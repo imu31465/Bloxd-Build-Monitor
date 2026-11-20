@@ -1,272 +1,272 @@
 export const id = 75;
 export const ids = [75, 91];
 export const modules = {
-    4516: (bb, ab, Ub) => {
-      Ub.d(ab, {
-        c: () => kb,
-        f: () => yb
+    4464: (zz, tz, sz) => {
+      sz.d(tz, {
+        c: () => gz,
+        e: () => Hz
       });
-      var Ab = Ub(984),
-        Mb = Ub.n(Ab),
-        Tb = Ub(52),
-        Eb = Ub(1134),
-        Yb = Ub(4522),
-        Bb = Ub(1794),
-        eb = Ub(2268),
-        vb = Ub(4531),
-        Lb = Ub(1023);
-      const Pb = new WeakMap;
-      let Xb = 0;
+      var Fz = sz(1020),
+        Wz = sz.n(Fz),
+        Xz = sz(65),
+        Oz = sz(1173),
+        oz = sz(4467),
+        vz = sz(1831),
+        Uz = sz(2290),
+        Kz = sz(4472),
+        uz = sz(1087);
+      const Nz = new WeakMap;
+      let bz = 0;
 
-      function jb(bb) {
-        let ab = Pb.get(bb);
-        return void 0 === ab && (ab = Xb++, Pb.set(bb, ab)), ab
+      function wz(zz) {
+        let tz = Nz.get(zz);
+        return void 0 === tz && (tz = bz++, Nz.set(zz, tz)), tz
       }
 
-      function Rb(bb) {
+      function Dz(zz) {
         let {
-          piece: ab
-        } = bb;
-        return "space" === ab.kind ? (0, Lb.jsx)(Lb.Fragment, {
-          children: ab.text
-        }) : (0, Lb.jsx)("span", {
+          piece: tz
+        } = zz;
+        return "space" === tz.kind ? (0, uz.jsx)(uz.Fragment, {
+          children: tz.text
+        }) : (0, uz.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${ab.delayMs}ms`
+            "--word-delay": `${tz.delayMs}ms`
           },
-          children: (0, Lb.jsx)(Yb.c, {
-            text: "icon" === ab.kind ? `[[${ab.icon}]]` : ab.text
+          children: (0, uz.jsx)(oz.b, {
+            text: "icon" === tz.kind ? `[[${tz.icon}]]` : tz.text
           })
         })
       }
 
-      function kb(bb) {
+      function gz(zz) {
         let {
-          display: ab
-        } = bb;
+          display: tz
+        } = zz;
         const {
-          selectedLanguage: Ub
-        } = (0, Eb.A)(), Ab = (0, Tb.useMemo)((() => (0, vb.e)((0, vb.g)(ab).plan.pieces)), [ab, Ub.code]);
-        return (0, Lb.jsxs)("div", {
-          className: Mb()("Dialogue", {
-            DialogueAnimateIn: !1 !== ab.animateIn
+          selectedLanguage: sz
+        } = (0, Oz.B)(), Fz = (0, Xz.useMemo)((() => (0, Kz.d)((0, Kz.f)(tz).plan.pieces)), [tz, sz.code]);
+        return (0, uz.jsxs)("div", {
+          className: Wz()("Dialogue", {
+            DialogueAnimateIn: !1 !== tz.animateIn
           }),
-          children: [ab.speakerName && (0, Lb.jsx)(Bb.c, {
-            text: ab.speakerName,
+          children: [tz.speakerName && (0, uz.jsx)(vz.c, {
+            text: tz.speakerName,
             className: "DialogueSpeaker"
-          }), (0, Lb.jsx)("p", {
+          }), (0, uz.jsx)("p", {
             className: "DialogueLine",
-            children: Ab.map(((bb, ab) => 1 === bb.length && "space" === bb[0].kind ? bb[0].text : (0, Lb.jsx)("span", {
+            children: Fz.map(((zz, tz) => 1 === zz.length && "space" === zz[0].kind ? zz[0].text : (0, uz.jsx)("span", {
               className: "DialogueGlue",
-              children: bb.map(((bb, ab) => (0, Lb.jsx)(Rb, {
-                piece: bb
-              }, ab)))
-            }, ab)))
+              children: zz.map(((zz, tz) => (0, uz.jsx)(Dz, {
+                piece: zz
+              }, tz)))
+            }, tz)))
           })]
         })
       }
-      const yb = (0, Tb.memo)((function() {
-        const bb = (0, eb.h)("dialogue");
-        return (0, Lb.jsx)("div", {
+      const Hz = (0, Xz.memo)((function() {
+        const zz = (0, Uz.e)("dialogue");
+        return (0, uz.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: bb && (0, Lb.jsx)(kb, {
-            display: bb
-          }, jb(bb))
+          children: zz && (0, uz.jsx)(gz, {
+            display: zz
+          }, wz(zz))
         })
       }))
     },
-    4392: (bb, ab, Ub) => {
-        Ub.r(ab), Ub.d(ab, {
-          default: () => nT
+    4356: (zz, tz, sz) => {
+        sz.r(tz), sz.d(tz, {
+          default: () => tO
         });
-        var Ab = Ub(52),
-          Mb = Ub(984),
-          Tb = Ub.n(Mb),
-          Eb = Ub(1438),
-          Yb = Ub(1446),
-          Bb = Ub(19),
-          eb = Ub(75),
-          vb = Ub(4399),
-          Lb = Ub(4405),
-          Pb = Ub(4413),
-          Xb = Ub(4047),
-          jb = Ub(1023);
-        const Rb = "/textures/docs/icons";
+        var Fz = sz(65),
+          Wz = sz(1020),
+          Xz = sz.n(Wz),
+          Oz = sz(1490),
+          oz = sz(1493),
+          vz = sz(30),
+          Uz = sz(78),
+          Kz = sz(4359),
+          uz = sz(4367),
+          Nz = sz(4373),
+          bz = sz(4017),
+          wz = sz(1087);
+        const Dz = "/textures/docs/icons";
 
-        function kb(bb) {
+        function gz(zz) {
           let {
-            name: ab,
-            isTinted: Ub,
-            className: Ab,
-            style: Mb
-          } = bb;
-          const Eb = `${Rb}/${ab}.png`;
-          return Ub ? (0, jb.jsxs)("span", {
-            className: Tb()("DocsPixelIcon", "Tinted", Ab),
+            name: tz,
+            isTinted: sz,
+            className: Fz,
+            style: Wz
+          } = zz;
+          const Oz = `${Dz}/${tz}.png`;
+          return sz ? (0, wz.jsxs)("span", {
+            className: Xz()("DocsPixelIcon", "Tinted", Fz),
             "aria-hidden": "true",
-            style: Mb,
-            children: [(0, jb.jsx)("span", {
+            style: Wz,
+            children: [(0, wz.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${Eb}")`,
-                WebkitMaskImage: `url("${Eb}")`
+                maskImage: `url("${Oz}")`,
+                WebkitMaskImage: `url("${Oz}")`
               }
-            }), (0, jb.jsx)("img", {
-              src: Eb,
+            }), (0, wz.jsx)("img", {
+              src: Oz,
               alt: ""
             })]
-          }) : (0, jb.jsx)("img", {
-            className: Tb()("DocsPixelIcon", Ab),
-            src: Eb,
+          }) : (0, wz.jsx)("img", {
+            className: Xz()("DocsPixelIcon", Fz),
+            src: Oz,
             alt: "",
             "aria-hidden": "true",
-            style: Mb
+            style: Wz
           })
         }
-        const yb = 1500;
+        const Hz = 1500;
 
-        function Zb() {
-          const [bb, ab] = (0, Ab.useState)(null);
-          (0, Ab.useEffect)((() => {
-            if (null === bb) return;
-            const Ub = setTimeout((() => {
-              ab(null)
-            }), yb);
+        function Bz() {
+          const [zz, tz] = (0, Fz.useState)(null);
+          (0, Fz.useEffect)((() => {
+            if (null === zz) return;
+            const sz = setTimeout((() => {
+              tz(null)
+            }), Hz);
             return () => {
-              clearTimeout(Ub)
+              clearTimeout(sz)
             }
-          }), [bb]);
-          return [bb, bb => {
-            (0, Xb.b)(bb).then((() => {
-              ab({
-                text: bb,
+          }), [zz]);
+          return [zz, zz => {
+            (0, bz.b)(zz).then((() => {
+              tz({
+                text: zz,
                 failed: !1
               })
-            }), (Ub => {
-              console.error("Could not copy to the clipboard", Ub), ab({
-                text: bb,
+            }), (sz => {
+              console.error("Could not copy to the clipboard", sz), tz({
+                text: zz,
                 failed: !0
               })
             }))
           }]
         }
 
-        function Db(bb) {
+        function Pz(zz) {
           let {
-            text: ab,
-            label: Ub,
-            className: Ab
-          } = bb;
-          const [Mb, Eb] = Zb(), Yb = !1 === (null === Mb || void 0 === Mb ? void 0 : Mb.failed);
-          return (0, jb.jsxs)("button", {
+            text: tz,
+            label: sz,
+            className: Fz
+          } = zz;
+          const [Wz, Oz] = Bz(), oz = !1 === (null === Wz || void 0 === Wz ? void 0 : Wz.failed);
+          return (0, wz.jsxs)("button", {
             type: "button",
-            className: Tb()("DocsCopyButton", Ab, {
-              Copied: Yb
+            className: Xz()("DocsCopyButton", Fz, {
+              Copied: oz
             }),
-            title: `Copy ${ab.length>40?"to clipboard":ab}`,
-            "aria-label": Ub ? void 0 : `Copy ${ab}`,
-            onClick: bb => {
-              bb.stopPropagation(), Eb(ab)
+            title: `Copy ${tz.length>40?"to clipboard":tz}`,
+            "aria-label": sz ? void 0 : `Copy ${tz}`,
+            onClick: zz => {
+              zz.stopPropagation(), Oz(tz)
             },
-            children: [(0, jb.jsx)(kb, {
-              name: Yb ? "check" : "copy"
-            }), Ub && (0, jb.jsx)("span", {
-              children: Yb ? "Copied" : null !== Mb && void 0 !== Mb && Mb.failed ? "Copy failed" : Ub
+            children: [(0, wz.jsx)(gz, {
+              name: oz ? "check" : "copy"
+            }), sz && (0, wz.jsx)("span", {
+              children: oz ? "Copied" : null !== Wz && void 0 !== Wz && Wz.failed ? "Copy failed" : sz
             })]
           })
         }
-        vb.d.registerLanguage("javascript", Lb.c), vb.d.registerLanguage("typescript", Pb.d);
-        const zb = {
+        Kz.d.registerLanguage("javascript", uz.c), Kz.d.registerLanguage("typescript", Nz.e);
+        const rz = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          xb = {
+          Yz = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          ib = 24;
+          xz = 24;
 
-        function fb(bb) {
+        function mz(zz) {
           let {
-            code: ab,
-            lang: Ub,
-            compact: Mb = !1
-          } = bb;
-          const Eb = (0, Ab.useMemo)((() => function(bb, ab) {
-              const Ub = zb[ab];
-              return Ub ? vb.d.highlight(bb, {
-                language: Ub
-              }).value : bb.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(ab, Ub)), [ab, Ub]),
-            Yb = ab.split("\n").length,
-            Bb = !Mb && Yb > ib + 6,
-            [eb, Lb] = (0, Ab.useState)(!1),
-            Pb = zb[Ub];
-          return (0, jb.jsxs)("div", {
-            className: Tb()("DocsCodeBlock", {
-              Compact: Mb,
-              Collapsed: Bb && !eb
+            code: tz,
+            lang: sz,
+            compact: Wz = !1
+          } = zz;
+          const Oz = (0, Fz.useMemo)((() => function(zz, tz) {
+              const sz = rz[tz];
+              return sz ? Kz.d.highlight(zz, {
+                language: sz
+              }).value : zz.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(tz, sz)), [tz, sz]),
+            oz = tz.split("\n").length,
+            vz = !Wz && oz > xz + 6,
+            [Uz, uz] = (0, Fz.useState)(!1),
+            Nz = rz[sz];
+          return (0, wz.jsxs)("div", {
+            className: Xz()("DocsCodeBlock", {
+              Compact: Wz,
+              Collapsed: vz && !Uz
             }),
-            children: [!Mb && (0, jb.jsxs)("div", {
+            children: [!Wz && (0, wz.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, jb.jsx)("span", {
+              children: [(0, wz.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: Pb ? xb[Pb] : "Text"
-              }), (0, jb.jsx)(Db, {
-                text: ab,
+                children: Nz ? Yz[Nz] : "Text"
+              }), (0, wz.jsx)(Pz, {
+                text: tz,
                 label: "Copy"
               })]
-            }), (0, jb.jsx)("pre", {
-              children: (0, jb.jsx)("code", {
+            }), (0, wz.jsx)("pre", {
+              children: (0, wz.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: Eb
+                  __html: Oz
                 }
               })
-            }), Bb && (0, jb.jsxs)("button", {
+            }), vz && (0, wz.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": eb,
+              "aria-expanded": Uz,
               onClick: () => {
-                Lb(!eb)
+                uz(!Uz)
               },
-              children: [(0, jb.jsx)(kb, {
-                name: eb ? "chevron-up" : "chevron-down"
-              }), eb ? "Show less" : `Show all ${Yb} lines`]
+              children: [(0, wz.jsx)(gz, {
+                name: Uz ? "chevron-up" : "chevron-down"
+              }), Uz ? "Show less" : `Show all ${oz} lines`]
             })]
           })
         }
-        var mb = Ub(4420);
-        var pb = Ub(4428);
-        const Nb = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var Jz = sz(4379);
+        var Iz = sz(4382);
+        const Cz = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function Wb(bb) {
-          const ab = new Map;
-          let Ub, Ab = [],
-            Mb = !1;
-          const Tb = () => {
-            Ub && ab.set(Ub.name, Ub.lines.join("\n").trimEnd())
+        function ez(zz) {
+          const tz = new Map;
+          let sz, Fz = [],
+            Wz = !1;
+          const Xz = () => {
+            sz && tz.set(sz.name, sz.lines.join("\n").trimEnd())
           };
-          for (const Eb of bb.split("\n")) {
-            const bb = Eb.match(Nb);
-            Mb || Eb.startsWith("/*") ? (Mb || (Tb(), Ub = void 0), Ab.push(Eb), Mb = !Eb.includes("*/")) : bb ? (Tb(), Ub = {
-              name: bb[1],
-              lines: [...Ab, Eb]
-            }, Ab = []) : Ub && (Eb.startsWith(" ") || Eb.startsWith("\t") || /^[}\])|]/.test(Eb)) ? Ub.lines.push(Eb) : Ub && "" !== Eb.trim() && (Tb(), Ub = void 0)
+          for (const Oz of zz.split("\n")) {
+            const zz = Oz.match(Cz);
+            Wz || Oz.startsWith("/*") ? (Wz || (Xz(), sz = void 0), Fz.push(Oz), Wz = !Oz.includes("*/")) : zz ? (Xz(), sz = {
+              name: zz[1],
+              lines: [...Fz, Oz]
+            }, Fz = []) : sz && (Oz.startsWith(" ") || Oz.startsWith("\t") || /^[}\])|]/.test(Oz)) ? sz.lines.push(Oz) : sz && "" !== Oz.trim() && (Xz(), sz = void 0)
           }
-          return Tb(), ab
+          return Xz(), tz
         }
 
-        function Hb(bb) {
-          return "methods" === bb || "callbacks" === bb || "settings" === bb
+        function Zz(zz) {
+          return "methods" === zz || "callbacks" === zz || "settings" === zz
         }
-        const Ib = {
+        const Gz = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (bb, ab) => `api.setClientOption(playerId, "${bb}", ${ab})`
+              setterSnippet: (zz, tz) => `api.setClientOption(playerId, "${zz}", ${tz})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (bb, ab) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${bb}", ${ab})`
+              setterSnippet: (zz, tz) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${zz}", ${tz})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (bb, ab) => `api.setMobSetting(mobId, "${bb}", ${ab})`
+              setterSnippet: (zz, tz) => `api.setMobSetting(mobId, "${zz}", ${tz})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (bb, ab) => `api.setVehicleSetting(vehicleId, "${bb}", ${ab})`
+              setterSnippet: (zz, tz) => `api.setVehicleSetting(vehicleId, "${zz}", ${tz})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          db = {
+          Tz = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function Fb(bb) {
-          return bb.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function cz(zz) {
+          return zz.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function hb(bb) {
-          let ab = !1;
-          return bb.split("\n").map((bb => (bb.startsWith("```") && (ab = !ab), !ab && /^#{3,} /.test(bb) ? bb.slice(1) : bb))).join("\n")
+        function jz(zz) {
+          let tz = !1;
+          return zz.split("\n").map((zz => (zz.startsWith("```") && (tz = !tz), !tz && /^#{3,} /.test(zz) ? zz.slice(1) : zz))).join("\n")
         }
 
-        function Gb(bb) {
-          return "readme" === bb ? "getting-started" : Fb(bb)
+        function Az(zz) {
+          return "readme" === zz ? "getting-started" : cz(zz)
         }
-        const Qb = "## Glossary of Referenced Types";
-        const qb = [{
+        const yz = "## Glossary of Referenced Types";
+        const Mz = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...pb.d.flatMap((bb => {
-            const ab = {
-              id: bb.id,
-              slug: Gb(bb.id),
-              title: bb.title,
-              markdown: bb.content,
-              ...Ib[bb.id]
+          }, ...Iz.d.flatMap((zz => {
+            const tz = {
+              id: zz.id,
+              slug: Az(zz.id),
+              title: zz.title,
+              markdown: zz.content,
+              ...Gz[zz.id]
             };
-            if ("readme" === bb.id) return function(bb) {
-              const ab = bb.markdown.indexOf(Qb),
-                Ub = bb.markdown.indexOf("\n```", ab),
-                Ab = bb.markdown.indexOf("\n```", Ub + 1);
-              if (-1 === ab || -1 === Ub || -1 === Ab) throw new Error(`Getting started has no "${Qb}" section with a code block`);
-              const Mb = bb.markdown.slice(ab + 31, Ub).trim(),
-                Tb = [...Wb(bb.markdown.slice(bb.markdown.indexOf("\n", Ub + 1) + 1, Ab))].map((bb => {
-                  let [ab, Ub] = bb;
-                  return `## ${ab}\n\n\`\`\`ts\n${Ub}\n\`\`\`\n`
+            if ("readme" === zz.id) return function(zz) {
+              const tz = zz.markdown.indexOf(yz),
+                sz = zz.markdown.indexOf("\n```", tz),
+                Fz = zz.markdown.indexOf("\n```", sz + 1);
+              if (-1 === tz || -1 === sz || -1 === Fz) throw new Error(`Getting started has no "${yz}" section with a code block`);
+              const Wz = zz.markdown.slice(tz + 31, sz).trim(),
+                Xz = [...ez(zz.markdown.slice(zz.markdown.indexOf("\n", sz + 1) + 1, Fz))].map((zz => {
+                  let [tz, sz] = zz;
+                  return `## ${tz}\n\n\`\`\`ts\n${sz}\n\`\`\`\n`
                 })),
-                Eb = bb.markdown.slice(bb.markdown.indexOf("\n", Ab + 1) + 1);
+                Oz = zz.markdown.slice(zz.markdown.indexOf("\n", Fz + 1) + 1);
               return [{
-                ...bb,
-                markdown: `${bb.markdown.slice(0,ab)}${Eb}`
+                ...zz,
+                markdown: `${zz.markdown.slice(0,tz)}${Oz}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${Mb}\n\n${Tb.join("\n")}`
+                markdown: `# Types\n\n${Wz}\n\n${Xz.join("\n")}`
               }]
-            }(ab);
-            if ("howTo" === bb.id) {
+            }(tz);
+            if ("howTo" === zz.id) {
               const {
-                parent: bb,
-                guides: Ub
-              } = function(bb) {
-                const [ab, ...Ub] = bb.markdown.split(/^(?=## )/m), Ab = [ab], Mb = [];
-                for (const Eb of Ub) {
-                  var Tb;
-                  const ab = Eb.indexOf("\n"),
-                    Ub = Eb.slice(3, ab).trim(),
-                    Yb = Eb.slice(ab + 1);
-                  if (!Yb.includes("```")) {
-                    Ab.push(Eb);
+                parent: zz,
+                guides: sz
+              } = function(zz) {
+                const [tz, ...sz] = zz.markdown.split(/^(?=## )/m), Fz = [tz], Wz = [];
+                for (const Oz of sz) {
+                  var Xz;
+                  const tz = Oz.indexOf("\n"),
+                    sz = Oz.slice(3, tz).trim(),
+                    oz = Oz.slice(tz + 1);
+                  if (!oz.includes("```")) {
+                    Fz.push(Oz);
                     continue
                   }
-                  const Bb = null !== (Tb = db[Ub]) && void 0 !== Tb ? Tb : {
+                  const vz = null !== (Xz = Tz[sz]) && void 0 !== Xz ? Xz : {
                     icon: "lightbulb",
-                    summary: `How to use ${Ub.toLowerCase()} in World Code.`
+                    summary: `How to use ${sz.toLowerCase()} in World Code.`
                   };
-                  Mb.push({
-                    id: `${bb.id}${Ub.split(/[^A-Za-z0-9]+/).map((bb=>bb.charAt(0).toUpperCase()+bb.slice(1))).join("")}`,
-                    slug: `${bb.slug}-${Fb(Ub)}`,
-                    title: Ub,
+                  Wz.push({
+                    id: `${zz.id}${sz.split(/[^A-Za-z0-9]+/).map((zz=>zz.charAt(0).toUpperCase()+zz.slice(1))).join("")}`,
+                    slug: `${zz.slug}-${cz(sz)}`,
+                    title: sz,
                     layout: "article",
-                    sourceAnchor: (0, mb.r)(Ub),
-                    markdown: `# ${Ub}\n\n${hb(Yb)}`,
-                    ...Bb
+                    sourceAnchor: (0, Jz.t)(sz),
+                    markdown: `# ${sz}\n\n${jz(oz)}`,
+                    ...vz
                   })
                 }
                 return {
                   parent: {
-                    ...bb,
-                    markdown: Ab.join(""),
-                    childPageIds: Mb.map((bb => bb.id))
+                    ...zz,
+                    markdown: Fz.join(""),
+                    childPageIds: Wz.map((zz => zz.id))
                   },
-                  guides: Mb
+                  guides: Wz
                 }
-              }(ab);
-              return [bb, ...Ub]
+              }(tz);
+              return [zz, ...sz]
             }
-            return [ab]
+            return [tz]
           }))],
-          ub = [{
+          dz = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...qb.filter((bb => void 0 !== bb.sourceAnchor)).map((bb => bb.id))]
+            pageIds: ["howTo", ...Mz.filter((zz => void 0 !== zz.sourceAnchor)).map((zz => zz.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function rb(bb) {
-          return qb.find((ab => ab.id === bb))
+        function hz(zz) {
+          return Mz.find((tz => tz.id === zz))
         }
-        const Kb = new Map;
+        const Qz = new Map;
 
-        function ob(bb) {
-          let ab = Kb.get(bb.id);
-          return ab || (ab = (0, mb.v)(bb.markdown, "changelog" === bb.layout ? 3 : 2), Kb.set(bb.id, ab)), ab
-        }
-
-        function lb(bb, ab) {
-          return ob(bb).sections.some((bb => bb.heading.anchor === ab || bb.blocks.some((bb => "heading" === bb.kind && bb.anchor === ab))))
+        function kz(zz) {
+          let tz = Qz.get(zz.id);
+          return tz || (tz = (0, Jz.x)(zz.markdown, "changelog" === zz.layout ? 3 : 2), Qz.set(zz.id, tz)), tz
         }
 
-        function tb(bb) {
-          const [ab, ...Ub] = bb.replace(/^#/, "").split("-"), Ab = qb.find((bb => bb.id === ab));
-          if (!Ab) return null;
-          const Mb = Ub.length > 0 ? (0, mb.r)(Ub.join("-")) : "";
-          for (const Eb of null !== (Tb = Ab.childPageIds) && void 0 !== Tb ? Tb : []) {
-            var Tb;
-            const bb = rb(Eb);
-            if (bb.sourceAnchor === Mb) return {
-              page: bb,
+        function iz(zz, tz) {
+          return kz(zz).sections.some((zz => zz.heading.anchor === tz || zz.blocks.some((zz => "heading" === zz.kind && zz.anchor === tz))))
+        }
+
+        function Lz(zz) {
+          const [tz, ...sz] = zz.replace(/^#/, "").split("-"), Fz = Mz.find((zz => zz.id === tz));
+          if (!Fz) return null;
+          const Wz = sz.length > 0 ? (0, Jz.t)(sz.join("-")) : "";
+          for (const Oz of null !== (Xz = Fz.childPageIds) && void 0 !== Xz ? Xz : []) {
+            var Xz;
+            const zz = hz(Oz);
+            if (zz.sourceAnchor === Wz) return {
+              page: zz,
               anchor: ""
             };
-            if (lb(bb, Mb)) return {
-              page: bb,
-              anchor: Mb
+            if (iz(zz, Wz)) return {
+              page: zz,
+              anchor: Wz
             }
           }
           return {
-            page: Ab,
-            anchor: Mb
+            page: Fz,
+            anchor: Wz
           }
         }
-        const wb = {
+        const lz = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function sb(bb, ab) {
-          let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const Ab = ab.slug ? `${bb}/${ab.slug}` : bb;
-          return Ub ? `${Ab}#${Ub}` : Ab
+        function nz(zz, tz) {
+          let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const Fz = tz.slug ? `${zz}/${tz.slug}` : zz;
+          return sz ? `${Fz}#${sz}` : Fz
         }
-        var gb = Ub(4446);
-        const Cb = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          Vb = new Set(["GameApi", "Console", "_TypeOf"]),
-          Ob = 4;
+        var az = sz(4391);
+        const qz = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          Sz = new Set(["GameApi", "Console", "_TypeOf"]),
+          Vz = 4;
 
-        function cb(bb) {
-          let ab = bb.length;
-          for (; ab > 0 && "" === bb[ab - 1].trim();) ab--;
-          return bb.slice(0, ab)
+        function Rz(zz) {
+          let tz = zz.length;
+          for (; tz > 0 && "" === zz[tz - 1].trim();) tz--;
+          return zz.slice(0, tz)
         }
 
-        function Jb(bb) {
-          var ab;
-          const Ub = cb(bb);
-          if (null === (ab = Ub.at(-1)) || void 0 === ab || !ab.trimEnd().endsWith("*/")) return {
-            lines: Ub,
+        function pz(zz) {
+          var tz;
+          const sz = Rz(zz);
+          if (null === (tz = sz.at(-1)) || void 0 === tz || !tz.trimEnd().endsWith("*/")) return {
+            lines: sz,
             doc: ""
           };
-          const Ab = Ub.findLastIndex((bb => bb.startsWith("/**")));
-          return -1 === Ab ? {
-            lines: Ub,
+          const Fz = sz.findLastIndex((zz => zz.startsWith("/**")));
+          return -1 === Fz ? {
+            lines: sz,
             doc: ""
           } : {
-            lines: cb(Ub.slice(0, Ab)),
-            doc: Ub.slice(Ab).join("\n")
+            lines: Rz(sz.slice(0, Fz)),
+            doc: sz.slice(Fz).join("\n")
           }
         }
 
-        function nb(bb) {
-          var ab;
-          const Ub = bb.split("\n"),
-            Ab = Ub.flatMap(((bb, ab) => Cb.test(bb) ? [ab] : []));
-          let Mb = Jb(Ub.slice(0, null !== (ab = Ab[0]) && void 0 !== ab ? ab : Ub.length)).doc;
-          return Ab.map(((bb, ab) => {
-            var Tb;
-            const Eb = Jb(Ub.slice(bb, null !== (Tb = Ab[ab + 1]) && void 0 !== Tb ? Tb : Ub.length)),
-              Yb = {
-                name: Ub[bb].match(Cb)[1],
-                doc: Mb,
-                lines: Eb.lines
+        function fz(zz) {
+          var tz;
+          const sz = zz.split("\n"),
+            Fz = sz.flatMap(((zz, tz) => qz.test(zz) ? [tz] : []));
+          let Wz = pz(sz.slice(0, null !== (tz = Fz[0]) && void 0 !== tz ? tz : sz.length)).doc;
+          return Fz.map(((zz, tz) => {
+            var Xz;
+            const Oz = pz(sz.slice(zz, null !== (Xz = Fz[tz + 1]) && void 0 !== Xz ? Xz : sz.length)),
+              oz = {
+                name: sz[zz].match(qz)[1],
+                doc: Wz,
+                lines: Oz.lines
               };
-            return Mb = Eb.doc, Yb
+            return Wz = Oz.doc, oz
           }))
         }
 
-        function Sb(bb) {
-          var ab;
-          const Ub = bb.match(/^readonly \[([\s\S]*)\]$/);
-          return Ub ? null !== (ab = Ub[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== ab ? ab : [] : null
+        function Ez(zz) {
+          var tz;
+          const sz = zz.match(/^readonly \[([\s\S]*)\]$/);
+          return sz ? null !== (tz = sz[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== tz ? tz : [] : null
         }
 
-        function ba(bb) {
-          if (!bb.startsWith("{") || !bb.endsWith("}")) return null;
-          const ab = {
+        function zt(zz) {
+          if (!zz.startsWith("{") || !zz.endsWith("}")) return null;
+          const tz = {
               keys: [],
               values: []
             },
-            Ub = bb => {
-              const Ub = bb.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              Ub && (ab.keys.push(Ub[1].startsWith('"') ? Ub[1] : `"${Ub[1]}"`), ab.values.push(Ub[2].trim()))
+            sz = zz => {
+              const sz = zz.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              sz && (tz.keys.push(sz[1].startsWith('"') ? sz[1] : `"${sz[1]}"`), tz.values.push(sz[2].trim()))
             };
-          let Ab = 0,
-            Mb = "";
-          for (const Tb of bb.slice(1, -1)) "{[(".includes(Tb) ? Ab++ : "}])".includes(Tb) && Ab--, ";" === Tb && 0 === Ab ? (Ub(Mb), Mb = "") : Mb += Tb;
-          return Ub(Mb), ab
+          let Fz = 0,
+            Wz = "";
+          for (const Xz of zz.slice(1, -1)) "{[(".includes(Xz) ? Fz++ : "}])".includes(Xz) && Fz--, ";" === Xz && 0 === Fz ? (sz(Wz), Wz = "") : Wz += Xz;
+          return sz(Wz), tz
         }
 
-        function aa(bb) {
-          return bb.length > Ob ? `\n\t| ${bb.join("\n\t| ")}` : bb.join(" | ")
+        function tt(zz) {
+          return zz.length > Vz ? `\n\t| ${zz.join("\n\t| ")}` : zz.join(" | ")
         }
 
-        function Ua(bb, ab) {
-          const Ub = function(bb, ab) {
-            return bb.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((bb, Ub) => {
-              var Ab;
-              const Mb = null === (Ab = ab.get(Ub)) || void 0 === Ab ? void 0 : Ab.object;
-              return Mb ? aa(Mb.values) : bb
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((bb, Ub) => {
-              var Ab, Mb;
-              const Tb = null === (Ab = ab.get(Ub)) || void 0 === Ab || null === (Mb = Ab.object) || void 0 === Mb ? void 0 : Mb.values.map(Sb);
-              return null !== Tb && void 0 !== Tb && Tb.every((bb => null !== bb)) ? aa([...new Set(Tb.flat())]) : bb
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((bb, Ub) => {
-              var Ab;
-              const Mb = null === (Ab = ab.get(Ub)) || void 0 === Ab ? void 0 : Ab.members;
-              return Mb ? aa(Mb) : bb
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((bb, Ub) => {
-              var Ab;
-              const Mb = null === (Ab = ab.get(Ub)) || void 0 === Ab ? void 0 : Ab.object;
-              return Mb ? aa(Mb.keys) : bb
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((bb, Ub) => {
-              var Ab, Mb;
-              return null !== (Ab = null === (Mb = ab.get(Ub)) || void 0 === Mb ? void 0 : Mb.text) && void 0 !== Ab ? Ab : bb
+        function st(zz, tz) {
+          const sz = function(zz, tz) {
+            return zz.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((zz, sz) => {
+              var Fz;
+              const Wz = null === (Fz = tz.get(sz)) || void 0 === Fz ? void 0 : Fz.object;
+              return Wz ? tt(Wz.values) : zz
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((zz, sz) => {
+              var Fz, Wz;
+              const Xz = null === (Fz = tz.get(sz)) || void 0 === Fz || null === (Wz = Fz.object) || void 0 === Wz ? void 0 : Wz.values.map(Ez);
+              return null !== Xz && void 0 !== Xz && Xz.every((zz => null !== zz)) ? tt([...new Set(Xz.flat())]) : zz
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((zz, sz) => {
+              var Fz;
+              const Wz = null === (Fz = tz.get(sz)) || void 0 === Fz ? void 0 : Fz.members;
+              return Wz ? tt(Wz) : zz
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((zz, sz) => {
+              var Fz;
+              const Wz = null === (Fz = tz.get(sz)) || void 0 === Fz ? void 0 : Fz.object;
+              return Wz ? tt(Wz.keys) : zz
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((zz, sz) => {
+              var Fz, Wz;
+              return null !== (Fz = null === (Wz = tz.get(sz)) || void 0 === Wz ? void 0 : Wz.text) && void 0 !== Fz ? Fz : zz
             }))
-          }(bb.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), ab);
-          return [bb.doc, Ub].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(zz.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), tz);
+          return [zz.doc, sz].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function Aa(bb) {
-          const ab = nb(bb),
-            Ub = function(bb) {
-              const ab = new Map,
-                Ub = bb.find((bb => "_TypeOf" === bb.name));
-              let Ab = null;
-              const Mb = () => {
-                if (Ab) {
-                  const bb = Ab.lines.join("\n");
-                  ab.set(Ab.name, {
-                    text: bb,
-                    members: Sb(bb),
-                    object: ba(bb)
+        function Ft(zz) {
+          const tz = fz(zz),
+            sz = function(zz) {
+              const tz = new Map,
+                sz = zz.find((zz => "_TypeOf" === zz.name));
+              let Fz = null;
+              const Wz = () => {
+                if (Fz) {
+                  const zz = Fz.lines.join("\n");
+                  tz.set(Fz.name, {
+                    text: zz,
+                    members: Ez(zz),
+                    object: zt(zz)
                   })
                 }
               };
-              for (const Tb of Ub.lines.slice(1, -1)) {
-                const bb = Tb.match(/^\t([\w$]+): (.+)$/);
-                bb ? (Mb(), Ab = {
-                  name: bb[1],
-                  lines: [bb[2]]
-                }) : Ab && Ab.lines.push(Tb.replace(/^\t/, ""))
+              for (const Xz of sz.lines.slice(1, -1)) {
+                const zz = Xz.match(/^\t([\w$]+): (.+)$/);
+                zz ? (Wz(), Fz = {
+                  name: zz[1],
+                  lines: [zz[2]]
+                }) : Fz && Fz.lines.push(Xz.replace(/^\t/, ""))
               }
-              return Mb(), ab
-            }(ab),
-            Ab = new Map;
-          for (const Mb of ab) Vb.has(Mb.name) || Ab.has(Mb.name) || Ab.set(Mb.name, Ua(Mb, Ub));
-          return Ab
+              return Wz(), tz
+            }(tz),
+            Fz = new Map;
+          for (const Wz of tz) Sz.has(Wz.name) || Fz.has(Wz.name) || Fz.set(Wz.name, st(Wz, sz));
+          return Fz
         }
-        let Ma, Ta, Ea;
+        let Wt, Xt, Ot;
 
-        function Ya() {
-          return Ta ??= function(bb) {
-            const ab = nb(bb).find((bb => "GameApi" === bb.name)),
-              Ub = new Map,
-              Ab = ab.lines;
-            for (let Tb = 0; Tb < Ab.length; Tb++) {
-              var Mb;
-              if (!Ab[Tb].trimStart().startsWith("/**")) continue;
-              const bb = Tb;
-              for (; Tb < Ab.length && !Ab[Tb].includes("*/");) Tb++;
-              const ab = null === (Mb = Ab[Tb + 1]) || void 0 === Mb ? void 0 : Mb.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!ab) continue;
-              let Eb = null;
-              const Yb = [];
-              let Bb = "description",
-                eb = !1;
-              for (const Ub of Ab.slice(bb, Tb + 1).join("\n").split("\n").map((bb => bb.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const bb = Ub.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                bb ? (Eb = bb[1].trim(), Bb = "deprecation") : Ub.startsWith("@") ? (Bb = "otherTag", eb = !0) : "" === Ub.trim() ? eb || (Bb = "description", Yb.push(Ub)) : "deprecation" !== Bb || /^[A-Z]/.test(Ub.trim()) ? "otherTag" !== Bb && (Bb = "description", Yb.push(Ub)) : Eb = `${Eb} ${Ub.trim()}`.trim()
+        function ot() {
+          return Xt ??= function(zz) {
+            const tz = fz(zz).find((zz => "GameApi" === zz.name)),
+              sz = new Map,
+              Fz = tz.lines;
+            for (let Xz = 0; Xz < Fz.length; Xz++) {
+              var Wz;
+              if (!Fz[Xz].trimStart().startsWith("/**")) continue;
+              const zz = Xz;
+              for (; Xz < Fz.length && !Fz[Xz].includes("*/");) Xz++;
+              const tz = null === (Wz = Fz[Xz + 1]) || void 0 === Wz ? void 0 : Wz.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!tz) continue;
+              let Oz = null;
+              const oz = [];
+              let vz = "description",
+                Uz = !1;
+              for (const sz of Fz.slice(zz, Xz + 1).join("\n").split("\n").map((zz => zz.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const zz = sz.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                zz ? (Oz = zz[1].trim(), vz = "deprecation") : sz.startsWith("@") ? (vz = "otherTag", Uz = !0) : "" === sz.trim() ? Uz || (vz = "description", oz.push(sz)) : "deprecation" !== vz || /^[A-Z]/.test(sz.trim()) ? "otherTag" !== vz && (vz = "description", oz.push(sz)) : Oz = `${Oz} ${sz.trim()}`.trim()
               }
-              Ub.set(ab[1], {
-                deprecation: Eb,
-                description: Yb.join("\n").trim()
+              sz.set(tz[1], {
+                deprecation: Oz,
+                description: oz.join("\n").trim()
               })
             }
-            return Ub
-          }(gb.default), Ta
+            return sz
+          }(az.default), Xt
         }
 
-        function Ba() {
-          if (!Ea) {
-            Ea = new Map;
-            for (const bb of qb) {
-              const ab = (0, mb.u)(ob(bb)).flatMap((bb => bb.blocks));
-              for (const bb of (0, mb.m)(ab))
-                if ("ts" === bb.lang || "typescript" === bb.lang)
-                  for (const [ab, Ub] of Wb(bb.code)) Ea.set(ab, Ub)
+        function vt() {
+          if (!Ot) {
+            Ot = new Map;
+            for (const zz of Mz) {
+              const tz = (0, Jz.w)(kz(zz)).flatMap((zz => zz.blocks));
+              for (const zz of (0, Jz.l)(tz))
+                if ("ts" === zz.lang || "typescript" === zz.lang)
+                  for (const [tz, sz] of ez(zz.code)) Ot.set(tz, sz)
             }
-            for (const [bb, ab] of(Ma ??= Aa(gb.default), Ma)) Ea.has(bb) || Ea.set(bb, ab)
+            for (const [zz, tz] of(Wt ??= Ft(az.default), Wt)) Ot.has(zz) || Ot.set(zz, tz)
           }
-          return Ea
+          return Ot
         }
-        const ea = {
+        const Ut = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let va;
+        let Kt;
 
-        function La() {
-          if (!va) {
-            va = new Map;
-            for (const bb of qb)
-              if (Hb(bb.layout))
-                for (const ab of ob(bb).sections) va.has(ab.heading.text) || va.set(ab.heading.text, {
-                  pageId: bb.id,
-                  anchor: ab.heading.anchor
+        function ut() {
+          if (!Kt) {
+            Kt = new Map;
+            for (const zz of Mz)
+              if (Zz(zz.layout))
+                for (const tz of kz(zz).sections) Kt.has(tz.heading.text) || Kt.set(tz.heading.text, {
+                  pageId: zz.id,
+                  anchor: tz.heading.anchor
                 })
           }
-          return va
+          return Kt
         }
 
-        function Pa(bb) {
-          const ab = bb.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return ab ? La().get(ab[1]) : void 0
+        function Nt(zz) {
+          const tz = zz.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return tz ? ut().get(tz[1]) : void 0
         }
-        const Xa = (0, Ab.createContext)("/docs"),
-          ja = (0, Ab.createContext)(null),
-          Ra = (0, Ab.createContext)(!1),
-          ka = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const bt = (0, Fz.createContext)("/docs"),
+          wt = (0, Fz.createContext)(null),
+          Dt = (0, Fz.createContext)(!1),
+          gt = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function ya(bb) {
-          const ab = bb.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return ab ? ab[1] : null
+        function Ht(zz) {
+          const tz = zz.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return tz ? tz[1] : null
         }
 
-        function Za(bb) {
+        function Bt(zz) {
           let {
-            colour: ab
-          } = bb;
-          return (0, jb.jsx)("span", {
+            colour: tz
+          } = zz;
+          return (0, wz.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: ab
+              background: tz
             },
             "aria-hidden": "true"
           })
         }
 
-        function Da(bb) {
-          const ab = [];
-          let Ub = 0;
-          for (const Ab of bb.matchAll(ka)) ab.push(bb.slice(Ub, Ab.index), (0, jb.jsx)(Za, {
-            colour: Ab[0]
-          }), Ab[0]), Ub = Ab.index + Ab[0].length;
-          return ab.push(bb.slice(Ub)), ab
+        function Pt(zz) {
+          const tz = [];
+          let sz = 0;
+          for (const Fz of zz.matchAll(gt)) tz.push(zz.slice(sz, Fz.index), (0, wz.jsx)(Bt, {
+            colour: Fz[0]
+          }), Fz[0]), sz = Fz.index + Fz[0].length;
+          return tz.push(zz.slice(sz)), tz
         }
 
-        function za(bb) {
+        function rt(zz) {
           let {
-            href: ab,
-            children: Ub
-          } = bb;
-          const Mb = (0, Ab.useContext)(Xa);
-          if (ab.startsWith("#")) {
-            const bb = tb(ab);
-            if (bb) return (0, jb.jsx)(Eb.c, {
-              to: sb(Mb, bb.page, bb.anchor),
-              children: (0, jb.jsx)(Ra.Provider, {
+            href: tz,
+            children: sz
+          } = zz;
+          const Wz = (0, Fz.useContext)(bt);
+          if (tz.startsWith("#")) {
+            const zz = Lz(tz);
+            if (zz) return (0, wz.jsx)(Oz.d, {
+              to: nz(Wz, zz.page, zz.anchor),
+              children: (0, wz.jsx)(Dt.Provider, {
                 value: !0,
-                children: Ub
+                children: sz
               })
             })
           }
-          return (0, jb.jsx)("a", {
-            href: ab,
+          return (0, wz.jsx)("a", {
+            href: tz,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, jb.jsx)(Ra.Provider, {
+            children: (0, wz.jsx)(Dt.Provider, {
               value: !0,
-              children: Ub
+              children: sz
             })
           })
         }
 
-        function xa(bb) {
+        function Yt(zz) {
           let {
-            code: ab
-          } = bb;
-          const Ub = (0, Ab.useContext)(Xa);
-          if ((0, Ab.useContext)(Ra)) return (0, jb.jsx)("code", {
+            code: tz
+          } = zz;
+          const sz = (0, Fz.useContext)(bt);
+          if ((0, Fz.useContext)(Dt)) return (0, wz.jsx)("code", {
             className: "DocsInlineCode",
-            children: ab
+            children: tz
           });
-          if (Ba().has(ab)) return (0, jb.jsx)(pa, {
-            type: ab
+          if (vt().has(tz)) return (0, wz.jsx)(It, {
+            type: tz
           });
-          const Mb = Pa(ab);
-          if (Mb) return (0, jb.jsx)(Eb.c, {
+          const Wz = Nt(tz);
+          if (Wz) return (0, wz.jsx)(Oz.d, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: sb(Ub, rb(Mb.pageId), Mb.anchor),
-            children: ab
+            to: nz(sz, hz(Wz.pageId), Wz.anchor),
+            children: tz
           });
-          const Tb = ya(ab);
-          return (0, jb.jsxs)("code", {
+          const Xz = Ht(tz);
+          return (0, wz.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [Tb && (0, jb.jsx)(Za, {
-              colour: Tb
-            }), ab]
+            children: [Xz && (0, wz.jsx)(Bt, {
+              colour: Xz
+            }), tz]
           })
         }
 
-        function ia(bb) {
+        function xt(zz) {
           let {
-            text: ab
-          } = bb;
-          const Ub = [];
-          let Mb = 0;
-          for (const Ab of ab.matchAll(mb.e)) {
-            Ab.index > Mb && Ub.push(...Da(ab.slice(Mb, Ab.index)));
-            const [, bb, Tb, Eb, Yb, Bb] = Ab;
-            bb ? Ub.push((0, jb.jsx)(xa, {
-              code: (0, mb.o)(bb, Tb)
-            })) : Eb ? Ub.push((0, jb.jsx)("strong", {
-              children: (0, jb.jsx)(ia, {
-                text: Eb
+            text: tz
+          } = zz;
+          const sz = [];
+          let Wz = 0;
+          for (const Fz of tz.matchAll(Jz.e)) {
+            Fz.index > Wz && sz.push(...Pt(tz.slice(Wz, Fz.index)));
+            const [, zz, Xz, Oz, oz, vz] = Fz;
+            zz ? sz.push((0, wz.jsx)(Yt, {
+              code: (0, Jz.n)(zz, Xz)
+            })) : Oz ? sz.push((0, wz.jsx)("strong", {
+              children: (0, wz.jsx)(xt, {
+                text: Oz
               })
-            })) : Ub.push((0, jb.jsx)(za, {
-              href: Bb,
-              children: (0, jb.jsx)(ia, {
-                text: Yb
+            })) : sz.push((0, wz.jsx)(rt, {
+              href: vz,
+              children: (0, wz.jsx)(xt, {
+                text: oz
               })
-            })), Mb = Ab.index + Ab[0].length
+            })), Wz = Fz.index + Fz[0].length
           }
-          return Mb < ab.length && Ub.push(...Da(ab.slice(Mb))), (0, jb.jsx)(jb.Fragment, {
-            children: Ub.map(((bb, ab) => (0, jb.jsx)(Ab.Fragment, {
-              children: bb
-            }, ab)))
+          return Wz < tz.length && sz.push(...Pt(tz.slice(Wz))), (0, wz.jsx)(wz.Fragment, {
+            children: sz.map(((zz, tz) => (0, wz.jsx)(Fz.Fragment, {
+              children: zz
+            }, tz)))
           })
         }
-        const fa = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          ma = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const mt = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          Jt = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function pa(bb) {
+        function It(zz) {
           let {
-            type: ab
-          } = bb;
-          const Ub = Ba(),
-            Mb = [];
-          for (const Ab of ab.trim().matchAll(fa)) {
-            const [bb, ab, Tb, Eb, Yb] = Ab;
-            ab ? Mb.push((0, jb.jsx)("span", {
+            type: tz
+          } = zz;
+          const sz = vt(),
+            Wz = [];
+          for (const Fz of tz.trim().matchAll(mt)) {
+            const [zz, tz, Xz, Oz, oz] = Fz;
+            tz ? Wz.push((0, wz.jsx)("span", {
               className: "DocsTypeString",
-              children: bb
-            })) : Tb && Ub.has(Tb) ? Mb.push((0, jb.jsx)(da, {
-              name: Tb,
-              definition: Ub.get(Tb)
-            })) : Tb ? Mb.push((0, jb.jsx)("span", {
-              className: ma.has(Tb) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: bb
-            })) : Eb ? Mb.push((0, jb.jsx)("span", {
+              children: zz
+            })) : Xz && sz.has(Xz) ? Wz.push((0, wz.jsx)(Tt, {
+              name: Xz,
+              definition: sz.get(Xz)
+            })) : Xz ? Wz.push((0, wz.jsx)("span", {
+              className: Jt.has(Xz) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: zz
+            })) : Oz ? Wz.push((0, wz.jsx)("span", {
               className: "DocsTypeNumber",
-              children: bb
-            })) : Yb ? Mb.push(" ") : Mb.push((0, jb.jsx)("span", {
+              children: zz
+            })) : oz ? Wz.push(" ") : Wz.push((0, wz.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: bb
+              children: zz
             }))
           }
-          return (0, jb.jsx)("code", {
+          return (0, wz.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: Mb.map(((bb, ab) => (0, jb.jsx)(Ab.Fragment, {
-              children: bb
-            }, ab)))
+            children: Wz.map(((zz, tz) => (0, wz.jsx)(Fz.Fragment, {
+              children: zz
+            }, tz)))
           })
         }
-        const Na = 480,
-          Wa = 6,
-          Ha = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let Ia = 0;
+        const Ct = 480,
+          et = 6,
+          Zt = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let Gt = 0;
 
-        function da(bb) {
+        function Tt(zz) {
           let {
-            name: ab,
-            definition: Ub
-          } = bb;
-          const Mb = (0, Ab.useContext)(Xa),
-            Tb = ea[ab],
-            Yb = (0, Ab.useRef)(null),
-            Bb = (0, Ab.useRef)(null),
-            vb = (0, Ab.useRef)(null),
-            [Lb, Pb] = (0, Ab.useState)(!1),
-            [Xb, Rb] = (0, Ab.useState)(null),
-            yb = (0, Ab.useRef)(),
-            Zb = (0, Ab.useContext)(ja),
-            [Db] = (0, Ab.useState)((() => "DocsTypePopover-" + Ia++)),
-            zb = () => {
-              clearTimeout(yb.current), Pb(!0)
+            name: tz,
+            definition: sz
+          } = zz;
+          const Wz = (0, Fz.useContext)(bt),
+            Xz = Ut[tz],
+            oz = (0, Fz.useRef)(null),
+            vz = (0, Fz.useRef)(null),
+            Kz = (0, Fz.useRef)(null),
+            [uz, Nz] = (0, Fz.useState)(!1),
+            [bz, Dz] = (0, Fz.useState)(null),
+            Hz = (0, Fz.useRef)(),
+            Bz = (0, Fz.useContext)(wt),
+            [Pz] = (0, Fz.useState)((() => "DocsTypePopover-" + Gt++)),
+            rz = () => {
+              clearTimeout(Hz.current), Nz(!0)
             },
-            xb = () => {
-              clearTimeout(yb.current), yb.current = setTimeout((() => {
-                Pb(!1)
+            Yz = () => {
+              clearTimeout(Hz.current), Hz.current = setTimeout((() => {
+                Nz(!1)
               }), 120)
             };
-          return (0, Ab.useEffect)((() => {
-            if (!Lb) return;
-            const bb = bb => {
-              if ("Escape" === bb.key) {
-                var ab, Ub;
-                if (null !== (ab = Bb.current) && void 0 !== ab && ab.contains(document.activeElement)) null === (Ub = Yb.current) || void 0 === Ub || Ub.focus();
-                Pb(!1)
+          return (0, Fz.useEffect)((() => {
+            if (!uz) return;
+            const zz = zz => {
+              if ("Escape" === zz.key) {
+                var tz, sz;
+                if (null !== (tz = vz.current) && void 0 !== tz && tz.contains(document.activeElement)) null === (sz = oz.current) || void 0 === sz || sz.focus();
+                Nz(!1)
               }
             };
-            return document.addEventListener("keydown", bb), () => {
-              document.removeEventListener("keydown", bb)
+            return document.addEventListener("keydown", zz), () => {
+              document.removeEventListener("keydown", zz)
             }
-          }), [Lb]), (0, Ab.useEffect)((() => () => {
-            clearTimeout(yb.current)
-          }), []), (0, Ab.useLayoutEffect)((() => {
-            if (!Lb || !Yb.current || !Bb.current) return void Rb(null);
-            const bb = Yb.current.getBoundingClientRect(),
-              ab = Bb.current.offsetHeight,
-              Ub = Math.min(Na, window.innerWidth - 32),
-              Ab = Math.min(Math.max(16, bb.left), window.innerWidth - Ub - 16),
-              Mb = bb.bottom + Wa + ab < window.innerHeight;
-            Rb({
-              left: Ab,
-              top: Mb ? bb.bottom + Wa : Math.max(16, bb.top - Wa - ab)
+          }), [uz]), (0, Fz.useEffect)((() => () => {
+            clearTimeout(Hz.current)
+          }), []), (0, Fz.useLayoutEffect)((() => {
+            if (!uz || !oz.current || !vz.current) return void Dz(null);
+            const zz = oz.current.getBoundingClientRect(),
+              tz = vz.current.offsetHeight,
+              sz = Math.min(Ct, window.innerWidth - 32),
+              Fz = Math.min(Math.max(16, zz.left), window.innerWidth - sz - 16),
+              Wz = zz.bottom + et + tz < window.innerHeight;
+            Dz({
+              left: Fz,
+              top: Wz ? zz.bottom + et : Math.max(16, zz.top - et - tz)
             })
-          }), [Lb]), (0, jb.jsxs)(jb.Fragment, {
-            children: [(0, jb.jsx)("button", {
+          }), [uz]), (0, wz.jsxs)(wz.Fragment, {
+            children: [(0, wz.jsx)("button", {
               type: "button",
-              ref: Yb,
+              ref: oz,
               className: "DocsTypeLink",
-              "aria-expanded": Lb,
-              "aria-describedby": Lb ? Db : void 0,
-              onMouseEnter: zb,
-              onMouseLeave: xb,
-              onFocus: zb,
-              onBlur: xb,
-              onKeyDown: bb => {
-                "Tab" === bb.key && !bb.shiftKey && vb.current && (bb.preventDefault(), vb.current.focus())
+              "aria-expanded": uz,
+              "aria-describedby": uz ? Pz : void 0,
+              onMouseEnter: rz,
+              onMouseLeave: Yz,
+              onFocus: rz,
+              onBlur: Yz,
+              onKeyDown: zz => {
+                "Tab" === zz.key && !zz.shiftKey && Kz.current && (zz.preventDefault(), Kz.current.focus())
               },
-              onClick: zb,
-              children: ab
-            }), Lb && (0, eb.createPortal)((0, jb.jsxs)("span", {
-              ref: Bb,
-              id: Db,
+              onClick: rz,
+              children: tz
+            }), uz && (0, Uz.createPortal)((0, wz.jsxs)("span", {
+              ref: vz,
+              id: Pz,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: Xb ? {
-                left: Xb.left,
-                top: Xb.top,
-                maxWidth: Na
+              style: bz ? {
+                left: bz.left,
+                top: bz.top,
+                maxWidth: Ct
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: zb,
-              onMouseLeave: xb,
-              onFocus: zb,
-              onBlur: xb,
-              children: [(0, jb.jsxs)("span", {
+              onMouseEnter: rz,
+              onMouseLeave: Yz,
+              onFocus: rz,
+              onBlur: Yz,
+              children: [(0, wz.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, jb.jsx)("span", {
+                children: [(0, wz.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: ab
-                }), Tb && (0, jb.jsxs)(Eb.c, {
-                  ref: vb,
+                  children: tz
+                }), Xz && (0, wz.jsxs)(Oz.d, {
+                  ref: Kz,
                   className: "DocsTypePopoverLink",
-                  to: sb(Mb, rb(Tb)),
+                  to: nz(Wz, hz(Xz)),
                   onClick: () => {
-                    Pb(!1)
+                    Nz(!1)
                   },
-                  onKeyDown: bb => {
-                    if ("Tab" === bb.key) {
-                      var ab;
-                      if (bb.preventDefault(), bb.shiftKey || !Yb.current || ! function(bb, ab) {
-                          const Ub = [...document.querySelectorAll(Ha)],
-                            Ab = Ub.slice(Ub.indexOf(bb) + 1).find((bb => bb.getClientRects().length > 0 && !(null !== ab && void 0 !== ab && ab.contains(bb))));
-                          return null === Ab || void 0 === Ab || Ab.focus(), void 0 !== Ab
-                        }(Yb.current, Bb.current)) null === (ab = Yb.current) || void 0 === ab || ab.focus();
-                      bb.shiftKey || Pb(!1)
+                  onKeyDown: zz => {
+                    if ("Tab" === zz.key) {
+                      var tz;
+                      if (zz.preventDefault(), zz.shiftKey || !oz.current || ! function(zz, tz) {
+                          const sz = [...document.querySelectorAll(Zt)],
+                            Fz = sz.slice(sz.indexOf(zz) + 1).find((zz => zz.getClientRects().length > 0 && !(null !== tz && void 0 !== tz && tz.contains(zz))));
+                          return null === Fz || void 0 === Fz || Fz.focus(), void 0 !== Fz
+                        }(oz.current, vz.current)) null === (tz = oz.current) || void 0 === tz || tz.focus();
+                      zz.shiftKey || Nz(!1)
                     }
                   },
-                  children: [rb(Tb).title, (0, jb.jsx)(kb, {
+                  children: [hz(Xz).title, (0, wz.jsx)(gz, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, jb.jsx)(fb, {
+              }), (0, wz.jsx)(mz, {
                 lang: "ts",
-                code: Ub,
+                code: sz,
                 compact: !0
               })]
-            }), null !== Zb && void 0 !== Zb ? Zb : document.body)]
+            }), null !== Bz && void 0 !== Bz ? Bz : document.body)]
           })
         }
-        var Fa = Ub(205),
-          ha = Ub(4455),
-          Ga = Ub(4457),
-          Qa = Ub(4462);
-        const qa = {
+        var ct = sz(201),
+          jt = sz(4395),
+          At = sz(4402),
+          yt = sz(4411);
+        const Mt = {
           progressBar: {
-            qb: 30,
-            ub: .075,
-            Kb: 5,
-            ob: !1,
+            yz: 30,
+            Mz: .075,
+            dz: 5,
+            hz: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            gb: "fa-solid fa-computer-mouse",
+            iz: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            Vb: 3e3,
+            lz: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            Ob: !0,
+            nz: !0,
             scale: 3,
             rotation: 15,
-            cb: !1
+            az: !1
           },
           gravityBar: {
-            qb: 30,
-            Sb: .25,
-            ba: 3,
-            aa: .8,
+            yz: 30,
+            Sz: .25,
+            Vz: 3,
+            Rz: .8,
             gravity: 1,
-            Ua: 1.5,
-            Aa: 8,
-            Ma: 4,
-            ob: !1,
+            pz: 1.5,
+            fz: 8,
+            Ez: 4,
+            hz: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            Ea: .15,
+            tt: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            Ba: 5,
-            ea: 1200,
-            va: .15,
-            La: 3,
+            Wt: 5,
+            Xt: 1200,
+            Ot: .15,
+            ot: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var ua = Ub(307),
-          ra = Ub(1889);
+        var dt = sz(308),
+          ht = sz(1920);
 
-        function Ka(bb) {
-          return bb.startsWith("fa-")
+        function Qt(zz) {
+          return zz.startsWith("fa-")
         }
-        const oa = {
+        const kt = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          la = {
+          it = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function ta(bb) {
-          return "string" === typeof bb ? "text" : "entityName" in bb || "translationKey" in bb ? "other" : (0, ua.qb)(bb) ? "progressBar" : (0, ua.ob)(bb) ? "keyBinding" : "icon" in bb ? "icon" : "str" in bb && "string" === typeof bb.str ? "text" : "other"
+        function Lt(zz) {
+          return "string" === typeof zz ? "text" : "entityName" in zz || "translationKey" in zz ? "other" : (0, dt.yb)(zz) ? "progressBar" : (0, dt.vb)(zz) ? "keyBinding" : "icon" in zz ? "icon" : "str" in zz && "string" === typeof zz.str ? "text" : "other"
         }
-        const wa = [{
+        const lt = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          sa = {
+          nt = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...wa],
+            }, ...lt],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: ra.m
+                options: ht.m
               },
               isRequired: !0
-            }, ...wa],
+            }, ...lt],
             other: []
           };
 
-        function ga(bb) {
-          return "string" === typeof bb ? {
-            str: bb
-          } : bb
+        function qt(zz) {
+          return "string" === typeof zz ? {
+            str: zz
+          } : zz
         }
 
-        function Ca(bb, ab) {
-          let Ub = ga(bb);
-          for (const Ab of ab) Ub = Ub && "object" === typeof Ub ? Ub[Ab] : void 0;
-          return Ub
+        function St(zz, tz) {
+          let sz = qt(zz);
+          for (const Fz of tz) sz = sz && "object" === typeof sz ? sz[Fz] : void 0;
+          return sz
         }
 
-        function Va(bb, ab, Ub) {
-          const Ab = (bb, Mb) => {
-            var Tb;
-            const Eb = ab[Mb],
-              Yb = {
-                ...bb
+        function Vt(zz, tz, sz) {
+          const Fz = (zz, Wz) => {
+            var Xz;
+            const Oz = tz[Wz],
+              oz = {
+                ...zz
               };
-            if (Mb === ab.length - 1) return void 0 === Ub ? delete Yb[Eb] : Yb[Eb] = Ub, Yb;
-            const Bb = Ab(null !== (Tb = bb[Eb]) && void 0 !== Tb ? Tb : {}, Mb + 1);
-            return 0 === Object.keys(Bb).length ? delete Yb[Eb] : Yb[Eb] = Bb, Yb
+            if (Wz === tz.length - 1) return void 0 === sz ? delete oz[Oz] : oz[Oz] = sz, oz;
+            const vz = Fz(null !== (Xz = zz[Oz]) && void 0 !== Xz ? Xz : {}, Wz + 1);
+            return 0 === Object.keys(vz).length ? delete oz[Oz] : oz[Oz] = vz, oz
           };
-          return function(bb) {
-            const ab = Object.keys(bb);
-            return "string" === typeof bb.str && 1 === ab.length ? bb.str : bb
-          }(Ab(ga(bb), 0))
+          return function(zz) {
+            const tz = Object.keys(zz);
+            return "string" === typeof zz.str && 1 === tz.length ? zz.str : zz
+          }(Fz(qt(zz), 0))
         }
 
-        function Oa(bb, ab) {
-          const Ub = ta(bb),
-            Ab = sa[Ub].find((bb => bb.path.join(".") === ab.join("."))),
-            Mb = null !== Ab && void 0 !== Ab && Ab.isRequired && "other" !== Ub ? Ca(la[Ub], ab) : void 0;
-          return Va(bb, ab, Mb)
+        function Rt(zz, tz) {
+          const sz = Lt(zz),
+            Fz = nt[sz].find((zz => zz.path.join(".") === tz.join("."))),
+            Wz = null !== Fz && void 0 !== Fz && Fz.isRequired && "other" !== sz ? St(it[sz], tz) : void 0;
+          return Vt(zz, tz, Wz)
         }
 
-        function ca(bb) {
-          switch (ta(bb)) {
+        function pt(zz) {
+          switch (Lt(zz)) {
             case "text":
-              return String(Ca(bb, ["str"]));
+              return String(St(zz, ["str"]));
             case "icon":
-              return String(Ca(bb, ["icon"]));
+              return String(St(zz, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(Ca(bb,["progress"])))}%`;
+              return `${Math.round(100*Number(St(zz,["progress"])))}%`;
             case "keyBinding":
-              return String(Ca(bb, ["action"]));
+              return String(St(zz, ["action"]));
             case "other":
-              return JSON.stringify(bb)
+              return JSON.stringify(zz)
           }
         }
-        const Ja = /^[A-Za-z_$][\w$]*$/;
+        const ft = /^[A-Za-z_$][\w$]*$/;
 
-        function na(bb) {
-          if (Array.isArray(bb)) return `[${bb.map(na).join(", ")}]`;
-          if (bb && "object" === typeof bb) {
-            const ab = Object.entries(bb).map((bb => {
-              let [ab, Ub] = bb;
-              return `${Ja.test(ab)?ab:JSON.stringify(ab)}: ${na(Ub)}`
+        function Et(zz) {
+          if (Array.isArray(zz)) return `[${zz.map(Et).join(", ")}]`;
+          if (zz && "object" === typeof zz) {
+            const tz = Object.entries(zz).map((zz => {
+              let [tz, sz] = zz;
+              return `${ft.test(tz)?tz:JSON.stringify(tz)}: ${Et(sz)}`
             }));
-            return 0 === ab.length ? "{}" : `{ ${ab.join(", ")} }`
+            return 0 === tz.length ? "{}" : `{ ${tz.join(", ")} }`
           }
-          return JSON.stringify(bb)
+          return JSON.stringify(zz)
         }
 
-        function Sa(bb) {
-          const ab = bb.map(na),
-            Ub = `[${ab.join(", ")}]`;
-          return Ub.length <= 60 ? Ub : `[\n${ab.map((bb=>`    ${bb},`)).join("\n")}\n]`
+        function zs(zz) {
+          const tz = zz.map(Et),
+            sz = `[${tz.join(", ")}]`;
+          return sz.length <= 60 ? sz : `[\n${tz.map((zz=>`    ${zz},`)).join("\n")}\n]`
         }
-        const bU = {
+        const ts = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function aU(bb) {
-          let ab = "";
-          for (let Mb = 0; Mb < bb.length; Mb++) {
-            const Tb = bb[Mb];
-            if ("\\" === Tb) {
-              var Ub;
-              const Ab = null !== (Ub = bb[Mb + 1]) && void 0 !== Ub ? Ub : "";
-              ab += "'" === Ab ? "'" : Tb + Ab, Mb++
-            } else if ('"' === Tb) ab += '\\"';
+        function ss(zz) {
+          let tz = "";
+          for (let Wz = 0; Wz < zz.length; Wz++) {
+            const Xz = zz[Wz];
+            if ("\\" === Xz) {
+              var sz;
+              const Fz = null !== (sz = zz[Wz + 1]) && void 0 !== sz ? sz : "";
+              tz += "'" === Fz ? "'" : Xz + Fz, Wz++
+            } else if ('"' === Xz) tz += '\\"';
             else {
-              var Ab;
-              ab += null !== (Ab = bU[Tb]) && void 0 !== Ab ? Ab : Tb
+              var Fz;
+              tz += null !== (Fz = ts[Xz]) && void 0 !== Fz ? Fz : Xz
             }
           }
-          return `"${ab}"`
+          return `"${tz}"`
         }
 
-        function UU(bb) {
-          if ("string" === typeof bb) return !0;
-          if (!bb || "object" !== typeof bb || Array.isArray(bb)) return !1;
-          const ab = bb;
-          return "ProgressBar" === ab.type ? "number" === typeof ab.progress : "StyledKeyBinding" === ab.type ? ra.m.includes(ab.action) : "string" === typeof ab.icon || "string" === typeof ab.str || "string" === typeof ab.entityName || "string" === typeof ab.translationKey
+        function Fs(zz) {
+          if ("string" === typeof zz) return !0;
+          if (!zz || "object" !== typeof zz || Array.isArray(zz)) return !1;
+          const tz = zz;
+          return "ProgressBar" === tz.type ? "number" === typeof tz.progress : "StyledKeyBinding" === tz.type ? ht.m.includes(tz.action) : "string" === typeof tz.icon || "string" === typeof tz.str || "string" === typeof tz.entityName || "string" === typeof tz.translationKey
         }
 
-        function AU(bb) {
-          let ab;
+        function Ws(zz) {
+          let tz;
           try {
-            ab = function(bb) {
-              let ab = "",
-                Ub = "",
-                Ab = 0;
-              const Mb = () => {
-                ab += Ub.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), Ub = ""
+            tz = function(zz) {
+              let tz = "",
+                sz = "",
+                Fz = 0;
+              const Wz = () => {
+                tz += sz.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), sz = ""
               };
-              for (; Ab < bb.length;) {
-                const Tb = bb.slice(Ab).search(/["'`]|\/\//);
-                if (-1 === Tb) {
-                  Ub += bb.slice(Ab);
+              for (; Fz < zz.length;) {
+                const Xz = zz.slice(Fz).search(/["'`]|\/\//);
+                if (-1 === Xz) {
+                  sz += zz.slice(Fz);
                   break
                 }
-                Ub += bb.slice(Ab, Ab + Tb);
-                const Eb = Ab + Tb,
-                  Yb = bb[Eb];
-                if ("/" === Yb) {
-                  const ab = bb.indexOf("\n", Eb);
-                  Ab = -1 === ab ? bb.length : ab;
+                sz += zz.slice(Fz, Fz + Xz);
+                const Oz = Fz + Xz,
+                  oz = zz[Oz];
+                if ("/" === oz) {
+                  const tz = zz.indexOf("\n", Oz);
+                  Fz = -1 === tz ? zz.length : tz;
                   continue
                 }
-                if (Mb(), "`" === Yb) throw new Error("Use quotes rather than template strings.");
-                let Bb = Eb + 1;
-                for (; Bb < bb.length && bb[Bb] !== Yb;) Bb += "\\" === bb[Bb] ? 2 : 1;
-                if (Bb >= bb.length) throw new Error("A string is missing its closing quote.");
-                const eb = bb.slice(Eb + 1, Bb);
-                ab += aU(eb), Ab = Bb + 1
+                if (Wz(), "`" === oz) throw new Error("Use quotes rather than template strings.");
+                let vz = Oz + 1;
+                for (; vz < zz.length && zz[vz] !== oz;) vz += "\\" === zz[vz] ? 2 : 1;
+                if (vz >= zz.length) throw new Error("A string is missing its closing quote.");
+                const Uz = zz.slice(Oz + 1, vz);
+                tz += ss(Uz), Fz = vz + 1
               }
-              return Mb(), JSON.parse(ab)
-            }(bb.trim())
-          } catch (Ab) {
+              return Wz(), JSON.parse(tz)
+            }(zz.trim())
+          } catch (Fz) {
             return {
               parts: null,
-              error: Ab instanceof SyntaxError ? "This isn't a valid array yet." : Ab.message
+              error: Fz instanceof SyntaxError ? "This isn't a valid array yet." : Fz.message
             }
           }
-          if (!Array.isArray(ab)) return {
+          if (!Array.isArray(tz)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const Ub = ab.findIndex((bb => !UU(bb)));
-          return -1 !== Ub ? {
+          const sz = tz.findIndex((zz => !Fs(zz)));
+          return -1 !== sz ? {
             parts: null,
-            error: `Part ${Ub+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${sz+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: ab,
+            parts: tz,
             error: null
           }
         }
-        const MU = 1 / Fa.c.clientTicksPerSecond,
-          TU = 700,
-          EU = {
+        const Xs = 1 / ct.d.clientTicksPerSecond,
+          Os = 700,
+          os = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          YU = {
-            progressBar: qa.progressBar.gb,
-            timedClick: qa.timedClick.icon,
-            gravityBar: qa.gravityBar.icon,
-            precisionBar: qa.precisionBar.icon,
-            rhythmClick: qa.rhythmClick.icon
+          vs = {
+            progressBar: Mt.progressBar.iz,
+            timedClick: Mt.timedClick.icon,
+            gravityBar: Mt.gravityBar.icon,
+            precisionBar: Mt.precisionBar.icon,
+            rhythmClick: Mt.rhythmClick.icon
           };
 
-        function BU(bb) {
+        function Us(zz) {
           let {
-            type: ab
-          } = bb;
-          const [Ub, Mb] = (0, Ab.useState)("ready"), [Eb, Yb] = (0, Ab.useState)(1), [Bb, eb] = (0, Ab.useState)(!0), vb = (0, Ab.useRef)(null), Lb = (0, Ab.useRef)(null), Pb = (0, Ab.useRef)(null), Xb = (0, Ab.useRef)(new Set), Rb = (0, Ab.useRef)(!1), yb = YU[ab], Zb = (0, Ab.useMemo)((() => ({
+            type: tz
+          } = zz;
+          const [sz, Wz] = (0, Fz.useState)("ready"), [Oz, oz] = (0, Fz.useState)(1), [vz, Uz] = (0, Fz.useState)(!0), Kz = (0, Fz.useRef)(null), uz = (0, Fz.useRef)(null), Nz = (0, Fz.useRef)(null), bz = (0, Fz.useRef)(new Set), Dz = (0, Fz.useRef)(!1), Hz = vs[tz], Bz = (0, Fz.useMemo)((() => ({
             getState: () => {
-              var bb, ab;
-              return null !== (bb = null === (ab = Pb.current) || void 0 === ab ? void 0 : ab.getState()) && void 0 !== bb ? bb : EU
+              var zz, tz;
+              return null !== (zz = null === (tz = Nz.current) || void 0 === tz ? void 0 : tz.getState()) && void 0 !== zz ? zz : os
             },
-            onFrame: bb => (Xb.current.add(bb), () => {
-              Xb.current.delete(bb)
+            onFrame: zz => (bz.current.add(zz), () => {
+              bz.current.delete(zz)
             })
           })), []);
-          (0, Ab.useEffect)((() => {
-            const bb = vb.current,
-              ab = Lb.current;
-            if (!bb || !ab) return;
-            const Ub = new ResizeObserver((() => {
-              Yb(bb.clientWidth / Math.max(1, ab.offsetWidth))
+          (0, Fz.useEffect)((() => {
+            const zz = Kz.current,
+              tz = uz.current;
+            if (!zz || !tz) return;
+            const sz = new ResizeObserver((() => {
+              oz(zz.clientWidth / Math.max(1, tz.offsetWidth))
             }));
-            return Ub.observe(bb), () => {
-              Ub.disconnect()
+            return sz.observe(zz), () => {
+              sz.disconnect()
             }
-          }), []), (0, Ab.useEffect)((() => {
-            var bb;
-            if ("playing" !== Ub) return;
-            let Ab = !1;
-            const Tb = new Qa.f[ab](qa[ab], (bb => {
-              Ab = !0, eb(!1), Mb(bb ? "succeeded" : "failed")
+          }), []), (0, Fz.useEffect)((() => {
+            var zz;
+            if ("playing" !== sz) return;
+            let Fz = !1;
+            const Xz = new yt.g[tz](Mt[tz], (zz => {
+              Fz = !0, Uz(!1), Wz(zz ? "succeeded" : "failed")
             }), (() => {}));
-            Pb.current = Tb;
-            let Eb = 0,
-              Yb = performance.now(),
-              Bb = requestAnimationFrame((function bb(ab) {
-                for (Eb += Math.min(.25, (ab - Yb) / 1e3), Yb = ab; Eb >= MU && !Ab;) Eb -= MU, Tb.handleTick(MU);
-                for (const Ub of Xb.current) Ub();
-                Ab || (Bb = requestAnimationFrame(bb))
+            Nz.current = Xz;
+            let Oz = 0,
+              oz = performance.now(),
+              vz = requestAnimationFrame((function zz(tz) {
+                for (Oz += Math.min(.25, (tz - oz) / 1e3), oz = tz; Oz >= Xs && !Fz;) Oz -= Xs, Xz.handleTick(Xs);
+                for (const sz of bz.current) sz();
+                Fz || (vz = requestAnimationFrame(zz))
               }));
-            return null === (bb = vb.current) || void 0 === bb || bb.focus({
+            return null === (zz = Kz.current) || void 0 === zz || zz.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(Bb), Tb.tearDown(), Pb.current = null, Rb.current = !1
+              cancelAnimationFrame(vz), Xz.tearDown(), Nz.current = null, Dz.current = !1
             }
-          }), [Ub, ab]), (0, Ab.useEffect)((() => {
-            if (Bb) return;
-            const bb = setTimeout((() => {
-              eb(!0)
-            }), TU);
+          }), [sz, tz]), (0, Fz.useEffect)((() => {
+            if (vz) return;
+            const zz = setTimeout((() => {
+              Uz(!0)
+            }), Os);
             return () => {
-              clearTimeout(bb)
+              clearTimeout(zz)
             }
-          }), [Bb]);
-          const Db = bb => {
-            var ab;
-            "playing" === Ub && Rb.current !== bb && (Rb.current = bb, null === (ab = Pb.current) || void 0 === ab || ab.handleMouseInput(bb))
+          }), [vz]);
+          const Pz = zz => {
+            var tz;
+            "playing" === sz && Dz.current !== zz && (Dz.current = zz, null === (tz = Nz.current) || void 0 === tz || tz.handleMouseInput(zz))
           };
-          return (0, jb.jsxs)("div", {
+          return (0, wz.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, jb.jsxs)("div", {
-              ref: vb,
-              className: Tb()("DocsQteStage", {
-                Playing: "playing" === Ub
+            children: [(0, wz.jsxs)("div", {
+              ref: Kz,
+              className: Xz()("DocsQteStage", {
+                Playing: "playing" === sz
               }),
-              tabIndex: "playing" === Ub ? 0 : -1,
-              role: "playing" === Ub ? "button" : void 0,
-              "aria-label": "playing" === Ub ? `${ab} quick time event: click or press Space` : void 0,
-              onPointerDown: bb => {
-                0 === bb.button && Db(!0)
+              tabIndex: "playing" === sz ? 0 : -1,
+              role: "playing" === sz ? "button" : void 0,
+              "aria-label": "playing" === sz ? `${tz} quick time event: click or press Space` : void 0,
+              onPointerDown: zz => {
+                0 === zz.button && Pz(!0)
               },
               onPointerUp: () => {
-                Db(!1)
+                Pz(!1)
               },
               onPointerLeave: () => {
-                Db(!1)
+                Pz(!1)
               },
               onPointerCancel: () => {
-                Db(!1)
+                Pz(!1)
               },
-              onKeyDown: bb => {
-                "playing" !== Ub || " " !== bb.key && "Enter" !== bb.key || (bb.preventDefault(), Db(!0))
+              onKeyDown: zz => {
+                "playing" !== sz || " " !== zz.key && "Enter" !== zz.key || (zz.preventDefault(), Pz(!0))
               },
-              onKeyUp: bb => {
-                "playing" !== Ub || " " !== bb.key && "Enter" !== bb.key || Db(!1)
+              onKeyUp: zz => {
+                "playing" !== sz || " " !== zz.key && "Enter" !== zz.key || Pz(!1)
               },
-              children: [(0, jb.jsx)("div", {
-                ref: Lb,
+              children: [(0, wz.jsx)("div", {
+                ref: uz,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${Eb})`
+                  transform: `scale(${Oz})`
                 },
-                children: "playing" === Ub && (0, jb.jsx)(Ga.c.Provider, {
-                  value: Zb,
-                  children: (0, jb.jsx)(ha.e, {
+                children: "playing" === sz && (0, wz.jsx)(At.b.Provider, {
+                  value: Bz,
+                  children: (0, wz.jsx)(jt.d, {
                     qte: {
-                      type: ab,
-                      parameters: qa[ab]
+                      type: tz,
+                      parameters: Mt[tz]
                     }
                   })
                 })
-              }), "playing" !== Ub && (0, jb.jsxs)("div", {
+              }), "playing" !== sz && (0, wz.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== Ub && (0, jb.jsxs)("div", {
-                  className: Tb()("DocsQteResult", "succeeded" === Ub ? "Succeeded" : "Failed"),
-                  children: [(0, jb.jsx)(kb, {
-                    name: "succeeded" === Ub ? "check" : "cross",
+                children: ["ready" !== sz && (0, wz.jsxs)("div", {
+                  className: Xz()("DocsQteResult", "succeeded" === sz ? "Succeeded" : "Failed"),
+                  children: [(0, wz.jsx)(gz, {
+                    name: "succeeded" === sz ? "check" : "cross",
                     isTinted: !0
-                  }), (0, jb.jsx)("span", {
-                    children: "succeeded" === Ub ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, wz.jsx)("span", {
+                    children: "succeeded" === sz ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, jb.jsxs)("button", {
+                }), (0, wz.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !Bb,
+                  disabled: !vz,
                   onClick: () => {
-                    Mb("playing")
+                    Wz("playing")
                   },
-                  children: [(0, jb.jsx)(kb, {
-                    name: "ready" === Ub ? "play" : "replay"
-                  }), (0, jb.jsx)("span", {
-                    children: "ready" === Ub ? `Try ${ab}` : "Play again"
+                  children: [(0, wz.jsx)(gz, {
+                    name: "ready" === sz ? "play" : "replay"
+                  }), (0, wz.jsx)("span", {
+                    children: "ready" === sz ? `Try ${tz}` : "Play again"
                   })]
                 })]
               })]
-            }), yb && !Ka(yb) && (0, jb.jsxs)("p", {
+            }), Hz && !Qt(Hz) && (0, wz.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, jb.jsx)("code", {
-                children: yb
+              children: ["The ", (0, wz.jsx)("code", {
+                children: Hz
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function eU(bb) {
+        function Ks(zz) {
           let {
-            level: ab,
-            text: Ub,
-            anchor: Ab,
-            className: Mb
-          } = bb;
-          const Eb = `h${Math.min(ab,6)}`;
-          return (0, jb.jsxs)(Eb, {
-                id: Ab,
-                className: Tb()("DocsHeading", Mb),
-                children: [(0, jb.jsx)(ia, {
-                      text: Ub
-                    }), (0, jb.jsx)("a", {
+            level: tz,
+            text: sz,
+            anchor: Fz,
+            className: Wz
+          } = zz;
+          const Oz = `h${Math.min(tz,6)}`;
+          return (0, wz.jsxs)(Oz, {
+                id: Fz,
+                className: Xz()("DocsHeading", Wz),
+                children: [(0, wz.jsx)(xt, {
+                      text: sz
+                    }), (0, wz.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${Ab}`,
-                        "aria-label": `Link to ${Ub.replace(/`/g,"")}`,children:"#"})]})}function vU(bb){let{items:ab,ordered:Ub}=bb;const Ab=Ub?"ol":"ul";return(0,jb.jsx)(Ab,{className:"DocsList",children:ab.map(((bb,ab)=>(0,jb.jsxs)("li",{children:[(0,jb.jsx)(ia,{text:bb.text}),bb.children.length>0&&(0,jb.jsx)(vU,{items:bb.children,ordered:Ub})]},ab)))})}function LU(bb){const ab=bb[0],Ub="paragraph"===(null===ab||void 0===ab?void 0:ab.kind)?ab.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(Ub)?"warning":/^\*\*(tip|prefer)/.test(Ub)?"tip":"note"}function PU(bb){let{block:ab}=bb;switch(ab.kind){case"heading":return(0,jb.jsx)(eU,{level:ab.level,text:ab.text,anchor:ab.anchor});case"paragraph":return(0,jb.jsx)("p",{children:(0,jb.jsx)(ia,{text:ab.text})});case"code":{const bb="ts"===ab.lang?function(bb){const ab=bb.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return ab&&Object.hasOwn(qa,ab[1])?ab[1]:null}(ab.code):null;return(0,jb.jsxs)(jb.Fragment,{children:[(0,jb.jsx)(fb,{code:ab.code,lang:ab.lang}),bb&&(0,jb.jsx)(BU,{type:bb})]})}case"table":return(0,jb.jsx)("div",{className:"DocsTableScroll",children:(0,jb.jsxs)("table",{className:"DocsTable",children:[(0,jb.jsx)("thead",{children:(0,jb.jsx)("tr",{children:ab.header.map(((bb,ab)=>(0,jb.jsx)("th",{children:(0,jb.jsx)(ia,{text:bb})},ab)))})}),(0,jb.jsx)("tbody",{children:ab.rows.map(((bb,ab)=>(0,jb.jsx)("tr",{children:bb.map(((bb,ab)=>(0,jb.jsx)("td",{children:(0,jb.jsx)(ia,{text:bb})},ab)))},ab)))})]})});case"list":return(0,jb.jsx)(vU,{items:ab.items,ordered:ab.ordered});case"quote":return(0,jb.jsx)("aside",{className:Tb()("DocsCallout",LU(ab.blocks)),children:(0,jb.jsx)(XU,{blocks:ab.blocks})});case"rule":return(0,jb.jsx)("hr",{className:"DocsRule"})}}function XU(bb){let{blocks:ab}=bb;return(0,jb.jsx)(jb.Fragment,{children:ab.map(((bb,ab)=>(0,jb.jsx)(PU,{block:bb},ab)))})}var jU=Ub(4437),RU=Ub(4439);function kU(bb){return"blocks"===bb||"items"===bb}const yU=new Map;function ZU(bb){let ab=yU.get(bb);return ab||(ab=function(bb){const ab={entries:[],legend:[],notes:[],examples:[]};let Ub=!1;for(const Tb of bb.split(/\r?\n/).slice(1)){if(Tb.startsWith("#")){const bb=Tb.replace(/^# ?/,""),Ab=bb.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Ab?ab.legend.push({code:Ab[1],meaning:Ab[2],usage:Ab[3].trim()}):/^Examples:/.test(bb.trim())?Ub=!0:Ub&&bb.trim()?ab.examples.push(bb.trim()):bb.trim()&&!/^\s/.test(bb)&&ab.notes.push(bb.trim());continue}const bb=Tb.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Ab,Mb;bb&&ab.entries.push({name:bb[1],variants:null!==(Ab=null===(Mb=bb[2])||void 0===Mb?void 0:Mb.split(","))&&void 0!==Ab?Ab:[]})}return ab}("blocks"===bb?jU:RU),yU.set(bb,ab)),ab}function DU(bb){let{className:ab,value:Ub,placeholder:Ab,label:Mb,onChange:Tb,count:Eb,children:Yb}=bb;return(0,jb.jsxs)("div",{className:ab,children:[(0,jb.jsx)(kb,{name:"magnifying-glass"}),(0,jb.jsx)("input",{type:"search",value:Ub,placeholder:Ab,"aria-label":Mb,onChange:bb=>{Tb(bb.target.value)}}),Yb,Eb&&(0,jb.jsxs)("span",{className:"DocsFilterCount",children:[Eb.visible," of ",Eb.total]})]})}var zU=Ub(990);function xU(bb){const ab=bb.trim().match(/^(` {
+                        href: `#${Fz}`,
+                        "aria-label": `Link to ${sz.replace(/`/g,"")}`,children:"#"})]})}function us(zz){let{items:tz,ordered:sz}=zz;const Fz=sz?"ol":"ul";return(0,wz.jsx)(Fz,{className:"DocsList",children:tz.map(((zz,tz)=>(0,wz.jsxs)("li",{children:[(0,wz.jsx)(xt,{text:zz.text}),zz.children.length>0&&(0,wz.jsx)(us,{items:zz.children,ordered:sz})]},tz)))})}function Ns(zz){const tz=zz[0],sz="paragraph"===(null===tz||void 0===tz?void 0:tz.kind)?tz.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(sz)?"warning":/^\*\*(tip|prefer)/.test(sz)?"tip":"note"}function bs(zz){let{block:tz}=zz;switch(tz.kind){case"heading":return(0,wz.jsx)(Ks,{level:tz.level,text:tz.text,anchor:tz.anchor});case"paragraph":return(0,wz.jsx)("p",{children:(0,wz.jsx)(xt,{text:tz.text})});case"code":{const zz="ts"===tz.lang?function(zz){const tz=zz.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return tz&&Object.hasOwn(Mt,tz[1])?tz[1]:null}(tz.code):null;return(0,wz.jsxs)(wz.Fragment,{children:[(0,wz.jsx)(mz,{code:tz.code,lang:tz.lang}),zz&&(0,wz.jsx)(Us,{type:zz})]})}case"table":return(0,wz.jsx)("div",{className:"DocsTableScroll",children:(0,wz.jsxs)("table",{className:"DocsTable",children:[(0,wz.jsx)("thead",{children:(0,wz.jsx)("tr",{children:tz.header.map(((zz,tz)=>(0,wz.jsx)("th",{children:(0,wz.jsx)(xt,{text:zz})},tz)))})}),(0,wz.jsx)("tbody",{children:tz.rows.map(((zz,tz)=>(0,wz.jsx)("tr",{children:zz.map(((zz,tz)=>(0,wz.jsx)("td",{children:(0,wz.jsx)(xt,{text:zz})},tz)))},tz)))})]})});case"list":return(0,wz.jsx)(us,{items:tz.items,ordered:tz.ordered});case"quote":return(0,wz.jsx)("aside",{className:Xz()("DocsCallout",Ns(tz.blocks)),children:(0,wz.jsx)(ws,{blocks:tz.blocks})});case"rule":return(0,wz.jsx)("hr",{className:"DocsRule"})}}function ws(zz){let{blocks:tz}=zz;return(0,wz.jsx)(wz.Fragment,{children:tz.map(((zz,tz)=>(0,wz.jsx)(bs,{block:zz},tz)))})}var Ds=sz(4387),gs=sz(4389);function Hs(zz){return"blocks"===zz||"items"===zz}const Bs=new Map;function Ps(zz){let tz=Bs.get(zz);return tz||(tz=function(zz){const tz={entries:[],legend:[],notes:[],examples:[]};let sz=!1;for(const Xz of zz.split(/\r?\n/).slice(1)){if(Xz.startsWith("#")){const zz=Xz.replace(/^# ?/,""),Fz=zz.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Fz?tz.legend.push({code:Fz[1],meaning:Fz[2],usage:Fz[3].trim()}):/^Examples:/.test(zz.trim())?sz=!0:sz&&zz.trim()?tz.examples.push(zz.trim()):zz.trim()&&!/^\s/.test(zz)&&tz.notes.push(zz.trim());continue}const zz=Xz.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Fz,Wz;zz&&tz.entries.push({name:zz[1],variants:null!==(Fz=null===(Wz=zz[2])||void 0===Wz?void 0:Wz.split(","))&&void 0!==Fz?Fz:[]})}return tz}("blocks"===zz?Ds:gs),Bs.set(zz,tz)),tz}function rs(zz){let{className:tz,value:sz,placeholder:Fz,label:Wz,onChange:Xz,count:Oz,children:oz}=zz;return(0,wz.jsxs)("div",{className:tz,children:[(0,wz.jsx)(gz,{name:"magnifying-glass"}),(0,wz.jsx)("input",{type:"search",value:sz,placeholder:Fz,"aria-label":Wz,onChange:zz=>{Xz(zz.target.value)}}),oz,Oz&&(0,wz.jsxs)("span",{className:"DocsFilterCount",children:[Oz.visible," of ",Oz.total]})]})}var Ys=sz(1036);function xs(zz){const tz=zz.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return ab?ab[2]:null}function iU(bb){return"paragraph"===bb.kind&&""===bb.text.trim()}function fU(bb){const ab={name:bb.heading.text,description:[],params:[],returns:null};let Ub="description";for(const Mb of bb.blocks)if(!iU(Mb))if("heading"===Mb.kind&&/^Parameters:?$/.test(Mb.text))Ub="params";else if("heading"===Mb.kind&&/^Returns:?$/.test(Mb.text))Ub="returns",ab.returns={type:"",description:[]};else if("params"!==Ub||"table"!==Mb.kind){if("returns"===Ub&&"paragraph"===Mb.kind&&""===ab.returns.type){const bb=xU(Mb.text);if(null!==bb){ab.returns.type=bb.replaceAll("\\|","|");continue}}"returns"===Ub?ab.returns.description.push(Mb):ab.description.push(Mb)}else for(const[bb,Ub,Tb]of Mb.rows){var Ab;ab.params.push({name:bb,type:null!==(Ab=xU(Ub))&&void 0!==Ab?Ab:Ub,description:null!==Tb&&void 0!==Tb?Tb:""})}return ab}const mU=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function pU(bb){return bb.filter((bb=>!iU(bb)))}const NU=/^[\w][\w .'&!:()-]*$/,WU=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function HU(bb){var ab;if("code"===bb.kind&&"text"===bb.lang){const ab=bb.code.split("\n").map((bb=>bb.trim())).filter(Boolean);return ab.length>0&&ab.every((bb=>NU.test(bb)))?ab.map((bb=>({name:bb}))):null}return"paragraph"===bb.kind&&WU.test(bb.text.trim())?[...bb.text.matchAll(/`([ ^ `]+)` / g)].flatMap((bb => bb[1].split(/,\s*/).map((bb => ({
-                              name: bb.trim()
-                            }))))): "table" === bb.kind && null !== (ab = bb.header[0]) && void 0 !== ab && ab.startsWith("Song") ? bb.rows.map((bb => {
-                              let [ab, Ub] = bb;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return tz?tz[2]:null}function ms(zz){return"paragraph"===zz.kind&&""===zz.text.trim()}function Is(zz){const tz={name:zz.heading.text,description:[],params:[],returns:null};let sz="description";for(const Wz of zz.blocks)if(!ms(Wz))if("heading"===Wz.kind&&/^Parameters:?$/.test(Wz.text))sz="params";else if("heading"===Wz.kind&&/^Returns:?$/.test(Wz.text))sz="returns",tz.returns={type:"",description:[]};else if("params"!==sz||"table"!==Wz.kind){if("returns"===sz&&"paragraph"===Wz.kind&&""===tz.returns.type){const zz=xs(Wz.text);if(null!==zz){tz.returns.type=zz.replaceAll("\\|","|");continue}}"returns"===sz?tz.returns.description.push(Wz):tz.description.push(Wz)}else for(const[zz,sz,Xz]of Wz.rows){var Fz;tz.params.push({name:zz,type:null!==(Fz=xs(sz))&&void 0!==Fz?Fz:sz,description:null!==Xz&&void 0!==Xz?Xz:""})}return tz}const Cs=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function es(zz){return zz.filter((zz=>!ms(zz)))}const Zs=/^[\w][\w .'&!:()-]*$/,Gs=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Ts(zz){var tz;if("code"===zz.kind&&"text"===zz.lang){const tz=zz.code.split("\n").map((zz=>zz.trim())).filter(Boolean);return tz.length>0&&tz.every((zz=>Zs.test(zz)))?tz.map((zz=>({name:zz}))):null}return"paragraph"===zz.kind&&Gs.test(zz.text.trim())?[...zz.text.matchAll(/`([ ^ `]+)` / g)].flatMap((zz => zz[1].split(/,\s*/).map((zz => ({
+                              name: zz.trim()
+                            }))))): "table" === zz.kind && null !== (tz = zz.header[0]) && void 0 !== tz && tz.startsWith("Song") ? zz.rows.map((zz => {
+                              let [tz, sz] = zz;
                               return {
-                                name: ab.replace(/`/g, ""),
-                                caption: Ub
+                                name: tz.replace(/`/g, ""),
+                                caption: sz
                               }
                             })) : null
                           }
 
-                          function IU(bb) {
-                            const ab = [];
-                            for (const Ub of bb) {
-                              const bb = HU(Ub),
-                                Ab = ab.at(-1),
-                                Mb = "table" === Ub.kind;
-                              bb ? "names" === (null === Ab || void 0 === Ab ? void 0 : Ab.kind) && Ab.isSongs === Mb ? Ab.names.push(...bb) : ab.push({
+                          function cs(zz) {
+                            const tz = [];
+                            for (const sz of zz) {
+                              const zz = Ts(sz),
+                                Fz = tz.at(-1),
+                                Wz = "table" === sz.kind;
+                              zz ? "names" === (null === Fz || void 0 === Fz ? void 0 : Fz.kind) && Fz.isSongs === Wz ? Fz.names.push(...zz) : tz.push({
                                 kind: "names",
-                                names: bb,
-                                isSongs: Mb
-                              }) : ab.push({
+                                names: zz,
+                                isSongs: Wz
+                              }) : tz.push({
                                 kind: "block",
-                                block: Ub
+                                block: sz
                               })
                             }
-                            return ab
+                            return tz
                           }
-                          const dU = {
+                          const As = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function FU(bb, ab) {
-                            return `${dU[bb]}-${(0,mb.r)(ab)}`
+                          function ys(zz, tz) {
+                            return `${As[zz]}-${(0,Jz.t)(tz)}`
                           }
-                          const hU = new WeakMap;
+                          const Ms = new WeakMap;
 
-                          function GU(bb, ab, Ub) {
-                            let Ab = hU.get(ab);
-                            if (!Ab) {
-                              Ab = new Map;
-                              const Ub = new Set;
-                              for (const Mb of (0, mb.u)(ab)) {
-                                const ab = IU(pU(Mb.blocks)).map((ab => {
-                                  if ("block" === ab.kind) return ab;
+                          function ds(zz, tz, sz) {
+                            let Fz = Ms.get(tz);
+                            if (!Fz) {
+                              Fz = new Map;
+                              const sz = new Set;
+                              for (const Wz of (0, Jz.w)(tz)) {
+                                const tz = cs(es(Wz.blocks)).map((tz => {
+                                  if ("block" === tz.kind) return tz;
                                   return {
                                     kind: "names",
-                                    names: ab.names.map((ab => {
-                                      var Ab, Tb;
-                                      const Eb = FU(bb, ab.name);
-                                      let Yb = Eb;
-                                      for (let bb = 2; Ub.has(Yb); bb++) Yb = `${Eb}-${bb}`;
-                                      return Ub.add(Yb), {
-                                        ...ab,
-                                        anchor: Yb,
-                                        heading: null !== (Ab = null === (Tb = Mb.heading) || void 0 === Tb ? void 0 : Tb.text) && void 0 !== Ab ? Ab : ""
+                                    names: tz.names.map((tz => {
+                                      var Fz, Xz;
+                                      const Oz = ys(zz, tz.name);
+                                      let oz = Oz;
+                                      for (let zz = 2; sz.has(oz); zz++) oz = `${Oz}-${zz}`;
+                                      return sz.add(oz), {
+                                        ...tz,
+                                        anchor: oz,
+                                        heading: null !== (Fz = null === (Xz = Wz.heading) || void 0 === Xz ? void 0 : Xz.text) && void 0 !== Fz ? Fz : ""
                                       }
                                     })),
-                                    isSongs: ab.isSongs
+                                    isSongs: tz.isSongs
                                   }
                                 }));
-                                Ab.set(Mb.blocks, ab)
+                                Fz.set(Wz.blocks, tz)
                               }
-                              hU.set(ab, Ab)
+                              Ms.set(tz, Fz)
                             }
-                            const Mb = Ab.get(Ub);
-                            if (!Mb) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return Mb
+                            const Wz = Fz.get(sz);
+                            if (!Wz) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return Wz
                           }
-                          const QU = "/textures/docs/skinPreviews",
-                            qU = [{
+                          const hs = "/textures/docs/skinPreviews",
+                            Qs = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var uU = Ub(3942),
-                            rU = Ub(3959);
+                          var ks = sz(3913),
+                            is = sz(3926);
 
-                          function KU(bb) {
-                            return Object.hasOwn(uU.f, bb) ? uU.f[bb] : null
+                          function Ls(zz) {
+                            return Object.hasOwn(ks.e, zz) ? ks.e[zz] : null
                           }
-                          const oU = {
+                          const ls = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: rU.f.Standard
+                            blendMode: is.f.Standard
                           };
 
-                          function lU(bb, ab, Ub) {
-                            return ab + (Ub - ab) * bb()
+                          function ns(zz, tz, sz) {
+                            return tz + (sz - tz) * zz()
                           }
 
-                          function tU(bb, ab, Ub) {
-                            return bb + (ab - bb) * Ub
+                          function as(zz, tz, sz) {
+                            return zz + (tz - zz) * sz
                           }
 
-                          function wU(bb) {
-                            return bb.length > 0 && "timeFraction" in bb[0]
+                          function qs(zz) {
+                            return zz.length > 0 && "timeFraction" in zz[0]
                           }
 
-                          function sU(bb, ab) {
-                            if (0 === bb.colorGradients.length) return [{
+                          function Ss(zz, tz) {
+                            if (0 === zz.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!wU(bb.colorGradients)) {
-                              const Ub = bb.colorGradients,
+                            if (!qs(zz.colorGradients)) {
+                              const sz = zz.colorGradients,
                                 {
-                                  color: Ab
-                                } = Ub[Math.floor(ab() * Ub.length) % Ub.length];
+                                  color: Fz
+                                } = sz[Math.floor(tz() * sz.length) % sz.length];
                               return [{
                                 at: 0,
-                                colour: [Ab[0] / 255, Ab[1] / 255, Ab[2] / 255, 1]
+                                colour: [Fz[0] / 255, Fz[1] / 255, Fz[2] / 255, 1]
                               }]
                             }
-                            return [...bb.colorGradients].sort(((bb, ab) => bb.timeFraction - ab.timeFraction)).map((bb => {
-                              var Ub, Ab, Mb;
-                              const Tb = bb.minColor,
-                                Eb = null !== (Ub = bb.maxColor) && void 0 !== Ub ? Ub : Tb,
-                                Yb = ab(),
-                                Bb = [tU(Tb[0], Eb[0], Yb) / 255, tU(Tb[1], Eb[1], Yb) / 255, tU(Tb[2], Eb[2], Yb) / 255, tU(null !== (Ab = Tb[3]) && void 0 !== Ab ? Ab : 1, null !== (Mb = Eb[3]) && void 0 !== Mb ? Mb : 1, Yb)];
+                            return [...zz.colorGradients].sort(((zz, tz) => zz.timeFraction - tz.timeFraction)).map((zz => {
+                              var sz, Fz, Wz;
+                              const Xz = zz.minColor,
+                                Oz = null !== (sz = zz.maxColor) && void 0 !== sz ? sz : Xz,
+                                oz = tz(),
+                                vz = [as(Xz[0], Oz[0], oz) / 255, as(Xz[1], Oz[1], oz) / 255, as(Xz[2], Oz[2], oz) / 255, as(null !== (Fz = Xz[3]) && void 0 !== Fz ? Fz : 1, null !== (Wz = Oz[3]) && void 0 !== Wz ? Wz : 1, oz)];
                               return {
-                                at: bb.timeFraction,
-                                colour: Bb
+                                at: zz.timeFraction,
+                                colour: vz
                               }
                             }))
                           }
 
-                          function gU(bb, ab, Ub, Ab) {
-                            const Mb = lU(Ab, bb.minEmitPower, bb.maxEmitPower),
-                              Tb = ab => lU(Ab, Math.min(bb.dir1[ab], bb.dir2[ab]), Math.max(bb.dir1[ab], bb.dir2[ab])) * Mb,
-                              Eb = [...bb.velocityGradients].sort(((bb, ab) => bb.timeFraction - ab.timeFraction)).map((bb => ({
-                                at: bb.timeFraction,
-                                factor: lU(Ab, bb.factor, bb.factor2)
+                          function Vs(zz, tz, sz, Fz) {
+                            const Wz = ns(Fz, zz.minEmitPower, zz.maxEmitPower),
+                              Xz = tz => ns(Fz, Math.min(zz.dir1[tz], zz.dir2[tz]), Math.max(zz.dir1[tz], zz.dir2[tz])) * Wz,
+                              Oz = [...zz.velocityGradients].sort(((zz, tz) => zz.timeFraction - tz.timeFraction)).map((zz => ({
+                                at: zz.timeFraction,
+                                factor: ns(Fz, zz.factor, zz.factor2)
                               })));
                             return {
-                              pos: [lU(Ab, ab[0], Ub[0]), lU(Ab, ab[1], Ub[1]), lU(Ab, ab[2], Ub[2])],
-                              dir: [Tb(0), Tb(1), Tb(2)],
+                              pos: [ns(Fz, tz[0], sz[0]), ns(Fz, tz[1], sz[1]), ns(Fz, tz[2], sz[2])],
+                              dir: [Xz(0), Xz(1), Xz(2)],
                               age: 0,
-                              life: lU(Ab, bb.minLifeTime, bb.maxLifeTime),
-                              size: lU(Ab, bb.minSize, bb.maxSize),
-                              colours: sU(bb, Ab),
-                              velocityFactors: Eb
+                              life: ns(Fz, zz.minLifeTime, zz.maxLifeTime),
+                              size: ns(Fz, zz.minSize, zz.maxSize),
+                              colours: Ss(zz, Fz),
+                              velocityFactors: Oz
                             }
                           }
 
-                          function CU(bb, ab, Ub, Ab) {
-                            if (ab < bb[0].at) return Ub(Math.min(1, bb.length - 1));
-                            for (let Mb = 0; Mb < bb.length - 1; Mb++)
-                              if (ab <= bb[Mb + 1].at) {
-                                const Tb = bb[Mb + 1].at - bb[Mb].at;
-                                return Ab(Ub(Mb), Ub(Mb + 1), Tb > 0 ? (ab - bb[Mb].at) / Tb : 1)
-                              } return Ub(bb.length - 1)
+                          function Rs(zz, tz, sz, Fz) {
+                            if (tz < zz[0].at) return sz(Math.min(1, zz.length - 1));
+                            for (let Wz = 0; Wz < zz.length - 1; Wz++)
+                              if (tz <= zz[Wz + 1].at) {
+                                const Xz = zz[Wz + 1].at - zz[Wz].at;
+                                return Fz(sz(Wz), sz(Wz + 1), Xz > 0 ? (tz - zz[Wz].at) / Xz : 1)
+                              } return sz(zz.length - 1)
                           }
 
-                          function VU(bb) {
-                            return CU(bb.colours, bb.age / bb.life, (ab => bb.colours[ab].colour), ((bb, ab, Ub) => [tU(bb[0], ab[0], Ub), tU(bb[1], ab[1], Ub), tU(bb[2], ab[2], Ub), tU(bb[3], ab[3], Ub)]))
+                          function ps(zz) {
+                            return Rs(zz.colours, zz.age / zz.life, (tz => zz.colours[tz].colour), ((zz, tz, sz) => [as(zz[0], tz[0], sz), as(zz[1], tz[1], sz), as(zz[2], tz[2], sz), as(zz[3], tz[3], sz)]))
                           }
 
-                          function OU(bb, ab, Ub) {
-                            if (bb.age += Ub, bb.age >= bb.life) return !1;
-                            const Ab = function(bb) {
-                              return 0 === bb.velocityFactors.length ? 1 : CU(bb.velocityFactors, bb.age / bb.life, (ab => bb.velocityFactors[ab].factor), tU)
-                            }(bb) * Ub;
-                            for (let Tb = 0; Tb < 3; Tb++) {
-                              var Mb;
-                              bb.pos[Tb] += bb.dir[Tb] * Ab, bb.dir[Tb] += (null !== (Mb = ab[Tb]) && void 0 !== Mb ? Mb : 0) * Ub
+                          function fs(zz, tz, sz) {
+                            if (zz.age += sz, zz.age >= zz.life) return !1;
+                            const Fz = function(zz) {
+                              return 0 === zz.velocityFactors.length ? 1 : Rs(zz.velocityFactors, zz.age / zz.life, (tz => zz.velocityFactors[tz].factor), as)
+                            }(zz) * sz;
+                            for (let Xz = 0; Xz < 3; Xz++) {
+                              var Wz;
+                              zz.pos[Xz] += zz.dir[Xz] * Fz, zz.dir[Xz] += (null !== (Wz = tz[Xz]) && void 0 !== Wz ? Wz : 0) * sz
                             }
                             return !0
                           }
 
-                          function cU(bb) {
-                            return String(Math.round(1e6 * bb) / 1e6)
+                          function Es(zz) {
+                            return String(Math.round(1e6 * zz) / 1e6)
                           }
 
-                          function JU(bb) {
-                            return `[${bb.map(cU).join(", ")}]`
+                          function zF(zz) {
+                            return `[${zz.map(Es).join(", ")}]`
                           }
 
-                          function nU(bb, ab) {
-                            const Ub = `${ab}    `;
-                            return `[\n${(wU(bb)?bb.map((bb=>{const ab=[`${Ub}    timeFraction: ${cU(bb.timeFraction)},`,`${Ub}    minColor: ${JU(bb.minColor)},`];return bb.maxColor&&ab.push(`${Ub}    maxColor: ${JU(bb.maxColor)},`),`${Ub}{\n${ab.join("\n")}\n${Ub}},`})):bb.map((bb=>`
+                          function tF(zz, tz) {
+                            const sz = `${tz}    `;
+                            return `[\n${(qs(zz)?zz.map((zz=>{const tz=[`${sz}    timeFraction: ${Es(zz.timeFraction)},`,`${sz}    minColor: ${zF(zz.minColor)},`];return zz.maxColor&&tz.push(`${sz}    maxColor: ${zF(zz.maxColor)},`),`${sz}{\n${tz.join("\n")}\n${sz}},`})):zz.map((zz=>`
                             $ {
-                              Ub
+                              sz
                             } {
                               color: $ {
-                                JU(bb.color)
+                                zF(zz.color)
                               }
-                            }, `))).join("\n")}\n${ab}]`
+                            }, `))).join("\n")}\n${tz}]`
                           }
-                          const SU = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            bA = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const aA = .6;
+                          const sF = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            FF = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const WF = .6;
 
-                          function UA(bb, ab) {
-                            return `${ab?"song":"sound"}:${bb}`
+                          function XF(zz, tz) {
+                            return `${tz?"song":"sound"}:${zz}`
                           }
-                          let AA = {
+                          let OF = {
                               track: null,
-                              volume: aA
+                              volume: WF
                             },
-                            MA = null,
-                            TA = 0,
-                            EA = 0;
-                          const YA = new Set;
+                            oF = null,
+                            vF = 0,
+                            UF = 0;
+                          const KF = new Set;
 
-                          function BA(bb) {
-                            AA = {
-                              ...AA,
-                              ...bb
-                            }, YA.forEach((bb => {
-                              bb()
+                          function uF(zz) {
+                            OF = {
+                              ...OF,
+                              ...zz
+                            }, KF.forEach((zz => {
+                              zz()
                             }))
                           }
 
-                          function eA(bb) {
-                            AA.track && BA({
+                          function NF(zz) {
+                            OF.track && uF({
                               track: {
-                                ...AA.track,
-                                ...bb
+                                ...OF.track,
+                                ...zz
                               }
                             })
                           }
 
-                          function vA(bb) {
-                            const [ab, Ub] = (0, Ab.useState)((() => bb(AA))), Mb = (0, Ab.useRef)(bb);
-                            return Mb.current = bb, (0, Ab.useEffect)((() => {
-                              const bb = () => {
-                                Ub((() => Mb.current(AA)))
+                          function bF(zz) {
+                            const [tz, sz] = (0, Fz.useState)((() => zz(OF))), Wz = (0, Fz.useRef)(zz);
+                            return Wz.current = zz, (0, Fz.useEffect)((() => {
+                              const zz = () => {
+                                sz((() => Wz.current(OF)))
                               };
-                              return YA.add(bb), bb(), () => {
-                                YA.delete(bb)
+                              return KF.add(zz), zz(), () => {
+                                KF.delete(zz)
                               }
-                            }), []), ab
+                            }), []), tz
                           }
 
-                          function LA() {
-                            TA++;
-                            const bb = MA;
-                            MA = null, null === bb || void 0 === bb || bb.stop()
+                          function wF() {
+                            vF++;
+                            const zz = oF;
+                            oF = null, null === zz || void 0 === zz || zz.stop()
                           }
 
-                          function PA(bb, ab) {
-                            let Ab = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            LA();
-                            const Mb = TA,
+                          function DF(zz, tz) {
+                            let Fz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            wF();
+                            const Wz = vF,
                               {
-                                track: Tb
-                              } = AA,
-                              Eb = Tb && Tb.name === bb && Tb.isSong === ab ? Tb.duration : 0;
-                            EA = Ab, BA({
+                                track: Xz
+                              } = OF,
+                              Oz = Xz && Xz.name === zz && Xz.isSong === tz ? Xz.duration : 0;
+                            UF = Fz, uF({
                               track: {
-                                name: bb,
-                                isSong: ab,
+                                name: zz,
+                                isSong: tz,
                                 status: "loading",
-                                duration: Eb
+                                duration: Oz
                               }
-                            }), Promise.all([Ub.e(215), Ub.e(239)]).then((() => Ub(38880))).then((Ub => {
+                            }), Promise.all([sz.e(215), sz.e(239)]).then((() => sz(38990))).then((sz => {
                               let {
-                                playDocsSound: Tb
-                              } = Ub;
-                              Mb === TA && (MA = Tb(bb, ab, AA.volume, Ab, {
-                                onPlay: bb => {
-                                  Mb === TA && eA({
+                                playDocsSound: Xz
+                              } = sz;
+                              Wz === vF && (oF = Xz(zz, tz, OF.volume, Fz, {
+                                onPlay: zz => {
+                                  Wz === vF && NF({
                                     status: "playing",
-                                    duration: bb
+                                    duration: zz
                                   })
                                 },
-                                onEnd: bb => {
-                                  var ab, Ub;
-                                  Mb === TA && (MA = null, bb ? BA({
+                                onEnd: zz => {
+                                  var tz, sz;
+                                  Wz === vF && (oF = null, zz ? uF({
                                     track: null
-                                  }) : (EA = null !== (ab = null === (Ub = AA.track) || void 0 === Ub ? void 0 : Ub.duration) && void 0 !== ab ? ab : 0, eA({
+                                  }) : (UF = null !== (tz = null === (sz = OF.track) || void 0 === sz ? void 0 : sz.duration) && void 0 !== tz ? tz : 0, NF({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((ab => {
-                              console.error(`Could not play docs sound ${bb}`, ab), Mb === TA && BA({
+                            })).catch((tz => {
+                              console.error(`Could not play docs sound ${zz}`, tz), Wz === vF && uF({
                                 track: null
                               })
                             }))
                           }
 
-                          function XA() {
+                          function gF() {
                             const {
-                              track: bb
-                            } = AA;
-                            if (!bb) return;
-                            if ("playing" === bb.status && MA) return EA = MA.eZ(), MA.pause(), void eA({
+                              track: zz
+                            } = OF;
+                            if (!zz) return;
+                            if ("playing" === zz.status && oF) return UF = oF.yB(), oF.pause(), void NF({
                               status: "paused"
                             });
-                            if ("loading" === bb.status) return LA(), void eA({
+                            if ("loading" === zz.status) return wF(), void NF({
                               status: "paused"
                             });
-                            if (MA) return void MA.resume();
-                            const ab = bb.duration > 0 && EA >= bb.duration - .05;
-                            PA(bb.name, bb.isSong, ab ? 0 : EA)
+                            if (oF) return void oF.resume();
+                            const tz = zz.duration > 0 && UF >= zz.duration - .05;
+                            DF(zz.name, zz.isSong, tz ? 0 : UF)
                           }
 
-                          function jA() {
-                            var bb;
-                            return MA && "playing" === (null === (bb = AA.track) || void 0 === bb ? void 0 : bb.status) ? MA.eZ() : EA
+                          function HF() {
+                            var zz;
+                            return oF && "playing" === (null === (zz = OF.track) || void 0 === zz ? void 0 : zz.status) ? oF.yB() : UF
                           }
 
-                          function RA(bb) {
-                            var ab;
-                            null === (ab = MA) || void 0 === ab || ab.setVolume(bb), BA({
-                              volume: bb
+                          function BF(zz) {
+                            var tz;
+                            null === (tz = oF) || void 0 === tz || tz.setVolume(zz), uF({
+                              volume: zz
                             })
                           }
 
-                          function kA() {
-                            LA(), EA = 0, BA({
+                          function PF() {
+                            wF(), UF = 0, uF({
                               track: null
                             })
                           }
-                          const yA = (0, Ab.createContext)(null);
-                          let ZA = null;
+                          const rF = (0, Fz.createContext)(null);
+                          let YF = null;
 
-                          function DA() {
-                            const [bb, ab] = (0, Ab.useState)(null);
-                            return (0, Ab.useEffect)((() => {
-                              let bb = !1;
-                              return ZA ??= Promise.all([Ub.e(69), Ub.e(72), Ub.e(71), Ub.e(70), Ub.e(196), Ub.e(96), Ub.e(220)]).then((() => Ub(38878))), ZA.then((Ub => {
-                                bb || ab(Ub)
-                              }), (bb => {
-                                console.error("Could not load the docs gallery's textures", bb), ZA = null
+                          function xF() {
+                            const [zz, tz] = (0, Fz.useState)(null);
+                            return (0, Fz.useEffect)((() => {
+                              let zz = !1;
+                              return YF ??= Promise.all([sz.e(69), sz.e(72), sz.e(71), sz.e(70), sz.e(196), sz.e(96), sz.e(220)]).then((() => sz(38981))), YF.then((sz => {
+                                zz || tz(sz)
+                              }), (zz => {
+                                console.error("Could not load the docs gallery's textures", zz), YF = null
                               })), () => {
-                                bb = !0
+                                zz = !0
                               }
-                            }), []), bb
+                            }), []), zz
                           }
-                          const zA = 24,
-                            xA = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const mF = 24,
+                            JF = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function iA(bb, ab) {
-                            const Ub = "skins" === bb ? function(bb, ab) {
-                              const Ub = qU.find((ab => bb.startsWith(ab.heading)));
-                              return Ub ? function(bb, ab) {
-                                return `${bb}-${ab}`
-                              }(Ub.prefix, ab) : null
-                            }(ab.heading, ab.name) : null;
-                            return null === Ub ? null : `${QU}/${Ub}.webp`
+                          function IF(zz, tz) {
+                            const sz = "skins" === zz ? function(zz, tz) {
+                              const sz = Qs.find((tz => zz.startsWith(tz.heading)));
+                              return sz ? function(zz, tz) {
+                                return `${zz}-${tz}`
+                              }(sz.prefix, tz) : null
+                            }(tz.heading, tz.name) : null;
+                            return null === sz ? null : `${hs}/${sz}.webp`
                           }
 
-                          function fA(bb) {
+                          function CF(zz) {
                             let {
-                              kind: ab,
-                              entry: Ub,
-                              assets: Mb,
-                              renderedUrl: Eb
-                            } = bb;
+                              kind: tz,
+                              entry: sz,
+                              assets: Wz,
+                              renderedUrl: Oz
+                            } = zz;
                             const {
-                              name: Yb
-                            } = Ub, [Bb, eb] = (0, Ab.useState)(!1);
-                            if ("icons" === ab && Ka(Yb)) return (0, jb.jsx)(zU.e, {
+                              name: oz
+                            } = sz, [vz, Uz] = (0, Fz.useState)(!1);
+                            if ("icons" === tz && Qt(oz)) return (0, wz.jsx)(Ys.c, {
                               className: "DocsTileIcon",
-                              name: Yb
+                              name: oz
                             });
-                            let vb = null;
-                            var Lb;
-                            if ("icons" === ab) vb = null !== (Lb = null === Mb || void 0 === Mb ? void 0 : Mb.getIngameIconUrl(Yb)) && void 0 !== Lb ? Lb : null;
-                            else if ("particles" === ab) {
-                              var Pb, Xb, Rb;
-                              vb = null !== (Pb = null === Mb || void 0 === Mb ? void 0 : Mb.getParticleTextureUrl(null !== (Xb = null === (Rb = KU(Yb)) || void 0 === Rb ? void 0 : Rb.texture) && void 0 !== Xb ? Xb : Yb)) && void 0 !== Pb ? Pb : null
-                            } else "skins" === ab && (vb = null !== Eb && void 0 !== Eb ? Eb : xA.test(Yb) ? `/textures/charSkins/previews/${Yb}_preview.png` : null);
-                            return !vb || Bb ? (0, jb.jsx)(kb, {
+                            let Kz = null;
+                            var uz;
+                            if ("icons" === tz) Kz = null !== (uz = null === Wz || void 0 === Wz ? void 0 : Wz.getIngameIconUrl(oz)) && void 0 !== uz ? uz : null;
+                            else if ("particles" === tz) {
+                              var Nz, bz, Dz;
+                              Kz = null !== (Nz = null === Wz || void 0 === Wz ? void 0 : Wz.getParticleTextureUrl(null !== (bz = null === (Dz = Ls(oz)) || void 0 === Dz ? void 0 : Dz.texture) && void 0 !== bz ? bz : oz)) && void 0 !== Nz ? Nz : null
+                            } else "skins" === tz && (Kz = null !== Oz && void 0 !== Oz ? Oz : JF.test(oz) ? `/textures/charSkins/previews/${oz}_preview.png` : null);
+                            return !Kz || vz ? (0, wz.jsx)(gz, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === ab ? "person" : "image"
-                            }) : (0, jb.jsx)("img", {
-                              className: Tb()("DocsTileImage", {
-                                Pixelated: "skins" !== ab
+                              name: "skins" === tz ? "person" : "image"
+                            }) : (0, wz.jsx)("img", {
+                              className: Xz()("DocsTileImage", {
+                                Pixelated: "skins" !== tz
                               }),
-                              src: vb,
-                              srcSet: vb === Eb ? `${vb} 2x` : void 0,
+                              src: Kz,
+                              srcSet: Kz === Oz ? `${Kz} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${vb}`), eb(!0)
+                                console.warn(`Docs gallery: could not load ${Kz}`), Uz(!0)
                               }
                             })
                           }
 
-                          function mA(bb) {
+                          function eF(zz) {
                             let {
-                              entry: ab,
-                              isSong: Ub
-                            } = bb;
-                            const Ab = vA((bb => {
+                              entry: tz,
+                              isSong: sz
+                            } = zz;
+                            const Fz = bF((zz => {
                                 let {
-                                  track: Ab
-                                } = bb;
-                                return (null === Ab || void 0 === Ab ? void 0 : Ab.name) === ab.name && Ab.isSong === Ub ? Ab.status : null
+                                  track: Fz
+                                } = zz;
+                                return (null === Fz || void 0 === Fz ? void 0 : Fz.name) === tz.name && Fz.isSong === sz ? Fz.status : null
                               })),
-                              Mb = null !== Ab && "paused" !== Ab;
-                            return (0, jb.jsxs)("button", {
+                              Wz = null !== Fz && "paused" !== Fz;
+                            return (0, wz.jsxs)("button", {
                               type: "button",
-                              id: ab.anchor,
-                              className: Tb()("DocsSoundTile", {
-                                Playing: Mb
+                              id: tz.anchor,
+                              className: Xz()("DocsSoundTile", {
+                                Playing: Wz
                               }),
-                              "data-docs-track": UA(ab.name, Ub),
-                              "aria-label": Mb ? `Pause ${ab.name}` : `Play ${ab.name}`,
+                              "data-docs-track": XF(tz.name, sz),
+                              "aria-label": Wz ? `Pause ${tz.name}` : `Play ${tz.name}`,
                               onClick: () => {
-                                null !== Ab ? XA() : PA(ab.name, Ub)
+                                null !== Fz ? gF() : DF(tz.name, sz)
                               },
-                              children: [(0, jb.jsx)("span", {
+                              children: [(0, wz.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, jb.jsx)(kb, {
-                                  name: Mb ? "pause" : "play"
+                                children: (0, wz.jsx)(gz, {
+                                  name: Wz ? "pause" : "play"
                                 })
-                              }), (0, jb.jsx)("code", {
+                              }), (0, wz.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: ab.name
-                              }), ab.caption && (0, jb.jsx)("span", {
+                                children: tz.name
+                              }), tz.caption && (0, wz.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: ab.caption
+                                children: tz.caption
                               })]
                             })
                           }
 
-                          function pA(bb) {
+                          function ZF(zz) {
                             let {
-                              kind: ab,
-                              names: Ub,
-                              isSongs: Mb
-                            } = bb;
-                            const Eb = DA(),
-                              [Yb, Bb] = Zb(),
-                              eb = !1 === (null === Yb || void 0 === Yb ? void 0 : Yb.failed) ? Yb.text : null,
-                              vb = (0, Ab.useContext)(yA),
-                              [Lb, Pb] = (0, Ab.useState)(""),
-                              Xb = Lb.trim().toLowerCase(),
-                              Rb = Xb ? Ub.filter((bb => bb.name.toLowerCase().includes(Xb))) : Ub;
-                            return (0, jb.jsxs)("div", {
+                              kind: tz,
+                              names: sz,
+                              isSongs: Wz
+                            } = zz;
+                            const Oz = xF(),
+                              [oz, vz] = Bz(),
+                              Uz = !1 === (null === oz || void 0 === oz ? void 0 : oz.failed) ? oz.text : null,
+                              Kz = (0, Fz.useContext)(rF),
+                              [uz, Nz] = (0, Fz.useState)(""),
+                              bz = uz.trim().toLowerCase(),
+                              Dz = bz ? sz.filter((zz => zz.name.toLowerCase().includes(bz))) : sz;
+                            return (0, wz.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [Ub.length > zA && (0, jb.jsx)(DU, {
+                              children: [sz.length > mF && (0, wz.jsx)(rs, {
                                 className: "DocsGalleryFilter",
-                                value: Lb,
-                                placeholder: `Filter ${Ub.length} names\u2026`,
+                                value: uz,
+                                placeholder: `Filter ${sz.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: Pb,
-                                count: Xb ? {
-                                  visible: Rb.length,
-                                  total: Ub.length
+                                onChange: Nz,
+                                count: bz ? {
+                                  visible: Dz.length,
+                                  total: sz.length
                                 } : null
-                              }), (0, jb.jsx)("div", {
-                                className: Tb()("DocsGalleryGrid", `Kind-${ab}`, {
-                                  Songs: Mb
+                              }), (0, wz.jsx)("div", {
+                                className: Xz()("DocsGalleryGrid", `Kind-${tz}`, {
+                                  Songs: Wz
                                 }),
-                                children: Rb.map((bb => {
-                                  if ("sounds" === ab) return (0, jb.jsx)(mA, {
-                                    entry: bb,
-                                    isSong: Mb
-                                  }, bb.anchor);
-                                  if (vb && "particles" === ab && KU(bb.name)) return (0, jb.jsxs)("button", {
+                                children: Dz.map((zz => {
+                                  if ("sounds" === tz) return (0, wz.jsx)(eF, {
+                                    entry: zz,
+                                    isSong: Wz
+                                  }, zz.anchor);
+                                  if (Kz && "particles" === tz && Ls(zz.name)) return (0, wz.jsxs)("button", {
                                     type: "button",
-                                    id: bb.anchor,
-                                    className: Tb()("DocsTile Previewable", {
-                                      Copied: eb === bb.name
+                                    id: zz.anchor,
+                                    className: Xz()("DocsTile Previewable", {
+                                      Copied: Uz === zz.name
                                     }),
-                                    title: `Play "${bb.name}" in the playground and copy its name`,
+                                    title: `Play "${zz.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      vb(bb.name), Bb(bb.name)
+                                      Kz(zz.name), vz(zz.name)
                                     },
-                                    children: [(0, jb.jsxs)("span", {
+                                    children: [(0, wz.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, jb.jsx)(fA, {
-                                        kind: ab,
-                                        entry: bb,
-                                        assets: Eb,
+                                      children: [(0, wz.jsx)(CF, {
+                                        kind: tz,
+                                        entry: zz,
+                                        assets: Oz,
                                         renderedUrl: null
-                                      }), (0, jb.jsx)("span", {
+                                      }), (0, wz.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, jb.jsx)(kb, {
+                                        children: (0, wz.jsx)(gz, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, jb.jsx)("span", {
+                                    }), (0, wz.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: eb === bb.name ? "Copied!" : bb.name
+                                      children: Uz === zz.name ? "Copied!" : zz.name
                                     })]
-                                  }, bb.anchor);
-                                  const Ub = iA(ab, bb);
-                                  return (0, jb.jsxs)("button", {
+                                  }, zz.anchor);
+                                  const sz = IF(tz, zz);
+                                  return (0, wz.jsxs)("button", {
                                     type: "button",
-                                    id: bb.anchor,
-                                    className: Tb()("DocsTile", {
-                                      Copied: eb === bb.name
+                                    id: zz.anchor,
+                                    className: Xz()("DocsTile", {
+                                      Copied: Uz === zz.name
                                     }),
-                                    title: `Copy "${bb.name}"`,
+                                    title: `Copy "${zz.name}"`,
                                     onClick: () => {
-                                      Bb(bb.name)
+                                      vz(zz.name)
                                     },
-                                    children: [(0, jb.jsx)("span", {
-                                      className: Tb()("DocsTilePreview", {
-                                        Rendered: null !== Ub
+                                    children: [(0, wz.jsx)("span", {
+                                      className: Xz()("DocsTilePreview", {
+                                        Rendered: null !== sz
                                       }),
-                                      children: (0, jb.jsx)(fA, {
-                                        kind: ab,
-                                        entry: bb,
-                                        assets: Eb,
-                                        renderedUrl: Ub
+                                      children: (0, wz.jsx)(CF, {
+                                        kind: tz,
+                                        entry: zz,
+                                        assets: Oz,
+                                        renderedUrl: sz
                                       })
-                                    }), (0, jb.jsx)("span", {
+                                    }), (0, wz.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: eb === bb.name ? "Copied!" : bb.name
+                                      children: Uz === zz.name ? "Copied!" : zz.name
                                     })]
-                                  }, bb.anchor)
+                                  }, zz.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function NA(bb) {
+                          function GF(zz) {
                             let {
-                              kind: ab,
-                              content: Ub,
-                              blocks: Ab
-                            } = bb;
-                            return (0, jb.jsx)(jb.Fragment, {
-                              children: GU(ab, Ub, Ab).map(((bb, Ub) => "block" === bb.kind ? (0, jb.jsx)(PU, {
-                                block: bb.block
-                              }, Ub) : (0, jb.jsx)(pA, {
-                                kind: ab,
-                                names: bb.names,
-                                isSongs: bb.isSongs
-                              }, Ub)))
+                              kind: tz,
+                              content: sz,
+                              blocks: Fz
+                            } = zz;
+                            return (0, wz.jsx)(wz.Fragment, {
+                              children: ds(tz, sz, Fz).map(((zz, sz) => "block" === zz.kind ? (0, wz.jsx)(bs, {
+                                block: zz.block
+                              }, sz) : (0, wz.jsx)(ZF, {
+                                kind: tz,
+                                names: zz.names,
+                                isSongs: zz.isSongs
+                              }, sz)))
                             })
                           }
-                          const WA = [{
+                          const TF = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,420 +2161,420 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function HA(bb) {
+                          function cF(zz) {
                             let {
-                              cards: ab = WA,
-                              label: Ub = "Start here"
-                            } = bb;
-                            const Mb = (0, Ab.useContext)(Xa);
-                            return (0, jb.jsx)("nav", {
+                              cards: tz = TF,
+                              label: sz = "Start here"
+                            } = zz;
+                            const Wz = (0, Fz.useContext)(bt);
+                            return (0, wz.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": Ub,
-                              children: ab.map((bb => {
+                              "aria-label": sz,
+                              children: tz.map((zz => {
                                 let {
-                                  pageId: ab,
-                                  countNoun: Ub
-                                } = bb;
-                                const Ab = rb(ab);
-                                return (0, jb.jsxs)(Eb.c, {
-                                  to: sb(Mb, Ab),
+                                  pageId: tz,
+                                  countNoun: sz
+                                } = zz;
+                                const Fz = hz(tz);
+                                return (0, wz.jsxs)(Oz.d, {
+                                  to: nz(Wz, Fz),
                                   className: "DocsLandingCard",
-                                  children: [(0, jb.jsx)("span", {
+                                  children: [(0, wz.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, jb.jsx)(kb, {
-                                      name: Ab.icon
+                                    children: (0, wz.jsx)(gz, {
+                                      name: Fz.icon
                                     })
-                                  }), (0, jb.jsx)("span", {
+                                  }), (0, wz.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: Ab.title
-                                  }), (0, jb.jsx)("span", {
+                                    children: Fz.title
+                                  }), (0, wz.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: Ab.summary
-                                  }), Ub && (0, jb.jsxs)("span", {
+                                    children: Fz.summary
+                                  }), sz && (0, wz.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [ob(Ab).sections.length, " ", Ub]
+                                    children: [kz(Fz).sections.length, " ", sz]
                                   })]
-                                }, ab)
+                                }, tz)
                               }))
                             })
                           }
-                          const IA = 240;
+                          const jF = 240;
 
-                          function dA(bb) {
+                          function AF(zz) {
                             let {
-                              faces: ab
-                            } = bb;
-                            return (0, jb.jsxs)("span", {
+                              faces: tz
+                            } = zz;
+                            return (0, wz.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, jb.jsx)("span", {
+                              children: [(0, wz.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${ab.top}")`
+                                  backgroundImage: `url("${tz.top}")`
                                 }
-                              }), (0, jb.jsx)("span", {
+                              }), (0, wz.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${ab.left}")`
+                                  backgroundImage: `url("${tz.left}")`
                                 }
-                              }), (0, jb.jsx)("span", {
+                              }), (0, wz.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${ab.right}")`
+                                  backgroundImage: `url("${tz.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function FA(bb) {
+                          function yF(zz) {
                             let {
-                              src: ab
-                            } = bb;
-                            const [Ub, Mb] = (0, Ab.useState)(!1);
-                            return Ub ? null : (0, jb.jsx)("img", {
-                              src: ab,
+                              src: tz
+                            } = zz;
+                            const [sz, Wz] = (0, Fz.useState)(!1);
+                            return sz ? null : (0, wz.jsx)("img", {
+                              src: tz,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${ab}`), Mb(!0)
+                                console.warn(`Docs catalogue: could not load ${tz}`), Wz(!0)
                               }
                             })
                           }
 
-                          function hA(bb) {
+                          function MF(zz) {
                             let {
-                              kind: ab
-                            } = bb;
-                            const Ub = ZU(ab),
-                              Mb = DA(),
-                              Eb = (0, Yb.v)(),
-                              [Bb, eb] = (0, Ab.useState)(""),
-                              [vb, Lb] = (0, Ab.useState)(null),
-                              [Pb, Xb] = (0, Ab.useState)(IA),
-                              [Rb, yb] = (0, Ab.useState)(null),
-                              Zb = (0, Ab.useRef)(null),
-                              zb = Bb.trim().toLowerCase();
-                            (0, Ab.useEffect)((() => {
-                              const bb = (0, mb.p)(Eb.hash),
-                                Ab = Ub.entries.find((Ub => FU(ab, Ub.name) === bb));
-                              if (Ab) Zb.current = Ab.name, eb(Ab.name), Lb(null), yb(Ab.name);
-                              else if (null !== Zb.current) {
-                                const bb = Zb.current;
-                                Zb.current = null, eb((ab => ab === bb ? "" : ab)), yb(null)
+                              kind: tz
+                            } = zz;
+                            const sz = Ps(tz),
+                              Wz = xF(),
+                              Oz = (0, oz.s)(),
+                              [vz, Uz] = (0, Fz.useState)(""),
+                              [Kz, uz] = (0, Fz.useState)(null),
+                              [Nz, bz] = (0, Fz.useState)(jF),
+                              [Dz, Hz] = (0, Fz.useState)(null),
+                              Bz = (0, Fz.useRef)(null),
+                              rz = vz.trim().toLowerCase();
+                            (0, Fz.useEffect)((() => {
+                              const zz = (0, Jz.q)(Oz.hash),
+                                Fz = sz.entries.find((sz => ys(tz, sz.name) === zz));
+                              if (Fz) Bz.current = Fz.name, Uz(Fz.name), uz(null), Hz(Fz.name);
+                              else if (null !== Bz.current) {
+                                const zz = Bz.current;
+                                Bz.current = null, Uz((tz => tz === zz ? "" : tz)), Hz(null)
                               }
-                            }), [Ub, ab, Eb.hash, Eb.key]), (0, Ab.useEffect)((() => {
-                              var bb;
-                              null !== Rb && (null === (bb = document.getElementById(FU(ab, Rb))) || void 0 === bb || bb.scrollIntoView({
+                            }), [sz, tz, Oz.hash, Oz.key]), (0, Fz.useEffect)((() => {
+                              var zz;
+                              null !== Dz && (null === (zz = document.getElementById(ys(tz, Dz))) || void 0 === zz || zz.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [ab, Rb]);
-                            const xb = Ub.entries.filter((bb => (!zb || bb.name.toLowerCase().includes(zb)) && (!vb || bb.variants.includes(vb))));
-                            return (0, jb.jsxs)("div", {
+                            }), [tz, Dz]);
+                            const Yz = sz.entries.filter((zz => (!rz || zz.name.toLowerCase().includes(rz)) && (!Kz || zz.variants.includes(Kz))));
+                            return (0, wz.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [Ub.notes.length > 0 && (0, jb.jsx)("div", {
+                              children: [sz.notes.length > 0 && (0, wz.jsx)("div", {
                                 className: "DocsProse",
-                                children: Ub.notes.map((bb => (0, jb.jsx)("p", {
-                                  children: bb
-                                }, bb)))
-                              }), Ub.legend.length > 0 && (0, jb.jsx)("div", {
+                                children: sz.notes.map((zz => (0, wz.jsx)("p", {
+                                  children: zz
+                                }, zz)))
+                              }), sz.legend.length > 0 && (0, wz.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, jb.jsxs)("table", {
+                                children: (0, wz.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, jb.jsx)("thead", {
-                                    children: (0, jb.jsxs)("tr", {
-                                      children: [(0, jb.jsx)("th", {
+                                  children: [(0, wz.jsx)("thead", {
+                                    children: (0, wz.jsxs)("tr", {
+                                      children: [(0, wz.jsx)("th", {
                                         children: "Code"
-                                      }), (0, jb.jsx)("th", {
+                                      }), (0, wz.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, jb.jsx)("th", {
+                                      }), (0, wz.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, jb.jsx)("tbody", {
-                                    children: Ub.legend.map((bb => (0, jb.jsxs)("tr", {
-                                      children: [(0, jb.jsx)("td", {
-                                        children: (0, jb.jsx)("button", {
+                                  }), (0, wz.jsx)("tbody", {
+                                    children: sz.legend.map((zz => (0, wz.jsxs)("tr", {
+                                      children: [(0, wz.jsx)("td", {
+                                        children: (0, wz.jsx)("button", {
                                           type: "button",
-                                          className: Tb()("DocsVariantChip", {
-                                            Active: vb === bb.code
+                                          className: Xz()("DocsVariantChip", {
+                                            Active: Kz === zz.code
                                           }),
-                                          "aria-pressed": vb === bb.code,
-                                          title: `Show only ${ab} with ${bb.meaning} variants`,
+                                          "aria-pressed": Kz === zz.code,
+                                          title: `Show only ${tz} with ${zz.meaning} variants`,
                                           onClick: () => {
-                                            Lb(vb === bb.code ? null : bb.code)
+                                            uz(Kz === zz.code ? null : zz.code)
                                           },
-                                          children: bb.code
+                                          children: zz.code
                                         })
-                                      }), (0, jb.jsx)("td", {
-                                        children: bb.meaning
-                                      }), (0, jb.jsx)("td", {
-                                        children: (0, jb.jsx)("code", {
+                                      }), (0, wz.jsx)("td", {
+                                        children: zz.meaning
+                                      }), (0, wz.jsx)("td", {
+                                        children: (0, wz.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: bb.usage
+                                          children: zz.usage
                                         })
                                       })]
-                                    }, bb.code)))
+                                    }, zz.code)))
                                   })]
                                 })
-                              }), Ub.examples.length > 0 && (0, jb.jsx)(fb, {
+                              }), sz.examples.length > 0 && (0, wz.jsx)(mz, {
                                 lang: "text",
-                                code: Ub.examples.join("\n")
-                              }), (0, jb.jsx)(DU, {
+                                code: sz.examples.join("\n")
+                              }), (0, wz.jsx)(rs, {
                                 className: "DocsFilterBar",
-                                value: Bb,
-                                placeholder: `Search ${Ub.entries.length} ${ab}\u2026`,
-                                label: `Search ${ab}`,
-                                onChange: bb => {
-                                  eb(bb), Xb(IA)
+                                value: vz,
+                                placeholder: `Search ${sz.entries.length} ${tz}\u2026`,
+                                label: `Search ${tz}`,
+                                onChange: zz => {
+                                  Uz(zz), bz(jF)
                                 },
-                                count: zb || vb ? {
-                                  visible: xb.length,
-                                  total: Ub.entries.length
+                                count: rz || Kz ? {
+                                  visible: Yz.length,
+                                  total: sz.entries.length
                                 } : null,
-                                children: vb && (0, jb.jsxs)("button", {
+                                children: Kz && (0, wz.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    Lb(null)
+                                    uz(null)
                                   },
-                                  children: [vb, " ", (0, jb.jsx)(kb, {
+                                  children: [Kz, " ", (0, wz.jsx)(gz, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, jb.jsx)("div", {
+                              }), (0, wz.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: xb.slice(0, Pb).map((bb => {
-                                  const Ub = "blocks" === ab ? null === Mb || void 0 === Mb ? void 0 : Mb.getBlockFaces(bb.name) : null,
-                                    Ab = Mb && !Ub ? Mb.getItemTextureUrl(bb.name) : null;
-                                  return (0, jb.jsxs)("div", {
-                                    id: FU(ab, bb.name),
-                                    className: Tb()("DocsCatalogueTile", {
-                                      Linked: bb.name === Rb
+                                children: Yz.slice(0, Nz).map((zz => {
+                                  const sz = "blocks" === tz ? null === Wz || void 0 === Wz ? void 0 : Wz.getBlockFaces(zz.name) : null,
+                                    Fz = Wz && !sz ? Wz.getItemTextureUrl(zz.name) : null;
+                                  return (0, wz.jsxs)("div", {
+                                    id: ys(tz, zz.name),
+                                    className: Xz()("DocsCatalogueTile", {
+                                      Linked: zz.name === Dz
                                     }),
-                                    children: [(0, jb.jsxs)("span", {
+                                    children: [(0, wz.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [Ub && (0, jb.jsx)(dA, {
-                                        faces: Ub
-                                      }), Ab && (0, jb.jsx)(FA, {
-                                        src: Ab
+                                      children: [sz && (0, wz.jsx)(AF, {
+                                        faces: sz
+                                      }), Fz && (0, wz.jsx)(yF, {
+                                        src: Fz
                                       })]
-                                    }), (0, jb.jsx)("span", {
+                                    }), (0, wz.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: bb.name
-                                    }), bb.variants.length > 0 && (0, jb.jsx)("span", {
+                                      children: zz.name
+                                    }), zz.variants.length > 0 && (0, wz.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: bb.variants.map((bb => (0, jb.jsx)("span", {
-                                        children: bb
-                                      }, bb)))
-                                    }), (0, jb.jsx)(Db, {
-                                      text: bb.name,
+                                      children: zz.variants.map((zz => (0, wz.jsx)("span", {
+                                        children: zz
+                                      }, zz)))
+                                    }), (0, wz.jsx)(Pz, {
+                                      text: zz.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, bb.name)
+                                  }, zz.name)
                                 }))
-                              }), xb.length > Pb && (0, jb.jsxs)("button", {
+                              }), Yz.length > Nz && (0, wz.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  Xb(xb.length)
+                                  bz(Yz.length)
                                 },
-                                children: ["Show all ", xb.length]
-                              }), 0 === xb.length && (0, jb.jsxs)("p", {
+                                children: ["Show all ", Yz.length]
+                              }), 0 === Yz.length && (0, wz.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", ab, " match."]
+                                children: ["No ", tz, " match."]
                               })]
                             })
                           }
-                          var GA = Ub(4509),
-                            QA = Ub(1505);
-                          const qA = .95 * GA.d;
+                          var dF = sz(4458),
+                            hF = sz(1536);
+                          const QF = .95 * dF.c;
 
-                          function uA(bb) {
-                            return /^\s*```/.test(bb)
+                          function kF(zz) {
+                            return /^\s*```/.test(zz)
                           }
 
-                          function rA(bb, ab) {
-                            const Ub = [
+                          function iF(zz, tz) {
+                            const sz = [
                               []
                             ];
-                            let Ab = !1;
-                            for (const Mb of bb.split("\n")) !Ab && ab(Mb) && Ub.at(-1).length > 0 && Ub.push([]), uA(Mb) && (Ab = !Ab), Ub.at(-1).push(Mb);
-                            return Ub.map((bb => bb.join("\n").trim())).filter(Boolean)
+                            let Fz = !1;
+                            for (const Wz of zz.split("\n")) !Fz && tz(Wz) && sz.at(-1).length > 0 && sz.push([]), kF(Wz) && (Fz = !Fz), sz.at(-1).push(Wz);
+                            return sz.map((zz => zz.join("\n").trim())).filter(Boolean)
                           }
 
-                          function KA(bb, ab) {
-                            const Ub = `${"#".repeat(ab)} `,
-                              Ab = [];
-                            let Mb = !1;
-                            for (const Tb of bb.split("\n")) uA(Tb) ? Mb = !Mb : !Mb && Tb.startsWith(Ub) && Ab.push(Tb.slice(Ub.length).trim());
-                            return Ab
+                          function LF(zz, tz) {
+                            const sz = `${"#".repeat(tz)} `,
+                              Fz = [];
+                            let Wz = !1;
+                            for (const Xz of zz.split("\n")) kF(Xz) ? Wz = !Wz : !Wz && Xz.startsWith(sz) && Fz.push(Xz.slice(sz.length).trim());
+                            return Fz
                           }
 
-                          function oA(bb) {
-                            return bb.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function lF(zz) {
+                            return zz.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class lA {
-                            constructor(bb, ab) {
-                              this.origin = ab, this.pages = void 0, this.partPaths = new Map;
-                              const Ub = bb.map((bb => {
-                                const ab = ab => this.resolveLinks(bb, ab).length,
-                                  Ub = function(bb, ab) {
-                                    const Ub = bb.map((bb => ab(bb.markdown) + 2)),
-                                      Ab = Ub.reduce(((bb, ab) => bb + ab), 0),
-                                      Mb = Ab / Math.ceil(Ab / qA),
-                                      Tb = [];
-                                    let Eb = 0;
-                                    return bb.forEach(((bb, ab) => {
-                                      const Ab = Ub[ab];
-                                      (0 === Tb.length || Eb + Ab > qA || Eb + Ab / 2 > Mb) && (Tb.push([]), Eb = 0), Tb.at(-1).push(bb), Eb += Ab
-                                    })), Tb
-                                  }(function(bb, ab) {
-                                    return rA(bb, (bb => bb.startsWith("## "))).flatMap((bb => {
-                                      var Ub;
-                                      const Ab = null !== (Ub = KA(bb, 2)[0]) && void 0 !== Ub ? Ub : "";
-                                      if (ab(bb) <= qA) return [{
-                                        markdown: bb,
-                                        section: Ab
+                          class nF {
+                            constructor(zz, tz) {
+                              this.origin = tz, this.pages = void 0, this.partPaths = new Map;
+                              const sz = zz.map((zz => {
+                                const tz = tz => this.resolveLinks(zz, tz).length,
+                                  sz = function(zz, tz) {
+                                    const sz = zz.map((zz => tz(zz.markdown) + 2)),
+                                      Fz = sz.reduce(((zz, tz) => zz + tz), 0),
+                                      Wz = Fz / Math.ceil(Fz / QF),
+                                      Xz = [];
+                                    let Oz = 0;
+                                    return zz.forEach(((zz, tz) => {
+                                      const Fz = sz[tz];
+                                      (0 === Xz.length || Oz + Fz > QF || Oz + Fz / 2 > Wz) && (Xz.push([]), Oz = 0), Xz.at(-1).push(zz), Oz += Fz
+                                    })), Xz
+                                  }(function(zz, tz) {
+                                    return iF(zz, (zz => zz.startsWith("## "))).flatMap((zz => {
+                                      var sz;
+                                      const Fz = null !== (sz = LF(zz, 2)[0]) && void 0 !== sz ? sz : "";
+                                      if (tz(zz) <= QF) return [{
+                                        markdown: zz,
+                                        section: Fz
                                       }];
-                                      let Mb = !1,
-                                        Tb = "";
-                                      return rA(bb, (bb => {
-                                        const ab = Mb && "" !== bb.trim();
-                                        return Mb = "" === bb.trim(), ab
-                                      })).map((bb => {
-                                        var ab;
-                                        const Ub = KA(bb, 3),
-                                          Mb = bb.startsWith("### ") ? Ub[0] : Tb;
-                                        return Tb = null !== (ab = Ub.at(-1)) && void 0 !== ab ? ab : Tb, {
-                                          markdown: bb,
-                                          section: Ab || Mb
+                                      let Wz = !1,
+                                        Xz = "";
+                                      return iF(zz, (zz => {
+                                        const tz = Wz && "" !== zz.trim();
+                                        return Wz = "" === zz.trim(), tz
+                                      })).map((zz => {
+                                        var tz;
+                                        const sz = LF(zz, 3),
+                                          Wz = zz.startsWith("### ") ? sz[0] : Xz;
+                                        return Xz = null !== (tz = sz.at(-1)) && void 0 !== tz ? tz : Xz, {
+                                          markdown: zz,
+                                          section: Fz || Wz
                                         }
                                       }))
                                     }))
-                                  }(oA(bb), ab), ab);
+                                  }(lF(zz), tz), tz);
                                 return {
-                                  page: bb,
-                                  groups: Ub.length > 1 ? Ub : []
+                                  page: zz,
+                                  groups: sz.length > 1 ? sz : []
                                 }
                               }));
                               for (const {
-                                  page: Ab,
-                                  groups: Mb
+                                  page: Fz,
+                                  groups: Wz
                                 }
-                                of Ub) Mb.forEach(((bb, ab) => {
-                                const Ub = (0, GA.x)(Ab.slug, ab);
-                                for (const Mb of bb.flatMap((bb => [...KA(bb.markdown, 2), ...KA(bb.markdown, 3)]))) {
-                                  const bb = `${Ab.id}#${(0,mb.r)(Mb)}`;
-                                  this.partPaths.has(bb) || this.partPaths.set(bb, Ub)
+                                of sz) Wz.forEach(((zz, tz) => {
+                                const sz = (0, dF.p)(Fz.slug, tz);
+                                for (const Wz of zz.flatMap((zz => [...LF(zz.markdown, 2), ...LF(zz.markdown, 3)]))) {
+                                  const zz = `${Fz.id}#${(0,Jz.t)(Wz)}`;
+                                  this.partPaths.has(zz) || this.partPaths.set(zz, sz)
                                 }
                               }));
-                              this.pages = Ub.map((bb => {
+                              this.pages = sz.map((zz => {
                                 let {
-                                  page: ab,
-                                  groups: Ub
-                                } = bb;
+                                  page: tz,
+                                  groups: sz
+                                } = zz;
                                 return {
-                                  page: ab,
-                                  path: (0, GA.v)(ab.slug),
-                                  markdown: `# ${ab.title}\n\n${this.resolveLinks(ab,oA(ab))}\n`,
-                                  parts: Ub.map(((bb, Ab) => this.renderPart(ab, bb, Ab, Ub.length)))
+                                  page: tz,
+                                  path: (0, dF.o)(tz.slug),
+                                  markdown: `# ${tz.title}\n\n${this.resolveLinks(tz,lF(tz))}\n`,
+                                  parts: sz.map(((zz, Fz) => this.renderPart(tz, zz, Fz, sz.length)))
                                 }
                               }))
                             }
-                            url(bb) {
-                              return `${this.origin}${bb}`
+                            url(zz) {
+                              return `${this.origin}${zz}`
                             }
-                            getPage(bb) {
-                              return this.pages.find((ab => ab.page.id === bb))
+                            getPage(zz) {
+                              return this.pages.find((tz => tz.page.id === zz))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((bb => (bb.parts.length > 0 ? bb.parts : [{
-                                path: bb.path,
+                              return this.pages.flatMap((zz => (zz.parts.length > 0 ? zz.parts : [{
+                                path: zz.path,
                                 label: "",
-                                markdown: bb.markdown
-                              }]).filter((bb => bb.markdown.length > GA.d))))
+                                markdown: zz.markdown
+                              }]).filter((zz => zz.markdown.length > dF.c))))
                             }
-                            markdownUrl(bb, ab) {
-                              const Ub = ab && this.partPaths.get(`${bb.id}#${ab}`) || (0, GA.v)(bb.slug);
-                              return this.url(ab ? `${Ub}#${ab}` : Ub)
+                            markdownUrl(zz, tz) {
+                              const sz = tz && this.partPaths.get(`${zz.id}#${tz}`) || (0, dF.o)(zz.slug);
+                              return this.url(tz ? `${sz}#${tz}` : sz)
                             }
-                            resolveLinks(bb, ab) {
-                              return ab.replace(/\]\((#[^)]+)\)/g, ((ab, Ub) => {
-                                var Ab;
-                                const Mb = null !== (Ab = tb(Ub)) && void 0 !== Ab ? Ab : this.samePageTarget(bb, Ub);
-                                return Mb ? `](${this.markdownUrl(Mb.page,Mb.anchor)})` : ab
+                            resolveLinks(zz, tz) {
+                              return tz.replace(/\]\((#[^)]+)\)/g, ((tz, sz) => {
+                                var Fz;
+                                const Wz = null !== (Fz = Lz(sz)) && void 0 !== Fz ? Fz : this.samePageTarget(zz, sz);
+                                return Wz ? `](${this.markdownUrl(Wz.page,Wz.anchor)})` : tz
                               }))
                             }
-                            samePageTarget(bb, ab) {
-                              const Ub = (0, mb.r)(ab.slice(1));
-                              return lb(bb, Ub) ? {
-                                page: bb,
-                                anchor: Ub
+                            samePageTarget(zz, tz) {
+                              const sz = (0, Jz.t)(tz.slice(1));
+                              return iz(zz, sz) ? {
+                                page: zz,
+                                anchor: sz
                               } : null
                             }
-                            renderPart(bb, ab, Ub, Ab) {
-                              const Mb = function(bb) {
-                                  const ab = bb.map((bb => bb.section)).filter(Boolean);
-                                  if (0 === ab.length) return "";
-                                  const Ub = ab[0],
-                                    Ab = ab.at(-1);
-                                  return Ub === Ab ? Ub : `${Ub} to ${Ab}`
-                                }(ab),
-                                Tb = ab.map((bb => bb.markdown)).join("\n\n"),
-                                Eb = Mb ? `It covers ${Mb}. ` : "",
-                                Yb = `Part ${Ub+1} of ${Ab} of [${bb.title}](${this.url((0,GA.v)(bb.slug))}). ${Eb}[llms.txt](${this.url(GA.j)}) lists every part.`;
+                            renderPart(zz, tz, sz, Fz) {
+                              const Wz = function(zz) {
+                                  const tz = zz.map((zz => zz.section)).filter(Boolean);
+                                  if (0 === tz.length) return "";
+                                  const sz = tz[0],
+                                    Fz = tz.at(-1);
+                                  return sz === Fz ? sz : `${sz} to ${Fz}`
+                                }(tz),
+                                Xz = tz.map((zz => zz.markdown)).join("\n\n"),
+                                Oz = Wz ? `It covers ${Wz}. ` : "",
+                                oz = `Part ${sz+1} of ${Fz} of [${zz.title}](${this.url((0,dF.o)(zz.slug))}). ${Oz}[llms.txt](${this.url(dF.h)}) lists every part.`;
                               return {
-                                path: (0, GA.x)(bb.slug, Ub),
-                                label: Mb,
-                                markdown: `# ${bb.title}, part ${Ub+1} of ${Ab}\n\n${Yb}\n\n${this.resolveLinks(bb,Tb)}\n`
+                                path: (0, dF.p)(zz.slug, sz),
+                                label: Wz,
+                                markdown: `# ${zz.title}, part ${sz+1} of ${Fz}\n\n${oz}\n\n${this.resolveLinks(zz,Xz)}\n`
                               }
                             }
-                            llmsTxt(bb) {
-                              const ab = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${tA(GA.d)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const Ub of ub) {
-                                ab.push("", `## ${Ub.title}`, "");
-                                for (const bb of Ub.pageIds) {
-                                  const Ub = this.getPage(bb),
+                            llmsTxt(zz) {
+                              const tz = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${aF(dF.c)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const sz of dz) {
+                                tz.push("", `## ${sz.title}`, "");
+                                for (const zz of sz.pageIds) {
+                                  const sz = this.getPage(zz),
                                     {
-                                      page: Ab,
-                                      parts: Mb
-                                    } = Ub,
-                                    Tb = `About ${tA(Ub.markdown.length)} tokens${Mb.length>0?`, in ${Mb.length} parts:`:"."}`;
-                                  ab.push(`- [${Ab.title}](${this.url(Ub.path)}): ${Ab.summary} ${Tb}`), Mb.forEach(((bb, Ub) => {
-                                    ab.push(`  - [Part ${Ub+1}${bb.label?`: ${bb.label}`:""}](${this.url(bb.path)})`)
+                                      page: Fz,
+                                      parts: Wz
+                                    } = sz,
+                                    Xz = `About ${aF(sz.markdown.length)} tokens${Wz.length>0?`, in ${Wz.length} parts:`:"."}`;
+                                  tz.push(`- [${Fz.title}](${this.url(sz.path)}): ${Fz.summary} ${Xz}`), Wz.forEach(((zz, sz) => {
+                                    tz.push(`  - [Part ${sz+1}${zz.label?`: ${zz.label}`:""}](${this.url(zz.path)})`)
                                   }))
                                 }
                               }
-                              return ab.push("", "## Optional", "", `- [Every page in one file](${this.url(GA.f)}): About ${tA(bb.length)} tokens, for a model with a large context window.`, ""), ab.join("\n")
+                              return tz.push("", "## Optional", "", `- [Every page in one file](${this.url(dF.e)}): About ${aF(zz.length)} tokens, for a model with a large context window.`, ""), tz.join("\n")
                             }
                             llmsFullTxt() {
-                              return ub.flatMap((bb => bb.pageIds.map((bb => this.getPage(bb).markdown)))).join("\n---\n\n")
+                              return dz.flatMap((zz => zz.pageIds.map((zz => this.getPage(zz).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const bb = this.llmsFullTxt(),
-                                ab = this.llmsTxt(bb),
-                                Ub = new Map([
-                                  [GA.q, ab],
-                                  [GA.j, ab],
-                                  [GA.f, bb]
+                              const zz = this.llmsFullTxt(),
+                                tz = this.llmsTxt(zz),
+                                sz = new Map([
+                                  [dF.l, tz],
+                                  [dF.h, tz],
+                                  [dF.e, zz]
                                 ]);
-                              for (const Ab of this.pages) {
-                                Ub.set(Ab.path, Ab.markdown);
-                                for (const bb of Ab.parts) Ub.set(bb.path, bb.markdown)
+                              for (const Fz of this.pages) {
+                                sz.set(Fz.path, Fz.markdown);
+                                for (const zz of Fz.parts) sz.set(zz.path, zz.markdown)
                               }
-                              return Ub
+                              return sz
                             }
                           }
 
-                          function tA(bb) {
-                            return `${Math.max(1,Math.round(bb/4e3))}K`
+                          function aF(zz) {
+                            return `${Math.max(1,Math.round(zz/4e3))}K`
                           }
-                          let wA = null;
+                          let qF = null;
 
-                          function sA() {
-                            return wA ??= new lA(qb, QA.d), wA
+                          function SF() {
+                            return qF ??= new nF(Mz, hF.c), qF
                           }
-                          const gA = [{
+                          const VF = [{
                             name: "ChatGPT",
                             url: "https://chatgpt.com/?hints=search&q="
                           }, {
@@ -2582,373 +2582,373 @@ export const modules = {
                             url: "https://claude.ai/new?q="
                           }];
 
-                          function CA(bb) {
-                            return sA().getPage(bb.id).parts.length > 0 ? `Read ${GA.n}, then the parts of the Bloxd Code API's ${bb.title} page it lists, so I can ask questions about it.` : `Read ${QA.d}${(0,GA.v)(bb.slug)} so I can ask questions about it. ${GA.n} lists every page of the Bloxd Code API docs.`
+                          function RF(zz) {
+                            return SF().getPage(zz.id).parts.length > 0 ? `Read ${dF.i}, then the parts of the Bloxd Code API's ${zz.title} page it lists, so I can ask questions about it.` : `Read ${hF.c}${(0,dF.o)(zz.slug)} so I can ask questions about it. ${dF.i} lists every page of the Bloxd Code API docs.`
                           }
 
-                          function VA(bb) {
+                          function pF(zz) {
                             let {
-                              page: ab
-                            } = bb;
-                            const [Ub, Ab] = Zb();
-                            return (0, jb.jsxs)("div", {
+                              page: tz
+                            } = zz;
+                            const [sz, Fz] = Bz();
+                            return (0, wz.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, jb.jsxs)("button", {
+                              children: [(0, wz.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  Ab(sA().getPage(ab.id).markdown)
+                                  Fz(SF().getPage(tz.id).markdown)
                                 },
-                                children: [(0, jb.jsx)(kb, {
-                                  name: !1 === (null === Ub || void 0 === Ub ? void 0 : Ub.failed) ? "check" : "copy"
-                                }), (0, jb.jsx)("span", {
-                                  children: Ub ? Ub.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, wz.jsx)(gz, {
+                                  name: !1 === (null === sz || void 0 === sz ? void 0 : sz.failed) ? "check" : "copy"
+                                }), (0, wz.jsx)("span", {
+                                  children: sz ? sz.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), gA.map((bb => (0, jb.jsxs)("a", {
+                              }), VF.map((zz => (0, wz.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: `${bb.url}${encodeURIComponent(CA(ab))}`,
+                                href: `${zz.url}${encodeURIComponent(RF(tz))}`,
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, jb.jsx)(kb, {
+                                children: [(0, wz.jsx)(gz, {
                                   name: "external-link"
-                                }), (0, jb.jsxs)("span", {
-                                  children: ["Open in ", bb.name]
+                                }), (0, wz.jsxs)("span", {
+                                  children: ["Open in ", zz.name]
                                 })]
-                              }, bb.name)))]
+                              }, zz.name)))]
                             })
                           }
 
-                          function OA(bb) {
-                            return `#${[0,1,2].map((ab=>Math.round(Math.min(255,Math.max(0,bb[ab]))).toString(16).padStart(2,"0"))).join("")}`
+                          function fF(zz) {
+                            return `#${[0,1,2].map((tz=>Math.round(Math.min(255,Math.max(0,zz[tz]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function cA(bb) {
-                            return [parseInt(bb.slice(1, 3), 16), parseInt(bb.slice(3, 5), 16), parseInt(bb.slice(5, 7), 16)]
+                          function EF(zz) {
+                            return [parseInt(zz.slice(1, 3), 16), parseInt(zz.slice(3, 5), 16), parseInt(zz.slice(5, 7), 16)]
                           }
 
-                          function JA(bb) {
+                          function zW(zz) {
                             let {
-                              label: ab,
-                              min: Ub,
-                              max: Ab,
-                              step: Mb,
-                              low: Tb,
-                              high: Eb,
-                              onChange: Yb
-                            } = bb;
-                            return (0, jb.jsxs)("div", {
+                              label: tz,
+                              min: sz,
+                              max: Fz,
+                              step: Wz,
+                              low: Xz,
+                              high: Oz,
+                              onChange: oz
+                            } = zz;
+                            return (0, wz.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, jb.jsxs)("div", {
+                              children: [(0, wz.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, jb.jsx)("span", {
-                                  children: ab
-                                }), (0, jb.jsx)("span", {
+                                children: [(0, wz.jsx)("span", {
+                                  children: tz
+                                }), (0, wz.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: Tb === Eb ? Tb : `${Tb}\u2013${Eb}`
+                                  children: Xz === Oz ? Xz : `${Xz}\u2013${Oz}`
                                 })]
-                              }), (0, jb.jsxs)("div", {
+                              }), (0, wz.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, jb.jsx)("input", {
+                                children: [(0, wz.jsx)("input", {
                                   type: "range",
-                                  min: Ub,
-                                  max: Ab,
-                                  step: Mb,
-                                  value: Math.min(Ab, Tb),
-                                  "aria-label": `Minimum ${ab.toLowerCase()}`,
-                                  onChange: bb => {
-                                    const ab = Number(bb.target.value);
-                                    Yb(ab, Math.max(ab, Eb))
+                                  min: sz,
+                                  max: Fz,
+                                  step: Wz,
+                                  value: Math.min(Fz, Xz),
+                                  "aria-label": `Minimum ${tz.toLowerCase()}`,
+                                  onChange: zz => {
+                                    const tz = Number(zz.target.value);
+                                    oz(tz, Math.max(tz, Oz))
                                   }
-                                }), (0, jb.jsx)("input", {
+                                }), (0, wz.jsx)("input", {
                                   type: "range",
-                                  min: Ub,
-                                  max: Ab,
-                                  step: Mb,
-                                  value: Math.min(Ab, Eb),
-                                  "aria-label": `Maximum ${ab.toLowerCase()}`,
-                                  onChange: bb => {
-                                    const ab = Number(bb.target.value);
-                                    Yb(Math.min(ab, Tb), ab)
+                                  min: sz,
+                                  max: Fz,
+                                  step: Wz,
+                                  value: Math.min(Fz, Oz),
+                                  "aria-label": `Maximum ${tz.toLowerCase()}`,
+                                  onChange: zz => {
+                                    const tz = Number(zz.target.value);
+                                    oz(Math.min(tz, Xz), tz)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function nA(bb) {
+                          function tW(zz) {
                             let {
-                              label: ab,
-                              min: Ub,
-                              max: Ab,
-                              step: Mb,
-                              value: Tb,
-                              onChange: Eb,
-                              format: Yb = String
-                            } = bb;
-                            return (0, jb.jsxs)("div", {
+                              label: tz,
+                              min: sz,
+                              max: Fz,
+                              step: Wz,
+                              value: Xz,
+                              onChange: Oz,
+                              format: oz = String
+                            } = zz;
+                            return (0, wz.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, jb.jsxs)("div", {
+                              children: [(0, wz.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, jb.jsx)("span", {
-                                  children: ab
-                                }), (0, jb.jsx)("span", {
+                                children: [(0, wz.jsx)("span", {
+                                  children: tz
+                                }), (0, wz.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: Yb(Tb)
+                                  children: oz(Xz)
                                 })]
-                              }), (0, jb.jsx)("input", {
+                              }), (0, wz.jsx)("input", {
                                 type: "range",
-                                min: Ub,
-                                max: Ab,
-                                step: Mb,
-                                value: Math.min(Ab, Math.max(Ub, Tb)),
-                                "aria-label": ab,
-                                onChange: bb => {
-                                  Eb(Number(bb.target.value))
+                                min: sz,
+                                max: Fz,
+                                step: Wz,
+                                value: Math.min(Fz, Math.max(sz, Xz)),
+                                "aria-label": tz,
+                                onChange: zz => {
+                                  Oz(Number(zz.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function SA(bb) {
+                          function sW(zz) {
                             let {
-                              opts: ab,
-                              onChange: Ub
-                            } = bb;
-                            const Ab = ab.colorGradients;
-                            if (!wU(Ab)) return (0, jb.jsxs)("div", {
+                              opts: tz,
+                              onChange: sz
+                            } = zz;
+                            const Fz = tz.colorGradients;
+                            if (!qs(Fz)) return (0, wz.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, jb.jsx)("div", {
+                              children: [(0, wz.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, jb.jsx)("span", {
+                                children: (0, wz.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, jb.jsx)("div", {
+                              }), (0, wz.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: Ab.map(((bb, ab) => (0, jb.jsx)("input", {
+                                children: Fz.map(((zz, tz) => (0, wz.jsx)("input", {
                                   type: "color",
-                                  value: OA(bb.color),
-                                  "aria-label": `Colour ${ab+1}`,
-                                  onChange: bb => {
-                                    const Mb = [...Ab];
-                                    Mb[ab] = {
-                                      color: cA(bb.target.value)
-                                    }, Ub(Mb)
+                                  value: fF(zz.color),
+                                  "aria-label": `Colour ${tz+1}`,
+                                  onChange: zz => {
+                                    const Wz = [...Fz];
+                                    Wz[tz] = {
+                                      color: EF(zz.target.value)
+                                    }, sz(Wz)
                                   }
-                                }, ab)))
+                                }, tz)))
                               })]
                             });
-                            const Mb = (bb, ab) => {
-                              const Mb = [...Ab];
-                              Mb[bb] = ab, Ub(Mb)
+                            const Wz = (zz, tz) => {
+                              const Wz = [...Fz];
+                              Wz[zz] = tz, sz(Wz)
                             };
-                            return (0, jb.jsxs)("div", {
+                            return (0, wz.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, jb.jsxs)("div", {
+                              children: [(0, wz.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, jb.jsx)("span", {
+                                children: [(0, wz.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, jb.jsx)("span", {
+                                }), (0, wz.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), Ab.map(((bb, ab) => {
-                                var Ub;
-                                const Ab = null !== (Ub = bb.maxColor) && void 0 !== Ub ? Ub : bb.minColor;
-                                return (0, jb.jsxs)("div", {
+                              }), Fz.map(((zz, tz) => {
+                                var sz;
+                                const Fz = null !== (sz = zz.maxColor) && void 0 !== sz ? sz : zz.minColor;
+                                return (0, wz.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, jb.jsxs)("span", {
+                                  children: [(0, wz.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * bb.timeFraction), "%"]
-                                  }), (0, jb.jsx)("span", {
+                                    children: [Math.round(100 * zz.timeFraction), "%"]
+                                  }), (0, wz.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${OA(bb.minColor)}, ${OA(Ab)})`
+                                      background: `linear-gradient(90deg, ${fF(zz.minColor)}, ${fF(Fz)})`
                                     }
-                                  }), (0, jb.jsx)("input", {
+                                  }), (0, wz.jsx)("input", {
                                     type: "color",
-                                    value: OA(bb.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*bb.timeFraction)}%`,
-                                    onChange: Ub => {
-                                      Mb(ab, {
-                                        ...bb,
-                                        minColor: [...cA(Ub.target.value), bb.minColor[3]]
+                                    value: fF(zz.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*zz.timeFraction)}%`,
+                                    onChange: sz => {
+                                      Wz(tz, {
+                                        ...zz,
+                                        minColor: [...EF(sz.target.value), zz.minColor[3]]
                                       })
                                     }
-                                  }), (0, jb.jsx)("input", {
+                                  }), (0, wz.jsx)("input", {
                                     type: "color",
-                                    value: OA(Ab),
-                                    "aria-label": `Maximum colour at ${Math.round(100*bb.timeFraction)}%`,
-                                    onChange: Ub => {
-                                      Mb(ab, {
-                                        ...bb,
-                                        maxColor: [...cA(Ub.target.value), Ab[3]]
+                                    value: fF(Fz),
+                                    "aria-label": `Maximum colour at ${Math.round(100*zz.timeFraction)}%`,
+                                    onChange: sz => {
+                                      Wz(tz, {
+                                        ...zz,
+                                        maxColor: [...EF(sz.target.value), Fz[3]]
                                       })
                                     }
                                   })]
-                                }, ab)
+                                }, tz)
                               }))]
                             })
                           }
-                          const bM = [-.5, -.5, -.5],
-                            aM = [.5, .5, .5],
-                            UM = [0, 1, 2, 3, 4, 5, 6, 7].map((bb => [1 & bb ? aM[0] : bM[0], 2 & bb ? aM[1] : bM[1], 4 & bb ? aM[2] : bM[2]]));class AM {
+                          const FW = [-.5, -.5, -.5],
+                            WW = [.5, .5, .5],
+                            XW = [0, 1, 2, 3, 4, 5, 6, 7].map((zz => [1 & zz ? WW[0] : FW[0], 2 & zz ? WW[1] : FW[1], 4 & zz ? WW[2] : FW[2]]));class OW {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(bb, ab, Ub, Ab) {
-                              const Mb = Math.round(31 * ab),
-                                Tb = Math.round(31 * Ub),
-                                Eb = Math.round(31 * Ab),
-                                Yb = `${Mb}|${Tb}|${Eb}`;
-                              let Bb = this.tints.get(bb);
-                              (!Bb || Bb.size > 2e3) && (Bb = new Map, this.tints.set(bb, Bb));
-                              let eb = Bb.get(Yb);
-                              if (eb) return eb;
-                              eb = document.createElement("canvas"), eb.width = bb.naturalWidth || 16, eb.height = bb.naturalHeight || 16;
-                              const vb = eb.getContext("2d");
-                              return vb ? (vb.imageSmoothingEnabled = !1, vb.drawImage(bb, 0, 0, eb.width, eb.height), vb.globalCompositeOperation = "multiply", vb.fillStyle = `rgb(${Mb/31*255}, ${Tb/31*255}, ${Eb/31*255})`, vb.fillRect(0, 0, eb.width, eb.height), vb.globalCompositeOperation = "destination-in", vb.drawImage(bb, 0, 0, eb.width, eb.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), Bb.set(Yb, eb), eb
+                            get(zz, tz, sz, Fz) {
+                              const Wz = Math.round(31 * tz),
+                                Xz = Math.round(31 * sz),
+                                Oz = Math.round(31 * Fz),
+                                oz = `${Wz}|${Xz}|${Oz}`;
+                              let vz = this.tints.get(zz);
+                              (!vz || vz.size > 2e3) && (vz = new Map, this.tints.set(zz, vz));
+                              let Uz = vz.get(oz);
+                              if (Uz) return Uz;
+                              Uz = document.createElement("canvas"), Uz.width = zz.naturalWidth || 16, Uz.height = zz.naturalHeight || 16;
+                              const Kz = Uz.getContext("2d");
+                              return Kz ? (Kz.imageSmoothingEnabled = !1, Kz.drawImage(zz, 0, 0, Uz.width, Uz.height), Kz.globalCompositeOperation = "multiply", Kz.fillStyle = `rgb(${Wz/31*255}, ${Xz/31*255}, ${Oz/31*255})`, Kz.fillRect(0, 0, Uz.width, Uz.height), Kz.globalCompositeOperation = "destination-in", Kz.drawImage(zz, 0, 0, Uz.width, Uz.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), vz.set(oz, Uz), Uz
                             }
                           }
 
-                          function MM(bb) {
+                          function oW(zz) {
                             let {
-                              opts: ab,
-                              textureUrl: Ub,
-                              burst: Mb,
-                              paused: Tb
-                            } = bb;
-                            const Eb = (0, Ab.useRef)(null),
-                              Yb = (0, Ab.useRef)(ab);
-                            Yb.current = ab;
-                            const Bb = (0, Ab.useRef)(Tb);
-                            Bb.current = Tb;
-                            const eb = (0, Ab.useRef)(null),
-                              vb = (0, Ab.useRef)(null),
-                              Lb = (0, Ab.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(bb) {
-                                let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const Ub = [-.5, -.5, -.5],
-                                  Ab = [.5, .5, .5];
-                                let Mb = .5;
-                                for (let Tb = 0; Tb < 40; Tb++) {
-                                  const Tb = gU(bb, Ub, Ab, ab),
-                                    Eb = Math.max(Tb.life / 30, .001);
-                                  for (; OU(Tb, bb.gravity, Eb);) Mb = Math.max(Mb, Math.hypot(Tb.pos[0], Tb.pos[1], Tb.pos[2]) + Tb.size / 2)
+                              opts: tz,
+                              textureUrl: sz,
+                              burst: Wz,
+                              paused: Xz
+                            } = zz;
+                            const Oz = (0, Fz.useRef)(null),
+                              oz = (0, Fz.useRef)(tz);
+                            oz.current = tz;
+                            const vz = (0, Fz.useRef)(Xz);
+                            vz.current = Xz;
+                            const Uz = (0, Fz.useRef)(null),
+                              Kz = (0, Fz.useRef)(null),
+                              uz = (0, Fz.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(zz) {
+                                let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const sz = [-.5, -.5, -.5],
+                                  Fz = [.5, .5, .5];
+                                let Wz = .5;
+                                for (let Xz = 0; Xz < 40; Xz++) {
+                                  const Xz = Vs(zz, sz, Fz, tz),
+                                    Oz = Math.max(Xz.life / 30, .001);
+                                  for (; fs(Xz, zz.gravity, Oz);) Wz = Math.max(Wz, Math.hypot(Xz.pos[0], Xz.pos[1], Xz.pos[2]) + Xz.size / 2)
                                 }
-                                return Mb
-                              }(ab)))), [ab]),
-                              Pb = (0, Ab.useRef)(Lb);
-                            return Pb.current = Lb, (0, Ab.useEffect)((() => {
-                              if (eb.current = null, !Ub) return;
-                              const bb = new Image;
-                              let ab = !1;
-                              return bb.onload = () => {
-                                ab || (eb.current = bb)
-                              }, bb.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${Ub}`)
-                              }, bb.src = Ub, () => {
-                                ab = !0
+                                return Wz
+                              }(tz)))), [tz]),
+                              Nz = (0, Fz.useRef)(uz);
+                            return Nz.current = uz, (0, Fz.useEffect)((() => {
+                              if (Uz.current = null, !sz) return;
+                              const zz = new Image;
+                              let tz = !1;
+                              return zz.onload = () => {
+                                tz || (Uz.current = zz)
+                              }, zz.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${sz}`)
+                              }, zz.src = sz, () => {
+                                tz = !0
                               }
-                            }), [Ub]), (0, Ab.useEffect)((() => {
-                              var bb;
-                              null === (bb = vb.current) || void 0 === bb || bb.call(vb)
-                            }), [ab, Mb]), (0, Ab.useEffect)((() => {
-                              const bb = Eb.current,
-                                ab = null === bb || void 0 === bb ? void 0 : bb.getContext("2d");
-                              if (!bb || !ab) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const Ub = new AM;
-                              let Ab = [],
-                                Mb = 0,
-                                Tb = -.7,
-                                Lb = Pb.current,
-                                Xb = performance.now(),
-                                jb = 0,
-                                Rb = !0,
-                                kb = null;
-                              const yb = () => {
-                                const bb = Yb.current,
-                                  ab = Math.min(400, Math.max(0, Math.ceil(bb.manualEmitCount)));
-                                Ab = [];
-                                for (let Ub = 0; Ub < ab; Ub++) Ab.push(gU(bb, bM, aM, Math.random));
-                                Mb = 0
+                            }), [sz]), (0, Fz.useEffect)((() => {
+                              var zz;
+                              null === (zz = Kz.current) || void 0 === zz || zz.call(Kz)
+                            }), [tz, Wz]), (0, Fz.useEffect)((() => {
+                              const zz = Oz.current,
+                                tz = null === zz || void 0 === zz ? void 0 : zz.getContext("2d");
+                              if (!zz || !tz) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const sz = new OW;
+                              let Fz = [],
+                                Wz = 0,
+                                Xz = -.7,
+                                uz = Nz.current,
+                                bz = performance.now(),
+                                wz = 0,
+                                Dz = !0,
+                                gz = null;
+                              const Hz = () => {
+                                const zz = oz.current,
+                                  tz = Math.min(400, Math.max(0, Math.ceil(zz.manualEmitCount)));
+                                Fz = [];
+                                for (let sz = 0; sz < tz; sz++) Fz.push(Vs(zz, FW, WW, Math.random));
+                                Wz = 0
                               };
-                              vb.current = yb, yb();
-                              const Zb = Eb => {
-                                jb = requestAnimationFrame(Zb);
-                                const vb = Math.min(.05, (Eb - Xb) / 1e3);
-                                if (Xb = Eb, !Rb) return;
-                                const Db = window.devicePixelRatio || 1,
-                                  zb = Math.round(bb.clientWidth * Db),
-                                  xb = Math.round(bb.clientHeight * Db);
-                                if (0 === zb || 0 === xb) return;
-                                bb.width === zb && bb.height === xb || (bb.width = zb, bb.height = xb);
-                                const ib = Yb.current;
-                                null === kb && (Tb += .18 * vb), Lb += (Pb.current - Lb) * Math.min(1, 4 * vb);
-                                const fb = .6 * vb;
-                                Ab = Ab.filter((bb => OU(bb, ib.gravity, fb))), 0 !== Ab.length || Bb.current || (Mb += vb, Mb > .6 && yb());
-                                const mb = function(bb, ab, Ub, Ab) {
-                                  const Mb = 3.2 * Ab,
-                                    Tb = .44 * Math.min(bb, ab) * Mb / Ab,
-                                    Eb = Math.cos(Ub),
-                                    Yb = Math.sin(Ub),
-                                    Bb = Math.cos(.42),
-                                    eb = Math.sin(.42);
-                                  return (Ub, Ab, vb) => {
-                                    const Lb = Ub * Yb + vb * Eb,
-                                      Pb = Mb - (Ab * eb + Lb * Bb);
-                                    if (Pb < .05) return null;
-                                    const Xb = Tb / Pb;
+                              Kz.current = Hz, Hz();
+                              const Bz = Oz => {
+                                wz = requestAnimationFrame(Bz);
+                                const Kz = Math.min(.05, (Oz - bz) / 1e3);
+                                if (bz = Oz, !Dz) return;
+                                const Pz = window.devicePixelRatio || 1,
+                                  rz = Math.round(zz.clientWidth * Pz),
+                                  Yz = Math.round(zz.clientHeight * Pz);
+                                if (0 === rz || 0 === Yz) return;
+                                zz.width === rz && zz.height === Yz || (zz.width = rz, zz.height = Yz);
+                                const xz = oz.current;
+                                null === gz && (Xz += .18 * Kz), uz += (Nz.current - uz) * Math.min(1, 4 * Kz);
+                                const mz = .6 * Kz;
+                                Fz = Fz.filter((zz => fs(zz, xz.gravity, mz))), 0 !== Fz.length || vz.current || (Wz += Kz, Wz > .6 && Hz());
+                                const Jz = function(zz, tz, sz, Fz) {
+                                  const Wz = 3.2 * Fz,
+                                    Xz = .44 * Math.min(zz, tz) * Wz / Fz,
+                                    Oz = Math.cos(sz),
+                                    oz = Math.sin(sz),
+                                    vz = Math.cos(.42),
+                                    Uz = Math.sin(.42);
+                                  return (sz, Fz, Kz) => {
+                                    const uz = sz * oz + Kz * Oz,
+                                      Nz = Wz - (Fz * Uz + uz * vz);
+                                    if (Nz < .05) return null;
+                                    const bz = Xz / Nz;
                                     return {
-                                      x: bb / 2 + (Ub * Eb - vb * Yb) * Xb,
-                                      y: ab / 2 - (Ab * Bb - Lb * eb) * Xb,
-                                      scale: Xb,
-                                      depth: Pb
+                                      x: zz / 2 + (sz * Oz - Kz * oz) * bz,
+                                      y: tz / 2 - (Fz * vz - uz * Uz) * bz,
+                                      scale: bz,
+                                      depth: Nz
                                     }
                                   }
-                                }(zb, xb, Tb, Lb);
-                                ! function(bb, ab, Ub, Ab, Mb) {
-                                  const Tb = bb.createLinearGradient(0, 0, 0, Ub);
-                                  Tb.addColorStop(0, "#23262d"), Tb.addColorStop(1, "#16181c"), bb.globalCompositeOperation = "source-over", bb.globalAlpha = 1, bb.fillStyle = Tb, bb.fillRect(0, 0, ab, Ub);
-                                  const Eb = (ab, Ub) => {
-                                      const Mb = Ab(ab[0], ab[1], ab[2]),
-                                        Tb = Ab(Ub[0], Ub[1], Ub[2]);
-                                      Mb && Tb && (bb.beginPath(), bb.moveTo(Mb.x, Mb.y), bb.lineTo(Tb.x, Tb.y), bb.stroke())
+                                }(rz, Yz, Xz, uz);
+                                ! function(zz, tz, sz, Fz, Wz) {
+                                  const Xz = zz.createLinearGradient(0, 0, 0, sz);
+                                  Xz.addColorStop(0, "#23262d"), Xz.addColorStop(1, "#16181c"), zz.globalCompositeOperation = "source-over", zz.globalAlpha = 1, zz.fillStyle = Xz, zz.fillRect(0, 0, tz, sz);
+                                  const Oz = (tz, sz) => {
+                                      const Wz = Fz(tz[0], tz[1], tz[2]),
+                                        Xz = Fz(sz[0], sz[1], sz[2]);
+                                      Wz && Xz && (zz.beginPath(), zz.moveTo(Wz.x, Wz.y), zz.lineTo(Xz.x, Xz.y), zz.stroke())
                                     },
-                                    Yb = Math.ceil(Mb) + 1,
-                                    Bb = bM[1];
-                                  bb.lineWidth = 1, bb.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let eb = -Yb; eb <= Yb; eb++) Eb([eb + .5, Bb, .5 - Yb], [eb + .5, Bb, Yb + .5]), Eb([.5 - Yb, Bb, eb + .5], [Yb + .5, Bb, eb + .5]);
-                                  bb.strokeStyle = "rgba(255, 255, 255, 0.28)", bb.setLineDash([4, 4]);
-                                  for (const eb of UM)
-                                    for (const bb of UM) {
-                                      const ab = [0, 1, 2].filter((ab => eb[ab] !== bb[ab]));
-                                      1 === ab.length && eb[ab[0]] < bb[ab[0]] && Eb(eb, bb)
+                                    oz = Math.ceil(Wz) + 1,
+                                    vz = FW[1];
+                                  zz.lineWidth = 1, zz.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let Uz = -oz; Uz <= oz; Uz++) Oz([Uz + .5, vz, .5 - oz], [Uz + .5, vz, oz + .5]), Oz([.5 - oz, vz, Uz + .5], [oz + .5, vz, Uz + .5]);
+                                  zz.strokeStyle = "rgba(255, 255, 255, 0.28)", zz.setLineDash([4, 4]);
+                                  for (const Uz of XW)
+                                    for (const zz of XW) {
+                                      const tz = [0, 1, 2].filter((tz => Uz[tz] !== zz[tz]));
+                                      1 === tz.length && Uz[tz[0]] < zz[tz[0]] && Oz(Uz, zz)
                                     }
-                                  bb.setLineDash([])
-                                }(ab, zb, xb, mb, Lb);
-                                const pb = eb.current,
-                                  Nb = Ab.map((bb => ({
-                                    particle: bb,
-                                    at: mb(bb.pos[0], bb.pos[1], bb.pos[2])
-                                  }))).filter((bb => null !== bb.at)).sort(((bb, ab) => ab.at.depth - bb.at.depth));
-                                ab.imageSmoothingEnabled = !1;
-                                for (const bb of function(bb) {
-                                    switch (bb) {
-                                      case rU.f.OneOne:
+                                  zz.setLineDash([])
+                                }(tz, rz, Yz, Jz, uz);
+                                const Iz = Uz.current,
+                                  Cz = Fz.map((zz => ({
+                                    particle: zz,
+                                    at: Jz(zz.pos[0], zz.pos[1], zz.pos[2])
+                                  }))).filter((zz => null !== zz.at)).sort(((zz, tz) => tz.at.depth - zz.at.depth));
+                                tz.imageSmoothingEnabled = !1;
+                                for (const zz of function(zz) {
+                                    switch (zz) {
+                                      case is.f.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case rU.f.Add:
+                                      case is.f.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case rU.f.Multiply:
+                                      case is.f.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case rU.f.MultiplyAdd:
+                                      case is.f.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2962,665 +2962,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(ib.blendMode)) {
-                                  ab.globalCompositeOperation = bb.operation;
+                                  }(xz.blendMode)) {
+                                  tz.globalCompositeOperation = zz.operation;
                                   for (const {
-                                      particle: Ab,
-                                      at: Mb
+                                      particle: Fz,
+                                      at: Wz
                                     }
-                                    of Nb) {
-                                    const [Tb, Eb, Yb, Bb] = VU(Ab), eb = Math.max(1, Ab.size * Mb.scale);
-                                    ab.globalAlpha = bb.usesAlpha ? Math.min(1, Math.max(0, Bb)) : 1, pb ? ab.drawImage(Ub.get(pb, Tb, Eb, Yb), Mb.x - eb / 2, Mb.y - eb / 2, eb, eb) : (ab.fillStyle = `rgb(${255*Tb}, ${255*Eb}, ${255*Yb})`, ab.fillRect(Mb.x - eb / 2, Mb.y - eb / 2, eb, eb))
+                                    of Cz) {
+                                    const [Xz, Oz, oz, vz] = ps(Fz), Uz = Math.max(1, Fz.size * Wz.scale);
+                                    tz.globalAlpha = zz.usesAlpha ? Math.min(1, Math.max(0, vz)) : 1, Iz ? tz.drawImage(sz.get(Iz, Xz, Oz, oz), Wz.x - Uz / 2, Wz.y - Uz / 2, Uz, Uz) : (tz.fillStyle = `rgb(${255*Xz}, ${255*Oz}, ${255*oz})`, tz.fillRect(Wz.x - Uz / 2, Wz.y - Uz / 2, Uz, Uz))
                                   }
                                 }
-                                ab.globalCompositeOperation = "source-over", ab.globalAlpha = 1
+                                tz.globalCompositeOperation = "source-over", tz.globalAlpha = 1
                               };
-                              jb = requestAnimationFrame(Zb);
-                              const Db = new IntersectionObserver((bb => {
-                                let [ab] = bb;
-                                Rb = ab.isIntersecting
+                              wz = requestAnimationFrame(Bz);
+                              const Pz = new IntersectionObserver((zz => {
+                                let [tz] = zz;
+                                Dz = tz.isIntersecting
                               }));
-                              Db.observe(bb);
-                              const zb = ab => {
-                                  kb = ab.clientX, bb.setPointerCapture(ab.pointerId)
+                              Pz.observe(zz);
+                              const rz = tz => {
+                                  gz = tz.clientX, zz.setPointerCapture(tz.pointerId)
                                 },
-                                xb = bb => {
-                                  null !== kb && (Tb += .01 * (bb.clientX - kb), kb = bb.clientX)
+                                Yz = zz => {
+                                  null !== gz && (Xz += .01 * (zz.clientX - gz), gz = zz.clientX)
                                 },
-                                ib = () => {
-                                  kb = null
+                                xz = () => {
+                                  gz = null
                                 };
-                              return bb.addEventListener("pointerdown", zb), bb.addEventListener("pointermove", xb), bb.addEventListener("pointerup", ib), bb.addEventListener("pointercancel", ib), () => {
-                                cancelAnimationFrame(jb), Db.disconnect(), vb.current = null, bb.removeEventListener("pointerdown", zb), bb.removeEventListener("pointermove", xb), bb.removeEventListener("pointerup", ib), bb.removeEventListener("pointercancel", ib)
+                              return zz.addEventListener("pointerdown", rz), zz.addEventListener("pointermove", Yz), zz.addEventListener("pointerup", xz), zz.addEventListener("pointercancel", xz), () => {
+                                cancelAnimationFrame(wz), Pz.disconnect(), Kz.current = null, zz.removeEventListener("pointerdown", rz), zz.removeEventListener("pointermove", Yz), zz.removeEventListener("pointerup", xz), zz.removeEventListener("pointercancel", xz)
                               }
-                            }), []), (0, jb.jsx)("canvas", {
-                              ref: Eb,
+                            }), []), (0, wz.jsx)("canvas", {
+                              ref: Oz,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${ab.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${tz.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const TM = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            EM = [{
-                              mode: rU.f.OneOne,
+                          const vW = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            UW = [{
+                              mode: is.f.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: rU.f.Standard,
+                              mode: is.f.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: rU.f.Add,
+                              mode: is.f.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: rU.f.Multiply,
+                              mode: is.f.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: rU.f.MultiplyAdd,
+                              mode: is.f.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            YM = (0, Ab.forwardRef)((function(bb, ab) {
-                              var Ub, Mb;
+                            KW = (0, Fz.forwardRef)((function(zz, tz) {
+                              var sz, Wz;
                               let {
-                                textures: Eb
-                              } = bb;
-                              const Yb = DA(),
-                                Bb = (0, Ab.useRef)(null),
-                                [eb, vb] = (0, Ab.useState)(oU),
-                                [Lb, Pb] = (0, Ab.useState)("example"),
-                                [Xb, Rb] = (0, Ab.useState)(0),
-                                [yb, Zb] = (0, Ab.useState)(!1),
-                                zb = bb => {
-                                  const ab = "example" === bb ? oU : KU(bb);
-                                  ab && (vb(ab), Pb(bb))
+                                textures: Oz
+                              } = zz;
+                              const oz = xF(),
+                                vz = (0, Fz.useRef)(null),
+                                [Uz, Kz] = (0, Fz.useState)(ls),
+                                [uz, Nz] = (0, Fz.useState)("example"),
+                                [bz, Dz] = (0, Fz.useState)(0),
+                                [Hz, Bz] = (0, Fz.useState)(!1),
+                                rz = zz => {
+                                  const tz = "example" === zz ? ls : Ls(zz);
+                                  tz && (Kz(tz), Nz(zz))
                                 };
-                              (0, Ab.useImperativeHandle)(ab, (() => ({
-                                preview: bb => {
-                                  var ab;
-                                  zb(bb), null === (ab = Bb.current) || void 0 === ab || ab.scrollIntoView({
+                              (0, Fz.useImperativeHandle)(tz, (() => ({
+                                preview: zz => {
+                                  var tz;
+                                  rz(zz), null === (tz = vz.current) || void 0 === tz || tz.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const xb = bb => {
-                                  vb({
-                                    ...eb,
-                                    ...bb
-                                  }), Pb(null)
+                              const Yz = zz => {
+                                  Kz({
+                                    ...Uz,
+                                    ...zz
+                                  }), Nz(null)
                                 },
-                                ib = function(bb, ab) {
-                                  if (null !== ab) return `${SU}    presetId: "${ab}",\n${bA}\n})`;
-                                  const Ub = bb.velocityGradients.map((bb => `        {\n            timeFraction: ${cU(bb.timeFraction)},\n            factor: ${cU(bb.factor)},\n            factor2: ${cU(bb.factor2)},\n        },`)),
-                                    Ab = [`    dir1: ${JU(bb.dir1)},`, `    dir2: ${JU(bb.dir2)},`, bA, `    texture: "${bb.texture}",`, `    minLifeTime: ${cU(bb.minLifeTime)},`, `    maxLifeTime: ${cU(bb.maxLifeTime)},`, `    minEmitPower: ${cU(bb.minEmitPower)},`, `    maxEmitPower: ${cU(bb.maxEmitPower)},`, `    minSize: ${cU(bb.minSize)},`, `    maxSize: ${cU(bb.maxSize)},`, `    manualEmitCount: ${cU(bb.manualEmitCount)},`, `    gravity: ${JU(bb.gravity)},`, `    colorGradients: ${nU(bb.colorGradients,"    ")},`, `    velocityGradients: ${Ub.length>0?`[\n${Ub.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${cU(bb.blendMode)},`];
-                                  return void 0 !== bb.hideDist && Ab.push(`    hideDist: ${cU(bb.hideDist)},`), `${SU}${Ab.join("\n")}\n})`
-                                }(eb, null === Lb || "example" === Lb ? null : Lb),
-                                mb = Eb.includes(eb.texture) ? Eb : [...Eb, eb.texture];
-                              return (0, jb.jsxs)("section", {
-                                ref: Bb,
+                                xz = function(zz, tz) {
+                                  if (null !== tz) return `${sF}    presetId: "${tz}",\n${FF}\n})`;
+                                  const sz = zz.velocityGradients.map((zz => `        {\n            timeFraction: ${Es(zz.timeFraction)},\n            factor: ${Es(zz.factor)},\n            factor2: ${Es(zz.factor2)},\n        },`)),
+                                    Fz = [`    dir1: ${zF(zz.dir1)},`, `    dir2: ${zF(zz.dir2)},`, FF, `    texture: "${zz.texture}",`, `    minLifeTime: ${Es(zz.minLifeTime)},`, `    maxLifeTime: ${Es(zz.maxLifeTime)},`, `    minEmitPower: ${Es(zz.minEmitPower)},`, `    maxEmitPower: ${Es(zz.maxEmitPower)},`, `    minSize: ${Es(zz.minSize)},`, `    maxSize: ${Es(zz.maxSize)},`, `    manualEmitCount: ${Es(zz.manualEmitCount)},`, `    gravity: ${zF(zz.gravity)},`, `    colorGradients: ${tF(zz.colorGradients,"    ")},`, `    velocityGradients: ${sz.length>0?`[\n${sz.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Es(zz.blendMode)},`];
+                                  return void 0 !== zz.hideDist && Fz.push(`    hideDist: ${Es(zz.hideDist)},`), `${sF}${Fz.join("\n")}\n})`
+                                }(Uz, null === uz || "example" === uz ? null : uz),
+                                Jz = Oz.includes(Uz.texture) ? Oz : [...Oz, Uz.texture];
+                              return (0, wz.jsxs)("section", {
+                                ref: vz,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, jb.jsxs)("header", {
+                                children: [(0, wz.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, jb.jsxs)("div", {
-                                    children: [(0, jb.jsx)("div", {
+                                  children: [(0, wz.jsxs)("div", {
+                                    children: [(0, wz.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, jb.jsx)("div", {
+                                    }), (0, wz.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, jb.jsx)(Db, {
-                                    text: ib,
+                                  }), (0, wz.jsx)(Pz, {
+                                    text: xz,
                                     label: "Copy code"
                                   })]
-                                }), (0, jb.jsxs)("div", {
+                                }), (0, wz.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, jb.jsx)("button", {
+                                  children: [(0, wz.jsx)("button", {
                                     type: "button",
-                                    className: Tb()("DocsVariantChip", {
-                                      Active: "example" === Lb
+                                    className: Xz()("DocsVariantChip", {
+                                      Active: "example" === uz
                                     }),
                                     onClick: () => {
-                                      zb("example")
+                                      rz("example")
                                     },
                                     children: "Example"
-                                  }), TM.filter((bb => null !== KU(bb))).map((bb => (0, jb.jsx)("button", {
+                                  }), vW.filter((zz => null !== Ls(zz))).map((zz => (0, wz.jsx)("button", {
                                     type: "button",
-                                    className: Tb()("DocsVariantChip", {
-                                      Active: Lb === bb
+                                    className: Xz()("DocsVariantChip", {
+                                      Active: uz === zz
                                     }),
                                     onClick: () => {
-                                      zb(bb)
+                                      rz(zz)
                                     },
-                                    children: bb
-                                  }, bb))), (0, jb.jsxs)("select", {
+                                    children: zz
+                                  }, zz))), (0, wz.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== Lb && void 0 !== Lb ? Lb : "custom",
+                                    value: null !== uz && void 0 !== uz ? uz : "custom",
                                     "aria-label": "Preset",
-                                    onChange: bb => {
-                                      zb(bb.target.value)
+                                    onChange: zz => {
+                                      rz(zz.target.value)
                                     },
-                                    children: [(0, jb.jsx)("option", {
+                                    children: [(0, wz.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === Lb && (0, jb.jsx)("option", {
+                                    }), null === uz && (0, wz.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), uU.d.map((bb => (0, jb.jsx)("option", {
-                                      value: bb,
-                                      children: bb
-                                    }, bb)))]
+                                    }), ks.c.map((zz => (0, wz.jsx)("option", {
+                                      value: zz,
+                                      children: zz
+                                    }, zz)))]
                                   })]
-                                }), (0, jb.jsxs)("div", {
+                                }), (0, wz.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, jb.jsxs)("div", {
+                                  children: [(0, wz.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, jb.jsx)(MM, {
-                                      opts: eb,
-                                      textureUrl: null !== (Ub = null === Yb || void 0 === Yb ? void 0 : Yb.getParticleTextureUrl(eb.texture)) && void 0 !== Ub ? Ub : null,
-                                      burst: Xb,
-                                      paused: yb
-                                    }), (0, jb.jsxs)("div", {
+                                    children: [(0, wz.jsx)(oW, {
+                                      opts: Uz,
+                                      textureUrl: null !== (sz = null === oz || void 0 === oz ? void 0 : oz.getParticleTextureUrl(Uz.texture)) && void 0 !== sz ? sz : null,
+                                      burst: bz,
+                                      paused: Hz
+                                    }), (0, wz.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, jb.jsxs)("button", {
+                                      children: [(0, wz.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          Rb(Xb + 1)
+                                          Dz(bz + 1)
                                         },
-                                        children: [(0, jb.jsx)(kb, {
+                                        children: [(0, wz.jsx)(gz, {
                                           name: "replay"
-                                        }), (0, jb.jsx)("span", {
+                                        }), (0, wz.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, jb.jsxs)("button", {
+                                      }), (0, wz.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": yb,
+                                        "aria-pressed": Hz,
                                         onClick: () => {
-                                          Zb(!yb)
+                                          Bz(!Hz)
                                         },
-                                        children: [(0, jb.jsx)(kb, {
-                                          name: yb ? "play" : "pause"
-                                        }), (0, jb.jsx)("span", {
-                                          children: yb ? "Loop" : "Stop looping"
+                                        children: [(0, wz.jsx)(gz, {
+                                          name: Hz ? "play" : "pause"
+                                        }), (0, wz.jsx)("span", {
+                                          children: Hz ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, jb.jsxs)("div", {
+                                  }), (0, wz.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, jb.jsxs)("div", {
+                                    children: [(0, wz.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, jb.jsxs)("div", {
+                                      children: [(0, wz.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, jb.jsx)("span", {
+                                        children: [(0, wz.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, jb.jsx)("code", {
+                                        }), (0, wz.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: eb.texture
+                                          children: Uz.texture
                                         })]
-                                      }), (0, jb.jsx)("div", {
+                                      }), (0, wz.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: mb.map((bb => {
-                                          var ab;
-                                          const Ub = null !== (ab = null === Yb || void 0 === Yb ? void 0 : Yb.getParticleTextureUrl(bb)) && void 0 !== ab ? ab : null;
-                                          return (0, jb.jsx)("button", {
+                                        children: Jz.map((zz => {
+                                          var tz;
+                                          const sz = null !== (tz = null === oz || void 0 === oz ? void 0 : oz.getParticleTextureUrl(zz)) && void 0 !== tz ? tz : null;
+                                          return (0, wz.jsx)("button", {
                                             type: "button",
-                                            className: Tb()("DocsParticleTexture", {
-                                              Active: eb.texture === bb
+                                            className: Xz()("DocsParticleTexture", {
+                                              Active: Uz.texture === zz
                                             }),
-                                            title: bb,
-                                            "aria-label": bb,
-                                            "aria-pressed": eb.texture === bb,
+                                            title: zz,
+                                            "aria-label": zz,
+                                            "aria-pressed": Uz.texture === zz,
                                             onClick: () => {
-                                              xb({
-                                                texture: bb
+                                              Yz({
+                                                texture: zz
                                               })
                                             },
-                                            children: Ub ? (0, jb.jsx)("img", {
-                                              src: Ub,
+                                            children: sz ? (0, wz.jsx)("img", {
+                                              src: sz,
                                               alt: ""
-                                            }) : (0, jb.jsx)(kb, {
+                                            }) : (0, wz.jsx)(gz, {
                                               name: "image"
                                             })
-                                          }, bb)
+                                          }, zz)
                                         }))
                                       })]
-                                    }), (0, jb.jsx)(nA, {
+                                    }), (0, wz.jsx)(tW, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: eb.manualEmitCount,
-                                      onChange: bb => {
-                                        xb({
-                                          manualEmitCount: bb
+                                      value: Uz.manualEmitCount,
+                                      onChange: zz => {
+                                        Yz({
+                                          manualEmitCount: zz
                                         })
                                       }
-                                    }), (0, jb.jsx)(JA, {
+                                    }), (0, wz.jsx)(zW, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: eb.minLifeTime,
-                                      high: eb.maxLifeTime,
-                                      onChange: (bb, ab) => {
-                                        xb({
-                                          minLifeTime: bb,
-                                          maxLifeTime: ab
+                                      low: Uz.minLifeTime,
+                                      high: Uz.maxLifeTime,
+                                      onChange: (zz, tz) => {
+                                        Yz({
+                                          minLifeTime: zz,
+                                          maxLifeTime: tz
                                         })
                                       }
-                                    }), (0, jb.jsx)(JA, {
+                                    }), (0, wz.jsx)(zW, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: eb.minEmitPower,
-                                      high: eb.maxEmitPower,
-                                      onChange: (bb, ab) => {
-                                        xb({
-                                          minEmitPower: bb,
-                                          maxEmitPower: ab
+                                      low: Uz.minEmitPower,
+                                      high: Uz.maxEmitPower,
+                                      onChange: (zz, tz) => {
+                                        Yz({
+                                          minEmitPower: zz,
+                                          maxEmitPower: tz
                                         })
                                       }
-                                    }), (0, jb.jsx)(JA, {
+                                    }), (0, wz.jsx)(zW, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: eb.minSize,
-                                      high: eb.maxSize,
-                                      onChange: (bb, ab) => {
-                                        xb({
-                                          minSize: bb,
-                                          maxSize: ab
+                                      low: Uz.minSize,
+                                      high: Uz.maxSize,
+                                      onChange: (zz, tz) => {
+                                        Yz({
+                                          minSize: zz,
+                                          maxSize: tz
                                         })
                                       }
-                                    }), (0, jb.jsx)(nA, {
+                                    }), (0, wz.jsx)(tW, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (Mb = eb.gravity[1]) && void 0 !== Mb ? Mb : 0,
-                                      onChange: bb => {
-                                        var ab, Ub;
-                                        xb({
-                                          gravity: [null !== (ab = eb.gravity[0]) && void 0 !== ab ? ab : 0, bb, null !== (Ub = eb.gravity[2]) && void 0 !== Ub ? Ub : 0]
+                                      value: null !== (Wz = Uz.gravity[1]) && void 0 !== Wz ? Wz : 0,
+                                      onChange: zz => {
+                                        var tz, sz;
+                                        Yz({
+                                          gravity: [null !== (tz = Uz.gravity[0]) && void 0 !== tz ? tz : 0, zz, null !== (sz = Uz.gravity[2]) && void 0 !== sz ? sz : 0]
                                         })
                                       }
-                                    }), (0, jb.jsxs)("div", {
+                                    }), (0, wz.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, jb.jsx)("div", {
+                                      children: [(0, wz.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, jb.jsx)("span", {
+                                        children: (0, wz.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, jb.jsx)("select", {
+                                      }), (0, wz.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: eb.blendMode,
+                                        value: Uz.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: bb => {
-                                          xb({
-                                            blendMode: Number(bb.target.value)
+                                        onChange: zz => {
+                                          Yz({
+                                            blendMode: Number(zz.target.value)
                                           })
                                         },
-                                        children: EM.map((bb => {
+                                        children: UW.map((zz => {
                                           let {
-                                            mode: ab,
-                                            label: Ub
-                                          } = bb;
-                                          return (0, jb.jsx)("option", {
-                                            value: ab,
-                                            children: Ub
-                                          }, ab)
+                                            mode: tz,
+                                            label: sz
+                                          } = zz;
+                                          return (0, wz.jsx)("option", {
+                                            value: tz,
+                                            children: sz
+                                          }, tz)
                                         }))
                                       })]
-                                    }), (0, jb.jsx)(SA, {
-                                      opts: eb,
-                                      onChange: bb => {
-                                        xb({
-                                          colorGradients: bb
+                                    }), (0, wz.jsx)(sW, {
+                                      opts: Uz,
+                                      onChange: zz => {
+                                        Yz({
+                                          colorGradients: zz
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, jb.jsx)(fb, {
-                                  code: ib,
+                                }), (0, wz.jsx)(mz, {
+                                  code: xz,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var BM = Ub(4150),
-                            eM = Ub(1794);
+                          var uW = sz(4107),
+                            NW = sz(1831);
 
-                          function vM(bb, ab) {
-                            return bb ? BM.b.includes(ab) ? bb.getIngameIconUrl(ab) : bb.getItemIconUrl(ab) : null
+                          function bW(zz, tz) {
+                            return zz ? uW.e.includes(tz) ? zz.getIngameIconUrl(tz) : zz.getItemIconUrl(tz) : null
                           }
 
-                          function LM(bb) {
-                            var ab, Ub, Ab;
+                          function wW(zz) {
+                            var tz, sz, Fz;
                             let {
-                              part: Mb,
-                              assets: Eb
-                            } = bb;
-                            const Yb = vM(Eb, Mb.icon),
-                              Bb = null !== (ab = null === (Ub = Mb.style) || void 0 === Ub ? void 0 : Ub.fontSize) && void 0 !== ab ? ab : "1.8em",
-                              eb = (0, ua.Vb)(Mb.style);
-                            return (0, jb.jsxs)("span", {
-                              className: Tb()("DocsBloxdTextIcon", {
-                                Missing: !Yb
+                              part: Wz,
+                              assets: Oz
+                            } = zz;
+                            const oz = bW(Oz, Wz.icon),
+                              vz = null !== (tz = null === (sz = Wz.style) || void 0 === sz ? void 0 : sz.fontSize) && void 0 !== tz ? tz : "1.8em",
+                              Uz = (0, dt.Xb)(Wz.style);
+                            return (0, wz.jsxs)("span", {
+                              className: Xz()("DocsBloxdTextIcon", {
+                                Missing: !oz
                               }),
                               style: {
-                                width: Bb,
-                                height: Bb,
-                                opacity: null === (Ab = Mb.style) || void 0 === Ab ? void 0 : Ab.opacity
+                                width: vz,
+                                height: vz,
+                                opacity: null === (Fz = Wz.style) || void 0 === Fz ? void 0 : Fz.opacity
                               },
-                              title: Yb ? void 0 : `No Bloxd icon, item or block is called "${Mb.icon}"`,
-                              children: [Yb && eb && (0, jb.jsx)("span", {
+                              title: oz ? void 0 : `No Bloxd icon, item or block is called "${Wz.icon}"`,
+                              children: [oz && Uz && (0, wz.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: eb,
-                                  maskImage: `url("${Yb}")`,
-                                  WebkitMaskImage: `url("${Yb}")`
+                                  background: Uz,
+                                  maskImage: `url("${oz}")`,
+                                  WebkitMaskImage: `url("${oz}")`
                                 }
-                              }), Yb ? (0, jb.jsx)("img", {
-                                src: Yb,
+                              }), oz ? (0, wz.jsx)("img", {
+                                src: oz,
                                 alt: "",
-                                className: Tb()({
-                                  Tinted: eb
+                                className: Xz()({
+                                  Tinted: Uz
                                 })
-                              }) : (0, jb.jsx)(kb, {
+                              }) : (0, wz.jsx)(gz, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function PM(bb) {
+                          function DW(zz) {
                             let {
-                              parts: ab,
-                              className: Ub
-                            } = bb;
-                            const Ab = DA(),
-                              Mb = [];
-                            let Eb = [];
-                            const Yb = bb => {
-                              Eb.length > 0 && (Mb.push((0, jb.jsx)(eM.c, {
-                                text: Eb
-                              }, `run-${bb}`)), Eb = [])
+                              parts: tz,
+                              className: sz
+                            } = zz;
+                            const Fz = xF(),
+                              Wz = [];
+                            let Oz = [];
+                            const oz = zz => {
+                              Oz.length > 0 && (Wz.push((0, wz.jsx)(NW.c, {
+                                text: Oz
+                              }, `run-${zz}`)), Oz = [])
                             };
-                            return ab.forEach(((bb, ab) => {
-                              "icon" !== ta(bb) || Ka(bb.icon) ? Eb.push(bb) : (Yb(ab), Mb.push((0, jb.jsx)(LM, {
-                                part: bb,
-                                assets: Ab
-                              }, `icon-${ab}`)))
-                            })), Yb(ab.length), (0, jb.jsx)("div", {
-                              className: Tb()("DocsStyledTextPreview", Ub),
-                              children: Mb
+                            return tz.forEach(((zz, tz) => {
+                              "icon" !== Lt(zz) || Qt(zz.icon) ? Oz.push(zz) : (oz(tz), Wz.push((0, wz.jsx)(wW, {
+                                part: zz,
+                                assets: Fz
+                              }, `icon-${tz}`)))
+                            })), oz(tz.length), (0, wz.jsx)("div", {
+                              className: Xz()("DocsStyledTextPreview", sz),
+                              children: Wz
                             })
                           }
-                          const XM = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let jM = null;
+                          const gW = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let HW = null;
 
-                          function RM(bb) {
-                            if (jM ??= document.createElement("canvas").getContext("2d"), !jM) return "#000000";
-                            jM.fillStyle = "#000000", jM.fillStyle = bb;
-                            const ab = jM.fillStyle;
-                            return ab.startsWith("#") ? ab : "#000000"
+                          function BW(zz) {
+                            if (HW ??= document.createElement("canvas").getContext("2d"), !HW) return "#000000";
+                            HW.fillStyle = "#000000", HW.fillStyle = zz;
+                            const tz = HW.fillStyle;
+                            return tz.startsWith("#") ? tz : "#000000"
                           }
 
-                          function kM(bb) {
+                          function PW(zz) {
                             let {
-                              value: ab,
-                              label: Ub,
-                              onChange: Ab
-                            } = bb;
-                            return (0, jb.jsxs)("span", {
+                              value: tz,
+                              label: sz,
+                              onChange: Fz
+                            } = zz;
+                            return (0, wz.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, jb.jsx)("input", {
+                              children: [(0, wz.jsx)("input", {
                                 type: "color",
-                                value: RM(ab),
-                                "aria-label": `${Ub} picker`,
-                                onChange: bb => {
-                                  Ab(bb.target.value)
+                                value: BW(tz),
+                                "aria-label": `${sz} picker`,
+                                onChange: zz => {
+                                  Fz(zz.target.value)
                                 }
-                              }), (0, jb.jsx)("input", {
+                              }), (0, wz.jsx)("input", {
                                 type: "text",
-                                value: ab,
+                                value: tz,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": Ub,
+                                "aria-label": sz,
                                 spellCheck: !1,
-                                onChange: bb => {
-                                  Ab(bb.target.value)
+                                onChange: zz => {
+                                  Fz(zz.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function yM(bb) {
+                          function rW(zz) {
                             let {
-                              value: ab,
-                              fontAwesomeIcons: Ub,
-                              onChange: Mb
-                            } = bb;
-                            const Eb = DA(),
-                              [Yb, Bb] = (0, Ab.useState)(Ka(ab) ? "fontAwesome" : "bloxd"),
-                              [eb, vb] = (0, Ab.useState)(""),
-                              Lb = eb.trim().toLowerCase(),
-                              Pb = "bloxd" === Yb ? BM.b : Ub,
-                              Xb = Lb ? Pb.filter((bb => bb.toLowerCase().includes(Lb))) : Pb;
-                            return (0, jb.jsxs)("div", {
+                              value: tz,
+                              fontAwesomeIcons: sz,
+                              onChange: Wz
+                            } = zz;
+                            const Oz = xF(),
+                              [oz, vz] = (0, Fz.useState)(Qt(tz) ? "fontAwesome" : "bloxd"),
+                              [Uz, Kz] = (0, Fz.useState)(""),
+                              uz = Uz.trim().toLowerCase(),
+                              Nz = "bloxd" === oz ? uW.e : sz,
+                              bz = uz ? Nz.filter((zz => zz.toLowerCase().includes(uz))) : Nz;
+                            return (0, wz.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, jb.jsx)("input", {
+                              children: [(0, wz.jsx)("input", {
                                 type: "text",
-                                value: ab,
+                                value: tz,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: bb => {
-                                  Mb(bb.target.value)
+                                onChange: zz => {
+                                  Wz(zz.target.value)
                                 }
-                              }), (0, jb.jsx)("p", {
+                              }), (0, wz.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, jb.jsxs)("div", {
+                              }), (0, wz.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((bb => (0, jb.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((zz => (0, wz.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": Yb === bb,
-                                    className: Tb()("DocsVariantChip", {
-                                      Active: Yb === bb
+                                    "aria-selected": oz === zz,
+                                    className: Xz()("DocsVariantChip", {
+                                      Active: oz === zz
                                     }),
                                     onClick: () => {
-                                      Bb(bb)
+                                      vz(zz)
                                     },
-                                    children: "bloxd" === bb ? `Bloxd icons (${BM.b.length})` : `Font Awesome (${Ub.length})`
-                                  }, bb))), (0, jb.jsx)("input", {
+                                    children: "bloxd" === zz ? `Bloxd icons (${uW.e.length})` : `Font Awesome (${sz.length})`
+                                  }, zz))), (0, wz.jsx)("input", {
                                     type: "search",
-                                    value: eb,
+                                    value: Uz,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: bb => {
-                                      vb(bb.target.value)
+                                    onChange: zz => {
+                                      Kz(zz.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, jb.jsxs)("div", {
+                              }), (0, wz.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [Xb.map((bb => {
-                                  const Ub = "bloxd" === Yb ? vM(Eb, bb) : null;
-                                  return (0, jb.jsx)("button", {
+                                children: [bz.map((zz => {
+                                  const sz = "bloxd" === oz ? bW(Oz, zz) : null;
+                                  return (0, wz.jsx)("button", {
                                     type: "button",
-                                    title: bb,
-                                    "aria-label": bb,
-                                    "aria-pressed": bb === ab,
-                                    className: Tb()("DocsIconPickerOption", {
-                                      Active: bb === ab
+                                    title: zz,
+                                    "aria-label": zz,
+                                    "aria-pressed": zz === tz,
+                                    className: Xz()("DocsIconPickerOption", {
+                                      Active: zz === tz
                                     }),
                                     onClick: () => {
-                                      Mb(bb)
+                                      Wz(zz)
                                     },
-                                    children: "fontAwesome" === Yb ? (0, jb.jsx)(zU.e, {
-                                      name: bb
-                                    }) : Ub ? (0, jb.jsx)("img", {
-                                      src: Ub,
+                                    children: "fontAwesome" === oz ? (0, wz.jsx)(Ys.c, {
+                                      name: zz
+                                    }) : sz ? (0, wz.jsx)("img", {
+                                      src: sz,
                                       alt: ""
-                                    }) : (0, jb.jsx)(kb, {
+                                    }) : (0, wz.jsx)(gz, {
                                       name: "image"
                                     })
-                                  }, bb)
-                                })), 0 === Xb.length && (0, jb.jsxs)("p", {
+                                  }, zz)
+                                })), 0 === bz.length && (0, wz.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", eb, "\u201d."]
+                                  children: ["No icons match \u201c", Uz, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function ZM(bb) {
+                          function YW(zz) {
                             let {
-                              property: ab,
-                              value: Ub,
-                              fontAwesomeIcons: Ab,
-                              onChange: Mb
-                            } = bb;
+                              property: tz,
+                              value: sz,
+                              fontAwesomeIcons: Fz,
+                              onChange: Wz
+                            } = zz;
                             const {
-                              field: Tb,
-                              label: Eb
-                            } = ab, Yb = bb => "" !== bb || ab.isRequired ? bb : void 0;
-                            switch (Tb.kind) {
+                              field: Xz,
+                              label: Oz
+                            } = tz, oz = zz => "" !== zz || tz.isRequired ? zz : void 0;
+                            switch (Xz.kind) {
                               case "text":
-                                return Tb.multiline ? (0, jb.jsx)("textarea", {
-                                  value: String(null !== Ub && void 0 !== Ub ? Ub : ""),
+                                return Xz.multiline ? (0, wz.jsx)("textarea", {
+                                  value: String(null !== sz && void 0 !== sz ? sz : ""),
                                   rows: 2,
-                                  "aria-label": Eb,
-                                  onChange: bb => {
-                                    Mb(bb.target.value)
+                                  "aria-label": Oz,
+                                  onChange: zz => {
+                                    Wz(zz.target.value)
                                   }
-                                }) : (0, jb.jsx)("input", {
+                                }) : (0, wz.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== Ub && void 0 !== Ub ? Ub : ""),
-                                  "aria-label": Eb,
-                                  onChange: bb => {
-                                    Mb(Yb(bb.target.value))
+                                  value: String(null !== sz && void 0 !== sz ? sz : ""),
+                                  "aria-label": Oz,
+                                  onChange: zz => {
+                                    Wz(oz(zz.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, jb.jsx)("input", {
+                                return (0, wz.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== Ub && void 0 !== Ub ? Ub : ""),
-                                  placeholder: ab.defaultText,
+                                  value: String(null !== sz && void 0 !== sz ? sz : ""),
+                                  placeholder: tz.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": Eb,
+                                  "aria-label": Oz,
                                   spellCheck: !1,
-                                  onChange: bb => {
-                                    Mb(Yb(bb.target.value.trim()))
+                                  onChange: zz => {
+                                    Wz(oz(zz.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, jb.jsx)(kM, {
-                                  value: String(null !== Ub && void 0 !== Ub ? Ub : ""),
-                                  label: Eb,
-                                  onChange: bb => {
-                                    Mb(Yb(bb))
+                                return (0, wz.jsx)(PW, {
+                                  value: String(null !== sz && void 0 !== sz ? sz : ""),
+                                  label: Oz,
+                                  onChange: zz => {
+                                    Wz(oz(zz))
                                   }
                                 });
                               case "colours": {
-                                const bb = Array.isArray(Ub) ? Ub : [],
-                                  ab = bb => {
-                                    Mb(bb.length > 0 ? bb : void 0)
+                                const zz = Array.isArray(sz) ? sz : [],
+                                  tz = zz => {
+                                    Wz(zz.length > 0 ? zz : void 0)
                                   };
-                                return (0, jb.jsxs)("div", {
+                                return (0, wz.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [bb.map(((Ub, Ab) => (0, jb.jsxs)("span", {
+                                  children: [zz.map(((sz, Fz) => (0, wz.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, jb.jsx)(kM, {
-                                      value: Ub,
-                                      label: `${Eb} ${Ab+1}`,
-                                      onChange: Ub => {
-                                        ab(bb.map(((bb, ab) => ab === Ab ? Ub : bb)))
+                                    children: [(0, wz.jsx)(PW, {
+                                      value: sz,
+                                      label: `${Oz} ${Fz+1}`,
+                                      onChange: sz => {
+                                        tz(zz.map(((zz, tz) => tz === Fz ? sz : zz)))
                                       }
-                                    }), (0, jb.jsx)("button", {
+                                    }), (0, wz.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${Ab+1}`,
+                                      "aria-label": `Remove colour ${Fz+1}`,
                                       onClick: () => {
-                                        ab(bb.filter(((bb, ab) => ab !== Ab)))
+                                        tz(zz.filter(((zz, tz) => tz !== Fz)))
                                       },
-                                      children: (0, jb.jsx)(kb, {
+                                      children: (0, wz.jsx)(gz, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, Ab))), (0, jb.jsxs)("button", {
+                                  }, Fz))), (0, wz.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var Ub;
-                                      ab([...bb, null !== (Ub = bb.at(-1)) && void 0 !== Ub ? Ub : "#ffffff"])
+                                      var sz;
+                                      tz([...zz, null !== (sz = zz.at(-1)) && void 0 !== sz ? sz : "#ffffff"])
                                     },
-                                    children: [(0, jb.jsx)(kb, {
+                                    children: [(0, wz.jsx)(gz, {
                                       name: "plus"
-                                    }), 0 === bb.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === zz.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var Bb;
-                                const bb = "number" === typeof Ub ? Ub : Number(null !== (Bb = ab.defaultText) && void 0 !== Bb ? Bb : 0);
-                                return (0, jb.jsxs)("span", {
+                                var vz;
+                                const zz = "number" === typeof sz ? sz : Number(null !== (vz = tz.defaultText) && void 0 !== vz ? vz : 0);
+                                return (0, wz.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, jb.jsx)("input", {
+                                  children: [(0, wz.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: bb,
-                                    "aria-label": Eb,
-                                    onChange: bb => {
-                                      Mb(Number(bb.target.value))
+                                    value: zz,
+                                    "aria-label": Oz,
+                                    onChange: zz => {
+                                      Wz(Number(zz.target.value))
                                     }
-                                  }), (0, jb.jsx)("output", {
-                                    children: bb.toFixed(2)
+                                  }), (0, wz.jsx)("output", {
+                                    children: zz.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, jb.jsxs)("select", {
-                                  value: String(null !== Ub && void 0 !== Ub ? Ub : ""),
-                                  "aria-label": Eb,
-                                  onChange: bb => {
-                                    Mb(Yb(bb.target.value))
+                                return (0, wz.jsxs)("select", {
+                                  value: String(null !== sz && void 0 !== sz ? sz : ""),
+                                  "aria-label": Oz,
+                                  onChange: zz => {
+                                    Wz(oz(zz.target.value))
                                   },
-                                  children: [!ab.isRequired && (0, jb.jsxs)("option", {
+                                  children: [!tz.isRequired && (0, wz.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", ab.defaultText, ")"]
-                                  }), Tb.options.map((bb => (0, jb.jsx)("option", {
-                                    value: bb,
-                                    children: bb
-                                  }, bb)))]
+                                    children: ["Default (", tz.defaultText, ")"]
+                                  }), Xz.options.map((zz => (0, wz.jsx)("option", {
+                                    value: zz,
+                                    children: zz
+                                  }, zz)))]
                                 });
                               case "icon":
-                                return (0, jb.jsx)(yM, {
-                                  value: String(null !== Ub && void 0 !== Ub ? Ub : ""),
-                                  fontAwesomeIcons: Ab,
-                                  onChange: Mb
+                                return (0, wz.jsx)(rW, {
+                                  value: String(null !== sz && void 0 !== sz ? sz : ""),
+                                  fontAwesomeIcons: Fz,
+                                  onChange: Wz
                                 })
                             }
                           }
 
-                          function DM(bb) {
-                            let ab;
+                          function xW(zz) {
+                            let tz;
                             try {
-                              ab = JSON.parse(bb)
-                            } catch (Ub) {
+                              tz = JSON.parse(zz)
+                            } catch (sz) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${Ub.message}`
+                                error: `Not valid JSON yet: ${sz.message}`
                               }
                             }
-                            return UU(ab) ? {
-                              part: ab,
+                            return Fs(tz) ? {
+                              part: tz,
                               error: null
                             } : {
                               part: null,
@@ -3628,150 +3628,150 @@ export const modules = {
                             }
                           }
 
-                          function zM(bb) {
+                          function mW(zz) {
                             let {
-                              parts: ab,
-                              index: Ub,
-                              fontAwesomeIcons: Mb,
-                              onChange: Tb,
-                              kp: Eb,
-                              onClose: Yb
-                            } = bb;
-                            const Bb = (0, Ab.useContext)(ja),
-                              vb = (0, Ab.useRef)(null),
-                              Lb = ab[Ub],
-                              Pb = ta(Lb),
-                              [Xb, Rb] = (0, Ab.useState)((() => JSON.stringify(Lb, null, 2))),
-                              yb = (0, Ab.useMemo)((() => "other" === Pb ? DM(Xb).error : null), [Pb, Xb]);
-                            (0, Ab.useEffect)((() => {
-                              var bb;
-                              null === (bb = vb.current) || void 0 === bb || bb.focus()
+                              parts: tz,
+                              index: sz,
+                              fontAwesomeIcons: Wz,
+                              onChange: Xz,
+                              NJ: Oz,
+                              onClose: oz
+                            } = zz;
+                            const vz = (0, Fz.useContext)(wt),
+                              Kz = (0, Fz.useRef)(null),
+                              uz = tz[sz],
+                              Nz = Lt(uz),
+                              [bz, Dz] = (0, Fz.useState)((() => JSON.stringify(uz, null, 2))),
+                              Hz = (0, Fz.useMemo)((() => "other" === Nz ? xW(bz).error : null), [Nz, bz]);
+                            (0, Fz.useEffect)((() => {
+                              var zz;
+                              null === (zz = Kz.current) || void 0 === zz || zz.focus()
                             }), []);
-                            const Zb = (0, jb.jsx)("div", {
+                            const Bz = (0, wz.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: bb => {
-                                bb.target === bb.currentTarget && Yb()
+                              onMouseDown: zz => {
+                                zz.target === zz.currentTarget && oz()
                               },
-                              children: (0, jb.jsxs)("div", {
-                                ref: vb,
+                              children: (0, wz.jsxs)("div", {
+                                ref: Kz,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${Ub+1}: ${oa[Pb]}`,
+                                "aria-label": `Edit part ${sz+1}: ${kt[Nz]}`,
                                 tabIndex: -1,
-                                onKeyDown: bb => {
-                                  "Escape" === bb.key ? (bb.stopPropagation(), Yb()) : "Tab" === bb.key && vb.current && function(bb, ab) {
-                                    const Ub = Array.from(bb.querySelectorAll(Ha)),
-                                      Ab = Ub[0],
-                                      Mb = Ub.at(-1);
-                                    if (!Ab || !Mb) return;
-                                    const Tb = document.activeElement;
-                                    !ab.shiftKey || Tb !== Ab && Tb !== bb ? ab.shiftKey || Tb !== Mb || (ab.preventDefault(), Ab.focus()) : (ab.preventDefault(), Mb.focus())
-                                  }(vb.current, bb)
+                                onKeyDown: zz => {
+                                  "Escape" === zz.key ? (zz.stopPropagation(), oz()) : "Tab" === zz.key && Kz.current && function(zz, tz) {
+                                    const sz = Array.from(zz.querySelectorAll(Zt)),
+                                      Fz = sz[0],
+                                      Wz = sz.at(-1);
+                                    if (!Fz || !Wz) return;
+                                    const Xz = document.activeElement;
+                                    !tz.shiftKey || Xz !== Fz && Xz !== zz ? tz.shiftKey || Xz !== Wz || (tz.preventDefault(), Fz.focus()) : (tz.preventDefault(), Wz.focus())
+                                  }(Kz.current, zz)
                                 },
-                                children: [(0, jb.jsxs)("header", {
+                                children: [(0, wz.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, jb.jsxs)("div", {
-                                    children: [(0, jb.jsxs)("div", {
+                                  children: [(0, wz.jsxs)("div", {
+                                    children: [(0, wz.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", Ub + 1]
-                                    }), (0, jb.jsx)("div", {
+                                      children: ["Part ", sz + 1]
+                                    }), (0, wz.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: oa[Pb]
+                                      children: kt[Nz]
                                     })]
-                                  }), (0, jb.jsx)("button", {
+                                  }), (0, wz.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: Yb,
-                                    children: (0, jb.jsx)(kb, {
+                                    onClick: oz,
+                                    children: (0, wz.jsx)(gz, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, jb.jsx)(PM, {
-                                  parts: ab,
+                                }), (0, wz.jsx)(DW, {
+                                  parts: tz,
                                   className: "DocsTextDialogPreview"
-                                }), (0, jb.jsx)("div", {
+                                }), (0, wz.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === Pb ? (0, jb.jsxs)("label", {
+                                  children: "other" === Nz ? (0, wz.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, jb.jsx)("span", {
+                                    children: [(0, wz.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, jb.jsx)("textarea", {
+                                    }), (0, wz.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: Xb,
+                                      value: bz,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: bb => {
-                                        Rb(bb.target.value);
-                                        const ab = DM(bb.target.value);
-                                        null !== ab.part && Tb(ab.part)
+                                      onChange: zz => {
+                                        Dz(zz.target.value);
+                                        const tz = xW(zz.target.value);
+                                        null !== tz.part && Xz(tz.part)
                                       }
-                                    }), yb && (0, jb.jsx)("span", {
+                                    }), Hz && (0, wz.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: yb
+                                      children: Hz
                                     })]
-                                  }) : sa[Pb].map((bb => {
-                                    const ab = Ca(Lb, bb.path),
-                                      Ub = bb.isRequired ? JSON.stringify(Oa(Lb, bb.path)) === JSON.stringify(Lb) : void 0 === ab;
-                                    return (0, jb.jsxs)("div", {
+                                  }) : nt[Nz].map((zz => {
+                                    const tz = St(uz, zz.path),
+                                      sz = zz.isRequired ? JSON.stringify(Rt(uz, zz.path)) === JSON.stringify(uz) : void 0 === tz;
+                                    return (0, wz.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, jb.jsxs)("div", {
+                                      children: [(0, wz.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, jb.jsx)("span", {
-                                          children: bb.label
-                                        }), (0, jb.jsxs)("button", {
+                                        children: [(0, wz.jsx)("span", {
+                                          children: zz.label
+                                        }), (0, wz.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: Ub,
-                                          "aria-label": `Reset ${bb.label.toLowerCase()} to default`,
+                                          disabled: sz,
+                                          "aria-label": `Reset ${zz.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            Tb(Oa(Lb, bb.path))
+                                            Xz(Rt(uz, zz.path))
                                           },
-                                          children: [(0, jb.jsx)(kb, {
+                                          children: [(0, wz.jsx)(gz, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, jb.jsx)(ZM, {
-                                        property: bb,
-                                        value: ab,
-                                        fontAwesomeIcons: Mb,
-                                        onChange: ab => {
-                                          Tb(Va(Lb, bb.path, ab))
+                                      }), (0, wz.jsx)(YW, {
+                                        property: zz,
+                                        value: tz,
+                                        fontAwesomeIcons: Wz,
+                                        onChange: tz => {
+                                          Xz(Vt(uz, zz.path, tz))
                                         }
-                                      }), !bb.isRequired && (0, jb.jsxs)("span", {
+                                      }), !zz.isRequired && (0, wz.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", bb.defaultText]
+                                        children: ["Default: ", zz.defaultText]
                                       })]
-                                    }, bb.path.join("."))
+                                    }, zz.path.join("."))
                                   }))
-                                }), (0, jb.jsxs)("footer", {
+                                }), (0, wz.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, jb.jsxs)("button", {
+                                  children: [(0, wz.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: Eb,
-                                    children: [(0, jb.jsx)(kb, {
+                                    onClick: Oz,
+                                    children: [(0, wz.jsx)(gz, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, jb.jsx)("button", {
+                                  }), (0, wz.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: Yb,
+                                    onClick: oz,
                                     children: "Done"
                                   })]
-                                }), (0, jb.jsx)("datalist", {
+                                }), (0, wz.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: XM.map((bb => (0, jb.jsx)("option", {
-                                    value: bb
-                                  }, bb)))
+                                  children: gW.map((zz => (0, wz.jsx)("option", {
+                                    value: zz
+                                  }, zz)))
                                 })]
                               })
                             });
-                            return Bb ? (0, eb.createPortal)(Zb, Bb) : Zb
+                            return vz ? (0, Uz.createPortal)(Bz, vz) : Bz
                           }
-                          const xM = [{
+                          const JW = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3815,265 +3815,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            iM = Object.keys(la);
+                            IW = Object.keys(it);
 
-                          function fM(bb) {
+                          function CW(zz) {
                             let {
-                              fontAwesomeIcons: ab
-                            } = bb;
-                            const [Ub, Mb] = (0, Ab.useState)(xM[0].parts), [Eb, Yb] = (0, Ab.useState)((() => Sa(xM[0].parts))), [Bb, eb] = (0, Ab.useState)(null), [vb, Lb] = (0, Ab.useState)(!1), [Pb, Xb] = (0, Ab.useState)(null), [Rb, yb] = (0, Ab.useState)(!1), [Zb, Db] = (0, Ab.useState)(null), zb = (0, Ab.useRef)(null), xb = Sa(Ub);
-                            (0, Ab.useLayoutEffect)((() => {
-                              var bb;
-                              if (!Zb) return;
-                              const ab = bb => {
-                                  var ab;
-                                  return null === (ab = zb.current) || void 0 === ab ? void 0 : ab.querySelector(`[data-focus-key="${bb}"]`)
+                              fontAwesomeIcons: tz
+                            } = zz;
+                            const [sz, Wz] = (0, Fz.useState)(JW[0].parts), [Oz, oz] = (0, Fz.useState)((() => zs(JW[0].parts))), [vz, Uz] = (0, Fz.useState)(null), [Kz, uz] = (0, Fz.useState)(!1), [Nz, bz] = (0, Fz.useState)(null), [Dz, Hz] = (0, Fz.useState)(!1), [Bz, Pz] = (0, Fz.useState)(null), rz = (0, Fz.useRef)(null), Yz = zs(sz);
+                            (0, Fz.useLayoutEffect)((() => {
+                              var zz;
+                              if (!Bz) return;
+                              const tz = zz => {
+                                  var tz;
+                                  return null === (tz = rz.current) || void 0 === tz ? void 0 : tz.querySelector(`[data-focus-key="${zz}"]`)
                                 },
-                                Ub = ab(Zb.key);
-                              null === (bb = Ub && !Ub.disabled ? Ub : ab(Zb.fallback)) || void 0 === bb || bb.focus(), Db(null)
-                            }), [Zb]);
-                            const ib = bb => {
-                                Mb(bb), Yb(Sa(bb)), eb(null)
+                                sz = tz(Bz.key);
+                              null === (zz = sz && !sz.disabled ? sz : tz(Bz.fallback)) || void 0 === zz || zz.focus(), Pz(null)
+                            }), [Bz]);
+                            const xz = zz => {
+                                Wz(zz), oz(zs(zz)), Uz(null)
                               },
-                              mb = bb => {
-                                ib(Ub.filter(((ab, Ub) => Ub !== bb))), Db({
-                                  key: `edit-${Math.min(bb,Ub.length-2)}`,
+                              Jz = zz => {
+                                xz(sz.filter(((tz, sz) => sz !== zz))), Pz({
+                                  key: `edit-${Math.min(zz,sz.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              pb = (bb, ab) => {
-                                const Ab = [...Ub],
-                                  [Mb] = Ab.splice(bb, 1);
-                                Ab.splice(bb + ab, 0, Mb), ib(Ab);
-                                Db({
-                                  key: `${ab<0?"up":"down"}-${bb+ab}`,
-                                  fallback: `edit-${bb+ab}`
+                              Iz = (zz, tz) => {
+                                const Fz = [...sz],
+                                  [Wz] = Fz.splice(zz, 1);
+                                Fz.splice(zz + tz, 0, Wz), xz(Fz);
+                                Pz({
+                                  key: `${tz<0?"up":"down"}-${zz+tz}`,
+                                  fallback: `edit-${zz+tz}`
                                 })
                               };
-                            return (0, jb.jsxs)("section", {
-                              ref: zb,
+                            return (0, wz.jsxs)("section", {
+                              ref: rz,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, jb.jsx)("header", {
+                              children: [(0, wz.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, jb.jsxs)("div", {
-                                  children: [(0, jb.jsx)("div", {
+                                children: (0, wz.jsxs)("div", {
+                                  children: [(0, wz.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, jb.jsx)("div", {
+                                  }), (0, wz.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, jb.jsx)("div", {
+                              }), (0, wz.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: xM.map((bb => (0, jb.jsx)("button", {
+                                children: JW.map((zz => (0, wz.jsx)("button", {
                                   type: "button",
-                                  className: Tb()("DocsVariantChip", {
-                                    Active: xb === Sa(bb.parts)
+                                  className: Xz()("DocsVariantChip", {
+                                    Active: Yz === zs(zz.parts)
                                   }),
                                   onClick: () => {
-                                    ib(bb.parts)
+                                    xz(zz.parts)
                                   },
-                                  children: bb.label
-                                }, bb.label)))
-                              }), (0, jb.jsx)(PM, {
-                                parts: Ub,
+                                  children: zz.label
+                                }, zz.label)))
+                              }), (0, wz.jsx)(DW, {
+                                parts: sz,
                                 className: "DocsTextEditorPreview"
-                              }), (0, jb.jsxs)("div", {
+                              }), (0, wz.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, jb.jsxs)("div", {
+                                children: [(0, wz.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, jb.jsx)("div", {
+                                  children: [(0, wz.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, jb.jsxs)("ol", {
+                                  }), (0, wz.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [Ub.map(((bb, ab) => {
-                                      const Ab = ta(bb);
-                                      return (0, jb.jsxs)("li", {
+                                    children: [sz.map(((zz, tz) => {
+                                      const Fz = Lt(zz);
+                                      return (0, wz.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, jb.jsxs)("button", {
+                                        children: [(0, wz.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${ab}`,
-                                          "aria-label": `Edit part ${ab+1}, ${oa[Ab]}`,
+                                          "data-focus-key": `edit-${tz}`,
+                                          "aria-label": `Edit part ${tz+1}, ${kt[Fz]}`,
                                           onClick: () => {
-                                            Xb(ab)
+                                            bz(tz)
                                           },
-                                          children: [(0, jb.jsx)("span", {
+                                          children: [(0, wz.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: oa[Ab]
-                                          }), (0, jb.jsx)(PM, {
-                                            parts: [bb],
+                                            children: kt[Fz]
+                                          }), (0, wz.jsx)(DW, {
+                                            parts: [zz],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== Ab && (0, jb.jsx)("code", {
+                                          }), "text" !== Fz && (0, wz.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: ca(bb)
+                                            children: pt(zz)
                                           })]
-                                        }), (0, jb.jsxs)("span", {
+                                        }), (0, wz.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, jb.jsx)("button", {
+                                          children: [(0, wz.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${ab+1} up`,
-                                            "data-focus-key": `up-${ab}`,
-                                            disabled: 0 === ab,
+                                            "aria-label": `Move part ${tz+1} up`,
+                                            "data-focus-key": `up-${tz}`,
+                                            disabled: 0 === tz,
                                             onClick: () => {
-                                              pb(ab, -1)
+                                              Iz(tz, -1)
                                             },
-                                            children: (0, jb.jsx)(kb, {
+                                            children: (0, wz.jsx)(gz, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, jb.jsx)("button", {
+                                          }), (0, wz.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${ab+1} down`,
-                                            "data-focus-key": `down-${ab}`,
-                                            disabled: ab === Ub.length - 1,
+                                            "aria-label": `Move part ${tz+1} down`,
+                                            "data-focus-key": `down-${tz}`,
+                                            disabled: tz === sz.length - 1,
                                             onClick: () => {
-                                              pb(ab, 1)
+                                              Iz(tz, 1)
                                             },
-                                            children: (0, jb.jsx)(kb, {
+                                            children: (0, wz.jsx)(gz, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, jb.jsx)("button", {
+                                          }), (0, wz.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${ab+1}`,
+                                            "aria-label": `Remove part ${tz+1}`,
                                             onClick: () => {
-                                              mb(ab)
+                                              Jz(tz)
                                             },
-                                            children: (0, jb.jsx)(kb, {
+                                            children: (0, wz.jsx)(gz, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, ab)
-                                    })), 0 === Ub.length && (0, jb.jsx)("li", {
+                                      }, tz)
+                                    })), 0 === sz.length && (0, wz.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, jb.jsxs)("div", {
+                                  }), (0, wz.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: bb => {
-                                      "Escape" === bb.key && Rb && (bb.stopPropagation(), yb(!1), Db({
+                                    onKeyDown: zz => {
+                                      "Escape" === zz.key && Dz && (zz.stopPropagation(), Hz(!1), Pz({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, jb.jsxs)("button", {
+                                    children: [(0, wz.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": Rb,
+                                      "aria-expanded": Dz,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        yb(!Rb)
+                                        Hz(!Dz)
                                       },
-                                      children: [(0, jb.jsx)(kb, {
+                                      children: [(0, wz.jsx)(gz, {
                                         name: "plus"
-                                      }), "Add a part", (0, jb.jsx)(kb, {
-                                        name: Rb ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, wz.jsx)(gz, {
+                                        name: Dz ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), Rb && (0, jb.jsx)("ul", {
+                                    }), Dz && (0, wz.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: iM.map((bb => (0, jb.jsx)("li", {
-                                        children: (0, jb.jsx)("button", {
+                                      children: IW.map((zz => (0, wz.jsx)("li", {
+                                        children: (0, wz.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (bb => {
-                                              ib([...Ub, la[bb]]), yb(!1), Xb(Ub.length)
-                                            })(bb)
+                                            (zz => {
+                                              xz([...sz, it[zz]]), Hz(!1), bz(sz.length)
+                                            })(zz)
                                           },
-                                          children: oa[bb]
+                                          children: kt[zz]
                                         })
-                                      }, bb)))
+                                      }, zz)))
                                     })]
                                   })]
-                                }), (0, jb.jsxs)("div", {
+                                }), (0, wz.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, jb.jsxs)("div", {
+                                  children: [(0, wz.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, jb.jsxs)("button", {
+                                    children: ["Code", (0, wz.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": vb,
+                                      "aria-pressed": Kz,
                                       onClick: () => {
-                                        Lb(!vb)
+                                        uz(!Kz)
                                       },
-                                      children: [(0, jb.jsx)(kb, {
-                                        name: vb ? "check" : "pencil"
-                                      }), vb ? "Done" : "Edit"]
+                                      children: [(0, wz.jsx)(gz, {
+                                        name: Kz ? "check" : "pencil"
+                                      }), Kz ? "Done" : "Edit"]
                                     })]
-                                  }), vb ? (0, jb.jsxs)(jb.Fragment, {
-                                    children: [(0, jb.jsx)("textarea", {
+                                  }), Kz ? (0, wz.jsxs)(wz.Fragment, {
+                                    children: [(0, wz.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: Eb,
+                                      value: Oz,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: bb => {
-                                        Yb(bb.target.value);
-                                        const ab = AU(bb.target.value);
-                                        eb(ab.error), ab.parts && Mb(ab.parts)
+                                      onChange: zz => {
+                                        oz(zz.target.value);
+                                        const tz = Ws(zz.target.value);
+                                        Uz(tz.error), tz.parts && Wz(tz.parts)
                                       }
-                                    }), Bb && (0, jb.jsx)("p", {
+                                    }), vz && (0, wz.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: Bb
+                                      children: vz
                                     })]
-                                  }) : (0, jb.jsx)(fb, {
+                                  }) : (0, wz.jsx)(mz, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${xb})`
+                                    code: `api.sendMessage(playerId, ${Yz})`
                                   })]
                                 })]
-                              }), null !== Pb && Pb < Ub.length && (0, jb.jsx)(zM, {
-                                parts: Ub,
-                                index: Pb,
-                                fontAwesomeIcons: ab,
-                                onChange: bb => {
-                                  ((bb, ab) => {
-                                    ib(Ub.map(((Ub, Ab) => Ab === bb ? ab : Ub)))
-                                  })(Pb, bb)
+                              }), null !== Nz && Nz < sz.length && (0, wz.jsx)(mW, {
+                                parts: sz,
+                                index: Nz,
+                                fontAwesomeIcons: tz,
+                                onChange: zz => {
+                                  ((zz, tz) => {
+                                    xz(sz.map(((sz, Fz) => Fz === zz ? tz : sz)))
+                                  })(Nz, zz)
                                 },
-                                kp: () => {
-                                  mb(Pb), Xb(null)
+                                NJ: () => {
+                                  Jz(Nz), bz(null)
                                 },
                                 onClose: () => {
-                                  Xb(null), Db({
-                                    key: `edit-${Pb}`,
+                                  bz(null), Pz({
+                                    key: `edit-${Nz}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var mM = Ub(4536),
-                            pM = Ub(4516),
-                            NM = Ub(4531),
-                            WM = Ub(4541);
-                          const HM = 40,
-                            IM = 800,
-                            dM = 150,
-                            FM = 8e3,
-                            hM = 2e3;
+                          var eW = sz(4476),
+                            ZW = sz(4464),
+                            GW = sz(4472),
+                            TW = sz(4479);
+                          const cW = 40,
+                            jW = 800,
+                            AW = 150,
+                            yW = 8e3,
+                            MW = 2e3;
 
-                          function GM(bb, ab) {
-                            return 12 * Math.log2(ab / bb)
+                          function dW(zz, tz) {
+                            return 12 * Math.log2(tz / zz)
                           }
 
-                          function QM(bb, ab) {
-                            return Math.round(bb * 2 ** (ab / 12) * 10) / 10
+                          function hW(zz, tz) {
+                            return Math.round(zz * 2 ** (tz / 12) * 10) / 10
                           }
 
-                          function qM(bb) {
-                            return `${bb} ms`
+                          function QW(zz) {
+                            return `${zz} ms`
                           }
 
-                          function uM(bb) {
-                            return `${bb} st`
+                          function kW(zz) {
+                            return `${zz} st`
                           }
-                          const rM = [{
+                          const iW = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4091,769 +4091,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function KM(bb) {
+                          function LW(zz) {
                             let {
-                              synth: ab,
-                              onChange: Ub
-                            } = bb;
-                            const Ab = (0, mM.k)(ab);
-                            return (0, jb.jsxs)("div", {
+                              synth: tz,
+                              onChange: sz
+                            } = zz;
+                            const Fz = (0, eW.l)(tz);
+                            return (0, wz.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, jb.jsxs)("div", {
+                              children: [(0, wz.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, jb.jsx)("div", {
+                                children: [(0, wz.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, jb.jsxs)("div", {
+                                }), (0, wz.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, jb.jsx)("div", {
+                                  children: [(0, wz.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, jb.jsx)("span", {
+                                    children: (0, wz.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, jb.jsx)("div", {
+                                  }), (0, wz.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: mM.e.map((bb => (0, jb.jsx)("button", {
+                                    children: eW.f.map((zz => (0, wz.jsx)("button", {
                                       type: "button",
-                                      className: Tb()("DocsVariantChip", {
-                                        Active: ab.waveform === bb
+                                      className: Xz()("DocsVariantChip", {
+                                        Active: tz.waveform === zz
                                       }),
-                                      "aria-pressed": ab.waveform === bb,
+                                      "aria-pressed": tz.waveform === zz,
                                       onClick: () => {
-                                        Ub({
-                                          waveform: bb
+                                        sz({
+                                          waveform: zz
                                         })
                                       },
-                                      children: bb
-                                    }, bb)))
+                                      children: zz
+                                    }, zz)))
                                   })]
-                                }), (0, jb.jsx)(nA, {
+                                }), (0, wz.jsx)(tW, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: GM(HM, IM),
+                                  max: dW(cW, jW),
                                   step: .1,
-                                  value: GM(HM, ab.pitchHz),
-                                  format: () => `${ab.pitchHz} Hz`,
-                                  onChange: bb => {
-                                    Ub({
-                                      pitchHz: QM(HM, bb)
+                                  value: dW(cW, tz.pitchHz),
+                                  format: () => `${tz.pitchHz} Hz`,
+                                  onChange: zz => {
+                                    sz({
+                                      pitchHz: hW(cW, zz)
                                     })
                                   }
-                                }), (0, jb.jsx)(nA, {
+                                }), (0, wz.jsx)(tW, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: ab.syllableMs,
-                                  format: qM,
-                                  onChange: bb => {
-                                    Ub({
-                                      syllableMs: bb
+                                  value: tz.syllableMs,
+                                  format: QW,
+                                  onChange: zz => {
+                                    sz({
+                                      syllableMs: zz
                                     })
                                   }
-                                }), (0, jb.jsx)(nA, {
+                                }), (0, wz.jsx)(tW, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: ab.volume,
-                                  onChange: bb => {
-                                    Ub({
-                                      volume: bb
+                                  value: tz.volume,
+                                  onChange: zz => {
+                                    sz({
+                                      volume: zz
                                     })
                                   }
                                 })]
-                              }), (0, jb.jsxs)("div", {
+                              }), (0, wz.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, jb.jsx)("div", {
+                                children: [(0, wz.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, jb.jsx)(nA, {
+                                }), (0, wz.jsx)(tW, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: ab.durationMs,
-                                  format: qM,
-                                  onChange: bb => {
-                                    Ub({
-                                      durationMs: bb
+                                  value: tz.durationMs,
+                                  format: QW,
+                                  onChange: zz => {
+                                    sz({
+                                      durationMs: zz
                                     })
                                   }
-                                }), (0, jb.jsx)(nA, {
+                                }), (0, wz.jsx)(tW, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: Ab.durationMs,
+                                  max: Fz.durationMs,
                                   step: 1,
-                                  value: Ab.attackMs,
-                                  format: qM,
-                                  onChange: bb => {
-                                    Ub({
-                                      attackMs: bb
+                                  value: Fz.attackMs,
+                                  format: QW,
+                                  onChange: zz => {
+                                    sz({
+                                      attackMs: zz
                                     })
                                   }
-                                }), (0, jb.jsx)(nA, {
+                                }), (0, wz.jsx)(tW, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: Ab.durationMs - Ab.attackMs,
+                                  max: Fz.durationMs - Fz.attackMs,
                                   step: 1,
-                                  value: Ab.releaseMs,
-                                  format: qM,
-                                  onChange: bb => {
-                                    Ub({
-                                      releaseMs: bb
+                                  value: Fz.releaseMs,
+                                  format: QW,
+                                  onChange: zz => {
+                                    sz({
+                                      releaseMs: zz
                                     })
                                   }
-                                }), (0, jb.jsx)(nA, {
+                                }), (0, wz.jsx)(tW, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: ab.glideSemitones,
-                                  format: uM,
-                                  onChange: bb => {
-                                    Ub({
-                                      glideSemitones: bb
+                                  value: tz.glideSemitones,
+                                  format: kW,
+                                  onChange: zz => {
+                                    sz({
+                                      glideSemitones: zz
                                     })
                                   }
-                                }), (0, jb.jsxs)("label", {
+                                }), (0, wz.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, jb.jsx)("input", {
+                                  children: [(0, wz.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== ab.lowpassHz,
-                                    onChange: bb => {
-                                      Ub({
-                                        lowpassHz: bb.target.checked ? hM : null
+                                    checked: null !== tz.lowpassHz,
+                                    onChange: zz => {
+                                      sz({
+                                        lowpassHz: zz.target.checked ? MW : null
                                       })
                                     }
-                                  }), (0, jb.jsx)("span", {
+                                  }), (0, wz.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== ab.lowpassHz && (0, jb.jsx)(nA, {
+                                }), null !== tz.lowpassHz && (0, wz.jsx)(tW, {
                                   label: "Filter",
                                   min: 0,
-                                  max: GM(dM, FM),
+                                  max: dW(AW, yW),
                                   step: .1,
-                                  value: GM(dM, ab.lowpassHz),
-                                  format: () => `${ab.lowpassHz} Hz`,
-                                  onChange: bb => {
-                                    Ub({
-                                      lowpassHz: QM(dM, bb)
+                                  value: dW(AW, tz.lowpassHz),
+                                  format: () => `${tz.lowpassHz} Hz`,
+                                  onChange: zz => {
+                                    sz({
+                                      lowpassHz: hW(AW, zz)
                                     })
                                   }
                                 })]
-                              }), (0, jb.jsxs)("div", {
+                              }), (0, wz.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, jb.jsx)("div", {
+                                children: [(0, wz.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), rM.map((bb => {
+                                }), iW.map((zz => {
                                   let {
-                                    key: Ab,
-                                    label: Mb,
-                                    max: Tb
-                                  } = bb;
-                                  return (0, jb.jsx)(nA, {
-                                    label: Mb,
+                                    key: Fz,
+                                    label: Wz,
+                                    max: Xz
+                                  } = zz;
+                                  return (0, wz.jsx)(tW, {
+                                    label: Wz,
                                     min: 0,
-                                    max: Tb,
+                                    max: Xz,
                                     step: .1,
-                                    value: ab.intonation[Ab],
-                                    format: uM,
-                                    onChange: bb => {
-                                      Ub({
+                                    value: tz.intonation[Fz],
+                                    format: kW,
+                                    onChange: zz => {
+                                      sz({
                                         intonation: {
-                                          ...ab.intonation,
-                                          [Ab]: bb
+                                          ...tz.intonation,
+                                          [Fz]: zz
                                         }
                                       })
                                     }
-                                  }, Ab)
+                                  }, Fz)
                                 }))]
                               })]
                             })
                           }
-                          const oM = Object.keys(mM.i),
-                            lM = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const lW = Object.keys(eW.h),
+                            nW = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function tM(bb) {
-                            var ab;
-                            const Ub = JSON.stringify((0, mM.k)(bb));
-                            return null !== (ab = oM.find((bb => JSON.stringify((0, mM.k)(mM.i[bb])) === Ub))) && void 0 !== ab ? ab : null
+                          function aW(zz) {
+                            var tz;
+                            const sz = JSON.stringify((0, eW.l)(zz));
+                            return null !== (tz = lW.find((zz => JSON.stringify((0, eW.l)(eW.h[zz])) === sz))) && void 0 !== tz ? tz : null
                           }
 
-                          function wM(bb) {
-                            let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof bb || null === bb) return JSON.stringify(bb);
-                            return `{\n${Object.entries(bb).map((bb=>{let[Ub,Ab]=bb;return`${ab}    ${Ub}: ${wM(Ab,`${ab}    `)},`})).join("\n")}\n${ab}}`
+                          function qW(zz) {
+                            let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof zz || null === zz) return JSON.stringify(zz);
+                            return `{\n${Object.entries(zz).map((zz=>{let[sz,Fz]=zz;return`${tz}    ${sz}: ${qW(Fz,`${tz}    `)},`})).join("\n")}\n${tz}}`
                           }
 
-                          function sM(bb, ab, Ub) {
-                            const Ab = tM(bb),
-                              Mb = [`    line: ${JSON.stringify(ab)},`];
-                            return Ub && Mb.push(`    speakerName: ${JSON.stringify(Ub)},`), Mb.push("    voice,"), `const voice = ${Ab?JSON.stringify(Ab):wM((0,mM.k)(bb))}\n\napi.setClientOption(playerId, "dialogue", {\n${Mb.join("\n")}\n})`
+                          function SW(zz, tz, sz) {
+                            const Fz = aW(zz),
+                              Wz = [`    line: ${JSON.stringify(tz)},`];
+                            return sz && Wz.push(`    speakerName: ${JSON.stringify(sz)},`), Wz.push("    voice,"), `const voice = ${Fz?JSON.stringify(Fz):qW((0,eW.l)(zz))}\n\napi.setClientOption(playerId, "dialogue", {\n${Wz.join("\n")}\n})`
                           }
-                          const gM = 400,
-                            CM = 90;
-                          let VM = null;
+                          const VW = 400,
+                            RW = 90;
+                          let pW = null;
 
-                          function OM(bb, ab, Ub) {
-                            return VM ??= new AudioContext, VM.resume(), (0, WM.c)(VM, VM.destination, bb, ab, Ub, (() => {}))
+                          function fW(zz, tz, sz) {
+                            return pW ??= new AudioContext, pW.resume(), (0, TW.b)(pW, pW.destination, zz, tz, sz, (() => {}))
                           }
 
-                          function cM() {
-                            const [bb, ab] = (0, Ab.useState)(mM.i.regular), [Ub, Mb] = (0, Ab.useState)(lM[0]), [Eb, Yb] = (0, Ab.useState)("Innkeeper"), [Bb, eb] = (0, Ab.useState)(0), vb = vA((bb => bb.volume)), Lb = (0, Ab.useRef)(null), Pb = (0, Ab.useRef)(0), Xb = (0, Ab.useRef)(0), Rb = () => {
-                              var bb;
-                              null === (bb = Lb.current) || void 0 === bb || bb.call(Lb), Lb.current = null
+                          function EW() {
+                            const [zz, tz] = (0, Fz.useState)(eW.h.regular), [sz, Wz] = (0, Fz.useState)(nW[0]), [Oz, oz] = (0, Fz.useState)("Innkeeper"), [vz, Uz] = (0, Fz.useState)(0), Kz = bF((zz => zz.volume)), uz = (0, Fz.useRef)(null), Nz = (0, Fz.useRef)(0), bz = (0, Fz.useRef)(0), Dz = () => {
+                              var zz;
+                              null === (zz = uz.current) || void 0 === zz || zz.call(uz), uz.current = null
                             };
-                            (0, Ab.useEffect)((() => () => {
-                              var bb;
-                              null === (bb = Lb.current) || void 0 === bb || bb.call(Lb), window.clearTimeout(Pb.current)
+                            (0, Fz.useEffect)((() => () => {
+                              var zz;
+                              null === (zz = uz.current) || void 0 === zz || zz.call(uz), window.clearTimeout(Nz.current)
                             }), []);
-                            const yb = (0, Ab.useMemo)((() => ({
-                                line: Ub,
-                                speakerName: Eb || void 0,
-                                voice: bb
-                              })), [Ub, Eb, bb]),
-                              Zb = (0, Ab.useRef)(yb);
-                            Zb.current = yb;
-                            const zb = tM(bb),
-                              xb = bb => {
-                                window.clearTimeout(Pb.current), Rb();
+                            const Hz = (0, Fz.useMemo)((() => ({
+                                line: sz,
+                                speakerName: Oz || void 0,
+                                voice: zz
+                              })), [sz, Oz, zz]),
+                              Bz = (0, Fz.useRef)(Hz);
+                            Bz.current = Hz;
+                            const rz = aW(zz),
+                              Yz = zz => {
+                                window.clearTimeout(Nz.current), Dz();
                                 const {
-                                  plan: ab,
-                                  synth: Ub
-                                } = (0, NM.g)(bb);
-                                Ub && (Lb.current = OM(Ub, ab.blips, vb)), eb((bb => bb + 1))
+                                  plan: tz,
+                                  synth: sz
+                                } = (0, GW.f)(zz);
+                                sz && (uz.current = fW(sz, tz.blips, Kz)), Uz((zz => zz + 1))
                               },
-                              ib = sM(bb, Ub, Eb);
-                            return (0, jb.jsxs)("section", {
+                              xz = SW(zz, sz, Oz);
+                            return (0, wz.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, jb.jsxs)("header", {
+                              children: [(0, wz.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, jb.jsxs)("div", {
-                                  children: [(0, jb.jsx)("div", {
+                                children: [(0, wz.jsxs)("div", {
+                                  children: [(0, wz.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, jb.jsx)("div", {
+                                  }), (0, wz.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, jb.jsx)(Db, {
-                                  text: ib,
+                                }), (0, wz.jsx)(Pz, {
+                                  text: xz,
                                   label: "Copy code"
                                 })]
-                              }), (0, jb.jsxs)("div", {
+                              }), (0, wz.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [oM.map((bb => (0, jb.jsx)("button", {
+                                children: [lW.map((zz => (0, wz.jsx)("button", {
                                   type: "button",
-                                  className: Tb()("DocsVariantChip", {
-                                    Active: zb === bb
+                                  className: Xz()("DocsVariantChip", {
+                                    Active: rz === zz
                                   }),
-                                  "aria-pressed": zb === bb,
+                                  "aria-pressed": rz === zz,
                                   onClick: () => {
-                                    (bb => {
-                                      const Ub = mM.i[bb];
-                                      ab(Ub), xb({
-                                        ...yb,
-                                        voice: Ub
+                                    (zz => {
+                                      const sz = eW.h[zz];
+                                      tz(sz), Yz({
+                                        ...Hz,
+                                        voice: sz
                                       })
-                                    })(bb)
+                                    })(zz)
                                   },
-                                  children: bb
-                                }, bb))), !zb && (0, jb.jsx)("span", {
+                                  children: zz
+                                }, zz))), !rz && (0, wz.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, jb.jsxs)("div", {
+                              }), (0, wz.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, jb.jsxs)("div", {
+                                children: [(0, wz.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, jb.jsx)("div", {
+                                  children: [(0, wz.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, jb.jsx)(pM.c, {
-                                      display: yb
-                                    }, Bb)
-                                  }), (0, jb.jsxs)("form", {
+                                    children: (0, wz.jsx)(ZW.c, {
+                                      display: Hz
+                                    }, vz)
+                                  }), (0, wz.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: bb => {
-                                      bb.preventDefault(), xb(yb)
+                                    onSubmit: zz => {
+                                      zz.preventDefault(), Yz(Hz)
                                     },
-                                    children: [(0, jb.jsx)("input", {
-                                      value: Ub,
+                                    children: [(0, wz.jsx)("input", {
+                                      value: sz,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: bb => {
-                                        Mb(bb.target.value)
+                                      onChange: zz => {
+                                        Wz(zz.target.value)
                                       }
-                                    }), (0, jb.jsxs)("button", {
+                                    }), (0, wz.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, jb.jsx)(kb, {
+                                      children: [(0, wz.jsx)(gz, {
                                         name: "play"
-                                      }), (0, jb.jsx)("span", {
+                                      }), (0, wz.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, jb.jsx)("div", {
+                                  }), (0, wz.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: lM.map((bb => (0, jb.jsx)("button", {
+                                    children: nW.map((zz => (0, wz.jsx)("button", {
                                       type: "button",
-                                      className: Tb()("DocsVariantChip", {
-                                        Active: Ub === bb
+                                      className: Xz()("DocsVariantChip", {
+                                        Active: sz === zz
                                       }),
                                       onClick: () => {
-                                        var ab;
-                                        Mb(ab = bb), xb({
-                                          ...yb,
-                                          line: ab
+                                        var tz;
+                                        Wz(tz = zz), Yz({
+                                          ...Hz,
+                                          line: tz
                                         })
                                       },
-                                      children: bb
-                                    }, bb)))
-                                  }), (0, jb.jsxs)("label", {
+                                      children: zz
+                                    }, zz)))
+                                  }), (0, wz.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, jb.jsx)("span", {
+                                    children: [(0, wz.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, jb.jsx)("input", {
-                                      value: Eb,
+                                    }), (0, wz.jsx)("input", {
+                                      value: Oz,
                                       placeholder: "No name",
-                                      onChange: bb => {
-                                        Yb(bb.target.value)
+                                      onChange: zz => {
+                                        oz(zz.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, jb.jsx)(KM, {
-                                  synth: bb,
-                                  onChange: Ub => {
-                                    const Ab = {
-                                      ...bb,
-                                      ...Ub
+                                }), (0, wz.jsx)(LW, {
+                                  synth: zz,
+                                  onChange: sz => {
+                                    const Fz = {
+                                      ...zz,
+                                      ...sz
                                     };
-                                    ab(Ab);
-                                    const Mb = {
-                                        ...yb,
-                                        voice: Ab
+                                    tz(Fz);
+                                    const Wz = {
+                                        ...Hz,
+                                        voice: Fz
                                       },
-                                      Tb = performance.now();
-                                    if (Tb - Xb.current >= CM) {
-                                      Xb.current = Tb, Rb();
-                                      const bb = (0, NM.g)(Mb).plan.blips[0];
-                                      bb && (Lb.current = OM((0, mM.k)(Ab), [{
-                                        ...bb,
+                                      Xz = performance.now();
+                                    if (Xz - bz.current >= RW) {
+                                      bz.current = Xz, Dz();
+                                      const zz = (0, GW.f)(Wz).plan.blips[0];
+                                      zz && (uz.current = fW((0, eW.l)(Fz), [{
+                                        ...zz,
                                         atMs: 0
-                                      }], vb))
+                                      }], Kz))
                                     }
-                                    window.clearTimeout(Pb.current), Pb.current = window.setTimeout((() => {
-                                      xb(Zb.current)
-                                    }), gM)
+                                    window.clearTimeout(Nz.current), Nz.current = window.setTimeout((() => {
+                                      Yz(Bz.current)
+                                    }), VW)
                                   }
                                 })]
-                              }), (0, jb.jsx)(fb, {
-                                code: ib,
+                              }), (0, wz.jsx)(mz, {
+                                code: xz,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var JM = Ub(4553);
-                          const nM = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            SM = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            bT = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${SM}`, "g"), JM.l],
+                          var zX = sz(4495);
+                          const tX = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            sX = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            FX = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${sX}`, "g"), zX.n],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, JM.l]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, zX.n]
                             ];
 
-                          function aT(bb) {
-                            return `${bb.pageId}#${bb.anchor}`
+                          function WX(zz) {
+                            return `${zz.pageId}#${zz.anchor}`
                           }
-                          let UT, AT, MT;
+                          let XX, OX, oX;
 
-                          function TT(bb) {
-                            const ab = (0, mb.i)(bb),
-                              Ub = new Set;
-                            for (const [, , Ab] of ab.matchAll(mb.b)) {
-                              const bb = Ab.startsWith("#") ? tb(Ab) : null,
-                                ab = bb ? aT({
-                                  pageId: bb.page.id,
-                                  anchor: bb.anchor
+                          function vX(zz) {
+                            const tz = (0, Jz.i)(zz),
+                              sz = new Set;
+                            for (const [, , Fz] of tz.matchAll(Jz.d)) {
+                              const zz = Fz.startsWith("#") ? Lz(Fz) : null,
+                                tz = zz ? WX({
+                                  pageId: zz.page.id,
+                                  anchor: zz.anchor
                                 }) : null;
-                              null !== ab && (UT || (UT = new Set(qb.flatMap((bb => Hb(bb.layout) ? ob(bb).sections.map((ab => aT({
-                                pageId: bb.id,
-                                anchor: ab.heading.anchor
-                              }))) : [])))), UT).has(ab) && Ub.add(ab)
+                              null !== tz && (XX || (XX = new Set(Mz.flatMap((zz => Zz(zz.layout) ? kz(zz).sections.map((tz => WX({
+                                pageId: zz.id,
+                                anchor: tz.heading.anchor
+                              }))) : [])))), XX).has(tz) && sz.add(tz)
                             }
-                            for (const [, , Ab] of ab.matchAll(nM)) {
-                              const bb = Pa(Ab);
-                              bb && Ub.add(aT(bb))
+                            for (const [, , Fz] of tz.matchAll(tX)) {
+                              const zz = Nt(Fz);
+                              zz && sz.add(WX(zz))
                             }
-                            return Ub
+                            return sz
                           }
 
-                          function ET(bb, ab) {
-                            const Ub = new Set,
-                              Ab = function(bb) {
-                                return bb.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(bb);
-                            for (const [, Mb] of Ab.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) Ub.add(Mb);
-                            for (const [Mb, Tb] of bT)
-                              for (const [, bb] of(0, JM.f)(Ab, Mb, Tb)) ab.has(bb) && Ub.add(bb);
-                            return Ub
+                          function UX(zz, tz) {
+                            const sz = new Set,
+                              Fz = function(zz) {
+                                return zz.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(zz);
+                            for (const [, Wz] of Fz.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) sz.add(Wz);
+                            for (const [Wz, Xz] of FX)
+                              for (const [, zz] of(0, zX.e)(Fz, Wz, Xz)) tz.has(zz) && sz.add(zz);
+                            return sz
                           }
 
-                          function YT(bb, ab, Ub, Ab) {
-                            const Mb = bb.get(ab);
-                            Mb ? !Ab && Mb.some((bb => bb.pageId === Ub.pageId)) || Mb.push(Ub) : bb.set(ab, [Ub])
+                          function KX(zz, tz, sz, Fz) {
+                            const Wz = zz.get(tz);
+                            Wz ? !Fz && Wz.some((zz => zz.pageId === sz.pageId)) || Wz.push(sz) : zz.set(tz, [sz])
                           }
-                          const BT = /^[A-Za-z_$][\w$]*$/;
+                          const uX = /^[A-Za-z_$][\w$]*$/;
 
-                          function eT(bb) {
-                            return BT.test(bb.name) ? bb.name : "options"
-                          }
-
-                          function vT(bb, ab) {
-                            const Ub = bb.params.map(eT).join(", ");
-                            return ab ? `${bb.name} = (${Ub}) => {\n\t\n}` : `api.${bb.name}(${Ub})`
+                          function NX(zz) {
+                            return uX.test(zz.name) ? zz.name : "options"
                           }
 
-                          function LT(bb) {
+                          function bX(zz, tz) {
+                            const sz = zz.params.map(NX).join(", ");
+                            return tz ? `${zz.name} = (${sz}) => {\n\t\n}` : `api.${zz.name}(${sz})`
+                          }
+
+                          function wX(zz) {
                             let {
-                              method: ab,
-                              isCallback: Ub
-                            } = bb;
-                            return (0, jb.jsxs)("div", {
+                              method: tz,
+                              isCallback: sz
+                            } = zz;
+                            return (0, wz.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, jb.jsxs)("span", {
+                              children: [(0, wz.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [Ub ? (0, jb.jsxs)(jb.Fragment, {
-                                  children: [(0, jb.jsx)("span", {
+                                children: [sz ? (0, wz.jsxs)(wz.Fragment, {
+                                  children: [(0, wz.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: ab.name
-                                  }), (0, jb.jsx)("span", {
+                                    children: tz.name
+                                  }), (0, wz.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, jb.jsxs)(jb.Fragment, {
-                                  children: [(0, jb.jsx)("span", {
+                                }) : (0, wz.jsxs)(wz.Fragment, {
+                                  children: [(0, wz.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, jb.jsx)("span", {
+                                  }), (0, wz.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: ab.name
-                                  }), (0, jb.jsx)("span", {
+                                    children: tz.name
+                                  }), (0, wz.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), ab.params.map(((bb, Ub) => (0, jb.jsxs)(Ab.Fragment, {
-                                  children: [Ub > 0 && (0, jb.jsx)("span", {
+                                }), tz.params.map(((zz, sz) => (0, wz.jsxs)(Fz.Fragment, {
+                                  children: [sz > 0 && (0, wz.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, jb.jsx)("a", {
+                                  }), (0, wz.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${ab.name}-${eT(bb)}`,
-                                    children: bb.name
+                                    href: `#${tz.name}-${NX(zz)}`,
+                                    children: zz.name
                                   })]
-                                }, bb.name))), (0, jb.jsx)("span", {
+                                }, zz.name))), (0, wz.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: Ub ? ") => " : ")"
-                                }), Ub && !ab.returns && (0, jb.jsx)("span", {
+                                  children: sz ? ") => " : ")"
+                                }), sz && !tz.returns && (0, wz.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), ab.returns && ab.returns.type && (0, jb.jsxs)("span", {
+                              }), tz.returns && tz.returns.type && (0, wz.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!Ub && (0, jb.jsx)("span", {
+                                children: [!sz && (0, wz.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, jb.jsx)(pa, {
-                                  type: ab.returns.type
+                                }), (0, wz.jsx)(It, {
+                                  type: tz.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function PT(bb) {
+                          function DX(zz) {
                             let {
-                              title: ab,
-                              references: Ub
-                            } = bb;
-                            const Mb = (0, Ab.useContext)(Xa);
-                            return (0, jb.jsxs)("div", {
+                              title: tz,
+                              references: sz
+                            } = zz;
+                            const Wz = (0, Fz.useContext)(bt);
+                            return (0, wz.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, jb.jsx)("span", {
+                              children: [(0, wz.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: ab
-                              }), Ub.map((bb => (0, jb.jsx)(Eb.c, {
-                                to: sb(Mb, rb(bb.pageId), bb.anchor),
-                                children: bb.label
-                              }, `${bb.pageId}#${bb.anchor}`)))]
+                                children: tz
+                              }), sz.map((zz => (0, wz.jsx)(Oz.d, {
+                                to: nz(Wz, hz(zz.pageId), zz.anchor),
+                                children: zz.label
+                              }, `${zz.pageId}#${zz.anchor}`)))]
                             })
                           }
 
-                          function XT(bb) {
-                            var ab, Ub;
+                          function gX(zz) {
+                            var tz, sz;
                             let {
-                              pageId: Ab,
-                              anchor: Mb
-                            } = bb;
-                            const Tb = aT({
-                                pageId: Ab,
-                                anchor: Mb
+                              pageId: Fz,
+                              anchor: Wz
+                            } = zz;
+                            const Xz = WX({
+                                pageId: Fz,
+                                anchor: Wz
                               }),
-                              Eb = null !== (ab = function() {
-                                if (!MT) {
-                                  MT = new Map;
-                                  const Ab = new Set(qb.filter((bb => "callbacks" === bb.layout)).flatMap((bb => ob(bb).sections.map((bb => bb.heading.text)))));
-                                  for (const Mb of qb)
-                                    if ("article" === Mb.layout || "snippets" === Mb.layout)
-                                      for (const Tb of (0, mb.u)(ob(Mb)))
+                              Oz = null !== (tz = function() {
+                                if (!oX) {
+                                  oX = new Map;
+                                  const Fz = new Set(Mz.filter((zz => "callbacks" === zz.layout)).flatMap((zz => kz(zz).sections.map((zz => zz.heading.text)))));
+                                  for (const Wz of Mz)
+                                    if ("article" === Wz.layout || "snippets" === Wz.layout)
+                                      for (const Xz of (0, Jz.w)(kz(Wz)))
                                         for (const {
-                                            code: Eb
+                                            code: Oz
                                           }
-                                          of(0, mb.m)(Tb.blocks))
-                                          for (const Yb of ET(Eb, Ab)) {
-                                            const Ab = La().get(Yb);
-                                            if (Ab) {
-                                              var bb, ab, Ub;
-                                              const Eb = {
-                                                pageId: Mb.id,
-                                                anchor: null !== (bb = null === (ab = Tb.heading) || void 0 === ab ? void 0 : ab.anchor) && void 0 !== bb ? bb : "",
-                                                label: null !== (Ub = Mb.navTitle) && void 0 !== Ub ? Ub : Mb.title
+                                          of(0, Jz.l)(Xz.blocks))
+                                          for (const oz of UX(Oz, Fz)) {
+                                            const Fz = ut().get(oz);
+                                            if (Fz) {
+                                              var zz, tz, sz;
+                                              const Oz = {
+                                                pageId: Wz.id,
+                                                anchor: null !== (zz = null === (tz = Xz.heading) || void 0 === tz ? void 0 : tz.anchor) && void 0 !== zz ? zz : "",
+                                                label: null !== (sz = Wz.navTitle) && void 0 !== sz ? sz : Wz.title
                                               };
-                                              YT(MT, aT(Ab), Eb, !1)
+                                              KX(oX, WX(Fz), Oz, !1)
                                             }
                                           }
                                 }
-                                return MT
-                              }().get(Tb)) && void 0 !== ab ? ab : [],
-                              Yb = null !== (Ub = function() {
-                                if (!AT) {
-                                  AT = new Map;
-                                  const bb = rb("changelog");
-                                  for (const ab of ob(bb).sections) {
-                                    const Ub = new Set(ab.blocks.flatMap((bb => [...TT(bb)])));
-                                    for (const Ab of Ub) {
-                                      const Ub = {
-                                        pageId: bb.id,
-                                        anchor: ab.heading.anchor,
-                                        label: ab.heading.text
+                                return oX
+                              }().get(Xz)) && void 0 !== tz ? tz : [],
+                              oz = null !== (sz = function() {
+                                if (!OX) {
+                                  OX = new Map;
+                                  const zz = hz("changelog");
+                                  for (const tz of kz(zz).sections) {
+                                    const sz = new Set(tz.blocks.flatMap((zz => [...vX(zz)])));
+                                    for (const Fz of sz) {
+                                      const sz = {
+                                        pageId: zz.id,
+                                        anchor: tz.heading.anchor,
+                                        label: tz.heading.text
                                       };
-                                      YT(AT, Ab, Ub, !0)
+                                      KX(OX, Fz, sz, !0)
                                     }
                                   }
                                 }
-                                return AT
-                              }().get(Tb)) && void 0 !== Ub ? Ub : [];
-                            return 0 === Eb.length && 0 === Yb.length ? null : (0, jb.jsxs)("footer", {
+                                return OX
+                              }().get(Xz)) && void 0 !== sz ? sz : [];
+                            return 0 === Oz.length && 0 === oz.length ? null : (0, wz.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [Eb.length > 0 && (0, jb.jsx)(PT, {
+                              children: [Oz.length > 0 && (0, wz.jsx)(DX, {
                                 title: "Used in",
-                                references: Eb
-                              }), Yb.length > 0 && (0, jb.jsx)(PT, {
+                                references: Oz
+                              }), oz.length > 0 && (0, wz.jsx)(DX, {
                                 title: "Changelog",
-                                references: Yb
+                                references: oz
                               })]
                             })
                           }
 
-                          function jT(bb) {
+                          function HX(zz) {
                             let {
-                              method: ab,
-                              pageId: Ub,
-                              anchor: Ab,
-                              isCallback: Mb
-                            } = bb;
-                            const Tb = Mb ? void 0 : Ya().get(ab.name),
-                              Eb = ab.description.length > 0 || null === Tb || void 0 === Tb || !Tb.description ? ab.description : (0, mb.z)(Tb.description);
-                            return (0, jb.jsxs)("article", {
+                              method: tz,
+                              pageId: sz,
+                              anchor: Fz,
+                              isCallback: Wz
+                            } = zz;
+                            const Xz = Wz ? void 0 : ot().get(tz.name),
+                              Oz = tz.description.length > 0 || null === Xz || void 0 === Xz || !Xz.description ? tz.description : (0, Jz.A)(Xz.description);
+                            return (0, wz.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, jb.jsxs)("header", {
+                              children: [(0, wz.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, jb.jsx)(eU, {
+                                children: [(0, wz.jsx)(Ks, {
                                   level: 2,
-                                  text: ab.name,
-                                  anchor: Ab,
+                                  text: tz.name,
+                                  anchor: Fz,
                                   className: "DocsCardTitle"
-                                }), (0, jb.jsx)(Db, {
-                                  text: vT(ab, Mb),
-                                  label: Mb ? "Copy handler" : "Copy call",
+                                }), (0, wz.jsx)(Pz, {
+                                  text: bX(tz, Wz),
+                                  label: Wz ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, jb.jsx)(LT, {
-                                method: ab,
-                                isCallback: Mb
-                              }), Tb && null !== Tb.deprecation && (0, jb.jsxs)("aside", {
+                              }), (0, wz.jsx)(wX, {
+                                method: tz,
+                                isCallback: Wz
+                              }), Xz && null !== Xz.deprecation && (0, wz.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, jb.jsx)("strong", {
+                                children: [(0, wz.jsx)("strong", {
                                   children: "Deprecated"
-                                }), Tb.deprecation && (0, jb.jsxs)(jb.Fragment, {
-                                  children: [": ", (0, jb.jsx)(ia, {
-                                    text: (Yb = Tb.deprecation, (0, JM.s)(Yb, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, JM.h)("`\\w"), (bb => {
-                                      let [ab] = bb;
-                                      return La().has(ab) ? `\`${ab}\`` : ab
+                                }), Xz.deprecation && (0, wz.jsxs)(wz.Fragment, {
+                                  children: [": ", (0, wz.jsx)(xt, {
+                                    text: (oz = Xz.deprecation, (0, zX.v)(oz, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, zX.l)("`\\w"), (zz => {
+                                      let [tz] = zz;
+                                      return ut().has(tz) ? `\`${tz}\`` : tz
                                     })))
                                   })]
                                 })]
-                              }), Eb.length > 0 && (0, jb.jsx)("div", {
+                              }), Oz.length > 0 && (0, wz.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, jb.jsx)(XU, {
-                                  blocks: Eb
+                                children: (0, wz.jsx)(ws, {
+                                  blocks: Oz
                                 })
-                              }), ab.params.length > 0 && (0, jb.jsxs)("section", {
+                              }), tz.params.length > 0 && (0, wz.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, jb.jsx)("h3", {
+                                children: [(0, wz.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, jb.jsx)("dl", {
+                                }), (0, wz.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: ab.params.map((bb => (0, jb.jsxs)("div", {
-                                    id: `${ab.name}-${eT(bb)}`,
+                                  children: tz.params.map((zz => (0, wz.jsxs)("div", {
+                                    id: `${tz.name}-${NX(zz)}`,
                                     className: "DocsParam",
-                                    children: [(0, jb.jsxs)("dt", {
-                                      children: [(0, jb.jsx)("code", {
+                                    children: [(0, wz.jsxs)("dt", {
+                                      children: [(0, wz.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: bb.name
-                                      }), (0, jb.jsx)(pa, {
-                                        type: bb.type
+                                        children: zz.name
+                                      }), (0, wz.jsx)(It, {
+                                        type: zz.type
                                       })]
-                                    }), bb.description && (0, jb.jsx)("dd", {
-                                      children: (0, jb.jsx)(ia, {
-                                        text: bb.description
+                                    }), zz.description && (0, wz.jsx)("dd", {
+                                      children: (0, wz.jsx)(xt, {
+                                        text: zz.description
                                       })
                                     })]
-                                  }, bb.name)))
+                                  }, zz.name)))
                                 })]
-                              }), ab.returns && (ab.returns.type || ab.returns.description.length > 0) && (0, jb.jsxs)("section", {
+                              }), tz.returns && (tz.returns.type || tz.returns.description.length > 0) && (0, wz.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, jb.jsx)("h3", {
+                                children: [(0, wz.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, jb.jsxs)("div", {
+                                }), (0, wz.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [ab.returns.type && (0, jb.jsx)(pa, {
-                                    type: ab.returns.type
-                                  }), ab.returns.description.length > 0 && (0, jb.jsx)("div", {
+                                  children: [tz.returns.type && (0, wz.jsx)(It, {
+                                    type: tz.returns.type
+                                  }), tz.returns.description.length > 0 && (0, wz.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, jb.jsx)(XU, {
-                                      blocks: ab.returns.description
+                                    children: (0, wz.jsx)(ws, {
+                                      blocks: tz.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, jb.jsx)(XT, {
-                                pageId: Ub,
-                                anchor: Ab
+                              }), (0, wz.jsx)(gX, {
+                                pageId: sz,
+                                anchor: Fz
                               })]
                             });
-                            var Yb
+                            var oz
                           }
 
-                          function RT(bb) {
-                            var ab;
-                            return null !== bb.defaultValue && "undefined" !== bb.defaultValue ? bb.defaultValue : null !== (ab = bb.example) && void 0 !== ab ? ab : "value"
+                          function BX(zz) {
+                            var tz;
+                            return null !== zz.defaultValue && "undefined" !== zz.defaultValue ? zz.defaultValue : null !== (tz = zz.example) && void 0 !== tz ? tz : "value"
                           }
 
-                          function kT(bb) {
+                          function PX(zz) {
                             let {
-                              setting: ab,
-                              pageId: Ub,
-                              anchor: Ab,
-                              setterSnippet: Mb
-                            } = bb;
-                            const Tb = null === ab.defaultValue ? null : ya(ab.defaultValue);
-                            return (0, jb.jsxs)("article", {
+                              setting: tz,
+                              pageId: sz,
+                              anchor: Fz,
+                              setterSnippet: Wz
+                            } = zz;
+                            const Xz = null === tz.defaultValue ? null : Ht(tz.defaultValue);
+                            return (0, wz.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, jb.jsxs)("header", {
+                              children: [(0, wz.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, jb.jsx)(eU, {
+                                children: [(0, wz.jsx)(Ks, {
                                   level: 2,
-                                  text: ab.name,
-                                  anchor: Ab,
+                                  text: tz.name,
+                                  anchor: Fz,
                                   className: "DocsCardTitle"
-                                }), (0, jb.jsx)(Db, {
-                                  text: Mb(ab.name, RT(ab)),
+                                }), (0, wz.jsx)(Pz, {
+                                  text: Wz(tz.name, BX(tz)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, jb.jsxs)("dl", {
+                              }), (0, wz.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, jb.jsxs)("div", {
-                                  children: [(0, jb.jsx)("dt", {
+                                children: [(0, wz.jsxs)("div", {
+                                  children: [(0, wz.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, jb.jsx)("dd", {
-                                    children: (0, jb.jsx)(pa, {
-                                      type: ab.type
+                                  }), (0, wz.jsx)("dd", {
+                                    children: (0, wz.jsx)(It, {
+                                      type: tz.type
                                     })
                                   })]
-                                }), null !== ab.defaultValue && (0, jb.jsxs)("div", {
-                                  children: [(0, jb.jsx)("dt", {
+                                }), null !== tz.defaultValue && (0, wz.jsxs)("div", {
+                                  children: [(0, wz.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, jb.jsx)("dd", {
-                                    children: (0, jb.jsxs)("code", {
+                                  }), (0, wz.jsx)("dd", {
+                                    children: (0, wz.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [Tb && (0, jb.jsx)(Za, {
-                                        colour: Tb
-                                      }), ab.defaultValue]
+                                      children: [Xz && (0, wz.jsx)(Bt, {
+                                        colour: Xz
+                                      }), tz.defaultValue]
                                     })
                                   })]
-                                }), null !== ab.example && (0, jb.jsxs)("div", {
-                                  children: [(0, jb.jsx)("dt", {
+                                }), null !== tz.example && (0, wz.jsxs)("div", {
+                                  children: [(0, wz.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, jb.jsx)("dd", {
-                                    children: (0, jb.jsx)("code", {
+                                  }), (0, wz.jsx)("dd", {
+                                    children: (0, wz.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: ab.example
+                                      children: tz.example
                                     })
                                   })]
                                 })]
-                              }), ab.description.length > 0 && (0, jb.jsx)("div", {
+                              }), tz.description.length > 0 && (0, wz.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, jb.jsx)(XU, {
-                                  blocks: ab.description
+                                children: (0, wz.jsx)(ws, {
+                                  blocks: tz.description
                                 })
-                              }), (0, jb.jsx)(XT, {
-                                pageId: Ub,
-                                anchor: Ab
+                              }), (0, wz.jsx)(gX, {
+                                pageId: sz,
+                                anchor: Fz
                               })]
                             })
                           }
 
-                          function yT(bb) {
+                          function rX(zz) {
                             let {
-                              section: ab
-                            } = bb;
-                            return (0, jb.jsxs)("article", {
+                              section: tz
+                            } = zz;
+                            return (0, wz.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, jb.jsx)(eU, {
+                              children: [(0, wz.jsx)(Ks, {
                                 level: 2,
-                                text: ab.heading.text,
-                                anchor: ab.heading.anchor,
+                                text: tz.heading.text,
+                                anchor: tz.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, jb.jsx)("div", {
+                              }), (0, wz.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, jb.jsx)(XU, {
-                                  blocks: ab.blocks
+                                children: (0, wz.jsx)(ws, {
+                                  blocks: tz.blocks
                                 })
                               })]
                             })
                           }
 
-                          function ZT(bb) {
+                          function YX(zz) {
                             let {
-                              section: ab
-                            } = bb;
-                            return (0, jb.jsxs)("section", {
+                              section: tz
+                            } = zz;
+                            return (0, wz.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, jb.jsx)(eU, {
-                                level: ab.heading.level,
-                                text: ab.heading.text,
-                                anchor: ab.heading.anchor
-                              }), (0, jb.jsx)(XU, {
-                                blocks: ab.blocks
+                              children: [(0, wz.jsx)(Ks, {
+                                level: tz.heading.level,
+                                text: tz.heading.text,
+                                anchor: tz.heading.anchor
+                              }), (0, wz.jsx)(ws, {
+                                blocks: tz.blocks
                               })]
                             })
                           }
-                          const DT = {
+                          const xX = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4862,337 +4862,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function zT(bb) {
+                          function mX(zz) {
                             let {
-                              page: ab,
-                              section: Ub
-                            } = bb;
-                            if ("methods" === ab.layout || "callbacks" === ab.layout) return (0, jb.jsx)(jT, {
-                              method: fU(Ub),
-                              pageId: ab.id,
-                              anchor: Ub.heading.anchor,
-                              isCallback: "callbacks" === ab.layout
+                              page: tz,
+                              section: sz
+                            } = zz;
+                            if ("methods" === tz.layout || "callbacks" === tz.layout) return (0, wz.jsx)(HX, {
+                              method: Is(sz),
+                              pageId: tz.id,
+                              anchor: sz.heading.anchor,
+                              isCallback: "callbacks" === tz.layout
                             });
-                            if ("settings" === ab.layout) {
-                              const bb = function(bb) {
-                                const ab = {
-                                  name: bb.heading.text,
+                            if ("settings" === tz.layout) {
+                              const zz = function(zz) {
+                                const tz = {
+                                  name: zz.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const Ab of bb.blocks) {
-                                  var Ub;
-                                  if (iU(Ab)) continue;
-                                  const bb = "paragraph" === Ab.kind ? Ab.text.match(mU) : null;
-                                  if (!bb) {
-                                    ab.description.push(Ab);
+                                for (const Fz of zz.blocks) {
+                                  var sz;
+                                  if (ms(Fz)) continue;
+                                  const zz = "paragraph" === Fz.kind ? Fz.text.match(Cs) : null;
+                                  if (!zz) {
+                                    tz.description.push(Fz);
                                     continue
                                   }
-                                  const Mb = null !== (Ub = xU(bb[2])) && void 0 !== Ub ? Ub : bb[2];
-                                  "Type" === bb[1] ? ab.type = Mb : "Default" === bb[1] ? ab.defaultValue = Mb : "" !== Mb && (ab.example = Mb)
+                                  const Wz = null !== (sz = xs(zz[2])) && void 0 !== sz ? sz : zz[2];
+                                  "Type" === zz[1] ? tz.type = Wz : "Default" === zz[1] ? tz.defaultValue = Wz : "" !== Wz && (tz.example = Wz)
                                 }
-                                return ab.type ? ab : null
-                              }(Ub);
-                              if (bb) return (0, jb.jsx)(kT, {
-                                setting: bb,
-                                pageId: ab.id,
-                                anchor: Ub.heading.anchor,
-                                setterSnippet: ab.setterSnippet
+                                return tz.type ? tz : null
+                              }(sz);
+                              if (zz) return (0, wz.jsx)(PX, {
+                                setting: zz,
+                                pageId: tz.id,
+                                anchor: sz.heading.anchor,
+                                setterSnippet: tz.setterSnippet
                               })
                             }
-                            return "snippets" === ab.layout ? (0, jb.jsx)(yT, {
-                              section: Ub
-                            }) : "changelog" === ab.layout ? (0, jb.jsxs)("section", {
+                            return "snippets" === tz.layout ? (0, wz.jsx)(rX, {
+                              section: sz
+                            }) : "changelog" === tz.layout ? (0, wz.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, jb.jsx)("div", {
+                              children: [(0, wz.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, jb.jsx)(eU, {
+                                children: (0, wz.jsx)(Ks, {
                                   level: 2,
-                                  text: Ub.heading.text,
-                                  anchor: Ub.heading.anchor
+                                  text: sz.heading.text,
+                                  anchor: sz.heading.anchor
                                 })
-                              }), (0, jb.jsx)("div", {
+                              }), (0, wz.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, jb.jsx)(XU, {
-                                  blocks: pU(Ub.blocks)
+                                children: (0, wz.jsx)(ws, {
+                                  blocks: es(sz.blocks)
                                 })
                               })]
-                            }) : ab.gallery ? (0, jb.jsxs)("section", {
+                            }) : tz.gallery ? (0, wz.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, jb.jsx)(eU, {
-                                level: Ub.heading.level,
-                                text: Ub.heading.text,
-                                anchor: Ub.heading.anchor
-                              }), (0, jb.jsx)(NA, {
-                                kind: ab.gallery,
-                                content: ob(ab),
-                                blocks: Ub.blocks
+                              children: [(0, wz.jsx)(Ks, {
+                                level: sz.heading.level,
+                                text: sz.heading.text,
+                                anchor: sz.heading.anchor
+                              }), (0, wz.jsx)(GF, {
+                                kind: tz.gallery,
+                                content: kz(tz),
+                                blocks: sz.blocks
                               })]
-                            }) : (0, jb.jsx)(ZT, {
-                              section: Ub
+                            }) : (0, wz.jsx)(YX, {
+                              section: sz
                             })
                           }
 
-                          function xT(bb) {
+                          function JX(zz) {
                             let {
-                              page: ab,
-                              onTocChange: Ub
-                            } = bb;
-                            const Mb = ob(ab),
-                              [Tb, Eb] = (0, Ab.useState)(""),
-                              Yb = "article" !== ab.layout,
-                              Bb = kU(ab.gallery) ? ab.gallery : null,
-                              eb = null !== Bb,
-                              vb = Tb.trim().toLowerCase(),
-                              Lb = (0, Ab.useRef)(null),
-                              Pb = (0, Ab.useCallback)((bb => {
-                                var ab;
-                                null === (ab = Lb.current) || void 0 === ab || ab.preview(bb)
+                              page: tz,
+                              onTocChange: sz
+                            } = zz;
+                            const Wz = kz(tz),
+                              [Xz, Oz] = (0, Fz.useState)(""),
+                              oz = "article" !== tz.layout,
+                              vz = Hs(tz.gallery) ? tz.gallery : null,
+                              Uz = null !== vz,
+                              Kz = Xz.trim().toLowerCase(),
+                              uz = (0, Fz.useRef)(null),
+                              Nz = (0, Fz.useCallback)((zz => {
+                                var tz;
+                                null === (tz = uz.current) || void 0 === tz || tz.preview(zz)
                               }), []),
-                              Xb = (0, Ab.useMemo)((() => {
-                                if (!ab.hasParticlePlayground) return [];
-                                const bb = IU(Mb.intro).find((bb => "names" === bb.kind && !bb.names.some((bb => null !== KU(bb.name)))));
-                                return "names" === (null === bb || void 0 === bb ? void 0 : bb.kind) ? bb.names.map((bb => bb.name)) : []
-                              }), [ab, Mb]),
-                              Rb = (0, Ab.useMemo)((() => {
-                                if (!ab.hasTextPlayground) return [];
-                                const bb = Mb.sections.flatMap((bb => bb.blocks.flatMap((bb => {
-                                  var ab;
-                                  return (null !== (ab = HU(bb)) && void 0 !== ab ? ab : []).flatMap((bb => Ka(bb.name) ? [bb.name] : []))
+                              bz = (0, Fz.useMemo)((() => {
+                                if (!tz.hasParticlePlayground) return [];
+                                const zz = cs(Wz.intro).find((zz => "names" === zz.kind && !zz.names.some((zz => null !== Ls(zz.name)))));
+                                return "names" === (null === zz || void 0 === zz ? void 0 : zz.kind) ? zz.names.map((zz => zz.name)) : []
+                              }), [tz, Wz]),
+                              Dz = (0, Fz.useMemo)((() => {
+                                if (!tz.hasTextPlayground) return [];
+                                const zz = Wz.sections.flatMap((zz => zz.blocks.flatMap((zz => {
+                                  var tz;
+                                  return (null !== (tz = Ts(zz)) && void 0 !== tz ? tz : []).flatMap((zz => Qt(zz.name) ? [zz.name] : []))
                                 }))));
-                                return [...new Set(bb)]
-                              }), [ab, Mb]),
-                              kb = (0, Ab.useMemo)((() => vb ? Mb.sections.filter((bb => function(bb, ab) {
-                                return !!bb.heading.text.toLowerCase().includes(ab) || bb.blocks.some((bb => (0, mb.i)(bb).toLowerCase().includes(ab)))
-                              }(bb, vb))) : Mb.sections), [Mb, vb]),
-                              yb = (0, Ab.useMemo)((() => function(bb, ab) {
-                                return "article" !== bb.layout ? ab.map((bb => ({
-                                  anchor: bb.heading.anchor,
-                                  text: bb.heading.text,
+                                return [...new Set(zz)]
+                              }), [tz, Wz]),
+                              gz = (0, Fz.useMemo)((() => Kz ? Wz.sections.filter((zz => function(zz, tz) {
+                                return !!zz.heading.text.toLowerCase().includes(tz) || zz.blocks.some((zz => (0, Jz.i)(zz).toLowerCase().includes(tz)))
+                              }(zz, Kz))) : Wz.sections), [Wz, Kz]),
+                              Hz = (0, Fz.useMemo)((() => function(zz, tz) {
+                                return "article" !== zz.layout ? tz.map((zz => ({
+                                  anchor: zz.heading.anchor,
+                                  text: zz.heading.text,
                                   level: 2
-                                }))) : ab.flatMap((bb => {
-                                  const ab = bb.blocks.flatMap((bb => "heading" === bb.kind && 3 === bb.level ? [{
-                                    anchor: bb.anchor,
-                                    text: bb.text,
+                                }))) : tz.flatMap((zz => {
+                                  const tz = zz.blocks.flatMap((zz => "heading" === zz.kind && 3 === zz.level ? [{
+                                    anchor: zz.anchor,
+                                    text: zz.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: bb.heading.anchor,
-                                    text: bb.heading.text,
+                                    anchor: zz.heading.anchor,
+                                    text: zz.heading.text,
                                     level: 2
-                                  }, ...ab]
+                                  }, ...tz]
                                 }))
-                              }(ab, kb)), [ab, kb]);
-                            return (0, Ab.useEffect)((() => {
-                              Ub(yb)
-                            }), [yb, Ub]), (0, jb.jsxs)("article", {
+                              }(tz, gz)), [tz, gz]);
+                            return (0, Fz.useEffect)((() => {
+                              sz(Hz)
+                            }), [Hz, sz]), (0, wz.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, jb.jsxs)("header", {
+                              children: [(0, wz.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, jb.jsx)("h1", {
+                                children: [(0, wz.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: Mb.title || ab.title
-                                }), (0, jb.jsx)("p", {
+                                  children: Wz.title || tz.title
+                                }), (0, wz.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: ab.summary
-                                }), (0, jb.jsx)(VA, {
-                                  page: ab
-                                }), Yb && (0, jb.jsx)("div", {
+                                  children: tz.summary
+                                }), (0, wz.jsx)(pF, {
+                                  page: tz
+                                }), oz && (0, wz.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, jb.jsxs)("span", {
-                                    children: [(0, jb.jsx)("strong", {
-                                      children: Mb.sections.length
-                                    }), " ", DT[ab.layout]]
+                                  children: (0, wz.jsxs)("span", {
+                                    children: [(0, wz.jsx)("strong", {
+                                      children: Wz.sections.length
+                                    }), " ", xX[tz.layout]]
                                   })
                                 })]
-                              }), "" === ab.slug && (0, jb.jsx)(HA, {}), Bb && (0, jb.jsx)(hA, {
-                                kind: Bb
-                              }, Bb), ab.hasParticlePlayground && (0, jb.jsx)(YM, {
-                                ref: Lb,
-                                textures: Xb
-                              }), !eb && Mb.intro.length > 0 && (0, jb.jsx)("div", {
+                              }), "" === tz.slug && (0, wz.jsx)(cF, {}), vz && (0, wz.jsx)(MF, {
+                                kind: vz
+                              }, vz), tz.hasParticlePlayground && (0, wz.jsx)(KW, {
+                                ref: uz,
+                                textures: bz
+                              }), !Uz && Wz.intro.length > 0 && (0, wz.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: ab.gallery ? (0, jb.jsx)(yA.Provider, {
-                                  value: ab.hasParticlePlayground ? Pb : null,
-                                  children: (0, jb.jsx)(NA, {
-                                    kind: ab.gallery,
-                                    content: Mb,
-                                    blocks: Mb.intro
+                                children: tz.gallery ? (0, wz.jsx)(rF.Provider, {
+                                  value: tz.hasParticlePlayground ? Nz : null,
+                                  children: (0, wz.jsx)(GF, {
+                                    kind: tz.gallery,
+                                    content: Wz,
+                                    blocks: Wz.intro
                                   })
-                                }) : (0, jb.jsx)(XU, {
-                                  blocks: pU(Mb.intro)
+                                }) : (0, wz.jsx)(ws, {
+                                  blocks: es(Wz.intro)
                                 })
-                              }), ab.hasTextPlayground && (0, jb.jsx)(fM, {
-                                fontAwesomeIcons: Rb
-                              }), ab.hasVoicePlayground && (0, jb.jsx)(cM, {}), ab.childPageIds && (0, jb.jsx)(HA, {
-                                cards: ab.childPageIds.map((bb => ({
-                                  pageId: bb
+                              }), tz.hasTextPlayground && (0, wz.jsx)(CW, {
+                                fontAwesomeIcons: Dz
+                              }), tz.hasVoicePlayground && (0, wz.jsx)(EW, {}), tz.childPageIds && (0, wz.jsx)(cF, {
+                                cards: tz.childPageIds.map((zz => ({
+                                  pageId: zz
                                 }))),
-                                label: ab.title
-                              }), Yb && (0, jb.jsx)(DU, {
+                                label: tz.title
+                              }), oz && (0, wz.jsx)(rs, {
                                 className: "DocsFilterBar",
-                                value: Tb,
-                                placeholder: `Filter ${Mb.sections.length} ${DT[ab.layout]}\u2026`,
-                                label: `Filter ${DT[ab.layout]}`,
-                                onChange: Eb,
-                                count: vb ? {
-                                  visible: kb.length,
-                                  total: Mb.sections.length
+                                value: Xz,
+                                placeholder: `Filter ${Wz.sections.length} ${xX[tz.layout]}\u2026`,
+                                label: `Filter ${xX[tz.layout]}`,
+                                onChange: Oz,
+                                count: Kz ? {
+                                  visible: gz.length,
+                                  total: Wz.sections.length
                                 } : null
-                              }), !eb && (0, jb.jsxs)("div", {
-                                className: `DocsSections Layout-${ab.layout}`,
-                                children: [kb.map((bb => (0, jb.jsx)(zT, {
-                                  page: ab,
-                                  section: bb
-                                }, bb.heading.anchor))), 0 === kb.length && (0, jb.jsxs)("p", {
+                              }), !Uz && (0, wz.jsxs)("div", {
+                                className: `DocsSections Layout-${tz.layout}`,
+                                children: [gz.map((zz => (0, wz.jsx)(mX, {
+                                  page: tz,
+                                  section: zz
+                                }, zz.heading.anchor))), 0 === gz.length && (0, wz.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", DT[ab.layout], " match \u201c", Tb, "\u201d."]
+                                  children: ["No ", xX[tz.layout], " match \u201c", Xz, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const iT = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const IX = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function fT(bb) {
+                          function CX(zz) {
                             let {
-                              entry: ab,
-                              isActive: Ub,
-                              onNavigate: Ab,
-                              label: Mb,
-                              children: Eb
-                            } = bb;
-                            return (0, jb.jsx)("a", {
-                              href: `#${ab.anchor}`,
-                              "aria-label": Mb,
-                              className: Tb()(`Level${ab.level}`, {
-                                Active: Ub
+                              entry: tz,
+                              isActive: sz,
+                              onNavigate: Fz,
+                              label: Wz,
+                              children: Oz
+                            } = zz;
+                            return (0, wz.jsx)("a", {
+                              href: `#${tz.anchor}`,
+                              "aria-label": Wz,
+                              className: Xz()(`Level${tz.level}`, {
+                                Active: sz
                               }),
-                              "aria-current": Ub ? "location" : void 0,
-                              onClick: bb => {
-                                bb.preventDefault(), Ab(ab.anchor)
+                              "aria-current": sz ? "location" : void 0,
+                              onClick: zz => {
+                                zz.preventDefault(), Fz(tz.anchor)
                               },
-                              children: Eb
+                              children: Oz
                             })
                           }
 
-                          function mT(bb) {
+                          function eX(zz) {
                             let {
-                              toc: ab,
-                              activeAnchor: Ub,
-                              onNavigate: Mb
-                            } = bb;
-                            const Eb = Math.max(0, ab.findIndex((bb => bb.anchor === Ub))),
-                              Yb = (0, Ab.useRef)(null),
-                              Bb = (0, Ab.useRef)(!1);
-                            (0, Ab.useEffect)((() => {
-                              var bb, Ub;
-                              const Ab = null === (bb = Yb.current) || void 0 === bb ? void 0 : bb.closest(".DocsToc"),
-                                Mb = null === (Ub = Yb.current) || void 0 === Ub ? void 0 : Ub.querySelector(".DocsTimelineNotch.Active");
-                              if (!Ab || !Mb) return;
-                              let Tb = 0;
-                              if (Eb === ab.length - 1) Tb = Ab.scrollHeight;
-                              else if (Eb > 0) {
-                                const bb = Ab.getBoundingClientRect(),
-                                  ab = Mb.getBoundingClientRect();
-                                Tb = Ab.scrollTop + ab.top + ab.height / 2 - (bb.top + Ab.clientHeight / 2)
+                              toc: tz,
+                              activeAnchor: sz,
+                              onNavigate: Wz
+                            } = zz;
+                            const Oz = Math.max(0, tz.findIndex((zz => zz.anchor === sz))),
+                              oz = (0, Fz.useRef)(null),
+                              vz = (0, Fz.useRef)(!1);
+                            (0, Fz.useEffect)((() => {
+                              var zz, sz;
+                              const Fz = null === (zz = oz.current) || void 0 === zz ? void 0 : zz.closest(".DocsToc"),
+                                Wz = null === (sz = oz.current) || void 0 === sz ? void 0 : sz.querySelector(".DocsTimelineNotch.Active");
+                              if (!Fz || !Wz) return;
+                              let Xz = 0;
+                              if (Oz === tz.length - 1) Xz = Fz.scrollHeight;
+                              else if (Oz > 0) {
+                                const zz = Fz.getBoundingClientRect(),
+                                  tz = Wz.getBoundingClientRect();
+                                Xz = Fz.scrollTop + tz.top + tz.height / 2 - (zz.top + Fz.clientHeight / 2)
                               }
-                              Ab.scrollTo({
-                                top: Tb,
-                                behavior: Bb.current ? "smooth" : "auto"
-                              }), Bb.current = !0
-                            }), [Eb, ab.length]);
-                            const eb = [];
-                            return ab.forEach(((bb, ab) => {
-                              var Ub, Ab, Mb;
-                              const Tb = function(bb) {
-                                  const ab = bb.trim().match(iT);
-                                  return ab ? {
-                                    day: ab[1],
-                                    month: `${ab[2]} ${ab[3]}`
+                              Fz.scrollTo({
+                                top: Xz,
+                                behavior: vz.current ? "smooth" : "auto"
+                              }), vz.current = !0
+                            }), [Oz, tz.length]);
+                            const Uz = [];
+                            return tz.forEach(((zz, tz) => {
+                              var sz, Fz, Wz;
+                              const Xz = function(zz) {
+                                  const tz = zz.trim().match(IX);
+                                  return tz ? {
+                                    day: tz[1],
+                                    month: `${tz[2]} ${tz[3]}`
                                   } : null
-                                }(bb.text),
-                                Eb = null !== (Ub = null === Tb || void 0 === Tb ? void 0 : Tb.month) && void 0 !== Ub ? Ub : null;
-                              null !== Eb && (null === (Ab = eb.at(-1)) || void 0 === Ab ? void 0 : Ab.month) === Eb || eb.push({
-                                month: Eb,
+                                }(zz.text),
+                                Oz = null !== (sz = null === Xz || void 0 === Xz ? void 0 : Xz.month) && void 0 !== sz ? sz : null;
+                              null !== Oz && (null === (Fz = Uz.at(-1)) || void 0 === Fz ? void 0 : Fz.month) === Oz || Uz.push({
+                                month: Oz,
                                 entries: []
-                              }), eb.at(-1).entries.push({
-                                entry: bb,
-                                day: null !== (Mb = null === Tb || void 0 === Tb ? void 0 : Tb.day) && void 0 !== Mb ? Mb : null,
-                                index: ab
+                              }), Uz.at(-1).entries.push({
+                                entry: zz,
+                                day: null !== (Wz = null === Xz || void 0 === Xz ? void 0 : Xz.day) && void 0 !== Wz ? Wz : null,
+                                index: tz
                               })
-                            })), (0, jb.jsx)("ol", {
-                              ref: Yb,
+                            })), (0, wz.jsx)("ol", {
+                              ref: oz,
                               className: "DocsTimeline",
-                              children: eb.map((bb => {
+                              children: Uz.map((zz => {
                                 let {
-                                  month: ab,
-                                  entries: Ub
-                                } = bb;
-                                return (0, jb.jsxs)("li", {
+                                  month: tz,
+                                  entries: sz
+                                } = zz;
+                                return (0, wz.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [ab && (0, jb.jsx)("span", {
+                                  children: [tz && (0, wz.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: ab
-                                  }), (0, jb.jsx)("ol", {
-                                    children: Ub.map((bb => {
+                                    children: tz
+                                  }), (0, wz.jsx)("ol", {
+                                    children: sz.map((zz => {
                                       let {
-                                        entry: ab,
-                                        day: Ub,
-                                        index: Ab
-                                      } = bb;
-                                      return (0, jb.jsx)("li", {
-                                        className: Tb()("DocsTimelineNotch", {
-                                          Passed: Ab < Eb,
-                                          Active: Ab === Eb
+                                        entry: tz,
+                                        day: sz,
+                                        index: Fz
+                                      } = zz;
+                                      return (0, wz.jsx)("li", {
+                                        className: Xz()("DocsTimelineNotch", {
+                                          Passed: Fz < Oz,
+                                          Active: Fz === Oz
                                         }),
-                                        children: (0, jb.jsx)(fT, {
-                                          entry: ab,
-                                          isActive: Ab === Eb,
-                                          onNavigate: Mb,
-                                          label: ab.text,
-                                          children: (0, jb.jsx)("span", {
+                                        children: (0, wz.jsx)(CX, {
+                                          entry: tz,
+                                          isActive: Fz === Oz,
+                                          onNavigate: Wz,
+                                          label: tz.text,
+                                          children: (0, wz.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== Ub && void 0 !== Ub ? Ub : ab.text
+                                            children: null !== sz && void 0 !== sz ? sz : tz.text
                                           })
                                         })
-                                      }, ab.anchor)
+                                      }, tz.anchor)
                                     }))
                                   })]
-                                }, Ub[0].entry.anchor)
+                                }, sz[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function pT(bb) {
+                          function ZX(zz) {
                             let {
-                              isChangelog: ab,
-                              toc: Ub,
-                              activeAnchor: Ab,
-                              onNavigate: Mb
-                            } = bb;
-                            return 0 === Ub.length ? null : (0, jb.jsxs)(jb.Fragment, {
-                              children: [(0, jb.jsx)("div", {
+                              isChangelog: tz,
+                              toc: sz,
+                              activeAnchor: Fz,
+                              onNavigate: Wz
+                            } = zz;
+                            return 0 === sz.length ? null : (0, wz.jsxs)(wz.Fragment, {
+                              children: [(0, wz.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: ab ? "Updates" : "On this page"
-                              }), ab ? (0, jb.jsx)(mT, {
-                                toc: Ub,
-                                activeAnchor: Ab,
-                                onNavigate: Mb
-                              }) : (0, jb.jsx)("ul", {
-                                children: Ub.map((bb => (0, jb.jsx)("li", {
-                                  children: (0, jb.jsx)(fT, {
-                                    entry: bb,
-                                    isActive: bb.anchor === Ab,
-                                    onNavigate: Mb,
-                                    children: bb.text.replace(/`/g, "")
+                                children: tz ? "Updates" : "On this page"
+                              }), tz ? (0, wz.jsx)(eX, {
+                                toc: sz,
+                                activeAnchor: Fz,
+                                onNavigate: Wz
+                              }) : (0, wz.jsx)("ul", {
+                                children: sz.map((zz => (0, wz.jsx)("li", {
+                                  children: (0, wz.jsx)(CX, {
+                                    entry: zz,
+                                    isActive: zz.anchor === Fz,
+                                    onNavigate: Wz,
+                                    children: zz.text.replace(/`/g, "")
                                   })
-                                }, bb.anchor)))
+                                }, zz.anchor)))
                               })]
                             })
                           }
-                          const NT = {
+                          const GX = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5200,7 +5200,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            WT = {
+                            TX = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5208,1086 +5208,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            HT = 20,
-                            IT = 10,
-                            dT = 40,
-                            FT = 120;
-                          let hT;
+                            cX = 20,
+                            jX = 10,
+                            AX = 40,
+                            yX = 120;
+                          let MX;
 
-                          function GT(bb) {
-                            const ab = bb.gallery;
-                            if (!ab) return [];
-                            if (kU(ab)) return function(bb) {
-                              return ZU(bb).entries.map((bb => bb.name))
-                            }(ab).map((Ub => ({
-                              page: bb,
-                              anchor: FU(ab, Ub),
-                              title: Ub,
-                              kind: WT[ab],
+                          function dX(zz) {
+                            const tz = zz.gallery;
+                            if (!tz) return [];
+                            if (Hs(tz)) return function(zz) {
+                              return Ps(zz).entries.map((zz => zz.name))
+                            }(tz).map((sz => ({
+                              page: zz,
+                              anchor: ys(tz, sz),
+                              title: sz,
+                              kind: TX[tz],
                               text: "",
-                              listedUnder: bb.title
+                              listedUnder: zz.title
                             })));
-                            const Ub = ob(bb);
-                            return (0, mb.u)(Ub).flatMap((Ab => {
-                              const Mb = Ab.heading ? `${bb.title} \u203a ${Ab.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : bb.title;
-                              return GU(ab, Ub, Ab.blocks).flatMap((Ub => "names" !== Ub.kind ? [] : Ub.names.map((Ab => {
-                                const Tb = Ub.isSongs ? "Song" : WT[ab];
+                            const sz = kz(zz);
+                            return (0, Jz.w)(sz).flatMap((Fz => {
+                              const Wz = Fz.heading ? `${zz.title} \u203a ${Fz.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : zz.title;
+                              return ds(tz, sz, Fz.blocks).flatMap((sz => "names" !== sz.kind ? [] : sz.names.map((Fz => {
+                                const Xz = sz.isSongs ? "Song" : TX[tz];
                                 return {
-                                  page: bb,
-                                  anchor: Ab.anchor,
-                                  title: Ab.name,
-                                  kind: Tb,
+                                  page: zz,
+                                  anchor: Fz.anchor,
+                                  title: Fz.name,
+                                  kind: Xz,
                                   text: "",
-                                  listedUnder: Mb
+                                  listedUnder: Wz
                                 }
                               }))))
                             }))
                           }
 
-                          function QT(bb, ab, Ub) {
-                            const Ab = bb.title.toLowerCase();
-                            let Mb = 0;
-                            if (Ab === ab) Mb = 100;
-                            else if (Ab.startsWith(ab)) Mb = 80;
-                            else if (Ab.includes(ab)) Mb = 60;
-                            else if (Ub.every((bb => Ab.includes(bb)))) Mb = 45;
+                          function hX(zz, tz, sz) {
+                            const Fz = zz.title.toLowerCase();
+                            let Wz = 0;
+                            if (Fz === tz) Wz = 100;
+                            else if (Fz.startsWith(tz)) Wz = 80;
+                            else if (Fz.includes(tz)) Wz = 60;
+                            else if (sz.every((zz => Fz.includes(zz)))) Wz = 45;
                             else {
-                              if (!bb.text.toLowerCase().includes(ab)) return 0;
-                              Mb = 20
+                              if (!zz.text.toLowerCase().includes(tz)) return 0;
+                              Wz = 20
                             }
-                            return Mb - Math.min(Ab.length / 10, 9) + ("Page" === bb.kind ? 8 : "Method" === bb.kind ? 3 : 0) - (bb.listedUnder ? HT : 0)
+                            return Wz - Math.min(Fz.length / 10, 9) + ("Page" === zz.kind ? 8 : "Method" === zz.kind ? 3 : 0) - (zz.listedUnder ? cX : 0)
                           }
 
-                          function qT(bb, ab) {
-                            const Ub = bb.toLowerCase().indexOf(ab),
-                              Ab = Math.max(0, Ub - FT / 3);
-                            return `${Ab>0?"\u2026":""}${bb.slice(Ab,Ab+FT)}${Ab+FT<bb.length?"\u2026":""}`
+                          function QX(zz, tz) {
+                            const sz = zz.toLowerCase().indexOf(tz),
+                              Fz = Math.max(0, sz - yX / 3);
+                            return `${Fz>0?"\u2026":""}${zz.slice(Fz,Fz+yX)}${Fz+yX<zz.length?"\u2026":""}`
                           }
 
-                          function uT(bb) {
+                          function kX(zz) {
                             let {
-                              text: ab,
-                              query: Ub
-                            } = bb;
-                            const Ab = Ub ? ab.toLowerCase().indexOf(Ub) : -1;
-                            return -1 === Ab ? (0, jb.jsx)(jb.Fragment, {
-                              children: ab
-                            }) : (0, jb.jsxs)(jb.Fragment, {
-                              children: [ab.slice(0, Ab), (0, jb.jsx)("mark", {
-                                children: ab.slice(Ab, Ab + Ub.length)
-                              }), ab.slice(Ab + Ub.length)]
+                              text: tz,
+                              query: sz
+                            } = zz;
+                            const Fz = sz ? tz.toLowerCase().indexOf(sz) : -1;
+                            return -1 === Fz ? (0, wz.jsx)(wz.Fragment, {
+                              children: tz
+                            }) : (0, wz.jsxs)(wz.Fragment, {
+                              children: [tz.slice(0, Fz), (0, wz.jsx)("mark", {
+                                children: tz.slice(Fz, Fz + sz.length)
+                              }), tz.slice(Fz + sz.length)]
                             })
                           }
 
-                          function rT(bb) {
+                          function iX(zz) {
                             let {
-                              basePath: ab,
-                              onClose: Ub
-                            } = bb;
-                            const Mb = (0, Yb.x)(),
-                              [Eb, Bb] = (0, Ab.useState)(""),
-                              [eb, vb] = (0, Ab.useState)(0),
-                              Lb = (0, Ab.useRef)(null),
-                              Pb = (0, Ab.useRef)(null),
-                              Xb = Eb.trim().toLowerCase(),
-                              Rb = (0, Ab.useMemo)((() => {
-                                const bb = (hT || (hT = qb.flatMap((bb => {
-                                  const ab = ob(bb);
+                              basePath: tz,
+                              onClose: sz
+                            } = zz;
+                            const Wz = (0, oz.u)(),
+                              [Oz, vz] = (0, Fz.useState)(""),
+                              [Uz, Kz] = (0, Fz.useState)(0),
+                              uz = (0, Fz.useRef)(null),
+                              Nz = (0, Fz.useRef)(null),
+                              bz = Oz.trim().toLowerCase(),
+                              Dz = (0, Fz.useMemo)((() => {
+                                const zz = (MX || (MX = Mz.flatMap((zz => {
+                                  const tz = kz(zz);
                                   return [{
-                                    page: bb,
+                                    page: zz,
                                     anchor: "",
-                                    title: bb.title,
+                                    title: zz.title,
                                     kind: "Page",
-                                    text: bb.summary
-                                  }, ...ab.sections.flatMap((ab => {
-                                    const Ub = ab.blocks.filter((bb => "paragraph" === bb.kind)).map(mb.i).join(" ").replace(/[`*]/g, ""),
-                                      Ab = {
-                                        page: bb,
-                                        anchor: ab.heading.anchor,
-                                        title: ab.heading.text.replace(/`/g, ""),
-                                        kind: NT[bb.layout],
-                                        text: Ub
+                                    text: zz.summary
+                                  }, ...tz.sections.flatMap((tz => {
+                                    const sz = tz.blocks.filter((zz => "paragraph" === zz.kind)).map(Jz.i).join(" ").replace(/[`*]/g, ""),
+                                      Fz = {
+                                        page: zz,
+                                        anchor: tz.heading.anchor,
+                                        title: tz.heading.text.replace(/`/g, ""),
+                                        kind: GX[zz.layout],
+                                        text: sz
                                       },
-                                      Mb = ab.blocks.flatMap((ab => "article" === bb.layout && "heading" === ab.kind && 3 === ab.level ? [{
-                                        page: bb,
-                                        anchor: ab.anchor,
-                                        title: ab.text.replace(/`/g, ""),
+                                      Wz = tz.blocks.flatMap((tz => "article" === zz.layout && "heading" === tz.kind && 3 === tz.level ? [{
+                                        page: zz,
+                                        anchor: tz.anchor,
+                                        title: tz.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: Ab.title
+                                        text: Fz.title
                                       }] : []));
-                                    return [Ab, ...Mb]
-                                  })), ...GT(bb)]
-                                }))), hT);
-                                if (!Xb) return bb.filter((bb => "Page" === bb.kind));
-                                const ab = Xb.split(/\s+/);
-                                let Ub = 0;
-                                return bb.map((bb => ({
-                                  entry: bb,
-                                  score: QT(bb, Xb, ab)
-                                }))).filter((bb => bb.score > 0)).sort(((bb, ab) => ab.score - bb.score)).filter((bb => !bb.entry.listedUnder || (Ub++, Ub <= IT))).slice(0, dT).map((bb => bb.entry))
-                              }), [Xb]);
-                            (0, Ab.useEffect)((() => {
-                              vb(0)
-                            }), [Xb]), (0, Ab.useEffect)((() => {
-                              const bb = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [Fz, ...Wz]
+                                  })), ...dX(zz)]
+                                }))), MX);
+                                if (!bz) return zz.filter((zz => "Page" === zz.kind));
+                                const tz = bz.split(/\s+/);
+                                let sz = 0;
+                                return zz.map((zz => ({
+                                  entry: zz,
+                                  score: hX(zz, bz, tz)
+                                }))).filter((zz => zz.score > 0)).sort(((zz, tz) => tz.score - zz.score)).filter((zz => !zz.entry.listedUnder || (sz++, sz <= jX))).slice(0, AX).map((zz => zz.entry))
+                              }), [bz]);
+                            (0, Fz.useEffect)((() => {
+                              Kz(0)
+                            }), [bz]), (0, Fz.useEffect)((() => {
+                              const zz = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === bb || void 0 === bb || bb.focus()
+                                null === zz || void 0 === zz || zz.focus()
                               }
-                            }), []), (0, Ab.useEffect)((() => {
-                              var bb, ab;
-                              null === (bb = Lb.current) || void 0 === bb || null === (ab = bb.querySelector(".Active")) || void 0 === ab || ab.scrollIntoView({
+                            }), []), (0, Fz.useEffect)((() => {
+                              var zz, tz;
+                              null === (zz = uz.current) || void 0 === zz || null === (tz = zz.querySelector(".Active")) || void 0 === tz || tz.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [eb]);
-                            const yb = bb => {
-                              Mb(sb(ab, bb.page, bb.anchor)), Ub()
+                            }), [Uz]);
+                            const Hz = zz => {
+                              Wz(nz(tz, zz.page, zz.anchor)), sz()
                             };
-                            return (0, jb.jsx)("div", {
+                            return (0, wz.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: bb => {
-                                bb.target === bb.currentTarget && Ub()
+                              onMouseDown: zz => {
+                                zz.target === zz.currentTarget && sz()
                               },
-                              children: (0, jb.jsxs)("div", {
+                              children: (0, wz.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: bb => {
-                                  bb.target !== Pb.current && bb.preventDefault()
+                                onMouseDown: zz => {
+                                  zz.target !== Nz.current && zz.preventDefault()
                                 },
-                                onKeyDown: bb => {
-                                  if ("Escape" === bb.key) Ub();
-                                  else if ("Tab" === bb.key) {
-                                    var ab;
-                                    bb.preventDefault(), null === (ab = Pb.current) || void 0 === ab || ab.focus()
+                                onKeyDown: zz => {
+                                  if ("Escape" === zz.key) sz();
+                                  else if ("Tab" === zz.key) {
+                                    var tz;
+                                    zz.preventDefault(), null === (tz = Nz.current) || void 0 === tz || tz.focus()
                                   }
                                 },
-                                children: [(0, jb.jsxs)("div", {
+                                children: [(0, wz.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, jb.jsx)(kb, {
+                                  children: [(0, wz.jsx)(gz, {
                                     name: "magnifying-glass"
-                                  }), (0, jb.jsx)("input", {
-                                    ref: Pb,
+                                  }), (0, wz.jsx)("input", {
+                                    ref: Nz,
                                     autoFocus: !0,
-                                    value: Eb,
+                                    value: Oz,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": Rb.length > 0 ? `DocsSearchResult-${eb}` : void 0,
-                                    onChange: bb => {
-                                      Bb(bb.target.value)
+                                    "aria-activedescendant": Dz.length > 0 ? `DocsSearchResult-${Uz}` : void 0,
+                                    onChange: zz => {
+                                      vz(zz.target.value)
                                     },
-                                    onKeyDown: bb => {
-                                      if ("ArrowDown" === bb.key || "ArrowUp" === bb.key) {
-                                        bb.preventDefault();
-                                        const ab = "ArrowDown" === bb.key ? 1 : -1;
-                                        vb((eb + ab + Rb.length) % Math.max(Rb.length, 1))
-                                      } else "Enter" === bb.key && Rb[eb] && yb(Rb[eb])
+                                    onKeyDown: zz => {
+                                      if ("ArrowDown" === zz.key || "ArrowUp" === zz.key) {
+                                        zz.preventDefault();
+                                        const tz = "ArrowDown" === zz.key ? 1 : -1;
+                                        Kz((Uz + tz + Dz.length) % Math.max(Dz.length, 1))
+                                      } else "Enter" === zz.key && Dz[Uz] && Hz(Dz[Uz])
                                     }
-                                  }), (0, jb.jsx)("kbd", {
+                                  }), (0, wz.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, jb.jsxs)("ul", {
+                                }), (0, wz.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: Lb,
+                                  ref: uz,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!Xb && (0, jb.jsx)("li", {
+                                  children: [!bz && (0, wz.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), Rb.map(((bb, ab) => {
-                                    var Ub;
-                                    return (0, jb.jsxs)("li", {
-                                      id: `DocsSearchResult-${ab}`,
+                                  }), Dz.map(((zz, tz) => {
+                                    var sz;
+                                    return (0, wz.jsxs)("li", {
+                                      id: `DocsSearchResult-${tz}`,
                                       role: "option",
-                                      "aria-selected": ab === eb,
-                                      className: Tb()("DocsSearchResult", {
-                                        Active: ab === eb
+                                      "aria-selected": tz === Uz,
+                                      className: Xz()("DocsSearchResult", {
+                                        Active: tz === Uz
                                       }),
                                       onMouseMove: () => {
-                                        vb(ab)
+                                        Kz(tz)
                                       },
                                       onClick: () => {
-                                        yb(bb)
+                                        Hz(zz)
                                       },
-                                      children: [(0, jb.jsx)(kb, {
-                                        name: bb.page.icon
-                                      }), (0, jb.jsxs)("div", {
+                                      children: [(0, wz.jsx)(gz, {
+                                        name: zz.page.icon
+                                      }), (0, wz.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, jb.jsx)("div", {
+                                        children: [(0, wz.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, jb.jsx)(uT, {
-                                            text: bb.title,
-                                            query: Xb
+                                          children: (0, wz.jsx)(kX, {
+                                            text: zz.title,
+                                            query: bz
                                           })
-                                        }), bb.text && (0, jb.jsx)("div", {
+                                        }), zz.text && (0, wz.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, jb.jsx)(uT, {
-                                            text: qT(bb.text, Xb),
-                                            query: Xb
+                                          children: (0, wz.jsx)(kX, {
+                                            text: QX(zz.text, bz),
+                                            query: bz
                                           })
                                         })]
-                                      }), (0, jb.jsx)("span", {
+                                      }), (0, wz.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === bb.kind ? "Page" : null !== (Ub = bb.listedUnder) && void 0 !== Ub ? Ub : `${bb.kind} \xb7 ${bb.page.title}`
+                                        children: "Page" === zz.kind ? "Page" : null !== (sz = zz.listedUnder) && void 0 !== sz ? sz : `${zz.kind} \xb7 ${zz.page.title}`
                                       })]
-                                    }, `${bb.page.id}#${bb.anchor}`)
-                                  })), Xb && 0 === Rb.length && (0, jb.jsxs)("li", {
+                                    }, `${zz.page.id}#${zz.anchor}`)
+                                  })), bz && 0 === Dz.length && (0, wz.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", Eb, "\u201d."]
+                                    children: ["Nothing matches \u201c", Oz, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function KT(bb, ab) {
-                            if (ab < 10) return `${bb.toFixed(1)}s`;
-                            const Ub = Math.floor(bb);
-                            return `${Math.floor(Ub/60)}:${String(Ub%60).padStart(2,"0")}`
+                          function LX(zz, tz) {
+                            if (tz < 10) return `${zz.toFixed(1)}s`;
+                            const sz = Math.floor(zz);
+                            return `${Math.floor(sz/60)}:${String(sz%60).padStart(2,"0")}`
                           }
 
-                          function oT() {
-                            const bb = vA((bb => bb.track)),
-                              ab = vA((bb => bb.volume)),
-                              [Ub, Mb] = (0, Ab.useState)(0),
-                              Eb = (0, Ab.useRef)(aA);
-                            if ((0, Ab.useEffect)((() => {
-                                if (!bb) return;
-                                if (Mb(jA()), "playing" !== bb.status) return;
-                                let ab = 0;
-                                const Ub = () => {
-                                  Mb(jA()), ab = requestAnimationFrame(Ub)
+                          function lX() {
+                            const zz = bF((zz => zz.track)),
+                              tz = bF((zz => zz.volume)),
+                              [sz, Wz] = (0, Fz.useState)(0),
+                              Oz = (0, Fz.useRef)(WF);
+                            if ((0, Fz.useEffect)((() => {
+                                if (!zz) return;
+                                if (Wz(HF()), "playing" !== zz.status) return;
+                                let tz = 0;
+                                const sz = () => {
+                                  Wz(HF()), tz = requestAnimationFrame(sz)
                                 };
-                                return ab = requestAnimationFrame(Ub), () => {
-                                  cancelAnimationFrame(ab)
+                                return tz = requestAnimationFrame(sz), () => {
+                                  cancelAnimationFrame(tz)
                                 }
-                              }), [bb]), !bb) return null;
-                            const Yb = "paused" !== bb.status,
-                              Bb = Math.min(Ub, bb.duration);
-                            return (0, jb.jsx)("div", {
+                              }), [zz]), !zz) return null;
+                            const oz = "paused" !== zz.status,
+                              vz = Math.min(sz, zz.duration);
+                            return (0, wz.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, jb.jsxs)("section", {
+                              children: (0, wz.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, jb.jsx)("button", {
+                                children: [(0, wz.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": Yb ? `Pause ${bb.name}` : `Play ${bb.name}`,
-                                  onClick: XA,
-                                  children: (0, jb.jsx)(kb, {
-                                    name: Yb ? "pause" : "play"
+                                  "aria-label": oz ? `Pause ${zz.name}` : `Play ${zz.name}`,
+                                  onClick: gF,
+                                  children: (0, wz.jsx)(gz, {
+                                    name: oz ? "pause" : "play"
                                   })
-                                }), (0, jb.jsxs)("div", {
+                                }), (0, wz.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, jb.jsxs)("div", {
+                                  children: [(0, wz.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, jb.jsx)("code", {
-                                      children: bb.name
-                                    }), (0, jb.jsx)("span", {
-                                      children: bb.isSong ? "Song" : "Sound"
+                                    children: [(0, wz.jsx)("code", {
+                                      children: zz.name
+                                    }), (0, wz.jsx)("span", {
+                                      children: zz.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, jb.jsxs)("div", {
+                                  }), (0, wz.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, jb.jsx)("span", {
-                                      children: KT(Bb, bb.duration)
-                                    }), (0, jb.jsx)("input", {
+                                    children: [(0, wz.jsx)("span", {
+                                      children: LX(vz, zz.duration)
+                                    }), (0, wz.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: bb.duration || 1,
+                                      max: zz.duration || 1,
                                       step: .01,
-                                      value: Bb,
-                                      disabled: 0 === bb.duration,
+                                      value: vz,
+                                      disabled: 0 === zz.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${KT(Bb,bb.duration)} of ${KT(bb.duration,bb.duration)}`,
-                                      onChange: bb => {
-                                        const ab = Number(bb.target.value);
-                                        ! function(bb) {
-                                          var ab;
-                                          EA = bb, null === (ab = MA) || void 0 === ab || ab.seek(bb)
-                                        }(ab), Mb(ab)
+                                      "aria-valuetext": `${LX(vz,zz.duration)} of ${LX(zz.duration,zz.duration)}`,
+                                      onChange: zz => {
+                                        const tz = Number(zz.target.value);
+                                        ! function(zz) {
+                                          var tz;
+                                          UF = zz, null === (tz = oF) || void 0 === tz || tz.seek(zz)
+                                        }(tz), Wz(tz)
                                       }
-                                    }), (0, jb.jsx)("span", {
-                                      children: bb.duration > 0 ? KT(bb.duration, bb.duration) : "\u2013"
+                                    }), (0, wz.jsx)("span", {
+                                      children: zz.duration > 0 ? LX(zz.duration, zz.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, jb.jsxs)("div", {
+                                }), (0, wz.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, jb.jsx)("button", {
+                                  children: [(0, wz.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === ab ? "Unmute" : "Mute",
+                                    "aria-label": 0 === tz ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === ab ? RA(Eb.current) : (Eb.current = ab, RA(0))
+                                      0 === tz ? BF(Oz.current) : (Oz.current = tz, BF(0))
                                     },
-                                    children: (0, jb.jsx)(kb, {
+                                    children: (0, wz.jsx)(gz, {
                                       name: "volume",
-                                      className: Tb()({
-                                        Muted: 0 === ab
+                                      className: Xz()({
+                                        Muted: 0 === tz
                                       })
                                     })
-                                  }), (0, jb.jsx)("input", {
+                                  }), (0, wz.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: ab,
+                                    value: tz,
                                     "aria-label": "Volume",
-                                    onChange: bb => {
-                                      RA(Number(bb.target.value))
+                                    onChange: zz => {
+                                      BF(Number(zz.target.value))
                                     }
                                   })]
-                                }), (0, jb.jsx)("button", {
+                                }), (0, wz.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var ab;
-                                    null === (ab = document.querySelector(`[data-docs-track="${CSS.escape(UA(bb.name,bb.isSong))}"]`)) || void 0 === ab || ab.focus(), kA()
+                                    var tz;
+                                    null === (tz = document.querySelector(`[data-docs-track="${CSS.escape(XF(zz.name,zz.isSong))}"]`)) || void 0 === tz || tz.focus(), PF()
                                   },
-                                  children: (0, jb.jsx)(kb, {
+                                  children: (0, wz.jsx)(gz, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var lT = Ub(31);
-                          const tT = "docsTheme",
-                            wT = window.matchMedia("(prefers-color-scheme: light)");
+                          var nX = sz(44);
+                          const aX = "docsTheme",
+                            qX = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function sT(bb) {
+                          function SX(zz) {
                             let {
-                              theme: ab,
-                              onChange: Ub
-                            } = bb;
-                            const Ab = "dark" === ab ? "light" : "dark";
-                            return (0, jb.jsx)("button", {
+                              theme: tz,
+                              onChange: sz
+                            } = zz;
+                            const Fz = "dark" === tz ? "light" : "dark";
+                            return (0, wz.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${Ab} theme`,
-                              title: `Switch to ${Ab} theme`,
+                              "aria-label": `Switch to ${Fz} theme`,
+                              title: `Switch to ${Fz} theme`,
                               onClick: () => {
-                                Ub(Ab)
+                                sz(Fz)
                               },
-                              children: (0, jb.jsx)(kb, {
-                                name: "dark" === ab ? "moon" : "sun"
+                              children: (0, wz.jsx)(gz, {
+                                name: "dark" === tz ? "moon" : "sun"
                               })
                             })
                           }
-                          const gT = "https://github.com/Bloxdy/code-api",
-                            CT = "https://discord.gg/playbloxd",
-                            VT = 180,
-                            OT = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const VX = "https://github.com/Bloxdy/code-api",
+                            RX = "https://discord.gg/playbloxd",
+                            pX = 180,
+                            fX = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function cT(bb) {
+                          function EX(zz) {
                             let {
-                              basePath: ab,
-                              activePageId: Ub,
-                              onNavigate: Ab
-                            } = bb;
-                            return (0, jb.jsx)("nav", {
+                              basePath: tz,
+                              activePageId: sz,
+                              onNavigate: Fz
+                            } = zz;
+                            return (0, wz.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: ub.map((bb => (0, jb.jsxs)("div", {
+                              children: dz.map((zz => (0, wz.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, jb.jsx)("div", {
+                                children: [(0, wz.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: bb.title
-                                }), bb.pageIds.map((bb => {
-                                  var Mb;
-                                  const Yb = rb(bb);
-                                  return (0, jb.jsxs)(Eb.c, {
-                                    to: sb(ab, Yb),
-                                    className: Tb()("DocsNavLink", {
-                                      Active: Yb.id === Ub
+                                  children: zz.title
+                                }), zz.pageIds.map((zz => {
+                                  var Wz;
+                                  const oz = hz(zz);
+                                  return (0, wz.jsxs)(Oz.d, {
+                                    to: nz(tz, oz),
+                                    className: Xz()("DocsNavLink", {
+                                      Active: oz.id === sz
                                     }),
-                                    "aria-current": Yb.id === Ub ? "page" : void 0,
-                                    onClick: Ab,
-                                    children: [(0, jb.jsx)(kb, {
-                                      name: Yb.icon
-                                    }), (0, jb.jsx)("span", {
-                                      children: null !== (Mb = Yb.navTitle) && void 0 !== Mb ? Mb : Yb.title
+                                    "aria-current": oz.id === sz ? "page" : void 0,
+                                    onClick: Fz,
+                                    children: [(0, wz.jsx)(gz, {
+                                      name: oz.icon
+                                    }), (0, wz.jsx)("span", {
+                                      children: null !== (Wz = oz.navTitle) && void 0 !== Wz ? Wz : oz.title
                                     })]
-                                  }, Yb.id)
+                                  }, oz.id)
                                 }))]
-                              }, bb.title)))
+                              }, zz.title)))
                             })
                           }
 
-                          function JT(bb) {
+                          function zO(zz) {
                             let {
-                              basePath: ab,
-                              pageId: Ub
-                            } = bb;
-                            const Ab = ub.flatMap((bb => bb.pageIds)),
-                              Mb = Ab.indexOf(Ub),
-                              Tb = Mb > 0 ? rb(Ab[Mb - 1]) : null,
-                              Yb = Mb < Ab.length - 1 ? rb(Ab[Mb + 1]) : null;
-                            return (0, jb.jsxs)("nav", {
+                              basePath: tz,
+                              pageId: sz
+                            } = zz;
+                            const Fz = dz.flatMap((zz => zz.pageIds)),
+                              Wz = Fz.indexOf(sz),
+                              Xz = Wz > 0 ? hz(Fz[Wz - 1]) : null,
+                              oz = Wz < Fz.length - 1 ? hz(Fz[Wz + 1]) : null;
+                            return (0, wz.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [Tb ? (0, jb.jsxs)(Eb.c, {
+                              children: [Xz ? (0, wz.jsxs)(Oz.d, {
                                 className: "DocsPagerLink Previous",
-                                to: sb(ab, Tb),
-                                children: [(0, jb.jsx)("span", {
+                                to: nz(tz, Xz),
+                                children: [(0, wz.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, jb.jsx)("span", {
+                                }), (0, wz.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: Tb.title
+                                  children: Xz.title
                                 })]
-                              }) : (0, jb.jsx)("span", {}), Yb && (0, jb.jsxs)(Eb.c, {
+                              }) : (0, wz.jsx)("span", {}), oz && (0, wz.jsxs)(Oz.d, {
                                 className: "DocsPagerLink Next",
-                                to: sb(ab, Yb),
-                                children: [(0, jb.jsx)("span", {
+                                to: nz(tz, oz),
+                                children: [(0, wz.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, jb.jsx)("span", {
+                                }), (0, wz.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: Yb.title
+                                  children: oz.title
                                 })]
                               })]
                             })
                           }
 
-                          function nT(bb) {
+                          function tO(zz) {
                             let {
-                              basePath: ab,
-                              embedded: Ub = !1
-                            } = bb;
+                              basePath: tz,
+                              embedded: sz = !1
+                            } = zz;
                             const {
-                              pageSlug: Mb = ""
-                            } = (0, Yb.F)(), eb = (0, Yb.v)(), vb = (0, Yb.x)(), Lb = (Pb = Mb, qb.find((bb => bb.slug === Pb)));
-                            var Pb;
-                            const [Xb, Rb] = function() {
-                              const [bb, ab] = (0, Ab.useState)((() => {
-                                const bb = lT.f.getItem(tT);
-                                return "dark" === bb || "light" === bb ? bb : null
-                              })), [Ub, Mb] = (0, Ab.useState)(wT.matches ? "light" : "dark");
-                              return (0, Ab.useEffect)((() => {
-                                const bb = () => {
-                                  Mb(wT.matches ? "light" : "dark")
+                              pageSlug: Wz = ""
+                            } = (0, oz.C)(), Uz = (0, oz.s)(), Kz = (0, oz.u)(), uz = (Nz = Wz, Mz.find((zz => zz.slug === Nz)));
+                            var Nz;
+                            const [bz, Dz] = function() {
+                              const [zz, tz] = (0, Fz.useState)((() => {
+                                const zz = nX.f.getItem(aX);
+                                return "dark" === zz || "light" === zz ? zz : null
+                              })), [sz, Wz] = (0, Fz.useState)(qX.matches ? "light" : "dark");
+                              return (0, Fz.useEffect)((() => {
+                                const zz = () => {
+                                  Wz(qX.matches ? "light" : "dark")
                                 };
-                                return wT.addEventListener("change", bb), () => {
-                                  wT.removeEventListener("change", bb)
+                                return qX.addEventListener("change", zz), () => {
+                                  qX.removeEventListener("change", zz)
                                 }
-                              }), []), [null !== bb && void 0 !== bb ? bb : Ub, bb => {
-                                lT.f.setItem(tT, bb), ab(bb)
+                              }), []), [null !== zz && void 0 !== zz ? zz : sz, zz => {
+                                nX.f.setItem(aX, zz), tz(zz)
                               }]
-                            }(), [yb, Zb] = (0, Ab.useState)(null), [Db, zb] = (0, Ab.useState)(!1), [xb, ib] = (0, Ab.useState)(!1), [fb, pb] = (0, Ab.useState)([]), Nb = function(bb, ab) {
-                              const [Ub, Mb] = (0, Ab.useState)("");
-                              return (0, Ab.useEffect)((() => {
-                                if (!ab) return;
-                                let Ub = 0;
-                                const Ab = () => {
-                                    var Ab, Tb;
-                                    Ub = 0;
-                                    const Eb = ab.getBoundingClientRect().top + VT;
-                                    let Yb = null !== (Ab = null === (Tb = bb[0]) || void 0 === Tb ? void 0 : Tb.anchor) && void 0 !== Ab ? Ab : "";
-                                    for (const ab of bb) {
-                                      const bb = document.getElementById(ab.anchor);
-                                      bb && bb.getBoundingClientRect().top <= Eb && (Yb = ab.anchor)
+                            }(), [Hz, Bz] = (0, Fz.useState)(null), [Pz, rz] = (0, Fz.useState)(!1), [Yz, xz] = (0, Fz.useState)(!1), [mz, Iz] = (0, Fz.useState)([]), Cz = function(zz, tz) {
+                              const [sz, Wz] = (0, Fz.useState)("");
+                              return (0, Fz.useEffect)((() => {
+                                if (!tz) return;
+                                let sz = 0;
+                                const Fz = () => {
+                                    var Fz, Xz;
+                                    sz = 0;
+                                    const Oz = tz.getBoundingClientRect().top + pX;
+                                    let oz = null !== (Fz = null === (Xz = zz[0]) || void 0 === Xz ? void 0 : Xz.anchor) && void 0 !== Fz ? Fz : "";
+                                    for (const tz of zz) {
+                                      const zz = document.getElementById(tz.anchor);
+                                      zz && zz.getBoundingClientRect().top <= Oz && (oz = tz.anchor)
                                     }
-                                    ab.scrollTop + ab.clientHeight >= ab.scrollHeight - 2 && ab.scrollTop > 0 && bb.length > 0 && (Yb = bb[bb.length - 1].anchor), Mb(Yb)
+                                    tz.scrollTop + tz.clientHeight >= tz.scrollHeight - 2 && tz.scrollTop > 0 && zz.length > 0 && (oz = zz[zz.length - 1].anchor), Wz(oz)
                                   },
-                                  Tb = () => {
-                                    Ub || (Ub = requestAnimationFrame(Ab))
+                                  Xz = () => {
+                                    sz || (sz = requestAnimationFrame(Fz))
                                   };
-                                return Ab(), ab.addEventListener("scroll", Tb, {
+                                return Fz(), tz.addEventListener("scroll", Xz, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(Ub), ab.removeEventListener("scroll", Tb)
+                                  cancelAnimationFrame(sz), tz.removeEventListener("scroll", Xz)
                                 }
-                              }), [bb, ab]), Ub
-                            }(fb, yb), Wb = "" === Mb && eb.hash ? function(bb) {
-                              const ab = (0, mb.p)(bb);
-                              if (lb(rb("welcome"), ab)) return null;
-                              const Ub = Object.hasOwn(wb, ab) ? wb[ab] : null;
-                              if (Ub) return {
-                                page: rb(Ub.pageId),
-                                anchor: Ub.anchor
+                              }), [zz, tz]), sz
+                            }(mz, Hz), ez = "" === Wz && Uz.hash ? function(zz) {
+                              const tz = (0, Jz.q)(zz);
+                              if (iz(hz("welcome"), tz)) return null;
+                              const sz = Object.hasOwn(lz, tz) ? lz[tz] : null;
+                              if (sz) return {
+                                page: hz(sz.pageId),
+                                anchor: sz.anchor
                               };
-                              const Ab = rb("readme");
-                              return lb(Ab, ab) ? {
-                                page: Ab,
-                                anchor: ab
-                              } : tb(`#${ab}`)
-                            }(eb.hash) : null;
-                            (0, Ab.useEffect)((() => (Bb.c.set({
+                              const Fz = hz("readme");
+                              return iz(Fz, tz) ? {
+                                page: Fz,
+                                anchor: tz
+                              } : Lz(`#${tz}`)
+                            }(Uz.hash) : null;
+                            (0, Fz.useEffect)((() => (vz.b.set({
                               musicOnFromPage: !1
                             }), () => {
-                              Bb.c.set({
+                              vz.b.set({
                                 musicOnFromPage: !0
-                              }), kA()
-                            })), []), (0, Ab.useEffect)((() => {
-                              const bb = bb => {
-                                const ab = bb.target;
-                                if (ab.closest(".DocsTextDialog")) return;
-                                const Ub = ab.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(ab.tagName);
-                                "k" === bb.key && (bb.metaKey || bb.ctrlKey) || "/" === bb.key && !Ub ? (bb.preventDefault(), ib(!0)) : "Escape" === bb.key && zb(!1)
+                              }), PF()
+                            })), []), (0, Fz.useEffect)((() => {
+                              const zz = zz => {
+                                const tz = zz.target;
+                                if (tz.closest(".DocsTextDialog")) return;
+                                const sz = tz.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(tz.tagName);
+                                "k" === zz.key && (zz.metaKey || zz.ctrlKey) || "/" === zz.key && !sz ? (zz.preventDefault(), xz(!0)) : "Escape" === zz.key && rz(!1)
                               };
-                              return window.addEventListener("keydown", bb), () => {
-                                window.removeEventListener("keydown", bb)
+                              return window.addEventListener("keydown", zz), () => {
+                                window.removeEventListener("keydown", zz)
                               }
                             }), []);
-                            const Hb = (0, Ab.useRef)(null);
-                            (0, Ab.useLayoutEffect)((() => {
-                              var bb, ab;
-                              if (!yb) return;
-                              const Ub = Hb.current === eb.pathname;
-                              Hb.current = eb.pathname;
-                              const Ab = (0, mb.p)(eb.hash),
-                                Mb = Ab ? document.getElementById(Ab) : null;
-                              if (null === (bb = yb.querySelector(".DocsTargeted")) || void 0 === bb || bb.classList.remove("DocsTargeted"), null === Mb || void 0 === Mb || null === (ab = Mb.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === ab || ab.classList.add("DocsTargeted"), Mb) {
-                                var Tb;
-                                const bb = Mb.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (Tb = Mb.closest(".DocsChangelogEntry")) && void 0 !== Tb ? Tb : Mb).scrollIntoView({
-                                  block: bb ? "center" : "start",
-                                  behavior: Ub ? "smooth" : "auto"
+                            const Zz = (0, Fz.useRef)(null);
+                            (0, Fz.useLayoutEffect)((() => {
+                              var zz, tz;
+                              if (!Hz) return;
+                              const sz = Zz.current === Uz.pathname;
+                              Zz.current = Uz.pathname;
+                              const Fz = (0, Jz.q)(Uz.hash),
+                                Wz = Fz ? document.getElementById(Fz) : null;
+                              if (null === (zz = Hz.querySelector(".DocsTargeted")) || void 0 === zz || zz.classList.remove("DocsTargeted"), null === Wz || void 0 === Wz || null === (tz = Wz.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === tz || tz.classList.add("DocsTargeted"), Wz) {
+                                var Xz;
+                                const zz = Wz.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (Xz = Wz.closest(".DocsChangelogEntry")) && void 0 !== Xz ? Xz : Wz).scrollIntoView({
+                                  block: zz ? "center" : "start",
+                                  behavior: sz ? "smooth" : "auto"
                                 })
-                              } else Ub || yb.scrollTo({
+                              } else sz || Hz.scrollTo({
                                 top: 0
                               })
-                            }), [yb, eb.pathname, eb.hash, eb.key]);
-                            const Ib = (0, Ab.useCallback)((() => {
-                                zb(!1)
+                            }), [Hz, Uz.pathname, Uz.hash, Uz.key]);
+                            const Gz = (0, Fz.useCallback)((() => {
+                                rz(!1)
                               }), []),
-                              db = (0, Ab.useCallback)((bb => {
-                                vb({
-                                  hash: bb
+                              Tz = (0, Fz.useCallback)((zz => {
+                                Kz({
+                                  hash: zz
                                 })
-                              }), [vb]);
-                            if (Wb) return (0, jb.jsx)(Yb.e, {
+                              }), [Kz]);
+                            if (ez) return (0, wz.jsx)(oz.c, {
                               replace: !0,
-                              to: sb(ab, Wb.page, Wb.anchor)
+                              to: nz(tz, ez.page, ez.anchor)
                             });
-                            if (!Lb) return (0, jb.jsx)(Yb.e, {
+                            if (!uz) return (0, wz.jsx)(oz.c, {
                               replace: !0,
-                              to: ab
+                              to: tz
                             });
-                            const Fb = Ub ? "div" : "main";
-                            return (0, jb.jsx)(Xa.Provider, {
-                              value: ab,
-                              children: (0, jb.jsx)(ja.Provider, {
-                                value: yb,
-                                children: (0, jb.jsxs)("div", {
-                                  ref: Zb,
-                                  className: Tb()("DocsSite", {
-                                    Embedded: Ub,
-                                    NavOpen: Db
+                            const cz = sz ? "div" : "main";
+                            return (0, wz.jsx)(bt.Provider, {
+                              value: tz,
+                              children: (0, wz.jsx)(wt.Provider, {
+                                value: Hz,
+                                children: (0, wz.jsxs)("div", {
+                                  ref: Bz,
+                                  className: Xz()("DocsSite", {
+                                    Embedded: sz,
+                                    NavOpen: Pz
                                   }),
-                                  "data-theme": Xb,
-                                  children: [(0, jb.jsxs)("header", {
+                                  "data-theme": bz,
+                                  children: [(0, wz.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, jb.jsx)("button", {
+                                    children: [(0, wz.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": Db ? "Close menu" : "Open menu",
-                                      "aria-expanded": Db,
+                                      "aria-label": Pz ? "Close menu" : "Open menu",
+                                      "aria-expanded": Pz,
                                       onClick: () => {
-                                        zb(!Db)
+                                        rz(!Pz)
                                       },
-                                      children: (0, jb.jsx)(kb, {
-                                        name: Db ? "cross" : "menu"
+                                      children: (0, wz.jsx)(gz, {
+                                        name: Pz ? "cross" : "menu"
                                       })
-                                    }), (0, jb.jsxs)(Eb.c, {
-                                      to: ab,
+                                    }), (0, wz.jsxs)(Oz.d, {
+                                      to: tz,
                                       className: "DocsBrand",
-                                      children: [(0, jb.jsx)("img", {
+                                      children: [(0, wz.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, jb.jsx)("span", {
+                                      }), (0, wz.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, jb.jsx)("span", {
+                                      }), (0, wz.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, jb.jsxs)("button", {
+                                    }), (0, wz.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        ib(!0)
+                                        xz(!0)
                                       },
-                                      children: [(0, jb.jsx)(kb, {
+                                      children: [(0, wz.jsx)(gz, {
                                         name: "magnifying-glass"
-                                      }), (0, jb.jsx)("span", {
+                                      }), (0, wz.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, jb.jsxs)("kbd", {
-                                        children: [OT ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, wz.jsxs)("kbd", {
+                                        children: [fX ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, jb.jsxs)("div", {
+                                    }), (0, wz.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, jb.jsxs)("a", {
-                                        href: CT,
+                                      children: [(0, wz.jsxs)("a", {
+                                        href: RX,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, jb.jsx)(kb, {
+                                        children: [(0, wz.jsx)(gz, {
                                           name: "discord"
-                                        }), (0, jb.jsx)("span", {
+                                        }), (0, wz.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, jb.jsxs)("a", {
-                                        href: gT,
+                                      }), (0, wz.jsxs)("a", {
+                                        href: VX,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, jb.jsx)(kb, {
+                                        children: [(0, wz.jsx)(gz, {
                                           name: "external-link"
-                                        }), (0, jb.jsx)("span", {
+                                        }), (0, wz.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !Ub && (0, jb.jsxs)(Eb.c, {
+                                      }), !sz && (0, wz.jsxs)(Oz.d, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, jb.jsx)(kb, {
+                                        children: [(0, wz.jsx)(gz, {
                                           name: "play"
-                                        }), (0, jb.jsx)("span", {
+                                        }), (0, wz.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, jb.jsx)(sT, {
-                                        theme: Xb,
-                                        onChange: Rb
+                                      }), (0, wz.jsx)(SX, {
+                                        theme: bz,
+                                        onChange: Dz
                                       })]
                                     })]
-                                  }), (0, jb.jsxs)("div", {
+                                  }), (0, wz.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, jb.jsx)("aside", {
+                                    children: [(0, wz.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, jb.jsx)(cT, {
-                                        basePath: ab,
-                                        activePageId: Lb.id,
-                                        onNavigate: Ib
+                                      children: (0, wz.jsx)(EX, {
+                                        basePath: tz,
+                                        activePageId: uz.id,
+                                        onNavigate: Gz
                                       })
-                                    }), (0, jb.jsx)("div", {
+                                    }), (0, wz.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: Ib
-                                    }), (0, jb.jsxs)(Fb, {
+                                      onClick: Gz
+                                    }), (0, wz.jsxs)(cz, {
                                       className: "DocsMain",
-                                      children: [(0, jb.jsx)(xT, {
-                                        page: Lb,
-                                        onTocChange: pb
-                                      }, Lb.id), (0, jb.jsx)(JT, {
-                                        basePath: ab,
-                                        pageId: Lb.id
+                                      children: [(0, wz.jsx)(JX, {
+                                        page: uz,
+                                        onTocChange: Iz
+                                      }, uz.id), (0, wz.jsx)(zO, {
+                                        basePath: tz,
+                                        pageId: uz.id
                                       })]
-                                    }), (0, jb.jsx)("aside", {
-                                      className: Tb()("DocsToc", {
-                                        Timeline: "changelog" === Lb.layout
+                                    }), (0, wz.jsx)("aside", {
+                                      className: Xz()("DocsToc", {
+                                        Timeline: "changelog" === uz.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, jb.jsx)(pT, {
-                                        isChangelog: "changelog" === Lb.layout,
-                                        toc: fb,
-                                        activeAnchor: Nb,
-                                        onNavigate: db
+                                      children: (0, wz.jsx)(ZX, {
+                                        isChangelog: "changelog" === uz.layout,
+                                        toc: mz,
+                                        activeAnchor: Cz,
+                                        onNavigate: Tz
                                       })
                                     })]
-                                  }), (0, jb.jsx)(oT, {}), xb && (0, jb.jsx)(rT, {
-                                    basePath: ab,
+                                  }), (0, wz.jsx)(lX, {}), Yz && (0, wz.jsx)(iX, {
+                                    basePath: tz,
                                     onClose: () => {
-                                      ib(!1)
+                                      xz(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4420: (bb, ab, Ub) => {
-                          Ub.d(ab, {
-                            b: () => Ab,
-                            e: () => Eb,
-                            i: () => kb,
-                            m: () => Rb,
-                            o: () => Yb,
-                            p: () => Mb,
-                            r: () => Tb,
-                            u: () => jb,
-                            v: () => Xb,
-                            z: () => Pb
+                        }, 4379: (zz, tz, sz) => {
+                          sz.d(tz, {
+                            A: () => Nz,
+                            d: () => Fz,
+                            e: () => Oz,
+                            i: () => gz,
+                            l: () => Dz,
+                            n: () => oz,
+                            q: () => Wz,
+                            t: () => Xz,
+                            w: () => wz,
+                            x: () => bz
                           });
-                          const Ab = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const Fz = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function Mb(bb) {
+                          function Wz(zz) {
                             try {
-                              return decodeURIComponent(bb.slice(1))
+                              return decodeURIComponent(zz.slice(1))
                             } catch {
-                              return bb.slice(1)
+                              return zz.slice(1)
                             }
                           }
 
-                          function Tb(bb) {
-                            return bb.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function Xz(zz) {
+                            return zz.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const Eb = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Ab.source}`, "g");
+                          const Oz = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Fz.source}`, "g");
 
-                          function Yb(bb, ab) {
-                            return 2 === bb.length ? ab.replace(/^ (.*) $/, "$1") : ab
-                          }
-
-                          function Bb(bb) {
-                            return "" === bb.trim()
+                          function oz(zz, tz) {
+                            return 2 === zz.length ? tz.replace(/^ (.*) $/, "$1") : tz
                           }
 
-                          function eb(bb) {
-                            const ab = [];
-                            for (const Ub of bb.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) ab.length > 0 && ab[ab.length - 1].endsWith("\\") ? ab[ab.length - 1] += `|${Ub}` : ab.push(Ub);
-                            return ab.map((bb => bb.trim().replaceAll("\\|", "|")))
+                          function vz(zz) {
+                            return "" === zz.trim()
                           }
-                          const vb = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function Lb(bb) {
-                            const ab = [],
-                              Ub = [{
+                          function Uz(zz) {
+                            const tz = [];
+                            for (const sz of zz.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) tz.length > 0 && tz[tz.length - 1].endsWith("\\") ? tz[tz.length - 1] += `|${sz}` : tz.push(sz);
+                            return tz.map((zz => zz.trim().replaceAll("\\|", "|")))
+                          }
+                          const Kz = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function uz(zz) {
+                            const tz = [],
+                              sz = [{
                                 indent: -1,
-                                items: ab
+                                items: tz
                               }];
-                            let Ab = null;
-                            for (const Mb of bb) {
-                              const bb = Mb.match(vb);
-                              if (!bb) {
-                                Ab && (Ab.text += ` ${Mb.trim()}`);
+                            let Fz = null;
+                            for (const Wz of zz) {
+                              const zz = Wz.match(Kz);
+                              if (!zz) {
+                                Fz && (Fz.text += ` ${Wz.trim()}`);
                                 continue
                               }
-                              const ab = bb[1].replace(/\t/g, "  ").length;
-                              for (; ab <= Ub[Ub.length - 1].indent;) Ub.pop();
-                              Ab = {
-                                text: bb[3].trim(),
+                              const tz = zz[1].replace(/\t/g, "  ").length;
+                              for (; tz <= sz[sz.length - 1].indent;) sz.pop();
+                              Fz = {
+                                text: zz[3].trim(),
                                 children: []
-                              }, Ub[Ub.length - 1].items.push(Ab), Ub.push({
-                                indent: ab,
-                                items: Ab.children
+                              }, sz[sz.length - 1].items.push(Fz), sz.push({
+                                indent: tz,
+                                items: Fz.children
                               })
                             }
-                            return ab
+                            return tz
                           }
 
-                          function Pb(bb) {
-                            const ab = bb.replace(/\r\n/g, "\n").split("\n"),
-                              Ub = [];
-                            let Ab = 0;
-                            for (; Ab < ab.length;) {
-                              const bb = ab[Ab];
-                              if (Bb(bb)) {
-                                Ab++;
+                          function Nz(zz) {
+                            const tz = zz.replace(/\r\n/g, "\n").split("\n"),
+                              sz = [];
+                            let Fz = 0;
+                            for (; Fz < tz.length;) {
+                              const zz = tz[Fz];
+                              if (vz(zz)) {
+                                Fz++;
                                 continue
                               }
-                              const Mb = bb.match(/^\s*```\s*(\w*)\s*$/);
-                              if (Mb) {
-                                const bb = [];
-                                for (Ab++; Ab < ab.length && !/^\s*```\s*$/.test(ab[Ab]);) bb.push(ab[Ab]), Ab++;
-                                Ab++, Ub.push({
+                              const Wz = zz.match(/^\s*```\s*(\w*)\s*$/);
+                              if (Wz) {
+                                const zz = [];
+                                for (Fz++; Fz < tz.length && !/^\s*```\s*$/.test(tz[Fz]);) zz.push(tz[Fz]), Fz++;
+                                Fz++, sz.push({
                                   kind: "code",
-                                  lang: Mb[1] || "text",
-                                  code: bb.join("\n").replace(/\s+$/, "")
+                                  lang: Wz[1] || "text",
+                                  code: zz.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const Eb = bb.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (Eb) {
-                                const bb = Eb[2].trim();
-                                Ub.push({
+                              const Oz = zz.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (Oz) {
+                                const zz = Oz[2].trim();
+                                sz.push({
                                   kind: "heading",
-                                  level: Eb[1].length,
-                                  text: bb,
-                                  anchor: Tb(bb)
-                                }), Ab++;
+                                  level: Oz[1].length,
+                                  text: zz,
+                                  anchor: Xz(zz)
+                                }), Fz++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(bb)) {
-                                Ub.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(zz)) {
+                                sz.push({
                                   kind: "rule"
-                                }), Ab++;
+                                }), Fz++;
                                 continue
                               }
-                              if (bb.trim().startsWith("|") && Ab + 1 < ab.length && /^\s*\|[\s:|-]+\|\s*$/.test(ab[Ab + 1])) {
-                                const Mb = eb(bb),
-                                  Tb = [];
-                                for (Ab += 2; Ab < ab.length && ab[Ab].trim().startsWith("|");) Tb.push(eb(ab[Ab])), Ab++;
-                                Ub.push({
+                              if (zz.trim().startsWith("|") && Fz + 1 < tz.length && /^\s*\|[\s:|-]+\|\s*$/.test(tz[Fz + 1])) {
+                                const Wz = Uz(zz),
+                                  Xz = [];
+                                for (Fz += 2; Fz < tz.length && tz[Fz].trim().startsWith("|");) Xz.push(Uz(tz[Fz])), Fz++;
+                                sz.push({
                                   kind: "table",
-                                  header: Mb,
-                                  rows: Tb
+                                  header: Wz,
+                                  rows: Xz
                                 });
                                 continue
                               }
-                              if (bb.startsWith(">")) {
-                                const bb = [];
-                                for (; Ab < ab.length && ab[Ab].startsWith(">");) bb.push(ab[Ab].replace(/^>\s?/, "")), Ab++;
-                                Ub.push({
+                              if (zz.startsWith(">")) {
+                                const zz = [];
+                                for (; Fz < tz.length && tz[Fz].startsWith(">");) zz.push(tz[Fz].replace(/^>\s?/, "")), Fz++;
+                                sz.push({
                                   kind: "quote",
-                                  blocks: Pb(bb.join("\n"))
+                                  blocks: Nz(zz.join("\n"))
                                 });
                                 continue
                               }
-                              if (vb.test(bb)) {
-                                const Mb = [],
-                                  Tb = /^\s*\d+\./.test(bb);
-                                for (; Ab < ab.length && !Bb(ab[Ab]) && (vb.test(ab[Ab]) || /^\s+\S/.test(ab[Ab]));) Mb.push(ab[Ab]), Ab++;
-                                Ub.push({
+                              if (Kz.test(zz)) {
+                                const Wz = [],
+                                  Xz = /^\s*\d+\./.test(zz);
+                                for (; Fz < tz.length && !vz(tz[Fz]) && (Kz.test(tz[Fz]) || /^\s+\S/.test(tz[Fz]));) Wz.push(tz[Fz]), Fz++;
+                                sz.push({
                                   kind: "list",
-                                  ordered: Tb,
-                                  items: Lb(Mb)
+                                  ordered: Xz,
+                                  items: uz(Wz)
                                 });
                                 continue
                               }
-                              const Yb = [];
-                              for (; Ab < ab.length && !Bb(ab[Ab]) && !/^\s*```/.test(ab[Ab]) && !/^#{1,6}\s/.test(ab[Ab]) && !ab[Ab].startsWith(">") && !vb.test(ab[Ab]) && (!ab[Ab].trim().startsWith("|") || 0 !== Yb.length);) Yb.push(ab[Ab].trim()), Ab++;
-                              0 === Yb.length && (Yb.push(ab[Ab].trim()), Ab++), Ub.push({
+                              const oz = [];
+                              for (; Fz < tz.length && !vz(tz[Fz]) && !/^\s*```/.test(tz[Fz]) && !/^#{1,6}\s/.test(tz[Fz]) && !tz[Fz].startsWith(">") && !Kz.test(tz[Fz]) && (!tz[Fz].trim().startsWith("|") || 0 !== oz.length);) oz.push(tz[Fz].trim()), Fz++;
+                              0 === oz.length && (oz.push(tz[Fz].trim()), Fz++), sz.push({
                                 kind: "paragraph",
-                                text: Yb.join(" ")
+                                text: oz.join(" ")
                               })
                             }
-                            return Ub
+                            return sz
                           }
 
-                          function Xb(bb) {
-                            let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const Ub = Pb(bb);
-                            let Ab = "";
-                            const Mb = [],
-                              Tb = [],
-                              Eb = new Map;
-                            for (const eb of Ub) {
-                              if ("heading" === eb.kind) {
-                                var Yb;
-                                const bb = (null !== (Yb = Eb.get(eb.anchor)) && void 0 !== Yb ? Yb : 0) + 1;
-                                Eb.set(eb.anchor, bb), bb > 1 && (eb.anchor = `${eb.anchor}-${bb}`)
+                          function bz(zz) {
+                            let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const sz = Nz(zz);
+                            let Fz = "";
+                            const Wz = [],
+                              Xz = [],
+                              Oz = new Map;
+                            for (const Uz of sz) {
+                              if ("heading" === Uz.kind) {
+                                var oz;
+                                const zz = (null !== (oz = Oz.get(Uz.anchor)) && void 0 !== oz ? oz : 0) + 1;
+                                Oz.set(Uz.anchor, zz), zz > 1 && (Uz.anchor = `${Uz.anchor}-${zz}`)
                               }
-                              if ("heading" === eb.kind && 1 === eb.level && !Ab) {
-                                Ab = eb.text;
+                              if ("heading" === Uz.kind && 1 === Uz.level && !Fz) {
+                                Fz = Uz.text;
                                 continue
                               }
-                              if ("heading" === eb.kind && eb.level <= ab) {
-                                Tb.push({
-                                  heading: eb,
+                              if ("heading" === Uz.kind && Uz.level <= tz) {
+                                Xz.push({
+                                  heading: Uz,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const bb = Tb.at(-1);
-                              bb ? bb.blocks.push(eb) : Mb.push(eb)
+                              const zz = Xz.at(-1);
+                              zz ? zz.blocks.push(Uz) : Wz.push(Uz)
                             }
-                            const Bb = bb => {
+                            const vz = zz => {
                               for (;
-                                "rule" === (null === (ab = bb.at(-1)) || void 0 === ab ? void 0 : ab.kind);) {
-                                var ab;
-                                bb.pop()
+                                "rule" === (null === (tz = zz.at(-1)) || void 0 === tz ? void 0 : tz.kind);) {
+                                var tz;
+                                zz.pop()
                               }
                             };
-                            Bb(Mb);
-                            for (const eb of Tb) Bb(eb.blocks);
+                            vz(Wz);
+                            for (const Uz of Xz) vz(Uz.blocks);
                             return {
-                              title: Ab,
-                              intro: Mb,
-                              sections: Tb
+                              title: Fz,
+                              intro: Wz,
+                              sections: Xz
                             }
                           }
 
-                          function jb(bb) {
+                          function wz(zz) {
                             return [{
                               heading: null,
-                              blocks: bb.intro
-                            }, ...bb.sections.map((bb => ({
-                              heading: bb.heading,
-                              blocks: bb.blocks
+                              blocks: zz.intro
+                            }, ...zz.sections.map((zz => ({
+                              heading: zz.heading,
+                              blocks: zz.blocks
                             })))]
                           }
 
-                          function Rb(bb) {
-                            return bb.flatMap((bb => "code" === bb.kind ? [bb] : "quote" === bb.kind ? Rb(bb.blocks) : []))
+                          function Dz(zz) {
+                            return zz.flatMap((zz => "code" === zz.kind ? [zz] : "quote" === zz.kind ? Dz(zz.blocks) : []))
                           }
 
-                          function kb(bb) {
-                            switch (bb.kind) {
+                          function gz(zz) {
+                            switch (zz.kind) {
                               case "heading":
                               case "paragraph":
-                                return bb.text;
+                                return zz.text;
                               case "code":
-                                return bb.code;
+                                return zz.code;
                               case "table":
-                                return [bb.header, ...bb.rows].map((bb => bb.join(" "))).join(" ");
+                                return [zz.header, ...zz.rows].map((zz => zz.join(" "))).join(" ");
                               case "list": {
-                                const ab = bb => bb.map((bb => `${bb.text} ${ab(bb.children)}`)).join(" ");
-                                return ab(bb.items)
+                                const tz = zz => zz.map((zz => `${zz.text} ${tz(zz.children)}`)).join(" ");
+                                return tz(zz.items)
                               }
                               case "quote":
-                                return bb.blocks.map(kb).join(" ");
+                                return zz.blocks.map(gz).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4522: (bb, ab, Ub) => {
-                          Ub.d(ab, {
-                            c: () => Yb
+                        }, 4467: (zz, tz, sz) => {
+                          sz.d(tz, {
+                            b: () => oz
                           });
-                          var Ab = Ub(52),
-                            Mb = Ub(307),
-                            Tb = Ub(1812),
-                            Eb = Ub(1023);
+                          var Fz = sz(65),
+                            Wz = sz(308),
+                            Xz = sz(1845),
+                            Oz = sz(1087);
 
-                          function Yb(bb) {
+                          function oz(zz) {
                             let {
-                              text: ab
-                            } = bb;
-                            const Ub = [];
-                            let Yb = "";
-                            return (0, Mb.cc)(ab).forEach(((bb, ab) => {
-                              if ("string" === typeof bb || !(0, Tb.f)(bb.icon)) return void(Yb += "string" === typeof bb ? bb : bb.icon);
-                              const Mb = Math.max(0, Yb.trimEnd().search(/\S{1,12}$/));
-                              Ub.push((0, Eb.jsxs)(Ab.Fragment, {
-                                children: [Yb.slice(0, Mb), (0, Eb.jsxs)("span", {
+                              text: tz
+                            } = zz;
+                            const sz = [];
+                            let oz = "";
+                            return (0, Wz.bc)(tz).forEach(((zz, tz) => {
+                              if ("string" === typeof zz || !(0, Xz.f)(zz.icon)) return void(oz += "string" === typeof zz ? zz : zz.icon);
+                              const Wz = Math.max(0, oz.trimEnd().search(/\S{1,12}$/));
+                              sz.push((0, Oz.jsxs)(Fz.Fragment, {
+                                children: [oz.slice(0, Wz), (0, Oz.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [Yb.slice(Mb), (0, Eb.jsx)("span", {
+                                  children: [oz.slice(Wz), (0, Oz.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": bb.icon,
-                                    children: (0, Eb.jsx)(Tb.c, {
-                                      itemName: bb.icon,
+                                    "aria-label": zz.icon,
+                                    children: (0, Oz.jsx)(Xz.c, {
+                                      itemName: zz.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, ab)), Yb = ""
-                            })), Ub.push(Yb), (0, Eb.jsx)(Eb.Fragment, {
-                              children: Ub
+                              }, tz)), oz = ""
+                            })), sz.push(oz), (0, Oz.jsx)(Oz.Fragment, {
+                              children: sz
                             })
                           }
-                        }, 4455: (bb, ab, Ub) => {
-                          Ub.d(ab, {
-                            g: () => Zb,
-                            e: () => yb
+                        }, 4395: (zz, tz, sz) => {
+                          sz.d(tz, {
+                            e: () => Bz,
+                            d: () => Hz
                           });
-                          var Ab = Ub(52),
-                            Mb = Ub(1345),
-                            Tb = Ub(1794),
-                            Eb = Ub(4457),
-                            Yb = Ub(1023);
-                          const Bb = (0, Ab.memo)((function(bb) {
+                          var Fz = sz(65),
+                            Wz = sz(1416),
+                            Xz = sz(1831),
+                            Oz = sz(4402),
+                            oz = sz(1087);
+                          const vz = (0, Fz.memo)((function(zz) {
                             let {
-                              initialParameters: ab
-                            } = bb;
-                            const Ub = (0, Ab.useRef)(null),
-                              Mb = (0, Ab.useRef)(null),
-                              Bb = (0, Ab.useRef)(0),
-                              eb = (0, Ab.useRef)(null),
-                              vb = ab.description,
-                              Lb = ab.gb,
+                              initialParameters: tz
+                            } = zz;
+                            const sz = (0, Fz.useRef)(null),
+                              Wz = (0, Fz.useRef)(null),
+                              vz = (0, Fz.useRef)(0),
+                              Uz = (0, Fz.useRef)(null),
+                              Kz = tz.description,
+                              uz = tz.iz,
                               {
-                                scale: Pb,
-                                rotation: Xb
-                              } = null !== ab && void 0 !== ab ? ab : {},
-                              jb = (0, Eb.f)();
-                            return (0, Ab.useEffect)((() => {
-                              const bb = jb.onFrame((() => {
-                                const bb = jb.getState();
-                                if (!bb.isActive || !Ub.current || !Mb.current) return;
-                                const ab = bb.state;
-                                if (Ub.current.value = ab.progress, ab.clickCount > Bb.current) {
-                                  Bb.current = ab.clickCount;
-                                  const bb = Mb.current;
-                                  bb.classList.add("pulse"), eb.current = setTimeout((() => {
-                                    bb.classList.remove("pulse")
+                                scale: Nz,
+                                rotation: bz
+                              } = null !== tz && void 0 !== tz ? tz : {},
+                              wz = (0, Oz.d)();
+                            return (0, Fz.useEffect)((() => {
+                              const zz = wz.onFrame((() => {
+                                const zz = wz.getState();
+                                if (!zz.isActive || !sz.current || !Wz.current) return;
+                                const tz = zz.state;
+                                if (sz.current.value = tz.progress, tz.clickCount > vz.current) {
+                                  vz.current = tz.clickCount;
+                                  const zz = Wz.current;
+                                  zz.classList.add("pulse"), Uz.current = setTimeout((() => {
+                                    zz.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(eb.current), bb()
+                                clearTimeout(Uz.current), zz()
                               }
-                            }), [jb]), (0, Yb.jsx)(Yb.Fragment, {
-                              children: (0, Yb.jsxs)("div", {
+                            }), [wz]), (0, oz.jsx)(oz.Fragment, {
+                              children: (0, oz.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== Pb && {
-                                    "--scale": Pb
+                                  ...null !== Nz && {
+                                    "--scale": Nz
                                   },
-                                  ...null !== Xb && {
-                                    "--rotation": `${Xb}deg`
+                                  ...null !== bz && {
+                                    "--rotation": `${bz}deg`
                                   }
                                 },
-                                children: [(0, Yb.jsx)("progress", {
+                                children: [(0, oz.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: Ub
-                                }), (0, Yb.jsx)("span", {
+                                  ref: sz
+                                }), (0, oz.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: Mb,
-                                  children: (0, Yb.jsx)(Tb.c, {
+                                  ref: Wz,
+                                  children: (0, oz.jsx)(Xz.c, {
                                     text: [{
-                                      icon: Lb
+                                      icon: uz
                                     }]
                                   })
-                                }), (0, Yb.jsx)("div", {
+                                }), (0, oz.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, Yb.jsx)(Tb.c, {
-                                    text: vb
+                                  children: (0, oz.jsx)(Xz.c, {
+                                    text: Kz
                                   })
                                 })]
                               })
                             })
                           }));
-                          var eb = Ub(984),
-                            vb = Ub.n(eb);
-                          const Lb = 2 * Math.PI * 90,
-                            Pb = (0, Ab.memo)((function(bb) {
+                          var Uz = sz(1020),
+                            Kz = sz.n(Uz);
+                          const uz = 2 * Math.PI * 90,
+                            Nz = (0, Fz.memo)((function(zz) {
                               let {
-                                initialParameters: ab
-                              } = bb;
-                              const Ub = (0, Ab.useRef)(null),
-                                Mb = (0, Ab.useRef)(null),
-                                Bb = (0, Ab.useRef)(null),
-                                eb = ab.label,
-                                Pb = ab.icon,
-                                Xb = ab.Ob,
+                                initialParameters: tz
+                              } = zz;
+                              const sz = (0, Fz.useRef)(null),
+                                Wz = (0, Fz.useRef)(null),
+                                vz = (0, Fz.useRef)(null),
+                                Uz = tz.label,
+                                Nz = tz.icon,
+                                bz = tz.nz,
                                 {
-                                  scale: jb,
-                                  rotation: Rb,
-                                  cb: kb
-                                } = null !== ab && void 0 !== ab ? ab : {},
-                                yb = (0, Eb.f)();
-                              return (0, Ab.useEffect)((() => {
-                                const bb = yb.onFrame((() => {
-                                  var bb, ab;
-                                  const Ab = yb.getState();
-                                  if (!Ab.isActive || !Mb.current) return;
-                                  const Tb = Ab.state,
-                                    Eb = null !== (bb = Tb.timeRemaining) && void 0 !== bb ? bb : 0,
-                                    Yb = null !== (ab = Tb.Vb) && void 0 !== ab ? ab : 1,
-                                    eb = Lb * (1 - Eb / Yb);
-                                  Mb.current.style.strokeDashoffset = `${eb}`, Ub.current && (Ub.current.style.opacity = Eb > 0 ? "1" : "0"), Bb.current && Xb && (Bb.current.textContent = `${(Eb/1e3).toFixed(1)}s`)
+                                  scale: wz,
+                                  rotation: Dz,
+                                  az: gz
+                                } = null !== tz && void 0 !== tz ? tz : {},
+                                Hz = (0, Oz.d)();
+                              return (0, Fz.useEffect)((() => {
+                                const zz = Hz.onFrame((() => {
+                                  var zz, tz;
+                                  const Fz = Hz.getState();
+                                  if (!Fz.isActive || !Wz.current) return;
+                                  const Xz = Fz.state,
+                                    Oz = null !== (zz = Xz.timeRemaining) && void 0 !== zz ? zz : 0,
+                                    oz = null !== (tz = Xz.lz) && void 0 !== tz ? tz : 1,
+                                    Uz = uz * (1 - Oz / oz);
+                                  Wz.current.style.strokeDashoffset = `${Uz}`, sz.current && (sz.current.style.opacity = Oz > 0 ? "1" : "0"), vz.current && bz && (vz.current.textContent = `${(Oz/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  bb()
+                                  zz()
                                 }
-                              }), [yb, Xb]), (0, Yb.jsxs)("div", {
+                              }), [Hz, bz]), (0, oz.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: Ub,
+                                ref: sz,
                                 style: {
-                                  ...null !== jb && {
-                                    "--scale": jb
+                                  ...null !== wz && {
+                                    "--scale": wz
                                   },
-                                  ...null !== Rb && {
-                                    "--rotation": `${Rb}deg`
+                                  ...null !== Dz && {
+                                    "--rotation": `${Dz}deg`
                                   }
                                 },
-                                children: [(0, Yb.jsxs)("div", {
+                                children: [(0, oz.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, Yb.jsxs)("svg", {
+                                  children: [(0, oz.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, Yb.jsx)("circle", {
+                                    children: [(0, oz.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, Yb.jsx)("circle", {
+                                    }), (0, oz.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6295,80 +6295,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: Lb,
-                                      ref: Mb
+                                      strokeDasharray: uz,
+                                      ref: Wz
                                     })]
-                                  }), (0, Yb.jsx)("div", {
+                                  }), (0, oz.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, Yb.jsx)(Tb.c, {
+                                    children: (0, oz.jsx)(Xz.c, {
                                       text: [{
-                                        icon: Pb
+                                        icon: Nz
                                       }],
-                                      className: vb()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: kb
+                                      className: Kz()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: gz
                                       })
                                     })
                                   })]
-                                }), (0, Yb.jsxs)("div", {
+                                }), (0, oz.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, Yb.jsx)(Tb.c, {
-                                    text: eb,
+                                  children: [(0, oz.jsx)(Xz.c, {
+                                    text: Uz,
                                     className: "QTETimedClickLabelText"
-                                  }), Xb && (0, Yb.jsx)("span", {
+                                  }), bz && (0, oz.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: Bb
+                                    ref: vz
                                   })]
                                 })]
                               })
                             })),
-                            Xb = (0, Ab.memo)((function(bb) {
+                            bz = (0, Fz.memo)((function(zz) {
                               let {
-                                initialParameters: ab
-                              } = bb;
-                              const Ub = (0, Ab.useRef)(null),
-                                Mb = (0, Ab.useRef)(null),
-                                Bb = (0, Ab.useRef)(null),
-                                eb = (0, Ab.useRef)(!1),
-                                vb = ab.description,
-                                Lb = null === ab || void 0 === ab ? void 0 : ab.icon,
-                                Pb = (0, Eb.f)();
-                              return (0, Ab.useEffect)((() => {
-                                const bb = Pb.onFrame((() => {
-                                  const bb = Pb.getState();
-                                  if (!bb.isActive) return;
-                                  const ab = bb.state;
-                                  if (Ub.current) {
-                                    const bb = 100 * (ab.catchZonePosition - ab.Sb / 2);
-                                    Ub.current.style.left = `${bb}%`, Ub.current.style.width = 100 * ab.Sb + "%", ab.isCatching !== eb.current && (eb.current = ab.isCatching, ab.isCatching ? Ub.current.classList.add("catching") : Ub.current.classList.remove("catching"))
+                                initialParameters: tz
+                              } = zz;
+                              const sz = (0, Fz.useRef)(null),
+                                Wz = (0, Fz.useRef)(null),
+                                vz = (0, Fz.useRef)(null),
+                                Uz = (0, Fz.useRef)(!1),
+                                Kz = tz.description,
+                                uz = null === tz || void 0 === tz ? void 0 : tz.icon,
+                                Nz = (0, Oz.d)();
+                              return (0, Fz.useEffect)((() => {
+                                const zz = Nz.onFrame((() => {
+                                  const zz = Nz.getState();
+                                  if (!zz.isActive) return;
+                                  const tz = zz.state;
+                                  if (sz.current) {
+                                    const zz = 100 * (tz.catchZonePosition - tz.Sz / 2);
+                                    sz.current.style.left = `${zz}%`, sz.current.style.width = 100 * tz.Sz + "%", tz.isCatching !== Uz.current && (Uz.current = tz.isCatching, tz.isCatching ? sz.current.classList.add("catching") : sz.current.classList.remove("catching"))
                                   }
-                                  Mb.current && (Mb.current.style.left = 100 * ab.moverPosition + "%"), Bb.current && (Bb.current.value = ab.progress)
+                                  Wz.current && (Wz.current.style.left = 100 * tz.moverPosition + "%"), vz.current && (vz.current.value = tz.progress)
                                 }));
                                 return () => {
-                                  bb()
+                                  zz()
                                 }
-                              }), [Pb]), (0, Yb.jsxs)("div", {
+                              }), [Nz]), (0, oz.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, Yb.jsx)("div", {
+                                children: [(0, oz.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, Yb.jsx)(Tb.c, {
-                                    text: vb
+                                  children: (0, oz.jsx)(Xz.c, {
+                                    text: Kz
                                   })
-                                }), (0, Yb.jsx)("progress", {
+                                }), (0, oz.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: Bb
-                                }), (0, Yb.jsxs)("div", {
+                                  ref: vz
+                                }), (0, oz.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, Yb.jsx)("div", {
+                                  children: [(0, oz.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: Ub
-                                  }), (0, Yb.jsx)("div", {
+                                    ref: sz
+                                  }), (0, oz.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: Mb,
-                                    children: (0, Yb.jsx)("span", {
-                                      children: Lb && (0, Yb.jsx)(Tb.c, {
+                                    ref: Wz,
+                                    children: (0, oz.jsx)("span", {
+                                      children: uz && (0, oz.jsx)(Xz.c, {
                                         text: [{
-                                          icon: Lb,
+                                          icon: uz,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6379,703 +6379,703 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var jb = Ub(591);
-                          const Rb = (0, Ab.memo)((function(bb) {
+                          var wz = sz(580);
+                          const Dz = (0, Fz.memo)((function(zz) {
                               let {
-                                initialParameters: ab
-                              } = bb;
-                              const Ub = (0, Ab.useRef)(null),
-                                Mb = ab.label,
-                                Bb = ab.Ea,
+                                initialParameters: tz
+                              } = zz;
+                              const sz = (0, Fz.useRef)(null),
+                                Wz = tz.label,
+                                vz = tz.tt,
                                 {
-                                  icon: eb,
-                                  scale: vb,
-                                  rotation: Lb
-                                } = null !== ab && void 0 !== ab ? ab : {},
-                                Pb = 100 * (.5 - Bb / 2),
-                                Xb = 100 * Bb,
-                                Rb = (0, Eb.f)();
-                              return (0, Ab.useEffect)((() => {
-                                const bb = Rb.onFrame((() => {
-                                  const bb = Rb.getState();
-                                  if (!bb.isActive || !Ub.current) return;
-                                  const ab = bb.state;
-                                  Ub.current.style.left = 100 * ab.markerPosition + "%"
+                                  icon: Uz,
+                                  scale: Kz,
+                                  rotation: uz
+                                } = null !== tz && void 0 !== tz ? tz : {},
+                                Nz = 100 * (.5 - vz / 2),
+                                bz = 100 * vz,
+                                Dz = (0, Oz.d)();
+                              return (0, Fz.useEffect)((() => {
+                                const zz = Dz.onFrame((() => {
+                                  const zz = Dz.getState();
+                                  if (!zz.isActive || !sz.current) return;
+                                  const tz = zz.state;
+                                  sz.current.style.left = 100 * tz.markerPosition + "%"
                                 }));
                                 return () => {
-                                  bb()
+                                  zz()
                                 }
-                              }), [Rb]), (0, Yb.jsxs)("div", {
+                              }), [Dz]), (0, oz.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, jb.I)(vb) && {
-                                    "--scale": vb
+                                  ...!(0, wz.G)(Kz) && {
+                                    "--scale": Kz
                                   },
-                                  ...!(0, jb.I)(Lb) && {
-                                    "--rotation": `${Lb}deg`
+                                  ...!(0, wz.G)(uz) && {
+                                    "--rotation": `${uz}deg`
                                   }
                                 },
-                                children: [eb && (0, Yb.jsx)(Tb.c, {
+                                children: [Uz && (0, oz.jsx)(Xz.c, {
                                   text: [{
-                                    icon: eb
+                                    icon: Uz
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, Yb.jsxs)("div", {
+                                }), (0, oz.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, Yb.jsx)("div", {
+                                  children: [(0, oz.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${Pb}%`,
-                                      width: `${Xb}%`
+                                      left: `${Nz}%`,
+                                      width: `${bz}%`
                                     }
-                                  }), (0, Yb.jsx)("div", {
+                                  }), (0, oz.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: Ub
+                                    ref: sz
                                   })]
-                                }), (0, Yb.jsx)("div", {
+                                }), (0, oz.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, Yb.jsx)(Tb.c, {
-                                    text: Mb
+                                  children: (0, oz.jsx)(Xz.c, {
+                                    text: Wz
                                   })
                                 })]
                               })
                             })),
-                            kb = (0, Ab.memo)((function(bb) {
+                            gz = (0, Fz.memo)((function(zz) {
                               let {
-                                initialParameters: ab
-                              } = bb;
-                              const Ub = (0, Ab.useRef)(null),
-                                [Mb, Bb] = (0, Ab.useState)((() => new Array(ab.Ba).fill("pending"))),
-                                [eb, vb] = (0, Ab.useState)((() => {
-                                  const bb = ab.La;
-                                  return (0, jb.I)(bb) || bb <= 0 ? [] : new Array(bb).fill("pending")
+                                initialParameters: tz
+                              } = zz;
+                              const sz = (0, Fz.useRef)(null),
+                                [Wz, vz] = (0, Fz.useState)((() => new Array(tz.Wt).fill("pending"))),
+                                [Uz, Kz] = (0, Fz.useState)((() => {
+                                  const zz = tz.ot;
+                                  return (0, wz.G)(zz) || zz <= 0 ? [] : new Array(zz).fill("pending")
                                 })),
-                                Lb = ab.label,
+                                uz = tz.label,
                                 {
-                                  icon: Pb
-                                } = ab,
-                                Xb = (0, Ab.useRef)(0),
-                                Rb = (0, Ab.useRef)(0),
-                                kb = (0, Ab.useRef)([]),
-                                yb = (0, Eb.f)();
-                              return (0, Ab.useEffect)((() => {
-                                const bb = yb.onFrame((() => {
-                                  const bb = yb.getState();
-                                  if (!bb.isActive || !Ub.current) return;
-                                  const ab = bb.state,
-                                    Ab = 30 + 60 * ab.outerCircleProgress;
-                                  if (Ub.current.setAttribute("r", String(Ab)), !0 === ab.lastClickResult && ab.successes > Xb.current) {
-                                    Ub.current.classList.remove("QTERhythmClickOuterCircle--miss"), Ub.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const bb = setTimeout((() => {
-                                      var bb;
-                                      null === (bb = Ub.current) || void 0 === bb || bb.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: Nz
+                                } = tz,
+                                bz = (0, Fz.useRef)(0),
+                                Dz = (0, Fz.useRef)(0),
+                                gz = (0, Fz.useRef)([]),
+                                Hz = (0, Oz.d)();
+                              return (0, Fz.useEffect)((() => {
+                                const zz = Hz.onFrame((() => {
+                                  const zz = Hz.getState();
+                                  if (!zz.isActive || !sz.current) return;
+                                  const tz = zz.state,
+                                    Fz = 30 + 60 * tz.outerCircleProgress;
+                                  if (sz.current.setAttribute("r", String(Fz)), !0 === tz.lastClickResult && tz.successes > bz.current) {
+                                    sz.current.classList.remove("QTERhythmClickOuterCircle--miss"), sz.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const zz = setTimeout((() => {
+                                      var zz;
+                                      null === (zz = sz.current) || void 0 === zz || zz.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    kb.current.push(bb)
-                                  } else if (!1 === ab.lastClickResult && ab.misses > Rb.current) {
-                                    Ub.current.classList.remove("QTERhythmClickOuterCircle--hit"), Ub.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const bb = setTimeout((() => {
-                                      var bb;
-                                      null === (bb = Ub.current) || void 0 === bb || bb.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    gz.current.push(zz)
+                                  } else if (!1 === tz.lastClickResult && tz.misses > Dz.current) {
+                                    sz.current.classList.remove("QTERhythmClickOuterCircle--hit"), sz.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const zz = setTimeout((() => {
+                                      var zz;
+                                      null === (zz = sz.current) || void 0 === zz || zz.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    kb.current.push(bb)
+                                    gz.current.push(zz)
                                   }
-                                  ab.successes === Xb.current && ab.misses === Rb.current || (Xb.current = ab.successes, Rb.current = ab.misses, Bb((bb => {
-                                    const Ub = [...bb];
-                                    for (let Ab = 0; Ab < ab.Ba; Ab++) Ub[Ab] = Ab < ab.successes ? "success" : "pending";
-                                    return Ub
-                                  })), vb((bb => {
-                                    if (0 === bb.length) return bb;
-                                    const Ub = [...bb];
-                                    for (let Ab = 0; Ab < Ub.length; Ab++) Ub[Ab] = Ab < ab.misses ? "miss" : "pending";
-                                    return Ub
+                                  tz.successes === bz.current && tz.misses === Dz.current || (bz.current = tz.successes, Dz.current = tz.misses, vz((zz => {
+                                    const sz = [...zz];
+                                    for (let Fz = 0; Fz < tz.Wt; Fz++) sz[Fz] = Fz < tz.successes ? "success" : "pending";
+                                    return sz
+                                  })), Kz((zz => {
+                                    if (0 === zz.length) return zz;
+                                    const sz = [...zz];
+                                    for (let Fz = 0; Fz < sz.length; Fz++) sz[Fz] = Fz < tz.misses ? "miss" : "pending";
+                                    return sz
                                   })))
                                 }));
                                 return () => {
-                                  bb();
-                                  for (const bb of kb.current) clearTimeout(bb);
-                                  kb.current = []
+                                  zz();
+                                  for (const zz of gz.current) clearTimeout(zz);
+                                  gz.current = []
                                 }
-                              }), [yb]), (0, Yb.jsxs)("div", {
+                              }), [Hz]), (0, oz.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, Yb.jsx)("div", {
+                                children: [(0, oz.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Mb.map(((bb, ab) => (0, Yb.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === bb ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, ab)))
-                                }), (0, Yb.jsxs)("div", {
+                                  children: Wz.map(((zz, tz) => (0, oz.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === zz ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, tz)))
+                                }), (0, oz.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, Yb.jsxs)("svg", {
+                                  children: [(0, oz.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, Yb.jsx)("circle", {
+                                    children: [(0, oz.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, Yb.jsx)("circle", {
+                                    }), (0, oz.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: Ub
+                                      ref: sz
                                     })]
-                                  }), Pb && (0, Yb.jsx)("div", {
+                                  }), Nz && (0, oz.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, Yb.jsx)(Tb.c, {
+                                    children: (0, oz.jsx)(Xz.c, {
                                       text: [{
-                                        icon: Pb
+                                        icon: Nz
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), eb.length > 0 && (0, Yb.jsx)("div", {
+                                }), Uz.length > 0 && (0, oz.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: eb.map(((bb, ab) => (0, Yb.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === bb ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, ab)))
-                                }), (0, Yb.jsx)("div", {
+                                  children: Uz.map(((zz, tz) => (0, oz.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === zz ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, tz)))
+                                }), (0, oz.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, Yb.jsx)(Tb.c, {
-                                    text: Lb
+                                  children: (0, oz.jsx)(Xz.c, {
+                                    text: uz
                                   })
                                 })]
                               })
                             }));
 
-                          function yb(bb) {
+                          function Hz(zz) {
                             let {
-                              qte: ab
-                            } = bb;
-                            switch (ab.type) {
+                              qte: tz
+                            } = zz;
+                            switch (tz.type) {
                               case "progressBar":
-                                return (0, Yb.jsx)(Bb, {
-                                  initialParameters: ab.parameters
+                                return (0, oz.jsx)(vz, {
+                                  initialParameters: tz.parameters
                                 });
                               case "timedClick":
-                                return (0, Yb.jsx)(Pb, {
-                                  initialParameters: ab.parameters
+                                return (0, oz.jsx)(Nz, {
+                                  initialParameters: tz.parameters
                                 });
                               case "gravityBar":
-                                return (0, Yb.jsx)(Xb, {
-                                  initialParameters: ab.parameters
+                                return (0, oz.jsx)(bz, {
+                                  initialParameters: tz.parameters
                                 });
                               case "precisionBar":
-                                return (0, Yb.jsx)(Rb, {
-                                  initialParameters: ab.parameters
+                                return (0, oz.jsx)(Dz, {
+                                  initialParameters: tz.parameters
                                 });
                               case "rhythmClick":
-                                return (0, Yb.jsx)(kb, {
-                                  initialParameters: ab.parameters
+                                return (0, oz.jsx)(gz, {
+                                  initialParameters: tz.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const Zb = (0, Ab.memo)((function() {
-                            const [bb, ab] = (0, Ab.useState)({
+                          const Bz = (0, Fz.memo)((function() {
+                            const [zz, tz] = (0, Fz.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, Mb.f)("qteStateUpdated", (bb => {
-                              ab(bb)
-                            })), bb.isActive && bb.type ? (0, Yb.jsx)("div", {
+                            return (0, Wz.g)("qteStateUpdated", (zz => {
+                              tz(zz)
+                            })), zz.isActive && zz.type ? (0, oz.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, Yb.jsx)(yb, {
-                                qte: bb
+                              children: (0, oz.jsx)(Hz, {
+                                qte: zz
                               })
                             }) : null
                           }))
-                        }, 4457: (bb, ab, Ub) => {
-                          Ub.d(ab, {
-                            c: () => Yb,
-                            f: () => Bb
+                        }, 4402: (zz, tz, sz) => {
+                          sz.d(tz, {
+                            b: () => oz,
+                            d: () => vz
                           });
-                          var Ab = Ub(52),
-                            Mb = Ub(1227),
-                            Tb = Ub(4462);
-                          const Eb = {
-                              getState: () => Tb.e.getCurrentState(),
-                              onFrame: Mb.j
+                          var Fz = sz(65),
+                            Wz = sz(1279),
+                            Xz = sz(4411);
+                          const Oz = {
+                              getState: () => Xz.e.getCurrentState(),
+                              onFrame: Wz.o
                             },
-                            Yb = (0, Ab.createContext)(Eb);
+                            oz = (0, Fz.createContext)(Oz);
 
-                          function Bb() {
-                            return (0, Ab.useContext)(Yb)
+                          function vz() {
+                            return (0, Fz.useContext)(oz)
                           }
-                        }, 4531: (bb, ab, Ub) => {
-                          Ub.d(ab, {
-                            e: () => Gb,
-                            g: () => hb
+                        }, 4472: (zz, tz, sz) => {
+                          sz.d(tz, {
+                            d: () => Az,
+                            f: () => jz
                           });
-                          var Ab = Ub(4536),
-                            Mb = Ub(307);
-                          const Tb = 120,
-                            Eb = 260,
-                            Yb = 1.15,
-                            Bb = 1.2,
-                            eb = 2,
-                            vb = 1.08,
-                            Lb = .8,
-                            Pb = .95,
-                            Xb = 8,
-                            jb = "[\"')\\]\u300d\u300f\uff09]*",
-                            Rb = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${jb}$`),
-                            kb = new RegExp(`[?\uff1f]${jb}$`),
-                            yb = new RegExp(`[!\uff01]${jb}$`),
-                            Zb = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            Db = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            zb = new RegExp(`[${Db}]`),
-                            xb = new RegExp(`[${Db}]|[^${Db}]+`, "g"),
-                            ib = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var Fz = sz(4476),
+                            Wz = sz(308);
+                          const Xz = 120,
+                            Oz = 260,
+                            oz = 1.15,
+                            vz = 1.2,
+                            Uz = 2,
+                            Kz = 1.08,
+                            uz = .8,
+                            Nz = .95,
+                            bz = 8,
+                            wz = "[\"')\\]\u300d\u300f\uff09]*",
+                            Dz = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${wz}$`),
+                            gz = new RegExp(`[?\uff1f]${wz}$`),
+                            Hz = new RegExp(`[!\uff01]${wz}$`),
+                            Bz = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            Pz = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            rz = new RegExp(`[${Pz}]`),
+                            Yz = new RegExp(`[${Pz}]|[^${Pz}]+`, "g"),
+                            xz = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function fb(bb) {
-                            let ab = 2166136261;
-                            for (let Ub = 0; Ub < bb.length; Ub++) ab ^= bb.charCodeAt(Ub), ab = Math.imul(ab, 16777619);
-                            return (ab >>> 0) / 4294967295 * 2 - 1
+                          function mz(zz) {
+                            let tz = 2166136261;
+                            for (let sz = 0; sz < zz.length; sz++) tz ^= zz.charCodeAt(sz), tz = Math.imul(tz, 16777619);
+                            return (tz >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function mb(bb) {
-                            var ab;
-                            if (zb.test(bb)) return 1;
-                            const Ub = bb.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              Ab = Ub.replace(/[^0-9]/g, "");
-                            if (Ab.length > 0 && !/\p{L}/u.test(Ub)) return Math.min(Ab.length, 4);
-                            const Mb = null !== (ab = Ub.match(ib)) && void 0 !== ab ? ab : [];
-                            if (0 === Mb.length) {
-                              var Tb, Eb;
-                              const bb = null !== (Tb = null === (Eb = Ub.match(/\p{L}/gu)) || void 0 === Eb ? void 0 : Eb.length) && void 0 !== Tb ? Tb : 0;
-                              return 0 === bb ? 0 : Math.min(Math.max(1, Math.round(bb / 2.5)), Xb)
+                          function Jz(zz) {
+                            var tz;
+                            if (rz.test(zz)) return 1;
+                            const sz = zz.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              Fz = sz.replace(/[^0-9]/g, "");
+                            if (Fz.length > 0 && !/\p{L}/u.test(sz)) return Math.min(Fz.length, 4);
+                            const Wz = null !== (tz = sz.match(xz)) && void 0 !== tz ? tz : [];
+                            if (0 === Wz.length) {
+                              var Xz, Oz;
+                              const zz = null !== (Xz = null === (Oz = sz.match(/\p{L}/gu)) || void 0 === Oz ? void 0 : Oz.length) && void 0 !== Xz ? Xz : 0;
+                              return 0 === zz ? 0 : Math.min(Math.max(1, Math.round(zz / 2.5)), bz)
                             }
-                            const Yb = Ub.replace(/[^\p{L}]/gu, ""),
-                              Bb = Mb.length > 1 && "e" === Mb.at(-1) && Yb.endsWith("e") && !Yb.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(bb.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(Mb.length - (Bb ? 1 : 0), Xb)
+                            const oz = sz.replace(/[^\p{L}]/gu, ""),
+                              vz = Wz.length > 1 && "e" === Wz.at(-1) && oz.endsWith("e") && !oz.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(zz.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(Wz.length - (vz ? 1 : 0), bz)
                           }
 
-                          function pb(bb) {
-                            return bb.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function Iz(zz) {
+                            return zz.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function Nb(bb) {
-                            const ab = bb.replace(/[^\p{L}]/gu, "");
-                            return ab.length >= 2 && ab === ab.toUpperCase() && ab !== ab.toLowerCase()
+                          function Cz(zz) {
+                            const tz = zz.replace(/[^\p{L}]/gu, "");
+                            return tz.length >= 2 && tz === tz.toUpperCase() && tz !== tz.toLowerCase()
                           }
 
-                          function Wb(bb, ab) {
-                            var Ub;
-                            const Xb = ab && (0, Ab.k)(ab),
-                              jb = null !== (Ub = null === Xb || void 0 === Xb ? void 0 : Xb.syllableMs) && void 0 !== Ub ? Ub : Ab.b,
-                              Db = function(bb) {
-                                const ab = [];
-                                for (const Ab of (0, Mb.cc)(bb))
-                                  if ("string" === typeof Ab)
-                                    for (const bb of Ab.split(/(\s+)/)) {
-                                      if ("" === bb) continue;
-                                      if (/^\s+$/.test(bb)) {
-                                        ab.push({
+                          function ez(zz, tz) {
+                            var sz;
+                            const bz = tz && (0, Fz.l)(tz),
+                              wz = null !== (sz = null === bz || void 0 === bz ? void 0 : bz.syllableMs) && void 0 !== sz ? sz : Fz.e,
+                              Pz = function(zz) {
+                                const tz = [];
+                                for (const Fz of (0, Wz.bc)(zz))
+                                  if ("string" === typeof Fz)
+                                    for (const zz of Fz.split(/(\s+)/)) {
+                                      if ("" === zz) continue;
+                                      if (/^\s+$/.test(zz)) {
+                                        tz.push({
                                           kind: "space",
-                                          text: bb
+                                          text: zz
                                         });
                                         continue
                                       }
-                                      if (!zb.test(bb)) {
-                                        ab.push({
+                                      if (!rz.test(zz)) {
+                                        tz.push({
                                           kind: "word",
-                                          text: bb,
+                                          text: zz,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let Ab = !0;
-                                      for (const Mb of null !== (Ub = bb.match(xb)) && void 0 !== Ub ? Ub : []) {
-                                        var Ub;
-                                        const bb = ab.at(-1);
-                                        Ab || "word" !== (null === bb || void 0 === bb ? void 0 : bb.kind) || zb.test(Mb) || /[\p{L}\p{N}]/u.test(Mb) ? (Ab || ab.push({
+                                      let Fz = !0;
+                                      for (const Wz of null !== (sz = zz.match(Yz)) && void 0 !== sz ? sz : []) {
+                                        var sz;
+                                        const zz = tz.at(-1);
+                                        Fz || "word" !== (null === zz || void 0 === zz ? void 0 : zz.kind) || rz.test(Wz) || /[\p{L}\p{N}]/u.test(Wz) ? (Fz || tz.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), ab.push({
+                                        }), tz.push({
                                           kind: "word",
-                                          text: Mb,
+                                          text: Wz,
                                           delayMs: 0
-                                        }), Ab = !1) : bb.text += Mb
+                                        }), Fz = !1) : zz.text += Wz
                                       }
-                                    } else ab.push({
+                                    } else tz.push({
                                       kind: "icon",
-                                      text: Ab.icon,
+                                      text: Fz.icon,
                                       delayMs: 0
                                     });
-                                return ab
-                              }(bb),
-                              ib = [];
-                            let Wb = [];
-                            for (const Ab of Db) "space" !== Ab.kind && (Wb.push(Ab), Rb.test(Ab.text) && (ib.push(Wb), Wb = []));
-                            ib.push(Wb);
-                            const Hb = [];
-                            let Ib = 0;
-                            for (const Ab of ib) {
-                              var db, Fb;
-                              const bb = null !== (db = null === (Fb = Ab.at(-1)) || void 0 === Fb ? void 0 : Fb.text) && void 0 !== db ? db : "",
-                                ab = kb.test(bb),
-                                Ub = yb.test(bb),
-                                Mb = Ab.map((bb => "word" === bb.kind ? mb(bb.text) : 1)),
-                                Db = Mb.findLastIndex((bb => bb > 0));
-                              for (const [kb, yb] of Ab.entries()) {
-                                const bb = "word" === yb.kind,
-                                  Ab = Mb[kb];
-                                yb.delayMs = Ib;
-                                for (let Mb = 0; Xb && Mb < Ab; Mb++) {
+                                return tz
+                              }(zz),
+                              xz = [];
+                            let ez = [];
+                            for (const Fz of Pz) "space" !== Fz.kind && (ez.push(Fz), Dz.test(Fz.text) && (xz.push(ez), ez = []));
+                            xz.push(ez);
+                            const Zz = [];
+                            let Gz = 0;
+                            for (const Fz of xz) {
+                              var Tz, cz;
+                              const zz = null !== (Tz = null === (cz = Fz.at(-1)) || void 0 === cz ? void 0 : cz.text) && void 0 !== Tz ? Tz : "",
+                                tz = gz.test(zz),
+                                sz = Hz.test(zz),
+                                Wz = Fz.map((zz => "word" === zz.kind ? Jz(zz.text) : 1)),
+                                Pz = Wz.findLastIndex((zz => zz > 0));
+                              for (const [gz, Hz] of Fz.entries()) {
+                                const zz = "word" === Hz.kind,
+                                  Fz = Wz[gz];
+                                Hz.delayMs = Gz;
+                                for (let Wz = 0; bz && Wz < Fz; Wz++) {
                                   const {
-                                    intonation: Tb
-                                  } = Xb;
-                                  let Eb = Db > 0 ? -Tb.declineSemitones * (kb / Db) : 0;
-                                  Eb += fb(`${pb(yb.text)}|${Mb}`) * Tb.variationSemitones;
-                                  const Rb = Math.min(1, Tb.variationSemitones);
-                                  let Zb = Xb.glideSemitones,
-                                    zb = 1;
-                                  Ub && (Eb += Tb.exclaimLiftSemitones, zb *= Yb), ab && kb === Db && (Eb += Tb.questionRiseSemitones * (Ab > 1 ? .5 + .5 * Mb / (Ab - 1) : 1), Mb === Ab - 1 && (Zb = Math.abs(Zb) + Tb.questionRiseSemitones / 2)), bb && Nb(yb.text) && (Eb += eb * Rb, zb *= Bb), Ab > 1 && 0 === Mb && (Eb += Lb * Rb, zb *= vb), Hb.push({
-                                    atMs: Ib + Mb * jb,
-                                    semitones: Eb,
-                                    glideSemitones: Zb,
-                                    durationMs: Mb < Ab - 1 ? Math.min(Xb.durationMs, jb * Pb) : Xb.durationMs,
-                                    level: zb
+                                    intonation: Xz
+                                  } = bz;
+                                  let Oz = Pz > 0 ? -Xz.declineSemitones * (gz / Pz) : 0;
+                                  Oz += mz(`${Iz(Hz.text)}|${Wz}`) * Xz.variationSemitones;
+                                  const Dz = Math.min(1, Xz.variationSemitones);
+                                  let Bz = bz.glideSemitones,
+                                    rz = 1;
+                                  sz && (Oz += Xz.exclaimLiftSemitones, rz *= oz), tz && gz === Pz && (Oz += Xz.questionRiseSemitones * (Fz > 1 ? .5 + .5 * Wz / (Fz - 1) : 1), Wz === Fz - 1 && (Bz = Math.abs(Bz) + Xz.questionRiseSemitones / 2)), zz && Cz(Hz.text) && (Oz += Uz * Dz, rz *= vz), Fz > 1 && 0 === Wz && (Oz += uz * Dz, rz *= Kz), Zz.push({
+                                    atMs: Gz + Wz * wz,
+                                    semitones: Oz,
+                                    glideSemitones: Bz,
+                                    durationMs: Wz < Fz - 1 ? Math.min(bz.durationMs, wz * Nz) : bz.durationMs,
+                                    level: rz
                                   })
                                 }
-                                Ib += Ab * jb + (Rb.test(yb.text) ? Eb : Zb.test(yb.text) ? Tb : 0)
+                                Gz += Fz * wz + (Dz.test(Hz.text) ? Oz : Bz.test(Hz.text) ? Xz : 0)
                               }
                             }
                             return {
-                              pieces: Db.map((bb => "space" === bb.kind ? bb : "icon" === bb.kind ? {
+                              pieces: Pz.map((zz => "space" === zz.kind ? zz : "icon" === zz.kind ? {
                                 kind: "icon",
-                                icon: bb.text,
-                                delayMs: bb.delayMs
+                                icon: zz.text,
+                                delayMs: zz.delayMs
                               } : {
                                 kind: "word",
-                                text: bb.text,
-                                delayMs: bb.delayMs
+                                text: zz.text,
+                                delayMs: zz.delayMs
                               })),
-                              blips: Hb
+                              blips: Zz
                             }
                           }
-                          var Hb = Ub(1134),
-                            Ib = Ub(1198),
-                            db = Ub(1829);
+                          var Zz = sz(1173),
+                            Gz = sz(1237),
+                            Tz = sz(1862);
 
-                          function Fb(bb) {
-                            if ("string" === typeof bb) return bb;
-                            const ab = Ib.f.get().getCurrentLanguageCode();
-                            return (0, Hb.p)(ab, bb.translationKey, (0, Hb.m)(bb.params, db.c.shown))
+                          function cz(zz) {
+                            if ("string" === typeof zz) return zz;
+                            const tz = Gz.g.get().getCurrentLanguageCode();
+                            return (0, Zz.s)(tz, zz.translationKey, (0, Zz.r)(zz.params, Tz.d.shown))
                           }
 
-                          function hb(bb) {
-                            const ab = void 0 === bb.voice ? null : (0, Ab.n)(bb.voice),
-                              Ub = ab && (0, Ab.k)(ab);
+                          function jz(zz) {
+                            const tz = void 0 === zz.voice ? null : (0, Fz.n)(zz.voice),
+                              sz = tz && (0, Fz.l)(tz);
                             return {
-                              plan: Wb(Fb(bb.line), Ub),
-                              synth: Ub
+                              plan: ez(cz(zz.line), sz),
+                              synth: sz
                             }
                           }
 
-                          function Gb(bb) {
-                            const ab = [];
-                            let Ub = [];
-                            for (const [Mb, Tb] of bb.entries()) {
-                              var Ab;
-                              "space" === Tb.kind && (" " !== Tb.text || "icon" !== (null === (Ab = bb[Mb + 1]) || void 0 === Ab ? void 0 : Ab.kind)) ? (Ub.length > 0 && ab.push(Ub), ab.push([Tb]), Ub = []) : Ub.push(Tb)
+                          function Az(zz) {
+                            const tz = [];
+                            let sz = [];
+                            for (const [Wz, Xz] of zz.entries()) {
+                              var Fz;
+                              "space" === Xz.kind && (" " !== Xz.text || "icon" !== (null === (Fz = zz[Wz + 1]) || void 0 === Fz ? void 0 : Fz.kind)) ? (sz.length > 0 && tz.push(sz), tz.push([Xz]), sz = []) : sz.push(Xz)
                             }
-                            return Ub.length > 0 && ab.push(Ub), ab
+                            return sz.length > 0 && tz.push(sz), tz
                           }
-                        }, 4541: (bb, ab, Ub) => {
-                          Ub.d(ab, {
-                            c: () => vb,
-                            g: () => Lb
+                        }, 4479: (zz, tz, sz) => {
+                          sz.d(tz, {
+                            b: () => Kz,
+                            e: () => uz
                           });
-                          var Ab = Ub(4546),
-                            Mb = Ub(19);
-                          const Tb = .25,
-                            Eb = .85,
-                            Yb = .02,
-                            Bb = .01;
+                          var Fz = sz(4488),
+                            Wz = sz(30);
+                          const Xz = .25,
+                            Oz = .85,
+                            oz = .02,
+                            vz = .01;
 
-                          function eb(bb, ab, Ub, Ab, Mb, Tb, Yb) {
+                          function Uz(zz, tz, sz, Fz, Wz, Xz, oz) {
                             const {
-                              waveform: Bb,
-                              pitchHz: eb,
-                              attackMs: vb,
-                              releaseMs: Lb,
-                              lowpassHz: Pb
-                            } = Ub, Xb = Mb + Ab.durationMs / 1e3, jb = eb * 2 ** (Ab.semitones / 12), Rb = bb.createOscillator();
-                            Rb.type = Bb, Rb.frequency.setValueAtTime(jb, Mb), Rb.frequency.exponentialRampToValueAtTime(jb * 2 ** (Ab.glideSemitones / 12), Xb);
-                            const kb = Mb + Math.min(vb, Ab.durationMs) / 1e3,
-                              yb = bb.createGain();
-                            yb.gain.setValueAtTime(0, Mb), yb.gain.linearRampToValueAtTime(Tb, kb), yb.gain.linearRampToValueAtTime(Tb * Eb, Math.max(kb, Xb - Lb / 1e3)), yb.gain.linearRampToValueAtTime(0, Xb);
-                            const Zb = [Rb];
-                            if (null !== Pb) {
-                              const ab = bb.createBiquadFilter();
-                              ab.type = "lowpass", ab.frequency.value = Pb, Zb.push(ab)
+                              waveform: vz,
+                              pitchHz: Uz,
+                              attackMs: Kz,
+                              releaseMs: uz,
+                              lowpassHz: Nz
+                            } = sz, bz = Wz + Fz.durationMs / 1e3, wz = Uz * 2 ** (Fz.semitones / 12), Dz = zz.createOscillator();
+                            Dz.type = vz, Dz.frequency.setValueAtTime(wz, Wz), Dz.frequency.exponentialRampToValueAtTime(wz * 2 ** (Fz.glideSemitones / 12), bz);
+                            const gz = Wz + Math.min(Kz, Fz.durationMs) / 1e3,
+                              Hz = zz.createGain();
+                            Hz.gain.setValueAtTime(0, Wz), Hz.gain.linearRampToValueAtTime(Xz, gz), Hz.gain.linearRampToValueAtTime(Xz * Oz, Math.max(gz, bz - uz / 1e3)), Hz.gain.linearRampToValueAtTime(0, bz);
+                            const Bz = [Dz];
+                            if (null !== Nz) {
+                              const tz = zz.createBiquadFilter();
+                              tz.type = "lowpass", tz.frequency.value = Nz, Bz.push(tz)
                             }
-                            Zb.push(yb, ab);
-                            for (let Eb = 1; Eb < Zb.length; Eb++) Zb[Eb - 1].connect(Zb[Eb]);
-                            return Rb.onended = () => {
-                              for (const bb of Zb.slice(0, -1)) bb.disconnect();
-                              Yb()
-                            }, Rb.start(Mb), Rb.stop(Xb), Rb
+                            Bz.push(Hz, tz);
+                            for (let Oz = 1; Oz < Bz.length; Oz++) Bz[Oz - 1].connect(Bz[Oz]);
+                            return Dz.onended = () => {
+                              for (const zz of Bz.slice(0, -1)) zz.disconnect();
+                              oz()
+                            }, Dz.start(Wz), Dz.stop(bz), Dz
                           }
 
-                          function vb(bb, ab, Ub, Ab, Mb, Eb) {
-                            if (0 === Ab.length) return Eb(), () => {};
-                            const vb = Tb * Ub.volume * Mb,
-                              Lb = bb.createGain();
-                            Lb.connect(ab);
-                            const Pb = bb.currentTime + Yb,
-                              Xb = new Set;
-                            for (const Tb of Ab) {
-                              const ab = eb(bb, Lb, Ub, Tb, Pb + Tb.atMs / 1e3, vb * Tb.level, (() => {
-                                Xb.delete(ab), 0 === Xb.size && (Lb.disconnect(), Eb())
+                          function Kz(zz, tz, sz, Fz, Wz, Oz) {
+                            if (0 === Fz.length) return Oz(), () => {};
+                            const Kz = Xz * sz.volume * Wz,
+                              uz = zz.createGain();
+                            uz.connect(tz);
+                            const Nz = zz.currentTime + oz,
+                              bz = new Set;
+                            for (const Xz of Fz) {
+                              const tz = Uz(zz, uz, sz, Xz, Nz + Xz.atMs / 1e3, Kz * Xz.level, (() => {
+                                bz.delete(tz), 0 === bz.size && (uz.disconnect(), Oz())
                               }));
-                              Xb.add(ab)
+                              bz.add(tz)
                             }
                             return () => {
-                              const ab = bb.currentTime;
-                              Lb.gain.setTargetAtTime(0, ab, Bb);
-                              for (const bb of Xb) try {
-                                bb.stop(ab + 5 * Bb)
+                              const tz = zz.currentTime;
+                              uz.gain.setTargetAtTime(0, tz, vz);
+                              for (const zz of bz) try {
+                                zz.stop(tz + 5 * vz)
                               } catch {}
                             }
                           }
 
-                          function Lb(bb, ab) {
-                            var Ub;
-                            const Tb = Ab.Howler.ctx,
-                              Eb = Ab.Howler.masterGain;
-                            if (!Tb || !Eb || !Mb.c.get("soundOnFromAd")) return () => {};
-                            const Yb = Ab.Howler;
-                            return null === (Ub = Yb._autoResume) || void 0 === Ub || Ub.call(Yb), vb(Tb, Eb, bb, ab, Mb.c.get("soundVolume"), (() => {
-                              var bb;
-                              null === (bb = Yb._autoSuspend) || void 0 === bb || bb.call(Yb)
+                          function uz(zz, tz) {
+                            var sz;
+                            const Xz = Fz.Howler.ctx,
+                              Oz = Fz.Howler.masterGain;
+                            if (!Xz || !Oz || !Wz.b.get("soundOnFromAd")) return () => {};
+                            const oz = Fz.Howler;
+                            return null === (sz = oz._autoResume) || void 0 === sz || sz.call(oz), Kz(Xz, Oz, zz, tz, Wz.b.get("soundVolume"), (() => {
+                              var zz;
+                              null === (zz = oz._autoSuspend) || void 0 === zz || zz.call(oz)
                             }))
                           }
-                        }, 4546: (bb, ab, Ub) => {
-                          Ub.r(ab), Ub.d(ab, {
-                            Howl: () => Mb.Howl,
-                            Howler: () => Mb.Howler,
-                            iosAudio: () => Bb,
-                            musicOutput: () => kb,
-                            readyAudioContext: () => yb
+                        }, 4488: (zz, tz, sz) => {
+                          sz.r(tz), sz.d(tz, {
+                            Howl: () => Wz.Howl,
+                            Howler: () => Wz.Howler,
+                            iosAudio: () => vz,
+                            musicOutput: () => gz,
+                            readyAudioContext: () => Hz
                           });
-                          var Ab, Mb = Ub(4551),
-                            Tb = Ub(101);
-                          const Eb = Mb.Howler;
-                          let Yb;
+                          var Fz, Wz = sz(4491),
+                            Xz = sz(106);
+                          const Oz = Wz.Howler;
+                          let oz;
 
-                          function Bb() {
-                            return Yb ??= "ios" === (0, Tb.getOperatingSystem)(), Yb
+                          function vz() {
+                            return oz ??= "ios" === (0, Xz.getOperatingSystem)(), oz
                           }
 
-                          function eb() {
-                            var bb, ab;
-                            if (Eb.ctx || !Eb.usingWebAudio || "undefined" === typeof AudioContext || !Bb()) return;
-                            const Ub = navigator.audioSession;
-                            let Ab;
-                            "auto" === (null === Ub || void 0 === Ub ? void 0 : Ub.type) && (Ub.type = "ambient");
+                          function Uz() {
+                            var zz, tz;
+                            if (Oz.ctx || !Oz.usingWebAudio || "undefined" === typeof AudioContext || !vz()) return;
+                            const sz = navigator.audioSession;
+                            let Fz;
+                            "auto" === (null === sz || void 0 === sz ? void 0 : sz.type) && (sz.type = "ambient");
                             try {
-                              Ab = new AudioContext({
+                              Fz = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const Mb = Ab.createGain();
-                            Mb.gain.setValueAtTime(Eb._muted ? 0 : null !== (bb = Eb._volume) && void 0 !== bb ? bb : 1, Ab.currentTime), Mb.connect(Ab.destination), Eb.ctx = Ab, Eb.masterGain = Mb, null === (ab = Eb._setup) || void 0 === ab || ab.call(Eb)
+                            const Wz = Fz.createGain();
+                            Wz.gain.setValueAtTime(Oz._muted ? 0 : null !== (zz = Oz._volume) && void 0 !== zz ? zz : 1, Fz.currentTime), Wz.connect(Fz.destination), Oz.ctx = Fz, Oz.masterGain = Wz, null === (tz = Oz._setup) || void 0 === tz || tz.call(Oz)
                           }
-                          Eb._mobileUnloaded = !0;
-                          const vb = Eb.volume.bind(Mb.Howler);
-                          Eb.volume = function() {
-                            return eb(), vb(...arguments)
+                          Oz._mobileUnloaded = !0;
+                          const Kz = Oz.volume.bind(Wz.Howler);
+                          Oz.volume = function() {
+                            return Uz(), Kz(...arguments)
                           };
-                          const Lb = Eb.mute.bind(Mb.Howler);
-                          Eb.mute = bb => (eb(), Lb(bb));
-                          const Pb = Mb.Howl.prototype,
-                            Xb = Pb.init;
-                          Pb.init = function(bb) {
-                            return eb(), Xb.call(this, bb)
+                          const uz = Oz.mute.bind(Wz.Howler);
+                          Oz.mute = zz => (Uz(), uz(zz));
+                          const Nz = Wz.Howl.prototype,
+                            bz = Nz.init;
+                          Nz.init = function(zz) {
+                            return Uz(), bz.call(this, zz)
                           };
-                          let jb = 0;
-                          const Rb = null === (Ab = Eb._autoSuspend) || void 0 === Ab ? void 0 : Ab.bind(Mb.Howler);
+                          let wz = 0;
+                          const Dz = null === (Fz = Oz._autoSuspend) || void 0 === Fz ? void 0 : Fz.bind(Wz.Howler);
 
-                          function kb() {
-                            yb();
+                          function gz() {
+                            Hz();
                             const {
-                              ctx: bb,
-                              masterGain: ab
-                            } = Eb;
-                            return bb && ab ? {
-                              ctx: bb,
-                              destination: ab,
-                              holdAwake: bb => {
-                                var ab, Ub;
-                                (jb += bb ? 1 : -1, bb) ? null === (ab = Eb._autoResume) || void 0 === ab || ab.call(Eb): null === (Ub = Eb._autoSuspend) || void 0 === Ub || Ub.call(Eb)
+                              ctx: zz,
+                              masterGain: tz
+                            } = Oz;
+                            return zz && tz ? {
+                              ctx: zz,
+                              destination: tz,
+                              holdAwake: zz => {
+                                var tz, sz;
+                                (wz += zz ? 1 : -1, zz) ? null === (tz = Oz._autoResume) || void 0 === tz || tz.call(Oz): null === (sz = Oz._autoSuspend) || void 0 === sz || sz.call(Oz)
                               },
                               wake: () => {
-                                var ab;
-                                "running" !== bb.state && (null === (ab = Eb._autoResume) || void 0 === ab || ab.call(Eb), bb.resume().catch((() => {})))
+                                var tz;
+                                "running" !== zz.state && (null === (tz = Oz._autoResume) || void 0 === tz || tz.call(Oz), zz.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function yb() {
-                            var bb;
-                            (Eb.volume(), Eb.ctx && Eb.autoUnlock) && (null === (bb = Eb._unlockAudio) || void 0 === bb || bb.call(Eb))
+                          function Hz() {
+                            var zz;
+                            (Oz.volume(), Oz.ctx && Oz.autoUnlock) && (null === (zz = Oz._unlockAudio) || void 0 === zz || zz.call(Oz))
                           }
-                          Rb && (Eb._autoSuspend = () => jb > 0 ? Mb.Howler : Rb())
-                        }, 4553: (bb, ab, Ub) => {
-                          function Ab(bb) {
+                          Dz && (Oz._autoSuspend = () => wz > 0 ? Wz.Howler : Dz())
+                        }, 4495: (zz, tz, sz) => {
+                          function Fz(zz) {
                             return {
-                              notAfter: bb
+                              notAfter: zz
                             }
                           }
-                          Ub.d(ab, {
-                            d: () => Bb,
-                            f: () => eb,
-                            g: () => Yb,
-                            h: () => Ab,
-                            l: () => Mb,
-                            m: () => Tb,
-                            p: () => Eb,
-                            s: () => vb,
-                            w: () => Lb
+                          sz.d(tz, {
+                            d: () => vz,
+                            e: () => Uz,
+                            h: () => oz,
+                            l: () => Fz,
+                            n: () => Wz,
+                            p: () => Xz,
+                            s: () => Oz,
+                            v: () => Kz,
+                            y: () => uz
                           });
-                          const Mb = Ab("\\w$."),
-                            Tb = Ab("\\w.,");
+                          const Wz = Fz("\\w$."),
+                            Xz = Fz("\\w.,");
 
-                          function Eb(bb) {
-                            return ab => Bb(ab, bb)
+                          function Oz(zz) {
+                            return tz => vz(tz, zz)
                           }
 
-                          function Yb(bb) {
-                            return ab => !bb.test(ab.input.slice(0, ab.index))
+                          function oz(zz) {
+                            return tz => !zz.test(tz.input.slice(0, tz.index))
                           }
 
-                          function Bb(bb, ab) {
-                            return bb.index > 0 && new RegExp(`[${ab}]`).test(bb.input[bb.index - 1])
+                          function vz(zz, tz) {
+                            return zz.index > 0 && new RegExp(`[${tz}]`).test(zz.input[zz.index - 1])
                           }
 
-                          function eb(bb, ab, Ub) {
-                            return function(bb) {
-                              return void 0 !== bb && "function" !== typeof bb
-                            }(Ub) ? function(bb, ab, Ub) {
-                              const Ab = ab.flags.replace(/[gy]/g, ""),
-                                Mb = new RegExp(`[^${Ub}](?:${ab.source})`, `${Ab}g`),
-                                Tb = [],
-                                Eb = Ub => {
-                                  const Ab = Ub.index + Ub[0].length;
-                                  return ("" === Ub[0] ? Pb(bb, ab, Ab) : Ab) - 1
+                          function Uz(zz, tz, sz) {
+                            return function(zz) {
+                              return void 0 !== zz && "function" !== typeof zz
+                            }(sz) ? function(zz, tz, sz) {
+                              const Fz = tz.flags.replace(/[gy]/g, ""),
+                                Wz = new RegExp(`[^${sz}](?:${tz.source})`, `${Fz}g`),
+                                Xz = [],
+                                Oz = sz => {
+                                  const Fz = sz.index + sz[0].length;
+                                  return ("" === sz[0] ? Nz(zz, tz, Fz) : Fz) - 1
                                 },
-                                Yb = new RegExp(`(?:${ab.source})`, `${Ab}y`).exec(bb);
-                              if (Yb) {
-                                if (Tb.push(Yb), !ab.global) return Tb;
-                                Mb.lastIndex = Eb(Yb)
+                                oz = new RegExp(`(?:${tz.source})`, `${Fz}y`).exec(zz);
+                              if (oz) {
+                                if (Xz.push(oz), !tz.global) return Xz;
+                                Wz.lastIndex = Oz(oz)
                               }
-                              for (let Bb = Mb.exec(bb); Bb; Bb = Mb.exec(bb)) {
-                                const Ub = Pb(bb, ab, Bb.index) - Bb.index;
-                                if (Bb[0] = Bb[0].slice(Ub), Bb.index += Ub, Tb.push(Bb), !ab.global) break;
-                                Mb.lastIndex = Eb(Bb)
+                              for (let vz = Wz.exec(zz); vz; vz = Wz.exec(zz)) {
+                                const sz = Nz(zz, tz, vz.index) - vz.index;
+                                if (vz[0] = vz[0].slice(sz), vz.index += sz, Xz.push(vz), !tz.global) break;
+                                Wz.lastIndex = Oz(vz)
                               }
-                              return Tb
-                            }(bb, ab, Ub.notAfter) : function(bb, ab, Ub) {
-                              const Ab = new RegExp(ab.source, `${ab.flags.replace(/[gy]/g,"")}g`),
-                                Mb = [];
-                              for (let Tb = Ab.exec(bb); Tb; Tb = Ab.exec(bb))
-                                if (!Ub || Ub(Tb)) {
-                                  if (Mb.push(Tb), !ab.global) break;
-                                  "" === Tb[0] && (Ab.lastIndex = Pb(bb, ab, Ab.lastIndex))
-                                } else Ab.lastIndex = Pb(bb, ab, Tb.index);
-                              return Mb
-                            }(bb, ab, Ub)
+                              return Xz
+                            }(zz, tz, sz.notAfter) : function(zz, tz, sz) {
+                              const Fz = new RegExp(tz.source, `${tz.flags.replace(/[gy]/g,"")}g`),
+                                Wz = [];
+                              for (let Xz = Fz.exec(zz); Xz; Xz = Fz.exec(zz))
+                                if (!sz || sz(Xz)) {
+                                  if (Wz.push(Xz), !tz.global) break;
+                                  "" === Xz[0] && (Fz.lastIndex = Nz(zz, tz, Fz.lastIndex))
+                                } else Fz.lastIndex = Nz(zz, tz, Xz.index);
+                              return Wz
+                            }(zz, tz, sz)
                           }
 
-                          function vb(bb, ab, Ub, Ab) {
-                            let Mb = "",
-                              Tb = 0;
-                            for (const Eb of eb(bb, ab, Ub)) Mb += bb.slice(Tb, Eb.index) + Ab(Eb), Tb = Eb.index + Eb[0].length;
-                            return Mb + bb.slice(Tb)
+                          function Kz(zz, tz, sz, Fz) {
+                            let Wz = "",
+                              Xz = 0;
+                            for (const Oz of Uz(zz, tz, sz)) Wz += zz.slice(Xz, Oz.index) + Fz(Oz), Xz = Oz.index + Oz[0].length;
+                            return Wz + zz.slice(Xz)
                           }
 
-                          function Lb(bb, ab, Ub) {
-                            const Ab = [];
-                            let Mb = 0;
-                            for (const Tb of eb(bb, ab, Ub)) Ab.push(bb.slice(Mb, Tb.index)), Mb = Tb.index + Tb[0].length;
-                            return [...Ab, bb.slice(Mb)]
+                          function uz(zz, tz, sz) {
+                            const Fz = [];
+                            let Wz = 0;
+                            for (const Xz of Uz(zz, tz, sz)) Fz.push(zz.slice(Wz, Xz.index)), Wz = Xz.index + Xz[0].length;
+                            return [...Fz, zz.slice(Wz)]
                           }
 
-                          function Pb(bb, ab, Ub) {
-                            var Ab;
-                            return Ub + (ab.unicode && (null !== (Ab = bb.codePointAt(Ub)) && void 0 !== Ab ? Ab : 0) > 65535 ? 2 : 1)
+                          function Nz(zz, tz, sz) {
+                            var Fz;
+                            return sz + (tz.unicode && (null !== (Fz = zz.codePointAt(sz)) && void 0 !== Fz ? Fz : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4509: (bb, ab, Ub) => {
-                          Ub.d(ab, {
-                            B: () => Rb,
-                            C: () => Xb,
-                            d: () => Mb,
-                            f: () => Bb,
-                            j: () => Tb,
-                            n: () => Eb,
-                            q: () => Yb,
-                            t: () => kb,
-                            v: () => vb,
-                            x: () => Lb
+                        }, 4458: (zz, tz, sz) => {
+                          sz.d(tz, {
+                            c: () => Wz,
+                            e: () => vz,
+                            h: () => Xz,
+                            i: () => Oz,
+                            l: () => oz,
+                            n: () => gz,
+                            o: () => Kz,
+                            p: () => uz,
+                            q: () => Dz,
+                            t: () => bz
                           });
-                          var Ab = Ub(1505);
-                          const Mb = 24e3,
-                            Tb = "/docs/llms.txt",
-                            Eb = `${Ab.d}${Tb}`,
-                            Yb = "/llms.txt",
-                            Bb = "/docs/llms-full.txt";
+                          var Fz = sz(1536);
+                          const Wz = 24e3,
+                            Xz = "/docs/llms.txt",
+                            Oz = `${Fz.c}${Xz}`,
+                            oz = "/llms.txt",
+                            vz = "/docs/llms-full.txt";
 
-                          function eb(bb) {
-                            return bb || "index"
+                          function Uz(zz) {
+                            return zz || "index"
                           }
 
-                          function vb(bb) {
-                            return `/docs/${eb(bb)}.md`
+                          function Kz(zz) {
+                            return `/docs/${Uz(zz)}.md`
                           }
 
-                          function Lb(bb, ab) {
-                            return `/docs/${eb(bb)}/${ab+1}.md`
+                          function uz(zz, tz) {
+                            return `/docs/${Uz(zz)}/${tz+1}.md`
                           }
-                          const Pb = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const Nz = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function Xb(bb) {
-                            const ab = Pb.exec(bb);
-                            return null === ab ? null : {
-                              name: ab[1],
-                              part: void 0 === ab[2] ? null : Number(ab[2])
+                          function bz(zz) {
+                            const tz = Nz.exec(zz);
+                            return null === tz ? null : {
+                              name: tz[1],
+                              part: void 0 === tz[2] ? null : Number(tz[2])
                             }
                           }
-                          const jb = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const wz = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function Rb(bb) {
-                            const ab = jb.exec(bb);
-                            if (null === ab) return null;
-                            const [, Ub = "", Ab] = ab;
-                            return void 0 === Ab ? vb(Ub) : Lb(Ub, Number(Ab) - 1)
+                          function Dz(zz) {
+                            const tz = wz.exec(zz);
+                            if (null === tz) return null;
+                            const [, sz = "", Fz] = tz;
+                            return void 0 === Fz ? Kz(sz) : uz(sz, Number(Fz) - 1)
                           }
 
-                          function kb(bb) {
-                            return `/docsHtml/${eb(bb)}.html`
+                          function gz(zz) {
+                            return `/docsHtml/${Uz(zz)}.html`
                           }
-                        }, 4536: (bb, ab, Ub) => {
-                          Ub.d(ab, {
-                            b: () => Mb,
-                            e: () => Ab,
-                            i: () => Tb,
-                            k: () => Bb,
-                            n: () => Eb
+                        }, 4476: (zz, tz, sz) => {
+                          sz.d(tz, {
+                            e: () => Wz,
+                            f: () => Fz,
+                            h: () => Xz,
+                            l: () => vz,
+                            n: () => Oz
                           });
-                          const Ab = ["sine", "triangle", "square", "sawtooth"],
-                            Mb = 55,
-                            Tb = {
+                          const Fz = ["sine", "triangle", "square", "sawtooth"],
+                            Wz = 55,
+                            Xz = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7214,38 +7214,38 @@ export const modules = {
                               }
                             };
 
-                          function Eb(bb) {
-                            return "string" !== typeof bb ? bb : Object.hasOwn(Tb, bb) ? Tb[bb] : null
+                          function Oz(zz) {
+                            return "string" !== typeof zz ? zz : Object.hasOwn(Xz, zz) ? Xz[zz] : null
                           }
 
-                          function Yb(bb, ab, Ub) {
-                            return Math.min(Ub, Math.max(ab, bb))
+                          function oz(zz, tz, sz) {
+                            return Math.min(sz, Math.max(tz, zz))
                           }
 
-                          function Bb(bb) {
-                            const ab = Yb(bb.durationMs, 10, 500),
-                              Ub = Yb(bb.attackMs, 0, ab),
+                          function vz(zz) {
+                            const tz = oz(zz.durationMs, 10, 500),
+                              sz = oz(zz.attackMs, 0, tz),
                               {
-                                intonation: Mb
-                              } = bb;
+                                intonation: Wz
+                              } = zz;
                             return {
-                              waveform: Ab.includes(bb.waveform) ? bb.waveform : "sine",
-                              pitchHz: Yb(bb.pitchHz, 20, 4e3),
-                              glideSemitones: Yb(bb.glideSemitones, -24, 24),
-                              durationMs: ab,
-                              attackMs: Ub,
-                              releaseMs: Yb(bb.releaseMs, 0, ab - Ub),
-                              lowpassHz: null === bb.lowpassHz ? null : Yb(bb.lowpassHz, 20, 2e4),
-                              volume: Yb(bb.volume, 0, 2),
+                              waveform: Fz.includes(zz.waveform) ? zz.waveform : "sine",
+                              pitchHz: oz(zz.pitchHz, 20, 4e3),
+                              glideSemitones: oz(zz.glideSemitones, -24, 24),
+                              durationMs: tz,
+                              attackMs: sz,
+                              releaseMs: oz(zz.releaseMs, 0, tz - sz),
+                              lowpassHz: null === zz.lowpassHz ? null : oz(zz.lowpassHz, 20, 2e4),
+                              volume: oz(zz.volume, 0, 2),
                               intonation: {
-                                variationSemitones: Yb(Mb.variationSemitones, 0, 6),
-                                declineSemitones: Yb(Mb.declineSemitones, 0, 12),
-                                questionRiseSemitones: Yb(Mb.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: Yb(Mb.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: oz(Wz.variationSemitones, 0, 6),
+                                declineSemitones: oz(Wz.declineSemitones, 0, 12),
+                                questionRiseSemitones: oz(Wz.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: oz(Wz.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: Yb(bb.syllableMs, 25, 200)
+                              syllableMs: oz(zz.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const bb in modules) Object.freeze(modules[bb]);
+                      for (const zz in modules) Object.freeze(modules[zz]);

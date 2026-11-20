@@ -1,78 +1,78 @@
 export const id = 234;
 export const ids = [234];
 export const modules = {
-  37394: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => eb,
-      f: () => Ab,
-      h: () => Yb,
-      j: () => Mb,
-      n: () => Eb,
-      q: () => Tb
+  37497: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => Uz,
+      h: () => Fz,
+      i: () => oz,
+      j: () => Wz,
+      l: () => Oz,
+      p: () => Xz
     });
-    const Ab = 1.001,
-      Mb = .501,
-      Tb = .025,
-      Eb = .75,
-      Yb = .08,
-      Bb = 4;
+    const Fz = 1.001,
+      Wz = .501,
+      Xz = .025,
+      Oz = .75,
+      oz = .08,
+      vz = 4;
 
-    function eb() {
-      const bb = Mb,
-        ab = Tb,
-        Ub = bb - ab / 2,
-        Ab = (2 * bb - 2 * ab) / (2 * Bb - 1),
-        Eb = [];
-      for (const Mb of [-Ub, Ub])
-        for (const Tb of [-Ub, Ub])
-          for (let Ub = 0; Ub < Bb; Ub++) {
-            const Yb = -bb + ab + Ab * (2 * Ub + .5);
-            Eb.push([Ab, ab, ab, Yb, Mb, Tb]), Eb.push([ab, Ab, ab, Mb, Yb, Tb]), Eb.push([ab, ab, Ab, Mb, Tb, Yb])
+    function Uz() {
+      const zz = Wz,
+        tz = Xz,
+        sz = zz - tz / 2,
+        Fz = (2 * zz - 2 * tz) / (2 * vz - 1),
+        Oz = [];
+      for (const Wz of [-sz, sz])
+        for (const Xz of [-sz, sz])
+          for (let sz = 0; sz < vz; sz++) {
+            const oz = -zz + tz + Fz * (2 * sz + .5);
+            Oz.push([Fz, tz, tz, oz, Wz, Xz]), Oz.push([tz, Fz, tz, Wz, oz, Xz]), Oz.push([tz, tz, Fz, Wz, Xz, oz])
           }
-      for (const Mb of [-Ub, Ub])
-        for (const bb of [-Ub, Ub])
-          for (const Ab of [-Ub, Ub]) Eb.push([ab, ab, ab, Mb, bb, Ab]);
-      return Eb
+      for (const Wz of [-sz, sz])
+        for (const zz of [-sz, sz])
+          for (const Fz of [-sz, sz]) Oz.push([tz, tz, tz, Wz, zz, Fz]);
+      return Oz
     }
   },
-  37760: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      B: () => Pb,
-      C: () => Rb,
-      D: () => yb,
-      H: () => Mb,
-      c: () => vb,
-      d: () => Bb,
-      e: () => Db,
-      f: () => eb,
-      h: () => Yb,
-      k: () => Eb,
-      l: () => Tb,
-      p: () => fb,
-      r: () => Xb,
-      s: () => ib,
-      u: () => mb,
-      w: () => xb,
-      y: () => zb
+  37849: (zz, tz, sz) => {
+    sz.d(tz, {
+      B: () => Jz,
+      D: () => Yz,
+      E: () => rz,
+      I: () => Nz,
+      J: () => Dz,
+      M: () => Hz,
+      N: () => Wz,
+      c: () => Kz,
+      g: () => vz,
+      i: () => Pz,
+      k: () => Uz,
+      m: () => oz,
+      n: () => Oz,
+      q: () => Xz,
+      u: () => mz,
+      w: () => bz,
+      z: () => xz
     });
-    var Ab = Ub(9086);
+    var Fz = sz(9014);
 
-    function Mb(bb) {
-      return Math.floor(bb).toLocaleString("en-US")
+    function Wz(zz) {
+      return Math.floor(zz).toLocaleString("en-US")
     }
-    const Tb = 2e3,
-      Eb = .005,
-      Yb = .001,
-      Bb = 2,
-      eb = "Fluid Tank",
-      vb = "Coolant Mixer",
-      Lb = 144;
+    const Xz = 2e3,
+      Oz = .005,
+      oz = .001,
+      vz = 2,
+      Uz = "Fluid Tank",
+      Kz = "Coolant Mixer",
+      uz = 144;
 
-    function Pb(bb) {
-      const ab = bb.split("|")[0];
-      return (0, Ab.k)(ab) ? ab === Ab.c ? "cryo" : "water" : null
+    function Nz(zz) {
+      const tz = zz.split("|")[0];
+      return (0, Fz.k)(tz) ? tz === Fz.c ? "cryo" : "water" : null
     }
-    const Xb = [
+    const bz = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -80,43 +80,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      jb = 63;
+      wz = 63;
 
-    function Rb(bb) {
-      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const Ub = ab ? function(bb, ab, Ub) {
-        const Ab = Xb.findIndex((Ab => {
-          let [Mb, Tb, Eb] = Ab;
-          return Mb === bb && Tb === ab && Eb === Ub
+    function Dz(zz) {
+      let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const sz = tz ? function(zz, tz, sz) {
+        const Fz = bz.findIndex((Fz => {
+          let [Wz, Xz, Oz] = Fz;
+          return Wz === zz && Xz === tz && Oz === sz
         }));
-        return Ab < 0 ? 0 : 1 << Ab
-      }(ab[0], ab[1], ab[2]) : 0;
-      return "maker" === bb ? {
-        kind: bb,
-        faces: Ub
-      } : "user" === bb ? {
-        kind: bb,
-        faces: jb & ~Ub
+        return Fz < 0 ? 0 : 1 << Fz
+      }(tz[0], tz[1], tz[2]) : 0;
+      return "maker" === zz ? {
+        kind: zz,
+        faces: sz
+      } : "user" === zz ? {
+        kind: zz,
+        faces: wz & ~sz
       } : {
-        kind: bb,
-        faces: jb
+        kind: zz,
+        faces: wz
       }
     }
 
-    function kb(bb) {
-      return "pipe" === bb || "tank" === bb || "maker" === bb
+    function gz(zz) {
+      return "pipe" === zz || "tank" === zz || "maker" === zz
     }
 
-    function yb(bb, ab, Ub) {
-      return 0 !== (bb.faces & 1 << Ub) && 0 !== (ab.faces & 1 << (1 ^ Ub)) && (kb(bb.kind) || kb(ab.kind))
+    function Hz(zz, tz, sz) {
+      return 0 !== (zz.faces & 1 << sz) && 0 !== (tz.faces & 1 << (1 ^ sz)) && (gz(zz.kind) || gz(tz.kind))
     }
-    const Zb = (bb, ab, Ub, Ab) => ({
-        input: bb,
-        inputAmount: Ab,
-        output: ab,
-        outputAmount: Ub
+    const Bz = (zz, tz, sz, Fz) => ({
+        input: zz,
+        inputAmount: Fz,
+        output: tz,
+        outputAmount: sz
       }),
-      Db = {
+      Pz = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -135,7 +135,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [Zb("Uranium Grit", "Uranium Pellet", 1, 12), Zb("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [Bz("Uranium Grit", "Uranium Pellet", 1, 12), Bz("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -156,36 +156,36 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [Zb("Biomass", "", 0, 1)],
+          recipes: [Bz("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: Lb,
+          cryoMade: uz,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function zb(bb, ab) {
-      return 1e3 * (null !== ab && void 0 !== ab ? ab : 0) / bb.opMs
+    function rz(zz, tz) {
+      return 1e3 * (null !== tz && void 0 !== tz ? tz : 0) / zz.opMs
     }
 
-    function xb(bb) {
-      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const Ub = zb(Db["Coolant Mixer"], Lb) * ab;
-      return bb <= 0 ? 0 : Math.ceil(bb / Ub - 1e-9)
+    function Yz(zz) {
+      let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const sz = rz(Pz["Coolant Mixer"], uz) * tz;
+      return zz <= 0 ? 0 : Math.ceil(zz / sz - 1e-9)
     }
-    const ib = "baf2Water",
-      fb = "baf2waterclose",
-      mb = "baf2wateropen"
+    const xz = "baf2Water",
+      mz = "baf2waterclose",
+      Jz = "baf2wateropen"
   },
-  37748: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => hb,
-      h: () => Gb
+  37834: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => jz,
+      e: () => Az
     });
-    var Ab = Ub(9007),
-      Mb = Ub(9036);
-    const Tb = [
+    var Fz = sz(8940),
+      Wz = sz(8970);
+    const Xz = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
@@ -193,45 +193,45 @@ export const modules = {
       [0, 1, 0],
       [0, -1, 0]
     ];
-    var Eb = Ub(9048),
-      Yb = Ub(37556),
-      Bb = Ub(9043);
-    const eb = {
+    var Oz = sz(8982),
+      oz = sz(37664),
+      vz = sz(8976);
+    const Uz = {
       1: [0, -1],
       2: [-1, 0],
       3: [0, 1],
       4: [1, 0]
     };
 
-    function vb(bb) {
-      let [ab, Ub] = bb;
-      return [-Ub, ab]
+    function Kz(zz) {
+      let [tz, sz] = zz;
+      return [-sz, tz]
     }
 
-    function Lb(bb, ab) {
-      return bb[0] === ab[0] && bb[1] === ab[1]
+    function uz(zz, tz) {
+      return zz[0] === tz[0] && zz[1] === tz[1]
     }
 
-    function Pb(bb, ab) {
-      return bb[0] * ab[0] + bb[1] * ab[1] === 0
+    function Nz(zz, tz) {
+      return zz[0] * tz[0] + zz[1] * tz[1] === 0
     }
-    const Xb = [
+    const bz = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
-    var jb = Ub(9077);
+    var wz = sz(9009);
 
-    function Rb(bb, ab, Ub, Ab, Mb) {
-      return ab < jb.q || ab >= jb.q + jb.r || Math.floor(bb / jb.y) === Math.floor(Ab / jb.y) && Math.floor(Ub / jb.y) === Math.floor(Mb / jb.y)
+    function Dz(zz, tz, sz, Fz, Wz) {
+      return tz < wz.k || tz >= wz.k + wz.m || Math.floor(zz / wz.t) === Math.floor(Fz / wz.t) && Math.floor(sz / wz.t) === Math.floor(Wz / wz.t)
     }
-    const kb = "Splitter",
-      yb = "Sorting Gate",
-      Zb = new Set(jb.O),
-      Db = new Set([...jb.O, "Belt Loader", "Fast Loader", yb]),
-      zb = new Set(jb.v),
-      xb = [
+    const gz = "Splitter",
+      Hz = "Sorting Gate",
+      Bz = new Set(wz.F),
+      Pz = new Set([...wz.F, "Belt Loader", "Fast Loader", Hz]),
+      rz = new Set(wz.q),
+      Yz = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 0, 1],
@@ -240,260 +240,260 @@ export const modules = {
         [0, -1, 0]
       ];
 
-    function ib(bb) {
-      var ab, Ub;
-      return null !== (ab = null === (Ub = Ab.h[bb]) || void 0 === Ub ? void 0 : Ub.meta.rootName) && void 0 !== ab ? ab : ""
+    function xz(zz) {
+      var tz, sz;
+      return null !== (tz = null === (sz = Fz.j[zz]) || void 0 === sz ? void 0 : sz.meta.rootName) && void 0 !== tz ? tz : ""
     }
 
-    function fb(bb) {
-      return ib(bb) === jb.k && (0, jb.Z)(Ab.h[bb].name)
+    function mz(zz) {
+      return xz(zz) === wz.g && (0, wz.R)(Fz.j[zz].name)
     }
-    var mb = Ub(9040),
-      pb = Ub(9063);
-    const Nb = [
+    var Jz = sz(8973),
+      Iz = sz(8996);
+    const Cz = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
 
-    function Wb(bb) {
-      var ab, Ub;
-      const Mb = null === (ab = Ab.h[bb]) || void 0 === ab ? void 0 : ab.meta;
-      return (null === Mb || void 0 === Mb ? void 0 : Mb.rootName) !== pb.r ? null : {
-        rot: null !== (Ub = Mb.rot) && void 0 !== Ub ? Ub : 1,
-        half: (0, pb.g)(Mb.rootName, Mb.metaStr)
+    function ez(zz) {
+      var tz, sz;
+      const Wz = null === (tz = Fz.j[zz]) || void 0 === tz ? void 0 : tz.meta;
+      return (null === Wz || void 0 === Wz ? void 0 : Wz.rootName) !== Iz.k ? null : {
+        rot: null !== (sz = Wz.rot) && void 0 !== sz ? sz : 1,
+        half: (0, Iz.e)(Wz.rootName, Wz.metaStr)
       }
     }
 
-    function Hb(bb, ab, Ub, Ab) {
-      return Wb(bb(ab, Ub, Ab))
+    function Zz(zz, tz, sz, Fz) {
+      return ez(zz(tz, sz, Fz))
     }
 
-    function Ib(bb, ab, Ub, Ab, Mb) {
+    function Gz(zz, tz, sz, Fz, Wz) {
       let {
-        rot: Tb,
-        half: Eb
-      } = Mb;
-      const [Yb, Bb] = (0, pb.n)(Tb, Eb), eb = Hb(bb, ab + Yb, Ub, Ab + Bb);
-      return null !== eb && eb.rot === Tb && eb.half === pb.v[Eb]
+        rot: Xz,
+        half: Oz
+      } = Wz;
+      const [oz, vz] = (0, Iz.j)(Xz, Oz), Uz = Zz(zz, tz + oz, sz, Fz + vz);
+      return null !== Uz && Uz.rot === Xz && Uz.half === Iz.l[Oz]
     }
-    var db = Ub(37757);
-    const Fb = [new class {
+    var Tz = sz(37840);
+    const cz = [new class {
       constructor() {
-        this.reshapeOffsets = Xb
+        this.reshapeOffsets = bz
       }
-      handles(bb) {
-        var ab;
-        return "Stairs" === (null === (ab = Ab.h[bb]) || void 0 === ab ? void 0 : ab.model)
+      handles(zz) {
+        var tz;
+        return "Stairs" === (null === (tz = Fz.j[zz]) || void 0 === tz ? void 0 : tz.model)
       }
-      affects(bb) {
-        return this.handles(bb)
+      affects(zz) {
+        return this.handles(zz)
       }
-      shape(bb, ab, Ub, Mb, Tb) {
-        const Eb = this.stairsOf(Tb),
-          Yb = this.cornerAt(bb, ab, Ub, Mb, Eb),
-          eb = Eb.half === Bb.e.top ? "top" : "bot";
-        return (0, Ab.l)(`${Ab.h[Tb].meta.rootName}|meta|rot${Eb.rot}|${eb}${null===Yb?"":`|${Yb}`}`)
+      shape(zz, tz, sz, Wz, Xz) {
+        const Oz = this.stairsOf(Xz),
+          oz = this.cornerAt(zz, tz, sz, Wz, Oz),
+          Uz = Oz.half === vz.c.top ? "top" : "bot";
+        return (0, Fz.k)(`${Fz.j[Xz].meta.rootName}|meta|rot${Oz.rot}|${Uz}${null===oz?"":`|${oz}`}`)
       }
-      stairsOf(bb) {
+      stairsOf(zz) {
         const {
-          rot: ab,
-          halfblockPlacement: Ub
-        } = Ab.h[bb].meta;
+          rot: tz,
+          halfblockPlacement: sz
+        } = Fz.j[zz].meta;
         return {
-          rot: ab,
-          half: Ub
+          rot: tz,
+          half: sz
         }
       }
-      stairsAt(bb, ab, Ub, Ab) {
-        const Mb = bb(ab, Ub, Ab);
-        return this.handles(Mb) ? this.stairsOf(Mb) : null
+      stairsAt(zz, tz, sz, Fz) {
+        const Wz = zz(tz, sz, Fz);
+        return this.handles(Wz) ? this.stairsOf(Wz) : null
       }
-      cornerAt(bb, ab, Ub, Ab, Mb) {
+      cornerAt(zz, tz, sz, Fz, Wz) {
         let {
-          rot: Tb,
-          half: Eb
-        } = Mb;
-        const Yb = eb[Tb],
-          Bb = Mb => {
-            let [Yb, Bb] = Mb;
-            const eb = this.stairsAt(bb, ab + Yb, Ub, Ab + Bb);
-            return null !== eb && eb.rot === Tb && eb.half === Eb
+          rot: Xz,
+          half: Oz
+        } = Wz;
+        const oz = Uz[Xz],
+          vz = Wz => {
+            let [oz, vz] = Wz;
+            const Uz = this.stairsAt(zz, tz + oz, sz, Fz + vz);
+            return null !== Uz && Uz.rot === Xz && Uz.half === Oz
           },
-          Xb = this.stairsAt(bb, ab + Yb[0], Ub, Ab + Yb[1]);
-        if (null !== Xb && Xb.half === Eb) {
-          const bb = eb[Xb.rot];
-          if (Pb(Yb, bb) && !Bb([-bb[0], -bb[1]])) return Lb(bb, vb(Yb)) ? "outerLeft" : "outerRight"
+          bz = this.stairsAt(zz, tz + oz[0], sz, Fz + oz[1]);
+        if (null !== bz && bz.half === Oz) {
+          const zz = Uz[bz.rot];
+          if (Nz(oz, zz) && !vz([-zz[0], -zz[1]])) return uz(zz, Kz(oz)) ? "outerLeft" : "outerRight"
         }
-        const jb = this.stairsAt(bb, ab - Yb[0], Ub, Ab - Yb[1]);
-        if (null !== jb && jb.half === Eb) {
-          const bb = eb[jb.rot];
-          if (Pb(Yb, bb) && !Bb(bb)) return Lb(bb, vb(Yb)) ? "innerLeft" : "innerRight"
+        const wz = this.stairsAt(zz, tz - oz[0], sz, Fz - oz[1]);
+        if (null !== wz && wz.half === Oz) {
+          const zz = Uz[wz.rot];
+          if (Nz(oz, zz) && !vz(zz)) return uz(zz, Kz(oz)) ? "innerLeft" : "innerRight"
         }
         return null
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = Tb, this.rootIds = new Set(Mb.g.map((bb => (0, Ab.l)(bb))))
+        this.reshapeOffsets = Xz, this.rootIds = new Set(Wz.g.map((zz => (0, Fz.k)(zz))))
       }
-      handles(bb) {
-        var ab;
-        const Ub = null === (ab = Ab.h[bb]) || void 0 === ab ? void 0 : ab.meta;
-        return void 0 !== Ub && this.rootIds.has(Ub.rootId)
+      handles(zz) {
+        var tz;
+        const sz = null === (tz = Fz.j[zz]) || void 0 === tz ? void 0 : tz.meta;
+        return void 0 !== sz && this.rootIds.has(sz.rootId)
       }
-      affects(bb) {
-        return this.handles(bb)
+      affects(zz) {
+        return this.handles(zz)
       }
-      placedBy(bb) {
-        return Ab.h[bb].meta.rootName === Mb.m ? null : Mb.m
+      placedBy(zz) {
+        return Fz.j[zz].meta.rootName === Wz.m ? null : Wz.m
       }
-      shape(bb, ab, Ub, Tb, Eb) {
+      shape(zz, tz, sz, Xz, Oz) {
         const {
-          rootId: Yb,
-          rootName: Bb,
-          rot: eb
-        } = Ab.h[Eb].meta;
-        let vb = 0;
-        return Mb.v[eb].forEach(((Mb, Eb) => {
-          var Bb;
-          let [Lb, Pb, Xb] = Mb;
-          const jb = null === (Bb = Ab.h[bb(ab + Lb, Ub + Pb, Tb + Xb)]) || void 0 === Bb ? void 0 : Bb.meta;
-          (null === jb || void 0 === jb ? void 0 : jb.rootId) === Yb && jb.rot === eb && (vb |= 1 << Eb)
-        })), (0, Ab.l)((0, Mb.e)(Bb, eb, vb))
+          rootId: oz,
+          rootName: vz,
+          rot: Uz
+        } = Fz.j[Oz].meta;
+        let Kz = 0;
+        return Wz.r[Uz].forEach(((Wz, Oz) => {
+          var vz;
+          let [uz, Nz, bz] = Wz;
+          const wz = null === (vz = Fz.j[zz(tz + uz, sz + Nz, Xz + bz)]) || void 0 === vz ? void 0 : vz.meta;
+          (null === wz || void 0 === wz ? void 0 : wz.rootId) === oz && wz.rot === Uz && (Kz |= 1 << Oz)
+        })), (0, Fz.k)((0, Wz.d)(vz, Uz, Kz))
       }
-    }, ...Eb.e.map((bb => new Yb.e(bb))), new class {
+    }, ...Oz.e.map((zz => new oz.e(zz))), new class {
       constructor() {
-        this.reshapeOffsets = xb
+        this.reshapeOffsets = Yz
       }
-      handles(bb) {
-        const ab = ib(bb);
-        return Zb.has(ab) || ab === jb.k
+      handles(zz) {
+        const tz = xz(zz);
+        return Bz.has(tz) || tz === wz.g
       }
-      affects(bb) {
-        const ab = ib(bb);
-        return Db.has(ab) || zb.has(ab) || ab === kb || ab === jb.k || void 0 !== jb.d[ab]
+      affects(zz) {
+        const tz = xz(zz);
+        return Pz.has(tz) || rz.has(tz) || tz === gz || tz === wz.g || void 0 !== wz.b[tz]
       }
-      shape(bb, ab, Ub, Mb, Tb, Eb) {
+      shape(zz, tz, sz, Wz, Xz, Oz) {
         const {
-          rootName: Yb,
-          rot: Bb
-        } = Ab.h[Tb].meta;
-        return Yb === jb.k ? Eb ? Tb : function(bb, ab, Ub, Mb, Tb) {
-          const [Eb, Yb] = jb.h[Tb - 1];
-          for (let Bb = 1; Bb <= jb.K; Bb++) {
-            const [eb, vb] = [ab - Eb * Bb, Mb - Yb * Bb], Lb = bb(eb, Ub, vb);
-            if (ib(Lb) === jb.k && Ab.h[Lb].meta.rot === Tb && Rb(ab, Ub, Mb, eb, vb)) return (0, Ab.l)((0, jb.hb)(Tb, !fb(Lb)))
+          rootName: oz,
+          rot: vz
+        } = Fz.j[Xz].meta;
+        return oz === wz.g ? Oz ? Xz : function(zz, tz, sz, Wz, Xz) {
+          const [Oz, oz] = wz.f[Xz - 1];
+          for (let vz = 1; vz <= wz.C; vz++) {
+            const [Uz, Kz] = [tz - Oz * vz, Wz - oz * vz], uz = zz(Uz, sz, Kz);
+            if (xz(uz) === wz.g && Fz.j[uz].meta.rot === Xz && Dz(tz, sz, Wz, Uz, Kz)) return (0, Fz.k)((0, wz.X)(Xz, !mz(uz)))
           }
-          return (0, Ab.l)((0, jb.hb)(Tb, !1))
-        }(bb, ab, Ub, Mb, Bb) : (0, Ab.l)((0, jb.P)(Yb, Bb, function(bb, ab, Ub, Mb, Tb) {
-          const [Eb, Yb] = jb.h[Tb - 1], Bb = (Tb, Bb) => function(bb, ab, Ub, Mb, Tb) {
-            var Eb;
-            const Yb = null === (Eb = Ab.h[bb]) || void 0 === Eb ? void 0 : Eb.meta;
-            if (!Yb) return !1;
-            const Bb = Yb.rootName,
-              eb = Db.has(Bb) || fb(bb);
-            if (!eb && !zb.has(Bb) && Bb !== kb) return !1;
-            const [vb, Lb] = jb.h[Yb.rot - 1];
-            return eb ? vb === -ab && Lb === -Ub : zb.has(Bb) ? vb === ab && Lb === Ub : (0, jb.db)(Ab.h[bb].name, vb, Lb).some((bb => {
-              let [Ab, Mb] = bb;
-              return Ab === -ab && Mb === -Ub
-            })) && !(Mb === ab && Tb === Ub)
-          }(bb(ab + Tb, Ub, Mb + Bb), Tb, Bb, Eb, Yb), eb = bb(ab - Eb, Ub, Mb - Yb), vb = ib(eb) === kb && Ab.h[eb].meta.rot === Tb, Lb = 1 === jb.d[ib(bb(ab, Ub - 1, Mb))] || -1 === jb.d[ib(bb(ab, Ub + 1, Mb))];
-          if (Lb || vb || function(bb, ab, Ub) {
-              if (ib(bb) !== yb) return !1;
-              const [Mb, Tb] = jb.h[Ab.h[bb].meta.rot - 1], [Eb, Yb] = (0, jb.R)(Ab.h[bb].name, Mb, Tb);
-              return ab === Eb && Ub === Yb
-            }(eb, Eb, Yb) || Bb(-Eb, -Yb)) return null;
-          const Pb = Bb(-Yb, Eb),
-            Xb = Bb(Yb, -Eb);
-          if (Pb === Xb) return null;
-          return Pb ? "turnLeft" : "turnRight"
-        }(bb, ab, Ub, Mb, Bb)))
+          return (0, Fz.k)((0, wz.X)(Xz, !1))
+        }(zz, tz, sz, Wz, vz) : (0, Fz.k)((0, wz.J)(oz, vz, function(zz, tz, sz, Wz, Xz) {
+          const [Oz, oz] = wz.f[Xz - 1], vz = (Xz, vz) => function(zz, tz, sz, Wz, Xz) {
+            var Oz;
+            const oz = null === (Oz = Fz.j[zz]) || void 0 === Oz ? void 0 : Oz.meta;
+            if (!oz) return !1;
+            const vz = oz.rootName,
+              Uz = Pz.has(vz) || mz(zz);
+            if (!Uz && !rz.has(vz) && vz !== gz) return !1;
+            const [Kz, uz] = wz.f[oz.rot - 1];
+            return Uz ? Kz === -tz && uz === -sz : rz.has(vz) ? Kz === tz && uz === sz : (0, wz.W)(Fz.j[zz].name, Kz, uz).some((zz => {
+              let [Fz, Wz] = zz;
+              return Fz === -tz && Wz === -sz
+            })) && !(Wz === tz && Xz === sz)
+          }(zz(tz + Xz, sz, Wz + vz), Xz, vz, Oz, oz), Uz = zz(tz - Oz, sz, Wz - oz), Kz = xz(Uz) === gz && Fz.j[Uz].meta.rot === Xz, uz = 1 === wz.b[xz(zz(tz, sz - 1, Wz))] || -1 === wz.b[xz(zz(tz, sz + 1, Wz))];
+          if (uz || Kz || function(zz, tz, sz) {
+              if (xz(zz) !== Hz) return !1;
+              const [Wz, Xz] = wz.f[Fz.j[zz].meta.rot - 1], [Oz, oz] = (0, wz.M)(Fz.j[zz].name, Wz, Xz);
+              return tz === Oz && sz === oz
+            }(Uz, Oz, oz) || vz(-Oz, -oz)) return null;
+          const Nz = vz(-oz, Oz),
+            bz = vz(oz, -Oz);
+          if (Nz === bz) return null;
+          return Nz ? "turnLeft" : "turnRight"
+        }(zz, tz, sz, Wz, vz)))
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = Nb, this.rootId = (0, Ab.l)(pb.r)
+        this.reshapeOffsets = Cz, this.rootId = (0, Fz.k)(Iz.k)
       }
-      handles(bb) {
-        var ab;
-        return (null === (ab = Ab.h[bb]) || void 0 === ab ? void 0 : ab.meta.rootId) === this.rootId
+      handles(zz) {
+        var tz;
+        return (null === (tz = Fz.j[zz]) || void 0 === tz ? void 0 : tz.meta.rootId) === this.rootId
       }
-      affects(bb) {
-        return this.handles(bb)
+      affects(zz) {
+        return this.handles(zz)
       }
-      shape(bb, ab, Ub, Mb, Tb, Eb) {
-        const Yb = Wb(Tb);
-        return (0, Ab.l)((Bb = Yb.rot, null !== (eb = Eb ? this.reshapedHalf(bb, ab, Ub, Mb, Yb) : this.placedHalf(bb, ab, Ub, Mb, Yb.rot)) ? (0, pb.d)(pb.r, Bb, eb) : 1 === Bb ? pb.r : `${pb.r}|meta|rot${Bb}`));
-        var Bb, eb
+      shape(zz, tz, sz, Wz, Xz, Oz) {
+        const oz = ez(Xz);
+        return (0, Fz.k)((vz = oz.rot, null !== (Uz = Oz ? this.reshapedHalf(zz, tz, sz, Wz, oz) : this.placedHalf(zz, tz, sz, Wz, oz.rot)) ? (0, Iz.d)(Iz.k, vz, Uz) : 1 === vz ? Iz.k : `${Iz.k}|meta|rot${vz}`));
+        var vz, Uz
       }
-      placedHalf(bb, ab, Ub, Ab, Mb) {
-        const [Tb, Eb] = mb.d[Mb];
-        for (const [Yb, Bb] of [
+      placedHalf(zz, tz, sz, Fz, Wz) {
+        const [Xz, Oz] = Jz.d[Wz];
+        for (const [oz, vz] of [
             ["right", 1],
             ["left", -1]
           ]) {
-          const eb = ab + Bb * Tb,
-            vb = Ab + Bb * Eb,
-            Lb = Hb(bb, eb, Ub, vb);
-          if (null !== Lb && Lb.rot === Mb && (null === Lb.half || !Ib(bb, eb, Ub, vb, Lb))) return Yb
+          const Uz = tz + vz * Xz,
+            Kz = Fz + vz * Oz,
+            uz = Zz(zz, Uz, sz, Kz);
+          if (null !== uz && uz.rot === Wz && (null === uz.half || !Gz(zz, Uz, sz, Kz, uz))) return oz
         }
         return null
       }
-      reshapedHalf(bb, ab, Ub, Ab, Mb) {
-        if (null !== Mb.half && Ib(bb, ab, Ub, Ab, Mb)) return Mb.half;
-        for (const Tb of ["right", "left"]) {
-          const [Eb, Yb] = (0, pb.n)(Mb.rot, Tb), Bb = Hb(bb, ab + Eb, Ub, Ab + Yb);
-          if (null !== Bb && Bb.rot === Mb.rot && Bb.half === pb.v[Tb]) return Tb
+      reshapedHalf(zz, tz, sz, Fz, Wz) {
+        if (null !== Wz.half && Gz(zz, tz, sz, Fz, Wz)) return Wz.half;
+        for (const Xz of ["right", "left"]) {
+          const [Oz, oz] = (0, Iz.j)(Wz.rot, Xz), vz = Zz(zz, tz + Oz, sz, Fz + oz);
+          if (null !== vz && vz.rot === Wz.rot && vz.half === Iz.l[Xz]) return Xz
         }
         return null
       }
-    }, new db.b];
+    }, new Tz.c];
 
-    function hb(bb, ab, Ub, Ab, Mb) {
-      let Tb = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const Eb of Fb)
-        if (Eb.handles(Mb)) return Eb.shape(bb, ab, Ub, Ab, Mb, Tb);
-      return Mb
+    function jz(zz, tz, sz, Fz, Wz) {
+      let Xz = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const Oz of cz)
+        if (Oz.handles(Wz)) return Oz.shape(zz, tz, sz, Fz, Wz, Xz);
+      return Wz
     }
 
-    function Gb(bb) {
-      for (const Ab of Fb) {
-        var ab, Ub;
-        if (Ab.handles(bb)) return null !== (ab = null === (Ub = Ab.placedBy) || void 0 === Ub ? void 0 : Ub.call(Ab, bb)) && void 0 !== ab ? ab : null
+    function Az(zz) {
+      for (const Fz of cz) {
+        var tz, sz;
+        if (Fz.handles(zz)) return null !== (tz = null === (sz = Fz.placedBy) || void 0 === sz ? void 0 : sz.call(Fz, zz)) && void 0 !== tz ? tz : null
       }
       return null
     }
   },
-  37757: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => pb,
-      d: () => zb,
-      g: () => Db
+  37840: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Iz,
+      d: () => rz,
+      g: () => Pz
     });
-    var Ab = Ub(9007),
-      Mb = Ub(9028),
-      Tb = Ub(9086),
-      Eb = Ub(37760),
-      Yb = Ub(9077);
-    const Bb = (0, Eb.C)("pipe"),
-      eb = (0, Eb.C)("tank"),
-      vb = (0, Eb.C)("port"),
-      Lb = "Reactor Port";
+    var Fz = sz(8940),
+      Wz = sz(8960),
+      Xz = sz(9014),
+      Oz = sz(37849),
+      oz = sz(9009);
+    const vz = (0, Oz.J)("pipe"),
+      Uz = (0, Oz.J)("tank"),
+      Kz = (0, Oz.J)("port"),
+      uz = "Reactor Port";
 
-    function Pb(bb, ab, Ub) {
-      const Ab = new Set([Tb.f, Tb.c, Lb, ...ab, ...Ub, ...bb ? [Eb.f] : []]);
+    function Nz(zz, tz, sz) {
+      const Fz = new Set([Xz.d, Xz.c, uz, ...tz, ...sz, ...zz ? [Oz.k] : []]);
       return {
-        makers: new Set(ab),
-        roots: Ab
+        makers: new Set(tz),
+        roots: Fz
       }
     }
-    const Xb = {
-        water: Pb(!0, ["Condenser"], ["Centrifuge", "Synthesizer", Eb.c]),
-        cryo: Pb(!1, [Eb.c], [])
+    const bz = {
+        water: Nz(!0, ["Condenser"], ["Centrifuge", "Synthesizer", Oz.c]),
+        cryo: Nz(!1, [Oz.c], [])
       },
-      jb = new Set([...Xb.water.roots, ...Xb.cryo.roots]),
-      Rb = {
+      wz = new Set([...bz.water.roots, ...bz.cryo.roots]),
+      Dz = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -501,127 +501,127 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      kb = Mb.c.map((bb => Rb[bb])),
-      yb = kb.map((bb => {
-        let [ab, Ub, Ab] = bb;
-        return Eb.r.findIndex((bb => {
-          let [Mb, Tb, Eb] = bb;
-          return Mb === ab && Tb === Ub && Eb === Ab
+      gz = Wz.f.map((zz => Dz[zz])),
+      Hz = gz.map((zz => {
+        let [tz, sz, Fz] = zz;
+        return Oz.w.findIndex((zz => {
+          let [Wz, Xz, Oz] = zz;
+          return Wz === tz && Xz === sz && Oz === Fz
         }))
       }));
 
-    function Zb(bb) {
-      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const Ub = Ab.h[bb],
-        Mb = null === Ub || void 0 === Ub ? void 0 : Ub.meta.rootName,
-        Pb = Xb[ab];
-      if (!Mb || !Pb.roots.has(Mb)) return null;
-      if ((0, Tb.k)(Mb)) return (0, Eb.B)(Ub.name) === ab ? Bb : null;
-      if (Mb === Eb.f) return eb;
-      if (Mb === Lb) return Ub.name.endsWith("|Water") ? vb : null;
-      const [jb, Rb] = Yb.h[(Ub.meta.rot || 1) - 1];
-      return (0, Eb.C)(Pb.makers.has(Mb) ? "maker" : "user", [-jb, 0, -Rb])
+    function Bz(zz) {
+      let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const sz = Fz.j[zz],
+        Wz = null === sz || void 0 === sz ? void 0 : sz.meta.rootName,
+        Nz = bz[tz];
+      if (!Wz || !Nz.roots.has(Wz)) return null;
+      if ((0, Xz.k)(Wz)) return (0, Oz.I)(sz.name) === tz ? vz : null;
+      if (Wz === Oz.k) return Uz;
+      if (Wz === uz) return sz.name.endsWith("|Water") ? Kz : null;
+      const [wz, Dz] = oz.f[(sz.meta.rot || 1) - 1];
+      return (0, Oz.J)(Nz.makers.has(Wz) ? "maker" : "user", [-wz, 0, -Dz])
     }
 
-    function Db(bb, ab, Ub, Mb) {
-      let Tb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function Pz(zz, tz, sz, Wz) {
+      let Xz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: Yb
-      } = Xb[Tb];
-      return kb.some(((eb, vb) => {
-        var Lb, Pb;
-        let [Xb, jb, Rb] = eb;
-        const kb = bb(ab + Xb, Ub + jb, Mb + Rb),
-          Db = Zb(kb, Tb);
-        return null !== Db && Yb.has(null !== (Lb = null === (Pb = Ab.h[kb]) || void 0 === Pb ? void 0 : Pb.meta.rootName) && void 0 !== Lb ? Lb : "") && !(0, Eb.D)(Bb, Db, yb[vb])
+        makers: oz
+      } = bz[Xz];
+      return gz.some(((Uz, Kz) => {
+        var uz, Nz;
+        let [bz, wz, Dz] = Uz;
+        const gz = zz(tz + bz, sz + wz, Wz + Dz),
+          Pz = Bz(gz, Xz);
+        return null !== Pz && oz.has(null !== (uz = null === (Nz = Fz.j[gz]) || void 0 === Nz ? void 0 : Nz.meta.rootName) && void 0 !== uz ? uz : "") && !(0, Oz.M)(vz, Pz, Hz[Kz])
       }))
     }
 
-    function zb(bb) {
-      const ab = Ab.h[bb];
-      return ab ? (0, Eb.B)(ab.name) : null
+    function rz(zz) {
+      const tz = Fz.j[zz];
+      return tz ? (0, Oz.I)(tz.name) : null
     }
-    let xb = null;
+    let Yz = null;
 
-    function ib(bb) {
-      if (!xb) {
-        xb = new Map;
-        for (const bb of ["water", "cryo"])
-          for (let ab = 0; ab < 64; ab++)
-            for (const Ub of [!1, !0]) xb.set((0, Tb.n)(bb, ab, Ub), {
-              CP: bb,
-              mask: ab,
-              full: Ub
+    function xz(zz) {
+      if (!Yz) {
+        Yz = new Map;
+        for (const zz of ["water", "cryo"])
+          for (let tz = 0; tz < 64; tz++)
+            for (const sz of [!1, !0]) Yz.set((0, Xz.m)(zz, tz, sz), {
+              cb: zz,
+              mask: tz,
+              full: sz
             })
       }
-      return xb.get(bb)
+      return Yz.get(zz)
     }
-    const fb = new Map(Array.from({
-      length: Tb.g + 1
-    }, ((bb, ab) => [(0, Tb.r)(ab), ab])));
+    const mz = new Map(Array.from({
+      length: Xz.h + 1
+    }, ((zz, tz) => [(0, Xz.p)(tz), tz])));
 
-    function mb(bb, ab, Ub, Mb, Tb, Eb) {
-      return kb.some(((Yb, Bb) => {
-        var eb, vb, Lb;
-        let [Pb, Xb, jb] = Yb;
-        if (0 === (Eb >> Bb & 1)) return !1;
-        const Rb = null !== (eb = null === (vb = Ab.h[bb(ab + Pb, Ub + Xb, Mb + jb)]) || void 0 === vb ? void 0 : vb.name) && void 0 !== eb ? eb : "",
-          kb = ib(Rb);
-        return kb ? kb.CP === Tb && kb.full : (null !== (Lb = function(bb) {
-          var ab;
-          return null !== (ab = fb.get(bb)) && void 0 !== ab ? ab : null
-        }(Rb)) && void 0 !== Lb ? Lb : 0) > 0
+    function Jz(zz, tz, sz, Wz, Xz, Oz) {
+      return gz.some(((oz, vz) => {
+        var Uz, Kz, uz;
+        let [Nz, bz, wz] = oz;
+        if (0 === (Oz >> vz & 1)) return !1;
+        const Dz = null !== (Uz = null === (Kz = Fz.j[zz(tz + Nz, sz + bz, Wz + wz)]) || void 0 === Kz ? void 0 : Kz.name) && void 0 !== Uz ? Uz : "",
+          gz = xz(Dz);
+        return gz ? gz.cb === Xz && gz.full : (null !== (uz = function(zz) {
+          var tz;
+          return null !== (tz = mz.get(zz)) && void 0 !== tz ? tz : null
+        }(Dz)) && void 0 !== uz ? uz : 0) > 0
       }))
     }
-    class pb {
+    class Iz {
       constructor() {
-        this.reshapeOffsets = kb
+        this.reshapeOffsets = gz
       }
-      handles(bb) {
-        return null !== zb(bb)
+      handles(zz) {
+        return null !== rz(zz)
       }
-      affects(bb) {
-        var ab, Ub;
-        return jb.has(null !== (ab = null === (Ub = Ab.h[bb]) || void 0 === Ub ? void 0 : Ub.meta.rootName) && void 0 !== ab ? ab : "")
+      affects(zz) {
+        var tz, sz;
+        return wz.has(null !== (tz = null === (sz = Fz.j[zz]) || void 0 === sz ? void 0 : sz.meta.rootName) && void 0 !== tz ? tz : "")
       }
-      placedBy(bb) {
-        var ab;
-        return (null === (ab = Ab.h[bb]) || void 0 === ab ? void 0 : ab.meta.rootName) === Tb.c ? Tb.f : null
+      placedBy(zz) {
+        var tz;
+        return (null === (tz = Fz.j[zz]) || void 0 === tz ? void 0 : tz.meta.rootName) === Xz.c ? Xz.d : null
       }
-      shape(bb, ab, Ub, Mb, Yb, eb) {
-        var vb, Lb, Pb;
-        const Xb = null !== (vb = null === (Lb = Ab.h[Yb]) || void 0 === Lb ? void 0 : Lb.name) && void 0 !== vb ? vb : "",
-          jb = eb || Xb !== Tb.f ? null !== (Pb = (0, Eb.B)(Xb)) && void 0 !== Pb ? Pb : "water" : function(bb, ab, Ub, Ab) {
-            return kb.some(((Mb, Tb) => {
-              let [Yb, eb, vb] = Mb;
-              const Lb = Zb(bb(ab + Yb, Ub + eb, Ab + vb), "cryo");
-              return null !== Lb && "port" !== Lb.kind && (0, Eb.D)(Bb, Lb, yb[Tb])
+      shape(zz, tz, sz, Wz, oz, Uz) {
+        var Kz, uz, Nz;
+        const bz = null !== (Kz = null === (uz = Fz.j[oz]) || void 0 === uz ? void 0 : uz.name) && void 0 !== Kz ? Kz : "",
+          wz = Uz || bz !== Xz.d ? null !== (Nz = (0, Oz.I)(bz)) && void 0 !== Nz ? Nz : "water" : function(zz, tz, sz, Fz) {
+            return gz.some(((Wz, Xz) => {
+              let [oz, Uz, Kz] = Wz;
+              const uz = Bz(zz(tz + oz, sz + Uz, Fz + Kz), "cryo");
+              return null !== uz && "port" !== uz.kind && (0, Oz.M)(vz, uz, Hz[Xz])
             })) ? "cryo" : "water"
-          }(bb, ab, Ub, Mb),
-          Rb = function(bb, ab, Ub, Ab) {
-            let Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              Tb = 0;
-            return kb.forEach(((Yb, eb) => {
-              let [vb, Lb, Pb] = Yb;
-              const Xb = Zb(bb(ab + vb, Ub + Lb, Ab + Pb), Mb);
-              Xb && (0, Eb.D)(Bb, Xb, yb[eb]) && (Tb |= 1 << eb)
-            })), Tb
-          }(bb, ab, Ub, Mb, jb),
-          Db = eb ? function(bb) {
-            var ab;
-            return !0 === (null === (ab = ib(bb)) || void 0 === ab ? void 0 : ab.full)
-          }(Xb) : mb(bb, ab, Ub, Mb, jb, Rb);
-        return (0, Ab.l)((0, Tb.n)(jb, Rb, Db))
+          }(zz, tz, sz, Wz),
+          Dz = function(zz, tz, sz, Fz) {
+            let Wz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              Xz = 0;
+            return gz.forEach(((oz, Uz) => {
+              let [Kz, uz, Nz] = oz;
+              const bz = Bz(zz(tz + Kz, sz + uz, Fz + Nz), Wz);
+              bz && (0, Oz.M)(vz, bz, Hz[Uz]) && (Xz |= 1 << Uz)
+            })), Xz
+          }(zz, tz, sz, Wz, wz),
+          Pz = Uz ? function(zz) {
+            var tz;
+            return !0 === (null === (tz = xz(zz)) || void 0 === tz ? void 0 : tz.full)
+          }(bz) : Jz(zz, tz, sz, Wz, wz, Dz);
+        return (0, Fz.k)((0, Xz.m)(wz, Dz, Pz))
       }
     }
   },
-  37509: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Ab,
-      d: () => Tb
+  37627: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Fz,
+      d: () => Xz
     });
-    const Ab = ["Chest", "Loot Chest", "Moonstone Chest"],
-      Mb = [{
+    const Fz = ["Chest", "Loot Chest", "Moonstone Chest"],
+      Wz = [{
         name: "Workbench",
         exactMatch: !0
       }, {
@@ -641,10 +641,10 @@ export const modules = {
         exactMatch: !1
       }];
 
-    function Tb(bb) {
-      return Mb.find((ab => ab.exactMatch ? bb === ab.name : bb.includes(ab.name)))
+    function Xz(zz) {
+      return Wz.find((tz => tz.exactMatch ? zz === tz.name : zz.includes(tz.name)))
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

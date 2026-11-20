@@ -1,47 +1,47 @@
 export const id = 250;
 export const ids = [250];
 export const modules = {
-  40186: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      c: () => ob
+  40177: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => kz
     });
-    var Ab = Ub(39104),
-      Mb = Ub(39110),
-      Tb = Ub(36431),
-      Eb = Ub(36401),
-      Yb = Ub(36436),
-      Bb = Ub(39314),
-      eb = Ub(39522),
-      vb = Ub(39269),
-      Lb = Ub(39010),
-      Pb = Ub(36405);
-    class Xb {
+    var Fz = sz(39167),
+      Wz = sz(39170),
+      Xz = sz(36505),
+      Oz = sz(36475),
+      oz = sz(36507),
+      vz = sz(39374),
+      Uz = sz(39555),
+      Kz = sz(39328),
+      uz = sz(39079),
+      Nz = sz(36479);
+    class bz {
       constructor() {
         this._zoomStopsAnimation = !1, this._idleRotationSpeed = .05, this._idleRotationWaitTime = 2e3, this._idleRotationSpinupTime = 2e3, this.targetAlpha = null, this._attachedCamera = null, this._isPointerDown = !1, this._lastFrameTime = null, this._lastInteractionTime = -1 / 0, this._cameraRotationSpeed = 0, this._lastFrameRadius = 0
       }
       get name() {
         return "AutoRotation"
       }
-      set zoomStopsAnimation(bb) {
-        this._zoomStopsAnimation = bb
+      set zoomStopsAnimation(zz) {
+        this._zoomStopsAnimation = zz
       }
       get zoomStopsAnimation() {
         return this._zoomStopsAnimation
       }
-      set idleRotationSpeed(bb) {
-        this._idleRotationSpeed = bb
+      set idleRotationSpeed(zz) {
+        this._idleRotationSpeed = zz
       }
       get idleRotationSpeed() {
         return this._idleRotationSpeed
       }
-      set idleRotationWaitTime(bb) {
-        this._idleRotationWaitTime = bb
+      set idleRotationWaitTime(zz) {
+        this._idleRotationWaitTime = zz
       }
       get idleRotationWaitTime() {
         return this._idleRotationWaitTime
       }
-      set idleRotationSpinupTime(bb) {
-        this._idleRotationSpinupTime = bb
+      set idleRotationSpinupTime(zz) {
+        this._idleRotationSpinupTime = zz
       }
       get idleRotationSpinupTime() {
         return this._idleRotationSpinupTime
@@ -53,75 +53,75 @@ export const modules = {
         return this._attachedCamera
       }
       init() {}
-      attach(bb) {
-        this._attachedCamera = bb;
-        const ab = this._attachedCamera.oN();
-        this._onPrePointerObservableObserver = ab.onPrePointerObservable.add((bb => {
-          bb.type !== vb.c.POINTERDOWN ? bb.type === vb.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onAfterCheckInputsObserver = bb.onAfterCheckInputsObservable.add((() => {
+      attach(zz) {
+        this._attachedCamera = zz;
+        const tz = this._attachedCamera.aJ();
+        this._onPrePointerObservableObserver = tz.onPrePointerObservable.add((zz => {
+          zz.type !== Kz.c.POINTERDOWN ? zz.type === Kz.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
+        })), this._onAfterCheckInputsObserver = zz.onAfterCheckInputsObservable.add((() => {
           if (this._reachTargetAlpha()) return;
-          const bb = Lb.e.Now;
-          let ab = 0;
-          null != this._lastFrameTime && (ab = bb - this._lastFrameTime), this._lastFrameTime = bb, this._applyUserInteraction();
-          const Ub = bb - this._lastInteractionTime - this._idleRotationWaitTime,
-            Ab = Math.max(Math.min(Ub / this._idleRotationSpinupTime, 1), 0);
-          this._cameraRotationSpeed = this._idleRotationSpeed * Ab, this._attachedCamera && (this._attachedCamera.alpha -= this._cameraRotationSpeed * (ab / 1e3))
+          const zz = uz.b.Now;
+          let tz = 0;
+          null != this._lastFrameTime && (tz = zz - this._lastFrameTime), this._lastFrameTime = zz, this._applyUserInteraction();
+          const sz = zz - this._lastInteractionTime - this._idleRotationWaitTime,
+            Fz = Math.max(Math.min(sz / this._idleRotationSpinupTime, 1), 0);
+          this._cameraRotationSpeed = this._idleRotationSpeed * Fz, this._attachedCamera && (this._attachedCamera.alpha -= this._cameraRotationSpeed * (tz / 1e3))
         }))
       }
       detach() {
         if (!this._attachedCamera) return;
-        const bb = this._attachedCamera.oN();
-        this._onPrePointerObservableObserver && bb.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._attachedCamera = null, this._lastFrameTime = null
+        const zz = this._attachedCamera.aJ();
+        this._onPrePointerObservableObserver && zz.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._attachedCamera = null, this._lastFrameTime = null
       }
-      resetLastInteractionTime(bb) {
-        this._lastInteractionTime = bb ?? Lb.e.Now
+      resetLastInteractionTime(zz) {
+        this._lastInteractionTime = zz ?? uz.b.Now
       }
       _reachTargetAlpha() {
-        return !(!this._attachedCamera || null === this.targetAlpha) && Math.abs(this._attachedCamera.alpha - this.targetAlpha) < Pb.e
+        return !(!this._attachedCamera || null === this.targetAlpha) && Math.abs(this._attachedCamera.alpha - this.targetAlpha) < Nz.c
       }
       _userIsZooming() {
         return !!this._attachedCamera && 0 !== this._attachedCamera.inertialRadiusOffset
       }
       _shouldAnimationStopForInteraction() {
         if (!this._attachedCamera) return !1;
-        let bb = !1;
-        return this._lastFrameRadius === this._attachedCamera.radius && 0 !== this._attachedCamera.inertialRadiusOffset && (bb = !0), this._lastFrameRadius = this._attachedCamera.radius, this._zoomStopsAnimation ? bb : this._userIsZooming()
+        let zz = !1;
+        return this._lastFrameRadius === this._attachedCamera.radius && 0 !== this._attachedCamera.inertialRadiusOffset && (zz = !0), this._lastFrameRadius = this._attachedCamera.radius, this._zoomStopsAnimation ? zz : this._userIsZooming()
       }
       _applyUserInteraction() {
-        this._userIsMoving() && !this._shouldAnimationStopForInteraction() && (this._lastInteractionTime = Lb.e.Now)
+        this._userIsMoving() && !this._shouldAnimationStopForInteraction() && (this._lastInteractionTime = uz.b.Now)
       }
       _userIsMoving() {
         return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
       }
     }
-    Ub(40192);
-    class jb {
+    sz(40180);
+    class wz {
       constructor() {
-        this._easingMode = jb.EASINGMODE_EASEIN
+        this._easingMode = wz.EASINGMODE_EASEIN
       }
-      setEasingMode(bb) {
-        const ab = Math.min(Math.max(bb, 0), 2);
-        this._easingMode = ab
+      setEasingMode(zz) {
+        const tz = Math.min(Math.max(zz, 0), 2);
+        this._easingMode = tz
       }
       getEasingMode() {
         return this._easingMode
       }
-      easeInCore(bb) {
+      easeInCore(zz) {
         throw new Error("You must implement this method")
       }
-      ease(bb) {
+      ease(zz) {
         switch (this._easingMode) {
-          case jb.EASINGMODE_EASEIN:
-            return this.easeInCore(bb);
-          case jb.EASINGMODE_EASEOUT:
-            return 1 - this.easeInCore(1 - bb)
+          case wz.EASINGMODE_EASEIN:
+            return this.easeInCore(zz);
+          case wz.EASINGMODE_EASEOUT:
+            return 1 - this.easeInCore(1 - zz)
         }
-        return bb >= .5 ? .5 * (1 - this.easeInCore(2 * (1 - bb))) + .5 : .5 * this.easeInCore(2 * bb)
+        return zz >= .5 ? .5 * (1 - this.easeInCore(2 * (1 - zz))) + .5 : .5 * this.easeInCore(2 * zz)
       }
     }
-    jb.EASINGMODE_EASEIN = 0, jb.EASINGMODE_EASEOUT = 1, jb.EASINGMODE_EASEINOUT = 2;
-    var Rb = Ub(40196);
-    class kb {
+    wz.EASINGMODE_EASEIN = 0, wz.EASINGMODE_EASEOUT = 1, wz.EASINGMODE_EASEINOUT = 2;
+    var Dz = sz(40185);
+    class gz {
       constructor() {
         this.transitionDuration = 450, this.lowerRadiusTransitionRange = 2, this.upperRadiusTransitionRange = -2, this._autoTransitionRange = !1, this._attachedCamera = null, this._radiusIsAnimating = !1, this._radiusBounceTransition = null, this._animatables = new Array
       }
@@ -131,37 +131,37 @@ export const modules = {
       get autoTransitionRange() {
         return this._autoTransitionRange
       }
-      set autoTransitionRange(bb) {
-        if (this._autoTransitionRange === bb) return;
-        this._autoTransitionRange = bb;
-        const ab = this._attachedCamera;
-        ab && (bb ? this._onMeshTargetChangedObserver = ab.onMeshTargetChangedObservable.add((bb => {
-          if (bb && (bb.computeWorldMatrix(!0), bb.DH)) {
-            const ab = bb.DH().diagonalLength;
-            this.lowerRadiusTransitionRange = .05 * ab, this.upperRadiusTransitionRange = .05 * ab
+      set autoTransitionRange(zz) {
+        if (this._autoTransitionRange === zz) return;
+        this._autoTransitionRange = zz;
+        const tz = this._attachedCamera;
+        tz && (zz ? this._onMeshTargetChangedObserver = tz.onMeshTargetChangedObservable.add((zz => {
+          if (zz && (zz.computeWorldMatrix(!0), zz.rC)) {
+            const tz = zz.rC().diagonalLength;
+            this.lowerRadiusTransitionRange = .05 * tz, this.upperRadiusTransitionRange = .05 * tz
           }
-        })) : this._onMeshTargetChangedObserver && ab.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver))
+        })) : this._onMeshTargetChangedObserver && tz.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver))
       }
       get attachedNode() {
         return this._attachedCamera
       }
       init() {}
-      attach(bb) {
-        this._attachedCamera = bb, this._onAfterCheckInputsObserver = bb.onAfterCheckInputsObservable.add((() => {
+      attach(zz) {
+        this._attachedCamera = zz, this._onAfterCheckInputsObserver = zz.onAfterCheckInputsObservable.add((() => {
           this._attachedCamera && (this._isRadiusAtLimit(this._attachedCamera.lowerRadiusLimit) && this._applyBoundRadiusAnimation(this.lowerRadiusTransitionRange), this._isRadiusAtLimit(this._attachedCamera.upperRadiusLimit) && this._applyBoundRadiusAnimation(this.upperRadiusTransitionRange))
         }))
       }
       detach() {
         this._attachedCamera && (this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null)
       }
-      _isRadiusAtLimit(bb) {
-        return !!this._attachedCamera && (this._attachedCamera.radius === bb && !this._radiusIsAnimating)
+      _isRadiusAtLimit(zz) {
+        return !!this._attachedCamera && (this._attachedCamera.radius === zz && !this._radiusIsAnimating)
       }
-      _applyBoundRadiusAnimation(bb) {
+      _applyBoundRadiusAnimation(zz) {
         if (!this._attachedCamera) return;
-        this._radiusBounceTransition || (kb.EasingFunction.setEasingMode(kb.EasingMode), this._radiusBounceTransition = Rb.e.CreateAnimation("radius", Rb.e.ANIMATIONTYPE_FLOAT, 60, kb.EasingFunction)), this._cachedWheelPrecision = this._attachedCamera.wheelPrecision, this._attachedCamera.wheelPrecision = 1 / 0, this._attachedCamera.inertialRadiusOffset = 0, this.stopAllAnimations(), this._radiusIsAnimating = !0;
-        const ab = Rb.e.TransitionTo("radius", this._attachedCamera.radius + bb, this._attachedCamera, this._attachedCamera.oN(), 60, this._radiusBounceTransition, this.transitionDuration, (() => this._clearAnimationLocks()));
-        ab && this._animatables.push(ab)
+        this._radiusBounceTransition || (gz.EasingFunction.setEasingMode(gz.EasingMode), this._radiusBounceTransition = Dz.d.CreateAnimation("radius", Dz.d.ANIMATIONTYPE_FLOAT, 60, gz.EasingFunction)), this._cachedWheelPrecision = this._attachedCamera.wheelPrecision, this._attachedCamera.wheelPrecision = 1 / 0, this._attachedCamera.inertialRadiusOffset = 0, this.stopAllAnimations(), this._radiusIsAnimating = !0;
+        const tz = Dz.d.TransitionTo("radius", this._attachedCamera.radius + zz, this._attachedCamera, this._attachedCamera.aJ(), 60, this._radiusBounceTransition, this.transitionDuration, (() => this._clearAnimationLocks()));
+        tz && this._animatables.push(tz)
       }
       _clearAnimationLocks() {
         this._radiusIsAnimating = !1, this._attachedCamera && (this._attachedCamera.wheelPrecision = this._cachedWheelPrecision)
@@ -170,67 +170,67 @@ export const modules = {
         for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0].onAnimationEnd = null, this._animatables[0].stop(), this._animatables.shift()
       }
     }
-    kb.EasingFunction = new class extends jb {
+    gz.EasingFunction = new class extends wz {
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        super(), this.amplitude = bb
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        super(), this.amplitude = zz
       }
-      easeInCore(bb) {
-        const ab = Math.max(0, this.amplitude);
-        return Math.pow(bb, 3) - bb * ab * Math.sin(3.141592653589793 * bb)
+      easeInCore(zz) {
+        const tz = Math.max(0, this.amplitude);
+        return Math.pow(zz, 3) - zz * tz * Math.sin(3.141592653589793 * zz)
       }
-    }(.3), kb.EasingMode = jb.EASINGMODE_EASEOUT;
-    class yb {
+    }(.3), gz.EasingMode = wz.EASINGMODE_EASEOUT;
+    class Hz {
       constructor() {
-        this.onTargetFramingAnimationEndObservable = new Tb.b, this._mode = yb.FitFrustumSidesMode, this._radiusScale = 1, this._positionScale = .5, this._defaultElevation = .3, this._elevationReturnTime = 1500, this._elevationReturnWaitTime = 1e3, this._zoomStopsAnimation = !1, this._framingTime = 1500, this.autoCorrectCameraLimitsAndSensibility = !0, this._attachedCamera = null, this._isPointerDown = !1, this._lastInteractionTime = -1 / 0, this._animatables = new Array, this._betaIsAnimating = !1
+        this.onTargetFramingAnimationEndObservable = new Xz.c, this._mode = Hz.FitFrustumSidesMode, this._radiusScale = 1, this._positionScale = .5, this._defaultElevation = .3, this._elevationReturnTime = 1500, this._elevationReturnWaitTime = 1e3, this._zoomStopsAnimation = !1, this._framingTime = 1500, this.autoCorrectCameraLimitsAndSensibility = !0, this._attachedCamera = null, this._isPointerDown = !1, this._lastInteractionTime = -1 / 0, this._animatables = new Array, this._betaIsAnimating = !1
       }
       get name() {
         return "Framing"
       }
-      set mode(bb) {
-        this._mode = bb
+      set mode(zz) {
+        this._mode = zz
       }
       get mode() {
         return this._mode
       }
-      set radiusScale(bb) {
-        this._radiusScale = bb
+      set radiusScale(zz) {
+        this._radiusScale = zz
       }
       get radiusScale() {
         return this._radiusScale
       }
-      set positionScale(bb) {
-        this._positionScale = bb
+      set positionScale(zz) {
+        this._positionScale = zz
       }
       get positionScale() {
         return this._positionScale
       }
-      set defaultElevation(bb) {
-        this._defaultElevation = bb
+      set defaultElevation(zz) {
+        this._defaultElevation = zz
       }
       get defaultElevation() {
         return this._defaultElevation
       }
-      set elevationReturnTime(bb) {
-        this._elevationReturnTime = bb
+      set elevationReturnTime(zz) {
+        this._elevationReturnTime = zz
       }
       get elevationReturnTime() {
         return this._elevationReturnTime
       }
-      set elevationReturnWaitTime(bb) {
-        this._elevationReturnWaitTime = bb
+      set elevationReturnWaitTime(zz) {
+        this._elevationReturnWaitTime = zz
       }
       get elevationReturnWaitTime() {
         return this._elevationReturnWaitTime
       }
-      set zoomStopsAnimation(bb) {
-        this._zoomStopsAnimation = bb
+      set zoomStopsAnimation(zz) {
+        this._zoomStopsAnimation = zz
       }
       get zoomStopsAnimation() {
         return this._zoomStopsAnimation
       }
-      set framingTime(bb) {
-        this._framingTime = bb
+      set framingTime(zz) {
+        this._framingTime = zz
       }
       get framingTime() {
         return this._framingTime
@@ -239,102 +239,102 @@ export const modules = {
         return this._attachedCamera
       }
       init() {}
-      attach(bb) {
-        this._attachedCamera = bb;
-        const ab = this._attachedCamera.oN();
-        yb.EasingFunction.setEasingMode(yb.EasingMode), this._onPrePointerObservableObserver = ab.onPrePointerObservable.add((bb => {
-          bb.type !== vb.c.POINTERDOWN ? bb.type === vb.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onMeshTargetChangedObserver = bb.onMeshTargetChangedObservable.add((bb => {
-          bb && bb.DH && this.zoomOnMesh(bb, void 0, (() => {
+      attach(zz) {
+        this._attachedCamera = zz;
+        const tz = this._attachedCamera.aJ();
+        Hz.EasingFunction.setEasingMode(Hz.EasingMode), this._onPrePointerObservableObserver = tz.onPrePointerObservable.add((zz => {
+          zz.type !== Kz.c.POINTERDOWN ? zz.type === Kz.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
+        })), this._onMeshTargetChangedObserver = zz.onMeshTargetChangedObservable.add((zz => {
+          zz && zz.rC && this.zoomOnMesh(zz, void 0, (() => {
             this.onTargetFramingAnimationEndObservable.notifyObservers()
           }))
-        })), this._onAfterCheckInputsObserver = bb.onAfterCheckInputsObservable.add((() => {
+        })), this._onAfterCheckInputsObserver = zz.onAfterCheckInputsObservable.add((() => {
           this._applyUserInteraction(), this._maintainCameraAboveGround()
         }))
       }
       detach() {
         if (!this._attachedCamera) return;
-        const bb = this._attachedCamera.oN();
-        this._onPrePointerObservableObserver && bb.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null
+        const zz = this._attachedCamera.aJ();
+        this._onPrePointerObservableObserver && zz.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null
       }
-      zoomOnMesh(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        bb.computeWorldMatrix(!0);
-        const Ab = bb.DH().boundingBox;
-        this.zoomOnBoundingInfo(Ab.minimumWorld, Ab.maximumWorld, ab, Ub)
+      zoomOnMesh(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        zz.computeWorldMatrix(!0);
+        const Fz = zz.rC().boundingBox;
+        this.zoomOnBoundingInfo(Fz.minimumWorld, Fz.maximumWorld, tz, sz)
       }
-      zoomOnMeshHierarchy(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        bb.computeWorldMatrix(!0);
-        const Ab = bb.getHierarchyBoundingVectors(!0);
-        this.zoomOnBoundingInfo(Ab.min, Ab.max, ab, Ub)
+      zoomOnMeshHierarchy(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        zz.computeWorldMatrix(!0);
+        const Fz = zz.getHierarchyBoundingVectors(!0);
+        this.zoomOnBoundingInfo(Fz.min, Fz.max, tz, sz)
       }
-      zoomOnMeshesHierarchy(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const Ab = new Eb.m(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-          Mb = new Eb.m(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-        for (let Tb = 0; Tb < bb.length; Tb++) {
-          const ab = bb[Tb].getHierarchyBoundingVectors(!0);
-          Eb.m.CheckExtends(ab.min, Ab, Mb), Eb.m.CheckExtends(ab.max, Ab, Mb)
+      zoomOnMeshesHierarchy(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const Fz = new Oz.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
+          Wz = new Oz.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+        for (let Xz = 0; Xz < zz.length; Xz++) {
+          const tz = zz[Xz].getHierarchyBoundingVectors(!0);
+          Oz.p.CheckExtends(tz.min, Fz, Wz), Oz.p.CheckExtends(tz.max, Fz, Wz)
         }
-        this.zoomOnBoundingInfo(Ab, Mb, ab, Ub)
+        this.zoomOnBoundingInfo(Fz, Wz, tz, sz)
       }
-      zoomOnBoundingInfo(bb, ab) {
-        let Ub, Ab = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Mb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      zoomOnBoundingInfo(zz, tz) {
+        let sz, Fz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Wz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
         if (!this._attachedCamera) return !1;
-        const Tb = bb.y,
-          Yb = Tb + (ab.y - Tb) * this._positionScale,
-          Bb = ab.subtract(bb).scale(.5);
-        if (!isFinite(Yb)) return !1;
-        if (Ab) Ub = new Eb.m(0, Yb, 0);
+        const Xz = zz.y,
+          oz = Xz + (tz.y - Xz) * this._positionScale,
+          vz = tz.subtract(zz).scale(.5);
+        if (!isFinite(oz)) return !1;
+        if (Fz) sz = new Oz.p(0, oz, 0);
         else {
-          const ab = bb.add(Bb);
-          Ub = new Eb.m(ab.x, Yb, ab.z)
+          const tz = zz.add(vz);
+          sz = new Oz.p(tz.x, oz, tz.z)
         }
-        this._vectorTransition || (this._vectorTransition = Rb.e.CreateAnimation("target", Rb.e.ANIMATIONTYPE_VECTOR3, 60, yb.EasingFunction)), this._betaIsAnimating = !0;
-        let eb = Rb.e.TransitionTo("target", Ub, this._attachedCamera, this._attachedCamera.oN(), 60, this._vectorTransition, this._framingTime);
-        eb && this._animatables.push(eb);
-        let vb = 0;
-        if (this._mode === yb.FitFrustumSidesMode) {
-          const Ub = this._calculateLowerRadiusFromModelBoundingSphere(bb, ab);
-          this.autoCorrectCameraLimitsAndSensibility && (this._attachedCamera.lowerRadiusLimit = Bb.length() + this._attachedCamera.minZ), vb = Ub
-        } else this._mode === yb.IgnoreBoundsSizeMode && (vb = this._calculateLowerRadiusFromModelBoundingSphere(bb, ab), this.autoCorrectCameraLimitsAndSensibility && null === this._attachedCamera.lowerRadiusLimit && (this._attachedCamera.lowerRadiusLimit = this._attachedCamera.minZ));
+        this._vectorTransition || (this._vectorTransition = Dz.d.CreateAnimation("target", Dz.d.ANIMATIONTYPE_VECTOR3, 60, Hz.EasingFunction)), this._betaIsAnimating = !0;
+        let Uz = Dz.d.TransitionTo("target", sz, this._attachedCamera, this._attachedCamera.aJ(), 60, this._vectorTransition, this._framingTime);
+        Uz && this._animatables.push(Uz);
+        let Kz = 0;
+        if (this._mode === Hz.FitFrustumSidesMode) {
+          const sz = this._calculateLowerRadiusFromModelBoundingSphere(zz, tz);
+          this.autoCorrectCameraLimitsAndSensibility && (this._attachedCamera.lowerRadiusLimit = vz.length() + this._attachedCamera.minZ), Kz = sz
+        } else this._mode === Hz.IgnoreBoundsSizeMode && (Kz = this._calculateLowerRadiusFromModelBoundingSphere(zz, tz), this.autoCorrectCameraLimitsAndSensibility && null === this._attachedCamera.lowerRadiusLimit && (this._attachedCamera.lowerRadiusLimit = this._attachedCamera.minZ));
         if (this.autoCorrectCameraLimitsAndSensibility) {
-          const Ub = ab.subtract(bb).length();
-          this._attachedCamera.panningSensibility = 5e3 / Ub, this._attachedCamera.wheelPrecision = 100 / vb
+          const sz = tz.subtract(zz).length();
+          this._attachedCamera.panningSensibility = 5e3 / sz, this._attachedCamera.wheelPrecision = 100 / Kz
         }
-        return this._radiusTransition || (this._radiusTransition = Rb.e.CreateAnimation("radius", Rb.e.ANIMATIONTYPE_FLOAT, 60, yb.EasingFunction)), eb = Rb.e.TransitionTo("radius", vb, this._attachedCamera, this._attachedCamera.oN(), 60, this._radiusTransition, this._framingTime, (() => {
-          this.stopAllAnimations(), Mb && Mb(), this._attachedCamera && this._attachedCamera.useInputToRestoreState && this._attachedCamera.storeState()
-        })), eb && this._animatables.push(eb), !0
+        return this._radiusTransition || (this._radiusTransition = Dz.d.CreateAnimation("radius", Dz.d.ANIMATIONTYPE_FLOAT, 60, Hz.EasingFunction)), Uz = Dz.d.TransitionTo("radius", Kz, this._attachedCamera, this._attachedCamera.aJ(), 60, this._radiusTransition, this._framingTime, (() => {
+          this.stopAllAnimations(), Wz && Wz(), this._attachedCamera && this._attachedCamera.useInputToRestoreState && this._attachedCamera.storeState()
+        })), Uz && this._animatables.push(Uz), !0
       }
-      _calculateLowerRadiusFromModelBoundingSphere(bb, ab) {
-        const Ub = this._attachedCamera;
-        if (!Ub) return 0;
-        let Ab = Ub._calculateLowerRadiusFromModelBoundingSphere(bb, ab, this._radiusScale);
-        return Ub.lowerRadiusLimit && this._mode === yb.IgnoreBoundsSizeMode && (Ab = Ab < Ub.lowerRadiusLimit ? Ub.lowerRadiusLimit : Ab), Ub.upperRadiusLimit && (Ab = Ab > Ub.upperRadiusLimit ? Ub.upperRadiusLimit : Ab), Ab
+      _calculateLowerRadiusFromModelBoundingSphere(zz, tz) {
+        const sz = this._attachedCamera;
+        if (!sz) return 0;
+        let Fz = sz._calculateLowerRadiusFromModelBoundingSphere(zz, tz, this._radiusScale);
+        return sz.lowerRadiusLimit && this._mode === Hz.IgnoreBoundsSizeMode && (Fz = Fz < sz.lowerRadiusLimit ? sz.lowerRadiusLimit : Fz), sz.upperRadiusLimit && (Fz = Fz > sz.upperRadiusLimit ? sz.upperRadiusLimit : Fz), Fz
       }
       _maintainCameraAboveGround() {
         if (this._elevationReturnTime < 0) return;
-        const bb = Lb.e.Now - this._lastInteractionTime,
-          ab = .5 * Math.PI - this._defaultElevation,
-          Ub = .5 * Math.PI;
-        if (this._attachedCamera && !this._betaIsAnimating && this._attachedCamera.beta > Ub && bb >= this._elevationReturnWaitTime) {
-          this._betaIsAnimating = !0, this.stopAllAnimations(), this._betaTransition || (this._betaTransition = Rb.e.CreateAnimation("beta", Rb.e.ANIMATIONTYPE_FLOAT, 60, yb.EasingFunction));
-          const bb = Rb.e.TransitionTo("beta", ab, this._attachedCamera, this._attachedCamera.oN(), 60, this._betaTransition, this._elevationReturnTime, (() => {
+        const zz = uz.b.Now - this._lastInteractionTime,
+          tz = .5 * Math.PI - this._defaultElevation,
+          sz = .5 * Math.PI;
+        if (this._attachedCamera && !this._betaIsAnimating && this._attachedCamera.beta > sz && zz >= this._elevationReturnWaitTime) {
+          this._betaIsAnimating = !0, this.stopAllAnimations(), this._betaTransition || (this._betaTransition = Dz.d.CreateAnimation("beta", Dz.d.ANIMATIONTYPE_FLOAT, 60, Hz.EasingFunction));
+          const zz = Dz.d.TransitionTo("beta", tz, this._attachedCamera, this._attachedCamera.aJ(), 60, this._betaTransition, this._elevationReturnTime, (() => {
             this._clearAnimationLocks(), this.stopAllAnimations()
           }));
-          bb && this._animatables.push(bb)
+          zz && this._animatables.push(zz)
         }
       }
       _clearAnimationLocks() {
         this._betaIsAnimating = !1
       }
       _applyUserInteraction() {
-        this.isUserIsMoving && (this._lastInteractionTime = Lb.e.Now, this.stopAllAnimations(), this._clearAnimationLocks())
+        this.isUserIsMoving && (this._lastInteractionTime = uz.b.Now, this.stopAllAnimations(), this._clearAnimationLocks())
       }
       stopAllAnimations() {
         for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0] && (this._animatables[0].onAnimationEnd = null, this._animatables[0].stop()), this._animatables.shift()
@@ -343,115 +343,115 @@ export const modules = {
         return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
       }
     }
-    yb.EasingFunction = new class extends jb {
+    Hz.EasingFunction = new class extends wz {
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-        super(), this.exponent = bb
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
+        super(), this.exponent = zz
       }
-      easeInCore(bb) {
-        return this.exponent <= 0 ? bb : (Math.exp(this.exponent * bb) - 1) / (Math.exp(this.exponent) - 1)
+      easeInCore(zz) {
+        return this.exponent <= 0 ? zz : (Math.exp(this.exponent * zz) - 1) / (Math.exp(this.exponent) - 1)
       }
-    }, yb.EasingMode = jb.EASINGMODE_EASEINOUT, yb.IgnoreBoundsSizeMode = 0, yb.FitFrustumSidesMode = 1;
-    var Zb = Ub(39310),
-      Db = Ub(39307),
-      zb = Ub(39344),
-      xb = Ub(39195);
-    let ib = (() => {
-        var bb;
-        let ab, Ub = [],
-          Tb = [];
-        return bb = class {
+    }, Hz.EasingMode = wz.EASINGMODE_EASEINOUT, Hz.IgnoreBoundsSizeMode = 0, Hz.FitFrustumSidesMode = 1;
+    var Bz = sz(39370),
+      Pz = sz(39362),
+      rz = sz(39402),
+      Yz = sz(39264);
+    let xz = (() => {
+        var zz;
+        let tz, sz = [],
+          Xz = [];
+        return zz = class {
           constructor() {
-            this._currentMousePointerIdDown = -1, this.buttons = (0, Ab.k)(this, Ub, [0, 1, 2]), this._pointerInput = (0, Ab.k)(this, Tb)
+            this._currentMousePointerIdDown = -1, this.buttons = (0, Fz.k)(this, sz, [0, 1, 2]), this._pointerInput = (0, Fz.k)(this, Xz)
           }
-          attachControl(bb) {
-            bb = xb.h.BackCompatCameraNoPreventDefault(arguments);
-            const ab = this.camera.vj(),
-              Ub = ab.getInputElement();
-            let Ab = 0,
-              Mb = null;
-            this._pointA = null, this._pointB = null, this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._pointerInput = Tb => {
-              const Eb = Tb.event,
-                Yb = "touch" === Eb.pointerType;
-              if (Tb.type !== vb.c.POINTERMOVE && -1 === this.buttons.indexOf(Eb.button)) return;
-              const Bb = Eb.target;
-              if (this._altKey = Eb.altKey, this._ctrlKey = Eb.ctrlKey, this._metaKey = Eb.metaKey, this._shiftKey = Eb.shiftKey, this._buttonsPressed = Eb.buttons, ab.isPointerLock) {
-                const bb = Eb.movementX,
-                  ab = Eb.movementY;
-                this.onTouch(null, bb, ab), this._pointA = null, this._pointB = null
+          attachControl(zz) {
+            zz = Yz.j.BackCompatCameraNoPreventDefault(arguments);
+            const tz = this.camera.FD(),
+              sz = tz.getInputElement();
+            let Fz = 0,
+              Wz = null;
+            this._pointA = null, this._pointB = null, this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._pointerInput = Xz => {
+              const Oz = Xz.event,
+                oz = "touch" === Oz.pointerType;
+              if (Xz.type !== Kz.c.POINTERMOVE && -1 === this.buttons.indexOf(Oz.button)) return;
+              const vz = Oz.target;
+              if (this._altKey = Oz.altKey, this._ctrlKey = Oz.ctrlKey, this._metaKey = Oz.metaKey, this._shiftKey = Oz.shiftKey, this._buttonsPressed = Oz.buttons, tz.isPointerLock) {
+                const zz = Oz.movementX,
+                  tz = Oz.movementY;
+                this.onTouch(null, zz, tz), this._pointA = null, this._pointB = null
               } else {
-                if (Tb.type !== vb.c.POINTERDOWN && Tb.type !== vb.c.POINTERDOUBLETAP && Yb && this._pointA?.pointerId !== Eb.pointerId && this._pointB?.pointerId !== Eb.pointerId) return;
-                if (Tb.type !== vb.c.POINTERDOWN || -1 !== this._currentMousePointerIdDown && !Yb)
-                  if (Tb.type === vb.c.POINTERDOUBLETAP) this.onDoubleTap(Eb.pointerType, Eb);
-                  else if (Tb.type !== vb.c.POINTERUP || this._currentMousePointerIdDown !== Eb.pointerId && !Yb) {
-                  if (Tb.type === vb.c.POINTERMOVE)
-                    if (bb || Eb.preventDefault(), this._pointA && null === this._pointB) {
-                      const bb = Eb.clientX - this._pointA.x,
-                        ab = Eb.clientY - this._pointA.y;
-                      this._pointA.x = Eb.clientX, this._pointA.y = Eb.clientY, this.onTouch(this._pointA, bb, ab)
+                if (Xz.type !== Kz.c.POINTERDOWN && Xz.type !== Kz.c.POINTERDOUBLETAP && oz && this._pointA?.pointerId !== Oz.pointerId && this._pointB?.pointerId !== Oz.pointerId) return;
+                if (Xz.type !== Kz.c.POINTERDOWN || -1 !== this._currentMousePointerIdDown && !oz)
+                  if (Xz.type === Kz.c.POINTERDOUBLETAP) this.onDoubleTap(Oz.pointerType, Oz);
+                  else if (Xz.type !== Kz.c.POINTERUP || this._currentMousePointerIdDown !== Oz.pointerId && !oz) {
+                  if (Xz.type === Kz.c.POINTERMOVE)
+                    if (zz || Oz.preventDefault(), this._pointA && null === this._pointB) {
+                      const zz = Oz.clientX - this._pointA.x,
+                        tz = Oz.clientY - this._pointA.y;
+                      this._pointA.x = Oz.clientX, this._pointA.y = Oz.clientY, this.onTouch(this._pointA, zz, tz)
                     } else if (this._pointA && this._pointB) {
-                    const bb = this._pointA.pointerId === Eb.pointerId ? this._pointA : this._pointB;
-                    bb.x = Eb.clientX, bb.y = Eb.clientY;
-                    const ab = this._pointA.x - this._pointB.x,
-                      Ub = this._pointA.y - this._pointB.y,
-                      Yb = ab * ab + Ub * Ub,
-                      Bb = {
+                    const zz = this._pointA.pointerId === Oz.pointerId ? this._pointA : this._pointB;
+                    zz.x = Oz.clientX, zz.y = Oz.clientY;
+                    const tz = this._pointA.x - this._pointB.x,
+                      sz = this._pointA.y - this._pointB.y,
+                      oz = tz * tz + sz * sz,
+                      vz = {
                         x: (this._pointA.x + this._pointB.x) / 2,
                         y: (this._pointA.y + this._pointB.y) / 2,
-                        pointerId: Eb.pointerId,
-                        type: Tb.type
+                        pointerId: Oz.pointerId,
+                        type: Xz.type
                       };
-                    this.onMultiTouch(this._pointA, this._pointB, Ab, Yb, Mb, Bb), Mb = Bb, Ab = Yb
+                    this.onMultiTouch(this._pointA, this._pointB, Fz, oz, Wz, vz), Wz = vz, Fz = oz
                   }
                 } else {
                   try {
-                    Bb?.releasePointerCapture(Eb.pointerId)
-                  } catch (eb) {}
-                  Yb || (this._pointB = null), ab._badOS ? this._pointA = this._pointB = null : this._pointB && this._pointA && this._pointA.pointerId == Eb.pointerId ? (this._pointA = this._pointB, this._pointB = null) : this._pointA && this._pointB && this._pointB.pointerId == Eb.pointerId ? this._pointB = null : this._pointA = this._pointB = null, (0 !== Ab || Mb) && (this.onMultiTouch(this._pointA, this._pointB, Ab, 0, Mb, null), Ab = 0, Mb = null), this._currentMousePointerIdDown = -1, this.onButtonUp(Eb), bb || Eb.preventDefault()
+                    vz?.releasePointerCapture(Oz.pointerId)
+                  } catch (Uz) {}
+                  oz || (this._pointB = null), tz._badOS ? this._pointA = this._pointB = null : this._pointB && this._pointA && this._pointA.pointerId == Oz.pointerId ? (this._pointA = this._pointB, this._pointB = null) : this._pointA && this._pointB && this._pointB.pointerId == Oz.pointerId ? this._pointB = null : this._pointA = this._pointB = null, (0 !== Fz || Wz) && (this.onMultiTouch(this._pointA, this._pointB, Fz, 0, Wz, null), Fz = 0, Wz = null), this._currentMousePointerIdDown = -1, this.onButtonUp(Oz), zz || Oz.preventDefault()
                 } else {
                   try {
-                    Bb?.setPointerCapture(Eb.pointerId)
-                  } catch (eb) {}
+                    vz?.setPointerCapture(Oz.pointerId)
+                  } catch (Uz) {}
                   if (null === this._pointA) this._pointA = {
-                    x: Eb.clientX,
-                    y: Eb.clientY,
-                    pointerId: Eb.pointerId,
-                    type: Eb.pointerType,
-                    button: Eb.button
+                    x: Oz.clientX,
+                    y: Oz.clientY,
+                    pointerId: Oz.pointerId,
+                    type: Oz.pointerType,
+                    button: Oz.button
                   };
                   else {
                     if (null !== this._pointB) return;
                     this._pointB = {
-                      x: Eb.clientX,
-                      y: Eb.clientY,
-                      pointerId: Eb.pointerId,
-                      type: Eb.pointerType,
-                      button: Eb.button
+                      x: Oz.clientX,
+                      y: Oz.clientY,
+                      pointerId: Oz.pointerId,
+                      type: Oz.pointerType,
+                      button: Oz.button
                     }
-                  } - 1 !== this._currentMousePointerIdDown || Yb || (this._currentMousePointerIdDown = Eb.pointerId), this.onButtonDown(Eb), bb || (Eb.preventDefault(), Ub && Ub.focus())
+                  } - 1 !== this._currentMousePointerIdDown || oz || (this._currentMousePointerIdDown = Oz.pointerId), this.onButtonDown(Oz), zz || (Oz.preventDefault(), sz && sz.focus())
                 }
               }
-            }, this._observer = this.camera.oN()._inputManager._addCameraPointerObserver(this._pointerInput, vb.c.POINTERDOWN | vb.c.POINTERUP | vb.c.POINTERMOVE | vb.c.POINTERDOUBLETAP), this._onLostFocus = () => {
-              this._pointA = this._pointB = null, Ab = 0, Mb = null, this.onLostFocus()
-            }, this._contextMenuBind = bb => this.onContextMenu(bb), Ub && Ub.addEventListener("contextmenu", this._contextMenuBind, !1);
-            const Tb = this.camera.oN().vj().getHostWindow();
-            Tb && xb.h.RegisterTopRootEvents(Tb, [{
+            }, this._observer = this.camera.aJ()._inputManager._addCameraPointerObserver(this._pointerInput, Kz.c.POINTERDOWN | Kz.c.POINTERUP | Kz.c.POINTERMOVE | Kz.c.POINTERDOUBLETAP), this._onLostFocus = () => {
+              this._pointA = this._pointB = null, Fz = 0, Wz = null, this.onLostFocus()
+            }, this._contextMenuBind = zz => this.onContextMenu(zz), sz && sz.addEventListener("contextmenu", this._contextMenuBind, !1);
+            const Xz = this.camera.aJ().FD().getHostWindow();
+            Xz && Yz.j.RegisterTopRootEvents(Xz, [{
               name: "blur",
               handler: this._onLostFocus
             }])
           }
           detachControl() {
             if (this._onLostFocus) {
-              const bb = this.camera.oN().vj().getHostWindow();
-              bb && xb.h.UnregisterTopRootEvents(bb, [{
+              const zz = this.camera.aJ().FD().getHostWindow();
+              zz && Yz.j.UnregisterTopRootEvents(zz, [{
                 name: "blur",
                 handler: this._onLostFocus
               }])
             }
             if (this._observer) {
-              if (this.camera.oN()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._contextMenuBind) {
-                const bb = this.camera.oN().vj().getInputElement();
-                bb && bb.removeEventListener("contextmenu", this._contextMenuBind)
+              if (this.camera.aJ()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._contextMenuBind) {
+                const zz = this.camera.aJ().FD().getInputElement();
+                zz && zz.removeEventListener("contextmenu", this._contextMenuBind)
               }
               this._onLostFocus = null
             }
@@ -463,131 +463,131 @@ export const modules = {
           getSimpleName() {
             return "pointers"
           }
-          onDoubleTap(bb, ab) {}
-          onTouch(bb, ab, Ub) {}
-          onMultiTouch(bb, ab, Ub, Ab, Mb, Tb) {}
-          onContextMenu(bb) {
-            bb.preventDefault()
+          onDoubleTap(zz, tz) {}
+          onTouch(zz, tz, sz) {}
+          onMultiTouch(zz, tz, sz, Fz, Wz, Xz) {}
+          onContextMenu(zz) {
+            zz.preventDefault()
           }
-          onButtonDown(bb) {}
-          onButtonUp(bb) {}
+          onButtonDown(zz) {}
+          onButtonUp(zz) {}
           onLostFocus() {}
         }, (() => {
-          const Eb = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          ab = [(0, Mb.K)()], (0, Ab.h)(null, null, ab, {
+          const Oz = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+          tz = [(0, Wz.J)()], (0, Fz.h)(null, null, tz, {
             kind: "field",
             name: "buttons",
             static: !1,
             private: !1,
             access: {
-              has: bb => "buttons" in bb,
-              get: bb => bb.buttons,
-              set: (bb, ab) => {
-                bb.buttons = ab
+              has: zz => "buttons" in zz,
+              get: zz => zz.buttons,
+              set: (zz, tz) => {
+                zz.buttons = tz
               }
             },
-            metadata: Eb
-          }, Ub, Tb), Eb && Object.defineProperty(bb, Symbol.metadata, {
+            metadata: Oz
+          }, sz, Xz), Oz && Object.defineProperty(zz, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Eb
+            value: Oz
           })
-        })(), bb
+        })(), zz
       })(),
-      fb = (() => {
-        var bb;
-        let ab, Ub, Tb, Eb = ib,
-          Yb = [],
-          Bb = [],
-          eb = [],
-          vb = [],
-          Lb = [],
-          Pb = [];
-        return bb = class extends Eb {
+      mz = (() => {
+        var zz;
+        let tz, sz, Xz, Oz = xz,
+          oz = [],
+          vz = [],
+          Uz = [],
+          Kz = [],
+          uz = [],
+          Nz = [];
+        return zz = class extends Oz {
           constructor() {
-            super(...arguments), this.pinchZoom = (0, Ab.k)(this, Yb, !0), this.multiTouchPanning = ((0, Ab.k)(this, Bb), (0, Ab.k)(this, eb, !0)), this.multiTouchPanAndZoom = ((0, Ab.k)(this, vb), (0, Ab.k)(this, Lb, !0)), this._isPinching = ((0, Ab.k)(this, Pb), !1), this._twoFingerActivityCount = 0, this._shouldStartPinchZoom = !1
+            super(...arguments), this.pinchZoom = (0, Fz.k)(this, oz, !0), this.multiTouchPanning = ((0, Fz.k)(this, vz), (0, Fz.k)(this, Uz, !0)), this.multiTouchPanAndZoom = ((0, Fz.k)(this, Kz), (0, Fz.k)(this, uz, !0)), this._isPinching = ((0, Fz.k)(this, Nz), !1), this._twoFingerActivityCount = 0, this._shouldStartPinchZoom = !1
           }
-          _computePinchZoom(bb, ab) {}
-          _computeMultiTouchPanning(bb, ab) {}
-          onMultiTouch(bb, ab, Ub, Ab, Mb, Tb) {
-            0 === Ub && null === Mb || 0 === Ab && null === Tb || (this.multiTouchPanAndZoom ? (this._computePinchZoom(Ub, Ab), this._computeMultiTouchPanning(Mb, Tb)) : this.multiTouchPanning && this.pinchZoom ? (this._twoFingerActivityCount++, this._isPinching || this._shouldStartPinchZoom ? (this._computePinchZoom(Ub, Ab), this._isPinching = !0) : this._computeMultiTouchPanning(Mb, Tb)) : this.multiTouchPanning ? this._computeMultiTouchPanning(Mb, Tb) : this.pinchZoom && this._computePinchZoom(Ub, Ab))
+          _computePinchZoom(zz, tz) {}
+          _computeMultiTouchPanning(zz, tz) {}
+          onMultiTouch(zz, tz, sz, Fz, Wz, Xz) {
+            0 === sz && null === Wz || 0 === Fz && null === Xz || (this.multiTouchPanAndZoom ? (this._computePinchZoom(sz, Fz), this._computeMultiTouchPanning(Wz, Xz)) : this.multiTouchPanning && this.pinchZoom ? (this._twoFingerActivityCount++, this._isPinching || this._shouldStartPinchZoom ? (this._computePinchZoom(sz, Fz), this._isPinching = !0) : this._computeMultiTouchPanning(Wz, Xz)) : this.multiTouchPanning ? this._computeMultiTouchPanning(Wz, Xz) : this.pinchZoom && this._computePinchZoom(sz, Fz))
           }
-          onButtonUp(bb) {
+          onButtonUp(zz) {
             this._twoFingerActivityCount = 0, this._isPinching = !1
           }
           onLostFocus() {
             this._twoFingerActivityCount = 0, this._isPinching = !1
           }
         }, (() => {
-          const Xb = "function" === typeof Symbol && Symbol.metadata ? Object.create(Eb[Symbol.metadata] ?? null) : void 0;
-          ab = [(0, Mb.K)()], Ub = [(0, Mb.K)()], Tb = [(0, Mb.K)()], (0, Ab.h)(null, null, ab, {
+          const bz = "function" === typeof Symbol && Symbol.metadata ? Object.create(Oz[Symbol.metadata] ?? null) : void 0;
+          tz = [(0, Wz.J)()], sz = [(0, Wz.J)()], Xz = [(0, Wz.J)()], (0, Fz.h)(null, null, tz, {
             kind: "field",
             name: "pinchZoom",
             static: !1,
             private: !1,
             access: {
-              has: bb => "pinchZoom" in bb,
-              get: bb => bb.pinchZoom,
-              set: (bb, ab) => {
-                bb.pinchZoom = ab
+              has: zz => "pinchZoom" in zz,
+              get: zz => zz.pinchZoom,
+              set: (zz, tz) => {
+                zz.pinchZoom = tz
               }
             },
-            metadata: Xb
-          }, Yb, Bb), (0, Ab.h)(null, null, Ub, {
+            metadata: bz
+          }, oz, vz), (0, Fz.h)(null, null, sz, {
             kind: "field",
             name: "multiTouchPanning",
             static: !1,
             private: !1,
             access: {
-              has: bb => "multiTouchPanning" in bb,
-              get: bb => bb.multiTouchPanning,
-              set: (bb, ab) => {
-                bb.multiTouchPanning = ab
+              has: zz => "multiTouchPanning" in zz,
+              get: zz => zz.multiTouchPanning,
+              set: (zz, tz) => {
+                zz.multiTouchPanning = tz
               }
             },
-            metadata: Xb
-          }, eb, vb), (0, Ab.h)(null, null, Tb, {
+            metadata: bz
+          }, Uz, Kz), (0, Fz.h)(null, null, Xz, {
             kind: "field",
             name: "multiTouchPanAndZoom",
             static: !1,
             private: !1,
             access: {
-              has: bb => "multiTouchPanAndZoom" in bb,
-              get: bb => bb.multiTouchPanAndZoom,
-              set: (bb, ab) => {
-                bb.multiTouchPanAndZoom = ab
+              has: zz => "multiTouchPanAndZoom" in zz,
+              get: zz => zz.multiTouchPanAndZoom,
+              set: (zz, tz) => {
+                zz.multiTouchPanAndZoom = tz
               }
             },
-            metadata: Xb
-          }, Lb, Pb), Xb && Object.defineProperty(bb, Symbol.metadata, {
+            metadata: bz
+          }, uz, Nz), bz && Object.defineProperty(zz, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Xb
+            value: bz
           })
-        })(), bb
+        })(), zz
       })(),
-      mb = (() => {
-        var bb;
-        let ab, Ub, Tb, Eb, Yb, Bb, eb, vb = fb,
-          Lb = [],
-          Pb = [],
-          Xb = [],
-          jb = [],
-          Rb = [],
-          kb = [],
-          yb = [],
-          Zb = [],
-          Db = [],
-          zb = [],
-          xb = [],
-          ib = [],
-          mb = [],
-          pb = [];
-        return bb = class extends vb {
+      Jz = (() => {
+        var zz;
+        let tz, sz, Xz, Oz, oz, vz, Uz, Kz = mz,
+          uz = [],
+          Nz = [],
+          bz = [],
+          wz = [],
+          Dz = [],
+          gz = [],
+          Hz = [],
+          Bz = [],
+          Pz = [],
+          rz = [],
+          Yz = [],
+          xz = [],
+          Jz = [],
+          Iz = [];
+        return zz = class extends Kz {
           constructor() {
-            super(...arguments), this.buttons = (0, Ab.k)(this, Lb, [0, 1, 2]), this.angularSensibilityX = ((0, Ab.k)(this, Pb), (0, Ab.k)(this, Xb, 1e3)), this.angularSensibilityY = ((0, Ab.k)(this, jb), (0, Ab.k)(this, Rb, 1e3)), this.pinchPrecision = ((0, Ab.k)(this, kb), (0, Ab.k)(this, yb, 12)), this.pinchDeltaPercentage = ((0, Ab.k)(this, Zb), (0, Ab.k)(this, Db, 0)), this.useNaturalPinchZoom = ((0, Ab.k)(this, zb), (0, Ab.k)(this, xb, !1)), this.panningSensibility = ((0, Ab.k)(this, ib), (0, Ab.k)(this, mb, 1e3)), this.pinchInwards = ((0, Ab.k)(this, pb), !0), this._activeEntry = null, this._pointerLockConditions = {
+            super(...arguments), this.buttons = (0, Fz.k)(this, uz, [0, 1, 2]), this.angularSensibilityX = ((0, Fz.k)(this, Nz), (0, Fz.k)(this, bz, 1e3)), this.angularSensibilityY = ((0, Fz.k)(this, wz), (0, Fz.k)(this, Dz, 1e3)), this.pinchPrecision = ((0, Fz.k)(this, gz), (0, Fz.k)(this, Hz, 12)), this.pinchDeltaPercentage = ((0, Fz.k)(this, Bz), (0, Fz.k)(this, Pz, 0)), this.useNaturalPinchZoom = ((0, Fz.k)(this, rz), (0, Fz.k)(this, Yz, !1)), this.panningSensibility = ((0, Fz.k)(this, xz), (0, Fz.k)(this, Jz, 1e3)), this.pinchInwards = ((0, Fz.k)(this, Iz), !0), this._activeEntry = null, this._pointerLockConditions = {
               button: 0,
               modifiers: {}
             }, this._pointerModifiers = {
@@ -601,203 +601,203 @@ export const modules = {
           getClassName() {
             return "ArcRotateCameraPointersInput"
           }
-          _computeMultiTouchPanning(bb, ab) {
-            if (bb && ab) {
-              const Ub = ab.x - bb.x,
-                Ab = ab.y - bb.y,
-                Mb = this.camera.movement.input.getEntry("pointer", "pan"),
-                Tb = Mb?.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-              0 !== Tb && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -Ub * Tb, this.camera.movement.panAccumulatedPixels.y += Ab * Tb)
+          _computeMultiTouchPanning(zz, tz) {
+            if (zz && tz) {
+              const sz = tz.x - zz.x,
+                Fz = tz.y - zz.y,
+                Wz = this.camera.movement.input.getEntry("pointer", "pan"),
+                Xz = Wz?.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
+              0 !== Xz && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -sz * Xz, this.camera.movement.panAccumulatedPixels.y += Fz * Xz)
             }
           }
-          _computePinchZoom(ab, Ub) {
-            const Ab = this.camera.radius || bb.MinimumRadiusForPinch;
-            if (this.useNaturalPinchZoom) this.camera.radius = Ab * Math.sqrt(ab) / Math.sqrt(Ub);
+          _computePinchZoom(tz, sz) {
+            const Fz = this.camera.radius || zz.MinimumRadiusForPinch;
+            if (this.useNaturalPinchZoom) this.camera.radius = Fz * Math.sqrt(tz) / Math.sqrt(sz);
             else if (this.pinchDeltaPercentage) {
-              const bb = .001 * (Ub - ab) * Ab * this.pinchDeltaPercentage;
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += bb
+              const zz = .001 * (sz - tz) * Fz * this.pinchDeltaPercentage;
+              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += zz
             } else {
-              const bb = (Ub - ab) / (this.pinchPrecision * (this.pinchInwards ? 1 : -1) * (this.angularSensibilityX + this.angularSensibilityY) / 2);
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += bb
+              const zz = (sz - tz) / (this.pinchPrecision * (this.pinchInwards ? 1 : -1) * (this.angularSensibilityX + this.angularSensibilityY) / 2);
+              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += zz
             }
           }
-          onTouch(bb, ab, Ub) {
-            const Ab = this._activeEntry ?? (this.camera.vj().isPointerLock ? this.camera.movement.input.resolveInteraction("pointer", this._pointerLockConditions) : null);
-            if (Ab)
-              if ("pan" === Ab.interaction) {
-                const bb = Ab.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-                0 !== bb && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -ab * bb, this.camera.movement.panAccumulatedPixels.y += Ub * bb)
-              } else if ("rotate" === Ab.interaction) {
-              const bb = Ab.hK ?? Ab.sensitivity ?? 1 / this.angularSensibilityX,
-                Mb = Ab.rK ?? Ab.sensitivity ?? 1 / this.angularSensibilityY;
-              this.camera.movement.activeInput = !0, this.camera.movement.rotationAccumulatedPixels.x += -ab * bb, this.camera.movement.rotationAccumulatedPixels.y += -Ub * Mb
+          onTouch(zz, tz, sz) {
+            const Fz = this._activeEntry ?? (this.camera.FD().isPointerLock ? this.camera.movement.input.resolveInteraction("pointer", this._pointerLockConditions) : null);
+            if (Fz)
+              if ("pan" === Fz.interaction) {
+                const zz = Fz.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
+                0 !== zz && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -tz * zz, this.camera.movement.panAccumulatedPixels.y += sz * zz)
+              } else if ("rotate" === Fz.interaction) {
+              const zz = Fz.wL ?? Fz.sensitivity ?? 1 / this.angularSensibilityX,
+                Wz = Fz.gL ?? Fz.sensitivity ?? 1 / this.angularSensibilityY;
+              this.camera.movement.activeInput = !0, this.camera.movement.rotationAccumulatedPixels.x += -tz * zz, this.camera.movement.rotationAccumulatedPixels.y += -sz * Wz
             }
           }
           onDoubleTap() {
             this.camera.useInputToRestoreState && this.camera.restoreState()
           }
-          onMultiTouch(bb, ab, Ub, Ab, Mb, Tb) {
-            this._shouldStartPinchZoom = this._twoFingerActivityCount < 20 && Math.abs(Math.sqrt(Ab) - Math.sqrt(Ub)) > this.camera.pinchToPanMaxDistance, super.onMultiTouch(bb, ab, Ub, Ab, Mb, Tb)
+          onMultiTouch(zz, tz, sz, Fz, Wz, Xz) {
+            this._shouldStartPinchZoom = this._twoFingerActivityCount < 20 && Math.abs(Math.sqrt(Fz) - Math.sqrt(sz)) > this.camera.pinchToPanMaxDistance, super.onMultiTouch(zz, tz, sz, Fz, Wz, Xz)
           }
-          onButtonDown(bb) {
-            this._pointerConditions.button = bb.button, this._pointerModifiers.ctrl = bb.ctrlKey, this._pointerModifiers.alt = bb.altKey, this._pointerModifiers.shift = bb.shiftKey, this._activeEntry = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions), super.onButtonDown(bb)
+          onButtonDown(zz) {
+            this._pointerConditions.button = zz.button, this._pointerModifiers.ctrl = zz.ctrlKey, this._pointerModifiers.alt = zz.altKey, this._pointerModifiers.shift = zz.shiftKey, this._activeEntry = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions), super.onButtonDown(zz)
           }
-          onButtonUp(bb) {
-            this._activeEntry = null, super.onButtonUp(bb)
+          onButtonUp(zz) {
+            this._activeEntry = null, super.onButtonUp(zz)
           }
           onLostFocus() {
             this._activeEntry = null, super.onLostFocus()
           }
         }, (() => {
-          const fb = "function" === typeof Symbol && Symbol.metadata ? Object.create(vb[Symbol.metadata] ?? null) : void 0;
-          ab = [(0, Mb.K)()], Ub = [(0, Mb.K)()], Tb = [(0, Mb.K)()], Eb = [(0, Mb.K)()], Yb = [(0, Mb.K)()], Bb = [(0, Mb.K)()], eb = [(0, Mb.K)()], (0, Ab.h)(null, null, ab, {
+          const mz = "function" === typeof Symbol && Symbol.metadata ? Object.create(Kz[Symbol.metadata] ?? null) : void 0;
+          tz = [(0, Wz.J)()], sz = [(0, Wz.J)()], Xz = [(0, Wz.J)()], Oz = [(0, Wz.J)()], oz = [(0, Wz.J)()], vz = [(0, Wz.J)()], Uz = [(0, Wz.J)()], (0, Fz.h)(null, null, tz, {
             kind: "field",
             name: "buttons",
             static: !1,
             private: !1,
             access: {
-              has: bb => "buttons" in bb,
-              get: bb => bb.buttons,
-              set: (bb, ab) => {
-                bb.buttons = ab
+              has: zz => "buttons" in zz,
+              get: zz => zz.buttons,
+              set: (zz, tz) => {
+                zz.buttons = tz
               }
             },
-            metadata: fb
-          }, Lb, Pb), (0, Ab.h)(null, null, Ub, {
+            metadata: mz
+          }, uz, Nz), (0, Fz.h)(null, null, sz, {
             kind: "field",
             name: "angularSensibilityX",
             static: !1,
             private: !1,
             access: {
-              has: bb => "angularSensibilityX" in bb,
-              get: bb => bb.angularSensibilityX,
-              set: (bb, ab) => {
-                bb.angularSensibilityX = ab
+              has: zz => "angularSensibilityX" in zz,
+              get: zz => zz.angularSensibilityX,
+              set: (zz, tz) => {
+                zz.angularSensibilityX = tz
               }
             },
-            metadata: fb
-          }, Xb, jb), (0, Ab.h)(null, null, Tb, {
+            metadata: mz
+          }, bz, wz), (0, Fz.h)(null, null, Xz, {
             kind: "field",
             name: "angularSensibilityY",
             static: !1,
             private: !1,
             access: {
-              has: bb => "angularSensibilityY" in bb,
-              get: bb => bb.angularSensibilityY,
-              set: (bb, ab) => {
-                bb.angularSensibilityY = ab
+              has: zz => "angularSensibilityY" in zz,
+              get: zz => zz.angularSensibilityY,
+              set: (zz, tz) => {
+                zz.angularSensibilityY = tz
               }
             },
-            metadata: fb
-          }, Rb, kb), (0, Ab.h)(null, null, Eb, {
+            metadata: mz
+          }, Dz, gz), (0, Fz.h)(null, null, Oz, {
             kind: "field",
             name: "pinchPrecision",
             static: !1,
             private: !1,
             access: {
-              has: bb => "pinchPrecision" in bb,
-              get: bb => bb.pinchPrecision,
-              set: (bb, ab) => {
-                bb.pinchPrecision = ab
+              has: zz => "pinchPrecision" in zz,
+              get: zz => zz.pinchPrecision,
+              set: (zz, tz) => {
+                zz.pinchPrecision = tz
               }
             },
-            metadata: fb
-          }, yb, Zb), (0, Ab.h)(null, null, Yb, {
+            metadata: mz
+          }, Hz, Bz), (0, Fz.h)(null, null, oz, {
             kind: "field",
             name: "pinchDeltaPercentage",
             static: !1,
             private: !1,
             access: {
-              has: bb => "pinchDeltaPercentage" in bb,
-              get: bb => bb.pinchDeltaPercentage,
-              set: (bb, ab) => {
-                bb.pinchDeltaPercentage = ab
+              has: zz => "pinchDeltaPercentage" in zz,
+              get: zz => zz.pinchDeltaPercentage,
+              set: (zz, tz) => {
+                zz.pinchDeltaPercentage = tz
               }
             },
-            metadata: fb
-          }, Db, zb), (0, Ab.h)(null, null, Bb, {
+            metadata: mz
+          }, Pz, rz), (0, Fz.h)(null, null, vz, {
             kind: "field",
             name: "useNaturalPinchZoom",
             static: !1,
             private: !1,
             access: {
-              has: bb => "useNaturalPinchZoom" in bb,
-              get: bb => bb.useNaturalPinchZoom,
-              set: (bb, ab) => {
-                bb.useNaturalPinchZoom = ab
+              has: zz => "useNaturalPinchZoom" in zz,
+              get: zz => zz.useNaturalPinchZoom,
+              set: (zz, tz) => {
+                zz.useNaturalPinchZoom = tz
               }
             },
-            metadata: fb
-          }, xb, ib), (0, Ab.h)(null, null, eb, {
+            metadata: mz
+          }, Yz, xz), (0, Fz.h)(null, null, Uz, {
             kind: "field",
             name: "panningSensibility",
             static: !1,
             private: !1,
             access: {
-              has: bb => "panningSensibility" in bb,
-              get: bb => bb.panningSensibility,
-              set: (bb, ab) => {
-                bb.panningSensibility = ab
+              has: zz => "panningSensibility" in zz,
+              get: zz => zz.panningSensibility,
+              set: (zz, tz) => {
+                zz.panningSensibility = tz
               }
             },
-            metadata: fb
-          }, mb, pb), fb && Object.defineProperty(bb, Symbol.metadata, {
+            metadata: mz
+          }, Jz, Iz), mz && Object.defineProperty(zz, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: fb
+            value: mz
           })
-        })(), bb.MinimumRadiusForPinch = .001, bb
+        })(), zz.MinimumRadiusForPinch = .001, zz
       })();
-    zb.b.ArcRotateCameraPointersInput = mb;
-    var pb = Ub(39275);
-    let Nb = (() => {
-      var bb;
-      let ab, Ub, Tb, Yb, Bb, eb, vb, Lb, Pb, Xb, jb, Rb = [],
-        kb = [],
-        yb = [],
-        Zb = [],
-        Db = [],
-        zb = [],
-        ib = [],
-        fb = [],
-        mb = [],
-        Nb = [],
-        Wb = [],
-        Hb = [],
-        Ib = [],
-        db = [],
-        Fb = [],
-        hb = [],
-        Gb = [],
-        Qb = [],
-        qb = [],
-        ub = [],
-        rb = [];
-      return bb = class {
+    rz.e.ArcRotateCameraPointersInput = Jz;
+    var Iz = sz(39331);
+    let Cz = (() => {
+      var zz;
+      let tz, sz, Xz, oz, vz, Uz, Kz, uz, Nz, bz, wz, Dz = [],
+        gz = [],
+        Hz = [],
+        Bz = [],
+        Pz = [],
+        rz = [],
+        xz = [],
+        mz = [],
+        Jz = [],
+        Cz = [],
+        ez = [],
+        Zz = [],
+        Gz = [],
+        Tz = [],
+        cz = [],
+        jz = [],
+        Az = [],
+        yz = [],
+        Mz = [],
+        dz = [],
+        hz = [];
+      return zz = class {
         constructor() {
-          this.camera = (0, Ab.k)(this, Rb), this.keysUp = (0, Ab.k)(this, kb, [38]), this.keysDown = ((0, Ab.k)(this, yb), (0, Ab.k)(this, Zb, [40])), this.keysLeft = ((0, Ab.k)(this, Db), (0, Ab.k)(this, zb, [37])), this.keysRight = ((0, Ab.k)(this, ib), (0, Ab.k)(this, fb, [39])), this.keysReset = ((0, Ab.k)(this, mb), (0, Ab.k)(this, Nb, [220])), this.keysZoomIn = ((0, Ab.k)(this, Wb), (0, Ab.k)(this, Hb, [187, 107])), this.keysZoomOut = ((0, Ab.k)(this, Ib), (0, Ab.k)(this, db, [189, 109])), this.panningSensibility = ((0, Ab.k)(this, Fb), (0, Ab.k)(this, hb, 50)), this.zoomingSensibility = ((0, Ab.k)(this, Gb), (0, Ab.k)(this, Qb, 25)), this.angularSpeed = ((0, Ab.k)(this, qb), (0, Ab.k)(this, ub, .01)), this._useAltToZoom = ((0, Ab.k)(this, rb), !0), this._keys = new Array, this._keyboardModifiers = {
+          this.camera = (0, Fz.k)(this, Dz), this.keysUp = (0, Fz.k)(this, gz, [38]), this.keysDown = ((0, Fz.k)(this, Hz), (0, Fz.k)(this, Bz, [40])), this.keysLeft = ((0, Fz.k)(this, Pz), (0, Fz.k)(this, rz, [37])), this.keysRight = ((0, Fz.k)(this, xz), (0, Fz.k)(this, mz, [39])), this.keysReset = ((0, Fz.k)(this, Jz), (0, Fz.k)(this, Cz, [220])), this.keysZoomIn = ((0, Fz.k)(this, ez), (0, Fz.k)(this, Zz, [187, 107])), this.keysZoomOut = ((0, Fz.k)(this, Gz), (0, Fz.k)(this, Tz, [189, 109])), this.panningSensibility = ((0, Fz.k)(this, cz), (0, Fz.k)(this, jz, 50)), this.zoomingSensibility = ((0, Fz.k)(this, Az), (0, Fz.k)(this, yz, 25)), this.angularSpeed = ((0, Fz.k)(this, Mz), (0, Fz.k)(this, dz, .01)), this._useAltToZoom = ((0, Fz.k)(this, hz), !0), this._keys = new Array, this._keyboardModifiers = {
             ctrl: !1,
             alt: !1
           }, this._keyboardConditions = {
             modifiers: this._keyboardModifiers
-          }, this._rotateDirection = new Eb.l, this._panDirection = new Eb.l
+          }, this._rotateDirection = new Oz.n, this._panDirection = new Oz.n
         }
         get useAltToZoom() {
           return this._useAltToZoom
         }
-        set useAltToZoom(bb) {
-          this._useAltToZoom = bb, this._applyUseAltToZoomToInputMap()
+        set useAltToZoom(zz) {
+          this._useAltToZoom = zz, this._applyUseAltToZoomToInputMap()
         }
         _applyUseAltToZoomToInputMap() {
           if (!this.camera?.movement) return;
-          const bb = this.camera.movement.input,
-            ab = bb.getEntry("keyboard", "zoom", {
+          const zz = this.camera.movement.input,
+            tz = zz.getEntry("keyboard", "zoom", {
               modifiers: {
                 alt: !0
               }
             });
-          !this._useAltToZoom && ab ? bb.inputMap.splice(bb.inputMap.indexOf(ab), 1) : this._useAltToZoom && !ab && bb.addEntry({
+          !this._useAltToZoom && tz ? zz.inputMap.splice(zz.inputMap.indexOf(tz), 1) : this._useAltToZoom && !tz && zz.addEntry({
             source: "keyboard",
             modifiers: {
               alt: !0
@@ -805,19 +805,19 @@ export const modules = {
             interaction: "zoom"
           })
         }
-        attachControl(bb) {
-          bb = xb.h.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.oN(), this._engine = this._scene.vj(), this._applyUseAltToZoomToInputMap(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
+        attachControl(zz) {
+          zz = Yz.j.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.aJ(), this._engine = this._scene.FD(), this._applyUseAltToZoomToInputMap(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
             this._keys.length = 0
-          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((ab => {
-            const Ub = ab.event;
-            if (!Ub.metaKey)
-              if (ab.type === pb.b.KEYDOWN) {
-                if (this._ctrlPressed = Ub.ctrlKey, this._altPressed = Ub.altKey, -1 !== this.keysUp.indexOf(Ub.keyCode) || -1 !== this.keysDown.indexOf(Ub.keyCode) || -1 !== this.keysLeft.indexOf(Ub.keyCode) || -1 !== this.keysRight.indexOf(Ub.keyCode) || -1 !== this.keysReset.indexOf(Ub.keyCode) || -1 !== this.keysZoomIn.indexOf(Ub.keyCode) || -1 !== this.keysZoomOut.indexOf(Ub.keyCode)) {
-                  -1 === this._keys.indexOf(Ub.keyCode) && this._keys.push(Ub.keyCode), Ub.preventDefault && (bb || Ub.preventDefault())
+          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((tz => {
+            const sz = tz.event;
+            if (!sz.metaKey)
+              if (tz.type === Iz.b.KEYDOWN) {
+                if (this._ctrlPressed = sz.ctrlKey, this._altPressed = sz.altKey, -1 !== this.keysUp.indexOf(sz.keyCode) || -1 !== this.keysDown.indexOf(sz.keyCode) || -1 !== this.keysLeft.indexOf(sz.keyCode) || -1 !== this.keysRight.indexOf(sz.keyCode) || -1 !== this.keysReset.indexOf(sz.keyCode) || -1 !== this.keysZoomIn.indexOf(sz.keyCode) || -1 !== this.keysZoomOut.indexOf(sz.keyCode)) {
+                  -1 === this._keys.indexOf(sz.keyCode) && this._keys.push(sz.keyCode), sz.preventDefault && (zz || sz.preventDefault())
                 }
-              } else if (-1 !== this.keysUp.indexOf(Ub.keyCode) || -1 !== this.keysDown.indexOf(Ub.keyCode) || -1 !== this.keysLeft.indexOf(Ub.keyCode) || -1 !== this.keysRight.indexOf(Ub.keyCode) || -1 !== this.keysReset.indexOf(Ub.keyCode) || -1 !== this.keysZoomIn.indexOf(Ub.keyCode) || -1 !== this.keysZoomOut.indexOf(Ub.keyCode)) {
-              const ab = this._keys.indexOf(Ub.keyCode);
-              ab >= 0 && this._keys.splice(ab, 1), Ub.preventDefault && (bb || Ub.preventDefault())
+              } else if (-1 !== this.keysUp.indexOf(sz.keyCode) || -1 !== this.keysDown.indexOf(sz.keyCode) || -1 !== this.keysLeft.indexOf(sz.keyCode) || -1 !== this.keysRight.indexOf(sz.keyCode) || -1 !== this.keysReset.indexOf(sz.keyCode) || -1 !== this.keysZoomIn.indexOf(sz.keyCode) || -1 !== this.keysZoomOut.indexOf(sz.keyCode)) {
+              const tz = this._keys.indexOf(sz.keyCode);
+              tz >= 0 && this._keys.splice(tz, 1), sz.preventDefault && (zz || sz.preventDefault())
             }
           })))
         }
@@ -826,25 +826,25 @@ export const modules = {
         }
         checkInputs() {
           if (this._onKeyboardObserver) {
-            const bb = this.camera,
-              ab = bb.movement.input;
+            const zz = this.camera,
+              tz = zz.movement.input;
             this._keyboardModifiers.ctrl = this._ctrlPressed, this._keyboardModifiers.alt = this._altPressed;
-            const Ub = this._rotateDirection.set(0, 0),
-              Ab = this._panDirection.set(0, 0);
-            let Mb = 0,
-              Tb = 0;
-            for (let Eb = 0; Eb < this._keys.length; Eb++) {
-              const Yb = this._keys[Eb];
-              if (this._keyboardConditions.key = Yb, -1 === this.keysReset.indexOf(Yb)) {
-                const bb = ab.resolveInteraction("keyboard", this._keyboardConditions);
-                if (bb)
-                  if ("pan" === bb.interaction) Tb = Math.max(Tb, bb.sensitivity ?? 1 / this.panningSensibility), -1 !== this.keysLeft.indexOf(Yb) ? Ab.x -= 1 : -1 !== this.keysRight.indexOf(Yb) ? Ab.x += 1 : -1 !== this.keysUp.indexOf(Yb) ? Ab.y += 1 : -1 !== this.keysDown.indexOf(Yb) && (Ab.y -= 1);
-                  else if ("zoom" === bb.interaction) {
-                  const Ub = bb.sensitivity ?? 1 / this.zoomingSensibility; - 1 !== this.keysUp.indexOf(Yb) || -1 !== this.keysZoomIn.indexOf(Yb) ? ab.handlers.zoom(Ub) : -1 === this.keysDown.indexOf(Yb) && -1 === this.keysZoomOut.indexOf(Yb) || ab.handlers.zoom(-Ub)
-                } else "rotate" === bb.interaction && (Mb = Math.max(Mb, bb.sensitivity ?? this.angularSpeed), -1 !== this.keysLeft.indexOf(Yb) ? Ub.x -= 1 : -1 !== this.keysRight.indexOf(Yb) ? Ub.x += 1 : -1 !== this.keysUp.indexOf(Yb) ? Ub.y -= 1 : -1 !== this.keysDown.indexOf(Yb) && (Ub.y += 1))
-              } - 1 !== this.keysReset.indexOf(Yb) && bb.useInputToRestoreState && bb.restoreState()
+            const sz = this._rotateDirection.set(0, 0),
+              Fz = this._panDirection.set(0, 0);
+            let Wz = 0,
+              Xz = 0;
+            for (let Oz = 0; Oz < this._keys.length; Oz++) {
+              const oz = this._keys[Oz];
+              if (this._keyboardConditions.key = oz, -1 === this.keysReset.indexOf(oz)) {
+                const zz = tz.resolveInteraction("keyboard", this._keyboardConditions);
+                if (zz)
+                  if ("pan" === zz.interaction) Xz = Math.max(Xz, zz.sensitivity ?? 1 / this.panningSensibility), -1 !== this.keysLeft.indexOf(oz) ? Fz.x -= 1 : -1 !== this.keysRight.indexOf(oz) ? Fz.x += 1 : -1 !== this.keysUp.indexOf(oz) ? Fz.y += 1 : -1 !== this.keysDown.indexOf(oz) && (Fz.y -= 1);
+                  else if ("zoom" === zz.interaction) {
+                  const sz = zz.sensitivity ?? 1 / this.zoomingSensibility; - 1 !== this.keysUp.indexOf(oz) || -1 !== this.keysZoomIn.indexOf(oz) ? tz.handlers.zoom(sz) : -1 === this.keysDown.indexOf(oz) && -1 === this.keysZoomOut.indexOf(oz) || tz.handlers.zoom(-sz)
+                } else "rotate" === zz.interaction && (Wz = Math.max(Wz, zz.sensitivity ?? this.angularSpeed), -1 !== this.keysLeft.indexOf(oz) ? sz.x -= 1 : -1 !== this.keysRight.indexOf(oz) ? sz.x += 1 : -1 !== this.keysUp.indexOf(oz) ? sz.y -= 1 : -1 !== this.keysDown.indexOf(oz) && (sz.y += 1))
+              } - 1 !== this.keysReset.indexOf(oz) && zz.useInputToRestoreState && zz.restoreState()
             }
-            0 === Ub.x && 0 === Ub.y || (Ub.normalize().scaleInPlace(Mb), ab.handlers.rotate(Ub.x, Ub.y)), 0 === Ab.x && 0 === Ab.y || (Ab.normalize().scaleInPlace(Tb), ab.handlers.pan(Ab.x, Ab.y))
+            0 === sz.x && 0 === sz.y || (sz.normalize().scaleInPlace(Wz), tz.handlers.rotate(sz.x, sz.y)), 0 === Fz.x && 0 === Fz.y || (Fz.normalize().scaleInPlace(Xz), tz.handlers.pan(Fz.x, Fz.y))
           }
         }
         getClassName() {
@@ -854,208 +854,208 @@ export const modules = {
           return "keyboard"
         }
       }, (() => {
-        const Eb = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        ab = [(0, Mb.K)()], Ub = [(0, Mb.K)()], Tb = [(0, Mb.K)()], Yb = [(0, Mb.K)()], Bb = [(0, Mb.K)()], eb = [(0, Mb.K)()], vb = [(0, Mb.K)()], Lb = [(0, Mb.K)()], Pb = [(0, Mb.K)()], Xb = [(0, Mb.K)()], jb = [(0, Mb.K)()], (0, Ab.h)(bb, null, jb, {
+        const Oz = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        tz = [(0, Wz.J)()], sz = [(0, Wz.J)()], Xz = [(0, Wz.J)()], oz = [(0, Wz.J)()], vz = [(0, Wz.J)()], Uz = [(0, Wz.J)()], Kz = [(0, Wz.J)()], uz = [(0, Wz.J)()], Nz = [(0, Wz.J)()], bz = [(0, Wz.J)()], wz = [(0, Wz.J)()], (0, Fz.h)(zz, null, wz, {
           kind: "getter",
           name: "useAltToZoom",
           static: !1,
           private: !1,
           access: {
-            has: bb => "useAltToZoom" in bb,
-            get: bb => bb.useAltToZoom
+            has: zz => "useAltToZoom" in zz,
+            get: zz => zz.useAltToZoom
           },
-          metadata: Eb
-        }, null, Rb), (0, Ab.h)(null, null, ab, {
+          metadata: Oz
+        }, null, Dz), (0, Fz.h)(null, null, tz, {
           kind: "field",
           name: "keysUp",
           static: !1,
           private: !1,
           access: {
-            has: bb => "keysUp" in bb,
-            get: bb => bb.keysUp,
-            set: (bb, ab) => {
-              bb.keysUp = ab
+            has: zz => "keysUp" in zz,
+            get: zz => zz.keysUp,
+            set: (zz, tz) => {
+              zz.keysUp = tz
             }
           },
-          metadata: Eb
-        }, kb, yb), (0, Ab.h)(null, null, Ub, {
+          metadata: Oz
+        }, gz, Hz), (0, Fz.h)(null, null, sz, {
           kind: "field",
           name: "keysDown",
           static: !1,
           private: !1,
           access: {
-            has: bb => "keysDown" in bb,
-            get: bb => bb.keysDown,
-            set: (bb, ab) => {
-              bb.keysDown = ab
+            has: zz => "keysDown" in zz,
+            get: zz => zz.keysDown,
+            set: (zz, tz) => {
+              zz.keysDown = tz
             }
           },
-          metadata: Eb
-        }, Zb, Db), (0, Ab.h)(null, null, Tb, {
+          metadata: Oz
+        }, Bz, Pz), (0, Fz.h)(null, null, Xz, {
           kind: "field",
           name: "keysLeft",
           static: !1,
           private: !1,
           access: {
-            has: bb => "keysLeft" in bb,
-            get: bb => bb.keysLeft,
-            set: (bb, ab) => {
-              bb.keysLeft = ab
+            has: zz => "keysLeft" in zz,
+            get: zz => zz.keysLeft,
+            set: (zz, tz) => {
+              zz.keysLeft = tz
             }
           },
-          metadata: Eb
-        }, zb, ib), (0, Ab.h)(null, null, Yb, {
+          metadata: Oz
+        }, rz, xz), (0, Fz.h)(null, null, oz, {
           kind: "field",
           name: "keysRight",
           static: !1,
           private: !1,
           access: {
-            has: bb => "keysRight" in bb,
-            get: bb => bb.keysRight,
-            set: (bb, ab) => {
-              bb.keysRight = ab
+            has: zz => "keysRight" in zz,
+            get: zz => zz.keysRight,
+            set: (zz, tz) => {
+              zz.keysRight = tz
             }
           },
-          metadata: Eb
-        }, fb, mb), (0, Ab.h)(null, null, Bb, {
+          metadata: Oz
+        }, mz, Jz), (0, Fz.h)(null, null, vz, {
           kind: "field",
           name: "keysReset",
           static: !1,
           private: !1,
           access: {
-            has: bb => "keysReset" in bb,
-            get: bb => bb.keysReset,
-            set: (bb, ab) => {
-              bb.keysReset = ab
+            has: zz => "keysReset" in zz,
+            get: zz => zz.keysReset,
+            set: (zz, tz) => {
+              zz.keysReset = tz
             }
           },
-          metadata: Eb
-        }, Nb, Wb), (0, Ab.h)(null, null, eb, {
+          metadata: Oz
+        }, Cz, ez), (0, Fz.h)(null, null, Uz, {
           kind: "field",
           name: "keysZoomIn",
           static: !1,
           private: !1,
           access: {
-            has: bb => "keysZoomIn" in bb,
-            get: bb => bb.keysZoomIn,
-            set: (bb, ab) => {
-              bb.keysZoomIn = ab
+            has: zz => "keysZoomIn" in zz,
+            get: zz => zz.keysZoomIn,
+            set: (zz, tz) => {
+              zz.keysZoomIn = tz
             }
           },
-          metadata: Eb
-        }, Hb, Ib), (0, Ab.h)(null, null, vb, {
+          metadata: Oz
+        }, Zz, Gz), (0, Fz.h)(null, null, Kz, {
           kind: "field",
           name: "keysZoomOut",
           static: !1,
           private: !1,
           access: {
-            has: bb => "keysZoomOut" in bb,
-            get: bb => bb.keysZoomOut,
-            set: (bb, ab) => {
-              bb.keysZoomOut = ab
+            has: zz => "keysZoomOut" in zz,
+            get: zz => zz.keysZoomOut,
+            set: (zz, tz) => {
+              zz.keysZoomOut = tz
             }
           },
-          metadata: Eb
-        }, db, Fb), (0, Ab.h)(null, null, Lb, {
+          metadata: Oz
+        }, Tz, cz), (0, Fz.h)(null, null, uz, {
           kind: "field",
           name: "panningSensibility",
           static: !1,
           private: !1,
           access: {
-            has: bb => "panningSensibility" in bb,
-            get: bb => bb.panningSensibility,
-            set: (bb, ab) => {
-              bb.panningSensibility = ab
+            has: zz => "panningSensibility" in zz,
+            get: zz => zz.panningSensibility,
+            set: (zz, tz) => {
+              zz.panningSensibility = tz
             }
           },
-          metadata: Eb
-        }, hb, Gb), (0, Ab.h)(null, null, Pb, {
+          metadata: Oz
+        }, jz, Az), (0, Fz.h)(null, null, Nz, {
           kind: "field",
           name: "zoomingSensibility",
           static: !1,
           private: !1,
           access: {
-            has: bb => "zoomingSensibility" in bb,
-            get: bb => bb.zoomingSensibility,
-            set: (bb, ab) => {
-              bb.zoomingSensibility = ab
+            has: zz => "zoomingSensibility" in zz,
+            get: zz => zz.zoomingSensibility,
+            set: (zz, tz) => {
+              zz.zoomingSensibility = tz
             }
           },
-          metadata: Eb
-        }, Qb, qb), (0, Ab.h)(null, null, Xb, {
+          metadata: Oz
+        }, yz, Mz), (0, Fz.h)(null, null, bz, {
           kind: "field",
           name: "angularSpeed",
           static: !1,
           private: !1,
           access: {
-            has: bb => "angularSpeed" in bb,
-            get: bb => bb.angularSpeed,
-            set: (bb, ab) => {
-              bb.angularSpeed = ab
+            has: zz => "angularSpeed" in zz,
+            get: zz => zz.angularSpeed,
+            set: (zz, tz) => {
+              zz.angularSpeed = tz
             }
           },
-          metadata: Eb
-        }, ub, rb), Eb && Object.defineProperty(bb, Symbol.metadata, {
+          metadata: Oz
+        }, dz, hz), Oz && Object.defineProperty(zz, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Eb
+          value: Oz
         })
-      })(), bb
+      })(), zz
     })();
-    zb.b.ArcRotateCameraKeyboardMoveInput = Nb;
-    var Wb = Ub(37122),
-      Hb = Ub(39280);
-    let Ib = (() => {
-      var bb;
-      let ab, Ub, Tb, Bb = [],
-        eb = [],
-        Lb = [],
-        Xb = [],
-        jb = [],
-        Rb = [];
-      return bb = class {
+    rz.e.ArcRotateCameraKeyboardMoveInput = Cz;
+    var ez = sz(37199),
+      Zz = sz(39337);
+    let Gz = (() => {
+      var zz;
+      let tz, sz, Xz, vz = [],
+        Uz = [],
+        uz = [],
+        bz = [],
+        wz = [],
+        Dz = [];
+      return zz = class {
         constructor() {
-          this.wheelPrecision = (0, Ab.k)(this, Bb, 3), this.zoomToMouseLocation = ((0, Ab.k)(this, eb), (0, Ab.k)(this, Lb, !1)), this.wheelDeltaPercentage = ((0, Ab.k)(this, Xb), (0, Ab.k)(this, jb, 0)), this.customComputeDeltaFromMouseWheel = ((0, Ab.k)(this, Rb), null), this._viewOffset = new Eb.m(0, 0, 0), this._globalOffset = new Eb.m(0, 0, 0), this._inertialPanning = Eb.m.Zero(), this._zoomToMouseRadiusOffset = 0
+          this.wheelPrecision = (0, Fz.k)(this, vz, 3), this.zoomToMouseLocation = ((0, Fz.k)(this, Uz), (0, Fz.k)(this, uz, !1)), this.wheelDeltaPercentage = ((0, Fz.k)(this, bz), (0, Fz.k)(this, wz, 0)), this.customComputeDeltaFromMouseWheel = ((0, Fz.k)(this, Dz), null), this._viewOffset = new Oz.p(0, 0, 0), this._globalOffset = new Oz.p(0, 0, 0), this._inertialPanning = Oz.p.Zero(), this._zoomToMouseRadiusOffset = 0
         }
-        _computeDeltaFromMouseWheelLegacyEvent(bb, ab) {
-          let Ub;
-          const Ab = .01 * bb * this.wheelDeltaPercentage * ab;
-          return Ub = bb > 0 ? Ab / (1 + this.wheelDeltaPercentage) : Ab * (1 + this.wheelDeltaPercentage), Ub
+        _computeDeltaFromMouseWheelLegacyEvent(zz, tz) {
+          let sz;
+          const Fz = .01 * zz * this.wheelDeltaPercentage * tz;
+          return sz = zz > 0 ? Fz / (1 + this.wheelDeltaPercentage) : Fz * (1 + this.wheelDeltaPercentage), sz
         }
-        attachControl(bb) {
-          bb = xb.h.BackCompatCameraNoPreventDefault(arguments), this._wheel = ab => {
-            if (ab.type !== vb.c.POINTERWHEEL) return;
-            const Ub = ab.event;
-            let Ab;
-            const Mb = Ub.deltaMode === Hb.e.DOM_DELTA_LINE ? 40 : 1,
-              Tb = -Ub.deltaY * Mb;
-            if (this.customComputeDeltaFromMouseWheel) Ab = this.customComputeDeltaFromMouseWheel(Tb, this, Ub);
+        attachControl(zz) {
+          zz = Yz.j.BackCompatCameraNoPreventDefault(arguments), this._wheel = tz => {
+            if (tz.type !== Kz.c.POINTERWHEEL) return;
+            const sz = tz.event;
+            let Fz;
+            const Wz = sz.deltaMode === Zz.e.DOM_DELTA_LINE ? 40 : 1,
+              Xz = -sz.deltaY * Wz;
+            if (this.customComputeDeltaFromMouseWheel) Fz = this.customComputeDeltaFromMouseWheel(Xz, this, sz);
             else if (this.wheelDeltaPercentage) {
-              if (Ab = this._computeDeltaFromMouseWheelLegacyEvent(Tb, this.camera.radius), Ab > 0) {
-                const bb = this.zoomToMouseLocation ? this._zoomToMouseRadiusOffset : this.camera.inertialRadiusOffset;
-                let ab = this.camera.radius,
-                  Ub = bb + Ab;
-                for (let Ab = 0; Ab < 20 && !(ab <= Ub) && !(Math.abs(Ub * this.camera.inertia) < .001); Ab++) ab -= Ub, Ub *= this.camera.inertia;
-                ab = (0, Yb.Clamp)(ab, 0, Number.MAX_VALUE), Ab = this._computeDeltaFromMouseWheelLegacyEvent(Tb, ab)
+              if (Fz = this._computeDeltaFromMouseWheelLegacyEvent(Xz, this.camera.radius), Fz > 0) {
+                const zz = this.zoomToMouseLocation ? this._zoomToMouseRadiusOffset : this.camera.inertialRadiusOffset;
+                let tz = this.camera.radius,
+                  sz = zz + Fz;
+                for (let Fz = 0; Fz < 20 && !(tz <= sz) && !(Math.abs(sz * this.camera.inertia) < .001); Fz++) tz -= sz, sz *= this.camera.inertia;
+                tz = (0, oz.Clamp)(tz, 0, Number.MAX_VALUE), Fz = this._computeDeltaFromMouseWheelLegacyEvent(Xz, tz)
               }
             } else {
-              const bb = this.camera.movement.input.getEntry("wheel", "zoom");
-              Ab = Tb * (bb?.sensitivity ?? 1 / (40 * this.wheelPrecision))
+              const zz = this.camera.movement.input.getEntry("wheel", "zoom");
+              Fz = Xz * (zz?.sensitivity ?? 1 / (40 * this.wheelPrecision))
             }
-            Ab && (this.zoomToMouseLocation ? (this._hitPlane || this._updateHitPlane(), this._zoomToMouse(Ab)) : this.camera.movement.zoomAccumulatedPixels += Ab), Ub.preventDefault && (bb || Ub.preventDefault())
-          }, this._observer = this.camera.oN()._inputManager._addCameraPointerObserver(this._wheel, vb.c.POINTERWHEEL), this.zoomToMouseLocation && this._inertialPanning.B3(0)
+            Fz && (this.zoomToMouseLocation ? (this._hitPlane || this._updateHitPlane(), this._zoomToMouse(Fz)) : this.camera.movement.zoomAccumulatedPixels += Fz), sz.preventDefault && (zz || sz.preventDefault())
+          }, this._observer = this.camera.aJ()._inputManager._addCameraPointerObserver(this._wheel, Kz.c.POINTERWHEEL), this.zoomToMouseLocation && this._inertialPanning.Z6(0)
         }
         detachControl() {
-          this._observer && (this.camera.oN()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null)
+          this._observer && (this.camera.aJ()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null)
         }
         checkInputs() {
           if (!this.zoomToMouseLocation) return;
-          const bb = this.camera;
-          if (Math.abs(this._zoomToMouseRadiusOffset) + this._inertialPanning.lengthSquared() + Math.abs(bb.inertialAlphaOffset) + Math.abs(bb.inertialBetaOffset) + Math.abs(bb.inertialRadiusOffset)) {
-            this._updateHitPlane(), bb.target.addInPlace(this._inertialPanning), bb.radius -= this._zoomToMouseRadiusOffset;
-            const ab = bb.movement.getFrameIndependentDecay(bb.inertia);
-            this._inertialPanning.scaleInPlace(ab), this._zoomToMouseRadiusOffset *= ab, this._zeroIfClose(this._inertialPanning), Math.abs(this._zoomToMouseRadiusOffset) < Pb.e && (this._zoomToMouseRadiusOffset = 0)
+          const zz = this.camera;
+          if (Math.abs(this._zoomToMouseRadiusOffset) + this._inertialPanning.lengthSquared() + Math.abs(zz.inertialAlphaOffset) + Math.abs(zz.inertialBetaOffset) + Math.abs(zz.inertialRadiusOffset)) {
+            this._updateHitPlane(), zz.target.addInPlace(this._inertialPanning), zz.radius -= this._zoomToMouseRadiusOffset;
+            const tz = zz.movement.getFrameIndependentDecay(zz.inertia);
+            this._inertialPanning.scaleInPlace(tz), this._zoomToMouseRadiusOffset *= tz, this._zeroIfClose(this._inertialPanning), Math.abs(this._zoomToMouseRadiusOffset) < Nz.c && (this._zoomToMouseRadiusOffset = 0)
           }
         }
         getClassName() {
@@ -1065,117 +1065,117 @@ export const modules = {
           return "mousewheel"
         }
         _updateHitPlane() {
-          const bb = this.camera,
-            ab = bb.target.subtract(bb.position);
-          this._hitPlane = Wb.b.FromPositionAndNormal(bb.target, ab)
+          const zz = this.camera,
+            tz = zz.target.subtract(zz.position);
+          this._hitPlane = ez.c.FromPositionAndNormal(zz.target, tz)
         }
         _getPosition() {
-          const bb = this.camera,
-            ab = bb.oN(),
-            Ub = ab.createPickingRay(ab.pointerX, ab.pointerY, Eb.b.Identity(), bb, !1);
-          0 === bb.targetScreenOffset.x && 0 === bb.targetScreenOffset.y || (this._viewOffset.set(bb.targetScreenOffset.x, bb.targetScreenOffset.y, 0), bb.getViewMatrix().invertToRef(bb._cameraTransformMatrix), this._globalOffset = Eb.m.TransformNormal(this._viewOffset, bb._cameraTransformMatrix), Ub.origin.addInPlace(this._globalOffset));
-          let Ab = 0;
-          return this._hitPlane && (Ab = Ub.intersectsPlane(this._hitPlane) ?? 0), Ub.origin.addInPlace(Ub.direction.scaleInPlace(Ab))
+          const zz = this.camera,
+            tz = zz.aJ(),
+            sz = tz.createPickingRay(tz.pointerX, tz.pointerY, Oz.e.Identity(), zz, !1);
+          0 === zz.targetScreenOffset.x && 0 === zz.targetScreenOffset.y || (this._viewOffset.set(zz.targetScreenOffset.x, zz.targetScreenOffset.y, 0), zz.getViewMatrix().invertToRef(zz._cameraTransformMatrix), this._globalOffset = Oz.p.TransformNormal(this._viewOffset, zz._cameraTransformMatrix), sz.origin.addInPlace(this._globalOffset));
+          let Fz = 0;
+          return this._hitPlane && (Fz = sz.intersectsPlane(this._hitPlane) ?? 0), sz.origin.addInPlace(sz.direction.scaleInPlace(Fz))
         }
-        _zoomToMouse(bb) {
-          const ab = this.camera,
-            Ub = 1 - ab.inertia,
-            Ab = ab.movement.getFrameIndependentInputScale(ab.inertia);
-          if (ab.lowerRadiusLimit) {
-            const Mb = ab.lowerRadiusLimit ?? 0;
-            ab.radius - (this._zoomToMouseRadiusOffset + bb * Ab) / Ub < Mb && (bb = ((ab.radius - Mb) * Ub - this._zoomToMouseRadiusOffset) / Ab)
+        _zoomToMouse(zz) {
+          const tz = this.camera,
+            sz = 1 - tz.inertia,
+            Fz = tz.movement.getFrameIndependentInputScale(tz.inertia);
+          if (tz.lowerRadiusLimit) {
+            const Wz = tz.lowerRadiusLimit ?? 0;
+            tz.radius - (this._zoomToMouseRadiusOffset + zz * Fz) / sz < Wz && (zz = ((tz.radius - Wz) * sz - this._zoomToMouseRadiusOffset) / Fz)
           }
-          if (ab.upperRadiusLimit) {
-            const Mb = ab.upperRadiusLimit ?? 0;
-            ab.radius - (this._zoomToMouseRadiusOffset + bb * Ab) / Ub > Mb && (bb = ((ab.radius - Mb) * Ub - this._zoomToMouseRadiusOffset) / Ab)
+          if (tz.upperRadiusLimit) {
+            const Wz = tz.upperRadiusLimit ?? 0;
+            tz.radius - (this._zoomToMouseRadiusOffset + zz * Fz) / sz > Wz && (zz = ((tz.radius - Wz) * sz - this._zoomToMouseRadiusOffset) / Fz)
           }
-          const Mb = bb / Ub / ab.radius,
-            Tb = this._getPosition(),
-            Yb = Eb.j.Pj[6];
-          Tb.subtractToRef(ab.target, Yb), Yb.scaleInPlace(Mb), Yb.scaleInPlace(Ub), Yb.scaleInPlace(Ab), this._inertialPanning.addInPlace(Yb), this._zoomToMouseRadiusOffset += bb * Ab
+          const Wz = zz / sz / tz.radius,
+            Xz = this._getPosition(),
+            oz = Oz.m.XD[6];
+          Xz.subtractToRef(tz.target, oz), oz.scaleInPlace(Wz), oz.scaleInPlace(sz), oz.scaleInPlace(Fz), this._inertialPanning.addInPlace(oz), this._zoomToMouseRadiusOffset += zz * Fz
         }
-        _zeroIfClose(bb) {
-          Math.abs(bb.x) < Pb.e && (bb.x = 0), Math.abs(bb.y) < Pb.e && (bb.y = 0), Math.abs(bb.z) < Pb.e && (bb.z = 0)
+        _zeroIfClose(zz) {
+          Math.abs(zz.x) < Nz.c && (zz.x = 0), Math.abs(zz.y) < Nz.c && (zz.y = 0), Math.abs(zz.z) < Nz.c && (zz.z = 0)
         }
       }, (() => {
-        const Eb = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        ab = [(0, Mb.K)()], Ub = [(0, Mb.K)()], Tb = [(0, Mb.K)()], (0, Ab.h)(null, null, ab, {
+        const Oz = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        tz = [(0, Wz.J)()], sz = [(0, Wz.J)()], Xz = [(0, Wz.J)()], (0, Fz.h)(null, null, tz, {
           kind: "field",
           name: "wheelPrecision",
           static: !1,
           private: !1,
           access: {
-            has: bb => "wheelPrecision" in bb,
-            get: bb => bb.wheelPrecision,
-            set: (bb, ab) => {
-              bb.wheelPrecision = ab
+            has: zz => "wheelPrecision" in zz,
+            get: zz => zz.wheelPrecision,
+            set: (zz, tz) => {
+              zz.wheelPrecision = tz
             }
           },
-          metadata: Eb
-        }, Bb, eb), (0, Ab.h)(null, null, Ub, {
+          metadata: Oz
+        }, vz, Uz), (0, Fz.h)(null, null, sz, {
           kind: "field",
           name: "zoomToMouseLocation",
           static: !1,
           private: !1,
           access: {
-            has: bb => "zoomToMouseLocation" in bb,
-            get: bb => bb.zoomToMouseLocation,
-            set: (bb, ab) => {
-              bb.zoomToMouseLocation = ab
+            has: zz => "zoomToMouseLocation" in zz,
+            get: zz => zz.zoomToMouseLocation,
+            set: (zz, tz) => {
+              zz.zoomToMouseLocation = tz
             }
           },
-          metadata: Eb
-        }, Lb, Xb), (0, Ab.h)(null, null, Tb, {
+          metadata: Oz
+        }, uz, bz), (0, Fz.h)(null, null, Xz, {
           kind: "field",
           name: "wheelDeltaPercentage",
           static: !1,
           private: !1,
           access: {
-            has: bb => "wheelDeltaPercentage" in bb,
-            get: bb => bb.wheelDeltaPercentage,
-            set: (bb, ab) => {
-              bb.wheelDeltaPercentage = ab
+            has: zz => "wheelDeltaPercentage" in zz,
+            get: zz => zz.wheelDeltaPercentage,
+            set: (zz, tz) => {
+              zz.wheelDeltaPercentage = tz
             }
           },
-          metadata: Eb
-        }, jb, Rb), Eb && Object.defineProperty(bb, Symbol.metadata, {
+          metadata: Oz
+        }, wz, Dz), Oz && Object.defineProperty(zz, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Eb
+          value: Oz
         })
-      })(), bb
+      })(), zz
     })();
-    zb.b.ArcRotateCameraMouseWheelInput = Ib;
-    var db, Fb, hb = Ub(38982);
-    class Gb extends zb.f {
-      constructor(bb) {
-        super(bb)
+    rz.e.ArcRotateCameraMouseWheelInput = Gz;
+    var Tz, cz, jz = sz(39065);
+    class Az extends rz.g {
+      constructor(zz) {
+        super(zz)
       }
       addMouseWheel() {
-        return this.add(new Ib), this
+        return this.add(new Gz), this
       }
       addPointers() {
-        return this.add(new mb), this
+        return this.add(new Jz), this
       }
       addKeyboard() {
-        return this.add(new Nb), this
+        return this.add(new Cz), this
       }
-    }(db = Gb.prototype).addVRDeviceOrientation ?? (db.addVRDeviceOrientation = (0, hb.i)("ArcRotateCameraInputsManager", "addVRDeviceOrientation")), (Fb = Gb.prototype).addGamepad ?? (Fb.addGamepad = (0, hb.i)("ArcRotateCameraInputsManager", "addGamepad"));
-    var Qb = Ub(36447),
-      qb = Ub(39331),
-      ub = Ub(39340);
-    class rb extends qb.c {
-      constructor(bb, ab, Ub) {
-        super(bb, ab, Ub), this.input = new ub.d({
-          pan: (bb, ab) => {
-            this.panAccumulatedPixels.x += bb, this.panAccumulatedPixels.y += ab
+    }(Tz = Az.prototype).addVRDeviceOrientation ?? (Tz.addVRDeviceOrientation = (0, jz.g)("ArcRotateCameraInputsManager", "addVRDeviceOrientation")), (cz = Az.prototype).addGamepad ?? (cz.addGamepad = (0, jz.g)("ArcRotateCameraInputsManager", "addGamepad"));
+    var yz = sz(36518),
+      Mz = sz(39390),
+      dz = sz(39395);
+    class hz extends Mz.b {
+      constructor(zz, tz, sz) {
+        super(zz, tz, sz), this.input = new dz.d({
+          pan: (zz, tz) => {
+            this.panAccumulatedPixels.x += zz, this.panAccumulatedPixels.y += tz
           },
-          rotate: (bb, ab) => {
-            this.rotationAccumulatedPixels.x += bb, this.rotationAccumulatedPixels.y += ab
+          rotate: (zz, tz) => {
+            this.rotationAccumulatedPixels.x += zz, this.rotationAccumulatedPixels.y += tz
           },
-          zoom: bb => {
-            this.zoomAccumulatedPixels += bb
+          zoom: zz => {
+            this.zoomAccumulatedPixels += zz
           }
         }, (() => this._createDefaultInputMap()))
       }
@@ -1221,71 +1221,71 @@ export const modules = {
       }
     }
 
-    function Kb(bb, ab) {
-      return isNaN(bb) ? ab : bb
+    function Qz(zz, tz) {
+      return isNaN(zz) ? tz : zz
     }
-    let ob = (() => {
-        var bb;
-        let ab, Ub, Bb, vb, Lb, jb, Rb, zb, ib, fb, mb, pb, Nb, Wb, Hb, Ib, db, Fb, hb, Qb, qb, ub, ob, lb, tb, wb, sb, gb, Cb = Db.h,
-          Vb = [],
-          Ob = [],
-          cb = [],
-          Jb = [],
-          nb = [],
-          Sb = [],
-          ba = [],
-          aa = [],
-          Ua = [],
-          Aa = [],
-          Ma = [],
-          Ta = [],
-          Ea = [],
-          Ya = [],
-          Ba = [],
-          ea = [],
-          va = [],
-          La = [],
-          Pa = [],
-          Xa = [],
-          ja = [],
-          Ra = [],
-          ka = [],
-          ya = [],
-          Za = [],
-          Da = [],
-          za = [],
-          xa = [],
-          ia = [],
-          fa = [],
-          ma = [],
-          pa = [],
-          Na = [],
-          Wa = [],
-          Ha = [],
-          Ia = [],
-          da = [],
-          Fa = [],
-          ha = [],
-          Ga = [],
-          Qa = [],
-          qa = [],
-          ua = [],
-          ra = [],
-          Ka = [],
-          oa = [],
-          la = [];
-        return bb = class extends Cb {
+    let kz = (() => {
+        var zz;
+        let tz, sz, vz, Kz, uz, wz, Dz, rz, xz, mz, Jz, Iz, Cz, ez, Zz, Gz, Tz, cz, jz, yz, Mz, dz, kz, iz, Lz, lz, nz, az, qz = Pz.h,
+          Sz = [],
+          Vz = [],
+          Rz = [],
+          pz = [],
+          fz = [],
+          Ez = [],
+          zt = [],
+          tt = [],
+          st = [],
+          Ft = [],
+          Wt = [],
+          Xt = [],
+          Ot = [],
+          ot = [],
+          vt = [],
+          Ut = [],
+          Kt = [],
+          ut = [],
+          Nt = [],
+          bt = [],
+          wt = [],
+          Dt = [],
+          gt = [],
+          Ht = [],
+          Bt = [],
+          Pt = [],
+          rt = [],
+          Yt = [],
+          xt = [],
+          mt = [],
+          Jt = [],
+          It = [],
+          Ct = [],
+          et = [],
+          Zt = [],
+          Gt = [],
+          Tt = [],
+          ct = [],
+          jt = [],
+          At = [],
+          yt = [],
+          Mt = [],
+          dt = [],
+          ht = [],
+          Qt = [],
+          kt = [],
+          it = [];
+        return zz = class extends qz {
           get target() {
-            return this.tC
+            return this.vV
           }
-          set target(bb) {
-            this.setTarget(bb)
+          set target(zz) {
+            this.setTarget(zz)
           }
           get targetHost() {
             return this._targetHost
           }
-          set targetHost(bb) {
-            bb && this.setTarget(bb)
+          set targetHost(zz) {
+            zz && this.setTarget(zz)
           }
           getTarget() {
             return this.target
@@ -1293,185 +1293,185 @@ export const modules = {
           get position() {
             return this._position
           }
-          set position(bb) {
-            this.setPosition(bb)
+          set position(zz) {
+            this.setPosition(zz)
           }
-          set upVector(bb) {
-            this._upToYMatrix || (this._yToUpMatrix = new Eb.b, this._upToYMatrix = new Eb.b, this._upVector = Eb.m.Zero()), bb.normalize(), this._upVector.EUb(bb), this.setMatUp()
+          set upVector(zz) {
+            this._upToYMatrix || (this._yToUpMatrix = new Oz.e, this._upToYMatrix = new Oz.e, this._upVector = Oz.p.Zero()), zz.normalize(), this._upVector.vsz(zz), this.setMatUp()
           }
           get upVector() {
             return this._upVector
           }
           setMatUp() {
-            Eb.b.RotationAlignToRef(Eb.m.UpReadOnly, this._upVector, this._yToUpMatrix), Eb.b.RotationAlignToRef(this._upVector, Eb.m.UpReadOnly, this._upToYMatrix)
+            Oz.e.RotationAlignToRef(Oz.p.UpReadOnly, this._upVector, this._yToUpMatrix), Oz.e.RotationAlignToRef(this._upVector, Oz.p.UpReadOnly, this._upToYMatrix)
           }
           get inertialAlphaOffset() {
             if (0 !== this._inertialAlphaOffset) return this._inertialAlphaOffset;
             if (0 !== this.movement.rotationAccumulatedPixels.x) return this.movement.rotationAccumulatedPixels.x;
-            const bb = this.movement.rotationDeltaCurrentFrame.x;
-            return Math.abs(bb) < this._rotationEpsilon ? 0 : bb
+            const zz = this.movement.rotationDeltaCurrentFrame.x;
+            return Math.abs(zz) < this._rotationEpsilon ? 0 : zz
           }
-          set inertialAlphaOffset(bb) {
-            this._inertialAlphaOffset = bb, 0 === bb && this.movement.resetRotationVelocity()
+          set inertialAlphaOffset(zz) {
+            this._inertialAlphaOffset = zz, 0 === zz && this.movement.resetRotationVelocity()
           }
           get inertialBetaOffset() {
             if (0 !== this._inertialBetaOffset) return this._inertialBetaOffset;
             if (0 !== this.movement.rotationAccumulatedPixels.y) return this.movement.rotationAccumulatedPixels.y;
-            const bb = this.movement.rotationDeltaCurrentFrame.y;
-            return Math.abs(bb) < this._rotationEpsilon ? 0 : bb
+            const zz = this.movement.rotationDeltaCurrentFrame.y;
+            return Math.abs(zz) < this._rotationEpsilon ? 0 : zz
           }
-          set inertialBetaOffset(bb) {
-            this._inertialBetaOffset = bb, 0 === bb && this.movement.resetRotationVelocity()
+          set inertialBetaOffset(zz) {
+            this._inertialBetaOffset = zz, 0 === zz && this.movement.resetRotationVelocity()
           }
           get inertialRadiusOffset() {
             if (0 !== this._inertialRadiusOffset) return this._inertialRadiusOffset;
             if (0 !== this.movement.zoomAccumulatedPixels) return this.movement.zoomAccumulatedPixels;
-            const bb = this.movement.zoomDeltaCurrentFrame;
-            return Math.abs(bb) < this._rotationEpsilon ? 0 : bb
+            const zz = this.movement.zoomDeltaCurrentFrame;
+            return Math.abs(zz) < this._rotationEpsilon ? 0 : zz
           }
-          set inertialRadiusOffset(bb) {
-            this._inertialRadiusOffset = bb, 0 === bb && this.movement.resetZoomVelocity()
+          set inertialRadiusOffset(zz) {
+            this._inertialRadiusOffset = zz, 0 === zz && this.movement.resetZoomVelocity()
           }
           get panningInertia() {
             return this._panningInertia
           }
-          set panningInertia(bb) {
-            this._panningInertia = bb, this.movement && (this.movement.panInertia = bb)
+          set panningInertia(zz) {
+            this._panningInertia = zz, this.movement && (this.movement.panInertia = zz)
           }
           get inertia() {
             return this._inertia
           }
-          set inertia(bb) {
-            this._inertia = bb, this.movement && (this.movement.rotationInertia = bb, this.movement.zoomInertia = bb)
+          set inertia(zz) {
+            this._inertia = zz, this.movement && (this.movement.rotationInertia = zz, this.movement.zoomInertia = zz)
           }
           get angularSensibilityX() {
-            const bb = this.inputs.attached.pointers;
-            return bb ? bb.angularSensibilityX : 0
+            const zz = this.inputs.attached.pointers;
+            return zz ? zz.angularSensibilityX : 0
           }
-          set angularSensibilityX(bb) {
-            const ab = this.inputs.attached.pointers;
-            ab && (ab.angularSensibilityX = bb)
+          set angularSensibilityX(zz) {
+            const tz = this.inputs.attached.pointers;
+            tz && (tz.angularSensibilityX = zz)
           }
           get angularSensibilityY() {
-            const bb = this.inputs.attached.pointers;
-            return bb ? bb.angularSensibilityY : 0
+            const zz = this.inputs.attached.pointers;
+            return zz ? zz.angularSensibilityY : 0
           }
-          set angularSensibilityY(bb) {
-            const ab = this.inputs.attached.pointers;
-            ab && (ab.angularSensibilityY = bb)
+          set angularSensibilityY(zz) {
+            const tz = this.inputs.attached.pointers;
+            tz && (tz.angularSensibilityY = zz)
           }
           get pinchPrecision() {
-            const bb = this.inputs.attached.pointers;
-            return bb ? bb.pinchPrecision : 0
+            const zz = this.inputs.attached.pointers;
+            return zz ? zz.pinchPrecision : 0
           }
-          set pinchPrecision(bb) {
-            const ab = this.inputs.attached.pointers;
-            ab && (ab.pinchPrecision = bb)
+          set pinchPrecision(zz) {
+            const tz = this.inputs.attached.pointers;
+            tz && (tz.pinchPrecision = zz)
           }
           get pinchDeltaPercentage() {
-            const bb = this.inputs.attached.pointers;
-            return bb ? bb.pinchDeltaPercentage : 0
+            const zz = this.inputs.attached.pointers;
+            return zz ? zz.pinchDeltaPercentage : 0
           }
-          set pinchDeltaPercentage(bb) {
-            const ab = this.inputs.attached.pointers;
-            ab && (ab.pinchDeltaPercentage = bb)
+          set pinchDeltaPercentage(zz) {
+            const tz = this.inputs.attached.pointers;
+            tz && (tz.pinchDeltaPercentage = zz)
           }
           get useNaturalPinchZoom() {
-            const bb = this.inputs.attached.pointers;
-            return !!bb && bb.useNaturalPinchZoom
+            const zz = this.inputs.attached.pointers;
+            return !!zz && zz.useNaturalPinchZoom
           }
-          set useNaturalPinchZoom(bb) {
-            const ab = this.inputs.attached.pointers;
-            ab && (ab.useNaturalPinchZoom = bb)
+          set useNaturalPinchZoom(zz) {
+            const tz = this.inputs.attached.pointers;
+            tz && (tz.useNaturalPinchZoom = zz)
           }
           get panningSensibility() {
-            const bb = this.inputs.attached.pointers;
-            return bb ? bb.panningSensibility : 0
+            const zz = this.inputs.attached.pointers;
+            return zz ? zz.panningSensibility : 0
           }
-          set panningSensibility(bb) {
-            const ab = this.inputs.attached.pointers;
-            ab && (ab.panningSensibility = bb)
+          set panningSensibility(zz) {
+            const tz = this.inputs.attached.pointers;
+            tz && (tz.panningSensibility = zz)
           }
           get keysUp() {
-            const bb = this.inputs.attached.keyboard;
-            return bb ? bb.keysUp : []
+            const zz = this.inputs.attached.keyboard;
+            return zz ? zz.keysUp : []
           }
-          set keysUp(bb) {
-            const ab = this.inputs.attached.keyboard;
-            ab && (ab.keysUp = bb)
+          set keysUp(zz) {
+            const tz = this.inputs.attached.keyboard;
+            tz && (tz.keysUp = zz)
           }
           get keysDown() {
-            const bb = this.inputs.attached.keyboard;
-            return bb ? bb.keysDown : []
+            const zz = this.inputs.attached.keyboard;
+            return zz ? zz.keysDown : []
           }
-          set keysDown(bb) {
-            const ab = this.inputs.attached.keyboard;
-            ab && (ab.keysDown = bb)
+          set keysDown(zz) {
+            const tz = this.inputs.attached.keyboard;
+            tz && (tz.keysDown = zz)
           }
           get keysLeft() {
-            const bb = this.inputs.attached.keyboard;
-            return bb ? bb.keysLeft : []
+            const zz = this.inputs.attached.keyboard;
+            return zz ? zz.keysLeft : []
           }
-          set keysLeft(bb) {
-            const ab = this.inputs.attached.keyboard;
-            ab && (ab.keysLeft = bb)
+          set keysLeft(zz) {
+            const tz = this.inputs.attached.keyboard;
+            tz && (tz.keysLeft = zz)
           }
           get keysRight() {
-            const bb = this.inputs.attached.keyboard;
-            return bb ? bb.keysRight : []
+            const zz = this.inputs.attached.keyboard;
+            return zz ? zz.keysRight : []
           }
-          set keysRight(bb) {
-            const ab = this.inputs.attached.keyboard;
-            ab && (ab.keysRight = bb)
+          set keysRight(zz) {
+            const tz = this.inputs.attached.keyboard;
+            tz && (tz.keysRight = zz)
           }
           get wheelPrecision() {
-            const bb = this.inputs.attached.mousewheel;
-            return bb ? bb.wheelPrecision : 0
+            const zz = this.inputs.attached.mousewheel;
+            return zz ? zz.wheelPrecision : 0
           }
-          set wheelPrecision(bb) {
-            const ab = this.inputs.attached.mousewheel;
-            ab && (ab.wheelPrecision = bb)
+          set wheelPrecision(zz) {
+            const tz = this.inputs.attached.mousewheel;
+            tz && (tz.wheelPrecision = zz)
           }
           get zoomToMouseLocation() {
-            const bb = this.inputs.attached.mousewheel;
-            return !!bb && bb.zoomToMouseLocation
+            const zz = this.inputs.attached.mousewheel;
+            return !!zz && zz.zoomToMouseLocation
           }
-          set zoomToMouseLocation(bb) {
-            const ab = this.inputs.attached.mousewheel;
-            ab && (ab.zoomToMouseLocation = bb)
+          set zoomToMouseLocation(zz) {
+            const tz = this.inputs.attached.mousewheel;
+            tz && (tz.zoomToMouseLocation = zz)
           }
           get wheelDeltaPercentage() {
-            const bb = this.inputs.attached.mousewheel;
-            return bb ? bb.wheelDeltaPercentage : 0
+            const zz = this.inputs.attached.mousewheel;
+            return zz ? zz.wheelDeltaPercentage : 0
           }
-          set wheelDeltaPercentage(bb) {
-            const ab = this.inputs.attached.mousewheel;
-            ab && (ab.wheelDeltaPercentage = bb)
+          set wheelDeltaPercentage(zz) {
+            const tz = this.inputs.attached.mousewheel;
+            tz && (tz.wheelDeltaPercentage = zz)
           }
           get _useCtrlForPanning() {
             return this._useCtrlForPanningInternal
           }
-          set _useCtrlForPanning(bb) {
-            this._useCtrlForPanningInternal = bb;
-            const ab = this.movement.input,
-              Ub = ab.getEntry("keyboard", "pan", {
+          set _useCtrlForPanning(zz) {
+            this._useCtrlForPanningInternal = zz;
+            const tz = this.movement.input,
+              sz = tz.getEntry("keyboard", "pan", {
                 modifiers: {
                   ctrl: !0
                 }
               });
-            !bb && Ub ? ab.inputMap.splice(ab.inputMap.indexOf(Ub), 1) : bb && !Ub && ab.addEntry({
+            !zz && sz ? tz.inputMap.splice(tz.inputMap.indexOf(sz), 1) : zz && !sz && tz.addEntry({
               source: "keyboard",
               modifiers: {
                 ctrl: !0
               },
               interaction: "pan"
             });
-            const Ab = ab.getEntry("pointer", "pan", {
+            const Fz = tz.getEntry("pointer", "pan", {
               modifiers: {
                 ctrl: !0
               }
             });
-            !bb && Ab ? ab.inputMap.splice(ab.inputMap.indexOf(Ab), 1) : bb && !Ab && ab.addEntry({
+            !zz && Fz ? tz.inputMap.splice(tz.inputMap.indexOf(Fz), 1) : zz && !Fz && tz.addEntry({
               source: "pointer",
               button: 0,
               modifiers: {
@@ -1483,12 +1483,12 @@ export const modules = {
           get _panningMouseButton() {
             return this._panningMouseButtonInternal
           }
-          set _panningMouseButton(bb) {
-            this._panningMouseButtonInternal = bb;
-            const ab = this.movement.input.getEntry("pointer", "pan", {
+          set _panningMouseButton(zz) {
+            this._panningMouseButtonInternal = zz;
+            const tz = this.movement.input.getEntry("pointer", "pan", {
               modifiers: {}
             });
-            ab && (ab.button = bb)
+            tz && (tz.button = zz)
           }
           get isInterpolating() {
             return this._isInterpolating
@@ -1499,8 +1499,8 @@ export const modules = {
           get useBouncingBehavior() {
             return null != this._bouncingBehavior
           }
-          set useBouncingBehavior(bb) {
-            bb !== this.useBouncingBehavior && (bb ? (this._bouncingBehavior = new kb, this.addBehavior(this._bouncingBehavior)) : this._bouncingBehavior && (this.removeBehavior(this._bouncingBehavior), this._bouncingBehavior = null))
+          set useBouncingBehavior(zz) {
+            zz !== this.useBouncingBehavior && (zz ? (this._bouncingBehavior = new gz, this.addBehavior(this._bouncingBehavior)) : this._bouncingBehavior && (this.removeBehavior(this._bouncingBehavior), this._bouncingBehavior = null))
           }
           get framingBehavior() {
             return this._framingBehavior
@@ -1508,8 +1508,8 @@ export const modules = {
           get useFramingBehavior() {
             return null != this._framingBehavior
           }
-          set useFramingBehavior(bb) {
-            bb !== this.useFramingBehavior && (bb ? (this._framingBehavior = new yb, this.addBehavior(this._framingBehavior)) : this._framingBehavior && (this.removeBehavior(this._framingBehavior), this._framingBehavior = null))
+          set useFramingBehavior(zz) {
+            zz !== this.useFramingBehavior && (zz ? (this._framingBehavior = new Hz, this.addBehavior(this._framingBehavior)) : this._framingBehavior && (this.removeBehavior(this._framingBehavior), this._framingBehavior = null))
           }
           get autoRotationBehavior() {
             return this._autoRotationBehavior
@@ -1517,136 +1517,136 @@ export const modules = {
           get useAutoRotationBehavior() {
             return null != this._autoRotationBehavior
           }
-          set useAutoRotationBehavior(bb) {
-            bb !== this.useAutoRotationBehavior && (bb ? (this._autoRotationBehavior = new Xb, this.addBehavior(this._autoRotationBehavior)) : this._autoRotationBehavior && (this.removeBehavior(this._autoRotationBehavior), this._autoRotationBehavior = null))
+          set useAutoRotationBehavior(zz) {
+            zz !== this.useAutoRotationBehavior && (zz ? (this._autoRotationBehavior = new bz, this.addBehavior(this._autoRotationBehavior)) : this._autoRotationBehavior && (this.removeBehavior(this._autoRotationBehavior), this._autoRotationBehavior = null))
           }
-          constructor(bb, ab, Ub, Mb, Yb, Bb) {
-            var eb;
-            let vb = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-            super(bb, Eb.m.Zero(), Bb, vb), eb = this, this.alpha = ((0, Ab.k)(this, Vb), (0, Ab.k)(this, Ob, void 0)), this.beta = ((0, Ab.k)(this, cb), (0, Ab.k)(this, Jb, void 0)), this.radius = ((0, Ab.k)(this, nb), (0, Ab.k)(this, Sb, void 0)), this.overrideCloneAlphaBetaRadius = ((0, Ab.k)(this, ba), (0, Ab.k)(this, aa, void 0)), this.tC = ((0, Ab.k)(this, Ua), (0, Ab.k)(this, Aa, void 0)), this._targetHost = ((0, Ab.k)(this, Ma), (0, Ab.k)(this, Ta, void 0)), this._upToYMatrix = (0, Ab.k)(this, Ea), this._inertialAlphaOffset = 0, this._inertialBetaOffset = 0, this._inertialRadiusOffset = 0, this.lowerAlphaLimit = (0, Ab.k)(this, Ya, null), this.upperAlphaLimit = ((0, Ab.k)(this, Ba), (0, Ab.k)(this, ea, null)), this.lowerBetaLimit = ((0, Ab.k)(this, va), (0, Ab.k)(this, La, .01)), this.upperBetaLimit = ((0, Ab.k)(this, Pa), (0, Ab.k)(this, Xa, Math.PI - .01)), this.lowerRadiusLimit = ((0, Ab.k)(this, ja), (0, Ab.k)(this, Ra, null)), this.upperRadiusLimit = ((0, Ab.k)(this, ka), (0, Ab.k)(this, ya, null)), this.lowerTargetYLimit = ((0, Ab.k)(this, Za), (0, Ab.k)(this, Da, -1 / 0)), this.inertialPanningX = ((0, Ab.k)(this, za), (0, Ab.k)(this, xa, 0)), this.inertialPanningY = ((0, Ab.k)(this, ia), (0, Ab.k)(this, fa, 0)), this.pinchToPanMaxDistance = ((0, Ab.k)(this, ma), (0, Ab.k)(this, pa, 20)), this.panningDistanceLimit = ((0, Ab.k)(this, Na), (0, Ab.k)(this, Wa, null)), this.panningOriginTarget = ((0, Ab.k)(this, Ha), (0, Ab.k)(this, Ia, Eb.m.Zero())), this._panningInertia = ((0, Ab.k)(this, da), .9), this._inertia = .9, this.zoomOnFactor = (0, Ab.k)(this, Fa, 1), this.targetScreenOffset = ((0, Ab.k)(this, ha), (0, Ab.k)(this, Ga, Eb.l.Zero())), this.allowUpsideDown = ((0, Ab.k)(this, Qa), (0, Ab.k)(this, qa, !0)), this.useInputToRestoreState = ((0, Ab.k)(this, ua), (0, Ab.k)(this, ra, !0)), this.restoreStateInterpolationFactor = ((0, Ab.k)(this, Ka), (0, Ab.k)(this, oa, 0)), this._currentInterpolationFactor = ((0, Ab.k)(this, la), 0), this._viewMatrix = new Eb.b, this._useCtrlForPanningInternal = !0, this._panningMouseButtonInternal = 2, this.panningAxis = new Eb.m(1, 1, 0), this._transformedDirection = new Eb.m, this.mapPanning = !1, this._isInterpolating = !1, this.onMeshTargetChangedObservable = new Tb.b, this.checkCollisions = !1, this.collisionRadius = new Eb.m(.5, .5, .5), this._previousPosition = Eb.m.Zero(), this._collisionVelocity = Eb.m.Zero(), this._newPosition = Eb.m.Zero(), this._computationVector = Eb.m.Zero(), this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget = new Eb.m(NaN, NaN, NaN), this._goalTargetScreenOffset = new Eb.l(NaN, NaN), this._onCollisionPositionChange = function(bb, ab) {
-              let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-              Ub ? (eb.setPosition(ab), eb.SL && eb.SL(Ub)) : eb._previousPosition.EUb(eb._position);
-              const Ab = Math.cos(eb.alpha),
-                Mb = Math.sin(eb.alpha),
-                Tb = Math.cos(eb.beta);
-              let Eb = Math.sin(eb.beta);
-              0 === Eb && (Eb = 1e-4);
-              const Yb = eb._getTargetPosition();
-              eb._computationVector.K9(eb.radius * Ab * Eb, eb.radius * Tb, eb.radius * Mb * Eb), Yb.addToRef(eb._computationVector, eb._newPosition), eb._position.EUb(eb._newPosition);
-              let Bb = eb.upVector;
-              eb.allowUpsideDown && eb.beta < 0 && (Bb = Bb.clone(), Bb = Bb.pa()), eb._computeViewMatrix(eb._position, Yb, Bb), eb._viewMatrix.addAtIndex(12, eb.targetScreenOffset.x), eb._viewMatrix.addAtIndex(13, eb.targetScreenOffset.y), eb._collisionTriggered = !1
-            }, this.tC = Eb.m.Zero(), Yb && this.setTarget(Yb), this.alpha = ab, this.beta = Ub, this.radius = Mb, this.getViewMatrix(), this.inputs = new Gb(this), this.inputs.addKeyboard().addMouseWheel().addPointers(), this.movement = new rb(this.oN(), this._position), this.movement.rotationInertia = this._inertia, this.movement.zoomInertia = this._inertia, this.movement.panInertia = this._panningInertia
+          constructor(zz, tz, sz, Wz, oz, vz) {
+            var Uz;
+            let Kz = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+            super(zz, Oz.p.Zero(), vz, Kz), Uz = this, this.alpha = ((0, Fz.k)(this, Sz), (0, Fz.k)(this, Vz, void 0)), this.beta = ((0, Fz.k)(this, Rz), (0, Fz.k)(this, pz, void 0)), this.radius = ((0, Fz.k)(this, fz), (0, Fz.k)(this, Ez, void 0)), this.overrideCloneAlphaBetaRadius = ((0, Fz.k)(this, zt), (0, Fz.k)(this, tt, void 0)), this.vV = ((0, Fz.k)(this, st), (0, Fz.k)(this, Ft, void 0)), this._targetHost = ((0, Fz.k)(this, Wt), (0, Fz.k)(this, Xt, void 0)), this._upToYMatrix = (0, Fz.k)(this, Ot), this._inertialAlphaOffset = 0, this._inertialBetaOffset = 0, this._inertialRadiusOffset = 0, this.lowerAlphaLimit = (0, Fz.k)(this, ot, null), this.upperAlphaLimit = ((0, Fz.k)(this, vt), (0, Fz.k)(this, Ut, null)), this.lowerBetaLimit = ((0, Fz.k)(this, Kt), (0, Fz.k)(this, ut, .01)), this.upperBetaLimit = ((0, Fz.k)(this, Nt), (0, Fz.k)(this, bt, Math.PI - .01)), this.lowerRadiusLimit = ((0, Fz.k)(this, wt), (0, Fz.k)(this, Dt, null)), this.upperRadiusLimit = ((0, Fz.k)(this, gt), (0, Fz.k)(this, Ht, null)), this.lowerTargetYLimit = ((0, Fz.k)(this, Bt), (0, Fz.k)(this, Pt, -1 / 0)), this.inertialPanningX = ((0, Fz.k)(this, rt), (0, Fz.k)(this, Yt, 0)), this.inertialPanningY = ((0, Fz.k)(this, xt), (0, Fz.k)(this, mt, 0)), this.pinchToPanMaxDistance = ((0, Fz.k)(this, Jt), (0, Fz.k)(this, It, 20)), this.panningDistanceLimit = ((0, Fz.k)(this, Ct), (0, Fz.k)(this, et, null)), this.panningOriginTarget = ((0, Fz.k)(this, Zt), (0, Fz.k)(this, Gt, Oz.p.Zero())), this._panningInertia = ((0, Fz.k)(this, Tt), .9), this._inertia = .9, this.zoomOnFactor = (0, Fz.k)(this, ct, 1), this.targetScreenOffset = ((0, Fz.k)(this, jt), (0, Fz.k)(this, At, Oz.n.Zero())), this.allowUpsideDown = ((0, Fz.k)(this, yt), (0, Fz.k)(this, Mt, !0)), this.useInputToRestoreState = ((0, Fz.k)(this, dt), (0, Fz.k)(this, ht, !0)), this.restoreStateInterpolationFactor = ((0, Fz.k)(this, Qt), (0, Fz.k)(this, kt, 0)), this._currentInterpolationFactor = ((0, Fz.k)(this, it), 0), this._viewMatrix = new Oz.e, this._useCtrlForPanningInternal = !0, this._panningMouseButtonInternal = 2, this.panningAxis = new Oz.p(1, 1, 0), this._transformedDirection = new Oz.p, this.mapPanning = !1, this._isInterpolating = !1, this.onMeshTargetChangedObservable = new Xz.c, this.checkCollisions = !1, this.collisionRadius = new Oz.p(.5, .5, .5), this._previousPosition = Oz.p.Zero(), this._collisionVelocity = Oz.p.Zero(), this._newPosition = Oz.p.Zero(), this._computationVector = Oz.p.Zero(), this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget = new Oz.p(NaN, NaN, NaN), this._goalTargetScreenOffset = new Oz.n(NaN, NaN), this._onCollisionPositionChange = function(zz, tz) {
+              let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+              sz ? (Uz.setPosition(tz), Uz.cN && Uz.cN(sz)) : Uz._previousPosition.vsz(Uz._position);
+              const Fz = Math.cos(Uz.alpha),
+                Wz = Math.sin(Uz.alpha),
+                Xz = Math.cos(Uz.beta);
+              let Oz = Math.sin(Uz.beta);
+              0 === Oz && (Oz = 1e-4);
+              const oz = Uz._getTargetPosition();
+              Uz._computationVector.m_(Uz.radius * Fz * Oz, Uz.radius * Xz, Uz.radius * Wz * Oz), oz.addToRef(Uz._computationVector, Uz._newPosition), Uz._position.vsz(Uz._newPosition);
+              let vz = Uz.upVector;
+              Uz.allowUpsideDown && Uz.beta < 0 && (vz = vz.clone(), vz = vz.nt()), Uz._computeViewMatrix(Uz._position, oz, vz), Uz._viewMatrix.addAtIndex(12, Uz.targetScreenOffset.x), Uz._viewMatrix.addAtIndex(13, Uz.targetScreenOffset.y), Uz._collisionTriggered = !1
+            }, this.vV = Oz.p.Zero(), oz && this.setTarget(oz), this.alpha = tz, this.beta = sz, this.radius = Wz, this.getViewMatrix(), this.inputs = new Az(this), this.inputs.addKeyboard().addMouseWheel().addPointers(), this.movement = new hz(this.aJ(), this._position), this.movement.rotationInertia = this._inertia, this.movement.zoomInertia = this._inertia, this.movement.panInertia = this._panningInertia
           }
           _initCache() {
-            super._initCache(), this._cache.tC = new Eb.m(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.alpha = void 0, this._cache.beta = void 0, this._cache.radius = void 0, this._cache.targetScreenOffset = Eb.l.Zero()
+            super._initCache(), this._cache.vV = new Oz.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.alpha = void 0, this._cache.beta = void 0, this._cache.radius = void 0, this._cache.targetScreenOffset = Oz.n.Zero()
           }
-          _updateCache(bb) {
-            bb || super._updateCache(), this._cache.tC.EUb(this._getTargetPosition()), this._cache.alpha = this.alpha, this._cache.beta = this.beta, this._cache.radius = this.radius, this._cache.targetScreenOffset.EUb(this.targetScreenOffset)
+          _updateCache(zz) {
+            zz || super._updateCache(), this._cache.vV.vsz(this._getTargetPosition()), this._cache.alpha = this.alpha, this._cache.beta = this.beta, this._cache.radius = this.radius, this._cache.targetScreenOffset.vsz(this.targetScreenOffset)
           }
           _getTargetPosition() {
             if (this._targetHost && this._targetHost.getAbsolutePosition) {
-              const bb = this._targetHost.getAbsolutePosition();
-              this._targetBoundingCenter ? bb.addToRef(this._targetBoundingCenter, this.tC) : this.tC.EUb(bb)
+              const zz = this._targetHost.getAbsolutePosition();
+              this._targetBoundingCenter ? zz.addToRef(this._targetBoundingCenter, this.vV) : this.vV.vsz(zz)
             }
-            const bb = this._getLockedTargetPosition();
-            return bb || this.tC
+            const zz = this._getLockedTargetPosition();
+            return zz || this.vV
           }
           storeState() {
             return this._storedAlpha = this.alpha, this._storedBeta = this.beta, this._storedRadius = this.radius, this._storedTarget = this._getTargetPosition().clone(), this._storedTargetScreenOffset = this.targetScreenOffset.clone(), super.storeState()
           }
           _restoreStateValues() {
-            return this.hasStateStored() && this.restoreStateInterpolationFactor > Pb.e && this.restoreStateInterpolationFactor < 1 ? (this.interpolateTo(this._storedAlpha, this._storedBeta, this._storedRadius, this._storedTarget, this._storedTargetScreenOffset, this.restoreStateInterpolationFactor), !0) : !!super._restoreStateValues() && (this.setTarget(this._storedTarget.clone()), this.alpha = this._storedAlpha, this.beta = this._storedBeta, this.radius = this._storedRadius, this.targetScreenOffset = this._storedTargetScreenOffset.clone(), this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, !0)
+            return this.hasStateStored() && this.restoreStateInterpolationFactor > Nz.c && this.restoreStateInterpolationFactor < 1 ? (this.interpolateTo(this._storedAlpha, this._storedBeta, this._storedRadius, this._storedTarget, this._storedTargetScreenOffset, this.restoreStateInterpolationFactor), !0) : !!super._restoreStateValues() && (this.setTarget(this._storedTarget.clone()), this.alpha = this._storedAlpha, this.beta = this._storedBeta, this.radius = this._storedRadius, this.targetScreenOffset = this._storedTargetScreenOffset.clone(), this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, !0)
           }
           stopInterpolation() {
             this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget.set(NaN, NaN, NaN), this._goalTargetScreenOffset.set(NaN, NaN)
           }
           interpolateTo() {
-            let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.alpha,
-              ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.beta,
-              Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.radius,
-              Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.target,
-              Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.targetScreenOffset,
-              Tb = arguments.length > 5 ? arguments[5] : void 0;
-            this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, null != Tb ? this._currentInterpolationFactor = Tb : 0 !== this.restoreStateInterpolationFactor ? this._currentInterpolationFactor = this.restoreStateInterpolationFactor : this._currentInterpolationFactor = .1, this._goalAlpha = Kb(bb, this._goalAlpha), this._goalBeta = Kb(ab, this._goalBeta), this._goalRadius = Kb(Ub, this._goalRadius), this._goalTarget.set(Kb(Ab.x, this._goalTarget.x), Kb(Ab.y, this._goalTarget.y), Kb(Ab.z, this._goalTarget.z)), this._goalTargetScreenOffset.set(Kb(Mb.x, this._goalTargetScreenOffset.x), Kb(Mb.y, this._goalTargetScreenOffset.y)), this._goalAlpha = (0, Yb.Clamp)(this._goalAlpha, this.lowerAlphaLimit ?? -1 / 0, this.upperAlphaLimit ?? 1 / 0), this._goalBeta = (0, Yb.Clamp)(this._goalBeta, this.lowerBetaLimit ?? -1 / 0, this.upperBetaLimit ?? 1 / 0), this._goalRadius = (0, Yb.Clamp)(this._goalRadius, this.lowerRadiusLimit ?? -1 / 0, this.upperRadiusLimit ?? 1 / 0), this._goalTarget.y = (0, Yb.Clamp)(this._goalTarget.y, this.lowerTargetYLimit ?? -1 / 0, 1 / 0), this._isInterpolating = !0
+            let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.alpha,
+              tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.beta,
+              sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.radius,
+              Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.target,
+              Wz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.targetScreenOffset,
+              Xz = arguments.length > 5 ? arguments[5] : void 0;
+            this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, null != Xz ? this._currentInterpolationFactor = Xz : 0 !== this.restoreStateInterpolationFactor ? this._currentInterpolationFactor = this.restoreStateInterpolationFactor : this._currentInterpolationFactor = .1, this._goalAlpha = Qz(zz, this._goalAlpha), this._goalBeta = Qz(tz, this._goalBeta), this._goalRadius = Qz(sz, this._goalRadius), this._goalTarget.set(Qz(Fz.x, this._goalTarget.x), Qz(Fz.y, this._goalTarget.y), Qz(Fz.z, this._goalTarget.z)), this._goalTargetScreenOffset.set(Qz(Wz.x, this._goalTargetScreenOffset.x), Qz(Wz.y, this._goalTargetScreenOffset.y)), this._goalAlpha = (0, oz.Clamp)(this._goalAlpha, this.lowerAlphaLimit ?? -1 / 0, this.upperAlphaLimit ?? 1 / 0), this._goalBeta = (0, oz.Clamp)(this._goalBeta, this.lowerBetaLimit ?? -1 / 0, this.upperBetaLimit ?? 1 / 0), this._goalRadius = (0, oz.Clamp)(this._goalRadius, this.lowerRadiusLimit ?? -1 / 0, this.upperRadiusLimit ?? 1 / 0), this._goalTarget.y = (0, oz.Clamp)(this._goalTarget.y, this.lowerTargetYLimit ?? -1 / 0, 1 / 0), this._isInterpolating = !0
           }
           _isSynchronizedViewMatrix() {
-            return !!super._isSynchronizedViewMatrix() && (this._cache.tC.equals(this._getTargetPosition()) && this._cache.alpha === this.alpha && this._cache.beta === this.beta && this._cache.radius === this.radius && this._cache.targetScreenOffset.equals(this.targetScreenOffset))
+            return !!super._isSynchronizedViewMatrix() && (this._cache.vV.equals(this._getTargetPosition()) && this._cache.alpha === this.alpha && this._cache.beta === this.beta && this._cache.radius === this.radius && this._cache.targetScreenOffset.equals(this.targetScreenOffset))
           }
-          attachControl(bb, ab) {
-            let Ub = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-              Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
-            const Mb = arguments;
-            ab = xb.h.BackCompatCameraNoPreventDefault(Mb), this._useCtrlForPanning = Ub, this._panningMouseButton = Ab, "boolean" === typeof Mb[0] && (Mb.length > 1 && (this._useCtrlForPanning = Mb[1]), Mb.length > 2 && (this._panningMouseButton = Mb[2])), this.inputs.attachElement(ab), this._reset = () => {
+          attachControl(zz, tz) {
+            let sz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+              Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
+            const Wz = arguments;
+            tz = Yz.j.BackCompatCameraNoPreventDefault(Wz), this._useCtrlForPanning = sz, this._panningMouseButton = Fz, "boolean" === typeof Wz[0] && (Wz.length > 1 && (this._useCtrlForPanning = Wz[1]), Wz.length > 2 && (this._panningMouseButton = Wz[2])), this.inputs.attachElement(tz), this._reset = () => {
               this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0
             }
           }
           detachControl() {
             this.inputs.detachElement(), this._reset && this._reset()
           }
-          _applyRotationAndZoomDelta(bb, ab, Ub) {
-            const Ab = this.invertRotation ? -1 : 1;
-            let Mb = bb * this._calculateHandednessMultiplier();
-            this.beta < 0 && (Mb *= -1), this.alpha += Mb * Ab, this.beta += ab * Ab, this.radius -= Ub
+          _applyRotationAndZoomDelta(zz, tz, sz) {
+            const Fz = this.invertRotation ? -1 : 1;
+            let Wz = zz * this._calculateHandednessMultiplier();
+            this.beta < 0 && (Wz *= -1), this.alpha += Wz * Fz, this.beta += tz * Fz, this.radius -= sz
           }
-          _applyPanDelta(bb, ab) {
-            const Ub = Eb.j.Pj[0].K9(bb, ab, ab);
-            if (this._viewMatrix.invertToRef(this._cameraTransformMatrix), Ub.multiplyInPlace(this.panningAxis), Eb.m.TransformNormalToRef(Ub, this._cameraTransformMatrix, this._transformedDirection), this.mapPanning) {
-              const bb = this.upVector,
-                ab = Eb.m.CrossToRef(this._transformedDirection, bb, this._transformedDirection);
-              Eb.m.CrossToRef(bb, ab, this._transformedDirection)
+          _applyPanDelta(zz, tz) {
+            const sz = Oz.m.XD[0].m_(zz, tz, tz);
+            if (this._viewMatrix.invertToRef(this._cameraTransformMatrix), sz.multiplyInPlace(this.panningAxis), Oz.p.TransformNormalToRef(sz, this._cameraTransformMatrix, this._transformedDirection), this.mapPanning) {
+              const zz = this.upVector,
+                tz = Oz.p.CrossToRef(this._transformedDirection, zz, this._transformedDirection);
+              Oz.p.CrossToRef(zz, tz, this._transformedDirection)
             } else this.panningAxis.y || (this._transformedDirection.y = 0);
             if (!this._targetHost)
               if (null !== this.panningDistanceLimit) {
-                this._transformedDirection.addInPlace(this.tC);
-                Eb.m.DistanceSquared(this._transformedDirection, this.panningOriginTarget) <= this.panningDistanceLimit * this.panningDistanceLimit && this.tC.EUb(this._transformedDirection)
+                this._transformedDirection.addInPlace(this.vV);
+                Oz.p.DistanceSquared(this._transformedDirection, this.panningOriginTarget) <= this.panningDistanceLimit * this.panningDistanceLimit && this.vV.vsz(this._transformedDirection)
               } else {
                 if (this.parent) {
-                  const bb = Eb.j.Matrix[0];
-                  this.parent.getWorldMatrix().getRotationMatrixToRef(bb), bb.transposeToRef(bb), Eb.m.TransformCoordinatesToRef(this._transformedDirection, bb, this._transformedDirection)
+                  const zz = Oz.m.Matrix[0];
+                  this.parent.getWorldMatrix().getRotationMatrixToRef(zz), zz.transposeToRef(zz), Oz.p.TransformCoordinatesToRef(this._transformedDirection, zz, this._transformedDirection)
                 }
-                this.tC.addInPlace(this._transformedDirection)
+                this.vV.addInPlace(this._transformedDirection)
               }
           }
           _checkInputs() {
             if (this._collisionTriggered) return;
             this.inputs.checkInputs();
-            let bb = !1;
+            let zz = !1;
             this.movement.computeCurrentFrameDeltas();
-            const ab = this.movement.rotationDeltaCurrentFrame,
-              Ub = this.movement.zoomDeltaCurrentFrame,
-              Ab = this.movement.panDeltaCurrentFrame;
-            if (0 === ab.x && 0 === ab.y && 0 === Ub && 0 === Ab.x && 0 === Ab.y || (bb = !0, 0 === ab.x && 0 === ab.y && 0 === Ub || this._applyRotationAndZoomDelta(ab.x, ab.y, Ub), 0 === Ab.x && 0 === Ab.y || this._applyPanDelta(Ab.x, Ab.y)), 0 === this._inertialAlphaOffset && 0 === this._inertialBetaOffset && 0 === this._inertialRadiusOffset || (this._applyRotationAndZoomDelta(this._inertialAlphaOffset, this._inertialBetaOffset, this._inertialRadiusOffset), this._inertialAlphaOffset *= this.inertia, this._inertialBetaOffset *= this.inertia, this._inertialRadiusOffset *= this.inertia, Math.abs(this._inertialAlphaOffset) < this._rotationEpsilon && (this._inertialAlphaOffset = 0), Math.abs(this._inertialBetaOffset) < this._rotationEpsilon && (this._inertialBetaOffset = 0), Math.abs(this._inertialRadiusOffset) < this._rotationEpsilon && (this._inertialRadiusOffset = 0), bb = !0), 0 !== this.inertialPanningX || 0 !== this.inertialPanningY) {
+            const tz = this.movement.rotationDeltaCurrentFrame,
+              sz = this.movement.zoomDeltaCurrentFrame,
+              Fz = this.movement.panDeltaCurrentFrame;
+            if (0 === tz.x && 0 === tz.y && 0 === sz && 0 === Fz.x && 0 === Fz.y || (zz = !0, 0 === tz.x && 0 === tz.y && 0 === sz || this._applyRotationAndZoomDelta(tz.x, tz.y, sz), 0 === Fz.x && 0 === Fz.y || this._applyPanDelta(Fz.x, Fz.y)), 0 === this._inertialAlphaOffset && 0 === this._inertialBetaOffset && 0 === this._inertialRadiusOffset || (this._applyRotationAndZoomDelta(this._inertialAlphaOffset, this._inertialBetaOffset, this._inertialRadiusOffset), this._inertialAlphaOffset *= this.inertia, this._inertialBetaOffset *= this.inertia, this._inertialRadiusOffset *= this.inertia, Math.abs(this._inertialAlphaOffset) < this._rotationEpsilon && (this._inertialAlphaOffset = 0), Math.abs(this._inertialBetaOffset) < this._rotationEpsilon && (this._inertialBetaOffset = 0), Math.abs(this._inertialRadiusOffset) < this._rotationEpsilon && (this._inertialRadiusOffset = 0), zz = !0), 0 !== this.inertialPanningX || 0 !== this.inertialPanningY) {
               this._applyPanDelta(this.inertialPanningX, this.inertialPanningY), this.inertialPanningX *= this.panningInertia, this.inertialPanningY *= this.panningInertia;
-              const ab = this._panningEpsilon;
-              Math.abs(this.inertialPanningX) < ab && (this.inertialPanningX = 0), Math.abs(this.inertialPanningY) < ab && (this.inertialPanningY = 0), bb = !0
+              const tz = this._panningEpsilon;
+              Math.abs(this.inertialPanningX) < tz && (this.inertialPanningX = 0), Math.abs(this.inertialPanningY) < tz && (this.inertialPanningY = 0), zz = !0
             }
-            if (bb) this.stopInterpolation();
+            if (zz) this.stopInterpolation();
             else if (this._isInterpolating) {
-              let bb = !1;
-              const ab = this._scene.vj().getDeltaTime() / 1e3,
-                Ub = 1 - Math.pow(2, -ab / this._currentInterpolationFactor),
-                Ab = Kb(this._goalRadius, this.radius);
+              let zz = !1;
+              const tz = this._scene.FD().getDeltaTime() / 1e3,
+                sz = 1 - Math.pow(2, -tz / this._currentInterpolationFactor),
+                Fz = Qz(this._goalRadius, this.radius);
               if (!isNaN(this._goalTarget.x) || !isNaN(this._goalTarget.y) || !isNaN(this._goalTarget.z)) {
-                const ab = Eb.j.Pj[0].set(Kb(this._goalTarget.x, this.tC.x), Kb(this._goalTarget.y, this.tC.y), Kb(this._goalTarget.z, this.tC.z));
-                Eb.m.LerpToRef(this.target, ab, Ub, this.tC), 10 * Eb.m.Distance(this.target, ab) / Ab < Pb.e ? (this._goalTarget.set(NaN, NaN, NaN), this.target.EUb(ab), this.setTarget(this.target, !1, !0, !0)) : bb = !0
+                const tz = Oz.m.XD[0].set(Qz(this._goalTarget.x, this.vV.x), Qz(this._goalTarget.y, this.vV.y), Qz(this._goalTarget.z, this.vV.z));
+                Oz.p.LerpToRef(this.target, tz, sz, this.vV), 10 * Oz.p.Distance(this.target, tz) / Fz < Nz.c ? (this._goalTarget.set(NaN, NaN, NaN), this.target.vsz(tz), this.setTarget(this.target, !1, !0, !0)) : zz = !0
               }
               if (!isNaN(this._goalAlpha) || !isNaN(this._goalBeta)) {
-                const ab = Eb.e.RotationAlphaBetaGammaToRef(Kb(this._goalAlpha, this.alpha), Kb(this._goalBeta, this.beta), 0, Eb.j.Quaternion[0]),
-                  Ab = Eb.e.RotationAlphaBetaGammaToRef(this.alpha, this.beta, 0, Eb.j.Quaternion[1]),
-                  Mb = Eb.e.SlerpToRef(Ab, ab, Ub, Eb.j.Quaternion[2]);
-                Mb.normalize();
-                const Tb = Mb.toAlphaBetaGammaToRef(Eb.j.Pj[0]);
-                if (this.alpha = Tb.x, this.beta = Tb.y, Mb.isApprox(ab, Pb.e / 5)) {
+                const tz = Oz.h.RotationAlphaBetaGammaToRef(Qz(this._goalAlpha, this.alpha), Qz(this._goalBeta, this.beta), 0, Oz.m.Quaternion[0]),
+                  Fz = Oz.h.RotationAlphaBetaGammaToRef(this.alpha, this.beta, 0, Oz.m.Quaternion[1]),
+                  Wz = Oz.h.SlerpToRef(Fz, tz, sz, Oz.m.Quaternion[2]);
+                Wz.normalize();
+                const Xz = Wz.toAlphaBetaGammaToRef(Oz.m.XD[0]);
+                if (this.alpha = Xz.x, this.beta = Xz.y, Wz.isApprox(tz, Nz.c / 5)) {
                   this._goalAlpha = NaN, this._goalBeta = NaN;
-                  const bb = ab.toAlphaBetaGammaToRef(Eb.j.Pj[0]);
-                  this.alpha = bb.x, this.beta = bb.y
-                } else bb = !0
+                  const zz = tz.toAlphaBetaGammaToRef(Oz.m.XD[0]);
+                  this.alpha = zz.x, this.beta = zz.y
+                } else zz = !0
               }
-              if (isNaN(this._goalRadius) || (this.radius += (Ab - this.radius) * Ub, Math.abs(Ab / this.radius - 1) < Pb.e ? (this._goalRadius = NaN, this.radius = Ab) : bb = !0), !isNaN(this._goalTargetScreenOffset.x) || !isNaN(this._goalTargetScreenOffset.y)) {
-                const ab = Eb.j.Vector2[0].set(Kb(this._goalTargetScreenOffset.x, this.targetScreenOffset.x), Kb(this._goalTargetScreenOffset.y, this.targetScreenOffset.y));
-                Eb.l.LerpToRef(this.targetScreenOffset, ab, Ub, this.targetScreenOffset), Eb.l.Distance(this.targetScreenOffset, ab) < Pb.e ? (this._goalTargetScreenOffset.set(NaN, NaN), this.targetScreenOffset.EUb(ab)) : bb = !0
+              if (isNaN(this._goalRadius) || (this.radius += (Fz - this.radius) * sz, Math.abs(Fz / this.radius - 1) < Nz.c ? (this._goalRadius = NaN, this.radius = Fz) : zz = !0), !isNaN(this._goalTargetScreenOffset.x) || !isNaN(this._goalTargetScreenOffset.y)) {
+                const tz = Oz.m.Vector2[0].set(Qz(this._goalTargetScreenOffset.x, this.targetScreenOffset.x), Qz(this._goalTargetScreenOffset.y, this.targetScreenOffset.y));
+                Oz.n.LerpToRef(this.targetScreenOffset, tz, sz, this.targetScreenOffset), Oz.n.Distance(this.targetScreenOffset, tz) < Nz.c ? (this._goalTargetScreenOffset.set(NaN, NaN), this.targetScreenOffset.vsz(tz)) : zz = !0
               }
-              this._isInterpolating = bb
+              this._isInterpolating = zz
             }
             this._checkLimits(), super._checkInputs()
           }
@@ -1654,117 +1654,117 @@ export const modules = {
             null === this.lowerBetaLimit || void 0 === this.lowerBetaLimit ? this.allowUpsideDown && this.beta > Math.PI && (this.beta = this.beta - 2 * Math.PI) : this.beta < this.lowerBetaLimit && (this.beta = this.lowerBetaLimit), null === this.upperBetaLimit || void 0 === this.upperBetaLimit ? this.allowUpsideDown && this.beta < -Math.PI && (this.beta = this.beta + 2 * Math.PI) : this.beta > this.upperBetaLimit && (this.beta = this.upperBetaLimit), null !== this.lowerAlphaLimit && this.alpha < this.lowerAlphaLimit && (this.alpha = this.lowerAlphaLimit), null !== this.upperAlphaLimit && this.alpha > this.upperAlphaLimit && (this.alpha = this.upperAlphaLimit), null !== this.lowerRadiusLimit && this.radius < this.lowerRadiusLimit && (this.radius = this.lowerRadiusLimit, this.inertialRadiusOffset = 0), null !== this.upperRadiusLimit && this.radius > this.upperRadiusLimit && (this.radius = this.upperRadiusLimit, this.inertialRadiusOffset = 0), this.target.y = Math.max(this.target.y, this.lowerTargetYLimit)
           }
           rebuildAnglesAndRadius() {
-            this._position.subtractToRef(this._getTargetPosition(), this._computationVector), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || Eb.m.TransformCoordinatesToRef(this._computationVector, this._upToYMatrix, this._computationVector), this.radius = this._computationVector.length(), 0 === this.radius && (this.radius = 1e-4);
-            const bb = this.alpha;
-            var ab, Ub;
-            this.alpha = function(bb) {
-              let ab = Math.PI / 2;
-              return 0 === bb.x && 0 === bb.z || (ab = Math.acos(bb.x / Math.sqrt(Math.pow(bb.x, 2) + Math.pow(bb.z, 2)))), bb.z < 0 && (ab = 2 * Math.PI - ab), ab
-            }(this._computationVector), this.beta = (ab = this._computationVector.y, Ub = this.radius, Math.acos(ab / Ub));
-            const Ab = Math.round((bb - this.alpha) / (2 * Math.PI));
-            this.alpha += 2 * Ab * Math.PI, this._checkLimits()
+            this._position.subtractToRef(this._getTargetPosition(), this._computationVector), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || Oz.p.TransformCoordinatesToRef(this._computationVector, this._upToYMatrix, this._computationVector), this.radius = this._computationVector.length(), 0 === this.radius && (this.radius = 1e-4);
+            const zz = this.alpha;
+            var tz, sz;
+            this.alpha = function(zz) {
+              let tz = Math.PI / 2;
+              return 0 === zz.x && 0 === zz.z || (tz = Math.acos(zz.x / Math.sqrt(Math.pow(zz.x, 2) + Math.pow(zz.z, 2)))), zz.z < 0 && (tz = 2 * Math.PI - tz), tz
+            }(this._computationVector), this.beta = (tz = this._computationVector.y, sz = this.radius, Math.acos(tz / sz));
+            const Fz = Math.round((zz - this.alpha) / (2 * Math.PI));
+            this.alpha += 2 * Fz * Math.PI, this._checkLimits()
           }
-          setPosition(bb) {
-            this._position.equals(bb) || (this._position.EUb(bb), this.rebuildAnglesAndRadius())
+          setPosition(zz) {
+            this._position.equals(zz) || (this._position.vsz(zz), this.rebuildAnglesAndRadius())
           }
-          setTarget(bb) {
-            let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-              Ab = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            if (Ab = this.overrideCloneAlphaBetaRadius ?? Ab, bb.computeWorldMatrix) ab && bb.DH ? this._targetBoundingCenter = bb.DH().boundingBox.centerWorld.clone() : this._targetBoundingCenter = null, bb.computeWorldMatrix(), this._targetHost = bb, this.tC = this._getTargetPosition(), this.onMeshTargetChangedObservable.notifyObservers(this._targetHost);
+          setTarget(zz) {
+            let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              sz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+              Fz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            if (Fz = this.overrideCloneAlphaBetaRadius ?? Fz, zz.computeWorldMatrix) tz && zz.rC ? this._targetBoundingCenter = zz.rC().boundingBox.centerWorld.clone() : this._targetBoundingCenter = null, zz.computeWorldMatrix(), this._targetHost = zz, this.vV = this._getTargetPosition(), this.onMeshTargetChangedObservable.notifyObservers(this._targetHost);
             else {
-              const ab = bb,
-                Ab = this._getTargetPosition();
-              if (Ab && !Ub && Ab.equals(ab)) return;
-              this._targetHost = null, this.tC = ab, this._targetBoundingCenter = null, this.onMeshTargetChangedObservable.notifyObservers(null)
+              const tz = zz,
+                Fz = this._getTargetPosition();
+              if (Fz && !sz && Fz.equals(tz)) return;
+              this._targetHost = null, this.vV = tz, this._targetBoundingCenter = null, this.onMeshTargetChangedObservable.notifyObservers(null)
             }
-            Ab || this.rebuildAnglesAndRadius()
+            Fz || this.rebuildAnglesAndRadius()
           }
           _getViewMatrix() {
-            const bb = Math.cos(this.alpha),
-              ab = Math.sin(this.alpha),
-              Ub = Math.cos(this.beta);
-            let Ab = Math.sin(this.beta);
-            0 === Ab && (Ab = 1e-4), 0 === this.radius && (this.radius = 1e-4);
-            const Mb = this._getTargetPosition();
-            if (this._computationVector.K9(this.radius * bb * Ab, this.radius * Ub, this.radius * ab * Ab), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || Eb.m.TransformCoordinatesToRef(this._computationVector, this._yToUpMatrix, this._computationVector), Mb.addToRef(this._computationVector, this._newPosition), this.oN().collisionsEnabled && this.checkCollisions) {
-              const bb = this.oN().collisionCoordinator;
-              this._collider || (this._collider = bb.createCollider()), this._collider._radius = this.collisionRadius, this._newPosition.subtractToRef(this._position, this._collisionVelocity), this._collisionTriggered = !0, bb.getNewPosition(this._position, this._collisionVelocity, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
+            const zz = Math.cos(this.alpha),
+              tz = Math.sin(this.alpha),
+              sz = Math.cos(this.beta);
+            let Fz = Math.sin(this.beta);
+            0 === Fz && (Fz = 1e-4), 0 === this.radius && (this.radius = 1e-4);
+            const Wz = this._getTargetPosition();
+            if (this._computationVector.m_(this.radius * zz * Fz, this.radius * sz, this.radius * tz * Fz), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || Oz.p.TransformCoordinatesToRef(this._computationVector, this._yToUpMatrix, this._computationVector), Wz.addToRef(this._computationVector, this._newPosition), this.aJ().collisionsEnabled && this.checkCollisions) {
+              const zz = this.aJ().collisionCoordinator;
+              this._collider || (this._collider = zz.createCollider()), this._collider._radius = this.collisionRadius, this._newPosition.subtractToRef(this._position, this._collisionVelocity), this._collisionTriggered = !0, zz.getNewPosition(this._position, this._collisionVelocity, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
             } else {
-              this._position.EUb(this._newPosition);
-              let bb = this.upVector;
-              this.allowUpsideDown && Ab < 0 && (bb = bb.pa()), this._computeViewMatrix(this._position, Mb, bb), this._viewMatrix.addAtIndex(12, this.targetScreenOffset.x), this._viewMatrix.addAtIndex(13, this.targetScreenOffset.y)
+              this._position.vsz(this._newPosition);
+              let zz = this.upVector;
+              this.allowUpsideDown && Fz < 0 && (zz = zz.nt()), this._computeViewMatrix(this._position, Wz, zz), this._viewMatrix.addAtIndex(12, this.targetScreenOffset.x), this._viewMatrix.addAtIndex(13, this.targetScreenOffset.y)
             }
-            return this._currentTarget.EUb(Mb), this._viewMatrix
+            return this._currentTarget.vsz(Wz), this._viewMatrix
           }
-          zoomOn(bb) {
-            let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            bb = bb || this.oN().meshes;
-            const Ub = eb.d.MinMax(bb);
-            let Ab = this._calculateLowerRadiusFromModelBoundingSphere(Ub.min, Ub.max);
-            if (Ab = Math.max(Math.min(Ab, this.upperRadiusLimit || Number.MAX_VALUE), this.lowerRadiusLimit || 0), this.radius = Ab * this.zoomOnFactor, this.mode === Zb.b.ORTHOGRAPHIC_CAMERA) {
-              const bb = this.oN().vj().getAspectRatio(this),
-                ab = Ab * this.zoomOnFactor / 2;
-              this.orthoLeft = -ab * bb, this.orthoRight = ab * bb, this.orthoBottom = -ab, this.orthoTop = ab
+          zoomOn(zz) {
+            let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            zz = zz || this.aJ().meshes;
+            const sz = Uz.c.MinMax(zz);
+            let Fz = this._calculateLowerRadiusFromModelBoundingSphere(sz.min, sz.max);
+            if (Fz = Math.max(Math.min(Fz, this.upperRadiusLimit || Number.MAX_VALUE), this.lowerRadiusLimit || 0), this.radius = Fz * this.zoomOnFactor, this.mode === Bz.b.ORTHOGRAPHIC_CAMERA) {
+              const zz = this.aJ().FD().getAspectRatio(this),
+                tz = Fz * this.zoomOnFactor / 2;
+              this.orthoLeft = -tz * zz, this.orthoRight = tz * zz, this.orthoBottom = -tz, this.orthoTop = tz
             }
             this.focusOn({
-              min: Ub.min,
-              max: Ub.max,
-              distance: Ab
-            }, ab)
+              min: sz.min,
+              max: sz.max,
+              distance: Fz
+            }, tz)
           }
-          focusOn(bb) {
-            let ab, Ub, Ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (void 0 === bb.min) {
-              const Ab = bb || this.oN().meshes;
-              ab = eb.d.MinMax(Ab), Ub = Eb.m.Distance(ab.min, ab.max)
+          focusOn(zz) {
+            let tz, sz, Fz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (void 0 === zz.min) {
+              const Fz = zz || this.aJ().meshes;
+              tz = Uz.c.MinMax(Fz), sz = Oz.p.Distance(tz.min, tz.max)
             } else {
-              ab = bb, Ub = bb.distance
+              tz = zz, sz = zz.distance
             }
-            this.tC = eb.d.Center(ab), Ab || (this.maxZ = 2 * Ub)
+            this.vV = Uz.c.Center(tz), Fz || (this.maxZ = 2 * sz)
           }
-          createRigCamera(ab, Ub) {
-            let Ab = 0;
+          createRigCamera(tz, sz) {
+            let Fz = 0;
             switch (this.cameraRigMode) {
-              case Zb.b.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case Zb.b.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case Zb.b.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case Zb.b.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case Zb.b.RIG_MODE_VR:
-                Ab = this._cameraRigParams.stereoHalfAngle * (0 === Ub ? 1 : -1);
+              case Bz.b.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
+              case Bz.b.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
+              case Bz.b.RIG_MODE_STEREOSCOPIC_OVERUNDER:
+              case Bz.b.RIG_MODE_STEREOSCOPIC_INTERLACED:
+              case Bz.b.RIG_MODE_VR:
+                Fz = this._cameraRigParams.stereoHalfAngle * (0 === sz ? 1 : -1);
                 break;
-              case Zb.b.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                Ab = this._cameraRigParams.stereoHalfAngle * (0 === Ub ? -1 : 1)
+              case Bz.b.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
+                Fz = this._cameraRigParams.stereoHalfAngle * (0 === sz ? -1 : 1)
             }
-            const Mb = new bb(ab, this.alpha + Ab, this.beta, this.radius, this.tC, this.oN());
-            return Mb._cameraRigParams = {}, Mb.isRigCamera = !0, Mb.rigParent = this, Mb.upVector = this.upVector, Mb.mode = this.mode, Mb.orthoLeft = this.orthoLeft, Mb.orthoRight = this.orthoRight, Mb.orthoBottom = this.orthoBottom, Mb.orthoTop = this.orthoTop, Mb
+            const Wz = new zz(tz, this.alpha + Fz, this.beta, this.radius, this.vV, this.aJ());
+            return Wz._cameraRigParams = {}, Wz.isRigCamera = !0, Wz.rigParent = this, Wz.upVector = this.upVector, Wz.mode = this.mode, Wz.orthoLeft = this.orthoLeft, Wz.orthoRight = this.orthoRight, Wz.orthoBottom = this.orthoBottom, Wz.orthoTop = this.orthoTop, Wz
           }
           _updateRigCameras() {
-            const bb = this._rigCameras[0],
-              ab = this._rigCameras[1];
-            switch (bb.beta = ab.beta = this.beta, this.cameraRigMode) {
-              case Zb.b.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case Zb.b.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case Zb.b.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case Zb.b.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case Zb.b.RIG_MODE_VR:
-                bb.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle, ab.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle;
+            const zz = this._rigCameras[0],
+              tz = this._rigCameras[1];
+            switch (zz.beta = tz.beta = this.beta, this.cameraRigMode) {
+              case Bz.b.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
+              case Bz.b.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
+              case Bz.b.RIG_MODE_STEREOSCOPIC_OVERUNDER:
+              case Bz.b.RIG_MODE_STEREOSCOPIC_INTERLACED:
+              case Bz.b.RIG_MODE_VR:
+                zz.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle, tz.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle;
                 break;
-              case Zb.b.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                bb.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle, ab.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle
+              case Bz.b.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
+                zz.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle, tz.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle
             }
             super._updateRigCameras()
           }
-          _calculateLowerRadiusFromModelBoundingSphere(bb, ab) {
-            let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-            const Ab = Eb.m.Distance(bb, ab),
-              Mb = this.oN().vj().getAspectRatio(this),
-              Tb = Math.tan(this.fov / 2),
-              Yb = Tb * Mb,
-              Bb = .5 * Ab * Ub,
-              eb = Bb * Math.sqrt(1 + 1 / (Yb * Yb)),
-              vb = Bb * Math.sqrt(1 + 1 / (Tb * Tb));
-            return Math.max(eb, vb)
+          _calculateLowerRadiusFromModelBoundingSphere(zz, tz) {
+            let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+            const Fz = Oz.p.Distance(zz, tz),
+              Wz = this.aJ().FD().getAspectRatio(this),
+              Xz = Math.tan(this.fov / 2),
+              oz = Xz * Wz,
+              vz = .5 * Fz * sz,
+              Uz = vz * Math.sqrt(1 + 1 / (oz * oz)),
+              Kz = vz * Math.sqrt(1 + 1 / (Xz * Xz));
+            return Math.max(Uz, Kz)
           }
           dispose() {
             this.inputs.clear(), super.dispose()
@@ -1773,396 +1773,396 @@ export const modules = {
             return "ArcRotateCamera"
           }
         }, (() => {
-          const Tb = "function" === typeof Symbol && Symbol.metadata ? Object.create(Cb[Symbol.metadata] ?? null) : void 0;
-          ab = [(0, Mb.K)()], Ub = [(0, Mb.K)()], Bb = [(0, Mb.K)()], vb = [(0, Mb.K)()], Lb = [(0, Mb.I)("target")], jb = [(0, Mb.x)("targetHost")], Rb = [(0, Mb.K)()], zb = [(0, Mb.K)()], ib = [(0, Mb.K)()], fb = [(0, Mb.K)()], mb = [(0, Mb.K)()], pb = [(0, Mb.K)()], Nb = [(0, Mb.K)()], Wb = [(0, Mb.K)()], Hb = [(0, Mb.K)()], Ib = [(0, Mb.K)()], db = [(0, Mb.K)()], Fb = [(0, Mb.K)()], hb = [(0, Mb.K)()], Qb = [(0, Mb.K)()], qb = [(0, Mb.I)()], ub = [(0, Mb.K)()], ob = [(0, Mb.K)()], lb = [(0, Mb.K)()], tb = [(0, Mb.F)()], wb = [(0, Mb.K)()], sb = [(0, Mb.K)()], gb = [(0, Mb.K)()], (0, Ab.h)(bb, null, Rb, {
+          const Xz = "function" === typeof Symbol && Symbol.metadata ? Object.create(qz[Symbol.metadata] ?? null) : void 0;
+          tz = [(0, Wz.J)()], sz = [(0, Wz.J)()], vz = [(0, Wz.J)()], Kz = [(0, Wz.J)()], uz = [(0, Wz.H)("target")], wz = [(0, Wz.x)("targetHost")], Dz = [(0, Wz.J)()], rz = [(0, Wz.J)()], xz = [(0, Wz.J)()], mz = [(0, Wz.J)()], Jz = [(0, Wz.J)()], Iz = [(0, Wz.J)()], Cz = [(0, Wz.J)()], ez = [(0, Wz.J)()], Zz = [(0, Wz.J)()], Gz = [(0, Wz.J)()], Tz = [(0, Wz.J)()], cz = [(0, Wz.J)()], jz = [(0, Wz.J)()], yz = [(0, Wz.J)()], Mz = [(0, Wz.H)()], dz = [(0, Wz.J)()], kz = [(0, Wz.J)()], iz = [(0, Wz.J)()], Lz = [(0, Wz.E)()], lz = [(0, Wz.J)()], nz = [(0, Wz.J)()], az = [(0, Wz.J)()], (0, Fz.h)(zz, null, Dz, {
             kind: "getter",
             name: "inertialAlphaOffset",
             static: !1,
             private: !1,
             access: {
-              has: bb => "inertialAlphaOffset" in bb,
-              get: bb => bb.inertialAlphaOffset
+              has: zz => "inertialAlphaOffset" in zz,
+              get: zz => zz.inertialAlphaOffset
             },
-            metadata: Tb
-          }, null, Vb), (0, Ab.h)(bb, null, zb, {
+            metadata: Xz
+          }, null, Sz), (0, Fz.h)(zz, null, rz, {
             kind: "getter",
             name: "inertialBetaOffset",
             static: !1,
             private: !1,
             access: {
-              has: bb => "inertialBetaOffset" in bb,
-              get: bb => bb.inertialBetaOffset
+              has: zz => "inertialBetaOffset" in zz,
+              get: zz => zz.inertialBetaOffset
             },
-            metadata: Tb
-          }, null, Vb), (0, Ab.h)(bb, null, ib, {
+            metadata: Xz
+          }, null, Sz), (0, Fz.h)(zz, null, xz, {
             kind: "getter",
             name: "inertialRadiusOffset",
             static: !1,
             private: !1,
             access: {
-              has: bb => "inertialRadiusOffset" in bb,
-              get: bb => bb.inertialRadiusOffset
+              has: zz => "inertialRadiusOffset" in zz,
+              get: zz => zz.inertialRadiusOffset
             },
-            metadata: Tb
-          }, null, Vb), (0, Ab.h)(bb, null, ub, {
+            metadata: Xz
+          }, null, Sz), (0, Fz.h)(zz, null, dz, {
             kind: "getter",
             name: "panningInertia",
             static: !1,
             private: !1,
             access: {
-              has: bb => "panningInertia" in bb,
-              get: bb => bb.panningInertia
+              has: zz => "panningInertia" in zz,
+              get: zz => zz.panningInertia
             },
-            metadata: Tb
-          }, null, Vb), (0, Ab.h)(bb, null, ob, {
+            metadata: Xz
+          }, null, Sz), (0, Fz.h)(zz, null, kz, {
             kind: "getter",
             name: "zoomToMouseLocation",
             static: !1,
             private: !1,
             access: {
-              has: bb => "zoomToMouseLocation" in bb,
-              get: bb => bb.zoomToMouseLocation
+              has: zz => "zoomToMouseLocation" in zz,
+              get: zz => zz.zoomToMouseLocation
             },
-            metadata: Tb
-          }, null, Vb), (0, Ab.h)(null, null, ab, {
+            metadata: Xz
+          }, null, Sz), (0, Fz.h)(null, null, tz, {
             kind: "field",
             name: "alpha",
             static: !1,
             private: !1,
             access: {
-              has: bb => "alpha" in bb,
-              get: bb => bb.alpha,
-              set: (bb, ab) => {
-                bb.alpha = ab
+              has: zz => "alpha" in zz,
+              get: zz => zz.alpha,
+              set: (zz, tz) => {
+                zz.alpha = tz
               }
             },
-            metadata: Tb
-          }, Ob, cb), (0, Ab.h)(null, null, Ub, {
+            metadata: Xz
+          }, Vz, Rz), (0, Fz.h)(null, null, sz, {
             kind: "field",
             name: "beta",
             static: !1,
             private: !1,
             access: {
-              has: bb => "beta" in bb,
-              get: bb => bb.beta,
-              set: (bb, ab) => {
-                bb.beta = ab
+              has: zz => "beta" in zz,
+              get: zz => zz.beta,
+              set: (zz, tz) => {
+                zz.beta = tz
               }
             },
-            metadata: Tb
-          }, Jb, nb), (0, Ab.h)(null, null, Bb, {
+            metadata: Xz
+          }, pz, fz), (0, Fz.h)(null, null, vz, {
             kind: "field",
             name: "radius",
             static: !1,
             private: !1,
             access: {
-              has: bb => "radius" in bb,
-              get: bb => bb.radius,
-              set: (bb, ab) => {
-                bb.radius = ab
+              has: zz => "radius" in zz,
+              get: zz => zz.radius,
+              set: (zz, tz) => {
+                zz.radius = tz
               }
             },
-            metadata: Tb
-          }, Sb, ba), (0, Ab.h)(null, null, vb, {
+            metadata: Xz
+          }, Ez, zt), (0, Fz.h)(null, null, Kz, {
             kind: "field",
             name: "overrideCloneAlphaBetaRadius",
             static: !1,
             private: !1,
             access: {
-              has: bb => "overrideCloneAlphaBetaRadius" in bb,
-              get: bb => bb.overrideCloneAlphaBetaRadius,
-              set: (bb, ab) => {
-                bb.overrideCloneAlphaBetaRadius = ab
+              has: zz => "overrideCloneAlphaBetaRadius" in zz,
+              get: zz => zz.overrideCloneAlphaBetaRadius,
+              set: (zz, tz) => {
+                zz.overrideCloneAlphaBetaRadius = tz
               }
             },
-            metadata: Tb
-          }, aa, Ua), (0, Ab.h)(null, null, Lb, {
+            metadata: Xz
+          }, tt, st), (0, Fz.h)(null, null, uz, {
             kind: "field",
-            name: "tC",
+            name: "vV",
             static: !1,
             private: !1,
             access: {
-              has: bb => "tC" in bb,
-              get: bb => bb.tC,
-              set: (bb, ab) => {
-                bb.tC = ab
+              has: zz => "vV" in zz,
+              get: zz => zz.vV,
+              set: (zz, tz) => {
+                zz.vV = tz
               }
             },
-            metadata: Tb
-          }, Aa, Ma), (0, Ab.h)(null, null, jb, {
+            metadata: Xz
+          }, Ft, Wt), (0, Fz.h)(null, null, wz, {
             kind: "field",
             name: "_targetHost",
             static: !1,
             private: !1,
             access: {
-              has: bb => "_targetHost" in bb,
-              get: bb => bb._targetHost,
-              set: (bb, ab) => {
-                bb._targetHost = ab
+              has: zz => "_targetHost" in zz,
+              get: zz => zz._targetHost,
+              set: (zz, tz) => {
+                zz._targetHost = tz
               }
             },
-            metadata: Tb
-          }, Ta, Ea), (0, Ab.h)(null, null, fb, {
+            metadata: Xz
+          }, Xt, Ot), (0, Fz.h)(null, null, mz, {
             kind: "field",
             name: "lowerAlphaLimit",
             static: !1,
             private: !1,
             access: {
-              has: bb => "lowerAlphaLimit" in bb,
-              get: bb => bb.lowerAlphaLimit,
-              set: (bb, ab) => {
-                bb.lowerAlphaLimit = ab
+              has: zz => "lowerAlphaLimit" in zz,
+              get: zz => zz.lowerAlphaLimit,
+              set: (zz, tz) => {
+                zz.lowerAlphaLimit = tz
               }
             },
-            metadata: Tb
-          }, Ya, Ba), (0, Ab.h)(null, null, mb, {
+            metadata: Xz
+          }, ot, vt), (0, Fz.h)(null, null, Jz, {
             kind: "field",
             name: "upperAlphaLimit",
             static: !1,
             private: !1,
             access: {
-              has: bb => "upperAlphaLimit" in bb,
-              get: bb => bb.upperAlphaLimit,
-              set: (bb, ab) => {
-                bb.upperAlphaLimit = ab
+              has: zz => "upperAlphaLimit" in zz,
+              get: zz => zz.upperAlphaLimit,
+              set: (zz, tz) => {
+                zz.upperAlphaLimit = tz
               }
             },
-            metadata: Tb
-          }, ea, va), (0, Ab.h)(null, null, pb, {
+            metadata: Xz
+          }, Ut, Kt), (0, Fz.h)(null, null, Iz, {
             kind: "field",
             name: "lowerBetaLimit",
             static: !1,
             private: !1,
             access: {
-              has: bb => "lowerBetaLimit" in bb,
-              get: bb => bb.lowerBetaLimit,
-              set: (bb, ab) => {
-                bb.lowerBetaLimit = ab
+              has: zz => "lowerBetaLimit" in zz,
+              get: zz => zz.lowerBetaLimit,
+              set: (zz, tz) => {
+                zz.lowerBetaLimit = tz
               }
             },
-            metadata: Tb
-          }, La, Pa), (0, Ab.h)(null, null, Nb, {
+            metadata: Xz
+          }, ut, Nt), (0, Fz.h)(null, null, Cz, {
             kind: "field",
             name: "upperBetaLimit",
             static: !1,
             private: !1,
             access: {
-              has: bb => "upperBetaLimit" in bb,
-              get: bb => bb.upperBetaLimit,
-              set: (bb, ab) => {
-                bb.upperBetaLimit = ab
+              has: zz => "upperBetaLimit" in zz,
+              get: zz => zz.upperBetaLimit,
+              set: (zz, tz) => {
+                zz.upperBetaLimit = tz
               }
             },
-            metadata: Tb
-          }, Xa, ja), (0, Ab.h)(null, null, Wb, {
+            metadata: Xz
+          }, bt, wt), (0, Fz.h)(null, null, ez, {
             kind: "field",
             name: "lowerRadiusLimit",
             static: !1,
             private: !1,
             access: {
-              has: bb => "lowerRadiusLimit" in bb,
-              get: bb => bb.lowerRadiusLimit,
-              set: (bb, ab) => {
-                bb.lowerRadiusLimit = ab
+              has: zz => "lowerRadiusLimit" in zz,
+              get: zz => zz.lowerRadiusLimit,
+              set: (zz, tz) => {
+                zz.lowerRadiusLimit = tz
               }
             },
-            metadata: Tb
-          }, Ra, ka), (0, Ab.h)(null, null, Hb, {
+            metadata: Xz
+          }, Dt, gt), (0, Fz.h)(null, null, Zz, {
             kind: "field",
             name: "upperRadiusLimit",
             static: !1,
             private: !1,
             access: {
-              has: bb => "upperRadiusLimit" in bb,
-              get: bb => bb.upperRadiusLimit,
-              set: (bb, ab) => {
-                bb.upperRadiusLimit = ab
+              has: zz => "upperRadiusLimit" in zz,
+              get: zz => zz.upperRadiusLimit,
+              set: (zz, tz) => {
+                zz.upperRadiusLimit = tz
               }
             },
-            metadata: Tb
-          }, ya, Za), (0, Ab.h)(null, null, Ib, {
+            metadata: Xz
+          }, Ht, Bt), (0, Fz.h)(null, null, Gz, {
             kind: "field",
             name: "lowerTargetYLimit",
             static: !1,
             private: !1,
             access: {
-              has: bb => "lowerTargetYLimit" in bb,
-              get: bb => bb.lowerTargetYLimit,
-              set: (bb, ab) => {
-                bb.lowerTargetYLimit = ab
+              has: zz => "lowerTargetYLimit" in zz,
+              get: zz => zz.lowerTargetYLimit,
+              set: (zz, tz) => {
+                zz.lowerTargetYLimit = tz
               }
             },
-            metadata: Tb
-          }, Da, za), (0, Ab.h)(null, null, db, {
+            metadata: Xz
+          }, Pt, rt), (0, Fz.h)(null, null, Tz, {
             kind: "field",
             name: "inertialPanningX",
             static: !1,
             private: !1,
             access: {
-              has: bb => "inertialPanningX" in bb,
-              get: bb => bb.inertialPanningX,
-              set: (bb, ab) => {
-                bb.inertialPanningX = ab
+              has: zz => "inertialPanningX" in zz,
+              get: zz => zz.inertialPanningX,
+              set: (zz, tz) => {
+                zz.inertialPanningX = tz
               }
             },
-            metadata: Tb
-          }, xa, ia), (0, Ab.h)(null, null, Fb, {
+            metadata: Xz
+          }, Yt, xt), (0, Fz.h)(null, null, cz, {
             kind: "field",
             name: "inertialPanningY",
             static: !1,
             private: !1,
             access: {
-              has: bb => "inertialPanningY" in bb,
-              get: bb => bb.inertialPanningY,
-              set: (bb, ab) => {
-                bb.inertialPanningY = ab
+              has: zz => "inertialPanningY" in zz,
+              get: zz => zz.inertialPanningY,
+              set: (zz, tz) => {
+                zz.inertialPanningY = tz
               }
             },
-            metadata: Tb
-          }, fa, ma), (0, Ab.h)(null, null, hb, {
+            metadata: Xz
+          }, mt, Jt), (0, Fz.h)(null, null, jz, {
             kind: "field",
             name: "pinchToPanMaxDistance",
             static: !1,
             private: !1,
             access: {
-              has: bb => "pinchToPanMaxDistance" in bb,
-              get: bb => bb.pinchToPanMaxDistance,
-              set: (bb, ab) => {
-                bb.pinchToPanMaxDistance = ab
+              has: zz => "pinchToPanMaxDistance" in zz,
+              get: zz => zz.pinchToPanMaxDistance,
+              set: (zz, tz) => {
+                zz.pinchToPanMaxDistance = tz
               }
             },
-            metadata: Tb
-          }, pa, Na), (0, Ab.h)(null, null, Qb, {
+            metadata: Xz
+          }, It, Ct), (0, Fz.h)(null, null, yz, {
             kind: "field",
             name: "panningDistanceLimit",
             static: !1,
             private: !1,
             access: {
-              has: bb => "panningDistanceLimit" in bb,
-              get: bb => bb.panningDistanceLimit,
-              set: (bb, ab) => {
-                bb.panningDistanceLimit = ab
+              has: zz => "panningDistanceLimit" in zz,
+              get: zz => zz.panningDistanceLimit,
+              set: (zz, tz) => {
+                zz.panningDistanceLimit = tz
               }
             },
-            metadata: Tb
-          }, Wa, Ha), (0, Ab.h)(null, null, qb, {
+            metadata: Xz
+          }, et, Zt), (0, Fz.h)(null, null, Mz, {
             kind: "field",
             name: "panningOriginTarget",
             static: !1,
             private: !1,
             access: {
-              has: bb => "panningOriginTarget" in bb,
-              get: bb => bb.panningOriginTarget,
-              set: (bb, ab) => {
-                bb.panningOriginTarget = ab
+              has: zz => "panningOriginTarget" in zz,
+              get: zz => zz.panningOriginTarget,
+              set: (zz, tz) => {
+                zz.panningOriginTarget = tz
               }
             },
-            metadata: Tb
-          }, Ia, da), (0, Ab.h)(null, null, lb, {
+            metadata: Xz
+          }, Gt, Tt), (0, Fz.h)(null, null, iz, {
             kind: "field",
             name: "zoomOnFactor",
             static: !1,
             private: !1,
             access: {
-              has: bb => "zoomOnFactor" in bb,
-              get: bb => bb.zoomOnFactor,
-              set: (bb, ab) => {
-                bb.zoomOnFactor = ab
+              has: zz => "zoomOnFactor" in zz,
+              get: zz => zz.zoomOnFactor,
+              set: (zz, tz) => {
+                zz.zoomOnFactor = tz
               }
             },
-            metadata: Tb
-          }, Fa, ha), (0, Ab.h)(null, null, tb, {
+            metadata: Xz
+          }, ct, jt), (0, Fz.h)(null, null, Lz, {
             kind: "field",
             name: "targetScreenOffset",
             static: !1,
             private: !1,
             access: {
-              has: bb => "targetScreenOffset" in bb,
-              get: bb => bb.targetScreenOffset,
-              set: (bb, ab) => {
-                bb.targetScreenOffset = ab
+              has: zz => "targetScreenOffset" in zz,
+              get: zz => zz.targetScreenOffset,
+              set: (zz, tz) => {
+                zz.targetScreenOffset = tz
               }
             },
-            metadata: Tb
-          }, Ga, Qa), (0, Ab.h)(null, null, wb, {
+            metadata: Xz
+          }, At, yt), (0, Fz.h)(null, null, lz, {
             kind: "field",
             name: "allowUpsideDown",
             static: !1,
             private: !1,
             access: {
-              has: bb => "allowUpsideDown" in bb,
-              get: bb => bb.allowUpsideDown,
-              set: (bb, ab) => {
-                bb.allowUpsideDown = ab
+              has: zz => "allowUpsideDown" in zz,
+              get: zz => zz.allowUpsideDown,
+              set: (zz, tz) => {
+                zz.allowUpsideDown = tz
               }
             },
-            metadata: Tb
-          }, qa, ua), (0, Ab.h)(null, null, sb, {
+            metadata: Xz
+          }, Mt, dt), (0, Fz.h)(null, null, nz, {
             kind: "field",
             name: "useInputToRestoreState",
             static: !1,
             private: !1,
             access: {
-              has: bb => "useInputToRestoreState" in bb,
-              get: bb => bb.useInputToRestoreState,
-              set: (bb, ab) => {
-                bb.useInputToRestoreState = ab
+              has: zz => "useInputToRestoreState" in zz,
+              get: zz => zz.useInputToRestoreState,
+              set: (zz, tz) => {
+                zz.useInputToRestoreState = tz
               }
             },
-            metadata: Tb
-          }, ra, Ka), (0, Ab.h)(null, null, gb, {
+            metadata: Xz
+          }, ht, Qt), (0, Fz.h)(null, null, az, {
             kind: "field",
             name: "restoreStateInterpolationFactor",
             static: !1,
             private: !1,
             access: {
-              has: bb => "restoreStateInterpolationFactor" in bb,
-              get: bb => bb.restoreStateInterpolationFactor,
-              set: (bb, ab) => {
-                bb.restoreStateInterpolationFactor = ab
+              has: zz => "restoreStateInterpolationFactor" in zz,
+              get: zz => zz.restoreStateInterpolationFactor,
+              set: (zz, tz) => {
+                zz.restoreStateInterpolationFactor = tz
               }
             },
-            metadata: Tb
-          }, oa, la), Tb && Object.defineProperty(bb, Symbol.metadata, {
+            metadata: Xz
+          }, kt, it), Xz && Object.defineProperty(zz, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Tb
+            value: Xz
           })
-        })(), bb
+        })(), zz
       })(),
-      lb = !1;
-    lb || (lb = !0, Bb.c.AddNodeConstructor("ArcRotateCamera", ((bb, ab) => () => new ob(bb, 0, 0, 1, Eb.m.Zero(), ab))), (0, Qb.f)("BABYLON.ArcRotateCamera", ob))
+      iz = !1;
+    iz || (iz = !0, vz.e.AddNodeConstructor("ArcRotateCamera", ((zz, tz) => () => new kz(zz, 0, 0, 1, Oz.p.Zero(), tz))), (0, yz.g)("BABYLON.ArcRotateCamera", kz))
   },
-  39347: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Ab.d
+  39408: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Fz.b
     });
-    var Ab = Ub(39356);
-    (0, Ab.f)()
+    var Fz = sz(39413);
+    (0, Fz.e)()
   },
-  39356: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => vb,
-      f: () => Pb
+  39413: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Kz,
+      e: () => Nz
     });
-    var Ab = Ub(39104),
-      Mb = Ub(39110),
-      Tb = Ub(36401),
-      Eb = Ub(36593),
-      Yb = Ub(39359),
-      Bb = Ub(39314),
-      eb = Ub(36447);
-    let vb = (() => {
-        var bb;
-        let ab, Ub, Bb = Yb.e,
-          eb = [],
-          vb = [],
-          Lb = [],
-          Pb = [];
-        return bb = class extends Bb {
-          constructor(bb, ab, Ub, Mb) {
-            super(bb, Ub, Mb), this.groundColor = (0, Ab.k)(this, eb, new Eb.c(0, 0, 0)), this.direction = ((0, Ab.k)(this, vb), (0, Ab.k)(this, Lb, void 0)), (0, Ab.k)(this, Pb), this.direction = ab || Tb.m.Up()
+    var Fz = sz(39167),
+      Wz = sz(39170),
+      Xz = sz(36475),
+      Oz = sz(36654),
+      oz = sz(39421),
+      vz = sz(39374),
+      Uz = sz(36518);
+    let Kz = (() => {
+        var zz;
+        let tz, sz, vz = oz.d,
+          Uz = [],
+          Kz = [],
+          uz = [],
+          Nz = [];
+        return zz = class extends vz {
+          constructor(zz, tz, sz, Wz) {
+            super(zz, sz, Wz), this.groundColor = (0, Fz.k)(this, Uz, new Oz.c(0, 0, 0)), this.direction = ((0, Fz.k)(this, Kz), (0, Fz.k)(this, uz, void 0)), (0, Fz.k)(this, Nz), this.direction = tz || Xz.p.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -2170,71 +2170,71 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(bb) {
-            return this.direction = Tb.m.Normalize(bb.subtract(Tb.m.Zero())), this.direction
+          setDirectionToTarget(zz) {
+            return this.direction = Xz.p.Normalize(zz.subtract(Xz.p.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(bb, ab) {
-            const Ub = Tb.m.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", Ub.x, Ub.y, Ub.z, 0, ab), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), ab), this
+          transferToEffect(zz, tz) {
+            const sz = Xz.p.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", sz.x, sz.y, sz.z, 0, tz), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), tz), this
           }
-          transferToNodeMaterialEffect(bb, ab) {
-            const Ub = Tb.m.Normalize(this.direction);
-            return bb.setFloat3(ab, Ub.x, Ub.y, Ub.z), this
+          transferToNodeMaterialEffect(zz, tz) {
+            const sz = Xz.p.Normalize(this.direction);
+            return zz.setFloat3(tz, sz.x, sz.y, sz.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = Tb.b.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = Xz.e.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return Yb.e.LIGHTTYPEID_HEMISPHERICLIGHT
+            return oz.d.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(bb, ab) {
-            bb["HEMILIGHT" + ab] = !0
+          prepareLightSpecificDefines(zz, tz) {
+            zz["HEMILIGHT" + tz] = !0
           }
         }, (() => {
-          const Tb = "function" === typeof Symbol && Symbol.metadata ? Object.create(Bb[Symbol.metadata] ?? null) : void 0;
-          ab = [(0, Mb.k)()], Ub = [(0, Mb.I)()], (0, Ab.h)(null, null, ab, {
+          const Xz = "function" === typeof Symbol && Symbol.metadata ? Object.create(vz[Symbol.metadata] ?? null) : void 0;
+          tz = [(0, Wz.p)()], sz = [(0, Wz.H)()], (0, Fz.h)(null, null, tz, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: bb => "groundColor" in bb,
-              get: bb => bb.groundColor,
-              set: (bb, ab) => {
-                bb.groundColor = ab
+              has: zz => "groundColor" in zz,
+              get: zz => zz.groundColor,
+              set: (zz, tz) => {
+                zz.groundColor = tz
               }
             },
-            metadata: Tb
-          }, eb, vb), (0, Ab.h)(null, null, Ub, {
+            metadata: Xz
+          }, Uz, Kz), (0, Fz.h)(null, null, sz, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: bb => "direction" in bb,
-              get: bb => bb.direction,
-              set: (bb, ab) => {
-                bb.direction = ab
+              has: zz => "direction" in zz,
+              get: zz => zz.direction,
+              set: (zz, tz) => {
+                zz.direction = tz
               }
             },
-            metadata: Tb
-          }, Lb, Pb), Tb && Object.defineProperty(bb, Symbol.metadata, {
+            metadata: Xz
+          }, uz, Nz), Xz && Object.defineProperty(zz, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Tb
+            value: Xz
           })
-        })(), bb
+        })(), zz
       })(),
-      Lb = !1;
+      uz = !1;
 
-    function Pb() {
-      Lb || (Lb = !0, Bb.c.AddNodeConstructor("Light_Type_3", ((bb, ab) => () => new vb(bb, Tb.m.Zero(), ab))), (0, eb.f)("BABYLON.HemisphericLight", vb))
+    function Nz() {
+      uz || (uz = !0, vz.e.AddNodeConstructor("Light_Type_3", ((zz, tz) => () => new Kz(zz, Xz.p.Zero(), tz))), (0, Uz.g)("BABYLON.HemisphericLight", Kz))
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

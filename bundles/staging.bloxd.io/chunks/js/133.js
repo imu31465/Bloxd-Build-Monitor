@@ -1,132 +1,132 @@
 export const id = 133;
 export const ids = [133];
 export const modules = {
-  6271: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => zb,
-      h: () => xb,
-      l: () => Zb,
-      n: () => yb
+  6215: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => rz,
+      g: () => Yz,
+      k: () => Bz,
+      o: () => Hz
     });
-    var Ab = Ub(6273);
-    const Mb = 6,
-      Tb = 3,
-      Eb = 1,
-      Yb = 2,
-      Bb = 4,
-      eb = 8,
-      vb = 16,
-      Lb = 32,
-      Pb = 64,
-      Xb = 128,
-      jb = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var Fz = sz(6221);
+    const Wz = 6,
+      Xz = 3,
+      Oz = 1,
+      oz = 2,
+      vz = 4,
+      Uz = 8,
+      Kz = 16,
+      uz = 32,
+      Nz = 64,
+      bz = 128,
+      wz = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function Rb(bb) {
-      if (!bb) return 0;
-      const ab = jb.indexOf(bb);
-      if (ab <= 0) throw new Error(`"${bb}" is not a shader pack hook function`);
-      return ab
+    function Dz(zz) {
+      if (!zz) return 0;
+      const tz = wz.indexOf(zz);
+      if (tz <= 0) throw new Error(`"${zz}" is not a shader pack hook function`);
+      return tz
     }
 
-    function kb(bb) {
-      if (0 === bb) return null;
-      const ab = jb[bb];
-      if (void 0 === ab) throw new Error(`${bb} is not a shader pack hook function id`);
-      return ab
+    function gz(zz) {
+      if (0 === zz) return null;
+      const tz = wz[zz];
+      if (void 0 === tz) throw new Error(`${zz} is not a shader pack hook function id`);
+      return tz
     }
 
-    function yb(bb) {
-      const ab = Ab.b.length;
+    function Hz(zz) {
+      const tz = Fz.c.length;
       return {
-        strict: bb >= ab,
-        program: Ab.b[bb % ab]
+        strict: zz >= tz,
+        program: Fz.c[zz % tz]
       }
     }
 
-    function Zb(bb) {
-      return Number(bb.strict) * Ab.b.length + Ab.b.indexOf(bb.program)
+    function Bz(zz) {
+      return Number(zz.strict) * Fz.c.length + Fz.c.indexOf(zz.program)
     }
 
-    function Db(bb) {
-      return "" === bb ? [] : bb.split(" ")
+    function Pz(zz) {
+      return "" === zz ? [] : zz.split(" ")
     }
 
-    function zb(bb) {
-      const ab = {
-        variantFlags: new Uint8Array(Mb),
-        hooks: new Uint8Array(Mb * Tb),
-        moduleCodes: Array(Mb).fill(""),
-        reads: Array(2 * Mb).fill("")
+    function rz(zz) {
+      const tz = {
+        variantFlags: new Uint8Array(Wz),
+        hooks: new Uint8Array(Wz * Xz),
+        moduleCodes: Array(Wz).fill(""),
+        reads: Array(2 * Wz).fill("")
       };
-      for (const Ub of bb) {
-        const bb = Zb(Ub.key),
-          Ab = (bb, ab) => null === Ub.hooks.surface || Ub.reads.fragment.includes(bb) ? 0 : ab;
-        ab.variantFlags[bb] = (Ub.sceneDepth ? Eb : 0) | (Ub.movesVertices ? Yb : 0) | (Ub.sunShadow ? Bb : 0) | (Ub.airShadow ? eb : 0) | (Ub.discards ? vb : 0) | Ab("localPosition", Lb) | Ab("enchantSpeed", Pb) | Ab("enchantTier", Xb), ab.hooks[bb * Tb] = Rb(Ub.hooks.vertex), ab.hooks[bb * Tb + 1] = Rb(Ub.hooks.surface), ab.hooks[bb * Tb + 2] = Rb(Ub.hooks.light), ab.moduleCodes[bb] = Ub.moduleCode, ab.reads[2 * bb] = Ub.reads.vertex.join(" "), ab.reads[2 * bb + 1] = Ub.reads.fragment.join(" ")
+      for (const sz of zz) {
+        const zz = Bz(sz.key),
+          Fz = (zz, tz) => null === sz.hooks.surface || sz.reads.fragment.includes(zz) ? 0 : tz;
+        tz.variantFlags[zz] = (sz.sceneDepth ? Oz : 0) | (sz.movesVertices ? oz : 0) | (sz.sunShadow ? vz : 0) | (sz.airShadow ? Uz : 0) | (sz.discards ? Kz : 0) | Fz("localPosition", uz) | Fz("enchantSpeed", Nz) | Fz("enchantTier", bz), tz.hooks[zz * Xz] = Dz(sz.hooks.vertex), tz.hooks[zz * Xz + 1] = Dz(sz.hooks.surface), tz.hooks[zz * Xz + 2] = Dz(sz.hooks.light), tz.moduleCodes[zz] = sz.moduleCode, tz.reads[2 * zz] = sz.reads.vertex.join(" "), tz.reads[2 * zz + 1] = sz.reads.fragment.join(" ")
       }
-      return ab
+      return tz
     }
 
-    function xb(bb) {
+    function Yz(zz) {
       const {
-        hooks: ab,
-        moduleCodes: Ub,
-        reads: Ab
-      } = bb;
-      return Array.from(bb.variantFlags, ((bb, Mb) => {
-        const Lb = Mb * Tb;
+        hooks: tz,
+        moduleCodes: sz,
+        reads: Fz
+      } = zz;
+      return Array.from(zz.variantFlags, ((zz, Wz) => {
+        const uz = Wz * Xz;
         return {
-          key: yb(Mb),
+          key: Hz(Wz),
           hooks: {
-            vertex: kb(ab[Lb]),
-            surface: kb(ab[Lb + 1]),
-            light: kb(ab[Lb + 2])
+            vertex: gz(tz[uz]),
+            surface: gz(tz[uz + 1]),
+            light: gz(tz[uz + 2])
           },
-          moduleCode: Ub[Mb],
-          sceneDepth: 0 !== (bb & Eb),
-          sunShadow: 0 !== (bb & Bb),
-          airShadow: 0 !== (bb & eb),
-          movesVertices: 0 !== (bb & Yb),
-          discards: 0 !== (bb & vb),
+          moduleCode: sz[Wz],
+          sceneDepth: 0 !== (zz & Oz),
+          sunShadow: 0 !== (zz & vz),
+          airShadow: 0 !== (zz & Uz),
+          movesVertices: 0 !== (zz & oz),
+          discards: 0 !== (zz & Kz),
           reads: {
-            vertex: Db(Ab[2 * Mb]),
-            fragment: Db(Ab[2 * Mb + 1])
+            vertex: Pz(Fz[2 * Wz]),
+            fragment: Pz(Fz[2 * Wz + 1])
           }
         }
       }))
     }
   },
-  40003: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Mb,
-      g: () => Ab,
-      i: () => Pb,
-      k: () => vb,
-      l: () => kb,
-      m: () => Tb,
-      n: () => Yb,
-      q: () => Bb,
-      t: () => Eb,
-      v: () => Rb,
-      x: () => Xb,
-      y: () => jb
+  39971: (zz, tz, sz) => {
+    sz.d(tz, {
+      B: () => Oz,
+      E: () => Dz,
+      F: () => bz,
+      J: () => wz,
+      e: () => Wz,
+      i: () => Fz,
+      k: () => Nz,
+      m: () => Kz,
+      q: () => gz,
+      s: () => Xz,
+      v: () => oz,
+      x: () => vz
     });
-    const Ab = 3,
-      Mb = 0,
-      Tb = 1,
-      Eb = 2,
-      Yb = {
+    const Fz = 3,
+      Wz = 0,
+      Xz = 1,
+      Oz = 2,
+      oz = {
         uniform: 3,
-        RP: 4,
+        RN: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      Bb = 10,
-      eb = "BloxdPackInputs",
-      vb = "bloxdPackInputs",
-      Lb = [{
+      vz = 10,
+      Uz = "BloxdPackInputs",
+      Kz = "bloxdPackInputs",
+      uz = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,99 +151,99 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      Pb = 80;
+      Nz = 80;
 
-    function Xb() {
-      const bb = Lb.map((bb => {
+    function bz() {
+      const zz = uz.map((zz => {
         let {
-          name: ab,
-          type: Ub
-        } = bb;
-        return `    ${ab}: ${Ub},\n`
+          name: tz,
+          type: sz
+        } = zz;
+        return `    ${tz}: ${sz},\n`
       })).join("");
-      return `struct ${eb} {\n${bb}}\n@group(${Ab}) @binding(${Mb}) var<uniform> ${vb}: ${eb};\n`
+      return `struct ${Uz} {\n${zz}}\n@group(${Fz}) @binding(${Wz}) var<uniform> ${Kz}: ${Uz};\n`
     }
 
-    function jb(bb, ab) {
-      const Ub = new DataView(bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Pb),
-        [Ab, Mb, Tb, Eb, Yb, Bb] = Lb;
-      Ub.setFloat32(Ab.offset, ab.seconds, !0), Ub.setUint32(Mb.offset, ab.lit ? 1 : 0, !0);
-      for (let eb = 0; eb < 3; eb++) Ub.setInt32(Tb.offset + 4 * eb, ab.renderOffset[eb], !0), Ub.setFloat32(Eb.offset + 4 * eb, ab.I6[eb], !0), Ub.setFloat32(Yb.offset + 4 * eb, ab.eyePosition[eb], !0), Ub.setFloat32(Bb.offset + 4 * eb, ab.shadowDirection[eb], !0)
+    function wz(zz, tz) {
+      const sz = new DataView(zz, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Nz),
+        [Fz, Wz, Xz, Oz, oz, vz] = uz;
+      sz.setFloat32(Fz.offset, tz.seconds, !0), sz.setUint32(Wz.offset, tz.lit ? 1 : 0, !0);
+      for (let Uz = 0; Uz < 3; Uz++) sz.setInt32(Xz.offset + 4 * Uz, tz.renderOffset[Uz], !0), sz.setFloat32(Oz.offset + 4 * Uz, tz.L_[Uz], !0), sz.setFloat32(oz.offset + 4 * Uz, tz.eyePosition[Uz], !0), sz.setFloat32(vz.offset + 4 * Uz, tz.shadowDirection[Uz], !0)
     }
 
-    function Rb(bb) {
-      const ab = new Uint32Array(Math.max(1, bb.length));
-      return bb.forEach(((bb, Ub) => {
+    function Dz(zz) {
+      const tz = new Uint32Array(Math.max(1, zz.length));
+      return zz.forEach(((zz, sz) => {
         let {
-          id: Ab,
-          rotation: Mb
-        } = bb;
-        ab[Ub] = 65535 & Ab | (3 & Mb) << 16
-      })), ab
+          id: Fz,
+          rotation: Wz
+        } = zz;
+        tz[sz] = 65535 & Fz | (3 & Wz) << 16
+      })), tz
     }
-    const kb = {
+    const gz = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6273: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Ab,
-      f: () => Eb,
-      i: () => Yb,
-      l: () => Mb,
-      m: () => Tb
+  6221: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Fz,
+      g: () => Oz,
+      k: () => oz,
+      l: () => Wz,
+      o: () => Xz
     });
-    const Ab = ["terrain", "liquid", "model"];
+    const Fz = ["terrain", "liquid", "model"];
 
-    function Mb() {
-      const bb = [];
-      for (const ab of [!1, !0])
-        for (const Ub of Ab) bb.push({
-          strict: ab,
-          program: Ub
+    function Wz() {
+      const zz = [];
+      for (const tz of [!1, !0])
+        for (const sz of Fz) zz.push({
+          strict: tz,
+          program: sz
         });
-      return bb
+      return zz
     }
 
-    function Tb(bb) {
-      return `${bb.strict?"strict":"allow"}.${bb.program}`
+    function Xz(zz) {
+      return `${zz.strict?"strict":"allow"}.${zz.program}`
     }
 
-    function Eb(bb) {
-      return !bb.hooks.vertex && !bb.hooks.surface && !bb.hooks.light
+    function Oz(zz) {
+      return !zz.hooks.vertex && !zz.hooks.surface && !zz.hooks.light
     }
 
-    function Yb(bb, ab) {
-      return "off" !== ab && (null === bb || bb.some((bb => bb.key.strict === ("strict" === ab) && !Eb(bb))))
+    function oz(zz, tz) {
+      return "off" !== tz && (null === zz || zz.some((zz => zz.key.strict === ("strict" === tz) && !Oz(zz))))
     }
   },
-  40379: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      SHADER_PACK_INPUTS_BINDING: () => Tb.d,
-      SHADER_PACK_INPUTS_GROUP: () => Tb.g,
-      SHADER_PACK_INPUTS_SIZE: () => Tb.i,
-      SHADER_PACK_INPUTS_VAR: () => Tb.k,
-      SHADER_PACK_MODES: () => Tb.l,
-      SHADER_PACK_PROGRAMS: () => Ab.b,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => Tb.m,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => Tb.n,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => Tb.q,
-      SHADER_PACK_TEXTURES_BINDING: () => Tb.t,
-      encodeTextureLayers: () => Tb.v,
-      flattenVariants: () => Mb.d,
-      isVariantOff: () => Ab.f,
-      packRunsIn: () => Ab.i,
-      shaderPackInputsWgsl: () => Tb.x,
-      shaderPackVariantKeys: () => Ab.l,
-      variantKeyId: () => Ab.m,
-      writeShaderPackInputs: () => Tb.y
+  40390: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      SHADER_PACK_INPUTS_BINDING: () => Xz.e,
+      SHADER_PACK_INPUTS_GROUP: () => Xz.i,
+      SHADER_PACK_INPUTS_SIZE: () => Xz.k,
+      SHADER_PACK_INPUTS_VAR: () => Xz.m,
+      SHADER_PACK_MODES: () => Xz.q,
+      SHADER_PACK_PROGRAMS: () => Fz.c,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => Xz.s,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => Xz.v,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => Xz.x,
+      SHADER_PACK_TEXTURES_BINDING: () => Xz.B,
+      encodeTextureLayers: () => Xz.E,
+      flattenVariants: () => Wz.c,
+      isVariantOff: () => Fz.g,
+      packRunsIn: () => Fz.k,
+      shaderPackInputsWgsl: () => Xz.F,
+      shaderPackVariantKeys: () => Fz.l,
+      variantKeyId: () => Fz.o,
+      writeShaderPackInputs: () => Xz.J
     });
-    var Ab = Ub(6273),
-      Mb = Ub(6271),
-      Tb = Ub(40003)
+    var Fz = sz(6221),
+      Wz = sz(6215),
+      Xz = sz(39971)
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

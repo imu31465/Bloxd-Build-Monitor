@@ -1,421 +1,421 @@
 export const id = 237;
 export const ids = [237];
 export const modules = {
-  39859: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Tb,
-      h: () => Eb
+  39861: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => Xz,
+      e: () => Oz
     });
-    var Ab = Ub(1838);
-    let Mb = !1;
+    var Fz = sz(1868);
+    let Wz = !1;
 
-    function Tb() {
-      Mb = !0
+    function Xz() {
+      Wz = !0
     }
 
-    function Eb() {
-      Mb && (Mb = !1, (0, Ab.c)())
+    function Oz() {
+      Wz && (Wz = !1, (0, Fz.b)())
     }
   },
-  39822: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => jb,
-      f: () => Pb,
-      j: () => Xb
+  39818: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => wz,
+      h: () => Nz,
+      i: () => bz
     });
-    var Ab = Ub(1840),
-      Mb = Ub(1225),
-      Tb = Ub(39714),
-      Eb = Ub(39740),
-      Yb = Ub(39742),
-      Bb = Ub(39762);
-    const eb = new Mb.d;
-    let vb = !1;
+    var Fz = sz(1875),
+      Wz = sz(1274),
+      Xz = sz(39720),
+      Oz = sz(39740),
+      oz = sz(39748),
+      vz = sz(39765);
+    const Uz = new Wz.d;
+    let Kz = !1;
 
-    function Lb(bb) {
-      const ab = (0, Tb.i)();
-      return null !== ab && +bb === ab.api.localId
+    function uz(zz) {
+      const tz = (0, Xz.f)();
+      return null !== tz && +zz === tz.api.localId
     }
 
-    function Pb() {
-      vb || (vb = !0, (0, Bb.k)(Eb.j, (bb => {
-        var ab, Ub;
-        const Ab = (0, Yb.f)(Eb.j, bb);
-        if (!(0, Yb.e)(Ab)) return;
-        const Mb = Ab;
-        Lb(Mb.Pa) && Xb(Mb.Xa, {
-          icon: Mb.Ra,
-          level: Mb.ya,
-          displayName: null !== (ab = Mb.ja) && void 0 !== ab ? ab : null,
-          durationMs: null !== (Ub = Mb.ka) && void 0 !== Ub ? Ub : null
+    function Nz() {
+      Kz || (Kz = !0, (0, vz.l)(Oz.l, (zz => {
+        var tz, sz;
+        const Fz = (0, oz.d)(Oz.l, zz);
+        if (!(0, oz.c)(Fz)) return;
+        const Wz = Fz;
+        uz(Wz.vt) && bz(Wz.Ut, {
+          icon: Wz.ut,
+          level: Wz.Dt,
+          displayName: null !== (tz = Wz.Kt) && void 0 !== tz ? tz : null,
+          durationMs: null !== (sz = Wz.Nt) && void 0 !== sz ? sz : null
         })
-      })), (0, Bb.k)(Eb.M, (bb => {
-        const ab = (0, Yb.f)(Eb.M, bb);
-        if (!(0, Yb.e)(ab)) return;
-        const Ub = ab;
-        Lb(Ub.Pa) && Ab.c.remove(Ub.Xa)
-      })), (0, Bb.d)((() => {
-        Ab.c.clear()
+      })), (0, vz.l)(Oz.P, (zz => {
+        const tz = (0, oz.d)(Oz.P, zz);
+        if (!(0, oz.c)(tz)) return;
+        const sz = tz;
+        uz(sz.vt) && Fz.c.remove(sz.Ut)
+      })), (0, vz.g)((() => {
+        Fz.c.clear()
       })))
     }
 
-    function Xb(bb, ab) {
-      Ab.c.update(bb, ab), eb.forEach((ab => {
-        ab(bb)
+    function bz(zz, tz) {
+      Fz.c.update(zz, tz), Uz.forEach((tz => {
+        tz(zz)
       }))
     }
-    const jb = {
+    const wz = {
       localEffectUpdated: {
-        watch: bb => eb.add(bb)
+        watch: zz => Uz.add(zz)
       }
     }
   },
-  39825: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => vb
+  39820: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => Kz
     });
-    var Ab = Ub(4485),
-      Mb = Ub(4479),
-      Tb = Ub(39751),
-      Eb = Ub(39762);
-    const Yb = new Set(Ab.L),
-      Bb = Ab.L.map((bb => (new TextEncoder).encode(bb))),
-      eb = new Map;
+    var Fz = sz(4436),
+      Wz = sz(4432),
+      Xz = sz(39754),
+      Oz = sz(39765);
+    const oz = new Set(Fz.J),
+      vz = Fz.J.map((zz => (new TextEncoder).encode(zz))),
+      Uz = new Map;
 
-    function vb(bb, ab) {
-      var Ub;
-      return null === (Ub = eb.get(bb)) || void 0 === Ub ? void 0 : Ub[ab]
-    }(0, Eb.k)(Ab.Tb.NewOtherEntitySettings, (bb => {
-      bb.payloadKind === Mb._b.Msgpack && Bb.some((ab => function(bb, ab) {
-        const Ub = ab[0];
-        for (let Ab = bb.indexOf(Ub); - 1 !== Ab && Ab + ab.length <= bb.length; Ab = bb.indexOf(Ub, Ab + 1)) {
-          let Ub = 1;
-          for (; Ub < ab.length && bb[Ab + Ub] === ab[Ub];) Ub++;
-          if (Ub === ab.length) return !0
+    function Kz(zz, tz) {
+      var sz;
+      return null === (sz = Uz.get(zz)) || void 0 === sz ? void 0 : sz[tz]
+    }(0, Oz.l)(Fz.fc.NewOtherEntitySettings, (zz => {
+      zz.payloadKind === Wz.Wb.Msgpack && vz.some((tz => function(zz, tz) {
+        const sz = tz[0];
+        for (let Fz = zz.indexOf(sz); - 1 !== Fz && Fz + tz.length <= zz.length; Fz = zz.indexOf(sz, Fz + 1)) {
+          let sz = 1;
+          for (; sz < tz.length && zz[Fz + sz] === tz[sz];) sz++;
+          if (sz === tz.length) return !0
         }
         return !1
-      }(bb.payload, ab))) && function(bb) {
-        if (null === bb || "object" !== typeof bb || null === bb.settings || "object" !== typeof bb.settings) return;
-        const ab = String(bb.eId),
-          Ub = bb.settings;
-        let Ab = eb.get(ab);
-        for (const Mb in Ub) {
-          if (!Yb.has(Mb)) continue;
-          const bb = Ub[Mb];
-          null === bb || void 0 === bb ? Ab && delete Ab[Mb] : (Ab ??= {}, Ab[Mb] = bb)
+      }(zz.payload, tz))) && function(zz) {
+        if (null === zz || "object" !== typeof zz || null === zz.settings || "object" !== typeof zz.settings) return;
+        const tz = String(zz.eId),
+          sz = zz.settings;
+        let Fz = Uz.get(tz);
+        for (const Wz in sz) {
+          if (!oz.has(Wz)) continue;
+          const zz = sz[Wz];
+          null === zz || void 0 === zz ? Fz && delete Fz[Wz] : (Fz ??= {}, Fz[Wz] = zz)
         }
-        Ab && eb.set(ab, Ab)
-      }((0, Tb.c)(bb.payload))
-    })), (0, Eb.d)((() => {
-      eb.clear()
+        Fz && Uz.set(tz, Fz)
+      }((0, Xz.c)(zz.payload))
+    })), (0, Oz.g)((() => {
+      Uz.clear()
     }))
   },
-  39815: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Xb,
-      e: () => eb,
-      i: () => Lb
+  39816: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => bz,
+      g: () => Uz,
+      h: () => uz
     });
-    var Ab = Ub(38312),
-      Mb = Ub(1829),
-      Tb = Ub(1225),
-      Eb = Ub(39740),
-      Yb = Ub(39742),
-      Bb = Ub(39762);
-    const eb = new Ab.e;
-    let vb = {};
+    var Fz = sz(38417),
+      Wz = sz(1862),
+      Xz = sz(1274),
+      Oz = sz(39740),
+      oz = sz(39748),
+      vz = sz(39765);
+    const Uz = new Fz.b;
+    let Kz = {};
 
-    function Lb(bb) {
-      return vb[bb]
+    function uz(zz) {
+      return Kz[zz]
     }
-    const Pb = new Tb.d;
+    const Nz = new Xz.d;
 
-    function Xb(bb) {
-      return Pb.add(bb)
+    function bz(zz) {
+      return Nz.add(zz)
     }
 
-    function jb(bb) {
-      Pb.callEach(bb, "a roster listener")
-    }(0, Bb.k)(Eb.V, (bb => {
-      const ab = (0, Yb.f)(Eb.V, bb);
-      if (void 0 === ab) return;
-      const Ub = ab.PA.some((bb => {
+    function wz(zz) {
+      Nz.callEach(zz, "a roster listener")
+    }(0, vz.l)(Oz.ab, (zz => {
+      const tz = (0, oz.d)(Oz.ab, zz);
+      if (void 0 === tz) return;
+      const sz = tz.yF.some((zz => {
           let {
-            XA: ab,
-            jA: Ub
-          } = bb;
-          return null !== Ub && eb.has(ab) && eb.getName(ab) !== Ub
+            MF: tz,
+            dF: sz
+          } = zz;
+          return null !== sz && Uz.has(tz) && Uz.getName(tz) !== sz
         })),
         {
-          added: Ab,
-          removed: Tb,
-          settingChanges: Bb
-        } = eb.apply(ab),
-        vb = new Set;
-      for (const Mb of Bb)
-        for (const bb in Mb.settings) vb.add(bb);
-      const Lb = Ub || Ab.length > 0 || Tb.length > 0;
-      (Lb || vb.has("hideNameSeed")) && function() {
-        const bb = new Map;
-        for (const ab of eb.ids()) {
-          const Ub = eb.getName(ab),
-            Ab = eb.getSetting(ab, "hideNameSeed");
-          void 0 !== Ub && void 0 !== Ab && null !== Ab && bb.set(Ub, Ab)
+          added: Fz,
+          removed: Xz,
+          settingChanges: vz
+        } = Uz.apply(tz),
+        Kz = new Set;
+      for (const Wz of vz)
+        for (const zz in Wz.settings) Kz.add(zz);
+      const uz = sz || Fz.length > 0 || Xz.length > 0;
+      (uz || Kz.has("hideNameSeed")) && function() {
+        const zz = new Map;
+        for (const tz of Uz.ids()) {
+          const sz = Uz.getName(tz),
+            Fz = Uz.getSetting(tz, "hideNameSeed");
+          void 0 !== sz && void 0 !== Fz && null !== Fz && zz.set(sz, Fz)
         }
-        Mb.c.replaceAll(bb)
-      }(), jb({
+        Wz.d.replaceAll(zz)
+      }(), wz({
         kind: "roster",
-        members: Lb,
-        settings: vb
+        members: uz,
+        settings: Kz
       })
-    })), (0, Bb.k)(Eb.L, (bb => {
-      const ab = (0, Yb.f)(Eb.L, bb);
-      if (void 0 !== ab) {
+    })), (0, vz.l)(Oz.M, (zz => {
+      const tz = (0, oz.d)(Oz.M, zz);
+      if (void 0 !== tz) {
         for (const {
-            gU: bb,
-            CU: Ub,
-            VU: Ab
+            bF: zz,
+            wF: sz,
+            DF: Fz
           }
-          of ab) vb[bb] = {
-          ...vb[bb],
-          [Ub]: Ab
+          of tz) Kz[zz] = {
+          ...Kz[zz],
+          [sz]: Fz
         };
-        jb({
+        wz({
           kind: "cosmetics",
-          updates: ab
+          updates: tz
         })
       }
-    })), (0, Bb.d)((() => {
-      eb.clear(), vb = {}, Mb.c.clear(), jb({
+    })), (0, vz.g)((() => {
+      Uz.clear(), Kz = {}, Wz.d.clear(), wz({
         kind: "reset"
       })
-    })), (0, Bb.g)((() => {
-      eb.clear(), jb({
+    })), (0, vz.k)((() => {
+      Uz.clear(), wz({
         kind: "reset"
       })
     }))
   },
-  39841: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      c: () => Wb,
-      g: () => kb,
-      j: () => Fb,
-      m: () => hb
+  39838: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => ez,
+      c: () => gz,
+      d: () => cz,
+      f: () => jz
     });
-    var Ab = Ub(1208),
-      Mb = Ub(580),
-      Tb = Ub(101),
-      Eb = Ub(4485),
-      Yb = Ub(39701),
-      Bb = Ub(39731),
-      eb = Ub(39714),
-      vb = Ub(39825),
-      Lb = Ub(39815),
-      Pb = Ub(39742),
-      Xb = Ub(39762);
+    var Fz = sz(1253),
+      Wz = sz(574),
+      Xz = sz(106),
+      Oz = sz(4436),
+      oz = sz(39714),
+      vz = sz(39733),
+      Uz = sz(39720),
+      Kz = sz(39820),
+      uz = sz(39816),
+      Nz = sz(39748),
+      bz = sz(39765);
 
-    function jb(bb) {
+    function wz(zz) {
       let {
-        deadEId: ab,
-        killerEId: Ub,
-        killerLifeformType: Ab,
-        withItem: Mb,
-        killstreak: Tb
-      } = bb;
+        deadEId: tz,
+        killerEId: sz,
+        killerLifeformType: Fz,
+        withItem: Wz,
+        killstreak: Xz
+      } = zz;
       return {
-        killer: zb({
-          eId: Ub,
-          lifeformType: Ab
+        killer: rz({
+          eId: sz,
+          lifeformType: Fz
         }),
-        victim: zb({
-          eId: ab
+        victim: rz({
+          eId: tz
         }),
-        withItem: Mb,
-        killstreak: Tb
+        withItem: Wz,
+        killstreak: Xz
       }
     }
 
-    function Rb(bb) {
+    function Dz(zz) {
       let {
-        killer: ab,
-        victim: Ub,
-        withItem: Ab
-      } = bb;
+        killer: tz,
+        victim: sz,
+        withItem: Fz
+      } = zz;
       return {
-        killer: zb(ab),
-        victim: zb(Ub),
-        withItem: Ab,
+        killer: rz(tz),
+        victim: rz(sz),
+        withItem: Fz,
         killstreak: 0
       }
     }
 
-    function kb(bb) {
-      mb && Nb((() => "killed" === bb.kind ? jb(bb.body) : Rb(bb.body)))
+    function gz(zz) {
+      Jz && Cz((() => "killed" === zz.kind ? wz(zz.body) : Dz(zz.body)))
     }
-    const yb = "#2727f1",
-      Zb = "#912c2c";
+    const Hz = "#2727f1",
+      Bz = "#912c2c";
 
-    function Db(bb, ab) {
-      var Ub;
-      return Lb.e.has(bb) ? null === (Ub = Lb.e.getSettings(bb)) || void 0 === Ub ? void 0 : Ub[ab] : (0, vb.e)(bb, ab)
+    function Pz(zz, tz) {
+      var sz;
+      return uz.g.has(zz) ? null === (sz = uz.g.getSettings(zz)) || void 0 === sz ? void 0 : sz[tz] : (0, Kz.d)(zz, tz)
     }
 
-    function zb(bb) {
-      var ab, Ub, Eb, Yb, vb;
+    function rz(zz) {
+      var tz, sz, Oz, oz, Kz;
       let {
-        eId: Pb,
-        name: Xb,
-        colour: jb,
-        lifeformType: Rb
-      } = bb;
-      if (void 0 === Pb || null === Pb || "" === Pb) {
-        const bb = Xb || null;
+        eId: Nz,
+        name: bz,
+        colour: wz,
+        lifeformType: Dz
+      } = zz;
+      if (void 0 === Nz || null === Nz || "" === Nz) {
+        const zz = bz || null;
         return {
           id: null,
-          shownName: bb,
-          lifeformType: null === bb && null !== Rb && void 0 !== Rb ? Rb : null,
-          colour: jb || null,
+          shownName: zz,
+          lifeformType: null === zz && null !== Dz && void 0 !== Dz ? Dz : null,
+          colour: wz || null,
           local: !1,
           realName: null
         }
       }
-      const kb = String(Pb),
-        zb = null === (ab = (0, eb.i)()) || void 0 === ab ? void 0 : ab.api,
-        xb = void 0 !== zb && String(zb.localId) === kb,
-        ib = null !== (Ub = Lb.e.getName(kb)) && void 0 !== Ub ? Ub : null,
-        fb = null !== (Eb = Db(kb, "hideNameSeed")) && void 0 !== Eb ? Eb : null;
-      let mb = null === ib ? null : (0, Ab.d)(ib, !Tb.featureFlags.canSeeRealPlayerNames, fb) || null,
-        pb = null;
-      if (null === mb && void 0 !== zb) {
-        const bb = zb.getEntityType(kb);
-        "Player" !== bb && (mb = (0, Bb.f)(zb, +kb) || null), pb = Mb.n.includes(bb) ? bb : null
+      const gz = String(Nz),
+        rz = null === (tz = (0, Uz.f)()) || void 0 === tz ? void 0 : tz.api,
+        Yz = void 0 !== rz && String(rz.localId) === gz,
+        xz = null !== (sz = uz.g.getName(gz)) && void 0 !== sz ? sz : null,
+        mz = null !== (Oz = Pz(gz, "hideNameSeed")) && void 0 !== Oz ? Oz : null;
+      let Jz = null === xz ? null : (0, Fz.c)(xz, !Xz.featureFlags.canSeeRealPlayerNames, mz) || null,
+        Iz = null;
+      if (null === Jz && void 0 !== rz) {
+        const zz = rz.getEntityType(gz);
+        "Player" !== zz && (Jz = (0, vz.i)(rz, +gz) || null), Iz = Wz.k.includes(zz) ? zz : null
       }
       return {
-        id: kb,
-        shownName: mb,
-        lifeformType: null === mb && null !== (Yb = null !== (vb = pb) && void 0 !== vb ? vb : Rb) && void 0 !== Yb ? Yb : null,
-        colour: jb || Db(kb, "killfeedColour") || (xb ? yb : Zb),
-        local: xb,
-        realName: ib
+        id: gz,
+        shownName: Jz,
+        lifeformType: null === Jz && null !== (oz = null !== (Kz = Iz) && void 0 !== Kz ? Kz : Dz) && void 0 !== oz ? oz : null,
+        colour: wz || Pz(gz, "killfeedColour") || (Yz ? Hz : Bz),
+        local: Yz,
+        realName: xz
       }
     }
-    const xb = 32;
-    let ib = [],
-      fb = null,
-      mb = !1,
-      pb = !1;
+    const Yz = 32;
+    let xz = [],
+      mz = null,
+      Jz = !1,
+      Iz = !1;
 
-    function Nb(bb) {
-      null === fb ? (ib.length === xb && ib.shift(), ib.push(bb)) : fb(bb())
+    function Cz(zz) {
+      null === mz ? (xz.length === Yz && xz.shift(), xz.push(zz)) : mz(zz())
     }
 
-    function Wb() {
-      pb || (pb = !0, (0, Xb.k)(Eb.Tb.PlayerKilled, (bb => {
-        const ab = (0, Pb.i)(bb);
-        (0, Pb.e)(ab) && Nb((() => jb(ab)))
-      })), (0, Xb.k)(Eb.Tb.CustomKillfeed, (bb => {
-        const ab = (0, Pb.i)(bb);
-        (0, Pb.e)(ab) && (0, Pb.e)(ab.killer) && (0, Pb.e)(ab.victim) && Nb((() => Rb(ab)))
-      })), (0, Xb.d)((() => {
-        ib = []
+    function ez() {
+      Iz || (Iz = !0, (0, bz.l)(Oz.fc.PlayerKilled, (zz => {
+        const tz = (0, Nz.f)(zz);
+        (0, Nz.c)(tz) && Cz((() => wz(tz)))
+      })), (0, bz.l)(Oz.fc.CustomKillfeed, (zz => {
+        const tz = (0, Nz.f)(zz);
+        (0, Nz.c)(tz) && (0, Nz.c)(tz.killer) && (0, Nz.c)(tz.victim) && Cz((() => Dz(tz)))
+      })), (0, bz.g)((() => {
+        xz = []
       })))
     }
-    const Hb = Object.freeze([0, 0, 0]),
-      Ib = [0, 0, 0],
-      db = [0, 0, 0],
-      Fb = {
+    const Zz = Object.freeze([0, 0, 0]),
+      Gz = [0, 0, 0],
+      Tz = [0, 0, 0],
+      cz = {
         kill: {
-          watch(bb) {
-            if (mb = !0, 0 === ib.length) return fb = bb, () => {
-              mb = !1, fb = null
+          watch(zz) {
+            if (Jz = !0, 0 === xz.length) return mz = zz, () => {
+              Jz = !1, mz = null
             };
-            const ab = setTimeout((() => {
-              const ab = ib;
-              ib = [], fb = bb;
-              for (const Ab of ab) try {
-                bb(Ab())
-              } catch (Ub) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", Ub)
+            const tz = setTimeout((() => {
+              const tz = xz;
+              xz = [], mz = zz;
+              for (const Fz of tz) try {
+                zz(Fz())
+              } catch (sz) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", sz)
               }
             }), 0);
             return () => {
-              clearTimeout(ab), mb = !1, fb = null
+              clearTimeout(tz), Jz = !1, mz = null
             }
           }
         }
       },
-      hb = {
+      jz = {
         localPos() {
-          const bb = (0, eb.i)();
-          if (null === bb) return Hb;
-          const ab = bb.api.apiView;
-          for (let Ub = 0; Ub < 3; Ub++) Ib[Ub] = Yb.t.localPos(ab, 0, Ub);
-          return Ib
+          const zz = (0, Uz.f)();
+          if (null === zz) return Zz;
+          const tz = zz.api.apiView;
+          for (let sz = 0; sz < 3; sz++) Gz[sz] = oz.t.localPos(tz, 0, sz);
+          return Gz
         },
         targetedBlockPos() {
-          const bb = (0, eb.i)();
-          if (null === bb || Yb.t.targetBlockId(bb.api.apiView, 0) === Yb.Wc) return null;
-          for (let ab = 0; ab < 3; ab++) db[ab] = Yb.t.targetBlock(bb.api.apiView, 0, ab);
-          return db
+          const zz = (0, Uz.f)();
+          if (null === zz || oz.t.targetBlockId(zz.api.apiView, 0) === oz.fd) return null;
+          for (let tz = 0; tz < 3; tz++) Tz[tz] = oz.t.targetBlock(zz.api.apiView, 0, tz);
+          return Tz
         }
       }
   },
-  38312: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Ab
+  38417: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Fz
     });
-    class Ab {
+    class Fz {
       constructor() {
         this.members = new Map
       }
-      apply(bb) {
-        const ab = {
+      apply(zz) {
+        const tz = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const Ab of bb.PA) {
-          let bb = this.members.get(Ab.XA);
-          if (bb || (bb = {
+        for (const Fz of zz.yF) {
+          let zz = this.members.get(Fz.MF);
+          if (zz || (zz = {
               name: null,
               settings: {}
-            }, this.members.set(Ab.XA, bb), ab.added.push(Ab.XA)), null !== Ab.jA && (bb.name = Ab.jA), null !== Ab.RA || Ab.kA.length > 0) {
-            const Ub = null === Ab.RA ? {} : JSON.parse(Ab.RA);
-            Object.assign(bb.settings, Ub);
-            for (const ab of Ab.kA) delete bb.settings[ab], Ub[ab] = void 0;
-            ab.settingChanges.push({
-              playerId: Ab.XA,
-              settings: Ub
+            }, this.members.set(Fz.MF, zz), tz.added.push(Fz.MF)), null !== Fz.dF && (zz.name = Fz.dF), null !== Fz.hF || Fz.QF.length > 0) {
+            const sz = null === Fz.hF ? {} : JSON.parse(Fz.hF);
+            Object.assign(zz.settings, sz);
+            for (const tz of Fz.QF) delete zz.settings[tz], sz[tz] = void 0;
+            tz.settingChanges.push({
+              playerId: Fz.MF,
+              settings: sz
             })
           }
         }
-        for (const Ab of bb.yA) {
-          const bb = this.members.get(Ab);
-          var Ub;
-          if (bb) this.members.delete(Ab), ab.removed.push({
-            playerId: Ab,
-            name: null !== (Ub = bb.name) && void 0 !== Ub ? Ub : void 0
+        for (const Fz of zz.kF) {
+          const zz = this.members.get(Fz);
+          var sz;
+          if (zz) this.members.delete(Fz), tz.removed.push({
+            playerId: Fz,
+            name: null !== (sz = zz.name) && void 0 !== sz ? sz : void 0
           })
         }
-        return ab
+        return tz
       }
-      has(bb) {
-        return this.members.has(bb)
+      has(zz) {
+        return this.members.has(zz)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(bb) {
-        var ab, Ub;
-        return null !== (ab = null === (Ub = this.members.get(bb)) || void 0 === Ub ? void 0 : Ub.name) && void 0 !== ab ? ab : void 0
+      getName(zz) {
+        var tz, sz;
+        return null !== (tz = null === (sz = this.members.get(zz)) || void 0 === sz ? void 0 : sz.name) && void 0 !== tz ? tz : void 0
       }
-      getSettings(bb) {
-        var ab;
-        return null === (ab = this.members.get(bb)) || void 0 === ab ? void 0 : ab.settings
+      getSettings(zz) {
+        var tz;
+        return null === (tz = this.members.get(zz)) || void 0 === tz ? void 0 : tz.settings
       }
-      getSetting(bb, ab) {
-        var Ub;
-        return null === (Ub = this.members.get(bb)) || void 0 === Ub ? void 0 : Ub.settings[ab]
+      getSetting(zz, tz) {
+        var sz;
+        return null === (sz = this.members.get(zz)) || void 0 === sz ? void 0 : sz.settings[tz]
       }
       clear() {
         this.members.clear()
@@ -424,4 +424,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

@@ -1,55 +1,55 @@
 export const id = 291;
 export const ids = [291];
 export const modules = {
-  40588: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      default: () => ib
+  40572: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      default: () => xz
     });
-    var Ab = Ub(52),
-      Mb = Ub(4428),
-      Tb = Ub(1589),
-      Eb = Ub(984),
-      Yb = Ub.n(Eb),
-      Bb = Ub(1352),
-      eb = Ub(1134),
-      vb = Ub(4399),
-      Lb = Ub(4405),
-      Pb = Ub(4413),
-      Xb = Ub(1023);
+    var Fz = sz(65),
+      Wz = sz(4382),
+      Xz = sz(1622),
+      Oz = sz(1020),
+      oz = sz.n(Oz),
+      vz = sz(1419),
+      Uz = sz(1173),
+      Kz = sz(4359),
+      uz = sz(4367),
+      Nz = sz(4373),
+      bz = sz(1087);
 
-    function jb(bb) {
-      return bb.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    function wz(zz) {
+      return zz.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
     }
-    vb.d.registerLanguage("javascript", Lb.c), vb.d.registerLanguage("typescript", Pb.d);
+    Kz.d.registerLanguage("javascript", uz.c), Kz.d.registerLanguage("typescript", Nz.e);
 
-    function Rb(bb, ab) {
-      const Ub = jb(bb).replace(/"/g, "&quot;");
-      return `<button type="button" class="DocsCopyButton ${ab}" title="${Ub}" aria-label="${Ub}"><svg class="DocsCopyIcon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8.5" height="8.5"/><path d="M10.5 3.5V1.5H1.5v9h2"/></svg><svg class="DocsCopiedIcon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-7.5"/></svg></button>`
+    function Dz(zz, tz) {
+      const sz = wz(zz).replace(/"/g, "&quot;");
+      return `<button type="button" class="DocsCopyButton ${tz}" title="${sz}" aria-label="${sz}"><svg class="DocsCopyIcon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8.5" height="8.5"/><path d="M10.5 3.5V1.5H1.5v9h2"/></svg><svg class="DocsCopiedIcon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-7.5"/></svg></button>`
     }
 
-    function kb(bb, ab) {
-      const Ub = [],
-        Ab = bb.toLowerCase(),
-        Mb = ab.toLowerCase();
-      let Tb = 0;
-      for (; Tb < bb.length;) {
-        const Eb = Ab.indexOf(Mb, Tb);
-        if (-1 === Eb) {
-          Ub.push(bb.slice(Tb));
+    function gz(zz, tz) {
+      const sz = [],
+        Fz = zz.toLowerCase(),
+        Wz = tz.toLowerCase();
+      let Xz = 0;
+      for (; Xz < zz.length;) {
+        const Oz = Fz.indexOf(Wz, Xz);
+        if (-1 === Oz) {
+          sz.push(zz.slice(Xz));
           break
         }
-        Eb > Tb && Ub.push(bb.slice(Tb, Eb)), Ub.push((0, Xb.jsx)("mark", {
+        Oz > Xz && sz.push(zz.slice(Xz, Oz)), sz.push((0, bz.jsx)("mark", {
           className: "DocsHighlight",
-          children: bb.slice(Eb, Eb + ab.length)
-        }, Eb)), Tb = Eb + ab.length
+          children: zz.slice(Oz, Oz + tz.length)
+        }, Oz)), Xz = Oz + tz.length
       }
-      return Ub
+      return sz
     }
-    var yb = Ub(990),
-      Zb = Ub(1268),
-      Db = Ub(36209),
-      zb = Ub(36214);
-    const xb = {
+    var Hz = sz(1036),
+      Bz = sz(1333),
+      Pz = sz(36297),
+      rz = sz(36303);
+    const Yz = {
         clientOptions: {
           tabStep: "docsClientOptionsTab",
           tabText: "codeEditor:tutorialClientOptionsTab",
@@ -69,342 +69,342 @@ export const modules = {
           pageText: "codeEditor:tutorialCallbacks"
         }
       },
-      ib = (0, Ab.memo)((function(bb) {
-        var ab, Ub, Eb, Lb, Pb, ib, fb;
+      xz = (0, Fz.memo)((function(zz) {
+        var tz, sz, Oz, uz, Nz, xz, mz;
         let {
-          popOutDocs: mb,
-          hideDocs: pb,
-          tutorialEnabled: Nb
-        } = bb;
-        const [Wb, Hb] = (0, Ab.useState)(Mb.d[0].id), Ib = (0, Ab.useRef)(null), db = (0, Ab.useRef)(null), [Fb, hb] = (0, Ab.useState)(""), [Gb, Qb] = (0, Ab.useState)(0), [qb, ub] = (0, Ab.useState)(null), [rb, Kb] = (0, Ab.useState)(!1), [ob, lb] = (0, Ab.useState)(160), tb = (0, Ab.useRef)(!1), wb = (0, Ab.useRef)(null), sb = (0, Db.k)("docsOverview"), [gb, Cb] = (0, Ab.useState)(0), Vb = Object.values(xb).some((bb => (null === bb || void 0 === bb ? void 0 : bb.tabStep) === sb));
-        (0, Ab.useEffect)((() => {
-          Vb && Fb.length > 0 && (hb(""), Cb((bb => bb + 1)))
-        }), [Vb, Fb]);
-        const Ob = Fb.length > 0,
-          cb = (0, Ab.useMemo)((() => function(bb) {
-            if (!bb) return [];
-            const ab = bb.toLowerCase(),
-              Ub = [];
-            for (const Ab of Mb.d) {
-              const bb = Ab.content.toLowerCase();
-              let Mb = 0,
-                Tb = -1,
-                Eb = 0,
-                Yb = bb.indexOf(ab, Eb);
-              for (; - 1 !== Yb;) - 1 === Tb && (Tb = Yb), Mb++, Eb = Yb + ab.length, Yb = bb.indexOf(ab, Eb);
-              if (0 === Mb) continue;
-              const Bb = Math.max(0, Tb - 40),
-                eb = Math.min(Ab.content.length, Tb + ab.length + 40),
-                vb = (Bb > 0 ? "..." : "") + Ab.content.slice(Bb, eb).replace(/\n/g, " ") + (eb < Ab.content.length ? "..." : "");
-              Ub.push({
-                doc: Ab,
-                matchCount: Mb,
-                snippet: vb
+          popOutDocs: Jz,
+          hideDocs: Iz,
+          tutorialEnabled: Cz
+        } = zz;
+        const [ez, Zz] = (0, Fz.useState)(Wz.d[0].id), Gz = (0, Fz.useRef)(null), Tz = (0, Fz.useRef)(null), [cz, jz] = (0, Fz.useState)(""), [Az, yz] = (0, Fz.useState)(0), [Mz, dz] = (0, Fz.useState)(null), [hz, Qz] = (0, Fz.useState)(!1), [kz, iz] = (0, Fz.useState)(160), Lz = (0, Fz.useRef)(!1), lz = (0, Fz.useRef)(null), nz = (0, Pz.j)("docsOverview"), [az, qz] = (0, Fz.useState)(0), Sz = Object.values(Yz).some((zz => (null === zz || void 0 === zz ? void 0 : zz.tabStep) === nz));
+        (0, Fz.useEffect)((() => {
+          Sz && cz.length > 0 && (jz(""), qz((zz => zz + 1)))
+        }), [Sz, cz]);
+        const Vz = cz.length > 0,
+          Rz = (0, Fz.useMemo)((() => function(zz) {
+            if (!zz) return [];
+            const tz = zz.toLowerCase(),
+              sz = [];
+            for (const Fz of Wz.d) {
+              const zz = Fz.content.toLowerCase();
+              let Wz = 0,
+                Xz = -1,
+                Oz = 0,
+                oz = zz.indexOf(tz, Oz);
+              for (; - 1 !== oz;) - 1 === Xz && (Xz = oz), Wz++, Oz = oz + tz.length, oz = zz.indexOf(tz, Oz);
+              if (0 === Wz) continue;
+              const vz = Math.max(0, Xz - 40),
+                Uz = Math.min(Fz.content.length, Xz + tz.length + 40),
+                Kz = (vz > 0 ? "..." : "") + Fz.content.slice(vz, Uz).replace(/\n/g, " ") + (Uz < Fz.content.length ? "..." : "");
+              sz.push({
+                doc: Fz,
+                matchCount: Wz,
+                snippet: Kz
               })
             }
-            return Ub.sort(((bb, ab) => ab.matchCount - bb.matchCount)), Ub
-          }(Fb)), [Fb]),
-          Jb = Ob ? null !== (ab = null !== (Ub = null === (Eb = cb.find((bb => bb.doc.id === Wb))) || void 0 === Eb ? void 0 : Eb.doc) && void 0 !== Ub ? Ub : null === (Lb = cb[0]) || void 0 === Lb ? void 0 : Lb.doc) && void 0 !== ab ? ab : null : null !== (Pb = Mb.d.find((bb => bb.id === Wb))) && void 0 !== Pb ? Pb : Mb.d[0],
+            return sz.sort(((zz, tz) => tz.matchCount - zz.matchCount)), sz
+          }(cz)), [cz]),
+          pz = Vz ? null !== (tz = null !== (sz = null === (Oz = Rz.find((zz => zz.doc.id === ez))) || void 0 === Oz ? void 0 : Oz.doc) && void 0 !== sz ? sz : null === (uz = Rz[0]) || void 0 === uz ? void 0 : uz.doc) && void 0 !== tz ? tz : null : null !== (Nz = Wz.d.find((zz => zz.id === ez))) && void 0 !== Nz ? Nz : Wz.d[0],
           {
-            t: nb
-          } = (0, eb.A)(),
-          Sb = nb("codeEditor:copySnippet"),
-          ba = (0, Ab.useMemo)((() => Jb ? function(bb, ab, Ub, Ab) {
-            let Mb = ab;
-            Mb = Mb.replace(/\r\n/g, "\n");
-            const Tb = [];
-            Mb = Mb.replace(/```(\w*)\n([\s\S]*?)```/g, ((bb, ab, Ab) => {
-              const Mb = Tb.length;
-              let Eb = jb(Ab);
+            t: fz
+          } = (0, Uz.B)(),
+          Ez = fz("codeEditor:copySnippet"),
+          zt = (0, Fz.useMemo)((() => pz ? function(zz, tz, sz, Fz) {
+            let Wz = tz;
+            Wz = Wz.replace(/\r\n/g, "\n");
+            const Xz = [];
+            Wz = Wz.replace(/```(\w*)\n([\s\S]*?)```/g, ((zz, tz, Fz) => {
+              const Wz = Xz.length;
+              let Oz = wz(Fz);
               try {
-                Eb = vb.d.highlight(Ab.trimEnd(), {
-                  language: ab
+                Oz = Kz.d.highlight(Fz.trimEnd(), {
+                  language: tz
                 }).value
-              } catch (Yb) {
-                console.warn("Could not highlight documentation code block", Yb)
+              } catch (oz) {
+                console.warn("Could not highlight documentation code block", oz)
               }
-              return Tb.push(`<div class="DocsCodeBlockRow"><pre class="DocsCodeBlock" data-lang="${ab}"><code>${Eb}</code></pre>${Rb(Ub,"DocsCopyBlock")}</div>`), `\0PLACEHOLDER_${Mb}\0`
-            })), Mb = Mb.replace(/(`{1,2})([^\n]+?)\1(?!`)/g, ((ab, Ab, Mb) => {
-              const Eb = Tb.length,
-                Yb = 2 === Ab.length ? Mb.replace(/^ (.*) $/, "$1") : Mb;
-              let Bb = jb(Yb);
+              return Xz.push(`<div class="DocsCodeBlockRow"><pre class="DocsCodeBlock" data-lang="${tz}"><code>${Oz}</code></pre>${Dz(sz,"DocsCopyBlock")}</div>`), `\0PLACEHOLDER_${Wz}\0`
+            })), Wz = Wz.replace(/(`{1,2})([^\n]+?)\1(?!`)/g, ((tz, Fz, Wz) => {
+              const Oz = Xz.length,
+                oz = 2 === Fz.length ? Wz.replace(/^ (.*) $/, "$1") : Wz;
+              let vz = wz(oz);
               try {
-                "apiReference" !== bb && "callbacks" !== bb || (Bb = vb.d.highlight(Yb.trimEnd().replaceAll("\\|", "|"), {
+                "apiReference" !== zz && "callbacks" !== zz || (vz = Kz.d.highlight(oz.trimEnd().replaceAll("\\|", "|"), {
                   language: "typescript"
                 }).value)
-              } catch (eb) {
-                console.warn("Could not highlight documentation snippet", eb)
+              } catch (Uz) {
+                console.warn("Could not highlight documentation snippet", Uz)
               }
-              return Tb.push(`<span class="DocsInlineCodeRow"><code class="DocsInlineCode">${Bb}</code>${Rb(Ub,"DocsCopyInline")}</span>`), `\0PLACEHOLDER_${Eb}\0`
-            })), Mb = jb(Mb), Mb = Mb.replace(/^#### (.+)$/gm, '<h4 class="DocsH4">$1</h4>'), Mb = Mb.replace(/^### (.+)$/gm, '<h3 class="DocsH3">$1</h3>'), Mb = Mb.replace(/^## (.+)$/gm, '<h2 class="DocsH2">$1</h2>'), Mb = Mb.replace(/^# (.+)$/gm, '<h1 class="DocsH1">$1</h1>'), Mb = Mb.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"), Mb = Mb.replace(/\[([^\]]+)\]\(([^)]+)\)/g, ((bb, ab, Ub) => Ub.startsWith("#") ? `<a class="DocsAnchor" data-id="${Ub}">${ab}</a>` : `<a href="${Ub}" target="_blank" rel="noopener noreferrer">${ab}</a>`)), Mb = Mb.replace(/^(\|.+\|)\n(\|[\s:\-|]+\|)\n((?:\|.+\|\s*\r?\n?)*)/gm, ((bb, ab, Ub, Ab) => `<table class="DocsTable"><thead><tr>${ab.split("|").slice(1,-1).map((bb=>`<th>${bb.trim()}</th>`)).join("")}</tr></thead><tbody>${Ab.trim().split("\n").map((bb=>`<tr>${bb.split("|").slice(1,-1).map((bb=>`<td>${bb.trim()}</td>`)).join("")}</tr>`)).join("")}</tbody></table>`)), Mb = Mb.replace(/(?:^[ \t]*([*-])[ \t]+.+(?:\n|$))+/gm, ((bb, ab) => function(bb, ab) {
-              const Ub = "*" === ab,
-                Ab = [];
-              for (const Yb of bb.split("\n")) {
-                const bb = Yb.match(/^([ \t]*)(?:[*-])[ \t]+(.+)$/);
-                bb && Ab.push({
-                  indent: bb[1].replace(/\t/g, "  ").length,
-                  content: bb[2]
+              return Xz.push(`<span class="DocsInlineCodeRow"><code class="DocsInlineCode">${vz}</code>${Dz(sz,"DocsCopyInline")}</span>`), `\0PLACEHOLDER_${Oz}\0`
+            })), Wz = wz(Wz), Wz = Wz.replace(/^#### (.+)$/gm, '<h4 class="DocsH4">$1</h4>'), Wz = Wz.replace(/^### (.+)$/gm, '<h3 class="DocsH3">$1</h3>'), Wz = Wz.replace(/^## (.+)$/gm, '<h2 class="DocsH2">$1</h2>'), Wz = Wz.replace(/^# (.+)$/gm, '<h1 class="DocsH1">$1</h1>'), Wz = Wz.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"), Wz = Wz.replace(/\[([^\]]+)\]\(([^)]+)\)/g, ((zz, tz, sz) => sz.startsWith("#") ? `<a class="DocsAnchor" data-id="${sz}">${tz}</a>` : `<a href="${sz}" target="_blank" rel="noopener noreferrer">${tz}</a>`)), Wz = Wz.replace(/^(\|.+\|)\n(\|[\s:\-|]+\|)\n((?:\|.+\|\s*\r?\n?)*)/gm, ((zz, tz, sz, Fz) => `<table class="DocsTable"><thead><tr>${tz.split("|").slice(1,-1).map((zz=>`<th>${zz.trim()}</th>`)).join("")}</tr></thead><tbody>${Fz.trim().split("\n").map((zz=>`<tr>${zz.split("|").slice(1,-1).map((zz=>`<td>${zz.trim()}</td>`)).join("")}</tr>`)).join("")}</tbody></table>`)), Wz = Wz.replace(/(?:^[ \t]*([*-])[ \t]+.+(?:\n|$))+/gm, ((zz, tz) => function(zz, tz) {
+              const sz = "*" === tz,
+                Fz = [];
+              for (const oz of zz.split("\n")) {
+                const zz = oz.match(/^([ \t]*)(?:[*-])[ \t]+(.+)$/);
+                zz && Fz.push({
+                  indent: zz[1].replace(/\t/g, "  ").length,
+                  content: zz[2]
                 })
               }
-              let Mb = "";
-              const Tb = [],
-                Eb = Ub ? "ol" : "ul";
+              let Wz = "";
+              const Xz = [],
+                Oz = sz ? "ol" : "ul";
               for (const {
-                  indent: Yb,
-                  content: Bb
+                  indent: oz,
+                  content: vz
                 }
-                of Ab) {
-                for (; Tb.length > 0 && Yb < Tb[Tb.length - 1];) Mb += `</${Eb}></li>`, Tb.pop();
-                (0 === Tb.length || Yb > Tb[Tb.length - 1]) && (Tb.length > 0 && (Mb = Mb.replace(/<\/li>$/, "")), Mb += `<${Eb} class="DocsList">`, Tb.push(Yb)), Mb += `<li class="DocsListItem">${Bb}</li>`
+                of Fz) {
+                for (; Xz.length > 0 && oz < Xz[Xz.length - 1];) Wz += `</${Oz}></li>`, Xz.pop();
+                (0 === Xz.length || oz > Xz[Xz.length - 1]) && (Xz.length > 0 && (Wz = Wz.replace(/<\/li>$/, "")), Wz += `<${Oz} class="DocsList">`, Xz.push(oz)), Wz += `<li class="DocsListItem">${vz}</li>`
               }
-              for (; Tb.length > 0;) Mb += `</${Eb}>`, Tb.pop(), Tb.length > 0 && (Mb += "</li>");
-              return Mb
-            }(bb, ab))), Mb = Mb.replace(/\n{2,}/g, "\n<br/>\n");
-            for (let Eb = 0; Eb < Tb.length; Eb++) Mb = Mb.replace(`\0PLACEHOLDER_${Eb}\0`, Tb[Eb]);
-            if (Ab) {
-              const bb = jb(Ab).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-                ab = new RegExp(bb, "gi");
-              Mb = Mb.replace(/([^<>]+)(?=<|$)/g, (bb => bb.replace(ab, (bb => `<mark class="DocsHighlight">${bb}</mark>`))))
+              for (; Xz.length > 0;) Wz += `</${Oz}>`, Xz.pop(), Xz.length > 0 && (Wz += "</li>");
+              return Wz
+            }(zz, tz))), Wz = Wz.replace(/\n{2,}/g, "\n<br/>\n");
+            for (let Oz = 0; Oz < Xz.length; Oz++) Wz = Wz.replace(`\0PLACEHOLDER_${Oz}\0`, Xz[Oz]);
+            if (Fz) {
+              const zz = wz(Fz).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+                tz = new RegExp(zz, "gi");
+              Wz = Wz.replace(/([^<>]+)(?=<|$)/g, (zz => zz.replace(tz, (zz => `<mark class="DocsHighlight">${zz}</mark>`))))
             }
-            return Mb
-          }(Jb.id, Jb.content, Sb, Ob ? Fb : void 0) : ""), [Jb, Sb, Ob, Fb]);
-        (0, Ab.useEffect)((() => {
-          const bb = db.current;
-          if (!bb) return;
-          const ab = bb => {
-            var ab, Ub, Ab, Mb, Tb;
-            const Eb = null === (ab = (Ub = bb.target).closest) || void 0 === ab ? void 0 : ab.call(Ub, ".DocsCopyButton");
-            if (!Eb) return;
-            bb.preventDefault(), bb.stopPropagation();
-            const Yb = null !== (Ab = null === (Mb = Eb.parentElement) || void 0 === Mb || null === (Tb = Mb.querySelector("code")) || void 0 === Tb ? void 0 : Tb.textContent) && void 0 !== Ab ? Ab : "";
-            navigator.clipboard.writeText(Yb.trimEnd()).then((() => {
-              Eb.classList.add("Copied"), setTimeout((() => {
-                Eb.classList.remove("Copied")
+            return Wz
+          }(pz.id, pz.content, Ez, Vz ? cz : void 0) : ""), [pz, Ez, Vz, cz]);
+        (0, Fz.useEffect)((() => {
+          const zz = Tz.current;
+          if (!zz) return;
+          const tz = zz => {
+            var tz, sz, Fz, Wz, Xz;
+            const Oz = null === (tz = (sz = zz.target).closest) || void 0 === tz ? void 0 : tz.call(sz, ".DocsCopyButton");
+            if (!Oz) return;
+            zz.preventDefault(), zz.stopPropagation();
+            const oz = null !== (Fz = null === (Wz = Oz.parentElement) || void 0 === Wz || null === (Xz = Wz.querySelector("code")) || void 0 === Xz ? void 0 : Xz.textContent) && void 0 !== Fz ? Fz : "";
+            navigator.clipboard.writeText(oz.trimEnd()).then((() => {
+              Oz.classList.add("Copied"), setTimeout((() => {
+                Oz.classList.remove("Copied")
               }), 1500)
-            })).catch((bb => {
-              console.warn("Could not copy documentation code", bb)
+            })).catch((zz => {
+              console.warn("Could not copy documentation code", zz)
             }))
           };
-          return bb.addEventListener("click", ab, !0), () => {
-            bb.removeEventListener("click", ab, !0)
+          return zz.addEventListener("click", tz, !0), () => {
+            zz.removeEventListener("click", tz, !0)
           }
         }), []);
-        const [aa, Ua] = (0, Ab.useState)(0);
-        (0, Ab.useEffect)((() => {
-          if (!Ob || !db.current) return void Ua(0);
-          const bb = db.current.querySelectorAll(".DocsHighlight").length;
-          Ua(bb)
-        }), [Ob, ba]), (0, Ab.useEffect)((() => {
-          if (null === qb || !db.current) return;
-          ub(null);
-          const bb = db.current.querySelectorAll(".DocsHighlight");
-          if (0 === bb.length) return;
-          const ab = Math.min(qb, bb.length - 1);
-          Qb(ab), bb.forEach((bb => {
-            bb.classList.remove("DocsHighlightActive")
-          })), bb[ab].classList.add("DocsHighlightActive"), bb[ab].scrollIntoView({
+        const [tt, st] = (0, Fz.useState)(0);
+        (0, Fz.useEffect)((() => {
+          if (!Vz || !Tz.current) return void st(0);
+          const zz = Tz.current.querySelectorAll(".DocsHighlight").length;
+          st(zz)
+        }), [Vz, zt]), (0, Fz.useEffect)((() => {
+          if (null === Mz || !Tz.current) return;
+          dz(null);
+          const zz = Tz.current.querySelectorAll(".DocsHighlight");
+          if (0 === zz.length) return;
+          const tz = Math.min(Mz, zz.length - 1);
+          yz(tz), zz.forEach((zz => {
+            zz.classList.remove("DocsHighlightActive")
+          })), zz[tz].classList.add("DocsHighlightActive"), zz[tz].scrollIntoView({
             block: "center",
             behavior: "smooth"
           })
-        }), [qb, ba]);
-        const Aa = (0, Ab.useCallback)((bb => {
-            if (!db.current) return;
-            const ab = db.current.querySelectorAll(".DocsHighlight");
-            if (0 === ab.length) return;
-            const Ub = (Gb + bb + ab.length) % ab.length;
-            Qb(Ub), ub(Ub)
-          }), [Gb]),
-          Ma = (0, Ab.useCallback)((bb => {
-            var ab;
-            const Ub = null === (ab = xb[bb]) || void 0 === ab ? void 0 : ab.tabStep;
-            Ub && Ub === sb && (0, zb.e)(Ub), bb !== Wb ? (Kb(!0), Hb(bb), Qb(0), db.current && (db.current.scrollTop = 0), Ob && ub(0)) : Kb(!rb)
-          }), [Ob, Wb, rb, sb]),
-          Ta = (0, Ab.useCallback)((bb => {
-            var ab;
-            const Ub = Array.from((null === (ab = db.current) || void 0 === ab ? void 0 : ab.querySelectorAll(".DocsH2, .DocsH3")) || []).find((ab => {
-              var Ub;
-              return null === (Ub = ab.textContent) || void 0 === Ub ? void 0 : Ub.includes(bb)
+        }), [Mz, zt]);
+        const Ft = (0, Fz.useCallback)((zz => {
+            if (!Tz.current) return;
+            const tz = Tz.current.querySelectorAll(".DocsHighlight");
+            if (0 === tz.length) return;
+            const sz = (Az + zz + tz.length) % tz.length;
+            yz(sz), dz(sz)
+          }), [Az]),
+          Wt = (0, Fz.useCallback)((zz => {
+            var tz;
+            const sz = null === (tz = Yz[zz]) || void 0 === tz ? void 0 : tz.tabStep;
+            sz && sz === nz && (0, rz.d)(sz), zz !== ez ? (Qz(!0), Zz(zz), yz(0), Tz.current && (Tz.current.scrollTop = 0), Vz && dz(0)) : Qz(!hz)
+          }), [Vz, ez, hz, nz]),
+          Xt = (0, Fz.useCallback)((zz => {
+            var tz;
+            const sz = Array.from((null === (tz = Tz.current) || void 0 === tz ? void 0 : tz.querySelectorAll(".DocsH2, .DocsH3")) || []).find((tz => {
+              var sz;
+              return null === (sz = tz.textContent) || void 0 === sz ? void 0 : sz.includes(zz)
             }));
-            Ub && Ub.scrollIntoView({
+            sz && sz.scrollIntoView({
               block: "start",
               behavior: "smooth"
             })
-          }), [db]),
-          Ea = (0, Ab.useCallback)((bb => {
-            var ab, Ub;
-            const Ab = null !== (ab = null === (Ub = Ib.current) || void 0 === Ub ? void 0 : Ub.clientWidth) && void 0 !== ab ? ab : window.innerWidth,
-              Mb = Math.max(120, Ab - 200);
-            return Math.min(Math.max(bb, 120), Mb)
+          }), [Tz]),
+          Ot = (0, Fz.useCallback)((zz => {
+            var tz, sz;
+            const Fz = null !== (tz = null === (sz = Gz.current) || void 0 === sz ? void 0 : sz.clientWidth) && void 0 !== tz ? tz : window.innerWidth,
+              Wz = Math.max(120, Fz - 200);
+            return Math.min(Math.max(zz, 120), Wz)
           }), []),
-          Ya = (0, Ab.useCallback)((() => {
-            var bb;
-            tb.current && (tb.current = !1, null === (bb = Ib.current) || void 0 === bb || bb.classList.remove("DocsSidebarResizing"))
+          ot = (0, Fz.useCallback)((() => {
+            var zz;
+            Lz.current && (Lz.current = !1, null === (zz = Gz.current) || void 0 === zz || zz.classList.remove("DocsSidebarResizing"))
           }), []),
-          Ba = (0, Ab.useCallback)((bb => {
-            var ab;
-            bb.preventDefault(), tb.current = !0, null === (ab = Ib.current) || void 0 === ab || ab.classList.add("DocsSidebarResizing")
+          vt = (0, Fz.useCallback)((zz => {
+            var tz;
+            zz.preventDefault(), Lz.current = !0, null === (tz = Gz.current) || void 0 === tz || tz.classList.add("DocsSidebarResizing")
           }), []);
-        (0, Ab.useEffect)((() => {
-          const bb = Ib.current,
-            ab = bb => {
-              if (!tb.current || !Ib.current) return;
-              const ab = Ib.current.getBoundingClientRect().left;
-              lb(Ea(bb.clientX - ab))
+        (0, Fz.useEffect)((() => {
+          const zz = Gz.current,
+            tz = zz => {
+              if (!Lz.current || !Gz.current) return;
+              const tz = Gz.current.getBoundingClientRect().left;
+              iz(Ot(zz.clientX - tz))
             };
-          return window.addEventListener("mousemove", ab), window.addEventListener("mouseup", Ya), () => {
-            window.removeEventListener("mousemove", ab), window.removeEventListener("mouseup", Ya), null === bb || void 0 === bb || bb.classList.remove("DocsSidebarResizing")
+          return window.addEventListener("mousemove", tz), window.addEventListener("mouseup", ot), () => {
+            window.removeEventListener("mousemove", tz), window.removeEventListener("mouseup", ot), null === zz || void 0 === zz || zz.classList.remove("DocsSidebarResizing")
           }
-        }), [Ea, Ya]);
-        const ea = (0, Ab.useCallback)((bb => {
-          if (bb) {
-            const [ab, Ub] = bb.slice(1).split("-");
-            Ub && (wb.current = {
-              docId: ab,
-              subsection: Ub
-            }), ab && Ma(ab)
+        }), [Ot, ot]);
+        const Ut = (0, Fz.useCallback)((zz => {
+          if (zz) {
+            const [tz, sz] = zz.slice(1).split("-");
+            sz && (lz.current = {
+              docId: tz,
+              subsection: sz
+            }), tz && Wt(tz)
           }
-        }), [Ma]);
-        (0, Ab.useEffect)((() => {
-          const bb = wb.current;
-          bb && Wb === bb.docId && (setTimeout((() => {
-            Ta(bb.subsection)
-          }), 0), wb.current = null)
-        })), (0, Ab.useEffect)((() => {
-          if (!db.current) return;
-          db.current.querySelectorAll("a.DocsAnchor").forEach((bb => {
-            bb.addEventListener("click", (ab => {
-              ab.preventDefault(), ea(bb.dataset.id)
+        }), [Wt]);
+        (0, Fz.useEffect)((() => {
+          const zz = lz.current;
+          zz && ez === zz.docId && (setTimeout((() => {
+            Xt(zz.subsection)
+          }), 0), lz.current = null)
+        })), (0, Fz.useEffect)((() => {
+          if (!Tz.current) return;
+          Tz.current.querySelectorAll("a.DocsAnchor").forEach((zz => {
+            zz.addEventListener("click", (tz => {
+              tz.preventDefault(), Ut(zz.dataset.id)
             }))
           }))
-        }), [Wb, ea]);
-        const va = Object.values(xb).find((bb => (null === bb || void 0 === bb ? void 0 : bb.pageStep) === sb));
-        return (0, Xb.jsx)(Db.j, {
+        }), [ez, Ut]);
+        const Kt = Object.values(Yz).find((zz => (null === zz || void 0 === zz ? void 0 : zz.pageStep) === nz));
+        return (0, bz.jsx)(Pz.g, {
           tutorial: "docsOverview",
-          step: null !== (ib = null === va || void 0 === va ? void 0 : va.pageStep) && void 0 !== ib ? ib : "docsPanel",
-          text: nb(null !== (fb = null === va || void 0 === va ? void 0 : va.pageText) && void 0 !== fb ? fb : "codeEditor:tutorialDocsPanel"),
-          enabled: Nb,
+          step: null !== (xz = null === Kt || void 0 === Kt ? void 0 : Kt.pageStep) && void 0 !== xz ? xz : "docsPanel",
+          text: fz(null !== (mz = null === Kt || void 0 === Kt ? void 0 : Kt.pageText) && void 0 !== mz ? mz : "codeEditor:tutorialDocsPanel"),
+          enabled: Cz,
           placement: "left",
-          onPrevious: va ? void 0 : pb,
-          children: (0, Xb.jsxs)("div", {
+          onPrevious: Kt ? void 0 : Iz,
+          children: (0, bz.jsxs)("div", {
             className: "DocsPanel",
-            ref: Ib,
-            children: [(0, Xb.jsxs)("div", {
+            ref: Gz,
+            children: [(0, bz.jsxs)("div", {
               className: "DocsSidebar",
               style: {
-                width: ob,
-                minWidth: ob,
-                maxWidth: ob
+                width: kz,
+                minWidth: kz,
+                maxWidth: kz
               },
-              children: [(0, Xb.jsx)(Tb.c, {
+              children: [(0, bz.jsx)(Xz.d, {
                 className: "DocsSearch",
                 placeholderText: "\ud83d\udd0e Search docs...",
-                onValueChange: bb => {
-                  hb(bb), Qb(0), ub(0)
+                onValueChange: zz => {
+                  jz(zz), yz(0), dz(0)
                 }
-              }, gb), (0, Xb.jsx)("div", {
+              }, az), (0, bz.jsx)("div", {
                 className: "DocsNavList",
-                children: Ob ? cb.map((bb => (0, Xb.jsxs)("div", {
-                  className: Yb()("DocsNavItem", "SearchResult", {
-                    Active: bb.doc.id === (null === Jb || void 0 === Jb ? void 0 : Jb.id)
+                children: Vz ? Rz.map((zz => (0, bz.jsxs)("div", {
+                  className: oz()("DocsNavItem", "SearchResult", {
+                    Active: zz.doc.id === (null === pz || void 0 === pz ? void 0 : pz.id)
                   }),
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    Ma(bb.doc.id)
+                    Wt(zz.doc.id)
                   },
-                  children: [(0, Xb.jsxs)("div", {
+                  children: [(0, bz.jsxs)("div", {
                     className: "SearchResultTitle",
-                    children: [bb.doc.title, (0, Xb.jsx)("span", {
+                    children: [zz.doc.title, (0, bz.jsx)("span", {
                       className: "SearchResultCount",
-                      children: bb.matchCount
+                      children: zz.matchCount
                     })]
-                  }), (0, Xb.jsx)("div", {
+                  }), (0, bz.jsx)("div", {
                     className: "SearchResultSnippet",
-                    children: kb(bb.snippet, Fb)
+                    children: gz(zz.snippet, cz)
                   })]
-                }, bb.doc.id))) : Mb.d.map((bb => {
-                  const ab = (0, Xb.jsxs)("div", {
-                      className: Yb()("DocsNavItem", {
-                        Active: bb.id === (null === Jb || void 0 === Jb ? void 0 : Jb.id)
+                }, zz.doc.id))) : Wz.d.map((zz => {
+                  const tz = (0, bz.jsxs)("div", {
+                      className: oz()("DocsNavItem", {
+                        Active: zz.id === (null === pz || void 0 === pz ? void 0 : pz.id)
                       }),
                       "data-pad-focusable": !0,
                       onClick: () => {
-                        Ma(bb.id)
+                        Wt(zz.id)
                       },
-                      children: [(0, Xb.jsx)("span", {
+                      children: [(0, bz.jsx)("span", {
                         className: "DocsNavItemTitle",
-                        children: bb.title
-                      }), bb.subsections && bb.id === (null === Jb || void 0 === Jb ? void 0 : Jb.id) && rb && (0, Xb.jsx)("span", {
+                        children: zz.title
+                      }), zz.subsections && zz.id === (null === pz || void 0 === pz ? void 0 : pz.id) && hz && (0, bz.jsx)("span", {
                         className: "DocsNavItemSubsectionArrow",
-                        children: (0, Xb.jsx)(yb.e, {
+                        children: (0, bz.jsx)(Hz.c, {
                           name: "angle-down"
                         })
-                      }), bb.subsections && (bb.id !== (null === Jb || void 0 === Jb ? void 0 : Jb.id) || !rb) && (0, Xb.jsx)("span", {
+                      }), zz.subsections && (zz.id !== (null === pz || void 0 === pz ? void 0 : pz.id) || !hz) && (0, bz.jsx)("span", {
                         className: "DocsNavItemSubsectionArrow",
-                        children: (0, Xb.jsx)(yb.e, {
+                        children: (0, bz.jsx)(Hz.c, {
                           name: "angle-up"
                         })
                       })]
                     }),
-                    Ub = xb[bb.id];
-                  return (0, Xb.jsxs)(Ab.Fragment, {
-                    children: [Ub && (0, Xb.jsx)(Db.j, {
+                    sz = Yz[zz.id];
+                  return (0, bz.jsxs)(Fz.Fragment, {
+                    children: [sz && (0, bz.jsx)(Pz.g, {
                       tutorial: "docsOverview",
-                      step: Ub.tabStep,
-                      text: nb(Ub.tabText),
-                      enabled: Nb,
+                      step: sz.tabStep,
+                      text: fz(sz.tabText),
+                      enabled: Cz,
                       placement: "left",
                       waitForClick: !0,
-                      children: ab
-                    }), !Ub && ab, rb && bb.subsections && bb.id === (null === Jb || void 0 === Jb ? void 0 : Jb.id) && bb.subsections.map((bb => (0, Xb.jsx)("div", {
+                      children: tz
+                    }), !sz && tz, hz && zz.subsections && zz.id === (null === pz || void 0 === pz ? void 0 : pz.id) && zz.subsections.map((zz => (0, bz.jsx)("div", {
                       className: "DocsNavItem DocsSubsection",
                       "data-pad-focusable": !0,
                       onClick: () => {
-                        Ta(bb)
+                        Xt(zz)
                       },
-                      children: bb
-                    }, bb)))]
-                  }, bb.id)
+                      children: zz
+                    }, zz)))]
+                  }, zz.id)
                 }))
-              }), (0, Xb.jsx)("div", {
+              }), (0, bz.jsx)("div", {
                 className: "DocsSidebarButtonContainer",
-                children: (0, Xb.jsx)(Zb.g, {
-                  tooltipInner: nb("codeEditor:popOutDocsTooltip"),
+                children: (0, bz.jsx)(Bz.h, {
+                  tooltipInner: fz("codeEditor:popOutDocsTooltip"),
                   placement: "top",
-                  children: (0, Xb.jsx)(Bb.g, {
+                  children: (0, bz.jsx)(vz.h, {
                     className: "DocsSidebarButton",
-                    onClick: mb,
-                    children: nb("codeEditor:popOutDocs")
+                    onClick: Jz,
+                    children: fz("codeEditor:popOutDocs")
                   })
                 })
               })]
-            }), (0, Xb.jsx)("div", {
+            }), (0, bz.jsx)("div", {
               className: "DocsSidebarResizeHandle",
-              onMouseDown: Ba
-            }), (0, Xb.jsxs)("div", {
+              onMouseDown: vt
+            }), (0, bz.jsxs)("div", {
               className: "DocsContentWrapper",
-              children: [Ob && aa > 0 && (0, Xb.jsxs)("div", {
+              children: [Vz && tt > 0 && (0, bz.jsxs)("div", {
                 className: "DocsMatchNav",
-                children: [(0, Xb.jsxs)("span", {
+                children: [(0, bz.jsxs)("span", {
                   className: "DocsMatchNavLabel",
-                  children: [Gb + 1, " / ", aa]
-                }), (0, Xb.jsx)("button", {
+                  children: [Az + 1, " / ", tt]
+                }), (0, bz.jsx)("button", {
                   className: "DocsMatchNavButton",
                   onClick: () => {
-                    Aa(-1)
+                    Ft(-1)
                   },
                   children: "\u25b2"
-                }), (0, Xb.jsx)("button", {
+                }), (0, bz.jsx)("button", {
                   className: "DocsMatchNavButton",
                   onClick: () => {
-                    Aa(1)
+                    Ft(1)
                   },
                   children: "\u25bc"
                 })]
-              }), (0, Xb.jsx)("div", {
+              }), (0, bz.jsx)("div", {
                 className: "DocsContent",
-                ref: db,
+                ref: Tz,
                 dangerouslySetInnerHTML: {
-                  __html: ba
+                  __html: zt
                 }
               })]
             })]
@@ -414,4 +414,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

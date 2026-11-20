@@ -1,217 +1,217 @@
 export const id = 191;
 export const ids = [191];
 export const modules = {
-  40656: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Tb
+  40633: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Xz
     });
-    var Ab = Ub(52),
-      Mb = Ub(2531);
+    var Fz = sz(65),
+      Wz = sz(2537);
 
-    function Tb(bb, ab, Ub) {
-      const Tb = (0, Ab.useRef)(null),
+    function Xz(zz, tz, sz) {
+      const Xz = (0, Fz.useRef)(null),
         {
-          width: Eb,
-          height: Yb
-        } = (0, Mb.e)(bb);
-      (0, Ab.useEffect)((() => {
-        const Ub = ab(bb.current);
-        return Tb.current = Ub, () => {
-          Ub.close(), Tb.current = null
+          width: Oz,
+          height: oz
+        } = (0, Wz.d)(zz);
+      (0, Fz.useEffect)((() => {
+        const sz = tz(zz.current);
+        return Xz.current = sz, () => {
+          sz.close(), Xz.current = null
         }
-      }), [bb, ab]), (0, Ab.useEffect)((() => {
-        Eb <= 0 || Yb <= 0 || Tb.current.resize(Eb, Yb)
-      }), [Eb, Yb]), (0, Ab.useEffect)((() => {
-        Tb.current.show(Ub)
-      }), [Ub])
+      }), [zz, tz]), (0, Fz.useEffect)((() => {
+        Oz <= 0 || oz <= 0 || Xz.current.resize(Oz, oz)
+      }), [Oz, oz]), (0, Fz.useEffect)((() => {
+        Xz.current.show(sz)
+      }), [sz])
     }
   },
-  40664: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Pb,
-      f: () => Lb,
-      h: () => Bb
+  40636: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => Nz,
+      h: () => uz,
+      l: () => vz
     });
-    var Ab = Ub(36471),
-      Mb = Ub(37946);
+    var Fz = sz(36547),
+      Wz = sz(38046);
 
-    function Tb(bb, ab) {
-      let [Ub, Ab, Mb] = bb;
-      return [0, .5, 1].map((bb => ({
-        timeFraction: bb,
+    function Xz(zz, tz) {
+      let [sz, Fz, Wz] = zz;
+      return [0, .5, 1].map((zz => ({
+        timeFraction: zz,
         rotation: {
-          DT: "catmull-rom-spline",
-          point: [Ub, Ab, Mb + (.5 === bb ? ab : 0)]
+          LX: "catmull-rom-spline",
+          point: [sz, Fz, Wz + (.5 === zz ? tz : 0)]
         }
       })))
     }
 
-    function Eb(bb, ab, Ub) {
+    function Oz(zz, tz, sz) {
       return {
-        jT: 3200,
+        dX: 3200,
         loop: !0,
-        kT: {
+        QX: {
           Root: {
-            timeline: [0, .5, 1].map((bb => ({
-              timeFraction: bb,
+            timeline: [0, .5, 1].map((zz => ({
+              timeFraction: zz,
               position: {
-                DT: "catmull-rom-spline",
-                point: [0, .5 === bb ? .18 : 0, 0]
+                LX: "catmull-rom-spline",
+                point: [0, .5 === zz ? .18 : 0, 0]
               }
             })))
           },
           HeadMesh: {
-            timeline: [0, .25, .75, 1].map((bb => ({
-              timeFraction: bb,
+            timeline: [0, .25, .75, 1].map((zz => ({
+              timeFraction: zz,
               rotation: {
-                DT: "catmull-rom-spline",
-                point: [0, .25 === bb ? .12 : .75 === bb ? -.12 : 0, 0]
+                LX: "catmull-rom-spline",
+                point: [0, .25 === zz ? .12 : .75 === zz ? -.12 : 0, 0]
               }
             })))
           },
           ArmLeftMesh: {
-            timeline: Tb(bb, Ub)
+            timeline: Xz(zz, sz)
           },
           ArmRightMesh: {
-            timeline: Tb(ab, -Ub)
+            timeline: Xz(tz, -sz)
           }
         }
       }
     }
-    const Yb = Eb([0, 0, 0], [0, 0, 0], .07),
-      Bb = (0, Mb.e)((0, Ab.e)(Yb), "mobIdle"),
-      eb = Eb([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      vb = Eb([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      Lb = (0, Mb.e)((0, Ab.e)(eb), "gunReady"),
-      Pb = (0, Mb.e)((0, Ab.e)(vb), "gunAimed")
+    const oz = Oz([0, 0, 0], [0, 0, 0], .07),
+      vz = (0, Wz.b)((0, Fz.f)(oz), "mobIdle"),
+      Uz = Oz([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
+      Kz = Oz([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
+      uz = (0, Wz.b)((0, Fz.f)(Uz), "gunReady"),
+      Nz = (0, Wz.b)((0, Fz.f)(Kz), "gunAimed")
   },
-  37946: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Mb,
-      g: () => Tb
+  38046: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Wz,
+      c: () => Xz
     });
-    const Ab = new WeakMap;
+    const Fz = new WeakMap;
 
-    function Mb(bb, ab) {
-      return Ab.set(bb, ab), bb
+    function Wz(zz, tz) {
+      return Fz.set(zz, tz), zz
     }
 
-    function Tb(bb) {
-      var ab;
-      return null !== (ab = Ab.get(bb)) && void 0 !== ab ? ab : null
+    function Xz(zz) {
+      var tz;
+      return null !== (tz = Fz.get(zz)) && void 0 !== tz ? tz : null
     }
   },
-  8951: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Eb,
-      h: () => Mb,
-      l: () => vb
+  8897: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Oz,
+      d: () => Wz,
+      e: () => Kz
     });
-    var Ab = Ub(1485);
+    var Fz = sz(1521);
 
-    function Mb(bb) {
-      var ab;
+    function Wz(zz) {
+      var tz;
       return {
-        ...Eb.store,
-        yaw: Eb.store.yaw + (null !== (ab = Ab.d[bb].previewYaw) && void 0 !== ab ? ab : 0)
+        ...Oz.store,
+        yaw: Oz.store.yaw + (null !== (tz = Fz.d[zz].previewYaw) && void 0 !== tz ? tz : 0)
       }
     }
-    const Tb = {
+    const Xz = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      Eb = {
-        player: Tb,
+      Oz = {
+        player: Xz,
         store: {
-          ...Tb,
+          ...Xz,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function Yb(bb, ab) {
-      bb instanceof Promise ? bb.then(ab).catch((bb => {
-        console.error("Couldn't open the preview", bb)
-      })) : ab(bb)
+    function oz(zz, tz) {
+      zz instanceof Promise ? zz.then(tz).catch((zz => {
+        console.error("Couldn't open the preview", zz)
+      })) : tz(zz)
     }
-    class Bb {
-      constructor(bb) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, Yb(bb, (bb => {
-          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height), null !== this.view && bb.show(this.view))
+    class vz {
+      constructor(zz) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, oz(zz, (zz => {
+          this.closed ? zz.close() : (this.opened = zz, null !== this.size && zz.resize(this.size.width, this.size.height), null !== this.view && zz.show(this.view))
         }))
       }
-      show(bb) {
-        var ab;
-        this.view = bb, null === (ab = this.opened) || void 0 === ab || ab.show(bb)
+      show(zz) {
+        var tz;
+        this.view = zz, null === (tz = this.opened) || void 0 === tz || tz.show(zz)
       }
-      resize(bb, ab) {
-        var Ub;
+      resize(zz, tz) {
+        var sz;
         this.size = {
-          width: bb,
-          height: ab
-        }, null === (Ub = this.opened) || void 0 === Ub || Ub.resize(bb, ab)
+          width: zz,
+          height: tz
+        }, null === (sz = this.opened) || void 0 === sz || sz.resize(zz, tz)
       }
       close() {
-        var bb;
-        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
+        var zz;
+        this.closed = !0, null === (zz = this.opened) || void 0 === zz || zz.close(), this.opened = null
       }
     }
-    class eb {
-      constructor(bb) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(bb).then((bb => bb.ready)), Yb(bb, (bb => {
-          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height))
+    class Uz {
+      constructor(zz) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(zz).then((zz => zz.ready)), oz(zz, (zz => {
+          this.closed ? zz.close() : (this.opened = zz, null !== this.size && zz.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var bb, ab;
-        return null !== (bb = null === (ab = this.opened) || void 0 === ab ? void 0 : ab.isReady()) && void 0 !== bb && bb
+        var zz, tz;
+        return null !== (zz = null === (tz = this.opened) || void 0 === tz ? void 0 : tz.isReady()) && void 0 !== zz && zz
       }
-      setCosmetic(bb, ab) {
-        var Ub;
-        null === (Ub = this.opened) || void 0 === Ub || Ub.setCosmetic(bb, ab)
+      setCosmetic(zz, tz) {
+        var sz;
+        null === (sz = this.opened) || void 0 === sz || sz.setCosmetic(zz, tz)
       }
-      playEmote(bb) {
-        var ab;
-        null === (ab = this.opened) || void 0 === ab || ab.playEmote(bb)
+      playEmote(zz) {
+        var tz;
+        null === (tz = this.opened) || void 0 === tz || tz.playEmote(zz)
       }
-      setOrbit(bb) {
-        var ab;
-        null === (ab = this.opened) || void 0 === ab || ab.setOrbit(bb)
+      setOrbit(zz) {
+        var tz;
+        null === (tz = this.opened) || void 0 === tz || tz.setOrbit(zz)
       }
       resetCamera() {
-        var bb;
-        null === (bb = this.opened) || void 0 === bb || bb.resetCamera()
+        var zz;
+        null === (zz = this.opened) || void 0 === zz || zz.resetCamera()
       }
-      async untilDrawn(bb) {
-        var ab;
-        await this.ready, await (null === (ab = this.opened) || void 0 === ab ? void 0 : ab.untilDrawn(bb))
+      async untilDrawn(zz) {
+        var tz;
+        await this.ready, await (null === (tz = this.opened) || void 0 === tz ? void 0 : tz.untilDrawn(zz))
       }
-      resize(bb, ab) {
-        var Ub;
+      resize(zz, tz) {
+        var sz;
         this.size = {
-          width: bb,
-          height: ab
-        }, null === (Ub = this.opened) || void 0 === Ub || Ub.resize(bb, ab)
+          width: zz,
+          height: tz
+        }, null === (sz = this.opened) || void 0 === sz || sz.resize(zz, tz)
       }
       close() {
-        var bb;
-        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
+        var zz;
+        this.closed = !0, null === (zz = this.opened) || void 0 === zz || zz.close(), this.opened = null
       }
     }
-    const vb = new class {
+    const Kz = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(bb) {
-        this.host = bb
+      setHost(zz) {
+        this.host = zz
       }
-      setDefaultHost(bb) {
-        this.makeDefault = bb
+      setDefaultHost(zz) {
+        this.makeDefault = zz
       }
       current() {
         if (null === this.host) {
@@ -220,426 +220,426 @@ export const modules = {
         }
         return this.host
       }
-      openMob(bb) {
-        return new Bb(this.current().openMob(bb))
+      openMob(zz) {
+        return new vz(this.current().openMob(zz))
       }
-      openPet(bb) {
-        return new Bb(this.current().openPet(bb))
+      openPet(zz) {
+        return new vz(this.current().openPet(zz))
       }
-      openMobLineup(bb) {
-        return new Bb(this.current().openMobLineup(bb))
+      openMobLineup(zz) {
+        return new vz(this.current().openMobLineup(zz))
       }
-      openCharacter(bb, ab) {
-        return new eb(this.current().openCharacter(bb, ab))
+      openCharacter(zz, tz) {
+        return new Uz(this.current().openCharacter(zz, tz))
       }
     }
   },
-  8945: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Ab.d,
-      h: () => Ab.h,
-      l: () => Ab.l
+  8891: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Fz.b,
+      c: () => Fz.d,
+      f: () => Fz.e
     });
-    var Ab = Ub(8951);
-    class Mb {
-      constructor(bb) {
-        this.load = bb, this.loaded = null, this.loading = null
+    var Fz = sz(8897);
+    class Wz {
+      constructor(zz) {
+        this.load = zz, this.loaded = null, this.loading = null
       }
-      run(bb) {
-        return null !== this.loaded ? bb(this.loaded) : (this.loading ??= this.load().then((bb => (this.loaded = bb, bb)), (bb => {
-          throw this.loading = null, bb
-        })), this.loading.then(bb))
+      run(zz) {
+        return null !== this.loaded ? zz(this.loaded) : (this.loading ??= this.load().then((zz => (this.loaded = zz, zz)), (zz => {
+          throw this.loading = null, zz
+        })), this.loading.then(zz))
       }
     }
-    class Tb {
+    class Xz {
       constructor() {
-        this.mobScene = new Mb((() => Promise.all([Ub.e(69), Ub.e(226), Ub.e(225), Ub.e(244), Ub.e(94), Ub.e(245), Ub.e(72), Ub.e(71), Ub.e(242), Ub.e(70), Ub.e(252), Ub.e(246), Ub.e(251), Ub.e(249), Ub.e(241), Ub.e(218), Ub.e(264), Ub.e(222), Ub.e(236), Ub.e(247), Ub.e(250), Ub.e(74), Ub.e(196), Ub.e(215), Ub.e(219), Ub.e(93), Ub.e(113), Ub.e(234), Ub.e(73), Ub.e(112), Ub.e(153)]).then((() => Ub(40179))))), this.characterScene = new Mb((() => Promise.all([Ub.e(69), Ub.e(226), Ub.e(225), Ub.e(244), Ub.e(94), Ub.e(245), Ub.e(72), Ub.e(71), Ub.e(242), Ub.e(70), Ub.e(252), Ub.e(246), Ub.e(251), Ub.e(249), Ub.e(241), Ub.e(218), Ub.e(264), Ub.e(222), Ub.e(236), Ub.e(247), Ub.e(250), Ub.e(74), Ub.e(196), Ub.e(215), Ub.e(219), Ub.e(93), Ub.e(113), Ub.e(234), Ub.e(73), Ub.e(112), Ub.e(152)]).then((() => Ub(40271)))))
+        this.mobScene = new Wz((() => Promise.all([sz.e(69), sz.e(226), sz.e(225), sz.e(244), sz.e(94), sz.e(245), sz.e(72), sz.e(71), sz.e(242), sz.e(70), sz.e(252), sz.e(246), sz.e(251), sz.e(249), sz.e(241), sz.e(218), sz.e(264), sz.e(222), sz.e(236), sz.e(247), sz.e(250), sz.e(74), sz.e(196), sz.e(215), sz.e(219), sz.e(93), sz.e(113), sz.e(234), sz.e(73), sz.e(112), sz.e(153)]).then((() => sz(40173))))), this.characterScene = new Wz((() => Promise.all([sz.e(69), sz.e(226), sz.e(225), sz.e(244), sz.e(94), sz.e(245), sz.e(72), sz.e(71), sz.e(242), sz.e(70), sz.e(252), sz.e(246), sz.e(251), sz.e(249), sz.e(241), sz.e(218), sz.e(264), sz.e(222), sz.e(236), sz.e(247), sz.e(250), sz.e(74), sz.e(196), sz.e(215), sz.e(219), sz.e(93), sz.e(113), sz.e(234), sz.e(73), sz.e(112), sz.e(152)]).then((() => sz(40255)))))
       }
-      openMob(bb) {
-        return this.mobScene.run((ab => ab.openMobPreview(bb)))
+      openMob(zz) {
+        return this.mobScene.run((tz => tz.openMobPreview(zz)))
       }
-      openPet(bb) {
-        return this.mobScene.run((ab => ab.openPetPreview(bb)))
+      openPet(zz) {
+        return this.mobScene.run((tz => tz.openPetPreview(zz)))
       }
-      openMobLineup(bb) {
-        return this.mobScene.run((ab => ab.openMobLineupPreview(bb)))
+      openMobLineup(zz) {
+        return this.mobScene.run((tz => tz.openMobLineupPreview(zz)))
       }
-      openCharacter(bb, ab) {
-        return this.characterScene.run((Ub => Ub.openCharacterPreview(bb, ab)))
+      openCharacter(zz, tz) {
+        return this.characterScene.run((sz => sz.openCharacterPreview(zz, tz)))
       }
     }
-    Ab.l.setDefaultHost((() => new Tb))
+    Fz.e.setDefaultHost((() => new Xz))
   },
-  40863: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      FrontlineMvpLineup: () => Lb
+  40861: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      FrontlineMvpLineup: () => uz
     });
-    var Ab = Ub(52),
-      Mb = Ub(984),
-      Tb = Ub.n(Mb),
-      Eb = Ub(8945),
-      Yb = Ub(40664),
-      Bb = Ub(40656),
-      eb = Ub(1023);
+    var Fz = sz(65),
+      Wz = sz(1020),
+      Xz = sz.n(Wz),
+      Oz = sz(8891),
+      oz = sz(40636),
+      vz = sz(40633),
+      Uz = sz(1087);
 
-    function vb(bb) {
-      return Eb.l.openMobLineup(bb)
+    function Kz(zz) {
+      return Oz.f.openMobLineup(zz)
     }
-    const Lb = (0, Ab.memo)((function(bb) {
+    const uz = (0, Fz.memo)((function(zz) {
       let {
-        players: ab,
-        className: Ub
-      } = bb;
-      const Mb = (0, Ab.useRef)(null),
-        Eb = (0, Ab.useMemo)((() => ab.map((bb => {
+        players: tz,
+        className: sz
+      } = zz;
+      const Wz = (0, Fz.useRef)(null),
+        Oz = (0, Fz.useMemo)((() => tz.map((zz => {
           let {
-            cosmetics: ab,
-            size: Ub,
-            heldGun: Ab
-          } = bb;
+            cosmetics: tz,
+            size: sz,
+            heldGun: Fz
+          } = zz;
           return {
-            cosmetics: ab,
-            size: Ub,
-            dD: Ab.name,
-            animation: Ab.aimed ? Yb.d : Yb.f
+            cosmetics: tz,
+            size: sz,
+            qY: Fz.name,
+            animation: Fz.aimed ? oz.d : oz.h
           }
-        }))), [ab]),
-        Lb = function(bb) {
-          const [ab, Ub] = (0, Ab.useState)([]);
-          return (0, Ab.useEffect)((() => {
-            Ub(bb.map((() => !1)));
-            const ab = bb.map(((bb, ab) => {
+        }))), [tz]),
+        uz = function(zz) {
+          const [tz, sz] = (0, Fz.useState)([]);
+          return (0, Fz.useEffect)((() => {
+            sz(zz.map((() => !1)));
+            const tz = zz.map(((zz, tz) => {
               let {
-                showAfterMs: Ab
-              } = bb;
+                showAfterMs: Fz
+              } = zz;
               return window.setTimeout((() => {
-                Ub((bb => bb.map(((bb, Ub) => bb || Ub === ab))))
-              }), Ab)
+                sz((zz => zz.map(((zz, sz) => zz || sz === tz))))
+              }), Fz)
             }));
             return () => {
-              for (const bb of ab) window.clearTimeout(bb)
+              for (const zz of tz) window.clearTimeout(zz)
             }
-          }), [bb]), ab
-        }(ab),
-        Pb = (0, Ab.useMemo)((() => ({
-          figures: Eb,
-          shown: Lb
-        })), [Eb, Lb]);
-      return (0, Bb.b)(Mb, vb, Pb), (0, eb.jsx)("div", {
-        className: Tb()("MobPreview", Ub),
-        ref: Mb
+          }), [zz]), tz
+        }(tz),
+        Nz = (0, Fz.useMemo)((() => ({
+          figures: Oz,
+          shown: uz
+        })), [Oz, uz]);
+      return (0, vz.b)(Wz, Kz, Nz), (0, Uz.jsx)("div", {
+        className: Xz()("MobPreview", sz),
+        ref: Wz
       })
     }))
   },
-  36471: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      c: () => Yb,
-      e: () => Eb
+  36547: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => oz,
+      f: () => Oz
     });
-    var Ab = Ub(36460),
-      Mb = Ub(325),
-      Tb = Ub(1786);
+    var Fz = sz(36531),
+      Wz = sz(321),
+      Xz = sz(1824);
 
-    function Eb(bb) {
-      if ("jT" in bb) return ib.createAnimationScript(bb);
-      return new eb(bb).createAnimationScript()
+    function Oz(zz) {
+      if ("dX" in zz) return xz.createAnimationScript(zz);
+      return new Uz(zz).createAnimationScript()
     }
 
-    function Yb(bb, ab, Ub, Mb) {
-      const Tb = bb.jT <= 0 ? 1 : ab + Ub * Math.max(0, Mb) / bb.jT;
-      return bb.RT === Ab.k.LoopOnLastFrame ? Tb % 1 : bb.RT === Ab.k.NoLoop && Tb >= 1 ? null : Math.min(1, Tb)
+    function oz(zz, tz, sz, Wz) {
+      const Xz = zz.dX <= 0 ? 1 : tz + sz * Math.max(0, Wz) / zz.dX;
+      return zz.hX === Fz.g.LoopOnLastFrame ? Xz % 1 : zz.hX === Fz.g.NoLoop && Xz >= 1 ? null : Math.min(1, Xz)
     }
-    class Bb {
-      createAnimationScript(bb) {
+    class vz {
+      createAnimationScript(zz) {
         const {
-          jT: ab,
-          loop: Ub,
-          kT: Ab
-        } = bb;
+          dX: tz,
+          loop: sz,
+          QX: Fz
+        } = zz;
         return {
-          jT: Math.round(ab),
-          RT: this.createLoopMode(null !== Ub && void 0 !== Ub && Ub),
-          kT: this.createNodeSkeletonAnimationScript(null !== Ab && void 0 !== Ab ? Ab : null)
+          dX: Math.round(tz),
+          hX: this.createLoopMode(null !== sz && void 0 !== sz && sz),
+          QX: this.createNodeSkeletonAnimationScript(null !== Fz && void 0 !== Fz ? Fz : null)
         }
       }
-      createLoopMode(bb) {
-        switch (bb) {
+      createLoopMode(zz) {
+        switch (zz) {
           case !1:
-            return Ab.k.NoLoop;
+            return Fz.g.NoLoop;
           case !0:
-            return Ab.k.LoopOnLastFrame;
+            return Fz.g.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return Ab.k.HoldOnLastFrame
+            return Fz.g.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${bb}`)
+        throw new Error(`Invalid loop mode schema: ${zz}`)
       }
-      createNodeSkeletonAnimationScript(bb) {
-        if (null === bb) return null;
-        const ab = {};
-        for (const Ub in bb) {
-          const Ab = bb[Ub];
-          ab[Ub] = this.createNodeAnimationScript(Ab)
+      createNodeSkeletonAnimationScript(zz) {
+        if (null === zz) return null;
+        const tz = {};
+        for (const sz in zz) {
+          const Fz = zz[sz];
+          tz[sz] = this.createNodeAnimationScript(Fz)
         }
-        return ab
+        return tz
       }
-      createNodeAnimationScript(bb) {
+      createNodeAnimationScript(zz) {
         const {
-          timeline: ab
-        } = bb, Ub = ab.filter((bb => Number.isFinite(bb.timeFraction)));
-        return Ub.sort(((bb, ab) => bb.timeFraction - ab.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(Ub, "rotation", Pb),
-          position: this.createTimelineFromKeyframes(Ub, "position", jb)
+          timeline: tz
+        } = zz, sz = tz.filter((zz => Number.isFinite(zz.timeFraction)));
+        return sz.sort(((zz, tz) => zz.timeFraction - tz.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(sz, "rotation", Nz),
+          position: this.createTimelineFromKeyframes(sz, "position", wz)
         }
       }
-      createTimelineFromKeyframes(bb, ab, Ub) {
-        const Ab = [];
-        for (const Bb of bb) {
-          const bb = Bb[ab];
-          if (bb) {
-            const ab = this.createAnimationFrameWithoutPrecomputes(Bb.timeFraction, bb);
-            vb(ab) && Ab.push(ab)
+      createTimelineFromKeyframes(zz, tz, sz) {
+        const Fz = [];
+        for (const vz of zz) {
+          const zz = vz[tz];
+          if (zz) {
+            const tz = this.createAnimationFrameWithoutPrecomputes(vz.timeFraction, zz);
+            Kz(tz) && Fz.push(tz)
           }
         }
-        const Mb = [];
-        for (let Bb = 0; Bb < Ab.length; Bb++) {
-          var Tb, Eb, Yb;
-          const bb = Ab[Bb],
-            ab = null !== (Tb = Ab[Bb - 1]) && void 0 !== Tb ? Tb : bb,
-            eb = null !== (Eb = Ab[Bb + 1]) && void 0 !== Eb ? Eb : bb,
-            vb = null !== (Yb = Ab[Bb + 2]) && void 0 !== Yb ? Yb : eb;
-          Mb.push({
-            ...bb,
-            ...Ub(ab.post, ab.timeFraction, bb.post, bb.timeFraction, eb.pre, eb.timeFraction, vb.pre, vb.timeFraction)
+        const Wz = [];
+        for (let vz = 0; vz < Fz.length; vz++) {
+          var Xz, Oz, oz;
+          const zz = Fz[vz],
+            tz = null !== (Xz = Fz[vz - 1]) && void 0 !== Xz ? Xz : zz,
+            Uz = null !== (Oz = Fz[vz + 1]) && void 0 !== Oz ? Oz : zz,
+            Kz = null !== (oz = Fz[vz + 2]) && void 0 !== oz ? oz : Uz;
+          Wz.push({
+            ...zz,
+            ...sz(tz.post, tz.timeFraction, zz.post, zz.timeFraction, Uz.pre, Uz.timeFraction, Kz.pre, Kz.timeFraction)
           })
         }
-        return Mb
+        return Wz
       }
-      createAnimationFrameWithoutPrecomputes(bb, ab) {
-        let Ub, Ab, Mb = null;
-        var Tb;
-        if ("object" === typeof ab && "point" in ab) Mb = null !== (Tb = ab.DT) && void 0 !== Tb ? Tb : null, Ub = ab.point, Ab = ab.point;
-        else if ("object" === typeof ab && "pre" in ab) {
-          var Eb;
-          Mb = null !== (Eb = ab.DT) && void 0 !== Eb ? Eb : null, Ub = ab.pre, Ab = ab.post
-        } else Ub = ab, Ab = ab;
+      createAnimationFrameWithoutPrecomputes(zz, tz) {
+        let sz, Fz, Wz = null;
+        var Xz;
+        if ("object" === typeof tz && "point" in tz) Wz = null !== (Xz = tz.LX) && void 0 !== Xz ? Xz : null, sz = tz.point, Fz = tz.point;
+        else if ("object" === typeof tz && "pre" in tz) {
+          var Oz;
+          Wz = null !== (Oz = tz.LX) && void 0 !== Oz ? Oz : null, sz = tz.pre, Fz = tz.post
+        } else sz = tz, Fz = tz;
         return {
-          timeFraction: bb,
-          DT: this.createLerpMode(Mb),
-          pre: Ub,
-          post: Ab
+          timeFraction: zz,
+          LX: this.createLerpMode(Wz),
+          pre: sz,
+          post: Fz
         }
       }
-      createLerpMode(bb) {
-        return null === bb ? Ab.h.Linear : Bb.LERP_MODE_SCHEMA_MAPPING[bb]
+      createLerpMode(zz) {
+        return null === zz ? Fz.f.Linear : vz.LERP_MODE_SCHEMA_MAPPING[zz]
       }
     }
-    Bb.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Ab.h.Linear,
-      "catmull-rom-spline": Ab.h.CatmullRomSpline
+    vz.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Fz.f.Linear,
+      "catmull-rom-spline": Fz.f.CatmullRomSpline
     };
-    class eb {
-      constructor(bb) {
-        this.animationSchema = bb
+    class Uz {
+      constructor(zz) {
+        this.animationSchema = zz
       }
       createAnimationScript() {
         const {
-          animation_length: bb,
-          loop: ab,
-          bones: Ub
+          animation_length: zz,
+          loop: tz,
+          bones: sz
         } = this.animationSchema;
         return {
-          jT: Math.round(1e3 * bb),
-          RT: this.createLoopMode(null !== ab && void 0 !== ab && ab),
-          kT: this.createNodeSkeletonAnimationScript(null !== Ub && void 0 !== Ub ? Ub : null)
+          dX: Math.round(1e3 * zz),
+          hX: this.createLoopMode(null !== tz && void 0 !== tz && tz),
+          QX: this.createNodeSkeletonAnimationScript(null !== sz && void 0 !== sz ? sz : null)
         }
       }
-      createLoopMode(bb) {
-        switch (bb) {
+      createLoopMode(zz) {
+        switch (zz) {
           case !1:
-            return Ab.k.NoLoop;
+            return Fz.g.NoLoop;
           case !0:
-            return Ab.k.LoopOnLastFrame;
+            return Fz.g.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return Ab.k.HoldOnLastFrame
+            return Fz.g.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${bb}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${zz}`)
       }
-      createNodeSkeletonAnimationScript(bb) {
-        if (null === bb) return null;
-        const ab = {};
-        for (const Ub in bb) {
-          const Ab = bb[Ub];
-          ab[Ub] = this.createNodeAnimationScript(Ab)
+      createNodeSkeletonAnimationScript(zz) {
+        if (null === zz) return null;
+        const tz = {};
+        for (const sz in zz) {
+          const Fz = zz[sz];
+          tz[sz] = this.createNodeAnimationScript(Fz)
         }
-        return ab
+        return tz
       }
-      createNodeAnimationScript(bb) {
+      createNodeAnimationScript(zz) {
         const {
-          rotation: ab,
-          position: Ub
-        } = bb;
+          rotation: tz,
+          position: sz
+        } = zz;
         return {
-          rotation: this.createAnimationTimeline(null !== ab && void 0 !== ab ? ab : null, kb, Pb, !0),
-          position: this.createAnimationTimeline(null !== Ub && void 0 !== Ub ? Ub : null, Zb, jb, !1)
+          rotation: this.createAnimationTimeline(null !== tz && void 0 !== tz ? tz : null, gz, Nz, !0),
+          position: this.createAnimationTimeline(null !== sz && void 0 !== sz ? sz : null, Bz, wz, !1)
         }
       }
-      createAnimationTimeline(bb, ab, Ub, Ab) {
-        if (null === bb) return [];
-        if (Array.isArray(bb)) {
-          bb = {
-            "0.0": bb
+      createAnimationTimeline(zz, tz, sz, Fz) {
+        if (null === zz) return [];
+        if (Array.isArray(zz)) {
+          zz = {
+            "0.0": zz
           }
         }
-        const Mb = Object.entries(bb).map((bb => {
-          let [Ub, Ab] = bb;
-          const Mb = Number(Ub) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(Mb, Ab, ab)
-        })).filter(vb);
-        Mb.sort(((bb, ab) => bb.timeFraction - ab.timeFraction)), Ab && function(bb) {
-          for (let ab = 1; ab < bb.length; ab++) {
-            const Ub = bb[ab - 1].post,
-              Ab = bb[ab],
-              Mb = Db(Ab.pre),
-              Tb = Db(Ab.post),
-              Eb = xb(Ub, Ab.pre);
-            xb(Ub, Mb) < Eb && (bb[ab] = {
-              ...Ab,
-              pre: Mb,
-              post: Tb
+        const Wz = Object.entries(zz).map((zz => {
+          let [sz, Fz] = zz;
+          const Wz = Number(sz) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(Wz, Fz, tz)
+        })).filter(Kz);
+        Wz.sort(((zz, tz) => zz.timeFraction - tz.timeFraction)), Fz && function(zz) {
+          for (let tz = 1; tz < zz.length; tz++) {
+            const sz = zz[tz - 1].post,
+              Fz = zz[tz],
+              Wz = Pz(Fz.pre),
+              Xz = Pz(Fz.post),
+              Oz = Yz(sz, Fz.pre);
+            Yz(sz, Wz) < Oz && (zz[tz] = {
+              ...Fz,
+              pre: Wz,
+              post: Xz
             })
           }
-        }(Mb);
-        const Tb = [];
-        for (let eb = 0; eb < Mb.length; eb++) {
-          var Eb, Yb, Bb;
-          const bb = Mb[eb],
-            ab = null !== (Eb = Mb[eb - 1]) && void 0 !== Eb ? Eb : bb,
-            Ab = null !== (Yb = Mb[eb + 1]) && void 0 !== Yb ? Yb : bb,
-            vb = null !== (Bb = Mb[eb + 2]) && void 0 !== Bb ? Bb : Ab;
-          Tb.push({
-            ...bb,
-            ...Ub(ab.post, ab.timeFraction, bb.post, bb.timeFraction, Ab.pre, Ab.timeFraction, vb.pre, vb.timeFraction)
+        }(Wz);
+        const Xz = [];
+        for (let Uz = 0; Uz < Wz.length; Uz++) {
+          var Oz, oz, vz;
+          const zz = Wz[Uz],
+            tz = null !== (Oz = Wz[Uz - 1]) && void 0 !== Oz ? Oz : zz,
+            Fz = null !== (oz = Wz[Uz + 1]) && void 0 !== oz ? oz : zz,
+            Kz = null !== (vz = Wz[Uz + 2]) && void 0 !== vz ? vz : Fz;
+          Xz.push({
+            ...zz,
+            ...sz(tz.post, tz.timeFraction, zz.post, zz.timeFraction, Fz.pre, Fz.timeFraction, Kz.pre, Kz.timeFraction)
           })
         }
-        return Tb
+        return Xz
       }
-      createAnimationFrameWithoutPrecomputes(bb, ab, Ub) {
-        let Ab, Mb, Tb = null;
-        if ("object" === typeof ab && "post" in ab) {
-          var Eb;
-          Tb = null !== (Eb = ab.lerp_mode) && void 0 !== Eb ? Eb : null, Mb = Rb(ab.post, Ub), Ab = ab.pre ? Rb(ab.pre, Ub) : Mb
+      createAnimationFrameWithoutPrecomputes(zz, tz, sz) {
+        let Fz, Wz, Xz = null;
+        if ("object" === typeof tz && "post" in tz) {
+          var Oz;
+          Xz = null !== (Oz = tz.lerp_mode) && void 0 !== Oz ? Oz : null, Wz = Dz(tz.post, sz), Fz = tz.pre ? Dz(tz.pre, sz) : Wz
         } else {
-          const bb = Rb(ab, Ub);
-          Mb = bb, Ab = bb
+          const zz = Dz(tz, sz);
+          Wz = zz, Fz = zz
         }
         return {
-          timeFraction: bb,
-          DT: this.createLerpMode(Tb),
-          pre: Ab,
-          post: Mb
+          timeFraction: zz,
+          LX: this.createLerpMode(Xz),
+          pre: Fz,
+          post: Wz
         }
       }
-      createLerpMode(bb) {
-        return null === bb ? Ab.h.Linear : eb.LERP_MODE_SCHEMA_MAPPING[bb]
+      createLerpMode(zz) {
+        return null === zz ? Fz.f.Linear : Uz.LERP_MODE_SCHEMA_MAPPING[zz]
       }
     }
 
-    function vb(bb) {
-      return Number.isFinite(bb.timeFraction) && Lb(bb.pre) && Lb(bb.post)
+    function Kz(zz) {
+      return Number.isFinite(zz.timeFraction) && uz(zz.pre) && uz(zz.post)
     }
 
-    function Lb(bb) {
-      return Number.isFinite(bb[0]) && Number.isFinite(bb[1]) && Number.isFinite(bb[2])
+    function uz(zz) {
+      return Number.isFinite(zz[0]) && Number.isFinite(zz[1]) && Number.isFinite(zz[2])
     }
 
-    function Pb(bb, ab, Ub, Ab, Mb, Tb, Eb, Yb) {
-      const Bb = Tb - ab,
-        eb = Tb - Ab,
-        vb = Yb - Ab,
-        Lb = [null, null, null];
-      for (let Pb = 0; Pb < Lb.length; Pb++) Lb[Pb] = Xb(bb[Pb], Ub[Pb], Mb[Pb], Eb[Pb], Bb, vb);
+    function Nz(zz, tz, sz, Fz, Wz, Xz, Oz, oz) {
+      const vz = Xz - tz,
+        Uz = Xz - Fz,
+        Kz = oz - Fz,
+        uz = [null, null, null];
+      for (let Nz = 0; Nz < uz.length; Nz++) uz[Nz] = bz(zz[Nz], sz[Nz], Wz[Nz], Oz[Nz], vz, Kz);
       return {
-        zT: eb,
-        xT: Lb
+        lX: Uz,
+        aX: uz
       }
     }
 
-    function Xb(bb, ab, Ub, Ab, Tb, Eb) {
+    function bz(zz, tz, sz, Fz, Xz, Oz) {
       return {
-        fT: Mb.d.computeShortestRotation(bb, Ub) / Tb,
-        mT: Mb.d.computeShortestRotation(ab, Ab) / Eb,
-        delta: Mb.d.computeShortestRotation(ab, Ub)
+        SX: Wz.c.computeShortestRotation(zz, sz) / Xz,
+        VX: Wz.c.computeShortestRotation(tz, Fz) / Oz,
+        delta: Wz.c.computeShortestRotation(tz, sz)
       }
     }
 
-    function jb(bb, ab, Ub, Ab, Mb, Tb, Eb, Yb) {
-      const Bb = Tb - ab,
-        eb = Tb - Ab,
-        vb = Yb - Ab,
-        Lb = [null, null, null];
-      for (let Pb = 0; Pb < Lb.length; Pb++) Lb[Pb] = {
-        fT: (Mb[Pb] - bb[Pb]) / Bb,
-        mT: (Eb[Pb] - Ub[Pb]) / vb,
-        delta: Mb[Pb] - Ub[Pb]
+    function wz(zz, tz, sz, Fz, Wz, Xz, Oz, oz) {
+      const vz = Xz - tz,
+        Uz = Xz - Fz,
+        Kz = oz - Fz,
+        uz = [null, null, null];
+      for (let Nz = 0; Nz < uz.length; Nz++) uz[Nz] = {
+        SX: (Wz[Nz] - zz[Nz]) / vz,
+        VX: (Oz[Nz] - sz[Nz]) / Kz,
+        delta: Wz[Nz] - sz[Nz]
       };
       return {
-        zT: eb,
-        xT: Lb
+        lX: Uz,
+        aX: uz
       }
     }
 
-    function Rb(bb, ab) {
-      return null === ab ? bb : ab(bb)
+    function Dz(zz, tz) {
+      return null === tz ? zz : tz(zz)
     }
 
-    function kb(bb) {
-      const [ab, Ub, Ab] = bb, Eb = -(0, Tb.i)(ab), Yb = -(0, Tb.i)(Ub), Bb = (0, Tb.i)(Ab), eb = Mb.d.quaternionFromEulerZYX(Eb, Yb, Bb);
-      return Mb.d.eulerYXZFromQuaternion(eb)
+    function gz(zz) {
+      const [tz, sz, Fz] = zz, Oz = -(0, Xz.h)(tz), oz = -(0, Xz.h)(sz), vz = (0, Xz.h)(Fz), Uz = Wz.c.quaternionFromEulerZYX(Oz, oz, vz);
+      return Wz.c.eulerYXZFromQuaternion(Uz)
     }
-    eb.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Ab.h.Linear,
-      catmullrom: Ab.h.CatmullRomSpline
+    Uz.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Fz.f.Linear,
+      catmullrom: Fz.f.CatmullRomSpline
     };
-    const yb = 1 / 16;
+    const Hz = 1 / 16;
 
-    function Zb(bb) {
-      return [-bb[0] * yb, bb[1] * yb, bb[2] * yb]
+    function Bz(zz) {
+      return [-zz[0] * Hz, zz[1] * Hz, zz[2] * Hz]
     }
 
-    function Db(bb) {
-      const [ab, Ub, Ab] = bb;
-      return [ab >= 0 ? Math.PI - ab : -Math.PI - ab, zb(Ub + Math.PI), zb(Ab + Math.PI)]
+    function Pz(zz) {
+      const [tz, sz, Fz] = zz;
+      return [tz >= 0 ? Math.PI - tz : -Math.PI - tz, rz(sz + Math.PI), rz(Fz + Math.PI)]
     }
 
-    function zb(bb) {
-      return Mb.d.mod(bb + Math.PI, 2 * Math.PI) - Math.PI
+    function rz(zz) {
+      return Wz.c.mod(zz + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function xb(bb, ab) {
-      return Math.abs(Mb.d.computeShortestRotation(bb[0], ab[0])) + Math.abs(Mb.d.computeShortestRotation(bb[1], ab[1])) + Math.abs(Mb.d.computeShortestRotation(bb[2], ab[2]))
+    function Yz(zz, tz) {
+      return Math.abs(Wz.c.computeShortestRotation(zz[0], tz[0])) + Math.abs(Wz.c.computeShortestRotation(zz[1], tz[1])) + Math.abs(Wz.c.computeShortestRotation(zz[2], tz[2]))
     }
-    const ib = new Bb
+    const xz = new vz
   },
-  36460: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Eb,
-      d: () => Tb,
-      h: () => Ab,
-      k: () => Mb
+  36531: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Oz,
+      c: () => Xz,
+      f: () => Fz,
+      g: () => Wz
     });
-    let Ab = function(bb) {
-        return bb[bb.Linear = 0] = "Linear", bb[bb.CatmullRomSpline = 1] = "CatmullRomSpline", bb
+    let Fz = function(zz) {
+        return zz[zz.Linear = 0] = "Linear", zz[zz.CatmullRomSpline = 1] = "CatmullRomSpline", zz
       }({}),
-      Mb = function(bb) {
-        return bb[bb.NoLoop = 0] = "NoLoop", bb[bb.LoopOnLastFrame = 1] = "LoopOnLastFrame", bb[bb.HoldOnLastFrame = 2] = "HoldOnLastFrame", bb
+      Wz = function(zz) {
+        return zz[zz.NoLoop = 0] = "NoLoop", zz[zz.LoopOnLastFrame = 1] = "LoopOnLastFrame", zz[zz.HoldOnLastFrame = 2] = "HoldOnLastFrame", zz
       }({}),
-      Tb = function(bb) {
-        return bb[bb.Movement = 0] = "Movement", bb[bb.Action = 1] = "Action", bb[bb.Emote = 2] = "Emote", bb[bb.Custom = 3] = "Custom", bb
+      Xz = function(zz) {
+        return zz[zz.Movement = 0] = "Movement", zz[zz.Action = 1] = "Action", zz[zz.Emote = 2] = "Emote", zz[zz.Custom = 3] = "Custom", zz
       }({}),
-      Eb = function(bb) {
-        return bb[bb.Start = 0] = "Start", bb[bb.Stop = 1] = "Stop", bb
+      Oz = function(zz) {
+        return zz[zz.Start = 0] = "Start", zz[zz.Stop = 1] = "Stop", zz
       }({})
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

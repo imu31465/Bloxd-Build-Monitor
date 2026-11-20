@@ -1,26 +1,26 @@
 export const id = 98;
 export const ids = [98];
 export const modules = {
-  4577: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      default: () => zb
+  4519: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      default: () => rz
     });
-    var Ab = Ub(1446),
-      Mb = Ub(52),
-      Tb = Ub(1134),
-      Eb = Ub(1060),
-      Yb = Ub(1047),
-      Bb = Ub(1967),
-      eb = Ub(1433),
-      vb = Ub(1254),
-      Lb = Ub(1039),
-      Pb = Ub(19),
-      Xb = Ub(1352),
-      jb = Ub(990),
-      Rb = Ub(2372),
-      kb = Ub(1458),
-      yb = Ub(1023);
-    const Zb = [{
+    var Fz = sz(1493),
+      Wz = sz(65),
+      Xz = sz(1173),
+      Oz = sz(1116),
+      oz = sz(1106),
+      vz = sz(2014),
+      Uz = sz(1483),
+      Kz = sz(1306),
+      uz = sz(1100),
+      Nz = sz(30),
+      bz = sz(1419),
+      wz = sz(1036),
+      Dz = sz(2372),
+      gz = sz(1506),
+      Hz = sz(1087);
+    const Bz = [{
         id: "myGames",
         icon: "joystick",
         title: "studio:myGames"
@@ -33,79 +33,79 @@ export const modules = {
         icon: "file-lines",
         title: "general:docs"
       }],
-      Db = {
+      Pz = {
         myGames: "/studio",
         leaderboard: "/studio/leaderboard",
         docs: "/studio/docs"
       };
 
-    function zb() {
+    function rz() {
       const {
-        t: bb
-      } = (0, Tb.A)(), ab = (0, eb.useNavigatePreserveSearch)(), Ub = (0, Ab.v)(), {
-        isUserContextUpdating: zb
-      } = (0, Eb.c)(), xb = (0, Bb.c)(), ib = (0, Yb.k)(), fb = (mb = Ub.pathname).startsWith(kb.k) ? null : mb.startsWith(Db.docs) ? "docs" : mb.startsWith(Db.leaderboard) ? "leaderboard" : "myGames";
-      var mb;
-      const pb = function(bb) {
-        if (!bb.startsWith(kb.k)) return {
+        t: zz
+      } = (0, Xz.B)(), tz = (0, Uz.useNavigatePreserveSearch)(), sz = (0, Fz.s)(), {
+        isUserContextUpdating: rz
+      } = (0, Oz.b)(), Yz = (0, vz.c)(), xz = (0, oz.i)(), mz = (Jz = sz.pathname).startsWith(gz.p) ? null : Jz.startsWith(Pz.docs) ? "docs" : Jz.startsWith(Pz.leaderboard) ? "leaderboard" : "myGames";
+      var Jz;
+      const Iz = function(zz) {
+        if (!zz.startsWith(gz.p)) return {
           title: "studio:leaveStudio",
           icon: "left-from-bracket",
           to: "/"
         };
-        const ab = (0, eb.getPreviousLocation)();
+        const tz = (0, Uz.getPreviousLocation)();
         return {
           title: "general:back",
           icon: "arrow-left",
-          to: null !== ab && ab.startsWith(Db.myGames) ? -1 : Db.myGames
+          to: null !== tz && tz.startsWith(Pz.myGames) ? -1 : Pz.myGames
         }
-      }(Ub.pathname);
-      return (0, Mb.useEffect)((() => {
-        Pb.c.set({
+      }(sz.pathname);
+      return (0, Wz.useEffect)((() => {
+        Nz.b.set({
           gameState: "studio",
           openEverythingMenuName: null
         })
-      }), []), (0, yb.jsxs)("div", {
+      }), []), (0, Hz.jsxs)("div", {
         className: "StudioLayout AnimFadeIn",
-        children: [xb && (0, yb.jsx)("aside", {
+        children: [Yz && (0, Hz.jsx)("aside", {
           className: "StudioLayoutLeft",
-          children: (0, yb.jsx)(Rb.e, {})
-        }), (0, yb.jsxs)("div", {
+          children: (0, Hz.jsx)(Dz.e, {})
+        }), (0, Hz.jsxs)("div", {
           className: "StudioLayoutRight",
-          children: [(0, yb.jsxs)("div", {
+          children: [(0, Hz.jsxs)("div", {
             className: "StudioTop",
-            children: [(0, yb.jsx)(Lb.e, {
+            children: [(0, Hz.jsx)(uz.d, {
               show: !0,
-              socialBarIsDocked: xb
-            }), (0, yb.jsxs)("nav", {
+              socialBarIsDocked: Yz
+            }), (0, Hz.jsxs)("nav", {
               className: "StudioNav",
-              children: [(0, yb.jsx)(Xb.e, {
-                icon: pb.icon,
+              children: [(0, Hz.jsx)(bz.e, {
+                icon: Iz.icon,
                 onClick: () => {
-                  ab(pb.to)
+                  tz(Iz.to)
                 },
-                children: bb(pb.title)
-              }), (0, yb.jsx)("div", {
+                children: zz(Iz.title)
+              }), (0, Hz.jsx)("div", {
                 className: "StudioNavTabs",
-                children: Zb.map((Ub => (0, yb.jsxs)(Xb.M, {
-                  active: fb === Ub.id,
-                  href: Db[Ub.id],
+                children: Bz.map((sz => (0, Hz.jsxs)(bz.Q, {
+                  active: mz === sz.id,
+                  href: Pz[sz.id],
                   onClick: () => {
-                    ab(Db[Ub.id])
+                    tz(Pz[sz.id])
                   },
-                  children: [(0, yb.jsx)(jb.e, {
-                    name: Ub.icon
-                  }), !ib && bb(Ub.title)]
-                }, Ub.id)))
+                  children: [(0, Hz.jsx)(wz.c, {
+                    name: sz.icon
+                  }), !xz && zz(sz.title)]
+                }, sz.id)))
               })]
             })]
-          }), (0, yb.jsxs)("main", {
+          }), (0, Hz.jsxs)("main", {
             className: "StudioBottom",
-            children: [zb && (0, yb.jsx)("div", {
+            children: [rz && (0, Hz.jsx)("div", {
               className: "StudioCentredMessage",
-              children: (0, yb.jsx)(vb.b, {})
-            }), !zb && (0, yb.jsx)("div", {
+              children: (0, Hz.jsx)(Kz.d, {})
+            }), !rz && (0, Hz.jsx)("div", {
               className: "StudioContent",
-              children: (0, yb.jsx)(Ab.i, {})
+              children: (0, Hz.jsx)(Fz.d, {})
             })]
           })]
         })]
@@ -114,4 +114,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

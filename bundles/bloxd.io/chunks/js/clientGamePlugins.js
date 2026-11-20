@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  4531: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Gb,
-      g: () => hb
+  4472: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => Az,
+      f: () => jz
     });
-    var Ab = Ub(4536),
-      Mb = Ub(307);
-    const Tb = 120,
-      Eb = 260,
-      Yb = 1.15,
-      Bb = 1.2,
-      eb = 2,
-      vb = 1.08,
-      Lb = .8,
-      Pb = .95,
-      Xb = 8,
-      jb = "[\"')\\]\u300d\u300f\uff09]*",
-      Rb = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${jb}$`),
-      kb = new RegExp(`[?\uff1f]${jb}$`),
-      yb = new RegExp(`[!\uff01]${jb}$`),
-      Zb = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Db = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      zb = new RegExp(`[${Db}]`),
-      xb = new RegExp(`[${Db}]|[^${Db}]+`, "g"),
-      ib = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Fz = sz(4476),
+      Wz = sz(308);
+    const Xz = 120,
+      Oz = 260,
+      oz = 1.15,
+      vz = 1.2,
+      Uz = 2,
+      Kz = 1.08,
+      uz = .8,
+      Nz = .95,
+      bz = 8,
+      wz = "[\"')\\]\u300d\u300f\uff09]*",
+      Dz = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${wz}$`),
+      gz = new RegExp(`[?\uff1f]${wz}$`),
+      Hz = new RegExp(`[!\uff01]${wz}$`),
+      Bz = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      Pz = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      rz = new RegExp(`[${Pz}]`),
+      Yz = new RegExp(`[${Pz}]|[^${Pz}]+`, "g"),
+      xz = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function fb(bb) {
-      let ab = 2166136261;
-      for (let Ub = 0; Ub < bb.length; Ub++) ab ^= bb.charCodeAt(Ub), ab = Math.imul(ab, 16777619);
-      return (ab >>> 0) / 4294967295 * 2 - 1
+    function mz(zz) {
+      let tz = 2166136261;
+      for (let sz = 0; sz < zz.length; sz++) tz ^= zz.charCodeAt(sz), tz = Math.imul(tz, 16777619);
+      return (tz >>> 0) / 4294967295 * 2 - 1
     }
 
-    function mb(bb) {
-      var ab;
-      if (zb.test(bb)) return 1;
-      const Ub = bb.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Ab = Ub.replace(/[^0-9]/g, "");
-      if (Ab.length > 0 && !/\p{L}/u.test(Ub)) return Math.min(Ab.length, 4);
-      const Mb = null !== (ab = Ub.match(ib)) && void 0 !== ab ? ab : [];
-      if (0 === Mb.length) {
-        var Tb, Eb;
-        const bb = null !== (Tb = null === (Eb = Ub.match(/\p{L}/gu)) || void 0 === Eb ? void 0 : Eb.length) && void 0 !== Tb ? Tb : 0;
-        return 0 === bb ? 0 : Math.min(Math.max(1, Math.round(bb / 2.5)), Xb)
+    function Jz(zz) {
+      var tz;
+      if (rz.test(zz)) return 1;
+      const sz = zz.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Fz = sz.replace(/[^0-9]/g, "");
+      if (Fz.length > 0 && !/\p{L}/u.test(sz)) return Math.min(Fz.length, 4);
+      const Wz = null !== (tz = sz.match(xz)) && void 0 !== tz ? tz : [];
+      if (0 === Wz.length) {
+        var Xz, Oz;
+        const zz = null !== (Xz = null === (Oz = sz.match(/\p{L}/gu)) || void 0 === Oz ? void 0 : Oz.length) && void 0 !== Xz ? Xz : 0;
+        return 0 === zz ? 0 : Math.min(Math.max(1, Math.round(zz / 2.5)), bz)
       }
-      const Yb = Ub.replace(/[^\p{L}]/gu, ""),
-        Bb = Mb.length > 1 && "e" === Mb.at(-1) && Yb.endsWith("e") && !Yb.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(bb.replace(/[^\p{L}]/gu, ""));
-      return Math.min(Mb.length - (Bb ? 1 : 0), Xb)
+      const oz = sz.replace(/[^\p{L}]/gu, ""),
+        vz = Wz.length > 1 && "e" === Wz.at(-1) && oz.endsWith("e") && !oz.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(zz.replace(/[^\p{L}]/gu, ""));
+      return Math.min(Wz.length - (vz ? 1 : 0), bz)
     }
 
-    function pb(bb) {
-      return bb.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function Iz(zz) {
+      return zz.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Nb(bb) {
-      const ab = bb.replace(/[^\p{L}]/gu, "");
-      return ab.length >= 2 && ab === ab.toUpperCase() && ab !== ab.toLowerCase()
+    function Cz(zz) {
+      const tz = zz.replace(/[^\p{L}]/gu, "");
+      return tz.length >= 2 && tz === tz.toUpperCase() && tz !== tz.toLowerCase()
     }
 
-    function Wb(bb, ab) {
-      var Ub;
-      const Xb = ab && (0, Ab.k)(ab),
-        jb = null !== (Ub = null === Xb || void 0 === Xb ? void 0 : Xb.syllableMs) && void 0 !== Ub ? Ub : Ab.b,
-        Db = function(bb) {
-          const ab = [];
-          for (const Ab of (0, Mb.cc)(bb))
-            if ("string" === typeof Ab)
-              for (const bb of Ab.split(/(\s+)/)) {
-                if ("" === bb) continue;
-                if (/^\s+$/.test(bb)) {
-                  ab.push({
+    function ez(zz, tz) {
+      var sz;
+      const bz = tz && (0, Fz.l)(tz),
+        wz = null !== (sz = null === bz || void 0 === bz ? void 0 : bz.syllableMs) && void 0 !== sz ? sz : Fz.e,
+        Pz = function(zz) {
+          const tz = [];
+          for (const Fz of (0, Wz.bc)(zz))
+            if ("string" === typeof Fz)
+              for (const zz of Fz.split(/(\s+)/)) {
+                if ("" === zz) continue;
+                if (/^\s+$/.test(zz)) {
+                  tz.push({
                     kind: "space",
-                    text: bb
+                    text: zz
                   });
                   continue
                 }
-                if (!zb.test(bb)) {
-                  ab.push({
+                if (!rz.test(zz)) {
+                  tz.push({
                     kind: "word",
-                    text: bb,
+                    text: zz,
                     delayMs: 0
                   });
                   continue
                 }
-                let Ab = !0;
-                for (const Mb of null !== (Ub = bb.match(xb)) && void 0 !== Ub ? Ub : []) {
-                  var Ub;
-                  const bb = ab.at(-1);
-                  Ab || "word" !== (null === bb || void 0 === bb ? void 0 : bb.kind) || zb.test(Mb) || /[\p{L}\p{N}]/u.test(Mb) ? (Ab || ab.push({
+                let Fz = !0;
+                for (const Wz of null !== (sz = zz.match(Yz)) && void 0 !== sz ? sz : []) {
+                  var sz;
+                  const zz = tz.at(-1);
+                  Fz || "word" !== (null === zz || void 0 === zz ? void 0 : zz.kind) || rz.test(Wz) || /[\p{L}\p{N}]/u.test(Wz) ? (Fz || tz.push({
                     kind: "space",
                     text: "\u200b"
-                  }), ab.push({
+                  }), tz.push({
                     kind: "word",
-                    text: Mb,
+                    text: Wz,
                     delayMs: 0
-                  }), Ab = !1) : bb.text += Mb
+                  }), Fz = !1) : zz.text += Wz
                 }
-              } else ab.push({
+              } else tz.push({
                 kind: "icon",
-                text: Ab.icon,
+                text: Fz.icon,
                 delayMs: 0
               });
-          return ab
-        }(bb),
-        ib = [];
-      let Wb = [];
-      for (const Ab of Db) "space" !== Ab.kind && (Wb.push(Ab), Rb.test(Ab.text) && (ib.push(Wb), Wb = []));
-      ib.push(Wb);
-      const Hb = [];
-      let Ib = 0;
-      for (const Ab of ib) {
-        var db, Fb;
-        const bb = null !== (db = null === (Fb = Ab.at(-1)) || void 0 === Fb ? void 0 : Fb.text) && void 0 !== db ? db : "",
-          ab = kb.test(bb),
-          Ub = yb.test(bb),
-          Mb = Ab.map((bb => "word" === bb.kind ? mb(bb.text) : 1)),
-          Db = Mb.findLastIndex((bb => bb > 0));
-        for (const [kb, yb] of Ab.entries()) {
-          const bb = "word" === yb.kind,
-            Ab = Mb[kb];
-          yb.delayMs = Ib;
-          for (let Mb = 0; Xb && Mb < Ab; Mb++) {
+          return tz
+        }(zz),
+        xz = [];
+      let ez = [];
+      for (const Fz of Pz) "space" !== Fz.kind && (ez.push(Fz), Dz.test(Fz.text) && (xz.push(ez), ez = []));
+      xz.push(ez);
+      const Zz = [];
+      let Gz = 0;
+      for (const Fz of xz) {
+        var Tz, cz;
+        const zz = null !== (Tz = null === (cz = Fz.at(-1)) || void 0 === cz ? void 0 : cz.text) && void 0 !== Tz ? Tz : "",
+          tz = gz.test(zz),
+          sz = Hz.test(zz),
+          Wz = Fz.map((zz => "word" === zz.kind ? Jz(zz.text) : 1)),
+          Pz = Wz.findLastIndex((zz => zz > 0));
+        for (const [gz, Hz] of Fz.entries()) {
+          const zz = "word" === Hz.kind,
+            Fz = Wz[gz];
+          Hz.delayMs = Gz;
+          for (let Wz = 0; bz && Wz < Fz; Wz++) {
             const {
-              intonation: Tb
-            } = Xb;
-            let Eb = Db > 0 ? -Tb.declineSemitones * (kb / Db) : 0;
-            Eb += fb(`${pb(yb.text)}|${Mb}`) * Tb.variationSemitones;
-            const Rb = Math.min(1, Tb.variationSemitones);
-            let Zb = Xb.glideSemitones,
-              zb = 1;
-            Ub && (Eb += Tb.exclaimLiftSemitones, zb *= Yb), ab && kb === Db && (Eb += Tb.questionRiseSemitones * (Ab > 1 ? .5 + .5 * Mb / (Ab - 1) : 1), Mb === Ab - 1 && (Zb = Math.abs(Zb) + Tb.questionRiseSemitones / 2)), bb && Nb(yb.text) && (Eb += eb * Rb, zb *= Bb), Ab > 1 && 0 === Mb && (Eb += Lb * Rb, zb *= vb), Hb.push({
-              atMs: Ib + Mb * jb,
-              semitones: Eb,
-              glideSemitones: Zb,
-              durationMs: Mb < Ab - 1 ? Math.min(Xb.durationMs, jb * Pb) : Xb.durationMs,
-              level: zb
+              intonation: Xz
+            } = bz;
+            let Oz = Pz > 0 ? -Xz.declineSemitones * (gz / Pz) : 0;
+            Oz += mz(`${Iz(Hz.text)}|${Wz}`) * Xz.variationSemitones;
+            const Dz = Math.min(1, Xz.variationSemitones);
+            let Bz = bz.glideSemitones,
+              rz = 1;
+            sz && (Oz += Xz.exclaimLiftSemitones, rz *= oz), tz && gz === Pz && (Oz += Xz.questionRiseSemitones * (Fz > 1 ? .5 + .5 * Wz / (Fz - 1) : 1), Wz === Fz - 1 && (Bz = Math.abs(Bz) + Xz.questionRiseSemitones / 2)), zz && Cz(Hz.text) && (Oz += Uz * Dz, rz *= vz), Fz > 1 && 0 === Wz && (Oz += uz * Dz, rz *= Kz), Zz.push({
+              atMs: Gz + Wz * wz,
+              semitones: Oz,
+              glideSemitones: Bz,
+              durationMs: Wz < Fz - 1 ? Math.min(bz.durationMs, wz * Nz) : bz.durationMs,
+              level: rz
             })
           }
-          Ib += Ab * jb + (Rb.test(yb.text) ? Eb : Zb.test(yb.text) ? Tb : 0)
+          Gz += Fz * wz + (Dz.test(Hz.text) ? Oz : Bz.test(Hz.text) ? Xz : 0)
         }
       }
       return {
-        pieces: Db.map((bb => "space" === bb.kind ? bb : "icon" === bb.kind ? {
+        pieces: Pz.map((zz => "space" === zz.kind ? zz : "icon" === zz.kind ? {
           kind: "icon",
-          icon: bb.text,
-          delayMs: bb.delayMs
+          icon: zz.text,
+          delayMs: zz.delayMs
         } : {
           kind: "word",
-          text: bb.text,
-          delayMs: bb.delayMs
+          text: zz.text,
+          delayMs: zz.delayMs
         })),
-        blips: Hb
+        blips: Zz
       }
     }
-    var Hb = Ub(1134),
-      Ib = Ub(1198),
-      db = Ub(1829);
+    var Zz = sz(1173),
+      Gz = sz(1237),
+      Tz = sz(1862);
 
-    function Fb(bb) {
-      if ("string" === typeof bb) return bb;
-      const ab = Ib.f.get().getCurrentLanguageCode();
-      return (0, Hb.p)(ab, bb.translationKey, (0, Hb.m)(bb.params, db.c.shown))
+    function cz(zz) {
+      if ("string" === typeof zz) return zz;
+      const tz = Gz.g.get().getCurrentLanguageCode();
+      return (0, Zz.s)(tz, zz.translationKey, (0, Zz.r)(zz.params, Tz.d.shown))
     }
 
-    function hb(bb) {
-      const ab = void 0 === bb.voice ? null : (0, Ab.n)(bb.voice),
-        Ub = ab && (0, Ab.k)(ab);
+    function jz(zz) {
+      const tz = void 0 === zz.voice ? null : (0, Fz.n)(zz.voice),
+        sz = tz && (0, Fz.l)(tz);
       return {
-        plan: Wb(Fb(bb.line), Ub),
-        synth: Ub
+        plan: ez(cz(zz.line), sz),
+        synth: sz
       }
     }
 
-    function Gb(bb) {
-      const ab = [];
-      let Ub = [];
-      for (const [Mb, Tb] of bb.entries()) {
-        var Ab;
-        "space" === Tb.kind && (" " !== Tb.text || "icon" !== (null === (Ab = bb[Mb + 1]) || void 0 === Ab ? void 0 : Ab.kind)) ? (Ub.length > 0 && ab.push(Ub), ab.push([Tb]), Ub = []) : Ub.push(Tb)
+    function Az(zz) {
+      const tz = [];
+      let sz = [];
+      for (const [Wz, Xz] of zz.entries()) {
+        var Fz;
+        "space" === Xz.kind && (" " !== Xz.text || "icon" !== (null === (Fz = zz[Wz + 1]) || void 0 === Fz ? void 0 : Fz.kind)) ? (sz.length > 0 && tz.push(sz), tz.push([Xz]), sz = []) : sz.push(Xz)
       }
-      return Ub.length > 0 && ab.push(Ub), ab
+      return sz.length > 0 && tz.push(sz), tz
     }
   },
-  4541: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      c: () => vb,
-      g: () => Lb
+  4479: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Kz,
+      e: () => uz
     });
-    var Ab = Ub(4546),
-      Mb = Ub(19);
-    const Tb = .25,
-      Eb = .85,
-      Yb = .02,
-      Bb = .01;
+    var Fz = sz(4488),
+      Wz = sz(30);
+    const Xz = .25,
+      Oz = .85,
+      oz = .02,
+      vz = .01;
 
-    function eb(bb, ab, Ub, Ab, Mb, Tb, Yb) {
+    function Uz(zz, tz, sz, Fz, Wz, Xz, oz) {
       const {
-        waveform: Bb,
-        pitchHz: eb,
-        attackMs: vb,
-        releaseMs: Lb,
-        lowpassHz: Pb
-      } = Ub, Xb = Mb + Ab.durationMs / 1e3, jb = eb * 2 ** (Ab.semitones / 12), Rb = bb.createOscillator();
-      Rb.type = Bb, Rb.frequency.setValueAtTime(jb, Mb), Rb.frequency.exponentialRampToValueAtTime(jb * 2 ** (Ab.glideSemitones / 12), Xb);
-      const kb = Mb + Math.min(vb, Ab.durationMs) / 1e3,
-        yb = bb.createGain();
-      yb.gain.setValueAtTime(0, Mb), yb.gain.linearRampToValueAtTime(Tb, kb), yb.gain.linearRampToValueAtTime(Tb * Eb, Math.max(kb, Xb - Lb / 1e3)), yb.gain.linearRampToValueAtTime(0, Xb);
-      const Zb = [Rb];
-      if (null !== Pb) {
-        const ab = bb.createBiquadFilter();
-        ab.type = "lowpass", ab.frequency.value = Pb, Zb.push(ab)
+        waveform: vz,
+        pitchHz: Uz,
+        attackMs: Kz,
+        releaseMs: uz,
+        lowpassHz: Nz
+      } = sz, bz = Wz + Fz.durationMs / 1e3, wz = Uz * 2 ** (Fz.semitones / 12), Dz = zz.createOscillator();
+      Dz.type = vz, Dz.frequency.setValueAtTime(wz, Wz), Dz.frequency.exponentialRampToValueAtTime(wz * 2 ** (Fz.glideSemitones / 12), bz);
+      const gz = Wz + Math.min(Kz, Fz.durationMs) / 1e3,
+        Hz = zz.createGain();
+      Hz.gain.setValueAtTime(0, Wz), Hz.gain.linearRampToValueAtTime(Xz, gz), Hz.gain.linearRampToValueAtTime(Xz * Oz, Math.max(gz, bz - uz / 1e3)), Hz.gain.linearRampToValueAtTime(0, bz);
+      const Bz = [Dz];
+      if (null !== Nz) {
+        const tz = zz.createBiquadFilter();
+        tz.type = "lowpass", tz.frequency.value = Nz, Bz.push(tz)
       }
-      Zb.push(yb, ab);
-      for (let Eb = 1; Eb < Zb.length; Eb++) Zb[Eb - 1].connect(Zb[Eb]);
-      return Rb.onended = () => {
-        for (const bb of Zb.slice(0, -1)) bb.disconnect();
-        Yb()
-      }, Rb.start(Mb), Rb.stop(Xb), Rb
+      Bz.push(Hz, tz);
+      for (let Oz = 1; Oz < Bz.length; Oz++) Bz[Oz - 1].connect(Bz[Oz]);
+      return Dz.onended = () => {
+        for (const zz of Bz.slice(0, -1)) zz.disconnect();
+        oz()
+      }, Dz.start(Wz), Dz.stop(bz), Dz
     }
 
-    function vb(bb, ab, Ub, Ab, Mb, Eb) {
-      if (0 === Ab.length) return Eb(), () => {};
-      const vb = Tb * Ub.volume * Mb,
-        Lb = bb.createGain();
-      Lb.connect(ab);
-      const Pb = bb.currentTime + Yb,
-        Xb = new Set;
-      for (const Tb of Ab) {
-        const ab = eb(bb, Lb, Ub, Tb, Pb + Tb.atMs / 1e3, vb * Tb.level, (() => {
-          Xb.delete(ab), 0 === Xb.size && (Lb.disconnect(), Eb())
+    function Kz(zz, tz, sz, Fz, Wz, Oz) {
+      if (0 === Fz.length) return Oz(), () => {};
+      const Kz = Xz * sz.volume * Wz,
+        uz = zz.createGain();
+      uz.connect(tz);
+      const Nz = zz.currentTime + oz,
+        bz = new Set;
+      for (const Xz of Fz) {
+        const tz = Uz(zz, uz, sz, Xz, Nz + Xz.atMs / 1e3, Kz * Xz.level, (() => {
+          bz.delete(tz), 0 === bz.size && (uz.disconnect(), Oz())
         }));
-        Xb.add(ab)
+        bz.add(tz)
       }
       return () => {
-        const ab = bb.currentTime;
-        Lb.gain.setTargetAtTime(0, ab, Bb);
-        for (const bb of Xb) try {
-          bb.stop(ab + 5 * Bb)
+        const tz = zz.currentTime;
+        uz.gain.setTargetAtTime(0, tz, vz);
+        for (const zz of bz) try {
+          zz.stop(tz + 5 * vz)
         } catch {}
       }
     }
 
-    function Lb(bb, ab) {
-      var Ub;
-      const Tb = Ab.Howler.ctx,
-        Eb = Ab.Howler.masterGain;
-      if (!Tb || !Eb || !Mb.c.get("soundOnFromAd")) return () => {};
-      const Yb = Ab.Howler;
-      return null === (Ub = Yb._autoResume) || void 0 === Ub || Ub.call(Yb), vb(Tb, Eb, bb, ab, Mb.c.get("soundVolume"), (() => {
-        var bb;
-        null === (bb = Yb._autoSuspend) || void 0 === bb || bb.call(Yb)
+    function uz(zz, tz) {
+      var sz;
+      const Xz = Fz.Howler.ctx,
+        Oz = Fz.Howler.masterGain;
+      if (!Xz || !Oz || !Wz.b.get("soundOnFromAd")) return () => {};
+      const oz = Fz.Howler;
+      return null === (sz = oz._autoResume) || void 0 === sz || sz.call(oz), Kz(Xz, Oz, zz, tz, Wz.b.get("soundVolume"), (() => {
+        var zz;
+        null === (zz = oz._autoSuspend) || void 0 === zz || zz.call(oz)
       }))
     }
   },
-  38428: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      closeClientGame: () => Qb,
-      createDefaultClientPlugins: () => Gb
+  38550: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      closeClientGame: () => yz,
+      createDefaultClientPlugins: () => Az
     });
-    var Ab = Ub(325);
+    var Fz = sz(321);
 
-    function Mb() {
-      let bb;
+    function Wz() {
+      let zz;
       return {
-        onCreate(ab) {
-          bb = ab
+        onCreate(tz) {
+          zz = tz
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(ab, Ub, Mb, Tb, Eb, Yb) {
-          var Bb, eb;
-          if ("Iron Chest" !== bb.getMetaInfo(Eb).rootName) return;
-          if (!bb.hasEffect(ab, "Thief")) return;
-          const vb = bb.getBlockData(Ub, Mb, Tb);
-          return bb.getPlayerDbId(ab) !== (null === vb || void 0 === vb || null === (Bb = vb.persisted) || void 0 === Bb || null === (eb = Bb.shared) || void 0 === eb ? void 0 : eb.ownerDbId) ? (bb.sendMessage(ab, [{
+        onPlayerAttemptAltAction(tz, sz, Wz, Xz, Oz, oz) {
+          var vz, Uz;
+          if ("Iron Chest" !== zz.getMetaInfo(Oz).rootName) return;
+          if (!zz.hasEffect(tz, "Thief")) return;
+          const Kz = zz.getBlockData(sz, Wz, Xz);
+          return zz.getPlayerDbId(tz) !== (null === Kz || void 0 === Kz || null === (vz = Kz.persisted) || void 0 === vz || null === (Uz = vz.shared) || void 0 === Uz ? void 0 : Uz.ownerDbId) ? (zz.sendMessage(tz, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: Ab.E.redUiText
+              color: Fz.N.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var Tb = Ub(3959),
-      Eb = Ub(1189);
-    const Yb = 8.4,
-      Bb = 1e-4,
-      eb = .15,
-      vb = .04,
-      Lb = [.12, .04, .12],
-      Pb = 26,
-      Xb = {
+    var Xz = sz(3926),
+      Oz = sz(1223);
+    const oz = 8.4,
+      vz = 1e-4,
+      Uz = .15,
+      Kz = .04,
+      uz = [.12, .04, .12],
+      Nz = 26,
+      bz = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        PL: 1,
-        minLifeTime: Bb,
-        maxLifeTime: Bb,
+        au: 1,
+        minLifeTime: vz,
+        maxLifeTime: vz,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: Tb.f.Standard
+        blendMode: Xz.f.Standard
       },
-      jb = {
+      wz = {
         texture: "bubble",
         mipmaps: !1,
-        PL: 96,
+        au: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: Pb,
+        emitRate: Nz,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: Tb.f.Standard
+        blendMode: Xz.f.Standard
       },
-      Rb = [0, 0, 0],
-      kb = [0, 0, 0];
+      Dz = [0, 0, 0],
+      gz = [0, 0, 0];
 
-    function yb(bb) {
-      const ab = new Map;
-      let Ub = null;
+    function Hz(zz) {
+      const tz = new Map;
+      let sz = null;
 
-      function Ab(bb) {
-        var ab, Ub;
-        null === (ab = bb.bubbles) || void 0 === ab || ab.stop(), null === (Ub = bb.fish) || void 0 === Ub || Ub.stop()
+      function Fz(zz) {
+        var tz, sz;
+        null === (tz = zz.bubbles) || void 0 === tz || tz.stop(), null === (sz = zz.fish) || void 0 === sz || sz.stop()
       }
 
-      function Mb(Ub) {
-        if (!Ub.readDrawnPosition(bb, kb)) {
-          for (const bb of ab.values()) {
-            var Ab;
-            null === (Ab = bb.bubbles) || void 0 === Ab || Ab.setEmitRate(0)
+      function Wz(sz) {
+        if (!sz.readDrawnPosition(zz, gz)) {
+          for (const zz of tz.values()) {
+            var Fz;
+            null === (Fz = zz.bubbles) || void 0 === Fz || Fz.setEmitRate(0)
           }
           return
         }
-        const Mb = performance.now();
-        for (const [bb, Eb] of ab) {
-          var Tb;
-          if (null === (Tb = Eb.bubbles) || void 0 === Tb || Tb.setEmitRate(0), !Ub.readDrawnPosition(bb, Rb)) continue;
-          if (!((Rb[0] - kb[0]) ** 2 + (Rb[1] - kb[1]) ** 2 + (Rb[2] - kb[2]) ** 2 < 900)) continue;
-          const ab = Math.max(0, Eb.biteAt - Mb),
-            Ab = Eb.approachDurationMs > 0 ? Math.min(1, 1 - ab / Eb.approachDurationMs) : 1,
-            Bb = (Eb.approachDurationMs - ab) / 1e3,
-            yb = Eb.phase + .25 * Math.sin(1.7 * Bb + Eb.phase),
-            Zb = Math.min(Eb.approachDurationMs / 3e3 * 2.8, Yb) * (1 - Ab) * (1 + .15 * Math.sin(2.1 * Bb + Eb.phase)),
-            Db = Math.min(1, 4 * (1 - Ab)),
-            zb = (.45 * Math.sin(4.1 * Bb + Eb.phase) + .18 * Math.sin(9.7 * Bb + 2 * Eb.phase)) * Db,
-            xb = Rb[0] + Math.cos(yb) * Zb - Math.sin(yb) * zb,
-            ib = Math.ceil(Eb.surfaceY),
-            fb = Rb[2] + Math.sin(yb) * Zb + Math.cos(yb) * zb,
+        const Wz = performance.now();
+        for (const [zz, Oz] of tz) {
+          var Xz;
+          if (null === (Xz = Oz.bubbles) || void 0 === Xz || Xz.setEmitRate(0), !sz.readDrawnPosition(zz, Dz)) continue;
+          if (!((Dz[0] - gz[0]) ** 2 + (Dz[1] - gz[1]) ** 2 + (Dz[2] - gz[2]) ** 2 < 900)) continue;
+          const tz = Math.max(0, Oz.biteAt - Wz),
+            Fz = Oz.approachDurationMs > 0 ? Math.min(1, 1 - tz / Oz.approachDurationMs) : 1,
+            vz = (Oz.approachDurationMs - tz) / 1e3,
+            Hz = Oz.phase + .25 * Math.sin(1.7 * vz + Oz.phase),
+            Bz = Math.min(Oz.approachDurationMs / 3e3 * 2.8, oz) * (1 - Fz) * (1 + .15 * Math.sin(2.1 * vz + Oz.phase)),
+            Pz = Math.min(1, 4 * (1 - Fz)),
+            rz = (.45 * Math.sin(4.1 * vz + Oz.phase) + .18 * Math.sin(9.7 * vz + 2 * Oz.phase)) * Pz,
+            Yz = Dz[0] + Math.cos(Hz) * Bz - Math.sin(Hz) * rz,
+            xz = Math.ceil(Oz.surfaceY),
+            mz = Dz[2] + Math.sin(Hz) * Bz + Math.cos(Hz) * rz,
             {
-              fishAt: mb,
-              bubblesAt: pb
-            } = Eb;
-          mb[0] = pb[0] = xb, mb[1] = ib + eb, pb[1] = ib + vb, mb[2] = pb[2] = fb, Eb.fish ??= Ub.createParticles(Xb, {
-            pos: mb
-          }), Eb.fish.moveTo(mb), Eb.fish.emit(1), Eb.bubbles ??= Ub.createParticles(jb, {
-            pos: pb,
-            half: Lb
-          }), Eb.bubbles.moveTo(pb), Eb.bubbles.setEmitRate(Pb + 32 * (.5 + .5 * Math.sin(9 * Bb + Eb.phase)) ** 4 + 13 * Ab)
+              fishAt: Jz,
+              bubblesAt: Iz
+            } = Oz;
+          Jz[0] = Iz[0] = Yz, Jz[1] = xz + Uz, Iz[1] = xz + Kz, Jz[2] = Iz[2] = mz, Oz.fish ??= sz.createParticles(bz, {
+            pos: Jz
+          }), Oz.fish.moveTo(Jz), Oz.fish.emit(1), Oz.bubbles ??= sz.createParticles(wz, {
+            pos: Iz,
+            half: uz
+          }), Oz.bubbles.moveTo(Iz), Oz.bubbles.setEmitRate(Nz + 32 * (.5 + .5 * Math.sin(9 * vz + Oz.phase)) ** 4 + 13 * Fz)
         }
       }
       return {
-        onCreate(bb) {
-          Ub = bb
+        onCreate(zz) {
+          sz = zz
         },
         onAfterRender() {
-          Ub && Mb(Ub)
+          sz && Wz(sz)
         },
         onClose() {
-          for (const bb of ab.values()) Ab(bb);
-          ab.clear(), Ub = null
+          for (const zz of tz.values()) Fz(zz);
+          tz.clear(), sz = null
         },
-        onReceivedMessageFromServer(bb, Ub) {
-          if (bb !== Eb.w) return;
+        onReceivedMessageFromServer(zz, sz) {
+          if (zz !== Oz.z) return;
           const {
-            hookId: Mb,
-            waiting: Tb
-          } = Ub;
-          if (Tb) ab.has(Mb) || ab.set(Mb, {
+            hookId: Wz,
+            waiting: Xz
+          } = sz;
+          if (Xz) tz.has(Wz) || tz.set(Wz, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + Tb.remainingMs,
-            approachDurationMs: Tb.durationMs,
-            surfaceY: Tb.surfaceY,
+            biteAt: performance.now() + Xz.remainingMs,
+            approachDurationMs: Xz.durationMs,
+            surfaceY: Xz.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const bb = ab.get(Mb);
-            bb && Ab(bb), ab.delete(Mb)
+            const zz = tz.get(Wz);
+            zz && Fz(zz), tz.delete(Wz)
           }
         }
       }
     }
-    var Zb = Ub(4541),
-      Db = Ub(4531);
+    var Bz = sz(4479),
+      Pz = sz(4472);
 
-    function zb(bb) {
-      let ab, Ub = null,
-        Ab = null;
-      const Mb = () => {
-        var bb;
-        null === (bb = Ab) || void 0 === bb || bb(), Ab = null
+    function rz(zz) {
+      let tz, sz = null,
+        Fz = null;
+      const Wz = () => {
+        var zz;
+        null === (zz = Fz) || void 0 === zz || zz(), Fz = null
       };
       return {
-        onCreate(Ab) {
-          ab = Ab, Ub = ab.getClientOption(bb, "dialogue")
+        onCreate(Fz) {
+          tz = Fz, sz = tz.getClientOption(zz, "dialogue")
         },
         onAfterRender() {
-          if (!ab) return;
-          const Tb = ab.getClientOption(bb, "dialogue");
-          if (Tb === Ub) return;
-          if (Ub = Tb, Mb(), !Tb || !1 === Tb.animateIn) return;
+          if (!tz) return;
+          const Xz = tz.getClientOption(zz, "dialogue");
+          if (Xz === sz) return;
+          if (sz = Xz, Wz(), !Xz || !1 === Xz.animateIn) return;
           const {
-            plan: Eb,
-            synth: Yb
-          } = (0, Db.g)(Tb);
-          Yb && (Ab = (0, Zb.g)(Yb, Eb.blips))
+            plan: Oz,
+            synth: oz
+          } = (0, Pz.f)(Xz);
+          oz && (Fz = (0, Bz.e)(oz, Oz.blips))
         },
-        onClose: Mb
+        onClose: Wz
       }
     }
-    var xb = Ub(38434);
-    const ib = [
+    var Yz = sz(38555);
+    const xz = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      fb = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      mb = [0, 1, 2, 0, 2, 3];
+      mz = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      Jz = [0, 1, 2, 0, 2, 3];
 
-    function pb(bb, ab, Ub) {
-      var Ab;
-      let [Mb, Tb, Eb] = ab;
-      if (bb.hasPackModel("Furnace")) return null;
-      const Yb = ((null !== (Ab = bb.getMetaInfo(Ub).rot) && void 0 !== Ab ? Ab : 1) - 1) * Math.PI / 2,
-        Bb = Math.PI + Yb,
-        eb = Math.cos(Bb),
-        vb = Math.sin(Bb),
-        Lb = [];
-      for (const [jb, Rb] of ib) Lb.push(jb * eb, Rb, -jb * vb);
-      const Pb = {
-          positions: Lb,
-          indices: mb,
-          uvs: fb
+    function Iz(zz, tz, sz) {
+      var Fz;
+      let [Wz, Xz, Oz] = tz;
+      if (zz.hasPackModel("Furnace")) return null;
+      const oz = ((null !== (Fz = zz.getMetaInfo(sz).rot) && void 0 !== Fz ? Fz : 1) - 1) * Math.PI / 2,
+        vz = Math.PI + oz,
+        Uz = Math.cos(vz),
+        Kz = Math.sin(vz),
+        uz = [];
+      for (const [wz, Dz] of xz) uz.push(wz * Uz, Dz, -wz * Kz);
+      const Nz = {
+          positions: uz,
+          indices: Jz,
+          uvs: mz
         },
-        Xb = [Mb + .5 + .51 * Math.sin(Yb), Tb + .375, Eb + .5 + .51 * Math.cos(Yb)];
-      return bb.createGameMesh(Pb, {
+        bz = [Wz + .5 + .51 * Math.sin(oz), Xz + .375, Oz + .5 + .51 * Math.cos(oz)];
+      return zz.createGameMesh(Nz, {
         kind: "furnaceFire"
-      }, Xb)
+      }, bz)
     }
 
-    function Nb(bb) {
-      return Math.floor(bb / 200) % 3
+    function Cz(zz) {
+      return Math.floor(zz / 200) % 3
     }
 
-    function Wb(bb, ab, Ub) {
-      bb.setGameMesh(ab, {
-        uvOffset: [0, Ub / 3]
+    function ez(zz, tz, sz) {
+      zz.setGameMesh(tz, {
+        uvOffset: [0, sz / 3]
       })
     }
-    const Hb = [.12, .025, .12],
-      Ib = [{
+    const Zz = [.12, .025, .12],
+      Gz = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: Tb.f.Standard,
+          blendMode: Xz.f.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: Tb.f.Add,
+          blendMode: Xz.f.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class db {
+    class Tz {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(bb, ab) {
-        const Ub = bb.getBlockId(ab[0], ab[1], ab[2]);
-        if ("Furnace" !== bb.getMetaInfo(Ub).rootName) return;
-        const Ab = performance.now();
-        let Mb = this.smokes.find((bb => bb.pos[0] === ab[0] && bb.pos[1] === ab[1] && bb.pos[2] === ab[2] && bb.Av === Ub));
-        if (Mb || (Mb = {
-            pos: [ab[0], ab[1], ab[2]],
-            Av: Ub,
-            endMs: Ab,
+      start(zz, tz) {
+        const sz = zz.getBlockId(tz[0], tz[1], tz[2]);
+        if ("Furnace" !== zz.getMetaInfo(sz).rootName) return;
+        const Fz = performance.now();
+        let Wz = this.smokes.find((zz => zz.pos[0] === tz[0] && zz.pos[1] === tz[1] && zz.pos[2] === tz[2] && zz.yK === sz));
+        if (Wz || (Wz = {
+            pos: [tz[0], tz[1], tz[2]],
+            yK: sz,
+            endMs: Fz,
             lastBurstMs: -1 / 0,
-            pending: new Array(Ib.length).fill(0),
-            fire: pb(bb, ab, Ub)
-          }, this.smokes.push(Mb), null !== Mb.fire && (Wb(bb, Mb.fire, Nb(Ab)), this.shownFireFrame = -1)), Mb.endMs = Ab + 6e3, this.smokes.length > 4) {
-          const ab = this.smokes.reduce(((bb, ab) => ab.endMs < bb.endMs ? ab : bb));
-          Fb(bb, ab), this.smokes.splice(this.smokes.indexOf(ab), 1)
+            pending: new Array(Gz.length).fill(0),
+            fire: Iz(zz, tz, sz)
+          }, this.smokes.push(Wz), null !== Wz.fire && (ez(zz, Wz.fire, Cz(Fz)), this.shownFireFrame = -1)), Wz.endMs = Fz + 6e3, this.smokes.length > 4) {
+          const tz = this.smokes.reduce(((zz, tz) => tz.endMs < zz.endMs ? tz : zz));
+          cz(zz, tz), this.smokes.splice(this.smokes.indexOf(tz), 1)
         }
-        Ab - Mb.lastBurstMs >= 300 && (Mb.lastBurstMs = Ab, Ib.forEach(((bb, ab) => {
-          Mb.pending[ab] += bb.style.count
+        Fz - Wz.lastBurstMs >= 300 && (Wz.lastBurstMs = Fz, Gz.forEach(((zz, tz) => {
+          Wz.pending[tz] += zz.style.count
         })))
       }
-      onAfterRender(bb, ab) {
+      onAfterRender(zz, tz) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const Ub = performance.now();
-        this.smokes = this.smokes.filter((ab => {
-          const [Ab, Mb, Tb] = ab.pos, Eb = Ub < ab.endMs && bb.getBlockId(Ab, Mb, Tb) === ab.Av;
-          return Eb || Fb(bb, ab), Eb
+        const sz = performance.now();
+        this.smokes = this.smokes.filter((tz => {
+          const [Fz, Wz, Xz] = tz.pos, Oz = sz < tz.endMs && zz.getBlockId(Fz, Wz, Xz) === tz.yK;
+          return Oz || cz(zz, tz), Oz
         }));
-        const Ab = Nb(Ub);
-        if (Ab !== this.shownFireFrame) {
-          this.shownFireFrame = Ab;
-          for (const ab of this.smokes) null !== ab.fire && Wb(bb, ab.fire, Ab)
+        const Fz = Cz(sz);
+        if (Fz !== this.shownFireFrame) {
+          this.shownFireFrame = Fz;
+          for (const tz of this.smokes) null !== tz.fire && ez(zz, tz.fire, Fz)
         }
-        if (!bb.particlesEnabled()) {
-          for (const bb of this.smokes) bb.pending.fill(0);
+        if (!zz.particlesEnabled()) {
+          for (const zz of this.smokes) zz.pending.fill(0);
           return
         }
-        const Mb = Math.min(ab, 250) / 1e3;
-        for (const Tb of this.smokes) {
-          const [ab, Ab, Eb] = Tb.pos;
-          if (0 !== bb.getBlockId(ab, Ab + 1, Eb)) {
-            Tb.pending.fill(0);
+        const Wz = Math.min(tz, 250) / 1e3;
+        for (const Xz of this.smokes) {
+          const [tz, Fz, Oz] = Xz.pos;
+          if (0 !== zz.getBlockId(tz, Fz + 1, Oz)) {
+            Xz.pending.fill(0);
             continue
           }
-          const Yb = (Tb.endMs - Ub) / 6e3,
-            Bb = this.centre;
-          Bb[0] = ab + .5, Bb[1] = Ab + 1.275, Bb[2] = Eb + .5, Ib.forEach(((ab, Ub) => {
-            Tb.pending[Ub] += ab.perSecond * Yb * Mb;
-            const Ab = Math.floor(Tb.pending[Ub]);
-            Ab > 0 && this.emit(bb, Ub, Bb, Ab) && (Tb.pending[Ub] -= Ab)
+          const oz = (Xz.endMs - sz) / 6e3,
+            vz = this.centre;
+          vz[0] = tz + .5, vz[1] = Fz + 1.275, vz[2] = Oz + .5, Gz.forEach(((tz, sz) => {
+            Xz.pending[sz] += tz.perSecond * oz * Wz;
+            const Fz = Math.floor(Xz.pending[sz]);
+            Fz > 0 && this.emit(zz, sz, vz, Fz) && (Xz.pending[sz] -= Fz)
           }))
         }
       }
-      dispose(bb) {
-        for (const Ub of this.smokes) Fb(bb, Ub);
+      dispose(zz) {
+        for (const sz of this.smokes) cz(zz, sz);
         this.smokes = [];
-        for (const Ub of null !== (ab = this.puffers) && void 0 !== ab ? ab : []) {
-          var ab;
-          Ub.dispose()
+        for (const sz of null !== (tz = this.puffers) && void 0 !== tz ? tz : []) {
+          var tz;
+          sz.dispose()
         }
         this.puffers = null
       }
-      emit(bb, ab, Ub, Ab) {
-        return this.puffers ??= Ib.map((bb => {
+      emit(zz, tz, sz, Fz) {
+        return this.puffers ??= Gz.map((zz => {
           let {
-            style: ab,
-            perSecond: Ub
-          } = bb;
-          const Ab = (ab.count / .3 + Ub) * ab.life[1];
-          return new xb.f(ab, Math.ceil(4 * Ab), Hb)
-        })), this.puffers[ab].emit(bb, Ub, this.renderFrame, Ab)
+            style: tz,
+            perSecond: sz
+          } = zz;
+          const Fz = (tz.count / .3 + sz) * tz.life[1];
+          return new Yz.d(tz, Math.ceil(4 * Fz), Zz)
+        })), this.puffers[tz].emit(zz, sz, this.renderFrame, Fz)
       }
     }
 
-    function Fb(bb, ab) {
-      null !== ab.fire && (bb.disposeGameMesh(ab.fire), ab.fire = null)
+    function cz(zz, tz) {
+      null !== tz.fire && (zz.disposeGameMesh(tz.fire), tz.fire = null)
     }
 
-    function hb() {
-      let bb;
-      const ab = new db;
+    function jz() {
+      let zz;
+      const tz = new Tz;
       return {
-        onCreate(ab) {
-          bb = ab
+        onCreate(tz) {
+          zz = tz
         },
-        onReceivedMessageFromServer(Ub, Ab) {
-          Ub === Eb.x && ab.start(bb, Ab)
+        onReceivedMessageFromServer(sz, Fz) {
+          sz === Oz.C && tz.start(zz, Fz)
         },
-        onAfterRender(Ub) {
-          ab.onAfterRender(bb, Ub)
+        onAfterRender(sz) {
+          tz.onAfterRender(zz, sz)
         },
         onClose() {
-          ab.dispose(bb)
+          tz.dispose(zz)
         }
       }
     }
 
-    function Gb(bb, ab, Ub, Ab) {
+    function Az(zz, tz, sz, Fz) {
       return {
-        dialogue: zb(Ab.localPlayerId),
-        fishing: yb(Ab.localPlayerId),
-        furnaceSmoke: hb(),
-        ironChest: Mb()
+        dialogue: rz(Fz.localPlayerId),
+        fishing: Hz(Fz.localPlayerId),
+        furnaceSmoke: jz(),
+        ironChest: Wz()
       }
     }
 
-    function Qb(bb, ab) {
-      for (const Mb of [bb, ...null !== ab && void 0 !== ab ? ab : []]) try {
-        var Ub;
-        null === Mb || void 0 === Mb || null === (Ub = Mb.onClose) || void 0 === Ub || Ub.call(Mb)
-      } catch (Ab) {
-        console.error("Error in client onClose callback", Ab)
+    function yz(zz, tz) {
+      for (const Wz of [zz, ...null !== tz && void 0 !== tz ? tz : []]) try {
+        var sz;
+        null === Wz || void 0 === Wz || null === (sz = Wz.onClose) || void 0 === sz || sz.call(Wz)
+      } catch (Fz) {
+        console.error("Error in client onClose callback", Fz)
       }
     }
   },
-  38434: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Ab,
-      f: () => Tb
+  38555: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Fz,
+      d: () => Xz
     });
-    const Ab = 1 / .6,
-      Mb = {
+    const Fz = 1 / .6,
+      Wz = {
         kind: "smokePuff"
       };
-    class Tb {
-      constructor(bb, ab, Ub) {
-        this.style = bb, this.PL = ab, this.half = Ub, this.particles = null, this.lastFrame = -1
+    class Xz {
+      constructor(zz, tz, sz) {
+        this.style = zz, this.au = tz, this.half = sz, this.particles = null, this.lastFrame = -1
       }
-      emit(bb, ab, Ub) {
-        let Tb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return Ub !== this.lastFrame && (this.lastFrame = Ub, this.particles || (this.particles = bb.createParticles(function(bb, ab) {
+      emit(zz, tz, sz) {
+        let Xz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return sz !== this.lastFrame && (this.lastFrame = sz, this.particles || (this.particles = zz.createParticles(function(zz, tz) {
           const [
-            [Ub, Tb, Eb],
-            [Yb, Bb, eb]
-          ] = bb.colours;
+            [sz, Xz, Oz],
+            [oz, vz, Uz]
+          ] = zz.colours;
           return {
-            texture: bb.soft ? Mb : "square_particle",
-            PL: ab,
-            minLifeTime: bb.life[0] / Ab,
-            maxLifeTime: bb.life[1] / Ab,
-            minEmitPower: bb.power[0] * Ab,
-            maxEmitPower: bb.power[1] * Ab,
-            minSize: bb.size[0],
-            maxSize: bb.size[1],
+            texture: zz.soft ? Wz : "square_particle",
+            au: tz,
+            minLifeTime: zz.life[0] / Fz,
+            maxLifeTime: zz.life[1] / Fz,
+            minEmitPower: zz.power[0] * Fz,
+            maxEmitPower: zz.power[1] * Fz,
+            minSize: zz.size[0],
+            maxSize: zz.size[1],
             emitRate: 0,
-            gravity: [0, bb.lift * Ab * Ab, 0],
-            dir1: [-bb.spread, 1, -bb.spread],
-            dir2: [bb.spread, 1, bb.spread],
+            gravity: [0, zz.lift * Fz * Fz, 0],
+            dir1: [-zz.spread, 1, -zz.spread],
+            dir2: [zz.spread, 1, zz.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [Ub, Tb, Eb, bb.alpha],
-              maxColor: [Yb, Bb, eb, bb.alpha]
+              minColor: [sz, Xz, Oz, zz.alpha],
+              maxColor: [oz, vz, Uz, zz.alpha]
             }, {
               timeFraction: 1,
-              minColor: [Ub, Tb, Eb, 0],
-              maxColor: [Yb, Bb, eb, 0]
+              minColor: [sz, Xz, Oz, 0],
+              maxColor: [oz, vz, Uz, 0]
             }],
-            blendMode: bb.blendMode
+            blendMode: zz.blendMode
           }
-        }(this.style, this.PL), {
-          pos: ab,
+        }(this.style, this.au), {
+          pos: tz,
           half: this.half
-        })), this.particles.moveTo(ab, this.half), this.particles.emit(Tb), !0)
+        })), this.particles.moveTo(tz, this.half), this.particles.emit(Xz), !0)
       }
       dispose() {
-        var bb;
-        null === (bb = this.particles) || void 0 === bb || bb.stop(), this.particles = null
+        var zz;
+        null === (zz = this.particles) || void 0 === zz || zz.stop(), this.particles = null
       }
     }
   },
-  4536: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Mb,
-      e: () => Ab,
-      i: () => Tb,
-      k: () => Bb,
-      n: () => Eb
+  4476: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Wz,
+      f: () => Fz,
+      h: () => Xz,
+      l: () => vz,
+      n: () => Oz
     });
-    const Ab = ["sine", "triangle", "square", "sawtooth"],
-      Mb = 55,
-      Tb = {
+    const Fz = ["sine", "triangle", "square", "sawtooth"],
+      Wz = 55,
+      Xz = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function Eb(bb) {
-      return "string" !== typeof bb ? bb : Object.hasOwn(Tb, bb) ? Tb[bb] : null
+    function Oz(zz) {
+      return "string" !== typeof zz ? zz : Object.hasOwn(Xz, zz) ? Xz[zz] : null
     }
 
-    function Yb(bb, ab, Ub) {
-      return Math.min(Ub, Math.max(ab, bb))
+    function oz(zz, tz, sz) {
+      return Math.min(sz, Math.max(tz, zz))
     }
 
-    function Bb(bb) {
-      const ab = Yb(bb.durationMs, 10, 500),
-        Ub = Yb(bb.attackMs, 0, ab),
+    function vz(zz) {
+      const tz = oz(zz.durationMs, 10, 500),
+        sz = oz(zz.attackMs, 0, tz),
         {
-          intonation: Mb
-        } = bb;
+          intonation: Wz
+        } = zz;
       return {
-        waveform: Ab.includes(bb.waveform) ? bb.waveform : "sine",
-        pitchHz: Yb(bb.pitchHz, 20, 4e3),
-        glideSemitones: Yb(bb.glideSemitones, -24, 24),
-        durationMs: ab,
-        attackMs: Ub,
-        releaseMs: Yb(bb.releaseMs, 0, ab - Ub),
-        lowpassHz: null === bb.lowpassHz ? null : Yb(bb.lowpassHz, 20, 2e4),
-        volume: Yb(bb.volume, 0, 2),
+        waveform: Fz.includes(zz.waveform) ? zz.waveform : "sine",
+        pitchHz: oz(zz.pitchHz, 20, 4e3),
+        glideSemitones: oz(zz.glideSemitones, -24, 24),
+        durationMs: tz,
+        attackMs: sz,
+        releaseMs: oz(zz.releaseMs, 0, tz - sz),
+        lowpassHz: null === zz.lowpassHz ? null : oz(zz.lowpassHz, 20, 2e4),
+        volume: oz(zz.volume, 0, 2),
         intonation: {
-          variationSemitones: Yb(Mb.variationSemitones, 0, 6),
-          declineSemitones: Yb(Mb.declineSemitones, 0, 12),
-          questionRiseSemitones: Yb(Mb.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: Yb(Mb.exclaimLiftSemitones, 0, 12)
+          variationSemitones: oz(Wz.variationSemitones, 0, 6),
+          declineSemitones: oz(Wz.declineSemitones, 0, 12),
+          questionRiseSemitones: oz(Wz.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: oz(Wz.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: Yb(bb.syllableMs, 25, 200)
+        syllableMs: oz(zz.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

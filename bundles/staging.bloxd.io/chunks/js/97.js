@@ -1,397 +1,397 @@
 export const id = 97;
 export const ids = [97, 185];
 export const modules = {
-  8789: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      EverythingMenu: () => bY
+  8717: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      EverythingMenu: () => Fo
     });
-    var Ab = Ub(52),
-      Mb = Ub(984),
-      Tb = Ub.n(Mb),
-      Eb = Ub(1134),
-      Yb = Ub(990),
-      Bb = Ub(1961),
-      eb = Ub(1047),
-      vb = Ub(1023);
+    var Fz = sz(65),
+      Wz = sz(1020),
+      Xz = sz.n(Wz),
+      Oz = sz(1173),
+      oz = sz(1036),
+      vz = sz(1997),
+      Uz = sz(1106),
+      Kz = sz(1087);
 
-    function Lb(bb) {
+    function uz(zz) {
       let {
-        items: ab,
-        onClick: Ub,
-        selectedItemId: Ab,
-        className: Mb,
-        padStartsOnTab: Lb = !0
-      } = bb;
+        items: tz,
+        onClick: sz,
+        selectedItemId: Fz,
+        className: Wz,
+        padStartsOnTab: uz = !0
+      } = zz;
       const {
-        t: Pb
-      } = (0, Eb.A)(), Xb = (0, eb.k)(), jb = [];
-      for (const Tb of ab) {
-        var Rb;
-        const bb = jb[jb.length - 1];
-        var kb;
-        if (bb && bb.title === (null !== (Rb = Tb.section) && void 0 !== Rb ? Rb : null)) bb.items.push(Tb);
-        else jb.push({
-          title: null !== (kb = Tb.section) && void 0 !== kb ? kb : null,
-          items: [Tb]
+        t: Nz
+      } = (0, Oz.B)(), bz = (0, Uz.i)(), wz = [];
+      for (const Xz of tz) {
+        var Dz;
+        const zz = wz[wz.length - 1];
+        var gz;
+        if (zz && zz.title === (null !== (Dz = Xz.section) && void 0 !== Dz ? Dz : null)) zz.items.push(Xz);
+        else wz.push({
+          title: null !== (gz = Xz.section) && void 0 !== gz ? gz : null,
+          items: [Xz]
         })
       }
-      return (0, vb.jsx)("div", {
-        className: Tb()("MenuSideBarBody", Mb),
+      return (0, Kz.jsx)("div", {
+        className: Xz()("MenuSideBarBody", Wz),
         "data-pad-tabs": "2",
-        children: jb.map(((bb, ab) => {
-          var Mb;
-          return (0, vb.jsxs)("div", {
+        children: wz.map(((zz, tz) => {
+          var Wz;
+          return (0, Kz.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [bb.title && (0, vb.jsx)("div", {
+            children: [zz.title && (0, Kz.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: Pb(bb.title)
-            }), bb.items.map((bb => {
-              var ab;
-              const Mb = !!bb.iconElement || !!bb.faIcon;
-              return (0, vb.jsxs)("div", {
+              children: Nz(zz.title)
+            }), zz.items.map((zz => {
+              var tz;
+              const Wz = !!zz.iconElement || !!zz.faIcon;
+              return (0, Kz.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": Ab === bb.id ? "true" : void 0,
-                "data-pad-default-focus": Lb && Ab === bb.id || void 0,
-                className: Tb()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: Ab === bb.id
+                "data-pad-selected": Fz === zz.id ? "true" : void 0,
+                "data-pad-default-focus": uz && Fz === zz.id || void 0,
+                className: Xz()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: Fz === zz.id
                 }),
                 onClick: () => {
-                  Ub(bb.id)
+                  sz(zz.id)
                 },
-                children: [Mb && (0, vb.jsx)("div", {
+                children: [Wz && (0, Kz.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (ab = bb.iconElement) && void 0 !== ab ? ab : (0, vb.jsx)(Yb.e, {
-                    name: bb.faIcon
+                  children: null !== (tz = zz.iconElement) && void 0 !== tz ? tz : (0, Kz.jsx)(oz.c, {
+                    name: zz.faIcon
                   })
-                }), (!Xb || !Mb) && (0, vb.jsx)("div", {
-                  children: Pb(bb.title)
-                }), bb.redDot && (0, vb.jsx)(Bb.d, {
+                }), (!bz || !Wz) && (0, Kz.jsx)("div", {
+                  children: Nz(zz.title)
+                }), zz.redDot && (0, Kz.jsx)(vz.c, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, bb.id)
+              }, zz.id)
             }))]
-          }, null !== (Mb = bb.title) && void 0 !== Mb ? Mb : ab)
+          }, null !== (Wz = zz.title) && void 0 !== Wz ? Wz : tz)
         }))
       })
     }
-    var Pb = Ub(2708),
-      Xb = Ub(1060),
-      jb = Ub(2268),
-      Rb = Ub(1055),
-      kb = Ub(1352),
-      yb = Ub(101),
-      Zb = Ub(1824),
-      Db = Ub(2118),
-      zb = Ub(2126),
-      xb = Ub(1589),
-      ib = Ub(1254),
-      fb = Ub(4673),
-      mb = Ub(19),
-      pb = Ub(8794);
+    var Nz = sz(2735),
+      bz = sz(1116),
+      wz = sz(2290),
+      Dz = sz(1113),
+      gz = sz(1419),
+      Hz = sz(106),
+      Bz = sz(1857),
+      Pz = sz(2164),
+      rz = sz(2168),
+      Yz = sz(1622),
+      xz = sz(1306),
+      mz = sz(4609),
+      Jz = sz(30),
+      Iz = sz(8723);
 
-    function Nb(bb) {
+    function Cz(zz) {
       let {
-        setApplySettingsCallback: ab
-      } = bb;
+        setApplySettingsCallback: tz
+      } = zz;
       const {
-        clientEscMenuOptions: Ub
-      } = (0, mb.n)(["clientEscMenuOptions"]), [Mb, Tb] = (0, Ab.useState)(!1), [Eb, Yb] = (0, Ab.useState)(!1), [Bb, eb] = (0, Ab.useState)(6400), [Lb, Pb] = (0, Ab.useState)(3600), [Xb, jb] = (0, Ab.useState)(!1), [Rb, yb] = (0, Ab.useState)(!1);
+        clientEscMenuOptions: sz
+      } = (0, Jz.h)(["clientEscMenuOptions"]), [Wz, Xz] = (0, Fz.useState)(!1), [Oz, oz] = (0, Fz.useState)(!1), [vz, Uz] = (0, Fz.useState)(6400), [uz, Nz] = (0, Fz.useState)(3600), [bz, wz] = (0, Fz.useState)(!1), [Dz, Hz] = (0, Fz.useState)(!1);
 
-      function Zb(bb) {
-        const ab = "screenshot" === bb ? Yb : Tb;
-        ab(!0);
-        const Ub = Xb ? "normals" : Rb ? "depth" : null;
-        pb.devTools.downloadScene(bb, {
-          width: Bb,
-          height: Lb,
-          colouring: Ub
-        }).catch((bb => {
-          console.error("Couldn't download the scene", bb)
+      function Bz(zz) {
+        const tz = "screenshot" === zz ? oz : Xz;
+        tz(!0);
+        const sz = bz ? "normals" : Dz ? "depth" : null;
+        Iz.devTools.downloadScene(zz, {
+          width: vz,
+          height: uz,
+          colouring: sz
+        }).catch((zz => {
+          console.error("Couldn't download the scene", zz)
         })).finally((() => {
-          ab(!1)
+          tz(!1)
         }))
       }
-      return (0, vb.jsxs)("div", {
+      return (0, Kz.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, vb.jsx)(fb.d, {
+        children: [(0, Kz.jsx)(mz.b, {
           label: "Disable Ambient Occlusion",
-          checked: Ub.disableAmbientOcclusion,
-          onClick: bb => {
-            mb.c.setClientEscMenuOptions({
-              disableAmbientOcclusion: bb
-            }), ab((() => fb.h))
+          checked: sz.disableAmbientOcclusion,
+          onClick: zz => {
+            Jz.b.setClientEscMenuOptions({
+              disableAmbientOcclusion: zz
+            }), tz((() => mz.h))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), pb.devTools.supports("ambientLight") && (0, vb.jsx)(fb.g, {
+        }), Iz.devTools.supports("ambientLight") && (0, Kz.jsx)(mz.g, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: Ub.ambientLightIntensity,
-          onChange: bb => {
-            pb.devTools.setAmbientLightIntensity(bb).then((() => {
-              mb.c.setClientEscMenuOptions({
-                ambientLightIntensity: bb
+          initValue: sz.ambientLightIntensity,
+          onChange: zz => {
+            Iz.devTools.setAmbientLightIntensity(zz).then((() => {
+              Jz.b.setClientEscMenuOptions({
+                ambientLightIntensity: zz
               })
-            })).catch((bb => {
-              console.error("Couldn't set the ambient light", bb)
+            })).catch((zz => {
+              console.error("Couldn't set the ambient light", zz)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), pb.devTools.supports("weaponRaycasts") && (0, vb.jsx)(fb.d, {
+        }), Iz.devTools.supports("weaponRaycasts") && (0, Kz.jsx)(mz.b, {
           label: "Show Weapon Raycasts",
-          checked: Ub.showWeaponRaycasts,
-          onClick: bb => {
-            mb.c.setClientEscMenuOptions({
-              showWeaponRaycasts: bb
+          checked: sz.showWeaponRaycasts,
+          onClick: zz => {
+            Jz.b.setClientEscMenuOptions({
+              showWeaponRaycasts: zz
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), pb.devTools.supports("sceneDownload") && (0, vb.jsxs)("div", {
+        }), Iz.devTools.supports("sceneDownload") && (0, Kz.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, vb.jsxs)("div", {
+          children: [(0, Kz.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, vb.jsx)(fb.d, {
+            children: [(0, Kz.jsx)(mz.b, {
               label: "Apply normal-based coloring",
-              checked: Xb,
-              onClick: bb => {
-                jb(bb), bb && yb(!1)
+              checked: bz,
+              onClick: zz => {
+                wz(zz), zz && Hz(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, vb.jsx)(fb.d, {
+            }), (0, Kz.jsx)(mz.b, {
               label: "Apply depth-based coloring",
-              checked: Rb,
-              onClick: bb => {
-                yb(bb), bb && jb(!1)
+              checked: Dz,
+              onClick: zz => {
+                Hz(zz), zz && wz(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, vb.jsxs)("div", {
+            }), (0, Kz.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, vb.jsx)("div", {
+              children: [(0, Kz.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, vb.jsx)(xb.c, {
+              }), (0, Kz.jsx)(Yz.d, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (bb, ab) => {
-                  const Ub = parseInt(bb) || 6400;
-                  eb(Ub)
+                onValueChange: (zz, tz) => {
+                  const sz = parseInt(zz) || 6400;
+                  Uz(sz)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: Bb.toString()
-              }), (0, vb.jsx)("span", {
+                defaultValue: vz.toString()
+              }), (0, Kz.jsx)("span", {
                 children: "X"
-              }), (0, vb.jsx)(xb.c, {
+              }), (0, Kz.jsx)(Yz.d, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (bb, ab) => {
-                  const Ub = parseInt(bb) || 3600;
-                  Pb(Ub)
+                onValueChange: (zz, tz) => {
+                  const sz = parseInt(zz) || 3600;
+                  Nz(sz)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: Lb.toString()
+                defaultValue: uz.toString()
               })]
-            }), (0, vb.jsxs)("div", {
+            }), (0, Kz.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, vb.jsxs)(kb.g, {
+              children: [(0, Kz.jsxs)(gz.h, {
                 onClick: () => {
-                  Zb("screenshot")
+                  Bz("screenshot")
                 },
-                disabled: Eb,
-                children: [Eb && (0, vb.jsx)(ib.b, {}), "Download Screenshot"]
-              }), (0, vb.jsxs)(kb.g, {
+                disabled: Oz,
+                children: [Oz && (0, Kz.jsx)(xz.d, {}), "Download Screenshot"]
+              }), (0, Kz.jsxs)(gz.h, {
                 onClick: () => {
-                  Zb("glb")
+                  Bz("glb")
                 },
-                disabled: Mb,
-                children: [Mb && (0, vb.jsx)(ib.b, {}), "Download GLB"]
+                disabled: Wz,
+                children: [Wz && (0, Kz.jsx)(xz.d, {}), "Download GLB"]
               })]
             })]
-          }), (0, vb.jsx)("div", {
+          }), (0, Kz.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var Wb = Ub(137),
-      Hb = Ub(1065),
-      Ib = Ub(1142),
-      db = Ub(2717),
-      Fb = Ub(1433),
-      hb = Ub(1208),
-      Gb = Ub(1180),
-      Qb = Ub(2794),
-      qb = Ub(1943),
-      ub = Ub(1413),
-      rb = Ub(325),
-      Kb = Ub(2132),
-      ob = Ub(2147),
-      lb = Ub(2480),
-      tb = Ub(1552),
-      wb = Ub(2776),
-      sb = Ub(2753),
-      gb = Ub(2802),
-      Cb = Ub(212);
+    var ez = sz(133),
+      Zz = sz(1120),
+      Gz = sz(1191),
+      Tz = sz(2737),
+      cz = sz(1483),
+      jz = sz(1253),
+      Az = sz(1220),
+      yz = sz(2824),
+      Mz = sz(1975),
+      dz = sz(1466),
+      hz = sz(321),
+      Qz = sz(2175),
+      kz = sz(2187),
+      iz = sz(2487),
+      Lz = sz(1577),
+      lz = sz(2793),
+      nz = sz(2774),
+      az = sz(2827),
+      qz = sz(214);
 
-    function Vb(bb) {
+    function Sz(zz) {
       const {
-        t: ab,
-        selectedLanguage: Ub
-      } = (0, Eb.A)(), {
-        userContext: Mb
-      } = (0, Xb.c)(), {
-        superRankInfo: Tb
-      } = Mb, Yb = bb && ((0, rb.mc)(Tb) || Mb.ranksMayChange) && (0, ob.purchasesAllowed)(), {
-        accountId: Bb,
-        data: eb
-      } = (0, lb.h)(wb.c, Yb);
-      if ((0, Ab.useEffect)((() => {
-          if (Yb) return wb.c.watchAccount(), tb.d.addRefetchListener("billing", (bb => {
-            "reconnected" === bb ? wb.c.refreshAfterReconnect() : wb.c.refresh()
+        t: tz,
+        selectedLanguage: sz
+      } = (0, Oz.B)(), {
+        userContext: Wz
+      } = (0, bz.b)(), {
+        superRankInfo: Xz
+      } = Wz, oz = zz && ((0, hz.vc)(Xz) || Wz.ranksMayChange) && (0, kz.purchasesAllowed)(), {
+        accountId: vz,
+        data: Uz
+      } = (0, iz.j)(lz.d, oz);
+      if ((0, Fz.useEffect)((() => {
+          if (oz) return lz.d.watchAccount(), Lz.d.addRefetchListener("billing", (zz => {
+            "reconnected" === zz ? lz.d.refreshAfterReconnect() : lz.d.refresh()
           }))
-        }), [Yb]), !Yb || !(0, rb.mc)(Tb) || null === eb || Bb !== Mb.whamm) return null;
-      const vb = function(bb, ab, Ub) {
-        const Ab = gb.g[(0, gb.c)(gb.g, ab)],
-          Mb = void 0 === Ab ? void 0 : (0, Cb.c)(bb.entitlements, Ab.entitlementId);
-        return void 0 === Mb || null === Mb.expiresAt || (0, sb.e)(Mb) <= Ub ? null : Mb.willRenew && null === Mb.billingIssueDetectedAt ? {
+        }), [oz]), !oz || !(0, hz.vc)(Xz) || null === Uz || vz !== Wz.whamm) return null;
+      const Kz = function(zz, tz, sz) {
+        const Fz = az.h[(0, az.b)(az.h, tz)],
+          Wz = void 0 === Fz ? void 0 : (0, qz.e)(zz.entitlements, Fz.entitlementId);
+        return void 0 === Wz || null === Wz.expiresAt || (0, nz.d)(Wz) <= sz ? null : Wz.willRenew && null === Wz.billingIssueDetectedAt ? {
           renews: !0,
-          at: Math.max(Mb.expiresAt, Ub)
+          at: Math.max(Wz.expiresAt, sz)
         } : {
           renews: !1,
-          at: (0, sb.e)(Mb)
+          at: (0, nz.d)(Wz)
         }
-      }(eb, Tb.tier, Date.now());
-      if (null === vb) return null;
-      const Lb = vb.renews ? "store:renewsOn" : "store:endsOn";
-      return ab(Lb, {
-        date: new Date(vb.at).toLocaleDateString((0, Eb.l)(Ub.code, Lb), {
+      }(Uz, Xz.tier, Date.now());
+      if (null === Kz) return null;
+      const uz = Kz.renews ? "store:renewsOn" : "store:endsOn";
+      return tz(uz, {
+        date: new Date(Kz.at).toLocaleDateString((0, Oz.o)(sz.code, uz), {
           year: "numeric",
           month: "short",
           day: "numeric"
         })
       })
     }
-    var Ob = Ub(1268),
-      cb = Ub(1150),
-      Jb = Ub(4575),
-      nb = Ub(1384),
-      Sb = Ub(3327),
-      ba = Ub(2111);
+    var Vz = sz(1333),
+      Rz = sz(1207),
+      pz = sz(4514),
+      fz = sz(1447),
+      Ez = sz(3325),
+      zt = sz(2152);
 
-    function aa(bb) {
+    function tt(zz) {
       let {
-        showing: ab
-      } = bb;
+        showing: tz
+      } = zz;
       const {
-        t: Ub
-      } = (0, Eb.A)(), {
-        data: Ab,
-        failed: Mb
-      } = (0, lb.h)(Sb.h, ab);
-      return 0 === (null === Ab || void 0 === Ab ? void 0 : Ab.length) || null === Ab && !Mb ? null : (0, vb.jsxs)("div", {
+        t: sz
+      } = (0, Oz.B)(), {
+        data: Fz,
+        failed: Wz
+      } = (0, iz.j)(Ez.f, tz);
+      return 0 === (null === Fz || void 0 === Fz ? void 0 : Fz.length) || null === Fz && !Wz ? null : (0, Kz.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, vb.jsx)("div", {
+        children: [(0, Kz.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: Ub("paymentHistory:title")
-        }), null === Ab && Mb && (0, vb.jsx)("div", {
+          children: sz("paymentHistory:title")
+        }), null === Fz && Wz && (0, Kz.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: Ub("paymentHistory:loadFailed")
-        }), null !== Ab && (0, vb.jsx)("ul", {
+          children: sz("paymentHistory:loadFailed")
+        }), null !== Fz && (0, Kz.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: Ab.map((bb => (0, vb.jsxs)("li", {
+          children: Fz.map((zz => (0, Kz.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, vb.jsx)(ba.c, {
-              entry: bb
-            }), (0, vb.jsxs)("div", {
+            children: [(0, Kz.jsx)(zt.b, {
+              entry: zz
+            }), (0, Kz.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, vb.jsx)("div", {
-                children: (0, ba.f)(Ub, bb)
-              }), (0, vb.jsxs)("div", {
+              children: [(0, Kz.jsx)("div", {
+                children: (0, zt.d)(sz, zz)
+              }), (0, Kz.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(bb.at).toLocaleDateString(), "number" === typeof bb.orderId && ` \xb7 ${Ub("paymentHistory:order",{orderId:bb.orderId})}`]
+                children: [new Date(zz.at).toLocaleDateString(), "number" === typeof zz.orderId && ` \xb7 ${sz("paymentHistory:order",{orderId:zz.orderId})}`]
               })]
             })]
-          }, (0, Sb.d)(bb))))
+          }, (0, Ez.c)(zz))))
         })]
       })
     }
-    var Ua = Ub(1778),
-      Aa = Ub(1192),
-      Ma = Ub(1260),
-      Ta = Ub(1238),
-      Ea = Ub(1687),
-      Ya = Ub(2740);
-    async function Ba() {
+    var st = sz(1815),
+      Ft = sz(1230),
+      Wt = sz(1319),
+      Xt = sz(1287),
+      Ot = sz(1715),
+      ot = sz(2762);
+    async function vt() {
       try {
-        return function(bb) {
-          const ab = new Map;
+        return function(zz) {
+          const tz = new Map;
           for (const {
-              store: Ub,
-              status: Ab,
-              autoRenewStatus: Mb,
-              managementUrl: Tb
+              store: sz,
+              status: Fz,
+              autoRenewStatus: Wz,
+              managementUrl: Xz
             }
-            of Object.values(bb.subscriptions)) !(0, sb.i)(Ub) || (0, sb.l)(Ab) || "willNotRenew" === Mb || ab.has(Ub) || ab.set(Ub, null !== Tb && void 0 !== Tb ? Tb : sb.n[Ub]);
-          return Array.from(ab, (bb => {
-            let [ab, Ub] = bb;
+            of Object.values(zz.subscriptions)) !(0, nz.e)(sz) || (0, nz.h)(Fz) || "willNotRenew" === Wz || tz.has(sz) || tz.set(sz, null !== Xz && void 0 !== Xz ? Xz : nz.l[sz]);
+          return Array.from(tz, (zz => {
+            let [tz, sz] = zz;
             return {
-              store: ab,
-              managementUrl: Ub
+              store: tz,
+              managementUrl: sz
             }
           }))
-        }(await (0, Ea.o)((0, Ya.f)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (bb) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", bb), null
+        }(await (0, Ot.f)((0, ot.f)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (zz) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", zz), null
       }
     }
-    var ea = Ub(307),
-      va = Ub(2334);
-    const La = {
+    var Ut = sz(308),
+      Kt = sz(2334);
+    const ut = {
       appStore: {
         name: "App Store",
-        ...ea.Rb.appStore
+        ...Ut.Vb.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...ea.Rb.googlePlay
+        ...Ut.Vb.googlePlay
       },
       discord: {
         name: "Discord",
-        ...ea.Rb.discord
+        ...Ut.Vb.discord
       }
     };
 
-    function Pa(bb) {
+    function Nt(zz) {
       let {
-        warning: ab,
-        subscriptions: Ub
-      } = bb;
+        warning: tz,
+        subscriptions: sz
+      } = zz;
       const {
-        t: Ab
-      } = (0, Eb.A)();
-      return null !== Ub && 0 === Ub.length ? (0, vb.jsx)(vb.Fragment, {
-        children: Ab(ab)
-      }) : (0, vb.jsxs)("div", {
+        t: Fz
+      } = (0, Oz.B)();
+      return null !== sz && 0 === sz.length ? (0, Kz.jsx)(Kz.Fragment, {
+        children: Fz(tz)
+      }) : (0, Kz.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [Ab(ab), null === Ub && (0, vb.jsx)("div", {
+        children: [Fz(tz), null === sz && (0, Kz.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: Ab("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== Ub && (0, vb.jsxs)(vb.Fragment, {
-          children: [(0, vb.jsx)("div", {
+          children: Fz("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== sz && (0, Kz.jsxs)(Kz.Fragment, {
+          children: [(0, Kz.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: Ab("auth:deleteAccountStoreSubscriptions")
-          }), (0, vb.jsx)(va.c, {
+            children: Fz("auth:deleteAccountStoreSubscriptions")
+          }), (0, Kz.jsx)(Kt.e, {
             className: "DeleteAccountSubtitleLinks",
-            links: Ub.map((bb => {
+            links: sz.map((zz => {
               let {
-                store: ab,
-                managementUrl: Ub
-              } = bb;
+                store: tz,
+                managementUrl: sz
+              } = zz;
               return {
-                ...La[ab],
-                url: Ub
+                ...ut[tz],
+                url: sz
               }
             }))
           })]
@@ -399,703 +399,703 @@ export const modules = {
       })
     }
 
-    function Xa(bb) {
+    function bt(zz) {
       let {
-        showing: ab
-      } = bb;
+        showing: tz
+      } = zz;
       const {
-        userContext: Ub,
-        isUserContextUpdating: Mb
-      } = (0, Xb.c)(), {
-        t: Tb
-      } = (0, Eb.A)(), [Yb, Bb] = (0, Ab.useState)(!1), [eb, Lb] = (0, Ab.useState)(null), Pb = (0, Ab.useRef)(ab);
-      (0, Ab.useEffect)((() => (Pb.current = ab, () => {
-        Pb.current = !1
-      })), [ab]);
-      const jb = Mb || Yb;
-      async function Rb() {
-        const bb = function(bb) {
-            if ((0, Wb.d)()) return "auth:discordActivityDeleteAccountWarning";
-            return bb ? "auth:deleteAccountWarning" : "auth:deleteGuestAccountWarning"
-          }(Ub.isLoggedIn()),
-          ab = (0, Ua.e)(Ub.availableUserContextTypes) ? await Ba() : [];
-        if (!Pb.current) return Aa.e.ok();
-        if (!0 !== await Ma.NotificationProvider.showPromptPopup({
+        userContext: sz,
+        isUserContextUpdating: Wz
+      } = (0, bz.b)(), {
+        t: Xz
+      } = (0, Oz.B)(), [oz, vz] = (0, Fz.useState)(!1), [Uz, uz] = (0, Fz.useState)(null), Nz = (0, Fz.useRef)(tz);
+      (0, Fz.useEffect)((() => (Nz.current = tz, () => {
+        Nz.current = !1
+      })), [tz]);
+      const wz = Wz || oz;
+      async function Dz() {
+        const zz = function(zz) {
+            if ((0, ez.e)()) return "auth:discordActivityDeleteAccountWarning";
+            return zz ? "auth:deleteAccountWarning" : "auth:deleteGuestAccountWarning"
+          }(sz.isLoggedIn()),
+          tz = (0, st.d)(sz.availableUserContextTypes) ? await vt() : [];
+        if (!Nz.current) return Ft.e.ok();
+        if (!0 !== await Wt.NotificationProvider.showPromptPopup({
             title: "auth:deleteAccountPopupTitleNamed",
             textOpts: {
               title: {
-                playerName: (0, hb.d)(Ub.getPlayerName(), !yb.featureFlags.canSeeRealPlayerNames)
+                playerName: (0, jz.c)(sz.getPlayerName(), !Hz.featureFlags.canSeeRealPlayerNames)
               }
             },
-            subtitle: (0, vb.jsx)(Pa, {
-              warning: bb,
-              subscriptions: ab
+            subtitle: (0, Kz.jsx)(Nt, {
+              warning: zz,
+              subscriptions: tz
             }),
             confirmText: "auth:deleteAccount",
             destructive: !0,
             confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
             cancelText: "general:cancel",
             cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-          }).getResult()) return Aa.e.ok();
-        const Ab = await (0, Hb.postJsonWithMetricsCookiesAndJsonResponse)(`${Ib.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-          gameState: mb.c.get("gameState")
+          }).getResult()) return Ft.e.ok();
+        const Fz = await (0, Zz.postJsonWithMetricsCookiesAndJsonResponse)(`${Gz.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+          gameState: Jz.b.get("gameState")
         }, {
           retries: 3
-        }, Ub.getMetricsCookies());
-        if (Ab.error) return Aa.e.error(Ab.error);
-        if ((0, Wb.d)()) {
-          (await Ta.j.discordActivity()).exit("User deleted their account")
+        }, sz.getMetricsCookies());
+        if (Fz.error) return Ft.e.error(Fz.error);
+        if ((0, ez.e)()) {
+          (await Xt.k.discordActivity()).exit("User deleted their account")
         }
-        return (0, Hb.forgetStoredGuestAccount)(Ub.whamm), (0, Hb.forceGlobalSignOut)(!0), Aa.e.ok()
+        return (0, Zz.forgetStoredGuestAccount)(sz.whamm), (0, Zz.forceGlobalSignOut)(!0), Ft.e.ok()
       }
-      return (0, vb.jsxs)("div", {
+      return (0, Kz.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, vb.jsxs)(kb.D, {
+        children: [(0, Kz.jsxs)(gz.H, {
           onClick: async function() {
-            if (!Yb) {
-              Bb(!0);
+            if (!oz) {
+              vz(!0);
               try {
-                const bb = await Rb(),
-                  ab = bb.isError() ? bb.asError().message : null;
-                Lb(ab)
-              } catch (bb) {
-                console.error("Failed to delete account:", bb), Lb(Tb("auth:genericDeleteAccountError"))
+                const zz = await Dz(),
+                  tz = zz.isError() ? zz.asError().message : null;
+                uz(tz)
+              } catch (zz) {
+                console.error("Failed to delete account:", zz), uz(Xz("auth:genericDeleteAccountError"))
               }
-              Bb(!1)
+              vz(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: jb,
-          children: [jb && (0, vb.jsx)("div", {
+          disabled: wz,
+          children: [wz && (0, Kz.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, vb.jsx)(ib.b, {})
-          }), Tb("auth:deleteAccount")]
-        }), eb && (0, vb.jsx)("div", {
+            children: (0, Kz.jsx)(xz.d, {})
+          }), Xz("auth:deleteAccount")]
+        }), Uz && (0, Kz.jsx)("div", {
           className: "DeleteAccountError",
-          children: eb
+          children: Uz
         })]
       })
     }
-    var ja = Ub(3252),
-      Ra = Ub(3271),
-      ka = Ub(3265);
+    var wt = sz(3260),
+      Dt = sz(3275),
+      gt = sz(3271);
 
-    function ya(bb) {
+    function Ht(zz) {
       let {
-        showing: ab
-      } = bb;
+        showing: tz
+      } = zz;
       const {
-        t: Ub
-      } = (0, Eb.A)(), {
-        data: Ab,
-        failed: Mb
-      } = (0, lb.h)(ja.b, ab), Tb = null === Ab ? null : (0, ja.c)(Ab);
-      return (0, vb.jsxs)("div", {
+        t: sz
+      } = (0, Oz.B)(), {
+        data: Fz,
+        failed: Wz
+      } = (0, iz.j)(wt.b, tz), Xz = null === Fz ? null : (0, wt.d)(Fz);
+      return (0, Kz.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, vb.jsx)("div", {
+        children: [(0, Kz.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: Ub("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === Tb && !Mb && (0, vb.jsx)(ib.b, {}), null === Tb && Mb && (0, vb.jsxs)("div", {
+          children: sz("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === Xz && !Wz && (0, Kz.jsx)(xz.d, {}), null === Xz && Wz && (0, Kz.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [Ub("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, vb.jsx)(kb.g, {
+          children: [sz("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, Kz.jsx)(gz.h, {
             className: "SmallTextLight",
             onClick: () => {
-              ja.b.refresh()
+              wt.b.refresh()
             },
-            children: Ub("general:tryAgain")
+            children: sz("general:tryAgain")
           })]
-        }), 0 === (null === Tb || void 0 === Tb ? void 0 : Tb.length) && (0, vb.jsx)("div", {
+        }), 0 === (null === Xz || void 0 === Xz ? void 0 : Xz.length) && (0, Kz.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: Ub("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== Tb && Tb.length > 0 && (0, vb.jsx)("ul", {
+          children: sz("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== Xz && Xz.length > 0 && (0, Kz.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: Tb.map((bb => {
+          children: Xz.map((zz => {
             let {
-              name: ab,
-              exclusion: Ab
-            } = bb;
-            const Mb = ka.e[Ab];
-            return (0, vb.jsxs)("li", {
+              name: tz,
+              exclusion: Fz
+            } = zz;
+            const Wz = gt.f[Fz];
+            return (0, Kz.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, vb.jsx)("div", {
+              children: [(0, Kz.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: ab
-              }), (0, vb.jsx)(kb.h, {
+                children: tz
+              }), (0, Kz.jsx)(gz.l, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, Ra.d)(Mb, ab, {
+                  (0, Dt.h)(Wz, tz, {
                     chatMessage: null
                   })
                 },
-                children: Ub(ka.i[Mb].text)
+                children: sz(gt.i[Wz].text)
               })]
-            }, ab)
+            }, tz)
           }))
         })]
       })
     }
-    const Za = (0, Ab.memo)((function(bb) {
-      var ab;
+    const Bt = (0, Fz.memo)((function(zz) {
+      var tz;
       let {
-        showing: Ub,
-        inGame: Mb
-      } = bb;
+        showing: sz,
+        inGame: Wz
+      } = zz;
       const {
-        t: Bb,
-        selectedLanguage: eb
-      } = (0, Eb.A)(), {
-        hideSocialLocationFrom: Lb
-      } = (0, mb.n)(["hideSocialLocationFrom"]), jb = (0, Pb.d)(), {
-        userContext: Rb,
-        isUserContextUpdating: Zb
-      } = (0, Xb.c)(), [Db, zb] = (0, Ab.useState)(null !== (ab = Rb.getPlayerName()) && void 0 !== ab ? ab : ""), [pb, Nb] = (0, Ab.useState)(null), {
-        purchasing: lb,
-        outcome: tb,
-        purchase: wb
-      } = (0, db.c)("/super-rank-welcome"), sb = (0, rb.Ub)((0, Eb.l)(eb.code, "general:timeLeft"), Rb.superRankInfo), gb = Vb(Ub), Cb = sb ? Bb("general:timeLeft", {
-        time: sb
-      }) : gb, [Sb, ba] = (0, Ab.useState)(!1), [Ua, Aa] = (0, Ab.useState)(!1), Ma = (0, Ab.useRef)(null), Ta = (0, Ab.useRef)(null), Ea = (0, qb.e)({
+        t: vz,
+        selectedLanguage: Uz
+      } = (0, Oz.B)(), {
+        hideSocialLocationFrom: uz
+      } = (0, Jz.h)(["hideSocialLocationFrom"]), wz = (0, Nz.b)(), {
+        userContext: Dz,
+        isUserContextUpdating: Bz
+      } = (0, bz.b)(), [Pz, rz] = (0, Fz.useState)(null !== (tz = Dz.getPlayerName()) && void 0 !== tz ? tz : ""), [Iz, Cz] = (0, Fz.useState)(null), {
+        purchasing: iz,
+        outcome: Lz,
+        purchase: lz
+      } = (0, Tz.b)("/super-rank-welcome"), nz = (0, hz.cc)((0, Oz.o)(Uz.code, "general:timeLeft"), Dz.superRankInfo), az = Sz(sz), qz = nz ? vz("general:timeLeft", {
+        time: nz
+      }) : az, [Ez, zt] = (0, Fz.useState)(!1), [st, Ft] = (0, Fz.useState)(!1), Wt = (0, Fz.useRef)(null), Xt = (0, Fz.useRef)(null), Ot = (0, Mz.f)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), Ya = null === Ea, Ba = null !== Ea && void 0 !== Ea ? Ea : [], ea = Rb !== Hb.NULL_USER_CONTEXT && !Rb.isLoggedIn(), va = ea && 0 !== (null === Ea || void 0 === Ea ? void 0 : Ea.length), [La, Pa] = (0, Ab.useState)([]), [ja, Ra] = (0, Ab.useState)(!1), ka = Rb.playerHasRank("youtuber"), Za = (0, Ab.useCallback)((() => ub.b.getPlayerProfile(Rb, {
-        lowerCaseName: Rb.getPlayerName().toLowerCase()
-      }).then((bb => {
-        Pa(bb.socialLinks)
-      })).catch((bb => {
-        console.error("Failed to refresh social links", bb)
-      }))), [Rb]);
+      }), ot = null === Ot, vt = null !== Ot && void 0 !== Ot ? Ot : [], Ut = Dz !== Zz.NULL_USER_CONTEXT && !Dz.isLoggedIn(), Kt = Ut && 0 !== (null === Ot || void 0 === Ot ? void 0 : Ot.length), [ut, Nt] = (0, Fz.useState)([]), [wt, Dt] = (0, Fz.useState)(!1), gt = Dz.playerHasRank("youtuber"), Bt = (0, Fz.useCallback)((() => dz.d.getPlayerProfile(Dz, {
+        lowerCaseName: Dz.getPlayerName().toLowerCase()
+      }).then((zz => {
+        Nt(zz.socialLinks)
+      })).catch((zz => {
+        console.error("Failed to refresh social links", zz)
+      }))), [Dz]);
 
-      function za(bb) {
-        bb !== Db && ((0, hb.o)(bb) ? (bb = (0, hb.q)(bb), Nb("Only letters, numbers, and _")) : Nb(null), Ma.current && (Ma.current.value = bb), zb(bb))
+      function rt(zz) {
+        zz !== Pz && ((0, jz.l)(zz) ? (zz = (0, jz.p)(zz), Cz("Only letters, numbers, and _")) : Cz(null), Wt.current && (Wt.current.value = zz), rz(zz))
       }
-      return (0, Ab.useEffect)((() => (!0 === Ub ? (clearInterval(Ta.current), Ta.current = setInterval(jb, 1e3)) : clearInterval(Ta.current), () => {
-        clearInterval(Ta.current)
-      })), [Ub, jb]), (0, Ab.useEffect)((() => {
-        var bb;
-        zb(null !== (bb = Rb.getPlayerName()) && void 0 !== bb ? bb : "")
-      }), [Rb]), (0, Ab.useEffect)((() => {
-        if (!Ub || !ka || Zb) return;
-        let bb = !1;
-        return Ra(!0), Pa([]), ub.b.getPlayerProfile(Rb, {
-          lowerCaseName: Rb.getPlayerName().toLowerCase()
-        }).then((ab => {
-          bb || Pa(ab.socialLinks)
-        })).catch((bb => {
-          console.error("Failed to load social links", bb)
+      return (0, Fz.useEffect)((() => (!0 === sz ? (clearInterval(Xt.current), Xt.current = setInterval(wz, 1e3)) : clearInterval(Xt.current), () => {
+        clearInterval(Xt.current)
+      })), [sz, wz]), (0, Fz.useEffect)((() => {
+        var zz;
+        rz(null !== (zz = Dz.getPlayerName()) && void 0 !== zz ? zz : "")
+      }), [Dz]), (0, Fz.useEffect)((() => {
+        if (!sz || !gt || Bz) return;
+        let zz = !1;
+        return Dt(!0), Nt([]), dz.d.getPlayerProfile(Dz, {
+          lowerCaseName: Dz.getPlayerName().toLowerCase()
+        }).then((tz => {
+          zz || Nt(tz.socialLinks)
+        })).catch((zz => {
+          console.error("Failed to load social links", zz)
         })).finally((() => {
-          bb || Ra(!1)
+          zz || Dt(!1)
         })), () => {
-          bb = !0
+          zz = !0
         }
-      }), [Ub, ka, Zb, Rb]), (0, vb.jsxs)("div", {
-        className: Tb()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: Mb
+      }), [sz, gt, Bz, Dz]), (0, Kz.jsxs)("div", {
+        className: Xz()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: Wz
         }),
-        children: [Mb && (0, vb.jsx)("div", {
+        children: [Wz && (0, Kz.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: Bb("settingsMenu:accountSettingsInGameWarning")
-        }), (0, vb.jsxs)("div", {
+          children: vz("settingsMenu:accountSettingsInGameWarning")
+        }), (0, Kz.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, vb.jsxs)("div", {
+          children: [(0, Kz.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [Bb("homePage:discordNamePopupTitle"), (0, vb.jsxs)(Fb.LinkPreserveSearch, {
+            children: [vz("homePage:discordNamePopupTitle"), (0, Kz.jsxs)(cz.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, Gb.f)({
-                name: Rb.getPlayerName()
+              to: (0, Az.h)({
+                name: Dz.getPlayerName()
               }),
               onClick: () => {
-                mb.c.set({
+                Jz.b.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, vb.jsx)(Yb.e, {
+              children: [(0, Kz.jsx)(oz.c, {
                 name: "arrow-up-right-from-square"
-              }), " ", Bb("profileCard:viewProfile")]
+              }), " ", vz("profileCard:viewProfile")]
             })]
-          }), (0, vb.jsxs)("div", {
+          }), (0, Kz.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, vb.jsxs)("div", {
+            children: [(0, Kz.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [yb.featureFlags.canChangeName && (0, vb.jsx)(xb.c, {
+              children: [Hz.featureFlags.canChangeName && (0, Kz.jsx)(Yz.d, {
                 className: "EnterName",
-                placeholderText: Bb("homePage:enterName"),
-                maxLength: hb.i,
-                defaultValue: Db,
-                onValueChange: bb => {
-                  za(bb)
+                placeholderText: vz("homePage:enterName"),
+                maxLength: jz.i,
+                defaultValue: Pz,
+                onValueChange: zz => {
+                  rt(zz)
                 },
-                forcedText: Sb || !yb.featureFlags.canChangeName ? Db : null,
+                forcedText: Ez || !Hz.featureFlags.canChangeName ? Pz : null,
                 blurOnEnter: !0,
-                domRef: Ma
-              }), (0, vb.jsx)(kb.g, {
+                domRef: Wt
+              }), (0, Kz.jsx)(gz.h, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  za((0, hb.f)())
+                  rt((0, jz.f)())
                 },
-                children: (0, vb.jsx)(Yb.e, {
+                children: (0, Kz.jsx)(oz.c, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !yb.featureFlags.canChangeName && (0, vb.jsx)("div", {
+              }), !Hz.featureFlags.canChangeName && (0, Kz.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, hb.d)(Db, !yb.featureFlags.canSeeRealPlayerNames)
+                children: (0, jz.c)(Pz, !Hz.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, vb.jsx)(kb.g, {
+            }), (0, Kz.jsx)(gz.h, {
               className: "ChooseNameButton",
-              disabled: Sb || Db === Rb.getPlayerName(),
+              disabled: Ez || Pz === Dz.getPlayerName(),
               onClick: () => {
-                Db.length < hb.m ? Nb(Bb("homePage:changeNameMinLengthError", {
-                  length: hb.m
-                })) : Db.length > hb.i ? Nb(Bb("homePage:changeNameMaxLengthError", {
-                  length: hb.i
-                })) : (ba(!0), Nb(null), async function(bb, ab, Ub, Ab) {
-                  const Mb = await (0, Hb.postJsonWithMetricsCookiesAndJsonResponse)(`${Ib.clientSideServerUrls.indexUrl}/index/name/update`, {
-                    name: bb
+                Pz.length < jz.k ? Cz(vz("homePage:changeNameMinLengthError", {
+                  length: jz.k
+                })) : Pz.length > jz.i ? Cz(vz("homePage:changeNameMaxLengthError", {
+                  length: jz.i
+                })) : (zt(!0), Cz(null), async function(zz, tz, sz, Fz) {
+                  const Wz = await (0, Zz.postJsonWithMetricsCookiesAndJsonResponse)(`${Gz.clientSideServerUrls.indexUrl}/index/name/update`, {
+                    name: zz
                   }, {
                     retries: 3
-                  }, ab.getMetricsCookies()).catch((bb => (console.error("Bad response from the server when trying to update name:", bb), {
+                  }, tz.getMetricsCookies()).catch((zz => (console.error("Bad response from the server when trying to update name:", zz), {
                     err: "An error occurred trying to change your name! Please report on discord what steps you took to get this error message."
                   })));
-                  Mb.err ? (console.error("Error when trying to get with new name from DB", Mb.err), Ab(Mb.err)) : !0 === Mb.nameExists ? Ab("Name is already taken") : Ub(bb)
-                }(Db, Rb, (bb => {
-                  Rb.setPlayerName(bb), ba(!1)
-                }), (bb => {
-                  Nb(bb), ba(!1)
+                  Wz.err ? (console.error("Error when trying to get with new name from DB", Wz.err), Fz(Wz.err)) : !0 === Wz.nameExists ? Fz("Name is already taken") : sz(zz)
+                }(Pz, Dz, (zz => {
+                  Dz.setPlayerName(zz), zt(!1)
+                }), (zz => {
+                  Cz(zz), zt(!1)
                 })))
               },
-              children: Bb("general:choose")
+              children: vz("general:choose")
             })]
-          }), pb && (0, vb.jsx)("div", {
+          }), Iz && (0, Kz.jsx)("div", {
             className: "ChooseAccNameError",
-            children: pb
+            children: Iz
           })]
-        }), (0, vb.jsx)(fb.d, {
+        }), (0, Kz.jsx)(mz.b, {
           label: (() => {
-            if ((0, cb.l)(Lb)) {
-              const bb = (0, Eb.l)(eb.code, "general:timeLeft"),
-                ab = (0, rb.$)(bb, Date.now(), Lb + cb.h);
-              return `${Bb("settingsMenu:hideSocialLocation")} (${Bb("general:timeLeft",{time:ab})})`
+            if ((0, Rz.n)(uz)) {
+              const zz = (0, Oz.o)(Uz.code, "general:timeLeft"),
+                tz = (0, hz.bb)(zz, Date.now(), uz + Rz.m);
+              return `${vz("settingsMenu:hideSocialLocation")} (${vz("general:timeLeft",{time:tz})})`
             }
-            return Bb("settingsMenu:hideSocialLocation")
+            return vz("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const bb = !(0, cb.l)(Lb);
-            (0, nb.reportAnalyticsClick)({
+            const zz = !(0, Rz.n)(uz);
+            (0, fz.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: bb ? "on" : "off"
-            }), Aa(!0), ub.b.setHideSocialLocation(Rb, bb).then((() => {
-              mb.c.set({
-                hideSocialLocationFrom: bb ? Date.now() : null
+              value: zz ? "on" : "off"
+            }), Ft(!0), dz.d.setHideSocialLocation(Dz, zz).then((() => {
+              Jz.b.set({
+                hideSocialLocationFrom: zz ? Date.now() : null
               })
             })).finally((() => {
-              Aa(!1)
+              Ft(!1)
             }))
           },
-          checked: (0, cb.l)(Lb),
-          disabled: Ua
-        }), ka && (0, vb.jsxs)("div", {
+          checked: (0, Rz.n)(uz),
+          disabled: st
+        }), gt && (0, Kz.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, vb.jsx)("div", {
+          children: [(0, Kz.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: Bb("settingsMenu:socialLinks")
-          }), ja && (0, vb.jsx)(ib.b, {}), !ja && (0, vb.jsx)(Jb.b, {
-            socialLinks: La,
+            children: vz("settingsMenu:socialLinks")
+          }), wt && (0, Kz.jsx)(xz.d, {}), !wt && (0, Kz.jsx)(pz.d, {
+            socialLinks: ut,
             editable: !0,
-            userContext: Rb,
-            onLinksUpdated: Za
+            userContext: Dz,
+            onLinksUpdated: Bt
           })]
-        }), (0, vb.jsxs)("div", {
+        }), (0, Kz.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, vb.jsx)("div", {
+          children: [(0, Kz.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: Bb(va ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), Ya && (0, vb.jsx)(ib.b, {}), !Ya && 0 === Ba.length && (0, vb.jsx)("div", {
+            children: vz(Kt ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), ot && (0, Kz.jsx)(xz.d, {}), !ot && 0 === vt.length && (0, Kz.jsx)("div", {
             className: "NoLoginOptions",
-            children: Bb("auth:noLoginOptions")
-          }), !Ya && Ba.length > 0 && "crazygames" !== Wb.p && (0, vb.jsx)("div", {
+            children: vz("auth:noLoginOptions")
+          }), !ot && vt.length > 0 && "crazygames" !== ez.t && (0, Kz.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: Ba
-          }), !Ya && Ba.length > 0 && "crazygames" === Wb.p && (0, vb.jsxs)("div", {
+            children: vt
+          }), !ot && vt.length > 0 && "crazygames" === ez.t && (0, Kz.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [Ba[0], Ba.length > 1 && (0, vb.jsxs)(vb.Fragment, {
-              children: [(0, vb.jsxs)("div", {
+            children: [vt[0], vt.length > 1 && (0, Kz.jsxs)(Kz.Fragment, {
+              children: [(0, Kz.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, vb.jsx)("span", {
+                children: [(0, Kz.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: Bb("auth:legacyLoginOptions")
-                }), (0, vb.jsx)(Ob.d, {
+                  children: vz("auth:legacyLoginOptions")
+                }), (0, Kz.jsx)(Vz.d, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: Bb("auth:legacyLoginOptionsInfo")
+                  hoverInfo: vz("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, vb.jsx)("div", {
+              }), (0, Kz.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: Ba.slice(1)
+                children: vt.slice(1)
               })]
             })]
-          }), yb.featureFlags.useLogin && (null !== Rb.loggedInInfo || Rb.isLoggedIn()) && (0, vb.jsxs)(vb.Fragment, {
-            children: [(0, vb.jsx)("div", {
+          }), Hz.featureFlags.useLogin && (null !== Dz.loggedInInfo || Dz.isLoggedIn()) && (0, Kz.jsxs)(Kz.Fragment, {
+            children: [(0, Kz.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, vb.jsxs)(kb.D, {
+            }), (0, Kz.jsxs)(gz.H, {
               onClick: () => {
-                (0, Hb.forceGlobalSignOut)()
+                (0, Zz.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, vb.jsx)(Yb.e, {
+              children: [(0, Kz.jsx)(oz.c, {
                 name: "right-from-bracket"
-              }), Bb("auth:signOut")]
+              }), vz("auth:signOut")]
             })]
           })]
-        }), !Rb.playerHasRank("super") && (0, ob.purchasesAllowed)() && (0, vb.jsxs)("div", {
+        }), !Dz.playerHasRank("super") && (0, kz.purchasesAllowed)() && (0, Kz.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, vb.jsxs)("div", {
+          children: [(0, Kz.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, vb.jsx)(Yb.e, {
+            children: [(0, Kz.jsx)(oz.c, {
               name: "bolt"
-            }), Bb("homePage:superRank")]
-          }), (0, vb.jsxs)("div", {
+            }), vz("homePage:superRank")]
+          }), (0, Kz.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, vb.jsxs)(kb.m, {
+            children: [(0, Kz.jsxs)(gz.p, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Kb.m)({
+                (0, Qz.p)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, vb.jsx)(Yb.e, {
+              children: [(0, Kz.jsx)(oz.c, {
                 name: "bolt"
-              }), Bb("homePage:getSuperRank")]
-            }), (0, vb.jsxs)(kb.m, {
+              }), vz("homePage:getSuperRank")]
+            }), (0, Kz.jsxs)(gz.p, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Kb.m)({
+                (0, Qz.p)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, vb.jsx)(Yb.e, {
+              children: [(0, Kz.jsx)(oz.c, {
                 name: "bolt"
-              }), Bb("homePage:giftSuperRank")]
+              }), vz("homePage:giftSuperRank")]
             })]
           })]
-        }), Rb.playerHasRank("super") && (0, vb.jsxs)("div", {
+        }), Dz.playerHasRank("super") && (0, Kz.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, vb.jsxs)("div", {
+          children: [(0, Kz.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, vb.jsx)(Yb.e, {
+            children: [(0, Kz.jsx)(oz.c, {
               name: "bolt"
-            }), Bb("homePage:superRank"), Cb && (0, vb.jsxs)("div", {
+            }), vz("homePage:superRank"), qz && (0, Kz.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", Cb, ")"]
+              children: ["(", qz, ")"]
             })]
-          }), (0, ob.purchasesAllowed)() && (0, vb.jsxs)("div", {
+          }), (0, kz.purchasesAllowed)() && (0, Kz.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, rb.mc)(Rb.superRankInfo) && (0, vb.jsxs)(kb.m, {
+            children: [!(0, hz.vc)(Dz.superRankInfo) && (0, Kz.jsxs)(gz.p, {
               className: "AccountSettingsSuperRankProlong",
-              loading: lb,
+              loading: iz,
               onClick: () => {
-                wb(Qb.q.id, null)
+                lz(yz.f.id, null)
               },
-              children: [(0, vb.jsx)(Yb.e, {
+              children: [(0, Kz.jsx)(oz.c, {
                 name: "bolt"
-              }), Bb("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: Qb.q.product.days,
-                price: Qb.q.price
+              }), vz("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: yz.f.product.days,
+                price: yz.f.price
               })]
-            }), (0, vb.jsxs)(kb.m, {
+            }), (0, Kz.jsxs)(gz.p, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Kb.m)({
+                (0, Qz.p)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, vb.jsx)(Yb.e, {
+              children: [(0, Kz.jsx)(oz.c, {
                 name: "bolt"
-              }), Bb("homePage:giftSuperRank")]
+              }), vz("homePage:giftSuperRank")]
             })]
-          }), tb && (0, vb.jsx)("div", {
+          }), Lz && (0, Kz.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: Bb(tb.translationKey)
+            children: vz(Lz.translationKey)
           })]
-        }), (0, vb.jsx)(aa, {
-          showing: Ub
-        }), yb.featureFlags.useSocialFeatures && (0, vb.jsx)(ya, {
-          showing: Ub
-        }), (0, vb.jsxs)("div", {
+        }), (0, Kz.jsx)(tt, {
+          showing: sz
+        }), Hz.featureFlags.useSocialFeatures && (0, Kz.jsx)(Ht, {
+          showing: sz
+        }), (0, Kz.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, vb.jsxs)("div", {
+          children: [(0, Kz.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, vb.jsx)("div", {
+            children: [(0, Kz.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: Bb(Da(ea, va))
-            }), (0, Wb.d)() && (0, vb.jsx)("div", {
+              children: vz(Pt(Ut, Kt))
+            }), (0, ez.e)() && (0, Kz.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: Bb("auth:discordActivityKickWarning")
-            }), (0, vb.jsx)(Xa, {
-              showing: Ub
+              children: vz("auth:discordActivityKickWarning")
+            }), (0, Kz.jsx)(bt, {
+              showing: sz
             })]
-          }), (0, vb.jsx)("div", {
+          }), (0, Kz.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: Bb("auth:deleteAccountWarning")
+            children: vz("auth:deleteAccountWarning")
           })]
         })]
       })
     }));
 
-    function Da(bb, ab) {
-      return bb ? ab ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function Pt(zz, tz) {
+      return zz ? tz ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var za = Ub(8802),
-      xa = Ub(2851),
-      ia = Ub(1198),
-      fa = Ub(1335);
-    const ma = (0, Ab.memo)((function(bb) {
+    var rt = sz(8739),
+      Yt = sz(2862),
+      xt = sz(1237),
+      mt = sz(1401);
+    const Jt = (0, Fz.memo)((function(zz) {
         let {
-          inGame: ab
-        } = bb;
+          inGame: tz
+        } = zz;
         const {
-          t: Ub,
-          selectedLanguage: Ab
-        } = (0, Eb.A)(), {
-          clientEscMenuOptions: Mb,
-          showDebugOverlay: Tb
-        } = (0, mb.n)(["clientEscMenuOptions", "showDebugOverlay"]), Yb = (0, jb.h)("hideCoordinates");
-        let Bb = "settingsMenu:showCoordinates",
-          eb = "settingsMenu:showChunkCoordinates";
+          t: sz,
+          selectedLanguage: Fz
+        } = (0, Oz.B)(), {
+          clientEscMenuOptions: Wz,
+          showDebugOverlay: Xz
+        } = (0, Jz.h)(["clientEscMenuOptions", "showDebugOverlay"]), oz = (0, wz.e)("hideCoordinates");
+        let vz = "settingsMenu:showCoordinates",
+          Uz = "settingsMenu:showChunkCoordinates";
 
-        function Lb(bb) {
-          const ab = new Intl.DisplayNames([bb], {
+        function uz(zz) {
+          const tz = new Intl.DisplayNames([zz], {
             type: "language"
-          }).of(bb);
-          return ab.charAt(0).toUpperCase() + ab.slice(1)
+          }).of(zz);
+          return tz.charAt(0).toUpperCase() + tz.slice(1)
         }
-        return Yb && (Bb = "settingsMenu:showCoordinatesHidden", eb = "settingsMenu:showChunkCoordinatesHidden"), (0, vb.jsxs)("div", {
+        return oz && (vz = "settingsMenu:showCoordinatesHidden", Uz = "settingsMenu:showChunkCoordinatesHidden"), (0, Kz.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [ab && yb.featureFlags.canUseInviteLinks && (0, vb.jsxs)("div", {
+          children: [tz && Hz.featureFlags.canUseInviteLinks && (0, Kz.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, vb.jsx)("div", {
+            children: [(0, Kz.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: Ub("settingsMenu:inviteLink")
-            }), (0, vb.jsx)(za.d, {})]
-          }), (0, vb.jsxs)("div", {
+              children: sz("settingsMenu:inviteLink")
+            }), (0, Kz.jsx)(rt.h, {})]
+          }), (0, Kz.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, vb.jsx)("div", {
+            children: [(0, Kz.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: Ub("settingsMenu:language")
-            }), (0, vb.jsx)(xa.c, {
-              options: Object.entries(Eb.g).map((bb => {
-                let [ab, Ub] = bb;
+              children: sz("settingsMenu:language")
+            }), (0, Kz.jsx)(Yt.d, {
+              options: Object.entries(Oz.i).map((zz => {
+                let [tz, sz] = zz;
                 return {
-                  label: (0, vb.jsxs)("div", {
+                  label: (0, Kz.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, vb.jsx)("img", {
-                      src: Ub.flagImg,
+                    children: [(0, Kz.jsx)("img", {
+                      src: sz.flagImg,
                       alt: "flag"
-                    }), (0, vb.jsxs)("span", {
-                      children: [Lb(ab), " ", (0, vb.jsxs)("span", {
+                    }), (0, Kz.jsxs)("span", {
+                      children: [uz(tz), " ", (0, Kz.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", ab, ")"]
+                        children: ["(", tz, ")"]
                       })]
                     })]
                   }),
-                  value: ab
+                  value: tz
                 }
               })),
-              value: Ab.code,
-              onChange: bb => {
-                ia.f.get().setCurrentLanguage(bb.value)
+              value: Fz.code,
+              onChange: zz => {
+                xt.g.get().setCurrentLanguage(zz.value)
               }
             })]
-          }), !(0, yb.isMobileApp)() && (0, fa.g)() && yb.featureFlags.useForceRotateForceFullscreenOverlay && (0, vb.jsx)(fb.d, {
-            label: Ub("settingsMenu:disableFullscreenMode"),
-            checked: Mb.disableFullscreen,
-            onClick: bb => {
-              mb.c.setClientEscMenuOptions({
-                disableFullscreen: bb
+          }), !(0, Hz.isMobileApp)() && (0, mt.h)() && Hz.featureFlags.useForceRotateForceFullscreenOverlay && (0, Kz.jsx)(mz.b, {
+            label: sz("settingsMenu:disableFullscreenMode"),
+            checked: Wz.disableFullscreen,
+            onClick: zz => {
+              Jz.b.setClientEscMenuOptions({
+                disableFullscreen: zz
               })
             }
-          }), (0, vb.jsx)(fb.d, {
-            label: Ub(Bb),
-            checked: Mb.showCoordinates,
-            onClick: bb => {
-              mb.c.setClientEscMenuOptions({
-                showCoordinates: bb
+          }), (0, Kz.jsx)(mz.b, {
+            label: sz(vz),
+            checked: Wz.showCoordinates,
+            onClick: zz => {
+              Jz.b.setClientEscMenuOptions({
+                showCoordinates: zz
               })
             },
-            disabled: Yb
-          }), (0, vb.jsx)(fb.d, {
-            label: Ub(eb),
-            checked: Mb.showChunkCoordinates,
-            onClick: bb => {
-              mb.c.setClientEscMenuOptions({
-                showChunkCoordinates: bb
+            disabled: oz
+          }), (0, Kz.jsx)(mz.b, {
+            label: sz(Uz),
+            checked: Wz.showChunkCoordinates,
+            onClick: zz => {
+              Jz.b.setClientEscMenuOptions({
+                showChunkCoordinates: zz
               })
             },
-            disabled: Yb
-          }), (0, vb.jsx)(fb.d, {
-            label: Ub("settingsMenu:showFps"),
-            checked: Mb.showFPS,
-            onClick: bb => {
-              mb.c.setClientEscMenuOptions({
-                showFPS: bb
+            disabled: oz
+          }), (0, Kz.jsx)(mz.b, {
+            label: sz("settingsMenu:showFps"),
+            checked: Wz.showFPS,
+            onClick: zz => {
+              Jz.b.setClientEscMenuOptions({
+                showFPS: zz
               })
             }
-          }), (0, vb.jsx)(fb.d, {
-            label: Ub("settingsMenu:disableBunnyHopping"),
-            checked: Mb.disableBunnyHopping,
-            onClick: bb => {
-              mb.c.setClientEscMenuOptions({
-                disableBunnyHopping: bb
+          }), (0, Kz.jsx)(mz.b, {
+            label: sz("settingsMenu:disableBunnyHopping"),
+            checked: Wz.disableBunnyHopping,
+            onClick: zz => {
+              Jz.b.setClientEscMenuOptions({
+                disableBunnyHopping: zz
               })
             }
-          }), (0, Ta.w)() && (0, vb.jsx)(fb.d, {
-            label: Ub("settingsMenu:showChat"),
-            checked: Mb.showChat,
-            onClick: bb => {
-              mb.c.setClientEscMenuOptions({
-                showChat: bb
+          }), (0, Xt.A)() && (0, Kz.jsx)(mz.b, {
+            label: sz("settingsMenu:showChat"),
+            checked: Wz.showChat,
+            onClick: zz => {
+              Jz.b.setClientEscMenuOptions({
+                showChat: zz
               })
             }
-          }), (0, vb.jsx)(fb.d, {
-            label: Ub("settingsMenu:showDebugOverlay"),
-            checked: Tb,
-            onClick: bb => {
-              mb.c.set({
-                showDebugOverlay: bb
+          }), (0, Kz.jsx)(mz.b, {
+            label: sz("settingsMenu:showDebugOverlay"),
+            checked: Xz,
+            onClick: zz => {
+              Jz.b.set({
+                showDebugOverlay: zz
               })
             }
-          }), yb.featureFlags.useSocialFeatures && (0, vb.jsx)(fb.d, {
-            label: Ub("settingsMenu:showFriendOnlineToasts"),
-            checked: Mb.showFriendOnlineToasts,
-            onClick: bb => {
-              mb.c.setClientEscMenuOptions({
-                showFriendOnlineToasts: bb
+          }), Hz.featureFlags.useSocialFeatures && (0, Kz.jsx)(mz.b, {
+            label: sz("settingsMenu:showFriendOnlineToasts"),
+            checked: Wz.showFriendOnlineToasts,
+            onClick: zz => {
+              Jz.b.setClientEscMenuOptions({
+                showFriendOnlineToasts: zz
               })
             }
-          }), (0, vb.jsx)(fb.d, {
-            label: Ub("settingsMenu:showNewItemIndicator"),
-            checked: Mb.showNewItemIndicator,
-            onClick: bb => {
-              mb.c.setClientEscMenuOptions({
-                showNewItemIndicator: bb
+          }), (0, Kz.jsx)(mz.b, {
+            label: sz("settingsMenu:showNewItemIndicator"),
+            checked: Wz.showNewItemIndicator,
+            onClick: zz => {
+              Jz.b.setClientEscMenuOptions({
+                showNewItemIndicator: zz
               })
             }
           })]
         })
       })),
-      pa = (0, Ab.memo)((function() {
+      It = (0, Fz.memo)((function() {
         const {
-          t: bb
-        } = (0, Eb.A)(), {
-          soundVolume: ab,
-          musicVolume: Ub
-        } = (0, mb.n)(["soundVolume", "musicVolume"]);
-        return (0, vb.jsxs)("div", {
+          t: zz
+        } = (0, Oz.B)(), {
+          soundVolume: tz,
+          musicVolume: sz
+        } = (0, Jz.h)(["soundVolume", "musicVolume"]);
+        return (0, Kz.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, vb.jsx)(fb.g, {
-            name: bb("settingsMenu:musicVolume"),
+          children: [(0, Kz.jsx)(mz.g, {
+            name: zz("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: Ub,
-            onChange: bb => {
-              mb.c.set({
-                musicVolume: Math.round(100 * bb) / 100
+            initValue: sz,
+            onChange: zz => {
+              Jz.b.set({
+                musicVolume: Math.round(100 * zz) / 100
               })
             },
-            format: bb => bb.toFixed(2)
-          }), (0, vb.jsx)(fb.g, {
-            name: bb("settingsMenu:soundEffectsVolume"),
+            format: zz => zz.toFixed(2)
+          }), (0, Kz.jsx)(mz.g, {
+            name: zz("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: ab,
-            onChange: bb => {
-              mb.c.set({
-                soundVolume: Math.round(100 * bb) / 100
+            initValue: tz,
+            onChange: zz => {
+              Jz.b.set({
+                soundVolume: Math.round(100 * zz) / 100
               })
             },
-            format: bb => bb.toFixed(2)
+            format: zz => zz.toFixed(2)
           })]
         })
       }));
-    var Na = Ub(675),
-      Wa = Ub(1345),
-      Ha = Ub(3332),
-      Ia = Ub(8807),
-      da = Ub(3170);
-    const Fa = {
+    var Ct = sz(686),
+      et = sz(1416),
+      Zt = sz(3336),
+      Gt = sz(8744),
+      Tt = sz(3163);
+    const ct = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function ha() {
+    function jt() {
       const {
-        t: bb
-      } = (0, Eb.A)(), ab = (0, da.b)(), {
-        mobilePushNotificationsCanAsk: Ub
-      } = (0, mb.n)(["mobilePushNotificationsCanAsk"]), [Mb, Tb] = (0, Ab.useState)(null), [Yb, Bb] = (0, Ab.useState)(!1), [eb, Lb] = (0, Ab.useState)(null), [Pb, Xb] = (0, Ab.useState)(!1), jb = (0, Ab.useCallback)((() => {
-        (0, Ha.e)().then((bb => {
-          ab.current && (Tb(bb), Bb(!1))
-        })).catch((bb => {
-          console.error("Failed to load push notification targets:", bb), ab.current && Bb(!0)
+        t: zz
+      } = (0, Oz.B)(), tz = (0, Tt.d)(), {
+        mobilePushNotificationsCanAsk: sz
+      } = (0, Jz.h)(["mobilePushNotificationsCanAsk"]), [Wz, Xz] = (0, Fz.useState)(null), [oz, vz] = (0, Fz.useState)(!1), [Uz, uz] = (0, Fz.useState)(null), [Nz, bz] = (0, Fz.useState)(!1), wz = (0, Fz.useCallback)((() => {
+        (0, Zt.d)().then((zz => {
+          tz.current && (Xz(zz), vz(!1))
+        })).catch((zz => {
+          console.error("Failed to load push notification targets:", zz), tz.current && vz(!0)
         }))
-      }), [ab]), Rb = (0, Ab.useCallback)((() => {
-        (0, Ia.d)().then((bb => {
-          ab.current && Lb((() => bb))
+      }), [tz]), Dz = (0, Fz.useCallback)((() => {
+        (0, Gt.b)().then((zz => {
+          tz.current && uz((() => zz))
         }))
-      }), [ab]);
-      (0, Ab.useEffect)((() => {
-        jb()
-      }), [jb]), (0, Ab.useEffect)((() => {
-        Rb()
-      }), [Rb, Ub]), (0, Wa.f)(Ha.j, jb);
-      const yb = null === Mb ? [] : Object.keys(Fa).filter((bb => Mb[bb] > 0));
-      return (0, vb.jsxs)("div", {
+      }), [tz]);
+      (0, Fz.useEffect)((() => {
+        wz()
+      }), [wz]), (0, Fz.useEffect)((() => {
+        Dz()
+      }), [Dz, sz]), (0, et.g)(Zt.j, wz);
+      const Hz = null === Wz ? [] : Object.keys(ct).filter((zz => Wz[zz] > 0));
+      return (0, Kz.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, vb.jsx)("div", {
+        children: [(0, Kz.jsx)("div", {
           className: "SliderText",
-          children: bb("notificationSettings:pushNotifications")
-        }), null === Mb && Yb && (0, vb.jsx)("div", {
+          children: zz("notificationSettings:pushNotifications")
+        }), null === Wz && oz && (0, Kz.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: bb("notificationSettings:pushTargetsLoadFailed")
-        }), null !== Mb && 0 === yb.length && (0, vb.jsx)("div", {
+          children: zz("notificationSettings:pushTargetsLoadFailed")
+        }), null !== Wz && 0 === Hz.length && (0, Kz.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: bb("notificationSettings:pushTargetsNone")
-        }), yb.length > 0 && (0, vb.jsx)("ul", {
+          children: zz("notificationSettings:pushTargetsNone")
+        }), Hz.length > 0 && (0, Kz.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: yb.map((ab => {
-            var Ub;
-            return (0, vb.jsx)("li", {
-              children: bb(Fa[ab], {
-                count: null !== (Ub = null === Mb || void 0 === Mb ? void 0 : Mb[ab]) && void 0 !== Ub ? Ub : 0
+          children: Hz.map((tz => {
+            var sz;
+            return (0, Kz.jsx)("li", {
+              children: zz(ct[tz], {
+                count: null !== (sz = null === Wz || void 0 === Wz ? void 0 : Wz[tz]) && void 0 !== sz ? sz : 0
               })
-            }, ab)
+            }, tz)
           }))
-        }), null !== eb && (0, vb.jsx)(kb.g, {
+        }), null !== Uz && (0, Kz.jsx)(gz.h, {
           className: "PushNotificationSettingsButton",
-          loading: Pb,
+          loading: Nz,
           onClick: () => {
-            Xb(!0), eb().catch((bb => {
-              console.error("Failed to turn on push notifications:", bb)
+            bz(!0), Uz().catch((zz => {
+              console.error("Failed to turn on push notifications:", zz)
             })).finally((() => {
-              ab.current && (Xb(!1), Rb())
+              tz.current && (bz(!1), Dz())
             }))
           },
-          children: bb("notificationSettings:pushTurnOn")
+          children: zz("notificationSettings:pushTurnOn")
         })]
       })
     }
-    const Ga = {
+    const At = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1109,337 +1109,337 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      Qa = (0, Ab.memo)((function() {
+      yt = (0, Fz.memo)((function() {
         const {
-          t: bb
-        } = (0, Eb.A)(), {
-          clientEscMenuOptions: ab
-        } = (0, mb.n)(["clientEscMenuOptions"]);
-        return (0, vb.jsxs)("div", {
+          t: zz
+        } = (0, Oz.B)(), {
+          clientEscMenuOptions: tz
+        } = (0, Jz.h)(["clientEscMenuOptions"]);
+        return (0, Kz.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, vb.jsx)(fb.e, {
-            label: bb("notificationSettings:friendRequests"),
-            options: Na.c.map((ab => ({
-              value: ab,
-              label: bb(Ga[ab].label)
+          children: [(0, Kz.jsx)(mz.d, {
+            label: zz("notificationSettings:friendRequests"),
+            options: Ct.b.map((tz => ({
+              value: tz,
+              label: zz(At[tz].label)
             }))),
-            value: ab.friendRequestNotifications,
-            onChange: bb => {
-              mb.c.setClientEscMenuOptions({
-                friendRequestNotifications: bb
+            value: tz.friendRequestNotifications,
+            onChange: zz => {
+              Jz.b.setClientEscMenuOptions({
+                friendRequestNotifications: zz
               })
             },
-            circleInfoText: (0, vb.jsx)("div", {
+            circleInfoText: (0, Kz.jsx)("div", {
               className: "NotificationSettingLevelsInfo",
-              children: Na.c.map((ab => (0, vb.jsxs)("div", {
-                children: [(0, vb.jsx)("b", {
-                  children: bb(Ga[ab].label)
-                }), ": ", bb(Ga[ab].info)]
-              }, ab)))
+              children: Ct.b.map((tz => (0, Kz.jsxs)("div", {
+                children: [(0, Kz.jsx)("b", {
+                  children: zz(At[tz].label)
+                }), ": ", zz(At[tz].info)]
+              }, tz)))
             })
-          }), (0, vb.jsx)(ha, {})]
+          }), (0, Kz.jsx)(jt, {})]
         })
       }));
-    var qa = Ub(4188),
-      ua = Ub(205),
-      ra = Ub(292),
-      Ka = Ub(6294),
-      oa = Ub(3132),
-      la = Ub(8815),
-      ta = Ub(591),
-      wa = Ub(22);
-    var sa = Ub(603),
-      ga = Ub(31),
-      Ca = Ub(4056);
-    const Va = new Map([
+    var Mt = sz(4145),
+      dt = sz(201),
+      ht = sz(290),
+      Qt = sz(6237),
+      kt = sz(3133),
+      it = sz(8752),
+      Lt = sz(580),
+      lt = sz(34);
+    var nt = sz(601),
+      qt = sz(44),
+      St = sz(4027);
+    const Vt = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function Oa(bb) {
-      return Va.has(bb) ? Zb.gameBridge.lookup("iZ", null) : null
+    function Rt(zz) {
+      return Vt.has(zz) ? Bz.gameBridge.lookup("RP", null) : null
     }
 
-    function ca(bb) {
-      if (!(0, ta.I)(mb.c.get("clientEscMenuOptions")[bb])) return mb.c.get("clientEscMenuOptions")[bb];
-      const ab = Oa(bb);
-      return null !== ab ? ab[Va.get(bb)] : ga.f.getItem(bb)
+    function pt(zz) {
+      if (!(0, Lt.G)(Jz.b.get("clientEscMenuOptions")[zz])) return Jz.b.get("clientEscMenuOptions")[zz];
+      const tz = Rt(zz);
+      return null !== tz ? tz[Vt.get(zz)] : qt.f.getItem(zz)
     }
 
-    function Ja(bb, ab) {
-      if ("useTouchControls" === bb) return void(0, Ca.d)(ab);
-      bb in mb.c.get("clientEscMenuOptions") && mb.c.setClientEscMenuOptions({
-        [bb]: ab
+    function ft(zz, tz) {
+      if ("useTouchControls" === zz) return void(0, St.c)(tz);
+      zz in Jz.b.get("clientEscMenuOptions") && Jz.b.setClientEscMenuOptions({
+        [zz]: tz
       });
-      const Ub = Oa(bb);
-      null !== Ub && Zb.gameBridge.send("setChunkAddDistance", {
-        ...Ub,
-        [Va.get(bb)]: ab
-      }), ga.f.setItem(bb, ab)
+      const sz = Rt(zz);
+      null !== sz && Bz.gameBridge.send("setChunkAddDistance", {
+        ...sz,
+        [Vt.get(zz)]: tz
+      }), qt.f.setItem(zz, tz)
     }
-    var na = Ub(4095),
-      Sa = Ub(8820),
-      bU = Ub(8822),
-      aU = Ub(4183);
+    var Et = sz(4063),
+      zs = sz(8755),
+      ts = sz(8757),
+      ss = sz(4142);
 
-    function UU(bb) {
-      var ab, Mb, Yb, Bb;
+    function Fs(zz) {
+      var tz, Wz, oz, vz;
       let {
-        minChunkAddDist: eb,
-        getValue: Lb,
-        onChange: Pb,
-        setApplySettingsCallback: Xb
-      } = bb;
+        minChunkAddDist: Uz,
+        getValue: uz,
+        onChange: Nz,
+        setApplySettingsCallback: bz
+      } = zz;
       const {
-        t: Rb
-      } = (0, Eb.A)(), {
-        clientEscMenuOptions: kb
-      } = (0, mb.n)(["clientEscMenuOptions", "showDistantNametags"]), Zb = (0, Ab.useRef)(Lb("showFog")), Db = (0, Ab.useRef)(kb.antiAliasing), zb = (0, Ab.useRef)(kb.useWebGpu), [xb, ib] = (0, Ab.useState)(null), [Nb, Wb] = (0, Ab.useState)((() => (0, oa.g)(yb.featureFlags.settings.canUseShaderPacks))), [Hb] = (0, Ab.useState)((() => mb.c.isWebGpuDefaultOff())), [Ib] = (0, Ab.useState)(ra.f);
-      (0, Ab.useEffect)((() => {
-        let bb = !1;
-        return (0, yb.hasUsableWebGpuAdapter)().then((ab => {
-          bb || ib(ab)
-        })), (0, oa.k)(yb.featureFlags.settings.canUseShaderPacks) && (0, Ka.f)().then((async ab => {
-          const Ab = null !== ab && await async function(bb) {
+        t: Dz
+      } = (0, Oz.B)(), {
+        clientEscMenuOptions: gz
+      } = (0, Jz.h)(["clientEscMenuOptions", "showDistantNametags"]), Bz = (0, Fz.useRef)(uz("showFog")), Pz = (0, Fz.useRef)(gz.antiAliasing), rz = (0, Fz.useRef)(gz.useWebGpu), [Yz, xz] = (0, Fz.useState)(null), [Cz, ez] = (0, Fz.useState)((() => (0, kt.f)(Hz.featureFlags.settings.canUseShaderPacks))), [Zz] = (0, Fz.useState)((() => Jz.b.isWebGpuDefaultOff())), [Gz] = (0, Fz.useState)(ht.g);
+      (0, Fz.useEffect)((() => {
+        let zz = !1;
+        return (0, Hz.hasUsableWebGpuAdapter)().then((tz => {
+          zz || xz(tz)
+        })), (0, kt.k)(Hz.featureFlags.settings.canUseShaderPacks) && (0, Qt.g)().then((async tz => {
+          const Fz = null !== tz && await async function(zz) {
             const [{
-              isShaderPackActive: ab
+              isShaderPackActive: tz
             }, {
-              loadPageShaderPackCompiler: Ab
-            }] = await Promise.all([Ub.e(127).then((() => Ub(6285))), Promise.all([Ub.e(74), Ub.e(131), Ub.e(130)]).then((() => Ub(6244)))]);
-            return ab(bb, await Ab())
-          }(ab);
-          bb || Wb(Ab)
+              loadPageShaderPackCompiler: Fz
+            }] = await Promise.all([sz.e(127).then((() => sz(6234))), Promise.all([sz.e(74), sz.e(131), sz.e(130)]).then((() => sz(6193)))]);
+            return tz(zz, await Fz())
+          }(tz);
+          zz || ez(Fz)
         })), () => {
-          bb = !0
+          zz = !0
         }
       }), []);
-      const db = function(bb, ab, Ub, Ab, Mb) {
-          return (0, la.d)(Ub, Ab) && !0 === ab ? {
+      const Tz = function(zz, tz, sz, Fz, Wz) {
+          return (0, it.d)(sz, Fz) && !0 === tz ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== ab ? "settingsMenu:newWebGpu" : Mb ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: bb && !1 !== ab,
-            disabled: !0 !== ab
+            translationKey: !1 !== tz ? "settingsMenu:newWebGpu" : Wz ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: zz && !1 !== tz,
+            disabled: !0 !== tz
           }
-        }(kb.useWebGpu, xb, Nb, Hb, Ib),
-        Fb = (kb.useWebGpu || (0, la.d)(Nb, Hb)) && Nb && !0 === xb,
-        hb = (0, jb.h)("lightingOverride"),
-        Gb = !(0, ta.I)(hb);
-      let Qb = "settingsMenu:enableLighting";
-      Gb && (Qb = hb ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const qb = bb => {
-          var ab, Ub, Ab;
-          const Mb = null !== (ab = bb.showFog) && void 0 !== ab ? ab : Lb("showFog"),
-            Tb = null !== (Ub = bb.antiAliasing) && void 0 !== Ub ? Ub : kb.antiAliasing,
-            Eb = null !== (Ab = bb.useWebGpu) && void 0 !== Ab ? Ab : kb.useWebGpu,
-            Yb = !sa.o && Mb !== Zb.current || Tb !== Db.current || Eb !== zb.current;
-          Xb(Yb ? () => fb.h : null)
+        }(gz.useWebGpu, Yz, Cz, Zz, Gz),
+        cz = (gz.useWebGpu || (0, it.d)(Cz, Zz)) && Cz && !0 === Yz,
+        jz = (0, wz.e)("lightingOverride"),
+        Az = !(0, Lt.G)(jz);
+      let yz = "settingsMenu:enableLighting";
+      Az && (yz = jz ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const Mz = zz => {
+          var tz, sz, Fz;
+          const Wz = null !== (tz = zz.showFog) && void 0 !== tz ? tz : uz("showFog"),
+            Xz = null !== (sz = zz.antiAliasing) && void 0 !== sz ? sz : gz.antiAliasing,
+            Oz = null !== (Fz = zz.useWebGpu) && void 0 !== Fz ? Fz : gz.useWebGpu,
+            oz = !nt.p && Wz !== Bz.current || Xz !== Pz.current || Oz !== rz.current;
+          bz(oz ? () => mz.h : null)
         },
-        ub = (0, jb.h)("fogChunkDistanceOverride"),
-        rb = (0, jb.h)("fogBlockDistanceOverride"),
-        Kb = !(0, ta.I)(ub) || !(0, ta.I)(rb),
-        ob = Kb ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [lb, tb] = (0, qa.f)(eb),
-        [wb, sb] = (0, aU.e)(eb),
-        gb = Rb("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        Cb = wb < lb,
-        Vb = Math.min(null !== (ab = Lb("chunkHorizAddDist")) && void 0 !== ab ? ab : eb[0], wb),
-        Ob = !Kb && function(bb, ab) {
-          return !0 === bb.showFog && bb.fogChunkDistance > ab
-        }(kb, Vb);
-      return (0, vb.jsxs)("div", {
+        dz = (0, wz.e)("fogChunkDistanceOverride"),
+        hz = (0, wz.e)("fogBlockDistanceOverride"),
+        Qz = !(0, Lt.G)(dz) || !(0, Lt.G)(hz),
+        kz = Qz ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [iz, Lz] = (0, Mt.c)(Uz),
+        [lz, nz] = (0, ss.j)(Uz),
+        az = Dz("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        qz = lz < iz,
+        Sz = Math.min(null !== (tz = uz("chunkHorizAddDist")) && void 0 !== tz ? tz : Uz[0], lz),
+        Vz = !Qz && function(zz, tz) {
+          return !0 === zz.showFog && zz.fogChunkDistance > tz
+        }(gz, Sz);
+      return (0, Kz.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, vb.jsx)(fb.g, {
-          name: Rb("settingsMenu:horizontalChunkLoadDistance"),
-          min: eb[0],
-          max: lb,
-          selectableMax: wb,
-          cappedNote: gb,
+        children: [(0, Kz.jsx)(mz.g, {
+          name: Dz("settingsMenu:horizontalChunkLoadDistance"),
+          min: Uz[0],
+          max: iz,
+          selectableMax: lz,
+          cappedNote: az,
           step: 1,
-          initValue: Vb,
-          onChange: bb => {
-            !0 === Lb("showFog") && bb < Lb("fogChunkDistance") && Pb("fogChunkDistance", bb), Pb("chunkHorizAddDist", bb), wa.m.IR("updatedChunkLoadDist")
+          initValue: Sz,
+          onChange: zz => {
+            !0 === uz("showFog") && zz < uz("fogChunkDistance") && Nz("fogChunkDistance", zz), Nz("chunkHorizAddDist", zz), lt.o.Yg("updatedChunkLoadDist")
           },
-          circleInfoText: Rb("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, vb.jsx)(fb.g, {
-          name: Rb("settingsMenu:verticalChunkLoadDistance"),
-          min: eb[1],
-          max: tb,
-          selectableMax: sb,
-          cappedNote: Cb ? void 0 : gb,
+          circleInfoText: Dz("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, Kz.jsx)(mz.g, {
+          name: Dz("settingsMenu:verticalChunkLoadDistance"),
+          min: Uz[1],
+          max: Lz,
+          selectableMax: nz,
+          cappedNote: qz ? void 0 : az,
           step: 1,
-          initValue: Math.min(null !== (Mb = Lb("chunkVertAddDist")) && void 0 !== Mb ? Mb : eb[1], sb),
-          onChange: bb => {
-            Pb("chunkVertAddDist", bb), wa.m.IR("updatedChunkLoadDist")
+          initValue: Math.min(null !== (Wz = uz("chunkVertAddDist")) && void 0 !== Wz ? Wz : Uz[1], nz),
+          onChange: zz => {
+            Nz("chunkVertAddDist", zz), lt.o.Yg("updatedChunkLoadDist")
           },
-          circleInfoText: Rb("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: Dz("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, vb.jsx)(fb.d, {
-          label: Rb("settingsMenu:chunkFadeIn"),
-          checked: kb.chunkFadeIn,
-          onClick: bb => {
-            mb.c.setClientEscMenuOptions({
-              chunkFadeIn: bb
+        }), (0, Kz.jsx)(mz.b, {
+          label: Dz("settingsMenu:chunkFadeIn"),
+          checked: gz.chunkFadeIn,
+          onClick: zz => {
+            Jz.b.setClientEscMenuOptions({
+              chunkFadeIn: zz
             })
           },
-          circleInfoText: Rb("settingsMenu:chunkFadeInInfo")
-        }), pb.devTools.supports("chunkBorders") && (0, vb.jsx)(fb.d, {
-          label: Rb("settingsMenu:showChunkBorders"),
-          checked: kb.showChunkBorders,
-          onClick: bb => {
-            mb.c.setClientEscMenuOptions({
-              showChunkBorders: bb
+          circleInfoText: Dz("settingsMenu:chunkFadeInInfo")
+        }), Iz.devTools.supports("chunkBorders") && (0, Kz.jsx)(mz.b, {
+          label: Dz("settingsMenu:showChunkBorders"),
+          checked: gz.showChunkBorders,
+          onClick: zz => {
+            Jz.b.setClientEscMenuOptions({
+              showChunkBorders: zz
             })
           },
-          circleInfoText: Rb("settingsMenu:showChunkBordersInfo")
-        }), (0, vb.jsx)(fb.d, {
-          label: Rb(Qb),
-          checked: kb.enableLighting,
-          onClick: bb => {
-            mb.c.setClientEscMenuOptions({
-              enableLighting: bb
+          circleInfoText: Dz("settingsMenu:showChunkBordersInfo")
+        }), (0, Kz.jsx)(mz.b, {
+          label: Dz(yz),
+          checked: gz.enableLighting,
+          onClick: zz => {
+            Jz.b.setClientEscMenuOptions({
+              enableLighting: zz
             })
           },
-          disabled: Gb
-        }), (0, vb.jsxs)("div", {
+          disabled: Az
+        }), (0, Kz.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, vb.jsx)(fb.d, {
-            label: Rb(ob),
-            checked: kb.showFog,
-            onClick: bb => {
-              qb({
-                showFog: bb
-              }), mb.c.setClientEscMenuOptions({
-                showFog: bb
+          children: [(0, Kz.jsx)(mz.b, {
+            label: Dz(kz),
+            checked: gz.showFog,
+            onClick: zz => {
+              Mz({
+                showFog: zz
+              }), Jz.b.setClientEscMenuOptions({
+                showFog: zz
               })
             },
-            disabled: Kb,
-            className: Tb()({
-              SettingBoxWarning: Ob
+            disabled: Qz,
+            className: Xz()({
+              SettingBoxWarning: Vz
             })
-          }), (0, vb.jsx)(fb.g, {
-            name: Rb("settingsMenu:fogChunkDistance"),
-            min: eb[0],
-            max: ua.c.maxChunkHorizAddDistance,
+          }), (0, Kz.jsx)(mz.g, {
+            name: Dz("settingsMenu:fogChunkDistance"),
+            min: Uz[0],
+            max: dt.d.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (Yb = kb.fogChunkDistance) && void 0 !== Yb ? Yb : eb[0],
-            onChange: bb => {
-              mb.c.setClientEscMenuOptions({
-                fogChunkDistance: bb
-              }), wa.m.IR("fogChunkDistanceChanged", bb)
+            initValue: null !== (oz = gz.fogChunkDistance) && void 0 !== oz ? oz : Uz[0],
+            onChange: zz => {
+              Jz.b.setClientEscMenuOptions({
+                fogChunkDistance: zz
+              }), lt.o.Yg("fogChunkDistanceChanged", zz)
             },
-            circleInfoText: Rb("settingsMenu:fogChunkDistanceInfo"),
-            disabled: Kb || !1 === Lb("showFog"),
-            className: Tb()({
-              SettingBoxWarning: Ob
+            circleInfoText: Dz("settingsMenu:fogChunkDistanceInfo"),
+            disabled: Qz || !1 === uz("showFog"),
+            className: Xz()({
+              SettingBoxWarning: Vz
             })
-          }), Ob && (0, vb.jsx)("div", {
+          }), Vz && (0, Kz.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: Rb("settingsMenu:fogChunkDistanceInfo")
+            children: Dz("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !sa.o && (0, vb.jsx)(fb.d, {
-          label: Rb(Fb ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !Fb && kb.disableTexAtlas,
-          onClick: bb => {
-            mb.c.setClientEscMenuOptions({
-              disableTexAtlas: bb
+        }), !nt.p && (0, Kz.jsx)(mz.b, {
+          label: Dz(cz ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !cz && gz.disableTexAtlas,
+          onClick: zz => {
+            Jz.b.setClientEscMenuOptions({
+              disableTexAtlas: zz
             })
           },
-          circleInfoText: Rb("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: Fb
-        }), (0, vb.jsx)(fb.g, {
-          name: Rb("settingsMenu:fieldOfView"),
+          circleInfoText: Dz("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: cz
+        }), (0, Kz.jsx)(mz.g, {
+          name: Dz("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: kb.cameraFOV,
-          onChange: bb => {
-            mb.c.setClientEscMenuOptions({
-              cameraFOV: bb
+          initValue: gz.cameraFOV,
+          onChange: zz => {
+            Jz.b.setClientEscMenuOptions({
+              cameraFOV: zz
             })
           }
-        }), (0, vb.jsx)(fb.d, {
-          label: Rb("settingsMenu:disableViewBobbing"),
-          checked: kb.disableBobbing,
-          onClick: bb => {
-            mb.c.setClientEscMenuOptions({
-              disableBobbing: bb
+        }), (0, Kz.jsx)(mz.b, {
+          label: Dz("settingsMenu:disableViewBobbing"),
+          checked: gz.disableBobbing,
+          onClick: zz => {
+            Jz.b.setClientEscMenuOptions({
+              disableBobbing: zz
             })
           },
-          circleInfoText: Rb("settingsMenu:disableViewBobbingInfo")
-        }), (0, vb.jsx)(fb.d, {
-          label: Rb("settingsMenu:antiAliasing"),
-          checked: kb.antiAliasing,
-          onClick: bb => {
-            qb({
-              antiAliasing: bb
-            }), (0, na.f)("antiAliasing"), mb.c.setClientEscMenuOptions({
-              antiAliasing: bb
+          circleInfoText: Dz("settingsMenu:disableViewBobbingInfo")
+        }), (0, Kz.jsx)(mz.b, {
+          label: Dz("settingsMenu:antiAliasing"),
+          checked: gz.antiAliasing,
+          onClick: zz => {
+            Mz({
+              antiAliasing: zz
+            }), (0, Et.g)("antiAliasing"), Jz.b.setClientEscMenuOptions({
+              antiAliasing: zz
             })
           },
-          circleInfoText: Rb("settingsMenu:antiAliasingInfo")
-        }), (0, vb.jsx)(fb.g, {
-          name: Rb("settingsMenu:pixelScale"),
+          circleInfoText: Dz("settingsMenu:antiAliasingInfo")
+        }), (0, Kz.jsx)(mz.g, {
+          name: Dz("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (Bb = kb.pixelScale) && void 0 !== Bb ? Bb : 1,
-          onChange: bb => {
-            (bb !== mb.c.get("clientEscMenuOptions").pixelScale || (0, bU.p)()) && (0, na.f)("pixelScale"), mb.c.setClientEscMenuOptions({
-              pixelScale: bb
+          initValue: null !== (vz = gz.pixelScale) && void 0 !== vz ? vz : 1,
+          onChange: zz => {
+            (zz !== Jz.b.get("clientEscMenuOptions").pixelScale || (0, ts.r)()) && (0, Et.g)("pixelScale"), Jz.b.setClientEscMenuOptions({
+              pixelScale: zz
             })
           },
-          circleInfoText: Rb("settingsMenu:pixelScaleInfo"),
-          format: bb => `${bb}x`
-        }), (0, vb.jsx)(fb.d, {
-          label: Rb("settingsMenu:pixelSmoothing"),
-          checked: kb.pixelSmoothing,
-          onClick: bb => {
-            mb.c.setClientEscMenuOptions({
-              pixelSmoothing: bb
+          circleInfoText: Dz("settingsMenu:pixelScaleInfo"),
+          format: zz => `${zz}x`
+        }), (0, Kz.jsx)(mz.b, {
+          label: Dz("settingsMenu:pixelSmoothing"),
+          checked: gz.pixelSmoothing,
+          onClick: zz => {
+            Jz.b.setClientEscMenuOptions({
+              pixelSmoothing: zz
             })
           },
-          circleInfoText: Rb("settingsMenu:pixelSmoothingInfo")
-        }), sa.o && (0, vb.jsx)(fb.d, {
-          label: Rb("settingsMenu:distantNametags"),
-          checked: (0, Sa.d)(),
-          onClick: bb => {
-            mb.c.set({
-              showDistantNametags: bb
+          circleInfoText: Dz("settingsMenu:pixelSmoothingInfo")
+        }), nt.p && (0, Kz.jsx)(mz.b, {
+          label: Dz("settingsMenu:distantNametags"),
+          checked: (0, zs.e)(),
+          onClick: zz => {
+            Jz.b.set({
+              showDistantNametags: zz
             })
           },
-          circleInfoText: Rb("settingsMenu:distantNametagsInfo")
-        }), (0, vb.jsx)(fb.d, {
-          label: Rb(db.translationKey),
-          checked: db.checked,
-          onClick: bb => {
-            qb({
-              useWebGpu: bb
-            }), mb.c.setClientEscMenuOptions({
-              useWebGpu: bb
+          circleInfoText: Dz("settingsMenu:distantNametagsInfo")
+        }), (0, Kz.jsx)(mz.b, {
+          label: Dz(Tz.translationKey),
+          checked: Tz.checked,
+          onClick: zz => {
+            Mz({
+              useWebGpu: zz
+            }), Jz.b.setClientEscMenuOptions({
+              useWebGpu: zz
             })
           },
-          circleInfoText: Rb("settingsMenu:newWebGpuInfo"),
-          disabled: db.disabled
+          circleInfoText: Dz("settingsMenu:newWebGpuInfo"),
+          disabled: Tz.disabled
         })]
       })
     }
-    var AU = Ub(4088),
-      MU = Ub(8427),
-      TU = Ub(8836),
-      EU = Ub(8432),
-      YU = Ub(8842);
-    const BU = {
+    var Ws = sz(4057),
+      Xs = sz(8361),
+      Os = sz(8779),
+      os = sz(8374),
+      vs = sz(8785);
+    const Us = {
         color: 16777215,
         name: "white"
       },
-      eU = {
+      Ks = {
         color: 0,
         name: "black"
       },
-      vU = [BU, {
+      us = [Us, {
         color: 5046092,
         name: "green"
       }, {
@@ -1454,73 +1454,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, eU],
-      LU = [eU, BU];
+      }, Ks],
+      Ns = [Ks, Us];
 
-    function PU(bb) {
-      return `${bb} px`
+    function bs(zz) {
+      return `${zz} px`
     }
 
-    function XU(bb) {
-      return `${bb}%`
+    function ws(zz) {
+      return `${zz}%`
     }
 
-    function jU(bb) {
+    function Ds(zz) {
       let {
-        label: ab,
-        value: Ub,
-        swatches: Ab,
-        onChange: Mb
-      } = bb;
+        label: tz,
+        value: sz,
+        swatches: Fz,
+        onChange: Wz
+      } = zz;
       const {
-        t: Yb
-      } = (0, Eb.A)(), Bb = !Ab.some((bb => bb.color === Ub));
-      return (0, vb.jsxs)("div", {
+        t: oz
+      } = (0, Oz.B)(), vz = !Fz.some((zz => zz.color === sz));
+      return (0, Kz.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, vb.jsx)("div", {
+        children: [(0, Kz.jsx)("div", {
           className: "SliderText",
-          children: ab
-        }), (0, vb.jsxs)("div", {
+          children: tz
+        }), (0, Kz.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": ab,
-          children: [Ab.map((bb => {
+          "aria-label": tz,
+          children: [Fz.map((zz => {
             let {
-              color: ab,
-              name: Ab
-            } = bb;
-            return (0, vb.jsx)("button", {
+              color: tz,
+              name: Fz
+            } = zz;
+            return (0, Kz.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": ab === Ub,
-              "aria-label": Yb(`crosshairSettings:color_${Ab}`),
+              "aria-checked": tz === sz,
+              "aria-label": oz(`crosshairSettings:color_${Fz}`),
               "data-pad-focusable": !0,
-              className: Tb()("CrosshairSwatch", {
-                Selected: ab === Ub
+              className: Xz()("CrosshairSwatch", {
+                Selected: tz === sz
               }),
               style: {
-                background: (0, YU.i)(ab)
+                background: (0, vs.n)(tz)
               },
               onClick: () => {
-                Mb(ab)
+                Wz(tz)
               }
-            }, ab)
-          })), (0, vb.jsx)("label", {
-            className: Tb()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: Bb
+            }, tz)
+          })), (0, Kz.jsx)("label", {
+            className: Xz()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: vz
             }),
-            style: Bb ? {
-              background: (0, YU.i)(Ub)
+            style: vz ? {
+              background: (0, vs.n)(sz)
             } : void 0,
-            title: Yb("crosshairSettings:customColor"),
+            title: oz("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, vb.jsx)("input", {
+            children: (0, Kz.jsx)("input", {
               type: "color",
-              "aria-label": Yb("crosshairSettings:customColor"),
-              value: (0, YU.i)(Ub),
-              onChange: bb => {
-                const ab = (0, YU.n)(bb.target.value);
-                null !== ab && Mb(ab)
+              "aria-label": oz("crosshairSettings:customColor"),
+              value: (0, vs.n)(sz),
+              onChange: zz => {
+                const tz = (0, vs.u)(zz.target.value);
+                null !== tz && Wz(tz)
               }
             })
           })]
@@ -1528,119 +1528,119 @@ export const modules = {
       })
     }
 
-    function RU(bb) {
+    function gs(zz) {
       let {
-        settings: ab,
-        onChange: Ub
-      } = bb;
+        settings: tz,
+        onChange: sz
+      } = zz;
       const {
-        t: Ab
-      } = (0, Eb.A)(), Mb = (bb, Ab) => {
-        Ub((0, YU.q)(ab, bb, Ab))
-      }, Tb = function(bb, Ub) {
-        let Ab = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : PU;
+        t: Fz
+      } = (0, Oz.B)(), Wz = (zz, Fz) => {
+        sz((0, vs.y)(tz, zz, Fz))
+      }, Xz = function(zz, sz) {
+        let Fz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bs;
         const {
-          min: Tb,
-          max: Eb,
-          step: Yb
-        } = YU.b[bb];
-        return (0, vb.jsx)(fb.g, {
-          name: Ub,
-          min: Tb,
-          max: Eb,
-          step: Yb,
-          initValue: ab[bb],
-          format: Ab,
-          onChange: ab => {
-            Mb(bb, ab)
+          min: Xz,
+          max: Oz,
+          step: oz
+        } = vs.e[zz];
+        return (0, Kz.jsx)(mz.g, {
+          name: sz,
+          min: Xz,
+          max: Oz,
+          step: oz,
+          initValue: tz[zz],
+          format: Fz,
+          onChange: tz => {
+            Wz(zz, tz)
           }
-        }, bb)
-      }, Yb = ["lines", "dot", "circle"].filter((bb => ab[bb])), Bb = (bb, Ub, Ab) => (0, vb.jsx)(fb.d, {
-        label: Ub,
-        checked: ab[bb],
-        disabled: 1 === Yb.length && Yb[0] === bb,
-        circleInfoText: Ab,
-        onClick: ab => {
-          Mb(bb, ab)
+        }, zz)
+      }, oz = ["lines", "dot", "circle"].filter((zz => tz[zz])), vz = (zz, sz, Fz) => (0, Kz.jsx)(mz.b, {
+        label: sz,
+        checked: tz[zz],
+        disabled: 1 === oz.length && oz[0] === zz,
+        circleInfoText: Fz,
+        onClick: tz => {
+          Wz(zz, tz)
         }
-      }, bb), eb = "shapes" === ab.style;
-      return (0, vb.jsxs)(vb.Fragment, {
-        children: [(0, vb.jsx)(fb.e, {
-          label: Ab("crosshairSettings:style"),
+      }, zz), Uz = "shapes" === tz.style;
+      return (0, Kz.jsxs)(Kz.Fragment, {
+        children: [(0, Kz.jsx)(mz.d, {
+          label: Fz("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: Ab("crosshairSettings:styleClassic")
+            label: Fz("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: Ab("crosshairSettings:styleShapes")
+            label: Fz("crosshairSettings:styleShapes")
           }],
-          value: ab.style,
-          onChange: bb => {
-            Mb("style", bb)
+          value: tz.style,
+          onChange: zz => {
+            Wz("style", zz)
           }
-        }), (0, vb.jsx)(jU, {
-          label: Ab("crosshairSettings:color"),
-          value: ab.color,
-          swatches: vU,
-          onChange: bb => {
-            Mb("color", bb)
+        }), (0, Kz.jsx)(Ds, {
+          label: Fz("crosshairSettings:color"),
+          value: tz.color,
+          swatches: us,
+          onChange: zz => {
+            Wz("color", zz)
           }
-        }), Tb("opacity", Ab("crosshairSettings:opacity"), XU), !eb && Tb("size", Ab("crosshairSettings:size"), XU), eb && (0, vb.jsxs)("div", {
+        }), Xz("opacity", Fz("crosshairSettings:opacity"), ws), !Uz && Xz("size", Fz("crosshairSettings:size"), ws), Uz && (0, Kz.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [Bb("lines", Ab("crosshairSettings:lines")), ab.lines && Tb("lineLength", Ab("crosshairSettings:lineLength")), ab.lines && Tb("lineThickness", Ab("crosshairSettings:lineThickness")), ab.lines && Tb("gap", Ab("crosshairSettings:gap")), ab.lines && Bb("tStyle", Ab("crosshairSettings:tStyle"))]
-        }), eb && (0, vb.jsxs)("div", {
+          children: [vz("lines", Fz("crosshairSettings:lines")), tz.lines && Xz("lineLength", Fz("crosshairSettings:lineLength")), tz.lines && Xz("lineThickness", Fz("crosshairSettings:lineThickness")), tz.lines && Xz("gap", Fz("crosshairSettings:gap")), tz.lines && vz("tStyle", Fz("crosshairSettings:tStyle"))]
+        }), Uz && (0, Kz.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [Bb("dot", Ab("crosshairSettings:dot")), ab.dot && Tb("dotSize", Ab("crosshairSettings:dotSize"))]
-        }), eb && (0, vb.jsxs)("div", {
+          children: [vz("dot", Fz("crosshairSettings:dot")), tz.dot && Xz("dotSize", Fz("crosshairSettings:dotSize"))]
+        }), Uz && (0, Kz.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [Bb("circle", Ab("crosshairSettings:circle")), ab.circle && Tb("circleRadius", Ab("crosshairSettings:circleRadius")), ab.circle && Tb("circleThickness", Ab("crosshairSettings:circleThickness"))]
-        }), (0, vb.jsxs)("div", {
+          children: [vz("circle", Fz("crosshairSettings:circle")), tz.circle && Xz("circleRadius", Fz("crosshairSettings:circleRadius")), tz.circle && Xz("circleThickness", Fz("crosshairSettings:circleThickness"))]
+        }), (0, Kz.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [Tb("outline", Ab("crosshairSettings:outline"), (bb => bb > 0 ? PU(bb) : Ab("crosshairSettings:off"))), ab.outline > 0 && (0, vb.jsx)(jU, {
-            label: Ab("crosshairSettings:outlineColor"),
-            value: ab.outlineColor,
-            swatches: LU,
-            onChange: bb => {
-              Mb("outlineColor", bb)
+          children: [Xz("outline", Fz("crosshairSettings:outline"), (zz => zz > 0 ? bs(zz) : Fz("crosshairSettings:off"))), tz.outline > 0 && (0, Kz.jsx)(Ds, {
+            label: Fz("crosshairSettings:outlineColor"),
+            value: tz.outlineColor,
+            swatches: Ns,
+            onChange: zz => {
+              Wz("outlineColor", zz)
             }
           })]
-        }), Bb("growOnClick", Ab("crosshairSettings:growOnClick")), eb && Bb("forGuns", Ab("crosshairSettings:forGuns"), Ab("crosshairSettings:forGunsInfo"))]
+        }), vz("growOnClick", Fz("crosshairSettings:growOnClick")), Uz && vz("forGuns", Fz("crosshairSettings:forGuns"), Fz("crosshairSettings:forGunsInfo"))]
       })
     }
-    var kU = Ub(75),
-      yU = Ub(1213),
-      ZU = Ub(8849),
-      DU = Ub(8855),
-      zU = Ub(8863),
-      xU = Ub(8871);
-    const iU = ["sky", "grass", "stone", "sand", "snow", "night"],
-      fU = "4rem";
+    var Hs = sz(78),
+      Bs = sz(1264),
+      Ps = sz(8794),
+      rs = sz(8799),
+      Ys = sz(8804),
+      xs = sz(8809);
+    const ms = ["sky", "grass", "stone", "sand", "snow", "night"],
+      Is = "4rem";
 
-    function mU(bb) {
+    function Cs(zz) {
       return {
-        backgroundImage: `url(${bb})`,
-        backgroundSize: `${fU} ${fU}`,
+        backgroundImage: `url(${zz})`,
+        backgroundSize: `${Is} ${Is}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function pU(bb) {
+    function es(zz) {
       return {
         ...(() => {
-          switch (bb) {
+          switch (zz) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return mU(ZU);
+              return Cs(Ps);
             case "stone":
-              return mU(DU);
+              return Cs(rs);
             case "sand":
-              return mU(zU);
+              return Cs(Ys);
             case "snow":
-              return mU(xU);
+              return Cs(xs);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1651,21 +1651,21 @@ export const modules = {
       }
     }
 
-    function NU(bb) {
+    function Zs(zz) {
       return Object.freeze({
-        ...YU.d,
+        ...vs.h,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...bb
+        ...zz
       })
     }
-    const WU = [{
+    const Gs = [{
         id: "default",
-        settings: YU.d
+        settings: vs.h
       }, {
         id: "cross",
-        settings: NU({
+        settings: Zs({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1674,7 +1674,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: NU({
+        settings: Zs({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1685,13 +1685,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: NU({
+        settings: Zs({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: NU({
+        settings: Zs({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1700,7 +1700,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: NU({
+        settings: Zs({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -1710,7 +1710,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: NU({
+        settings: Zs({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -1719,7 +1719,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: NU({
+        settings: Zs({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -1727,571 +1727,571 @@ export const modules = {
           outline: 1.5
         })
       }],
-      HU = ["growOnClick", "forGuns"];
-    var IU = Ub(8879);
+      Ts = ["growOnClick", "forGuns"];
+    var cs = sz(8813);
 
-    function dU(bb) {
+    function As(zz) {
       let {
-        label: ab,
-        selected: Ub,
-        onClick: Ab,
-        className: Mb,
-        style: Eb,
-        children: Yb
-      } = bb;
-      return (0, vb.jsx)("button", {
+        label: tz,
+        selected: sz,
+        onClick: Fz,
+        className: Wz,
+        style: Oz,
+        children: oz
+      } = zz;
+      return (0, Kz.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": Ub,
-        title: ab,
-        "aria-label": ab,
+        "aria-checked": sz,
+        title: tz,
+        "aria-label": tz,
         "data-pad-focusable": !0,
-        className: Tb()("CrosshairBackdropSwatch", Mb, {
-          Selected: Ub
+        className: Xz()("CrosshairBackdropSwatch", Wz, {
+          Selected: sz
         }),
-        style: Eb,
-        onClick: Ab,
-        children: Yb
+        style: Oz,
+        onClick: Fz,
+        children: oz
       })
     }
 
-    function FU(bb) {
+    function ys(zz) {
       let {
-        backdrop: ab,
-        onChange: Ub,
-        game: Ab
-      } = bb;
+        backdrop: tz,
+        onChange: sz,
+        game: Fz
+      } = zz;
       const {
-        t: Mb
-      } = (0, Eb.A)();
-      return (0, vb.jsxs)("div", {
+        t: Wz
+      } = (0, Oz.B)();
+      return (0, Kz.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": Mb("crosshairSettings:background"),
-        children: [Ab && (0, vb.jsx)(dU, {
-          label: Mb("crosshairSettings:bg_game"),
-          selected: Ab.selected,
-          onClick: Ab.onSelect,
+        "aria-label": Wz("crosshairSettings:background"),
+        children: [Fz && (0, Kz.jsx)(As, {
+          label: Wz("crosshairSettings:bg_game"),
+          selected: Fz.selected,
+          onClick: Fz.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, vb.jsx)(Yb.e, {
+          children: (0, Kz.jsx)(oz.c, {
             name: "cube"
           })
-        }), iU.map((bb => (0, vb.jsx)(dU, {
-          label: Mb(`crosshairSettings:bg_${bb}`),
-          selected: !(null !== Ab && void 0 !== Ab && Ab.selected) && bb === ab,
-          style: pU(bb),
+        }), ms.map((zz => (0, Kz.jsx)(As, {
+          label: Wz(`crosshairSettings:bg_${zz}`),
+          selected: !(null !== Fz && void 0 !== Fz && Fz.selected) && zz === tz,
+          style: es(zz),
           onClick: () => {
-            Ub(bb)
+            sz(zz)
           }
-        }, bb)))]
+        }, zz)))]
       })
     }
 
-    function hU(bb) {
+    function Ms(zz) {
       let {
-        settings: ab,
-        touch: Ub,
-        backdrop: Ab,
-        onChange: Mb
-      } = bb;
+        settings: tz,
+        touch: sz,
+        backdrop: Fz,
+        onChange: Wz
+      } = zz;
       const {
-        t: Yb
-      } = (0, Eb.A)(), Bb = function(bb) {
-        var ab;
-        return null !== (ab = WU.find((ab => (0, YU.o)(ab.settings, bb, HU)))) && void 0 !== ab ? ab : null
-      }(ab);
-      return (0, vb.jsx)("div", {
+        t: oz
+      } = (0, Oz.B)(), vz = function(zz) {
+        var tz;
+        return null !== (tz = Gs.find((tz => (0, vs.v)(tz.settings, zz, Ts)))) && void 0 !== tz ? tz : null
+      }(tz);
+      return (0, Kz.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": Yb("crosshairSettings:presets"),
-        children: WU.map((bb => {
-          const Eb = (null === Bb || void 0 === Bb ? void 0 : Bb.id) === bb.id;
-          return (0, vb.jsxs)("button", {
+        "aria-label": oz("crosshairSettings:presets"),
+        children: Gs.map((zz => {
+          const Oz = (null === vz || void 0 === vz ? void 0 : vz.id) === zz.id;
+          return (0, Kz.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": Eb,
+            "aria-checked": Oz,
             "data-pad-focusable": !0,
-            className: Tb()("CrosshairPreset", {
-              Selected: Eb
+            className: Xz()("CrosshairPreset", {
+              Selected: Oz
             }),
             onClick: () => {
-              Mb(function(bb, ab) {
+              Wz(function(zz, tz) {
                 return {
-                  ...ab.settings,
-                  growOnClick: bb.growOnClick,
-                  forGuns: bb.forGuns
+                  ...tz.settings,
+                  growOnClick: zz.growOnClick,
+                  forGuns: zz.forGuns
                 }
-              }(ab, bb))
+              }(tz, zz))
             },
-            children: [(0, vb.jsx)("div", {
+            children: [(0, Kz.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: pU(Ab),
-              children: (0, vb.jsx)(IU.e, {
-                settings: bb.settings,
-                touch: Ub,
+              style: es(Fz),
+              children: (0, Kz.jsx)(cs.d, {
+                settings: zz.settings,
+                touch: sz,
                 inPreview: !0
               })
-            }), (0, vb.jsx)("div", {
+            }), (0, Kz.jsx)("div", {
               className: "CrosshairPresetName",
-              children: Yb(`crosshairSettings:preset_${bb.id}`)
+              children: oz(`crosshairSettings:preset_${zz.id}`)
             })]
-          }, bb.id)
+          }, zz.id)
         }))
       })
     }
-    var GU = Ub(1584);
+    var ds = sz(1613);
 
-    function QU(bb, ab) {
-      const [Ub, Mb] = (0, Ab.useState)(!1), Tb = () => {
-        Mb(!1)
-      }, [Eb, Yb] = (0, Ab.useState)(!1), Bb = (0, Ab.useRef)({
-        growOnClick: bb.growOnClick,
-        forGuns: bb.forGuns
+    function hs(zz, tz) {
+      const [sz, Wz] = (0, Fz.useState)(!1), Xz = () => {
+        Wz(!1)
+      }, [Oz, oz] = (0, Fz.useState)(!1), vz = (0, Fz.useRef)({
+        growOnClick: zz.growOnClick,
+        forGuns: zz.forGuns
       });
-      (0, Ab.useEffect)((() => {
-        const ab = Bb.current;
-        Bb.current = {
-          growOnClick: bb.growOnClick,
-          forGuns: bb.forGuns
-        }, (bb.growOnClick && !ab.growOnClick || bb.forGuns && !ab.forGuns) && Yb(!0)
-      }), [bb.growOnClick, bb.forGuns]), (0, Ab.useEffect)((() => {
-        if (!Eb) return;
-        const bb = setTimeout((() => {
-          Yb(!1)
+      (0, Fz.useEffect)((() => {
+        const tz = vz.current;
+        vz.current = {
+          growOnClick: zz.growOnClick,
+          forGuns: zz.forGuns
+        }, (zz.growOnClick && !tz.growOnClick || zz.forGuns && !tz.forGuns) && oz(!0)
+      }), [zz.growOnClick, zz.forGuns]), (0, Fz.useEffect)((() => {
+        if (!Oz) return;
+        const zz = setTimeout((() => {
+          oz(!1)
         }), 600);
         return () => {
-          clearTimeout(bb)
+          clearTimeout(zz)
         }
-      }), [Eb]);
-      const eb = Ub || Eb;
+      }), [Oz]);
+      const Uz = sz || Oz;
       return {
         view: {
-          pressed: eb,
-          spread: eb && bb.forGuns && !bb.growOnClick ? 6 : 0
+          pressed: Uz,
+          spread: Uz && zz.forGuns && !zz.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: bb => {
-            !bb.target.closest(ab) && (0, GU.c)(bb.currentTarget, bb.pointerId) && Mb(!0)
+          onPointerDown: zz => {
+            !zz.target.closest(tz) && (0, ds.c)(zz.currentTarget, zz.pointerId) && Wz(!0)
           },
-          onPointerUp: Tb,
-          onPointerCancel: Tb,
-          onLostPointerCapture: Tb
+          onPointerUp: Xz,
+          onPointerCancel: Xz,
+          onLostPointerCapture: Xz
         }
       }
     }
 
-    function qU(bb) {
+    function Qs(zz) {
       let {
-        settings: ab,
-        touch: Ub,
-        backdrop: Ab,
-        className: Mb,
-        children: Eb,
-        label: Yb
-      } = bb;
-      const Bb = QU(ab, ".CrosshairStageControls");
-      return (0, vb.jsxs)("div", {
-        className: Tb()("CrosshairStage", Mb),
-        style: pU(Ab),
-        ...Bb.handlers,
-        children: [(0, vb.jsx)("div", {
+        settings: tz,
+        touch: sz,
+        backdrop: Fz,
+        className: Wz,
+        children: Oz,
+        label: oz
+      } = zz;
+      const vz = hs(tz, ".CrosshairStageControls");
+      return (0, Kz.jsxs)("div", {
+        className: Xz()("CrosshairStage", Wz),
+        style: es(Fz),
+        ...vz.handlers,
+        children: [(0, Kz.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": Yb,
-          children: (0, vb.jsx)(IU.e, {
-            settings: ab,
-            touch: Ub,
+          "aria-label": oz,
+          children: (0, Kz.jsx)(cs.d, {
+            settings: tz,
+            touch: sz,
             inPreview: !0,
-            ...Bb.view
+            ...vz.view
           })
-        }), Eb]
+        }), Oz]
       })
     }
-    const uU = "crosshairFullScreen";
+    const ks = "crosshairFullScreen";
 
-    function rU(bb) {
+    function is(zz) {
       let {
-        settings: ab,
-        touch: Ub,
-        backdrop: Mb,
-        onBackdrop: Bb,
-        inGame: eb,
-        onChange: Lb,
-        onClose: Pb
-      } = bb;
+        settings: tz,
+        touch: sz,
+        backdrop: Wz,
+        onBackdrop: vz,
+        inGame: Uz,
+        onChange: uz,
+        onClose: Nz
+      } = zz;
       const {
-        t: Xb
-      } = (0, Eb.A)(), jb = (0, Ab.useRef)(null);
-      (0, yU.r)("popup", jb, Pb),
-      function(bb) {
-        const ab = (0, Ab.useRef)(bb);
-        ab.current = bb, (0, Ab.useEffect)((() => {
+        t: bz
+      } = (0, Oz.B)(), wz = (0, Fz.useRef)(null);
+      (0, Bs.s)("popup", wz, Nz),
+      function(zz) {
+        const tz = (0, Fz.useRef)(zz);
+        tz.current = zz, (0, Fz.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [uU]: !0
+            [ks]: !0
           }, "");
-          let bb = !1;
-          const Ub = () => {
-            bb = !0, ab.current()
+          let zz = !1;
+          const sz = () => {
+            zz = !0, tz.current()
           };
-          return window.addEventListener("popstate", Ub), () => {
-            var ab;
-            window.removeEventListener("popstate", Ub), !bb && null !== (ab = window.history.state) && void 0 !== ab && ab[uU] && window.history.back()
+          return window.addEventListener("popstate", sz), () => {
+            var tz;
+            window.removeEventListener("popstate", sz), !zz && null !== (tz = window.history.state) && void 0 !== tz && tz[ks] && window.history.back()
           }
         }), [])
-      }(Pb);
-      const Rb = (0, Ab.useRef)(Pb);
-      Rb.current = Pb, (0, Ab.useEffect)((() => {
-        function bb(bb) {
-          "Escape" === bb.key && (bb.stopPropagation(), Rb.current())
+      }(Nz);
+      const Dz = (0, Fz.useRef)(Nz);
+      Dz.current = Nz, (0, Fz.useEffect)((() => {
+        function zz(zz) {
+          "Escape" === zz.key && (zz.stopPropagation(), Dz.current())
         }
-        return window.addEventListener("keydown", bb, !0), () => {
-          window.removeEventListener("keydown", bb, !0)
+        return window.addEventListener("keydown", zz, !0), () => {
+          window.removeEventListener("keydown", zz, !0)
         }
       }), []);
-      const yb = QU(ab, ".CrosshairFullScreenPanel"),
-        [Zb, Db] = (0, Ab.useState)(!0),
-        zb = Zb && eb;
-      (0, Ab.useEffect)((() => {
-        if (zb) return mb.c.set({
+      const Hz = hs(tz, ".CrosshairFullScreenPanel"),
+        [Bz, Pz] = (0, Fz.useState)(!0),
+        rz = Bz && Uz;
+      (0, Fz.useEffect)((() => {
+        if (rz) return Jz.b.set({
           crosshairGameView: !0
         }), () => {
-          mb.c.set({
+          Jz.b.set({
             crosshairGameView: !1
           })
         }
-      }), [zb]);
-      const [xb, ib] = (0, Ab.useState)(!0);
-      return (0, kU.createPortal)((0, vb.jsxs)("div", {
-        ref: jb,
+      }), [rz]);
+      const [Yz, xz] = (0, Fz.useState)(!0);
+      return (0, Hs.createPortal)((0, Kz.jsxs)("div", {
+        ref: wz,
         className: "CrosshairFullScreen",
-        style: zb ? void 0 : pU(Mb),
-        ...yb.handlers,
-        children: [(0, vb.jsx)(IU.e, {
-          settings: ab,
-          touch: Ub,
+        style: rz ? void 0 : es(Wz),
+        ...Hz.handlers,
+        children: [(0, Kz.jsx)(cs.d, {
+          settings: tz,
+          touch: sz,
           inEditor: !0,
-          ...yb.view
-        }), (0, vb.jsxs)("div", {
-          className: Tb()("CrosshairFullScreenPanel", {
-            Collapsed: !xb
+          ...Hz.view
+        }), (0, Kz.jsxs)("div", {
+          className: Xz()("CrosshairFullScreenPanel", {
+            Collapsed: !Yz
           }),
-          children: [(0, vb.jsxs)("div", {
+          children: [(0, Kz.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, vb.jsx)(FU, {
-              backdrop: Mb,
-              onChange: bb => {
-                Db(!1), Bb(bb)
+            children: [(0, Kz.jsx)(ys, {
+              backdrop: Wz,
+              onChange: zz => {
+                Pz(!1), vz(zz)
               },
-              game: eb ? {
-                selected: zb,
+              game: Uz ? {
+                selected: rz,
                 onSelect: () => {
-                  Db(!0)
+                  Pz(!0)
                 }
               } : void 0
-            }), (0, vb.jsx)(kb.M, {
+            }), (0, Kz.jsx)(gz.Q, {
               className: "CrosshairPanelToggle",
-              ariaLabel: Xb(xb ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: bz(Yz ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                ib(!xb)
+                xz(!Yz)
               },
-              children: (0, vb.jsx)(Yb.e, {
-                name: xb ? "caret-up" : "pen"
+              children: (0, Kz.jsx)(oz.c, {
+                name: Yz ? "caret-up" : "pen"
               })
-            }), (0, vb.jsx)(kb.g, {
+            }), (0, Kz.jsx)(gz.h, {
               className: "CrosshairFullScreenDone",
-              onClick: Pb,
+              onClick: Nz,
               padDefaultFocus: !0,
-              children: Xb("crosshairSettings:done")
+              children: bz("crosshairSettings:done")
             })]
-          }), xb && (0, vb.jsxs)("div", {
+          }), Yz && (0, Kz.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, vb.jsx)(hU, {
-              settings: ab,
-              touch: Ub,
-              backdrop: Mb,
-              onChange: Lb
-            }), (0, vb.jsx)(RU, {
-              settings: ab,
-              onChange: Lb
+            children: [(0, Kz.jsx)(Ms, {
+              settings: tz,
+              touch: sz,
+              backdrop: Wz,
+              onChange: uz
+            }), (0, Kz.jsx)(gs, {
+              settings: tz,
+              onChange: uz
             })]
           })]
         })]
       }), document.body)
     }
-    var KU = Ub(2469),
-      oU = Ub(8889);
+    var Ls = sz(2477),
+      ls = sz(8823);
 
-    function lU(bb) {
+    function ns(zz) {
       let {
-        settings: ab,
-        onChange: Ub
-      } = bb;
+        settings: tz,
+        onChange: sz
+      } = zz;
       const {
-        t: Mb
-      } = (0, Eb.A)(), Bb = (0, oU.h)(ab), [eb, Lb] = (0, KU.k)(), [Pb, Xb] = (0, Ab.useState)(!1), jb = (0, Ab.useRef)(null), [Rb, yb] = (0, KU.k)(), [Zb, Db] = (0, Ab.useState)(!1);
-      return (0, vb.jsxs)("div", {
+        t: Wz
+      } = (0, Oz.B)(), vz = (0, ls.k)(tz), [Uz, uz] = (0, Ls.g)(), [Nz, bz] = (0, Fz.useState)(!1), wz = (0, Fz.useRef)(null), [Dz, Hz] = (0, Ls.g)(), [Bz, Pz] = (0, Fz.useState)(!1);
+      return (0, Kz.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, vb.jsxs)("div", {
+        children: [(0, Kz.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, vb.jsxs)(kb.M, {
-            className: Tb()("CrosshairCopy", {
-              ActiveSecondaryButton: eb
+          children: [(0, Kz.jsxs)(gz.Q, {
+            className: Xz()("CrosshairCopy", {
+              ActiveSecondaryButton: Uz
             }),
             onClick: () => {
-              (0, KU.h)(Bb, {
+              (0, Ls.e)(vz, {
                 useShareSheet: !1,
-                onOutcome: bb => {
-                  Xb("failed" === bb), "copied" === bb && Lb()
+                onOutcome: zz => {
+                  bz("failed" === zz), "copied" === zz && uz()
                 }
               })
             },
-            children: [(0, vb.jsx)(Yb.e, {
-              name: eb ? "check" : "copy"
-            }), " ", Mb(eb ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, vb.jsx)(xb.c, {
+            children: [(0, Kz.jsx)(oz.c, {
+              name: Uz ? "check" : "copy"
+            }), " ", Wz(Uz ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, Kz.jsx)(Yz.d, {
             className: "CrosshairPaste",
-            domRef: jb,
-            ariaLabel: Mb("crosshairSettings:paste"),
-            placeholderText: Mb("crosshairSettings:paste"),
-            onValueChange: bb => {
-              const ab = (0, oU.f)(bb);
-              Db(!ab && bb.trim().length >= oU.e), ab && (Ub(ab), jb.current.value = "", yb())
+            domRef: wz,
+            ariaLabel: Wz("crosshairSettings:paste"),
+            placeholderText: Wz("crosshairSettings:paste"),
+            onValueChange: zz => {
+              const tz = (0, ls.g)(zz);
+              Pz(!tz && zz.trim().length >= ls.c), tz && (sz(tz), wz.current.value = "", Hz())
             }
           })]
-        }), Pb && (0, vb.jsx)("input", {
+        }), Nz && (0, Kz.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: Bb,
-          "aria-label": Mb("crosshairSettings:copy"),
-          onFocus: bb => {
-            bb.currentTarget.select()
+          value: vz,
+          "aria-label": Wz("crosshairSettings:copy"),
+          onFocus: zz => {
+            zz.currentTarget.select()
           }
-        }), (0, vb.jsxs)("div", {
+        }), (0, Kz.jsxs)("div", {
           "aria-live": "polite",
-          children: [Zb && (0, vb.jsx)("div", {
+          children: [Bz && (0, Kz.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: Mb("crosshairSettings:pasteInvalid")
-          }), Rb && !Zb && (0, vb.jsx)("div", {
+            children: Wz("crosshairSettings:pasteInvalid")
+          }), Dz && !Bz && (0, Kz.jsx)("div", {
             className: "CrosshairShareNote",
-            children: Mb("crosshairSettings:applied")
+            children: Wz("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var tU = Ub(8892);
-    let wU = "sky";
+    var as = sz(8826);
+    let qs = "sky";
 
-    function sU(bb) {
+    function Ss(zz) {
       let {
-        showing: ab
-      } = bb;
+        showing: tz
+      } = zz;
       const {
-        t: Ub
-      } = (0, Eb.A)(), {
-        isTouchScreen: Mb,
-        gameState: Tb,
-        clientEscMenuOptions: Bb
-      } = (0, mb.n)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), eb = (0, tU.g)(), [Lb, Pb] = (0, Ab.useState)(wU), Xb = bb => {
-        wU = bb, Pb(bb)
-      }, [jb, Rb] = (0, Ab.useState)(!1);
-      return (0, Ab.useEffect)((() => {
-        ab || Rb(!1)
-      }), [ab]), (0, vb.jsxs)("div", {
+        t: sz
+      } = (0, Oz.B)(), {
+        isTouchScreen: Wz,
+        gameState: Xz,
+        clientEscMenuOptions: vz
+      } = (0, Jz.h)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), Uz = (0, as.f)(), [uz, Nz] = (0, Fz.useState)(qs), bz = zz => {
+        qs = zz, Nz(zz)
+      }, [wz, Dz] = (0, Fz.useState)(!1);
+      return (0, Fz.useEffect)((() => {
+        tz || Dz(!1)
+      }), [tz]), (0, Kz.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, vb.jsx)("div", {
+        children: [(0, Kz.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, vb.jsx)(qU, {
+          children: (0, Kz.jsx)(Qs, {
             className: "CrosshairPreviewStage",
-            settings: eb,
-            touch: Mb,
-            backdrop: Lb,
-            label: Ub("crosshairSettings:preview"),
-            children: (0, vb.jsxs)("div", {
+            settings: Uz,
+            touch: Wz,
+            backdrop: uz,
+            label: sz("crosshairSettings:preview"),
+            children: (0, Kz.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, vb.jsx)(FU, {
-                backdrop: Lb,
-                onChange: Xb
-              }), (0, vb.jsxs)(kb.M, {
+              children: [(0, Kz.jsx)(ys, {
+                backdrop: uz,
+                onChange: bz
+              }), (0, Kz.jsxs)(gz.Q, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  Rb(!0)
+                  Dz(!0)
                 },
-                children: [(0, vb.jsx)(Yb.e, {
+                children: [(0, Kz.jsx)(oz.c, {
                   name: "expand"
-                }), " ", Ub("crosshairSettings:fullScreen")]
+                }), " ", sz("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, vb.jsx)("div", {
+        }), (0, Kz.jsx)("div", {
           className: "SettingBox",
-          children: (0, vb.jsx)(hU, {
-            settings: eb,
-            touch: Mb,
-            backdrop: Lb,
-            onChange: tU.d
+          children: (0, Kz.jsx)(Ms, {
+            settings: Uz,
+            touch: Wz,
+            backdrop: uz,
+            onChange: as.d
           })
-        }), (0, vb.jsx)(lU, {
-          settings: eb,
-          onChange: tU.d
-        }), Mb && (0, vb.jsx)(EU.b, {
-          note: (0, TU.f)(Mb, Bb.touchActionButtons) ? Ub("crosshairSettings:touchNote") : void 0
-        }), (0, vb.jsx)(RU, {
-          settings: eb,
-          onChange: tU.d
-        }), jb && (0, vb.jsx)(rU, {
-          settings: eb,
-          touch: Mb,
-          backdrop: Lb,
-          onBackdrop: Xb,
-          inGame: "inGame" === Tb,
-          onChange: tU.d,
+        }), (0, Kz.jsx)(ns, {
+          settings: Uz,
+          onChange: as.d
+        }), Wz && (0, Kz.jsx)(os.b, {
+          note: (0, Os.i)(Wz, vz.touchActionButtons) ? sz("crosshairSettings:touchNote") : void 0
+        }), (0, Kz.jsx)(gs, {
+          settings: Uz,
+          onChange: as.d
+        }), wz && (0, Kz.jsx)(is, {
+          settings: Uz,
+          touch: Wz,
+          backdrop: uz,
+          onBackdrop: bz,
+          inGame: "inGame" === Xz,
+          onChange: as.d,
           onClose: () => {
-            Rb(!1)
+            Dz(!1)
           }
         })]
       })
     }
-    var gU = Ub(8430),
-      CU = Ub(1296),
-      VU = Ub(4668),
-      OU = Ub(8898),
-      cU = Ub(1858),
-      JU = Ub(3996),
-      nU = Ub(1867),
-      SU = Ub(679);
-    const bA = (0, Ab.memo)((function() {
+    var Vs = sz(8367),
+      Rs = sz(1367),
+      ps = sz(4607),
+      fs = sz(8834),
+      Es = sz(1901),
+      zF = sz(3967),
+      tF = sz(1904),
+      sF = sz(689);
+    const FF = (0, Fz.memo)((function() {
       const {
-        clientEscMenuOptions: bb
-      } = (0, mb.n)(["clientEscMenuOptions"]), {
-        recording: ab,
-        clipping: Ub,
-        hasClipBuffer: Mb
-      } = (0, cU.k)("replayRecorder"), Eb = (0, cU.g)("connectedGame", (bb => bb.replay)), Yb = (0, JU.j)(), Bb = !1 === (0, jb.h)("canRecordReplays");
-      (0, Ab.useEffect)((() => {
-        Zb.gameBridge.send("setRecorderPrefs", {
-          clipping: bb.enableClipping,
-          clipSeconds: bb.clipDurationSeconds
+        clientEscMenuOptions: zz
+      } = (0, Jz.h)(["clientEscMenuOptions"]), {
+        recording: tz,
+        clipping: sz,
+        hasClipBuffer: Wz
+      } = (0, Es.l)("replayRecorder"), Oz = (0, Es.h)("connectedGame", (zz => zz.replay)), oz = (0, zF.n)(), vz = !1 === (0, wz.e)("canRecordReplays");
+      (0, Fz.useEffect)((() => {
+        Bz.gameBridge.send("setRecorderPrefs", {
+          clipping: zz.enableClipping,
+          clipSeconds: zz.clipDurationSeconds
         })
-      }), [bb.enableClipping, bb.clipDurationSeconds]);
-      const eb = Yb || Eb,
-        Lb = !eb && !Bb,
-        Pb = ab || Lb,
-        Xb = Lb,
-        Rb = Xb && Ub && !ab;
+      }), [zz.enableClipping, zz.clipDurationSeconds]);
+      const Uz = oz || Oz,
+        uz = !Uz && !vz,
+        Nz = tz || uz,
+        bz = uz,
+        Dz = bz && sz && !tz;
 
-      function yb() {
-        Pb && Zb.gameBridge.send("toggleRecording", null)
+      function Hz() {
+        Nz && Bz.gameBridge.send("toggleRecording", null)
       }
-      return (0, vb.jsxs)("div", {
+      return (0, Kz.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, vb.jsxs)("div", {
+        children: [(0, Kz.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, vb.jsx)("div", {
+          children: [(0, Kz.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: ab ? (0, vb.jsxs)(vb.Fragment, {
-              children: [(0, vb.jsxs)(kb.D, {
+            children: tz ? (0, Kz.jsxs)(Kz.Fragment, {
+              children: [(0, Kz.jsxs)(gz.H, {
                 className: "ReplayViewerCategoryButton",
-                onClick: yb,
-                disabled: !Pb,
-                children: [(0, vb.jsx)("span", {
+                onClick: Hz,
+                disabled: !Nz,
+                children: [(0, Kz.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, vb.jsx)(nU.b, {
+                }), (0, Kz.jsx)(tF.b, {
                   noaAction: "recordGame"
                 })]
-              }), (0, vb.jsx)(OU.c, {
+              }), (0, Kz.jsx)(fs.e, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, vb.jsxs)(kb.g, {
+            }) : (0, Kz.jsxs)(gz.h, {
               className: "ReplayViewerCategoryButton",
-              onClick: yb,
-              disabled: !Pb,
-              children: [(0, vb.jsx)("span", {
+              onClick: Hz,
+              disabled: !Nz,
+              children: [(0, Kz.jsx)("span", {
                 children: "Start Recording"
-              }), (0, vb.jsx)(nU.b, {
+              }), (0, Kz.jsx)(tF.b, {
                 noaAction: "recordGame"
               })]
             })
-          }), Bb && (0, vb.jsx)("div", {
+          }), vz && (0, Kz.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), eb && !ab && (0, vb.jsx)("div", {
+          }), Uz && !tz && (0, Kz.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, vb.jsxs)("div", {
+        }), (0, Kz.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, vb.jsx)(fb.d, {
+          children: [(0, Kz.jsx)(mz.b, {
             label: "Enable clipping",
-            checked: bb.enableClipping,
-            disabled: !Xb,
-            onClick: function(bb) {
-              Xb && mb.c.setClientEscMenuOptions({
-                enableClipping: bb
+            checked: zz.enableClipping,
+            disabled: !bz,
+            onClick: function(zz) {
+              bz && Jz.b.setClientEscMenuOptions({
+                enableClipping: zz
               })
             },
-            className: Tb()({
-              SettingBoxDisabled: !Xb
+            className: Xz()({
+              SettingBoxDisabled: !bz
             })
-          }), (0, vb.jsx)(fb.g, {
+          }), (0, Kz.jsx)(mz.g, {
             name: "Clip duration (seconds)",
-            min: SU.h,
-            max: SU.g,
-            step: SU.c,
-            initValue: bb.clipDurationSeconds,
-            onChange: function(bb) {
-              mb.c.setClientEscMenuOptions({
-                clipDurationSeconds: bb
+            min: sF.g,
+            max: sF.f,
+            step: sF.d,
+            initValue: zz.clipDurationSeconds,
+            onChange: function(zz) {
+              Jz.b.setClientEscMenuOptions({
+                clipDurationSeconds: zz
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !Xb || !bb.enableClipping
+            disabled: !bz || !zz.enableClipping
           })]
-        }), (0, vb.jsxs)("div", {
+        }), (0, Kz.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, vb.jsxs)(kb.g, {
+          children: [(0, Kz.jsxs)(gz.h, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              Rb && Zb.gameBridge.send("saveClip", null)
+              Dz && Bz.gameBridge.send("saveClip", null)
             },
-            disabled: !Rb,
-            children: [(0, vb.jsx)("span", {
+            disabled: !Dz,
+            children: [(0, Kz.jsx)("span", {
               children: "Record clip"
-            }), (0, vb.jsx)(nU.b, {
+            }), (0, Kz.jsx)(tF.b, {
               noaAction: "recordClip"
             })]
-          }), bb.enableClipping && !Mb && Xb && !ab && (0, vb.jsx)("div", {
+          }), zz.enableClipping && !Wz && bz && !tz && (0, Kz.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), ab && (0, vb.jsx)("div", {
+          }), tz && (0, Kz.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, vb.jsxs)("div", {
+        }), (0, Kz.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, vb.jsxs)(kb.g, {
+          children: [(0, Kz.jsxs)(gz.h, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, JU.i)(!0), mb.c.set({
+              (0, zF.k)(!0), Jz.b.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: Yb,
-            children: [(0, vb.jsx)("span", {
+            disabled: oz,
+            children: [(0, Kz.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, vb.jsx)(nU.b, {
+            }), (0, Kz.jsx)(tF.b, {
               noaAction: "replayViewerOpen"
             })]
-          }), Yb && (0, vb.jsx)("div", {
+          }), oz && (0, Kz.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, vb.jsxs)("div", {
+        }), (0, Kz.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, vb.jsx)("div", {
+          children: [(0, Kz.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, vb.jsx)("iframe", {
+          }), (0, Kz.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2302,8 +2302,8 @@ export const modules = {
         })]
       })
     }));
-    var aA = Ub(1786);
-    const UA = {
+    var WF = sz(1824);
+    const XF = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2325,11 +2325,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, vb.jsx)("svg", {
+        icon: () => (0, Kz.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, vb.jsx)("path", {
+          children: (0, Kz.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2348,7 +2348,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      QX: {
+      Cw: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2374,280 +2374,280 @@ export const modules = {
       }
     };
 
-    function AA() {
-      return Promise.all([Ub.e(74), Ub.e(131), Ub.e(125), Ub.e(122)]).then((() => Ub(40177))).then((bb => ({
-        default: bb.ShaderPackCategory
-      })), (bb => (console.error("Failed to load the shader pack settings", bb), {
-        default: MA
+    function OF() {
+      return Promise.all([sz.e(74), sz.e(131), sz.e(125), sz.e(122)]).then((() => sz(40169))).then((zz => ({
+        default: zz.ShaderPackCategory
+      })), (zz => (console.error("Failed to load the shader pack settings", zz), {
+        default: oF
       })))
     }
 
-    function MA() {
+    function oF() {
       const {
-        t: bb
-      } = (0, Eb.A)();
-      return (0, vb.jsx)("div", {
+        t: zz
+      } = (0, Oz.B)();
+      return (0, Kz.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: bb("shaderPack:tabLoadFailed")
+        children: zz("shaderPack:tabLoadFailed")
       })
     }
-    var TA = Ub(1294);
-    const EA = (0, Ab.lazy)((() => Ub.e(263).then((() => Ub(40170))).then((bb => ({
-        default: bb.BloxdInformation
+    var vF = sz(1358);
+    const UF = (0, Fz.lazy)((() => sz.e(263).then((() => sz(40151))).then((zz => ({
+        default: zz.BloxdInformation
       }))))),
-      YA = (0, Ab.lazy)(AA);
+      KF = (0, Fz.lazy)(OF);
 
-    function BA(bb) {
-      return bb ? "general" : "account"
+    function uF(zz) {
+      return zz ? "general" : "account"
     }
-    const eA = new Map,
-      vA = (0, Ab.memo)((function(bb) {
+    const NF = new Map,
+      bF = (0, Fz.memo)((function(zz) {
         let {
-          show: ab,
-          setBeforeResumeCallback: Ub
-        } = bb;
-        (0, Rb.e)();
+          show: tz,
+          setBeforeResumeCallback: sz
+        } = zz;
+        (0, Dz.c)();
         const {
-          gameState: Mb,
-          openSettingsCategory: Tb
-        } = (0, mb.n)(["gameState", "openSettingsCategory"]), {
-          userContext: Bb
-        } = (0, Xb.c)(), {
-          t: eb
-        } = (0, Eb.A)(), xb = (0, Pb.d)(), ib = (0, jb.h)("minChunkAddDist"), fb = "inGame" === Mb, [pb, Hb] = (0, Ab.useState)(BA(fb)), [Ib, db] = (0, Ab.useState)(null), [Fb, hb] = (0, Ab.useState)([]), Gb = (0, Ab.useRef)(function() {
-          const bb = new Date,
-            ab = 6 * (bb.getMonth() + bb.getDate()) % ea.r.length;
-          return [...ea.r, ...ea.r].slice(ab, ab + 6)
-        }()), Qb = (0, Ab.useRef)(null), qb = (0, Wa.i)(CU.i, (0, CU.d)()), ub = Object.keys(UA).filter((bb => {
-          switch (bb) {
+          gameState: Wz,
+          openSettingsCategory: Xz
+        } = (0, Jz.h)(["gameState", "openSettingsCategory"]), {
+          userContext: vz
+        } = (0, bz.b)(), {
+          t: Uz
+        } = (0, Oz.B)(), Yz = (0, Nz.b)(), xz = (0, wz.e)("minChunkAddDist"), mz = "inGame" === Wz, [Iz, Zz] = (0, Fz.useState)(uF(mz)), [Gz, Tz] = (0, Fz.useState)(null), [cz, jz] = (0, Fz.useState)([]), Az = (0, Fz.useRef)(function() {
+          const zz = new Date,
+            tz = 6 * (zz.getMonth() + zz.getDate()) % Ut.A.length;
+          return [...Ut.A, ...Ut.A].slice(tz, tz + 6)
+        }()), yz = (0, Fz.useRef)(null), Mz = (0, et.h)(Rs.k, (0, Rs.e)()), dz = Object.keys(XF).filter((zz => {
+          switch (zz) {
             case "replayViewer":
-              return fb;
+              return mz;
             case "developerTools":
-              return Bb.playerHasRank("developer") || !1;
+              return vz.playerHasRank("developer") || !1;
             case "texturePack":
-              return yb.featureFlags.settings.canChangeTexturePack;
-            case "QX":
-              return yb.featureFlags.settings.canUseShaderPacks;
+              return Hz.featureFlags.settings.canChangeTexturePack;
+            case "Cw":
+              return Hz.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return yb.featureFlags.useSocialFeatures;
+              return Hz.featureFlags.useSocialFeatures;
             case "alternativeDomains":
-              return "crazygames" !== Wb.p;
+              return "crazygames" !== ez.t;
             case "controller":
-              return yb.featureFlags.useControllerSupport && (qb || "controller" === pb);
+              return Hz.featureFlags.useControllerSupport && (Mz || "controller" === Iz);
             default:
               return !0
           }
         }));
-        (0, Wa.f)("toggleFullCoordinateOverlay", (() => {
-          const bb = ca("showCoordinates") && ca("showChunkCoordinates") && ca("showFPS");
-          Ja("showCoordinates", !bb), Ja("showChunkCoordinates", !bb), Ja("showFPS", !bb), xb()
-        })), (0, Wa.f)("updatedChunkLoadDist", (() => {
-          xb()
-        })), (0, Ab.useEffect)((() => {
-          if (db(null), null === mb.c.get("openSettingsCategory")) {
-            const bb = (0, TA.d)() ? eA.get(fb) : void 0;
-            Hb(bb && ub.includes(bb) ? bb : BA(fb))
+        (0, et.g)("toggleFullCoordinateOverlay", (() => {
+          const zz = pt("showCoordinates") && pt("showChunkCoordinates") && pt("showFPS");
+          ft("showCoordinates", !zz), ft("showChunkCoordinates", !zz), ft("showFPS", !zz), Yz()
+        })), (0, et.g)("updatedChunkLoadDist", (() => {
+          Yz()
+        })), (0, Fz.useEffect)((() => {
+          if (Tz(null), null === Jz.b.get("openSettingsCategory")) {
+            const zz = (0, vF.c)() ? NF.get(mz) : void 0;
+            Zz(zz && dz.includes(zz) ? zz : uF(mz))
           }
-        }), [ab]), (0, Ab.useEffect)((() => {
-          null !== Tb && (Hb(Tb), eA.set(fb, Tb), mb.c.set({
+        }), [tz]), (0, Fz.useEffect)((() => {
+          null !== Xz && (Zz(Xz), NF.set(mz, Xz), Jz.b.set({
             openSettingsCategory: null
           }))
-        }), [Tb, fb]), (0, Ab.useLayoutEffect)((() => {
-          Qb.current && (Qb.current.scrollTop = 0)
-        }), [pb, ab]), (0, Ab.useEffect)((() => {
-          "updateLog" === pb && (0, zb.e)().then(hb)
-        }), [pb]), (0, Ab.useEffect)((() => {
-          if ((0, ta.I)(ib)) return;
-          const [bb, ab] = (0, AU.e)(), [Ub, Ab] = (0, qa.f)(ib), Mb = (0, aA.c)(ib[0], bb, Ub), Tb = (0, aA.c)(ib[1], ab, Ab);
-          Zb.gameBridge.send("setChunkAddDistance", {
-            horizontal: Mb,
-            vertical: Tb
+        }), [Xz, mz]), (0, Fz.useLayoutEffect)((() => {
+          yz.current && (yz.current.scrollTop = 0)
+        }), [Iz, tz]), (0, Fz.useEffect)((() => {
+          "updateLog" === Iz && (0, rz.b)().then(jz)
+        }), [Iz]), (0, Fz.useEffect)((() => {
+          if ((0, Lt.G)(xz)) return;
+          const [zz, tz] = (0, Ws.f)(), [sz, Fz] = (0, Mt.c)(xz), Wz = (0, WF.f)(xz[0], zz, sz), Xz = (0, WF.f)(xz[1], tz, Fz);
+          Bz.gameBridge.send("setChunkAddDistance", {
+            horizontal: Wz,
+            vertical: Xz
           })
-        }), [ib]);
-        const rb = (0, Ab.useCallback)((async () => {
-          Ib && (await Ib(), db(null))
-        }), [Ib]);
+        }), [xz]);
+        const hz = (0, Fz.useCallback)((async () => {
+          Gz && (await Gz(), Tz(null))
+        }), [Gz]);
 
-        function Kb() {
-          mb.c.set({
+        function Qz() {
+          Jz.b.set({
             openEverythingMenuName: null
           })
         }
-        return (0, Ab.useEffect)((() => {
-          Ub((() => rb))
-        }), [rb, Ub]), (0, vb.jsxs)("div", {
+        return (0, Fz.useEffect)((() => {
+          sz((() => hz))
+        }), [hz, sz]), (0, Kz.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: ab ? {} : {
+          style: tz ? {} : {
             display: "none"
           },
-          children: [(0, vb.jsx)("div", {
+          children: [(0, Kz.jsx)("div", {
             className: "MenuSideBar",
-            children: (0, vb.jsx)("div", {
+            children: (0, Kz.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, vb.jsx)(Lb, {
-                items: ub.map((bb => {
-                  const ab = UA[bb].icon;
+              children: (0, Kz.jsx)(uz, {
+                items: dz.map((zz => {
+                  const tz = XF[zz].icon;
                   return {
-                    id: bb,
-                    faIcon: "string" === typeof ab ? ab : void 0,
-                    iconElement: "string" === typeof ab ? void 0 : (0, vb.jsx)(ab, {}),
-                    title: eb(UA[bb].displayName),
+                    id: zz,
+                    faIcon: "string" === typeof tz ? tz : void 0,
+                    iconElement: "string" === typeof tz ? void 0 : (0, Kz.jsx)(tz, {}),
+                    title: Uz(XF[zz].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: pb,
-                onClick: bb => {
-                  !async function(bb) {
-                    await rb(), Hb(bb), eA.set(fb, bb)
-                  }(bb)
+                selectedItemId: Iz,
+                onClick: zz => {
+                  !async function(zz) {
+                    await hz(), Zz(zz), NF.set(mz, zz)
+                  }(zz)
                 }
               })
             })
-          }), (0, vb.jsxs)("div", {
-            ref: Qb,
+          }), (0, Kz.jsxs)("div", {
+            ref: yz,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === pb && (0, vb.jsx)(Za, {
-              showing: ab,
-              inGame: fb
-            }), "general" === pb && (0, vb.jsx)(ma, {
-              inGame: fb
-            }), "audio" === pb && (0, vb.jsx)(pa, {}), "notifications" === pb && (0, vb.jsx)(Qa, {}), "graphics" === pb && (0, vb.jsx)(UU, {
-              minChunkAddDist: null !== ib && void 0 !== ib ? ib : [2, 2],
-              getValue: ca,
-              onChange: Ja,
-              setApplySettingsCallback: db
-            }), "controls" === pb && (0, vb.jsx)(MU.e, {}), "crosshair" === pb && (0, vb.jsx)(sU, {
-              showing: ab
-            }), "controller" === pb && yb.featureFlags.useControllerSupport && (0, vb.jsx)(gU.c, {}), yb.featureFlags.settings.canChangeTexturePack && "texturePack" === pb && (0, vb.jsx)(VU.d, {
-              setApplySettingsCallback: db
-            }), yb.featureFlags.settings.canUseShaderPacks && "QX" === pb && (0, vb.jsx)(Ab.Suspense, {
+            children: ["account" === Iz && (0, Kz.jsx)(Bt, {
+              showing: tz,
+              inGame: mz
+            }), "general" === Iz && (0, Kz.jsx)(Jt, {
+              inGame: mz
+            }), "audio" === Iz && (0, Kz.jsx)(It, {}), "notifications" === Iz && (0, Kz.jsx)(yt, {}), "graphics" === Iz && (0, Kz.jsx)(Fs, {
+              minChunkAddDist: null !== xz && void 0 !== xz ? xz : [2, 2],
+              getValue: pt,
+              onChange: ft,
+              setApplySettingsCallback: Tz
+            }), "controls" === Iz && (0, Kz.jsx)(Xs.d, {}), "crosshair" === Iz && (0, Kz.jsx)(Ss, {
+              showing: tz
+            }), "controller" === Iz && Hz.featureFlags.useControllerSupport && (0, Kz.jsx)(Vs.e, {}), Hz.featureFlags.settings.canChangeTexturePack && "texturePack" === Iz && (0, Kz.jsx)(ps.b, {
+              setApplySettingsCallback: Tz
+            }), Hz.featureFlags.settings.canUseShaderPacks && "Cw" === Iz && (0, Kz.jsx)(Fz.Suspense, {
               fallback: null,
-              children: (0, vb.jsx)(YA, {
-                setApplySettingsCallback: db
+              children: (0, Kz.jsx)(KF, {
+                setApplySettingsCallback: Tz
               })
-            }), "updateLog" === pb && (0, vb.jsx)("div", {
+            }), "updateLog" === Iz && (0, Kz.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, vb.jsx)("div", {
+              children: (0, Kz.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: Fb.map(((bb, ab) => (0, vb.jsx)(Db.b, {
-                  updateLog: bb,
-                  index: ab,
-                  close: Kb
-                }, ab)))
+                children: cz.map(((zz, tz) => (0, Kz.jsx)(Pz.d, {
+                  updateLog: zz,
+                  index: tz,
+                  close: Qz
+                }, tz)))
               })
-            }), "information" === pb && (0, vb.jsx)("div", {
+            }), "information" === Iz && (0, Kz.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, vb.jsx)(Ab.Suspense, {
+              children: (0, Kz.jsx)(Fz.Suspense, {
                 fallback: null,
-                children: (0, vb.jsx)(EA, {})
+                children: (0, Kz.jsx)(UF, {})
               })
-            }), "alternativeDomains" === pb && (0, vb.jsxs)("div", {
+            }), "alternativeDomains" === Iz && (0, Kz.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, vb.jsx)("div", {
+              children: [(0, Kz.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: eb("settingsMenu:unblockedDomainsDescription")
-              }), (0, vb.jsx)("div", {
+                children: Uz("settingsMenu:unblockedDomainsDescription")
+              }), (0, Kz.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: Gb.current.map((bb => (0, vb.jsxs)(kb.g, {
+                children: Az.current.map((zz => (0, Kz.jsxs)(gz.h, {
                   onClick: () => {
-                    window.open(`https://${bb}`)
+                    window.open(`https://${zz}`)
                   },
-                  children: [(0, vb.jsx)(Yb.e, {
+                  children: [(0, Kz.jsx)(oz.c, {
                     name: "arrow-up-right-from-square"
-                  }), " ", bb]
-                }, bb)))
+                  }), " ", zz]
+                }, zz)))
               })]
-            }), "replayViewer" === pb && (0, vb.jsx)(bA, {}), "developerTools" === pb && (0, vb.jsx)("div", {
+            }), "replayViewer" === Iz && (0, Kz.jsx)(FF, {}), "developerTools" === Iz && (0, Kz.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, vb.jsx)(Nb, {
-                setApplySettingsCallback: db
+              children: (0, Kz.jsx)(Cz, {
+                setApplySettingsCallback: Tz
               })
-            }), null !== Ib && (0, vb.jsx)("div", {
+            }), null !== Gz && (0, Kz.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, vb.jsx)(kb.g, {
+              children: (0, Kz.jsx)(gz.h, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: rb,
-                children: eb("general:apply")
+                onClick: hz,
+                children: Uz("general:apply")
               })
             })]
           })]
         })
       }));
-    var LA = Ub(2424);
-    const PA = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
-      XA = (0, Ab.lazy)((() => Promise.resolve().then((() => Ub(4340))).then((bb => {
-        bb.needGameClientAfterPaint();
-        const ab = bb.matchmakingLibrariesPromise.then((bb => (0, LA.e)(bb.loadCharacterCustomisationUI(), (bb => bb.CharacterCustomisationUI))));
-        return Promise.all([bb.ensureGameSetup(), ab]).then((bb => {
-          let [, ab] = bb;
-          return ab
+    var wF = sz(2414);
+    const DF = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
+      gF = (0, Fz.lazy)((() => Promise.resolve().then((() => sz(4304))).then((zz => {
+        zz.needGameClientAfterPaint();
+        const tz = zz.matchmakingLibrariesPromise.then((zz => (0, wF.d)(zz.loadCharacterCustomisationUI(), (zz => zz.CharacterCustomisationUI))));
+        return Promise.all([zz.ensureGameSetup(), tz]).then((zz => {
+          let [, tz] = zz;
+          return tz
         }))
       }))));
 
-    function jA(bb) {
+    function HF(zz) {
       let {
-        show: ab
-      } = bb;
+        show: tz
+      } = zz;
       const {
-        userContext: Ub
-      } = (0, Xb.c)(), [Mb, Tb] = (0, Ab.useState)("characters");
-      if (!ab) return null;
-      const Eb = PA.filter((bb => "cape" !== bb && "nameColour" !== bb || Ub.getPlayerRanks().includes("super") || (0, ob.purchasesAllowed)())).map((bb => ({
-        id: bb,
-        faIcon: ea.w[bb],
-        title: ea.A[bb],
+        userContext: sz
+      } = (0, bz.b)(), [Wz, Xz] = (0, Fz.useState)("characters");
+      if (!tz) return null;
+      const Oz = DF.filter((zz => "cape" !== zz && "nameColour" !== zz || sz.getPlayerRanks().includes("super") || (0, kz.purchasesAllowed)())).map((zz => ({
+        id: zz,
+        faIcon: Ut.I[zz],
+        title: Ut.L[zz],
         redDot: !1
       })));
-      return (0, vb.jsxs)("div", {
+      return (0, Kz.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, vb.jsx)("div", {
+        children: [(0, Kz.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, vb.jsx)(Lb, {
-            items: Eb,
-            selectedItemId: Mb,
-            onClick: bb => {
-              Tb(bb)
+          children: (0, Kz.jsx)(uz, {
+            items: Oz,
+            selectedItemId: Wz,
+            onClick: zz => {
+              Xz(zz)
             }
           })
-        }), (0, vb.jsx)("div", {
+        }), (0, Kz.jsx)("div", {
           className: "MenuBody",
-          children: (0, vb.jsx)(Ab.Suspense, {
-            fallback: (0, vb.jsx)("div", {
+          children: (0, Kz.jsx)(Fz.Suspense, {
+            fallback: (0, Kz.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, vb.jsx)(ib.b, {})
+              children: (0, Kz.jsx)(xz.d, {})
             }),
-            children: (0, vb.jsx)(XA, {
-              selectedTab: Mb
+            children: (0, Kz.jsx)(gF, {
+              selectedTab: Wz
             })
           })
         })]
       })
     }
-    var RA = Ub(1370),
-      kA = Ub(8906),
-      yA = Ub(4211),
-      ZA = Ub(3090),
-      DA = Ub(3142),
-      zA = Ub(8930),
-      xA = Ub(8334),
-      iA = Ub(8910),
-      fA = Ub(8917),
-      mA = Ub(1812),
-      pA = Ub(1794),
-      NA = Ub(4595),
-      WA = Ub(1203),
-      HA = Ub(1162),
-      IA = Ub(1578),
-      dA = Ub(8418);
+    var BF = sz(1435),
+      PF = sz(8843),
+      rF = sz(4175),
+      YF = sz(3080),
+      xF = sz(3137),
+      mF = sz(8874),
+      JF = sz(8279),
+      IF = sz(8848),
+      CF = sz(8863),
+      eF = sz(1845),
+      ZF = sz(1831),
+      GF = sz(4539),
+      TF = sz(1244),
+      cF = sz(1213),
+      jF = sz(1608),
+      AF = sz(8345);
 
-    function FA(bb) {
-      return bb ? Object.keys(bb).sort(((ab, Ub) => {
-        var Ab, Mb, Tb, Eb;
-        const Yb = (null !== (Ab = null === (Mb = bb[Ub]) || void 0 === Mb ? void 0 : Mb.sortPriority) && void 0 !== Ab ? Ab : 0) - (null !== (Tb = null === (Eb = bb[ab]) || void 0 === Eb ? void 0 : Eb.sortPriority) && void 0 !== Tb ? Tb : 0);
-        return 0 !== Yb ? Yb : ab.localeCompare(Ub)
+    function yF(zz) {
+      return zz ? Object.keys(zz).sort(((tz, sz) => {
+        var Fz, Wz, Xz, Oz;
+        const oz = (null !== (Fz = null === (Wz = zz[sz]) || void 0 === Wz ? void 0 : Wz.sortPriority) && void 0 !== Fz ? Fz : 0) - (null !== (Xz = null === (Oz = zz[tz]) || void 0 === Oz ? void 0 : Oz.sortPriority) && void 0 !== Xz ? Xz : 0);
+        return 0 !== oz ? oz : tz.localeCompare(sz)
       })) : []
     }
-    const hA = [{
+    const MF = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -2661,241 +2661,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function GA(bb) {
+    function dF(zz) {
       for (const {
-          threshold: ab,
-          suffix: Ub
+          threshold: tz,
+          suffix: sz
         }
-        of hA)
-        if (bb >= ab) {
-          const Ab = bb / ab;
-          return Ab >= 100 ? `${Math.floor(Ab)}${Ub}` : Ab >= 10 ? `${Ab.toFixed(1).replace(/\.0$/,"")}${Ub}` : `${Ab.toFixed(2).replace(/\.?0+$/,"")}${Ub}`
-        } return String(bb)
+        of MF)
+        if (zz >= tz) {
+          const Fz = zz / tz;
+          return Fz >= 100 ? `${Math.floor(Fz)}${sz}` : Fz >= 10 ? `${Fz.toFixed(1).replace(/\.0$/,"")}${sz}` : `${Fz.toFixed(2).replace(/\.?0+$/,"")}${sz}`
+        } return String(zz)
     }
-    var QA = Ub(4690);
-    const qA = {
+    var hF = sz(4636);
+    const QF = {
         normal: "0.8em",
         big: "1em"
       },
-      uA = (0, Ab.memo)((function(bb) {
+      kF = (0, Fz.memo)((function(zz) {
         let {
-          item: ab,
-          amount: Ub = 0,
-          size: Ab = "normal",
-          tier: Mb = null
-        } = bb;
-        return (0, vb.jsx)("div", {
-          className: Tb()("SmpSlot", `SmpSlot-${Ab}`),
-          children: ab && (0, vb.jsx)(mA.c, {
-            itemName: ab,
-            amount: Ub > 1 ? Ub : 0,
-            amountFontSize: qA[Ab],
-            enchantmentTier: Mb
+          item: tz,
+          amount: sz = 0,
+          size: Fz = "normal",
+          tier: Wz = null
+        } = zz;
+        return (0, Kz.jsx)("div", {
+          className: Xz()("SmpSlot", `SmpSlot-${Fz}`),
+          children: tz && (0, Kz.jsx)(eF.c, {
+            itemName: tz,
+            amount: sz > 1 ? sz : 0,
+            amountFontSize: QF[Fz],
+            enchantmentTier: Wz
           })
         })
       }));
 
-    function rA(bb) {
+    function iF(zz) {
       let {
-        amount: ab,
-        exact: Ub = !1,
-        className: Ab
-      } = bb;
-      return (0, vb.jsxs)("span", {
-        className: Tb()("SmpGold", Ab),
-        children: [(0, vb.jsx)("span", {
+        amount: tz,
+        exact: sz = !1,
+        className: Fz
+      } = zz;
+      return (0, Kz.jsxs)("span", {
+        className: Xz()("SmpGold", Fz),
+        children: [(0, Kz.jsx)("span", {
           className: "SmpCoin",
-          children: (0, vb.jsx)(mA.c, {
+          children: (0, Kz.jsx)(eF.c, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), Ub ? ab.toLocaleString("en-US") : GA(ab)]
+        }), sz ? tz.toLocaleString("en-US") : dF(tz)]
       })
     }
 
-    function KA(bb) {
+    function LF(zz) {
       let {
-        count: ab = 5,
-        grid: Ub = !1
-      } = bb;
-      return (0, vb.jsx)("div", {
-        className: Ub ? "SmpCardGrid" : "SmpList",
+        count: tz = 5,
+        grid: sz = !1
+      } = zz;
+      return (0, Kz.jsx)("div", {
+        className: sz ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: ab
-        }, ((bb, ab) => (0, vb.jsxs)("div", {
-          className: Tb()(Ub ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, vb.jsx)("div", {
-            className: Tb()("SmpSlot", Ub ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, vb.jsxs)("div", {
+          length: tz
+        }, ((zz, tz) => (0, Kz.jsxs)("div", {
+          className: Xz()(sz ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, Kz.jsx)("div", {
+            className: Xz()("SmpSlot", sz ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, Kz.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, vb.jsx)("b", {}), (0, vb.jsx)("small", {})]
-          }), (0, vb.jsx)("div", {
+            children: [(0, Kz.jsx)("b", {}), (0, Kz.jsx)("small", {})]
+          }), (0, Kz.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, ab)))
+        }, tz)))
       })
     }
 
-    function oA(bb) {
+    function lF(zz) {
       let {
-        title: ab,
-        children: Ub
-      } = bb;
-      return (0, vb.jsxs)("div", {
+        title: tz,
+        children: sz
+      } = zz;
+      return (0, Kz.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, vb.jsx)("b", {
-          children: ab
-        }), Ub && (0, vb.jsx)("small", {
-          children: Ub
+        children: [(0, Kz.jsx)("b", {
+          children: tz
+        }), sz && (0, Kz.jsx)("small", {
+          children: sz
         })]
       })
     }
 
-    function lA(bb) {
+    function nF(zz) {
       let {
-        entry: ab
-      } = bb;
-      return (0, vb.jsx)(oA, {
-        title: (0, vb.jsx)(pA.c, {
-          text: ab.item.customTitle
+        entry: tz
+      } = zz;
+      return (0, Kz.jsx)(lF, {
+        title: (0, Kz.jsx)(ZF.c, {
+          text: tz.item.customTitle
         }),
-        children: (0, vb.jsx)(pA.c, {
-          text: ab.item.description
+        children: (0, Kz.jsx)(ZF.c, {
+          text: tz.item.description
         })
       })
     }
 
-    function tA(bb) {
-      return (0, vb.jsx)(QA.e, {
-        ...bb,
-        className: Tb()("SmpChoice", bb.className),
+    function aF(zz) {
+      return (0, Kz.jsx)(hF.b, {
+        ...zz,
+        className: Xz()("SmpChoice", zz.className),
         reselectable: !0
       })
     }
 
-    function wA() {
-      return (0, vb.jsx)("span", {
+    function qF() {
+      return (0, Kz.jsx)("span", {
         className: "SmpLoader",
-        children: (0, vb.jsx)(ib.b, {})
+        children: (0, Kz.jsx)(xz.d, {})
       })
     }
 
-    function sA(bb) {
+    function SF(zz) {
       let {
-        value: ab,
-        onChange: Ub,
-        min: Mb = 1,
-        max: Tb,
-        step: Eb = 1,
-        label: Yb
-      } = bb;
-      const Bb = (0, Ab.useRef)(null),
-        eb = (0, Ab.useRef)(ab);
-      eb.current = ab;
-      const [Lb, Pb] = (0, Ab.useState)(null), Xb = bb => Math.max(Mb, Math.min(Tb, Math.floor(bb))), jb = bb => {
-        const ab = eb.current,
-          Ab = "function" === typeof Eb ? Eb(ab, bb) : Eb,
-          Mb = Xb(ab + Ab * bb);
-        eb.current = Mb, Ub(Mb)
+        value: tz,
+        onChange: sz,
+        min: Wz = 1,
+        max: Xz,
+        step: Oz = 1,
+        label: oz
+      } = zz;
+      const vz = (0, Fz.useRef)(null),
+        Uz = (0, Fz.useRef)(tz);
+      Uz.current = tz;
+      const [uz, Nz] = (0, Fz.useState)(null), bz = zz => Math.max(Wz, Math.min(Xz, Math.floor(zz))), wz = zz => {
+        const tz = Uz.current,
+          Fz = "function" === typeof Oz ? Oz(tz, zz) : Oz,
+          Wz = bz(tz + Fz * zz);
+        Uz.current = Wz, sz(Wz)
       };
-      (0, Ab.useEffect)((() => {
-        if (null === Lb) return;
-        let bb;
-        const ab = () => {
-            Pb(null)
+      (0, Fz.useEffect)((() => {
+        if (null === uz) return;
+        let zz;
+        const tz = () => {
+            Nz(null)
           },
-          Ub = setTimeout((() => {
-            bb = setInterval((() => {
-              jb(Lb);
-              const bb = eb.current;
-              (Lb > 0 ? bb >= Tb : bb <= Mb) && ab()
+          sz = setTimeout((() => {
+            zz = setInterval((() => {
+              wz(uz);
+              const zz = Uz.current;
+              (uz > 0 ? zz >= Xz : zz <= Wz) && tz()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", ab), window.addEventListener("pointercancel", ab), window.addEventListener("blur", ab), () => {
-          clearTimeout(Ub), clearInterval(bb), window.removeEventListener("pointerup", ab), window.removeEventListener("pointercancel", ab), window.removeEventListener("blur", ab)
+        return window.addEventListener("pointerup", tz), window.addEventListener("pointercancel", tz), window.addEventListener("blur", tz), () => {
+          clearTimeout(sz), clearInterval(zz), window.removeEventListener("pointerup", tz), window.removeEventListener("pointercancel", tz), window.removeEventListener("blur", tz)
         }
-      }), [Lb]), (0, Ab.useEffect)((() => {
-        const bb = Bb.current;
-        bb && document.activeElement !== bb && bb.value !== String(ab) && (bb.value = String(ab))
-      }), [ab]), (0, Ab.useEffect)((() => {
-        const bb = Bb.current;
-        if (!bb) return;
-        const ab = () => {
-          bb.value = String(eb.current)
+      }), [uz]), (0, Fz.useEffect)((() => {
+        const zz = vz.current;
+        zz && document.activeElement !== zz && zz.value !== String(tz) && (zz.value = String(tz))
+      }), [tz]), (0, Fz.useEffect)((() => {
+        const zz = vz.current;
+        if (!zz) return;
+        const tz = () => {
+          zz.value = String(Uz.current)
         };
-        return bb.addEventListener("blur", ab), () => {
-          bb.removeEventListener("blur", ab)
+        return zz.addEventListener("blur", tz), () => {
+          zz.removeEventListener("blur", tz)
         }
       }), []);
-      const Rb = bb => (0, vb.jsx)("button", {
+      const Dz = zz => (0, Kz.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${bb>0?"More":"Less"} ${Yb}`,
-        disabled: bb > 0 ? ab >= Tb : ab <= Mb,
-        onPointerDown: ab => {
-          0 === ab.button && (jb(bb), Pb(bb))
+        "aria-label": `${zz>0?"More":"Less"} ${oz}`,
+        disabled: zz > 0 ? tz >= Xz : tz <= Wz,
+        onPointerDown: tz => {
+          0 === tz.button && (wz(zz), Nz(zz))
         },
-        onKeyDown: ab => {
-          "Enter" !== ab.key && " " !== ab.key || jb(bb)
+        onKeyDown: tz => {
+          "Enter" !== tz.key && " " !== tz.key || wz(zz)
         },
-        onContextMenu: bb => {
-          bb.preventDefault()
+        onContextMenu: zz => {
+          zz.preventDefault()
         },
-        children: bb > 0 ? "+" : "\u2212"
+        children: zz > 0 ? "+" : "\u2212"
       });
-      return (0, vb.jsxs)("div", {
+      return (0, Kz.jsxs)("div", {
         className: "SmpStepper",
-        children: [Rb(-1), (0, vb.jsx)(xb.c, {
+        children: [Dz(-1), (0, Kz.jsx)(Yz.d, {
           className: "SmpStepperInput",
-          domRef: Bb,
-          defaultValue: String(ab),
-          ariaLabel: Yb,
+          domRef: vz,
+          defaultValue: String(tz),
+          ariaLabel: oz,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: bb => {
-            const ab = bb.replace(/[^\d]/g, "");
-            Bb.current && ab !== bb && (Bb.current.value = ab), "" !== ab && Ub(Xb(Number(ab)))
+          onValueChange: zz => {
+            const tz = zz.replace(/[^\d]/g, "");
+            vz.current && tz !== zz && (vz.current.value = tz), "" !== tz && sz(bz(Number(tz)))
           }
-        }), Rb(1)]
+        }), Dz(1)]
       })
     }
 
-    function gA(bb) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, bb))) - 1))
+    function VF(zz) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, zz))) - 1))
     }
-    var CA = Ub(8922),
-      VA = Ub(1189);
-    const OA = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    VA.u, rb.qc.length;
+    var RF = sz(8866),
+      pF = sz(1223);
+    const fF = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    pF.y, hz.Cc.length;
     new Map;
-    var cA = Ub(2989);
+    var EF = sz(2965);
 
-    function JA(bb, ab) {
-      var Ub;
-      return ab && (null === (Ub = bb[ab]) || void 0 === Ub ? void 0 : Ub.smp) || null
+    function zW(zz, tz) {
+      var sz;
+      return tz && (null === (sz = zz[tz]) || void 0 === sz ? void 0 : sz.smp) || null
     }
 
-    function nA(bb, ab) {
-      const Ub = [];
-      for (const Mb of FA(bb)) {
-        var Ab;
-        const Tb = bb[Mb];
-        (null === (Ab = Tb.smp) || void 0 === Ab ? void 0 : Ab.kind) === ab && Ub.push({
-          key: Mb,
-          item: Tb,
-          meta: Tb.smp
+    function tW(zz, tz) {
+      const sz = [];
+      for (const Wz of yF(zz)) {
+        var Fz;
+        const Xz = zz[Wz];
+        (null === (Fz = Xz.smp) || void 0 === Fz ? void 0 : Fz.kind) === tz && sz.push({
+          key: Wz,
+          item: Xz,
+          meta: Xz.smp
         })
       }
-      return Ub
+      return sz
     }
 
-    function SA(bb, ab) {
-      var Ub;
-      return null !== (Ub = nA(bb, ab)[0]) && void 0 !== Ub ? Ub : null
+    function sW(zz, tz) {
+      var sz;
+      return null !== (sz = tW(zz, tz)[0]) && void 0 !== sz ? sz : null
     }
-    const bM = "50% 0% 50% 0%",
-      aM = [{
+    const FW = "50% 0% 50% 0%",
+      WW = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -2909,746 +2909,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function UM(bb) {
-      const ab = bb - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function XW(zz) {
+      const tz = zz - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: Ub,
-          suffix: Ab
+          divisor: sz,
+          suffix: Fz
         }
-        of aM)
-        if (ab >= Ub) return `${Math.floor(ab/Ub)}${Ab}`;
+        of WW)
+        if (tz >= sz) return `${Math.floor(tz/sz)}${Fz}`;
       return "<1s"
     }
 
-    function AM(bb) {
-      const ab = bb.map(xA.g),
-        Ub = [];
-      return ab.forEach(((bb, Ab) => {
-        const Mb = function(bb) {
-            const ab = bb.match(/\d+/);
-            return ab ? Number(ab[0]) : 0
-          }(bb),
-          Tb = Ab === ab.length - 1;
-        (Tb || 1 === Mb || 10 === Mb || 100 === Mb) && Ub.push({
-          label: bb,
-          quantity: Mb,
-          isAll: Tb
+    function OW(zz) {
+      const tz = zz.map(JF.e),
+        sz = [];
+      return tz.forEach(((zz, Fz) => {
+        const Wz = function(zz) {
+            const tz = zz.match(/\d+/);
+            return tz ? Number(tz[0]) : 0
+          }(zz),
+          Xz = Fz === tz.length - 1;
+        (Xz || 1 === Wz || 10 === Wz || 100 === Wz) && sz.push({
+          label: zz,
+          quantity: Wz,
+          isAll: Xz
         })
-      })), Ub
+      })), sz
     }
-    let MM = null;
+    let oW = null;
 
-    function TM(bb, ab) {
-      const Ub = ab.trim().toLowerCase();
-      if (!Ub) return [];
-      const Ab = bb => {
-          if (bb === Ub) return 0;
-          if (bb.startsWith(Ub)) return 1;
-          const ab = bb.indexOf(Ub);
-          return -1 === ab ? -1 : 2 + ab
+    function vW(zz, tz) {
+      const sz = tz.trim().toLowerCase();
+      if (!sz) return [];
+      const Fz = zz => {
+          if (zz === sz) return 0;
+          if (zz.startsWith(sz)) return 1;
+          const tz = zz.indexOf(sz);
+          return -1 === tz ? -1 : 2 + tz
         },
-        Mb = [];
-      for (const Yb of bb) {
-        const bb = [Ab(Yb.lowerLabel), Ab(Yb.lowerName)].filter((bb => -1 !== bb));
-        bb.length && Mb.push({
-          item: Yb,
-          rank: Math.min(...bb)
+        Wz = [];
+      for (const oz of zz) {
+        const zz = [Fz(oz.lowerLabel), Fz(oz.lowerName)].filter((zz => -1 !== zz));
+        zz.length && Wz.push({
+          item: oz,
+          rank: Math.min(...zz)
         })
       }
-      if (Mb.length > 0) return Mb.sort(((bb, ab) => bb.rank - ab.rank)).map((bb => bb.item));
-      const Tb = [...Ub],
-        Eb = bb => {
-          let ab = 0;
-          for (const Ub of Tb) {
-            if (ab = bb.indexOf(Ub, ab), -1 === ab) return !1;
-            ab++
+      if (Wz.length > 0) return Wz.sort(((zz, tz) => zz.rank - tz.rank)).map((zz => zz.item));
+      const Xz = [...sz],
+        Oz = zz => {
+          let tz = 0;
+          for (const sz of Xz) {
+            if (tz = zz.indexOf(sz, tz), -1 === tz) return !1;
+            tz++
           }
           return !0
         };
-      return bb.filter((bb => Eb(bb.lowerLabel) || Eb(bb.lowerName)))
+      return zz.filter((zz => Oz(zz.lowerLabel) || Oz(zz.lowerName)))
     }
 
-    function EM(bb, ab) {
-      var Ub;
-      return null !== (Ub = null === bb || void 0 === bb ? void 0 : bb[ab]) && void 0 !== Ub ? Ub : ab
+    function UW(zz, tz) {
+      var sz;
+      return null !== (sz = null === zz || void 0 === zz ? void 0 : zz[tz]) && void 0 !== sz ? sz : tz
     }
 
-    function YM(bb, ab) {
-      const Ub = bb.userInput;
-      return void 0 !== ab && "dropdown" === (null === Ub || void 0 === Ub ? void 0 : Ub.type) && Ub.dropdownOptions.map(xA.g).includes(ab) ? ab : function(bb) {
-        const ab = bb.userInput;
-        if ("dropdown" !== (null === ab || void 0 === ab ? void 0 : ab.type) || 0 === ab.dropdownOptions.length) return null;
-        const Ub = ab.dropdownOptions.map(xA.g);
-        return ab.initialValue && Ub.includes(ab.initialValue) ? ab.initialValue : Ub[Ub.length - 1]
-      }(bb)
+    function KW(zz, tz) {
+      const sz = zz.userInput;
+      return void 0 !== tz && "dropdown" === (null === sz || void 0 === sz ? void 0 : sz.type) && sz.dropdownOptions.map(JF.e).includes(tz) ? tz : function(zz) {
+        const tz = zz.userInput;
+        if ("dropdown" !== (null === tz || void 0 === tz ? void 0 : tz.type) || 0 === tz.dropdownOptions.length) return null;
+        const sz = tz.dropdownOptions.map(JF.e);
+        return tz.initialValue && sz.includes(tz.initialValue) ? tz.initialValue : sz[sz.length - 1]
+      }(zz)
     }
 
-    function BM(bb) {
-      return void 0 === bb ? "" : JSON.stringify(bb)
+    function uW(zz) {
+      return void 0 === zz ? "" : JSON.stringify(zz)
     }
-    const eM = (0, Ab.createContext)(null);
+    const NW = (0, Fz.createContext)(null);
 
-    function vM() {
-      return (0, Ab.useContext)(eM)
+    function bW() {
+      return (0, Fz.useContext)(NW)
     }
-    var LM = Ub(2490);
-    const PM = (0, Ab.memo)((function(bb) {
+    var wW = sz(2495);
+    const DW = (0, Fz.memo)((function(zz) {
         let {
-          name: ab,
-          label: Ub,
-          onPick: Ab
-        } = bb;
-        return (0, vb.jsxs)("button", {
+          name: tz,
+          label: sz,
+          onPick: Fz
+        } = zz;
+        return (0, Kz.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: Ub,
+          title: sz,
           onClick: () => {
-            Ab(ab)
+            Fz(tz)
           },
-          children: [(0, vb.jsx)(uA, {
-            item: ab,
+          children: [(0, Kz.jsx)(kF, {
+            item: tz,
             size: "big"
-          }), (0, vb.jsx)("span", {
-            children: Ub
+          }), (0, Kz.jsx)("span", {
+            children: sz
           })]
         })
       })),
-      XM = (0, Ab.memo)((function(bb) {
+      gW = (0, Fz.memo)((function(zz) {
         let {
-          items: ab,
-          query: Ub,
-          onPick: Mb
-        } = bb;
+          items: tz,
+          query: sz,
+          onPick: Wz
+        } = zz;
         const {
-          t: Tb
-        } = (0, Eb.A)(), [Yb, Bb] = (0, Ab.useState)(new Set), eb = (0, Ab.useMemo)((() => function(bb) {
-          const ab = new Map;
-          for (const Ub of bb) {
-            let bb = ab.get(Ub.category);
-            bb || (bb = [], ab.set(Ub.category, bb)), bb.push(Ub)
+          t: Xz
+        } = (0, Oz.B)(), [oz, vz] = (0, Fz.useState)(new Set), Uz = (0, Fz.useMemo)((() => function(zz) {
+          const tz = new Map;
+          for (const sz of zz) {
+            let zz = tz.get(sz.category);
+            zz || (zz = [], tz.set(sz.category, zz)), zz.push(sz)
           }
-          return [...OA, "other"].filter((bb => ab.has(bb))).map((bb => ({
-            category: bb,
-            items: ab.get(bb)
+          return [...fF, "other"].filter((zz => tz.has(zz))).map((zz => ({
+            category: zz,
+            items: tz.get(zz)
           })))
-        }(ab)), [ab]), Lb = (0, Ab.useMemo)((() => TM(ab, Ub).slice(0, 60)), [ab, Ub]);
-        return Ub.trim() ? 0 === Lb.length ? (0, vb.jsx)(oA, {
-          title: Tb("smpShop:noItemsFound", {
-            query: Ub.trim()
+        }(tz)), [tz]), uz = (0, Fz.useMemo)((() => vW(tz, sz).slice(0, 60)), [tz, sz]);
+        return sz.trim() ? 0 === uz.length ? (0, Kz.jsx)(lF, {
+          title: Xz("smpShop:noItemsFound", {
+            query: sz.trim()
           }),
-          children: Tb("smpShop:tryShorterName")
-        }) : (0, vb.jsx)(LM.c, {
+          children: Xz("smpShop:tryShorterName")
+        }) : (0, Kz.jsx)(wW.c, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: bM,
-          observerUpdateDeps: [Ub],
-          children: Lb.map((bb => (0, vb.jsx)(PM, {
-            name: bb.name,
-            label: bb.label,
-            onPick: Mb
-          }, bb.name)))
-        }) : (0, vb.jsx)(vb.Fragment, {
-          children: eb.map((bb => {
+          rootMargin: FW,
+          observerUpdateDeps: [sz],
+          children: uz.map((zz => (0, Kz.jsx)(DW, {
+            name: zz.name,
+            label: zz.label,
+            onPick: Wz
+          }, zz.name)))
+        }) : (0, Kz.jsx)(Kz.Fragment, {
+          children: Uz.map((zz => {
             let {
-              category: ab,
-              items: Ub
-            } = bb;
-            const Ab = Yb.has(ab) || Ub.length <= 48,
-              Eb = Ab ? Ub : Ub.slice(0, 48);
-            return (0, vb.jsxs)("section", {
+              category: tz,
+              items: sz
+            } = zz;
+            const Fz = oz.has(tz) || sz.length <= 48,
+              Oz = Fz ? sz : sz.slice(0, 48);
+            return (0, Kz.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, vb.jsxs)("h4", {
-                children: [Tb("other" === ab ? "smpShop:otherItems" : `creativeInventory:${ab}`), !Ab && (0, vb.jsx)("button", {
+              children: [(0, Kz.jsxs)("h4", {
+                children: [Xz("other" === tz ? "smpShop:otherItems" : `creativeInventory:${tz}`), !Fz && (0, Kz.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    Bb(new Set([...Yb, ab]))
+                    vz(new Set([...oz, tz]))
                   },
-                  children: Tb("smpShop:showAll", {
-                    count: Ub.length
+                  children: Xz("smpShop:showAll", {
+                    count: sz.length
                   })
                 })]
-              }), (0, vb.jsx)(LM.c, {
+              }), (0, Kz.jsx)(wW.c, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: bM,
-                observerUpdateDeps: [Ab],
-                children: Eb.map((bb => (0, vb.jsx)(PM, {
-                  name: bb.name,
-                  label: bb.label,
-                  onPick: Mb
-                }, bb.name)))
+                rootMargin: FW,
+                observerUpdateDeps: [Fz],
+                children: Oz.map((zz => (0, Kz.jsx)(DW, {
+                  name: zz.name,
+                  label: zz.label,
+                  onPick: Wz
+                }, zz.name)))
               })]
-            }, ab)
+            }, tz)
           }))
         })
       }));
 
-    function jM(bb, ab) {
+    function HW(zz, tz) {
       const {
-        searched: Ub,
-        shown: Mb,
-        searchFor: Tb,
-        loading: Eb
-      } = function(bb, ab) {
-        var Ub;
-        const Mb = vM(),
-          [Tb, Eb] = (0, Ab.useState)(void 0),
-          Yb = (0, Ab.useRef)(void 0),
-          Bb = (0, Ab.useRef)(0),
-          eb = (0, Ab.useRef)(void 0),
-          vb = null !== (Ub = null === bb || void 0 === bb ? void 0 : bb.meta.item) && void 0 !== Ub ? Ub : null,
-          Lb = !!bb && Mb.isPending(bb.key);
-        (0, Ab.useEffect)((() => {
-          if (!bb || Lb || !ab || void 0 === Tb || Tb === vb) return;
-          const Ub = Tb === Yb.current && Mb.gaveUpAt(bb.key) > Bb.current && eb.current !== Tb;
-          (Tb !== Yb.current || Ub) && Mb.act(bb.key, null !== Tb && void 0 !== Tb ? Tb : "*", Ub) && (Ub && (eb.current = Tb), Yb.current = Tb, Bb.current = Date.now())
-        }), [bb, Lb, ab, Tb, vb, Mb]);
-        const Pb = (0, Ab.useCallback)((bb => {
-            Yb.current = void 0, eb.current = void 0, Eb(bb)
+        searched: sz,
+        shown: Wz,
+        searchFor: Xz,
+        loading: Oz
+      } = function(zz, tz) {
+        var sz;
+        const Wz = bW(),
+          [Xz, Oz] = (0, Fz.useState)(void 0),
+          oz = (0, Fz.useRef)(void 0),
+          vz = (0, Fz.useRef)(0),
+          Uz = (0, Fz.useRef)(void 0),
+          Kz = null !== (sz = null === zz || void 0 === zz ? void 0 : zz.meta.item) && void 0 !== sz ? sz : null,
+          uz = !!zz && Wz.isPending(zz.key);
+        (0, Fz.useEffect)((() => {
+          if (!zz || uz || !tz || void 0 === Xz || Xz === Kz) return;
+          const sz = Xz === oz.current && Wz.gaveUpAt(zz.key) > vz.current && Uz.current !== Xz;
+          (Xz !== oz.current || sz) && Wz.act(zz.key, null !== Xz && void 0 !== Xz ? Xz : "*", sz) && (sz && (Uz.current = Xz), oz.current = Xz, vz.current = Date.now())
+        }), [zz, uz, tz, Xz, Kz, Wz]);
+        const Nz = (0, Fz.useCallback)((zz => {
+            oz.current = void 0, Uz.current = void 0, Oz(zz)
           }), []),
-          Xb = void 0 !== Tb && Tb !== vb && (Lb || Yb.current !== Tb);
+          bz = void 0 !== Xz && Xz !== Kz && (uz || oz.current !== Xz);
         return {
-          searched: vb,
-          shown: Xb ? Tb : vb,
-          searchFor: Pb,
-          loading: Xb || Lb || null !== vb && !ab
+          searched: Kz,
+          shown: bz ? Xz : Kz,
+          searchFor: Nz,
+          loading: bz || uz || null !== Kz && !tz
         }
-      }(bb, ab), Yb = (0, Ab.useMemo)((() => function() {
-        var bb;
-        let ab = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          Ab = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Mb = `${(0,cA.l)()}\x1f${ab.join("\x1e")}\x1f${Ub.join("\x1e")}\x1f${JSON.stringify(Ab)}`;
-        if ((null === (bb = MM) || void 0 === bb ? void 0 : bb.key) === Mb) return MM.items;
-        const Tb = new Set(Ub),
-          Eb = new Set,
-          Yb = [],
-          Bb = (bb, ab) => {
-            var Ub;
-            if (!bb || Eb.has(bb) || Tb.has(bb)) return;
-            Eb.add(bb);
-            const Mb = null !== (Ub = Ab[bb]) && void 0 !== Ub ? Ub : bb;
-            Yb.push({
-              name: bb,
-              label: Mb,
-              lowerLabel: Mb.toLowerCase(),
-              lowerName: bb.toLowerCase(),
-              category: ab
+      }(zz, tz), oz = (0, Fz.useMemo)((() => function() {
+        var zz;
+        let tz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          sz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          Fz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Wz = `${(0,EF.h)()}\x1f${tz.join("\x1e")}\x1f${sz.join("\x1e")}\x1f${JSON.stringify(Fz)}`;
+        if ((null === (zz = oW) || void 0 === zz ? void 0 : zz.key) === Wz) return oW.items;
+        const Xz = new Set(sz),
+          Oz = new Set,
+          oz = [],
+          vz = (zz, tz) => {
+            var sz;
+            if (!zz || Oz.has(zz) || Xz.has(zz)) return;
+            Oz.add(zz);
+            const Wz = null !== (sz = Fz[zz]) && void 0 !== sz ? sz : zz;
+            oz.push({
+              name: zz,
+              label: Wz,
+              lowerLabel: Wz.toLowerCase(),
+              lowerName: zz.toLowerCase(),
+              category: tz
             })
           };
-        for (const vb of (0, CA.creativeItemIds)()) {
-          var eb;
-          (0, CA.itemIsDisabled)(vb, !0, !0, !1) || (0, CA.showOnlyInCreativeSearch)(vb) || Bb((0, cA.h)(vb), null !== (eb = (0, CA.creativeCategoryOf)(vb)) && void 0 !== eb ? eb : "other")
+        for (const Kz of (0, RF.creativeItemIds)()) {
+          var Uz;
+          (0, RF.itemIsDisabled)(Kz, !0, !0, !1) || (0, RF.showOnlyInCreativeSearch)(Kz) || vz((0, EF.d)(Kz), null !== (Uz = (0, RF.creativeCategoryOf)(Kz)) && void 0 !== Uz ? Uz : "other")
         }
-        for (const vb of ab) Bb(vb, "other");
-        return MM = {
-          key: Mb,
-          items: Yb
-        }, Yb
-      }(null === bb || void 0 === bb ? void 0 : bb.meta.extra, null === bb || void 0 === bb ? void 0 : bb.meta.excluded, null === bb || void 0 === bb ? void 0 : bb.meta.names)), [null === bb || void 0 === bb ? void 0 : bb.meta.extra, null === bb || void 0 === bb ? void 0 : bb.meta.excluded, null === bb || void 0 === bb ? void 0 : bb.meta.names]), [Bb, eb] = (0, Ab.useState)(""), [vb, Lb] = (0, Ab.useState)(0), [Pb, Xb] = (0, Ab.useState)("recent"), jb = (0, Ab.useCallback)((bb => {
-        eb(""), Lb((bb => bb + 1)), Tb(bb)
-      }), [Tb]), Rb = "browse" === Pb || "" !== Bb.trim();
+        for (const Kz of tz) vz(Kz, "other");
+        return oW = {
+          key: Wz,
+          items: oz
+        }, oz
+      }(null === zz || void 0 === zz ? void 0 : zz.meta.extra, null === zz || void 0 === zz ? void 0 : zz.meta.excluded, null === zz || void 0 === zz ? void 0 : zz.meta.names)), [null === zz || void 0 === zz ? void 0 : zz.meta.extra, null === zz || void 0 === zz ? void 0 : zz.meta.excluded, null === zz || void 0 === zz ? void 0 : zz.meta.names]), [vz, Uz] = (0, Fz.useState)(""), [Kz, uz] = (0, Fz.useState)(0), [Nz, bz] = (0, Fz.useState)("recent"), wz = (0, Fz.useCallback)((zz => {
+        Uz(""), uz((zz => zz + 1)), Xz(zz)
+      }), [Xz]), Dz = "browse" === Nz || "" !== vz.trim();
       return {
-        searched: Ub,
-        shown: Mb,
-        searchFor: Tb,
-        loading: Eb,
-        catalogue: Yb,
-        names: null === bb || void 0 === bb ? void 0 : bb.meta.names,
-        query: Bb,
-        setQuery: eb,
-        searchBoxKey: vb,
-        pickItem: jb,
-        setView: Xb,
-        browsing: Rb
+        searched: sz,
+        shown: Wz,
+        searchFor: Xz,
+        loading: Oz,
+        catalogue: oz,
+        names: null === zz || void 0 === zz ? void 0 : zz.meta.names,
+        query: vz,
+        setQuery: Uz,
+        searchBoxKey: Kz,
+        pickItem: wz,
+        setView: bz,
+        browsing: Dz
       }
     }
 
-    function RM(bb) {
+    function BW(zz) {
       let {
-        browser: ab,
-        children: Ub
-      } = bb;
+        browser: tz,
+        children: sz
+      } = zz;
       const {
-        t: Ab
-      } = (0, Eb.A)(), Mb = vM();
-      return (0, vb.jsxs)("div", {
+        t: Fz
+      } = (0, Oz.B)(), Wz = bW();
+      return (0, Kz.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, vb.jsx)("div", {
+        children: [(0, Kz.jsx)("div", {
           className: "SmpSearch",
-          children: (0, vb.jsx)(xb.c, {
+          children: (0, Kz.jsx)(Yz.d, {
             className: "SmpSearchInput",
-            placeholderText: Ab("smpShop:searchPlaceholder"),
-            defaultValue: ab.query,
-            onValueChange: bb => {
-              ab.setQuery(bb), ab.searched && bb.trim() && ab.searchFor(null)
+            placeholderText: Fz("smpShop:searchPlaceholder"),
+            defaultValue: tz.query,
+            onValueChange: zz => {
+              tz.setQuery(zz), tz.searched && zz.trim() && tz.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const bb = TM(ab.catalogue, ab.query)[0];
-              bb ? ab.pickItem(bb.name) : ab.query.trim() && Mb.notify(Ab("smpShop:noItemsFound", {
-                query: ab.query.trim()
+              const zz = vW(tz.catalogue, tz.query)[0];
+              zz ? tz.pickItem(zz.name) : tz.query.trim() && Wz.notify(Fz("smpShop:noItemsFound", {
+                query: tz.query.trim()
               }))
             }
-          }, ab.searchBoxKey)
-        }), Ub]
+          }, tz.searchBoxKey)
+        }), sz]
       })
     }
 
-    function kM(bb) {
+    function PW(zz) {
       let {
-        browser: ab,
-        recentLabel: Ub,
-        children: Ab
-      } = bb;
+        browser: tz,
+        recentLabel: sz,
+        children: Fz
+      } = zz;
       const {
-        t: Mb
-      } = (0, Eb.A)();
-      return (0, vb.jsxs)("div", {
+        t: Wz
+      } = (0, Oz.B)();
+      return (0, Kz.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, vb.jsx)(tA, {
+        children: [(0, Kz.jsx)(aF, {
           options: [{
             value: "recent",
-            label: Ub
+            label: sz
           }, {
             value: "browse",
-            label: Mb("smpShop:browseItems")
+            label: Wz("smpShop:browseItems")
           }],
-          value: ab.browsing ? "browse" : "recent",
-          onChange: ab.setView,
-          ariaLabel: Mb("smpShop:show")
-        }), !ab.browsing && Ab]
+          value: tz.browsing ? "browse" : "recent",
+          onChange: tz.setView,
+          ariaLabel: Wz("smpShop:show")
+        }), !tz.browsing && Fz]
       })
     }
 
-    function yM(bb) {
+    function rW(zz) {
       let {
-        item: ab,
-        names: Ub,
-        summary: Ab,
-        onBack: Mb,
-        children: Tb
-      } = bb;
+        item: tz,
+        names: sz,
+        summary: Fz,
+        onBack: Wz,
+        children: Xz
+      } = zz;
       const {
-        t: Yb
-      } = (0, Eb.A)();
-      return (0, vb.jsxs)("div", {
+        t: oz
+      } = (0, Oz.B)();
+      return (0, Kz.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, vb.jsx)(kb.e, {
+        children: [(0, Kz.jsx)(gz.e, {
           className: "SmpBackButton",
-          onClick: Mb,
-          children: Yb("general:back")
-        }), (0, vb.jsx)(uA, {
-          item: ab,
+          onClick: Wz,
+          children: oz("general:back")
+        }), (0, Kz.jsx)(kF, {
+          item: tz,
           size: "big"
-        }), (0, vb.jsxs)("div", {
+        }), (0, Kz.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, vb.jsx)("b", {
-            children: EM(Ub, ab)
-          }), Ab && (0, vb.jsx)("small", {
-            children: Ab
+          children: [(0, Kz.jsx)("b", {
+            children: UW(sz, tz)
+          }), Fz && (0, Kz.jsx)("small", {
+            children: Fz
           })]
-        }), Tb]
+        }), Xz]
       })
     }
 
-    function ZM(bb) {
+    function YW(zz) {
       let {
-        browser: ab,
-        className: Ub,
-        action: Ab,
-        above: Mb,
-        list: Eb,
-        summary: Yb,
-        recentLabel: Bb,
-        listControls: eb,
-        onBack: Lb
-      } = bb;
-      return (0, vb.jsxs)("div", {
-        className: Tb()("SmpScreen", Ub),
-        children: [(0, vb.jsx)(RM, {
-          browser: ab,
-          children: Ab
-        }), ab.shown && (0, vb.jsx)(yM, {
-          item: ab.shown,
-          names: ab.names,
-          summary: !ab.loading && Yb,
+        browser: tz,
+        className: sz,
+        action: Fz,
+        above: Wz,
+        list: Oz,
+        summary: oz,
+        recentLabel: vz,
+        listControls: Uz,
+        onBack: uz
+      } = zz;
+      return (0, Kz.jsxs)("div", {
+        className: Xz()("SmpScreen", sz),
+        children: [(0, Kz.jsx)(BW, {
+          browser: tz,
+          children: Fz
+        }), tz.shown && (0, Kz.jsx)(rW, {
+          item: tz.shown,
+          names: tz.names,
+          summary: !tz.loading && oz,
           onBack: () => {
-            null === Lb || void 0 === Lb || Lb(), ab.searchFor(null)
+            null === uz || void 0 === uz || uz(), tz.searchFor(null)
           },
-          children: eb
-        }), Mb, ab.shown ? Eb : (0, vb.jsxs)(vb.Fragment, {
-          children: [(0, vb.jsx)(kM, {
-            browser: ab,
-            recentLabel: Bb,
-            children: eb
-          }), ab.browsing ? (0, vb.jsx)(XM, {
-            items: ab.catalogue,
-            query: ab.query,
-            onPick: ab.pickItem
-          }) : Eb]
+          children: Uz
+        }), Wz, tz.shown ? Oz : (0, Kz.jsxs)(Kz.Fragment, {
+          children: [(0, Kz.jsx)(PW, {
+            browser: tz,
+            recentLabel: vz,
+            children: Uz
+          }), tz.browsing ? (0, Kz.jsx)(gW, {
+            items: tz.catalogue,
+            query: tz.query,
+            onPick: tz.pickItem
+          }) : Oz]
         })]
       })
     }
 
-    function DM(bb, ab) {
-      const Ub = bb.map((bb => {
+    function xW(zz, tz) {
+      const sz = zz.map((zz => {
         let {
-          meta: ab
-        } = bb;
-        return ab.pricePerItem
+          meta: tz
+        } = zz;
+        return tz.pricePerItem
       }));
-      return "min" === ab ? Math.min(...Ub) : Math.max(...Ub)
+      return "min" === tz ? Math.min(...sz) : Math.max(...sz)
     }
-    var zM = Ub(6188);
-    const xM = (0, Ab.memo)((function(bb) {
-      var ab;
+    var mW = sz(6151);
+    const JW = (0, Fz.memo)((function(zz) {
+      var tz;
       const {
-        t: Ub
-      } = (0, Eb.A)(), Ab = null === bb.seller, Mb = bb.quantity * bb.pricePerItem;
-      return (0, vb.jsxs)("div", {
-        className: bb.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, vb.jsx)(uA, {
-          item: bb.item,
-          amount: bb.quantity,
-          size: bb.grid ? "big" : "normal",
-          tier: bb.tier
-        }), (0, vb.jsxs)("div", {
+        t: sz
+      } = (0, Oz.B)(), Fz = null === zz.seller, Wz = zz.quantity * zz.pricePerItem;
+      return (0, Kz.jsxs)("div", {
+        className: zz.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, Kz.jsx)(kF, {
+          item: zz.item,
+          amount: zz.quantity,
+          size: zz.grid ? "big" : "normal",
+          tier: zz.tier
+        }), (0, Kz.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, vb.jsx)("b", {
-            children: (0, vb.jsx)(pA.c, {
-              text: null !== (ab = bb.title) && void 0 !== ab ? ab : `${bb.quantity}x ${bb.item}`
+          children: [(0, Kz.jsx)("b", {
+            children: (0, Kz.jsx)(ZF.c, {
+              text: null !== (tz = zz.title) && void 0 !== tz ? tz : `${zz.quantity}x ${zz.item}`
             })
-          }), (0, vb.jsxs)("small", {
+          }), (0, Kz.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, vb.jsx)("span", {
-              children: Ab ? Ub("smpShop:you") : (0, vb.jsx)(pA.c, {
+            children: [(0, Kz.jsx)("span", {
+              children: Fz ? sz("smpShop:you") : (0, Kz.jsx)(ZF.c, {
                 text: [{
-                  entityName: bb.seller
+                  entityName: zz.seller
                 }]
               })
-            }), (0, vb.jsx)("span", {
-              children: Ub("smpShop:timeLeft", {
-                time: UM(bb.expiresAt)
+            }), (0, Kz.jsx)("span", {
+              children: sz("smpShop:timeLeft", {
+                time: XW(zz.expiresAt)
               })
             })]
           })]
-        }), (0, vb.jsxs)("div", {
+        }), (0, Kz.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, vb.jsx)(rA, {
-            amount: bb.pricePerItem
-          }), (0, vb.jsx)("small", {
-            children: Ub("smpShop:each")
+          children: [(0, Kz.jsx)(iF, {
+            amount: zz.pricePerItem
+          }), (0, Kz.jsx)("small", {
+            children: sz("smpShop:each")
           })]
-        }), (0, vb.jsx)(kb.g, {
+        }), (0, Kz.jsx)(gz.h, {
           className: "SmpBuyButton",
-          disabled: Ab || !bb.canAfford && !bb.busy,
-          loading: bb.busy,
+          disabled: Fz || !zz.canAfford && !zz.busy,
+          loading: zz.busy,
           onClick: () => {
-            bb.onBuy(bb.itemKey)
+            zz.onBuy(zz.itemKey)
           },
-          children: Ab ? Ub("smpShop:yours") : (0, vb.jsx)(rA, {
-            amount: Mb
+          children: Fz ? sz("smpShop:yours") : (0, Kz.jsx)(iF, {
+            amount: Wz
           })
         })]
       })
     }));
 
-    function iM(bb) {
+    function IW(zz) {
       let {
-        view: ab,
-        onChange: Ub
-      } = bb;
+        view: tz,
+        onChange: sz
+      } = zz;
       const {
-        t: Ab
-      } = (0, Eb.A)();
-      return (0, vb.jsx)(QA.e, {
+        t: Fz
+      } = (0, Oz.B)();
+      return (0, Kz.jsx)(hF.b, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: Ab("smpShop:layout"),
+        ariaLabel: Fz("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, vb.jsx)(Yb.e, {
+          label: (0, Kz.jsx)(oz.c, {
             name: "list"
           }),
-          ariaLabel: Ab("smpShop:listView")
+          ariaLabel: Fz("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, vb.jsx)(Yb.e, {
+          label: (0, Kz.jsx)(oz.c, {
             name: "grid-2"
           }),
-          ariaLabel: Ab("smpShop:gridView")
+          ariaLabel: Fz("smpShop:gridView")
         }],
-        value: ab,
-        onChange: Ub
+        value: tz,
+        onChange: sz
       })
     }
 
-    function fM(bb) {
+    function CW(zz) {
       let {
-        entries: ab,
-        view: Ub
-      } = bb;
+        entries: tz,
+        view: sz
+      } = zz;
       const {
-        t: Ab
-      } = (0, Eb.A)(), Mb = vM(), Tb = "grid" === Ub;
-      return (0, vb.jsxs)(vb.Fragment, {
-        children: [!Tb && (0, vb.jsxs)("div", {
+        t: Fz
+      } = (0, Oz.B)(), Wz = bW(), Xz = "grid" === sz;
+      return (0, Kz.jsxs)(Kz.Fragment, {
+        children: [!Xz && (0, Kz.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, vb.jsx)("span", {}), (0, vb.jsx)("span", {
-            children: Ab("smpShop:columnItem")
-          }), (0, vb.jsx)("span", {
-            children: Ab("smpShop:columnPriceEach")
-          }), (0, vb.jsx)("span", {
-            children: Ab("smpShop:columnTotal")
+          children: [(0, Kz.jsx)("span", {}), (0, Kz.jsx)("span", {
+            children: Fz("smpShop:columnItem")
+          }), (0, Kz.jsx)("span", {
+            children: Fz("smpShop:columnPriceEach")
+          }), (0, Kz.jsx)("span", {
+            children: Fz("smpShop:columnTotal")
           })]
-        }), (0, vb.jsx)(LM.c, {
-          lazyLoadedClassName: Tb ? "SmpCardGrid" : "SmpList",
+        }), (0, Kz.jsx)(wW.c, {
+          lazyLoadedClassName: Xz ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: bM,
-          observerUpdateDeps: [ab.length],
-          children: ab.map((bb => {
-            var ab, Ub;
+          rootMargin: FW,
+          observerUpdateDeps: [tz.length],
+          children: tz.map((zz => {
+            var tz, sz;
             let {
-              key: Ab,
-              item: Eb,
-              meta: Yb
-            } = bb;
-            const Bb = Yb.quantity * Yb.pricePerItem;
-            return (0, vb.jsx)(xM, {
-              itemKey: Ab,
-              item: Yb.item,
-              title: Eb.customTitle,
-              quantity: Yb.quantity,
-              pricePerItem: Yb.pricePerItem,
-              seller: Yb.seller,
-              expiresAt: Yb.expiresAt,
-              tier: null !== (ab = null === (Ub = Eb.enchant) || void 0 === Ub ? void 0 : Ub.tier) && void 0 !== ab ? ab : null,
-              busy: Mb.isPending(Ab) || null !== Yb.seller && !1 === Eb.canBuy,
-              canAfford: Mb.canAfford(Eb, Bb),
-              grid: Tb,
-              onBuy: Mb.act
-            }, Ab)
+              key: Fz,
+              item: Oz,
+              meta: oz
+            } = zz;
+            const vz = oz.quantity * oz.pricePerItem;
+            return (0, Kz.jsx)(JW, {
+              itemKey: Fz,
+              item: oz.item,
+              title: Oz.customTitle,
+              quantity: oz.quantity,
+              pricePerItem: oz.pricePerItem,
+              seller: oz.seller,
+              expiresAt: oz.expiresAt,
+              tier: null !== (tz = null === (sz = Oz.enchant) || void 0 === sz ? void 0 : sz.tier) && void 0 !== tz ? tz : null,
+              busy: Wz.isPending(Fz) || null !== oz.seller && !1 === Oz.canBuy,
+              canAfford: Wz.canAfford(Oz, vz),
+              grid: Xz,
+              onBuy: Wz.act
+            }, Fz)
           }))
-        }, Ub)]
+        }, sz)]
       })
     }
-    const mM = [1, 10, 100],
-      pM = [1, 10, 100, 999];
+    const eW = [1, 10, 100],
+      ZW = [1, 10, 100, 999];
 
-    function NM(bb) {
-      var ab, Ub, Mb, Bb, eb, Lb, Pb, Xb, jb, Rb;
+    function GW(zz) {
+      var tz, sz, Wz, vz, Uz, uz, Nz, bz, wz, Dz;
       const {
-        t: yb
-      } = (0, Eb.A)(), Zb = vM(), {
-        creator: Db,
-        mode: zb
-      } = bb, [ib, fb] = (0, Ab.useState)(null !== (ab = null === Db || void 0 === Db ? void 0 : Db.meta.item) && void 0 !== ab ? ab : null), [mb, pb] = (0, Ab.useState)(1), [Nb, Wb] = (0, Ab.useState)(0), [Hb, Ib] = (0, Ab.useState)(""), [db, Fb] = (0, Ab.useState)(0), hb = (0, Ab.useRef)(ib), Gb = (0, Ab.useRef)(!1), [Qb, qb] = (0, Ab.useState)(!1), ub = null !== (Ub = null === Db || void 0 === Db ? void 0 : Db.meta.item) && void 0 !== Ub ? Ub : null, rb = null !== (Mb = null === Db || void 0 === Db ? void 0 : Db.meta.PY) && void 0 !== Mb ? Mb : 0;
-      (0, Ab.useEffect)((() => {
-        bb.searching || null === ub || ub === hb.current || (hb.current = ub, Gb.current = !1, fb(ub), Wb(0), pb("list" === zb ? Math.max(1, rb) : 1))
-      }), [ub, bb.searching]);
-      const Kb = !!Db && !!ib && Db.meta.item === ib,
-        ob = Kb ? Db.meta.PY : null !== (Bb = null === (eb = bb.inventory) || void 0 === eb || null === (Lb = eb.find((bb => bb.item === ib))) || void 0 === Lb ? void 0 : Lb.quantity) && void 0 !== Bb ? Bb : 0,
-        lb = "list" === zb ? Math.max(1, ob) : 45954,
-        tb = null !== (Pb = bb.prices[0]) && void 0 !== Pb ? Pb : null,
-        wb = bb.prices.length ? Math.round(bb.prices.reduce(((bb, ab) => bb + ab), 0) / bb.prices.length) : null,
-        sb = null === (Xb = bb.inventory) || void 0 === Xb || null === (jb = Xb.find((bb => bb.item === ib))) || void 0 === jb ? void 0 : jb.sellPrice;
-      (0, Ab.useEffect)((() => {
-        var bb;
-        Kb && (pb((bb => "list" === zb ? Math.min(Math.max(1, bb), Math.max(1, ob)) : bb)), Gb.current || Wb(null !== (bb = null !== tb && void 0 !== tb ? tb : wb) && void 0 !== bb ? bb : Math.max(1, null !== sb && void 0 !== sb ? sb : 1)))
-      }), [Kb, ob, ib, tb, wb]);
-      const gb = bb => {
-          Gb.current = !0, Wb(bb)
+        t: Hz
+      } = (0, Oz.B)(), Bz = bW(), {
+        creator: Pz,
+        mode: rz
+      } = zz, [xz, mz] = (0, Fz.useState)(null !== (tz = null === Pz || void 0 === Pz ? void 0 : Pz.meta.item) && void 0 !== tz ? tz : null), [Jz, Iz] = (0, Fz.useState)(1), [Cz, ez] = (0, Fz.useState)(0), [Zz, Gz] = (0, Fz.useState)(""), [Tz, cz] = (0, Fz.useState)(0), jz = (0, Fz.useRef)(xz), Az = (0, Fz.useRef)(!1), [yz, Mz] = (0, Fz.useState)(!1), dz = null !== (sz = null === Pz || void 0 === Pz ? void 0 : Pz.meta.item) && void 0 !== sz ? sz : null, hz = null !== (Wz = null === Pz || void 0 === Pz ? void 0 : Pz.meta.po) && void 0 !== Wz ? Wz : 0;
+      (0, Fz.useEffect)((() => {
+        zz.searching || null === dz || dz === jz.current || (jz.current = dz, Az.current = !1, mz(dz), ez(0), Iz("list" === rz ? Math.max(1, hz) : 1))
+      }), [dz, zz.searching]);
+      const Qz = !!Pz && !!xz && Pz.meta.item === xz,
+        kz = Qz ? Pz.meta.po : null !== (vz = null === (Uz = zz.inventory) || void 0 === Uz || null === (uz = Uz.find((zz => zz.item === xz))) || void 0 === uz ? void 0 : uz.quantity) && void 0 !== vz ? vz : 0,
+        iz = "list" === rz ? Math.max(1, kz) : 45954,
+        Lz = null !== (Nz = zz.prices[0]) && void 0 !== Nz ? Nz : null,
+        lz = zz.prices.length ? Math.round(zz.prices.reduce(((zz, tz) => zz + tz), 0) / zz.prices.length) : null,
+        nz = null === (bz = zz.inventory) || void 0 === bz || null === (wz = bz.find((zz => zz.item === xz))) || void 0 === wz ? void 0 : wz.sellPrice;
+      (0, Fz.useEffect)((() => {
+        var zz;
+        Qz && (Iz((zz => "list" === rz ? Math.min(Math.max(1, zz), Math.max(1, kz)) : zz)), Az.current || ez(null !== (zz = null !== Lz && void 0 !== Lz ? Lz : lz) && void 0 !== zz ? zz : Math.max(1, null !== nz && void 0 !== nz ? nz : 1)))
+      }), [Qz, kz, xz, Lz, lz]);
+      const az = zz => {
+          Az.current = !0, ez(zz)
         },
-        Cb = ab => {
-          var Ub, Ab, Mb;
-          hb.current = ab, Gb.current = !1, qb(!1), Ib(""), Fb((bb => bb + 1)), fb(ab), Wb(0), pb("list" === zb && null !== (Ub = null === (Ab = bb.inventory) || void 0 === Ab || null === (Mb = Ab.find((bb => bb.item === ab))) || void 0 === Mb ? void 0 : Mb.quantity) && void 0 !== Ub ? Ub : 1), (null === Db || void 0 === Db ? void 0 : Db.meta.item) !== ab && bb.onPickItem(ab)
+        qz = tz => {
+          var sz, Fz, Wz;
+          jz.current = tz, Az.current = !1, Mz(!1), Gz(""), cz((zz => zz + 1)), mz(tz), ez(0), Iz("list" === rz && null !== (sz = null === (Fz = zz.inventory) || void 0 === Fz || null === (Wz = Fz.find((zz => zz.item === tz))) || void 0 === Wz ? void 0 : Wz.quantity) && void 0 !== sz ? sz : 1), (null === Pz || void 0 === Pz ? void 0 : Pz.meta.item) !== tz && zz.onPickItem(tz)
         },
-        Vb = mb * Nb,
-        Ob = "list" === zb && null !== Db && void 0 !== Db && Db.meta.fee ? function(bb, ab) {
-          const Ub = Math.max(0, ab - bb.taxFreeAllowance);
-          return Math.ceil(Math.round(Ub * bb.rate * 1e6) / 1e6)
-        }(Db.meta.fee, Vb) : 0,
-        cb = !!Db && Zb.isPending(Db.key),
-        Jb = Kb && !bb.searching && mb >= 1 && Nb >= 1 && ("order" === zb || ob >= mb) && !cb,
-        nb = !!ib && !Kb && !bb.searching && mb >= 1 && Nb >= 1,
-        Sb = () => {
-          Jb ? Zb.act(Db.key, `${mb}|${Nb}`) : nb && (bb.onPickItem(ib), qb(!0))
+        Sz = Jz * Cz,
+        Vz = "list" === rz && null !== Pz && void 0 !== Pz && Pz.meta.fee ? function(zz, tz) {
+          const sz = Math.max(0, tz - zz.taxFreeAllowance);
+          return Math.ceil(Math.round(sz * zz.rate * 1e6) / 1e6)
+        }(Pz.meta.fee, Sz) : 0,
+        Rz = !!Pz && Bz.isPending(Pz.key),
+        pz = Qz && !zz.searching && Jz >= 1 && Cz >= 1 && ("order" === rz || kz >= Jz) && !Rz,
+        fz = !!xz && !Qz && !zz.searching && Jz >= 1 && Cz >= 1,
+        Ez = () => {
+          pz ? Bz.act(Pz.key, `${Jz}|${Cz}`) : fz && (zz.onPickItem(xz), Mz(!0))
         };
-      (0, Ab.useEffect)((() => {
-        Qb && Kb && !bb.searching && (qb(!1), Sb())
-      }), [Qb, Kb, bb.searching]);
-      const ba = !!ib && !Kb && (bb.searching || Qb),
-        aa = ib ? EM(bb.names, ib) : "",
-        Ua = (0, Ab.useMemo)((() => TM(bb.catalogue, Hb).slice(0, 8)), [bb.catalogue, Hb]),
-        Aa = ("list" === zb ? mM.filter((bb => bb < ob)) : pM).map((bb => ({
-          value: bb,
-          label: String(bb)
+      (0, Fz.useEffect)((() => {
+        yz && Qz && !zz.searching && (Mz(!1), Ez())
+      }), [yz, Qz, zz.searching]);
+      const zt = !!xz && !Qz && (zz.searching || yz),
+        tt = xz ? UW(zz.names, xz) : "",
+        st = (0, Fz.useMemo)((() => vW(zz.catalogue, Zz).slice(0, 8)), [zz.catalogue, Zz]),
+        Ft = ("list" === rz ? eW.filter((zz => zz < kz)) : ZW).map((zz => ({
+          value: zz,
+          label: String(zz)
         })));
-      "list" === zb && ob > 0 && Aa.push({
-        value: ob,
-        label: yb("smpShop:all", {
-          count: ob
+      "list" === rz && kz > 0 && Ft.push({
+        value: kz,
+        label: Hz("smpShop:all", {
+          count: kz
         })
       });
-      const Ma = [];
-      return null !== tb && (tb > 1 && Ma.push({
-        value: tb - 1,
-        label: yb("smpShop:undercut", {
-          price: GA(tb - 1)
+      const Wt = [];
+      return null !== Lz && (Lz > 1 && Wt.push({
+        value: Lz - 1,
+        label: Hz("smpShop:undercut", {
+          price: dF(Lz - 1)
         })
-      }), Ma.push({
-        value: tb,
-        label: yb("smpShop:lowest", {
-          price: GA(tb)
+      }), Wt.push({
+        value: Lz,
+        label: Hz("smpShop:lowest", {
+          price: dF(Lz)
         })
-      })), null !== wb && wb !== tb && Ma.push({
-        value: wb,
-        label: yb("smpShop:average", {
-          price: GA(wb)
+      })), null !== lz && lz !== Lz && Wt.push({
+        value: lz,
+        label: Hz("smpShop:average", {
+          price: dF(lz)
         })
-      }), (0, vb.jsxs)("div", {
+      }), (0, Kz.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, vb.jsxs)("div", {
+        children: [(0, Kz.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, vb.jsx)("b", {
-            children: yb("list" === zb ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, vb.jsx)("button", {
+          children: [(0, Kz.jsx)("b", {
+            children: Hz("list" === rz ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, Kz.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": yb("smpShop:close"),
-            onClick: bb.onClose,
-            children: (0, vb.jsx)(Yb.e, {
+            "aria-label": Hz("smpShop:close"),
+            onClick: zz.onClose,
+            children: (0, Kz.jsx)(oz.c, {
               name: "xmark"
             })
           })]
-        }), "list" === zb && (0, vb.jsx)("div", {
+        }), "list" === rz && (0, Kz.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (Rb = bb.inventory) && void 0 !== Rb && Rb.length ? bb.inventory.map((bb => {
+          children: null !== (Dz = zz.inventory) && void 0 !== Dz && Dz.length ? zz.inventory.map((zz => {
             let {
-              item: ab,
-              quantity: Ub
-            } = bb;
-            return (0, vb.jsx)("button", {
+              item: tz,
+              quantity: sz
+            } = zz;
+            return (0, Kz.jsx)("button", {
               type: "button",
-              title: ab,
-              className: Tb()("SmpPickerSlot", {
-                SmpPickerSlotOn: ab === ib
+              title: tz,
+              className: Xz()("SmpPickerSlot", {
+                SmpPickerSlotOn: tz === xz
               }),
               onClick: () => {
-                Cb(ab)
+                qz(tz)
               },
-              children: (0, vb.jsx)(uA, {
-                item: ab,
-                amount: Ub
+              children: (0, Kz.jsx)(kF, {
+                item: tz,
+                amount: sz
               })
-            }, ab)
-          })) : (0, vb.jsx)("span", {
+            }, tz)
+          })) : (0, Kz.jsx)("span", {
             className: "SmpMuted",
-            children: yb("smpShop:nothingToList")
+            children: Hz("smpShop:nothingToList")
           })
-        }), ("list" === zb || !ib) && (0, vb.jsxs)("div", {
+        }), ("list" === rz || !xz) && (0, Kz.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, vb.jsx)(xb.c, {
+          children: [(0, Kz.jsx)(Yz.d, {
             className: "SmpSearchInput",
-            placeholderText: yb("list" === zb ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: Hb,
-            onValueChange: Ib,
+            placeholderText: Hz("list" === rz ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: Zz,
+            onValueChange: Gz,
             blurOnEnter: !0,
             onEnter: () => {
-              Ua[0] && Cb(Ua[0].name)
+              st[0] && qz(st[0].name)
             }
-          }, db), Ua.length > 0 && (0, vb.jsx)("div", {
+          }, Tz), st.length > 0 && (0, Kz.jsx)("div", {
             className: "SmpPicker",
-            children: Ua.map((bb => {
+            children: st.map((zz => {
               let {
-                name: ab
-              } = bb;
-              return (0, vb.jsx)("button", {
+                name: tz
+              } = zz;
+              return (0, Kz.jsx)("button", {
                 type: "button",
-                title: ab,
-                className: Tb()("SmpPickerSlot", {
-                  SmpPickerSlotOn: ab === ib
+                title: tz,
+                className: Xz()("SmpPickerSlot", {
+                  SmpPickerSlotOn: tz === xz
                 }),
                 onClick: () => {
-                  Cb(ab)
+                  qz(tz)
                 },
-                children: (0, vb.jsx)(uA, {
-                  item: ab
+                children: (0, Kz.jsx)(kF, {
+                  item: tz
                 })
-              }, ab)
+              }, tz)
             }))
           })]
-        }), ib && (0, vb.jsxs)(vb.Fragment, {
-          children: [(0, vb.jsxs)("div", {
+        }), xz && (0, Kz.jsxs)(Kz.Fragment, {
+          children: [(0, Kz.jsxs)("div", {
             className: "SmpPickedName",
-            children: [aa, ba && (0, vb.jsx)(wA, {})]
-          }), (0, vb.jsxs)("div", {
+            children: [tt, zt && (0, Kz.jsx)(qF, {})]
+          }), (0, Kz.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, vb.jsxs)("div", {
+            children: [(0, Kz.jsxs)("div", {
               className: "SmpField",
-              children: [(0, vb.jsxs)("span", {
-                children: [yb("smpShop:quantity"), "list" === zb && Kb && (0, vb.jsx)("small", {
-                  children: yb("smpShop:youHave", {
-                    count: ob
+              children: [(0, Kz.jsxs)("span", {
+                children: [Hz("smpShop:quantity"), "list" === rz && Qz && (0, Kz.jsx)("small", {
+                  children: Hz("smpShop:youHave", {
+                    count: kz
                   })
                 })]
-              }), (0, vb.jsx)(sA, {
-                value: mb,
-                onChange: pb,
-                max: lb,
-                label: yb("smpShop:quantity")
-              }), (0, vb.jsx)(tA, {
-                options: Aa,
-                value: mb,
-                onChange: pb,
-                ariaLabel: yb("smpShop:quantity")
+              }), (0, Kz.jsx)(SF, {
+                value: Jz,
+                onChange: Iz,
+                max: iz,
+                label: Hz("smpShop:quantity")
+              }), (0, Kz.jsx)(aF, {
+                options: Ft,
+                value: Jz,
+                onChange: Iz,
+                ariaLabel: Hz("smpShop:quantity")
               })]
-            }), (0, vb.jsxs)("div", {
+            }), (0, Kz.jsxs)("div", {
               className: "SmpField",
-              children: [(0, vb.jsx)("span", {
-                children: yb("smpShop:pricePerItem")
-              }), (0, vb.jsx)(sA, {
-                value: Math.max(1, Nb),
-                onChange: gb,
+              children: [(0, Kz.jsx)("span", {
+                children: Hz("smpShop:pricePerItem")
+              }), (0, Kz.jsx)(SF, {
+                value: Math.max(1, Cz),
+                onChange: az,
                 max: 9999999,
-                step: gA,
-                label: yb("smpShop:pricePerItem")
-              }), (0, vb.jsx)(tA, {
-                options: Ma,
-                value: Nb,
-                onChange: gb,
-                ariaLabel: yb("smpShop:pricePerItem")
+                step: VF,
+                label: Hz("smpShop:pricePerItem")
+              }), (0, Kz.jsx)(aF, {
+                options: Wt,
+                value: Cz,
+                onChange: az,
+                ariaLabel: Hz("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === zb && (0, vb.jsxs)("div", {
+          }), "list" === rz && (0, Kz.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, vb.jsxs)("span", {
-              children: [yb("smpShop:youGet"), " ", (0, vb.jsx)(rA, {
-                amount: Math.max(0, Vb - Ob),
+            children: [(0, Kz.jsxs)("span", {
+              children: [Hz("smpShop:youGet"), " ", (0, Kz.jsx)(iF, {
+                amount: Math.max(0, Sz - Vz),
                 exact: !0
               })]
-            }), (0, vb.jsx)("small", {
-              children: Ob > 0 ? yb("smpShop:listingFee", {
-                fee: Ob.toLocaleString("en-US")
-              }) : yb("smpShop:listingRules")
+            }), (0, Kz.jsx)("small", {
+              children: Vz > 0 ? Hz("smpShop:listingFee", {
+                fee: Vz.toLocaleString("en-US")
+              }) : Hz("smpShop:listingRules")
             })]
-          }), (0, vb.jsx)(kb.s, {
+          }), (0, Kz.jsx)(gz.t, {
             className: "SmpSubmit",
-            disabled: !Jb && !nb && !cb,
-            loading: cb || ba || Kb && bb.searching,
-            onClick: Sb,
-            children: "list" === zb ? yb("smpShop:listButton", {
-              count: mb,
-              item: aa
-            }) : (0, vb.jsxs)(vb.Fragment, {
-              children: [yb("smpShop:orderButton", {
-                count: mb,
-                item: aa
-              }), " ", Nb >= 1 && (0, vb.jsx)(rA, {
-                amount: Vb
+            disabled: !pz && !fz && !Rz,
+            loading: Rz || zt || Qz && zz.searching,
+            onClick: Ez,
+            children: "list" === rz ? Hz("smpShop:listButton", {
+              count: Jz,
+              item: tt
+            }) : (0, Kz.jsxs)(Kz.Fragment, {
+              children: [Hz("smpShop:orderButton", {
+                count: Jz,
+                item: tt
+              }), " ", Cz >= 1 && (0, Kz.jsx)(iF, {
+                amount: Sz
               })]
             })
           })]
@@ -3656,627 +3656,627 @@ export const modules = {
       })
     }
 
-    function WM() {
-      var bb;
+    function TW() {
+      var zz;
       const {
-        t: ab
-      } = (0, Eb.A)(), Ub = vM(), Mb = null === (bb = Ub.shopInfo[Ub.categoryKey]) || void 0 === bb ? void 0 : bb.items, Tb = SA(Mb, "search"), Yb = SA(Mb, "creator"), Bb = nA(Mb, "enchantedCreator"), eb = nA(Mb, "listing"), Lb = SA(Mb, "empty"), Pb = jM(Tb, eb.length > 0 || null !== Lb), {
-        searched: Xb,
-        shown: jb,
-        loading: Rb
-      } = Pb, [yb, Zb] = (0, Ab.useState)(!1), [Db, zb] = function() {
-        const [bb, ab] = (0, zM.b)("smpMarketView", "list");
-        return ["grid" === bb ? "grid" : "list", ab]
-      }(), xb = "grid" === Db, ib = (0, Ab.useMemo)((() => eb.filter((bb => {
+        t: tz
+      } = (0, Oz.B)(), sz = bW(), Wz = null === (zz = sz.shopInfo[sz.categoryKey]) || void 0 === zz ? void 0 : zz.items, Xz = sW(Wz, "search"), oz = sW(Wz, "creator"), vz = tW(Wz, "enchantedCreator"), Uz = tW(Wz, "listing"), uz = sW(Wz, "empty"), Nz = HW(Xz, Uz.length > 0 || null !== uz), {
+        searched: bz,
+        shown: wz,
+        loading: Dz
+      } = Nz, [Hz, Bz] = (0, Fz.useState)(!1), [Pz, rz] = function() {
+        const [zz, tz] = (0, mW.c)("smpMarketView", "list");
+        return ["grid" === zz ? "grid" : "list", tz]
+      }(), Yz = "grid" === Pz, xz = (0, Fz.useMemo)((() => Uz.filter((zz => {
         let {
-          meta: ab
-        } = bb;
-        return null !== ab.seller && ab.item === Xb
-      })).map((bb => {
+          meta: tz
+        } = zz;
+        return null !== tz.seller && tz.item === bz
+      })).map((zz => {
         let {
-          meta: ab
-        } = bb;
-        return ab.pricePerItem
-      })).sort(((bb, ab) => bb - ab))), [eb, Xb]), fb = (0, Ab.useMemo)((() => {
-        const bb = new Set(Pb.catalogue.map((bb => {
+          meta: tz
+        } = zz;
+        return tz.pricePerItem
+      })).sort(((zz, tz) => zz - tz))), [Uz, bz]), mz = (0, Fz.useMemo)((() => {
+        const zz = new Set(Nz.catalogue.map((zz => {
           let {
-            name: ab
-          } = bb;
-          return ab
+            name: tz
+          } = zz;
+          return tz
         })));
-        return function(bb) {
-          for (const ab in bb)
-            if ("sell" === bb[ab].smp) return nA(bb[ab].items, "sell").filter((bb => {
+        return function(zz) {
+          for (const tz in zz)
+            if ("sell" === zz[tz].smp) return tW(zz[tz].items, "sell").filter((zz => {
               let {
-                item: ab
-              } = bb;
-              return !ab.enchant
-            })).map((bb => {
+                item: tz
+              } = zz;
+              return !tz.enchant
+            })).map((zz => {
               let {
-                meta: ab
-              } = bb;
+                meta: tz
+              } = zz;
               return {
-                item: ab.item,
-                quantity: ab.quantity,
-                sellPrice: ab.pricePerItem
+                item: tz.item,
+                quantity: tz.quantity,
+                sellPrice: tz.pricePerItem
               }
             }));
           return []
-        }(Ub.shopInfo).filter((ab => {
+        }(sz.shopInfo).filter((tz => {
           let {
-            item: Ub
-          } = ab;
-          return bb.has(Ub)
+            item: sz
+          } = tz;
+          return zz.has(sz)
         }))
-      }), [Ub.shopInfo, Pb.catalogue]);
-      return (0, vb.jsx)(ZM, {
-        browser: Pb,
+      }), [sz.shopInfo, Nz.catalogue]);
+      return (0, Kz.jsx)(YW, {
+        browser: Nz,
         className: "SmpMarketTab",
-        recentLabel: ab("smpShop:recentlyListed"),
-        action: (0, vb.jsx)(kb.s, {
+        recentLabel: tz("smpShop:recentlyListed"),
+        action: (0, Kz.jsx)(gz.t, {
           className: "SmpSellButton",
           onClick: () => {
-            Zb((bb => !bb))
+            Bz((zz => !zz))
           },
-          children: ab("smpShop:sell")
+          children: tz("smpShop:sell")
         }),
-        above: yb && (0, vb.jsxs)(vb.Fragment, {
-          children: [(0, vb.jsx)(NM, {
+        above: Hz && (0, Kz.jsxs)(Kz.Fragment, {
+          children: [(0, Kz.jsx)(GW, {
             mode: "list",
-            creator: Yb,
-            inventory: fb,
-            catalogue: Pb.catalogue,
-            names: Pb.names,
-            searching: Rb,
-            prices: ib,
-            onPickItem: Pb.searchFor,
+            creator: oz,
+            inventory: mz,
+            catalogue: Nz.catalogue,
+            names: Nz.names,
+            searching: Dz,
+            prices: xz,
+            onPickItem: Nz.searchFor,
             onClose: () => {
-              Zb(!1)
+              Bz(!1)
             }
-          }), Bb.length > 0 && (0, vb.jsx)(HM, {
-            entries: Bb
+          }), vz.length > 0 && (0, Kz.jsx)(cW, {
+            entries: vz
           })]
         }),
-        listControls: (0, vb.jsx)(iM, {
-          view: Db,
-          onChange: zb
+        listControls: (0, Kz.jsx)(IW, {
+          view: Pz,
+          onChange: rz
         }),
-        summary: jb && (eb.length > 0 ? ab(1 === eb.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: eb.length,
-          price: GA(DM(eb, "min"))
-        }) : ab("smpShop:noOneSelling", {
-          item: EM(Pb.names, jb)
+        summary: wz && (Uz.length > 0 ? tz(1 === Uz.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: Uz.length,
+          price: dF(xW(Uz, "min"))
+        }) : tz("smpShop:noOneSelling", {
+          item: UW(Nz.names, wz)
         })),
-        list: Rb ? (0, vb.jsx)(KA, {
-          grid: xb
-        }) : eb.length > 0 ? (0, vb.jsx)(fM, {
-          entries: eb,
-          view: Db
-        }) : Lb ? (0, vb.jsx)(lA, {
-          entry: Lb
-        }) : (0, vb.jsx)(KA, {
+        list: Dz ? (0, Kz.jsx)(LF, {
+          grid: Yz
+        }) : Uz.length > 0 ? (0, Kz.jsx)(CW, {
+          entries: Uz,
+          view: Pz
+        }) : uz ? (0, Kz.jsx)(nF, {
+          entry: uz
+        }) : (0, Kz.jsx)(LF, {
           count: 3,
-          grid: xb
+          grid: Yz
         })
       })
     }
 
-    function HM(bb) {
+    function cW(zz) {
       let {
-        entries: ab
-      } = bb;
+        entries: tz
+      } = zz;
       const {
-        t: Ub
-      } = (0, Eb.A)(), Mb = vM(), [Tb, Yb] = (0, Ab.useState)({});
-      return (0, vb.jsx)("div", {
+        t: sz
+      } = (0, Oz.B)(), Wz = bW(), [Xz, oz] = (0, Fz.useState)({});
+      return (0, Kz.jsx)("div", {
         className: "SmpList",
-        children: ab.map((bb => {
-          var ab, Ab, Eb;
+        children: tz.map((zz => {
+          var tz, Fz, Oz;
           let {
-            key: Bb,
-            item: eb,
-            meta: Lb
-          } = bb;
-          const Pb = null !== (ab = Tb[Bb]) && void 0 !== ab ? ab : 1;
-          return (0, vb.jsxs)("div", {
+            key: vz,
+            item: Uz,
+            meta: uz
+          } = zz;
+          const Nz = null !== (tz = Xz[vz]) && void 0 !== tz ? tz : 1;
+          return (0, Kz.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, vb.jsx)(uA, {
-              item: Lb.item,
-              amount: Lb.quantity,
-              tier: null !== (Ab = null === (Eb = eb.enchant) || void 0 === Eb ? void 0 : Eb.tier) && void 0 !== Ab ? Ab : null
-            }), (0, vb.jsxs)("div", {
+            children: [(0, Kz.jsx)(kF, {
+              item: uz.item,
+              amount: uz.quantity,
+              tier: null !== (Fz = null === (Oz = Uz.enchant) || void 0 === Oz ? void 0 : Oz.tier) && void 0 !== Fz ? Fz : null
+            }), (0, Kz.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, vb.jsx)("b", {
-                children: (0, vb.jsx)(pA.c, {
-                  text: eb.customTitle
+              children: [(0, Kz.jsx)("b", {
+                children: (0, Kz.jsx)(ZF.c, {
+                  text: Uz.customTitle
                 })
-              }), (0, vb.jsx)("small", {
-                children: Ub("smpShop:enchantedListing")
+              }), (0, Kz.jsx)("small", {
+                children: sz("smpShop:enchantedListing")
               })]
-            }), (0, vb.jsx)(sA, {
-              value: Pb,
-              onChange: bb => {
-                Yb({
-                  ...Tb,
-                  [Bb]: bb
+            }), (0, Kz.jsx)(SF, {
+              value: Nz,
+              onChange: zz => {
+                oz({
+                  ...Xz,
+                  [vz]: zz
                 })
               },
               max: 9999999,
-              step: gA,
-              label: Ub("smpShop:pricePerItem")
-            }), (0, vb.jsxs)(kb.s, {
-              loading: Mb.isPending(Bb),
+              step: VF,
+              label: sz("smpShop:pricePerItem")
+            }), (0, Kz.jsxs)(gz.t, {
+              loading: Wz.isPending(vz),
               onClick: () => {
-                Mb.act(Bb, String(Pb))
+                Wz.act(vz, String(Nz))
               },
-              children: [Ub("smpShop:list"), " ", (0, vb.jsx)(rA, {
-                amount: Pb
+              children: [sz("smpShop:list"), " ", (0, Kz.jsx)(iF, {
+                amount: Nz
               })]
             })]
-          }, Bb)
+          }, vz)
         }))
       })
     }
-    const IM = (0, Ab.memo)((function(bb) {
+    const jW = (0, Fz.memo)((function(zz) {
       let {
-        itemKey: ab,
-        item: Ub,
-        quantity: Ab,
-        pricePerItem: Mb,
-        tier: Eb,
-        selected: Yb,
-        onSelect: Bb
-      } = bb;
-      return (0, vb.jsxs)("button", {
+        itemKey: tz,
+        item: sz,
+        quantity: Fz,
+        pricePerItem: Wz,
+        tier: Oz,
+        selected: oz,
+        onSelect: vz
+      } = zz;
+      return (0, Kz.jsxs)("button", {
         type: "button",
-        className: Tb()("SmpInventorySlot", {
-          SmpInventorySlotOn: Yb
+        className: Xz()("SmpInventorySlot", {
+          SmpInventorySlotOn: oz
         }),
-        title: Ub,
+        title: sz,
         onClick: () => {
-          Bb(ab)
+          vz(tz)
         },
-        children: [(0, vb.jsx)(uA, {
-          item: Ub,
-          amount: Ab,
-          tier: Eb
-        }), (0, vb.jsx)(rA, {
-          amount: Mb
+        children: [(0, Kz.jsx)(kF, {
+          item: sz,
+          amount: Fz,
+          tier: Oz
+        }), (0, Kz.jsx)(iF, {
+          amount: Wz
         })]
       })
     }));
 
-    function dM() {
-      var bb;
+    function AW() {
+      var zz;
       const {
-        t: ab
-      } = (0, Eb.A)(), Ub = vM(), Mb = null === (bb = Ub.shopInfo[Ub.categoryKey]) || void 0 === bb ? void 0 : bb.items, Yb = nA(Mb, "sell"), Bb = SA(Mb, "empty"), [eb, Lb] = (0, Ab.useState)(null), [Pb, Xb] = (0, Ab.useState)({}), jb = Yb.find((bb => {
+        t: tz
+      } = (0, Oz.B)(), sz = bW(), Wz = null === (zz = sz.shopInfo[sz.categoryKey]) || void 0 === zz ? void 0 : zz.items, oz = tW(Wz, "sell"), vz = sW(Wz, "empty"), [Uz, uz] = (0, Fz.useState)(null), [Nz, bz] = (0, Fz.useState)({}), wz = oz.find((zz => {
         let {
-          key: ab
-        } = bb;
-        return ab === eb
+          key: tz
+        } = zz;
+        return tz === Uz
       }));
-      return 0 === Yb.length ? (0, vb.jsx)("div", {
+      return 0 === oz.length ? (0, Kz.jsx)("div", {
         className: "SmpScreen",
-        children: (0, vb.jsx)(oA, {
-          title: Bb ? (0, vb.jsx)(pA.c, {
-            text: Bb.item.customTitle
-          }) : ab("smpShop:nothingToSell"),
-          children: Bb && (0, vb.jsx)(pA.c, {
-            text: Bb.item.description
+        children: (0, Kz.jsx)(lF, {
+          title: vz ? (0, Kz.jsx)(ZF.c, {
+            text: vz.item.customTitle
+          }) : tz("smpShop:nothingToSell"),
+          children: vz && (0, Kz.jsx)(ZF.c, {
+            text: vz.item.description
           })
         })
-      }) : (0, vb.jsxs)("div", {
+      }) : (0, Kz.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, vb.jsx)("div", {
+        children: [(0, Kz.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: Yb.map((bb => {
-            var ab, Ub;
+          children: oz.map((zz => {
+            var tz, sz;
             let {
-              key: Ab,
-              item: Mb,
-              meta: Tb
-            } = bb;
-            return (0, vb.jsx)(IM, {
-              itemKey: Ab,
-              item: Tb.item,
-              quantity: Tb.quantity,
-              pricePerItem: Tb.pricePerItem,
-              tier: null !== (ab = null === (Ub = Mb.enchant) || void 0 === Ub ? void 0 : Ub.tier) && void 0 !== ab ? ab : null,
-              selected: Ab === eb,
-              onSelect: Lb
-            }, Ab)
+              key: Fz,
+              item: Wz,
+              meta: Xz
+            } = zz;
+            return (0, Kz.jsx)(jW, {
+              itemKey: Fz,
+              item: Xz.item,
+              quantity: Xz.quantity,
+              pricePerItem: Xz.pricePerItem,
+              tier: null !== (tz = null === (sz = Wz.enchant) || void 0 === sz ? void 0 : sz.tier) && void 0 !== tz ? tz : null,
+              selected: Fz === Uz,
+              onSelect: uz
+            }, Fz)
           }))
-        }), (0, vb.jsx)("div", {
-          className: Tb()("SmpSellBar", {
-            SmpSellBarIdle: !jb
+        }), (0, Kz.jsx)("div", {
+          className: Xz()("SmpSellBar", {
+            SmpSellBarIdle: !wz
           }),
-          children: jb ? (0, vb.jsx)(FM, {
-            entry: jb,
-            choice: YM(jb.item, Pb[jb.key]),
-            onChoose: bb => {
-              Xb({
-                ...Pb,
-                [jb.key]: bb
+          children: wz ? (0, Kz.jsx)(yW, {
+            entry: wz,
+            choice: KW(wz.item, Nz[wz.key]),
+            onChoose: zz => {
+              bz({
+                ...Nz,
+                [wz.key]: zz
               })
             }
-          }) : (0, vb.jsx)("span", {
+          }) : (0, Kz.jsx)("span", {
             className: "SmpMuted",
-            children: ab("smpShop:tapToSell")
+            children: tz("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function FM(bb) {
-      var ab, Ub, Ab, Mb;
+    function yW(zz) {
+      var tz, sz, Fz, Wz;
       let {
-        entry: Tb,
-        choice: Yb,
-        onChoose: Bb
-      } = bb;
+        entry: Xz,
+        choice: oz,
+        onChoose: vz
+      } = zz;
       const {
-        t: eb
-      } = (0, Eb.A)(), Lb = vM(), {
-        key: Pb,
-        item: Xb,
-        meta: jb
-      } = Tb, Rb = AM("dropdown" === (null === (ab = Xb.userInput) || void 0 === ab ? void 0 : ab.type) ? Xb.userInput.dropdownOptions : []), yb = null === Yb ? 0 : -(0, xA.c)(Xb, Yb);
-      return (0, vb.jsxs)(vb.Fragment, {
-        children: [(0, vb.jsx)(uA, {
-          item: jb.item,
-          amount: jb.quantity,
-          tier: null !== (Ub = null === (Ab = Xb.enchant) || void 0 === Ab ? void 0 : Ab.tier) && void 0 !== Ub ? Ub : null
-        }), (0, vb.jsxs)("div", {
+        t: Uz
+      } = (0, Oz.B)(), uz = bW(), {
+        key: Nz,
+        item: bz,
+        meta: wz
+      } = Xz, Dz = OW("dropdown" === (null === (tz = bz.userInput) || void 0 === tz ? void 0 : tz.type) ? bz.userInput.dropdownOptions : []), Hz = null === oz ? 0 : -(0, JF.b)(bz, oz);
+      return (0, Kz.jsxs)(Kz.Fragment, {
+        children: [(0, Kz.jsx)(kF, {
+          item: wz.item,
+          amount: wz.quantity,
+          tier: null !== (sz = null === (Fz = bz.enchant) || void 0 === Fz ? void 0 : Fz.tier) && void 0 !== sz ? sz : null
+        }), (0, Kz.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, vb.jsx)("b", {
-            children: (0, vb.jsx)(pA.c, {
-              text: null !== (Mb = Xb.customTitle) && void 0 !== Mb ? Mb : jb.item
+          children: [(0, Kz.jsx)("b", {
+            children: (0, Kz.jsx)(ZF.c, {
+              text: null !== (Wz = bz.customTitle) && void 0 !== Wz ? Wz : wz.item
             })
-          }), (0, vb.jsx)("small", {
-            children: eb("smpShop:sellEach", {
-              count: jb.quantity
+          }), (0, Kz.jsx)("small", {
+            children: Uz("smpShop:sellEach", {
+              count: wz.quantity
             })
           })]
-        }), (0, vb.jsx)(tA, {
-          options: Rb.map((bb => {
+        }), (0, Kz.jsx)(aF, {
+          options: Dz.map((zz => {
             let {
-              label: ab,
-              quantity: Ub,
-              isAll: Ab
-            } = bb;
+              label: tz,
+              quantity: sz,
+              isAll: Fz
+            } = zz;
             return {
-              value: ab,
-              label: Ab ? eb("smpShop:all", {
-                count: Ub
-              }) : String(Ub)
+              value: tz,
+              label: Fz ? Uz("smpShop:all", {
+                count: sz
+              }) : String(sz)
             }
           })),
-          value: Yb,
-          onChange: Bb,
-          ariaLabel: eb("smpShop:quantity")
-        }), (0, vb.jsxs)(kb.s, {
-          loading: Lb.isPending(Pb),
-          disabled: null === Yb,
+          value: oz,
+          onChange: vz,
+          ariaLabel: Uz("smpShop:quantity")
+        }), (0, Kz.jsxs)(gz.t, {
+          loading: uz.isPending(Nz),
+          disabled: null === oz,
           onClick: () => {
-            Lb.act(Pb, Yb)
+            uz.act(Nz, oz)
           },
-          children: [eb("smpShop:sellButton"), " ", (0, vb.jsx)(rA, {
-            amount: yb
+          children: [Uz("smpShop:sellButton"), " ", (0, Kz.jsx)(iF, {
+            amount: Hz
           })]
         })]
       })
     }
 
-    function hM() {
-      var bb;
+    function MW() {
+      var zz;
       const {
-        t: ab
-      } = (0, Eb.A)(), Ub = vM(), Ab = null === (bb = Ub.shopInfo[Ub.categoryKey]) || void 0 === bb ? void 0 : bb.items, Mb = nA(Ab, "collect"), Tb = nA(Ab, "myListing"), Yb = (bb, ab) => Ub.isPending(bb) || !1 === ab.canBuy;
-      return (0, vb.jsxs)("div", {
+        t: tz
+      } = (0, Oz.B)(), sz = bW(), Fz = null === (zz = sz.shopInfo[sz.categoryKey]) || void 0 === zz ? void 0 : zz.items, Wz = tW(Fz, "collect"), Xz = tW(Fz, "myListing"), oz = (zz, tz) => sz.isPending(zz) || !1 === tz.canBuy;
+      return (0, Kz.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, vb.jsx)("h3", {
+        children: [(0, Kz.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: ab("smpShop:readyToCollect")
-        }), Mb.length > 0 ? (0, vb.jsx)("div", {
+          children: tz("smpShop:readyToCollect")
+        }), Wz.length > 0 ? (0, Kz.jsx)("div", {
           className: "SmpList",
-          children: Mb.map((bb => {
-            var Ab, Mb;
+          children: Wz.map((zz => {
+            var Fz, Wz;
             let {
-              key: Tb,
-              item: Eb,
-              meta: Bb
-            } = bb;
-            return (0, vb.jsxs)("div", {
+              key: Xz,
+              item: Oz,
+              meta: vz
+            } = zz;
+            return (0, Kz.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, vb.jsx)(uA, {
-                item: "sold" === Bb.type ? "Gold Coin" : Bb.item,
-                amount: "sold" === Bb.type ? 0 : Bb.quantity,
-                tier: null !== (Ab = null === (Mb = Eb.enchant) || void 0 === Mb ? void 0 : Mb.tier) && void 0 !== Ab ? Ab : null
-              }), (0, vb.jsxs)("div", {
+              children: [(0, Kz.jsx)(kF, {
+                item: "sold" === vz.type ? "Gold Coin" : vz.item,
+                amount: "sold" === vz.type ? 0 : vz.quantity,
+                tier: null !== (Fz = null === (Wz = Oz.enchant) || void 0 === Wz ? void 0 : Wz.tier) && void 0 !== Fz ? Fz : null
+              }), (0, Kz.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, vb.jsx)("b", {
-                  children: (0, vb.jsx)(pA.c, {
-                    text: Eb.customTitle
+                children: [(0, Kz.jsx)("b", {
+                  children: (0, Kz.jsx)(ZF.c, {
+                    text: Oz.customTitle
                   })
-                }), (0, vb.jsx)("small", {
-                  children: (0, vb.jsx)(pA.c, {
-                    text: Eb.description
+                }), (0, Kz.jsx)("small", {
+                  children: (0, Kz.jsx)(ZF.c, {
+                    text: Oz.description
                   })
                 })]
-              }), (0, vb.jsx)(kb.m, {
-                loading: Yb(Tb, Eb),
+              }), (0, Kz.jsx)(gz.p, {
+                loading: oz(Xz, Oz),
                 onClick: () => {
-                  Ub.act(Tb)
+                  sz.act(Xz)
                 },
-                children: ab("smpShop:collect")
+                children: tz("smpShop:collect")
               })]
-            }, Tb)
+            }, Xz)
           }))
-        }) : (0, vb.jsx)(oA, {
-          title: ab("smpShop:nothingToCollect"),
-          children: ab("smpShop:nothingToCollectHint")
-        }), (0, vb.jsx)("h3", {
+        }) : (0, Kz.jsx)(lF, {
+          title: tz("smpShop:nothingToCollect"),
+          children: tz("smpShop:nothingToCollectHint")
+        }), (0, Kz.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: ab("smpShop:activeListings", {
-            count: Tb.length
+          children: tz("smpShop:activeListings", {
+            count: Xz.length
           })
-        }), Tb.length > 0 ? (0, vb.jsx)("div", {
+        }), Xz.length > 0 ? (0, Kz.jsx)("div", {
           className: "SmpList",
-          children: Tb.map((bb => {
-            var Ab, Mb;
+          children: Xz.map((zz => {
+            var Fz, Wz;
             let {
-              key: Tb,
-              item: Eb,
-              meta: Bb
-            } = bb;
-            return (0, vb.jsxs)("div", {
+              key: Xz,
+              item: Oz,
+              meta: vz
+            } = zz;
+            return (0, Kz.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, vb.jsx)(uA, {
-                item: Bb.item,
-                amount: Bb.quantity,
-                tier: null !== (Ab = null === (Mb = Eb.enchant) || void 0 === Mb ? void 0 : Mb.tier) && void 0 !== Ab ? Ab : null
-              }), (0, vb.jsxs)("div", {
+              children: [(0, Kz.jsx)(kF, {
+                item: vz.item,
+                amount: vz.quantity,
+                tier: null !== (Fz = null === (Wz = Oz.enchant) || void 0 === Wz ? void 0 : Wz.tier) && void 0 !== Fz ? Fz : null
+              }), (0, Kz.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, vb.jsx)("b", {
-                  children: (0, vb.jsx)(pA.c, {
-                    text: Eb.customTitle
+                children: [(0, Kz.jsx)("b", {
+                  children: (0, Kz.jsx)(ZF.c, {
+                    text: Oz.customTitle
                   })
-                }), (0, vb.jsx)("small", {
-                  children: ab("smpShop:timeLeft", {
-                    time: UM(Bb.expiresAt)
+                }), (0, Kz.jsx)("small", {
+                  children: tz("smpShop:timeLeft", {
+                    time: XW(vz.expiresAt)
                   })
                 })]
-              }), (0, vb.jsxs)("div", {
+              }), (0, Kz.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, vb.jsx)(rA, {
-                  amount: Bb.pricePerItem
-                }), (0, vb.jsx)("small", {
-                  children: ab("smpShop:each")
+                children: [(0, Kz.jsx)(iF, {
+                  amount: vz.pricePerItem
+                }), (0, Kz.jsx)("small", {
+                  children: tz("smpShop:each")
                 })]
-              }), (0, vb.jsx)(kb.D, {
-                loading: Yb(Tb, Eb),
+              }), (0, Kz.jsx)(gz.H, {
+                loading: oz(Xz, Oz),
                 onClick: () => {
-                  Ub.act(Tb)
+                  sz.act(Xz)
                 },
-                children: ab("smpShop:cancel")
+                children: tz("smpShop:cancel")
               })]
-            }, Tb)
+            }, Xz)
           }))
-        }) : (0, vb.jsx)(oA, {
-          title: ab("smpShop:noActiveListings"),
-          children: ab("smpShop:noActiveListingsHint")
+        }) : (0, Kz.jsx)(lF, {
+          title: tz("smpShop:noActiveListings"),
+          children: tz("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function GM(bb) {
+    function dW(zz) {
       let {
-        done: ab,
-        of: Ub
-      } = bb;
-      return (0, vb.jsx)("span", {
+        done: tz,
+        of: sz
+      } = zz;
+      return (0, Kz.jsx)("span", {
         className: "SmpProgress",
-        children: (0, vb.jsx)("i", {
+        children: (0, Kz.jsx)("i", {
           style: {
-            width: `${Math.min(100,ab/Math.max(1,Ub)*100)}%`
+            width: `${Math.min(100,tz/Math.max(1,sz)*100)}%`
           }
         })
       })
     }
 
-    function QM(bb) {
-      var ab, Ub, Ab;
+    function hW(zz) {
+      var tz, sz, Fz;
       let {
-        entry: Mb,
-        choice: Tb,
-        onChoose: Yb
-      } = bb;
+        entry: Wz,
+        choice: Xz,
+        onChoose: oz
+      } = zz;
       const {
-        t: Bb
-      } = (0, Eb.A)(), eb = vM(), {
-        key: Lb,
-        item: Pb,
-        meta: Xb
-      } = Mb, jb = "dropdown" === (null === (ab = Pb.userInput) || void 0 === ab ? void 0 : ab.type) ? Pb.userInput.dropdownOptions : [], Rb = !0 === Xb.processing, yb = null !== Xb.creator && (Xb.PY > 0 || Rb), Zb = yb && Xb.PY > 0 ? AM(jb) : [], Db = null === Tb ? 0 : null !== (Ub = null === (Ab = Zb.find((bb => bb.label === Tb))) || void 0 === Ab ? void 0 : Ab.quantity) && void 0 !== Ub ? Ub : 0;
-      return (0, vb.jsxs)("div", {
+        t: vz
+      } = (0, Oz.B)(), Uz = bW(), {
+        key: uz,
+        item: Nz,
+        meta: bz
+      } = Wz, wz = "dropdown" === (null === (tz = Nz.userInput) || void 0 === tz ? void 0 : tz.type) ? Nz.userInput.dropdownOptions : [], Dz = !0 === bz.processing, Hz = null !== bz.creator && (bz.po > 0 || Dz), Bz = Hz && bz.po > 0 ? OW(wz) : [], Pz = null === Xz ? 0 : null !== (sz = null === (Fz = Bz.find((zz => zz.label === Xz))) || void 0 === Fz ? void 0 : Fz.quantity) && void 0 !== sz ? sz : 0;
+      return (0, Kz.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, vb.jsx)(uA, {
-          item: Xb.item
-        }), (0, vb.jsxs)("div", {
+        children: [(0, Kz.jsx)(kF, {
+          item: bz.item
+        }), (0, Kz.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, vb.jsx)("b", {
-            children: (0, vb.jsx)(pA.c, {
-              text: Pb.customTitle
+          children: [(0, Kz.jsx)("b", {
+            children: (0, Kz.jsx)(ZF.c, {
+              text: Nz.customTitle
             })
-          }), (0, vb.jsxs)("small", {
-            children: [(0, vb.jsx)(rA, {
-              amount: Xb.pricePerItem
-            }), " ", Bb("smpShop:each"), " \xb7", " ", null === Xb.creator ? Bb("smpShop:you") : (0, vb.jsx)(pA.c, {
+          }), (0, Kz.jsxs)("small", {
+            children: [(0, Kz.jsx)(iF, {
+              amount: bz.pricePerItem
+            }), " ", vz("smpShop:each"), " \xb7", " ", null === bz.creator ? vz("smpShop:you") : (0, Kz.jsx)(ZF.c, {
               text: [{
-                entityName: Xb.creator
+                entityName: bz.creator
               }]
             })]
-          }), (0, vb.jsx)(GM, {
-            done: Xb.delivered,
-            of: Xb.wanted
+          }), (0, Kz.jsx)(dW, {
+            done: bz.delivered,
+            of: bz.wanted
           })]
-        }), yb ? (0, vb.jsxs)(vb.Fragment, {
-          children: [(0, vb.jsx)(tA, {
-            options: Zb.map((bb => {
+        }), Hz ? (0, Kz.jsxs)(Kz.Fragment, {
+          children: [(0, Kz.jsx)(aF, {
+            options: Bz.map((zz => {
               let {
-                label: ab,
-                quantity: Ub,
-                isAll: Ab
-              } = bb;
+                label: tz,
+                quantity: sz,
+                isAll: Fz
+              } = zz;
               return {
-                value: ab,
-                label: Ab ? Bb("smpShop:max", {
-                  count: Ub
-                }) : String(Ub)
+                value: tz,
+                label: Fz ? vz("smpShop:max", {
+                  count: sz
+                }) : String(sz)
               }
             })),
-            value: Tb,
-            onChange: Yb,
-            ariaLabel: Bb("smpShop:quantity")
-          }), (0, vb.jsxs)(kb.s, {
-            loading: eb.isPending(Lb) || Rb,
-            disabled: null === Tb,
+            value: Xz,
+            onChange: oz,
+            ariaLabel: vz("smpShop:quantity")
+          }), (0, Kz.jsxs)(gz.t, {
+            loading: Uz.isPending(uz) || Dz,
+            disabled: null === Xz,
             onClick: () => {
-              eb.act(Lb, Tb)
+              Uz.act(uz, Xz)
             },
-            children: [Bb("smpShop:deliver"), " ", (0, vb.jsx)(rA, {
-              amount: Db * Xb.pricePerItem
+            children: [vz("smpShop:deliver"), " ", (0, Kz.jsx)(iF, {
+              amount: Pz * bz.pricePerItem
             })]
           })]
-        }) : (0, vb.jsx)("span", {
+        }) : (0, Kz.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === Xb.creator ? Bb("smpShop:yourOrder") : Bb("smpShop:youHave", {
+          children: null === bz.creator ? vz("smpShop:yourOrder") : vz("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function qM() {
-      var bb;
+    function QW() {
+      var zz;
       const {
-        t: ab
-      } = (0, Eb.A)(), Ub = vM(), Mb = null === (bb = Ub.shopInfo[Ub.categoryKey]) || void 0 === bb ? void 0 : bb.items, Tb = SA(Mb, "search"), Yb = SA(Mb, "creator"), Bb = nA(Mb, "order"), eb = SA(Mb, "empty"), Lb = jM(Tb, Bb.length > 0 || null !== eb), [Pb, Xb] = (0, Ab.useState)(!1), [jb, Rb] = (0, Ab.useState)({});
-      return (0, vb.jsx)(ZM, {
-        browser: Lb,
-        recentLabel: ab("smpShop:recentOrders"),
-        action: (0, vb.jsx)(kb.s, {
+        t: tz
+      } = (0, Oz.B)(), sz = bW(), Wz = null === (zz = sz.shopInfo[sz.categoryKey]) || void 0 === zz ? void 0 : zz.items, Xz = sW(Wz, "search"), oz = sW(Wz, "creator"), vz = tW(Wz, "order"), Uz = sW(Wz, "empty"), uz = HW(Xz, vz.length > 0 || null !== Uz), [Nz, bz] = (0, Fz.useState)(!1), [wz, Dz] = (0, Fz.useState)({});
+      return (0, Kz.jsx)(YW, {
+        browser: uz,
+        recentLabel: tz("smpShop:recentOrders"),
+        action: (0, Kz.jsx)(gz.t, {
           onClick: () => {
-            Xb((bb => !bb))
+            bz((zz => !zz))
           },
-          children: ab("smpShop:createOrder")
+          children: tz("smpShop:createOrder")
         }),
-        above: Pb && (0, vb.jsx)(NM, {
+        above: Nz && (0, Kz.jsx)(GW, {
           mode: "order",
-          creator: Yb,
-          catalogue: Lb.catalogue,
-          names: Lb.names,
-          searching: Lb.loading,
+          creator: oz,
+          catalogue: uz.catalogue,
+          names: uz.names,
+          searching: uz.loading,
           prices: [],
-          onPickItem: Lb.searchFor,
+          onPickItem: uz.searchFor,
           onClose: () => {
-            Xb(!1)
+            bz(!1)
           }
         }),
         onBack: () => {
-          Xb(!1)
+          bz(!1)
         },
-        summary: Bb.length > 0 && ab(1 === Bb.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: Bb.length,
-          price: GA(DM(Bb, "max"))
+        summary: vz.length > 0 && tz(1 === vz.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: vz.length,
+          price: dF(xW(vz, "max"))
         }),
-        list: Lb.loading ? (0, vb.jsx)(KA, {}) : Bb.length > 0 ? (0, vb.jsx)(LM.c, {
+        list: uz.loading ? (0, Kz.jsx)(LF, {}) : vz.length > 0 ? (0, Kz.jsx)(wW.c, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: bM,
-          observerUpdateDeps: [Bb.length],
-          children: Bb.map((bb => (0, vb.jsx)(QM, {
-            entry: bb,
-            choice: YM(bb.item, jb[bb.key]),
-            onChoose: ab => {
-              Rb({
-                ...jb,
-                [bb.key]: ab
+          rootMargin: FW,
+          observerUpdateDeps: [vz.length],
+          children: vz.map((zz => (0, Kz.jsx)(hW, {
+            entry: zz,
+            choice: KW(zz.item, wz[zz.key]),
+            onChoose: tz => {
+              Dz({
+                ...wz,
+                [zz.key]: tz
               })
             }
-          }, bb.key)))
-        }) : eb ? (0, vb.jsx)(lA, {
-          entry: eb
-        }) : (0, vb.jsx)(KA, {
+          }, zz.key)))
+        }) : Uz ? (0, Kz.jsx)(nF, {
+          entry: Uz
+        }) : (0, Kz.jsx)(LF, {
           count: 3
         })
       })
     }
 
-    function uM() {
-      var bb;
+    function kW() {
+      var zz;
       const {
-        t: ab
-      } = (0, Eb.A)(), Ub = vM(), Ab = nA(null === (bb = Ub.shopInfo[Ub.categoryKey]) || void 0 === bb ? void 0 : bb.items, "myOrder");
-      return 0 === Ab.length ? (0, vb.jsx)("div", {
+        t: tz
+      } = (0, Oz.B)(), sz = bW(), Fz = tW(null === (zz = sz.shopInfo[sz.categoryKey]) || void 0 === zz ? void 0 : zz.items, "myOrder");
+      return 0 === Fz.length ? (0, Kz.jsx)("div", {
         className: "SmpScreen",
-        children: (0, vb.jsx)(oA, {
-          title: ab("smpShop:noOrders"),
-          children: ab("smpShop:noOrdersHint")
+        children: (0, Kz.jsx)(lF, {
+          title: tz("smpShop:noOrders"),
+          children: tz("smpShop:noOrdersHint")
         })
-      }) : (0, vb.jsx)("div", {
+      }) : (0, Kz.jsx)("div", {
         className: "SmpScreen",
-        children: (0, vb.jsx)("div", {
+        children: (0, Kz.jsx)("div", {
           className: "SmpList",
-          children: Ab.map((bb => {
+          children: Fz.map((zz => {
             let {
-              key: Ab,
-              item: Mb,
-              meta: Tb
-            } = bb;
-            const Eb = Ub.isPending(Ab) || !1 === Mb.canBuy;
-            return (0, vb.jsxs)("div", {
+              key: Fz,
+              item: Wz,
+              meta: Xz
+            } = zz;
+            const Oz = sz.isPending(Fz) || !1 === Wz.canBuy;
+            return (0, Kz.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, vb.jsx)(uA, {
-                item: Tb.item,
-                amount: Tb.collectable
-              }), (0, vb.jsxs)("div", {
+              children: [(0, Kz.jsx)(kF, {
+                item: Xz.item,
+                amount: Xz.collectable
+              }), (0, Kz.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, vb.jsx)("b", {
-                  children: (0, vb.jsx)(pA.c, {
-                    text: Mb.customTitle
+                children: [(0, Kz.jsx)("b", {
+                  children: (0, Kz.jsx)(ZF.c, {
+                    text: Wz.customTitle
                   })
-                }), (0, vb.jsxs)("small", {
-                  children: [(0, vb.jsx)(rA, {
-                    amount: Tb.pricePerItem
-                  }), " ", ab("smpShop:each"), Tb.collectable > 0 && ` \xb7 ${ab("smpShop:readyCount",{count:Tb.collectable})}`]
-                }), (0, vb.jsx)(GM, {
-                  done: Tb.delivered,
-                  of: Tb.wanted
+                }), (0, Kz.jsxs)("small", {
+                  children: [(0, Kz.jsx)(iF, {
+                    amount: Xz.pricePerItem
+                  }), " ", tz("smpShop:each"), Xz.collectable > 0 && ` \xb7 ${tz("smpShop:readyCount",{count:Xz.collectable})}`]
+                }), (0, Kz.jsx)(dW, {
+                  done: Xz.delivered,
+                  of: Xz.wanted
                 })]
-              }), Tb.collectable > 0 ? (0, vb.jsx)(kb.m, {
-                loading: Eb,
+              }), Xz.collectable > 0 ? (0, Kz.jsx)(gz.p, {
+                loading: Oz,
                 onClick: () => {
-                  Ub.act(Ab)
+                  sz.act(Fz)
                 },
-                children: ab("smpShop:collectCount", {
-                  count: Tb.collectable
+                children: tz("smpShop:collectCount", {
+                  count: Xz.collectable
                 })
-              }) : (0, vb.jsx)(kb.D, {
-                loading: Eb,
+              }) : (0, Kz.jsx)(gz.H, {
+                loading: Oz,
                 onClick: () => {
-                  Ub.act(Ab)
+                  sz.act(Fz)
                 },
-                children: ab("smpShop:cancel")
+                children: tz("smpShop:cancel")
               })]
-            }, Ab)
+            }, Fz)
           }))
         })
       })
     }
-    const rM = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      KM = {
+    const iW = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      LW = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4284,764 +4284,764 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function oM(bb, ab) {
-      let Ub = !1;
-      const Ab = {};
-      for (const Mb in bb) ab(Mb, bb[Mb]) ? Ab[Mb] = bb[Mb] : Ub = !0;
-      return Ub ? Ab : bb
+    function lW(zz, tz) {
+      let sz = !1;
+      const Fz = {};
+      for (const Wz in zz) tz(Wz, zz[Wz]) ? Fz[Wz] = zz[Wz] : sz = !0;
+      return sz ? Fz : zz
     }
 
-    function lM(bb) {
-      var ab, Ub, Mb, Bb;
+    function nW(zz) {
+      var tz, sz, Wz, vz;
       const {
-        show: eb,
-        shopInfo: Lb,
-        selectedCategoryKey: Pb
-      } = bb, {
-        t: Xb
-      } = (0, Eb.A)(), jb = null !== Pb && void 0 !== Pb ? Pb : "", Rb = JA(Lb, jb), kb = null === (ab = Lb[jb]) || void 0 === ab ? void 0 : ab.items, yb = null !== Rb, [Zb, Db] = (0, Ab.useState)({}), [zb, xb] = (0, Ab.useState)([]), [ib, fb] = (0, Ab.useState)(!1), [mb, pb] = (0, Ab.useState)(null), [, Nb] = (0, Ab.useState)(0), Wb = (0, Ab.useRef)(0), Hb = (0, Ab.useRef)({}), Ib = (0, Ab.useRef)({
-        items: kb,
-        pending: Zb,
-        shopInfo: Lb,
-        active: yb,
-        canAfford: bb.canAfford,
-        buy: bb.buy
+        show: Uz,
+        shopInfo: uz,
+        selectedCategoryKey: Nz
+      } = zz, {
+        t: bz
+      } = (0, Oz.B)(), wz = null !== Nz && void 0 !== Nz ? Nz : "", Dz = zW(uz, wz), gz = null === (tz = uz[wz]) || void 0 === tz ? void 0 : tz.items, Hz = null !== Dz, [Bz, Pz] = (0, Fz.useState)({}), [rz, Yz] = (0, Fz.useState)([]), [xz, mz] = (0, Fz.useState)(!1), [Jz, Iz] = (0, Fz.useState)(null), [, Cz] = (0, Fz.useState)(0), ez = (0, Fz.useRef)(0), Zz = (0, Fz.useRef)({}), Gz = (0, Fz.useRef)({
+        items: gz,
+        pending: Bz,
+        shopInfo: uz,
+        active: Hz,
+        canAfford: zz.canAfford,
+        buy: zz.buy
       });
-      Ib.current = {
-        items: kb,
-        pending: Zb,
-        shopInfo: Lb,
-        active: yb,
-        canAfford: bb.canAfford,
-        buy: bb.buy
+      Gz.current = {
+        items: gz,
+        pending: Bz,
+        shopInfo: uz,
+        active: Hz,
+        canAfford: zz.canAfford,
+        buy: zz.buy
       };
-      const db = (0, Ab.useCallback)((bb => {
-        Wb.current++;
-        const ab = Wb.current;
-        xb((Ub => [{
-          id: ab,
-          text: bb
-        }, ...Ub].slice(0, 8))), pb(ab)
+      const Tz = (0, Fz.useCallback)((zz => {
+        ez.current++;
+        const tz = ez.current;
+        Yz((sz => [{
+          id: tz,
+          text: zz
+        }, ...sz].slice(0, 8))), Iz(tz)
       }), []);
-      (0, Ab.useEffect)((() => {
-        if (null === mb) return;
-        const bb = setTimeout((() => {
-          pb(null)
+      (0, Fz.useEffect)((() => {
+        if (null === Jz) return;
+        const zz = setTimeout((() => {
+          Iz(null)
         }), 3e3);
         return () => {
-          clearTimeout(bb)
+          clearTimeout(zz)
         }
-      }), [mb]), (0, Ab.useEffect)((() => {
-        const ab = bb.message;
-        if (!ab) return;
+      }), [Jz]), (0, Fz.useEffect)((() => {
+        const tz = zz.message;
+        if (!tz) return;
         const {
-          shopInfo: Ub,
-          active: Ab,
-          items: Mb
-        } = Ib.current, Tb = null !== ab.categoryKey ? null !== JA(Ub, ab.categoryKey) : Ab;
-        (Tb || Ab) && db(ab.text), Tb && Db((bb => oM(bb, (bb => {
-          var ab, Ub;
-          return !rM.has(null === Mb || void 0 === Mb || null === (ab = Mb[bb]) || void 0 === ab || null === (Ub = ab.smp) || void 0 === Ub ? void 0 : Ub.kind)
+          shopInfo: sz,
+          active: Fz,
+          items: Wz
+        } = Gz.current, Xz = null !== tz.categoryKey ? null !== zW(sz, tz.categoryKey) : Fz;
+        (Xz || Fz) && Tz(tz.text), Xz && Pz((zz => lW(zz, (zz => {
+          var tz, sz;
+          return !iW.has(null === Wz || void 0 === Wz || null === (tz = Wz[zz]) || void 0 === tz || null === (sz = tz.smp) || void 0 === sz ? void 0 : sz.kind)
         }))))
-      }), [bb.message, db]), (0, Ab.useEffect)((() => {
-        Db((bb => oM(bb, ((bb, ab) => BM(null === kb || void 0 === kb ? void 0 : kb[bb]) === ab.snapshot))))
-      }), [Lb, kb]);
-      const Fb = Object.keys(Zb).length > 0;
-      (0, Ab.useEffect)((() => {
-        if (!Fb) return;
-        const bb = setInterval((() => {
-          Nb((bb => bb + 1));
-          const bb = Date.now(),
+      }), [zz.message, Tz]), (0, Fz.useEffect)((() => {
+        Pz((zz => lW(zz, ((zz, tz) => uW(null === gz || void 0 === gz ? void 0 : gz[zz]) === tz.snapshot))))
+      }), [uz, gz]);
+      const cz = Object.keys(Bz).length > 0;
+      (0, Fz.useEffect)((() => {
+        if (!cz) return;
+        const zz = setInterval((() => {
+          Cz((zz => zz + 1));
+          const zz = Date.now(),
             {
-              pending: ab,
-              items: Ub
-            } = Ib.current,
-            Ab = Object.keys(ab).filter((Ub => bb - ab[Ub].at >= 12e3));
-          if (0 === Ab.length) return;
-          const Mb = Ab.some((bb => {
-            var Ab, Mb;
-            return "search" !== (null === Ub || void 0 === Ub || null === (Ab = Ub[bb]) || void 0 === Ab || null === (Mb = Ab.smp) || void 0 === Mb ? void 0 : Mb.kind) || ab[bb].resend
+              pending: tz,
+              items: sz
+            } = Gz.current,
+            Fz = Object.keys(tz).filter((sz => zz - tz[sz].at >= 12e3));
+          if (0 === Fz.length) return;
+          const Wz = Fz.some((zz => {
+            var Fz, Wz;
+            return "search" !== (null === sz || void 0 === sz || null === (Fz = sz[zz]) || void 0 === Fz || null === (Wz = Fz.smp) || void 0 === Wz ? void 0 : Wz.kind) || tz[zz].resend
           }));
-          for (const Tb of Ab) Hb.current[Tb] = bb;
-          Db((bb => oM(bb, (bb => !Ab.includes(bb))))), Mb && db(Xb("smpShop:noAnswer"))
+          for (const Xz of Fz) Zz.current[Xz] = zz;
+          Pz((zz => lW(zz, (zz => !Fz.includes(zz))))), Wz && Tz(bz("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(bb)
+          clearInterval(zz)
         }
-      }), [Fb]), (0, Ab.useEffect)((() => {
-        Db({})
-      }), [jb]), (0, Ab.useEffect)((() => {
-        eb || fb(!1)
-      }), [eb]);
-      const hb = (0, Ab.useCallback)((function(bb, ab) {
-          let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [cz]), (0, Fz.useEffect)((() => {
+        Pz({})
+      }), [wz]), (0, Fz.useEffect)((() => {
+        Uz || mz(!1)
+      }), [Uz]);
+      const jz = (0, Fz.useCallback)((function(zz, tz) {
+          let sz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: Ab,
-            pending: Mb,
-            canAfford: Tb,
-            buy: Eb
-          } = Ib.current, Yb = null === Ab || void 0 === Ab ? void 0 : Ab[bb];
-          if (!Yb || bb in Mb || !1 === Yb.canBuy) return !1;
-          if (!Tb(Yb, (0, xA.c)(Yb, ab))) return !1;
-          Eb(bb, Yb, ab);
-          const Bb = {
-            snapshot: BM(Yb),
+            items: Fz,
+            pending: Wz,
+            canAfford: Xz,
+            buy: Oz
+          } = Gz.current, oz = null === Fz || void 0 === Fz ? void 0 : Fz[zz];
+          if (!oz || zz in Wz || !1 === oz.canBuy) return !1;
+          if (!Xz(oz, (0, JF.b)(oz, tz))) return !1;
+          Oz(zz, oz, tz);
+          const vz = {
+            snapshot: uW(oz),
             at: Date.now(),
-            resend: Ub
+            resend: sz
           };
-          return Ib.current.pending = {
-            ...Ib.current.pending,
-            [bb]: Bb
-          }, Db((ab => ({
-            ...ab,
-            [bb]: Bb
+          return Gz.current.pending = {
+            ...Gz.current.pending,
+            [zz]: vz
+          }, Pz((tz => ({
+            ...tz,
+            [zz]: vz
           }))), !0
         }), []),
-        Gb = (0, Ab.useMemo)((() => ({
-          shopInfo: Lb,
-          categoryKey: jb,
-          canAfford: bb.canAfford,
-          isPending: bb => bb in Zb,
-          gaveUpAt: bb => {
-            var ab;
-            return null !== (ab = Hb.current[bb]) && void 0 !== ab ? ab : 0
+        Az = (0, Fz.useMemo)((() => ({
+          shopInfo: uz,
+          categoryKey: wz,
+          canAfford: zz.canAfford,
+          isPending: zz => zz in Bz,
+          gaveUpAt: zz => {
+            var tz;
+            return null !== (tz = Zz.current[zz]) && void 0 !== tz ? tz : 0
           },
-          act: hb,
-          notify: db
-        })), [Lb, jb, bb.canAfford, Zb, hb, db]),
-        Qb = Math.min(...Object.values(Zb).map((bb => bb.at))),
-        qb = Fb && Date.now() - Qb > 1500,
-        ub = zb.length > 1,
-        rb = null !== (Ub = null === (Mb = Lb[jb]) || void 0 === Mb ? void 0 : Mb.customTitle) && void 0 !== Ub ? Ub : jb,
-        Kb = null === (Bb = Lb[jb]) || void 0 === Bb ? void 0 : Bb.description;
-      let ob = null;
-      return "market" === Rb ? ob = (0, vb.jsx)(WM, {}) : "sell" === Rb ? ob = (0, vb.jsx)(dM, {}) : "collect" === Rb ? ob = (0, vb.jsx)(hM, {}) : "orders" === Rb ? ob = (0, vb.jsx)(qM, {}) : "myOrders" === Rb && (ob = (0, vb.jsx)(uM, {})), (0, vb.jsx)(eM.Provider, {
-        value: Gb,
-        children: (0, vb.jsx)("div", {
+          act: jz,
+          notify: Tz
+        })), [uz, wz, zz.canAfford, Bz, jz, Tz]),
+        yz = Math.min(...Object.values(Bz).map((zz => zz.at))),
+        Mz = cz && Date.now() - yz > 1500,
+        dz = rz.length > 1,
+        hz = null !== (sz = null === (Wz = uz[wz]) || void 0 === Wz ? void 0 : Wz.customTitle) && void 0 !== sz ? sz : wz,
+        Qz = null === (vz = uz[wz]) || void 0 === vz ? void 0 : vz.description;
+      let kz = null;
+      return "market" === Dz ? kz = (0, Kz.jsx)(TW, {}) : "sell" === Dz ? kz = (0, Kz.jsx)(AW, {}) : "collect" === Dz ? kz = (0, Kz.jsx)(MW, {}) : "orders" === Dz ? kz = (0, Kz.jsx)(QW, {}) : "myOrders" === Dz && (kz = (0, Kz.jsx)(kW, {})), (0, Kz.jsx)(NW.Provider, {
+        value: Az,
+        children: (0, Kz.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !yb,
-          children: (0, vb.jsxs)("div", {
+          hidden: !Hz,
+          children: (0, Kz.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, vb.jsx)("header", {
+            children: [(0, Kz.jsx)("header", {
               className: "SmpHeader",
-              children: (0, vb.jsxs)("div", {
+              children: (0, Kz.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, vb.jsxs)("h2", {
-                  children: [Rb && (0, vb.jsx)(Yb.e, {
-                    name: KM[Rb]
-                  }), Xb(rb)]
-                }), Kb && (0, vb.jsx)("p", {
-                  children: (0, vb.jsx)(pA.c, {
-                    text: Kb
+                children: [(0, Kz.jsxs)("h2", {
+                  children: [Dz && (0, Kz.jsx)(oz.c, {
+                    name: LW[Dz]
+                  }), bz(hz)]
+                }), Qz && (0, Kz.jsx)("p", {
+                  children: (0, Kz.jsx)(ZF.c, {
+                    text: Qz
                   })
                 })]
               })
-            }), (0, vb.jsx)("main", {
+            }), (0, Kz.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: eb && ob
-            }), (0, vb.jsxs)("button", {
+              children: Uz && kz
+            }), (0, Kz.jsxs)("button", {
               type: "button",
-              className: Tb()("SmpStatus", {
-                SmpStatusWaiting: Fb,
-                SmpStatusFresh: !Fb && null !== mb,
-                SmpStatusHasHistory: ub
+              className: Xz()("SmpStatus", {
+                SmpStatusWaiting: cz,
+                SmpStatusFresh: !cz && null !== Jz,
+                SmpStatusHasHistory: dz
               }),
               "aria-live": "polite",
-              "aria-expanded": ub ? ib : void 0,
+              "aria-expanded": dz ? xz : void 0,
               onClick: () => {
-                ub && fb((bb => !bb))
+                dz && mz((zz => !zz))
               },
-              children: [Fb ? (0, vb.jsxs)("span", {
+              children: [cz ? (0, Kz.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, vb.jsx)(wA, {}), Xb(qb ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : zb[0] ? (0, vb.jsx)("span", {
+                children: [(0, Kz.jsx)(qF, {}), bz(Mz ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : rz[0] ? (0, Kz.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, vb.jsx)(pA.c, {
-                  text: zb[0].text
+                children: (0, Kz.jsx)(ZF.c, {
+                  text: rz[0].text
                 })
-              }, zb[0].id) : (0, vb.jsx)("span", {
+              }, rz[0].id) : (0, Kz.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: Xb("smpShop:ready")
-              }), ub && (0, vb.jsx)("small", {
-                children: Xb("smpShop:recentMessages", {
-                  count: zb.length
+                children: bz("smpShop:ready")
+              }), dz && (0, Kz.jsx)("small", {
+                children: bz("smpShop:recentMessages", {
+                  count: rz.length
                 })
               })]
-            }), ib && ub && (0, vb.jsx)("div", {
+            }), xz && dz && (0, Kz.jsx)("div", {
               className: "SmpStatusHistory",
-              children: zb.map((bb => (0, vb.jsx)("div", {
-                children: (0, vb.jsx)(pA.c, {
-                  text: bb.text
+              children: rz.map((zz => (0, Kz.jsx)("div", {
+                children: (0, Kz.jsx)(ZF.c, {
+                  text: zz.text
                 })
-              }, bb.id)))
+              }, zz.id)))
             })]
           })
         })
       })
     }
-    class tM {
-      constructor(bb) {
-        this.info = bb
+    class aW {
+      constructor(zz) {
+        this.info = zz
       }
-      static fromShopInfo(bb) {
-        const ab = {};
-        for (const Ub in bb) {
-          const Ab = !0 === bb[Ub].redDot && !0 !== bb[Ub].forceRemoveRedDot;
-          ab[Ub] = {
-            redDot: Ab,
+      static fromShopInfo(zz) {
+        const tz = {};
+        for (const sz in zz) {
+          const Fz = !0 === zz[sz].redDot && !0 !== zz[sz].forceRemoveRedDot;
+          tz[sz] = {
+            redDot: Fz,
             items: {}
           };
-          for (const Mb in bb[Ub].items) {
-            const Ab = bb[Ub].items[Mb],
-              Tb = !0 === Ab.redDot && !0 !== Ab.forceRemoveRedDot;
-            ab[Ub].items[Mb] = {
-              redDot: Tb
+          for (const Wz in zz[sz].items) {
+            const Fz = zz[sz].items[Wz],
+              Xz = !0 === Fz.redDot && !0 !== Fz.forceRemoveRedDot;
+            tz[sz].items[Wz] = {
+              redDot: Xz
             }
           }
         }
-        return new tM(ab)
+        return new aW(tz)
       }
       anyCategoryHasRedDots() {
-        for (const bb in this.info)
-          if (this.categoryHasRedDot(bb)) return !0;
+        for (const zz in this.info)
+          if (this.categoryHasRedDot(zz)) return !0;
         return !1
       }
-      doesCategoryExist(bb) {
-        return !(0, ta.I)(this.info[bb])
+      doesCategoryExist(zz) {
+        return !(0, Lt.G)(this.info[zz])
       }
-      categoryHasRedDot(bb) {
-        return !0 === this.info[bb].redDot
+      categoryHasRedDot(zz) {
+        return !0 === this.info[zz].redDot
       }
-      updateCategoryRedDot(bb, ab) {
-        this.info[bb].redDot = ab
+      updateCategoryRedDot(zz, tz) {
+        this.info[zz].redDot = tz
       }
-      doesItemExist(bb, ab) {
-        return this.doesCategoryExist(bb) && !(0, ta.I)(this.info[bb].items[ab])
+      doesItemExist(zz, tz) {
+        return this.doesCategoryExist(zz) && !(0, Lt.G)(this.info[zz].items[tz])
       }
-      itemHasRedDot(bb, ab) {
-        return !0 === this.info[bb].items[ab].redDot
+      itemHasRedDot(zz, tz) {
+        return !0 === this.info[zz].items[tz].redDot
       }
-      updateItemRedDot(bb, ab, Ub) {
-        this.info[bb].items[ab].redDot = Ub
+      updateItemRedDot(zz, tz, sz) {
+        this.info[zz].items[tz].redDot = sz
       }
       shallowCopy() {
-        return new tM(this.info)
+        return new aW(this.info)
       }
     }
 
-    function wM(bb, ab) {
-      return `${bb}\x1f${ab}`
+    function qW(zz, tz) {
+      return `${zz}\x1f${tz}`
     }
 
-    function sM(bb, ab) {
-      return !(0, ta.I)(ab) && !(0, ta.I)(bb) && ab in bb
+    function SW(zz, tz) {
+      return !(0, Lt.G)(tz) && !(0, Lt.G)(zz) && tz in zz
     }
-    const gM = (0, Ab.memo)((function(bb) {
-      var ab, Ub;
+    const VW = (0, Fz.memo)((function(zz) {
+      var tz, sz;
       let {
-        show: Mb
-      } = bb;
-      const Eb = (0, cU.g)("players", nM),
-        Yb = (0, cU.g)("players", SM),
-        [eb, Pb] = (0, Ab.useState)({
+        show: Wz
+      } = zz;
+      const Oz = (0, Es.h)("players", tX),
+        oz = (0, Es.h)("players", sX),
+        [Uz, Nz] = (0, Fz.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: tM.fromShopInfo({}),
+          redDotInfo: aW.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        Xb = (0, Ab.useRef)(""),
-        Rb = (0, Ab.useRef)(null),
-        yb = (0, Ab.useRef)(null),
-        Db = (0, Ab.useRef)(0),
-        zb = (0, Ab.useRef)(void 0),
-        xb = (0, Ab.useRef)(null),
-        ib = (0, Ab.useRef)(eb),
-        fb = eb.redDotInfo.anyCategoryHasRedDots(),
-        [pb, Nb] = (0, Ab.useState)(null),
-        Hb = (0, Ab.useRef)(!1);
-      let Ib = !1,
-        db = 0,
-        Fb = 0;
-      if (eb.currencyAmounts) {
-        for (const bb in eb.currencyAmounts) {
-          var hb;
-          const ab = eb.currencyAmounts[bb];
-          ab.hidden || (db++, (null === (hb = ab.subtext) || void 0 === hb ? void 0 : hb.length) > 0 && Fb++)
+        bz = (0, Fz.useRef)(""),
+        Dz = (0, Fz.useRef)(null),
+        Hz = (0, Fz.useRef)(null),
+        Pz = (0, Fz.useRef)(0),
+        rz = (0, Fz.useRef)(void 0),
+        Yz = (0, Fz.useRef)(null),
+        xz = (0, Fz.useRef)(Uz),
+        mz = Uz.redDotInfo.anyCategoryHasRedDots(),
+        [Iz, Cz] = (0, Fz.useState)(null),
+        Zz = (0, Fz.useRef)(!1);
+      let Gz = !1,
+        Tz = 0,
+        cz = 0;
+      if (Uz.currencyAmounts) {
+        for (const zz in Uz.currencyAmounts) {
+          var jz;
+          const tz = Uz.currencyAmounts[zz];
+          tz.hidden || (Tz++, (null === (jz = tz.subtext) || void 0 === jz ? void 0 : jz.length) > 0 && cz++)
         }
-        Ib = db + Fb > 4
-      }(0, Ab.useEffect)((() => {
-        wa.m.IR("showShopIconRedDot", fb, !0)
-      }), [fb]), (0, Ab.useEffect)((() => {
-        Zb.gameBridge.send("setShopOpen", Mb), Mb || (clearTimeout(zb.current), Pb((bb => bb.awaitingPurchase ? {
-          ...bb,
+        Gz = Tz + cz > 4
+      }(0, Fz.useEffect)((() => {
+        lt.o.Yg("showShopIconRedDot", mz, !0)
+      }), [mz]), (0, Fz.useEffect)((() => {
+        Bz.gameBridge.send("setShopOpen", Wz), Wz || (clearTimeout(rz.current), Nz((zz => zz.awaitingPurchase ? {
+          ...zz,
           awaitingPurchase: !1
-        } : bb)))
-      }), [Mb]), (0, Ab.useEffect)((() => () => {
-        Zb.gameBridge.send("setShopOpen", !1), clearTimeout(zb.current)
-      }), []), (0, Ab.useEffect)((() => {
-        ib.current = eb
-      }), [eb]), (0, Ab.useEffect)((() => {
-        if (null === pb) return;
-        return (0, IA.e)("pointerdown", (bb => {
-          const ab = bb.target;
-          null !== ab && void 0 !== ab && ab.closest(".ShopItem") || Nb(null)
+        } : zz)))
+      }), [Wz]), (0, Fz.useEffect)((() => () => {
+        Bz.gameBridge.send("setShopOpen", !1), clearTimeout(rz.current)
+      }), []), (0, Fz.useEffect)((() => {
+        xz.current = Uz
+      }), [Uz]), (0, Fz.useEffect)((() => {
+        if (null === Iz) return;
+        return (0, jF.d)("pointerdown", (zz => {
+          const tz = zz.target;
+          null !== tz && void 0 !== tz && tz.closest(".ShopItem") || Cz(null)
         }))
-      }), [pb]);
-      const Gb = bb => {
-          Pb((ab => ({
-            ...ab,
-            ...bb
+      }), [Iz]);
+      const Az = zz => {
+          Nz((tz => ({
+            ...tz,
+            ...zz
           })))
         },
-        Qb = bb => {
-          var ab;
-          clearTimeout(null === (ab = eb.onBoughtInfo) || void 0 === ab ? void 0 : ab.timeout);
-          const Ub = setTimeout((() => {
-            Gb({
+        yz = zz => {
+          var tz;
+          clearTimeout(null === (tz = Uz.onBoughtInfo) || void 0 === tz ? void 0 : tz.timeout);
+          const sz = setTimeout((() => {
+            Az({
               onBoughtInfo: null
             })
           }), 3e3);
-          Xb.current = bb, Gb({
+          bz.current = zz, Az({
             onBoughtInfo: {
-              text: bb,
-              timeout: Ub,
-              categoryKey: Rb.current
+              text: zz,
+              timeout: sz,
+              categoryKey: Dz.current
             }
           })
         },
-        qb = bb => {
+        Mz = zz => {
           const {
-            shopInfo: ab,
-            userInputsPerItem: Ub,
-            redDotInfo: Ab,
-            autoSelectCategory: Tb
-          } = function(bb, ab, Ub, Ab, Mb, Tb) {
-            if ((0, ta.I)(bb) || 0 === Object.keys(bb).length) return {
+            shopInfo: tz,
+            userInputsPerItem: sz,
+            redDotInfo: Fz,
+            autoSelectCategory: Xz
+          } = function(zz, tz, sz, Fz, Wz, Xz) {
+            if ((0, Lt.G)(zz) || 0 === Object.keys(zz).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: tM.fromShopInfo({}),
+              redDotInfo: aW.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const Eb = Wb.l[Wb.p].adConfig.showRewardedAds,
-              Yb = {};
-            let Bb = null;
-            for (const kb in bb) {
-              const ab = bb[kb],
-                Ub = {};
-              let Ab = !1;
-              for (const bb in ab.items) {
-                const Mb = ab.items[bb];
-                (0, xA.n)(Mb, Eb) && (Ub[bb] = Mb, Ab = !0)
+            const Oz = ez.r[ez.t].adConfig.showRewardedAds,
+              oz = {};
+            let vz = null;
+            for (const gz in zz) {
+              const tz = zz[gz],
+                sz = {};
+              let Fz = !1;
+              for (const zz in tz.items) {
+                const Wz = tz.items[zz];
+                (0, JF.k)(Wz, Oz) && (sz[zz] = Wz, Fz = !0)
               }
-              Ab && (Yb[kb] = {
-                ...ab,
-                items: Ub
-              }, !0 === ab.autoSelectCategory && (Bb = kb))
+              Fz && (oz[gz] = {
+                ...tz,
+                items: sz
+              }, !0 === tz.autoSelectCategory && (vz = gz))
             }
-            const eb = {},
-              vb = (bb, ab, Ab, Eb) => {
-                var Yb, Bb;
-                const vb = wM(bb, ab),
-                  Lb = null !== (Yb = Ub[vb]) && void 0 !== Yb ? Yb : Ub[ab];
-                if (null !== (Bb = Eb.userInput) && void 0 !== Bb && Bb.type) switch (Eb.userInput.type) {
+            const Uz = {},
+              Kz = (zz, tz, Fz, Oz) => {
+                var oz, vz;
+                const Kz = qW(zz, tz),
+                  uz = null !== (oz = sz[Kz]) && void 0 !== oz ? oz : sz[tz];
+                if (null !== (vz = Oz.userInput) && void 0 !== vz && vz.type) switch (Oz.userInput.type) {
                   case "dropdown": {
-                    var Pb;
-                    const bb = !Lb || !Eb.userInput.dropdownOptions.some((bb => (0, xA.g)(bb) === Lb)),
-                      ab = Eb.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === Ab || void 0 === Ab || null === (Pb = Ab.userInput) || void 0 === Pb ? void 0 : Pb.type) || JSON.stringify(Ab.userInput.dropdownOptions) !== JSON.stringify(Eb.userInput.dropdownOptions)),
-                      Ub = Eb.userInput,
-                      Mb = !(0, ta.I)(Ub.initialValue) && Ub.dropdownOptions.some((bb => (0, xA.g)(bb) === Ub.initialValue));
-                    var Xb;
-                    return void(bb || ab ? Mb ? eb[vb] = null !== (Xb = Eb.userInput.initialValue) && void 0 !== Xb ? Xb : null : Eb.userInput.dropdownOptions.length > 0 ? eb[vb] = (0, xA.g)(Eb.userInput.dropdownOptions[0]) : eb[vb] = null : eb[vb] = Lb)
+                    var Nz;
+                    const zz = !uz || !Oz.userInput.dropdownOptions.some((zz => (0, JF.e)(zz) === uz)),
+                      tz = Oz.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === Fz || void 0 === Fz || null === (Nz = Fz.userInput) || void 0 === Nz ? void 0 : Nz.type) || JSON.stringify(Fz.userInput.dropdownOptions) !== JSON.stringify(Oz.userInput.dropdownOptions)),
+                      sz = Oz.userInput,
+                      Wz = !(0, Lt.G)(sz.initialValue) && sz.dropdownOptions.some((zz => (0, JF.e)(zz) === sz.initialValue));
+                    var bz;
+                    return void(zz || tz ? Wz ? Uz[Kz] = null !== (bz = Oz.userInput.initialValue) && void 0 !== bz ? bz : null : Oz.userInput.dropdownOptions.length > 0 ? Uz[Kz] = (0, JF.e)(Oz.userInput.dropdownOptions[0]) : Uz[Kz] = null : Uz[Kz] = uz)
                   }
                   case "text":
                   case "number":
-                    var jb, Rb, kb;
-                    return void((null === Ab || void 0 === Ab ? void 0 : Ab.userInput) !== Eb.userInput ? eb[vb] = null !== (jb = null !== (Rb = Eb.userInput.initialValue) && void 0 !== Rb ? Rb : Lb) && void 0 !== jb ? jb : "" : eb[vb] = null !== (kb = null !== Lb && void 0 !== Lb ? Lb : Eb.userInput.initialValue) && void 0 !== kb ? kb : "");
+                    var wz, Dz, gz;
+                    return void((null === Fz || void 0 === Fz ? void 0 : Fz.userInput) !== Oz.userInput ? Uz[Kz] = null !== (wz = null !== (Dz = Oz.userInput.initialValue) && void 0 !== Dz ? Dz : uz) && void 0 !== wz ? wz : "" : Uz[Kz] = null !== (gz = null !== uz && void 0 !== uz ? uz : Oz.userInput.initialValue) && void 0 !== gz ? gz : "");
                   case "color":
-                    var yb, Zb, Db;
-                    return void((null === Ab || void 0 === Ab ? void 0 : Ab.userInput) !== Eb.userInput ? eb[vb] = null !== (yb = null !== (Zb = Eb.userInput.initialValue) && void 0 !== Zb ? Zb : Lb) && void 0 !== yb ? yb : "#000000" : eb[vb] = null !== (Db = null !== Lb && void 0 !== Lb ? Lb : Eb.userInput.initialValue) && void 0 !== Db ? Db : "#000000");
+                    var Hz, Bz, Pz;
+                    return void((null === Fz || void 0 === Fz ? void 0 : Fz.userInput) !== Oz.userInput ? Uz[Kz] = null !== (Hz = null !== (Bz = Oz.userInput.initialValue) && void 0 !== Bz ? Bz : uz) && void 0 !== Hz ? Hz : "#000000" : Uz[Kz] = null !== (Pz = null !== uz && void 0 !== uz ? uz : Oz.userInput.initialValue) && void 0 !== Pz ? Pz : "#000000");
                   case "player": {
-                    const bb = (0, xA.j)(Mb, Tb, Eb.userInput);
-                    return void(Lb && bb.includes(Lb) ? eb[vb] = Lb : eb[vb] = bb.length > 0 ? bb[0] : null)
+                    const zz = (0, JF.i)(Wz, Xz, Oz.userInput);
+                    return void(uz && zz.includes(uz) ? Uz[Kz] = uz : Uz[Kz] = zz.length > 0 ? zz[0] : null)
                   }
                 }
               };
-            for (const kb in Yb)
-              for (const bb in Yb[kb].items) {
-                var Lb;
-                const Ub = Yb[kb].items[bb];
-                vb(kb, bb, null === (Lb = ab[kb]) || void 0 === Lb ? void 0 : Lb.items[bb], Ub)
+            for (const gz in oz)
+              for (const zz in oz[gz].items) {
+                var uz;
+                const sz = oz[gz].items[zz];
+                Kz(gz, zz, null === (uz = tz[gz]) || void 0 === uz ? void 0 : uz.items[zz], sz)
               }
-            const Pb = tM.fromShopInfo(Yb);
-            for (const kb in Yb) {
-              var Xb;
-              if (Ab.doesCategoryExist(kb)) {
-                (null === (Xb = ab[kb]) || void 0 === Xb ? void 0 : Xb.redDot) === Yb[kb].redDot && Pb.updateCategoryRedDot(kb, Ab.categoryHasRedDot(kb));
-                for (const bb in Yb[kb].items) {
-                  var jb, Rb;
-                  Ab.doesItemExist(kb, bb) && (null === (jb = ab[kb]) || void 0 === jb || null === (Rb = jb.items[bb]) || void 0 === Rb ? void 0 : Rb.redDot) === Yb[kb].items[bb].redDot && Pb.updateItemRedDot(kb, bb, Ab.itemHasRedDot(kb, bb))
+            const Nz = aW.fromShopInfo(oz);
+            for (const gz in oz) {
+              var bz;
+              if (Fz.doesCategoryExist(gz)) {
+                (null === (bz = tz[gz]) || void 0 === bz ? void 0 : bz.redDot) === oz[gz].redDot && Nz.updateCategoryRedDot(gz, Fz.categoryHasRedDot(gz));
+                for (const zz in oz[gz].items) {
+                  var wz, Dz;
+                  Fz.doesItemExist(gz, zz) && (null === (wz = tz[gz]) || void 0 === wz || null === (Dz = wz.items[zz]) || void 0 === Dz ? void 0 : Dz.redDot) === oz[gz].items[zz].redDot && Nz.updateItemRedDot(gz, zz, Fz.itemHasRedDot(gz, zz))
                 }
               }
             }
             return {
-              shopInfo: Yb,
-              userInputsPerItem: eb,
-              redDotInfo: Pb,
-              autoSelectCategory: Bb
+              shopInfo: oz,
+              userInputsPerItem: Uz,
+              redDotInfo: Nz,
+              autoSelectCategory: vz
             }
-          }(bb, eb.shopInfo, eb.userInputsPerItem, eb.redDotInfo, Eb, Yb), Bb = {
-            shopInfo: ab,
-            userInputsPerItem: Ub,
-            redDotInfo: Ab
+          }(zz, Uz.shopInfo, Uz.userInputsPerItem, Uz.redDotInfo, Oz, oz), vz = {
+            shopInfo: tz,
+            userInputsPerItem: sz,
+            redDotInfo: Fz
           };
-          if (null === Tb || Mb)
-            if (ab[eb.selectedCategoryKey]) Bb.selectedCategoryKey = eb.selectedCategoryKey;
+          if (null === Xz || Wz)
+            if (tz[Uz.selectedCategoryKey]) vz.selectedCategoryKey = Uz.selectedCategoryKey;
             else {
-              const bb = FA(ab);
-              Bb.selectedCategoryKey = bb.length > 0 ? bb[0] : null
+              const zz = yF(tz);
+              vz.selectedCategoryKey = zz.length > 0 ? zz[0] : null
             }
-          else Bb.selectedCategoryKey = Tb;
-          return 0 === Object.keys(ab).length && Mb && mb.c.set({
+          else vz.selectedCategoryKey = Xz;
+          return 0 === Object.keys(tz).length && Wz && Jz.b.set({
             openEverythingMenuName: null
-          }), Bb
+          }), vz
         },
-        ub = (bb, ab, Ub) => {
-          const Ab = eb.selectedCategoryKey,
-            Mb = wM(Ab, bb),
-            Tb = null !== Ub && void 0 !== Ub ? Ub : eb.userInputsPerItem[Mb],
-            Eb = {
-              categoryKey: Ab,
-              itemKey: bb,
-              userInput: Tb
+        dz = (zz, tz, sz) => {
+          const Fz = Uz.selectedCategoryKey,
+            Wz = qW(Fz, zz),
+            Xz = null !== sz && void 0 !== sz ? sz : Uz.userInputsPerItem[Wz],
+            Oz = {
+              categoryKey: Fz,
+              itemKey: zz,
+              userInput: Xz
             };
-          if (Rb.current = Ab, ab.isRewardedAd) {
-            if (Date.now() - Db.current < 5e3) return;
-            (0, Ta.Z)((() => {
-              var Ub, Ab, Tb;
+          if (Dz.current = Fz, tz.isRewardedAd) {
+            if (Date.now() - Pz.current < 5e3) return;
+            (0, Xt.gb)((() => {
+              var sz, Fz, Xz;
               console.log("bought rewarded ad");
-              const Yb = Eb.categoryKey ? null === (Ub = ib.current.shopInfo[Eb.categoryKey]) || void 0 === Ub ? void 0 : Ub.items[bb] : null;
-              if (!Yb || !Yb.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (Ab = ab.userInput) || void 0 === Ab ? void 0 : Ab.type) === (null === Yb || void 0 === Yb || null === (Tb = Yb.userInput) || void 0 === Tb ? void 0 : Tb.type) ? (Eb.userInput = ib.current.userInputsPerItem[Mb], Zb.gameBridge.send("buyShopItem", Eb), ab.onBoughtMessage && Qb(ab.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), Db.current = Date.now()
+              const oz = Oz.categoryKey ? null === (sz = xz.current.shopInfo[Oz.categoryKey]) || void 0 === sz ? void 0 : sz.items[zz] : null;
+              if (!oz || !oz.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (Fz = tz.userInput) || void 0 === Fz ? void 0 : Fz.type) === (null === oz || void 0 === oz || null === (Xz = oz.userInput) || void 0 === Xz ? void 0 : Xz.type) ? (Oz.userInput = xz.current.userInputsPerItem[Wz], Bz.gameBridge.send("buyShopItem", Oz), tz.onBoughtMessage && yz(tz.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), Pz.current = Date.now()
           } else {
-            Zb.gameBridge.send("buyShopItem", Eb), Gb({
+            Bz.gameBridge.send("buyShopItem", Oz), Az({
               awaitingPurchase: !0
-            }), clearTimeout(zb.current), zb.current = setTimeout((() => {
-              xb.current = null, Gb({
+            }), clearTimeout(rz.current), rz.current = setTimeout((() => {
+              Yz.current = null, Az({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const bb = (0, xA.c)(ab, Tb);
-            if (xb.current = null, !isNaN(bb) && sM(eb.currencyAmounts, ab.currency)) {
-              0 !== bb && (xb.current = {
-                currency: ab.currency,
-                amountBefore: eb.currencyAmounts[ab.currency].amount
+            const zz = (0, JF.b)(tz, Xz);
+            if (Yz.current = null, !isNaN(zz) && SW(Uz.currencyAmounts, tz.currency)) {
+              0 !== zz && (Yz.current = {
+                currency: tz.currency,
+                amountBefore: Uz.currencyAmounts[tz.currency].amount
               });
-              const Ub = {
-                ...eb.currencyAmounts
+              const sz = {
+                ...Uz.currencyAmounts
               };
-              Ub[ab.currency].amount -= bb, Gb({
-                currencyAmounts: Ub
+              sz[tz.currency].amount -= zz, Az({
+                currencyAmounts: sz
               })
             }
-            ab.onBoughtMessage && Qb(ab.onBoughtMessage)
+            tz.onBoughtMessage && yz(tz.onBoughtMessage)
           }
         },
-        Kb = (bb, ab) => {
-          if (null === ab || !bb.shopInfo[ab]) return bb;
-          let Ub = bb.redDotInfo;
-          return Ub.categoryHasRedDot(ab) && (Ub.updateCategoryRedDot(ab, !1), Ub = Ub.shallowCopy()), {
-            ...bb,
-            selectedCategoryKey: ab,
-            redDotInfo: Ub
+        Qz = (zz, tz) => {
+          if (null === tz || !zz.shopInfo[tz]) return zz;
+          let sz = zz.redDotInfo;
+          return sz.categoryHasRedDot(tz) && (sz.updateCategoryRedDot(tz, !1), sz = sz.shallowCopy()), {
+            ...zz,
+            selectedCategoryKey: tz,
+            redDotInfo: sz
           }
         },
-        ob = bb => {
-          Pb((ab => Kb(ab, bb)))
+        kz = zz => {
+          Nz((tz => Qz(tz, zz)))
         };
-      (0, Wa.f)(dA.m, (() => {
-        Pb((bb => {
-          const ab = (0, dA.q)(FA(bb.shopInfo), bb.selectedCategoryKey, (ab => (0, dA.i)(bb.shopInfo[ab].items)));
-          return ab === bb.selectedCategoryKey ? bb : Kb(bb, ab)
+      (0, et.g)(AF.i, (() => {
+        Nz((zz => {
+          const tz = (0, AF.k)(yF(zz.shopInfo), zz.selectedCategoryKey, (tz => (0, AF.f)(zz.shopInfo[tz].items)));
+          return tz === zz.selectedCategoryKey ? zz : Qz(zz, tz)
         }))
-      })), (0, Wa.f)("showShopFromServer", (bb => {
+      })), (0, et.g)("showShopFromServer", (zz => {
         let {
-          toggle: ab,
-          Da: Ub
-        } = bb;
-        Ub && ob(Ub), 0 === Object.keys(eb.shopInfo).length || ab && Mb ? mb.c.set({
+          toggle: tz,
+          Ht: sz
+        } = zz;
+        sz && kz(sz), 0 === Object.keys(Uz.shopInfo).length || tz && Wz ? Jz.b.set({
           openEverythingMenuName: null
-        }) : mb.c.set({
-          openEverythingMenuName: ea.j.SHOP
+        }) : Jz.b.set({
+          openEverythingMenuName: Ut.r.SHOP
         })
-      })), (0, Wa.f)("closeShopOnDamaged", (() => {
-        Mb && mb.c.set({
+      })), (0, et.g)("closeShopOnDamaged", (() => {
+        Wz && Jz.b.set({
           openEverythingMenuName: null
         })
-      })), (0, Wa.f)("overShopInfo", (bb => {
-        Qb(bb)
-      })), (0, jb.f)("currencyAmounts", (bb => {
-        var ab;
-        const Ub = xb.current;
-        Ub && (null === bb || void 0 === bb || null === (ab = bb[Ub.currency]) || void 0 === ab ? void 0 : ab.amount) === Ub.amountBefore ? Gb({
-          currencyAmounts: bb
-        }) : (xb.current = null, Gb({
-          currencyAmounts: bb,
+      })), (0, et.g)("overShopInfo", (zz => {
+        yz(zz)
+      })), (0, wz.d)("currencyAmounts", (zz => {
+        var tz;
+        const sz = Yz.current;
+        sz && (null === zz || void 0 === zz || null === (tz = zz[sz.currency]) || void 0 === tz ? void 0 : tz.amount) === sz.amountBefore ? Az({
+          currencyAmounts: zz
+        }) : (Yz.current = null, Az({
+          currencyAmounts: zz,
           awaitingPurchase: !1
         }))
-      })), (0, jb.f)("shopInfo", (bb => {
-        Gb({
-          ...qb(bb),
+      })), (0, wz.d)("shopInfo", (zz => {
+        Az({
+          ...Mz(zz),
           awaitingPurchase: !1
         })
       }));
-      const lb = (0, Ab.useRef)({
-        playerIds: Eb,
-        localPlayerId: Yb
+      const iz = (0, Fz.useRef)({
+        playerIds: Oz,
+        localPlayerId: oz
       });
-      (0, Ab.useEffect)((() => {
-        lb.current.playerIds === Eb && lb.current.localPlayerId === Yb || (lb.current = {
-          playerIds: Eb,
-          localPlayerId: Yb
-        }, Pb((bb => {
-          const ab = qb(bb.shopInfo);
+      (0, Fz.useEffect)((() => {
+        iz.current.playerIds === Oz && iz.current.localPlayerId === oz || (iz.current = {
+          playerIds: Oz,
+          localPlayerId: oz
+        }, Nz((zz => {
+          const tz = Mz(zz.shopInfo);
           return {
-            ...bb,
-            ...ab
+            ...zz,
+            ...tz
           }
         })))
-      }), [Eb, Yb]);
-      const tb = eb.selectedCategoryKey,
-        wb = (bb, ab) => {
-          var Ub, Ab;
-          return (isNaN(ab) || (0, ta.I)(bb.currency) || sM(eb.currencyAmounts, bb.currency) && ab <= eb.currencyAmounts[bb.currency].amount) && (null === (Ub = bb.canBuy) || void 0 === Ub || Ub) && !(null !== (Ab = bb.hidden) && void 0 !== Ab && Ab)
+      }), [Oz, oz]);
+      const Lz = Uz.selectedCategoryKey,
+        lz = (zz, tz) => {
+          var sz, Fz;
+          return (isNaN(tz) || (0, Lt.G)(zz.currency) || SW(Uz.currencyAmounts, zz.currency) && tz <= Uz.currencyAmounts[zz.currency].amount) && (null === (sz = zz.canBuy) || void 0 === sz || sz) && !(null !== (Fz = zz.hidden) && void 0 !== Fz && Fz)
         },
-        sb = (bb, ab) => {
-          var Ub, Ab, Mb;
-          const Eb = wM(tb, bb),
-            Yb = eb.shopInfo[tb].items[bb],
-            Lb = eb.userInputsPerItem[Eb],
-            Pb = (0, xA.c)(Yb, Lb),
-            Xb = wb(Yb, Pb),
-            jb = Yb.enchant,
-            Rb = jb ? (0, rb.kb)(null !== (Ub = Yb.customTitle) && void 0 !== Ub ? Ub : bb, {
-              colour: rb.fb[jb.tier]
-            }) : null !== (Ab = Yb.customTitle) && void 0 !== Ab ? Ab : bb,
-            yb = ab => {
-              const Ub = null !== ab && void 0 !== ab ? ab : Lb,
-                Ab = void 0 !== ab ? (0, xA.c)(Yb, ab) : Pb;
-              wb(Yb, Ab) && null !== Ub && ub(bb, Yb, ab);
-              let Mb = eb.redDotInfo;
-              Mb.itemHasRedDot(tb, bb) && (Mb.updateItemRedDot(tb, bb, !1), Mb = Mb.shallowCopy()), Gb({
-                redDotInfo: Mb
+        nz = (zz, tz) => {
+          var sz, Fz, Wz;
+          const Oz = qW(Lz, zz),
+            oz = Uz.shopInfo[Lz].items[zz],
+            uz = Uz.userInputsPerItem[Oz],
+            Nz = (0, JF.b)(oz, uz),
+            bz = lz(oz, Nz),
+            wz = oz.enchant,
+            Dz = wz ? (0, hz.sb)(null !== (sz = oz.customTitle) && void 0 !== sz ? sz : zz, {
+              colour: hz.lb[wz.tier]
+            }) : null !== (Fz = oz.customTitle) && void 0 !== Fz ? Fz : zz,
+            Hz = tz => {
+              const sz = null !== tz && void 0 !== tz ? tz : uz,
+                Fz = void 0 !== tz ? (0, JF.b)(oz, tz) : Nz;
+              lz(oz, Fz) && null !== sz && dz(zz, oz, tz);
+              let Wz = Uz.redDotInfo;
+              Wz.itemHasRedDot(Lz, zz) && (Wz.updateItemRedDot(Lz, zz, !1), Wz = Wz.shallowCopy()), Az({
+                redDotInfo: Wz
               })
             };
-          return (0, vb.jsxs)("div", {
-            className: Tb()("ShopItem", {
-              ShopItemNoInput: !Yb.userInput,
-              ShopItemNoInputCanBuy: !Yb.userInput && Xb,
-              ShopItemNoInputSelected: Yb.isSelected,
-              ShopItemEnchant: !!jb
+          return (0, Kz.jsxs)("div", {
+            className: Xz()("ShopItem", {
+              ShopItemNoInput: !oz.userInput,
+              ShopItemNoInputCanBuy: !oz.userInput && bz,
+              ShopItemNoInputSelected: oz.isSelected,
+              ShopItemEnchant: !!wz
             }),
-            "data-pad-focusable": !Yb.userInput || void 0,
-            "data-pad-unavailable": !Yb.userInput && !Xb || void 0,
-            "data-pad-repeat": null !== (Mb = (0, dA.b)(Yb)) && void 0 !== Mb ? Mb : void 0,
-            "data-pad-repeat-wait": eb.awaitingPurchase || void 0,
+            "data-pad-focusable": !oz.userInput || void 0,
+            "data-pad-unavailable": !oz.userInput && !bz || void 0,
+            "data-pad-repeat": null !== (Wz = (0, AF.c)(oz)) && void 0 !== Wz ? Wz : void 0,
+            "data-pad-repeat-wait": Uz.awaitingPurchase || void 0,
             onClick: () => {
-              if (jb && Hb.current) {
-                if (pb !== Eb) return void Nb(Eb);
-                Nb(null)
+              if (wz && Zz.current) {
+                if (Iz !== Oz) return void Cz(Oz);
+                Cz(null)
               }
-              Yb.userInput || yb()
+              oz.userInput || Hz()
             },
-            onPointerDown: bb => {
-              jb && (Hb.current = (0, fA.r)(bb))
+            onPointerDown: zz => {
+              wz && (Zz.current = (0, CF.j)(zz))
             },
-            onPointerEnter: bb => {
-              jb && !(0, fA.r)(bb) && Nb(Eb)
+            onPointerEnter: zz => {
+              wz && !(0, CF.j)(zz) && Cz(Oz)
             },
-            onPointerLeave: bb => {
-              jb && !(0, fA.r)(bb) && Nb((bb => bb === Eb ? null : bb))
+            onPointerLeave: zz => {
+              wz && !(0, CF.j)(zz) && Cz((zz => zz === Oz ? null : zz))
             },
             style: {
-              zIndex: Object.keys(eb.shopInfo[tb].items).length - ab
+              zIndex: Object.keys(Uz.shopInfo[Lz].items).length - tz
             },
-            children: [eb.redDotInfo.itemHasRedDot(tb, bb) && (0, vb.jsx)(Bb.d, {
+            children: [Uz.redDotInfo.itemHasRedDot(Lz, zz) && (0, Kz.jsx)(vz.c, {
               top: "-6px",
               right: "-6px"
-            }), Yb.badge && (0, vb.jsx)("div", {
+            }), oz.badge && (0, Kz.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, vb.jsx)("div", {
-                className: Tb()("ShopBadgeMain", Yb.badge.type),
-                children: (0, vb.jsx)(pA.c, {
-                  text: Yb.badge.text
+              children: (0, Kz.jsx)("div", {
+                className: Xz()("ShopBadgeMain", oz.badge.type),
+                children: (0, Kz.jsx)(ZF.c, {
+                  text: oz.badge.text
                 })
               })
-            }), (0, vb.jsx)("div", {
+            }), (0, Kz.jsx)("div", {
               className: "ShopItemLeft",
-              children: Yb.image && (0, vb.jsx)(CM, {
-                item: Yb,
+              children: oz.image && (0, Kz.jsx)(RW, {
+                item: oz,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, vb.jsxs)("div", {
+            }), (0, Kz.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, vb.jsxs)("div", {
+              children: [(0, Kz.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, vb.jsx)("div", {
+                children: [(0, Kz.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, vb.jsx)(pA.c, {
-                    text: Rb
+                  children: (0, Kz.jsx)(ZF.c, {
+                    text: Dz
                   })
-                }), (0, vb.jsx)("div", {
+                }), (0, Kz.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, vb.jsx)(pA.c, {
-                    text: Yb.description
+                  children: (0, Kz.jsx)(ZF.c, {
+                    text: oz.description
                   })
                 })]
-              }), Yb.userInput && (0, vb.jsxs)("div", {
+              }), oz.userInput && (0, Kz.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: bb => {
-                  bb.stopPropagation()
+                onClick: zz => {
+                  zz.stopPropagation()
                 },
-                children: [(0, vb.jsx)(cM, {
-                  item: Yb,
-                  currInput: Lb,
-                  updateInput: ab => {
-                    ((bb, ab, Ub) => {
-                      const Ab = wM(bb, ab),
-                        Mb = {
-                          ...eb.userInputsPerItem
+                children: [(0, Kz.jsx)(EW, {
+                  item: oz,
+                  currInput: uz,
+                  updateInput: tz => {
+                    ((zz, tz, sz) => {
+                      const Fz = qW(zz, tz),
+                        Wz = {
+                          ...Uz.userInputsPerItem
                         };
-                      Mb[Ab] = Ub, Gb({
-                        userInputsPerItem: Mb
+                      Wz[Fz] = sz, Az({
+                        userInputsPerItem: Wz
                       })
-                    })(tb, bb, ab)
+                    })(Lz, zz, tz)
                   },
-                  onSubmit: bb => {
-                    yb(bb)
+                  onSubmit: zz => {
+                    Hz(zz)
                   }
-                }), ("dropdown" !== Yb.userInput.type || !Yb.userInput.autoSubmit) && (0, vb.jsx)(kb.g, {
+                }), ("dropdown" !== oz.userInput.type || !oz.userInput.autoSubmit) && (0, Kz.jsx)(gz.h, {
                   className: "ItemCostButton",
-                  disabled: !Xb && null !== Lb,
+                  disabled: !bz && null !== uz,
                   onClick: () => {
-                    yb()
+                    Hz()
                   },
-                  children: (0, vb.jsx)(OM, {
-                    item: Yb,
-                    cost: Pb,
-                    currencyAmounts: eb.currencyAmounts
+                  children: (0, Kz.jsx)(fW, {
+                    item: oz,
+                    cost: Nz,
+                    currencyAmounts: Uz.currencyAmounts
                   })
                 })]
               })]
-            }), !Yb.userInput && (0, vb.jsx)("div", {
+            }), !oz.userInput && (0, Kz.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, vb.jsx)(OM, {
-                item: Yb,
-                cost: Pb,
-                currencyAmounts: eb.currencyAmounts
+              children: (0, Kz.jsx)(fW, {
+                item: oz,
+                cost: Nz,
+                currencyAmounts: Uz.currencyAmounts
               })
-            }), jb && pb === Eb && (0, vb.jsxs)("div", {
+            }), wz && Iz === Oz && (0, Kz.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, vb.jsx)(pA.c, {
-                text: Rb
-              }), (0, vb.jsx)("div", {
+              children: [(0, Kz.jsx)(ZF.c, {
+                text: Dz
+              }), (0, Kz.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, vb.jsx)(pA.c, {
-                  text: (0, iA.b)("", jb.enchantments, jb.enchantmentData)
+                children: (0, Kz.jsx)(ZF.c, {
+                  text: (0, IF.c)("", wz.enchantments, wz.enchantmentData)
                 })
               })]
             })]
-          }, Eb)
+          }, Oz)
         },
-        gb = function(bb) {
-          for (const ab in bb)
-            if (bb[ab].smp) return !0;
+        az = function(zz) {
+          for (const tz in zz)
+            if (zz[tz].smp) return !0;
           return !1
-        }(eb.shopInfo),
-        Cb = JA(eb.shopInfo, tb);
-      return (0, vb.jsx)(ZA.d, {
+        }(Uz.shopInfo),
+        qz = zW(Uz.shopInfo, Lz);
+      return (0, Kz.jsx)(YF.d, {
         className: "Menu ShopBody",
-        show: Mb,
-        children: 0 !== Object.keys(eb.shopInfo).length && (0, vb.jsxs)(vb.Fragment, {
-          children: [(0, vb.jsxs)("div", {
+        show: Wz,
+        children: 0 !== Object.keys(Uz.shopInfo).length && (0, Kz.jsxs)(Kz.Fragment, {
+          children: [(0, Kz.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, vb.jsx)(Lb, {
-              items: FA(eb.shopInfo).map((bb => {
-                var ab;
+            children: [(0, Kz.jsx)(uz, {
+              items: yF(Uz.shopInfo).map((zz => {
+                var tz;
                 return {
-                  id: bb,
-                  title: null !== (ab = eb.shopInfo[bb].customTitle) && void 0 !== ab ? ab : bb,
-                  redDot: eb.redDotInfo.categoryHasRedDot(bb)
+                  id: zz,
+                  title: null !== (tz = Uz.shopInfo[zz].customTitle) && void 0 !== tz ? tz : zz,
+                  redDot: Uz.redDotInfo.categoryHasRedDot(zz)
                 }
               })),
-              selectedItemId: tb,
-              onClick: ob,
-              padStartsOnTab: (0, dA.f)(tb)
-            }), (0, vb.jsx)("div", {
+              selectedItemId: Lz,
+              onClick: kz,
+              padStartsOnTab: (0, AF.e)(Lz)
+            }), (0, Kz.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: eb.currencyAmounts && Object.keys(eb.currencyAmounts).map((bb => {
-                var ab;
-                const Ub = eb.currencyAmounts[bb];
-                return Ub.hidden ? null : (0, vb.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (Ib ? "SmallText" : ""),
-                  children: [(0, vb.jsxs)("div", {
+              children: Uz.currencyAmounts && Object.keys(Uz.currencyAmounts).map((zz => {
+                var tz;
+                const sz = Uz.currencyAmounts[zz];
+                return sz.hidden ? null : (0, Kz.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (Gz ? "SmallText" : ""),
+                  children: [(0, Kz.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, vb.jsx)("div", {
+                    children: [(0, Kz.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: Ub.iconColour
+                        color: sz.iconColour
                       },
-                      children: (0, vb.jsx)(bT, {
-                        iconName: Ub.icon
+                      children: (0, Kz.jsx)(FX, {
+                        iconName: sz.icon
                       })
-                    }), "\xa0", (0, zA.d)(Ub.amount, 6)]
-                  }), (null === (ab = Ub.subtext) || void 0 === ab ? void 0 : ab.length) > 0 && (0, vb.jsx)("div", {
+                    }), "\xa0", (0, mF.e)(sz.amount, 6)]
+                  }), (null === (tz = sz.subtext) || void 0 === tz ? void 0 : tz.length) > 0 && (0, Kz.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, vb.jsx)(pA.c, {
-                      text: Ub.subtext
+                    children: (0, Kz.jsx)(ZF.c, {
+                      text: sz.subtext
                     })
                   })]
-                }, bb)
+                }, zz)
               }))
             })]
-          }), (0, vb.jsxs)("div", {
+          }), (0, Kz.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [gb && (0, vb.jsx)(lM, {
-              show: Mb,
-              shopInfo: eb.shopInfo,
-              selectedCategoryKey: tb,
-              buy: (bb, ab, Ub) => {
-                ub(bb, ab, Ub)
+            children: [az && (0, Kz.jsx)(nW, {
+              show: Wz,
+              shopInfo: Uz.shopInfo,
+              selectedCategoryKey: Lz,
+              buy: (zz, tz, sz) => {
+                dz(zz, tz, sz)
               },
-              canAfford: wb,
-              message: eb.onBoughtInfo
-            }), null === Cb && (0, vb.jsxs)(vb.Fragment, {
-              children: [(0, vb.jsx)("div", {
-                className: Tb()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== eb.onBoughtInfo
+              canAfford: lz,
+              message: Uz.onBoughtInfo
+            }), null === qz && (0, Kz.jsxs)(Kz.Fragment, {
+              children: [(0, Kz.jsx)("div", {
+                className: Xz()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== Uz.onBoughtInfo
                 }),
-                children: (0, vb.jsx)(pA.c, {
-                  text: Xb.current
+                children: (0, Kz.jsx)(ZF.c, {
+                  text: bz.current
                 })
-              }), (0, vb.jsx)("div", {
+              }), (0, Kz.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, vb.jsxs)("div", {
+                children: (0, Kz.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (ab = eb.shopInfo[tb]) || void 0 === ab ? void 0 : ab.description) && (0, vb.jsx)("div", {
+                  children: [(null === (tz = Uz.shopInfo[Lz]) || void 0 === tz ? void 0 : tz.description) && (0, Kz.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, vb.jsx)(pA.c, {
-                      text: eb.shopInfo[tb].description
+                    children: (0, Kz.jsx)(ZF.c, {
+                      text: Uz.shopInfo[Lz].description
                     })
-                  }), Mb && (0, vb.jsx)("div", {
+                  }), Wz && (0, Kz.jsx)("div", {
                     className: "ShopItems",
-                    ref: yb,
+                    ref: Hz,
                     "data-pad-initial-area": !0,
-                    children: FA(null === (Ub = eb.shopInfo[tb]) || void 0 === Ub ? void 0 : Ub.items).map(((bb, ab) => sb(bb, ab)))
+                    children: yF(null === (sz = Uz.shopInfo[Lz]) || void 0 === sz ? void 0 : sz.items).map(((zz, tz) => nz(zz, tz)))
                   })]
                 })
               })]
@@ -5051,777 +5051,777 @@ export const modules = {
       })
     }));
 
-    function CM(bb) {
+    function RW(zz) {
       let {
-        item: ab,
-        minWidth: Ub,
-        minHeight: Ab
-      } = bb;
+        item: tz,
+        minWidth: sz,
+        minHeight: Fz
+      } = zz;
       const {
-        image: Mb,
-        schematicId: Tb,
-        imageColour: Eb
-      } = ab;
-      if (Tb) return (0, vb.jsx)("div", {
+        image: Wz,
+        schematicId: Xz,
+        imageColour: Oz
+      } = tz;
+      if (Xz) return (0, Kz.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${Ub}rem`,
-          height: `${Ab}rem`
+          width: `${sz}rem`,
+          height: `${Fz}rem`
         },
-        children: (0, vb.jsx)(NA.e, {
+        children: (0, Kz.jsx)(GF.c, {
           game: {
-            schematicId: Tb
+            schematicId: Xz
           }
         })
       });
-      var Bb, eb;
-      if ((0, mA.f)(Mb)) return (0, vb.jsx)("div", {
+      var vz, Uz;
+      if ((0, eF.f)(Wz)) return (0, Kz.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${Ub}rem`,
+          minWidth: `${sz}rem`,
           height: "0",
-          minHeight: `${Ab}rem`
+          minHeight: `${Fz}rem`
         },
-        children: (0, vb.jsx)(mA.c, {
-          itemName: Mb,
-          amount: null !== (Bb = ab.amount) && void 0 !== Bb ? Bb : 0,
-          amountFontSize: Ab / 4 + "rem",
-          enchantmentTier: null === (eb = ab.enchant) || void 0 === eb ? void 0 : eb.tier
+        children: (0, Kz.jsx)(eF.c, {
+          itemName: Wz,
+          amount: null !== (vz = tz.amount) && void 0 !== vz ? vz : 0,
+          amountFontSize: Fz / 4 + "rem",
+          enchantmentTier: null === (Uz = tz.enchant) || void 0 === Uz ? void 0 : Uz.tier
         })
       });
-      const Lb = Mb.slice(-4);
-      return ".jpg" === Lb || ".png" === Lb ? (0, vb.jsx)(VM, {
-        image: Mb,
-        minWidth: Ub
-      }) : (0, vb.jsx)(Yb.e, {
-        name: Mb,
+      const uz = Wz.slice(-4);
+      return ".jpg" === uz || ".png" === uz ? (0, Kz.jsx)(pW, {
+        image: Wz,
+        minWidth: sz
+      }) : (0, Kz.jsx)(oz.c, {
+        name: Wz,
         className: "SelectedItemImage",
         style: {
-          color: Eb
+          color: Oz
         }
       })
     }
 
-    function VM(bb) {
+    function pW(zz) {
       let {
-        image: ab,
-        minWidth: Ub
-      } = bb;
+        image: tz,
+        minWidth: sz
+      } = zz;
       const {
-        gameNameWithVariation: Ab
-      } = (0, cU.k)("connectedGame"), Mb = ab.endsWith(".jpg");
-      return (0, vb.jsx)("img", {
-        className: Tb()({
-          ShopPixelImage: !Mb
+        gameNameWithVariation: Fz
+      } = (0, Es.l)("connectedGame"), Wz = tz.endsWith(".jpg");
+      return (0, Kz.jsx)("img", {
+        className: Xz()({
+          ShopPixelImage: !Wz
         }),
         style: {
-          width: `${Mb?1.6*Ub:Ub}rem`,
+          width: `${Wz?1.6*sz:sz}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,rb.Gb)(Ab)}/${ab}`,
-        alt: ab,
+        src: `/textures/games/${(0,hz.Tb)(Fz)}/${tz}`,
+        alt: tz,
         draggable: !1
       })
     }
 
-    function OM(bb) {
+    function fW(zz) {
       let {
-        item: ab,
-        cost: Ub,
-        currencyAmounts: Ab
-      } = bb;
-      const Mb = !isNaN(Ub) && 0 !== Ub && sM(Ab, ab.currency);
-      let Tb = null;
-      return ab.buyButtonText ? Tb = ab.buyButtonText : Mb ? (Tb = Ub, ab.sell && (Tb = -1 * Ub), Tb = Tb.toString()) : 0 === Ub ? Tb = "Free" : ab.isRewardedAd && (Tb = "Watch ad"), (0, ta.I)(Tb) || " " === Tb ? null : (0, vb.jsxs)("div", {
+        item: tz,
+        cost: sz,
+        currencyAmounts: Fz
+      } = zz;
+      const Wz = !isNaN(sz) && 0 !== sz && SW(Fz, tz.currency);
+      let Xz = null;
+      return tz.buyButtonText ? Xz = tz.buyButtonText : Wz ? (Xz = sz, tz.sell && (Xz = -1 * sz), Xz = Xz.toString()) : 0 === sz ? Xz = "Free" : tz.isRewardedAd && (Xz = "Watch ad"), (0, Lt.G)(Xz) || " " === Xz ? null : (0, Kz.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [Mb && (0, vb.jsx)("div", {
+        children: [Wz && (0, Kz.jsx)("div", {
           style: {
-            color: Ab[ab.currency].iconColour
+            color: Fz[tz.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, vb.jsx)(bT, {
-            iconName: Ab[ab.currency].icon
+          children: (0, Kz.jsx)(FX, {
+            iconName: Fz[tz.currency].icon
           })
-        }), (0, vb.jsx)("div", {
+        }), (0, Kz.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, vb.jsx)(pA.c, {
-            text: Tb
+          children: (0, Kz.jsx)(ZF.c, {
+            text: Xz
           })
         })]
       })
     }
 
-    function cM(bb) {
+    function EW(zz) {
       let {
-        item: ab,
-        currInput: Ub,
-        updateInput: Mb,
-        onSubmit: Tb
-      } = bb;
+        item: tz,
+        currInput: sz,
+        updateInput: Wz,
+        onSubmit: Xz
+      } = zz;
       const {
-        t: Yb
-      } = (0, Eb.A)(), Bb = (0, Ab.useRef)(null);
-      if ((0, Ab.useEffect)((() => {
-          const bb = Bb.current;
-          bb && bb.value !== Ub && document.activeElement !== bb && (bb.value = null !== Ub && void 0 !== Ub ? Ub : "")
-        }), [Ub]), !ab.userInput) return null;
-      let eb = ab.userInput;
-      if (yb.featureFlags.sanitizeShopInput && "text" === ab.userInput.type && (eb = {
+        t: oz
+      } = (0, Oz.B)(), vz = (0, Fz.useRef)(null);
+      if ((0, Fz.useEffect)((() => {
+          const zz = vz.current;
+          zz && zz.value !== sz && document.activeElement !== zz && (zz.value = null !== sz && void 0 !== sz ? sz : "")
+        }), [sz]), !tz.userInput) return null;
+      let Uz = tz.userInput;
+      if (Hz.featureFlags.sanitizeShopInput && "text" === tz.userInput.type && (Uz = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === eb.type || "number" === eb.type) {
-        var Lb, Pb;
-        console.assert(void 0 !== Ub, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(ab)}`);
-        const bb = "text" === eb.type && eb.wordCharsOnly;
-        return (0, vb.jsx)("div", {
+        }), "text" === Uz.type || "number" === Uz.type) {
+        var uz, Nz;
+        console.assert(void 0 !== sz, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(tz)}`);
+        const zz = "text" === Uz.type && Uz.wordCharsOnly;
+        return (0, Kz.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, vb.jsx)(xb.c, {
+          children: (0, Kz.jsx)(Yz.d, {
             className: "ShopItemUserInputText",
-            placeholderText: Yb(eb.placeholderText),
-            defaultValue: Ub,
-            domRef: Bb,
-            onValueChange: (ab, Ub) => {
-              !0 === bb && (ab = (0, HA.ob)(ab)), Bb.current.value = ab, Mb(ab)
+            placeholderText: oz(Uz.placeholderText),
+            defaultValue: sz,
+            domRef: vz,
+            onValueChange: (tz, sz) => {
+              !0 === zz && (tz = (0, cF.mb)(tz)), vz.current.value = tz, Wz(tz)
             },
-            onEnter: Tb,
-            type: eb.type
-          }, (null !== (Lb = eb.initialValue) && void 0 !== Lb ? Lb : "") + (null !== (Pb = eb.placeholderText) && void 0 !== Pb ? Pb : ""))
+            onEnter: Xz,
+            type: Uz.type
+          }, (null !== (uz = Uz.initialValue) && void 0 !== uz ? uz : "") + (null !== (Nz = Uz.placeholderText) && void 0 !== Nz ? Nz : ""))
         })
       }
-      if ("dropdown" === eb.type) {
-        console.assert(void 0 !== Ub, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(ab)}`);
-        const bb = eb.autoSubmit;
-        return (0, vb.jsx)("div", {
+      if ("dropdown" === Uz.type) {
+        console.assert(void 0 !== sz, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(tz)}`);
+        const zz = Uz.autoSubmit;
+        return (0, Kz.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, vb.jsx)(xa.c, {
-            options: eb.dropdownOptions.map((bb => (0, xA.g)(bb))),
-            value: Ub,
-            onChange: ab => {
+          children: (0, Kz.jsx)(Yt.d, {
+            options: Uz.dropdownOptions.map((zz => (0, JF.e)(zz))),
+            value: sz,
+            onChange: tz => {
               let {
-                value: Ub
-              } = ab;
-              Mb(Ub), bb && Tb(Ub)
+                value: sz
+              } = tz;
+              Wz(sz), zz && Xz(sz)
             }
           })
         })
       }
-      return "player" === eb.type ? (0, vb.jsx)(JM, {
-        userInput: eb,
-        currInput: Ub,
-        updateInput: Mb
-      }) : "color" === eb.type ? (0, vb.jsx)("div", {
+      return "player" === Uz.type ? (0, Kz.jsx)(zX, {
+        userInput: Uz,
+        currInput: sz,
+        updateInput: Wz
+      }) : "color" === Uz.type ? (0, Kz.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, vb.jsx)("input", {
+        children: (0, Kz.jsx)("input", {
           type: "color",
-          value: Ub,
-          onChange: bb => {
-            Mb(bb.target.value)
+          value: sz,
+          onChange: zz => {
+            Wz(zz.target.value)
           }
         })
       }) : null
     }
 
-    function JM(bb) {
+    function zX(zz) {
       let {
-        userInput: ab,
-        currInput: Ub,
-        updateInput: Ab
-      } = bb;
-      const Mb = (0, cU.k)("players"),
-        Tb = (0, cU.k)("hiddenPlayerNames"),
-        Eb = (0, xA.j)(Mb.ids, Mb.localId, ab);
-      return (0, vb.jsx)("div", {
+        userInput: tz,
+        currInput: sz,
+        updateInput: Fz
+      } = zz;
+      const Wz = (0, Es.l)("players"),
+        Xz = (0, Es.l)("hiddenPlayerNames"),
+        Oz = (0, JF.i)(Wz.ids, Wz.localId, tz);
+      return (0, Kz.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, vb.jsx)(xa.c, {
-          options: Eb.map((bb => {
+        children: (0, Kz.jsx)(Yt.d, {
+          options: Oz.map((zz => {
             const {
-              name: ab
-            } = Mb.byId[bb];
+              name: tz
+            } = Wz.byId[zz];
             return {
-              value: bb,
-              label: null === ab ? "" : (0, WA.d)(ab, Tb)
+              value: zz,
+              label: null === tz ? "" : (0, TF.g)(tz, Xz)
             }
           })),
-          value: Ub,
-          onChange: bb => {
+          value: sz,
+          onChange: zz => {
             let {
-              value: ab
-            } = bb;
-            Ab(ab)
+              value: tz
+            } = zz;
+            Fz(tz)
           }
         })
       })
     }
 
-    function nM(bb) {
+    function tX(zz) {
       let {
-        ids: ab
-      } = bb;
-      return ab
+        ids: tz
+      } = zz;
+      return tz
     }
 
-    function SM(bb) {
+    function sX(zz) {
       let {
-        localId: ab
-      } = bb;
-      return ab
+        localId: tz
+      } = zz;
+      return tz
     }
 
-    function bT(bb) {
+    function FX(zz) {
       let {
-        iconName: ab
-      } = bb;
-      return Zb.gameBridge.lookup("isItemName", ab) ? (0, vb.jsx)(mA.c, {
-        itemName: ab,
+        iconName: tz
+      } = zz;
+      return Bz.gameBridge.lookup("isItemName", tz) ? (0, Kz.jsx)(eF.c, {
+        itemName: tz,
         amount: 1
-      }) : (0, vb.jsx)(Yb.e, {
-        name: ab,
+      }) : (0, Kz.jsx)(oz.c, {
+        name: tz,
         className: "2x"
       })
     }
-    var aT = Ub(1548);
-    const UT = (0, Ub(1304).e)((bb => bb.PadLobbyShortcuts)),
-      AT = (0, Ab.lazy)((() => Promise.resolve().then((() => Ub(4340))).then((bb => ({
-        default: bb.Lobbyleaderboard
+    var WX = sz(1571);
+    const XX = (0, sz(1375).g)((zz => zz.PadLobbyShortcuts)),
+      OX = (0, Fz.lazy)((() => Promise.resolve().then((() => sz(4304))).then((zz => ({
+        default: zz.Lobbyleaderboard
       })))));
 
-    function MT(bb) {
+    function oX(zz) {
       let {
-        show: ab
-      } = bb;
-      return ab ? (0, vb.jsxs)(vb.Fragment, {
-        children: [(0, vb.jsx)(UT, {}), (0, vb.jsx)(Ab.Suspense, {
-          fallback: (0, vb.jsx)("div", {
+        show: tz
+      } = zz;
+      return tz ? (0, Kz.jsxs)(Kz.Fragment, {
+        children: [(0, Kz.jsx)(XX, {}), (0, Kz.jsx)(Fz.Suspense, {
+          fallback: (0, Kz.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, vb.jsx)(ib.b, {})
+            children: (0, Kz.jsx)(xz.d, {})
           }),
-          children: (0, vb.jsx)(AT, {})
+          children: (0, Kz.jsx)(OX, {})
         })]
       }) : null
     }
-    var TT = Ub(1476),
-      ET = Ub(2732),
-      YT = Ub(1639),
-      BT = Ub(2783),
-      eT = Ub(2476),
-      vT = Ub(1405),
-      LT = Ub(1358),
-      PT = Ub(2706),
-      XT = Ub(2725),
-      jT = Ub(2201);
-    const RT = "storeRecentGiftRecipients",
-      kT = new Map;
+    var vX = sz(1518),
+      UX = sz(2754),
+      KX = sz(1664),
+      uX = sz(2800),
+      NX = sz(2483),
+      bX = sz(1464),
+      wX = sz(1423),
+      DX = sz(2728),
+      gX = sz(2746),
+      HX = sz(2225);
+    const BX = "storeRecentGiftRecipients",
+      PX = new Map;
 
-    function yT() {
+    function rX() {
       try {
-        const bb = ga.f.getItem(RT);
-        return Array.isArray(bb) ? bb.filter((bb => "string" === typeof(null === bb || void 0 === bb ? void 0 : bb.name) && bb.name.length > 0)).map((bb => ({
-          name: bb.name,
-          cosmetics: bb.cosmetics && "object" === typeof bb.cosmetics ? bb.cosmetics : null
+        const zz = qt.f.getItem(BX);
+        return Array.isArray(zz) ? zz.filter((zz => "string" === typeof(null === zz || void 0 === zz ? void 0 : zz.name) && zz.name.length > 0)).map((zz => ({
+          name: zz.name,
+          cosmetics: zz.cosmetics && "object" === typeof zz.cosmetics ? zz.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function ZT(bb) {
-      var ab;
-      const [Ub, Mb] = (0, Ab.useState)(""), [Tb, Eb] = (0, Ab.useState)("search"), [Yb, Bb] = (0, Ab.useState)(null), [eb, vb] = (0, Ab.useState)(null), Lb = (0, Ab.useRef)(null), Pb = (0, Ab.useRef)(null);
-      (0, Ab.useEffect)((() => () => {
-        Lb.current && clearTimeout(Lb.current)
+    function YX(zz) {
+      var tz;
+      const [sz, Wz] = (0, Fz.useState)(""), [Xz, Oz] = (0, Fz.useState)("search"), [oz, vz] = (0, Fz.useState)(null), [Uz, Kz] = (0, Fz.useState)(null), uz = (0, Fz.useRef)(null), Nz = (0, Fz.useRef)(null);
+      (0, Fz.useEffect)((() => () => {
+        uz.current && clearTimeout(uz.current)
       }), []);
-      const Xb = null !== (ab = null === Yb || void 0 === Yb ? void 0 : Yb.name) && void 0 !== ab ? ab : null;
+      const bz = null !== (tz = null === oz || void 0 === oz ? void 0 : oz.name) && void 0 !== tz ? tz : null;
 
-      function jb() {
-        Lb.current && (clearTimeout(Lb.current), Lb.current = null)
-      }(0, Ab.useEffect)((() => {
-        if (null === Xb || bb === Hb.NULL_USER_CONTEXT) return;
-        const ab = Xb.toLowerCase();
-        if (ab === bb.getPlayerName().toLowerCase()) return void vb({
-          name: Xb,
+      function wz() {
+        uz.current && (clearTimeout(uz.current), uz.current = null)
+      }(0, Fz.useEffect)((() => {
+        if (null === bz || zz === Zz.NULL_USER_CONTEXT) return;
+        const tz = bz.toLowerCase();
+        if (tz === zz.getPlayerName().toLowerCase()) return void Kz({
+          name: bz,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const Ub = kT.get(ab);
-        if (Ub) return void vb({
-          name: Xb,
-          result: Ub
+        const sz = PX.get(tz);
+        if (sz) return void Kz({
+          name: bz,
+          result: sz
         });
-        let Ab = !1;
-        return async function(bb, ab) {
+        let Fz = !1;
+        return async function(zz, tz) {
           try {
-            const Ub = await (0, Hb.postJsonWithMetricsCookiesAndJsonResponse)(`${Ib.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: ab
+            const sz = await (0, Zz.postJsonWithMetricsCookiesAndJsonResponse)(`${Gz.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: tz
             }, {
               retries: 1
-            }, bb.getMetricsCookies());
-            if ("boolean" !== typeof(null === Ub || void 0 === Ub ? void 0 : Ub.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(Ub)}`);
-            return Ub
-          } catch (Ub) {
-            return console.error("Failed to look up gift recipient:", Ub), {
+            }, zz.getMetricsCookies());
+            if ("boolean" !== typeof(null === sz || void 0 === sz ? void 0 : sz.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(sz)}`);
+            return sz
+          } catch (sz) {
+            return console.error("Failed to look up gift recipient:", sz), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(bb, Xb).catch((bb => (console.error("Gift recipient lookup failed:", bb), {
+        }(zz, bz).catch((zz => (console.error("Gift recipient lookup failed:", zz), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((bb => {
-          !0 !== bb.giftRecipientFound && "store:giftRecipientLookupFailed" === bb.giftRecipientError || kT.set(ab, bb), Ab || vb({
-            name: Xb,
-            result: bb
+        }))).then((zz => {
+          !0 !== zz.giftRecipientFound && "store:giftRecipientLookupFailed" === zz.giftRecipientError || PX.set(tz, zz), Fz || Kz({
+            name: bz,
+            result: zz
           })
         })), () => {
-          Ab = !0
+          Fz = !0
         }
-      }), [Xb, bb]);
-      const Rb = (0, Ab.useMemo)((() => {
-        const bb = Ub.trim();
-        if (!bb) return {
+      }), [bz, zz]);
+      const Dz = (0, Fz.useMemo)((() => {
+        const zz = sz.trim();
+        if (!zz) return {
           status: "none"
         };
-        if (!Yb || Yb.name !== bb || (null === eb || void 0 === eb ? void 0 : eb.name) !== Yb.name) return {
+        if (!oz || oz.name !== zz || (null === Uz || void 0 === Uz ? void 0 : Uz.name) !== oz.name) return {
           status: "pending",
-          name: bb
+          name: zz
         };
-        const ab = eb.result;
-        return !1 === ab.giftRecipientFound ? {
+        const tz = Uz.result;
+        return !1 === tz.giftRecipientFound ? {
           status: "error",
-          name: Yb.name,
-          error: ab.giftRecipientError
+          name: oz.name,
+          error: tz.giftRecipientError
         } : {
           status: "found",
-          name: ab.giftRecipientName,
-          ownedPacks: ab.giftRecipientOwnedPacks,
-          hasSuperRank: ab.giftRecipientHasSuperRank,
-          isSubscriber: ab.giftRecipientIsSubscriber
+          name: tz.giftRecipientName,
+          ownedPacks: tz.giftRecipientOwnedPacks,
+          hasSuperRank: tz.giftRecipientHasSuperRank,
+          isSubscriber: tz.giftRecipientIsSubscriber
         }
-      }), [Ub, Yb, eb]);
-      (0, Ab.useEffect)((() => {
-        "found" === Rb.status && "typed" === (null === Yb || void 0 === Yb ? void 0 : Yb.source) && Pb.current !== Rb.name && (Pb.current = Rb.name, (0, nb.reportAnalyticsClick)({
+      }), [sz, oz, Uz]);
+      (0, Fz.useEffect)((() => {
+        "found" === Dz.status && "typed" === (null === oz || void 0 === oz ? void 0 : oz.source) && Nz.current !== Dz.name && (Nz.current = Dz.name, (0, fz.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [Rb, Yb]);
-      const kb = (null === eb || void 0 === eb ? void 0 : eb.name) === (null === Yb || void 0 === Yb ? void 0 : Yb.name) ? null === eb || void 0 === eb ? void 0 : eb.result : null,
-        yb = !0 === (null === kb || void 0 === kb ? void 0 : kb.giftRecipientFound) ? kb.giftRecipientCosmetics : null;
+      }), [Dz, oz]);
+      const gz = (null === Uz || void 0 === Uz ? void 0 : Uz.name) === (null === oz || void 0 === oz ? void 0 : oz.name) ? null === Uz || void 0 === Uz ? void 0 : Uz.result : null,
+        Hz = !0 === (null === gz || void 0 === gz ? void 0 : gz.giftRecipientFound) ? gz.giftRecipientCosmetics : null;
       return {
-        query: Ub,
-        via: Tb,
-        recipient: Rb,
-        recipientCosmetics: yb,
-        type: function(bb) {
-          Mb(bb), Eb("search"), jb();
-          const ab = bb.trim();
-          ab ? Lb.current = setTimeout((() => {
-            Bb({
-              name: ab,
+        query: sz,
+        via: Xz,
+        recipient: Dz,
+        recipientCosmetics: Hz,
+        type: function(zz) {
+          Wz(zz), Oz("search"), wz();
+          const tz = zz.trim();
+          tz ? uz.current = setTimeout((() => {
+            vz({
+              name: tz,
               source: "typed"
             })
-          }), 400) : Bb(null)
+          }), 400) : vz(null)
         },
-        choose: function(bb, ab) {
-          jb(), Mb(bb), Eb("typed" === ab ? "search" : "prefilled" === ab ? "prefilled" : "suggestion"), Bb({
-            name: bb,
-            source: ab
-          }), "typed" !== ab && "prefilled" !== ab && (0, nb.reportAnalyticsClick)({
+        choose: function(zz, tz) {
+          wz(), Wz(zz), Oz("typed" === tz ? "search" : "prefilled" === tz ? "prefilled" : "suggestion"), vz({
+            name: zz,
+            source: tz
+          }), "typed" !== tz && "prefilled" !== tz && (0, fz.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: ab
+            value: tz
           })
         },
         clear: function() {
-          jb(), Mb(""), Eb("search"), Bb(null)
+          wz(), Wz(""), Oz("search"), vz(null)
         },
-        recordGift: function(bb, ab) {
-          ! function(bb) {
-            kT.delete(bb.toLowerCase())
-          }(bb), vb((Ub => {
-            if (!Ub || Ub.name.toLowerCase() !== bb.toLowerCase() || !0 !== Ub.result.giftRecipientFound || "superRank" === ab) return Ub;
-            const Ab = Ub.result.giftRecipientOwnedPacks;
+        recordGift: function(zz, tz) {
+          ! function(zz) {
+            PX.delete(zz.toLowerCase())
+          }(zz), Kz((sz => {
+            if (!sz || sz.name.toLowerCase() !== zz.toLowerCase() || !0 !== sz.result.giftRecipientFound || "superRank" === tz) return sz;
+            const Fz = sz.result.giftRecipientOwnedPacks;
             return {
-              ...Ub,
+              ...sz,
               result: {
-                ...Ub.result,
-                giftRecipientOwnedPacks: Ab.includes(ab) ? Ab : [...Ab, ab]
+                ...sz.result,
+                giftRecipientOwnedPacks: Fz.includes(tz) ? Fz : [...Fz, tz]
               }
             }
           }))
         }
       }
     }
-    var DT = Ub(2199),
-      zT = Ub(4346),
-      xT = Ub(263),
-      iT = Ub(2829);
-    const fT = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var mT = Ub(2141),
-      pT = Ub(574),
-      NT = Ub(2227),
-      WT = Ub(2397);
+    var xX = sz(2223),
+      mX = sz(4312),
+      JX = sz(263),
+      IX = sz(2844);
+    const CX = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var eX = sz(2181),
+      ZX = sz(571),
+      GX = sz(2257),
+      TX = sz(2391);
 
-    function HT(bb) {
+    function cX(zz) {
       let {
-        cosmetics: ab
-      } = bb;
-      return (0, vb.jsx)("span", {
+        cosmetics: tz
+      } = zz;
+      return (0, Kz.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, vb.jsx)(NT.d, {
-          cosmetics: ab
+        children: (0, Kz.jsx)(GX.e, {
+          cosmetics: tz
         })
       })
     }
 
-    function IT(bb, ab) {
-      var Ub, Ab;
-      const Mb = null !== (Ub = bb.friend) && void 0 !== Ub ? Ub : {
+    function jX(zz, tz) {
+      var sz, Fz;
+      const Wz = null !== (sz = zz.friend) && void 0 !== sz ? sz : {
         isError: !1,
-        name: bb.name,
+        name: zz.name,
         ranks: [],
-        cosmetics: null !== (Ab = bb.cosmetics) && void 0 !== Ab ? Ab : {},
-        nameColour: pT.b,
+        cosmetics: null !== (Fz = zz.cosmetics) && void 0 !== Fz ? Fz : {},
+        nameColour: ZX.e,
         location: {
           status: "noGamePlayed"
         }
       };
-      return ab ? {
-        ...Mb,
-        cosmetics: ab
-      } : Mb
+      return tz ? {
+        ...Wz,
+        cosmetics: tz
+      } : Wz
     }
 
-    function dT(bb) {
+    function AX(zz) {
       let {
-        recipient: ab
-      } = bb;
-      return "pending" === ab.status ? (0, vb.jsx)("span", {
+        recipient: tz
+      } = zz;
+      return "pending" === tz.status ? (0, Kz.jsx)("span", {
         className: "StoreRecipientStatus",
-        children: (0, vb.jsx)(ib.b, {})
-      }) : "found" === ab.status ? (0, vb.jsx)(Yb.e, {
+        children: (0, Kz.jsx)(xz.d, {})
+      }) : "found" === tz.status ? (0, Kz.jsx)(oz.c, {
         name: "check",
         className: "StoreRecipientStatus StoreRecipientStatusFound"
       }) : null
     }
 
-    function FT(bb) {
-      var ab;
+    function yX(zz) {
+      var tz;
       let {
-        selfName: Ub,
-        giftRecipient: Mb,
-        suggestionsVersion: Bb,
-        pulseSignal: eb,
-        disabled: Lb
-      } = bb;
+        selfName: sz,
+        giftRecipient: Wz,
+        suggestionsVersion: vz,
+        pulseSignal: Uz,
+        disabled: uz
+      } = zz;
       const {
-        t: Pb
-      } = (0, Eb.A)(), Xb = (0, tb.l)(), jb = (0, Ab.useRef)(null), Rb = (0, Ab.useRef)(null), {
-        query: Zb,
-        via: Db,
-        recipient: zb,
-        recipientCosmetics: ib
-      } = Mb, fb = (0, jT.t)(Zb), mb = (0, Ab.useMemo)((() => {
-        const bb = yb.featureFlags.useSocialFeatures ? Xb.friends.filter((bb => !bb.isError)) : [];
-        return (0, jT.l)({
-          onlineFriends: (0, tb.g)(bb),
-          recentRecipients: yT(),
-          friends: bb,
-          selfName: Ub,
+        t: Nz
+      } = (0, Oz.B)(), bz = (0, Lz.k)(), wz = (0, Fz.useRef)(null), Dz = (0, Fz.useRef)(null), {
+        query: Bz,
+        via: Pz,
+        recipient: rz,
+        recipientCosmetics: xz
+      } = Wz, mz = (0, HX.p)(Bz), Jz = (0, Fz.useMemo)((() => {
+        const zz = Hz.featureFlags.useSocialFeatures ? bz.friends.filter((zz => !zz.isError)) : [];
+        return (0, HX.i)({
+          onlineFriends: (0, Lz.g)(zz),
+          recentRecipients: rX(),
+          friends: zz,
+          selfName: sz,
           max: 8
         })
-      }), [Xb.friends, Ub, Bb]), pb = Zb.trim().toLowerCase(), Nb = "search" !== Db && pb ? mb.find((bb => bb.name.toLowerCase() === pb)) : void 0, Wb = Nb && "prefilled" === Db ? [Nb, ...mb.filter((bb => bb !== Nb))] : mb, Hb = "" !== pb && !Nb, Ib = Hb ? Zb : "", db = Wb.length > 0;
-      (0, Ab.useEffect)((() => {
-        jb.current && jb.current.value !== Ib && (jb.current.value = Ib)
-      }), [Ib]), (0, Ab.useEffect)((() => {
-        jb.current && (jb.current.disabled = Lb)
-      }), [Lb, eb]);
-      const Fb = (0, Ab.useRef)(0);
+      }), [bz.friends, sz, vz]), Iz = Bz.trim().toLowerCase(), Cz = "search" !== Pz && Iz ? Jz.find((zz => zz.name.toLowerCase() === Iz)) : void 0, ez = Cz && "prefilled" === Pz ? [Cz, ...Jz.filter((zz => zz !== Cz))] : Jz, Zz = "" !== Iz && !Cz, Gz = Zz ? Bz : "", Tz = ez.length > 0;
+      (0, Fz.useEffect)((() => {
+        wz.current && wz.current.value !== Gz && (wz.current.value = Gz)
+      }), [Gz]), (0, Fz.useEffect)((() => {
+        wz.current && (wz.current.disabled = uz)
+      }), [uz, Uz]);
+      const cz = (0, Fz.useRef)(0);
 
-      function Gb() {
-        "self" !== fb && (0, nb.reportAnalyticsClick)({
+      function Az() {
+        "self" !== mz && (0, fz.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), Mb.clear()
+        }), Wz.clear()
       }
 
-      function Qb(bb) {
-        var ab, Ub;
-        if (Lb) return;
-        if (" " === bb.key || "Enter" === bb.key) return bb.preventDefault(), void bb.currentTarget.click();
-        const Ab = Array.from(null !== (ab = null === (Ub = Rb.current) || void 0 === Ub ? void 0 : Ub.querySelectorAll("[role=radio]")) && void 0 !== ab ? ab : []),
-          Mb = Ab.indexOf(bb.currentTarget);
-        let Tb;
-        "ArrowRight" === bb.key || "ArrowDown" === bb.key ? Tb = Ab[(Mb + 1) % Ab.length] : "ArrowLeft" === bb.key || "ArrowUp" === bb.key ? Tb = Ab[(Mb - 1 + Ab.length) % Ab.length] : "Home" === bb.key ? Tb = Ab[0] : "End" === bb.key && (Tb = Ab[Ab.length - 1]), Tb && (bb.preventDefault(), Tb.focus(), Tb.click())
-      }(0, Ab.useEffect)((() => {
-        var bb;
-        eb > Fb.current && !Lb && (Fb.current = eb, null === (bb = jb.current) || void 0 === bb || bb.focus())
-      }), [eb, Lb]);
-      const qb = "self" === fb,
-        ub = null !== (ab = null === Nb || void 0 === Nb ? void 0 : Nb.name) && void 0 !== ab ? ab : null,
-        rb = "error" === zb.status ? zb.error : null,
-        Kb = "store:giftRecipientLookupFailed" === rb;
-      return (0, vb.jsxs)("div", {
-        className: Tb()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: Lb,
-          StoreRecipientStripNoChips: !db
+      function yz(zz) {
+        var tz, sz;
+        if (uz) return;
+        if (" " === zz.key || "Enter" === zz.key) return zz.preventDefault(), void zz.currentTarget.click();
+        const Fz = Array.from(null !== (tz = null === (sz = Dz.current) || void 0 === sz ? void 0 : sz.querySelectorAll("[role=radio]")) && void 0 !== tz ? tz : []),
+          Wz = Fz.indexOf(zz.currentTarget);
+        let Xz;
+        "ArrowRight" === zz.key || "ArrowDown" === zz.key ? Xz = Fz[(Wz + 1) % Fz.length] : "ArrowLeft" === zz.key || "ArrowUp" === zz.key ? Xz = Fz[(Wz - 1 + Fz.length) % Fz.length] : "Home" === zz.key ? Xz = Fz[0] : "End" === zz.key && (Xz = Fz[Fz.length - 1]), Xz && (zz.preventDefault(), Xz.focus(), Xz.click())
+      }(0, Fz.useEffect)((() => {
+        var zz;
+        Uz > cz.current && !uz && (cz.current = Uz, null === (zz = wz.current) || void 0 === zz || zz.focus())
+      }), [Uz, uz]);
+      const Mz = "self" === mz,
+        dz = null !== (tz = null === Cz || void 0 === Cz ? void 0 : Cz.name) && void 0 !== tz ? tz : null,
+        hz = "error" === rz.status ? rz.error : null,
+        Qz = "store:giftRecipientLookupFailed" === hz;
+      return (0, Kz.jsxs)("div", {
+        className: Xz()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: uz,
+          StoreRecipientStripNoChips: !Tz
         }),
-        children: [(0, vb.jsx)("span", {
+        children: [(0, Kz.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: Pb("store:buyingFor")
-        }), (0, vb.jsxs)("div", {
-          ref: Rb,
+          children: Nz("store:buyingFor")
+        }), (0, Kz.jsxs)("div", {
+          ref: Dz,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": Pb("store:whoIsItFor"),
-          children: [(0, vb.jsxs)("div", {
+          "aria-label": Nz("store:whoIsItFor"),
+          children: [(0, Kz.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": qb,
-            tabIndex: Lb || !qb && null !== ub ? -1 : 0,
-            className: Tb()("StoreRecipientMe", {
-              StoreRecipientChecked: qb
+            "aria-checked": Mz,
+            tabIndex: uz || !Mz && null !== dz ? -1 : 0,
+            className: Xz()("StoreRecipientMe", {
+              StoreRecipientChecked: Mz
             }),
             onClick: () => {
-              Lb || Gb()
+              uz || Az()
             },
-            onKeyDown: Qb,
-            children: [(0, vb.jsx)(Yb.e, {
+            onKeyDown: yz,
+            children: [(0, Kz.jsx)(oz.c, {
               name: "user"
-            }), " ", Pb("store:me")]
-          }), db && (0, vb.jsx)("div", {
+            }), " ", Nz("store:me")]
+          }), Tz && (0, Kz.jsx)("div", {
             className: "StoreRecipientChips",
-            children: Wb.map((bb => {
-              const ab = bb === Nb;
-              return (0, vb.jsx)("div", {
+            children: ez.map((zz => {
+              const tz = zz === Cz;
+              return (0, Kz.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": ab,
-                tabIndex: !Lb && ab ? 0 : -1,
-                title: bb.name,
-                className: Tb()("StoreRecipientChip", {
-                  StoreRecipientChecked: ab
+                "aria-checked": tz,
+                tabIndex: !uz && tz ? 0 : -1,
+                title: zz.name,
+                className: Xz()("StoreRecipientChip", {
+                  StoreRecipientChecked: tz
                 }),
                 onClick: () => {
-                  Lb || function(bb) {
-                    "gift" !== fb && (0, nb.reportAnalyticsClick)({
+                  uz || function(zz) {
+                    "gift" !== mz && (0, fz.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), Mb.choose(bb.name, bb.kind)
-                  }(bb)
+                    }), Wz.choose(zz.name, zz.kind)
+                  }(zz)
                 },
-                onKeyDown: Qb,
-                children: (0, vb.jsx)(WT.h, {
-                  playerSocialPreview: IT(bb, ab ? ib : null),
+                onKeyDown: yz,
+                children: (0, Kz.jsx)(TX.g, {
+                  playerSocialPreview: jX(zz, tz ? xz : null),
                   opensProfileCard: !1,
-                  isFriend: null !== bb.friend,
+                  isFriend: null !== zz.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== bb.friend,
-                  status: null === bb.friend ? null : void 0,
-                  trailing: ab ? (0, vb.jsx)(dT, {
-                    recipient: zb
+                  showLocation: null !== zz.friend,
+                  status: null === zz.friend ? null : void 0,
+                  trailing: tz ? (0, Kz.jsx)(AX, {
+                    recipient: rz
                   }) : void 0
                 })
-              }, bb.name)
+              }, zz.name)
             }))
           })]
-        }), (0, vb.jsxs)("div", {
-          className: Tb()("StoreRecipientSearch", {
-            StoreRecipientChecked: Hb,
-            StoreRecipientSearchPulse: eb > 0 && !Hb,
-            StoreRecipientSearchError: null !== rb && !Kb
+        }), (0, Kz.jsxs)("div", {
+          className: Xz()("StoreRecipientSearch", {
+            StoreRecipientChecked: Zz,
+            StoreRecipientSearchPulse: Uz > 0 && !Zz,
+            StoreRecipientSearchError: null !== hz && !Qz
           }),
           onClick: () => {
-            var bb;
-            null === (bb = jb.current) || void 0 === bb || bb.focus()
+            var zz;
+            null === (zz = wz.current) || void 0 === zz || zz.focus()
           },
-          children: [Hb && "found" === zb.status && ib && (0, vb.jsx)(HT, {
-            cosmetics: ib
-          }), !(Hb && "found" === zb.status && ib) && (0, vb.jsx)(Yb.e, {
+          children: [Zz && "found" === rz.status && xz && (0, Kz.jsx)(cX, {
+            cosmetics: xz
+          }), !(Zz && "found" === rz.status && xz) && (0, Kz.jsx)(oz.c, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, vb.jsx)(xb.c, {
+          }), (0, Kz.jsx)(Yz.d, {
             className: "StoreRecipientSearchInput",
-            domRef: jb,
-            placeholderText: Pb("store:searchName"),
-            defaultValue: Ib,
-            maxLength: hb.i,
-            onValueChange: function(bb) {
-              "gift" !== fb && bb.trim() && (0, nb.reportAnalyticsClick)({
+            domRef: wz,
+            placeholderText: Nz("store:searchName"),
+            defaultValue: Gz,
+            maxLength: jz.i,
+            onValueChange: function(zz) {
+              "gift" !== mz && zz.trim() && (0, fz.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), Mb.type(bb)
+              }), Wz.type(zz)
             },
             onEnter: () => {
-              var bb;
-              const ab = null === (bb = jb.current) || void 0 === bb ? void 0 : bb.value.trim();
-              ab && Mb.choose(ab, "typed")
+              var zz;
+              const tz = null === (zz = wz.current) || void 0 === zz ? void 0 : zz.value.trim();
+              tz && Wz.choose(tz, "typed")
             },
             blurOnEnter: !0
-          }), Hb && (0, vb.jsx)(dT, {
-            recipient: zb
-          }), Hb && (0, vb.jsx)("div", {
-            ...(0, kb.Q)({
-              disabled: Lb
+          }), Zz && (0, Kz.jsx)(AX, {
+            recipient: rz
+          }), Zz && (0, Kz.jsx)("div", {
+            ...(0, gz.T)({
+              disabled: uz
             }),
-            "aria-label": Pb("store:clearRecipient"),
-            title: Pb("store:clearRecipient"),
+            "aria-label": Nz("store:clearRecipient"),
+            title: Nz("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: bb => {
-              bb.stopPropagation(), Lb || Gb()
+            onClick: zz => {
+              zz.stopPropagation(), uz || Az()
             },
-            children: (0, vb.jsx)(Yb.e, {
+            children: (0, Kz.jsx)(oz.c, {
               name: "xmark"
             })
           })]
-        }, eb), rb && (0, vb.jsx)("div", {
-          className: Tb()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: Kb
+        }, Uz), hz && (0, Kz.jsx)("div", {
+          className: Xz()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: Qz
           }),
           role: "status",
-          children: Pb(rb)
+          children: Nz(hz)
         })]
       })
     }
-    var hT = Ub(2190),
-      GT = Ub(2113),
-      QT = Ub(3246),
-      qT = Ub(2838),
-      uT = Ub(2152);
-    const rT = Ub.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var MX = sz(2214),
+      dX = sz(2157),
+      hX = sz(3256),
+      QX = sz(2849),
+      kX = sz(2189);
+    const iX = sz.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function KT() {
-      (0, uT.i)(rT, {
+    function LX() {
+      (0, kX.f)(iX, {
         lowPriority: !1
       })
     }
 
-    function oT(bb) {
+    function lX(zz) {
       let {
-        onBack: ab,
-        cta: Ub,
-        recipient: Mb,
-        afterCta: Tb
-      } = bb;
+        onBack: tz,
+        cta: sz,
+        recipient: Wz,
+        afterCta: Xz
+      } = zz;
       const {
-        t: Bb
-      } = (0, Eb.A)(), [eb, Lb] = (0, Ab.useState)("starting"), Pb = (0, Ab.useRef)(null), Xb = (0, da.b)(), jb = (0, Ab.useRef)(null), Rb = (0, Ab.useCallback)((() => {
-        const bb = Pb.current;
-        null !== bb.error && bb.load();
-        const ab = bb.play();
-        jb.current = ab, ab.catch((bb => {
-          (0, QT.b)("Failed to play Super Rank video", bb), Xb.current && jb.current === ab && Lb("failed")
+        t: vz
+      } = (0, Oz.B)(), [Uz, uz] = (0, Fz.useState)("starting"), Nz = (0, Fz.useRef)(null), bz = (0, Tt.d)(), wz = (0, Fz.useRef)(null), Dz = (0, Fz.useCallback)((() => {
+        const zz = Nz.current;
+        null !== zz.error && zz.load();
+        const tz = zz.play();
+        wz.current = tz, tz.catch((zz => {
+          (0, hX.e)("Failed to play Super Rank video", zz), bz.current && wz.current === tz && uz("failed")
         }))
-      }), [Xb]);
-      return (0, Ab.useEffect)((() => {
-        const bb = Pb.current;
-        let ab;
+      }), [bz]);
+      return (0, Fz.useEffect)((() => {
+        const zz = Nz.current;
+        let tz;
 
-        function Ub() {
-          clearTimeout(ab), ab = setTimeout(Rb, 3e3)
+        function sz() {
+          clearTimeout(tz), tz = setTimeout(Dz, 3e3)
         }
-        return Rb(), bb.addEventListener("ended", Ub), () => {
-          clearTimeout(ab), bb.removeEventListener("ended", Ub)
+        return Dz(), zz.addEventListener("ended", sz), () => {
+          clearTimeout(tz), zz.removeEventListener("ended", sz)
         }
-      }), [Rb]), (0, vb.jsxs)("div", {
+      }), [Dz]), (0, Kz.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, vb.jsxs)("div", {
+        children: [(0, Kz.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, vb.jsx)(kb.e, {
+          children: [(0, Kz.jsx)(gz.e, {
             className: "StoreDetailBackButton",
-            onClick: ab,
+            onClick: tz,
             padBack: !0,
-            children: Bb("general:back")
-          }), (0, vb.jsxs)("div", {
+            children: vz("general:back")
+          }), (0, Kz.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, vb.jsx)(Yb.e, {
+            children: [(0, Kz.jsx)(oz.c, {
               name: "bolt"
-            }), " ", Bb("homePage:superRank")]
-          }), Mb]
-        }), (0, vb.jsxs)("div", {
+            }), " ", vz("homePage:superRank")]
+          }), Wz]
+        }), (0, Kz.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, vb.jsxs)("div", {
+          children: [(0, Kz.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, vb.jsx)("video", {
-              ref: Pb,
-              src: `${Ib.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: rT,
+            children: [(0, Kz.jsx)("video", {
+              ref: Nz,
+              src: `${Gz.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: iX,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === eb,
+              controls: "playing" === Uz,
               onPlaying: () => {
-                Lb("playing")
+                uz("playing")
               },
               onError: () => {
-                Lb("failed")
+                uz("failed")
               }
-            }), ("failed" === eb || "loading" === eb) && (0, vb.jsx)("div", {
+            }), ("failed" === Uz || "loading" === Uz) && (0, Kz.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, vb.jsx)(kb.g, {
-                ariaLabel: Bb("general:play"),
-                loading: "loading" === eb,
+              children: (0, Kz.jsx)(gz.h, {
+                ariaLabel: vz("general:play"),
+                loading: "loading" === Uz,
                 onClick: () => {
-                  Lb("loading"), Rb()
+                  uz("loading"), Dz()
                 },
                 touchPressOn: "pointerup",
-                children: (0, vb.jsx)(Yb.e, {
+                children: (0, Kz.jsx)(oz.c, {
                   name: "play"
                 })
               })
             })]
-          }), (0, vb.jsxs)("div", {
+          }), (0, Kz.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, vb.jsx)("div", {
+            children: [(0, Kz.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, vb.jsx)(qT.e, {})
-            }), (0, vb.jsxs)("div", {
+              children: (0, Kz.jsx)(QX.e, {})
+            }), (0, Kz.jsxs)("div", {
               className: "StoreTileActions",
-              children: [Ub, Tb]
+              children: [sz, Xz]
             })]
           })]
         })]
       })
     }
-    var lT = Ub(2417),
-      tT = Ub(3209),
-      wT = Ub(2814),
-      sT = Ub(2822);
-    const gT = [pT.t.yellow, pT.t.green, pT.t.aqua, pT.t.blue, pT.t.purple, pT.t.red];
+    var nX = sz(2411),
+      aX = sz(3208),
+      qX = sz(2835),
+      SX = sz(2840);
+    const VX = [ZX.v.yellow, ZX.v.green, ZX.v.aqua, ZX.v.blue, ZX.v.purple, ZX.v.red];
 
-    function CT(bb) {
-      return "needsRecipient" === bb || "lookingUp" === bb || "gift" === bb || "recipientOwns" === bb || "recipientSharesOwned" === bb || "recipientSubscribed" === bb
+    function RX(zz) {
+      return "needsRecipient" === zz || "lookingUp" === zz || "gift" === zz || "recipientOwns" === zz || "recipientSharesOwned" === zz || "recipientSubscribed" === zz
     }
 
-    function VT(bb) {
+    function pX(zz) {
       const {
-        onKeyDown: ab,
-        ...Ub
-      } = (0, kb.Q)();
+        onKeyDown: tz,
+        ...sz
+      } = (0, gz.T)();
       return {
-        ...Ub,
-        "aria-label": bb,
-        onKeyDown: bb => {
-          bb.target === bb.currentTarget && (null === ab || void 0 === ab || ab(bb))
+        ...sz,
+        "aria-label": zz,
+        onKeyDown: zz => {
+          zz.target === zz.currentTarget && (null === tz || void 0 === tz || tz(zz))
         }
       }
     }
 
-    function OT(bb) {
+    function fX(zz) {
       let {
-        text: ab
-      } = bb;
-      return (0, vb.jsx)("span", {
+        text: tz
+      } = zz;
+      return (0, Kz.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(ab).map(((bb, ab) => (0, vb.jsx)("span", {
+        children: Array.from(tz).map(((zz, tz) => (0, Kz.jsx)("span", {
           style: {
-            color: gT[ab % gT.length]
+            color: VX[tz % VX.length]
           },
-          children: bb
-        }, ab)))
+          children: zz
+        }, tz)))
       })
     }
-    const cT = {
+    const EX = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -5829,67 +5829,67 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function JT(bb) {
+    function zO(zz) {
       let {
-        state: ab,
-        item: Ub,
-        price: Ab,
-        busy: Mb,
-        highlight: Bb = !1,
-        onAct: eb,
-        onNeedRecipient: Lb,
-        onLogin: Pb
-      } = bb;
+        state: tz,
+        item: sz,
+        price: Fz,
+        busy: Wz,
+        highlight: vz = !1,
+        onAct: Uz,
+        onNeedRecipient: uz,
+        onLogin: Nz
+      } = zz;
       const {
-        t: Xb
-      } = (0, Eb.A)(), jb = "superRank" === Ub ? Qb.q.product.days : null, Rb = bb => null === jb ? Xb(bb ? "general:gift" : "general:buy") : Xb(bb ? "store:giftDays" : "store:buyDays", {
-        days: jb
-      }), yb = (bb, ab) => (0, vb.jsxs)(vb.Fragment, {
-        children: [ab && (0, vb.jsx)("span", {
+        t: bz
+      } = (0, Oz.B)(), wz = "superRank" === sz ? yz.f.product.days : null, Dz = zz => null === wz ? bz(zz ? "general:gift" : "general:buy") : bz(zz ? "store:giftDays" : "store:buyDays", {
+        days: wz
+      }), Hz = (zz, tz) => (0, Kz.jsxs)(Kz.Fragment, {
+        children: [tz && (0, Kz.jsx)("span", {
           className: "StoreCtaIcon",
-          children: ab
-        }), null === bb && (0, vb.jsx)("span", {
+          children: tz
+        }), null === zz && (0, Kz.jsx)("span", {
           className: "StoreCtaLabel StoreCtaLabelPending"
-        }), null !== bb && (0, vb.jsx)("span", {
+        }), null !== zz && (0, Kz.jsx)("span", {
           className: "StoreCtaLabel",
-          title: bb,
-          children: bb
-        }), (0, vb.jsxs)("span", {
+          title: zz,
+          children: zz
+        }), (0, Kz.jsxs)("span", {
           className: "StoreCtaPrice",
-          children: ["\xb7", (0, vb.jsx)(GT.d, {
-            amount: Ab
+          children: ["\xb7", (0, Kz.jsx)(dX.e, {
+            amount: Fz
           })]
         })]
       });
-      let Zb;
-      switch (ab) {
+      let Bz;
+      switch (tz) {
         case "pending":
-          Zb = (0, vb.jsx)(kb.m, {
+          Bz = (0, Kz.jsx)(gz.p, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: yb(null)
+            children: Hz(null)
           });
           break;
         case "login":
-          Zb = (0, vb.jsx)(kb.m, {
+          Bz = (0, Kz.jsx)(gz.p, {
             className: "StoreCtaButton",
-            onClick: Pb,
-            children: yb(Rb(!1))
+            onClick: Nz,
+            children: Hz(Dz(!1))
           });
           break;
         case "owned":
-          Zb = (0, vb.jsx)(kb.h, {
+          Bz = (0, Kz.jsx)(gz.l, {
             className: "StoreCtaButton",
             onClick: () => {
-              mb.c.set({
-                openEverythingMenuName: ea.j.CUSTOMISATION
+              Jz.b.set({
+                openEverythingMenuName: Ut.r.CUSTOMISATION
               })
             },
-            children: (0, vb.jsxs)("span", {
+            children: (0, Kz.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, vb.jsx)(Yb.e, {
+              children: [(0, Kz.jsx)(oz.c, {
                 name: "shirt"
-              }), " ", Xb("store:equip")]
+              }), " ", bz("store:equip")]
             })
           });
           break;
@@ -5898,205 +5898,205 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          Zb = (0, vb.jsx)(kb.m, {
+          Bz = (0, Kz.jsx)(gz.p, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, vb.jsx)("span", {
+            children: (0, Kz.jsx)("span", {
               className: "StoreCtaLabel",
-              children: Xb(cT[ab])
+              children: bz(EX[tz])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          Zb = (0, vb.jsx)(kb.m, {
+          Bz = (0, Kz.jsx)(gz.p, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === ab || null === Ab,
-            loading: "lookingUp" === ab || Mb,
-            onClick: eb,
+            disabled: "needsRecipient" === tz || null === Fz,
+            loading: "lookingUp" === tz || Wz,
+            onClick: Uz,
             analyticsClick: {
               id: "store.gift",
-              value: Ub
+              value: sz
             },
-            children: yb(Rb(!0), jT.e)
+            children: Hz(Dz(!0), HX.e)
           });
           break;
         case "buy":
         case "recharge":
-          Zb = (0, vb.jsx)(kb.m, {
+          Bz = (0, Kz.jsx)(gz.p, {
             className: "StoreCtaButton",
-            loading: Mb,
-            disabled: null === Ab,
-            onClick: eb,
+            loading: Wz,
+            disabled: null === Fz,
+            onClick: Uz,
             analyticsClick: {
               id: "store.buy",
-              value: Ub
+              value: sz
             },
-            children: yb(Rb(!1))
+            children: Hz(Dz(!1))
           })
       }
-      return (0, vb.jsx)("div", {
-        className: Tb()("StoreCta", {
-          StoreCtaHighlight: Bb
+      return (0, Kz.jsx)("div", {
+        className: Xz()("StoreCta", {
+          StoreCtaHighlight: vz
         }),
-        onClick: bb => {
-          bb.stopPropagation(), "needsRecipient" === ab && Lb()
+        onClick: zz => {
+          zz.stopPropagation(), "needsRecipient" === tz && uz()
         },
-        children: Zb
+        children: Bz
       })
     }
 
-    function nT() {
+    function tO() {
       const {
-        t: bb
-      } = (0, Eb.A)();
-      return (0, vb.jsxs)("ul", {
+        t: zz
+      } = (0, Oz.B)();
+      return (0, Kz.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, vb.jsxs)("li", {
-          children: [(0, vb.jsx)(Yb.e, {
+        children: [(0, Kz.jsxs)("li", {
+          children: [(0, Kz.jsx)(oz.c, {
             name: "check"
-          }), (0, vb.jsx)(OT, {
-            text: bb("store:colourfulNames")
+          }), (0, Kz.jsx)(fX, {
+            text: zz("store:colourfulNames")
           })]
-        }), (0, vb.jsxs)("li", {
-          children: [(0, vb.jsx)(Yb.e, {
+        }), (0, Kz.jsxs)("li", {
+          children: [(0, Kz.jsx)(oz.c, {
             name: "check"
-          }), bb("store:perkCapes")]
-        }), (0, vb.jsxs)("li", {
-          children: [(0, vb.jsx)(Yb.e, {
+          }), zz("store:perkCapes")]
+        }), (0, Kz.jsxs)("li", {
+          children: [(0, Kz.jsx)(oz.c, {
             name: "check"
-          }), bb("store:perkNoAdverts")]
-        }), (0, vb.jsxs)("li", {
-          children: [(0, vb.jsx)(Yb.e, {
+          }), zz("store:perkNoAdverts")]
+        }), (0, Kz.jsxs)("li", {
+          children: [(0, Kz.jsx)(oz.c, {
             name: "check"
-          }), bb("store:perkFriends", {
-            count: (0, cb.c)(["super"])
+          }), zz("store:perkFriends", {
+            count: (0, Rz.d)(["super"])
           })]
         })]
       })
     }
 
-    function ST(bb) {
+    function sO(zz) {
       let {
-        daysLeft: ab,
-        totalDays: Ub,
-        urgent: Ab
-      } = bb;
+        daysLeft: tz,
+        totalDays: sz,
+        urgent: Fz
+      } = zz;
       const {
-        t: Mb
-      } = (0, Eb.A)(), Yb = Ub > 0 ? Math.min(1, Math.max(.03, ab / Ub)) : 1;
-      return (0, vb.jsxs)("div", {
-        className: Tb()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: Ab
+        t: Wz
+      } = (0, Oz.B)(), oz = sz > 0 ? Math.min(1, Math.max(.03, tz / sz)) : 1;
+      return (0, Kz.jsxs)("div", {
+        className: Xz()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: Fz
         }),
-        children: [(0, vb.jsx)("span", {
+        children: [(0, Kz.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === ab ? Mb("store:oneDayLeft") : Mb("store:daysLeft", {
-            days: ab
+          children: 1 === tz ? Wz("store:oneDayLeft") : Wz("store:daysLeft", {
+            days: tz
           })
-        }), (0, vb.jsx)("div", {
+        }), (0, Kz.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, vb.jsx)("i", {
+          children: (0, Kz.jsx)("i", {
             style: {
-              width: 100 * Yb + "%"
+              width: 100 * oz + "%"
             }
           })
         })]
       })
     }
 
-    function bE(bb) {
+    function FO(zz) {
       let {
-        state: ab,
-        urgent: Ub,
-        daysLeft: Ab,
-        totalDays: Mb,
-        recipientHasSuperRank: Bb,
-        busy: eb,
-        highlight: Lb,
-        onOpen: Pb,
-        onAct: Xb,
-        onNeedRecipient: jb,
-        onLogin: Rb
-      } = bb;
+        state: tz,
+        urgent: sz,
+        daysLeft: Fz,
+        totalDays: Wz,
+        recipientHasSuperRank: vz,
+        busy: Uz,
+        highlight: uz,
+        onOpen: Nz,
+        onAct: bz,
+        onNeedRecipient: wz,
+        onLogin: Dz
+      } = zz;
       const {
-        t: kb
-      } = (0, Eb.A)(), yb = CT(ab), {
-        days: Zb
-      } = Qb.q.product, Db = kb("store:recipientHasSuperRank", {
-        giftDays: Zb
-      }), zb = Vb("subscribed" === ab);
-      return (0, vb.jsxs)("div", {
-        className: Tb()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: yb,
-          StoreSuperRankTileUrgent: "recharge" === ab && Ub,
-          StoreSuperRankTileWithChip: Bb,
-          StoreSuperRankTileGiftReady: "gift" === ab
+        t: gz
+      } = (0, Oz.B)(), Hz = RX(tz), {
+        days: Bz
+      } = yz.f.product, Pz = gz("store:recipientHasSuperRank", {
+        giftDays: Bz
+      }), rz = Sz("subscribed" === tz);
+      return (0, Kz.jsxs)("div", {
+        className: Xz()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: Hz,
+          StoreSuperRankTileUrgent: "recharge" === tz && sz,
+          StoreSuperRankTileWithChip: vz,
+          StoreSuperRankTileGiftReady: "gift" === tz
         }),
-        ...VT(kb("homePage:superRank")),
+        ...pX(gz("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: KT,
-        onFocus: KT,
-        onClick: Pb,
-        children: [(0, vb.jsx)("div", {
+        onPointerEnter: LX,
+        onFocus: LX,
+        onClick: Nz,
+        children: [(0, Kz.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${mT.e})`
+            backgroundImage: `url(${eX.e})`
           }
-        }), yb && (0, vb.jsx)("div", {
+        }), Hz && (0, Kz.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, vb.jsxs)("div", {
+        }), (0, Kz.jsxs)("div", {
           className: "StoreTileContent",
-          children: [Bb && (0, vb.jsx)("span", {
+          children: [vz && (0, Kz.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: Db,
-            children: Db
-          }), (0, vb.jsxs)("div", {
+            title: Pz,
+            children: Pz
+          }), (0, Kz.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, vb.jsx)(Yb.e, {
+            children: [(0, Kz.jsx)(oz.c, {
               name: "bolt"
-            }), " ", kb("homePage:superRank")]
-          }), yb && (0, vb.jsx)("div", {
+            }), " ", gz("homePage:superRank")]
+          }), Hz && (0, Kz.jsx)("div", {
             className: "StoreTilePitch",
-            children: kb("store:giftPitch", {
-              days: Zb
+            children: gz("store:giftPitch", {
+              days: Bz
             })
-          }), "recharge" === ab && (0, vb.jsx)(ST, {
-            daysLeft: Ab,
-            totalDays: Mb,
-            urgent: Ub
-          }), zb && (0, vb.jsx)("div", {
+          }), "recharge" === tz && (0, Kz.jsx)(sO, {
+            daysLeft: Fz,
+            totalDays: Wz,
+            urgent: sz
+          }), rz && (0, Kz.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, vb.jsx)("span", {
+            children: (0, Kz.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: zb
+              children: rz
             })
-          }), (0, vb.jsx)(nT, {}), (0, vb.jsxs)("div", {
+          }), (0, Kz.jsx)(tO, {}), (0, Kz.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, vb.jsx)(JT, {
-              state: ab,
+            children: [(0, Kz.jsx)(zO, {
+              state: tz,
               item: "superRank",
-              price: Qb.q.price,
-              busy: eb,
-              highlight: Lb,
-              onAct: Xb,
-              onNeedRecipient: jb,
-              onLogin: Rb
-            }), "needsRecipient" === ab && (0, vb.jsx)("span", {
+              price: yz.f.price,
+              busy: Uz,
+              highlight: uz,
+              onAct: bz,
+              onNeedRecipient: wz,
+              onLogin: Dz
+            }), "needsRecipient" === tz && (0, Kz.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: kb("store:pickRecipientFirst")
-            }), "recharge" === ab && Ub && (0, vb.jsx)("span", {
+              children: gz("store:pickRecipientFirst")
+            }), "recharge" === tz && sz && (0, Kz.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === Ab ? kb("store:endsInOneDay") : kb("store:endsInDays", {
-                days: Ab
+              children: 1 === Fz ? gz("store:endsInOneDay") : gz("store:endsInDays", {
+                days: Fz
               })
             })]
           })]
         })]
       })
     }
-    const aE = {
+    const WO = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6104,403 +6104,403 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function UE(bb) {
-      var ab;
+    function XO(zz) {
+      var tz;
       let {
-        pack: Ub,
-        state: Mb,
-        busy: Bb,
-        onOpen: eb,
-        onAct: Lb,
-        onNeedRecipient: Pb,
-        onLogin: Xb
-      } = bb;
+        pack: sz,
+        state: Wz,
+        busy: vz,
+        onOpen: Uz,
+        onAct: uz,
+        onNeedRecipient: Nz,
+        onLogin: bz
+      } = zz;
       const {
-        t: jb
-      } = (0, Eb.A)(), Rb = TT.d[Ub], kb = PT.f[Ub], yb = (0, mT.m)(Ub), Zb = (0, Ab.useRef)(null);
-      (0, wT.h)(Ub, Zb);
-      const Db = CT(Mb),
-        zb = null !== (ab = Rb.displayName) && void 0 !== ab ? ab : Ub,
-        xb = (0, tT.b)((() => {
-          (0, lT.f)();
-          const bb = (0, wT.f)(Ub);
-          void 0 !== bb && (0, uT.i)((0, wT.c)(bb))
+        t: wz
+      } = (0, Oz.B)(), Dz = vX.e[sz], gz = DX.k[sz], Hz = (0, eX.l)(sz), Bz = (0, Fz.useRef)(null);
+      (0, qX.n)(sz, Bz);
+      const Pz = RX(Wz),
+        rz = null !== (tz = Dz.displayName) && void 0 !== tz ? tz : sz,
+        Yz = (0, aX.e)((() => {
+          (0, nX.f)();
+          const zz = (0, qX.g)(sz);
+          void 0 !== zz && (0, kX.f)((0, qX.e)(zz))
         })),
-        [ib] = (0, Ab.useState)(iT.i);
-      return (0, vb.jsxs)("div", {
-        className: Tb()("StoreTile StorePackTile", aE[Rb.tier], {
-          StorePackTileOwned: "owned" === Mb,
-          StorePackTileRecipientOwns: "recipientOwns" === Mb,
-          StoreTileGift: Db
+        [xz] = (0, Fz.useState)(IX.f);
+      return (0, Kz.jsxs)("div", {
+        className: Xz()("StoreTile StorePackTile", WO[Dz.tier], {
+          StorePackTileOwned: "owned" === Wz,
+          StorePackTileRecipientOwns: "recipientOwns" === Wz,
+          StoreTileGift: Pz
         }),
-        ...VT(zb),
-        ref: Zb,
-        "data-store-item": Ub,
-        onClick: eb,
-        onPointerMove: bb => {
-          "mouse" !== bb.pointerType || 0 === bb.movementX && 0 === bb.movementY || ib || xb.start()
+        ...pX(rz),
+        ref: Bz,
+        "data-store-item": sz,
+        onClick: Uz,
+        onPointerMove: zz => {
+          "mouse" !== zz.pointerType || 0 === zz.movementX && 0 === zz.movementY || xz || Yz.start()
         },
-        onPointerLeave: xb.cancel,
-        children: [kb && (0, vb.jsx)(kb, {}), (0, vb.jsx)("div", {
+        onPointerLeave: Yz.cancel,
+        children: [gz && (0, Kz.jsx)(gz, {}), (0, Kz.jsx)("div", {
           className: "StorePackCharacters",
-          children: yb.map((bb => (0, vb.jsx)("div", {
+          children: Hz.map((zz => (0, Kz.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,mT.h)(bb)})`
+              backgroundImage: `url(${(0,eX.i)(zz)})`
             }
-          }, bb)))
-        }), (0, vb.jsx)("div", {
+          }, zz)))
+        }), (0, Kz.jsx)("div", {
           className: "StoreTileScrim"
-        }), Db && (0, vb.jsx)("div", {
+        }), Pz && (0, Kz.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, vb.jsxs)("div", {
+        }), (0, Kz.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, vb.jsx)("div", {
+          children: [(0, Kz.jsx)("div", {
             className: "StoreTileTitle",
-            children: zb
-          }), (0, vb.jsxs)("div", {
+            children: rz
+          }), (0, Kz.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, vb.jsx)(sT.e, {
-              tier: Rb.tier
-            }), " \xb7 ", jb("store:itemCount", {
-              count: (0, hT.g)(Ub)
-            }), "owned" === Mb && (0, vb.jsxs)("span", {
+            children: [(0, Kz.jsx)(SX.b, {
+              tier: Dz.tier
+            }), " \xb7 ", wz("store:itemCount", {
+              count: (0, MX.c)(sz)
+            }), "owned" === Wz && (0, Kz.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, vb.jsx)(Yb.e, {
+              children: [" \xb7 ", (0, Kz.jsx)(oz.c, {
                 name: "check"
-              }), " ", jb("general:owned")]
+              }), " ", wz("general:owned")]
             })]
-          }), (0, vb.jsx)(JT, {
-            state: Mb,
-            item: Ub,
-            price: (0, Qb.i)(Ub),
-            busy: Bb,
-            onAct: Lb,
-            onNeedRecipient: Pb,
-            onLogin: Xb
+          }), (0, Kz.jsx)(zO, {
+            state: Wz,
+            item: sz,
+            price: (0, yz.c)(sz),
+            busy: vz,
+            onAct: uz,
+            onNeedRecipient: Nz,
+            onLogin: bz
           })]
         })]
       })
     }
-    var AE = Ub(2786),
-      ME = Ub(1472),
-      TE = Ub(1365),
-      EE = Ub(3228);
+    var OO = sz(2809),
+      oO = sz(1516),
+      vO = sz(1430),
+      UO = sz(3236);
 
-    function YE() {
-      return (0, vb.jsx)("span", {
+    function KO() {
+      return (0, Kz.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var BE = Ub(1257),
-      eE = Ub(1485),
-      vE = Ub(8945);
+    var uO = sz(1314),
+      NO = sz(1521),
+      bO = sz(8891);
 
-    function LE(bb) {
+    function wO(zz) {
       let {
-        character: ab,
-        drawn: Ub,
-        onDrawn: Mb
-      } = bb;
-      const Eb = (0, Ab.useRef)(null),
-        Yb = (0, vE.h)(ab);
-      return (0, vb.jsx)("div", {
-        className: Tb()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: Ub
+        character: tz,
+        drawn: sz,
+        onDrawn: Wz
+      } = zz;
+      const Oz = (0, Fz.useRef)(null),
+        oz = (0, bO.c)(tz);
+      return (0, Kz.jsx)("div", {
+        className: Xz()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: sz
         }),
-        children: (0, vb.jsx)(Ab.Suspense, {
+        children: (0, Kz.jsx)(Fz.Suspense, {
           fallback: null,
-          children: (0, vb.jsx)(lT.c, {
-            ref: Eb,
+          children: (0, Kz.jsx)(nX.b, {
+            ref: Oz,
             framing: "store",
-            turntableFromYaw: Ub ? Yb.yaw : null,
+            turntableFromYaw: sz ? oz.yaw : null,
             onReady: () => {
-              var bb, Ub;
-              null === (bb = Eb.current) || void 0 === bb || bb.setOrbit(Yb), null === (Ub = Eb.current) || void 0 === Ub || Ub.setAllCosmetics(eE.d[ab].cosmetics)
+              var zz, sz;
+              null === (zz = Oz.current) || void 0 === zz || zz.setOrbit(oz), null === (sz = Oz.current) || void 0 === sz || sz.setAllCosmetics(NO.d[tz].cosmetics)
             },
-            onDrawn: Mb
+            onDrawn: Wz
           })
         })
       })
     }
-    const PE = {
+    const DO = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      XE = new Set(["wildSpirits"]);
+      gO = new Set(["wildSpirits"]);
 
-    function jE(bb) {
-      var ab;
+    function HO(zz) {
+      var tz;
       let {
-        tile: Ub,
-        design: Mb,
-        canGoLive: Bb,
-        live: eb,
-        busy: Lb,
-        highlight: Pb,
-        onLiveStart: Xb,
-        onLiveEnd: jb,
-        onOpen: Rb,
-        onAct: kb,
-        onNeedRecipient: yb,
-        onLogin: Zb
-      } = bb;
+        tile: sz,
+        design: Wz,
+        canGoLive: vz,
+        live: Uz,
+        busy: uz,
+        highlight: Nz,
+        onLiveStart: bz,
+        onLiveEnd: wz,
+        onOpen: Dz,
+        onAct: gz,
+        onNeedRecipient: Hz,
+        onLogin: Bz
+      } = zz;
       const {
-        t: Db
-      } = (0, Eb.A)(), {
-        pack: zb,
-        state: xb
-      } = Ub, ib = TT.d[zb], fb = (0, TT.f)(zb), mb = (0, mT.i)(zb), pb = PT.f[mb], Nb = XE.has(mb), {
-        tier: Wb
-      } = ib, Hb = "legendary" === Wb || "mythic" === Wb, Ib = (0, Ab.useRef)(null);
-      (0, BE.b)(Ib, "epic" === Wb || Hb || Nb);
-      const [db, hb] = (0, Ab.useState)(!1);
-      return !eb && db && hb(!1), (0, vb.jsxs)("div", {
-        ref: Ib,
-        className: Tb()("StoreCharacterCard", `StoreCharacterCard${Mb}`, PE[Wb], {
-          StoreCharacterCardOwned: "owned" === xb || "recipientOwns" === xb,
-          StoreCharacterCardGift: CT(xb),
-          StoreCharacterCardItem: void 0 === fb
+        t: Pz
+      } = (0, Oz.B)(), {
+        pack: rz,
+        state: Yz
+      } = sz, xz = vX.e[rz], mz = (0, vX.i)(rz), Jz = (0, eX.j)(rz), Iz = DX.k[Jz], Cz = gO.has(Jz), {
+        tier: ez
+      } = xz, Zz = "legendary" === ez || "mythic" === ez, Gz = (0, Fz.useRef)(null);
+      (0, uO.b)(Gz, "epic" === ez || Zz || Cz);
+      const [Tz, jz] = (0, Fz.useState)(!1);
+      return !Uz && Tz && jz(!1), (0, Kz.jsxs)("div", {
+        ref: Gz,
+        className: Xz()("StoreCharacterCard", `StoreCharacterCard${Wz}`, DO[ez], {
+          StoreCharacterCardOwned: "owned" === Yz || "recipientOwns" === Yz,
+          StoreCharacterCardGift: RX(Yz),
+          StoreCharacterCardItem: void 0 === mz
         }),
-        onPointerMove: bb => {
-          "mouse" !== bb.pointerType || 0 === bb.movementX && 0 === bb.movementY || !Bb || eb || void 0 === fb || Xb()
+        onPointerMove: zz => {
+          "mouse" !== zz.pointerType || 0 === zz.movementX && 0 === zz.movementY || !vz || Uz || void 0 === mz || bz()
         },
-        onPointerLeave: jb,
-        children: [(0, vb.jsx)("div", {
+        onPointerLeave: wz,
+        children: [(0, Kz.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: pb && (0, vb.jsx)(pb, {
+          children: Iz && (0, Kz.jsx)(Iz, {
             simple: !0
           })
-        }), Hb && (0, vb.jsx)("div", {
+        }), Zz && (0, Kz.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, vb.jsxs)(Fb.LinkPreserveSearch, {
+        }), (0, Kz.jsxs)(cz.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, ME.e)({
+          to: (0, oO.h)({
             kind: "pack",
-            pack: zb
+            pack: rz
           }),
-          "data-store-item": zb,
-          onClick: bb => {
-            (0, TE.e)(bb) && (bb.preventDefault(), Rb())
+          "data-store-item": rz,
+          onClick: zz => {
+            (0, vO.c)(zz) && (zz.preventDefault(), Dz())
           },
-          children: [(0, vb.jsxs)("div", {
+          children: [(0, Kz.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, vb.jsx)("div", {
+            children: [(0, Kz.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, vb.jsx)("div", {
-              className: Tb()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: db
+            }), (0, Kz.jsx)("div", {
+              className: Xz()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: Tz
               }),
               style: {
-                backgroundImage: `url(${(0,mT.r)(zb)})`
+                backgroundImage: `url(${(0,eX.n)(rz)})`
               }
-            }), eb && void 0 !== fb && (0, vb.jsx)(LE, {
-              character: fb,
-              drawn: db,
+            }), Uz && void 0 !== mz && (0, Kz.jsx)(wO, {
+              character: mz,
+              drawn: Tz,
               onDrawn: () => {
-                hb(!0)
+                jz(!0)
               }
             })]
-          }), (0, vb.jsx)("div", {
+          }), (0, Kz.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (ab = ib.displayName) && void 0 !== ab ? ab : zb
-          }), (0, vb.jsx)(sT.e, {
-            tier: Wb,
+            children: null !== (tz = xz.displayName) && void 0 !== tz ? tz : rz
+          }), (0, Kz.jsx)(SX.b, {
+            tier: ez,
             className: "StoreCharacterTier"
           })]
-        }), (0, vb.jsx)("div", {
+        }), (0, Kz.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), Nb && (0, vb.jsx)("span", {
+        }), Cz && (0, Kz.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, vb.jsx)(YE, {})
-        }), "owned" === xb && (0, vb.jsx)("span", {
+          children: (0, Kz.jsx)(KO, {})
+        }), "owned" === Yz && (0, Kz.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: Db("general:owned"),
-          "aria-label": Db("general:owned"),
-          children: (0, vb.jsx)(Yb.e, {
+          title: Pz("general:owned"),
+          "aria-label": Pz("general:owned"),
+          children: (0, Kz.jsx)(oz.c, {
             name: "check"
           })
-        }), (0, vb.jsx)("div", {
+        }), (0, Kz.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, vb.jsx)(JT, {
-            state: xb,
-            item: zb,
-            price: (0, Qb.i)(zb),
-            busy: Lb,
-            highlight: Pb,
-            onAct: kb,
-            onNeedRecipient: yb,
-            onLogin: Zb
+          children: (0, Kz.jsx)(zO, {
+            state: Yz,
+            item: rz,
+            price: (0, yz.c)(rz),
+            busy: uz,
+            highlight: Nz,
+            onAct: gz,
+            onNeedRecipient: Hz,
+            onLogin: Bz
           })
         })]
       })
     }
 
-    function RE(bb) {
+    function BO(zz) {
       let {
-        tiles: ab,
-        busy: Ub,
-        highlightItem: Mb,
-        onOpen: Tb,
-        onAct: Eb,
-        onNeedRecipient: Yb,
-        onLogin: Bb
-      } = bb;
-      const eb = (0, EE.m)("storeCharacterCardFoil"),
-        Lb = (0, EE.m)("storeCharacterCardSpotlight"),
-        Pb = eb ? "Foil" : Lb ? "Spotlight" : "Showcase",
-        [Xb] = (0, Ab.useState)(iT.i),
-        [jb, Rb] = (0, Ab.useState)(null);
-      return (0, vb.jsx)("div", {
+        tiles: tz,
+        busy: sz,
+        highlightItem: Wz,
+        onOpen: Xz,
+        onAct: Oz,
+        onNeedRecipient: oz,
+        onLogin: vz
+      } = zz;
+      const Uz = (0, UO.m)("storeCharacterCardFoil"),
+        uz = (0, UO.m)("storeCharacterCardSpotlight"),
+        Nz = Uz ? "Foil" : uz ? "Spotlight" : "Showcase",
+        [bz] = (0, Fz.useState)(IX.f),
+        [wz, Dz] = (0, Fz.useState)(null);
+      return (0, Kz.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: ab.map((bb => (0, vb.jsx)(jE, {
-          tile: bb,
-          design: Pb,
-          canGoLive: !Xb,
-          live: jb === bb.pack,
-          busy: Ub,
-          highlight: Mb === bb.pack,
+        children: tz.map((zz => (0, Kz.jsx)(HO, {
+          tile: zz,
+          design: Nz,
+          canGoLive: !bz,
+          live: wz === zz.pack,
+          busy: sz,
+          highlight: Wz === zz.pack,
           onLiveStart: () => {
-            Rb(bb.pack)
+            Dz(zz.pack)
           },
           onLiveEnd: () => {
-            Rb((ab => ab === bb.pack ? null : ab))
+            Dz((tz => tz === zz.pack ? null : tz))
           },
           onOpen: () => {
-            Tb(bb.pack)
+            Xz(zz.pack)
           },
           onAct: () => {
-            Eb(bb.pack)
+            Oz(zz.pack)
           },
-          onNeedRecipient: Yb,
+          onNeedRecipient: oz,
           onLogin: () => {
-            Bb(bb.pack)
+            vz(zz.pack)
           }
-        }, bb.pack)))
+        }, zz.pack)))
       })
     }
-    var kE = Ub(8957);
+    var PO = sz(8900);
 
-    function yE(bb) {
+    function rO(zz) {
       let {
-        title: ab
-      } = bb;
-      return (0, vb.jsx)("h2", {
+        title: tz
+      } = zz;
+      return (0, Kz.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, vb.jsx)("span", {
+        children: (0, Kz.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: ab
+          children: tz
         })
       })
     }
 
-    function ZE(bb) {
+    function YO(zz) {
       let {
-        mountAtOnce: ab,
-        children: Ub
-      } = bb;
-      const Mb = (0, Ab.useRef)(null),
-        [Tb, Eb] = (0, Ab.useState)(ab),
-        Yb = (0, kE.c)();
-      return (0, Ab.useLayoutEffect)((() => {
-        const bb = Mb.current;
-        bb && bb.getBoundingClientRect().top < bb.parentElement.getBoundingClientRect().bottom && Eb(!0)
-      }), []), Tb || Yb ? (0, vb.jsx)(vb.Fragment, {
-        children: Ub
-      }) : (0, vb.jsx)("div", {
-        ref: Mb
+        mountAtOnce: tz,
+        children: sz
+      } = zz;
+      const Wz = (0, Fz.useRef)(null),
+        [Xz, Oz] = (0, Fz.useState)(tz),
+        oz = (0, PO.e)();
+      return (0, Fz.useLayoutEffect)((() => {
+        const zz = Wz.current;
+        zz && zz.getBoundingClientRect().top < zz.parentElement.getBoundingClientRect().bottom && Oz(!0)
+      }), []), Xz || oz ? (0, Kz.jsx)(Kz.Fragment, {
+        children: sz
+      }) : (0, Kz.jsx)("div", {
+        ref: Wz
       })
     }
 
-    function DE(bb) {
+    function xO(zz) {
       let {
-        layout: ab,
-        mountAtOnce: Ub,
-        bundleGift: Ab,
-        superRankTotalDays: Mb,
-        busy: Tb,
-        highlightItem: Yb,
-        onOpen: Bb,
-        onAct: eb,
-        onNeedRecipient: Lb,
-        onLogin: Pb
-      } = bb;
+        layout: tz,
+        mountAtOnce: sz,
+        bundleGift: Fz,
+        superRankTotalDays: Wz,
+        busy: Xz,
+        highlightItem: oz,
+        onOpen: vz,
+        onAct: Uz,
+        onNeedRecipient: uz,
+        onLogin: Nz
+      } = zz;
       const {
-        t: Xb
-      } = (0, Eb.A)(), jb = ab.packs.filter((bb => void 0 === (0, TT.f)(bb.pack) && !(0, TT.k)(bb.pack))), Rb = ab.packs.filter((bb => void 0 !== (0, TT.f)(bb.pack))), kb = ab.packs.filter((bb => (0, TT.k)(bb.pack)));
-      return (0, vb.jsxs)(vb.Fragment, {
-        children: [(0, vb.jsx)(AE.b, {
+        t: bz
+      } = (0, Oz.B)(), wz = tz.packs.filter((zz => void 0 === (0, vX.i)(zz.pack) && !(0, vX.m)(zz.pack))), Dz = tz.packs.filter((zz => void 0 !== (0, vX.i)(zz.pack))), gz = tz.packs.filter((zz => (0, vX.m)(zz.pack)));
+      return (0, Kz.jsxs)(Kz.Fragment, {
+        children: [(0, Kz.jsx)(OO.c, {
           className: "StoreSuperGems",
-          gift: Ab,
-          highlightSku: Yb
-        }), (0, vb.jsx)(yE, {
-          title: Xb("store:rank")
-        }), (0, vb.jsx)(bE, {
-          state: ab.superRank.state,
-          urgent: ab.superRank.urgent,
-          daysLeft: ab.superRankDaysLeft,
-          totalDays: Mb,
-          recipientHasSuperRank: ab.recipientHasSuperRank,
-          busy: Tb,
-          highlight: "superRank" === Yb,
+          gift: Fz,
+          highlightSku: oz
+        }), (0, Kz.jsx)(rO, {
+          title: bz("store:rank")
+        }), (0, Kz.jsx)(FO, {
+          state: tz.superRank.state,
+          urgent: tz.superRank.urgent,
+          daysLeft: tz.superRankDaysLeft,
+          totalDays: Wz,
+          recipientHasSuperRank: tz.recipientHasSuperRank,
+          busy: Xz,
+          highlight: "superRank" === oz,
           onOpen: () => {
-            Bb("superRank")
+            vz("superRank")
           },
           onAct: () => {
-            eb("superRank")
+            Uz("superRank")
           },
-          onNeedRecipient: Lb,
+          onNeedRecipient: uz,
           onLogin: () => {
-            Pb("superRank")
+            Nz("superRank")
           }
-        }), (0, vb.jsxs)(ZE, {
-          mountAtOnce: Ub,
-          children: [(0, vb.jsx)(yE, {
-            title: Xb("store:bundles")
-          }), (0, vb.jsx)("div", {
+        }), (0, Kz.jsxs)(YO, {
+          mountAtOnce: sz,
+          children: [(0, Kz.jsx)(rO, {
+            title: bz("store:bundles")
+          }), (0, Kz.jsx)("div", {
             className: "StorePackGrid",
-            children: jb.map((bb => (0, vb.jsx)(UE, {
-              pack: bb.pack,
-              state: bb.state,
-              busy: Tb,
+            children: wz.map((zz => (0, Kz.jsx)(XO, {
+              pack: zz.pack,
+              state: zz.state,
+              busy: Xz,
               onOpen: () => {
-                Bb(bb.pack)
+                vz(zz.pack)
               },
               onAct: () => {
-                eb(bb.pack)
+                Uz(zz.pack)
               },
-              onNeedRecipient: Lb,
+              onNeedRecipient: uz,
               onLogin: () => {
-                Pb(bb.pack)
+                Nz(zz.pack)
               }
-            }, bb.pack)))
-          }), (0, vb.jsxs)(ZE, {
-            mountAtOnce: Ub,
-            children: [(0, vb.jsx)(yE, {
-              title: Xb("store:characters")
-            }), (0, vb.jsx)(RE, {
-              tiles: Rb,
-              busy: Tb,
-              highlightItem: Yb,
-              onOpen: Bb,
-              onAct: eb,
-              onNeedRecipient: Lb,
-              onLogin: Pb
-            }), kb.length > 0 && (0, vb.jsxs)(vb.Fragment, {
-              children: [(0, vb.jsx)(yE, {
-                title: Xb("store:premiumItems")
-              }), (0, vb.jsx)(RE, {
-                tiles: kb,
-                busy: Tb,
-                highlightItem: Yb,
-                onOpen: Bb,
-                onAct: eb,
-                onNeedRecipient: Lb,
-                onLogin: Pb
+            }, zz.pack)))
+          }), (0, Kz.jsxs)(YO, {
+            mountAtOnce: sz,
+            children: [(0, Kz.jsx)(rO, {
+              title: bz("store:characters")
+            }), (0, Kz.jsx)(BO, {
+              tiles: Dz,
+              busy: Xz,
+              highlightItem: oz,
+              onOpen: vz,
+              onAct: Uz,
+              onNeedRecipient: uz,
+              onLogin: Nz
+            }), gz.length > 0 && (0, Kz.jsxs)(Kz.Fragment, {
+              children: [(0, Kz.jsx)(rO, {
+                title: bz("store:premiumItems")
+              }), (0, Kz.jsx)(BO, {
+                tiles: gz,
+                busy: Xz,
+                highlightItem: oz,
+                onOpen: vz,
+                onAct: Uz,
+                onNeedRecipient: uz,
+                onLogin: Nz
               })]
             })]
           })]
@@ -6508,780 +6508,780 @@ export const modules = {
       })
     }
 
-    function zE(bb) {
+    function mO(zz) {
       let {
-        state: ab,
-        mode: Ub,
-        giftName: Ab,
-        busy: Mb,
-        highlight: Tb,
-        purchaseError: Yb,
-        onBack: Bb,
-        onChooseRecipient: eb,
-        onAct: Lb,
-        onLogin: Pb
-      } = bb;
+        state: tz,
+        mode: sz,
+        giftName: Fz,
+        busy: Wz,
+        highlight: Xz,
+        purchaseError: oz,
+        onBack: vz,
+        onChooseRecipient: Uz,
+        onAct: uz,
+        onLogin: Nz
+      } = zz;
       const {
-        t: Xb
-      } = (0, Eb.A)(), jb = Vb("gift" !== Ub);
-      return (0, vb.jsx)(oT, {
-        onBack: Bb,
-        recipient: "gift" === Ub && (0, vb.jsxs)(vb.Fragment, {
-          children: [Ab && (0, vb.jsxs)("span", {
+        t: bz
+      } = (0, Oz.B)(), wz = Sz("gift" !== sz);
+      return (0, Kz.jsx)(lX, {
+        onBack: vz,
+        recipient: "gift" === sz && (0, Kz.jsxs)(Kz.Fragment, {
+          children: [Fz && (0, Kz.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: Xb("store:giftFor", {
-              name: Ab
+            title: bz("store:giftFor", {
+              name: Fz
             }),
-            children: [jT.e, " ", Xb("store:giftFor", {
-              name: Ab
+            children: [HX.e, " ", bz("store:giftFor", {
+              name: Fz
             })]
-          }), !Ab && (0, vb.jsxs)("div", {
-            ...(0, kb.Q)(),
+          }), !Fz && (0, Kz.jsxs)("div", {
+            ...(0, gz.T)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: eb,
-            children: [jT.e, " ", Xb("store:chooseRecipient")]
+            onClick: Uz,
+            children: [HX.e, " ", bz("store:chooseRecipient")]
           })]
         }),
-        cta: (0, vb.jsx)(JT, {
-          state: ab,
+        cta: (0, Kz.jsx)(zO, {
+          state: tz,
           item: "superRank",
-          price: Qb.q.price,
-          busy: Mb,
-          highlight: Tb,
-          onAct: Lb,
-          onNeedRecipient: eb,
-          onLogin: Pb
+          price: yz.f.price,
+          busy: Wz,
+          highlight: Xz,
+          onAct: uz,
+          onNeedRecipient: Uz,
+          onLogin: Nz
         }),
-        afterCta: (0, vb.jsxs)(vb.Fragment, {
-          children: [jb && (0, vb.jsx)("span", {
+        afterCta: (0, Kz.jsxs)(Kz.Fragment, {
+          children: [wz && (0, Kz.jsx)("span", {
             className: "StoreTileNote",
-            children: jb
-          }), Yb && (0, vb.jsx)("span", {
+            children: wz
+          }), oz && (0, Kz.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: Xb(Yb)
+            children: bz(oz)
           })]
         })
       })
     }
-    var xE = Ub(150);
-    const iE = xE.k("kind", [xE.x({
-      kind: xE.r("refused"),
-      heldTierId: xE.R(),
-      until: xE.v()
-    }), xE.x({
-      kind: xE.r("refund"),
-      tierId: xE.R(),
-      refundedMs: xE.v(),
-      forfeitedMs: xE.v(),
-      premiumCurrency: xE.v()
-    }), xE.x({
-      kind: xE.r("none")
+    var JO = sz(149);
+    const IO = JO.h("kind", [JO.u({
+      kind: JO.n("refused"),
+      heldTierId: JO.M(),
+      until: JO.t()
+    }), JO.u({
+      kind: JO.n("refund"),
+      tierId: JO.M(),
+      refundedMs: JO.t(),
+      forfeitedMs: JO.t(),
+      premiumCurrency: JO.t()
+    }), JO.u({
+      kind: JO.n("none")
     })]);
-    async function fE(bb) {
-      const ab = await (0, Hb.postJsonWithMetricsCookiesAndJsonResponse)(`${Ib.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
-        productId: bb
+    async function CO(zz) {
+      const tz = await (0, Zz.postJsonWithMetricsCookiesAndJsonResponse)(`${Gz.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
+        productId: zz
       }, {
         retries: 1
       });
-      return iE.parse(ab)
+      return IO.parse(tz)
     }
-    var mE = Ub(2766),
-      pE = Ub(2788);
+    var eO = sz(2782),
+      ZO = sz(2816);
 
-    function NE(bb, ab) {
-      const Ub = Math.max(1, Math.round(ab / rb.g));
-      return [1 === Ub ? `${bb}OneDay` : bb, {
-        days: Ub.toLocaleString()
+    function GO(zz, tz) {
+      const sz = Math.max(1, Math.round(tz / hz.h));
+      return [1 === sz ? `${zz}OneDay` : zz, {
+        days: sz.toLocaleString()
       }]
     }
 
-    function WE() {
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, ob.purchasesAllowed)() ? (0, vb.jsx)(HE, {}) : null
+    function TO() {
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, kz.purchasesAllowed)() ? (0, Kz.jsx)(cO, {}) : null
     }
 
-    function HE() {
+    function cO() {
       const {
-        t: bb
-      } = (0, Eb.A)(), {
-        userContext: ab
-      } = (0, Xb.c)(), {
-        purchaseUnderWay: Ub,
-        notice: Mb,
-        subscribe: Tb
-      } = (0, mE.b)(), [Yb, Bb] = (0, Ab.useState)(null), [eb, Lb] = (0, Ab.useState)(0), [Pb, jb] = (0, Ab.useState)(!1), Rb = (0, Ab.useRef)(!0), yb = ab !== Hb.NULL_USER_CONTEXT, Zb = null !== Yb && Yb.loadedFor === ab ? Yb.offer : null, Db = null === Mb || void 0 === Mb ? void 0 : Mb.pendingIntentId, zb = (0, Ab.useRef)(Db);
+        t: zz
+      } = (0, Oz.B)(), {
+        userContext: tz
+      } = (0, bz.b)(), {
+        purchaseUnderWay: sz,
+        notice: Wz,
+        subscribe: Xz
+      } = (0, eO.c)(), [oz, vz] = (0, Fz.useState)(null), [Uz, uz] = (0, Fz.useState)(0), [Nz, wz] = (0, Fz.useState)(!1), Dz = (0, Fz.useRef)(!0), Hz = tz !== Zz.NULL_USER_CONTEXT, Bz = null !== oz && oz.loadedFor === tz ? oz.offer : null, Pz = null === Wz || void 0 === Wz ? void 0 : Wz.pendingIntentId, rz = (0, Fz.useRef)(Pz);
 
-      function xb() {
-        Lb((bb => bb + 1))
+      function Yz() {
+        uz((zz => zz + 1))
       }
-      async function ib(bb) {
-        jb(!1), await Tb(bb), Rb.current && xb()
+      async function xz(zz) {
+        wz(!1), await Xz(zz), Dz.current && Yz()
       }
-      if ((0, Ab.useEffect)((() => (Rb.current = !0, () => {
-          Rb.current = !1
-        })), []), (0, Ab.useEffect)((() => {
-          void 0 !== zb.current && void 0 === Db && xb(), zb.current = Db
-        }), [Db]), (0, Ab.useEffect)((() => {
-          if (!yb) return;
-          let bb = !1;
-          return jb(!1), async function() {
+      if ((0, Fz.useEffect)((() => (Dz.current = !0, () => {
+          Dz.current = !1
+        })), []), (0, Fz.useEffect)((() => {
+          void 0 !== rz.current && void 0 === Pz && Yz(), rz.current = Pz
+        }), [Pz]), (0, Fz.useEffect)((() => {
+          if (!Hz) return;
+          let zz = !1;
+          return wz(!1), async function() {
             const {
-              offering: bb
-            } = await (0, Ya.f)().getOfferings("superRankPage"), ab = null === bb || void 0 === bb ? void 0 : bb.packages.find((bb => null !== bb.price));
-            return void 0 === ab ? {
+              offering: zz
+            } = await (0, ot.f)().getOfferings("superRankPage"), tz = null === zz || void 0 === zz ? void 0 : zz.packages.find((zz => null !== zz.price));
+            return void 0 === tz ? {
               kind: "unavailable"
             } : {
               kind: "loaded",
-              pkg: ab,
-              preview: await fE(ab.productId)
+              pkg: tz,
+              preview: await CO(tz.productId)
             }
-          }().catch((bb => (console.error("Billing: loading the Super Rank subscription or its preview failed:", bb), {
+          }().catch((zz => (console.error("Billing: loading the Super Rank subscription or its preview failed:", zz), {
             kind: "loadFailed"
-          }))).then((Ub => {
-            bb || Bb((bb => "loadFailed" === Ub.kind && (null === bb || void 0 === bb ? void 0 : bb.loadedFor) === ab ? bb : {
-              loadedFor: ab,
-              offer: Ub
+          }))).then((sz => {
+            zz || vz((zz => "loadFailed" === sz.kind && (null === zz || void 0 === zz ? void 0 : zz.loadedFor) === tz ? zz : {
+              loadedFor: tz,
+              offer: sz
             }))
           })), () => {
-            bb = !0
+            zz = !0
           }
-        }), [ab, yb, eb]), null === Zb) return null;
-      if ("loaded" !== Zb.kind) return (0, vb.jsx)(pE.g, {
+        }), [tz, Hz, Uz]), null === Bz) return null;
+      if ("loaded" !== Bz.kind) return (0, Kz.jsx)(ZO.l, {
         notice: {
           kind: "error",
-          key: "unavailable" === Zb.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === Bz.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: fb,
-        preview: mb
-      } = Zb;
-      if ("refused" === mb.kind) return (0, vb.jsx)(pE.g, {
+        pkg: mz,
+        preview: Jz
+      } = Bz;
+      if ("refused" === Jz.kind) return (0, Kz.jsx)(ZO.l, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(mb.until).toLocaleDateString()
+            date: new Date(Jz.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const pb = (0, AE.d)(fb.price);
-      if (Pb && "refund" === mb.kind) {
+      const Iz = (0, OO.g)(mz.price);
+      if (Nz && "refund" === Jz.kind) {
         const {
-          refundedMs: ab,
-          forfeitedMs: Ab,
-          premiumCurrency: Mb
-        } = mb, Tb = Ab + (0 === Mb ? ab : 0), [Eb, Yb] = NE("payments:subscribeRefundsGemRank", ab), [Bb, eb] = NE("payments:subscribeForfeitsGemRank", Tb);
-        return (0, vb.jsxs)("div", {
+          refundedMs: tz,
+          forfeitedMs: Fz,
+          premiumCurrency: Wz
+        } = Jz, Xz = Fz + (0 === Wz ? tz : 0), [Oz, oz] = GO("payments:subscribeRefundsGemRank", tz), [vz, Uz] = GO("payments:subscribeForfeitsGemRank", Xz);
+        return (0, Kz.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, vb.jsx)("div", {
-            children: bb("payments:subscribeEndsGemRank")
-          }), Mb > 0 && (0, vb.jsx)("div", {
-            children: bb(Eb, {
-              ...Yb,
-              amount: Mb.toLocaleString()
+          children: [(0, Kz.jsx)("div", {
+            children: zz("payments:subscribeEndsGemRank")
+          }), Wz > 0 && (0, Kz.jsx)("div", {
+            children: zz(Oz, {
+              ...oz,
+              amount: Wz.toLocaleString()
             })
-          }), Tb > 0 && (0, vb.jsx)("div", {
-            children: bb(Bb, eb)
-          }), (0, vb.jsxs)("div", {
+          }), Xz > 0 && (0, Kz.jsx)("div", {
+            children: zz(vz, Uz)
+          }), (0, Kz.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, vb.jsx)(kb.h, {
+            children: [(0, Kz.jsx)(gz.l, {
               onClick: () => {
-                jb(!1)
+                wz(!1)
               },
-              children: bb("general:cancel")
-            }), (0, vb.jsx)(kb.m, {
+              children: zz("general:cancel")
+            }), (0, Kz.jsx)(gz.p, {
               onClick: () => {
-                ib(fb)
+                xz(mz)
               },
-              loading: Ub,
-              children: bb("payments:subscribeContinue", {
-                price: pb
+              loading: sz,
+              children: zz("payments:subscribeContinue", {
+                price: Iz
               })
             })]
           })]
         })
       }
-      return (0, vb.jsxs)("div", {
+      return (0, Kz.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, vb.jsx)(pE.g, {
-          notice: Mb,
+        children: [(0, Kz.jsx)(ZO.l, {
+          notice: Wz,
           className: "SmallTextBold"
-        }), (0, vb.jsx)(pE.c, {
+        }), (0, Kz.jsx)(ZO.e, {
           className: "SmallTextBold"
-        }), (0, vb.jsx)(kb.m, {
+        }), (0, Kz.jsx)(gz.p, {
           onClick: () => {
-            "refund" === mb.kind ? jb(!0) : ib(fb)
+            "refund" === Jz.kind ? wz(!0) : xz(mz)
           },
-          disabled: void 0 !== Db,
-          loading: Ub,
-          children: bb("payments:subscribeToSuperRank", {
-            price: pb
+          disabled: void 0 !== Pz,
+          loading: sz,
+          children: zz("payments:subscribeToSuperRank", {
+            price: Iz
           })
         })]
       })
     }
-    const IE = {
+    const jO = {
       kind: "board"
     };
-    let dE = !1;
+    let AO = !1;
 
-    function FE(bb) {
-      return "found" === bb.status || "error" === bb.status && "store:giftRecipientLookupFailed" === bb.error ? bb.name : null
-    }(0, Kb.s)(ET.prefetchBillingOfferings);
-    const hE = (0, Ab.memo)((function(bb) {
-      var ab;
+    function yO(zz) {
+      return "found" === zz.status || "error" === zz.status && "store:giftRecipientLookupFailed" === zz.error ? zz.name : null
+    }(0, Qz.A)(UX.prefetchBillingOfferings);
+    const MO = (0, Fz.memo)((function(zz) {
+      var tz;
       let {
-        show: Mb
-      } = bb;
+        show: Wz
+      } = zz;
       const {
-        t: Yb
-      } = (0, Eb.A)(), {
-        userContext: Bb
-      } = (0, Xb.c)(), eb = Bb !== Hb.NULL_USER_CONTEXT, Lb = ZT(Bb), [Pb, jb] = (0, Rb.e)(), {
-        page: kb,
-        urlMode: yb,
-        goTo: Zb
-      } = (0, DT.h)(), Db = function(bb) {
-        return "superRank" === bb.kind ? "superRank" : "pack" === bb.kind ? bb.pack : null
-      }(kb), {
-        openEverythingMenuName: zb,
-        gameState: xb
-      } = (0, mb.n)(["openEverythingMenuName", "gameState"]), ib = null !== zb;
-      ! function(bb, ab) {
-        const [Mb] = (0, Ab.useState)(iT.i), [Tb, Eb] = (0, Ab.useState)(!1);
-        Mb && ab && !Tb && Eb(!0);
-        const Yb = (0, TA.o)(),
-          Bb = Mb && Tb && bb && !Yb;
-        (0, Ab.useEffect)((() => {
-          if (!Bb) return;
-          let bb = null,
-            ab = null,
-            Ab = null;
-          const Mb = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, Ya.f)().purchaseUnderWay,
-            Tb = () => {
-              var Ub;
-              null === (Ub = Ab) || void 0 === Ub || Ub(), Ab = null, null !== bb && (clearTimeout(bb), bb = null), null !== ab && (clearTimeout(ab), ab = null)
+        t: oz
+      } = (0, Oz.B)(), {
+        userContext: vz
+      } = (0, bz.b)(), Uz = vz !== Zz.NULL_USER_CONTEXT, uz = YX(vz), [Nz, wz] = (0, Dz.c)(), {
+        page: gz,
+        urlMode: Hz,
+        goTo: Bz
+      } = (0, xX.f)(), Pz = function(zz) {
+        return "superRank" === zz.kind ? "superRank" : "pack" === zz.kind ? zz.pack : null
+      }(gz), {
+        openEverythingMenuName: rz,
+        gameState: Yz
+      } = (0, Jz.h)(["openEverythingMenuName", "gameState"]), xz = null !== rz;
+      ! function(zz, tz) {
+        const [Wz] = (0, Fz.useState)(IX.f), [Xz, Oz] = (0, Fz.useState)(!1);
+        Wz && tz && !Xz && Oz(!0);
+        const oz = (0, vF.j)(),
+          vz = Wz && Xz && zz && !oz;
+        (0, Fz.useEffect)((() => {
+          if (!vz) return;
+          let zz = null,
+            tz = null,
+            Fz = null;
+          const Wz = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, ot.f)().purchaseUnderWay,
+            Xz = () => {
+              var sz;
+              null === (sz = Fz) || void 0 === sz || sz(), Fz = null, null !== zz && (clearTimeout(zz), zz = null), null !== tz && (clearTimeout(tz), tz = null)
             },
-            Eb = () => {
-              (0, zT.r)(!1), (0, zT.o)(!1), Tb(), bb = setTimeout((() => {
-                bb = null, Ab = (0, xT.b)((() => {
-                  Ab = null, Mb() ? Eb() : ((0, zT.r)(!0), ab = setTimeout((() => {
-                    ab = null, Ab = (0, xT.b)((() => {
-                      Ab = null, Mb() ? Eb() : (0, zT.o)(!0)
+            Oz = () => {
+              (0, mX.k)(!1), (0, mX.j)(!1), Xz(), zz = setTimeout((() => {
+                zz = null, Fz = (0, JX.c)((() => {
+                  Fz = null, Wz() ? Oz() : ((0, mX.k)(!0), tz = setTimeout((() => {
+                    tz = null, Fz = (0, JX.c)((() => {
+                      Fz = null, Wz() ? Oz() : (0, mX.j)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => Ub(4340))).then((bb => {
-                    bb.startBackgroundGameSetup()
-                  }), (bb => {
-                    console.warn("Background game setup: its chunk failed to load", bb)
+                  }), 3e3), Promise.resolve().then((() => sz(4304))).then((zz => {
+                    zz.startBackgroundGameSetup()
+                  }), (zz => {
+                    console.warn("Background game setup: its chunk failed to load", zz)
                   })))
                 }))
               }), 2e3)
             };
-          for (const Ub of fT) window.addEventListener(Ub, Eb, {
+          for (const sz of CX) window.addEventListener(sz, Oz, {
             capture: !0,
             passive: !0
           });
-          return Eb(), () => {
-            for (const bb of fT) window.removeEventListener(bb, Eb, {
+          return Oz(), () => {
+            for (const zz of CX) window.removeEventListener(zz, Oz, {
               capture: !0
             });
-            Tb(), (0, zT.r)(!1), (0, zT.o)(!1)
+            Xz(), (0, mX.k)(!1), (0, mX.j)(!1)
           }
-        }), [Bb])
-      }(Mb && ib, "pack" === kb.kind);
-      const fb = "landingPage" === xb;
-      (0, Ab.useEffect)((() => {
-        ib && (0, ET.prefetchBillingOfferings)()
-      }), [ib]), (0, Ab.useEffect)((() => {
-        ib && !Mb && fb && (0, mT.s)()
-      }), [ib, Mb, fb]);
-      const [pb, Nb] = (0, Ab.useState)(0), [Wb, Ib] = (0, Ab.useState)(null), [db, Fb] = (0, Ab.useState)(null), [hb, Gb] = (0, Ab.useState)(null), [qb, ub] = (0, Ab.useState)(null), rb = (0, Ab.useRef)(null), lb = (0, Ab.useRef)(null), tb = (0, Ab.useRef)(!1), wb = (0, Kb.E)(), sb = (0, Ab.useRef)(0), gb = (0, Ab.useRef)(!1);
+        }), [vz])
+      }(Wz && xz, "pack" === gz.kind);
+      const mz = "landingPage" === Yz;
+      (0, Fz.useEffect)((() => {
+        xz && (0, UX.prefetchBillingOfferings)()
+      }), [xz]), (0, Fz.useEffect)((() => {
+        xz && !Wz && mz && (0, eX.r)()
+      }), [xz, Wz, mz]);
+      const [Iz, Cz] = (0, Fz.useState)(0), [ez, Gz] = (0, Fz.useState)(null), [Tz, cz] = (0, Fz.useState)(null), [jz, Az] = (0, Fz.useState)(null), [Mz, dz] = (0, Fz.useState)(null), hz = (0, Fz.useRef)(null), iz = (0, Fz.useRef)(null), Lz = (0, Fz.useRef)(!1), lz = (0, Qz.I)(), nz = (0, Fz.useRef)(0), az = (0, Fz.useRef)(!1);
 
-      function Cb() {
-        Nb((bb => bb + 1))
-      }(0, Ab.useEffect)((() => {
-        if (Mb) {
-          if (dE = !0, (0, Kb.j)(), wb && wb.seq !== sb.current) {
-            var bb;
-            sb.current = wb.seq, "loginResume" !== wb.source && (0, Kb.A)();
-            const ab = (0, Kb.b)(wb);
-            yb || Zb(ab), ub(null !== (bb = wb.highlight) && void 0 !== bb ? bb : null), Fb(null), "gift" === wb.mode && wb.giftRecipientName ? Lb.choose(wb.giftRecipientName, "prefilled") : "current" !== wb.mode && Lb.clear(), "gift" !== wb.mode || wb.giftRecipientName || Cb(), (0, nb.reportAnalyticsClick)({
+      function qz() {
+        Cz((zz => zz + 1))
+      }(0, Fz.useEffect)((() => {
+        if (Wz) {
+          if (AO = !0, (0, Qz.m)(), lz && lz.seq !== nz.current) {
+            var zz;
+            nz.current = lz.seq, "loginResume" !== lz.source && (0, Qz.G)();
+            const tz = (0, Qz.c)(lz);
+            Hz || Bz(tz), dz(null !== (zz = lz.highlight) && void 0 !== zz ? zz : null), cz(null), "gift" === lz.mode && lz.giftRecipientName ? uz.choose(lz.giftRecipientName, "prefilled") : "current" !== lz.mode && uz.clear(), "gift" !== lz.mode || lz.giftRecipientName || qz(), (0, fz.reportAnalyticsClick)({
               id: "store.open",
-              value: wb.source
+              value: lz.source
             })
-          } else gb.current || (0, nb.reportAnalyticsClick)({
+          } else az.current || (0, fz.reportAnalyticsClick)({
             id: "store.open",
             value: "menuTab"
           });
-          gb.current = !0
-        } else gb.current = !1
-      }), [Mb, wb]), (0, Ab.useEffect)((() => {
-        if (!qb) return;
-        const bb = setTimeout((() => {
-          ub(null)
+          az.current = !0
+        } else az.current = !1
+      }), [Wz, lz]), (0, Fz.useEffect)((() => {
+        if (!Mz) return;
+        const zz = setTimeout((() => {
+          dz(null)
         }), 4e3);
         return () => {
-          clearTimeout(bb)
+          clearTimeout(zz)
         }
-      }), [qb]), (0, Ab.useEffect)((() => {
-        const bb = rb.current;
-        var ab;
-        if (Mb && bb) {
-          if (Db) lb.current = Db, null === (ab = bb.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === ab || ab.focus();
-          else if (lb.current) {
-            var Ub;
-            null === (Ub = bb.querySelector(`[data-store-item="${lb.current}"]`)) || void 0 === Ub || Ub.focus(), lb.current = null
+      }), [Mz]), (0, Fz.useEffect)((() => {
+        const zz = hz.current;
+        var tz;
+        if (Wz && zz) {
+          if (Pz) iz.current = Pz, null === (tz = zz.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === tz || tz.focus();
+          else if (iz.current) {
+            var sz;
+            null === (sz = zz.querySelector(`[data-store-item="${iz.current}"]`)) || void 0 === sz || sz.focus(), iz.current = null
           }
-        } else lb.current = null
-      }), [Db, Mb]), (0, Ab.useEffect)((() => {
-        Fb(null)
-      }), [Lb.query]), (0, Ab.useEffect)((() => {
-        if (!hb) return;
-        const bb = setTimeout((() => {
-          Gb(null)
+        } else iz.current = null
+      }), [Pz, Wz]), (0, Fz.useEffect)((() => {
+        cz(null)
+      }), [uz.query]), (0, Fz.useEffect)((() => {
+        if (!jz) return;
+        const zz = setTimeout((() => {
+          Az(null)
         }), 8e3);
         return () => {
-          clearTimeout(bb)
+          clearTimeout(zz)
         }
-      }), [hb]);
-      const Vb = Bb.superRankInfo,
-        Ob = Bb.isLoggedIn() || (0, ob.guestsMayBuy)(),
-        cb = Bb.getOwnedCosmeticPacks(),
-        Jb = (0, jT.t)(Lb.query),
-        Sb = (0, jT.h)({
-          mode: Jb,
-          loggedIn: eb ? Ob : null,
-          superRankInfo: Vb,
+      }), [jz]);
+      const Sz = vz.superRankInfo,
+        Vz = vz.isLoggedIn() || (0, kz.guestsMayBuy)(),
+        Rz = vz.getOwnedCosmeticPacks(),
+        pz = (0, HX.p)(uz.query),
+        Ez = (0, HX.f)({
+          mode: pz,
+          loggedIn: Uz ? Vz : null,
+          superRankInfo: Sz,
           now: Date.now(),
-          ownedPacks: cb,
-          packs: TT.s,
-          recipient: Lb.recipient
+          ownedPacks: Rz,
+          packs: vX.x,
+          recipient: uz.recipient
         });
-      (0, Ab.useEffect)((() => {
-        if (!Ob || !Mb) return;
-        const bb = (0, Kb.A)(),
-          ab = bb && (0, jT.p)(bb, TT.s);
-        bb && ab && ((0, nb.reportAnalyticsClick)({
+      (0, Fz.useEffect)((() => {
+        if (!Vz || !Wz) return;
+        const zz = (0, Qz.G)(),
+          tz = zz && (0, HX.l)(zz, vX.x);
+        zz && tz && ((0, fz.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: bb.item
-        }), (0, Kb.m)(ab))
-      }), [Ob, Mb]);
-      const ba = (0, jT.v)({
-        superRankDaysLeft: Sb.superRankDaysLeft,
-        openedThisSession: dE || Mb,
-        seenNewItems: (0, Kb.g)()
+          value: zz.item
+        }), (0, Qz.p)(tz))
+      }), [Vz, Wz]);
+      const zt = (0, HX.t)({
+        superRankDaysLeft: Ez.superRankDaysLeft,
+        openedThisSession: AO || Wz,
+        seenNewItems: (0, Qz.j)()
       });
-      if ((0, Ab.useEffect)((() => {
-          (0, Kb.w)(ba)
-        }), [ba]), !Mb || !(0, ob.purchasesAllowed)()) return null;
-      const aa = jb > Pb && Pb <= 700,
-        Ua = !aa && jb <= 420,
-        Aa = "gift" === Jb ? FE(Lb.recipient) : null,
-        Ma = null !== Wb;
+      if ((0, Fz.useEffect)((() => {
+          (0, Qz.D)(zt)
+        }), [zt]), !Wz || !(0, kz.purchasesAllowed)()) return null;
+      const tt = wz > Nz && Nz <= 700,
+        st = !tt && wz <= 420,
+        Ft = "gift" === pz ? yO(uz.recipient) : null,
+        Wt = null !== ez;
 
-      function Ta(bb) {
-        (0, BT.d)(bb, "gift" === Jb ? Lb.query.trim() : null)
+      function Xt(zz) {
+        (0, uX.e)(zz, "gift" === pz ? uz.query.trim() : null)
       }
 
-      function Ea(bb, ab) {
-        (0, nb.reportAnalyticsClick)({
+      function Ot(zz, tz) {
+        (0, fz.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${ab?"gift":"self"}:${bb}`
-        }), ab && (Lb.recordGift(ab.name, bb), Ba(ab))
+          value: `${tz?"gift":"self"}:${zz}`
+        }), tz && (uz.recordGift(tz.name, zz), vt(tz))
       }
 
-      function Ba(bb) {
-        ! function(bb) {
+      function vt(zz) {
+        ! function(zz) {
           try {
-            ga.f.setItem(RT, (0, jT.F)(yT(), bb))
+            qt.f.setItem(BX, (0, HX.y)(rX(), zz))
           } catch {}
         }({
-          name: bb.name,
-          cosmetics: bb.cosmetics
-        }), Zb(IE), Gb((ab => {
-          var Ub;
+          name: zz.name,
+          cosmetics: zz.cosmetics
+        }), Bz(jO), Az((tz => {
+          var sz;
           return {
-            name: bb.name,
-            seq: (null !== (Ub = null === ab || void 0 === ab ? void 0 : ab.seq) && void 0 !== Ub ? Ub : 0) + 1
+            name: zz.name,
+            seq: (null !== (sz = null === tz || void 0 === tz ? void 0 : tz.seq) && void 0 !== sz ? sz : 0) + 1
           }
         }))
       }
-      async function ea(bb) {
-        var ab, Ub;
-        if (tb.current) return;
-        if (!Ob) return void Ta(bb);
-        Fb(null), ub(null);
-        const Ab = "gift" === Jb ? {
-          name: FE(Lb.recipient),
-          cosmetics: Lb.recipientCosmetics
+      async function Ut(zz) {
+        var tz, sz;
+        if (Lz.current) return;
+        if (!Vz) return void Xt(zz);
+        cz(null), dz(null);
+        const Fz = "gift" === pz ? {
+          name: yO(uz.recipient),
+          cosmetics: uz.recipientCosmetics
         } : null;
-        if (Ab && !Ab.name) return void Cb();
-        const Mb = "superRank" === bb ? Qb.q.id : (0, Qb.e)(bb);
-        tb.current = !0;
-        const Tb = await (0, XT.b)(Mb, null !== (ab = null === Ab || void 0 === Ab ? void 0 : Ab.name) && void 0 !== ab ? ab : null);
-        if (tb.current = !1, !Tb) return;
-        Ib(bb);
-        const Eb = await eT.c.purchase(Mb, null !== (Ub = null === Ab || void 0 === Ab ? void 0 : Ab.name) && void 0 !== Ub ? Ub : null);
-        Ib(null), Eb ? Fb(Eb) : (Ea(bb, Ab), Ab || (await (0, vT.flushClientAnalyticsEvents)(), (0, YT.refreshWithoutConfirmation)("superRank" === bb ? "/super-rank-welcome" : `/pack-welcome/${bb}`)))
+        if (Fz && !Fz.name) return void qz();
+        const Wz = "superRank" === zz ? yz.f.id : (0, yz.b)(zz);
+        Lz.current = !0;
+        const Xz = await (0, gX.d)(Wz, null !== (tz = null === Fz || void 0 === Fz ? void 0 : Fz.name) && void 0 !== tz ? tz : null);
+        if (Lz.current = !1, !Xz) return;
+        Gz(zz);
+        const Oz = await NX.b.purchase(Wz, null !== (sz = null === Fz || void 0 === Fz ? void 0 : Fz.name) && void 0 !== sz ? sz : null);
+        Gz(null), Oz ? cz(Oz) : (Ot(zz, Fz), Fz || (await (0, bX.flushClientAnalyticsEvents)(), (0, KX.refreshWithoutConfirmation)("superRank" === zz ? "/super-rank-welcome" : `/pack-welcome/${zz}`)))
       }
-      const va = Tb()("Store", {
-        StoreGift: "gift" === Jb,
-        StorePortrait: aa,
-        StoreCompact: Ua
+      const Kt = Xz()("Store", {
+        StoreGift: "gift" === pz,
+        StorePortrait: tt,
+        StoreCompact: st
       });
-      if ("pack" === kb.kind) {
-        const bb = kb.pack,
-          ab = Sb.packs.find((ab => ab.pack === bb));
-        return (0, vb.jsx)("div", {
-          ref: rb,
+      if ("pack" === gz.kind) {
+        const zz = gz.pack,
+          tz = Ez.packs.find((tz => tz.pack === zz));
+        return (0, Kz.jsx)("div", {
+          ref: hz,
           className: "CosmeticShopContainer",
-          children: (0, vb.jsx)(PT.c, {
-            pack: bb,
+          children: (0, Kz.jsx)(DX.g, {
+            pack: zz,
             onBack: () => {
-              Zb(IE)
+              Bz(jO)
             },
-            onPurchased: ab => {
-              Ea(bb, ab ? {
-                name: ab,
+            onPurchased: tz => {
+              Ot(zz, tz ? {
+                name: tz,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === Jb && Aa && ab && (0, vb.jsxs)(vb.Fragment, {
-              children: [(0, vb.jsx)(JT, {
-                state: ab.state,
-                item: bb,
-                price: (La = bb, "superRank" === La ? Qb.q.price : (0, Qb.i)(La)),
-                busy: Ma,
+            giftCta: "gift" === pz && Ft && tz && (0, Kz.jsxs)(Kz.Fragment, {
+              children: [(0, Kz.jsx)(zO, {
+                state: tz.state,
+                item: zz,
+                price: (ut = zz, "superRank" === ut ? yz.f.price : (0, yz.c)(ut)),
+                busy: Wt,
                 onAct: () => {
-                  ea(bb)
+                  Ut(zz)
                 },
                 onNeedRecipient: () => {
-                  Zb(IE), Cb()
+                  Bz(jO), qz()
                 },
                 onLogin: () => {
-                  Ta(bb)
+                  Xt(zz)
                 },
-                highlight: qb === bb
-              }), db && (0, vb.jsx)("span", {
+                highlight: Mz === zz
+              }), Tz && (0, Kz.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: Yb(db)
+                children: oz(Tz)
               })]
             }),
-            ownedPacks: cb,
-            startAsGift: "gift" === Jb,
-            initialGiftRecipient: "gift" === Jb ? null !== Aa && void 0 !== Aa ? Aa : Lb.query.trim() : "",
-            highlightCta: qb === bb
-          }, bb)
+            ownedPacks: Rz,
+            startAsGift: "gift" === pz,
+            initialGiftRecipient: "gift" === pz ? null !== Ft && void 0 !== Ft ? Ft : uz.query.trim() : "",
+            highlightCta: Mz === zz
+          }, zz)
         })
       }
-      var La;
-      return "superRank" === kb.kind ? (0, vb.jsx)("div", {
-        ref: rb,
-        className: Tb()(va, "StoreDetailView"),
-        children: (0, vb.jsx)(zE, {
-          state: Sb.superRank.state,
-          mode: Jb,
-          giftName: Aa,
-          busy: Ma,
-          highlight: "superRank" === qb,
-          purchaseError: db,
+      var ut;
+      return "superRank" === gz.kind ? (0, Kz.jsx)("div", {
+        ref: hz,
+        className: Xz()(Kt, "StoreDetailView"),
+        children: (0, Kz.jsx)(mO, {
+          state: Ez.superRank.state,
+          mode: pz,
+          giftName: Ft,
+          busy: Wt,
+          highlight: "superRank" === Mz,
+          purchaseError: Tz,
           onBack: () => {
-            Zb(IE)
+            Bz(jO)
           },
           onChooseRecipient: () => {
-            Zb(IE), Cb()
+            Bz(jO), qz()
           },
           onAct: () => {
-            ea("superRank")
+            Ut("superRank")
           },
           onLogin: () => {
-            Ta("superRank")
+            Xt("superRank")
           }
         })
-      }) : (0, vb.jsxs)("div", {
-        ref: rb,
-        className: va,
-        children: [(0, vb.jsx)("div", {
+      }) : (0, Kz.jsxs)("div", {
+        ref: hz,
+        className: Kt,
+        children: [(0, Kz.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, vb.jsx)(FT, {
-            selfName: eb ? Bb.getPlayerName() : "",
-            giftRecipient: Lb,
-            suggestionsVersion: null !== (ab = null === hb || void 0 === hb ? void 0 : hb.seq) && void 0 !== ab ? ab : 0,
-            pulseSignal: pb,
-            disabled: Ma || !eb
+          children: (0, Kz.jsx)(yX, {
+            selfName: Uz ? vz.getPlayerName() : "",
+            giftRecipient: uz,
+            suggestionsVersion: null !== (tz = null === jz || void 0 === jz ? void 0 : jz.seq) && void 0 !== tz ? tz : 0,
+            pulseSignal: Iz,
+            disabled: Wt || !Uz
           })
-        }), hb && (0, vb.jsxs)("div", {
+        }), jz && (0, Kz.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            Gb(null)
+            Az(null)
           },
-          children: [(0, vb.jsx)(LT.d, {
-            showSignal: hb.seq
-          }), jT.e, " ", Yb("store:giftSent", {
-            name: hb.name
+          children: [(0, Kz.jsx)(wX.e, {
+            showSignal: jz.seq
+          }), HX.e, " ", oz("store:giftSent", {
+            name: jz.name
           })]
-        }, hb.seq), !hb && db && (0, vb.jsx)("div", {
+        }, jz.seq), !jz && Tz && (0, Kz.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: Yb(db)
-        }), (0, vb.jsx)(DE, {
-          layout: Sb,
-          mountAtOnce: null !== lb.current,
-          bundleGift: "gift" === Jb ? {
-            recipientName: Aa,
-            lookingUp: "pending" === Lb.recipient.status,
-            busy: Ma,
-            onNeedRecipient: Cb,
-            onSent: bb => {
-              (0, nb.reportAnalyticsClick)({
+          children: oz(Tz)
+        }), (0, Kz.jsx)(xO, {
+          layout: Ez,
+          mountAtOnce: null !== iz.current,
+          bundleGift: "gift" === pz ? {
+            recipientName: Ft,
+            lookingUp: "pending" === uz.recipient.status,
+            busy: Wt,
+            onNeedRecipient: qz,
+            onSent: zz => {
+              (0, fz.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), Ba({
-                name: bb,
-                cosmetics: Lb.recipientCosmetics
+              }), vt({
+                name: zz,
+                cosmetics: uz.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, jT.y)(Vb),
-          busy: Ma,
-          highlightItem: qb,
-          onOpen: function(bb) {
-            (0, nb.reportAnalyticsClick)({
+          superRankTotalDays: (0, HX.u)(Sz),
+          busy: Wt,
+          highlightItem: Mz,
+          onOpen: function(zz) {
+            (0, fz.reportAnalyticsClick)({
               id: "store.item_open",
-              value: bb
-            }), Zb((0, Kb.e)(bb))
+              value: zz
+            }), Bz((0, Qz.f)(zz))
           },
-          onAct: ea,
-          onNeedRecipient: Cb,
-          onLogin: Ta
-        }), "gift" !== Jb && (0, vb.jsx)(WE, {})]
+          onAct: Ut,
+          onNeedRecipient: qz,
+          onLogin: Xt
+        }), "gift" !== pz && (0, Kz.jsx)(TO, {})]
       })
     }));
-    var GE = Ub(2472),
-      QE = Ub(8410),
-      qE = Ub(2528),
-      uE = Ub(2386),
-      rE = Ub(2445),
-      KE = Ub(2451),
-      oE = Ub(2453),
-      lE = Ub(2522),
-      tE = Ub(2503),
-      wE = Ub(2218),
-      sE = Ub(2238),
-      gE = Ub(2229),
-      CE = Ub(1934),
-      VE = Ub(2455),
-      OE = Ub(2246);
+    var dO = sz(2479),
+      hO = sz(8337),
+      QO = sz(2530),
+      kO = sz(2379),
+      iO = sz(2432),
+      LO = sz(2444),
+      lO = sz(2446),
+      nO = sz(2524),
+      aO = sz(2507),
+      qO = sz(2243),
+      SO = sz(2268),
+      VO = sz(2260),
+      RO = sz(1966),
+      pO = sz(2455),
+      fO = sz(2270);
 
-    function cE(bb) {
+    function EO(zz) {
       let {
-        show: ab
-      } = bb;
-      return ab ? (0, vb.jsx)(JE, {}) : null
+        show: tz
+      } = zz;
+      return tz ? (0, Kz.jsx)(zo, {}) : null
     }
 
-    function JE() {
+    function zo() {
       const {
-        t: bb
-      } = (0, Eb.A)(), {
-        followsLeader: ab
-      } = (0, uE.f)(), {
-        loading: Ub,
-        friends: Mb,
-        requests: Bb,
-        invites: eb
-      } = (0, tb.l)(), {
-        userContext: Lb
-      } = (0, Xb.c)(), [Pb, jb] = (0, Ab.useState)(OE.j);
-      (0, Ab.useEffect)((() => {
-        (0, OE.b)()
+        t: zz
+      } = (0, Oz.B)(), {
+        followsLeader: tz
+      } = (0, kO.i)(), {
+        loading: sz,
+        friends: Wz,
+        requests: vz,
+        invites: Uz
+      } = (0, Lz.k)(), {
+        userContext: uz
+      } = (0, bz.b)(), [Nz, wz] = (0, Fz.useState)(fO.l);
+      (0, Fz.useEffect)((() => {
+        (0, fO.e)()
       }), []);
-      const Rb = Bb.map((bb => bb.name)),
+      const Dz = vz.map((zz => zz.name)),
         {
-          state: yb,
-          recentRequesters: Zb
-        } = (0, tE.o)(),
-        Db = new Map([...("loaded" === yb.status ? yb.recentPlayers : []).map((bb => [bb.preview.name, bb])), ...Zb.map((bb => [bb.name, bb]))]),
-        zb = (0, Ab.useRef)(null),
-        [fb, mb] = (0, Ab.useState)(""),
-        [pb, Nb] = (0, Ab.useState)("Enter"),
-        [Wb, Hb] = (0, Ab.useState)(null);
+          state: Hz,
+          recentRequesters: Bz
+        } = (0, aO.r)(),
+        Pz = new Map([...("loaded" === Hz.status ? Hz.recentPlayers : []).map((zz => [zz.preview.name, zz])), ...Bz.map((zz => [zz.name, zz]))]),
+        rz = (0, Fz.useRef)(null),
+        [mz, Jz] = (0, Fz.useState)(""),
+        [Iz, Cz] = (0, Fz.useState)("Enter"),
+        [ez, Zz] = (0, Fz.useState)(null);
 
-      function Ib() {
-        fb && (Nb("Loading"), (0, gE.l)(fb, "social_menu").then((bb => {
-          if (zb.current) switch (bb.kind) {
+      function Gz() {
+        mz && (Cz("Loading"), (0, VO.d)(mz, "social_menu").then((zz => {
+          if (rz.current) switch (zz.kind) {
             case "sent":
-              Nb("Success");
+              Cz("Success");
               break;
             case "becameFriends":
-              Nb("BecameFriends");
+              Cz("BecameFriends");
               break;
             case "failed":
-              Hb(bb.message), Nb("Error")
+              Zz(zz.message), Cz("Error")
           }
         })))
       }
-      return (0, Ab.useEffect)((() => {
-        if ("Enter" === pb || "Loading" === pb) return;
-        const bb = setTimeout((() => {
-          zb.current.value = "", mb(""), Nb("Enter")
-        }), "Success" === pb ? 1e3 : 4e3);
+      return (0, Fz.useEffect)((() => {
+        if ("Enter" === Iz || "Loading" === Iz) return;
+        const zz = setTimeout((() => {
+          rz.current.value = "", Jz(""), Cz("Enter")
+        }), "Success" === Iz ? 1e3 : 4e3);
         return () => {
-          clearTimeout(bb)
+          clearTimeout(zz)
         }
-      }), [pb]), (0, vb.jsx)("div", {
+      }), [Iz]), (0, Kz.jsx)("div", {
         className: "SocialMenu",
-        children: (0, vb.jsxs)("div", {
+        children: (0, Kz.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, vb.jsxs)("div", {
+          children: [(0, Kz.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, vb.jsxs)("div", {
+            children: [(0, Kz.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, vb.jsx)(oE.b, {
-                label: bb("socialBar:addFriend")
-              }), (0, vb.jsxs)("div", {
+              children: [(0, Kz.jsx)(lO.e, {
+                label: zz("socialBar:addFriend")
+              }), (0, Kz.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, vb.jsxs)("div", {
-                  className: Tb()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${pb}`]: !0
+                children: [(0, Kz.jsxs)("div", {
+                  className: Xz()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${Iz}`]: !0
                   }),
-                  children: ["Loading" === pb && (0, vb.jsx)(ib.b, {}), "Success" === pb && (0, vb.jsx)(Yb.e, {
+                  children: ["Loading" === Iz && (0, Kz.jsx)(xz.d, {}), "Success" === Iz && (0, Kz.jsx)(oz.c, {
                     name: "check"
-                  }), "BecameFriends" === pb && (0, vb.jsx)(vb.Fragment, {
-                    children: bb("socialBar:nowFriends", {
-                      playerName: fb
+                  }), "BecameFriends" === Iz && (0, Kz.jsx)(Kz.Fragment, {
+                    children: zz("socialBar:nowFriends", {
+                      playerName: mz
                     })
-                  }), "Error" === pb && Wb && (0, vb.jsx)(vb.Fragment, {
-                    children: bb(Wb.translationKey, Wb.params)
+                  }), "Error" === Iz && ez && (0, Kz.jsx)(Kz.Fragment, {
+                    children: zz(ez.translationKey, ez.params)
                   })]
-                }), (0, vb.jsxs)("div", {
+                }), (0, Kz.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, vb.jsx)(xb.c, {
+                  children: [(0, Kz.jsx)(Yz.d, {
                     className: "PlayerSearchInput",
-                    placeholderText: bb("socialBar:enterPlayerName"),
-                    domRef: zb,
-                    onValueChange: bb => {
-                      mb((0, hb.q)(bb)), zb.current.value = (0, hb.q)(bb)
+                    placeholderText: zz("socialBar:enterPlayerName"),
+                    domRef: rz,
+                    onValueChange: zz => {
+                      Jz((0, jz.p)(zz)), rz.current.value = (0, jz.p)(zz)
                     },
                     onEnter: () => {
-                      fb && (0, nb.reportAnalyticsClick)({
+                      mz && (0, fz.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), Ib()
+                      }), Gz()
                     }
-                  }), (0, vb.jsxs)(kb.g, {
+                  }), (0, Kz.jsxs)(gz.h, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      Ib()
+                      Gz()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, vb.jsx)(Yb.e, {
+                    children: [(0, Kz.jsx)(oz.c, {
                       name: "user-plus"
-                    }), " ", bb("socialBar:sendRequest")]
+                    }), " ", zz("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, vb.jsx)(VE.c, {
+              }), (0, Kz.jsx)(pO.e, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), eb.length > 0 && (0, vb.jsxs)("div", {
+            }), Uz.length > 0 && (0, Kz.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, vb.jsx)(oE.b, {
-                label: bb("socialBar:invites"),
-                meta: eb.length
-              }), eb.map((ab => (0, vb.jsxs)("div", {
+              children: [(0, Kz.jsx)(lO.e, {
+                label: zz("socialBar:invites"),
+                meta: Uz.length
+              }), Uz.map((tz => (0, Kz.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, vb.jsx)("div", {
+                children: [(0, Kz.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, vb.jsx)(wE.b, {
-                    invite: ab
+                  children: (0, Kz.jsx)(qO.b, {
+                    invite: tz
                   })
-                }), (0, vb.jsx)("div", {
+                }), (0, Kz.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, vb.jsx)(wE.f, {
-                    invite: ab
+                  children: (0, Kz.jsx)(qO.d, {
+                    invite: tz
                   })
-                }), (0, vb.jsx)(kb.m, {
+                }), (0, Kz.jsx)(gz.p, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, sE.f)(ab)
+                    (0, SO.d)(tz)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${ab.destination.kind}`
+                    value: `social_menu:${tz.destination.kind}`
                   },
-                  children: bb("general:join")
-                }), (0, vb.jsx)(Ob.g, {
-                  tooltipInner: (0, vb.jsx)(vb.Fragment, {
-                    children: bb("general:decline")
+                  children: zz("general:join")
+                }), (0, Kz.jsx)(Vz.h, {
+                  tooltipInner: (0, Kz.jsx)(Kz.Fragment, {
+                    children: zz("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, vb.jsx)(kb.h, {
+                  children: (0, Kz.jsx)(gz.l, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === Pb || void 0 === Pb ? void 0 : Pb.kind) && Pb.inviteId === ab.id,
+                    padDefaultFocus: "invite" === (null === Nz || void 0 === Nz ? void 0 : Nz.kind) && Nz.inviteId === tz.id,
                     onClick: () => {
-                      tb.d.declineInvite(ab.id)
+                      Lz.d.declineInvite(tz.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${ab.destination.kind}`
+                      value: `social_menu:${tz.destination.kind}`
                     },
-                    children: (0, vb.jsx)(Yb.e, {
+                    children: (0, Kz.jsx)(oz.c, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, ab.id)))]
-            }), (0, vb.jsxs)("div", {
-              className: Tb()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !Ub && 0 === Bb.length
+              }, tz.id)))]
+            }), (0, Kz.jsxs)("div", {
+              className: Xz()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !sz && 0 === vz.length
               }),
-              children: [(0, vb.jsx)(oE.b, {
-                label: (0, vb.jsxs)(vb.Fragment, {
-                  children: [(0, vb.jsx)(Yb.e, {
-                    name: CE.c
-                  }), " ", bb("socialBar:requests")]
+              children: [(0, Kz.jsx)(lO.e, {
+                label: (0, Kz.jsxs)(Kz.Fragment, {
+                  children: [(0, Kz.jsx)(oz.c, {
+                    name: RO.f
+                  }), " ", zz("socialBar:requests")]
                 }),
-                meta: (0, vb.jsxs)(vb.Fragment, {
-                  children: [Bb.length, Bb.length === cb.p && (0, vb.jsx)("span", {
+                meta: (0, Kz.jsxs)(Kz.Fragment, {
+                  children: [vz.length, vz.length === Rz.p && (0, Kz.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: bb("socialBar:limitReached")
+                    children: zz("socialBar:limitReached")
                   })]
                 })
-              }), Ub && (0, vb.jsx)("div", {
+              }), sz && (0, Kz.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, vb.jsx)(ib.b, {})
-              }), !Ub && 0 === Bb.length && (0, vb.jsx)("div", {
+                children: (0, Kz.jsx)(xz.d, {})
+              }), !sz && 0 === vz.length && (0, Kz.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: bb("socialBar:noFriendRequests")
-              }), !Ub && Bb.length > 0 && (0, vb.jsx)("div", {
+                children: zz("socialBar:noFriendRequests")
+              }), !sz && vz.length > 0 && (0, Kz.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, vb.jsx)(LM.c, {
+                children: (0, Kz.jsx)(wW.c, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [Bb],
-                  children: Bb.map(((ab, Ub) => {
-                    const Ab = Db.get(ab.name);
-                    return (0, vb.jsxs)(KE.d, {
-                      playerSocialPreview: ab,
-                      zIndex: Bb.length - Ub,
-                      padDefaultFocus: (0, OE.h)(Pb, ab.name, Ub),
-                      status: Ab && (0, vb.jsx)(lE.d, {
-                        gameNameWithVariation: Ab.gameNameWithVariation,
-                        isPrivateLobby: Ab.isPrivateLobby
+                  observerUpdateDeps: [vz],
+                  children: vz.map(((tz, sz) => {
+                    const Fz = Pz.get(tz.name);
+                    return (0, Kz.jsxs)(LO.d, {
+                      playerSocialPreview: tz,
+                      zIndex: vz.length - sz,
+                      padDefaultFocus: (0, fO.j)(Nz, tz.name, sz),
+                      status: Fz && (0, Kz.jsx)(nO.c, {
+                        gameNameWithVariation: Fz.gameNameWithVariation,
+                        isPrivateLobby: Fz.isPrivateLobby
                       }),
-                      children: [(0, vb.jsx)(Ob.g, {
-                        tooltipInner: (0, vb.jsx)(vb.Fragment, {
-                          children: bb("general:accept")
+                      children: [(0, Kz.jsx)(Vz.h, {
+                        tooltipInner: (0, Kz.jsx)(Kz.Fragment, {
+                          children: zz("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, vb.jsx)(kb.g, {
+                        children: (0, Kz.jsx)(gz.h, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            jb((0, OE.f)(Rb, Ub)), (0, gE.h)(ab.name, !0, {
+                            wz((0, fO.g)(Dz, sz)), (0, VO.c)(tz.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -7290,19 +7290,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, vb.jsx)(Yb.e, {
+                          children: (0, Kz.jsx)(oz.c, {
                             name: "check"
                           })
                         })
-                      }), (0, vb.jsx)(Ob.g, {
-                        tooltipInner: (0, vb.jsx)(vb.Fragment, {
-                          children: bb("general:decline")
+                      }), (0, Kz.jsx)(Vz.h, {
+                        tooltipInner: (0, Kz.jsx)(Kz.Fragment, {
+                          children: zz("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, vb.jsx)(kb.h, {
+                        children: (0, Kz.jsx)(gz.l, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            jb((0, OE.f)(Rb, Ub)), (0, gE.h)(ab.name, !1, {
+                            wz((0, fO.g)(Dz, sz)), (0, VO.c)(tz.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -7310,62 +7310,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, vb.jsx)(Yb.e, {
+                          children: (0, Kz.jsx)(oz.c, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${ab.name}_${ab.isError}`)
+                    }, `${tz.name}_${tz.isError}`)
                   }))
                 })
               })]
-            }), (0, vb.jsx)(lE.h, {})]
-          }), (0, vb.jsxs)("div", {
+            }), (0, Kz.jsx)(nO.g, {})]
+          }), (0, Kz.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, vb.jsxs)("div", {
+            children: [(0, Kz.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, vb.jsx)(oE.b, {
-                label: bb("socialBar:party")
-              }), (0, vb.jsx)(rE.b, {})]
-            }), (0, vb.jsxs)("div", {
+              children: [(0, Kz.jsx)(lO.e, {
+                label: zz("socialBar:party")
+              }), (0, Kz.jsx)(iO.e, {})]
+            }), (0, Kz.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, vb.jsx)(oE.b, {
-                label: (0, vb.jsxs)(vb.Fragment, {
-                  children: [(0, vb.jsx)(Yb.e, {
-                    name: CE.b
-                  }), " ", bb("socialBar:friends")]
+              children: [(0, Kz.jsx)(lO.e, {
+                label: (0, Kz.jsxs)(Kz.Fragment, {
+                  children: [(0, Kz.jsx)(oz.c, {
+                    name: RO.e
+                  }), " ", zz("socialBar:friends")]
                 }),
-                meta: (0, vb.jsxs)(vb.Fragment, {
-                  children: [Mb.length, Mb.length >= (0, cb.c)(Lb.getPlayerRanks()) && (0, vb.jsx)("span", {
+                meta: (0, Kz.jsxs)(Kz.Fragment, {
+                  children: [Wz.length, Wz.length >= (0, Rz.d)(uz.getPlayerRanks()) && (0, Kz.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: bb("socialBar:limitReached")
+                    children: zz("socialBar:limitReached")
                   })]
                 })
-              }), Ub && (0, vb.jsx)("div", {
+              }), sz && (0, Kz.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, vb.jsx)(ib.b, {})
-              }), !Ub && 0 === Mb.length && (0, vb.jsx)("div", {
+                children: (0, Kz.jsx)(xz.d, {})
+              }), !sz && 0 === Wz.length && (0, Kz.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: bb("socialBar:noFriends")
-              }), !Ub && Mb.length > 0 && (0, vb.jsx)("div", {
+                children: zz("socialBar:noFriends")
+              }), !sz && Wz.length > 0 && (0, Kz.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, vb.jsx)(LM.c, {
+                children: (0, Kz.jsx)(wW.c, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [Mb],
-                  children: Mb.map(((bb, Ub) => (0, vb.jsx)(KE.d, {
-                    playerSocialPreview: bb,
+                  observerUpdateDeps: [Wz],
+                  children: Wz.map(((zz, sz) => (0, Kz.jsx)(LO.d, {
+                    playerSocialPreview: zz,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: bb => {
-                      tb.d.removeFriendFromState(bb)
+                    onFriendRemoved: zz => {
+                      Lz.d.removeFriendFromState(zz)
                     },
-                    zIndex: Mb.length - Ub,
-                    children: (0, vb.jsx)(KE.b, {
-                      friend: bb,
-                      followsLeader: ab,
+                    zIndex: Wz.length - sz,
+                    children: (0, Kz.jsx)(LO.c, {
+                      friend: zz,
+                      followsLeader: tz,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${bb.name}_${bb.isError}`)))
+                  }, `${zz.name}_${zz.isError}`)))
                 })
               })]
             })]
@@ -7373,231 +7373,231 @@ export const modules = {
         })
       })
     }
-    var nE = Ub(2364);
-    const SE = bb => {
+    var to = sz(2368);
+    const so = zz => {
         let {
-          action: ab,
-          padAction: Ub
-        } = bb;
+          action: tz,
+          padAction: sz
+        } = zz;
         const {
-          isTouchScreen: Ab
-        } = (0, mb.n)(["isTouchScreen"]), Mb = (0, TA.o)();
-        return Ab && !Mb ? null : (0, vb.jsx)(nU.b, {
+          isTouchScreen: Fz
+        } = (0, Jz.h)(["isTouchScreen"]), Wz = (0, vF.j)();
+        return Fz && !Wz ? null : (0, Kz.jsx)(tF.b, {
           className: "EverythingMenuTabKey",
-          noaAction: ab,
+          noaAction: tz,
           padHidesKey: !0,
-          padMenuShortcut: Ub
+          padMenuShortcut: sz
         })
       },
-      bY = (0, Ab.memo)((function() {
+      Fo = (0, Fz.memo)((function() {
         const {
-          t: bb
-        } = (0, Eb.A)(), {
-          gameState: ab,
-          openEverythingMenuName: Ub,
-          initSdkSelectorFinished: Mb,
-          crosshairGameView: Yb
-        } = (0, mb.n)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
-          userContext: Bb
-        } = (0, Xb.c)(), eb = (0, ob.purchasesAllowed)(), Lb = (0, Kb.G)(), Pb = (bb, ab) => (0, vb.jsx)(SE, {
-          action: bb,
-          padAction: ab
-        }), [jb, Rb] = (0, Ab.useState)(null), Zb = (0, Ab.useRef)(null), Db = {
-          ..."inGame" === ab ? {} : (0, kb.Q)({
+          t: zz
+        } = (0, Oz.B)(), {
+          gameState: tz,
+          openEverythingMenuName: sz,
+          initSdkSelectorFinished: Wz,
+          crosshairGameView: oz
+        } = (0, Jz.h)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
+          userContext: vz
+        } = (0, bz.b)(), Uz = (0, kz.purchasesAllowed)(), uz = (0, Qz.M)(), Nz = (zz, tz) => (0, Kz.jsx)(so, {
+          action: zz,
+          padAction: tz
+        }), [wz, Dz] = (0, Fz.useState)(null), Bz = (0, Fz.useRef)(null), Pz = {
+          ..."inGame" === tz ? {} : (0, gz.T)({
             focusOnClick: !1
           }),
-          ...RA.e
-        }, zb = null !== Ub, xb = Ub !== ea.j.COSMETIC_SHOP && !Yb;
-        async function ib() {
+          ...BF.g
+        }, rz = null !== sz, Yz = sz !== Ut.r.COSMETIC_SHOP && !oz;
+        async function xz() {
           await async function() {
-            if (!jb) return;
-            await jb(), Rb(null)
-          }(), mb.c.set({
+            if (!wz) return;
+            await wz(), Dz(null)
+          }(), Jz.b.set({
             openEverythingMenuName: null
           })
         }
-        const fb = (0, Ab.useMemo)((() => "inGame" === ab ? {
-          text: bb("settingsMenu:exitGame"),
+        const mz = (0, Fz.useMemo)((() => "inGame" === tz ? {
+          text: zz("settingsMenu:exitGame"),
           onClick: () => {
-            (0, QE.e)()
+            (0, hO.e)()
           }
-        } : (0, Wb.d)() ? {
-          text: bb("settingsMenu:exitGame"),
+        } : (0, ez.e)() ? {
+          text: zz("settingsMenu:exitGame"),
           onClick: () => {
-            Ta.j.discordActivity().then((bb => {
-              bb.exit("User exited the game")
+            Xt.k.discordActivity().then((zz => {
+              zz.exit("User exited the game")
             }))
           }
-        } : null), [ab, bb]);
-        const pb = (0, vb.jsx)("div", {
+        } : null), [tz, zz]);
+        const Iz = (0, Kz.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
           onClick: () => {
-            ib()
+            xz()
           },
-          children: (0, vb.jsx)(kb.k, {
+          children: (0, Kz.jsx)(gz.n, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, vb.jsx)(kA.d, {
-          showing: zb,
+        return (0, Kz.jsx)(PF.c, {
+          showing: rz,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: Ub === ea.j.SHOP,
-          doGameplayStartStopOnShow: "inGame" === ab,
-          children: (0, vb.jsx)(ZA.d, {
+          keepsMovement: sz === Ut.r.SHOP,
+          doGameplayStartStopOnShow: "inGame" === tz,
+          children: (0, Kz.jsx)(YF.d, {
             className: "EverythingMenuContainer",
-            show: zb && !Yb,
-            children: (0, vb.jsx)(yA.d, {
+            show: rz && !oz,
+            children: (0, Kz.jsx)(rF.b, {
               close: () => {
-                ib()
+                xz()
               },
               togglePointerLock: !1,
-              children: (0, vb.jsxs)("div", {
+              children: (0, Kz.jsxs)("div", {
                 className: "EverythingMenu",
-                children: [!(0, aT.j)(Ub) && (0, vb.jsxs)("div", {
+                children: [!(0, WX.m)(sz) && (0, Kz.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, vb.jsxs)("div", {
+                  children: [(0, Kz.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [fb && (0, vb.jsx)(kb.e, {
+                    children: [mz && (0, Kz.jsx)(gz.e, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        fb.onClick()
+                        mz.onClick()
                       },
-                      children: fb.text
-                    }), zb && eb && (0, vb.jsx)("div", {
-                      ...Db,
+                      children: mz.text
+                    }), rz && Uz && (0, Kz.jsx)("div", {
+                      ...Pz,
                       className: "EverythingMenuWallet",
-                      title: bb("homePage:getPremiumCurrency"),
+                      title: zz("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, Kb.m)({
+                        (0, Qz.p)({
                           mode: "current",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, vb.jsx)(GE.h, {})
+                      children: (0, Kz.jsx)(dO.i, {})
                     })]
-                  }), (0, vb.jsxs)("div", {
+                  }), (0, Kz.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
                     "data-pad-tabs": "1",
-                    children: [(0, vb.jsxs)("div", {
-                      ...Db,
+                    children: [(0, Kz.jsxs)("div", {
+                      ...Pz,
                       "data-pad-tab": !0,
-                      "data-pad-selected": Ub === ea.j.SETTINGS ? "true" : void 0,
-                      className: Tb()("EverythingMenuTab", {
-                        EverythingMenuTabActive: Ub === ea.j.SETTINGS
+                      "data-pad-selected": sz === Ut.r.SETTINGS ? "true" : void 0,
+                      className: Xz()("EverythingMenuTab", {
+                        EverythingMenuTabActive: sz === Ut.r.SETTINGS
                       }),
                       onClick: () => {
-                        mb.c.set({
-                          openEverythingMenuName: ea.j.SETTINGS
+                        Jz.b.set({
+                          openEverythingMenuName: Ut.r.SETTINGS
                         })
                       },
-                      children: [bb("general:settings"), Pb("OpenSettings", "pause")]
-                    }), (0, vb.jsxs)("div", {
-                      ...Db,
+                      children: [zz("general:settings"), Nz("OpenSettings", "pause")]
+                    }), (0, Kz.jsxs)("div", {
+                      ...Pz,
                       "data-pad-tab": !0,
-                      "data-pad-selected": Ub === ea.j.CUSTOMISATION ? "true" : void 0,
-                      className: Tb()("EverythingMenuTab", {
-                        EverythingMenuTabActive: Ub === ea.j.CUSTOMISATION
+                      "data-pad-selected": sz === Ut.r.CUSTOMISATION ? "true" : void 0,
+                      className: Xz()("EverythingMenuTab", {
+                        EverythingMenuTabActive: sz === Ut.r.CUSTOMISATION
                       }),
                       onClick: () => {
-                        mb.c.set({
-                          openEverythingMenuName: ea.j.CUSTOMISATION
+                        Jz.b.set({
+                          openEverythingMenuName: Ut.r.CUSTOMISATION
                         })
                       },
-                      children: [bb("general:player"), Pb("OpenCharacterCustomization")]
-                    }), yb.featureFlags.useSocialFeatures && (0, vb.jsxs)("div", {
-                      ...Db,
+                      children: [zz("general:player"), Nz("OpenCharacterCustomization")]
+                    }), Hz.featureFlags.useSocialFeatures && (0, Kz.jsxs)("div", {
+                      ...Pz,
                       "data-pad-tab": !0,
-                      "data-pad-selected": Ub === ea.j.SOCIAL ? "true" : void 0,
-                      className: Tb()("EverythingMenuTab", {
-                        EverythingMenuTabActive: Ub === ea.j.SOCIAL
+                      "data-pad-selected": sz === Ut.r.SOCIAL ? "true" : void 0,
+                      className: Xz()("EverythingMenuTab", {
+                        EverythingMenuTabActive: sz === Ut.r.SOCIAL
                       }),
-                      ...(0, nb.e)({
+                      ...(0, fz.d)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, Ub === ea.j.SOCIAL),
+                      }, sz === Ut.r.SOCIAL),
                       onClick: () => {
-                        mb.c.set({
-                          openEverythingMenuName: ea.j.SOCIAL
+                        Jz.b.set({
+                          openEverythingMenuName: Ut.r.SOCIAL
                         })
                       },
-                      children: [bb("socialBar:social"), (0, vb.jsx)(nE.c, {})]
-                    }), eb && (0, vb.jsxs)("div", {
-                      ...Db,
+                      children: [zz("socialBar:social"), (0, Kz.jsx)(to.b, {})]
+                    }), Uz && (0, Kz.jsxs)("div", {
+                      ...Pz,
                       "data-pad-tab": !0,
-                      "data-pad-selected": Ub === ea.j.COSMETIC_SHOP ? "true" : void 0,
-                      className: Tb()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: Ub === ea.j.COSMETIC_SHOP
+                      "data-pad-selected": sz === Ut.r.COSMETIC_SHOP ? "true" : void 0,
+                      className: Xz()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: sz === Ut.r.COSMETIC_SHOP
                       }),
                       onClick: () => {
-                        mb.c.set({
-                          openEverythingMenuName: ea.j.COSMETIC_SHOP
+                        Jz.b.set({
+                          openEverythingMenuName: Ut.r.COSMETIC_SHOP
                         })
                       },
-                      children: [(0, vb.jsx)("span", {
+                      children: [(0, Kz.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: bb("store:title")
-                      }), "new" === Lb && (0, vb.jsx)(YE, {}), "dot" === Lb && (0, vb.jsx)("span", {
+                        children: zz("store:title")
+                      }), "new" === uz && (0, Kz.jsx)(KO, {}), "dot" === uz && (0, Kz.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === ab && (0, vb.jsxs)("div", {
-                      ...Db,
+                    }), "inGame" === tz && (0, Kz.jsxs)("div", {
+                      ...Pz,
                       "data-pad-tab": !0,
-                      "data-pad-selected": Ub === ea.j.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: Tb()("EverythingMenuTab", {
-                        EverythingMenuTabActive: Ub === ea.j.LOBBY_LEADERBOARD
+                      "data-pad-selected": sz === Ut.r.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: Xz()("EverythingMenuTab", {
+                        EverythingMenuTabActive: sz === Ut.r.LOBBY_LEADERBOARD
                       }),
                       onClick: () => {
-                        mb.c.set({
-                          openEverythingMenuName: ea.j.LOBBY_LEADERBOARD
+                        Jz.b.set({
+                          openEverythingMenuName: Ut.r.LOBBY_LEADERBOARD
                         })
                       },
-                      children: [bb("general:lobby"), Pb("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [zz("general:lobby"), Nz("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, vb.jsx)("div", {
+                  }), (0, Kz.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: pb
+                    children: Iz
                   })]
-                }), (0, aT.j)(Ub) && pb, (0, vb.jsxs)("div", {
+                }), (0, WX.m)(sz) && Iz, (0, Kz.jsxs)("div", {
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === ab ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === tz ? "0.85" : "1"
                   },
-                  children: [(0, vb.jsx)(vA, {
-                    show: Ub === ea.j.SETTINGS,
-                    setBeforeResumeCallback: Rb
-                  }), (0, vb.jsx)(jA, {
-                    show: Ub === ea.j.CUSTOMISATION
-                  }), (0, vb.jsx)(Ab.Suspense, {
+                  children: [(0, Kz.jsx)(bF, {
+                    show: sz === Ut.r.SETTINGS,
+                    setBeforeResumeCallback: Dz
+                  }), (0, Kz.jsx)(HF, {
+                    show: sz === Ut.r.CUSTOMISATION
+                  }), (0, Kz.jsx)(Fz.Suspense, {
                     fallback: null,
-                    children: (0, vb.jsx)(gM, {
-                      show: Ub === ea.j.SHOP
+                    children: (0, Kz.jsx)(VW, {
+                      show: sz === Ut.r.SHOP
                     })
-                  }), (0, vb.jsx)(MT, {
-                    show: Ub === ea.j.LOBBY_LEADERBOARD
-                  }), (0, vb.jsx)(hE, {
-                    show: Ub === ea.j.COSMETIC_SHOP
-                  }), (0, vb.jsx)(cE, {
-                    show: Ub === ea.j.SOCIAL
+                  }), (0, Kz.jsx)(oX, {
+                    show: sz === Ut.r.LOBBY_LEADERBOARD
+                  }), (0, Kz.jsx)(MO, {
+                    show: sz === Ut.r.COSMETIC_SHOP
+                  }), (0, Kz.jsx)(EO, {
+                    show: sz === Ut.r.SOCIAL
                   })]
-                }), !(0, yb.isMobileApp)() && (0, DA.g)(Bb.getPlayerRanks()) && (0, vb.jsx)(ZA.d, {
-                  ref: Zb,
+                }), !(0, Hz.isMobileApp)() && (0, xF.e)(vz.getPlayerRanks()) && (0, Kz.jsx)(YF.d, {
+                  ref: Bz,
                   className: "EverythingMenuBannerDiv",
-                  show: xb,
+                  show: Yz,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, vb.jsx)(qE.b, {
+                  children: (0, Kz.jsx)(QO.c, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: Zb
+                      parentRef: Bz
                     },
-                    showing: zb && xb,
+                    showing: rz && Yz,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -7609,135 +7609,135 @@ export const modules = {
         })
       }))
   },
-  8910: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Tb
+  8848: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Xz
     });
-    var Ab = Ub(325),
-      Mb = Ub(8914);
+    var Fz = sz(321),
+      Wz = sz(8856);
 
-    function Tb(bb, ab, Ub) {
-      const Tb = Object.entries(ab).sort(((bb, ab) => ab[1] - bb[1])),
-        Eb = (0, Ab.kb)(bb);
-      Eb.push(bb ? "\n\n" : "\n");
-      for (const [Mb, jb] of Tb) {
-        var Yb, Bb, eb;
-        const bb = null !== (Yb = null === Ub || void 0 === Ub || null === (Bb = Ub[Mb]) || void 0 === Bb ? void 0 : Bb.icon) && void 0 !== Yb ? Yb : `${Mb} Enchantment`;
-        Eb.push({
-          icon: bb,
+    function Xz(zz, tz, sz) {
+      const Xz = Object.entries(tz).sort(((zz, tz) => tz[1] - zz[1])),
+        Oz = (0, Fz.sb)(zz);
+      Oz.push(zz ? "\n\n" : "\n");
+      for (const [Wz, wz] of Xz) {
+        var oz, vz, Uz;
+        const zz = null !== (oz = null === sz || void 0 === sz || null === (vz = sz[Wz]) || void 0 === vz ? void 0 : vz.icon) && void 0 !== oz ? oz : `${Wz} Enchantment`;
+        Oz.push({
+          icon: zz,
           style: {
             fontSize: "1.5rem"
           }
-        }), Eb.push({
-          str: `${Mb} ${null!==(eb=(0,Ab.O)(jb))&&void 0!==eb?eb:jb}\n`
+        }), Oz.push({
+          str: `${Wz} ${null!==(Uz=(0,Fz.S)(wz))&&void 0!==Uz?Uz:wz}\n`
         })
       }
-      Eb.push({
+      Oz.push({
         str: "\n"
       });
-      for (const [Ab, jb] of Tb) {
-        var vb, Lb, Pb, Xb;
-        const bb = null !== (vb = null === Ub || void 0 === Ub || null === (Lb = Ub[Ab]) || void 0 === Lb ? void 0 : Lb.icon) && void 0 !== vb ? vb : `${Ab} Enchantment`,
-          ab = null !== (Pb = null === Ub || void 0 === Ub || null === (Xb = Ub[Ab]) || void 0 === Xb ? void 0 : Xb.description) && void 0 !== Pb ? Pb : (0, Mb.i)(Ab);
-        Eb.push({
-          icon: bb,
+      for (const [Fz, wz] of Xz) {
+        var Kz, uz, Nz, bz;
+        const zz = null !== (Kz = null === sz || void 0 === sz || null === (uz = sz[Fz]) || void 0 === uz ? void 0 : uz.icon) && void 0 !== Kz ? Kz : `${Fz} Enchantment`,
+          tz = null !== (Nz = null === sz || void 0 === sz || null === (bz = sz[Fz]) || void 0 === bz ? void 0 : bz.description) && void 0 !== Nz ? Nz : (0, Wz.o)(Fz);
+        Oz.push({
+          icon: zz,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), Eb.push({
-          str: ab,
+        }), Oz.push({
+          str: tz,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), Eb.push({
+        }), Oz.push({
           str: "\n"
         })
       }
-      return Eb
+      return Oz
     }
   },
-  8917: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => eb,
-      f: () => Zb,
-      g: () => kb,
-      k: () => Bb,
-      l: () => yb,
-      p: () => vb,
-      r: () => Pb,
-      t: () => Rb,
-      w: () => Lb
+  8863: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Uz,
+      e: () => Bz,
+      f: () => gz,
+      g: () => vz,
+      h: () => Hz,
+      i: () => Kz,
+      j: () => Nz,
+      k: () => Dz,
+      o: () => uz
     });
-    var Ab = Ub(307),
-      Mb = Ub(591),
-      Tb = Ub(325),
-      Eb = Ub(3951),
-      Yb = Ub(8910);
+    var Fz = sz(308),
+      Wz = sz(580),
+      Xz = sz(321),
+      Oz = sz(3919),
+      oz = sz(8848);
 
-    function Bb(bb, ab) {
-      var Ub;
+    function vz(zz, tz) {
+      var sz;
       let {
-        player: Ab,
-        chestOrCreative: Mb
-      } = bb;
-      var Tb;
-      return ab < Ab.length ? null !== (Tb = Ab[ab]) && void 0 !== Tb ? Tb : null : null !== (Ub = Mb[ab - Ab.length]) && void 0 !== Ub ? Ub : null
+        player: Fz,
+        chestOrCreative: Wz
+      } = zz;
+      var Xz;
+      return tz < Fz.length ? null !== (Xz = Fz[tz]) && void 0 !== Xz ? Xz : null : null !== (sz = Wz[tz - Fz.length]) && void 0 !== sz ? sz : null
     }
 
-    function eb(bb) {
-      var ab;
-      return null !== (ab = bb.amount) && void 0 !== ab ? ab : 0
+    function Uz(zz) {
+      var tz;
+      return null !== (tz = zz.amount) && void 0 !== tz ? tz : 0
     }
 
-    function vb(bb) {
-      return 0 === bb.button || void 0 === bb.button
+    function Kz(zz) {
+      return 0 === zz.button || void 0 === zz.button
     }
 
-    function Lb(bb) {
-      return !!bb.shiftKey
+    function uz(zz) {
+      return !!zz.shiftKey
     }
 
-    function Pb(bb) {
-      return "touches" in bb || "touch" === bb.pointerType || "pen" === bb.pointerType
+    function Nz(zz) {
+      return "touches" in zz || "touch" === zz.pointerType || "pen" === zz.pointerType
     }
-    const Xb = new Set,
-      jb = 50;
+    const bz = new Set,
+      wz = 50;
 
-    function Rb(bb, ab) {
-      var Ub;
-      const Ab = null === (Ub = bb[ab]) || void 0 === Ub ? void 0 : Ub.displayName;
-      return (0, Mb.I)(Ab) ? "string" !== typeof ab ? "" : (!Xb.has(ab) && Xb.size < jb && (Xb.add(ab), console.warn(`No item called "${ab}", so its hover shows the name as given`)), ab) : Ab
+    function Dz(zz, tz) {
+      var sz;
+      const Fz = null === (sz = zz[tz]) || void 0 === sz ? void 0 : sz.displayName;
+      return (0, Wz.G)(Fz) ? "string" !== typeof tz ? "" : (!bz.has(tz) && bz.size < wz && (bz.add(tz), console.warn(`No item called "${tz}", so its hover shows the name as given`)), tz) : Fz
     }
 
-    function kb(bb, ab, Ub) {
-      var Bb, eb, vb, Lb, Pb, Xb, jb, kb, yb, Zb, Db, zb, xb, ib;
-      const fb = bb.attributes,
-        mb = null !== (Bb = null === (eb = ab[bb.name]) || void 0 === eb ? void 0 : eb.rootName) && void 0 !== Bb ? Bb : bb.name,
-        pb = null !== (vb = null !== (Lb = fb.customDisplayName) && void 0 !== Lb ? Lb : null === (Pb = ab[bb.name]) || void 0 === Pb ? void 0 : Pb.displayName) && void 0 !== vb ? vb : Rb(ab, mb);
-      let Nb = pb;
-      const Wb = null === (Xb = fb.customAttributes) || void 0 === Xb ? void 0 : Xb.enchantmentTier;
-      Wb && (Nb = (0, Tb.kb)(pb, {
-        colour: Tb.fb[Wb]
+    function gz(zz, tz, sz) {
+      var vz, Uz, Kz, uz, Nz, bz, wz, gz, Hz, Bz, Pz, rz, Yz, xz;
+      const mz = zz.attributes,
+        Jz = null !== (vz = null === (Uz = tz[zz.name]) || void 0 === Uz ? void 0 : Uz.rootName) && void 0 !== vz ? vz : zz.name,
+        Iz = null !== (Kz = null !== (uz = mz.customDisplayName) && void 0 !== uz ? uz : null === (Nz = tz[zz.name]) || void 0 === Nz ? void 0 : Nz.displayName) && void 0 !== Kz ? Kz : Dz(tz, Jz);
+      let Cz = Iz;
+      const ez = null === (bz = mz.customAttributes) || void 0 === bz ? void 0 : bz.enchantmentTier;
+      ez && (Cz = (0, Xz.sb)(Iz, {
+        colour: Xz.lb[ez]
       }));
-      const Hb = null !== (jb = null !== (kb = null !== (yb = function(bb, ab) {
-        var Ub;
-        if (void 0 === bb || null !== (Ub = ab.customAttributes) && void 0 !== Ub && Ub.author) return bb;
-        const Mb = (0, Ab.cc)(bb);
-        return Mb.every((bb => "string" === typeof bb)) ? bb : Mb.map((bb => "string" === typeof bb ? bb : {
-          icon: bb.icon,
+      const Zz = null !== (wz = null !== (gz = null !== (Hz = function(zz, tz) {
+        var sz;
+        if (void 0 === zz || null !== (sz = tz.customAttributes) && void 0 !== sz && sz.author) return zz;
+        const Wz = (0, Fz.bc)(zz);
+        return Wz.every((zz => "string" === typeof zz)) ? zz : Wz.map((zz => "string" === typeof zz ? zz : {
+          icon: zz.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(fb.customDescription, fb)) && void 0 !== yb ? yb : null === (Zb = ab[bb.name]) || void 0 === Zb ? void 0 : Zb.description) && void 0 !== kb ? kb : null === (Db = ab[mb]) || void 0 === Db ? void 0 : Db.description) && void 0 !== jb ? jb : "";
-      let Ib = Hb;
-      if (null !== (zb = fb.customAttributes) && void 0 !== zb && zb.enchantments) Ib = (0, Yb.b)(Hb, fb.customAttributes.enchantments, fb.customAttributes.enchantmentData);
-      else if (Ub[mb]) Ib = (0, Tb.kb)(Hb), Ib.push({
+      }(mz.customDescription, mz)) && void 0 !== Hz ? Hz : null === (Bz = tz[zz.name]) || void 0 === Bz ? void 0 : Bz.description) && void 0 !== gz ? gz : null === (Pz = tz[Jz]) || void 0 === Pz ? void 0 : Pz.description) && void 0 !== wz ? wz : "";
+      let Gz = Zz;
+      if (null !== (rz = mz.customAttributes) && void 0 !== rz && rz.enchantments) Gz = (0, oz.c)(Zz, mz.customAttributes.enchantments, mz.customAttributes.enchantmentData);
+      else if (sz[Jz]) Gz = (0, Xz.sb)(Zz), Gz.push({
         str: "\n"
-      }), Ib.push({
+      }), Gz.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -7745,373 +7745,373 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (xb = fb.customAttributes) && void 0 !== xb && xb.mobSettings) {
-        var db, Fb;
-        const bb = fb.customAttributes.mobSettings;
-        var hb, Gb;
-        if (Ib = [], (0, Mb.I)(fb.customAttributes.health) || (Ib.push({
+      else if (null !== (Yz = mz.customAttributes) && void 0 !== Yz && Yz.mobSettings) {
+        var Tz, cz;
+        const zz = mz.customAttributes.mobSettings;
+        var jz, Az;
+        if (Gz = [], (0, Wz.G)(mz.customAttributes.health) || (Gz.push({
             str: "\n"
-          }), Ib.push({
+          }), Gz.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), Ib.push({
+          }), Gz.push({
             str: " "
-          }), Ib.push({
-            str: fb.customAttributes.health.toString()
-          }), (0, Mb.I)(bb.maxHealth) || (Ib.push({
+          }), Gz.push({
+            str: mz.customAttributes.health.toString()
+          }), (0, Wz.G)(zz.maxHealth) || (Gz.push({
             str: "/"
-          }), Ib.push({
-            str: bb.maxHealth.toString()
-          }))), !(0, Mb.I)(bb.attackDamage) && bb.attackDamage > 0 && (Ib.push({
+          }), Gz.push({
+            str: zz.maxHealth.toString()
+          }))), !(0, Wz.G)(zz.attackDamage) && zz.attackDamage > 0 && (Gz.push({
             str: "\n"
-          }), Ib.push({
+          }), Gz.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), Ib.push({
+          }), Gz.push({
             str: " "
-          }), Ib.push({
-            str: bb.attackDamage.toString()
-          })), !(0, Mb.I)(bb.secondaryAttackDamage) && bb.secondaryAttackDamage > 0 && (Ib.push({
+          }), Gz.push({
+            str: zz.attackDamage.toString()
+          })), !(0, Wz.G)(zz.secondaryAttackDamage) && zz.secondaryAttackDamage > 0 && (Gz.push({
             str: "\n"
-          }), Ib.push({
+          }), Gz.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), Ib.push({
+          }), Gz.push({
             str: " "
-          }), Ib.push({
-            str: bb.secondaryAttackDamage.toString()
-          })), (0, Mb.I)(bb.baseRunningSpeed) || (Ib.push({
+          }), Gz.push({
+            str: zz.secondaryAttackDamage.toString()
+          })), (0, Wz.G)(zz.baseRunningSpeed) || (Gz.push({
             str: "\n"
-          }), Ib.push({
+          }), Gz.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), Ib.push({
+          }), Gz.push({
             str: " "
-          }), Ib.push({
-            str: bb.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === bb.metaInfo) Ib.push({
+          }), Gz.push({
+            str: zz.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === zz.metaInfo) Gz.push({
           str: "\n"
-        }), Ib.push({
+        }), Gz.push({
           str: {
             translationKey: "general:has"
           }
-        }), Ib.push({
+        }), Gz.push({
           str: " "
-        }), Ib.push({
-          icon: null !== (hb = null === (Gb = bb.tameInfo) || void 0 === Gb ? void 0 : Gb.saddleItemName) && void 0 !== hb ? hb : "Saddle",
+        }), Gz.push({
+          icon: null !== (jz = null === (Az = zz.tameInfo) || void 0 === Az ? void 0 : Az.saddleItemName) && void 0 !== jz ? jz : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (Ib.push({
+        if (Gz.push({
             str: "\n"
-          }), Ib.push({
+          }), Gz.push({
             str: "\n"
-          }), bb.petInfo && null !== (db = bb.tameInfo) && void 0 !== db && db.supportsFriendship) {
-          const ab = Eb.c.getIconsFromFriendshipPoints(bb.petInfo.friendshipPoints);
-          for (const bb of ab) Ib.push({
-            icon: bb,
+          }), zz.petInfo && null !== (Tz = zz.tameInfo) && void 0 !== Tz && Tz.supportsFriendship) {
+          const tz = Oz.e.getIconsFromFriendshipPoints(zz.petInfo.friendshipPoints);
+          for (const zz of tz) Gz.push({
+            icon: zz,
             style: {
               fontSize: "1.5em"
             }
           });
-          Ib.push({
+          Gz.push({
             str: "\n"
           });
-          const Ub = Eb.c.getMobHungerLevel(bb.petInfo.lastFedAt);
-          for (const bb of Eb.c.hungerLevelIcons[Ub]) Ib.push({
-            icon: bb,
+          const sz = Oz.e.getMobHungerLevel(zz.petInfo.lastFedAt);
+          for (const zz of Oz.e.hungerLevelIcons[sz]) Gz.push({
+            icon: zz,
             style: {
               fontSize: "1.5em"
             }
           });
-          Ib.push({
+          Gz.push({
             str: " "
-          }), Ib.push({
-            str: Eb.c.hungerLevelTranslations[Ub],
+          }), Gz.push({
+            str: Oz.e.hungerLevelTranslations[sz],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (bb.tameInfo && null !== (Fb = bb.tameInfo) && void 0 !== Fb && Fb.supportsFriendship) {
-          var Qb, qb;
-          let ab = null !== (Qb = bb.tameInfo.likedFoods) && void 0 !== Qb ? Qb : [];
-          Ib.push({
+        if (zz.tameInfo && null !== (cz = zz.tameInfo) && void 0 !== cz && cz.supportsFriendship) {
+          var yz, Mz;
+          let tz = null !== (yz = zz.tameInfo.likedFoods) && void 0 !== yz ? yz : [];
+          Gz.push({
             str: "\n"
-          }), Ib.push({
+          }), Gz.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Eb.c.feedTextColours[Eb.c.MobFoodType.Superliked]
+              color: Oz.e.feedTextColours[Oz.e.MobFoodType.Superliked]
             }
-          }), Ib.push({
+          }), Gz.push({
             str: " "
-          }), null !== (qb = bb.petInfo) && void 0 !== qb && qb.superlikedFoodKnown ? (Ib.push({
-            icon: bb.petInfo.superlikedFood,
+          }), null !== (Mz = zz.petInfo) && void 0 !== Mz && Mz.superlikedFoodKnown ? (Gz.push({
+            icon: zz.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), ab = ab.filter((ab => ab !== bb.petInfo.superlikedFood))) : Ib.push({
+          }), tz = tz.filter((tz => tz !== zz.petInfo.superlikedFood))) : Gz.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), Ib.push({
+          }), Gz.push({
             str: "\n"
-          }), Ib.push({
+          }), Gz.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Eb.c.feedTextColours[Eb.c.MobFoodType.Liked]
+              color: Oz.e.feedTextColours[Oz.e.MobFoodType.Liked]
             }
-          }), Ib.push({
+          }), Gz.push({
             str: " "
           });
-          for (const bb of ab) Ib.push({
-            icon: bb,
+          for (const zz of tz) Gz.push({
+            icon: zz,
             style: {
               fontSize: "1.5em"
             }
           });
-          Ib.push({
+          Gz.push({
             str: "\n"
-          }), Ib.push({
+          }), Gz.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Eb.c.feedTextColours[Eb.c.MobFoodType.Neutral]
+              color: Oz.e.feedTextColours[Oz.e.MobFoodType.Neutral]
             }
-          }), Ib.push({
+          }), Gz.push({
             str: " "
           });
-          for (const Ub of null !== (ub = bb.tameInfo.neutralFoods) && void 0 !== ub ? ub : []) {
-            var ub;
-            Ib.push({
-              icon: Ub,
+          for (const sz of null !== (dz = zz.tameInfo.neutralFoods) && void 0 !== dz ? dz : []) {
+            var dz;
+            Gz.push({
+              icon: sz,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          Ib.push({
+          Gz.push({
             str: "\n"
-          }), Ib.push({
+          }), Gz.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Eb.c.feedTextColours[Eb.c.MobFoodType.Disliked]
+              color: Oz.e.feedTextColours[Oz.e.MobFoodType.Disliked]
             }
-          }), Ib.push({
+          }), Gz.push({
             str: " "
           });
-          for (const Ub of null !== (rb = bb.tameInfo.dislikedFoods) && void 0 !== rb ? rb : []) {
-            var rb;
-            Ib.push({
-              icon: Ub,
+          for (const sz of null !== (hz = zz.tameInfo.dislikedFoods) && void 0 !== hz ? hz : []) {
+            var hz;
+            Gz.push({
+              icon: sz,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        Ib.length > 0 ? (Ib.shift(), Ib.unshift(...(0, Tb.kb)(Hb))) : Ib = (0, Tb.kb)(Hb)
+        Gz.length > 0 ? (Gz.shift(), Gz.unshift(...(0, Xz.sb)(Zz))) : Gz = (0, Xz.sb)(Zz)
       }
       return {
-        name: Nb,
-        desc: Ib,
-        fontStyle: null !== (ib = fb.customAttributes) && void 0 !== ib && ib.author ? "italic" : "normal"
+        name: Cz,
+        desc: Gz,
+        fontStyle: null !== (xz = mz.customAttributes) && void 0 !== xz && xz.author ? "italic" : "normal"
       }
     }
 
-    function yb(bb, ab, Ub, Ab) {
-      const Mb = Bb(bb, Ub),
-        Tb = Bb(bb, Ab);
-      if (!Mb) return !1;
-      const Eb = ab[Mb.name].armourReduction,
-        Yb = ab[Tb.name].armourReduction;
-      if (Yb === Eb) {
-        var eb, vb, Lb, Pb;
-        const bb = null !== (eb = null === (vb = Mb.attributes.customAttributes) || void 0 === vb ? void 0 : vb.enchantmentTier) && void 0 !== eb ? eb : "Tier 0",
-          ab = null !== (Lb = null === (Pb = Tb.attributes.customAttributes) || void 0 === Pb ? void 0 : Pb.enchantmentTier) && void 0 !== Lb ? Lb : "Tier 0";
-        return parseInt(bb.replace("Tier ", "")) >= parseInt(ab.replace("Tier ", ""))
+    function Hz(zz, tz, sz, Fz) {
+      const Wz = vz(zz, sz),
+        Xz = vz(zz, Fz);
+      if (!Wz) return !1;
+      const Oz = tz[Wz.name].armourReduction,
+        oz = tz[Xz.name].armourReduction;
+      if (oz === Oz) {
+        var Uz, Kz, uz, Nz;
+        const zz = null !== (Uz = null === (Kz = Wz.attributes.customAttributes) || void 0 === Kz ? void 0 : Kz.enchantmentTier) && void 0 !== Uz ? Uz : "Tier 0",
+          tz = null !== (uz = null === (Nz = Xz.attributes.customAttributes) || void 0 === Nz ? void 0 : Nz.enchantmentTier) && void 0 !== uz ? uz : "Tier 0";
+        return parseInt(zz.replace("Tier ", "")) >= parseInt(tz.replace("Tier ", ""))
       }
-      return Eb > Yb
+      return Oz > oz
     }
 
-    function Zb(bb) {
-      let ab;
-      if ("number" === typeof bb) {
-        const Ub = document.querySelector(`[data-inven-idx="${bb}"]`);
-        if (!Ub) return null;
-        ab = Ub.getBoundingClientRect()
-      } else ab = bb.getBoundingClientRect();
+    function Bz(zz) {
+      let tz;
+      if ("number" === typeof zz) {
+        const sz = document.querySelector(`[data-inven-idx="${zz}"]`);
+        if (!sz) return null;
+        tz = sz.getBoundingClientRect()
+      } else tz = zz.getBoundingClientRect();
       return {
-        x: ab.left + ab.width / 2,
-        y: ab.top + ab.height / 2
+        x: tz.left + tz.width / 2,
+        y: tz.top + tz.height / 2
       }
     }
   },
-  8802: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      c: () => Xb,
-      d: () => jb,
-      h: () => Rb
+  8739: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => bz,
+      h: () => wz,
+      k: () => Dz
     });
-    var Ab = Ub(1352),
-      Mb = Ub(52),
-      Tb = Ub(1238),
-      Eb = Ub(4211),
-      Yb = Ub(2221),
-      Bb = Ub(1134),
-      eb = Ub(101),
-      vb = Ub(1858),
-      Lb = Ub(1254),
-      Pb = Ub(1023);
+    var Fz = sz(1419),
+      Wz = sz(65),
+      Xz = sz(1287),
+      Oz = sz(4175),
+      oz = sz(2250),
+      vz = sz(1173),
+      Uz = sz(106),
+      Kz = sz(1901),
+      uz = sz(1306),
+      Nz = sz(1087);
 
-    function Xb(bb) {
+    function bz(zz) {
       let {
-        show: ab,
-        onClose: Ub
-      } = bb;
+        show: tz,
+        onClose: sz
+      } = zz;
       const {
-        requestedGameNameWithVariation: Ab,
-        lobbyName: Mb,
-        shownLobbyName: Tb
-      } = (0, vb.k)("connectedGame"), Bb = (0, Yb.e)(Ab, Mb, !1);
-      return eb.featureFlags.canUseInviteLinks && (0, Pb.jsx)(Eb.d, {
-        show: ab,
-        close: Ub,
+        requestedGameNameWithVariation: Fz,
+        lobbyName: Wz,
+        shownLobbyName: Xz
+      } = (0, Kz.l)("connectedGame"), vz = (0, oz.c)(Fz, Wz, !1);
+      return Uz.featureFlags.canUseInviteLinks && (0, Nz.jsx)(Oz.b, {
+        show: tz,
+        close: sz,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, Pb.jsxs)("div", {
+        children: (0, Nz.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, Pb.jsx)("div", {
+          children: [(0, Nz.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, Pb.jsxs)("div", {
+          }), (0, Nz.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, Pb.jsx)("div", {
+            children: [(0, Nz.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === Bb ? (0, Pb.jsx)(Lb.b, {}) : Bb, (0, Pb.jsx)("br", {}), "Lobby Name: ", Tb, (0, Pb.jsx)("br", {}), (0, Pb.jsx)("br", {}), (0, Pb.jsx)("br", {}), (0, Pb.jsx)("div", {
+            }), "Game: ", null === vz ? (0, Nz.jsx)(uz.d, {}) : vz, (0, Nz.jsx)("br", {}), "Lobby Name: ", Xz, (0, Nz.jsx)("br", {}), (0, Nz.jsx)("br", {}), (0, Nz.jsx)("br", {}), (0, Nz.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, Pb.jsx)(jb, {})]
+          }), (0, Nz.jsx)(wz, {})]
         })
       })
     }
 
-    function jb() {
-      var bb;
+    function wz() {
+      var zz;
       const {
-        t: ab
-      } = (0, Bb.A)(), Ub = null !== (bb = Rb(eb.featureFlags.canUseInviteLinks)) && void 0 !== bb ? bb : "Loading Link...", [Tb, Eb] = (0, Mb.useState)(0), [Yb, vb] = (0, Mb.useReducer)((bb => bb + 1), 0);
-      return (0, Mb.useEffect)((() => {
-        const bb = setTimeout((() => {
-          vb()
+        t: tz
+      } = (0, vz.B)(), sz = null !== (zz = Dz(Uz.featureFlags.canUseInviteLinks)) && void 0 !== zz ? zz : "Loading Link...", [Xz, Oz] = (0, Wz.useState)(0), [oz, Kz] = (0, Wz.useReducer)((zz => zz + 1), 0);
+      return (0, Wz.useEffect)((() => {
+        const zz = setTimeout((() => {
+          Kz()
         }), 1100);
         return () => {
-          clearTimeout(bb)
+          clearTimeout(zz)
         }
-      }), [Tb]), eb.featureFlags.canUseInviteLinks && (0, Pb.jsxs)("div", {
+      }), [Xz]), Uz.featureFlags.canUseInviteLinks && (0, Nz.jsxs)("div", {
         className: "InviteLinkInnerWrapper",
-        children: [(0, Pb.jsx)("div", {
+        children: [(0, Nz.jsx)("div", {
           className: "InviteLinkInner",
-          children: Ub
-        }), (0, Pb.jsx)(Ab.g, {
+          children: sz
+        }), (0, Nz.jsx)(Fz.h, {
           className: "InviteLinkCopyButton",
           onClick: () => {
-            navigator.clipboard.writeText(Ub).catch((bb => {
-              console.error("Failed to copy invite link:", bb)
-            })), Eb(Date.now())
+            navigator.clipboard.writeText(sz).catch((zz => {
+              console.error("Failed to copy invite link:", zz)
+            })), Oz(Date.now())
           },
-          disabled: Date.now() - Tb < 1e3,
-          children: Date.now() - Tb < 1e3 ? ab("general:copied") : ab("general:copy")
+          disabled: Date.now() - Xz < 1e3,
+          children: Date.now() - Xz < 1e3 ? tz("general:copied") : tz("general:copy")
         })]
       })
     }
 
-    function Rb(bb) {
-      const [ab, Ub] = (0, Mb.useState)(null);
-      return (0, Mb.useEffect)((() => {
-        if (!bb) return;
-        let ab = !0;
-        return (0, Tb.y)().then((bb => {
-          ab && Ub(bb)
-        })).catch((bb => {
-          console.error("Failed to get invite link:", bb)
+    function Dz(zz) {
+      const [tz, sz] = (0, Wz.useState)(null);
+      return (0, Wz.useEffect)((() => {
+        if (!zz) return;
+        let tz = !0;
+        return (0, Xz.E)().then((zz => {
+          tz && sz(zz)
+        })).catch((zz => {
+          console.error("Failed to get invite link:", zz)
         })), () => {
-          ab = !1
+          tz = !1
         }
-      }), [bb]), ab
+      }), [zz]), tz
     }
   },
-  8898: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      c: () => eb
+  8834: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Uz
     });
-    var Ab = Ub(52),
-      Mb = Ub(984),
-      Tb = Ub.n(Mb),
-      Eb = Ub(1858),
-      Yb = Ub(1023);
+    var Fz = sz(65),
+      Wz = sz(1020),
+      Xz = sz.n(Wz),
+      Oz = sz(1901),
+      oz = sz(1087);
 
-    function Bb(bb) {
-      const ab = Math.floor(bb / 3600),
-        Ub = Math.floor(bb % 3600 / 60),
-        Ab = Math.floor(bb % 60),
-        Mb = `${Ub.toString().padStart(2,"0")}:${Ab.toString().padStart(2,"0")}`;
-      return ab > 0 ? `${ab}:${Mb}` : Mb
+    function vz(zz) {
+      const tz = Math.floor(zz / 3600),
+        sz = Math.floor(zz % 3600 / 60),
+        Fz = Math.floor(zz % 60),
+        Wz = `${sz.toString().padStart(2,"0")}:${Fz.toString().padStart(2,"0")}`;
+      return tz > 0 ? `${tz}:${Wz}` : Wz
     }
-    const eb = (0, Ab.memo)((function(bb) {
+    const Uz = (0, Fz.memo)((function(zz) {
       let {
-        className: ab
-      } = bb;
+        className: tz
+      } = zz;
       const {
-        recording: Ub,
-        seconds: Ab
-      } = (0, Eb.k)("replayRecorder");
-      return Ub ? (0, Yb.jsxs)("div", {
-        className: Tb()("RecordingIndicator", ab),
-        children: [(0, Yb.jsx)("span", {
+        recording: sz,
+        seconds: Fz
+      } = (0, Oz.l)("replayRecorder");
+      return sz ? (0, oz.jsxs)("div", {
+        className: Xz()("RecordingIndicator", tz),
+        children: [(0, oz.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, Yb.jsx)("span", {
+        }), (0, oz.jsx)("span", {
           className: "RecordingIndicatorLabel",
           children: "REC"
-        }), (0, Yb.jsx)("span", {
+        }), (0, oz.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: Bb(Ab)
+          children: vz(Fz)
         })]
       }) : null
     }))
   },
-  4575: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => kb
+  4514: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => gz
     });
-    var Ab = Ub(984),
-      Mb = Ub.n(Ab),
-      Tb = Ub(4329),
-      Eb = Ub(1134),
-      Yb = Ub(990),
-      Bb = Ub(1352),
-      eb = Ub(1413),
-      vb = Ub(1260),
-      Lb = Ub(2337),
-      Pb = Ub(1023);
-    const Xb = {
+    var Fz = sz(1020),
+      Wz = sz.n(Fz),
+      Xz = sz(4295),
+      Oz = sz(1173),
+      oz = sz(1036),
+      vz = sz(1419),
+      Uz = sz(1466),
+      Kz = sz(1319),
+      uz = sz(2341),
+      Nz = sz(1087);
+    const bz = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -8139,354 +8139,354 @@ export const modules = {
       }
     };
 
-    function jb(bb) {
+    function wz(zz) {
       let {
-        platform: ab
-      } = bb;
-      const Ub = "youtube" === ab;
-      return (0, Pb.jsxs)("span", {
-        className: Mb()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: Ub
+        platform: tz
+      } = zz;
+      const sz = "youtube" === tz;
+      return (0, Nz.jsxs)("span", {
+        className: Wz()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: sz
         }),
-        children: [Ub && (0, Pb.jsx)(Lb.e, {
+        children: [sz && (0, Nz.jsx)(uz.c, {
           variant: "white"
-        }), !Ub && (0, Pb.jsx)(Yb.e, {
-          name: Xb[ab].icon,
+        }), !sz && (0, Nz.jsx)(oz.c, {
+          name: bz[tz].icon,
           kit: "brands"
         })]
       })
     }
 
-    function Rb(bb) {
+    function Dz(zz) {
       let {
-        platform: ab,
-        link: Ub,
-        editable: Ab,
-        userContext: Mb,
-        onLinksUpdated: Lb
-      } = bb;
+        platform: tz,
+        link: sz,
+        editable: Fz,
+        userContext: Wz,
+        onLinksUpdated: uz
+      } = zz;
       const {
-        t: Rb
-      } = (0, Eb.A)(), kb = Xb[ab];
-      if (!Ub && !Ab) return null;
+        t: Dz
+      } = (0, Oz.B)(), gz = bz[tz];
+      if (!sz && !Fz) return null;
 
-      function yb() {
-        var bb;
-        if (!Mb || !Lb) return;
-        vb.NotificationProvider.showInputPopup({
+      function Hz() {
+        var zz;
+        if (!Wz || !uz) return;
+        Kz.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: kb.name
+              platform: gz.name
             }
           },
-          prefixText: Tb.z[ab],
+          prefixText: Xz.p[tz],
           placeholderText: "playBloxd",
-          initialValue: null !== (bb = null === Ub || void 0 === Ub ? void 0 : Ub.handle) && void 0 !== bb ? bb : "",
+          initialValue: null !== (zz = null === sz || void 0 === sz ? void 0 : sz.handle) && void 0 !== zz ? zz : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: Ub ? "general:remove" : void 0
-        }).getResult().then((async bb => {
-          if ("notificationTornDown" !== bb && null !== bb) try {
-            "submit" === bb.type ? await eb.b.setSocialLink(Mb, ab, bb.value) : await eb.b.clearSocialLink(Mb, ab), Lb()
-          } catch (Ub) {
-            console.error("Failed to update social link", Ub), vb.NotificationProvider.showAlertPopup({
-              title: Ub.errorMessageForUser,
+          secondaryButtonText: sz ? "general:remove" : void 0
+        }).getResult().then((async zz => {
+          if ("notificationTornDown" !== zz && null !== zz) try {
+            "submit" === zz.type ? await Uz.d.setSocialLink(Wz, tz, zz.value) : await Uz.d.clearSocialLink(Wz, tz), uz()
+          } catch (sz) {
+            console.error("Failed to update social link", sz), Kz.NotificationProvider.showAlertPopup({
+              title: sz.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (Ub) {
-        const bb = `@${Ub.handle}`;
-        return (0, Pb.jsxs)("a", {
+      if (sz) {
+        const zz = `@${sz.handle}`;
+        return (0, Nz.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: kb.color
+            background: gz.color
           },
-          href: Ub.profileUrl,
+          href: sz.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, Pb.jsxs)("div", {
+          children: [(0, Nz.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, Pb.jsx)(jb, {
-              platform: ab
-            }), (0, Pb.jsx)("span", {
+            children: [(0, Nz.jsx)(wz, {
+              platform: tz
+            }), (0, Nz.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, Pb.jsx)("span", {
+              children: (0, Nz.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: bb
+                children: zz
               })
             })]
-          }), Ab && (0, Pb.jsx)("button", {
+          }), Fz && (0, Nz.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, Bb.Q)({
+            ...(0, vz.T)({
               stopPropagation: !0
             }),
-            onClick: bb => {
-              bb.stopPropagation(), bb.preventDefault(), yb()
+            onClick: zz => {
+              zz.stopPropagation(), zz.preventDefault(), Hz()
             },
-            children: (0, Pb.jsx)(Yb.e, {
+            children: (0, Nz.jsx)(oz.c, {
               name: "pen-to-square"
             })
-          }), !Ab && (0, Pb.jsx)("span", {
+          }), !Fz && (0, Nz.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, Pb.jsx)(Yb.e, {
+            children: (0, Nz.jsx)(oz.c, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, Pb.jsxs)("button", {
+      return (0, Nz.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: kb.color
+          background: gz.color
         },
-        ...(0, Bb.Q)(),
+        ...(0, vz.T)(),
         onClick: () => {
-          yb()
+          Hz()
         },
-        children: [(0, Pb.jsx)(jb, {
-          platform: ab
-        }), (0, Pb.jsxs)("span", {
+        children: [(0, Nz.jsx)(wz, {
+          platform: tz
+        }), (0, Nz.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, Pb.jsx)("span", {
+          children: [(0, Nz.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: kb.name
-          }), (0, Pb.jsx)("span", {
+            children: gz.name
+          }), (0, Nz.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: Rb("homePage:profileSocialLinkAdd")
+            children: Dz("homePage:profileSocialLinkAdd")
           })]
-        }), (0, Pb.jsx)("span", {
+        }), (0, Nz.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, Pb.jsx)(Yb.e, {
+          children: (0, Nz.jsx)(oz.c, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function kb(bb) {
+    function gz(zz) {
       let {
-        socialLinks: ab,
-        editable: Ub = !1,
-        userContext: Ab,
-        onLinksUpdated: Mb
-      } = bb;
-      if (!Ub && 0 === ab.length) return null;
-      const Eb = new Map(ab.map((bb => [bb.platform, bb]))),
-        Yb = Ub ? Tb.v : ab.map((bb => bb.platform));
-      return (0, Pb.jsx)("div", {
+        socialLinks: tz,
+        editable: sz = !1,
+        userContext: Fz,
+        onLinksUpdated: Wz
+      } = zz;
+      if (!sz && 0 === tz.length) return null;
+      const Oz = new Map(tz.map((zz => [zz.platform, zz]))),
+        oz = sz ? Xz.n : tz.map((zz => zz.platform));
+      return (0, Nz.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, Pb.jsx)("div", {
+        children: (0, Nz.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: Yb.map((bb => (0, Pb.jsx)(Rb, {
-            platform: bb,
-            link: Eb.get(bb),
-            editable: Ub,
-            userContext: Ab,
-            onLinksUpdated: Mb
-          }, bb)))
+          children: oz.map((zz => (0, Nz.jsx)(Dz, {
+            platform: zz,
+            link: Oz.get(zz),
+            editable: sz,
+            userContext: Fz,
+            onLinksUpdated: Wz
+          }, zz)))
         })
       })
     }
   },
-  8906: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Tb
+  8843: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Xz
     });
-    var Ab = Ub(4218),
-      Mb = Ub(4225);
+    var Fz = sz(4178),
+      Wz = sz(4180);
 
-    function Tb(bb) {
+    function Xz(zz) {
       let {
-        children: ab,
-        showing: Ub,
-        globallyUniqueKey: Tb,
-        alwaysMountChildren: Eb = !1,
-        doGameplayStartStopOnShow: Yb = !0,
-        keepsMovement: Bb = !1
-      } = bb;
-      return (0, Mb.b)(!0, Ub, Tb, Bb), (0, Ab.c)(Yb, Ub), Ub || Eb ? ab : null
+        children: tz,
+        showing: sz,
+        globallyUniqueKey: Xz,
+        alwaysMountChildren: Oz = !1,
+        doGameplayStartStopOnShow: oz = !0,
+        keepsMovement: vz = !1
+      } = zz;
+      return (0, Wz.b)(!0, sz, Xz, vz), (0, Fz.e)(oz, sz), sz || Oz ? tz : null
     }
   },
-  8957: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      c: () => Tb
+  8900: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Xz
     });
-    var Ab = Ub(52),
-      Mb = Ub(3237);
+    var Fz = sz(65),
+      Wz = sz(3252);
 
-    function Tb() {
-      const [bb, ab] = (0, Ab.useState)(!1);
-      return (0, Ab.useLayoutEffect)((() => {
-        let bb = !0;
-        return (0, Mb.b)().then((() => {
-          bb && ab(!0)
+    function Xz() {
+      const [zz, tz] = (0, Fz.useState)(!1);
+      return (0, Fz.useLayoutEffect)((() => {
+        let zz = !0;
+        return (0, Wz.d)().then((() => {
+          zz && tz(!0)
         })), () => {
-          bb = !1
+          zz = !1
         }
-      }), []), bb
+      }), []), zz
     }
   },
-  6188: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Tb
+  6151: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Xz
     });
-    var Ab = Ub(52),
-      Mb = Ub(31);
+    var Fz = sz(65),
+      Wz = sz(44);
 
-    function Tb(bb, ab) {
-      var Ub;
-      const [Tb, Eb] = (0, Ab.useState)(null !== (Ub = Mb.f.getItem(bb)) && void 0 !== Ub ? Ub : ab);
-      return [Tb, ab => {
-        Mb.f.setItem(bb, ab), Eb(ab)
+    function Xz(zz, tz) {
+      var sz;
+      const [Xz, Oz] = (0, Fz.useState)(null !== (sz = Wz.f.getItem(zz)) && void 0 !== sz ? sz : tz);
+      return [Xz, tz => {
+        Wz.f.setItem(zz, tz), Oz(tz)
       }]
     }
   },
-  8879: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Pb,
-      f: () => Lb
+  8813: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => Nz,
+      f: () => uz
     });
-    Ub(8884);
-    var Ab = Ub(984),
-      Mb = Ub.n(Ab),
-      Tb = Ub(52),
-      Eb = Ub(8842);
+    sz(8821);
+    var Fz = sz(1020),
+      Wz = sz.n(Fz),
+      Xz = sz(65),
+      Oz = sz(8785);
 
-    function Yb(bb, ab) {
-      return Math.max(1, Math.round(bb * ab))
+    function oz(zz, tz) {
+      return Math.max(1, Math.round(zz * tz))
     }
 
-    function Bb(bb, ab, Ub) {
-      const Ab = 2 * Ub >= ab - 1;
+    function vz(zz, tz, sz) {
+      const Fz = 2 * sz >= tz - 1;
       return {
-        x: bb,
-        y: bb,
-        size: ab,
-        border: Math.min(Ub, Math.floor(ab / 2)),
-        filled: Ab
+        x: zz,
+        y: zz,
+        size: tz,
+        border: Math.min(sz, Math.floor(tz / 2)),
+        filled: Fz
       }
     }
-    var eb = Ub(1023);
-    const vb = 1.4;
+    var Uz = sz(1087);
+    const Kz = 1.4;
 
-    function Lb(bb, ab) {
-      return bb && ab ? `scale(${vb})` : "scale(1)"
+    function uz(zz, tz) {
+      return zz && tz ? `scale(${Kz})` : "scale(1)"
     }
 
-    function Pb(bb) {
-      return "classic" === bb.settings.style ? (0, eb.jsx)(Rb, {
-        ...bb
-      }) : (0, eb.jsx)(ib, {
-        ...bb
+    function Nz(zz) {
+      return "classic" === zz.settings.style ? (0, Uz.jsx)(Dz, {
+        ...zz
+      }) : (0, Uz.jsx)(xz, {
+        ...zz
       })
     }
-    const Xb = .125;
+    const bz = .125;
 
-    function jb(bb, ab) {
-      const Ub = {};
-      if (bb.color !== Eb.d.color && (Ub.color = (0, Eb.i)(bb.color)), bb.opacity !== Eb.d.opacity && (Ub.opacity = bb.opacity / 100), bb.outline !== Eb.d.outline || bb.outlineColor !== Eb.d.outlineColor) {
-        const ab = bb.outline,
-          Ab = (0, Eb.i)(bb.outlineColor);
-        Ub.textShadow = ab > 0 ? `-${ab}px 0 ${Ab}, 0 ${ab}px ${Ab}, ${ab}px 0 ${Ab}, 0 -${ab}px ${Ab}` : "none"
+    function wz(zz, tz) {
+      const sz = {};
+      if (zz.color !== Oz.h.color && (sz.color = (0, Oz.n)(zz.color)), zz.opacity !== Oz.h.opacity && (sz.opacity = zz.opacity / 100), zz.outline !== Oz.h.outline || zz.outlineColor !== Oz.h.outlineColor) {
+        const tz = zz.outline,
+          Fz = (0, Oz.n)(zz.outlineColor);
+        sz.textShadow = tz > 0 ? `-${tz}px 0 ${Fz}, 0 ${tz}px ${Fz}, ${tz}px 0 ${Fz}, 0 -${tz}px ${Fz}` : "none"
       }
-      if (bb.size !== Eb.d.size) {
-        const Ab = bb.size / 100;
-        Ub.fontSize = ab ? `calc(max(1.3rem, 18px) * ${Ab})` : `calc(1.3rem * ${Ab})`, Ub.marginTop = `-${Xb}em`, Ub.transformOrigin = `50% calc(50% + ${Xb}em)`
+      if (zz.size !== Oz.h.size) {
+        const Fz = zz.size / 100;
+        sz.fontSize = tz ? `calc(max(1.3rem, 18px) * ${Fz})` : `calc(1.3rem * ${Fz})`, sz.marginTop = `-${bz}em`, sz.transformOrigin = `50% calc(50% + ${bz}em)`
       }
-      return Ub
+      return sz
     }
 
-    function Rb(bb) {
+    function Dz(zz) {
       let {
-        settings: ab,
-        touch: Ub,
-        inPreview: Ab,
-        inEditor: Tb,
-        pressed: Eb = !1,
-        pressRef: Yb
-      } = bb;
-      return (0, eb.jsx)("div", {
-        className: Mb()("Crosshair", {
-          Touch: Ub,
-          CrosshairInPreview: Ab,
-          CrosshairInEditor: Tb || Ab
+        settings: tz,
+        touch: sz,
+        inPreview: Fz,
+        inEditor: Xz,
+        pressed: Oz = !1,
+        pressRef: oz
+      } = zz;
+      return (0, Uz.jsx)("div", {
+        className: Wz()("Crosshair", {
+          Touch: sz,
+          CrosshairInPreview: Fz,
+          CrosshairInEditor: Xz || Fz
         }),
-        ref: Yb,
+        ref: oz,
         style: {
-          transform: Lb(Eb, ab.growOnClick),
-          ...jb(ab, Ub)
+          transform: uz(Oz, tz.growOnClick),
+          ...wz(tz, sz)
         },
         children: "+"
       })
     }
 
-    function kb(bb, ab) {
-      return bb / ab + "px"
+    function gz(zz, tz) {
+      return zz / tz + "px"
     }
 
-    function yb(bb, ab, Ub, Ab) {
+    function Hz(zz, tz, sz, Fz) {
       return {
-        ...zb(bb, ab, Ub),
-        width: kb(bb.w, Ub),
-        height: kb(bb.h, Ub),
-        background: Ab
+        ...rz(zz, tz, sz),
+        width: gz(zz.w, sz),
+        height: gz(zz.h, sz),
+        background: Fz
       }
     }
 
-    function Zb(bb, ab, Ub) {
+    function Bz(zz, tz, sz) {
       return {
-        left: kb(bb.x, ab),
-        top: kb(bb.y, ab),
-        width: kb(bb.size, ab),
-        height: kb(bb.size, ab),
-        borderWidth: kb(bb.border, ab),
-        borderColor: Ub,
-        background: bb.filled ? Ub : void 0
+        left: gz(zz.x, tz),
+        top: gz(zz.y, tz),
+        width: gz(zz.size, tz),
+        height: gz(zz.size, tz),
+        borderWidth: gz(zz.border, tz),
+        borderColor: sz,
+        background: zz.filled ? sz : void 0
       }
     }
-    const Db = {
+    const Pz = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function zb(bb, ab, Ub) {
-      const [Ab, Mb] = bb.arm ? Db[bb.arm] : [0, 0], Tb = Math.round(ab * Ub);
+    function rz(zz, tz, sz) {
+      const [Fz, Wz] = zz.arm ? Pz[zz.arm] : [0, 0], Xz = Math.round(tz * sz);
       return {
-        left: kb(bb.x + Ab * Tb, Ub),
-        top: kb(bb.y + Mb * Tb, Ub)
+        left: gz(zz.x + Fz * Xz, sz),
+        top: gz(zz.y + Wz * Xz, sz)
       }
     }
 
-    function xb(bb) {
-      return bb.arm ? {
-        "data-arm": bb.arm,
-        "data-x": bb.x,
-        "data-y": bb.y
+    function Yz(zz) {
+      return zz.arm ? {
+        "data-arm": zz.arm,
+        "data-x": zz.x,
+        "data-y": zz.y
       } : {}
     }
 
-    function ib(bb) {
+    function xz(zz) {
       let {
-        settings: ab,
-        inPreview: Ub,
-        inEditor: Ab,
-        pressed: Lb = !1,
-        spread: Pb,
-        spreadRef: Xb
-      } = bb;
-      const jb = (0, Tb.useRef)(null),
+        settings: tz,
+        inPreview: sz,
+        inEditor: Fz,
+        pressed: uz = !1,
+        spread: Nz,
+        spreadRef: bz
+      } = zz;
+      const wz = (0, Xz.useRef)(null),
         {
-          box: Rb,
-          dpr: kb
-        } = function(bb) {
-          const [ab, Ub] = (0, Tb.useState)({
+          box: Dz,
+          dpr: gz
+        } = function(zz) {
+          const [tz, sz] = (0, Xz.useState)({
             box: {
               left: 0,
               top: 0,
@@ -8495,282 +8495,282 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, Tb.useLayoutEffect)((() => {
-            const ab = bb.current;
-            if (!ab) return;
-            const Ab = () => {
-              const bb = ab.getBoundingClientRect(),
-                Ab = window.devicePixelRatio || 1;
-              Ub((ab => ab.dpr === Ab && ab.box.left === bb.left && ab.box.top === bb.top && ab.box.width === bb.width && ab.box.height === bb.height ? ab : {
+          return (0, Xz.useLayoutEffect)((() => {
+            const tz = zz.current;
+            if (!tz) return;
+            const Fz = () => {
+              const zz = tz.getBoundingClientRect(),
+                Fz = window.devicePixelRatio || 1;
+              sz((tz => tz.dpr === Fz && tz.box.left === zz.left && tz.box.top === zz.top && tz.box.width === zz.width && tz.box.height === zz.height ? tz : {
                 box: {
-                  left: bb.left,
-                  top: bb.top,
-                  width: bb.width,
-                  height: bb.height
+                  left: zz.left,
+                  top: zz.top,
+                  width: zz.width,
+                  height: zz.height
                 },
-                dpr: Ab
+                dpr: Fz
               }))
             };
-            Ab();
-            const Mb = new ResizeObserver(Ab);
-            return Mb.observe(ab), window.addEventListener("resize", Ab), window.addEventListener("scroll", Ab, !0), () => {
-              Mb.disconnect(), window.removeEventListener("resize", Ab), window.removeEventListener("scroll", Ab, !0)
+            Fz();
+            const Wz = new ResizeObserver(Fz);
+            return Wz.observe(tz), window.addEventListener("resize", Fz), window.addEventListener("scroll", Fz, !0), () => {
+              Wz.disconnect(), window.removeEventListener("resize", Fz), window.removeEventListener("scroll", Fz, !0)
             }
-          }), [bb]), ab
-        }(jb),
-        Db = (0, Tb.useRef)(kb);
-      Db.current = kb;
-      const ib = function(bb, ab) {
-          const Ub = Yb(bb.lineThickness, ab),
-            Ab = Yb(bb.lineLength, ab),
-            Mb = Math.round(bb.gap * ab),
-            Tb = Yb(bb.dotSize, ab),
-            Eb = bb.outline > 0 ? Yb(bb.outline, ab) : 0,
-            eb = Yb(bb.circleThickness, ab),
-            vb = bb.circle ? Math.round(bb.circleRadius * ab * 2 + eb) : 0,
-            Lb = function(bb, ab, Ub, Ab) {
-              return bb.lines ? ab : bb.dot ? Ub : bb.circle && Ab % 2 === 0 ? 2 : 1
-            }(bb, Ub, Tb, vb),
-            Pb = [];
-          if (bb.lines && (Pb.push({
-              x: Lb + Mb,
+          }), [zz]), tz
+        }(wz),
+        Pz = (0, Xz.useRef)(gz);
+      Pz.current = gz;
+      const xz = function(zz, tz) {
+          const sz = oz(zz.lineThickness, tz),
+            Fz = oz(zz.lineLength, tz),
+            Wz = Math.round(zz.gap * tz),
+            Xz = oz(zz.dotSize, tz),
+            Oz = zz.outline > 0 ? oz(zz.outline, tz) : 0,
+            Uz = oz(zz.circleThickness, tz),
+            Kz = zz.circle ? Math.round(zz.circleRadius * tz * 2 + Uz) : 0,
+            uz = function(zz, tz, sz, Fz) {
+              return zz.lines ? tz : zz.dot ? sz : zz.circle && Fz % 2 === 0 ? 2 : 1
+            }(zz, sz, Xz, Kz),
+            Nz = [];
+          if (zz.lines && (Nz.push({
+              x: uz + Wz,
               y: 0,
-              w: Ab,
-              h: Ub,
+              w: Fz,
+              h: sz,
               arm: "right"
-            }), Pb.push({
-              x: -Mb - Ab,
+            }), Nz.push({
+              x: -Wz - Fz,
               y: 0,
-              w: Ab,
-              h: Ub,
+              w: Fz,
+              h: sz,
               arm: "left"
-            }), Pb.push({
+            }), Nz.push({
               x: 0,
-              y: Lb + Mb,
-              w: Ub,
-              h: Ab,
+              y: uz + Wz,
+              w: sz,
+              h: Fz,
               arm: "down"
-            }), bb.tStyle || Pb.push({
+            }), zz.tStyle || Nz.push({
               x: 0,
-              y: -Mb - Ab,
-              w: Ub,
-              h: Ab,
+              y: -Wz - Fz,
+              w: sz,
+              h: Fz,
               arm: "up"
-            }), 0 === Mb && Pb.push({
+            }), 0 === Wz && Nz.push({
               x: 0,
               y: 0,
-              w: Ub,
-              h: Ub
-            })), bb.dot) {
-            const bb = Math.floor((Lb - Tb) / 2);
-            Pb.push({
-              x: bb,
-              y: bb,
-              w: Tb,
-              h: Tb
+              w: sz,
+              h: sz
+            })), zz.dot) {
+            const zz = Math.floor((uz - Xz) / 2);
+            Nz.push({
+              x: zz,
+              y: zz,
+              w: Xz,
+              h: Xz
             })
           }
-          const Xb = Pb.map((bb => ({
-            ...bb,
-            x: bb.x - Eb,
-            y: bb.y - Eb,
-            w: bb.w + 2 * Eb,
-            h: bb.h + 2 * Eb
+          const bz = Nz.map((zz => ({
+            ...zz,
+            x: zz.x - Oz,
+            y: zz.y - Oz,
+            w: zz.w + 2 * Oz,
+            h: zz.h + 2 * Oz
           })));
-          let jb = null,
-            Rb = null;
-          if (bb.circle) {
-            const bb = vb + ((vb - Lb) % 2 === 0 ? 0 : 1),
-              ab = (Lb - bb) / 2;
-            jb = Bb(ab, bb, eb), Eb > 0 && (Rb = Bb(ab - Eb, bb + 2 * Eb, eb + 2 * Eb))
+          let wz = null,
+            Dz = null;
+          if (zz.circle) {
+            const zz = Kz + ((Kz - uz) % 2 === 0 ? 0 : 1),
+              tz = (uz - zz) / 2;
+            wz = vz(tz, zz, Uz), Oz > 0 && (Dz = vz(tz - Oz, zz + 2 * Oz, Uz + 2 * Oz))
           }
           return {
-            cell: Lb,
-            fills: Pb,
-            outlines: Eb > 0 ? Xb : [],
-            ring: jb,
-            ringOutline: Rb
+            cell: uz,
+            fills: Nz,
+            outlines: Oz > 0 ? bz : [],
+            ring: wz,
+            ringOutline: Dz
           }
-        }(Lb && ab.growOnClick ? function(bb, ab) {
+        }(uz && tz.growOnClick ? function(zz, tz) {
           return {
-            ...bb,
-            outline: bb.outline * ab,
-            lineLength: bb.lineLength * ab,
-            lineThickness: bb.lineThickness * ab,
-            gap: bb.gap * ab,
-            dotSize: bb.dotSize * ab,
-            circleRadius: bb.circleRadius * ab,
-            circleThickness: bb.circleThickness * ab
+            ...zz,
+            outline: zz.outline * tz,
+            lineLength: zz.lineLength * tz,
+            lineThickness: zz.lineThickness * tz,
+            gap: zz.gap * tz,
+            dotSize: zz.dotSize * tz,
+            circleRadius: zz.circleRadius * tz,
+            circleThickness: zz.circleThickness * tz
           }
-        }(ab, vb) : ab, kb),
-        fb = function(bb, ab, Ub) {
-          const Ab = Math.round((bb.left + bb.width / 2) * Ub - ab / 2),
-            Mb = Math.round((bb.top + bb.height / 2) * Ub - ab / 2);
+        }(tz, Kz) : tz, gz),
+        mz = function(zz, tz, sz) {
+          const Fz = Math.round((zz.left + zz.width / 2) * sz - tz / 2),
+            Wz = Math.round((zz.top + zz.height / 2) * sz - tz / 2);
           return {
-            x: Ab / Ub - bb.left,
-            y: Mb / Ub - bb.top
+            x: Fz / sz - zz.left,
+            y: Wz / sz - zz.top
           }
-        }(Rb, ib.cell, kb),
-        mb = (0, Eb.i)(ab.color),
-        pb = (0, Eb.i)(ab.outlineColor),
-        Nb = (0, Tb.useRef)(0);
-      (0, Tb.useLayoutEffect)((() => {
-        if (Xb) return Xb.current = bb => {
-          var ab;
-          Nb.current = bb, null === (ab = jb.current) || void 0 === ab || ab.querySelectorAll("[data-arm]").forEach((ab => {
-            Object.assign(ab.style, zb(function(bb) {
+        }(Dz, xz.cell, gz),
+        Jz = (0, Oz.n)(tz.color),
+        Iz = (0, Oz.n)(tz.outlineColor),
+        Cz = (0, Xz.useRef)(0);
+      (0, Xz.useLayoutEffect)((() => {
+        if (bz) return bz.current = zz => {
+          var tz;
+          Cz.current = zz, null === (tz = wz.current) || void 0 === tz || tz.querySelectorAll("[data-arm]").forEach((tz => {
+            Object.assign(tz.style, rz(function(zz) {
               return {
-                x: Number(bb.dataset.x),
-                y: Number(bb.dataset.y),
-                arm: bb.dataset.arm
+                x: Number(zz.dataset.x),
+                y: Number(zz.dataset.y),
+                arm: zz.dataset.arm
               }
-            }(ab), bb, Db.current))
+            }(tz), zz, Pz.current))
           }))
         }, () => {
-          Xb.current = null
+          bz.current = null
         }
-      }), [Xb]);
-      const Wb = null !== Pb && void 0 !== Pb ? Pb : Nb.current;
-      return (0, eb.jsx)("div", {
-        ref: jb,
-        className: Mb()("CrosshairShapes", {
-          CrosshairInPreview: Ub,
-          CrosshairInEditor: Ab || Ub,
-          CrosshairSpreads: void 0 !== Xb
+      }), [bz]);
+      const ez = null !== Nz && void 0 !== Nz ? Nz : Cz.current;
+      return (0, Uz.jsx)("div", {
+        ref: wz,
+        className: Wz()("CrosshairShapes", {
+          CrosshairInPreview: sz,
+          CrosshairInEditor: Fz || sz,
+          CrosshairSpreads: void 0 !== bz
         }),
-        children: (0, eb.jsx)("div", {
+        children: (0, Uz.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: fb.x,
-            top: fb.y,
-            opacity: ab.opacity / 100
+            left: mz.x,
+            top: mz.y,
+            opacity: tz.opacity / 100
           },
-          children: (0, eb.jsxs)("div", {
+          children: (0, Uz.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [ib.ringOutline && (0, eb.jsx)("div", {
+            children: [xz.ringOutline && (0, Uz.jsx)("div", {
               className: "CrosshairRing",
-              style: Zb(ib.ringOutline, kb, pb)
-            }), ib.outlines.map(((bb, ab) => (0, eb.jsx)("div", {
+              style: Bz(xz.ringOutline, gz, Iz)
+            }), xz.outlines.map(((zz, tz) => (0, Uz.jsx)("div", {
               className: "CrosshairPart",
-              ...xb(bb),
-              style: yb(bb, Wb, kb, pb)
-            }, `o${ab}`))), ib.ring && (0, eb.jsx)("div", {
+              ...Yz(zz),
+              style: Hz(zz, ez, gz, Iz)
+            }, `o${tz}`))), xz.ring && (0, Uz.jsx)("div", {
               className: "CrosshairRing",
-              style: Zb(ib.ring, kb, mb)
-            }), ib.fills.map(((bb, ab) => (0, eb.jsx)("div", {
+              style: Bz(xz.ring, gz, Jz)
+            }), xz.fills.map(((zz, tz) => (0, Uz.jsx)("div", {
               className: "CrosshairPart",
-              ...xb(bb),
-              style: yb(bb, Wb, kb, mb)
-            }, `f${ab}`)))]
+              ...Yz(zz),
+              style: Hz(zz, ez, gz, Jz)
+            }, `f${tz}`)))]
           })
         })
       })
     }
   },
-  8889: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => vb,
-      f: () => kb,
-      h: () => Rb
+  8823: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Kz,
+      g: () => gz,
+      k: () => Dz
     });
-    var Ab = Ub(8842);
-    const Mb = "XH1-",
-      Tb = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      Eb = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      Yb = ["color", "outlineColor"],
-      Bb = 1 + 3 * Yb.length + Eb.length + 1,
-      eb = Math.ceil(8 * Bb / Math.log2(62)),
-      vb = Mb.length + eb;
+    var Fz = sz(8785);
+    const Wz = "XH1-",
+      Xz = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      Oz = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      oz = ["color", "outlineColor"],
+      vz = 1 + 3 * oz.length + Oz.length + 1,
+      Uz = Math.ceil(8 * vz / Math.log2(62)),
+      Kz = Wz.length + Uz;
 
-    function Lb(bb) {
-      let ab = 90;
-      for (const Ub of bb) ab = 31 * ab + Ub & 255;
-      return ab
+    function uz(zz) {
+      let tz = 90;
+      for (const sz of zz) tz = 31 * tz + sz & 255;
+      return tz
     }
-    const Pb = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      Xb = BigInt(Pb.length);
+    const Nz = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      bz = BigInt(Nz.length);
 
-    function jb(bb, ab) {
-      let Ub = 0n;
-      for (const Mb of bb) {
-        const bb = Pb.indexOf(Mb);
-        if (bb < 0) return null;
-        Ub = Ub * Xb + BigInt(bb)
+    function wz(zz, tz) {
+      let sz = 0n;
+      for (const Wz of zz) {
+        const zz = Nz.indexOf(Wz);
+        if (zz < 0) return null;
+        sz = sz * bz + BigInt(zz)
       }
-      if (Ub >> BigInt(8 * ab) !== 0n) return null;
-      const Ab = [];
-      for (let Mb = 0; Mb < ab; Mb++) Ab.unshift(Number(0xffn & Ub)), Ub >>= 8n;
-      return Ab
+      if (sz >> BigInt(8 * tz) !== 0n) return null;
+      const Fz = [];
+      for (let Wz = 0; Wz < tz; Wz++) Fz.unshift(Number(0xffn & sz)), sz >>= 8n;
+      return Fz
     }
 
-    function Rb(bb) {
-      let ab = "shapes" === bb.style ? 1 : 0;
-      Tb.forEach(((Ub, Ab) => {
-        bb[Ub] && (ab |= 1 << Ab + 1)
+    function Dz(zz) {
+      let tz = "shapes" === zz.style ? 1 : 0;
+      Xz.forEach(((sz, Fz) => {
+        zz[sz] && (tz |= 1 << Fz + 1)
       }));
-      const Ub = [ab];
-      for (const Mb of Yb) {
-        const ab = (0, Ab.e)(Mb, bb[Mb]);
-        Ub.push(ab >> 16 & 255, ab >> 8 & 255, 255 & ab)
+      const sz = [tz];
+      for (const Wz of oz) {
+        const tz = (0, Fz.l)(Wz, zz[Wz]);
+        sz.push(tz >> 16 & 255, tz >> 8 & 255, 255 & tz)
       }
-      for (const Mb of Eb) {
+      for (const Wz of Oz) {
         const {
-          min: ab,
-          step: Tb
-        } = Ab.b[Mb];
-        Ub.push(Math.round(((0, Ab.e)(Mb, bb[Mb]) - ab) / Tb))
+          min: tz,
+          step: Xz
+        } = Fz.e[Wz];
+        sz.push(Math.round(((0, Fz.l)(Wz, zz[Wz]) - tz) / Xz))
       }
-      return Ub.push(Lb(Ub)), Mb + function(bb, ab) {
-        let Ub = 0n;
-        for (const Mb of bb) Ub = Ub << 8n | BigInt(Mb);
-        let Ab = "";
-        for (let Mb = 0; Mb < ab; Mb++) Ab = Pb[Number(Ub % Xb)] + Ab, Ub /= Xb;
-        return Ab
-      }(Ub, eb)
+      return sz.push(uz(sz)), Wz + function(zz, tz) {
+        let sz = 0n;
+        for (const Wz of zz) sz = sz << 8n | BigInt(Wz);
+        let Fz = "";
+        for (let Wz = 0; Wz < tz; Wz++) Fz = Nz[Number(sz % bz)] + Fz, sz /= bz;
+        return Fz
+      }(sz, Uz)
     }
 
-    function kb(bb) {
-      for (const ab of bb.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${eb}})`, "gi"))) {
-        const bb = yb(jb(ab[1], Bb));
-        if (bb) return bb
+    function gz(zz) {
+      for (const tz of zz.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Uz}})`, "gi"))) {
+        const zz = Hz(wz(tz[1], vz));
+        if (zz) return zz
       }
       return null
     }
 
-    function yb(bb) {
-      if (!bb || bb.length !== Bb || Lb(bb.slice(0, -1)) !== bb[bb.length - 1]) return null;
-      const ab = bb[0],
-        Ub = {
-          ...Ab.d,
-          style: 1 & ab ? "shapes" : "classic"
+    function Hz(zz) {
+      if (!zz || zz.length !== vz || uz(zz.slice(0, -1)) !== zz[zz.length - 1]) return null;
+      const tz = zz[0],
+        sz = {
+          ...Fz.h,
+          style: 1 & tz ? "shapes" : "classic"
         };
-      Tb.forEach(((bb, Ab) => {
-        Ub[bb] = 0 !== (ab & 1 << Ab + 1)
+      Xz.forEach(((zz, Fz) => {
+        sz[zz] = 0 !== (tz & 1 << Fz + 1)
       }));
-      let Mb = 1;
-      for (const Ab of Yb) Ub[Ab] = bb[Mb] << 16 | bb[Mb + 1] << 8 | bb[Mb + 2], Mb += 3;
-      for (const Tb of Eb) {
+      let Wz = 1;
+      for (const Fz of oz) sz[Fz] = zz[Wz] << 16 | zz[Wz + 1] << 8 | zz[Wz + 2], Wz += 3;
+      for (const Xz of Oz) {
         const {
-          min: ab,
-          step: Eb
-        } = Ab.b[Tb];
-        Ub[Tb] = (0, Ab.e)(Tb, ab + bb[Mb] * Eb), Mb++
+          min: tz,
+          step: Oz
+        } = Fz.e[Xz];
+        sz[Xz] = (0, Fz.l)(Xz, tz + zz[Wz] * Oz), Wz++
       }
-      return Ub
+      return sz
     }
   },
-  8842: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Ab,
-      d: () => Mb,
-      e: () => Tb,
-      i: () => eb,
-      l: () => Bb,
-      n: () => vb,
-      o: () => Yb,
-      q: () => Eb
+  8785: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Fz,
+      h: () => Wz,
+      l: () => Xz,
+      n: () => Uz,
+      q: () => vz,
+      u: () => Kz,
+      v: () => oz,
+      y: () => Oz
     });
-    const Ab = {
+    const Fz = {
         opacity: {
           min: 5,
           max: 100,
@@ -8827,7 +8827,7 @@ export const modules = {
           step: 1
         }
       },
-      Mb = Object.freeze({
+      Wz = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -8848,271 +8848,271 @@ export const modules = {
         forGuns: !1
       });
 
-    function Tb(bb, ab) {
-      var Ub;
+    function Xz(zz, tz) {
+      var sz;
       const {
-        min: Tb,
-        max: Eb,
-        step: Yb
-      } = Ab[bb];
-      if (!Number.isFinite(ab)) return Mb[bb];
-      const Bb = (null !== (Ub = String(Yb).split(".")[1]) && void 0 !== Ub ? Ub : "").length,
-        eb = Number((Math.round(ab / Yb) * Yb).toFixed(Bb));
-      return Math.min(Eb, Math.max(Tb, eb))
+        min: Xz,
+        max: Oz,
+        step: oz
+      } = Fz[zz];
+      if (!Number.isFinite(tz)) return Wz[zz];
+      const vz = (null !== (sz = String(oz).split(".")[1]) && void 0 !== sz ? sz : "").length,
+        Uz = Number((Math.round(tz / oz) * oz).toFixed(vz));
+      return Math.min(Oz, Math.max(Xz, Uz))
     }
 
-    function Eb(bb, ab, Ub) {
-      const Ab = "number" === typeof Ub ? Tb(ab, Ub) : Ub;
+    function Oz(zz, tz, sz) {
+      const Fz = "number" === typeof sz ? Xz(tz, sz) : sz;
       return {
-        ...bb,
-        [ab]: Ab
+        ...zz,
+        [tz]: Fz
       }
     }
 
-    function Yb(bb, ab) {
-      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(Mb).every((Ab => Ub.includes(Ab) || bb[Ab] === ab[Ab]))
+    function oz(zz, tz) {
+      let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(Wz).every((Fz => sz.includes(Fz) || zz[Fz] === tz[Fz]))
     }
 
-    function Bb(bb) {
-      return Yb(bb, Mb)
+    function vz(zz) {
+      return oz(zz, Wz)
     }
 
-    function eb(bb) {
-      return `#${bb.toString(16).padStart(6,"0")}`
+    function Uz(zz) {
+      return `#${zz.toString(16).padStart(6,"0")}`
     }
 
-    function vb(bb) {
-      const ab = /^#?([0-9a-f]{6})$/i.exec(bb.trim());
-      return ab ? parseInt(ab[1], 16) : null
+    function Kz(zz) {
+      const tz = /^#?([0-9a-f]{6})$/i.exec(zz.trim());
+      return tz ? parseInt(tz[1], 16) : null
     }
   },
-  8892: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Lb,
-      g: () => Pb
+  8826: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => uz,
+      f: () => Nz
     });
-    var Ab = Ub(52),
-      Mb = Ub(31),
-      Tb = Ub(8889),
-      Eb = Ub(8842);
-    const Yb = "crosshairCode";
-    let Bb = null;
-    const eb = new Set;
+    var Fz = sz(65),
+      Wz = sz(44),
+      Xz = sz(8823),
+      Oz = sz(8785);
+    const oz = "crosshairCode";
+    let vz = null;
+    const Uz = new Set;
 
-    function vb() {
-      if (null === Bb) {
-        var bb;
-        const ab = Mb.f.getItem(Yb);
-        Bb = null !== (bb = "string" === typeof ab ? (0, Tb.f)(ab) : null) && void 0 !== bb ? bb : Eb.d
+    function Kz() {
+      if (null === vz) {
+        var zz;
+        const tz = Wz.f.getItem(oz);
+        vz = null !== (zz = "string" === typeof tz ? (0, Xz.g)(tz) : null) && void 0 !== zz ? zz : Oz.h
       }
-      return Bb
+      return vz
     }
 
-    function Lb(bb) {
-      Bb = bb, (0, Eb.l)(bb) ? Mb.f.removeItem(Yb) : Mb.f.setItem(Yb, (0, Tb.h)(bb));
-      for (const ab of eb) ab()
+    function uz(zz) {
+      vz = zz, (0, Oz.q)(zz) ? Wz.f.removeItem(oz) : Wz.f.setItem(oz, (0, Xz.k)(zz));
+      for (const tz of Uz) tz()
     }
 
-    function Pb() {
-      const [bb, ab] = (0, Ab.useState)(vb);
-      return (0, Ab.useEffect)((() => {
-        const bb = () => {
-          ab(vb())
+    function Nz() {
+      const [zz, tz] = (0, Fz.useState)(Kz);
+      return (0, Fz.useEffect)((() => {
+        const zz = () => {
+          tz(Kz())
         };
-        return bb(), Ub = bb, eb.add(Ub), () => {
-          eb.delete(Ub)
+        return zz(), sz = zz, Uz.add(sz), () => {
+          Uz.delete(sz)
         };
-        var Ub
-      }), []), bb
+        var sz
+      }), []), zz
     }
   },
-  8450: (bb, ab, Ub) => {
-    function Ab(bb) {
+  8381: (zz, tz, sz) => {
+    function Fz(zz) {
       return {
-        x: (bb.left + bb.right) / 2,
-        y: (bb.top + bb.bottom) / 2
+        x: (zz.left + zz.right) / 2,
+        y: (zz.top + zz.bottom) / 2
       }
     }
 
-    function Mb(bb) {
-      return 0 === bb.length ? null : bb.reduce(((bb, ab) => ({
-        left: Math.min(bb.left, ab.left),
-        top: Math.min(bb.top, ab.top),
-        right: Math.max(bb.right, ab.right),
-        bottom: Math.max(bb.bottom, ab.bottom)
+    function Wz(zz) {
+      return 0 === zz.length ? null : zz.reduce(((zz, tz) => ({
+        left: Math.min(zz.left, tz.left),
+        top: Math.min(zz.top, tz.top),
+        right: Math.max(zz.right, tz.right),
+        bottom: Math.max(zz.bottom, tz.bottom)
       })))
     }
 
-    function Tb(bb, ab) {
-      const Ub = Math.max(0, (ab - (bb.right - bb.left)) / 2),
-        Ab = Math.max(0, (ab - (bb.bottom - bb.top)) / 2);
+    function Xz(zz, tz) {
+      const sz = Math.max(0, (tz - (zz.right - zz.left)) / 2),
+        Fz = Math.max(0, (tz - (zz.bottom - zz.top)) / 2);
       return {
-        left: bb.left - Ub,
-        top: bb.top - Ab,
-        right: bb.right + Ub,
-        bottom: bb.bottom + Ab
+        left: zz.left - sz,
+        top: zz.top - Fz,
+        right: zz.right + sz,
+        bottom: zz.bottom + Fz
       }
     }
 
-    function Eb(bb, ab) {
-      return ab.x >= bb.left && ab.x <= bb.right && ab.y >= bb.top && ab.y <= bb.bottom
+    function Oz(zz, tz) {
+      return tz.x >= zz.left && tz.x <= zz.right && tz.y >= zz.top && tz.y <= zz.bottom
     }
 
-    function Yb(bb, ab, Ub) {
-      let Mb = null,
-        Yb = 1 / 0;
+    function oz(zz, tz, sz) {
+      let Wz = null,
+        oz = 1 / 0;
       for (const {
-          id: Ab,
-          box: Tb
+          id: Fz,
+          box: Xz
         }
-        of ab) {
-        const ab = (Tb.right - Tb.left) * (Tb.bottom - Tb.top);
-        Eb(Tb, bb) && ab < Yb && (Yb = ab, Mb = Ab)
+        of tz) {
+        const tz = (Xz.right - Xz.left) * (Xz.bottom - Xz.top);
+        Oz(Xz, zz) && tz < oz && (oz = tz, Wz = Fz)
       }
-      if (null !== Mb) return Mb;
-      let Bb = 1 / 0;
+      if (null !== Wz) return Wz;
+      let vz = 1 / 0;
       for (const {
-          id: eb,
-          box: vb
+          id: Uz,
+          box: Kz
         }
-        of ab) {
-        if (!Eb(Tb(vb, Ub), bb)) continue;
-        const ab = Ab(vb),
-          Yb = Math.hypot(bb.x - ab.x, bb.y - ab.y);
-        Yb < Bb && (Bb = Yb, Mb = eb)
+        of tz) {
+        if (!Oz(Xz(Kz, sz), zz)) continue;
+        const tz = Fz(Kz),
+          oz = Math.hypot(zz.x - tz.x, zz.y - tz.y);
+        oz < vz && (vz = oz, Wz = Uz)
       }
-      return Mb
+      return Wz
     }
 
-    function Bb(bb, ab, Ub) {
+    function vz(zz, tz, sz) {
       return {
-        left: Ub.left,
-        top: Ub.top,
-        right: bb - Ub.right,
-        bottom: ab - Ub.bottom
+        left: sz.left,
+        top: sz.top,
+        right: zz - sz.right,
+        bottom: tz - sz.bottom
       }
     }
 
-    function eb(bb, ab, Ub, Ab) {
-      const Mb = (bb, ab, Ub) => Math.max(Math.min(ab, 0), Math.min(Math.max(Ub, 0), bb));
+    function Uz(zz, tz, sz, Fz) {
+      const Wz = (zz, tz, sz) => Math.max(Math.min(tz, 0), Math.min(Math.max(sz, 0), zz));
       return {
-        x: Mb(ab, Ab.left - bb.left, Ab.right - bb.right),
-        y: Mb(Ub, Ab.top - bb.top, Ab.bottom - bb.bottom)
+        x: Wz(tz, Fz.left - zz.left, Fz.right - zz.right),
+        y: Wz(sz, Fz.top - zz.top, Fz.bottom - zz.bottom)
       }
     }
 
-    function vb(bb, ab, Ub, Ab, Mb) {
-      const Tb = bb.dx * Ab + ab,
-        Eb = bb.dy * Mb + Ub,
-        Yb = bb => Math.max(-1, Math.min(1, bb));
+    function Kz(zz, tz, sz, Fz, Wz) {
+      const Xz = zz.dx * Fz + tz,
+        Oz = zz.dy * Wz + sz,
+        oz = zz => Math.max(-1, Math.min(1, zz));
       return {
-        dx: Yb(Tb / Ab),
-        dy: Yb(Eb / Mb)
+        dx: oz(Xz / Fz),
+        dy: oz(Oz / Wz)
       }
     }
 
-    function Lb(bb, ab, Ub, Ab) {
-      return ab <= 0 || Ub <= 0 ? 1 : Math.max(.05, Math.min(1, bb / ab, Ab / Ub))
+    function uz(zz, tz, sz, Fz) {
+      return tz <= 0 || sz <= 0 ? 1 : Math.max(.05, Math.min(1, zz / tz, Fz / sz))
     }
 
-    function Pb(bb, ab, Ub) {
-      return Math.min(bb.right, ab.right) - Math.max(bb.left, ab.left) > Ub && Math.min(bb.bottom, ab.bottom) - Math.max(bb.top, ab.top) > Ub
+    function Nz(zz, tz, sz) {
+      return Math.min(zz.right, tz.right) - Math.max(zz.left, tz.left) > sz && Math.min(zz.bottom, tz.bottom) - Math.max(zz.top, tz.top) > sz
     }
 
-    function Xb(bb, ab) {
-      const Ub = (bb, ab, Ub, Ab) => ab - bb > Ab - Ub ? Ub - bb > ab - Ab ? Ab - ab : Ub - bb : bb < Ub ? Ub - bb : ab > Ab ? Ab - ab : 0;
+    function bz(zz, tz) {
+      const sz = (zz, tz, sz, Fz) => tz - zz > Fz - sz ? sz - zz > tz - Fz ? Fz - tz : sz - zz : zz < sz ? sz - zz : tz > Fz ? Fz - tz : 0;
       return {
-        x: Ub(bb.left, bb.right, ab.left, ab.right),
-        y: Ub(bb.top, bb.bottom, ab.top, ab.bottom)
+        x: sz(zz.left, zz.right, tz.left, tz.right),
+        y: sz(zz.top, zz.bottom, tz.top, tz.bottom)
       }
     }
 
-    function jb(bb, ab) {
+    function wz(zz, tz) {
       let {
-        avoid: Ub = null,
-        bounds: Ab = null
-      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, Mb = 0, Tb = 1 / 0;
-      return bb.forEach(((bb, Eb) => {
-        const Yb = ab.filter((ab => Pb(bb, ab, 0))).length,
-          Bb = null !== Ab && (bb.left < Ab.left || bb.top < Ab.top || bb.right > Ab.right || bb.bottom > Ab.bottom),
-          eb = Yb + (Ub && Pb(bb, Ub, 0) ? 1e3 : 0) + (Bb ? 1e6 : 0);
-        eb < Tb && (Mb = Eb, Tb = eb)
-      })), Mb
+        avoid: sz = null,
+        bounds: Fz = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, Wz = 0, Xz = 1 / 0;
+      return zz.forEach(((zz, Oz) => {
+        const oz = tz.filter((tz => Nz(zz, tz, 0))).length,
+          vz = null !== Fz && (zz.left < Fz.left || zz.top < Fz.top || zz.right > Fz.right || zz.bottom > Fz.bottom),
+          Uz = oz + (sz && Nz(zz, sz, 0) ? 1e3 : 0) + (vz ? 1e6 : 0);
+        Uz < Xz && (Wz = Oz, Xz = Uz)
+      })), Wz
     }
-    Ub.d(ab, {
-      b: () => Ab,
-      c: () => Eb,
-      e: () => Pb,
-      h: () => eb,
-      k: () => Tb,
-      m: () => jb,
-      o: () => vb,
-      s: () => Yb,
-      t: () => Lb,
-      v: () => Bb,
-      w: () => Xb,
-      x: () => Mb
+    sz.d(tz, {
+      B: () => Wz,
+      c: () => Fz,
+      d: () => Oz,
+      f: () => Nz,
+      h: () => Uz,
+      k: () => Xz,
+      l: () => wz,
+      p: () => Kz,
+      r: () => oz,
+      v: () => uz,
+      w: () => vz,
+      y: () => bz
     })
   },
-  8836: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Tb,
-      f: () => Mb
+  8779: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Xz,
+      i: () => Wz
     });
-    var Ab = Ub(19);
+    var Fz = sz(30);
 
-    function Mb(bb, ab) {
-      return bb && !ab
+    function Wz(zz, tz) {
+      return zz && !tz
     }
 
-    function Tb() {
-      return Mb(Ab.c.get("isTouchScreen"), Ab.c.get("clientEscMenuOptions").touchActionButtons)
+    function Xz() {
+      return Wz(Fz.b.get("isTouchScreen"), Fz.b.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  8797: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Ab
+  8732: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Fz
     });
-    const Ab = new Set(["chunkBorders"])
+    const Fz = new Set(["chunkBorders"])
   },
-  8794: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      ALL_DEV_TOOLS: () => Eb,
-      coreDevTools: () => eb,
-      devTools: () => Bb
+  8723: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      ALL_DEV_TOOLS: () => Oz,
+      coreDevTools: () => Uz,
+      devTools: () => vz
     });
-    var Ab = Ub(603),
-      Mb = Ub(1227),
-      Tb = Ub(8797);
-    const Eb = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function Yb() {
+    var Fz = sz(601),
+      Wz = sz(1279),
+      Xz = sz(8732);
+    const Oz = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function oz() {
       const {
-        noaDevTools: bb
-      } = await Ub.e(230).then((() => Ub(40174)));
-      return bb
+        noaDevTools: zz
+      } = await sz.e(230).then((() => sz(40160)));
+      return zz
     }
-    const Bb = new class {
+    const vz = new class {
         constructor() {
-          this.loadHost = Yb, this.tools = Eb
+          this.loadHost = oz, this.tools = Oz
         }
-        setHost(bb) {
-          this.tools = null === bb ? Eb : bb.tools, this.loadHost = null === bb ? Yb : async () => bb
+        setHost(zz) {
+          this.tools = null === zz ? Oz : zz.tools, this.loadHost = null === zz ? oz : async () => zz
         }
-        supports(bb) {
-          return this.tools.has(bb)
+        supports(zz) {
+          return this.tools.has(zz)
         }
-        async downloadScene(bb, ab) {
-          const Ub = await this.loadHost();
-          await Ub.downloadScene(bb, ab)
+        async downloadScene(zz, tz) {
+          const sz = await this.loadHost();
+          await sz.downloadScene(zz, tz)
         }
-        async setAmbientLightIntensity(bb) {
-          const ab = await this.loadHost();
-          await ab.setAmbientLightIntensity(bb)
+        async setAmbientLightIntensity(zz) {
+          const tz = await this.loadHost();
+          await tz.setAmbientLightIntensity(zz)
         }
       },
-      eb = {
-        tools: Tb.e,
+      Uz = {
+        tools: Xz.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -9120,121 +9120,121 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    Ab.o && Bb.setHost(eb), (0, Mb.p)((() => {
-      Bb.setHost(eb)
+    Fz.p && vz.setHost(Uz), (0, Wz.t)((() => {
+      vz.setHost(Uz)
     }))
   },
-  8951: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Eb,
-      h: () => Mb,
-      l: () => vb
+  8897: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Oz,
+      d: () => Wz,
+      e: () => Kz
     });
-    var Ab = Ub(1485);
+    var Fz = sz(1521);
 
-    function Mb(bb) {
-      var ab;
+    function Wz(zz) {
+      var tz;
       return {
-        ...Eb.store,
-        yaw: Eb.store.yaw + (null !== (ab = Ab.d[bb].previewYaw) && void 0 !== ab ? ab : 0)
+        ...Oz.store,
+        yaw: Oz.store.yaw + (null !== (tz = Fz.d[zz].previewYaw) && void 0 !== tz ? tz : 0)
       }
     }
-    const Tb = {
+    const Xz = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      Eb = {
-        player: Tb,
+      Oz = {
+        player: Xz,
         store: {
-          ...Tb,
+          ...Xz,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function Yb(bb, ab) {
-      bb instanceof Promise ? bb.then(ab).catch((bb => {
-        console.error("Couldn't open the preview", bb)
-      })) : ab(bb)
+    function oz(zz, tz) {
+      zz instanceof Promise ? zz.then(tz).catch((zz => {
+        console.error("Couldn't open the preview", zz)
+      })) : tz(zz)
     }
-    class Bb {
-      constructor(bb) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, Yb(bb, (bb => {
-          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height), null !== this.view && bb.show(this.view))
+    class vz {
+      constructor(zz) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, oz(zz, (zz => {
+          this.closed ? zz.close() : (this.opened = zz, null !== this.size && zz.resize(this.size.width, this.size.height), null !== this.view && zz.show(this.view))
         }))
       }
-      show(bb) {
-        var ab;
-        this.view = bb, null === (ab = this.opened) || void 0 === ab || ab.show(bb)
+      show(zz) {
+        var tz;
+        this.view = zz, null === (tz = this.opened) || void 0 === tz || tz.show(zz)
       }
-      resize(bb, ab) {
-        var Ub;
+      resize(zz, tz) {
+        var sz;
         this.size = {
-          width: bb,
-          height: ab
-        }, null === (Ub = this.opened) || void 0 === Ub || Ub.resize(bb, ab)
+          width: zz,
+          height: tz
+        }, null === (sz = this.opened) || void 0 === sz || sz.resize(zz, tz)
       }
       close() {
-        var bb;
-        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
+        var zz;
+        this.closed = !0, null === (zz = this.opened) || void 0 === zz || zz.close(), this.opened = null
       }
     }
-    class eb {
-      constructor(bb) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(bb).then((bb => bb.ready)), Yb(bb, (bb => {
-          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height))
+    class Uz {
+      constructor(zz) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(zz).then((zz => zz.ready)), oz(zz, (zz => {
+          this.closed ? zz.close() : (this.opened = zz, null !== this.size && zz.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var bb, ab;
-        return null !== (bb = null === (ab = this.opened) || void 0 === ab ? void 0 : ab.isReady()) && void 0 !== bb && bb
+        var zz, tz;
+        return null !== (zz = null === (tz = this.opened) || void 0 === tz ? void 0 : tz.isReady()) && void 0 !== zz && zz
       }
-      setCosmetic(bb, ab) {
-        var Ub;
-        null === (Ub = this.opened) || void 0 === Ub || Ub.setCosmetic(bb, ab)
+      setCosmetic(zz, tz) {
+        var sz;
+        null === (sz = this.opened) || void 0 === sz || sz.setCosmetic(zz, tz)
       }
-      playEmote(bb) {
-        var ab;
-        null === (ab = this.opened) || void 0 === ab || ab.playEmote(bb)
+      playEmote(zz) {
+        var tz;
+        null === (tz = this.opened) || void 0 === tz || tz.playEmote(zz)
       }
-      setOrbit(bb) {
-        var ab;
-        null === (ab = this.opened) || void 0 === ab || ab.setOrbit(bb)
+      setOrbit(zz) {
+        var tz;
+        null === (tz = this.opened) || void 0 === tz || tz.setOrbit(zz)
       }
       resetCamera() {
-        var bb;
-        null === (bb = this.opened) || void 0 === bb || bb.resetCamera()
+        var zz;
+        null === (zz = this.opened) || void 0 === zz || zz.resetCamera()
       }
-      async untilDrawn(bb) {
-        var ab;
-        await this.ready, await (null === (ab = this.opened) || void 0 === ab ? void 0 : ab.untilDrawn(bb))
+      async untilDrawn(zz) {
+        var tz;
+        await this.ready, await (null === (tz = this.opened) || void 0 === tz ? void 0 : tz.untilDrawn(zz))
       }
-      resize(bb, ab) {
-        var Ub;
+      resize(zz, tz) {
+        var sz;
         this.size = {
-          width: bb,
-          height: ab
-        }, null === (Ub = this.opened) || void 0 === Ub || Ub.resize(bb, ab)
+          width: zz,
+          height: tz
+        }, null === (sz = this.opened) || void 0 === sz || sz.resize(zz, tz)
       }
       close() {
-        var bb;
-        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
+        var zz;
+        this.closed = !0, null === (zz = this.opened) || void 0 === zz || zz.close(), this.opened = null
       }
     }
-    const vb = new class {
+    const Kz = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(bb) {
-        this.host = bb
+      setHost(zz) {
+        this.host = zz
       }
-      setDefaultHost(bb) {
-        this.makeDefault = bb
+      setDefaultHost(zz) {
+        this.makeDefault = zz
       }
       current() {
         if (null === this.host) {
@@ -9243,99 +9243,99 @@ export const modules = {
         }
         return this.host
       }
-      openMob(bb) {
-        return new Bb(this.current().openMob(bb))
+      openMob(zz) {
+        return new vz(this.current().openMob(zz))
       }
-      openPet(bb) {
-        return new Bb(this.current().openPet(bb))
+      openPet(zz) {
+        return new vz(this.current().openPet(zz))
       }
-      openMobLineup(bb) {
-        return new Bb(this.current().openMobLineup(bb))
+      openMobLineup(zz) {
+        return new vz(this.current().openMobLineup(zz))
       }
-      openCharacter(bb, ab) {
-        return new eb(this.current().openCharacter(bb, ab))
+      openCharacter(zz, tz) {
+        return new Uz(this.current().openCharacter(zz, tz))
       }
     }
   },
-  8945: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Ab.d,
-      h: () => Ab.h,
-      l: () => Ab.l
+  8891: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Fz.b,
+      c: () => Fz.d,
+      f: () => Fz.e
     });
-    var Ab = Ub(8951);
-    class Mb {
-      constructor(bb) {
-        this.load = bb, this.loaded = null, this.loading = null
+    var Fz = sz(8897);
+    class Wz {
+      constructor(zz) {
+        this.load = zz, this.loaded = null, this.loading = null
       }
-      run(bb) {
-        return null !== this.loaded ? bb(this.loaded) : (this.loading ??= this.load().then((bb => (this.loaded = bb, bb)), (bb => {
-          throw this.loading = null, bb
-        })), this.loading.then(bb))
+      run(zz) {
+        return null !== this.loaded ? zz(this.loaded) : (this.loading ??= this.load().then((zz => (this.loaded = zz, zz)), (zz => {
+          throw this.loading = null, zz
+        })), this.loading.then(zz))
       }
     }
-    class Tb {
+    class Xz {
       constructor() {
-        this.mobScene = new Mb((() => Promise.all([Ub.e(69), Ub.e(226), Ub.e(225), Ub.e(244), Ub.e(94), Ub.e(245), Ub.e(72), Ub.e(71), Ub.e(242), Ub.e(70), Ub.e(252), Ub.e(246), Ub.e(251), Ub.e(249), Ub.e(241), Ub.e(218), Ub.e(264), Ub.e(222), Ub.e(236), Ub.e(247), Ub.e(250), Ub.e(74), Ub.e(196), Ub.e(215), Ub.e(219), Ub.e(93), Ub.e(113), Ub.e(234), Ub.e(73), Ub.e(112), Ub.e(153)]).then((() => Ub(40179))))), this.characterScene = new Mb((() => Promise.all([Ub.e(69), Ub.e(226), Ub.e(225), Ub.e(244), Ub.e(94), Ub.e(245), Ub.e(72), Ub.e(71), Ub.e(242), Ub.e(70), Ub.e(252), Ub.e(246), Ub.e(251), Ub.e(249), Ub.e(241), Ub.e(218), Ub.e(264), Ub.e(222), Ub.e(236), Ub.e(247), Ub.e(250), Ub.e(74), Ub.e(196), Ub.e(215), Ub.e(219), Ub.e(93), Ub.e(113), Ub.e(234), Ub.e(73), Ub.e(112), Ub.e(152)]).then((() => Ub(40271)))))
+        this.mobScene = new Wz((() => Promise.all([sz.e(69), sz.e(226), sz.e(225), sz.e(244), sz.e(94), sz.e(245), sz.e(72), sz.e(71), sz.e(242), sz.e(70), sz.e(252), sz.e(246), sz.e(251), sz.e(249), sz.e(241), sz.e(218), sz.e(264), sz.e(222), sz.e(236), sz.e(247), sz.e(250), sz.e(74), sz.e(196), sz.e(215), sz.e(219), sz.e(93), sz.e(113), sz.e(234), sz.e(73), sz.e(112), sz.e(153)]).then((() => sz(40173))))), this.characterScene = new Wz((() => Promise.all([sz.e(69), sz.e(226), sz.e(225), sz.e(244), sz.e(94), sz.e(245), sz.e(72), sz.e(71), sz.e(242), sz.e(70), sz.e(252), sz.e(246), sz.e(251), sz.e(249), sz.e(241), sz.e(218), sz.e(264), sz.e(222), sz.e(236), sz.e(247), sz.e(250), sz.e(74), sz.e(196), sz.e(215), sz.e(219), sz.e(93), sz.e(113), sz.e(234), sz.e(73), sz.e(112), sz.e(152)]).then((() => sz(40255)))))
       }
-      openMob(bb) {
-        return this.mobScene.run((ab => ab.openMobPreview(bb)))
+      openMob(zz) {
+        return this.mobScene.run((tz => tz.openMobPreview(zz)))
       }
-      openPet(bb) {
-        return this.mobScene.run((ab => ab.openPetPreview(bb)))
+      openPet(zz) {
+        return this.mobScene.run((tz => tz.openPetPreview(zz)))
       }
-      openMobLineup(bb) {
-        return this.mobScene.run((ab => ab.openMobLineupPreview(bb)))
+      openMobLineup(zz) {
+        return this.mobScene.run((tz => tz.openMobLineupPreview(zz)))
       }
-      openCharacter(bb, ab) {
-        return this.characterScene.run((Ub => Ub.openCharacterPreview(bb, ab)))
+      openCharacter(zz, tz) {
+        return this.characterScene.run((sz => sz.openCharacterPreview(zz, tz)))
       }
     }
-    Ab.l.setDefaultHost((() => new Tb))
+    Fz.e.setDefaultHost((() => new Xz))
   },
-  6294: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Mb,
-      f: () => Tb
+  6237: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Wz,
+      g: () => Xz
     });
-    var Ab = Ub(31);
-    const Mb = "shaderPack";
-    async function Tb() {
-      var bb;
-      let ab = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (bb = await Ab.c.getItem(Mb, ab)) && void 0 !== bb ? bb : null
+    var Fz = sz(44);
+    const Wz = "shaderPack";
+    async function Xz() {
+      var zz;
+      let tz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (zz = await Fz.e.getItem(Wz, tz)) && void 0 !== zz ? zz : null
     }
   },
-  8815: (bb, ab, Ub) => {
-    function Ab(bb, ab) {
-      return bb && !ab
+  8752: (zz, tz, sz) => {
+    function Fz(zz, tz) {
+      return zz && !tz
     }
-    Ub.d(ab, {
-      d: () => Ab
+    sz.d(tz, {
+      d: () => Fz
     })
   },
-  8834: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Tb
+  8771: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Xz
     });
-    var Ab = Ub(1003);
+    var Fz = sz(1060);
 
-    function Mb() {
-      var bb, ab;
-      return null !== (bb = null === (ab = screen.orientation) || void 0 === ab ? void 0 : ab.type) && void 0 !== bb ? bb : innerWidth > innerHeight ? "landscape" : "portrait"
+    function Wz() {
+      var zz, tz;
+      return null !== (zz = null === (tz = screen.orientation) || void 0 === tz ? void 0 : tz.type) && void 0 !== zz ? zz : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const Tb = new class {
+    const Xz = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && Mb() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && Wz() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = Mb(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, Ab.UR)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = Wz(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, Fz.SD)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -9343,34 +9343,34 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const bb of this.resizers) bb()
+            for (const zz of this.resizers) zz()
           }
         }), 1e3)
       }
-      heldSizer(bb) {
-        let ab = !1;
+      heldSizer(zz) {
+        let tz = !1;
         return () => {
-          if (ab && this.isHeld()) return null;
-          const Ub = bb();
-          return ab ||= null !== Ub, Ub
+          if (tz && this.isHeld()) return null;
+          const sz = zz();
+          return tz ||= null !== sz, sz
         }
       }
-      onRelease(bb) {
-        return this.resizers.add(bb), () => {
-          this.resizers.delete(bb)
+      onRelease(zz) {
+        return this.resizers.add(zz), () => {
+          this.resizers.delete(zz)
         }
       }
     }
   },
-  8441: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Yb,
-      f: () => Bb
+  8376: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => oz,
+      e: () => vz
     });
-    var Ab = Ub(19),
-      Mb = Ub(1242),
-      Tb = Ub(101);
-    const Eb = {
+    var Fz = sz(30),
+      Wz = sz(1293),
+      Xz = sz(106);
+    const Oz = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -9413,111 +9413,111 @@ export const modules = {
       }
     };
 
-    function Yb() {
-      return (0, Tb.isMobile)() && "function" === typeof navigator.vibrate
+    function oz() {
+      return (0, Xz.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const Bb = new class {
-      constructor(bb) {
-        this.deps = bb, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const vz = new class {
+      constructor(zz) {
+        this.deps = zz, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(bb, ab) {
-        var Ub;
+      play(zz, tz) {
+        var sz;
         if (!this.deps.enabled()) return;
-        const Ab = Eb[bb],
-          Mb = null !== ab && void 0 !== ab ? ab : Ab.pattern;
-        if (null === Mb) return void console.warn("No vibration pattern for", bb);
-        const Tb = this.deps.now();
-        Tb - this.lastAnyAt < 40 && Ab.priority < this.playingPriority || Tb - (null !== (Ub = this.lastAt.get(bb)) && void 0 !== Ub ? Ub : -1 / 0) < Ab.minGapMs || Tb < this.playingUntil && Ab.priority < this.playingPriority || (this.lastAt.set(bb, Tb), this.lastAnyAt = Tb, this.playingUntil = Tb + Mb.reduce(((bb, ab) => bb + ab), 0), this.playingPriority = Ab.priority, this.deps.vibrate(Mb))
+        const Fz = Oz[zz],
+          Wz = null !== tz && void 0 !== tz ? tz : Fz.pattern;
+        if (null === Wz) return void console.warn("No vibration pattern for", zz);
+        const Xz = this.deps.now();
+        Xz - this.lastAnyAt < 40 && Fz.priority < this.playingPriority || Xz - (null !== (sz = this.lastAt.get(zz)) && void 0 !== sz ? sz : -1 / 0) < Fz.minGapMs || Xz < this.playingUntil && Fz.priority < this.playingPriority || (this.lastAt.set(zz, Xz), this.lastAnyAt = Xz, this.playingUntil = Xz + Wz.reduce(((zz, tz) => zz + tz), 0), this.playingPriority = Fz.priority, this.deps.vibrate(Wz))
       }
     }({
-      vibrate: bb => {
-        navigator.vibrate([...bb])
+      vibrate: zz => {
+        navigator.vibrate([...zz])
       },
       now: () => performance.now(),
-      enabled: () => Yb() && Ab.c.get("isTouchScreen") && Ab.c.get("clientEscMenuOptions").vibration && !(0, Mb.f)()
+      enabled: () => oz() && Fz.b.get("isTouchScreen") && Fz.b.get("clientEscMenuOptions").vibration && !(0, Wz.e)()
     })
   },
-  8807: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Xb,
-      e: () => Pb
+  8744: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => bz,
+      e: () => Nz
     });
-    var Ab = Ub(19),
-      Mb = Ub(1605),
-      Tb = Ub(31),
-      Eb = Ub(1260),
-      Yb = Ub(3330),
-      Bb = Ub(1384),
-      eb = Ub(1294);
-    const vb = 2592e5,
-      Lb = "notificationOptInLastPromptedAt";
-    async function Pb() {
-      var bb;
-      const ab = await Xb();
-      if (null === ab) return;
-      const Ub = null !== (bb = Tb.f.getItem(Lb)) && void 0 !== bb ? bb : 0;
-      if (Date.now() - Ub < vb) return;
-      if ((0, eb.d)()) return;
-      const Ab = await Eb.NotificationProvider.showPromptPopup({
+    var Fz = sz(30),
+      Wz = sz(1636),
+      Xz = sz(44),
+      Oz = sz(1319),
+      oz = sz(3330),
+      vz = sz(1447),
+      Uz = sz(1358);
+    const Kz = 2592e5,
+      uz = "notificationOptInLastPromptedAt";
+    async function Nz() {
+      var zz;
+      const tz = await bz();
+      if (null === tz) return;
+      const sz = null !== (zz = Xz.f.getItem(uz)) && void 0 !== zz ? zz : 0;
+      if (Date.now() - sz < Kz) return;
+      if ((0, Uz.c)()) return;
+      const Fz = await Oz.NotificationProvider.showPromptPopup({
         icon: "bell",
         title: "mobilePushNotifications:optInTitle",
-        subtitle: Mb.d.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
+        subtitle: Wz.c.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
         confirmText: "mobilePushNotifications:optInConfirm",
         cancelText: "mobilePushNotifications:optInCancel",
         padStartsOn: "cancel"
       }).getResult();
-      "notificationTornDown" !== Ab && (Tb.f.setItem(Lb, Date.now()), (0, Bb.reportAnalyticsClick)({
-        id: !0 === Ab ? "push.allow" : "push.deny",
-        value: Mb.d.supports("notifications") ? "app" : "browser"
-      }), !0 === Ab && ab().catch((bb => {
-        console.error("Failed to ask for push notifications:", bb)
+      "notificationTornDown" !== Fz && (Xz.f.setItem(uz, Date.now()), (0, vz.reportAnalyticsClick)({
+        id: !0 === Fz ? "push.allow" : "push.deny",
+        value: Wz.c.supports("notifications") ? "app" : "browser"
+      }), !0 === Fz && tz().catch((zz => {
+        console.error("Failed to ask for push notifications:", zz)
       })))
     }
-    async function Xb() {
-      return await Mb.d.ready, Mb.d.supports("notifications") ? Ab.c.get("mobilePushNotificationsCanAsk") ? async () => {
-        Mb.d.request("notifications.requestPermission", {}).then((bb => {
+    async function bz() {
+      return await Wz.c.ready, Wz.c.supports("notifications") ? Fz.b.get("mobilePushNotificationsCanAsk") ? async () => {
+        Wz.c.request("notifications.requestPermission", {}).then((zz => {
           let {
-            canAsk: ab
-          } = bb;
-          Ab.c.set({
-            mobilePushNotificationsCanAsk: ab
+            canAsk: tz
+          } = zz;
+          Fz.b.set({
+            mobilePushNotificationsCanAsk: tz
           })
-        }), (bb => {
-          console.error("The app couldn't ask for push notifications:", bb)
+        }), (zz => {
+          console.error("The app couldn't ask for push notifications:", zz)
         }))
-      }: null: await Yb.c.canAsk() ? () => Yb.c.requestPermission() : null
+      }: null: await oz.e.canAsk() ? () => oz.e.requestPermission() : null
     }
   },
-  8820: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Yb,
-      e: () => Bb
+  8755: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => oz,
+      g: () => vz
     });
-    var Ab = Ub(19);
-    const Mb = 24,
-      Tb = "farNametags",
-      Eb = 1e5;
+    var Fz = sz(30);
+    const Wz = 24,
+      Xz = "farNametags",
+      Oz = 1e5;
 
-    function Yb() {
-      var bb;
-      return null === (bb = Ab.c.get("showDistantNametags")) || void 0 === bb || bb
+    function oz() {
+      var zz;
+      return null === (zz = Fz.b.get("showDistantNametags")) || void 0 === zz || zz
     }
 
-    function Bb() {
-      var bb;
-      return null !== (bb = function() {
-        const bb = new URLSearchParams(window.location.search).get(Tb),
-          ab = null === bb || "" === bb ? NaN : Number(bb);
-        return Number.isFinite(ab) && ab >= 0 ? Math.min(ab, Eb) : null
-      }()) && void 0 !== bb ? bb : Yb() ? 0 : Mb
+    function vz() {
+      var zz;
+      return null !== (zz = function() {
+        const zz = new URLSearchParams(window.location.search).get(Xz),
+          tz = null === zz || "" === zz ? NaN : Number(zz);
+        return Number.isFinite(tz) && tz >= 0 ? Math.min(tz, Oz) : null
+      }()) && void 0 !== zz ? zz : oz() ? 0 : Wz
     }
   },
-  8930: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Mb,
-      g: () => Eb
+  8874: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Wz,
+      f: () => Oz
     });
-    const Ab = [{
+    const Fz = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -9699,79 +9699,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Mb(bb) {
-      let ab, Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof bb) {
-        if (!Number.isFinite(bb)) return "0";
-        if (Math.abs(bb) < 100) {
-          const ab = bb < 0 ? "-" : "",
-            Ub = Math.abs(bb);
-          return Ub >= 10 ? `${ab}${Ub.toFixed(1).replace(/\.0$/,"")}` : `${ab}${Ub.toFixed(2).replace(/\.?0+$/,"")}`
+    function Wz(zz) {
+      let tz, sz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof zz) {
+        if (!Number.isFinite(zz)) return "0";
+        if (Math.abs(zz) < 100) {
+          const tz = zz < 0 ? "-" : "",
+            sz = Math.abs(zz);
+          return sz >= 10 ? `${tz}${sz.toFixed(1).replace(/\.0$/,"")}` : `${tz}${sz.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        ab = BigInt(Math.floor(bb))
-      } else ab = bb;
-      const Mb = ab < 0n ? -ab : ab,
-        Tb = ab < 0n ? "-" : "",
-        Eb = Mb.toString();
-      if (Eb.length <= Ub) return `${Tb}${Eb}`;
-      const Yb = 3 * Math.floor((Eb.length - 1) / 3);
-      if (Yb < 3) return `${Tb}${Eb}`;
-      if (Yb > 3 * Ab.length) {
-        const bb = Eb[0],
-          ab = Eb.slice(1, 3).replace(/0+$/, "");
-        return `${Tb}${ab?`${bb}.${ab}`:bb}e${Eb.length-1}`
+        tz = BigInt(Math.floor(zz))
+      } else tz = zz;
+      const Wz = tz < 0n ? -tz : tz,
+        Xz = tz < 0n ? "-" : "",
+        Oz = Wz.toString();
+      if (Oz.length <= sz) return `${Xz}${Oz}`;
+      const oz = 3 * Math.floor((Oz.length - 1) / 3);
+      if (oz < 3) return `${Xz}${Oz}`;
+      if (oz > 3 * Fz.length) {
+        const zz = Oz[0],
+          tz = Oz.slice(1, 3).replace(/0+$/, "");
+        return `${Xz}${tz?`${zz}.${tz}`:zz}e${Oz.length-1}`
       }
       const {
-        threshold: Bb,
-        suffix: eb
-      } = Ab[Ab.length - Yb / 3], vb = Mb / Bb, Lb = Number(1000n * (Mb % Bb) / Bb), Pb = Number(vb) + Lb / 1e3;
-      let Xb;
-      return Xb = Pb >= 100 ? Math.floor(Pb).toString() : Pb >= 10 ? Pb.toFixed(1).replace(/\.0$/, "") : Pb.toFixed(2).replace(/\.?0+$/, ""), `${Tb}${Xb}${eb}`
+        threshold: vz,
+        suffix: Uz
+      } = Fz[Fz.length - oz / 3], Kz = Wz / vz, uz = Number(1000n * (Wz % vz) / vz), Nz = Number(Kz) + uz / 1e3;
+      let bz;
+      return bz = Nz >= 100 ? Math.floor(Nz).toString() : Nz >= 10 ? Nz.toFixed(1).replace(/\.0$/, "") : Nz.toFixed(2).replace(/\.?0+$/, ""), `${Xz}${bz}${Uz}`
     }
-    const Tb = Ab.map((bb => {
+    const Xz = Fz.map((zz => {
       let {
-        threshold: ab,
-        suffix: Ub
-      } = bb;
+        threshold: tz,
+        suffix: sz
+      } = zz;
       return {
-        threshold: Number(ab),
-        suffix: Ub
+        threshold: Number(tz),
+        suffix: sz
       }
-    })).filter((bb => {
+    })).filter((zz => {
       let {
-        threshold: ab
-      } = bb;
-      return Number.isFinite(ab)
+        threshold: tz
+      } = zz;
+      return Number.isFinite(tz)
     }));
 
-    function Eb(bb) {
-      const ab = Math.abs(bb),
-        Ub = bb < 0 ? "-" : "";
+    function Oz(zz) {
+      const tz = Math.abs(zz),
+        sz = zz < 0 ? "-" : "";
       for (const {
-          threshold: Ab,
-          suffix: Mb
+          threshold: Fz,
+          suffix: Wz
         }
-        of Tb)
-        if (ab >= Ab) {
-          const bb = ab / Ab;
-          if (bb >= 1e3) return `${Ub}${ab.toExponential(2).replace("e+","e")}`;
-          let Tb;
-          return Tb = bb >= 100 ? Math.floor(bb).toString() : bb >= 10 ? bb.toFixed(1).replace(/\.0$/, "") : bb.toFixed(2).replace(/\.?0+$/, ""), `${Ub}${Tb}${Mb}`
-        } return `${Ub}${ab}`
+        of Xz)
+        if (tz >= Fz) {
+          const zz = tz / Fz;
+          if (zz >= 1e3) return `${sz}${tz.toExponential(2).replace("e+","e")}`;
+          let Xz;
+          return Xz = zz >= 100 ? Math.floor(zz).toString() : zz >= 10 ? zz.toFixed(1).replace(/\.0$/, "") : zz.toFixed(2).replace(/\.?0+$/, ""), `${sz}${Xz}${Wz}`
+        } return `${sz}${tz}`
     }
   },
-  8914: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => vb,
-      f: () => Pb,
-      h: () => Lb,
-      i: () => Eb,
-      m: () => eb,
-      n: () => Bb
+  8856: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => Kz,
+      g: () => Nz,
+      k: () => uz,
+      o: () => Oz,
+      r: () => Uz,
+      u: () => vz
     });
-    var Ab = Ub(325);
-    const Mb = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      Tb = {
+    var Fz = sz(321);
+    const Wz = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      Xz = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -9846,13 +9846,13 @@ export const modules = {
         }
       };
 
-    function Eb(bb) {
-      var ab;
-      return null !== (ab = Tb[bb]) && void 0 !== ab ? ab : {
+    function Oz(zz) {
+      var tz;
+      return null !== (tz = Xz[zz]) && void 0 !== tz ? tz : {
         translationKey: ""
       }
     }
-    const Yb = {
+    const oz = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -9905,107 +9905,107 @@ export const modules = {
       }]
     };
 
-    function Bb(bb) {
-      return Mb.includes(bb)
+    function vz(zz) {
+      return Wz.includes(zz)
     }
 
-    function eb(bb) {
-      var ab;
-      return !0 === (null === bb || void 0 === bb || null === (ab = bb.customAttributes) || void 0 === ab ? void 0 : ab.cannotEnchant)
+    function Uz(zz) {
+      var tz;
+      return !0 === (null === zz || void 0 === zz || null === (tz = zz.customAttributes) || void 0 === tz ? void 0 : tz.cannotEnchant)
     }
 
-    function vb(bb, ab) {
+    function Kz(zz, tz) {
       const {
-        max: Ub
-      } = Yb[bb].at(-1);
-      return ab <= Ub
+        max: sz
+      } = oz[zz].at(-1);
+      return tz <= sz
     }
 
-    function Lb(bb) {
-      const ab = Math.sin(bb / 80),
-        Ub = bb => {
-          if (bb <= 0) return 0;
-          if (bb > 1) return 1;
-          let ab = 0;
-          const Ub = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let Ab = 0; Ab < Ub.length; Ab++) {
-            ab += (Ab % 2 === 0 ? 1 : -1) * Ub[Ab] * Math.pow(bb, 2 + Ab) / (2 + Ab)
+    function uz(zz) {
+      const tz = Math.sin(zz / 80),
+        sz = zz => {
+          if (zz <= 0) return 0;
+          if (zz > 1) return 1;
+          let tz = 0;
+          const sz = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let Fz = 0; Fz < sz.length; Fz++) {
+            tz += (Fz % 2 === 0 ? 1 : -1) * sz[Fz] * Math.pow(zz, 2 + Fz) / (2 + Fz)
           }
-          return 72 * ab
+          return 72 * tz
         },
-        Ab = .3 - .78 * ab,
-        Mb = .5 - .78 * ab,
-        Tb = .6 - .7 * ab,
-        Eb = .8 - .6 * ab;
-      let Yb = Ub(Ab),
-        Bb = Ub(Mb) - Yb,
-        eb = Ub(Tb) - Bb - Yb,
-        vb = Ub(Eb) - eb - Bb - Yb;
-      Ab < .041 && (Bb /= 1 - Yb, eb /= 1 - Yb, vb /= 1 - Yb, Yb = 0), Mb < .041 && (Yb /= 1 - Bb, eb /= 1 - Bb, vb /= 1 - Bb, Bb = 0), Tb < .041 && (Yb /= 1 - eb, Bb /= 1 - eb, vb /= 1 - eb, eb = 0), Eb < .041 && (Yb /= 1 - vb, Bb /= 1 - vb, eb /= 1 - vb, vb = 0);
+        Fz = .3 - .78 * tz,
+        Wz = .5 - .78 * tz,
+        Xz = .6 - .7 * tz,
+        Oz = .8 - .6 * tz;
+      let oz = sz(Fz),
+        vz = sz(Wz) - oz,
+        Uz = sz(Xz) - vz - oz,
+        Kz = sz(Oz) - Uz - vz - oz;
+      Fz < .041 && (vz /= 1 - oz, Uz /= 1 - oz, Kz /= 1 - oz, oz = 0), Wz < .041 && (oz /= 1 - vz, Uz /= 1 - vz, Kz /= 1 - vz, vz = 0), Xz < .041 && (oz /= 1 - Uz, vz /= 1 - Uz, Kz /= 1 - Uz, Uz = 0), Oz < .041 && (oz /= 1 - Kz, vz /= 1 - Kz, Uz /= 1 - Kz, Kz = 0);
       return {
-        commonProb: Yb,
-        uncommonProb: Bb,
-        rareProb: eb,
-        epicProb: vb,
-        legendaryProb: 1 - (vb + eb + Bb + Yb)
+        commonProb: oz,
+        uncommonProb: vz,
+        rareProb: Uz,
+        epicProb: Kz,
+        legendaryProb: 1 - (Kz + Uz + vz + oz)
       }
     }
 
-    function Pb(bb, ab) {
+    function Nz(zz, tz) {
       const {
-        min: Ub,
-        max: Mb
-      } = Yb[bb][ab], Tb = Ab.d.sampleUniformIntDistribution(Ub, Mb, "includeMax");
+        min: sz,
+        max: Wz
+      } = oz[zz][tz], Xz = Fz.c.sampleUniformIntDistribution(sz, Wz, "includeMax");
       return {
-        ...Lb(Tb),
-        level: Tb
+        ...uz(Xz),
+        level: Xz
       }
     }
   },
-  8334: (bb, ab, Ub) => {
-    function Ab(bb, ab) {
-      return !bb.hidden && (ab || !bb.isRewardedAd)
+  8279: (zz, tz, sz) => {
+    function Fz(zz, tz) {
+      return !zz.hidden && (tz || !zz.isRewardedAd)
     }
 
-    function Mb(bb) {
-      return "object" === typeof bb ? bb.option : bb
+    function Wz(zz) {
+      return "object" === typeof zz ? zz.option : zz
     }
 
-    function Tb(bb, ab) {
-      var Ub;
-      if ("dropdown" === (null === (Ub = bb.userInput) || void 0 === Ub ? void 0 : Ub.type) && "object" === typeof bb.userInput.dropdownOptions[0]) {
-        for (const Ub of bb.userInput.dropdownOptions)
-          if (Mb(Ub) === ab) return "object" === typeof Ub ? Ub.cost : bb.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", bb, "input:", ab)
+    function Xz(zz, tz) {
+      var sz;
+      if ("dropdown" === (null === (sz = zz.userInput) || void 0 === sz ? void 0 : sz.type) && "object" === typeof zz.userInput.dropdownOptions[0]) {
+        for (const sz of zz.userInput.dropdownOptions)
+          if (Wz(sz) === tz) return "object" === typeof sz ? sz.cost : zz.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", zz, "input:", tz)
       }
-      return bb.cost
+      return zz.cost
     }
 
-    function Eb(bb, ab, Ub) {
-      var Ab;
-      const Mb = null !== (Ab = Ub.excludedPlayers) && void 0 !== Ab ? Ab : [ab];
-      return bb.filter((bb => !Mb.includes(bb)))
+    function Oz(zz, tz, sz) {
+      var Fz;
+      const Wz = null !== (Fz = sz.excludedPlayers) && void 0 !== Fz ? Fz : [tz];
+      return zz.filter((zz => !Wz.includes(zz)))
     }
-    Ub.d(ab, {
-      c: () => Tb,
-      g: () => Mb,
-      j: () => Eb,
-      n: () => Ab
+    sz.d(tz, {
+      b: () => Xz,
+      e: () => Wz,
+      i: () => Oz,
+      k: () => Fz
     })
   },
-  8884: () => {},
-  8849: bb => {
-    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  8821: () => {},
+  8794: zz => {
+    zz.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  8855: bb => {
-    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  8799: zz => {
+    zz.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  8863: bb => {
-    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  8804: zz => {
+    zz.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  8871: bb => {
-    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  8809: zz => {
+    zz.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

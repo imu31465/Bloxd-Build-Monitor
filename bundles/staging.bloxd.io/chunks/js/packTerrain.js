@@ -1,235 +1,235 @@
 export const id = 45;
 export const ids = [45];
 export const modules = {
-  42427: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      MAX_LAYER_WIDTH: () => eb,
-      PackTextures: () => Zb,
-      deviceMaxLayerWidth: () => vb,
-      layerWidthFor: () => Xb,
-      packFileUrl: () => jb,
-      packFilesOf: () => yb,
-      packTerrainSources: () => Rb,
-      webgl1GridColumns: () => Lb,
-      webgl1LayerWidth: () => Pb
+  42374: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      MAX_LAYER_WIDTH: () => Uz,
+      PackTextures: () => Bz,
+      deviceMaxLayerWidth: () => Kz,
+      layerWidthFor: () => bz,
+      packFileUrl: () => wz,
+      packFilesOf: () => Hz,
+      packTerrainSources: () => Dz,
+      webgl1GridColumns: () => uz,
+      webgl1LayerWidth: () => Nz
     });
-    var Ab = Ub(2829),
-      Mb = Ub(39907),
-      Tb = Ub(40103),
-      Eb = Ub(42434),
-      Yb = Ub(40092),
-      Bb = Ub(42438);
-    const eb = {
+    var Fz = sz(2844),
+      Wz = sz(39894),
+      Xz = sz(40075),
+      Oz = sz(42381),
+      oz = sz(40063),
+      vz = sz(42384);
+    const Uz = {
       webgpu: 128,
       webgl: 128,
       webgl1: 64
     };
 
-    function vb(bb) {
-      return (0, Ab.d)() ? Math.min(eb[bb], 64) : eb[bb]
+    function Kz(zz) {
+      return (0, Fz.b)() ? Math.min(Uz[zz], 64) : Uz[zz]
     }
 
-    function Lb(bb) {
-      const ab = Math.ceil(Math.log2(Math.max(1, bb)));
-      return 2 ** Math.ceil(ab / 2)
+    function uz(zz) {
+      const tz = Math.ceil(Math.log2(Math.max(1, zz)));
+      return 2 ** Math.ceil(tz / 2)
     }
 
-    function Pb(bb, ab, Ub) {
-      const Ab = null !== Ub && Ub > 0 ? Ub : Mb.c.limits.MAX_TEXTURE_SIZE;
-      return Xb(Math.max(1, Math.floor(Ab / Lb(ab))), bb)
+    function Nz(zz, tz, sz) {
+      const Fz = null !== sz && sz > 0 ? sz : Wz.b.limits.MAX_TEXTURE_SIZE;
+      return bz(Math.max(1, Math.floor(Fz / uz(tz))), zz)
     }
 
-    function Xb(bb, ab) {
-      let Ub = 1;
-      for (; 2 * Ub <= Math.min(bb, ab);) Ub *= 2;
-      return Ub
+    function bz(zz, tz) {
+      let sz = 1;
+      for (; 2 * sz <= Math.min(zz, tz);) sz *= 2;
+      return sz
     }
 
-    function jb(bb, ab) {
-      return "string" !== typeof bb || "" === bb ? null : "player" === ab || (0, Eb.d)(bb) ? bb : null
+    function wz(zz, tz) {
+      return "string" !== typeof zz || "" === zz ? null : "player" === tz || (0, Oz.e)(zz) ? zz : null
     }
-    async function Rb(bb, ab, Ab) {
-      const Mb = await Ub.e(201).then((() => Ub(33702))),
+    async function Dz(zz, tz, Fz) {
+      const Wz = await sz.e(201).then((() => sz(33845))),
         {
-          sheetLayout: Eb,
-          sheetWidth: Bb
-        } = bb;
-      if (Bb > ab) throw new Error(`the pack's atlas is ${Bb} px wide, not within ${ab} px`);
-      if (!(Eb.length === Mb.imagesPerAtlas.length && Eb.every(((bb, ab) => bb === Mb.imagesPerAtlas[ab])))) {
-        const bb = `the pack's atlas is sheets of ${Eb.join(", ")} layers, the built atlas's ${Mb.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
-        if (Eb.length < Mb.imagesPerAtlas.length) throw new Error(bb);
-        console.warn(bb)
+          sheetLayout: Oz,
+          sheetWidth: vz
+        } = zz;
+      if (vz > tz) throw new Error(`the pack's atlas is ${vz} px wide, not within ${tz} px`);
+      if (!(Oz.length === Wz.imagesPerAtlas.length && Oz.every(((zz, tz) => zz === Wz.imagesPerAtlas[tz])))) {
+        const zz = `the pack's atlas is sheets of ${Oz.join(", ")} layers, the built atlas's ${Wz.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
+        if (Oz.length < Wz.imagesPerAtlas.length) throw new Error(zz);
+        console.warn(zz)
       }
       return {
         atlasSheets: [],
-        heldUntil: bb.heldUntil,
-        texture: ab => {
-          var Ub, Eb, Yb;
-          return null !== (Ub = null !== (Eb = null !== (Yb = jb(bb.terrain.texture(ab), Ab)) && void 0 !== Yb ? Yb : Mb.animatedBlockTextures[ab]) && void 0 !== Eb ? Eb : Mb.rotatedBlockTextures[ab]) && void 0 !== Ub ? Ub : function(bb, ab, Ub) {
-            var Ab, Mb;
-            const Eb = null !== (Ab = Tb.b[bb]) && void 0 !== Ab ? Ab : null;
-            return null === Eb ? null : null !== (Mb = jb(ab.texture(bb), Ub)) && void 0 !== Mb ? Mb : Eb
-          }(ab, bb, Ab)
+        heldUntil: zz.heldUntil,
+        texture: tz => {
+          var sz, Oz, oz;
+          return null !== (sz = null !== (Oz = null !== (oz = wz(zz.terrain.texture(tz), Fz)) && void 0 !== oz ? oz : Wz.animatedBlockTextures[tz]) && void 0 !== Oz ? Oz : Wz.rotatedBlockTextures[tz]) && void 0 !== sz ? sz : function(zz, tz, sz) {
+            var Fz, Wz;
+            const Oz = null !== (Fz = Xz.b[zz]) && void 0 !== Fz ? Fz : null;
+            return null === Oz ? null : null !== (Wz = wz(tz.texture(zz), sz)) && void 0 !== Wz ? Wz : Oz
+          }(tz, zz, Fz)
         },
-        decoded: ab => {
-          const Ub = (0, Yb.h)(ab);
-          return null === Ub ? null : (async ab => {
-            const Ub = bb.sheetPixels.at(ab);
-            if (Ub) {
-              bb.sheetPixels[ab] = null;
-              const Ab = Bb > 0 ? Ub.byteLength / (4 * Bb) : 0;
+        decoded: tz => {
+          const sz = (0, oz.h)(tz);
+          return null === sz ? null : (async tz => {
+            const sz = zz.sheetPixels.at(tz);
+            if (sz) {
+              zz.sheetPixels[tz] = null;
+              const Fz = vz > 0 ? sz.byteLength / (4 * vz) : 0;
               return {
-                width: Bb,
-                height: Ab,
-                pixels: new Uint8Array(Ub.buffer, Ub.byteOffset, Ub.byteLength)
+                width: vz,
+                height: Fz,
+                pixels: new Uint8Array(sz.buffer, sz.byteOffset, sz.byteLength)
               }
             }
-            const Mb = bb.terrain.atlasSheets.at(ab);
-            if (void 0 === Mb) throw new Error(`the pack has no atlas sheet ${ab}`);
-            const Tb = jb(Mb, Ab);
-            if (null === Tb) throw new Error(`the pack's atlas sheet ${ab} isn't a pack file`);
-            return (0, Yb.m)(Tb)
-          })(Ub)
+            const Wz = zz.terrain.atlasSheets.at(tz);
+            if (void 0 === Wz) throw new Error(`the pack has no atlas sheet ${tz}`);
+            const Xz = wz(Wz, Fz);
+            if (null === Xz) throw new Error(`the pack's atlas sheet ${tz} isn't a pack file`);
+            return (0, oz.j)(Xz)
+          })(sz)
         }
       }
     }
-    const kb = new WeakMap;
+    const gz = new WeakMap;
 
-    function yb(bb, ab) {
-      if (null === bb) return null;
-      let Ub = kb.get(bb);
-      void 0 === Ub && (Ub = {}, kb.set(bb, Ub));
-      const Ab = Ub[ab];
-      if (void 0 !== Ab) return Ab;
+    function Hz(zz, tz) {
+      if (null === zz) return null;
+      let sz = gz.get(zz);
+      void 0 === sz && (sz = {}, gz.set(zz, sz));
+      const Fz = sz[tz];
+      if (void 0 !== Fz) return Fz;
       const {
-        armourAtlasUrl: Mb,
-        texture: Tb,
-        model: Eb
-      } = bb, Yb = {
-        armourAtlasUrl: () => jb(Mb, ab),
-        textureUrl: bb => jb(Tb(bb), ab),
-        modelUrl: bb => jb(Eb(bb), ab)
+        armourAtlasUrl: Wz,
+        texture: Xz,
+        model: Oz
+      } = zz, oz = {
+        armourAtlasUrl: () => wz(Wz, tz),
+        textureUrl: zz => wz(Xz(zz), tz),
+        modelUrl: zz => wz(Oz(zz), tz)
       };
-      return Ub[ab] = Yb, Yb
+      return sz[tz] = oz, oz
     }
-    class Zb {
-      constructor(bb) {
-        this.host = bb, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
+    class Bz {
+      constructor(zz) {
+        this.host = zz, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
       }
       maxLayerWidth() {
-        return this.maxWidth ??= (async (bb, ab, Ab) => {
+        return this.maxWidth ??= (async (zz, tz, Fz) => {
           const {
-            backend: Mb
-          } = this.host, Tb = vb(Mb);
-          if ("webgl1" !== Mb) return Tb;
-          const [Eb, Yb] = await Promise.all([Ub.e(201).then((() => Ub(33702))), null !== (bb = null === (ab = (Ab = this.host).maxTextureSize) || void 0 === ab ? void 0 : ab.call(Ab)) && void 0 !== bb ? bb : null]);
-          return Pb(Tb, Eb.imagesPerAtlas.length * Math.max(0, ...Eb.imagesPerAtlas), Yb)
-        })().catch((bb => {
-          throw this.maxWidth = null, bb
+            backend: Wz
+          } = this.host, Xz = Kz(Wz);
+          if ("webgl1" !== Wz) return Xz;
+          const [Oz, oz] = await Promise.all([sz.e(201).then((() => sz(33845))), null !== (zz = null === (tz = (Fz = this.host).maxTextureSize) || void 0 === tz ? void 0 : tz.call(Fz)) && void 0 !== zz ? zz : null]);
+          return Nz(Xz, Oz.imagesPerAtlas.length * Math.max(0, ...Oz.imagesPerAtlas), oz)
+        })().catch((zz => {
+          throw this.maxWidth = null, zz
         })), this.maxWidth
       }
       files() {
-        return yb(this.assets, this.owner)
+        return Hz(this.assets, this.owner)
       }
       iconOverrides() {
-        const bb = this.files();
-        return null === bb ? null : {
-          itemSprite: bb.textureUrl,
-          blockTexture: bb.textureUrl,
-          model: bb.modelUrl
+        const zz = this.files();
+        return null === zz ? null : {
+          itemSprite: zz.textureUrl,
+          blockTexture: zz.textureUrl,
+          model: zz.modelUrl
         }
       }
       start() {
-        const bb = this.host.feed.subscribe((bb => {
-          const ab = ++this.latest;
-          this.host.settling(), this.assetsFor(bb).then((Ub => this.apply(ab, Ub, bb).catch((bb => {
-            this.host.warn("the texture pack landed, but reloading what it overrides failed", bb)
-          }))), (Ub => {
-            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", Ub), this.settled(ab, bb, null, !0)
+        const zz = this.host.feed.subscribe((zz => {
+          const tz = ++this.latest;
+          this.host.settling(), this.assetsFor(zz).then((sz => this.apply(tz, sz, zz).catch((zz => {
+            this.host.warn("the texture pack landed, but reloading what it overrides failed", zz)
+          }))), (sz => {
+            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", sz), this.settled(tz, zz, null, !0)
           }))
         }));
         return () => {
-          bb(), this.latest++, this.ended = !0
+          zz(), this.latest++, this.ended = !0
         }
       }
-      async apply(bb, ab, Ub) {
+      async apply(zz, tz, sz) {
         const {
-          host: Ab
+          host: Fz
         } = this;
-        if (bb !== this.latest || Ab.stopped()) return;
-        const Mb = (0, Eb.k)(Ub);
-        if (this.texturesIn(ab, Mb) && 0 === this.swapping) return void this.settled(bb, Ub, yb(ab, Mb));
-        let Tb;
+        if (zz !== this.latest || Fz.stopped()) return;
+        const Wz = (0, Oz.m)(sz);
+        if (this.texturesIn(tz, Wz) && 0 === this.swapping) return void this.settled(zz, sz, Hz(tz, Wz));
+        let Xz;
         this.swapping++;
         try {
-          Tb = await Ab.terrain.swap((bb => {
-            var ab;
-            Ab.warn(`texture pack texture ${null!==(ab=bb.name)&&void 0!==ab?ab:"(all)"} failed`, bb.error)
-          }), (async () => Ab.sourcesOf ? Ab.sourcesOf(ab) : null === ab ? (0, Yb.j)() : Rb(ab, await this.maxLayerWidth(), Mb)), {
-            wholeAtlas: null !== ab,
-            wanted: () => bb === this.latest
+          Xz = await Fz.terrain.swap((zz => {
+            var tz;
+            Fz.warn(`texture pack texture ${null!==(tz=zz.name)&&void 0!==tz?tz:"(all)"} failed`, zz.error)
+          }), (async () => Fz.sourcesOf ? Fz.sourcesOf(tz) : null === tz ? (0, oz.i)() : Dz(tz, await this.maxLayerWidth(), Wz)), {
+            wholeAtlas: null !== tz,
+            wanted: () => zz === this.latest
           })
-        } catch (Bb) {
-          return Ab.warn("the texture pack's swap failed: the textures in stay", Bb), void this.settled(bb, Ub, null, !0)
+        } catch (vz) {
+          return Fz.warn("the texture pack's swap failed: the textures in stay", vz), void this.settled(zz, sz, null, !0)
         } finally {
           this.swapping--
         }
-        if (!0 !== Tb || this.ended) this.settled(bb, Ub, null, !0);
+        if (!0 !== Xz || this.ended) this.settled(zz, sz, null, !0);
         else {
-          Ab.landed(), this.assets = ab, this.owner = Mb;
+          Fz.landed(), this.assets = tz, this.owner = Wz;
           try {
-            Ab.packSwapped()
+            Fz.packSwapped()
           } finally {
-            this.settled(bb, Ub, this.files())
+            this.settled(zz, sz, this.files())
           }
         }
       }
-      async assetsFor(bb) {
-        var ab;
-        return (null !== (ab = this.host.assetsOf) && void 0 !== ab ? ab : Bb.g)(bb, await this.maxLayerWidth())
+      async assetsFor(zz) {
+        var tz;
+        return (null !== (tz = this.host.assetsOf) && void 0 !== tz ? tz : vz.i)(zz, await this.maxLayerWidth())
       }
-      texturesIn(bb, ab) {
-        return bb === this.assets && (null === bb || ab === this.owner)
+      texturesIn(zz, tz) {
+        return zz === this.assets && (null === zz || tz === this.owner)
       }
-      settled(bb, ab, Ub) {
-        let Ab = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        bb !== this.latest || this.ended || this.host.stopped() || this.host.settled(ab, Ub, Ab)
+      settled(zz, tz, sz) {
+        let Fz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        zz !== this.latest || this.ended || this.host.stopped() || this.host.settled(tz, sz, Fz)
       }
     }
   },
-  42446: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      followPagePackFiles: () => Tb
+  42386: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      followPagePackFiles: () => Xz
     });
-    var Ab = Ub(42427),
-      Mb = Ub(42438);
+    var Fz = sz(42374),
+      Wz = sz(42384);
 
-    function Tb(bb, ab, Ub, Tb, Eb) {
-      let Yb, Bb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bb => (0, Mb.g)(bb, (0, Ab.deviceMaxLayerWidth)(Ub)),
-        eb = 0,
-        vb = null;
-      const Lb = () => {
-          if (null === vb || null !== vb.gameSource && !ab.showsPage()) return;
-          const Ub = null === vb.gameSource ? vb : bb.playerState();
-          if (Ub.pack === Yb) return;
-          Yb = Ub.pack;
-          const Mb = ++eb;
-          Bb(Ub).then((bb => {
-            Mb === eb && Tb((0, Ab.packFilesOf)(bb, "player"))
-          }), (bb => {
-            Mb === eb && (Yb = void 0), Eb("the texture pack's files couldn't be had for the previews: the files in stay", bb)
+    function Xz(zz, tz, sz, Xz, Oz) {
+      let oz, vz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : zz => (0, Wz.i)(zz, (0, Fz.deviceMaxLayerWidth)(sz)),
+        Uz = 0,
+        Kz = null;
+      const uz = () => {
+          if (null === Kz || null !== Kz.gameSource && !tz.showsPage()) return;
+          const sz = null === Kz.gameSource ? Kz : zz.playerState();
+          if (sz.pack === oz) return;
+          oz = sz.pack;
+          const Wz = ++Uz;
+          vz(sz).then((zz => {
+            Wz === Uz && Xz((0, Fz.packFilesOf)(zz, "player"))
+          }), (zz => {
+            Wz === Uz && (oz = void 0), Oz("the texture pack's files couldn't be had for the previews: the files in stay", zz)
           }))
         },
-        Pb = bb.subscribe((bb => {
-          vb = bb, Lb()
+        Nz = zz.subscribe((zz => {
+          Kz = zz, uz()
         })),
-        Xb = bb.onPlayerPackChange(Lb),
-        jb = ab.onPageShown(Lb);
+        bz = zz.onPlayerPackChange(uz),
+        wz = tz.onPageShown(uz);
       return () => {
-        Pb(), Xb(), jb(), eb++
+        Nz(), bz(), wz(), Uz++
       }
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

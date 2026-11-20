@@ -1,282 +1,282 @@
 export const id = 14;
 export const ids = [14];
 export const modules = {
-  36209: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => mb,
-      i: () => ib,
-      j: () => fb,
-      k: () => jb
+  36297: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Jz,
+      e: () => xz,
+      g: () => mz,
+      j: () => wz
     });
-    var Ab = Ub(984),
-      Mb = Ub.n(Ab),
-      Tb = Ub(52),
-      Eb = Ub(75),
-      Yb = Ub(1273),
-      Bb = Ub(1352),
-      eb = Ub(1268),
-      vb = Ub(1213),
-      Lb = Ub(1134),
-      Pb = Ub(36214),
-      Xb = Ub(1023);
+    var Fz = sz(1020),
+      Wz = sz.n(Fz),
+      Xz = sz(65),
+      Oz = sz(78),
+      oz = sz(1336),
+      vz = sz(1419),
+      Uz = sz(1333),
+      Kz = sz(1264),
+      uz = sz(1173),
+      Nz = sz(36303),
+      bz = sz(1087);
 
-    function jb(bb) {
-      const [ab, Ub] = (0, Tb.useState)((() => (0, Pb.k)(bb)));
-      return (0, Tb.useEffect)((() => (Ub((0, Pb.k)(bb)), (0, Pb.M)((() => {
-        Ub((0, Pb.k)(bb))
-      })))), [bb]), ab
+    function wz(zz) {
+      const [tz, sz] = (0, Xz.useState)((() => (0, Nz.o)(zz)));
+      return (0, Xz.useEffect)((() => (sz((0, Nz.o)(zz)), (0, Nz.J)((() => {
+        sz((0, Nz.o)(zz))
+      })))), [zz]), tz
     }
 
-    function Rb(bb, ab) {
-      "function" === typeof bb ? bb(ab) : bb && (bb.current = ab)
+    function Dz(zz, tz) {
+      "function" === typeof zz ? zz(tz) : zz && (zz.current = tz)
     }
 
-    function kb(bb) {
+    function gz(zz) {
       let {
-        tutorial: ab,
-        step: Ub,
-        enabled: Ab = !0
-      } = bb;
-      const Mb = jb(ab);
-      return Ab && Mb === Ub
+        tutorial: tz,
+        step: sz,
+        enabled: Fz = !0
+      } = zz;
+      const Wz = wz(tz);
+      return Fz && Wz === sz
     }
 
-    function yb(bb, ab) {
-      const Ub = (0, Pb.m)(bb),
-        Ab = Ub.indexOf(ab);
-      return !Ub.slice(Ab + 1).some((ab => (0, Pb.v)(bb, ab)))
+    function Hz(zz, tz) {
+      const sz = (0, Nz.s)(zz),
+        Fz = sz.indexOf(tz);
+      return !sz.slice(Fz + 1).some((tz => (0, Nz.B)(zz, tz)))
     }
 
-    function Zb(bb, ab, Ub, Ab) {
+    function Bz(zz, tz, sz, Fz) {
       let {
-        tutorial: Mb,
-        step: Tb,
-        waitForClick: Eb = !1,
-        onPrevious: Yb
-      } = bb;
-      const Bb = ab && (0, Pb.r)(Mb, Tb),
-        eb = ab && !yb(Mb, Tb),
-        Lb = Eb ? Ab : Ub;
-      let Xb = null;
-      Bb ? Xb = () => {
-        null === Yb || void 0 === Yb || Yb(), (0, Pb.p)(Mb, Tb)
-      } : eb && (Xb = () => {
-        (0, Pb.h)(Mb)
-      }), (0, vb.r)("popup", null !== Lb && void 0 !== Lb ? Lb : Ub, Xb, ab && null !== Lb, null, Bb ? void 0 : "controller:menusSkipTutorial")
+        tutorial: Wz,
+        step: Xz,
+        waitForClick: Oz = !1,
+        onPrevious: oz
+      } = zz;
+      const vz = tz && (0, Nz.y)(Wz, Xz),
+        Uz = tz && !Hz(Wz, Xz),
+        uz = Oz ? Fz : sz;
+      let bz = null;
+      vz ? bz = () => {
+        null === oz || void 0 === oz || oz(), (0, Nz.w)(Wz, Xz)
+      } : Uz && (bz = () => {
+        (0, Nz.l)(Wz)
+      }), (0, Kz.s)("popup", null !== uz && void 0 !== uz ? uz : sz, bz, tz && null !== uz, null, vz ? void 0 : "controller:menusSkipTutorial")
     }
 
-    function Db(bb) {
+    function Pz(zz) {
       let {
-        tutorial: ab,
-        step: Ub,
-        text: Ab,
-        waitForClick: Mb = !1,
-        onPrevious: Tb
-      } = bb;
+        tutorial: tz,
+        step: sz,
+        text: Fz,
+        waitForClick: Wz = !1,
+        onPrevious: Xz
+      } = zz;
       const {
-        t: Eb
-      } = (0, Lb.A)(), Yb = yb(ab, Ub);
-      return (0, Xb.jsxs)(Xb.Fragment, {
-        children: [(0, Xb.jsx)("div", {
+        t: Oz
+      } = (0, uz.B)(), oz = Hz(tz, sz);
+      return (0, bz.jsxs)(bz.Fragment, {
+        children: [(0, bz.jsx)("div", {
           className: "TutorialStepText",
-          children: Ab
-        }), (0, Xb.jsxs)("div", {
+          children: Fz
+        }), (0, bz.jsxs)("div", {
           className: "TutorialStepButtons",
-          children: [(0, Pb.r)(ab, Ub) && (0, Xb.jsx)(Bb.h, {
+          children: [(0, Nz.y)(tz, sz) && (0, bz.jsx)(vz.l, {
             className: "TutorialStepButton",
             onClick: () => {
-              null === Tb || void 0 === Tb || Tb(), (0, Pb.p)(ab, Ub)
+              null === Xz || void 0 === Xz || Xz(), (0, Nz.w)(tz, sz)
             },
-            children: Eb("tutorial:back")
-          }), !Mb && (0, Xb.jsx)(Bb.g, {
+            children: Oz("tutorial:back")
+          }), !Wz && (0, bz.jsx)(vz.h, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, Pb.e)(Ub)
+              (0, Nz.d)(sz)
             },
             padDefaultFocus: !0,
-            children: Eb(Yb ? "tutorial:done" : "tutorial:next")
-          }), !Yb && (0, Xb.jsx)(Bb.h, {
+            children: Oz(oz ? "tutorial:done" : "tutorial:next")
+          }), !oz && (0, bz.jsx)(vz.l, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, Pb.h)(ab)
+              (0, Nz.l)(tz)
             },
-            children: Eb("tutorial:skip")
+            children: Oz("tutorial:skip")
           })]
         })]
       })
     }
-    const zb = 6;
+    const rz = 6;
 
-    function xb(bb) {
+    function Yz(zz) {
       let {
-        rect: ab,
-        margin: Ub
-      } = bb;
-      const Ab = Math.max(0, ab.top - Ub),
-        Mb = ab.bottom + Ub,
-        Tb = Math.max(0, ab.left - Ub),
-        Eb = ab.right + Ub;
-      return (0, Xb.jsxs)(Xb.Fragment, {
-        children: [(0, Xb.jsx)("div", {
+        rect: tz,
+        margin: sz
+      } = zz;
+      const Fz = Math.max(0, tz.top - sz),
+        Wz = tz.bottom + sz,
+        Xz = Math.max(0, tz.left - sz),
+        Oz = tz.right + sz;
+      return (0, bz.jsxs)(bz.Fragment, {
+        children: [(0, bz.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
             top: 0,
             left: 0,
             right: 0,
-            height: Ab
+            height: Fz
           }
-        }), (0, Xb.jsx)("div", {
+        }), (0, bz.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: Mb,
+            top: Wz,
             left: 0,
             right: 0,
             bottom: 0
           }
-        }), (0, Xb.jsx)("div", {
+        }), (0, bz.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: Ab,
+            top: Fz,
             left: 0,
-            width: Tb,
-            height: Mb - Ab
+            width: Xz,
+            height: Wz - Fz
           }
-        }), (0, Xb.jsx)("div", {
+        }), (0, bz.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: Ab,
-            left: Eb,
+            top: Fz,
+            left: Oz,
             right: 0,
-            height: Mb - Ab
+            height: Wz - Fz
           }
         })]
       })
     }
 
-    function ib(bb) {
+    function xz(zz) {
       let {
-        target: ab,
-        placement: Ub,
-        boxRef: Ab,
-        className: Bb,
-        spotlightMargin: vb = zb,
-        children: Lb
-      } = bb;
+        target: tz,
+        placement: sz,
+        boxRef: Fz,
+        className: vz,
+        spotlightMargin: Kz = rz,
+        children: uz
+      } = zz;
       const {
-        getArrowProps: Pb,
-        getTooltipProps: jb,
-        setTooltipRef: Rb,
-        setTriggerRef: kb
-      } = (0, Yb.d)({
-        placement: Ub,
+        getArrowProps: Nz,
+        getTooltipProps: wz,
+        setTooltipRef: Dz,
+        setTriggerRef: gz
+      } = (0, oz.e)({
+        placement: sz,
         trigger: null,
         visible: !0,
         interactive: !0,
         closeOnOutsideClick: !1,
-        offset: [0, vb]
+        offset: [0, Kz]
       });
-      (0, Tb.useLayoutEffect)((() => {
-        kb(ab)
-      }), [ab, kb]);
-      const yb = function(bb, ab) {
-        const [Ub, Ab] = (0, Tb.useState)(null);
-        return (0, Tb.useEffect)((() => {
-          if (!ab || !bb) return void Ab(null);
-          let Ub = 0,
-            Mb = null;
-          const Tb = () => {
-            const ab = bb.getBoundingClientRect();
-            Mb && ab.left === Mb.left && ab.top === Mb.top && ab.width === Mb.width && ab.height === Mb.height || (Mb = ab, Ab(ab)), Ub = requestAnimationFrame(Tb)
+      (0, Xz.useLayoutEffect)((() => {
+        gz(tz)
+      }), [tz, gz]);
+      const Hz = function(zz, tz) {
+        const [sz, Fz] = (0, Xz.useState)(null);
+        return (0, Xz.useEffect)((() => {
+          if (!tz || !zz) return void Fz(null);
+          let sz = 0,
+            Wz = null;
+          const Xz = () => {
+            const tz = zz.getBoundingClientRect();
+            Wz && tz.left === Wz.left && tz.top === Wz.top && tz.width === Wz.width && tz.height === Wz.height || (Wz = tz, Fz(tz)), sz = requestAnimationFrame(Xz)
           };
-          return Tb(), () => {
-            cancelAnimationFrame(Ub)
+          return Xz(), () => {
+            cancelAnimationFrame(sz)
           }
-        }), [bb, ab]), Ub
-      }(ab, !0);
-      (0, Tb.useEffect)((() => {
-        null === ab || void 0 === ab || ab.scrollIntoView({
+        }), [zz, tz]), sz
+      }(tz, !0);
+      (0, Xz.useEffect)((() => {
+        null === tz || void 0 === tz || tz.scrollIntoView({
           block: "nearest",
           inline: "nearest"
         })
-      }), [ab]);
-      const Zb = (0, Tb.useCallback)((bb => {
-        Rb(bb), Ab && (Ab.current = bb)
-      }), [Rb, Ab]);
-      return (0, Eb.createPortal)((0, Xb.jsxs)(Xb.Fragment, {
-        children: [yb && (0, Xb.jsx)(xb, {
-          rect: yb,
-          margin: vb
-        }), (0, Xb.jsxs)("div", {
-          ref: Zb,
-          ...jb({
-            className: Mb()("tooltip-container SmallTextLight TutorialStep", Bb)
+      }), [tz]);
+      const Bz = (0, Xz.useCallback)((zz => {
+        Dz(zz), Fz && (Fz.current = zz)
+      }), [Dz, Fz]);
+      return (0, Oz.createPortal)((0, bz.jsxs)(bz.Fragment, {
+        children: [Hz && (0, bz.jsx)(Yz, {
+          rect: Hz,
+          margin: Kz
+        }), (0, bz.jsxs)("div", {
+          ref: Bz,
+          ...wz({
+            className: Wz()("tooltip-container SmallTextLight TutorialStep", vz)
           }),
-          children: [Lb, (0, Xb.jsx)("div", {
-            ...Pb({
+          children: [uz, (0, bz.jsx)("div", {
+            ...Nz({
               className: "tooltip-arrow"
             })
           })]
         })]
-      }), (0, eb.k)())
+      }), (0, Uz.k)())
     }
-    const fb = (0, Tb.forwardRef)((function(bb, ab) {
+    const mz = (0, Xz.forwardRef)((function(zz, tz) {
       let {
-        placement: Ub = "right",
-        children: Ab,
-        ...Mb
-      } = bb;
-      const Eb = kb(Mb),
-        Yb = (0, Tb.useRef)(null),
-        Bb = (0, Tb.useRef)(null);
-      Zb(Mb, Eb, Yb, Bb);
-      const [eb, vb] = (0, Tb.useState)(null), Lb = Ab.ref, Pb = (0, Tb.useCallback)((bb => {
-        Bb.current = bb, vb(bb), Rb(ab, bb), Rb(Lb, bb)
-      }), [ab, Lb]);
-      return (0, Xb.jsxs)(Xb.Fragment, {
-        children: [(0, Tb.cloneElement)(Ab, {
-          ref: Pb
-        }), Eb && (0, Xb.jsx)(ib, {
-          target: eb,
-          placement: Ub,
-          boxRef: Yb,
-          children: (0, Xb.jsx)(Db, {
-            ...Mb
+        placement: sz = "right",
+        children: Fz,
+        ...Wz
+      } = zz;
+      const Oz = gz(Wz),
+        oz = (0, Xz.useRef)(null),
+        vz = (0, Xz.useRef)(null);
+      Bz(Wz, Oz, oz, vz);
+      const [Uz, Kz] = (0, Xz.useState)(null), uz = Fz.ref, Nz = (0, Xz.useCallback)((zz => {
+        vz.current = zz, Kz(zz), Dz(tz, zz), Dz(uz, zz)
+      }), [tz, uz]);
+      return (0, bz.jsxs)(bz.Fragment, {
+        children: [(0, Xz.cloneElement)(Fz, {
+          ref: Nz
+        }), Oz && (0, bz.jsx)(xz, {
+          target: Uz,
+          placement: sz,
+          boxRef: oz,
+          children: (0, bz.jsx)(Pz, {
+            ...Wz
           })
         })]
       })
     }));
 
-    function mb(bb) {
-      const ab = kb(bb),
-        Ub = (0, Tb.useRef)(null);
-      return Zb(bb, ab, Ub, null), ab ? (0, Eb.createPortal)((0, Xb.jsx)("div", {
+    function Jz(zz) {
+      const tz = gz(zz),
+        sz = (0, Xz.useRef)(null);
+      return Bz(zz, tz, sz, null), tz ? (0, Oz.createPortal)((0, bz.jsx)("div", {
         className: "TutorialCentreBackdrop",
-        children: (0, Xb.jsx)("div", {
-          ref: Ub,
+        children: (0, bz.jsx)("div", {
+          ref: sz,
           className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
-          children: (0, Xb.jsx)(Db, {
-            ...bb
+          children: (0, bz.jsx)(Pz, {
+            ...zz
           })
         })
-      }), (0, eb.k)()) : null
+      }), (0, Uz.k)()) : null
     }
   },
-  37875: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Eb
+  37967: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Oz
     });
-    const Ab = 4,
-      Mb = 12e3,
-      Tb = 1e3;
-    class Eb {
+    const Fz = 4,
+      Wz = 12e3,
+      Xz = 1e3;
+    class Oz {
       constructor() {
         let {
-          limit: bb = Ab,
-          windowMs: ab = Mb,
-          spacingMs: Ub = Tb,
-          now: Eb = Date.now
+          limit: zz = Fz,
+          windowMs: tz = Wz,
+          spacingMs: sz = Xz,
+          now: Oz = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = bb, this.windowMs = ab, this.spacingMs = Ub, this.now = Eb
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = zz, this.windowMs = tz, this.spacingMs = sz, this.now = Oz
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -285,139 +285,139 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const bb of this.priority) bb.flush();
+        for (const zz of this.priority) zz.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const bb = this.now();
-        this.sent.push(bb), this.lastSentAt = bb, this.schedule(), this.notify()
+        const zz = this.now();
+        this.sent.push(zz), this.lastSentAt = zz, this.schedule(), this.notify()
       }
-      addPriority(bb) {
-        return this.priority.add(bb), () => {
-          this.priority.delete(bb)
+      addPriority(zz) {
+        return this.priority.add(zz), () => {
+          this.priority.delete(zz)
         }
       }
-      subscribe(bb) {
-        return this.listeners.add(bb), () => {
-          this.listeners.delete(bb)
+      subscribe(zz) {
+        return this.listeners.add(zz), () => {
+          this.listeners.delete(zz)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const bb of this.priority)
-          if (bb.waiting()) return !0;
+        for (const zz of this.priority)
+          if (zz.waiting()) return !0;
         return !1
       }
       prune() {
-        const bb = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= bb;) this.sent.shift()
+        const zz = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= zz;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const bb = this.now(),
-          ab = this.lastSentAt + this.spacingMs,
-          Ub = Math.min(ab > bb ? ab : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        Ub !== 1 / 0 && (this.timer = setTimeout((() => {
+        const zz = this.now(),
+          tz = this.lastSentAt + this.spacingMs,
+          sz = Math.min(tz > zz ? tz : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        sz !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, Ub - bb)))
+        }), Math.max(0, sz - zz)))
       }
       notify() {
-        for (const bb of this.listeners) bb()
+        for (const zz of this.listeners) zz()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  36023: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Tb,
-      i: () => Rb,
-      j: () => kb,
-      l: () => Yb,
-      n: () => Pb,
-      p: () => yb,
-      s: () => Lb,
-      u: () => Db,
-      v: () => jb,
-      x: () => Zb
+  36090: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Xz,
+      e: () => Dz,
+      i: () => gz,
+      k: () => oz,
+      m: () => Nz,
+      p: () => Hz,
+      r: () => uz,
+      t: () => Pz,
+      w: () => wz,
+      z: () => Bz
     });
-    var Ab = Ub(19),
-      Mb = Ub(22);
-    const Tb = "clientGameInventoryButtonsChanged",
-      Eb = new Map;
+    var Fz = sz(30),
+      Wz = sz(34);
+    const Xz = "clientGameInventoryButtonsChanged",
+      Oz = new Map;
 
-    function Yb() {
-      return [...Eb.values()].sort(((bb, ab) => {
-        var Ub, Ab;
-        return (null !== (Ub = bb.order) && void 0 !== Ub ? Ub : 0) - (null !== (Ab = ab.order) && void 0 !== Ab ? Ab : 0)
+    function oz() {
+      return [...Oz.values()].sort(((zz, tz) => {
+        var sz, Fz;
+        return (null !== (sz = zz.order) && void 0 !== sz ? sz : 0) - (null !== (Fz = tz.order) && void 0 !== Fz ? Fz : 0)
       }))
     }
-    let Bb = null;
+    let vz = null;
 
-    function eb(bb) {
-      Bb = bb
+    function Uz(zz) {
+      vz = zz
     }
-    let vb = !1;
+    let Kz = !1;
 
-    function Lb(bb) {
-      vb = !0;
+    function uz(zz) {
+      Kz = !0;
       try {
-        bb.onClick()
+        zz.onClick()
       } finally {
-        vb = !1
+        Kz = !1
       }
-      bb.panel && "clientGame" === Ab.c.get("openInGameMenuName") && eb(bb.id)
+      zz.panel && "clientGame" === Fz.b.get("openInGameMenuName") && Uz(zz.id)
     }
 
-    function Pb() {
-      return vb
+    function Nz() {
+      return Kz
     }
 
-    function Xb() {
-      return Yb().filter((bb => bb.panel && !bb.disabled))
+    function bz() {
+      return oz().filter((zz => zz.panel && !zz.disabled))
     }
 
-    function jb(bb) {
-      const ab = Xb(),
-        Ub = ab.findIndex((bb => bb.id === Bb));
-      return !(Ub < 0 || ab.length < 2) && (Lb(ab[(Ub + bb + ab.length) % ab.length]), !0)
+    function wz(zz) {
+      const tz = bz(),
+        sz = tz.findIndex((zz => zz.id === vz));
+      return !(sz < 0 || tz.length < 2) && (uz(tz[(sz + zz + tz.length) % tz.length]), !0)
     }
 
-    function Rb() {
-      return null !== Bb && Xb().length > 1
+    function Dz() {
+      return null !== vz && bz().length > 1
     }
 
-    function kb() {
-      eb(null)
+    function gz() {
+      Uz(null)
     }
 
-    function yb() {
-      "inventory" !== Ab.c.get("openInGameMenuName") && eb(null)
+    function Hz() {
+      "inventory" !== Fz.b.get("openInGameMenuName") && Uz(null)
     }
 
-    function Zb() {
-      const bb = Bb;
-      return eb(null), bb
+    function Bz() {
+      const zz = vz;
+      return Uz(null), zz
     }
 
-    function Db(bb) {
-      return Eb.set(bb.id, bb), Mb.m.IR(Tb, Yb(), !0), () => {
-        Eb.get(bb.id) === bb && (Eb.delete(bb.id), Mb.m.IR(Tb, Yb()))
+    function Pz(zz) {
+      return Oz.set(zz.id, zz), Wz.o.Yg(Xz, oz(), !0), () => {
+        Oz.get(zz.id) === zz && (Oz.delete(zz.id), Wz.o.Yg(Xz, oz()))
       }
     }
   },
-  37856: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Ab
+  37953: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => Fz
     });
-    class Ab {
-      constructor(bb, ab, Ub) {
-        this.IR = bb, this.beforeOpen = ab, this.afterClose = Ub, this.open = !1, this.cX = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.cX && (this.open = !0, this.beforeOpen(this), this.emit())
+    class Fz {
+      constructor(zz, tz, sz) {
+        this.Yg = zz, this.beforeOpen = tz, this.afterClose = sz, this.open = !1, this.lw = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.lw && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -430,300 +430,300 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(bb) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(bb)
+      closePanel(zz) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(zz)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.cX = !0
+        this.open = !1, this.emit(), this.lw = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.cX || (this.snapshot = this.buildSnapshot(), this.IR(this.snapshot))
+        this.lw || (this.snapshot = this.buildSnapshot(), this.Yg(this.snapshot))
       }
     }
   },
-  36017: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      c: () => Yb,
-      g: () => kb,
-      i: () => yb,
-      j: () => Pb,
-      l: () => eb,
-      o: () => Rb,
-      s: () => Xb,
-      w: () => vb
+  36086: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => oz,
+      h: () => gz,
+      j: () => Hz,
+      l: () => Nz,
+      o: () => Uz,
+      s: () => Dz,
+      w: () => bz,
+      x: () => Kz
     });
-    var Ab = Ub(19),
-      Mb = Ub(22),
-      Tb = Ub(1216),
-      Eb = Ub(36023);
-    const Yb = "clientGameUiChanged";
-    let Bb = null;
+    var Fz = sz(30),
+      Wz = sz(34),
+      Xz = sz(1269),
+      Oz = sz(36090);
+    const oz = "clientGameUiChanged";
+    let vz = null;
 
-    function eb() {
-      return Bb
+    function Uz() {
+      return vz
     }
 
-    function vb(bb, ab) {
-      const Ub = {
-        content: bb,
-        menu: ab
+    function Kz(zz, tz) {
+      const sz = {
+        content: zz,
+        menu: tz
       };
-      return Bb = Ub, Mb.m.IR(Yb, Bb, !0), () => {
-        Bb === Ub && (Bb = null, jb = !1, kb(), Mb.m.IR(Yb, null))
+      return vz = sz, Wz.o.Yg(oz, vz, !0), () => {
+        vz === sz && (vz = null, wz = !1, gz(), Wz.o.Yg(oz, null))
       }
     }
-    let Lb = null;
+    let uz = null;
 
-    function Pb() {
-      return Lb
+    function Nz() {
+      return uz
     }
 
-    function Xb(bb) {
-      return Lb = bb, () => {
-        Lb === bb && (Lb = null)
+    function bz(zz) {
+      return uz = zz, () => {
+        uz === zz && (uz = null)
       }
     }
-    let jb = !1;
+    let wz = !1;
 
-    function Rb() {
-      const bb = Ab.c.get("openInGameMenuName");
-      "clientGame" !== bb && (jb = "inventory" === bb), (0, Eb.n)() || (0, Eb.j)(), (0, Tb.h)(Tb.b), Ab.c.set({
+    function Dz() {
+      const zz = Fz.b.get("openInGameMenuName");
+      "clientGame" !== zz && (wz = "inventory" === zz), (0, Oz.m)() || (0, Oz.i)(), (0, Xz.n)(Xz.c), Fz.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function kb() {
-      Zb(!1)
+    function gz() {
+      Bz(!1)
     }
 
-    function yb() {
-      Zb(jb)
+    function Hz() {
+      Bz(wz)
     }
 
-    function Zb(bb) {
-      "clientGame" === Ab.c.get("openInGameMenuName") && Ab.c.set({
-        openInGameMenuName: bb ? "inventory" : null
-      }), bb || (0, Eb.j)(), jb = !1
+    function Bz(zz) {
+      "clientGame" === Fz.b.get("openInGameMenuName") && Fz.b.set({
+        openInGameMenuName: zz ? "inventory" : null
+      }), zz || (0, Oz.i)(), wz = !1
     }
   },
-  38541: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      default: () => vU
+  38669: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      default: () => us
     });
-    var Ab = Ub(52);
-    var Mb = Ub(19),
-      Tb = Ub(1805),
-      Eb = Ub(22),
-      Yb = Ub(36017),
-      Bb = Ub(984),
-      eb = Ub.n(Bb),
-      vb = Ub(1345),
-      Lb = Ub(1134),
-      Pb = Ub(4211),
-      Xb = Ub(1257),
-      jb = Ub(1352),
-      Rb = Ub(1812),
-      kb = Ub(1268),
-      yb = Ub(1794),
-      Zb = Ub(1858),
-      Db = Ub(212);
-    const zb = Ub(38549),
-      xb = Object.fromEntries(zb.keys().map((bb => [bb.replace(/^\.\/(.*)\.webp$/, "$1"), zb(bb)]))),
-      ib = new Set;
+    var Fz = sz(65);
+    var Wz = sz(30),
+      Xz = sz(1842),
+      Oz = sz(34),
+      oz = sz(36086),
+      vz = sz(1020),
+      Uz = sz.n(vz),
+      Kz = sz(1416),
+      uz = sz(1173),
+      Nz = sz(4175),
+      bz = sz(1314),
+      wz = sz(1419),
+      Dz = sz(1845),
+      gz = sz(1333),
+      Hz = sz(1831),
+      Bz = sz(1901),
+      Pz = sz(214);
+    const rz = sz(38672),
+      Yz = Object.fromEntries(rz.keys().map((zz => [zz.replace(/^\.\/(.*)\.webp$/, "$1"), rz(zz)]))),
+      xz = new Set;
 
-    function fb(bb, ab) {
-      const Ub = ab ? bb : `${bb}-uncaught`,
-        Ab = (0, Db.c)(xb, Ub);
-      return void 0 !== Ab || ib.has(Ub) || (ib.add(Ub), console.warn(`Containment Breach has no mugshot ${Ub}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), Ab
+    function mz(zz, tz) {
+      const sz = tz ? zz : `${zz}-uncaught`,
+        Fz = (0, Pz.e)(Yz, sz);
+      return void 0 !== Fz || xz.has(sz) || (xz.add(sz), console.warn(`Containment Breach has no mugshot ${sz}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), Fz
     }
-    var mb = Ub(1023);
-    const pb = "containmentBreach",
-      Nb = "Gold Coin";
+    var Jz = sz(1087);
+    const Iz = "containmentBreach",
+      Cz = "Gold Coin";
 
-    function Wb(bb) {
+    function ez(zz) {
       let {
-        open: ab,
-        onDismiss: Ub,
-        title: Ab,
-        className: Mb,
-        decor: Tb,
-        headerExtra: Eb,
-        status: Yb,
-        statusRefused: Bb = !1,
-        children: vb
-      } = bb;
-      const Lb = `${Mb}Title`;
-      return (0, mb.jsx)(Pb.d, {
-        show: ab,
-        close: Ub,
+        open: tz,
+        onDismiss: sz,
+        title: Fz,
+        className: Wz,
+        decor: Xz,
+        headerExtra: Oz,
+        status: oz,
+        statusRefused: vz = !1,
+        children: Kz
+      } = zz;
+      const uz = `${Wz}Title`;
+      return (0, Jz.jsx)(Nz.b, {
+        show: tz,
+        close: sz,
         togglePointerLock: !1,
         className: "ContainmentBoardOverlay",
-        children: (0, mb.jsxs)("section", {
-          className: eb()("ContainmentBoardPanel", Mb),
+        children: (0, Jz.jsxs)("section", {
+          className: Uz()("ContainmentBoardPanel", Wz),
           role: "dialog",
           "aria-modal": "true",
-          "aria-labelledby": Lb,
-          children: [Tb && (0, mb.jsx)("div", {
+          "aria-labelledby": uz,
+          children: [Xz && (0, Jz.jsx)("div", {
             className: "BoardDecor",
             "aria-hidden": "true",
-            children: Tb
-          }), (0, mb.jsxs)("header", {
+            children: Xz
+          }), (0, Jz.jsxs)("header", {
             className: "BoardHeader",
-            children: [(0, mb.jsx)("h2", {
-              id: Lb,
+            children: [(0, Jz.jsx)("h2", {
+              id: uz,
               className: "VisuallyHidden",
-              children: Ab
-            }), Eb, (0, mb.jsx)(jb.k, {
-              onClick: Ub
+              children: Fz
+            }), Oz, (0, Jz.jsx)(wz.n, {
+              onClick: sz
             })]
-          }), (0, mb.jsx)("div", {
+          }), (0, Jz.jsx)("div", {
             className: "BoardBody",
-            children: vb
-          }), void 0 !== Yb && (0, mb.jsx)("footer", {
-            className: eb()("BoardStatus", {
-              Refused: Bb
+            children: Kz
+          }), void 0 !== oz && (0, Jz.jsx)("footer", {
+            className: Uz()("BoardStatus", {
+              Refused: vz
             }),
-            children: Yb
+            children: oz
           })]
         })
       })
     }
 
-    function Hb(bb) {
+    function Zz(zz) {
       let {
-        itemName: ab
-      } = bb;
-      return (0, mb.jsx)(Rb.c, {
-        itemName: ab,
+        itemName: tz
+      } = zz;
+      return (0, Jz.jsx)(Dz.c, {
+        itemName: tz,
         amount: 0
       })
     }
 
-    function Ib(bb) {
+    function Gz(zz) {
       let {
-        anomalyId: ab,
-        caught: Ub
-      } = bb;
-      const Mb = (0, Ab.useRef)(null);
-      return (0, Xb.b)(Mb, !Ub), (0, mb.jsx)("span", {
-        ref: Mb,
-        className: eb()("BoardMugshot", {
-          Uncaught: !Ub
+        anomalyId: tz,
+        caught: sz
+      } = zz;
+      const Wz = (0, Fz.useRef)(null);
+      return (0, bz.b)(Wz, !sz), (0, Jz.jsx)("span", {
+        ref: Wz,
+        className: Uz()("BoardMugshot", {
+          Uncaught: !sz
         }),
-        children: (0, mb.jsx)("img", {
-          src: fb(ab, Ub),
+        children: (0, Jz.jsx)("img", {
+          src: mz(tz, sz),
           alt: "",
           draggable: !1
         })
       })
     }
 
-    function db(bb) {
+    function Tz(zz) {
       let {
-        itemName: ab,
-        amount: Ub,
-        PY: Ab,
-        inTile: Mb = !1
-      } = bb;
-      return (0, mb.jsx)(kb.g, {
+        itemName: tz,
+        amount: sz,
+        po: Fz,
+        inTile: Wz = !1
+      } = zz;
+      return (0, Jz.jsx)(gz.h, {
         delayShow: 200,
-        hoverOnly: Mb,
+        hoverOnly: Wz,
         placement: "top",
         tooltipClassName: "BoardChipTooltipBox",
-        tooltipInner: (0, mb.jsx)(hb, {
-          itemName: ab,
-          amount: Ub,
-          PY: Ab
+        tooltipInner: (0, Jz.jsx)(jz, {
+          itemName: tz,
+          amount: sz,
+          po: Fz
         }),
-        children: (0, mb.jsxs)("span", {
-          className: eb()("BoardChip", {
-            Short: void 0 !== Ab && Ab < Ub
+        children: (0, Jz.jsxs)("span", {
+          className: Uz()("BoardChip", {
+            Short: void 0 !== Fz && Fz < sz
           }),
-          children: [(0, mb.jsx)("span", {
+          children: [(0, Jz.jsx)("span", {
             className: "BoardChipIcon",
-            children: (0, mb.jsx)(Hb, {
-              itemName: ab
+            children: (0, Jz.jsx)(Zz, {
+              itemName: tz
             })
-          }), Ub.toLocaleString()]
+          }), sz.toLocaleString()]
         })
       })
     }
-    const Fb = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
+    const cz = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
 
-    function hb(bb) {
-      var ab;
+    function jz(zz) {
+      var tz;
       let {
-        itemName: Ub,
-        amount: Ab,
-        PY: Mb
-      } = bb;
+        itemName: sz,
+        amount: Fz,
+        po: Wz
+      } = zz;
       const {
-        t: Tb
-      } = (0, Lb.A)(), Eb = (0, Zb.g)("itemInfo", (bb => bb[Ub])), {
-        lore: Yb,
-        droppedBy: Bb
-      } = function(bb) {
-        if ("string" !== typeof bb) return {
-          lore: bb,
+        t: Xz
+      } = (0, uz.B)(), Oz = (0, Bz.h)("itemInfo", (zz => zz[sz])), {
+        lore: oz,
+        droppedBy: vz
+      } = function(zz) {
+        if ("string" !== typeof zz) return {
+          lore: zz,
           droppedBy: null
         };
-        const ab = Fb.exec(bb);
-        return null === ab ? {
-          lore: bb,
+        const tz = cz.exec(zz);
+        return null === tz ? {
+          lore: zz,
           droppedBy: null
         } : {
-          lore: "" === ab[1] ? void 0 : ab[1],
-          droppedBy: ab[2]
+          lore: "" === tz[1] ? void 0 : tz[1],
+          droppedBy: tz[2]
         }
-      }(null === Eb || void 0 === Eb ? void 0 : Eb.description);
-      return (0, mb.jsxs)("div", {
+      }(null === Oz || void 0 === Oz ? void 0 : Oz.description);
+      return (0, Jz.jsxs)("div", {
         className: "BoardChipTooltip",
-        children: [(0, mb.jsxs)("div", {
+        children: [(0, Jz.jsxs)("div", {
           className: "BoardChipTooltipHeader",
-          children: [(0, mb.jsx)("span", {
+          children: [(0, Jz.jsx)("span", {
             className: "BoardChipTooltipIcon",
-            children: (0, mb.jsx)(Hb, {
-              itemName: Ub
+            children: (0, Jz.jsx)(Zz, {
+              itemName: sz
             })
-          }), (0, mb.jsx)(yb.c, {
-            text: null !== (ab = null === Eb || void 0 === Eb ? void 0 : Eb.displayName) && void 0 !== ab ? ab : Ub,
+          }), (0, Jz.jsx)(Hz.c, {
+            text: null !== (tz = null === Oz || void 0 === Oz ? void 0 : Oz.displayName) && void 0 !== tz ? tz : sz,
             className: "BoardChipTooltipName"
           })]
-        }), (void 0 !== Yb || null !== Bb) && (0, mb.jsxs)("div", {
+        }), (void 0 !== oz || null !== vz) && (0, Jz.jsxs)("div", {
           className: "BoardChipTooltipBody",
-          children: [void 0 !== Yb && (0, mb.jsx)(yb.c, {
-            text: Yb,
+          children: [void 0 !== oz && (0, Jz.jsx)(Hz.c, {
+            text: oz,
             className: "BoardChipTooltipDescription"
-          }), null !== Bb && (0, mb.jsxs)("span", {
+          }), null !== vz && (0, Jz.jsxs)("span", {
             className: "BoardChipTooltipSource",
-            children: [(0, mb.jsx)("span", {
+            children: [(0, Jz.jsx)("span", {
               className: "BoardChipTooltipLabel",
-              children: Tb(`${pb}:chipDroppedBy`)
-            }), Bb]
+              children: Xz(`${Iz}:chipDroppedBy`)
+            }), vz]
           })]
-        }), void 0 !== Mb && (0, mb.jsxs)("div", {
-          className: eb()("BoardChipTooltipHeld", {
-            Short: Mb < Ab
+        }), void 0 !== Wz && (0, Jz.jsxs)("div", {
+          className: Uz()("BoardChipTooltipHeld", {
+            Short: Wz < Fz
           }),
-          children: [(0, mb.jsx)("span", {
+          children: [(0, Jz.jsx)("span", {
             className: "BoardChipTooltipLabel",
-            children: Tb(`${pb}:chipYouHave`)
-          }), (0, mb.jsxs)("span", {
+            children: Xz(`${Iz}:chipYouHave`)
+          }), (0, Jz.jsxs)("span", {
             className: "BoardChipTooltipCount",
-            children: [(0, mb.jsx)("span", {
+            children: [(0, Jz.jsx)("span", {
               className: "BoardChipTooltipHeldAmount",
-              children: Mb.toLocaleString()
-            }), ` / ${Ab.toLocaleString()}`]
-          }), (0, mb.jsx)("span", {
+              children: Wz.toLocaleString()
+            }), ` / ${Fz.toLocaleString()}`]
+          }), (0, Jz.jsx)("span", {
             className: "BoardChipTooltipMeter",
-            children: (0, mb.jsx)("span", {
+            children: (0, Jz.jsx)("span", {
               style: {
-                width: (Ab > 0 ? 100 * Math.min(1, Mb / Ab) : 100) + "%"
+                width: (Fz > 0 ? 100 * Math.min(1, Wz / Fz) : 100) + "%"
               }
             })
           })]
@@ -731,81 +731,81 @@ export const modules = {
       })
     }
 
-    function Gb(bb) {
+    function Az(zz) {
       let {
-        icon: ab,
-        name: Ub,
-        selected: Ab,
-        locked: Mb,
-        className: Tb,
-        buttonRef: Eb,
-        onSelect: Yb,
-        children: Bb
-      } = bb;
-      return (0, mb.jsxs)("button", {
-        ref: Eb,
+        icon: tz,
+        name: sz,
+        selected: Fz,
+        locked: Wz,
+        className: Xz,
+        buttonRef: Oz,
+        onSelect: oz,
+        children: vz
+      } = zz;
+      return (0, Jz.jsxs)("button", {
+        ref: Oz,
         type: "button",
-        className: eb()("BoardTile", Tb, {
-          Selected: Ab,
-          Locked: Mb
+        className: Uz()("BoardTile", Xz, {
+          Selected: Fz,
+          Locked: Wz
         }),
-        onClick: Yb,
-        children: [(0, mb.jsx)("span", {
+        onClick: oz,
+        children: [(0, Jz.jsx)("span", {
           className: "BoardTileIcon",
-          children: ab
-        }), (0, mb.jsx)("span", {
+          children: tz
+        }), (0, Jz.jsx)("span", {
           className: "BoardTileName",
-          children: Ub
-        }), Bb]
+          children: sz
+        }), vz]
       })
     }
 
-    function Qb(bb) {
+    function yz(zz) {
       let {
-        icon: ab,
-        name: Ub,
-        children: Ab
-      } = bb;
-      return (0, mb.jsxs)("header", {
+        icon: tz,
+        name: sz,
+        children: Fz
+      } = zz;
+      return (0, Jz.jsxs)("header", {
         className: "BoardDetailHeader",
-        children: [(0, mb.jsx)("span", {
+        children: [(0, Jz.jsx)("span", {
           className: "BoardDetailIcon",
-          children: ab
-        }), (0, mb.jsxs)("div", {
+          children: tz
+        }), (0, Jz.jsxs)("div", {
           className: "BoardDetailHeading",
-          children: [(0, mb.jsx)("h3", {
-            children: Ub
-          }), (0, mb.jsx)("span", {
+          children: [(0, Jz.jsx)("h3", {
+            children: sz
+          }), (0, Jz.jsx)("span", {
             className: "BoardDetailStatus",
-            children: Ab
+            children: Fz
           })]
         })]
       })
     }
 
-    function qb(bb) {
+    function Mz(zz) {
       let {
-        coins: ab,
-        children: Ub
-      } = bb;
-      return (0, mb.jsxs)("div", {
+        coins: tz,
+        children: sz
+      } = zz;
+      return (0, Jz.jsxs)("div", {
         className: "BoardWallet",
-        children: [(0, mb.jsx)(db, {
-          itemName: Nb,
-          amount: ab
-        }), Ub]
+        children: [(0, Jz.jsx)(Tz, {
+          itemName: Cz,
+          amount: tz
+        }), sz]
       })
     }
-    var ub = Ub(37856);
-    const rb = "containmentCodexView";
-    class Kb extends ub.d {
+    var dz = sz(37953);
+    const hz = "containmentCodexView";
+    class Qz extends dz.d {
       constructor() {
-        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = bb => {
-          this.selectedId = bb, this.emit()
+        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = zz => {
+          this.selectedId = zz, this.emit()
         }
       }
-      aj(bb) {
-        this.entries = bb.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
+      Sw(zz) {
+        this.entries = zz.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
       }
       buildSnapshot() {
         return {
@@ -815,55 +815,55 @@ export const modules = {
         }
       }
     }
-    const ob = {
-        codexAnyDifficulty: `${pb}:codexNeedsAny`,
-        codexNormalOnly: `${pb}:codexNeedsNormal`,
-        codexHardOnly: `${pb}:codexNeedsHard`
+    const kz = {
+        codexAnyDifficulty: `${Iz}:codexNeedsAny`,
+        codexNormalOnly: `${Iz}:codexNeedsNormal`,
+        codexHardOnly: `${Iz}:codexNeedsHard`
       },
-      lb = {
+      iz = {
         codexContained: "Contained",
         codexEncountered: "Sighted",
         codexUnidentified: "Unknown"
       },
-      tb = {
-        codexContained: `${pb}:codexContainedBadge`,
-        codexEncountered: `${pb}:codexEncounteredBadge`,
-        codexUnidentified: `${pb}:codexUnidentifiedBadge`
+      Lz = {
+        codexContained: `${Iz}:codexContainedBadge`,
+        codexEncountered: `${Iz}:codexEncounteredBadge`,
+        codexUnidentified: `${Iz}:codexUnidentifiedBadge`
       },
-      wb = ["94%", "81%", "88%", "46%", "72%"];
+      lz = ["94%", "81%", "88%", "46%", "72%"];
 
-    function sb(bb) {
+    function nz(zz) {
       let {
-        entry: ab
-      } = bb;
+        entry: tz
+      } = zz;
       const {
-        t: Ub
-      } = (0, Lb.A)();
-      return (0, mb.jsx)("span", {
-        className: eb()("BoardBadge", lb[ab.codexEntryState]),
-        children: Ub(tb[ab.codexEntryState])
+        t: sz
+      } = (0, uz.B)();
+      return (0, Jz.jsx)("span", {
+        className: Uz()("BoardBadge", iz[tz.codexEntryState]),
+        children: sz(Lz[tz.codexEntryState])
       })
     }
 
-    function gb(bb) {
+    function az(zz) {
       const {
-        t: ab
-      } = (0, Lb.A)();
-      return "codexUnidentified" === bb.codexEntryState ? ab(`${pb}:codexUnidentifiedName`) : bb.codexEntryName
+        t: tz
+      } = (0, uz.B)();
+      return "codexUnidentified" === zz.codexEntryState ? tz(`${Iz}:codexUnidentifiedName`) : zz.codexEntryName
     }
 
-    function Cb(bb) {
+    function qz(zz) {
       let {
-        entry: ab
-      } = bb;
-      return "codexUnidentified" === ab.codexEntryState ? (0, mb.jsx)(Hb, {
+        entry: tz
+      } = zz;
+      return "codexUnidentified" === tz.codexEntryState ? (0, Jz.jsx)(Zz, {
         itemName: "Book"
-      }) : (0, mb.jsxs)("span", {
+      }) : (0, Jz.jsxs)("span", {
         className: "CodexPhoto",
-        children: [(0, mb.jsx)(Ib, {
-          anomalyId: ab.codexEntryId,
-          caught: "codexContained" === ab.codexEntryState
-        }), (0, mb.jsx)("img", {
+        children: [(0, Jz.jsx)(Gz, {
+          anomalyId: tz.codexEntryId,
+          caught: "codexContained" === tz.codexEntryState
+        }), (0, Jz.jsx)("img", {
           className: "CodexPaperclip",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGNggIIXb97/X7V57/+Wvtn/GZDBqs17UQTgClahScBATHrlf5ySeHWimo9NMbokCp9OkmD/oasGCaJLAAC5ZUIBS85GiAAAAABJRU5ErkJggg==",
           alt: "",
@@ -872,27 +872,27 @@ export const modules = {
       })
     }
 
-    function Vb(bb) {
+    function Sz(zz) {
       let {
-        entry: ab,
-        selected: Ub,
-        onSelect: Ab
-      } = bb;
-      const Mb = "codexUnidentified" === ab.codexEntryState;
-      return (0, mb.jsxs)(Gb, {
-        icon: (0, mb.jsx)(Cb, {
-          entry: ab
+        entry: tz,
+        selected: sz,
+        onSelect: Fz
+      } = zz;
+      const Wz = "codexUnidentified" === tz.codexEntryState;
+      return (0, Jz.jsxs)(Az, {
+        icon: (0, Jz.jsx)(qz, {
+          entry: tz
         }),
-        name: gb(ab),
-        selected: Ub,
-        locked: Mb,
-        className: eb()("CodexFolder", lb[ab.codexEntryState]),
+        name: az(tz),
+        selected: sz,
+        locked: Wz,
+        className: Uz()("CodexFolder", iz[tz.codexEntryState]),
         onSelect: () => {
-          Ab(ab.codexEntryId)
+          Fz(tz.codexEntryId)
         },
-        children: [!Mb && (0, mb.jsx)(sb, {
-          entry: ab
-        }), Mb && (0, mb.jsx)("img", {
+        children: [!Wz && (0, Jz.jsx)(nz, {
+          entry: tz
+        }), Wz && (0, Jz.jsx)("img", {
           className: "CodexSeal",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVR4nGNggIIGHp7/MAzjw+TAnMf+/mB8RkQEjOGKYZLIgsiK4AqQJZA1gBXAOHgVwCRQJJEdCVOEYj8yQPciTAEAz0hgyamUqskAAAAASUVORK5CYII=",
           alt: "",
@@ -901,176 +901,176 @@ export const modules = {
       })
     }
 
-    function Ob(bb) {
+    function Vz(zz) {
       let {
-        count: ab
-      } = bb;
-      const Ub = [];
-      for (let Ab = Math.min(ab, 25); Ab > 0; Ab -= 5) Ub.push(Math.min(Ab, 5));
-      return (0, mb.jsx)("span", {
+        count: tz
+      } = zz;
+      const sz = [];
+      for (let Fz = Math.min(tz, 25); Fz > 0; Fz -= 5) sz.push(Math.min(Fz, 5));
+      return (0, Jz.jsx)("span", {
         className: "CodexTallyMarks",
         "aria-hidden": "true",
-        children: Ub.map(((bb, ab) => (0, mb.jsx)("span", {
-          className: eb()("CodexTallyGroup", {
-            Gate: 5 === bb
+        children: sz.map(((zz, tz) => (0, Jz.jsx)("span", {
+          className: Uz()("CodexTallyGroup", {
+            Gate: 5 === zz
           }),
           children: Array.from({
-            length: Math.min(bb, 4)
-          }, ((bb, ab) => (0, mb.jsx)("span", {
+            length: Math.min(zz, 4)
+          }, ((zz, tz) => (0, Jz.jsx)("span", {
             className: "CodexTallyMark"
-          }, ab)))
-        }, ab)))
+          }, tz)))
+        }, tz)))
       })
     }
 
-    function cb(bb) {
+    function Rz(zz) {
       let {
-        contained: ab,
-        total: Ub
-      } = bb;
+        contained: tz,
+        total: sz
+      } = zz;
       const {
-        t: Ab
-      } = (0, Lb.A)();
-      return (0, mb.jsxs)("div", {
+        t: Fz
+      } = (0, uz.B)();
+      return (0, Jz.jsxs)("div", {
         className: "CodexProgress",
-        children: [Ab(`${pb}:codexProgress`, {
-          contained: String(ab),
-          total: String(Ub)
-        }), (0, mb.jsx)("span", {
+        children: [Fz(`${Iz}:codexProgress`, {
+          contained: String(tz),
+          total: String(sz)
+        }), (0, Jz.jsx)("span", {
           className: "CodexProgressMeter",
-          children: (0, mb.jsx)("span", {
+          children: (0, Jz.jsx)("span", {
             style: {
-              width: ab / Ub * 100 + "%"
+              width: tz / sz * 100 + "%"
             }
           })
         })]
       })
     }
 
-    function Jb(bb) {
+    function pz(zz) {
       let {
-        entry: ab,
-        fileNumber: Ub
-      } = bb;
+        entry: tz,
+        fileNumber: sz
+      } = zz;
       const {
-        t: Ab
-      } = (0, Lb.A)(), Mb = "codexContained" === ab.codexEntryState;
-      return (0, mb.jsx)("section", {
+        t: Fz
+      } = (0, uz.B)(), Wz = "codexContained" === tz.codexEntryState;
+      return (0, Jz.jsx)("section", {
         className: "BoardDetail",
-        children: (0, mb.jsxs)("article", {
-          className: eb()("CodexDossier", lb[ab.codexEntryState]),
-          children: [(0, mb.jsx)("span", {
+        children: (0, Jz.jsxs)("article", {
+          className: Uz()("CodexDossier", iz[tz.codexEntryState]),
+          children: [(0, Jz.jsx)("span", {
             className: "CodexFileNumber",
-            children: Ab(`${pb}:codexFileNumber`, {
-              number: String(Ub).padStart(3, "0")
+            children: Fz(`${Iz}:codexFileNumber`, {
+              number: String(sz).padStart(3, "0")
             })
-          }), (0, mb.jsx)(Qb, {
-            icon: (0, mb.jsx)(Cb, {
-              entry: ab
+          }), (0, Jz.jsx)(yz, {
+            icon: (0, Jz.jsx)(qz, {
+              entry: tz
             }),
-            name: gb(ab),
-            children: (0, mb.jsx)(sb, {
-              entry: ab
+            name: az(tz),
+            children: (0, Jz.jsx)(nz, {
+              entry: tz
             })
-          }), Mb && (0, mb.jsxs)(mb.Fragment, {
-            children: [(0, mb.jsx)("p", {
+          }), Wz && (0, Jz.jsxs)(Jz.Fragment, {
+            children: [(0, Jz.jsx)("p", {
               className: "BoardDescription",
-              children: ab.codexEntryLore
-            }), (0, mb.jsxs)("p", {
+              children: tz.codexEntryLore
+            }), (0, Jz.jsxs)("p", {
               className: "CodexTally",
-              children: [Ab(`${pb}:codexContainments`, {
-                count: String(ab.codexEntryContainedCount)
-              }), (0, mb.jsx)(Ob, {
-                count: ab.codexEntryContainedCount
+              children: [Fz(`${Iz}:codexContainments`, {
+                count: String(tz.codexEntryContainedCount)
+              }), (0, Jz.jsx)(Vz, {
+                count: tz.codexEntryContainedCount
               })]
-            }), (0, mb.jsx)("span", {
+            }), (0, Jz.jsx)("span", {
               className: "CodexClosedStamp",
               "aria-hidden": "true",
-              children: Ab(`${pb}:codexContainedBadge`)
+              children: Fz(`${Iz}:codexContainedBadge`)
             })]
-          }), !Mb && (0, mb.jsxs)(mb.Fragment, {
-            children: [(0, mb.jsxs)("div", {
+          }), !Wz && (0, Jz.jsxs)(Jz.Fragment, {
+            children: [(0, Jz.jsxs)("div", {
               className: "CodexRedaction",
-              children: [wb.map((bb => (0, mb.jsx)("span", {
+              children: [lz.map((zz => (0, Jz.jsx)("span", {
                 className: "CodexRedactedLine",
                 style: {
-                  width: bb
+                  width: zz
                 }
-              }, bb))), (0, mb.jsx)("p", {
+              }, zz))), (0, Jz.jsx)("p", {
                 className: "CodexRedacted",
-                children: Ab(`${pb}:codexRedacted`)
+                children: Fz(`${Iz}:codexRedacted`)
               })]
-            }), "" !== ab.codexEntryHint && (0, mb.jsxs)("aside", {
+            }), "" !== tz.codexEntryHint && (0, Jz.jsxs)("aside", {
               className: "CodexNote",
-              children: [(0, mb.jsx)("h4", {
-                children: Ab(`${pb}:codexHintLabel`)
-              }), (0, mb.jsx)("p", {
-                children: ab.codexEntryHint
+              children: [(0, Jz.jsx)("h4", {
+                children: Fz(`${Iz}:codexHintLabel`)
+              }), (0, Jz.jsx)("p", {
+                children: tz.codexEntryHint
               })]
-            }), (0, mb.jsx)("p", {
+            }), (0, Jz.jsx)("p", {
               className: "CodexClearance",
-              children: Ab(ob[ab.codexEntryDifficulty])
+              children: Fz(kz[tz.codexEntryDifficulty])
             })]
           })]
         })
       })
     }
 
-    function nb(bb) {
+    function fz(zz) {
       let {
-        controller: ab
-      } = bb;
-      const Ub = (0, vb.i)(rb, ab.getSnapshot()),
+        controller: tz
+      } = zz;
+      const sz = (0, Kz.h)(hz, tz.getSnapshot()),
         {
-          t: Ab
-        } = (0, Lb.A)();
-      if (0 === Ub.entries.length) return null;
-      const Mb = Ub.entries.find((bb => bb.codexEntryId === Ub.selectedId)),
-        Tb = Ub.entries.filter((bb => "codexContained" === bb.codexEntryState)).length,
-        Eb = Ub.entries.map((bb => bb.codexEntryId)).sort().indexOf(Mb.codexEntryId) + 1;
-      return (0, mb.jsxs)(Wb, {
-        open: Ub.open,
-        onDismiss: ab.dismiss,
-        title: Ab(`${pb}:codexTitle`),
+          t: Fz
+        } = (0, uz.B)();
+      if (0 === sz.entries.length) return null;
+      const Wz = sz.entries.find((zz => zz.codexEntryId === sz.selectedId)),
+        Xz = sz.entries.filter((zz => "codexContained" === zz.codexEntryState)).length,
+        Oz = sz.entries.map((zz => zz.codexEntryId)).sort().indexOf(Wz.codexEntryId) + 1;
+      return (0, Jz.jsxs)(ez, {
+        open: sz.open,
+        onDismiss: tz.dismiss,
+        title: Fz(`${Iz}:codexTitle`),
         className: "ContainmentCodexPanel",
-        headerExtra: (0, mb.jsx)(cb, {
-          contained: Tb,
-          total: Ub.entries.length
+        headerExtra: (0, Jz.jsx)(Rz, {
+          contained: Xz,
+          total: sz.entries.length
         }),
-        children: [(0, mb.jsx)("div", {
+        children: [(0, Jz.jsx)("div", {
           className: "BoardTiles",
-          children: Ub.entries.map((bb => (0, mb.jsx)(Vb, {
-            entry: bb,
-            selected: bb === Mb,
-            onSelect: ab.select
-          }, bb.codexEntryId)))
-        }), (0, mb.jsx)(Jb, {
-          entry: Mb,
-          fileNumber: Eb
+          children: sz.entries.map((zz => (0, Jz.jsx)(Sz, {
+            entry: zz,
+            selected: zz === Wz,
+            onSelect: tz.select
+          }, zz.codexEntryId)))
+        }), (0, Jz.jsx)(pz, {
+          entry: Wz,
+          fileNumber: Oz
         })]
       })
     }
-    var Sb = Ub(325);
-    class ba extends ub.d {
-      constructor(bb, ab, Ub, Ab, Mb, Tb) {
-        super(bb, ab, Ub), this.pacer = Ab, this.command = Mb, this.predict = Tb, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = bb => {
-          this.selectedId = bb, this.emit()
-        }, this.act = (bb, ab) => {
-          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${bb} ${ab}`, this.rollBack)) return;
-          const Ub = this.predict(this.board, bb, ab);
-          null !== Ub && (this.board = Ub.board, this.notice = Ub.notice, this.emit())
+    var Ez = sz(321);
+    class zt extends dz.d {
+      constructor(zz, tz, sz, Fz, Wz, Xz) {
+        super(zz, tz, sz), this.pacer = Fz, this.command = Wz, this.predict = Xz, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = zz => {
+          this.selectedId = zz, this.emit()
+        }, this.act = (zz, tz) => {
+          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${zz} ${tz}`, this.rollBack)) return;
+          const sz = this.predict(this.board, zz, tz);
+          null !== sz && (this.board = sz.board, this.notice = sz.notice, this.emit())
         }, this.rollBack = () => {
           this.board !== this.confirmed && (this.board = this.confirmed, this.notice = null)
-        }, this.unsubscribePacer = Ab.subscribe((() => {
+        }, this.unsubscribePacer = Fz.subscribe((() => {
           this.emit()
         }))
       }
-      aj(bb) {
-        const ab = this.messageOpens(bb);
-        if (ab && this.open) return this.board === this.confirmed && (this.board = bb), this.confirmed = bb, void this.emit();
-        if (this.board = bb, this.confirmed = bb, this.pacer.onReply(), ab) return this.notice = null, this.selectedId = this.openingSelection(bb), void this.show();
-        const Ub = this.messageNotice(bb);
-        null !== Ub && (this.notice = Ub), this.emit()
+      Sw(zz) {
+        const tz = this.messageOpens(zz);
+        if (tz && this.open) return this.board === this.confirmed && (this.board = zz), this.confirmed = zz, void this.emit();
+        if (this.board = zz, this.confirmed = zz, this.pacer.onReply(), tz) return this.notice = null, this.selectedId = this.openingSelection(zz), void this.show();
+        const sz = this.messageNotice(zz);
+        null !== sz && (this.notice = sz), this.emit()
       }
       dispose() {
         this.unsubscribePacer(), super.dispose()
@@ -1080,153 +1080,153 @@ export const modules = {
       }
     }
 
-    function aa(bb, ab) {
-      return bb.loadoutCoins >= ab.loadoutCostCoins && ab.loadoutCostParts.every((ab => function(bb, ab) {
-        return Ua(bb, ab).loadoutHeldPartAmount
-      }(bb, ab.loadoutPartCurrency) >= ab.loadoutPartAmount))
+    function tt(zz, tz) {
+      return zz.loadoutCoins >= tz.loadoutCostCoins && tz.loadoutCostParts.every((tz => function(zz, tz) {
+        return st(zz, tz).loadoutHeldPartAmount
+      }(zz, tz.loadoutPartCurrency) >= tz.loadoutPartAmount))
     }
 
-    function Ua(bb, ab) {
-      return bb.loadoutHeldParts.find((bb => bb.loadoutHeldPartCurrency === ab))
+    function st(zz, tz) {
+      return zz.loadoutHeldParts.find((zz => zz.loadoutHeldPartCurrency === tz))
     }
 
-    function Aa(bb, ab) {
-      return bb.loadoutSlots.find((bb => bb.loadoutSlotKind === ab))
+    function Ft(zz, tz) {
+      return zz.loadoutSlots.find((zz => zz.loadoutSlotKind === tz))
     }
 
-    function Ma(bb) {
-      return bb.loadoutPerks.filter((bb => bb.loadoutPerkEquipped)).length >= bb.loadoutMaxPerks
+    function Wt(zz) {
+      return zz.loadoutPerks.filter((zz => zz.loadoutPerkEquipped)).length >= zz.loadoutMaxPerks
     }
 
-    function Ta(bb, ab, Ub) {
-      for (const Mb of bb.loadoutSlots) {
-        const Ab = Mb.loadoutSlotOptions.find((bb => bb.loadoutOptionId === Ub));
-        if (Ab) return "loadoutArmour" === Mb.loadoutSlotKind ? Ya(bb, Mb, Ab, ab) : Ea(bb, Mb, Ab, ab)
+    function Xt(zz, tz, sz) {
+      for (const Wz of zz.loadoutSlots) {
+        const Fz = Wz.loadoutSlotOptions.find((zz => zz.loadoutOptionId === sz));
+        if (Fz) return "loadoutArmour" === Wz.loadoutSlotKind ? ot(zz, Wz, Fz, tz) : Ot(zz, Wz, Fz, tz)
       }
-      const Ab = bb.loadoutPerks.find((bb => bb.loadoutPerkId === Ub));
-      return Ab ? function(bb, ab, Ub) {
-        const Ab = ab.loadoutPerkOwned,
-          Mb = ab.loadoutPerkEquipped,
-          Tb = ab.loadoutPerkName,
-          Eb = Ma(bb);
-        if ("loadoutUnlock" === Ub) {
-          if (Ab || !aa(bb, ab.loadoutPerkCost)) return null;
-          const Ub = {
-            ...ab,
+      const Fz = zz.loadoutPerks.find((zz => zz.loadoutPerkId === sz));
+      return Fz ? function(zz, tz, sz) {
+        const Fz = tz.loadoutPerkOwned,
+          Wz = tz.loadoutPerkEquipped,
+          Xz = tz.loadoutPerkName,
+          Oz = Wt(zz);
+        if ("loadoutUnlock" === sz) {
+          if (Fz || !tt(zz, tz.loadoutPerkCost)) return null;
+          const sz = {
+            ...tz,
             loadoutPerkOwned: !0,
-            loadoutPerkEquipped: !Eb
+            loadoutPerkEquipped: !Oz
           };
           return {
-            board: ea(va(bb, ab.loadoutPerkCost), Ub),
-            notice: La(Eb ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", Tb)
+            board: Ut(Kt(zz, tz.loadoutPerkCost), sz),
+            notice: ut(Oz ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", Xz)
           }
         }
-        if ("loadoutUpgrade" === Ub || !Ab || "loadoutEquip" === Ub === Mb || !Mb && Eb) return null;
+        if ("loadoutUpgrade" === sz || !Fz || "loadoutEquip" === sz === Wz || !Wz && Oz) return null;
         return {
-          board: ea(bb, {
-            ...ab,
-            loadoutPerkEquipped: !Mb
+          board: Ut(zz, {
+            ...tz,
+            loadoutPerkEquipped: !Wz
           }),
-          notice: La(Mb ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", Tb)
+          notice: ut(Wz ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", Xz)
         }
-      }(bb, Ab, ab) : null
+      }(zz, Fz, tz) : null
     }
 
-    function Ea(bb, ab, Ub, Ab) {
-      const Mb = Ub.loadoutOptionOwnedTier,
-        Tb = Ub.loadoutOptionName;
-      if ("loadoutEquip" === Ab) return 0 === Mb ? null : {
-        board: Ba(bb, ab, Ub.loadoutOptionId, null),
-        notice: La("loadoutNoticeEquipped", Tb)
+    function Ot(zz, tz, sz, Fz) {
+      const Wz = sz.loadoutOptionOwnedTier,
+        Xz = sz.loadoutOptionName;
+      if ("loadoutEquip" === Fz) return 0 === Wz ? null : {
+        board: vt(zz, tz, sz.loadoutOptionId, null),
+        notice: ut("loadoutNoticeEquipped", Xz)
       };
-      const Eb = "loadoutUnlock" === Ab;
-      if (Eb && 0 !== Mb || "loadoutUpgrade" === Ab && (0 === Mb || Mb >= Ub.loadoutOptionTiers.length) || "loadoutUnequip" === Ab) return null;
-      const Yb = Ub.loadoutOptionTiers[Mb].loadoutTierCost;
-      if (!aa(bb, Yb)) return null;
-      const Bb = {
-          ...Ub,
-          loadoutOptionOwnedTier: Mb + 1
+      const Oz = "loadoutUnlock" === Fz;
+      if (Oz && 0 !== Wz || "loadoutUpgrade" === Fz && (0 === Wz || Wz >= sz.loadoutOptionTiers.length) || "loadoutUnequip" === Fz) return null;
+      const oz = sz.loadoutOptionTiers[Wz].loadoutTierCost;
+      if (!tt(zz, oz)) return null;
+      const vz = {
+          ...sz,
+          loadoutOptionOwnedTier: Wz + 1
         },
-        eb = Eb ? Ub.loadoutOptionId : ab.loadoutSlotEquippedId;
+        Uz = Oz ? sz.loadoutOptionId : tz.loadoutSlotEquippedId;
       return {
-        board: Ba(va(bb, Yb), ab, eb, Bb),
-        notice: Eb ? La("loadoutNoticeUnlocked", Tb) : La("loadoutNoticeUpgraded", Tb, Mb + 1)
+        board: vt(Kt(zz, oz), tz, Uz, vz),
+        notice: Oz ? ut("loadoutNoticeUnlocked", Xz) : ut("loadoutNoticeUpgraded", Xz, Wz + 1)
       }
     }
 
-    function Ya(bb, ab, Ub, Ab) {
-      const Mb = Ub.loadoutOptionOwnedTier > 0,
-        Tb = Ub.loadoutOptionName;
-      if ("loadoutEquip" === Ab && Mb) return {
-        board: Ba(bb, ab, Ub.loadoutOptionId, null),
-        notice: La("loadoutNoticeEquipped", Tb)
+    function ot(zz, tz, sz, Fz) {
+      const Wz = sz.loadoutOptionOwnedTier > 0,
+        Xz = sz.loadoutOptionName;
+      if ("loadoutEquip" === Fz && Wz) return {
+        board: vt(zz, tz, sz.loadoutOptionId, null),
+        notice: ut("loadoutNoticeEquipped", Xz)
       };
-      const Eb = Ub.loadoutOptionTiers[0].loadoutTierCost;
-      return "loadoutUnlock" !== Ab || Mb || !aa(bb, Eb) ? null : {
-        board: Ba(va(bb, Eb), ab, Ub.loadoutOptionId, {
-          ...Ub,
+      const Oz = sz.loadoutOptionTiers[0].loadoutTierCost;
+      return "loadoutUnlock" !== Fz || Wz || !tt(zz, Oz) ? null : {
+        board: vt(Kt(zz, Oz), tz, sz.loadoutOptionId, {
+          ...sz,
           loadoutOptionOwnedTier: 1
         }),
-        notice: La("loadoutNoticeUnlocked", Tb)
+        notice: ut("loadoutNoticeUnlocked", Xz)
       }
     }
 
-    function Ba(bb, ab, Ub, Ab) {
-      const Mb = {
-        ...ab,
-        loadoutSlotEquippedId: Ub,
-        loadoutSlotOptions: ab.loadoutSlotOptions.map((bb => null !== Ab && bb.loadoutOptionId === Ab.loadoutOptionId ? Ab : bb))
+    function vt(zz, tz, sz, Fz) {
+      const Wz = {
+        ...tz,
+        loadoutSlotEquippedId: sz,
+        loadoutSlotOptions: tz.loadoutSlotOptions.map((zz => null !== Fz && zz.loadoutOptionId === Fz.loadoutOptionId ? Fz : zz))
       };
       return {
-        ...bb,
-        loadoutSlots: bb.loadoutSlots.map((bb => bb === ab ? Mb : bb))
+        ...zz,
+        loadoutSlots: zz.loadoutSlots.map((zz => zz === tz ? Wz : zz))
       }
     }
 
-    function ea(bb, ab) {
+    function Ut(zz, tz) {
       return {
-        ...bb,
-        loadoutPerks: bb.loadoutPerks.map((bb => bb.loadoutPerkId === ab.loadoutPerkId ? ab : bb))
+        ...zz,
+        loadoutPerks: zz.loadoutPerks.map((zz => zz.loadoutPerkId === tz.loadoutPerkId ? tz : zz))
       }
     }
 
-    function va(bb, ab) {
+    function Kt(zz, tz) {
       return {
-        ...bb,
-        loadoutCoins: bb.loadoutCoins - ab.loadoutCostCoins,
-        loadoutHeldParts: bb.loadoutHeldParts.map((bb => {
-          const Ub = ab.loadoutCostParts.find((ab => ab.loadoutPartCurrency === bb.loadoutHeldPartCurrency));
-          return Ub ? {
-            ...bb,
-            loadoutHeldPartAmount: bb.loadoutHeldPartAmount - Ub.loadoutPartAmount
-          } : bb
+        ...zz,
+        loadoutCoins: zz.loadoutCoins - tz.loadoutCostCoins,
+        loadoutHeldParts: zz.loadoutHeldParts.map((zz => {
+          const sz = tz.loadoutCostParts.find((tz => tz.loadoutPartCurrency === zz.loadoutHeldPartCurrency));
+          return sz ? {
+            ...zz,
+            loadoutHeldPartAmount: zz.loadoutHeldPartAmount - sz.loadoutPartAmount
+          } : zz
         }))
       }
     }
 
-    function La(bb, ab) {
+    function ut(zz, tz) {
       return {
-        loadoutNoticeKey: bb,
+        loadoutNoticeKey: zz,
         loadoutNoticeRefused: !1,
-        loadoutNoticeName: ab,
+        loadoutNoticeName: tz,
         loadoutNoticeTier: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0
       }
     }
-    const Pa = "containmentLoadoutView";
-    class Xa extends ba {
-      constructor(bb, ab, Ub, Ab) {
-        super(bb, ab, Ub, Ab, "loadout", Ta), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = bb => {
-          this.slot = bb, this.selectedId = ja(this.board, bb), this.emit()
+    const Nt = "containmentLoadoutView";
+    class bt extends zt {
+      constructor(zz, tz, sz, Fz) {
+        super(zz, tz, sz, Fz, "loadout", Xt), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = zz => {
+          this.slot = zz, this.selectedId = wt(this.board, zz), this.emit()
         }
       }
-      messageOpens(bb) {
-        return bb.loadoutMessageOpens
+      messageOpens(zz) {
+        return zz.loadoutMessageOpens
       }
-      messageNotice(bb) {
-        return bb.loadoutNotice
+      messageNotice(zz) {
+        return zz.loadoutNotice
       }
-      openingSelection(bb) {
-        return ja(bb, this.slot)
+      openingSelection(zz) {
+        return wt(zz, this.slot)
       }
       buildSnapshot() {
         return {
@@ -1240,765 +1240,765 @@ export const modules = {
       }
     }
 
-    function ja(bb, ab) {
-      if ("loadoutPerks" === ab) {
-        var Ub;
-        const ab = bb.loadoutPerks;
-        return (null !== (Ub = ab.find((bb => bb.loadoutPerkEquipped))) && void 0 !== Ub ? Ub : ab[0]).loadoutPerkId
+    function wt(zz, tz) {
+      if ("loadoutPerks" === tz) {
+        var sz;
+        const tz = zz.loadoutPerks;
+        return (null !== (sz = tz.find((zz => zz.loadoutPerkEquipped))) && void 0 !== sz ? sz : tz[0]).loadoutPerkId
       }
-      return Aa(bb, ab).loadoutSlotEquippedId
+      return Ft(zz, tz).loadoutSlotEquippedId
     }
-    const Ra = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
-    var ka = Ub(36209),
-      ya = Ub(1213);
-    const Za = {
-        loadoutPrimary: `${pb}:loadoutSlotPrimary`,
-        loadoutSecondary: `${pb}:loadoutSlotSecondary`,
-        loadoutOffensive: `${pb}:loadoutSlotOffensive`,
-        loadoutSelfHelp: `${pb}:loadoutSlotSelfHelp`,
-        loadoutArmour: `${pb}:loadoutSlotArmour`,
-        loadoutPerks: `${pb}:loadoutSlotPerks`
+    const Dt = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
+    var gt = sz(36297),
+      Ht = sz(1264);
+    const Bt = {
+        loadoutPrimary: `${Iz}:loadoutSlotPrimary`,
+        loadoutSecondary: `${Iz}:loadoutSlotSecondary`,
+        loadoutOffensive: `${Iz}:loadoutSlotOffensive`,
+        loadoutSelfHelp: `${Iz}:loadoutSlotSelfHelp`,
+        loadoutArmour: `${Iz}:loadoutSlotArmour`,
+        loadoutPerks: `${Iz}:loadoutSlotPerks`
       },
-      Da = {
+      Pt = {
         section: "right",
-        GP: "bottom",
+        gb: "bottom",
         act: "top"
       },
-      za = (0, Ab.createContext)({
+      rt = (0, Fz.createContext)({
         step: null,
         targetRef: () => {}
       });
 
-    function xa() {
+    function Yt() {
       const {
-        step: bb,
-        targetRef: ab
-      } = (0, Ab.useContext)(za);
-      return (Ub, Ab) => (null === bb || void 0 === bb ? void 0 : bb.kind) === Ub && bb.id === Ab ? ab : void 0
+        step: zz,
+        targetRef: tz
+      } = (0, Fz.useContext)(rt);
+      return (sz, Fz) => (null === zz || void 0 === zz ? void 0 : zz.kind) === sz && zz.id === Fz ? tz : void 0
     }
 
-    function ia(bb, ab) {
-      const Ub = ab.loadoutTargetId;
-      if ("loadoutPerks" === ab.loadoutTargetSection) {
-        const ab = bb.loadoutPerks.find((bb => bb.loadoutPerkId === Ub));
+    function xt(zz, tz) {
+      const sz = tz.loadoutTargetId;
+      if ("loadoutPerks" === tz.loadoutTargetSection) {
+        const tz = zz.loadoutPerks.find((zz => zz.loadoutPerkId === sz));
         return {
-          name: ab.loadoutPerkName,
-          owned: ab.loadoutPerkOwned,
-          equipped: ab.loadoutPerkEquipped
+          name: tz.loadoutPerkName,
+          owned: tz.loadoutPerkOwned,
+          equipped: tz.loadoutPerkEquipped
         }
       }
-      const Ab = Aa(bb, ab.loadoutTargetSection),
-        Mb = Ab.loadoutSlotOptions.find((bb => bb.loadoutOptionId === Ub));
+      const Fz = Ft(zz, tz.loadoutTargetSection),
+        Wz = Fz.loadoutSlotOptions.find((zz => zz.loadoutOptionId === sz));
       return {
-        name: Mb.loadoutOptionName,
-        owned: Mb.loadoutOptionOwnedTier > 0,
-        equipped: Ab.loadoutSlotEquippedId === Ub
+        name: Wz.loadoutOptionName,
+        owned: Wz.loadoutOptionOwnedTier > 0,
+        equipped: Fz.loadoutSlotEquippedId === sz
       }
     }
 
-    function fa(bb, ab, Ub, Ab) {
-      const [Mb, Tb] = bb(`${pb}:${ab}`, {
-        [Ub]: "\x01"
+    function mt(zz, tz, sz, Fz) {
+      const [Wz, Xz] = zz(`${Iz}:${tz}`, {
+        [sz]: "\x01"
       }).split("\x01");
-      return (0, mb.jsxs)(mb.Fragment, {
-        children: [Mb, (0, mb.jsx)("span", {
+      return (0, Jz.jsxs)(Jz.Fragment, {
+        children: [Wz, (0, Jz.jsx)("span", {
           className: "LoadoutWalkthroughName",
-          children: Ab
-        }), Tb]
+          children: Fz
+        }), Xz]
       })
     }
 
-    function ma(bb) {
+    function Jt(zz) {
       let {
-        view: ab,
-        onDismiss: Ub,
-        children: Mb
-      } = bb;
+        view: tz,
+        onDismiss: sz,
+        children: Wz
+      } = zz;
       const {
-        t: Tb
-      } = (0, Lb.A)(), Eb = ab.loadout, Yb = ab.open ? Eb.loadoutWalkthrough.map((bb => ({
-        target: bb,
-        info: ia(Eb, bb)
-      }))).find((bb => {
+        t: Xz
+      } = (0, uz.B)(), Oz = tz.loadout, oz = tz.open ? Oz.loadoutWalkthrough.map((zz => ({
+        target: zz,
+        info: xt(Oz, zz)
+      }))).find((zz => {
         let {
-          info: ab
-        } = bb;
-        return !ab.equipped
+          info: tz
+        } = zz;
+        return !tz.equipped
       })) : void 0;
-      let Bb = null,
-        eb = null;
-      if (void 0 !== Yb) {
+      let vz = null,
+        Uz = null;
+      if (void 0 !== oz) {
         const {
-          target: bb,
-          info: Ub
-        } = Yb;
-        ab.slot !== bb.loadoutTargetSection ? (Bb = {
+          target: zz,
+          info: sz
+        } = oz;
+        tz.slot !== zz.loadoutTargetSection ? (vz = {
           kind: "section",
-          id: bb.loadoutTargetSection
-        }, eb = fa(Tb, "loadoutWalkthroughSection", "section", Tb(Za[bb.loadoutTargetSection]))) : ab.selectedId !== bb.loadoutTargetId ? (Bb = {
-          kind: "GP",
-          id: bb.loadoutTargetId
-        }, eb = fa(Tb, "loadoutWalkthroughPick", "name", Ub.name)) : (Bb = {
+          id: zz.loadoutTargetSection
+        }, Uz = mt(Xz, "loadoutWalkthroughSection", "section", Xz(Bt[zz.loadoutTargetSection]))) : tz.selectedId !== zz.loadoutTargetId ? (vz = {
+          kind: "gb",
+          id: zz.loadoutTargetId
+        }, Uz = mt(Xz, "loadoutWalkthroughPick", "name", sz.name)) : (vz = {
           kind: "act",
-          id: bb.loadoutTargetId
-        }, eb = fa(Tb, Ub.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", Ub.name))
+          id: zz.loadoutTargetId
+        }, Uz = mt(Xz, sz.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", sz.name))
       }
-      const vb = null === Bb ? null : function(bb) {
-          return `${bb.kind}:${bb.id}`
-        }(Bb),
-        [Pb, Xb] = (0, Ab.useState)(null),
-        jb = (0, Ab.useCallback)((bb => {
-          Xb((ab => null !== bb ? {
-            key: vb,
-            node: bb
-          } : (null === ab || void 0 === ab ? void 0 : ab.key) === vb ? null : ab))
-        }), [vb]),
-        Rb = null !== vb && (null === Pb || void 0 === Pb ? void 0 : Pb.key) === vb ? Pb.node : null;
-      return (0, mb.jsxs)(za.Provider, {
+      const Kz = null === vz ? null : function(zz) {
+          return `${zz.kind}:${zz.id}`
+        }(vz),
+        [Nz, bz] = (0, Fz.useState)(null),
+        wz = (0, Fz.useCallback)((zz => {
+          bz((tz => null !== zz ? {
+            key: Kz,
+            node: zz
+          } : (null === tz || void 0 === tz ? void 0 : tz.key) === Kz ? null : tz))
+        }), [Kz]),
+        Dz = null !== Kz && (null === Nz || void 0 === Nz ? void 0 : Nz.key) === Kz ? Nz.node : null;
+      return (0, Jz.jsxs)(rt.Provider, {
         value: {
-          step: Bb,
-          targetRef: jb
+          step: vz,
+          targetRef: wz
         },
-        children: [Mb, null !== Bb && null !== Rb && (0, mb.jsx)(pa, {
-          target: Rb,
-          placement: Da[Bb.kind],
-          onDismiss: Ub,
-          children: eb
-        }, vb)]
+        children: [Wz, null !== vz && null !== Dz && (0, Jz.jsx)(It, {
+          target: Dz,
+          placement: Pt[vz.kind],
+          onDismiss: sz,
+          children: Uz
+        }, Kz)]
       })
     }
 
-    function pa(bb) {
+    function It(zz) {
       let {
-        target: ab,
-        placement: Ub,
-        onDismiss: Mb,
-        children: Tb
-      } = bb;
+        target: tz,
+        placement: sz,
+        onDismiss: Wz,
+        children: Xz
+      } = zz;
       const {
-        t: Eb
-      } = (0, Lb.A)(), Yb = (0, Ab.useRef)(ab);
-      return Yb.current = ab, (0, ya.r)("popup", Yb, Mb), (0, mb.jsxs)(ka.i, {
-        target: ab,
-        placement: Ub,
+        t: Oz
+      } = (0, uz.B)(), oz = (0, Fz.useRef)(tz);
+      return oz.current = tz, (0, Ht.s)("popup", oz, Wz), (0, Jz.jsxs)(gt.e, {
+        target: tz,
+        placement: sz,
         className: "LoadoutWalkthroughStep",
         spotlightMargin: 10,
-        children: [(0, mb.jsxs)("div", {
+        children: [(0, Jz.jsxs)("div", {
           className: "LoadoutWalkthroughHeader",
-          children: [(0, mb.jsx)("img", {
+          children: [(0, Jz.jsx)("img", {
             className: "LoadoutWalkthroughPortrait",
-            src: Ra,
+            src: Dt,
             alt: "",
             draggable: !1
-          }), (0, mb.jsx)("span", {
+          }), (0, Jz.jsx)("span", {
             className: "LoadoutWalkthroughSpeaker",
-            children: Eb(`${pb}:operatorName`)
-          }), (0, mb.jsx)(jb.k, {
-            onClick: Mb,
-            ariaLabel: Eb(`${pb}:loadoutWalkthroughClose`),
+            children: Oz(`${Iz}:operatorName`)
+          }), (0, Jz.jsx)(wz.n, {
+            onClick: Wz,
+            ariaLabel: Oz(`${Iz}:loadoutWalkthroughClose`),
             padIgnore: !0
           })]
-        }), (0, mb.jsx)("p", {
+        }), (0, Jz.jsx)("p", {
           className: "LoadoutWalkthroughText",
-          children: Tb
+          children: Xz
         })]
       })
     }
-    const Na = new Set(["loadoutStatReload", "loadoutStatResupply"]);
+    const Ct = new Set(["loadoutStatReload", "loadoutStatResupply"]);
 
-    function Wa(bb) {
+    function et(zz) {
       let {
-        cost: ab,
-        loadout: Ub
-      } = bb;
+        cost: tz,
+        loadout: sz
+      } = zz;
       const {
-        t: Ab
-      } = (0, Lb.A)();
-      return ab.loadoutCostCoins <= 0 && 0 === ab.loadoutCostParts.length ? (0, mb.jsx)("span", {
+        t: Fz
+      } = (0, uz.B)();
+      return tz.loadoutCostCoins <= 0 && 0 === tz.loadoutCostParts.length ? (0, Jz.jsx)("span", {
         className: "LoadoutCost",
-        children: Ab(`${pb}:loadoutFree`)
-      }) : (0, mb.jsxs)("span", {
+        children: Fz(`${Iz}:loadoutFree`)
+      }) : (0, Jz.jsxs)("span", {
         className: "LoadoutCost",
-        children: [ab.loadoutCostCoins > 0 && (0, mb.jsx)(db, {
-          itemName: Nb,
-          amount: ab.loadoutCostCoins,
-          PY: Ub.loadoutCoins
-        }), ab.loadoutCostParts.map((bb => {
-          const ab = Ua(Ub, bb.loadoutPartCurrency);
-          return (0, mb.jsx)(db, {
-            itemName: ab.loadoutHeldPartItem,
-            amount: bb.loadoutPartAmount,
-            PY: ab.loadoutHeldPartAmount
-          }, bb.loadoutPartCurrency)
+        children: [tz.loadoutCostCoins > 0 && (0, Jz.jsx)(Tz, {
+          itemName: Cz,
+          amount: tz.loadoutCostCoins,
+          po: sz.loadoutCoins
+        }), tz.loadoutCostParts.map((zz => {
+          const tz = st(sz, zz.loadoutPartCurrency);
+          return (0, Jz.jsx)(Tz, {
+            itemName: tz.loadoutHeldPartItem,
+            amount: zz.loadoutPartAmount,
+            po: tz.loadoutHeldPartAmount
+          }, zz.loadoutPartCurrency)
         }))]
       })
     }
-    const Ha = {
-      loadoutStatFireRate: `${pb}:loadoutUnitPerMinute`,
-      loadoutStatReload: `${pb}:loadoutUnitSeconds`,
-      loadoutStatResupply: `${pb}:loadoutUnitSeconds`
+    const Zt = {
+      loadoutStatFireRate: `${Iz}:loadoutUnitPerMinute`,
+      loadoutStatReload: `${Iz}:loadoutUnitSeconds`,
+      loadoutStatResupply: `${Iz}:loadoutUnitSeconds`
     };
 
-    function Ia(bb) {
-      return "loadoutStatPotency" === bb.loadoutStatKind ? (0, Sb.O)(bb.loadoutStatValue) : String(bb.loadoutStatValue)
+    function Gt(zz) {
+      return "loadoutStatPotency" === zz.loadoutStatKind ? (0, Ez.S)(zz.loadoutStatValue) : String(zz.loadoutStatValue)
     }
 
-    function da(bb) {
-      var ab;
+    function Tt(zz) {
+      var tz;
       let {
-        option: Ub
-      } = bb;
+        option: sz
+      } = zz;
       const {
-        t: Ab
-      } = (0, Lb.A)(), Mb = Ub.loadoutOptionTiers, Tb = null === (ab = Mb[0]) || void 0 === ab ? void 0 : ab.loadoutTierStats.map((bb => bb.loadoutStatKind));
-      if (!Tb || 0 === Tb.length) return null;
-      const Eb = Ub.loadoutOptionOwnedTier,
-        Yb = (bb, ab) => {
-          var Ub;
-          return null === (Ub = Mb[bb]) || void 0 === Ub ? void 0 : Ub.loadoutTierStats.find((bb => bb.loadoutStatKind === ab))
+        t: Fz
+      } = (0, uz.B)(), Wz = sz.loadoutOptionTiers, Xz = null === (tz = Wz[0]) || void 0 === tz ? void 0 : tz.loadoutTierStats.map((zz => zz.loadoutStatKind));
+      if (!Xz || 0 === Xz.length) return null;
+      const Oz = sz.loadoutOptionOwnedTier,
+        oz = (zz, tz) => {
+          var sz;
+          return null === (sz = Wz[zz]) || void 0 === sz ? void 0 : sz.loadoutTierStats.find((zz => zz.loadoutStatKind === tz))
         };
-      return (0, mb.jsxs)("table", {
+      return (0, Jz.jsxs)("table", {
         className: "LoadoutTierTable",
-        children: [(0, mb.jsx)("thead", {
-          children: (0, mb.jsxs)("tr", {
-            children: [(0, mb.jsx)("th", {}), Mb.map(((bb, ab) => (0, mb.jsx)("th", {
-              className: eb()({
-                Current: ab + 1 === Eb,
-                Next: ab === Eb
+        children: [(0, Jz.jsx)("thead", {
+          children: (0, Jz.jsxs)("tr", {
+            children: [(0, Jz.jsx)("th", {}), Wz.map(((zz, tz) => (0, Jz.jsx)("th", {
+              className: Uz()({
+                Current: tz + 1 === Oz,
+                Next: tz === Oz
               }),
-              children: Ab(`${pb}:loadoutTier`, {
-                tier: (0, Sb.O)(ab + 1)
+              children: Fz(`${Iz}:loadoutTier`, {
+                tier: (0, Ez.S)(tz + 1)
               })
-            }, ab)))]
+            }, tz)))]
           })
-        }), (0, mb.jsx)("tbody", {
-          children: Tb.map((bb => {
-            const ab = Ha[bb];
-            return (0, mb.jsxs)("tr", {
-              children: [(0, mb.jsxs)("th", {
+        }), (0, Jz.jsx)("tbody", {
+          children: Xz.map((zz => {
+            const tz = Zt[zz];
+            return (0, Jz.jsxs)("tr", {
+              children: [(0, Jz.jsxs)("th", {
                 scope: "row",
-                children: [Ab(`${pb}:${bb}`), ab && (0, mb.jsx)("span", {
+                children: [Fz(`${Iz}:${zz}`), tz && (0, Jz.jsx)("span", {
                   className: "LoadoutStatUnit",
-                  children: Ab(ab)
+                  children: Fz(tz)
                 })]
-              }), Mb.map(((ab, Ub) => {
-                const Ab = Yb(Ub, bb),
-                  Mb = Ub > 0 ? Yb(Ub - 1, bb) : void 0,
-                  Tb = Ab && Mb ? Ab.loadoutStatValue - Mb.loadoutStatValue : 0,
-                  Bb = Na.has(bb) ? Tb < 0 : Tb > 0,
-                  vb = Ub === Eb;
-                return (0, mb.jsxs)("td", {
-                  className: eb()({
-                    Current: Ub + 1 === Eb,
-                    Next: vb,
-                    Gain: Bb,
-                    Owned: Ub < Eb
+              }), Wz.map(((tz, sz) => {
+                const Fz = oz(sz, zz),
+                  Wz = sz > 0 ? oz(sz - 1, zz) : void 0,
+                  Xz = Fz && Wz ? Fz.loadoutStatValue - Wz.loadoutStatValue : 0,
+                  vz = Ct.has(zz) ? Xz < 0 : Xz > 0,
+                  Kz = sz === Oz;
+                return (0, Jz.jsxs)("td", {
+                  className: Uz()({
+                    Current: sz + 1 === Oz,
+                    Next: Kz,
+                    Gain: vz,
+                    Owned: sz < Oz
                   }),
-                  children: [vb && Bb && (0, mb.jsx)("span", {
+                  children: [Kz && vz && (0, Jz.jsx)("span", {
                     className: "LoadoutGainArrow",
                     "aria-hidden": "true",
-                    children: Tb < 0 ? "\u25bc" : "\u25b2"
-                  }), Ab ? Ia(Ab) : "-"]
-                }, Ub)
+                    children: Xz < 0 ? "\u25bc" : "\u25b2"
+                  }), Fz ? Gt(Fz) : "-"]
+                }, sz)
               }))]
-            }, bb)
+            }, zz)
           }))
         })]
       })
     }
 
-    function Fa(bb) {
+    function ct(zz) {
       let {
-        view: ab,
-        controller: Ub,
-        slot: Ab,
-        option: Mb
-      } = bb;
+        view: tz,
+        controller: sz,
+        slot: Fz,
+        option: Wz
+      } = zz;
       const {
-        t: Tb
-      } = (0, Lb.A)(), Eb = ab.loadout, Yb = Mb.loadoutOptionOwnedTier, Bb = Mb.loadoutOptionTiers.length, eb = Ab.loadoutSlotEquippedId === Mb.loadoutOptionId, vb = Yb < Bb ? Mb.loadoutOptionTiers[Yb].loadoutTierCost : null, Pb = null !== vb && aa(Eb, vb), Xb = Mb.loadoutOptionId, Rb = xa();
-      return (0, mb.jsxs)(mb.Fragment, {
-        children: [(0, mb.jsx)(Ga, {
-          icon: Mb.loadoutOptionIcon,
-          name: Mb.loadoutOptionName,
-          status: 0 === Yb ? Tb(`${pb}:loadoutLocked`) : Bb > 1 ? Tb(`${pb}:loadoutTier`, {
-            tier: (0, Sb.O)(Yb)
+        t: Xz
+      } = (0, uz.B)(), Oz = tz.loadout, oz = Wz.loadoutOptionOwnedTier, vz = Wz.loadoutOptionTiers.length, Uz = Fz.loadoutSlotEquippedId === Wz.loadoutOptionId, Kz = oz < vz ? Wz.loadoutOptionTiers[oz].loadoutTierCost : null, Nz = null !== Kz && tt(Oz, Kz), bz = Wz.loadoutOptionId, Dz = Yt();
+      return (0, Jz.jsxs)(Jz.Fragment, {
+        children: [(0, Jz.jsx)(At, {
+          icon: Wz.loadoutOptionIcon,
+          name: Wz.loadoutOptionName,
+          status: 0 === oz ? Xz(`${Iz}:loadoutLocked`) : vz > 1 ? Xz(`${Iz}:loadoutTier`, {
+            tier: (0, Ez.S)(oz)
           }) : null,
-          locked: 0 === Yb,
-          equipped: eb
-        }), (0, mb.jsx)("p", {
+          locked: 0 === oz,
+          equipped: Uz
+        }), (0, Jz.jsx)("p", {
           className: "BoardDescription",
-          children: Mb.loadoutOptionDescription
-        }), (0, mb.jsx)(da, {
-          option: Mb
-        }), (0, mb.jsxs)("div", {
-          ref: Rb("act", Xb),
+          children: Wz.loadoutOptionDescription
+        }), (0, Jz.jsx)(Tt, {
+          option: Wz
+        }), (0, Jz.jsxs)("div", {
+          ref: Dz("act", bz),
           className: "BoardActions",
-          children: [null !== vb && (0, mb.jsxs)("div", {
+          children: [null !== Kz && (0, Jz.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, mb.jsx)(Wa, {
-              cost: vb,
-              loadout: Eb
-            }), (0, mb.jsx)(jb.m, {
-              disabled: !Pb || ab.pending,
+            children: [(0, Jz.jsx)(et, {
+              cost: Kz,
+              loadout: Oz
+            }), (0, Jz.jsx)(wz.p, {
+              disabled: !Nz || tz.pending,
               onClick: () => {
-                Ub.act(0 === Yb ? "loadoutUnlock" : "loadoutUpgrade", Xb)
+                sz.act(0 === oz ? "loadoutUnlock" : "loadoutUpgrade", bz)
               },
-              children: 0 === Yb ? Tb(`${pb}:loadoutUnlock`) : Tb(`${pb}:loadoutUpgrade`, {
-                tier: (0, Sb.O)(Yb + 1)
+              children: 0 === oz ? Xz(`${Iz}:loadoutUnlock`) : Xz(`${Iz}:loadoutUpgrade`, {
+                tier: (0, Ez.S)(oz + 1)
               })
             })]
-          }), null === vb && Bb > 1 && (0, mb.jsx)("span", {
+          }), null === Kz && vz > 1 && (0, Jz.jsx)("span", {
             className: "BoardHint",
-            children: Tb(`${pb}:loadoutMaxed`)
-          }), Yb > 0 && !eb && (0, mb.jsx)(jb.g, {
-            disabled: ab.pending,
+            children: Xz(`${Iz}:loadoutMaxed`)
+          }), oz > 0 && !Uz && (0, Jz.jsx)(wz.h, {
+            disabled: tz.pending,
             onClick: () => {
-              Ub.act("loadoutEquip", Xb)
+              sz.act("loadoutEquip", bz)
             },
-            children: Tb(`${pb}:loadoutEquip`)
+            children: Xz(`${Iz}:loadoutEquip`)
           })]
         })]
       })
     }
 
-    function ha(bb) {
+    function jt(zz) {
       let {
-        view: ab,
-        controller: Ub,
-        perk: Ab
-      } = bb;
+        view: tz,
+        controller: sz,
+        perk: Fz
+      } = zz;
       const {
-        t: Mb
-      } = (0, Lb.A)(), Tb = ab.loadout, Eb = Ma(Tb), Yb = Ab.loadoutPerkId, Bb = xa();
-      return (0, mb.jsxs)(mb.Fragment, {
-        children: [(0, mb.jsx)(Ga, {
-          icon: Ab.loadoutPerkIcon,
-          name: Ab.loadoutPerkName,
-          status: Ab.loadoutPerkOwned ? null : Mb(`${pb}:loadoutLocked`),
-          locked: !Ab.loadoutPerkOwned,
-          equipped: Ab.loadoutPerkEquipped
-        }), (0, mb.jsx)("p", {
+        t: Wz
+      } = (0, uz.B)(), Xz = tz.loadout, Oz = Wt(Xz), oz = Fz.loadoutPerkId, vz = Yt();
+      return (0, Jz.jsxs)(Jz.Fragment, {
+        children: [(0, Jz.jsx)(At, {
+          icon: Fz.loadoutPerkIcon,
+          name: Fz.loadoutPerkName,
+          status: Fz.loadoutPerkOwned ? null : Wz(`${Iz}:loadoutLocked`),
+          locked: !Fz.loadoutPerkOwned,
+          equipped: Fz.loadoutPerkEquipped
+        }), (0, Jz.jsx)("p", {
           className: "BoardDescription",
-          children: Ab.loadoutPerkDescription
-        }), (0, mb.jsxs)("div", {
-          ref: Bb("act", Yb),
+          children: Fz.loadoutPerkDescription
+        }), (0, Jz.jsxs)("div", {
+          ref: vz("act", oz),
           className: "BoardActions",
-          children: [!Ab.loadoutPerkOwned && (0, mb.jsxs)("div", {
+          children: [!Fz.loadoutPerkOwned && (0, Jz.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, mb.jsx)(Wa, {
-              cost: Ab.loadoutPerkCost,
-              loadout: Tb
-            }), (0, mb.jsx)(jb.m, {
-              disabled: !aa(Tb, Ab.loadoutPerkCost) || ab.pending,
+            children: [(0, Jz.jsx)(et, {
+              cost: Fz.loadoutPerkCost,
+              loadout: Xz
+            }), (0, Jz.jsx)(wz.p, {
+              disabled: !tt(Xz, Fz.loadoutPerkCost) || tz.pending,
               onClick: () => {
-                Ub.act("loadoutUnlock", Yb)
+                sz.act("loadoutUnlock", oz)
               },
-              children: Mb(`${pb}:loadoutUnlock`)
+              children: Wz(`${Iz}:loadoutUnlock`)
             })]
-          }), Ab.loadoutPerkOwned && !Ab.loadoutPerkEquipped && (0, mb.jsx)(jb.g, {
-            disabled: Eb || ab.pending,
+          }), Fz.loadoutPerkOwned && !Fz.loadoutPerkEquipped && (0, Jz.jsx)(wz.h, {
+            disabled: Oz || tz.pending,
             onClick: () => {
-              Ub.act("loadoutEquip", Yb)
+              sz.act("loadoutEquip", oz)
             },
-            children: Mb(`${pb}:loadoutEquip`)
-          }), Ab.loadoutPerkOwned && !Ab.loadoutPerkEquipped && Eb && (0, mb.jsx)("span", {
+            children: Wz(`${Iz}:loadoutEquip`)
+          }), Fz.loadoutPerkOwned && !Fz.loadoutPerkEquipped && Oz && (0, Jz.jsx)("span", {
             className: "BoardHint",
-            children: Mb(`${pb}:loadoutSocketsFullHint`)
-          }), Ab.loadoutPerkEquipped && (0, mb.jsx)(jb.M, {
-            disabled: ab.pending,
+            children: Wz(`${Iz}:loadoutSocketsFullHint`)
+          }), Fz.loadoutPerkEquipped && (0, Jz.jsx)(wz.Q, {
+            disabled: tz.pending,
             onClick: () => {
-              Ub.act("loadoutUnequip", Yb)
+              sz.act("loadoutUnequip", oz)
             },
-            children: Mb(`${pb}:loadoutUnequip`)
+            children: Wz(`${Iz}:loadoutUnequip`)
           })]
         })]
       })
     }
 
-    function Ga(bb) {
+    function At(zz) {
       let {
-        icon: ab,
-        name: Ub,
-        status: Ab,
-        locked: Mb,
-        equipped: Tb
-      } = bb;
+        icon: tz,
+        name: sz,
+        status: Fz,
+        locked: Wz,
+        equipped: Xz
+      } = zz;
       const {
-        t: Eb
-      } = (0, Lb.A)();
-      return (0, mb.jsxs)(Qb, {
-        icon: (0, mb.jsx)(Hb, {
-          itemName: ab
+        t: Oz
+      } = (0, uz.B)();
+      return (0, Jz.jsxs)(yz, {
+        icon: (0, Jz.jsx)(Zz, {
+          itemName: tz
         }),
-        name: Ub,
-        children: [null !== Ab && (0, mb.jsx)("span", {
-          className: eb()("LoadoutStatusText", {
-            Locked: Mb
+        name: sz,
+        children: [null !== Fz && (0, Jz.jsx)("span", {
+          className: Uz()("LoadoutStatusText", {
+            Locked: Wz
           }),
-          children: Ab
-        }), Tb && (0, mb.jsx)("span", {
+          children: Fz
+        }), Xz && (0, Jz.jsx)("span", {
           className: "BoardBadge",
-          children: Eb(`${pb}:loadoutEquippedBadge`)
+          children: Oz(`${Iz}:loadoutEquippedBadge`)
         })]
       })
     }
 
-    function Qa(bb) {
+    function yt(zz) {
       let {
-        view: ab,
-        controller: Ub
-      } = bb;
-      const Ab = ab.loadout;
-      if ("loadoutPerks" === ab.slot) {
-        const bb = Ab.loadoutPerks.find((bb => bb.loadoutPerkId === ab.selectedId));
-        return (0, mb.jsx)("section", {
+        view: tz,
+        controller: sz
+      } = zz;
+      const Fz = tz.loadout;
+      if ("loadoutPerks" === tz.slot) {
+        const zz = Fz.loadoutPerks.find((zz => zz.loadoutPerkId === tz.selectedId));
+        return (0, Jz.jsx)("section", {
           className: "BoardDetail",
-          children: bb && (0, mb.jsx)(ha, {
-            view: ab,
-            controller: Ub,
-            perk: bb
+          children: zz && (0, Jz.jsx)(jt, {
+            view: tz,
+            controller: sz,
+            perk: zz
           })
         })
       }
-      const Mb = Aa(Ab, ab.slot),
-        Tb = Mb.loadoutSlotOptions.find((bb => bb.loadoutOptionId === ab.selectedId));
-      return (0, mb.jsx)("section", {
+      const Wz = Ft(Fz, tz.slot),
+        Xz = Wz.loadoutSlotOptions.find((zz => zz.loadoutOptionId === tz.selectedId));
+      return (0, Jz.jsx)("section", {
         className: "BoardDetail",
-        children: Tb && (0, mb.jsx)(Fa, {
-          view: ab,
-          controller: Ub,
-          slot: Mb,
-          option: Tb
+        children: Xz && (0, Jz.jsx)(ct, {
+          view: tz,
+          controller: sz,
+          slot: Wz,
+          option: Xz
         })
       })
     }
 
-    function qa(bb) {
+    function Mt(zz) {
       let {
-        owned: ab,
-        total: Ub
-      } = bb;
-      return Ub <= 1 ? null : (0, mb.jsx)("span", {
+        owned: tz,
+        total: sz
+      } = zz;
+      return sz <= 1 ? null : (0, Jz.jsx)("span", {
         className: "LoadoutPips",
         children: Array.from({
-          length: Ub
-        }, ((bb, Ub) => (0, mb.jsx)("span", {
-          className: eb()("LoadoutPip", {
-            Filled: Ub < ab
+          length: sz
+        }, ((zz, sz) => (0, Jz.jsx)("span", {
+          className: Uz()("LoadoutPip", {
+            Filled: sz < tz
           })
-        }, Ub)))
+        }, sz)))
       })
     }
 
-    function ua(bb) {
+    function dt(zz) {
       let {
-        view: ab,
-        controller: Ub
-      } = bb;
+        view: tz,
+        controller: sz
+      } = zz;
       const {
-        t: Ab
-      } = (0, Lb.A)(), Mb = ab.loadout, Tb = xa();
-      return (0, mb.jsxs)("nav", {
+        t: Fz
+      } = (0, uz.B)(), Wz = tz.loadout, Xz = Yt();
+      return (0, Jz.jsxs)("nav", {
         className: "LoadoutKit",
-        "aria-label": Ab(`${pb}:loadoutKit`),
-        children: [Mb.loadoutSlots.map((bb => {
-          const Mb = bb.loadoutSlotOptions.find((ab => ab.loadoutOptionId === bb.loadoutSlotEquippedId));
-          return (0, mb.jsxs)("button", {
-            ref: Tb("section", bb.loadoutSlotKind),
+        "aria-label": Fz(`${Iz}:loadoutKit`),
+        children: [Wz.loadoutSlots.map((zz => {
+          const Wz = zz.loadoutSlotOptions.find((tz => tz.loadoutOptionId === zz.loadoutSlotEquippedId));
+          return (0, Jz.jsxs)("button", {
+            ref: Xz("section", zz.loadoutSlotKind),
             type: "button",
-            className: eb()("LoadoutKitSlot", {
-              Selected: ab.slot === bb.loadoutSlotKind
+            className: Uz()("LoadoutKitSlot", {
+              Selected: tz.slot === zz.loadoutSlotKind
             }),
             onClick: () => {
-              Ub.selectSlot(bb.loadoutSlotKind)
+              sz.selectSlot(zz.loadoutSlotKind)
             },
-            children: [(0, mb.jsx)("span", {
+            children: [(0, Jz.jsx)("span", {
               className: "LoadoutKitIcon",
-              children: Mb && (0, mb.jsx)(Hb, {
-                itemName: Mb.loadoutOptionIcon
+              children: Wz && (0, Jz.jsx)(Zz, {
+                itemName: Wz.loadoutOptionIcon
               })
-            }), (0, mb.jsxs)("span", {
+            }), (0, Jz.jsxs)("span", {
               className: "LoadoutKitText",
-              children: [(0, mb.jsxs)("span", {
+              children: [(0, Jz.jsxs)("span", {
                 className: "LoadoutKitTop",
-                children: [(0, mb.jsx)("span", {
+                children: [(0, Jz.jsx)("span", {
                   className: "LoadoutKitLabel",
-                  children: Ab(Za[bb.loadoutSlotKind])
-                }), Mb && (0, mb.jsx)(qa, {
-                  owned: Mb.loadoutOptionOwnedTier,
-                  total: Mb.loadoutOptionTiers.length
+                  children: Fz(Bt[zz.loadoutSlotKind])
+                }), Wz && (0, Jz.jsx)(Mt, {
+                  owned: Wz.loadoutOptionOwnedTier,
+                  total: Wz.loadoutOptionTiers.length
                 })]
-              }), (0, mb.jsx)("span", {
+              }), (0, Jz.jsx)("span", {
                 className: "LoadoutKitName",
-                children: null === Mb || void 0 === Mb ? void 0 : Mb.loadoutOptionName
+                children: null === Wz || void 0 === Wz ? void 0 : Wz.loadoutOptionName
               })]
             })]
-          }, bb.loadoutSlotKind)
-        })), (0, mb.jsx)(ra, {
-          view: ab,
-          controller: Ub
+          }, zz.loadoutSlotKind)
+        })), (0, Jz.jsx)(ht, {
+          view: tz,
+          controller: sz
         })]
       })
     }
 
-    function ra(bb) {
+    function ht(zz) {
       let {
-        view: ab,
-        controller: Ub
-      } = bb;
+        view: tz,
+        controller: sz
+      } = zz;
       const {
-        t: Ab
-      } = (0, Lb.A)(), Mb = ab.loadout, Tb = Mb.loadoutPerks.filter((bb => bb.loadoutPerkEquipped)), Eb = xa();
-      return (0, mb.jsxs)("button", {
-        ref: Eb("section", "loadoutPerks"),
+        t: Fz
+      } = (0, uz.B)(), Wz = tz.loadout, Xz = Wz.loadoutPerks.filter((zz => zz.loadoutPerkEquipped)), Oz = Yt();
+      return (0, Jz.jsxs)("button", {
+        ref: Oz("section", "loadoutPerks"),
         type: "button",
-        className: eb()("LoadoutKitSlot", "LoadoutPerks", {
-          Selected: "loadoutPerks" === ab.slot
+        className: Uz()("LoadoutKitSlot", "LoadoutPerks", {
+          Selected: "loadoutPerks" === tz.slot
         }),
         onClick: () => {
-          Ub.selectSlot("loadoutPerks")
+          sz.selectSlot("loadoutPerks")
         },
-        children: [(0, mb.jsxs)("span", {
+        children: [(0, Jz.jsxs)("span", {
           className: "LoadoutKitTop",
-          children: [(0, mb.jsx)("span", {
+          children: [(0, Jz.jsx)("span", {
             className: "LoadoutKitLabel",
-            children: Ab(Za.loadoutPerks)
-          }), (0, mb.jsx)("span", {
+            children: Fz(Bt.loadoutPerks)
+          }), (0, Jz.jsx)("span", {
             className: "LoadoutPerkCount",
-            children: Ab(`${pb}:loadoutPerkCount`, {
-              equipped: String(Tb.length),
-              max: String(Mb.loadoutMaxPerks)
+            children: Fz(`${Iz}:loadoutPerkCount`, {
+              equipped: String(Xz.length),
+              max: String(Wz.loadoutMaxPerks)
             })
           })]
-        }), (0, mb.jsx)("span", {
+        }), (0, Jz.jsx)("span", {
           className: "LoadoutSockets",
           children: Array.from({
-            length: Mb.loadoutMaxPerks
-          }, ((bb, ab) => {
-            const Ub = Tb[ab];
-            return (0, mb.jsxs)("span", {
-              className: eb()("LoadoutSocket", {
-                Filled: Ub,
-                Empty: !Ub
+            length: Wz.loadoutMaxPerks
+          }, ((zz, tz) => {
+            const sz = Xz[tz];
+            return (0, Jz.jsxs)("span", {
+              className: Uz()("LoadoutSocket", {
+                Filled: sz,
+                Empty: !sz
               }),
-              children: [(0, mb.jsx)("span", {
+              children: [(0, Jz.jsx)("span", {
                 className: "LoadoutSocketWell",
-                children: Ub && (0, mb.jsx)(Hb, {
-                  itemName: Ub.loadoutPerkIcon
+                children: sz && (0, Jz.jsx)(Zz, {
+                  itemName: sz.loadoutPerkIcon
                 })
-              }), (0, mb.jsx)("span", {
+              }), (0, Jz.jsx)("span", {
                 className: "LoadoutSocketName",
-                children: Ub ? Ub.loadoutPerkName : Ab(`${pb}:loadoutPerkSocketEmpty`)
+                children: sz ? sz.loadoutPerkName : Fz(`${Iz}:loadoutPerkSocketEmpty`)
               })]
-            }, ab)
+            }, tz)
           }))
         })]
       })
     }
 
-    function Ka(bb) {
+    function Qt(zz) {
       let {
-        icon: ab,
-        name: Ub,
-        selected: Ab,
-        equipped: Mb,
-        locked: Tb,
-        ownedTier: Eb,
-        tiers: Yb,
-        buttonRef: Bb,
-        onSelect: eb
-      } = bb;
+        icon: tz,
+        name: sz,
+        selected: Fz,
+        equipped: Wz,
+        locked: Xz,
+        ownedTier: Oz,
+        tiers: oz,
+        buttonRef: vz,
+        onSelect: Uz
+      } = zz;
       const {
-        t: vb
-      } = (0, Lb.A)();
-      return (0, mb.jsxs)(Gb, {
-        icon: (0, mb.jsx)(Hb, {
-          itemName: ab
+        t: Kz
+      } = (0, uz.B)();
+      return (0, Jz.jsxs)(Az, {
+        icon: (0, Jz.jsx)(Zz, {
+          itemName: tz
         }),
-        name: Ub,
-        selected: Ab,
-        locked: Tb,
-        buttonRef: Bb,
-        onSelect: eb,
-        children: [Mb && (0, mb.jsx)("span", {
+        name: sz,
+        selected: Fz,
+        locked: Xz,
+        buttonRef: vz,
+        onSelect: Uz,
+        children: [Wz && (0, Jz.jsx)("span", {
           className: "BoardBadge",
-          children: vb(`${pb}:loadoutEquippedBadge`)
-        }), Tb && (0, mb.jsx)("span", {
+          children: Kz(`${Iz}:loadoutEquippedBadge`)
+        }), Xz && (0, Jz.jsx)("span", {
           className: "BoardBadge Muted",
-          children: vb(`${pb}:loadoutLocked`)
-        }), !Tb && (0, mb.jsx)(qa, {
-          owned: Eb,
-          total: Yb
+          children: Kz(`${Iz}:loadoutLocked`)
+        }), !Xz && (0, Jz.jsx)(Mt, {
+          owned: Oz,
+          total: oz
         })]
       })
     }
 
-    function oa(bb) {
+    function kt(zz) {
       let {
-        view: ab,
-        controller: Ub
-      } = bb;
-      const Ab = ab.loadout,
-        Mb = xa();
-      if ("loadoutPerks" === ab.slot) return (0, mb.jsx)("div", {
+        view: tz,
+        controller: sz
+      } = zz;
+      const Fz = tz.loadout,
+        Wz = Yt();
+      if ("loadoutPerks" === tz.slot) return (0, Jz.jsx)("div", {
         className: "BoardTiles",
-        children: Ab.loadoutPerks.map((bb => (0, mb.jsx)(Ka, {
-          icon: bb.loadoutPerkIcon,
-          name: bb.loadoutPerkName,
-          selected: ab.selectedId === bb.loadoutPerkId,
-          equipped: bb.loadoutPerkEquipped,
-          locked: !bb.loadoutPerkOwned,
+        children: Fz.loadoutPerks.map((zz => (0, Jz.jsx)(Qt, {
+          icon: zz.loadoutPerkIcon,
+          name: zz.loadoutPerkName,
+          selected: tz.selectedId === zz.loadoutPerkId,
+          equipped: zz.loadoutPerkEquipped,
+          locked: !zz.loadoutPerkOwned,
           ownedTier: 0,
           tiers: 0,
-          buttonRef: Mb("GP", bb.loadoutPerkId),
+          buttonRef: Wz("gb", zz.loadoutPerkId),
           onSelect: () => {
-            Ub.select(bb.loadoutPerkId)
+            sz.select(zz.loadoutPerkId)
           }
-        }, bb.loadoutPerkId)))
+        }, zz.loadoutPerkId)))
       });
-      const Tb = Aa(Ab, ab.slot);
-      return (0, mb.jsx)("div", {
+      const Xz = Ft(Fz, tz.slot);
+      return (0, Jz.jsx)("div", {
         className: "BoardTiles",
-        children: Tb.loadoutSlotOptions.map((bb => (0, mb.jsx)(Ka, {
-          icon: bb.loadoutOptionIcon,
-          name: bb.loadoutOptionName,
-          selected: ab.selectedId === bb.loadoutOptionId,
-          equipped: Tb.loadoutSlotEquippedId === bb.loadoutOptionId,
-          locked: 0 === bb.loadoutOptionOwnedTier,
-          ownedTier: bb.loadoutOptionOwnedTier,
-          tiers: bb.loadoutOptionTiers.length,
-          buttonRef: Mb("GP", bb.loadoutOptionId),
+        children: Xz.loadoutSlotOptions.map((zz => (0, Jz.jsx)(Qt, {
+          icon: zz.loadoutOptionIcon,
+          name: zz.loadoutOptionName,
+          selected: tz.selectedId === zz.loadoutOptionId,
+          equipped: Xz.loadoutSlotEquippedId === zz.loadoutOptionId,
+          locked: 0 === zz.loadoutOptionOwnedTier,
+          ownedTier: zz.loadoutOptionOwnedTier,
+          tiers: zz.loadoutOptionTiers.length,
+          buttonRef: Wz("gb", zz.loadoutOptionId),
           onSelect: () => {
-            Ub.select(bb.loadoutOptionId)
+            sz.select(zz.loadoutOptionId)
           }
-        }, bb.loadoutOptionId)))
+        }, zz.loadoutOptionId)))
       })
     }
 
-    function la(bb) {
+    function it(zz) {
       let {
-        loadout: ab
-      } = bb;
-      return (0, mb.jsx)(qb, {
-        coins: ab.loadoutCoins,
-        children: ab.loadoutHeldParts.filter((bb => bb.loadoutHeldPartAmount > 0)).map((bb => (0, mb.jsx)(db, {
-          itemName: bb.loadoutHeldPartItem,
-          amount: bb.loadoutHeldPartAmount
-        }, bb.loadoutHeldPartCurrency)))
+        loadout: tz
+      } = zz;
+      return (0, Jz.jsx)(Mz, {
+        coins: tz.loadoutCoins,
+        children: tz.loadoutHeldParts.filter((zz => zz.loadoutHeldPartAmount > 0)).map((zz => (0, Jz.jsx)(Tz, {
+          itemName: zz.loadoutHeldPartItem,
+          amount: zz.loadoutHeldPartAmount
+        }, zz.loadoutHeldPartCurrency)))
       })
     }
 
-    function ta(bb) {
+    function Lt(zz) {
       let {
-        controller: ab
-      } = bb;
-      const Ub = (0, vb.i)(Pa, ab.getSnapshot()),
+        controller: tz
+      } = zz;
+      const sz = (0, Kz.h)(Nt, tz.getSnapshot()),
         {
-          t: Ab
-        } = (0, Lb.A)();
-      if (null === Ub.loadout) return null;
-      const Mb = Ub.notice;
-      return (0, mb.jsx)(ma, {
-        view: Ub,
-        onDismiss: ab.dismiss,
-        children: (0, mb.jsxs)(Wb, {
-          open: Ub.open,
-          onDismiss: ab.dismiss,
-          title: Ab(`${pb}:loadoutTitle`),
+          t: Fz
+        } = (0, uz.B)();
+      if (null === sz.loadout) return null;
+      const Wz = sz.notice;
+      return (0, Jz.jsx)(Jt, {
+        view: sz,
+        onDismiss: tz.dismiss,
+        children: (0, Jz.jsxs)(ez, {
+          open: sz.open,
+          onDismiss: tz.dismiss,
+          title: Fz(`${Iz}:loadoutTitle`),
           className: "ContainmentLoadoutPanel",
-          headerExtra: (0, mb.jsx)(la, {
-            loadout: Ub.loadout
+          headerExtra: (0, Jz.jsx)(it, {
+            loadout: sz.loadout
           }),
-          statusRefused: null === Mb || void 0 === Mb ? void 0 : Mb.loadoutNoticeRefused,
-          status: (0, mb.jsxs)(mb.Fragment, {
-            children: [(0, mb.jsx)("span", {
+          statusRefused: null === Wz || void 0 === Wz ? void 0 : Wz.loadoutNoticeRefused,
+          status: (0, Jz.jsxs)(Jz.Fragment, {
+            children: [(0, Jz.jsx)("span", {
               className: "LoadoutRadioBadge",
-              children: Ab(`${pb}:loadoutRadioBadge`)
-            }), null !== Mb && Ab(`${pb}:${Mb.loadoutNoticeKey}`, {
-              name: Mb.loadoutNoticeName,
-              tier: (0, Sb.O)(Mb.loadoutNoticeTier),
-              max: String(Ub.loadout.loadoutMaxPerks)
+              children: Fz(`${Iz}:loadoutRadioBadge`)
+            }), null !== Wz && Fz(`${Iz}:${Wz.loadoutNoticeKey}`, {
+              name: Wz.loadoutNoticeName,
+              tier: (0, Ez.S)(Wz.loadoutNoticeTier),
+              max: String(sz.loadout.loadoutMaxPerks)
             })]
           }),
-          children: [(0, mb.jsx)(ua, {
-            view: Ub,
-            controller: ab
-          }), (0, mb.jsx)(oa, {
-            view: Ub,
-            controller: ab
-          }), (0, mb.jsx)(Qa, {
-            view: Ub,
-            controller: ab
+          children: [(0, Jz.jsx)(dt, {
+            view: sz,
+            controller: tz
+          }), (0, Jz.jsx)(kt, {
+            view: sz,
+            controller: tz
+          }), (0, Jz.jsx)(yt, {
+            view: sz,
+            controller: tz
           })]
         })
       })
     }
 
-    function wa(bb, ab, Ub) {
-      const Ab = bb.locatorEntries.find((bb => bb.locatorEntryId === Ub));
-      if (!Ab) return null;
-      const Mb = Ab.locatorEntryName;
-      if ("locatorDisarm" === ab) return Ab.locatorEntryArmed ? {
-        board: sa(bb, null),
-        notice: ga("locatorNoticeDisarmed", Mb)
+    function lt(zz, tz, sz) {
+      const Fz = zz.locatorEntries.find((zz => zz.locatorEntryId === sz));
+      if (!Fz) return null;
+      const Wz = Fz.locatorEntryName;
+      if ("locatorDisarm" === tz) return Fz.locatorEntryArmed ? {
+        board: nt(zz, null),
+        notice: qt("locatorNoticeDisarmed", Wz)
       } : null;
-      if ("locatorArm" === ab) return Ab.locatorEntryOwned && !Ab.locatorEntryArmed ? {
-        board: sa(bb, Ub),
-        notice: ga("locatorNoticeArmed", Mb)
+      if ("locatorArm" === tz) return Fz.locatorEntryOwned && !Fz.locatorEntryArmed ? {
+        board: nt(zz, sz),
+        notice: qt("locatorNoticeArmed", Wz)
       } : null;
-      if (Ab.locatorEntryOwned || bb.locatorCoins < Ab.locatorEntryPrice) return null;
-      const Tb = sa({
-        ...bb,
-        locatorCoins: bb.locatorCoins - Ab.locatorEntryPrice
-      }, Ub);
+      if (Fz.locatorEntryOwned || zz.locatorCoins < Fz.locatorEntryPrice) return null;
+      const Xz = nt({
+        ...zz,
+        locatorCoins: zz.locatorCoins - Fz.locatorEntryPrice
+      }, sz);
       return {
         board: {
-          ...Tb,
-          locatorEntries: Tb.locatorEntries.map((bb => bb.locatorEntryId === Ub ? {
-            ...bb,
+          ...Xz,
+          locatorEntries: Xz.locatorEntries.map((zz => zz.locatorEntryId === sz ? {
+            ...zz,
             locatorEntryOwned: !0
-          } : bb))
+          } : zz))
         },
-        notice: ga("locatorNoticeBought", Mb)
+        notice: qt("locatorNoticeBought", Wz)
       }
     }
 
-    function sa(bb, ab) {
+    function nt(zz, tz) {
       return {
-        ...bb,
-        locatorEntries: bb.locatorEntries.map((bb => {
-          const Ub = bb.locatorEntryId === ab;
-          return bb.locatorEntryArmed === Ub ? bb : {
-            ...bb,
-            locatorEntryArmed: Ub
+        ...zz,
+        locatorEntries: zz.locatorEntries.map((zz => {
+          const sz = zz.locatorEntryId === tz;
+          return zz.locatorEntryArmed === sz ? zz : {
+            ...zz,
+            locatorEntryArmed: sz
           }
         }))
       }
     }
 
-    function ga(bb, ab) {
+    function qt(zz, tz) {
       return {
-        locatorNoticeKey: bb,
+        locatorNoticeKey: zz,
         locatorNoticeRefused: !1,
-        locatorNoticeName: ab
+        locatorNoticeName: tz
       }
     }
-    const Ca = "containmentLocatorView";
-    class Va extends ba {
-      constructor(bb, ab, Ub, Ab) {
-        super(bb, ab, Ub, Ab, "locator", wa), this.snapshot = this.buildSnapshot()
+    const St = "containmentLocatorView";
+    class Vt extends zt {
+      constructor(zz, tz, sz, Fz) {
+        super(zz, tz, sz, Fz, "locator", lt), this.snapshot = this.buildSnapshot()
       }
-      messageOpens(bb) {
-        return bb.locatorMessageOpens
+      messageOpens(zz) {
+        return zz.locatorMessageOpens
       }
-      messageNotice(bb) {
-        return bb.locatorNotice
+      messageNotice(zz) {
+        return zz.locatorNotice
       }
-      openingSelection(bb) {
-        var ab;
-        const Ub = bb.locatorEntries;
-        return (null !== (ab = Ub.find((bb => bb.locatorEntryArmed))) && void 0 !== ab ? ab : Ub[0]).locatorEntryId
+      openingSelection(zz) {
+        var tz;
+        const sz = zz.locatorEntries;
+        return (null !== (tz = sz.find((zz => zz.locatorEntryArmed))) && void 0 !== tz ? tz : sz[0]).locatorEntryId
       }
       buildSnapshot() {
         return {
@@ -2010,245 +2010,245 @@ export const modules = {
         }
       }
     }
-    const Oa = {
-        locatorContained: `${pb}:locatorFlavourContained`,
-        locatorEncountered: `${pb}:locatorFlavourEncountered`,
-        locatorUnseen: `${pb}:locatorFlavourUnseen`
+    const Rt = {
+        locatorContained: `${Iz}:locatorFlavourContained`,
+        locatorEncountered: `${Iz}:locatorFlavourEncountered`,
+        locatorUnseen: `${Iz}:locatorFlavourUnseen`
       },
-      ca = {
+      pt = {
         codexAnyDifficulty: null,
-        codexNormalOnly: `${pb}:locatorAttunedNormal`,
-        codexHardOnly: `${pb}:locatorAttunedHard`
+        codexNormalOnly: `${Iz}:locatorAttunedNormal`,
+        codexHardOnly: `${Iz}:locatorAttunedHard`
       };
 
-    function Ja() {
-      return (0, mb.jsx)(mb.Fragment, {
+    function ft() {
+      return (0, Jz.jsx)(Jz.Fragment, {
         children: Array.from({
           length: 5
-        }, ((bb, ab) => (0, mb.jsx)("span", {
+        }, ((zz, tz) => (0, Jz.jsx)("span", {
           className: "LocatorFly",
-          children: (0, mb.jsx)("img", {
+          children: (0, Jz.jsx)("img", {
             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoBboMlb5LyUjD8YgNtHyJ6/d+Q/CILa1lz9YAbo4DCDLYxjQv3gt3AYQG90AdHkUQ/qhkjAb0BURkgcDmAQMo7sSXR7deyiGoIvDvIOsGasB+ACyBmTNACS0go3ibhumAAAAAElFTkSuQmCC",
             alt: "",
             draggable: !1
           })
-        }, ab)))
+        }, tz)))
       })
     }
 
-    function na(bb) {
+    function Et(zz) {
       let {
-        entry: ab
-      } = bb;
+        entry: tz
+      } = zz;
       const {
-        t: Ub
-      } = (0, Lb.A)();
-      return ab.locatorEntryArmed ? (0, mb.jsx)("span", {
+        t: sz
+      } = (0, uz.B)();
+      return tz.locatorEntryArmed ? (0, Jz.jsx)("span", {
         className: "BoardBadge Armed",
-        children: Ub(`${pb}:locatorArmedBadge`)
-      }) : ab.locatorEntryOwned ? (0, mb.jsx)("span", {
+        children: sz(`${Iz}:locatorArmedBadge`)
+      }) : tz.locatorEntryOwned ? (0, Jz.jsx)("span", {
         className: "BoardBadge",
-        children: Ub(`${pb}:locatorOwnedBadge`)
+        children: sz(`${Iz}:locatorOwnedBadge`)
       }) : null
     }
 
-    function Sa(bb) {
+    function zs(zz) {
       let {
-        entry: ab,
-        coins: Ub,
-        inTile: Ab = !1
-      } = bb;
-      return (0, mb.jsx)(db, {
-        itemName: Nb,
-        amount: ab.locatorEntryPrice,
-        PY: Ub,
-        inTile: Ab
+        entry: tz,
+        coins: sz,
+        inTile: Fz = !1
+      } = zz;
+      return (0, Jz.jsx)(Tz, {
+        itemName: Cz,
+        amount: tz.locatorEntryPrice,
+        po: sz,
+        inTile: Fz
       })
     }
 
-    function bU(bb) {
+    function ts(zz) {
       let {
-        view: ab,
-        controller: Ub,
-        entry: Ab
-      } = bb;
+        view: tz,
+        controller: sz,
+        entry: Fz
+      } = zz;
       const {
-        t: Mb
-      } = (0, Lb.A)(), Tb = Ab.locatorEntryId, Eb = ab.locators.locatorEntries.find((bb => bb.locatorEntryArmed && bb !== Ab));
-      return (0, mb.jsxs)("div", {
+        t: Wz
+      } = (0, uz.B)(), Xz = Fz.locatorEntryId, Oz = tz.locators.locatorEntries.find((zz => zz.locatorEntryArmed && zz !== Fz));
+      return (0, Jz.jsxs)("div", {
         className: "BoardActions",
-        children: [Ab.locatorEntryArmed && (0, mb.jsx)(jb.M, {
-          disabled: ab.pending,
+        children: [Fz.locatorEntryArmed && (0, Jz.jsx)(wz.Q, {
+          disabled: tz.pending,
           onClick: () => {
-            Ub.act("locatorDisarm", Tb)
+            sz.act("locatorDisarm", Xz)
           },
-          children: Mb(`${pb}:locatorDisarm`)
-        }), Ab.locatorEntryOwned && !Ab.locatorEntryArmed && (0, mb.jsx)(jb.g, {
-          disabled: ab.pending,
+          children: Wz(`${Iz}:locatorDisarm`)
+        }), Fz.locatorEntryOwned && !Fz.locatorEntryArmed && (0, Jz.jsx)(wz.h, {
+          disabled: tz.pending,
           onClick: () => {
-            Ub.act("locatorArm", Tb)
+            sz.act("locatorArm", Xz)
           },
-          children: Mb(`${pb}:locatorArm`)
-        }), !Ab.locatorEntryOwned && (0, mb.jsxs)("div", {
+          children: Wz(`${Iz}:locatorArm`)
+        }), !Fz.locatorEntryOwned && (0, Jz.jsxs)("div", {
           className: "LocatorBuy",
-          children: [(0, mb.jsx)(Sa, {
-            entry: Ab,
-            coins: ab.locators.locatorCoins
-          }), (0, mb.jsx)(jb.m, {
-            disabled: ab.locators.locatorCoins < Ab.locatorEntryPrice || ab.pending,
+          children: [(0, Jz.jsx)(zs, {
+            entry: Fz,
+            coins: tz.locators.locatorCoins
+          }), (0, Jz.jsx)(wz.p, {
+            disabled: tz.locators.locatorCoins < Fz.locatorEntryPrice || tz.pending,
             onClick: () => {
-              Ub.act("locatorBuy", Tb)
+              sz.act("locatorBuy", Xz)
             },
-            children: Mb(`${pb}:locatorBuy`)
+            children: Wz(`${Iz}:locatorBuy`)
           })]
-        }), Eb && !Ab.locatorEntryArmed && (0, mb.jsx)("span", {
+        }), Oz && !Fz.locatorEntryArmed && (0, Jz.jsx)("span", {
           className: "BoardHint",
-          children: Mb(`${pb}:locatorReplacesHint`, {
-            name: Eb.locatorEntryName
+          children: Wz(`${Iz}:locatorReplacesHint`, {
+            name: Oz.locatorEntryName
           })
         })]
       })
     }
 
-    function aU(bb) {
+    function ss(zz) {
       let {
-        entry: ab
-      } = bb;
-      return "locatorUnseen" === ab.locatorEntryStanding ? (0, mb.jsx)(Hb, {
+        entry: tz
+      } = zz;
+      return "locatorUnseen" === tz.locatorEntryStanding ? (0, Jz.jsx)(Zz, {
         itemName: "Compass"
-      }) : (0, mb.jsx)(Ib, {
-        anomalyId: ab.locatorEntryId,
-        caught: "locatorContained" === ab.locatorEntryStanding
+      }) : (0, Jz.jsx)(Gz, {
+        anomalyId: tz.locatorEntryId,
+        caught: "locatorContained" === tz.locatorEntryStanding
       })
     }
 
-    function UU(bb) {
+    function Fs(zz) {
       let {
-        view: ab,
-        controller: Ub,
-        entry: Ab
-      } = bb;
+        view: tz,
+        controller: sz,
+        entry: Fz
+      } = zz;
       const {
-        t: Mb
-      } = (0, Lb.A)(), Tb = ca[Ab.locatorEntryDifficulty];
-      return (0, mb.jsxs)("section", {
+        t: Wz
+      } = (0, uz.B)(), Xz = pt[Fz.locatorEntryDifficulty];
+      return (0, Jz.jsxs)("section", {
         className: "BoardDetail",
-        children: [(0, mb.jsxs)("div", {
-          className: eb()("LocatorLabel", {
-            Armed: Ab.locatorEntryArmed
+        children: [(0, Jz.jsxs)("div", {
+          className: Uz()("LocatorLabel", {
+            Armed: Fz.locatorEntryArmed
           }),
-          children: [(0, mb.jsx)(Qb, {
-            icon: (0, mb.jsx)(aU, {
-              entry: Ab
+          children: [(0, Jz.jsx)(yz, {
+            icon: (0, Jz.jsx)(ss, {
+              entry: Fz
             }),
-            name: Mb(`${pb}:locatorName`, {
-              name: Ab.locatorEntryName
+            name: Wz(`${Iz}:locatorName`, {
+              name: Fz.locatorEntryName
             }),
-            children: (0, mb.jsx)(na, {
-              entry: Ab
+            children: (0, Jz.jsx)(Et, {
+              entry: Fz
             })
-          }), (0, mb.jsx)("p", {
+          }), (0, Jz.jsx)("p", {
             className: "BoardDescription",
-            children: Mb(Ab.locatorEntryArmed ? `${pb}:locatorFlavourArmed` : Oa[Ab.locatorEntryStanding])
-          }), null !== Tb && (0, mb.jsx)("p", {
+            children: Wz(Fz.locatorEntryArmed ? `${Iz}:locatorFlavourArmed` : Rt[Fz.locatorEntryStanding])
+          }), null !== Xz && (0, Jz.jsx)("p", {
             className: "LocatorAttuned",
-            children: Mb(Tb)
-          }), (0, mb.jsx)("p", {
+            children: Wz(Xz)
+          }), (0, Jz.jsx)("p", {
             className: "BoardDescription LocatorUsage",
-            children: Mb(`${pb}:locatorUsage`)
+            children: Wz(`${Iz}:locatorUsage`)
           })]
-        }), (0, mb.jsx)(bU, {
-          view: ab,
-          controller: Ub,
-          entry: Ab
+        }), (0, Jz.jsx)(ts, {
+          view: tz,
+          controller: sz,
+          entry: Fz
         })]
       })
     }
 
-    function AU(bb) {
+    function Ws(zz) {
       let {
-        controller: ab
-      } = bb;
-      const Ub = (0, vb.i)(Ca, ab.getSnapshot()),
+        controller: tz
+      } = zz;
+      const sz = (0, Kz.h)(St, tz.getSnapshot()),
         {
-          t: Ab
-        } = (0, Lb.A)(),
-        Mb = Ub.locators;
-      if (null === Mb) return null;
-      const Tb = Mb.locatorEntries.find((bb => bb.locatorEntryId === Ub.selectedId)),
-        Eb = Ub.notice;
-      return (0, mb.jsxs)(Wb, {
-        open: Ub.open,
-        onDismiss: ab.dismiss,
-        title: Ab(`${pb}:locatorTitle`),
+          t: Fz
+        } = (0, uz.B)(),
+        Wz = sz.locators;
+      if (null === Wz) return null;
+      const Xz = Wz.locatorEntries.find((zz => zz.locatorEntryId === sz.selectedId)),
+        Oz = sz.notice;
+      return (0, Jz.jsxs)(ez, {
+        open: sz.open,
+        onDismiss: tz.dismiss,
+        title: Fz(`${Iz}:locatorTitle`),
         className: "ContainmentLocatorPanel",
-        decor: (0, mb.jsx)(Ja, {}),
-        headerExtra: (0, mb.jsx)(qb, {
-          coins: Mb.locatorCoins
+        decor: (0, Jz.jsx)(ft, {}),
+        headerExtra: (0, Jz.jsx)(Mz, {
+          coins: Wz.locatorCoins
         }),
-        statusRefused: null === Eb || void 0 === Eb ? void 0 : Eb.locatorNoticeRefused,
-        status: (0, mb.jsxs)(mb.Fragment, {
-          children: [(0, mb.jsx)("span", {
+        statusRefused: null === Oz || void 0 === Oz ? void 0 : Oz.locatorNoticeRefused,
+        status: (0, Jz.jsxs)(Jz.Fragment, {
+          children: [(0, Jz.jsx)("span", {
             className: "LocatorKeeperBadge",
-            children: Ab(`${pb}:locatorKeeperName`)
-          }), null !== Eb && Ab(`${pb}:${Eb.locatorNoticeKey}`, {
-            name: Eb.locatorNoticeName
+            children: Fz(`${Iz}:locatorKeeperName`)
+          }), null !== Oz && Fz(`${Iz}:${Oz.locatorNoticeKey}`, {
+            name: Oz.locatorNoticeName
           })]
         }),
-        children: [(0, mb.jsx)("div", {
+        children: [(0, Jz.jsx)("div", {
           className: "BoardTiles",
-          children: Mb.locatorEntries.map((bb => (0, mb.jsxs)(Gb, {
-            icon: (0, mb.jsx)(aU, {
-              entry: bb
+          children: Wz.locatorEntries.map((zz => (0, Jz.jsxs)(Az, {
+            icon: (0, Jz.jsx)(ss, {
+              entry: zz
             }),
-            name: bb.locatorEntryName,
-            selected: bb === Tb,
+            name: zz.locatorEntryName,
+            selected: zz === Xz,
             locked: !1,
-            className: eb()("LocatorTag", {
-              Armed: bb.locatorEntryArmed
+            className: Uz()("LocatorTag", {
+              Armed: zz.locatorEntryArmed
             }),
             onSelect: () => {
-              ab.select(bb.locatorEntryId)
+              tz.select(zz.locatorEntryId)
             },
-            children: [(0, mb.jsx)(na, {
-              entry: bb
-            }), !bb.locatorEntryOwned && (0, mb.jsx)(Sa, {
-              entry: bb,
-              coins: Mb.locatorCoins,
+            children: [(0, Jz.jsx)(Et, {
+              entry: zz
+            }), !zz.locatorEntryOwned && (0, Jz.jsx)(zs, {
+              entry: zz,
+              coins: Wz.locatorCoins,
               inTile: !0
             })]
-          }, bb.locatorEntryId)))
-        }), (0, mb.jsx)(UU, {
-          view: Ub,
-          controller: ab,
-          entry: Tb
+          }, zz.locatorEntryId)))
+        }), (0, Jz.jsx)(Fs, {
+          view: sz,
+          controller: tz,
+          entry: Xz
         })]
       })
     }
 
-    function MU(bb) {
+    function Xs(zz) {
       let {
-        loadout: ab,
-        codex: Ub,
-        locator: Ab
-      } = bb;
-      return (0, mb.jsxs)(mb.Fragment, {
-        children: [(0, mb.jsx)(ta, {
-          controller: ab
-        }), (0, mb.jsx)(nb, {
-          controller: Ub
-        }), (0, mb.jsx)(AU, {
-          controller: Ab
+        loadout: tz,
+        codex: sz,
+        locator: Fz
+      } = zz;
+      return (0, Jz.jsxs)(Jz.Fragment, {
+        children: [(0, Jz.jsx)(Lt, {
+          controller: tz
+        }), (0, Jz.jsx)(fz, {
+          controller: sz
+        }), (0, Jz.jsx)(Ws, {
+          controller: Fz
         })]
       })
     }
-    var TU = Ub(37875);
-    class EU {
-      constructor(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.sendCommand = bb, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new TU.b({
+    var Os = sz(37967);
+    class os {
+      constructor(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.sendCommand = zz, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new Os.c({
           spacingMs: 0,
-          now: ab
+          now: tz
         }), this.budget.subscribe((() => {
           this.notify()
         }))
@@ -2256,17 +2256,17 @@ export const modules = {
       isPending() {
         return this.awaitingReply || this.budget.isPacing()
       }
-      send(bb, ab) {
+      send(zz, tz) {
         return !this.isPending() && (this.awaitingReply = !0, this.replyTimer = setTimeout((() => {
-          this.replyTimer = null, this.awaitingReply = !1, ab(), this.notify()
-        }), 8e3), this.budget.start(), this.sendCommand(bb), !0)
+          this.replyTimer = null, this.awaitingReply = !1, tz(), this.notify()
+        }), 8e3), this.budget.start(), this.sendCommand(zz), !0)
       }
       onReply() {
         this.awaitingReply = !1, this.clearReplyTimer()
       }
-      subscribe(bb) {
-        return this.listeners.add(bb), () => {
-          this.listeners.delete(bb)
+      subscribe(zz) {
+        return this.listeners.add(zz), () => {
+          this.listeners.delete(zz)
         }
       }
       dispose() {
@@ -2276,340 +2276,340 @@ export const modules = {
         null !== this.replyTimer && (clearTimeout(this.replyTimer), this.replyTimer = null)
       }
       notify() {
-        for (const bb of this.listeners) bb()
+        for (const zz of this.listeners) zz()
       }
     }
-    var YU = Ub(37873);
-    const BU = new Map([
-      ["npc_general", Ra],
-      ["npc_tentacle_guy", YU]
+    var vs = sz(37964);
+    const Us = new Map([
+      ["npc_general", Dt],
+      ["npc_tentacle_guy", vs]
     ]);
 
-    function eU(bb) {
-      const ab = BU.get(bb);
-      if (void 0 === ab) return null;
-      const Ub = document.createElement("img");
-      return Ub.src = ab, Ub.alt = "", Ub.draggable = !1, Ub.style.imageRendering = "pixelated", Ub
+    function Ks(zz) {
+      const tz = Us.get(zz);
+      if (void 0 === tz) return null;
+      const sz = document.createElement("img");
+      return sz.src = tz, sz.alt = "", sz.draggable = !1, sz.style.imageRendering = "pixelated", sz
     }
-    const vU = function() {
-      let bb, ab = !1,
-        Ub = null,
-        Bb = null;
-      const eb = [],
-        vb = bb => {
-          for (const ab of eb) ab !== bb && ab.close();
-          (0, Yb.o)()
+    const us = function() {
+      let zz, tz = !1,
+        sz = null,
+        vz = null;
+      const Uz = [],
+        Kz = zz => {
+          for (const tz of Uz) tz !== zz && tz.close();
+          (0, oz.s)()
         },
-        Lb = bb => {
-          bb && (0, Yb.i)()
+        uz = zz => {
+          zz && (0, oz.j)()
         },
-        Pb = new EU((ab => {
-          bb.sendCommand(ab)
+        Nz = new os((tz => {
+          zz.sendCommand(tz)
         })),
-        Xb = new Xa((bb => {
-          Eb.m.IR(Pa, bb, !0)
-        }), vb, Lb, Pb),
-        jb = new Kb((bb => {
-          Eb.m.IR(rb, bb, !0)
-        }), vb, Lb),
-        Rb = new Va((bb => {
-          Eb.m.IR(Ca, bb, !0)
-        }), vb, Lb, Pb);
-      eb.push(Xb, jb, Rb);
+        bz = new bt((zz => {
+          Oz.o.Yg(Nt, zz, !0)
+        }), Kz, uz, Nz),
+        wz = new Qz((zz => {
+          Oz.o.Yg(hz, zz, !0)
+        }), Kz, uz),
+        Dz = new Vt((zz => {
+          Oz.o.Yg(St, zz, !0)
+        }), Kz, uz, Nz);
+      Uz.push(bz, wz, Dz);
       return {
-        onCreate: ab => {
-          bb = ab, Ub = (0, Yb.w)(null, {
-            content: (0, Ab.createElement)(MU, {
-              loadout: Xb,
-              codex: jb,
-              locator: Rb
+        onCreate: tz => {
+          zz = tz, sz = (0, oz.x)(null, {
+            content: (0, Fz.createElement)(Xs, {
+              loadout: bz,
+              codex: wz,
+              locator: Dz
             }),
             onClose: () => {
-              for (const bb of eb) bb.close()
+              for (const zz of Uz) zz.close()
             }
-          }), Bb = (0, Tb.g)(eU)
+          }), vz = (0, Xz.f)(Ks)
         },
-        onReceivedMessageFromServer: (bb, ab) => {
-          "containmentLoadout" === bb ? Xb.aj(ab) : "containmentLoadoutClose" === bb ? Xb.isOpen() && (Xb.close(), (0, Yb.g)()) : "containmentCodex" === bb ? jb.aj(ab) : "containmentLocator" === bb && Rb.aj(ab)
+        onReceivedMessageFromServer: (zz, tz) => {
+          "containmentLoadout" === zz ? bz.Sw(tz) : "containmentLoadoutClose" === zz ? bz.isOpen() && (bz.close(), (0, oz.h)()) : "containmentCodex" === zz ? wz.Sw(tz) : "containmentLocator" === zz && Dz.Sw(tz)
         },
-        qL: () => {
-          ab || Mb.c.get("loadingOverlayVisible") || (ab = !0, bb.sendCommand("containmentEntered"))
+        wN: () => {
+          tz || Wz.b.get("loadingOverlayVisible") || (tz = !0, zz.sendCommand("containmentEntered"))
         },
         onClose: () => {
-          var bb, ab;
-          null === (bb = Ub) || void 0 === bb || bb(), Ub = null, null === (ab = Bb) || void 0 === ab || ab(), Bb = null;
-          for (const Ub of eb) Ub.dispose();
-          Pb.dispose()
+          var zz, tz;
+          null === (zz = sz) || void 0 === zz || zz(), sz = null, null === (tz = vz) || void 0 === tz || tz(), vz = null;
+          for (const sz of Uz) sz.dispose();
+          Nz.dispose()
         }
       }
     }
   },
-  36214: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      D: () => qb,
-      G: () => ub,
-      J: () => Gb,
-      M: () => rb,
-      d: () => Bb,
-      e: () => Hb,
-      g: () => Yb,
-      h: () => hb,
-      k: () => Nb,
-      m: () => ib,
-      p: () => Fb,
-      r: () => db,
-      v: () => pb,
-      z: () => Qb
+  36303: (zz, tz, sz) => {
+    sz.d(tz, {
+      B: () => Iz,
+      E: () => yz,
+      G: () => Mz,
+      H: () => dz,
+      I: () => Az,
+      J: () => hz,
+      c: () => vz,
+      d: () => Zz,
+      h: () => oz,
+      l: () => jz,
+      o: () => Cz,
+      s: () => xz,
+      w: () => cz,
+      y: () => Tz
     });
-    var Ab = Ub(31);
-    const Mb = {
+    var Fz = sz(44);
+    const Wz = {
         codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
         worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
       },
-      Tb = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
-      Eb = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
-      Yb = Tb.filter((bb => "docsButton" !== bb)),
-      Bb = Eb.filter((bb => "aiHelperButton" !== bb)),
-      eb = "codeEditorTutorials",
-      vb = {
+      Xz = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      Oz = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      oz = Xz.filter((zz => "docsButton" !== zz)),
+      vz = Oz.filter((zz => "aiHelperButton" !== zz)),
+      Uz = "codeEditorTutorials",
+      Kz = {
         codeBlockIntro: "codeBlockIntroShown",
         worldCodeIntro: "worldCodeIntroShown"
       },
-      Lb = {
+      uz = {
         welcome: "welcomeComplete",
         docsOverview: "docsOverviewComplete",
         aiHelperOverview: "aiHelperOverviewComplete"
       };
-    let Pb = null,
-      Xb = null;
-    const jb = new Set,
-      Rb = new Set;
-    let kb = null;
-    const yb = new Set,
-      Zb = new Set;
+    let Nz = null,
+      bz = null;
+    const wz = new Set,
+      Dz = new Set;
+    let gz = null;
+    const Hz = new Set,
+      Bz = new Set;
 
-    function Db() {
-      Zb.forEach((bb => {
-        bb()
+    function Pz() {
+      Bz.forEach((zz => {
+        zz()
       }))
     }
 
-    function zb() {
-      if (!Pb) {
-        const bb = Ab.f.getItem(eb);
-        Pb = {
+    function rz() {
+      if (!Nz) {
+        const zz = Fz.f.getItem(Uz);
+        Nz = {
           codeBlockIntroShown: !1,
           worldCodeIntroShown: !1,
           welcomeComplete: !1,
           docsOverviewComplete: !1,
           aiHelperOverviewComplete: !1,
-          ..."object" === typeof bb && null !== bb ? bb : {}
+          ..."object" === typeof zz && null !== zz ? zz : {}
         }
       }
-      return Pb
+      return Nz
     }
 
-    function xb(bb) {
-      const ab = zb();
-      ab[bb] || (Pb = {
-        ...ab,
-        [bb]: !0
-      }, Ab.f.setItem(eb, Pb))
+    function Yz(zz) {
+      const tz = rz();
+      tz[zz] || (Nz = {
+        ...tz,
+        [zz]: !0
+      }, Fz.f.setItem(Uz, Nz))
     }
 
-    function ib(bb) {
-      return "docsOverview" === bb ? Tb : "aiHelperOverview" === bb ? Eb : Xb ? Mb[Xb] : []
+    function xz(zz) {
+      return "docsOverview" === zz ? Xz : "aiHelperOverview" === zz ? Oz : bz ? Wz[bz] : []
     }
 
-    function fb(bb) {
-      return ("worldCodeButton" !== bb || !zb().worldCodeIntroShown) && !yb.has(bb)
+    function mz(zz) {
+      return ("worldCodeButton" !== zz || !rz().worldCodeIntroShown) && !Hz.has(zz)
     }
 
-    function mb(bb) {
-      var ab;
-      return (null === (ab = kb) || void 0 === ab ? void 0 : ab.name) === bb ? kb.stepsDone : jb
+    function Jz(zz) {
+      var tz;
+      return (null === (tz = gz) || void 0 === tz ? void 0 : tz.name) === zz ? gz.stepsDone : wz
     }
 
-    function pb(bb, ab) {
-      if (! function(bb) {
-          return kb ? kb.name === bb : "welcome" === bb
-        }(bb) || !fb(ab) || mb(bb).has(ab)) return !1;
-      if (kb) return !0;
-      const Ub = vb[ab];
-      return Ub ? !zb()[Ub] || Rb.has(ab) : !zb()[Lb[bb]]
+    function Iz(zz, tz) {
+      if (! function(zz) {
+          return gz ? gz.name === zz : "welcome" === zz
+        }(zz) || !mz(tz) || Jz(zz).has(tz)) return !1;
+      if (gz) return !0;
+      const sz = Kz[tz];
+      return sz ? !rz()[sz] || Dz.has(tz) : !rz()[uz[zz]]
     }
 
-    function Nb(bb) {
-      var ab;
-      return null !== (ab = ib(bb).find((ab => pb(bb, ab)))) && void 0 !== ab ? ab : null
+    function Cz(zz) {
+      var tz;
+      return null !== (tz = xz(zz).find((tz => Iz(zz, tz)))) && void 0 !== tz ? tz : null
     }
 
-    function Wb(bb) {
-      var ab;
-      xb(Lb[bb]), (null === (ab = kb) || void 0 === ab ? void 0 : ab.name) === bb && (kb = null)
+    function ez(zz) {
+      var tz;
+      Yz(uz[zz]), (null === (tz = gz) || void 0 === tz ? void 0 : tz.name) === zz && (gz = null)
     }
 
-    function Hb(bb) {
-      const ab = (kb ? [kb.name] : ["welcome", "docsOverview"]).find((ab => Nb(ab) === bb));
-      if (!ab) return;
-      mb(ab).add(bb);
-      const Ub = vb[bb];
-      Ub && (xb(Ub), kb || Rb.add(bb)), null === Nb(ab) && Wb(ab), Db()
+    function Zz(zz) {
+      const tz = (gz ? [gz.name] : ["welcome", "docsOverview"]).find((tz => Cz(tz) === zz));
+      if (!tz) return;
+      Jz(tz).add(zz);
+      const sz = Kz[zz];
+      sz && (Yz(sz), gz || Dz.add(zz)), null === Cz(tz) && ez(tz), Pz()
     }
 
-    function Ib(bb, ab) {
-      const Ub = ib(bb),
-        Ab = mb(bb);
-      for (let Mb = Ub.indexOf(ab) - 1; Mb >= 0; Mb--)
-        if (Ab.has(Ub[Mb]) && fb(Ub[Mb])) return Ub[Mb];
+    function Gz(zz, tz) {
+      const sz = xz(zz),
+        Fz = Jz(zz);
+      for (let Wz = sz.indexOf(tz) - 1; Wz >= 0; Wz--)
+        if (Fz.has(sz[Wz]) && mz(sz[Wz])) return sz[Wz];
       return null
     }
 
-    function db(bb, ab) {
-      return null !== Ib(bb, ab)
+    function Tz(zz, tz) {
+      return null !== Gz(zz, tz)
     }
 
-    function Fb(bb, ab) {
-      const Ub = Ib(bb, ab);
-      Ub && (mb(bb).delete(Ub), Db())
+    function cz(zz, tz) {
+      const sz = Gz(zz, tz);
+      sz && (Jz(zz).delete(sz), Pz())
     }
 
-    function hb(bb) {
-      Wb(bb), "welcome" === bb && ib("welcome").forEach((bb => {
-        const ab = vb[bb];
-        ab && xb(ab)
-      })), Db()
+    function jz(zz) {
+      ez(zz), "welcome" === zz && xz("welcome").forEach((zz => {
+        const tz = Kz[zz];
+        tz && Yz(tz)
+      })), Pz()
     }
 
-    function Gb(bb) {
-      kb = {
-        name: bb,
+    function Az(zz) {
+      gz = {
+        name: zz,
         stepsDone: new Set
-      }, Db()
+      }, Pz()
     }
 
-    function Qb() {
-      (kb || 0 !== jb.size || 0 !== Rb.size) && (kb = null, jb.clear(), Rb.clear(), Db())
+    function yz() {
+      (gz || 0 !== wz.size || 0 !== Dz.size) && (gz = null, wz.clear(), Dz.clear(), Pz())
     }
 
-    function qb(bb, ab) {
-      const Ub = ab ? bb : Xb === bb ? null : Xb;
-      Ub !== Xb && (Xb = Ub, Db())
+    function Mz(zz, tz) {
+      const sz = tz ? zz : bz === zz ? null : bz;
+      sz !== bz && (bz = sz, Pz())
     }
 
-    function ub(bb, ab) {
-      yb.has(bb) === ab && (ab ? yb.delete(bb) : yb.add(bb), Db())
+    function dz(zz, tz) {
+      Hz.has(zz) === tz && (tz ? Hz.delete(zz) : Hz.add(zz), Pz())
     }
 
-    function rb(bb) {
-      return Zb.add(bb), () => {
-        Zb.delete(bb)
+    function hz(zz) {
+      return Bz.add(zz), () => {
+        Bz.delete(zz)
       }
     }
   },
-  38549: (bb, ab, Ub) => {
-    var Ab = {
-      "./breach-zero-uncaught.webp": 38557,
-      "./breach-zero.webp": 38563,
-      "./brood-father-uncaught.webp": 38565,
-      "./brood-father.webp": 38572,
-      "./carousel-uncaught.webp": 38574,
-      "./carousel.webp": 38576,
-      "./deadlock-uncaught.webp": 38579,
-      "./deadlock.webp": 38581,
-      "./frost-revenant-uncaught.webp": 38589,
-      "./frost-revenant.webp": 38595,
-      "./hollow-choir-uncaught.webp": 38599,
-      "./hollow-choir.webp": 38601,
-      "./magma-warden-uncaught.webp": 38608,
-      "./magma-warden.webp": 38611,
-      "./patient-zero-uncaught.webp": 38615,
-      "./patient-zero.webp": 38618,
-      "./siege-engine-uncaught.webp": 38621,
-      "./siege-engine.webp": 38627,
-      "./warp-stalker-uncaught.webp": 38633,
-      "./warp-stalker.webp": 38635
+  38672: (zz, tz, sz) => {
+    var Fz = {
+      "./breach-zero-uncaught.webp": 38676,
+      "./breach-zero.webp": 38682,
+      "./brood-father-uncaught.webp": 38684,
+      "./brood-father.webp": 38686,
+      "./carousel-uncaught.webp": 38692,
+      "./carousel.webp": 38696,
+      "./deadlock-uncaught.webp": 38699,
+      "./deadlock.webp": 38706,
+      "./frost-revenant-uncaught.webp": 38708,
+      "./frost-revenant.webp": 38716,
+      "./hollow-choir-uncaught.webp": 38718,
+      "./hollow-choir.webp": 38725,
+      "./magma-warden-uncaught.webp": 38734,
+      "./magma-warden.webp": 38736,
+      "./patient-zero-uncaught.webp": 38745,
+      "./patient-zero.webp": 38747,
+      "./siege-engine-uncaught.webp": 38756,
+      "./siege-engine.webp": 38765,
+      "./warp-stalker-uncaught.webp": 38771,
+      "./warp-stalker.webp": 38775
     };
 
-    function Mb(bb) {
-      var ab = Tb(bb);
-      return Ub(ab)
+    function Wz(zz) {
+      var tz = Xz(zz);
+      return sz(tz)
     }
 
-    function Tb(bb) {
-      if (!Ub.o(Ab, bb)) {
-        var ab = new Error("Cannot find module '" + bb + "'");
-        throw ab.code = "MODULE_NOT_FOUND", ab
+    function Xz(zz) {
+      if (!sz.o(Fz, zz)) {
+        var tz = new Error("Cannot find module '" + zz + "'");
+        throw tz.code = "MODULE_NOT_FOUND", tz
       }
-      return Ab[bb]
+      return Fz[zz]
     }
-    Mb.keys = function() {
-      return Object.keys(Ab)
-    }, Mb.resolve = Tb, bb.exports = Mb, Mb.id = 38549
+    Wz.keys = function() {
+      return Object.keys(Fz)
+    }, Wz.resolve = Xz, zz.exports = Wz, Wz.id = 38672
   },
-  38557: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
+  38676: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
   },
-  38563: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
+  38682: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
   },
-  38565: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
+  38684: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
   },
-  38572: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/brood-father.e48391955a574c1155fa.webp"
+  38686: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/brood-father.e48391955a574c1155fa.webp"
   },
-  38574: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
+  38692: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
   },
-  38576: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
+  38696: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
   },
-  38579: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
+  38699: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
   },
-  38581: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
+  38706: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
   },
-  38589: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
+  38708: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
   },
-  38595: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
+  38716: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
   },
-  38599: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
+  38718: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
   },
-  38601: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
+  38725: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
   },
-  38608: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
+  38734: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
   },
-  38611: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
+  38736: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
   },
-  38615: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
+  38745: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
   },
-  38618: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
+  38747: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
   },
-  38621: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
+  38756: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
   },
-  38627: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
+  38765: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
   },
-  38633: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
+  38771: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
   },
-  38635: (bb, ab, Ub) => {
-    bb.exports = Ub.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  38775: (zz, tz, sz) => {
+    zz.exports = sz.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
   },
-  37873: bb => {
-    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  37964: zz => {
+    zz.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

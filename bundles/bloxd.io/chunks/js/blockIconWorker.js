@@ -1,285 +1,285 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var bb = __webpack_require__.u,
-        ab = __webpack_require__.e,
-        Ub = {},
-        Ab = {};
-      __webpack_require__.u = function(ab) {
-        return bb(ab) + (Ub.hasOwnProperty(ab) ? "?" + Ub[ab] : "")
-      }, __webpack_require__.e = function(Mb) {
-        return ab(Mb).catch((function(ab) {
-          var Tb = Ab.hasOwnProperty(Mb) ? Ab[Mb] : 4;
-          if (Tb < 1) {
-            var Eb = bb(Mb);
-            throw ab.message = "Loading chunk " + Mb + " failed after 4 retries.\n(" + Eb + ")", ab.request = Eb, Ub[Mb] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete Ab[Mb]
-            }), 0), ab
+      var zz = __webpack_require__.u,
+        tz = __webpack_require__.e,
+        sz = {},
+        Fz = {};
+      __webpack_require__.u = function(tz) {
+        return zz(tz) + (sz.hasOwnProperty(tz) ? "?" + sz[tz] : "")
+      }, __webpack_require__.e = function(Wz) {
+        return tz(Wz).catch((function(tz) {
+          var Xz = Fz.hasOwnProperty(Wz) ? Fz[Wz] : 4;
+          if (Xz < 1) {
+            var Oz = zz(Wz);
+            throw tz.message = "Loading chunk " + Wz + " failed after 4 retries.\n(" + Oz + ")", tz.request = Oz, sz[Wz] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete Fz[Wz]
+            }), 0), tz
           }
-          return new Promise((function(bb) {
-            var ab = 4 - Tb + 1;
+          return new Promise((function(zz) {
+            var tz = 4 - Xz + 1;
             setTimeout((function() {
-              var ab = "cache-bust=" + Date.now();
-              Ub[Mb] = ab, Ab[Mb] = Tb - 1, bb(__webpack_require__.e(Mb))
-            }), function(bb) {
-              return 500 * Math.pow(2, bb)
-            }(ab))
+              var tz = "cache-bust=" + Date.now();
+              sz[Wz] = tz, Fz[Wz] = Xz - 1, zz(__webpack_require__.e(Wz))
+            }), function(zz) {
+              return 500 * Math.pow(2, zz)
+            }(tz))
           }))
         }))
       }
     }
   })();
-  const bb = [15, 15, 15],
-    ab = {
+  const zz = [15, 15, 15],
+    tz = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function Ub(ab, Ub, Ab) {
-    let Mb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb => 0 !== ab[4 * bb + 3];
-    const Tb = (bb, ab) => bb < 0 || ab < 0 || bb >= Ub || ab >= Ub || !Mb(ab * Ub + bb),
-      Eb = [];
-    for (let bb = 0; bb < Ub; bb++)
-      for (let ab = 0; ab < Ub; ab++)
-        if (!Tb(ab, bb)) bb: for (let Mb = -Ab; Mb <= Ab; Mb++) {
-          const Yb = Ab - Math.abs(Mb);
-          for (let Ab = -Yb; Ab <= Yb; Ab++)
-            if (Tb(ab + Ab, bb + Mb)) {
-              Eb.push(bb * Ub + ab);
-              break bb
+  function sz(tz, sz, Fz) {
+    let Wz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zz => 0 !== tz[4 * zz + 3];
+    const Xz = (zz, tz) => zz < 0 || tz < 0 || zz >= sz || tz >= sz || !Wz(tz * sz + zz),
+      Oz = [];
+    for (let zz = 0; zz < sz; zz++)
+      for (let tz = 0; tz < sz; tz++)
+        if (!Xz(tz, zz)) zz: for (let Wz = -Fz; Wz <= Fz; Wz++) {
+          const oz = Fz - Math.abs(Wz);
+          for (let Fz = -oz; Fz <= oz; Fz++)
+            if (Xz(tz + Fz, zz + Wz)) {
+              Oz.push(zz * sz + tz);
+              break zz
             }
         }
-    for (const Yb of Eb) ab.set(bb, 4 * Yb), ab[4 * Yb + 3] = 255
+    for (const oz of Oz) tz.set(zz, 4 * oz), tz[4 * oz + 3] = 255
   }
-  const Ab = Math.SQRT1_2,
-    Mb = Math.sqrt(3) / 2,
-    Tb = {
+  const Fz = Math.SQRT1_2,
+    Wz = Math.sqrt(3) / 2,
+    Xz = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    Eb = {
+    Oz = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    Yb = {
+    oz = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const Bb = 1e-6;
+  const vz = 1e-6;
 
-  function eb(bb, ab, Ub, Ab) {
+  function Uz(zz, tz, sz, Fz) {
     let {
-      origin: Mb,
-      across: Tb,
-      down: Eb,
-      texture: Yb,
-      rect: [eb, vb, Lb, Pb],
-      shade: Xb
-    } = Ab;
-    const jb = Tb.x * Eb.y - Tb.y * Eb.x;
-    if (Math.abs(jb) < 1e-9) return;
-    const Rb = [Mb.x, Mb.x + Tb.x, Mb.x + Eb.x, Mb.x + Tb.x + Eb.x],
-      kb = [Mb.y, Mb.y + Tb.y, Mb.y + Eb.y, Mb.y + Tb.y + Eb.y],
-      yb = Math.max(0, Math.floor(Math.min(...Rb))),
-      Zb = Math.min(Ub - 1, Math.ceil(Math.max(...Rb))),
-      Db = Math.max(0, Math.floor(Math.min(...kb))),
-      zb = Math.min(Ub - 1, Math.ceil(Math.max(...kb)));
-    for (let xb = Db; xb <= zb; xb++)
-      for (let Ab = yb; Ab <= Zb; Ab++) {
-        const Rb = Ab + .5 - Mb.x,
-          kb = xb + .5 - Mb.y,
-          yb = (Rb * Eb.y - kb * Eb.x) / jb,
-          Zb = (Tb.x * kb - Tb.y * Rb) / jb;
-        if (yb < -Bb || yb > 1 + Bb || Zb < -Bb || Zb > 1 + Bb) continue;
-        const Db = xb * Ub + Ab;
-        ab[Db] = 1;
-        const zb = eb + Math.min(Math.max(yb, 0), 1) * (Lb - eb),
-          ib = vb + Math.min(Math.max(Zb, 0), 1) * (Pb - vb),
-          fb = Math.min(Yb.width - 1, Math.floor(zb * Yb.width)),
-          mb = 4 * (Math.min(Yb.height - 1, Math.floor(ib * Yb.height)) * Yb.width + fb),
-          pb = Yb.pixels[mb + 3] / 255;
-        if (0 === pb) continue;
-        const Nb = 4 * Db,
-          Wb = bb[Nb + 3] / 255 * (1 - pb),
-          Hb = pb + Wb;
-        for (let ab = 0; ab < 3; ab++) bb[Nb + ab] = (Yb.pixels[mb + ab] * Xb * pb + bb[Nb + ab] * Wb) / Hb;
-        bb[Nb + 3] = 255 * Hb
+      origin: Wz,
+      across: Xz,
+      down: Oz,
+      texture: oz,
+      rect: [Uz, Kz, uz, Nz],
+      shade: bz
+    } = Fz;
+    const wz = Xz.x * Oz.y - Xz.y * Oz.x;
+    if (Math.abs(wz) < 1e-9) return;
+    const Dz = [Wz.x, Wz.x + Xz.x, Wz.x + Oz.x, Wz.x + Xz.x + Oz.x],
+      gz = [Wz.y, Wz.y + Xz.y, Wz.y + Oz.y, Wz.y + Xz.y + Oz.y],
+      Hz = Math.max(0, Math.floor(Math.min(...Dz))),
+      Bz = Math.min(sz - 1, Math.ceil(Math.max(...Dz))),
+      Pz = Math.max(0, Math.floor(Math.min(...gz))),
+      rz = Math.min(sz - 1, Math.ceil(Math.max(...gz)));
+    for (let Yz = Pz; Yz <= rz; Yz++)
+      for (let Fz = Hz; Fz <= Bz; Fz++) {
+        const Dz = Fz + .5 - Wz.x,
+          gz = Yz + .5 - Wz.y,
+          Hz = (Dz * Oz.y - gz * Oz.x) / wz,
+          Bz = (Xz.x * gz - Xz.y * Dz) / wz;
+        if (Hz < -vz || Hz > 1 + vz || Bz < -vz || Bz > 1 + vz) continue;
+        const Pz = Yz * sz + Fz;
+        tz[Pz] = 1;
+        const rz = Uz + Math.min(Math.max(Hz, 0), 1) * (uz - Uz),
+          xz = Kz + Math.min(Math.max(Bz, 0), 1) * (Nz - Kz),
+          mz = Math.min(oz.width - 1, Math.floor(rz * oz.width)),
+          Jz = 4 * (Math.min(oz.height - 1, Math.floor(xz * oz.height)) * oz.width + mz),
+          Iz = oz.pixels[Jz + 3] / 255;
+        if (0 === Iz) continue;
+        const Cz = 4 * Pz,
+          ez = zz[Cz + 3] / 255 * (1 - Iz),
+          Zz = Iz + ez;
+        for (let tz = 0; tz < 3; tz++) zz[Cz + tz] = (oz.pixels[Jz + tz] * bz * Iz + zz[Cz + tz] * ez) / Zz;
+        zz[Cz + 3] = 255 * Zz
       }
   }
 
-  function vb(bb, ab, Ub) {
-    const Ab = bb.get(ab);
-    if (void 0 === Ab) throw new Error(`no ${Ub} was sent for ${ab.slice(0,100)}`);
-    return Ab
+  function Kz(zz, tz, sz) {
+    const Fz = zz.get(tz);
+    if (void 0 === Fz) throw new Error(`no ${sz} was sent for ${tz.slice(0,100)}`);
+    return Fz
   }
-  const Lb = {
-      pixelsOf(bb) {
-        const ab = new OffscreenCanvas(bb.width, bb.height),
-          Ub = ab.getContext("2d");
-        if (!Ub) throw new Error("no 2D context");
-        return Ub.drawImage(bb, 0, 0), bb.close(), {
-          width: ab.width,
-          height: ab.height,
-          pixels: Ub.getImageData(0, 0, ab.width, ab.height).data
+  const uz = {
+      pixelsOf(zz) {
+        const tz = new OffscreenCanvas(zz.width, zz.height),
+          sz = tz.getContext("2d");
+        if (!sz) throw new Error("no 2D context");
+        return sz.drawImage(zz, 0, 0), zz.close(), {
+          width: tz.width,
+          height: tz.height,
+          pixels: sz.getImageData(0, 0, tz.width, tz.height).data
         }
       },
-      async encode(bb, ab) {
-        const Ub = new OffscreenCanvas(ab, ab),
-          Ab = Ub.getContext("2d");
-        if (!Ab) throw new Error("no 2D context");
-        Ab.putImageData(new ImageData(bb, ab, ab), 0, 0);
-        const Mb = await Ub.convertToBlob();
-        return new Promise(((bb, ab) => {
-          const Ub = new FileReader;
-          Ub.onload = () => {
-            bb(Ub.result)
-          }, Ub.onerror = () => {
-            var bb;
-            ab(null !== (bb = Ub.error) && void 0 !== bb ? bb : new Error("the icon did not encode"))
-          }, Ub.readAsDataURL(Mb)
+      async encode(zz, tz) {
+        const sz = new OffscreenCanvas(tz, tz),
+          Fz = sz.getContext("2d");
+        if (!Fz) throw new Error("no 2D context");
+        Fz.putImageData(new ImageData(zz, tz, tz), 0, 0);
+        const Wz = await sz.convertToBlob();
+        return new Promise(((zz, tz) => {
+          const sz = new FileReader;
+          sz.onload = () => {
+            zz(sz.result)
+          }, sz.onerror = () => {
+            var zz;
+            tz(null !== (zz = sz.error) && void 0 !== zz ? zz : new Error("the icon did not encode"))
+          }, sz.readAsDataURL(Wz)
         }))
       }
     },
-    Pb = globalThis.WorkerGlobalScope;
-  void 0 !== Pb && globalThis instanceof Pb && function(bb, Bb) {
-    const Lb = new Map,
-      Pb = new Map,
-      Xb = (ab, Ub, Ab) => {
+    Nz = globalThis.WorkerGlobalScope;
+  void 0 !== Nz && globalThis instanceof Nz && function(zz, vz) {
+    const uz = new Map,
+      Nz = new Map,
+      bz = (tz, sz, Fz) => {
         (async () => {
           try {
-            bb.postMessage({
+            zz.postMessage({
               type: "drawn",
-              id: ab,
-              url: await Bb.encode(Ab(), Ub)
+              id: tz,
+              url: await vz.encode(Fz(), sz)
             })
-          } catch (Mb) {
-            bb.postMessage({
+          } catch (Wz) {
+            zz.postMessage({
               type: "failed",
-              message: String(Mb)
+              message: String(Wz)
             })
           }
         })()
       };
-    bb.onmessage = bb => {
+    zz.onmessage = zz => {
       let {
-        data: jb
-      } = bb;
-      if ("texture" === jb.type) Lb.set(jb.url, Bb.pixelsOf(jb.bitmap));
-      else if ("model" === jb.type) Pb.set(jb.name, {
-        geometry: jb.geometry,
-        texture: Bb.pixelsOf(jb.bitmap)
+        data: wz
+      } = zz;
+      if ("texture" === wz.type) uz.set(wz.url, vz.pixelsOf(wz.bitmap));
+      else if ("model" === wz.type) Nz.set(wz.name, {
+        geometry: wz.geometry,
+        texture: vz.pixelsOf(wz.bitmap)
       });
-      else if ("draw" === jb.type) {
+      else if ("draw" === wz.type) {
         const {
-          id: bb,
-          top: Bb,
-          left: Pb,
-          right: Rb,
-          itemType: kb,
-          size: yb,
-          outlineWidth: Zb
-        } = jb;
-        Xb(bb, yb, (() => function(bb, Tb, Eb, Yb) {
-          const Bb = .6 * Eb,
-            vb = Bb * Ab,
-            Lb = Bb * Ab * .5,
-            Pb = Bb * Mb,
-            Xb = Math.max(...Tb.boxes.map((bb => bb[4]))),
-            jb = vb / 2 + (Eb - vb) / 2,
-            Rb = Lb + (Eb - Lb - Lb - Xb * Pb) / 2,
-            kb = (bb, ab, Ub) => ({
-              x: jb + (bb - Ub) * vb,
-              y: Rb - Lb + (bb + Ub) * Lb + (Xb - ab) * Pb
+          id: zz,
+          top: vz,
+          left: Nz,
+          right: Dz,
+          itemType: gz,
+          size: Hz,
+          outlineWidth: Bz
+        } = wz;
+        bz(zz, Hz, (() => function(zz, Xz, Oz, oz) {
+          const vz = .6 * Oz,
+            Kz = vz * Fz,
+            uz = vz * Fz * .5,
+            Nz = vz * Wz,
+            bz = Math.max(...Xz.boxes.map((zz => zz[4]))),
+            wz = Kz / 2 + (Oz - Kz) / 2,
+            Dz = uz + (Oz - uz - uz - bz * Nz) / 2,
+            gz = (zz, tz, sz) => ({
+              x: wz + (zz - sz) * Kz,
+              y: Dz - uz + (zz + sz) * uz + (bz - tz) * Nz
             }),
-            yb = (bb, ab, Ub, Ab, Mb, Eb) => ({
-              origin: bb,
+            Hz = (zz, tz, sz, Fz, Wz, Oz) => ({
+              origin: zz,
               across: {
-                x: ab.x - bb.x,
-                y: ab.y - bb.y
+                x: tz.x - zz.x,
+                y: tz.y - zz.y
               },
               down: {
-                x: Ub.x - bb.x,
-                y: Ub.y - bb.y
+                x: sz.x - zz.x,
+                y: sz.y - zz.y
               },
-              texture: Ab,
-              rect: Tb.cropFaces ? Mb : [0, 0, 1, 1],
-              shade: Eb
+              texture: Fz,
+              rect: Xz.cropFaces ? Wz : [0, 0, 1, 1],
+              shade: Oz
             }),
-            Zb = new Uint8ClampedArray(Eb * Eb * 4),
-            Db = new Uint8Array(Eb * Eb),
-            zb = ab;
-          for (const [ab, Ub, Ab, Mb, xb, ib] of Tb.boxes) {
-            const Tb = yb(kb(Mb, xb, ib), kb(Mb, xb, Ab), kb(Mb, Ub, ib), bb.right, [1 - ib, 1 - xb, 1 - Ab, 1 - Ub], zb.right),
-              Yb = yb(kb(ab, xb, ib), kb(Mb, xb, ib), kb(ab, Ub, ib), bb.left, [ab, 1 - xb, Mb, 1 - Ub], zb.left),
-              Bb = yb(kb(ab, xb, Ab), kb(Mb, xb, Ab), kb(ab, xb, ib), bb.top, [ab, Ab, Mb, ib], zb.top);
-            for (const bb of [Tb, Yb, Bb]) eb(Zb, Db, Eb, bb)
+            Bz = new Uint8ClampedArray(Oz * Oz * 4),
+            Pz = new Uint8Array(Oz * Oz),
+            rz = tz;
+          for (const [tz, sz, Fz, Wz, Yz, xz] of Xz.boxes) {
+            const Xz = Hz(gz(Wz, Yz, xz), gz(Wz, Yz, Fz), gz(Wz, sz, xz), zz.right, [1 - xz, 1 - Yz, 1 - Fz, 1 - sz], rz.right),
+              oz = Hz(gz(tz, Yz, xz), gz(Wz, Yz, xz), gz(tz, sz, xz), zz.left, [tz, 1 - Yz, Wz, 1 - sz], rz.left),
+              vz = Hz(gz(tz, Yz, Fz), gz(Wz, Yz, Fz), gz(tz, Yz, xz), zz.top, [tz, Fz, Wz, xz], rz.top);
+            for (const zz of [Xz, oz, vz]) Uz(Bz, Pz, Oz, zz)
           }
-          return Ub(Zb, Eb, Yb, (bb => 1 === Db[bb])), Zb
+          return sz(Bz, Oz, oz, (zz => 1 === Pz[zz])), Bz
         }({
-          top: vb(Lb, Bb, "texture"),
-          left: vb(Lb, Pb, "texture"),
-          right: vb(Lb, Rb, "texture")
-        }, function(bb) {
-          return "SlabBlock" === bb ? Eb : "StairsBlock" === bb ? Yb : Tb
-        }(kb), yb, Zb)))
+          top: Kz(uz, vz, "texture"),
+          left: Kz(uz, Nz, "texture"),
+          right: Kz(uz, Dz, "texture")
+        }, function(zz) {
+          return "SlabBlock" === zz ? Oz : "StairsBlock" === zz ? oz : Xz
+        }(gz), Hz, Bz)))
       } else {
         const {
-          id: bb,
-          name: ab,
-          size: Ab,
-          outlineWidth: Mb
-        } = jb;
-        Xb(bb, Ab, (() => {
+          id: zz,
+          name: tz,
+          size: Fz,
+          outlineWidth: Wz
+        } = wz;
+        bz(zz, Fz, (() => {
           const {
-            geometry: bb,
-            texture: Tb
-          } = vb(Pb, ab, "model");
-          return function(bb, ab, Ab, Mb) {
+            geometry: zz,
+            texture: Xz
+          } = Kz(Nz, tz, "model");
+          return function(zz, tz, Fz, Wz) {
             const {
-              vertices: Tb,
-              uvs: Eb,
-              indices: Yb,
-              shades: Bb
-            } = bb, eb = .03125 * Ab, vb = Ab - 2 * eb, Lb = new Float32Array(Tb.length);
-            for (let Ub = 0; Ub < Tb.length; Ub += 3) Lb[Ub] = eb + Tb[Ub] * vb, Lb[Ub + 1] = eb + Tb[Ub + 1] * vb, Lb[Ub + 2] = Tb[Ub + 2];
-            const Pb = new Float32Array(Ab * Ab).fill(-1 / 0),
-              Xb = new Uint8ClampedArray(Ab * Ab * 4),
-              jb = 255 * bb.alphaCutoff;
-            for (let Ub = 0; Ub < Yb.length; Ub += 3) {
-              const [bb, Mb, Tb] = [Yb[Ub], Yb[Ub + 1], Yb[Ub + 2]], [eb, vb, Rb] = [3 * bb, 3 * Mb, 3 * Tb], [kb, yb, Zb, Db, zb, xb] = [Lb[eb], Lb[eb + 1], Lb[vb], Lb[vb + 1], Lb[Rb], Lb[Rb + 1]], ib = (Zb - kb) * (xb - yb) - (zb - kb) * (Db - yb);
-              if (Math.abs(ib) < 1e-9) continue;
-              const fb = Bb[Ub / 3],
-                [mb, pb, Nb, Wb, Hb, Ib] = [Eb[2 * bb], Eb[2 * bb + 1], Eb[2 * Mb], Eb[2 * Mb + 1], Eb[2 * Tb], Eb[2 * Tb + 1]],
-                db = Math.max(0, Math.floor(Math.min(kb, Zb, zb))),
-                Fb = Math.min(Ab - 1, Math.ceil(Math.max(kb, Zb, zb))),
-                hb = Math.max(0, Math.floor(Math.min(yb, Db, xb))),
-                Gb = Math.min(Ab - 1, Math.ceil(Math.max(yb, Db, xb)));
-              for (let Ub = hb; Ub <= Gb; Ub++)
-                for (let bb = db; bb <= Fb; bb++) {
-                  const [Mb, Tb] = [bb + .5, Ub + .5], Eb = ((Mb - kb) * (xb - yb) - (zb - kb) * (Tb - yb)) / ib, Yb = ((Zb - kb) * (Tb - yb) - (Mb - kb) * (Db - yb)) / ib, Bb = 1 - Eb - Yb;
-                  if (Bb < 0 || Eb < 0 || Yb < 0) continue;
-                  const db = Bb * Lb[eb + 2] + Eb * Lb[vb + 2] + Yb * Lb[Rb + 2],
-                    Fb = Ub * Ab + bb;
-                  if (db <= Pb[Fb]) continue;
-                  const hb = Math.max(0, Math.min(ab.width - 1, Math.floor((Bb * mb + Eb * Nb + Yb * Hb) * ab.width))),
-                    Gb = 4 * (Math.max(0, Math.min(ab.height - 1, Math.floor((Bb * pb + Eb * Wb + Yb * Ib) * ab.height))) * ab.width + hb);
-                  ab.pixels[Gb + 3] < jb || (Pb[Fb] = db, Xb[4 * Fb] = ab.pixels[Gb] * fb, Xb[4 * Fb + 1] = ab.pixels[Gb + 1] * fb, Xb[4 * Fb + 2] = ab.pixels[Gb + 2] * fb, Xb[4 * Fb + 3] = 255)
+              vertices: Xz,
+              uvs: Oz,
+              indices: oz,
+              shades: vz
+            } = zz, Uz = .03125 * Fz, Kz = Fz - 2 * Uz, uz = new Float32Array(Xz.length);
+            for (let sz = 0; sz < Xz.length; sz += 3) uz[sz] = Uz + Xz[sz] * Kz, uz[sz + 1] = Uz + Xz[sz + 1] * Kz, uz[sz + 2] = Xz[sz + 2];
+            const Nz = new Float32Array(Fz * Fz).fill(-1 / 0),
+              bz = new Uint8ClampedArray(Fz * Fz * 4),
+              wz = 255 * zz.alphaCutoff;
+            for (let sz = 0; sz < oz.length; sz += 3) {
+              const [zz, Wz, Xz] = [oz[sz], oz[sz + 1], oz[sz + 2]], [Uz, Kz, Dz] = [3 * zz, 3 * Wz, 3 * Xz], [gz, Hz, Bz, Pz, rz, Yz] = [uz[Uz], uz[Uz + 1], uz[Kz], uz[Kz + 1], uz[Dz], uz[Dz + 1]], xz = (Bz - gz) * (Yz - Hz) - (rz - gz) * (Pz - Hz);
+              if (Math.abs(xz) < 1e-9) continue;
+              const mz = vz[sz / 3],
+                [Jz, Iz, Cz, ez, Zz, Gz] = [Oz[2 * zz], Oz[2 * zz + 1], Oz[2 * Wz], Oz[2 * Wz + 1], Oz[2 * Xz], Oz[2 * Xz + 1]],
+                Tz = Math.max(0, Math.floor(Math.min(gz, Bz, rz))),
+                cz = Math.min(Fz - 1, Math.ceil(Math.max(gz, Bz, rz))),
+                jz = Math.max(0, Math.floor(Math.min(Hz, Pz, Yz))),
+                Az = Math.min(Fz - 1, Math.ceil(Math.max(Hz, Pz, Yz)));
+              for (let sz = jz; sz <= Az; sz++)
+                for (let zz = Tz; zz <= cz; zz++) {
+                  const [Wz, Xz] = [zz + .5, sz + .5], Oz = ((Wz - gz) * (Yz - Hz) - (rz - gz) * (Xz - Hz)) / xz, oz = ((Bz - gz) * (Xz - Hz) - (Wz - gz) * (Pz - Hz)) / xz, vz = 1 - Oz - oz;
+                  if (vz < 0 || Oz < 0 || oz < 0) continue;
+                  const Tz = vz * uz[Uz + 2] + Oz * uz[Kz + 2] + oz * uz[Dz + 2],
+                    cz = sz * Fz + zz;
+                  if (Tz <= Nz[cz]) continue;
+                  const jz = Math.max(0, Math.min(tz.width - 1, Math.floor((vz * Jz + Oz * Cz + oz * Zz) * tz.width))),
+                    Az = 4 * (Math.max(0, Math.min(tz.height - 1, Math.floor((vz * Iz + Oz * ez + oz * Gz) * tz.height))) * tz.width + jz);
+                  tz.pixels[Az + 3] < wz || (Nz[cz] = Tz, bz[4 * cz] = tz.pixels[Az] * mz, bz[4 * cz + 1] = tz.pixels[Az + 1] * mz, bz[4 * cz + 2] = tz.pixels[Az + 2] * mz, bz[4 * cz + 3] = 255)
                 }
             }
-            return Ub(Xb, Ab, Mb), Xb
-          }(bb, Tb, Ab, Mb)
+            return sz(bz, Fz, Wz), bz
+          }(zz, Xz, Fz, Wz)
         }))
       }
-    }, bb.postMessage({
+    }, zz.postMessage({
       type: "started"
     })
-  }(globalThis, Lb)
+  }(globalThis, uz)
 })();

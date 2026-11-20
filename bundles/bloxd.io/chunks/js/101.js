@@ -1,162 +1,162 @@
 export const id = 101;
 export const ids = [101];
 export const modules = {
-  4595: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Pb
+  4539: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Nz
     });
-    var Ab = Ub(984),
-      Mb = Ub.n(Ab),
-      Tb = Ub(990),
-      Eb = Ub(1254),
-      Yb = Ub(3180),
-      Bb = Ub(137),
-      eb = Ub(3211),
-      vb = Ub(3200),
-      Lb = Ub(1023);
+    var Fz = sz(1020),
+      Wz = sz.n(Fz),
+      Xz = sz(1036),
+      Oz = sz(1306),
+      oz = sz(3169),
+      vz = sz(133),
+      Uz = sz(3215),
+      Kz = sz(3202),
+      uz = sz(1087);
 
-    function Pb(bb) {
+    function Nz(zz) {
       let {
-        game: ab
-      } = bb;
-      const Ub = (0, Bb.j)() ? "large" : "small",
-        Ab = (0, eb.c)(ab, Ub),
-        Pb = (0, Yb.f)(Ab),
-        Xb = void 0 !== Pb.blurhash;
-      return (0, Lb.jsxs)("div", {
+        game: tz
+      } = zz;
+      const sz = (0, vz.p)() ? "large" : "small",
+        Fz = (0, Uz.e)(tz, sz),
+        Nz = (0, oz.e)(Fz),
+        bz = void 0 !== Nz.blurhash;
+      return (0, uz.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [Pb.isLoading && !Xb && (0, Lb.jsx)(Eb.b, {
+        children: [Nz.isLoading && !bz && (0, uz.jsx)(Oz.d, {
           loaderType: "Secondary"
-        }), !Pb.failed && (null !== Pb.src || Xb) && (0, Lb.jsx)("div", {
-          className: Mb()("SchematicImage", vb.f, {
-            SchematicImageFadeIn: Pb.fadeIn && !Xb
+        }), !Nz.failed && (null !== Nz.src || bz) && (0, uz.jsx)("div", {
+          className: Wz()("SchematicImage", Kz.h, {
+            SchematicImageFadeIn: Nz.fadeIn && !bz
           }),
-          style: (0, vb.d)(Pb),
-          children: (0, Lb.jsx)(vb.c, {
-            image: Pb
+          style: (0, Kz.f)(Nz),
+          children: (0, uz.jsx)(Kz.d, {
+            image: Nz
           })
-        }), Pb.failed && (0, Lb.jsx)("div", {
+        }), Nz.failed && (0, uz.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Lb.jsx)(Tb.e, {
+          children: (0, uz.jsx)(Xz.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4701: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Xb
+  4650: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => bz
     });
-    var Ab = Ub(52),
-      Mb = Ub(984),
-      Tb = Ub.n(Mb),
-      Eb = Ub(4638),
-      Yb = Ub(1254),
-      Bb = Ub(1134),
-      eb = Ub(2884),
-      vb = Ub(2996),
-      Lb = Ub(990),
-      Pb = Ub(1023);
+    var Fz = sz(65),
+      Wz = sz(1020),
+      Xz = sz.n(Wz),
+      Oz = sz(4580),
+      oz = sz(1306),
+      vz = sz(1173),
+      Uz = sz(2881),
+      Kz = sz(2975),
+      uz = sz(1036),
+      Nz = sz(1087);
 
-    function Xb(bb) {
+    function bz(zz) {
       let {
-        folderName: ab,
-        onTexturePackUpdated: Mb,
-        disabled: Xb = !1,
-        maxFileSizeMb: jb,
-        packOwner: Rb
-      } = bb;
+        folderName: tz,
+        onTexturePackUpdated: Wz,
+        disabled: bz = !1,
+        maxFileSizeMb: wz,
+        packOwner: Dz
+      } = zz;
       const {
-        t: kb
-      } = (0, Bb.A)(), [yb, Zb] = (0, Ab.useState)(!1), [Db, zb] = (0, Ab.useState)(null), [xb, ib] = (0, Ab.useState)(null), fb = (0, Ab.useRef)(null);
+        t: gz
+      } = (0, vz.B)(), [Hz, Bz] = (0, Fz.useState)(!1), [Pz, rz] = (0, Fz.useState)(null), [Yz, xz] = (0, Fz.useState)(null), mz = (0, Fz.useRef)(null);
       const {
-        getRootProps: mb,
-        getInputProps: pb,
-        isDragActive: Nb
-      } = (0, Eb.b)({
-        onDrop: async function(bb) {
-          Zb(!0);
+        getRootProps: Jz,
+        getInputProps: Iz,
+        isDragActive: Cz
+      } = (0, Oz.e)({
+        onDrop: async function(zz) {
+          Bz(!0);
           try {
-            const ab = await (0, eb.n)(bb);
-            if ("customGame" === Rb && (0, vb.i)(ab)) return void zb(kb(vb.b));
-            if (void 0 !== jb) {
-              const bb = JSON.stringify(ab).length / 1048576;
-              if (bb > jb) return void zb(`File size is too large. Max size is ${jb}MB. Current size is ${bb}MB.`)
+            const tz = await (0, Uz.s)(zz);
+            if ("customGame" === Dz && (0, Kz.j)(tz)) return void rz(gz(Kz.e));
+            if (void 0 !== wz) {
+              const zz = JSON.stringify(tz).length / 1048576;
+              if (zz > wz) return void rz(`File size is too large. Max size is ${wz}MB. Current size is ${zz}MB.`)
             }
-            zb(null), ib(null), Mb(ab), fb.current = ab,
-              function(bb, ab) {
-                const Ab = bb.modelOverrides;
-                Ab && Promise.all([Ub.e(195), Ub.e(194)]).then((() => Ub(8979))).then((Ub => {
+            rz(null), xz(null), Wz(tz), mz.current = tz,
+              function(zz, tz) {
+                const Fz = zz.modelOverrides;
+                Fz && Promise.all([sz.e(195), sz.e(194)]).then((() => sz(8916))).then((sz => {
                   let {
-                    packDisplayName: Mb,
-                    refusedPackModels: Tb,
-                    packModelSummary: Eb
-                  } = Ub;
-                  const Yb = Mb(bb.metaData);
-                  ab(Eb(Yb, Tb(Yb, Ab, !1)))
-                })).catch((bb => {
-                  console.error("Checking the texture pack's models failed:", bb)
+                    packDisplayName: Wz,
+                    refusedPackModels: Xz,
+                    packModelSummary: Oz
+                  } = sz;
+                  const oz = Wz(zz.metaData);
+                  tz(Oz(oz, Xz(oz, Fz, !1)))
+                })).catch((zz => {
+                  console.error("Checking the texture pack's models failed:", zz)
                 }))
-              }(ab, (bb => {
-                fb.current === ab && ib(bb)
+              }(tz, (zz => {
+                mz.current === tz && xz(zz)
               }))
           } catch {
-            zb("Invalid Texture Pack Folder")
+            rz("Invalid Texture Pack Folder")
           } finally {
-            Zb(!1)
+            Bz(!1)
           }
         },
         useFsAccessApi: !1,
-        disabled: Xb
+        disabled: bz
       });
-      return (0, Pb.jsxs)("div", {
+      return (0, Nz.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, Pb.jsxs)("div", {
+        children: [(0, Nz.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [kb("settingsMenu:customTextureWarning"), ".", (0, Pb.jsx)("br", {}), kb("settingsMenu:viewDocumentation"), ":", " ", (0, Pb.jsx)("a", {
+          children: [gz("settingsMenu:customTextureWarning"), ".", (0, Nz.jsx)("br", {}), gz("settingsMenu:viewDocumentation"), ":", " ", (0, Nz.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), Db && (0, Pb.jsxs)("div", {
+        }), Pz && (0, Nz.jsxs)("div", {
           className: "CustomTextureError",
-          children: [kb("general:error"), ": ", Db]
-        }), xb && (0, Pb.jsx)("div", {
+          children: [gz("general:error"), ": ", Pz]
+        }), Yz && (0, Nz.jsx)("div", {
           className: "CustomTextureError",
-          children: xb
-        }), (0, Pb.jsxs)("div", {
-          ...mb({
-            className: Tb()("CustomTextureFolderUpload", {
-              ActiveDrag: Nb,
-              Disabled: Xb
+          children: Yz
+        }), (0, Nz.jsxs)("div", {
+          ...Jz({
+            className: Xz()("CustomTextureFolderUpload", {
+              ActiveDrag: Cz,
+              Disabled: bz
             })
           }),
-          children: [(0, Pb.jsx)("input", {
-            ...pb({
+          children: [(0, Nz.jsx)("input", {
+            ...Iz({
               webkitdirectory: "true"
             })
-          }), yb && (0, Pb.jsx)("div", {
+          }), Hz && (0, Nz.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, Pb.jsx)(Yb.b, {})
-          }), !yb && !Nb && ab && (0, Pb.jsxs)(Pb.Fragment, {
-            children: [(0, Pb.jsx)("div", {
+            children: (0, Nz.jsx)(oz.d, {})
+          }), !Hz && !Cz && tz && (0, Nz.jsxs)(Nz.Fragment, {
+            children: [(0, Nz.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, Pb.jsx)(Lb.e, {
+              children: (0, Nz.jsx)(uz.c, {
                 name: "folder-image"
               })
-            }), (0, Pb.jsx)("div", {
+            }), (0, Nz.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: ab
+              children: tz
             })]
-          }), !yb && (Nb || !ab) && (0, Pb.jsxs)(Pb.Fragment, {
-            children: [(0, Pb.jsx)("div", {
+          }), !Hz && (Cz || !tz) && (0, Nz.jsxs)(Nz.Fragment, {
+            children: [(0, Nz.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, Pb.jsx)(Lb.e, {
+              children: (0, Nz.jsx)(uz.c, {
                 name: "up-from-bracket"
               })
-            }), (0, Pb.jsx)("div", {
+            }), (0, Nz.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
               children: "Drag and drop a Texture Pack folder here"
             })]
@@ -165,310 +165,310 @@ export const modules = {
       })
     }
   },
-  4673: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => jb,
-      e: () => Db,
-      g: () => Rb,
-      h: () => Zb
+  4609: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => wz,
+      d: () => Pz,
+      g: () => Dz,
+      h: () => Bz
     });
-    var Ab = Ub(52),
-      Mb = Ub(4675),
-      Tb = Ub(4054),
-      Eb = Ub(1268),
-      Yb = Ub(4690),
-      Bb = Ub(984),
-      eb = Ub.n(Bb),
-      vb = Ub(1260),
-      Lb = Ub(1639),
-      Pb = Ub(4697),
-      Xb = Ub(1023);
+    var Fz = sz(65),
+      Wz = sz(4616),
+      Xz = sz(4022),
+      Oz = sz(1333),
+      oz = sz(4636),
+      vz = sz(1020),
+      Uz = sz.n(vz),
+      Kz = sz(1319),
+      uz = sz(1664),
+      Nz = sz(4644),
+      bz = sz(1087);
 
-    function jb(bb) {
+    function wz(zz) {
       let {
-        label: ab,
-        onClick: Ub,
-        checked: Ab,
-        circleInfoText: Mb,
-        className: Yb,
-        disabled: Bb,
-        note: vb
-      } = bb;
-      return (0, Xb.jsxs)("div", {
-        "aria-disabled": Bb || void 0,
+        label: tz,
+        onClick: sz,
+        checked: Fz,
+        circleInfoText: Wz,
+        className: oz,
+        disabled: vz,
+        note: Kz
+      } = zz;
+      return (0, bz.jsxs)("div", {
+        "aria-disabled": vz || void 0,
         "data-pad-focusable": !0,
-        className: eb()("SettingBox CheckboxContainer", {
-          [Yb]: Yb,
-          SettingBoxDisabled: Bb
+        className: Uz()("SettingBox CheckboxContainer", {
+          [oz]: oz,
+          SettingBoxDisabled: vz
         }),
         onClick: () => {
-          Bb || Ub(!Ab)
+          vz || sz(!Fz)
         },
-        children: [(0, Xb.jsxs)("div", {
+        children: [(0, bz.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, Xb.jsx)("label", {
+          children: [(0, bz.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, Xb.jsx)(Tb.d, {
+            children: (0, bz.jsx)(Xz.e, {
               className: "SettingsCheckbox",
-              checked: Ab,
-              disabled: Bb,
+              checked: Fz,
+              disabled: vz,
               onChange: () => {}
             })
-          }), (0, Xb.jsxs)("div", {
+          }), (0, bz.jsxs)("div", {
             className: "CheckboxText",
-            children: [ab, Mb && (0, Xb.jsx)("span", {
-              onClick: bb => bb.stopPropagation(),
-              children: (0, Xb.jsx)(Eb.d, {
+            children: [tz, Wz && (0, bz.jsx)("span", {
+              onClick: zz => zz.stopPropagation(),
+              children: (0, bz.jsx)(Oz.d, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: Mb
+                hoverInfo: Wz
               })
             })]
           })]
-        }), vb && (0, Xb.jsx)("div", {
+        }), Kz && (0, bz.jsx)("div", {
           className: "SettingNote",
-          children: vb
+          children: Kz
         })]
       })
     }
 
-    function Rb(bb) {
+    function Dz(zz) {
       let {
-        name: ab,
-        onChange: Ub,
-        min: Mb,
-        max: Tb,
-        step: Yb,
-        initValue: Bb,
-        circleInfoText: vb,
-        format: Lb,
-        className: Pb,
-        padStep: jb,
-        disabled: Rb = !1,
-        selectableMax: kb,
-        cappedNote: Zb,
-        onChangeComplete: Db
-      } = bb;
-      const [zb, xb] = (0, Ab.useState)(Bb), ib = (0, Ab.useRef)(Bb);
-      (0, Ab.useEffect)((() => {
-        ib.current = Bb, xb(Bb)
-      }), [Bb]);
-      const fb = void 0 !== kb && kb < Tb,
-        mb = fb ? {
-          "--slider-selectable": (kb - Mb) / (Tb - Mb)
+        name: tz,
+        onChange: sz,
+        min: Wz,
+        max: Xz,
+        step: oz,
+        initValue: vz,
+        circleInfoText: Kz,
+        format: uz,
+        className: Nz,
+        padStep: wz,
+        disabled: Dz = !1,
+        selectableMax: gz,
+        cappedNote: Bz,
+        onChangeComplete: Pz
+      } = zz;
+      const [rz, Yz] = (0, Fz.useState)(vz), xz = (0, Fz.useRef)(vz);
+      (0, Fz.useEffect)((() => {
+        xz.current = vz, Yz(vz)
+      }), [vz]);
+      const mz = void 0 !== gz && gz < Xz,
+        Jz = mz ? {
+          "--slider-selectable": (gz - Wz) / (Xz - Wz)
         } : void 0;
-      return (0, Xb.jsxs)("div", {
-        className: eb()("SettingBox SettingsSliderDiv", {
-          [Pb]: Pb,
-          SettingBoxDisabled: Rb,
-          SliderCapped: fb
+      return (0, bz.jsxs)("div", {
+        className: Uz()("SettingBox SettingsSliderDiv", {
+          [Nz]: Nz,
+          SettingBoxDisabled: Dz,
+          SliderCapped: mz
         }),
-        style: mb,
-        children: [(0, Xb.jsxs)("div", {
+        style: Jz,
+        children: [(0, bz.jsxs)("div", {
           className: "SliderText",
-          children: [`${ab}: ${Lb?Lb(zb):zb}`, vb && (0, Xb.jsx)(Eb.d, {
+          children: [`${tz}: ${uz?uz(rz):rz}`, Kz && (0, bz.jsx)(Oz.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: vb
+            hoverInfo: Kz
           })]
-        }), (0, Xb.jsx)("div", {
+        }), (0, bz.jsx)("div", {
           className: "SliderDiv",
-          children: (0, Xb.jsx)(yb, {
-            value: zb,
-            min: Mb,
-            max: Tb,
-            step: Yb,
-            onChange: bb => {
-              if (fb && bb >= kb && zb === kb) return;
-              const ab = fb ? Math.min(bb, kb) : bb;
-              ib.current = ab, xb(ab), Ub(ab)
+          children: (0, bz.jsx)(Hz, {
+            value: rz,
+            min: Wz,
+            max: Xz,
+            step: oz,
+            onChange: zz => {
+              if (mz && zz >= gz && rz === gz) return;
+              const tz = mz ? Math.min(zz, gz) : zz;
+              xz.current = tz, Yz(tz), sz(tz)
             },
-            onChangeComplete: Db && (() => {
-              Db(ib.current)
+            onChangeComplete: Pz && (() => {
+              Pz(xz.current)
             }),
-            format: Lb,
-            padStep: jb,
-            disabled: Rb
+            format: uz,
+            padStep: wz,
+            disabled: Dz
           })
-        }), fb && Zb && (0, Xb.jsx)("div", {
+        }), mz && Bz && (0, bz.jsx)("div", {
           className: "SettingNote",
-          children: Zb
+          children: Bz
         })]
       })
     }
-    const kb = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const gz = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function yb(bb) {
-      var ab;
+    function Hz(zz) {
+      var tz;
       let {
-        value: Ub,
-        min: Tb,
-        max: Eb,
-        step: Yb,
-        onChange: Bb,
-        orientation: eb,
-        reverse: vb,
-        setIsChanging: Lb,
-        tooltip: jb,
-        labels: Rb,
-        handleLabel: yb,
-        format: Zb,
-        onChangeStart: Db,
-        onChangeComplete: zb,
-        padStep: xb,
-        disabled: ib = !1
-      } = bb;
-      const fb = (0, Ab.useRef)(null),
-        mb = (0, Ab.useRef)(null);
-      (0, Ab.useLayoutEffect)((() => {
-        var bb, ab, Ub;
-        const Ab = null !== (bb = null === (ab = fb.current) || void 0 === ab ? void 0 : ab.querySelector(".rangeslider")) && void 0 !== bb ? bb : null;
-        null === Ab || void 0 === Ab || Ab.setAttribute("data-pad-slider", ""), null === Ab || void 0 === Ab || Ab.setAttribute("data-pad-focusable", ""), null === Ab || void 0 === Ab || null === (Ub = Ab.querySelector(".rangeslider__handle")) || void 0 === Ub || Ub.setAttribute("data-pad-slider-handle", ""), mb.current = Ab
-      }), []), (0, Ab.useLayoutEffect)((() => {
-        var bb, ab;
-        ib ? null === (bb = mb.current) || void 0 === bb || bb.setAttribute("aria-disabled", "true") : null === (ab = mb.current) || void 0 === ab || ab.removeAttribute("aria-disabled")
-      }), [ib]);
-      const pb = (null !== (ab = String(Yb).split(".")[1]) && void 0 !== ab ? ab : "").length,
-        Nb = bb => {
-          const ab = Number((Math.round((bb - Tb) / Yb) * Yb + Tb).toFixed(pb));
-          return Math.min(Eb, Math.max(Tb, ab))
+        value: sz,
+        min: Xz,
+        max: Oz,
+        step: oz,
+        onChange: vz,
+        orientation: Uz,
+        reverse: Kz,
+        setIsChanging: uz,
+        tooltip: wz,
+        labels: Dz,
+        handleLabel: Hz,
+        format: Bz,
+        onChangeStart: Pz,
+        onChangeComplete: rz,
+        padStep: Yz,
+        disabled: xz = !1
+      } = zz;
+      const mz = (0, Fz.useRef)(null),
+        Jz = (0, Fz.useRef)(null);
+      (0, Fz.useLayoutEffect)((() => {
+        var zz, tz, sz;
+        const Fz = null !== (zz = null === (tz = mz.current) || void 0 === tz ? void 0 : tz.querySelector(".rangeslider")) && void 0 !== zz ? zz : null;
+        null === Fz || void 0 === Fz || Fz.setAttribute("data-pad-slider", ""), null === Fz || void 0 === Fz || Fz.setAttribute("data-pad-focusable", ""), null === Fz || void 0 === Fz || null === (sz = Fz.querySelector(".rangeslider__handle")) || void 0 === sz || sz.setAttribute("data-pad-slider-handle", ""), Jz.current = Fz
+      }), []), (0, Fz.useLayoutEffect)((() => {
+        var zz, tz;
+        xz ? null === (zz = Jz.current) || void 0 === zz || zz.setAttribute("aria-disabled", "true") : null === (tz = Jz.current) || void 0 === tz || tz.removeAttribute("aria-disabled")
+      }), [xz]);
+      const Iz = (null !== (tz = String(oz).split(".")[1]) && void 0 !== tz ? tz : "").length,
+        Cz = zz => {
+          const tz = Number((Math.round((zz - Xz) / oz) * oz + Xz).toFixed(Iz));
+          return Math.min(Oz, Math.max(Xz, tz))
         },
-        Wb = (0, Ab.useRef)(zb);
-      Wb.current = zb, (0, Ab.useEffect)((() => {
-        const bb = fb.current;
-        if (!bb) return;
-        const ab = bb => {
-          var ab;
-          kb.has(bb.key) && (null === (ab = Wb.current) || void 0 === ab || ab.call(Wb))
+        ez = (0, Fz.useRef)(rz);
+      ez.current = rz, (0, Fz.useEffect)((() => {
+        const zz = mz.current;
+        if (!zz) return;
+        const tz = zz => {
+          var tz;
+          gz.has(zz.key) && (null === (tz = ez.current) || void 0 === tz || tz.call(ez))
         };
-        return bb.addEventListener("keyup", ab), () => {
-          bb.removeEventListener("keyup", ab)
+        return zz.addEventListener("keyup", tz), () => {
+          zz.removeEventListener("keyup", tz)
         }
       }), []);
-      const Hb = (0, Ab.useRef)(!1);
-      return (0, Pb.e)(mb, {
-        adjust: bb => {
-          if (ib) return;
-          const ab = null !== xb && void 0 !== xb ? xb : Math.max(Yb, Math.round((Eb - Tb) / 20 / Yb) * Yb),
-            Ab = Nb(Ub + bb * ab * (vb ? -1 : 1));
-          Ab !== Ub && (null === Db || void 0 === Db || Db(), Bb(Ab), null === zb || void 0 === zb || zb())
+      const Zz = (0, Fz.useRef)(!1);
+      return (0, Nz.g)(Jz, {
+        adjust: zz => {
+          if (xz) return;
+          const tz = null !== Yz && void 0 !== Yz ? Yz : Math.max(oz, Math.round((Oz - Xz) / 20 / oz) * oz),
+            Fz = Cz(sz + zz * tz * (Kz ? -1 : 1));
+          Fz !== sz && (null === Pz || void 0 === Pz || Pz(), vz(Fz), null === rz || void 0 === rz || rz())
         },
-        setFraction: bb => {
-          if (ib) return;
-          const ab = Nb(Tb + (vb ? 1 - bb : bb) * (Eb - Tb));
-          ab !== Ub && (Hb.current || (Hb.current = !0, null === Db || void 0 === Db || Db()), Bb(ab))
+        setFraction: zz => {
+          if (xz) return;
+          const tz = Cz(Xz + (Kz ? 1 - zz : zz) * (Oz - Xz));
+          tz !== sz && (Zz.current || (Zz.current = !0, null === Pz || void 0 === Pz || Pz()), vz(tz))
         },
         endDrag: () => {
-          Hb.current && (Hb.current = !1, null === zb || void 0 === zb || zb())
+          Zz.current && (Zz.current = !1, null === rz || void 0 === rz || rz())
         }
-      }), (0, Xb.jsx)("div", {
-        ref: fb,
+      }), (0, bz.jsx)("div", {
+        ref: mz,
         style: {
           display: "contents"
         },
-        children: (0, Xb.jsx)(Mb.d, {
-          value: Ub,
-          min: Tb,
-          max: Eb,
-          step: Yb,
-          onChange: Bb,
-          orientation: eb,
-          reverse: vb,
-          tooltip: jb,
-          labels: Rb,
-          handleLabel: yb,
-          format: Zb,
+        children: (0, bz.jsx)(Wz.c, {
+          value: sz,
+          min: Xz,
+          max: Oz,
+          step: oz,
+          onChange: vz,
+          orientation: Uz,
+          reverse: Kz,
+          tooltip: wz,
+          labels: Dz,
+          handleLabel: Hz,
+          format: Bz,
           onChangeStart: () => {
-            null === Db || void 0 === Db || Db(), null === Lb || void 0 === Lb || Lb(!0)
+            null === Pz || void 0 === Pz || Pz(), null === uz || void 0 === uz || uz(!0)
           },
           onChangeComplete: () => {
-            null === Lb || void 0 === Lb || Lb(!1), null === zb || void 0 === zb || zb()
+            null === uz || void 0 === uz || uz(!1), null === rz || void 0 === rz || rz()
           }
         })
       })
     }
-    async function Zb() {
-      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const ab = vb.NotificationProvider.showPromptPopup({
+    async function Bz() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const tz = Kz.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: bb
+        unlockPointerKey: zz
       });
-      !0 === await ab.getResult() && (0, Lb.reloadBloxd)()
+      !0 === await tz.getResult() && (0, uz.reloadBloxd)()
     }
 
-    function Db(bb) {
+    function Pz(zz) {
       let {
-        label: ab,
-        options: Ub,
-        value: Ab,
-        onChange: Mb,
-        circleInfoText: Tb
-      } = bb;
-      return (0, Xb.jsxs)("div", {
+        label: tz,
+        options: sz,
+        value: Fz,
+        onChange: Wz,
+        circleInfoText: Xz
+      } = zz;
+      return (0, bz.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, Xb.jsxs)("div", {
+        children: [(0, bz.jsxs)("div", {
           className: "SliderText",
-          children: [ab, Tb && (0, Xb.jsx)(Eb.d, {
+          children: [tz, Xz && (0, bz.jsx)(Oz.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Tb
+            hoverInfo: Xz
           })]
-        }), (0, Xb.jsx)(Yb.e, {
-          ariaLabel: ab,
-          options: Ub,
-          value: Ab,
-          onChange: Mb
+        }), (0, bz.jsx)(oz.b, {
+          ariaLabel: tz,
+          options: sz,
+          value: Fz,
+          onChange: Wz
         })]
       })
     }
   },
-  4668: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => yb,
-      e: () => Zb
+  4607: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Hz,
+      c: () => Bz
     });
-    var Ab = Ub(2884),
-      Mb = Ub(2890),
-      Tb = Ub(52),
-      Eb = Ub(984),
-      Yb = Ub.n(Eb),
-      Bb = Ub(1254),
-      eb = Ub(2875),
-      vb = Ub(1260),
-      Lb = Ub(4673),
-      Pb = Ub(4701),
-      Xb = Ub(603),
-      jb = Ub(4709),
-      Rb = Ub(1023);
+    var Fz = sz(2881),
+      Wz = sz(2883),
+      Xz = sz(65),
+      Oz = sz(1020),
+      oz = sz.n(Oz),
+      vz = sz(1306),
+      Uz = sz(2873),
+      Kz = sz(1319),
+      uz = sz(4609),
+      Nz = sz(4650),
+      bz = sz(601),
+      wz = sz(4656),
+      Dz = sz(1087);
 
-    function kb() {
-      (0, Lb.h)("texturePackPickReload")
+    function gz() {
+      (0, uz.h)("texturePackPickReload")
     }
 
-    function yb(bb) {
-      var ab;
+    function Hz(zz) {
+      var tz;
       let {
-        setApplySettingsCallback: Ub
-      } = bb;
-      const [, Eb] = (0, Tb.useReducer)((bb => bb + 1), 0), Yb = (0, Tb.useRef)(!1), Bb = (0, Tb.useRef)(null);
+        setApplySettingsCallback: sz
+      } = zz;
+      const [, Oz] = (0, Xz.useReducer)((zz => zz + 1), 0), oz = (0, Xz.useRef)(!1), vz = (0, Xz.useRef)(null);
 
-      function yb(bb, ab) {
-        eb.c.setFromJson(bb, "player");
-        const Ab = eb.c.saveTexturePack();
-        if (Xb.o) {
-          const bb = eb.c.toJson();
-          Ab.then((ab => {
-            ab && (0, jb.e)(bb, kb)
+      function Hz(zz, tz) {
+        Uz.d.setFromJson(zz, "player");
+        const Fz = Uz.d.saveTexturePack();
+        if (bz.p) {
+          const zz = Uz.d.toJson();
+          Fz.then((tz => {
+            tz && (0, wz.e)(zz, gz)
           }))
-        } else Yb.current ||= ab, Bb.current !== eb.c.getId() || eb.c.getId() === Mb.q.CUSTOM && Yb.current ? Ub((() => Lb.h)) : Ub(null);
-        Eb()
+        } else oz.current ||= tz, vz.current !== Uz.d.getId() || Uz.d.getId() === Wz.s.CUSTOM && oz.current ? sz((() => uz.h)) : sz(null);
+        Oz()
       }
-      async function Db(bb) {
-        if (eb.c.getId() !== bb.metaData.id) {
-          if (eb.c.getId() === Mb.q.CUSTOM && eb.c.getFromFolderName()) {
-            const bb = vb.NotificationProvider.showPromptPopup({
+      async function Pz(zz) {
+        if (Uz.d.getId() !== zz.metaData.id) {
+          if (Uz.d.getId() === Wz.s.CUSTOM && Uz.d.getFromFolderName()) {
+            const zz = Kz.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -477,29 +477,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await bb.getResult()) return
+            if (!0 !== await zz.getResult()) return
           }
-          yb(bb, !1)
+          Hz(zz, !1)
         }
-      }(0, Tb.useEffect)((() => {
-        Bb.current = eb.c.getId()
+      }(0, Xz.useEffect)((() => {
+        vz.current = Uz.d.getId()
       }), []);
-      const zb = Ab.d,
-        xb = [zb, ...Object.values(Mb.q).filter((bb => bb !== zb))];
-      return (0, Rb.jsx)(Rb.Fragment, {
-        children: (0, Rb.jsxs)("div", {
+      const rz = Fz.e,
+        Yz = [rz, ...Object.values(Wz.s).filter((zz => zz !== rz))];
+      return (0, Dz.jsx)(Dz.Fragment, {
+        children: (0, Dz.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, Rb.jsx)("div", {
+          children: [(0, Dz.jsx)("div", {
             className: "TexturePackList",
-            children: xb.map((bb => (0, Rb.jsx)(Zb, {
-              id: bb,
-              isSelected: bb === eb.c.getId(),
-              setSelected: Db
-            }, bb)))
-          }), eb.c.getId() === Mb.q.CUSTOM && (0, Rb.jsx)(Pb.b, {
-            folderName: null !== (ab = eb.c.getFromFolderName()) && void 0 !== ab ? ab : null,
-            onTexturePackUpdated: function(bb) {
-              yb(bb, !0)
+            children: Yz.map((zz => (0, Dz.jsx)(Bz, {
+              id: zz,
+              isSelected: zz === Uz.d.getId(),
+              setSelected: Pz
+            }, zz)))
+          }), Uz.d.getId() === Wz.s.CUSTOM && (0, Dz.jsx)(Nz.e, {
+            folderName: null !== (tz = Uz.d.getFromFolderName()) && void 0 !== tz ? tz : null,
+            onTexturePackUpdated: function(zz) {
+              Hz(zz, !0)
             },
             packOwner: "player"
           })]
@@ -507,163 +507,163 @@ export const modules = {
       })
     }
 
-    function Zb(bb) {
+    function Bz(zz) {
       let {
-        id: ab,
-        isSelected: Ub,
-        setSelected: Eb,
-        disabled: eb = !1
-      } = bb;
-      const [vb, Lb] = (0, Tb.useState)(!0), [Pb, Xb] = (0, Tb.useState)(""), [jb, kb] = (0, Tb.useState)(""), [yb, Zb] = (0, Tb.useState)(""), Db = (0, Tb.useRef)({});
-      return (0, Tb.useEffect)((() => {
-        (0, Ab.j)(ab).then((bb => {
-          var ab;
-          bb && (Db.current = bb, Lb(!1), Xb(Db.current.metaData.name), kb(Db.current.metaData.author), Zb(null !== (ab = Db.current.metaData.previewImage) && void 0 !== ab ? ab : ""))
-        })).catch((bb => {
-          console.warn(`Failed to fetch texture pack ${ab}`, bb)
+        id: tz,
+        isSelected: sz,
+        setSelected: Oz,
+        disabled: Uz = !1
+      } = zz;
+      const [Kz, uz] = (0, Xz.useState)(!0), [Nz, bz] = (0, Xz.useState)(""), [wz, gz] = (0, Xz.useState)(""), [Hz, Bz] = (0, Xz.useState)(""), Pz = (0, Xz.useRef)({});
+      return (0, Xz.useEffect)((() => {
+        (0, Fz.p)(tz).then((zz => {
+          var tz;
+          zz && (Pz.current = zz, uz(!1), bz(Pz.current.metaData.name), gz(Pz.current.metaData.author), Bz(null !== (tz = Pz.current.metaData.previewImage) && void 0 !== tz ? tz : ""))
+        })).catch((zz => {
+          console.warn(`Failed to fetch texture pack ${tz}`, zz)
         }))
-      }), [ab]), (0, Rb.jsxs)("div", {
+      }), [tz]), (0, Dz.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": eb || void 0,
-        className: Yb()("TexturePack", {
-          Selected: Ub,
-          Custom: ab === Mb.q.CUSTOM,
-          Disabled: eb
+        "aria-disabled": Uz || void 0,
+        className: oz()("TexturePack", {
+          Selected: sz,
+          Custom: tz === Wz.s.CUSTOM,
+          Disabled: Uz
         }),
         onClick: () => {
-          vb || eb || Eb(Db.current)
+          Kz || Uz || Oz(Pz.current)
         },
-        children: [(0, Rb.jsx)("div", {
+        children: [(0, Dz.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: yb ? `url(${yb})` : void 0
+            backgroundImage: Hz ? `url(${Hz})` : void 0
           }
-        }), vb && (0, Rb.jsx)("div", {
+        }), Kz && (0, Dz.jsx)("div", {
           className: "TexturePackName",
-          children: (0, Rb.jsx)(Bb.b, {})
-        }), !vb && Pb && (0, Rb.jsx)("div", {
+          children: (0, Dz.jsx)(vz.d, {})
+        }), !Kz && Nz && (0, Dz.jsx)("div", {
           className: "TexturePackName",
-          children: Pb
-        }), !vb && jb && (0, Rb.jsx)("div", {
+          children: Nz
+        }), !Kz && wz && (0, Dz.jsx)("div", {
           className: "TexturePackAuthor",
-          children: jb
+          children: wz
         })]
       })
     }
   },
-  4690: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Eb
+  4636: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Oz
     });
-    var Ab = Ub(984),
-      Mb = Ub.n(Ab),
-      Tb = Ub(1023);
+    var Fz = sz(1020),
+      Wz = sz.n(Fz),
+      Xz = sz(1087);
 
-    function Eb(bb) {
+    function Oz(zz) {
       let {
-        options: ab,
-        value: Ub,
-        onChange: Ab,
-        ariaLabel: Eb,
-        className: Yb,
-        reselectable: Bb = !1,
-        keepsFocus: eb = !1
-      } = bb;
-      return (0, Tb.jsx)("div", {
-        className: Mb()("SegmentedToggle", Yb),
+        options: tz,
+        value: sz,
+        onChange: Fz,
+        ariaLabel: Oz,
+        className: oz,
+        reselectable: vz = !1,
+        keepsFocus: Uz = !1
+      } = zz;
+      return (0, Xz.jsx)("div", {
+        className: Wz()("SegmentedToggle", oz),
         role: "group",
-        "aria-label": Eb,
-        children: ab.map((bb => {
-          const ab = bb.value === Ub;
-          return (0, Tb.jsx)("button", {
+        "aria-label": Oz,
+        children: tz.map((zz => {
+          const tz = zz.value === sz;
+          return (0, Xz.jsx)("button", {
             type: "button",
-            "aria-pressed": ab,
-            "aria-label": bb.ariaLabel,
-            title: bb.ariaLabel,
-            className: Mb()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: ab
+            "aria-pressed": tz,
+            "aria-label": zz.ariaLabel,
+            title: zz.ariaLabel,
+            className: Wz()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: tz
             }),
-            onMouseDown: eb ? bb => {
-              bb.preventDefault()
+            onMouseDown: Uz ? zz => {
+              zz.preventDefault()
             } : void 0,
             onClick: () => {
-              ab && !Bb || Ab(bb.value)
+              tz && !vz || Fz(zz.value)
             },
-            children: bb.label
-          }, bb.value)
+            children: zz.label
+          }, zz.value)
         }))
       })
     }
   },
-  4697: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Tb,
-      e: () => Eb
+  4644: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Xz,
+      g: () => Oz
     });
-    var Ab = Ub(52);
-    const Mb = new WeakMap,
-      Tb = bb => {
-        var ab;
-        const Ub = bb.closest("[data-pad-slider]");
-        return Ub && null !== (ab = Mb.get(Ub)) && void 0 !== ab ? ab : null
+    var Fz = sz(65);
+    const Wz = new WeakMap,
+      Xz = zz => {
+        var tz;
+        const sz = zz.closest("[data-pad-slider]");
+        return sz && null !== (tz = Wz.get(sz)) && void 0 !== tz ? tz : null
       },
-      Eb = (bb, ab) => {
-        const Ub = (0, Ab.useRef)(ab);
-        Ub.current = ab, (0, Ab.useEffect)((() => {
-          if (bb.current) return ((bb, ab) => (Mb.set(bb, ab), () => {
-            Mb.get(bb) === ab && Mb.delete(bb)
-          }))(bb.current, {
-            adjust: bb => {
-              Ub.current.adjust(bb)
+      Oz = (zz, tz) => {
+        const sz = (0, Fz.useRef)(tz);
+        sz.current = tz, (0, Fz.useEffect)((() => {
+          if (zz.current) return ((zz, tz) => (Wz.set(zz, tz), () => {
+            Wz.get(zz) === tz && Wz.delete(zz)
+          }))(zz.current, {
+            adjust: zz => {
+              sz.current.adjust(zz)
             },
-            setFraction: bb => {
-              Ub.current.setFraction(bb)
+            setFraction: zz => {
+              sz.current.setFraction(zz)
             },
             endDrag: () => {
-              Ub.current.endDrag()
+              sz.current.endDrag()
             }
           })
-        }), [bb])
+        }), [zz])
       }
   },
-  4709: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      c: () => Yb,
-      e: () => Eb
+  4656: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => oz,
+      e: () => Oz
     });
-    var Ab = Ub(2890),
-      Mb = Ub(4711);
-    let Tb = null;
+    var Fz = sz(2883),
+      Wz = sz(4665);
+    let Xz = null;
 
-    function Eb(bb, ab) {
-      Tb = {
-        pack: bb.metaData.id === Ab.b ? null : bb,
-        prompt: ab
+    function Oz(zz, tz) {
+      Xz = {
+        pack: zz.metaData.id === Fz.e ? null : zz,
+        prompt: tz
       }
     }
 
-    function Yb(bb, ab) {
-      const Ub = Tb;
-      null !== Ub && (0, Mb.c)(Ub.pack, bb) && (Tb = null, ab && Ub.prompt())
+    function oz(zz, tz) {
+      const sz = Xz;
+      null !== sz && (0, Wz.d)(sz.pack, zz) && (Xz = null, tz && sz.prompt())
     }
   },
-  4711: (bb, ab, Ub) => {
-    function Ab(bb, ab) {
-      return Mb(bb, ab)
+  4665: (zz, tz, sz) => {
+    function Fz(zz, tz) {
+      return Wz(zz, tz)
     }
 
-    function Mb(bb, ab) {
-      if (bb === ab) return !0;
-      if ("object" !== typeof bb || "object" !== typeof ab || null === bb || null === ab || Array.isArray(bb) !== Array.isArray(ab)) return !1;
-      const Ub = bb,
-        Ab = ab,
-        Tb = Object.keys(Ub);
-      return Tb.length === Object.keys(Ab).length && Tb.every((bb => Object.prototype.hasOwnProperty.call(Ab, bb) && Mb(Ub[bb], Ab[bb])))
+    function Wz(zz, tz) {
+      if (zz === tz) return !0;
+      if ("object" !== typeof zz || "object" !== typeof tz || null === zz || null === tz || Array.isArray(zz) !== Array.isArray(tz)) return !1;
+      const sz = zz,
+        Fz = tz,
+        Xz = Object.keys(sz);
+      return Xz.length === Object.keys(Fz).length && Xz.every((zz => Object.prototype.hasOwnProperty.call(Fz, zz) && Wz(sz[zz], Fz[zz])))
     }
-    Ub.d(ab, {
-      c: () => Ab
+    sz.d(tz, {
+      d: () => Fz
     })
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

@@ -1,80 +1,80 @@
 export const id = 239;
 export const ids = [239];
 export const modules = {
-  38880: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      playDocsSound: () => Yb
+  38990: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      playDocsSound: () => oz
     });
-    var Ab = Ub(4546),
-      Mb = Ub(36108),
-      Tb = Ub(1142);
-    const Eb = new Map;
+    var Fz = sz(4488),
+      Wz = sz(36199),
+      Xz = sz(1191);
+    const Oz = new Map;
 
-    function Yb(bb, ab, Ub, Yb, Bb) {
-      let eb, vb = null,
-        Lb = 0,
-        Pb = 0;
-      if (ab) eb = new Ab.Howl({
-        src: [`${Tb.clientSideServerUrls.staticUrl}/sounds/music/${bb}.mp3`],
+    function oz(zz, tz, sz, oz, vz) {
+      let Uz, Kz = null,
+        uz = 0,
+        Nz = 0;
+      if (tz) Uz = new Fz.Howl({
+        src: [`${Xz.clientSideServerUrls.staticUrl}/sounds/music/${zz}.mp3`],
         html5: !0,
-        volume: Ub
+        volume: sz
       });
       else {
-        var Xb;
-        vb = (0, Mb.k)(bb);
-        const ab = (0, Mb.i)(vb),
-          Ub = null !== (Xb = ab.sprite[bb]) && void 0 !== Xb ? Xb : null;
-        if (!Ub) throw new Error(`Docs sound ${bb} is not in sprite sheet ${vb}`);
-        Lb = Ub[0] / 1e3, Pb = Ub[1] / 1e3, eb = Eb.get(vb), eb || (eb = new Ab.Howl({
-          ...ab,
+        var bz;
+        Kz = (0, Wz.h)(zz);
+        const tz = (0, Wz.e)(Kz),
+          sz = null !== (bz = tz.sprite[zz]) && void 0 !== bz ? bz : null;
+        if (!sz) throw new Error(`Docs sound ${zz} is not in sprite sheet ${Kz}`);
+        uz = sz[0] / 1e3, Nz = sz[1] / 1e3, Uz = Oz.get(Kz), Uz || (Uz = new Fz.Howl({
+          ...tz,
           volume: 1
-        }), Eb.set(vb, eb))
+        }), Oz.set(Kz, Uz))
       }
-      const jb = ab ? eb.play() : eb.play(bb);
-      eb.volume(Ub, jb), Yb > 0 && eb.seek(Lb + Yb, jb);
-      const Rb = () => ab ? eb.duration() : Pb;
-      let kb = !1;
-      const yb = bb => {
-          kb || (kb = !0, eb.off("play", Zb, jb), eb.off("end", Db, jb), eb.off("loaderror", xb), eb.off("playerror", zb, jb), ab && eb.unload(), Bb.onEnd(bb))
+      const wz = tz ? Uz.play() : Uz.play(zz);
+      Uz.volume(sz, wz), oz > 0 && Uz.seek(uz + oz, wz);
+      const Dz = () => tz ? Uz.duration() : Nz;
+      let gz = !1;
+      const Hz = zz => {
+          gz || (gz = !0, Uz.off("play", Bz, wz), Uz.off("end", Pz, wz), Uz.off("loaderror", Yz), Uz.off("playerror", rz, wz), tz && Uz.unload(), vz.onEnd(zz))
         },
-        Zb = () => {
-          Bb.onPlay(Rb())
+        Bz = () => {
+          vz.onPlay(Dz())
         },
-        Db = () => {
-          yb(!1)
+        Pz = () => {
+          Hz(!1)
         },
-        zb = (ab, Ub) => {
-          console.error(`Could not play docs sound ${bb}`, Ub), yb(!0)
+        rz = (tz, sz) => {
+          console.error(`Could not play docs sound ${zz}`, sz), Hz(!0)
         },
-        xb = (bb, ab) => {
-          null !== vb && Eb.get(vb) === eb && (Eb.delete(vb), eb.unload()), zb(bb, ab)
+        Yz = (zz, tz) => {
+          null !== Kz && Oz.get(Kz) === Uz && (Oz.delete(Kz), Uz.unload()), rz(zz, tz)
         };
-      return eb.on("play", Zb, jb), eb.once("end", Db, jb), eb.once("loaderror", xb), eb.once("playerror", zb, jb), {
+      return Uz.on("play", Bz, wz), Uz.once("end", Pz, wz), Uz.once("loaderror", Yz), Uz.once("playerror", rz, wz), {
         pause: () => {
-          eb.pause(jb)
+          Uz.pause(wz)
         },
         resume: () => {
-          eb.play(jb)
+          Uz.play(wz)
         },
-        seek: bb => {
-          const ab = Rb(),
-            Ub = Math.max(bb, 0);
-          eb.seek(Lb + (ab > 0 ? Math.min(Ub, ab) : Ub), jb)
+        seek: zz => {
+          const tz = Dz(),
+            sz = Math.max(zz, 0);
+          Uz.seek(uz + (tz > 0 ? Math.min(sz, tz) : sz), wz)
         },
-        eZ: () => {
-          const bb = eb.seek(jb);
-          return "number" === typeof bb ? Math.max(0, bb - Lb) : 0
+        yB: () => {
+          const zz = Uz.seek(wz);
+          return "number" === typeof zz ? Math.max(0, zz - uz) : 0
         },
-        getDuration: Rb,
-        setVolume: bb => {
-          eb.volume(bb, jb)
+        getDuration: Dz,
+        setVolume: zz => {
+          Uz.volume(zz, wz)
         },
         stop: () => {
-          kb || (eb.stop(jb), yb(!1))
+          gz || (Uz.stop(wz), Hz(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

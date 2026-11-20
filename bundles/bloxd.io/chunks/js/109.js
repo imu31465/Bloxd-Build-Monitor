@@ -1,685 +1,685 @@
 export const id = 109;
 export const ids = [109];
 export const modules = {
-  4673: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => jb,
-      e: () => Db,
-      g: () => Rb,
-      h: () => Zb
+  4609: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => wz,
+      d: () => Pz,
+      g: () => Dz,
+      h: () => Bz
     });
-    var Ab = Ub(52),
-      Mb = Ub(4675),
-      Tb = Ub(4054),
-      Eb = Ub(1268),
-      Yb = Ub(4690),
-      Bb = Ub(984),
-      eb = Ub.n(Bb),
-      vb = Ub(1260),
-      Lb = Ub(1639),
-      Pb = Ub(4697),
-      Xb = Ub(1023);
+    var Fz = sz(65),
+      Wz = sz(4616),
+      Xz = sz(4022),
+      Oz = sz(1333),
+      oz = sz(4636),
+      vz = sz(1020),
+      Uz = sz.n(vz),
+      Kz = sz(1319),
+      uz = sz(1664),
+      Nz = sz(4644),
+      bz = sz(1087);
 
-    function jb(bb) {
+    function wz(zz) {
       let {
-        label: ab,
-        onClick: Ub,
-        checked: Ab,
-        circleInfoText: Mb,
-        className: Yb,
-        disabled: Bb,
-        note: vb
-      } = bb;
-      return (0, Xb.jsxs)("div", {
-        "aria-disabled": Bb || void 0,
+        label: tz,
+        onClick: sz,
+        checked: Fz,
+        circleInfoText: Wz,
+        className: oz,
+        disabled: vz,
+        note: Kz
+      } = zz;
+      return (0, bz.jsxs)("div", {
+        "aria-disabled": vz || void 0,
         "data-pad-focusable": !0,
-        className: eb()("SettingBox CheckboxContainer", {
-          [Yb]: Yb,
-          SettingBoxDisabled: Bb
+        className: Uz()("SettingBox CheckboxContainer", {
+          [oz]: oz,
+          SettingBoxDisabled: vz
         }),
         onClick: () => {
-          Bb || Ub(!Ab)
+          vz || sz(!Fz)
         },
-        children: [(0, Xb.jsxs)("div", {
+        children: [(0, bz.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, Xb.jsx)("label", {
+          children: [(0, bz.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, Xb.jsx)(Tb.d, {
+            children: (0, bz.jsx)(Xz.e, {
               className: "SettingsCheckbox",
-              checked: Ab,
-              disabled: Bb,
+              checked: Fz,
+              disabled: vz,
               onChange: () => {}
             })
-          }), (0, Xb.jsxs)("div", {
+          }), (0, bz.jsxs)("div", {
             className: "CheckboxText",
-            children: [ab, Mb && (0, Xb.jsx)("span", {
-              onClick: bb => bb.stopPropagation(),
-              children: (0, Xb.jsx)(Eb.d, {
+            children: [tz, Wz && (0, bz.jsx)("span", {
+              onClick: zz => zz.stopPropagation(),
+              children: (0, bz.jsx)(Oz.d, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: Mb
+                hoverInfo: Wz
               })
             })]
           })]
-        }), vb && (0, Xb.jsx)("div", {
+        }), Kz && (0, bz.jsx)("div", {
           className: "SettingNote",
-          children: vb
+          children: Kz
         })]
       })
     }
 
-    function Rb(bb) {
+    function Dz(zz) {
       let {
-        name: ab,
-        onChange: Ub,
-        min: Mb,
-        max: Tb,
-        step: Yb,
-        initValue: Bb,
-        circleInfoText: vb,
-        format: Lb,
-        className: Pb,
-        padStep: jb,
-        disabled: Rb = !1,
-        selectableMax: kb,
-        cappedNote: Zb,
-        onChangeComplete: Db
-      } = bb;
-      const [zb, xb] = (0, Ab.useState)(Bb), ib = (0, Ab.useRef)(Bb);
-      (0, Ab.useEffect)((() => {
-        ib.current = Bb, xb(Bb)
-      }), [Bb]);
-      const fb = void 0 !== kb && kb < Tb,
-        mb = fb ? {
-          "--slider-selectable": (kb - Mb) / (Tb - Mb)
+        name: tz,
+        onChange: sz,
+        min: Wz,
+        max: Xz,
+        step: oz,
+        initValue: vz,
+        circleInfoText: Kz,
+        format: uz,
+        className: Nz,
+        padStep: wz,
+        disabled: Dz = !1,
+        selectableMax: gz,
+        cappedNote: Bz,
+        onChangeComplete: Pz
+      } = zz;
+      const [rz, Yz] = (0, Fz.useState)(vz), xz = (0, Fz.useRef)(vz);
+      (0, Fz.useEffect)((() => {
+        xz.current = vz, Yz(vz)
+      }), [vz]);
+      const mz = void 0 !== gz && gz < Xz,
+        Jz = mz ? {
+          "--slider-selectable": (gz - Wz) / (Xz - Wz)
         } : void 0;
-      return (0, Xb.jsxs)("div", {
-        className: eb()("SettingBox SettingsSliderDiv", {
-          [Pb]: Pb,
-          SettingBoxDisabled: Rb,
-          SliderCapped: fb
+      return (0, bz.jsxs)("div", {
+        className: Uz()("SettingBox SettingsSliderDiv", {
+          [Nz]: Nz,
+          SettingBoxDisabled: Dz,
+          SliderCapped: mz
         }),
-        style: mb,
-        children: [(0, Xb.jsxs)("div", {
+        style: Jz,
+        children: [(0, bz.jsxs)("div", {
           className: "SliderText",
-          children: [`${ab}: ${Lb?Lb(zb):zb}`, vb && (0, Xb.jsx)(Eb.d, {
+          children: [`${tz}: ${uz?uz(rz):rz}`, Kz && (0, bz.jsx)(Oz.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: vb
+            hoverInfo: Kz
           })]
-        }), (0, Xb.jsx)("div", {
+        }), (0, bz.jsx)("div", {
           className: "SliderDiv",
-          children: (0, Xb.jsx)(yb, {
-            value: zb,
-            min: Mb,
-            max: Tb,
-            step: Yb,
-            onChange: bb => {
-              if (fb && bb >= kb && zb === kb) return;
-              const ab = fb ? Math.min(bb, kb) : bb;
-              ib.current = ab, xb(ab), Ub(ab)
+          children: (0, bz.jsx)(Hz, {
+            value: rz,
+            min: Wz,
+            max: Xz,
+            step: oz,
+            onChange: zz => {
+              if (mz && zz >= gz && rz === gz) return;
+              const tz = mz ? Math.min(zz, gz) : zz;
+              xz.current = tz, Yz(tz), sz(tz)
             },
-            onChangeComplete: Db && (() => {
-              Db(ib.current)
+            onChangeComplete: Pz && (() => {
+              Pz(xz.current)
             }),
-            format: Lb,
-            padStep: jb,
-            disabled: Rb
+            format: uz,
+            padStep: wz,
+            disabled: Dz
           })
-        }), fb && Zb && (0, Xb.jsx)("div", {
+        }), mz && Bz && (0, bz.jsx)("div", {
           className: "SettingNote",
-          children: Zb
+          children: Bz
         })]
       })
     }
-    const kb = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const gz = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function yb(bb) {
-      var ab;
+    function Hz(zz) {
+      var tz;
       let {
-        value: Ub,
-        min: Tb,
-        max: Eb,
-        step: Yb,
-        onChange: Bb,
-        orientation: eb,
-        reverse: vb,
-        setIsChanging: Lb,
-        tooltip: jb,
-        labels: Rb,
-        handleLabel: yb,
-        format: Zb,
-        onChangeStart: Db,
-        onChangeComplete: zb,
-        padStep: xb,
-        disabled: ib = !1
-      } = bb;
-      const fb = (0, Ab.useRef)(null),
-        mb = (0, Ab.useRef)(null);
-      (0, Ab.useLayoutEffect)((() => {
-        var bb, ab, Ub;
-        const Ab = null !== (bb = null === (ab = fb.current) || void 0 === ab ? void 0 : ab.querySelector(".rangeslider")) && void 0 !== bb ? bb : null;
-        null === Ab || void 0 === Ab || Ab.setAttribute("data-pad-slider", ""), null === Ab || void 0 === Ab || Ab.setAttribute("data-pad-focusable", ""), null === Ab || void 0 === Ab || null === (Ub = Ab.querySelector(".rangeslider__handle")) || void 0 === Ub || Ub.setAttribute("data-pad-slider-handle", ""), mb.current = Ab
-      }), []), (0, Ab.useLayoutEffect)((() => {
-        var bb, ab;
-        ib ? null === (bb = mb.current) || void 0 === bb || bb.setAttribute("aria-disabled", "true") : null === (ab = mb.current) || void 0 === ab || ab.removeAttribute("aria-disabled")
-      }), [ib]);
-      const pb = (null !== (ab = String(Yb).split(".")[1]) && void 0 !== ab ? ab : "").length,
-        Nb = bb => {
-          const ab = Number((Math.round((bb - Tb) / Yb) * Yb + Tb).toFixed(pb));
-          return Math.min(Eb, Math.max(Tb, ab))
+        value: sz,
+        min: Xz,
+        max: Oz,
+        step: oz,
+        onChange: vz,
+        orientation: Uz,
+        reverse: Kz,
+        setIsChanging: uz,
+        tooltip: wz,
+        labels: Dz,
+        handleLabel: Hz,
+        format: Bz,
+        onChangeStart: Pz,
+        onChangeComplete: rz,
+        padStep: Yz,
+        disabled: xz = !1
+      } = zz;
+      const mz = (0, Fz.useRef)(null),
+        Jz = (0, Fz.useRef)(null);
+      (0, Fz.useLayoutEffect)((() => {
+        var zz, tz, sz;
+        const Fz = null !== (zz = null === (tz = mz.current) || void 0 === tz ? void 0 : tz.querySelector(".rangeslider")) && void 0 !== zz ? zz : null;
+        null === Fz || void 0 === Fz || Fz.setAttribute("data-pad-slider", ""), null === Fz || void 0 === Fz || Fz.setAttribute("data-pad-focusable", ""), null === Fz || void 0 === Fz || null === (sz = Fz.querySelector(".rangeslider__handle")) || void 0 === sz || sz.setAttribute("data-pad-slider-handle", ""), Jz.current = Fz
+      }), []), (0, Fz.useLayoutEffect)((() => {
+        var zz, tz;
+        xz ? null === (zz = Jz.current) || void 0 === zz || zz.setAttribute("aria-disabled", "true") : null === (tz = Jz.current) || void 0 === tz || tz.removeAttribute("aria-disabled")
+      }), [xz]);
+      const Iz = (null !== (tz = String(oz).split(".")[1]) && void 0 !== tz ? tz : "").length,
+        Cz = zz => {
+          const tz = Number((Math.round((zz - Xz) / oz) * oz + Xz).toFixed(Iz));
+          return Math.min(Oz, Math.max(Xz, tz))
         },
-        Wb = (0, Ab.useRef)(zb);
-      Wb.current = zb, (0, Ab.useEffect)((() => {
-        const bb = fb.current;
-        if (!bb) return;
-        const ab = bb => {
-          var ab;
-          kb.has(bb.key) && (null === (ab = Wb.current) || void 0 === ab || ab.call(Wb))
+        ez = (0, Fz.useRef)(rz);
+      ez.current = rz, (0, Fz.useEffect)((() => {
+        const zz = mz.current;
+        if (!zz) return;
+        const tz = zz => {
+          var tz;
+          gz.has(zz.key) && (null === (tz = ez.current) || void 0 === tz || tz.call(ez))
         };
-        return bb.addEventListener("keyup", ab), () => {
-          bb.removeEventListener("keyup", ab)
+        return zz.addEventListener("keyup", tz), () => {
+          zz.removeEventListener("keyup", tz)
         }
       }), []);
-      const Hb = (0, Ab.useRef)(!1);
-      return (0, Pb.e)(mb, {
-        adjust: bb => {
-          if (ib) return;
-          const ab = null !== xb && void 0 !== xb ? xb : Math.max(Yb, Math.round((Eb - Tb) / 20 / Yb) * Yb),
-            Ab = Nb(Ub + bb * ab * (vb ? -1 : 1));
-          Ab !== Ub && (null === Db || void 0 === Db || Db(), Bb(Ab), null === zb || void 0 === zb || zb())
+      const Zz = (0, Fz.useRef)(!1);
+      return (0, Nz.g)(Jz, {
+        adjust: zz => {
+          if (xz) return;
+          const tz = null !== Yz && void 0 !== Yz ? Yz : Math.max(oz, Math.round((Oz - Xz) / 20 / oz) * oz),
+            Fz = Cz(sz + zz * tz * (Kz ? -1 : 1));
+          Fz !== sz && (null === Pz || void 0 === Pz || Pz(), vz(Fz), null === rz || void 0 === rz || rz())
         },
-        setFraction: bb => {
-          if (ib) return;
-          const ab = Nb(Tb + (vb ? 1 - bb : bb) * (Eb - Tb));
-          ab !== Ub && (Hb.current || (Hb.current = !0, null === Db || void 0 === Db || Db()), Bb(ab))
+        setFraction: zz => {
+          if (xz) return;
+          const tz = Cz(Xz + (Kz ? 1 - zz : zz) * (Oz - Xz));
+          tz !== sz && (Zz.current || (Zz.current = !0, null === Pz || void 0 === Pz || Pz()), vz(tz))
         },
         endDrag: () => {
-          Hb.current && (Hb.current = !1, null === zb || void 0 === zb || zb())
+          Zz.current && (Zz.current = !1, null === rz || void 0 === rz || rz())
         }
-      }), (0, Xb.jsx)("div", {
-        ref: fb,
+      }), (0, bz.jsx)("div", {
+        ref: mz,
         style: {
           display: "contents"
         },
-        children: (0, Xb.jsx)(Mb.d, {
-          value: Ub,
-          min: Tb,
-          max: Eb,
-          step: Yb,
-          onChange: Bb,
-          orientation: eb,
-          reverse: vb,
-          tooltip: jb,
-          labels: Rb,
-          handleLabel: yb,
-          format: Zb,
+        children: (0, bz.jsx)(Wz.c, {
+          value: sz,
+          min: Xz,
+          max: Oz,
+          step: oz,
+          onChange: vz,
+          orientation: Uz,
+          reverse: Kz,
+          tooltip: wz,
+          labels: Dz,
+          handleLabel: Hz,
+          format: Bz,
           onChangeStart: () => {
-            null === Db || void 0 === Db || Db(), null === Lb || void 0 === Lb || Lb(!0)
+            null === Pz || void 0 === Pz || Pz(), null === uz || void 0 === uz || uz(!0)
           },
           onChangeComplete: () => {
-            null === Lb || void 0 === Lb || Lb(!1), null === zb || void 0 === zb || zb()
+            null === uz || void 0 === uz || uz(!1), null === rz || void 0 === rz || rz()
           }
         })
       })
     }
-    async function Zb() {
-      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const ab = vb.NotificationProvider.showPromptPopup({
+    async function Bz() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const tz = Kz.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: bb
+        unlockPointerKey: zz
       });
-      !0 === await ab.getResult() && (0, Lb.reloadBloxd)()
+      !0 === await tz.getResult() && (0, uz.reloadBloxd)()
     }
 
-    function Db(bb) {
+    function Pz(zz) {
       let {
-        label: ab,
-        options: Ub,
-        value: Ab,
-        onChange: Mb,
-        circleInfoText: Tb
-      } = bb;
-      return (0, Xb.jsxs)("div", {
+        label: tz,
+        options: sz,
+        value: Fz,
+        onChange: Wz,
+        circleInfoText: Xz
+      } = zz;
+      return (0, bz.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, Xb.jsxs)("div", {
+        children: [(0, bz.jsxs)("div", {
           className: "SliderText",
-          children: [ab, Tb && (0, Xb.jsx)(Eb.d, {
+          children: [tz, Xz && (0, bz.jsx)(Oz.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Tb
+            hoverInfo: Xz
           })]
-        }), (0, Xb.jsx)(Yb.e, {
-          ariaLabel: ab,
-          options: Ub,
-          value: Ab,
-          onChange: Mb
+        }), (0, bz.jsx)(oz.b, {
+          ariaLabel: tz,
+          options: sz,
+          value: Fz,
+          onChange: Wz
         })]
       })
     }
   },
-  6300: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      default: () => Ob
+  6245: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      default: () => Vz
     });
-    var Ab = Ub(52),
-      Mb = Ub(1446),
-      Tb = Ub(6167),
-      Eb = Ub(1162),
-      Yb = Ub(325),
-      Bb = Ub(1254),
-      eb = Ub(1433),
-      vb = Ub(1352),
-      Lb = Ub(1268),
-      Pb = Ub(2397),
-      Xb = Ub(2522),
-      jb = Ub(4234),
-      Rb = Ub(1060),
-      kb = Ub(1413),
-      yb = Ub(101),
-      Zb = Ub(1134);
-    const Db = Ub.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
-    var zb = Ub(984),
-      xb = Ub.n(zb),
-      ib = Ub(990),
-      fb = Ub(1260),
-      mb = Ub(6161),
-      pb = Ub(1023);
-    const Nb = (0, Ab.lazy)((() => Promise.all([Ub.e(105), Ub.e(74), Ub.e(131), Ub.e(125), Ub.e(124)]).then((() => Ub(6203))).then((bb => ({
-      default: bb.ShaderPackPublishForm
+    var Fz = sz(65),
+      Wz = sz(1493),
+      Xz = sz(6129),
+      Oz = sz(1213),
+      oz = sz(321),
+      vz = sz(1306),
+      Uz = sz(1483),
+      Kz = sz(1419),
+      uz = sz(1333),
+      Nz = sz(2391),
+      bz = sz(2524),
+      wz = sz(4191),
+      Dz = sz(1116),
+      gz = sz(1466),
+      Hz = sz(106),
+      Bz = sz(1173);
+    const Pz = sz.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
+    var rz = sz(1020),
+      Yz = sz.n(rz),
+      xz = sz(1036),
+      mz = sz(1319),
+      Jz = sz(6122),
+      Iz = sz(1087);
+    const Cz = (0, Fz.lazy)((() => Promise.all([sz.e(105), sz.e(74), sz.e(131), sz.e(125), sz.e(124)]).then((() => sz(6158))).then((zz => ({
+      default: zz.ShaderPackPublishForm
     })))));
 
-    function Wb(bb) {
+    function ez(zz) {
       let {
-        details: ab,
-        owner: Ub,
-        onChanged: Mb
-      } = bb;
+        details: tz,
+        owner: sz,
+        onChanged: Wz
+      } = zz;
       const {
-        t: Eb
-      } = (0, Zb.A)(), Yb = (0, eb.useNavigatePreserveSearch)(), {
-        userContext: Lb
-      } = (0, Rb.c)(), [Pb, Xb] = (0, Ab.useState)(!1), [jb, yb] = (0, Ab.useState)(null), [Db, zb] = (0, Ab.useState)(!1), {
-        packId: Wb,
-        name: Hb,
-        description: Ib,
-        live: db
-      } = ab;
-      async function Fb(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Mb;
-        Xb(!0), yb(null);
+        t: Oz
+      } = (0, Bz.B)(), oz = (0, Uz.useNavigatePreserveSearch)(), {
+        userContext: uz
+      } = (0, Dz.b)(), [Nz, bz] = (0, Fz.useState)(!1), [wz, Hz] = (0, Fz.useState)(null), [Pz, rz] = (0, Fz.useState)(!1), {
+        packId: ez,
+        name: Zz,
+        description: Gz,
+        live: Tz
+      } = tz;
+      async function cz(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wz;
+        bz(!0), Hz(null);
         try {
-          await bb(), ab()
-        } catch (Ub) {
-          console.error("Failed to change a shader pack", Ub), yb((0, mb.z)(Ub, Eb, "shaderPackListing:ownerActionFailed"))
+          await zz(), tz()
+        } catch (sz) {
+          console.error("Failed to change a shader pack", sz), Hz((0, Jz.B)(sz, Oz, "shaderPackListing:ownerActionFailed"))
         } finally {
-          Xb(!1)
+          bz(!1)
         }
       }
-      const hb = (0, mb.t)(Lb);
-      return (0, pb.jsxs)("section", {
+      const jz = (0, Jz.u)(uz);
+      return (0, Iz.jsxs)("section", {
         className: "ShaderPackOwnerPanel",
-        children: [(0, pb.jsx)("h2", {
+        children: [(0, Iz.jsx)("h2", {
           className: "ShaderPackSectionTitle",
-          children: Eb("general:manage")
-        }), (0, mb.V)(Ub, !(null === db || void 0 === db || !db.renderId), Date.now(), Eb).map((bb => (0, pb.jsxs)("div", {
-          className: xb()("ShaderPackOwnerNotice", {
-            Warning: "warning" === bb.tone
+          children: Oz("general:manage")
+        }), (0, Jz.hb)(sz, !(null === Tz || void 0 === Tz || !Tz.renderId), Date.now(), Oz).map((zz => (0, Iz.jsxs)("div", {
+          className: Yz()("ShaderPackOwnerNotice", {
+            Warning: "warning" === zz.tone
           }),
-          children: [(0, pb.jsx)(ib.e, {
-            name: "warning" === bb.tone ? "triangle-exclamation" : "circle-info"
-          }), (0, pb.jsxs)("div", {
-            children: [bb.text, bb.detail && (0, pb.jsx)("pre", {
+          children: [(0, Iz.jsx)(xz.c, {
+            name: "warning" === zz.tone ? "triangle-exclamation" : "circle-info"
+          }), (0, Iz.jsxs)("div", {
+            children: [zz.text, zz.detail && (0, Iz.jsx)("pre", {
               className: "ShaderPackOwnerNoticeDetail",
-              children: bb.detail
+              children: zz.detail
             })]
           })]
-        }, bb.text))), ab.ban && (0, pb.jsxs)("div", {
+        }, zz.text))), tz.ban && (0, Iz.jsxs)("div", {
           className: "ShaderPackOwnerNotice Warning",
-          children: [(0, pb.jsx)(ib.e, {
+          children: [(0, Iz.jsx)(xz.c, {
             name: "ban"
-          }), (0, pb.jsxs)("div", {
-            children: ["Banned by ", ab.ban.byName, " on ", new Date(ab.ban.at).toLocaleString()]
+          }), (0, Iz.jsxs)("div", {
+            children: ["Banned by ", tz.ban.byName, " on ", new Date(tz.ban.at).toLocaleString()]
           })]
-        }), jb && (0, pb.jsx)("div", {
+        }), wz && (0, Iz.jsx)("div", {
           className: "ShaderPackOwnerError",
-          children: jb
-        }), (0, pb.jsxs)("div", {
+          children: wz
+        }), (0, Iz.jsxs)("div", {
           className: "ShaderPackOwnerActions",
-          children: [(0, pb.jsxs)(vb.M, {
-            disabled: Pb,
+          children: [(0, Iz.jsxs)(Kz.Q, {
+            disabled: Nz,
             onClick: () => {
               !async function() {
-                const bb = await fb.NotificationProvider.showInputPopup({
+                const zz = await mz.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:renameTitle",
-                  initialValue: Hb,
-                  maxLength: Tb.C,
+                  initialValue: Zz,
+                  maxLength: Xz.w,
                   submitText: "general:save",
-                  validate: bb => bb.trim().length < Tb.E ? Eb("shaderPackListing:nameTooShort", {
-                    min: String(Tb.E)
+                  validate: zz => zz.trim().length < Xz.A ? Oz("shaderPackListing:nameTooShort", {
+                    min: String(Xz.A)
                   }) : null
                 }).getResult();
-                "notificationTornDown" !== bb && "submit" === (null === bb || void 0 === bb ? void 0 : bb.type) && bb.value.trim() !== Hb && await Fb((() => kb.b.updateShaderPack(Lb, {
-                  packId: Wb,
-                  name: bb.value.trim()
+                "notificationTornDown" !== zz && "submit" === (null === zz || void 0 === zz ? void 0 : zz.type) && zz.value.trim() !== Zz && await cz((() => gz.d.updateShaderPack(uz, {
+                  packId: ez,
+                  name: zz.value.trim()
                 })))
               }()
             },
-            children: [(0, pb.jsx)(ib.e, {
+            children: [(0, Iz.jsx)(xz.c, {
               name: "pen"
-            }), " ", Eb("shaderPackListing:rename")]
-          }), (0, pb.jsxs)(vb.M, {
-            disabled: Pb,
+            }), " ", Oz("shaderPackListing:rename")]
+          }), (0, Iz.jsxs)(Kz.Q, {
+            disabled: Nz,
             onClick: () => {
               !async function() {
-                const bb = await fb.NotificationProvider.showInputPopup({
+                const zz = await mz.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:editDescription",
-                  initialValue: Ib,
-                  maxLength: Tb.o,
+                  initialValue: Gz,
+                  maxLength: Xz.p,
                   multiline: !0,
                   allowEmptySubmit: !0,
                   submitText: "general:save"
                 }).getResult();
-                "notificationTornDown" !== bb && "submit" === (null === bb || void 0 === bb ? void 0 : bb.type) && bb.value.trim() !== Ib && await Fb((() => kb.b.updateShaderPack(Lb, {
-                  packId: Wb,
-                  description: bb.value.trim()
+                "notificationTornDown" !== zz && "submit" === (null === zz || void 0 === zz ? void 0 : zz.type) && zz.value.trim() !== Gz && await cz((() => gz.d.updateShaderPack(uz, {
+                  packId: ez,
+                  description: zz.value.trim()
                 })))
               }()
             },
-            children: [(0, pb.jsx)(ib.e, {
+            children: [(0, Iz.jsx)(xz.c, {
               name: "file-lines"
-            }), " ", Eb("shaderPackListing:editDescription")]
-          }), (0, pb.jsxs)(vb.M, {
-            disabled: Pb || Ub.isBanned && !Ub.listed,
+            }), " ", Oz("shaderPackListing:editDescription")]
+          }), (0, Iz.jsxs)(Kz.Q, {
+            disabled: Nz || sz.isBanned && !sz.listed,
             onClick: () => {
-              Fb((() => kb.b.updateShaderPack(Lb, {
-                packId: Wb,
-                listed: !Ub.listed
+              cz((() => gz.d.updateShaderPack(uz, {
+                packId: ez,
+                listed: !sz.listed
               })))
             },
-            children: [(0, pb.jsx)(ib.e, {
-              name: Ub.listed ? "eye-slash" : "eye"
-            }), " ", Eb(Ub.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
-          }), !Ub.isBanned && (0, pb.jsxs)(vb.g, {
-            disabled: Pb,
+            children: [(0, Iz.jsx)(xz.c, {
+              name: sz.listed ? "eye-slash" : "eye"
+            }), " ", Oz(sz.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
+          }), !sz.isBanned && (0, Iz.jsxs)(Kz.h, {
+            disabled: Nz,
             onClick: () => {
-              zb(!Db)
+              rz(!Pz)
             },
-            children: [(0, pb.jsx)(ib.e, {
+            children: [(0, Iz.jsx)(xz.c, {
               name: "upload"
-            }), " ", Eb("shaderPackListing:uploadVersion")]
-          }), (0, pb.jsxs)(vb.F, {
-            disabled: Pb || Ub.isBanned,
+            }), " ", Oz("shaderPackListing:uploadVersion")]
+          }), (0, Iz.jsxs)(Kz.K, {
+            disabled: Nz || sz.isBanned,
             onClick: () => {
               !async function() {
-                !0 === await fb.NotificationProvider.showPromptPopup({
+                !0 === await mz.NotificationProvider.showPromptPopup({
                   title: "shaderPackListing:deleteTitle",
                   subtitle: "shaderPackListing:deleteSubtitle",
                   confirmText: "general:delete",
                   cancelText: "general:cancel",
                   destructive: !0
-                }).getResult() && await Fb((() => kb.b.deleteShaderPack(Lb, Wb)), (() => {
-                  Yb(`${mb.U}?section=mine`, {
+                }).getResult() && await cz((() => gz.d.deleteShaderPack(uz, ez)), (() => {
+                  oz(`${Jz.db}?section=mine`, {
                     replace: !0
                   })
                 }))
               }()
             },
-            children: [(0, pb.jsx)(ib.e, {
+            children: [(0, Iz.jsx)(xz.c, {
               name: "trash-can"
-            }), " ", Eb("general:delete")]
-          }), hb && (0, pb.jsxs)(vb.F, {
-            disabled: Pb,
+            }), " ", Oz("general:delete")]
+          }), jz && (0, Iz.jsxs)(Kz.K, {
+            disabled: Nz,
             onClick: () => {
-              Fb((() => kb.b.setShaderPackBanned(Lb, Wb, !Ub.isBanned)))
+              cz((() => gz.d.setShaderPackBanned(uz, ez, !sz.isBanned)))
             },
-            children: [(0, pb.jsx)(ib.e, {
-              name: Ub.isBanned ? "circle-check" : "ban"
-            }), " ", Ub.isBanned ? "Unban" : "Ban"]
+            children: [(0, Iz.jsx)(xz.c, {
+              name: sz.isBanned ? "circle-check" : "ban"
+            }), " ", sz.isBanned ? "Unban" : "Ban"]
           })]
-        }), Db && (0, pb.jsx)(Ab.Suspense, {
-          fallback: (0, pb.jsx)(Bb.b, {}),
-          children: (0, pb.jsx)(Nb, {
+        }), Pz && (0, Iz.jsx)(Fz.Suspense, {
+          fallback: (0, Iz.jsx)(vz.d, {}),
+          children: (0, Iz.jsx)(Cz, {
             existing: {
-              packId: Wb,
-              name: Hb,
-              description: Ib
+              packId: ez,
+              name: Zz,
+              description: Gz
             },
             onPublished: () => {
-              zb(!1), Mb()
+              rz(!1), Wz()
             }
           })
         })]
       })
     }
-    var Hb = Ub(75),
-      Ib = Ub(1786),
-      db = Ub(1213),
-      Fb = Ub(4697),
-      hb = Ub(1142),
-      Gb = Ub(6179),
-      Qb = Ub(6176),
-      qb = Ub(6194);
+    var Zz = sz(78),
+      Gz = sz(1824),
+      Tz = sz(1264),
+      cz = sz(4644),
+      jz = sz(1191),
+      Az = sz(6143),
+      yz = sz(6138),
+      Mz = sz(6153);
 
-    function ub(bb) {
+    function dz(zz) {
       let {
-        item: ab
-      } = bb;
+        item: tz
+      } = zz;
       const {
-        t: Ub
-      } = (0, Zb.A)(), [Mb] = (0, Gb.k)(), [Eb, Yb] = (0, Ab.useState)(Mb), [Bb, eb] = (0, Ab.useState)(!1), [vb, Lb] = (0, Ab.useState)(!1), {
-        s3Url: Pb
-      } = hb.clientSideServerUrls, {
-        width: Xb,
-        height: jb
-      } = Tb.s.large, Rb = (0, Tb.w)(Pb, ab, Eb, "large"), {
-        renderVersion: kb
-      } = ab;
-      return (0, pb.jsxs)("div", {
+        t: sz
+      } = (0, Bz.B)(), [Wz] = (0, Az.f)(), [Oz, oz] = (0, Fz.useState)(Wz), [vz, Uz] = (0, Fz.useState)(!1), [Kz, uz] = (0, Fz.useState)(!1), {
+        s3Url: Nz
+      } = jz.clientSideServerUrls, {
+        width: bz,
+        height: wz
+      } = Xz.q.large, Dz = (0, Xz.r)(Nz, tz, Oz, "large"), {
+        renderVersion: gz
+      } = tz;
+      return (0, Iz.jsxs)("div", {
         className: "ShaderPackPreviews",
-        children: [(0, pb.jsx)(qb.c, {
-          selected: Eb,
-          onSelect: bb => {
-            Yb(bb), eb(!1)
+        children: [(0, Iz.jsx)(Mz.d, {
+          selected: Oz,
+          onSelect: zz => {
+            oz(zz), Uz(!1)
           },
-          imageUrl: bb => (0, Tb.w)(Pb, ab, bb, "thumb")
-        }), (0, pb.jsxs)("div", {
+          imageUrl: zz => (0, Xz.r)(Nz, tz, zz, "thumb")
+        }), (0, Iz.jsxs)("div", {
           className: "ShaderPackPreviewStage",
-          children: [!Bb && (0, pb.jsxs)("button", {
+          children: [!vz && (0, Iz.jsxs)("button", {
             type: "button",
             className: "ShaderPackPreviewMain",
-            title: null === kb ? void 0 : Ub("shaderPackListing:fullSize"),
-            disabled: null === kb,
+            title: null === gz ? void 0 : sz("shaderPackListing:fullSize"),
+            disabled: null === gz,
             onClick: () => {
-              Lb(!0)
+              uz(!0)
             },
-            children: [(0, pb.jsx)("img", {
-              src: Rb,
-              width: Xb,
-              height: jb,
-              alt: Ub(mb.eb[Eb]),
+            children: [(0, Iz.jsx)("img", {
+              src: Dz,
+              width: bz,
+              height: wz,
+              alt: sz(Jz.qb[Oz]),
               draggable: !1
-            }), (0, pb.jsx)(Qb.b, {
-              item: ab
+            }), (0, Iz.jsx)(yz.d, {
+              item: tz
             })]
-          }), !Bb && null !== kb && (0, pb.jsxs)(lb, {
+          }), !vz && null !== gz && (0, Iz.jsxs)(iz, {
             side: "Right",
             onClick: () => {
-              eb(!0)
+              Uz(!0)
             },
-            children: [(0, pb.jsx)(ib.e, {
+            children: [(0, Iz.jsx)(xz.c, {
               name: "arrows-left-right"
-            }), " ", Ub("shaderPackListing:compare")]
-          }), Bb && null !== kb && (0, pb.jsx)(ob, {
-            item: ab,
-            packUrl: Rb,
-            baselineUrl: (0, Tb.m)(Pb, kb, Eb, "large")
-          }), Bb && (0, pb.jsx)(lb, {
+            }), " ", sz("shaderPackListing:compare")]
+          }), vz && null !== gz && (0, Iz.jsx)(kz, {
+            item: tz,
+            packUrl: Dz,
+            baselineUrl: (0, Xz.m)(Nz, gz, Oz, "large")
+          }), vz && (0, Iz.jsx)(iz, {
             side: "Left",
             onClick: () => {
-              eb(!1)
+              Uz(!1)
             },
-            children: Ub("shaderPackListing:withPack")
-          }), Bb && (0, pb.jsx)(lb, {
+            children: sz("shaderPackListing:withPack")
+          }), vz && (0, Iz.jsx)(iz, {
             side: "Right",
             onClick: () => {
-              eb(!1)
+              Uz(!1)
             },
-            children: Ub("shaderPackListing:withoutPack")
+            children: sz("shaderPackListing:withoutPack")
           })]
-        }), vb && (0, pb.jsx)(rb, {
-          fullUrl: (0, Tb.w)(Pb, ab, Eb, "full"),
-          largeUrl: Rb,
-          alt: Ub(mb.eb[Eb]),
+        }), Kz && (0, Iz.jsx)(hz, {
+          fullUrl: (0, Xz.r)(Nz, tz, Oz, "full"),
+          largeUrl: Dz,
+          alt: sz(Jz.qb[Oz]),
           onClose: () => {
-            Lb(!1)
+            uz(!1)
           }
         })]
       })
     }
 
-    function rb(bb) {
+    function hz(zz) {
       let {
-        fullUrl: ab,
-        largeUrl: Ub,
-        alt: Mb,
-        onClose: Tb
-      } = bb;
-      const Eb = (0, Ab.useRef)(null);
-      return (0, db.r)("popup", Eb, Tb), (0, Ab.useEffect)((() => {
-        function bb(bb) {
-          "Escape" === bb.key && (bb.stopPropagation(), Tb())
+        fullUrl: tz,
+        largeUrl: sz,
+        alt: Wz,
+        onClose: Xz
+      } = zz;
+      const Oz = (0, Fz.useRef)(null);
+      return (0, Tz.s)("popup", Oz, Xz), (0, Fz.useEffect)((() => {
+        function zz(zz) {
+          "Escape" === zz.key && (zz.stopPropagation(), Xz())
         }
-        return window.addEventListener("keydown", bb, !0), () => {
-          window.removeEventListener("keydown", bb, !0)
+        return window.addEventListener("keydown", zz, !0), () => {
+          window.removeEventListener("keydown", zz, !0)
         }
-      }), [Tb]), (0, Hb.createPortal)((0, pb.jsxs)("div", {
-        ref: Eb,
+      }), [Xz]), (0, Zz.createPortal)((0, Iz.jsxs)("div", {
+        ref: Oz,
         className: "ShaderPackFullSize",
-        onClick: Tb,
-        children: [(0, pb.jsx)("img", {
+        onClick: Xz,
+        children: [(0, Iz.jsx)("img", {
           className: "ShaderPackFullSizeImage",
-          src: ab,
-          alt: Mb,
+          src: tz,
+          alt: Wz,
           draggable: !1,
           style: {
-            backgroundImage: `url(${Ub})`
+            backgroundImage: `url(${sz})`
           }
-        }), (0, pb.jsx)(vb.k, {
+        }), (0, Iz.jsx)(Kz.n, {
           className: "ShaderPackFullSizeClose",
-          onClick: Tb
+          onClick: Xz
         })]
       }), document.body)
     }
-    const Kb = 5;
+    const Qz = 5;
 
-    function ob(bb) {
+    function kz(zz) {
       let {
-        item: ab,
-        packUrl: Ub,
-        baselineUrl: Mb
-      } = bb;
+        item: tz,
+        packUrl: sz,
+        baselineUrl: Wz
+      } = zz;
       const {
-        t: Eb
-      } = (0, Zb.A)(), [Yb, Bb] = (0, Ab.useState)(50), eb = (0, Ab.useRef)(!1), vb = (0, Ab.useRef)(null), {
-        width: Lb,
-        height: Pb
-      } = Tb.s.large;
+        t: Oz
+      } = (0, Bz.B)(), [oz, vz] = (0, Fz.useState)(50), Uz = (0, Fz.useRef)(!1), Kz = (0, Fz.useRef)(null), {
+        width: uz,
+        height: Nz
+      } = Xz.q.large;
 
-      function Xb(bb) {
-        Bb((ab => (0, Ib.c)(ab + bb, 0, 100)))
+      function bz(zz) {
+        vz((tz => (0, Gz.f)(tz + zz, 0, 100)))
       }
 
-      function jb(bb) {
-        const ab = bb.currentTarget.getBoundingClientRect();
-        Bb((0, Ib.c)((bb.clientX - ab.left) / ab.width * 100, 0, 100))
+      function wz(zz) {
+        const tz = zz.currentTarget.getBoundingClientRect();
+        vz((0, Gz.f)((zz.clientX - tz.left) / tz.width * 100, 0, 100))
       }
-      return (0, Fb.e)(vb, {
-        adjust: bb => {
-          Xb(bb * Kb)
+      return (0, cz.g)(Kz, {
+        adjust: zz => {
+          bz(zz * Qz)
         },
-        setFraction: bb => {
-          Bb(100 * bb)
+        setFraction: zz => {
+          vz(100 * zz)
         },
         endDrag: () => {}
-      }), (0, pb.jsxs)("div", {
-        ref: vb,
+      }), (0, Iz.jsxs)("div", {
+        ref: Kz,
         className: "ShaderPackCompare",
         "data-pad-slider": "",
         "data-pad-focusable": "",
         role: "slider",
         tabIndex: 0,
-        "aria-label": Eb("shaderPackListing:compare"),
+        "aria-label": Oz("shaderPackListing:compare"),
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(Yb),
+        "aria-valuenow": Math.round(oz),
         style: {
-          "--split": `${Yb}%`
+          "--split": `${oz}%`
         },
-        onKeyDown: function(bb) {
-          const ab = "ArrowLeft" === bb.key ? -Kb : "ArrowRight" === bb.key ? Kb : 0;
-          0 !== ab && (bb.preventDefault(), Xb(ab))
+        onKeyDown: function(zz) {
+          const tz = "ArrowLeft" === zz.key ? -Qz : "ArrowRight" === zz.key ? Qz : 0;
+          0 !== tz && (zz.preventDefault(), bz(tz))
         },
-        onPointerDown: bb => {
-          eb.current = !0, bb.currentTarget.setPointerCapture(bb.pointerId), jb(bb)
+        onPointerDown: zz => {
+          Uz.current = !0, zz.currentTarget.setPointerCapture(zz.pointerId), wz(zz)
         },
-        onPointerMove: bb => {
-          eb.current && jb(bb)
+        onPointerMove: zz => {
+          Uz.current && wz(zz)
         },
         onPointerUp: () => {
-          eb.current = !1
+          Uz.current = !1
         },
         onPointerCancel: () => {
-          eb.current = !1
+          Uz.current = !1
         },
-        children: [(0, pb.jsx)("img", {
+        children: [(0, Iz.jsx)("img", {
           className: "ShaderPackCompareBaseline",
-          src: Mb,
-          width: Lb,
-          height: Pb,
+          src: Wz,
+          width: uz,
+          height: Nz,
           alt: "",
           draggable: !1,
           style: {
-            backgroundImage: `url(${Ub})`
+            backgroundImage: `url(${sz})`
           }
-        }), (0, pb.jsx)("div", {
+        }), (0, Iz.jsx)("div", {
           className: "ShaderPackCompareLine"
-        }), (0, pb.jsx)("img", {
+        }), (0, Iz.jsx)("img", {
           className: "ShaderPackComparePack",
-          src: Ub,
-          width: Lb,
-          height: Pb,
+          src: sz,
+          width: uz,
+          height: Nz,
           alt: "",
           draggable: !1
-        }), (0, pb.jsx)(Qb.b, {
-          item: ab,
+        }), (0, Iz.jsx)(yz.d, {
+          item: tz,
           className: "ShaderPackCompareNotice"
         })]
       })
     }
 
-    function lb(bb) {
+    function iz(zz) {
       let {
-        side: ab,
-        onClick: Ub,
-        children: Ab
-      } = bb;
-      return (0, pb.jsx)("button", {
+        side: tz,
+        onClick: sz,
+        children: Fz
+      } = zz;
+      return (0, Iz.jsx)("button", {
         type: "button",
-        className: `ShaderPackStageButton ${ab}`,
-        onClick: Ub,
-        children: (0, pb.jsx)("span", {
+        className: `ShaderPackStageButton ${tz}`,
+        onClick: sz,
+        children: (0, Iz.jsx)("span", {
           className: "ShaderPackStageButtonFace SmallTextBold",
-          children: Ab
+          children: Fz
         })
       })
     }
-    var tb = Ub(4673),
-      wb = Ub(292),
-      sb = Ub(6294);
-    const gb = {
+    var Lz = sz(4609),
+      lz = sz(290),
+      nz = sz(6237);
+    const az = {
       compiler: "shaderPack:compilerUnavailable",
       download: "shaderPackListing:useDownloadFailed",
       apiVersion: "shaderPackListing:useOtherApiVersion",
@@ -688,391 +688,391 @@ export const modules = {
       save: "shaderPack:saveFailed"
     };
 
-    function Cb(bb) {
+    function qz(zz) {
       const {
-        userContext: ab
-      } = (0, Rb.c)(), [Mb, Tb] = (0, Ab.useState)(null), [Eb, Yb] = (0, Ab.useState)(!1), [Bb, eb] = (0, Ab.useState)(!1), [vb, Lb] = (0, Ab.useState)(null), Pb = null === bb || void 0 === bb ? void 0 : bb.packId, Xb = null === bb || void 0 === bb ? void 0 : bb.sourceHash;
-      return (0, Ab.useEffect)((() => {
-        if (Yb(!1), Lb(null), void 0 === Pb) return;
-        let bb = !1;
-        return Promise.all([(0, yb.hasUsableWebGpuAdapter)(), (0, sb.f)()]).then((ab => {
-          let [Ub, Ab] = ab;
-          var Mb;
-          bb || (Tb(Ub), Yb((null === Ab || void 0 === Ab || null === (Mb = Ab.listing) || void 0 === Mb ? void 0 : Mb.packId) === Pb && Ab.listing.sourceHash === Xb))
-        })).catch((ab => {
-          console.error("Failed to check whether this shader pack can be used", ab), bb || Tb(!1)
+        userContext: tz
+      } = (0, Dz.b)(), [Wz, Xz] = (0, Fz.useState)(null), [Oz, oz] = (0, Fz.useState)(!1), [vz, Uz] = (0, Fz.useState)(!1), [Kz, uz] = (0, Fz.useState)(null), Nz = null === zz || void 0 === zz ? void 0 : zz.packId, bz = null === zz || void 0 === zz ? void 0 : zz.sourceHash;
+      return (0, Fz.useEffect)((() => {
+        if (oz(!1), uz(null), void 0 === Nz) return;
+        let zz = !1;
+        return Promise.all([(0, Hz.hasUsableWebGpuAdapter)(), (0, nz.g)()]).then((tz => {
+          let [sz, Fz] = tz;
+          var Wz;
+          zz || (Xz(sz), oz((null === Fz || void 0 === Fz || null === (Wz = Fz.listing) || void 0 === Wz ? void 0 : Wz.packId) === Nz && Fz.listing.sourceHash === bz))
+        })).catch((tz => {
+          console.error("Failed to check whether this shader pack can be used", tz), zz || Xz(!1)
         })), () => {
-          bb = !0
+          zz = !0
         }
-      }), [Pb, Xb]), {
-        webGpuUsable: Mb,
-        inUse: Eb,
-        busy: Bb,
-        errorKey: vb,
+      }), [Nz, bz]), {
+        webGpuUsable: Wz,
+        inUse: Oz,
+        busy: vz,
+        errorKey: Kz,
         use: () => {
-          null !== bb && async function(bb) {
-            eb(!0), Lb(null);
+          null !== zz && async function(zz) {
+            Uz(!0), uz(null);
             try {
               const {
-                installListedShaderPack: Ab
-              } = await Promise.all([Ub.e(74), Ub.e(131), Ub.e(126)]).then((() => Ub(39622))), Mb = await Ab({
-                packId: bb.packId,
-                sourceHash: bb.sourceHash,
-                name: bb.name,
-                ownerName: bb.ownerName,
-                description: bb.description
+                installListedShaderPack: Fz
+              } = await Promise.all([sz.e(74), sz.e(131), sz.e(126)]).then((() => sz(39632))), Wz = await Fz({
+                packId: zz.packId,
+                sourceHash: zz.sourceHash,
+                name: zz.name,
+                ownerName: zz.ownerName,
+                description: zz.description
               });
-              if ("failed" === Mb.kind) return void Lb(gb[Mb.reason]);
-              Yb(!0), kb.b.recordShaderPackDownload(ab, bb.packId).catch((bb => {
-                console.error("Failed to count a shader pack's download", bb)
-              })), (0, tb.h)()
-            } catch (Ab) {
-              console.error("Failed to use the shader pack", Ab), Lb("shaderPack:unexpectedError")
+              if ("failed" === Wz.kind) return void uz(az[Wz.reason]);
+              oz(!0), gz.d.recordShaderPackDownload(tz, zz.packId).catch((zz => {
+                console.error("Failed to count a shader pack's download", zz)
+              })), (0, Lz.h)()
+            } catch (Fz) {
+              console.error("Failed to use the shader pack", Fz), uz("shaderPack:unexpectedError")
             } finally {
-              eb(!1)
+              Uz(!1)
             }
-          }(bb)
+          }(zz)
         }
       }
     }
 
-    function Vb(bb) {
+    function Sz(zz) {
       let {
-        packUse: ab
-      } = bb;
+        packUse: tz
+      } = zz;
       const {
-        t: Ub
-      } = (0, Zb.A)(), {
-        webGpuUsable: Ab,
-        inUse: Mb,
-        busy: Tb,
-        errorKey: Eb,
-        use: Yb
-      } = ab;
-      return (0, pb.jsxs)("div", {
+        t: sz
+      } = (0, Bz.B)(), {
+        webGpuUsable: Fz,
+        inUse: Wz,
+        busy: Xz,
+        errorKey: Oz,
+        use: oz
+      } = tz;
+      return (0, Iz.jsxs)("div", {
         className: "ShaderPackUse",
-        children: [(0, pb.jsxs)(vb.m, {
-          disabled: !0 !== Ab || Mb,
-          loading: Tb,
-          onClick: Yb,
-          children: [(0, pb.jsx)(ib.e, {
-            name: Mb ? "check" : "download"
-          }), " ", Ub(Mb ? "shaderPackListing:inUse" : "shaderPackListing:use")]
-        }), !1 === Ab && (0, pb.jsx)("div", {
+        children: [(0, Iz.jsxs)(Kz.p, {
+          disabled: !0 !== Fz || Wz,
+          loading: Xz,
+          onClick: oz,
+          children: [(0, Iz.jsx)(xz.c, {
+            name: Wz ? "check" : "download"
+          }), " ", sz(Wz ? "shaderPackListing:inUse" : "shaderPackListing:use")]
+        }), !1 === Fz && (0, Iz.jsx)("div", {
           className: "ShaderPackUseNote",
-          children: Ub((0, wb.f)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), Eb && (0, pb.jsx)("div", {
+          children: sz((0, lz.g)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), Oz && (0, Iz.jsx)("div", {
           className: "ShaderPackUseNote Error",
-          children: Ub(Eb)
+          children: sz(Oz)
         })]
       })
     }
 
-    function Ob() {
-      var bb;
+    function Vz() {
+      var zz;
       const {
-        t: ab
-      } = (0, Zb.A)(), Ub = (0, eb.useNavigatePreserveSearch)(), {
-        packId: Tb
-      } = (0, Mb.F)(), {
-        userContext: Eb,
-        isUserContextUpdating: Yb
-      } = (0, Rb.c)(), [Lb, Pb] = (0, Ab.useState)(null), [Xb, yb] = (0, Ab.useState)(null), [Db, zb] = (0, Ab.useState)(0), xb = (0, Ab.useRef)(0);
+        t: tz
+      } = (0, Bz.B)(), sz = (0, Uz.useNavigatePreserveSearch)(), {
+        packId: Xz
+      } = (0, Wz.C)(), {
+        userContext: Oz,
+        isUserContextUpdating: oz
+      } = (0, Dz.b)(), [uz, Nz] = (0, Fz.useState)(null), [bz, Hz] = (0, Fz.useState)(null), [Pz, rz] = (0, Fz.useState)(0), Yz = (0, Fz.useRef)(0);
 
-      function ib() {
-        var bb;
-        null !== (bb = (0, eb.getPreviousLocation)()) && void 0 !== bb && bb.startsWith(mb.U) ? Ub(-1) : Ub(mb.U)
-      }(0, jb.c)(ib), (0, Gb.e)(), (0, Ab.useEffect)((() => {
-        if (Yb || void 0 === Tb) return;
-        const bb = ++xb.current;
-        yb(null), kb.b.getShaderPack(Eb, Tb).then((ab => {
-          xb.current === bb && Pb(ab)
-        })).catch((ab => {
-          xb.current === bb && (console.error("Failed to get the shader pack", ab), Pb(null), yb({
-            error: ab
+      function xz() {
+        var zz;
+        null !== (zz = (0, Uz.getPreviousLocation)()) && void 0 !== zz && zz.startsWith(Jz.db) ? sz(-1) : sz(Jz.db)
+      }(0, wz.b)(xz), (0, Az.c)(), (0, Fz.useEffect)((() => {
+        if (oz || void 0 === Xz) return;
+        const zz = ++Yz.current;
+        Hz(null), gz.d.getShaderPack(Oz, Xz).then((tz => {
+          Yz.current === zz && Nz(tz)
+        })).catch((tz => {
+          Yz.current === zz && (console.error("Failed to get the shader pack", tz), Nz(null), Hz({
+            error: tz
           }))
         }))
-      }), [Tb, Eb, Yb, Db]);
-      const fb = () => {
-          zb((bb => bb + 1))
+      }), [Xz, Oz, oz, Pz]);
+      const mz = () => {
+          rz((zz => zz + 1))
         },
-        Nb = (null === Lb || void 0 === Lb ? void 0 : Lb.packId) === Tb ? Lb : null,
-        Hb = (0, Gb.n)(),
-        Ib = Cb(null !== (bb = null === Nb || void 0 === Nb ? void 0 : Nb.live) && void 0 !== bb ? bb : null),
-        db = null !== Nb && void 0 !== Nb && Nb.live ? (0, pb.jsx)(cb, {
-          item: Nb.live,
-          favourites: Hb,
-          packUse: Ib
+        Cz = (null === uz || void 0 === uz ? void 0 : uz.packId) === Xz ? uz : null,
+        Zz = (0, Az.g)(),
+        Gz = qz(null !== (zz = null === Cz || void 0 === Cz ? void 0 : Cz.live) && void 0 !== zz ? zz : null),
+        Tz = null !== Cz && void 0 !== Cz && Cz.live ? (0, Iz.jsx)(Rz, {
+          item: Cz.live,
+          favourites: Zz,
+          packUse: Gz
         }) : null;
-      return (0, pb.jsxs)("article", {
+      return (0, Iz.jsxs)("article", {
         className: "ShaderPackInformation AnimFadeIn",
-        children: [(0, pb.jsx)(vb.e, {
-          onClick: ib,
-          children: ab("shaderPackListing:backToPacks")
-        }), null === Nb && null === Xb && (0, pb.jsx)("div", {
+        children: [(0, Iz.jsx)(Kz.e, {
+          onClick: xz,
+          children: tz("shaderPackListing:backToPacks")
+        }), null === Cz && null === bz && (0, Iz.jsx)("div", {
           className: "ShaderPackInformationMessage",
-          children: (0, pb.jsx)(Bb.b, {})
-        }), null !== Xb && (0, pb.jsxs)("div", {
+          children: (0, Iz.jsx)(vz.d, {})
+        }), null !== bz && (0, Iz.jsxs)("div", {
           className: "ShaderPackInformationMessage",
-          children: [(0, mb.z)(Xb.error, ab, "shaderPackListing:loadPackFailed"), (0, pb.jsx)(vb.g, {
-            onClick: fb,
-            children: ab("general:tryAgain")
+          children: [(0, Jz.B)(bz.error, tz, "shaderPackListing:loadPackFailed"), (0, Iz.jsx)(Kz.h, {
+            onClick: mz,
+            children: tz("general:tryAgain")
           })]
-        }), null !== Nb && null === Xb && (0, pb.jsxs)("div", {
+        }), null !== Cz && null === bz && (0, Iz.jsxs)("div", {
           className: "ShaderPackInformationBody",
-          children: [(0, pb.jsxs)("header", {
+          children: [(0, Iz.jsxs)("header", {
             className: "ShaderPackInformationHeader",
-            children: [(0, pb.jsx)("h1", {
+            children: [(0, Iz.jsx)("h1", {
               className: "FullyFancyText",
-              children: Nb.name
-            }), db]
-          }), Nb.live && (0, pb.jsx)(ub, {
-            item: Nb.live
-          }), Nb.live && (0, pb.jsx)(Jb, {
-            item: Nb.live,
-            ownerPreview: Nb.ownerPreview,
-            bloxdhubSlug: Nb.bloxdhubSlug,
-            actions: db
-          }), Nb.owner && (0, pb.jsx)(Wb, {
-            details: Nb,
-            owner: Nb.owner,
-            onChanged: fb
+              children: Cz.name
+            }), Tz]
+          }), Cz.live && (0, Iz.jsx)(dz, {
+            item: Cz.live
+          }), Cz.live && (0, Iz.jsx)(pz, {
+            item: Cz.live,
+            ownerPreview: Cz.ownerPreview,
+            bloxdhubSlug: Cz.bloxdhubSlug,
+            actions: Tz
+          }), Cz.owner && (0, Iz.jsx)(ez, {
+            details: Cz,
+            owner: Cz.owner,
+            onChanged: mz
           })]
         })]
       })
     }
 
-    function cb(bb) {
+    function Rz(zz) {
       let {
-        item: ab,
-        favourites: Ub,
-        packUse: Ab
-      } = bb;
-      const Mb = Ub.isFavourite(ab.packId);
-      return (0, pb.jsxs)("div", {
+        item: tz,
+        favourites: sz,
+        packUse: Fz
+      } = zz;
+      const Wz = sz.isFavourite(tz.packId);
+      return (0, Iz.jsxs)("div", {
         className: "ShaderPackInformationActions",
-        children: [yb.featureFlags.settings.canUseShaderPacks && (0, pb.jsx)(Vb, {
-          packUse: Ab
-        }), (0, pb.jsx)(vb.w, {
+        children: [Hz.featureFlags.settings.canUseShaderPacks && (0, Iz.jsx)(Sz, {
+          packUse: Fz
+        }), (0, Iz.jsx)(Kz.v, {
           className: "ShaderPackInformationLike",
           onClick: () => {
-            Ub.toggle(ab.packId)
+            sz.toggle(tz.packId)
           },
-          isLiked: !0 === Mb,
-          isLoading: null === Mb
+          isLiked: !0 === Wz,
+          isLoading: null === Wz
         })]
       })
     }
 
-    function Jb(bb) {
+    function pz(zz) {
       let {
-        item: ab,
-        ownerPreview: Ub,
-        bloxdhubSlug: Ab,
-        actions: Mb
-      } = bb;
+        item: tz,
+        ownerPreview: sz,
+        bloxdhubSlug: Fz,
+        actions: Wz
+      } = zz;
       const {
-        t: Yb
-      } = (0, Zb.A)(), Bb = (0, Xb.q)(), vb = null === Ab ? null : (0, Tb.f)(Ab);
-      return (0, pb.jsxs)("div", {
+        t: oz
+      } = (0, Bz.B)(), vz = (0, bz.q)(), Kz = null === Fz ? null : (0, Xz.f)(Fz);
+      return (0, Iz.jsxs)("div", {
         className: "ShaderPackFacts",
-        children: [ab.description && (0, pb.jsx)("p", {
+        children: [tz.description && (0, Iz.jsx)("p", {
           className: "ShaderPackDescription",
-          children: ab.description
-        }), (0, pb.jsxs)("div", {
+          children: tz.description
+        }), (0, Iz.jsxs)("div", {
           className: "ShaderPackFeatureList",
-          children: [(null !== Ub || null !== vb) && (0, pb.jsx)("div", {
+          children: [(null !== sz || null !== Kz) && (0, Iz.jsx)("div", {
             className: "ShaderPackAuthor",
-            children: null !== Ub ? (0, pb.jsxs)(pb.Fragment, {
-              children: [(0, pb.jsx)(Pb.h, {
-                playerSocialPreview: Ub,
+            children: null !== sz ? (0, Iz.jsxs)(Iz.Fragment, {
+              children: [(0, Iz.jsx)(Nz.g, {
+                playerSocialPreview: sz,
                 showLocation: !1,
                 linkToProfile: !0
-              }), null !== vb && (0, pb.jsx)("a", {
+              }), null !== Kz && (0, Iz.jsx)("a", {
                 className: "ShaderPackBloxdhubLogo",
-                href: vb,
+                href: Kz,
                 target: "_blank",
                 rel: "noopener noreferrer",
-                children: (0, pb.jsx)("img", {
-                  src: Db,
-                  alt: Tb.e
+                children: (0, Iz.jsx)("img", {
+                  src: Pz,
+                  alt: Xz.b
                 })
               })]
-            }) : (0, pb.jsxs)("a", {
+            }) : (0, Iz.jsxs)("a", {
               className: "ShaderPackBloxdhubName",
-              href: vb,
+              href: Kz,
               target: "_blank",
               rel: "noopener noreferrer",
-              children: [Tb.e, (0, pb.jsx)("img", {
-                src: Db,
+              children: [Xz.b, (0, Iz.jsx)("img", {
+                src: Pz,
                 alt: ""
               })]
             })
-          }), mb.D.filter((bb => ab.features.includes(bb))).map((bb => (0, pb.jsx)(eb.LinkPreserveSearch, {
+          }), Jz.E.filter((zz => tz.features.includes(zz))).map((zz => (0, Iz.jsx)(Uz.LinkPreserveSearch, {
             className: "ShaderPackFeature",
-            to: (0, mb.J)(bb),
-            children: Yb(mb.K[bb])
-          }, bb)))]
-        }), Mb, (0, pb.jsxs)("dl", {
+            to: (0, Jz.Q)(zz),
+            children: oz(Jz.U[zz])
+          }, zz)))]
+        }), Wz, (0, Iz.jsxs)("dl", {
           className: "ShaderPackFactList",
-          children: [(0, pb.jsxs)("div", {
-            children: [(0, pb.jsx)("dt", {
-              children: Yb("shaderPackListing:downloads")
-            }), (0, pb.jsx)("dd", {
-              children: (0, Eb.T)(ab.downloads)
+          children: [(0, Iz.jsxs)("div", {
+            children: [(0, Iz.jsx)("dt", {
+              children: oz("shaderPackListing:downloads")
+            }), (0, Iz.jsx)("dd", {
+              children: (0, Oz.R)(tz.downloads)
             })]
-          }), (0, pb.jsx)(nb, {
-            label: Yb("shaderPackListing:updated"),
-            time: ab.listedUpdatedAt,
-            now: Bb
-          }), (0, pb.jsx)(nb, {
-            label: Yb("shaderPackListing:created"),
-            time: ab.publishedAt,
-            now: Bb
-          }), null !== ab.gpuCost && (0, pb.jsxs)("div", {
-            children: [(0, pb.jsx)("dt", {
-              children: Yb("shaderPackListing:lag")
-            }), (0, pb.jsx)("dd", {
-              children: Yb("shaderPackListing:lagPercent", {
-                percent: String((0, mb.R)(ab.gpuCost))
+          }), (0, Iz.jsx)(fz, {
+            label: oz("shaderPackListing:updated"),
+            time: tz.listedUpdatedAt,
+            now: vz
+          }), (0, Iz.jsx)(fz, {
+            label: oz("shaderPackListing:created"),
+            time: tz.publishedAt,
+            now: vz
+          }), null !== tz.gpuCost && (0, Iz.jsxs)("div", {
+            children: [(0, Iz.jsx)("dt", {
+              children: oz("shaderPackListing:lag")
+            }), (0, Iz.jsx)("dd", {
+              children: oz("shaderPackListing:lagPercent", {
+                percent: String((0, Jz.ab)(tz.gpuCost))
               })
             })]
-          }), (0, pb.jsxs)("div", {
-            children: [(0, pb.jsx)("dt", {
-              children: Yb("shaderPackListing:size")
-            }), (0, pb.jsx)("dd", {
-              children: Yb("shaderPackListing:sizeValue", {
-                kilobytes: String((0, mb.O)(ab.sourceBytes))
+          }), (0, Iz.jsxs)("div", {
+            children: [(0, Iz.jsx)("dt", {
+              children: oz("shaderPackListing:size")
+            }), (0, Iz.jsx)("dd", {
+              children: oz("shaderPackListing:sizeValue", {
+                kilobytes: String((0, Jz.Y)(tz.sourceBytes))
               })
             })]
-          }), (0, pb.jsxs)("div", {
-            children: [(0, pb.jsx)("dt", {
-              children: Yb("shaderPackListing:files")
-            }), (0, pb.jsx)("dd", {
-              children: ab.fileCount
+          }), (0, Iz.jsxs)("div", {
+            children: [(0, Iz.jsx)("dt", {
+              children: oz("shaderPackListing:files")
+            }), (0, Iz.jsx)("dd", {
+              children: tz.fileCount
             })]
           })]
         })]
       })
     }
 
-    function nb(bb) {
+    function fz(zz) {
       let {
-        label: ab,
-        time: Ub,
-        now: Ab
-      } = bb;
+        label: tz,
+        time: sz,
+        now: Fz
+      } = zz;
       const {
-        t: Mb,
-        selectedLanguage: Tb
-      } = (0, Zb.A)(), Eb = new Date(Ub);
-      let Bb = Eb.toLocaleDateString();
-      if (Ab - Ub <= 30 * Yb.g) {
-        const bb = (0, Zb.l)(Tb.code, "shaderPackListing:timeAgo");
-        Bb = Mb("shaderPackListing:timeAgo", {
-          time: (0, Yb.$)(bb, Ub, Ab)
+        t: Wz,
+        selectedLanguage: Xz
+      } = (0, Bz.B)(), Oz = new Date(sz);
+      let vz = Oz.toLocaleDateString();
+      if (Fz - sz <= 30 * oz.h) {
+        const zz = (0, Bz.o)(Xz.code, "shaderPackListing:timeAgo");
+        vz = Wz("shaderPackListing:timeAgo", {
+          time: (0, oz.bb)(zz, sz, Fz)
         })
       }
-      return (0, pb.jsx)(Lb.g, {
-        tooltipInner: Eb.toLocaleString(),
-        children: (0, pb.jsxs)("div", {
-          children: [(0, pb.jsx)("dt", {
-            children: ab
-          }), (0, pb.jsx)("dd", {
-            children: Bb
+      return (0, Iz.jsx)(uz.h, {
+        tooltipInner: Oz.toLocaleString(),
+        children: (0, Iz.jsxs)("div", {
+          children: [(0, Iz.jsx)("dt", {
+            children: tz
+          }), (0, Iz.jsx)("dd", {
+            children: vz
           })]
         })
       })
     }
   },
-  4690: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => Eb
+  4636: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Oz
     });
-    var Ab = Ub(984),
-      Mb = Ub.n(Ab),
-      Tb = Ub(1023);
+    var Fz = sz(1020),
+      Wz = sz.n(Fz),
+      Xz = sz(1087);
 
-    function Eb(bb) {
+    function Oz(zz) {
       let {
-        options: ab,
-        value: Ub,
-        onChange: Ab,
-        ariaLabel: Eb,
-        className: Yb,
-        reselectable: Bb = !1,
-        keepsFocus: eb = !1
-      } = bb;
-      return (0, Tb.jsx)("div", {
-        className: Mb()("SegmentedToggle", Yb),
+        options: tz,
+        value: sz,
+        onChange: Fz,
+        ariaLabel: Oz,
+        className: oz,
+        reselectable: vz = !1,
+        keepsFocus: Uz = !1
+      } = zz;
+      return (0, Xz.jsx)("div", {
+        className: Wz()("SegmentedToggle", oz),
         role: "group",
-        "aria-label": Eb,
-        children: ab.map((bb => {
-          const ab = bb.value === Ub;
-          return (0, Tb.jsx)("button", {
+        "aria-label": Oz,
+        children: tz.map((zz => {
+          const tz = zz.value === sz;
+          return (0, Xz.jsx)("button", {
             type: "button",
-            "aria-pressed": ab,
-            "aria-label": bb.ariaLabel,
-            title: bb.ariaLabel,
-            className: Mb()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: ab
+            "aria-pressed": tz,
+            "aria-label": zz.ariaLabel,
+            title: zz.ariaLabel,
+            className: Wz()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: tz
             }),
-            onMouseDown: eb ? bb => {
-              bb.preventDefault()
+            onMouseDown: Uz ? zz => {
+              zz.preventDefault()
             } : void 0,
             onClick: () => {
-              ab && !Bb || Ab(bb.value)
+              tz && !vz || Fz(zz.value)
             },
-            children: bb.label
-          }, bb.value)
+            children: zz.label
+          }, zz.value)
         }))
       })
     }
   },
-  4697: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Tb,
-      e: () => Eb
+  4644: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Xz,
+      g: () => Oz
     });
-    var Ab = Ub(52);
-    const Mb = new WeakMap,
-      Tb = bb => {
-        var ab;
-        const Ub = bb.closest("[data-pad-slider]");
-        return Ub && null !== (ab = Mb.get(Ub)) && void 0 !== ab ? ab : null
+    var Fz = sz(65);
+    const Wz = new WeakMap,
+      Xz = zz => {
+        var tz;
+        const sz = zz.closest("[data-pad-slider]");
+        return sz && null !== (tz = Wz.get(sz)) && void 0 !== tz ? tz : null
       },
-      Eb = (bb, ab) => {
-        const Ub = (0, Ab.useRef)(ab);
-        Ub.current = ab, (0, Ab.useEffect)((() => {
-          if (bb.current) return ((bb, ab) => (Mb.set(bb, ab), () => {
-            Mb.get(bb) === ab && Mb.delete(bb)
-          }))(bb.current, {
-            adjust: bb => {
-              Ub.current.adjust(bb)
+      Oz = (zz, tz) => {
+        const sz = (0, Fz.useRef)(tz);
+        sz.current = tz, (0, Fz.useEffect)((() => {
+          if (zz.current) return ((zz, tz) => (Wz.set(zz, tz), () => {
+            Wz.get(zz) === tz && Wz.delete(zz)
+          }))(zz.current, {
+            adjust: zz => {
+              sz.current.adjust(zz)
             },
-            setFraction: bb => {
-              Ub.current.setFraction(bb)
+            setFraction: zz => {
+              sz.current.setFraction(zz)
             },
             endDrag: () => {
-              Ub.current.endDrag()
+              sz.current.endDrag()
             }
           })
-        }), [bb])
+        }), [zz])
       }
   },
-  6294: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Mb,
-      f: () => Tb
+  6237: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Wz,
+      g: () => Xz
     });
-    var Ab = Ub(31);
-    const Mb = "shaderPack";
-    async function Tb() {
-      var bb;
-      let ab = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (bb = await Ab.c.getItem(Mb, ab)) && void 0 !== bb ? bb : null
+    var Fz = sz(44);
+    const Wz = "shaderPack";
+    async function Xz() {
+      var zz;
+      let tz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (zz = await Fz.e.getItem(Wz, tz)) && void 0 !== zz ? zz : null
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

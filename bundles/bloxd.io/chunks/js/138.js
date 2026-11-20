@@ -1,146 +1,146 @@
 export const id = 138;
 export const ids = [138];
 export const modules = {
-  7662: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      BloxdDiscordSDK: () => Rb,
-      DiscordLoginCancelledError: () => jb,
-      discordPopupTimeoutMs: () => Xb
+  7602: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      BloxdDiscordSDK: () => Dz,
+      DiscordLoginCancelledError: () => wz,
+      discordPopupTimeoutMs: () => bz
     });
-    var Ab = Ub(166),
-      Mb = Ub(1171),
-      Tb = Ub(1065),
-      Eb = Ub(1084),
-      Yb = Ub.n(Eb),
-      Bb = Ub(1142),
-      eb = Ub(31),
-      vb = Ub(591),
-      Lb = Ub(1260),
-      Pb = Ub(1145);
-    const Xb = 6e5;
-    class jb extends Error {
+    var Fz = sz(161),
+      Wz = sz(1215),
+      Xz = sz(1120),
+      Oz = sz(1137),
+      oz = sz.n(Oz),
+      vz = sz(1191),
+      Uz = sz(44),
+      Kz = sz(580),
+      uz = sz(1319),
+      Nz = sz(1198);
+    const bz = 6e5;
+    class wz extends Error {
       constructor() {
-        super(...arguments), this.name = Tb.discordLoginCancelledErrorName
+        super(...arguments), this.name = Xz.discordLoginCancelledErrorName
       }
     }
-    class Rb {
+    class Dz {
       constructor() {
-        this.popupWindowPromise = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindow = null, this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.bloxdDiscordRefreshTokenKey = "4PSIDTCPM", this.discordRedirectUrl = Mb.k[Pb.c.clientEnvironment];
-        const bb = new URL(this.discordRedirectUrl).origin;
-        window.addEventListener("message", (ab => {
-          var Ub;
-          if (ab.origin !== bb || "oauth_authentication_discord" !== (null === (Ub = ab.data) || void 0 === Ub ? void 0 : Ub.type)) return;
-          if ("string" !== typeof ab.data.code || !ab.data.code) return void this.failPopup(new jb("Discord authentication was cancelled on Discord"));
-          const Ab = this.popupWindowPromiseResolve;
-          this.resetPopupState(), null === Ab || void 0 === Ab || Ab(ab.data.code)
+        this.popupWindowPromise = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindow = null, this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.bloxdDiscordRefreshTokenKey = "4PSIDTCPM", this.discordRedirectUrl = Wz.p[Nz.c.clientEnvironment];
+        const zz = new URL(this.discordRedirectUrl).origin;
+        window.addEventListener("message", (tz => {
+          var sz;
+          if (tz.origin !== zz || "oauth_authentication_discord" !== (null === (sz = tz.data) || void 0 === sz ? void 0 : sz.type)) return;
+          if ("string" !== typeof tz.data.code || !tz.data.code) return void this.failPopup(new wz("Discord authentication was cancelled on Discord"));
+          const Fz = this.popupWindowPromiseResolve;
+          this.resetPopupState(), null === Fz || void 0 === Fz || Fz(tz.data.code)
         }))
       }
       resetPopupState() {
         null !== this.popupWindowCheckInterval && window.clearInterval(this.popupWindowCheckInterval), null !== this.popupWindowTimeout && window.clearTimeout(this.popupWindowTimeout), this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindowPromise = null, this.popupWindow = null
       }
-      failPopup(bb) {
-        var ab;
-        const Ub = this.popupWindowPromiseReject;
-        null === (ab = this.popupWindow) || void 0 === ab || ab.close(), this.resetPopupState(), null === Ub || void 0 === Ub || Ub(bb)
+      failPopup(zz) {
+        var tz;
+        const sz = this.popupWindowPromiseReject;
+        null === (tz = this.popupWindow) || void 0 === tz || tz.close(), this.resetPopupState(), null === sz || void 0 === sz || sz(zz)
       }
       openDiscordOAuthWindow() {
-        const bb = Pb.c.discordClientID;
-        return window.open(`https://discord.com/oauth2/authorize?response_type=code&client_id=${bb}&scope=identify%20guilds&redirect_uri=${this.discordRedirectUrl}&integration_type=0`, "oauth_authentication", `popup,width=480,height=720,top=${window.screen.height/2-360},left=${window.screen.width/2-240}`)
+        const zz = Nz.c.discordClientID;
+        return window.open(`https://discord.com/oauth2/authorize?response_type=code&client_id=${zz}&scope=identify%20guilds&redirect_uri=${this.discordRedirectUrl}&integration_type=0`, "oauth_authentication", `popup,width=480,height=720,top=${window.screen.height/2-360},left=${window.screen.width/2-240}`)
       }
       async showDiscordAuthPrompt() {
-        return new Promise(((bb, ab) => {
-          Lb.NotificationProvider.showPromptPopup({
+        return new Promise(((zz, tz) => {
+          uz.NotificationProvider.showPromptPopup({
             title: "Discord Login Required",
             confirmText: "Continue",
             confirmTooltip: "Open Discord login window",
             cancelText: "Cancel",
             cancelTooltip: "Cancel Discord login"
-          }).getResult().then((Ub => {
-            !0 === Ub ? bb() : ab(new jb("Discord login was cancelled"))
-          })).catch(ab)
+          }).getResult().then((sz => {
+            !0 === sz ? zz() : tz(new wz("Discord login was cancelled"))
+          })).catch(tz)
         }))
       }
       signInWithPopup() {
         if (null !== this.popupWindowPromise) return this.popupWindowPromise;
-        const bb = new Promise(((bb, ab) => {
-          this.popupWindowPromiseResolve = bb, this.popupWindowPromiseReject = ab
+        const zz = new Promise(((zz, tz) => {
+          this.popupWindowPromiseResolve = zz, this.popupWindowPromiseReject = tz
         }));
-        return this.popupWindowPromise = bb, eb.b.removeItem(this.bloxdDiscordRefreshTokenKey), this.popupWindowTimeout = window.setTimeout((() => {
+        return this.popupWindowPromise = zz, Uz.d.removeItem(this.bloxdDiscordRefreshTokenKey), this.popupWindowTimeout = window.setTimeout((() => {
           this.failPopup(new Error("Discord authentication timed out"))
-        }), Xb), this.openPopup(bb).catch((ab => {
-          this.popupWindowPromise === bb && this.failPopup(ab instanceof Error ? ab : new Error(String(ab)))
-        })), bb
+        }), bz), this.openPopup(zz).catch((tz => {
+          this.popupWindowPromise === zz && this.failPopup(tz instanceof Error ? tz : new Error(String(tz)))
+        })), zz
       }
-      async openPopup(bb) {
-        let ab = this.openDiscordOAuthWindow();
-        if (!ab) {
-          if (await this.showDiscordAuthPrompt(), this.popupWindowPromise !== bb) return;
-          ab = this.openDiscordOAuthWindow()
+      async openPopup(zz) {
+        let tz = this.openDiscordOAuthWindow();
+        if (!tz) {
+          if (await this.showDiscordAuthPrompt(), this.popupWindowPromise !== zz) return;
+          tz = this.openDiscordOAuthWindow()
         }
-        if (console.log("Discord OAuth window opened:", ab), !ab) throw new Error("Failed to open Discord authentication popup - popup may have been blocked");
-        this.popupWindow = ab;
-        const Ub = window.setInterval((() => {
-          ab.closed && this.popupWindowPromise === bb && (window.clearInterval(Ub), this.popupWindowCheckInterval = null, window.setTimeout((() => {
-            this.popupWindowPromise === bb && this.failPopup(new jb("Discord authentication was cancelled - popup window was closed"))
+        if (console.log("Discord OAuth window opened:", tz), !tz) throw new Error("Failed to open Discord authentication popup - popup may have been blocked");
+        this.popupWindow = tz;
+        const sz = window.setInterval((() => {
+          tz.closed && this.popupWindowPromise === zz && (window.clearInterval(sz), this.popupWindowCheckInterval = null, window.setTimeout((() => {
+            this.popupWindowPromise === zz && this.failPopup(new wz("Discord authentication was cancelled - popup window was closed"))
           }), 1e3))
         }), 200);
-        this.popupWindowCheckInterval = Ub
+        this.popupWindowCheckInterval = sz
       }
-      async exchangeAuthorizationCodeForAccessToken(bb, ab) {
+      async exchangeAuthorizationCodeForAccessToken(zz, tz) {
         const {
-          accessToken: Ub,
-          refreshToken: Ab
-        } = await Yb()((async () => await (0, Tb.postJsonWithMetricsCookiesAndJsonResponse)(`${Bb.clientSideServerUrls.indexUrl}/index/discord/log-event`, {
-          authorizationCode: bb,
-          bloxdClientEnvironment: Pb.c.clientEnvironment,
+          accessToken: sz,
+          refreshToken: Fz
+        } = await oz()((async () => await (0, Xz.postJsonWithMetricsCookiesAndJsonResponse)(`${vz.clientSideServerUrls.indexUrl}/index/discord/log-event`, {
+          authorizationCode: zz,
+          bloxdClientEnvironment: Nz.c.clientEnvironment,
           instanceId: null
         }, {
           retries: 0
-        }, ab.getMetricsCookies())), {
+        }, tz.getMetricsCookies())), {
           retries: 3
         });
-        return console.log("Discord access token received:", Ab, this.bloxdDiscordRefreshTokenKey), eb.b.setItem(this.bloxdDiscordRefreshTokenKey, Ab), Ub
+        return console.log("Discord access token received:", Fz, this.bloxdDiscordRefreshTokenKey), Uz.d.setItem(this.bloxdDiscordRefreshTokenKey, Fz), sz
       }
       hasCurrentUser() {
-        const bb = eb.b.getItem(this.bloxdDiscordRefreshTokenKey);
-        return !(0, vb.I)(bb)
+        const zz = Uz.d.getItem(this.bloxdDiscordRefreshTokenKey);
+        return !(0, Kz.G)(zz)
       }
-      async getCurrentUser(bb) {
-        const ab = eb.b.getItem(this.bloxdDiscordRefreshTokenKey);
-        if (!ab) return null;
-        let Ub;
+      async getCurrentUser(zz) {
+        const tz = Uz.d.getItem(this.bloxdDiscordRefreshTokenKey);
+        if (!tz) return null;
+        let sz;
         try {
-          const Ab = await Yb()((async () => {
+          const Fz = await oz()((async () => {
             try {
-              return await (0, Tb.postJsonWithMetricsCookiesAndJsonResponse)(`${Bb.clientSideServerUrls.indexUrl}/index/discord/collect-event`, {
-                refreshToken: ab
+              return await (0, Xz.postJsonWithMetricsCookiesAndJsonResponse)(`${vz.clientSideServerUrls.indexUrl}/index/discord/collect-event`, {
+                refreshToken: tz
               }, {
                 retries: 0
-              }, bb.getMetricsCookies())
-            } catch (Ub) {
-              if (kb(Ub)) throw new(Yb().AbortError)(Ub);
-              throw Ub
+              }, zz.getMetricsCookies())
+            } catch (sz) {
+              if (gz(sz)) throw new(oz().AbortError)(sz);
+              throw sz
             }
           }), {
             retries: 3
           });
-          Ub = Ab.accessToken, eb.b.setItem(this.bloxdDiscordRefreshTokenKey, Ab.refreshToken)
-        } catch (Ab) {
-          return kb(Ab) ? (eb.b.removeItem(this.bloxdDiscordRefreshTokenKey), null) : (console.error("Failed to refresh Discord access token:", Ab), null)
+          sz = Fz.accessToken, Uz.d.setItem(this.bloxdDiscordRefreshTokenKey, Fz.refreshToken)
+        } catch (Fz) {
+          return gz(Fz) ? (Uz.d.removeItem(this.bloxdDiscordRefreshTokenKey), null) : (console.error("Failed to refresh Discord access token:", Fz), null)
         }
         return {
-          accessToken: Ub
+          accessToken: sz
         }
       }
       signOut() {
-        this.failPopup(new jb("Signed out of Discord during login")), eb.b.removeItem(this.bloxdDiscordRefreshTokenKey)
+        this.failPopup(new wz("Signed out of Discord during login")), Uz.d.removeItem(this.bloxdDiscordRefreshTokenKey)
       }
     }
 
-    function kb(bb) {
-      return bb instanceof Ab.c && 435 === bb.httpCode
+    function gz(zz) {
+      return zz instanceof Fz.e && 435 === zz.httpCode
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

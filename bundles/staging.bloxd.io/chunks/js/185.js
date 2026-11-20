@@ -1,43 +1,43 @@
 export const id = 185;
 export const ids = [185];
 export const modules = {
-  8794: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      ALL_DEV_TOOLS: () => Eb,
-      coreDevTools: () => eb,
-      devTools: () => Bb
+  8723: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      ALL_DEV_TOOLS: () => Oz,
+      coreDevTools: () => Uz,
+      devTools: () => vz
     });
-    var Ab = Ub(603),
-      Mb = Ub(1227),
-      Tb = Ub(8797);
-    const Eb = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function Yb() {
+    var Fz = sz(601),
+      Wz = sz(1279),
+      Xz = sz(8732);
+    const Oz = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function oz() {
       const {
-        noaDevTools: bb
-      } = await Ub.e(230).then((() => Ub(40174)));
-      return bb
+        noaDevTools: zz
+      } = await sz.e(230).then((() => sz(40160)));
+      return zz
     }
-    const Bb = new class {
+    const vz = new class {
         constructor() {
-          this.loadHost = Yb, this.tools = Eb
+          this.loadHost = oz, this.tools = Oz
         }
-        setHost(bb) {
-          this.tools = null === bb ? Eb : bb.tools, this.loadHost = null === bb ? Yb : async () => bb
+        setHost(zz) {
+          this.tools = null === zz ? Oz : zz.tools, this.loadHost = null === zz ? oz : async () => zz
         }
-        supports(bb) {
-          return this.tools.has(bb)
+        supports(zz) {
+          return this.tools.has(zz)
         }
-        async downloadScene(bb, ab) {
-          const Ub = await this.loadHost();
-          await Ub.downloadScene(bb, ab)
+        async downloadScene(zz, tz) {
+          const sz = await this.loadHost();
+          await sz.downloadScene(zz, tz)
         }
-        async setAmbientLightIntensity(bb) {
-          const ab = await this.loadHost();
-          await ab.setAmbientLightIntensity(bb)
+        async setAmbientLightIntensity(zz) {
+          const tz = await this.loadHost();
+          await tz.setAmbientLightIntensity(zz)
         }
       },
-      eb = {
-        tools: Tb.e,
+      Uz = {
+        tools: Xz.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -45,10 +45,10 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    Ab.o && Bb.setHost(eb), (0, Mb.p)((() => {
-      Bb.setHost(eb)
+    Fz.p && vz.setHost(Uz), (0, Wz.t)((() => {
+      vz.setHost(Uz)
     }))
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

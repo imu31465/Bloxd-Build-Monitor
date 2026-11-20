@@ -1,161 +1,161 @@
 export const id = 194;
 export const ids = [194];
 export const modules = {
-  8979: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      packDisplayName: () => jb,
-      packModelMessage: () => Rb,
-      packModelSummary: () => yb,
-      refusedPackModels: () => kb
+  8916: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      packDisplayName: () => wz,
+      packModelMessage: () => Dz,
+      packModelSummary: () => Hz,
+      refusedPackModels: () => gz
     });
-    var Ab = Ub(8982),
-      Mb = Ub(8985);
-    const Tb = "DRACO",
-      Eb = 0,
-      Yb = 1,
-      Bb = 0,
-      eb = 1,
-      vb = 32768;
+    var Fz = sz(8924),
+      Wz = sz(8930);
+    const Xz = "DRACO",
+      Oz = 0,
+      oz = 1,
+      vz = 0,
+      Uz = 1,
+      Kz = 32768;
 
-    function Lb(bb) {
-      const ab = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
-      let Ub = 0;
-      const Ab = () => {
-          if (Ub >= bb.byteLength) throw new RangeError("past the stream");
-          return bb[Ub++]
+    function uz(zz) {
+      const tz = new DataView(zz.buffer, zz.byteOffset, zz.byteLength);
+      let sz = 0;
+      const Fz = () => {
+          if (sz >= zz.byteLength) throw new RangeError("past the stream");
+          return zz[sz++]
         },
-        Mb = () => {
-          if (Ub + 4 > bb.byteLength) throw new RangeError("past the stream");
-          const Ab = ab.getUint32(Ub, !0);
-          return Ub += 4, Ab
+        Wz = () => {
+          if (sz + 4 > zz.byteLength) throw new RangeError("past the stream");
+          const Fz = tz.getUint32(sz, !0);
+          return sz += 4, Fz
         },
-        Lb = () => {
-          let bb = 0;
-          for (let ab = 0; ab < 35; ab += 7) {
-            const Ub = Ab();
-            if (bb += (127 & Ub) * 2 ** ab, 0 === (128 & Ub)) return bb
+        uz = () => {
+          let zz = 0;
+          for (let tz = 0; tz < 35; tz += 7) {
+            const sz = Fz();
+            if (zz += (127 & sz) * 2 ** tz, 0 === (128 & sz)) return zz
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let bb = 0; bb < Tb.length; bb++)
-          if (Ab() !== Tb.charCodeAt(bb)) return null;
-        const ab = Ab(),
-          Pb = Ab(),
-          Xb = Ab(),
-          jb = Ab(),
-          Rb = Ab() | Ab() << 8;
-        if (2 !== ab) return null;
-        0 !== (Rb & vb) && function(bb, ab, Ub) {
-          const Ab = () => {
-              ab(Ub())
+        for (let zz = 0; zz < Xz.length; zz++)
+          if (Fz() !== Xz.charCodeAt(zz)) return null;
+        const tz = Fz(),
+          Nz = Fz(),
+          bz = Fz(),
+          wz = Fz(),
+          Dz = Fz() | Fz() << 8;
+        if (2 !== tz) return null;
+        0 !== (Dz & Kz) && function(zz, tz, sz) {
+          const Fz = () => {
+              tz(sz())
             },
-            Mb = () => {
-              let Ub = 1,
-                Mb = !0;
-              for (; Ub > 0;) {
-                Ub--, Mb || Ab(), Mb = !1;
-                const Tb = bb();
-                for (let Ub = 0; Ub < Tb; Ub++) Ab(), ab(bb());
-                Ub += bb()
+            Wz = () => {
+              let sz = 1,
+                Wz = !0;
+              for (; sz > 0;) {
+                sz--, Wz || Fz(), Wz = !1;
+                const Xz = zz();
+                for (let sz = 0; sz < Xz; sz++) Fz(), tz(zz());
+                sz += zz()
               }
             },
-            Tb = bb();
-          for (let Eb = 0; Eb < Tb; Eb++) bb(), Mb();
-          Mb()
-        }(Lb, (ab => {
-          if (Ub + ab > bb.byteLength) throw new RangeError("past the stream");
-          Ub += ab
-        }), Ab);
-        const kb = Pb < 2 ? Mb : Lb;
-        if (Xb === Eb) return {
+            Xz = zz();
+          for (let Oz = 0; Oz < Xz; Oz++) zz(), Wz();
+          Wz()
+        }(uz, (tz => {
+          if (sz + tz > zz.byteLength) throw new RangeError("past the stream");
+          sz += tz
+        }), Fz);
+        const gz = Nz < 2 ? Wz : uz;
+        if (bz === Oz) return {
           faces: 0,
-          vertices: Mb()
+          vertices: Wz()
         };
-        if (Xb !== Yb) return null;
-        if (jb === Bb) {
+        if (bz !== oz) return null;
+        if (wz === vz) {
           return {
-            faces: kb(),
-            vertices: kb()
+            faces: gz(),
+            vertices: gz()
           }
         }
-        if (jb !== eb) return null;
-        Ab(), Pb < 2 && Lb();
-        const yb = Lb();
+        if (wz !== Uz) return null;
+        Fz(), Nz < 2 && uz();
+        const Hz = uz();
         return {
-          faces: Lb(),
-          vertices: yb
+          faces: uz(),
+          vertices: Hz
         }
       } catch {
         return null
       }
     }
 
-    function Pb(bb, ab, Ub) {
-      var Ab, Mb;
-      if (null === (Ab = null === (Mb = bb.extensionsUsed) || void 0 === Mb ? void 0 : Mb.includes("KHR_draco_mesh_compression")) || void 0 === Ab || !Ab) return null;
-      for (const jb of null !== (Tb = bb.meshes) && void 0 !== Tb ? Tb : []) {
-        var Tb;
-        for (const Ab of jb.primitives) {
-          var Eb, Yb, Bb, eb, vb, Pb;
-          const Mb = null === (Eb = Ab.extensions) || void 0 === Eb ? void 0 : Eb.KHR_draco_mesh_compression;
-          if ("object" !== typeof Mb || null === Mb) continue;
-          const Tb = null === (Yb = bb.bufferViews) || void 0 === Yb ? void 0 : Yb[Mb.bufferView];
-          if (null === ab || void 0 === Tb) return Xb;
-          const jb = null !== (Bb = Tb.byteOffset) && void 0 !== Bb ? Bb : 0,
-            Rb = Lb(ab.subarray(jb, jb + Tb.byteLength));
-          if (null === Rb && !Ub) continue;
-          const kb = null !== (eb = bb.accessors) && void 0 !== eb ? eb : [],
-            yb = null === (vb = kb[Ab.attributes.POSITION]) || void 0 === vb ? void 0 : vb.count,
-            Zb = void 0 === Ab.indices ? 0 : null === (Pb = kb[Ab.indices]) || void 0 === Pb ? void 0 : Pb.count;
-          if (null === Rb || void 0 === yb || void 0 === Zb || 3 * Rb.faces !== Zb || Rb.vertices > yb) return Xb
+    function Nz(zz, tz, sz) {
+      var Fz, Wz;
+      if (null === (Fz = null === (Wz = zz.extensionsUsed) || void 0 === Wz ? void 0 : Wz.includes("KHR_draco_mesh_compression")) || void 0 === Fz || !Fz) return null;
+      for (const wz of null !== (Xz = zz.meshes) && void 0 !== Xz ? Xz : []) {
+        var Xz;
+        for (const Fz of wz.primitives) {
+          var Oz, oz, vz, Uz, Kz, Nz;
+          const Wz = null === (Oz = Fz.extensions) || void 0 === Oz ? void 0 : Oz.KHR_draco_mesh_compression;
+          if ("object" !== typeof Wz || null === Wz) continue;
+          const Xz = null === (oz = zz.bufferViews) || void 0 === oz ? void 0 : oz[Wz.bufferView];
+          if (null === tz || void 0 === Xz) return bz;
+          const wz = null !== (vz = Xz.byteOffset) && void 0 !== vz ? vz : 0,
+            Dz = uz(tz.subarray(wz, wz + Xz.byteLength));
+          if (null === Dz && !sz) continue;
+          const gz = null !== (Uz = zz.accessors) && void 0 !== Uz ? Uz : [],
+            Hz = null === (Kz = gz[Fz.attributes.POSITION]) || void 0 === Kz ? void 0 : Kz.count,
+            Bz = void 0 === Fz.indices ? 0 : null === (Nz = gz[Fz.indices]) || void 0 === Nz ? void 0 : Nz.count;
+          if (null === Dz || void 0 === Hz || void 0 === Bz || 3 * Dz.faces !== Bz || Dz.vertices > Hz) return bz
         }
       }
       return null
     }
-    const Xb = "has a Draco stream whose counts don't match its accessors";
+    const bz = "has a Draco stream whose counts don't match its accessors";
 
-    function jb(bb) {
-      var ab;
-      return null !== (ab = bb.name) && void 0 !== ab ? ab : bb.fromFolderName || bb.id
+    function wz(zz) {
+      var tz;
+      return null !== (tz = zz.name) && void 0 !== tz ? tz : zz.fromFolderName || zz.id
     }
 
-    function Rb(bb, ab, Ub) {
-      return `Texture pack "${bb}": model "${ab}" was not loaded because it ${Ub}. The default model is used instead.`
+    function Dz(zz, tz, sz) {
+      return `Texture pack "${zz}": model "${tz}" was not loaded because it ${sz}. The default model is used instead.`
     }
 
-    function kb(bb, ab, Ub) {
+    function gz(zz, tz, sz) {
       let {
-        strictDraco: Tb = !1
+        strictDraco: Xz = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Eb = {};
-      for (const [Yb, Bb] of Object.entries(ab)) {
-        let ab;
-        if (Bb.startsWith("data:")) try {
-          const bb = new Uint8Array((0, Mb.n)(Bb));
-          if (ab = (0, Ab.c)(bb), null === ab) {
+      const Oz = {};
+      for (const [oz, vz] of Object.entries(tz)) {
+        let tz;
+        if (vz.startsWith("data:")) try {
+          const zz = new Uint8Array((0, Wz.o)(vz));
+          if (tz = (0, Fz.c)(zz), null === tz) {
             const {
-              json: Ub,
-              bin: Ab
-            } = (0, Mb.v)(bb);
-            ab = Pb(Ub, Ab, Tb)
+              json: sz,
+              bin: Fz
+            } = (0, Wz.y)(zz);
+            tz = Nz(sz, Fz, Xz)
           }
         } catch {
-          ab = "is not a binary glTF 2.0 file"
-        } else ab = "loads data from outside the file";
-        ab && (Eb[Yb] = ab, Ub && console.warn(Rb(bb, Yb, ab)))
+          tz = "is not a binary glTF 2.0 file"
+        } else tz = "loads data from outside the file";
+        tz && (Oz[oz] = tz, sz && console.warn(Dz(zz, oz, tz)))
       }
-      return Eb
+      return Oz
     }
 
-    function yb(bb, ab) {
-      const Ub = Object.keys(ab);
-      if (0 === Ub.length) return null;
-      if (1 === Ub.length) return Rb(bb, Ub[0], ab[Ub[0]]);
-      const Ab = Ub.map((bb => `"${bb}" ${ab[bb]}`)).join("; ");
-      return `Texture pack "${bb}": ${Ub.length} models were not loaded (${Ab}). The default models are used instead.`
+    function Hz(zz, tz) {
+      const sz = Object.keys(tz);
+      if (0 === sz.length) return null;
+      if (1 === sz.length) return Dz(zz, sz[0], tz[sz[0]]);
+      const Fz = sz.map((zz => `"${zz}" ${tz[zz]}`)).join("; ");
+      return `Texture pack "${zz}": ${sz.length} models were not loaded (${Fz}). The default models are used instead.`
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

@@ -1,509 +1,509 @@
 export const id = 74;
 export const ids = [74];
 export const modules = {
-  4376: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      e: () => la,
-      h: () => LU,
-      i: () => Ja,
-      m: () => aU,
-      q: () => Va,
-      t: () => na,
-      x: () => ua,
-      B: () => sa,
-      D: () => Ha,
-      G: () => vU,
-      I: () => eU,
-      K: () => ga,
-      N: () => qa
+  4344: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => it,
+      e: () => Ns,
+      i: () => ft,
+      j: () => ss,
+      k: () => Vt,
+      o: () => Et,
+      r: () => dt,
+      u: () => nt,
+      x: () => Zt,
+      z: () => us,
+      B: () => Ks,
+      E: () => qt,
+      F: () => Mt
     });
-    var Ab = Ub(3376);
-    const Mb = Function.prototype.toString,
-      Tb = RegExp.prototype.exec,
-      Eb = Reflect.apply,
-      Yb = Function.prototype.call,
-      Bb = Function.prototype.apply,
-      eb = Function.prototype.bind,
-      vb = Object.defineProperty,
-      Lb = Uint8Array;
-    let Pb, Xb;
+    var Fz = sz(3376);
+    const Wz = Function.prototype.toString,
+      Xz = RegExp.prototype.exec,
+      Oz = Reflect.apply,
+      oz = Function.prototype.call,
+      vz = Function.prototype.apply,
+      Uz = Function.prototype.bind,
+      Kz = Object.defineProperty,
+      uz = Uint8Array;
+    let Nz, bz;
     try {
-      Pb = globalThis.crypto, Xb = void 0 === Pb || null === Pb ? void 0 : Pb.getRandomValues
+      Nz = globalThis.crypto, bz = void 0 === Nz || null === Nz ? void 0 : Nz.getRandomValues
     } catch {}
-    const jb = "bloxdBindApply";
-    let Rb;
+    const wz = "bloxdBindApply";
+    let Dz;
     try {
-      const bb = Yb;
-      vb(bb, jb, {
+      const zz = oz;
+      Kz(zz, wz, {
         __proto__: null,
-        value: eb,
+        value: Uz,
         configurable: !0
       });
       try {
-        Rb = bb[jb](Bb)
+        Dz = zz[wz](vz)
       } finally {
-        delete bb[jb]
+        delete zz[wz]
       }
     } catch {}
-    const kb = 16,
-      yb = 256,
-      Zb = 0,
-      Db = 1,
-      zb = 2,
-      xb = 3;
-    let ib, fb = Zb,
-      mb = Eb,
-      pb = 0;
+    const gz = 16,
+      Hz = 256,
+      Bz = 0,
+      Pz = 1,
+      rz = 2,
+      Yz = 3;
+    let xz, mz = Bz,
+      Jz = Oz,
+      Iz = 0;
 
-    function Nb(bb, ab) {
-      return bb === `function ${ab}() { [native code] }` || bb === `function ${ab}() {\n    [native code]\n}`
+    function Cz(zz, tz) {
+      return zz === `function ${tz}() { [native code] }` || zz === `function ${tz}() {\n    [native code]\n}`
     }
-    const Wb = 0,
-      Hb = 1,
-      Ib = 2;
-    let db = Wb;
+    const ez = 0,
+      Zz = 1,
+      Gz = 2;
+    let Tz = ez;
 
-    function Fb(bb, ab, Ub) {
-      if (db === Ib && fb === Db && ! function() {
-          const bb = ib;
-          return pb >= yb && (mb(Xb, Pb, [bb]), pb = 0), bb[pb++] < 256 / kb
-        }()) return function(bb, ab, Ub) {
-        return mb(bb, ab, Ub ?? 0)
+    function cz(zz, tz, sz) {
+      if (Tz === Gz && mz === Pz && ! function() {
+          const zz = xz;
+          return Iz >= Hz && (Jz(bz, Nz, [zz]), Iz = 0), zz[Iz++] < 256 / gz
+        }()) return function(zz, tz, sz) {
+        return Jz(zz, tz, sz ?? 0)
       }(...arguments);
-      if (db === Wb || fb === zb) return Eb(bb, ab, Ub);
-      let Ab;
-      db = Wb;
+      if (Tz === ez || mz === rz) return Oz(zz, tz, sz);
+      let Fz;
+      Tz = ez;
       try {
-        fb === Zb && (fb = xb, fb = function() {
-          const bb = Eb(Mb, Eb, []);
-          if (Nb(bb, "apply")) return zb;
-          if (null === Eb(Tb, /\(\.\.\.arguments\)/, [bb]) && null === Eb(Tb, /^function\s*\(\.\.\.[\w$]+\)/, [bb])) return zb;
-          if ("function" !== typeof Rb || "function" !== typeof Yb || "function" !== typeof Bb || "function" !== typeof eb || "function" !== typeof vb || "function" !== typeof Xb || "function" !== typeof Lb || !Nb(Eb(Mb, Yb, []), "call") || !Nb(Eb(Mb, Bb, []), "apply") || !Nb(Eb(Mb, eb, []), "bind") || !Nb(Eb(Mb, vb, []), "defineProperty") || !Nb(Eb(Mb, Xb, []), "getRandomValues") || !Nb(Eb(Mb, Lb, []), "Uint8Array")) return zb;
-          const ab = Rb,
-            Ub = {},
-            Ab = function(bb) {
-              return this === Ub && bb === Ub
+        mz === Bz && (mz = Yz, mz = function() {
+          const zz = Oz(Wz, Oz, []);
+          if (Cz(zz, "apply")) return rz;
+          if (null === Oz(Xz, /\(\.\.\.arguments\)/, [zz]) && null === Oz(Xz, /^function\s*\(\.\.\.[\w$]+\)/, [zz])) return rz;
+          if ("function" !== typeof Dz || "function" !== typeof oz || "function" !== typeof vz || "function" !== typeof Uz || "function" !== typeof Kz || "function" !== typeof bz || "function" !== typeof uz || !Cz(Oz(Wz, oz, []), "call") || !Cz(Oz(Wz, vz, []), "apply") || !Cz(Oz(Wz, Uz, []), "bind") || !Cz(Oz(Wz, Kz, []), "defineProperty") || !Cz(Oz(Wz, bz, []), "getRandomValues") || !Cz(Oz(Wz, uz, []), "Uint8Array")) return rz;
+          const tz = Dz,
+            sz = {},
+            Fz = function(zz) {
+              return this === sz && zz === sz
             };
           try {
-            if (!0 !== ab(Ab, Ub, [Ub])) return zb;
-            const bb = new Lb(yb);
-            ab(Xb, Pb, [bb]), ib = bb
+            if (!0 !== tz(Fz, sz, [sz])) return rz;
+            const zz = new uz(Hz);
+            tz(bz, Nz, [zz]), xz = zz
           } catch {
-            return zb
+            return rz
           }
-          return mb = ab, Db
-        }()), Ab = Eb(bb, ab, Ub)
-      } catch (jb) {
-        throw fb = zb, jb
+          return Jz = tz, Pz
+        }()), Fz = Oz(zz, tz, sz)
+      } catch (wz) {
+        throw mz = rz, wz
       }
-      return db = Ib, Ab
+      return Tz = Gz, Fz
     }
-    let hb = Eb;
+    let jz = Oz;
 
-    function Gb() {
-      return (hb === Eb ? 0 : 3) + db
-    }
-
-    function Qb() {
-      const bb = Gb();
-      return hb = Eb, bb
+    function Az() {
+      return (jz === Oz ? 0 : 3) + Tz
     }
 
-    function qb(bb) {
-      hb = bb >= 3 ? Fb : Eb, db = bb % 3
-    }
-    const ub = Function.prototype.toString,
-      rb = Object.getOwnPropertyDescriptor,
-      Kb = Object.prototype.hasOwnProperty,
-      ob = RegExp.prototype.exec,
-      lb = TextEncoder.prototype.encodeInto,
-      tb = String.prototype.startsWith,
-      wb = Number.prototype.toString,
-      sb = WeakMap.prototype.get,
-      gb = WeakMap.prototype.set,
-      Cb = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      Vb = new TextEncoder,
-      Ob = new Uint8Array(1024),
-      cb = 9999999,
-      Jb = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      nb = new WeakMap;
-
-    function Sb(bb) {
-      if ("function" !== typeof bb) return "#a0.0";
-      const ab = hb(sb, nb, [bb]);
-      if (void 0 !== ab) return ab;
-      const Ub = hb(ub, bb, []),
-        Ab = Ub.length > cb ? cb : Ub.length,
-        Mb = `#${function(bb,ab){const Ub=hb(ob,Cb,[ab]);if(null===Ub)return"s";const Ab=Ub[1];if("ProxyObject"===Ab)return"p";if(""!==Ab)return hb(tb,Ab,["bound "])?"b":"n";try{const ab=rb(bb,"name"),Ub=void 0!==ab&&hb(Kb,ab,["value"])?ab.value:void 0;return"string"===typeof Ub&&hb(tb,Ub,["bound "])?"b":"p"}catch{return"p"}}(bb,Ub)}${Ab}.${function(bb){const{written:ab}=hb(lb,Vb,[bb,Ob]);let Ub=2166136261;for(let Ab=0;Ab<ab;Ab++)Ub=(Ub^Ob[Ab])>>>0,Ub=Ub+(Ub<<1)+(Ub<<4)+(Ub<<7)+(Ub<<8)+(Ub<<24)>>>0;return hb(wb,Ub,[36])}(Ub)}`;
-      return hb(gb, nb, [bb, Mb]), Mb
+    function yz() {
+      const zz = Az();
+      return jz = Oz, zz
     }
 
-    function ba(bb) {
-      const ab = hb(ob, Jb, [bb]);
-      return null === ab ? bb : ab[1]
+    function Mz(zz) {
+      jz = zz >= 3 ? cz : Oz, Tz = zz % 3
     }
-    var aa = Ub(3384);
-    const Ua = Function.prototype.toString,
-      Aa = Object.getOwnPropertyDescriptor,
-      Ma = RegExp.prototype.exec,
-      Ta = Object.prototype.hasOwnProperty,
-      Ea = Set.prototype.has,
-      Ya = WeakMap.prototype.get,
-      Ba = WeakMap.prototype.set,
-      ea = Reflect.get,
-      va = Object.getPrototypeOf,
-      La = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+    const dz = Function.prototype.toString,
+      hz = Object.getOwnPropertyDescriptor,
+      Qz = Object.prototype.hasOwnProperty,
+      kz = RegExp.prototype.exec,
+      iz = TextEncoder.prototype.encodeInto,
+      Lz = String.prototype.startsWith,
+      lz = Number.prototype.toString,
+      nz = WeakMap.prototype.get,
+      az = WeakMap.prototype.set,
+      qz = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
+      Sz = new TextEncoder,
+      Vz = new Uint8Array(1024),
+      Rz = 9999999,
+      pz = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
+      fz = new WeakMap;
 
-    function Pa(bb, ab, Ub) {
+    function Ez(zz) {
+      if ("function" !== typeof zz) return "#a0.0";
+      const tz = jz(nz, fz, [zz]);
+      if (void 0 !== tz) return tz;
+      const sz = jz(dz, zz, []),
+        Fz = sz.length > Rz ? Rz : sz.length,
+        Wz = `#${function(zz,tz){const sz=jz(kz,qz,[tz]);if(null===sz)return"s";const Fz=sz[1];if("ProxyObject"===Fz)return"p";if(""!==Fz)return jz(Lz,Fz,["bound "])?"b":"n";try{const tz=hz(zz,"name"),sz=void 0!==tz&&jz(Qz,tz,["value"])?tz.value:void 0;return"string"===typeof sz&&jz(Lz,sz,["bound "])?"b":"p"}catch{return"p"}}(zz,sz)}${Fz}.${function(zz){const{written:tz}=jz(iz,Sz,[zz,Vz]);let sz=2166136261;for(let Fz=0;Fz<tz;Fz++)sz=(sz^Vz[Fz])>>>0,sz=sz+(sz<<1)+(sz<<4)+(sz<<7)+(sz<<8)+(sz<<24)>>>0;return jz(lz,sz,[36])}(sz)}`;
+      return jz(az, fz, [zz, Wz]), Wz
+    }
+
+    function zt(zz) {
+      const tz = jz(kz, pz, [zz]);
+      return null === tz ? zz : tz[1]
+    }
+    var tt = sz(3386);
+    const st = Function.prototype.toString,
+      Ft = Object.getOwnPropertyDescriptor,
+      Wt = RegExp.prototype.exec,
+      Xt = Object.prototype.hasOwnProperty,
+      Ot = Set.prototype.has,
+      ot = WeakMap.prototype.get,
+      vt = WeakMap.prototype.set,
+      Ut = Reflect.get,
+      Kt = Object.getPrototypeOf,
+      ut = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+
+    function Nt(zz, tz, sz) {
       return {
-        code: bb,
-        holder: ab,
-        key: Ub,
+        code: zz,
+        holder: tz,
+        key: sz,
         ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${Ub}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
+        native: new RegExp(`^function (get )?${sz}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
       }
     }
 
-    function Xa() {
-      return La
+    function bt() {
+      return ut
     }
-    const ja = La?.Instance.prototype,
-      Ra = La?.Memory.prototype;
+    const wt = ut?.Instance.prototype,
+      Dt = ut?.Memory.prototype;
 
-    function ka() {
-      return Ra
+    function gt() {
+      return Dt
     }
-    let ya, Za;
+    let Ht, Bt;
     try {
-      const bb = globalThis.crypto,
-        ab = bb?.subtle;
-      ya = bb ? va(bb) : void 0, Za = ab ? va(ab) : void 0
+      const zz = globalThis.crypto,
+        tz = zz?.subtle;
+      Ht = zz ? Kt(zz) : void 0, Bt = tz ? Kt(tz) : void 0
     } catch {}
 
-    function Da(bb, ab) {
-      for (let Ub = bb; void 0 !== Ub && null !== Ub; Ub = va(Ub)) {
-        const bb = Aa(Ub, ab);
-        if (bb) return bb
+    function Pt(zz, tz) {
+      for (let sz = zz; void 0 !== sz && null !== sz; sz = Kt(sz)) {
+        const zz = Ft(sz, tz);
+        if (zz) return zz
       }
     }
-    const za = [Pa("in", Xa, "instantiate", {
+    const rt = [Nt("in", bt, "instantiate", {
       tier: "weighted",
       onNamespace: !0
-    }), Pa("is", Xa, "instantiateStreaming", {
+    }), Nt("is", bt, "instantiateStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), Pa("co", Xa, "compile", {
+    }), Nt("co", bt, "compile", {
       tier: "weighted",
       onNamespace: !0
-    }), Pa("cs", Xa, "compileStreaming", {
+    }), Nt("cs", bt, "compileStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), Pa("mo", Xa, "Module", {
+    }), Nt("mo", bt, "Module", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), Pa("it", Xa, "Instance", {
+    }), Nt("it", bt, "Instance", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), Pa("me", Xa, "Memory", {
+    }), Nt("me", bt, "Memory", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), Pa("ex", (function() {
-      return ja
+    }), Nt("ex", (function() {
+      return wt
     }), "exports", {
       isGetter: !0,
       tier: "punished"
-    }), Pa("bu", ka, "buffer", {
+    }), Nt("bu", gt, "buffer", {
       isGetter: !0,
       tier: "punished"
-    }), Pa("gr", ka, "grow", {
+    }), Nt("gr", gt, "grow", {
       tier: "punished"
-    }), Pa("rc", (function() {
+    }), Nt("rc", (function() {
       return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), Pa("cr", (function() {
+    }), "clone"), Nt("cr", (function() {
       return globalThis
     }), "crypto", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), Pa("su", (function() {
-      return ya
+    }), Nt("su", (function() {
+      return Ht
     }), "subtle", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), Pa("dg", (function() {
-      return Za
+    }), Nt("dg", (function() {
+      return Bt
     }), "digest", {
       tier: "punished",
       inSecureContext: !0
     })];
 
-    function xa(bb) {
-      let ab;
+    function Yt(zz) {
+      let tz;
       try {
-        const Ub = ea(globalThis, bb);
-        ab = "function" === typeof Ub ? Ub.prototype : void 0
+        const sz = Ut(globalThis, zz);
+        tz = "function" === typeof sz ? sz.prototype : void 0
       } catch {}
-      return () => ab
+      return () => tz
     }
 
-    function ia(bb, ab, Ub) {
-      return Ub.map((Ub => Pa(bb, ab, Ub)))
+    function xt(zz, tz, sz) {
+      return sz.map((sz => Nt(zz, tz, sz)))
     }
-    const fa = Pa("rx", xa("HTMLCanvasElement"), "getContext"),
-      ma = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      pa = {
-        webgpu: [...ia("gd", xa("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...ia("gq", xa("GPUQueue"), ["submit", "writeBuffer"]), ...ia("ge", xa("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...ia("gp", xa("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), fa],
-        webgl: [...ia("g2", xa("WebGL2RenderingContext"), [...ma, "drawArraysInstanced", "drawElementsInstanced"]), fa],
-        webgl1: [...ia("g1", xa("WebGLRenderingContext"), ma), fa]
+    const mt = Nt("rx", Yt("HTMLCanvasElement"), "getContext"),
+      Jt = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
+      It = {
+        webgpu: [...xt("gd", Yt("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...xt("gq", Yt("GPUQueue"), ["submit", "writeBuffer"]), ...xt("ge", Yt("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...xt("gp", Yt("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), mt],
+        webgl: [...xt("g2", Yt("WebGL2RenderingContext"), [...Jt, "drawArraysInstanced", "drawElementsInstanced"]), mt],
+        webgl1: [...xt("g1", Yt("WebGLRenderingContext"), Jt), mt]
       };
-    let Na = [];
-    const Wa = new WeakMap;
+    let Ct = [];
+    const et = new WeakMap;
 
-    function Ha(bb, ab) {
-      const Ub = Qb();
+    function Zt(zz, tz) {
+      const sz = yz();
       try {
-        hb(Ba, Wa, [bb, ab])
+        jz(vt, et, [zz, tz])
       } finally {
-        qb(Ub)
+        Mz(sz)
       }
     }
 
-    function Ia(bb) {
+    function Gt(zz) {
       try {
-        const ab = YU(bb),
-          Ub = hb(Ya, Wa, [ab]);
-        return bU(Ub, bb) ? da(bb, !0) : `${da(bb,!1)}${Sb(Ub??ab)}`
+        const tz = vs(zz),
+          sz = jz(ot, et, [tz]);
+        return ts(sz, zz) ? Tt(zz, !0) : `${Tt(zz,!1)}${Ez(sz??tz)}`
       } catch {
-        return `${da(bb,!1)}${Sb(void 0)}`
+        return `${Tt(zz,!1)}${Ez(void 0)}`
       }
     }
 
-    function da(bb, ab) {
+    function Tt(zz, tz) {
       let {
-        code: Ub,
-        key: Ab
-      } = bb;
-      return `wh:${Ub}${ab?"-dbg":""}:${Ab}`
+        code: sz,
+        key: Fz
+      } = zz;
+      return `wh:${sz}${tz?"-dbg":""}:${Fz}`
     }
 
-    function Fa(bb) {
-      return Object.values(pa).flatMap((ab => ab.map((ab => da(ab, bb)))))
+    function ct(zz) {
+      return Object.values(It).flatMap((tz => tz.map((tz => Tt(tz, zz)))))
     }
-    const ha = new Set(Fa(!0)),
-      Ga = new Set([...Fa(!1), ...ha]),
-      Qa = da(fa, !1);
+    const jt = new Set(ct(!0)),
+      At = new Set([...ct(!1), ...jt]),
+      yt = Tt(mt, !1);
 
-    function qa(bb) {
-      Na = pa[bb]
+    function Mt(zz) {
+      Ct = It[zz]
     }
 
-    function ua(bb) {
-      const ab = Qb();
+    function dt(zz) {
+      const tz = yz();
       try {
-        return ra(bb) || ra(ba(bb))
+        return ht(zz) || ht(zt(zz))
       } finally {
-        qb(ab)
+        Mz(tz)
       }
     }
 
-    function ra(bb) {
-      return hb(Ea, Ga, [bb])
+    function ht(zz) {
+      return jz(Ot, At, [zz])
     }
 
-    function Ka(bb) {
-      return new Set(za.filter((ab => ab.tier === bb)).map((bb => `wh:${bb.code}`)))
+    function Qt(zz) {
+      return new Set(rt.filter((tz => tz.tier === zz)).map((zz => `wh:${zz.code}`)))
     }
-    const oa = Ka("punished"),
-      la = !1,
-      ta = new Set(aa.d),
-      wa = Ka("weighted");
+    const kt = Qt("punished"),
+      it = !1,
+      Lt = new Set(tt.b),
+      lt = Qt("weighted");
 
-    function sa(bb) {
-      const ab = Qb();
+    function nt(zz) {
+      const tz = yz();
       try {
-        return Ca(ba(bb))
+        return St(zt(zz))
       } finally {
-        qb(ab)
+        Mz(tz)
       }
     }
 
-    function ga(bb) {
-      const ab = Qb();
+    function qt(zz) {
+      const tz = yz();
       try {
-        return ba(bb)
+        return zt(zz)
       } finally {
-        qb(ab)
+        Mz(tz)
       }
     }
 
-    function Ca(bb) {
-      return hb(Ea, wa, [bb])
+    function St(zz) {
+      return jz(Ot, lt, [zz])
     }
 
-    function Va(bb) {
-      const ab = Qb();
+    function Vt(zz) {
+      const tz = yz();
       try {
-        return Oa(bb)
+        return Rt(zz)
       } finally {
-        qb(ab)
+        Mz(tz)
       }
     }
 
-    function Oa(bb) {
-      return hb(Ea, ta, [bb])
+    function Rt(zz) {
+      return jz(Ot, Lt, [zz])
     }
 
-    function ca(bb) {
-      return "wb" === bb || hb(Ea, oa, [bb])
+    function pt(zz) {
+      return "wb" === zz || jz(Ot, kt, [zz])
     }
 
-    function Ja(bb) {
-      const ab = Qb();
+    function ft(zz) {
+      const tz = yz();
       try {
-        return ca(bb) || Oa(bb)
+        return pt(zz) || Rt(zz)
       } finally {
-        qb(ab)
+        Mz(tz)
       }
     }
 
-    function na(bb) {
-      const ab = Qb();
+    function Et(zz) {
+      const tz = yz();
       try {
-        return "wb" === bb || la && ca(bb)
+        return "wb" === zz || it && pt(zz)
       } finally {
-        qb(ab)
+        Mz(tz)
       }
     }
 
-    function Sa(bb, ab) {
+    function zs(zz, tz) {
       let {
-        isGetter: Ub
-      } = ab;
-      const Ab = Aa(bb, Ub ? "get" : "value");
-      return void 0 === Ab ? void 0 : Ab.value
+        isGetter: sz
+      } = tz;
+      const Fz = Ft(zz, sz ? "get" : "value");
+      return void 0 === Fz ? void 0 : Fz.value
     }
 
-    function bU(bb, ab) {
+    function ts(zz, tz) {
       let {
-        isConstructor: Ub,
-        native: Ab
-      } = ab;
-      return "function" === typeof bb && (!(!Ub && hb(Ta, bb, ["prototype"])) && null !== hb(Ma, Ab, [hb(Ua, bb, [])]))
+        isConstructor: sz,
+        native: Fz
+      } = tz;
+      return "function" === typeof zz && (!(!sz && jz(Xt, zz, ["prototype"])) && null !== jz(Wt, Fz, [jz(st, zz, [])]))
     }
 
-    function aU(bb, ab) {
-      return bU(bb, Pa("", (() => {}), ab, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
+    function ss(zz, tz) {
+      return ts(zz, Nt("", (() => {}), tz, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
         isConstructor: !0
       } : {}))
     }
-    let UU = null,
-      AU = !1;
+    let Fs = null,
+      Ws = !1;
 
-    function MU() {
+    function Xs() {
       try {
-        return globalThis.WebAssembly === La
+        return globalThis.WebAssembly === ut
       } catch {
         return !1
       }
     }
 
-    function TU(bb) {
+    function Os(zz) {
       try {
-        return function(bb) {
+        return function(zz) {
           const {
-            holder: ab,
-            key: Ub,
-            onNamespace: Ab,
-            inSecureContext: Mb
-          } = bb, Tb = ab(), Eb = Da(Tb, Ub);
-          if (!Eb) return !(Mb && !0 === globalThis.isSecureContext);
-          const Yb = Sa(Eb, bb);
-          if (!bU(Yb, bb)) return !1;
-          if (Ab) {
-            const ab = globalThis.WebAssembly;
-            if (ab !== Tb && null !== ab && ("object" === typeof ab || "function" === typeof ab)) {
-              const Ab = ea(ab, Ub);
-              return Ab === Yb || void 0 === Ab || bU(Ab, bb)
+            holder: tz,
+            key: sz,
+            onNamespace: Fz,
+            inSecureContext: Wz
+          } = zz, Xz = tz(), Oz = Pt(Xz, sz);
+          if (!Oz) return !(Wz && !0 === globalThis.isSecureContext);
+          const oz = zs(Oz, zz);
+          if (!ts(oz, zz)) return !1;
+          if (Fz) {
+            const tz = globalThis.WebAssembly;
+            if (tz !== Xz && null !== tz && ("object" === typeof tz || "function" === typeof tz)) {
+              const Fz = Ut(tz, sz);
+              return Fz === oz || void 0 === Fz || ts(Fz, zz)
             }
           }
           return !0
-        }(bb)
+        }(zz)
       } catch {
         return !1
       }
     }
 
-    function EU(bb) {
-      const ab = `wh:${bb.code}`;
-      if ("punished" === bb.tier) return ab;
+    function os(zz) {
+      const tz = `wh:${zz.code}`;
+      if ("punished" === zz.tier) return tz;
       try {
-        return `${ab}${Sb(YU(bb))}`
+        return `${tz}${Ez(vs(zz))}`
       } catch {
-        return `${ab}${Sb(void 0)}`
+        return `${tz}${Ez(void 0)}`
       }
     }
 
-    function YU(bb) {
-      const ab = Da(bb.holder(), bb.key),
-        Ub = void 0 === ab ? void 0 : Sa(ab, bb);
-      return bb.onNamespace && !MU() && bU(Ub, bb) ? ea(globalThis.WebAssembly, bb.key) : Ub
+    function vs(zz) {
+      const tz = Pt(zz.holder(), zz.key),
+        sz = void 0 === tz ? void 0 : zs(tz, zz);
+      return zz.onNamespace && !Xs() && ts(sz, zz) ? Ut(globalThis.WebAssembly, zz.key) : sz
     }
 
-    function BU(bb) {
-      if (ca(bb)) return 5;
-      const ab = ba(bb);
-      return Ca(ab) ? 4 : Oa(bb) ? 3 : ra(ab) ? function(bb) {
-        return hb(Ea, ha, [bb])
-      }(ab) ? -1 : ab === Qa ? 0 : 1 : 2
+    function Us(zz) {
+      if (pt(zz)) return 5;
+      const tz = zt(zz);
+      return St(tz) ? 4 : Rt(zz) ? 3 : ht(tz) ? function(zz) {
+        return jz(Ot, jt, [zz])
+      }(tz) ? -1 : tz === yt ? 0 : 1 : 2
     }
 
-    function eU() {
-      const bb = function() {
-        const bb = Gb();
-        return fb === Zb || fb === Db ? (hb = Fb, db = Hb) : hb = Eb, bb
+    function Ks() {
+      const zz = function() {
+        const zz = Az();
+        return mz === Bz || mz === Pz ? (jz = cz, Tz = Zz) : jz = Oz, zz
       }();
       try {
-        if (null === UU || !ca(UU)) {
-          const bb = function() {
-            if (void 0 === La) return null;
-            let bb = MU() ? null : "wh:wa";
-            const ab = ab => {
-              null !== ab && (null === bb || BU(ab) > BU(bb)) && (bb = ab)
+        if (null === Fs || !pt(Fs)) {
+          const zz = function() {
+            if (void 0 === ut) return null;
+            let zz = Xs() ? null : "wh:wa";
+            const tz = tz => {
+              null !== tz && (null === zz || Us(tz) > Us(zz)) && (zz = tz)
             };
-            for (let Ub = 0; Ub < za.length; Ub++) {
-              const bb = za[Ub];
-              void 0 === bb || TU(bb) || ab(EU(bb))
+            for (let sz = 0; sz < rt.length; sz++) {
+              const zz = rt[sz];
+              void 0 === zz || Os(zz) || tz(os(zz))
             }
-            ab((0, aa.m)());
-            for (let Ub = 0; Ub < Na.length; Ub++) {
-              const bb = Na[Ub];
-              void 0 === bb || TU(bb) || ab(Ia(bb))
+            tz((0, tt.l)());
+            for (let sz = 0; sz < Ct.length; sz++) {
+              const zz = Ct[sz];
+              void 0 === zz || Os(zz) || tz(Gt(zz))
             }
-            return bb
+            return zz
           }();
-          (null === UU || null !== bb && BU(bb) > BU(UU)) && (UU = bb)
+          (null === Fs || null !== zz && Us(zz) > Us(Fs)) && (Fs = zz)
         }
       } finally {
-        qb(bb)
+        Mz(zz)
       }
     }
 
-    function vU() {
-      AU = !0
+    function us() {
+      Ws = !0
     }
 
-    function LU() {
-      if (AU) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && eU(), null !== UU) return UU;
-      if (void 0 === La) return "wn:unsupported";
-      const bb = (0, Ab.l)();
-      return null === bb ? null : `wn:${bb}`
+    function Ns() {
+      if (Ws) return "wb";
+      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && Ks(), null !== Fs) return Fs;
+      if (void 0 === ut) return "wn:unsupported";
+      const zz = (0, Fz.u)();
+      return null === zz ? null : `wn:${zz}`
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

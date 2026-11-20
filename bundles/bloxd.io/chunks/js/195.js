@@ -1,14 +1,14 @@
 export const id = 195;
 export const ids = [195];
 export const modules = {
-  8982: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      c: () => Fb,
-      e: () => db,
-      i: () => Ib
+  8924: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => cz,
+      g: () => Tz,
+      h: () => Gz
     });
-    var Ab = Ub(8985);
-    const Mb = {
+    var Fz = sz(8930);
+    const Wz = {
         fileBytes: 4194304,
         vertices: 65535,
         indices: 196608,
@@ -20,7 +20,7 @@ export const modules = {
         images: 8,
         imageSide: 1024
       },
-      Tb = {
+      Xz = {
         items: 1024,
         perFile: 1024,
         surfaces: 256,
@@ -28,453 +28,453 @@ export const modules = {
         bounds: 16,
         attributeMembers: 32
       },
-      Eb = 1048576,
-      Yb = "is not a binary glTF 2.0 file",
-      Bb = "loads data from outside the file",
-      eb = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
-      vb = {
+      Oz = 1048576,
+      oz = "is not a binary glTF 2.0 file",
+      vz = "loads data from outside the file",
+      Uz = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
+      Kz = {
         POSITION: "VEC3",
         NORMAL: "VEC3",
         TEXCOORD_0: "VEC2",
         COLOR_0: "VEC4"
       },
-      Lb = {
+      uz = {
         type: "VEC2",
         componentTypes: [5126, 5121, 5123]
       },
-      Pb = {
+      Nz = {
         TANGENT: {
           type: "VEC4",
           componentTypes: [5126]
         },
-        TEXCOORD_1: Lb,
-        TEXCOORD_2: Lb,
-        TEXCOORD_3: Lb,
-        TEXCOORD_4: Lb,
-        TEXCOORD_5: Lb
+        TEXCOORD_1: uz,
+        TEXCOORD_2: uz,
+        TEXCOORD_3: uz,
+        TEXCOORD_4: uz,
+        TEXCOORD_5: uz
       },
-      Xb = new Set(Ab.h.map((bb => {
-        let [ab] = bb;
-        return ab
+      bz = new Set(Fz.j.map((zz => {
+        let [tz] = zz;
+        return tz
       }))),
-      jb = {
+      wz = {
         1: "line",
         2: "line loop",
         3: "line strip",
         5: "triangle strip",
         6: "triangle fan"
       },
-      Rb = 5126;
+      Dz = 5126;
 
-    function kb(bb) {
-      return bb.toLocaleString("en-US")
+    function gz(zz) {
+      return zz.toLocaleString("en-US")
     }
 
-    function yb(bb, ab, Ub) {
-      return bb > ab ? `has ${kb(bb)} ${Ub} (the limit is ${kb(ab)})` : null
+    function Hz(zz, tz, sz) {
+      return zz > tz ? `has ${gz(zz)} ${sz} (the limit is ${gz(tz)})` : null
     }
 
-    function Zb(bb, ab) {
-      return Number.isInteger(bb) && bb >= 0 && bb < (null !== ab && void 0 !== ab ? ab : 0)
+    function Bz(zz, tz) {
+      return Number.isInteger(zz) && zz >= 0 && zz < (null !== tz && void 0 !== tz ? tz : 0)
     }
 
-    function Db(bb) {
-      return Number.isInteger(bb) && bb >= 0
+    function Pz(zz) {
+      return Number.isInteger(zz) && zz >= 0
     }
 
-    function zb(bb, ab) {
-      return void 0 !== bb && (!Array.isArray(bb) || bb.length > ab)
+    function rz(zz, tz) {
+      return void 0 !== zz && (!Array.isArray(zz) || zz.length > tz)
     }
 
-    function xb(bb, ab) {
-      return "object" === typeof bb && null !== bb && Object.keys(bb).length > ab
+    function Yz(zz, tz) {
+      return "object" === typeof zz && null !== zz && Object.keys(zz).length > tz
     }
 
-    function ib(bb) {
-      var ab;
-      return `${bb.normalized?"normalized ":""}${null!==(ab=Ab.g[bb.componentType])&&void 0!==ab?ab:bb.componentType} ${bb.type}`
+    function xz(zz) {
+      var tz;
+      return `${zz.normalized?"normalized ":""}${null!==(tz=Fz.f[zz.componentType])&&void 0!==tz?tz:zz.componentType} ${zz.type}`
     }
 
-    function fb(bb) {
-      const ab = ab => {
-        var Ub;
-        return null !== (Ub = bb[ab]) && void 0 !== Ub ? Ub : -1
+    function mz(zz) {
+      const tz = tz => {
+        var sz;
+        return null !== (sz = zz[tz]) && void 0 !== sz ? sz : -1
       };
-      return 255 === ab(0) && 216 === ab(1) ? "JPEG" : 82 === ab(0) && 73 === ab(1) && 87 === ab(8) && 69 === ab(9) ? "WebP" : 171 === ab(0) && 75 === ab(1) && 84 === ab(2) && 88 === ab(3) ? "KTX2" : "non-PNG"
+      return 255 === tz(0) && 216 === tz(1) ? "JPEG" : 82 === tz(0) && 73 === tz(1) && 87 === tz(8) && 69 === tz(9) ? "WebP" : 171 === tz(0) && 75 === tz(1) && 84 === tz(2) && 88 === tz(3) ? "KTX2" : "non-PNG"
     }
 
-    function mb(bb) {
-      return bb.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((ab, Ub) => bb[Ub] === ab)) && 73 === bb[12] && 72 === bb[13] && 68 === bb[14] && 82 === bb[15]
+    function Jz(zz) {
+      return zz.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((tz, sz) => zz[sz] === tz)) && 73 === zz[12] && 72 === zz[13] && 68 === zz[14] && 82 === zz[15]
     }
 
-    function pb(bb) {
-      return /^[aeiou]/i.test(bb) ? `an ${bb}` : `a ${bb}`
+    function Iz(zz) {
+      return /^[aeiou]/i.test(zz) ? `an ${zz}` : `a ${zz}`
     }
 
-    function Nb(bb) {
-      const ab = bb.byteStride;
-      return void 0 === ab || Number.isInteger(ab) && ab >= 4 && ab <= 252 && ab % 4 === 0
+    function Cz(zz) {
+      const tz = zz.byteStride;
+      return void 0 === tz || Number.isInteger(tz) && tz >= 4 && tz <= 252 && tz % 4 === 0
     }
 
-    function Wb(bb, ab, Ub) {
-      var Ab, Mb;
-      const Tb = null === (Ab = bb.bufferViews) || void 0 === Ab ? void 0 : Ab[Ub];
-      if (!Tb || !ab || 0 !== Tb.buffer) return null;
-      const Eb = null !== (Mb = Tb.byteOffset) && void 0 !== Mb ? Mb : 0;
-      return !Db(Eb) || !Db(Tb.byteLength) || Eb + Tb.byteLength > ab.byteLength ? null : ab.subarray(Eb, Eb + Tb.byteLength)
+    function ez(zz, tz, sz) {
+      var Fz, Wz;
+      const Xz = null === (Fz = zz.bufferViews) || void 0 === Fz ? void 0 : Fz[sz];
+      if (!Xz || !tz || 0 !== Xz.buffer) return null;
+      const Oz = null !== (Wz = Xz.byteOffset) && void 0 !== Wz ? Wz : 0;
+      return !Pz(Oz) || !Pz(Xz.byteLength) || Oz + Xz.byteLength > tz.byteLength ? null : tz.subarray(Oz, Oz + Xz.byteLength)
     }
 
-    function Hb(bb, ab) {
-      var Ub, Mb, Tb;
-      const Eb = Ab.k[ab.type],
-        Yb = Ab.d[ab.componentType];
-      if (!Eb || !Yb || !Number.isInteger(ab.count) || ab.count < 0) return !1;
-      if (void 0 === ab.bufferView) return !0;
-      const Bb = null === (Ub = bb.bufferViews) || void 0 === Ub ? void 0 : Ub[ab.bufferView],
-        eb = null !== (Mb = ab.byteOffset) && void 0 !== Mb ? Mb : 0;
-      if (!Bb || !Db(eb) || eb % Yb !== 0) return !1;
-      const vb = Eb * Yb,
-        Lb = null !== (Tb = Bb.byteStride) && void 0 !== Tb ? Tb : vb;
-      if (Lb < vb) return !1;
-      return (0 === ab.count ? 0 : eb + Lb * (ab.count - 1) + vb) <= Bb.byteLength
+    function Zz(zz, tz) {
+      var sz, Wz, Xz;
+      const Oz = Fz.n[tz.type],
+        oz = Fz.e[tz.componentType];
+      if (!Oz || !oz || !Number.isInteger(tz.count) || tz.count < 0) return !1;
+      if (void 0 === tz.bufferView) return !0;
+      const vz = null === (sz = zz.bufferViews) || void 0 === sz ? void 0 : sz[tz.bufferView],
+        Uz = null !== (Wz = tz.byteOffset) && void 0 !== Wz ? Wz : 0;
+      if (!vz || !Pz(Uz) || Uz % oz !== 0) return !1;
+      const Kz = Oz * oz,
+        uz = null !== (Xz = vz.byteStride) && void 0 !== Xz ? Xz : Kz;
+      if (uz < Kz) return !1;
+      return (0 === tz.count ? 0 : Uz + uz * (tz.count - 1) + Kz) <= vz.byteLength
     }
 
-    function Ib(bb) {
-      return bb > Mb.fileBytes ? `is ${(bb/Eb).toFixed(1)} MiB (the limit is ${Mb.fileBytes/Eb} MiB)` : null
+    function Gz(zz) {
+      return zz > Wz.fileBytes ? `is ${(zz/Oz).toFixed(1)} MiB (the limit is ${Wz.fileBytes/Oz} MiB)` : null
     }
 
-    function db(bb, ab) {
+    function Tz(zz, tz) {
       try {
-        return function(bb, ab) {
-          var Ub, Eb, Lb, kb, Db, Ib, db, Fb, hb, Gb, Qb, qb, ub, rb, Kb, ob, lb;
-          const tb = Array.isArray(bb.extensionsUsed) && bb.extensionsUsed.includes("KHR_draco_mesh_compression");
-          if (function(bb, ab) {
-              var Ub, Ab;
+        return function(zz, tz) {
+          var sz, Oz, uz, gz, Pz, Gz, Tz, cz, jz, Az, yz, Mz, dz, hz, Qz, kz, iz;
+          const Lz = Array.isArray(zz.extensionsUsed) && zz.extensionsUsed.includes("KHR_draco_mesh_compression");
+          if (function(zz, tz) {
+              var sz, Fz;
               const {
-                items: Mb,
-                perFile: Eb,
-                surfaces: Yb,
-                few: Bb,
-                bounds: eb,
-                attributeMembers: vb
-              } = Tb;
-              if (zb(bb.extensionsRequired, Bb) || zb(bb.animations, 1 / 0) || zb(bb.skins, 1 / 0)) return !0;
-              if (null !== (Ub = bb.animations) && void 0 !== Ub && Ub.length || null !== (Ab = bb.skins) && void 0 !== Ab && Ab.length) return !1;
+                items: Wz,
+                perFile: Oz,
+                surfaces: oz,
+                few: vz,
+                bounds: Uz,
+                attributeMembers: Kz
+              } = Xz;
+              if (rz(zz.extensionsRequired, vz) || rz(zz.animations, 1 / 0) || rz(zz.skins, 1 / 0)) return !0;
+              if (null !== (sz = zz.animations) && void 0 !== sz && sz.length || null !== (Fz = zz.skins) && void 0 !== Fz && Fz.length) return !1;
               if ([
-                  [bb.buffers, Bb],
-                  [bb.scenes, Bb],
-                  [bb.bufferViews, Mb],
-                  [bb.accessors, Mb],
-                  [bb.nodes, Mb],
-                  [bb.meshes, Mb],
-                  [bb.materials, Yb],
-                  [bb.textures, Yb],
-                  [bb.samplers, Yb],
-                  [bb.images, Yb]
-                ].some((bb => {
-                  let [ab, Ub] = bb;
-                  return zb(ab, Ub)
+                  [zz.buffers, vz],
+                  [zz.scenes, vz],
+                  [zz.bufferViews, Wz],
+                  [zz.accessors, Wz],
+                  [zz.nodes, Wz],
+                  [zz.meshes, Wz],
+                  [zz.materials, oz],
+                  [zz.textures, oz],
+                  [zz.samplers, oz],
+                  [zz.images, oz]
+                ].some((zz => {
+                  let [tz, sz] = zz;
+                  return rz(tz, sz)
                 }))) return !0;
-              for (const Tb of null !== (Lb = bb.accessors) && void 0 !== Lb ? Lb : []) {
-                var Lb, Pb, Xb;
-                if (Number.isInteger(Tb.count) && (!Number.isSafeInteger(Tb.count) || Object.is(Tb.count, -0)) || zb(null !== (Pb = Tb.min) && void 0 !== Pb ? Pb : void 0, eb) || zb(null !== (Xb = Tb.max) && void 0 !== Xb ? Xb : void 0, eb)) return !0
+              for (const Xz of null !== (uz = zz.accessors) && void 0 !== uz ? uz : []) {
+                var uz, Nz, bz;
+                if (Number.isInteger(Xz.count) && (!Number.isSafeInteger(Xz.count) || Object.is(Xz.count, -0)) || rz(null !== (Nz = Xz.min) && void 0 !== Nz ? Nz : void 0, Uz) || rz(null !== (bz = Xz.max) && void 0 !== bz ? bz : void 0, Uz)) return !0
               }
-              for (const Tb of null !== (jb = bb.scenes) && void 0 !== jb ? jb : []) {
-                var jb;
-                if (zb(Tb.nodes, Mb)) return !0
+              for (const Xz of null !== (wz = zz.scenes) && void 0 !== wz ? wz : []) {
+                var wz;
+                if (rz(Xz.nodes, Wz)) return !0
               }
-              let Rb = 0;
-              for (const Tb of null !== (kb = bb.nodes) && void 0 !== kb ? kb : []) {
-                var kb, yb, Zb;
-                if (zb(Tb.children, Eb)) return !0;
-                Rb += null !== (yb = null === (Zb = Tb.children) || void 0 === Zb ? void 0 : Zb.length) && void 0 !== yb ? yb : 0
+              let Dz = 0;
+              for (const Xz of null !== (gz = zz.nodes) && void 0 !== gz ? gz : []) {
+                var gz, Hz, Bz;
+                if (rz(Xz.children, Oz)) return !0;
+                Dz += null !== (Hz = null === (Bz = Xz.children) || void 0 === Bz ? void 0 : Bz.length) && void 0 !== Hz ? Hz : 0
               }
-              if (Rb > Eb) return !0;
-              let Db = 0;
-              for (const Tb of null !== (ib = bb.meshes) && void 0 !== ib ? ib : []) {
-                var ib;
-                if (!Array.isArray(Tb.primitives)) return !0;
-                if (Db += Tb.primitives.length, Db > Eb) return !0;
-                for (const bb of Tb.primitives) {
-                  var fb;
-                  const Ub = ab ? null === (fb = bb.extensions) || void 0 === fb ? void 0 : fb.KHR_draco_mesh_compression : void 0;
-                  if (xb(bb.attributes, vb) || xb(null === Ub || void 0 === Ub ? void 0 : Ub.attributes, vb)) return !0
+              if (Dz > Oz) return !0;
+              let Pz = 0;
+              for (const Xz of null !== (xz = zz.meshes) && void 0 !== xz ? xz : []) {
+                var xz;
+                if (!Array.isArray(Xz.primitives)) return !0;
+                if (Pz += Xz.primitives.length, Pz > Oz) return !0;
+                for (const zz of Xz.primitives) {
+                  var mz;
+                  const sz = tz ? null === (mz = zz.extensions) || void 0 === mz ? void 0 : mz.KHR_draco_mesh_compression : void 0;
+                  if (Yz(zz.attributes, Kz) || Yz(null === sz || void 0 === sz ? void 0 : sz.attributes, Kz)) return !0
                 }
               }
               return !1
-            }(bb, tb)) return Yb;
-          const wb = null === (Ub = bb.asset) || void 0 === Ub ? void 0 : Ub.version;
-          if ("string" !== typeof wb || !/^2\.\d+/.test(wb)) return `uses glTF version ${null!==wb&&void 0!==wb?wb:"(none)"}`;
-          const sb = null === (Eb = bb.asset) || void 0 === Eb ? void 0 : Eb.minVersion;
-          if (void 0 !== sb && "2.0" !== sb) return `uses glTF version ${sb}`;
-          for (const Ab of null !== (gb = bb.extensionsRequired) && void 0 !== gb ? gb : []) {
-            var gb;
-            if (!eb.has(Ab)) return `requires the glTF extension ${Ab}`
+            }(zz, Lz)) return oz;
+          const lz = null === (sz = zz.asset) || void 0 === sz ? void 0 : sz.version;
+          if ("string" !== typeof lz || !/^2\.\d+/.test(lz)) return `uses glTF version ${null!==lz&&void 0!==lz?lz:"(none)"}`;
+          const nz = null === (Oz = zz.asset) || void 0 === Oz ? void 0 : Oz.minVersion;
+          if (void 0 !== nz && "2.0" !== nz) return `uses glTF version ${nz}`;
+          for (const Fz of null !== (az = zz.extensionsRequired) && void 0 !== az ? az : []) {
+            var az;
+            if (!Uz.has(Fz)) return `requires the glTF extension ${Fz}`
           }
-          if (null !== (Lb = bb.animations) && void 0 !== Lb && Lb.length) return "has animations";
-          if (null !== (kb = bb.skins) && void 0 !== kb && kb.length) return "uses skins";
-          const Cb = null !== (Db = bb.buffers) && void 0 !== Db ? Db : [];
-          for (const [Ab, Mb] of Cb.entries()) {
-            if (void 0 !== Mb.uri) return Bb;
-            if (Ab > 0 || !ab) return Yb
+          if (null !== (uz = zz.animations) && void 0 !== uz && uz.length) return "has animations";
+          if (null !== (gz = zz.skins) && void 0 !== gz && gz.length) return "uses skins";
+          const qz = null !== (Pz = zz.buffers) && void 0 !== Pz ? Pz : [];
+          for (const [Fz, Wz] of qz.entries()) {
+            if (void 0 !== Wz.uri) return vz;
+            if (Fz > 0 || !tz) return oz
           }
-          for (const [Ab, Mb] of(null !== (Vb = bb.bufferViews) && void 0 !== Vb ? Vb : []).entries()) {
-            var Vb;
-            if (!Wb(bb, ab, Ab) || !Nb(Mb)) return Yb
+          for (const [Fz, Wz] of(null !== (Sz = zz.bufferViews) && void 0 !== Sz ? Sz : []).entries()) {
+            var Sz;
+            if (!ez(zz, tz, Fz) || !Cz(Wz)) return oz
           }
-          const Ob = null !== (Ib = bb.accessors) && void 0 !== Ib ? Ib : [];
-          for (const Ab of Ob) {
-            if (void 0 !== Ab.sparse) return "uses sparse accessors";
-            const ab = Number.isInteger(Ab.count) ? yb(Ab.count, Mb.accessorElements, "elements in an accessor") : null;
-            if (ab) return ab;
-            if (!Hb(bb, Ab)) return Yb
+          const Vz = null !== (Gz = zz.accessors) && void 0 !== Gz ? Gz : [];
+          for (const Fz of Vz) {
+            if (void 0 !== Fz.sparse) return "uses sparse accessors";
+            const tz = Number.isInteger(Fz.count) ? Hz(Fz.count, Wz.accessorElements, "elements in an accessor") : null;
+            if (tz) return tz;
+            if (!Zz(zz, Fz)) return oz
           }
-          const cb = null !== (db = bb.scenes) && void 0 !== db ? db : [];
-          if (1 !== cb.length) return `has ${cb.length} scenes`;
-          const Jb = (0, Ab.s)(bb);
-          if (void 0 !== Jb && 0 !== Jb) return Yb;
-          const nb = null !== (Fb = bb.nodes) && void 0 !== Fb ? Fb : [],
-            Sb = null !== (hb = bb.meshes) && void 0 !== hb ? hb : [],
-            ba = null !== (Gb = bb.materials) && void 0 !== Gb ? Gb : [],
-            aa = null !== (Qb = bb.textures) && void 0 !== Qb ? Qb : [],
-            Ua = null !== (qb = bb.images) && void 0 !== qb ? qb : [],
-            Aa = null !== (ub = null !== (rb = null !== (Kb = yb(nb.length, Mb.nodes, "nodes")) && void 0 !== Kb ? Kb : yb(Sb.length, Mb.meshes, "meshes")) && void 0 !== rb ? rb : yb(ba.length, Mb.materials, "materials")) && void 0 !== ub ? ub : yb(Ua.length, Mb.images, "images");
-          if (Aa) return Aa;
-          const Ma = new Set;
-          for (const Ab of nb)
-            for (const bb of null !== (Ta = Ab.children) && void 0 !== Ta ? Ta : []) {
-              var Ta;
-              if (!Zb(bb, nb.length) || Ma.has(bb)) return Yb;
-              Ma.add(bb)
+          const Rz = null !== (Tz = zz.scenes) && void 0 !== Tz ? Tz : [];
+          if (1 !== Rz.length) return `has ${Rz.length} scenes`;
+          const pz = (0, Fz.u)(zz);
+          if (void 0 !== pz && 0 !== pz) return oz;
+          const fz = null !== (cz = zz.nodes) && void 0 !== cz ? cz : [],
+            Ez = null !== (jz = zz.meshes) && void 0 !== jz ? jz : [],
+            zt = null !== (Az = zz.materials) && void 0 !== Az ? Az : [],
+            tt = null !== (yz = zz.textures) && void 0 !== yz ? yz : [],
+            st = null !== (Mz = zz.images) && void 0 !== Mz ? Mz : [],
+            Ft = null !== (dz = null !== (hz = null !== (Qz = Hz(fz.length, Wz.nodes, "nodes")) && void 0 !== Qz ? Qz : Hz(Ez.length, Wz.meshes, "meshes")) && void 0 !== hz ? hz : Hz(zt.length, Wz.materials, "materials")) && void 0 !== dz ? dz : Hz(st.length, Wz.images, "images");
+          if (Ft) return Ft;
+          const Wt = new Set;
+          for (const Fz of fz)
+            for (const zz of null !== (Xt = Fz.children) && void 0 !== Xt ? Xt : []) {
+              var Xt;
+              if (!Bz(zz, fz.length) || Wt.has(zz)) return oz;
+              Wt.add(zz)
             }
-          const Ea = new Set,
-            Ya = bb => {
-              var ab;
-              return !Ea.has(bb) && (Ea.add(bb), (null !== (ab = nb[bb].children) && void 0 !== ab ? ab : []).every(Ya))
+          const Ot = new Set,
+            ot = zz => {
+              var tz;
+              return !Ot.has(zz) && (Ot.add(zz), (null !== (tz = fz[zz].children) && void 0 !== tz ? tz : []).every(ot))
             };
-          for (const Ab of null !== (Ba = cb[0].nodes) && void 0 !== Ba ? Ba : []) {
-            var Ba;
-            if (!Zb(Ab, nb.length) || Ma.has(Ab) || !Ya(Ab)) return Yb
+          for (const Fz of null !== (vt = Rz[0].nodes) && void 0 !== vt ? vt : []) {
+            var vt;
+            if (!Bz(Fz, fz.length) || Wt.has(Fz) || !ot(Fz)) return oz
           }
-          for (const Ab of nb) {
-            if (void 0 !== Ab.matrix) return "uses node matrices";
-            if (void 0 !== Ab.skin) return "uses skins";
-            if (void 0 !== Ab.weights) return "uses morph targets";
-            if (void 0 !== Ab.mesh && !Zb(Ab.mesh, Sb.length)) return Yb;
-            const bb = [
-              [Ab.translation, 3],
-              [Ab.rotation, 4],
-              [Ab.scale, 3]
+          for (const Fz of fz) {
+            if (void 0 !== Fz.matrix) return "uses node matrices";
+            if (void 0 !== Fz.skin) return "uses skins";
+            if (void 0 !== Fz.weights) return "uses morph targets";
+            if (void 0 !== Fz.mesh && !Bz(Fz.mesh, Ez.length)) return oz;
+            const zz = [
+              [Fz.translation, 3],
+              [Fz.rotation, 4],
+              [Fz.scale, 3]
             ];
-            for (const [ab, Ub] of bb)
-              if (void 0 !== ab && (!Array.isArray(ab) || ab.length !== Ub || !ab.every((bb => Number.isFinite(bb))))) return Yb
+            for (const [tz, sz] of zz)
+              if (void 0 !== tz && (!Array.isArray(tz) || tz.length !== sz || !tz.every((zz => Number.isFinite(zz))))) return oz
           }
-          let ea = -1,
-            va = 0,
-            La = 0,
-            Pa = null;
-          for (const Mb of Sb) {
-            if (void 0 !== Mb.weights) return "uses morph targets";
-            if (0 === Mb.primitives.length) return Yb;
-            for (const Ub of Mb.primitives) {
-              var Xa, ja;
-              const Mb = null !== (Xa = Ub.mode) && void 0 !== Xa ? Xa : 4;
-              var Ra;
-              if (4 !== Mb && 0 !== Mb) return `uses ${null!==(Ra=jb[Mb])&&void 0!==Ra?Ra:`mode ${Mb}`} primitives`;
-              if (void 0 !== Ub.targets) return "uses morph targets";
-              if (void 0 !== Ub.material && !Zb(Ub.material, ba.length)) return Yb;
-              const Tb = tb ? null === (ja = Ub.extensions) || void 0 === ja ? void 0 : ja.KHR_draco_mesh_compression : void 0;
-              if (Tb) {
-                if (4 !== Mb) return "uses Draco-compressed points";
-                if (!Wb(bb, ab, Tb.bufferView) || "object" !== typeof Tb.attributes) return Yb
+          let Ut = -1,
+            Kt = 0,
+            ut = 0,
+            Nt = null;
+          for (const Wz of Ez) {
+            if (void 0 !== Wz.weights) return "uses morph targets";
+            if (0 === Wz.primitives.length) return oz;
+            for (const sz of Wz.primitives) {
+              var bt, wt;
+              const Wz = null !== (bt = sz.mode) && void 0 !== bt ? bt : 4;
+              var Dt;
+              if (4 !== Wz && 0 !== Wz) return `uses ${null!==(Dt=wz[Wz])&&void 0!==Dt?Dt:`mode ${Wz}`} primitives`;
+              if (void 0 !== sz.targets) return "uses morph targets";
+              if (void 0 !== sz.material && !Bz(sz.material, zt.length)) return oz;
+              const Xz = Lz ? null === (wt = sz.extensions) || void 0 === wt ? void 0 : wt.KHR_draco_mesh_compression : void 0;
+              if (Xz) {
+                if (4 !== Wz) return "uses Draco-compressed points";
+                if (!ez(zz, tz, Xz.bufferView) || "object" !== typeof Xz.attributes) return oz
               }
-              const Eb = Ub.attributes;
-              if ("object" !== typeof Eb || null === Eb) return Yb;
-              if (void 0 === Eb.POSITION) return "has a primitive with no positions";
-              if (!Zb(Eb.POSITION, Ob.length)) return Yb;
-              const Bb = Ob[Eb.POSITION].count;
-              for (const [bb, ab] of Object.entries(Eb)) {
-                if (!Zb(ab, Ob.length)) return Yb;
-                if (/^(JOINTS|WEIGHTS)_\d+$/.test(bb)) return "uses skins";
-                const Ub = Ob[ab],
-                  Ab = vb[bb];
-                if (Ab && (Ub.componentType !== Rb || Ub.normalized || Ub.type !== Ab)) return `stores ${bb} as ${ib(Ub)}`;
-                const Mb = Pb[bb];
-                if (Mb && (Ub.type !== Mb.type || !Mb.componentTypes.includes(Ub.componentType) || Ub.componentType === Rb === !!Ub.normalized)) return `stores ${bb} as ${ib(Ub)}`;
-                if (Xb.has(bb) && Ub.count !== Bb) return "has vertex attributes of different lengths"
+              const Oz = sz.attributes;
+              if ("object" !== typeof Oz || null === Oz) return oz;
+              if (void 0 === Oz.POSITION) return "has a primitive with no positions";
+              if (!Bz(Oz.POSITION, Vz.length)) return oz;
+              const vz = Vz[Oz.POSITION].count;
+              for (const [zz, tz] of Object.entries(Oz)) {
+                if (!Bz(tz, Vz.length)) return oz;
+                if (/^(JOINTS|WEIGHTS)_\d+$/.test(zz)) return "uses skins";
+                const sz = Vz[tz],
+                  Fz = Kz[zz];
+                if (Fz && (sz.componentType !== Dz || sz.normalized || sz.type !== Fz)) return `stores ${zz} as ${xz(sz)}`;
+                const Wz = Nz[zz];
+                if (Wz && (sz.type !== Wz.type || !Wz.componentTypes.includes(sz.componentType) || sz.componentType === Dz === !!sz.normalized)) return `stores ${zz} as ${xz(sz)}`;
+                if (bz.has(zz) && sz.count !== vz) return "has vertex attributes of different lengths"
               }
-              if (Tb) {
-                if (void 0 === Ub.indices) return Yb;
-                for (const ab in Tb.attributes)
-                  if (Xb.has(ab) && void 0 === Eb[ab]) return Yb;
-                if (void 0 === Tb.attributes.POSITION) return Yb;
-                const bb = Zb(Ub.indices, Ob.length) ? Ob[Ub.indices].count : -1;
-                if (0 === bb) return Yb;
-                if (-1 === ea) ea = Tb.bufferView, va = Bb, La = bb;
+              if (Xz) {
+                if (void 0 === sz.indices) return oz;
+                for (const tz in Xz.attributes)
+                  if (bz.has(tz) && void 0 === Oz[tz]) return oz;
+                if (void 0 === Xz.attributes.POSITION) return oz;
+                const zz = Bz(sz.indices, Vz.length) ? Vz[sz.indices].count : -1;
+                if (0 === zz) return oz;
+                if (-1 === Ut) Ut = Xz.bufferView, Kt = vz, ut = zz;
                 else {
-                  Pa ??= new Map([
-                    [ea, [va, La]]
+                  Nt ??= new Map([
+                    [Ut, [Kt, ut]]
                   ]);
-                  const ab = Pa.get(Tb.bufferView);
-                  if (ab && (ab[0] !== Bb || ab[1] !== bb)) return Yb;
-                  Pa.set(Tb.bufferView, null !== ab && void 0 !== ab ? ab : [Bb, bb])
+                  const tz = Nt.get(Xz.bufferView);
+                  if (tz && (tz[0] !== vz || tz[1] !== zz)) return oz;
+                  Nt.set(Xz.bufferView, null !== tz && void 0 !== tz ? tz : [vz, zz])
                 }
               }
-              let eb = Bb;
-              if (void 0 !== Ub.indices) {
-                if (!Zb(Ub.indices, Ob.length)) return Yb;
-                const bb = Ob[Ub.indices];
-                if ("SCALAR" !== bb.type) return Yb;
-                if (5121 === bb.componentType) return "uses 8-bit indices";
-                var ka;
-                if (5123 !== bb.componentType && 5125 !== bb.componentType) return `stores indices as ${null!==(ka=Ab.g[bb.componentType])&&void 0!==ka?ka:bb.componentType}`;
-                if (!Tb && void 0 === bb.bufferView) return Yb;
-                eb = bb.count
+              let Uz = vz;
+              if (void 0 !== sz.indices) {
+                if (!Bz(sz.indices, Vz.length)) return oz;
+                const zz = Vz[sz.indices];
+                if ("SCALAR" !== zz.type) return oz;
+                if (5121 === zz.componentType) return "uses 8-bit indices";
+                var gt;
+                if (5123 !== zz.componentType && 5125 !== zz.componentType) return `stores indices as ${null!==(gt=Fz.f[zz.componentType])&&void 0!==gt?gt:zz.componentType}`;
+                if (!Xz && void 0 === zz.bufferView) return oz;
+                Uz = zz.count
               }
-              if (4 === Mb && eb % 3 !== 0) return Yb
+              if (4 === Wz && Uz % 3 !== 0) return oz
             }
           }
-          let ya = 0,
-            Za = 0,
-            Da = 0;
-          for (let Ab = 0; Ab < nb.length; Ab++) {
-            const bb = nb[Ab].mesh;
-            if (void 0 !== bb && Ea.has(Ab))
-              for (const ab of Sb[bb].primitives) Da++, ya += Ob[ab.attributes.POSITION].count, void 0 !== ab.indices && (Za += Ob[ab.indices].count)
+          let Ht = 0,
+            Bt = 0,
+            Pt = 0;
+          for (let Fz = 0; Fz < fz.length; Fz++) {
+            const zz = fz[Fz].mesh;
+            if (void 0 !== zz && Ot.has(Fz))
+              for (const tz of Ez[zz].primitives) Pt++, Ht += Vz[tz.attributes.POSITION].count, void 0 !== tz.indices && (Bt += Vz[tz.indices].count)
           }
-          const za = null !== (ob = null !== (lb = yb(ya, Mb.vertices, "vertices")) && void 0 !== lb ? lb : yb(Za, Mb.indices, "indices")) && void 0 !== ob ? ob : yb(Da, Mb.primitives, "primitives");
-          if (za) return za;
-          for (const Ab of ba) {
-            var xa, ia;
-            if (void 0 !== Ab.emissiveTexture) return "uses an emissive texture";
-            const ab = null !== (xa = Ab.alphaMode) && void 0 !== xa ? xa : "OPAQUE";
-            if ("OPAQUE" !== ab && "MASK" !== ab && "BLEND" !== ab) return Yb;
-            const Ub = null === (ia = Ab.pbrMetallicRoughness) || void 0 === ia ? void 0 : ia.baseColorTexture;
-            if (Ub) {
-              var fa, ma, pa, Na, Wa;
-              const ab = null !== (fa = bb.extensionsUsed) && void 0 !== fa && fa.includes("KHR_texture_transform") ? null === (ma = Ub.extensions) || void 0 === ma ? void 0 : ma.KHR_texture_transform : void 0;
-              if (0 !== (null !== (pa = Ub.texCoord) && void 0 !== pa ? pa : 0) || 0 !== (null !== (Na = null === ab || void 0 === ab ? void 0 : ab.texCoord) && void 0 !== Na ? Na : 0)) return "uses a second UV set";
-              const Ab = aa[Ub.index];
-              if (!Ab || !Zb(Ab.source, Ua.length) || void 0 !== Ab.sampler && !Zb(Ab.sampler, null === (Wa = bb.samplers) || void 0 === Wa ? void 0 : Wa.length)) return Yb
+          const rt = null !== (kz = null !== (iz = Hz(Ht, Wz.vertices, "vertices")) && void 0 !== iz ? iz : Hz(Bt, Wz.indices, "indices")) && void 0 !== kz ? kz : Hz(Pt, Wz.primitives, "primitives");
+          if (rt) return rt;
+          for (const Fz of zt) {
+            var Yt, xt;
+            if (void 0 !== Fz.emissiveTexture) return "uses an emissive texture";
+            const tz = null !== (Yt = Fz.alphaMode) && void 0 !== Yt ? Yt : "OPAQUE";
+            if ("OPAQUE" !== tz && "MASK" !== tz && "BLEND" !== tz) return oz;
+            const sz = null === (xt = Fz.pbrMetallicRoughness) || void 0 === xt ? void 0 : xt.baseColorTexture;
+            if (sz) {
+              var mt, Jt, It, Ct, et;
+              const tz = null !== (mt = zz.extensionsUsed) && void 0 !== mt && mt.includes("KHR_texture_transform") ? null === (Jt = sz.extensions) || void 0 === Jt ? void 0 : Jt.KHR_texture_transform : void 0;
+              if (0 !== (null !== (It = sz.texCoord) && void 0 !== It ? It : 0) || 0 !== (null !== (Ct = null === tz || void 0 === tz ? void 0 : tz.texCoord) && void 0 !== Ct ? Ct : 0)) return "uses a second UV set";
+              const Fz = tt[sz.index];
+              if (!Fz || !Bz(Fz.source, st.length) || void 0 !== Fz.sampler && !Bz(Fz.sampler, null === (et = zz.samplers) || void 0 === et ? void 0 : et.length)) return oz
             }
           }
-          for (const Ab of Ua) {
-            if (void 0 !== Ab.uri) return Bb;
-            if (void 0 === Ab.bufferView) return Yb;
-            const Ub = Wb(bb, ab, Ab.bufferView);
-            if (!Ub) return Yb;
-            if ("image/png" !== Ab.mimeType) {
-              var Ha, Ia, da;
-              return `has ${pb(null!==(Ha=null!==(Ia={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(da=Ab.mimeType)&&void 0!==da?da:""])&&void 0!==Ia?Ia:Ab.mimeType)&&void 0!==Ha?Ha:"untyped")} image`
+          for (const Fz of st) {
+            if (void 0 !== Fz.uri) return vz;
+            if (void 0 === Fz.bufferView) return oz;
+            const sz = ez(zz, tz, Fz.bufferView);
+            if (!sz) return oz;
+            if ("image/png" !== Fz.mimeType) {
+              var Zt, Gt, Tt;
+              return `has ${Iz(null!==(Zt=null!==(Gt={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(Tt=Fz.mimeType)&&void 0!==Tt?Tt:""])&&void 0!==Gt?Gt:Fz.mimeType)&&void 0!==Zt?Zt:"untyped")} image`
             }
-            if (!mb(Ub)) return `has ${pb(fb(Ub))} image`;
-            const Tb = new DataView(Ub.buffer, Ub.byteOffset, Ub.byteLength),
-              Eb = Tb.getUint32(16),
-              eb = Tb.getUint32(20);
-            if (Eb > Mb.imageSide || eb > Mb.imageSide) return `has a ${Eb} \xd7 ${eb} image (the limit is ${Mb.imageSide})`
+            if (!Jz(sz)) return `has ${Iz(mz(sz))} image`;
+            const Xz = new DataView(sz.buffer, sz.byteOffset, sz.byteLength),
+              Oz = Xz.getUint32(16),
+              Uz = Xz.getUint32(20);
+            if (Oz > Wz.imageSide || Uz > Wz.imageSide) return `has a ${Oz} \xd7 ${Uz} image (the limit is ${Wz.imageSide})`
           }
           return null
-        }(bb, ab)
+        }(zz, tz)
       } catch {
-        return Yb
+        return oz
       }
     }
 
-    function Fb(bb) {
-      const ab = Ib(bb.byteLength);
-      if (ab) return ab;
+    function cz(zz) {
+      const tz = Gz(zz.byteLength);
+      if (tz) return tz;
       try {
         const {
-          json: ab,
-          bin: Ub
-        } = (0, Ab.v)(bb);
-        return db(ab, Ub)
-      } catch (Ub) {
-        if (Ub instanceof Ab.j) return Ub.reason;
-        throw Ub
+          json: tz,
+          bin: sz
+        } = (0, Fz.y)(zz);
+        return Tz(tz, sz)
+      } catch (sz) {
+        if (sz instanceof Fz.m) return sz.reason;
+        throw sz
       }
     }
   },
-  8985: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Xb,
-      g: () => Pb,
-      h: () => Rb,
-      i: () => Tb,
-      j: () => Mb,
-      k: () => jb,
-      n: () => vb,
-      r: () => Lb,
-      s: () => Eb,
-      v: () => eb
+  8930: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => bz,
+      f: () => Nz,
+      j: () => Dz,
+      l: () => Xz,
+      m: () => Wz,
+      n: () => wz,
+      o: () => Kz,
+      r: () => uz,
+      u: () => Oz,
+      y: () => Uz
     });
-    var Ab = Ub(8989);
-    class Mb extends Error {
-      constructor(bb) {
-        super(`GLB refused: it ${bb}`), this.reason = bb, this.name = "GlbRefused"
+    var Fz = sz(8934);
+    class Wz extends Error {
+      constructor(zz) {
+        super(`GLB refused: it ${zz}`), this.reason = zz, this.name = "GlbRefused"
       }
     }
-    class Tb extends Error {
-      constructor(bb) {
-        super(bb), this.name = "GlbError"
+    class Xz extends Error {
+      constructor(zz) {
+        super(zz), this.name = "GlbError"
       }
     }
 
-    function Eb(bb) {
-      return Reflect.get(bb, "scene")
+    function Oz(zz) {
+      return Reflect.get(zz, "scene")
     }
-    const Yb = 5130562,
-      Bb = "is not a binary glTF 2.0 file";
+    const oz = 5130562,
+      vz = "is not a binary glTF 2.0 file";
 
-    function eb(bb) {
-      var ab;
-      const Ub = bb instanceof Uint8Array ? bb : new Uint8Array(bb),
-        Tb = (0, Ab.e)(Ub);
-      if (null === Tb) throw new Mb(Bb);
-      const Eb = Tb.json,
+    function Uz(zz) {
+      var tz;
+      const sz = zz instanceof Uint8Array ? zz : new Uint8Array(zz),
+        Xz = (0, Fz.f)(sz);
+      if (null === Xz) throw new Wz(vz);
+      const Oz = Xz.json,
         {
-          jsonEnd: eb,
-          length: vb
-        } = Tb,
-        Lb = new DataView(Ub.buffer, Ub.byteOffset, Ub.byteLength);
-      let Pb = -1,
-        Xb = 0;
-      for (let kb = eb; kb < vb;) {
-        if (kb + 8 > vb) throw new Mb(Bb);
-        const bb = Lb.getUint32(kb, !0),
-          ab = Lb.getUint32(kb + 4, !0);
-        if (kb + 8 + bb > vb || ab === Ab.b || ab === Yb && -1 !== Pb) throw new Mb(Bb);
-        ab === Yb && (Pb = kb + 8, Xb = bb), kb += 8 + bb
+          jsonEnd: Uz,
+          length: Kz
+        } = Xz,
+        uz = new DataView(sz.buffer, sz.byteOffset, sz.byteLength);
+      let Nz = -1,
+        bz = 0;
+      for (let gz = Uz; gz < Kz;) {
+        if (gz + 8 > Kz) throw new Wz(vz);
+        const zz = uz.getUint32(gz, !0),
+          tz = uz.getUint32(gz + 4, !0);
+        if (gz + 8 + zz > Kz || tz === Fz.b || tz === oz && -1 !== Nz) throw new Wz(vz);
+        tz === oz && (Nz = gz + 8, bz = zz), gz += 8 + zz
       }
-      let jb = null;
-      const Rb = null === (ab = Eb.buffers) || void 0 === ab ? void 0 : ab[0];
-      if (-1 !== Pb && Rb && void 0 === Rb.uri) {
-        if (!(Rb.byteLength >= 0) || Rb.byteLength > Xb) throw new Mb(Bb);
-        jb = new Uint8Array(Ub.buffer, Ub.byteOffset + Pb, Rb.byteLength)
+      let wz = null;
+      const Dz = null === (tz = Oz.buffers) || void 0 === tz ? void 0 : tz[0];
+      if (-1 !== Nz && Dz && void 0 === Dz.uri) {
+        if (!(Dz.byteLength >= 0) || Dz.byteLength > bz) throw new Wz(vz);
+        wz = new Uint8Array(sz.buffer, sz.byteOffset + Nz, Dz.byteLength)
       }
       return {
-        json: Eb,
-        bin: jb,
-        fileBytes: Ub.byteLength
+        json: Oz,
+        bin: wz,
+        fileBytes: sz.byteLength
       }
     }
 
-    function vb(bb) {
-      const ab = bb.slice(bb.indexOf(",") + 1),
-        Ub = Uint8Array.fromBase64;
-      if (Ub) return Ub(ab).buffer;
-      const Ab = atob(ab),
-        Mb = new Uint8Array(Ab.length);
-      for (let Tb = 0; Tb < Ab.length; Tb++) Mb[Tb] = Ab.charCodeAt(Tb);
-      return Mb.buffer
+    function Kz(zz) {
+      const tz = zz.slice(zz.indexOf(",") + 1),
+        sz = Uint8Array.fromBase64;
+      if (sz) return sz(tz).buffer;
+      const Fz = atob(tz),
+        Wz = new Uint8Array(Fz.length);
+      for (let Xz = 0; Xz < Fz.length; Xz++) Wz[Xz] = Fz.charCodeAt(Xz);
+      return Wz.buffer
     }
-    async function Lb(bb) {
-      if (bb.startsWith("data:")) return vb(bb);
-      const ab = await fetch(bb);
-      if (!ab.ok) throw new Tb(`fetching ${bb} failed: ${ab.status} ${ab.statusText}`);
-      return await ab.arrayBuffer()
+    async function uz(zz) {
+      if (zz.startsWith("data:")) return Kz(zz);
+      const tz = await fetch(zz);
+      if (!tz.ok) throw new Xz(`fetching ${zz} failed: ${tz.status} ${tz.statusText}`);
+      return await tz.arrayBuffer()
     }
-    const Pb = {
+    const Nz = {
         5120: "i8",
         5121: "u8",
         5122: "i16",
@@ -482,7 +482,7 @@ export const modules = {
         5125: "u32",
         5126: "f32"
       },
-      Xb = {
+      bz = {
         5120: 1,
         5121: 1,
         5122: 2,
@@ -490,7 +490,7 @@ export const modules = {
         5125: 4,
         5126: 4
       },
-      jb = {
+      wz = {
         SCALAR: 1,
         VEC2: 2,
         VEC3: 3,
@@ -499,7 +499,7 @@ export const modules = {
         MAT3: 9,
         MAT4: 16
       },
-      Rb = [
+      Dz = [
         ["POSITION", "position"],
         ["NORMAL", "normal"],
         ["TANGENT", "tangent"],
@@ -512,48 +512,48 @@ export const modules = {
         ["COLOR_0", "color"]
       ]
   },
-  8989: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Mb,
-      e: () => Tb,
-      f: () => Eb
+  8934: (zz, tz, sz) => {
+    sz.d(tz, {
+      b: () => Wz,
+      f: () => Xz,
+      i: () => Oz
     });
-    const Ab = 1179937895,
-      Mb = 1313821514;
+    const Fz = 1179937895,
+      Wz = 1313821514;
 
-    function Tb(bb) {
-      const ab = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
-      if (bb.byteLength < 20 || ab.getUint32(0, !0) !== Ab || 2 !== ab.getUint32(4, !0)) return null;
-      const Ub = Math.min(ab.getUint32(8, !0), bb.byteLength),
-        Tb = ab.getUint32(12, !0);
-      if (ab.getUint32(16, !0) !== Mb || 20 + Tb > Ub) return null;
-      let Eb;
+    function Xz(zz) {
+      const tz = new DataView(zz.buffer, zz.byteOffset, zz.byteLength);
+      if (zz.byteLength < 20 || tz.getUint32(0, !0) !== Fz || 2 !== tz.getUint32(4, !0)) return null;
+      const sz = Math.min(tz.getUint32(8, !0), zz.byteLength),
+        Xz = tz.getUint32(12, !0);
+      if (tz.getUint32(16, !0) !== Wz || 20 + Xz > sz) return null;
+      let Oz;
       try {
-        Eb = JSON.parse((new TextDecoder).decode(bb.subarray(20, 20 + Tb)))
+        Oz = JSON.parse((new TextDecoder).decode(zz.subarray(20, 20 + Xz)))
       } catch {
         return null
       }
-      return "object" === typeof Eb && null !== Eb ? {
-        json: Eb,
-        jsonEnd: 20 + Tb,
-        length: Ub
+      return "object" === typeof Oz && null !== Oz ? {
+        json: Oz,
+        jsonEnd: 20 + Xz,
+        length: sz
       } : null
     }
 
-    function Eb(bb) {
-      var ab;
-      const Ub = null === (ab = Tb(bb)) || void 0 === ab ? void 0 : ab.json;
-      if (void 0 === Ub || !Array.isArray(Ub.extensionsUsed) || !Ub.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const Ab = Ub.meshes;
-      return Array.isArray(Ab) && Ab.some((bb => {
-        const ab = null === bb || void 0 === bb ? void 0 : bb.primitives;
-        return Array.isArray(ab) && ab.some((bb => {
-          const ab = null === bb || void 0 === bb ? void 0 : bb.extensions;
-          return null != (null === ab || void 0 === ab ? void 0 : ab.KHR_draco_mesh_compression)
+    function Oz(zz) {
+      var tz;
+      const sz = null === (tz = Xz(zz)) || void 0 === tz ? void 0 : tz.json;
+      if (void 0 === sz || !Array.isArray(sz.extensionsUsed) || !sz.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
+      const Fz = sz.meshes;
+      return Array.isArray(Fz) && Fz.some((zz => {
+        const tz = null === zz || void 0 === zz ? void 0 : zz.primitives;
+        return Array.isArray(tz) && tz.some((zz => {
+          const tz = null === zz || void 0 === zz ? void 0 : zz.extensions;
+          return null != (null === tz || void 0 === tz ? void 0 : tz.KHR_draco_mesh_compression)
         }))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

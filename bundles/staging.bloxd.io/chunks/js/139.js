@@ -1,17 +1,17 @@
 export const id = 139;
 export const ids = [139];
 export const modules = {
-  7666: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      BloxdFirebaseSdk: () => vb
+  7605: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      BloxdFirebaseSdk: () => Kz
     });
-    var Ab = Ub(1725),
-      Mb = Ub(2636),
-      Tb = Ub(109),
-      Eb = Ub(101),
-      Yb = Ub(1605),
-      Bb = Ub(1945);
-    const eb = {
+    var Fz = sz(1770),
+      Wz = sz(2662),
+      Xz = sz(116),
+      Oz = sz(106),
+      oz = sz(1636),
+      vz = sz(1983);
+    const Uz = {
       apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
       authDomain: "bloxd-ee1aa.firebaseapp.com",
       projectId: "bloxd-ee1aa",
@@ -19,142 +19,142 @@ export const modules = {
       messagingSenderId: "758847442742",
       appId: "1:758847442742:web:7bb74eb261641e30f02d97"
     };
-    class vb {
+    class Kz {
       constructor() {}
       static async setup() {
         try {
-          return await vb.setupInternal()
-        } catch (bb) {
-          return console.error("Failed to setup Firebase SDK:", bb), null
+          return await Kz.setupInternal()
+        } catch (zz) {
+          return console.error("Failed to setup Firebase SDK:", zz), null
         }
       }
       static async setupInternal() {
-        const bb = await Promise.all([Ub.e(256), Ub.e(255)]).then((() => Ub(39624))),
-          ab = await Promise.all([Ub.e(256), Ub.e(257)]).then((() => Ub(39646))),
-          Lb = await Promise.all([Ub.e(256), Ub.e(258)]).then((() => Ub(39653))),
-          Pb = bb.initializeApp({
-            ...eb,
-            measurementId: Mb.b
+        const zz = await Promise.all([sz.e(256), sz.e(255)]).then((() => sz(39641))),
+          tz = await Promise.all([sz.e(256), sz.e(257)]).then((() => sz(39669))),
+          uz = await Promise.all([sz.e(256), sz.e(258)]).then((() => sz(39675))),
+          Nz = zz.initializeApp({
+            ...Uz,
+            measurementId: Wz.e
           });
-        (0, Mb.A)(), window.gtag("config", Mb.b), (0, Mb.v)(), window.gtag("config", "AW-16469618203");
-        const Xb = ab.getAnalytics(Pb),
-          jb = {
-            portal: Tb.currentUrl.getSearchParam("portal") || "root",
+        (0, Wz.D)(), window.gtag("config", Wz.e), (0, Wz.z)(), window.gtag("config", "AW-16469618203");
+        const bz = tz.getAnalytics(Nz),
+          wz = {
+            portal: Xz.currentUrl.getSearchParam("portal") || "root",
             loggedIn: !1
           };
-        ab.setUserProperties(Xb, jb);
-        const Rb = Lb.getAuth();
-        Lb.useDeviceLanguage(Rb);
-        const kb = new Lb.GoogleAuthProvider;
-        kb.setCustomParameters({
+        tz.setUserProperties(bz, wz);
+        const Dz = uz.getAuth();
+        uz.useDeviceLanguage(Dz);
+        const gz = new uz.GoogleAuthProvider;
+        gz.setCustomParameters({
           prompt: "select_account"
         });
-        const yb = new Lb.OAuthProvider(Ab.j[Ab.e.APPLE]),
-          Zb = new Lb.OAuthProvider(Ab.j[Ab.e.MICROSOFT]);
-        Zb.setCustomParameters({
+        const Hz = new uz.OAuthProvider(Fz.j[Fz.d.APPLE]),
+          Bz = new uz.OAuthProvider(Fz.j[Fz.d.MICROSOFT]);
+        Bz.setCustomParameters({
           prompt: "select_account",
           tenant: "consumers"
         });
-        const Db = {
-          [Ab.e.GOOGLE]: kb,
-          [Ab.e.APPLE]: yb,
-          [Ab.e.MICROSOFT]: Zb
+        const Pz = {
+          [Fz.d.GOOGLE]: gz,
+          [Fz.d.APPLE]: Hz,
+          [Fz.d.MICROSOFT]: Bz
         };
         window.gtag("set", {
           cookie_flags: "SameSite=None;Secure"
-        }), await new Promise((bb => {
-          const ab = Lb.onIdTokenChanged(Rb, (Ub => {
-            ab(), bb()
+        }), await new Promise((zz => {
+          const tz = uz.onIdTokenChanged(Dz, (sz => {
+            tz(), zz()
           }))
         }));
-        class zb extends vb {
-          setUserProperties(bb) {
-            ab.setUserProperties(Xb, bb)
+        class rz extends Kz {
+          setUserProperties(zz) {
+            tz.setUserProperties(bz, zz)
           }
-          onIdTokenChanged(bb) {
-            Lb.onIdTokenChanged(Rb, bb)
+          onIdTokenChanged(zz) {
+            uz.onIdTokenChanged(Dz, zz)
           }
           canSignIn() {
             return !0
           }
-          async signInWithPopup(bb) {
-            var ab;
-            const Ub = await Lb.signInWithPopup(Rb, Db[bb]);
-            return null !== (ab = null === Ub || void 0 === Ub ? void 0 : Ub.user) && void 0 !== ab ? ab : null
+          async signInWithPopup(zz) {
+            var tz;
+            const sz = await uz.signInWithPopup(Dz, Pz[zz]);
+            return null !== (tz = null === sz || void 0 === sz ? void 0 : sz.user) && void 0 !== tz ? tz : null
           }
-          async getCurrentUser(bb) {
-            const ab = Rb.currentUser;
-            if (!ab) return null;
+          async getCurrentUser(zz) {
+            const tz = Dz.currentUser;
+            if (!tz) return null;
             const {
-              signInProvider: Ub
-            } = await ab.getIdTokenResult(!1);
-            return Ub === Ab.j[bb] ? ab : null
+              signInProvider: sz
+            } = await tz.getIdTokenResult(!1);
+            return sz === Fz.j[zz] ? tz : null
           }
-          async signOut(bb) {
-            null !== await this.getCurrentUser(bb) && await Lb.signOut(Rb)
+          async signOut(zz) {
+            null !== await this.getCurrentUser(zz) && await uz.signOut(Dz)
           }
         }
-        async function xb(bb, ab) {
-          const Ub = await Yb.d.request(`${bb}.${ab}`, {});
-          if (null === Ub) return null;
-          const Ab = "google" === bb ? Lb.GoogleAuthProvider.credential(Ub.idToken) : yb.credential({
-            idToken: Ub.idToken
+        async function Yz(zz, tz) {
+          const sz = await oz.c.request(`${zz}.${tz}`, {});
+          if (null === sz) return null;
+          const Fz = "google" === zz ? uz.GoogleAuthProvider.credential(sz.idToken) : Hz.credential({
+            idToken: sz.idToken
           });
-          return (await Lb.signInWithCredential(Rb, Ab)).user
+          return (await uz.signInWithCredential(Dz, Fz)).user
         }
-        class ib extends vb {
-          setUserProperties(bb) {
-            ab.setUserProperties(Xb, bb)
+        class xz extends Kz {
+          setUserProperties(zz) {
+            tz.setUserProperties(bz, zz)
           }
-          onIdTokenChanged(bb) {
-            Lb.onIdTokenChanged(Rb, bb)
+          onIdTokenChanged(zz) {
+            uz.onIdTokenChanged(Dz, zz)
           }
-          canSignIn(bb) {
-            return null !== (0, Bb.d)(bb)
+          canSignIn(zz) {
+            return null !== (0, vz.d)(zz)
           }
-          async signInWithPopup(bb) {
-            const ab = (0, Bb.d)(bb);
-            if (null === ab) return console.warn(`The app can't sign in with ${bb}; check canSignIn first`), null;
+          async signInWithPopup(zz) {
+            const tz = (0, vz.d)(zz);
+            if (null === tz) return console.warn(`The app can't sign in with ${zz}; check canSignIn first`), null;
             try {
-              return await xb(ab, "signIn")
-            } catch (Ub) {
-              return console.error(`Failed to sign in with ${bb} in the app:`, Ub), null
+              return await Yz(tz, "signIn")
+            } catch (sz) {
+              return console.error(`Failed to sign in with ${zz} in the app:`, sz), null
             }
           }
-          async getCurrentUser(bb) {
-            const ab = Rb.currentUser;
-            if (ab) {
+          async getCurrentUser(zz) {
+            const tz = Dz.currentUser;
+            if (tz) {
               const {
-                signInProvider: Ub
-              } = await ab.getIdTokenResult(!1);
-              if (Ub === Ab.j[bb]) return ab
+                signInProvider: sz
+              } = await tz.getIdTokenResult(!1);
+              if (sz === Fz.j[zz]) return tz
             }
-            const Ub = (0, Bb.d)(bb);
-            if (null === Ub) return null;
+            const sz = (0, vz.d)(zz);
+            if (null === sz) return null;
             try {
-              return await xb(Ub, "getCurrentUser")
-            } catch (Mb) {
-              return console.error(`Failed to get the current ${bb} user from the app:`, Mb), null
+              return await Yz(sz, "getCurrentUser")
+            } catch (Wz) {
+              return console.error(`Failed to get the current ${zz} user from the app:`, Wz), null
             }
           }
-          async signOut(bb) {
-            const ab = (0, Bb.d)(bb);
-            null !== ab && Yb.d.request(`${ab}.signOut`, {}).catch((ab => {
-              console.error(`Failed to sign out of ${bb} in the app:`, ab)
+          async signOut(zz) {
+            const tz = (0, vz.d)(zz);
+            null !== tz && oz.c.request(`${tz}.signOut`, {}).catch((tz => {
+              console.error(`Failed to sign out of ${zz} in the app:`, tz)
             }));
-            const Ub = Rb.currentUser;
-            if (Ub) {
+            const sz = Dz.currentUser;
+            if (sz) {
               const {
-                signInProvider: ab
-              } = await Ub.getIdTokenResult(!1);
-              ab === Ab.j[bb] && await Lb.signOut(Rb)
+                signInProvider: tz
+              } = await sz.getIdTokenResult(!1);
+              tz === Fz.j[zz] && await uz.signOut(Dz)
             }
           }
         }
-        return (0, Eb.isMobileApp)() ? (await Yb.d.ready, new ib) : new zb
+        return (0, Oz.isMobileApp)() ? (await oz.c.ready, new xz) : new rz
       }
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

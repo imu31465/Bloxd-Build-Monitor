@@ -1,279 +1,279 @@
 export const id = 260;
 export const ids = [260];
 export const modules = {
-  39859: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Tb,
-      h: () => Eb
+  39861: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => Xz,
+      e: () => Oz
     });
-    var Ab = Ub(1838);
-    let Mb = !1;
+    var Fz = sz(1868);
+    let Wz = !1;
 
-    function Tb() {
-      Mb = !0
+    function Xz() {
+      Wz = !0
     }
 
-    function Eb() {
-      Mb && (Mb = !1, (0, Ab.c)())
+    function Oz() {
+      Wz && (Wz = !1, (0, Fz.b)())
     }
   },
-  39870: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      c: () => Yb,
-      g: () => Eb
+  39867: (zz, tz, sz) => {
+    sz.d(tz, {
+      d: () => oz,
+      e: () => Oz
     });
-    var Ab = Ub(2991);
-    let Mb = null,
-      Tb = null;
+    var Fz = sz(2970);
+    let Wz = null,
+      Xz = null;
 
-    function Eb() {
-      return Tb ??= Ub.e(208).then((() => Ub(35785))).then((bb => {
+    function Oz() {
+      return Xz ??= sz.e(208).then((() => sz(35839))).then((zz => {
         let {
-          ITEM_SPRITES: ab,
-          ITEM_SPRITES_WITHOUT_FILE: Ub,
-          ITEM_FILES_WITHOUT_SPRITE: Tb
-        } = bb;
-        Mb = function(bb, ab, Ub) {
-          const Mb = new Set,
-            Tb = (0, Ab.C)(ab);
-          let Eb = 0;
-          for (const [Ab, Yb] of bb.entries()) Ab === Tb[Eb] ? Eb++ : Mb.add(Yb);
-          if ("" !== Ub)
-            for (const Yb of Ub.split(Ab.u)) Mb.add(Yb);
-          return Mb
-        }(ab.split(Ab.u), Ub, Tb)
-      }), (bb => {
-        throw Tb = null, bb
-      })), Tb
+          ITEM_SPRITES: tz,
+          ITEM_SPRITES_WITHOUT_FILE: sz,
+          ITEM_FILES_WITHOUT_SPRITE: Xz
+        } = zz;
+        Wz = function(zz, tz, sz) {
+          const Wz = new Set,
+            Xz = (0, Fz.t)(tz);
+          let Oz = 0;
+          for (const [Fz, oz] of zz.entries()) Fz === Xz[Oz] ? Oz++ : Wz.add(oz);
+          if ("" !== sz)
+            for (const oz of sz.split(Fz.o)) Wz.add(oz);
+          return Wz
+        }(tz.split(Fz.o), sz, Xz)
+      }), (zz => {
+        throw Xz = null, zz
+      })), Xz
     }
 
-    function Yb(bb) {
-      var ab, Ub;
-      return null !== (ab = null === (Ub = Mb) || void 0 === Ub ? void 0 : Ub.has(bb)) && void 0 !== ab && ab
+    function oz(zz) {
+      var tz, sz;
+      return null !== (tz = null === (sz = Wz) || void 0 === sz ? void 0 : sz.has(zz)) && void 0 !== tz && tz
     }
   },
-  39857: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      loadIcons: () => Wb,
-      setIconFileOverrides: () => Hb,
-      wasmIconLookups: () => rb,
-      wasmIconQueries: () => ub
+  39853: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      loadIcons: () => ez,
+      setIconFileOverrides: () => Zz,
+      wasmIconLookups: () => hz,
+      wasmIconQueries: () => dz
     });
-    var Ab = Ub(4174),
-      Mb = Ub(4147),
-      Tb = Ub(39859),
-      Eb = Ub(1838),
-      Yb = Ub(1824),
-      Bb = Ub(2989),
-      eb = Ub(2991);
-    let vb = null,
-      Lb = null;
+    var Fz = sz(4133),
+      Wz = sz(4105),
+      Xz = sz(39861),
+      Oz = sz(1868),
+      oz = sz(1857),
+      vz = sz(2965),
+      Uz = sz(2970);
+    let Kz = null,
+      uz = null;
 
-    function Pb(bb) {
-      const ab = bb.startsWith(eb.m),
-        [Ub, Ab = Ub, Mb = Ub] = (ab ? bb.slice(eb.m.length) : bb).split(eb.k);
+    function Nz(zz) {
+      const tz = zz.startsWith(Uz.k),
+        [sz, Fz = sz, Wz = sz] = (tz ? zz.slice(Uz.k.length) : zz).split(Uz.j);
       return {
-        top: Ub,
-        left: Ab,
-        right: Mb,
-        half: ab
+        top: sz,
+        left: Fz,
+        right: Wz,
+        half: tz
       }
     }
 
-    function Xb(bb) {
-      const ab = null === vb ? void 0 : (0, Bb.d)(bb),
-        Ub = void 0 === ab ? 0 : vb.codes[ab];
-      return 0 === Ub ? void 0 : vb.pool[Ub - 1]
+    function bz(zz) {
+      const tz = null === Kz ? void 0 : (0, vz.b)(zz),
+        sz = void 0 === tz ? 0 : Kz.codes[tz];
+      return 0 === sz ? void 0 : Kz.pool[sz - 1]
     }
-    var jb = Ub(2981),
-      Rb = Ub(4131),
-      kb = Ub(4165),
-      yb = Ub(39864);
-    const Zb = "item:";
-    let Db = null,
-      zb = null,
-      xb = null,
-      ib = null,
-      fb = !1,
-      mb = !1,
-      pb = null,
-      Nb = 0;
+    var wz = sz(2962),
+      Dz = sz(4094),
+      gz = sz(4126),
+      Hz = sz(39864);
+    const Bz = "item:";
+    let Pz = null,
+      rz = null,
+      Yz = null,
+      xz = null,
+      mz = !1,
+      Jz = !1,
+      Iz = null,
+      Cz = 0;
 
-    function Wb() {
-      return mb || (mb = !0, (0, kb.f)().then((bb => {
-        bb && (0, Eb.c)()
-      }))), xb ??= Promise.all([(0, jb.f)(), (Lb ??= Ub.e(1).then((() => Ub(41705))).then((bb => {
+    function ez() {
+      return Jz || (Jz = !0, (0, gz.h)().then((zz => {
+        zz && (0, Oz.b)()
+      }))), Yz ??= Promise.all([(0, wz.g)(), (uz ??= sz.e(1).then((() => sz(41694))).then((zz => {
         let {
-          BLOCK_FACE_RUNS: ab,
-          BLOCK_FACES: Ub,
-          MAX_FACE_ITEM_ID: Ab
-        } = bb;
-        vb = {
-          codes: (0, eb.E)(ab, Ab + 1),
-          pool: Ub.split(eb.u).map(Pb)
+          BLOCK_FACE_RUNS: tz,
+          BLOCK_FACES: sz,
+          MAX_FACE_ITEM_ID: Fz
+        } = zz;
+        Kz = {
+          codes: (0, Uz.x)(tz, Fz + 1),
+          pool: sz.split(Uz.o).map(Nz)
         }
-      }), (bb => {
-        throw Lb = null, bb
-      })), Lb), (0, yb.h)(), Ub.e(189).then((() => Ub(8922)))]).then((bb => {
-        let [, , ab, Ub] = bb;
-        ab.followBundledTextures(), Db = ab, zb = Ub, (0, Eb.c)()
-      }), (bb => {
-        xb = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", bb)
-      })), xb
+      }), (zz => {
+        throw uz = null, zz
+      })), uz), (0, Hz.f)(), sz.e(189).then((() => sz(8866)))]).then((zz => {
+        let [, , tz, sz] = zz;
+        tz.followBundledTextures(), Pz = tz, rz = sz, (0, Oz.b)()
+      }), (zz => {
+        Yz = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", zz)
+      })), Yz
     }
 
-    function Hb(bb) {
-      pb = bb, Nb++, (0, Eb.c)()
+    function Zz(zz) {
+      Iz = zz, Cz++, (0, Oz.b)()
     }
 
-    function Ib(bb) {
-      var ab, Ub;
-      return null !== (ab = null === (Ub = pb) || void 0 === Ub ? void 0 : Ub.itemSprite(bb)) && void 0 !== ab ? ab : Db.itemSpriteUrl(bb)
+    function Gz(zz) {
+      var tz, sz;
+      return null !== (tz = null === (sz = Iz) || void 0 === sz ? void 0 : sz.itemSprite(zz)) && void 0 !== tz ? tz : Pz.itemSpriteUrl(zz)
     }
 
-    function db(bb) {
-      var ab, Ub;
-      return null !== (ab = null === (Ub = pb) || void 0 === Ub ? void 0 : Ub.blockTexture(bb)) && void 0 !== ab ? ab : Db.blockTextureUrl(bb)
+    function Tz(zz) {
+      var tz, sz;
+      return null !== (tz = null === (sz = Iz) || void 0 === sz ? void 0 : sz.blockTexture(zz)) && void 0 !== tz ? tz : Pz.blockTextureUrl(zz)
     }
 
-    function Fb(bb) {
-      var ab;
-      return null !== (ab = (0, jb.c)(bb)) && void 0 !== ab ? ab : bb
+    function cz(zz) {
+      var tz;
+      return null !== (tz = (0, wz.e)(zz)) && void 0 !== tz ? tz : zz
     }
 
-    function hb(bb, ab) {
-      var Ub, Ab, Mb;
-      return null !== (Ub = null !== (Ab = null !== (Mb = db(bb)) && void 0 !== Mb ? Mb : null === ab || void 0 === ab ? void 0 : ab.rotated[bb]) && void 0 !== Ab ? Ab : null === ab || void 0 === ab ? void 0 : ab.animated[bb]) && void 0 !== Ub ? Ub : Db.notFoundUrl()
+    function jz(zz, tz) {
+      var sz, Fz, Wz;
+      return null !== (sz = null !== (Fz = null !== (Wz = Tz(zz)) && void 0 !== Wz ? Wz : null === tz || void 0 === tz ? void 0 : tz.rotated[zz]) && void 0 !== Fz ? Fz : null === tz || void 0 === tz ? void 0 : tz.animated[zz]) && void 0 !== sz ? sz : Pz.notFoundUrl()
     }
 
-    function Gb(bb) {
-      return void 0 !== (0, Bb.d)(bb) ? bb : /^[1-9][0-9]*$/.test(bb) ? (0, Bb.h)(Number(bb)) : void 0
+    function Az(zz) {
+      return void 0 !== (0, vz.b)(zz) ? zz : /^[1-9][0-9]*$/.test(zz) ? (0, vz.d)(Number(zz)) : void 0
     }
 
-    function Qb(bb) {
-      var ab;
-      if (bb.startsWith(Zb)) {
-        var Ub;
-        const ab = (0, jb.c)(bb.slice(5));
-        return null !== (Ub = void 0 === ab ? null : Ib(ab)) && void 0 !== Ub ? Ub : Db.notFoundUrl()
+    function yz(zz) {
+      var tz;
+      if (zz.startsWith(Bz)) {
+        var sz;
+        const tz = (0, wz.e)(zz.slice(5));
+        return null !== (sz = void 0 === tz ? null : Gz(tz)) && void 0 !== sz ? sz : Pz.notFoundUrl()
       }
-      return null !== (ab = Db.particleUrl(bb)) && void 0 !== ab ? ab : Db.notFoundUrl()
+      return null !== (tz = Pz.particleUrl(zz)) && void 0 !== tz ? tz : Pz.notFoundUrl()
     }
 
-    function qb(bb, ab) {
-      return "StairsBlock" === bb ? bb : ab ? "SlabBlock" : "CubeBlock"
+    function Mz(zz, tz) {
+      return "StairsBlock" === zz ? zz : tz ? "SlabBlock" : "CubeBlock"
     }
-    const ub = {
-        async blockIcon(bb) {
-          var ab;
+    const dz = {
+        async blockIcon(zz) {
+          var tz;
           let {
-            name: Ab,
-            size: Mb,
-            lineWidth: Tb
-          } = bb;
-          await Wb();
-          const Yb = null !== (ab = Gb(Ab)) && void 0 !== ab ? ab : Ab,
-            eb = (0, kb.b)(Yb, Mb, Tb);
-          if (null !== eb) return eb;
-          const vb = Xb(Yb),
-            Lb = (0, Bb.d)(Yb),
-            Pb = void 0 === Lb || null === zb ? void 0 : zb.itemTypeNameOf(Lb);
-          if (null === Db || void 0 === vb) return "";
-          const jb = [vb.top, vb.left, vb.right].some((bb => null === db(bb))),
-            yb = jb ? await (ib ??= Ub.e(201).then((() => Ub(33702))).then((bb => (fb && (fb = !1, (0, Eb.c)()), {
-              rotated: bb.rotatedBlockTextures,
-              animated: bb.animatedBlockTextures
-            })), (bb => (ib = null, fb = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", bb), null))), ib) : null;
-          if (jb && null === yb) return "";
-          const Zb = {
-              top: hb(vb.top, yb),
-              left: hb(vb.left, yb),
-              right: hb(vb.right, yb),
-              itemType: qb(Pb, vb.half)
+            name: Fz,
+            size: Wz,
+            lineWidth: Xz
+          } = zz;
+          await ez();
+          const oz = null !== (tz = Az(Fz)) && void 0 !== tz ? tz : Fz,
+            Uz = (0, gz.b)(oz, Wz, Xz);
+          if (null !== Uz) return Uz;
+          const Kz = bz(oz),
+            uz = (0, vz.b)(oz),
+            Nz = void 0 === uz || null === rz ? void 0 : rz.itemTypeNameOf(uz);
+          if (null === Pz || void 0 === Kz) return "";
+          const wz = [Kz.top, Kz.left, Kz.right].some((zz => null === Tz(zz))),
+            Hz = wz ? await (xz ??= sz.e(201).then((() => sz(33845))).then((zz => (mz && (mz = !1, (0, Oz.b)()), {
+              rotated: zz.rotatedBlockTextures,
+              animated: zz.animatedBlockTextures
+            })), (zz => (xz = null, mz = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", zz), null))), xz) : null;
+          if (wz && null === Hz) return "";
+          const Bz = {
+              top: jz(Kz.top, Hz),
+              left: jz(Kz.left, Hz),
+              right: jz(Kz.right, Hz),
+              itemType: Mz(Nz, Kz.half)
             },
-            xb = 0 === Nb ? Yb : `${Yb}#${Nb}`;
-          return (await (0, Rb.c)()).drawBlockIconUrl(xb, Mb, Tb, (() => Zb))
+            Yz = 0 === Cz ? oz : `${oz}#${Cz}`;
+          return (await (0, Dz.d)()).drawBlockIconUrl(Yz, Wz, Xz, (() => Bz))
         }
       },
-      rb = {
-        itemIcon: function(bb) {
-          var ab, Ub;
-          if (null === Db) return Wb(), Yb.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(bb);
-          if ((0, Mb.k)(bb)) return {
+      hz = {
+        itemIcon: function(zz) {
+          var tz, sz;
+          if (null === Pz) return ez(), oz.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(zz);
+          if ((0, Wz.h)(zz)) return {
             kind: "icon",
-            url: null !== (Ub = Db.ingameIconUrl(bb)) && void 0 !== Ub ? Ub : Db.notFoundUrl()
+            url: null !== (sz = Pz.ingameIconUrl(zz)) && void 0 !== sz ? sz : Pz.notFoundUrl()
           };
-          if (bb.startsWith(Mb.d)) return {
+          if (zz.startsWith(Wz.e)) return {
             kind: "icon",
-            url: Qb(bb.slice(Mb.d.length))
+            url: yz(zz.slice(Wz.e.length))
           };
-          if (0 === (0, Bb.l)()) return (0, Tb.d)(), Yb.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(bb);
-          const Eb = null !== (ab = Gb(bb)) && void 0 !== ab ? ab : bb,
-            eb = (0, Bb.d)(Eb),
-            vb = void 0 === eb ? void 0 : zb.itemTypeNameOf(eb);
-          if (void 0 !== Xb(Eb)) return {
+          if (0 === (0, vz.h)()) return (0, Xz.d)(), oz.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(zz);
+          const Oz = null !== (tz = Az(zz)) && void 0 !== tz ? tz : zz,
+            Uz = (0, vz.b)(Oz),
+            Kz = void 0 === Uz ? void 0 : rz.itemTypeNameOf(Uz);
+          if (void 0 !== bz(Oz)) return {
             kind: "drawnBlock"
           };
-          const Lb = function(bb) {
-            var ab;
-            return null !== (ab = Ib(Fb(bb))) && void 0 !== ab ? ab : Db.notFoundUrl()
-          }(Eb);
-          if ((0, kb.c)(Eb) && ! function(bb) {
-              return null !== pb && (null !== pb.itemSprite(Fb(bb)) || null !== pb.model(bb))
-            }(Eb)) return {
+          const uz = function(zz) {
+            var tz;
+            return null !== (tz = Gz(cz(zz))) && void 0 !== tz ? tz : Pz.notFoundUrl()
+          }(Oz);
+          if ((0, gz.e)(Oz) && ! function(zz) {
+              return null !== Iz && (null !== Iz.itemSprite(cz(zz)) || null !== Iz.model(zz))
+            }(Oz)) return {
             kind: "model",
-            url: Lb
+            url: uz
           };
-          if ("Gun" === vb) return {
+          if ("Gun" === Kz) return {
             kind: "gun",
-            url: Lb
+            url: uz
           };
-          if (void 0 !== eb && "GrayscaleArmour" === zb.itemTypeOf(eb) || Object.hasOwn(Ab.b, Eb)) {
-            var Pb;
-            const ab = null !== (Pb = (0, Ab.c)(bb)) && void 0 !== Pb ? Pb : (0, Ab.c)(Eb);
-            if (ab) return {
+          if (void 0 !== Uz && "GrayscaleArmour" === rz.itemTypeOf(Uz) || Object.hasOwn(Fz.c, Oz)) {
+            var Nz;
+            const tz = null !== (Nz = (0, Fz.e)(zz)) && void 0 !== Nz ? Nz : (0, Fz.e)(Oz);
+            if (tz) return {
               kind: "item",
-              url: Lb,
-              tint: ab
+              url: uz,
+              tint: tz
             }
           }
           return {
             kind: "item",
-            url: Lb
+            url: uz
           }
         },
-        hasIcon: function(bb) {
-          return void 0 !== Gb(bb) || (0, Mb.k)(bb) || bb.startsWith(Mb.d)
+        hasIcon: function(zz) {
+          return void 0 !== Az(zz) || (0, Wz.h)(zz) || zz.startsWith(Wz.e)
         },
-        isItemName: function(bb) {
-          return void 0 !== Gb(bb)
+        isItemName: function(zz) {
+          return void 0 !== Az(zz)
         }
       }
   },
-  39864: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Eb,
-      h: () => Yb
+  39864: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Oz,
+      f: () => oz
     });
-    var Ab = Ub(39870);
-    let Mb = null,
-      Tb = null;
+    var Fz = sz(39867);
+    let Wz = null,
+      Xz = null;
 
-    function Eb() {
-      return Mb ??= Ub.e(58).then((() => Ub(41714))).catch((bb => {
-        throw Mb = null, bb
-      })), Mb
+    function Oz() {
+      return Wz ??= sz.e(58).then((() => sz(41697))).catch((zz => {
+        throw Wz = null, zz
+      })), Wz
     }
 
-    function Yb() {
-      return Tb ??= Promise.all([Eb(), (0, Ab.g)()]).then((bb => {
-        let [ab] = bb;
-        return ab
-      }), (bb => {
-        throw Tb = null, bb
-      })), Tb
+    function oz() {
+      return Xz ??= Promise.all([Oz(), (0, Fz.e)()]).then((zz => {
+        let [tz] = zz;
+        return tz
+      }), (zz => {
+        throw Xz = null, zz
+      })), Xz
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

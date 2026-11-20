@@ -1,12 +1,12 @@
 export const id = 225;
 export const ids = [225];
 export const modules = {
-  36425: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      d: () => Mb
+  36502: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Wz
     });
-    var Ab = Ub(36431);
-    class Mb {
+    var Fz = sz(36505);
+    class Wz {
       static get LastCreatedEngine() {
         return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
@@ -14,178 +14,178 @@ export const modules = {
         return this._LastCreatedScene
       }
     }
-    Mb.Instances = [], Mb.OnEnginesDisposedObservable = new Ab.b, Mb._LastCreatedScene = null, Mb.UseFallbackTexture = !0, Mb.FallbackTexture = ""
+    Wz.Instances = [], Wz.OnEnginesDisposedObservable = new Fz.c, Wz._LastCreatedScene = null, Wz.UseFallbackTexture = !0, Wz.FallbackTexture = ""
   },
-  36418: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Ab
+  36493: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Fz
     });
-    class Ab {
-      static SetMatrixPrecision(bb) {
-        if (Ab.MatrixTrackPrecisionChange = !1, bb && !Ab.MatrixUse64Bits && Ab.MatrixTrackedMatrices)
-          for (let ab = 0; ab < Ab.MatrixTrackedMatrices.length; ++ab) {
-            const bb = Ab.MatrixTrackedMatrices[ab],
-              Ub = bb._m;
-            bb._m = new Array(16);
-            for (let ab = 0; ab < 16; ++ab) bb._m[ab] = Ub[ab]
+    class Fz {
+      static SetMatrixPrecision(zz) {
+        if (Fz.MatrixTrackPrecisionChange = !1, zz && !Fz.MatrixUse64Bits && Fz.MatrixTrackedMatrices)
+          for (let tz = 0; tz < Fz.MatrixTrackedMatrices.length; ++tz) {
+            const zz = Fz.MatrixTrackedMatrices[tz],
+              sz = zz._m;
+            zz._m = new Array(16);
+            for (let tz = 0; tz < 16; ++tz) zz._m[tz] = sz[tz]
           }
-        Ab.MatrixUse64Bits = bb, Ab.MatrixCurrentType = Ab.MatrixUse64Bits ? Array : Float32Array, Ab.MatrixTrackedMatrices = null
+        Fz.MatrixUse64Bits = zz, Fz.MatrixCurrentType = Fz.MatrixUse64Bits ? Array : Float32Array, Fz.MatrixTrackedMatrices = null
       }
     }
-    Ab.MatrixUse64Bits = !1, Ab.MatrixTrackPrecisionChange = !0, Ab.MatrixCurrentType = Float32Array, Ab.MatrixTrackedMatrices = []
+    Fz.MatrixUse64Bits = !1, Fz.MatrixTrackPrecisionChange = !0, Fz.MatrixCurrentType = Float32Array, Fz.MatrixTrackedMatrices = []
   },
-  36438: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Yb,
-      d: () => eb,
-      h: () => Bb,
-      j: () => Ab,
-      l: () => Tb,
-      n: () => Eb
+  36513: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => oz,
+      d: () => Uz,
+      h: () => vz,
+      i: () => Fz,
+      l: () => Xz,
+      o: () => Oz
     });
-    class Ab {}
+    class Fz {}
 
-    function Mb(bb) {
-      bb.updateFlag = Ab._UpdateFlagSeed++
+    function Wz(zz) {
+      zz.updateFlag = Fz._UpdateFlagSeed++
     }
 
-    function Tb(bb, ab, Ub) {
-      let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      const Mb = bb.qUb(),
-        Tb = ab.qUb(),
-        Eb = Mb[0],
-        Yb = Mb[1],
-        Bb = Mb[2],
-        eb = Mb[3],
-        vb = Mb[4],
-        Lb = Mb[5],
-        Pb = Mb[6],
-        Xb = Mb[7],
-        jb = Mb[8],
-        Rb = Mb[9],
-        kb = Mb[10],
-        yb = Mb[11],
-        Zb = Mb[12],
-        Db = Mb[13],
-        zb = Mb[14],
-        xb = Mb[15],
-        ib = Tb[0],
-        fb = Tb[1],
-        mb = Tb[2],
-        pb = Tb[3],
-        Nb = Tb[4],
-        Wb = Tb[5],
-        Hb = Tb[6],
-        Ib = Tb[7],
-        db = Tb[8],
-        Fb = Tb[9],
-        hb = Tb[10],
-        Gb = Tb[11],
-        Qb = Tb[12],
-        qb = Tb[13],
-        ub = Tb[14],
-        rb = Tb[15];
-      Ub[Ab] = Eb * ib + Yb * Nb + Bb * db + eb * Qb, Ub[Ab + 1] = Eb * fb + Yb * Wb + Bb * Fb + eb * qb, Ub[Ab + 2] = Eb * mb + Yb * Hb + Bb * hb + eb * ub, Ub[Ab + 3] = Eb * pb + Yb * Ib + Bb * Gb + eb * rb, Ub[Ab + 4] = vb * ib + Lb * Nb + Pb * db + Xb * Qb, Ub[Ab + 5] = vb * fb + Lb * Wb + Pb * Fb + Xb * qb, Ub[Ab + 6] = vb * mb + Lb * Hb + Pb * hb + Xb * ub, Ub[Ab + 7] = vb * pb + Lb * Ib + Pb * Gb + Xb * rb, Ub[Ab + 8] = jb * ib + Rb * Nb + kb * db + yb * Qb, Ub[Ab + 9] = jb * fb + Rb * Wb + kb * Fb + yb * qb, Ub[Ab + 10] = jb * mb + Rb * Hb + kb * hb + yb * ub, Ub[Ab + 11] = jb * pb + Rb * Ib + kb * Gb + yb * rb, Ub[Ab + 12] = Zb * ib + Db * Nb + zb * db + xb * Qb, Ub[Ab + 13] = Zb * fb + Db * Wb + zb * Fb + xb * qb, Ub[Ab + 14] = Zb * mb + Db * Hb + zb * hb + xb * ub, Ub[Ab + 15] = Zb * pb + Db * Ib + zb * Gb + xb * rb
+    function Xz(zz, tz, sz) {
+      let Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      const Wz = zz.hsz(),
+        Xz = tz.hsz(),
+        Oz = Wz[0],
+        oz = Wz[1],
+        vz = Wz[2],
+        Uz = Wz[3],
+        Kz = Wz[4],
+        uz = Wz[5],
+        Nz = Wz[6],
+        bz = Wz[7],
+        wz = Wz[8],
+        Dz = Wz[9],
+        gz = Wz[10],
+        Hz = Wz[11],
+        Bz = Wz[12],
+        Pz = Wz[13],
+        rz = Wz[14],
+        Yz = Wz[15],
+        xz = Xz[0],
+        mz = Xz[1],
+        Jz = Xz[2],
+        Iz = Xz[3],
+        Cz = Xz[4],
+        ez = Xz[5],
+        Zz = Xz[6],
+        Gz = Xz[7],
+        Tz = Xz[8],
+        cz = Xz[9],
+        jz = Xz[10],
+        Az = Xz[11],
+        yz = Xz[12],
+        Mz = Xz[13],
+        dz = Xz[14],
+        hz = Xz[15];
+      sz[Fz] = Oz * xz + oz * Cz + vz * Tz + Uz * yz, sz[Fz + 1] = Oz * mz + oz * ez + vz * cz + Uz * Mz, sz[Fz + 2] = Oz * Jz + oz * Zz + vz * jz + Uz * dz, sz[Fz + 3] = Oz * Iz + oz * Gz + vz * Az + Uz * hz, sz[Fz + 4] = Kz * xz + uz * Cz + Nz * Tz + bz * yz, sz[Fz + 5] = Kz * mz + uz * ez + Nz * cz + bz * Mz, sz[Fz + 6] = Kz * Jz + uz * Zz + Nz * jz + bz * dz, sz[Fz + 7] = Kz * Iz + uz * Gz + Nz * Az + bz * hz, sz[Fz + 8] = wz * xz + Dz * Cz + gz * Tz + Hz * yz, sz[Fz + 9] = wz * mz + Dz * ez + gz * cz + Hz * Mz, sz[Fz + 10] = wz * Jz + Dz * Zz + gz * jz + Hz * dz, sz[Fz + 11] = wz * Iz + Dz * Gz + gz * Az + Hz * hz, sz[Fz + 12] = Bz * xz + Pz * Cz + rz * Tz + Yz * yz, sz[Fz + 13] = Bz * mz + Pz * ez + rz * cz + Yz * Mz, sz[Fz + 14] = Bz * Jz + Pz * Zz + rz * jz + Yz * dz, sz[Fz + 15] = Bz * Iz + Pz * Gz + rz * Az + Yz * hz
     }
 
-    function Eb(bb, ab, Ub) {
-      let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      Tb(bb, ab, Ub.qUb(), Ab), Mb(Ub)
+    function Oz(zz, tz, sz) {
+      let Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      Xz(zz, tz, sz.hsz(), Fz), Wz(sz)
     }
 
-    function Yb(bb, ab) {
-      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const Ab = bb.qUb();
-      ab[Ub] = Ab[0], ab[Ub + 1] = Ab[1], ab[Ub + 2] = Ab[2], ab[Ub + 3] = Ab[3], ab[Ub + 4] = Ab[4], ab[Ub + 5] = Ab[5], ab[Ub + 6] = Ab[6], ab[Ub + 7] = Ab[7], ab[Ub + 8] = Ab[8], ab[Ub + 9] = Ab[9], ab[Ub + 10] = Ab[10], ab[Ub + 11] = Ab[11], ab[Ub + 12] = Ab[12], ab[Ub + 13] = Ab[13], ab[Ub + 14] = Ab[14], ab[Ub + 15] = Ab[15]
+    function oz(zz, tz) {
+      let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const Fz = zz.hsz();
+      tz[sz] = Fz[0], tz[sz + 1] = Fz[1], tz[sz + 2] = Fz[2], tz[sz + 3] = Fz[3], tz[sz + 4] = Fz[4], tz[sz + 5] = Fz[5], tz[sz + 6] = Fz[6], tz[sz + 7] = Fz[7], tz[sz + 8] = Fz[8], tz[sz + 9] = Fz[9], tz[sz + 10] = Fz[10], tz[sz + 11] = Fz[11], tz[sz + 12] = Fz[12], tz[sz + 13] = Fz[13], tz[sz + 14] = Fz[14], tz[sz + 15] = Fz[15]
     }
 
-    function Bb(bb, ab) {
-      const Ub = eb(bb, ab.qUb());
-      return Ub && Mb(ab), Ub
+    function vz(zz, tz) {
+      const sz = Uz(zz, tz.hsz());
+      return sz && Wz(tz), sz
     }
 
-    function eb(bb, ab) {
-      const Ub = bb.qUb(),
-        Ab = Ub[0],
-        Mb = Ub[1],
-        Tb = Ub[2],
-        Eb = Ub[3],
-        Yb = Ub[4],
-        Bb = Ub[5],
-        eb = Ub[6],
-        vb = Ub[7],
-        Lb = Ub[8],
-        Pb = Ub[9],
-        Xb = Ub[10],
-        jb = Ub[11],
-        Rb = Ub[12],
-        kb = Ub[13],
-        yb = Ub[14],
-        Zb = Ub[15],
-        Db = Xb * Zb - yb * jb,
-        zb = Pb * Zb - kb * jb,
-        xb = Pb * yb - kb * Xb,
-        ib = Lb * Zb - Rb * jb,
-        fb = Lb * yb - Xb * Rb,
-        mb = Lb * kb - Rb * Pb,
-        pb = +(Bb * Db - eb * zb + vb * xb),
-        Nb = -(Yb * Db - eb * ib + vb * fb),
-        Wb = +(Yb * zb - Bb * ib + vb * mb),
-        Hb = -(Yb * xb - Bb * fb + eb * mb),
-        Ib = Ab * pb + Mb * Nb + Tb * Wb + Eb * Hb;
-      if (0 === Ib) return !1;
-      const db = 1 / Ib,
-        Fb = eb * Zb - yb * vb,
-        hb = Bb * Zb - kb * vb,
-        Gb = Bb * yb - kb * eb,
-        Qb = Yb * Zb - Rb * vb,
-        qb = Yb * yb - Rb * eb,
-        ub = Yb * kb - Rb * Bb,
-        rb = eb * jb - Xb * vb,
-        Kb = Bb * jb - Pb * vb,
-        ob = Bb * Xb - Pb * eb,
-        lb = Yb * jb - Lb * vb,
-        tb = Yb * Xb - Lb * eb,
-        wb = Yb * Pb - Lb * Bb,
-        sb = -(Mb * Db - Tb * zb + Eb * xb),
-        gb = +(Ab * Db - Tb * ib + Eb * fb),
-        Cb = -(Ab * zb - Mb * ib + Eb * mb),
-        Vb = +(Ab * xb - Mb * fb + Tb * mb),
-        Ob = +(Mb * Fb - Tb * hb + Eb * Gb),
-        cb = -(Ab * Fb - Tb * Qb + Eb * qb),
-        Jb = +(Ab * hb - Mb * Qb + Eb * ub),
-        nb = -(Ab * Gb - Mb * qb + Tb * ub),
-        Sb = -(Mb * rb - Tb * Kb + Eb * ob),
-        ba = +(Ab * rb - Tb * lb + Eb * tb),
-        aa = -(Ab * Kb - Mb * lb + Eb * wb),
-        Ua = +(Ab * ob - Mb * tb + Tb * wb);
-      return ab[0] = pb * db, ab[1] = sb * db, ab[2] = Ob * db, ab[3] = Sb * db, ab[4] = Nb * db, ab[5] = gb * db, ab[6] = cb * db, ab[7] = ba * db, ab[8] = Wb * db, ab[9] = Cb * db, ab[10] = Jb * db, ab[11] = aa * db, ab[12] = Hb * db, ab[13] = Vb * db, ab[14] = nb * db, ab[15] = Ua * db, !0
+    function Uz(zz, tz) {
+      const sz = zz.hsz(),
+        Fz = sz[0],
+        Wz = sz[1],
+        Xz = sz[2],
+        Oz = sz[3],
+        oz = sz[4],
+        vz = sz[5],
+        Uz = sz[6],
+        Kz = sz[7],
+        uz = sz[8],
+        Nz = sz[9],
+        bz = sz[10],
+        wz = sz[11],
+        Dz = sz[12],
+        gz = sz[13],
+        Hz = sz[14],
+        Bz = sz[15],
+        Pz = bz * Bz - Hz * wz,
+        rz = Nz * Bz - gz * wz,
+        Yz = Nz * Hz - gz * bz,
+        xz = uz * Bz - Dz * wz,
+        mz = uz * Hz - bz * Dz,
+        Jz = uz * gz - Dz * Nz,
+        Iz = +(vz * Pz - Uz * rz + Kz * Yz),
+        Cz = -(oz * Pz - Uz * xz + Kz * mz),
+        ez = +(oz * rz - vz * xz + Kz * Jz),
+        Zz = -(oz * Yz - vz * mz + Uz * Jz),
+        Gz = Fz * Iz + Wz * Cz + Xz * ez + Oz * Zz;
+      if (0 === Gz) return !1;
+      const Tz = 1 / Gz,
+        cz = Uz * Bz - Hz * Kz,
+        jz = vz * Bz - gz * Kz,
+        Az = vz * Hz - gz * Uz,
+        yz = oz * Bz - Dz * Kz,
+        Mz = oz * Hz - Dz * Uz,
+        dz = oz * gz - Dz * vz,
+        hz = Uz * wz - bz * Kz,
+        Qz = vz * wz - Nz * Kz,
+        kz = vz * bz - Nz * Uz,
+        iz = oz * wz - uz * Kz,
+        Lz = oz * bz - uz * Uz,
+        lz = oz * Nz - uz * vz,
+        nz = -(Wz * Pz - Xz * rz + Oz * Yz),
+        az = +(Fz * Pz - Xz * xz + Oz * mz),
+        qz = -(Fz * rz - Wz * xz + Oz * Jz),
+        Sz = +(Fz * Yz - Wz * mz + Xz * Jz),
+        Vz = +(Wz * cz - Xz * jz + Oz * Az),
+        Rz = -(Fz * cz - Xz * yz + Oz * Mz),
+        pz = +(Fz * jz - Wz * yz + Oz * dz),
+        fz = -(Fz * Az - Wz * Mz + Xz * dz),
+        Ez = -(Wz * hz - Xz * Qz + Oz * kz),
+        zt = +(Fz * hz - Xz * iz + Oz * Lz),
+        tt = -(Fz * Qz - Wz * iz + Oz * lz),
+        st = +(Fz * kz - Wz * Lz + Xz * lz);
+      return tz[0] = Iz * Tz, tz[1] = nz * Tz, tz[2] = Vz * Tz, tz[3] = Ez * Tz, tz[4] = Cz * Tz, tz[5] = az * Tz, tz[6] = Rz * Tz, tz[7] = zt * Tz, tz[8] = ez * Tz, tz[9] = qz * Tz, tz[10] = pz * Tz, tz[11] = tt * Tz, tz[12] = Zz * Tz, tz[13] = Sz * Tz, tz[14] = fz * Tz, tz[15] = st * Tz, !0
     }
-    Ab._UpdateFlagSeed = 0
+    Fz._UpdateFlagSeed = 0
   },
-  36401: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Rb,
-      e: () => jb,
-      i: () => zb,
-      j: () => yb,
-      l: () => Lb,
-      m: () => Pb,
-      o: () => Xb
+  36475: (zz, tz, sz) => {
+    sz.d(tz, {
+      e: () => Dz,
+      h: () => wz,
+      k: () => rz,
+      m: () => Hz,
+      n: () => uz,
+      p: () => Nz,
+      q: () => bz
     });
-    var Ab = Ub(36405),
-      Mb = Ub(36410),
-      Tb = Ub(36418),
-      Eb = Ub(36425),
-      Yb = Ub(36436),
-      Bb = Ub(36438),
-      eb = Ub(36447);
-    const vb = bb => parseInt(bb.toString().replace(/\W/g, ""));
-    class Lb {
+    var Fz = sz(36479),
+      Wz = sz(36487),
+      Xz = sz(36493),
+      Oz = sz(36502),
+      oz = sz(36507),
+      vz = sz(36513),
+      Uz = sz(36518);
+    const Kz = zz => parseInt(zz.toString().replace(/\W/g, ""));
+    class uz {
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.x = bb, this.y = ab
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.x = zz, this.y = tz
       }
       toString() {
         return `{X: ${this.x} Y: ${this.y}}`
@@ -194,145 +194,145 @@ export const modules = {
         return "Vector2"
       }
       getHashCode() {
-        let bb = vb(this.x);
-        return bb = 397 * bb ^ vb(this.y), bb
+        let zz = Kz(this.x);
+        return zz = 397 * zz ^ Kz(this.y), zz
       }
-      toArray(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return bb[ab] = this.x, bb[ab + 1] = this.y, this
+      toArray(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return zz[tz] = this.x, zz[tz + 1] = this.y, this
       }
-      Zab(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Lb.FromArrayToRef(bb, ab, this), this
+      Ztz(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return uz.FromArrayToRef(zz, tz, this), this
       }
-      qUb() {
+      hsz() {
         return [this.x, this.y]
       }
-      EUb(bb) {
-        return this.x = bb.x, this.y = bb.y, this
+      vsz(zz) {
+        return this.x = zz.x, this.y = zz.y, this
       }
-      K9(bb, ab) {
-        return this.x = bb, this.y = ab, this
+      m_(zz, tz) {
+        return this.x = zz, this.y = tz, this
       }
-      set(bb, ab) {
-        return this.K9(bb, ab)
+      set(zz, tz) {
+        return this.m_(zz, tz)
       }
-      B3(bb) {
-        return this.K9(bb, bb)
+      Z6(zz) {
+        return this.m_(zz, zz)
       }
-      add(bb) {
-        return new Lb(this.x + bb.x, this.y + bb.y)
+      add(zz) {
+        return new uz(this.x + zz.x, this.y + zz.y)
       }
-      addToRef(bb, ab) {
-        return ab.x = this.x + bb.x, ab.y = this.y + bb.y, ab
+      addToRef(zz, tz) {
+        return tz.x = this.x + zz.x, tz.y = this.y + zz.y, tz
       }
-      addInPlace(bb) {
-        return this.x += bb.x, this.y += bb.y, this
+      addInPlace(zz) {
+        return this.x += zz.x, this.y += zz.y, this
       }
-      addInPlaceFromFloats(bb, ab) {
-        return this.x += bb, this.y += ab, this
+      addInPlaceFromFloats(zz, tz) {
+        return this.x += zz, this.y += tz, this
       }
-      addVector3(bb) {
-        return new Lb(this.x + bb.x, this.y + bb.y)
+      addVector3(zz) {
+        return new uz(this.x + zz.x, this.y + zz.y)
       }
-      subtract(bb) {
-        return new Lb(this.x - bb.x, this.y - bb.y)
+      subtract(zz) {
+        return new uz(this.x - zz.x, this.y - zz.y)
       }
-      subtractToRef(bb, ab) {
-        return ab.x = this.x - bb.x, ab.y = this.y - bb.y, ab
+      subtractToRef(zz, tz) {
+        return tz.x = this.x - zz.x, tz.y = this.y - zz.y, tz
       }
-      MAb(bb) {
-        return this.x -= bb.x, this.y -= bb.y, this
+      oFz(zz) {
+        return this.x -= zz.x, this.y -= zz.y, this
       }
-      multiplyInPlace(bb) {
-        return this.x *= bb.x, this.y *= bb.y, this
+      multiplyInPlace(zz) {
+        return this.x *= zz.x, this.y *= zz.y, this
       }
-      multiply(bb) {
-        return new Lb(this.x * bb.x, this.y * bb.y)
+      multiply(zz) {
+        return new uz(this.x * zz.x, this.y * zz.y)
       }
-      multiplyToRef(bb, ab) {
-        return ab.x = this.x * bb.x, ab.y = this.y * bb.y, ab
+      multiplyToRef(zz, tz) {
+        return tz.x = this.x * zz.x, tz.y = this.y * zz.y, tz
       }
-      multiplyByFloats(bb, ab) {
-        return new Lb(this.x * bb, this.y * ab)
+      multiplyByFloats(zz, tz) {
+        return new uz(this.x * zz, this.y * tz)
       }
-      divide(bb) {
-        return new Lb(this.x / bb.x, this.y / bb.y)
+      divide(zz) {
+        return new uz(this.x / zz.x, this.y / zz.y)
       }
-      divideToRef(bb, ab) {
-        return ab.x = this.x / bb.x, ab.y = this.y / bb.y, ab
+      divideToRef(zz, tz) {
+        return tz.x = this.x / zz.x, tz.y = this.y / zz.y, tz
       }
-      divideInPlace(bb) {
-        return this.x = this.x / bb.x, this.y = this.y / bb.y, this
+      divideInPlace(zz) {
+        return this.x = this.x / zz.x, this.y = this.y / zz.y, this
       }
-      minimizeInPlace(bb) {
-        return this.minimizeInPlaceFromFloats(bb.x, bb.y)
+      minimizeInPlace(zz) {
+        return this.minimizeInPlaceFromFloats(zz.x, zz.y)
       }
-      maximizeInPlace(bb) {
-        return this.maximizeInPlaceFromFloats(bb.x, bb.y)
+      maximizeInPlace(zz) {
+        return this.maximizeInPlaceFromFloats(zz.x, zz.y)
       }
-      minimizeInPlaceFromFloats(bb, ab) {
-        return this.x = Math.min(bb, this.x), this.y = Math.min(ab, this.y), this
+      minimizeInPlaceFromFloats(zz, tz) {
+        return this.x = Math.min(zz, this.x), this.y = Math.min(tz, this.y), this
       }
-      maximizeInPlaceFromFloats(bb, ab) {
-        return this.x = Math.max(bb, this.x), this.y = Math.max(ab, this.y), this
+      maximizeInPlaceFromFloats(zz, tz) {
+        return this.x = Math.max(zz, this.x), this.y = Math.max(tz, this.y), this
       }
-      subtractFromFloats(bb, ab) {
-        return new Lb(this.x - bb, this.y - ab)
+      subtractFromFloats(zz, tz) {
+        return new uz(this.x - zz, this.y - tz)
       }
-      subtractFromFloatsToRef(bb, ab, Ub) {
-        return Ub.x = this.x - bb, Ub.y = this.y - ab, Ub
+      subtractFromFloatsToRef(zz, tz, sz) {
+        return sz.x = this.x - zz, sz.y = this.y - tz, sz
       }
-      pa() {
-        return new Lb(-this.x, -this.y)
+      nt() {
+        return new uz(-this.x, -this.y)
       }
       negateInPlace() {
         return this.x *= -1, this.y *= -1, this
       }
-      negateToRef(bb) {
-        return bb.x = -this.x, bb.y = -this.y, bb
+      negateToRef(zz) {
+        return zz.x = -this.x, zz.y = -this.y, zz
       }
-      scaleInPlace(bb) {
-        return this.x *= bb, this.y *= bb, this
+      scaleInPlace(zz) {
+        return this.x *= zz, this.y *= zz, this
       }
-      scale(bb) {
-        return new Lb(this.x * bb, this.y * bb)
+      scale(zz) {
+        return new uz(this.x * zz, this.y * zz)
       }
-      scaleToRef(bb, ab) {
-        return ab.x = this.x * bb, ab.y = this.y * bb, ab
+      scaleToRef(zz, tz) {
+        return tz.x = this.x * zz, tz.y = this.y * zz, tz
       }
-      scaleAndAddToRef(bb, ab) {
-        return ab.x += this.x * bb, ab.y += this.y * bb, ab
+      scaleAndAddToRef(zz, tz) {
+        return tz.x += this.x * zz, tz.y += this.y * zz, tz
       }
-      equals(bb) {
-        return bb && this.x === bb.x && this.y === bb.y
+      equals(zz) {
+        return zz && this.x === zz.x && this.y === zz.y
       }
-      equalsWithEpsilon(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ab.e;
-        return bb && (0, Yb.WithinEpsilon)(this.x, bb.x, ab) && (0, Yb.WithinEpsilon)(this.y, bb.y, ab)
+      equalsWithEpsilon(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fz.c;
+        return zz && (0, oz.WithinEpsilon)(this.x, zz.x, tz) && (0, oz.WithinEpsilon)(this.y, zz.y, tz)
       }
-      eEb(bb, ab) {
-        return this.x === bb && this.y === ab
+      wOz(zz, tz) {
+        return this.x === zz && this.y === tz
       }
       floor() {
-        return new Lb(Math.floor(this.x), Math.floor(this.y))
+        return new uz(Math.floor(this.x), Math.floor(this.y))
       }
-      floorToRef(bb) {
-        return bb.x = Math.floor(this.x), bb.y = Math.floor(this.y), bb
+      floorToRef(zz) {
+        return zz.x = Math.floor(this.x), zz.y = Math.floor(this.y), zz
       }
       fract() {
-        return new Lb(this.x - Math.floor(this.x), this.y - Math.floor(this.y))
+        return new uz(this.x - Math.floor(this.x), this.y - Math.floor(this.y))
       }
-      fractToRef(bb) {
-        return bb.x = this.x - Math.floor(this.x), bb.y = this.y - Math.floor(this.y), bb
+      fractToRef(zz) {
+        return zz.x = this.x - Math.floor(this.x), zz.y = this.y - Math.floor(this.y), zz
       }
-      rotate(bb) {
-        return this.rotateToRef(bb, new Lb)
+      rotate(zz) {
+        return this.rotateToRef(zz, new uz)
       }
-      rotateToRef(bb, ab) {
-        const Ub = Math.cos(bb),
-          Ab = Math.sin(bb);
-        return ab.x = Ub * this.x - Ab * this.y, ab.y = Ab * this.x + Ub * this.y, ab
+      rotateToRef(zz, tz) {
+        const sz = Math.cos(zz),
+          Fz = Math.sin(zz);
+        return tz.x = sz * this.x - Fz * this.y, tz.y = Fz * this.x + sz * this.y, tz
       }
       length() {
         return Math.sqrt(this.x * this.x + this.y * this.y)
@@ -343,359 +343,359 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(bb) {
-        return 0 === bb || 1 === bb ? this : this.scaleInPlace(1 / bb)
+      normalizeFromLength(zz) {
+        return 0 === zz || 1 === zz ? this : this.scaleInPlace(1 / zz)
       }
       normalizeToNew() {
-        const bb = new Lb;
-        return this.normalizeToRef(bb), bb
+        const zz = new uz;
+        return this.normalizeToRef(zz), zz
       }
-      normalizeToRef(bb) {
-        const ab = this.length();
-        return 0 === ab || 1 === ab ? (bb.x = this.x, bb.y = this.y, bb) : this.scaleToRef(1 / ab, bb)
+      normalizeToRef(zz) {
+        const tz = this.length();
+        return 0 === tz || 1 === tz ? (zz.x = this.x, zz.y = this.y, zz) : this.scaleToRef(1 / tz, zz)
       }
       clone() {
-        return new Lb(this.x, this.y)
+        return new uz(this.x, this.y)
       }
-      dot(bb) {
-        return this.x * bb.x + this.y * bb.y
+      dot(zz) {
+        return this.x * zz.x + this.y * zz.y
       }
       static Zero() {
-        return new Lb(0, 0)
+        return new uz(0, 0)
       }
       static One() {
-        return new Lb(1, 1)
+        return new uz(1, 1)
       }
       static Random() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Lb((0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab))
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new uz((0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz))
       }
       static RandomToRef() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).K9((0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab))
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).m_((0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz))
       }
       static get ZeroReadOnly() {
-        return Lb._ZeroReadOnly
+        return uz._ZeroReadOnly
       }
-      static FromArray(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Lb(bb[ab], bb[ab + 1])
+      static FromArray(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new uz(zz[tz], zz[tz + 1])
       }
-      static FromArrayToRef(bb, ab, Ub) {
-        return Ub.x = bb[ab], Ub.y = bb[ab + 1], Ub
+      static FromArrayToRef(zz, tz, sz) {
+        return sz.x = zz[tz], sz.y = zz[tz + 1], sz
       }
-      static FromFloatsToRef(bb, ab, Ub) {
-        return Ub.K9(bb, ab), Ub
+      static FromFloatsToRef(zz, tz, sz) {
+        return sz.m_(zz, tz), sz
       }
-      static CatmullRom(bb, ab, Ub, Ab, Mb) {
-        const Tb = Mb * Mb,
-          Eb = Mb * Tb,
-          Yb = .5 * (2 * ab.x + (-bb.x + Ub.x) * Mb + (2 * bb.x - 5 * ab.x + 4 * Ub.x - Ab.x) * Tb + (-bb.x + 3 * ab.x - 3 * Ub.x + Ab.x) * Eb),
-          Bb = .5 * (2 * ab.y + (-bb.y + Ub.y) * Mb + (2 * bb.y - 5 * ab.y + 4 * Ub.y - Ab.y) * Tb + (-bb.y + 3 * ab.y - 3 * Ub.y + Ab.y) * Eb);
-        return new Lb(Yb, Bb)
+      static CatmullRom(zz, tz, sz, Fz, Wz) {
+        const Xz = Wz * Wz,
+          Oz = Wz * Xz,
+          oz = .5 * (2 * tz.x + (-zz.x + sz.x) * Wz + (2 * zz.x - 5 * tz.x + 4 * sz.x - Fz.x) * Xz + (-zz.x + 3 * tz.x - 3 * sz.x + Fz.x) * Oz),
+          vz = .5 * (2 * tz.y + (-zz.y + sz.y) * Wz + (2 * zz.y - 5 * tz.y + 4 * sz.y - Fz.y) * Xz + (-zz.y + 3 * tz.y - 3 * sz.y + Fz.y) * Oz);
+        return new uz(oz, vz)
       }
-      static ClampToRef(bb, ab, Ub, Ab) {
-        return Ab.x = (0, Yb.Clamp)(bb.x, ab.x, Ub.x), Ab.y = (0, Yb.Clamp)(bb.y, ab.y, Ub.y), Ab
+      static ClampToRef(zz, tz, sz, Fz) {
+        return Fz.x = (0, oz.Clamp)(zz.x, tz.x, sz.x), Fz.y = (0, oz.Clamp)(zz.y, tz.y, sz.y), Fz
       }
-      static Clamp(bb, ab, Ub) {
-        const Ab = (0, Yb.Clamp)(bb.x, ab.x, Ub.x),
-          Mb = (0, Yb.Clamp)(bb.y, ab.y, Ub.y);
-        return new Lb(Ab, Mb)
+      static Clamp(zz, tz, sz) {
+        const Fz = (0, oz.Clamp)(zz.x, tz.x, sz.x),
+          Wz = (0, oz.Clamp)(zz.y, tz.y, sz.y);
+        return new uz(Fz, Wz)
       }
-      static Hermite(bb, ab, Ub, Ab, Mb) {
-        const Tb = Mb * Mb,
-          Eb = Mb * Tb,
-          Yb = 2 * Eb - 3 * Tb + 1,
-          Bb = -2 * Eb + 3 * Tb,
-          eb = Eb - 2 * Tb + Mb,
-          vb = Eb - Tb,
-          Pb = bb.x * Yb + Ub.x * Bb + ab.x * eb + Ab.x * vb,
-          Xb = bb.y * Yb + Ub.y * Bb + ab.y * eb + Ab.y * vb;
-        return new Lb(Pb, Xb)
+      static Hermite(zz, tz, sz, Fz, Wz) {
+        const Xz = Wz * Wz,
+          Oz = Wz * Xz,
+          oz = 2 * Oz - 3 * Xz + 1,
+          vz = -2 * Oz + 3 * Xz,
+          Uz = Oz - 2 * Xz + Wz,
+          Kz = Oz - Xz,
+          Nz = zz.x * oz + sz.x * vz + tz.x * Uz + Fz.x * Kz,
+          bz = zz.y * oz + sz.y * vz + tz.y * Uz + Fz.y * Kz;
+        return new uz(Nz, bz)
       }
-      static Hermite1stDerivative(bb, ab, Ub, Ab, Mb) {
-        return this.Hermite1stDerivativeToRef(bb, ab, Ub, Ab, Mb, new Lb)
+      static Hermite1stDerivative(zz, tz, sz, Fz, Wz) {
+        return this.Hermite1stDerivativeToRef(zz, tz, sz, Fz, Wz, new uz)
       }
-      static Hermite1stDerivativeToRef(bb, ab, Ub, Ab, Mb, Tb) {
-        const Eb = Mb * Mb;
-        return Tb.x = 6 * (Eb - Mb) * bb.x + (3 * Eb - 4 * Mb + 1) * ab.x + 6 * (-Eb + Mb) * Ub.x + (3 * Eb - 2 * Mb) * Ab.x, Tb.y = 6 * (Eb - Mb) * bb.y + (3 * Eb - 4 * Mb + 1) * ab.y + 6 * (-Eb + Mb) * Ub.y + (3 * Eb - 2 * Mb) * Ab.y, Tb
+      static Hermite1stDerivativeToRef(zz, tz, sz, Fz, Wz, Xz) {
+        const Oz = Wz * Wz;
+        return Xz.x = 6 * (Oz - Wz) * zz.x + (3 * Oz - 4 * Wz + 1) * tz.x + 6 * (-Oz + Wz) * sz.x + (3 * Oz - 2 * Wz) * Fz.x, Xz.y = 6 * (Oz - Wz) * zz.y + (3 * Oz - 4 * Wz + 1) * tz.y + 6 * (-Oz + Wz) * sz.y + (3 * Oz - 2 * Wz) * Fz.y, Xz
       }
-      static Lerp(bb, ab, Ub) {
-        return Lb.LerpToRef(bb, ab, Ub, new Lb)
+      static Lerp(zz, tz, sz) {
+        return uz.LerpToRef(zz, tz, sz, new uz)
       }
-      static LerpToRef(bb, ab, Ub, Ab) {
-        return Ab.x = bb.x + (ab.x - bb.x) * Ub, Ab.y = bb.y + (ab.y - bb.y) * Ub, Ab
+      static LerpToRef(zz, tz, sz, Fz) {
+        return Fz.x = zz.x + (tz.x - zz.x) * sz, Fz.y = zz.y + (tz.y - zz.y) * sz, Fz
       }
-      static Dot(bb, ab) {
-        return bb.x * ab.x + bb.y * ab.y
+      static Dot(zz, tz) {
+        return zz.x * tz.x + zz.y * tz.y
       }
-      static Normalize(bb) {
-        return Lb.NormalizeToRef(bb, new Lb)
+      static Normalize(zz) {
+        return uz.NormalizeToRef(zz, new uz)
       }
-      static NormalizeToRef(bb, ab) {
-        return bb.normalizeToRef(ab), ab
+      static NormalizeToRef(zz, tz) {
+        return zz.normalizeToRef(tz), tz
       }
-      static Minimize(bb, ab) {
-        const Ub = bb.x < ab.x ? bb.x : ab.x,
-          Ab = bb.y < ab.y ? bb.y : ab.y;
-        return new Lb(Ub, Ab)
+      static Minimize(zz, tz) {
+        const sz = zz.x < tz.x ? zz.x : tz.x,
+          Fz = zz.y < tz.y ? zz.y : tz.y;
+        return new uz(sz, Fz)
       }
-      static Maximize(bb, ab) {
-        const Ub = bb.x > ab.x ? bb.x : ab.x,
-          Ab = bb.y > ab.y ? bb.y : ab.y;
-        return new Lb(Ub, Ab)
+      static Maximize(zz, tz) {
+        const sz = zz.x > tz.x ? zz.x : tz.x,
+          Fz = zz.y > tz.y ? zz.y : tz.y;
+        return new uz(sz, Fz)
       }
-      static Transform(bb, ab) {
-        return Lb.TransformToRef(bb, ab, new Lb)
+      static Transform(zz, tz) {
+        return uz.TransformToRef(zz, tz, new uz)
       }
-      static TransformToRef(bb, ab, Ub) {
-        const Ab = ab.m,
-          Mb = bb.x * Ab[0] + bb.y * Ab[4] + Ab[12],
-          Tb = bb.x * Ab[1] + bb.y * Ab[5] + Ab[13];
-        return Ub.x = Mb, Ub.y = Tb, Ub
+      static TransformToRef(zz, tz, sz) {
+        const Fz = tz.m,
+          Wz = zz.x * Fz[0] + zz.y * Fz[4] + Fz[12],
+          Xz = zz.x * Fz[1] + zz.y * Fz[5] + Fz[13];
+        return sz.x = Wz, sz.y = Xz, sz
       }
-      static PointInTriangle(bb, ab, Ub, Ab) {
-        const Mb = .5 * (-Ub.y * Ab.x + ab.y * (-Ub.x + Ab.x) + ab.x * (Ub.y - Ab.y) + Ub.x * Ab.y),
-          Tb = Mb < 0 ? -1 : 1,
-          Eb = (ab.y * Ab.x - ab.x * Ab.y + (Ab.y - ab.y) * bb.x + (ab.x - Ab.x) * bb.y) * Tb,
-          Yb = (ab.x * Ub.y - ab.y * Ub.x + (ab.y - Ub.y) * bb.x + (Ub.x - ab.x) * bb.y) * Tb;
-        return Eb > 0 && Yb > 0 && Eb + Yb < 2 * Mb * Tb
+      static PointInTriangle(zz, tz, sz, Fz) {
+        const Wz = .5 * (-sz.y * Fz.x + tz.y * (-sz.x + Fz.x) + tz.x * (sz.y - Fz.y) + sz.x * Fz.y),
+          Xz = Wz < 0 ? -1 : 1,
+          Oz = (tz.y * Fz.x - tz.x * Fz.y + (Fz.y - tz.y) * zz.x + (tz.x - Fz.x) * zz.y) * Xz,
+          oz = (tz.x * sz.y - tz.y * sz.x + (tz.y - sz.y) * zz.x + (sz.x - tz.x) * zz.y) * Xz;
+        return Oz > 0 && oz > 0 && Oz + oz < 2 * Wz * Xz
       }
-      static Distance(bb, ab) {
-        return Math.sqrt(Lb.DistanceSquared(bb, ab))
+      static Distance(zz, tz) {
+        return Math.sqrt(uz.DistanceSquared(zz, tz))
       }
-      static DistanceSquared(bb, ab) {
-        const Ub = bb.x - ab.x,
-          Ab = bb.y - ab.y;
-        return Ub * Ub + Ab * Ab
+      static DistanceSquared(zz, tz) {
+        const sz = zz.x - tz.x,
+          Fz = zz.y - tz.y;
+        return sz * sz + Fz * Fz
       }
-      static Center(bb, ab) {
-        return Lb.CenterToRef(bb, ab, new Lb)
+      static Center(zz, tz) {
+        return uz.CenterToRef(zz, tz, new uz)
       }
-      static CenterToRef(bb, ab, Ub) {
-        return Ub.K9((bb.x + ab.x) / 2, (bb.y + ab.y) / 2)
+      static CenterToRef(zz, tz, sz) {
+        return sz.m_((zz.x + tz.x) / 2, (zz.y + tz.y) / 2)
       }
-      static DistanceOfPointFromSegment(bb, ab, Ub) {
-        const Ab = Lb.DistanceSquared(ab, Ub);
-        if (0 === Ab) return Lb.Distance(bb, ab);
-        const Mb = Ub.subtract(ab),
-          Tb = Math.max(0, Math.min(1, Lb.Dot(bb.subtract(ab), Mb) / Ab)),
-          Eb = ab.add(Mb.multiplyByFloats(Tb, Tb));
-        return Lb.Distance(bb, Eb)
+      static DistanceOfPointFromSegment(zz, tz, sz) {
+        const Fz = uz.DistanceSquared(tz, sz);
+        if (0 === Fz) return uz.Distance(zz, tz);
+        const Wz = sz.subtract(tz),
+          Xz = Math.max(0, Math.min(1, uz.Dot(zz.subtract(tz), Wz) / Fz)),
+          Oz = tz.add(Wz.multiplyByFloats(Xz, Xz));
+        return uz.Distance(zz, Oz)
       }
     }
-    Lb._V8PerformanceHack = new Lb(.5, .5), Lb._ZeroReadOnly = Lb.Zero();
-    class Pb {
+    uz._V8PerformanceHack = new uz(.5, .5), uz._ZeroReadOnly = uz.Zero();
+    class Nz {
       get x() {
         return this._x
       }
-      set x(bb) {
-        this._x = bb, this._isDirty = !0
+      set x(zz) {
+        this._x = zz, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(bb) {
-        this._y = bb, this._isDirty = !0
+      set y(zz) {
+        this._y = zz, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(bb) {
-        this._z = bb, this._isDirty = !0
+      set z(zz) {
+        this._z = zz, this._isDirty = !0
       }
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this._isDirty = !0, this._x = bb, this._y = ab, this._z = Ub
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this._isDirty = !0, this._x = zz, this._y = tz, this._z = sz
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z}}`
       }
       getClassName() {
-        return "Pj"
+        return "XD"
       }
       getHashCode() {
-        let bb = vb(this._x);
-        return bb = 397 * bb ^ vb(this._y), bb = 397 * bb ^ vb(this._z), bb
+        let zz = Kz(this._x);
+        return zz = 397 * zz ^ Kz(this._y), zz = 397 * zz ^ Kz(this._z), zz
       }
-      qUb() {
+      hsz() {
         return [this._x, this._y, this._z]
       }
-      toArray(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return bb[ab] = this._x, bb[ab + 1] = this._y, bb[ab + 2] = this._z, this
+      toArray(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return zz[tz] = this._x, zz[tz + 1] = this._y, zz[tz + 2] = this._z, this
       }
-      Zab(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Pb.FromArrayToRef(bb, ab, this), this
+      Ztz(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return Nz.FromArrayToRef(zz, tz, this), this
       }
       toQuaternion() {
-        return jb.RotationYawPitchRoll(this._y, this._x, this._z)
+        return wz.RotationYawPitchRoll(this._y, this._x, this._z)
       }
-      addInPlace(bb) {
-        return this._x += bb._x, this._y += bb._y, this._z += bb._z, this._isDirty = !0, this
+      addInPlace(zz) {
+        return this._x += zz._x, this._y += zz._y, this._z += zz._z, this._isDirty = !0, this
       }
-      addInPlaceFromFloats(bb, ab, Ub) {
-        return this._x += bb, this._y += ab, this._z += Ub, this._isDirty = !0, this
+      addInPlaceFromFloats(zz, tz, sz) {
+        return this._x += zz, this._y += tz, this._z += sz, this._isDirty = !0, this
       }
-      add(bb) {
-        return new Pb(this._x + bb._x, this._y + bb._y, this._z + bb._z)
+      add(zz) {
+        return new Nz(this._x + zz._x, this._y + zz._y, this._z + zz._z)
       }
-      addToRef(bb, ab) {
-        return ab._x = this._x + bb._x, ab._y = this._y + bb._y, ab._z = this._z + bb._z, ab._isDirty = !0, ab
+      addToRef(zz, tz) {
+        return tz._x = this._x + zz._x, tz._y = this._y + zz._y, tz._z = this._z + zz._z, tz._isDirty = !0, tz
       }
-      MAb(bb) {
-        return this._x -= bb._x, this._y -= bb._y, this._z -= bb._z, this._isDirty = !0, this
+      oFz(zz) {
+        return this._x -= zz._x, this._y -= zz._y, this._z -= zz._z, this._isDirty = !0, this
       }
-      subtract(bb) {
-        return new Pb(this._x - bb._x, this._y - bb._y, this._z - bb._z)
+      subtract(zz) {
+        return new Nz(this._x - zz._x, this._y - zz._y, this._z - zz._z)
       }
-      subtractToRef(bb, ab) {
-        return this.subtractFromFloatsToRef(bb._x, bb._y, bb._z, ab)
+      subtractToRef(zz, tz) {
+        return this.subtractFromFloatsToRef(zz._x, zz._y, zz._z, tz)
       }
-      subtractFromFloats(bb, ab, Ub) {
-        return new Pb(this._x - bb, this._y - ab, this._z - Ub)
+      subtractFromFloats(zz, tz, sz) {
+        return new Nz(this._x - zz, this._y - tz, this._z - sz)
       }
-      subtractFromFloatsToRef(bb, ab, Ub, Ab) {
-        return Ab._x = this._x - bb, Ab._y = this._y - ab, Ab._z = this._z - Ub, Ab._isDirty = !0, Ab
+      subtractFromFloatsToRef(zz, tz, sz, Fz) {
+        return Fz._x = this._x - zz, Fz._y = this._y - tz, Fz._z = this._z - sz, Fz._isDirty = !0, Fz
       }
-      pa() {
-        return new Pb(-this._x, -this._y, -this._z)
+      nt() {
+        return new Nz(-this._x, -this._y, -this._z)
       }
       negateInPlace() {
         return this._x *= -1, this._y *= -1, this._z *= -1, this._isDirty = !0, this
       }
-      negateToRef(bb) {
-        return bb._x = -1 * this._x, bb._y = -1 * this._y, bb._z = -1 * this._z, bb._isDirty = !0, bb
+      negateToRef(zz) {
+        return zz._x = -1 * this._x, zz._y = -1 * this._y, zz._z = -1 * this._z, zz._isDirty = !0, zz
       }
-      scaleInPlace(bb) {
-        return this._x *= bb, this._y *= bb, this._z *= bb, this._isDirty = !0, this
+      scaleInPlace(zz) {
+        return this._x *= zz, this._y *= zz, this._z *= zz, this._isDirty = !0, this
       }
-      scale(bb) {
-        return new Pb(this._x * bb, this._y * bb, this._z * bb)
+      scale(zz) {
+        return new Nz(this._x * zz, this._y * zz, this._z * zz)
       }
-      scaleToRef(bb, ab) {
-        return ab._x = this._x * bb, ab._y = this._y * bb, ab._z = this._z * bb, ab._isDirty = !0, ab
+      scaleToRef(zz, tz) {
+        return tz._x = this._x * zz, tz._y = this._y * zz, tz._z = this._z * zz, tz._isDirty = !0, tz
       }
-      getNormalToRef(bb) {
-        const ab = this.length();
-        let Ub = Math.acos(this._y / ab);
-        const Ab = Math.atan2(this._z, this._x);
-        Ub > Math.PI / 2 ? Ub -= Math.PI / 2 : Ub += Math.PI / 2;
-        const Mb = ab * Math.sin(Ub) * Math.cos(Ab),
-          Tb = ab * Math.cos(Ub),
-          Eb = ab * Math.sin(Ub) * Math.sin(Ab);
-        return bb.set(Mb, Tb, Eb), bb
+      getNormalToRef(zz) {
+        const tz = this.length();
+        let sz = Math.acos(this._y / tz);
+        const Fz = Math.atan2(this._z, this._x);
+        sz > Math.PI / 2 ? sz -= Math.PI / 2 : sz += Math.PI / 2;
+        const Wz = tz * Math.sin(sz) * Math.cos(Fz),
+          Xz = tz * Math.cos(sz),
+          Oz = tz * Math.sin(sz) * Math.sin(Fz);
+        return zz.set(Wz, Xz, Oz), zz
       }
-      applyRotationQuaternionToRef(bb, ab) {
-        const Ub = this._x,
-          Ab = this._y,
-          Mb = this._z,
-          Tb = bb._x,
-          Eb = bb._y,
-          Yb = bb._z,
-          Bb = bb._w,
-          eb = 2 * (Eb * Mb - Yb * Ab),
-          vb = 2 * (Yb * Ub - Tb * Mb),
-          Lb = 2 * (Tb * Ab - Eb * Ub);
-        return ab._x = Ub + Bb * eb + Eb * Lb - Yb * vb, ab._y = Ab + Bb * vb + Yb * eb - Tb * Lb, ab._z = Mb + Bb * Lb + Tb * vb - Eb * eb, ab._isDirty = !0, ab
+      applyRotationQuaternionToRef(zz, tz) {
+        const sz = this._x,
+          Fz = this._y,
+          Wz = this._z,
+          Xz = zz._x,
+          Oz = zz._y,
+          oz = zz._z,
+          vz = zz._w,
+          Uz = 2 * (Oz * Wz - oz * Fz),
+          Kz = 2 * (oz * sz - Xz * Wz),
+          uz = 2 * (Xz * Fz - Oz * sz);
+        return tz._x = sz + vz * Uz + Oz * uz - oz * Kz, tz._y = Fz + vz * Kz + oz * Uz - Xz * uz, tz._z = Wz + vz * uz + Xz * Kz - Oz * Uz, tz._isDirty = !0, tz
       }
-      applyRotationQuaternionInPlace(bb) {
-        return this.applyRotationQuaternionToRef(bb, this)
+      applyRotationQuaternionInPlace(zz) {
+        return this.applyRotationQuaternionToRef(zz, this)
       }
-      applyRotationQuaternion(bb) {
-        return this.applyRotationQuaternionToRef(bb, new Pb)
+      applyRotationQuaternion(zz) {
+        return this.applyRotationQuaternionToRef(zz, new Nz)
       }
-      scaleAndAddToRef(bb, ab) {
-        return ab._x += this._x * bb, ab._y += this._y * bb, ab._z += this._z * bb, ab._isDirty = !0, ab
+      scaleAndAddToRef(zz, tz) {
+        return tz._x += this._x * zz, tz._y += this._y * zz, tz._z += this._z * zz, tz._isDirty = !0, tz
       }
-      projectOnPlane(bb, ab) {
-        return this.projectOnPlaneToRef(bb, ab, new Pb)
+      projectOnPlane(zz, tz) {
+        return this.projectOnPlaneToRef(zz, tz, new Nz)
       }
-      projectOnPlaneToRef(bb, ab, Ub) {
-        const Ab = bb.normal,
-          Mb = bb.d,
-          Tb = kb.Pj[0];
-        this.subtractToRef(ab, Tb), Tb.normalize();
-        const Eb = Pb.Dot(Tb, Ab);
-        if (Math.abs(Eb) < 1e-10) Ub.B3(1 / 0);
+      projectOnPlaneToRef(zz, tz, sz) {
+        const Fz = zz.normal,
+          Wz = zz.d,
+          Xz = gz.XD[0];
+        this.subtractToRef(tz, Xz), Xz.normalize();
+        const Oz = Nz.Dot(Xz, Fz);
+        if (Math.abs(Oz) < 1e-10) sz.Z6(1 / 0);
         else {
-          const bb = -(Pb.Dot(ab, Ab) + Mb) / Eb,
-            Yb = Tb.scaleInPlace(bb);
-          ab.addToRef(Yb, Ub)
+          const zz = -(Nz.Dot(tz, Fz) + Wz) / Oz,
+            oz = Xz.scaleInPlace(zz);
+          tz.addToRef(oz, sz)
         }
-        return Ub
+        return sz
       }
-      equals(bb) {
-        return bb && this._x === bb._x && this._y === bb._y && this._z === bb._z
+      equals(zz) {
+        return zz && this._x === zz._x && this._y === zz._y && this._z === zz._z
       }
-      equalsWithEpsilon(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ab.e;
-        return bb && (0, Yb.WithinEpsilon)(this._x, bb._x, ab) && (0, Yb.WithinEpsilon)(this._y, bb._y, ab) && (0, Yb.WithinEpsilon)(this._z, bb._z, ab)
+      equalsWithEpsilon(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fz.c;
+        return zz && (0, oz.WithinEpsilon)(this._x, zz._x, tz) && (0, oz.WithinEpsilon)(this._y, zz._y, tz) && (0, oz.WithinEpsilon)(this._z, zz._z, tz)
       }
-      eEb(bb, ab, Ub) {
-        return this._x === bb && this._y === ab && this._z === Ub
+      wOz(zz, tz, sz) {
+        return this._x === zz && this._y === tz && this._z === sz
       }
-      multiplyInPlace(bb) {
-        return this._x *= bb._x, this._y *= bb._y, this._z *= bb._z, this._isDirty = !0, this
+      multiplyInPlace(zz) {
+        return this._x *= zz._x, this._y *= zz._y, this._z *= zz._z, this._isDirty = !0, this
       }
-      multiply(bb) {
-        return this.multiplyByFloats(bb._x, bb._y, bb._z)
+      multiply(zz) {
+        return this.multiplyByFloats(zz._x, zz._y, zz._z)
       }
-      multiplyToRef(bb, ab) {
-        return ab._x = this._x * bb._x, ab._y = this._y * bb._y, ab._z = this._z * bb._z, ab._isDirty = !0, ab
+      multiplyToRef(zz, tz) {
+        return tz._x = this._x * zz._x, tz._y = this._y * zz._y, tz._z = this._z * zz._z, tz._isDirty = !0, tz
       }
-      multiplyByFloats(bb, ab, Ub) {
-        return new Pb(this._x * bb, this._y * ab, this._z * Ub)
+      multiplyByFloats(zz, tz, sz) {
+        return new Nz(this._x * zz, this._y * tz, this._z * sz)
       }
-      divide(bb) {
-        return new Pb(this._x / bb._x, this._y / bb._y, this._z / bb._z)
+      divide(zz) {
+        return new Nz(this._x / zz._x, this._y / zz._y, this._z / zz._z)
       }
-      divideToRef(bb, ab) {
-        return ab._x = this._x / bb._x, ab._y = this._y / bb._y, ab._z = this._z / bb._z, ab._isDirty = !0, ab
+      divideToRef(zz, tz) {
+        return tz._x = this._x / zz._x, tz._y = this._y / zz._y, tz._z = this._z / zz._z, tz._isDirty = !0, tz
       }
-      divideInPlace(bb) {
-        return this._x = this._x / bb._x, this._y = this._y / bb._y, this._z = this._z / bb._z, this._isDirty = !0, this
+      divideInPlace(zz) {
+        return this._x = this._x / zz._x, this._y = this._y / zz._y, this._z = this._z / zz._z, this._isDirty = !0, this
       }
-      minimizeInPlace(bb) {
-        return this.minimizeInPlaceFromFloats(bb._x, bb._y, bb._z)
+      minimizeInPlace(zz) {
+        return this.minimizeInPlaceFromFloats(zz._x, zz._y, zz._z)
       }
-      maximizeInPlace(bb) {
-        return this.maximizeInPlaceFromFloats(bb._x, bb._y, bb._z)
+      maximizeInPlace(zz) {
+        return this.maximizeInPlaceFromFloats(zz._x, zz._y, zz._z)
       }
-      minimizeInPlaceFromFloats(bb, ab, Ub) {
-        return bb < this._x && (this.x = bb), ab < this._y && (this.y = ab), Ub < this._z && (this.z = Ub), this
+      minimizeInPlaceFromFloats(zz, tz, sz) {
+        return zz < this._x && (this.x = zz), tz < this._y && (this.y = tz), sz < this._z && (this.z = sz), this
       }
-      maximizeInPlaceFromFloats(bb, ab, Ub) {
-        return bb > this._x && (this.x = bb), ab > this._y && (this.y = ab), Ub > this._z && (this.z = Ub), this
+      maximizeInPlaceFromFloats(zz, tz, sz) {
+        return zz > this._x && (this.x = zz), tz > this._y && (this.y = tz), sz > this._z && (this.z = sz), this
       }
-      isNonUniformWithinEpsilon(bb) {
-        const ab = Math.abs(this._x),
-          Ub = Math.abs(this._y);
-        if (!(0, Yb.WithinEpsilon)(ab, Ub, bb)) return !0;
-        const Ab = Math.abs(this._z);
-        return !(0, Yb.WithinEpsilon)(ab, Ab, bb) || !(0, Yb.WithinEpsilon)(Ub, Ab, bb)
+      isNonUniformWithinEpsilon(zz) {
+        const tz = Math.abs(this._x),
+          sz = Math.abs(this._y);
+        if (!(0, oz.WithinEpsilon)(tz, sz, zz)) return !0;
+        const Fz = Math.abs(this._z);
+        return !(0, oz.WithinEpsilon)(tz, Fz, zz) || !(0, oz.WithinEpsilon)(sz, Fz, zz)
       }
       get isNonUniform() {
-        const bb = Math.abs(this._x);
-        if (bb !== Math.abs(this._y)) return !0;
-        return bb !== Math.abs(this._z)
+        const zz = Math.abs(this._x);
+        if (zz !== Math.abs(this._y)) return !0;
+        return zz !== Math.abs(this._z)
       }
-      floorToRef(bb) {
-        return bb._x = Math.floor(this._x), bb._y = Math.floor(this._y), bb._z = Math.floor(this._z), bb._isDirty = !0, bb
+      floorToRef(zz) {
+        return zz._x = Math.floor(this._x), zz._y = Math.floor(this._y), zz._z = Math.floor(this._z), zz._isDirty = !0, zz
       }
       floor() {
-        return new Pb(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z))
+        return new Nz(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z))
       }
-      fractToRef(bb) {
-        return bb._x = this._x - Math.floor(this._x), bb._y = this._y - Math.floor(this._y), bb._z = this._z - Math.floor(this._z), bb._isDirty = !0, bb
+      fractToRef(zz) {
+        return zz._x = this._x - Math.floor(this._x), zz._y = this._y - Math.floor(this._y), zz._z = this._z - Math.floor(this._z), zz._isDirty = !0, zz
       }
       fract() {
-        return new Pb(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z))
+        return new Nz(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z))
       }
       length() {
         return Math.sqrt(this.lengthSquared())
@@ -709,438 +709,438 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      reorderInPlace(bb) {
-        if ("xyz" === (bb = bb.toLowerCase())) return this;
-        const ab = kb.Pj[0].EUb(this);
-        return this.x = ab[bb[0]], this.y = ab[bb[1]], this.z = ab[bb[2]], this
+      reorderInPlace(zz) {
+        if ("xyz" === (zz = zz.toLowerCase())) return this;
+        const tz = gz.XD[0].vsz(this);
+        return this.x = tz[zz[0]], this.y = tz[zz[1]], this.z = tz[zz[2]], this
       }
-      rotateByQuaternionToRef(bb, ab) {
-        return bb.toRotationMatrix(kb.Matrix[0]), Pb.TransformCoordinatesToRef(this, kb.Matrix[0], ab), ab
+      rotateByQuaternionToRef(zz, tz) {
+        return zz.toRotationMatrix(gz.Matrix[0]), Nz.TransformCoordinatesToRef(this, gz.Matrix[0], tz), tz
       }
-      rotateByQuaternionAroundPointToRef(bb, ab, Ub) {
-        return this.subtractToRef(ab, kb.Pj[0]), kb.Pj[0].rotateByQuaternionToRef(bb, kb.Pj[0]), ab.addToRef(kb.Pj[0], Ub), Ub
+      rotateByQuaternionAroundPointToRef(zz, tz, sz) {
+        return this.subtractToRef(tz, gz.XD[0]), gz.XD[0].rotateByQuaternionToRef(zz, gz.XD[0]), tz.addToRef(gz.XD[0], sz), sz
       }
-      cross(bb) {
-        return Pb.CrossToRef(this, bb, new Pb)
+      cross(zz) {
+        return Nz.CrossToRef(this, zz, new Nz)
       }
-      normalizeFromLength(bb) {
-        return 0 === bb || 1 === bb ? this : this.scaleInPlace(1 / bb)
+      normalizeFromLength(zz) {
+        return 0 === zz || 1 === zz ? this : this.scaleInPlace(1 / zz)
       }
       normalizeToNew() {
-        return this.normalizeToRef(new Pb)
+        return this.normalizeToRef(new Nz)
       }
-      normalizeToRef(bb) {
-        const ab = this.length();
-        return 0 === ab || 1 === ab ? (bb._x = this._x, bb._y = this._y, bb._z = this._z, bb._isDirty = !0, bb) : this.scaleToRef(1 / ab, bb)
+      normalizeToRef(zz) {
+        const tz = this.length();
+        return 0 === tz || 1 === tz ? (zz._x = this._x, zz._y = this._y, zz._z = this._z, zz._isDirty = !0, zz) : this.scaleToRef(1 / tz, zz)
       }
       clone() {
-        return new Pb(this._x, this._y, this._z)
+        return new Nz(this._x, this._y, this._z)
       }
-      EUb(bb) {
-        return this.K9(bb._x, bb._y, bb._z)
+      vsz(zz) {
+        return this.m_(zz._x, zz._y, zz._z)
       }
-      K9(bb, ab, Ub) {
-        return this._x = bb, this._y = ab, this._z = Ub, this._isDirty = !0, this
+      m_(zz, tz, sz) {
+        return this._x = zz, this._y = tz, this._z = sz, this._isDirty = !0, this
       }
-      set(bb, ab, Ub) {
-        return this.K9(bb, ab, Ub)
+      set(zz, tz, sz) {
+        return this.m_(zz, tz, sz)
       }
-      B3(bb) {
-        return this._x = this._y = this._z = bb, this._isDirty = !0, this
+      Z6(zz) {
+        return this._x = this._y = this._z = zz, this._isDirty = !0, this
       }
-      static GetClipFactor(bb, ab, Ub, Ab) {
-        const Mb = Pb.Dot(bb, Ub);
-        return (Mb - Ab) / (Mb - Pb.Dot(ab, Ub))
+      static GetClipFactor(zz, tz, sz, Fz) {
+        const Wz = Nz.Dot(zz, sz);
+        return (Wz - Fz) / (Wz - Nz.Dot(tz, sz))
       }
-      static GetAngleBetweenVectors(bb, ab, Ub) {
-        const Ab = bb.normalizeToRef(kb.Pj[1]),
-          Mb = ab.normalizeToRef(kb.Pj[2]);
-        let Tb = Pb.Dot(Ab, Mb);
-        Tb = (0, Yb.Clamp)(Tb, -1, 1);
-        const Eb = Math.acos(Tb),
-          Bb = kb.Pj[3];
-        return Pb.CrossToRef(Ab, Mb, Bb), Pb.Dot(Bb, Ub) > 0 ? isNaN(Eb) ? 0 : Eb : isNaN(Eb) ? -Math.PI : -Math.acos(Tb)
+      static GetAngleBetweenVectors(zz, tz, sz) {
+        const Fz = zz.normalizeToRef(gz.XD[1]),
+          Wz = tz.normalizeToRef(gz.XD[2]);
+        let Xz = Nz.Dot(Fz, Wz);
+        Xz = (0, oz.Clamp)(Xz, -1, 1);
+        const Oz = Math.acos(Xz),
+          vz = gz.XD[3];
+        return Nz.CrossToRef(Fz, Wz, vz), Nz.Dot(vz, sz) > 0 ? isNaN(Oz) ? 0 : Oz : isNaN(Oz) ? -Math.PI : -Math.acos(Xz)
       }
-      static GetAngleBetweenVectorsOnPlane(bb, ab, Ub) {
-        kb.Pj[0].EUb(bb);
-        const Ab = kb.Pj[0];
-        kb.Pj[1].EUb(ab);
-        const Mb = kb.Pj[1];
-        kb.Pj[2].EUb(Ub);
-        const Tb = kb.Pj[2],
-          Eb = kb.Pj[3],
-          Bb = kb.Pj[4];
-        Ab.normalize(), Mb.normalize(), Tb.normalize(), Pb.CrossToRef(Tb, Ab, Eb), Pb.CrossToRef(Eb, Tb, Bb);
-        const eb = Math.atan2(Pb.Dot(Mb, Eb), Pb.Dot(Mb, Bb));
-        return (0, Yb.NormalizeRadians)(eb)
+      static GetAngleBetweenVectorsOnPlane(zz, tz, sz) {
+        gz.XD[0].vsz(zz);
+        const Fz = gz.XD[0];
+        gz.XD[1].vsz(tz);
+        const Wz = gz.XD[1];
+        gz.XD[2].vsz(sz);
+        const Xz = gz.XD[2],
+          Oz = gz.XD[3],
+          vz = gz.XD[4];
+        Fz.normalize(), Wz.normalize(), Xz.normalize(), Nz.CrossToRef(Xz, Fz, Oz), Nz.CrossToRef(Oz, Xz, vz);
+        const Uz = Math.atan2(Nz.Dot(Wz, Oz), Nz.Dot(Wz, vz));
+        return (0, oz.NormalizeRadians)(Uz)
       }
-      static PitchYawRollToMoveBetweenPointsToRef(bb, ab, Ub) {
-        const Ab = yb.Pj[0];
-        return ab.subtractToRef(bb, Ab), Ub._y = Math.atan2(Ab.x, Ab.z) || 0, Ub._x = Math.atan2(Math.sqrt(Ab.x ** 2 + Ab.z ** 2), Ab.y) || 0, Ub._z = 0, Ub._isDirty = !0, Ub
+      static PitchYawRollToMoveBetweenPointsToRef(zz, tz, sz) {
+        const Fz = Hz.XD[0];
+        return tz.subtractToRef(zz, Fz), sz._y = Math.atan2(Fz.x, Fz.z) || 0, sz._x = Math.atan2(Math.sqrt(Fz.x ** 2 + Fz.z ** 2), Fz.y) || 0, sz._z = 0, sz._isDirty = !0, sz
       }
-      static PitchYawRollToMoveBetweenPoints(bb, ab) {
-        const Ub = Pb.Zero();
-        return Pb.PitchYawRollToMoveBetweenPointsToRef(bb, ab, Ub)
+      static PitchYawRollToMoveBetweenPoints(zz, tz) {
+        const sz = Nz.Zero();
+        return Nz.PitchYawRollToMoveBetweenPointsToRef(zz, tz, sz)
       }
-      static SlerpToRef(bb, ab, Ub, Mb) {
-        Ub = (0, Yb.Clamp)(Ub, 0, 1);
-        const Tb = kb.Pj[0],
-          Eb = kb.Pj[1];
-        Tb.EUb(bb);
-        const Bb = Tb.length();
-        Tb.normalizeFromLength(Bb), Eb.EUb(ab);
-        const eb = Eb.length();
-        Eb.normalizeFromLength(eb);
-        const vb = Pb.Dot(Tb, Eb);
-        let Lb, Xb;
-        if (vb < 1 - Ab.e) {
-          const bb = Math.acos(vb),
-            ab = 1 / Math.sin(bb);
-          Lb = Math.sin((1 - Ub) * bb) * ab, Xb = Math.sin(Ub * bb) * ab
-        } else Lb = 1 - Ub, Xb = Ub;
-        return Tb.scaleInPlace(Lb), Eb.scaleInPlace(Xb), Mb.EUb(Tb).addInPlace(Eb), Mb.scaleInPlace((0, Yb.Lerp)(Bb, eb, Ub)), Mb
+      static SlerpToRef(zz, tz, sz, Wz) {
+        sz = (0, oz.Clamp)(sz, 0, 1);
+        const Xz = gz.XD[0],
+          Oz = gz.XD[1];
+        Xz.vsz(zz);
+        const vz = Xz.length();
+        Xz.normalizeFromLength(vz), Oz.vsz(tz);
+        const Uz = Oz.length();
+        Oz.normalizeFromLength(Uz);
+        const Kz = Nz.Dot(Xz, Oz);
+        let uz, bz;
+        if (Kz < 1 - Fz.c) {
+          const zz = Math.acos(Kz),
+            tz = 1 / Math.sin(zz);
+          uz = Math.sin((1 - sz) * zz) * tz, bz = Math.sin(sz * zz) * tz
+        } else uz = 1 - sz, bz = sz;
+        return Xz.scaleInPlace(uz), Oz.scaleInPlace(bz), Wz.vsz(Xz).addInPlace(Oz), Wz.scaleInPlace((0, oz.Lerp)(vz, Uz, sz)), Wz
       }
-      static SmoothToRef(bb, ab, Ub, Ab, Mb) {
-        return Pb.SlerpToRef(bb, ab, 0 === Ab ? 1 : Ub / Ab, Mb), Mb
+      static SmoothToRef(zz, tz, sz, Fz, Wz) {
+        return Nz.SlerpToRef(zz, tz, 0 === Fz ? 1 : sz / Fz, Wz), Wz
       }
-      static FromArray(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Pb(bb[ab], bb[ab + 1], bb[ab + 2])
+      static FromArray(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new Nz(zz[tz], zz[tz + 1], zz[tz + 2])
       }
-      static FromFloatArray(bb, ab) {
-        return Pb.FromArray(bb, ab)
+      static FromFloatArray(zz, tz) {
+        return Nz.FromArray(zz, tz)
       }
-      static FromArrayToRef(bb, ab, Ub) {
-        return Ub._x = bb[ab], Ub._y = bb[ab + 1], Ub._z = bb[ab + 2], Ub._isDirty = !0, Ub
+      static FromArrayToRef(zz, tz, sz) {
+        return sz._x = zz[tz], sz._y = zz[tz + 1], sz._z = zz[tz + 2], sz._isDirty = !0, sz
       }
-      static FromFloatArrayToRef(bb, ab, Ub) {
-        return Pb.FromArrayToRef(bb, ab, Ub)
+      static FromFloatArrayToRef(zz, tz, sz) {
+        return Nz.FromArrayToRef(zz, tz, sz)
       }
-      static FromFloatsToRef(bb, ab, Ub, Ab) {
-        return Ab.K9(bb, ab, Ub), Ab
+      static FromFloatsToRef(zz, tz, sz, Fz) {
+        return Fz.m_(zz, tz, sz), Fz
       }
       static Zero() {
-        return new Pb(0, 0, 0)
+        return new Nz(0, 0, 0)
       }
       static One() {
-        return new Pb(1, 1, 1)
+        return new Nz(1, 1, 1)
       }
       static Up() {
-        return new Pb(0, 1, 0)
+        return new Nz(0, 1, 0)
       }
       static get UpReadOnly() {
-        return Pb._UpReadOnly
+        return Nz._UpReadOnly
       }
       static get DownReadOnly() {
-        return Pb._DownReadOnly
+        return Nz._DownReadOnly
       }
       static get RightReadOnly() {
-        return Pb._RightReadOnly
+        return Nz._RightReadOnly
       }
       static get LeftReadOnly() {
-        return Pb._LeftReadOnly
+        return Nz._LeftReadOnly
       }
       static get LeftHandedForwardReadOnly() {
-        return Pb._LeftHandedForwardReadOnly
+        return Nz._LeftHandedForwardReadOnly
       }
       static get RightHandedForwardReadOnly() {
-        return Pb._RightHandedForwardReadOnly
+        return Nz._RightHandedForwardReadOnly
       }
       static get LeftHandedBackwardReadOnly() {
-        return Pb._LeftHandedBackwardReadOnly
+        return Nz._LeftHandedBackwardReadOnly
       }
       static get RightHandedBackwardReadOnly() {
-        return Pb._RightHandedBackwardReadOnly
+        return Nz._RightHandedBackwardReadOnly
       }
       static get ZeroReadOnly() {
-        return Pb._ZeroReadOnly
+        return Nz._ZeroReadOnly
       }
       static get OneReadOnly() {
-        return Pb._OneReadOnly
+        return Nz._OneReadOnly
       }
       static Down() {
-        return new Pb(0, -1, 0)
+        return new Nz(0, -1, 0)
       }
       static Forward() {
-        return new Pb(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? -1 : 1)
+        return new Nz(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? -1 : 1)
       }
       static Backward() {
-        return new Pb(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? 1 : -1)
+        return new Nz(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? 1 : -1)
       }
       static Right() {
-        return new Pb(1, 0, 0)
+        return new Nz(1, 0, 0)
       }
       static Left() {
-        return new Pb(-1, 0, 0)
+        return new Nz(-1, 0, 0)
       }
       static Random() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Pb((0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab))
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new Nz((0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz))
       }
       static RandomToRef() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).K9((0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab))
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).m_((0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz))
       }
-      static TransformCoordinates(bb, ab) {
-        const Ub = Pb.Zero();
-        return Pb.TransformCoordinatesToRef(bb, ab, Ub), Ub
+      static TransformCoordinates(zz, tz) {
+        const sz = Nz.Zero();
+        return Nz.TransformCoordinatesToRef(zz, tz, sz), sz
       }
-      static TransformCoordinatesToRef(bb, ab, Ub) {
-        return Pb.TransformCoordinatesFromFloatsToRef(bb._x, bb._y, bb._z, ab, Ub), Ub
+      static TransformCoordinatesToRef(zz, tz, sz) {
+        return Nz.TransformCoordinatesFromFloatsToRef(zz._x, zz._y, zz._z, tz, sz), sz
       }
-      static TransformCoordinatesFromFloatsToRef(bb, ab, Ub, Ab, Mb) {
-        const Tb = Ab.m,
-          Eb = bb * Tb[0] + ab * Tb[4] + Ub * Tb[8] + Tb[12],
-          Yb = bb * Tb[1] + ab * Tb[5] + Ub * Tb[9] + Tb[13],
-          Bb = bb * Tb[2] + ab * Tb[6] + Ub * Tb[10] + Tb[14],
-          eb = 1 / (bb * Tb[3] + ab * Tb[7] + Ub * Tb[11] + Tb[15]);
-        return Mb._x = Eb * eb, Mb._y = Yb * eb, Mb._z = Bb * eb, Mb._isDirty = !0, Mb
+      static TransformCoordinatesFromFloatsToRef(zz, tz, sz, Fz, Wz) {
+        const Xz = Fz.m,
+          Oz = zz * Xz[0] + tz * Xz[4] + sz * Xz[8] + Xz[12],
+          oz = zz * Xz[1] + tz * Xz[5] + sz * Xz[9] + Xz[13],
+          vz = zz * Xz[2] + tz * Xz[6] + sz * Xz[10] + Xz[14],
+          Uz = 1 / (zz * Xz[3] + tz * Xz[7] + sz * Xz[11] + Xz[15]);
+        return Wz._x = Oz * Uz, Wz._y = oz * Uz, Wz._z = vz * Uz, Wz._isDirty = !0, Wz
       }
-      static TransformNormal(bb, ab) {
-        const Ub = Pb.Zero();
-        return Pb.TransformNormalToRef(bb, ab, Ub), Ub
+      static TransformNormal(zz, tz) {
+        const sz = Nz.Zero();
+        return Nz.TransformNormalToRef(zz, tz, sz), sz
       }
-      static TransformNormalToRef(bb, ab, Ub) {
-        return this.TransformNormalFromFloatsToRef(bb._x, bb._y, bb._z, ab, Ub), Ub
+      static TransformNormalToRef(zz, tz, sz) {
+        return this.TransformNormalFromFloatsToRef(zz._x, zz._y, zz._z, tz, sz), sz
       }
-      static TransformNormalFromFloatsToRef(bb, ab, Ub, Ab, Mb) {
-        const Tb = Ab.m;
-        return Mb._x = bb * Tb[0] + ab * Tb[4] + Ub * Tb[8], Mb._y = bb * Tb[1] + ab * Tb[5] + Ub * Tb[9], Mb._z = bb * Tb[2] + ab * Tb[6] + Ub * Tb[10], Mb._isDirty = !0, Mb
+      static TransformNormalFromFloatsToRef(zz, tz, sz, Fz, Wz) {
+        const Xz = Fz.m;
+        return Wz._x = zz * Xz[0] + tz * Xz[4] + sz * Xz[8], Wz._y = zz * Xz[1] + tz * Xz[5] + sz * Xz[9], Wz._z = zz * Xz[2] + tz * Xz[6] + sz * Xz[10], Wz._isDirty = !0, Wz
       }
-      static CatmullRom(bb, ab, Ub, Ab, Mb) {
-        const Tb = Mb * Mb,
-          Eb = Mb * Tb,
-          Yb = .5 * (2 * ab._x + (-bb._x + Ub._x) * Mb + (2 * bb._x - 5 * ab._x + 4 * Ub._x - Ab._x) * Tb + (-bb._x + 3 * ab._x - 3 * Ub._x + Ab._x) * Eb),
-          Bb = .5 * (2 * ab._y + (-bb._y + Ub._y) * Mb + (2 * bb._y - 5 * ab._y + 4 * Ub._y - Ab._y) * Tb + (-bb._y + 3 * ab._y - 3 * Ub._y + Ab._y) * Eb),
-          eb = .5 * (2 * ab._z + (-bb._z + Ub._z) * Mb + (2 * bb._z - 5 * ab._z + 4 * Ub._z - Ab._z) * Tb + (-bb._z + 3 * ab._z - 3 * Ub._z + Ab._z) * Eb);
-        return new Pb(Yb, Bb, eb)
+      static CatmullRom(zz, tz, sz, Fz, Wz) {
+        const Xz = Wz * Wz,
+          Oz = Wz * Xz,
+          oz = .5 * (2 * tz._x + (-zz._x + sz._x) * Wz + (2 * zz._x - 5 * tz._x + 4 * sz._x - Fz._x) * Xz + (-zz._x + 3 * tz._x - 3 * sz._x + Fz._x) * Oz),
+          vz = .5 * (2 * tz._y + (-zz._y + sz._y) * Wz + (2 * zz._y - 5 * tz._y + 4 * sz._y - Fz._y) * Xz + (-zz._y + 3 * tz._y - 3 * sz._y + Fz._y) * Oz),
+          Uz = .5 * (2 * tz._z + (-zz._z + sz._z) * Wz + (2 * zz._z - 5 * tz._z + 4 * sz._z - Fz._z) * Xz + (-zz._z + 3 * tz._z - 3 * sz._z + Fz._z) * Oz);
+        return new Nz(oz, vz, Uz)
       }
-      static Clamp(bb, ab, Ub) {
-        const Ab = new Pb;
-        return Pb.ClampToRef(bb, ab, Ub, Ab), Ab
+      static Clamp(zz, tz, sz) {
+        const Fz = new Nz;
+        return Nz.ClampToRef(zz, tz, sz, Fz), Fz
       }
-      static ClampToRef(bb, ab, Ub, Ab) {
-        let Mb = bb._x;
-        Mb = Mb > Ub._x ? Ub._x : Mb, Mb = Mb < ab._x ? ab._x : Mb;
-        let Tb = bb._y;
-        Tb = Tb > Ub._y ? Ub._y : Tb, Tb = Tb < ab._y ? ab._y : Tb;
-        let Eb = bb._z;
-        return Eb = Eb > Ub._z ? Ub._z : Eb, Eb = Eb < ab._z ? ab._z : Eb, Ab.K9(Mb, Tb, Eb), Ab
+      static ClampToRef(zz, tz, sz, Fz) {
+        let Wz = zz._x;
+        Wz = Wz > sz._x ? sz._x : Wz, Wz = Wz < tz._x ? tz._x : Wz;
+        let Xz = zz._y;
+        Xz = Xz > sz._y ? sz._y : Xz, Xz = Xz < tz._y ? tz._y : Xz;
+        let Oz = zz._z;
+        return Oz = Oz > sz._z ? sz._z : Oz, Oz = Oz < tz._z ? tz._z : Oz, Fz.m_(Wz, Xz, Oz), Fz
       }
-      static CheckExtends(bb, ab, Ub) {
-        ab.minimizeInPlace(bb), Ub.maximizeInPlace(bb)
+      static CheckExtends(zz, tz, sz) {
+        tz.minimizeInPlace(zz), sz.maximizeInPlace(zz)
       }
-      static Hermite(bb, ab, Ub, Ab, Mb) {
-        const Tb = Mb * Mb,
-          Eb = Mb * Tb,
-          Yb = 2 * Eb - 3 * Tb + 1,
-          Bb = -2 * Eb + 3 * Tb,
-          eb = Eb - 2 * Tb + Mb,
-          vb = Eb - Tb,
-          Lb = bb._x * Yb + Ub._x * Bb + ab._x * eb + Ab._x * vb,
-          Xb = bb._y * Yb + Ub._y * Bb + ab._y * eb + Ab._y * vb,
-          jb = bb._z * Yb + Ub._z * Bb + ab._z * eb + Ab._z * vb;
-        return new Pb(Lb, Xb, jb)
+      static Hermite(zz, tz, sz, Fz, Wz) {
+        const Xz = Wz * Wz,
+          Oz = Wz * Xz,
+          oz = 2 * Oz - 3 * Xz + 1,
+          vz = -2 * Oz + 3 * Xz,
+          Uz = Oz - 2 * Xz + Wz,
+          Kz = Oz - Xz,
+          uz = zz._x * oz + sz._x * vz + tz._x * Uz + Fz._x * Kz,
+          bz = zz._y * oz + sz._y * vz + tz._y * Uz + Fz._y * Kz,
+          wz = zz._z * oz + sz._z * vz + tz._z * Uz + Fz._z * Kz;
+        return new Nz(uz, bz, wz)
       }
-      static Hermite1stDerivative(bb, ab, Ub, Ab, Mb) {
-        const Tb = new Pb;
-        return this.Hermite1stDerivativeToRef(bb, ab, Ub, Ab, Mb, Tb), Tb
+      static Hermite1stDerivative(zz, tz, sz, Fz, Wz) {
+        const Xz = new Nz;
+        return this.Hermite1stDerivativeToRef(zz, tz, sz, Fz, Wz, Xz), Xz
       }
-      static Hermite1stDerivativeToRef(bb, ab, Ub, Ab, Mb, Tb) {
-        const Eb = Mb * Mb;
-        return Tb._x = 6 * (Eb - Mb) * bb._x + (3 * Eb - 4 * Mb + 1) * ab._x + 6 * (-Eb + Mb) * Ub._x + (3 * Eb - 2 * Mb) * Ab._x, Tb._y = 6 * (Eb - Mb) * bb._y + (3 * Eb - 4 * Mb + 1) * ab._y + 6 * (-Eb + Mb) * Ub._y + (3 * Eb - 2 * Mb) * Ab._y, Tb._z = 6 * (Eb - Mb) * bb._z + (3 * Eb - 4 * Mb + 1) * ab._z + 6 * (-Eb + Mb) * Ub._z + (3 * Eb - 2 * Mb) * Ab._z, Tb._isDirty = !0, Tb
+      static Hermite1stDerivativeToRef(zz, tz, sz, Fz, Wz, Xz) {
+        const Oz = Wz * Wz;
+        return Xz._x = 6 * (Oz - Wz) * zz._x + (3 * Oz - 4 * Wz + 1) * tz._x + 6 * (-Oz + Wz) * sz._x + (3 * Oz - 2 * Wz) * Fz._x, Xz._y = 6 * (Oz - Wz) * zz._y + (3 * Oz - 4 * Wz + 1) * tz._y + 6 * (-Oz + Wz) * sz._y + (3 * Oz - 2 * Wz) * Fz._y, Xz._z = 6 * (Oz - Wz) * zz._z + (3 * Oz - 4 * Wz + 1) * tz._z + 6 * (-Oz + Wz) * sz._z + (3 * Oz - 2 * Wz) * Fz._z, Xz._isDirty = !0, Xz
       }
-      static Lerp(bb, ab, Ub) {
-        const Ab = new Pb(0, 0, 0);
-        return Pb.LerpToRef(bb, ab, Ub, Ab), Ab
+      static Lerp(zz, tz, sz) {
+        const Fz = new Nz(0, 0, 0);
+        return Nz.LerpToRef(zz, tz, sz, Fz), Fz
       }
-      static LerpToRef(bb, ab, Ub, Ab) {
-        return Ab._x = bb._x + (ab._x - bb._x) * Ub, Ab._y = bb._y + (ab._y - bb._y) * Ub, Ab._z = bb._z + (ab._z - bb._z) * Ub, Ab._isDirty = !0, Ab
+      static LerpToRef(zz, tz, sz, Fz) {
+        return Fz._x = zz._x + (tz._x - zz._x) * sz, Fz._y = zz._y + (tz._y - zz._y) * sz, Fz._z = zz._z + (tz._z - zz._z) * sz, Fz._isDirty = !0, Fz
       }
-      static Dot(bb, ab) {
-        return bb._x * ab._x + bb._y * ab._y + bb._z * ab._z
+      static Dot(zz, tz) {
+        return zz._x * tz._x + zz._y * tz._y + zz._z * tz._z
       }
-      dot(bb) {
-        return this._x * bb._x + this._y * bb._y + this._z * bb._z
+      dot(zz) {
+        return this._x * zz._x + this._y * zz._y + this._z * zz._z
       }
-      static Cross(bb, ab) {
-        const Ub = new Pb;
-        return Pb.CrossToRef(bb, ab, Ub), Ub
+      static Cross(zz, tz) {
+        const sz = new Nz;
+        return Nz.CrossToRef(zz, tz, sz), sz
       }
-      static CrossToRef(bb, ab, Ub) {
-        const Ab = bb._y * ab._z - bb._z * ab._y,
-          Mb = bb._z * ab._x - bb._x * ab._z,
-          Tb = bb._x * ab._y - bb._y * ab._x;
-        return Ub.K9(Ab, Mb, Tb), Ub
+      static CrossToRef(zz, tz, sz) {
+        const Fz = zz._y * tz._z - zz._z * tz._y,
+          Wz = zz._z * tz._x - zz._x * tz._z,
+          Xz = zz._x * tz._y - zz._y * tz._x;
+        return sz.m_(Fz, Wz, Xz), sz
       }
-      static Normalize(bb) {
-        const ab = Pb.Zero();
-        return Pb.NormalizeToRef(bb, ab), ab
+      static Normalize(zz) {
+        const tz = Nz.Zero();
+        return Nz.NormalizeToRef(zz, tz), tz
       }
-      static NormalizeToRef(bb, ab) {
-        return bb.normalizeToRef(ab), ab
+      static NormalizeToRef(zz, tz) {
+        return zz.normalizeToRef(tz), tz
       }
-      static Project(bb, ab, Ub, Ab) {
-        const Mb = new Pb;
-        return Pb.ProjectToRef(bb, ab, Ub, Ab, Mb), Mb
+      static Project(zz, tz, sz, Fz) {
+        const Wz = new Nz;
+        return Nz.ProjectToRef(zz, tz, sz, Fz, Wz), Wz
       }
-      static ProjectToRef(bb, ab, Ub, Ab, Mb) {
-        const Tb = Ab.width,
-          Yb = Ab.height,
-          Bb = Ab.x,
-          eb = Ab.y,
-          vb = kb.Matrix[1],
-          Lb = Eb.d.LastCreatedEngine?.isNDCHalfZRange,
-          Xb = Lb ? 1 : .5,
-          jb = Lb ? 0 : .5;
-        Rb.FromValuesToRef(Tb / 2, 0, 0, 0, 0, -Yb / 2, 0, 0, 0, 0, Xb, 0, Bb + Tb / 2, Yb / 2 + eb, jb, 1, vb);
-        const yb = kb.Matrix[0];
-        return ab.multiplyToRef(Ub, yb), yb.multiplyToRef(vb, yb), Pb.TransformCoordinatesToRef(bb, yb, Mb), Mb
+      static ProjectToRef(zz, tz, sz, Fz, Wz) {
+        const Xz = Fz.width,
+          oz = Fz.height,
+          vz = Fz.x,
+          Uz = Fz.y,
+          Kz = gz.Matrix[1],
+          uz = Oz.c.LastCreatedEngine?.isNDCHalfZRange,
+          bz = uz ? 1 : .5,
+          wz = uz ? 0 : .5;
+        Dz.FromValuesToRef(Xz / 2, 0, 0, 0, 0, -oz / 2, 0, 0, 0, 0, bz, 0, vz + Xz / 2, oz / 2 + Uz, wz, 1, Kz);
+        const Hz = gz.Matrix[0];
+        return tz.multiplyToRef(sz, Hz), Hz.multiplyToRef(Kz, Hz), Nz.TransformCoordinatesToRef(zz, Hz, Wz), Wz
       }
-      static Reflect(bb, ab) {
-        return this.ReflectToRef(bb, ab, new Pb)
+      static Reflect(zz, tz) {
+        return this.ReflectToRef(zz, tz, new Nz)
       }
-      static ReflectToRef(bb, ab, Ub) {
-        const Ab = yb.Pj[0];
-        return Ab.EUb(ab).scaleInPlace(2 * Pb.Dot(bb, ab)), Ub.EUb(bb).MAb(Ab)
+      static ReflectToRef(zz, tz, sz) {
+        const Fz = Hz.XD[0];
+        return Fz.vsz(tz).scaleInPlace(2 * Nz.Dot(zz, tz)), sz.vsz(zz).oFz(Fz)
       }
-      static UnprojectFromTransform(bb, ab, Ub, Ab, Mb) {
-        return this.Unproject(bb, ab, Ub, Ab, Mb, Rb.IdentityReadOnly)
+      static UnprojectFromTransform(zz, tz, sz, Fz, Wz) {
+        return this.Unproject(zz, tz, sz, Fz, Wz, Dz.IdentityReadOnly)
       }
-      static Unproject(bb, ab, Ub, Ab, Mb, Tb) {
-        const Eb = new Pb;
-        return Pb.UnprojectToRef(bb, ab, Ub, Ab, Mb, Tb, Eb), Eb
+      static Unproject(zz, tz, sz, Fz, Wz, Xz) {
+        const Oz = new Nz;
+        return Nz.UnprojectToRef(zz, tz, sz, Fz, Wz, Xz, Oz), Oz
       }
-      static UnprojectToRef(bb, ab, Ub, Ab, Mb, Tb, Eb) {
-        return Pb.UnprojectFloatsToRef(bb._x, bb._y, bb._z, ab, Ub, Ab, Mb, Tb, Eb), Eb
+      static UnprojectToRef(zz, tz, sz, Fz, Wz, Xz, Oz) {
+        return Nz.UnprojectFloatsToRef(zz._x, zz._y, zz._z, tz, sz, Fz, Wz, Xz, Oz), Oz
       }
-      static UnprojectFloatsToRef(bb, ab, Ub, Ab, Mb, Tb, Yb, Bb, eb) {
-        const vb = kb.Matrix[0];
-        Tb.multiplyToRef(Yb, vb), vb.multiplyToRef(Bb, vb), vb.invert();
-        const Lb = kb.Pj[0];
-        return Lb.x = bb / Ab * 2 - 1, Lb.y = -(ab / Mb * 2 - 1), Eb.d.LastCreatedEngine?.isNDCHalfZRange ? Lb.z = Ub : Lb.z = 2 * Ub - 1, Pb.TransformCoordinatesToRef(Lb, vb, eb), eb
+      static UnprojectFloatsToRef(zz, tz, sz, Fz, Wz, Xz, oz, vz, Uz) {
+        const Kz = gz.Matrix[0];
+        Xz.multiplyToRef(oz, Kz), Kz.multiplyToRef(vz, Kz), Kz.invert();
+        const uz = gz.XD[0];
+        return uz.x = zz / Fz * 2 - 1, uz.y = -(tz / Wz * 2 - 1), Oz.c.LastCreatedEngine?.isNDCHalfZRange ? uz.z = sz : uz.z = 2 * sz - 1, Nz.TransformCoordinatesToRef(uz, Kz, Uz), Uz
       }
-      static Minimize(bb, ab) {
-        const Ub = new Pb;
-        return Ub.EUb(bb), Ub.minimizeInPlace(ab), Ub
+      static Minimize(zz, tz) {
+        const sz = new Nz;
+        return sz.vsz(zz), sz.minimizeInPlace(tz), sz
       }
-      static Maximize(bb, ab) {
-        const Ub = new Pb;
-        return Ub.EUb(bb), Ub.maximizeInPlace(ab), Ub
+      static Maximize(zz, tz) {
+        const sz = new Nz;
+        return sz.vsz(zz), sz.maximizeInPlace(tz), sz
       }
-      static Distance(bb, ab) {
-        return Math.sqrt(Pb.DistanceSquared(bb, ab))
+      static Distance(zz, tz) {
+        return Math.sqrt(Nz.DistanceSquared(zz, tz))
       }
-      static DistanceSquared(bb, ab) {
-        const Ub = bb._x - ab._x,
-          Ab = bb._y - ab._y,
-          Mb = bb._z - ab._z;
-        return Ub * Ub + Ab * Ab + Mb * Mb
+      static DistanceSquared(zz, tz) {
+        const sz = zz._x - tz._x,
+          Fz = zz._y - tz._y,
+          Wz = zz._z - tz._z;
+        return sz * sz + Fz * Fz + Wz * Wz
       }
-      static ProjectOnTriangleToRef(bb, ab, Ub, Mb, Tb) {
-        const Eb = kb.Pj[0],
-          Bb = kb.Pj[1],
-          eb = kb.Pj[2],
-          vb = kb.Pj[3],
-          Lb = kb.Pj[4];
-        Ub.subtractToRef(ab, Eb), Mb.subtractToRef(ab, Bb), Mb.subtractToRef(Ub, eb);
-        const Xb = Eb.length(),
-          jb = Bb.length(),
-          Rb = eb.length();
-        if (Xb < Ab.e || jb < Ab.e || Rb < Ab.e) return Tb.EUb(ab), Pb.Distance(bb, ab);
-        bb.subtractToRef(ab, Lb), Pb.CrossToRef(Eb, Bb, vb);
-        const yb = vb.length();
-        if (yb < Ab.e) return Tb.EUb(ab), Pb.Distance(bb, ab);
-        vb.normalizeFromLength(yb);
-        let Zb = Lb.length();
-        if (Zb < Ab.e) return Tb.EUb(ab), 0;
-        Lb.normalizeFromLength(Zb);
-        const Db = Pb.Dot(vb, Lb),
-          zb = kb.Pj[5],
-          xb = kb.Pj[6];
-        zb.EUb(vb).scaleInPlace(-Zb * Db), xb.EUb(bb).addInPlace(zb);
-        const ib = kb.Pj[4],
-          fb = kb.Pj[5],
-          mb = kb.Pj[7],
-          pb = kb.Pj[8];
-        ib.EUb(Eb).scaleInPlace(1 / Xb), pb.EUb(Bb).scaleInPlace(1 / jb), ib.addInPlace(pb).scaleInPlace(-1), fb.EUb(Eb).scaleInPlace(-1 / Xb), pb.EUb(eb).scaleInPlace(1 / Rb), fb.addInPlace(pb).scaleInPlace(-1), mb.EUb(eb).scaleInPlace(-1 / Rb), pb.EUb(Bb).scaleInPlace(-1 / jb), mb.addInPlace(pb).scaleInPlace(-1);
-        const Nb = kb.Pj[9];
-        let Wb;
-        Nb.EUb(xb).MAb(ab), Pb.CrossToRef(ib, Nb, pb), Wb = Pb.Dot(pb, vb);
-        const Hb = Wb;
-        Nb.EUb(xb).MAb(Ub), Pb.CrossToRef(fb, Nb, pb), Wb = Pb.Dot(pb, vb);
-        const Ib = Wb;
-        Nb.EUb(xb).MAb(Mb), Pb.CrossToRef(mb, Nb, pb), Wb = Pb.Dot(pb, vb);
-        const db = Wb,
-          Fb = kb.Pj[10];
-        let hb, Gb;
-        Hb > 0 && Ib < 0 ? (Fb.EUb(Eb), hb = ab, Gb = Ub) : Ib > 0 && db < 0 ? (Fb.EUb(eb), hb = Ub, Gb = Mb) : (Fb.EUb(Bb).scaleInPlace(-1), hb = Mb, Gb = ab);
-        const Qb = kb.Pj[9],
-          qb = kb.Pj[4];
-        hb.subtractToRef(xb, pb), Gb.subtractToRef(xb, Qb), Pb.CrossToRef(pb, Qb, qb);
-        if (!(Pb.Dot(qb, vb) < 0)) return Tb.EUb(xb), Math.abs(Zb * Db);
-        const ub = kb.Pj[5];
-        Pb.CrossToRef(Fb, qb, ub), ub.normalize();
-        const rb = kb.Pj[9];
-        rb.EUb(hb).MAb(xb);
-        const Kb = rb.length();
-        if (Kb < Ab.e) return Tb.EUb(hb), Pb.Distance(bb, hb);
-        rb.normalizeFromLength(Kb);
-        const ob = Pb.Dot(ub, rb),
-          lb = kb.Pj[7];
-        lb.EUb(xb).addInPlace(ub.scaleInPlace(Kb * ob)), pb.EUb(lb).MAb(hb), Zb = Fb.length(), Fb.normalizeFromLength(Zb);
-        let tb = Pb.Dot(pb, Fb) / Math.max(Zb, Ab.e);
-        return tb = (0, Yb.Clamp)(tb, 0, 1), lb.EUb(hb).addInPlace(Fb.scaleInPlace(tb * Zb)), Tb.EUb(lb), Pb.Distance(bb, lb)
+      static ProjectOnTriangleToRef(zz, tz, sz, Wz, Xz) {
+        const Oz = gz.XD[0],
+          vz = gz.XD[1],
+          Uz = gz.XD[2],
+          Kz = gz.XD[3],
+          uz = gz.XD[4];
+        sz.subtractToRef(tz, Oz), Wz.subtractToRef(tz, vz), Wz.subtractToRef(sz, Uz);
+        const bz = Oz.length(),
+          wz = vz.length(),
+          Dz = Uz.length();
+        if (bz < Fz.c || wz < Fz.c || Dz < Fz.c) return Xz.vsz(tz), Nz.Distance(zz, tz);
+        zz.subtractToRef(tz, uz), Nz.CrossToRef(Oz, vz, Kz);
+        const Hz = Kz.length();
+        if (Hz < Fz.c) return Xz.vsz(tz), Nz.Distance(zz, tz);
+        Kz.normalizeFromLength(Hz);
+        let Bz = uz.length();
+        if (Bz < Fz.c) return Xz.vsz(tz), 0;
+        uz.normalizeFromLength(Bz);
+        const Pz = Nz.Dot(Kz, uz),
+          rz = gz.XD[5],
+          Yz = gz.XD[6];
+        rz.vsz(Kz).scaleInPlace(-Bz * Pz), Yz.vsz(zz).addInPlace(rz);
+        const xz = gz.XD[4],
+          mz = gz.XD[5],
+          Jz = gz.XD[7],
+          Iz = gz.XD[8];
+        xz.vsz(Oz).scaleInPlace(1 / bz), Iz.vsz(vz).scaleInPlace(1 / wz), xz.addInPlace(Iz).scaleInPlace(-1), mz.vsz(Oz).scaleInPlace(-1 / bz), Iz.vsz(Uz).scaleInPlace(1 / Dz), mz.addInPlace(Iz).scaleInPlace(-1), Jz.vsz(Uz).scaleInPlace(-1 / Dz), Iz.vsz(vz).scaleInPlace(-1 / wz), Jz.addInPlace(Iz).scaleInPlace(-1);
+        const Cz = gz.XD[9];
+        let ez;
+        Cz.vsz(Yz).oFz(tz), Nz.CrossToRef(xz, Cz, Iz), ez = Nz.Dot(Iz, Kz);
+        const Zz = ez;
+        Cz.vsz(Yz).oFz(sz), Nz.CrossToRef(mz, Cz, Iz), ez = Nz.Dot(Iz, Kz);
+        const Gz = ez;
+        Cz.vsz(Yz).oFz(Wz), Nz.CrossToRef(Jz, Cz, Iz), ez = Nz.Dot(Iz, Kz);
+        const Tz = ez,
+          cz = gz.XD[10];
+        let jz, Az;
+        Zz > 0 && Gz < 0 ? (cz.vsz(Oz), jz = tz, Az = sz) : Gz > 0 && Tz < 0 ? (cz.vsz(Uz), jz = sz, Az = Wz) : (cz.vsz(vz).scaleInPlace(-1), jz = Wz, Az = tz);
+        const yz = gz.XD[9],
+          Mz = gz.XD[4];
+        jz.subtractToRef(Yz, Iz), Az.subtractToRef(Yz, yz), Nz.CrossToRef(Iz, yz, Mz);
+        if (!(Nz.Dot(Mz, Kz) < 0)) return Xz.vsz(Yz), Math.abs(Bz * Pz);
+        const dz = gz.XD[5];
+        Nz.CrossToRef(cz, Mz, dz), dz.normalize();
+        const hz = gz.XD[9];
+        hz.vsz(jz).oFz(Yz);
+        const Qz = hz.length();
+        if (Qz < Fz.c) return Xz.vsz(jz), Nz.Distance(zz, jz);
+        hz.normalizeFromLength(Qz);
+        const kz = Nz.Dot(dz, hz),
+          iz = gz.XD[7];
+        iz.vsz(Yz).addInPlace(dz.scaleInPlace(Qz * kz)), Iz.vsz(iz).oFz(jz), Bz = cz.length(), cz.normalizeFromLength(Bz);
+        let Lz = Nz.Dot(Iz, cz) / Math.max(Bz, Fz.c);
+        return Lz = (0, oz.Clamp)(Lz, 0, 1), iz.vsz(jz).addInPlace(cz.scaleInPlace(Lz * Bz)), Xz.vsz(iz), Nz.Distance(zz, iz)
       }
-      static Center(bb, ab) {
-        return Pb.CenterToRef(bb, ab, Pb.Zero())
+      static Center(zz, tz) {
+        return Nz.CenterToRef(zz, tz, Nz.Zero())
       }
-      static CenterToRef(bb, ab, Ub) {
-        return Ub.K9((bb._x + ab._x) / 2, (bb._y + ab._y) / 2, (bb._z + ab._z) / 2)
+      static CenterToRef(zz, tz, sz) {
+        return sz.m_((zz._x + tz._x) / 2, (zz._y + tz._y) / 2, (zz._z + tz._z) / 2)
       }
-      static RotationFromAxis(bb, ab, Ub) {
-        const Ab = new Pb;
-        return Pb.RotationFromAxisToRef(bb, ab, Ub, Ab), Ab
+      static RotationFromAxis(zz, tz, sz) {
+        const Fz = new Nz;
+        return Nz.RotationFromAxisToRef(zz, tz, sz, Fz), Fz
       }
-      static RotationFromAxisToRef(bb, ab, Ub, Ab) {
-        const Mb = kb.Quaternion[0];
-        return jb.RotationQuaternionFromAxisToRef(bb, ab, Ub, Mb), Mb.toEulerAnglesToRef(Ab), Ab
+      static RotationFromAxisToRef(zz, tz, sz, Fz) {
+        const Wz = gz.Quaternion[0];
+        return wz.RotationQuaternionFromAxisToRef(zz, tz, sz, Wz), Wz.toEulerAnglesToRef(Fz), Fz
       }
     }
-    Pb._V8PerformanceHack = new Pb(.5, .5, .5), Pb._UpReadOnly = Pb.Up(), Pb._DownReadOnly = Pb.Down(), Pb._LeftHandedForwardReadOnly = Pb.Forward(!1), Pb._RightHandedForwardReadOnly = Pb.Forward(!0), Pb._LeftHandedBackwardReadOnly = Pb.Backward(!1), Pb._RightHandedBackwardReadOnly = Pb.Backward(!0), Pb._RightReadOnly = Pb.Right(), Pb._LeftReadOnly = Pb.Left(), Pb._ZeroReadOnly = Pb.Zero(), Pb._OneReadOnly = Pb.One();
-    class Xb {
+    Nz._V8PerformanceHack = new Nz(.5, .5, .5), Nz._UpReadOnly = Nz.Up(), Nz._DownReadOnly = Nz.Down(), Nz._LeftHandedForwardReadOnly = Nz.Forward(!1), Nz._RightHandedForwardReadOnly = Nz.Forward(!0), Nz._LeftHandedBackwardReadOnly = Nz.Backward(!1), Nz._RightHandedBackwardReadOnly = Nz.Backward(!0), Nz._RightReadOnly = Nz.Right(), Nz._LeftReadOnly = Nz.Left(), Nz._ZeroReadOnly = Nz.Zero(), Nz._OneReadOnly = Nz.One();
+    class bz {
       get x() {
         return this._x
       }
-      set x(bb) {
-        this._x = bb, this._isDirty = !0
+      set x(zz) {
+        this._x = zz, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(bb) {
-        this._y = bb, this._isDirty = !0
+      set y(zz) {
+        this._y = zz, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(bb) {
-        this._z = bb, this._isDirty = !0
+      set z(zz) {
+        this._z = zz, this._isDirty = !0
       }
       get w() {
         return this._w
       }
-      set w(bb) {
-        this._w = bb, this._isDirty = !0
+      set w(zz) {
+        this._w = zz, this._isDirty = !0
       }
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this._isDirty = !0, this._x = bb, this._y = ab, this._z = Ub, this._w = Ab
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this._isDirty = !0, this._x = zz, this._y = tz, this._z = sz, this._w = Fz
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z} W: ${this._w}}`
@@ -1149,121 +1149,121 @@ export const modules = {
         return "Vector4"
       }
       getHashCode() {
-        let bb = vb(this._x);
-        return bb = 397 * bb ^ vb(this._y), bb = 397 * bb ^ vb(this._z), bb = 397 * bb ^ vb(this._w), bb
+        let zz = Kz(this._x);
+        return zz = 397 * zz ^ Kz(this._y), zz = 397 * zz ^ Kz(this._z), zz = 397 * zz ^ Kz(this._w), zz
       }
-      qUb() {
+      hsz() {
         return [this._x, this._y, this._z, this._w]
       }
-      toArray(bb, ab) {
-        return void 0 === ab && (ab = 0), bb[ab] = this._x, bb[ab + 1] = this._y, bb[ab + 2] = this._z, bb[ab + 3] = this._w, this
+      toArray(zz, tz) {
+        return void 0 === tz && (tz = 0), zz[tz] = this._x, zz[tz + 1] = this._y, zz[tz + 2] = this._z, zz[tz + 3] = this._w, this
       }
-      Zab(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Xb.FromArrayToRef(bb, ab, this), this
+      Ztz(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return bz.FromArrayToRef(zz, tz, this), this
       }
-      addInPlace(bb) {
-        return this.x += bb._x, this.y += bb._y, this.z += bb._z, this.w += bb._w, this
+      addInPlace(zz) {
+        return this.x += zz._x, this.y += zz._y, this.z += zz._z, this.w += zz._w, this
       }
-      addInPlaceFromFloats(bb, ab, Ub, Ab) {
-        return this.x += bb, this.y += ab, this.z += Ub, this.w += Ab, this
+      addInPlaceFromFloats(zz, tz, sz, Fz) {
+        return this.x += zz, this.y += tz, this.z += sz, this.w += Fz, this
       }
-      add(bb) {
-        return new Xb(this._x + bb.x, this._y + bb.y, this._z + bb.z, this._w + bb.w)
+      add(zz) {
+        return new bz(this._x + zz.x, this._y + zz.y, this._z + zz.z, this._w + zz.w)
       }
-      addToRef(bb, ab) {
-        return ab.x = this._x + bb.x, ab.y = this._y + bb.y, ab.z = this._z + bb.z, ab.w = this._w + bb.w, ab
+      addToRef(zz, tz) {
+        return tz.x = this._x + zz.x, tz.y = this._y + zz.y, tz.z = this._z + zz.z, tz.w = this._w + zz.w, tz
       }
-      MAb(bb) {
-        return this.x -= bb.x, this.y -= bb.y, this.z -= bb.z, this.w -= bb.w, this
+      oFz(zz) {
+        return this.x -= zz.x, this.y -= zz.y, this.z -= zz.z, this.w -= zz.w, this
       }
-      subtract(bb) {
-        return new Xb(this._x - bb.x, this._y - bb.y, this._z - bb.z, this._w - bb.w)
+      subtract(zz) {
+        return new bz(this._x - zz.x, this._y - zz.y, this._z - zz.z, this._w - zz.w)
       }
-      subtractToRef(bb, ab) {
-        return ab.x = this._x - bb.x, ab.y = this._y - bb.y, ab.z = this._z - bb.z, ab.w = this._w - bb.w, ab
+      subtractToRef(zz, tz) {
+        return tz.x = this._x - zz.x, tz.y = this._y - zz.y, tz.z = this._z - zz.z, tz.w = this._w - zz.w, tz
       }
-      subtractFromFloats(bb, ab, Ub, Ab) {
-        return new Xb(this._x - bb, this._y - ab, this._z - Ub, this._w - Ab)
+      subtractFromFloats(zz, tz, sz, Fz) {
+        return new bz(this._x - zz, this._y - tz, this._z - sz, this._w - Fz)
       }
-      subtractFromFloatsToRef(bb, ab, Ub, Ab, Mb) {
-        return Mb.x = this._x - bb, Mb.y = this._y - ab, Mb.z = this._z - Ub, Mb.w = this._w - Ab, Mb
+      subtractFromFloatsToRef(zz, tz, sz, Fz, Wz) {
+        return Wz.x = this._x - zz, Wz.y = this._y - tz, Wz.z = this._z - sz, Wz.w = this._w - Fz, Wz
       }
-      pa() {
-        return new Xb(-this._x, -this._y, -this._z, -this._w)
+      nt() {
+        return new bz(-this._x, -this._y, -this._z, -this._w)
       }
       negateInPlace() {
         return this.x *= -1, this.y *= -1, this.z *= -1, this.w *= -1, this
       }
-      negateToRef(bb) {
-        return bb.x = -this._x, bb.y = -this._y, bb.z = -this._z, bb.w = -this._w, bb
+      negateToRef(zz) {
+        return zz.x = -this._x, zz.y = -this._y, zz.z = -this._z, zz.w = -this._w, zz
       }
-      scaleInPlace(bb) {
-        return this.x *= bb, this.y *= bb, this.z *= bb, this.w *= bb, this
+      scaleInPlace(zz) {
+        return this.x *= zz, this.y *= zz, this.z *= zz, this.w *= zz, this
       }
-      scale(bb) {
-        return new Xb(this._x * bb, this._y * bb, this._z * bb, this._w * bb)
+      scale(zz) {
+        return new bz(this._x * zz, this._y * zz, this._z * zz, this._w * zz)
       }
-      scaleToRef(bb, ab) {
-        return ab.x = this._x * bb, ab.y = this._y * bb, ab.z = this._z * bb, ab.w = this._w * bb, ab
+      scaleToRef(zz, tz) {
+        return tz.x = this._x * zz, tz.y = this._y * zz, tz.z = this._z * zz, tz.w = this._w * zz, tz
       }
-      scaleAndAddToRef(bb, ab) {
-        return ab.x += this._x * bb, ab.y += this._y * bb, ab.z += this._z * bb, ab.w += this._w * bb, ab
+      scaleAndAddToRef(zz, tz) {
+        return tz.x += this._x * zz, tz.y += this._y * zz, tz.z += this._z * zz, tz.w += this._w * zz, tz
       }
-      equals(bb) {
-        return bb && this._x === bb.x && this._y === bb.y && this._z === bb.z && this._w === bb.w
+      equals(zz) {
+        return zz && this._x === zz.x && this._y === zz.y && this._z === zz.z && this._w === zz.w
       }
-      equalsWithEpsilon(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ab.e;
-        return bb && (0, Yb.WithinEpsilon)(this._x, bb.x, ab) && (0, Yb.WithinEpsilon)(this._y, bb.y, ab) && (0, Yb.WithinEpsilon)(this._z, bb.z, ab) && (0, Yb.WithinEpsilon)(this._w, bb.w, ab)
+      equalsWithEpsilon(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fz.c;
+        return zz && (0, oz.WithinEpsilon)(this._x, zz.x, tz) && (0, oz.WithinEpsilon)(this._y, zz.y, tz) && (0, oz.WithinEpsilon)(this._z, zz.z, tz) && (0, oz.WithinEpsilon)(this._w, zz.w, tz)
       }
-      eEb(bb, ab, Ub, Ab) {
-        return this._x === bb && this._y === ab && this._z === Ub && this._w === Ab
+      wOz(zz, tz, sz, Fz) {
+        return this._x === zz && this._y === tz && this._z === sz && this._w === Fz
       }
-      multiplyInPlace(bb) {
-        return this.x *= bb.x, this.y *= bb.y, this.z *= bb.z, this.w *= bb.w, this
+      multiplyInPlace(zz) {
+        return this.x *= zz.x, this.y *= zz.y, this.z *= zz.z, this.w *= zz.w, this
       }
-      multiply(bb) {
-        return new Xb(this._x * bb.x, this._y * bb.y, this._z * bb.z, this._w * bb.w)
+      multiply(zz) {
+        return new bz(this._x * zz.x, this._y * zz.y, this._z * zz.z, this._w * zz.w)
       }
-      multiplyToRef(bb, ab) {
-        return ab.x = this._x * bb.x, ab.y = this._y * bb.y, ab.z = this._z * bb.z, ab.w = this._w * bb.w, ab
+      multiplyToRef(zz, tz) {
+        return tz.x = this._x * zz.x, tz.y = this._y * zz.y, tz.z = this._z * zz.z, tz.w = this._w * zz.w, tz
       }
-      multiplyByFloats(bb, ab, Ub, Ab) {
-        return new Xb(this._x * bb, this._y * ab, this._z * Ub, this._w * Ab)
+      multiplyByFloats(zz, tz, sz, Fz) {
+        return new bz(this._x * zz, this._y * tz, this._z * sz, this._w * Fz)
       }
-      divide(bb) {
-        return new Xb(this._x / bb.x, this._y / bb.y, this._z / bb.z, this._w / bb.w)
+      divide(zz) {
+        return new bz(this._x / zz.x, this._y / zz.y, this._z / zz.z, this._w / zz.w)
       }
-      divideToRef(bb, ab) {
-        return ab.x = this._x / bb.x, ab.y = this._y / bb.y, ab.z = this._z / bb.z, ab.w = this._w / bb.w, ab
+      divideToRef(zz, tz) {
+        return tz.x = this._x / zz.x, tz.y = this._y / zz.y, tz.z = this._z / zz.z, tz.w = this._w / zz.w, tz
       }
-      divideInPlace(bb) {
-        return this.divideToRef(bb, this)
+      divideInPlace(zz) {
+        return this.divideToRef(zz, this)
       }
-      minimizeInPlace(bb) {
-        return bb.x < this._x && (this.x = bb.x), bb.y < this._y && (this.y = bb.y), bb.z < this._z && (this.z = bb.z), bb.w < this._w && (this.w = bb.w), this
+      minimizeInPlace(zz) {
+        return zz.x < this._x && (this.x = zz.x), zz.y < this._y && (this.y = zz.y), zz.z < this._z && (this.z = zz.z), zz.w < this._w && (this.w = zz.w), this
       }
-      maximizeInPlace(bb) {
-        return bb.x > this._x && (this.x = bb.x), bb.y > this._y && (this.y = bb.y), bb.z > this._z && (this.z = bb.z), bb.w > this._w && (this.w = bb.w), this
+      maximizeInPlace(zz) {
+        return zz.x > this._x && (this.x = zz.x), zz.y > this._y && (this.y = zz.y), zz.z > this._z && (this.z = zz.z), zz.w > this._w && (this.w = zz.w), this
       }
-      minimizeInPlaceFromFloats(bb, ab, Ub, Ab) {
-        return this.x = Math.min(bb, this._x), this.y = Math.min(ab, this._y), this.z = Math.min(Ub, this._z), this.w = Math.min(Ab, this._w), this
+      minimizeInPlaceFromFloats(zz, tz, sz, Fz) {
+        return this.x = Math.min(zz, this._x), this.y = Math.min(tz, this._y), this.z = Math.min(sz, this._z), this.w = Math.min(Fz, this._w), this
       }
-      maximizeInPlaceFromFloats(bb, ab, Ub, Ab) {
-        return this.x = Math.max(bb, this._x), this.y = Math.max(ab, this._y), this.z = Math.max(Ub, this._z), this.w = Math.max(Ab, this._w), this
+      maximizeInPlaceFromFloats(zz, tz, sz, Fz) {
+        return this.x = Math.max(zz, this._x), this.y = Math.max(tz, this._y), this.z = Math.max(sz, this._z), this.w = Math.max(Fz, this._w), this
       }
-      floorToRef(bb) {
-        return bb.x = Math.floor(this._x), bb.y = Math.floor(this._y), bb.z = Math.floor(this._z), bb.w = Math.floor(this._w), bb
+      floorToRef(zz) {
+        return zz.x = Math.floor(this._x), zz.y = Math.floor(this._y), zz.z = Math.floor(this._z), zz.w = Math.floor(this._w), zz
       }
       floor() {
-        return new Xb(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z), Math.floor(this._w))
+        return new bz(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z), Math.floor(this._w))
       }
-      fractToRef(bb) {
-        return bb.x = this._x - Math.floor(this._x), bb.y = this._y - Math.floor(this._y), bb.z = this._z - Math.floor(this._z), bb.w = this._w - Math.floor(this._w), bb
+      fractToRef(zz) {
+        return zz.x = this._x - Math.floor(this._x), zz.y = this._y - Math.floor(this._y), zz.z = this._z - Math.floor(this._z), zz.w = this._w - Math.floor(this._w), zz
       }
       fract() {
-        return new Xb(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z), this._w - Math.floor(this._w))
+        return new bz(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z), this._w - Math.floor(this._w))
       }
       length() {
         return Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z + this._w * this._w)
@@ -1274,176 +1274,176 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(bb) {
-        return 0 === bb || 1 === bb ? this : this.scaleInPlace(1 / bb)
+      normalizeFromLength(zz) {
+        return 0 === zz || 1 === zz ? this : this.scaleInPlace(1 / zz)
       }
       normalizeToNew() {
-        return this.normalizeToRef(new Xb)
+        return this.normalizeToRef(new bz)
       }
-      normalizeToRef(bb) {
-        const ab = this.length();
-        return 0 === ab || 1 === ab ? (bb.x = this._x, bb.y = this._y, bb.z = this._z, bb.w = this._w, bb) : this.scaleToRef(1 / ab, bb)
+      normalizeToRef(zz) {
+        const tz = this.length();
+        return 0 === tz || 1 === tz ? (zz.x = this._x, zz.y = this._y, zz.z = this._z, zz.w = this._w, zz) : this.scaleToRef(1 / tz, zz)
       }
       toVector3() {
-        return new Pb(this._x, this._y, this._z)
+        return new Nz(this._x, this._y, this._z)
       }
       clone() {
-        return new Xb(this._x, this._y, this._z, this._w)
+        return new bz(this._x, this._y, this._z, this._w)
       }
-      EUb(bb) {
-        return this.x = bb.x, this.y = bb.y, this.z = bb.z, this.w = bb.w, this
+      vsz(zz) {
+        return this.x = zz.x, this.y = zz.y, this.z = zz.z, this.w = zz.w, this
       }
-      K9(bb, ab, Ub, Ab) {
-        return this.x = bb, this.y = ab, this.z = Ub, this.w = Ab, this
+      m_(zz, tz, sz, Fz) {
+        return this.x = zz, this.y = tz, this.z = sz, this.w = Fz, this
       }
-      set(bb, ab, Ub, Ab) {
-        return this.K9(bb, ab, Ub, Ab)
+      set(zz, tz, sz, Fz) {
+        return this.m_(zz, tz, sz, Fz)
       }
-      B3(bb) {
-        return this.x = this.y = this.z = this.w = bb, this
+      Z6(zz) {
+        return this.x = this.y = this.z = this.w = zz, this
       }
-      dot(bb) {
-        return this._x * bb.x + this._y * bb.y + this._z * bb.z + this._w * bb.w
+      dot(zz) {
+        return this._x * zz.x + this._y * zz.y + this._z * zz.z + this._w * zz.w
       }
-      static FromArray(bb, ab) {
-        return ab || (ab = 0), new Xb(bb[ab], bb[ab + 1], bb[ab + 2], bb[ab + 3])
+      static FromArray(zz, tz) {
+        return tz || (tz = 0), new bz(zz[tz], zz[tz + 1], zz[tz + 2], zz[tz + 3])
       }
-      static FromArrayToRef(bb, ab, Ub) {
-        return Ub.x = bb[ab], Ub.y = bb[ab + 1], Ub.z = bb[ab + 2], Ub.w = bb[ab + 3], Ub
+      static FromArrayToRef(zz, tz, sz) {
+        return sz.x = zz[tz], sz.y = zz[tz + 1], sz.z = zz[tz + 2], sz.w = zz[tz + 3], sz
       }
-      static FromFloatArrayToRef(bb, ab, Ub) {
-        return Xb.FromArrayToRef(bb, ab, Ub), Ub
+      static FromFloatArrayToRef(zz, tz, sz) {
+        return bz.FromArrayToRef(zz, tz, sz), sz
       }
-      static FromFloatsToRef(bb, ab, Ub, Ab, Mb) {
-        return Mb.x = bb, Mb.y = ab, Mb.z = Ub, Mb.w = Ab, Mb
+      static FromFloatsToRef(zz, tz, sz, Fz, Wz) {
+        return Wz.x = zz, Wz.y = tz, Wz.z = sz, Wz.w = Fz, Wz
       }
       static Zero() {
-        return new Xb(0, 0, 0, 0)
+        return new bz(0, 0, 0, 0)
       }
       static One() {
-        return new Xb(1, 1, 1, 1)
+        return new bz(1, 1, 1, 1)
       }
       static Random() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Xb((0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab))
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new bz((0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz))
       }
       static RandomToRef() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          Ub = arguments.length > 2 ? arguments[2] : void 0;
-        return Ub.x = (0, Yb.RandomRange)(bb, ab), Ub.y = (0, Yb.RandomRange)(bb, ab), Ub.z = (0, Yb.RandomRange)(bb, ab), Ub.w = (0, Yb.RandomRange)(bb, ab), Ub
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          sz = arguments.length > 2 ? arguments[2] : void 0;
+        return sz.x = (0, oz.RandomRange)(zz, tz), sz.y = (0, oz.RandomRange)(zz, tz), sz.z = (0, oz.RandomRange)(zz, tz), sz.w = (0, oz.RandomRange)(zz, tz), sz
       }
-      static Clamp(bb, ab, Ub) {
-        return Xb.ClampToRef(bb, ab, Ub, new Xb)
+      static Clamp(zz, tz, sz) {
+        return bz.ClampToRef(zz, tz, sz, new bz)
       }
-      static ClampToRef(bb, ab, Ub, Ab) {
-        return Ab.x = (0, Yb.Clamp)(bb.x, ab.x, Ub.x), Ab.y = (0, Yb.Clamp)(bb.y, ab.y, Ub.y), Ab.z = (0, Yb.Clamp)(bb.z, ab.z, Ub.z), Ab.w = (0, Yb.Clamp)(bb.w, ab.w, Ub.w), Ab
+      static ClampToRef(zz, tz, sz, Fz) {
+        return Fz.x = (0, oz.Clamp)(zz.x, tz.x, sz.x), Fz.y = (0, oz.Clamp)(zz.y, tz.y, sz.y), Fz.z = (0, oz.Clamp)(zz.z, tz.z, sz.z), Fz.w = (0, oz.Clamp)(zz.w, tz.w, sz.w), Fz
       }
-      static CheckExtends(bb, ab, Ub) {
-        ab.minimizeInPlace(bb), Ub.maximizeInPlace(bb)
+      static CheckExtends(zz, tz, sz) {
+        tz.minimizeInPlace(zz), sz.maximizeInPlace(zz)
       }
       static get ZeroReadOnly() {
-        return Xb._ZeroReadOnly
+        return bz._ZeroReadOnly
       }
-      static Normalize(bb) {
-        return Xb.NormalizeToRef(bb, new Xb)
+      static Normalize(zz) {
+        return bz.NormalizeToRef(zz, new bz)
       }
-      static NormalizeToRef(bb, ab) {
-        return bb.normalizeToRef(ab), ab
+      static NormalizeToRef(zz, tz) {
+        return zz.normalizeToRef(tz), tz
       }
-      static Minimize(bb, ab) {
-        const Ub = new Xb;
-        return Ub.EUb(bb), Ub.minimizeInPlace(ab), Ub
+      static Minimize(zz, tz) {
+        const sz = new bz;
+        return sz.vsz(zz), sz.minimizeInPlace(tz), sz
       }
-      static Maximize(bb, ab) {
-        const Ub = new Xb;
-        return Ub.EUb(bb), Ub.maximizeInPlace(ab), Ub
+      static Maximize(zz, tz) {
+        const sz = new bz;
+        return sz.vsz(zz), sz.maximizeInPlace(tz), sz
       }
-      static Distance(bb, ab) {
-        return Math.sqrt(Xb.DistanceSquared(bb, ab))
+      static Distance(zz, tz) {
+        return Math.sqrt(bz.DistanceSquared(zz, tz))
       }
-      static DistanceSquared(bb, ab) {
-        const Ub = bb.x - ab.x,
-          Ab = bb.y - ab.y,
-          Mb = bb.z - ab.z,
-          Tb = bb.w - ab.w;
-        return Ub * Ub + Ab * Ab + Mb * Mb + Tb * Tb
+      static DistanceSquared(zz, tz) {
+        const sz = zz.x - tz.x,
+          Fz = zz.y - tz.y,
+          Wz = zz.z - tz.z,
+          Xz = zz.w - tz.w;
+        return sz * sz + Fz * Fz + Wz * Wz + Xz * Xz
       }
-      static Center(bb, ab) {
-        return Xb.CenterToRef(bb, ab, new Xb)
+      static Center(zz, tz) {
+        return bz.CenterToRef(zz, tz, new bz)
       }
-      static CenterToRef(bb, ab, Ub) {
-        return Ub.x = (bb.x + ab.x) / 2, Ub.y = (bb.y + ab.y) / 2, Ub.z = (bb.z + ab.z) / 2, Ub.w = (bb.w + ab.w) / 2, Ub
+      static CenterToRef(zz, tz, sz) {
+        return sz.x = (zz.x + tz.x) / 2, sz.y = (zz.y + tz.y) / 2, sz.z = (zz.z + tz.z) / 2, sz.w = (zz.w + tz.w) / 2, sz
       }
-      static TransformCoordinates(bb, ab) {
-        return Xb.TransformCoordinatesToRef(bb, ab, new Xb)
+      static TransformCoordinates(zz, tz) {
+        return bz.TransformCoordinatesToRef(zz, tz, new bz)
       }
-      static TransformCoordinatesToRef(bb, ab, Ub) {
-        return Xb.TransformCoordinatesFromFloatsToRef(bb._x, bb._y, bb._z, ab, Ub), Ub
+      static TransformCoordinatesToRef(zz, tz, sz) {
+        return bz.TransformCoordinatesFromFloatsToRef(zz._x, zz._y, zz._z, tz, sz), sz
       }
-      static TransformCoordinatesFromFloatsToRef(bb, ab, Ub, Ab, Mb) {
-        const Tb = Ab.m,
-          Eb = bb * Tb[0] + ab * Tb[4] + Ub * Tb[8] + Tb[12],
-          Yb = bb * Tb[1] + ab * Tb[5] + Ub * Tb[9] + Tb[13],
-          Bb = bb * Tb[2] + ab * Tb[6] + Ub * Tb[10] + Tb[14],
-          eb = bb * Tb[3] + ab * Tb[7] + Ub * Tb[11] + Tb[15];
-        return Mb.x = Eb, Mb.y = Yb, Mb.z = Bb, Mb.w = eb, Mb
+      static TransformCoordinatesFromFloatsToRef(zz, tz, sz, Fz, Wz) {
+        const Xz = Fz.m,
+          Oz = zz * Xz[0] + tz * Xz[4] + sz * Xz[8] + Xz[12],
+          oz = zz * Xz[1] + tz * Xz[5] + sz * Xz[9] + Xz[13],
+          vz = zz * Xz[2] + tz * Xz[6] + sz * Xz[10] + Xz[14],
+          Uz = zz * Xz[3] + tz * Xz[7] + sz * Xz[11] + Xz[15];
+        return Wz.x = Oz, Wz.y = oz, Wz.z = vz, Wz.w = Uz, Wz
       }
-      static TransformNormal(bb, ab) {
-        return Xb.TransformNormalToRef(bb, ab, new Xb)
+      static TransformNormal(zz, tz) {
+        return bz.TransformNormalToRef(zz, tz, new bz)
       }
-      static TransformNormalToRef(bb, ab, Ub) {
-        const Ab = ab.m,
-          Mb = bb.x * Ab[0] + bb.y * Ab[4] + bb.z * Ab[8],
-          Tb = bb.x * Ab[1] + bb.y * Ab[5] + bb.z * Ab[9],
-          Eb = bb.x * Ab[2] + bb.y * Ab[6] + bb.z * Ab[10];
-        return Ub.x = Mb, Ub.y = Tb, Ub.z = Eb, Ub.w = bb.w, Ub
+      static TransformNormalToRef(zz, tz, sz) {
+        const Fz = tz.m,
+          Wz = zz.x * Fz[0] + zz.y * Fz[4] + zz.z * Fz[8],
+          Xz = zz.x * Fz[1] + zz.y * Fz[5] + zz.z * Fz[9],
+          Oz = zz.x * Fz[2] + zz.y * Fz[6] + zz.z * Fz[10];
+        return sz.x = Wz, sz.y = Xz, sz.z = Oz, sz.w = zz.w, sz
       }
-      static TransformNormalFromFloatsToRef(bb, ab, Ub, Ab, Mb, Tb) {
-        const Eb = Mb.m;
-        return Tb.x = bb * Eb[0] + ab * Eb[4] + Ub * Eb[8], Tb.y = bb * Eb[1] + ab * Eb[5] + Ub * Eb[9], Tb.z = bb * Eb[2] + ab * Eb[6] + Ub * Eb[10], Tb.w = Ab, Tb
+      static TransformNormalFromFloatsToRef(zz, tz, sz, Fz, Wz, Xz) {
+        const Oz = Wz.m;
+        return Xz.x = zz * Oz[0] + tz * Oz[4] + sz * Oz[8], Xz.y = zz * Oz[1] + tz * Oz[5] + sz * Oz[9], Xz.z = zz * Oz[2] + tz * Oz[6] + sz * Oz[10], Xz.w = Fz, Xz
       }
-      static FromVector3(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Xb(bb._x, bb._y, bb._z, ab)
+      static FromVector3(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new bz(zz._x, zz._y, zz._z, tz)
       }
-      static Dot(bb, ab) {
-        return bb.x * ab.x + bb.y * ab.y + bb.z * ab.z + bb.w * ab.w
+      static Dot(zz, tz) {
+        return zz.x * tz.x + zz.y * tz.y + zz.z * tz.z + zz.w * tz.w
       }
     }
-    Xb._V8PerformanceHack = new Xb(.5, .5, .5, .5), Xb._ZeroReadOnly = Xb.Zero();
-    class jb {
+    bz._V8PerformanceHack = new bz(.5, .5, .5, .5), bz._ZeroReadOnly = bz.Zero();
+    class wz {
       get x() {
         return this._x
       }
-      set x(bb) {
-        this._x = bb, this._isDirty = !0
+      set x(zz) {
+        this._x = zz, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(bb) {
-        this._y = bb, this._isDirty = !0
+      set y(zz) {
+        this._y = zz, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(bb) {
-        this._z = bb, this._isDirty = !0
+      set z(zz) {
+        this._z = zz, this._isDirty = !0
       }
       get w() {
         return this._w
       }
-      set w(bb) {
-        this._w = bb, this._isDirty = !0
+      set w(zz) {
+        this._w = zz, this._isDirty = !0
       }
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this._isDirty = !0, this._x = bb, this._y = ab, this._z = Ub, this._w = Ab
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this._isDirty = !0, this._x = zz, this._y = tz, this._z = sz, this._w = Fz
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z} W: ${this._w}}`
@@ -1452,109 +1452,109 @@ export const modules = {
         return "Quaternion"
       }
       getHashCode() {
-        let bb = vb(this._x);
-        return bb = 397 * bb ^ vb(this._y), bb = 397 * bb ^ vb(this._z), bb = 397 * bb ^ vb(this._w), bb
+        let zz = Kz(this._x);
+        return zz = 397 * zz ^ Kz(this._y), zz = 397 * zz ^ Kz(this._z), zz = 397 * zz ^ Kz(this._w), zz
       }
-      qUb() {
+      hsz() {
         return [this._x, this._y, this._z, this._w]
       }
-      toArray(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return bb[ab] = this._x, bb[ab + 1] = this._y, bb[ab + 2] = this._z, bb[ab + 3] = this._w, this
+      toArray(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return zz[tz] = this._x, zz[tz + 1] = this._y, zz[tz + 2] = this._z, zz[tz + 3] = this._w, this
       }
-      Zab(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return jb.FromArrayToRef(bb, ab, this)
+      Ztz(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return wz.FromArrayToRef(zz, tz, this)
       }
-      equals(bb) {
-        return bb && this._x === bb._x && this._y === bb._y && this._z === bb._z && this._w === bb._w
+      equals(zz) {
+        return zz && this._x === zz._x && this._y === zz._y && this._z === zz._z && this._w === zz._w
       }
-      equalsWithEpsilon(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ab.e;
-        return bb && (0, Yb.WithinEpsilon)(this._x, bb._x, ab) && (0, Yb.WithinEpsilon)(this._y, bb._y, ab) && (0, Yb.WithinEpsilon)(this._z, bb._z, ab) && (0, Yb.WithinEpsilon)(this._w, bb._w, ab)
+      equalsWithEpsilon(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fz.c;
+        return zz && (0, oz.WithinEpsilon)(this._x, zz._x, tz) && (0, oz.WithinEpsilon)(this._y, zz._y, tz) && (0, oz.WithinEpsilon)(this._z, zz._z, tz) && (0, oz.WithinEpsilon)(this._w, zz._w, tz)
       }
-      isApprox(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ab.e;
-        return bb && ((0, Yb.WithinEpsilon)(this._x, bb._x, ab) && (0, Yb.WithinEpsilon)(this._y, bb._y, ab) && (0, Yb.WithinEpsilon)(this._z, bb._z, ab) && (0, Yb.WithinEpsilon)(this._w, bb._w, ab) || (0, Yb.WithinEpsilon)(this._x, -bb._x, ab) && (0, Yb.WithinEpsilon)(this._y, -bb._y, ab) && (0, Yb.WithinEpsilon)(this._z, -bb._z, ab) && (0, Yb.WithinEpsilon)(this._w, -bb._w, ab))
+      isApprox(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fz.c;
+        return zz && ((0, oz.WithinEpsilon)(this._x, zz._x, tz) && (0, oz.WithinEpsilon)(this._y, zz._y, tz) && (0, oz.WithinEpsilon)(this._z, zz._z, tz) && (0, oz.WithinEpsilon)(this._w, zz._w, tz) || (0, oz.WithinEpsilon)(this._x, -zz._x, tz) && (0, oz.WithinEpsilon)(this._y, -zz._y, tz) && (0, oz.WithinEpsilon)(this._z, -zz._z, tz) && (0, oz.WithinEpsilon)(this._w, -zz._w, tz))
       }
       clone() {
-        return new jb(this._x, this._y, this._z, this._w)
+        return new wz(this._x, this._y, this._z, this._w)
       }
-      EUb(bb) {
-        return this._x = bb._x, this._y = bb._y, this._z = bb._z, this._w = bb._w, this._isDirty = !0, this
+      vsz(zz) {
+        return this._x = zz._x, this._y = zz._y, this._z = zz._z, this._w = zz._w, this._isDirty = !0, this
       }
-      K9(bb, ab, Ub, Ab) {
-        return this._x = bb, this._y = ab, this._z = Ub, this._w = Ab, this._isDirty = !0, this
+      m_(zz, tz, sz, Fz) {
+        return this._x = zz, this._y = tz, this._z = sz, this._w = Fz, this._isDirty = !0, this
       }
-      set(bb, ab, Ub, Ab) {
-        return this.K9(bb, ab, Ub, Ab)
+      set(zz, tz, sz, Fz) {
+        return this.m_(zz, tz, sz, Fz)
       }
-      B3(bb) {
-        return this.K9(bb, bb, bb, bb)
+      Z6(zz) {
+        return this.m_(zz, zz, zz, zz)
       }
-      add(bb) {
-        return new jb(this._x + bb._x, this._y + bb._y, this._z + bb._z, this._w + bb._w)
+      add(zz) {
+        return new wz(this._x + zz._x, this._y + zz._y, this._z + zz._z, this._w + zz._w)
       }
-      addInPlace(bb) {
-        return this._x += bb._x, this._y += bb._y, this._z += bb._z, this._w += bb._w, this._isDirty = !0, this
+      addInPlace(zz) {
+        return this._x += zz._x, this._y += zz._y, this._z += zz._z, this._w += zz._w, this._isDirty = !0, this
       }
-      addToRef(bb, ab) {
-        return ab._x = this._x + bb._x, ab._y = this._y + bb._y, ab._z = this._z + bb._z, ab._w = this._w + bb._w, ab._isDirty = !0, ab
+      addToRef(zz, tz) {
+        return tz._x = this._x + zz._x, tz._y = this._y + zz._y, tz._z = this._z + zz._z, tz._w = this._w + zz._w, tz._isDirty = !0, tz
       }
-      addInPlaceFromFloats(bb, ab, Ub, Ab) {
-        return this._x += bb, this._y += ab, this._z += Ub, this._w += Ab, this._isDirty = !0, this
+      addInPlaceFromFloats(zz, tz, sz, Fz) {
+        return this._x += zz, this._y += tz, this._z += sz, this._w += Fz, this._isDirty = !0, this
       }
-      subtractToRef(bb, ab) {
-        return ab._x = this._x - bb._x, ab._y = this._y - bb._y, ab._z = this._z - bb._z, ab._w = this._w - bb._w, ab._isDirty = !0, ab
+      subtractToRef(zz, tz) {
+        return tz._x = this._x - zz._x, tz._y = this._y - zz._y, tz._z = this._z - zz._z, tz._w = this._w - zz._w, tz._isDirty = !0, tz
       }
-      subtractFromFloats(bb, ab, Ub, Ab) {
-        return this.subtractFromFloatsToRef(bb, ab, Ub, Ab, new jb)
+      subtractFromFloats(zz, tz, sz, Fz) {
+        return this.subtractFromFloatsToRef(zz, tz, sz, Fz, new wz)
       }
-      subtractFromFloatsToRef(bb, ab, Ub, Ab, Mb) {
-        return Mb._x = this._x - bb, Mb._y = this._y - ab, Mb._z = this._z - Ub, Mb._w = this._w - Ab, Mb._isDirty = !0, Mb
+      subtractFromFloatsToRef(zz, tz, sz, Fz, Wz) {
+        return Wz._x = this._x - zz, Wz._y = this._y - tz, Wz._z = this._z - sz, Wz._w = this._w - Fz, Wz._isDirty = !0, Wz
       }
-      subtract(bb) {
-        return new jb(this._x - bb._x, this._y - bb._y, this._z - bb._z, this._w - bb._w)
+      subtract(zz) {
+        return new wz(this._x - zz._x, this._y - zz._y, this._z - zz._z, this._w - zz._w)
       }
-      MAb(bb) {
-        return this._x -= bb._x, this._y -= bb._y, this._z -= bb._z, this._w -= bb._w, this._isDirty = !0, this
+      oFz(zz) {
+        return this._x -= zz._x, this._y -= zz._y, this._z -= zz._z, this._w -= zz._w, this._isDirty = !0, this
       }
-      scale(bb) {
-        return new jb(this._x * bb, this._y * bb, this._z * bb, this._w * bb)
+      scale(zz) {
+        return new wz(this._x * zz, this._y * zz, this._z * zz, this._w * zz)
       }
-      scaleToRef(bb, ab) {
-        return ab._x = this._x * bb, ab._y = this._y * bb, ab._z = this._z * bb, ab._w = this._w * bb, ab._isDirty = !0, ab
+      scaleToRef(zz, tz) {
+        return tz._x = this._x * zz, tz._y = this._y * zz, tz._z = this._z * zz, tz._w = this._w * zz, tz._isDirty = !0, tz
       }
-      scaleInPlace(bb) {
-        return this._x *= bb, this._y *= bb, this._z *= bb, this._w *= bb, this._isDirty = !0, this
+      scaleInPlace(zz) {
+        return this._x *= zz, this._y *= zz, this._z *= zz, this._w *= zz, this._isDirty = !0, this
       }
-      scaleAndAddToRef(bb, ab) {
-        return ab._x += this._x * bb, ab._y += this._y * bb, ab._z += this._z * bb, ab._w += this._w * bb, ab._isDirty = !0, ab
+      scaleAndAddToRef(zz, tz) {
+        return tz._x += this._x * zz, tz._y += this._y * zz, tz._z += this._z * zz, tz._w += this._w * zz, tz._isDirty = !0, tz
       }
-      multiply(bb) {
-        const ab = new jb(0, 0, 0, 1);
-        return this.multiplyToRef(bb, ab), ab
+      multiply(zz) {
+        const tz = new wz(0, 0, 0, 1);
+        return this.multiplyToRef(zz, tz), tz
       }
-      multiplyToRef(bb, ab) {
-        const Ub = this._x * bb._w + this._y * bb._z - this._z * bb._y + this._w * bb._x,
-          Ab = -this._x * bb._z + this._y * bb._w + this._z * bb._x + this._w * bb._y,
-          Mb = this._x * bb._y - this._y * bb._x + this._z * bb._w + this._w * bb._z,
-          Tb = -this._x * bb._x - this._y * bb._y - this._z * bb._z + this._w * bb._w;
-        return ab.K9(Ub, Ab, Mb, Tb), ab
+      multiplyToRef(zz, tz) {
+        const sz = this._x * zz._w + this._y * zz._z - this._z * zz._y + this._w * zz._x,
+          Fz = -this._x * zz._z + this._y * zz._w + this._z * zz._x + this._w * zz._y,
+          Wz = this._x * zz._y - this._y * zz._x + this._z * zz._w + this._w * zz._z,
+          Xz = -this._x * zz._x - this._y * zz._y - this._z * zz._z + this._w * zz._w;
+        return tz.m_(sz, Fz, Wz, Xz), tz
       }
-      multiplyInPlace(bb) {
-        return this.multiplyToRef(bb, this)
+      multiplyInPlace(zz) {
+        return this.multiplyToRef(zz, this)
       }
-      multiplyByFloats(bb, ab, Ub, Ab) {
-        return this._x *= bb, this._y *= ab, this._z *= Ub, this._w *= Ab, this._isDirty = !0, this
+      multiplyByFloats(zz, tz, sz, Fz) {
+        return this._x *= zz, this._y *= tz, this._z *= sz, this._w *= Fz, this._isDirty = !0, this
       }
-      divide(bb) {
+      divide(zz) {
         throw new ReferenceError("Can not divide a quaternion")
       }
-      divideToRef(bb, ab) {
+      divideToRef(zz, tz) {
         throw new ReferenceError("Can not divide a quaternion")
       }
-      divideInPlace(bb) {
+      divideInPlace(zz) {
         throw new ReferenceError("Can not divide a quaternion")
       }
       minimizeInPlace() {
@@ -1569,48 +1569,48 @@ export const modules = {
       maximizeInPlaceFromFloats() {
         throw new ReferenceError("Can not maximize a quaternion")
       }
-      pa() {
-        return this.negateToRef(new jb)
+      nt() {
+        return this.negateToRef(new wz)
       }
       negateInPlace() {
         return this._x = -this._x, this._y = -this._y, this._z = -this._z, this._w = -this._w, this._isDirty = !0, this
       }
-      negateToRef(bb) {
-        return bb._x = -this._x, bb._y = -this._y, bb._z = -this._z, bb._w = -this._w, bb._isDirty = !0, bb
+      negateToRef(zz) {
+        return zz._x = -this._x, zz._y = -this._y, zz._z = -this._z, zz._w = -this._w, zz._isDirty = !0, zz
       }
-      eEb(bb, ab, Ub, Ab) {
-        return this._x === bb && this._y === ab && this._z === Ub && this._w === Ab
+      wOz(zz, tz, sz, Fz) {
+        return this._x === zz && this._y === tz && this._z === sz && this._w === Fz
       }
-      floorToRef(bb) {
+      floorToRef(zz) {
         throw new ReferenceError("Can not floor a quaternion")
       }
       floor() {
         throw new ReferenceError("Can not floor a quaternion")
       }
-      fractToRef(bb) {
+      fractToRef(zz) {
         throw new ReferenceError("Can not fract a quaternion")
       }
       fract() {
         throw new ReferenceError("Can not fract a quaternion")
       }
-      conjugateToRef(bb) {
-        return bb.K9(-this._x, -this._y, -this._z, this._w), bb
+      conjugateToRef(zz) {
+        return zz.m_(-this._x, -this._y, -this._z, this._w), zz
       }
       conjugateInPlace() {
         return this._x *= -1, this._y *= -1, this._z *= -1, this._isDirty = !0, this
       }
       conjugate() {
-        return new jb(-this._x, -this._y, -this._z, this._w)
+        return new wz(-this._x, -this._y, -this._z, this._w)
       }
       invert() {
-        const bb = this.conjugate(),
-          ab = this.lengthSquared();
-        return 0 == ab || 1 == ab || bb.scaleInPlace(1 / ab), bb
+        const zz = this.conjugate(),
+          tz = this.lengthSquared();
+        return 0 == tz || 1 == tz || zz.scaleInPlace(1 / tz), zz
       }
       invertInPlace() {
         this.conjugateInPlace();
-        const bb = this.lengthSquared();
-        return 0 == bb || 1 == bb || this.scaleInPlace(1 / bb), this
+        const zz = this.lengthSquared();
+        return 0 == zz || 1 == zz || this.scaleInPlace(1 / zz), this
       }
       lengthSquared() {
         return this._x * this._x + this._y * this._y + this._z * this._z + this._w * this._w
@@ -1621,266 +1621,266 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(bb) {
-        return 0 === bb || 1 === bb ? this : this.scaleInPlace(1 / bb)
+      normalizeFromLength(zz) {
+        return 0 === zz || 1 === zz ? this : this.scaleInPlace(1 / zz)
       }
       normalizeToNew() {
-        const bb = new jb(0, 0, 0, 1);
-        return this.normalizeToRef(bb), bb
+        const zz = new wz(0, 0, 0, 1);
+        return this.normalizeToRef(zz), zz
       }
-      normalizeToRef(bb) {
-        const ab = this.length();
-        return 0 === ab || 1 === ab ? bb.K9(this._x, this._y, this._z, this._w) : this.scaleToRef(1 / ab, bb)
+      normalizeToRef(zz) {
+        const tz = this.length();
+        return 0 === tz || 1 === tz ? zz.m_(this._x, this._y, this._z, this._w) : this.scaleToRef(1 / tz, zz)
       }
       toEulerAngles() {
-        const bb = Pb.Zero();
-        return this.toEulerAnglesToRef(bb), bb
+        const zz = Nz.Zero();
+        return this.toEulerAnglesToRef(zz), zz
       }
-      toEulerAnglesToRef(bb) {
-        const ab = this._z,
-          Ub = this._x,
-          Ab = this._y,
-          Mb = this._w,
-          Tb = Ab * ab - Ub * Mb,
-          Eb = .4999999;
-        if (Tb < -Eb) bb._y = 2 * Math.atan2(Ab, Mb), bb._x = Math.PI / 2, bb._z = 0, bb._isDirty = !0;
-        else if (Tb > Eb) bb._y = 2 * Math.atan2(Ab, Mb), bb._x = -Math.PI / 2, bb._z = 0, bb._isDirty = !0;
+      toEulerAnglesToRef(zz) {
+        const tz = this._z,
+          sz = this._x,
+          Fz = this._y,
+          Wz = this._w,
+          Xz = Fz * tz - sz * Wz,
+          Oz = .4999999;
+        if (Xz < -Oz) zz._y = 2 * Math.atan2(Fz, Wz), zz._x = Math.PI / 2, zz._z = 0, zz._isDirty = !0;
+        else if (Xz > Oz) zz._y = 2 * Math.atan2(Fz, Wz), zz._x = -Math.PI / 2, zz._z = 0, zz._isDirty = !0;
         else {
-          const Eb = Mb * Mb,
-            Yb = ab * ab,
-            Bb = Ub * Ub,
-            eb = Ab * Ab;
-          bb._z = Math.atan2(2 * (Ub * Ab + ab * Mb), -Yb - Bb + eb + Eb), bb._x = Math.asin(-2 * Tb), bb._y = Math.atan2(2 * (ab * Ub + Ab * Mb), Yb - Bb - eb + Eb), bb._isDirty = !0
+          const Oz = Wz * Wz,
+            oz = tz * tz,
+            vz = sz * sz,
+            Uz = Fz * Fz;
+          zz._z = Math.atan2(2 * (sz * Fz + tz * Wz), -oz - vz + Uz + Oz), zz._x = Math.asin(-2 * Xz), zz._y = Math.atan2(2 * (tz * sz + Fz * Wz), oz - vz - Uz + Oz), zz._isDirty = !0
         }
-        return bb
+        return zz
       }
-      toAlphaBetaGammaToRef(bb) {
-        const ab = this._z,
-          Ub = this._x,
-          Ab = this._y,
-          Mb = this._w,
-          Tb = Math.sqrt(Ub * Ub + Ab * Ab),
-          Eb = Math.sqrt(ab * ab + Mb * Mb),
-          Yb = 2 * Math.atan2(Tb, Eb),
-          Bb = 2 * Math.atan2(ab, Mb),
-          eb = 2 * Math.atan2(Ab, Ub),
-          vb = (Bb + eb) / 2,
-          Lb = (Bb - eb) / 2;
-        return bb.set(Lb, Yb, vb), bb
+      toAlphaBetaGammaToRef(zz) {
+        const tz = this._z,
+          sz = this._x,
+          Fz = this._y,
+          Wz = this._w,
+          Xz = Math.sqrt(sz * sz + Fz * Fz),
+          Oz = Math.sqrt(tz * tz + Wz * Wz),
+          oz = 2 * Math.atan2(Xz, Oz),
+          vz = 2 * Math.atan2(tz, Wz),
+          Uz = 2 * Math.atan2(Fz, sz),
+          Kz = (vz + Uz) / 2,
+          uz = (vz - Uz) / 2;
+        return zz.set(uz, oz, Kz), zz
       }
-      toRotationMatrix(bb) {
-        return Rb.FromQuaternionToRef(this, bb), bb
+      toRotationMatrix(zz) {
+        return Dz.FromQuaternionToRef(this, zz), zz
       }
-      fromRotationMatrix(bb) {
-        return jb.FromRotationMatrixToRef(bb, this), this
+      fromRotationMatrix(zz) {
+        return wz.FromRotationMatrixToRef(zz, this), this
       }
-      dot(bb) {
-        return this._x * bb._x + this._y * bb._y + this._z * bb._z + this._w * bb._w
+      dot(zz) {
+        return this._x * zz._x + this._y * zz._y + this._z * zz._z + this._w * zz._w
       }
       toAxisAngle() {
-        const bb = Pb.Zero();
+        const zz = Nz.Zero();
         return {
-          axis: bb,
-          angle: this.toAxisAngleToRef(bb)
+          axis: zz,
+          angle: this.toAxisAngleToRef(zz)
         }
       }
-      toAxisAngleToRef(bb) {
-        let ab;
-        const Ub = Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z),
-          Ab = this._w;
-        return Ub > 0 ? (ab = 2 * Math.atan2(Ub, Ab), bb.set(this._x / Ub, this._y / Ub, this._z / Ub)) : (ab = 0, bb.set(1, 0, 0)), ab
+      toAxisAngleToRef(zz) {
+        let tz;
+        const sz = Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z),
+          Fz = this._w;
+        return sz > 0 ? (tz = 2 * Math.atan2(sz, Fz), zz.set(this._x / sz, this._y / sz, this._z / sz)) : (tz = 0, zz.set(1, 0, 0)), tz
       }
-      static FromRotationMatrix(bb) {
-        const ab = new jb;
-        return jb.FromRotationMatrixToRef(bb, ab), ab
+      static FromRotationMatrix(zz) {
+        const tz = new wz;
+        return wz.FromRotationMatrixToRef(zz, tz), tz
       }
-      static FromRotationMatrixToRef(bb, ab) {
-        const Ub = bb.m,
-          Ab = Ub[0],
-          Mb = Ub[4],
-          Tb = Ub[8],
-          Eb = Ub[1],
-          Yb = Ub[5],
-          Bb = Ub[9],
-          eb = Ub[2],
-          vb = Ub[6],
-          Lb = Ub[10],
-          Pb = Ab + Yb + Lb;
-        let Xb;
-        return Pb > 0 ? (Xb = .5 / Math.sqrt(Pb + 1), ab._w = .25 / Xb, ab._x = (vb - Bb) * Xb, ab._y = (Tb - eb) * Xb, ab._z = (Eb - Mb) * Xb, ab._isDirty = !0) : Ab > Yb && Ab > Lb ? (Xb = 2 * Math.sqrt(1 + Ab - Yb - Lb), ab._w = (vb - Bb) / Xb, ab._x = .25 * Xb, ab._y = (Mb + Eb) / Xb, ab._z = (Tb + eb) / Xb, ab._isDirty = !0) : Yb > Lb ? (Xb = 2 * Math.sqrt(1 + Yb - Ab - Lb), ab._w = (Tb - eb) / Xb, ab._x = (Mb + Eb) / Xb, ab._y = .25 * Xb, ab._z = (Bb + vb) / Xb, ab._isDirty = !0) : (Xb = 2 * Math.sqrt(1 + Lb - Ab - Yb), ab._w = (Eb - Mb) / Xb, ab._x = (Tb + eb) / Xb, ab._y = (Bb + vb) / Xb, ab._z = .25 * Xb, ab._isDirty = !0), ab
+      static FromRotationMatrixToRef(zz, tz) {
+        const sz = zz.m,
+          Fz = sz[0],
+          Wz = sz[4],
+          Xz = sz[8],
+          Oz = sz[1],
+          oz = sz[5],
+          vz = sz[9],
+          Uz = sz[2],
+          Kz = sz[6],
+          uz = sz[10],
+          Nz = Fz + oz + uz;
+        let bz;
+        return Nz > 0 ? (bz = .5 / Math.sqrt(Nz + 1), tz._w = .25 / bz, tz._x = (Kz - vz) * bz, tz._y = (Xz - Uz) * bz, tz._z = (Oz - Wz) * bz, tz._isDirty = !0) : Fz > oz && Fz > uz ? (bz = 2 * Math.sqrt(1 + Fz - oz - uz), tz._w = (Kz - vz) / bz, tz._x = .25 * bz, tz._y = (Wz + Oz) / bz, tz._z = (Xz + Uz) / bz, tz._isDirty = !0) : oz > uz ? (bz = 2 * Math.sqrt(1 + oz - Fz - uz), tz._w = (Xz - Uz) / bz, tz._x = (Wz + Oz) / bz, tz._y = .25 * bz, tz._z = (vz + Kz) / bz, tz._isDirty = !0) : (bz = 2 * Math.sqrt(1 + uz - Fz - oz), tz._w = (Oz - Wz) / bz, tz._x = (Xz + Uz) / bz, tz._y = (vz + Kz) / bz, tz._z = .25 * bz, tz._isDirty = !0), tz
       }
-      static Dot(bb, ab) {
-        return bb._x * ab._x + bb._y * ab._y + bb._z * ab._z + bb._w * ab._w
+      static Dot(zz, tz) {
+        return zz._x * tz._x + zz._y * tz._y + zz._z * tz._z + zz._w * tz._w
       }
-      static AreClose(bb, ab) {
-        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .1;
-        const Ab = jb.Dot(bb, ab);
-        return 1 - Ab * Ab <= Ub
+      static AreClose(zz, tz) {
+        let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .1;
+        const Fz = wz.Dot(zz, tz);
+        return 1 - Fz * Fz <= sz
       }
-      static SmoothToRef(bb, ab, Ub, Ab, Mb) {
-        let Tb = 0 === Ab ? 1 : Ub / Ab;
-        return Tb = (0, Yb.Clamp)(Tb, 0, 1), jb.SlerpToRef(bb, ab, Tb, Mb), Mb
+      static SmoothToRef(zz, tz, sz, Fz, Wz) {
+        let Xz = 0 === Fz ? 1 : sz / Fz;
+        return Xz = (0, oz.Clamp)(Xz, 0, 1), wz.SlerpToRef(zz, tz, Xz, Wz), Wz
       }
       static Zero() {
-        return new jb(0, 0, 0, 0)
+        return new wz(0, 0, 0, 0)
       }
-      static Inverse(bb) {
-        return new jb(-bb._x, -bb._y, -bb._z, bb._w)
+      static Inverse(zz) {
+        return new wz(-zz._x, -zz._y, -zz._z, zz._w)
       }
-      static InverseToRef(bb, ab) {
-        return ab.set(-bb._x, -bb._y, -bb._z, bb._w), ab
+      static InverseToRef(zz, tz) {
+        return tz.set(-zz._x, -zz._y, -zz._z, zz._w), tz
       }
       static Identity() {
-        return new jb(0, 0, 0, 1)
+        return new wz(0, 0, 0, 1)
       }
-      static IsIdentity(bb) {
-        return bb && 0 === bb._x && 0 === bb._y && 0 === bb._z && 1 === bb._w
+      static IsIdentity(zz) {
+        return zz && 0 === zz._x && 0 === zz._y && 0 === zz._z && 1 === zz._w
       }
-      static RotationAxis(bb, ab) {
-        return jb.RotationAxisToRef(bb, ab, new jb)
+      static RotationAxis(zz, tz) {
+        return wz.RotationAxisToRef(zz, tz, new wz)
       }
-      static RotationAxisToRef(bb, ab, Ub) {
-        Ub._w = Math.cos(ab / 2);
-        const Ab = Math.sin(ab / 2) / bb.length();
-        return Ub._x = bb._x * Ab, Ub._y = bb._y * Ab, Ub._z = bb._z * Ab, Ub._isDirty = !0, Ub
+      static RotationAxisToRef(zz, tz, sz) {
+        sz._w = Math.cos(tz / 2);
+        const Fz = Math.sin(tz / 2) / zz.length();
+        return sz._x = zz._x * Fz, sz._y = zz._y * Fz, sz._z = zz._z * Fz, sz._isDirty = !0, sz
       }
-      static FromArray(bb, ab) {
-        return ab || (ab = 0), new jb(bb[ab], bb[ab + 1], bb[ab + 2], bb[ab + 3])
+      static FromArray(zz, tz) {
+        return tz || (tz = 0), new wz(zz[tz], zz[tz + 1], zz[tz + 2], zz[tz + 3])
       }
-      static FromArrayToRef(bb, ab, Ub) {
-        return Ub._x = bb[ab], Ub._y = bb[ab + 1], Ub._z = bb[ab + 2], Ub._w = bb[ab + 3], Ub._isDirty = !0, Ub
+      static FromArrayToRef(zz, tz, sz) {
+        return sz._x = zz[tz], sz._y = zz[tz + 1], sz._z = zz[tz + 2], sz._w = zz[tz + 3], sz._isDirty = !0, sz
       }
-      static FromFloatsToRef(bb, ab, Ub, Ab, Mb) {
-        return Mb.K9(bb, ab, Ub, Ab), Mb
+      static FromFloatsToRef(zz, tz, sz, Fz, Wz) {
+        return Wz.m_(zz, tz, sz, Fz), Wz
       }
-      static FromEulerAngles(bb, ab, Ub) {
-        const Ab = new jb;
-        return jb.RotationYawPitchRollToRef(ab, bb, Ub, Ab), Ab
+      static FromEulerAngles(zz, tz, sz) {
+        const Fz = new wz;
+        return wz.RotationYawPitchRollToRef(tz, zz, sz, Fz), Fz
       }
-      static FromEulerAnglesToRef(bb, ab, Ub, Ab) {
-        return jb.RotationYawPitchRollToRef(ab, bb, Ub, Ab), Ab
+      static FromEulerAnglesToRef(zz, tz, sz, Fz) {
+        return wz.RotationYawPitchRollToRef(tz, zz, sz, Fz), Fz
       }
-      static FromEulerVector(bb) {
-        const ab = new jb;
-        return jb.RotationYawPitchRollToRef(bb._y, bb._x, bb._z, ab), ab
+      static FromEulerVector(zz) {
+        const tz = new wz;
+        return wz.RotationYawPitchRollToRef(zz._y, zz._x, zz._z, tz), tz
       }
-      static FromEulerVectorToRef(bb, ab) {
-        return jb.RotationYawPitchRollToRef(bb._y, bb._x, bb._z, ab), ab
+      static FromEulerVectorToRef(zz, tz) {
+        return wz.RotationYawPitchRollToRef(zz._y, zz._x, zz._z, tz), tz
       }
-      static FromUnitVectorsToRef(bb, ab, Ub) {
-        let Mb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Ab.e;
-        const Tb = Pb.Dot(bb, ab) + 1;
-        return Tb < Mb ? Math.abs(bb.x) > Math.abs(bb.z) ? Ub.set(-bb.y, bb.x, 0, 0) : Ub.set(0, -bb.z, bb.y, 0) : (Pb.CrossToRef(bb, ab, yb.Pj[0]), Ub.set(yb.Pj[0].x, yb.Pj[0].y, yb.Pj[0].z, Tb)), Ub.normalize()
+      static FromUnitVectorsToRef(zz, tz, sz) {
+        let Wz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Fz.c;
+        const Xz = Nz.Dot(zz, tz) + 1;
+        return Xz < Wz ? Math.abs(zz.x) > Math.abs(zz.z) ? sz.set(-zz.y, zz.x, 0, 0) : sz.set(0, -zz.z, zz.y, 0) : (Nz.CrossToRef(zz, tz, Hz.XD[0]), sz.set(Hz.XD[0].x, Hz.XD[0].y, Hz.XD[0].z, Xz)), sz.normalize()
       }
-      static RotationYawPitchRoll(bb, ab, Ub) {
-        const Ab = new jb;
-        return jb.RotationYawPitchRollToRef(bb, ab, Ub, Ab), Ab
+      static RotationYawPitchRoll(zz, tz, sz) {
+        const Fz = new wz;
+        return wz.RotationYawPitchRollToRef(zz, tz, sz, Fz), Fz
       }
-      static RotationYawPitchRollToRef(bb, ab, Ub, Ab) {
-        const Mb = .5 * Ub,
-          Tb = .5 * ab,
-          Eb = .5 * bb,
-          Yb = Math.sin(Mb),
-          Bb = Math.cos(Mb),
-          eb = Math.sin(Tb),
-          vb = Math.cos(Tb),
-          Lb = Math.sin(Eb),
-          Pb = Math.cos(Eb);
-        return Ab._x = Pb * eb * Bb + Lb * vb * Yb, Ab._y = Lb * vb * Bb - Pb * eb * Yb, Ab._z = Pb * vb * Yb - Lb * eb * Bb, Ab._w = Pb * vb * Bb + Lb * eb * Yb, Ab._isDirty = !0, Ab
+      static RotationYawPitchRollToRef(zz, tz, sz, Fz) {
+        const Wz = .5 * sz,
+          Xz = .5 * tz,
+          Oz = .5 * zz,
+          oz = Math.sin(Wz),
+          vz = Math.cos(Wz),
+          Uz = Math.sin(Xz),
+          Kz = Math.cos(Xz),
+          uz = Math.sin(Oz),
+          Nz = Math.cos(Oz);
+        return Fz._x = Nz * Uz * vz + uz * Kz * oz, Fz._y = uz * Kz * vz - Nz * Uz * oz, Fz._z = Nz * Kz * oz - uz * Uz * vz, Fz._w = Nz * Kz * vz + uz * Uz * oz, Fz._isDirty = !0, Fz
       }
-      static RotationAlphaBetaGamma(bb, ab, Ub) {
-        const Ab = new jb;
-        return jb.RotationAlphaBetaGammaToRef(bb, ab, Ub, Ab), Ab
+      static RotationAlphaBetaGamma(zz, tz, sz) {
+        const Fz = new wz;
+        return wz.RotationAlphaBetaGammaToRef(zz, tz, sz, Fz), Fz
       }
-      static RotationAlphaBetaGammaToRef(bb, ab, Ub, Ab) {
-        const Mb = .5 * (Ub + bb),
-          Tb = .5 * (Ub - bb),
-          Eb = .5 * ab;
-        return Ab._x = Math.cos(Tb) * Math.sin(Eb), Ab._y = Math.sin(Tb) * Math.sin(Eb), Ab._z = Math.sin(Mb) * Math.cos(Eb), Ab._w = Math.cos(Mb) * Math.cos(Eb), Ab._isDirty = !0, Ab
+      static RotationAlphaBetaGammaToRef(zz, tz, sz, Fz) {
+        const Wz = .5 * (sz + zz),
+          Xz = .5 * (sz - zz),
+          Oz = .5 * tz;
+        return Fz._x = Math.cos(Xz) * Math.sin(Oz), Fz._y = Math.sin(Xz) * Math.sin(Oz), Fz._z = Math.sin(Wz) * Math.cos(Oz), Fz._w = Math.cos(Wz) * Math.cos(Oz), Fz._isDirty = !0, Fz
       }
-      static RotationQuaternionFromAxis(bb, ab, Ub) {
-        const Ab = new jb(0, 0, 0, 0);
-        return jb.RotationQuaternionFromAxisToRef(bb, ab, Ub, Ab), Ab
+      static RotationQuaternionFromAxis(zz, tz, sz) {
+        const Fz = new wz(0, 0, 0, 0);
+        return wz.RotationQuaternionFromAxisToRef(zz, tz, sz, Fz), Fz
       }
-      static RotationQuaternionFromAxisToRef(bb, ab, Ub, Ab) {
-        const Mb = kb.Matrix[0];
-        return bb = bb.normalizeToRef(kb.Pj[0]), ab = ab.normalizeToRef(kb.Pj[1]), Ub = Ub.normalizeToRef(kb.Pj[2]), Rb.FromXYZAxesToRef(bb, ab, Ub, Mb), jb.FromRotationMatrixToRef(Mb, Ab), Ab
+      static RotationQuaternionFromAxisToRef(zz, tz, sz, Fz) {
+        const Wz = gz.Matrix[0];
+        return zz = zz.normalizeToRef(gz.XD[0]), tz = tz.normalizeToRef(gz.XD[1]), sz = sz.normalizeToRef(gz.XD[2]), Dz.FromXYZAxesToRef(zz, tz, sz, Wz), wz.FromRotationMatrixToRef(Wz, Fz), Fz
       }
-      static FromLookDirectionLH(bb, ab) {
-        const Ub = new jb;
-        return jb.FromLookDirectionLHToRef(bb, ab, Ub), Ub
+      static FromLookDirectionLH(zz, tz) {
+        const sz = new wz;
+        return wz.FromLookDirectionLHToRef(zz, tz, sz), sz
       }
-      static FromLookDirectionLHToRef(bb, ab, Ub) {
-        const Ab = kb.Matrix[0];
-        return Rb.LookDirectionLHToRef(bb, ab, Ab), jb.FromRotationMatrixToRef(Ab, Ub), Ub
+      static FromLookDirectionLHToRef(zz, tz, sz) {
+        const Fz = gz.Matrix[0];
+        return Dz.LookDirectionLHToRef(zz, tz, Fz), wz.FromRotationMatrixToRef(Fz, sz), sz
       }
-      static FromLookDirectionRH(bb, ab) {
-        const Ub = new jb;
-        return jb.FromLookDirectionRHToRef(bb, ab, Ub), Ub
+      static FromLookDirectionRH(zz, tz) {
+        const sz = new wz;
+        return wz.FromLookDirectionRHToRef(zz, tz, sz), sz
       }
-      static FromLookDirectionRHToRef(bb, ab, Ub) {
-        const Ab = kb.Matrix[0];
-        return Rb.LookDirectionRHToRef(bb, ab, Ab), jb.FromRotationMatrixToRef(Ab, Ub)
+      static FromLookDirectionRHToRef(zz, tz, sz) {
+        const Fz = gz.Matrix[0];
+        return Dz.LookDirectionRHToRef(zz, tz, Fz), wz.FromRotationMatrixToRef(Fz, sz)
       }
-      static Slerp(bb, ab, Ub) {
-        const Ab = jb.Identity();
-        return jb.SlerpToRef(bb, ab, Ub, Ab), Ab
+      static Slerp(zz, tz, sz) {
+        const Fz = wz.Identity();
+        return wz.SlerpToRef(zz, tz, sz, Fz), Fz
       }
-      static SlerpToRef(bb, ab, Ub, Ab) {
-        let Mb, Tb, Eb = bb._x * ab._x + bb._y * ab._y + bb._z * ab._z + bb._w * ab._w,
-          Yb = !1;
-        if (Eb < 0 && (Yb = !0, Eb = -Eb), Eb > .999999) Tb = 1 - Ub, Mb = Yb ? -Ub : Ub;
+      static SlerpToRef(zz, tz, sz, Fz) {
+        let Wz, Xz, Oz = zz._x * tz._x + zz._y * tz._y + zz._z * tz._z + zz._w * tz._w,
+          oz = !1;
+        if (Oz < 0 && (oz = !0, Oz = -Oz), Oz > .999999) Xz = 1 - sz, Wz = oz ? -sz : sz;
         else {
-          const bb = Math.acos(Eb),
-            ab = 1 / Math.sin(bb);
-          Tb = Math.sin((1 - Ub) * bb) * ab, Mb = Yb ? -Math.sin(Ub * bb) * ab : Math.sin(Ub * bb) * ab
+          const zz = Math.acos(Oz),
+            tz = 1 / Math.sin(zz);
+          Xz = Math.sin((1 - sz) * zz) * tz, Wz = oz ? -Math.sin(sz * zz) * tz : Math.sin(sz * zz) * tz
         }
-        return Ab._x = Tb * bb._x + Mb * ab._x, Ab._y = Tb * bb._y + Mb * ab._y, Ab._z = Tb * bb._z + Mb * ab._z, Ab._w = Tb * bb._w + Mb * ab._w, Ab._isDirty = !0, Ab
+        return Fz._x = Xz * zz._x + Wz * tz._x, Fz._y = Xz * zz._y + Wz * tz._y, Fz._z = Xz * zz._z + Wz * tz._z, Fz._w = Xz * zz._w + Wz * tz._w, Fz._isDirty = !0, Fz
       }
-      static Hermite(bb, ab, Ub, Ab, Mb) {
-        const Tb = Mb * Mb,
-          Eb = Mb * Tb,
-          Yb = 2 * Eb - 3 * Tb + 1,
-          Bb = -2 * Eb + 3 * Tb,
-          eb = Eb - 2 * Tb + Mb,
-          vb = Eb - Tb,
-          Lb = bb._x * Yb + Ub._x * Bb + ab._x * eb + Ab._x * vb,
-          Pb = bb._y * Yb + Ub._y * Bb + ab._y * eb + Ab._y * vb,
-          Xb = bb._z * Yb + Ub._z * Bb + ab._z * eb + Ab._z * vb,
-          Rb = bb._w * Yb + Ub._w * Bb + ab._w * eb + Ab._w * vb;
-        return new jb(Lb, Pb, Xb, Rb)
+      static Hermite(zz, tz, sz, Fz, Wz) {
+        const Xz = Wz * Wz,
+          Oz = Wz * Xz,
+          oz = 2 * Oz - 3 * Xz + 1,
+          vz = -2 * Oz + 3 * Xz,
+          Uz = Oz - 2 * Xz + Wz,
+          Kz = Oz - Xz,
+          uz = zz._x * oz + sz._x * vz + tz._x * Uz + Fz._x * Kz,
+          Nz = zz._y * oz + sz._y * vz + tz._y * Uz + Fz._y * Kz,
+          bz = zz._z * oz + sz._z * vz + tz._z * Uz + Fz._z * Kz,
+          Dz = zz._w * oz + sz._w * vz + tz._w * Uz + Fz._w * Kz;
+        return new wz(uz, Nz, bz, Dz)
       }
-      static Hermite1stDerivative(bb, ab, Ub, Ab, Mb) {
-        const Tb = new jb;
-        return this.Hermite1stDerivativeToRef(bb, ab, Ub, Ab, Mb, Tb), Tb
+      static Hermite1stDerivative(zz, tz, sz, Fz, Wz) {
+        const Xz = new wz;
+        return this.Hermite1stDerivativeToRef(zz, tz, sz, Fz, Wz, Xz), Xz
       }
-      static Hermite1stDerivativeToRef(bb, ab, Ub, Ab, Mb, Tb) {
-        const Eb = Mb * Mb;
-        return Tb._x = 6 * (Eb - Mb) * bb._x + (3 * Eb - 4 * Mb + 1) * ab._x + 6 * (-Eb + Mb) * Ub._x + (3 * Eb - 2 * Mb) * Ab._x, Tb._y = 6 * (Eb - Mb) * bb._y + (3 * Eb - 4 * Mb + 1) * ab._y + 6 * (-Eb + Mb) * Ub._y + (3 * Eb - 2 * Mb) * Ab._y, Tb._z = 6 * (Eb - Mb) * bb._z + (3 * Eb - 4 * Mb + 1) * ab._z + 6 * (-Eb + Mb) * Ub._z + (3 * Eb - 2 * Mb) * Ab._z, Tb._w = 6 * (Eb - Mb) * bb._w + (3 * Eb - 4 * Mb + 1) * ab._w + 6 * (-Eb + Mb) * Ub._w + (3 * Eb - 2 * Mb) * Ab._w, Tb._isDirty = !0, Tb
+      static Hermite1stDerivativeToRef(zz, tz, sz, Fz, Wz, Xz) {
+        const Oz = Wz * Wz;
+        return Xz._x = 6 * (Oz - Wz) * zz._x + (3 * Oz - 4 * Wz + 1) * tz._x + 6 * (-Oz + Wz) * sz._x + (3 * Oz - 2 * Wz) * Fz._x, Xz._y = 6 * (Oz - Wz) * zz._y + (3 * Oz - 4 * Wz + 1) * tz._y + 6 * (-Oz + Wz) * sz._y + (3 * Oz - 2 * Wz) * Fz._y, Xz._z = 6 * (Oz - Wz) * zz._z + (3 * Oz - 4 * Wz + 1) * tz._z + 6 * (-Oz + Wz) * sz._z + (3 * Oz - 2 * Wz) * Fz._z, Xz._w = 6 * (Oz - Wz) * zz._w + (3 * Oz - 4 * Wz + 1) * tz._w + 6 * (-Oz + Wz) * sz._w + (3 * Oz - 2 * Wz) * Fz._w, Xz._isDirty = !0, Xz
       }
-      static Normalize(bb) {
-        const ab = jb.Zero();
-        return jb.NormalizeToRef(bb, ab), ab
+      static Normalize(zz) {
+        const tz = wz.Zero();
+        return wz.NormalizeToRef(zz, tz), tz
       }
-      static NormalizeToRef(bb, ab) {
-        return bb.normalizeToRef(ab), ab
+      static NormalizeToRef(zz, tz) {
+        return zz.normalizeToRef(tz), tz
       }
-      static Clamp(bb, ab, Ub) {
-        const Ab = new jb;
-        return jb.ClampToRef(bb, ab, Ub, Ab), Ab
+      static Clamp(zz, tz, sz) {
+        const Fz = new wz;
+        return wz.ClampToRef(zz, tz, sz, Fz), Fz
       }
-      static ClampToRef(bb, ab, Ub, Ab) {
-        return Ab.K9((0, Yb.Clamp)(bb.x, ab.x, Ub.x), (0, Yb.Clamp)(bb.y, ab.y, Ub.y), (0, Yb.Clamp)(bb.z, ab.z, Ub.z), (0, Yb.Clamp)(bb.w, ab.w, Ub.w))
+      static ClampToRef(zz, tz, sz, Fz) {
+        return Fz.m_((0, oz.Clamp)(zz.x, tz.x, sz.x), (0, oz.Clamp)(zz.y, tz.y, sz.y), (0, oz.Clamp)(zz.z, tz.z, sz.z), (0, oz.Clamp)(zz.w, tz.w, sz.w))
       }
       static Random() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new jb((0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab))
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new wz((0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz))
       }
       static RandomToRef() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).K9((0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab), (0, Yb.RandomRange)(bb, ab))
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).m_((0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz), (0, oz.RandomRange)(zz, tz))
       }
       static Minimize() {
         throw new ReferenceError("Quaternion.Minimize does not make sense")
@@ -1888,48 +1888,48 @@ export const modules = {
       static Maximize() {
         throw new ReferenceError("Quaternion.Maximize does not make sense")
       }
-      static Distance(bb, ab) {
-        return Math.sqrt(jb.DistanceSquared(bb, ab))
+      static Distance(zz, tz) {
+        return Math.sqrt(wz.DistanceSquared(zz, tz))
       }
-      static DistanceSquared(bb, ab) {
-        const Ub = bb.x - ab.x,
-          Ab = bb.y - ab.y,
-          Mb = bb.z - ab.z,
-          Tb = bb.w - ab.w;
-        return Ub * Ub + Ab * Ab + Mb * Mb + Tb * Tb
+      static DistanceSquared(zz, tz) {
+        const sz = zz.x - tz.x,
+          Fz = zz.y - tz.y,
+          Wz = zz.z - tz.z,
+          Xz = zz.w - tz.w;
+        return sz * sz + Fz * Fz + Wz * Wz + Xz * Xz
       }
-      static Center(bb, ab) {
-        return jb.CenterToRef(bb, ab, jb.Zero())
+      static Center(zz, tz) {
+        return wz.CenterToRef(zz, tz, wz.Zero())
       }
-      static CenterToRef(bb, ab, Ub) {
-        return Ub.K9((bb.x + ab.x) / 2, (bb.y + ab.y) / 2, (bb.z + ab.z) / 2, (bb.w + ab.w) / 2)
+      static CenterToRef(zz, tz, sz) {
+        return sz.m_((zz.x + tz.x) / 2, (zz.y + tz.y) / 2, (zz.z + tz.z) / 2, (zz.w + tz.w) / 2)
       }
     }
-    jb._V8PerformanceHack = new jb(.5, .5, .5, .5);
-    class Rb {
+    wz._V8PerformanceHack = new wz(.5, .5, .5, .5);
+    class Dz {
       static get Use64Bits() {
-        return Tb.b.MatrixUse64Bits
+        return Xz.c.MatrixUse64Bits
       }
       get m() {
         return this._m
       }
       markAsUpdated() {
-        this.updateFlag = Bb.j._UpdateFlagSeed++, this._isIdentity = !1, this._isIdentity3x2 = !1, this._isIdentityDirty = !0, this._isIdentity3x2Dirty = !0
+        this.updateFlag = vz.i._UpdateFlagSeed++, this._isIdentity = !1, this._isIdentity3x2 = !1, this._isIdentityDirty = !0, this._isIdentity3x2Dirty = !0
       }
-      _updateIdentityStatus(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Ab = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        this._isIdentity = bb, this._isIdentity3x2 = bb || Ub, this._isIdentityDirty = !this._isIdentity && ab, this._isIdentity3x2Dirty = !this._isIdentity3x2 && Ab
+      _updateIdentityStatus(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          sz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Fz = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        this._isIdentity = zz, this._isIdentity3x2 = zz || sz, this._isIdentityDirty = !this._isIdentity && tz, this._isIdentity3x2Dirty = !this._isIdentity3x2 && Fz
       }
       constructor() {
-        this._isIdentity = !1, this._isIdentityDirty = !0, this._isIdentity3x2 = !0, this._isIdentity3x2Dirty = !0, this.updateFlag = -1, Tb.b.MatrixTrackPrecisionChange && Tb.b.MatrixTrackedMatrices.push(this), this._m = new Tb.b.MatrixCurrentType(16), this.markAsUpdated()
+        this._isIdentity = !1, this._isIdentityDirty = !0, this._isIdentity3x2 = !0, this._isIdentity3x2Dirty = !0, this.updateFlag = -1, Xz.c.MatrixTrackPrecisionChange && Xz.c.MatrixTrackedMatrices.push(this), this._m = new Xz.c.MatrixCurrentType(16), this.markAsUpdated()
       }
       isIdentity() {
         if (this._isIdentityDirty) {
           this._isIdentityDirty = !1;
-          const bb = this._m;
-          this._isIdentity = 1 === bb[0] && 0 === bb[1] && 0 === bb[2] && 0 === bb[3] && 0 === bb[4] && 1 === bb[5] && 0 === bb[6] && 0 === bb[7] && 0 === bb[8] && 0 === bb[9] && 1 === bb[10] && 0 === bb[11] && 0 === bb[12] && 0 === bb[13] && 0 === bb[14] && 1 === bb[15]
+          const zz = this._m;
+          this._isIdentity = 1 === zz[0] && 0 === zz[1] && 0 === zz[2] && 0 === zz[3] && 0 === zz[4] && 1 === zz[5] && 0 === zz[6] && 0 === zz[7] && 0 === zz[8] && 0 === zz[9] && 1 === zz[10] && 0 === zz[11] && 0 === zz[12] && 0 === zz[13] && 0 === zz[14] && 1 === zz[15]
         }
         return this._isIdentity
       }
@@ -1938,966 +1938,966 @@ export const modules = {
       }
       determinant() {
         if (!0 === this._isIdentity) return 1;
-        const bb = this._m,
-          ab = bb[0],
-          Ub = bb[1],
-          Ab = bb[2],
-          Mb = bb[3],
-          Tb = bb[4],
-          Eb = bb[5],
-          Yb = bb[6],
-          Bb = bb[7],
-          eb = bb[8],
-          vb = bb[9],
-          Lb = bb[10],
-          Pb = bb[11],
-          Xb = bb[12],
-          jb = bb[13],
-          Rb = bb[14],
-          kb = bb[15],
-          yb = Lb * kb - Rb * Pb,
-          Zb = vb * kb - jb * Pb,
-          Db = vb * Rb - jb * Lb,
-          zb = eb * kb - Xb * Pb,
-          xb = eb * Rb - Lb * Xb,
-          ib = eb * jb - Xb * vb;
-        return ab * +(Eb * yb - Yb * Zb + Bb * Db) + Ub * -(Tb * yb - Yb * zb + Bb * xb) + Ab * +(Tb * Zb - Eb * zb + Bb * ib) + Mb * -(Tb * Db - Eb * xb + Yb * ib)
+        const zz = this._m,
+          tz = zz[0],
+          sz = zz[1],
+          Fz = zz[2],
+          Wz = zz[3],
+          Xz = zz[4],
+          Oz = zz[5],
+          oz = zz[6],
+          vz = zz[7],
+          Uz = zz[8],
+          Kz = zz[9],
+          uz = zz[10],
+          Nz = zz[11],
+          bz = zz[12],
+          wz = zz[13],
+          Dz = zz[14],
+          gz = zz[15],
+          Hz = uz * gz - Dz * Nz,
+          Bz = Kz * gz - wz * Nz,
+          Pz = Kz * Dz - wz * uz,
+          rz = Uz * gz - bz * Nz,
+          Yz = Uz * Dz - uz * bz,
+          xz = Uz * wz - bz * Kz;
+        return tz * +(Oz * Hz - oz * Bz + vz * Pz) + sz * -(Xz * Hz - oz * rz + vz * Yz) + Fz * +(Xz * Bz - Oz * rz + vz * xz) + Wz * -(Xz * Pz - Oz * Yz + oz * xz)
       }
       toString() {
         return `{${this.m[0]}, ${this.m[1]}, ${this.m[2]}, ${this.m[3]}\n${this.m[4]}, ${this.m[5]}, ${this.m[6]}, ${this.m[7]}\n${this.m[8]}, ${this.m[9]}, ${this.m[10]}, ${this.m[11]}\n${this.m[12]}, ${this.m[13]}, ${this.m[14]}, ${this.m[15]}}`
       }
       toArray() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (!bb) return this._m;
-        const Ub = this._m;
-        for (let Ab = 0; Ab < 16; Ab++) bb[ab + Ab] = Ub[Ab];
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (!zz) return this._m;
+        const sz = this._m;
+        for (let Fz = 0; Fz < 16; Fz++) zz[tz + Fz] = sz[Fz];
         return this
       }
-      qUb() {
+      hsz() {
         return this._m
       }
-      Zab(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Rb.FromArrayToRef(bb, ab, this)
+      Ztz(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return Dz.FromArrayToRef(zz, tz, this)
       }
-      K9() {
-        for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
-        return Rb.FromArrayToRef(ab, 0, this)
+      m_() {
+        for (var zz = arguments.length, tz = new Array(zz), sz = 0; sz < zz; sz++) tz[sz] = arguments[sz];
+        return Dz.FromArrayToRef(tz, 0, this)
       }
       set() {
-        const bb = this._m;
-        for (let ab = 0; ab < 16; ab++) bb[ab] = ab < 0 || arguments.length <= ab ? void 0 : arguments[ab];
+        const zz = this._m;
+        for (let tz = 0; tz < 16; tz++) zz[tz] = tz < 0 || arguments.length <= tz ? void 0 : arguments[tz];
         return this.markAsUpdated(), this
       }
-      B3(bb) {
-        const ab = this._m;
-        for (let Ub = 0; Ub < 16; Ub++) ab[Ub] = bb;
+      Z6(zz) {
+        const tz = this._m;
+        for (let sz = 0; sz < 16; sz++) tz[sz] = zz;
         return this.markAsUpdated(), this
       }
       invert() {
         return this.invertToRef(this), this
       }
       reset() {
-        return Rb.FromValuesToRef(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, this), this._updateIdentityStatus(!1), this
+        return Dz.FromValuesToRef(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, this), this._updateIdentityStatus(!1), this
       }
-      add(bb) {
-        const ab = new Rb;
-        return this.addToRef(bb, ab), ab
+      add(zz) {
+        const tz = new Dz;
+        return this.addToRef(zz, tz), tz
       }
-      addToRef(bb, ab) {
-        const Ub = this._m,
-          Ab = ab._m,
-          Mb = bb.m;
-        for (let Tb = 0; Tb < 16; Tb++) Ab[Tb] = Ub[Tb] + Mb[Tb];
-        return ab.markAsUpdated(), ab
+      addToRef(zz, tz) {
+        const sz = this._m,
+          Fz = tz._m,
+          Wz = zz.m;
+        for (let Xz = 0; Xz < 16; Xz++) Fz[Xz] = sz[Xz] + Wz[Xz];
+        return tz.markAsUpdated(), tz
       }
-      addToSelf(bb) {
-        const ab = this._m,
-          Ub = bb.m;
-        return ab[0] += Ub[0], ab[1] += Ub[1], ab[2] += Ub[2], ab[3] += Ub[3], ab[4] += Ub[4], ab[5] += Ub[5], ab[6] += Ub[6], ab[7] += Ub[7], ab[8] += Ub[8], ab[9] += Ub[9], ab[10] += Ub[10], ab[11] += Ub[11], ab[12] += Ub[12], ab[13] += Ub[13], ab[14] += Ub[14], ab[15] += Ub[15], this.markAsUpdated(), this
+      addToSelf(zz) {
+        const tz = this._m,
+          sz = zz.m;
+        return tz[0] += sz[0], tz[1] += sz[1], tz[2] += sz[2], tz[3] += sz[3], tz[4] += sz[4], tz[5] += sz[5], tz[6] += sz[6], tz[7] += sz[7], tz[8] += sz[8], tz[9] += sz[9], tz[10] += sz[10], tz[11] += sz[11], tz[12] += sz[12], tz[13] += sz[13], tz[14] += sz[14], tz[15] += sz[15], this.markAsUpdated(), this
       }
-      addInPlace(bb) {
-        const ab = this._m,
-          Ub = bb.m;
-        for (let Ab = 0; Ab < 16; Ab++) ab[Ab] += Ub[Ab];
+      addInPlace(zz) {
+        const tz = this._m,
+          sz = zz.m;
+        for (let Fz = 0; Fz < 16; Fz++) tz[Fz] += sz[Fz];
         return this.markAsUpdated(), this
       }
       addInPlaceFromFloats() {
-        const bb = this._m;
-        for (let ab = 0; ab < 16; ab++) bb[ab] += ab < 0 || arguments.length <= ab ? void 0 : arguments[ab];
+        const zz = this._m;
+        for (let tz = 0; tz < 16; tz++) zz[tz] += tz < 0 || arguments.length <= tz ? void 0 : arguments[tz];
         return this.markAsUpdated(), this
       }
-      subtract(bb) {
-        const ab = this._m,
-          Ub = bb.m;
-        for (let Ab = 0; Ab < 16; Ab++) ab[Ab] -= Ub[Ab];
+      subtract(zz) {
+        const tz = this._m,
+          sz = zz.m;
+        for (let Fz = 0; Fz < 16; Fz++) tz[Fz] -= sz[Fz];
         return this.markAsUpdated(), this
       }
-      subtractToRef(bb, ab) {
-        const Ub = this._m,
-          Ab = bb.m,
-          Mb = ab._m;
-        for (let Tb = 0; Tb < 16; Tb++) Mb[Tb] = Ub[Tb] - Ab[Tb];
-        return ab.markAsUpdated(), ab
+      subtractToRef(zz, tz) {
+        const sz = this._m,
+          Fz = zz.m,
+          Wz = tz._m;
+        for (let Xz = 0; Xz < 16; Xz++) Wz[Xz] = sz[Xz] - Fz[Xz];
+        return tz.markAsUpdated(), tz
       }
-      MAb(bb) {
-        const ab = this._m,
-          Ub = bb.m;
-        for (let Ab = 0; Ab < 16; Ab++) ab[Ab] -= Ub[Ab];
+      oFz(zz) {
+        const tz = this._m,
+          sz = zz.m;
+        for (let Fz = 0; Fz < 16; Fz++) tz[Fz] -= sz[Fz];
         return this.markAsUpdated(), this
       }
       subtractFromFloats() {
-        for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
-        return this.subtractFromFloatsToRef(...ab, new Rb)
+        for (var zz = arguments.length, tz = new Array(zz), sz = 0; sz < zz; sz++) tz[sz] = arguments[sz];
+        return this.subtractFromFloatsToRef(...tz, new Dz)
       }
       subtractFromFloatsToRef() {
-        for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
-        const Ab = ab.pop(),
-          Mb = this._m,
-          Tb = Ab._m,
-          Eb = ab;
-        for (let Yb = 0; Yb < 16; Yb++) Tb[Yb] = Mb[Yb] - Eb[Yb];
-        return Ab.markAsUpdated(), Ab
+        for (var zz = arguments.length, tz = new Array(zz), sz = 0; sz < zz; sz++) tz[sz] = arguments[sz];
+        const Fz = tz.pop(),
+          Wz = this._m,
+          Xz = Fz._m,
+          Oz = tz;
+        for (let oz = 0; oz < 16; oz++) Xz[oz] = Wz[oz] - Oz[oz];
+        return Fz.markAsUpdated(), Fz
       }
-      invertToRef(bb) {
-        return !0 === this._isIdentity ? (Rb.IdentityToRef(bb), bb) : ((0, Bb.d)(this, bb.qUb()) ? bb.markAsUpdated() : bb.EUb(this), bb)
+      invertToRef(zz) {
+        return !0 === this._isIdentity ? (Dz.IdentityToRef(zz), zz) : ((0, vz.d)(this, zz.hsz()) ? zz.markAsUpdated() : zz.vsz(this), zz)
       }
-      addAtIndex(bb, ab) {
-        return this._m[bb] += ab, this.markAsUpdated(), this
+      addAtIndex(zz, tz) {
+        return this._m[zz] += tz, this.markAsUpdated(), this
       }
-      multiplyAtIndex(bb, ab) {
-        return this._m[bb] *= ab, this.markAsUpdated(), this
+      multiplyAtIndex(zz, tz) {
+        return this._m[zz] *= tz, this.markAsUpdated(), this
       }
-      setTranslationFromFloats(bb, ab, Ub) {
-        return this._m[12] = bb, this._m[13] = ab, this._m[14] = Ub, this.markAsUpdated(), this
+      setTranslationFromFloats(zz, tz, sz) {
+        return this._m[12] = zz, this._m[13] = tz, this._m[14] = sz, this.markAsUpdated(), this
       }
-      addTranslationFromFloats(bb, ab, Ub) {
-        return this._m[12] += bb, this._m[13] += ab, this._m[14] += Ub, this.markAsUpdated(), this
+      addTranslationFromFloats(zz, tz, sz) {
+        return this._m[12] += zz, this._m[13] += tz, this._m[14] += sz, this.markAsUpdated(), this
       }
-      setTranslation(bb) {
-        return this.setTranslationFromFloats(bb._x, bb._y, bb._z)
+      setTranslation(zz) {
+        return this.setTranslationFromFloats(zz._x, zz._y, zz._z)
       }
       getTranslation() {
-        return new Pb(this._m[12], this._m[13], this._m[14])
+        return new Nz(this._m[12], this._m[13], this._m[14])
       }
-      getTranslationToRef(bb) {
-        return bb.x = this._m[12], bb.y = this._m[13], bb.z = this._m[14], bb
+      getTranslationToRef(zz) {
+        return zz.x = this._m[12], zz.y = this._m[13], zz.z = this._m[14], zz
       }
       removeRotationAndScaling() {
-        const bb = this.m;
-        return Rb.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, bb[12], bb[13], bb[14], bb[15], this), this._updateIdentityStatus(0 === bb[12] && 0 === bb[13] && 0 === bb[14] && 1 === bb[15]), this
+        const zz = this.m;
+        return Dz.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, zz[12], zz[13], zz[14], zz[15], this), this._updateIdentityStatus(0 === zz[12] && 0 === zz[13] && 0 === zz[14] && 1 === zz[15]), this
       }
-      EUb(bb) {
-        bb.copyToArray(this._m);
-        const ab = bb;
-        return this.updateFlag = ab.updateFlag, this._updateIdentityStatus(ab._isIdentity, ab._isIdentityDirty, ab._isIdentity3x2, ab._isIdentity3x2Dirty), this
+      vsz(zz) {
+        zz.copyToArray(this._m);
+        const tz = zz;
+        return this.updateFlag = tz.updateFlag, this._updateIdentityStatus(tz._isIdentity, tz._isIdentityDirty, tz._isIdentity3x2, tz._isIdentity3x2Dirty), this
       }
-      copyToArray(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return (0, Bb.b)(this, bb, ab), this
+      copyToArray(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return (0, vz.c)(this, zz, tz), this
       }
-      multiply(bb) {
-        const ab = new Rb;
-        return this.multiplyToRef(bb, ab), ab
+      multiply(zz) {
+        const tz = new Dz;
+        return this.multiplyToRef(zz, tz), tz
       }
-      multiplyInPlace(bb) {
-        const ab = this._m,
-          Ub = bb.m;
-        for (let Ab = 0; Ab < 16; Ab++) ab[Ab] *= Ub[Ab];
+      multiplyInPlace(zz) {
+        const tz = this._m,
+          sz = zz.m;
+        for (let Fz = 0; Fz < 16; Fz++) tz[Fz] *= sz[Fz];
         return this.markAsUpdated(), this
       }
       multiplyByFloats() {
-        const bb = this._m;
-        for (let ab = 0; ab < 16; ab++) bb[ab] *= ab < 0 || arguments.length <= ab ? void 0 : arguments[ab];
+        const zz = this._m;
+        for (let tz = 0; tz < 16; tz++) zz[tz] *= tz < 0 || arguments.length <= tz ? void 0 : arguments[tz];
         return this.markAsUpdated(), this
       }
       multiplyByFloatsToRef() {
-        for (var bb = arguments.length, ab = new Array(bb), Ub = 0; Ub < bb; Ub++) ab[Ub] = arguments[Ub];
-        const Ab = ab.pop(),
-          Mb = this._m,
-          Tb = Ab._m,
-          Eb = ab;
-        for (let Yb = 0; Yb < 16; Yb++) Tb[Yb] = Mb[Yb] * Eb[Yb];
-        return Ab.markAsUpdated(), Ab
+        for (var zz = arguments.length, tz = new Array(zz), sz = 0; sz < zz; sz++) tz[sz] = arguments[sz];
+        const Fz = tz.pop(),
+          Wz = this._m,
+          Xz = Fz._m,
+          Oz = tz;
+        for (let oz = 0; oz < 16; oz++) Xz[oz] = Wz[oz] * Oz[oz];
+        return Fz.markAsUpdated(), Fz
       }
-      multiplyToRef(bb, ab) {
-        return this._isIdentity ? (ab.EUb(bb), ab) : bb._isIdentity ? (ab.EUb(this), ab) : (this.multiplyToArray(bb, ab._m, 0), ab.markAsUpdated(), ab)
+      multiplyToRef(zz, tz) {
+        return this._isIdentity ? (tz.vsz(zz), tz) : zz._isIdentity ? (tz.vsz(this), tz) : (this.multiplyToArray(zz, tz._m, 0), tz.markAsUpdated(), tz)
       }
-      multiplyToArray(bb, ab, Ub) {
-        return (0, Bb.l)(this, bb, ab, Ub), this
+      multiplyToArray(zz, tz, sz) {
+        return (0, vz.l)(this, zz, tz, sz), this
       }
-      divide(bb) {
-        return this.divideToRef(bb, new Rb)
+      divide(zz) {
+        return this.divideToRef(zz, new Dz)
       }
-      divideToRef(bb, ab) {
-        const Ub = this._m,
-          Ab = bb.m,
-          Mb = ab._m;
-        for (let Tb = 0; Tb < 16; Tb++) Mb[Tb] = Ub[Tb] / Ab[Tb];
-        return ab.markAsUpdated(), ab
+      divideToRef(zz, tz) {
+        const sz = this._m,
+          Fz = zz.m,
+          Wz = tz._m;
+        for (let Xz = 0; Xz < 16; Xz++) Wz[Xz] = sz[Xz] / Fz[Xz];
+        return tz.markAsUpdated(), tz
       }
-      divideInPlace(bb) {
-        const ab = this._m,
-          Ub = bb.m;
-        for (let Ab = 0; Ab < 16; Ab++) ab[Ab] /= Ub[Ab];
+      divideInPlace(zz) {
+        const tz = this._m,
+          sz = zz.m;
+        for (let Fz = 0; Fz < 16; Fz++) tz[Fz] /= sz[Fz];
         return this.markAsUpdated(), this
       }
-      minimizeInPlace(bb) {
-        const ab = this._m,
-          Ub = bb.m;
-        for (let Ab = 0; Ab < 16; Ab++) ab[Ab] = Math.min(ab[Ab], Ub[Ab]);
+      minimizeInPlace(zz) {
+        const tz = this._m,
+          sz = zz.m;
+        for (let Fz = 0; Fz < 16; Fz++) tz[Fz] = Math.min(tz[Fz], sz[Fz]);
         return this.markAsUpdated(), this
       }
       minimizeInPlaceFromFloats() {
-        const bb = this._m;
-        for (let ab = 0; ab < 16; ab++) bb[ab] = Math.min(bb[ab], ab < 0 || arguments.length <= ab ? void 0 : arguments[ab]);
+        const zz = this._m;
+        for (let tz = 0; tz < 16; tz++) zz[tz] = Math.min(zz[tz], tz < 0 || arguments.length <= tz ? void 0 : arguments[tz]);
         return this.markAsUpdated(), this
       }
-      maximizeInPlace(bb) {
-        const ab = this._m,
-          Ub = bb.m;
-        for (let Ab = 0; Ab < 16; Ab++) ab[Ab] = Math.max(ab[Ab], Ub[Ab]);
+      maximizeInPlace(zz) {
+        const tz = this._m,
+          sz = zz.m;
+        for (let Fz = 0; Fz < 16; Fz++) tz[Fz] = Math.max(tz[Fz], sz[Fz]);
         return this.markAsUpdated(), this
       }
       maximizeInPlaceFromFloats() {
-        const bb = this._m;
-        for (let ab = 0; ab < 16; ab++) bb[ab] = Math.max(bb[ab], ab < 0 || arguments.length <= ab ? void 0 : arguments[ab]);
+        const zz = this._m;
+        for (let tz = 0; tz < 16; tz++) zz[tz] = Math.max(zz[tz], tz < 0 || arguments.length <= tz ? void 0 : arguments[tz]);
         return this.markAsUpdated(), this
       }
-      pa() {
-        return this.negateToRef(new Rb)
+      nt() {
+        return this.negateToRef(new Dz)
       }
       negateInPlace() {
-        const bb = this._m;
-        for (let ab = 0; ab < 16; ab++) bb[ab] = -bb[ab];
+        const zz = this._m;
+        for (let tz = 0; tz < 16; tz++) zz[tz] = -zz[tz];
         return this.markAsUpdated(), this
       }
-      negateToRef(bb) {
-        const ab = this._m,
-          Ub = bb._m;
-        for (let Ab = 0; Ab < 16; Ab++) Ub[Ab] = -ab[Ab];
-        return bb.markAsUpdated(), bb
+      negateToRef(zz) {
+        const tz = this._m,
+          sz = zz._m;
+        for (let Fz = 0; Fz < 16; Fz++) sz[Fz] = -tz[Fz];
+        return zz.markAsUpdated(), zz
       }
-      equals(bb) {
-        const ab = bb;
-        if (!ab) return !1;
-        if ((this._isIdentity || ab._isIdentity) && !this._isIdentityDirty && !ab._isIdentityDirty) return this._isIdentity && ab._isIdentity;
-        const Ub = this.m,
-          Ab = ab.m;
-        return Ub[0] === Ab[0] && Ub[1] === Ab[1] && Ub[2] === Ab[2] && Ub[3] === Ab[3] && Ub[4] === Ab[4] && Ub[5] === Ab[5] && Ub[6] === Ab[6] && Ub[7] === Ab[7] && Ub[8] === Ab[8] && Ub[9] === Ab[9] && Ub[10] === Ab[10] && Ub[11] === Ab[11] && Ub[12] === Ab[12] && Ub[13] === Ab[13] && Ub[14] === Ab[14] && Ub[15] === Ab[15]
+      equals(zz) {
+        const tz = zz;
+        if (!tz) return !1;
+        if ((this._isIdentity || tz._isIdentity) && !this._isIdentityDirty && !tz._isIdentityDirty) return this._isIdentity && tz._isIdentity;
+        const sz = this.m,
+          Fz = tz.m;
+        return sz[0] === Fz[0] && sz[1] === Fz[1] && sz[2] === Fz[2] && sz[3] === Fz[3] && sz[4] === Fz[4] && sz[5] === Fz[5] && sz[6] === Fz[6] && sz[7] === Fz[7] && sz[8] === Fz[8] && sz[9] === Fz[9] && sz[10] === Fz[10] && sz[11] === Fz[11] && sz[12] === Fz[12] && sz[13] === Fz[13] && sz[14] === Fz[14] && sz[15] === Fz[15]
       }
-      equalsWithEpsilon(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const Ub = this._m,
-          Ab = bb.m;
-        for (let Mb = 0; Mb < 16; Mb++)
-          if (!(0, Yb.WithinEpsilon)(Ub[Mb], Ab[Mb], ab)) return !1;
+      equalsWithEpsilon(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const sz = this._m,
+          Fz = zz.m;
+        for (let Wz = 0; Wz < 16; Wz++)
+          if (!(0, oz.WithinEpsilon)(sz[Wz], Fz[Wz], tz)) return !1;
         return !0
       }
-      eEb() {
-        const bb = this._m;
-        for (let ab = 0; ab < 16; ab++)
-          if (bb[ab] != (ab < 0 || arguments.length <= ab ? void 0 : arguments[ab])) return !1;
+      wOz() {
+        const zz = this._m;
+        for (let tz = 0; tz < 16; tz++)
+          if (zz[tz] != (tz < 0 || arguments.length <= tz ? void 0 : arguments[tz])) return !1;
         return !0
       }
       floor() {
-        return this.floorToRef(new Rb)
+        return this.floorToRef(new Dz)
       }
-      floorToRef(bb) {
-        const ab = this._m,
-          Ub = bb._m;
-        for (let Ab = 0; Ab < 16; Ab++) Ub[Ab] = Math.floor(ab[Ab]);
-        return bb.markAsUpdated(), bb
+      floorToRef(zz) {
+        const tz = this._m,
+          sz = zz._m;
+        for (let Fz = 0; Fz < 16; Fz++) sz[Fz] = Math.floor(tz[Fz]);
+        return zz.markAsUpdated(), zz
       }
       fract() {
-        return this.fractToRef(new Rb)
+        return this.fractToRef(new Dz)
       }
-      fractToRef(bb) {
-        const ab = this._m,
-          Ub = bb._m;
-        for (let Ab = 0; Ab < 16; Ab++) Ub[Ab] = ab[Ab] - Math.floor(ab[Ab]);
-        return bb.markAsUpdated(), bb
+      fractToRef(zz) {
+        const tz = this._m,
+          sz = zz._m;
+        for (let Fz = 0; Fz < 16; Fz++) sz[Fz] = tz[Fz] - Math.floor(tz[Fz]);
+        return zz.markAsUpdated(), zz
       }
       clone() {
-        const bb = new Rb;
-        return bb.EUb(this), bb
+        const zz = new Dz;
+        return zz.vsz(this), zz
       }
       getClassName() {
         return "Matrix"
       }
       getHashCode() {
-        let bb = vb(this._m[0]);
-        for (let ab = 1; ab < 16; ab++) bb = 397 * bb ^ vb(this._m[ab]);
-        return bb
+        let zz = Kz(this._m[0]);
+        for (let tz = 1; tz < 16; tz++) zz = 397 * zz ^ Kz(this._m[tz]);
+        return zz
       }
-      decomposeToTransformNode(bb) {
-        return bb.rotationQuaternion = bb.rotationQuaternion || new jb, this.decompose(bb.nY, bb.rotationQuaternion, bb.position)
+      decomposeToTransformNode(zz) {
+        return zz.rotationQuaternion = zz.rotationQuaternion || new wz, this.decompose(zz.nX, zz.rotationQuaternion, zz.position)
       }
-      decompose(bb, ab, Ub, Ab) {
-        let Mb = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        if (this._isIdentity) return Ub && Ub.B3(0), bb && bb.B3(1), ab && ab.K9(0, 0, 0, 1), !0;
-        const Tb = this._m;
-        if (Ub && Ub.K9(Tb[12], Tb[13], Tb[14]), (bb = bb || kb.Pj[0]).x = Math.sqrt(Tb[0] * Tb[0] + Tb[1] * Tb[1] + Tb[2] * Tb[2]), bb.y = Math.sqrt(Tb[4] * Tb[4] + Tb[5] * Tb[5] + Tb[6] * Tb[6]), bb.z = Math.sqrt(Tb[8] * Tb[8] + Tb[9] * Tb[9] + Tb[10] * Tb[10]), Ab) {
-          const ab = (Mb ? Ab.absoluteScaling.x : Ab.nY.x) < 0 ? -1 : 1,
-            Ub = (Mb ? Ab.absoluteScaling.y : Ab.nY.y) < 0 ? -1 : 1,
-            Tb = (Mb ? Ab.absoluteScaling.z : Ab.nY.z) < 0 ? -1 : 1;
-          bb.x *= ab, bb.y *= Ub, bb.z *= Tb
-        } else this.determinant() <= 0 && (bb.y *= -1);
-        if (0 === bb._x || 0 === bb._y || 0 === bb._z) return ab && ab.K9(0, 0, 0, 1), !1;
-        if (ab) {
-          const Ub = 1 / bb._x,
-            Ab = 1 / bb._y,
-            Mb = 1 / bb._z;
-          Rb.FromValuesToRef(Tb[0] * Ub, Tb[1] * Ub, Tb[2] * Ub, 0, Tb[4] * Ab, Tb[5] * Ab, Tb[6] * Ab, 0, Tb[8] * Mb, Tb[9] * Mb, Tb[10] * Mb, 0, 0, 0, 0, 1, kb.Matrix[0]), jb.FromRotationMatrixToRef(kb.Matrix[0], ab)
+      decompose(zz, tz, sz, Fz) {
+        let Wz = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        if (this._isIdentity) return sz && sz.Z6(0), zz && zz.Z6(1), tz && tz.m_(0, 0, 0, 1), !0;
+        const Xz = this._m;
+        if (sz && sz.m_(Xz[12], Xz[13], Xz[14]), (zz = zz || gz.XD[0]).x = Math.sqrt(Xz[0] * Xz[0] + Xz[1] * Xz[1] + Xz[2] * Xz[2]), zz.y = Math.sqrt(Xz[4] * Xz[4] + Xz[5] * Xz[5] + Xz[6] * Xz[6]), zz.z = Math.sqrt(Xz[8] * Xz[8] + Xz[9] * Xz[9] + Xz[10] * Xz[10]), Fz) {
+          const tz = (Wz ? Fz.absoluteScaling.x : Fz.nX.x) < 0 ? -1 : 1,
+            sz = (Wz ? Fz.absoluteScaling.y : Fz.nX.y) < 0 ? -1 : 1,
+            Xz = (Wz ? Fz.absoluteScaling.z : Fz.nX.z) < 0 ? -1 : 1;
+          zz.x *= tz, zz.y *= sz, zz.z *= Xz
+        } else this.determinant() <= 0 && (zz.y *= -1);
+        if (0 === zz._x || 0 === zz._y || 0 === zz._z) return tz && tz.m_(0, 0, 0, 1), !1;
+        if (tz) {
+          const sz = 1 / zz._x,
+            Fz = 1 / zz._y,
+            Wz = 1 / zz._z;
+          Dz.FromValuesToRef(Xz[0] * sz, Xz[1] * sz, Xz[2] * sz, 0, Xz[4] * Fz, Xz[5] * Fz, Xz[6] * Fz, 0, Xz[8] * Wz, Xz[9] * Wz, Xz[10] * Wz, 0, 0, 0, 0, 1, gz.Matrix[0]), wz.FromRotationMatrixToRef(gz.Matrix[0], tz)
         }
         return !0
       }
-      getRow(bb) {
-        if (bb < 0 || bb > 3) return null;
-        const ab = 4 * bb;
-        return new Xb(this._m[ab + 0], this._m[ab + 1], this._m[ab + 2], this._m[ab + 3])
+      getRow(zz) {
+        if (zz < 0 || zz > 3) return null;
+        const tz = 4 * zz;
+        return new bz(this._m[tz + 0], this._m[tz + 1], this._m[tz + 2], this._m[tz + 3])
       }
-      getRowToRef(bb, ab) {
-        if (bb >= 0 && bb <= 3) {
-          const Ub = 4 * bb;
-          ab.x = this._m[Ub + 0], ab.y = this._m[Ub + 1], ab.z = this._m[Ub + 2], ab.w = this._m[Ub + 3]
+      getRowToRef(zz, tz) {
+        if (zz >= 0 && zz <= 3) {
+          const sz = 4 * zz;
+          tz.x = this._m[sz + 0], tz.y = this._m[sz + 1], tz.z = this._m[sz + 2], tz.w = this._m[sz + 3]
         }
-        return ab
+        return tz
       }
-      setRow(bb, ab) {
-        return this.setRowFromFloats(bb, ab.x, ab.y, ab.z, ab.w)
+      setRow(zz, tz) {
+        return this.setRowFromFloats(zz, tz.x, tz.y, tz.z, tz.w)
       }
       transpose() {
-        const bb = new Rb;
-        return Rb.TransposeToRef(this, bb), bb
+        const zz = new Dz;
+        return Dz.TransposeToRef(this, zz), zz
       }
-      transposeToRef(bb) {
-        return Rb.TransposeToRef(this, bb), bb
+      transposeToRef(zz) {
+        return Dz.TransposeToRef(this, zz), zz
       }
-      setRowFromFloats(bb, ab, Ub, Ab, Mb) {
-        if (bb < 0 || bb > 3) return this;
-        const Tb = 4 * bb;
-        return this._m[Tb + 0] = ab, this._m[Tb + 1] = Ub, this._m[Tb + 2] = Ab, this._m[Tb + 3] = Mb, this.markAsUpdated(), this
+      setRowFromFloats(zz, tz, sz, Fz, Wz) {
+        if (zz < 0 || zz > 3) return this;
+        const Xz = 4 * zz;
+        return this._m[Xz + 0] = tz, this._m[Xz + 1] = sz, this._m[Xz + 2] = Fz, this._m[Xz + 3] = Wz, this.markAsUpdated(), this
       }
-      scale(bb) {
-        const ab = new Rb;
-        return this.scaleToRef(bb, ab), ab
+      scale(zz) {
+        const tz = new Dz;
+        return this.scaleToRef(zz, tz), tz
       }
-      scaleToRef(bb, ab) {
-        for (let Ub = 0; Ub < 16; Ub++) ab._m[Ub] = this._m[Ub] * bb;
-        return ab.markAsUpdated(), ab
+      scaleToRef(zz, tz) {
+        for (let sz = 0; sz < 16; sz++) tz._m[sz] = this._m[sz] * zz;
+        return tz.markAsUpdated(), tz
       }
-      scaleAndAddToRef(bb, ab) {
-        for (let Ub = 0; Ub < 16; Ub++) ab._m[Ub] += this._m[Ub] * bb;
-        return ab.markAsUpdated(), ab
+      scaleAndAddToRef(zz, tz) {
+        for (let sz = 0; sz < 16; sz++) tz._m[sz] += this._m[sz] * zz;
+        return tz.markAsUpdated(), tz
       }
-      scaleInPlace(bb) {
-        const ab = this._m;
-        for (let Ub = 0; Ub < 16; Ub++) ab[Ub] *= bb;
+      scaleInPlace(zz) {
+        const tz = this._m;
+        for (let sz = 0; sz < 16; sz++) tz[sz] *= zz;
         return this.markAsUpdated(), this
       }
-      toNormalMatrix(bb) {
-        const ab = kb.Matrix[0];
-        this.invertToRef(ab), ab.transposeToRef(bb);
-        const Ub = bb._m;
-        return Rb.FromValuesToRef(Ub[0], Ub[1], Ub[2], 0, Ub[4], Ub[5], Ub[6], 0, Ub[8], Ub[9], Ub[10], 0, 0, 0, 0, 1, bb), bb
+      toNormalMatrix(zz) {
+        const tz = gz.Matrix[0];
+        this.invertToRef(tz), tz.transposeToRef(zz);
+        const sz = zz._m;
+        return Dz.FromValuesToRef(sz[0], sz[1], sz[2], 0, sz[4], sz[5], sz[6], 0, sz[8], sz[9], sz[10], 0, 0, 0, 0, 1, zz), zz
       }
       getRotationMatrix() {
-        const bb = new Rb;
-        return this.getRotationMatrixToRef(bb), bb
+        const zz = new Dz;
+        return this.getRotationMatrixToRef(zz), zz
       }
-      getRotationMatrixToRef(bb) {
-        const ab = kb.Pj[0];
-        if (!this.decompose(ab)) return Rb.IdentityToRef(bb), bb;
-        const Ub = this._m,
-          Ab = 1 / ab._x,
-          Mb = 1 / ab._y,
-          Tb = 1 / ab._z;
-        return Rb.FromValuesToRef(Ub[0] * Ab, Ub[1] * Ab, Ub[2] * Ab, 0, Ub[4] * Mb, Ub[5] * Mb, Ub[6] * Mb, 0, Ub[8] * Tb, Ub[9] * Tb, Ub[10] * Tb, 0, 0, 0, 0, 1, bb), bb
+      getRotationMatrixToRef(zz) {
+        const tz = gz.XD[0];
+        if (!this.decompose(tz)) return Dz.IdentityToRef(zz), zz;
+        const sz = this._m,
+          Fz = 1 / tz._x,
+          Wz = 1 / tz._y,
+          Xz = 1 / tz._z;
+        return Dz.FromValuesToRef(sz[0] * Fz, sz[1] * Fz, sz[2] * Fz, 0, sz[4] * Wz, sz[5] * Wz, sz[6] * Wz, 0, sz[8] * Xz, sz[9] * Xz, sz[10] * Xz, 0, 0, 0, 0, 1, zz), zz
       }
       toggleModelMatrixHandInPlace() {
-        const bb = this._m;
-        return bb[2] *= -1, bb[6] *= -1, bb[8] *= -1, bb[9] *= -1, bb[14] *= -1, this.markAsUpdated(), this
+        const zz = this._m;
+        return zz[2] *= -1, zz[6] *= -1, zz[8] *= -1, zz[9] *= -1, zz[14] *= -1, this.markAsUpdated(), this
       }
       toggleProjectionMatrixHandInPlace() {
-        const bb = this._m;
-        return bb[8] *= -1, bb[9] *= -1, bb[10] *= -1, bb[11] *= -1, this.markAsUpdated(), this
+        const zz = this._m;
+        return zz[8] *= -1, zz[9] *= -1, zz[10] *= -1, zz[11] *= -1, this.markAsUpdated(), this
       }
       _convertProjectionToHalfZRangeInPlace() {
-        return this.multiplyToRef(Zb, this), this
+        return this.multiplyToRef(Bz, this), this
       }
-      static FromArray(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const Ub = new Rb;
-        return Rb.FromArrayToRef(bb, ab, Ub), Ub
+      static FromArray(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const sz = new Dz;
+        return Dz.FromArrayToRef(zz, tz, sz), sz
       }
-      static FromArrayToRef(bb, ab, Ub) {
-        for (let Ab = 0; Ab < 16; Ab++) Ub._m[Ab] = bb[Ab + ab];
-        return Ub.markAsUpdated(), Ub
+      static FromArrayToRef(zz, tz, sz) {
+        for (let Fz = 0; Fz < 16; Fz++) sz._m[Fz] = zz[Fz + tz];
+        return sz.markAsUpdated(), sz
       }
-      static FromFloat32ArrayToRefScaled(bb, ab, Ub, Ab) {
-        return Ab._m[0] = bb[0 + ab] * Ub, Ab._m[1] = bb[1 + ab] * Ub, Ab._m[2] = bb[2 + ab] * Ub, Ab._m[3] = bb[3 + ab] * Ub, Ab._m[4] = bb[4 + ab] * Ub, Ab._m[5] = bb[5 + ab] * Ub, Ab._m[6] = bb[6 + ab] * Ub, Ab._m[7] = bb[7 + ab] * Ub, Ab._m[8] = bb[8 + ab] * Ub, Ab._m[9] = bb[9 + ab] * Ub, Ab._m[10] = bb[10 + ab] * Ub, Ab._m[11] = bb[11 + ab] * Ub, Ab._m[12] = bb[12 + ab] * Ub, Ab._m[13] = bb[13 + ab] * Ub, Ab._m[14] = bb[14 + ab] * Ub, Ab._m[15] = bb[15 + ab] * Ub, Ab.markAsUpdated(), Ab
+      static FromFloat32ArrayToRefScaled(zz, tz, sz, Fz) {
+        return Fz._m[0] = zz[0 + tz] * sz, Fz._m[1] = zz[1 + tz] * sz, Fz._m[2] = zz[2 + tz] * sz, Fz._m[3] = zz[3 + tz] * sz, Fz._m[4] = zz[4 + tz] * sz, Fz._m[5] = zz[5 + tz] * sz, Fz._m[6] = zz[6 + tz] * sz, Fz._m[7] = zz[7 + tz] * sz, Fz._m[8] = zz[8 + tz] * sz, Fz._m[9] = zz[9 + tz] * sz, Fz._m[10] = zz[10 + tz] * sz, Fz._m[11] = zz[11 + tz] * sz, Fz._m[12] = zz[12 + tz] * sz, Fz._m[13] = zz[13 + tz] * sz, Fz._m[14] = zz[14 + tz] * sz, Fz._m[15] = zz[15 + tz] * sz, Fz.markAsUpdated(), Fz
       }
       static get IdentityReadOnly() {
-        return Rb._IdentityReadOnly
+        return Dz._IdentityReadOnly
       }
-      static FromValuesToRef(bb, ab, Ub, Ab, Mb, Tb, Eb, Yb, Bb, eb, vb, Lb, Pb, Xb, jb, Rb, kb) {
-        const yb = kb._m;
-        yb[0] = bb, yb[1] = ab, yb[2] = Ub, yb[3] = Ab, yb[4] = Mb, yb[5] = Tb, yb[6] = Eb, yb[7] = Yb, yb[8] = Bb, yb[9] = eb, yb[10] = vb, yb[11] = Lb, yb[12] = Pb, yb[13] = Xb, yb[14] = jb, yb[15] = Rb, kb.markAsUpdated()
+      static FromValuesToRef(zz, tz, sz, Fz, Wz, Xz, Oz, oz, vz, Uz, Kz, uz, Nz, bz, wz, Dz, gz) {
+        const Hz = gz._m;
+        Hz[0] = zz, Hz[1] = tz, Hz[2] = sz, Hz[3] = Fz, Hz[4] = Wz, Hz[5] = Xz, Hz[6] = Oz, Hz[7] = oz, Hz[8] = vz, Hz[9] = Uz, Hz[10] = Kz, Hz[11] = uz, Hz[12] = Nz, Hz[13] = bz, Hz[14] = wz, Hz[15] = Dz, gz.markAsUpdated()
       }
-      static FromValues(bb, ab, Ub, Ab, Mb, Tb, Eb, Yb, Bb, eb, vb, Lb, Pb, Xb, jb, kb) {
-        const yb = new Rb,
-          Zb = yb._m;
-        return Zb[0] = bb, Zb[1] = ab, Zb[2] = Ub, Zb[3] = Ab, Zb[4] = Mb, Zb[5] = Tb, Zb[6] = Eb, Zb[7] = Yb, Zb[8] = Bb, Zb[9] = eb, Zb[10] = vb, Zb[11] = Lb, Zb[12] = Pb, Zb[13] = Xb, Zb[14] = jb, Zb[15] = kb, yb.markAsUpdated(), yb
+      static FromValues(zz, tz, sz, Fz, Wz, Xz, Oz, oz, vz, Uz, Kz, uz, Nz, bz, wz, gz) {
+        const Hz = new Dz,
+          Bz = Hz._m;
+        return Bz[0] = zz, Bz[1] = tz, Bz[2] = sz, Bz[3] = Fz, Bz[4] = Wz, Bz[5] = Xz, Bz[6] = Oz, Bz[7] = oz, Bz[8] = vz, Bz[9] = Uz, Bz[10] = Kz, Bz[11] = uz, Bz[12] = Nz, Bz[13] = bz, Bz[14] = wz, Bz[15] = gz, Hz.markAsUpdated(), Hz
       }
-      static Compose(bb, ab, Ub) {
-        const Ab = new Rb;
-        return Rb.ComposeToRef(bb, ab, Ub, Ab), Ab
+      static Compose(zz, tz, sz) {
+        const Fz = new Dz;
+        return Dz.ComposeToRef(zz, tz, sz, Fz), Fz
       }
-      static ComposeToRef(bb, ab, Ub, Ab) {
-        const Mb = Ab._m,
-          Tb = ab._x,
-          Eb = ab._y,
-          Yb = ab._z,
-          Bb = ab._w,
-          eb = Tb + Tb,
-          vb = Eb + Eb,
-          Lb = Yb + Yb,
-          Pb = Tb * eb,
-          Xb = Tb * vb,
-          jb = Tb * Lb,
-          Rb = Eb * vb,
-          kb = Eb * Lb,
-          yb = Yb * Lb,
-          Zb = Bb * eb,
-          Db = Bb * vb,
-          zb = Bb * Lb,
-          xb = bb._x,
-          ib = bb._y,
-          fb = bb._z;
-        return Mb[0] = (1 - (Rb + yb)) * xb, Mb[1] = (Xb + zb) * xb, Mb[2] = (jb - Db) * xb, Mb[3] = 0, Mb[4] = (Xb - zb) * ib, Mb[5] = (1 - (Pb + yb)) * ib, Mb[6] = (kb + Zb) * ib, Mb[7] = 0, Mb[8] = (jb + Db) * fb, Mb[9] = (kb - Zb) * fb, Mb[10] = (1 - (Pb + Rb)) * fb, Mb[11] = 0, Mb[12] = Ub._x, Mb[13] = Ub._y, Mb[14] = Ub._z, Mb[15] = 1, Ab.markAsUpdated(), Ab
+      static ComposeToRef(zz, tz, sz, Fz) {
+        const Wz = Fz._m,
+          Xz = tz._x,
+          Oz = tz._y,
+          oz = tz._z,
+          vz = tz._w,
+          Uz = Xz + Xz,
+          Kz = Oz + Oz,
+          uz = oz + oz,
+          Nz = Xz * Uz,
+          bz = Xz * Kz,
+          wz = Xz * uz,
+          Dz = Oz * Kz,
+          gz = Oz * uz,
+          Hz = oz * uz,
+          Bz = vz * Uz,
+          Pz = vz * Kz,
+          rz = vz * uz,
+          Yz = zz._x,
+          xz = zz._y,
+          mz = zz._z;
+        return Wz[0] = (1 - (Dz + Hz)) * Yz, Wz[1] = (bz + rz) * Yz, Wz[2] = (wz - Pz) * Yz, Wz[3] = 0, Wz[4] = (bz - rz) * xz, Wz[5] = (1 - (Nz + Hz)) * xz, Wz[6] = (gz + Bz) * xz, Wz[7] = 0, Wz[8] = (wz + Pz) * mz, Wz[9] = (gz - Bz) * mz, Wz[10] = (1 - (Nz + Dz)) * mz, Wz[11] = 0, Wz[12] = sz._x, Wz[13] = sz._y, Wz[14] = sz._z, Wz[15] = 1, Fz.markAsUpdated(), Fz
       }
       static Identity() {
-        const bb = Rb.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-        return bb._updateIdentityStatus(!0), bb
+        const zz = Dz.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        return zz._updateIdentityStatus(!0), zz
       }
-      static IdentityToRef(bb) {
-        return Rb.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, bb), bb._updateIdentityStatus(!0), bb
+      static IdentityToRef(zz) {
+        return Dz.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, zz), zz._updateIdentityStatus(!0), zz
       }
       static Zero() {
-        const bb = Rb.FromValues(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-        return bb._updateIdentityStatus(!1), bb
+        const zz = Dz.FromValues(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        return zz._updateIdentityStatus(!1), zz
       }
-      static RotationX(bb) {
-        const ab = new Rb;
-        return Rb.RotationXToRef(bb, ab), ab
+      static RotationX(zz) {
+        const tz = new Dz;
+        return Dz.RotationXToRef(zz, tz), tz
       }
-      static Invert(bb) {
-        const ab = new Rb;
-        return bb.invertToRef(ab), ab
+      static Invert(zz) {
+        const tz = new Dz;
+        return zz.invertToRef(tz), tz
       }
-      static RotationXToRef(bb, ab) {
-        const Ub = Math.sin(bb),
-          Ab = Math.cos(bb);
-        return Rb.FromValuesToRef(1, 0, 0, 0, 0, Ab, Ub, 0, 0, -Ub, Ab, 0, 0, 0, 0, 1, ab), ab._updateIdentityStatus(1 === Ab && 0 === Ub), ab
+      static RotationXToRef(zz, tz) {
+        const sz = Math.sin(zz),
+          Fz = Math.cos(zz);
+        return Dz.FromValuesToRef(1, 0, 0, 0, 0, Fz, sz, 0, 0, -sz, Fz, 0, 0, 0, 0, 1, tz), tz._updateIdentityStatus(1 === Fz && 0 === sz), tz
       }
-      static RotationY(bb) {
-        const ab = new Rb;
-        return Rb.RotationYToRef(bb, ab), ab
+      static RotationY(zz) {
+        const tz = new Dz;
+        return Dz.RotationYToRef(zz, tz), tz
       }
-      static RotationYToRef(bb, ab) {
-        const Ub = Math.sin(bb),
-          Ab = Math.cos(bb);
-        return Rb.FromValuesToRef(Ab, 0, -Ub, 0, 0, 1, 0, 0, Ub, 0, Ab, 0, 0, 0, 0, 1, ab), ab._updateIdentityStatus(1 === Ab && 0 === Ub), ab
+      static RotationYToRef(zz, tz) {
+        const sz = Math.sin(zz),
+          Fz = Math.cos(zz);
+        return Dz.FromValuesToRef(Fz, 0, -sz, 0, 0, 1, 0, 0, sz, 0, Fz, 0, 0, 0, 0, 1, tz), tz._updateIdentityStatus(1 === Fz && 0 === sz), tz
       }
-      static RotationZ(bb) {
-        const ab = new Rb;
-        return Rb.RotationZToRef(bb, ab), ab
+      static RotationZ(zz) {
+        const tz = new Dz;
+        return Dz.RotationZToRef(zz, tz), tz
       }
-      static RotationZToRef(bb, ab) {
-        const Ub = Math.sin(bb),
-          Ab = Math.cos(bb);
-        return Rb.FromValuesToRef(Ab, Ub, 0, 0, -Ub, Ab, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, ab), ab._updateIdentityStatus(1 === Ab && 0 === Ub), ab
+      static RotationZToRef(zz, tz) {
+        const sz = Math.sin(zz),
+          Fz = Math.cos(zz);
+        return Dz.FromValuesToRef(Fz, sz, 0, 0, -sz, Fz, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, tz), tz._updateIdentityStatus(1 === Fz && 0 === sz), tz
       }
-      static RotationAxis(bb, ab) {
-        const Ub = new Rb;
-        return Rb.RotationAxisToRef(bb, ab, Ub), Ub
+      static RotationAxis(zz, tz) {
+        const sz = new Dz;
+        return Dz.RotationAxisToRef(zz, tz, sz), sz
       }
-      static RotationAxisToRef(bb, ab, Ub) {
-        const Ab = Math.sin(-ab),
-          Mb = Math.cos(-ab),
-          Tb = 1 - Mb;
-        bb = bb.normalizeToRef(kb.Pj[0]);
-        const Eb = Ub._m;
-        return Eb[0] = bb._x * bb._x * Tb + Mb, Eb[1] = bb._x * bb._y * Tb - bb._z * Ab, Eb[2] = bb._x * bb._z * Tb + bb._y * Ab, Eb[3] = 0, Eb[4] = bb._y * bb._x * Tb + bb._z * Ab, Eb[5] = bb._y * bb._y * Tb + Mb, Eb[6] = bb._y * bb._z * Tb - bb._x * Ab, Eb[7] = 0, Eb[8] = bb._z * bb._x * Tb - bb._y * Ab, Eb[9] = bb._z * bb._y * Tb + bb._x * Ab, Eb[10] = bb._z * bb._z * Tb + Mb, Eb[11] = 0, Eb[12] = 0, Eb[13] = 0, Eb[14] = 0, Eb[15] = 1, Ub.markAsUpdated(), Ub
+      static RotationAxisToRef(zz, tz, sz) {
+        const Fz = Math.sin(-tz),
+          Wz = Math.cos(-tz),
+          Xz = 1 - Wz;
+        zz = zz.normalizeToRef(gz.XD[0]);
+        const Oz = sz._m;
+        return Oz[0] = zz._x * zz._x * Xz + Wz, Oz[1] = zz._x * zz._y * Xz - zz._z * Fz, Oz[2] = zz._x * zz._z * Xz + zz._y * Fz, Oz[3] = 0, Oz[4] = zz._y * zz._x * Xz + zz._z * Fz, Oz[5] = zz._y * zz._y * Xz + Wz, Oz[6] = zz._y * zz._z * Xz - zz._x * Fz, Oz[7] = 0, Oz[8] = zz._z * zz._x * Xz - zz._y * Fz, Oz[9] = zz._z * zz._y * Xz + zz._x * Fz, Oz[10] = zz._z * zz._z * Xz + Wz, Oz[11] = 0, Oz[12] = 0, Oz[13] = 0, Oz[14] = 0, Oz[15] = 1, sz.markAsUpdated(), sz
       }
-      static RotationAlignToRef(bb, ab, Ub) {
-        let Mb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const Tb = Pb.Dot(ab, bb),
-          Eb = Ub._m;
-        if (Tb < -1 + Ab.e) Eb[0] = -1, Eb[1] = 0, Eb[2] = 0, Eb[3] = 0, Eb[4] = 0, Eb[5] = Mb ? 1 : -1, Eb[6] = 0, Eb[7] = 0, Eb[8] = 0, Eb[9] = 0, Eb[10] = Mb ? -1 : 1, Eb[11] = 0;
+      static RotationAlignToRef(zz, tz, sz) {
+        let Wz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const Xz = Nz.Dot(tz, zz),
+          Oz = sz._m;
+        if (Xz < -1 + Fz.c) Oz[0] = -1, Oz[1] = 0, Oz[2] = 0, Oz[3] = 0, Oz[4] = 0, Oz[5] = Wz ? 1 : -1, Oz[6] = 0, Oz[7] = 0, Oz[8] = 0, Oz[9] = 0, Oz[10] = Wz ? -1 : 1, Oz[11] = 0;
         else {
-          const Ub = Pb.Cross(ab, bb),
-            Ab = 1 / (1 + Tb);
-          Eb[0] = Ub._x * Ub._x * Ab + Tb, Eb[1] = Ub._y * Ub._x * Ab - Ub._z, Eb[2] = Ub._z * Ub._x * Ab + Ub._y, Eb[3] = 0, Eb[4] = Ub._x * Ub._y * Ab + Ub._z, Eb[5] = Ub._y * Ub._y * Ab + Tb, Eb[6] = Ub._z * Ub._y * Ab - Ub._x, Eb[7] = 0, Eb[8] = Ub._x * Ub._z * Ab - Ub._y, Eb[9] = Ub._y * Ub._z * Ab + Ub._x, Eb[10] = Ub._z * Ub._z * Ab + Tb, Eb[11] = 0
+          const sz = Nz.Cross(tz, zz),
+            Fz = 1 / (1 + Xz);
+          Oz[0] = sz._x * sz._x * Fz + Xz, Oz[1] = sz._y * sz._x * Fz - sz._z, Oz[2] = sz._z * sz._x * Fz + sz._y, Oz[3] = 0, Oz[4] = sz._x * sz._y * Fz + sz._z, Oz[5] = sz._y * sz._y * Fz + Xz, Oz[6] = sz._z * sz._y * Fz - sz._x, Oz[7] = 0, Oz[8] = sz._x * sz._z * Fz - sz._y, Oz[9] = sz._y * sz._z * Fz + sz._x, Oz[10] = sz._z * sz._z * Fz + Xz, Oz[11] = 0
         }
-        return Eb[12] = 0, Eb[13] = 0, Eb[14] = 0, Eb[15] = 1, Ub.markAsUpdated(), Ub
+        return Oz[12] = 0, Oz[13] = 0, Oz[14] = 0, Oz[15] = 1, sz.markAsUpdated(), sz
       }
-      static RotationYawPitchRoll(bb, ab, Ub) {
-        const Ab = new Rb;
-        return Rb.RotationYawPitchRollToRef(bb, ab, Ub, Ab), Ab
+      static RotationYawPitchRoll(zz, tz, sz) {
+        const Fz = new Dz;
+        return Dz.RotationYawPitchRollToRef(zz, tz, sz, Fz), Fz
       }
-      static RotationYawPitchRollToRef(bb, ab, Ub, Ab) {
-        return jb.RotationYawPitchRollToRef(bb, ab, Ub, kb.Quaternion[0]), kb.Quaternion[0].toRotationMatrix(Ab), Ab
+      static RotationYawPitchRollToRef(zz, tz, sz, Fz) {
+        return wz.RotationYawPitchRollToRef(zz, tz, sz, gz.Quaternion[0]), gz.Quaternion[0].toRotationMatrix(Fz), Fz
       }
-      static Scaling(bb, ab, Ub) {
-        const Ab = new Rb;
-        return Rb.ScalingToRef(bb, ab, Ub, Ab), Ab
+      static Scaling(zz, tz, sz) {
+        const Fz = new Dz;
+        return Dz.ScalingToRef(zz, tz, sz, Fz), Fz
       }
-      static ScalingToRef(bb, ab, Ub, Ab) {
-        return Rb.FromValuesToRef(bb, 0, 0, 0, 0, ab, 0, 0, 0, 0, Ub, 0, 0, 0, 0, 1, Ab), Ab._updateIdentityStatus(1 === bb && 1 === ab && 1 === Ub), Ab
+      static ScalingToRef(zz, tz, sz, Fz) {
+        return Dz.FromValuesToRef(zz, 0, 0, 0, 0, tz, 0, 0, 0, 0, sz, 0, 0, 0, 0, 1, Fz), Fz._updateIdentityStatus(1 === zz && 1 === tz && 1 === sz), Fz
       }
-      static Translation(bb, ab, Ub) {
-        const Ab = new Rb;
-        return Rb.TranslationToRef(bb, ab, Ub, Ab), Ab
+      static Translation(zz, tz, sz) {
+        const Fz = new Dz;
+        return Dz.TranslationToRef(zz, tz, sz, Fz), Fz
       }
-      static TranslationToRef(bb, ab, Ub, Ab) {
-        return Rb.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, bb, ab, Ub, 1, Ab), Ab._updateIdentityStatus(0 === bb && 0 === ab && 0 === Ub), Ab
+      static TranslationToRef(zz, tz, sz, Fz) {
+        return Dz.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, zz, tz, sz, 1, Fz), Fz._updateIdentityStatus(0 === zz && 0 === tz && 0 === sz), Fz
       }
-      static Lerp(bb, ab, Ub) {
-        const Ab = new Rb;
-        return Rb.LerpToRef(bb, ab, Ub, Ab), Ab
+      static Lerp(zz, tz, sz) {
+        const Fz = new Dz;
+        return Dz.LerpToRef(zz, tz, sz, Fz), Fz
       }
-      static LerpToRef(bb, ab, Ub, Ab) {
-        const Mb = Ab._m,
-          Tb = bb.m,
-          Eb = ab.m;
-        for (let Yb = 0; Yb < 16; Yb++) Mb[Yb] = Tb[Yb] * (1 - Ub) + Eb[Yb] * Ub;
-        return Ab.markAsUpdated(), Ab
+      static LerpToRef(zz, tz, sz, Fz) {
+        const Wz = Fz._m,
+          Xz = zz.m,
+          Oz = tz.m;
+        for (let oz = 0; oz < 16; oz++) Wz[oz] = Xz[oz] * (1 - sz) + Oz[oz] * sz;
+        return Fz.markAsUpdated(), Fz
       }
-      static DecomposeLerp(bb, ab, Ub) {
-        const Ab = new Rb;
-        return Rb.DecomposeLerpToRef(bb, ab, Ub, Ab), Ab
+      static DecomposeLerp(zz, tz, sz) {
+        const Fz = new Dz;
+        return Dz.DecomposeLerpToRef(zz, tz, sz, Fz), Fz
       }
-      static DecomposeLerpToRef(bb, ab, Ub, Ab) {
-        const Mb = kb.Pj[0],
-          Tb = kb.Quaternion[0],
-          Eb = kb.Pj[1];
-        bb.decompose(Mb, Tb, Eb);
-        const Yb = kb.Pj[2],
-          Bb = kb.Quaternion[1],
-          eb = kb.Pj[3];
-        ab.decompose(Yb, Bb, eb);
-        const vb = kb.Pj[4];
-        Pb.LerpToRef(Mb, Yb, Ub, vb);
-        const Lb = kb.Quaternion[2];
-        jb.SlerpToRef(Tb, Bb, Ub, Lb);
-        const Xb = kb.Pj[5];
-        return Pb.LerpToRef(Eb, eb, Ub, Xb), Rb.ComposeToRef(vb, Lb, Xb, Ab), Ab
+      static DecomposeLerpToRef(zz, tz, sz, Fz) {
+        const Wz = gz.XD[0],
+          Xz = gz.Quaternion[0],
+          Oz = gz.XD[1];
+        zz.decompose(Wz, Xz, Oz);
+        const oz = gz.XD[2],
+          vz = gz.Quaternion[1],
+          Uz = gz.XD[3];
+        tz.decompose(oz, vz, Uz);
+        const Kz = gz.XD[4];
+        Nz.LerpToRef(Wz, oz, sz, Kz);
+        const uz = gz.Quaternion[2];
+        wz.SlerpToRef(Xz, vz, sz, uz);
+        const bz = gz.XD[5];
+        return Nz.LerpToRef(Oz, Uz, sz, bz), Dz.ComposeToRef(Kz, uz, bz, Fz), Fz
       }
-      static LookAtLH(bb, ab, Ub) {
-        const Ab = new Rb;
-        return Rb.LookAtLHToRef(bb, ab, Ub, Ab), Ab
+      static LookAtLH(zz, tz, sz) {
+        const Fz = new Dz;
+        return Dz.LookAtLHToRef(zz, tz, sz, Fz), Fz
       }
-      static LookAtLHToRef(bb, ab, Ub, Ab) {
-        const Mb = kb.Pj[0],
-          Tb = kb.Pj[1],
-          Eb = kb.Pj[2];
-        ab.subtractToRef(bb, Eb), Eb.normalize(), Pb.CrossToRef(Ub, Eb, Mb);
-        const Yb = Mb.lengthSquared();
-        0 === Yb ? Mb.x = 1 : Mb.normalizeFromLength(Math.sqrt(Yb)), Pb.CrossToRef(Eb, Mb, Tb), Tb.normalize();
-        const Bb = -Pb.Dot(Mb, bb),
-          eb = -Pb.Dot(Tb, bb),
-          vb = -Pb.Dot(Eb, bb);
-        return Rb.FromValuesToRef(Mb._x, Tb._x, Eb._x, 0, Mb._y, Tb._y, Eb._y, 0, Mb._z, Tb._z, Eb._z, 0, Bb, eb, vb, 1, Ab), Ab
+      static LookAtLHToRef(zz, tz, sz, Fz) {
+        const Wz = gz.XD[0],
+          Xz = gz.XD[1],
+          Oz = gz.XD[2];
+        tz.subtractToRef(zz, Oz), Oz.normalize(), Nz.CrossToRef(sz, Oz, Wz);
+        const oz = Wz.lengthSquared();
+        0 === oz ? Wz.x = 1 : Wz.normalizeFromLength(Math.sqrt(oz)), Nz.CrossToRef(Oz, Wz, Xz), Xz.normalize();
+        const vz = -Nz.Dot(Wz, zz),
+          Uz = -Nz.Dot(Xz, zz),
+          Kz = -Nz.Dot(Oz, zz);
+        return Dz.FromValuesToRef(Wz._x, Xz._x, Oz._x, 0, Wz._y, Xz._y, Oz._y, 0, Wz._z, Xz._z, Oz._z, 0, vz, Uz, Kz, 1, Fz), Fz
       }
-      static LookAtRH(bb, ab, Ub) {
-        const Ab = new Rb;
-        return Rb.LookAtRHToRef(bb, ab, Ub, Ab), Ab
+      static LookAtRH(zz, tz, sz) {
+        const Fz = new Dz;
+        return Dz.LookAtRHToRef(zz, tz, sz, Fz), Fz
       }
-      static LookAtRHToRef(bb, ab, Ub, Ab) {
-        const Mb = kb.Pj[0],
-          Tb = kb.Pj[1],
-          Eb = kb.Pj[2];
-        bb.subtractToRef(ab, Eb), Eb.normalize(), Pb.CrossToRef(Ub, Eb, Mb);
-        const Yb = Mb.lengthSquared();
-        0 === Yb ? Mb.x = 1 : Mb.normalizeFromLength(Math.sqrt(Yb)), Pb.CrossToRef(Eb, Mb, Tb), Tb.normalize();
-        const Bb = -Pb.Dot(Mb, bb),
-          eb = -Pb.Dot(Tb, bb),
-          vb = -Pb.Dot(Eb, bb);
-        return Rb.FromValuesToRef(Mb._x, Tb._x, Eb._x, 0, Mb._y, Tb._y, Eb._y, 0, Mb._z, Tb._z, Eb._z, 0, Bb, eb, vb, 1, Ab), Ab
+      static LookAtRHToRef(zz, tz, sz, Fz) {
+        const Wz = gz.XD[0],
+          Xz = gz.XD[1],
+          Oz = gz.XD[2];
+        zz.subtractToRef(tz, Oz), Oz.normalize(), Nz.CrossToRef(sz, Oz, Wz);
+        const oz = Wz.lengthSquared();
+        0 === oz ? Wz.x = 1 : Wz.normalizeFromLength(Math.sqrt(oz)), Nz.CrossToRef(Oz, Wz, Xz), Xz.normalize();
+        const vz = -Nz.Dot(Wz, zz),
+          Uz = -Nz.Dot(Xz, zz),
+          Kz = -Nz.Dot(Oz, zz);
+        return Dz.FromValuesToRef(Wz._x, Xz._x, Oz._x, 0, Wz._y, Xz._y, Oz._y, 0, Wz._z, Xz._z, Oz._z, 0, vz, Uz, Kz, 1, Fz), Fz
       }
-      static LookDirectionLH(bb, ab) {
-        const Ub = new Rb;
-        return Rb.LookDirectionLHToRef(bb, ab, Ub), Ub
+      static LookDirectionLH(zz, tz) {
+        const sz = new Dz;
+        return Dz.LookDirectionLHToRef(zz, tz, sz), sz
       }
-      static LookDirectionLHToRef(bb, ab, Ub) {
-        const Ab = kb.Pj[0];
-        Ab.EUb(bb), Ab.scaleInPlace(-1);
-        const Mb = kb.Pj[1];
-        return Pb.CrossToRef(ab, Ab, Mb), Rb.FromValuesToRef(Mb._x, Mb._y, Mb._z, 0, ab._x, ab._y, ab._z, 0, Ab._x, Ab._y, Ab._z, 0, 0, 0, 0, 1, Ub), Ub
+      static LookDirectionLHToRef(zz, tz, sz) {
+        const Fz = gz.XD[0];
+        Fz.vsz(zz), Fz.scaleInPlace(-1);
+        const Wz = gz.XD[1];
+        return Nz.CrossToRef(tz, Fz, Wz), Dz.FromValuesToRef(Wz._x, Wz._y, Wz._z, 0, tz._x, tz._y, tz._z, 0, Fz._x, Fz._y, Fz._z, 0, 0, 0, 0, 1, sz), sz
       }
-      static LookDirectionRH(bb, ab) {
-        const Ub = new Rb;
-        return Rb.LookDirectionRHToRef(bb, ab, Ub), Ub
+      static LookDirectionRH(zz, tz) {
+        const sz = new Dz;
+        return Dz.LookDirectionRHToRef(zz, tz, sz), sz
       }
-      static LookDirectionRHToRef(bb, ab, Ub) {
-        const Ab = kb.Pj[2];
-        return Pb.CrossToRef(ab, bb, Ab), Rb.FromValuesToRef(Ab._x, Ab._y, Ab._z, 0, ab._x, ab._y, ab._z, 0, bb._x, bb._y, bb._z, 0, 0, 0, 0, 1, Ub), Ub
+      static LookDirectionRHToRef(zz, tz, sz) {
+        const Fz = gz.XD[2];
+        return Nz.CrossToRef(tz, zz, Fz), Dz.FromValuesToRef(Fz._x, Fz._y, Fz._z, 0, tz._x, tz._y, tz._z, 0, zz._x, zz._y, zz._z, 0, 0, 0, 0, 1, sz), sz
       }
-      static OrthoLH(bb, ab, Ub, Ab, Mb) {
-        const Tb = new Rb;
-        return Rb.OrthoLHToRef(bb, ab, Ub, Ab, Tb, Mb), Tb
+      static OrthoLH(zz, tz, sz, Fz, Wz) {
+        const Xz = new Dz;
+        return Dz.OrthoLHToRef(zz, tz, sz, Fz, Xz, Wz), Xz
       }
-      static OrthoLHToRef(bb, ab, Ub, Ab, Mb, Tb) {
-        const Eb = 2 / bb,
-          Yb = 2 / ab,
-          Bb = 2 / (Ab - Ub),
-          eb = -(Ab + Ub) / (Ab - Ub);
-        return Rb.FromValuesToRef(Eb, 0, 0, 0, 0, Yb, 0, 0, 0, 0, Bb, 0, 0, 0, eb, 1, Mb), Tb && Mb.multiplyToRef(Zb, Mb), Mb._updateIdentityStatus(1 === Eb && 1 === Yb && 1 === Bb && 0 === eb), Mb
+      static OrthoLHToRef(zz, tz, sz, Fz, Wz, Xz) {
+        const Oz = 2 / zz,
+          oz = 2 / tz,
+          vz = 2 / (Fz - sz),
+          Uz = -(Fz + sz) / (Fz - sz);
+        return Dz.FromValuesToRef(Oz, 0, 0, 0, 0, oz, 0, 0, 0, 0, vz, 0, 0, 0, Uz, 1, Wz), Xz && Wz.multiplyToRef(Bz, Wz), Wz._updateIdentityStatus(1 === Oz && 1 === oz && 1 === vz && 0 === Uz), Wz
       }
-      static OrthoOffCenterLH(bb, ab, Ub, Ab, Mb, Tb, Eb) {
-        const Yb = new Rb;
-        return Rb.OrthoOffCenterLHToRef(bb, ab, Ub, Ab, Mb, Tb, Yb, Eb), Yb
+      static OrthoOffCenterLH(zz, tz, sz, Fz, Wz, Xz, Oz) {
+        const oz = new Dz;
+        return Dz.OrthoOffCenterLHToRef(zz, tz, sz, Fz, Wz, Xz, oz, Oz), oz
       }
-      static OrthoOffCenterLHToRef(bb, ab, Ub, Ab, Mb, Tb, Eb, Yb) {
-        const Bb = 2 / (ab - bb),
-          eb = 2 / (Ab - Ub),
-          vb = 2 / (Tb - Mb),
-          Lb = -(Tb + Mb) / (Tb - Mb),
-          Pb = (bb + ab) / (bb - ab),
-          Xb = (Ab + Ub) / (Ub - Ab);
-        return Rb.FromValuesToRef(Bb, 0, 0, 0, 0, eb, 0, 0, 0, 0, vb, 0, Pb, Xb, Lb, 1, Eb), Yb && Eb.multiplyToRef(Zb, Eb), Eb.markAsUpdated(), Eb
+      static OrthoOffCenterLHToRef(zz, tz, sz, Fz, Wz, Xz, Oz, oz) {
+        const vz = 2 / (tz - zz),
+          Uz = 2 / (Fz - sz),
+          Kz = 2 / (Xz - Wz),
+          uz = -(Xz + Wz) / (Xz - Wz),
+          Nz = (zz + tz) / (zz - tz),
+          bz = (Fz + sz) / (sz - Fz);
+        return Dz.FromValuesToRef(vz, 0, 0, 0, 0, Uz, 0, 0, 0, 0, Kz, 0, Nz, bz, uz, 1, Oz), oz && Oz.multiplyToRef(Bz, Oz), Oz.markAsUpdated(), Oz
       }
-      static ObliqueOffCenterLHToRef(bb, ab, Ub, Ab, Mb, Tb, Eb, Yb, Bb, eb, vb) {
-        const Lb = -Eb * Math.cos(Yb),
-          Pb = -Eb * Math.sin(Yb);
-        return Rb.TranslationToRef(0, 0, -Bb, kb.Matrix[1]), Rb.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, Lb, Pb, 1, 0, 0, 0, 0, 1, kb.Matrix[0]), kb.Matrix[1].multiplyToRef(kb.Matrix[0], kb.Matrix[0]), Rb.TranslationToRef(0, 0, Bb, kb.Matrix[1]), kb.Matrix[0].multiplyToRef(kb.Matrix[1], kb.Matrix[0]), Rb.OrthoOffCenterLHToRef(bb, ab, Ub, Ab, Mb, Tb, eb, vb), kb.Matrix[0].multiplyToRef(eb, eb), eb
+      static ObliqueOffCenterLHToRef(zz, tz, sz, Fz, Wz, Xz, Oz, oz, vz, Uz, Kz) {
+        const uz = -Oz * Math.cos(oz),
+          Nz = -Oz * Math.sin(oz);
+        return Dz.TranslationToRef(0, 0, -vz, gz.Matrix[1]), Dz.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, uz, Nz, 1, 0, 0, 0, 0, 1, gz.Matrix[0]), gz.Matrix[1].multiplyToRef(gz.Matrix[0], gz.Matrix[0]), Dz.TranslationToRef(0, 0, vz, gz.Matrix[1]), gz.Matrix[0].multiplyToRef(gz.Matrix[1], gz.Matrix[0]), Dz.OrthoOffCenterLHToRef(zz, tz, sz, Fz, Wz, Xz, Uz, Kz), gz.Matrix[0].multiplyToRef(Uz, Uz), Uz
       }
-      static OrthoOffCenterRH(bb, ab, Ub, Ab, Mb, Tb, Eb) {
-        const Yb = new Rb;
-        return Rb.OrthoOffCenterRHToRef(bb, ab, Ub, Ab, Mb, Tb, Yb, Eb), Yb
+      static OrthoOffCenterRH(zz, tz, sz, Fz, Wz, Xz, Oz) {
+        const oz = new Dz;
+        return Dz.OrthoOffCenterRHToRef(zz, tz, sz, Fz, Wz, Xz, oz, Oz), oz
       }
-      static OrthoOffCenterRHToRef(bb, ab, Ub, Ab, Mb, Tb, Eb, Yb) {
-        return Rb.OrthoOffCenterLHToRef(bb, ab, Ub, Ab, Mb, Tb, Eb, Yb), Eb._m[10] *= -1, Eb
+      static OrthoOffCenterRHToRef(zz, tz, sz, Fz, Wz, Xz, Oz, oz) {
+        return Dz.OrthoOffCenterLHToRef(zz, tz, sz, Fz, Wz, Xz, Oz, oz), Oz._m[10] *= -1, Oz
       }
-      static ObliqueOffCenterRHToRef(bb, ab, Ub, Ab, Mb, Tb, Eb, Yb, Bb, eb, vb) {
-        const Lb = Eb * Math.cos(Yb),
-          Pb = Eb * Math.sin(Yb);
-        return Rb.TranslationToRef(0, 0, Bb, kb.Matrix[1]), Rb.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, Lb, Pb, 1, 0, 0, 0, 0, 1, kb.Matrix[0]), kb.Matrix[1].multiplyToRef(kb.Matrix[0], kb.Matrix[0]), Rb.TranslationToRef(0, 0, -Bb, kb.Matrix[1]), kb.Matrix[0].multiplyToRef(kb.Matrix[1], kb.Matrix[0]), Rb.OrthoOffCenterRHToRef(bb, ab, Ub, Ab, Mb, Tb, eb, vb), kb.Matrix[0].multiplyToRef(eb, eb), eb
+      static ObliqueOffCenterRHToRef(zz, tz, sz, Fz, Wz, Xz, Oz, oz, vz, Uz, Kz) {
+        const uz = Oz * Math.cos(oz),
+          Nz = Oz * Math.sin(oz);
+        return Dz.TranslationToRef(0, 0, vz, gz.Matrix[1]), Dz.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, uz, Nz, 1, 0, 0, 0, 0, 1, gz.Matrix[0]), gz.Matrix[1].multiplyToRef(gz.Matrix[0], gz.Matrix[0]), Dz.TranslationToRef(0, 0, -vz, gz.Matrix[1]), gz.Matrix[0].multiplyToRef(gz.Matrix[1], gz.Matrix[0]), Dz.OrthoOffCenterRHToRef(zz, tz, sz, Fz, Wz, Xz, Uz, Kz), gz.Matrix[0].multiplyToRef(Uz, Uz), Uz
       }
-      static PerspectiveLH(bb, ab, Ub, Ab, Mb) {
-        let Tb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const Eb = new Rb,
-          Yb = 2 * Ub / bb,
-          Bb = 2 * Ub / ab,
-          eb = (Ab + Ub) / (Ab - Ub),
-          vb = -2 * Ab * Ub / (Ab - Ub),
-          Lb = Math.tan(Tb);
-        return Rb.FromValuesToRef(Yb, 0, 0, 0, 0, Bb, 0, Lb, 0, 0, eb, 1, 0, 0, vb, 0, Eb), Mb && Eb.multiplyToRef(Zb, Eb), Eb._updateIdentityStatus(!1), Eb
+      static PerspectiveLH(zz, tz, sz, Fz, Wz) {
+        let Xz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const Oz = new Dz,
+          oz = 2 * sz / zz,
+          vz = 2 * sz / tz,
+          Uz = (Fz + sz) / (Fz - sz),
+          Kz = -2 * Fz * sz / (Fz - sz),
+          uz = Math.tan(Xz);
+        return Dz.FromValuesToRef(oz, 0, 0, 0, 0, vz, 0, uz, 0, 0, Uz, 1, 0, 0, Kz, 0, Oz), Wz && Oz.multiplyToRef(Bz, Oz), Oz._updateIdentityStatus(!1), Oz
       }
-      static PerspectiveFovLH(bb, ab, Ub, Ab, Mb) {
-        let Tb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          Eb = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        const Yb = new Rb;
-        return Rb.PerspectiveFovLHToRef(bb, ab, Ub, Ab, Yb, !0, Mb, Tb, Eb), Yb
+      static PerspectiveFovLH(zz, tz, sz, Fz, Wz) {
+        let Xz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          Oz = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        const oz = new Dz;
+        return Dz.PerspectiveFovLHToRef(zz, tz, sz, Fz, oz, !0, Wz, Xz, Oz), oz
       }
-      static PerspectiveFovLHToRef(bb, ab, Ub, Ab, Mb) {
-        let Tb = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Eb = arguments.length > 6 ? arguments[6] : void 0,
-          Yb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
-          Bb = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
-        const eb = Ub,
-          vb = Ab,
-          Lb = 1 / Math.tan(.5 * bb),
-          Pb = Tb ? Lb / ab : Lb,
-          Xb = Tb ? Lb : Lb * ab,
-          jb = Bb && 0 === eb ? -1 : 0 !== vb ? (vb + eb) / (vb - eb) : 1,
-          kb = Bb && 0 === eb ? 2 * vb : 0 !== vb ? -2 * vb * eb / (vb - eb) : -2 * eb,
-          yb = Math.tan(Yb);
-        return Rb.FromValuesToRef(Pb, 0, 0, 0, 0, Xb, 0, yb, 0, 0, jb, 1, 0, 0, kb, 0, Mb), Eb && Mb.multiplyToRef(Zb, Mb), Mb._updateIdentityStatus(!1), Mb
+      static PerspectiveFovLHToRef(zz, tz, sz, Fz, Wz) {
+        let Xz = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          Oz = arguments.length > 6 ? arguments[6] : void 0,
+          oz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
+          vz = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+        const Uz = sz,
+          Kz = Fz,
+          uz = 1 / Math.tan(.5 * zz),
+          Nz = Xz ? uz / tz : uz,
+          bz = Xz ? uz : uz * tz,
+          wz = vz && 0 === Uz ? -1 : 0 !== Kz ? (Kz + Uz) / (Kz - Uz) : 1,
+          gz = vz && 0 === Uz ? 2 * Kz : 0 !== Kz ? -2 * Kz * Uz / (Kz - Uz) : -2 * Uz,
+          Hz = Math.tan(oz);
+        return Dz.FromValuesToRef(Nz, 0, 0, 0, 0, bz, 0, Hz, 0, 0, wz, 1, 0, 0, gz, 0, Wz), Oz && Wz.multiplyToRef(Bz, Wz), Wz._updateIdentityStatus(!1), Wz
       }
-      static PerspectiveFovReverseLHToRef(bb, ab, Ub, Ab, Mb) {
-        let Tb = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Eb = arguments.length > 6 ? arguments[6] : void 0,
-          Yb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
-        const Bb = 1 / Math.tan(.5 * bb),
-          eb = Tb ? Bb / ab : Bb,
-          vb = Tb ? Bb : Bb * ab,
-          Lb = Math.tan(Yb);
-        return Rb.FromValuesToRef(eb, 0, 0, 0, 0, vb, 0, Lb, 0, 0, -Ub, 1, 0, 0, 1, 0, Mb), Eb && Mb.multiplyToRef(Zb, Mb), Mb._updateIdentityStatus(!1), Mb
+      static PerspectiveFovReverseLHToRef(zz, tz, sz, Fz, Wz) {
+        let Xz = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          Oz = arguments.length > 6 ? arguments[6] : void 0,
+          oz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
+        const vz = 1 / Math.tan(.5 * zz),
+          Uz = Xz ? vz / tz : vz,
+          Kz = Xz ? vz : vz * tz,
+          uz = Math.tan(oz);
+        return Dz.FromValuesToRef(Uz, 0, 0, 0, 0, Kz, 0, uz, 0, 0, -sz, 1, 0, 0, 1, 0, Wz), Oz && Wz.multiplyToRef(Bz, Wz), Wz._updateIdentityStatus(!1), Wz
       }
-      static PerspectiveFovRH(bb, ab, Ub, Ab, Mb) {
-        let Tb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          Eb = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        const Yb = new Rb;
-        return Rb.PerspectiveFovRHToRef(bb, ab, Ub, Ab, Yb, !0, Mb, Tb, Eb), Yb
+      static PerspectiveFovRH(zz, tz, sz, Fz, Wz) {
+        let Xz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          Oz = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        const oz = new Dz;
+        return Dz.PerspectiveFovRHToRef(zz, tz, sz, Fz, oz, !0, Wz, Xz, Oz), oz
       }
-      static PerspectiveFovRHToRef(bb, ab, Ub, Ab, Mb) {
-        let Tb = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Eb = arguments.length > 6 ? arguments[6] : void 0,
-          Yb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
-          Bb = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
-        const eb = Ub,
-          vb = Ab,
-          Lb = 1 / Math.tan(.5 * bb),
-          Pb = Tb ? Lb / ab : Lb,
-          Xb = Tb ? Lb : Lb * ab,
-          jb = Bb && 0 === eb ? 1 : 0 !== vb ? -(vb + eb) / (vb - eb) : -1,
-          kb = Bb && 0 === eb ? 2 * vb : 0 !== vb ? -2 * vb * eb / (vb - eb) : -2 * eb,
-          yb = Math.tan(Yb);
-        return Rb.FromValuesToRef(Pb, 0, 0, 0, 0, Xb, 0, yb, 0, 0, jb, -1, 0, 0, kb, 0, Mb), Eb && Mb.multiplyToRef(Zb, Mb), Mb._updateIdentityStatus(!1), Mb
+      static PerspectiveFovRHToRef(zz, tz, sz, Fz, Wz) {
+        let Xz = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          Oz = arguments.length > 6 ? arguments[6] : void 0,
+          oz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
+          vz = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+        const Uz = sz,
+          Kz = Fz,
+          uz = 1 / Math.tan(.5 * zz),
+          Nz = Xz ? uz / tz : uz,
+          bz = Xz ? uz : uz * tz,
+          wz = vz && 0 === Uz ? 1 : 0 !== Kz ? -(Kz + Uz) / (Kz - Uz) : -1,
+          gz = vz && 0 === Uz ? 2 * Kz : 0 !== Kz ? -2 * Kz * Uz / (Kz - Uz) : -2 * Uz,
+          Hz = Math.tan(oz);
+        return Dz.FromValuesToRef(Nz, 0, 0, 0, 0, bz, 0, Hz, 0, 0, wz, -1, 0, 0, gz, 0, Wz), Oz && Wz.multiplyToRef(Bz, Wz), Wz._updateIdentityStatus(!1), Wz
       }
-      static PerspectiveFovReverseRHToRef(bb, ab, Ub, Ab, Mb) {
-        let Tb = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Eb = arguments.length > 6 ? arguments[6] : void 0,
-          Yb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
-        const Bb = 1 / Math.tan(.5 * bb),
-          eb = Tb ? Bb / ab : Bb,
-          vb = Tb ? Bb : Bb * ab,
-          Lb = Math.tan(Yb);
-        return Rb.FromValuesToRef(eb, 0, 0, 0, 0, vb, 0, Lb, 0, 0, -Ub, -1, 0, 0, -1, 0, Mb), Eb && Mb.multiplyToRef(Zb, Mb), Mb._updateIdentityStatus(!1), Mb
+      static PerspectiveFovReverseRHToRef(zz, tz, sz, Fz, Wz) {
+        let Xz = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          Oz = arguments.length > 6 ? arguments[6] : void 0,
+          oz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
+        const vz = 1 / Math.tan(.5 * zz),
+          Uz = Xz ? vz / tz : vz,
+          Kz = Xz ? vz : vz * tz,
+          uz = Math.tan(oz);
+        return Dz.FromValuesToRef(Uz, 0, 0, 0, 0, Kz, 0, uz, 0, 0, -sz, -1, 0, 0, -1, 0, Wz), Oz && Wz.multiplyToRef(Bz, Wz), Wz._updateIdentityStatus(!1), Wz
       }
-      static GetFinalMatrix(bb, ab, Ub, Ab, Mb, Tb) {
-        const Eb = bb.width,
-          Yb = bb.height,
-          Bb = bb.x,
-          eb = bb.y,
-          vb = Rb.FromValues(Eb / 2, 0, 0, 0, 0, -Yb / 2, 0, 0, 0, 0, Tb - Mb, 0, Bb + Eb / 2, Yb / 2 + eb, Mb, 1),
-          Lb = new Rb;
-        return ab.multiplyToRef(Ub, Lb), Lb.multiplyToRef(Ab, Lb), Lb.multiplyToRef(vb, Lb)
+      static GetFinalMatrix(zz, tz, sz, Fz, Wz, Xz) {
+        const Oz = zz.width,
+          oz = zz.height,
+          vz = zz.x,
+          Uz = zz.y,
+          Kz = Dz.FromValues(Oz / 2, 0, 0, 0, 0, -oz / 2, 0, 0, 0, 0, Xz - Wz, 0, vz + Oz / 2, oz / 2 + Uz, Wz, 1),
+          uz = new Dz;
+        return tz.multiplyToRef(sz, uz), uz.multiplyToRef(Fz, uz), uz.multiplyToRef(Kz, uz)
       }
-      static GetAsMatrix2x2(bb) {
-        const ab = bb.m,
-          Ub = [ab[0], ab[1], ab[4], ab[5]];
-        return Tb.b.MatrixUse64Bits ? Ub : new Float32Array(Ub)
+      static GetAsMatrix2x2(zz) {
+        const tz = zz.m,
+          sz = [tz[0], tz[1], tz[4], tz[5]];
+        return Xz.c.MatrixUse64Bits ? sz : new Float32Array(sz)
       }
-      static GetAsMatrix3x3(bb) {
-        const ab = bb.m,
-          Ub = [ab[0], ab[1], ab[2], ab[4], ab[5], ab[6], ab[8], ab[9], ab[10]];
-        return Tb.b.MatrixUse64Bits ? Ub : new Float32Array(Ub)
+      static GetAsMatrix3x3(zz) {
+        const tz = zz.m,
+          sz = [tz[0], tz[1], tz[2], tz[4], tz[5], tz[6], tz[8], tz[9], tz[10]];
+        return Xz.c.MatrixUse64Bits ? sz : new Float32Array(sz)
       }
-      static Transpose(bb) {
-        const ab = new Rb;
-        return Rb.TransposeToRef(bb, ab), ab
+      static Transpose(zz) {
+        const tz = new Dz;
+        return Dz.TransposeToRef(zz, tz), tz
       }
-      static TransposeToRef(bb, ab) {
-        const Ub = bb.m,
-          Ab = Ub[0],
-          Mb = Ub[4],
-          Tb = Ub[8],
-          Eb = Ub[12],
-          Yb = Ub[1],
-          Bb = Ub[5],
-          eb = Ub[9],
-          vb = Ub[13],
-          Lb = Ub[2],
-          Pb = Ub[6],
-          Xb = Ub[10],
-          jb = Ub[14],
-          Rb = Ub[3],
-          kb = Ub[7],
-          yb = Ub[11],
-          Zb = Ub[15],
-          Db = ab._m;
-        return Db[0] = Ab, Db[1] = Mb, Db[2] = Tb, Db[3] = Eb, Db[4] = Yb, Db[5] = Bb, Db[6] = eb, Db[7] = vb, Db[8] = Lb, Db[9] = Pb, Db[10] = Xb, Db[11] = jb, Db[12] = Rb, Db[13] = kb, Db[14] = yb, Db[15] = Zb, ab.markAsUpdated(), ab._updateIdentityStatus(bb._isIdentity, bb._isIdentityDirty), ab
+      static TransposeToRef(zz, tz) {
+        const sz = zz.m,
+          Fz = sz[0],
+          Wz = sz[4],
+          Xz = sz[8],
+          Oz = sz[12],
+          oz = sz[1],
+          vz = sz[5],
+          Uz = sz[9],
+          Kz = sz[13],
+          uz = sz[2],
+          Nz = sz[6],
+          bz = sz[10],
+          wz = sz[14],
+          Dz = sz[3],
+          gz = sz[7],
+          Hz = sz[11],
+          Bz = sz[15],
+          Pz = tz._m;
+        return Pz[0] = Fz, Pz[1] = Wz, Pz[2] = Xz, Pz[3] = Oz, Pz[4] = oz, Pz[5] = vz, Pz[6] = Uz, Pz[7] = Kz, Pz[8] = uz, Pz[9] = Nz, Pz[10] = bz, Pz[11] = wz, Pz[12] = Dz, Pz[13] = gz, Pz[14] = Hz, Pz[15] = Bz, tz.markAsUpdated(), tz._updateIdentityStatus(zz._isIdentity, zz._isIdentityDirty), tz
       }
-      static Reflection(bb) {
-        const ab = new Rb;
-        return Rb.ReflectionToRef(bb, ab), ab
+      static Reflection(zz) {
+        const tz = new Dz;
+        return Dz.ReflectionToRef(zz, tz), tz
       }
-      static ReflectionToRef(bb, ab) {
-        bb.normalize();
-        const Ub = bb.normal.x,
-          Ab = bb.normal.y,
-          Mb = bb.normal.z,
-          Tb = -2 * Ub,
-          Eb = -2 * Ab,
-          Yb = -2 * Mb;
-        return Rb.FromValuesToRef(Tb * Ub + 1, Eb * Ub, Yb * Ub, 0, Tb * Ab, Eb * Ab + 1, Yb * Ab, 0, Tb * Mb, Eb * Mb, Yb * Mb + 1, 0, Tb * bb.d, Eb * bb.d, Yb * bb.d, 1, ab), ab
+      static ReflectionToRef(zz, tz) {
+        zz.normalize();
+        const sz = zz.normal.x,
+          Fz = zz.normal.y,
+          Wz = zz.normal.z,
+          Xz = -2 * sz,
+          Oz = -2 * Fz,
+          oz = -2 * Wz;
+        return Dz.FromValuesToRef(Xz * sz + 1, Oz * sz, oz * sz, 0, Xz * Fz, Oz * Fz + 1, oz * Fz, 0, Xz * Wz, Oz * Wz, oz * Wz + 1, 0, Xz * zz.d, Oz * zz.d, oz * zz.d, 1, tz), tz
       }
-      static FromXYZAxesToRef(bb, ab, Ub, Ab) {
-        return Rb.FromValuesToRef(bb._x, bb._y, bb._z, 0, ab._x, ab._y, ab._z, 0, Ub._x, Ub._y, Ub._z, 0, 0, 0, 0, 1, Ab), Ab
+      static FromXYZAxesToRef(zz, tz, sz, Fz) {
+        return Dz.FromValuesToRef(zz._x, zz._y, zz._z, 0, tz._x, tz._y, tz._z, 0, sz._x, sz._y, sz._z, 0, 0, 0, 0, 1, Fz), Fz
       }
-      static FromQuaternionToRef(bb, ab) {
-        const Ub = bb._x * bb._x,
-          Ab = bb._y * bb._y,
-          Mb = bb._z * bb._z,
-          Tb = bb._x * bb._y,
-          Eb = bb._z * bb._w,
-          Yb = bb._z * bb._x,
-          Bb = bb._y * bb._w,
-          eb = bb._y * bb._z,
-          vb = bb._x * bb._w;
-        return ab._m[0] = 1 - 2 * (Ab + Mb), ab._m[1] = 2 * (Tb + Eb), ab._m[2] = 2 * (Yb - Bb), ab._m[3] = 0, ab._m[4] = 2 * (Tb - Eb), ab._m[5] = 1 - 2 * (Mb + Ub), ab._m[6] = 2 * (eb + vb), ab._m[7] = 0, ab._m[8] = 2 * (Yb + Bb), ab._m[9] = 2 * (eb - vb), ab._m[10] = 1 - 2 * (Ab + Ub), ab._m[11] = 0, ab._m[12] = 0, ab._m[13] = 0, ab._m[14] = 0, ab._m[15] = 1, ab.markAsUpdated(), ab
+      static FromQuaternionToRef(zz, tz) {
+        const sz = zz._x * zz._x,
+          Fz = zz._y * zz._y,
+          Wz = zz._z * zz._z,
+          Xz = zz._x * zz._y,
+          Oz = zz._z * zz._w,
+          oz = zz._z * zz._x,
+          vz = zz._y * zz._w,
+          Uz = zz._y * zz._z,
+          Kz = zz._x * zz._w;
+        return tz._m[0] = 1 - 2 * (Fz + Wz), tz._m[1] = 2 * (Xz + Oz), tz._m[2] = 2 * (oz - vz), tz._m[3] = 0, tz._m[4] = 2 * (Xz - Oz), tz._m[5] = 1 - 2 * (Wz + sz), tz._m[6] = 2 * (Uz + Kz), tz._m[7] = 0, tz._m[8] = 2 * (oz + vz), tz._m[9] = 2 * (Uz - Kz), tz._m[10] = 1 - 2 * (Fz + sz), tz._m[11] = 0, tz._m[12] = 0, tz._m[13] = 0, tz._m[14] = 0, tz._m[15] = 1, tz.markAsUpdated(), tz
       }
     }
-    Rb._IdentityReadOnly = Rb.Identity();
-    class kb {}
-    kb.Pj = (0, Mb.e)(11, Pb.Zero), kb.Matrix = (0, Mb.e)(2, Rb.Identity), kb.Quaternion = (0, Mb.e)(3, jb.Zero);
-    class yb {}
-    yb.Vector2 = (0, Mb.e)(3, Lb.Zero), yb.Pj = (0, Mb.e)(13, Pb.Zero), yb.Vector4 = (0, Mb.e)(3, Xb.Zero), yb.Quaternion = (0, Mb.e)(3, jb.Zero), yb.Matrix = (0, Mb.e)(8, Rb.Identity);
-    const Zb = Rb.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, 0, 0, 0, .5, 1);
-    let Db = !1;
+    Dz._IdentityReadOnly = Dz.Identity();
+    class gz {}
+    gz.XD = (0, Wz.d)(11, Nz.Zero), gz.Matrix = (0, Wz.d)(2, Dz.Identity), gz.Quaternion = (0, Wz.d)(3, wz.Zero);
+    class Hz {}
+    Hz.Vector2 = (0, Wz.d)(3, uz.Zero), Hz.XD = (0, Wz.d)(13, Nz.Zero), Hz.Vector4 = (0, Wz.d)(3, bz.Zero), Hz.Quaternion = (0, Wz.d)(3, wz.Zero), Hz.Matrix = (0, Wz.d)(8, Dz.Identity);
+    const Bz = Dz.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, 0, 0, 0, .5, 1);
+    let Pz = !1;
 
-    function zb() {
-      Db || (Db = !0, Object.defineProperties(Lb.prototype, {
+    function rz() {
+      Pz || (Pz = !0, Object.defineProperties(uz.prototype, {
         dimension: {
           value: [2]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(Pb.prototype, {
+      }), Object.defineProperties(Nz.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(Xb.prototype, {
+      }), Object.defineProperties(bz.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(jb.prototype, {
+      }), Object.defineProperties(wz.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(Rb.prototype, {
+      }), Object.defineProperties(Dz.prototype, {
         dimension: {
           value: [4, 4]
         },
         rank: {
           value: 2
         }
-      }), (0, eb.f)("BABYLON.Vector2", Lb), (0, eb.f)("BABYLON.Vector3", Pb), (0, eb.f)("BABYLON.Vector4", Xb), (0, eb.f)("BABYLON.Matrix", Rb))
+      }), (0, Uz.g)("BABYLON.Vector2", uz), (0, Uz.g)("BABYLON.Vector3", Nz), (0, Uz.g)("BABYLON.Vector4", bz), (0, Uz.g)("BABYLON.Matrix", Dz))
     }
   },
-  36431: (bb, ab, Ub) => {
-    Ub.d(ab, {
-      b: () => Eb
+  36505: (zz, tz, sz) => {
+    sz.d(tz, {
+      c: () => Oz
     });
-    const Ab = "undefined" !== typeof WeakRef;
-    class Mb {
-      constructor(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Ub = arguments.length > 2 ? arguments[2] : void 0,
-          Ab = arguments.length > 3 ? arguments[3] : void 0;
-        this.initialize(bb, ab, Ub, Ab)
+    const Fz = "undefined" !== typeof WeakRef;
+    class Wz {
+      constructor(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          sz = arguments.length > 2 ? arguments[2] : void 0,
+          Fz = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(zz, tz, sz, Fz)
       }
-      initialize(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Ub = arguments.length > 2 ? arguments[2] : void 0,
-          Ab = arguments.length > 3 ? arguments[3] : void 0;
-        return this.mask = bb, this.skipNextObservers = ab, this.target = Ub, this.currentTarget = Ab, this
+      initialize(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          sz = arguments.length > 2 ? arguments[2] : void 0,
+          Fz = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = zz, this.skipNextObservers = tz, this.target = sz, this.currentTarget = Fz, this
       }
     }
-    class Tb {
-      constructor(bb, ab) {
-        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.callback = bb, this.mask = ab, this.scope = Ub, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+    class Xz {
+      constructor(zz, tz) {
+        let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = zz, this.mask = tz, this.scope = sz, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
       }
       remove() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._remove && this._remove(bb)
+        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(zz)
       }
     }
-    class Eb {
-      static FromPromise(bb, ab) {
-        const Ub = new Eb;
-        return bb.then((bb => {
-          Ub.notifyObservers(bb)
-        })).catch((bb => {
-          if (!ab) throw bb;
-          ab.notifyObservers(bb)
-        })), Ub
+    class Oz {
+      static FromPromise(zz, tz) {
+        const sz = new Oz;
+        return zz.then((zz => {
+          sz.notifyObservers(zz)
+        })).catch((zz => {
+          if (!tz) throw zz;
+          tz.notifyObservers(zz)
+        })), sz
       }
       get observers() {
         return this._observers
       }
-      constructor(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.notifyIfTriggered = ab, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new Mb(0), bb && (this._onObserverAdded = bb)
+      constructor(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = tz, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new Wz(0), zz && (this._onObserverAdded = zz)
       }
-      add(bb) {
-        let ab = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Ub = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (!bb) return null;
-        const Mb = new Tb(bb, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
-        Mb.unregisterOnNextCall = Ub, ab ? this._observers.unshift(Mb) : this._observers.push(Mb), this._onObserverAdded && this._onObserverAdded(Mb), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(Mb, this._lastNotifiedValue);
-        const Eb = Ab ? new WeakRef(this) : {
+      add(zz) {
+        let tz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          sz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!zz) return null;
+        const Wz = new Xz(zz, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        Wz.unregisterOnNextCall = sz, tz ? this._observers.unshift(Wz) : this._observers.push(Wz), this._onObserverAdded && this._onObserverAdded(Wz), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(Wz, this._lastNotifiedValue);
+        const Oz = Fz ? new WeakRef(this) : {
           deref: () => this
         };
-        return Mb._remove = function() {
-          let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const ab = Eb.deref();
-          ab && (bb ? ab.remove(Mb) : ab._remove(Mb))
-        }, Mb
+        return Wz._remove = function() {
+          let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const tz = Oz.deref();
+          tz && (zz ? tz.remove(Wz) : tz._remove(Wz))
+        }, Wz
       }
-      addOnce(bb) {
-        return this.add(bb, void 0, void 0, void 0, !0)
+      addOnce(zz) {
+        return this.add(zz, void 0, void 0, void 0, !0)
       }
-      remove(bb) {
-        if (!bb) return !1;
-        bb._remove = null;
-        return -1 !== this._observers.indexOf(bb) && (this._deferUnregister(bb), !0)
+      remove(zz) {
+        if (!zz) return !1;
+        zz._remove = null;
+        return -1 !== this._observers.indexOf(zz) && (this._deferUnregister(zz), !0)
       }
-      removeCallback(bb, ab) {
-        for (let Ub = 0; Ub < this._observers.length; Ub++) {
-          const Ab = this._observers[Ub];
-          if (!Ab._willBeUnregistered && (Ab.callback === bb && (!ab || ab === Ab.scope))) return this._deferUnregister(Ab), !0
+      removeCallback(zz, tz) {
+        for (let sz = 0; sz < this._observers.length; sz++) {
+          const Fz = this._observers[sz];
+          if (!Fz._willBeUnregistered && (Fz.callback === zz && (!tz || tz === Fz.scope))) return this._deferUnregister(Fz), !0
         }
         return !1
       }
-      _deferUnregister(bb) {
-        bb._willBeUnregistered || (this._numObserversMarkedAsDeleted++, bb.unregisterOnNextCall = !1, bb._willBeUnregistered = !0, setTimeout((() => {
-          this._remove(bb)
+      _deferUnregister(zz) {
+        zz._willBeUnregistered || (this._numObserversMarkedAsDeleted++, zz.unregisterOnNextCall = !1, zz._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(zz)
         }), 0))
       }
-      _remove(bb) {
-        let ab = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!bb) return !1;
-        const Ub = this._observers.indexOf(bb);
-        return -1 !== Ub && (ab && this._numObserversMarkedAsDeleted--, this._observers.splice(Ub, 1), !0)
+      _remove(zz) {
+        let tz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!zz) return !1;
+        const sz = this._observers.indexOf(zz);
+        return -1 !== sz && (tz && this._numObserversMarkedAsDeleted--, this._observers.splice(sz, 1), !0)
       }
-      makeObserverTopPriority(bb) {
-        this._remove(bb, !1), this._observers.unshift(bb)
+      makeObserverTopPriority(zz) {
+        this._remove(zz, !1), this._observers.unshift(zz)
       }
-      makeObserverBottomPriority(bb) {
-        this._remove(bb, !1), this._observers.push(bb)
+      makeObserverBottomPriority(zz) {
+        this._remove(zz, !1), this._observers.push(zz)
       }
-      notifyObservers(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          Ub = arguments.length > 2 ? arguments[2] : void 0,
-          Ab = arguments.length > 3 ? arguments[3] : void 0,
-          Mb = arguments.length > 4 ? arguments[4] : void 0;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = bb), !this._observers.length) return !0;
-        const Tb = this._eventState;
-        Tb.mask = ab, Tb.target = Ub, Tb.currentTarget = Ab, Tb.skipNextObservers = !1, Tb.lastReturnValue = bb, Tb.userInfo = Mb;
-        for (const Eb of this._observers)
-          if (!Eb._willBeUnregistered && (Eb.mask & ab && (Eb.unregisterOnNextCall && this._deferUnregister(Eb), Eb.scope ? Tb.lastReturnValue = Eb.callback.apply(Eb.scope, [bb, Tb]) : Tb.lastReturnValue = Eb.callback(bb, Tb)), Tb.skipNextObservers)) return !1;
+      notifyObservers(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          sz = arguments.length > 2 ? arguments[2] : void 0,
+          Fz = arguments.length > 3 ? arguments[3] : void 0,
+          Wz = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = zz), !this._observers.length) return !0;
+        const Xz = this._eventState;
+        Xz.mask = tz, Xz.target = sz, Xz.currentTarget = Fz, Xz.skipNextObservers = !1, Xz.lastReturnValue = zz, Xz.userInfo = Wz;
+        for (const Oz of this._observers)
+          if (!Oz._willBeUnregistered && (Oz.mask & tz && (Oz.unregisterOnNextCall && this._deferUnregister(Oz), Oz.scope ? Xz.lastReturnValue = Oz.callback.apply(Oz.scope, [zz, Xz]) : Xz.lastReturnValue = Oz.callback(zz, Xz)), Xz.skipNextObservers)) return !1;
         return !0
       }
-      notifyObserver(bb, ab) {
-        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = ab), bb._willBeUnregistered) return;
-        const Ab = this._eventState;
-        Ab.mask = Ub, Ab.skipNextObservers = !1, bb.unregisterOnNextCall && this._deferUnregister(bb), bb.callback(ab, Ab)
+      notifyObserver(zz, tz) {
+        let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = tz), zz._willBeUnregistered) return;
+        const Fz = this._eventState;
+        Fz.mask = sz, Fz.skipNextObservers = !1, zz.unregisterOnNextCall && this._deferUnregister(zz), zz.callback(tz, Fz)
       }
       hasObservers() {
         return this._observers.length - this._numObserversMarkedAsDeleted > 0
       }
       clear() {
         for (; this._observers.length;) {
-          const bb = this._observers.pop();
-          bb && (bb._remove = null)
+          const zz = this._observers.pop();
+          zz && (zz._remove = null)
         }
         this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
       }
@@ -2905,17 +2905,17 @@ export const modules = {
         this._hasNotified = !1, this._lastNotifiedValue = void 0
       }
       clone() {
-        const bb = new Eb;
-        return bb._observers = this._observers.slice(0), bb
+        const zz = new Oz;
+        return zz._observers = this._observers.slice(0), zz
       }
       hasSpecificMask() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
-        for (const ab of this._observers)
-          if (ab.mask & bb || ab.mask === bb) return !0;
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const tz of this._observers)
+          if (tz.mask & zz || tz.mask === zz) return !0;
         return !1
       }
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

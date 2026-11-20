@@ -1,495 +1,495 @@
 export const id = 88;
 export const ids = [88];
 export const modules = {
-  40598: (bb, ab, Ub) => {
-    async function Ab(bb, ab) {
+  40586: (zz, tz, sz) => {
+    async function Fz(zz, tz) {
       const [{
-        clientSideServerUrls: Ab
+        clientSideServerUrls: Fz
       }, {
-        postJsonWithMetricsCookiesAndJsonResponse: Mb
+        postJsonWithMetricsCookiesAndJsonResponse: Wz
       }, {
-        gameBridge: Tb
-      }] = await Promise.all([Promise.resolve().then((() => Ub(1142))), Promise.resolve().then((() => Ub(1065))), Promise.resolve().then((() => Ub(1824)))]), Eb = Tb.latest("connectedGame").websocketUrl;
-      if (!Eb) throw new Error("AI Helper: not connected to a game server");
-      const Yb = `${Ab.getHttpUrlFromWebSocketUrl(Eb)}${bb}`;
-      return await Mb(Yb, ab, {
+        gameBridge: Xz
+      }] = await Promise.all([Promise.resolve().then((() => sz(1191))), Promise.resolve().then((() => sz(1120))), Promise.resolve().then((() => sz(1857)))]), Oz = Xz.latest("connectedGame").websocketUrl;
+      if (!Oz) throw new Error("AI Helper: not connected to a game server");
+      const oz = `${Fz.getHttpUrlFromWebSocketUrl(Oz)}${zz}`;
+      return await Wz(oz, tz, {
         retries: 0
       })
     }
-    Ub.r(ab), Ub.d(ab, {
-      postToGameServer: () => Ab
+    sz.r(tz), sz.d(tz, {
+      postToGameServer: () => Fz
     })
   },
-  40590: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      WorldCodeAiPanel: () => oL,
-      default: () => lL
+  40578: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      WorldCodeAiPanel: () => au,
+      default: () => qu
     });
-    var Ab = Ub(52),
-      Mb = Ub(984),
-      Tb = Ub.n(Mb),
-      Eb = Ub(1023);
+    var Fz = sz(65),
+      Wz = sz(1020),
+      Xz = sz.n(Wz),
+      Oz = sz(1087);
 
-    function Yb(bb) {
+    function oz(zz) {
       let {
-        title: ab,
-        children: Ub,
-        isCalm: Mb = !1,
-        isElsewhere: Yb = !1,
-        defaultOpen: Bb = !1,
-        isOpen: eb,
-        onToggle: vb,
-        className: Lb
-      } = bb;
-      const [Pb, Xb] = (0, Ab.useState)(Bb), jb = null !== eb && void 0 !== eb ? eb : Pb;
-      return (0, Eb.jsxs)("div", {
-        className: Tb()("WorldCodeAiLog", Mb && "WorldCodeAiLog-calm", Yb && "WorldCodeAiLog-elsewhere", jb && "WorldCodeAiLog-open", Lb),
-        children: [(0, Eb.jsxs)("button", {
+        title: tz,
+        children: sz,
+        isCalm: Wz = !1,
+        isElsewhere: oz = !1,
+        defaultOpen: vz = !1,
+        isOpen: Uz,
+        onToggle: Kz,
+        className: uz
+      } = zz;
+      const [Nz, bz] = (0, Fz.useState)(vz), wz = null !== Uz && void 0 !== Uz ? Uz : Nz;
+      return (0, Oz.jsxs)("div", {
+        className: Xz()("WorldCodeAiLog", Wz && "WorldCodeAiLog-calm", oz && "WorldCodeAiLog-elsewhere", wz && "WorldCodeAiLog-open", uz),
+        children: [(0, Oz.jsxs)("button", {
           className: "WorldCodeAiLogToggle",
-          "aria-expanded": jb,
+          "aria-expanded": wz,
           onClick: () => {
-            void 0 === eb && Xb(!jb), null === vb || void 0 === vb || vb(!jb)
+            void 0 === Uz && bz(!wz), null === Kz || void 0 === Kz || Kz(!wz)
           },
-          children: [(0, Eb.jsx)("span", {
+          children: [(0, Oz.jsx)("span", {
             className: "WorldCodeAiLogChevron",
             "aria-hidden": "true",
-            children: jb ? "\u25be" : "\u25b8"
-          }), ab]
-        }), jb && (0, Eb.jsx)("div", {
+            children: wz ? "\u25be" : "\u25b8"
+          }), tz]
+        }), wz && (0, Oz.jsx)("div", {
           className: "WorldCodeAiLogBody",
-          children: Ub
+          children: sz
         })]
       })
     }
-    var Bb = Ub(1824),
-      eb = Ub(6109),
-      vb = Ub(1352),
-      Lb = Ub(36220),
-      Pb = Ub(990),
-      Xb = Ub(4428),
-      jb = Ub(36240),
-      Rb = Ub(1505),
-      kb = Ub(4509),
-      yb = Ub(6104);
-    const Zb = new URL(Rb.d).host;
+    var vz = sz(1857),
+      Uz = sz(6082),
+      Kz = sz(1419),
+      uz = sz(36309),
+      Nz = sz(1036),
+      bz = sz(4382),
+      wz = sz(36317),
+      Dz = sz(1536),
+      gz = sz(4458),
+      Hz = sz(6074);
+    const Bz = new URL(Dz.c).host;
 
-    function Db(bb) {
-      const ab = bb.trim();
-      let Ub;
+    function Pz(zz) {
+      const tz = zz.trim();
+      let sz;
       try {
-        const bb = /^docs\//i.test(ab) ? `${Rb.d}/` : `${Rb.d}/docs/`,
-          Ab = ab.toLowerCase().replace(/^www\./, "").startsWith(`${Zb}/`);
-        Ub = new URL(Ab ? `https://${ab}` : ab, bb)
+        const zz = /^docs\//i.test(tz) ? `${Dz.c}/` : `${Dz.c}/docs/`,
+          Fz = tz.toLowerCase().replace(/^www\./, "").startsWith(`${Bz}/`);
+        sz = new URL(Fz ? `https://${tz}` : tz, zz)
       } catch {
         return null
       }
-      if ("https:" !== Ub.protocol && "http:" !== Ub.protocol || Ub.host !== Zb && Ub.host !== `www.${Zb}`) return null;
-      const Ab = Ub.pathname.toLowerCase();
-      return zb(Ab) || null !== (0, kb.C)(Ab) ? Ab : (0, kb.B)(Ab)
+      if ("https:" !== sz.protocol && "http:" !== sz.protocol || sz.host !== Bz && sz.host !== `www.${Bz}`) return null;
+      const Fz = sz.pathname.toLowerCase();
+      return rz(Fz) || null !== (0, gz.t)(Fz) ? Fz : (0, gz.q)(Fz)
     }
 
-    function zb(bb) {
-      return bb === kb.j || bb === kb.q
+    function rz(zz) {
+      return zz === gz.h || zz === gz.l
     }
 
-    function xb(bb) {
-      const ab = Db(bb);
-      return null === ab ? bb : `${Rb.d}${ab}`
+    function Yz(zz) {
+      const tz = Pz(zz);
+      return null === tz ? zz : `${Dz.c}${tz}`
     }
-    var ib = Ub(212),
-      fb = Ub(40505),
-      mb = Ub.n(fb);
+    var xz = sz(214),
+      mz = sz(40527),
+      Jz = sz.n(mz);
 
-    function pb(bb) {
-      const ab = [];
-      let Ub = 0;
-      return bb.split("\n").forEach(((bb, Ab) => {
-        ab.push({
-          text: bb,
-          from: Ub,
-          index: Ab
-        }), Ub += bb.length + 1
-      })), ab
-    }
-
-    function Nb(bb) {
-      return bb.replace(/^\s*\/\/.*$/, "").replace(/\s+/g, "").replace(/['`]/g, '"').replace(/[;,]+$/, "")
+    function Iz(zz) {
+      const tz = [];
+      let sz = 0;
+      return zz.split("\n").forEach(((zz, Fz) => {
+        tz.push({
+          text: zz,
+          from: sz,
+          index: Fz
+        }), sz += zz.length + 1
+      })), tz
     }
 
-    function Wb(bb, ab, Ub) {
-      if (0 === ab.length) return null;
-      let Ab = null;
-      for (let Mb = 0; Mb + ab.length <= bb.length; Mb++) {
-        if (ab.every(((ab, Ab) => Ub(bb[Mb + Ab].text) === ab))) {
-          if (Ab) return {
-            ...Ab,
+    function Cz(zz) {
+      return zz.replace(/^\s*\/\/.*$/, "").replace(/\s+/g, "").replace(/['`]/g, '"').replace(/[;,]+$/, "")
+    }
+
+    function ez(zz, tz, sz) {
+      if (0 === tz.length) return null;
+      let Fz = null;
+      for (let Wz = 0; Wz + tz.length <= zz.length; Wz++) {
+        if (tz.every(((tz, Fz) => sz(zz[Wz + Fz].text) === tz))) {
+          if (Fz) return {
+            ...Fz,
             isOnly: !1
           };
-          const Ub = bb[Mb + ab.length - 1];
-          Ab = {
-            from: bb[Mb].from,
-            to: Ub.from + Ub.text.length
+          const sz = zz[Wz + tz.length - 1];
+          Fz = {
+            from: zz[Wz].from,
+            to: sz.from + sz.text.length
           }
         }
       }
-      return Ab ? {
-        ...Ab,
+      return Fz ? {
+        ...Fz,
         isOnly: !0
       } : null
     }
 
-    function Hb(bb, ab) {
-      if ("" === ab.trim()) return null;
-      const Ub = pb(bb),
-        Ab = function(bb) {
-          return bb.split("\n").map((bb => bb.trim())).filter(((bb, ab, Ub) => "" !== bb || ab > 0 && ab < Ub.length - 1))
-        }(ab),
-        Mb = Wb(Ub, Ab, (bb => bb.trim()));
-      if (null !== Mb) return {
-        from: Mb.from,
-        to: Mb.to,
-        isLoose: !Mb.isOnly
+    function Zz(zz, tz) {
+      if ("" === tz.trim()) return null;
+      const sz = Iz(zz),
+        Fz = function(zz) {
+          return zz.split("\n").map((zz => zz.trim())).filter(((zz, tz, sz) => "" !== zz || tz > 0 && tz < sz.length - 1))
+        }(tz),
+        Wz = ez(sz, Fz, (zz => zz.trim()));
+      if (null !== Wz) return {
+        from: Wz.from,
+        to: Wz.to,
+        isLoose: !Wz.isOnly
       };
-      const Tb = bb => bb.trim().replace(/;+$/, ""),
-        Eb = Wb(Ub, Ab.map(Tb), Tb);
-      if (null !== Eb) {
-        const Ub = bb.indexOf(ab),
-          Ab = -1 !== Ub && (Ub < Eb.from || Ub >= Eb.to);
+      const Xz = zz => zz.trim().replace(/;+$/, ""),
+        Oz = ez(sz, Fz.map(Xz), Xz);
+      if (null !== Oz) {
+        const sz = zz.indexOf(tz),
+          Fz = -1 !== sz && (sz < Oz.from || sz >= Oz.to);
         return {
-          from: Eb.from,
-          to: Eb.to,
-          isLoose: !Eb.isOnly || Ab
+          from: Oz.from,
+          to: Oz.to,
+          isLoose: !Oz.isOnly || Fz
         }
       }
-      const Yb = bb.indexOf(ab);
-      if (-1 !== Yb) {
-        var Bb, eb, vb;
-        const Ub = /\w/.test(ab[0]) && /\w/.test(null !== (Bb = bb[Yb - 1]) && void 0 !== Bb ? Bb : "") || /\w/.test(null !== (eb = ab.at(-1)) && void 0 !== eb ? eb : "") && /\w/.test(null !== (vb = bb[Yb + ab.length]) && void 0 !== vb ? vb : "");
+      const oz = zz.indexOf(tz);
+      if (-1 !== oz) {
+        var vz, Uz, Kz;
+        const sz = /\w/.test(tz[0]) && /\w/.test(null !== (vz = zz[oz - 1]) && void 0 !== vz ? vz : "") || /\w/.test(null !== (Uz = tz.at(-1)) && void 0 !== Uz ? Uz : "") && /\w/.test(null !== (Kz = zz[oz + tz.length]) && void 0 !== Kz ? Kz : "");
         return {
-          from: Yb,
-          to: Yb + ab.length,
-          isLoose: Ub || -1 !== bb.indexOf(ab, Yb + 1)
+          from: oz,
+          to: oz + tz.length,
+          isLoose: sz || -1 !== zz.indexOf(tz, oz + 1)
         }
       }
-      const Lb = ab.split("\n").map(Nb).filter(Boolean),
-        Pb = Wb(Ub.filter((bb => "" !== Nb(bb.text))), Lb, Nb);
-      return null === Pb ? null : {
-        from: Pb.from,
-        to: Pb.to,
+      const uz = tz.split("\n").map(Cz).filter(Boolean),
+        Nz = ez(sz.filter((zz => "" !== Cz(zz.text))), uz, Cz);
+      return null === Nz ? null : {
+        from: Nz.from,
+        to: Nz.to,
         isLoose: !0
       }
     }
 
-    function Ib(bb) {
-      var ab, Ub;
-      return null !== (ab = null === (Ub = /^[ \t]*/.exec(bb)) || void 0 === Ub ? void 0 : Ub[0]) && void 0 !== ab ? ab : ""
+    function Gz(zz) {
+      var tz, sz;
+      return null !== (tz = null === (sz = /^[ \t]*/.exec(zz)) || void 0 === sz ? void 0 : sz[0]) && void 0 !== tz ? tz : ""
     }
 
-    function db(bb, ab, Ub, Ab) {
-      if (ab.from > 0 && "\n" !== bb[ab.from - 1]) return Ab;
-      const Mb = bb.slice(ab.from, ab.to).split("\n").filter((bb => "" !== bb.trim())),
-        Tb = Ub.split("\n").filter((bb => "" !== bb.trim()));
-      if (0 === Mb.length || 0 === Tb.length) return Ab;
-      const Eb = Ib(Mb[0]),
-        Yb = Ib(Tb[0]);
-      if (Eb === Yb) return Ab;
-      const Bb = Tb.length > 1 && Tb.length === Mb.length && Tb.slice(1).every(((bb, ab) => Ib(bb) === Ib(Mb[ab + 1]))),
-        eb = Ab.split("\n"),
-        vb = eb.findIndex((bb => "" !== bb.trim()));
-      if (-1 === vb || Ib(eb[vb]) === Eb) return Ab;
-      let Lb = !1;
-      return eb.map(((bb, ab) => {
-        var Ub, Ab;
-        const Mb = Lb;
-        return (null !== (Ub = null === (Ab = bb.replace(/\\`/g, "").match(/`/g)) || void 0 === Ab ? void 0 : Ab.length) && void 0 !== Ub ? Ub : 0) % 2 === 1 && (Lb = !Lb), Mb || Bb && ab !== vb ? bb : function(bb, ab, Ub) {
-          if ("" === bb.trim()) return bb;
-          const Ab = Ib(bb);
-          return Ab.startsWith(ab) ? Ub + bb.slice(ab.length) : ab.startsWith(Ab) ? Ub.slice(0, Math.max(0, Ub.length - (ab.length - Ab.length))) + bb.trimStart() : bb
-        }(bb, Yb, Eb)
+    function Tz(zz, tz, sz, Fz) {
+      if (tz.from > 0 && "\n" !== zz[tz.from - 1]) return Fz;
+      const Wz = zz.slice(tz.from, tz.to).split("\n").filter((zz => "" !== zz.trim())),
+        Xz = sz.split("\n").filter((zz => "" !== zz.trim()));
+      if (0 === Wz.length || 0 === Xz.length) return Fz;
+      const Oz = Gz(Wz[0]),
+        oz = Gz(Xz[0]);
+      if (Oz === oz) return Fz;
+      const vz = Xz.length > 1 && Xz.length === Wz.length && Xz.slice(1).every(((zz, tz) => Gz(zz) === Gz(Wz[tz + 1]))),
+        Uz = Fz.split("\n"),
+        Kz = Uz.findIndex((zz => "" !== zz.trim()));
+      if (-1 === Kz || Gz(Uz[Kz]) === Oz) return Fz;
+      let uz = !1;
+      return Uz.map(((zz, tz) => {
+        var sz, Fz;
+        const Wz = uz;
+        return (null !== (sz = null === (Fz = zz.replace(/\\`/g, "").match(/`/g)) || void 0 === Fz ? void 0 : Fz.length) && void 0 !== sz ? sz : 0) % 2 === 1 && (uz = !uz), Wz || vz && tz !== Kz ? zz : function(zz, tz, sz) {
+          if ("" === zz.trim()) return zz;
+          const Fz = Gz(zz);
+          return Fz.startsWith(tz) ? sz + zz.slice(tz.length) : tz.startsWith(Fz) ? sz.slice(0, Math.max(0, sz.length - (tz.length - Fz.length))) + zz.trimStart() : zz
+        }(zz, oz, Oz)
       })).join("\n")
     }
 
-    function Fb(bb, ab) {
-      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const Ab = new Map;
-      for (const Yb of bb.split("\n")) {
-        const bb = Yb.trim(),
-          ab = bb.replace(/;$/, "");
-        "" === ab || bb.endsWith(";") || Ab.has(ab) || Ab.set(ab, bb)
+    function cz(zz, tz) {
+      let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const Fz = new Map;
+      for (const oz of zz.split("\n")) {
+        const zz = oz.trim(),
+          tz = zz.replace(/;$/, "");
+        "" === tz || zz.endsWith(";") || Fz.has(tz) || Fz.set(tz, zz)
       }
-      const Mb = ab.split("\n");
-      let Tb = !1;
-      const Eb = Mb.map(((bb, ab) => {
-        var Eb, Yb, Bb;
-        const eb = Tb;
-        (null !== (Eb = null === (Yb = bb.replace(/\\`/g, "").match(/`/g)) || void 0 === Yb ? void 0 : Yb.length) && void 0 !== Eb ? Eb : 0) % 2 === 1 && (Tb = !Tb);
-        const vb = bb.trim(),
-          Lb = Ab.get(vb.replace(/;$/, ""));
-        if (void 0 === Lb || Lb === vb || eb || Tb) return bb;
-        const Pb = null !== (Bb = Mb.slice(ab + 1).find((bb => "" !== bb.trim()))) && void 0 !== Bb ? Bb : Ub;
-        return /^(?:[([`+-]|\/(?![/*]))/.test(Pb.trim()) ? bb : bb.slice(0, bb.length - bb.trimStart().length) + Lb
+      const Wz = tz.split("\n");
+      let Xz = !1;
+      const Oz = Wz.map(((zz, tz) => {
+        var Oz, oz, vz;
+        const Uz = Xz;
+        (null !== (Oz = null === (oz = zz.replace(/\\`/g, "").match(/`/g)) || void 0 === oz ? void 0 : oz.length) && void 0 !== Oz ? Oz : 0) % 2 === 1 && (Xz = !Xz);
+        const Kz = zz.trim(),
+          uz = Fz.get(Kz.replace(/;$/, ""));
+        if (void 0 === uz || uz === Kz || Uz || Xz) return zz;
+        const Nz = null !== (vz = Wz.slice(tz + 1).find((zz => "" !== zz.trim()))) && void 0 !== vz ? vz : sz;
+        return /^(?:[([`+-]|\/(?![/*]))/.test(Nz.trim()) ? zz : zz.slice(0, zz.length - zz.trimStart().length) + uz
       })).join("\n");
-      return Eb.trim() === bb.trim() && ab.trim() !== bb.trim() ? ab : Eb
+      return Oz.trim() === zz.trim() && tz.trim() !== zz.trim() ? tz : Oz
     }
 
-    function hb(bb) {
-      var ab;
-      return null !== (ab = bb.split("\n").find((bb => "" !== bb.trim()))) && void 0 !== ab ? ab : ""
+    function jz(zz) {
+      var tz;
+      return null !== (tz = zz.split("\n").find((zz => "" !== zz.trim()))) && void 0 !== tz ? tz : ""
     }
 
-    function Gb(bb, ab) {
-      if (bb === ab) return 1;
-      if (bb.length < 2 || ab.length < 2) return 0;
-      const Ub = new Map;
-      for (let Eb = 0; Eb < bb.length - 1; Eb++) {
-        var Ab;
-        const ab = bb.slice(Eb, Eb + 2);
-        Ub.set(ab, (null !== (Ab = Ub.get(ab)) && void 0 !== Ab ? Ab : 0) + 1)
+    function Az(zz, tz) {
+      if (zz === tz) return 1;
+      if (zz.length < 2 || tz.length < 2) return 0;
+      const sz = new Map;
+      for (let Oz = 0; Oz < zz.length - 1; Oz++) {
+        var Fz;
+        const tz = zz.slice(Oz, Oz + 2);
+        sz.set(tz, (null !== (Fz = sz.get(tz)) && void 0 !== Fz ? Fz : 0) + 1)
       }
-      let Mb = 0;
-      for (let Eb = 0; Eb < ab.length - 1; Eb++) {
-        var Tb;
-        const bb = ab.slice(Eb, Eb + 2),
-          Ab = null !== (Tb = Ub.get(bb)) && void 0 !== Tb ? Tb : 0;
-        Ab > 0 && (Ub.set(bb, Ab - 1), Mb++)
+      let Wz = 0;
+      for (let Oz = 0; Oz < tz.length - 1; Oz++) {
+        var Xz;
+        const zz = tz.slice(Oz, Oz + 2),
+          Fz = null !== (Xz = sz.get(zz)) && void 0 !== Xz ? Xz : 0;
+        Fz > 0 && (sz.set(zz, Fz - 1), Wz++)
       }
-      return 2 * Mb / (bb.length + ab.length - 2)
+      return 2 * Wz / (zz.length + tz.length - 2)
     }
 
-    function Qb(bb, ab) {
-      const Ub = ab.split("\n").map(Nb).filter(Boolean),
-        Ab = pb(bb).filter((bb => "" !== Nb(bb.text)));
-      if (0 === Ub.length || 0 === Ab.length) return null;
-      const Mb = Math.min(Ub.length, Ab.length);
-      let Tb = null;
-      for (let Yb = 0; Yb + Mb <= Ab.length; Yb++) {
-        let bb = 0;
-        for (let ab = 0; ab < Mb; ab++) bb += Gb(Nb(Ab[Yb + ab].text), Ub[ab]);
-        bb /= Ub.length, (null === Tb || bb > Tb.score) && (Tb = {
-          start: Yb,
-          score: bb
+    function yz(zz, tz) {
+      const sz = tz.split("\n").map(Cz).filter(Boolean),
+        Fz = Iz(zz).filter((zz => "" !== Cz(zz.text)));
+      if (0 === sz.length || 0 === Fz.length) return null;
+      const Wz = Math.min(sz.length, Fz.length);
+      let Xz = null;
+      for (let oz = 0; oz + Wz <= Fz.length; oz++) {
+        let zz = 0;
+        for (let tz = 0; tz < Wz; tz++) zz += Az(Cz(Fz[oz + tz].text), sz[tz]);
+        zz /= sz.length, (null === Xz || zz > Xz.score) && (Xz = {
+          start: oz,
+          score: zz
         })
       }
-      if (null === Tb || Tb.score < .5) return null;
-      const Eb = Ab.slice(Tb.start, Tb.start + Mb);
+      if (null === Xz || Xz.score < .5) return null;
+      const Oz = Fz.slice(Xz.start, Xz.start + Wz);
       return {
-        line: Eb[0].index + 1,
-        lastLine: Eb[Eb.length - 1].index + 1,
-        text: Eb.map((bb => bb.text.trim())).join("\n")
+        line: Oz[0].index + 1,
+        lastLine: Oz[Oz.length - 1].index + 1,
+        text: Oz.map((zz => zz.text.trim())).join("\n")
       }
     }
 
-    function qb(bb) {
-      return mb().isFunctionExpression(bb) || mb().isArrowFunction(bb)
+    function Mz(zz) {
+      return Jz().isFunctionExpression(zz) || Jz().isArrowFunction(zz)
     }
 
-    function ub(bb) {
-      return mb().isExpressionStatement(bb) && mb().isBinaryExpression(bb.expression) && mb().isPropertyAccessExpression(bb.expression.left) && ! function(bb) {
-        return mb().isIdentifier(bb) && ("globalThis" === bb.text || "window" === bb.text || "self" === bb.text)
-      }(bb.expression.left.expression)
+    function dz(zz) {
+      return Jz().isExpressionStatement(zz) && Jz().isBinaryExpression(zz.expression) && Jz().isPropertyAccessExpression(zz.expression.left) && ! function(zz) {
+        return Jz().isIdentifier(zz) && ("globalThis" === zz.text || "window" === zz.text || "self" === zz.text)
+      }(zz.expression.left.expression)
     }
 
-    function rb(bb, ab, Ub) {
-      let Ab = Ub;
-      for (const Tb of (null !== (Mb = mb().getLeadingCommentRanges(bb, ab.getFullStart())) && void 0 !== Mb ? Mb : []).reverse()) {
-        var Mb;
-        if (/\n[^\S\n]*\n/.test(bb.slice(Tb.end, Ab))) break;
-        Ab = Tb.pos
+    function hz(zz, tz, sz) {
+      let Fz = sz;
+      for (const Xz of (null !== (Wz = Jz().getLeadingCommentRanges(zz, tz.getFullStart())) && void 0 !== Wz ? Wz : []).reverse()) {
+        var Wz;
+        if (/\n[^\S\n]*\n/.test(zz.slice(Xz.end, Fz))) break;
+        Fz = Xz.pos
       }
-      return Ab
+      return Fz
     }
 
-    function Kb(bb) {
-      var ab;
+    function Qz(zz) {
+      var tz;
       const {
-        parseDiagnostics: Ub
-      } = bb;
-      return (null !== (ab = null === Ub || void 0 === Ub ? void 0 : Ub.length) && void 0 !== ab ? ab : 0) > 0
+        parseDiagnostics: sz
+      } = zz;
+      return (null !== (tz = null === sz || void 0 === sz ? void 0 : sz.length) && void 0 !== tz ? tz : 0) > 0
     }
 
-    function ob(bb) {
-      const ab = mb().createSourceFile("worldCode.js", bb, mb().ScriptTarget.Latest, !1, mb().ScriptKind.JS),
-        Ub = [],
-        Ab = (Mb, Tb) => {
-          const Eb = function(bb) {
-            var ab, Ub;
-            if (mb().isFunctionDeclaration(bb)) return null !== (ab = null === (Ub = bb.name) || void 0 === Ub ? void 0 : Ub.text) && void 0 !== ab ? ab : null;
-            if (mb().isVariableStatement(bb) && 1 === bb.declarationList.declarations.length) {
-              const ab = bb.declarationList.declarations[0];
-              return mb().isIdentifier(ab.name) && ab.initializer && qb(ab.initializer) ? ab.name.text : null
+    function kz(zz) {
+      const tz = Jz().createSourceFile("worldCode.js", zz, Jz().ScriptTarget.Latest, !1, Jz().ScriptKind.JS),
+        sz = [],
+        Fz = (Wz, Xz) => {
+          const Oz = function(zz) {
+            var tz, sz;
+            if (Jz().isFunctionDeclaration(zz)) return null !== (tz = null === (sz = zz.name) || void 0 === sz ? void 0 : sz.text) && void 0 !== tz ? tz : null;
+            if (Jz().isVariableStatement(zz) && 1 === zz.declarationList.declarations.length) {
+              const tz = zz.declarationList.declarations[0];
+              return Jz().isIdentifier(tz.name) && tz.initializer && Mz(tz.initializer) ? tz.name.text : null
             }
-            if (mb().isExpressionStatement(bb) && mb().isBinaryExpression(bb.expression) && bb.expression.operatorToken.kind === mb().SyntaxKind.EqualsToken && qb(bb.expression.right)) {
-              const ab = bb.expression.left;
-              return mb().isIdentifier(ab) ? ab.text : mb().isPropertyAccessExpression(ab) ? ab.name.text : null
+            if (Jz().isExpressionStatement(zz) && Jz().isBinaryExpression(zz.expression) && zz.expression.operatorToken.kind === Jz().SyntaxKind.EqualsToken && Mz(zz.expression.right)) {
+              const tz = zz.expression.left;
+              return Jz().isIdentifier(tz) ? tz.text : Jz().isPropertyAccessExpression(tz) ? tz.name.text : null
             }
             return null
-          }(Mb);
-          if (null !== Eb) {
-            const Ab = Mb.getStart(ab);
-            Ub.push({
-              name: Eb,
-              from: Ab,
-              to: Mb.getEnd(),
-              commentFrom: rb(bb, Mb, Ab),
-              topLevel: Tb,
-              isProperty: ub(Mb)
+          }(Wz);
+          if (null !== Oz) {
+            const Fz = Wz.getStart(tz);
+            sz.push({
+              name: Oz,
+              from: Fz,
+              to: Wz.getEnd(),
+              commentFrom: hz(zz, Wz, Fz),
+              topLevel: Xz,
+              isProperty: dz(Wz)
             })
           }
-          mb().forEachChild(Mb, (bb => {
-            Ab(bb, !1)
+          Jz().forEachChild(Wz, (zz => {
+            Fz(zz, !1)
           }))
         };
-      for (const Mb of ab.statements) Ab(Mb, !0);
+      for (const Wz of tz.statements) Fz(Wz, !0);
       return {
-        functions: Ub,
-        hasErrors: Kb(ab)
+        functions: sz,
+        hasErrors: Qz(tz)
       }
     }
 
-    function lb(bb) {
-      return ob(bb).functions
+    function iz(zz) {
+      return kz(zz).functions
     }
 
-    function tb(bb) {
-      return bb.trim().replace(/^(?:callback:|function\s+)/, "").replace(/\s*\(.*$/s, "").trim()
+    function Lz(zz) {
+      return zz.trim().replace(/^(?:callback:|function\s+)/, "").replace(/\s*\(.*$/s, "").trim()
     }
 
-    function wb(bb, ab) {
-      var Ub;
-      const Ab = bb.filter((bb => bb.name === ab)),
-        Mb = Ab.filter((bb => !bb.isProperty)),
-        Tb = Mb.length > 0 ? Mb : Ab;
-      return null !== (Ub = Tb.find((bb => bb.topLevel))) && void 0 !== Ub ? Ub : Tb[0]
+    function lz(zz, tz) {
+      var sz;
+      const Fz = zz.filter((zz => zz.name === tz)),
+        Wz = Fz.filter((zz => !zz.isProperty)),
+        Xz = Wz.length > 0 ? Wz : Fz;
+      return null !== (sz = Xz.find((zz => zz.topLevel))) && void 0 !== sz ? sz : Xz[0]
     }
 
-    function sb(bb, ab) {
-      return "" === bb.trim() ? `${ab.trim()}\n` : `${bb.replace(/\s*$/,"")}\n\n${ab.trim()}\n`
+    function nz(zz, tz) {
+      return "" === zz.trim() ? `${tz.trim()}\n` : `${zz.replace(/\s*$/,"")}\n\n${tz.trim()}\n`
     }
 
-    function gb(bb, ab, Ub) {
-      var Ab, Mb;
-      const Tb = ob(bb),
+    function az(zz, tz, sz) {
+      var Fz, Wz;
+      const Xz = kz(zz),
         {
-          functions: Eb
-        } = Tb,
-        Yb = lb(Ub),
-        Bb = null !== (Ab = Yb.find((bb => bb.topLevel && !bb.isProperty))) && void 0 !== Ab ? Ab : Yb.find((bb => bb.topLevel)),
-        eb = tb(ab),
-        vb = Bb ? wb(Eb, Bb.name) : void 0,
-        Lb = null !== (Mb = void 0 !== vb && !Yb.some((bb => bb.topLevel && bb.name === eb)) ? vb : wb(Eb, eb)) && void 0 !== Mb ? Mb : vb;
-      return Lb ? Cb(bb, Tb, Lb, Yb, Ub) : sb(bb, Ub)
+          functions: Oz
+        } = Xz,
+        oz = iz(sz),
+        vz = null !== (Fz = oz.find((zz => zz.topLevel && !zz.isProperty))) && void 0 !== Fz ? Fz : oz.find((zz => zz.topLevel)),
+        Uz = Lz(tz),
+        Kz = vz ? lz(Oz, vz.name) : void 0,
+        uz = null !== (Wz = void 0 !== Kz && !oz.some((zz => zz.topLevel && zz.name === Uz)) ? Kz : lz(Oz, Uz)) && void 0 !== Wz ? Wz : Kz;
+      return uz ? qz(zz, Xz, uz, oz, sz) : nz(zz, sz)
     }
 
-    function Cb(bb, ab, Ub, Ab, Mb) {
+    function qz(zz, tz, sz, Fz, Wz) {
       let {
-        functions: Tb,
-        hasErrors: Eb
-      } = ab;
-      const Yb = Tb.some((bb => bb.from > Ub.from && bb.to <= Ub.to && !Ab.some((ab => ab.name === bb.name))));
-      if (Eb && Yb) return null;
-      const Bb = /^\s*(?:\/\/|\/\*)/.test(Mb) ? Ub.commentFrom : Ub.from;
-      return bb.slice(0, Bb) + Fb(bb.slice(Bb, Ub.to), Mb.trim(), hb(bb.slice(Ub.to))) + bb.slice(Ub.to)
+        functions: Xz,
+        hasErrors: Oz
+      } = tz;
+      const oz = Xz.some((zz => zz.from > sz.from && zz.to <= sz.to && !Fz.some((tz => tz.name === zz.name))));
+      if (Oz && oz) return null;
+      const vz = /^\s*(?:\/\/|\/\*)/.test(Wz) ? sz.commentFrom : sz.from;
+      return zz.slice(0, vz) + cz(zz.slice(vz, sz.to), Wz.trim(), jz(zz.slice(sz.to))) + zz.slice(sz.to)
     }
 
-    function Vb(bb, ab, Ub, Ab, Mb) {
-      const Tb = Ab.trim();
-      if (Tb.includes("\n") || !Tb.endsWith("{")) return null;
-      const Eb = ob(bb),
-        Yb = Eb.functions.find((Ab => Ab.topLevel && Ob(bb, Ab.from) <= ab && Ub < Ab.to && !bb.slice(Ab.from, Ub).includes("\n"))),
-        Bb = ob(Mb),
-        eb = Bb.functions.filter((bb => bb.topLevel)),
-        vb = !Bb.hasErrors && (1 === eb.length || eb.some((bb => bb.name === (null === Yb || void 0 === Yb ? void 0 : Yb.name)))),
-        Lb = 1 === eb.length && eb[0].name !== (null === Yb || void 0 === Yb ? void 0 : Yb.name) ? eb[0].name : void 0,
-        Pb = void 0 === Lb ? void 0 : Eb.functions.find((bb => bb.topLevel && bb.name === Lb));
-      return Yb && vb ? Cb(bb, Eb, null !== Pb && void 0 !== Pb ? Pb : Yb, Bb.functions, Mb) : function(bb, ab, Ub, Ab, Mb) {
-        const Tb = mb().createSourceFile("worldCode.js", bb, mb().ScriptTarget.Latest, !0, mb().ScriptKind.JS),
-          Eb = Tb.statements.find((Ab => {
-            const Mb = Ab.getStart(Tb);
-            return Ob(bb, Mb) <= ab && Ub < Ab.getEnd() && !bb.slice(Mb, Ub).includes("\n")
+    function Sz(zz, tz, sz, Fz, Wz) {
+      const Xz = Fz.trim();
+      if (Xz.includes("\n") || !Xz.endsWith("{")) return null;
+      const Oz = kz(zz),
+        oz = Oz.functions.find((Fz => Fz.topLevel && Vz(zz, Fz.from) <= tz && sz < Fz.to && !zz.slice(Fz.from, sz).includes("\n"))),
+        vz = kz(Wz),
+        Uz = vz.functions.filter((zz => zz.topLevel)),
+        Kz = !vz.hasErrors && (1 === Uz.length || Uz.some((zz => zz.name === (null === oz || void 0 === oz ? void 0 : oz.name)))),
+        uz = 1 === Uz.length && Uz[0].name !== (null === oz || void 0 === oz ? void 0 : oz.name) ? Uz[0].name : void 0,
+        Nz = void 0 === uz ? void 0 : Oz.functions.find((zz => zz.topLevel && zz.name === uz));
+      return oz && Kz ? qz(zz, Oz, null !== Nz && void 0 !== Nz ? Nz : oz, vz.functions, Wz) : function(zz, tz, sz, Fz, Wz) {
+        const Xz = Jz().createSourceFile("worldCode.js", zz, Jz().ScriptTarget.Latest, !0, Jz().ScriptKind.JS),
+          Oz = Xz.statements.find((Fz => {
+            const Wz = Fz.getStart(Xz);
+            return Vz(zz, Wz) <= tz && sz < Fz.getEnd() && !zz.slice(Wz, sz).includes("\n")
           })),
-          Yb = mb().createSourceFile("replace.js", Mb.trim(), mb().ScriptTarget.Latest, !0, mb().ScriptKind.JS),
-          Bb = 1 === Yb.statements.length ? Yb.statements[0] : void 0;
-        if (!Eb || !Bb || Kb(Yb) || Bb.kind !== Eb.kind || !Bb.getText(Yb).startsWith(Ab)) return null;
-        const eb = Eb.getStart(Tb);
-        return bb.slice(0, eb) + Mb.trim() + bb.slice(Eb.getEnd())
-      }(bb, ab, Ub, Tb, Mb)
+          oz = Jz().createSourceFile("replace.js", Wz.trim(), Jz().ScriptTarget.Latest, !0, Jz().ScriptKind.JS),
+          vz = 1 === oz.statements.length ? oz.statements[0] : void 0;
+        if (!Oz || !vz || Qz(oz) || vz.kind !== Oz.kind || !vz.getText(oz).startsWith(Fz)) return null;
+        const Uz = Oz.getStart(Xz);
+        return zz.slice(0, Uz) + Wz.trim() + zz.slice(Oz.getEnd())
+      }(zz, tz, sz, Xz, Wz)
     }
 
-    function Ob(bb, ab) {
-      let Ub = ab;
-      for (; Ub > 0 && (" " === bb[Ub - 1] || "\t" === bb[Ub - 1]);) Ub--;
-      return 0 === Ub || "\n" === bb[Ub - 1] ? Ub : ab
+    function Vz(zz, tz) {
+      let sz = tz;
+      for (; sz > 0 && (" " === zz[sz - 1] || "\t" === zz[sz - 1]);) sz--;
+      return 0 === sz || "\n" === zz[sz - 1] ? sz : tz
     }
 
-    function cb(bb, ab, Ub) {
-      const Ab = ab.trim().toLowerCase();
-      if ("" !== bb.trim() && ("top" === Ab || "start" === Ab)) return `${Ub.trim()}\n\n${bb.replace(/^\s+/,"")}`;
-      const Mb = "end" === Ab ? void 0 : wb(lb(bb), tb(ab));
-      return Mb ? `${bb.slice(0,Mb.to)}\n\n${Ub.trim()}${bb.slice(Mb.to)}` : sb(bb, Ub)
+    function Rz(zz, tz, sz) {
+      const Fz = tz.trim().toLowerCase();
+      if ("" !== zz.trim() && ("top" === Fz || "start" === Fz)) return `${sz.trim()}\n\n${zz.replace(/^\s+/,"")}`;
+      const Wz = "end" === Fz ? void 0 : lz(iz(zz), Lz(tz));
+      return Wz ? `${zz.slice(0,Wz.to)}\n\n${sz.trim()}${zz.slice(Wz.to)}` : nz(zz, sz)
     }
 
-    function Jb(bb) {
-      return [...new Set(lb(bb).filter((bb => bb.topLevel)).map((bb => bb.name)))]
+    function pz(zz) {
+      return [...new Set(iz(zz).filter((zz => zz.topLevel)).map((zz => zz.name)))]
     }
-    const nb = 120,
-      Sb = /\b(?:my|his|her|their)\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\b(?:i am|i'm)\s+\d+\b|\b\d+\s+years?\s+old\b|\be-?mail\b|\bphone number\b|\bpassword\b|\bwhere (?:i|we) live\b/i;
+    const fz = 120,
+      Ez = /\b(?:my|his|her|their)\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\b(?:i am|i'm)\s+\d+\b|\b\d+\s+years?\s+old\b|\be-?mail\b|\bphone number\b|\bpassword\b|\bwhere (?:i|we) live\b/i;
 
-    function ba(bb) {
-      let ab = bb.replace(/\s+/g, " ").trim();
-      if ("" === ab || Sb.test(ab)) return null;
-      if (ab.length > nb) {
-        const bb = ab.slice(0, nb);
-        ab = `${bb.slice(0,Math.max(bb.lastIndexOf(" "),60)).trimEnd()}\u2026`
+    function zt(zz) {
+      let tz = zz.replace(/\s+/g, " ").trim();
+      if ("" === tz || Ez.test(tz)) return null;
+      if (tz.length > fz) {
+        const zz = tz.slice(0, fz);
+        tz = `${zz.slice(0,Math.max(zz.lastIndexOf(" "),60)).trimEnd()}\u2026`
       }
-      return ab.charAt(0).toUpperCase() + ab.slice(1)
+      return tz.charAt(0).toUpperCase() + tz.slice(1)
     }
-    const aa = /(?:===?\s*|\bcase\s+|startsWith\(\s*)["'`]\/?([a-zA-Z][\w-]{0,20})/g;
+    const tt = /(?:===?\s*|\bcase\s+|startsWith\(\s*)["'`]\/?([a-zA-Z][\w-]{0,20})/g;
 
-    function Ua(bb) {
-      var ab, Ub;
-      const Ab = null === (ab = /\(([^)]*)\)/.exec(bb)) || void 0 === ab || null === (Ub = ab[1].split(",")[1]) || void 0 === Ub ? void 0 : Ub.trim();
-      return Ab && /^[A-Za-z_$][\w$]*$/.test(Ab) ? [...bb.matchAll(/\b([A-Za-z_$][\w$]*)\s*\(([^()]*)\)/g)].flatMap((bb => bb[2].split(",").some((bb => bb.trim() === Ab)) ? [bb[1]] : [])) : []
+    function st(zz) {
+      var tz, sz;
+      const Fz = null === (tz = /\(([^)]*)\)/.exec(zz)) || void 0 === tz || null === (sz = tz[1].split(",")[1]) || void 0 === sz ? void 0 : sz.trim();
+      return Fz && /^[A-Za-z_$][\w$]*$/.test(Fz) ? [...zz.matchAll(/\b([A-Za-z_$][\w$]*)\s*\(([^()]*)\)/g)].flatMap((zz => zz[2].split(",").some((zz => zz.trim() === Fz)) ? [zz[1]] : [])) : []
     }
 
-    function Aa(bb, ab) {
-      const Ub = new Set,
-        Ab = new Set,
-        Mb = new Set,
-        Tb = Object.values(bb).map((bb => {
-          const ab = lb(bb),
-            Ub = ab.filter((bb => "playerCommand" === bb.name)).map((ab => bb.slice(ab.from, ab.to)));
+    function Ft(zz, tz) {
+      const sz = new Set,
+        Fz = new Set,
+        Wz = new Set,
+        Xz = Object.values(zz).map((zz => {
+          const tz = iz(zz),
+            sz = tz.filter((zz => "playerCommand" === zz.name)).map((tz => zz.slice(tz.from, tz.to)));
           return {
-            text: bb,
-            found: ab,
-            own: Ub
+            text: zz,
+            found: tz,
+            own: sz
           }
         })),
-        Eb = new Set(Tb.flatMap((bb => {
+        Oz = new Set(Xz.flatMap((zz => {
           let {
-            own: ab
-          } = bb;
-          return ab.flatMap(Ua)
+            own: tz
+          } = zz;
+          return tz.flatMap(st)
         })));
       for (const {
-          text: Bb,
-          found: eb,
-          own: vb
+          text: vz,
+          found: Uz,
+          own: Kz
         }
-        of Tb) {
-        for (const Mb of Jb(Bb)) ab.has(Mb) ? Ub.add(Mb) : Ab.add(Mb);
-        const bb = [...vb, ...eb.filter((bb => "playerCommand" !== bb.name && Eb.has(bb.name))).map((bb => Bb.slice(bb.from, bb.to)))],
-          Tb = bb.length > 0 || !/\bplayerCommand\b/.test(Bb) ? bb : [Bb];
-        for (const ab of Tb)
-          for (const bb of ab.matchAll(aa)) Mb.add(`/${bb[1].split(/\s/)[0]}`)
+        of Xz) {
+        for (const Wz of pz(vz)) tz.has(Wz) ? sz.add(Wz) : Fz.add(Wz);
+        const zz = [...Kz, ...Uz.filter((zz => "playerCommand" !== zz.name && Oz.has(zz.name))).map((zz => vz.slice(zz.from, zz.to)))],
+          Xz = zz.length > 0 || !/\bplayerCommand\b/.test(vz) ? zz : [vz];
+        for (const tz of Xz)
+          for (const zz of tz.matchAll(tt)) Wz.add(`/${zz[1].split(/\s/)[0]}`)
       }
-      const Yb = bb => [...bb].slice(0, 12);
+      const oz = zz => [...zz].slice(0, 12);
       return {
-        callbacks: Yb(Ub),
-        commands: Yb(Mb),
-        functions: Yb(Ab)
+        callbacks: oz(sz),
+        commands: oz(Wz),
+        functions: oz(Fz)
       }
     }
-    const Ma = new Map([
+    const Wt = new Map([
       ["onPlayerJoin", "When a player joins"],
       ["onPlayerLeave", "When a player leaves"],
       ["onPlayerChat", "When a player chats"],
@@ -520,87 +520,87 @@ export const modules = {
       ["doPeriodicSave", "When the game saves"]
     ]);
 
-    function Ta(bb) {
-      const ab = Ma.get(bb);
-      if (ab) return ab;
-      return `When: ${bb.replace(/^on/,"").replace(/([a-z])([A-Z])/g,"$1 $2").toLowerCase()}`
+    function Xt(zz) {
+      const tz = Wt.get(zz);
+      if (tz) return tz;
+      return `When: ${zz.replace(/^on/,"").replace(/([a-z])([A-Z])/g,"$1 $2").toLowerCase()}`
     }
 
-    function Ea(bb) {
-      return Array.isArray(bb) && bb.every((bb => "string" === typeof bb))
+    function Ot(zz) {
+      return Array.isArray(zz) && zz.every((zz => "string" === typeof zz))
     }
-    const Ya = /\b(?:game|minigame|tycoon|rpg|simulator|obby|shop|store|upgrades?|levels?|rounds?|teams?|quests?|leaderboards?|lobby|economy|inventory|bosse?s?|waves?|missions?)\b/gi,
-      Ba = /,|\band\b|\bthen\b|\bplus\b|\bwith\b|\balso\b/gi;
+    const ot = /\b(?:game|minigame|tycoon|rpg|simulator|obby|shop|store|upgrades?|levels?|rounds?|teams?|quests?|leaderboards?|lobby|economy|inventory|bosse?s?|waves?|missions?)\b/gi,
+      vt = /,|\band\b|\bthen\b|\bplus\b|\bwith\b|\balso\b/gi;
 
-    function ea(bb) {
-      var ab, Ub;
-      const Ab = bb.trim().split(/\s+/).length,
-        Mb = new Set((null !== (ab = bb.match(Ya)) && void 0 !== ab ? ab : []).map((bb => bb.toLowerCase().replace(/s$/, "")))).size,
-        Tb = (null !== (Ub = bb.match(Ba)) && void 0 !== Ub ? Ub : []).length;
-      return Mb >= 2 && Tb >= 2 || Ab >= 30 && Tb >= 3
-    }
-
-    function va(bb) {
-      const ab = bb.split(/\n|\|/).map((bb => bb.replace(/^\s*(?:[-*\u2022]|\d+[.)]|step\s*\d+[:.)]?)\s*/i, "").replace(/\s+/g, " ").trim())).filter((bb => "" !== bb)).slice(0, 5).map((bb => bb.length > 90 ? `${bb.slice(0,89).trimEnd()}\u2026` : bb));
-      return ab.length >= 2 ? ab : []
-    }
-    var La = Ub(4553);
-
-    function Pa(bb) {
-      return bb.replace(/^on/, "").replace(/^player/i, "").toLowerCase()
+    function Ut(zz) {
+      var tz, sz;
+      const Fz = zz.trim().split(/\s+/).length,
+        Wz = new Set((null !== (tz = zz.match(ot)) && void 0 !== tz ? tz : []).map((zz => zz.toLowerCase().replace(/s$/, "")))).size,
+        Xz = (null !== (sz = zz.match(vt)) && void 0 !== sz ? sz : []).length;
+      return Wz >= 2 && Xz >= 2 || Fz >= 30 && Xz >= 3
     }
 
-    function Xa(bb) {
-      const ab = new Set;
-      for (const Ub of bb.matchAll(/^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(/gm)) ab.add(Ub[1]);
-      for (const Ub of bb.matchAll(/^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|[A-Za-z_$][\w$]*\s*=>)/gm)) ab.add(Ub[1]);
-      return [...ab]
+    function Kt(zz) {
+      const tz = zz.split(/\n|\|/).map((zz => zz.replace(/^\s*(?:[-*\u2022]|\d+[.)]|step\s*\d+[:.)]?)\s*/i, "").replace(/\s+/g, " ").trim())).filter((zz => "" !== zz)).slice(0, 5).map((zz => zz.length > 90 ? `${zz.slice(0,89).trimEnd()}\u2026` : zz));
+      return tz.length >= 2 ? tz : []
+    }
+    var ut = sz(4495);
+
+    function Nt(zz) {
+      return zz.replace(/^on/, "").replace(/^player/i, "").toLowerCase()
     }
 
-    function ja(bb, ab) {
-      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const Ab = new Set(ab),
-        Mb = new Map;
-      for (const Lb of ab) {
-        var Tb;
-        const bb = Pa(Lb);
-        Mb.set(bb, [...null !== (Tb = Mb.get(bb)) && void 0 !== Tb ? Tb : [], Lb])
+    function bt(zz) {
+      const tz = new Set;
+      for (const sz of zz.matchAll(/^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(/gm)) tz.add(sz[1]);
+      for (const sz of zz.matchAll(/^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|[A-Za-z_$][\w$]*\s*=>)/gm)) tz.add(sz[1]);
+      return [...tz]
+    }
+
+    function wt(zz, tz) {
+      let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const Fz = new Set(tz),
+        Wz = new Map;
+      for (const uz of tz) {
+        var Xz;
+        const zz = Nt(uz);
+        Wz.set(zz, [...null !== (Xz = Wz.get(zz)) && void 0 !== Xz ? Xz : [], uz])
       }
-      const Eb = Xa(bb),
-        Yb = new Set(Xa(Ub)),
-        Bb = [];
-      let eb = bb;
-      for (const Lb of Eb) {
-        var vb;
-        if (Ab.has(Lb) || Yb.has(Lb) || !/^(on|player)[A-Z]/.test(Lb)) continue;
-        const bb = null !== (vb = Mb.get(Pa(Lb))) && void 0 !== vb ? vb : [];
-        1 !== bb.length || Eb.includes(bb[0]) || (eb = (0, La.s)(eb, new RegExp(`${Lb}(?![\\w$])`, "g"), La.l, (() => bb[0])), Bb.push({
-          from: Lb,
-          to: bb[0]
+      const Oz = bt(zz),
+        oz = new Set(bt(sz)),
+        vz = [];
+      let Uz = zz;
+      for (const uz of Oz) {
+        var Kz;
+        if (Fz.has(uz) || oz.has(uz) || !/^(on|player)[A-Z]/.test(uz)) continue;
+        const zz = null !== (Kz = Wz.get(Nt(uz))) && void 0 !== Kz ? Kz : [];
+        1 !== zz.length || Oz.includes(zz[0]) || (Uz = (0, ut.v)(Uz, new RegExp(`${uz}(?![\\w$])`, "g"), ut.n, (() => zz[0])), vz.push({
+          from: uz,
+          to: zz[0]
         }))
       }
       return {
-        code: eb,
-        renames: Bb
+        code: Uz,
+        renames: vz
       }
     }
-    const Ra = {
+    const Dt = {
         functions: "api",
         callbacks: "callback",
         "client options": "clientOption"
       },
-      ka = Object.keys(Ra).map((bb => `"${bb}"`)).join(", ").replace(/, ([^,]*)$/, " or $1"),
-      ya = {
+      gt = Object.keys(Dt).map((zz => `"${zz}"`)).join(", ").replace(/, ([^,]*)$/, " or $1"),
+      Ht = {
         type: "string",
         description: "A few plain words for the creator on what this change does, under 80 characters"
       },
-      Za = {
+      Bt = {
         readOnlyHint: !0,
         destructiveHint: !1,
         idempotentHint: !0,
         openWorldHint: !1
       },
-      Da = [{
+      Pt = [{
         name: "write_file",
         title: "Write a file",
         description: "Replaces a file with new code, or makes a new file",
@@ -611,7 +611,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: ya,
+            why: Ht,
             content: {
               type: "string",
               description: "The whole new file"
@@ -636,7 +636,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: ya,
+            why: Ht,
             search: {
               type: "string",
               description: "Lines to find, copied exactly from the current file"
@@ -669,7 +669,7 @@ export const modules = {
               type: "string",
               description: "The function's or callback's name, e.g. onPlayerJoin"
             },
-            why: ya,
+            why: Ht,
             code: {
               type: "string",
               description: "The whole new function"
@@ -698,7 +698,7 @@ export const modules = {
               type: "string",
               description: 'Where it goes: "top", "end", or the name of the function to put it after'
             },
-            why: ya,
+            why: Ht,
             code: {
               type: "string",
               description: "Only the new code"
@@ -731,7 +731,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: ya
+            why: Ht
           },
           required: ["name"]
         },
@@ -768,7 +768,7 @@ export const modules = {
         inputSchema: {
           type: "object",
           properties: {
-            why: ya,
+            why: Ht,
             search: {
               type: "string",
               description: "Lines to find, copied exactly from the open code"
@@ -906,7 +906,7 @@ export const modules = {
           },
           required: ["path"]
         },
-        annotations: Za,
+        annotations: Bt,
         _meta: {
           isLookup: !0
         }
@@ -919,7 +919,7 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: Za,
+        annotations: Bt,
         _meta: {
           isLookup: !0
         }
@@ -937,7 +937,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: Za,
+        annotations: Bt,
         _meta: {
           isLookup: !0
         }
@@ -950,25 +950,25 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: Za,
+        annotations: Bt,
         _meta: {
           isLookup: !0
         }
       }, {
         name: "fetch_url",
         title: "Read a docs page",
-        description: `Reads a page of Bloxd's docs as Markdown. ${kb.n} lists every page with its link; then read the page, or the part of a long page, you need`,
+        description: `Reads a page of Bloxd's docs as Markdown. ${gz.i} lists every page with its link; then read the page, or the part of a long page, you need`,
         inputSchema: {
           type: "object",
           properties: {
             url: {
               type: "string",
-              description: `${kb.n}, or a page it links to`
+              description: `${gz.i}, or a page it links to`
             }
           },
           required: ["url"]
         },
-        annotations: Za,
+        annotations: Bt,
         _meta: {
           isLookup: !0
         }
@@ -981,7 +981,7 @@ export const modules = {
           properties: {
             list: {
               type: "string",
-              description: `${ka}, to list every one of them`
+              description: `${gt}, to list every one of them`
             },
             name: {
               type: "string",
@@ -990,7 +990,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: Za,
+        annotations: Bt,
         _meta: {
           isLookup: !0
         }
@@ -1008,7 +1008,7 @@ export const modules = {
           },
           required: ["words"]
         },
-        annotations: Za,
+        annotations: Bt,
         _meta: {
           isLookup: !0
         }
@@ -1026,7 +1026,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: Za,
+        annotations: Bt,
         _meta: {
           isLookup: !0
         }
@@ -1044,7 +1044,7 @@ export const modules = {
           },
           required: ["name"]
         },
-        annotations: Za,
+        annotations: Bt,
         _meta: {
           isLookup: !0
         }
@@ -1057,290 +1057,290 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: Za,
+        annotations: Bt,
         _meta: {
           isLookup: !0
         }
       }];
 
-    function za(bb) {
-      var ab;
-      return !0 === (null === (ab = xa(bb)._meta) || void 0 === ab ? void 0 : ab.isLookup)
+    function rt(zz) {
+      var tz;
+      return !0 === (null === (tz = Yt(zz)._meta) || void 0 === tz ? void 0 : tz.isLookup)
     }
 
-    function xa(bb) {
-      const ab = Da.find((ab => ab.name === bb));
-      if (!ab) throw new Error(`No AI Helper tool ${bb}`);
-      return ab
+    function Yt(zz) {
+      const tz = Pt.find((tz => tz.name === zz));
+      if (!tz) throw new Error(`No AI Helper tool ${zz}`);
+      return tz
     }
-    const ia = Da.map((bb => bb.name)).filter((bb => "plan" !== bb && "remember" !== bb)).join("|"),
-      fa = new RegExp(String.raw`^(?:\s*(?:We(?:'ll|'d| will| need to| should| must| can(?!'t))|Will use|Need to|Simpler:)(?:[^\n.]*\.(?=[A-Z])|[^\n]*(?:\n+|$))|\s*(?:Now,? )?(?:I'll |I will |[Ll]et's |[Ll]et me )?(?:[Ww]rite|[Mm]ake|[Ss]end|[Oo]utput|[Pp]roduce|[Uu]se|[Dd]o|[Cc]all) (?:the |an? |one )?(?:${ia})\b[^\n.]*\.?[ \t]*\n*)+`),
-      ma = [new RegExp(String.raw`(?:^|[^\w"</=.])(?:${ia})\b(?!\s*\()`), /\btool calls?\b|^(?:so,? )?(?:(?:we(?:'ll| will)?|I'll|let's) (?:produce|output|generate)|now (?:produce|output))\b|^The user (?:wants?|wanted|asks?|asked|requests?|requested|says|said)\b/i, /^We (?:need|have) to\b/, /^(?:Now|Then),? (?:replace|apply) \S+\.?$|^First edit\b|^Provide (?:the )?(?:entire|full)\b/, /^Let's (?:update|write|implement|produce|output|apply|edit) (?:the )?(?:code|edits?|changes?|calls?|function)\b/, /^(?:Implement|Proceed)\.?$/],
-      pa = /[.!?](?=[ \t]|[A-Z]|$)|\n|$/g;
+    const xt = Pt.map((zz => zz.name)).filter((zz => "plan" !== zz && "remember" !== zz)).join("|"),
+      mt = new RegExp(String.raw`^(?:\s*(?:We(?:'ll|'d| will| need to| should| must| can(?!'t))|Will use|Need to|Simpler:)(?:[^\n.]*\.(?=[A-Z])|[^\n]*(?:\n+|$))|\s*(?:Now,? )?(?:I'll |I will |[Ll]et's |[Ll]et me )?(?:[Ww]rite|[Mm]ake|[Ss]end|[Oo]utput|[Pp]roduce|[Uu]se|[Dd]o|[Cc]all) (?:the |an? |one )?(?:${xt})\b[^\n.]*\.?[ \t]*\n*)+`),
+      Jt = [new RegExp(String.raw`(?:^|[^\w"</=.])(?:${xt})\b(?!\s*\()`), /\btool calls?\b|^(?:so,? )?(?:(?:we(?:'ll| will)?|I'll|let's) (?:produce|output|generate)|now (?:produce|output))\b|^The user (?:wants?|wanted|asks?|asked|requests?|requested|says|said)\b/i, /^We (?:need|have) to\b/, /^(?:Now|Then),? (?:replace|apply) \S+\.?$|^First edit\b|^Provide (?:the )?(?:entire|full)\b/, /^Let's (?:update|write|implement|produce|output|apply|edit) (?:the )?(?:code|edits?|changes?|calls?|function)\b/, /^(?:Implement|Proceed)\.?$/],
+      It = /[.!?](?=[ \t]|[A-Z]|$)|\n|$/g;
 
-    function Na(bb) {
-      const ab = bb.trim();
-      return ma.some((bb => bb.test(ab)))
+    function Ct(zz) {
+      const tz = zz.trim();
+      return Jt.some((zz => zz.test(tz)))
     }
 
-    function Wa(bb, ab) {
-      const Ub = bb.replace(fa, "");
-      return ab ? function(bb) {
-        const ab = bb.indexOf("```"),
-          Ub = -1 === ab ? bb : bb.slice(0, ab);
-        let Ab = -1,
-          Mb = -1,
-          Tb = 0;
-        for (const Eb of Ub.matchAll(pa)) {
-          const bb = Eb.index + Eb[0].length;
-          Na(Ub.slice(Tb, bb)) && (Ab = -1 === Ab ? Tb : Ab, Mb = bb), Tb = bb
+    function et(zz, tz) {
+      const sz = zz.replace(mt, "");
+      return tz ? function(zz) {
+        const tz = zz.indexOf("```"),
+          sz = -1 === tz ? zz : zz.slice(0, tz);
+        let Fz = -1,
+          Wz = -1,
+          Xz = 0;
+        for (const Oz of sz.matchAll(It)) {
+          const zz = Oz.index + Oz[0].length;
+          Ct(sz.slice(Xz, zz)) && (Fz = -1 === Fz ? Xz : Fz, Wz = zz), Xz = zz
         }
-        return -1 === Mb ? bb : "" !== Ub.slice(Mb).trim() ? bb.slice(Mb).trimStart() : `${bb.slice(0,Ab).trimEnd()}\n${bb.slice(Ub.length)}`.trim()
-      }(Ub) : "" !== Ub.trim() ? Ub : bb
+        return -1 === Wz ? zz : "" !== sz.slice(Wz).trim() ? zz.slice(Wz).trimStart() : `${zz.slice(0,Fz).trimEnd()}\n${zz.slice(sz.length)}`.trim()
+      }(sz) : "" !== sz.trim() ? sz : zz
     }
-    const Ha = /^(?=[\s\S]{200})[^\n]*(?:\\n[^\n]*){3}$/,
-      Ia = new Set(["content", "code"]);
+    const Zt = /^(?=[\s\S]{200})[^\n]*(?:\\n[^\n]*){3}$/,
+      Gt = new Set(["content", "code"]);
 
-    function da(bb) {
-      const ab = "string" === typeof bb ? bb.split(/[./:]/).pop() : void 0;
-      return function(bb) {
-        return Da.some((ab => ab.name === bb))
-      }(ab) ? ab : null
+    function Tt(zz) {
+      const tz = "string" === typeof zz ? zz.split(/[./:]/).pop() : void 0;
+      return function(zz) {
+        return Pt.some((tz => tz.name === zz))
+      }(tz) ? tz : null
     }
 
-    function Fa(bb, ab) {
-      return Ub => {
-        const Ab = [];
-        let Mb;
-        for (const Bb of Ub.matchAll(bb)) {
-          var Tb;
-          const bb = da(Bb[1]);
-          if (null === bb) continue;
-          const eb = {};
-          for (const Ub of Bb[2].matchAll(ab)) {
-            var Eb, Yb;
-            eb[null !== (Eb = Ub[1]) && void 0 !== Eb ? Eb : Ub[2]] = null !== (Yb = Ub[3]) && void 0 !== Yb ? Yb : Ub[4]
-          }(null === (Tb = Mb) || void 0 === Tb ? void 0 : Tb.call.name) === bb && "" === Ub.slice(Mb.index + Mb.call.source.length, Bb.index).trim() ? Ab[Ab.length - 1] = {
+    function ct(zz, tz) {
+      return sz => {
+        const Fz = [];
+        let Wz;
+        for (const vz of sz.matchAll(zz)) {
+          var Xz;
+          const zz = Tt(vz[1]);
+          if (null === zz) continue;
+          const Uz = {};
+          for (const sz of vz[2].matchAll(tz)) {
+            var Oz, oz;
+            Uz[null !== (Oz = sz[1]) && void 0 !== Oz ? Oz : sz[2]] = null !== (oz = sz[3]) && void 0 !== oz ? oz : sz[4]
+          }(null === (Xz = Wz) || void 0 === Xz ? void 0 : Xz.call.name) === zz && "" === sz.slice(Wz.index + Wz.call.source.length, vz.index).trim() ? Fz[Fz.length - 1] = {
             call: {
-              name: bb,
-              args: eb,
-              source: Ub.slice(Mb.index, Bb.index + Bb[0].length)
+              name: zz,
+              args: Uz,
+              source: sz.slice(Wz.index, vz.index + vz[0].length)
             },
-            index: Mb.index
-          } : Ab.push({
+            index: Wz.index
+          } : Fz.push({
             call: {
-              name: bb,
-              args: eb,
-              source: Bb[0]
+              name: zz,
+              args: Uz,
+              source: vz[0]
             },
-            index: Bb.index
-          }), Mb = "" === Bb[2].trim() && xa(bb).inputSchema.required.length > 0 ? Ab.at(-1) : void 0
+            index: vz.index
+          }), Wz = "" === vz[2].trim() && Yt(zz).inputSchema.required.length > 0 ? Fz.at(-1) : void 0
         }
-        return Ab
+        return Fz
       }
     }
 
-    function ha(bb) {
-      return bb.replace(/\\(["\\nt])/g, ((bb, ab) => "n" === ab ? "\n" : "t" === ab ? "\t" : ab))
+    function jt(zz) {
+      return zz.replace(/\\(["\\nt])/g, ((zz, tz) => "n" === tz ? "\n" : "t" === tz ? "\t" : tz))
     }
 
-    function Ga(bb) {
-      let ab = null !== bb && void 0 !== bb ? bb : {};
-      if ("string" === typeof ab) try {
-        ab = JSON.parse("" === ab ? "{}" : ab)
+    function At(zz) {
+      let tz = null !== zz && void 0 !== zz ? zz : {};
+      if ("string" === typeof tz) try {
+        tz = JSON.parse("" === tz ? "{}" : tz)
       } catch {
         return null
       }
-      if ("object" !== typeof ab || null === ab) return null;
-      const Ub = {};
-      for (const [Ab, Mb] of Object.entries(ab)) "string" === typeof Mb ? Ub[Ab] = Ia.has(Ab) && Ha.test(Mb) && !Mb.includes("\n") ? ha(Mb) : Mb : "boolean" === typeof Mb || "number" === typeof Mb ? Ub[Ab] = String(Mb) : "object" !== typeof Mb || null === Mb || Array.isArray(Mb) ? Array.isArray(Mb) && Mb.every((bb => "string" === typeof bb)) && (Ub[Ab] = Mb.join("\n")) : Ub[Ab] = JSON.stringify(Mb);
-      return Ub
+      if ("object" !== typeof tz || null === tz) return null;
+      const sz = {};
+      for (const [Fz, Wz] of Object.entries(tz)) "string" === typeof Wz ? sz[Fz] = Gt.has(Fz) && Zt.test(Wz) && !Wz.includes("\n") ? jt(Wz) : Wz : "boolean" === typeof Wz || "number" === typeof Wz ? sz[Fz] = String(Wz) : "object" !== typeof Wz || null === Wz || Array.isArray(Wz) ? Array.isArray(Wz) && Wz.every((zz => "string" === typeof zz)) && (sz[Fz] = Wz.join("\n")) : sz[Fz] = JSON.stringify(Wz);
+      return sz
     }
 
-    function Qa(bb, ab) {
-      let Ub = 0,
-        Ab = !1;
-      for (let Mb = ab; Mb < bb.length; Mb++) {
-        const ab = bb[Mb];
-        if (Ab) "\\" === ab ? Mb++ : '"' === ab && (Ab = !1);
-        else if ('"' === ab) Ab = !0;
-        else if ("{" === ab) Ub++;
-        else if ("}" === ab && (Ub--, 0 === Ub)) return Mb + 1
+    function yt(zz, tz) {
+      let sz = 0,
+        Fz = !1;
+      for (let Wz = tz; Wz < zz.length; Wz++) {
+        const tz = zz[Wz];
+        if (Fz) "\\" === tz ? Wz++ : '"' === tz && (Fz = !1);
+        else if ('"' === tz) Fz = !0;
+        else if ("{" === tz) sz++;
+        else if ("}" === tz && (sz--, 0 === sz)) return Wz + 1
       }
       return null
     }
 
-    function qa(bb, ab) {
-      let Ub = bb;
+    function Mt(zz, tz) {
+      let sz = zz;
       for (const {
-          call: Ab,
-          index: Mb
+          call: Fz,
+          index: Wz
         }
-        of ab) Ub = Ub.slice(0, Mb) + " ".repeat(Ab.source.length) + Ub.slice(Mb + Ab.source.length);
-      return Ub
+        of tz) sz = sz.slice(0, Wz) + " ".repeat(Fz.source.length) + sz.slice(Wz + Fz.source.length);
+      return sz
     }
-    const ua = new RegExp(`\\b(${Da.map((bb=>bb.name)).join("|")})\\s*\\(\\s*(?=\\{)`, "g");
-    const ra = {
-        formatCall: (bb, ab) => {
-          const Ub = Object.fromEntries(Object.entries(ab).filter((bb => {
-            let [, ab] = bb;
-            return void 0 !== ab
+    const dt = new RegExp(`\\b(${Pt.map((zz=>zz.name)).join("|")})\\s*\\(\\s*(?=\\{)`, "g");
+    const ht = {
+        formatCall: (zz, tz) => {
+          const sz = Object.fromEntries(Object.entries(tz).filter((zz => {
+            let [, tz] = zz;
+            return void 0 !== tz
           })));
-          return `${bb}(${JSON.stringify(Ub)})`
+          return `${zz}(${JSON.stringify(sz)})`
         },
-        declareTools: bb => bb,
+        declareTools: zz => zz,
         callStyle: "Make each call with function calling, its code in full: never write a call, or the code it carries, in your answer's words or in a code fence.",
-        fileResult: (bb, ab, Ub) => `<file path="${bb}"${Ub?' open_in_editor="true"':""}>\n${ab}\n</file>`,
-        editFailure: (bb, ab) => `${bb} failed: ${ab}`,
-        lookupResult: (bb, ab, Ub) => `${bb} ${ab}:\n${Ub}`
+        fileResult: (zz, tz, sz) => `<file path="${zz}"${sz?' open_in_editor="true"':""}>\n${tz}\n</file>`,
+        editFailure: (zz, tz) => `${zz} failed: ${tz}`,
+        lookupResult: (zz, tz, sz) => `${zz} ${tz}:\n${sz}`
       },
-      Ka = /(?:<\|start\|>\s*assistant\s*)?<\|channel\|>[^<{]*?\bto=([\w./:-]+)[^{]*?(?=\{)/g;
+      Qt = /(?:<\|start\|>\s*assistant\s*)?<\|channel\|>[^<{]*?\bto=([\w./:-]+)[^{]*?(?=\{)/g;
 
-    function oa(bb) {
-      const ab = [];
-      for (const Mb of bb.matchAll(Ka)) {
-        const Tb = da(Mb[1]),
-          Eb = Mb.index + Mb[0].length,
-          Yb = Qa(bb, Eb),
-          Bb = null === Yb ? null : Ga(bb.slice(Eb, Yb));
-        if (null !== Tb && null !== Yb && null !== Bb) {
-          var Ub, Ab;
-          const Eb = null !== (Ub = null === (Ab = bb.slice(Yb).match(/^\s*<\|call\|>/)) || void 0 === Ab ? void 0 : Ab[0]) && void 0 !== Ub ? Ub : "";
-          ab.push({
+    function kt(zz) {
+      const tz = [];
+      for (const Wz of zz.matchAll(Qt)) {
+        const Xz = Tt(Wz[1]),
+          Oz = Wz.index + Wz[0].length,
+          oz = yt(zz, Oz),
+          vz = null === oz ? null : At(zz.slice(Oz, oz));
+        if (null !== Xz && null !== oz && null !== vz) {
+          var sz, Fz;
+          const Oz = null !== (sz = null === (Fz = zz.slice(oz).match(/^\s*<\|call\|>/)) || void 0 === Fz ? void 0 : Fz[0]) && void 0 !== sz ? sz : "";
+          tz.push({
             call: {
-              name: Tb,
-              args: Bb,
-              source: bb.slice(Mb.index, Yb + Eb.length)
+              name: Xz,
+              args: vz,
+              source: zz.slice(Wz.index, oz + Oz.length)
             },
-            index: Mb.index
+            index: Wz.index
           })
         }
       }
-      return ab
+      return tz
     }
 
-    function la(bb) {
-      var ab, Ub, Ab, Mb;
-      let Tb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      if ("object" !== typeof bb || null === bb) return [];
-      const Eb = bb;
-      if (Array.isArray(Eb.tool_calls)) return Eb.tool_calls.flatMap((bb => la(bb, !0)));
-      if (void 0 !== Eb.tool_call) return la(Eb.tool_call, !0);
-      if (void 0 !== Eb.function) return la(Eb.function, !0);
-      const Yb = null !== (ab = null !== (Ub = null !== (Ab = null !== (Mb = Eb.arguments) && void 0 !== Mb ? Mb : Eb.params) && void 0 !== Ab ? Ab : Eb.param) && void 0 !== Ub ? Ub : Eb.args) && void 0 !== ab ? ab : Eb.input,
-        Bb = da(Eb.tool);
-      if (null !== Bb) {
+    function it(zz) {
+      var tz, sz, Fz, Wz;
+      let Xz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      if ("object" !== typeof zz || null === zz) return [];
+      const Oz = zz;
+      if (Array.isArray(Oz.tool_calls)) return Oz.tool_calls.flatMap((zz => it(zz, !0)));
+      if (void 0 !== Oz.tool_call) return it(Oz.tool_call, !0);
+      if (void 0 !== Oz.function) return it(Oz.function, !0);
+      const oz = null !== (tz = null !== (sz = null !== (Fz = null !== (Wz = Oz.arguments) && void 0 !== Wz ? Wz : Oz.params) && void 0 !== Fz ? Fz : Oz.param) && void 0 !== sz ? sz : Oz.args) && void 0 !== tz ? tz : Oz.input,
+        vz = Tt(Oz.tool);
+      if (null !== vz) {
         const {
-          tool: bb,
-          ...ab
-        } = Eb, Ub = Ga(null !== Yb && void 0 !== Yb ? Yb : ab);
-        return null === Ub ? [] : [{
-          name: Bb,
-          args: Ub
+          tool: zz,
+          ...tz
+        } = Oz, sz = At(null !== oz && void 0 !== oz ? oz : tz);
+        return null === sz ? [] : [{
+          name: vz,
+          args: sz
         }]
       }
-      if (!Tb && void 0 === Yb) return [];
-      const eb = da(Eb.name),
-        vb = Ga(Yb);
-      return null === eb || null === vb ? [] : [{
-        name: eb,
-        args: vb
+      if (!Xz && void 0 === oz) return [];
+      const Uz = Tt(Oz.name),
+        Kz = At(oz);
+      return null === Uz || null === Kz ? [] : [{
+        name: Uz,
+        args: Kz
       }]
     }
 
-    function ta(bb) {
-      const ab = [];
-      let Ub = bb.indexOf("{");
-      for (; - 1 !== Ub;) {
-        const Ab = Qa(bb, Ub);
-        let Mb = [];
-        if (null !== Ab) try {
-          Mb = la(JSON.parse(bb.slice(Ub, Ab)))
+    function Lt(zz) {
+      const tz = [];
+      let sz = zz.indexOf("{");
+      for (; - 1 !== sz;) {
+        const Fz = yt(zz, sz);
+        let Wz = [];
+        if (null !== Fz) try {
+          Wz = it(JSON.parse(zz.slice(sz, Fz)))
         } catch {}
-        if (null !== Ab && Mb.length > 0) {
-          const Tb = bb.slice(Ub, Ab);
-          ab.push(...Mb.map((bb => ({
+        if (null !== Fz && Wz.length > 0) {
+          const Xz = zz.slice(sz, Fz);
+          tz.push(...Wz.map((zz => ({
             call: {
-              ...bb,
-              source: Tb
+              ...zz,
+              source: Xz
             },
-            index: Ub
-          })))), Ub = bb.indexOf("{", Ab)
-        } else Ub = bb.indexOf("{", Ub + 1)
+            index: sz
+          })))), sz = zz.indexOf("{", Fz)
+        } else sz = zz.indexOf("{", sz + 1)
       }
-      return ab
+      return tz
     }
 
-    function wa(bb) {
-      if (Array.isArray(bb)) return `[${bb.map(wa).join(", ")}]`;
-      if ("object" === typeof bb && null !== bb) {
-        return `{${Object.entries(bb).map((bb=>{let[ab,Ub]=bb;return`${JSON.stringify(ab)}: ${wa(Ub)}`})).join(", ")}}`
+    function lt(zz) {
+      if (Array.isArray(zz)) return `[${zz.map(lt).join(", ")}]`;
+      if ("object" === typeof zz && null !== zz) {
+        return `{${Object.entries(zz).map((zz=>{let[tz,sz]=zz;return`${JSON.stringify(tz)}: ${lt(sz)}`})).join(", ")}}`
       }
-      return JSON.stringify(bb)
+      return JSON.stringify(zz)
     }
-    const sa = {
-        formatCall: (bb, ab) => `<tool_call>\n<function=${bb}>\n${Object.entries(ab).flatMap((bb=>{let[ab,Ub]=bb;return void 0===Ub?[]:[`<parameter=${ab}>\n${Ub}\n</parameter>\n`]})).join("")}</function>\n</tool_call>`,
-        declareTools: (bb, ab, Ub) => Ub || 0 === ab.length ? bb : `${function(bb){return`# Tools\n\nYou have access to the following functions:\n\n<tools>${bb.map((bb=>`\n${wa({type:"function",function:{name:bb.name,description:bb.description,parameters:bb.inputSchema}})}`)).join("")}\n</tools>\n\nIf you choose to call a function ONLY reply in the following format with NO suffix:\n\n<tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>\nvalue_1\n</parameter>\n<parameter=example_parameter_2>\nThis is the value for the second parameter\nthat can span\nmultiple lines\n</parameter>\n</function>\n</tool_call>\n\n<IMPORTANT>\nReminder:\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\n- Required parameters MUST be specified\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\n</IMPORTANT>`}(ab)}\n\n${bb}`,
+    const nt = {
+        formatCall: (zz, tz) => `<tool_call>\n<function=${zz}>\n${Object.entries(tz).flatMap((zz=>{let[tz,sz]=zz;return void 0===sz?[]:[`<parameter=${tz}>\n${sz}\n</parameter>\n`]})).join("")}</function>\n</tool_call>`,
+        declareTools: (zz, tz, sz) => sz || 0 === tz.length ? zz : `${function(zz){return`# Tools\n\nYou have access to the following functions:\n\n<tools>${zz.map((zz=>`\n${lt({type:"function",function:{name:zz.name,description:zz.description,parameters:zz.inputSchema}})}`)).join("")}\n</tools>\n\nIf you choose to call a function ONLY reply in the following format with NO suffix:\n\n<tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>\nvalue_1\n</parameter>\n<parameter=example_parameter_2>\nThis is the value for the second parameter\nthat can span\nmultiple lines\n</parameter>\n</function>\n</tool_call>\n\n<IMPORTANT>\nReminder:\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\n- Required parameters MUST be specified\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\n</IMPORTANT>`}(tz)}\n\n${zz}`,
         callStyle: "Write each call in your answer as a <tool_call> holding a <function=name> block with a <parameter=name> for each argument, the code inside as it is, not escaped and in full: never as JSON or inside a code fence.",
-        fileResult: (bb, ab, Ub) => `<tool_response>\nview_file ${bb}${Ub?" (open in the editor)":""}:\n${ab}\n</tool_response>`,
-        editFailure: (bb, ab) => `<tool_response>\nError: ${ab}\n</tool_response>`,
-        lookupResult: (bb, ab, Ub) => `<tool_response>\n${bb} ${ab}:\n${Ub}\n</tool_response>`
+        fileResult: (zz, tz, sz) => `<tool_response>\nview_file ${zz}${sz?" (open in the editor)":""}:\n${tz}\n</tool_response>`,
+        editFailure: (zz, tz) => `<tool_response>\nError: ${tz}\n</tool_response>`,
+        lookupResult: (zz, tz, sz) => `<tool_response>\n${zz} ${tz}:\n${sz}\n</tool_response>`
       },
-      ga = Fa(/(?:<tool_call>\s*)?<function=([\w.:/-]+)>((?:(?!<tool_call\b|<function=)[\s\S])*?(?:<\/parameter>(?=\s*(?:<tool_call\b|<function=|$))|(?=<\/function>|<\/tool_call>)))(?:<\/function>(?:\s*<\/tool_call>)?|<\/tool_call>|\s*(?=<tool_call\b|<function=|$))/g, /<parameter(?:=([\w-]+)|\s+name\s*=\s*"([^"]+)")\s*>\n?([\s\S]*?)(?:\n?<\/parameter>|(?=<parameter[=\s])|\n?$)/g),
-      Ca = new Set(["path", "why", "name", "after", "question", "allow_other", "note"]),
-      Va = {
-        formatCall: (bb, ab) => `<tool_call name="${bb}">\n${Object.entries(ab).flatMap((bb=>{let[ab,Ub]=bb;return void 0===Ub?[]:[`<param name="${ab}">${Ca.has(ab)?Ub:`\n${Ub}\n`}</param>\n`]})).join("")}</tool_call>`,
-        declareTools: bb => bb,
+      qt = ct(/(?:<tool_call>\s*)?<function=([\w.:/-]+)>((?:(?!<tool_call\b|<function=)[\s\S])*?(?:<\/parameter>(?=\s*(?:<tool_call\b|<function=|$))|(?=<\/function>|<\/tool_call>)))(?:<\/function>(?:\s*<\/tool_call>)?|<\/tool_call>|\s*(?=<tool_call\b|<function=|$))/g, /<parameter(?:=([\w-]+)|\s+name\s*=\s*"([^"]+)")\s*>\n?([\s\S]*?)(?:\n?<\/parameter>|(?=<parameter[=\s])|\n?$)/g),
+      St = new Set(["path", "why", "name", "after", "question", "allow_other", "note"]),
+      Vt = {
+        formatCall: (zz, tz) => `<tool_call name="${zz}">\n${Object.entries(tz).flatMap((zz=>{let[tz,sz]=zz;return void 0===sz?[]:[`<param name="${tz}">${St.has(tz)?sz:`\n${sz}\n`}</param>\n`]})).join("")}</tool_call>`,
+        declareTools: zz => zz,
         callStyle: "Write each call in your answer as a <tool_call> with a <param> for each argument, the code inside as it is, not escaped and in full: never as JSON, a function call or inside a code fence.",
-        fileResult: (bb, ab, Ub) => `<tool_result name="view_file" path="${bb}"${Ub?' open_in_editor="true"':""}>\n${ab}\n</tool_result>`,
-        editFailure: (bb, ab) => `<tool_result name="${bb}" is_error="true">\n${ab}\n</tool_result>`,
-        lookupResult: (bb, ab, Ub) => `<tool_result name="${bb}" about="${ab.replace(/"/g,"'")}">\n${Ub}\n</tool_result>`
+        fileResult: (zz, tz, sz) => `<tool_result name="view_file" path="${zz}"${sz?' open_in_editor="true"':""}>\n${tz}\n</tool_result>`,
+        editFailure: (zz, tz) => `<tool_result name="${zz}" is_error="true">\n${tz}\n</tool_result>`,
+        lookupResult: (zz, tz, sz) => `<tool_result name="${zz}" about="${tz.replace(/"/g,"'")}">\n${sz}\n</tool_result>`
       },
-      Oa = Fa(/<tool_call\s+name\s*=\s*"([^"]+)"\s*>((?:(?!<tool_call\b)[\s\S])*?(?:<\/param(?:eter)?>(?=\s*(?:<tool_call\b|$))|(?=<\/(?:tool_call|invoke|function)>)))(?:<\/(?:tool_call|invoke|function)>|\s*(?=<tool_call\b|$))/g, /<(?:param(?:eter)?\s+name\s*=\s*"([^"]+)"|(?:param(?:eter)?(?:=|\s+)|(?=(?:search|replace)>))([\w-]+))\s*>\n?(?:([\s\S]*?)\n?<\/(?:param(?:eter)?|\1\2)>|((?=\s*\S)(?![\s\S]*<\/[\w-]+[^>]*>)[\s\S]*?)\s*$)/g),
-      ca = {
-        simple: Va,
-        qwenXml: sa,
-        deepseek: ra
+      Rt = ct(/<tool_call\s+name\s*=\s*"([^"]+)"\s*>((?:(?!<tool_call\b)[\s\S])*?(?:<\/param(?:eter)?>(?=\s*(?:<tool_call\b|$))|(?=<\/(?:tool_call|invoke|function)>)))(?:<\/(?:tool_call|invoke|function)>|\s*(?=<tool_call\b|$))/g, /<(?:param(?:eter)?\s+name\s*=\s*"([^"]+)"|(?:param(?:eter)?(?:=|\s+)|(?=(?:search|replace)>))([\w-]+))\s*>\n?(?:([\s\S]*?)\n?<\/(?:param(?:eter)?|\1\2)>|((?=\s*\S)(?![\s\S]*<\/[\w-]+[^>]*>)[\s\S]*?)\s*$)/g),
+      pt = {
+        simple: Vt,
+        qwenXml: nt,
+        deepseek: ht
       },
-      Ja = {
-        simple: Oa,
-        qwenXml: ga,
-        deepseek: function(bb) {
-          const ab = [];
-          for (const Yb of bb.matchAll(ua)) {
-            var Ub, Ab, Mb, Tb, Eb;
-            const Bb = da(Yb[1]),
-              eb = Yb.index + Yb[0].length,
-              vb = Qa(bb, eb);
-            if (null === Bb || null === vb || (null !== (Ub = null === (Ab = ab.at(-1)) || void 0 === Ab ? void 0 : Ab.index) && void 0 !== Ub ? Ub : -1) + (null !== (Mb = null === (Tb = ab.at(-1)) || void 0 === Tb ? void 0 : Tb.call.source.length) && void 0 !== Mb ? Mb : 0) > Yb.index) continue;
-            const Lb = Ga(bb.slice(eb, vb));
-            if (null === Lb) continue;
-            const Pb = /^\s*\)/.exec(bb.slice(vb)),
-              Xb = bb.slice(Yb.index, vb + (null !== (Eb = null === Pb || void 0 === Pb ? void 0 : Pb[0].length) && void 0 !== Eb ? Eb : 0));
-            ab.push({
+      ft = {
+        simple: Rt,
+        qwenXml: qt,
+        deepseek: function(zz) {
+          const tz = [];
+          for (const oz of zz.matchAll(dt)) {
+            var sz, Fz, Wz, Xz, Oz;
+            const vz = Tt(oz[1]),
+              Uz = oz.index + oz[0].length,
+              Kz = yt(zz, Uz);
+            if (null === vz || null === Kz || (null !== (sz = null === (Fz = tz.at(-1)) || void 0 === Fz ? void 0 : Fz.index) && void 0 !== sz ? sz : -1) + (null !== (Wz = null === (Xz = tz.at(-1)) || void 0 === Xz ? void 0 : Xz.call.source.length) && void 0 !== Wz ? Wz : 0) > oz.index) continue;
+            const uz = At(zz.slice(Uz, Kz));
+            if (null === uz) continue;
+            const Nz = /^\s*\)/.exec(zz.slice(Kz)),
+              bz = zz.slice(oz.index, Kz + (null !== (Oz = null === Nz || void 0 === Nz ? void 0 : Nz[0].length) && void 0 !== Oz ? Oz : 0));
+            tz.push({
               call: {
-                name: Bb,
-                args: Lb,
-                source: Xb
+                name: vz,
+                args: uz,
+                source: bz
               },
-              index: Yb.index
+              index: oz.index
             })
           }
-          return ab
+          return tz
         }
       },
-      na = ["simple", "qwenXml"];
+      Et = ["simple", "qwenXml"];
 
-    function Sa(bb) {
-      return "deepseek" === bb ? "simple" : bb
+    function zs(zz) {
+      return "deepseek" === zz ? "simple" : zz
     }
-    const bU = /<\|[a-z_]+\|>/g,
-      aU = /^[ \t]*`{1,2}[ \t]*$/gm,
-      UU = /^[ \t]*<\/(?:tool_call|invoke|function|param(?:eter)?)>[ \t]*$/gm,
-      AU = /^[ \t]*(?:Wait|Oops|Hmm)\b[^\n]*\b(?:redo|re-do|the format|let me (?:fix|try|rewrite|write) (?:that|it|this))\b[^\n]*$/gim,
-      MU = /```[\w-]*/g,
-      TU = /^[\s[\],]*$/,
-      EU = {
+    const ts = /<\|[a-z_]+\|>/g,
+      ss = /^[ \t]*`{1,2}[ \t]*$/gm,
+      Fs = /^[ \t]*<\/(?:tool_call|invoke|function|param(?:eter)?)>[ \t]*$/gm,
+      Ws = /^[ \t]*(?:Wait|Oops|Hmm)\b[^\n]*\b(?:redo|re-do|the format|let me (?:fix|try|rewrite|write) (?:that|it|this))\b[^\n]*$/gim,
+      Xs = /```[\w-]*/g,
+      Os = /^[\s[\],]*$/,
+      os = {
         use_prefab: 0,
         add_world_code: 1,
         write_file: 2,
@@ -1365,823 +1365,823 @@ export const modules = {
         view_prefab: 21
       };
 
-    function YU(bb) {
-      return xa(bb.name).inputSchema.required.every((ab => void 0 !== bb.args[ab]))
+    function vs(zz) {
+      return Yt(zz.name).inputSchema.required.every((tz => void 0 !== zz.args[tz]))
     }
 
-    function BU(bb, ab) {
-      const Ub = da(bb),
-        Ab = Ga(ab);
-      return null === Ub || null === Ab ? null : {
-        name: Ub,
-        args: Ab
+    function Us(zz, tz) {
+      const sz = Tt(zz),
+        Fz = At(tz);
+      return null === sz || null === Fz ? null : {
+        name: sz,
+        args: Fz
       }
     }
 
-    function eU(bb, ab) {
-      const Ub = [];
-      for (const Ab of function(bb) {
-          const ab = Sa(bb),
-            Ub = na.filter((bb => bb !== ab));
-          return [Ja[ab], ...bb === ab ? [] : [Ja[bb]], ...Ub.map((bb => Ja[bb])), oa, ta]
-        }(ab)) Ub.push(...Ab(qa(bb, Ub)));
-      return Ub.map((bb => {
+    function Ks(zz, tz) {
+      const sz = [];
+      for (const Fz of function(zz) {
+          const tz = zs(zz),
+            sz = Et.filter((zz => zz !== tz));
+          return [ft[tz], ...zz === tz ? [] : [ft[zz]], ...sz.map((zz => ft[zz])), kt, Lt]
+        }(tz)) sz.push(...Fz(Mt(zz, sz)));
+      return sz.map((zz => {
         let {
-          call: ab
-        } = bb;
-        return ab
+          call: tz
+        } = zz;
+        return tz
       }))
     }
 
-    function vU(bb, ab) {
-      return eU(bb, ab).sort(((bb, ab) => EU[bb.name] - EU[ab.name]))
+    function us(zz, tz) {
+      return Ks(zz, tz).sort(((zz, tz) => os[zz.name] - os[tz.name]))
     }
 
-    function LU(bb) {
-      return function(bb) {
-        const ab = [...bb.matchAll(MU)],
-          Ub = [];
-        let Ab = 0;
-        for (; Ab < ab.length;) {
-          const Mb = ab[Ab],
-            Tb = ab.at(Ab + 1);
-          void 0 !== Tb && "```" === Tb[0] ? (TU.test(bb.slice(Mb.index + Mb[0].length, Tb.index)) && Ub.push({
-            from: Mb.index,
-            to: Tb.index + Tb[0].length
-          }), Ab += 2) : (Ub.push({
-            from: Mb.index,
-            to: Mb.index + Mb[0].length
-          }), Ab++)
+    function Ns(zz) {
+      return function(zz) {
+        const tz = [...zz.matchAll(Xs)],
+          sz = [];
+        let Fz = 0;
+        for (; Fz < tz.length;) {
+          const Wz = tz[Fz],
+            Xz = tz.at(Fz + 1);
+          void 0 !== Xz && "```" === Xz[0] ? (Os.test(zz.slice(Wz.index + Wz[0].length, Xz.index)) && sz.push({
+            from: Wz.index,
+            to: Xz.index + Xz[0].length
+          }), Fz += 2) : (sz.push({
+            from: Wz.index,
+            to: Wz.index + Wz[0].length
+          }), Fz++)
         }
-        let Mb = bb;
+        let Wz = zz;
         for (const {
-            from: Tb,
-            to: Eb
+            from: Xz,
+            to: Oz
           }
-          of Ub.reverse()) Mb = Mb.slice(0, Tb) + Mb.slice(Eb);
-        return Mb
-      }(bb.replace(bU, "").replace(aU, "").replace(UU, "").replace(AU, ""))
+          of sz.reverse()) Wz = Wz.slice(0, Xz) + Wz.slice(Oz);
+        return Wz
+      }(zz.replace(ts, "").replace(ss, "").replace(Fs, "").replace(Ws, ""))
     }
 
-    function PU(bb) {
-      return /^(?:on[A-Z]\w*|tick|playerCommand)$/.test(bb)
+    function bs(zz) {
+      return /^(?:on[A-Z]\w*|tick|playerCommand)$/.test(zz)
     }
-    const XU = new Set(["tick", "onPlayerJoin", "onPlayerLeave", "onMobDespawned", "onBlockStand", "onBlockStandStart", "onBlockStandStop", "onPlayerJump", "onPlayerSelectInventorySlot", "onEntityCollision", "onChunkLoaded", "onClose"]),
-      jU = {
+    const ws = new Set(["tick", "onPlayerJoin", "onPlayerLeave", "onMobDespawned", "onBlockStand", "onBlockStandStart", "onBlockStandStop", "onPlayerJump", "onPlayerSelectInventorySlot", "onEntityCollision", "onChunkLoaded", "onClose"]),
+      Ds = {
         playerCommand: {
-          stopsWhen: bb => `${bb} !== undefined && ${bb} !== false`,
+          stopsWhen: zz => `${zz} !== undefined && ${zz} !== false`,
           passedOn: !1
         },
         onPlayerChat: {
-          stopsWhen: bb => `${bb} === false || ${bb} === null`,
+          stopsWhen: zz => `${zz} === false || ${zz} === null`,
           passedOn: !0
         },
         onPlayerDamagingOtherPlayer: {
-          stopsWhen: bb => `${bb} === "preventDamage"`,
+          stopsWhen: zz => `${zz} === "preventDamage"`,
           passedOn: !0
         }
       };
 
-    function RU(bb) {
-      var ab;
-      const Ub = mb().createSourceFile("worldCode.js", bb, mb().ScriptTarget.Latest, !0, mb().ScriptKind.JS),
+    function gs(zz) {
+      var tz;
+      const sz = Jz().createSourceFile("worldCode.js", zz, Jz().ScriptTarget.Latest, !0, Jz().ScriptKind.JS),
         {
-          parseDiagnostics: Ab
-        } = Ub;
+          parseDiagnostics: Fz
+        } = sz;
       return {
-        file: Ub,
-        hasErrors: (null !== (ab = null === Ab || void 0 === Ab ? void 0 : Ab.length) && void 0 !== ab ? ab : 0) > 0
+        file: sz,
+        hasErrors: (null !== (tz = null === Fz || void 0 === Fz ? void 0 : Fz.length) && void 0 !== tz ? tz : 0) > 0
       }
     }
 
-    function kU(bb) {
-      return void 0 !== bb && (mb().isFunctionExpression(bb) || mb().isArrowFunction(bb))
+    function Hs(zz) {
+      return void 0 !== zz && (Jz().isFunctionExpression(zz) || Jz().isArrowFunction(zz))
     }
 
-    function yU(bb) {
-      if (mb().isFunctionDeclaration(bb) && bb.name) return {
-        uX: bb,
-        nameNode: bb.name
+    function Bs(zz) {
+      if (Jz().isFunctionDeclaration(zz) && zz.name) return {
+        Zw: zz,
+        nameNode: zz.name
       };
-      if (mb().isVariableStatement(bb) && 1 === bb.declarationList.declarations.length) {
-        const ab = bb.declarationList.declarations[0],
-          Ub = ab.initializer && ZU(ab.initializer);
-        if (mb().isIdentifier(ab.name) && kU(Ub)) return {
-          uX: Ub,
-          nameNode: ab.name
+      if (Jz().isVariableStatement(zz) && 1 === zz.declarationList.declarations.length) {
+        const tz = zz.declarationList.declarations[0],
+          sz = tz.initializer && Ps(tz.initializer);
+        if (Jz().isIdentifier(tz.name) && Hs(sz)) return {
+          Zw: sz,
+          nameNode: tz.name
         }
       }
-      const ab = DU(bb),
-        Ub = ab && ZU(ab.value);
-      return ab && kU(Ub) ? {
-        uX: Ub,
-        nameNode: ab.name
+      const tz = rs(zz),
+        sz = tz && Ps(tz.value);
+      return tz && Hs(sz) ? {
+        Zw: sz,
+        nameNode: tz.name
       } : null
     }
 
-    function ZU(bb) {
-      return mb().isParenthesizedExpression(bb) ? ZU(bb.expression) : bb
+    function Ps(zz) {
+      return Jz().isParenthesizedExpression(zz) ? Ps(zz.expression) : zz
     }
 
-    function DU(bb) {
-      return mb().isExpressionStatement(bb) && mb().isBinaryExpression(bb.expression) && bb.expression.operatorToken.kind === mb().SyntaxKind.EqualsToken && mb().isIdentifier(bb.expression.left) ? {
-        name: bb.expression.left,
-        value: bb.expression.right
+    function rs(zz) {
+      return Jz().isExpressionStatement(zz) && Jz().isBinaryExpression(zz.expression) && zz.expression.operatorToken.kind === Jz().SyntaxKind.EqualsToken && Jz().isIdentifier(zz.expression.left) ? {
+        name: zz.expression.left,
+        value: zz.expression.right
       } : null
     }
 
-    function zU(bb) {
-      return mb().isIdentifier(bb) ? [bb.text] : bb.elements.flatMap((bb => mb().isOmittedExpression(bb) ? [] : zU(bb.name)))
+    function Ys(zz) {
+      return Jz().isIdentifier(zz) ? [zz.text] : zz.elements.flatMap((zz => Jz().isOmittedExpression(zz) ? [] : Ys(zz.name)))
     }
 
-    function xU(bb) {
-      if (!mb().isVariableStatement(bb)) return null;
-      const ab = bb.declarationList.declarations.find((bb => mb().isIdentifier(bb.name) && "CONFIG" === bb.name.text));
-      return null !== ab && void 0 !== ab && ab.initializer && mb().isObjectLiteralExpression(ab.initializer) ? ab.initializer : null
+    function xs(zz) {
+      if (!Jz().isVariableStatement(zz)) return null;
+      const tz = zz.declarationList.declarations.find((zz => Jz().isIdentifier(zz.name) && "CONFIG" === zz.name.text));
+      return null !== tz && void 0 !== tz && tz.initializer && Jz().isObjectLiteralExpression(tz.initializer) ? tz.initializer : null
     }
 
-    function iU(bb, ab) {
-      return ab.statements.map((Ub => {
-        var Ab;
-        const Mb = function(bb, ab, Ub) {
-            let Ab = Ub.getStart(ab);
-            for (const Tb of (null !== (Mb = mb().getLeadingCommentRanges(bb, Ub.getFullStart())) && void 0 !== Mb ? Mb : []).reverse()) {
-              var Mb;
-              if (/\n[^\S\n]*\n/.test(bb.slice(Tb.end, Ab))) break;
-              Ab = Tb.pos
+    function ms(zz, tz) {
+      return tz.statements.map((sz => {
+        var Fz;
+        const Wz = function(zz, tz, sz) {
+            let Fz = sz.getStart(tz);
+            for (const Xz of (null !== (Wz = Jz().getLeadingCommentRanges(zz, sz.getFullStart())) && void 0 !== Wz ? Wz : []).reverse()) {
+              var Wz;
+              if (/\n[^\S\n]*\n/.test(zz.slice(Xz.end, Fz))) break;
+              Fz = Xz.pos
             }
-            return Ab
-          }(bb, ab, Ub),
-          Tb = yU(Ub);
-        if (null !== Tb && void 0 !== Tb && Tb.nameNode) {
-          const bb = Tb.nameNode.text;
+            return Fz
+          }(zz, tz, sz),
+          Xz = Bs(sz);
+        if (null !== Xz && void 0 !== Xz && Xz.nameNode) {
+          const zz = Xz.nameNode.text;
           return {
-            kind: PU(bb) ? "callback" : "function",
-            names: [bb],
-            from: Mb,
-            to: Ub.getEnd(),
-            node: Ub
+            kind: bs(zz) ? "callback" : "function",
+            names: [zz],
+            from: Wz,
+            to: sz.getEnd(),
+            node: sz
           }
         }
-        const Eb = mb().isVariableStatement(Ub) ? Ub.declarationList.declarations.flatMap((bb => zU(bb.name))) : [];
-        if (xU(Ub)) {
+        const Oz = Jz().isVariableStatement(sz) ? sz.declarationList.declarations.flatMap((zz => Ys(zz.name))) : [];
+        if (xs(sz)) {
           return {
             kind: "config",
-            names: ["CONFIG", ...Eb.filter((bb => "CONFIG" !== bb))],
-            from: Mb,
-            to: Ub.getEnd(),
-            node: Ub
+            names: ["CONFIG", ...Oz.filter((zz => "CONFIG" !== zz))],
+            from: Wz,
+            to: sz.getEnd(),
+            node: sz
           }
         }
-        if (mb().isVariableStatement(Ub)) return {
+        if (Jz().isVariableStatement(sz)) return {
           kind: "variable",
-          names: Eb,
-          from: Mb,
-          to: Ub.getEnd(),
-          node: Ub
+          names: Oz,
+          from: Wz,
+          to: sz.getEnd(),
+          node: sz
         };
-        if (mb().isClassDeclaration(Ub) && Ub.name) return {
+        if (Jz().isClassDeclaration(sz) && sz.name) return {
           kind: "function",
-          names: [Ub.name.text],
-          from: Mb,
-          to: Ub.getEnd(),
-          node: Ub
+          names: [sz.name.text],
+          from: Wz,
+          to: sz.getEnd(),
+          node: sz
         };
-        const Yb = null === (Ab = DU(Ub)) || void 0 === Ab ? void 0 : Ab.name.text;
+        const oz = null === (Fz = rs(sz)) || void 0 === Fz ? void 0 : Fz.name.text;
         return {
           kind: "other",
-          names: void 0 !== Yb && PU(Yb) ? [Yb] : [],
-          from: Mb,
-          to: Ub.getEnd(),
-          node: Ub
+          names: void 0 !== oz && bs(oz) ? [oz] : [],
+          from: Wz,
+          to: sz.getEnd(),
+          node: sz
         }
       }))
     }
 
-    function fU(bb) {
-      if (!mb().isPropertyAssignment(bb) && !mb().isShorthandPropertyAssignment(bb)) return null;
-      const ab = bb.name;
-      return mb().isIdentifier(ab) || mb().isStringLiteral(ab) ? ab.text : null
+    function Is(zz) {
+      if (!Jz().isPropertyAssignment(zz) && !Jz().isShorthandPropertyAssignment(zz)) return null;
+      const tz = zz.name;
+      return Jz().isIdentifier(tz) || Jz().isStringLiteral(tz) ? tz.text : null
     }
 
-    function mU(bb, ab) {
-      return bb.lastIndexOf("\n", ab - 1) + 1
+    function Cs(zz, tz) {
+      return zz.lastIndexOf("\n", tz - 1) + 1
     }
 
-    function pU(bb, ab) {
-      var Ub, Ab;
-      const Mb = bb.slice(mU(bb, ab), ab);
-      return /^\s*$/.test(Mb) ? Mb : `${null!==(Ub=null===(Ab=/^\s*/.exec(Mb))||void 0===Ab?void 0:Ab[0])&&void 0!==Ub?Ub:""}\t`
+    function es(zz, tz) {
+      var sz, Fz;
+      const Wz = zz.slice(Cs(zz, tz), tz);
+      return /^\s*$/.test(Wz) ? Wz : `${null!==(sz=null===(Fz=/^\s*/.exec(Wz))||void 0===Fz?void 0:Fz[0])&&void 0!==sz?sz:""}\t`
     }
 
-    function NU(bb, ab, Ub) {
-      const Ab = bb.slice(mU(bb, ab.getStart(Ub)), function(bb, ab) {
-          const Ub = bb.indexOf("\n", ab);
-          return -1 === Ub ? bb.length : Ub
-        }(bb, ab.getEnd())),
-        Mb = Ab.trim(),
-        Tb = /^[\w$"']+\s*:/.test(Mb) && "" === bb.slice(mU(bb, ab.getStart(Ub)), ab.getStart(Ub)).trim() ? Ab.replace(/^\s*/, "\t") : `\t${ab.getText(Ub)},`;
-      return /,\s*(?:\/\/.*)?$/.test(Tb) ? Tb : Tb.replace(/(\s*(?:\/\/.*)?)$/, ",$1")
+    function Zs(zz, tz, sz) {
+      const Fz = zz.slice(Cs(zz, tz.getStart(sz)), function(zz, tz) {
+          const sz = zz.indexOf("\n", tz);
+          return -1 === sz ? zz.length : sz
+        }(zz, tz.getEnd())),
+        Wz = Fz.trim(),
+        Xz = /^[\w$"']+\s*:/.test(Wz) && "" === zz.slice(Cs(zz, tz.getStart(sz)), tz.getStart(sz)).trim() ? Fz.replace(/^\s*/, "\t") : `\t${tz.getText(sz)},`;
+      return /,\s*(?:\/\/.*)?$/.test(Xz) ? Xz : Xz.replace(/(\s*(?:\/\/.*)?)$/, ",$1")
     }
 
-    function WU(bb, ab) {
-      let Ub = bb;
-      for (const Ab of [...ab].sort(((bb, ab) => ab.from - bb.from))) Ub = Ub.slice(0, Ab.from) + Ab.text + Ub.slice(Ab.to);
-      return Ub
+    function Gs(zz, tz) {
+      let sz = zz;
+      for (const Fz of [...tz].sort(((zz, tz) => tz.from - zz.from))) sz = sz.slice(0, Fz.from) + Fz.text + sz.slice(Fz.to);
+      return sz
     }
 
-    function HU(bb) {
-      return bb.charAt(0).toUpperCase() + bb.slice(1)
+    function Ts(zz) {
+      return zz.charAt(0).toUpperCase() + zz.slice(1)
     }
 
-    function IU(bb) {
-      return bb.replace(/[^A-Za-z0-9]+(.)?/g, ((bb, ab) => ab ? ab.toUpperCase() : ""))
+    function cs(zz) {
+      return zz.replace(/[^A-Za-z0-9]+(.)?/g, ((zz, tz) => tz ? tz.toUpperCase() : ""))
     }
 
-    function dU(bb, ab) {
-      var Ub, Ab;
-      const Mb = bb.filter((bb => bb.names.includes(ab))),
-        Tb = Mb.filter((bb => !mb().isFunctionDeclaration(bb.node) && function(bb, ab) {
-          return !mb().isVariableStatement(bb) || bb.declarationList.declarations.some((bb => void 0 !== bb.initializer && zU(bb.name).includes(ab)))
-        }(bb.node, ab))),
-        Eb = null !== (Ub = Tb[Tb.length - 1]) && void 0 !== Ub ? Ub : Mb[Mb.length - 1];
-      if ("callback" === (null === Eb || void 0 === Eb ? void 0 : Eb.kind)) return yU(Eb.node);
-      const Yb = "other" === (null === Eb || void 0 === Eb ? void 0 : Eb.kind) ? null === (Ab = DU(Eb.node)) || void 0 === Ab ? void 0 : Ab.value : void 0;
-      if (!Yb || !mb().isIdentifier(Yb)) return null;
-      const Bb = bb.filter((bb => {
-          var ab;
-          const Ub = null === (ab = DU(bb.node)) || void 0 === ab ? void 0 : ab.value;
-          return void 0 !== Ub && mb().isIdentifier(Ub) && Ub.text === Yb.text
+    function As(zz, tz) {
+      var sz, Fz;
+      const Wz = zz.filter((zz => zz.names.includes(tz))),
+        Xz = Wz.filter((zz => !Jz().isFunctionDeclaration(zz.node) && function(zz, tz) {
+          return !Jz().isVariableStatement(zz) || zz.declarationList.declarations.some((zz => void 0 !== zz.initializer && Ys(zz.name).includes(tz)))
+        }(zz.node, tz))),
+        Oz = null !== (sz = Xz[Xz.length - 1]) && void 0 !== sz ? sz : Wz[Wz.length - 1];
+      if ("callback" === (null === Oz || void 0 === Oz ? void 0 : Oz.kind)) return Bs(Oz.node);
+      const oz = "other" === (null === Oz || void 0 === Oz ? void 0 : Oz.kind) ? null === (Fz = rs(Oz.node)) || void 0 === Fz ? void 0 : Fz.value : void 0;
+      if (!oz || !Jz().isIdentifier(oz)) return null;
+      const vz = zz.filter((zz => {
+          var tz;
+          const sz = null === (tz = rs(zz.node)) || void 0 === tz ? void 0 : tz.value;
+          return void 0 !== sz && Jz().isIdentifier(sz) && sz.text === oz.text
         })),
-        eb = bb.filter((bb => bb.names.includes(Yb.text))),
-        vb = 1 === eb.length && "function" === eb[0].kind ? yU(eb[0].node) : null;
-      return 1 === Bb.length ? vb : null
+        Uz = zz.filter((zz => zz.names.includes(oz.text))),
+        Kz = 1 === Uz.length && "function" === Uz[0].kind ? Bs(Uz[0].node) : null;
+      return 1 === vz.length ? Kz : null
     }
 
-    function FU(bb) {
-      return bb.parameters.map((bb => mb().isIdentifier(bb.name) ? bb.name.text : null))
+    function ys(zz) {
+      return zz.parameters.map((zz => Jz().isIdentifier(zz.name) ? zz.name.text : null))
     }
 
-    function hU(bb, ab, Ub, Ab, Mb, Tb, Eb) {
-      var Yb;
-      let Bb = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+    function Ms(zz, tz, sz, Fz, Wz, Xz, Oz) {
+      var oz;
+      let vz = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
       const {
-        uX: eb
-      } = Ub, vb = eb.body;
-      if (!vb) return [];
-      const Lb = [],
-        Pb = FU(eb),
-        Xb = [],
-        jb = new Set([...Pb.filter((bb => null !== bb)), ...qU(vb)]),
-        Rb = (bb, ab) => {
-          let Ub = bb;
-          for (let Ab = ab; jb.has(Ub); Ab++) Ub = `${bb}${Ab}`;
-          return jb.add(Ub), Ub
+        Zw: Uz
+      } = sz, Kz = Uz.body;
+      if (!Kz) return [];
+      const uz = [],
+        Nz = ys(Uz),
+        bz = [],
+        wz = new Set([...Nz.filter((zz => null !== zz)), ...Qs(Kz)]),
+        Dz = (zz, tz) => {
+          let sz = zz;
+          for (let Fz = tz; wz.has(sz); Fz++) sz = `${zz}${Fz}`;
+          return wz.add(sz), sz
         },
-        kb = [];
-      for (const [mb, Wb] of Tb.entries()) {
-        var yb;
-        const bb = Pb[mb];
-        if (void 0 !== bb && null !== (yb = eb.parameters[mb]) && void 0 !== yb && yb.dotDotDotToken) {
-          Xb.push(null === bb ? "undefined" : `...${bb}`);
+        gz = [];
+      for (const [Jz, ez] of Xz.entries()) {
+        var Hz;
+        const zz = Nz[Jz];
+        if (void 0 !== zz && null !== (Hz = Uz.parameters[Jz]) && void 0 !== Hz && Hz.dotDotDotToken) {
+          bz.push(null === zz ? "undefined" : `...${zz}`);
           break
         }
-        if (void 0 !== bb) {
-          Xb.push(null !== bb && void 0 !== bb ? bb : "undefined");
+        if (void 0 !== zz) {
+          bz.push(null !== zz && void 0 !== zz ? zz : "undefined");
           continue
         }
-        const ab = Rb(Wb, mb);
-        kb.push(ab), Xb.push(ab)
+        const tz = Dz(ez, Jz);
+        gz.push(tz), bz.push(tz)
       }
-      if (kb.length > 0) {
-        const bb = eb.getChildren(ab).find((bb => bb.kind === mb().SyntaxKind.CloseParenToken)),
-          Ub = bb ? bb.getStart(ab) : -1;
-        if (-1 === Ub) {
-          const bb = eb.parameters[0];
-          if (!bb) return [];
-          Lb.push({
-            from: bb.getStart(ab),
-            to: bb.getEnd(),
-            text: `(${[bb.getText(ab),...kb].join(", ")})`
+      if (gz.length > 0) {
+        const zz = Uz.getChildren(tz).find((zz => zz.kind === Jz().SyntaxKind.CloseParenToken)),
+          sz = zz ? zz.getStart(tz) : -1;
+        if (-1 === sz) {
+          const zz = Uz.parameters[0];
+          if (!zz) return [];
+          uz.push({
+            from: zz.getStart(tz),
+            to: zz.getEnd(),
+            text: `(${[zz.getText(tz),...gz].join(", ")})`
           })
         } else {
-          const bb = eb.parameters.hasTrailingComma ? " " : eb.parameters.length > 0 ? ", " : "";
-          Lb.push({
-            from: Ub,
-            to: Ub,
-            text: `${bb}${kb.join(", ")}`
+          const zz = Uz.parameters.hasTrailingComma ? " " : Uz.parameters.length > 0 ? ", " : "";
+          uz.push({
+            from: sz,
+            to: sz,
+            text: `${zz}${gz.join(", ")}`
           })
         }
       }
-      const Zb = `${Mb}(${Xb.join(", ")})`,
-        Db = Rb(`${IU(Eb)}Result`, 2),
-        zb = jU[Ab],
-        xb = XU.has(Ab) ? [Zb] : zb ? [`const ${Db} = ${Zb}`, `if (${zb.stopsWhen(Db)}) return ${Db}`] : [`const ${Db} = ${Zb}`],
-        ib = !XU.has(Ab) && (null === (Yb = null === zb || void 0 === zb ? void 0 : zb.passedOn) || void 0 === Yb || Yb);
-      if (ib && mb().isBlock(vb)) {
-        const Ub = function(bb, ab) {
-            const Ub = new Set;
-            for (const Ab of bb.statements) {
-              const bb = mb().isVariableStatement(Ab) ? Ab.declarationList.declarations[0] : void 0;
-              bb && mb().isIdentifier(bb.name) && bb.initializer && GU(bb.initializer, ab) && Ub.add(bb.name.text)
+      const Bz = `${Wz}(${bz.join(", ")})`,
+        Pz = Dz(`${cs(Oz)}Result`, 2),
+        rz = Ds[Fz],
+        Yz = ws.has(Fz) ? [Bz] : rz ? [`const ${Pz} = ${Bz}`, `if (${rz.stopsWhen(Pz)}) return ${Pz}`] : [`const ${Pz} = ${Bz}`],
+        xz = !ws.has(Fz) && (null === (oz = null === rz || void 0 === rz ? void 0 : rz.passedOn) || void 0 === oz || oz);
+      if (xz && Jz().isBlock(Kz)) {
+        const sz = function(zz, tz) {
+            const sz = new Set;
+            for (const Fz of zz.statements) {
+              const zz = Jz().isVariableStatement(Fz) ? Fz.declarationList.declarations[0] : void 0;
+              zz && Jz().isIdentifier(zz.name) && zz.initializer && ds(zz.initializer, tz) && sz.add(zz.name.text)
             }
-            return Ub
-          }(vb, Ab),
-          Mb = bb => {
-            if (!mb().isFunctionLike(bb) && ! function(bb, ab, Ub) {
-                if (!mb().isIfStatement(bb) || !mb().isReturnStatement(bb.thenStatement) || !bb.thenStatement.expression) return !1;
-                const Ab = bb.thenStatement.expression;
-                return mb().isIdentifier(Ab) && ab.has(Ab.text) && bb.expression.getText(Ub).startsWith(`${Ab.text} `)
-              }(bb, Ub, ab)) {
-              if (mb().isReturnStatement(bb) && !bb.expression) Lb.push({
-                from: bb.getStart(ab),
-                to: bb.getEnd(),
-                text: `return ${Db}`
+            return sz
+          }(Kz, Fz),
+          Wz = zz => {
+            if (!Jz().isFunctionLike(zz) && ! function(zz, tz, sz) {
+                if (!Jz().isIfStatement(zz) || !Jz().isReturnStatement(zz.thenStatement) || !zz.thenStatement.expression) return !1;
+                const Fz = zz.thenStatement.expression;
+                return Jz().isIdentifier(Fz) && tz.has(Fz.text) && zz.expression.getText(sz).startsWith(`${Fz.text} `)
+              }(zz, sz, tz)) {
+              if (Jz().isReturnStatement(zz) && !zz.expression) uz.push({
+                from: zz.getStart(tz),
+                to: zz.getEnd(),
+                text: `return ${Pz}`
               });
-              else if (mb().isReturnStatement(bb) && bb.expression) {
-                const Ab = QU(bb.expression, Ub);
-                Ab && Lb.push({
-                  from: Ab.getStart(ab),
-                  to: Ab.getEnd(),
-                  text: `${Ab.text} !== undefined ? ${Ab.text} : ${Db}`
+              else if (Jz().isReturnStatement(zz) && zz.expression) {
+                const Fz = hs(zz.expression, sz);
+                Fz && uz.push({
+                  from: Fz.getStart(tz),
+                  to: Fz.getEnd(),
+                  text: `${Fz.text} !== undefined ? ${Fz.text} : ${Pz}`
                 })
               }
-              mb().forEachChild(bb, Mb)
+              Jz().forEachChild(zz, Wz)
             }
           };
-        vb.statements.forEach(Mb);
-        const Tb = vb.statements[vb.statements.length - 1];
-        if (!Tb || !mb().isReturnStatement(Tb) && !mb().isThrowStatement(Tb)) {
-          const Ub = vb.getEnd() - 1,
-            Ab = Tb ? pU(bb, Tb.getStart(ab)) : `${bb.slice(mU(bb,eb.getStart(ab)),eb.getStart(ab)).replace(/\S.*$/,"")}\t`,
-            Mb = bb.slice(mU(bb, Ub), Ub),
-            Eb = /^\s*$/.test(Mb) ? `${Ab}return ${Db}\n${Mb}` : `\n${Ab}return ${Db}\n`;
-          Lb.push({
-            from: /^\s*$/.test(Mb) ? mU(bb, Ub) : Ub,
-            to: Ub,
-            text: Eb
+        Kz.statements.forEach(Wz);
+        const Xz = Kz.statements[Kz.statements.length - 1];
+        if (!Xz || !Jz().isReturnStatement(Xz) && !Jz().isThrowStatement(Xz)) {
+          const sz = Kz.getEnd() - 1,
+            Fz = Xz ? es(zz, Xz.getStart(tz)) : `${zz.slice(Cs(zz,Uz.getStart(tz)),Uz.getStart(tz)).replace(/\S.*$/,"")}\t`,
+            Wz = zz.slice(Cs(zz, sz), sz),
+            Oz = /^\s*$/.test(Wz) ? `${Fz}return ${Pz}\n${Wz}` : `\n${Fz}return ${Pz}\n`;
+          uz.push({
+            from: /^\s*$/.test(Wz) ? Cs(zz, sz) : sz,
+            to: sz,
+            text: Oz
           })
         }
       }
-      const fb = mb().isBlock(vb) ? [...vb.statements] : [],
-        pb = fb.findIndex((bb => ! function(bb, ab) {
-          return mb().isExpressionStatement(bb) && GU(bb.expression, ab)
-        }(bb, Ab))),
-        Nb = fb[(-1 === pb ? fb.length : pb) - 1];
-      if (Bb && XU.has(Ab) && Nb) Lb.push({
-        from: Nb.getEnd(),
-        to: Nb.getEnd(),
-        text: `\n${pU(bb,Nb.getStart(ab))}${Zb}`
+      const mz = Jz().isBlock(Kz) ? [...Kz.statements] : [],
+        Iz = mz.findIndex((zz => ! function(zz, tz) {
+          return Jz().isExpressionStatement(zz) && ds(zz.expression, tz)
+        }(zz, Fz))),
+        Cz = mz[(-1 === Iz ? mz.length : Iz) - 1];
+      if (vz && ws.has(Fz) && Cz) uz.push({
+        from: Cz.getEnd(),
+        to: Cz.getEnd(),
+        text: `\n${es(zz,Cz.getStart(tz))}${Bz}`
       });
-      else if (mb().isBlock(vb)) {
-        const Ub = vb.statements[0],
-          Ab = Ub ? pU(bb, Ub.getStart(ab)) : `${bb.slice(mU(bb,eb.getStart(ab)),eb.getStart(ab)).replace(/\S.*$/,"")}\t`,
-          Mb = vb.getStart(ab) + 1,
-          Tb = void 0 !== Ub && !bb.slice(Mb, Ub.getStart(ab)).includes("\n");
-        Lb.push({
-          from: Mb,
-          to: Tb ? Ub.getStart(ab) : Mb,
-          text: `\n${xb.map((bb=>`${Ab}${bb}`)).join("\n")}${Ub?Tb?`\n${Ab}`:"":"\n"}`
+      else if (Jz().isBlock(Kz)) {
+        const sz = Kz.statements[0],
+          Fz = sz ? es(zz, sz.getStart(tz)) : `${zz.slice(Cs(zz,Uz.getStart(tz)),Uz.getStart(tz)).replace(/\S.*$/,"")}\t`,
+          Wz = Kz.getStart(tz) + 1,
+          Xz = void 0 !== sz && !zz.slice(Wz, sz.getStart(tz)).includes("\n");
+        uz.push({
+          from: Wz,
+          to: Xz ? sz.getStart(tz) : Wz,
+          text: `\n${Yz.map((zz=>`${Fz}${zz}`)).join("\n")}${sz?Xz?`\n${Fz}`:"":"\n"}`
         })
       } else {
-        const Ub = bb.slice(mU(bb, eb.getStart(ab)), eb.getStart(ab)).replace(/\S.*$/, ""),
-          Ab = Rb("ownResult", 2),
-          Mb = ib ? [`const ${Ab} = ${vb.getText(ab)}`, `return ${Ab} !== undefined ? ${Ab} : ${Db}`] : [`return ${vb.getText(ab)}`];
-        Lb.push({
-          from: vb.getStart(ab),
-          to: vb.getEnd(),
-          text: `{\n${[...xb,...Mb].map((bb=>`${Ub}\t${bb}`)).join("\n")}\n${Ub}}`
+        const sz = zz.slice(Cs(zz, Uz.getStart(tz)), Uz.getStart(tz)).replace(/\S.*$/, ""),
+          Fz = Dz("ownResult", 2),
+          Wz = xz ? [`const ${Fz} = ${Kz.getText(tz)}`, `return ${Fz} !== undefined ? ${Fz} : ${Pz}`] : [`return ${Kz.getText(tz)}`];
+        uz.push({
+          from: Kz.getStart(tz),
+          to: Kz.getEnd(),
+          text: `{\n${[...Yz,...Wz].map((zz=>`${sz}\t${zz}`)).join("\n")}\n${sz}}`
         })
       }
-      return Lb
+      return uz
     }
 
-    function GU(bb, ab) {
-      return mb().isCallExpression(bb) && mb().isIdentifier(bb.expression) && bb.expression.text.endsWith(HU(ab)) && bb.expression.text !== HU(ab)
+    function ds(zz, tz) {
+      return Jz().isCallExpression(zz) && Jz().isIdentifier(zz.expression) && zz.expression.text.endsWith(Ts(tz)) && zz.expression.text !== Ts(tz)
     }
 
-    function QU(bb, ab) {
-      return mb().isIdentifier(bb) ? ab.has(bb.text) ? bb : null : mb().isConditionalExpression(bb) ? QU(bb.whenFalse, ab) : null
+    function hs(zz, tz) {
+      return Jz().isIdentifier(zz) ? tz.has(zz.text) ? zz : null : Jz().isConditionalExpression(zz) ? hs(zz.whenFalse, tz) : null
     }
 
-    function qU(bb) {
-      const ab = [],
-        Ub = bb => {
-          mb().isIdentifier(bb) && ab.push(bb.text), mb().forEachChild(bb, Ub)
+    function Qs(zz) {
+      const tz = [],
+        sz = zz => {
+          Jz().isIdentifier(zz) && tz.push(zz.text), Jz().forEachChild(zz, sz)
         };
-      return Ub(bb), ab
+      return sz(zz), tz
     }
 
-    function uU(bb, ab, Ub) {
-      var Ab, Mb;
-      return (0, La.f)(null !== (Ab = null === (Mb = bb.body) || void 0 === Mb ? void 0 : Mb.getText(ab)) && void 0 !== Ab ? Ab : "", new RegExp(`${Ub}\\s*\\(`), La.l).length > 0
+    function ks(zz, tz, sz) {
+      var Fz, Wz;
+      return (0, ut.e)(null !== (Fz = null === (Wz = zz.body) || void 0 === Wz ? void 0 : Wz.getText(tz)) && void 0 !== Fz ? Fz : "", new RegExp(`${sz}\\s*\\(`), ut.n).length > 0
     }
 
-    function rU(bb, ab, Ub) {
-      var Ab;
+    function is(zz, tz, sz) {
+      var Fz;
       const {
-        owner: Mb,
-        heading: Tb
-      } = Ub, Eb = null !== (Ab = Ub.overrides) && void 0 !== Ab ? Ab : new Set;
-      if ("" === bb.trim() && !0 !== Ub.chainCallbacks) {
-        const bb = `${Tb?`${Tb}\n`:""}${ab.trim()}\n`,
+        owner: Wz,
+        heading: Xz
+      } = sz, Oz = null !== (Fz = sz.overrides) && void 0 !== Fz ? Fz : new Set;
+      if ("" === zz.trim() && !0 !== sz.chainCallbacks) {
+        const zz = `${Xz?`${Xz}\n`:""}${tz.trim()}\n`,
           {
-            file: Ub,
-            hasErrors: Ab
-          } = RU(bb);
-        if (Ab) return null;
-        const Mb = iU(bb, Ub);
+            file: sz,
+            hasErrors: Fz
+          } = gs(zz);
+        if (Fz) return null;
+        const Wz = ms(zz, sz);
         return {
-          text: bb,
-          added: Mb.flatMap((bb => "config" === bb.kind ? [] : bb.names)),
+          text: zz,
+          added: Wz.flatMap((zz => "config" === zz.kind ? [] : zz.names)),
           chained: [],
-          settings: Mb.flatMap((bb => {
-            var ab;
-            const Ub = "config" === bb.kind ? xU(bb.node) : null;
-            return (null !== (ab = null === Ub || void 0 === Ub ? void 0 : Ub.properties) && void 0 !== ab ? ab : []).flatMap((bb => {
-              const ab = fU(bb);
-              return null === ab ? [] : [ab]
+          settings: Wz.flatMap((zz => {
+            var tz;
+            const sz = "config" === zz.kind ? xs(zz.node) : null;
+            return (null !== (tz = null === sz || void 0 === sz ? void 0 : sz.properties) && void 0 !== tz ? tz : []).flatMap((zz => {
+              const tz = Is(zz);
+              return null === tz ? [] : [tz]
             }))
           }))
         }
       }
-      const Yb = RU(bb),
-        Bb = RU(ab);
-      if (Yb.hasErrors || Bb.hasErrors) return null;
-      const eb = iU(bb, Yb.file),
-        vb = iU(ab, Bb.file),
-        Lb = new Set(eb.flatMap((bb => bb.names))),
-        Pb = new Set(Lb),
-        Xb = [],
-        jb = [],
-        Rb = [],
-        kb = [];
-      let yb = [];
-      const Zb = vb.find((bb => "config" === bb.kind)),
-        Db = eb.find((bb => "config" === bb.kind));
-      if (Zb) {
-        const Ub = xU(Zb.node),
-          Ab = Db ? xU(Db.node) : null;
-        if (Ub && Ab) {
-          const Mb = function(bb, ab, Ub, Ab, Mb, Tb, Eb) {
-            const Yb = new Map;
-            for (const Db of Ub.properties) {
-              const bb = fU(Db);
-              null !== bb && Yb.set(bb, Db)
+      const oz = gs(zz),
+        vz = gs(tz);
+      if (oz.hasErrors || vz.hasErrors) return null;
+      const Uz = ms(zz, oz.file),
+        Kz = ms(tz, vz.file),
+        uz = new Set(Uz.flatMap((zz => zz.names))),
+        Nz = new Set(uz),
+        bz = [],
+        wz = [],
+        Dz = [],
+        gz = [];
+      let Hz = [];
+      const Bz = Kz.find((zz => "config" === zz.kind)),
+        Pz = Uz.find((zz => "config" === zz.kind));
+      if (Bz) {
+        const sz = xs(Bz.node),
+          Fz = Pz ? xs(Pz.node) : null;
+        if (sz && Fz) {
+          const Wz = function(zz, tz, sz, Fz, Wz, Xz, Oz) {
+            const oz = new Map;
+            for (const Pz of sz.properties) {
+              const zz = Is(Pz);
+              null !== zz && oz.set(zz, Pz)
             }
-            const Bb = [],
-              eb = [],
-              vb = [],
-              Lb = new Map;
-            for (const Db of Tb.properties) {
-              const bb = fU(Db);
-              if (null === bb) continue;
-              const Ub = Yb.get(bb);
-              if (Ub) {
-                if (Eb.has(bb) && mb().isPropertyAssignment(Ub) && mb().isPropertyAssignment(Db)) {
-                  const Ab = Db.initializer.getText(Mb);
-                  Ub.initializer.getText(ab) !== Ab && (Bb.push({
-                    from: Ub.initializer.getStart(ab),
-                    to: Ub.initializer.getEnd(),
-                    text: Ab
-                  }), Lb.set(Ub, Ab), eb.push(bb))
+            const vz = [],
+              Uz = [],
+              Kz = [],
+              uz = new Map;
+            for (const Pz of Xz.properties) {
+              const zz = Is(Pz);
+              if (null === zz) continue;
+              const sz = oz.get(zz);
+              if (sz) {
+                if (Oz.has(zz) && Jz().isPropertyAssignment(sz) && Jz().isPropertyAssignment(Pz)) {
+                  const Fz = Pz.initializer.getText(Wz);
+                  sz.initializer.getText(tz) !== Fz && (vz.push({
+                    from: sz.initializer.getStart(tz),
+                    to: sz.initializer.getEnd(),
+                    text: Fz
+                  }), uz.set(sz, Fz), Uz.push(zz))
                 }
-              } else vb.push(NU(Ab, Db, Mb)), eb.push(bb)
+              } else Kz.push(Zs(Fz, Pz, Wz)), Uz.push(zz)
             }
-            if (0 === vb.length) return {
-              edits: Bb,
-              settings: eb
+            if (0 === Kz.length) return {
+              edits: vz,
+              settings: Uz
             };
-            const Pb = Ub.getEnd() - 1,
-              Xb = Ub.properties[Ub.properties.length - 1];
-            if (!bb.slice(Ub.getStart(ab), Pb).includes("\n")) {
-              const bb = Ub.properties.map((bb => {
-                const Ub = Lb.get(bb);
-                return mb().isPropertyAssignment(bb) && void 0 !== Ub ? `\t${bb.name.getText(ab)}: ${Ub},` : `\t${bb.getText(ab)},`
+            const Nz = sz.getEnd() - 1,
+              bz = sz.properties[sz.properties.length - 1];
+            if (!zz.slice(sz.getStart(tz), Nz).includes("\n")) {
+              const zz = sz.properties.map((zz => {
+                const sz = uz.get(zz);
+                return Jz().isPropertyAssignment(zz) && void 0 !== sz ? `\t${zz.name.getText(tz)}: ${sz},` : `\t${zz.getText(tz)},`
               }));
               return {
                 edits: [{
-                  from: Ub.getStart(ab),
-                  to: Ub.getEnd(),
-                  text: `{\n${[...bb,...vb].join("\n")}\n}`
+                  from: sz.getStart(tz),
+                  to: sz.getEnd(),
+                  text: `{\n${[...zz,...Kz].join("\n")}\n}`
                 }],
-                settings: eb
+                settings: Uz
               }
             }
-            const jb = void 0 !== Xb && !Ub.properties.hasTrailingComma,
-              Rb = mU(bb, Pb),
-              kb = bb.slice(Rb, Pb);
-            if ("" === kb.trim()) return jb && Bb.push({
-              from: Xb.getEnd(),
-              to: Xb.getEnd(),
+            const wz = void 0 !== bz && !sz.properties.hasTrailingComma,
+              Dz = Cs(zz, Nz),
+              gz = zz.slice(Dz, Nz);
+            if ("" === gz.trim()) return wz && vz.push({
+              from: bz.getEnd(),
+              to: bz.getEnd(),
               text: ","
-            }), Bb.push({
-              from: Rb,
-              to: Rb,
-              text: `${vb.join("\n")}\n`
+            }), vz.push({
+              from: Dz,
+              to: Dz,
+              text: `${Kz.join("\n")}\n`
             }), {
-              edits: Bb,
-              settings: eb
+              edits: vz,
+              settings: Uz
             };
-            const yb = Rb + kb.trimEnd().length,
-              Zb = jb && Xb.getEnd() === yb;
-            return jb && !Zb && Bb.push({
-              from: Xb.getEnd(),
-              to: Xb.getEnd(),
+            const Hz = Dz + gz.trimEnd().length,
+              Bz = wz && bz.getEnd() === Hz;
+            return wz && !Bz && vz.push({
+              from: bz.getEnd(),
+              to: bz.getEnd(),
               text: ","
-            }), Bb.push({
-              from: yb,
-              to: Pb,
-              text: `${Zb?",":""}\n${vb.join("\n")}\n`
+            }), vz.push({
+              from: Hz,
+              to: Nz,
+              text: `${Bz?",":""}\n${Kz.join("\n")}\n`
             }), {
-              edits: Bb,
-              settings: eb
+              edits: vz,
+              settings: Uz
             }
-          }(bb, Yb.file, Ab, ab, Bb.file, Ub, Eb);
-          Xb.push(...Mb.edits), yb = Mb.settings
-        } else if (Ub) {
-          if (Pb.has("CONFIG")) return null;
-          const Ab = function(bb, ab) {
-              const Ub = ab.statements[0];
-              return Ub ? mU(bb, Ub.getStart(ab)) : bb.length
-            }(bb, Yb.file),
-            Mb = Ab > 0 && "\n" !== bb[Ab - 1] ? "\n" : "";
-          Xb.push({
-            from: Ab,
-            to: Ab,
-            text: `${Mb}${ab.slice(Zb.from,Zb.to)}\n\n`
-          }), yb = Ub.properties.flatMap((bb => {
-            const ab = fU(bb);
-            return null === ab ? [] : [ab]
+          }(zz, oz.file, Fz, tz, vz.file, sz, Oz);
+          bz.push(...Wz.edits), Hz = Wz.settings
+        } else if (sz) {
+          if (Nz.has("CONFIG")) return null;
+          const Fz = function(zz, tz) {
+              const sz = tz.statements[0];
+              return sz ? Cs(zz, sz.getStart(tz)) : zz.length
+            }(zz, oz.file),
+            Wz = Fz > 0 && "\n" !== zz[Fz - 1] ? "\n" : "";
+          bz.push({
+            from: Fz,
+            to: Fz,
+            text: `${Wz}${tz.slice(Bz.from,Bz.to)}\n\n`
+          }), Hz = sz.properties.flatMap((zz => {
+            const tz = Is(zz);
+            return null === tz ? [] : [tz]
           }))
         }
       }
-      const zb = [],
-        xb = (bb, Ub) => {
-          const Ab = zb[zb.length - 1],
-            Mb = void 0 !== Ab && Ab >= 0 && Ab === Ub - 1 && !/\n[^\S\n]*\n/.test(ab.slice(vb[Ab].to, vb[Ub].from)) ? "\n" : "\n\n";
-          jb.push(0 === jb.length ? bb : `${Mb}${bb}`), zb.push(Ub)
+      const rz = [],
+        Yz = (zz, sz) => {
+          const Fz = rz[rz.length - 1],
+            Wz = void 0 !== Fz && Fz >= 0 && Fz === sz - 1 && !/\n[^\S\n]*\n/.test(tz.slice(Kz[Fz].to, Kz[sz].from)) ? "\n" : "\n\n";
+          wz.push(0 === wz.length ? zz : `${Wz}${zz}`), rz.push(sz)
         };
-      for (const [fb, mb] of vb.entries()) {
-        if ("config" === mb.kind) continue;
-        const Ab = ab.slice(mb.from, mb.to);
-        if ("callback" === mb.kind) {
-          const ab = mb.names[0],
-            Tb = dU(eb, ab);
-          if (!Tb && Lb.has(ab)) {
-            if (!0 === Ub.chainCallbacks) continue;
+      for (const [mz, Jz] of Kz.entries()) {
+        if ("config" === Jz.kind) continue;
+        const Fz = tz.slice(Jz.from, Jz.to);
+        if ("callback" === Jz.kind) {
+          const tz = Jz.names[0],
+            Xz = As(Uz, tz);
+          if (!Xz && uz.has(tz)) {
+            if (!0 === sz.chainCallbacks) continue;
             return null
           }
-          if (!Tb && !0 !== Ub.chainCallbacks) {
-            Pb.has(ab) || (xb(Ab, fb), Rb.push(ab), Pb.add(ab));
+          if (!Xz && !0 !== sz.chainCallbacks) {
+            Nz.has(tz) || (Yz(Fz, mz), Dz.push(tz), Nz.add(tz));
             continue
           }
-          const Eb = `${IU(Mb)}${HU(ab)}`,
-            vb = yU(mb.node);
-          if (null === vb || void 0 === vb || !vb.nameNode) continue;
-          if (!Pb.has(Eb)) {
-            const bb = vb.nameNode.getStart(Bb.file) - mb.from,
-              ab = vb.nameNode.getEnd() - mb.from;
-            xb(Ab.slice(0, bb) + Eb + Ab.slice(ab), fb), Rb.push(Eb), Pb.add(Eb)
+          const Oz = `${cs(Wz)}${Ts(tz)}`,
+            Kz = Bs(Jz.node);
+          if (null === Kz || void 0 === Kz || !Kz.nameNode) continue;
+          if (!Nz.has(Oz)) {
+            const zz = Kz.nameNode.getStart(vz.file) - Jz.from,
+              tz = Kz.nameNode.getEnd() - Jz.from;
+            Yz(Fz.slice(0, zz) + Oz + Fz.slice(tz), mz), Dz.push(Oz), Nz.add(Oz)
           }
-          const jb = FU(vb.uX).map(((bb, ab) => null !== bb && void 0 !== bb ? bb : `arg${ab}`));
-          if (!Tb) {
-            const bb = `${Eb}(${jb.join(", ")})`,
-              Ub = `${IU(Mb)}Result`;
-            xb(`function ${ab}(${jb.join(", ")}) {\n\t${XU.has(ab)?bb:`const ${Ub} = ${bb}\n\treturn ${Ub}`}\n}`, -1), Rb.push(ab), Pb.add(ab);
+          const wz = ys(Kz.Zw).map(((zz, tz) => null !== zz && void 0 !== zz ? zz : `arg${tz}`));
+          if (!Xz) {
+            const zz = `${Oz}(${wz.join(", ")})`,
+              sz = `${cs(Wz)}Result`;
+            Yz(`function ${tz}(${wz.join(", ")}) {\n\t${ws.has(tz)?zz:`const ${sz} = ${zz}\n\treturn ${sz}`}\n}`, -1), Dz.push(tz), Nz.add(tz);
             continue
           }
-          uU(Tb.uX, Yb.file, Eb) || (Xb.push(...hU(bb, Yb.file, Tb, ab, Eb, jb, Mb, !0 === Ub.runsLast)), kb.push(ab));
+          ks(Xz.Zw, oz.file, Oz) || (bz.push(...Ms(zz, oz.file, Xz, tz, Oz, wz, Wz, !0 === sz.runsLast)), gz.push(tz));
           continue
         }
-        const Tb = mb.names.filter((bb => !Pb.has(bb)));
-        if ("other" === mb.kind || mb.names.length > 0 && Tb.length === mb.names.length) {
-          xb(Ab, fb), Rb.push(...Tb);
-          for (const bb of Tb) Pb.add(bb)
+        const Xz = Jz.names.filter((zz => !Nz.has(zz)));
+        if ("other" === Jz.kind || Jz.names.length > 0 && Xz.length === Jz.names.length) {
+          Yz(Fz, mz), Dz.push(...Xz);
+          for (const zz of Xz) Nz.add(zz)
         }
       }
-      let ib = WU(bb, Xb);
-      if (jb.length > 0) {
-        const bb = ib.replace(/\s*$/, "");
-        ib = `${""===bb?"":`${bb}\n\n`}${Tb?`${Tb}\n`:""}${jb.join("")}\n`
+      let xz = Gs(zz, bz);
+      if (wz.length > 0) {
+        const zz = xz.replace(/\s*$/, "");
+        xz = `${""===zz?"":`${zz}\n\n`}${Xz?`${Xz}\n`:""}${wz.join("")}\n`
       }
-      return RU(ib).hasErrors ? null : {
-        text: ib,
-        added: Rb,
-        chained: kb,
-        settings: yb
+      return gs(xz).hasErrors ? null : {
+        text: xz,
+        added: Dz,
+        chained: gz,
+        settings: Hz
       }
     }
 
-    function KU(bb) {
+    function Ls(zz) {
       const {
-        file: ab
-      } = RU(bb);
-      return new Set(iU(bb, ab).flatMap((bb => bb.names)))
+        file: tz
+      } = gs(zz);
+      return new Set(ms(zz, tz).flatMap((zz => zz.names)))
     }
 
-    function oU(bb) {
+    function ls(zz) {
       const {
-        file: ab
-      } = RU(bb), Ub = new Set, Ab = bb => {
-        mb().isCallExpression(bb) && mb().isIdentifier(bb.expression) && Ub.add(bb.expression.text), mb().forEachChild(bb, Ab)
+        file: tz
+      } = gs(zz), sz = new Set, Fz = zz => {
+        Jz().isCallExpression(zz) && Jz().isIdentifier(zz.expression) && sz.add(zz.expression.text), Jz().forEachChild(zz, Fz)
       };
-      return Ab(ab), Ub
+      return Fz(tz), sz
     }
 
-    function lU(bb) {
-      return !RU(bb).hasErrors
+    function ns(zz) {
+      return !gs(zz).hasErrors
     }
 
-    function tU(bb, ab) {
-      return mb().isCallExpression(bb) && mb().isPropertyAccessExpression(bb.expression) && "api" === bb.expression.expression.getText(ab)
+    function as(zz, tz) {
+      return Jz().isCallExpression(zz) && Jz().isPropertyAccessExpression(zz.expression) && "api" === zz.expression.expression.getText(tz)
     }
 
-    function wU(bb, ab) {
-      var Ub;
-      const Ab = bb.getPropertiesOfType(bb.getNonNullableType(ab)),
-        Mb = null !== (Ub = Ab.find((bb => "color" === bb.name))) && void 0 !== Ub ? Ub : Ab[0];
-      if (!Mb) return;
-      const Tb = bb.typeToString(bb.getNonNullableType(bb.getTypeOfSymbol(Mb))),
-        Eb = "color" === Mb.name ? '"red"' : Tb.includes("number") ? "1" : "boolean" === Tb ? "true" : '"..."';
-      return `{ ${Mb.name}: ${Eb} }`
+    function qs(zz, tz) {
+      var sz;
+      const Fz = zz.getPropertiesOfType(zz.getNonNullableType(tz)),
+        Wz = null !== (sz = Fz.find((zz => "color" === zz.name))) && void 0 !== sz ? sz : Fz[0];
+      if (!Wz) return;
+      const Xz = zz.typeToString(zz.getNonNullableType(zz.getTypeOfSymbol(Wz))),
+        Oz = "color" === Wz.name ? '"red"' : Xz.includes("number") ? "1" : "boolean" === Xz ? "true" : '"..."';
+      return `{ ${Wz.name}: ${Oz} }`
     }
 
-    function sU(bb) {
-      return bb.isUnion() ? bb.types.every((bb => 0 !== (bb.flags & mb().TypeFlags.Object))) : 0 !== (bb.flags & mb().TypeFlags.Object)
+    function Ss(zz) {
+      return zz.isUnion() ? zz.types.every((zz => 0 !== (zz.flags & Jz().TypeFlags.Object))) : 0 !== (zz.flags & Jz().TypeFlags.Object)
     }
 
-    function gU(bb, ab) {
-      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const Ab = bb.getNonNullableType(ab);
-      if (Ab.isUnion()) {
-        const ab = [...new Set(Ab.types.map((ab => gU(bb, ab, Ub))))];
-        return ab.length > 7 ? `${ab.slice(0,7).join(" or ")} or ...` : ab.join(" or ")
+    function Vs(zz, tz) {
+      let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const Fz = zz.getNonNullableType(tz);
+      if (Fz.isUnion()) {
+        const tz = [...new Set(Fz.types.map((tz => Vs(zz, tz, sz))))];
+        return tz.length > 7 ? `${tz.slice(0,7).join(" or ")} or ...` : tz.join(" or ")
       }
-      if (Ab.isStringLiteral()) return `"${Ab.value}"`;
-      if (Ab.isNumberLiteral()) return `${Ab.value}`;
-      if (Ab.flags & mb().TypeFlags.StringLike) return "text";
-      if (Ab.flags & mb().TypeFlags.NumberLike) return "a number";
-      if (Ab.flags & mb().TypeFlags.BooleanLike) return "true or false";
-      if (bb.isTupleType(Ab)) {
-        return `[${bb.getTypeArguments(Ab).map((ab=>gU(bb,ab,Ub+1))).join(", ")}]`
+      if (Fz.isStringLiteral()) return `"${Fz.value}"`;
+      if (Fz.isNumberLiteral()) return `${Fz.value}`;
+      if (Fz.flags & Jz().TypeFlags.StringLike) return "text";
+      if (Fz.flags & Jz().TypeFlags.NumberLike) return "a number";
+      if (Fz.flags & Jz().TypeFlags.BooleanLike) return "true or false";
+      if (zz.isTupleType(Fz)) {
+        return `[${zz.getTypeArguments(Fz).map((tz=>Vs(zz,tz,sz+1))).join(", ")}]`
       }
-      if (bb.isArrayType(Ab)) {
-        if (Ub > 1) return "a list";
-        const ab = gU(bb, bb.getTypeArguments(Ab)[0], Ub + 1);
-        return `a list of ${ab.includes(" or ")?`(${ab})`:ab}`
+      if (zz.isArrayType(Fz)) {
+        if (sz > 1) return "a list";
+        const tz = Vs(zz, zz.getTypeArguments(Fz)[0], sz + 1);
+        return `a list of ${tz.includes(" or ")?`(${tz})`:tz}`
       }
-      if (Ab.getCallSignatures().length > 0) return "a function";
-      const Mb = bb.getPropertiesOfType(Ab);
-      if (0 === Mb.length || Ub > 1) return "{ ... }";
-      return `{ ${Mb.slice(0,10).map((bb=>`${bb.name}${bb.flags&mb().SymbolFlags.Optional?"?":""}`)).join(", ")}${Mb.length>10?", ...":""} }`
+      if (Fz.getCallSignatures().length > 0) return "a function";
+      const Wz = zz.getPropertiesOfType(Fz);
+      if (0 === Wz.length || sz > 1) return "{ ... }";
+      return `{ ${Wz.slice(0,10).map((zz=>`${zz.name}${zz.flags&Jz().SymbolFlags.Optional?"?":""}`)).join(", ")}${Wz.length>10?", ...":""} }`
     }
 
-    function CU(bb, ab, Ub) {
-      const Ab = (ab, Ub) => bb.isTypeAssignableTo(ab, Ub) || CU(bb, ab, Ub),
-        Mb = ab => bb.getTypeArguments(ab)[0];
-      if ("string | number" === bb.typeToString(ab)) return !0;
-      if (ab.isUnion() && !(ab.flags & mb().TypeFlags.Boolean)) return ab.types.every((bb => Ab(bb, Ub)));
-      const Tb = bb.getNonNullableType(Ub);
-      return (Tb.isUnion() ? Tb.types : [Tb]).some((Ub => bb.isTupleType(Ub) ? bb.isArrayType(ab) && bb.getTypeArguments(Ub).every((bb => Ab(Mb(ab), bb))) : bb.isArrayType(Ub) ? bb.isArrayType(ab) && Ab(Mb(ab), Mb(Ub)) : Ub.flags & (mb().TypeFlags.Object | mb().TypeFlags.Intersection) && 0 === Ub.getCallSignatures().length ? !!(ab.flags & (mb().TypeFlags.Object | mb().TypeFlags.Intersection)) && !bb.isArrayType(ab) && !bb.isTupleType(ab) && bb.getPropertiesOfType(Ub).every((bb => 0 !== (bb.flags & mb().SymbolFlags.Optional) || void 0 !== ab.getProperty(bb.name))) && bb.getPropertiesOfType(ab).every((ab => {
-        var Mb;
-        if (bb.getTypeOfSymbol(ab).flags & mb().TypeFlags.Undefined) return !0;
-        const Tb = Ub.getProperty(ab.name),
-          Eb = Tb ? bb.getTypeOfSymbol(Tb) : null === (Mb = bb.getIndexInfoOfType(Ub, mb().IndexKind.String)) || void 0 === Mb ? void 0 : Mb.type;
-        return void 0 !== Eb && Ab(bb.getTypeOfSymbol(ab), Eb)
-      })) : Ub.isNumberLiteral() && ab.flags === mb().TypeFlags.Number || Ub.isStringLiteral() && ab.flags === mb().TypeFlags.String))
+    function Rs(zz, tz, sz) {
+      const Fz = (tz, sz) => zz.isTypeAssignableTo(tz, sz) || Rs(zz, tz, sz),
+        Wz = tz => zz.getTypeArguments(tz)[0];
+      if ("string | number" === zz.typeToString(tz)) return !0;
+      if (tz.isUnion() && !(tz.flags & Jz().TypeFlags.Boolean)) return tz.types.every((zz => Fz(zz, sz)));
+      const Xz = zz.getNonNullableType(sz);
+      return (Xz.isUnion() ? Xz.types : [Xz]).some((sz => zz.isTupleType(sz) ? zz.isArrayType(tz) && zz.getTypeArguments(sz).every((zz => Fz(Wz(tz), zz))) : zz.isArrayType(sz) ? zz.isArrayType(tz) && Fz(Wz(tz), Wz(sz)) : sz.flags & (Jz().TypeFlags.Object | Jz().TypeFlags.Intersection) && 0 === sz.getCallSignatures().length ? !!(tz.flags & (Jz().TypeFlags.Object | Jz().TypeFlags.Intersection)) && !zz.isArrayType(tz) && !zz.isTupleType(tz) && zz.getPropertiesOfType(sz).every((zz => 0 !== (zz.flags & Jz().SymbolFlags.Optional) || void 0 !== tz.getProperty(zz.name))) && zz.getPropertiesOfType(tz).every((tz => {
+        var Wz;
+        if (zz.getTypeOfSymbol(tz).flags & Jz().TypeFlags.Undefined) return !0;
+        const Xz = sz.getProperty(tz.name),
+          Oz = Xz ? zz.getTypeOfSymbol(Xz) : null === (Wz = zz.getIndexInfoOfType(sz, Jz().IndexKind.String)) || void 0 === Wz ? void 0 : Wz.type;
+        return void 0 !== Oz && Fz(zz.getTypeOfSymbol(tz), Oz)
+      })) : sz.isNumberLiteral() && tz.flags === Jz().TypeFlags.Number || sz.isStringLiteral() && tz.flags === Jz().TypeFlags.String))
     }
 
-    function VU(bb, ab) {
-      return mb().isTypeReferenceNode(bb) && mb().isIdentifier(bb.typeName) && ab.has(bb.typeName.text) || !!mb().forEachChild(bb, (bb => VU(bb, ab) || void 0))
+    function ps(zz, tz) {
+      return Jz().isTypeReferenceNode(zz) && Jz().isIdentifier(zz.typeName) && tz.has(zz.typeName.text) || !!Jz().forEachChild(zz, (zz => ps(zz, tz) || void 0))
     }
 
-    function OU(bb, ab) {
-      const Ub = new Set,
-        Ab = Mb => {
-          if (tU(Mb, bb)) {
-            var Tb, Eb, Yb;
-            const Ab = ab.getResolvedSignature(Mb),
-              Bb = null !== (Tb = null === Ab || void 0 === Ab ? void 0 : Ab.getParameters()) && void 0 !== Tb ? Tb : [],
-              eb = new Set((null !== (Eb = null === Ab || void 0 === Ab || null === (Yb = Ab.getDeclaration()) || void 0 === Yb ? void 0 : Yb.typeParameters) && void 0 !== Eb ? Eb : []).map((bb => bb.name.text)));
-            Mb.arguments.forEach(((ab, Ab) => {
-              var Tb;
-              const Eb = null === (Tb = Bb[Ab]) || void 0 === Tb ? void 0 : Tb.valueDeclaration,
-                Yb = Eb && mb().isParameter(Eb) ? Eb.type : void 0;
-              if (ab.kind === mb().SyntaxKind.NullKeyword && Yb && !VU(Yb, eb) && !/\b(?:null|any|unknown)\b/.test(Yb.getText())) {
-                const ab = Ab === Mb.arguments.length - 1;
-                Ub.add(`${Mb.expression.getText(bb)} can't take null as ${Bb[Ab].name}: ${ab?"leave it out":"give undefined instead"}, or it throws when that line runs.`)
+    function fs(zz, tz) {
+      const sz = new Set,
+        Fz = Wz => {
+          if (as(Wz, zz)) {
+            var Xz, Oz, oz;
+            const Fz = tz.getResolvedSignature(Wz),
+              vz = null !== (Xz = null === Fz || void 0 === Fz ? void 0 : Fz.getParameters()) && void 0 !== Xz ? Xz : [],
+              Uz = new Set((null !== (Oz = null === Fz || void 0 === Fz || null === (oz = Fz.getDeclaration()) || void 0 === oz ? void 0 : oz.typeParameters) && void 0 !== Oz ? Oz : []).map((zz => zz.name.text)));
+            Wz.arguments.forEach(((tz, Fz) => {
+              var Xz;
+              const Oz = null === (Xz = vz[Fz]) || void 0 === Xz ? void 0 : Xz.valueDeclaration,
+                oz = Oz && Jz().isParameter(Oz) ? Oz.type : void 0;
+              if (tz.kind === Jz().SyntaxKind.NullKeyword && oz && !ps(oz, Uz) && !/\b(?:null|any|unknown)\b/.test(oz.getText())) {
+                const tz = Fz === Wz.arguments.length - 1;
+                sz.add(`${Wz.expression.getText(zz)} can't take null as ${vz[Fz].name}: ${tz?"leave it out":"give undefined instead"}, or it throws when that line runs.`)
               }
             }))
           }
-          mb().forEachChild(Mb, Ab)
+          Jz().forEachChild(Wz, Fz)
         };
-      return Ab(bb), [...Ub]
+      return Fz(zz), [...sz]
     }
 
-    function cU(bb) {
-      return RU(bb).file
+    function Es(zz) {
+      return gs(zz).file
     }
 
-    function JU(bb) {
+    function zF(zz) {
       return {
-        from: bb.getFullStart(),
-        to: bb.getEnd()
+        from: zz.getFullStart(),
+        to: zz.getEnd()
       }
     }
 
-    function nU(bb) {
-      if (!/\buse_?prefab\s*\(/i.test(bb)) return {
-        code: bb,
+    function tF(zz) {
+      if (!/\buse_?prefab\s*\(/i.test(zz)) return {
+        code: zz,
         calls: []
       };
-      const ab = cU(bb),
-        Ub = function(bb) {
-          const ab = new Map;
-          for (const Ub of bb.statements)
-            if (mb().isVariableStatement(Ub))
-              for (const bb of Ub.declarationList.declarations)
-                if (mb().isIdentifier(bb.name) && "CONFIG" === bb.name.text && bb.initializer && mb().isObjectLiteralExpression(bb.initializer))
-                  for (const Ub of bb.initializer.properties) mb().isPropertyAssignment(Ub) && (mb().isIdentifier(Ub.name) || mb().isStringLiteral(Ub.name)) && ab.set(Ub.name.text, Ub.initializer.getText());
-          return ab
-        }(ab),
-        Ab = [],
-        Mb = [],
-        Tb = bb => {
-          var ab;
-          return mb().isPropertyAccessExpression(bb) && mb().isIdentifier(bb.expression) && "CONFIG" === bb.expression.text && null !== (ab = Ub.get(bb.name.text)) && void 0 !== ab ? ab : bb.getText()
+      const tz = Es(zz),
+        sz = function(zz) {
+          const tz = new Map;
+          for (const sz of zz.statements)
+            if (Jz().isVariableStatement(sz))
+              for (const zz of sz.declarationList.declarations)
+                if (Jz().isIdentifier(zz.name) && "CONFIG" === zz.name.text && zz.initializer && Jz().isObjectLiteralExpression(zz.initializer))
+                  for (const sz of zz.initializer.properties) Jz().isPropertyAssignment(sz) && (Jz().isIdentifier(sz.name) || Jz().isStringLiteral(sz.name)) && tz.set(sz.name.text, sz.initializer.getText());
+          return tz
+        }(tz),
+        Fz = [],
+        Wz = [],
+        Xz = zz => {
+          var tz;
+          return Jz().isPropertyAccessExpression(zz) && Jz().isIdentifier(zz.expression) && "CONFIG" === zz.expression.text && null !== (tz = sz.get(zz.name.text)) && void 0 !== tz ? tz : zz.getText()
         },
-        Eb = bb => bb && (mb().isStringLiteral(bb) || mb().isNoSubstitutionTemplateLiteral(bb)) ? bb.text : bb && mb().isObjectLiteralExpression(bb) ? bb.properties.flatMap((bb => mb().isPropertyAssignment(bb) && (mb().isIdentifier(bb.name) || mb().isStringLiteral(bb.name)) ? [`${bb.name.text}: ${Tb(bb.initializer)}`] : mb().isShorthandPropertyAssignment(bb) && Ub.has(bb.name.text) ? [`${bb.name.text}: ${Ub.get(bb.name.text)}`] : [])).join("\n") : "";
-      for (const Yb of ab.statements) {
-        const bb = mb().isExpressionStatement(Yb) ? Yb.expression : null;
-        if (!bb || !mb().isCallExpression(bb) || !mb().isIdentifier(bb.expression) || !/^use_?prefab$/i.test(bb.expression.text)) continue;
-        const [ab, Ub] = bb.arguments;
-        if (ab && (mb().isStringLiteral(ab) || mb().isNoSubstitutionTemplateLiteral(ab))) Ab.push({
-          name: ab.text,
-          settings: Eb(Ub)
+        Oz = zz => zz && (Jz().isStringLiteral(zz) || Jz().isNoSubstitutionTemplateLiteral(zz)) ? zz.text : zz && Jz().isObjectLiteralExpression(zz) ? zz.properties.flatMap((zz => Jz().isPropertyAssignment(zz) && (Jz().isIdentifier(zz.name) || Jz().isStringLiteral(zz.name)) ? [`${zz.name.text}: ${Xz(zz.initializer)}`] : Jz().isShorthandPropertyAssignment(zz) && sz.has(zz.name.text) ? [`${zz.name.text}: ${sz.get(zz.name.text)}`] : [])).join("\n") : "";
+      for (const oz of tz.statements) {
+        const zz = Jz().isExpressionStatement(oz) ? oz.expression : null;
+        if (!zz || !Jz().isCallExpression(zz) || !Jz().isIdentifier(zz.expression) || !/^use_?prefab$/i.test(zz.expression.text)) continue;
+        const [tz, sz] = zz.arguments;
+        if (tz && (Jz().isStringLiteral(tz) || Jz().isNoSubstitutionTemplateLiteral(tz))) Fz.push({
+          name: tz.text,
+          settings: Oz(sz)
         });
         else {
-          if (!ab || !mb().isObjectLiteralExpression(ab)) continue;
+          if (!tz || !Jz().isObjectLiteralExpression(tz)) continue;
           {
-            const bb = bb => {
-                var Ub;
-                return null === (Ub = ab.properties.find((ab => mb().isPropertyAssignment(ab) && mb().isIdentifier(ab.name) && ab.name.text === bb))) || void 0 === Ub ? void 0 : Ub.initializer
+            const zz = zz => {
+                var sz;
+                return null === (sz = tz.properties.find((tz => Jz().isPropertyAssignment(tz) && Jz().isIdentifier(tz.name) && tz.name.text === zz))) || void 0 === sz ? void 0 : sz.initializer
               },
-              Ub = bb("name");
-            Ub && mb().isStringLiteral(Ub) && Ab.push({
-              name: Ub.text,
-              settings: Eb(bb("settings"))
+              sz = zz("name");
+            sz && Jz().isStringLiteral(sz) && Fz.push({
+              name: sz.text,
+              settings: Oz(zz("settings"))
             })
           }
         }
-        Mb.push({
-          ...JU(Yb),
+        Wz.push({
+          ...zF(oz),
           text: ""
         })
       }
       return {
-        code: WU(bb, Mb),
-        calls: Ab
+        code: Gs(zz, Wz),
+        calls: Fz
       }
     }
 
-    function SU(bb) {
-      if (!/=\s*(?:on[A-Z]\w*|tick|playerCommand)\b/.test(bb)) return bb;
-      const ab = cU(bb),
-        Ub = new Set(ab.statements.flatMap((bb => mb().isFunctionDeclaration(bb) && bb.name ? [bb.name.text] : []))),
-        Ab = [];
-      for (const Mb of ab.statements)
-        if (mb().isExpressionStatement(Mb) && mb().isBinaryExpression(Mb.expression) && Mb.expression.operatorToken.kind === mb().SyntaxKind.EqualsToken && mb().isIdentifier(Mb.expression.left) && Ub.add(Mb.expression.left.text), mb().isVariableStatement(Mb))
-          for (const bb of Mb.declarationList.declarations) {
-            const ab = bb.initializer;
-            ab && mb().isIdentifier(ab) && PU(ab.text) && !Ub.has(ab.text) && Ab.push({
-              from: ab.getStart(),
-              to: ab.getEnd(),
+    function sF(zz) {
+      if (!/=\s*(?:on[A-Z]\w*|tick|playerCommand)\b/.test(zz)) return zz;
+      const tz = Es(zz),
+        sz = new Set(tz.statements.flatMap((zz => Jz().isFunctionDeclaration(zz) && zz.name ? [zz.name.text] : []))),
+        Fz = [];
+      for (const Wz of tz.statements)
+        if (Jz().isExpressionStatement(Wz) && Jz().isBinaryExpression(Wz.expression) && Wz.expression.operatorToken.kind === Jz().SyntaxKind.EqualsToken && Jz().isIdentifier(Wz.expression.left) && sz.add(Wz.expression.left.text), Jz().isVariableStatement(Wz))
+          for (const zz of Wz.declarationList.declarations) {
+            const tz = zz.initializer;
+            tz && Jz().isIdentifier(tz) && bs(tz.text) && !sz.has(tz.text) && Fz.push({
+              from: tz.getStart(),
+              to: tz.getEnd(),
               text: "function () {}"
-            }), ab && mb().isIdentifier(bb.name) && Ub.add(bb.name.text)
+            }), tz && Jz().isIdentifier(zz.name) && sz.add(zz.name.text)
           }
-      return WU(bb, Ab)
+      return Gs(zz, Fz)
     }
 
-    function bA(bb, ab) {
-      if (!bb.includes("api.setBlockRect(")) return bb;
-      const Ub = cU(bb);
-      if (Ub.statements.some((bb => {
-          var ab;
-          return mb().isFunctionDeclaration(bb) && "fillBox" === (null === (ab = bb.name) || void 0 === ab ? void 0 : ab.text) && 3 !== bb.parameters.length
-        }))) return bb;
-      const Ab = [],
-        Mb = bb => {
-          var Tb;
-          mb().isFunctionDeclaration(bb) && "fillBox" === (null === (Tb = bb.name) || void 0 === Tb ? void 0 : Tb.text) || (tU(bb, Ub) && "setBlockRect" === bb.expression.name.text && 3 === bb.arguments.length && !ab.includes(bb.getText()) && Ab.push({
-            from: bb.expression.getStart(),
-            to: bb.expression.getEnd(),
+    function FF(zz, tz) {
+      if (!zz.includes("api.setBlockRect(")) return zz;
+      const sz = Es(zz);
+      if (sz.statements.some((zz => {
+          var tz;
+          return Jz().isFunctionDeclaration(zz) && "fillBox" === (null === (tz = zz.name) || void 0 === tz ? void 0 : tz.text) && 3 !== zz.parameters.length
+        }))) return zz;
+      const Fz = [],
+        Wz = zz => {
+          var Xz;
+          Jz().isFunctionDeclaration(zz) && "fillBox" === (null === (Xz = zz.name) || void 0 === Xz ? void 0 : Xz.text) || (as(zz, sz) && "setBlockRect" === zz.expression.name.text && 3 === zz.arguments.length && !tz.includes(zz.getText()) && Fz.push({
+            from: zz.expression.getStart(),
+            to: zz.expression.getEnd(),
             text: "fillBox"
-          }), mb().forEachChild(bb, Mb))
+          }), Jz().forEachChild(zz, Wz))
         };
-      return Mb(Ub), WU(bb, Ab)
+      return Wz(sz), Gs(zz, Fz)
     }
-    const aA = [{
+    const WF = [{
         name: "parkour",
         kind: "game",
         title: "Parkour / obby",
@@ -4416,7 +4416,7 @@ export const modules = {
         }],
         setup: "Put your own Bloxd name in admins to get the admin commands, and set spawnPosition to where players should start."
       }],
-      UA = [{
+      XF = [{
         group: "timers",
         code: "// Ready-made timers: runLater(seconds, fn) runs fn once after some seconds, repeatEvery(seconds, fn) runs it every\n// few seconds, and cancelTimer(id) stops either. Time is counted in tick. The list is a var made on first use, so\n// they can be called from the top of the file, above this code.\nvar timerList\nvar nextTimerId\n\nfunction runLater(seconds, fn) {\n\treturn addToTimerList(seconds, 0, fn)\n}\n\nfunction repeatEvery(seconds, fn) {\n\treturn addToTimerList(seconds, Math.max(50, seconds * 1000), fn)\n}\n\nfunction addToTimerList(seconds, everyMs, fn) {\n\tif (!timerList) {\n\t\ttimerList = []\n\t\tnextTimerId = 1\n\t}\n\tconst id = nextTimerId++\n\ttimerList.push({ id: id, msLeft: seconds * 1000, everyMs: everyMs, fn: fn })\n\treturn id\n}\n\nfunction cancelTimer(id) {\n\tconst index = timerList ? timerList.findIndex((timer) => timer.id === id) : -1\n\tif (index !== -1) {\n\t\ttimerList.splice(index, 1)\n\t}\n}\n\nfunction tick(ms) {\n\tif (!timerList) {\n\t\treturn\n\t}\n\tfor (const timer of timerList.slice()) {\n\t\tif (!timerList.includes(timer)) {\n\t\t\tcontinue\n\t\t}\n\t\ttimer.msLeft -= ms\n\t\tif (timer.msLeft > 0) {\n\t\t\tcontinue\n\t\t}\n\t\tif (timer.everyMs > 0) {\n\t\t\ttimer.msLeft += timer.everyMs\n\t\t} else {\n\t\t\tcancelTimer(timer.id)\n\t\t}\n\t\ttimer.fn()\n\t}\n}",
         helpers: [{
@@ -5003,180 +5003,180 @@ export const modules = {
           about: "Stops a risingLava (the handle it returned). With clear true it also takes away the blocks it placed, and only those, e.g. for the next round. Returns nothing.",
           example: "stopLava(lava, true)"
         }]
-      }].flatMap((bb => bb.helpers.map((ab => ({
-        ...ab,
-        group: bb.group,
-        code: bb.code,
-        ...bb.uses ? {
-          uses: bb.uses
+      }].flatMap((zz => zz.helpers.map((tz => ({
+        ...tz,
+        group: zz.group,
+        code: zz.code,
+        ...zz.uses ? {
+          uses: zz.uses
         } : {}
       })))));
 
-    function AA(bb) {
+    function OF(zz) {
       const {
-        file: ab,
-        hasErrors: Ub
-      } = RU(`(${bb})`), Ab = ab.statements[0];
-      if (Ub || 1 !== ab.statements.length || !Ab || !mb().isExpressionStatement(Ab)) return null;
-      const Mb = Ab.expression;
-      return mb().isParenthesizedExpression(Mb) ? Mb.expression : Mb
+        file: tz,
+        hasErrors: sz
+      } = gs(`(${zz})`), Fz = tz.statements[0];
+      if (sz || 1 !== tz.statements.length || !Fz || !Jz().isExpressionStatement(Fz)) return null;
+      const Wz = Fz.expression;
+      return Jz().isParenthesizedExpression(Wz) ? Wz.expression : Wz
     }
 
-    function MA(bb) {
-      return !!(mb().isNumericLiteral(bb) || mb().isStringLiteral(bb) || mb().isNoSubstitutionTemplateLiteral(bb)) || (bb.kind === mb().SyntaxKind.TrueKeyword || bb.kind === mb().SyntaxKind.FalseKeyword || bb.kind === mb().SyntaxKind.NullKeyword || (!mb().isPrefixUnaryExpression(bb) || bb.operator !== mb().SyntaxKind.MinusToken && bb.operator !== mb().SyntaxKind.PlusToken ? mb().isArrayLiteralExpression(bb) ? bb.elements.every((bb => MA(bb))) : !!mb().isObjectLiteralExpression(bb) && bb.properties.every((bb => mb().isPropertyAssignment(bb) && (mb().isIdentifier(bb.name) || mb().isStringLiteral(bb.name)) && MA(bb.initializer))) : mb().isNumericLiteral(bb.operand)))
+    function oF(zz) {
+      return !!(Jz().isNumericLiteral(zz) || Jz().isStringLiteral(zz) || Jz().isNoSubstitutionTemplateLiteral(zz)) || (zz.kind === Jz().SyntaxKind.TrueKeyword || zz.kind === Jz().SyntaxKind.FalseKeyword || zz.kind === Jz().SyntaxKind.NullKeyword || (!Jz().isPrefixUnaryExpression(zz) || zz.operator !== Jz().SyntaxKind.MinusToken && zz.operator !== Jz().SyntaxKind.PlusToken ? Jz().isArrayLiteralExpression(zz) ? zz.elements.every((zz => oF(zz))) : !!Jz().isObjectLiteralExpression(zz) && zz.properties.every((zz => Jz().isPropertyAssignment(zz) && (Jz().isIdentifier(zz.name) || Jz().isStringLiteral(zz.name)) && oF(zz.initializer))) : Jz().isNumericLiteral(zz.operand)))
     }
 
-    function TA(bb) {
-      return mb().isNumericLiteral(bb) || mb().isPrefixUnaryExpression(bb) && mb().isNumericLiteral(bb.operand)
+    function vF(zz) {
+      return Jz().isNumericLiteral(zz) || Jz().isPrefixUnaryExpression(zz) && Jz().isNumericLiteral(zz.operand)
     }
 
-    function EA(bb) {
-      return mb().isStringLiteral(bb) || mb().isNoSubstitutionTemplateLiteral(bb) ? bb.text : null
+    function UF(zz) {
+      return Jz().isStringLiteral(zz) || Jz().isNoSubstitutionTemplateLiteral(zz) ? zz.text : null
     }
-    const YA = /"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/g;
+    const KF = /"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/g;
 
-    function BA(bb) {
-      const ab = bb.trim();
-      if ("" === ab) return [];
-      if (ab.startsWith("{")) try {
-        const bb = JSON.parse(ab);
-        if (bb && "object" === typeof bb && !Array.isArray(bb)) return Object.entries(bb).map((bb => {
-          let [ab, Ub] = bb;
-          return [ab, JSON.stringify(Ub)]
+    function uF(zz) {
+      const tz = zz.trim();
+      if ("" === tz) return [];
+      if (tz.startsWith("{")) try {
+        const zz = JSON.parse(tz);
+        if (zz && "object" === typeof zz && !Array.isArray(zz)) return Object.entries(zz).map((zz => {
+          let [tz, sz] = zz;
+          return [tz, JSON.stringify(sz)]
         }))
       } catch {}
-      const Ub = function(bb) {
-        const ab = AA(bb);
-        if (!ab || !mb().isObjectLiteralExpression(ab)) return null;
-        const Ub = [];
-        for (const Ab of ab.properties) {
-          if (!mb().isPropertyAssignment(Ab) || !mb().isIdentifier(Ab.name) && !mb().isStringLiteral(Ab.name)) return null;
-          Ub.push([Ab.name.text, Ab.initializer.getText()])
+      const sz = function(zz) {
+        const tz = OF(zz);
+        if (!tz || !Jz().isObjectLiteralExpression(tz)) return null;
+        const sz = [];
+        for (const Fz of tz.properties) {
+          if (!Jz().isPropertyAssignment(Fz) || !Jz().isIdentifier(Fz.name) && !Jz().isStringLiteral(Fz.name)) return null;
+          sz.push([Fz.name.text, Fz.initializer.getText()])
         }
-        return Ub
-      }(ab.startsWith("{") ? ab : `{${ab}}`);
-      if (Ub) return Ub;
-      const Ab = [];
-      let Mb = null,
-        Tb = 0;
-      const Eb = ab.startsWith("{") ? ab.replace(/^\{/, "").replace(/\}\s*$/, "") : ab;
-      for (const Lb of Eb.split("\n")) {
-        var Yb, Bb, eb, vb;
-        const bb = /\/\//.exec(Lb.replace(YA, (bb => " ".repeat(bb.length)))),
-          ab = (bb ? Lb.slice(0, bb.index) : Lb).trim();
-        if ("" === ab) continue;
-        if (Mb && Tb > 0) Mb[1] += `\n${ab}`;
+        return sz
+      }(tz.startsWith("{") ? tz : `{${tz}}`);
+      if (sz) return sz;
+      const Fz = [];
+      let Wz = null,
+        Xz = 0;
+      const Oz = tz.startsWith("{") ? tz.replace(/^\{/, "").replace(/\}\s*$/, "") : tz;
+      for (const uz of Oz.split("\n")) {
+        var oz, vz, Uz, Kz;
+        const zz = /\/\//.exec(uz.replace(KF, (zz => " ".repeat(zz.length)))),
+          tz = (zz ? uz.slice(0, zz.index) : uz).trim();
+        if ("" === tz) continue;
+        if (Wz && Xz > 0) Wz[1] += `\n${tz}`;
         else {
-          const bb = /^["']?([A-Za-z_$][\w$]*)["']?\s*[:=]\s*(.*)$/.exec(ab.replace(/^[-*\u2022]\s*/, ""));
-          if (!bb) continue;
-          Mb = [bb[1], bb[2]], Ab.push(Mb)
+          const zz = /^["']?([A-Za-z_$][\w$]*)["']?\s*[:=]\s*(.*)$/.exec(tz.replace(/^[-*\u2022]\s*/, ""));
+          if (!zz) continue;
+          Wz = [zz[1], zz[2]], Fz.push(Wz)
         }
-        const Ub = ab.replace(YA, "");
-        Tb = Math.max(0, Tb + (null !== (Yb = null === (Bb = Ub.match(/[[{(]/g)) || void 0 === Bb ? void 0 : Bb.length) && void 0 !== Yb ? Yb : 0) - (null !== (eb = null === (vb = Ub.match(/[\]})]/g)) || void 0 === vb ? void 0 : vb.length) && void 0 !== eb ? eb : 0))
+        const sz = tz.replace(KF, "");
+        Xz = Math.max(0, Xz + (null !== (oz = null === (vz = sz.match(/[[{(]/g)) || void 0 === vz ? void 0 : vz.length) && void 0 !== oz ? oz : 0) - (null !== (Uz = null === (Kz = sz.match(/[\]})]/g)) || void 0 === Kz ? void 0 : Kz.length) && void 0 !== Uz ? Uz : 0))
       }
-      return Ab.map((bb => {
-        let [ab, Ub] = bb;
-        return [ab, Ub.trim().replace(/[,;]\s*$/, "")]
+      return Fz.map((zz => {
+        let [tz, sz] = zz;
+        return [tz, sz.trim().replace(/[,;]\s*$/, "")]
       }))
     }
 
-    function eA(bb, ab, Ub) {
-      const Ab = "string" === bb.kind || "block" === bb.kind || "item" === bb.kind || "mob" === bb.kind;
-      let Mb = AA(ab),
-        Tb = ab;
-      var Eb;
-      if (Mb && MA(Mb) || !Ab || (Eb = ab, Tb = JSON.stringify(Eb.replace(/^["'`]|["'`]$/g, "")), Mb = AA(Tb)), !Mb || !MA(Mb)) return {
-        problem: `${bb.key} must be a plain value like ${bb.value}, not ${ab}`
+    function NF(zz, tz, sz) {
+      const Fz = "string" === zz.kind || "block" === zz.kind || "item" === zz.kind || "mob" === zz.kind;
+      let Wz = OF(tz),
+        Xz = tz;
+      var Oz;
+      if (Wz && oF(Wz) || !Fz || (Oz = tz, Xz = JSON.stringify(Oz.replace(/^["'`]|["'`]$/g, "")), Wz = OF(Xz)), !Wz || !oF(Wz)) return {
+        problem: `${zz.key} must be a plain value like ${zz.value}, not ${tz}`
       };
-      if ("number" === bb.kind && !TA(Mb)) return {
-        problem: `${bb.key} must be a number, like ${bb.value}`
+      if ("number" === zz.kind && !vF(Wz)) return {
+        problem: `${zz.key} must be a number, like ${zz.value}`
       };
-      if ("boolean" === bb.kind && Mb.kind !== mb().SyntaxKind.TrueKeyword && Mb.kind !== mb().SyntaxKind.FalseKeyword) return {
-        problem: `${bb.key} must be true or false`
+      if ("boolean" === zz.kind && Wz.kind !== Jz().SyntaxKind.TrueKeyword && Wz.kind !== Jz().SyntaxKind.FalseKeyword) return {
+        problem: `${zz.key} must be true or false`
       };
-      if ("position" === bb.kind && ! function(bb) {
-          return mb().isArrayLiteralExpression(bb) && 3 === bb.elements.length && bb.elements.every(TA)
-        }(Mb) && (Mb.kind !== mb().SyntaxKind.NullKeyword || "null" !== bb.value)) return {
-        problem: `${bb.key} must be a position [x, y, z], like ${"null"===bb.value?"[0, 10, 0]":bb.value}`
+      if ("position" === zz.kind && ! function(zz) {
+          return Jz().isArrayLiteralExpression(zz) && 3 === zz.elements.length && zz.elements.every(vF)
+        }(Wz) && (Wz.kind !== Jz().SyntaxKind.NullKeyword || "null" !== zz.value)) return {
+        problem: `${zz.key} must be a position [x, y, z], like ${"null"===zz.value?"[0, 10, 0]":zz.value}`
       };
-      if ("list" === bb.kind && !mb().isArrayLiteralExpression(Mb)) return {
-        problem: `${bb.key} must be a list in [ ], like ${bb.value}`
+      if ("list" === zz.kind && !Jz().isArrayLiteralExpression(Wz)) return {
+        problem: `${zz.key} must be a list in [ ], like ${zz.value}`
       };
-      if ("list" === bb.kind && bb.names && Ub && mb().isArrayLiteralExpression(Mb)) return function(bb, ab, Ub, Ab) {
-        const Mb = bb => bb.elements.flatMap(((ab, Ab) => {
-            if (mb().isArrayLiteralExpression(ab)) return Mb(ab);
-            if ("item" === Ub && mb().isObjectLiteralExpression(ab)) return Tb(ab);
-            const Eb = bb.elements[Ab + 1],
-              Yb = void 0 !== Eb && mb().isArrayLiteralExpression(Eb);
-            return null === EA(ab) || Yb ? [] : [ab]
+      if ("list" === zz.kind && zz.names && sz && Jz().isArrayLiteralExpression(Wz)) return function(zz, tz, sz, Fz) {
+        const Wz = zz => zz.elements.flatMap(((tz, Fz) => {
+            if (Jz().isArrayLiteralExpression(tz)) return Wz(tz);
+            if ("item" === sz && Jz().isObjectLiteralExpression(tz)) return Xz(tz);
+            const Oz = zz.elements[Fz + 1],
+              oz = void 0 !== Oz && Jz().isArrayLiteralExpression(Oz);
+            return null === UF(tz) || oz ? [] : [tz]
           })),
-          Tb = bb => bb.properties.flatMap((bb => {
-            if (!mb().isPropertyAssignment(bb) || !["item", "ammo", "projectile", "items"].includes(bb.name.getText().replace(/["']/g, ""))) return [];
-            const ab = bb.initializer;
-            return mb().isArrayLiteralExpression(ab) ? Mb(ab) : null !== EA(ab) ? [ab] : []
+          Xz = zz => zz.properties.flatMap((zz => {
+            if (!Jz().isPropertyAssignment(zz) || !["item", "ammo", "projectile", "items"].includes(zz.name.getText().replace(/["']/g, ""))) return [];
+            const tz = zz.initializer;
+            return Jz().isArrayLiteralExpression(tz) ? Wz(tz) : null !== UF(tz) ? [tz] : []
           })),
-          Eb = Mb(ab),
-          Yb = ab.getStart();
-        let Bb = ab.getText();
-        const eb = [],
-          vb = [],
-          Lb = new Map([...bb.value.matchAll(/\{ item: "([^"]+)"[^}]*?action: "(\w+)"/g)].map((bb => [bb[2], bb[1]]))),
-          Pb = bb => {
-            var ab;
-            const Ub = bb.parent,
-              Ab = null === Ub || void 0 === Ub ? void 0 : Ub.parent;
-            if (!mb().isPropertyAssignment(Ub) || "item" !== Ub.name.getText().replace(/["']/g, "") || !Ab || !mb().isObjectLiteralExpression(Ab)) return;
-            const Mb = bb => Ab.properties.find((ab => mb().isPropertyAssignment(ab) && ab.name.getText().replace(/["']/g, "") === bb)),
-              Tb = Mb("action"),
-              Eb = Tb ? Lb.get(null !== (ab = EA(Tb.initializer)) && void 0 !== ab ? ab : "") : void 0;
-            return Eb ? {
-              property: Ub,
-              item: Eb,
-              named: void 0 !== Mb("name")
+          Oz = Wz(tz),
+          oz = tz.getStart();
+        let vz = tz.getText();
+        const Uz = [],
+          Kz = [],
+          uz = new Map([...zz.value.matchAll(/\{ item: "([^"]+)"[^}]*?action: "(\w+)"/g)].map((zz => [zz[2], zz[1]]))),
+          Nz = zz => {
+            var tz;
+            const sz = zz.parent,
+              Fz = null === sz || void 0 === sz ? void 0 : sz.parent;
+            if (!Jz().isPropertyAssignment(sz) || "item" !== sz.name.getText().replace(/["']/g, "") || !Fz || !Jz().isObjectLiteralExpression(Fz)) return;
+            const Wz = zz => Fz.properties.find((tz => Jz().isPropertyAssignment(tz) && tz.name.getText().replace(/["']/g, "") === zz)),
+              Xz = Wz("action"),
+              Oz = Xz ? uz.get(null !== (tz = UF(Xz.initializer)) && void 0 !== tz ? tz : "") : void 0;
+            return Oz ? {
+              property: sz,
+              item: Oz,
+              named: void 0 !== Wz("name")
             } : void 0
           };
-        for (const jb of [...Eb].reverse()) {
-          var Xb;
-          const bb = null !== (Xb = EA(jb)) && void 0 !== Xb ? Xb : "",
-            ab = Ab(Ub, bb),
-            Mb = null === ab ? Pb(jb) : void 0;
-          if (Mb) {
-            const ab = Mb.named ? `item: ${JSON.stringify(Mb.item)}` : `item: ${JSON.stringify(Mb.item)}, name: ${JSON.stringify(bb)}`;
-            eb.unshift(`"${bb}" isn't an item, so it is a ${Mb.item}${Mb.named?"":` named "${bb}"`}`), Bb = `${Bb.slice(0,Mb.property.getStart()-Yb)}${ab}${Bb.slice(Mb.property.getEnd()-Yb)}`
-          } else null === ab ? vb.unshift(`"${bb}"`) : ab !== bb && (eb.unshift(`"${bb}" is "${ab}"`), Bb = `${Bb.slice(0,jb.getStart()-Yb)}${JSON.stringify(ab)}${Bb.slice(jb.getEnd()-Yb)}`)
+        for (const wz of [...Oz].reverse()) {
+          var bz;
+          const zz = null !== (bz = UF(wz)) && void 0 !== bz ? bz : "",
+            tz = Fz(sz, zz),
+            Wz = null === tz ? Nz(wz) : void 0;
+          if (Wz) {
+            const tz = Wz.named ? `item: ${JSON.stringify(Wz.item)}` : `item: ${JSON.stringify(Wz.item)}, name: ${JSON.stringify(zz)}`;
+            Uz.unshift(`"${zz}" isn't an item, so it is a ${Wz.item}${Wz.named?"":` named "${zz}"`}`), vz = `${vz.slice(0,Wz.property.getStart()-oz)}${tz}${vz.slice(Wz.property.getEnd()-oz)}`
+          } else null === tz ? Kz.unshift(`"${zz}"`) : tz !== zz && (Uz.unshift(`"${zz}" is "${tz}"`), vz = `${vz.slice(0,wz.getStart()-oz)}${JSON.stringify(tz)}${vz.slice(wz.getEnd()-oz)}`)
         }
-        if (vb.length > 0) return {
-          problem: `${vb.join(", ")} ${1===vb.length?"item"===Ub?"isn't an":"isn't a":"aren't"} ${Ub} name${1===vb.length?"":"s"}, so ${bb.key} kept ${bb.value}`
+        if (Kz.length > 0) return {
+          problem: `${Kz.join(", ")} ${1===Kz.length?"item"===sz?"isn't an":"isn't a":"aren't"} ${sz} name${1===Kz.length?"":"s"}, so ${zz.key} kept ${zz.value}`
         };
         return {
-          value: Bb,
-          ...eb.length > 0 ? {
-            fixed: eb.join(", ")
+          value: vz,
+          ...Uz.length > 0 ? {
+            fixed: Uz.join(", ")
           } : {}
         }
-      }(bb, Mb, bb.names, Ub);
-      if (Ab) {
-        const ab = EA(Mb);
-        if (null === ab) return {
-          problem: `${bb.key} must be text in quotes, like ${bb.value}`
+      }(zz, Wz, zz.names, sz);
+      if (Fz) {
+        const tz = UF(Wz);
+        if (null === tz) return {
+          problem: `${zz.key} must be text in quotes, like ${zz.value}`
         };
-        if (("block" === bb.kind || "item" === bb.kind || "mob" === bb.kind) && Ub) {
-          const Ab = Ub(bb.kind, ab);
-          if (null === Ab) return {
-            problem: `"${ab}" isn't ${"item"===bb.kind?"an":"a"} ${bb.kind} name, so ${bb.key} kept ${bb.value}`
+        if (("block" === zz.kind || "item" === zz.kind || "mob" === zz.kind) && sz) {
+          const Fz = sz(zz.kind, tz);
+          if (null === Fz) return {
+            problem: `"${tz}" isn't ${"item"===zz.kind?"an":"a"} ${zz.kind} name, so ${zz.key} kept ${zz.value}`
           };
-          if (Ab !== ab) return {
-            value: JSON.stringify(Ab),
-            fixed: `"${ab}" is "${Ab}"`
+          if (Fz !== tz) return {
+            value: JSON.stringify(Fz),
+            fixed: `"${tz}" is "${Fz}"`
           }
         }
       }
       return {
-        value: Mb.getText()
+        value: Wz.getText()
       }
     }
-    const vA = aA,
-      LA = new Map([
+    const bF = WF,
+      wF = new Map([
         ["parkour", "parkour, obbies and races to a finish"],
         ["pvp", "fighting other players: arenas, kills, last one standing"],
         ["teams", "teams against each other"],
@@ -5190,707 +5190,707 @@ export const modules = {
         ["screen", "text on players' screens and announcements"]
       ]);
 
-    function PA(bb) {
-      return bb.toLowerCase().replace(/[^a-z0-9]/g, "")
+    function DF(zz) {
+      return zz.toLowerCase().replace(/[^a-z0-9]/g, "")
     }
 
-    function XA(bb) {
-      var ab;
-      const Ub = PA(bb);
-      return null !== (ab = vA.find((bb => PA(bb.name) === Ub || PA(bb.title) === Ub))) && void 0 !== ab ? ab : null
+    function gF(zz) {
+      var tz;
+      const sz = DF(zz);
+      return null !== (tz = bF.find((zz => DF(zz.name) === sz || DF(zz.title) === sz))) && void 0 !== tz ? tz : null
     }
 
-    function jA(bb) {
-      var ab;
-      return null !== (ab = UA.find((ab => ab.name === bb))) && void 0 !== ab ? ab : null
+    function HF(zz) {
+      var tz;
+      return null !== (tz = XF.find((tz => tz.name === zz))) && void 0 !== tz ? tz : null
     }
 
-    function RA(bb) {
-      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-      const Ub = function(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return 0 === bb.length ? "" : `const CONFIG = {\n${bb.map((bb=>{var Ub;return`\t${bb.key}: ${null!==(Ub=ab.get(bb.key))&&void 0!==Ub?Ub:bb.value}, // ${bb.about}`})).join("\n")}\n}`
-      }(bb.settings, ab);
-      return `${""===Ub?"":`${Ub}\n\n`}${bb.code.trim()}\n`
+    function BF(zz) {
+      let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+      const sz = function(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return 0 === zz.length ? "" : `const CONFIG = {\n${zz.map((zz=>{var sz;return`\t${zz.key}: ${null!==(sz=tz.get(zz.key))&&void 0!==sz?sz:zz.value}, // ${zz.about}`})).join("\n")}\n}`
+      }(zz.settings, tz);
+      return `${""===sz?"":`${sz}\n\n`}${zz.code.trim()}\n`
     }
 
-    function kA(bb) {
-      const ab = [],
-        Ub = new Set,
-        Ab = bb => {
-          const Mb = jA(bb);
-          if (Mb && !Ub.has(Mb.group)) {
-            Ub.add(Mb.group);
-            for (const bb of null !== (Tb = Mb.uses) && void 0 !== Tb ? Tb : []) {
-              var Tb;
-              Ab(bb)
+    function PF(zz) {
+      const tz = [],
+        sz = new Set,
+        Fz = zz => {
+          const Wz = HF(zz);
+          if (Wz && !sz.has(Wz.group)) {
+            sz.add(Wz.group);
+            for (const zz of null !== (Xz = Wz.uses) && void 0 !== Xz ? Xz : []) {
+              var Xz;
+              Fz(zz)
             }
-            ab.push(Mb)
+            tz.push(Wz)
           }
         };
-      for (const Mb of bb) Ab(Mb);
-      return ab
+      for (const Wz of zz) Fz(Wz);
+      return tz
     }
 
-    function yA(bb, ab) {
-      const Ub = bb => bb.replace(/\s+/g, ""),
-        Ab = new RegExp(`function ${ab.name}\\s*\\([^)]*\\)\\s*\\{`).exec(bb);
-      return !!Ab && Ub(ab.code).includes(Ub(bb.slice(Ab.index, Ab.index + 200)).slice(0, 60))
+    function rF(zz, tz) {
+      const sz = zz => zz.replace(/\s+/g, ""),
+        Fz = new RegExp(`function ${tz.name}\\s*\\([^)]*\\)\\s*\\{`).exec(zz);
+      return !!Fz && sz(tz.code).includes(sz(zz.slice(Fz.index, Fz.index + 200)).slice(0, 60))
     }
 
-    function ZA(bb) {
-      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set;
-      if (!lU(bb)) return {
-        text: bb,
+    function YF(zz) {
+      let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set;
+      if (!ns(zz)) return {
+        text: zz,
         added: []
       };
-      let Ub = bb;
-      const Ab = [];
-      for (let Mb = 0; Mb < 4; Mb++) {
-        const bb = KU(Ub),
-          Mb = [...oU(Ub)].filter((Ab => {
-            const Mb = jA(Ab);
-            return null !== Mb && !ab.has(Ab) && (!bb.has(Ab) || yA(Ub, Mb))
+      let sz = zz;
+      const Fz = [];
+      for (let Wz = 0; Wz < 4; Wz++) {
+        const zz = Ls(sz),
+          Wz = [...ls(sz)].filter((Fz => {
+            const Wz = HF(Fz);
+            return null !== Wz && !tz.has(Fz) && (!zz.has(Fz) || rF(sz, Wz))
           }));
-        let Tb = !1;
-        for (const ab of kA(Mb)) {
-          const Eb = rU(Ub, ab.code, {
-            owner: ab.group,
+        let Xz = !1;
+        for (const tz of PF(Wz)) {
+          const Oz = is(sz, tz.code, {
+            owner: tz.group,
             chainCallbacks: !0
           });
-          Eb && Eb.text !== Ub && (Ub = Eb.text, Tb = !0, bb.has(ab.name) || Ab.push(...UA.filter((bb => bb.group === ab.group && Mb.includes(bb.name))).map((bb => bb.name))))
+          Oz && Oz.text !== sz && (sz = Oz.text, Xz = !0, zz.has(tz.name) || Fz.push(...XF.filter((zz => zz.group === tz.group && Wz.includes(zz.name))).map((zz => zz.name))))
         }
-        if (!Tb) break
+        if (!Xz) break
       }
       return {
-        text: Ub,
-        added: [...new Set(Ab)]
+        text: sz,
+        added: [...new Set(Fz)]
       }
     }
 
-    function DA(bb, ab) {
-      const Ub = [...KU(ab.code)].filter((bb => "CONFIG" !== bb && !PU(bb)));
-      if (0 === Ub.length) return bb.includes(ab.code.trim().slice(0, 80));
-      const Ab = lU(bb) ? KU(bb) : new Set;
-      return 2 * Ub.filter((bb => Ab.has(bb))).length >= Ub.length
+    function xF(zz, tz) {
+      const sz = [...Ls(tz.code)].filter((zz => "CONFIG" !== zz && !bs(zz)));
+      if (0 === sz.length) return zz.includes(tz.code.trim().slice(0, 80));
+      const Fz = ns(zz) ? Ls(zz) : new Set;
+      return 2 * sz.filter((zz => Fz.has(zz))).length >= sz.length
     }
 
-    function zA(bb) {
-      const ab = /^const CONFIG = \{\n([\s\S]*?)\n\}/m.exec(bb.code);
-      return ab ? ab[1].split("\n").flatMap((bb => {
-        const ab = /^\t(\w+): (.+?), \/\/ (.*)$/.exec(bb);
-        if (!ab) return [];
-        const [, Ub, Ab, Mb] = ab;
+    function mF(zz) {
+      const tz = /^const CONFIG = \{\n([\s\S]*?)\n\}/m.exec(zz.code);
+      return tz ? tz[1].split("\n").flatMap((zz => {
+        const tz = /^\t(\w+): (.+?), \/\/ (.*)$/.exec(zz);
+        if (!tz) return [];
+        const [, sz, Fz, Wz] = tz;
         return [{
-          key: Ub,
-          kind: /^-?\d/.test(Ab) ? "number" : "true" === Ab || "false" === Ab ? "boolean" : Ab.startsWith("[") ? "list" : "string",
-          value: Ab,
-          about: Mb
+          key: sz,
+          kind: /^-?\d/.test(Fz) ? "number" : "true" === Fz || "false" === Fz ? "boolean" : Fz.startsWith("[") ? "list" : "string",
+          value: Fz,
+          about: Wz
         }]
       })) : []
     }
 
-    function xA(bb) {
-      const ab = new Set(bb.settings.map((bb => bb.key))),
-        Ub = new Map;
-      for (const Ab of kA(oU(bb.code)))
-        for (const bb of zA(Ab)) ab.has(bb.key) || Ub.set(bb.key, bb);
-      return [...Ub.values()]
+    function JF(zz) {
+      const tz = new Set(zz.settings.map((zz => zz.key))),
+        sz = new Map;
+      for (const Fz of PF(ls(zz.code)))
+        for (const zz of mF(Fz)) tz.has(zz.key) || sz.set(zz.key, zz);
+      return [...sz.values()]
     }
 
-    function iA(bb, ab, Ub, Ab) {
-      const Mb = xA(ab),
-        Tb = function(bb, ab, Ub) {
-          const Ab = new Map,
-            Mb = [],
-            Tb = [],
-            Eb = new Map(bb.settings.map((bb => [bb.key.toLowerCase(), bb])));
-          for (const [Yb, Bb] of BA(ab)) {
-            const ab = Eb.get(Yb.toLowerCase());
-            if (!ab) {
-              Mb.push(`${bb.name} has no setting ${Yb}`);
+    function IF(zz, tz, sz, Fz) {
+      const Wz = JF(tz),
+        Xz = function(zz, tz, sz) {
+          const Fz = new Map,
+            Wz = [],
+            Xz = [],
+            Oz = new Map(zz.settings.map((zz => [zz.key.toLowerCase(), zz])));
+          for (const [oz, vz] of uF(tz)) {
+            const tz = Oz.get(oz.toLowerCase());
+            if (!tz) {
+              Wz.push(`${zz.name} has no setting ${oz}`);
               continue
             }
-            if (/^CONFIG\.\w+$/.test(Bb.trim())) continue;
-            const eb = eA(ab, Bb, Ub);
-            "problem" in eb ? Mb.push(eb.problem) : (Ab.set(ab.key, eb.value), eb.fixed && Tb.push(eb.fixed))
+            if (/^CONFIG\.\w+$/.test(vz.trim())) continue;
+            const Uz = NF(tz, vz, sz);
+            "problem" in Uz ? Wz.push(Uz.problem) : (Fz.set(tz.key, Uz.value), Uz.fixed && Xz.push(Uz.fixed))
           }
           return {
-            values: Ab,
-            problems: Mb,
-            fixed: Tb
+            values: Fz,
+            problems: Wz,
+            fixed: Xz
           }
         }({
-          ...ab,
-          settings: [...ab.settings, ...Mb]
-        }, Ub, Ab),
-        Eb = Mb.filter((bb => Tb.values.has(bb.key))),
-        Yb = rU(bb, RA({
-          ...ab,
-          settings: [...ab.settings, ...Eb]
-        }, Tb.values), {
-          owner: ab.name,
-          overrides: new Set(Tb.values.keys()),
-          heading: "" === bb.trim() ? void 0 : `// ---- ${ab.title} (ready-made) ----`
+          ...tz,
+          settings: [...tz.settings, ...Wz]
+        }, sz, Fz),
+        Oz = Wz.filter((zz => Xz.values.has(zz.key))),
+        oz = is(zz, BF({
+          ...tz,
+          settings: [...tz.settings, ...Oz]
+        }, Xz.values), {
+          owner: tz.name,
+          overrides: new Set(Xz.values.keys()),
+          heading: "" === zz.trim() ? void 0 : `// ---- ${tz.title} (ready-made) ----`
         });
-      if (!Yb) return {
-        error: lU(bb) ? "The prefab couldn't be fitted into the code around it without breaking it. Put it into an empty file instead." : "The code around it doesn't parse (a bracket is likely missing), so the prefab couldn't be fitted in. Fix the code first."
+      if (!oz) return {
+        error: ns(zz) ? "The prefab couldn't be fitted into the code around it without breaking it. Put it into an empty file instead." : "The code around it doesn't parse (a bracket is likely missing), so the prefab couldn't be fitted in. Fix the code first."
       };
-      const Bb = ZA(Yb.text);
+      const vz = YF(oz.text);
       return {
-        prefab: ab,
-        text: Bb.text,
-        problems: Tb.problems,
-        fixed: Tb.fixed,
-        chained: Yb.chained,
-        helpers: Bb.added
+        prefab: tz,
+        text: vz.text,
+        problems: Xz.problems,
+        fixed: Xz.fixed,
+        chained: oz.chained,
+        helpers: vz.added
       }
     }
 
-    function fA(bb) {
-      return `- ${bb.name}: ${bb.summary}. Settings: ${bb.settings.map((bb=>bb.key)).join(", ")}`
+    function CF(zz) {
+      return `- ${zz.name}: ${zz.summary}. Settings: ${zz.settings.map((zz=>zz.key)).join(", ")}`
     }
 
-    function mA(bb) {
-      var ab;
-      const Ub = null !== (ab = null === bb || void 0 === bb ? void 0 : bb.trim().toLowerCase()) && void 0 !== ab ? ab : "",
-        Ab = [...LA.keys()].find((bb => bb === Ub)),
-        Mb = Ab ? vA.filter((bb => bb.category === Ab)) : vA,
-        Tb = Ab ? UA.filter((bb => bb.category === Ab)) : [];
-      return `${Ab?`Prefabs for ${LA.get(Ab)}:`:""===Ub||"all"===Ub?"Every prefab:":`There is no category ${bb}. Every prefab:`}\n${Mb.length>0?Mb.map(fA).join("\n"):"(none yet)"}${Tb.length>0?`\nReady-made functions for it (call them; their code is added by itself):\n${Tb.map((bb=>`- ${bb.signature}: ${bb.about}`)).join("\n")}`:""}${Ab?"":`\nCategories: ${[...LA.keys()].join(", ")}`}`
+    function eF(zz) {
+      var tz;
+      const sz = null !== (tz = null === zz || void 0 === zz ? void 0 : zz.trim().toLowerCase()) && void 0 !== tz ? tz : "",
+        Fz = [...wF.keys()].find((zz => zz === sz)),
+        Wz = Fz ? bF.filter((zz => zz.category === Fz)) : bF,
+        Xz = Fz ? XF.filter((zz => zz.category === Fz)) : [];
+      return `${Fz?`Prefabs for ${wF.get(Fz)}:`:""===sz||"all"===sz?"Every prefab:":`There is no category ${zz}. Every prefab:`}\n${Wz.length>0?Wz.map(CF).join("\n"):"(none yet)"}${Xz.length>0?`\nReady-made functions for it (call them; their code is added by itself):\n${Xz.map((zz=>`- ${zz.signature}: ${zz.about}`)).join("\n")}`:""}${Fz?"":`\nCategories: ${[...wF.keys()].join(", ")}`}`
     }
 
-    function pA(bb, ab) {
-      var Ub;
-      const Ab = [...bb.settings, ...xA(bb)].map((bb => `- ${bb.key} (${bb.kind}, default ${bb.value}): ${bb.about}`)).join("\n"),
-        Mb = null !== (Ub = bb.changeable) && void 0 !== Ub && Ub.length ? `\nFunctions to replace by name for a game of their own:\n${bb.changeable.map((bb=>`- ${bb.name}: ${bb.about}`)).join("\n")}` : "",
-        Tb = ab ? `\nIts code, as it goes in with the default settings:\n${RA(bb)}` : "";
-      return `${bb.name} (${bb.title}): ${bb.summary}.\nHow it plays: ${bb.howItPlays}\nSettings:\n${Ab}${Mb}${bb.setup?`\nThe creator sets up: ${bb.setup}`:""}${Tb}`
+    function ZF(zz, tz) {
+      var sz;
+      const Fz = [...zz.settings, ...JF(zz)].map((zz => `- ${zz.key} (${zz.kind}, default ${zz.value}): ${zz.about}`)).join("\n"),
+        Wz = null !== (sz = zz.changeable) && void 0 !== sz && sz.length ? `\nFunctions to replace by name for a game of their own:\n${zz.changeable.map((zz=>`- ${zz.name}: ${zz.about}`)).join("\n")}` : "",
+        Xz = tz ? `\nIts code, as it goes in with the default settings:\n${BF(zz)}` : "";
+      return `${zz.name} (${zz.title}): ${zz.summary}.\nHow it plays: ${zz.howItPlays}\nSettings:\n${Fz}${Wz}${zz.setup?`\nThe creator sets up: ${zz.setup}`:""}${Xz}`
     }
 
-    function NA(bb) {
-      let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4;
-      const Ub = function(bb) {
-          return new Set(bb.toLowerCase().split(/[^a-z0-9]+/).filter((bb => bb.length > 1)))
-        }(bb),
-        Ab = ` ${bb.toLowerCase().replace(/[^a-z0-9]+/g," ")} `;
-      return vA.map((bb => {
-        const ab = bb.keywords.map((bb => bb.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())).filter((bb => bb.includes(" ") ? Ab.includes(` ${bb} `) : Ub.has(bb))),
-          Mb = Math.min(...ab.map((bb => Ab.indexOf(` ${bb} `))));
+    function GF(zz) {
+      let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4;
+      const sz = function(zz) {
+          return new Set(zz.toLowerCase().split(/[^a-z0-9]+/).filter((zz => zz.length > 1)))
+        }(zz),
+        Fz = ` ${zz.toLowerCase().replace(/[^a-z0-9]+/g," ")} `;
+      return bF.map((zz => {
+        const tz = zz.keywords.map((zz => zz.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())).filter((zz => zz.includes(" ") ? Fz.includes(` ${zz} `) : sz.has(zz))),
+          Wz = Math.min(...tz.map((zz => Fz.indexOf(` ${zz} `))));
         return {
-          prefab: bb,
-          score: ab.length,
-          first: Mb
+          prefab: zz,
+          score: tz.length,
+          first: Wz
         }
-      })).filter((bb => bb.score > 0)).sort(((bb, ab) => ab.score - bb.score || bb.first - ab.first)).slice(0, ab).map((bb => bb.prefab))
+      })).filter((zz => zz.score > 0)).sort(((zz, tz) => tz.score - zz.score || zz.first - tz.first)).slice(0, tz).map((zz => zz.prefab))
     }
-    const WA = /\byour\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\bhow old\b|\bwhere (?:do )?you live\b|\be-?mail\b|\bphone number\b|\bpassword\b/i;
+    const TF = /\byour\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\bhow old\b|\bwhere (?:do )?you live\b|\be-?mail\b|\bphone number\b|\bpassword\b/i;
 
-    function HA(bb) {
-      var ab, Ub, Ab, Mb, Tb, Eb;
-      const Yb = function(bb) {
-          var ab, Ub;
-          const Ab = null === (ab = bb.questions) || void 0 === ab ? void 0 : ab.trim();
-          if (null !== (Ub = bb.question) && void 0 !== Ub && Ub.trim() || !Ab) return bb;
-          const Mb = {
-            ...bb,
-            question: Ab
+    function cF(zz) {
+      var tz, sz, Fz, Wz, Xz, Oz;
+      const oz = function(zz) {
+          var tz, sz;
+          const Fz = null === (tz = zz.questions) || void 0 === tz ? void 0 : tz.trim();
+          if (null !== (sz = zz.question) && void 0 !== sz && sz.trim() || !Fz) return zz;
+          const Wz = {
+            ...zz,
+            question: Fz
           };
-          if (!/^[[{]/.test(Ab)) return Mb;
+          if (!/^[[{]/.test(Fz)) return Wz;
           try {
-            const ab = JSON.parse(Ab),
-              Ub = Array.isArray(ab) ? ab[0] : ab;
-            if ("string" === typeof Ub) {
-              const Ab = Array.isArray(ab) ? ab.slice(1).filter((bb => "string" === typeof bb)) : [];
+            const tz = JSON.parse(Fz),
+              sz = Array.isArray(tz) ? tz[0] : tz;
+            if ("string" === typeof sz) {
+              const Fz = Array.isArray(tz) ? tz.slice(1).filter((zz => "string" === typeof zz)) : [];
               return {
-                ...bb,
-                question: Ub,
-                ...Ab.length > 0 && void 0 === bb.choices ? {
-                  choices: Ab.join("\n")
+                ...zz,
+                question: sz,
+                ...Fz.length > 0 && void 0 === zz.choices ? {
+                  choices: Fz.join("\n")
                 } : {}
               }
             }
-            if ("object" !== typeof Ub || null === Ub) return Mb;
-            const Tb = Ub,
-              Eb = bb => "string" === typeof bb ? bb : "boolean" === typeof bb ? String(bb) : Array.isArray(bb) ? bb.filter((bb => "string" === typeof bb)).join("\n") : void 0,
-              Yb = {
-                question: Eb(Tb.question),
-                choices: Eb(Tb.choices),
-                allow_other: Eb(Tb.allow_other)
+            if ("object" !== typeof sz || null === sz) return Wz;
+            const Xz = sz,
+              Oz = zz => "string" === typeof zz ? zz : "boolean" === typeof zz ? String(zz) : Array.isArray(zz) ? zz.filter((zz => "string" === typeof zz)).join("\n") : void 0,
+              oz = {
+                question: Oz(Xz.question),
+                choices: Oz(Xz.choices),
+                allow_other: Oz(Xz.allow_other)
               };
             return {
-              ...bb,
-              ...Object.fromEntries(Object.entries(Yb).filter((bb => {
-                let [, ab] = bb;
-                return void 0 !== ab
+              ...zz,
+              ...Object.fromEntries(Object.entries(oz).filter((zz => {
+                let [, tz] = zz;
+                return void 0 !== tz
               })))
             }
           } catch {
-            return Ab.startsWith("[") ? Mb : bb
+            return Fz.startsWith("[") ? Wz : zz
           }
-        }(bb),
-        Bb = null !== (ab = null === (Ub = Yb.question) || void 0 === Ub ? void 0 : Ub.replace(/\s+/g, " ").trim()) && void 0 !== ab ? ab : "",
-        eb = (null !== (Ab = Yb.choices) && void 0 !== Ab ? Ab : "").includes("\n") ? (null !== (Mb = Yb.choices) && void 0 !== Mb ? Mb : "").split("\n") : (null !== (Tb = Yb.choices) && void 0 !== Tb ? Tb : "").split("|"),
-        vb = [...new Set(eb.map((bb => bb.replace(/^\s*(?:[-*\u2022]|\d+[.)])\s*/, "").trim())).filter(Boolean))].slice(0, 4),
-        Lb = "false" !== (null === (Eb = Yb.allow_other) || void 0 === Eb ? void 0 : Eb.trim().toLowerCase());
-      return "" === Bb || WA.test(Bb) || vb.length < 2 && !Lb ? null : {
-        question: Bb,
-        choices: vb,
-        allowOther: Lb
+        }(zz),
+        vz = null !== (tz = null === (sz = oz.question) || void 0 === sz ? void 0 : sz.replace(/\s+/g, " ").trim()) && void 0 !== tz ? tz : "",
+        Uz = (null !== (Fz = oz.choices) && void 0 !== Fz ? Fz : "").includes("\n") ? (null !== (Wz = oz.choices) && void 0 !== Wz ? Wz : "").split("\n") : (null !== (Xz = oz.choices) && void 0 !== Xz ? Xz : "").split("|"),
+        Kz = [...new Set(Uz.map((zz => zz.replace(/^\s*(?:[-*\u2022]|\d+[.)])\s*/, "").trim())).filter(Boolean))].slice(0, 4),
+        uz = "false" !== (null === (Oz = oz.allow_other) || void 0 === Oz ? void 0 : Oz.trim().toLowerCase());
+      return "" === vz || TF.test(vz) || Kz.length < 2 && !uz ? null : {
+        question: vz,
+        choices: Kz,
+        allowOther: uz
       }
     }
-    const IA = /^\s*(?:\.\.\.|\u2026)\s*$/,
-      dA = /^[ \t]*(?:\/\/|\/\*)[ \t]*(?:(?:\.\.\.|\u2026)[ \t]*(?:\*\/)?[ \t]*$|(?:\.\.\.|\u2026)?[ \t]*(?:existing code|rest of (?:the |your )?(?:code|file)))/im;
+    const jF = /^\s*(?:\.\.\.|\u2026)\s*$/,
+      AF = /^[ \t]*(?:\/\/|\/\*)[ \t]*(?:(?:\.\.\.|\u2026)[ \t]*(?:\*\/)?[ \t]*$|(?:\.\.\.|\u2026)?[ \t]*(?:existing code|rest of (?:the |your )?(?:code|file)))/im;
 
-    function FA(bb, ab) {
-      if (IA.test(bb)) return !0;
-      const Ub = new Set(ab.split("\n").map((bb => bb.trim())));
-      return bb.split("\n").some((bb => dA.test(bb) && !Ub.has(bb.trim())))
+    function yF(zz, tz) {
+      if (jF.test(zz)) return !0;
+      const sz = new Set(tz.split("\n").map((zz => zz.trim())));
+      return zz.split("\n").some((zz => AF.test(zz) && !sz.has(zz.trim())))
     }
-    const hA = /```(?:js|javascript|ts|typescript)?\n([\s\S]*?)```/g,
-      GA = String.raw`on[A-Z]\w*|tick|playerCommand`,
-      QA = new RegExp(String.raw`^(?:(?:async\s+)?function\s+(?:${GA})\s*\(|(?:${GA})\s*=\s*(?:async\s+)?(?:function\b|\())`, "m"),
-      qA = new RegExp(`^(?:${GA})$`),
-      uA = new RegExp(String.raw`^(${GA})(\s*\([^()\n]*\)\s*\{)`, "gm"),
-      rA = new RegExp(String.raw`\bapi\.|\bfunction\s+(?:${GA})\b|\buse_?prefab\s*\(`, "i");
+    const MF = /```(?:js|javascript|ts|typescript)?\n([\s\S]*?)```/g,
+      dF = String.raw`on[A-Z]\w*|tick|playerCommand`,
+      hF = new RegExp(String.raw`^(?:(?:async\s+)?function\s+(?:${dF})\s*\(|(?:${dF})\s*=\s*(?:async\s+)?(?:function\b|\())`, "m"),
+      QF = new RegExp(`^(?:${dF})$`),
+      kF = new RegExp(String.raw`^(${dF})(\s*\([^()\n]*\)\s*\{)`, "gm"),
+      iF = new RegExp(String.raw`\bapi\.|\bfunction\s+(?:${dF})\b|\buse_?prefab\s*\(`, "i");
 
-    function KA(bb) {
-      return bb.replace(/^\s*```[\w-]*[^\n]*\n/, "").replace(/\n?```\s*$/, "")
-    }
-
-    function oA(bb) {
-      return KA(bb).replace(/\s*$/, "\n")
+    function LF(zz) {
+      return zz.replace(/^\s*```[\w-]*[^\n]*\n/, "").replace(/\n?```\s*$/, "")
     }
 
-    function lA(bb, ab) {
-      switch (bb) {
+    function lF(zz) {
+      return LF(zz).replace(/\s*$/, "\n")
+    }
+
+    function nF(zz, tz) {
+      switch (zz) {
         case "view_file":
-          return void 0 === ab.path ? ab : {
-            path: tA(ab.path)
+          return void 0 === tz.path ? tz : {
+            path: aF(tz.path)
           };
         case "fetch_url":
-          return void 0 === ab.url ? ab : {
-            url: xb(ab.url)
+          return void 0 === tz.url ? tz : {
+            url: Yz(tz.url)
           };
         default:
-          return ab
+          return tz
       }
     }
 
-    function tA(bb) {
-      return bb.trim().replace(/^\.?\//, "")
+    function aF(zz) {
+      return zz.trim().replace(/^\.?\//, "")
     }
 
-    function wA(bb) {
-      return bb.replace(uA, "function $1$2")
+    function qF(zz) {
+      return zz.replace(kF, "function $1$2")
     }
 
-    function sA(bb) {
-      return bb.replace(/\bif\s*\(\s*(\/\*(?:(?!\*\/)[^])*\*\/)\s*\)/g, "if (false $1)")
+    function SF(zz) {
+      return zz.replace(/\bif\s*\(\s*(\/\*(?:(?!\*\/)[^])*\*\/)\s*\)/g, "if (false $1)")
     }
 
-    function gA(bb, ab, Ub, Ab) {
-      let Mb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
-        Tb = arguments.length > 5 ? arguments[5] : void 0,
-        Eb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "offer",
-        Yb = arguments.length > 7 ? arguments[7] : void 0,
-        Bb = arguments.length > 8 ? arguments[8] : void 0;
-      const eb = {
-          ...Ub
+    function VF(zz, tz, sz, Fz) {
+      let Wz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+        Xz = arguments.length > 5 ? arguments[5] : void 0,
+        Oz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "offer",
+        oz = arguments.length > 7 ? arguments[7] : void 0,
+        vz = arguments.length > 8 ? arguments[8] : void 0;
+      const Uz = {
+          ...sz
         },
-        vb = new Set,
-        Lb = [];
-      let Pb;
-      const Xb = (bb, ab, Ub, Ab) => {
-        Lb.push({
-          tool: bb,
-          path: ab,
-          reason: Ub,
+        Kz = new Set,
+        uz = [];
+      let Nz;
+      const bz = (zz, tz, sz, Fz) => {
+        uz.push({
+          tool: zz,
+          path: tz,
+          reason: sz,
           closest: null,
           functions: [],
-          ...Ab,
-          ...Pb ? {
-            call: Pb
+          ...Fz,
+          ...Nz ? {
+            call: Nz
           } : {}
         })
       };
-      let Rb = bb;
-      const kb = Object.keys(Ub).some(jb.f),
-        yb = bb => null !== bb && kb && (0, jb.f)(bb),
-        Zb = bb => yb(bb) ? `${jb.l}${(0,jb.j)(bb)}` : null !== Tb && void 0 !== Tb ? Tb : tA(bb),
-        Db = bb => void 0 === Tb || yb(bb),
-        zb = bb => void 0 !== Yb && !Yb.has(bb),
-        xb = new Set,
-        ib = bb => JSON.stringify({
-          name: bb.name,
-          args: bb.args
+      let Dz = zz;
+      const gz = Object.keys(sz).some(wz.d),
+        Hz = zz => null !== zz && gz && (0, wz.d)(zz),
+        Bz = zz => Hz(zz) ? `${wz.h}${(0,wz.g)(zz)}` : null !== Xz && void 0 !== Xz ? Xz : aF(zz),
+        Pz = zz => void 0 === Xz || Hz(zz),
+        rz = zz => void 0 !== oz && !oz.has(zz),
+        Yz = new Set,
+        xz = zz => JSON.stringify({
+          name: zz.name,
+          args: zz.args
         }),
-        fb = bb => {
-          const ab = yb(bb) ? {
+        mz = zz => {
+          const tz = Hz(zz) ? {
               name: "view_world_code",
               args: {}
             } : {
               name: "view_file",
               args: {
-                path: bb
+                path: zz
               }
             },
-            Ub = Pb ? {
-              ...ab,
-              call: Pb
-            } : ab;
-          xb.add(ib(Ub)), pb(Ub)
+            sz = Nz ? {
+              ...tz,
+              call: Nz
+            } : tz;
+          Yz.add(xz(sz)), Iz(sz)
         },
-        mb = [],
-        pb = bb => {
-          const ab = ib(bb);
-          mb.length < 4 && !mb.some((bb => ib(bb) === ab)) && mb.push(bb)
+        Jz = [],
+        Iz = zz => {
+          const tz = xz(zz);
+          Jz.length < 4 && !Jz.some((zz => xz(zz) === tz)) && Jz.push(zz)
         },
-        Nb = [],
-        Wb = [],
-        Ib = [],
-        Gb = new Map,
-        qb = new Map,
-        ub = (bb, ab, Ub) => {
-          var Ab;
-          const Mb = function(bb) {
-              const ab = bb.replace(/\s+/g, " ").trim();
-              if (ab.length <= 80) return ab;
-              const Ub = ab.slice(0, 80);
-              return `${Ub.slice(0,Math.max(Ub.lastIndexOf(" "),40)).replace(/[\s,.;:]+$/,"")}\u2026`
-            }(null !== ab && void 0 !== ab ? ab : ""),
-            Tb = null !== (Ab = Gb.get(bb)) && void 0 !== Ab ? Ab : [];
-          var Eb;
-          ("" === Mb || Tb.includes(Mb) || Gb.set(bb, [...Tb, Mb]), "" !== Mb) && qb.set(bb, [...null !== (Eb = qb.get(bb)) && void 0 !== Eb ? Eb : [], {
-            why: Mb,
-            code: Ub
+        Cz = [],
+        ez = [],
+        Gz = [],
+        Az = new Map,
+        Mz = new Map,
+        dz = (zz, tz, sz) => {
+          var Fz;
+          const Wz = function(zz) {
+              const tz = zz.replace(/\s+/g, " ").trim();
+              if (tz.length <= 80) return tz;
+              const sz = tz.slice(0, 80);
+              return `${sz.slice(0,Math.max(sz.lastIndexOf(" "),40)).replace(/[\s,.;:]+$/,"")}\u2026`
+            }(null !== tz && void 0 !== tz ? tz : ""),
+            Xz = null !== (Fz = Az.get(zz)) && void 0 !== Fz ? Fz : [];
+          var Oz;
+          ("" === Wz || Xz.includes(Wz) || Az.set(zz, [...Xz, Wz]), "" !== Wz) && Mz.set(zz, [...null !== (Oz = Mz.get(zz)) && void 0 !== Oz ? Oz : [], {
+            why: Wz,
+            code: sz
           }])
         },
-        rb = new Set,
-        Kb = [],
-        ob = new Map,
-        lb = [];
-      let wb = null;
-      const sb = [];
-      let Cb = [];
-      const Ob = (bb, ab) => void 0 !== Tb && !yb(bb) && (null === bb || tA(bb) !== Tb) && QA.test(ab),
-        nb = (bb, ab, Ub, Ab) => {
-          var Mb, Tb;
-          const Eb = function(bb, ab, Ub, Ab) {
-            const Mb = XA(ab);
-            return Mb ? iA(bb, Mb, Ub, Ab) : {
-              error: `There is no prefab called ${ab}. The prefabs are: ${vA.map((bb=>bb.name)).join(", ")}.`
+        hz = new Set,
+        Qz = [],
+        kz = new Map,
+        iz = [];
+      let lz = null;
+      const nz = [];
+      let qz = [];
+      const Vz = (zz, tz) => void 0 !== Xz && !Hz(zz) && (null === zz || aF(zz) !== Xz) && hF.test(tz),
+        fz = (zz, tz, sz, Fz) => {
+          var Wz, Xz;
+          const Oz = function(zz, tz, sz, Fz) {
+            const Wz = gF(tz);
+            return Wz ? IF(zz, Wz, sz, Fz) : {
+              error: `There is no prefab called ${tz}. The prefabs are: ${bF.map((zz=>zz.name)).join(", ")}.`
             }
-          }(null !== (Mb = eb[bb]) && void 0 !== Mb ? Mb : "", ab, Ub, Bb);
-          return "error" in Eb ? (Xb("use_prefab", bb, "prefab", {
-            detail: Eb.error
-          }), !1) : (eb[bb] = Eb.text, vb.add(bb), ob.set(bb, {
-            prefab: Eb.prefab,
-            settings: Ub
-          }), ub(bb, null !== Ab && void 0 !== Ab ? Ab : Eb.prefab.title, Eb.text), Kb.push({
-            name: Eb.prefab.name,
-            title: Eb.prefab.title,
-            path: bb,
-            problems: Eb.problems,
-            fixed: Eb.fixed,
-            setup: null !== (Tb = Eb.prefab.setup) && void 0 !== Tb ? Tb : null
+          }(null !== (Wz = Uz[zz]) && void 0 !== Wz ? Wz : "", tz, sz, vz);
+          return "error" in Oz ? (bz("use_prefab", zz, "prefab", {
+            detail: Oz.error
+          }), !1) : (Uz[zz] = Oz.text, Kz.add(zz), kz.set(zz, {
+            prefab: Oz.prefab,
+            settings: sz
+          }), dz(zz, null !== Fz && void 0 !== Fz ? Fz : Oz.prefab.title, Oz.text), Qz.push({
+            name: Oz.prefab.name,
+            title: Oz.prefab.title,
+            path: zz,
+            problems: Oz.problems,
+            fixed: Oz.fixed,
+            setup: null !== (Xz = Oz.prefab.setup) && void 0 !== Xz ? Xz : null
           }), !0)
         },
-        Sb = (bb, ab, Ub) => {
-          const Ab = nU(ab);
-          if (0 === Ab.calls.length) return !1;
-          eb[bb] = Ab.code, vb.add(bb);
-          for (const Mb of Ab.calls) nb(bb, Mb.name, Mb.settings, Ub);
-          return ub(bb, Ub, Ab.code), !0
+        Ez = (zz, tz, sz) => {
+          const Fz = tF(tz);
+          if (0 === Fz.calls.length) return !1;
+          Uz[zz] = Fz.code, Kz.add(zz);
+          for (const Wz of Fz.calls) fz(zz, Wz.name, Wz.settings, sz);
+          return dz(zz, sz, Fz.code), !0
         },
-        aa = bb => {
-          const ab = ja(wA(oA(bb)), Mb);
-          Nb.push(ab.code), Ib.push(...ab.renames)
+        tt = zz => {
+          const tz = wt(qF(lF(zz)), Wz);
+          Cz.push(tz.code), Gz.push(...tz.renames)
         },
-        Ua = vU(bb, ab),
-        Aa = new Map;
-      for (const jb of Ua) {
-        var Ma, Ta, Ea, Ya;
-        const bb = null !== (Ma = Aa.get(jb.name)) && void 0 !== Ma ? Ma : 0;
-        Aa.set(jb.name, bb + 1), Pb = {
-          name: jb.name,
-          nth: bb
+        st = us(zz, tz),
+        Ft = new Map;
+      for (const wz of st) {
+        var Wt, Xt, Ot, ot;
+        const zz = null !== (Wt = Ft.get(wz.name)) && void 0 !== Wt ? Wt : 0;
+        Ft.set(wz.name, zz + 1), Nz = {
+          name: wz.name,
+          nth: zz
         };
-        const ab = ("replace_function" === jb.name || "insert_code" === jb.name) && void 0 === jb.args.code && void 0 !== jb.args.content ? {
-            ...jb,
+        const tz = ("replace_function" === wz.name || "insert_code" === wz.name) && void 0 === wz.args.code && void 0 !== wz.args.content ? {
+            ...wz,
             args: {
-              ...jb.args,
-              code: jb.args.content,
-              path: null !== (Ta = null !== (Ea = null !== (Ya = jb.args.path) && void 0 !== Ya ? Ya : Tb) && void 0 !== Ea ? Ea : Ab) && void 0 !== Ta ? Ta : void 0
+              ...wz.args,
+              code: wz.args.content,
+              path: null !== (Xt = null !== (Ot = null !== (ot = wz.args.path) && void 0 !== ot ? ot : Xz) && void 0 !== Ot ? Ot : Fz) && void 0 !== Xt ? Xt : void 0
             }
-          } : jb,
+          } : wz,
           {
-            path: Mb,
-            content: Eb,
-            search: Yb,
-            replace: Lb,
-            code: kb
-          } = ab.args,
-          yb = xa(ab.name),
-          xb = `${ab.name}\n${JSON.stringify({...ab.args,why:void 0})}`,
-          ib = rb.has(xb);
-        if (yb.annotations.idempotentHint && ib) Rb = Rb.replace(ab.source, "");
+            path: Wz,
+            content: Oz,
+            search: oz,
+            replace: uz,
+            code: gz
+          } = tz.args,
+          Hz = Yt(tz.name),
+          Yz = `${tz.name}\n${JSON.stringify({...tz.args,why:void 0})}`,
+          xz = hz.has(Yz);
+        if (Hz.annotations.idempotentHint && xz) Dz = Dz.replace(tz.source, "");
         else {
-          if (rb.add(xb), za(ab.name)) {
-            const bb = Object.fromEntries(Object.entries(ab.args).flatMap((bb => {
-              let [ab, Ub] = bb;
-              return void 0 === Ub || "" === Ub.trim() ? [] : [
-                [ab, Ub.trim()]
+          if (hz.add(Yz), rt(tz.name)) {
+            const zz = Object.fromEntries(Object.entries(tz.args).flatMap((zz => {
+              let [tz, sz] = zz;
+              return void 0 === sz || "" === sz.trim() ? [] : [
+                [tz, sz.trim()]
               ]
             })));
-            pb({
-              name: ab.name,
-              args: lA(ab.name, bb),
-              call: Pb
+            Iz({
+              name: tz.name,
+              args: nF(tz.name, zz),
+              call: Nz
             })
-          } else if ("add_world_code" === ab.name) {
-            if (void 0 === Tb) continue;
-            void 0 !== kb ? aa(kb) : Xb(ab.name, null, "missingArgs")
-          } else if ("use_prefab" === ab.name) {
-            const bb = void 0 !== Mb && "" !== Mb.trim() ? Zb(Mb) : void 0 === Tb ? null !== Ab && void 0 !== Ab ? Ab : "index.js" : null;
-            if (void 0 === ab.args.name || "" === ab.args.name.trim()) Xb(ab.name, bb, "missingArgs");
-            else if (null !== bb && Db(bb)) {
-              var Ba;
-              nb(bb, ab.args.name, null !== (Ba = ab.args.settings) && void 0 !== Ba ? Ba : "", ab.args.why)
-            } else Xb(ab.name, bb, "prefab", {
+          } else if ("add_world_code" === tz.name) {
+            if (void 0 === Xz) continue;
+            void 0 !== gz ? tt(gz) : bz(tz.name, null, "missingArgs")
+          } else if ("use_prefab" === tz.name) {
+            const zz = void 0 !== Wz && "" !== Wz.trim() ? Bz(Wz) : void 0 === Xz ? null !== Fz && void 0 !== Fz ? Fz : "index.js" : null;
+            if (void 0 === tz.args.name || "" === tz.args.name.trim()) bz(tz.name, zz, "missingArgs");
+            else if (null !== zz && Pz(zz)) {
+              var vt;
+              fz(zz, tz.args.name, null !== (vt = tz.args.settings) && void 0 !== vt ? vt : "", tz.args.why)
+            } else bz(tz.name, zz, "prefab", {
               detail: "A prefab goes in World Code, not in a code block."
             })
-          } else if ("ask_creator" === ab.name) wb ??= HA(ab.args);
-          else if ("plan" === ab.name) {
-            var ea;
-            if (0 === Cb.length) Cb = va(null !== (ea = ab.args.steps) && void 0 !== ea ? ea : "")
-          } else if ("remember" === ab.name) {
-            var La;
-            const bb = ba(null !== (La = ab.args.note) && void 0 !== La ? La : "");
-            null !== bb && 0 === sb.length && sb.push(bb)
-          } else if ("export_game" === ab.name || "switch_to_world_code" === ab.name) {
-            if ("switch_to_world_code" === ab.name && void 0 === Tb) continue;
-            const bb = "export_game" === ab.name ? "exportGame" : "switchToWorldCode";
-            var Pa;
-            if (!Wb.some((ab => ab.kind === bb))) Wb.push("export_game" === ab.name ? {
+          } else if ("ask_creator" === tz.name) lz ??= cF(tz.args);
+          else if ("plan" === tz.name) {
+            var Ut;
+            if (0 === qz.length) qz = Kt(null !== (Ut = tz.args.steps) && void 0 !== Ut ? Ut : "")
+          } else if ("remember" === tz.name) {
+            var ut;
+            const zz = zt(null !== (ut = tz.args.note) && void 0 !== ut ? ut : "");
+            null !== zz && 0 === nz.length && nz.push(zz)
+          } else if ("export_game" === tz.name || "switch_to_world_code" === tz.name) {
+            if ("switch_to_world_code" === tz.name && void 0 === Xz) continue;
+            const zz = "export_game" === tz.name ? "exportGame" : "switchToWorldCode";
+            var Nt;
+            if (!ez.some((tz => tz.kind === zz))) ez.push("export_game" === tz.name ? {
               kind: "exportGame"
             } : {
               kind: "switchToWorldCode",
-              request: (null === (Pa = ab.args.request) || void 0 === Pa ? void 0 : Pa.trim()) || null
+              request: (null === (Nt = tz.args.request) || void 0 === Nt ? void 0 : Nt.trim()) || null
             })
-          } else if ("write_file" === ab.name) {
-            var Xa, Ra;
-            if (YU(ab))
-              if (void 0 === Eb || "" !== Eb.trim() && !FA(KA(Eb), void 0 === Mb ? "" : null !== (Xa = eb[Zb(Mb)]) && void 0 !== Xa ? Xa : "")) {
-                if (void 0 !== Mb && void 0 !== Eb && Ob(Mb, Eb)) aa(Eb);
-                else if (void 0 !== Mb && zb(Zb(Mb)) && "" !== (null !== (Ra = Ub[Zb(Mb)]) && void 0 !== Ra ? Ra : "").trim()) Xb(ab.name, Zb(Mb), "unread", void 0 === Eb ? void 0 : {
-                  code: oA(Eb)
-                }), fb(Zb(Mb));
-                else if (void 0 !== Mb && void 0 !== Eb) {
-                  const bb = Zb(Mb),
-                    Ub = SU(oA(Eb));
-                  if (!Db(bb) || !Sb(bb, Ub, ab.args.why)) {
-                    const Ab = ob.get(bb),
-                      Mb = Ab && !DA(Ub, Ab.prefab) ? iA(Ub, Ab.prefab, Ab.settings, Bb) : null;
-                    eb[bb] = Mb && !("error" in Mb) ? Mb.text : Ub, vb.add(bb), ub(bb, ab.args.why, Eb)
+          } else if ("write_file" === tz.name) {
+            var bt, Dt;
+            if (vs(tz))
+              if (void 0 === Oz || "" !== Oz.trim() && !yF(LF(Oz), void 0 === Wz ? "" : null !== (bt = Uz[Bz(Wz)]) && void 0 !== bt ? bt : "")) {
+                if (void 0 !== Wz && void 0 !== Oz && Vz(Wz, Oz)) tt(Oz);
+                else if (void 0 !== Wz && rz(Bz(Wz)) && "" !== (null !== (Dt = sz[Bz(Wz)]) && void 0 !== Dt ? Dt : "").trim()) bz(tz.name, Bz(Wz), "unread", void 0 === Oz ? void 0 : {
+                  code: lF(Oz)
+                }), mz(Bz(Wz));
+                else if (void 0 !== Wz && void 0 !== Oz) {
+                  const zz = Bz(Wz),
+                    sz = sF(lF(Oz));
+                  if (!Pz(zz) || !Ez(zz, sz, tz.args.why)) {
+                    const Fz = kz.get(zz),
+                      Wz = Fz && !xF(sz, Fz.prefab) ? IF(sz, Fz.prefab, Fz.settings, vz) : null;
+                    Uz[zz] = Wz && !("error" in Wz) ? Wz.text : sz, Kz.add(zz), dz(zz, tz.args.why, Oz)
                   }
                 }
-              } else Xb(ab.name, void 0 === Mb ? null : Zb(Mb), "placeholder");
-            else Xb(ab.name, void 0 === Mb ? null : Zb(Mb), "missingArgs")
-          } else if ("replace_function" === ab.name || "insert_code" === ab.name) {
-            var ka, ya, Za;
-            const bb = void 0 === Mb ? null : Zb(Mb),
-              Ub = "replace_function" === ab.name ? ab.args.name : ab.args.after,
-              Ab = void 0 === Ub ? void 0 : tb(Ub),
-              Tb = null === bb ? "" : null !== (ka = eb[bb]) && void 0 !== ka ? ka : "",
-              Eb = void 0 === kb ? "" : KA(kb),
-              Yb = null === bb ? void 0 : ob.get(bb),
-              Bb = "replace_function" === ab.name && void 0 !== Yb && void 0 !== Ab && qA.test(Ab) && KU(Yb.prefab.code).has(Ab),
-              Lb = null === bb || void 0 === kb || void 0 === Ub ? null : Bb ? null !== (ya = null === (Za = rU(Tb, Eb, {
+              } else bz(tz.name, void 0 === Wz ? null : Bz(Wz), "placeholder");
+            else bz(tz.name, void 0 === Wz ? null : Bz(Wz), "missingArgs")
+          } else if ("replace_function" === tz.name || "insert_code" === tz.name) {
+            var gt, Ht, Bt;
+            const zz = void 0 === Wz ? null : Bz(Wz),
+              sz = "replace_function" === tz.name ? tz.args.name : tz.args.after,
+              Fz = void 0 === sz ? void 0 : Lz(sz),
+              Xz = null === zz ? "" : null !== (gt = Uz[zz]) && void 0 !== gt ? gt : "",
+              Oz = void 0 === gz ? "" : LF(gz),
+              oz = null === zz ? void 0 : kz.get(zz),
+              vz = "replace_function" === tz.name && void 0 !== oz && void 0 !== Fz && QF.test(Fz) && Ls(oz.prefab.code).has(Fz),
+              uz = null === zz || void 0 === gz || void 0 === sz ? null : vz ? null !== (Ht = null === (Bt = is(Xz, Oz, {
                 owner: "extra",
                 runsLast: !0
-              })) || void 0 === Za ? void 0 : Za.text) && void 0 !== ya ? ya : null : "replace_function" === ab.name ? gb(Tb, Ub, Eb) : cb(Tb, Ub, Eb);
-            null === bb || null === Lb ? Xb(ab.name, bb, YU(ab) ? "brokenCode" : "missingArgs") : FA(Eb, Tb) ? Xb(ab.name, bb, "placeholder") : "replace_function" === ab.name && zb(bb) && Jb(Tb).includes(null !== Ab && void 0 !== Ab ? Ab : "") ? (Xb(ab.name, bb, "unread", {
-              code: oA(Eb)
-            }), fb(bb)) : (eb[bb] = Lb, vb.add(bb), ub(bb, ab.args.why, Eb))
+              })) || void 0 === Bt ? void 0 : Bt.text) && void 0 !== Ht ? Ht : null : "replace_function" === tz.name ? az(Xz, sz, Oz) : Rz(Xz, sz, Oz);
+            null === zz || null === uz ? bz(tz.name, zz, vs(tz) ? "brokenCode" : "missingArgs") : yF(Oz, Xz) ? bz(tz.name, zz, "placeholder") : "replace_function" === tz.name && rz(zz) && pz(Xz).includes(null !== Fz && void 0 !== Fz ? Fz : "") ? (bz(tz.name, zz, "unread", {
+              code: lF(Oz)
+            }), mz(zz)) : (Uz[zz] = uz, Kz.add(zz), dz(zz, tz.args.why, Oz))
           } else {
-            var Da, ia;
-            const bb = !0 === (null === (Da = yb._meta) || void 0 === Da ? void 0 : Da.appliesAtOnce) ? null !== Tb && void 0 !== Tb ? Tb : Ab : void 0 === Mb ? null : Zb(Mb),
-              Ub = null === bb ? "" : null !== (ia = eb[bb]) && void 0 !== ia ? ia : "",
-              Eb = YU(ab) && void 0 !== Yb,
-              Bb = Eb ? Hb(Ub, Yb) : null,
-              Pb = null === Bb && void 0 !== Yb && Yb.includes("\\n") ? Hb(Ub, ha(Yb)) : null,
-              jb = null !== Bb && void 0 !== Bb ? Bb : Pb,
-              Rb = null !== Pb ? ha(null !== Lb && void 0 !== Lb ? Lb : "") : null !== Lb && void 0 !== Lb ? Lb : "",
-              kb = null === jb || void 0 === Yb ? Rb : Fb(Ub.slice(jb.from, jb.to), db(Ub, jb, null !== Pb ? ha(Yb) : Yb, Rb), hb(Ub.slice(jb.to)));
-            if (null === bb || null === jb) Xb(ab.name, bb, Eb ? "noMatch" : "missingArgs", {
-              closest: Eb ? Qb(Ub, Yb) : null,
-              functions: Db(bb) ? Jb(Ub) : []
+            var Pt, xt;
+            const zz = !0 === (null === (Pt = Hz._meta) || void 0 === Pt ? void 0 : Pt.appliesAtOnce) ? null !== Xz && void 0 !== Xz ? Xz : Fz : void 0 === Wz ? null : Bz(Wz),
+              sz = null === zz ? "" : null !== (xt = Uz[zz]) && void 0 !== xt ? xt : "",
+              Oz = vs(tz) && void 0 !== oz,
+              vz = Oz ? Zz(sz, oz) : null,
+              Nz = null === vz && void 0 !== oz && oz.includes("\\n") ? Zz(sz, jt(oz)) : null,
+              wz = null !== vz && void 0 !== vz ? vz : Nz,
+              Dz = null !== Nz ? jt(null !== uz && void 0 !== uz ? uz : "") : null !== uz && void 0 !== uz ? uz : "",
+              gz = null === wz || void 0 === oz ? Dz : cz(sz.slice(wz.from, wz.to), Tz(sz, wz, null !== Nz ? jt(oz) : oz, Dz), jz(sz.slice(wz.to)));
+            if (null === zz || null === wz) bz(tz.name, zz, Oz ? "noMatch" : "missingArgs", {
+              closest: Oz ? yz(sz, oz) : null,
+              functions: Pz(zz) ? pz(sz) : []
             });
-            else if (FA(kb, Ub.slice(jb.from, jb.to))) Xb(ab.name, bb, "placeholder");
+            else if (yF(gz, sz.slice(wz.from, wz.to))) bz(tz.name, zz, "placeholder");
             else {
-              const Ab = Db(bb) ? Vb(Ub, jb.from, jb.to, null !== Yb && void 0 !== Yb ? Yb : "", Rb) : null;
-              eb[bb] = null !== Ab && void 0 !== Ab ? Ab : Ub.slice(0, jb.from) + kb + Ub.slice(jb.to), vb.add(bb), ub(bb, ab.args.why, kb)
+              const Fz = Pz(zz) ? Sz(sz, wz.from, wz.to, null !== oz && void 0 !== oz ? oz : "", Dz) : null;
+              Uz[zz] = null !== Fz && void 0 !== Fz ? Fz : sz.slice(0, wz.from) + gz + sz.slice(wz.to), Kz.add(zz), dz(zz, tz.args.why, gz)
             }
           }
-          Rb = Rb.replace(ab.source, "")
+          Dz = Dz.replace(tz.source, "")
         }
       }
-      if (Pb = void 0, Rb = Wa(LU(Rb), Ua.length > 0), 0 === Ua.length) {
-        var fa, ma;
-        const ab = [...bb.matchAll(hA)],
-          Ub = 1 === ab.length ? ab[0][1] : null,
-          Mb = null !== (fa = null !== Tb && void 0 !== Tb ? Tb : Ab) && void 0 !== fa ? fa : "index.js";
-        if (null !== Ub && Ob(null, Ub)) aa(Ub), Rb = Rb.replace(ab[0][0], "");
-        else if (null !== Ub && rA.test(Ub) && !FA(Ub, null !== (ma = eb[Mb]) && void 0 !== ma ? ma : "")) {
-          const bb = SU(oA(Ub));
-          Db(Mb) && Sb(Mb, bb, void 0) || (eb[Mb] = bb, vb.add(Mb)), Rb = Rb.replace(ab[0][0], "")
+      if (Nz = void 0, Dz = et(Ns(Dz), st.length > 0), 0 === st.length) {
+        var mt, Jt;
+        const tz = [...zz.matchAll(MF)],
+          sz = 1 === tz.length ? tz[0][1] : null,
+          Wz = null !== (mt = null !== Xz && void 0 !== Xz ? Xz : Fz) && void 0 !== mt ? mt : "index.js";
+        if (null !== sz && Vz(null, sz)) tt(sz), Dz = Dz.replace(tz[0][0], "");
+        else if (null !== sz && iF.test(sz) && !yF(sz, null !== (Jt = Uz[Wz]) && void 0 !== Jt ? Jt : "")) {
+          const zz = sF(lF(sz));
+          Pz(Wz) && Ez(Wz, zz, void 0) || (Uz[Wz] = zz, Kz.add(Wz)), Dz = Dz.replace(tz[0][0], "")
         }
       }
-      for (const jb of vb) {
-        var pa;
-        if (Db(jb)) {
-          var Na;
-          const bb = Object.values(eb).some((bb => /\brequire\s*\(/.test(bb)));
-          eb[jb] = bA(SU(bb ? eb[jb] : eb[jb].replace(/^module\.exports\s*=\s*(?:\{[\s\w$,:]*\}|[\w$]+)\s*;?[ \t]*(?:\n|$)/gm, "")), null !== (Na = Ub[jb]) && void 0 !== Na ? Na : "");
-          const ab = new Set(Object.keys(eb).filter((bb => bb !== jb && Db(bb))).flatMap((bb => [...KU(eb[bb])]))),
-            Ab = ZA(eb[jb], ab);
-          eb[jb] = Ab.text, lb.push(...Ab.added)
+      for (const wz of Kz) {
+        var It;
+        if (Pz(wz)) {
+          var Ct;
+          const zz = Object.values(Uz).some((zz => /\brequire\s*\(/.test(zz)));
+          Uz[wz] = FF(sF(zz ? Uz[wz] : Uz[wz].replace(/^module\.exports\s*=\s*(?:\{[\s\w$,:]*\}|[\w$]+)\s*;?[ \t]*(?:\n|$)/gm, "")), null !== (Ct = sz[wz]) && void 0 !== Ct ? Ct : "");
+          const tz = new Set(Object.keys(Uz).filter((zz => zz !== wz && Pz(zz))).flatMap((zz => [...Ls(Uz[zz])]))),
+            Fz = YF(Uz[wz], tz);
+          Uz[wz] = Fz.text, iz.push(...Fz.added)
         }
-        const bb = ja(sA(wA(eb[jb])), Db(jb) ? Mb : [], null !== (pa = Ub[jb]) && void 0 !== pa ? pa : "");
-        eb[jb] = bb.code, Ib.push(...bb.renames)
+        const zz = wt(SF(qF(Uz[wz])), Pz(wz) ? Wz : [], null !== (It = sz[wz]) && void 0 !== It ? It : "");
+        Uz[wz] = zz.code, Gz.push(...zz.renames)
       }
-      for (const jb of Kb) {
-        const bb = jb.problems.length > 0 ? ` Kept as it was: ${jb.problems.join("; ")}.` : "",
-          ab = jb.fixed.length > 0 ? ` Names changed to real ones: ${jb.fixed.join(", ")}.` : "";
-        Rb += `\n\nThis uses the ready-made ${jb.title}.${ab}${bb}${jb.setup?` ${jb.setup}`:""}`
+      for (const wz of Qz) {
+        const zz = wz.problems.length > 0 ? ` Kept as it was: ${wz.problems.join("; ")}.` : "",
+          tz = wz.fixed.length > 0 ? ` Names changed to real ones: ${wz.fixed.join(", ")}.` : "";
+        Dz += `\n\nThis uses the ready-made ${wz.title}.${tz}${zz}${wz.setup?` ${wz.setup}`:""}`
       }
       for (const {
-          from: jb,
-          to: Hb
+          from: wz,
+          to: Zz
         }
-        of Ib) Rb += `\n\nI renamed \`${jb}\` to \`${Hb}\`, the name World Code calls.`;
-      const Ha = [];
-      for (const jb of vb) {
-        var Ia;
-        const bb = null !== (Ia = Ub[jb]) && void 0 !== Ia ? Ia : "";
-        if (eb[jb] !== bb) {
-          const ab = Gb.get(jb);
-          Ha.push(ab ? {
-            path: jb,
-            before: bb,
-            after: eb[jb],
-            why: ab,
-            parts: qb.get(jb)
+        of Gz) Dz += `\n\nI renamed \`${wz}\` to \`${Zz}\`, the name World Code calls.`;
+      const Zt = [];
+      for (const wz of Kz) {
+        var Gt;
+        const zz = null !== (Gt = sz[wz]) && void 0 !== Gt ? Gt : "";
+        if (Uz[wz] !== zz) {
+          const tz = Az.get(wz);
+          Zt.push(tz ? {
+            path: wz,
+            before: zz,
+            after: Uz[wz],
+            why: tz,
+            parts: Mz.get(wz)
           } : {
-            path: jb,
-            before: bb,
-            after: eb[jb]
+            path: wz,
+            before: zz,
+            after: Uz[wz]
           })
         }
       }
-      const da = "direct" === Eb && Ha.length > 0,
-        Fa = Ha.length > 0 || Nb.length > 0;
+      const Tt = "direct" === Oz && Zt.length > 0,
+        ct = Zt.length > 0 || Cz.length > 0;
       return {
-        text: Rb.replace(/\n{3,}/g, "\n\n").trim(),
-        changes: Ha,
-        failedEdits: Lb,
-        renamedCallbacks: Ib,
-        worldCode: Nb,
-        inPlace: da,
-        actions: Wb,
-        question: Fa ? null : wb,
-        notes: sb,
-        plan: Fa ? [] : Cb,
-        lookups: Fa ? mb.filter((bb => xb.has(ib(bb)))) : null !== wb || Cb.length > 0 ? [] : mb,
-        prefabs: Kb,
-        helpersAdded: [...new Set(lb)]
+        text: Dz.replace(/\n{3,}/g, "\n\n").trim(),
+        changes: Zt,
+        failedEdits: uz,
+        renamedCallbacks: Gz,
+        worldCode: Cz,
+        inPlace: Tt,
+        actions: ez,
+        question: ct ? null : lz,
+        notes: nz,
+        plan: ct ? [] : qz,
+        lookups: ct ? Jz.filter((zz => Yz.has(xz(zz)))) : null !== lz || qz.length > 0 ? [] : Jz,
+        prefabs: Qz,
+        helpersAdded: [...new Set(iz)]
       }
     }
 
-    function CA(bb, ab) {
-      const Ub = "" === bb ? [] : bb.replace(/\n$/, "").split("\n"),
-        Ab = "" === ab ? [] : ab.replace(/\n$/, "").split("\n");
-      let Mb = 0;
-      for (; Mb < Ub.length && Mb < Ab.length && Ub[Mb] === Ab[Mb];) Mb++;
-      let Tb = Ub.length,
-        Eb = Ab.length;
-      for (; Tb > Mb && Eb > Mb && Ub[Tb - 1] === Ab[Eb - 1];) Tb--, Eb--;
-      const Yb = Ub.slice(Mb, Tb),
-        Bb = Ab.slice(Mb, Eb),
-        eb = Array.from({
-          length: Yb.length + 1
-        }, (() => new Array(Bb.length + 1).fill(0)));
-      for (let Xb = Yb.length - 1; Xb >= 0; Xb--)
-        for (let bb = Bb.length - 1; bb >= 0; bb--) eb[Xb][bb] = Yb[Xb] === Bb[bb] ? eb[Xb + 1][bb + 1] + 1 : Math.max(eb[Xb + 1][bb], eb[Xb][bb + 1]);
-      const vb = Ub.slice(0, Mb).map((bb => ({
+    function RF(zz, tz) {
+      const sz = "" === zz ? [] : zz.replace(/\n$/, "").split("\n"),
+        Fz = "" === tz ? [] : tz.replace(/\n$/, "").split("\n");
+      let Wz = 0;
+      for (; Wz < sz.length && Wz < Fz.length && sz[Wz] === Fz[Wz];) Wz++;
+      let Xz = sz.length,
+        Oz = Fz.length;
+      for (; Xz > Wz && Oz > Wz && sz[Xz - 1] === Fz[Oz - 1];) Xz--, Oz--;
+      const oz = sz.slice(Wz, Xz),
+        vz = Fz.slice(Wz, Oz),
+        Uz = Array.from({
+          length: oz.length + 1
+        }, (() => new Array(vz.length + 1).fill(0)));
+      for (let bz = oz.length - 1; bz >= 0; bz--)
+        for (let zz = vz.length - 1; zz >= 0; zz--) Uz[bz][zz] = oz[bz] === vz[zz] ? Uz[bz + 1][zz + 1] + 1 : Math.max(Uz[bz + 1][zz], Uz[bz][zz + 1]);
+      const Kz = sz.slice(0, Wz).map((zz => ({
         kind: "same",
-        text: bb
+        text: zz
       })));
-      let Lb = 0,
-        Pb = 0;
-      for (; Lb < Yb.length || Pb < Bb.length;) Lb < Yb.length && Pb < Bb.length && Yb[Lb] === Bb[Pb] ? (vb.push({
+      let uz = 0,
+        Nz = 0;
+      for (; uz < oz.length || Nz < vz.length;) uz < oz.length && Nz < vz.length && oz[uz] === vz[Nz] ? (Kz.push({
         kind: "same",
-        text: Yb[Lb]
-      }), Lb++, Pb++) : Pb < Bb.length && (Lb === Yb.length || eb[Lb][Pb + 1] > eb[Lb + 1][Pb]) ? (vb.push({
+        text: oz[uz]
+      }), uz++, Nz++) : Nz < vz.length && (uz === oz.length || Uz[uz][Nz + 1] > Uz[uz + 1][Nz]) ? (Kz.push({
         kind: "added",
-        text: Bb[Pb]
-      }), Pb++) : (vb.push({
+        text: vz[Nz]
+      }), Nz++) : (Kz.push({
         kind: "removed",
-        text: Yb[Lb]
-      }), Lb++);
-      for (const Xb of Ub.slice(Tb)) vb.push({
+        text: oz[uz]
+      }), uz++);
+      for (const bz of sz.slice(Xz)) Kz.push({
         kind: "same",
-        text: Xb
+        text: bz
       });
-      return vb
+      return Kz
     }
-    const VA = /\b(?:publish|export)\b|\bsave\b.{0,20}\b(?:game|world|map|it|this|work)\b/i;
+    const pF = /\b(?:publish|export)\b|\bsave\b.{0,20}\b(?:game|world|map|it|this|work)\b/i;
 
-    function OA(bb) {
-      return VA.test(bb)
+    function fF(zz) {
+      return pF.test(zz)
     }
-    const cA = {
+    const EF = {
       worldCode: new Set(["write_file", "edit_file", "replace_function", "use_prefab", "edit_code_in_place", "export_game", "ask_creator", "plan", "remember", "view_file", "view_chunk", "view_game_state", "get_docs", "find_names", "view_prefab", "view_errors"]),
       codeBlock: new Set(["write_file", "edit_file", "replace_function", "add_world_code", "edit_code_in_place", "switch_to_world_code", "ask_creator", "view_world_code", "view_chunk", "view_game_state", "get_docs", "find_names", "view_errors"])
     };
 
-    function JA(bb, ab, Ub) {
-      return ca[bb].formatCall(ab, Ub)
+    function zW(zz, tz, sz) {
+      return pt[zz].formatCall(tz, sz)
     }
 
-    function nA(bb, ab, Ub, Ab) {
-      return ca[Ub].declareTools(bb, ab, Ab)
+    function tW(zz, tz, sz, Fz) {
+      return pt[sz].declareTools(zz, tz, Fz)
     }
 
-    function SA(bb) {
-      const ab = null === bb.path ? bb.tool : `${bb.tool} ${bb.path}`;
-      var Ub;
-      if ("prefab" === bb.reason) return `${ab}: ${null!==(Ub=bb.detail)&&void 0!==Ub?Ub:"the prefab couldn't go in."} Nothing changed.`;
-      if ("missingArgs" === bb.reason) return `${ab}: the call was missing an argument it needs, so nothing changed.`;
-      if ("placeholder" === bb.reason) return "write_file" === bb.tool ? `${ab}: the content was only "..." or had a line standing in for the rest, so nothing changed. Send the whole file, every line of it.` : `${ab}: the code had a line standing in for code left out ("// ... existing code ..."), so nothing changed. Write out every line it replaces.`;
-      if ("unread" === bb.reason) return `${ab}: you hadn't seen this code, so writing it whole could have lost what it has, and nothing changed. Make the change from its code, which ${null!==bb.path&&(0,jb.f)(bb.path)?"view_world_code":"view_file"} shows.`;
-      if ("brokenCode" === bb.reason) return `${ab}: the code around that function doesn't parse (a bracket is likely missing), so where it ends isn't clear and nothing changed. Send the whole fixed file with write_file instead.`;
-      return `${ab}: search matched nothing in the file, so nothing changed. ${bb.closest?`The closest lines (${bb.closest.line}-${bb.closest.lastLine}) are:\n${bb.closest.text}`:"No lines in the file are like it."}\nCopy the lines exactly${bb.functions.length>0?`, or use replace_function with one of these names: ${bb.functions.join(", ")}`:""}.`
+    function sW(zz) {
+      const tz = null === zz.path ? zz.tool : `${zz.tool} ${zz.path}`;
+      var sz;
+      if ("prefab" === zz.reason) return `${tz}: ${null!==(sz=zz.detail)&&void 0!==sz?sz:"the prefab couldn't go in."} Nothing changed.`;
+      if ("missingArgs" === zz.reason) return `${tz}: the call was missing an argument it needs, so nothing changed.`;
+      if ("placeholder" === zz.reason) return "write_file" === zz.tool ? `${tz}: the content was only "..." or had a line standing in for the rest, so nothing changed. Send the whole file, every line of it.` : `${tz}: the code had a line standing in for code left out ("// ... existing code ..."), so nothing changed. Write out every line it replaces.`;
+      if ("unread" === zz.reason) return `${tz}: you hadn't seen this code, so writing it whole could have lost what it has, and nothing changed. Make the change from its code, which ${null!==zz.path&&(0,wz.d)(zz.path)?"view_world_code":"view_file"} shows.`;
+      if ("brokenCode" === zz.reason) return `${tz}: the code around that function doesn't parse (a bracket is likely missing), so where it ends isn't clear and nothing changed. Send the whole fixed file with write_file instead.`;
+      return `${tz}: search matched nothing in the file, so nothing changed. ${zz.closest?`The closest lines (${zz.closest.line}-${zz.closest.lastLine}) are:\n${zz.closest.text}`:"No lines in the file are like it."}\nCopy the lines exactly${zz.functions.length>0?`, or use replace_function with one of these names: ${zz.functions.join(", ")}`:""}.`
     }
-    const bM = {
+    const FW = {
         offer: "matched",
         list: "matched",
         categories: !1,
         helperIndex: !0
       },
-      aM = /\b(?:game|minigame|mini-game|gamemode|game mode|map|server)\b/i;
+      WW = /\b(?:game|minigame|mini-game|gamemode|game mode|map|server)\b/i;
 
-    function UM(bb) {
-      return Object.values(bb).some((bb => "" !== bb.trim()))
+    function XW(zz) {
+      return Object.values(zz).some((zz => "" !== zz.trim()))
     }
-    const AM = {
+    const OW = {
         format: "simple",
         nativeTools: !1
       },
-      MM = bb => `You are the coding helper inside Bloxd's World Code editor. Bloxd is a voxel game; World Code is JavaScript that runs on the game server for one world. The person asking is a young creator (13 or older) who is new to coding.\n\nHow World Code works:\n- The engine calls special top-level functions ("callbacks") when things happen: function onPlayerJoin(playerId) {...}, function tick(ms) {...}, function playerCommand(playerId, command) {...} and the others ${bb?"in the docs":"in the callback list"}. Define each callback once; never call callbacks yourself.\n- playerCommand gets the chat line without its "/" (e.g. "speed 2"); return true for a command you handled, so the player isn't told it is unknown, and return nothing (never false) for any other, or the game's own commands (/spawn) stop working.\n- tick(ms) runs 20 times a second, with the milliseconds since the last tick. Count time with it (add up ms) instead of setTimeout, and keep it light.\n- Talk to the game only through the api object: api.sendMessage(playerId, text), api.setClientOption(playerId, option, value) and the other methods ${bb?"in the docs":"in the API list"}. Use only methods, callbacks and client options that are ${bb?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables at the top level keep their values while the world runs. Players are identified by playerId (a string, not their name).\n- Values you keep per player (lists, timers, scores, teams) need a start in onPlayerJoin and removing in onPlayerLeave(playerId), so tick never uses a player who left.\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n- Settings: numbers and messages the creator may want to change (times, amounts, prices, speeds, messages shown to players, on/off switches) go in one const CONFIG = { ... } at the top of the file, each value a plain number, a quoted string or true/false with a short comment saying what it does, e.g. waveSeconds: 30, // seconds between zombie waves. The code uses CONFIG.waveSeconds, and a message that mentions a setting builds it from CONFIG ("You start with " + CONFIG.startCoins + " coins"), so changing the setting changes the message too. If the file has a CONFIG, add new settings to it and change a setting there; never make a second one. Don't move code they didn't ask about into CONFIG.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(playerId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: playerId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(playerId).\n- Flying: api.setClientOption(playerId, "creative", true) (false to stop).\n- Leaderboard: in onPlayerJoin, api.setClientOption(playerId, "lobbyLeaderboardInfo", { name: { displayName: "Name", sortPriority: 0 }, coins: { displayName: "Coins", sortPriority: 1 } }); then whenever a value changes, api.setTargetedPlayerSettingForEveryone(playerId, "lobbyLeaderboardValues", { coins: 5 }, true).\n- Text on the right of the screen: api.setClientOption(playerId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(playerId, api.getClientOption(playerId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(playerId); api.setPosition(playerId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(playerId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- A player who can't play any more (e.g. out of lives): api.setPlayerGamemode(playerId, "spectator"); "survival" brings them back.\n- Mob waves: api.attemptSpawnMob(mobType, x, y, z) returns the mob's id. Keep the ids, and remove each in onMobDespawned(mobId) to know when they are all dead.\n- Removing or changing a block later: count ms in tick, then api.setBlock(x, y, z, "Air").\n- Coins as a currency: make it once in onPlayerJoin, only if they don't have it yet (a saved one comes back by itself, and setCurrency again would reset it): if (api.getCurrencyAmount(playerId, "coins") === null) api.setCurrency(playerId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(playerId, "coins", 5). When the request says anything is saved or kept after leaving (e.g. "it saves if you leave"), the coins are saved too: add persistent: true. Otherwise leave it out.\n- Values the request says must stay after leaving (e.g. when they last claimed a reward): api.setPlayerDbValue(playerId, "lastClaim", Date.now()) and api.getPlayerDbValue(playerId, "lastClaim") (null if never set); a saved value is a string or a number. Only those: lives, scores, checkpoints and timers for one game stay in top-level variables, which reset when they leave.\n- A player dying, from anything: onAttemptKillPlayer(killedPlayerId, attackingLifeformId). onPlayerKilledOtherPlayer only covers kills by players.\n- Stopping one player hurting another (e.g. teammates): onPlayerDamagingOtherPlayer(attackingPlayer, damagedPlayer) returns "preventDamage". onAttemptKillPlayer only stops the death, not the damage.\n- A counter of how long each player has been alive: in tick, count only while api.isAlive(playerId), and start again from 0 in onRespawnRequest (the death screen isn't time alive). Other timers don't need this.\n- A reward for reaching a count (5 kills, 10 coins): give it when the count first reaches it (=== 5, or keep a per-player flag such as rewarded[playerId] = true), never on every count after (>= 5 alone gives it again each time).\n- Telling whether a player moved: compare with where they were after any teleport of yours (update the saved position when you teleport them), or your own teleport counts as them moving.\n- A box around a player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position. A bottom corner at by would fill the block they stand in; replacing the ground under them is fine. If they should be trapped, also stop them breaking it: api.setCantChangeBlockRect(playerId, [bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2]).`,
-      TM = bb => `You are the coding helper inside Bloxd's code block editor. Bloxd is a voxel game; a code block is a block in the world holding JavaScript that runs on the game server when a player clicks it. The person asking is a young creator (13 or older) who is new to coding.\n\nHow code blocks work:\n- Each click runs the whole code once, from top to bottom. A code block has no callbacks: something that has to happen later or by itself (when players join, every tick, on a chat command, when a player breaks a block) needs World Code, the world's main code, where callbacks such as onPlayerJoin(playerId), tick() and playerCommand(playerId, command) are defined as functions. Write that part as World Code (see How to answer), and put what one click does in the code block.\n- myId is the id of the player who clicked the block (a string, not their name), and thisPos is the block's position as [x, y, z].\n- Talk to the game only through the api object: api.sendMessage(myId, text), api.setClientOption(myId, option, value) and the other methods ${bb?"in the docs":"in the API list"}. Use only methods and client options that are ${bb?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables made with const or let start again on every click. A value kept between clicks is assigned without const or let, after checking it is there, e.g. clicks = (typeof clicks === "number" ? clicks : 0) + 1. It lasts until World Code is next saved or the world restarts.\n- When the last line has a value, the player who clicked sees it in chat as "Result: ...".\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(myId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: myId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(myId).\n- Teleporting the player onto this block: api.setPosition(myId, thisPos[0] + 0.5, thisPos[1] + 1, thisPos[2] + 0.5).\n- A block next to this one: api.setBlock(thisPos[0], thisPos[1] + 1, thisPos[2], "Block of Gold").\n- Flying: api.setClientOption(myId, "creative", true) (false to stop).\n- Text on the right of the screen: api.setClientOption(myId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(myId, api.getClientOption(myId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(myId); api.setPosition(myId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(myId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- Coins as a currency: make it only if they don't have it yet (setCurrency again would reset it): if (api.getCurrencyAmount(myId, "coins") === null) api.setCurrency(myId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(myId, "coins", 5).\n- A box around the player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position.`,
-      EM = {
+      oW = zz => `You are the coding helper inside Bloxd's World Code editor. Bloxd is a voxel game; World Code is JavaScript that runs on the game server for one world. The person asking is a young creator (13 or older) who is new to coding.\n\nHow World Code works:\n- The engine calls special top-level functions ("callbacks") when things happen: function onPlayerJoin(playerId) {...}, function tick(ms) {...}, function playerCommand(playerId, command) {...} and the others ${zz?"in the docs":"in the callback list"}. Define each callback once; never call callbacks yourself.\n- playerCommand gets the chat line without its "/" (e.g. "speed 2"); return true for a command you handled, so the player isn't told it is unknown, and return nothing (never false) for any other, or the game's own commands (/spawn) stop working.\n- tick(ms) runs 20 times a second, with the milliseconds since the last tick. Count time with it (add up ms) instead of setTimeout, and keep it light.\n- Talk to the game only through the api object: api.sendMessage(playerId, text), api.setClientOption(playerId, option, value) and the other methods ${zz?"in the docs":"in the API list"}. Use only methods, callbacks and client options that are ${zz?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables at the top level keep their values while the world runs. Players are identified by playerId (a string, not their name).\n- Values you keep per player (lists, timers, scores, teams) need a start in onPlayerJoin and removing in onPlayerLeave(playerId), so tick never uses a player who left.\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n- Settings: numbers and messages the creator may want to change (times, amounts, prices, speeds, messages shown to players, on/off switches) go in one const CONFIG = { ... } at the top of the file, each value a plain number, a quoted string or true/false with a short comment saying what it does, e.g. waveSeconds: 30, // seconds between zombie waves. The code uses CONFIG.waveSeconds, and a message that mentions a setting builds it from CONFIG ("You start with " + CONFIG.startCoins + " coins"), so changing the setting changes the message too. If the file has a CONFIG, add new settings to it and change a setting there; never make a second one. Don't move code they didn't ask about into CONFIG.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(playerId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: playerId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(playerId).\n- Flying: api.setClientOption(playerId, "creative", true) (false to stop).\n- Leaderboard: in onPlayerJoin, api.setClientOption(playerId, "lobbyLeaderboardInfo", { name: { displayName: "Name", sortPriority: 0 }, coins: { displayName: "Coins", sortPriority: 1 } }); then whenever a value changes, api.setTargetedPlayerSettingForEveryone(playerId, "lobbyLeaderboardValues", { coins: 5 }, true).\n- Text on the right of the screen: api.setClientOption(playerId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(playerId, api.getClientOption(playerId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(playerId); api.setPosition(playerId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(playerId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- A player who can't play any more (e.g. out of lives): api.setPlayerGamemode(playerId, "spectator"); "survival" brings them back.\n- Mob waves: api.attemptSpawnMob(mobType, x, y, z) returns the mob's id. Keep the ids, and remove each in onMobDespawned(mobId) to know when they are all dead.\n- Removing or changing a block later: count ms in tick, then api.setBlock(x, y, z, "Air").\n- Coins as a currency: make it once in onPlayerJoin, only if they don't have it yet (a saved one comes back by itself, and setCurrency again would reset it): if (api.getCurrencyAmount(playerId, "coins") === null) api.setCurrency(playerId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(playerId, "coins", 5). When the request says anything is saved or kept after leaving (e.g. "it saves if you leave"), the coins are saved too: add persistent: true. Otherwise leave it out.\n- Values the request says must stay after leaving (e.g. when they last claimed a reward): api.setPlayerDbValue(playerId, "lastClaim", Date.now()) and api.getPlayerDbValue(playerId, "lastClaim") (null if never set); a saved value is a string or a number. Only those: lives, scores, checkpoints and timers for one game stay in top-level variables, which reset when they leave.\n- A player dying, from anything: onAttemptKillPlayer(killedPlayerId, attackingLifeformId). onPlayerKilledOtherPlayer only covers kills by players.\n- Stopping one player hurting another (e.g. teammates): onPlayerDamagingOtherPlayer(attackingPlayer, damagedPlayer) returns "preventDamage". onAttemptKillPlayer only stops the death, not the damage.\n- A counter of how long each player has been alive: in tick, count only while api.isAlive(playerId), and start again from 0 in onRespawnRequest (the death screen isn't time alive). Other timers don't need this.\n- A reward for reaching a count (5 kills, 10 coins): give it when the count first reaches it (=== 5, or keep a per-player flag such as rewarded[playerId] = true), never on every count after (>= 5 alone gives it again each time).\n- Telling whether a player moved: compare with where they were after any teleport of yours (update the saved position when you teleport them), or your own teleport counts as them moving.\n- A box around a player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position. A bottom corner at by would fill the block they stand in; replacing the ground under them is fine. If they should be trapped, also stop them breaking it: api.setCantChangeBlockRect(playerId, [bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2]).`,
+      vW = zz => `You are the coding helper inside Bloxd's code block editor. Bloxd is a voxel game; a code block is a block in the world holding JavaScript that runs on the game server when a player clicks it. The person asking is a young creator (13 or older) who is new to coding.\n\nHow code blocks work:\n- Each click runs the whole code once, from top to bottom. A code block has no callbacks: something that has to happen later or by itself (when players join, every tick, on a chat command, when a player breaks a block) needs World Code, the world's main code, where callbacks such as onPlayerJoin(playerId), tick() and playerCommand(playerId, command) are defined as functions. Write that part as World Code (see How to answer), and put what one click does in the code block.\n- myId is the id of the player who clicked the block (a string, not their name), and thisPos is the block's position as [x, y, z].\n- Talk to the game only through the api object: api.sendMessage(myId, text), api.setClientOption(myId, option, value) and the other methods ${zz?"in the docs":"in the API list"}. Use only methods and client options that are ${zz?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables made with const or let start again on every click. A value kept between clicks is assigned without const or let, after checking it is there, e.g. clicks = (typeof clicks === "number" ? clicks : 0) + 1. It lasts until World Code is next saved or the world restarts.\n- When the last line has a value, the player who clicked sees it in chat as "Result: ...".\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(myId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: myId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(myId).\n- Teleporting the player onto this block: api.setPosition(myId, thisPos[0] + 0.5, thisPos[1] + 1, thisPos[2] + 0.5).\n- A block next to this one: api.setBlock(thisPos[0], thisPos[1] + 1, thisPos[2], "Block of Gold").\n- Flying: api.setClientOption(myId, "creative", true) (false to stop).\n- Text on the right of the screen: api.setClientOption(myId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(myId, api.getClientOption(myId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(myId); api.setPosition(myId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(myId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- Coins as a currency: make it only if they don't have it yet (setCurrency again would reset it): if (api.getCurrencyAmount(myId, "coins") === null) api.setCurrency(myId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(myId, "coins", 5).\n- A box around the player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position.`,
+      UW = {
         search: "lines to find",
         replace: "lines to put instead",
         codeBlock: "...all of the code block's code...",
@@ -5898,324 +5898,324 @@ export const modules = {
         worldCode: "...only the World Code to add...",
         function: "function onPlayerJoin(playerId) {\n\t...the whole new function...\n}"
       },
-      YM = Object.values(EM);
-    const BM = `You looked at World Code: its files are below, their paths starting ${jb.l}. Put the part of the request that needs World Code (a callback, or something that happens without a click) straight into World Code with the same calls, its path exactly as shown, e.g. ${jb.l}index.js (in World Code the player is playerId; there is no myId or thisPos). A callback World Code already has is changed in place, with what it already does kept, never defined twice. Keep the code block's own change on the path ${jb.b}, and leave it out if the request is all World Code. They are taken to World Code to see the change.`;
+      KW = Object.values(UW);
+    const uW = `You looked at World Code: its files are below, their paths starting ${wz.h}. Put the part of the request that needs World Code (a callback, or something that happens without a click) straight into World Code with the same calls, its path exactly as shown, e.g. ${wz.h}index.js (in World Code the player is playerId; there is no myId or thisPos). A callback World Code already has is changed in place, with what it already does kept, never defined twice. Keep the code block's own change on the path ${wz.c}, and leave it out if the request is all World Code. They are taken to World Code to see the change.`;
 
-    function eM(bb, ab, Ub, Ab) {
-      var Mb, Tb, Eb, Yb;
+    function NW(zz, tz, sz, Fz) {
+      var Wz, Xz, Oz, oz;
       let {
-        hasWorldCodeFiles: Bb,
-        hasLookedUp: eb,
-        movesToWorldCode: vb,
-        listedPrefabs: Lb,
-        guidesToPrefabs: Pb
-      } = Ab;
-      const Xb = ab ? jb.b : "index.js",
-        Rb = ab ? `${jb.l}index.js` : Xb,
-        yb = (bb, ab) => JA(Ub, bb, ab),
-        Zb = ab => bb.some((bb => bb.name === ab)),
-        Db = bb.filter((bb => ["content", "replace", "code"].some((ab => ab in bb.inputSchema.properties)))),
-        zb = Zb("edit_code_in_place") ? `\nFor a fix of one to a few lines in the code open in the editor, use edit_code_in_place instead: it changes their code straight away, as if they pressed Apply, and they can undo it. search is copied exactly from the open code:\n${yb("edit_code_in_place",{why:"what this fix does",search:EM.search,replace:EM.replace})}` : "",
-        xb = Zb("export_game") ? `\nWhen the creator asks to export, save or publish their world or game, your answer must contain the export_game call; without it nothing is exported. For example, if the creator writes "export the world", your whole answer is:\nSaving your world as your custom game now!\n${yb("export_game",{})}` : "",
-        ib = Zb("replace_function") ? `\nWhen you change only one or two functions or callbacks of a file that already has code, you can send just those instead of the whole file. replace_function finds a function by its name and puts your whole new function in its place; with a name the file doesn't have yet, it adds your new callback or function at the end, changing nothing already there:\n${yb("replace_function",{path:Rb,name:"onPlayerJoin",why:"what the new function does",code:EM.function})}` : "",
-        fb = Zb("edit_file") ? `\nFor a file longer than 6000 characters, don't send it whole: change only the parts that need it, with replace_function where you can, and an edit_file call for each other part, where search is copied exactly from the current file:\n${yb("edit_file",{path:Xb,why:"what this part's change does",search:EM.search,replace:EM.replace})}` : "",
-        mb = ab ? `2. Then give the whole new code with a write_file call, exactly like this:\n${yb("write_file",{path:Xb,why:"what the change does",content:EM.codeBlock})}` : `2. Then give every file you change, in full, with a write_file call, exactly like this:\n${yb("write_file",{path:Xb,why:"what the change does",content:EM.file})}`,
-        pb = ab ? "" : ` If there is no code yet, write it in ${Xb}.`,
-        Nb = yb("switch_to_world_code", {}),
-        Wb = ab ? Bb ? `\n${BM}` : `\nIf part of the request needs World Code (a callback, or something that happens without a click), give that part as World Code with an add_world_code call, with its callbacks written as functions (in World Code the player is playerId; there is no myId or thisPos), exactly like this:\n${yb("add_world_code",{code:EM.worldCode})}\n${vb?"In your sentences, say which part goes in World Code: they are taken there, and it is put in for them.":"In your sentences, say which part goes in World Code and that they should press the World Code button to switch there and add it."} Leave out the code block's write_file call if the request is all World Code.${Zb("view_world_code")?`\nTo see what World Code already has before you write that part (a callback it may already define), look at it first:\n${yb("view_world_code",{})}`:""}\nWhen the request is all World Code, also call switch_to_world_code after add_world_code: it takes them to World Code, where its AI Helper is asked to add your World Code part. Give a request instead when they asked to go to World Code for something else:\n${Nb}` : "",
-        Hb = Pb && Zb("use_prefab") && Lb.length >= 2,
-        Ib = Hb ? Lb.slice(0, 3).map((bb => bb.title)).join("\n") : "A parkour race\nZombie survival\nCapture the flag",
-        db = Hb ? " When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles: the one they pick is put in with use_prefab next." : "",
-        Fb = Zb("ask_creator") ? `\nOnly if the request is too unclear to build anything sensible, ask instead of writing code: call ask_creator with one short question and 2 to 4 short choices, one per line. That is: no idea what kind of thing they want ("make a game"), or asking to make their game better, more fun or cooler without saying how ("make it more fun"): then the choices are 2 to 4 different ideas built on what their code already has, each a short concrete thing to add, not a general word like "more fun" (e.g. for a snowball fight: "Power-ups that drop in", "A score at the top", "Last player standing wins"). Otherwise build it, choosing sensibly, and say in your sentences what you chose so they can ask for something different. Never ask for personal details (name, age, school, where they live).${db}\n${yb("ask_creator",{question:"What kind of game should it be?",choices:Ib,allow_other:"true"})}` : "",
-        hb = Zb("plan") ? `\n${"deepseek"===Ub?"When a request is big, instead of writing it all at once, you may":"This request is big. Instead of writing it all at once, you may"} call plan with 2 to 5 short steps, one per line, each small enough to build and try on its own, the first one playable. Then send no code: the creator builds the steps one at a time. Build it at once instead if it is really only a few lines:\n${yb("plan",{steps:"Give each player 0 coins when they join, shown on screen\nEarn a coin for each block broken\nA /shop command that sells a sword for 10 coins"})}` : "",
-        Gb = null !== (Mb = Lb[0]) && void 0 !== Mb ? Mb : XA("parkour"),
-        Qb = (null !== (Tb = null === Gb || void 0 === Gb ? void 0 : Gb.settings) && void 0 !== Tb ? Tb : []).slice(0, 2).map((bb => `${bb.key}: ${bb.value}`)).join("\n");
-      return `How to answer:\n1. Start with one or two short, friendly sentences in simple words saying what the change does, in the present tense as they read it before it goes in ("This adds...", "This changes..."; or what was wrong), and anything you had to do differently from what they asked. Don't promise it works: they will press Submit and try it. No long lectures.\n${mb}${ib}${fb}${zb}${Wb}${Zb("use_prefab")?`\nFor a game, or a feature (a kit, a shop, rewards...), that a prefab listed below fits, put the prefab in with use_prefab instead of writing that code yourself: it is tested code that works, and it fits around the code they already have: their code stays as it is, and where both have the same callback (onPlayerJoin...) both run, so never rewrite their code to make room for a prefab. Give only the settings the request changes, one per line as key: value, each value written as in JavaScript (text in quotes, positions as [x, y, z]); the rest keep their defaults. For a game like the one asked for but not the same, still use the closest prefab, then in the same answer, after the use_prefab call, change what it doesn't do: replace one of its functions by name, or add a callback, with replace_function. If no prefab fits, write the code yourself:\n${yb("use_prefab",{name:null!==(Eb=null===Gb||void 0===Gb?void 0:Gb.name)&&void 0!==Eb?Eb:"parkour",settings:Qb,why:null!==(Yb=null===Gb||void 0===Gb?void 0:Gb.summary)&&void 0!==Yb?Yb:"a parkour course"})}`:""}${xb}${Fb}${hb}${Zb("remember")?`\nIf the creator tells you something lasting about their game that later requests should know (its idea, its rules, names of teams, items or places in it), also call remember with one short sentence about the game. They are asked before it is kept. Only what they said, never personal details, and not what the code already shows:\n${yb("remember",{note:"A zombie survival game: a wave comes every 30 seconds and players start with a sword"})}`:""}${function(bb,ab,Ub){const Ab=bb.some((bb=>"fetch_url"===bb.name)),Mb={view_file:`To see another of their files from the list, before you change it:\n${ab("view_file",{path:"shop.js"})}`,view_world_code:`To see World Code, so you can change it yourself:\n${ab("view_world_code",{})}`,view_chunk:`To see the blocks around the player (or give a position "x y z" for another chunk near them):\n${ab("view_chunk",{})}`,view_game_state:`To see where the player is, their health, what they hold and carry, and the players and mobs near them:\n${ab("view_game_state",{})}`,fetch_url:`To read the docs: ${kb.n} lists every docs page with its link. Read it, then the page you need (for a long page, the part that has it):\n${ab("fetch_url",{url:kb.n})}`,get_docs:Ab?`Or, for a name you already know, read its docs in full, or list every api method, callback or client option by name (${ka}):\n${ab("get_docs",{name:"setClientOption"})}\n${ab("get_docs",{list:"callbacks"})}`:`To read the full docs of an api method, callback or client option the lists only name:\n${ab("get_docs",{name:"setClientOption"})}`,find_names:`To find the exact names of blocks, items or mobs:\n${ab("find_names",{words:"gold sword"})}`,view_errors:`To see all the errors their world showed, not only the newest:\n${ab("view_errors",{})}`,list_prefabs:`To see the prefabs for one kind of game, and the ready-made functions for it:\n${ab("list_prefabs",{category:"pvp"})}`,view_prefab:`To see one prefab in full, every setting and the functions to replace to change it, before you use it:\n${ab("view_prefab",{name:"parkour"})}`},Tb=bb.flatMap((bb=>{const ab=Mb[bb.name];return void 0===ab?[]:[ab]}));return 0===Tb.length?Ub?"\nYou have looked things up as many times as you can: answer now with what you found.":"":`\
+        hasWorldCodeFiles: vz,
+        hasLookedUp: Uz,
+        movesToWorldCode: Kz,
+        listedPrefabs: uz,
+        guidesToPrefabs: Nz
+      } = Fz;
+      const bz = tz ? wz.c : "index.js",
+        Dz = tz ? `${wz.h}index.js` : bz,
+        Hz = (zz, tz) => zW(sz, zz, tz),
+        Bz = tz => zz.some((zz => zz.name === tz)),
+        Pz = zz.filter((zz => ["content", "replace", "code"].some((tz => tz in zz.inputSchema.properties)))),
+        rz = Bz("edit_code_in_place") ? `\nFor a fix of one to a few lines in the code open in the editor, use edit_code_in_place instead: it changes their code straight away, as if they pressed Apply, and they can undo it. search is copied exactly from the open code:\n${Hz("edit_code_in_place",{why:"what this fix does",search:UW.search,replace:UW.replace})}` : "",
+        Yz = Bz("export_game") ? `\nWhen the creator asks to export, save or publish their world or game, your answer must contain the export_game call; without it nothing is exported. For example, if the creator writes "export the world", your whole answer is:\nSaving your world as your custom game now!\n${Hz("export_game",{})}` : "",
+        xz = Bz("replace_function") ? `\nWhen you change only one or two functions or callbacks of a file that already has code, you can send just those instead of the whole file. replace_function finds a function by its name and puts your whole new function in its place; with a name the file doesn't have yet, it adds your new callback or function at the end, changing nothing already there:\n${Hz("replace_function",{path:Dz,name:"onPlayerJoin",why:"what the new function does",code:UW.function})}` : "",
+        mz = Bz("edit_file") ? `\nFor a file longer than 6000 characters, don't send it whole: change only the parts that need it, with replace_function where you can, and an edit_file call for each other part, where search is copied exactly from the current file:\n${Hz("edit_file",{path:bz,why:"what this part's change does",search:UW.search,replace:UW.replace})}` : "",
+        Jz = tz ? `2. Then give the whole new code with a write_file call, exactly like this:\n${Hz("write_file",{path:bz,why:"what the change does",content:UW.codeBlock})}` : `2. Then give every file you change, in full, with a write_file call, exactly like this:\n${Hz("write_file",{path:bz,why:"what the change does",content:UW.file})}`,
+        Iz = tz ? "" : ` If there is no code yet, write it in ${bz}.`,
+        Cz = Hz("switch_to_world_code", {}),
+        ez = tz ? vz ? `\n${uW}` : `\nIf part of the request needs World Code (a callback, or something that happens without a click), give that part as World Code with an add_world_code call, with its callbacks written as functions (in World Code the player is playerId; there is no myId or thisPos), exactly like this:\n${Hz("add_world_code",{code:UW.worldCode})}\n${Kz?"In your sentences, say which part goes in World Code: they are taken there, and it is put in for them.":"In your sentences, say which part goes in World Code and that they should press the World Code button to switch there and add it."} Leave out the code block's write_file call if the request is all World Code.${Bz("view_world_code")?`\nTo see what World Code already has before you write that part (a callback it may already define), look at it first:\n${Hz("view_world_code",{})}`:""}\nWhen the request is all World Code, also call switch_to_world_code after add_world_code: it takes them to World Code, where its AI Helper is asked to add your World Code part. Give a request instead when they asked to go to World Code for something else:\n${Cz}` : "",
+        Zz = Nz && Bz("use_prefab") && uz.length >= 2,
+        Gz = Zz ? uz.slice(0, 3).map((zz => zz.title)).join("\n") : "A parkour race\nZombie survival\nCapture the flag",
+        Tz = Zz ? " When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles: the one they pick is put in with use_prefab next." : "",
+        cz = Bz("ask_creator") ? `\nOnly if the request is too unclear to build anything sensible, ask instead of writing code: call ask_creator with one short question and 2 to 4 short choices, one per line. That is: no idea what kind of thing they want ("make a game"), or asking to make their game better, more fun or cooler without saying how ("make it more fun"): then the choices are 2 to 4 different ideas built on what their code already has, each a short concrete thing to add, not a general word like "more fun" (e.g. for a snowball fight: "Power-ups that drop in", "A score at the top", "Last player standing wins"). Otherwise build it, choosing sensibly, and say in your sentences what you chose so they can ask for something different. Never ask for personal details (name, age, school, where they live).${Tz}\n${Hz("ask_creator",{question:"What kind of game should it be?",choices:Gz,allow_other:"true"})}` : "",
+        jz = Bz("plan") ? `\n${"deepseek"===sz?"When a request is big, instead of writing it all at once, you may":"This request is big. Instead of writing it all at once, you may"} call plan with 2 to 5 short steps, one per line, each small enough to build and try on its own, the first one playable. Then send no code: the creator builds the steps one at a time. Build it at once instead if it is really only a few lines:\n${Hz("plan",{steps:"Give each player 0 coins when they join, shown on screen\nEarn a coin for each block broken\nA /shop command that sells a sword for 10 coins"})}` : "",
+        Az = null !== (Wz = uz[0]) && void 0 !== Wz ? Wz : gF("parkour"),
+        yz = (null !== (Xz = null === Az || void 0 === Az ? void 0 : Az.settings) && void 0 !== Xz ? Xz : []).slice(0, 2).map((zz => `${zz.key}: ${zz.value}`)).join("\n");
+      return `How to answer:\n1. Start with one or two short, friendly sentences in simple words saying what the change does, in the present tense as they read it before it goes in ("This adds...", "This changes..."; or what was wrong), and anything you had to do differently from what they asked. Don't promise it works: they will press Submit and try it. No long lectures.\n${Jz}${xz}${mz}${rz}${ez}${Bz("use_prefab")?`\nFor a game, or a feature (a kit, a shop, rewards...), that a prefab listed below fits, put the prefab in with use_prefab instead of writing that code yourself: it is tested code that works, and it fits around the code they already have: their code stays as it is, and where both have the same callback (onPlayerJoin...) both run, so never rewrite their code to make room for a prefab. Give only the settings the request changes, one per line as key: value, each value written as in JavaScript (text in quotes, positions as [x, y, z]); the rest keep their defaults. For a game like the one asked for but not the same, still use the closest prefab, then in the same answer, after the use_prefab call, change what it doesn't do: replace one of its functions by name, or add a callback, with replace_function. If no prefab fits, write the code yourself:\n${Hz("use_prefab",{name:null!==(Oz=null===Az||void 0===Az?void 0:Az.name)&&void 0!==Oz?Oz:"parkour",settings:yz,why:null!==(oz=null===Az||void 0===Az?void 0:Az.summary)&&void 0!==oz?oz:"a parkour course"})}`:""}${Yz}${cz}${jz}${Bz("remember")?`\nIf the creator tells you something lasting about their game that later requests should know (its idea, its rules, names of teams, items or places in it), also call remember with one short sentence about the game. They are asked before it is kept. Only what they said, never personal details, and not what the code already shows:\n${Hz("remember",{note:"A zombie survival game: a wave comes every 30 seconds and players start with a sword"})}`:""}${function(zz,tz,sz){const Fz=zz.some((zz=>"fetch_url"===zz.name)),Wz={view_file:`To see another of their files from the list, before you change it:\n${tz("view_file",{path:"shop.js"})}`,view_world_code:`To see World Code, so you can change it yourself:\n${tz("view_world_code",{})}`,view_chunk:`To see the blocks around the player (or give a position "x y z" for another chunk near them):\n${tz("view_chunk",{})}`,view_game_state:`To see where the player is, their health, what they hold and carry, and the players and mobs near them:\n${tz("view_game_state",{})}`,fetch_url:`To read the docs: ${gz.i} lists every docs page with its link. Read it, then the page you need (for a long page, the part that has it):\n${tz("fetch_url",{url:gz.i})}`,get_docs:Fz?`Or, for a name you already know, read its docs in full, or list every api method, callback or client option by name (${gt}):\n${tz("get_docs",{name:"setClientOption"})}\n${tz("get_docs",{list:"callbacks"})}`:`To read the full docs of an api method, callback or client option the lists only name:\n${tz("get_docs",{name:"setClientOption"})}`,find_names:`To find the exact names of blocks, items or mobs:\n${tz("find_names",{words:"gold sword"})}`,view_errors:`To see all the errors their world showed, not only the newest:\n${tz("view_errors",{})}`,list_prefabs:`To see the prefabs for one kind of game, and the ready-made functions for it:\n${tz("list_prefabs",{category:"pvp"})}`,view_prefab:`To see one prefab in full, every setting and the functions to replace to change it, before you use it:\n${tz("view_prefab",{name:"parkour"})}`},Xz=zz.flatMap((zz=>{const tz=Wz[zz.name];return void 0===tz?[]:[tz]}));return 0===Xz.length?sz?"\nYou have looked things up as many times as you can: answer now with what you found.":"":`\
       nIf you need to see something before you can answer well, look it up first: answer with only look - up calls, no other words and no code, and you are asked again with what they found.$ {
-        Ab ? "The docs aren't in this message: before you use an api method, callback or client option, look up any you aren't sure of, with llms.txt where you can. Make every look-up you need in one answer where you can, up to 4." : "Most requests need no look-up: only look when the answer depends on it."
+        Fz ? "The docs aren't in this message: before you use an api method, callback or client option, look up any you aren't sure of, with llms.txt where you can. Make every look-up you need in one answer where you can, up to 4." : "Most requests need no look-up: only look when the answer depends on it."
       }\
       n$ {
-        Tb.join("\n")
+        Xz.join("\n")
       }
-      `}(bb,yb,eb)}\nGive each call that changes code a why: a few plain words the creator sees beside that change, e.g. "gives everyone a sword when they join".\n3. Keep everything that already works; change only what the request needs. Don't add commands or features they didn't ask for: suggest them in your answer instead.${pb}\n4. If the request is not about their ${ab?"code block":"World Code"}, or asks for something unsafe or unkind, say briefly that you can only help with their game's code.\nDo not put code anywhere except in ${Db.map((bb=>bb.name)).join(" or ")} calls. ${function(bb){return ca[bb].callStyle}(Ub)}`
+      `}(zz,Hz,Uz)}\nGive each call that changes code a why: a few plain words the creator sees beside that change, e.g. "gives everyone a sword when they join".\n3. Keep everything that already works; change only what the request needs. Don't add commands or features they didn't ask for: suggest them in your answer instead.${Iz}\n4. If the request is not about their ${tz?"code block":"World Code"}, or asks for something unsafe or unkind, say briefly that you can only help with their game's code.\nDo not put code anywhere except in ${Pz.map((zz=>zz.name)).join(" or ")} calls. ${function(zz){return pt[zz].callStyle}(sz)}`
     }
 
-    function vM(bb, ab, Ub) {
-      return Object.keys(bb).filter((bb => !Ub || !(0, jb.f)(bb))).sort(((bb, Ub) => (Ub === ab ? 1 : 0) - (bb === ab ? 1 : 0) || bb.localeCompare(Ub)))
+    function bW(zz, tz, sz) {
+      return Object.keys(zz).filter((zz => !sz || !(0, wz.d)(zz))).sort(((zz, sz) => (sz === tz ? 1 : 0) - (zz === tz ? 1 : 0) || zz.localeCompare(sz)))
     }
 
-    function LM(bb, ab, Ub) {
-      var Ab;
-      const Mb = vM(bb, ab, Ub);
-      return null !== ab && Mb.includes(ab) ? ab : null !== (Ab = Mb[0]) && void 0 !== Ab ? Ab : null
+    function wW(zz, tz, sz) {
+      var Fz;
+      const Wz = bW(zz, tz, sz);
+      return null !== tz && Wz.includes(tz) ? tz : null !== (Fz = Wz[0]) && void 0 !== Fz ? Fz : null
     }
 
-    function PM(bb) {
-      const ab = `${arguments.length>1&&void 0!==arguments[1]?arguments[1]:""}${bb.includes("index.ts")?"index.ts":"index.js"}`;
-      return `Only ${ab} runs by itself: another file runs when ${ab} imports or requires it, so keep the import, require and export lines their files have (no import/export is for one file), and put callbacks in ${ab}.\n`
+    function DW(zz) {
+      const tz = `${arguments.length>1&&void 0!==arguments[1]?arguments[1]:""}${zz.includes("index.ts")?"index.ts":"index.js"}`;
+      return `Only ${tz} runs by itself: another file runs when ${tz} imports or requires it, so keep the import, require and export lines their files have (no import/export is for one file), and put callbacks in ${tz}.\n`
     }
 
-    function XM(bb, ab) {
-      var Ub;
+    function gW(zz, tz) {
+      var sz;
       const {
-        files: Ab,
-        activePath: Mb
-      } = bb, Tb = !0 === bb.codeBlock, Eb = vM(Ab, Mb, Tb);
-      if (0 === Eb.length || Eb.every((bb => "" === Ab[bb].trim()))) return Tb ? "There is no code yet: the code block is empty." : Eb.includes("index.ts") ? "There is no code yet: index.ts is empty. Write it in index.ts." : "There is no code yet: index.js is empty.";
-      const Yb = null !== (Ub = LM(Ab, Mb, Tb)) && void 0 !== Ub ? Ub : Eb[0];
-      return `${Eb.length>1?`Their files:\n${Eb.map((bb=>{const ab=""===(Ub=Ab[bb])?0:Ub.replace(/\n$/,"").split("\n").length;var Ub;return`- ${bb}: ${1===ab?"1 line":`${ab} lines`}${bb===Yb?" (open in the editor, its code below)":""}`})).join("\n")}\n${Tb?"":PM(Eb)}\n`:""}${function(bb,ab,Ub,Ab){return ab.map((ab=>ca[Ab].fileResult(ab,bb[ab],ab===Ub))).join("\n\n")}(Ab,[Yb],Mb,ab)}`
+        files: Fz,
+        activePath: Wz
+      } = zz, Xz = !0 === zz.codeBlock, Oz = bW(Fz, Wz, Xz);
+      if (0 === Oz.length || Oz.every((zz => "" === Fz[zz].trim()))) return Xz ? "There is no code yet: the code block is empty." : Oz.includes("index.ts") ? "There is no code yet: index.ts is empty. Write it in index.ts." : "There is no code yet: index.js is empty.";
+      const oz = null !== (sz = wW(Fz, Wz, Xz)) && void 0 !== sz ? sz : Oz[0];
+      return `${Oz.length>1?`Their files:\n${Oz.map((zz=>{const tz=""===(sz=Fz[zz])?0:sz.replace(/\n$/,"").split("\n").length;var sz;return`- ${zz}: ${1===tz?"1 line":`${tz} lines`}${zz===oz?" (open in the editor, its code below)":""}`})).join("\n")}\n${Xz?"":DW(Oz)}\n`:""}${function(zz,tz,sz,Fz){return tz.map((tz=>pt[Fz].fileResult(tz,zz[tz],tz===sz))).join("\n\n")}(Fz,[oz],Wz,tz)}`
     }
 
-    function jM(bb) {
-      var ab, Ub, Ab, Mb, Tb, Eb;
+    function HW(zz) {
+      var tz, sz, Fz, Wz, Xz, Oz;
       return {
-        codeBlock: !0 === bb.codeBlock,
-        hasCode: "" !== (null !== (ab = bb.files[null !== (Ub = bb.activePath) && void 0 !== Ub ? Ub : ""]) && void 0 !== ab ? ab : "").trim(),
-        hasBigFile: Object.values(bb.files).some((bb => bb.length > 6e3)),
-        wantsExport: OA(bb.request),
-        canAsk: !0 === bb.canAsk,
-        canRemember: !0 === (null === (Ab = bb.about) || void 0 === Ab ? void 0 : Ab.canRemember),
-        isBigRequest: ea(bb.request),
-        canLookUp: !0 === bb.canLookUp,
-        hasOtherFiles: Object.keys(bb.files).length > 1,
-        hasErrors: bb.errors.length > 0,
-        canChangeWorldCode: !0 === bb.canChangeWorldCode,
-        hasWorldCodeFiles: Object.keys(bb.files).some(jb.f),
-        offersPrefabs: (Mb = bb.request, Tb = bb.files, Eb = RM(bb), "never" !== Eb.offer && ("always" === Eb.offer || NA(Mb, 1).length > 0 || ea(Mb) || !UM(Tb) && aM.test(Mb))),
-        listsPrefabs: RM(bb).categories,
-        looksUpDocs: !0 === bb.looksUpDocs
+        codeBlock: !0 === zz.codeBlock,
+        hasCode: "" !== (null !== (tz = zz.files[null !== (sz = zz.activePath) && void 0 !== sz ? sz : ""]) && void 0 !== tz ? tz : "").trim(),
+        hasBigFile: Object.values(zz.files).some((zz => zz.length > 6e3)),
+        wantsExport: fF(zz.request),
+        canAsk: !0 === zz.canAsk,
+        canRemember: !0 === (null === (Fz = zz.about) || void 0 === Fz ? void 0 : Fz.canRemember),
+        isBigRequest: Ut(zz.request),
+        canLookUp: !0 === zz.canLookUp,
+        hasOtherFiles: Object.keys(zz.files).length > 1,
+        hasErrors: zz.errors.length > 0,
+        canChangeWorldCode: !0 === zz.canChangeWorldCode,
+        hasWorldCodeFiles: Object.keys(zz.files).some(wz.d),
+        offersPrefabs: (Wz = zz.request, Xz = zz.files, Oz = BW(zz), "never" !== Oz.offer && ("always" === Oz.offer || GF(Wz, 1).length > 0 || Ut(Wz) || !XW(Xz) && WW.test(Wz))),
+        listsPrefabs: BW(zz).categories,
+        looksUpDocs: !0 === zz.looksUpDocs
       }
     }
 
-    function RM(bb) {
-      var ab;
-      return null !== (ab = bb.prefabs) && void 0 !== ab ? ab : bM
+    function BW(zz) {
+      var tz;
+      return null !== (tz = zz.prefabs) && void 0 !== tz ? tz : FW
     }
 
-    function kM(bb, ab) {
-      return "deepseek" === ab ? function(bb) {
-        const ab = cA[bb ? "codeBlock" : "worldCode"];
-        return Da.filter((bb => ab.has(bb.name)))
-      }(!0 === bb.codeBlock) : function(bb) {
-        const ab = (bb.hasCode || bb.hasBigFile) && !bb.codeBlock || !0 === bb.hasWorldCodeFiles,
-          Ub = !0 === bb.canLookUp,
-          Ab = bb.codeBlock && !0 === bb.canChangeWorldCode && !0 !== bb.hasWorldCodeFiles && Ub,
-          Mb = {
+    function PW(zz, tz) {
+      return "deepseek" === tz ? function(zz) {
+        const tz = EF[zz ? "codeBlock" : "worldCode"];
+        return Pt.filter((zz => tz.has(zz.name)))
+      }(!0 === zz.codeBlock) : function(zz) {
+        const tz = (zz.hasCode || zz.hasBigFile) && !zz.codeBlock || !0 === zz.hasWorldCodeFiles,
+          sz = !0 === zz.canLookUp,
+          Fz = zz.codeBlock && !0 === zz.canChangeWorldCode && !0 !== zz.hasWorldCodeFiles && sz,
+          Wz = {
             write_file: !0,
-            edit_file: bb.hasBigFile,
-            replace_function: ab,
+            edit_file: zz.hasBigFile,
+            replace_function: tz,
             insert_code: !1,
-            add_world_code: bb.codeBlock && !0 !== bb.hasWorldCodeFiles,
-            edit_code_in_place: bb.hasCode,
-            export_game: bb.wantsExport,
-            switch_to_world_code: bb.codeBlock,
-            ask_creator: bb.canAsk,
-            remember: !0 === bb.canRemember && !bb.codeBlock,
-            plan: !0 === bb.isBigRequest && bb.canAsk && !bb.codeBlock,
-            view_file: Ub && !0 === bb.hasOtherFiles && !bb.codeBlock,
-            view_world_code: Ab,
-            view_chunk: Ub,
-            view_game_state: Ub,
-            get_docs: Ub,
-            fetch_url: Ub && !0 === bb.looksUpDocs,
-            find_names: Ub,
-            view_errors: Ub && !0 === bb.hasErrors,
-            use_prefab: !0 === bb.offersPrefabs && !bb.codeBlock,
-            list_prefabs: Ub && !0 === bb.listsPrefabs && !bb.codeBlock,
-            view_prefab: Ub && !0 === bb.offersPrefabs && !bb.codeBlock
+            add_world_code: zz.codeBlock && !0 !== zz.hasWorldCodeFiles,
+            edit_code_in_place: zz.hasCode,
+            export_game: zz.wantsExport,
+            switch_to_world_code: zz.codeBlock,
+            ask_creator: zz.canAsk,
+            remember: !0 === zz.canRemember && !zz.codeBlock,
+            plan: !0 === zz.isBigRequest && zz.canAsk && !zz.codeBlock,
+            view_file: sz && !0 === zz.hasOtherFiles && !zz.codeBlock,
+            view_world_code: Fz,
+            view_chunk: sz,
+            view_game_state: sz,
+            get_docs: sz,
+            fetch_url: sz && !0 === zz.looksUpDocs,
+            find_names: sz,
+            view_errors: sz && !0 === zz.hasErrors,
+            use_prefab: !0 === zz.offersPrefabs && !zz.codeBlock,
+            list_prefabs: sz && !0 === zz.listsPrefabs && !zz.codeBlock,
+            view_prefab: sz && !0 === zz.offersPrefabs && !zz.codeBlock
           };
-        let Tb = Da.filter((bb => Mb[bb.name]));
-        for (const Eb of ["remember", "plan"]) Tb.filter((bb => !za(bb.name))).length > 7 && (Tb = Tb.filter((bb => bb.name !== Eb)));
-        return Tb
-      }(jM(bb))
+        let Xz = Pt.filter((zz => Wz[zz.name]));
+        for (const Oz of ["remember", "plan"]) Xz.filter((zz => !rt(zz.name))).length > 7 && (Xz = Xz.filter((zz => zz.name !== Oz)));
+        return Xz
+      }(HW(zz))
     }
 
-    function yM(bb, ab) {
-      var Ub, Ab;
-      const Mb = jM(bb),
-        Tb = !0 === Mb.canLookUp,
-        Eb = (null !== (Ub = null === (Ab = bb.lookups) || void 0 === Ab ? void 0 : Ab.length) && void 0 !== Ub ? Ub : 0) > 0,
-        Yb = !0 === Mb.hasWorldCodeFiles,
-        Bb = [Mb.hasCode ? "" : "No open file has code, so don't call edit_code_in_place.", Mb.hasBigFile ? "" : "Every file is short, so change them with write_file or replace_function, not edit_file.", Tb ? "" : Eb ? "You have looked things up as many times as you can: answer now with what you found, calling no view_ tool, get_docs or find_names." : "Answer with what you have: call no view_ tool, get_docs or find_names.", Tb && !0 !== Mb.hasErrors ? "Their world showed no errors, so don't call view_errors." : "", ...Mb.codeBlock ? [Mb.canAsk ? "" : "Build what they asked: don't call ask_creator.", Yb ? `${BM} So don't call add_world_code or view_world_code.` : "", Yb || !0 !== Mb.canChangeWorldCode ? "" : "When part of it needs World Code, say which part goes there: they are taken to World Code, and it is put in for them.", Yb || !0 === Mb.canChangeWorldCode && Tb ? "" : "Don't call view_world_code.", Yb ? "" : "The code block has no functions, so don't call replace_function."] : [Mb.canAsk ? "" : "Build what they asked: don't call ask_creator or plan.", Mb.canAsk && !0 !== Mb.isBigRequest ? "This request isn't big, so build it rather than calling plan." : "", Mb.wantsExport ? "" : "They haven't asked to save, so don't call export_game.", !0 === Mb.canRemember ? "" : "Their AI notes are full, so don't call remember.", Tb && !0 !== Mb.hasOtherFiles ? "They have only the one file, so don't call view_file." : "", !0 === Mb.offersPrefabs ? "" : "No prefab fits this request, so don't call use_prefab or view_prefab.", Mb.canAsk && !0 === RM(bb).guide && ab.length >= 2 ? `When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles (${ab.slice(0,3).map((bb=>bb.title)).join(", ")}...): the one they pick is put in with use_prefab next.` : ""]].filter((bb => "" !== bb));
-      return Bb.length > 0 ? `\n\nFor this request: ${Bb.join(" ")}` : ""
+    function rW(zz, tz) {
+      var sz, Fz;
+      const Wz = HW(zz),
+        Xz = !0 === Wz.canLookUp,
+        Oz = (null !== (sz = null === (Fz = zz.lookups) || void 0 === Fz ? void 0 : Fz.length) && void 0 !== sz ? sz : 0) > 0,
+        oz = !0 === Wz.hasWorldCodeFiles,
+        vz = [Wz.hasCode ? "" : "No open file has code, so don't call edit_code_in_place.", Wz.hasBigFile ? "" : "Every file is short, so change them with write_file or replace_function, not edit_file.", Xz ? "" : Oz ? "You have looked things up as many times as you can: answer now with what you found, calling no view_ tool, get_docs or find_names." : "Answer with what you have: call no view_ tool, get_docs or find_names.", Xz && !0 !== Wz.hasErrors ? "Their world showed no errors, so don't call view_errors." : "", ...Wz.codeBlock ? [Wz.canAsk ? "" : "Build what they asked: don't call ask_creator.", oz ? `${uW} So don't call add_world_code or view_world_code.` : "", oz || !0 !== Wz.canChangeWorldCode ? "" : "When part of it needs World Code, say which part goes there: they are taken to World Code, and it is put in for them.", oz || !0 === Wz.canChangeWorldCode && Xz ? "" : "Don't call view_world_code.", oz ? "" : "The code block has no functions, so don't call replace_function."] : [Wz.canAsk ? "" : "Build what they asked: don't call ask_creator or plan.", Wz.canAsk && !0 !== Wz.isBigRequest ? "This request isn't big, so build it rather than calling plan." : "", Wz.wantsExport ? "" : "They haven't asked to save, so don't call export_game.", !0 === Wz.canRemember ? "" : "Their AI notes are full, so don't call remember.", Xz && !0 !== Wz.hasOtherFiles ? "They have only the one file, so don't call view_file." : "", !0 === Wz.offersPrefabs ? "" : "No prefab fits this request, so don't call use_prefab or view_prefab.", Wz.canAsk && !0 === BW(zz).guide && tz.length >= 2 ? `When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles (${tz.slice(0,3).map((zz=>zz.title)).join(", ")}...): the one they pick is put in with use_prefab next.` : ""]].filter((zz => "" !== zz));
+      return vz.length > 0 ? `\n\nFor this request: ${vz.join(" ")}` : ""
     }
 
-    function ZM(bb, ab) {
-      var Ub, Ab, Mb, Tb, Eb, Yb;
-      let Bb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AM,
+    function YW(zz, tz) {
+      var sz, Fz, Wz, Xz, Oz, oz;
+      let vz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : OW,
         {
-          docsInTurn: eb = !1,
-          qR: vb = !1
+          docsInTurn: Uz = !1,
+          nb: Kz = !1
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Lb = "deepseek" === Bb.format,
-        Pb = Object.values(ab.files).join("\n"),
-        Xb = ab.history.slice(-2).map((bb => bb.text)).join("\n"),
-        jb = `${ab.request}\n${Xb}\n${ab.errors.join("\n")}`,
-        Rb = !0 === ab.looksUpDocs,
-        kb = Rb && !0 === ab.canLookUp ? [] : bb.find(jb, Pb, 12),
-        yb = bb.matchItemAndBlockNames(jb, 12),
-        Zb = !0 === ab.codeBlock,
-        Db = Zb ? "myId" : "playerId",
-        zb = kM(ab, Bb.format),
-        xb = zb.some((bb => "use_prefab" === bb.name)),
-        ib = !xb || Lb && !0 !== jM(ab).offersPrefabs ? [] : function(bb, ab, Ub) {
-          if ("never" === Ub.offer || "none" === Ub.list) return [];
-          if ("all" === Ub.list) return [...vA];
-          const Ab = NA(bb, 4);
-          if (UM(ab) || !aM.test(bb) && !ea(bb)) return Ab;
-          const Mb = vA.filter((bb => "game" === bb.kind && !Ab.includes(bb)));
-          return [...Ab, ...Mb]
-        }(ab.request, ab.files, RM(ab)),
-        fb = xb ? function(bb, ab, Ub) {
-          const Ab = ab ? `\nOther kinds of game have prefabs too: look them up with list_prefabs (${[...LA.keys()].join(", ")}).` : "";
-          if (0 === bb.length) return ab ? `## Prefabs (ready-made games)${Ab}` : "";
-          const Mb = Ub && bb.includes(Ub) ? `\nThis request fits ${Ub.name}: put it in with use_prefab, then change only what the request wants differently: what it already does needs no code of yours (its sidebar is the text on the right of the screen).\n${pA(Ub,!1)}` : "";
-          return `## Prefabs: ready-made games and features to start from (use_prefab)\n${bb.map(fA).join("\n")}${Mb}${Ab}`
-        }(ib, RM(ab).categories, NA(ab.request, 1)[0]) : "",
-        mb = Zb || !0 !== RM(ab).inlineCode ? "" : function(bb) {
-          const ab = NA(bb, 1)[0];
-          if (!ab) return "";
-          const Ub = ZA(RA(ab)).text;
-          return `## Tested code for this kind of game (${ab.title})\nThis code works. Start from it: put it in the file, keeping what the file already has, and change what the request needs. Change settings in its CONFIG.\n\`\`\`js\n${Ub}\`\`\``
-        }(ab.request),
-        pb = [kb.length > 0 ? `## Docs for this request\n${kb.map((bb=>bb.text)).join("\n\n")}` : "", yb.length > 0 ? `## Exact item and block names that match the request\n${yb.join(", ")}` : ""].filter((bb => "" !== bb)),
-        Nb = [{
+      const uz = "deepseek" === vz.format,
+        Nz = Object.values(tz.files).join("\n"),
+        bz = tz.history.slice(-2).map((zz => zz.text)).join("\n"),
+        wz = `${tz.request}\n${bz}\n${tz.errors.join("\n")}`,
+        Dz = !0 === tz.looksUpDocs,
+        gz = Dz && !0 === tz.canLookUp ? [] : zz.find(wz, Nz, 12),
+        Hz = zz.matchItemAndBlockNames(wz, 12),
+        Bz = !0 === tz.codeBlock,
+        Pz = Bz ? "myId" : "playerId",
+        rz = PW(tz, vz.format),
+        Yz = rz.some((zz => "use_prefab" === zz.name)),
+        xz = !Yz || uz && !0 !== HW(tz).offersPrefabs ? [] : function(zz, tz, sz) {
+          if ("never" === sz.offer || "none" === sz.list) return [];
+          if ("all" === sz.list) return [...bF];
+          const Fz = GF(zz, 4);
+          if (XW(tz) || !WW.test(zz) && !Ut(zz)) return Fz;
+          const Wz = bF.filter((zz => "game" === zz.kind && !Fz.includes(zz)));
+          return [...Fz, ...Wz]
+        }(tz.request, tz.files, BW(tz)),
+        mz = Yz ? function(zz, tz, sz) {
+          const Fz = tz ? `\nOther kinds of game have prefabs too: look them up with list_prefabs (${[...wF.keys()].join(", ")}).` : "";
+          if (0 === zz.length) return tz ? `## Prefabs (ready-made games)${Fz}` : "";
+          const Wz = sz && zz.includes(sz) ? `\nThis request fits ${sz.name}: put it in with use_prefab, then change only what the request wants differently: what it already does needs no code of yours (its sidebar is the text on the right of the screen).\n${ZF(sz,!1)}` : "";
+          return `## Prefabs: ready-made games and features to start from (use_prefab)\n${zz.map(CF).join("\n")}${Wz}${Fz}`
+        }(xz, BW(tz).categories, GF(tz.request, 1)[0]) : "",
+        Jz = Bz || !0 !== BW(tz).inlineCode ? "" : function(zz) {
+          const tz = GF(zz, 1)[0];
+          if (!tz) return "";
+          const sz = YF(BF(tz)).text;
+          return `## Tested code for this kind of game (${tz.title})\nThis code works. Start from it: put it in the file, keeping what the file already has, and change what the request needs. Change settings in its CONFIG.\n\`\`\`js\n${sz}\`\`\``
+        }(tz.request),
+        Iz = [gz.length > 0 ? `## Docs for this request\n${gz.map((zz=>zz.text)).join("\n\n")}` : "", Hz.length > 0 ? `## Exact item and block names that match the request\n${Hz.join(", ")}` : ""].filter((zz => "" !== zz)),
+        Cz = [{
           role: "system",
-          content: nA([Zb ? TM(Rb) : MM(Rb), ...Rb ? [] : [Zb ? `## World Code callbacks (all of them; only for World Code, never in the code block)\n${bb.index("callback")}` : `## Callbacks (all of them)\n${bb.index("callback")}`, `## API methods (all of them, call as api.name(...))\n${bb.index("api")}`, `## Client options (all of them, set with api.setClientOption(${Db}, name, value))\n${bb.index("clientOption")}`], ...eb ? [] : pb, bb.mobTypes.length > 0 ? `## Mob types (for api.attemptSpawnMob)\n${bb.mobTypes.join(", ")}` : "", Lb ? "" : fb, !Zb && RM(ab).helperIndex ? `## Ready-made functions (call them by name, without api. and without writing them: their code is added to the file by itself; get_docs shows one)\n${UA.map((bb=>bb.signature)).join(", ")}` : "", Lb ? "" : mb, eM(zb, Zb, Bb.format, Lb ? {
+          content: tW([Bz ? vW(Dz) : oW(Dz), ...Dz ? [] : [Bz ? `## World Code callbacks (all of them; only for World Code, never in the code block)\n${zz.index("callback")}` : `## Callbacks (all of them)\n${zz.index("callback")}`, `## API methods (all of them, call as api.name(...))\n${zz.index("api")}`, `## Client options (all of them, set with api.setClientOption(${Pz}, name, value))\n${zz.index("clientOption")}`], ...Uz ? [] : Iz, zz.mobTypes.length > 0 ? `## Mob types (for api.attemptSpawnMob)\n${zz.mobTypes.join(", ")}` : "", uz ? "" : mz, !Bz && BW(tz).helperIndex ? `## Ready-made functions (call them by name, without api. and without writing them: their code is added to the file by itself; get_docs shows one)\n${XF.map((zz=>zz.signature)).join(", ")}` : "", uz ? "" : Jz, NW(rz, Bz, vz.format, uz ? {
             hasWorldCodeFiles: !1,
             hasLookedUp: !1,
             movesToWorldCode: !1,
             listedPrefabs: [],
             guidesToPrefabs: !1
           } : {
-            hasWorldCodeFiles: !0 === jM(ab).hasWorldCodeFiles,
-            hasLookedUp: (null !== (Ub = null === (Ab = ab.lookups) || void 0 === Ab ? void 0 : Ab.length) && void 0 !== Ub ? Ub : 0) > 0,
-            movesToWorldCode: !0 === ab.canChangeWorldCode,
-            listedPrefabs: ib,
-            guidesToPrefabs: !0 === RM(ab).guide
-          })].filter((bb => "" !== bb)).join("\n\n"), zb, Bb.format, Bb.nativeTools)
+            hasWorldCodeFiles: !0 === HW(tz).hasWorldCodeFiles,
+            hasLookedUp: (null !== (sz = null === (Fz = tz.lookups) || void 0 === Fz ? void 0 : Fz.length) && void 0 !== sz ? sz : 0) > 0,
+            movesToWorldCode: !0 === tz.canChangeWorldCode,
+            listedPrefabs: xz,
+            guidesToPrefabs: !0 === BW(tz).guide
+          })].filter((zz => "" !== zz)).join("\n\n"), rz, vz.format, vz.nativeTools)
         }];
-      if (!Lb)
-        for (const ub of ab.history) Nb.push({
-          role: ub.role,
-          content: ub.text
+      if (!uz)
+        for (const dz of tz.history) Cz.push({
+          role: dz.role,
+          content: dz.text
         });
-      const Wb = Lb && !vb && ab.history.length > 0 ? `Earlier in this chat:\n${ab.history.map((bb=>`${"user"===bb.role?"They asked":"You answered"}: ${bb.text}`)).join("\n")}\n\n` : "",
-        Hb = null !== (Mb = ab.about) && void 0 !== Mb && Mb.notes.length ? `AI notes (notes they kept):\n${ab.about.notes.map((bb=>`- ${bb}`)).join("\n")}\n\n` : "",
-        Ib = null !== (Tb = ab.about) && void 0 !== Tb && Tb.outline ? `Outline of their code:\n${ab.about.outline}\n\n` : "",
-        db = ab.errors.length > 0 ? `\n\nErrors their world showed recently:\n${ab.errors.slice(-5).join("\n")}` : "",
-        Fb = null === (Eb = ab.failedEdits) || void 0 === Eb || !Eb.length || Lb && vb ? "" : `\n\nWhat happened to your last answer's changes:\n${function(bb,ab){return bb.map((bb=>ca[ab].editFailure(bb.tool,SA(bb)))).join("\n\n")}(ab.failedEdits,Bb.format)}`,
-        hb = [...eb ? pb : [], ...Lb ? [fb, mb] : []].filter((bb => "" !== bb)).map((bb => `${bb}\n\n`)).join(""),
-        Gb = null === (Yb = ab.lookups) || void 0 === Yb || !Yb.length || Lb && vb ? "" : `\n\nWhat you looked up for this request:\n${Qb=ab.lookups,qb=Bb.format,Qb.map((bb=>ca[qb].lookupResult(bb.tool,bb.about,bb.text))).join("\n\n")}`;
-      var Qb, qb;
-      return Nb.push({
+      const ez = uz && !Kz && tz.history.length > 0 ? `Earlier in this chat:\n${tz.history.map((zz=>`${"user"===zz.role?"They asked":"You answered"}: ${zz.text}`)).join("\n")}\n\n` : "",
+        Zz = null !== (Wz = tz.about) && void 0 !== Wz && Wz.notes.length ? `AI notes (notes they kept):\n${tz.about.notes.map((zz=>`- ${zz}`)).join("\n")}\n\n` : "",
+        Gz = null !== (Xz = tz.about) && void 0 !== Xz && Xz.outline ? `Outline of their code:\n${tz.about.outline}\n\n` : "",
+        Tz = tz.errors.length > 0 ? `\n\nErrors their world showed recently:\n${tz.errors.slice(-5).join("\n")}` : "",
+        cz = null === (Oz = tz.failedEdits) || void 0 === Oz || !Oz.length || uz && Kz ? "" : `\n\nWhat happened to your last answer's changes:\n${function(zz,tz){return zz.map((zz=>pt[tz].editFailure(zz.tool,sW(zz)))).join("\n\n")}(tz.failedEdits,vz.format)}`,
+        jz = [...Uz ? Iz : [], ...uz ? [mz, Jz] : []].filter((zz => "" !== zz)).map((zz => `${zz}\n\n`)).join(""),
+        Az = null === (oz = tz.lookups) || void 0 === oz || !oz.length || uz && Kz ? "" : `\n\nWhat you looked up for this request:\n${yz=tz.lookups,Mz=vz.format,yz.map((zz=>pt[Mz].lookupResult(zz.tool,zz.about,zz.text))).join("\n\n")}`;
+      var yz, Mz;
+      return Cz.push({
         role: "user",
-        content: `${hb}${Hb}${Ib}${Wb}Their code now:\n${XM(ab,Bb.format)}${db}${Fb}${Gb}${Lb?yM(ab,ib):""}\n\nTheir request: ${ab.request}`
-      }), Nb
+        content: `${jz}${Zz}${Gz}${ez}Their code now:\n${gW(tz,vz.format)}${Tz}${cz}${Az}${uz?rW(tz,xz):""}\n\nTheir request: ${tz.request}`
+      }), Cz
     }
-    var DM = Ub(38856);
+    var xW = sz(38964);
 
-    function zM(bb) {
-      var ab, Ub, Ab, Mb, Tb, Eb;
+    function mW(zz) {
+      var tz, sz, Fz, Wz, Xz, Oz;
       const {
-        args: Yb
-      } = bb;
-      switch (bb.name) {
+        args: oz
+      } = zz;
+      switch (zz.name) {
         case "view_file":
-          return null !== (ab = Yb.path) && void 0 !== ab ? ab : "a file";
+          return null !== (tz = oz.path) && void 0 !== tz ? tz : "a file";
         case "view_world_code":
           return "your World Code";
         case "view_chunk":
-          return Yb.position ? `the blocks near ${null!==(Ub=null===(Ab=(0,DM.f)(Yb.position))||void 0===Ab?void 0:Ab.map(Math.floor).join(", "))&&void 0!==Ub?Ub:Yb.position}` : "the blocks around you";
+          return oz.position ? `the blocks near ${null!==(sz=null===(Fz=(0,xW.e)(oz.position))||void 0===Fz?void 0:Fz.map(Math.floor).join(", "))&&void 0!==sz?sz:oz.position}` : "the blocks around you";
         case "view_game_state":
           return "what you see in your world";
         case "get_docs":
-          return Yb.name ? `the docs for ${Yb.name}` : `the list of ${iM(null!==(Mb=Yb.list)&&void 0!==Mb?Mb:xM)}`;
+          return oz.name ? `the docs for ${oz.name}` : `the list of ${IW(null!==(Wz=oz.list)&&void 0!==Wz?Wz:JW)}`;
         case "fetch_url":
-          return function(bb) {
-            const ab = void 0 === bb ? null : Db(bb);
-            if (null === ab) return null !== bb && void 0 !== bb ? bb : "a docs page";
-            return zb(ab) ? "the list of docs pages" : `the docs page ${function(bb){const ab=(0,kb.C)(bb);return null===ab?bb:`${ab.name}${null===ab.part?"":`/${ab.part}`}`}(ab)}`
-          }(Yb.url);
+          return function(zz) {
+            const tz = void 0 === zz ? null : Pz(zz);
+            if (null === tz) return null !== zz && void 0 !== zz ? zz : "a docs page";
+            return rz(tz) ? "the list of docs pages" : `the docs page ${function(zz){const tz=(0,gz.t)(zz);return null===tz?zz:`${tz.name}${null===tz.part?"":`/${tz.part}`}`}(tz)}`
+          }(oz.url);
         case "find_names":
-          return `names for "${null!==(Tb=Yb.words)&&void 0!==Tb?Tb:""}"`;
+          return `names for "${null!==(Xz=oz.words)&&void 0!==Xz?Xz:""}"`;
         case "view_errors":
           return "your world's errors";
         case "list_prefabs":
-          return Yb.category ? `the ready-made ${Yb.category} games` : "the ready-made games";
+          return oz.category ? `the ready-made ${oz.category} games` : "the ready-made games";
         case "view_prefab":
-          return `the ready-made ${null!==(Eb=Yb.name)&&void 0!==Eb?Eb:"game"}`
+          return `the ready-made ${null!==(Oz=oz.name)&&void 0!==Oz?Oz:"game"}`
       }
     }
-    const xM = "functions";
+    const JW = "functions";
 
-    function iM(bb) {
-      return bb.trim().toLowerCase().replace(/[\s_]+/g, " ").replace(/s?$/, "s")
+    function IW(zz) {
+      return zz.trim().toLowerCase().replace(/[\s_]+/g, " ").replace(/s?$/, "s")
     }
 
-    function fM(bb) {
-      return "get_docs" === bb.name || "fetch_url" === bb.name
+    function CW(zz) {
+      return "get_docs" === zz.name || "fetch_url" === zz.name
     }
-    async function mM(bb, ab) {
-      var Ub;
-      const Ab = zM(bb),
-        Mb = ab => ({
+    async function eW(zz, tz) {
+      var sz;
+      const Fz = mW(zz),
+        Wz = tz => ({
           result: {
-            tool: bb.name,
-            about: Ab,
-            text: ab
+            tool: zz.name,
+            about: Fz,
+            text: tz
           }
         });
-      switch (bb.name) {
+      switch (zz.name) {
         case "view_file":
-          return Mb((Yb = bb.args.path, Bb = ab.files, void 0 === Yb ? "No path was given: give the path of a file from the list." : Object.hasOwn(Bb, Yb) ? "" === Bb[Yb] ? `${Yb} is empty.` : Bb[Yb] : `There is no file called ${Yb}. Their files are: ${Object.keys(Bb).join(", ")}.`));
+          return Wz((oz = zz.args.path, vz = tz.files, void 0 === oz ? "No path was given: give the path of a file from the list." : Object.hasOwn(vz, oz) ? "" === vz[oz] ? `${oz} is empty.` : vz[oz] : `There is no file called ${oz}. Their files are: ${Object.keys(vz).join(", ")}.`));
         case "view_world_code": {
-          const bb = ab.readWorldCode ? await ab.readWorldCode() : null;
-          if (null === bb) return Mb("World Code couldn't be read, so it can't be changed from here. Give its part with add_world_code instead.");
-          const Ub = Object.keys(bb).sort(),
-            Ab = Object.fromEntries(Ub.map((ab => [`${jb.l}${ab}`, bb[ab]]))),
-            Tb = Ub.map((ab => `${jb.l}${ab}:\n${""===bb[ab]?"(empty)":bb[ab]}`)).join("\n\n"),
-            Eb = Ub.length > 1 ? `\n\n${PM(Ub,jb.l)}` : "";
+          const zz = tz.readWorldCode ? await tz.readWorldCode() : null;
+          if (null === zz) return Wz("World Code couldn't be read, so it can't be changed from here. Give its part with add_world_code instead.");
+          const sz = Object.keys(zz).sort(),
+            Fz = Object.fromEntries(sz.map((tz => [`${wz.h}${tz}`, zz[tz]]))),
+            Xz = sz.map((tz => `${wz.h}${tz}:\n${""===zz[tz]?"(empty)":zz[tz]}`)).join("\n\n"),
+            Oz = sz.length > 1 ? `\n\n${DW(sz,wz.h)}` : "";
           return {
-            ...Mb("" === Tb ? `World Code has no code yet: ${jb.l}index.js is empty.` : `${Tb}${Eb}`),
-            worldCodeFiles: Ab
+            ...Wz("" === Xz ? `World Code has no code yet: ${wz.h}index.js is empty.` : `${Xz}${Oz}`),
+            worldCodeFiles: Fz
           }
         }
         case "view_chunk":
-          return Mb(await ab.viewChunk((0, DM.f)(bb.args.position)));
+          return Wz(await tz.viewChunk((0, xW.e)(zz.args.position)));
         case "view_game_state":
-          return Mb(await ab.viewGameState());
+          return Wz(await tz.viewGameState());
         case "get_docs":
-          return Mb(function(bb, ab, Ub) {
-            if (void 0 === bb) {
-              const bb = (0, ib.c)(Ra, iM(null !== ab && void 0 !== ab ? ab : xM));
-              return void 0 === bb ? `There is no list called ${ab}: ask for ${ka}.` : Ub.index(bb)
+          return Wz(function(zz, tz, sz) {
+            if (void 0 === zz) {
+              const zz = (0, xz.e)(Dt, IW(null !== tz && void 0 !== tz ? tz : JW));
+              return void 0 === zz ? `There is no list called ${tz}: ask for ${gt}.` : sz.index(zz)
             }
-            const Ab = Ub.section(bb);
-            if (Ab) return Ab.text;
-            const Mb = Ub.find(bb, "", 3).map((bb => bb.name)).join(", ");
-            return `Nothing is called ${bb}.${""===Mb?"":` The closest names are: ${Mb}.`}`
-          }(bb.args.name, bb.args.list, ab.docs));
+            const Fz = sz.section(zz);
+            if (Fz) return Fz.text;
+            const Wz = sz.find(zz, "", 3).map((zz => zz.name)).join(", ");
+            return `Nothing is called ${zz}.${""===Wz?"":` The closest names are: ${Wz}.`}`
+          }(zz.args.name, zz.args.list, tz.docs));
         case "fetch_url":
-          return Mb(await ab.fetchDocsPage(null !== (Ub = bb.args.url) && void 0 !== Ub ? Ub : ""));
+          return Wz(await tz.fetchDocsPage(null !== (sz = zz.args.url) && void 0 !== sz ? sz : ""));
         case "find_names": {
-          var Tb, Eb;
-          const Ub = ab.docs.searchNames(null !== (Tb = bb.args.words) && void 0 !== Tb ? Tb : "", 20);
-          return Mb(Ub.length > 0 ? Ub.join(", ") : `No block, item or mob name has any of the words "${null!==(Eb=bb.args.words)&&void 0!==Eb?Eb:""}".`)
+          var Xz, Oz;
+          const sz = tz.docs.searchNames(null !== (Xz = zz.args.words) && void 0 !== Xz ? Xz : "", 20);
+          return Wz(sz.length > 0 ? sz.join(", ") : `No block, item or mob name has any of the words "${null!==(Oz=zz.args.words)&&void 0!==Oz?Oz:""}".`)
         }
         case "view_errors":
-          return Mb(ab.errors.length > 0 ? ab.errors.slice(-30).join("\n") : "Their world showed no errors recently.");
+          return Wz(tz.errors.length > 0 ? tz.errors.slice(-30).join("\n") : "Their world showed no errors recently.");
         case "list_prefabs":
-          return Mb(mA(bb.args.category));
+          return Wz(eF(zz.args.category));
         case "view_prefab":
-          return Mb(function(bb, ab) {
-            const Ub = void 0 === bb ? null : XA(bb);
-            return Ub ? pA(Ub, ab) : `There is no prefab called ${null!==bb&&void 0!==bb?bb:"that"}.\n${mA()}`
-          }(bb.args.name, !0 === ab.showPrefabCode))
+          return Wz(function(zz, tz) {
+            const sz = void 0 === zz ? null : gF(zz);
+            return sz ? ZF(sz, tz) : `There is no prefab called ${null!==zz&&void 0!==zz?zz:"that"}.\n${eF()}`
+          }(zz.args.name, !0 === tz.showPrefabCode))
       }
-      var Yb, Bb
+      var oz, vz
     }
-    const pM = [
+    const ZW = [
       [/\bme\b/gi, "the player"],
       [/\bmyself\b/gi, "the player"],
       [/\bmy\b/gi, "the player's"],
@@ -6241,206 +6241,206 @@ export const modules = {
       [/\bstolen\b/gi, "taken"]
     ];
 
-    function NM(bb) {
-      let ab = bb;
-      for (const [Ub, Ab] of pM) ab = ab.replace(Ub, (bb => bb.length > 1 && bb[0] !== bb[0].toLowerCase() && bb.slice(1) === bb.slice(1).toLowerCase() ? Ab[0].toUpperCase() + Ab.slice(1) : Ab));
-      return ab
+    function GW(zz) {
+      let tz = zz;
+      for (const [sz, Fz] of ZW) tz = tz.replace(sz, (zz => zz.length > 1 && zz[0] !== zz[0].toLowerCase() && zz.slice(1) === zz.slice(1).toLowerCase() ? Fz[0].toUpperCase() + Fz.slice(1) : Fz));
+      return tz
     }
-    const WM = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      HM = ["Qwen3Guard-Gen-0.6B", "Qwen3Guard-Gen-8B"],
-      IM = ["Qwen3Guard-Gen-8B", "Qwen3Guard-Gen-0.6B"],
-      dM = 12e3,
-      FM = new Set(["Violent", "Non-violent Illegal Acts", "Unethical Acts"]);
+    const TW = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      cW = ["Qwen3Guard-Gen-0.6B", "Qwen3Guard-Gen-8B"],
+      jW = ["Qwen3Guard-Gen-8B", "Qwen3Guard-Gen-0.6B"],
+      AW = 12e3,
+      yW = new Set(["Violent", "Non-violent Illegal Acts", "Unethical Acts"]);
 
-    function hM(bb) {
-      var ab, Ub, Ab;
-      const Mb = null === (ab = /Safety:\s*(\w+)/.exec(bb)) || void 0 === ab ? void 0 : ab[1],
-        Tb = null !== (Ub = null === (Ab = /Categories:\s*(.+)/.exec(bb)) || void 0 === Ab ? void 0 : Ab[1]) && void 0 !== Ub ? Ub : "";
-      return /PII/.test(Tb) ? "personalInfo" : "Unsafe" === Mb || /Jailbreak|Sexual|Suicide|Self-Harm/i.test(Tb) ? "unsafe" : "ok"
-    }
-
-    function GM(bb) {
-      var ab, Ub, Ab;
-      const Mb = null === (ab = /Safety:\s*(\w+)/.exec(bb)) || void 0 === ab ? void 0 : ab[1];
-      if (!Mb) return null;
-      const Tb = (null !== (Ub = null === (Ab = /Categories:\s*(.+)/.exec(bb)) || void 0 === Ab ? void 0 : Ab[1]) && void 0 !== Ub ? Ub : "").split(",").map((bb => bb.trim())).filter((bb => "" !== bb && "None" !== bb));
-      return "Safe" !== Mb && Tb.some((bb => /Sexual/.test(bb))) ? "unsafe" : "Unsafe" !== Mb ? "ok" : Tb.length > 0 && Tb.every((bb => FM.has(bb))) ? "maybeGame" : "unsafe"
-    }
-    async function QM(bb, ab) {
-      let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Ab = await ab(bb),
-        Mb = null === Ab ? null : GM(Ab);
-      if (null === Mb) return "unchecked";
-      if ("ok" === Mb || "unsafe" === Mb && (!Ub || null === Ab || /Sexual/.test(Ab))) return Mb;
-      const Tb = NM(bb);
-      if (Tb === bb) return "unsafe";
-      const Eb = await ab(Tb),
-        Yb = null === Eb ? null : GM(Eb);
-      return null === Yb ? "unchecked" : "ok" === Yb ? "ok" : "unsafe"
+    function MW(zz) {
+      var tz, sz, Fz;
+      const Wz = null === (tz = /Safety:\s*(\w+)/.exec(zz)) || void 0 === tz ? void 0 : tz[1],
+        Xz = null !== (sz = null === (Fz = /Categories:\s*(.+)/.exec(zz)) || void 0 === Fz ? void 0 : Fz[1]) && void 0 !== sz ? sz : "";
+      return /PII/.test(Xz) ? "personalInfo" : "Unsafe" === Wz || /Jailbreak|Sexual|Suicide|Self-Harm/i.test(Xz) ? "unsafe" : "ok"
     }
 
-    function qM(bb) {
-      const ab = [];
-      return oM(bb, 0, !1, ab), ab.map((bb => bb.trim())).filter((bb => "" !== bb))
+    function dW(zz) {
+      var tz, sz, Fz;
+      const Wz = null === (tz = /Safety:\s*(\w+)/.exec(zz)) || void 0 === tz ? void 0 : tz[1];
+      if (!Wz) return null;
+      const Xz = (null !== (sz = null === (Fz = /Categories:\s*(.+)/.exec(zz)) || void 0 === Fz ? void 0 : Fz[1]) && void 0 !== sz ? sz : "").split(",").map((zz => zz.trim())).filter((zz => "" !== zz && "None" !== zz));
+      return "Safe" !== Wz && Xz.some((zz => /Sexual/.test(zz))) ? "unsafe" : "Unsafe" !== Wz ? "ok" : Xz.length > 0 && Xz.every((zz => yW.has(zz))) ? "maybeGame" : "unsafe"
     }
-    const uM = new Set(["return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"]);
-
-    function rM(bb, ab) {
-      let Ub = ab - 1;
-      for (; Ub >= 0 && /\s/.test(bb[Ub]);) Ub--;
-      if (Ub < 0 || /[(,=:[!&|?{};+\-*%<>~^]/.test(bb[Ub])) return !0;
-      let Ab = Ub;
-      for (; Ab > 0 && /[\w$]/.test(bb[Ab - 1]);) Ab--;
-      return uM.has(bb.slice(Ab, Ub + 1))
+    async function hW(zz, tz) {
+      let sz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Fz = await tz(zz),
+        Wz = null === Fz ? null : dW(Fz);
+      if (null === Wz) return "unchecked";
+      if ("ok" === Wz || "unsafe" === Wz && (!sz || null === Fz || /Sexual/.test(Fz))) return Wz;
+      const Xz = GW(zz);
+      if (Xz === zz) return "unsafe";
+      const Oz = await tz(Xz),
+        oz = null === Oz ? null : dW(Oz);
+      return null === oz ? "unchecked" : "ok" === oz ? "ok" : "unsafe"
     }
 
-    function KM(bb, ab) {
-      let Ub = !1;
-      for (let Ab = ab + 1; Ab < bb.length; Ab++) {
-        const ab = bb[Ab];
-        if ("\\" === ab) Ab++;
+    function QW(zz) {
+      const tz = [];
+      return lW(zz, 0, !1, tz), tz.map((zz => zz.trim())).filter((zz => "" !== zz))
+    }
+    const kW = new Set(["return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"]);
+
+    function iW(zz, tz) {
+      let sz = tz - 1;
+      for (; sz >= 0 && /\s/.test(zz[sz]);) sz--;
+      if (sz < 0 || /[(,=:[!&|?{};+\-*%<>~^]/.test(zz[sz])) return !0;
+      let Fz = sz;
+      for (; Fz > 0 && /[\w$]/.test(zz[Fz - 1]);) Fz--;
+      return kW.has(zz.slice(Fz, sz + 1))
+    }
+
+    function LW(zz, tz) {
+      let sz = !1;
+      for (let Fz = tz + 1; Fz < zz.length; Fz++) {
+        const tz = zz[Fz];
+        if ("\\" === tz) Fz++;
         else {
-          if ("\n" === ab) break;
-          if (Ub) Ub = "]" !== ab;
-          else if ("[" === ab) Ub = !0;
-          else if ("/" === ab) return Ab + 1
+          if ("\n" === tz) break;
+          if (sz) sz = "]" !== tz;
+          else if ("[" === tz) sz = !0;
+          else if ("/" === tz) return Fz + 1
         }
       }
-      return ab + 1
+      return tz + 1
     }
 
-    function oM(bb, ab, Ub, Ab) {
-      let Mb = ab,
-        Tb = 0;
-      for (; Mb < bb.length;) {
-        const ab = bb[Mb],
-          Eb = bb[Mb + 1];
-        if ("/" === ab && "/" === Eb) {
-          const ab = bb.indexOf("\n", Mb);
-          Ab.push(bb.slice(Mb + 2, -1 === ab ? bb.length : ab)), Mb = -1 === ab ? bb.length : ab
-        } else if ("/" === ab && "*" === Eb) {
-          const ab = bb.indexOf("*/", Mb + 2);
-          Ab.push(bb.slice(Mb + 2, -1 === ab ? bb.length : ab)), Mb = -1 === ab ? bb.length : ab + 2
-        } else if ("/" === ab && rM(bb, Mb)) Mb = KM(bb, Mb);
-        else if ('"' === ab || "'" === ab || "`" === ab) {
-          const Ub = Ab.length;
-          Ab.push("");
-          let Tb = "";
-          for (Mb++; Mb < bb.length && bb[Mb] !== ab;) "\\" === bb[Mb] ? (Tb += bb.slice(Mb, Mb + 2), Mb += 2) : "`" === ab && "$" === bb[Mb] && "{" === bb[Mb + 1] ? (Tb += " ", Mb = oM(bb, Mb + 2, !0, Ab)) : (Tb += bb[Mb], Mb++);
-          Ab[Ub] = Tb, Mb++
+    function lW(zz, tz, sz, Fz) {
+      let Wz = tz,
+        Xz = 0;
+      for (; Wz < zz.length;) {
+        const tz = zz[Wz],
+          Oz = zz[Wz + 1];
+        if ("/" === tz && "/" === Oz) {
+          const tz = zz.indexOf("\n", Wz);
+          Fz.push(zz.slice(Wz + 2, -1 === tz ? zz.length : tz)), Wz = -1 === tz ? zz.length : tz
+        } else if ("/" === tz && "*" === Oz) {
+          const tz = zz.indexOf("*/", Wz + 2);
+          Fz.push(zz.slice(Wz + 2, -1 === tz ? zz.length : tz)), Wz = -1 === tz ? zz.length : tz + 2
+        } else if ("/" === tz && iW(zz, Wz)) Wz = LW(zz, Wz);
+        else if ('"' === tz || "'" === tz || "`" === tz) {
+          const sz = Fz.length;
+          Fz.push("");
+          let Xz = "";
+          for (Wz++; Wz < zz.length && zz[Wz] !== tz;) "\\" === zz[Wz] ? (Xz += zz.slice(Wz, Wz + 2), Wz += 2) : "`" === tz && "$" === zz[Wz] && "{" === zz[Wz + 1] ? (Xz += " ", Wz = lW(zz, Wz + 2, !0, Fz)) : (Xz += zz[Wz], Wz++);
+          Fz[sz] = Xz, Wz++
         } else {
-          if (Ub && "{" === ab) Tb++;
-          else if (Ub && "}" === ab) {
-            if (0 === Tb) return Mb + 1;
-            Tb--
+          if (sz && "{" === tz) Xz++;
+          else if (sz && "}" === tz) {
+            if (0 === Xz) return Wz + 1;
+            Xz--
           }
-          Mb++
+          Wz++
         }
       }
-      return Mb
+      return Wz
     }
-    const lM = 4e5;
-    var tM = Ub(40598);
-    const wM = 15e3;
-    let sM = [],
-      gM = null;
+    const nW = 4e5;
+    var aW = sz(40586);
+    const qW = 15e3;
+    let SW = [],
+      VW = null;
 
-    function CM(bb) {
-      return Math.ceil(bb.length / 4)
-    }
-
-    function VM(bb) {
-      return "number" === typeof bb && Number.isInteger(bb) && bb >= 0
+    function RW(zz) {
+      return Math.ceil(zz.length / 4)
     }
 
-    function OM(bb, ab, Ub) {
-      var Ab;
-      let Mb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      ! function(bb) {
+    function pW(zz) {
+      return "number" === typeof zz && Number.isInteger(zz) && zz >= 0
+    }
+
+    function fW(zz, tz, sz) {
+      var Fz;
+      let Wz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      ! function(zz) {
         if ("undefined" === typeof window) return;
-        if (sM.push(bb), sM.length >= 40) return void cM();
-        gM ??= setTimeout((() => {
-          cM()
-        }), wM)
-      }(null !== (Ab = function(bb) {
-        if (null === bb || "object" !== typeof bb) return null;
+        if (SW.push(zz), SW.length >= 40) return void EW();
+        VW ??= setTimeout((() => {
+          EW()
+        }), qW)
+      }(null !== (Fz = function(zz) {
+        if (null === zz || "object" !== typeof zz) return null;
         const {
-          prompt_tokens: ab,
-          completion_tokens: Ub,
-          prompt_tokens_details: Ab
-        } = bb;
-        if (!VM(ab) || !VM(Ub)) return null;
-        const Mb = null !== Ab && "object" === typeof Ab ? Ab.cached_tokens : void 0;
+          prompt_tokens: tz,
+          completion_tokens: sz,
+          prompt_tokens_details: Fz
+        } = zz;
+        if (!pW(tz) || !pW(sz)) return null;
+        const Wz = null !== Fz && "object" === typeof Fz ? Fz.cached_tokens : void 0;
         return {
-          sent: ab,
-          cached: VM(Mb) ? Mb : 0,
-          received: Ub
+          sent: tz,
+          cached: pW(Wz) ? Wz : 0,
+          received: sz
         }
-      }(bb)) && void 0 !== Ab ? Ab : {
-        sent: CM(JSON.stringify(ab)),
+      }(zz)) && void 0 !== Fz ? Fz : {
+        sent: RW(JSON.stringify(tz)),
         cached: 0,
-        received: CM(Ub) + Mb
+        received: RW(sz) + Wz
       })
     }
-    async function cM() {
-      null !== gM && (clearTimeout(gM), gM = null);
-      const bb = sM.slice(0, 40);
-      if (sM = sM.slice(40), sM.length > 0 && (gM = setTimeout((() => {
-          cM()
-        }), wM)), 0 !== bb.length) try {
-        await (0, tM.postToGameServer)("/ai-helper/usage", {
-          calls: bb
+    async function EW() {
+      null !== VW && (clearTimeout(VW), VW = null);
+      const zz = SW.slice(0, 40);
+      if (SW = SW.slice(40), SW.length > 0 && (VW = setTimeout((() => {
+          EW()
+        }), qW)), 0 !== zz.length) try {
+        await (0, aW.postToGameServer)("/ai-helper/usage", {
+          calls: zz
         })
       } catch {}
     }
-    const JM = 6e4;
-    const nM = new class {
+    const zX = 6e4;
+    const tX = new class {
         constructor() {
           this.calls = new Map, this.fullUntil = new Map
         }
-        record(bb) {
-          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          this.calls.set(bb, [...this.recent(bb, ab), ab])
+        record(zz) {
+          let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          this.calls.set(zz, [...this.recent(zz, tz), tz])
         }
-        markFull(bb) {
-          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          this.fullUntil.set(bb, ab + JM)
+        markFull(zz) {
+          let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          this.fullUntil.set(zz, tz + zX)
         }
-        callsInLastMinute(bb) {
-          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          return this.recent(bb, ab).length
+        callsInLastMinute(zz) {
+          let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          return this.recent(zz, tz).length
         }
-        freeAt(bb) {
-          var ab;
-          let Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          const Ab = this.recent(bb, Ub),
-            Mb = Ab.length < 2 ? Ub : Ab[Ab.length - 2] + JM;
-          return Math.max(Mb, null !== (ab = this.fullUntil.get(bb)) && void 0 !== ab ? ab : 0, Ub)
+        freeAt(zz) {
+          var tz;
+          let sz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          const Fz = this.recent(zz, sz),
+            Wz = Fz.length < 2 ? sz : Fz[Fz.length - 2] + zX;
+          return Math.max(Wz, null !== (tz = this.fullUntil.get(zz)) && void 0 !== tz ? tz : 0, sz)
         }
-        firstFreeAt(bb) {
-          let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          return Math.min(...bb.map((bb => this.freeAt(bb, ab))))
+        firstFreeAt(zz) {
+          let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          return Math.min(...zz.map((zz => this.freeAt(zz, tz))))
         }
         clear() {
           this.calls.clear(), this.fullUntil.clear()
         }
-        recent(bb, ab) {
-          var Ub;
-          return (null !== (Ub = this.calls.get(bb)) && void 0 !== Ub ? Ub : []).filter((bb => ab - bb < JM))
+        recent(zz, tz) {
+          var sz;
+          return (null !== (sz = this.calls.get(zz)) && void 0 !== sz ? sz : []).filter((zz => tz - zz < zX))
         }
       },
-      SM = /\n{3,}/,
-      bT = /<tool_call\b|<function=/;
+      sX = /\n{3,}/,
+      FX = /<tool_call\b|<function=/;
 
-    function aT(bb) {
-      const ab = bb.trimStart(),
-        Ub = SM.exec(ab),
-        Ab = bT.exec(ab);
-      if (null === Ub || null !== Ab && Ab.index < Ub.index) return null;
-      const Mb = ab.slice(Ub.index + Ub[0].length);
-      return "" === Mb.trim() ? null : Mb
+    function WX(zz) {
+      const tz = zz.trimStart(),
+        sz = sX.exec(tz),
+        Fz = FX.exec(tz);
+      if (null === sz || null !== Fz && Fz.index < sz.index) return null;
+      const Wz = tz.slice(sz.index + sz[0].length);
+      return "" === Wz.trim() ? null : Wz
     }
-    const UT = [{
+    const XX = [{
       name: "Qwen3.8-27B",
       temperature: .6,
       nativeTools: !0,
@@ -6459,45 +6459,45 @@ export const modules = {
       temperature: 1,
       reasoningEffort: "high"
     }];
-    const AT = {
+    const OX = {
       name: "Qwen3.6-27B",
       temperature: .6,
       nativeTools: !0,
       callFormat: "qwenXml"
     };
 
-    function MT(bb) {
-      return [...UT, AT].find((ab => ab.name === bb))
+    function oX(zz) {
+      return [...XX, OX].find((tz => tz.name === zz))
     }
 
-    function TT(bb) {
-      var ab, Ub;
-      return null !== (ab = null === (Ub = MT(bb)) || void 0 === Ub ? void 0 : Ub.callFormat) && void 0 !== ab ? ab : "simple"
+    function vX(zz) {
+      var tz, sz;
+      return null !== (tz = null === (sz = oX(zz)) || void 0 === sz ? void 0 : sz.callFormat) && void 0 !== tz ? tz : "simple"
     }
 
-    function ET(bb) {
-      var ab;
+    function UX(zz) {
+      var tz;
       return {
-        format: null !== (ab = bb.callFormat) && void 0 !== ab ? ab : "simple",
-        nativeTools: !0 === bb.nativeTools
+        format: null !== (tz = zz.callFormat) && void 0 !== tz ? tz : "simple",
+        nativeTools: !0 === zz.nativeTools
       }
     }
 
-    function YT(bb, ab) {
-      return "function" === typeof bb ? bb(ab) : bb
+    function KX(zz, tz) {
+      return "function" === typeof zz ? zz(tz) : zz
     }
-    const BT = "TOO_COMPLEX",
-      eT = `\n\nYou are the quick helper: answer only small requests yourself, and pass everything else to a bigger model by replying with exactly ${BT} and nothing else.\nAnswer yourself only when the whole change is a few lines doing one or two simple things, such as giving an item, sending a message, teleporting, setting a block or a client option, or one callback that does one of those.\nReply ${BT} for anything more: a game or minigame, anything where players make choices, take turns or type commands with options, scores, timers, rounds or values that must be kept, more than about 10 new lines, a fix for an error, a question about what the code does, or exporting, saving or publishing the game. Reply ${BT} too if you aren't sure of an exact api method, option or item name.\nCode runs fresh each time: nothing you write remembers anything from one click or event to the next. So reply ${BT} to any request that says once, again, already, count, how many, total, times, score, every few seconds, until, wait, after or each player, whatever else it asks. "Everyone" alone is fine.\nThese are too complex: reply ${BT} to each of them, and to anything like them:\n- "Count how many times each player clicked this block", "Show how many times this block has been clicked in total": a count kept between clicks\n- "Give me a sword but only once", "Give me a sword, but only once" or "only every 10 seconds": remembering who already got it, or when\n- "Make a rock paper scissors game", "Make a parkour course", "Make a quiz": any game, round or win and lose\n- "Make a /give command" or "a /tp command that takes a player's name": commands with options to read\n- "Make a shop where I buy a sword for 10 coins": currencies, prices and checking what a player has\n- "Start a 60 second countdown", "Spawn a zombie every 5 seconds": timers and things that repeat\n- "Put players into two teams", "Show a leaderboard of the top players": sorting or grouping players\n- "Build me a house" or "a tower": many blocks placed in loops\n- "Teleport me somewhere random but safe": finding the ground or a free space\n- "Why doesn't my code work?", "Fix this error", "What does this line do?"\n- "Export the world", "Save my game", "Publish this": exporting the game is for the bigger model\nThese are small enough to answer yourself:\n- "Give me a diamond sword", "Teleport me onto this block", "Put a gold block on top of this one", "Let me fly", "Heal me", "Say hello to everyone"\n- "Welcome players when they join" (one callback with one message)`,
-      vT = 24e4,
-      LT = ["tooLarge", "busy", "timeout", "turnedAway", "failed"];
-    class PT extends Error {
-      constructor(bb) {
-        super(`World Code AI ${bb}`), this.reason = bb
+    const uX = "TOO_COMPLEX",
+      NX = `\n\nYou are the quick helper: answer only small requests yourself, and pass everything else to a bigger model by replying with exactly ${uX} and nothing else.\nAnswer yourself only when the whole change is a few lines doing one or two simple things, such as giving an item, sending a message, teleporting, setting a block or a client option, or one callback that does one of those.\nReply ${uX} for anything more: a game or minigame, anything where players make choices, take turns or type commands with options, scores, timers, rounds or values that must be kept, more than about 10 new lines, a fix for an error, a question about what the code does, or exporting, saving or publishing the game. Reply ${uX} too if you aren't sure of an exact api method, option or item name.\nCode runs fresh each time: nothing you write remembers anything from one click or event to the next. So reply ${uX} to any request that says once, again, already, count, how many, total, times, score, every few seconds, until, wait, after or each player, whatever else it asks. "Everyone" alone is fine.\nThese are too complex: reply ${uX} to each of them, and to anything like them:\n- "Count how many times each player clicked this block", "Show how many times this block has been clicked in total": a count kept between clicks\n- "Give me a sword but only once", "Give me a sword, but only once" or "only every 10 seconds": remembering who already got it, or when\n- "Make a rock paper scissors game", "Make a parkour course", "Make a quiz": any game, round or win and lose\n- "Make a /give command" or "a /tp command that takes a player's name": commands with options to read\n- "Make a shop where I buy a sword for 10 coins": currencies, prices and checking what a player has\n- "Start a 60 second countdown", "Spawn a zombie every 5 seconds": timers and things that repeat\n- "Put players into two teams", "Show a leaderboard of the top players": sorting or grouping players\n- "Build me a house" or "a tower": many blocks placed in loops\n- "Teleport me somewhere random but safe": finding the ground or a free space\n- "Why doesn't my code work?", "Fix this error", "What does this line do?"\n- "Export the world", "Save my game", "Publish this": exporting the game is for the bigger model\nThese are small enough to answer yourself:\n- "Give me a diamond sword", "Teleport me onto this block", "Put a gold block on top of this one", "Let me fly", "Heal me", "Say hello to everyone"\n- "Welcome players when they join" (one callback with one message)`,
+      bX = 24e4,
+      wX = ["tooLarge", "busy", "timeout", "turnedAway", "failed"];
+    class DX extends Error {
+      constructor(zz) {
+        super(`World Code AI ${zz}`), this.reason = zz
       }
     }
 
-    function XT(bb) {
-      switch (bb) {
+    function gX(zz) {
+      switch (zz) {
         case "busy":
           return "Bot.xd is busy right now.";
         case "tooLarge":
@@ -6510,421 +6510,421 @@ export const modules = {
       }
     }
 
-    function jT(bb, ab) {
-      var Ub, Ab, Mb, Tb, Eb;
-      const Yb = bb[null !== (Ub = ab.index) && void 0 !== Ub ? Ub : 0] ??= {
+    function HX(zz, tz) {
+      var sz, Fz, Wz, Xz, Oz;
+      const oz = zz[null !== (sz = tz.index) && void 0 !== sz ? sz : 0] ??= {
         name: "",
         args: ""
       };
-      Yb.name += null !== (Ab = null === (Mb = ab.function) || void 0 === Mb ? void 0 : Mb.name) && void 0 !== Ab ? Ab : "", Yb.args += null !== (Tb = null === (Eb = ab.function) || void 0 === Eb ? void 0 : Eb.arguments) && void 0 !== Tb ? Tb : ""
+      oz.name += null !== (Fz = null === (Wz = tz.function) || void 0 === Wz ? void 0 : Wz.name) && void 0 !== Fz ? Fz : "", oz.args += null !== (Xz = null === (Oz = tz.function) || void 0 === Oz ? void 0 : Oz.arguments) && void 0 !== Xz ? Xz : ""
     }
 
-    function RT(bb) {
-      return "mcp" === bb ? "simple" : bb
+    function BX(zz) {
+      return "mcp" === zz ? "simple" : zz
     }
 
-    function kT(bb, ab, Ub, Ab) {
-      let Mb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      return yT(bb, ab, Ub, RT(Ab), Mb).answer
+    function PX(zz, tz, sz, Fz) {
+      let Wz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      return rX(zz, tz, sz, BX(Fz), Wz).answer
     }
 
-    function yT(bb, ab, Ub, Ab, Mb) {
-      const Tb = Ub.flatMap((bb => {
-        const ab = BU(bb.name, bb.args);
-        return null === ab ? [] : [JA(Sa(Ab), ab.name, ab.args)]
+    function rX(zz, tz, sz, Fz, Wz) {
+      const Xz = sz.flatMap((zz => {
+        const tz = Us(zz.name, zz.args);
+        return null === tz ? [] : [zW(zs(Fz), tz.name, tz.args)]
       }));
-      let Eb = !1;
-      return 0 !== Tb.length || 0 !== vU(bb, Ab).length || bb.includes("```") || (Tb.push(...Mb ? [] : function(bb, ab) {
-        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        const Ab = new Map;
-        for (const Yb of eU(bb, ab)) {
-          const bb = Object.values(Yb.args).some((bb => void 0 !== bb && Ub.includes(bb.trim())));
-          var Mb, Tb, Eb;
-          "export_game" === Yb.name || "switch_to_world_code" === Yb.name || za(Yb.name) || bb || Ab.set(`${Yb.name} ${null!==(Mb=Yb.args.path)&&void 0!==Mb?Mb:""} ${null!==(Tb=Yb.args.search)&&void 0!==Tb?Tb:""} ${null!==(Eb=Yb.args.name)&&void 0!==Eb?Eb:""}`, Yb.source)
+      let Oz = !1;
+      return 0 !== Xz.length || 0 !== us(zz, Fz).length || zz.includes("```") || (Xz.push(...Wz ? [] : function(zz, tz) {
+        let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+        const Fz = new Map;
+        for (const oz of Ks(zz, tz)) {
+          const zz = Object.values(oz.args).some((zz => void 0 !== zz && sz.includes(zz.trim())));
+          var Wz, Xz, Oz;
+          "export_game" === oz.name || "switch_to_world_code" === oz.name || rt(oz.name) || zz || Fz.set(`${oz.name} ${null!==(Wz=oz.args.path)&&void 0!==Wz?Wz:""} ${null!==(Xz=oz.args.search)&&void 0!==Xz?Xz:""} ${null!==(Oz=oz.args.name)&&void 0!==Oz?Oz:""}`, oz.source)
         }
-        return [...new Set(Ab.values())]
-      }(ab, Ab, YM)), Eb = Tb.length > 0), {
-        answer: [bb, ...Tb].join("\n\n").trim(),
-        hasCallsFromReasoning: Eb
+        return [...new Set(Fz.values())]
+      }(tz, Fz, KW)), Oz = Xz.length > 0), {
+        answer: [zz, ...Xz].join("\n\n").trim(),
+        hasCallsFromReasoning: Oz
       }
     }
-    async function ZT(bb, ab) {
-      const Ub = bb.getReader(),
-        Ab = new TextDecoder;
-      let Mb = "";
+    async function YX(zz, tz) {
+      const sz = zz.getReader(),
+        Fz = new TextDecoder;
+      let Wz = "";
       for (;;) {
         const {
-          done: bb,
-          value: Tb
-        } = await Ub.read();
-        if (bb) break;
-        Mb += Ab.decode(Tb, {
+          done: zz,
+          value: Xz
+        } = await sz.read();
+        if (zz) break;
+        Wz += Fz.decode(Xz, {
           stream: !0
         });
-        let Eb = Mb.indexOf("\n");
-        for (; - 1 !== Eb;) {
-          const bb = Mb.slice(0, Eb).trim();
-          if (Mb = Mb.slice(Eb + 1), Eb = Mb.indexOf("\n"), !bb.startsWith("data:")) continue;
-          const Ub = bb.slice(5).trim();
-          if ("[DONE]" === Ub) return;
-          let Ab;
+        let Oz = Wz.indexOf("\n");
+        for (; - 1 !== Oz;) {
+          const zz = Wz.slice(0, Oz).trim();
+          if (Wz = Wz.slice(Oz + 1), Oz = Wz.indexOf("\n"), !zz.startsWith("data:")) continue;
+          const sz = zz.slice(5).trim();
+          if ("[DONE]" === sz) return;
+          let Fz;
           try {
-            Ab = JSON.parse(Ub)
+            Fz = JSON.parse(sz)
           } catch {
             continue
           }
-          ab(Ab)
+          tz(Fz)
         }
       }
     }
 
-    function DT(bb) {
-      return bb.map((bb => ({
+    function xX(zz) {
+      return zz.map((zz => ({
         type: "function",
         function: {
-          name: bb.name,
-          description: bb.description,
-          parameters: bb.inputSchema
+          name: zz.name,
+          description: zz.description,
+          parameters: zz.inputSchema
         }
       })))
     }
 
-    function zT(bb) {
-      return "object" === typeof bb
+    function mX(zz) {
+      return "object" === typeof zz
     }
-    async function xT(bb, ab, Ub, Ab) {
-      var Mb;
-      let Tb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-      if (nM.freeAt(bb.name) > Date.now()) return "busy";
-      nM.record(bb.name);
-      const Eb = await fetch(WM, {
+    async function JX(zz, tz, sz, Fz) {
+      var Wz;
+      let Xz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
+      if (tX.freeAt(zz.name) > Date.now()) return "busy";
+      tX.record(zz.name);
+      const Oz = await fetch(TW, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: bb.name,
-          messages: ab,
+          model: zz.name,
+          messages: tz,
           max_tokens: 16e3,
-          temperature: bb.temperature,
-          reasoning_effort: bb.reasoningEffort,
+          temperature: zz.temperature,
+          reasoning_effort: zz.reasoningEffort,
           stream: !0,
           stream_options: {
             include_usage: !0
           },
-          ...bb.nativeTools && Tb.length > 0 ? {
-            tools: DT(Tb)
+          ...zz.nativeTools && Xz.length > 0 ? {
+            tools: xX(Xz)
           } : {}
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: Ub
+        signal: sz
       });
-      if (429 === Eb.status) return nM.markFull(bb.name), "busy";
-      if (!Eb.ok || !Eb.body) return console.warn(`World Code AI: ${bb.name} answered ${Eb.status}`), Eb.ok ? "failed" : 429 === (Yb = Eb.status) ? "busy" : 400 === Yb || 413 === Yb ? "tooLarge" : 401 === Yb || 403 === Yb ? "turnedAway" : "failed";
-      var Yb;
-      let Bb = "",
-        eb = "";
-      const vb = [];
-      let Lb = !1,
-        Pb = !1,
-        Xb = null;
+      if (429 === Oz.status) return tX.markFull(zz.name), "busy";
+      if (!Oz.ok || !Oz.body) return console.warn(`World Code AI: ${zz.name} answered ${Oz.status}`), Oz.ok ? "failed" : 429 === (oz = Oz.status) ? "busy" : 400 === oz || 413 === oz ? "tooLarge" : 401 === oz || 403 === oz ? "turnedAway" : "failed";
+      var oz;
+      let vz = "",
+        Uz = "";
+      const Kz = [];
+      let uz = !1,
+        Nz = !1,
+        bz = null;
       try {
-        await async function(bb, ab, Ub) {
-          await ZT(bb, (bb => {
-            var Ab;
-            const Mb = bb,
-              Tb = null === (Ab = Mb.choices) || void 0 === Ab ? void 0 : Ab[0];
-            var Eb, Yb;
-            Tb && ab(null !== (Eb = Tb.delta) && void 0 !== Eb ? Eb : {}, null !== (Yb = Tb.finish_reason) && void 0 !== Yb ? Yb : null), Mb.usage && (null === Ub || void 0 === Ub || Ub(Mb.usage))
+        await async function(zz, tz, sz) {
+          await YX(zz, (zz => {
+            var Fz;
+            const Wz = zz,
+              Xz = null === (Fz = Wz.choices) || void 0 === Fz ? void 0 : Fz[0];
+            var Oz, oz;
+            Xz && tz(null !== (Oz = Xz.delta) && void 0 !== Oz ? Oz : {}, null !== (oz = Xz.finish_reason) && void 0 !== oz ? oz : null), Wz.usage && (null === sz || void 0 === sz || sz(Wz.usage))
           }))
-        }(Eb.body, ((ab, Ub) => {
-          var Mb, Tb, Eb, Yb;
-          Lb ||= "length" === Ub, eb += null !== (Mb = null !== (Tb = ab.reasoning) && void 0 !== Tb ? Tb : ab.reasoning_content) && void 0 !== Mb ? Mb : "", Bb += null !== (Eb = ab.content) && void 0 !== Eb ? Eb : "";
-          for (const bb of null !== (Xb = ab.tool_calls) && void 0 !== Xb ? Xb : []) {
-            var Xb;
-            Pb ||= "" !== eb && "" === Bb.trim(), jT(vb, bb)
+        }(Oz.body, ((tz, sz) => {
+          var Wz, Xz, Oz, oz;
+          uz ||= "length" === sz, Uz += null !== (Wz = null !== (Xz = tz.reasoning) && void 0 !== Xz ? Xz : tz.reasoning_content) && void 0 !== Wz ? Wz : "", vz += null !== (Oz = tz.content) && void 0 !== Oz ? Oz : "";
+          for (const zz of null !== (bz = tz.tool_calls) && void 0 !== bz ? bz : []) {
+            var bz;
+            Nz ||= "" !== Uz && "" === vz.trim(), HX(Kz, zz)
           }
-          const jb = bb.nativeTools && Pb ? null !== (Yb = aT(Bb)) && void 0 !== Yb ? Yb : "" : Bb;
-          null === Ab || void 0 === Ab || Ab({
-            model: bb.name,
-            reasoningChars: eb.length,
-            answer: jb,
-            isCalling: vb.length > 0
+          const wz = zz.nativeTools && Nz ? null !== (oz = WX(vz)) && void 0 !== oz ? oz : "" : vz;
+          null === Fz || void 0 === Fz || Fz({
+            model: zz.name,
+            reasoningChars: Uz.length,
+            answer: wz,
+            isCalling: Kz.length > 0
           })
-        }), (bb => {
-          Xb = bb
+        }), (zz => {
+          bz = zz
         }))
       } finally {
-        OM(Xb, ab, Bb + eb, 20 * vb.length)
+        fW(bz, tz, vz + Uz, 20 * Kz.length)
       }
-      return null !== (Mb = iT(bb, Bb, eb, vb, Lb, Pb)) && void 0 !== Mb ? Mb : "failed"
+      return null !== (Wz = IX(zz, vz, Uz, Kz, uz, Nz)) && void 0 !== Wz ? Wz : "failed"
     }
 
-    function iT(bb, ab, Ub, Ab, Mb) {
-      var Tb;
-      let Eb = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        Yb = ab;
-      var Bb;
-      bb.nativeTools && Eb && (Yb = null !== (Bb = aT(Yb)) && void 0 !== Bb ? Bb : Yb);
-      Yb = Yb.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-      const eb = yT(Yb, Ub, Ab, null !== (Tb = bb.callFormat) && void 0 !== Tb ? Tb : "simple", Mb);
-      return "" === eb.answer ? null : {
-        model: bb.name,
-        answer: eb.answer,
-        reasoning: Ub,
-        isCutShort: Mb,
-        hasCallsFromReasoning: eb.hasCallsFromReasoning
+    function IX(zz, tz, sz, Fz, Wz) {
+      var Xz;
+      let Oz = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        oz = tz;
+      var vz;
+      zz.nativeTools && Oz && (oz = null !== (vz = WX(oz)) && void 0 !== vz ? vz : oz);
+      oz = oz.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+      const Uz = rX(oz, sz, Fz, null !== (Xz = zz.callFormat) && void 0 !== Xz ? Xz : "simple", Wz);
+      return "" === Uz.answer ? null : {
+        model: zz.name,
+        answer: Uz.answer,
+        reasoning: sz,
+        isCutShort: Wz,
+        hasCallsFromReasoning: Uz.hasCallsFromReasoning
       }
     }
 
-    function fT(bb) {
-      return bb.replace(/<think>[\s\S]*?(<\/think>|$)/g, "")
+    function CX(zz) {
+      return zz.replace(/<think>[\s\S]*?(<\/think>|$)/g, "")
     }
 
-    function mT(bb) {
-      return zT(bb) && !bb.isCutShort
+    function eX(zz) {
+      return mX(zz) && !zz.isCutShort
     }
-    async function pT(bb, ab, Ub, Ab, Mb) {
-      const Tb = bb.map((() => new AbortController)),
-        Eb = () => {
-          for (const bb of Tb) bb.abort()
+    async function ZX(zz, tz, sz, Fz, Wz) {
+      const Xz = zz.map((() => new AbortController)),
+        Oz = () => {
+          for (const zz of Xz) zz.abort()
         };
-      null !== Ub && void 0 !== Ub && Ub.aborted && Eb(), null === Ub || void 0 === Ub || Ub.addEventListener("abort", Eb, {
+      null !== sz && void 0 !== sz && sz.aborted && Oz(), null === sz || void 0 === sz || sz.addEventListener("abort", Oz, {
         once: !0
       });
-      const Yb = bb.map((() => {})),
-        Bb = bb.map((() => {}));
-      let eb = null;
-      const vb = bb => void 0 !== bb && ("" !== fT(bb.answer).trim() || !0 === bb.isCalling);
-      let Lb = () => {};
-      bb.forEach(((bb, Ub) => {
-        const Eb = (0, yb.b)(vT, Tb[Ub].signal);
-        xT(bb, YT(ab, bb), Eb.signal, (bb => {
-          Bb[Ub] = bb, null === eb && vb(bb) && (eb = Ub), eb === Ub && (null === Ab || void 0 === Ab || Ab(bb))
-        }), Mb).catch((ab => {
-          if (Tb[Ub].signal.aborted) return "failed";
-          const Ab = Eb.signal.aborted;
-          return console.warn(`World Code AI: ${bb.name} ${Ab?"took longer than 240 s":"couldn't be reached"}`, ab), Ab ? "timeout" : "failed"
-        })).then((bb => {
-          Eb.clear(), Yb[Ub] = bb, eb !== Ub || mT(bb) || (eb = null), Lb()
+      const oz = zz.map((() => {})),
+        vz = zz.map((() => {}));
+      let Uz = null;
+      const Kz = zz => void 0 !== zz && ("" !== CX(zz.answer).trim() || !0 === zz.isCalling);
+      let uz = () => {};
+      zz.forEach(((zz, sz) => {
+        const Oz = (0, Hz.c)(bX, Xz[sz].signal);
+        JX(zz, KX(tz, zz), Oz.signal, (zz => {
+          vz[sz] = zz, null === Uz && Kz(zz) && (Uz = sz), Uz === sz && (null === Fz || void 0 === Fz || Fz(zz))
+        }), Wz).catch((tz => {
+          if (Xz[sz].signal.aborted) return "failed";
+          const Fz = Oz.signal.aborted;
+          return console.warn(`World Code AI: ${zz.name} ${Fz?"took longer than 240 s":"couldn't be reached"}`, tz), Fz ? "timeout" : "failed"
+        })).then((zz => {
+          Oz.clear(), oz[sz] = zz, Uz !== sz || eX(zz) || (Uz = null), uz()
         }))
       }));
-      const Pb = () => {
-        var bb;
-        if (null !== eb) {
-          const bb = Yb[eb];
-          return mT(bb) ? {
-            reply: bb
+      const Nz = () => {
+        var zz;
+        if (null !== Uz) {
+          const zz = oz[Uz];
+          return eX(zz) ? {
+            reply: zz
           } : void 0
         }
-        const ab = Yb.find(mT);
-        if (ab) return {
-          reply: ab
+        const tz = oz.find(eX);
+        if (tz) return {
+          reply: tz
         };
-        if (!Yb.includes(void 0)) return {
-          reply: null !== (bb = Yb.find(zT)) && void 0 !== bb ? bb : null
+        if (!oz.includes(void 0)) return {
+          reply: null !== (zz = oz.find(mX)) && void 0 !== zz ? zz : null
         };
         {
-          const bb = Yb.findIndex(((bb, ab) => void 0 === bb && vb(Bb[ab])));
-          if (-1 !== bb) {
-            eb = bb;
-            const ab = Bb[bb];
-            ab && (null === Ab || void 0 === Ab || Ab(ab))
+          const zz = oz.findIndex(((zz, tz) => void 0 === zz && Kz(vz[tz])));
+          if (-1 !== zz) {
+            Uz = zz;
+            const tz = vz[zz];
+            tz && (null === Fz || void 0 === Fz || Fz(tz))
           }
         }
       };
       try {
         for (;;) {
-          if (null !== Ub && void 0 !== Ub && Ub.aborted) throw new DOMException("The World Code AI request was stopped", "AbortError");
-          const bb = Pb();
-          if (bb) {
-            const ab = Yb.filter((bb => "string" === typeof bb));
+          if (null !== sz && void 0 !== sz && sz.aborted) throw new DOMException("The World Code AI request was stopped", "AbortError");
+          const zz = Nz();
+          if (zz) {
+            const tz = oz.filter((zz => "string" === typeof zz));
             return {
-              reply: bb.reply,
-              failures: ab
+              reply: zz.reply,
+              failures: tz
             }
           }
-          await new Promise((bb => {
-            Lb = bb
+          await new Promise((zz => {
+            uz = zz
           }))
         }
       } finally {
-        null === Ub || void 0 === Ub || Ub.removeEventListener("abort", Eb), Eb()
+        null === sz || void 0 === sz || sz.removeEventListener("abort", Oz), Oz()
       }
     }
 
-    function NT() {
-      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-      return nM.firstFreeAt(UT.map((bb => bb.name)), bb)
+    function GX() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
+      return tX.firstFreeAt(XX.map((zz => zz.name)), zz)
     }
-    async function WT(bb) {
-      var ab;
-      let Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const Ab = Date.now(),
-        Mb = null !== (ab = Ub.models) && void 0 !== ab ? ab : UT,
-        Tb = void 0 === Ub.models ? function(bb, ab) {
-          let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-          const Ab = bb.map((bb => ({
-              model: bb,
-              key: Ub()
-            }))).sort(((bb, ab) => bb.key - ab.key)).map((bb => {
+    async function TX(zz) {
+      var tz;
+      let sz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const Fz = Date.now(),
+        Wz = null !== (tz = sz.models) && void 0 !== tz ? tz : XX,
+        Xz = void 0 === sz.models ? function(zz, tz) {
+          let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+          const Fz = zz.map((zz => ({
+              model: zz,
+              key: sz()
+            }))).sort(((zz, tz) => zz.key - tz.key)).map((zz => {
               let {
-                model: ab
-              } = bb;
-              return ab
+                model: tz
+              } = zz;
+              return tz
             })),
-            Mb = [...Ab.filter((bb => ab(bb))), ...Ab.filter((bb => !ab(bb)))],
-            Tb = [];
-          for (let Eb = 0; Eb < Mb.length; Eb += 2) Tb.push(Mb.slice(Eb, Eb + 2));
-          return Tb
-        }(Mb, (bb => nM.freeAt(bb.name) <= Ab)) : Mb.map((bb => [bb])),
-        Eb = [];
-      for (const Bb of Tb) {
-        const ab = await pT(Bb, bb, Ub.signal, Ub.onProgress, Ub.tools);
-        if (null !== ab.reply) {
-          const Mb = Bb.find((bb => {
-            var Ub;
-            return bb.name === (null === (Ub = ab.reply) || void 0 === Ub ? void 0 : Ub.model)
+            Wz = [...Fz.filter((zz => tz(zz))), ...Fz.filter((zz => !tz(zz)))],
+            Xz = [];
+          for (let Oz = 0; Oz < Wz.length; Oz += 2) Xz.push(Wz.slice(Oz, Oz + 2));
+          return Xz
+        }(Wz, (zz => tX.freeAt(zz.name) <= Fz)) : Wz.map((zz => [zz])),
+        Oz = [];
+      for (const vz of Xz) {
+        const tz = await ZX(vz, zz, sz.signal, sz.onProgress, sz.tools);
+        if (null !== tz.reply) {
+          const Wz = vz.find((zz => {
+            var sz;
+            return zz.name === (null === (sz = tz.reply) || void 0 === sz ? void 0 : sz.model)
           }));
           return {
-            ...Mb && !1 !== Ub.canNudge ? await dT(Mb, YT(bb, Mb), ab.reply, Ub.signal, Ub.onProgress, Ub.tools) : ab.reply,
-            ms: Date.now() - Ab
+            ...Wz && !1 !== sz.canNudge ? await AX(Wz, KX(zz, Wz), tz.reply, sz.signal, sz.onProgress, sz.tools) : tz.reply,
+            ms: Date.now() - Fz
           }
         }
-        Eb.push(...ab.failures)
+        Oz.push(...tz.failures)
       }
-      const Yb = LT.find((bb => Eb.includes(bb)));
-      throw new PT(null !== Yb && void 0 !== Yb ? Yb : "failed")
+      const oz = wX.find((zz => Oz.includes(zz)));
+      throw new DX(null !== oz && void 0 !== oz ? oz : "failed")
     }
-    const HT = "You said what you'd change but made no call, so nothing changed. Make the call now, with the code in full.";
+    const cX = "You said what you'd change but made no call, so nothing changed. Make the call now, with the code in full.";
 
-    function IT(bb) {
-      const ab = bb.trim();
-      return ab.length <= 400 && !/<tool_call|<function=|<\|channel\|>|```/.test(ab) && !/^\s*(?:\d+[.)]|[-*\u2022])\s/m.test(ab) && /^(?:I['\u2019]ll|I will|I['\u2019]m going to|We(?:['\u2019]ll| will| need to| should)|Let me(?! know)|Will|Need to)\s(?!not\b|never\b)[^.!?\n]*\b(?:add|change|replace|update|fix|rewrite|write|create|make|edit|remove|put)\b/i.test(ab)
+    function jX(zz) {
+      const tz = zz.trim();
+      return tz.length <= 400 && !/<tool_call|<function=|<\|channel\|>|```/.test(tz) && !/^\s*(?:\d+[.)]|[-*\u2022])\s/m.test(tz) && /^(?:I['\u2019]ll|I will|I['\u2019]m going to|We(?:['\u2019]ll| will| need to| should)|Let me(?! know)|Will|Need to)\s(?!not\b|never\b)[^.!?\n]*\b(?:add|change|replace|update|fix|rewrite|write|create|make|edit|remove|put)\b/i.test(tz)
     }
-    async function dT(bb, ab, Ub, Ab, Mb, Tb) {
-      var Eb;
-      let Yb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : vT;
-      if (! function(bb, ab) {
-          return !bb.isCutShort && IT(bb.answer) && !bb.answer.includes("?") && 0 === vU(bb.answer, ab).length
-        }(Ub, null !== (Eb = bb.callFormat) && void 0 !== Eb ? Eb : "simple")) return Ub;
-      const Bb = [...ab, {
+    async function AX(zz, tz, sz, Fz, Wz, Xz) {
+      var Oz;
+      let oz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : bX;
+      if (! function(zz, tz) {
+          return !zz.isCutShort && jX(zz.answer) && !zz.answer.includes("?") && 0 === us(zz.answer, tz).length
+        }(sz, null !== (Oz = zz.callFormat) && void 0 !== Oz ? Oz : "simple")) return sz;
+      const vz = [...tz, {
           role: "assistant",
-          content: Ub.answer
+          content: sz.answer
         }, {
           role: "user",
-          content: HT
+          content: cX
         }],
-        eb = (0, yb.b)(Yb, Ab);
+        Uz = (0, Hz.c)(oz, Fz);
       try {
-        const ab = await xT(bb, Bb, eb.signal, Mb, Tb);
-        return zT(ab) && "" !== ab.answer.trim() ? ab : Ub
-      } catch (vb) {
-        if (null !== Ab && void 0 !== Ab && Ab.aborted) throw vb;
-        return Ub
+        const tz = await JX(zz, vz, Uz.signal, Wz, Xz);
+        return mX(tz) && "" !== tz.answer.trim() ? tz : sz
+      } catch (Kz) {
+        if (null !== Fz && void 0 !== Fz && Fz.aborted) throw Kz;
+        return sz
       } finally {
-        eb.clear()
+        Uz.clear()
       }
     }
 
-    function FT(bb) {
-      const ab = fT(bb);
-      return /too_complex/i.test(ab) || /^\W*too[\s_-]*complex\W*$/i.test(ab.trim())
+    function yX(zz) {
+      const tz = CX(zz);
+      return /too_complex/i.test(tz) || /^\W*too[\s_-]*complex\W*$/i.test(tz.trim())
     }
 
-    function hT(bb) {
-      const ab = fT(bb).trim();
-      return ab.length > 19 && !/^\W*too[\s_-]*complex/i.test(ab)
+    function MX(zz) {
+      const tz = CX(zz).trim();
+      return tz.length > 19 && !/^\W*too[\s_-]*complex/i.test(tz)
     }
 
-    function GT(bb) {
-      return bb.map(((bb, ab) => 0 === ab && "system" === bb.role ? {
-        ...bb,
-        content: bb.content + eT
-      } : bb))
+    function dX(zz) {
+      return zz.map(((zz, tz) => 0 === tz && "system" === zz.role ? {
+        ...zz,
+        content: zz.content + NX
+      } : zz))
     }
-    async function QT(bb, ab) {
-      let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      for (const Ab of HM) {
-        const Ub = await qT(Ab, [{
+    async function hX(zz, tz) {
+      let sz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      for (const Fz of cW) {
+        const sz = await QX(Fz, [{
           role: "user",
-          content: bb
-        }], ab);
-        if (null !== Ub && "busy" !== Ub) return hM(Ub)
+          content: zz
+        }], tz);
+        if (null !== sz && "busy" !== sz) return MW(sz)
       }
-      return Ub ? "unchecked" : "ok"
+      return sz ? "unchecked" : "ok"
     }
-    async function qT(bb, ab, Ub) {
-      const Ab = (0, yb.b)(2e4, Ub);
-      nM.record(bb);
+    async function QX(zz, tz, sz) {
+      const Fz = (0, Hz.c)(2e4, sz);
+      tX.record(zz);
       try {
-        var Mb, Tb, Eb, Yb;
-        const Ub = await fetch(WM, {
+        var Wz, Xz, Oz, oz;
+        const sz = await fetch(TW, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            model: bb,
-            messages: ab,
+            model: zz,
+            messages: tz,
             max_tokens: 40
           }),
           credentials: "omit",
           referrerPolicy: "no-referrer",
-          signal: Ab.signal
+          signal: Fz.signal
         });
-        if (429 === Ub.status) return nM.markFull(bb), "busy";
-        if (!Ub.ok) return null;
-        const Bb = await Ub.json(),
-          eb = String(null !== (Mb = null === (Tb = Bb.choices) || void 0 === Tb || null === (Eb = Tb[0]) || void 0 === Eb || null === (Yb = Eb.message) || void 0 === Yb ? void 0 : Yb.content) && void 0 !== Mb ? Mb : "");
-        return OM(Bb.usage, ab, eb),
-          function(bb) {
-            return /Safety:/.test(bb)
-          }(eb) ? eb : null
-      } catch (Bb) {
-        if (null !== Ub && void 0 !== Ub && Ub.aborted) throw Bb;
+        if (429 === sz.status) return tX.markFull(zz), "busy";
+        if (!sz.ok) return null;
+        const vz = await sz.json(),
+          Uz = String(null !== (Wz = null === (Xz = vz.choices) || void 0 === Xz || null === (Oz = Xz[0]) || void 0 === Oz || null === (oz = Oz.message) || void 0 === oz ? void 0 : oz.content) && void 0 !== Wz ? Wz : "");
+        return fW(vz.usage, tz, Uz),
+          function(zz) {
+            return /Safety:/.test(zz)
+          }(Uz) ? Uz : null
+      } catch (vz) {
+        if (null !== sz && void 0 !== sz && sz.aborted) throw vz;
         return null
       } finally {
-        Ab.clear()
+        Fz.clear()
       }
     }
-    var uT = Ub(31);
-    const rT = "aiHelperDataSharing";
+    var kX = sz(44);
+    const iX = "aiHelperDataSharing";
 
-    function KT() {
-      const bb = uT.f.getItem(rT);
-      return null !== bb && "object" === typeof bb ? bb : {}
+    function LX() {
+      const zz = kX.f.getItem(iX);
+      return null !== zz && "object" === typeof zz ? zz : {}
     }
-    const oT = new class {
+    const lX = new class {
       constructor() {
-        this.player = null, this.unsaved = new Map, this.listeners = new Set, this.listening = !1, this.subscribe = bb => (this.listen(), this.listeners.add(bb), () => {
-          this.listeners.delete(bb)
+        this.player = null, this.unsaved = new Map, this.listeners = new Set, this.listening = !1, this.subscribe = zz => (this.listen(), this.listeners.add(zz), () => {
+          this.listeners.delete(zz)
         })
       }
       get() {
-        var bb, ab;
-        return null === this.player ? null : null !== (bb = null !== (ab = this.unsaved.get(this.player)) && void 0 !== ab ? ab : KT()[this.player]) && void 0 !== bb ? bb : null
+        var zz, tz;
+        return null === this.player ? null : null !== (zz = null !== (tz = this.unsaved.get(this.player)) && void 0 !== tz ? tz : LX()[this.player]) && void 0 !== zz ? zz : null
       }
       getPlayer() {
         return this.player
       }
       async refresh() {
         this.listen();
-        const bb = await async function() {
-          var bb, ab;
+        const zz = await async function() {
+          var zz, tz;
           const {
-            userContextManager: Ab
-          } = await Promise.resolve().then((() => Ub(1065)));
-          return null !== (bb = null === (ab = Ab.peekCurrentUserContext()) || void 0 === ab ? void 0 : ab.whamm) && void 0 !== bb ? bb : null
-        }().catch((bb => (console.error("AI Helper: couldn't look up the player for sharing chats", bb), null)));
-        return bb !== this.player && (this.player = bb, this.notify()), this.get()
+            userContextManager: Fz
+          } = await Promise.resolve().then((() => sz(1120)));
+          return null !== (zz = null === (tz = Fz.peekCurrentUserContext()) || void 0 === tz ? void 0 : tz.whamm) && void 0 !== zz ? zz : null
+        }().catch((zz => (console.error("AI Helper: couldn't look up the player for sharing chats", zz), null)));
+        return zz !== this.player && (this.player = zz, this.notify()), this.get()
       }
-      set(bb) {
-        null !== this.player && (uT.f.setItem(rT, {
-          ...KT(),
-          [this.player]: bb
-        }) ? this.unsaved.delete(this.player) : this.unsaved.set(this.player, bb), this.notify())
+      set(zz) {
+        null !== this.player && (kX.f.setItem(iX, {
+          ...LX(),
+          [this.player]: zz
+        }) ? this.unsaved.delete(this.player) : this.unsaved.set(this.player, zz), this.notify())
       }
       listen() {
         this.listening || (this.listening = !0, window.addEventListener("storage", (() => {
@@ -6932,133 +6932,133 @@ export const modules = {
         })))
       }
       notify() {
-        for (const bb of this.listeners) bb()
+        for (const zz of this.listeners) zz()
       }
     };
-    let lT = null,
-      tT = !1;
-    const wT = 4e5,
-      sT = 6e4,
-      gT = 12,
-      CT = 9e5;
+    let nX = null,
+      aX = !1;
+    const qX = 4e5,
+      SX = 6e4,
+      VX = 12,
+      RX = 9e5;
 
-    function VT(bb, ab) {
-      if (bb.length <= ab) return bb;
-      const Ub = `\n[... ${bb.length-ab} more characters cut]`;
-      let Ab = Math.max(0, ab - Ub.length);
-      const Mb = bb.charCodeAt(Ab - 1);
-      return Mb >= 55296 && Mb <= 56319 && Ab--, bb.slice(0, Ab) + Ub
+    function pX(zz, tz) {
+      if (zz.length <= tz) return zz;
+      const sz = `\n[... ${zz.length-tz} more characters cut]`;
+      let Fz = Math.max(0, tz - sz.length);
+      const Wz = zz.charCodeAt(Fz - 1);
+      return Wz >= 55296 && Wz <= 56319 && Fz--, zz.slice(0, Fz) + sz
     }
-    var OT = Ub(595);
+    var fX = sz(585);
 
-    function cT(bb) {
-      var ab;
-      return "system" === (null === (ab = bb[0]) || void 0 === ab ? void 0 : ab.role) ? function(bb) {
-        let ab = 2166136261;
-        for (let Ub = 0; Ub < bb.length; Ub++) ab ^= bb.charCodeAt(Ub), ab = Math.imul(ab, 16777619);
-        return (ab >>> 0).toString(16).padStart(8, "0")
-      }(bb[0].content.split("\n\n## ")[0]) : ""
+    function EX(zz) {
+      var tz;
+      return "system" === (null === (tz = zz[0]) || void 0 === tz ? void 0 : tz.role) ? function(zz) {
+        let tz = 2166136261;
+        for (let sz = 0; sz < zz.length; sz++) tz ^= zz.charCodeAt(sz), tz = Math.imul(tz, 16777619);
+        return (tz >>> 0).toString(16).padStart(8, "0")
+      }(zz[0].content.split("\n\n## ")[0]) : ""
     }
 
-    function JT(bb, ab, Ub) {
-      const Ab = (Mb = ab.input, JSON.stringify({
-        ...Mb,
+    function zO(zz, tz, sz) {
+      const Fz = (Wz = tz.input, JSON.stringify({
+        ...Wz,
         prefabs: void 0
       }));
-      var Mb;
-      return Ab.length > wT ? null : {
+      var Wz;
+      return Fz.length > qX ? null : {
         sentAt: Date.now(),
-        chatId: bb,
-        responder: ab.responder,
-        promptVersion: ab.promptVersion,
-        clientVersion: String(OT.b),
-        request: Ab,
-        responses: [nT(Ub)]
+        chatId: zz,
+        responder: tz.responder,
+        promptVersion: tz.promptVersion,
+        clientVersion: String(fX.e),
+        request: Fz,
+        responses: [tO(sz)]
       }
     }
 
-    function nT(bb) {
+    function tO(zz) {
       return {
-        model: bb.model,
-        text: VT(bb.text, sT)
+        model: zz.model,
+        text: pX(zz.text, SX)
       }
     }
-    class ST {
+    class sO {
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : AE;
-        this.GX = bb, this.chatId = function() {
-          const bb = new Uint8Array(12);
-          return crypto.getRandomValues(bb), Array.from(bb, (bb => bb.toString(16).padStart(2, "0"))).join("")
+        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : OO;
+        this.Iw = zz, this.chatId = function() {
+          const zz = new Uint8Array(12);
+          return crypto.getRandomValues(zz), Array.from(zz, (zz => zz.toString(16).padStart(2, "0"))).join("")
         }(), this.open = new Map
       }
-      requestStarted(bb, ab) {
-        const Ub = this.open.get(bb);
-        Ub && (clearTimeout(Ub.timer), ab || (this.open.delete(bb), this.send(Ub.GX)))
+      requestStarted(zz, tz) {
+        const sz = this.open.get(zz);
+        sz && (clearTimeout(sz.timer), tz || (this.open.delete(zz), this.send(sz.Iw)))
       }
-      answered(bb, ab, Ub) {
-        if ("" === Ub.text.trim()) return;
-        const Ab = this.open.get(bb);
-        if (Ab) return void(Ab.GX.responses.length < gT && Ab.GX.responses.push(nT(Ub)));
-        const Mb = JT(this.chatId, ab, Ub);
-        Mb && this.open.set(bb, {
-          GX: Mb
+      answered(zz, tz, sz) {
+        if ("" === sz.text.trim()) return;
+        const Fz = this.open.get(zz);
+        if (Fz) return void(Fz.Iw.responses.length < VX && Fz.Iw.responses.push(tO(sz)));
+        const Wz = zO(this.chatId, tz, sz);
+        Wz && this.open.set(zz, {
+          Iw: Wz
         })
       }
-      drop(bb) {
-        var ab;
-        clearTimeout(null === (ab = this.open.get(bb)) || void 0 === ab ? void 0 : ab.timer), this.open.delete(bb)
+      drop(zz) {
+        var tz;
+        clearTimeout(null === (tz = this.open.get(zz)) || void 0 === tz ? void 0 : tz.timer), this.open.delete(zz)
       }
-      requestEnded(bb) {
-        const ab = this.open.get(bb);
-        ab && (clearTimeout(ab.timer), ab.timer = setTimeout((() => {
-          this.open.delete(bb), this.send(ab.GX)
+      requestEnded(zz) {
+        const tz = this.open.get(zz);
+        tz && (clearTimeout(tz.timer), tz.timer = setTimeout((() => {
+          this.open.delete(zz), this.send(tz.Iw)
         }), 2e4))
       }
-      send(bb) {
-        (function(bb) {
-          return (new TextEncoder).encode(JSON.stringify(bb)).length <= CT
-        })(bb) && this.GX(bb)
+      send(zz) {
+        (function(zz) {
+          return (new TextEncoder).encode(JSON.stringify(zz)).length <= RX
+        })(zz) && this.Iw(zz)
       }
     }
-    const bE = [],
-      aE = 5;
-    let UE = !1;
+    const FO = [],
+      WO = 5;
+    let XO = !1;
 
-    function AE(bb) {
+    function OO(zz) {
       (async () => {
-        const ab = await oT.refresh(),
-          Ub = oT.getPlayer();
-        "yes" === ab ? await TE([bb]) : null === ab && null !== Ub && function(bb, ab) {
-          UE || (UE = !0, oT.subscribe(ME));
-          bE.push({
-            player: bb,
-            GX: ab
-          }), bE.length > aE && bE.shift()
-        }(Ub, bb)
+        const tz = await lX.refresh(),
+          sz = lX.getPlayer();
+        "yes" === tz ? await vO([zz]) : null === tz && null !== sz && function(zz, tz) {
+          XO || (XO = !0, lX.subscribe(oO));
+          FO.push({
+            player: zz,
+            Iw: tz
+          }), FO.length > WO && FO.shift()
+        }(sz, zz)
       })()
     }
 
-    function ME() {
-      const bb = oT.get();
-      if (null === bb) return;
-      const ab = oT.getPlayer(),
-        Ub = bE.splice(0).filter((bb => bb.player === ab));
-      "yes" === bb && Ub.length > 0 && TE(Ub.map((bb => bb.GX)))
+    function oO() {
+      const zz = lX.get();
+      if (null === zz) return;
+      const tz = lX.getPlayer(),
+        sz = FO.splice(0).filter((zz => zz.player === tz));
+      "yes" === zz && sz.length > 0 && vO(sz.map((zz => zz.Iw)))
     }
-    async function TE(bb) {
-      const ab = Promise.resolve().then((() => Ub(40598)));
-      for (const Ub of bb) try {
+    async function vO(zz) {
+      const tz = Promise.resolve().then((() => sz(40586)));
+      for (const sz of zz) try {
         const {
-          postToGameServer: bb
-        } = await ab;
-        await bb("/ai-helper/turn", Ub)
-      } catch (Ab) {
-        console.warn("AI Helper: couldn't share a turn", Ab)
+          postToGameServer: zz
+        } = await tz;
+        await zz("/ai-helper/turn", sz)
+      } catch (Fz) {
+        console.warn("AI Helper: couldn't share a turn", Fz)
       }
     }
-    var EE = Ub(325),
-      YE = Ub(166);
-    const BE = {
+    var UO = sz(321),
+      KO = sz(161);
+    const uO = {
         openrouter: {
           id: "openrouter",
           name: "OpenRouter",
@@ -7095,292 +7095,292 @@ export const modules = {
           keyPage: ""
         }
       },
-      eE = ["openrouter", "anthropic", "openai", "gemini", "custom"],
-      vE = new Set(Object.values(BE).flatMap((bb => "" === bb.baseUrl ? [] : [new URL(bb.baseUrl).host])));
+      NO = ["openrouter", "anthropic", "openai", "gemini", "custom"],
+      bO = new Set(Object.values(uO).flatMap((zz => "" === zz.baseUrl ? [] : [new URL(zz.baseUrl).host])));
 
-    function LE(bb) {
-      return bb.trim().replace(/^[A-Z_]+\s*=\s*/, "").replace(/^["'`]+|["'`]+$/g, "").replace(/^Bearer\s+/i, "").replace(/\s+/g, "")
+    function wO(zz) {
+      return zz.trim().replace(/^[A-Z_]+\s*=\s*/, "").replace(/^["'`]+|["'`]+$/g, "").replace(/^Bearer\s+/i, "").replace(/\s+/g, "")
     }
 
-    function PE(bb) {
-      return bb.startsWith("sk-or-") ? "openrouter" : bb.startsWith("sk-ant-") ? "anthropic" : bb.startsWith("AIza") ? "gemini" : bb.startsWith("sk-") ? "openai" : null
+    function DO(zz) {
+      return zz.startsWith("sk-or-") ? "openrouter" : zz.startsWith("sk-ant-") ? "anthropic" : zz.startsWith("AIza") ? "gemini" : zz.startsWith("sk-") ? "openai" : null
     }
 
-    function XE(bb) {
-      let ab;
+    function gO(zz) {
+      let tz;
       try {
-        ab = new URL(bb.trim())
+        tz = new URL(zz.trim())
       } catch {
         return null
       }
-      const Ub = "localhost" === ab.hostname || "127.0.0.1" === ab.hostname;
-      return "https:" !== ab.protocol && ("http:" !== ab.protocol || !Ub) || ab.username || ab.password || ab.search ? null : `${ab.origin}${ab.pathname}`.replace(/\/chat\/completions\/?$/, "").replace(/\/+$/, "")
+      const sz = "localhost" === tz.hostname || "127.0.0.1" === tz.hostname;
+      return "https:" !== tz.protocol && ("http:" !== tz.protocol || !sz) || tz.username || tz.password || tz.search ? null : `${tz.origin}${tz.pathname}`.replace(/\/chat\/completions\/?$/, "").replace(/\/+$/, "")
     }
 
-    function jE(bb, ab) {
-      let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      return "custom" === bb && ab ? new URL(ab).host : Ub ? BE[bb].shortName : BE[bb].name
+    function HO(zz, tz) {
+      let sz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      return "custom" === zz && tz ? new URL(tz).host : sz ? uO[zz].shortName : uO[zz].name
     }
-    class RE extends Error {
-      constructor(bb, ab, Ub, Ab) {
-        super(`AI key request: ${bb}`), this.problem = bb, this.retryAfterMs = ab, this.status = Ub, this.detail = Ab
+    class BO extends Error {
+      constructor(zz, tz, sz, Fz) {
+        super(`AI key request: ${zz}`), this.problem = zz, this.retryAfterMs = tz, this.status = sz, this.detail = Fz
       }
     }
 
-    function kE(bb, ab) {
-      return ("" === ab ? bb : bb.split(ab).join("\u2026")).replace(/[\w-]{24,}/g, "\u2026")
+    function PO(zz, tz) {
+      return ("" === tz ? zz : zz.split(tz).join("\u2026")).replace(/[\w-]{24,}/g, "\u2026")
     }
 
-    function yE(bb, ab) {
-      const Ub = "custom" === ab ? "That server" : BE[ab].shortName;
-      switch (bb) {
+    function rO(zz, tz) {
+      const sz = "custom" === tz ? "That server" : uO[tz].shortName;
+      switch (zz) {
         case "badKey":
-          return `${Ub} didn't accept your key: it may be wrong or deleted. Check you copied all of it.`;
+          return `${sz} didn't accept your key: it may be wrong or deleted. Check you copied all of it.`;
         case "busy":
           return "Too many requests right now. Wait a minute and try again.";
         case "noModel":
-          return `${Ub} can't find that model. Check its name.`;
+          return `${sz} can't find that model. Check its name.`;
         case "unreachable":
-          return "anthropic" === ab ? "Claude didn't accept your key: check it, or make a new one." : "custom" === ab ? "Couldn't reach that address. Check it's typed right and the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help." : `Couldn't reach ${Ub}. Check your internet and try again.`;
+          return "anthropic" === tz ? "Claude didn't accept your key: check it, or make a new one." : "custom" === tz ? "Couldn't reach that address. Check it's typed right and the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help." : `Couldn't reach ${sz}. Check your internet and try again.`;
         case "noCredit":
-          return "custom" === ab ? "That server stopped your key for now: it has used all it can." : `${Ub} stopped your key for now: it has used all it can. Check it on ${Ub}'s website.`;
+          return "custom" === tz ? "That server stopped your key for now: it has used all it can." : `${sz} stopped your key for now: it has used all it can. Check it on ${sz}'s website.`;
         case "blocked":
-          return `${Ub} doesn't work from where you are.`;
+          return `${sz} doesn't work from where you are.`;
         case "timeout":
           return "That took too long. Try again.";
         default:
-          return `${Ub} had a problem with that. Try again in a minute.`
+          return `${sz} had a problem with that. Try again in a minute.`
       }
     }
 
-    function ZE(bb) {
-      var ab;
-      const Ub = bb.at(-1);
-      if (!Ub || null !== BU(Ub.name, Ub.args) || function(bb) {
+    function YO(zz) {
+      var tz;
+      const sz = zz.at(-1);
+      if (!sz || null !== Us(sz.name, sz.args) || function(zz) {
           try {
-            return JSON.parse(bb), !0
+            return JSON.parse(zz), !0
           } catch {
             return !1
           }
-        }(Ub.args)) return;
-      const Ab = null === (ab = /"path"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(Ub.args)) || void 0 === ab ? void 0 : ab[1];
+        }(sz.args)) return;
+      const Fz = null === (tz = /"path"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(sz.args)) || void 0 === tz ? void 0 : tz[1];
       return {
-        name: Ub.name || "write_file",
-        path: Ab
+        name: sz.name || "write_file",
+        path: Fz
       }
     }
-    const DE = 1e4,
-      zE = 3e5,
-      xE = 16e3;
-    async function iE(bb, ab, Ub, Ab) {
-      if ("custom" !== bb && ! function(bb) {
-          return vE.has(new URL(bb).host)
-        }(ab)) throw new Error(`AI key request to an unknown host for ${bb}`);
-      const Mb = await fetch(ab, {
-        ...Ub,
+    const xO = 1e4,
+      mO = 3e5,
+      JO = 16e3;
+    async function IO(zz, tz, sz, Fz) {
+      if ("custom" !== zz && ! function(zz) {
+          return bO.has(new URL(zz).host)
+        }(tz)) throw new Error(`AI key request to an unknown host for ${zz}`);
+      const Wz = await fetch(tz, {
+        ...sz,
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: Ab
+        signal: Fz
       });
-      if (!Mb.ok) {
-        const ab = await Mb.text().catch((() => ""));
-        throw console.warn(`AI key request: ${bb} answered ${Mb.status}`), new RE(function(bb, ab, Ub) {
-          const Ab = !("gemini" === bb && 429 === ab) && /credit|quota|billing|balance|payment|spend|budget|limit[ _]exceeded|key limit/i.test(Ub);
-          return 401 === ab ? "badKey" : 404 !== ab && 400 !== ab || !/model_not_found|not_found_error[^\n]{0,80}model:|models?\b[^\n]{0,80}?(does not exist|not found)|no such model|unknown model|(invalid|not a valid) model/i.test(Ub) ? 402 === ab || (400 === ab || 403 === ab || 429 === ab) && Ab && !/rate[ _-]?limit/i.test(Ub) ? "noCredit" : 400 === ab && /(location|region|country|territory)[^\n]{0,40}not supported|unsupported_country/i.test(Ub) ? "blocked" : 400 === ab && /api[ _-]?key/i.test(Ub) ? "badKey" : 403 === ab ? /moderat|flagged/i.test(Ub) ? "refused" : /region|country|territor|location/i.test(Ub) ? "blocked" : "badKey" : 429 === ab ? "busy" : "failed" : "noModel"
-        }(bb, Mb.status, ab), function(bb) {
-          const ab = bb.headers.get("retry-after");
-          if (!ab) return;
-          const Ub = Number(ab);
-          return Number.isFinite(Ub) ? 1e3 * Ub : Math.max(0, Date.parse(ab) - Date.now()) || void 0
-        }(Mb), Mb.status, function(bb, ab) {
-          let Ub = bb;
+      if (!Wz.ok) {
+        const tz = await Wz.text().catch((() => ""));
+        throw console.warn(`AI key request: ${zz} answered ${Wz.status}`), new BO(function(zz, tz, sz) {
+          const Fz = !("gemini" === zz && 429 === tz) && /credit|quota|billing|balance|payment|spend|budget|limit[ _]exceeded|key limit/i.test(sz);
+          return 401 === tz ? "badKey" : 404 !== tz && 400 !== tz || !/model_not_found|not_found_error[^\n]{0,80}model:|models?\b[^\n]{0,80}?(does not exist|not found)|no such model|unknown model|(invalid|not a valid) model/i.test(sz) ? 402 === tz || (400 === tz || 403 === tz || 429 === tz) && Fz && !/rate[ _-]?limit/i.test(sz) ? "noCredit" : 400 === tz && /(location|region|country|territory)[^\n]{0,40}not supported|unsupported_country/i.test(sz) ? "blocked" : 400 === tz && /api[ _-]?key/i.test(sz) ? "badKey" : 403 === tz ? /moderat|flagged/i.test(sz) ? "refused" : /region|country|territor|location/i.test(sz) ? "blocked" : "badKey" : 429 === tz ? "busy" : "failed" : "noModel"
+        }(zz, Wz.status, tz), function(zz) {
+          const tz = zz.headers.get("retry-after");
+          if (!tz) return;
+          const sz = Number(tz);
+          return Number.isFinite(sz) ? 1e3 * sz : Math.max(0, Date.parse(tz) - Date.now()) || void 0
+        }(Wz), Wz.status, function(zz, tz) {
+          let sz = zz;
           try {
-            const ab = JSON.parse(bb),
-              Ab = ab.error && "object" === typeof ab.error ? ab.error.message : void 0,
-              Mb = [ab.error, Ab, ab.message].find((bb => "string" === typeof bb));
-            Ub = "string" === typeof Mb ? Mb : bb
+            const tz = JSON.parse(zz),
+              Fz = tz.error && "object" === typeof tz.error ? tz.error.message : void 0,
+              Wz = [tz.error, Fz, tz.message].find((zz => "string" === typeof zz));
+            sz = "string" === typeof Wz ? Wz : zz
           } catch {}
-          const Ab = ab.reduce(((bb, ab) => kE(bb, ab)), Ub.replace(/\s+/g, " ").trim()).slice(0, 200);
-          return "" === Ab ? void 0 : Ab
-        }(ab, function(bb) {
-          const ab = [];
-          return new Headers(bb.headers).forEach(((bb, Ub) => {
-            /authorization|key/i.test(Ub) && ab.push(bb, bb.replace(/^Bearer\s+/i, ""))
-          })), ab.filter((bb => bb.length >= 6))
-        }(Ub)))
+          const Fz = tz.reduce(((zz, tz) => PO(zz, tz)), sz.replace(/\s+/g, " ").trim()).slice(0, 200);
+          return "" === Fz ? void 0 : Fz
+        }(tz, function(zz) {
+          const tz = [];
+          return new Headers(zz.headers).forEach(((zz, sz) => {
+            /authorization|key/i.test(sz) && tz.push(zz, zz.replace(/^Bearer\s+/i, ""))
+          })), tz.filter((zz => zz.length >= 6))
+        }(sz)))
       }
-      return Mb
+      return Wz
     }
-    async function fE(bb, ab, Ub) {
-      const Ab = (0, yb.b)(bb, ab);
+    async function CO(zz, tz, sz) {
+      const Fz = (0, Hz.c)(zz, tz);
       try {
-        return await Ub(Ab.signal)
-      } catch (Mb) {
-        if (Mb instanceof RE || null !== ab && void 0 !== ab && ab.aborted) throw Mb;
-        throw Ab.signal.aborted || console.warn("AI key request couldn't be read", Mb), new RE(Ab.signal.aborted ? "timeout" : "unreachable")
+        return await sz(Fz.signal)
+      } catch (Wz) {
+        if (Wz instanceof BO || null !== tz && void 0 !== tz && tz.aborted) throw Wz;
+        throw Fz.signal.aborted || console.warn("AI key request couldn't be read", Wz), new BO(Fz.signal.aborted ? "timeout" : "unreachable")
       } finally {
-        Ab.clear()
+        Fz.clear()
       }
     }
 
-    function mE(bb) {
-      let ab = bb.length;
-      const Ub = bb.lastIndexOf("<tool_call"); - 1 === Ub || bb.includes("</tool_call>", Ub) || (ab = Ub);
-      const Ab = [...bb.matchAll(/\{\s*"(?:jsonrpc|name|tool|method|function)"/g)].find((ab => null === function(bb, ab) {
-        let Ub = 0,
-          Ab = !1;
-        for (let Mb = ab; Mb < bb.length; Mb++) {
-          const ab = bb[Mb];
-          if (Ab) "\\" === ab ? Mb++ : '"' === ab && (Ab = !1);
-          else if ('"' === ab) Ab = !0;
-          else if ("{" === ab) Ub++;
-          else if ("}" === ab && (Ub--, 0 === Ub)) return Mb + 1
+    function eO(zz) {
+      let tz = zz.length;
+      const sz = zz.lastIndexOf("<tool_call"); - 1 === sz || zz.includes("</tool_call>", sz) || (tz = sz);
+      const Fz = [...zz.matchAll(/\{\s*"(?:jsonrpc|name|tool|method|function)"/g)].find((tz => null === function(zz, tz) {
+        let sz = 0,
+          Fz = !1;
+        for (let Wz = tz; Wz < zz.length; Wz++) {
+          const tz = zz[Wz];
+          if (Fz) "\\" === tz ? Wz++ : '"' === tz && (Fz = !1);
+          else if ('"' === tz) Fz = !0;
+          else if ("{" === tz) sz++;
+          else if ("}" === tz && (sz--, 0 === sz)) return Wz + 1
         }
         return null
-      }(bb, ab.index)));
-      return Ab && Ab.index < ab && (ab = Ab.index), bb.slice(0, ab).replace(/```[\w-]*\s*$/, "").trim()
+      }(zz, tz.index)));
+      return Fz && Fz.index < tz && (tz = Fz.index), zz.slice(0, tz).replace(/```[\w-]*\s*$/, "").trim()
     }
 
-    function pE(bb, ab) {
-      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "simple",
-        Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
+    function ZO(zz, tz) {
+      let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "simple",
+        Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
       const {
-        answer: Mb,
-        reasoning: Tb,
-        lUb: Eb,
-        isCutShort: Yb,
-        nativeCalls: Bb = []
-      } = ab, eb = Mb.replace(/<think>[\s\S]*?<\/think>/g, ""), vb = "" === Ab ? eb.trim() : function(bb, ab) {
-        var Ub, Ab;
-        const Mb = ab.trimStart(),
-          Tb = bb.trimStart();
-        if (Tb.length >= 16 && Mb.startsWith(Tb.slice(0, 240))) return Mb;
-        const Eb = null !== (Ub = null === (Ab = bb.match(/```/g)) || void 0 === Ab ? void 0 : Ab.length) && void 0 !== Ub ? Ub : 0,
-          Yb = mE(bb) !== bb.trim() || Eb % 2 === 1 ? 48 : 16;
-        for (let Bb = Math.min(bb.length, Mb.length, 4e3); Bb >= Yb; Bb--)
-          if (bb.endsWith(Mb.slice(0, Bb))) return bb + Mb.slice(Bb);
-        return bb + ab
-      }(Ab, eb).trim(), Lb = kT(vb, "", Bb, Ub), Pb = kT(Yb ? mE(vb) : vb, Tb, Bb, Ub, Yb), Xb = Yb ? ZE(Bb) : void 0;
-      if (Eb && "" === Pb) throw new RE("refused");
-      if ("" === Pb && (!Yb || "" === Lb && !Xb)) throw new RE("failed");
+        answer: Wz,
+        reasoning: Xz,
+        lsz: Oz,
+        isCutShort: oz,
+        nativeCalls: vz = []
+      } = tz, Uz = Wz.replace(/<think>[\s\S]*?<\/think>/g, ""), Kz = "" === Fz ? Uz.trim() : function(zz, tz) {
+        var sz, Fz;
+        const Wz = tz.trimStart(),
+          Xz = zz.trimStart();
+        if (Xz.length >= 16 && Wz.startsWith(Xz.slice(0, 240))) return Wz;
+        const Oz = null !== (sz = null === (Fz = zz.match(/```/g)) || void 0 === Fz ? void 0 : Fz.length) && void 0 !== sz ? sz : 0,
+          oz = eO(zz) !== zz.trim() || Oz % 2 === 1 ? 48 : 16;
+        for (let vz = Math.min(zz.length, Wz.length, 4e3); vz >= oz; vz--)
+          if (zz.endsWith(Wz.slice(0, vz))) return zz + Wz.slice(vz);
+        return zz + tz
+      }(Fz, Uz).trim(), uz = PX(Kz, "", vz, sz), Nz = PX(oz ? eO(Kz) : Kz, Xz, vz, sz, oz), bz = oz ? YO(vz) : void 0;
+      if (Oz && "" === Nz) throw new BO("refused");
+      if ("" === Nz && (!oz || "" === uz && !bz)) throw new BO("failed");
       return {
-        model: bb,
-        answer: Pb,
-        reasoning: Tb,
-        isCutShort: Yb,
-        written: Yb ? Lb : void 0,
-        cutCall: Xb
+        model: zz,
+        answer: Nz,
+        reasoning: Xz,
+        isCutShort: oz,
+        written: oz ? uz : void 0,
+        cutCall: bz
       }
     }
 
-    function NE(bb) {
-      const ab = bb.findIndex((bb => "user" === bb.role));
-      return -1 === ab ? [] : bb.slice(ab)
+    function GO(zz) {
+      const tz = zz.findIndex((zz => "user" === zz.role));
+      return -1 === tz ? [] : zz.slice(tz)
     }
 
-    function WE(bb, ab) {
-      var Ub;
-      const Ab = null !== (Ub = ab.tools) && void 0 !== Ub ? Ub : [];
-      if (0 === Ab.length) return {};
-      switch (bb) {
+    function TO(zz, tz) {
+      var sz;
+      const Fz = null !== (sz = tz.tools) && void 0 !== sz ? sz : [];
+      if (0 === Fz.length) return {};
+      switch (zz) {
         case "openai":
           return {
-            tools: DT(Ab)
+            tools: xX(Fz)
           };
         case "anthropic":
           return {
-            tools: Ab.map((bb => ({
-              name: bb.name,
-              description: bb.description,
-              input_schema: bb.inputSchema
+            tools: Fz.map((zz => ({
+              name: zz.name,
+              description: zz.description,
+              input_schema: zz.inputSchema
             })))
           };
         case "gemini":
           return {
             tools: [{
-              functionDeclarations: Ab.map((bb => {
+              functionDeclarations: Fz.map((zz => {
                 return {
-                  name: bb.name,
-                  description: bb.description,
-                  parameters: (ab = bb.inputSchema, {
+                  name: zz.name,
+                  description: zz.description,
+                  parameters: (tz = zz.inputSchema, {
                     type: "OBJECT",
-                    properties: Object.fromEntries(Object.entries(ab.properties).map((bb => {
-                      let [ab, Ub] = bb;
-                      return [ab, {
+                    properties: Object.fromEntries(Object.entries(tz.properties).map((zz => {
+                      let [tz, sz] = zz;
+                      return [tz, {
                         type: "STRING",
-                        description: Ub.description
+                        description: sz.description
                       }]
                     }))),
-                    required: ab.required
+                    required: tz.required
                   })
                 };
-                var ab
+                var tz
               }))
             }]
           }
       }
     }
-    class HE {
-      constructor(bb, ab, Ub) {
-        this.provider = bb, this.baseUrl = ab, this.key = Ub
+    class cO {
+      constructor(zz, tz, sz) {
+        this.provider = zz, this.baseUrl = tz, this.key = sz
       }
-      async check(bb) {
-        return fE(DE, bb, (async bb => {
-          var ab;
-          const Ub = await iE(this.provider, `${this.baseUrl}/models`, {
+      async check(zz) {
+        return CO(xO, zz, (async zz => {
+          var tz;
+          const sz = await IO(this.provider, `${this.baseUrl}/models`, {
             headers: this.headers()
-          }, bb);
+          }, zz);
           return {
-            models: (null !== (ab = (await Ub.json()).data) && void 0 !== ab ? ab : []).map((bb => ({
-              id: bb.id,
-              name: bb.name
+            models: (null !== (tz = (await sz.json()).data) && void 0 !== tz ? tz : []).map((zz => ({
+              id: zz.id,
+              name: zz.name
             })))
           }
         }))
       }
-      async ask(bb, ab) {
-        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return fE(zE, Ub.signal, (async Ab => {
-          var Mb;
-          const Tb = await iE(this.provider, `${this.baseUrl}/chat/completions`, {
+      async ask(zz, tz) {
+        let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return CO(mO, sz.signal, (async Fz => {
+          var Wz;
+          const Xz = await IO(this.provider, `${this.baseUrl}/chat/completions`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
-              model: bb,
-              messages: ab,
-              ["openai" === this.provider ? "max_completion_tokens" : "max_tokens"]: xE,
+              model: zz,
+              messages: tz,
+              ["openai" === this.provider ? "max_completion_tokens" : "max_tokens"]: JO,
               stream: !0,
-              ...WE("openai", Ub)
+              ...TO("openai", sz)
             })
-          }, Ab);
-          let Eb = "",
-            Yb = "",
-            Bb = !1,
-            eb = !1;
-          const vb = [];
-          return await ZT(null !== (Mb = Tb.body) && void 0 !== Mb ? Mb : new ReadableStream, (ab => {
-            var Ab, Mb, Tb, Lb, Pb, Xb, jb, Rb;
-            const kb = ab;
-            if (kb.error) throw new RE(402 === Number(kb.error.code) ? "noCredit" : "failed");
-            const yb = null === (Ab = kb.choices) || void 0 === Ab ? void 0 : Ab[0];
-            Yb += null !== (Mb = null !== (Tb = null === yb || void 0 === yb || null === (Lb = yb.delta) || void 0 === Lb ? void 0 : Lb.reasoning) && void 0 !== Tb ? Tb : null === yb || void 0 === yb || null === (Pb = yb.delta) || void 0 === Pb ? void 0 : Pb.reasoning_content) && void 0 !== Mb ? Mb : "", Eb += null !== (Xb = null === yb || void 0 === yb || null === (jb = yb.delta) || void 0 === jb ? void 0 : jb.content) && void 0 !== Xb ? Xb : "";
-            for (const bb of null !== (Zb = null === yb || void 0 === yb || null === (Db = yb.delta) || void 0 === Db ? void 0 : Db.tool_calls) && void 0 !== Zb ? Zb : []) {
-              var Zb, Db;
-              jT(vb, bb)
+          }, Fz);
+          let Oz = "",
+            oz = "",
+            vz = !1,
+            Uz = !1;
+          const Kz = [];
+          return await YX(null !== (Wz = Xz.body) && void 0 !== Wz ? Wz : new ReadableStream, (tz => {
+            var Fz, Wz, Xz, uz, Nz, bz, wz, Dz;
+            const gz = tz;
+            if (gz.error) throw new BO(402 === Number(gz.error.code) ? "noCredit" : "failed");
+            const Hz = null === (Fz = gz.choices) || void 0 === Fz ? void 0 : Fz[0];
+            oz += null !== (Wz = null !== (Xz = null === Hz || void 0 === Hz || null === (uz = Hz.delta) || void 0 === uz ? void 0 : uz.reasoning) && void 0 !== Xz ? Xz : null === Hz || void 0 === Hz || null === (Nz = Hz.delta) || void 0 === Nz ? void 0 : Nz.reasoning_content) && void 0 !== Wz ? Wz : "", Oz += null !== (bz = null === Hz || void 0 === Hz || null === (wz = Hz.delta) || void 0 === wz ? void 0 : wz.content) && void 0 !== bz ? bz : "";
+            for (const zz of null !== (Bz = null === Hz || void 0 === Hz || null === (Pz = Hz.delta) || void 0 === Pz ? void 0 : Pz.tool_calls) && void 0 !== Bz ? Bz : []) {
+              var Bz, Pz;
+              HX(Kz, zz)
             }
-            Bb ||= "content_filter" === (null === yb || void 0 === yb ? void 0 : yb.finish_reason), eb ||= "length" === (null === yb || void 0 === yb ? void 0 : yb.finish_reason), null === (Rb = Ub.onProgress) || void 0 === Rb || Rb.call(Ub, {
-              model: bb,
-              reasoningChars: Yb.length,
-              answer: Eb,
-              isCalling: vb.length > 0
+            vz ||= "content_filter" === (null === Hz || void 0 === Hz ? void 0 : Hz.finish_reason), Uz ||= "length" === (null === Hz || void 0 === Hz ? void 0 : Hz.finish_reason), null === (Dz = sz.onProgress) || void 0 === Dz || Dz.call(sz, {
+              model: zz,
+              reasoningChars: oz.length,
+              answer: Oz,
+              isCalling: Kz.length > 0
             })
-          })), pE(bb, {
-            answer: Eb,
-            reasoning: Yb,
-            lUb: Bb,
-            isCutShort: eb,
-            nativeCalls: vb
-          }, Ub.callFormat, Ub.continueFrom)
+          })), ZO(zz, {
+            answer: Oz,
+            reasoning: oz,
+            lsz: vz,
+            isCutShort: Uz,
+            nativeCalls: Kz
+          }, sz.callFormat, sz.continueFrom)
         }))
       }
       headers() {
@@ -7392,99 +7392,99 @@ export const modules = {
         }
       }
     }
-    class IE {
-      constructor(bb) {
-        this.key = bb, this.chat = void 0, this.chat = new HE("openrouter", BE.openrouter.baseUrl, bb)
+    class jO {
+      constructor(zz) {
+        this.key = zz, this.chat = void 0, this.chat = new cO("openrouter", uO.openrouter.baseUrl, zz)
       }
-      async check(bb) {
-        return await fE(DE, bb, (async bb => iE("openrouter", `${BE.openrouter.baseUrl}/key`, {
+      async check(zz) {
+        return await CO(xO, zz, (async zz => IO("openrouter", `${uO.openrouter.baseUrl}/key`, {
           headers: {
             Authorization: `Bearer ${this.key}`
           }
-        }, bb))), this.chat.check(bb)
+        }, zz))), this.chat.check(zz)
       }
-      ask(bb, ab, Ub) {
-        return this.chat.ask(bb, ab, Ub)
+      ask(zz, tz, sz) {
+        return this.chat.ask(zz, tz, sz)
       }
     }
-    class dE {
-      constructor(bb) {
-        this.key = bb, this.baseUrl = BE.anthropic.baseUrl
+    class AO {
+      constructor(zz) {
+        this.key = zz, this.baseUrl = uO.anthropic.baseUrl
       }
-      async check(bb) {
-        return fE(DE, bb, (async bb => {
-          var ab;
-          const Ub = await iE("anthropic", `${this.baseUrl}/models?limit=1000`, {
+      async check(zz) {
+        return CO(xO, zz, (async zz => {
+          var tz;
+          const sz = await IO("anthropic", `${this.baseUrl}/models?limit=1000`, {
             headers: this.headers()
-          }, bb);
+          }, zz);
           return {
-            models: (null !== (ab = (await Ub.json()).data) && void 0 !== ab ? ab : []).map((bb => ({
-              id: bb.id,
-              name: bb.display_name
+            models: (null !== (tz = (await sz.json()).data) && void 0 !== tz ? tz : []).map((zz => ({
+              id: zz.id,
+              name: zz.display_name
             })))
           }
         }))
       }
-      async ask(bb, ab) {
-        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Ab = ab.filter((bb => "system" === bb.role)).map((bb => bb.content)).join("\n\n"),
-          Mb = NE(ab).map((bb => ({
-            role: bb.role,
-            content: bb.content
+      async ask(zz, tz) {
+        let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Fz = tz.filter((zz => "system" === zz.role)).map((zz => zz.content)).join("\n\n"),
+          Wz = GO(tz).map((zz => ({
+            role: zz.role,
+            content: zz.content
           })));
-        return fE(zE, Ub.signal, (async ab => {
-          var Tb;
-          const Eb = await iE("anthropic", `${this.baseUrl}/messages`, {
+        return CO(mO, sz.signal, (async tz => {
+          var Xz;
+          const Oz = await IO("anthropic", `${this.baseUrl}/messages`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
-              model: bb,
-              max_tokens: xE,
-              system: Ab,
-              messages: Mb,
+              model: zz,
+              max_tokens: JO,
+              system: Fz,
+              messages: Wz,
               stream: !0,
-              ...WE("anthropic", Ub)
+              ...TO("anthropic", sz)
             })
-          }, ab);
-          let Yb = "",
-            Bb = "",
-            eb = !1,
-            vb = !1;
-          const Lb = new Map;
-          await ZT(null !== (Tb = Eb.body) && void 0 !== Tb ? Tb : new ReadableStream, (ab => {
-            var Ab, Mb;
-            const Tb = ab;
-            var Eb, Pb, Xb, jb;
-            if ("error" === Tb.type) throw new RE("overloaded_error" === (null === (Eb = Tb.error) || void 0 === Eb ? void 0 : Eb.type) || "rate_limit_error" === (null === (Pb = Tb.error) || void 0 === Pb ? void 0 : Pb.type) ? "busy" : "failed");
-            if ("content_block_start" === Tb.type && "tool_use" === (null === (Ab = Tb.content_block) || void 0 === Ab ? void 0 : Ab.type)) Lb.set(null !== (Xb = Tb.index) && void 0 !== Xb ? Xb : Lb.size, {
-              name: null !== (jb = Tb.content_block.name) && void 0 !== jb ? jb : "",
+          }, tz);
+          let oz = "",
+            vz = "",
+            Uz = !1,
+            Kz = !1;
+          const uz = new Map;
+          await YX(null !== (Xz = Oz.body) && void 0 !== Xz ? Xz : new ReadableStream, (tz => {
+            var Fz, Wz;
+            const Xz = tz;
+            var Oz, Nz, bz, wz;
+            if ("error" === Xz.type) throw new BO("overloaded_error" === (null === (Oz = Xz.error) || void 0 === Oz ? void 0 : Oz.type) || "rate_limit_error" === (null === (Nz = Xz.error) || void 0 === Nz ? void 0 : Nz.type) ? "busy" : "failed");
+            if ("content_block_start" === Xz.type && "tool_use" === (null === (Fz = Xz.content_block) || void 0 === Fz ? void 0 : Fz.type)) uz.set(null !== (bz = Xz.index) && void 0 !== bz ? bz : uz.size, {
+              name: null !== (wz = Xz.content_block.name) && void 0 !== wz ? wz : "",
               args: ""
             });
-            else if ("content_block_delta" === Tb.type) {
-              var Rb, kb, yb, Zb, Db, zb;
-              Yb += null !== (Rb = null === (kb = Tb.delta) || void 0 === kb ? void 0 : kb.text) && void 0 !== Rb ? Rb : "", Bb += null !== (yb = null === (Zb = Tb.delta) || void 0 === Zb ? void 0 : Zb.thinking) && void 0 !== yb ? yb : "";
-              const bb = Lb.get(null !== (Db = Tb.index) && void 0 !== Db ? Db : -1);
-              var xb;
-              if (bb && "input_json_delta" === (null === (zb = Tb.delta) || void 0 === zb ? void 0 : zb.type)) bb.args += null !== (xb = Tb.delta.partial_json) && void 0 !== xb ? xb : ""
-            } else if ("message_delta" === Tb.type) {
-              var ib, fb;
-              eb ||= "refusal" === (null === (ib = Tb.delta) || void 0 === ib ? void 0 : ib.stop_reason), vb ||= "max_tokens" === (null === (fb = Tb.delta) || void 0 === fb ? void 0 : fb.stop_reason)
+            else if ("content_block_delta" === Xz.type) {
+              var Dz, gz, Hz, Bz, Pz, rz;
+              oz += null !== (Dz = null === (gz = Xz.delta) || void 0 === gz ? void 0 : gz.text) && void 0 !== Dz ? Dz : "", vz += null !== (Hz = null === (Bz = Xz.delta) || void 0 === Bz ? void 0 : Bz.thinking) && void 0 !== Hz ? Hz : "";
+              const zz = uz.get(null !== (Pz = Xz.index) && void 0 !== Pz ? Pz : -1);
+              var Yz;
+              if (zz && "input_json_delta" === (null === (rz = Xz.delta) || void 0 === rz ? void 0 : rz.type)) zz.args += null !== (Yz = Xz.delta.partial_json) && void 0 !== Yz ? Yz : ""
+            } else if ("message_delta" === Xz.type) {
+              var xz, mz;
+              Uz ||= "refusal" === (null === (xz = Xz.delta) || void 0 === xz ? void 0 : xz.stop_reason), Kz ||= "max_tokens" === (null === (mz = Xz.delta) || void 0 === mz ? void 0 : mz.stop_reason)
             }
-            null === (Mb = Ub.onProgress) || void 0 === Mb || Mb.call(Ub, {
-              model: bb,
-              reasoningChars: Bb.length,
-              answer: Yb,
-              isCalling: Lb.size > 0
+            null === (Wz = sz.onProgress) || void 0 === Wz || Wz.call(sz, {
+              model: zz,
+              reasoningChars: vz.length,
+              answer: oz,
+              isCalling: uz.size > 0
             })
           }));
-          const Pb = [...Lb.values()];
-          return pE(bb, {
-            answer: Yb,
-            reasoning: Bb,
-            lUb: eb,
-            isCutShort: vb,
-            nativeCalls: Pb
-          }, Ub.callFormat, Ub.continueFrom)
+          const Nz = [...uz.values()];
+          return ZO(zz, {
+            answer: oz,
+            reasoning: vz,
+            lsz: Uz,
+            isCutShort: Kz,
+            nativeCalls: Nz
+          }, sz.callFormat, sz.continueFrom)
         }))
       }
       headers() {
@@ -7496,90 +7496,90 @@ export const modules = {
         }
       }
     }
-    class FE {
-      constructor(bb) {
-        this.key = bb, this.baseUrl = BE.gemini.baseUrl
+    class yO {
+      constructor(zz) {
+        this.key = zz, this.baseUrl = uO.gemini.baseUrl
       }
-      async check(bb) {
-        return fE(DE, bb, (async bb => {
-          var ab;
-          const Ub = await iE("gemini", `${this.baseUrl}/models?pageSize=1000`, {
+      async check(zz) {
+        return CO(xO, zz, (async zz => {
+          var tz;
+          const sz = await IO("gemini", `${this.baseUrl}/models?pageSize=1000`, {
             headers: this.headers()
-          }, bb);
+          }, zz);
           return {
-            models: (null !== (ab = (await Ub.json()).models) && void 0 !== ab ? ab : []).filter((bb => {
-              var ab, Ub;
-              return null === (ab = null === (Ub = bb.supportedGenerationMethods) || void 0 === Ub ? void 0 : Ub.includes("generateContent")) || void 0 === ab || ab
-            })).map((bb => ({
-              id: bb.name.replace(/^models\//, ""),
-              name: bb.displayName
+            models: (null !== (tz = (await sz.json()).models) && void 0 !== tz ? tz : []).filter((zz => {
+              var tz, sz;
+              return null === (tz = null === (sz = zz.supportedGenerationMethods) || void 0 === sz ? void 0 : sz.includes("generateContent")) || void 0 === tz || tz
+            })).map((zz => ({
+              id: zz.name.replace(/^models\//, ""),
+              name: zz.displayName
             })))
           }
         }))
       }
-      async ask(bb, ab) {
-        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Ab = ab.filter((bb => "system" === bb.role)).map((bb => ({
-            text: bb.content
+      async ask(zz, tz) {
+        let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Fz = tz.filter((zz => "system" === zz.role)).map((zz => ({
+            text: zz.content
           }))),
-          Mb = NE(ab).map((bb => ({
-            role: "assistant" === bb.role ? "model" : "user",
+          Wz = GO(tz).map((zz => ({
+            role: "assistant" === zz.role ? "model" : "user",
             parts: [{
-              text: bb.content
+              text: zz.content
             }]
           })));
-        return fE(zE, Ub.signal, (async ab => {
-          var Tb;
-          const Eb = await iE("gemini", `${this.baseUrl}/models/${encodeURIComponent(bb)}:streamGenerateContent?alt=sse`, {
+        return CO(mO, sz.signal, (async tz => {
+          var Xz;
+          const Oz = await IO("gemini", `${this.baseUrl}/models/${encodeURIComponent(zz)}:streamGenerateContent?alt=sse`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
               systemInstruction: {
-                parts: Ab
+                parts: Fz
               },
-              contents: Mb,
+              contents: Wz,
               generationConfig: {
-                maxOutputTokens: xE
+                maxOutputTokens: JO
               },
-              ...WE("gemini", Ub)
+              ...TO("gemini", sz)
             })
-          }, ab);
-          let Yb = "",
-            Bb = "",
-            eb = !1,
-            vb = !1;
-          const Lb = [];
-          return await ZT(null !== (Tb = Eb.body) && void 0 !== Tb ? Tb : new ReadableStream, (ab => {
-            var Ab, Mb, Tb;
-            const Eb = ab,
-              Pb = null === (Ab = Eb.candidates) || void 0 === Ab ? void 0 : Ab[0];
-            for (const bb of null !== (Xb = null === Pb || void 0 === Pb || null === (jb = Pb.content) || void 0 === jb ? void 0 : jb.parts) && void 0 !== Xb ? Xb : []) {
-              var Xb, jb, Rb, kb;
-              if (bb.functionCall) Lb.push({
-                name: null !== (Rb = bb.functionCall.name) && void 0 !== Rb ? Rb : "",
-                args: JSON.stringify(null !== (kb = bb.functionCall.args) && void 0 !== kb ? kb : {})
+          }, tz);
+          let oz = "",
+            vz = "",
+            Uz = !1,
+            Kz = !1;
+          const uz = [];
+          return await YX(null !== (Xz = Oz.body) && void 0 !== Xz ? Xz : new ReadableStream, (tz => {
+            var Fz, Wz, Xz;
+            const Oz = tz,
+              Nz = null === (Fz = Oz.candidates) || void 0 === Fz ? void 0 : Fz[0];
+            for (const zz of null !== (bz = null === Nz || void 0 === Nz || null === (wz = Nz.content) || void 0 === wz ? void 0 : wz.parts) && void 0 !== bz ? bz : []) {
+              var bz, wz, Dz, gz;
+              if (zz.functionCall) uz.push({
+                name: null !== (Dz = zz.functionCall.name) && void 0 !== Dz ? Dz : "",
+                args: JSON.stringify(null !== (gz = zz.functionCall.args) && void 0 !== gz ? gz : {})
               });
-              else if (bb.thought) {
-                var yb;
-                Bb += null !== (yb = bb.text) && void 0 !== yb ? yb : ""
+              else if (zz.thought) {
+                var Hz;
+                vz += null !== (Hz = zz.text) && void 0 !== Hz ? Hz : ""
               } else {
-                var Zb;
-                Yb += null !== (Zb = bb.text) && void 0 !== Zb ? Zb : ""
+                var Bz;
+                oz += null !== (Bz = zz.text) && void 0 !== Bz ? Bz : ""
               }
             }
-            eb ||= void 0 !== (null === (Mb = Eb.promptFeedback) || void 0 === Mb ? void 0 : Mb.blockReason) || "SAFETY" === (null === Pb || void 0 === Pb ? void 0 : Pb.finishReason) || "PROHIBITED_CONTENT" === (null === Pb || void 0 === Pb ? void 0 : Pb.finishReason), vb ||= "MAX_TOKENS" === (null === Pb || void 0 === Pb ? void 0 : Pb.finishReason), null === (Tb = Ub.onProgress) || void 0 === Tb || Tb.call(Ub, {
-              model: bb,
-              reasoningChars: Bb.length,
-              answer: Yb,
-              isCalling: Lb.length > 0
+            Uz ||= void 0 !== (null === (Wz = Oz.promptFeedback) || void 0 === Wz ? void 0 : Wz.blockReason) || "SAFETY" === (null === Nz || void 0 === Nz ? void 0 : Nz.finishReason) || "PROHIBITED_CONTENT" === (null === Nz || void 0 === Nz ? void 0 : Nz.finishReason), Kz ||= "MAX_TOKENS" === (null === Nz || void 0 === Nz ? void 0 : Nz.finishReason), null === (Xz = sz.onProgress) || void 0 === Xz || Xz.call(sz, {
+              model: zz,
+              reasoningChars: vz.length,
+              answer: oz,
+              isCalling: uz.length > 0
             })
-          })), pE(bb, {
-            answer: Yb,
-            reasoning: Bb,
-            lUb: eb,
-            isCutShort: vb,
-            nativeCalls: Lb
-          }, Ub.callFormat, Ub.continueFrom)
+          })), ZO(zz, {
+            answer: oz,
+            reasoning: vz,
+            lsz: Uz,
+            isCutShort: Kz,
+            nativeCalls: uz
+          }, sz.callFormat, sz.continueFrom)
         }))
       }
       headers() {
@@ -7590,26 +7590,26 @@ export const modules = {
       }
     }
 
-    function hE(bb, ab, Ub) {
-      switch (bb) {
+    function MO(zz, tz, sz) {
+      switch (zz) {
         case "openrouter":
-          return new IE(ab);
+          return new jO(tz);
         case "anthropic":
-          return new dE(ab);
+          return new AO(tz);
         case "gemini":
-          return new FE(ab);
+          return new yO(tz);
         case "openai":
-          return new HE("openai", BE.openai.baseUrl, ab);
+          return new cO("openai", uO.openai.baseUrl, tz);
         case "custom":
-          return new HE("custom", null !== Ub && void 0 !== Ub ? Ub : "", ab)
+          return new cO("custom", null !== sz && void 0 !== sz ? sz : "", tz)
       }
     }
-    const GE = {
+    const dO = {
         fast: "Fast",
         smart: "Smart",
         smartest: "Smartest"
       },
-      QE = {
+      hO = {
         anthropic: {
           fast: [{
             id: "claude-haiku-5-5",
@@ -7716,436 +7716,436 @@ export const modules = {
         }
       };
 
-    function qE(bb) {
-      return /claude-(sonnet|opus|fable)|gpt-5(\.\d+)?($|-codex|-pro|-sol)|gpt-6(\.\d+)?-(sol|astra)|gemini-[\d.]+-pro|gemini-4/.test(bb) ? "mcp" : "simple"
+    function QO(zz) {
+      return /claude-(sonnet|opus|fable)|gpt-5(\.\d+)?($|-codex|-pro|-sol)|gpt-6(\.\d+)?-(sol|astra)|gemini-[\d.]+-pro|gemini-4/.test(zz) ? "mcp" : "simple"
     }
 
-    function uE(bb, ab) {
-      return "custom" !== bb && /claude-|gpt-|gemini-/.test(ab)
+    function kO(zz, tz) {
+      return "custom" !== zz && /claude-|gpt-|gemini-/.test(tz)
     }
 
-    function rE(bb, ab, Ub) {
-      var Ab;
-      const Mb = Ub.find((bb => bb.id === ab));
+    function iO(zz, tz, sz) {
+      var Fz;
+      const Wz = sz.find((zz => zz.id === tz));
       return {
-        id: ab,
-        name: null !== (Ab = null === Mb || void 0 === Mb ? void 0 : Mb.name) && void 0 !== Ab ? Ab : ab,
-        callFormat: qE(ab),
-        nativeTools: uE(bb, ab)
+        id: tz,
+        name: null !== (Fz = null === Wz || void 0 === Wz ? void 0 : Wz.name) && void 0 !== Fz ? Fz : tz,
+        callFormat: QO(tz),
+        nativeTools: kO(zz, tz)
       }
     }
 
-    function KE(bb, ab) {
-      return "custom" !== bb ? function(bb, ab) {
-        if ("custom" === bb) return [];
-        const Ub = new Set(ab.map((bb => bb.id))),
-          Ab = QE[bb];
-        return Object.keys(Ab).flatMap((Mb => {
-          const Tb = Ab[Mb].find((bb => Ub.has(bb.id)));
-          return Tb ? [{
-            ...rE(bb, Tb.id, ab),
-            name: Tb.name,
-            tier: Mb
+    function LO(zz, tz) {
+      return "custom" !== zz ? function(zz, tz) {
+        if ("custom" === zz) return [];
+        const sz = new Set(tz.map((zz => zz.id))),
+          Fz = hO[zz];
+        return Object.keys(Fz).flatMap((Wz => {
+          const Xz = Fz[Wz].find((zz => sz.has(zz.id)));
+          return Xz ? [{
+            ...iO(zz, Xz.id, tz),
+            name: Xz.name,
+            tier: Wz
           }] : []
         }))
-      }(bb, ab) : ab.slice(0, 20).map((Ub => rE(bb, Ub.id, ab)))
+      }(zz, tz) : tz.slice(0, 20).map((sz => iO(zz, sz.id, tz)))
     }
 
-    function oE(bb) {
-      var ab;
-      return null !== (ab = bb.find((bb => "smart" === bb.tier))) && void 0 !== ab ? ab : bb[0]
+    function lO(zz) {
+      var tz;
+      return null !== (tz = zz.find((zz => "smart" === zz.tier))) && void 0 !== tz ? tz : zz[0]
     }
 
-    function lE(bb) {
-      var ab;
-      let Ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      return null !== (ab = bb.name) && void 0 !== ab ? ab : jE(bb.provider, bb.baseUrl, Ub)
+    function nO(zz) {
+      var tz;
+      let sz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      return null !== (tz = zz.name) && void 0 !== tz ? tz : HO(zz.provider, zz.baseUrl, sz)
     }
-    const tE = "bloxdAiHelperKeys",
-      wE = {
+    const aO = "bloxdAiHelperKeys",
+      qO = {
         keys: [],
         selected: null,
         remember: !1
       };
 
-    function sE(bb, ab) {
-      return bb.id === ab.id || "custom" === bb.provider && "custom" === ab.provider && bb.baseUrl === ab.baseUrl
+    function SO(zz, tz) {
+      return zz.id === tz.id || "custom" === zz.provider && "custom" === tz.provider && zz.baseUrl === tz.baseUrl
     }
 
-    function gE(bb) {
-      if ("custom" !== bb.provider) return !0;
+    function VO(zz) {
+      if ("custom" !== zz.provider) return !0;
       try {
-        var ab;
-        return new URL(null !== (ab = bb.baseUrl) && void 0 !== ab ? ab : "").protocol.startsWith("http")
+        var tz;
+        return new URL(null !== (tz = zz.baseUrl) && void 0 !== tz ? tz : "").protocol.startsWith("http")
       } catch {
         return !1
       }
     }
 
-    function CE(bb) {
+    function RO(zz) {
       try {
-        return "undefined" === typeof window ? null : window[bb]
-      } catch (ab) {
-        return console.warn(`AI Helper: no ${bb}`, ab), null
+        return "undefined" === typeof window ? null : window[zz]
+      } catch (tz) {
+        return console.warn(`AI Helper: no ${zz}`, tz), null
       }
     }
-    const VE = new class {
-      constructor(bb, ab) {
-        var Ub;
-        this.session = bb, this.local = ab, this.state = void 0, this.listeners = new Set, this.ownsRemembered = !1, this.lastUsedAt = 0, this.getState = () => this.state, this.subscribe = bb => (this.listeners.add(bb), () => {
-          this.listeners.delete(bb)
+    const pO = new class {
+      constructor(zz, tz) {
+        var sz;
+        this.session = zz, this.local = tz, this.state = void 0, this.listeners = new Set, this.ownsRemembered = !1, this.lastUsedAt = 0, this.getState = () => this.state, this.subscribe = zz => (this.listeners.add(zz), () => {
+          this.listeners.delete(zz)
         });
-        for (const Tb of [bb, ab]) null !== Tb && void 0 !== Tb && Tb.getItem(tE) && !this.read(Tb) && Tb.removeItem(tE);
-        const Ab = this.read(bb),
-          Mb = this.read(ab);
-        this.state = null !== Ab && void 0 !== Ab && Ab.remember ? null !== Mb && void 0 !== Mb && Mb.remember ? Mb : {
-          ...Ab,
+        for (const Xz of [zz, tz]) null !== Xz && void 0 !== Xz && Xz.getItem(aO) && !this.read(Xz) && Xz.removeItem(aO);
+        const Fz = this.read(zz),
+          Wz = this.read(tz);
+        this.state = null !== Fz && void 0 !== Fz && Fz.remember ? null !== Wz && void 0 !== Wz && Wz.remember ? Wz : {
+          ...Fz,
           remember: !1
-        } : null !== (Ub = null !== Ab && void 0 !== Ab ? Ab : Mb) && void 0 !== Ub ? Ub : wE, this.ownsRemembered = this.state.remember && null !== Mb
+        } : null !== (sz = null !== Fz && void 0 !== Fz ? Fz : Wz) && void 0 !== sz ? sz : qO, this.ownsRemembered = this.state.remember && null !== Wz
       }
       nextUsedAt() {
         return this.lastUsedAt = Math.max(Date.now(), this.lastUsedAt + 1), this.lastUsedAt
       }
       activeKey() {
-        const bb = this.state.selected,
-          ab = bb ? this.state.keys.find((ab => ab.id === bb.keyId)) : void 0,
-          Ub = null === ab || void 0 === ab ? void 0 : ab.models.find((ab => ab.id === (null === bb || void 0 === bb ? void 0 : bb.modelId)));
-        return ab && Ub ? {
-          ...ab,
-          model: Ub
+        const zz = this.state.selected,
+          tz = zz ? this.state.keys.find((tz => tz.id === zz.keyId)) : void 0,
+          sz = null === tz || void 0 === tz ? void 0 : tz.models.find((tz => tz.id === (null === zz || void 0 === zz ? void 0 : zz.modelId)));
+        return tz && sz ? {
+          ...tz,
+          model: sz
         } : null
       }
-      addKey(bb, ab, Ub) {
-        var Ab, Mb, Tb;
-        const Eb = this.state.keys.find((ab => "custom" === ab.provider && ab.baseUrl === bb.baseUrl)),
-          Yb = "custom" !== bb.provider ? bb.provider : null !== (Ab = null === Eb || void 0 === Eb ? void 0 : Eb.id) && void 0 !== Ab ? Ab : `custom-${Date.now().toString(36)}${Math.random().toString(36).slice(2,6)}`,
-          Bb = void 0 === ab ? oE(bb.models) : null !== (Mb = bb.models.find((bb => bb.id === ab))) && void 0 !== Mb ? Mb : bb.models[0],
-          eb = this.state.keys.find((bb => bb.id === Yb)),
-          vb = {
-            ...bb,
-            id: Yb,
+      addKey(zz, tz, sz) {
+        var Fz, Wz, Xz;
+        const Oz = this.state.keys.find((tz => "custom" === tz.provider && tz.baseUrl === zz.baseUrl)),
+          oz = "custom" !== zz.provider ? zz.provider : null !== (Fz = null === Oz || void 0 === Oz ? void 0 : Oz.id) && void 0 !== Fz ? Fz : `custom-${Date.now().toString(36)}${Math.random().toString(36).slice(2,6)}`,
+          vz = void 0 === tz ? lO(zz.models) : null !== (Wz = zz.models.find((zz => zz.id === tz))) && void 0 !== Wz ? Wz : zz.models[0],
+          Uz = this.state.keys.find((zz => zz.id === oz)),
+          Kz = {
+            ...zz,
+            id: oz,
             usedAt: this.nextUsedAt(),
-            ...Bb ? {
-              usedModelId: Bb.id
+            ...vz ? {
+              usedModelId: vz.id
             } : {},
-            ...null !== eb && void 0 !== eb && eb.name && !bb.name ? {
-              name: eb.name
+            ...null !== Uz && void 0 !== Uz && Uz.name && !zz.name ? {
+              name: Uz.name
             } : {}
           },
-          Lb = this.state.keys.every((bb => bb.id !== Yb)),
-          Pb = void 0 !== Ub && Ub !== Yb && this.state.keys.some((bb => bb.id === Ub)),
-          Xb = Pb ? this.state.keys.filter((bb => bb.id !== Yb)).map((bb => bb.id === Ub ? vb : bb)) : Lb ? [...this.state.keys, vb] : this.state.keys.map((bb => bb.id === Yb ? vb : bb)),
-          jb = Bb ? {
-            keyId: Yb,
-            modelId: Bb.id
-          } : (null === (Tb = this.state.selected) || void 0 === Tb ? void 0 : Tb.keyId) === Ub && Pb ? null : this.state.selected;
+          uz = this.state.keys.every((zz => zz.id !== oz)),
+          Nz = void 0 !== sz && sz !== oz && this.state.keys.some((zz => zz.id === sz)),
+          bz = Nz ? this.state.keys.filter((zz => zz.id !== oz)).map((zz => zz.id === sz ? Kz : zz)) : uz ? [...this.state.keys, Kz] : this.state.keys.map((zz => zz.id === oz ? Kz : zz)),
+          wz = vz ? {
+            keyId: oz,
+            modelId: vz.id
+          } : (null === (Xz = this.state.selected) || void 0 === Xz ? void 0 : Xz.keyId) === sz && Nz ? null : this.state.selected;
         return this.update({
-          keys: Xb,
-          selected: jb
-        }), Yb
+          keys: bz,
+          selected: wz
+        }), oz
       }
-      renameKey(bb, ab) {
-        const Ub = ab.replace(/\s+/g, " ").trim().slice(0, 30);
+      renameKey(zz, tz) {
+        const sz = tz.replace(/\s+/g, " ").trim().slice(0, 30);
         this.update({
-          keys: this.state.keys.map((ab => {
-            if (ab.id !== bb) return ab;
+          keys: this.state.keys.map((tz => {
+            if (tz.id !== zz) return tz;
             const {
-              name: Ab,
-              ...Mb
-            } = ab;
-            return "" === Ub ? Mb : {
-              ...Mb,
-              name: Ub
+              name: Fz,
+              ...Wz
+            } = tz;
+            return "" === sz ? Wz : {
+              ...Wz,
+              name: sz
             }
           }))
         })
       }
-      select(bb) {
-        const ab = this.nextUsedAt(),
-          Ub = null === bb ? this.state.keys : this.state.keys.map((Ub => Ub.id === bb.keyId ? {
-            ...Ub,
-            usedAt: ab,
-            usedModelId: bb.modelId
-          } : Ub));
+      select(zz) {
+        const tz = this.nextUsedAt(),
+          sz = null === zz ? this.state.keys : this.state.keys.map((sz => sz.id === zz.keyId ? {
+            ...sz,
+            usedAt: tz,
+            usedModelId: zz.modelId
+          } : sz));
         this.update({
-          keys: Ub,
-          selected: bb
+          keys: sz,
+          selected: zz
         })
       }
-      refreshModels(bb, ab, Ub) {
-        const Ab = this.state.keys.find((ab => ab.id === bb));
-        if (!Ab || Ub && (Ab.key !== Ub.key || Ab.baseUrl !== Ub.baseUrl)) return !1;
-        const Mb = [...ab.map((bb => {
-            const ab = Ab.models.find((ab => ab.id === bb.id));
+      refreshModels(zz, tz, sz) {
+        const Fz = this.state.keys.find((tz => tz.id === zz));
+        if (!Fz || sz && (Fz.key !== sz.key || Fz.baseUrl !== sz.baseUrl)) return !1;
+        const Wz = [...tz.map((zz => {
+            const tz = Fz.models.find((tz => tz.id === zz.id));
             return {
-              ...bb,
-              ...!1 === (null === ab || void 0 === ab ? void 0 : ab.nativeTools) ? {
+              ...zz,
+              ...!1 === (null === tz || void 0 === tz ? void 0 : tz.nativeTools) ? {
                 nativeTools: !1
               } : {},
-              ...null !== ab && void 0 !== ab && ab.typed ? {
+              ...null !== tz && void 0 !== tz && tz.typed ? {
                 typed: !0
               } : {}
             }
-          })), ...Ab.models.filter((bb => bb.typed && !ab.some((ab => ab.id === bb.id))))],
-          Tb = this.state.selected,
-          Eb = (null === Tb || void 0 === Tb ? void 0 : Tb.keyId) === bb && !Mb.some((bb => bb.id === Tb.modelId)),
-          Yb = oE(Mb);
+          })), ...Fz.models.filter((zz => zz.typed && !tz.some((tz => tz.id === zz.id))))],
+          Xz = this.state.selected,
+          Oz = (null === Xz || void 0 === Xz ? void 0 : Xz.keyId) === zz && !Wz.some((zz => zz.id === Xz.modelId)),
+          oz = lO(Wz);
         return this.update({
-          keys: this.state.keys.map((ab => ab.id === bb ? {
-            ...ab,
-            models: Mb
-          } : ab)),
-          selected: Eb ? Yb ? {
-            keyId: bb,
-            modelId: Yb.id
-          } : null : Tb
+          keys: this.state.keys.map((tz => tz.id === zz ? {
+            ...tz,
+            models: Wz
+          } : tz)),
+          selected: Oz ? oz ? {
+            keyId: zz,
+            modelId: oz.id
+          } : null : Xz
         }), !0
       }
-      stopNativeTools(bb, ab) {
+      stopNativeTools(zz, tz) {
         this.update({
-          keys: this.state.keys.map((Ub => {
-            if (Ub.id !== bb) return Ub;
-            const Ab = Ub.models.map((bb => bb.id === ab ? {
-              ...bb,
+          keys: this.state.keys.map((sz => {
+            if (sz.id !== zz) return sz;
+            const Fz = sz.models.map((zz => zz.id === tz ? {
+              ...zz,
               nativeTools: !1
-            } : bb));
+            } : zz));
             return {
-              ...Ub,
-              models: Ab
+              ...sz,
+              models: Fz
             }
           }))
         })
       }
-      removeKey(bb) {
-        var ab;
-        const Ub = this.state,
-          Ab = Ub.keys.findIndex((ab => ab.id === bb)),
-          Mb = Ub.keys[Ab];
-        if (!Mb) return () => {};
-        const Tb = Ub.keys.filter((ab => ab.id !== bb)),
-          Eb = (null === (ab = Ub.selected) || void 0 === ab ? void 0 : ab.keyId) === bb ? null : Ub.selected;
+      removeKey(zz) {
+        var tz;
+        const sz = this.state,
+          Fz = sz.keys.findIndex((tz => tz.id === zz)),
+          Wz = sz.keys[Fz];
+        if (!Wz) return () => {};
+        const Xz = sz.keys.filter((tz => tz.id !== zz)),
+          Oz = (null === (tz = sz.selected) || void 0 === tz ? void 0 : tz.keyId) === zz ? null : sz.selected;
         return this.update({
-          keys: Tb,
-          selected: Eb,
-          remember: Tb.length > 0 && Ub.remember
+          keys: Xz,
+          selected: Oz,
+          remember: Xz.length > 0 && sz.remember
         }), () => {
-          var ab;
-          const Tb = this.state.keys.some((bb => sE(bb, Mb)));
-          if (Tb) return;
-          const Eb = [...this.state.keys];
-          Eb.splice(Math.min(Ab, Eb.length), 0, Mb);
-          const Yb = (null === (ab = Ub.selected) || void 0 === ab ? void 0 : ab.keyId) === bb && null === this.state.selected;
+          var tz;
+          const Xz = this.state.keys.some((zz => SO(zz, Wz)));
+          if (Xz) return;
+          const Oz = [...this.state.keys];
+          Oz.splice(Math.min(Fz, Oz.length), 0, Wz);
+          const oz = (null === (tz = sz.selected) || void 0 === tz ? void 0 : tz.keyId) === zz && null === this.state.selected;
           this.update({
-            keys: Eb,
-            selected: Yb ? Ub.selected : this.state.selected,
-            remember: this.state.remember || Ub.remember
+            keys: Oz,
+            selected: oz ? sz.selected : this.state.selected,
+            remember: this.state.remember || sz.remember
           })
         }
       }
       removeAll() {
-        this.update(wE), this.local && null !== this.local.getItem(tE) && (this.local.setItem(tE, JSON.stringify(wE)), this.local.removeItem(tE))
+        this.update(qO), this.local && null !== this.local.getItem(aO) && (this.local.setItem(aO, JSON.stringify(qO)), this.local.removeItem(aO))
       }
-      setRemember(bb) {
-        var ab;
-        const Ub = bb && !this.ownsRemembered ? this.read(this.local) : null,
-          Ab = (null !== (ab = null === Ub || void 0 === Ub ? void 0 : Ub.keys) && void 0 !== ab ? ab : []).filter((bb => this.state.keys.every((ab => !sE(ab, bb)))));
+      setRemember(zz) {
+        var tz;
+        const sz = zz && !this.ownsRemembered ? this.read(this.local) : null,
+          Fz = (null !== (tz = null === sz || void 0 === sz ? void 0 : sz.keys) && void 0 !== tz ? tz : []).filter((zz => this.state.keys.every((tz => !SO(tz, zz)))));
         this.update({
-          remember: bb,
-          keys: [...Ab, ...this.state.keys]
+          remember: zz,
+          keys: [...Fz, ...this.state.keys]
         })
       }
-      otherTabChanged(bb) {
-        var ab;
+      otherTabChanged(zz) {
+        var tz;
         if (!this.state.remember) return;
-        const Ub = bb ? this.parse(bb) : null;
-        Ub ? (this.state = Ub, this.ownsRemembered = Ub.remember) : (this.ownsRemembered = !1, this.state = {
+        const sz = zz ? this.parse(zz) : null;
+        sz ? (this.state = sz, this.ownsRemembered = sz.remember) : (this.ownsRemembered = !1, this.state = {
           ...this.state,
           remember: !1
-        }), null === (ab = this.session) || void 0 === ab || ab.setItem(tE, JSON.stringify(this.state)), this.notify()
+        }), null === (tz = this.session) || void 0 === tz || tz.setItem(aO, JSON.stringify(this.state)), this.notify()
       }
       notify() {
-        for (const bb of this.listeners) bb()
+        for (const zz of this.listeners) zz()
       }
-      update(bb) {
-        var ab;
+      update(zz) {
+        var tz;
         this.state = {
           ...this.state,
-          ...bb
+          ...zz
         };
-        const Ub = JSON.stringify(this.state);
-        var Ab;
-        if (null === (ab = this.session) || void 0 === ab || ab.setItem(tE, Ub), this.state.remember && this.state.keys.length > 0) null === (Ab = this.local) || void 0 === Ab || Ab.setItem(tE, Ub), this.ownsRemembered = !0;
+        const sz = JSON.stringify(this.state);
+        var Fz;
+        if (null === (tz = this.session) || void 0 === tz || tz.setItem(aO, sz), this.state.remember && this.state.keys.length > 0) null === (Fz = this.local) || void 0 === Fz || Fz.setItem(aO, sz), this.ownsRemembered = !0;
         else if (this.ownsRemembered) {
-          var Mb, Tb;
-          if (0 === this.state.keys.length) null === (Tb = this.local) || void 0 === Tb || Tb.setItem(tE, JSON.stringify(wE));
-          null === (Mb = this.local) || void 0 === Mb || Mb.removeItem(tE), this.ownsRemembered = !1
+          var Wz, Xz;
+          if (0 === this.state.keys.length) null === (Xz = this.local) || void 0 === Xz || Xz.setItem(aO, JSON.stringify(qO));
+          null === (Wz = this.local) || void 0 === Wz || Wz.removeItem(aO), this.ownsRemembered = !1
         }
         this.notify()
       }
-      read(bb) {
-        const ab = null === bb || void 0 === bb ? void 0 : bb.getItem(tE);
-        return ab ? this.parse(ab) : null
+      read(zz) {
+        const tz = null === zz || void 0 === zz ? void 0 : zz.getItem(aO);
+        return tz ? this.parse(tz) : null
       }
-      parse(bb) {
+      parse(zz) {
         try {
-          const ab = {
-            ...wE,
-            ...JSON.parse(bb)
+          const tz = {
+            ...qO,
+            ...JSON.parse(zz)
           };
-          return Array.isArray(ab.keys) && ab.keys.every(gE) ? ab : (console.warn("AI Helper: saved keys are in a form this version doesn't read"), null)
-        } catch (ab) {
-          return console.warn("AI Helper: saved keys couldn't be read", ab instanceof Error ? ab.name : "error"), null
+          return Array.isArray(tz.keys) && tz.keys.every(VO) ? tz : (console.warn("AI Helper: saved keys are in a form this version doesn't read"), null)
+        } catch (tz) {
+          return console.warn("AI Helper: saved keys couldn't be read", tz instanceof Error ? tz.name : "error"), null
         }
       }
-    }(CE("sessionStorage"), CE("localStorage"));
+    }(RO("sessionStorage"), RO("localStorage"));
 
-    function OE() {
-      const bb = function() {
-          const [bb, ab] = (0, Ab.useState)(VE.getState);
-          return (0, Ab.useEffect)((() => (ab(VE.getState()), VE.subscribe((() => {
-            ab(VE.getState())
-          })))), []), bb
+    function fO() {
+      const zz = function() {
+          const [zz, tz] = (0, Fz.useState)(pO.getState);
+          return (0, Fz.useEffect)((() => (tz(pO.getState()), pO.subscribe((() => {
+            tz(pO.getState())
+          })))), []), zz
         }(),
-        ab = VE.activeKey();
+        tz = pO.activeKey();
       return {
-        ...bb,
-        active: ab,
-        isSelected: Ub => {
-          return (Ab = ab ? bb.selected : null) === (Mb = Ub) || null !== Ab && null !== Mb && Ab.keyId === Mb.keyId && Ab.modelId === Mb.modelId;
-          var Ab, Mb
+        ...zz,
+        active: tz,
+        isSelected: sz => {
+          return (Fz = tz ? zz.selected : null) === (Wz = sz) || null !== Fz && null !== Wz && Fz.keyId === Wz.keyId && Fz.modelId === Wz.modelId;
+          var Fz, Wz
         },
-        select: bb => {
-          VE.select(bb)
+        select: zz => {
+          pO.select(zz)
         },
-        removeKey: bb => VE.removeKey(bb),
-        renameKey: (bb, ab) => {
-          VE.renameKey(bb, ab)
+        removeKey: zz => pO.removeKey(zz),
+        renameKey: (zz, tz) => {
+          pO.renameKey(zz, tz)
         },
-        setRemember: bb => {
-          VE.setRemember(bb)
+        setRemember: zz => {
+          pO.setRemember(zz)
         }
       }
     }
-    async function cE(bb, ab) {
-      var Ub;
+    async function EO(zz, tz) {
+      var sz;
       let {
-        provider: Ab,
-        key: Mb,
-        baseUrl: Tb,
-        modelName: Eb
-      } = bb;
-      const Yb = null !== (Ub = null === Eb || void 0 === Eb ? void 0 : Eb.trim()) && void 0 !== Ub ? Ub : "";
-      let Bb = [];
+        provider: Fz,
+        key: Wz,
+        baseUrl: Xz,
+        modelName: Oz
+      } = zz;
+      const oz = null !== (sz = null === Oz || void 0 === Oz ? void 0 : Oz.trim()) && void 0 !== sz ? sz : "";
+      let vz = [];
       try {
-        Bb = (await hE(Ab, Mb, Tb).check(ab)).models
-      } catch (eb) {
-        if (!("custom" === Ab && eb instanceof RE && ("failed" === eb.problem || "noModel" === eb.problem))) throw eb
+        vz = (await MO(Fz, Wz, Xz).check(tz)).models
+      } catch (Uz) {
+        if (!("custom" === Fz && Uz instanceof BO && ("failed" === Uz.problem || "noModel" === Uz.problem))) throw Uz
       }
-      if (null !== ab && void 0 !== ab && ab.aborted) throw new DOMException("The AI key test was stopped", "AbortError");
-      return "" !== Yb ? [{
-        ...rE(Ab, Yb, Bb),
+      if (null !== tz && void 0 !== tz && tz.aborted) throw new DOMException("The AI key test was stopped", "AbortError");
+      return "" !== oz ? [{
+        ...iO(Fz, oz, vz),
         typed: !0
-      }] : KE(Ab, Bb)
+      }] : LO(Fz, vz)
     }
-    "undefined" !== typeof window && window.addEventListener("storage", (bb => {
-      bb.storageArea === CE("localStorage") && bb.key === tE && VE.otherTabChanged(bb.newValue)
+    "undefined" !== typeof window && window.addEventListener("storage", (zz => {
+      zz.storageArea === RO("localStorage") && zz.key === aO && pO.otherTabChanged(zz.newValue)
     }));
-    async function JE(bb, ab) {
-      let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Ab = hE(bb.provider, bb.key, bb.baseUrl);
-      let Mb = {
-        ...Ub,
-        callFormat: bb.model.callFormat,
-        tools: bb.model.nativeTools ? Ub.tools : void 0
+    async function zo(zz, tz) {
+      let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const Fz = MO(zz.provider, zz.key, zz.baseUrl);
+      let Wz = {
+        ...sz,
+        callFormat: zz.model.callFormat,
+        tools: zz.model.nativeTools ? sz.tools : void 0
       };
-      const Tb = async () => {
+      const Xz = async () => {
         try {
-          return await Ab.ask(bb.model.id, ab, Mb)
-        } catch (Ub) {
-          if (! function(bb, ab) {
-              var Ub, Ab, Mb;
-              return 0 !== (null !== (Ub = null === (Ab = ab.tools) || void 0 === Ab ? void 0 : Ab.length) && void 0 !== Ub ? Ub : 0) && bb instanceof RE && "failed" === bb.problem && (400 === bb.status || 404 === bb.status && /\btool/i.test(null !== (Mb = bb.detail) && void 0 !== Mb ? Mb : ""))
-            }(Ub, Mb)) throw Ub;
-          const Tb = {
-              ...Mb,
+          return await Fz.ask(zz.model.id, tz, Wz)
+        } catch (sz) {
+          if (! function(zz, tz) {
+              var sz, Fz, Wz;
+              return 0 !== (null !== (sz = null === (Fz = tz.tools) || void 0 === Fz ? void 0 : Fz.length) && void 0 !== sz ? sz : 0) && zz instanceof BO && "failed" === zz.problem && (400 === zz.status || 404 === zz.status && /\btool/i.test(null !== (Wz = zz.detail) && void 0 !== Wz ? Wz : ""))
+            }(sz, Wz)) throw sz;
+          const Xz = {
+              ...Wz,
               tools: void 0
             },
-            Eb = await Ab.ask(bb.model.id, ab, Tb);
-          return VE.stopNativeTools(bb.id, bb.model.id), Mb = Tb, Eb
+            Oz = await Fz.ask(zz.model.id, tz, Xz);
+          return pO.stopNativeTools(zz.id, zz.model.id), Wz = Xz, Oz
         }
       };
       try {
-        return await Tb()
-      } catch (Lb) {
-        var Eb, Yb;
-        if (!((vb = Lb) instanceof RE && void 0 !== vb.status && "noCredit" !== vb.problem && (429 === vb.status || 408 === vb.status || vb.status >= 500))) throw Lb;
-        return await (Bb = Math.min(null !== (Eb = null !== (Yb = Lb.retryAfterMs) && void 0 !== Yb ? Yb : Ub.retryWaitMs) && void 0 !== Eb ? Eb : 3e3, 2e4), eb = Ub.signal, new Promise(((bb, ab) => {
-          if (null !== eb && void 0 !== eb && eb.aborted) return void ab(new DOMException("The AI key request was stopped", "AbortError"));
-          const Ub = setTimeout(bb, Bb);
-          null === eb || void 0 === eb || eb.addEventListener("abort", (() => {
-            clearTimeout(Ub), ab(new DOMException("The AI key request was stopped", "AbortError"))
+        return await Xz()
+      } catch (uz) {
+        var Oz, oz;
+        if (!((Kz = uz) instanceof BO && void 0 !== Kz.status && "noCredit" !== Kz.problem && (429 === Kz.status || 408 === Kz.status || Kz.status >= 500))) throw uz;
+        return await (vz = Math.min(null !== (Oz = null !== (oz = uz.retryAfterMs) && void 0 !== oz ? oz : sz.retryWaitMs) && void 0 !== Oz ? Oz : 3e3, 2e4), Uz = sz.signal, new Promise(((zz, tz) => {
+          if (null !== Uz && void 0 !== Uz && Uz.aborted) return void tz(new DOMException("The AI key request was stopped", "AbortError"));
+          const sz = setTimeout(zz, vz);
+          null === Uz || void 0 === Uz || Uz.addEventListener("abort", (() => {
+            clearTimeout(sz), tz(new DOMException("The AI key request was stopped", "AbortError"))
           }), {
             once: !0
           })
-        }))), Tb()
+        }))), Xz()
       }
-      var Bb, eb, vb
+      var vz, Uz, Kz
     }
-    var nE = Ub(3309);
-    const SE = "Super Bot.xd",
-      bY = {
+    var to = sz(3309);
+    const so = "Super Bot.xd",
+      Fo = {
         ovh: {
-          name: SE,
+          name: so,
           temperature: .6,
           nativeTools: !0,
           callFormat: "qwenXml"
         },
         deepseek: {
-          name: SE,
+          name: so,
           temperature: 1,
           nativeTools: !0,
           callFormat: "deepseek"
         }
       };
-    const aY = "bloxdAiHelperSuperBot",
-      UY = "bloxdAiHelperDeepSeekNotice";
+    const Wo = "bloxdAiHelperSuperBot",
+      Xo = "bloxdAiHelperDeepSeekNotice";
 
-    function AY(bb) {
-      if ("deepseek" !== bb) return !0;
+    function Oo(zz) {
+      if ("deepseek" !== zz) return !0;
       try {
-        return "undefined" !== typeof window && "1" === window.localStorage.getItem(UY)
+        return "undefined" !== typeof window && "1" === window.localStorage.getItem(Xo)
       } catch {
         return !1
       }
     }
 
-    function MY() {
+    function oo() {
       try {
-        return "undefined" !== typeof window && "1" === window.sessionStorage.getItem(aY)
+        return "undefined" !== typeof window && "1" === window.sessionStorage.getItem(Wo)
       } catch {
         return !1
       }
     }
-    const TY = new class {
+    const vo = new class {
       constructor() {
-        this.state = void 0, this.listeners = new Set, this.refreshing = null, this.getState = () => this.state, this.subscribe = bb => (this.listeners.add(bb), () => {
-          this.listeners.delete(bb)
+        this.state = void 0, this.listeners = new Set, this.refreshing = null, this.getState = () => this.state, this.subscribe = zz => (this.listeners.add(zz), () => {
+          this.listeners.delete(zz)
         }), this.state = {
-          picked: MY(),
+          picked: oo(),
           status: null,
           canBuySuperRank: null
-        }, VE.subscribe((() => {
-          null !== VE.getState().selected && this.state.picked && this.update({
+        }, pO.subscribe((() => {
+          null !== pO.getState().selected && this.state.picked && this.update({
             picked: !1
           })
         }))
       }
       isAnswering() {
-        var bb;
-        return this.state.picked && "ok" === (null === (bb = this.state.status) || void 0 === bb ? void 0 : bb.availability)
+        var zz;
+        return this.state.picked && "ok" === (null === (zz = this.state.status) || void 0 === zz ? void 0 : zz.availability)
       }
-      GP() {
-        VE.select(null), this.update({
+      gb() {
+        pO.select(null), this.update({
           picked: !0
         })
       }
@@ -8154,105 +8154,105 @@ export const modules = {
           picked: !1
         })
       }
-      setStatus(bb) {
-        const ab = this.state.picked && eY(bb, this.state.canBuySuperRank) && AY(bb.provider);
+      setStatus(zz) {
+        const tz = this.state.picked && No(zz, this.state.canBuySuperRank) && Oo(zz.provider);
         this.update({
-          status: bb,
-          picked: ab
+          status: zz,
+          picked: tz
         })
       }
-      setCanBuySuperRank(bb) {
+      setCanBuySuperRank(zz) {
         const {
-          status: ab
+          status: tz
         } = this.state;
         this.update({
-          canBuySuperRank: bb,
-          picked: this.state.picked && (null === ab || eY(ab, bb))
+          canBuySuperRank: zz,
+          picked: this.state.picked && (null === tz || No(tz, zz))
         })
       }
       async refresh() {
-        return this.refreshing ??= (0, tM.postToGameServer)("/ai-helper/super-bot-xd/status", {}).then((bb => {
-          this.setStatus(bb)
-        })).catch((bb => {
-          console.warn("AI Helper: Super Bot.xd's usage couldn't be checked", bb)
+        return this.refreshing ??= (0, aW.postToGameServer)("/ai-helper/super-bot-xd/status", {}).then((zz => {
+          this.setStatus(zz)
+        })).catch((zz => {
+          console.warn("AI Helper: Super Bot.xd's usage couldn't be checked", zz)
         })).finally((() => {
           this.refreshing = null
         })), this.refreshing
       }
-      update(bb) {
+      update(zz) {
         this.state = {
           ...this.state,
-          ...bb
+          ...zz
         };
         try {
-          window.sessionStorage.setItem(aY, this.state.picked ? "1" : "0")
+          window.sessionStorage.setItem(Wo, this.state.picked ? "1" : "0")
         } catch {}
-        for (const ab of this.listeners) ab()
+        for (const tz of this.listeners) tz()
       }
     };
 
-    function EY() {
-      const [bb, ab] = (0, Ab.useState)(TY.getState);
-      return (0, Ab.useEffect)((() => (ab(TY.getState()), TY.subscribe((() => {
-        ab(TY.getState())
-      })))), []), bb
+    function Uo() {
+      const [zz, tz] = (0, Fz.useState)(vo.getState);
+      return (0, Fz.useEffect)((() => (tz(vo.getState()), vo.subscribe((() => {
+        tz(vo.getState())
+      })))), []), zz
     }
 
-    function YY(bb) {
-      var ab;
-      let Ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-      if (null === bb) return "Checking whether Super Bot.xd can answer for you\u2026";
-      switch (bb.availability) {
+    function Ko(zz) {
+      var tz;
+      let sz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+      if (null === zz) return "Checking whether Super Bot.xd can answer for you\u2026";
+      switch (zz.availability) {
         case "ok":
           return null;
         case "guest":
           return "Log in to use Super Bot.xd.";
         case "tooNew":
-          return `Super Bot.xd opens once your account is a week old: ${RY((null!==(ab=bb.availableFrom)&&void 0!==ab?ab:Ub)-Ub)} to go.`;
+          return `Super Bot.xd opens once your account is a week old: ${Bo((null!==(tz=zz.availableFrom)&&void 0!==tz?tz:sz)-sz)} to go.`;
         case "noUsageLeft":
-          return bb.isSuper ? `You've used this week's Super Bot.xd usage. It comes back ${function(bb,ab){const Ub=Math.ceil((bb-ab)/36e5);if(Ub<=24)return Ub<=1?"within the hour":`in ${Ub} hours`;return`in ${RY(bb-ab)}`}(bb.resetsAt,Ub)}.` : "0 usage remaining - upgrade to Super for a more powerful AI.";
+          return zz.isSuper ? `You've used this week's Super Bot.xd usage. It comes back ${function(zz,tz){const sz=Math.ceil((zz-tz)/36e5);if(sz<=24)return sz<=1?"within the hour":`in ${sz} hours`;return`in ${Bo(zz-tz)}`}(zz.resetsAt,sz)}.` : "0 usage remaining - upgrade to Super for a more powerful AI.";
         case "unavailable":
           return "Super Bot.xd can't answer right now. Try again later."
       }
     }
 
-    function BY(bb) {
-      return null !== bb && !bb.isSuper && "noUsageLeft" === bb.availability
+    function uo(zz) {
+      return null !== zz && !zz.isSuper && "noUsageLeft" === zz.availability
     }
 
-    function eY(bb, ab) {
-      return "ok" === bb.availability || !1 !== ab && BY(bb)
+    function No(zz, tz) {
+      return "ok" === zz.availability || !1 !== tz && uo(zz)
     }
 
-    function vY(bb) {
-      return !0 === bb.canBuySuperRank && BY(bb.status)
+    function bo(zz) {
+      return !0 === zz.canBuySuperRank && uo(zz.status)
     }
 
-    function LY(bb) {
-      return vY(bb) ? null : YY(bb.status)
+    function wo(zz) {
+      return bo(zz) ? null : Ko(zz.status)
     }
 
-    function PY(bb) {
-      return bb.picked && null === LY(bb)
+    function Do(zz) {
+      return zz.picked && null === wo(zz)
     }
 
-    function XY(bb) {
-      return bb.picked && vY(bb)
+    function go(zz) {
+      return zz.picked && bo(zz)
     }
 
-    function jY(bb) {
-      return `Usage left: ${bb.left}`
+    function Ho(zz) {
+      return `Usage left: ${zz.left}`
     }
 
-    function RY(bb) {
-      const ab = Math.max(1, Math.ceil(bb / EE.g));
-      return 1 === ab ? "1 day" : `${ab} days`
+    function Bo(zz) {
+      const tz = Math.max(1, Math.ceil(zz / UO.h));
+      return 1 === tz ? "1 day" : `${tz} days`
     }
 
-    function kY(bb, ab) {
-      const Ub = "unavailable" === bb ? YY(ab) : null;
-      if (Ub) return `${Ub} Bot.xd is answering instead.`;
-      switch (bb) {
+    function Po(zz, tz) {
+      const sz = "unavailable" === zz ? Ko(tz) : null;
+      if (sz) return `${sz} Bot.xd is answering instead.`;
+      switch (zz) {
         case "busy":
           return "Super Bot.xd is busy, so Bot.xd is answering this one.";
         case "tooLong":
@@ -8267,91 +8267,91 @@ export const modules = {
           return "Super Bot.xd couldn't answer, so Bot.xd is answering this one."
       }
     }
-    async function yY(bb) {
-      if (function(bb) {
-          var ab, Ub, Ab, Mb, Tb, Eb, Yb;
-          return bb.messages.length > 12 || bb.messages.some((bb => bb.content.length > lM)) || (null !== (ab = null === (Ub = bb.toolsJson) || void 0 === Ub ? void 0 : Ub.length) && void 0 !== ab ? ab : 0) > 1e5 || (null !== (Ab = null === (Mb = bb.request) || void 0 === Mb ? void 0 : Mb.length) && void 0 !== Ab ? Ab : 0) > lM || (null !== (Tb = null === (Eb = bb.code) || void 0 === Eb ? void 0 : Eb.length) && void 0 !== Tb ? Tb : 0) > lM || (null !== (Yb = bb.toolResults) && void 0 !== Yb ? Yb : []).some((bb => bb.text.length > 1e5))
-        }(bb)) return {
+    async function ro(zz) {
+      if (function(zz) {
+          var tz, sz, Fz, Wz, Xz, Oz, oz;
+          return zz.messages.length > 12 || zz.messages.some((zz => zz.content.length > nW)) || (null !== (tz = null === (sz = zz.toolsJson) || void 0 === sz ? void 0 : sz.length) && void 0 !== tz ? tz : 0) > 1e5 || (null !== (Fz = null === (Wz = zz.request) || void 0 === Wz ? void 0 : Wz.length) && void 0 !== Fz ? Fz : 0) > nW || (null !== (Xz = null === (Oz = zz.code) || void 0 === Oz ? void 0 : Oz.length) && void 0 !== Xz ? Xz : 0) > nW || (null !== (oz = zz.toolResults) && void 0 !== oz ? oz : []).some((zz => zz.text.length > 1e5))
+        }(zz)) return {
         outcome: "tooLarge"
       };
       try {
-        return await (0, tM.postToGameServer)("/ai-helper/super-bot-xd/ask", bb)
-      } catch (ab) {
-        if (ab instanceof YE.c && 413 === ab.httpCode) return {
+        return await (0, aW.postToGameServer)("/ai-helper/super-bot-xd/ask", zz)
+      } catch (tz) {
+        if (tz instanceof KO.e && 413 === tz.httpCode) return {
           outcome: "tooLarge"
         };
-        throw ab
+        throw tz
       }
     }
-    async function ZY(bb, ab) {
-      return ab ? await new Promise(((Ub, Ab) => {
-        const Mb = () => {
-          Ab(new DOMException("The Super Bot.xd request was stopped", "AbortError"))
+    async function Yo(zz, tz) {
+      return tz ? await new Promise(((sz, Fz) => {
+        const Wz = () => {
+          Fz(new DOMException("The Super Bot.xd request was stopped", "AbortError"))
         };
-        ab.aborted ? Mb() : (ab.addEventListener("abort", Mb, {
+        tz.aborted ? Wz() : (tz.addEventListener("abort", Wz, {
           once: !0
-        }), bb.then(Ub, Ab).finally((() => {
-          ab.removeEventListener("abort", Mb)
+        }), zz.then(sz, Fz).finally((() => {
+          tz.removeEventListener("abort", Wz)
         })))
-      })) : await bb
+      })) : await zz
     }
-    var DY = Ub(22),
-      zY = Ub(19),
-      xY = Ub(2132);
-    let iY = null;
+    var xo = sz(34),
+      mo = sz(30),
+      Jo = sz(2175);
+    let Io = null;
 
-    function fY() {
-      iY ??= Promise.resolve().then((() => Ub(2147))), iY.then((bb => {
+    function Co() {
+      Io ??= Promise.resolve().then((() => sz(2187))), Io.then((zz => {
         let {
-          purchasesAllowed: ab
-        } = bb;
-        TY.setCanBuySuperRank(ab())
-      }), (bb => {
-        iY = null, console.warn("AI Helper: couldn't find out whether Super rank is sold here", bb)
+          purchasesAllowed: tz
+        } = zz;
+        vo.setCanBuySuperRank(tz())
+      }), (zz => {
+        Io = null, console.warn("AI Helper: couldn't find out whether Super rank is sold here", zz)
       }))
     }
-    let mY = !1,
-      pY = null;
-    async function NY() {
-      if (mY) return !0;
-      mY = !0;
+    let eo = !1,
+      Zo = null;
+    async function Go() {
+      if (eo) return !0;
+      eo = !0;
       try {
-        var bb;
-        if (await TY.refresh(), !XY(TY.getState())) return !1;
+        var zz;
+        if (await vo.refresh(), !go(vo.getState())) return !1;
         document.activeElement instanceof HTMLElement && document.activeElement.blur();
         const [{
-          NotificationProvider: ab
+          NotificationProvider: tz
         }, {
-          WorldCodeAiOutOfUsage: Ab
-        }] = await Promise.all([Promise.resolve().then((() => Ub(1260))), Ub.e(346).then((() => Ub(60270)))]);
-        null === (bb = pY) || void 0 === bb || bb.tearDownNotification();
-        const Mb = ab.showCustomPopup({
-          body: bb => (0, Eb.jsx)(Ab, {
+          WorldCodeAiOutOfUsage: Fz
+        }] = await Promise.all([Promise.resolve().then((() => sz(1319))), sz.e(346).then((() => sz(60339)))]);
+        null === (zz = Zo) || void 0 === zz || zz.tearDownNotification();
+        const Wz = tz.showCustomPopup({
+          body: zz => (0, Oz.jsx)(Fz, {
             onGetSuperRank: () => {
-              bb(),
+              zz(),
                 function() {
-                  DY.m.IR("OpenStoreFromCodeEditor"), (0, xY.m)({
+                  xo.o.Yg("OpenStoreFromCodeEditor"), (0, Jo.p)({
                     mode: "self",
                     source: "codeEditorAi",
                     openItem: "superRank"
                   });
-                  const bb = DY.m.subscribe("appManagerUpdated|openEverythingMenuName", (() => {
-                    null === zY.c.get("openEverythingMenuName") && (DY.m.unsubscribe(bb), TY.refresh())
+                  const zz = xo.o.subscribe("appManagerUpdated|openEverythingMenuName", (() => {
+                    null === mo.b.get("openEverythingMenuName") && (xo.o.unsubscribe(zz), vo.refresh())
                   }))
                 }()
             }
           })
         });
-        return pY = Mb, Mb.getResult().finally((() => {
-          pY === Mb && (pY = null)
+        return Zo = Wz, Wz.getResult().finally((() => {
+          Zo === Wz && (Zo = null)
         })), !0
-      } catch (ab) {
-        return console.warn("AI Helper: the out of usage popup couldn't be opened", ab), !0
+      } catch (tz) {
+        return console.warn("AI Helper: the out of usage popup couldn't be opened", tz), !0
       } finally {
-        mY = !1
+        eo = !1
       }
     }
-    const WY = {
+    const To = {
         wood: ["Maple Log"],
         log: ["Maple Log"],
         logs: ["Maple Log"],
@@ -8429,7 +8429,7 @@ export const modules = {
         glowstone: ["Glow Lamp"],
         "sea lantern": ["Glow Lamp", "Lantern"]
       },
-      HY = {
+      co = {
         wooden: "wood",
         golden: "gold",
         oak: "maple",
@@ -8441,7 +8441,7 @@ export const modules = {
         egg: "orb",
         stained: ""
       },
-      IY = {
+      jo = {
         teleport: ["setPosition"],
         tp: ["setPosition"],
         heal: ["setHealth", "getHealth"],
@@ -8504,1240 +8504,1240 @@ export const modules = {
         green: ["sendMessage"],
         red: ["sendMessage"]
       },
-      dY = new Set("a an and are as at be but by can do does for from get got give go has have he her his how i if in into is it its make me my no not of on or our please so that the their them then there they this to u up us was we what when where which who will with you your want wanna like just also add let lets makes".split(" "));
+      Ao = new Set("a an and are as at be but by can do does for from get got give go has have he her his how i if in into is it its make me my no not of on or our please so that the their them then there they this to u up us was we what when where which who will with you your want wanna like just also add let lets makes".split(" "));
 
-    function FY(bb) {
-      return bb.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9]+/).filter((bb => bb.length > 1))
+    function yo(zz) {
+      return zz.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9]+/).filter((zz => zz.length > 1))
     }
 
-    function hY(bb) {
-      return bb.length > 4 && bb.endsWith("ies") ? `${bb.slice(0,-3)}y` : bb.length > 3 && bb.endsWith("s") && !bb.endsWith("ss") ? bb.slice(0, -1) : bb
+    function Mo(zz) {
+      return zz.length > 4 && zz.endsWith("ies") ? `${zz.slice(0,-3)}y` : zz.length > 3 && zz.endsWith("s") && !zz.endsWith("ss") ? zz.slice(0, -1) : zz
     }
 
-    function GY(bb) {
-      return new Set(FY(bb).map((bb => hY(bb))))
+    function ho(zz) {
+      return new Set(yo(zz).map((zz => Mo(zz))))
     }
-    const QY = /^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(|^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/gm;
+    const Qo = /^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(|^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/gm;
 
-    function qY(bb) {
-      return bb.split("\n").map((bb => bb.replace(/\/\/.*$/, "").replace(/(["'`])(?:\\.|(?!\1).)*\1/g, '""'))).join("\n").replace(/\/\*[^]*?\*\//g, (bb => bb.replace(/[^\n]/g, ""))).split("\n")
-    }
-
-    function uY(bb) {
-      let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const Ub = [],
-        Ab = new Set,
-        Mb = qY(ab ? bb : (0, La.s)(bb, /require(?=\s*\(\s*["'`](?:\.\.?\/|@plugins\/))/g, La.l, (() => "projectRequire"))),
-        Tb = new Set([...Mb.join("\n").matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)/g)].map((bb => bb[1])));
-      return Mb.forEach(((bb, ab) => {
-        for (const Mb of (0, La.f)(bb, /(global|window|document|process|require)\b\s*[.([]/g, La.l)) Ab.has(Mb[1]) || Tb.has(Mb[1]) || (Ab.add(Mb[1]), Ub.push(`Line ${ab+1} uses "${Mb[1]}", which World Code doesn't have, so it throws there. Callbacks need no export: function onPlayerJoin(playerId) {} is enough.`))
-      })), Ub
+    function ko(zz) {
+      return zz.split("\n").map((zz => zz.replace(/\/\/.*$/, "").replace(/(["'`])(?:\\.|(?!\1).)*\1/g, '""'))).join("\n").replace(/\/\*[^]*?\*\//g, (zz => zz.replace(/[^\n]/g, ""))).split("\n")
     }
 
-    function rY(bb) {
-      const ab = bb.split("\n"),
-        Ub = [];
-      return ab.forEach(((bb, Ab) => {
-        var Mb, Tb, Eb, Yb, Bb;
-        const eb = bb.indexOf("api.setCurrency(");
-        if (-1 === eb) return;
-        const vb = ab.slice(Ab, Ab + 3).join(" ").slice(eb),
-          Lb = vb.slice(0, vb.indexOf("}") + 1 || void 0),
-          Pb = null === (Mb = /amount\s*:\s*(\d+)/.exec(Lb)) || void 0 === Mb ? void 0 : Mb[1];
-        if (!/persistent\s*:\s*true/.test(Lb) || void 0 === Pb) return;
-        const Xb = [null !== (Tb = ab[Ab - 2]) && void 0 !== Tb ? Tb : "", null !== (Eb = ab[Ab - 1]) && void 0 !== Eb ? Eb : "", bb.slice(0, eb)].join(" ");
-        if (/\bif\s*\(|\belse\b|\?\s*$|&&\s*$/.test(Xb)) return;
-        const jb = null !== (Yb = null === (Bb = /api\.setCurrency\(\s*[^,]+,\s*["']([^"']+)["']/.exec(Lb)) || void 0 === Bb ? void 0 : Bb[1]) && void 0 !== Yb ? Yb : "coins";
-        Ub.push(`Line ${Ab+1} sets the saved "${jb}" back to ${Pb} each time it runs, so a player who rejoins loses what they had. Set it only when api.getCurrencyAmount(playerId, "${jb}") is null.`)
-      })), Ub
+    function io(zz) {
+      let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const sz = [],
+        Fz = new Set,
+        Wz = ko(tz ? zz : (0, ut.v)(zz, /require(?=\s*\(\s*["'`](?:\.\.?\/|@plugins\/))/g, ut.n, (() => "projectRequire"))),
+        Xz = new Set([...Wz.join("\n").matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)/g)].map((zz => zz[1])));
+      return Wz.forEach(((zz, tz) => {
+        for (const Wz of (0, ut.e)(zz, /(global|window|document|process|require)\b\s*[.([]/g, ut.n)) Fz.has(Wz[1]) || Xz.has(Wz[1]) || (Fz.add(Wz[1]), sz.push(`Line ${tz+1} uses "${Wz[1]}", which World Code doesn't have, so it throws there. Callbacks need no export: function onPlayerJoin(playerId) {} is enough.`))
+      })), sz
     }
 
-    function KY(bb) {
-      var ab, Ub;
-      const Ab = null !== (ab = null === (Ub = bb.split("### Parameters:")[1]) || void 0 === Ub ? void 0 : Ub.split("###")[0]) && void 0 !== ab ? ab : "",
-        Mb = [];
-      for (const Tb of Ab.split("\n")) {
-        const bb = /^\|\s*([A-Za-z_$][\w$]*)\s*\|(?:\s*`([^`]*)`)?/.exec(Tb);
-        bb && "Parameter" !== bb[1] && Mb.push({
-          name: bb[1],
-          type: bb[2]
+    function Lo(zz) {
+      const tz = zz.split("\n"),
+        sz = [];
+      return tz.forEach(((zz, Fz) => {
+        var Wz, Xz, Oz, oz, vz;
+        const Uz = zz.indexOf("api.setCurrency(");
+        if (-1 === Uz) return;
+        const Kz = tz.slice(Fz, Fz + 3).join(" ").slice(Uz),
+          uz = Kz.slice(0, Kz.indexOf("}") + 1 || void 0),
+          Nz = null === (Wz = /amount\s*:\s*(\d+)/.exec(uz)) || void 0 === Wz ? void 0 : Wz[1];
+        if (!/persistent\s*:\s*true/.test(uz) || void 0 === Nz) return;
+        const bz = [null !== (Xz = tz[Fz - 2]) && void 0 !== Xz ? Xz : "", null !== (Oz = tz[Fz - 1]) && void 0 !== Oz ? Oz : "", zz.slice(0, Uz)].join(" ");
+        if (/\bif\s*\(|\belse\b|\?\s*$|&&\s*$/.test(bz)) return;
+        const wz = null !== (oz = null === (vz = /api\.setCurrency\(\s*[^,]+,\s*["']([^"']+)["']/.exec(uz)) || void 0 === vz ? void 0 : vz[1]) && void 0 !== oz ? oz : "coins";
+        sz.push(`Line ${Fz+1} sets the saved "${wz}" back to ${Nz} each time it runs, so a player who rejoins loses what they had. Set it only when api.getCurrencyAmount(playerId, "${wz}") is null.`)
+      })), sz
+    }
+
+    function no(zz) {
+      var tz, sz;
+      const Fz = null !== (tz = null === (sz = zz.split("### Parameters:")[1]) || void 0 === sz ? void 0 : sz.split("###")[0]) && void 0 !== tz ? tz : "",
+        Wz = [];
+      for (const Xz of Fz.split("\n")) {
+        const zz = /^\|\s*([A-Za-z_$][\w$]*)\s*\|(?:\s*`([^`]*)`)?/.exec(Xz);
+        zz && "Parameter" !== zz[1] && Wz.push({
+          name: zz[1],
+          type: zz[2]
         })
       }
-      return Mb
+      return Wz
     }
 
-    function oY(bb) {
-      return KY(bb).map((bb => bb.name))
+    function ao(zz) {
+      return no(zz).map((zz => zz.name))
     }
-    const lY = "(\"[^\"\\n]*\"|'[^'\\n]*')";
+    const qo = "(\"[^\"\\n]*\"|'[^'\\n]*')";
 
-    function tY(bb, ab) {
-      const Ub = [];
-      let Ab = 0,
-        Mb = "",
-        Tb = "",
-        Eb = ab;
-      for (let Yb = ab; Yb < bb.length; Yb++) {
-        const ab = bb[Yb];
-        if (Mb) "\\" === ab ? Yb++ : ab === Mb && (Mb = "");
-        else if ("/" === ab && "/" === bb[Yb + 1]) {
-          Tb += bb.slice(Eb, Yb);
-          const ab = bb.indexOf("\n", Yb);
-          Yb = -1 === ab ? bb.length : ab, Eb = Yb
-        } else if ('"' === ab || "'" === ab || "`" === ab) Mb = ab;
-        else if ("[" === ab || "{" === ab || "(" === ab) Ab++;
-        else if (("]" === ab || "}" === ab || ")" === ab) && Ab > 0) Ab--;
+    function So(zz, tz) {
+      const sz = [];
+      let Fz = 0,
+        Wz = "",
+        Xz = "",
+        Oz = tz;
+      for (let oz = tz; oz < zz.length; oz++) {
+        const tz = zz[oz];
+        if (Wz) "\\" === tz ? oz++ : tz === Wz && (Wz = "");
+        else if ("/" === tz && "/" === zz[oz + 1]) {
+          Xz += zz.slice(Oz, oz);
+          const tz = zz.indexOf("\n", oz);
+          oz = -1 === tz ? zz.length : tz, Oz = oz
+        } else if ('"' === tz || "'" === tz || "`" === tz) Wz = tz;
+        else if ("[" === tz || "{" === tz || "(" === tz) Fz++;
+        else if (("]" === tz || "}" === tz || ")" === tz) && Fz > 0) Fz--;
         else {
-          if (")" === ab) {
-            const ab = (Tb + bb.slice(Eb, Yb)).trim();
-            return "" !== ab || Ub.length > 0 ? [...Ub, ab] : Ub
+          if (")" === tz) {
+            const tz = (Xz + zz.slice(Oz, oz)).trim();
+            return "" !== tz || sz.length > 0 ? [...sz, tz] : sz
           }
-          "," === ab && 0 === Ab && (Ub.push((Tb + bb.slice(Eb, Yb)).trim()), Tb = "", Eb = Yb + 1)
+          "," === tz && 0 === Fz && (sz.push((Xz + zz.slice(Oz, oz)).trim()), Xz = "", Oz = oz + 1)
         }
       }
       return []
     }
 
-    function wY(bb, ab) {
-      var Ub;
-      if (!/^[A-Za-z_$][\w$]*$/.test(ab)) return;
-      const Ab = ab.replaceAll("$", "\\$"),
-        Mb = `\\((?:[^()]*[\\s,])?${Ab}(?![\\w$])[^()]*\\)`,
-        Tb = new RegExp(`(?:const|let|var)\\s+${Ab}(?![\\w$])|${Ab}\\s*(?:\\+?=(?![=>])|=>)|${Mb}\\s*=>|function\\s*[\\w$]*\\s*${Mb}`, "g");
-      return 1 === (0, La.f)(bb, Tb, La.l).length ? null === (Ub = new RegExp(`\\b(?:const|let|var)\\s+${Ab}\\s*=\\s*${lY}\\s*(?:;|//|$)`, "m").exec(bb)) || void 0 === Ub ? void 0 : Ub[1] : void 0
+    function Vo(zz, tz) {
+      var sz;
+      if (!/^[A-Za-z_$][\w$]*$/.test(tz)) return;
+      const Fz = tz.replaceAll("$", "\\$"),
+        Wz = `\\((?:[^()]*[\\s,])?${Fz}(?![\\w$])[^()]*\\)`,
+        Xz = new RegExp(`(?:const|let|var)\\s+${Fz}(?![\\w$])|${Fz}\\s*(?:\\+?=(?![=>])|=>)|${Wz}\\s*=>|function\\s*[\\w$]*\\s*${Wz}`, "g");
+      return 1 === (0, ut.e)(zz, Xz, ut.n).length ? null === (sz = new RegExp(`\\b(?:const|let|var)\\s+${Fz}\\s*=\\s*${qo}\\s*(?:;|//|$)`, "m").exec(zz)) || void 0 === sz ? void 0 : sz[1] : void 0
     }
 
-    function sY(bb, ab, Ub) {
-      let Ab;
-      const Mb = function(bb) {
-        const ab = bb.split("\n").slice(1).map((bb => bb.trim())).find((bb => "" !== bb && !bb.startsWith("#") && !bb.startsWith("|") && !bb.startsWith("**") && !bb.startsWith("```")));
-        if (!ab) return "";
-        const Ub = ab.search(/\.\s/),
-          Ab = -1 === Ub ? ab : ab.slice(0, Ub + 1);
-        return Ab.length > 110 ? `${Ab.slice(0,107)}...` : Ab
-      }(Ub);
-      return Ab = "api" === bb ? `api.${ab}(${oY(Ub).join(", ")})${Mb?` \u2014 ${Mb}`:""}` : "callback" === bb ? `${ab}(${oY(Ub).join(", ")})${Mb?` \u2014 ${Mb}`:""}` : "clientOption" === bb ? `${ab}: ${function(bb){var ab,Ub;return null!==(ab=null===(Ub=/\*\*Type:\*\*\s*`([^`]+)`/.exec(bb))||void 0===Ub?void 0:Ub[1])&&void 0!==ab?ab:""}(Ub)}${Mb?` \u2014 ${Mb}`:""}`:ab,{kind:bb,name:ab,text:Ub,line:Ab,nameWords:GY(ab),textWords:GY(Ub)}}function gY(bb){return bb.toLowerCase().split(/[^a-z0-9]+/).filter((bb=>""!==bb&&"of"!==bb&&"the"!==bb)).sort().join(" ")}const CY=new Set(["block","item"]);function VY(bb){let{names:ab,isSure:Ub}=bb;return 0===ab.length?"":1!==ab.length||Ub?`
+    function Ro(zz, tz, sz) {
+      let Fz;
+      const Wz = function(zz) {
+        const tz = zz.split("\n").slice(1).map((zz => zz.trim())).find((zz => "" !== zz && !zz.startsWith("#") && !zz.startsWith("|") && !zz.startsWith("**") && !zz.startsWith("```")));
+        if (!tz) return "";
+        const sz = tz.search(/\.\s/),
+          Fz = -1 === sz ? tz : tz.slice(0, sz + 1);
+        return Fz.length > 110 ? `${Fz.slice(0,107)}...` : Fz
+      }(sz);
+      return Fz = "api" === zz ? `api.${tz}(${ao(sz).join(", ")})${Wz?` \u2014 ${Wz}`:""}` : "callback" === zz ? `${tz}(${ao(sz).join(", ")})${Wz?` \u2014 ${Wz}`:""}` : "clientOption" === zz ? `${tz}: ${function(zz){var tz,sz;return null!==(tz=null===(sz=/\*\*Type:\*\*\s*`([^`]+)`/.exec(zz))||void 0===sz?void 0:sz[1])&&void 0!==tz?tz:""}(sz)}${Wz?` \u2014 ${Wz}`:""}`:tz,{kind:zz,name:tz,text:sz,line:Fz,nameWords:ho(tz),textWords:ho(sz)}}function po(zz){return zz.toLowerCase().split(/[^a-z0-9]+/).filter((zz=>""!==zz&&"of"!==zz&&"the"!==zz)).sort().join(" ")}const fo=new Set(["block","item"]);function Eo(zz){let{names:tz,isSure:sz}=zz;return 0===tz.length?"":1!==tz.length||sz?`
       Did you mean $ {
-        ab.map((bb => `"${bb}"`)).join(" or ")
+        tz.map((zz => `"${zz}"`)).join(" or ")
       } ? `:`
-      The closest name is "${ab[0]}", which may be something
+      The closest name is "${tz[0]}", which may be something
       else.
-      `}function OY(bb){return bb.split("\n").slice(1).map((bb=>bb.replace(/\s*\[[A-Z]+(?:,[A-Z]+)*\]\s*$/,"").trim())).filter((bb=>""!==bb&&!bb.startsWith("#")))}class cY{constructor(bb){this.sections=void 0,this.mobTypes=void 0,this.byName=new Map,this.itemAndBlockNames=void 0,this.blockNames=void 0,this.namesByLowerCase=void 0,this.wordCounts=new Map,this.realName=(bb,ab)=>{if("mob"===bb){var Ub;const bb=ab.trim().toLowerCase();return null!==(Ub=this.mobTypes.find((ab=>ab.toLowerCase()===bb)))&&void 0!==Ub?Ub:null}const Ab=this.suggestNames(ab),Mb=Ab.isSure?Ab.names[0]:void 0;return void 0===Mb||"item"!==bb&&!this.blockNames.has(Mb)?null:Mb};const ab=[],Ub=(bb,Ub)=>{for(const{name:Ab,text:Mb}of function(bb){const ab=[],Ub=bb.split(/^## /m).slice(1);for(const Ab of Ub){const bb=Ab.indexOf("\n"),Ub=(-1===bb?Ab:Ab.slice(0,bb)).trim(),Mb=`
+      `}function zv(zz){return zz.split("\n").slice(1).map((zz=>zz.replace(/\s*\[[A-Z]+(?:,[A-Z]+)*\]\s*$/,"").trim())).filter((zz=>""!==zz&&!zz.startsWith("#")))}class tv{constructor(zz){this.sections=void 0,this.mobTypes=void 0,this.byName=new Map,this.itemAndBlockNames=void 0,this.blockNames=void 0,this.namesByLowerCase=void 0,this.wordCounts=new Map,this.realName=(zz,tz)=>{if("mob"===zz){var sz;const zz=tz.trim().toLowerCase();return null!==(sz=this.mobTypes.find((tz=>tz.toLowerCase()===zz)))&&void 0!==sz?sz:null}const Fz=this.suggestNames(tz),Wz=Fz.isSure?Fz.names[0]:void 0;return void 0===Wz||"item"!==zz&&!this.blockNames.has(Wz)?null:Wz};const tz=[],sz=(zz,sz)=>{for(const{name:Fz,text:Wz}of function(zz){const tz=[],sz=zz.split(/^## /m).slice(1);for(const Fz of sz){const zz=Fz.indexOf("\n"),sz=(-1===zz?Fz:Fz.slice(0,zz)).trim(),Wz=`
       # # $ {
-        Ab
+        Fz
       }
-      `.replace(/\n\s*\n(\s*\n)+/g,"\n\n").trim();ab.push({name:Ub,text:Mb})}return ab}(Ub))ab.push(sY(bb,Ab,Mb))};Ub("api",bb.apiReference),Ub("callback",bb.callbacks),Ub("clientOption",bb.clientOptions),Ub("snippet",bb.snippets),Ub("howTo",bb.howTo);const Ab=function(){const bb=UA.map((bb=>`
+      `.replace(/\n\s*\n(\s*\n)+/g,"\n\n").trim();tz.push({name:sz,text:Wz})}return tz}(sz))tz.push(Ro(zz,Fz,Wz))};sz("api",zz.apiReference),sz("callback",zz.callbacks),sz("clientOption",zz.clientOptions),sz("snippet",zz.snippets),sz("howTo",zz.howTo);const Fz=function(){const zz=XF.map((zz=>`
       # # $ {
-        bb.name
+        zz.name
       }\
       nReady - made
       function($ {
-        bb.category
+        zz.category
       }) : call it as it is, without api.and without writing it;
       its code is added to the file by itself.\n$ {
-        bb.about
+        zz.about
       }\
-      n\ nUsage: \`${bb.signature}\`\n\n\`\`\`js\n${bb.example}\n\`\`\``)),
-  ab = vA.map((bb => `## ${bb.name}\nPrefab (${bb.kind}, ${bb.category}): put in with use_prefab. ${pA(bb,!1)}`));
+      n\ nUsage: \`${zz.signature}\`\n\n\`\`\`js\n${zz.example}\n\`\`\``)),
+  tz = bF.map((zz => `## ${zz.name}\nPrefab (${zz.kind}, ${zz.category}): put in with use_prefab. ${ZF(zz,!1)}`));
   return {
-    helpers: `# Ready-made functions\n\n${bb.join("\n\n")}\n`,
-    prefabs: `# Prefabs\n\n${ab.join("\n\n")}\n`
+    helpers: `# Ready-made functions\n\n${zz.join("\n\n")}\n`,
+    prefabs: `# Prefabs\n\n${tz.join("\n\n")}\n`
   }
 }();
-Ub("helper", Ab.helpers), Ub("prefab", Ab.prefabs), this.sections = ab;
-for (const Tb of ab) {
-  this.byName.has(Tb.name) || this.byName.set(Tb.name, Tb);
-  for (const bb of Tb.textWords) {
-    var Mb;
-    this.wordCounts.set(bb, (null !== (Mb = this.wordCounts.get(bb)) && void 0 !== Mb ? Mb : 0) + 1)
+sz("helper", Fz.helpers), sz("prefab", Fz.prefabs), this.sections = tz;
+for (const Xz of tz) {
+  this.byName.has(Xz.name) || this.byName.set(Xz.name, Xz);
+  for (const zz of Xz.textWords) {
+    var Wz;
+    this.wordCounts.set(zz, (null !== (Wz = this.wordCounts.get(zz)) && void 0 !== Wz ? Wz : 0) + 1)
   }
 }
-this.itemAndBlockNames = [...new Set([...OY(bb.itemNames), ...OY(bb.blockNames)])], this.blockNames = new Set(OY(bb.blockNames)), this.namesByLowerCase = new Map(this.itemAndBlockNames.map((bb => [bb.toLowerCase(), bb]))), this.mobTypes = function(bb) {
-  var ab, Ub;
-  const Ab = null !== (ab = null === (Ub = bb.split("## Mob Variations")[1]) || void 0 === Ub ? void 0 : Ub.split("```")[1]) && void 0 !== ab ? ab : "",
-    Mb = [];
-  for (const Tb of Ab.split("\n")) {
-    const bb = /^([A-Z][\w ]*?):\s*"/.exec(Tb.trim());
-    bb && Mb.push(bb[1])
+this.itemAndBlockNames = [...new Set([...zv(zz.itemNames), ...zv(zz.blockNames)])], this.blockNames = new Set(zv(zz.blockNames)), this.namesByLowerCase = new Map(this.itemAndBlockNames.map((zz => [zz.toLowerCase(), zz]))), this.mobTypes = function(zz) {
+  var tz, sz;
+  const Fz = null !== (tz = null === (sz = zz.split("## Mob Variations")[1]) || void 0 === sz ? void 0 : sz.split("```")[1]) && void 0 !== tz ? tz : "",
+    Wz = [];
+  for (const Xz of Fz.split("\n")) {
+    const zz = /^([A-Z][\w ]*?):\s*"/.exec(Xz.trim());
+    zz && Wz.push(zz[1])
   }
-  return Mb
-}(bb.mobSettings)
+  return Wz
+}(zz.mobSettings)
 }
-index(bb) {
-  return this.sections.filter((ab => ab.kind === bb)).map((bb => bb.line)).join("\n")
+index(zz) {
+  return this.sections.filter((tz => tz.kind === zz)).map((zz => zz.line)).join("\n")
 }
 callbackNames() {
-  return this.sections.filter((bb => "callback" === bb.kind)).map((bb => bb.name))
+  return this.sections.filter((zz => "callback" === zz.kind)).map((zz => zz.name))
 }
-get(bb) {
-  return this.byName.get(bb)
+get(zz) {
+  return this.byName.get(zz)
 }
-unprefixedApiCalls(bb) {
-  const ab = qY(bb),
-    Ub = ab.join("\n"),
-    Ab = new Set([...Ub.matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)|^([\w$]+)\s*=/gm)].map((bb => {
-      var ab;
-      return null !== (ab = bb[1]) && void 0 !== ab ? ab : bb[2]
+unprefixedApiCalls(zz) {
+  const tz = ko(zz),
+    sz = tz.join("\n"),
+    Fz = new Set([...sz.matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)|^([\w$]+)\s*=/gm)].map((zz => {
+      var tz;
+      return null !== (tz = zz[1]) && void 0 !== tz ? tz : zz[2]
     }))),
-    Mb = [...Ub.matchAll(/\b(?:const|let|var)\s*([{[][^=]*?[}\]])\s*=/g), ...Ub.matchAll(/\bimport\s+([\w$\s{},*]+?)\s+from\b/g)];
-  for (const Eb of Mb)
-    for (const bb of Eb[1].matchAll(/([\w$]+)\s*(?=[,}\]=]|$)/g)) Ab.add(bb[1]);
-  const Tb = new Map;
-  return ab.forEach(((bb, ab) => {
-    for (const Mb of (0, La.f)(bb, /([\w$]+)\s*\(/g, La.l)) {
-      var Ub;
-      const Eb = Mb[1],
-        Yb = /^\s*(?:async\s+)?$/.test(bb.slice(0, Mb.index)) && /^[\w$]+\s*\([^()]*\)\s*\{/.test(bb.slice(Mb.index));
-      Tb.has(Eb) || Ab.has(Eb) || Yb || "api" !== (null === (Ub = this.byName.get(Eb)) || void 0 === Ub ? void 0 : Ub.kind) || Tb.set(Eb, `Line ${ab+1} calls ${Eb} without "api.", so it throws there. Did you mean api.${Eb}?`)
+    Wz = [...sz.matchAll(/\b(?:const|let|var)\s*([{[][^=]*?[}\]])\s*=/g), ...sz.matchAll(/\bimport\s+([\w$\s{},*]+?)\s+from\b/g)];
+  for (const Oz of Wz)
+    for (const zz of Oz[1].matchAll(/([\w$]+)\s*(?=[,}\]=]|$)/g)) Fz.add(zz[1]);
+  const Xz = new Map;
+  return tz.forEach(((zz, tz) => {
+    for (const Wz of (0, ut.e)(zz, /([\w$]+)\s*\(/g, ut.n)) {
+      var sz;
+      const Oz = Wz[1],
+        oz = /^\s*(?:async\s+)?$/.test(zz.slice(0, Wz.index)) && /^[\w$]+\s*\([^()]*\)\s*\{/.test(zz.slice(Wz.index));
+      Xz.has(Oz) || Fz.has(Oz) || oz || "api" !== (null === (sz = this.byName.get(Oz)) || void 0 === sz ? void 0 : sz.kind) || Xz.set(Oz, `Line ${tz+1} calls ${Oz} without "api.", so it throws there. Did you mean api.${Oz}?`)
     }
-  })), [...Tb.values()]
+  })), [...Xz.values()]
 }
-unknownApiMethods(bb) {
-  return [...new Set([...bb.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)].map((bb => bb[1])))].filter((bb => {
-    var ab;
-    return "api" !== (null === (ab = this.byName.get(bb)) || void 0 === ab ? void 0 : ab.kind)
-  })).map((bb => {
-    const ab = this.find(bb.replace(/([a-z])([A-Z])/g, "$1 $2"), "", 20).filter((bb => "api" === bb.kind)).slice(0, 2).map((bb => `api.${bb.name}`));
-    return `api.${bb} doesn't exist.${ab.length?` Did you mean ${ab.join(" or ")}?`:""}`
+unknownApiMethods(zz) {
+  return [...new Set([...zz.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)].map((zz => zz[1])))].filter((zz => {
+    var tz;
+    return "api" !== (null === (tz = this.byName.get(zz)) || void 0 === tz ? void 0 : tz.kind)
+  })).map((zz => {
+    const tz = this.find(zz.replace(/([a-z])([A-Z])/g, "$1 $2"), "", 20).filter((zz => "api" === zz.kind)).slice(0, 2).map((zz => `api.${zz.name}`));
+    return `api.${zz} doesn't exist.${tz.length?` Did you mean ${tz.join(" or ")}?`:""}`
   }))
 }
-unknownItemNames(bb) {
-  const ab = new Set([...this.itemAndBlockNames, "Air"]),
-    Ub = new Set;
-  for (const Ab of bb.matchAll(/\bapi\.([A-Za-z_$][\w$]*)\(/g)) {
-    const Mb = this.byName.get(Ab[1]);
-    if ("api" !== (null === Mb || void 0 === Mb ? void 0 : Mb.kind)) continue;
-    const Tb = KY(Mb.text).map((bb => {
+unknownItemNames(zz) {
+  const tz = new Set([...this.itemAndBlockNames, "Air"]),
+    sz = new Set;
+  for (const Fz of zz.matchAll(/\bapi\.([A-Za-z_$][\w$]*)\(/g)) {
+    const Wz = this.byName.get(Fz[1]);
+    if ("api" !== (null === Wz || void 0 === Wz ? void 0 : Wz.kind)) continue;
+    const Xz = no(Wz.text).map((zz => {
         let {
-          type: ab
-        } = bb;
-        return void 0 !== ab && /^(ItemName|BlockName)\b/.test(ab)
+          type: tz
+        } = zz;
+        return void 0 !== tz && /^(ItemName|BlockName)\b/.test(tz)
       })),
-      Eb = tY(bb, Ab.index + Ab[0].length);
-    Eb.forEach(((Ab, Mb) => {
-      var Yb, Bb, eb, vb;
-      if (!Tb[Mb] && (Mb !== Eb.length - 1 || !Tb[Tb.length - 1])) return;
-      const Lb = null === (Yb = /^CONFIG\.([\w$]+)$/.exec(Ab)) || void 0 === Yb ? void 0 : Yb[1],
-        Pb = Lb ? null === (Bb = new RegExp(`(?:^|[{,])\\s*${Lb.replaceAll("$","\\$")}\\s*:\\s*${lY}`, "m").exec(bb)) || void 0 === Bb ? void 0 : Bb[1] : void 0,
-        Xb = wY(bb, Ab),
-        jb = null !== (eb = null === (vb = new RegExp(`\\?\\s*${lY}\\s*:\\s*${lY}$`).exec(Ab)) || void 0 === vb ? void 0 : vb.slice(1)) && void 0 !== eb ? eb : [];
-      for (const bb of [null !== (Rb = null !== Pb && void 0 !== Pb ? Pb : Xb) && void 0 !== Rb ? Rb : Ab, ...jb]) {
-        var Rb;
-        const Ab = /^(["'`])([^"'`]+)\1$/.exec(bb),
-          Mb = "`" === (null === Ab || void 0 === Ab ? void 0 : Ab[1]) && Ab[2].includes("${");
-        !Ab || Mb || ab.has(Ab[2]) || Ub.add(Ab[2])
+      Oz = So(zz, Fz.index + Fz[0].length);
+    Oz.forEach(((Fz, Wz) => {
+      var oz, vz, Uz, Kz;
+      if (!Xz[Wz] && (Wz !== Oz.length - 1 || !Xz[Xz.length - 1])) return;
+      const uz = null === (oz = /^CONFIG\.([\w$]+)$/.exec(Fz)) || void 0 === oz ? void 0 : oz[1],
+        Nz = uz ? null === (vz = new RegExp(`(?:^|[{,])\\s*${uz.replaceAll("$","\\$")}\\s*:\\s*${qo}`, "m").exec(zz)) || void 0 === vz ? void 0 : vz[1] : void 0,
+        bz = Vo(zz, Fz),
+        wz = null !== (Uz = null === (Kz = new RegExp(`\\?\\s*${qo}\\s*:\\s*${qo}$`).exec(Fz)) || void 0 === Kz ? void 0 : Kz.slice(1)) && void 0 !== Uz ? Uz : [];
+      for (const zz of [null !== (Dz = null !== Nz && void 0 !== Nz ? Nz : bz) && void 0 !== Dz ? Dz : Fz, ...wz]) {
+        var Dz;
+        const Fz = /^(["'`])([^"'`]+)\1$/.exec(zz),
+          Wz = "`" === (null === Fz || void 0 === Fz ? void 0 : Fz[1]) && Fz[2].includes("${");
+        !Fz || Wz || tz.has(Fz[2]) || sz.add(Fz[2])
       }
     }))
   }
-  return [...Ub].map((bb => `"${bb}" isn't an item or block name.${VY(this.suggestNames(bb))}`))
+  return [...sz].map((zz => `"${zz}" isn't an item or block name.${Eo(this.suggestNames(zz))}`))
 }
-reorderedComparedNames(bb) {
-  const ab = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
-    Ub = new Map(this.itemAndBlockNames.map((bb => [gY(bb), bb]))),
-    Ab = new Map,
-    Mb = [/[!=]==?\s*(["'])([^"'\n]{3,40})\1/g, /(["'])([^"'\n]{3,40})\1\s*[!=]==?/g, /\bcase\s+(["'])([^"'\n]{3,40})\1\s*:/g, /\.includes\(\s*(["'])([^"'\n]{3,40})\1\s*\)/g];
-  for (const Yb of Mb)
-    for (const Mb of bb.matchAll(Yb)) {
-      const bb = Mb[2],
-        Tb = ab.has(bb) || !/\s/.test(bb.trim()) ? void 0 : Ub.get(gY(bb));
-      Tb && Ab.set(bb, Tb)
+reorderedComparedNames(zz) {
+  const tz = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
+    sz = new Map(this.itemAndBlockNames.map((zz => [po(zz), zz]))),
+    Fz = new Map,
+    Wz = [/[!=]==?\s*(["'])([^"'\n]{3,40})\1/g, /(["'])([^"'\n]{3,40})\1\s*[!=]==?/g, /\bcase\s+(["'])([^"'\n]{3,40})\1\s*:/g, /\.includes\(\s*(["'])([^"'\n]{3,40})\1\s*\)/g];
+  for (const oz of Wz)
+    for (const Wz of zz.matchAll(oz)) {
+      const zz = Wz[2],
+        Xz = tz.has(zz) || !/\s/.test(zz.trim()) ? void 0 : sz.get(po(zz));
+      Xz && Fz.set(zz, Xz)
     }
-  const Tb = [...Ab].map((bb => {
-      let [ab, Ub] = bb;
-      return `"${ab}" isn't a block or item name, so comparing with it is never true. Did you mean "${Ub}"?`
+  const Xz = [...Fz].map((zz => {
+      let [tz, sz] = zz;
+      return `"${tz}" isn't a block or item name, so comparing with it is never true. Did you mean "${sz}"?`
     })),
-    Eb = new Map;
-  for (const Yb of bb.matchAll(/\b\w*block\w*\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) {
-    const ab = Yb[2],
-      Ub = this.blockNames.has(ab) || !this.itemAndBlockNames.includes(ab) ? void 0 : [`Block of ${ab}`, `${ab} Block`].find((bb => this.blockNames.has(bb)));
-    !Ub || bb.includes(`"${Ub}"`) || bb.includes(`'${Ub}'`) || Eb.set(ab, Ub)
+    Oz = new Map;
+  for (const oz of zz.matchAll(/\b\w*block\w*\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) {
+    const tz = oz[2],
+      sz = this.blockNames.has(tz) || !this.itemAndBlockNames.includes(tz) ? void 0 : [`Block of ${tz}`, `${tz} Block`].find((zz => this.blockNames.has(zz)));
+    !sz || zz.includes(`"${sz}"`) || zz.includes(`'${sz}'`) || Oz.set(tz, sz)
   }
-  return [...Tb, ...[...Eb].map((bb => {
-    let [ab, Ub] = bb;
-    return `"${ab}" is an item, not a block, so no block is ever called that. Did you mean "${Ub}"?`
+  return [...Xz, ...[...Oz].map((zz => {
+    let [tz, sz] = zz;
+    return `"${tz}" is an item, not a block, so no block is ever called that. Did you mean "${sz}"?`
   }))]
 }
-unknownComparedBlockNames(bb) {
-  const ab = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
-    Ub = new Set(this.itemAndBlockNames.map((bb => gY(bb)))),
-    Ab = new Set;
-  for (const Mb of bb.matchAll(/\b\w*block(?:name|type)?\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) Ab.add(Mb[2]);
-  for (const Mb of bb.matchAll(/(["'])([^"'\n]+)\1\s*[!=]==?\s*\w*block(?:name|type)?\b/gi)) Ab.add(Mb[2]);
-  return [...Ab].filter((bb => !ab.has(bb) && !(/\s/.test(bb.trim()) && Ub.has(gY(bb))))).map((bb => {
-    const ab = this.itemAndBlockNames.filter((ab => gY(ab) === gY(bb))),
-      Ub = this.itemAndBlockNames.filter((ab => FY(ab).includes(bb.toLowerCase()))),
-      Ab = this.suggestNames(bb),
-      Mb = ab.length > 0 ? {
-        names: ab,
-        isSure: 1 === ab.length,
+unknownComparedBlockNames(zz) {
+  const tz = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
+    sz = new Set(this.itemAndBlockNames.map((zz => po(zz)))),
+    Fz = new Set;
+  for (const Wz of zz.matchAll(/\b\w*block(?:name|type)?\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) Fz.add(Wz[2]);
+  for (const Wz of zz.matchAll(/(["'])([^"'\n]+)\1\s*[!=]==?\s*\w*block(?:name|type)?\b/gi)) Fz.add(Wz[2]);
+  return [...Fz].filter((zz => !tz.has(zz) && !(/\s/.test(zz.trim()) && sz.has(po(zz))))).map((zz => {
+    const tz = this.itemAndBlockNames.filter((tz => po(tz) === po(zz))),
+      sz = this.itemAndBlockNames.filter((tz => yo(tz).includes(zz.toLowerCase()))),
+      Fz = this.suggestNames(zz),
+      Wz = tz.length > 0 ? {
+        names: tz,
+        isSure: 1 === tz.length,
         isDecided: !0
-      } : Ab.names.length > 0 || Ab.isDecided ? Ab : {
-        names: Ub.length <= 2 ? Ub : [],
-        isSure: 1 === Ub.length,
+      } : Fz.names.length > 0 || Fz.isDecided ? Fz : {
+        names: sz.length <= 2 ? sz : [],
+        isSure: 1 === sz.length,
         isDecided: !1
       };
-    return `"${bb}" isn't a block or item name, so comparing a block with it is never true.${VY(Mb)}`
+    return `"${zz}" isn't a block or item name, so comparing a block with it is never true.${Eo(Wz)}`
   }))
 }
-madeUpStopValues(bb) {
-  const ab = new Set;
+madeUpStopValues(zz) {
+  const tz = new Set;
   for (const {
-      name: Ub,
-      body: Ab
+      name: sz,
+      body: Fz
     }
     of
-    function(bb) {
-      const ab = [...bb.matchAll(QY)];
-      return ab.map(((Ub, Ab) => {
-        var Mb, Tb, Eb;
+    function(zz) {
+      const tz = [...zz.matchAll(Qo)];
+      return tz.map(((sz, Fz) => {
+        var Wz, Xz, Oz;
         return {
-          name: null !== (Mb = Ub[1]) && void 0 !== Mb ? Mb : Ub[2],
-          body: bb.slice(Ub.index, null !== (Tb = null === (Eb = ab[Ab + 1]) || void 0 === Eb ? void 0 : Eb.index) && void 0 !== Tb ? Tb : bb.length)
+          name: null !== (Wz = sz[1]) && void 0 !== Wz ? Wz : sz[2],
+          body: zz.slice(sz.index, null !== (Xz = null === (Oz = tz[Fz + 1]) || void 0 === Oz ? void 0 : Oz.index) && void 0 !== Xz ? Xz : zz.length)
         }
       }))
-    }(bb)) {
-    const bb = this.byName.get(Ub);
-    if ("callback" === (null === bb || void 0 === bb ? void 0 : bb.kind))
-      for (const Mb of Ab.matchAll(/\breturn\s+["']((?:[Pp]revent|[Cc]ancel|[Ss]top|[Bb]lock|[Dd]eny)\w*)["']/g)) {
-        const Ab = Mb[1];
-        if (bb.text.includes(`"${Ab}"`)) continue;
-        const Tb = [...new Set([...bb.text.matchAll(/Return "(prevent[A-Za-z]*)"/g)].map((bb => bb[1])))],
-          Eb = Tb.length > 0 ? `Did you mean ${Tb.map((bb=>`"${bb}"`)).join(" or ")}?` : /Return false/i.test(bb.text) ? `To stop it, return false instead of "${Ab}".` : "Check Show Docs for what it can return.";
-        ab.add(`${Ub} can't use "${Ab}" to stop anything. ${Eb}`)
+    }(zz)) {
+    const zz = this.byName.get(sz);
+    if ("callback" === (null === zz || void 0 === zz ? void 0 : zz.kind))
+      for (const Wz of Fz.matchAll(/\breturn\s+["']((?:[Pp]revent|[Cc]ancel|[Ss]top|[Bb]lock|[Dd]eny)\w*)["']/g)) {
+        const Fz = Wz[1];
+        if (zz.text.includes(`"${Fz}"`)) continue;
+        const Xz = [...new Set([...zz.text.matchAll(/Return "(prevent[A-Za-z]*)"/g)].map((zz => zz[1])))],
+          Oz = Xz.length > 0 ? `Did you mean ${Xz.map((zz=>`"${zz}"`)).join(" or ")}?` : /Return false/i.test(zz.text) ? `To stop it, return false instead of "${Fz}".` : "Check Show Docs for what it can return.";
+        tz.add(`${sz} can't use "${Fz}" to stop anything. ${Oz}`)
       }
   }
-  return [...ab]
+  return [...tz]
 }
-codeWarnings(bb) {
-  let ab = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return [...this.unknownApiMethods(bb), ...this.unprefixedApiCalls(bb), ...this.unknownItemNames(bb), ...this.reorderedComparedNames(bb), ...this.unknownComparedBlockNames(bb), ...this.madeUpStopValues(bb), ...rY(bb), ...uY(bb, ab)]
+codeWarnings(zz) {
+  let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  return [...this.unknownApiMethods(zz), ...this.unprefixedApiCalls(zz), ...this.unknownItemNames(zz), ...this.reorderedComparedNames(zz), ...this.unknownComparedBlockNames(zz), ...this.madeUpStopValues(zz), ...Lo(zz), ...io(zz, tz)]
 }
-suggestNames(bb) {
-  var ab;
-  const Ub = bb.trim().toLowerCase().replace(/\s+/g, " "),
-    Ab = Object.hasOwn(WY, Ub) ? WY[Ub] : void 0;
-  if (Ab) {
-    const bb = Ab.filter((bb => this.namesByLowerCase.has(bb.toLowerCase())));
+suggestNames(zz) {
+  var tz;
+  const sz = zz.trim().toLowerCase().replace(/\s+/g, " "),
+    Fz = Object.hasOwn(To, sz) ? To[sz] : void 0;
+  if (Fz) {
+    const zz = Fz.filter((zz => this.namesByLowerCase.has(zz.toLowerCase())));
     return {
-      names: bb,
-      isSure: 1 === bb.length,
+      names: zz,
+      isSure: 1 === zz.length,
       isDecided: !0
     }
   }
-  const Mb = bb.trim().replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/\s+/).map((bb => Object.hasOwn(HY, bb) ? HY[bb] : bb)).filter(Boolean).join(" "),
-    Tb = null !== (ab = this.namesByLowerCase.get(Ub)) && void 0 !== ab ? ab : this.namesByLowerCase.get(Mb);
-  if (Tb) return {
-    names: [Tb],
+  const Wz = zz.trim().replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/\s+/).map((zz => Object.hasOwn(co, zz) ? co[zz] : zz)).filter(Boolean).join(" "),
+    Xz = null !== (tz = this.namesByLowerCase.get(sz)) && void 0 !== tz ? tz : this.namesByLowerCase.get(Wz);
+  if (Xz) return {
+    names: [Xz],
     isSure: !0,
     isDecided: !0
   };
-  const Eb = this.closestItemAndBlockNames(Mb),
-    Yb = bb => FY(bb).filter((bb => !dY.has(bb) && !CY.has(bb))).map(hY),
-    Bb = 1 === Eb.length ? Yb(Eb[0]) : [];
+  const Oz = this.closestItemAndBlockNames(Wz),
+    oz = zz => yo(zz).filter((zz => !Ao.has(zz) && !fo.has(zz))).map(Mo),
+    vz = 1 === Oz.length ? oz(Oz[0]) : [];
   return {
-    names: Eb,
-    isSure: 1 === Eb.length && Yb(Mb).every((bb => Bb.includes(bb))),
+    names: Oz,
+    isSure: 1 === Oz.length && oz(Wz).every((zz => vz.includes(zz))),
     isDecided: !1
   }
 }
-closestItemAndBlockNames(bb) {
-  const ab = new Set(FY(bb).filter((bb => !dY.has(bb))).map(hY)),
-    Ub = this.itemAndBlockNames.map((bb => {
-      const Ub = FY(bb).filter((bb => !dY.has(bb))).map(hY),
-        Ab = Ub.filter((bb => ab.has(bb))).length;
+closestItemAndBlockNames(zz) {
+  const tz = new Set(yo(zz).filter((zz => !Ao.has(zz))).map(Mo)),
+    sz = this.itemAndBlockNames.map((zz => {
+      const sz = yo(zz).filter((zz => !Ao.has(zz))).map(Mo),
+        Fz = sz.filter((zz => tz.has(zz))).length;
       return {
-        candidate: bb,
-        score: 2 * Ab - (Ub.length - Ab)
+        candidate: zz,
+        score: 2 * Fz - (sz.length - Fz)
       }
-    })).filter((bb => bb.score > 0)),
-    Ab = Math.max(...Ub.map((bb => bb.score)));
-  return Ub.filter((bb => bb.score === Ab)).slice(0, 2).map((bb => bb.candidate))
+    })).filter((zz => zz.score > 0)),
+    Fz = Math.max(...sz.map((zz => zz.score)));
+  return sz.filter((zz => zz.score === Fz)).slice(0, 2).map((zz => zz.candidate))
 }
-find(bb, ab, Ub) {
-  const Ab = new Map,
-    Mb = (bb, ab) => {
-      var Ub;
-      bb && Ab.set(bb, (null !== (Ub = Ab.get(bb)) && void 0 !== Ub ? Ub : 0) + ab)
+find(zz, tz, sz) {
+  const Fz = new Map,
+    Wz = (zz, tz) => {
+      var sz;
+      zz && Fz.set(zz, (null !== (sz = Fz.get(zz)) && void 0 !== sz ? sz : 0) + tz)
     },
-    Tb = FY(bb),
-    Eb = Tb.filter((bb => !dY.has(bb)));
-  for (const Lb of Tb)
-    for (const bb of Object.hasOwn(IY, Lb) ? IY[Lb] : []) Mb(this.byName.get(bb), 6);
-  for (const Lb of `${bb}\n${ab}`.matchAll(/\bapi\.(\w+)|\b(on[A-Z]\w+|tick|playerCommand)\b|"(\w+)"/g)) {
-    var Yb, Bb;
-    Mb(this.byName.get(null !== (Yb = null !== (Bb = Lb[1]) && void 0 !== Bb ? Bb : Lb[2]) && void 0 !== Yb ? Yb : Lb[3]), Lb[1] || Lb[2] ? 4 : 2)
+    Xz = yo(zz),
+    Oz = Xz.filter((zz => !Ao.has(zz)));
+  for (const uz of Xz)
+    for (const zz of Object.hasOwn(jo, uz) ? jo[uz] : []) Wz(this.byName.get(zz), 6);
+  for (const uz of `${zz}\n${tz}`.matchAll(/\bapi\.(\w+)|\b(on[A-Z]\w+|tick|playerCommand)\b|"(\w+)"/g)) {
+    var oz, vz;
+    Wz(this.byName.get(null !== (oz = null !== (vz = uz[1]) && void 0 !== vz ? vz : uz[2]) && void 0 !== oz ? oz : uz[3]), uz[1] || uz[2] ? 4 : 2)
   }
-  for (const Lb of (0, La.f)(ab, /([A-Za-z_$][\w$]*)\s*\(/g, La.l)) {
-    const bb = this.byName.get(Lb[1]);
-    "helper" === (null === bb || void 0 === bb ? void 0 : bb.kind) && Mb(bb, 3)
+  for (const uz of (0, ut.e)(tz, /([A-Za-z_$][\w$]*)\s*\(/g, ut.n)) {
+    const zz = this.byName.get(uz[1]);
+    "helper" === (null === zz || void 0 === zz ? void 0 : zz.kind) && Wz(zz, 3)
   }
-  const eb = new Set(Eb.map(hY));
-  for (const Lb of this.sections) {
-    let bb = 0;
-    for (const ab of eb) {
-      var vb;
-      const Ub = 1 / Math.log2(2 + (null !== (vb = this.wordCounts.get(ab)) && void 0 !== vb ? vb : 0));
-      Lb.nameWords.has(ab) ? bb += 3 * Ub : Lb.textWords.has(ab) && (bb += Ub)
+  const Uz = new Set(Oz.map(Mo));
+  for (const uz of this.sections) {
+    let zz = 0;
+    for (const tz of Uz) {
+      var Kz;
+      const sz = 1 / Math.log2(2 + (null !== (Kz = this.wordCounts.get(tz)) && void 0 !== Kz ? Kz : 0));
+      uz.nameWords.has(tz) ? zz += 3 * sz : uz.textWords.has(tz) && (zz += sz)
     }
-    Mb(Lb, bb)
+    Wz(uz, zz)
   }
-  return [...Ab.entries()].filter((bb => {
-    let [ab, Ub] = bb;
-    return Ub > .5 && "prefab" !== ab.kind
-  })).sort(((bb, ab) => ab[1] - bb[1])).slice(0, Ub).map((bb => {
-    let [ab] = bb;
-    return ab
+  return [...Fz.entries()].filter((zz => {
+    let [tz, sz] = zz;
+    return sz > .5 && "prefab" !== tz.kind
+  })).sort(((zz, tz) => tz[1] - zz[1])).slice(0, sz).map((zz => {
+    let [tz] = zz;
+    return tz
   }))
 }
-section(bb) {
-  var ab, Ub;
-  const Ab = bb.trim().replace(/^api\./, "").replace(/\(.*$/, ""),
-    Mb = Ab.toLowerCase();
-  return null !== (ab = null !== (Ub = this.byName.get(Ab)) && void 0 !== Ub ? Ub : this.sections.find((bb => bb.name.toLowerCase() === Mb))) && void 0 !== ab ? ab : null
+section(zz) {
+  var tz, sz;
+  const Fz = zz.trim().replace(/^api\./, "").replace(/\(.*$/, ""),
+    Wz = Fz.toLowerCase();
+  return null !== (tz = null !== (sz = this.byName.get(Fz)) && void 0 !== sz ? sz : this.sections.find((zz => zz.name.toLowerCase() === Wz))) && void 0 !== tz ? tz : null
 }
-searchNames(bb, ab) {
-  const Ub = FY(bb).filter((bb => !dY.has(bb))).map(hY);
-  if (0 === Ub.length) return [];
-  const Ab = [...this.itemAndBlockNames, ...this.mobTypes].flatMap((bb => {
-      const ab = new Set(FY(bb).map(hY)),
-        Ab = Ub.filter((bb => ab.has(bb))).length;
-      return 0 === Ab ? [] : [{
-        name: bb,
-        found: Ab,
-        length: ab.size
+searchNames(zz, tz) {
+  const sz = yo(zz).filter((zz => !Ao.has(zz))).map(Mo);
+  if (0 === sz.length) return [];
+  const Fz = [...this.itemAndBlockNames, ...this.mobTypes].flatMap((zz => {
+      const tz = new Set(yo(zz).map(Mo)),
+        Fz = sz.filter((zz => tz.has(zz))).length;
+      return 0 === Fz ? [] : [{
+        name: zz,
+        found: Fz,
+        length: tz.size
       }]
     })),
-    Mb = Math.max(0, ...Ab.map((bb => bb.found)));
-  return [...new Set(Ab.filter((bb => bb.found === Mb)).sort(((bb, ab) => bb.length - ab.length || bb.name.localeCompare(ab.name))).map((bb => bb.name)))].slice(0, ab)
+    Wz = Math.max(0, ...Fz.map((zz => zz.found)));
+  return [...new Set(Fz.filter((zz => zz.found === Wz)).sort(((zz, tz) => zz.length - tz.length || zz.name.localeCompare(tz.name))).map((zz => zz.name)))].slice(0, tz)
 }
-matchItemAndBlockNames(bb, ab) {
-  const Ub = new Set(FY(bb).map(hY)),
-    Ab = [];
-  for (const Mb of this.itemAndBlockNames) {
-    const bb = FY(Mb).filter((bb => !dY.has(bb))).map(hY);
-    bb.length > 0 && bb.every((bb => Ub.has(bb))) && Ab.push({
-      name: Mb,
-      length: bb.length
+matchItemAndBlockNames(zz, tz) {
+  const sz = new Set(yo(zz).map(Mo)),
+    Fz = [];
+  for (const Wz of this.itemAndBlockNames) {
+    const zz = yo(Wz).filter((zz => !Ao.has(zz))).map(Mo);
+    zz.length > 0 && zz.every((zz => sz.has(zz))) && Fz.push({
+      name: Wz,
+      length: zz.length
     })
   }
-  return Ab.sort(((bb, ab) => ab.length - bb.length)).slice(0, ab).map((bb => bb.name))
+  return Fz.sort(((zz, tz) => tz.length - zz.length)).slice(0, tz).map((zz => zz.name))
 }
 }
 
-function JY(bb, ab) {
-  var Ub;
-  const Ab = nY(bb, !0),
-    Mb = null === (Ub = /^([\w$.]+) (?:needs|couldn't|didn't|isn't a function)/.exec(Ab)) || void 0 === Ub ? void 0 : Ub[1],
-    Tb = Mb && void 0 !== ab ? function(bb, ab) {
-      const Ub = ab.replace(/[$.]/g, "\\$&"),
-        Ab = new RegExp(`(^|[^\\w$.])${Ub}\\s*\\(`),
-        Mb = bb.split("\n").flatMap(((bb, ab) => Ab.test(bb) ? [ab + 1] : []));
-      return 1 === Mb.length ? Mb[0] : void 0
-    }(ab, Mb) : void 0;
-  return Tb ? {
-    text: nY(bb, !1),
-    line: Tb
+function sv(zz, tz) {
+  var sz;
+  const Fz = Fv(zz, !0),
+    Wz = null === (sz = /^([\w$.]+) (?:needs|couldn't|didn't|isn't a function)/.exec(Fz)) || void 0 === sz ? void 0 : sz[1],
+    Xz = Wz && void 0 !== tz ? function(zz, tz) {
+      const sz = tz.replace(/[$.]/g, "\\$&"),
+        Fz = new RegExp(`(^|[^\\w$.])${sz}\\s*\\(`),
+        Wz = zz.split("\n").flatMap(((zz, tz) => Fz.test(zz) ? [tz + 1] : []));
+      return 1 === Wz.length ? Wz[0] : void 0
+    }(tz, Wz) : void 0;
+  return Xz ? {
+    text: Fv(zz, !1),
+    line: Xz
   } : {
-    text: Ab
+    text: Fz
   }
 }
 
-function nY(bb, ab) {
-  const Ub = bb.replace(/^Logging too many errors\n/, "").replace(/^(First|Last) error of \d+ errors:\n/, ""),
-    [Ab, ...Mb] = Ub.split("\n"),
+function Fv(zz, tz) {
+  const sz = zz.replace(/^Logging too many errors\n/, "").replace(/^(First|Last) error of \d+ errors:\n/, ""),
+    [Fz, ...Wz] = sz.split("\n"),
     {
-      when: Tb,
-      rest: Eb
-    } = function(bb) {
-      const ab = /^Error in world code init:\s*/.exec(bb);
-      if (ab) return {
+      when: Xz,
+      rest: Oz
+    } = function(zz) {
+      const tz = /^Error in world code init:\s*/.exec(zz);
+      if (tz) return {
         when: "when your world started",
-        rest: bb.slice(ab[0].length)
+        rest: zz.slice(tz[0].length)
       };
-      const Ub = /^Error in (?:callback )?(\w+):\s*/.exec(bb);
-      return Ub ? {
-        when: `in ${Ub[1]}`,
-        rest: bb.slice(Ub[0].length)
+      const sz = /^Error in (?:callback )?(\w+):\s*/.exec(zz);
+      return sz ? {
+        when: `in ${sz[1]}`,
+        rest: zz.slice(sz[0].length)
       } : {
         when: "",
-        rest: bb
+        rest: zz
       }
-    }(Ab.trim()),
-    Yb = Tb && ab ? ` ${Tb}` : "",
-    Bb = /(?:ApiError:\s*)?(\w+) didn't work/.exec(Eb);
-  if (Bb) {
-    var eb, vb, Lb, Pb, Xb;
-    const bb = /^Invalid argument #(\d+)(?:\s*\(([^)]*)\))?:?\s*(.*)$/.exec(null !== (eb = null === (vb = Mb[0]) || void 0 === vb ? void 0 : vb.trim()) && void 0 !== eb ? eb : ""),
-      ab = null === (Lb = /^Expected(?: type)?:?\s*(.*)$/.exec(null !== (Pb = null === (Xb = Mb[1]) || void 0 === Xb ? void 0 : Xb.trim()) && void 0 !== Pb ? Pb : "")) || void 0 === Lb ? void 0 : Lb[1],
-      Ub = ab ? function(bb) {
-        const ab = bb.split(/\s+or\s+/)[0].trim();
-        return /^(a|an|the)\s/i.test(ab) || !/^[a-z]/i.test(ab) ? ab : `${/^[aeiou]/i.test(ab)?"an":"a"} ${ab}`
-      }(ab) : void 0;
-    return Ub && null !== bb && void 0 !== bb && bb[3] ? `api.${Bb[1]} needs ${Ub}, but it got ${bb[3]}${Yb}.` : bb ? `api.${Bb[1]} couldn't use its ${jb=Number(bb[1]),1===jb?"first":2===jb?"second":3===jb?"third":4===jb?"fourth":`#${jb}`} argument${Yb}.${Ub?` It needs ${Ub}.`:""}` : `api.${Bb[1]} didn't work${Yb}.`
+    }(Fz.trim()),
+    oz = Xz && tz ? ` ${Xz}` : "",
+    vz = /(?:ApiError:\s*)?(\w+) didn't work/.exec(Oz);
+  if (vz) {
+    var Uz, Kz, uz, Nz, bz;
+    const zz = /^Invalid argument #(\d+)(?:\s*\(([^)]*)\))?:?\s*(.*)$/.exec(null !== (Uz = null === (Kz = Wz[0]) || void 0 === Kz ? void 0 : Kz.trim()) && void 0 !== Uz ? Uz : ""),
+      tz = null === (uz = /^Expected(?: type)?:?\s*(.*)$/.exec(null !== (Nz = null === (bz = Wz[1]) || void 0 === bz ? void 0 : bz.trim()) && void 0 !== Nz ? Nz : "")) || void 0 === uz ? void 0 : uz[1],
+      sz = tz ? function(zz) {
+        const tz = zz.split(/\s+or\s+/)[0].trim();
+        return /^(a|an|the)\s/i.test(tz) || !/^[a-z]/i.test(tz) ? tz : `${/^[aeiou]/i.test(tz)?"an":"a"} ${tz}`
+      }(tz) : void 0;
+    return sz && null !== zz && void 0 !== zz && zz[3] ? `api.${vz[1]} needs ${sz}, but it got ${zz[3]}${oz}.` : zz ? `api.${vz[1]} couldn't use its ${wz=Number(zz[1]),1===wz?"first":2===wz?"second":3===wz?"third":4===wz?"fourth":`#${wz}`} argument${oz}.${sz?` It needs ${sz}.`:""}` : `api.${vz[1]} didn't work${oz}.`
   }
-  var jb;
-  const Rb = /TypeError:\s*(?:(.+?) is )?not a function/.exec(Eb);
-  if (Rb) return Rb[1] ? `${Rb[1]} isn't a function${Yb}. Check its name is spelt exactly right.` : `Your code called something that isn't a function${Yb}. Check each name it calls is spelt exactly right.`;
-  const kb = /ReferenceError:\s*'?([^'\s]+)'? is not defined/.exec(Eb);
-  if (kb) return `${kb[1]} isn't defined${Yb}. Check the spelling, or create it before using it.`;
-  const yb = /TypeError:\s*[Cc]annot read propert(?:y|ies) (?:'([^']+)' )?of (undefined|null)(?: \(reading '([^']+)'\))?/.exec(Eb);
-  if (yb) {
-    var Zb;
-    const bb = null !== (Zb = yb[1]) && void 0 !== Zb ? Zb : yb[3];
-    return `Your code tried to read${bb?` .${bb}`:" something"} from ${yb[2]}${Yb}: a value it expected wasn't there.`
+  var wz;
+  const Dz = /TypeError:\s*(?:(.+?) is )?not a function/.exec(Oz);
+  if (Dz) return Dz[1] ? `${Dz[1]} isn't a function${oz}. Check its name is spelt exactly right.` : `Your code called something that isn't a function${oz}. Check each name it calls is spelt exactly right.`;
+  const gz = /ReferenceError:\s*'?([^'\s]+)'? is not defined/.exec(Oz);
+  if (gz) return `${gz[1]} isn't defined${oz}. Check the spelling, or create it before using it.`;
+  const Hz = /TypeError:\s*[Cc]annot read propert(?:y|ies) (?:'([^']+)' )?of (undefined|null)(?: \(reading '([^']+)'\))?/.exec(Oz);
+  if (Hz) {
+    var Bz;
+    const zz = null !== (Bz = Hz[1]) && void 0 !== Bz ? Bz : Hz[3];
+    return `Your code tried to read${zz?` .${zz}`:" something"} from ${Hz[2]}${oz}: a value it expected wasn't there.`
   }
-  return `Your code hit an error${Yb}: ${Eb.replace(/^\w*Error:\s*/,"")}`
+  return `Your code hit an error${oz}: ${Oz.replace(/^\w*Error:\s*/,"")}`
 }
-const SY = /^"([^"]+)" isn't an item or block name\..*Did you mean "([^"]+)"\?$/,
-  bB = /^"([^"]+)" isn't a block or item name, so comparing with it\b.*Did you mean "([^"]+)"\?$/,
-  aB = /^"([^"]+)" (?:is an item, not a block|isn't a block or item name, so comparing a block with it)\b.*Did you mean "([^"]+)"\?$/,
-  UB = /^([\w$]+) can't use "([^"]+)" to stop anything\. Did you mean "([^"]+)"\?$/,
-  AB = /^Line \d+ calls ([\w$]+) without "api\.", so it throws there\. Did you mean (api\.[\w$]+)\?$/,
-  MB = /^Line \d+ uses "([\w$]+)", which is never set, so it throws there\. Did you mean "([\w$]+)"\?$/,
-  TB = /^Line \d+ uses "global", which World Code doesn't have\b/,
-  EB = /^[ \t]*global\.([\w$]+)[ \t]*=[ \t]*\1[ \t]*;?[ \t]*(?:\/\/.*)?(?:\r?\n|$)/gm,
-  YB = /^([ \t]*)global\.([\w$]+)([ \t]*=(?!=))/gm;
+const Wv = /^"([^"]+)" isn't an item or block name\..*Did you mean "([^"]+)"\?$/,
+  Xv = /^"([^"]+)" isn't a block or item name, so comparing with it\b.*Did you mean "([^"]+)"\?$/,
+  Ov = /^"([^"]+)" (?:is an item, not a block|isn't a block or item name, so comparing a block with it)\b.*Did you mean "([^"]+)"\?$/,
+  ov = /^([\w$]+) can't use "([^"]+)" to stop anything\. Did you mean "([^"]+)"\?$/,
+  vv = /^Line \d+ calls ([\w$]+) without "api\.", so it throws there\. Did you mean (api\.[\w$]+)\?$/,
+  Uv = /^Line \d+ uses "([\w$]+)", which is never set, so it throws there\. Did you mean "([\w$]+)"\?$/,
+  Kv = /^Line \d+ uses "global", which World Code doesn't have\b/,
+  uv = /^[ \t]*global\.([\w$]+)[ \t]*=[ \t]*\1[ \t]*;?[ \t]*(?:\/\/.*)?(?:\r?\n|$)/gm,
+  Nv = /^([ \t]*)global\.([\w$]+)([ \t]*=(?!=))/gm;
 
-function BB(bb) {
-  const ab = AB.exec(bb);
-  if (ab) return {
-    from: ab[1],
-    to: ab[2],
+function bv(zz) {
+  const tz = vv.exec(zz);
+  if (tz) return {
+    from: tz[1],
+    to: tz[2],
     kind: "call"
   };
-  const Ub = MB.exec(bb);
-  if (Ub) return {
-    from: Ub[1],
-    to: Ub[2],
+  const sz = Uv.exec(zz);
+  if (sz) return {
+    from: sz[1],
+    to: sz[2],
     kind: "variable"
   };
-  if (TB.test(bb)) return {
+  if (Kv.test(zz)) return {
     from: "global",
     to: "",
     kind: "export"
   };
-  const Ab = UB.exec(bb);
-  if (Ab) return {
-    from: Ab[2],
-    to: Ab[3],
-    callback: Ab[1]
+  const Fz = ov.exec(zz);
+  if (Fz) return {
+    from: Fz[2],
+    to: Fz[3],
+    callback: Fz[1]
   };
-  const Mb = bB.exec(bb);
-  if (Mb) return {
-    from: Mb[1],
-    to: Mb[2],
+  const Wz = Xv.exec(zz);
+  if (Wz) return {
+    from: Wz[1],
+    to: Wz[2],
     kind: "compared"
   };
-  const Tb = aB.exec(bb);
-  if (Tb) return {
-    from: Tb[1],
-    to: Tb[2],
+  const Xz = Ov.exec(zz);
+  if (Xz) return {
+    from: Xz[1],
+    to: Xz[2],
     kind: "comparedBlock"
   };
-  const Eb = SY.exec(bb);
-  return Eb ? {
-    from: Eb[1],
-    to: Eb[2]
+  const Oz = Wv.exec(zz);
+  return Oz ? {
+    from: Oz[1],
+    to: Oz[2]
   } : void 0
 }
 
-function eB(bb) {
-  const ab = bb.map(BB);
-  return ab.length > 0 && !ab.includes(void 0) ? ab : void 0
+function wv(zz) {
+  const tz = zz.map(bv);
+  return tz.length > 0 && !tz.includes(void 0) ? tz : void 0
 }
 
-function vB(bb, ab, Ub) {
-  return bb.replaceAll(`"${ab}"`, `"${Ub}"`).replaceAll(`'${ab}'`, `'${Ub}'`)
+function Dv(zz, tz, sz) {
+  return zz.replaceAll(`"${tz}"`, `"${sz}"`).replaceAll(`'${tz}'`, `'${sz}'`)
 }
 
-function LB(bb, ab) {
-  const Ub = bb => mb().isIdentifier(bb) ? bb.text === ab : bb.elements.some((bb => !mb().isOmittedExpression(bb) && Ub(bb.name))),
-    Ab = bb => void 0 !== bb && mb().isVariableDeclarationList(bb) && bb.declarations.some((bb => Ub(bb.name))),
-    Mb = bb => {
-      const ab = bb => !mb().isFunctionLike(bb) && !mb().isClassStaticBlockDeclaration(bb) && (!(!mb().isVariableDeclarationList(bb) || 0 !== (bb.flags & mb().NodeFlags.BlockScoped) || !Ab(bb)) || !0 === mb().forEachChild(bb, ab));
-      return void 0 !== bb && !0 === mb().forEachChild(bb, ab)
+function gv(zz, tz) {
+  const sz = zz => Jz().isIdentifier(zz) ? zz.text === tz : zz.elements.some((zz => !Jz().isOmittedExpression(zz) && sz(zz.name))),
+    Fz = zz => void 0 !== zz && Jz().isVariableDeclarationList(zz) && zz.declarations.some((zz => sz(zz.name))),
+    Wz = zz => {
+      const tz = zz => !Jz().isFunctionLike(zz) && !Jz().isClassStaticBlockDeclaration(zz) && (!(!Jz().isVariableDeclarationList(zz) || 0 !== (zz.flags & Jz().NodeFlags.BlockScoped) || !Fz(zz)) || !0 === Jz().forEachChild(zz, tz));
+      return void 0 !== zz && !0 === Jz().forEachChild(zz, tz)
     };
-  var Tb;
-  if (mb().isFunctionLike(bb)) return bb.parameters.some((bb => Ub(bb.name))) || mb().isFunctionExpression(bb) && (null === (Tb = bb.name) || void 0 === Tb ? void 0 : Tb.text) === ab || "body" in bb && Mb(bb.body);
-  return !(!mb().isSourceFile(bb) || !Mb(bb)) || (mb().isSourceFile(bb) || mb().isBlock(bb) || mb().isCaseClause(bb) || mb().isDefaultClause(bb) ? bb.statements.some((bb => {
-    var Ub;
-    return mb().isVariableStatement(bb) && Ab(bb.declarationList) || (mb().isFunctionDeclaration(bb) || mb().isClassDeclaration(bb)) && (null === (Ub = bb.name) || void 0 === Ub ? void 0 : Ub.text) === ab || mb().isImportDeclaration(bb) && (bb => {
-      var Ub;
-      const Ab = null === bb || void 0 === bb ? void 0 : bb.namedBindings;
-      return (null === bb || void 0 === bb || null === (Ub = bb.name) || void 0 === Ub ? void 0 : Ub.text) === ab || void 0 !== Ab && (mb().isNamespaceImport(Ab) ? Ab.name.text === ab : Ab.elements.some((bb => bb.name.text === ab)))
-    })(bb.importClause)
-  })) : mb().isForStatement(bb) || mb().isForInStatement(bb) || mb().isForOfStatement(bb) ? Ab(bb.initializer) : mb().isCatchClause(bb) && void 0 !== bb.variableDeclaration && Ub(bb.variableDeclaration.name))
+  var Xz;
+  if (Jz().isFunctionLike(zz)) return zz.parameters.some((zz => sz(zz.name))) || Jz().isFunctionExpression(zz) && (null === (Xz = zz.name) || void 0 === Xz ? void 0 : Xz.text) === tz || "body" in zz && Wz(zz.body);
+  return !(!Jz().isSourceFile(zz) || !Wz(zz)) || (Jz().isSourceFile(zz) || Jz().isBlock(zz) || Jz().isCaseClause(zz) || Jz().isDefaultClause(zz) ? zz.statements.some((zz => {
+    var sz;
+    return Jz().isVariableStatement(zz) && Fz(zz.declarationList) || (Jz().isFunctionDeclaration(zz) || Jz().isClassDeclaration(zz)) && (null === (sz = zz.name) || void 0 === sz ? void 0 : sz.text) === tz || Jz().isImportDeclaration(zz) && (zz => {
+      var sz;
+      const Fz = null === zz || void 0 === zz ? void 0 : zz.namedBindings;
+      return (null === zz || void 0 === zz || null === (sz = zz.name) || void 0 === sz ? void 0 : sz.text) === tz || void 0 !== Fz && (Jz().isNamespaceImport(Fz) ? Fz.name.text === tz : Fz.elements.some((zz => zz.name.text === tz)))
+    })(zz.importClause)
+  })) : Jz().isForStatement(zz) || Jz().isForInStatement(zz) || Jz().isForOfStatement(zz) ? Fz(zz.initializer) : Jz().isCatchClause(zz) && void 0 !== zz.variableDeclaration && sz(zz.variableDeclaration.name))
 }
 
-function PB(bb, ab) {
-  return ab.reduce(((bb, ab) => {
+function Hv(zz, tz) {
+  return tz.reduce(((zz, tz) => {
     let {
-      from: Ub,
-      to: Ab,
-      kind: Mb,
-      callback: Tb
-    } = ab;
-    if ("export" === Mb) return bb.replace(EB, "").replace(YB, "$1$2$3");
-    if ("call" === Mb || "variable" === Mb) return function(bb, ab, Ub, Ab) {
-      const Mb = mb().createSourceFile("worldCode.js", bb, mb().ScriptTarget.Latest, !0, mb().ScriptKind.JS),
-        Tb = [],
-        Eb = (bb, Yb) => {
-          const Bb = Yb || LB(bb, ab),
-            eb = bb.parent;
-          if (mb().isIdentifier(bb) && bb.text === ab && !Bb && eb) {
-            const Eb = mb().isBindingElement(eb) && eb.propertyName === bb || (mb().isPropertyAccessExpression(eb) || mb().isPropertyAssignment(eb) || mb().isMethodDeclaration(eb) || mb().isPropertyDeclaration(eb) || mb().isGetAccessorDeclaration(eb) || mb().isSetAccessorDeclaration(eb)) && eb.name === bb,
-              Yb = mb().isCallExpression(eb) && eb.expression === bb;
-            Eb || Ab && !Yb || Tb.push({
-              at: bb.getStart(Mb),
-              text: mb().isShorthandPropertyAssignment(eb) ? `${ab}: ${Ub}` : Ub
+      from: sz,
+      to: Fz,
+      kind: Wz,
+      callback: Xz
+    } = tz;
+    if ("export" === Wz) return zz.replace(uv, "").replace(Nv, "$1$2$3");
+    if ("call" === Wz || "variable" === Wz) return function(zz, tz, sz, Fz) {
+      const Wz = Jz().createSourceFile("worldCode.js", zz, Jz().ScriptTarget.Latest, !0, Jz().ScriptKind.JS),
+        Xz = [],
+        Oz = (zz, oz) => {
+          const vz = oz || gv(zz, tz),
+            Uz = zz.parent;
+          if (Jz().isIdentifier(zz) && zz.text === tz && !vz && Uz) {
+            const Oz = Jz().isBindingElement(Uz) && Uz.propertyName === zz || (Jz().isPropertyAccessExpression(Uz) || Jz().isPropertyAssignment(Uz) || Jz().isMethodDeclaration(Uz) || Jz().isPropertyDeclaration(Uz) || Jz().isGetAccessorDeclaration(Uz) || Jz().isSetAccessorDeclaration(Uz)) && Uz.name === zz,
+              oz = Jz().isCallExpression(Uz) && Uz.expression === zz;
+            Oz || Fz && !oz || Xz.push({
+              at: zz.getStart(Wz),
+              text: Jz().isShorthandPropertyAssignment(Uz) ? `${tz}: ${sz}` : sz
             })
           }
-          mb().forEachChild(bb, (bb => {
-            Eb(bb, Bb)
+          Jz().forEachChild(zz, (zz => {
+            Oz(zz, vz)
           }))
         };
-      return Eb(Mb, !1), Tb.reduceRight(((bb, Ub) => bb.slice(0, Ub.at) + Ub.text + bb.slice(Ub.at + ab.length)), bb)
-    }(bb, Ub, Ab, "call" === Mb);
-    if ("compared" === Mb || "comparedBlock" === Mb) {
-      const ab = `(["'])${function(bb){return bb.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(Ub)}\\1`;
-      return ("comparedBlock" === Mb ? [`\\b\\w*[Bb]lock\\w*\\s*[!=]==?\\s*${ab}`, `${ab}\\s*[!=]==?\\s*\\w*[Bb]lock\\w*\\b`] : [`[!=]==?\\s*${ab}`, `${ab}\\s*[!=]==?`, `\\bcase\\s+${ab}\\s*:`, `\\.includes\\(\\s*${ab}\\s*\\)`]).reduce(((bb, ab) => bb.replace(new RegExp(ab, "g"), (bb => vB(bb, Ub, Ab)))), bb)
+      return Oz(Wz, !1), Xz.reduceRight(((zz, sz) => zz.slice(0, sz.at) + sz.text + zz.slice(sz.at + tz.length)), zz)
+    }(zz, sz, Fz, "call" === Wz);
+    if ("compared" === Wz || "comparedBlock" === Wz) {
+      const tz = `(["'])${function(zz){return zz.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(sz)}\\1`;
+      return ("comparedBlock" === Wz ? [`\\b\\w*[Bb]lock\\w*\\s*[!=]==?\\s*${tz}`, `${tz}\\s*[!=]==?\\s*\\w*[Bb]lock\\w*\\b`] : [`[!=]==?\\s*${tz}`, `${tz}\\s*[!=]==?`, `\\bcase\\s+${tz}\\s*:`, `\\.includes\\(\\s*${tz}\\s*\\)`]).reduce(((zz, tz) => zz.replace(new RegExp(tz, "g"), (zz => Dv(zz, sz, Fz)))), zz)
     }
-    if (void 0 !== Tb) {
-      return lb(bb).filter((bb => bb.name === Tb && bb.topLevel)).reduceRight(((bb, ab) => bb.slice(0, ab.from) + vB(bb.slice(ab.from, ab.to), Ub, Ab) + bb.slice(ab.to)), bb)
+    if (void 0 !== Xz) {
+      return iz(zz).filter((zz => zz.name === Xz && zz.topLevel)).reduceRight(((zz, tz) => zz.slice(0, tz.from) + Dv(zz.slice(tz.from, tz.to), sz, Fz) + zz.slice(tz.to)), zz)
     }
-    return vB(bb, Ub, Ab)
-  }), bb)
+    return Dv(zz, sz, Fz)
+  }), zz)
 }
 
-function XB(bb) {
+function Bv(zz) {
   let {
-    from: ab,
-    to: Ub,
-    kind: Ab
-  } = bb;
-  return "export" === Ab ? 'The "global." lines are gone: World Code finds your callbacks by their names.' : `"${ab}" is now "${Ub}".`
+    from: tz,
+    to: sz,
+    kind: Fz
+  } = zz;
+  return "export" === Fz ? 'The "global." lines are gone: World Code finds your callbacks by their names.' : `"${tz}" is now "${sz}".`
 }
-var jB = Ub(40581);
+var Pv = sz(40568);
 
-function RB() {
-  return (0, Eb.jsxs)("svg", {
+function rv() {
+  return (0, Oz.jsxs)("svg", {
     className: "WorldCodeAiKeyIcon",
     viewBox: "0 0 16 16",
     "aria-hidden": "true",
-    children: [(0, Eb.jsx)("circle", {
+    children: [(0, Oz.jsx)("circle", {
       cx: "4.5",
       cy: "8",
       r: "3"
-    }), (0, Eb.jsx)("path", {
+    }), (0, Oz.jsx)("path", {
       d: "M7.5 8h7.5M12.5 8v3M15 8v2.5"
     })]
   })
 }
 
-function kB(bb) {
+function Yv(zz) {
   let {
-    detail: ab,
-    onOpen: Ub
-  } = bb;
-  return (0, Eb.jsxs)("details", {
+    detail: tz,
+    onOpen: sz
+  } = zz;
+  return (0, Oz.jsxs)("details", {
     className: "WorldCodeAiKeyDetails",
-    onToggle: bb => {
-      bb.currentTarget.open && (null === Ub || void 0 === Ub || Ub())
+    onToggle: zz => {
+      zz.currentTarget.open && (null === sz || void 0 === sz || sz())
     },
-    children: [(0, Eb.jsx)("summary", {
+    children: [(0, Oz.jsx)("summary", {
       children: "Details"
-    }), (0, Eb.jsx)("p", {
-      children: ab
+    }), (0, Oz.jsx)("p", {
+      children: tz
     })]
   })
 }
 
-function yB(bb) {
+function xv(zz) {
   let {
-    answeredBy: ab
-  } = bb;
-  return "free" === ab ? (0, Eb.jsx)("div", {
+    answeredBy: tz
+  } = zz;
+  return "free" === tz ? (0, Oz.jsx)("div", {
     className: "WorldCodeAiAnsweredBy",
     children: "Bot.xd (free)"
-  }) : (0, Eb.jsxs)("div", {
-    className: ab.isSuperBot ? "WorldCodeAiAnsweredBy" : "WorldCodeAiAnsweredBy WorldCodeAiAnsweredBy-key",
-    children: [!ab.isSuperBot && (0, Eb.jsx)(RB, {}), ab.model]
+  }) : (0, Oz.jsxs)("div", {
+    className: tz.isSuperBot ? "WorldCodeAiAnsweredBy" : "WorldCodeAiAnsweredBy WorldCodeAiAnsweredBy-key",
+    children: [!tz.isSuperBot && (0, Oz.jsx)(rv, {}), tz.model]
   })
 }
 
-function ZB(bb) {
+function mv(zz) {
   let {
-    notice: ab,
-    model: Ub,
-    company: Ab,
-    isServer: Mb
-  } = bb;
-  switch (ab) {
+    notice: tz,
+    model: sz,
+    company: Fz,
+    isServer: Wz
+  } = zz;
+  switch (tz) {
     case "badKey":
-      return Mb ? `${Ab} didn't accept your key: it may be wrong or deleted.` : `${Ab} didn't accept your key: it may be wrong or deleted. Check it on ${Ab}'s website.`;
+      return Wz ? `${Fz} didn't accept your key: it may be wrong or deleted.` : `${Fz} didn't accept your key: it may be wrong or deleted. Check it on ${Fz}'s website.`;
     case "noCredit":
-      return Mb ? `${Ab} stopped your key for now: it has used all it can.` : `${Ab} stopped your key for now: it has used all it can. Check it on ${Ab}'s website.`;
+      return Wz ? `${Fz} stopped your key for now: it has used all it can.` : `${Fz} stopped your key for now: it has used all it can. Check it on ${Fz}'s website.`;
     case "busy":
-      return `Too many requests to ${Ub} right now. Wait a minute and try again.`;
+      return `Too many requests to ${sz} right now. Wait a minute and try again.`;
     case "noModel":
-      return `${Ab} can't find ${Ub}. Pick another model, or press Check for new models in AI settings.`;
+      return `${Fz} can't find ${sz}. Pick another model, or press Check for new models in AI settings.`;
     case "timeout":
-      return `${Ub} took too long to answer.`;
+      return `${sz} took too long to answer.`;
     case "unreachable":
-      return Mb ? `Couldn't reach ${Ab}. Check the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help.` : `Couldn't reach ${Ab}. Check your internet and your key.`;
+      return Wz ? `Couldn't reach ${Fz}. Check the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help.` : `Couldn't reach ${Fz}. Check your internet and your key.`;
     case "blocked":
-      return `${Ab} doesn't work from where you are.`;
+      return `${Fz} doesn't work from where you are.`;
     case "unchecked":
       return "Bloxd's safety check didn't answer, so your key wasn't used.";
     default:
-      return `${Ub} can't be used right now. Try again in a minute.`
+      return `${sz} can't be used right now. Try again in a minute.`
   }
 }
 
-function DB(bb) {
+function Jv(zz) {
   let {
-    notice: ab,
-    model: Ub,
-    company: Ab
-  } = bb;
-  switch (ab) {
+    notice: tz,
+    model: sz,
+    company: Fz
+  } = zz;
+  switch (tz) {
     case "badKey":
-      return `Not answered: ${Ab} didn't accept your key.`;
+      return `Not answered: ${Fz} didn't accept your key.`;
     case "noModel":
-      return `Not answered: ${Ab} couldn't find ${Ub}.`;
+      return `Not answered: ${Fz} couldn't find ${sz}.`;
     case "noCredit":
-      return `Not answered: ${Ab} stopped your key for now.`;
+      return `Not answered: ${Fz} stopped your key for now.`;
     case "busy":
-      return `Not answered: too many requests to ${Ub}.`;
+      return `Not answered: too many requests to ${sz}.`;
     case "timeout":
-      return `Not answered: ${Ub} took too long.`;
+      return `Not answered: ${sz} took too long.`;
     case "unreachable":
-      return `Not answered: couldn't reach ${Ab}.`;
+      return `Not answered: couldn't reach ${Fz}.`;
     case "blocked":
-      return `Not answered: ${Ab} doesn't work from where you are.`;
+      return `Not answered: ${Fz} doesn't work from where you are.`;
     case "unchecked":
       return "Not answered: the safety check didn't answer.";
     default:
-      return `Not answered: ${Ub} couldn't be used.`
+      return `Not answered: ${sz} couldn't be used.`
   }
 }
 
-function zB(bb) {
-  return "busy" === bb || "timeout" === bb || "failed" === bb || "unchecked" === bb
+function Iv(zz) {
+  return "busy" === zz || "timeout" === zz || "failed" === zz || "unchecked" === zz
 }
 
-function xB(bb) {
+function Cv(zz) {
   let {
-    notice: ab,
-    onRetry: Ub,
-    onUseFree: Ab,
-    onCheckKey: Mb
-  } = bb;
-  return (0, Eb.jsxs)("div", {
+    notice: tz,
+    onRetry: sz,
+    onUseFree: Fz,
+    onCheckKey: Wz
+  } = zz;
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiKeyNoticeActions",
-    children: [(0, Eb.jsx)("button", {
-      ...jB.g,
+    children: [(0, Oz.jsx)("button", {
+      ...Pv.f,
       className: "WorldCodeAiPrimaryButton",
-      onClick: Ab,
+      onClick: Fz,
       children: "Use Bot.xd for this one"
-    }), zB(ab) && (0, Eb.jsx)("button", {
+    }), Iv(tz) && (0, Oz.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: Ub,
+      onClick: sz,
       children: "Try again"
-    }), "unchecked" !== ab && (0, Eb.jsx)("button", {
+    }), "unchecked" !== tz && (0, Oz.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: Mb,
+      onClick: Wz,
       children: "Open AI settings"
     })]
   })
 }
 
-function iB(bb) {
+function ev(zz) {
   let {
-    hasCode: ab,
-    canFinish: Ub,
-    onFinish: Ab
-  } = bb;
-  return (0, Eb.jsxs)("div", {
+    hasCode: tz,
+    canFinish: sz,
+    onFinish: Fz
+  } = zz;
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiCutShort",
-    children: [(0, Eb.jsx)("p", {
-      children: ab ? "The answer was cut short because it was too long." : "The answer was cut short before its code because it was too long."
-    }), Ub && (0, Eb.jsx)("button", {
+    children: [(0, Oz.jsx)("p", {
+      children: tz ? "The answer was cut short because it was too long." : "The answer was cut short before its code because it was too long."
+    }), sz && (0, Oz.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: Ab,
+      onClick: Fz,
       children: "Finish the answer"
     })]
   })
 }
-const fB = "worldCodeAiAllowEdits";
+const Zv = "worldCodeAiAllowEdits";
 
-function mB() {
+function Gv() {
   try {
-    return "false" !== localStorage.getItem(fB)
+    return "false" !== localStorage.getItem(Zv)
   } catch {
     return !0
   }
 }
 
-function pB(bb) {
+function Tv(zz) {
   let {
-    allow: ab,
-    onChange: Ub
-  } = bb;
-  return (0, Eb.jsxs)("label", {
+    allow: tz,
+    onChange: sz
+  } = zz;
+  return (0, Oz.jsxs)("label", {
     className: "WorldCodeAiAllowEdits",
-    children: [(0, Eb.jsx)("input", {
+    children: [(0, Oz.jsx)("input", {
       type: "checkbox",
       role: "switch",
-      checked: ab,
-      onChange: bb => {
-        Ub(bb.target.checked)
+      checked: tz,
+      onChange: zz => {
+        sz(zz.target.checked)
       }
-    }), (0, Eb.jsx)("span", {
+    }), (0, Oz.jsx)("span", {
       children: "Allow AI to make edits to my code"
     })]
   })
 }
-const NB = {
+const cv = {
   keyId: "bloxd",
   modelId: "superbotxd"
 };
 
-function WB(bb, ab) {
-  const Ub = Array.from(bb.querySelectorAll(".WorldCodeAiModelGroup")),
-    Ab = Ub.findIndex((bb => bb.contains(ab)));
-  if (Ab < 0) return !1;
-  const Mb = bb.getBoundingClientRect(),
-    Tb = ab => bb.scrollTop + ab.top - Mb.top,
-    Eb = Tb(ab.getBoundingClientRect()) + ab.getBoundingClientRect().height,
-    Yb = bb.scrollHeight - bb.clientHeight,
-    Bb = Ub.slice(0, Ab + 1).map((bb => Tb(bb.getBoundingClientRect()))).filter((bb => Eb - bb <= Mb.height + 1));
-  if (0 === Bb.length) return !1;
-  const eb = Bb.filter((bb => bb <= Yb + 1)),
-    vb = eb.length > 0 ? Math.max(...eb) : Math.min(...Bb);
-  return vb > Yb && (bb.style.paddingBottom = (parseFloat(getComputedStyle(bb).paddingBottom) || 0) + vb - Yb + "px"), bb.scrollTop = vb, !0
+function jv(zz, tz) {
+  const sz = Array.from(zz.querySelectorAll(".WorldCodeAiModelGroup")),
+    Fz = sz.findIndex((zz => zz.contains(tz)));
+  if (Fz < 0) return !1;
+  const Wz = zz.getBoundingClientRect(),
+    Xz = tz => zz.scrollTop + tz.top - Wz.top,
+    Oz = Xz(tz.getBoundingClientRect()) + tz.getBoundingClientRect().height,
+    oz = zz.scrollHeight - zz.clientHeight,
+    vz = sz.slice(0, Fz + 1).map((zz => Xz(zz.getBoundingClientRect()))).filter((zz => Oz - zz <= Wz.height + 1));
+  if (0 === vz.length) return !1;
+  const Uz = vz.filter((zz => zz <= oz + 1)),
+    Kz = Uz.length > 0 ? Math.max(...Uz) : Math.min(...vz);
+  return Kz > oz && (zz.style.paddingBottom = (parseFloat(getComputedStyle(zz).paddingBottom) || 0) + Kz - oz + "px"), zz.scrollTop = Kz, !0
 }
 
-function HB(bb) {
+function Av(zz) {
   let {
-    keyName: ab,
-    placeholder: Ub,
-    onDone: Mb
-  } = bb;
-  const [Tb, Yb] = (0, Ab.useState)(ab);
-  return (0, Eb.jsxs)("form", {
+    keyName: tz,
+    placeholder: sz,
+    onDone: Wz
+  } = zz;
+  const [Xz, oz] = (0, Fz.useState)(tz);
+  return (0, Oz.jsxs)("form", {
     className: "WorldCodeAiKeyRename",
-    onSubmit: bb => {
-      bb.preventDefault(), Mb(Tb)
+    onSubmit: zz => {
+      zz.preventDefault(), Wz(Xz)
     },
-    children: [(0, Eb.jsx)("input", {
+    children: [(0, Oz.jsx)("input", {
       className: "WorldCodeAiAddKeyInput",
       "aria-label": "Name for this key",
-      value: Tb,
+      value: Xz,
       maxLength: 30,
-      placeholder: Ub,
+      placeholder: sz,
       autoFocus: !0,
-      onChange: bb => {
-        Yb(bb.target.value)
+      onChange: zz => {
+        oz(zz.target.value)
       },
-      onKeyDown: bb => {
-        bb.stopPropagation(), "Escape" === bb.key && (bb.preventDefault(), Mb(null))
+      onKeyDown: zz => {
+        zz.stopPropagation(), "Escape" === zz.key && (zz.preventDefault(), Wz(null))
       }
-    }), (0, Eb.jsx)("button", {
+    }), (0, Oz.jsx)("button", {
       type: "submit",
       className: "WorldCodeAiLinkButton",
       children: "Save"
-    }), (0, Eb.jsx)("button", {
+    }), (0, Oz.jsx)("button", {
       type: "button",
       className: "WorldCodeAiKeyLearnMore",
       onClick: () => {
-        Mb(null)
+        Wz(null)
       },
       children: "Cancel"
     })]
   })
 }
 
-function IB(bb) {
+function yv(zz) {
   let {
-    savedKey: ab,
-    isInUse: Ub,
-    onRename: Ab,
-    onEdit: Mb
-  } = bb;
-  const Tb = lE(ab),
-    Yb = jE(ab.provider, ab.baseUrl, !0),
-    Bb = function(bb, ab) {
-      var Ub, Ab;
-      return "" === bb ? "no key needed" : bb.length <= 12 ? "\u2022\u2022\u2022\u2022" : "custom" === ab ? `key \u2026${bb.slice(-4)}` : `${(null!==(Ub=null===(Ab=/^[a-zA-Z]+-/.exec(bb))||void 0===Ab?void 0:Ab[0])&&void 0!==Ub?Ub:bb.slice(0,4)).slice(0,6)}\u2026${bb.slice(-4)}`
-    }(ab.key, ab.provider);
-  return (0, Eb.jsxs)("span", {
+    savedKey: tz,
+    isInUse: sz,
+    onRename: Fz,
+    onEdit: Wz
+  } = zz;
+  const Xz = nO(tz),
+    oz = HO(tz.provider, tz.baseUrl, !0),
+    vz = function(zz, tz) {
+      var sz, Fz;
+      return "" === zz ? "no key needed" : zz.length <= 12 ? "\u2022\u2022\u2022\u2022" : "custom" === tz ? `key \u2026${zz.slice(-4)}` : `${(null!==(sz=null===(Fz=/^[a-zA-Z]+-/.exec(zz))||void 0===Fz?void 0:Fz[0])&&void 0!==sz?sz:zz.slice(0,4)).slice(0,6)}\u2026${zz.slice(-4)}`
+    }(tz.key, tz.provider);
+  return (0, Oz.jsxs)("span", {
     className: "WorldCodeAiModelGroupName",
-    title: ab.baseUrl,
-    children: [Tb, " ", ab.name && (0, Eb.jsxs)("span", {
+    title: tz.baseUrl,
+    children: [Xz, " ", tz.name && (0, Oz.jsxs)("span", {
       className: "WorldCodeAiModelHint",
-      children: ["\xb7 ", Yb, " "]
-    }), "" === ab.key ? (0, Eb.jsx)("span", {
+      children: ["\xb7 ", oz, " "]
+    }), "" === tz.key ? (0, Oz.jsx)("span", {
       className: "WorldCodeAiModelHint",
-      children: Bb
-    }) : (0, Eb.jsx)("code", {
-      children: Bb
-    }), Ub && (0, Eb.jsxs)(Eb.Fragment, {
-      children: [" ", (0, Eb.jsx)("span", {
+      children: vz
+    }) : (0, Oz.jsx)("code", {
+      children: vz
+    }), sz && (0, Oz.jsxs)(Oz.Fragment, {
+      children: [" ", (0, Oz.jsx)("span", {
         className: "WorldCodeAiInUseTag",
         children: "In use"
       })]
-    }), (Mb || Ab) && (0, Eb.jsxs)("span", {
+    }), (Wz || Fz) && (0, Oz.jsxs)("span", {
       className: "WorldCodeAiKeyLinks",
-      children: [Mb && (0, Eb.jsx)("button", {
+      children: [Wz && (0, Oz.jsx)("button", {
         className: "WorldCodeAiKeyLearnMore",
-        "aria-label": `Edit ${Tb} key`,
-        onClick: Mb,
+        "aria-label": `Edit ${Xz} key`,
+        onClick: Wz,
         children: "Edit"
-      }), Ab && (0, Eb.jsx)("button", {
+      }), Fz && (0, Oz.jsx)("button", {
         className: "WorldCodeAiKeyLearnMore",
-        "aria-label": `Rename ${Tb} key`,
-        onClick: Ab,
+        "aria-label": `Rename ${Xz} key`,
+        onClick: Fz,
         children: "Rename"
       })]
     })]
   })
 }
 
-function dB(bb) {
-  var ab, Ub, Mb, Yb;
+function Mv(zz) {
+  var tz, sz, Wz, oz;
   let {
-    name: Bb,
-    hint: eb,
-    choice: vb,
-    selected: Lb,
-    radioName: Pb,
-    onSelect: Xb,
-    onChosen: jb,
-    disabledWhy: Rb
-  } = bb;
-  const kb = (0, Ab.useRef)(!1),
-    yb = `${Pb}-${null!==(ab=null===vb||void 0===vb?void 0:vb.keyId)&&void 0!==ab?ab:"botxd"}-${null!==(Ub=null===vb||void 0===vb?void 0:vb.modelId)&&void 0!==Ub?Ub:"botxd"}`.replace(/[^\w-]/g, "_"),
-    Zb = !!Rb;
-  return (0, Eb.jsxs)("label", {
-    className: Tb()("WorldCodeAiModelRow", Lb && "Selected", Zb && "Disabled"),
-    "data-key-id": null !== (Mb = null === vb || void 0 === vb ? void 0 : vb.keyId) && void 0 !== Mb ? Mb : "botxd",
-    "data-model-id": null !== (Yb = null === vb || void 0 === vb ? void 0 : vb.modelId) && void 0 !== Yb ? Yb : "botxd",
-    title: null !== Rb && void 0 !== Rb ? Rb : void 0,
+    name: vz,
+    hint: Uz,
+    choice: Kz,
+    selected: uz,
+    radioName: Nz,
+    onSelect: bz,
+    onChosen: wz,
+    disabledWhy: Dz
+  } = zz;
+  const gz = (0, Fz.useRef)(!1),
+    Hz = `${Nz}-${null!==(tz=null===Kz||void 0===Kz?void 0:Kz.keyId)&&void 0!==tz?tz:"botxd"}-${null!==(sz=null===Kz||void 0===Kz?void 0:Kz.modelId)&&void 0!==sz?sz:"botxd"}`.replace(/[^\w-]/g, "_"),
+    Bz = !!Dz;
+  return (0, Oz.jsxs)("label", {
+    className: Xz()("WorldCodeAiModelRow", uz && "Selected", Bz && "Disabled"),
+    "data-key-id": null !== (Wz = null === Kz || void 0 === Kz ? void 0 : Kz.keyId) && void 0 !== Wz ? Wz : "botxd",
+    "data-model-id": null !== (oz = null === Kz || void 0 === Kz ? void 0 : Kz.modelId) && void 0 !== oz ? oz : "botxd",
+    title: null !== Dz && void 0 !== Dz ? Dz : void 0,
     onPointerDown: () => {
-      kb.current = !Zb
+      gz.current = !Bz
     },
-    children: [(0, Eb.jsx)("input", {
+    children: [(0, Oz.jsx)("input", {
       type: "radio",
-      name: Pb,
-      "aria-label": Bb,
-      "aria-describedby": eb ? yb : void 0,
-      checked: Lb,
-      disabled: Zb,
-      onChange: Xb,
+      name: Nz,
+      "aria-label": vz,
+      "aria-describedby": Uz ? Hz : void 0,
+      checked: uz,
+      disabled: Bz,
+      onChange: bz,
       onClick: () => {
-        kb.current && (null === jb || void 0 === jb || jb()), kb.current = !1
+        gz.current && (null === wz || void 0 === wz || wz()), gz.current = !1
       },
-      onKeyDown: bb => {
-        "Enter" === bb.key && (null === jb || void 0 === jb || jb())
+      onKeyDown: zz => {
+        "Enter" === zz.key && (null === wz || void 0 === wz || wz())
       }
-    }), (0, Eb.jsx)("span", {
+    }), (0, Oz.jsx)("span", {
       className: "WorldCodeAiModelName",
-      children: Bb
-    }), eb && (0, Eb.jsx)("span", {
-      id: yb,
+      children: vz
+    }), Uz && (0, Oz.jsx)("span", {
+      id: Hz,
       className: "WorldCodeAiModelHint",
-      children: eb
+      children: Uz
     })]
   })
 }
 
-function FB(bb) {
+function dv(zz) {
   let {
-    labelledBy: ab,
-    onPicked: Mb,
-    canRename: Tb = !1,
-    onEdit: Yb,
-    kp: Bb,
-    onRefresh: eb,
-    refreshingIds: vb,
-    keyNote: Lb
-  } = bb;
+    labelledBy: tz,
+    onPicked: Wz,
+    canRename: Xz = !1,
+    onEdit: oz,
+    NJ: vz,
+    onRefresh: Uz,
+    refreshingIds: Kz,
+    keyNote: uz
+  } = zz;
   const {
-    keys: Pb,
-    isSelected: Xb,
-    select: jb,
-    renameKey: Rb
-  } = OE(), kb = EY();
-  (0, Ab.useEffect)((() => {
-    TY.refresh(), fY()
+    keys: Nz,
+    isSelected: bz,
+    select: wz,
+    renameKey: Dz
+  } = fO(), gz = Uo();
+  (0, Fz.useEffect)((() => {
+    vo.refresh(), Co()
   }), []);
-  const yb = LY(kb),
-    [Zb, Db] = (0, Ab.useState)(null),
-    [zb, xb] = (0, Ab.useState)(null),
-    [ib, fb] = (0, Ab.useState)({}),
-    [mb] = (0, Ab.useState)((() => function(bb) {
-      const ab = bb.map(((bb, ab) => {
-        var Ub;
+  const Hz = wo(gz),
+    [Bz, Pz] = (0, Fz.useState)(null),
+    [rz, Yz] = (0, Fz.useState)(null),
+    [xz, mz] = (0, Fz.useState)({}),
+    [Jz] = (0, Fz.useState)((() => function(zz) {
+      const tz = zz.map(((zz, tz) => {
+        var sz;
         return {
-          id: bb.id,
-          at: null !== (Ub = bb.usedAt) && void 0 !== Ub ? Ub : 0,
-          i: ab
+          id: zz.id,
+          at: null !== (sz = zz.usedAt) && void 0 !== sz ? sz : 0,
+          i: tz
         }
-      })).sort(((bb, ab) => ab.at - bb.at || ab.i - bb.i));
-      return new Set(ab.slice(0, 2).map((bb => {
+      })).sort(((zz, tz) => tz.at - zz.at || tz.i - zz.i));
+      return new Set(tz.slice(0, 2).map((zz => {
         let {
-          id: ab
-        } = bb;
-        return ab
+          id: tz
+        } = zz;
+        return tz
       })))
-    }(Pb))),
-    [pb, Nb] = (0, Ab.useState)(new Set),
-    Wb = bb => bb.models.some((ab => Xb({
-      keyId: bb.id,
-      modelId: ab.id
+    }(Nz))),
+    [Iz, Cz] = (0, Fz.useState)(new Set),
+    ez = zz => zz.models.some((tz => bz({
+      keyId: zz.id,
+      modelId: tz.id
     }))),
-    Hb = bb => {
-      const ab = bb.closest(".WorldCodeAiModelGroupHeader");
-      xb(null), setTimeout((() => {
-        var bb;
-        null === ab || void 0 === ab || null === (bb = ab.querySelector(".WorldCodeAiModelRemove")) || void 0 === bb || bb.focus()
+    Zz = zz => {
+      const tz = zz.closest(".WorldCodeAiModelGroupHeader");
+      Yz(null), setTimeout((() => {
+        var zz;
+        null === tz || void 0 === tz || null === (zz = tz.querySelector(".WorldCodeAiModelRemove")) || void 0 === zz || zz.focus()
       }))
     },
-    Ib = `${ab}-model`,
-    db = (bb, ab, Ub) => {
-      var Ab;
-      return (0, Eb.jsx)(dB, {
-        name: bb,
-        hint: ab,
-        choice: Ub,
-        selected: Xb(Ub) && !(null === Ub && kb.picked && null === yb),
-        radioName: Ib,
+    Gz = `${tz}-model`,
+    Tz = (zz, tz, sz) => {
+      var Fz;
+      return (0, Oz.jsx)(Mv, {
+        name: zz,
+        hint: tz,
+        choice: sz,
+        selected: bz(sz) && !(null === sz && gz.picked && null === Hz),
+        radioName: Gz,
         onSelect: () => {
-          jb(Ub), TY.unpick()
+          wz(sz), vo.unpick()
         },
-        onChosen: Mb
-      }, null !== (Ab = null === Ub || void 0 === Ub ? void 0 : Ub.modelId) && void 0 !== Ab ? Ab : "botxd")
+        onChosen: Wz
+      }, null !== (Fz = null === sz || void 0 === sz ? void 0 : sz.modelId) && void 0 !== Fz ? Fz : "botxd")
     };
-  return (0, Eb.jsxs)("div", {
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiModelList",
     role: "radiogroup",
-    "aria-labelledby": ab,
-    children: [db("Bot.xd (free)", "Bloxd's own AI.", null), (0, Eb.jsx)(dB, {
-      name: SE,
-      hint: null !== yb && void 0 !== yb ? yb : `Bloxd's better AI. ${kb.status?jY(kb.status):""}`.trim(),
-      choice: NB,
-      selected: kb.picked && null === yb,
-      radioName: Ib,
+    "aria-labelledby": tz,
+    children: [Tz("Bot.xd (free)", "Bloxd's own AI.", null), (0, Oz.jsx)(Mv, {
+      name: so,
+      hint: null !== Hz && void 0 !== Hz ? Hz : `Bloxd's better AI. ${gz.status?Ho(gz.status):""}`.trim(),
+      choice: cv,
+      selected: gz.picked && null === Hz,
+      radioName: Gz,
       onSelect: () => {
-        var bb, ab;
-        AY(null !== (bb = null === (ab = kb.status) || void 0 === ab ? void 0 : ab.provider) && void 0 !== bb ? bb : "ovh") && TY.GP()
+        var zz, tz;
+        Oo(null !== (zz = null === (tz = gz.status) || void 0 === tz ? void 0 : tz.provider) && void 0 !== zz ? zz : "ovh") && vo.gb()
       },
       onChosen: () => {
-        (async function(bb) {
-          var ab;
-          if (AY(null !== (ab = null === bb || void 0 === bb ? void 0 : bb.provider) && void 0 !== ab ? ab : "ovh")) return TY.GP(), !0;
-          if (hB) return !1;
-          hB = !0;
+        (async function(zz) {
+          var tz;
+          if (Oo(null !== (tz = null === zz || void 0 === zz ? void 0 : zz.provider) && void 0 !== tz ? tz : "ovh")) return vo.gb(), !0;
+          if (hv) return !1;
+          hv = !0;
           try {
             const [{
-              NotificationProvider: bb
+              NotificationProvider: zz
             }, {
-              WorldCodeAiDeepSeekNotice: ab
-            }] = await Promise.all([Promise.resolve().then((() => Ub(1260))), Ub.e(347).then((() => Ub(60277)))]), Ab = bb.showPromptPopup({
+              WorldCodeAiDeepSeekNotice: tz
+            }] = await Promise.all([Promise.resolve().then((() => sz(1319))), sz.e(347).then((() => sz(60341)))]), Fz = zz.showPromptPopup({
               title: "superBotXd:deepSeekTitle",
-              subtitle: (0, Eb.jsx)(ab, {}),
+              subtitle: (0, Oz.jsx)(tz, {}),
               confirmText: "superBotXd:use",
               cancelText: "general:cancel"
             });
-            GB = Ab.tearDownNotification;
-            return !0 === await Ab.getResult() && (function() {
+            Qv = Fz.tearDownNotification;
+            return !0 === await Fz.getResult() && (function() {
               try {
-                window.localStorage.setItem(UY, "1")
+                window.localStorage.setItem(Xo, "1")
               } catch {}
-            }(), TY.GP(), !0)
+            }(), vo.gb(), !0)
           } finally {
-            hB = !1, GB = null
+            hv = !1, Qv = null
           }
-        })(kb.status).then((bb => {
-          bb && (null === Mb || void 0 === Mb || Mb())
+        })(gz.status).then((zz => {
+          zz && (null === Wz || void 0 === Wz || Wz())
         }))
       },
-      disabledWhy: yb
-    }), Pb.map((bb => {
-      var ab, Ub, Ab, Mb, jb;
-      const kb = lE(bb),
-        yb = Pb.length >= 4 && !Wb(bb) && !mb.has(bb.id) && !pb.has(bb.id),
-        Ib = yb ? null !== (ab = bb.models.find((ab => ab.id === bb.usedModelId))) && void 0 !== ab ? ab : oE(bb.models) : void 0,
-        Fb = null !== (Ub = null === (Ab = ib[bb.id]) || void 0 === Ab ? void 0 : Ab.trim().toLowerCase()) && void 0 !== Ub ? Ub : "",
-        hb = Ib ? [Ib] : "" === Fb ? bb.models : bb.models.filter((ab => ab.name.toLowerCase().includes(Fb) || Xb({
-          keyId: bb.id,
-          modelId: ab.id
+      disabledWhy: Hz
+    }), Nz.map((zz => {
+      var tz, sz, Fz, Wz, wz;
+      const gz = nO(zz),
+        Hz = Nz.length >= 4 && !ez(zz) && !Jz.has(zz.id) && !Iz.has(zz.id),
+        Gz = Hz ? null !== (tz = zz.models.find((tz => tz.id === zz.usedModelId))) && void 0 !== tz ? tz : lO(zz.models) : void 0,
+        cz = null !== (sz = null === (Fz = xz[zz.id]) || void 0 === Fz ? void 0 : Fz.trim().toLowerCase()) && void 0 !== sz ? sz : "",
+        jz = Gz ? [Gz] : "" === cz ? zz.models : zz.models.filter((tz => tz.name.toLowerCase().includes(cz) || bz({
+          keyId: zz.id,
+          modelId: tz.id
         })));
-      return (0, Eb.jsxs)("div", {
+      return (0, Oz.jsxs)("div", {
         className: "WorldCodeAiModelGroup",
         role: "group",
-        "aria-label": kb,
-        "data-key-id": bb.id,
-        children: [(0, Eb.jsxs)("div", {
+        "aria-label": gz,
+        "data-key-id": zz.id,
+        children: [(0, Oz.jsxs)("div", {
           className: "WorldCodeAiModelGroupHeader",
-          children: [Zb === bb.id ? (0, Eb.jsx)(HB, {
-            keyName: null !== (Mb = bb.name) && void 0 !== Mb ? Mb : "",
-            placeholder: jE(bb.provider, bb.baseUrl),
-            onDone: ab => {
-              null !== ab && Rb(bb.id, ab), Db(null)
+          children: [Bz === zz.id ? (0, Oz.jsx)(Av, {
+            keyName: null !== (Wz = zz.name) && void 0 !== Wz ? Wz : "",
+            placeholder: HO(zz.provider, zz.baseUrl),
+            onDone: tz => {
+              null !== tz && Dz(zz.id, tz), Pz(null)
             }
-          }) : (0, Eb.jsx)(IB, {
-            savedKey: bb,
-            isInUse: Wb(bb),
-            onEdit: Yb ? () => {
-              Yb(bb)
+          }) : (0, Oz.jsx)(yv, {
+            savedKey: zz,
+            isInUse: ez(zz),
+            onEdit: oz ? () => {
+              oz(zz)
             } : void 0,
-            onRename: Tb ? () => {
-              Db(bb.id)
+            onRename: Xz ? () => {
+              Pz(zz.id)
             } : void 0
-          }), eb && zb !== bb.id && (0, Eb.jsx)("button", {
+          }), Uz && rz !== zz.id && (0, Oz.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRefresh",
-            "aria-label": `Check ${kb} for new models`,
-            disabled: null === vb || void 0 === vb ? void 0 : vb.has(bb.id),
+            "aria-label": `Check ${gz} for new models`,
+            disabled: null === Kz || void 0 === Kz ? void 0 : Kz.has(zz.id),
             onClick: () => {
-              eb(bb)
+              Uz(zz)
             },
-            children: null !== vb && void 0 !== vb && vb.has(bb.id) ? "Checking\u2026" : "Check for new models"
-          }), Bb && zb !== bb.id && (0, Eb.jsx)("button", {
+            children: null !== Kz && void 0 !== Kz && Kz.has(zz.id) ? "Checking\u2026" : "Check for new models"
+          }), vz && rz !== zz.id && (0, Oz.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
-            "aria-label": `Remove ${kb} key`,
+            "aria-label": `Remove ${gz} key`,
             onClick: () => {
-              xb(bb.id)
+              Yz(zz.id)
             },
             children: "Remove"
-          }), Bb && zb === bb.id && (0, Eb.jsxs)("span", {
+          }), vz && rz === zz.id && (0, Oz.jsxs)("span", {
             className: "WorldCodeAiKeyConfirm",
             role: "group",
-            "aria-label": `Remove ${kb} key?`,
-            onKeyDown: bb => {
-              "Escape" === bb.key && (bb.stopPropagation(), bb.preventDefault(), Hb(bb.currentTarget))
+            "aria-label": `Remove ${gz} key?`,
+            onKeyDown: zz => {
+              "Escape" === zz.key && (zz.stopPropagation(), zz.preventDefault(), Zz(zz.currentTarget))
             },
-            children: ["Remove key?", (0, Eb.jsx)("button", {
+            children: ["Remove key?", (0, Oz.jsx)("button", {
               className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
-              "aria-label": `Yes, remove ${kb} key`,
+              "aria-label": `Yes, remove ${gz} key`,
               onClick: () => {
-                xb(null), Bb(bb)
+                Yz(null), vz(zz)
               },
               children: "Yes"
-            }), (0, Eb.jsx)("button", {
+            }), (0, Oz.jsx)("button", {
               className: "WorldCodeAiLinkButton",
-              "aria-label": `No, keep ${kb} key`,
+              "aria-label": `No, keep ${gz} key`,
               autoFocus: !0,
-              onClick: bb => {
-                Hb(bb.currentTarget)
+              onClick: zz => {
+                Zz(zz.currentTarget)
               },
               children: "No"
             })]
           })]
-        }), (null === Lb || void 0 === Lb ? void 0 : Lb.keyId) === bb.id && (0, Eb.jsx)("p", {
+        }), (null === uz || void 0 === uz ? void 0 : uz.keyId) === zz.id && (0, Oz.jsx)("p", {
           className: "WorldCodeAiAiSettingsNote",
           role: "status",
-          children: Lb.text
-        }), !yb && bb.models.length > 12 && (0, Eb.jsx)("input", {
+          children: uz.text
+        }), !Hz && zz.models.length > 12 && (0, Oz.jsx)("input", {
           className: "WorldCodeAiAddKeyInput WorldCodeAiModelFilter",
-          "aria-label": `Find a model from ${kb}`,
-          placeholder: `Find a model (${bb.models.length})`,
-          value: null !== (jb = ib[bb.id]) && void 0 !== jb ? jb : "",
-          onKeyDown: bb => {
-            bb.stopPropagation()
+          "aria-label": `Find a model from ${gz}`,
+          placeholder: `Find a model (${zz.models.length})`,
+          value: null !== (wz = xz[zz.id]) && void 0 !== wz ? wz : "",
+          onKeyDown: zz => {
+            zz.stopPropagation()
           },
-          onChange: ab => {
-            const Ub = ab.target.value;
-            fb((ab => ({
-              ...ab,
-              [bb.id]: Ub
+          onChange: tz => {
+            const sz = tz.target.value;
+            mz((tz => ({
+              ...tz,
+              [zz.id]: sz
             })))
           }
-        }), hb.map((ab => db(ab.name, ab.tier ? GE[ab.tier] : "", {
-          keyId: bb.id,
-          modelId: ab.id
-        }))), yb && bb.models.length > 1 && (0, Eb.jsxs)("button", {
+        }), jz.map((tz => Tz(tz.name, tz.tier ? dO[tz.tier] : "", {
+          keyId: zz.id,
+          modelId: tz.id
+        }))), Hz && zz.models.length > 1 && (0, Oz.jsxs)("button", {
           className: "WorldCodeAiKeyLearnMore WorldCodeAiModelUnfold",
-          "aria-label": `Show all ${kb} models`,
-          onClick: ab => {
-            const Ub = ab.currentTarget.closest(".WorldCodeAiModelGroup");
-            Nb((ab => new Set(ab).add(bb.id))), setTimeout((() => {
-              var bb;
-              null === Ub || void 0 === Ub || null === (bb = Ub.querySelector("input")) || void 0 === bb || bb.focus()
+          "aria-label": `Show all ${gz} models`,
+          onClick: tz => {
+            const sz = tz.currentTarget.closest(".WorldCodeAiModelGroup");
+            Cz((tz => new Set(tz).add(zz.id))), setTimeout((() => {
+              var zz;
+              null === sz || void 0 === sz || null === (zz = sz.querySelector("input")) || void 0 === zz || zz.focus()
             }))
           },
-          children: ["Show all ", bb.models.length, " models"]
+          children: ["Show all ", zz.models.length, " models"]
         })]
-      }, bb.id)
+      }, zz.id)
     }))]
   })
 }
-let hB = !1,
-  GB = null;
+let hv = !1,
+  Qv = null;
 
-function QB(bb) {
+function kv(zz) {
   let {
-    checked: ab,
-    onChange: Ub,
-    title: Ab,
-    onNote: Mb,
-    offNote: Tb
-  } = bb;
-  return (0, Eb.jsxs)("label", {
+    checked: tz,
+    onChange: sz,
+    title: Fz,
+    onNote: Wz,
+    offNote: Xz
+  } = zz;
+  return (0, Oz.jsxs)("label", {
     className: "WorldCodeAiSettingSwitch",
-    children: [(0, Eb.jsx)("input", {
+    children: [(0, Oz.jsx)("input", {
       type: "checkbox",
-      checked: ab,
-      onChange: bb => {
-        Ub(bb.target.checked)
+      checked: tz,
+      onChange: zz => {
+        sz(zz.target.checked)
       }
-    }), (0, Eb.jsxs)("span", {
-      children: [Ab, (0, Eb.jsx)("span", {
+    }), (0, Oz.jsxs)("span", {
+      children: [Fz, (0, Oz.jsx)("span", {
         className: "WorldCodeAiAiSettingsNote",
-        children: ab ? Mb : Tb
+        children: tz ? Wz : Xz
       })]
     })]
   })
 }
 
-function qB() {
+function iv() {
   const {
-    remember: bb,
-    setRemember: ab
-  } = OE();
-  return (0, Eb.jsx)(QB, {
-    checked: bb,
-    onChange: ab,
+    remember: zz,
+    setRemember: tz
+  } = fO();
+  return (0, Oz.jsx)(kv, {
+    checked: zz,
+    onChange: tz,
     title: "Remember my keys in this browser",
     onNote: "On: saved only in this browser, not synced, for all your keys. Not for shared computers.",
     offNote: "Off: you'll paste your keys again next time. Best on shared computers."
   })
 }
 
-function uB() {
+function Lv() {
   const {
-    answer: bb,
-    hasPlayer: ab
+    answer: zz,
+    hasPlayer: tz
   } = function() {
-    const bb = () => ({
-        answer: oT.get(),
-        hasPlayer: null !== oT.getPlayer()
+    const zz = () => ({
+        answer: lX.get(),
+        hasPlayer: null !== lX.getPlayer()
       }),
-      [ab, Ub] = (0, Ab.useState)(bb);
-    return (0, Ab.useEffect)((() => {
-      const ab = oT.subscribe((() => {
-        Ub(bb())
+      [tz, sz] = (0, Fz.useState)(zz);
+    return (0, Fz.useEffect)((() => {
+      const tz = lX.subscribe((() => {
+        sz(zz())
       }));
-      return oT.refresh(), ab
-    }), []), ab
+      return lX.refresh(), tz
+    }), []), tz
   }();
-  return ab ? (0, Eb.jsx)("div", {
+  return tz ? (0, Oz.jsx)("div", {
     className: "WorldCodeAiAiSettingsSection",
-    children: (0, Eb.jsx)(QB, {
-      checked: "yes" === bb,
-      onChange: bb => {
-        oT.set(bb ? "yes" : "no")
+    children: (0, Oz.jsx)(kv, {
+      checked: "yes" === zz,
+      onChange: zz => {
+        lX.set(zz ? "yes" : "no")
       },
       title: "Help make the AI Helper better",
       onNote: "On: Bloxd keeps your questions, code and the AI's answers for 30 days to improve the AI Helper.",
@@ -9746,258 +9746,258 @@ function uB() {
   }) : null
 }
 
-function rB(bb) {
+function lv(zz) {
   let {
-    allowEdits: ab,
-    onAllowEditsChange: Ub,
-    onAddKey: Mb,
-    onEditKey: Tb
-  } = bb;
+    allowEdits: tz,
+    onAllowEditsChange: sz,
+    onAddKey: Wz,
+    onEditKey: Xz
+  } = zz;
   const {
-    keys: Yb,
-    removeKey: Bb
-  } = OE(), [eb, vb] = (0, Ab.useState)(null), [Lb, Pb] = (0, Ab.useState)(!1), [Xb, jb] = (0, Ab.useState)(!1), Rb = (0, Ab.useRef)(null);
-  (0, Ab.useEffect)((() => {
-    var bb, ab;
-    (eb || Xb) && (null === (bb = Rb.current) || void 0 === bb || bb.scrollIntoView({
+    keys: oz,
+    removeKey: vz
+  } = fO(), [Uz, Kz] = (0, Fz.useState)(null), [uz, Nz] = (0, Fz.useState)(!1), [bz, wz] = (0, Fz.useState)(!1), Dz = (0, Fz.useRef)(null);
+  (0, Fz.useEffect)((() => {
+    var zz, tz;
+    (Uz || bz) && (null === (zz = Dz.current) || void 0 === zz || zz.scrollIntoView({
       block: "nearest"
-    }), null === (ab = Rb.current) || void 0 === ab || ab.focus({
+    }), null === (tz = Dz.current) || void 0 === tz || tz.focus({
       preventScroll: !0
     }))
-  }), [eb, Xb]);
-  const kb = (0, Ab.useRef)(null),
-    yb = () => {
-      Pb(!1), setTimeout((() => {
-        var bb;
-        null === (bb = kb.current) || void 0 === bb || bb.focus()
+  }), [Uz, bz]);
+  const gz = (0, Fz.useRef)(null),
+    Hz = () => {
+      Nz(!1), setTimeout((() => {
+        var zz;
+        null === (zz = gz.current) || void 0 === zz || zz.focus()
       }))
     },
-    [Zb, Db] = (0, Ab.useState)(new Set),
-    [zb, xb] = (0, Ab.useState)(null);
-  return (0, Eb.jsxs)("div", {
+    [Bz, Pz] = (0, Fz.useState)(new Set),
+    [rz, Yz] = (0, Fz.useState)(null);
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiAiSettings",
-    children: [Ub && (0, Eb.jsxs)("div", {
+    children: [sz && (0, Oz.jsxs)("div", {
       className: "WorldCodeAiAiSettingsSection",
-      children: [(0, Eb.jsx)(pB, {
-        allow: ab,
-        onChange: bb => {
-          vb(null), Ub(bb)
+      children: [(0, Oz.jsx)(Tv, {
+        allow: tz,
+        onChange: zz => {
+          Kz(null), sz(zz)
         }
-      }), (0, Eb.jsx)("p", {
+      }), (0, Oz.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote",
-        children: ab ? "On: the AI changes this game's code right away, without asking; Undo is under each change. It can't touch other games or your account." : "Off: the AI shows each change to this game's code first, and you press Apply."
+        children: tz ? "On: the AI changes this game's code right away, without asking; Undo is under each change. It can't touch other games or your account." : "Off: the AI shows each change to this game's code first, and you press Apply."
       })]
-    }), (0, Eb.jsxs)("div", {
+    }), (0, Oz.jsxs)("div", {
       className: "WorldCodeAiAiSettingsSection",
-      children: [(0, Eb.jsxs)("div", {
+      children: [(0, Oz.jsxs)("div", {
         className: "WorldCodeAiAiSettingsHeading",
-        children: [(0, Eb.jsx)("h3", {
+        children: [(0, Oz.jsx)("h3", {
           id: "WorldCodeAiModelTitle",
           className: "WorldCodeAiAiSettingsTitle",
           children: "AI model"
-        }), (0, Eb.jsxs)("button", {
+        }), (0, Oz.jsxs)("button", {
           className: "WorldCodeAiSecondaryButton WorldCodeAiAddKeyButton",
-          onClick: Mb,
-          children: [(0, Eb.jsx)("span", {
+          onClick: Wz,
+          children: [(0, Oz.jsx)("span", {
             "aria-hidden": "true",
             children: "+ "
           }), "Add API key"]
         })]
-      }), 0 === Yb.length && (0, Eb.jsx)("p", {
+      }), 0 === oz.length && (0, Oz.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote",
         children: "Use a stronger AI with your own key."
-      }), (0, Eb.jsx)(qB, {}), Yb.length > 0 && (0, Eb.jsx)("p", {
+      }), (0, Oz.jsx)(iv, {}), oz.length > 0 && (0, Oz.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote WorldCodeAiForgetAll",
-        children: Lb ? (0, Eb.jsxs)("span", {
+        children: uz ? (0, Oz.jsxs)("span", {
           className: "WorldCodeAiKeyConfirm",
           role: "group",
           "aria-label": "Forget all keys?",
-          onKeyDown: bb => {
-            "Escape" === bb.key && (bb.stopPropagation(), bb.preventDefault(), yb())
+          onKeyDown: zz => {
+            "Escape" === zz.key && (zz.stopPropagation(), zz.preventDefault(), Hz())
           },
-          children: [1 === Yb.length ? "Forget your key" : `Forget all ${Yb.length} keys`, " in this browser?", (0, Eb.jsx)("button", {
+          children: [1 === oz.length ? "Forget your key" : `Forget all ${oz.length} keys`, " in this browser?", (0, Oz.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
             onClick: () => {
-              VE.removeAll(), Pb(!1), vb(null), jb(!0)
+              pO.removeAll(), Nz(!1), Kz(null), wz(!0)
             },
             children: "Yes"
-          }), (0, Eb.jsx)("button", {
+          }), (0, Oz.jsx)("button", {
             className: "WorldCodeAiLinkButton",
             autoFocus: !0,
-            onClick: yb,
+            onClick: Hz,
             children: "No"
           })]
-        }) : (0, Eb.jsx)("button", {
-          ref: kb,
+        }) : (0, Oz.jsx)("button", {
+          ref: gz,
           className: "WorldCodeAiKeyLearnMore",
           onClick: () => {
-            Pb(!0)
+            Nz(!0)
           },
           children: "Forget all keys"
         })
-      }), 0 === Yb.length && Xb && (0, Eb.jsx)("p", {
-        ref: Rb,
+      }), 0 === oz.length && bz && (0, Oz.jsx)("p", {
+        ref: Dz,
         className: "WorldCodeAiAiSettingsNote WorldCodeAiKeyRemoved",
         tabIndex: -1,
         children: "All keys forgotten in this browser. Bot.xd answers now. To stop a key working everywhere, delete it on its company's website."
-      }), eb && (0, Eb.jsxs)("p", {
-        ref: Rb,
+      }), Uz && (0, Oz.jsxs)("p", {
+        ref: Dz,
         className: "WorldCodeAiAiSettingsNote WorldCodeAiKeyRemoved",
         tabIndex: -1,
-        children: [eb.name, " removed.", eb.wasInUse && " Bot.xd answers now.", eb.keyPage && (0, Eb.jsxs)(Eb.Fragment, {
-          children: [" ", "To stop it working everywhere, delete it on", " ", (0, Eb.jsxs)("a", {
-            href: eb.keyPage,
+        children: [Uz.name, " removed.", Uz.wasInUse && " Bot.xd answers now.", Uz.keyPage && (0, Oz.jsxs)(Oz.Fragment, {
+          children: [" ", "To stop it working everywhere, delete it on", " ", (0, Oz.jsxs)("a", {
+            href: Uz.keyPage,
             target: "_blank",
             rel: "noreferrer noopener",
-            children: [eb.label, "'s website"]
+            children: [Uz.label, "'s website"]
           }), "."]
-        }), " ", (0, Eb.jsx)("button", {
+        }), " ", (0, Oz.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiModelUndo",
           onClick: () => {
-            eb.undo(), vb(null)
+            Uz.undo(), Kz(null)
           },
           children: "Undo"
         })]
-      }), (0, Eb.jsx)(FB, {
+      }), (0, Oz.jsx)(dv, {
         labelledBy: "WorldCodeAiModelTitle",
         onPicked: () => {
-          vb(null), xb(null)
+          Kz(null), Yz(null)
         },
         canRename: !0,
-        onEdit: Tb,
-        refreshingIds: Zb,
-        keyNote: zb,
-        onRefresh: bb => {
-          (async bb => {
-            const ab = jE(bb.provider, bb.baseUrl, !0);
-            Db((ab => new Set(ab).add(bb.id))), xb(null);
+        onEdit: Xz,
+        refreshingIds: Bz,
+        keyNote: rz,
+        onRefresh: zz => {
+          (async zz => {
+            const tz = HO(zz.provider, zz.baseUrl, !0);
+            Pz((tz => new Set(tz).add(zz.id))), Yz(null);
             try {
-              const Ub = await cE({
-                provider: bb.provider,
-                key: bb.key,
-                baseUrl: bb.baseUrl
+              const sz = await EO({
+                provider: zz.provider,
+                key: zz.key,
+                baseUrl: zz.baseUrl
               });
-              0 === Ub.length ? xb({
-                keyId: bb.id,
-                text: `${ab} listed no models, so your models stay as they were.`
-              }) : VE.refreshModels(bb.id, Ub, {
-                key: bb.key,
-                baseUrl: bb.baseUrl
-              }) && xb({
-                keyId: bb.id,
-                text: `${ab}'s models are up to date.`
+              0 === sz.length ? Yz({
+                keyId: zz.id,
+                text: `${tz} listed no models, so your models stay as they were.`
+              }) : pO.refreshModels(zz.id, sz, {
+                key: zz.key,
+                baseUrl: zz.baseUrl
+              }) && Yz({
+                keyId: zz.id,
+                text: `${tz}'s models are up to date.`
               })
-            } catch (Ub) {
-              xb({
-                keyId: bb.id,
-                text: yE(Ub instanceof RE ? Ub.problem : "failed", bb.provider)
+            } catch (sz) {
+              Yz({
+                keyId: zz.id,
+                text: rO(sz instanceof BO ? sz.problem : "failed", zz.provider)
               })
             }
-            Db((ab => {
-              const Ub = new Set(ab);
-              return Ub.delete(bb.id), Ub
+            Pz((tz => {
+              const sz = new Set(tz);
+              return sz.delete(zz.id), sz
             }))
-          })(bb)
+          })(zz)
         },
-        kp: bb => {
-          var ab;
-          const Ub = (null === (ab = VE.activeKey()) || void 0 === ab ? void 0 : ab.id) === bb.id,
-            Ab = Bb(bb.id);
-          vb({
-            name: lE(bb, !0),
-            label: jE(bb.provider, bb.baseUrl, !0),
-            keyPage: BE[bb.provider].keyPage,
-            wasInUse: Ub,
-            undo: Ab
+        NJ: zz => {
+          var tz;
+          const sz = (null === (tz = pO.activeKey()) || void 0 === tz ? void 0 : tz.id) === zz.id,
+            Fz = vz(zz.id);
+          Kz({
+            name: nO(zz, !0),
+            label: HO(zz.provider, zz.baseUrl, !0),
+            keyPage: uO[zz.provider].keyPage,
+            wasInUse: sz,
+            undo: Fz
           })
         }
       })]
-    }), (0, Eb.jsx)(uB, {})]
+    }), (0, Oz.jsx)(Lv, {})]
   })
 }
-const KB = ["anthropic", "openai", "gemini", "openrouter"];
+const nv = ["anthropic", "openai", "gemini", "openrouter"];
 
-function oB(bb) {
+function av(zz) {
   let {
-    provider: ab,
-    children: Ub
-  } = bb;
-  return (0, Eb.jsx)("a", {
-    href: BE[ab].keyPage,
+    provider: tz,
+    children: sz
+  } = zz;
+  return (0, Oz.jsx)("a", {
+    href: uO[tz].keyPage,
     target: "_blank",
     rel: "noreferrer noopener",
-    children: Ub
+    children: sz
   })
 }
 
-function lB() {
-  return (0, Eb.jsxs)(Eb.Fragment, {
-    children: [KB.map(((bb, ab) => {
-      const Ub = 0 === ab ? "" : ab === KB.length - 1 ? " or " : ", ";
-      return (0, Eb.jsxs)("span", {
-        children: [Ub, (0, Eb.jsx)(oB, {
-          provider: bb,
-          children: BE[bb].shortName
+function qv() {
+  return (0, Oz.jsxs)(Oz.Fragment, {
+    children: [nv.map(((zz, tz) => {
+      const sz = 0 === tz ? "" : tz === nv.length - 1 ? " or " : ", ";
+      return (0, Oz.jsxs)("span", {
+        children: [sz, (0, Oz.jsx)(av, {
+          provider: zz,
+          children: uO[zz].shortName
         })]
-      }, bb)
+      }, zz)
     })), "'s website"]
   })
 }
 
-function tB(bb) {
-  var ab;
+function Sv(zz) {
+  var tz;
   let {
-    provider: Ub
-  } = bb;
-  const [Mb, Tb] = (0, Ab.useState)(!1), Yb = (0, Ab.useRef)(null);
-  if ((0, Ab.useEffect)((() => {
-      if (Mb) {
-        var bb, ab, Ub;
-        const Ab = null === (bb = Yb.current) || void 0 === bb || null === (ab = bb.closest("form")) || void 0 === ab ? void 0 : ab.querySelector(".WorldCodeAiAddKeyActions");
-        null === (Ub = null !== Ab && void 0 !== Ab ? Ab : Yb.current) || void 0 === Ub || Ub.scrollIntoView({
+    provider: sz
+  } = zz;
+  const [Wz, Xz] = (0, Fz.useState)(!1), oz = (0, Fz.useRef)(null);
+  if ((0, Fz.useEffect)((() => {
+      if (Wz) {
+        var zz, tz, sz;
+        const Fz = null === (zz = oz.current) || void 0 === zz || null === (tz = zz.closest("form")) || void 0 === tz ? void 0 : tz.querySelector(".WorldCodeAiAddKeyActions");
+        null === (sz = null !== Fz && void 0 !== Fz ? Fz : oz.current) || void 0 === sz || sz.scrollIntoView({
           block: "nearest",
           behavior: "smooth"
         })
       }
-    }), [Mb]), "custom" === Ub) return (0, Eb.jsx)("div", {
+    }), [Wz]), "custom" === sz) return (0, Oz.jsx)("div", {
     className: "WorldCodeAiKeyExplainer",
-    children: (0, Eb.jsx)("p", {
+    children: (0, Oz.jsx)("p", {
       className: "WorldCodeAiAiSettingsNote",
       children: "Paste the key for that server, or leave it empty if it doesn't need one. It goes only to that server, never to Bloxd."
     })
   });
-  const Bb = Ub ? BE[Ub] : null;
-  return (0, Eb.jsxs)("div", {
+  const vz = sz ? uO[sz] : null;
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiKeyExplainer",
-    children: [(0, Eb.jsxs)("ul", {
-      ref: Yb,
+    children: [(0, Oz.jsxs)("ul", {
+      ref: oz,
       id: "WorldCodeAiKeyExplainerLines",
       className: "WorldCodeAiKeyExplainerLines",
-      children: [(0, Eb.jsx)("li", {
-        children: Bb ? `An API key works like a password for ${Bb.shortName}'s AI (it isn't your ${Bb.shortName} login password). Keep it secret.` : "An API key works like a password for an AI company's AI (it isn't your login password). Keep it secret."
-      }), (0, Eb.jsxs)("li", {
-        children: ["You make it on ", Bb ? `${Bb.shortName}'s website` : (0, Eb.jsx)(lB, {}), ", and see how much you've used or delete it there."]
-      }), Mb && (0, Eb.jsxs)("li", {
-        children: ["Your key stays in this browser and only goes to ", null !== (ab = null === Bb || void 0 === Bb ? void 0 : Bb.shortName) && void 0 !== ab ? ab : "that company", ", never to Bloxd."]
-      }), (0, Eb.jsx)("li", {
+      children: [(0, Oz.jsx)("li", {
+        children: vz ? `An API key works like a password for ${vz.shortName}'s AI (it isn't your ${vz.shortName} login password). Keep it secret.` : "An API key works like a password for an AI company's AI (it isn't your login password). Keep it secret."
+      }), (0, Oz.jsxs)("li", {
+        children: ["You make it on ", vz ? `${vz.shortName}'s website` : (0, Oz.jsx)(qv, {}), ", and see how much you've used or delete it there."]
+      }), Wz && (0, Oz.jsxs)("li", {
+        children: ["Your key stays in this browser and only goes to ", null !== (tz = null === vz || void 0 === vz ? void 0 : vz.shortName) && void 0 !== tz ? tz : "that company", ", never to Bloxd."]
+      }), (0, Oz.jsx)("li", {
         className: "WorldCodeAiKeyExplainerMore",
-        children: (0, Eb.jsx)("button", {
+        children: (0, Oz.jsx)("button", {
           type: "button",
           className: "WorldCodeAiKeyLearnMore",
-          "aria-expanded": Mb,
+          "aria-expanded": Wz,
           "aria-controls": "WorldCodeAiKeyExplainerLines",
           onClick: () => {
-            Tb(!Mb)
+            Xz(!Wz)
           },
-          children: Mb ? "Less about keys" : "More about keys"
+          children: Wz ? "Less about keys" : "More about keys"
         })
       })]
-    }), Bb && (0, Eb.jsxs)("a", {
+    }), vz && (0, Oz.jsxs)("a", {
       className: "WorldCodeAiKeyPageLink",
-      href: Bb.keyPage,
+      href: vz.keyPage,
       target: "_blank",
       rel: "noreferrer noopener",
-      children: ["Get a key on ", Bb.shortName, "'s website ", (0, Eb.jsx)("span", {
+      children: ["Get a key on ", vz.shortName, "'s website ", (0, Oz.jsx)("span", {
         "aria-hidden": "true",
         children: "\u2197"
       })]
@@ -10005,473 +10005,473 @@ function tB(bb) {
   })
 }
 
-function wB() {
-  const [bb, ab] = (0, Ab.useState)(!1);
-  return (0, Eb.jsxs)("span", {
+function Vv() {
+  const [zz, tz] = (0, Fz.useState)(!1);
+  return (0, Oz.jsxs)("span", {
     className: "WorldCodeAiAiSettingsNote",
-    children: ["Any server that works like OpenAI's, such as LM Studio or Ollama.", " ", (0, Eb.jsx)("button", {
+    children: ["Any server that works like OpenAI's, such as LM Studio or Ollama.", " ", (0, Oz.jsx)("button", {
       type: "button",
       className: "WorldCodeAiKeyLearnMore",
-      "aria-expanded": bb,
+      "aria-expanded": zz,
       onClick: () => {
-        ab(!bb)
+        tz(!zz)
       },
-      children: bb ? "Hide tips" : "Server tips"
-    }), bb && (0, Eb.jsx)("span", {
+      children: zz ? "Hide tips" : "Server tips"
+    }), zz && (0, Oz.jsx)("span", {
       className: "WorldCodeAiServerTips",
       children: "Use https://, or http:// for one on this computer, like http://localhost:1234/v1. It must allow web pages to use it: in LM Studio turn on CORS; for Ollama see its help."
     })]
   })
 }
 
-function sB(bb) {
-  bb.stopPropagation()
+function Rv(zz) {
+  zz.stopPropagation()
 }
 
-function gB(bb) {
-  var ab, Ub, Mb, Tb, Yb;
+function pv(zz) {
+  var tz, sz, Wz, Xz, oz;
   let {
-    editing: Bb,
-    onAdded: eb,
-    onOpenSettings: vb
-  } = bb;
+    editing: vz,
+    onAdded: Uz,
+    onOpenSettings: Kz
+  } = zz;
   const {
-    remember: Lb
-  } = OE(), [Pb, Xb] = (0, Ab.useState)(null !== (ab = null === Bb || void 0 === Bb ? void 0 : Bb.provider) && void 0 !== ab ? ab : null), [jb, Rb] = (0, Ab.useState)(!!Bb), [kb, yb] = (0, Ab.useState)(""), Zb = null !== (Ub = null === Bb || void 0 === Bb ? void 0 : Bb.key) && void 0 !== Ub ? Ub : "", [Db, zb] = (0, Ab.useState)(!1), [xb, ib] = (0, Ab.useState)(null !== (Mb = null === Bb || void 0 === Bb ? void 0 : Bb.baseUrl) && void 0 !== Mb ? Mb : ""), fb = bb => {
-    var ab, Ub;
-    return bb === (null === Bb || void 0 === Bb ? void 0 : Bb.provider) && ("custom" !== bb || (null !== (ab = XE(xb)) && void 0 !== ab ? ab : "") === (null !== (Ub = Bb.baseUrl) && void 0 !== Ub ? Ub : ""))
-  }, mb = "" !== Zb && fb(Pb), pb = function(bb) {
-    let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : LE(kb);
-    return "" === ab && "" !== Zb && fb(bb) ? Zb : ab
-  }, [Nb, Wb] = (0, Ab.useState)(""), [Hb, Ib] = (0, Ab.useState)(null !== (Tb = null === Bb || void 0 === Bb ? void 0 : Bb.name) && void 0 !== Tb ? Tb : ""), [db, Fb] = (0, Ab.useState)(!1), [hb, Gb] = (0, Ab.useState)(null), [Qb, qb] = (0, Ab.useState)(""), [ub, rb] = (0, Ab.useState)(!1), [Kb, ob] = (0, Ab.useState)(null), [lb, tb] = (0, Ab.useState)(null), wb = "custom" === Pb && "" === pb(Pb), sb = (0, Ab.useRef)(null), gb = (0, Ab.useRef)(null), Cb = (0, Ab.useRef)(null);
-  (0, Ab.useEffect)((() => {
-    var bb, ab;
-    hb && (null === (bb = gb.current) || void 0 === bb || bb.scrollIntoView({
+    remember: uz
+  } = fO(), [Nz, bz] = (0, Fz.useState)(null !== (tz = null === vz || void 0 === vz ? void 0 : vz.provider) && void 0 !== tz ? tz : null), [wz, Dz] = (0, Fz.useState)(!!vz), [gz, Hz] = (0, Fz.useState)(""), Bz = null !== (sz = null === vz || void 0 === vz ? void 0 : vz.key) && void 0 !== sz ? sz : "", [Pz, rz] = (0, Fz.useState)(!1), [Yz, xz] = (0, Fz.useState)(null !== (Wz = null === vz || void 0 === vz ? void 0 : vz.baseUrl) && void 0 !== Wz ? Wz : ""), mz = zz => {
+    var tz, sz;
+    return zz === (null === vz || void 0 === vz ? void 0 : vz.provider) && ("custom" !== zz || (null !== (tz = gO(Yz)) && void 0 !== tz ? tz : "") === (null !== (sz = vz.baseUrl) && void 0 !== sz ? sz : ""))
+  }, Jz = "" !== Bz && mz(Nz), Iz = function(zz) {
+    let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wO(gz);
+    return "" === tz && "" !== Bz && mz(zz) ? Bz : tz
+  }, [Cz, ez] = (0, Fz.useState)(""), [Zz, Gz] = (0, Fz.useState)(null !== (Xz = null === vz || void 0 === vz ? void 0 : vz.name) && void 0 !== Xz ? Xz : ""), [Tz, cz] = (0, Fz.useState)(!1), [jz, Az] = (0, Fz.useState)(null), [yz, Mz] = (0, Fz.useState)(""), [dz, hz] = (0, Fz.useState)(!1), [Qz, kz] = (0, Fz.useState)(null), [iz, Lz] = (0, Fz.useState)(null), lz = "custom" === Nz && "" === Iz(Nz), nz = (0, Fz.useRef)(null), az = (0, Fz.useRef)(null), qz = (0, Fz.useRef)(null);
+  (0, Fz.useEffect)((() => {
+    var zz, tz;
+    jz && (null === (zz = az.current) || void 0 === zz || zz.scrollIntoView({
       block: "start"
-    }), null === (ab = Cb.current) || void 0 === ab || ab.scrollIntoView({
+    }), null === (tz = qz.current) || void 0 === tz || tz.scrollIntoView({
       block: "nearest"
     }))
-  }), [hb]), (0, Ab.useEffect)((() => () => {
-    var bb;
-    null === (bb = sb.current) || void 0 === bb || bb.abort()
-  }), []), (0, Ab.useEffect)((() => {
-    var bb;
-    Kb && (null === (bb = Cb.current) || void 0 === bb || bb.scrollIntoView({
+  }), [jz]), (0, Fz.useEffect)((() => () => {
+    var zz;
+    null === (zz = nz.current) || void 0 === zz || zz.abort()
+  }), []), (0, Fz.useEffect)((() => {
+    var zz;
+    Qz && (null === (zz = qz.current) || void 0 === zz || zz.scrollIntoView({
       block: "nearest"
     }))
-  }), [Kb]);
-  const Vb = () => {
-      var bb;
-      null === (bb = sb.current) || void 0 === bb || bb.abort(), rb(!1), Gb(null), ob(null), tb(null)
+  }), [Qz]);
+  const Sz = () => {
+      var zz;
+      null === (zz = nz.current) || void 0 === zz || zz.abort(), hz(!1), Az(null), kz(null), Lz(null)
     },
-    Ob = null === hb || void 0 === hb ? void 0 : hb.find((bb => bb.id === Qb));
-  return (0, Eb.jsxs)("form", {
+    Vz = null === jz || void 0 === jz ? void 0 : jz.find((zz => zz.id === yz));
+  return (0, Oz.jsxs)("form", {
     className: "WorldCodeAiAddKey",
-    onSubmit: bb => {
-      bb.preventDefault(), hb ? (() => {
-        var bb;
-        if (!Pb || !hb) return;
-        const ab = VE.addKey({
-          provider: Pb,
-          key: pb(Pb),
-          baseUrl: "custom" === Pb && null !== (bb = XE(xb)) && void 0 !== bb ? bb : void 0,
-          models: hb
-        }, Qb, null === Bb || void 0 === Bb ? void 0 : Bb.id);
-        ("" !== Hb.trim() || Bb) && VE.renameKey(ab, Hb), eb()
+    onSubmit: zz => {
+      zz.preventDefault(), jz ? (() => {
+        var zz;
+        if (!Nz || !jz) return;
+        const tz = pO.addKey({
+          provider: Nz,
+          key: Iz(Nz),
+          baseUrl: "custom" === Nz && null !== (zz = gO(Yz)) && void 0 !== zz ? zz : void 0,
+          models: jz
+        }, yz, null === vz || void 0 === vz ? void 0 : vz.id);
+        ("" !== Zz.trim() || vz) && pO.renameKey(tz, Zz), Uz()
       })() : (async () => {
-        const ab = LE(kb);
-        yb(ab), tb(null);
-        const Ub = null !== Pb && void 0 !== Pb ? Pb : PE(ab),
-          Ab = pb(Ub, ab);
-        if ("" === Ab && "custom" !== Ub) return void ob("Paste your key first.");
-        if (!Ub) return void ob("Pick the company your key is from.");
-        const Mb = "custom" === Ub ? XE(xb) : null;
-        if ("custom" === Ub && null === Mb) return void ob("That address doesn't look right. It should start with https://");
-        if (db && "" === Nb.trim()) return void ob("Type the name of the model to use.");
-        Xb(Ub), rb(!0), ob(null);
-        const Tb = new AbortController;
-        sb.current = Tb;
+        const tz = wO(gz);
+        Hz(tz), Lz(null);
+        const sz = null !== Nz && void 0 !== Nz ? Nz : DO(tz),
+          Fz = Iz(sz, tz);
+        if ("" === Fz && "custom" !== sz) return void kz("Paste your key first.");
+        if (!sz) return void kz("Pick the company your key is from.");
+        const Wz = "custom" === sz ? gO(Yz) : null;
+        if ("custom" === sz && null === Wz) return void kz("That address doesn't look right. It should start with https://");
+        if (Tz && "" === Cz.trim()) return void kz("Type the name of the model to use.");
+        bz(sz), hz(!0), kz(null);
+        const Xz = new AbortController;
+        nz.current = Xz;
         try {
-          var Eb, Yb;
-          const bb = await cE({
-            provider: Ub,
-            key: Ab,
-            baseUrl: null !== Mb && void 0 !== Mb ? Mb : void 0,
-            modelName: db ? Nb : void 0
-          }, Tb.signal);
-          if (rb(!1), 0 === bb.length) return Fb(!0), void ob("custom" === Ub ? "This address doesn't list its models. Type the name of the model to use." : "Type the name of the model to use.");
-          Gb(bb);
-          const ab = VE.getState().selected,
-            eb = Bb && (null === ab || void 0 === ab ? void 0 : ab.keyId) === Bb.id ? bb.find((bb => bb.id === ab.modelId)) : void 0;
-          qb(null !== (Eb = null === (Yb = null !== eb && void 0 !== eb ? eb : oE(bb)) || void 0 === Yb ? void 0 : Yb.id) && void 0 !== Eb ? Eb : "")
-        } catch (bb) {
-          if (Tb.signal.aborted) return;
-          rb(!1);
-          const Mb = bb instanceof RE ? bb.problem : "failed";
-          if (tb(bb instanceof RE && bb.detail ? kE(bb.detail, Ab) : null), "badKey" === Mb && "" === Ab) return void ob("This address needs a key.");
-          const Eb = "badKey" !== Mb || jb ? "" : ` If it isn't from ${BE[Ub].shortName}, pick the company it's from.`;
-          ob(`${yE(Mb,Ub)}${Eb}`)
+          var Oz, oz;
+          const zz = await EO({
+            provider: sz,
+            key: Fz,
+            baseUrl: null !== Wz && void 0 !== Wz ? Wz : void 0,
+            modelName: Tz ? Cz : void 0
+          }, Xz.signal);
+          if (hz(!1), 0 === zz.length) return cz(!0), void kz("custom" === sz ? "This address doesn't list its models. Type the name of the model to use." : "Type the name of the model to use.");
+          Az(zz);
+          const tz = pO.getState().selected,
+            Uz = vz && (null === tz || void 0 === tz ? void 0 : tz.keyId) === vz.id ? zz.find((zz => zz.id === tz.modelId)) : void 0;
+          Mz(null !== (Oz = null === (oz = null !== Uz && void 0 !== Uz ? Uz : lO(zz)) || void 0 === oz ? void 0 : oz.id) && void 0 !== Oz ? Oz : "")
+        } catch (zz) {
+          if (Xz.signal.aborted) return;
+          hz(!1);
+          const Wz = zz instanceof BO ? zz.problem : "failed";
+          if (Lz(zz instanceof BO && zz.detail ? PO(zz.detail, Fz) : null), "badKey" === Wz && "" === Fz) return void kz("This address needs a key.");
+          const Oz = "badKey" !== Wz || wz ? "" : ` If it isn't from ${uO[sz].shortName}, pick the company it's from.`;
+          kz(`${rO(Wz,sz)}${Oz}`)
         }
       })()
     },
-    children: [(0, Eb.jsxs)("label", {
+    children: [(0, Oz.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, Eb.jsx)("span", {
+      children: [(0, Oz.jsx)("span", {
         children: "Company"
-      }), (0, Eb.jsxs)("select", {
+      }), (0, Oz.jsxs)("select", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyCompany",
-        value: null !== Pb && void 0 !== Pb ? Pb : "",
-        onChange: bb => {
-          Xb(bb.target.value), Rb(!0), Fb(!1), Vb()
+        value: null !== Nz && void 0 !== Nz ? Nz : "",
+        onChange: zz => {
+          bz(zz.target.value), Dz(!0), cz(!1), Sz()
         },
-        onKeyDown: sB,
-        children: [null === Pb && (0, Eb.jsx)("option", {
+        onKeyDown: Rv,
+        children: [null === Nz && (0, Oz.jsx)("option", {
           value: "",
           disabled: !0,
           children: "Pick one, or paste your key below"
-        }), eE.map((bb => (0, Eb.jsx)("option", {
-          value: bb,
-          children: BE[bb].name
-        }, bb)))]
+        }), NO.map((zz => (0, Oz.jsx)("option", {
+          value: zz,
+          children: uO[zz].name
+        }, zz)))]
       })]
-    }), "custom" === Pb && (0, Eb.jsxs)("label", {
+    }), "custom" === Nz && (0, Oz.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, Eb.jsx)("span", {
+      children: [(0, Oz.jsx)("span", {
         children: "Server address"
-      }), (0, Eb.jsx)("input", {
+      }), (0, Oz.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyEndpoint",
-        value: xb,
+        value: Yz,
         placeholder: "https://ai.example.com/v1",
         autoComplete: "off",
         spellCheck: !1,
-        onChange: bb => {
-          ib(bb.target.value), Fb(!1), Vb()
+        onChange: zz => {
+          xz(zz.target.value), cz(!1), Sz()
         },
-        onKeyDown: sB
-      }), (!Bb || xb !== (null !== (Yb = Bb.baseUrl) && void 0 !== Yb ? Yb : "")) && (0, Eb.jsx)(wB, {})]
-    }), (0, Eb.jsxs)("div", {
+        onKeyDown: Rv
+      }), (!vz || Yz !== (null !== (oz = vz.baseUrl) && void 0 !== oz ? oz : "")) && (0, Oz.jsx)(Vv, {})]
+    }), (0, Oz.jsxs)("div", {
       className: "WorldCodeAiAddKeyField",
-      children: [mb && (0, Eb.jsxs)("span", {
+      children: [Jz && (0, Oz.jsxs)("span", {
         className: "WorldCodeAiAddKeySavedKey",
-        children: ["Key ends ", (0, Eb.jsxs)("code", {
-          children: ["\u2026", Zb.slice(-4)]
+        children: ["Key ends ", (0, Oz.jsxs)("code", {
+          children: ["\u2026", Bz.slice(-4)]
         })]
-      }), (0, Eb.jsx)("label", {
+      }), (0, Oz.jsx)("label", {
         htmlFor: "WorldCodeAiAddKeyKey",
-        children: mb ? "Paste a new key to replace it (optional)" : "Your key"
-      }), (0, Eb.jsxs)("span", {
+        children: Jz ? "Paste a new key to replace it (optional)" : "Your key"
+      }), (0, Oz.jsxs)("span", {
         className: "WorldCodeAiAddKeyPaste",
-        children: [(0, Eb.jsx)("input", {
+        children: [(0, Oz.jsx)("input", {
           id: "WorldCodeAiAddKeyKey",
           className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyKey",
-          type: Db ? "text" : "password",
-          value: kb,
-          placeholder: mb ? "Leave empty to keep it" : "custom" === Pb ? "Paste the key, or leave empty" : "Paste the key here",
+          type: Pz ? "text" : "password",
+          value: gz,
+          placeholder: Jz ? "Leave empty to keep it" : "custom" === Nz ? "Paste the key, or leave empty" : "Paste the key here",
           autoComplete: "off",
           spellCheck: !1,
-          onChange: bb => {
-            yb(bb.target.value), jb || Xb(PE(LE(bb.target.value))), Vb()
+          onChange: zz => {
+            Hz(zz.target.value), wz || bz(DO(wO(zz.target.value))), Sz()
           },
-          onKeyDown: sB
-        }), (0, Eb.jsx)("button", {
+          onKeyDown: Rv
+        }), (0, Oz.jsx)("button", {
           type: "button",
           className: "WorldCodeAiSecondaryButton",
           onClick: () => {
-            zb(!Db)
+            rz(!Pz)
           },
-          children: Db ? "Hide" : "Show"
+          children: Pz ? "Hide" : "Show"
         })]
-      }), (0, Eb.jsx)(tB, {
-        provider: Pb
+      }), (0, Oz.jsx)(Sv, {
+        provider: Nz
       })]
-    }), !Bb && (0, Eb.jsxs)("p", {
+    }), !vz && (0, Oz.jsxs)("p", {
       className: "WorldCodeAiAiSettingsNote WorldCodeAiAddKeyRemember",
-      children: [Lb ? "Your keys are remembered in this browser. Change it in " : "Your keys are kept until you close this tab. To remember them, see ", (0, Eb.jsx)("button", {
+      children: [uz ? "Your keys are remembered in this browser. Change it in " : "Your keys are kept until you close this tab. To remember them, see ", (0, Oz.jsx)("button", {
         type: "button",
         className: "WorldCodeAiKeyLearnMore",
-        onClick: vb,
+        onClick: Kz,
         children: "AI settings"
       }), "."]
-    }), db && (0, Eb.jsxs)("label", {
+    }), Tz && (0, Oz.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, Eb.jsx)("span", {
+      children: [(0, Oz.jsx)("span", {
         children: "Model name"
-      }), (0, Eb.jsx)("input", {
+      }), (0, Oz.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyModel",
-        value: Nb,
+        value: Cz,
         placeholder: "llama-3.3-70b-versatile",
         autoComplete: "off",
         spellCheck: !1,
-        onChange: bb => {
-          Wb(bb.target.value), Vb()
+        onChange: zz => {
+          ez(zz.target.value), Sz()
         },
-        onKeyDown: sB
+        onKeyDown: Rv
       })]
-    }), hb && (0, Eb.jsxs)("div", {
-      ref: gb,
+    }), jz && (0, Oz.jsxs)("div", {
+      ref: az,
       className: "WorldCodeAiModelList WorldCodeAiAddKeyModels",
       role: "radiogroup",
       "aria-labelledby": "WorldCodeAiAddKeyModelsTitle",
-      children: [(0, Eb.jsxs)("p", {
+      children: [(0, Oz.jsxs)("p", {
         id: "WorldCodeAiAddKeyModelsTitle",
         className: "WorldCodeAiAddKeyWorks",
-        children: ["" === pb(Pb) ? "It works." : "Your key works.", " Pick a model:"]
-      }), hb.map((bb => (0, Eb.jsx)(dB, {
-        name: bb.name,
-        hint: bb.tier ? GE[bb.tier] : "",
+        children: ["" === Iz(Nz) ? "It works." : "Your key works.", " Pick a model:"]
+      }), jz.map((zz => (0, Oz.jsx)(Mv, {
+        name: zz.name,
+        hint: zz.tier ? dO[zz.tier] : "",
         choice: {
-          keyId: null !== Pb && void 0 !== Pb ? Pb : "",
-          modelId: bb.id
+          keyId: null !== Nz && void 0 !== Nz ? Nz : "",
+          modelId: zz.id
         },
-        selected: bb.id === Qb,
+        selected: zz.id === yz,
         radioName: "WorldCodeAiAddKeyModelPick",
         onSelect: () => {
-          qb(bb.id)
+          Mz(zz.id)
         }
-      }, bb.id))), (0, Eb.jsx)("button", {
+      }, zz.id))), (0, Oz.jsx)("button", {
         type: "button",
         className: "WorldCodeAiKeyLearnMore",
         onClick: () => {
-          Fb(!0), Vb()
+          cz(!0), Sz()
         },
         children: "Type a model name yourself"
       })]
-    }), hb && (0, Eb.jsxs)("label", {
+    }), jz && (0, Oz.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, Eb.jsx)("span", {
+      children: [(0, Oz.jsx)("span", {
         children: "Name it (optional)"
-      }), (0, Eb.jsx)("input", {
+      }), (0, Oz.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyName",
-        value: Hb,
+        value: Zz,
         maxLength: 30,
-        placeholder: Pb && "custom" !== Pb ? `Like My ${BE[Pb].shortName}` : "Like Home server",
+        placeholder: Nz && "custom" !== Nz ? `Like My ${uO[Nz].shortName}` : "Like Home server",
         autoComplete: "off",
-        onChange: bb => {
-          Ib(bb.target.value)
+        onChange: zz => {
+          Gz(zz.target.value)
         },
-        onKeyDown: sB
+        onKeyDown: Rv
       })]
-    }), (0, Eb.jsxs)("div", {
-      ref: Cb,
+    }), (0, Oz.jsxs)("div", {
+      ref: qz,
       className: "WorldCodeAiAddKeyActions",
-      children: [Kb && (0, Eb.jsx)("p", {
+      children: [Qz && (0, Oz.jsx)("p", {
         className: "WorldCodeAiAddKeyError",
         role: "alert",
-        children: Kb
-      }), Kb && lb && (0, Eb.jsx)(kB, {
-        detail: lb,
+        children: Qz
+      }), Qz && iz && (0, Oz.jsx)(Yv, {
+        detail: iz,
         onOpen: () => {
-          var bb, ab;
-          null === (bb = Cb.current) || void 0 === bb || null === (ab = bb.querySelector(".WorldCodeAiAddKeySave")) || void 0 === ab || ab.scrollIntoView({
+          var zz, tz;
+          null === (zz = qz.current) || void 0 === zz || null === (tz = zz.querySelector(".WorldCodeAiAddKeySave")) || void 0 === tz || tz.scrollIntoView({
             block: "nearest"
           })
         }
-      }), (0, Eb.jsx)("button", {
+      }), (0, Oz.jsx)("button", {
         type: "submit",
         className: "WorldCodeAiPrimaryButton WorldCodeAiAddKeySave",
-        disabled: ub,
-        children: ub ? wb ? "Testing the connection\u2026" : "Testing your key\u2026" : Ob ? `Save and use ${Ob.name}` : wb ? "Test connection" : "Test key"
+        disabled: dz,
+        children: dz ? lz ? "Testing the connection\u2026" : "Testing your key\u2026" : Vz ? `Save and use ${Vz.name}` : lz ? "Test connection" : "Test key"
       })]
     })]
   })
 }
-var CB = Ub(1134),
-  VB = Ub(36214),
-  OB = Ub(36209);
+var fv = sz(1173),
+  Ev = sz(36303),
+  zU = sz(36297);
 
-function cB(bb) {
+function tU(zz) {
   let {
-    step: ab,
-    placement: Ub = "left",
-    onPrevious: Ab,
-    children: Mb
-  } = bb;
+    step: tz,
+    placement: sz = "left",
+    onPrevious: Fz,
+    children: Wz
+  } = zz;
   const {
-    t: Tb
-  } = (0, CB.A)();
-  return (0, Eb.jsx)(OB.j, {
+    t: Xz
+  } = (0, fv.B)();
+  return (0, Oz.jsx)(zU.g, {
     tutorial: "aiHelperOverview",
-    step: ab,
-    text: Tb(`codeEditorAiTutorial:${ab}`),
-    placement: Ub,
-    onPrevious: Ab,
-    children: Mb
+    step: tz,
+    text: Xz(`codeEditorAiTutorial:${tz}`),
+    placement: sz,
+    onPrevious: Fz,
+    children: Wz
   })
 }
 
-function JB(bb, ab) {
-  if (bb.scrollHeight <= bb.clientHeight + 1) nB(bb);
+function sU(zz, tz) {
+  if (zz.scrollHeight <= zz.clientHeight + 1) FU(zz);
   else {
-    if (!WB(bb, ab)) {
-      const Ub = ab.getBoundingClientRect().bottom - bb.getBoundingClientRect().bottom;
-      Ub > 0 && (bb.scrollTop += Ub),
-        function(bb, ab) {
-          const Ub = bb.getBoundingClientRect(),
-            Ab = Math.max(Ub.top, ...Array.from(bb.querySelectorAll(".WorldCodeAiModelGroupHeader"), (bb => {
-              const ab = bb.getBoundingClientRect();
-              return ab.top <= Ub.top + 1 ? ab.bottom : Ub.top
+    if (!jv(zz, tz)) {
+      const sz = tz.getBoundingClientRect().bottom - zz.getBoundingClientRect().bottom;
+      sz > 0 && (zz.scrollTop += sz),
+        function(zz, tz) {
+          const sz = zz.getBoundingClientRect(),
+            Fz = Math.max(sz.top, ...Array.from(zz.querySelectorAll(".WorldCodeAiModelGroupHeader"), (zz => {
+              const tz = zz.getBoundingClientRect();
+              return tz.top <= sz.top + 1 ? tz.bottom : sz.top
             })));
-          if (Ab <= Ub.top) return;
-          const Mb = ab.closest(".WorldCodeAiModelGroup"),
-            Tb = Mb && parseFloat(getComputedStyle(Mb).rowGap) || 6,
-            Eb = Array.from(bb.querySelectorAll(".WorldCodeAiModelRow, .WorldCodeAiModelUnfold")).find((bb => {
-              const ab = bb.getBoundingClientRect();
-              return ab.top < Ab + Tb - 1 && ab.bottom > Ab - Tb
+          if (Fz <= sz.top) return;
+          const Wz = tz.closest(".WorldCodeAiModelGroup"),
+            Xz = Wz && parseFloat(getComputedStyle(Wz).rowGap) || 6,
+            Oz = Array.from(zz.querySelectorAll(".WorldCodeAiModelRow, .WorldCodeAiModelUnfold")).find((zz => {
+              const tz = zz.getBoundingClientRect();
+              return tz.top < Fz + Xz - 1 && tz.bottom > Fz - Xz
             }));
-          if (!Eb || Eb === ab) return;
-          const Yb = bb.scrollTop;
-          bb.scrollTop -= Ab + Tb - Eb.getBoundingClientRect().top, ab.getBoundingClientRect().bottom > Ub.bottom && (bb.scrollTop = Yb, bb.scrollTop += Math.max(0, Eb.getBoundingClientRect().bottom - Ab))
-        }(bb, ab)
+          if (!Oz || Oz === tz) return;
+          const oz = zz.scrollTop;
+          zz.scrollTop -= Fz + Xz - Oz.getBoundingClientRect().top, tz.getBoundingClientRect().bottom > sz.bottom && (zz.scrollTop = oz, zz.scrollTop += Math.max(0, Oz.getBoundingClientRect().bottom - Fz))
+        }(zz, tz)
     }
-    nB(bb)
+    FU(zz)
   }
 }
 
-function nB(bb) {
-  const ab = bb.getBoundingClientRect().top;
-  for (const Ub of Array.from(bb.querySelectorAll(".WorldCodeAiModelGroup"))) {
-    const bb = Ub.querySelector(".WorldCodeAiModelGroupHeader");
-    if (!bb) continue;
-    const Ab = ab + bb.offsetHeight,
-      Mb = Array.from(Ub.querySelectorAll(".WorldCodeAiModelRow")).some((bb => bb.getBoundingClientRect().bottom > Ab + 2));
-    bb.classList.toggle("Unpinned", !Mb)
+function FU(zz) {
+  const tz = zz.getBoundingClientRect().top;
+  for (const sz of Array.from(zz.querySelectorAll(".WorldCodeAiModelGroup"))) {
+    const zz = sz.querySelector(".WorldCodeAiModelGroupHeader");
+    if (!zz) continue;
+    const Fz = tz + zz.offsetHeight,
+      Wz = Array.from(sz.querySelectorAll(".WorldCodeAiModelRow")).some((zz => zz.getBoundingClientRect().bottom > Fz + 2));
+    zz.classList.toggle("Unpinned", !Wz)
   }
 }
 
-function SB(bb) {
-  const ab = lE(bb, !0);
-  return bb.model.name.toLowerCase().startsWith(ab.toLowerCase()) ? bb.model.name : `${ab} \xb7 ${bb.model.name}`
+function WU(zz) {
+  const tz = nO(zz, !0);
+  return zz.model.name.toLowerCase().startsWith(tz.toLowerCase()) ? zz.model.name : `${tz} \xb7 ${zz.model.name}`
 }
 
-function be(bb) {
+function XU(zz) {
   let {
-    onAddKey: ab,
-    editsOn: Ub,
-    freeOnce: Mb = !1,
-    onFreeOnce: Yb,
-    children: Bb
-  } = bb;
+    onAddKey: tz,
+    editsOn: sz,
+    freeOnce: Wz = !1,
+    onFreeOnce: oz,
+    children: vz
+  } = zz;
   const {
-    active: eb,
-    select: vb
-  } = OE(), Lb = PY(EY());
-  (0, Ab.useEffect)((() => {
-    TY.refresh(), fY()
+    active: Uz,
+    select: Kz
+  } = fO(), uz = Do(Uo());
+  (0, Fz.useEffect)((() => {
+    vo.refresh(), Co()
   }), []);
-  const [Pb, Xb] = (0, Ab.useState)(!1), jb = (0, Ab.useRef)(null), Rb = (0, Ab.useRef)(null), kb = (0, Ab.useRef)(null), yb = () => {
-    var bb;
-    Xb(!1), null === (bb = Rb.current) || void 0 === bb || bb.focus()
+  const [Nz, bz] = (0, Fz.useState)(!1), wz = (0, Fz.useRef)(null), Dz = (0, Fz.useRef)(null), gz = (0, Fz.useRef)(null), Hz = () => {
+    var zz;
+    bz(!1), null === (zz = Dz.current) || void 0 === zz || zz.focus()
   };
-  (0, Ab.useEffect)((() => {
-    var bb, ab;
-    if (!Pb) return;
-    const Ub = null === (bb = kb.current) || void 0 === bb ? void 0 : bb.querySelector("input:checked");
-    null === Ub || void 0 === Ub || Ub.focus({
+  (0, Fz.useEffect)((() => {
+    var zz, tz;
+    if (!Nz) return;
+    const sz = null === (zz = gz.current) || void 0 === zz ? void 0 : zz.querySelector("input:checked");
+    null === sz || void 0 === sz || sz.focus({
       preventScroll: !0
     });
-    const Ab = null === (ab = kb.current) || void 0 === ab ? void 0 : ab.querySelector(".WorldCodeAiModelMenuList"),
-      Mb = null === Ub || void 0 === Ub ? void 0 : Ub.closest(".WorldCodeAiModelRow");
-    Ab && Mb && JB(Ab, Mb);
-    const Tb = () => {
-      Ab && nB(Ab)
+    const Fz = null === (tz = gz.current) || void 0 === tz ? void 0 : tz.querySelector(".WorldCodeAiModelMenuList"),
+      Wz = null === sz || void 0 === sz ? void 0 : sz.closest(".WorldCodeAiModelRow");
+    Fz && Wz && sU(Fz, Wz);
+    const Xz = () => {
+      Fz && FU(Fz)
     };
-    null === Ab || void 0 === Ab || Ab.addEventListener("scroll", Tb, {
+    null === Fz || void 0 === Fz || Fz.addEventListener("scroll", Xz, {
       passive: !0
     });
-    const Eb = bb => {
-        var ab;
-        null !== (ab = jb.current) && void 0 !== ab && ab.contains(bb.target) || Xb(!1)
+    const Oz = zz => {
+        var tz;
+        null !== (tz = wz.current) && void 0 !== tz && tz.contains(zz.target) || bz(!1)
       },
-      Yb = bb => {
-        "Escape" === bb.key && (bb.stopPropagation(), bb.preventDefault(), GB && (GB(), 1) || yb())
+      oz = zz => {
+        "Escape" === zz.key && (zz.stopPropagation(), zz.preventDefault(), Qv && (Qv(), 1) || Hz())
       };
-    return document.addEventListener("pointerdown", Eb), document.addEventListener("keydown", Yb, !0), () => {
-      null === Ab || void 0 === Ab || Ab.removeEventListener("scroll", Tb), document.removeEventListener("pointerdown", Eb), document.removeEventListener("keydown", Yb, !0)
+    return document.addEventListener("pointerdown", Oz), document.addEventListener("keydown", oz, !0), () => {
+      null === Fz || void 0 === Fz || Fz.removeEventListener("scroll", Xz), document.removeEventListener("pointerdown", Oz), document.removeEventListener("keydown", oz, !0)
     }
-  }), [Pb]);
-  const Zb = Mb && null !== eb,
-    Db = Zb ? "Bot.xd (free) \xb7 once" : eb ? SB(eb) : Lb ? SE : "Bot.xd (free)";
-  return (0, Eb.jsxs)("div", {
-    ref: jb,
+  }), [Nz]);
+  const Bz = Wz && null !== Uz,
+    Pz = Bz ? "Bot.xd (free) \xb7 once" : Uz ? WU(Uz) : uz ? so : "Bot.xd (free)";
+  return (0, Oz.jsxs)("div", {
+    ref: wz,
     className: "WorldCodeAiModelChipRow",
-    onBlur: bb => {
-      var ab;
-      !Pb || !bb.relatedTarget || null !== (ab = jb.current) && void 0 !== ab && ab.contains(bb.relatedTarget) || Xb(!1)
+    onBlur: zz => {
+      var tz;
+      !Nz || !zz.relatedTarget || null !== (tz = wz.current) && void 0 !== tz && tz.contains(zz.relatedTarget) || bz(!1)
     },
-    children: [(0, Eb.jsxs)("button", {
-      ref: Rb,
-      className: Tb()("WorldCodeAiModelChip", Pb && "Open"),
-      "aria-expanded": Pb,
-      "aria-label": `AI model: ${Db}`,
+    children: [(0, Oz.jsxs)("button", {
+      ref: Dz,
+      className: Xz()("WorldCodeAiModelChip", Nz && "Open"),
+      "aria-expanded": Nz,
+      "aria-label": `AI model: ${Pz}`,
       title: "Change AI model",
       onClick: () => {
-        Xb(!Pb)
+        bz(!Nz)
       },
-      children: [eb && !Zb && "" !== eb.key && (0, Eb.jsx)(RB, {}), (0, Eb.jsx)("span", {
+      children: [Uz && !Bz && "" !== Uz.key && (0, Oz.jsx)(rv, {}), (0, Oz.jsx)("span", {
         className: "WorldCodeAiModelChipName",
-        children: Db
-      }), (0, Eb.jsx)("span", {
+        children: Pz
+      }), (0, Oz.jsx)("span", {
         className: "WorldCodeAiModelChipCaret",
         "aria-hidden": "true",
         children: "\u25be"
       })]
-    }), null !== Ub && (0, Eb.jsx)(cB, {
+    }), null !== sz && (0, Oz.jsx)(tU, {
       step: "aiEdits",
       placement: "top",
-      children: (0, Eb.jsx)("span", {
-        className: Tb()("WorldCodeAiEditsTag", !Ub && "WorldCodeAiEditsTag-off"),
-        title: `Allow AI to make edits to my code is ${Ub?"on":"off"}, in AI settings`,
-        children: Ub ? "Edits on" : "Edits off"
+      children: (0, Oz.jsx)("span", {
+        className: Xz()("WorldCodeAiEditsTag", !sz && "WorldCodeAiEditsTag-off"),
+        title: `Allow AI to make edits to my code is ${sz?"on":"off"}, in AI settings`,
+        children: sz ? "Edits on" : "Edits off"
       })
-    }), (0, Eb.jsx)("span", {
+    }), (0, Oz.jsx)("span", {
       className: "WorldCodeAiModelChipStatus",
-      children: Bb
-    }), Pb && (0, Eb.jsxs)("div", {
-      ref: kb,
+      children: vz
+    }), Nz && (0, Oz.jsxs)("div", {
+      ref: gz,
       className: "WorldCodeAiModelMenu",
       role: "dialog",
       "aria-labelledby": "WorldCodeAiModelMenuTitle",
-      children: [(0, Eb.jsx)("h3", {
+      children: [(0, Oz.jsx)("h3", {
         id: "WorldCodeAiModelMenuTitle",
         className: "WorldCodeAiAiSettingsTitle",
         children: "AI model"
-      }), (0, Eb.jsx)("div", {
+      }), (0, Oz.jsx)("div", {
         className: "WorldCodeAiModelMenuList",
-        children: (0, Eb.jsx)(FB, {
+        children: (0, Oz.jsx)(dv, {
           labelledBy: "WorldCodeAiModelMenuTitle",
           onPicked: () => {
-            null === Yb || void 0 === Yb || Yb(!1), yb()
+            null === oz || void 0 === oz || oz(!1), Hz()
           }
         })
-      }), (0, Eb.jsxs)("div", {
+      }), (0, Oz.jsxs)("div", {
         className: "WorldCodeAiModelMenuActions",
-        children: [(0, Eb.jsxs)("button", {
+        children: [(0, Oz.jsxs)("button", {
           className: "WorldCodeAiSecondaryButton WorldCodeAiAddKeyButton",
           onClick: () => {
-            Xb(!1), ab()
+            bz(!1), tz()
           },
-          children: [(0, Eb.jsx)("span", {
+          children: [(0, Oz.jsx)("span", {
             "aria-hidden": "true",
             children: "+ "
           }), "Add API key"]
-        }), eb && (0, Eb.jsxs)("span", {
+        }), Uz && (0, Oz.jsxs)("span", {
           className: "WorldCodeAiModelMenuBotxd",
-          children: [Yb && (Zb ? (0, Eb.jsxs)("button", {
+          children: [oz && (Bz ? (0, Oz.jsxs)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              Yb(!1), yb()
+              oz(!1), Hz()
             },
-            children: ["Back to ", eb.model.name]
-          }) : (0, Eb.jsx)("button", {
+            children: ["Back to ", Uz.model.name]
+          }) : (0, Oz.jsx)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              Yb(!0), yb()
+              oz(!0), Hz()
             },
             children: "Ask Bot.xd once"
-          })), (0, Eb.jsx)("button", {
+          })), (0, Oz.jsx)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              vb(null), yb()
+              Kz(null), Hz()
             },
             children: "Use Bot.xd from now on"
           })]
@@ -10480,379 +10480,379 @@ function be(bb) {
     })]
   })
 }
-const ae = "kv";
+const OU = "kv";
 
-function Ue(bb) {
-  return new Promise(((ab, Ub) => {
-    bb.oncomplete = () => {
-      ab()
-    }, bb.onerror = () => {
-      var ab;
-      Ub(null !== (ab = bb.error) && void 0 !== ab ? ab : new Error("IndexedDB transaction failed"))
-    }, bb.onabort = () => {
-      var ab;
-      Ub(null !== (ab = bb.error) && void 0 !== ab ? ab : new Error("IndexedDB transaction aborted"))
+function oU(zz) {
+  return new Promise(((tz, sz) => {
+    zz.oncomplete = () => {
+      tz()
+    }, zz.onerror = () => {
+      var tz;
+      sz(null !== (tz = zz.error) && void 0 !== tz ? tz : new Error("IndexedDB transaction failed"))
+    }, zz.onabort = () => {
+      var tz;
+      sz(null !== (tz = zz.error) && void 0 !== tz ? tz : new Error("IndexedDB transaction aborted"))
     }
   }))
 }
-var Ae = Ub(36242);
-const Me = (0, Ab.memo)((function(bb) {
+var vU = sz(36322);
+const UU = (0, Fz.memo)((function(zz) {
   let {
-    change: ab,
-    marked: Ub
-  } = bb;
-  const Mb = (0, Ab.useMemo)((() => CA(ab.before, ab.after)), [ab]),
-    Yb = [];
-  for (let Ab = 0; Ab < Mb.length; Ab++) {
-    if ("same" !== Mb[Ab].kind) {
-      Yb.push(Mb[Ab]);
+    change: tz,
+    marked: sz
+  } = zz;
+  const Wz = (0, Fz.useMemo)((() => RF(tz.before, tz.after)), [tz]),
+    oz = [];
+  for (let Fz = 0; Fz < Wz.length; Fz++) {
+    if ("same" !== Wz[Fz].kind) {
+      oz.push(Wz[Fz]);
       continue
     }
-    let bb = Ab;
-    for (; bb + 1 < Mb.length && "same" === Mb[bb + 1].kind;) bb++;
-    const ab = Mb.slice(Ab, bb + 1),
-      Ub = 0 === Ab ? 0 : 2,
-      Tb = bb === Mb.length - 1 ? 0 : 2;
-    ab.length > Ub + Tb + 1 ? Yb.push(...ab.slice(0, Ub), {
+    let zz = Fz;
+    for (; zz + 1 < Wz.length && "same" === Wz[zz + 1].kind;) zz++;
+    const tz = Wz.slice(Fz, zz + 1),
+      sz = 0 === Fz ? 0 : 2,
+      Xz = zz === Wz.length - 1 ? 0 : 2;
+    tz.length > sz + Xz + 1 ? oz.push(...tz.slice(0, sz), {
       kind: "fold",
-      count: ab.length - Ub - Tb
-    }, ...ab.slice(ab.length - Tb)) : Yb.push(...ab), Ab = bb
+      count: tz.length - sz - Xz
+    }, ...tz.slice(tz.length - Xz)) : oz.push(...tz), Fz = zz
   }
-  return (0, Eb.jsx)("pre", {
+  return (0, Oz.jsx)("pre", {
     className: "WorldCodeAiDiff",
-    children: Yb.map(((bb, ab) => {
-      if ("fold" === bb.kind) return (0, Eb.jsxs)("div", {
+    children: oz.map(((zz, tz) => {
+      if ("fold" === zz.kind) return (0, Oz.jsxs)("div", {
         className: "WorldCodeAiDiffFold",
-        children: ["\u22ef ", bb.count, " unchanged lines"]
-      }, ab);
-      const Ab = "added" === bb.kind ? function(bb, ab) {
-          if (ab) return bb.includes(`"${ab}"`) ? `"${ab}"` : bb.includes(ab) ? ab : void 0
-        }(bb.text, Ub) : void 0,
-        Mb = Ab ? bb.text.indexOf(Ab) : -1;
-      return (0, Eb.jsxs)("div", {
-        className: Tb()("WorldCodeAiDiffLine", `WorldCodeAiDiff-${bb.kind}`, Ab && "WorldCodeAiDiff-marked"),
-        children: [(0, Eb.jsx)("span", {
+        children: ["\u22ef ", zz.count, " unchanged lines"]
+      }, tz);
+      const Fz = "added" === zz.kind ? function(zz, tz) {
+          if (tz) return zz.includes(`"${tz}"`) ? `"${tz}"` : zz.includes(tz) ? tz : void 0
+        }(zz.text, sz) : void 0,
+        Wz = Fz ? zz.text.indexOf(Fz) : -1;
+      return (0, Oz.jsxs)("div", {
+        className: Xz()("WorldCodeAiDiffLine", `WorldCodeAiDiff-${zz.kind}`, Fz && "WorldCodeAiDiff-marked"),
+        children: [(0, Oz.jsx)("span", {
           className: "WorldCodeAiDiffMark",
-          children: "added" === bb.kind ? "+" : "removed" === bb.kind ? "\u2212" : " "
-        }), (0, Eb.jsx)("span", {
+          children: "added" === zz.kind ? "+" : "removed" === zz.kind ? "\u2212" : " "
+        }), (0, Oz.jsx)("span", {
           className: "WorldCodeAiDiffText",
-          children: Ab ? (0, Eb.jsxs)(Eb.Fragment, {
-            children: [bb.text.slice(0, Mb), (0, Eb.jsx)("mark", {
-              children: Ab
-            }), bb.text.slice(Mb + Ab.length)]
-          }) : bb.text || " "
+          children: Fz ? (0, Oz.jsxs)(Oz.Fragment, {
+            children: [zz.text.slice(0, Wz), (0, Oz.jsx)("mark", {
+              children: Fz
+            }), zz.text.slice(Wz + Fz.length)]
+          }) : zz.text || " "
         })]
-      }, ab)
+      }, tz)
     }))
   })
 }));
 
-function Te(bb) {
-  var ab, Ub;
+function KU(zz) {
+  var tz, sz;
   if ("undefined" === typeof BroadcastChannel) return;
-  const Ab = new BroadcastChannel(bb);
-  return null === (ab = (Ub = Ab).unref) || void 0 === ab || ab.call(Ub), {
-    post: bb => {
-      Ab.postMessage(bb)
+  const Fz = new BroadcastChannel(zz);
+  return null === (tz = (sz = Fz).unref) || void 0 === tz || tz.call(sz), {
+    post: zz => {
+      Fz.postMessage(zz)
     },
-    listen: bb => {
-      const ab = ab => {
-        "string" === typeof ab.data && bb(ab.data)
+    listen: zz => {
+      const tz = tz => {
+        "string" === typeof tz.data && zz(tz.data)
       };
-      return Ab.addEventListener("message", ab), () => {
-        Ab.removeEventListener("message", ab)
+      return Fz.addEventListener("message", tz), () => {
+        Fz.removeEventListener("message", tz)
       }
     }
   }
 }
 
-function Ee(bb) {
-  return Array.isArray(bb) && bb.every((bb => {
-    if ("object" !== typeof bb || null === bb || !("id" in bb) || !("at" in bb) || !("label" in bb) || !("files" in bb)) return !1;
-    const ab = bb.files;
-    return "object" === typeof ab && null !== ab && Object.values(ab).every((bb => "string" === typeof bb))
+function uU(zz) {
+  return Array.isArray(zz) && zz.every((zz => {
+    if ("object" !== typeof zz || null === zz || !("id" in zz) || !("at" in zz) || !("label" in zz) || !("files" in zz)) return !1;
+    const tz = zz.files;
+    return "object" === typeof tz && null !== tz && Object.values(tz).every((zz => "string" === typeof zz))
   }))
 }
 
-function Ye(bb, ab) {
-  return ab ? function(bb, ab) {
-    if (!ab) return [...bb];
-    const Ub = new Map;
-    for (const Ab of [...ab, ...bb]) Ub.set(Ab.id, Ab);
-    return [...Ub.values()].sort(((bb, ab) => bb.at - ab.at || bb.id - ab.id)).slice(-30)
-  }(ab, bb) : [...bb]
+function NU(zz, tz) {
+  return tz ? function(zz, tz) {
+    if (!tz) return [...zz];
+    const sz = new Map;
+    for (const Fz of [...tz, ...zz]) sz.set(Fz.id, Fz);
+    return [...sz.values()].sort(((zz, tz) => zz.at - tz.at || zz.id - tz.id)).slice(-30)
+  }(tz, zz) : [...zz]
 }
 
-function Be(bb, ab) {
-  let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  const Ab = new Date(bb).toLocaleTimeString("en-US", {
+function bU(zz, tz) {
+  let sz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  const Fz = new Date(zz).toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "2-digit",
-      ...Ub ? {
+      ...sz ? {
         second: "2-digit"
       } : {}
     }).toLowerCase(),
-    Mb = bb => new Date(bb).toDateString();
-  return Mb(bb) === Mb(ab) ? Ab : Mb(bb) === Mb(ab - 864e5) ? `yesterday ${Ab}` : function(bb, ab) {
-    const Ub = Math.floor((ab - bb) / 6e4);
-    if (Ub < 1) return "just now";
-    if (Ub < 60) return `${Ub} min ago`;
-    const Ab = Math.floor(Ub / 60);
-    if (Ab < 24) return `${Ab} h ago`;
-    const Mb = Math.floor(Ab / 24);
-    return 1 === Mb ? "1 day ago" : `${Mb} days ago`
-  }(bb, ab)
+    Wz = zz => new Date(zz).toDateString();
+  return Wz(zz) === Wz(tz) ? Fz : Wz(zz) === Wz(tz - 864e5) ? `yesterday ${Fz}` : function(zz, tz) {
+    const sz = Math.floor((tz - zz) / 6e4);
+    if (sz < 1) return "just now";
+    if (sz < 60) return `${sz} min ago`;
+    const Fz = Math.floor(sz / 60);
+    if (Fz < 24) return `${Fz} h ago`;
+    const Wz = Math.floor(Fz / 24);
+    return 1 === Wz ? "1 day ago" : `${Wz} days ago`
+  }(zz, tz)
 }
 
-function ee(bb, ab) {
-  return [...new Set([...Object.keys(ab), ...Object.keys(bb.files)])].flatMap((Ub => {
-    var Ab, Mb;
-    const Tb = null !== (Ab = bb.files[Ub]) && void 0 !== Ab ? Ab : "";
-    return (null !== (Mb = ab[Ub]) && void 0 !== Mb ? Mb : "") === Tb ? [] : [{
-      path: Ub,
-      text: Tb
+function wU(zz, tz) {
+  return [...new Set([...Object.keys(tz), ...Object.keys(zz.files)])].flatMap((sz => {
+    var Fz, Wz;
+    const Xz = null !== (Fz = zz.files[sz]) && void 0 !== Fz ? Fz : "";
+    return (null !== (Wz = tz[sz]) && void 0 !== Wz ? Wz : "") === Xz ? [] : [{
+      path: sz,
+      text: Xz
     }]
   }))
 }
 
-function ve(bb) {
-  let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 120;
-  if (bb.length <= ab) return null;
-  const Ub = bb.slice(0, ab),
-    Ab = Ub.lastIndexOf(" ");
-  return `${(Ab>ab/2?Ub.slice(0,Ab):Ub).replace(/[\s,;:.]+$/,"")}\u2026`
+function DU(zz) {
+  let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 120;
+  if (zz.length <= tz) return null;
+  const sz = zz.slice(0, tz),
+    Fz = sz.lastIndexOf(" ");
+  return `${(Fz>tz/2?sz.slice(0,Fz):sz).replace(/[\s,;:.]+$/,"")}\u2026`
 }
 
-function Le(bb) {
+function gU(zz) {
   let {
-    snapshot: ab,
-    files: Ub,
-    now: Mb,
-    withSeconds: Yb,
-    onRestore: Bb
-  } = bb;
-  const [eb, vb] = (0, Ab.useState)(!1), [Lb, Pb] = (0, Ab.useState)(!1), Xb = ab.did ? `Before: ${ab.did}` : ab.label, jb = ve(Xb), Rb = ab.did && ab.label.startsWith('Before "') ? ab.label.slice(7) : null, kb = null === Rb ? null : ve(Rb, 50), yb = null !== kb && null !== Rb && void 0 !== Rb && Rb.startsWith('"') ? `${kb}"` : kb, Zb = (0, Ab.useRef)(null);
-  (0, Ab.useEffect)((() => {
-    const bb = Zb.current,
-      ab = null === bb || void 0 === bb ? void 0 : bb.closest(".WorldCodeAiMessages");
-    if (!eb || !bb || !ab) return;
-    const Ub = ab.getBoundingClientRect(),
-      Ab = bb.getBoundingClientRect(),
-      Mb = Ab.bottom - (Ub.bottom - 28),
-      Tb = Ab.top - (Ub.top + 16);
-    Mb > 0 && ab.scrollBy({
-      top: Math.min(Mb, Tb),
+    snapshot: tz,
+    files: sz,
+    now: Wz,
+    withSeconds: oz,
+    onRestore: vz
+  } = zz;
+  const [Uz, Kz] = (0, Fz.useState)(!1), [uz, Nz] = (0, Fz.useState)(!1), bz = tz.did ? `Before: ${tz.did}` : tz.label, wz = DU(bz), Dz = tz.did && tz.label.startsWith('Before "') ? tz.label.slice(7) : null, gz = null === Dz ? null : DU(Dz, 50), Hz = null !== gz && null !== Dz && void 0 !== Dz && Dz.startsWith('"') ? `${gz}"` : gz, Bz = (0, Fz.useRef)(null);
+  (0, Fz.useEffect)((() => {
+    const zz = Bz.current,
+      tz = null === zz || void 0 === zz ? void 0 : zz.closest(".WorldCodeAiMessages");
+    if (!Uz || !zz || !tz) return;
+    const sz = tz.getBoundingClientRect(),
+      Fz = zz.getBoundingClientRect(),
+      Wz = Fz.bottom - (sz.bottom - 28),
+      Xz = Fz.top - (sz.top + 16);
+    Wz > 0 && tz.scrollBy({
+      top: Math.min(Wz, Xz),
       behavior: "smooth"
     })
-  }), [eb]);
-  const Db = (0, Ab.useRef)(null),
-    [zb, xb] = (0, Ab.useState)(!1),
-    ib = (0, Ab.useCallback)((() => {
-      const bb = Db.current;
-      xb(null !== bb && bb.scrollTop + bb.clientHeight >= bb.scrollHeight - 24)
+  }), [Uz]);
+  const Pz = (0, Fz.useRef)(null),
+    [rz, Yz] = (0, Fz.useState)(!1),
+    xz = (0, Fz.useCallback)((() => {
+      const zz = Pz.current;
+      Yz(null !== zz && zz.scrollTop + zz.clientHeight >= zz.scrollHeight - 24)
     }), []);
-  (0, Ab.useEffect)((() => {
-    eb && ib()
-  }), [eb, ib]);
-  const fb = (0, Ab.useMemo)((() => [...new Set([...Object.keys(ab.files), ...Object.keys(Ub)])].flatMap((bb => {
-    var Ab, Mb;
-    const Tb = null !== (Ab = ab.files[bb]) && void 0 !== Ab ? Ab : "",
-      Eb = null !== (Mb = Ub[bb]) && void 0 !== Mb ? Mb : "";
-    return Tb === Eb ? [] : [{
-      path: bb,
-      before: Tb,
-      after: Eb
+  (0, Fz.useEffect)((() => {
+    Uz && xz()
+  }), [Uz, xz]);
+  const mz = (0, Fz.useMemo)((() => [...new Set([...Object.keys(tz.files), ...Object.keys(sz)])].flatMap((zz => {
+    var Fz, Wz;
+    const Xz = null !== (Fz = tz.files[zz]) && void 0 !== Fz ? Fz : "",
+      Oz = null !== (Wz = sz[zz]) && void 0 !== Wz ? Wz : "";
+    return Xz === Oz ? [] : [{
+      path: zz,
+      before: Xz,
+      after: Oz
     }]
-  }))), [ab, Ub]);
-  return (0, Eb.jsxs)("li", {
-    ref: Zb,
+  }))), [tz, sz]);
+  return (0, Oz.jsxs)("li", {
+    ref: Bz,
     className: "WorldCodeAiSnapshot",
-    children: [(0, Eb.jsxs)("div", {
+    children: [(0, Oz.jsxs)("div", {
       className: "WorldCodeAiSnapshotRow",
-      children: [(0, Eb.jsxs)("span", {
+      children: [(0, Oz.jsxs)("span", {
         className: "WorldCodeAiSnapshotLabel",
-        children: [Lb || !jb ? Xb : jb, (jb || yb) && (0, Eb.jsx)("button", {
+        children: [uz || !wz ? bz : wz, (wz || Hz) && (0, Oz.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiSnapshotMore",
-          "aria-expanded": Lb,
+          "aria-expanded": uz,
           onClick: () => {
-            Pb(!Lb)
+            Nz(!uz)
           },
-          children: Lb ? "less" : "more"
-        }), (0, Eb.jsxs)("span", {
+          children: uz ? "less" : "more"
+        }), (0, Oz.jsxs)("span", {
           className: "WorldCodeAiSnapshotAge",
-          children: [" \xb7 ", Be(ab.at, Mb, Yb)]
-        }), null !== Rb && (0, Eb.jsxs)("span", {
+          children: [" \xb7 ", bU(tz.at, Wz, oz)]
+        }), null !== Dz && (0, Oz.jsxs)("span", {
           className: "WorldCodeAiSnapshotAsked",
-          children: ["You asked: ", Lb || !yb ? Rb : yb]
+          children: ["You asked: ", uz || !Hz ? Dz : Hz]
         })]
-      }), fb.length > 0 && (0, Eb.jsx)("button", {
+      }), mz.length > 0 && (0, Oz.jsx)("button", {
         className: "WorldCodeAiLinkButton",
         onClick: () => {
-          vb(!eb)
+          Kz(!Uz)
         },
-        children: eb ? "Hide" : "Compare"
-      }), fb.length > 0 && Bb && (0, Eb.jsx)("button", {
+        children: Uz ? "Hide" : "Compare"
+      }), mz.length > 0 && vz && (0, Oz.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
-        onClick: Bb,
+        onClick: vz,
         children: "Go back to this code"
-      }), 0 === fb.length && (0, Eb.jsx)("span", {
+      }), 0 === mz.length && (0, Oz.jsx)("span", {
         className: "WorldCodeAiSnapshotNow",
         children: "Same as your code now"
       })]
-    }), eb && (0, Eb.jsxs)("div", {
+    }), Uz && (0, Oz.jsxs)("div", {
       className: "WorldCodeAiChanges",
-      children: [(0, Eb.jsx)("p", {
+      children: [(0, Oz.jsx)("p", {
         className: "WorldCodeAiSnapshotCompareNote",
         children: "What changed since then:"
-      }), (0, Eb.jsx)("div", {
-        ref: Db,
-        className: Tb()("WorldCodeAiSnapshotCompare", zb && "WorldCodeAiSnapshotCompare-end"),
-        onScroll: ib,
-        children: fb.map((bb => (0, Eb.jsxs)("div", {
+      }), (0, Oz.jsx)("div", {
+        ref: Pz,
+        className: Xz()("WorldCodeAiSnapshotCompare", rz && "WorldCodeAiSnapshotCompare-end"),
+        onScroll: xz,
+        children: mz.map((zz => (0, Oz.jsxs)("div", {
           className: "WorldCodeAiChange",
-          children: [(0, Eb.jsx)("div", {
+          children: [(0, Oz.jsx)("div", {
             className: "WorldCodeAiChangeHeader",
-            children: (0, Eb.jsx)("span", {
+            children: (0, Oz.jsx)("span", {
               className: "WorldCodeAiChangePath",
-              children: bb.path
+              children: zz.path
             })
-          }), (0, Eb.jsx)(Me, {
-            change: bb
+          }), (0, Oz.jsx)(UU, {
+            change: zz
           })]
-        }, bb.path)))
+        }, zz.path)))
       })]
     })]
   })
 }
 
-function Pe(bb) {
+function HU(zz) {
   let {
-    snapshots: ab,
-    files: Ub,
-    now: Ab,
-    onRestore: Mb
-  } = bb;
-  return (0, Eb.jsxs)("div", {
+    snapshots: tz,
+    files: sz,
+    now: Fz,
+    onRestore: Wz
+  } = zz;
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiHistory",
-    children: [(0, Eb.jsx)("div", {
+    children: [(0, Oz.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, Eb.jsx)("span", {
+      children: (0, Oz.jsx)("span", {
         children: "Your code before each change"
       })
-    }), 0 === ab.length ? (0, Eb.jsx)("p", {
+    }), 0 === tz.length ? (0, Oz.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Nothing here yet. Each time a change goes into your code, your code from before it is kept here."
-    }) : (0, Eb.jsx)("ul", {
+    }) : (0, Oz.jsx)("ul", {
       className: "WorldCodeAiSnapshots",
-      children: [...ab].reverse().map((bb => {
-        const Tb = ab.some((ab => ab.id !== bb.id && Be(ab.at, Ab) === Be(bb.at, Ab)));
-        return (0, Eb.jsx)(Le, {
-          snapshot: bb,
-          files: Ub,
-          now: Ab,
-          withSeconds: Tb,
-          onRestore: Mb && (() => {
-            Mb(bb)
+      children: [...tz].reverse().map((zz => {
+        const Xz = tz.some((tz => tz.id !== zz.id && bU(tz.at, Fz) === bU(zz.at, Fz)));
+        return (0, Oz.jsx)(gU, {
+          snapshot: zz,
+          files: sz,
+          now: Fz,
+          withSeconds: Xz,
+          onRestore: Wz && (() => {
+            Wz(zz)
           })
-        }, bb.id)
+        }, zz.id)
       }))
     })]
   })
 }
 
-function Xe(bb) {
+function BU(zz) {
   let {
-    notes: ab,
-    outline: Ub,
-    uZ: Mb,
-    onDelete: Tb
-  } = bb;
-  const [Yb, Bb] = (0, Ab.useState)(""), [eb, vb] = (0, Ab.useState)(null), [Lb, Pb] = (0, Ab.useState)(!1), Xb = ab.length >= 8, jb = Ub.callbacks.length + Ub.commands.length + Ub.functions.length > 0;
-  return (0, Eb.jsxs)("div", {
+    notes: tz,
+    outline: sz,
+    Hr: Wz,
+    onDelete: Xz
+  } = zz;
+  const [oz, vz] = (0, Fz.useState)(""), [Uz, Kz] = (0, Fz.useState)(null), [uz, Nz] = (0, Fz.useState)(!1), bz = tz.length >= 8, wz = sz.callbacks.length + sz.commands.length + sz.functions.length > 0;
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiHistory WorldCodeAiAbout",
-    children: [(0, Eb.jsx)("div", {
+    children: [(0, Oz.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, Eb.jsx)("span", {
+      children: (0, Oz.jsx)("span", {
         children: "AI notes"
       })
-    }), (0, Eb.jsx)("p", {
+    }), (0, Oz.jsx)("p", {
       className: "WorldCodeAiAboutNote",
       children: "The AI reads these notes with every request, so it remembers what your game is."
-    }), 0 === ab.length && (0, Eb.jsx)("p", {
+    }), 0 === tz.length && (0, Oz.jsx)("p", {
       className: "WorldCodeAiHint",
       children: 'No notes yet. Add one, like "Two teams, red and blue, race to the flag".'
-    }), (0, Eb.jsx)("ul", {
+    }), (0, Oz.jsx)("ul", {
       className: "WorldCodeAiAboutList",
-      children: ab.map((bb => (0, Eb.jsxs)("li", {
-        children: [(0, Eb.jsx)("span", {
-          children: bb
-        }), (0, Eb.jsx)("button", {
+      children: tz.map((zz => (0, Oz.jsxs)("li", {
+        children: [(0, Oz.jsx)("span", {
+          children: zz
+        }), (0, Oz.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          "aria-label": `Delete note: ${bb}`,
+          "aria-label": `Delete note: ${zz}`,
           onClick: () => {
-            Tb(bb)
+            Xz(zz)
           },
           children: "Delete"
         })]
-      }, bb)))
-    }), Mb && !Xb && (0, Eb.jsxs)("form", {
+      }, zz)))
+    }), Wz && !bz && (0, Oz.jsxs)("form", {
       className: "WorldCodeAiQuestionOther",
-      onSubmit: bb => {
-        bb.preventDefault(), "" === Yb.trim() || Lb || (Pb(!0), vb(null), Mb(Yb).then((bb => {
-          vb(bb), null === bb && Bb("")
+      onSubmit: zz => {
+        zz.preventDefault(), "" === oz.trim() || uz || (Nz(!0), Kz(null), Wz(oz).then((zz => {
+          Kz(zz), null === zz && vz("")
         })).catch((() => {
-          vb("That note couldn't be kept. Try again.")
+          Kz("That note couldn't be kept. Try again.")
         })).finally((() => {
-          Pb(!1)
+          Nz(!1)
         })))
       },
-      children: [(0, Eb.jsx)("input", {
+      children: [(0, Oz.jsx)("input", {
         className: "WorldCodeAiInput WorldCodeAiQuestionInput",
-        value: Yb,
-        maxLength: nb,
+        value: oz,
+        maxLength: fz,
         placeholder: "Add a note about your game",
         "aria-label": "Add a note about your game",
-        onChange: bb => {
-          Bb(bb.target.value)
+        onChange: zz => {
+          vz(zz.target.value)
         },
-        onKeyDown: bb => {
-          bb.stopPropagation()
+        onKeyDown: zz => {
+          zz.stopPropagation()
         }
-      }), (0, Eb.jsx)("button", {
+      }), (0, Oz.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
         type: "submit",
-        disabled: "" === Yb.trim() || Lb,
-        children: Lb ? "Adding\u2026" : "Add"
+        disabled: "" === oz.trim() || uz,
+        children: uz ? "Adding\u2026" : "Add"
       })]
-    }), Xb && (0, Eb.jsxs)("p", {
+    }), bz && (0, Oz.jsxs)("p", {
       className: "WorldCodeAiHint",
       children: ["That's ", 8, " notes, the most it keeps: delete one to add another."]
-    }), eb && (0, Eb.jsx)("p", {
+    }), Uz && (0, Oz.jsx)("p", {
       className: "WorldCodeAiAboutError",
-      children: eb
-    }), (0, Eb.jsx)("p", {
+      children: Uz
+    }), (0, Oz.jsx)("p", {
       className: "WorldCodeAiAboutHeading",
       children: "In your code now"
-    }), jb ? (0, Eb.jsxs)("ul", {
+    }), wz ? (0, Oz.jsxs)("ul", {
       className: "WorldCodeAiOutline",
-      children: [Ub.callbacks.map((bb => (0, Eb.jsxs)("li", {
-        children: [Ta(bb), " ", (0, Eb.jsx)("code", {
-          children: bb
+      children: [sz.callbacks.map((zz => (0, Oz.jsxs)("li", {
+        children: [Xt(zz), " ", (0, Oz.jsx)("code", {
+          children: zz
         })]
-      }, bb))), Ub.commands.length > 0 && (0, Eb.jsxs)("li", {
-        children: ["Chat commands: ", Ub.commands.join(", ")]
-      }), Ub.functions.length > 0 && (0, Eb.jsxs)("li", {
-        children: ["Your own functions: ", (0, Eb.jsx)("code", {
-          children: Ub.functions.join(", ")
+      }, zz))), sz.commands.length > 0 && (0, Oz.jsxs)("li", {
+        children: ["Chat commands: ", sz.commands.join(", ")]
+      }), sz.functions.length > 0 && (0, Oz.jsxs)("li", {
+        children: ["Your own functions: ", (0, Oz.jsx)("code", {
+          children: sz.functions.join(", ")
         })]
       })]
-    }) : (0, Eb.jsx)("p", {
+    }) : (0, Oz.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Nothing yet. Ask the AI to make something."
     })]
   })
 }
-const je = {
+const PU = {
   asked: "Remember this about your game?",
   pending: "A note to remember, once the change is in",
   checking: "Saving a note\u2026",
@@ -10861,42 +10861,42 @@ const je = {
   refused: "Note not saved"
 };
 
-function Re(bb) {
+function rU(zz) {
   let {
-    note: ab,
-    status: Ub,
-    onAnswer: Ab,
-    isPartLeftOut: Mb = !1,
-    defaultOpen: Tb
-  } = bb;
-  const Bb = Mb && ("asked" === Ub || "pending" === Ub);
-  return (0, Eb.jsxs)("div", {
+    note: tz,
+    status: sz,
+    onAnswer: Fz,
+    isPartLeftOut: Wz = !1,
+    defaultOpen: Xz
+  } = zz;
+  const vz = Wz && ("asked" === sz || "pending" === sz);
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiToolCard",
-    children: [(0, Eb.jsxs)(Yb, {
-      title: je[Ub],
-      isCalm: "refused" !== Ub,
-      defaultOpen: Tb,
-      children: [Bb && (0, Eb.jsx)("p", {
+    children: [(0, Oz.jsxs)(oz, {
+      title: PU[sz],
+      isCalm: "refused" !== sz,
+      defaultOpen: Xz,
+      children: [vz && (0, Oz.jsx)("p", {
         children: "The note to remember is hidden while a part is unticked. Tick every part to see it."
-      }), !Bb && (0, Eb.jsxs)("p", {
-        children: ['"', ab, '"']
-      }), !Bb && "pending" === Ub && (0, Eb.jsx)("p", {
+      }), !vz && (0, Oz.jsxs)("p", {
+        children: ['"', tz, '"']
+      }), !vz && "pending" === sz && (0, Oz.jsx)("p", {
         children: "It goes into AI notes once the change is in."
-      }), "refused" === Ub && (0, Eb.jsx)("p", {
+      }), "refused" === sz && (0, Oz.jsx)("p", {
         children: "This note can't be saved. Notes are only about your game."
       })]
-    }), !Bb && "asked" === Ub && Ab && (0, Eb.jsxs)("div", {
+    }), !vz && "asked" === sz && Fz && (0, Oz.jsxs)("div", {
       className: "WorldCodeAiChangeActions",
-      children: [(0, Eb.jsx)("button", {
+      children: [(0, Oz.jsx)("button", {
         className: "WorldCodeAiPrimaryButton",
         onClick: () => {
-          Ab(!0)
+          Fz(!0)
         },
         children: "Yes, remember it"
-      }), (0, Eb.jsx)("button", {
+      }), (0, Oz.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
         onClick: () => {
-          Ab(!1)
+          Fz(!1)
         },
         children: "No"
       })]
@@ -10904,148 +10904,148 @@ function Re(bb) {
   })
 }
 
-function ke(bb) {
+function YU(zz) {
   let {
-    steps: ab,
-    built: Ub,
-    done: Ab,
-    onBuild: Mb
-  } = bb;
-  return (0, Eb.jsxs)("div", {
+    steps: tz,
+    built: sz,
+    done: Fz,
+    onBuild: Wz
+  } = zz;
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiQuestion WorldCodeAiPlan",
-    children: [(0, Eb.jsx)("p", {
+    children: [(0, Oz.jsx)("p", {
       className: "WorldCodeAiQuestionText",
       children: "The plan: one step at a time"
-    }), (0, Eb.jsx)("ol", {
+    }), (0, Oz.jsx)("ol", {
       className: "WorldCodeAiPlanSteps",
-      children: ab.map(((bb, ab) => (0, Eb.jsxs)("li", {
-        className: ab < Ab ? "WorldCodeAiPlanStep-built" : void 0,
-        children: [ab < Ab && (0, Eb.jsx)("span", {
+      children: tz.map(((zz, tz) => (0, Oz.jsxs)("li", {
+        className: tz < Fz ? "WorldCodeAiPlanStep-built" : void 0,
+        children: [tz < Fz && (0, Oz.jsx)("span", {
           className: "WorldCodeAiPlanTick",
           children: "\u2713 "
-        }), bb, ab < Ub && ab >= Ab && (0, Eb.jsx)("span", {
+        }), zz, tz < sz && tz >= Fz && (0, Oz.jsx)("span", {
           className: "WorldCodeAiPlanAsked",
           children: " (apply it to tick it off)"
         })]
-      }, `${ab}:${bb}`)))
-    }), Ub < ab.length && Ab < Ub && (0, Eb.jsxs)("span", {
+      }, `${tz}:${zz}`)))
+    }), sz < tz.length && Fz < sz && (0, Oz.jsxs)("span", {
       className: "WorldCodeAiHint",
-      children: ["Apply ", Ub - Ab > 1 ? `steps ${Ab+1} to ${Ub}` : `step ${Ub}`, " to your code and try it, then build step ", Ub + 1, "."]
-    }), Ub < ab.length && Mb && (0, Eb.jsx)("button", {
-      ...jB.g,
-      className: Ab < Ub ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
+      children: ["Apply ", sz - Fz > 1 ? `steps ${Fz+1} to ${sz}` : `step ${sz}`, " to your code and try it, then build step ", sz + 1, "."]
+    }), sz < tz.length && Wz && (0, Oz.jsx)("button", {
+      ...Pv.f,
+      className: Fz < sz ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
       onClick: () => {
-        Mb(Ub)
+        Wz(sz)
       },
-      children: Ab < Ub ? `Build step ${Ub+1} anyway` : `Build step ${Ub+1}`
-    }), Ub < ab.length && Ub > 0 && Ab >= Ub && (0, Eb.jsx)("span", {
+      children: Fz < sz ? `Build step ${sz+1} anyway` : `Build step ${sz+1}`
+    }), sz < tz.length && sz > 0 && Fz >= sz && (0, Oz.jsx)("span", {
       className: "WorldCodeAiHint",
       children: "Try each step in your world before the next."
-    }), Ub === ab.length && (0, Eb.jsx)("span", {
+    }), sz === tz.length && (0, Oz.jsx)("span", {
       className: "WorldCodeAiHint",
       children: "Every step is asked for."
     })]
   })
 }
 
-function ye(bb, ab, Ub) {
-  return `${bb}\n\nYou asked me: "${ab}" ${null===Ub?"I don't mind: choose what works best.":`My answer: ${Ub.replace(/\.$/,"")}.`} Build it now, without asking again.`
+function xU(zz, tz, sz) {
+  return `${zz}\n\nYou asked me: "${tz}" ${null===sz?"I don't mind: choose what works best.":`My answer: ${sz.replace(/\.$/,"")}.`} Build it now, without asking again.`
 }
 
-function Ze(bb) {
+function mU(zz) {
   let {
-    question: ab,
-    onAnswer: Ub,
-    ownAnswerBelow: Mb = !1
-  } = bb;
-  const [Tb, Yb] = (0, Ab.useState)("");
-  return (0, Eb.jsxs)("div", {
+    question: tz,
+    onAnswer: sz,
+    ownAnswerBelow: Wz = !1
+  } = zz;
+  const [Xz, oz] = (0, Fz.useState)("");
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiQuestion",
-    children: [(0, Eb.jsx)("p", {
+    children: [(0, Oz.jsx)("p", {
       className: "WorldCodeAiQuestionText",
-      children: ab.question
-    }), Ub && (0, Eb.jsxs)(Eb.Fragment, {
-      children: [(0, Eb.jsx)("div", {
+      children: tz.question
+    }), sz && (0, Oz.jsxs)(Oz.Fragment, {
+      children: [(0, Oz.jsx)("div", {
         className: "WorldCodeAiQuestionChoices",
-        children: ab.choices.map(((bb, ab) => (0, Ab.createElement)("button", {
-          ...jB.g,
-          key: `${ab}:${bb}`,
+        children: tz.choices.map(((zz, tz) => (0, Fz.createElement)("button", {
+          ...Pv.f,
+          key: `${tz}:${zz}`,
           className: "WorldCodeAiQuestionChoice",
           onClick: () => {
-            Ub(bb, !1)
+            sz(zz, !1)
           }
-        }, bb)))
-      }), ab.allowOther && Mb && (0, Eb.jsx)("span", {
+        }, zz)))
+      }), tz.allowOther && Wz && (0, Oz.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "Or type your own answer in the box below."
-      }), ab.allowOther && !Mb && (0, Eb.jsxs)("form", {
+      }), tz.allowOther && !Wz && (0, Oz.jsxs)("form", {
         className: "WorldCodeAiQuestionOther",
-        onSubmit: bb => {
-          bb.preventDefault(), "" !== Tb.trim() && Ub(Tb.trim(), !0)
+        onSubmit: zz => {
+          zz.preventDefault(), "" !== Xz.trim() && sz(Xz.trim(), !0)
         },
-        children: [(0, Eb.jsx)("input", {
+        children: [(0, Oz.jsx)("input", {
           className: "WorldCodeAiInput",
-          value: Tb,
+          value: Xz,
           maxLength: 200,
           placeholder: "Or type your own answer",
           "aria-label": "Your own answer",
-          onChange: bb => {
-            Yb(bb.target.value)
+          onChange: zz => {
+            oz(zz.target.value)
           },
-          onKeyDown: bb => {
-            bb.stopPropagation()
+          onKeyDown: zz => {
+            zz.stopPropagation()
           }
-        }), (0, Eb.jsx)("button", {
+        }), (0, Oz.jsx)("button", {
           className: "WorldCodeAiSecondaryButton",
           type: "submit",
-          disabled: "" === Tb.trim(),
+          disabled: "" === Xz.trim(),
           children: "Send"
         })]
-      }), (0, Eb.jsx)("button", {
-        ...jB.g,
+      }), (0, Oz.jsx)("button", {
+        ...Pv.f,
         className: "WorldCodeAiSecondaryButton WorldCodeAiQuestionAiPicks",
         onClick: () => {
-          Ub(null, !1)
+          sz(null, !1)
         },
         children: "Let the AI pick"
       })]
     })]
   })
 }
-const De = /^(?:const|let|var)\s+CONFIG\s*=\s*\{/gm;
+const JU = /^(?:const|let|var)\s+CONFIG\s*=\s*\{/gm;
 
-function ze(bb, ab) {
-  let Ub = 0;
-  for (; Ub < ab;) {
-    const Ab = bb[Ub],
-      Mb = bb[Ub + 1];
-    let Tb = Ub + 1;
-    if ("/" === Ab && "/" === Mb) {
-      const ab = bb.indexOf("\n", Ub);
-      Tb = -1 === ab ? bb.length : ab
-    } else if ("/" === Ab && "*" === Mb) {
-      const ab = bb.indexOf("*/", Ub + 2);
-      Tb = -1 === ab ? bb.length : ab + 2
-    } else if ('"' === Ab || "'" === Ab || "`" === Ab) {
-      for (Tb = Ub + 1; Tb < bb.length && bb[Tb] !== Ab && ("`" === Ab || "\n" !== bb[Tb]);) Tb += "\\" === bb[Tb] ? 2 : 1;
-      Tb++
+function IU(zz, tz) {
+  let sz = 0;
+  for (; sz < tz;) {
+    const Fz = zz[sz],
+      Wz = zz[sz + 1];
+    let Xz = sz + 1;
+    if ("/" === Fz && "/" === Wz) {
+      const tz = zz.indexOf("\n", sz);
+      Xz = -1 === tz ? zz.length : tz
+    } else if ("/" === Fz && "*" === Wz) {
+      const tz = zz.indexOf("*/", sz + 2);
+      Xz = -1 === tz ? zz.length : tz + 2
+    } else if ('"' === Fz || "'" === Fz || "`" === Fz) {
+      for (Xz = sz + 1; Xz < zz.length && zz[Xz] !== Fz && ("`" === Fz || "\n" !== zz[Xz]);) Xz += "\\" === zz[Xz] ? 2 : 1;
+      Xz++
     }
-    if (Tb > ab) return !0;
-    Ub = Tb
+    if (Xz > tz) return !0;
+    sz = Xz
   }
   return !1
 }
 
-function xe(bb) {
-  const ab = bb.slice(1, -1);
-  let Ub = "";
-  for (let Ab = 0; Ab < ab.length; Ab++) {
-    if ("\\" !== ab[Ab]) {
-      Ub += ab[Ab];
+function CU(zz) {
+  const tz = zz.slice(1, -1);
+  let sz = "";
+  for (let Fz = 0; Fz < tz.length; Fz++) {
+    if ("\\" !== tz[Fz]) {
+      sz += tz[Fz];
       continue
     }
-    const bb = ab[++Ab],
-      Mb = {
+    const zz = tz[++Fz],
+      Wz = {
         n: "\n",
         t: "\t",
         r: "\r",
@@ -11053,223 +11053,223 @@ function xe(bb) {
         '"': '"',
         "'": "'"
       },
-      Tb = "u" === bb ? ab.slice(Ab + 1, Ab + 5) : "x" === bb ? ab.slice(Ab + 1, Ab + 3) : "";
-    if (bb in Mb) Ub += Mb[bb];
+      Xz = "u" === zz ? tz.slice(Fz + 1, Fz + 5) : "x" === zz ? tz.slice(Fz + 1, Fz + 3) : "";
+    if (zz in Wz) sz += Wz[zz];
     else {
-      if ("" === Tb || !/^[\da-f]+$/i.test(Tb) || Tb.length !== ("u" === bb ? 4 : 2)) return null;
-      Ub += String.fromCharCode(parseInt(Tb, 16)), Ab += Tb.length
+      if ("" === Xz || !/^[\da-f]+$/i.test(Xz) || Xz.length !== ("u" === zz ? 4 : 2)) return null;
+      sz += String.fromCharCode(parseInt(Xz, 16)), Fz += Xz.length
     }
   }
-  return Ub
+  return sz
 }
 
-function ie(bb) {
-  const ab = function(bb) {
-    De.lastIndex = 0;
-    for (let ab = De.exec(bb); ab; ab = De.exec(bb))
-      if (!ze(bb, ab.index)) return ab;
+function eU(zz) {
+  const tz = function(zz) {
+    JU.lastIndex = 0;
+    for (let tz = JU.exec(zz); tz; tz = JU.exec(zz))
+      if (!IU(zz, tz.index)) return tz;
     return null
-  }(bb);
-  if (!ab) return [];
-  const Ub = function(bb, ab) {
-    const Ub = [];
-    let Ab = 0,
-      Mb = ab;
-    for (; Mb < bb.length;) {
-      var Tb;
-      const ab = bb[Mb];
-      if (/\s/.test(ab)) {
-        Mb++;
+  }(zz);
+  if (!tz) return [];
+  const sz = function(zz, tz) {
+    const sz = [];
+    let Fz = 0,
+      Wz = tz;
+    for (; Wz < zz.length;) {
+      var Xz;
+      const tz = zz[Wz];
+      if (/\s/.test(tz)) {
+        Wz++;
         continue
       }
-      const Eb = Mb;
-      if ("/" === ab && "/" === bb[Mb + 1]) {
-        const ab = bb.indexOf("\n", Mb);
-        Mb = -1 === ab ? bb.length : ab, Ub.push({
+      const Oz = Wz;
+      if ("/" === tz && "/" === zz[Wz + 1]) {
+        const tz = zz.indexOf("\n", Wz);
+        Wz = -1 === tz ? zz.length : tz, sz.push({
           type: "comment",
-          text: bb.slice(Eb + 2, Mb).trim(),
-          start: Eb,
-          end: Mb
+          text: zz.slice(Oz + 2, Wz).trim(),
+          start: Oz,
+          end: Wz
         });
         continue
       }
-      if ("/" === ab && "*" === bb[Mb + 1]) {
-        const ab = bb.indexOf("*/", Mb + 2);
-        if (-1 === ab) return null;
-        Mb = ab + 2, Ub.push({
+      if ("/" === tz && "*" === zz[Wz + 1]) {
+        const tz = zz.indexOf("*/", Wz + 2);
+        if (-1 === tz) return null;
+        Wz = tz + 2, sz.push({
           type: "comment",
-          text: bb.slice(Eb + 2, ab).trim(),
-          start: Eb,
-          end: Mb
+          text: zz.slice(Oz + 2, tz).trim(),
+          start: Oz,
+          end: Wz
         });
         continue
       }
-      if ('"' === ab || "'" === ab || "`" === ab) {
-        for (Mb++; Mb < bb.length && bb[Mb] !== ab;) {
-          if ("\\" === bb[Mb]) Mb++;
-          else if ("\n" === bb[Mb] && "`" !== ab) return null;
-          Mb++
+      if ('"' === tz || "'" === tz || "`" === tz) {
+        for (Wz++; Wz < zz.length && zz[Wz] !== tz;) {
+          if ("\\" === zz[Wz]) Wz++;
+          else if ("\n" === zz[Wz] && "`" !== tz) return null;
+          Wz++
         }
-        if (Mb >= bb.length) return null;
-        Mb++, Ub.push({
-          type: "`" === ab ? "template" : "string",
-          text: bb.slice(Eb, Mb),
-          start: Eb,
-          end: Mb
+        if (Wz >= zz.length) return null;
+        Wz++, sz.push({
+          type: "`" === tz ? "template" : "string",
+          text: zz.slice(Oz, Wz),
+          start: Oz,
+          end: Wz
         });
         continue
       }
-      const Yb = /^-?(?:\d[\d_]*(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?\b/i.exec(bb.slice(Mb, Mb + 40));
-      if (Yb && ("-" !== ab || ":" === (null === (Tb = Ub[Ub.length - 1]) || void 0 === Tb ? void 0 : Tb.text))) {
-        Mb += Yb[0].length, Ub.push({
+      const oz = /^-?(?:\d[\d_]*(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?\b/i.exec(zz.slice(Wz, Wz + 40));
+      if (oz && ("-" !== tz || ":" === (null === (Xz = sz[sz.length - 1]) || void 0 === Xz ? void 0 : Xz.text))) {
+        Wz += oz[0].length, sz.push({
           type: "number",
-          text: Yb[0],
-          start: Eb,
-          end: Mb
+          text: oz[0],
+          start: Oz,
+          end: Wz
         });
         continue
       }
-      const Bb = /^[A-Za-z_$][\w$]*/.exec(bb.slice(Mb, Mb + 80));
-      if (Bb) Mb += Bb[0].length, Ub.push({
+      const vz = /^[A-Za-z_$][\w$]*/.exec(zz.slice(Wz, Wz + 80));
+      if (vz) Wz += vz[0].length, sz.push({
         type: "word",
-        text: Bb[0],
-        start: Eb,
-        end: Mb
+        text: vz[0],
+        start: Oz,
+        end: Wz
       });
-      else if (Mb++, Ub.push({
+      else if (Wz++, sz.push({
           type: "punct",
-          text: ab,
-          start: Eb,
-          end: Mb
-        }), "{[(".includes(ab)) Ab++;
-      else if ("}])".includes(ab) && (Ab--, 0 === Ab)) return Ub
+          text: tz,
+          start: Oz,
+          end: Wz
+        }), "{[(".includes(tz)) Fz++;
+      else if ("}])".includes(tz) && (Fz--, 0 === Fz)) return sz
     }
     return null
-  }(bb, ab.index + ab[0].length - 1);
-  if (!Ub) return [];
-  const Ab = [];
-  let Mb, Tb = 1;
-  for (; Tb < Ub.length - 1;) {
-    var Eb, Yb, Bb, eb, vb, Lb;
-    const ab = Ub[Tb];
-    if ("comment" === ab.type) {
-      Mb = ab.text, Tb++;
+  }(zz, tz.index + tz[0].length - 1);
+  if (!sz) return [];
+  const Fz = [];
+  let Wz, Xz = 1;
+  for (; Xz < sz.length - 1;) {
+    var Oz, oz, vz, Uz, Kz, uz;
+    const tz = sz[Xz];
+    if ("comment" === tz.type) {
+      Wz = tz.text, Xz++;
       continue
     }
-    if ("," === ab.text) {
-      Tb++;
+    if ("," === tz.text) {
+      Xz++;
       continue
     }
-    const Pb = ab,
-      Xb = "word" === Pb.type ? Pb.text : "string" === Pb.type ? xe(Pb.text) : null;
-    if (null === Xb || ":" !== (null === (Eb = Ub[Tb + 1]) || void 0 === Eb ? void 0 : Eb.text)) return [];
-    let jb = Tb + 2,
-      Rb = 0;
-    const kb = [];
-    for (; jb < Ub.length - 1;) {
-      const bb = Ub[jb];
-      if (0 === Rb && "," === bb.text) break;
-      "punct" === bb.type && "{[(".includes(bb.text) ? Rb++ : "punct" === bb.type && "}])".includes(bb.text) && Rb--, "comment" !== bb.type && kb.push(bb), jb++
+    const Nz = tz,
+      bz = "word" === Nz.type ? Nz.text : "string" === Nz.type ? CU(Nz.text) : null;
+    if (null === bz || ":" !== (null === (Oz = sz[Xz + 1]) || void 0 === Oz ? void 0 : Oz.text)) return [];
+    let wz = Xz + 2,
+      Dz = 0;
+    const gz = [];
+    for (; wz < sz.length - 1;) {
+      const zz = sz[wz];
+      if (0 === Dz && "," === zz.text) break;
+      "punct" === zz.type && "{[(".includes(zz.text) ? Dz++ : "punct" === zz.type && "}])".includes(zz.text) && Dz--, "comment" !== zz.type && gz.push(zz), wz++
     }
-    const yb = kb.at(-1),
-      Zb = "," === (null === (Yb = Ub[jb]) || void 0 === Yb ? void 0 : Yb.text) ? Ub[jb + 1] : Ub.slice(Tb + 2, jb).find((bb => "comment" === bb.type && void 0 !== yb && bb.start >= yb.end)),
-      Db = "comment" !== (null === Zb || void 0 === Zb ? void 0 : Zb.type) || void 0 === yb || bb.slice(yb.end, Zb.start).includes("\n") ? void 0 : Zb.text,
-      zb = 1 === kb.length ? kb[0] : void 0,
-      xb = null !== Db && void 0 !== Db ? Db : Mb;
-    Mb = void 0;
-    const ib = {
-      key: Xb,
-      raw: null !== (Bb = null === zb || void 0 === zb ? void 0 : zb.text) && void 0 !== Bb ? Bb : "",
-      start: null !== (eb = null === zb || void 0 === zb ? void 0 : zb.start) && void 0 !== eb ? eb : 0,
-      end: null !== (vb = null === zb || void 0 === zb ? void 0 : zb.end) && void 0 !== vb ? vb : 0,
-      ...xb ? {
-        comment: xb
+    const Hz = gz.at(-1),
+      Bz = "," === (null === (oz = sz[wz]) || void 0 === oz ? void 0 : oz.text) ? sz[wz + 1] : sz.slice(Xz + 2, wz).find((zz => "comment" === zz.type && void 0 !== Hz && zz.start >= Hz.end)),
+      Pz = "comment" !== (null === Bz || void 0 === Bz ? void 0 : Bz.type) || void 0 === Hz || zz.slice(Hz.end, Bz.start).includes("\n") ? void 0 : Bz.text,
+      rz = 1 === gz.length ? gz[0] : void 0,
+      Yz = null !== Pz && void 0 !== Pz ? Pz : Wz;
+    Wz = void 0;
+    const xz = {
+      key: bz,
+      raw: null !== (vz = null === rz || void 0 === rz ? void 0 : rz.text) && void 0 !== vz ? vz : "",
+      start: null !== (Uz = null === rz || void 0 === rz ? void 0 : rz.start) && void 0 !== Uz ? Uz : 0,
+      end: null !== (Kz = null === rz || void 0 === rz ? void 0 : rz.end) && void 0 !== Kz ? Kz : 0,
+      ...Yz ? {
+        comment: Yz
       } : {}
     };
-    if ("number" === (null === zb || void 0 === zb ? void 0 : zb.type)) {
-      const bb = Number(zb.text.replace(/_/g, ""));
-      Number.isFinite(bb) && Ab.push({
-        ...ib,
+    if ("number" === (null === rz || void 0 === rz ? void 0 : rz.type)) {
+      const zz = Number(rz.text.replace(/_/g, ""));
+      Number.isFinite(zz) && Fz.push({
+        ...xz,
         kind: "number",
-        value: bb
+        value: zz
       })
-    } else if ("string" === (null === zb || void 0 === zb ? void 0 : zb.type)) {
-      const bb = xe(zb.text);
-      null !== bb && Ab.push({
-        ...ib,
+    } else if ("string" === (null === rz || void 0 === rz ? void 0 : rz.type)) {
+      const zz = CU(rz.text);
+      null !== zz && Fz.push({
+        ...xz,
         kind: "string",
-        value: bb
+        value: zz
       })
-    } else "word" !== (null === zb || void 0 === zb ? void 0 : zb.type) || "true" !== zb.text && "false" !== zb.text || Ab.push({
-      ...ib,
+    } else "word" !== (null === rz || void 0 === rz ? void 0 : rz.type) || "true" !== rz.text && "false" !== rz.text || Fz.push({
+      ...xz,
       kind: "boolean",
-      value: "true" === zb.text
+      value: "true" === rz.text
     });
-    Tb = jb, Db && "," === (null === (Lb = Ub[Tb]) || void 0 === Lb ? void 0 : Lb.text) && (Tb += 2)
+    Xz = wz, Pz && "," === (null === (uz = sz[Xz]) || void 0 === uz ? void 0 : uz.text) && (Xz += 2)
   }
-  return Ab.slice(0, 30)
+  return Fz.slice(0, 30)
 }
 
-function fe(bb, ab, Ub) {
-  const Ab = ie(bb).find((bb => bb.key === ab.key));
-  if (!Ab || Ab.kind !== ab.kind || Ab.raw !== ab.raw) return null;
-  let Mb;
-  if ("number" === ab.kind) {
-    if ("number" !== typeof Ub || !Number.isFinite(Ub)) return null;
-    Mb = String(Number(Ub.toPrecision(12)))
-  } else if ("boolean" === ab.kind) {
-    if ("boolean" !== typeof Ub) return null;
-    Mb = Ub ? "true" : "false"
+function ZU(zz, tz, sz) {
+  const Fz = eU(zz).find((zz => zz.key === tz.key));
+  if (!Fz || Fz.kind !== tz.kind || Fz.raw !== tz.raw) return null;
+  let Wz;
+  if ("number" === tz.kind) {
+    if ("number" !== typeof sz || !Number.isFinite(sz)) return null;
+    Wz = String(Number(sz.toPrecision(12)))
+  } else if ("boolean" === tz.kind) {
+    if ("boolean" !== typeof sz) return null;
+    Wz = sz ? "true" : "false"
   } else {
-    if ("string" !== typeof Ub) return null;
-    const bb = ab.raw.startsWith("'") ? "'" : '"',
-      Ab = "'" === bb ? '"' : "'";
-    Tb = Ub, Mb = `${Eb=Ub.includes(bb)&&!Ub.includes(Ab)?Ab:bb}${Tb.slice(0,200).replace(/\\/g,"\\\\").replace('"'===Eb?/"/g:/'/g,`\\${Eb}`).replace(/\n/g,"\\n").replace(/\r/g,"\\r").replace(/\t/g,"\\t").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029").replace(/[\u0000-\u001f\u007f]/g,(bb=>`\\u${bb.charCodeAt(0).toString(16).padStart(4,"0")}`))}${Eb}`
+    if ("string" !== typeof sz) return null;
+    const zz = tz.raw.startsWith("'") ? "'" : '"',
+      Fz = "'" === zz ? '"' : "'";
+    Xz = sz, Wz = `${Oz=sz.includes(zz)&&!sz.includes(Fz)?Fz:zz}${Xz.slice(0,200).replace(/\\/g,"\\\\").replace('"'===Oz?/"/g:/'/g,`\\${Oz}`).replace(/\n/g,"\\n").replace(/\r/g,"\\r").replace(/\t/g,"\\t").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029").replace(/[\u0000-\u001f\u007f]/g,(zz=>`\\u${zz.charCodeAt(0).toString(16).padStart(4,"0")}`))}${Oz}`
   }
-  var Tb, Eb;
-  return bb.slice(0, Ab.start) + Mb + bb.slice(Ab.end)
+  var Xz, Oz;
+  return zz.slice(0, Fz.start) + Wz + zz.slice(Fz.end)
 }
 
-function me(bb) {
-  if (!Number.isInteger(bb)) {
-    var ab;
-    const Ub = Math.min(3, (null !== (ab = String(bb).split(".")[1]) && void 0 !== ab ? ab : "").length);
-    return 10 ** -Math.max(1, Ub)
+function GU(zz) {
+  if (!Number.isInteger(zz)) {
+    var tz;
+    const sz = Math.min(3, (null !== (tz = String(zz).split(".")[1]) && void 0 !== tz ? tz : "").length);
+    return 10 ** -Math.max(1, sz)
   }
-  const Ub = Math.abs(bb);
-  return Ub >= 100 ? 10 ** (Math.floor(Math.log10(Ub)) - 1) : 1
+  const sz = Math.abs(zz);
+  return sz >= 100 ? 10 ** (Math.floor(Math.log10(sz)) - 1) : 1
 }
 
-function pe(bb) {
-  return bb.comment ? bb.comment.charAt(0).toUpperCase() + bb.comment.slice(1) : function(bb) {
-    const ab = bb.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase();
-    return ab.charAt(0).toUpperCase() + ab.slice(1)
-  }(bb.key)
+function TU(zz) {
+  return zz.comment ? zz.comment.charAt(0).toUpperCase() + zz.comment.slice(1) : function(zz) {
+    const tz = zz.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase();
+    return tz.charAt(0).toUpperCase() + tz.slice(1)
+  }(zz.key)
 }
 
-function Ne(bb) {
-  return "boolean" === typeof bb ? bb ? "on" : "off" : "number" === typeof bb ? String(bb) : bb.length > 20 ? `\u201c${bb.slice(0,19)}\u2026\u201d` : `\u201c${bb}\u201d`
+function cU(zz) {
+  return "boolean" === typeof zz ? zz ? "on" : "off" : "number" === typeof zz ? String(zz) : zz.length > 20 ? `\u201c${zz.slice(0,19)}\u2026\u201d` : `\u201c${zz}\u201d`
 }
 
-function We(bb) {
-  let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "changing";
-  if (0 === bb.length) return `Before ${ab} settings`;
-  const Ub = 3 === bb.length ? 3 : 2,
-    Ab = bb.slice(0, Ub).map((bb => `${bb.name} ${bb.from} \u2192 ${bb.to}`)),
-    Mb = bb.length > Ub ? ` and ${bb.length-Ub} more` : "";
-  return `Before ${ab} settings: ${Ab.join(", ")}${Mb}`
+function jU(zz) {
+  let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "changing";
+  if (0 === zz.length) return `Before ${tz} settings`;
+  const sz = 3 === zz.length ? 3 : 2,
+    Fz = zz.slice(0, sz).map((zz => `${zz.name} ${zz.from} \u2192 ${zz.to}`)),
+    Wz = zz.length > sz ? ` and ${zz.length-sz} more` : "";
+  return `Before ${tz} settings: ${Fz.join(", ")}${Wz}`
 }
-const He = /^(?:(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)|(?:const|let|var)\s+([A-Za-z_$][\w$]*)|([A-Za-z_$][\w$]*)\s*=(?!=))/gm;
+const AU = /^(?:(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)|(?:const|let|var)\s+([A-Za-z_$][\w$]*)|([A-Za-z_$][\w$]*)\s*=(?!=))/gm;
 
-function Ie(bb) {
-  const ab = new Set;
-  for (const Mb of bb.matchAll(He)) {
-    var Ub, Ab;
-    ab.add(null !== (Ub = null !== (Ab = Mb[1]) && void 0 !== Ab ? Ab : Mb[2]) && void 0 !== Ub ? Ub : Mb[3])
+function yU(zz) {
+  const tz = new Set;
+  for (const Wz of zz.matchAll(AU)) {
+    var sz, Fz;
+    tz.add(null !== (sz = null !== (Fz = Wz[1]) && void 0 !== Fz ? Fz : Wz[2]) && void 0 !== sz ? sz : Wz[3])
   }
-  return ab
+  return tz
 }
-const de = new Map([
+const MU = new Map([
     ["tick", ["second", "minute", "timer", "time", "every", "countdown", "wave", "always", "clock"]],
     ["playerCommand", ["command", "/"]],
     ["onPlayerJoin", ["join", "start", "welcome", "spawn", "enter", "arrive"]],
@@ -11292,27 +11292,27 @@ const de = new Map([
     ["onPlayerDropItem", ["drop"]],
     ["CONFIG", ["setting", "config", "number", "value"]]
   ]),
-  Fe = new Set("a an and the to of in on at for with from by as is are be it its it's this that these those my your their our me you they them we i so if then than when while each all any some more most less make makes made let lets get gets add adds added put puts change changes changed use uses using new now also just only can could should would will want like say says said tell tells told show shows game player players someone everyone people thing things code function part bit way one two three".split(" "));
+  dU = new Set("a an and the to of in on at for with from by as is are be it its it's this that these those my your their our me you they them we i so if then than when while each all any some more most less make makes made let lets get gets add adds added put puts change changes changed use uses using new now also just only can could should would will want like say says said tell tells told show shows game player players someone everyone people thing things code function part bit way one two three".split(" "));
 
-function he(bb) {
-  return bb.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9/]+/).filter((bb => bb.length >= 3 && !Fe.has(bb)))
+function hU(zz) {
+  return zz.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9/]+/).filter((zz => zz.length >= 3 && !dU.has(zz)))
 }
 
-function Ge(bb, ab) {
-  return bb.some((bb => ab.some((ab => function(bb, ab) {
-    return bb.startsWith(ab) || ab.startsWith(bb)
-  }(bb, ab)))))
+function QU(zz, tz) {
+  return zz.some((zz => tz.some((tz => function(zz, tz) {
+    return zz.startsWith(tz) || tz.startsWith(zz)
+  }(zz, tz)))))
 }
 
-function Qe(bb, ab, Ub) {
-  const Ab = ab.toLowerCase();
-  return bb.names.some((ab => {
-    var Mb;
-    const Tb = null !== (Mb = de.get(ab)) && void 0 !== Mb ? Mb : [];
-    return !!(Ab.includes(ab.toLowerCase()) || Tb.includes("/") && Ab.includes("/")) || Ge(Ub, [...Tb.flatMap(he), ...he(bb.plainWords.join(" ")), ...bb.configKeys.flatMap(he)])
+function kU(zz, tz, sz) {
+  const Fz = tz.toLowerCase();
+  return zz.names.some((tz => {
+    var Wz;
+    const Xz = null !== (Wz = MU.get(tz)) && void 0 !== Wz ? Wz : [];
+    return !!(Fz.includes(tz.toLowerCase()) || Xz.includes("/") && Fz.includes("/")) || QU(sz, [...Xz.flatMap(hU), ...hU(zz.plainWords.join(" ")), ...zz.configKeys.flatMap(hU)])
   }))
 }
-const qe = new Map([
+const iU = new Map([
   ["tick", "Runs all the time"],
   ["playerCommand", "Chat commands like /help"],
   ["onPlayerJoin", "When a player joins"],
@@ -11358,382 +11358,382 @@ const qe = new Map([
   ["onClose", "When the game closes"]
 ]);
 
-function ue(bb) {
-  var ab;
-  return null !== (ab = qe.get(bb)) && void 0 !== ab ? ab : "CONFIG" === bb ? "Settings" : void 0
+function LU(zz) {
+  var tz;
+  return null !== (tz = iU.get(zz)) && void 0 !== tz ? tz : "CONFIG" === zz ? "Settings" : void 0
 }
-qe.keys();
-const re = /^(?:export\s+)?(?:async\s+)?function\b|^(?:(?:const|let|var)\s+)?\w+\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/;
+iU.keys();
+const lU = /^(?:export\s+)?(?:async\s+)?function\b|^(?:(?:const|let|var)\s+)?\w+\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/;
 
-function Ke(bb) {
-  const ab = bb.trim();
-  return "" === ab || /^(?:\/\/|\/\*|\*)/.test(ab)
+function nU(zz) {
+  const tz = zz.trim();
+  return "" === tz || /^(?:\/\/|\/\*|\*)/.test(tz)
 }
 
-function oe(bb) {
-  const ab = bb.map((bb => bb.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "").replace(/\/\/.*$/, ""))).join("\n");
-  return ["{}", "()", "[]"].every((bb => {
-    let [Ub, Ab] = bb;
-    return ab.split(Ub).length === ab.split(Ab).length
+function aU(zz) {
+  const tz = zz.map((zz => zz.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "").replace(/\/\/.*$/, ""))).join("\n");
+  return ["{}", "()", "[]"].every((zz => {
+    let [sz, Fz] = zz;
+    return tz.split(sz).length === tz.split(Fz).length
   }))
 }
 
-function le(bb) {
-  const ab = [];
-  let Ub = 0;
-  const Ab = Ab => {
-    if (Ab > Ub) {
-      var Mb;
-      const Tb = bb.slice(Ub, Ab).find((bb => re.test(bb)));
-      ab.push({
-        name: void 0 === Tb ? null : null !== (Mb = se(Tb)) && void 0 !== Mb ? Mb : null,
-        lines: bb.slice(Ub, Ab)
-      }), Ub = Ab
+function qU(zz) {
+  const tz = [];
+  let sz = 0;
+  const Fz = Fz => {
+    if (Fz > sz) {
+      var Wz;
+      const Xz = zz.slice(sz, Fz).find((zz => lU.test(zz)));
+      tz.push({
+        name: void 0 === Xz ? null : null !== (Wz = RU(Xz)) && void 0 !== Wz ? Wz : null,
+        lines: zz.slice(sz, Fz)
+      }), sz = Fz
     }
   };
-  for (let Mb = 1; Mb < bb.length; Mb++)
-    if (re.test(bb[Mb])) {
-      let ab = Mb;
-      for (; ab > Ub && Ke(bb[ab - 1]);) ab--;
-      Ab(ab)
-    } return Ab(bb.length), ab
+  for (let Wz = 1; Wz < zz.length; Wz++)
+    if (lU.test(zz[Wz])) {
+      let tz = Wz;
+      for (; tz > sz && nU(zz[tz - 1]);) tz--;
+      Fz(tz)
+    } return Fz(zz.length), tz
 }
 
-function te(bb) {
-  const ab = le(bb.removed),
-    Ub = le(bb.added);
-  if (ab.length + Ub.length <= 1) return [bb];
-  const Ab = [];
-  let Mb = 0,
-    Tb = 0;
-  const Eb = (bb, ab, Ub) => ab.slice(Ub).some((ab => ab.name === bb));
-  for (; Mb < ab.length || Tb < Ub.length;)
-    if (Mb < ab.length && Tb < Ub.length && ab[Mb].name === Ub[Tb].name) Ab.push({
-      removed: ab[Mb++].lines,
-      added: Ub[Tb++].lines
+function SU(zz) {
+  const tz = qU(zz.removed),
+    sz = qU(zz.added);
+  if (tz.length + sz.length <= 1) return [zz];
+  const Fz = [];
+  let Wz = 0,
+    Xz = 0;
+  const Oz = (zz, tz, sz) => tz.slice(sz).some((tz => tz.name === zz));
+  for (; Wz < tz.length || Xz < sz.length;)
+    if (Wz < tz.length && Xz < sz.length && tz[Wz].name === sz[Xz].name) Fz.push({
+      removed: tz[Wz++].lines,
+      added: sz[Xz++].lines
     });
-    else if (Mb < ab.length && !Eb(ab[Mb].name, Ub, Tb)) Ab.push({
-    removed: ab[Mb++].lines,
+    else if (Wz < tz.length && !Oz(tz[Wz].name, sz, Xz)) Fz.push({
+    removed: tz[Wz++].lines,
     added: []
   });
   else {
-    if (!(Tb < Ub.length) || Eb(Ub[Tb].name, ab, Mb)) {
-      Ab.push({
-        removed: ab.slice(Mb).flatMap((bb => bb.lines)),
-        added: Ub.slice(Tb).flatMap((bb => bb.lines))
+    if (!(Xz < sz.length) || Oz(sz[Xz].name, tz, Wz)) {
+      Fz.push({
+        removed: tz.slice(Wz).flatMap((zz => zz.lines)),
+        added: sz.slice(Xz).flatMap((zz => zz.lines))
       });
       break
     }
-    Ab.push({
+    Fz.push({
       removed: [],
-      added: Ub[Tb++].lines
+      added: sz[Xz++].lines
     })
   }
-  const Yb = [];
-  for (const Bb of Ab) {
-    const bb = Yb[Yb.length - 1],
-      ab = [...Bb.removed, ...Bb.added].every(Ke);
-    bb && (ab || [...bb.removed, ...bb.added].every(Ke)) ? Yb[Yb.length - 1] = {
-      removed: [...bb.removed, ...Bb.removed],
-      added: [...bb.added, ...Bb.added]
-    } : Yb.push(Bb)
+  const oz = [];
+  for (const vz of Fz) {
+    const zz = oz[oz.length - 1],
+      tz = [...vz.removed, ...vz.added].every(nU);
+    zz && (tz || [...zz.removed, ...zz.added].every(nU)) ? oz[oz.length - 1] = {
+      removed: [...zz.removed, ...vz.removed],
+      added: [...zz.added, ...vz.added]
+    } : oz.push(vz)
   }
-  return Yb.every((bb => oe(bb.removed) && oe(bb.added))) ? Yb : [bb]
+  return oz.every((zz => aU(zz.removed) && aU(zz.added))) ? oz : [zz]
 }
 
-function we(bb, ab) {
-  const Ub = [];
-  for (const Tb of CA(bb, ab)) {
-    const bb = Ub[Ub.length - 1];
-    "same" === Tb.kind ? Ub.push({
+function VU(zz, tz) {
+  const sz = [];
+  for (const Xz of RF(zz, tz)) {
+    const zz = sz[sz.length - 1];
+    "same" === Xz.kind ? sz.push({
       kind: "same",
-      text: Tb.text
-    }) : "hunk" === (null === bb || void 0 === bb ? void 0 : bb.kind) ? bb[Tb.kind].push(Tb.text) : Ub.push({
+      text: Xz.text
+    }) : "hunk" === (null === zz || void 0 === zz ? void 0 : zz.kind) ? zz[Xz.kind].push(Xz.text) : sz.push({
       kind: "hunk",
-      removed: "removed" === Tb.kind ? [Tb.text] : [],
-      added: "added" === Tb.kind ? [Tb.text] : []
+      removed: "removed" === Xz.kind ? [Xz.text] : [],
+      added: "added" === Xz.kind ? [Xz.text] : []
     })
   }
-  const Ab = [];
-  let Mb = 0;
-  for (let Tb = 0; Tb < Ub.length; Tb++) {
-    const bb = Ub[Tb];
-    if ("same" === bb.kind) {
-      Ab.push(bb);
+  const Fz = [];
+  let Wz = 0;
+  for (let Xz = 0; Xz < sz.length; Xz++) {
+    const zz = sz[Xz];
+    if ("same" === zz.kind) {
+      Fz.push(zz);
       continue
     }
-    let ab = te(bb);
-    if (1 === ab.length) {
-      let Ab = Tb + 1;
-      const Mb = [];
-      for (; Ab < Ub.length; Ab++) {
-        const bb = Ub[Ab];
-        if ("same" !== bb.kind || !/^[\s})\];,]+$/.test(bb.text)) break;
-        Mb.push(bb.text)
+    let tz = SU(zz);
+    if (1 === tz.length) {
+      let Fz = Xz + 1;
+      const Wz = [];
+      for (; Fz < sz.length; Fz++) {
+        const zz = sz[Fz];
+        if ("same" !== zz.kind || !/^[\s})\];,]+$/.test(zz.text)) break;
+        Wz.push(zz.text)
       }
-      const Eb = Mb.length > 0 ? te({
-        removed: [...bb.removed, ...Mb],
-        added: [...bb.added, ...Mb]
-      }) : ab;
-      Eb.length > 1 && (ab = Eb, Tb = Ab - 1)
+      const Oz = Wz.length > 0 ? SU({
+        removed: [...zz.removed, ...Wz],
+        added: [...zz.added, ...Wz]
+      }) : tz;
+      Oz.length > 1 && (tz = Oz, Xz = Fz - 1)
     }
-    for (const Ub of ab) Ab.push({
+    for (const sz of tz) Fz.push({
       kind: "hunk",
-      index: Mb++,
-      removed: Ub.removed,
-      added: Ub.added
+      index: Wz++,
+      removed: sz.removed,
+      added: sz.added
     })
   }
-  return Ab
+  return Fz
 }
 
-function se(bb) {
-  var ab, Ub;
-  const Ab = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^\s*(?:export\s+)?(?:const|let|var|class)\s+(\w+)|^(\w+)\s*=(?!=)/.exec(bb);
-  return Ab ? null !== (ab = null !== (Ub = Ab[1]) && void 0 !== Ub ? Ub : Ab[2]) && void 0 !== ab ? ab : Ab[3] : void 0
+function RU(zz) {
+  var tz, sz;
+  const Fz = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^\s*(?:export\s+)?(?:const|let|var|class)\s+(\w+)|^(\w+)\s*=(?!=)/.exec(zz);
+  return Fz ? null !== (tz = null !== (sz = Fz[1]) && void 0 !== sz ? sz : Fz[2]) && void 0 !== tz ? tz : Fz[3] : void 0
 }
 
-function ge(bb) {
-  const ab = se(bb);
-  if (!ab || /^\s/.test(bb)) return;
-  return /^(?:export\s+)?(?:async\s+)?function\b/.test(bb) || /=\s*(?:async\s+)?(?:function\b|\(|\w+\s*=>)/.test(bb) || "CONFIG" === ab ? ue(ab) : void 0
+function pU(zz) {
+  const tz = RU(zz);
+  if (!tz || /^\s/.test(zz)) return;
+  return /^(?:export\s+)?(?:async\s+)?function\b/.test(zz) || /=\s*(?:async\s+)?(?:function\b|\(|\w+\s*=>)/.test(zz) || "CONFIG" === tz ? LU(tz) : void 0
 }
 
-function Ce(bb) {
-  const ab = new Map;
-  for (const Ub of bb) {
-    const bb = ge(Ub),
-      Ab = se(Ub);
-    bb && Ab && ab.set(Ab, bb)
+function fU(zz) {
+  const tz = new Map;
+  for (const sz of zz) {
+    const zz = pU(sz),
+      Fz = RU(sz);
+    zz && Fz && tz.set(Fz, zz)
   }
-  return ab
+  return tz
 }
 
-function Ve(bb) {
-  return [...new Set(bb.flatMap((bb => {
-    const ab = /^\s/.test(bb) ? void 0 : se(bb);
-    return ab ? [ab] : []
+function EU(zz) {
+  return [...new Set(zz.flatMap((zz => {
+    const tz = /^\s/.test(zz) ? void 0 : RU(zz);
+    return tz ? [tz] : []
   })))]
 }
 
-function Oe(bb) {
-  var ab;
-  return bb.length <= 1 ? null !== (ab = bb[0]) && void 0 !== ab ? ab : "" : `${bb.slice(0,-1).join(", ")} and ${bb[bb.length-1]}`
+function zK(zz) {
+  var tz;
+  return zz.length <= 1 ? null !== (tz = zz[0]) && void 0 !== tz ? tz : "" : `${zz.slice(0,-1).join(", ")} and ${zz[zz.length-1]}`
 }
 
-function ce(bb) {
-  return bb.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase()
+function tK(zz) {
+  return zz.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase()
 }
 
-function Je(bb) {
-  return bb.charAt(0).toUpperCase() + bb.slice(1)
+function sK(zz) {
+  return zz.charAt(0).toUpperCase() + zz.slice(1)
 }
-const ne = new Set("api const let var function return if else for of in new true false null undefined this typeof while break continue playerId attacker killed damaged command ms Math Date JSON String Number Object Array console length push".split(" "));
+const FK = new Set("api const let var function return if else for of in new true false null undefined this typeof while break continue playerId attacker killed damaged command ms Math Date JSON String Number Object Array console length push".split(" "));
 
-function Se(bb) {
-  return [...new Set(bb.flatMap((bb => {
-    const ab = bb.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "");
-    return (0, La.f)(ab, /[A-Za-z_$][\w$]{2,}(?!\s*:(?!:))/g, La.l).map((bb => bb[0])).filter((bb => !ne.has(bb)))
+function WK(zz) {
+  return [...new Set(zz.flatMap((zz => {
+    const tz = zz.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "");
+    return (0, ut.e)(tz, /[A-Za-z_$][\w$]{2,}(?!\s*:(?!:))/g, ut.n).map((zz => zz[0])).filter((zz => !FK.has(zz)))
   })))]
 }
 
-function bv(bb, ab) {
-  var Ub;
-  const Ab = (null !== (Ub = bb.parts) && void 0 !== Ub ? Ub : []).map((bb => {
+function XK(zz, tz) {
+  var sz;
+  const Fz = (null !== (sz = zz.parts) && void 0 !== sz ? sz : []).map((zz => {
       return {
-        why: bb.why,
-        lines: (ab = bb.code, new Set(ab.split("\n").map((bb => bb.trim())).filter((bb => bb.length > 1))))
+        why: zz.why,
+        lines: (tz = zz.code, new Set(tz.split("\n").map((zz => zz.trim())).filter((zz => zz.length > 1))))
       };
-      var ab
+      var tz
     })),
-    Mb = we(bb.before, bb.after);
-  let Tb = 1;
-  const Eb = Mb.flatMap(((bb, ab) => {
-      if ("hunk" !== bb.kind) return Tb++, [];
-      let Ub;
-      for (const Mb of Ab) {
-        const ab = bb.added.filter((bb => Mb.lines.has(bb.trim()))).length;
-        ab > 0 && (!Ub || ab > Ub.score) && (Ub = {
-          why: Mb.why,
-          score: ab
+    Wz = VU(zz.before, zz.after);
+  let Xz = 1;
+  const Oz = Wz.flatMap(((zz, tz) => {
+      if ("hunk" !== zz.kind) return Xz++, [];
+      let sz;
+      for (const Wz of Fz) {
+        const tz = zz.added.filter((zz => Wz.lines.has(zz.trim()))).length;
+        tz > 0 && (!sz || tz > sz.score) && (sz = {
+          why: Wz.why,
+          score: tz
         })
       }
-      const Eb = function(bb, ab, Ub) {
-          const Ab = Ve(bb.added),
-            Mb = Ve(bb.removed),
-            Tb = Ab.filter((bb => Mb.includes(bb))),
-            Eb = Ab.filter((bb => !Tb.includes(bb))),
-            Yb = Mb.filter((bb => !Tb.includes(bb))),
-            Bb = new Map([...Ce(bb.removed), ...Ce(bb.added)]),
-            eb = [...Tb, ...Eb].filter((bb => Bb.has(bb))),
-            vb = (ab, Ub) => {
+      const Oz = function(zz, tz, sz) {
+          const Fz = EU(zz.added),
+            Wz = EU(zz.removed),
+            Xz = Fz.filter((zz => Wz.includes(zz))),
+            Oz = Fz.filter((zz => !Xz.includes(zz))),
+            oz = Wz.filter((zz => !Xz.includes(zz))),
+            vz = new Map([...fU(zz.removed), ...fU(zz.added)]),
+            Uz = [...Xz, ...Oz].filter((zz => vz.has(zz))),
+            Kz = (tz, sz) => {
               return {
-                names: ab,
-                configKeys: ab.includes("CONFIG") ? (Ab = bb.added, Ab.flatMap((bb => {
-                  const ab = /^\s+(\w+)\s*:/.exec(bb);
-                  return ab ? [ab[1]] : []
+                names: tz,
+                configKeys: tz.includes("CONFIG") ? (Fz = zz.added, Fz.flatMap((zz => {
+                  const tz = /^\s+(\w+)\s*:/.exec(zz);
+                  return tz ? [tz[1]] : []
                 }))) : [],
-                plainWords: ab.flatMap((bb => {
-                  const ab = Bb.get(bb);
-                  return ab ? [ab] : []
+                plainWords: tz.flatMap((zz => {
+                  const tz = vz.get(zz);
+                  return tz ? [tz] : []
                 })),
-                onlyAdds: Ub,
-                uses: Se(bb.added),
-                takesOut: Yb,
-                removedUses: Se(bb.removed)
+                onlyAdds: sz,
+                uses: WK(zz.added),
+                takesOut: oz,
+                removedUses: WK(zz.removed)
               };
-              var Ab
+              var Fz
             },
-            Lb = new Set([...bb.added, ...bb.removed].flatMap((bb => {
-              var ab;
-              const Ub = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^(\w+)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/.exec(bb);
-              return Ub ? [null !== (ab = Ub[1]) && void 0 !== ab ? ab : Ub[2]] : []
+            uz = new Set([...zz.added, ...zz.removed].flatMap((zz => {
+              var tz;
+              const sz = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^(\w+)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/.exec(zz);
+              return sz ? [null !== (tz = sz[1]) && void 0 !== tz ? tz : sz[2]] : []
             }))),
-            Pb = bb => {
-              const ab = ce(bb);
-              return Lb.has(bb) ? `"${ab}"` : ab
+            Nz = zz => {
+              const tz = tK(zz);
+              return uz.has(zz) ? `"${tz}"` : tz
             },
-            Xb = [...Tb, ...Eb, ...Yb];
-          if (Xb.some((bb => Bb.has(bb)))) {
-            const bb = bb => {
-                const ab = bb.filter((bb => Bb.has(bb)));
-                return Oe(ab.length > 0 ? ab.map((bb => {
-                  var ab;
-                  return null !== (ab = Bb.get(bb)) && void 0 !== ab ? ab : bb
-                })) : bb.map(Pb))
+            bz = [...Xz, ...Oz, ...oz];
+          if (bz.some((zz => vz.has(zz)))) {
+            const zz = zz => {
+                const tz = zz.filter((zz => vz.has(zz)));
+                return zK(tz.length > 0 ? tz.map((zz => {
+                  var tz;
+                  return null !== (tz = vz.get(zz)) && void 0 !== tz ? tz : zz
+                })) : zz.map(Nz))
               },
-              ab = [Tb.length > 0 ? `${bb(Tb)} \u2014 changed` : "", Eb.length > 0 ? `${bb(Eb)} \u2014 added` : "", Yb.length > 0 ? `${bb(Yb)} \u2014 taken out` : ""].filter(Boolean),
-              Ub = [...Xb.filter((bb => Bb.has(bb))), ...Xb.filter((bb => !Bb.has(bb)))],
-              Ab = eb.every((bb => Eb.includes(bb)));
+              tz = [Xz.length > 0 ? `${zz(Xz)} \u2014 changed` : "", Oz.length > 0 ? `${zz(Oz)} \u2014 added` : "", oz.length > 0 ? `${zz(oz)} \u2014 taken out` : ""].filter(Boolean),
+              sz = [...bz.filter((zz => vz.has(zz))), ...bz.filter((zz => !vz.has(zz)))],
+              Fz = Uz.every((zz => Oz.includes(zz)));
             return {
-              named: Je(ab.join("; ")),
-              codeNames: Ub,
-              takesOut: Yb,
+              named: sK(tz.join("; ")),
+              codeNames: sz,
+              takesOut: oz,
               isPlain: !0,
-              about: vb(eb, Ab)
+              about: Kz(Uz, Fz)
             }
           }
-          const jb = [Tb.length > 0 ? `changes ${Oe(Tb.map(Pb))}` : "", Eb.length > 0 ? `adds ${Oe(Eb.map(Pb))}` : "", Yb.length > 0 ? `takes out ${Oe(Yb.map(Pb))}` : ""].filter(Boolean);
-          if (jb.length > 0) return {
-            named: Je(jb.join(", ")),
-            codeNames: Xb,
-            takesOut: Yb,
+          const wz = [Xz.length > 0 ? `changes ${zK(Xz.map(Nz))}` : "", Oz.length > 0 ? `adds ${zK(Oz.map(Nz))}` : "", oz.length > 0 ? `takes out ${zK(oz.map(Nz))}` : ""].filter(Boolean);
+          if (wz.length > 0) return {
+            named: sK(wz.join(", ")),
+            codeNames: bz,
+            takesOut: oz,
             isPlain: !1,
-            about: vb([], !1)
+            about: Kz([], !1)
           };
-          const Rb = ab.flatMap((bb => "same" === bb.kind ? [bb.text] : bb.added));
-          for (let kb = Rb.length - 1; kb >= 0; kb--) {
-            const bb = Rb[kb],
-              ab = /^\s/.test(bb) ? void 0 : se(bb);
-            if (!ab && "" !== bb.trim() && !/^\s/.test(bb) && !/^(?:\/\/|\/\*|\*)/.test(bb.trim())) break;
-            if (ab) {
-              const Ub = ge(bb);
-              return Ub ? (Bb.set(ab, Ub), {
-                named: `${Ub} \u2014 changed`,
-                codeNames: [ab],
+          const Dz = tz.flatMap((zz => "same" === zz.kind ? [zz.text] : zz.added));
+          for (let gz = Dz.length - 1; gz >= 0; gz--) {
+            const zz = Dz[gz],
+              tz = /^\s/.test(zz) ? void 0 : RU(zz);
+            if (!tz && "" !== zz.trim() && !/^\s/.test(zz) && !/^(?:\/\/|\/\*|\*)/.test(zz.trim())) break;
+            if (tz) {
+              const sz = pU(zz);
+              return sz ? (vz.set(tz, sz), {
+                named: `${sz} \u2014 changed`,
+                codeNames: [tz],
                 takesOut: [],
                 isPlain: !0,
-                about: vb([ab], !1)
+                about: Kz([tz], !1)
               }) : {
-                named: `Changes ${/\bfunction\b|=>/.test(bb)?`"${ce(ab)}"`:ce(ab)}`,
-                codeNames: [ab],
+                named: `Changes ${/\bfunction\b|=>/.test(zz)?`"${tK(tz)}"`:tK(tz)}`,
+                codeNames: [tz],
                 takesOut: [],
                 isPlain: !1,
-                about: vb([], !1)
+                about: Kz([], !1)
               }
             }
           }
           return {
-            named: 0 === bb.added.length ? `Takes out lines from line ${Ub}` : `Changes line ${Ub}`,
+            named: 0 === zz.added.length ? `Takes out lines from line ${sz}` : `Changes line ${sz}`,
             codeNames: [],
             takesOut: [],
             isPlain: !1,
-            about: vb([], !1)
+            about: Kz([], !1)
           }
-        }(bb, Mb.slice(0, ab), Tb),
-        Yb = Tb;
-      return Tb += bb.added.length, [{
-        index: bb.index,
-        removed: bb.removed,
-        added: bb.added,
-        line: Yb,
-        ...Eb,
-        ...Ub ? {
-          why: Ub.why
+        }(zz, Wz.slice(0, tz), Xz),
+        oz = Xz;
+      return Xz += zz.added.length, [{
+        index: zz.index,
+        removed: zz.removed,
+        added: zz.added,
+        line: oz,
+        ...Oz,
+        ...sz ? {
+          why: sz.why
         } : {}
       }]
     })),
-    Yb = function(bb, ab) {
-      const Ub = ab ? he(ab) : [];
-      if (!ab || 0 === Ub.length) return bb.map((() => {}));
-      const Ab = bb.map((bb => Qe(bb, ab, Ub) || void 0 !== bb.why && Ge(Ub, he(bb.why)))),
-        Mb = new Set(bb.flatMap(((bb, ab) => {
-          var Ub;
-          return Ab[ab] && null !== (Ub = bb.uses) && void 0 !== Ub ? Ub : []
+    oz = function(zz, tz) {
+      const sz = tz ? hU(tz) : [];
+      if (!tz || 0 === sz.length) return zz.map((() => {}));
+      const Fz = zz.map((zz => kU(zz, tz, sz) || void 0 !== zz.why && QU(sz, hU(zz.why)))),
+        Wz = new Set(zz.flatMap(((zz, tz) => {
+          var sz;
+          return Fz[tz] && null !== (sz = zz.uses) && void 0 !== sz ? sz : []
         }))),
-        Tb = bb.map(((bb, ab) => {
-          var Ub;
-          return Ab[ab] || (null !== (Ub = bb.uses) && void 0 !== Ub ? Ub : []).some((bb => Mb.has(bb)))
+        Xz = zz.map(((zz, tz) => {
+          var sz;
+          return Fz[tz] || (null !== (sz = zz.uses) && void 0 !== sz ? sz : []).some((zz => Wz.has(zz)))
         }));
-      if (!Ab.includes(!0)) return bb.map((() => {}));
-      const Eb = new Set(bb.flatMap((bb => bb.names)));
-      return bb.map(((bb, Ab) => {
-        if (0 === bb.names.length) {
-          var Yb, Bb;
-          const Ab = (null !== (Yb = bb.takesOut) && void 0 !== Yb ? Yb : []).filter((bb => ("CONFIG" === bb || de.has(bb)) && !Eb.has(bb)));
-          return 0 === Ab.length || Qe({
-            ...bb,
-            names: Ab
-          }, ab, Ub) || void 0 !== bb.why && Ge(Ub, he(bb.why)) || (null !== (Bb = bb.removedUses) && void 0 !== Bb ? Bb : []).some((bb => Mb.has(bb))) ? void 0 : "takesOut"
+      if (!Fz.includes(!0)) return zz.map((() => {}));
+      const Oz = new Set(zz.flatMap((zz => zz.names)));
+      return zz.map(((zz, Fz) => {
+        if (0 === zz.names.length) {
+          var oz, vz;
+          const Fz = (null !== (oz = zz.takesOut) && void 0 !== oz ? oz : []).filter((zz => ("CONFIG" === zz || MU.has(zz)) && !Oz.has(zz)));
+          return 0 === Fz.length || kU({
+            ...zz,
+            names: Fz
+          }, tz, sz) || void 0 !== zz.why && QU(sz, hU(zz.why)) || (null !== (vz = zz.removedUses) && void 0 !== vz ? vz : []).some((zz => Wz.has(zz))) ? void 0 : "takesOut"
         }
-        if (!Tb[Ab]) return bb.onlyAdds ? "adds" : "changes"
+        if (!Xz[Fz]) return zz.onlyAdds ? "adds" : "changes"
       }))
-    }(Eb.map((bb => ({
-      ...bb.about,
-      ...bb.why ? {
-        why: bb.why
+    }(Oz.map((zz => ({
+      ...zz.about,
+      ...zz.why ? {
+        why: zz.why
       } : {}
-    }))), ab),
-    Bb = Eb.map(((bb, ab) => {
+    }))), tz),
+    vz = Oz.map(((zz, tz) => {
       let {
-        named: Ub,
-        codeNames: Ab,
-        isPlain: Mb,
-        about: Tb,
-        ...Bb
-      } = bb;
-      const eb = void 0 !== Bb.why && 1 === Eb.filter((bb => bb.why === Bb.why)).length && Bb.why ? Bb.why.charAt(0).toUpperCase() + Bb.why.slice(1) : void 0,
-        vb = !Mb && eb ? eb : Ub,
-        Lb = Yb[ab],
-        Pb = Lb ? vb.replace(/ \u2014 (added|changed|taken out)$/, "") : vb;
+        named: sz,
+        codeNames: Fz,
+        isPlain: Wz,
+        about: Xz,
+        ...vz
+      } = zz;
+      const Uz = void 0 !== vz.why && 1 === Oz.filter((zz => zz.why === vz.why)).length && vz.why ? vz.why.charAt(0).toUpperCase() + vz.why.slice(1) : void 0,
+        Kz = !Wz && Uz ? Uz : sz,
+        uz = oz[tz],
+        Nz = uz ? Kz.replace(/ \u2014 (added|changed|taken out)$/, "") : Kz;
       return {
-        ...Bb,
-        label: Pb,
-        codeNames: Ab,
-        ...Mb && eb ? {
-          detail: eb
+        ...vz,
+        label: Nz,
+        codeNames: Fz,
+        ...Wz && Uz ? {
+          detail: Uz
         } : {},
-        ...Lb ? {
-          also: Lb
+        ...uz ? {
+          also: uz
         } : {}
       }
     })),
-    eb = bb => {
-      var ab, Ub;
-      return `${null!==(ab=bb.also)&&void 0!==ab?ab:""}|${bb.label}|${null!==(Ub=bb.detail)&&void 0!==Ub?Ub:""}`
+    Uz = zz => {
+      var tz, sz;
+      return `${null!==(tz=zz.also)&&void 0!==tz?tz:""}|${zz.label}|${null!==(sz=zz.detail)&&void 0!==sz?sz:""}`
     };
-  return Bb.map((bb => {
+  return vz.map((zz => {
     let {
-      line: ab,
-      ...Ub
-    } = bb;
-    return Bb.filter((bb => eb(bb) === eb(Ub))).length > 1 ? {
-      ...Ub,
-      label: `${Ub.label} (line ${ab})`
-    } : Ub
+      line: tz,
+      ...sz
+    } = zz;
+    return vz.filter((zz => Uz(zz) === Uz(sz))).length > 1 ? {
+      ...sz,
+      label: `${sz.label} (line ${tz})`
+    } : sz
   }))
 }
-const av = {
+const OK = {
     added: "adds",
     changed: "changes",
     updated: "updates",
@@ -11745,1301 +11745,1301 @@ const av = {
     gave: "gives",
     moved: "moves"
   },
-  Uv = Object.keys(av).join("|"),
-  Av = new Set(["is", "its", "this", "was", "as", "us", "always", "less", "plus", "across", "yours", "theirs"]),
-  Mv = /(?:^|[,;:(]|\b(?:and|so|but|or|then|right|because|until|since|just|even))\s*$/i;
-const Tv = /```[\s\S]*?(?:```|$)|`[^`\n]*`|"[^"\n]*"|\u201c[^\u201d\n]*\u201d|['\u2018][^'\u2019\n]*['\u2019](?![\w])/g;
+  oK = Object.keys(OK).join("|"),
+  vK = new Set(["is", "its", "this", "was", "as", "us", "always", "less", "plus", "across", "yours", "theirs"]),
+  UK = /(?:^|[,;:(]|\b(?:and|so|but|or|then|right|because|until|since|just|even))\s*$/i;
+const KK = /```[\s\S]*?(?:```|$)|`[^`\n]*`|"[^"\n]*"|\u201c[^\u201d\n]*\u201d|['\u2018][^'\u2019\n]*['\u2019](?![\w])/g;
 
-function Ev(bb) {
-  return !/^['\u2018]/.test(bb[0]) || !(0, La.d)(bb, "\\w\u2019'")
+function uK(zz) {
+  return !/^['\u2018]/.test(zz[0]) || !(0, ut.d)(zz, "\\w\u2019'")
 }
-const Yv = /\b(?:last time|before|earlier|previous(?:ly)?|already|in my last|a mistake|an error|wrong)\b/i;
+const NK = /\b(?:last time|before|earlier|previous(?:ly)?|already|in my last|a mistake|an error|wrong)\b/i;
 
-function Bv(bb) {
-  const ab = function(bb) {
-      return (0, La.f)(bb, Tv, Ev).map((bb => [bb.index, bb.index + bb[0].length]))
-    }(bb),
-    Ub = bb => ab.some((ab => {
-      let [Ub, Ab] = ab;
-      return bb >= Ub && bb < Ab
+function bK(zz) {
+  const tz = function(zz) {
+      return (0, ut.e)(zz, KK, uK).map((zz => [zz.index, zz.index + zz[0].length]))
+    }(zz),
+    sz = zz => tz.some((tz => {
+      let [sz, Fz] = tz;
+      return zz >= sz && zz < Fz
     })),
-    Ab = [];
-  for (const Tb of bb.matchAll(new RegExp(`(^|[.!?]\\s+|\\n\\s*)I(?:'ve|\u2019ve| have)?( also)? (${Uv})\\b`, "g"))) {
-    const ab = Tb.index + Tb[1].length,
-      Mb = Tb.index + Tb[0].length,
-      Eb = bb.slice(Mb),
-      Yb = /[.!?](?=\s|$)|\n/.exec(Eb),
-      Bb = Yb ? Eb.slice(0, Yb.index) : Eb;
-    if (!Ub(ab) && !Yv.test(Bb)) {
-      Ab.push({
-        at: ab,
-        length: Mb - ab,
-        words: `${Tb[2]?"It also":"This"} ${av[Tb[3]]}`
+    Fz = [];
+  for (const Xz of zz.matchAll(new RegExp(`(^|[.!?]\\s+|\\n\\s*)I(?:'ve|\u2019ve| have)?( also)? (${oK})\\b`, "g"))) {
+    const tz = Xz.index + Xz[1].length,
+      Wz = Xz.index + Xz[0].length,
+      Oz = zz.slice(Wz),
+      oz = /[.!?](?=\s|$)|\n/.exec(Oz),
+      vz = oz ? Oz.slice(0, oz.index) : Oz;
+    if (!sz(tz) && !NK.test(vz)) {
+      Fz.push({
+        at: tz,
+        length: Wz - tz,
+        words: `${Xz[2]?"It also":"This"} ${OK[Xz[3]]}`
       });
-      for (const bb of Bb.matchAll(new RegExp(`\\b(and|then|also) (${Uv})\\b(?!\\s+(?:of|by|from|with|when|if|in|on|at|to|for|so|as|after|before|into)\\b)`, "g"))) Ub(Mb + bb.index) || Ab.push({
-        at: Mb + bb.index,
-        length: bb[0].length,
-        words: `${bb[1]} ${av[bb[2]]}`
+      for (const zz of vz.matchAll(new RegExp(`\\b(and|then|also) (${oK})\\b(?!\\s+(?:of|by|from|with|when|if|in|on|at|to|for|so|as|after|before|into)\\b)`, "g"))) sz(Wz + zz.index) || Fz.push({
+        at: Wz + zz.index,
+        length: zz[0].length,
+        words: `${zz[1]} ${OK[zz[2]]}`
       })
     }
   }
-  for (const Tb of bb.matchAll(/\bnow ([a-z]{2,}s)\b/g)) {
-    const ab = Math.max(bb.lastIndexOf(".", Tb.index), bb.lastIndexOf("\n", Tb.index)) + 1,
-      Eb = /[.!?](?=\s|$)|\n/.exec(bb.slice(Tb.index)),
-      Yb = bb.slice(ab, Eb ? Tb.index + Eb.index : bb.length),
-      Bb = Ab.some((bb => Tb.index < bb.at + bb.length && bb.at < Tb.index + Tb[0].length)),
-      eb = Mv.test(bb.slice(ab, Tb.index));
-    Av.has(Tb[1]) || eb || Ub(Tb.index) || Yv.test(Yb) || Bb || Ab.push({
-      at: Tb.index,
-      length: Tb[0].length,
-      words: `will ${Mb=Tb[1],"has"===Mb?"have":Mb.endsWith("ies")?`${Mb.slice(0,-3)}y`:/(?:ch|sh|x|zz|o|ss)es$/.test(Mb)?Mb.slice(0,-2):Mb.slice(0,-1)}`
+  for (const Xz of zz.matchAll(/\bnow ([a-z]{2,}s)\b/g)) {
+    const tz = Math.max(zz.lastIndexOf(".", Xz.index), zz.lastIndexOf("\n", Xz.index)) + 1,
+      Oz = /[.!?](?=\s|$)|\n/.exec(zz.slice(Xz.index)),
+      oz = zz.slice(tz, Oz ? Xz.index + Oz.index : zz.length),
+      vz = Fz.some((zz => Xz.index < zz.at + zz.length && zz.at < Xz.index + Xz[0].length)),
+      Uz = UK.test(zz.slice(tz, Xz.index));
+    vK.has(Xz[1]) || Uz || sz(Xz.index) || NK.test(oz) || vz || Fz.push({
+      at: Xz.index,
+      length: Xz[0].length,
+      words: `will ${Wz=Xz[1],"has"===Wz?"have":Wz.endsWith("ies")?`${Wz.slice(0,-3)}y`:/(?:ch|sh|x|zz|o|ss)es$/.test(Wz)?Wz.slice(0,-2):Wz.slice(0,-1)}`
     })
   }
-  var Mb;
-  return Ab.sort(((bb, ab) => ab.at - bb.at)).reduce(((bb, ab) => bb.slice(0, ab.at) + ab.words + bb.slice(ab.at + ab.length)), bb)
+  var Wz;
+  return Fz.sort(((zz, tz) => tz.at - zz.at)).reduce(((zz, tz) => zz.slice(0, tz.at) + tz.words + zz.slice(tz.at + tz.length)), zz)
 }
 
-function ev(bb) {
+function wK(zz) {
   let {
-    path: ab,
-    field: Ub,
-    onWrite: Mb,
-    isChanged: Tb
-  } = bb;
-  const [Yb, Bb] = (0, Ab.useState)(null), [eb, vb] = (0, Ab.useState)(null), Lb = pe(Ub), [Pb, Xb] = (0, Ab.useState)(!1), jb = (0, Ab.useRef)(null), Rb = async bb => {
-    if (Mb && !Pb) {
-      Bb(null), Xb(!0);
+    path: tz,
+    field: sz,
+    onWrite: Wz,
+    isChanged: Xz
+  } = zz;
+  const [oz, vz] = (0, Fz.useState)(null), [Uz, Kz] = (0, Fz.useState)(null), uz = TU(sz), [Nz, bz] = (0, Fz.useState)(!1), wz = (0, Fz.useRef)(null), Dz = async zz => {
+    if (Wz && !Nz) {
+      vz(null), bz(!0);
       try {
-        const Eb = await Mb(ab, Ub, bb);
-        var Ab, Tb;
-        if (vb(Eb ? null : "Your code changed here. Look at it again."), Eb) null === (Ab = jb.current) || void 0 === Ab || null === (Tb = Ab.scrollIntoView) || void 0 === Tb || Tb.call(Ab, {
+        const Oz = await Wz(tz, sz, zz);
+        var Fz, Xz;
+        if (Kz(Oz ? null : "Your code changed here. Look at it again."), Oz) null === (Fz = wz.current) || void 0 === Fz || null === (Xz = Fz.scrollIntoView) || void 0 === Xz || Xz.call(Fz, {
           block: "nearest"
         })
       } finally {
-        Xb(!1)
+        bz(!1)
       }
     }
-  }, kb = () => {
-    if (null !== Yb)
-      if ("number" === Ub.kind) {
-        const bb = Number(Yb.trim());
-        if ("" === Yb.trim() || !Number.isFinite(bb)) return vb("That needs to be a number."), void Bb(null);
-        Rb(bb)
-      } else Rb(Yb)
-  }, yb = `WorldCodeAiSetting-${ab}-${Ub.key}`;
-  return (0, Eb.jsxs)("li", {
-    ref: jb,
+  }, gz = () => {
+    if (null !== oz)
+      if ("number" === sz.kind) {
+        const zz = Number(oz.trim());
+        if ("" === oz.trim() || !Number.isFinite(zz)) return Kz("That needs to be a number."), void vz(null);
+        Dz(zz)
+      } else Dz(oz)
+  }, Hz = `WorldCodeAiSetting-${tz}-${sz.key}`;
+  return (0, Oz.jsxs)("li", {
+    ref: wz,
     className: "WorldCodeAiSetting",
-    children: [(0, Eb.jsxs)("label", {
+    children: [(0, Oz.jsxs)("label", {
       className: "WorldCodeAiSettingLabel",
-      htmlFor: yb,
-      children: [Lb, Ub.comment && (0, Eb.jsx)("code", {
-        children: Ub.key
+      htmlFor: Hz,
+      children: [uz, sz.comment && (0, Oz.jsx)("code", {
+        children: sz.key
       })]
-    }), "boolean" === Ub.kind ? (0, Eb.jsxs)("label", {
+    }), "boolean" === sz.kind ? (0, Oz.jsxs)("label", {
       className: "WorldCodeAiSwitch",
-      children: [(0, Eb.jsx)("input", {
-        id: yb,
+      children: [(0, Oz.jsx)("input", {
+        id: Hz,
         type: "checkbox",
         role: "switch",
-        checked: !0 === Ub.value,
-        disabled: !Mb,
-        onChange: bb => {
-          Rb(bb.target.checked)
+        checked: !0 === sz.value,
+        disabled: !Wz,
+        onChange: zz => {
+          Dz(zz.target.checked)
         }
-      }), (0, Eb.jsx)("span", {
-        children: Ub.value ? "On" : "Off"
+      }), (0, Oz.jsx)("span", {
+        children: sz.value ? "On" : "Off"
       })]
-    }) : (0, Eb.jsxs)("div", {
+    }) : (0, Oz.jsxs)("div", {
       className: "WorldCodeAiSettingControl",
-      children: ["number" === Ub.kind && (0, Eb.jsx)("button", {
+      children: ["number" === sz.kind && (0, Oz.jsx)("button", {
         className: "WorldCodeAiSecondaryButton WorldCodeAiStepper",
-        "aria-label": `Less ${Lb}`,
-        disabled: !Mb,
+        "aria-label": `Less ${uz}`,
+        disabled: !Wz,
         onClick: () => {
-          Rb(Ub.value - me(Ub.value))
+          Dz(sz.value - GU(sz.value))
         },
         children: "\u2212"
-      }), (0, Eb.jsx)("input", {
-        id: yb,
+      }), (0, Oz.jsx)("input", {
+        id: Hz,
         className: "WorldCodeAiInput WorldCodeAiSettingInput",
-        type: "number" === Ub.kind ? "number" : "text",
-        inputMode: "number" === Ub.kind ? "decimal" : void 0,
-        maxLength: "string" === Ub.kind ? 200 : void 0,
-        value: null !== Yb && void 0 !== Yb ? Yb : String(Ub.value),
-        disabled: !Mb,
-        onChange: bb => {
-          Bb(bb.target.value)
+        type: "number" === sz.kind ? "number" : "text",
+        inputMode: "number" === sz.kind ? "decimal" : void 0,
+        maxLength: "string" === sz.kind ? 200 : void 0,
+        value: null !== oz && void 0 !== oz ? oz : String(sz.value),
+        disabled: !Wz,
+        onChange: zz => {
+          vz(zz.target.value)
         },
-        onBlur: kb,
-        onKeyDown: bb => {
-          bb.stopPropagation(), "Enter" === bb.key ? kb() : "Escape" === bb.key && Bb(null)
+        onBlur: gz,
+        onKeyDown: zz => {
+          zz.stopPropagation(), "Enter" === zz.key ? gz() : "Escape" === zz.key && vz(null)
         }
-      }), "number" === Ub.kind && (0, Eb.jsx)("button", {
+      }), "number" === sz.kind && (0, Oz.jsx)("button", {
         className: "WorldCodeAiSecondaryButton WorldCodeAiStepper",
-        "aria-label": `More ${Lb}`,
-        disabled: !Mb,
+        "aria-label": `More ${uz}`,
+        disabled: !Wz,
         onClick: () => {
-          Rb(Ub.value + me(Ub.value))
+          Dz(sz.value + GU(sz.value))
         },
         children: "+"
       })]
-    }), eb && (0, Eb.jsx)("span", {
+    }), Uz && (0, Oz.jsx)("span", {
       className: "WorldCodeAiAboutError",
-      children: eb
-    }), Tb && !eb && (0, Eb.jsx)("span", {
+      children: Uz
+    }), Xz && !Uz && (0, Oz.jsx)("span", {
       className: "WorldCodeAiSettingDone",
       children: "\u2713 Changed in your code"
     })]
   })
 }
 
-function vv(bb) {
+function DK(zz) {
   let {
-    files: ab,
-    onWrite: Ub,
-    onTryIt: Ab,
-    onUndo: Mb,
-    before: Tb
-  } = bb;
-  const Yb = Object.entries(ab).flatMap((bb => {
-    let [ab, Ub] = bb;
-    const Ab = ie(Ub);
-    return Ab.length > 0 ? [{
-      path: ab,
-      fields: Ab
+    files: tz,
+    onWrite: sz,
+    onTryIt: Fz,
+    onUndo: Wz,
+    before: Xz
+  } = zz;
+  const oz = Object.entries(tz).flatMap((zz => {
+    let [tz, sz] = zz;
+    const Fz = eU(sz);
+    return Fz.length > 0 ? [{
+      path: tz,
+      fields: Fz
     }] : []
   }));
-  return (0, Eb.jsxs)("div", {
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiHistory WorldCodeAiSettings",
-    children: [(0, Eb.jsx)("div", {
+    children: [(0, Oz.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, Eb.jsx)("span", {
+      children: (0, Oz.jsx)("span", {
         children: "Settings of my game"
       })
-    }), 0 === Yb.length ? (0, Eb.jsx)("p", {
+    }), 0 === oz.length ? (0, Oz.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Your code has no settings yet. Settings are the numbers and messages at the top of your code, in CONFIG."
-    }) : (0, Eb.jsxs)(Eb.Fragment, {
-      children: [(0, Eb.jsx)("p", {
+    }) : (0, Oz.jsxs)(Oz.Fragment, {
+      children: [(0, Oz.jsx)("p", {
         className: "WorldCodeAiAboutNote",
         children: "Changes go into your code straight away. Try them in your world."
-      }), (Ab || Mb) && (0, Eb.jsxs)("div", {
+      }), (Fz || Wz) && (0, Oz.jsxs)("div", {
         className: "WorldCodeAiSettingActions",
-        children: [Ab && (0, Eb.jsx)("button", {
+        children: [Fz && (0, Oz.jsx)("button", {
           className: "WorldCodeAiPrimaryButton",
-          onClick: Ab,
+          onClick: Fz,
           children: "Try it in my world"
-        }), Mb && (0, Eb.jsx)("button", {
+        }), Wz && (0, Oz.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          onClick: Mb,
+          onClick: Wz,
           children: "Undo these changes"
         })]
-      }), Yb.map((bb => {
+      }), oz.map((zz => {
         let {
-          path: ab,
-          fields: Ab
-        } = bb;
-        return (0, Eb.jsxs)("div", {
-          children: [Yb.length > 1 && (0, Eb.jsx)("p", {
+          path: tz,
+          fields: Fz
+        } = zz;
+        return (0, Oz.jsxs)("div", {
+          children: [oz.length > 1 && (0, Oz.jsx)("p", {
             className: "WorldCodeAiAboutHeading",
-            children: ab
-          }), (0, Eb.jsx)("ul", {
+            children: tz
+          }), (0, Oz.jsx)("ul", {
             className: "WorldCodeAiSettingList",
-            children: Ab.map((bb => {
-              const Ab = void 0 === (null === Tb || void 0 === Tb ? void 0 : Tb[ab]) ? void 0 : ie(Tb[ab]).find((ab => ab.key === bb.key));
-              return (0, Eb.jsx)(ev, {
-                isChanged: !!Tb && (null === Ab || void 0 === Ab ? void 0 : Ab.value) !== bb.value,
-                path: ab,
-                field: bb,
-                onWrite: Ub
-              }, bb.key)
+            children: Fz.map((zz => {
+              const Fz = void 0 === (null === Xz || void 0 === Xz ? void 0 : Xz[tz]) ? void 0 : eU(Xz[tz]).find((tz => tz.key === zz.key));
+              return (0, Oz.jsx)(wK, {
+                isChanged: !!Xz && (null === Fz || void 0 === Fz ? void 0 : Fz.value) !== zz.value,
+                path: tz,
+                field: zz,
+                onWrite: sz
+              }, zz.key)
             }))
           })]
-        }, ab)
+        }, tz)
       }))]
     })]
   })
 }
-const Lv = /<tool_call\b|<function=|```|^\s*\{|<\|/m;
-const Pv = ["Reading your code", "Planning", "Writing", "Safety check"];
+const gK = /<tool_call\b|<function=|```|^\s*\{|<\|/m;
+const HK = ["Reading your code", "Planning", "Writing", "Safety check"];
 
-function Xv(bb) {
-  if (bb <= 1e4) return "It starts in a few seconds.";
-  const ab = 10 * Math.ceil(bb / 1e4);
-  return ab >= 60 ? "It starts in about a minute." : `It starts in about ${ab} seconds.`
+function BK(zz) {
+  if (zz <= 1e4) return "It starts in a few seconds.";
+  const tz = 10 * Math.ceil(zz / 1e4);
+  return tz >= 60 ? "It starts in about a minute." : `It starts in about ${tz} seconds.`
 }
-var jv = Ub(1710);
+var PK = sz(1750);
 
-function Rv(bb, ab) {
-  const Ub = new Map;
-  for (const Mb of qM(bb)) {
-    var Ab;
-    Ub.set(Mb, (null !== (Ab = Ub.get(Mb)) && void 0 !== Ab ? Ab : 0) + 1)
+function rK(zz, tz) {
+  const sz = new Map;
+  for (const Wz of QW(zz)) {
+    var Fz;
+    sz.set(Wz, (null !== (Fz = sz.get(Wz)) && void 0 !== Fz ? Fz : 0) + 1)
   }
-  return qM(ab).filter((bb => {
-    var ab;
-    const Ab = null !== (ab = Ub.get(bb)) && void 0 !== ab ? ab : 0;
-    return Ub.set(bb, Ab - 1), Ab <= 0
+  return QW(tz).filter((zz => {
+    var tz;
+    const Fz = null !== (tz = sz.get(zz)) && void 0 !== tz ? tz : 0;
+    return sz.set(zz, Fz - 1), Fz <= 0
   }))
 }
 
-function kv(bb, ab) {
-  return new Promise(((Ub, Ab) => {
-    if (null !== ab && void 0 !== ab && ab.aborted) return void Ab((0, jv.e)(ab));
-    const Mb = setTimeout(Ub, bb);
-    null === ab || void 0 === ab || ab.addEventListener("abort", (() => {
-      clearTimeout(Mb), Ab((0, jv.e)(ab))
+function YK(zz, tz) {
+  return new Promise(((sz, Fz) => {
+    if (null !== tz && void 0 !== tz && tz.aborted) return void Fz((0, PK.f)(tz));
+    const Wz = setTimeout(sz, zz);
+    null === tz || void 0 === tz || tz.addEventListener("abort", (() => {
+      clearTimeout(Wz), Fz((0, PK.f)(tz))
     }), {
       once: !0
     })
   }))
 }
-async function yv(bb, ab, Ub, Ab, Mb) {
-  const Tb = new Set;
-  for (; Date.now() < Ub;) {
-    var Eb;
-    const Yb = IM.filter((bb => !Tb.has(bb)));
-    if (0 === Yb.length) return null;
-    const Bb = nM.firstFreeAt(Yb);
-    if (Bb > Date.now()) {
-      if (Bb > Ub) return null;
-      null === Mb || void 0 === Mb || Mb(Bb), await kv(Bb - Date.now(), Ab)
+async function xK(zz, tz, sz, Fz, Wz) {
+  const Xz = new Set;
+  for (; Date.now() < sz;) {
+    var Oz;
+    const oz = jW.filter((zz => !Xz.has(zz)));
+    if (0 === oz.length) return null;
+    const vz = tX.firstFreeAt(oz);
+    if (vz > Date.now()) {
+      if (vz > sz) return null;
+      null === Wz || void 0 === Wz || Wz(vz), await YK(vz - Date.now(), Fz)
     }
-    const eb = null !== (Eb = Yb.find((bb => nM.freeAt(bb) <= Date.now()))) && void 0 !== Eb ? Eb : Yb[0],
-      vb = await qT(eb, [{
+    const Uz = null !== (Oz = oz.find((zz => tX.freeAt(zz) <= Date.now()))) && void 0 !== Oz ? Oz : oz[0],
+      Kz = await QX(Uz, [{
         role: "user",
-        content: bb
+        content: zz
       }, {
         role: "assistant",
-        content: ab
-      }], Ab);
-    if (null === vb) Tb.add(eb);
-    else if ("busy" !== vb) return vb
+        content: tz
+      }], Fz);
+    if (null === Kz) Xz.add(Uz);
+    else if ("busy" !== Kz) return Kz
   }
   return null
 }
-async function Zv(bb, ab, Ub, Ab) {
-  const Mb = function(bb) {
-    const ab = [bb.text, ...bb.question ? [bb.question.question, ...bb.question.choices] : [], ...bb.plan, ...bb.notes, ...bb.actions.flatMap((bb => "switchToWorldCode" === bb.kind && bb.request ? [bb.request] : [])), ...bb.lookups.flatMap((bb => Object.values(bb.args).filter((bb => void 0 !== bb)))), ...bb.changes.flatMap((bb => {
-      var ab, Ub;
-      return [...null !== (ab = bb.why) && void 0 !== ab ? ab : [], ...(null !== (Ub = bb.parts) && void 0 !== Ub ? Ub : []).map((bb => bb.why)), ...Rv(bb.before, bb.after)]
-    })), ...bb.worldCode.flatMap((bb => qM(bb)))];
-    return ab.map((bb => bb.trim())).filter((bb => "" !== bb)).join("\n")
-  }(ab);
-  if ("" === Mb) return "ok";
-  const Tb = Date.now() + 75e3;
-  for (const Eb of function(bb) {
-      const ab = [];
-      let Ub = bb;
-      for (; Ub.length > dM;) {
-        const bb = Ub.lastIndexOf("\n", dM),
-          Ab = bb > 6e3 ? bb : dM;
-        ab.push(Ub.slice(0, Ab)), Ub = Ub.slice(Ab)
+async function mK(zz, tz, sz, Fz) {
+  const Wz = function(zz) {
+    const tz = [zz.text, ...zz.question ? [zz.question.question, ...zz.question.choices] : [], ...zz.plan, ...zz.notes, ...zz.actions.flatMap((zz => "switchToWorldCode" === zz.kind && zz.request ? [zz.request] : [])), ...zz.lookups.flatMap((zz => Object.values(zz.args).filter((zz => void 0 !== zz)))), ...zz.changes.flatMap((zz => {
+      var tz, sz;
+      return [...null !== (tz = zz.why) && void 0 !== tz ? tz : [], ...(null !== (sz = zz.parts) && void 0 !== sz ? sz : []).map((zz => zz.why)), ...rK(zz.before, zz.after)]
+    })), ...zz.worldCode.flatMap((zz => QW(zz)))];
+    return tz.map((zz => zz.trim())).filter((zz => "" !== zz)).join("\n")
+  }(tz);
+  if ("" === Wz) return "ok";
+  const Xz = Date.now() + 75e3;
+  for (const Oz of function(zz) {
+      const tz = [];
+      let sz = zz;
+      for (; sz.length > AW;) {
+        const zz = sz.lastIndexOf("\n", AW),
+          Fz = zz > 6e3 ? zz : AW;
+        tz.push(sz.slice(0, Fz)), sz = sz.slice(Fz)
       }
-      return [...ab, Ub]
-    }(Mb)) {
-    const ab = await QM(Eb, (ab => yv(bb, ab, Tb, Ub, Ab)));
-    if ("ok" !== ab) return ab
+      return [...tz, sz]
+    }(Wz)) {
+    const tz = await hW(Oz, (tz => xK(zz, tz, Xz, sz, Fz)));
+    if ("ok" !== tz) return tz
   }
   return "ok"
 }
-const Dv = "worldCodeAiAnswerTimes";
+const JK = "worldCodeAiAnswerTimes";
 
-function zv(bb, ab) {
-  var Ub;
-  const Ab = ab && null !== (Ub = bb[ab]) && void 0 !== Ub ? Ub : [],
-    Mb = Ab.length >= 2 ? Ab : Object.values(bb).flat();
-  return Mb.length < 2 ? "Usually under a minute." : `Usually ${function(bb){const ab=Math.max(5,5*Math.round(bb/5e3));if(ab<60)return`about ${ab} seconds`;const Ub=10*Math.round(bb/1e4),Ab=Math.floor(Ub/60),Mb=Ub%60,Tb=`${Ab} ${1===Ab?"minute":"minutes"}`;return 0===Mb?`about ${Tb}`:`about ${Tb} ${Mb} seconds`}(function(bb){const ab=[...bb].sort(((bb,ab)=>bb-ab)),Ub=Math.floor(ab.length/2);return ab.length%2===1?ab[Ub]:(ab[Ub-1]+ab[Ub])/2}(Mb))}.`
+function IK(zz, tz) {
+  var sz;
+  const Fz = tz && null !== (sz = zz[tz]) && void 0 !== sz ? sz : [],
+    Wz = Fz.length >= 2 ? Fz : Object.values(zz).flat();
+  return Wz.length < 2 ? "Usually under a minute." : `Usually ${function(zz){const tz=Math.max(5,5*Math.round(zz/5e3));if(tz<60)return`about ${tz} seconds`;const sz=10*Math.round(zz/1e4),Fz=Math.floor(sz/60),Wz=sz%60,Xz=`${Fz} ${1===Fz?"minute":"minutes"}`;return 0===Wz?`about ${Xz}`:`about ${Xz} ${Wz} seconds`}(function(zz){const tz=[...zz].sort(((zz,tz)=>zz-tz)),sz=Math.floor(tz.length/2);return tz.length%2===1?tz[sz]:(tz[sz-1]+tz[sz])/2}(Wz))}.`
 }
-var xv = Ub(36247);
+var CK = sz(36326);
 
-function iv(bb, ab) {
-  const Ub = bb.split("\n"),
-    Ab = ab.split("\n"),
-    Mb = Ab.findIndex(((bb, ab) => bb !== Ub[ab]));
-  return (-1 === Mb ? Math.min(Ub.length, Ab.length) - 1 : Mb) + 1
+function eK(zz, tz) {
+  const sz = zz.split("\n"),
+    Fz = tz.split("\n"),
+    Wz = Fz.findIndex(((zz, tz) => zz !== sz[tz]));
+  return (-1 === Wz ? Math.min(sz.length, Fz.length) - 1 : Wz) + 1
 }
 
-function fv(bb, ab) {
-  return bb.filter((bb => bb.path !== ab)).map((bb => ({
-    path: bb.path,
-    line: iv(bb.before, bb.after)
+function ZK(zz, tz) {
+  return zz.filter((zz => zz.path !== tz)).map((zz => ({
+    path: zz.path,
+    line: eK(zz.before, zz.after)
   })))
 }
 
-function mv(bb) {
-  return `Moving to ${bb} code\u2026`
+function GK(zz) {
+  return `Moving to ${zz} code\u2026`
 }
 
-function pv(bb) {
-  return bb.fromLine === bb.toLine ? `line ${bb.fromLine}` : `lines ${bb.fromLine}-${bb.toLine}`
+function TK(zz) {
+  return zz.fromLine === zz.toLine ? `line ${zz.fromLine}` : `lines ${zz.fromLine}-${zz.toLine}`
 }
 
-function Nv(bb) {
-  const ab = bb.text.length > 4e3 ? `${bb.text.slice(0,4e3)}\n...` : bb.text;
-  return `The part I picked (${bb.path}, ${pv(bb)}):\n\`\`\`\n${ab}\n\`\`\``
+function cK(zz) {
+  const tz = zz.text.length > 4e3 ? `${zz.text.slice(0,4e3)}\n...` : zz.text;
+  return `The part I picked (${zz.path}, ${TK(zz)}):\n\`\`\`\n${tz}\n\`\`\``
 }
 
-function Wv(bb) {
-  let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-  switch (bb.action) {
+function jK(zz) {
+  let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+  switch (zz.action) {
     case "explain":
-      return `Explain what this part of my code does, in 2 or 3 short sentences. Don't change any code.\n\n${Nv(bb)}`;
+      return `Explain what this part of my code does, in 2 or 3 short sentences. Don't change any code.\n\n${cK(zz)}`;
     case "fix":
-      return `Fix what is wrong in this part of my code. Change only what it needs.\n\n${Nv(bb)}`;
+      return `Fix what is wrong in this part of my code. Change only what it needs.\n\n${cK(zz)}`;
     case "change":
-      return `${ab.trim()}\n\nChange only this part of my code, unless more is needed for it to work.\n\n${Nv(bb)}`
+      return `${tz.trim()}\n\nChange only this part of my code, unless more is needed for it to work.\n\n${cK(zz)}`
   }
 }
 
-function Hv(bb) {
-  let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-  const Ub = pv(bb);
-  switch (bb.action) {
+function AK(zz) {
+  let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+  const sz = TK(zz);
+  switch (zz.action) {
     case "explain":
-      return `Explain ${Ub}`;
+      return `Explain ${sz}`;
     case "fix":
-      return `Fix ${Ub}`;
+      return `Fix ${sz}`;
     case "change":
-      return `${ab.trim()} (${Ub})`
+      return `${tz.trim()} (${sz})`
   }
 }
-var Iv = Ub(40487),
-  dv = Ub(4446),
-  Fv = Ub(40469),
-  hv = Ub(40483),
-  Gv = Ub(40475);
+var yK = sz(40514),
+  MK = sz(4391),
+  dK = sz(40495),
+  hK = sz(40506),
+  QK = sz(40498);
 
-function Qv(bb) {
-  return bb ? "/worldCodeAiCheck.ts" : "/worldCodeAiCheck.js"
+function kK(zz) {
+  return zz ? "/worldCodeAiCheck.ts" : "/worldCodeAiCheck.js"
 }
-const qv = new Set([2345, 2559, 2353, 2554, 2322, 2820]),
-  uv = new Set([2304, 2552]),
-  rv = new Set(["Date", "isNaN", "isFinite", "parseInt", "parseFloat"]),
-  Kv = {};
+const iK = new Set([2345, 2559, 2353, 2554, 2322, 2820]),
+  LK = new Set([2304, 2552]),
+  lK = new Set(["Date", "isNaN", "isFinite", "parseInt", "parseFloat"]),
+  nK = {};
 
-function ov() {
-  let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  const ab = bb ? "codeBlock" : arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "worldCodeTs" : "worldCode";
-  let Ub = Kv[ab];
-  if (!Ub) {
-    const Ab = Qv("worldCodeTs" === ab),
-      Mb = new Map(bb ? [
-        [Ab, "\n"],
-        ["/globals.d.ts", Fv.e],
-        ["/lib.d.ts", hv.e]
+function aK() {
+  let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+  const tz = zz ? "codeBlock" : arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "worldCodeTs" : "worldCode";
+  let sz = nK[tz];
+  if (!sz) {
+    const Fz = kK("worldCodeTs" === tz),
+      Wz = new Map(zz ? [
+        [Fz, "\n"],
+        ["/globals.d.ts", dK.d],
+        ["/lib.d.ts", hK.d]
       ] : [
-        [Ab, "\n"],
-        ["/node_modules/@bloxd/index.d.ts", dv.default],
-        ["/globals.d.ts", Gv.d],
-        ["/lib.d.ts", hv.e]
+        [Fz, "\n"],
+        ["/node_modules/@bloxd/index.d.ts", MK.default],
+        ["/globals.d.ts", QK.b],
+        ["/lib.d.ts", hK.d]
       ]);
-    Ub = Iv.g(Iv.c(Mb), [...Mb.keys()], mb(), {
+    sz = yK.h(yK.e(Wz), [...Wz.keys()], Jz(), {
       allowJs: !0,
       checkJs: !0,
       noLib: !0,
       strict: !1,
-      module: mb().ModuleKind.ESNext,
-      moduleResolution: mb().ModuleResolutionKind.Bundler,
-      target: mb().ScriptTarget.ES2015,
+      module: Jz().ModuleKind.ESNext,
+      moduleResolution: Jz().ModuleResolutionKind.Bundler,
+      target: Jz().ScriptTarget.ES2015,
       allowUnreachableCode: !1,
       paths: {
         "@bloxd": ["/node_modules/@bloxd/index.d.ts"]
       }
-    }), Kv[ab] = Ub
+    }), nK[tz] = sz
   }
-  return Ub
+  return sz
 }
 
-function lv(bb, ab, Ub) {
-  let Ab;
-  const Mb = Tb => {
-    ab < Tb.getStart(bb) || ab >= Tb.getEnd() || (mb().isFunctionLike(Tb) && ab > Tb.getStart(bb) && (Ab = void 0), mb().isCallExpression(Tb) && (ab >= Tb.expression.getEnd() || Ub <= Tb.expression.getEnd()) && (Ab = Tb), mb().forEachChild(Tb, Mb))
+function qK(zz, tz, sz) {
+  let Fz;
+  const Wz = Xz => {
+    tz < Xz.getStart(zz) || tz >= Xz.getEnd() || (Jz().isFunctionLike(Xz) && tz > Xz.getStart(zz) && (Fz = void 0), Jz().isCallExpression(Xz) && (tz >= Xz.expression.getEnd() || sz <= Xz.expression.getEnd()) && (Fz = Xz), Jz().forEachChild(Xz, Wz))
   };
-  return Mb(bb), Ab && tU(Ab, bb) ? Ab : void 0
+  return Wz(zz), Fz && as(Fz, zz) ? Fz : void 0
 }
 
-function tv(bb, ab, Ub) {
-  let Ab;
-  const Mb = Tb => {
-    ab < Tb.getStart(bb) || Ub > Tb.getEnd() || (Ab = Tb, mb().forEachChild(Tb, Mb))
+function SK(zz, tz, sz) {
+  let Fz;
+  const Wz = Xz => {
+    tz < Xz.getStart(zz) || sz > Xz.getEnd() || (Fz = Xz, Jz().forEachChild(Xz, Wz))
   };
-  return Mb(bb), Ab
+  return Wz(zz), Fz
 }
 
-function wv(bb) {
-  return bb.toLowerCase().replace(/[^a-z0-9]/g, "")
+function VK(zz) {
+  return zz.toLowerCase().replace(/[^a-z0-9]/g, "")
 }
 
-function sv(bb, ab) {
-  const Ub = wv(bb);
-  if (!Ub) return;
-  const Ab = ab.find((bb => wv(bb) === Ub));
-  if (Ab) return `"${Ab}"`;
-  const Mb = ab.filter((bb => {
-    const ab = wv(bb);
-    return ab.includes(Ub) || Ub.includes(ab)
-  })).sort(((bb, ab) => bb.length - ab.length));
-  if (Mb.length > 0) return Mb.slice(0, 2).map((bb => `"${bb}"`)).join(" or ");
-  const Tb = new Set(bb.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
-  let Eb;
-  for (const Yb of ab) {
-    const bb = Yb.toLowerCase().split(/[^a-z0-9]+/).filter((bb => Tb.has(bb))).length;
-    bb > 0 && (!Eb || bb > Eb.shared) && (Eb = {
-      option: Yb,
-      shared: bb
+function RK(zz, tz) {
+  const sz = VK(zz);
+  if (!sz) return;
+  const Fz = tz.find((zz => VK(zz) === sz));
+  if (Fz) return `"${Fz}"`;
+  const Wz = tz.filter((zz => {
+    const tz = VK(zz);
+    return tz.includes(sz) || sz.includes(tz)
+  })).sort(((zz, tz) => zz.length - tz.length));
+  if (Wz.length > 0) return Wz.slice(0, 2).map((zz => `"${zz}"`)).join(" or ");
+  const Xz = new Set(zz.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+  let Oz;
+  for (const oz of tz) {
+    const zz = oz.toLowerCase().split(/[^a-z0-9]+/).filter((zz => Xz.has(zz))).length;
+    zz > 0 && (!Oz || zz > Oz.shared) && (Oz = {
+      option: oz,
+      shared: zz
     })
   }
-  return Eb ? `"${Eb.option}"` : void 0
+  return Oz ? `"${Oz.option}"` : void 0
 }
 
-function gv(bb) {
-  for (let ab = bb; ab && !mb().isSourceFile(ab); ab = ab.parent)
-    if (mb().isExpressionWithTypeArguments(ab)) {
-      if (mb().isHeritageClause(ab.parent) && ab.parent.token === mb().SyntaxKind.ImplementsKeyword) return !0
-    } else if (mb().isTypeNode(ab)) return !0;
+function pK(zz) {
+  for (let tz = zz; tz && !Jz().isSourceFile(tz); tz = tz.parent)
+    if (Jz().isExpressionWithTypeArguments(tz)) {
+      if (Jz().isHeritageClause(tz.parent) && tz.parent.token === Jz().SyntaxKind.ImplementsKeyword) return !0
+    } else if (Jz().isTypeNode(tz)) return !0;
   return !1
 }
 
-function Cv(bb) {
-  var ab;
-  let Ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    Ab = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  const Mb = Qv(Ab && !Ub),
-    Tb = ov(Ub, Ab);
-  Tb.updateFile(Mb, bb || "\n");
-  const Eb = Tb.getSourceFile(Mb),
-    Yb = null === (ab = Tb.languageService.getProgram()) || void 0 === ab ? void 0 : ab.getTypeChecker();
-  if (!Eb || !Yb) return [];
-  const Bb = new Set,
-    eb = Tb.languageService.getSyntacticDiagnostics(Mb)[0];
-  if (void 0 !== (null === eb || void 0 === eb ? void 0 : eb.start)) {
-    var vb, Lb;
-    const ab = Eb.getLineAndCharacterOfPosition(eb.start).line,
-      Ub = null !== (vb = null === (Lb = bb.split("\n")[ab]) || void 0 === Lb ? void 0 : Lb.trim()) && void 0 !== vb ? vb : "",
-      Ab = Ub.length > 40 ? `${Ub.slice(0,37)}...` : Ub,
-      Mb = mb().flattenDiagnosticMessageText(eb.messageText, " ").replace(/\.$/, "");
-    Bb.add(`Line ${ab+1} stops all of this code from running: "${Ab}" (${Mb}).`)
+function fK(zz) {
+  var tz;
+  let sz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    Fz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  const Wz = kK(Fz && !sz),
+    Xz = aK(sz, Fz);
+  Xz.updateFile(Wz, zz || "\n");
+  const Oz = Xz.getSourceFile(Wz),
+    oz = null === (tz = Xz.languageService.getProgram()) || void 0 === tz ? void 0 : tz.getTypeChecker();
+  if (!Oz || !oz) return [];
+  const vz = new Set,
+    Uz = Xz.languageService.getSyntacticDiagnostics(Wz)[0];
+  if (void 0 !== (null === Uz || void 0 === Uz ? void 0 : Uz.start)) {
+    var Kz, uz;
+    const tz = Oz.getLineAndCharacterOfPosition(Uz.start).line,
+      sz = null !== (Kz = null === (uz = zz.split("\n")[tz]) || void 0 === uz ? void 0 : uz.trim()) && void 0 !== Kz ? Kz : "",
+      Fz = sz.length > 40 ? `${sz.slice(0,37)}...` : sz,
+      Wz = Jz().flattenDiagnosticMessageText(Uz.messageText, " ").replace(/\.$/, "");
+    vz.add(`Line ${tz+1} stops all of this code from running: "${Fz}" (${Wz}).`)
   }
-  const Pb = new Set;
-  for (const Qb of Tb.languageService.getSemanticDiagnostics(Mb)) {
-    var Xb, jb, Rb, kb, yb, Zb, Db, zb;
-    if (7027 === Qb.code && void 0 !== Qb.start) {
-      var xb, ib;
-      const ab = Eb.getLineAndCharacterOfPosition(Qb.start).line,
-        Ub = null !== (xb = null === (ib = bb.split("\n")[ab]) || void 0 === ib ? void 0 : ib.trim()) && void 0 !== xb ? xb : "",
-        Ab = Ub.length > 40 ? `${Ub.slice(0,37)}...` : Ub;
-      Bb.add(`Line ${ab+1} never runs: "${Ab}" comes after a return, which ends the function first.`);
+  const Nz = new Set;
+  for (const yz of Xz.languageService.getSemanticDiagnostics(Wz)) {
+    var bz, wz, Dz, gz, Hz, Bz, Pz, rz;
+    if (7027 === yz.code && void 0 !== yz.start) {
+      var Yz, xz;
+      const tz = Oz.getLineAndCharacterOfPosition(yz.start).line,
+        sz = null !== (Yz = null === (xz = zz.split("\n")[tz]) || void 0 === xz ? void 0 : xz.trim()) && void 0 !== Yz ? Yz : "",
+        Fz = sz.length > 40 ? `${sz.slice(0,37)}...` : sz;
+      vz.add(`Line ${tz+1} never runs: "${Fz}" comes after a return, which ends the function first.`);
       continue
     }
-    if (uv.has(Qb.code) && void 0 !== Qb.start) {
-      var fb, pb;
-      const ab = Qb.start + (null !== (fb = Qb.length) && void 0 !== fb ? fb : 0),
-        Ub = bb.slice(Qb.start, ab),
-        Ab = /^\s*\(/.test(bb.slice(ab)),
-        Mb = new RegExp(`^${Ub.replaceAll("$","\\$")}\\s*=[^=]`, "m").test(bb),
-        Tb = bb.slice(0, Qb.start),
-        Yb = Tb.lastIndexOf("/*") > Tb.lastIndexOf("*/") || Tb.slice(Tb.lastIndexOf("\n")).includes("//"),
-        vb = new RegExp(`//\\s*(?:const|let|var)\\s+${Ub.replaceAll("$","\\$")}\\b`).test(bb),
-        Lb = new RegExp(`typeof\\s+${Ub.replaceAll("$","\\$")}\\b`).test(bb);
-      if (rv.has(Ub) || Pb.has(Ub) || Ab || Mb || Yb || vb || Lb || eb || gv(tv(Eb, Qb.start, ab))) continue;
-      Pb.add(Ub);
-      const Xb = Eb.getLineAndCharacterOfPosition(Qb.start).line,
-        jb = null === (pb = /Did you mean '([\w$]+)'\?/.exec(mb().flattenDiagnosticMessageText(Qb.messageText, " "))) || void 0 === pb ? void 0 : pb[1];
-      Bb.add(jb ? `Line ${Xb+1} uses "${Ub}", which is never set, so it throws there. Did you mean "${jb}"?` : `Line ${Xb+1} uses "${Ub}", which isn't set there, so it throws when that line runs.`);
+    if (LK.has(yz.code) && void 0 !== yz.start) {
+      var mz, Iz;
+      const tz = yz.start + (null !== (mz = yz.length) && void 0 !== mz ? mz : 0),
+        sz = zz.slice(yz.start, tz),
+        Fz = /^\s*\(/.test(zz.slice(tz)),
+        Wz = new RegExp(`^${sz.replaceAll("$","\\$")}\\s*=[^=]`, "m").test(zz),
+        Xz = zz.slice(0, yz.start),
+        oz = Xz.lastIndexOf("/*") > Xz.lastIndexOf("*/") || Xz.slice(Xz.lastIndexOf("\n")).includes("//"),
+        Kz = new RegExp(`//\\s*(?:const|let|var)\\s+${sz.replaceAll("$","\\$")}\\b`).test(zz),
+        uz = new RegExp(`typeof\\s+${sz.replaceAll("$","\\$")}\\b`).test(zz);
+      if (lK.has(sz) || Nz.has(sz) || Fz || Wz || oz || Kz || uz || Uz || pK(SK(Oz, yz.start, tz))) continue;
+      Nz.add(sz);
+      const bz = Oz.getLineAndCharacterOfPosition(yz.start).line,
+        wz = null === (Iz = /Did you mean '([\w$]+)'\?/.exec(Jz().flattenDiagnosticMessageText(yz.messageText, " "))) || void 0 === Iz ? void 0 : Iz[1];
+      vz.add(wz ? `Line ${bz+1} uses "${sz}", which is never set, so it throws there. Did you mean "${wz}"?` : `Line ${bz+1} uses "${sz}", which isn't set there, so it throws when that line runs.`);
       continue
     }
-    if (!qv.has(Qb.code) || void 0 === Qb.start) continue;
-    const ab = mb().flattenDiagnosticMessageText(Qb.messageText, " ");
-    if (ab.includes("'string | number'")) continue;
-    const Ub = Qb.start + (null !== (Xb = Qb.length) && void 0 !== Xb ? Xb : 0),
-      Ab = lv(Eb, Qb.start, Ub);
-    if (!Ab) continue;
-    const Mb = tv(Eb, Qb.start, Ub),
-      Tb = Ab.expression.getText(Eb),
-      vb = null !== Mb && void 0 !== Mb && Mb.parent && mb().isPropertyAssignment(Mb.parent) && Mb.parent.name === Mb ? Mb.parent : void 0,
-      Lb = (vb ? vb.getText(Eb) : bb.slice(Qb.start, Ub)).replace(/\s+/g, " "),
-      qb = Lb.length > 40 ? `${Lb.slice(0,37)}...` : Lb;
-    if (2554 === Qb.code) {
-      var Nb, Wb, Hb;
-      const bb = ab.match(/Expected (\S+) arguments?, but got (\d+)/),
-        Ub = null !== (Nb = null === bb || void 0 === bb || null === (Wb = bb[1]) || void 0 === Wb ? void 0 : Wb.replace("-", " to ")) && void 0 !== Nb ? Nb : "a different number of",
-        Mb = Number(null !== (Hb = null === bb || void 0 === bb ? void 0 : bb[2]) && void 0 !== Hb ? Hb : Ab.arguments.length);
-      Bb.add(`${Tb} needs ${Ub} ${"1"===Ub?"value":"values"}, but this line gives it ${Mb}.`);
+    if (!iK.has(yz.code) || void 0 === yz.start) continue;
+    const tz = Jz().flattenDiagnosticMessageText(yz.messageText, " ");
+    if (tz.includes("'string | number'")) continue;
+    const sz = yz.start + (null !== (bz = yz.length) && void 0 !== bz ? bz : 0),
+      Fz = qK(Oz, yz.start, sz);
+    if (!Fz) continue;
+    const Wz = SK(Oz, yz.start, sz),
+      Xz = Fz.expression.getText(Oz),
+      Kz = null !== Wz && void 0 !== Wz && Wz.parent && Jz().isPropertyAssignment(Wz.parent) && Wz.parent.name === Wz ? Wz.parent : void 0,
+      uz = (Kz ? Kz.getText(Oz) : zz.slice(yz.start, sz)).replace(/\s+/g, " "),
+      Mz = uz.length > 40 ? `${uz.slice(0,37)}...` : uz;
+    if (2554 === yz.code) {
+      var Cz, ez, Zz;
+      const zz = tz.match(/Expected (\S+) arguments?, but got (\d+)/),
+        sz = null !== (Cz = null === zz || void 0 === zz || null === (ez = zz[1]) || void 0 === ez ? void 0 : ez.replace("-", " to ")) && void 0 !== Cz ? Cz : "a different number of",
+        Wz = Number(null !== (Zz = null === zz || void 0 === zz ? void 0 : zz[2]) && void 0 !== Zz ? Zz : Fz.arguments.length);
+      vz.add(`${Xz} needs ${sz} ${"1"===sz?"value":"values"}, but this line gives it ${Wz}.`);
       continue
     }
-    if (2353 === Qb.code) {
-      var Ib, db;
-      const bb = null !== (Ib = null === (db = ab.match(/'([^']*)' does not exist/)) || void 0 === db ? void 0 : db[1]) && void 0 !== Ib ? Ib : qb,
-        Ub = null !== Mb && void 0 !== Mb && Mb.parent && mb().isPropertyAssignment(Mb.parent) ? Mb.parent.parent : null === Mb || void 0 === Mb ? void 0 : Mb.parent,
-        Ab = Ub && mb().isObjectLiteralExpression(Ub) ? Yb.getContextualType(Ub) : void 0,
-        Eb = sv(bb, Ab && !Yb.isArrayType(Yb.getNonNullableType(Ab)) ? Yb.getPropertiesOfType(Yb.getNonNullableType(Ab)).map((bb => bb.name)) : []),
-        eb = Ab ? ` It takes ${gU(Yb,Ab)}.` : " Check Show Docs for its settings.";
-      Bb.add(`${Tb} has no setting called "${bb}".${Eb?` Did you mean ${Eb}?`:eb}`);
+    if (2353 === yz.code) {
+      var Gz, Tz;
+      const zz = null !== (Gz = null === (Tz = tz.match(/'([^']*)' does not exist/)) || void 0 === Tz ? void 0 : Tz[1]) && void 0 !== Gz ? Gz : Mz,
+        sz = null !== Wz && void 0 !== Wz && Wz.parent && Jz().isPropertyAssignment(Wz.parent) ? Wz.parent.parent : null === Wz || void 0 === Wz ? void 0 : Wz.parent,
+        Fz = sz && Jz().isObjectLiteralExpression(sz) ? oz.getContextualType(sz) : void 0,
+        Oz = RK(zz, Fz && !oz.isArrayType(oz.getNonNullableType(Fz)) ? oz.getPropertiesOfType(oz.getNonNullableType(Fz)).map((zz => zz.name)) : []),
+        Uz = Fz ? ` It takes ${Vs(oz,Fz)}.` : " Check Show Docs for its settings.";
+      vz.add(`${Xz} has no setting called "${zz}".${Oz?` Did you mean ${Oz}?`:Uz}`);
       continue
     }
-    const ub = null !== (jb = null === vb || void 0 === vb ? void 0 : vb.initializer) && void 0 !== jb ? jb : Mb,
-      rb = ub && mb().isExpression(ub) ? Yb.getContextualType(ub) : void 0,
-      Kb = (null !== (Gb = rb) && void 0 !== Gb && Gb.isUnion() ? Gb.types : Gb ? [Gb] : []).filter((bb => bb.isStringLiteral())).map((bb => bb.value)),
-      ob = ab.includes("keyof ") ? "setting" : "name",
-      lb = null !== (Rb = null === ub || void 0 === ub ? void 0 : ub.getText(Eb)) && void 0 !== Rb ? Rb : Lb,
-      tb = Kb.length > 0 ? null === (kb = /^CONFIG\.([\w$]+)$/.exec(lb)) || void 0 === kb ? void 0 : kb[1] : void 0;
-    if (void 0 !== tb) {
-      var Fb;
-      const ab = null === (Fb = new RegExp(`(?:^|[{,])\\s*${tb.replaceAll("$","\\$")}\\s*:\\s*(["'])([^"'\\n]*)\\1`, "m").exec(bb)) || void 0 === Fb ? void 0 : Fb[2];
-      if (void 0 !== ab && !Kb.includes(ab)) {
-        const bb = sv(ab, Kb);
-        Bb.add(`${Tb} has no ${ob} called "${ab}" (${lb}).${bb?` Did you mean ${bb}?`:""}`)
+    const dz = null !== (wz = null === Kz || void 0 === Kz ? void 0 : Kz.initializer) && void 0 !== wz ? wz : Wz,
+      hz = dz && Jz().isExpression(dz) ? oz.getContextualType(dz) : void 0,
+      Qz = (null !== (Az = hz) && void 0 !== Az && Az.isUnion() ? Az.types : Az ? [Az] : []).filter((zz => zz.isStringLiteral())).map((zz => zz.value)),
+      kz = tz.includes("keyof ") ? "setting" : "name",
+      iz = null !== (Dz = null === dz || void 0 === dz ? void 0 : dz.getText(Oz)) && void 0 !== Dz ? Dz : uz,
+      Lz = Qz.length > 0 ? null === (gz = /^CONFIG\.([\w$]+)$/.exec(iz)) || void 0 === gz ? void 0 : gz[1] : void 0;
+    if (void 0 !== Lz) {
+      var cz;
+      const tz = null === (cz = new RegExp(`(?:^|[{,])\\s*${Lz.replaceAll("$","\\$")}\\s*:\\s*(["'])([^"'\\n]*)\\1`, "m").exec(zz)) || void 0 === cz ? void 0 : cz[2];
+      if (void 0 !== tz && !Qz.includes(tz)) {
+        const zz = RK(tz, Qz);
+        vz.add(`${Xz} has no ${kz} called "${tz}" (${iz}).${zz?` Did you mean ${zz}?`:""}`)
       }
       continue
     }
-    if (rb && ub && CU(Yb, Yb.getTypeAtLocation(ub), rb)) continue;
-    if (Kb.length > 0) {
-      const bb = ub && mb().isStringLiteral(ub) ? ub : void 0,
-        ab = bb ? sv(bb.text, Kb) : void 0,
-        Ub = bb && !vb ? `${Tb} has no ${ob} called ${hb=qb,hb.startsWith('"')?hb:`"${hb}"`}.` : `${Tb} can't take ${qb} there.`;
-      Bb.add(`${Ub}${ab?` Did you mean ${ab}?`:" Check Show Docs for what it takes."}`);
+    if (hz && dz && Rs(oz, oz.getTypeAtLocation(dz), hz)) continue;
+    if (Qz.length > 0) {
+      const zz = dz && Jz().isStringLiteral(dz) ? dz : void 0,
+        tz = zz ? RK(zz.text, Qz) : void 0,
+        sz = zz && !Kz ? `${Xz} has no ${kz} called ${jz=Mz,jz.startsWith('"')?jz:`"${jz}"`}.` : `${Xz} can't take ${Mz} there.`;
+      vz.add(`${sz}${tz?` Did you mean ${tz}?`:" Check Show Docs for what it takes."}`);
       continue
     }
-    if (rb && ub && sU(Yb.getTypeAtLocation(ub))) {
-      Bb.add(`${Tb} can't take ${qb} there: it takes ${gU(Yb,rb)}.`);
+    if (hz && dz && Ss(oz.getTypeAtLocation(dz))) {
+      vz.add(`${Xz} can't take ${Mz} there: it takes ${Vs(oz,hz)}.`);
       continue
     }
-    const wb = rb && Yb.getNonNullableType(rb);
-    if (wb && sU(wb) && !Yb.isArrayType(wb) && !Yb.isTupleType(wb)) {
-      const bb = wU(Yb, rb);
-      Bb.add(`${Tb} needs settings in { } there${bb?`, like ${bb}`:""}, not ${qb}.`);
+    const lz = hz && oz.getNonNullableType(hz);
+    if (lz && Ss(lz) && !oz.isArrayType(lz) && !oz.isTupleType(lz)) {
+      const zz = qs(oz, hz);
+      vz.add(`${Xz} needs settings in { } there${zz?`, like ${zz}`:""}, not ${Mz}.`);
       continue
     }
-    const sb = null === (yb = ab.match(/parameter of type '([^']*)'/)) || void 0 === yb ? void 0 : yb[1],
-      gb = Ab.arguments.findIndex((bb => bb.getStart(Eb) <= Qb.start && Qb.start < bb.getEnd())),
-      Cb = null !== (Zb = null === (Db = Yb.getResolvedSignature(Ab)) || void 0 === Db || null === (zb = Db.parameters[gb]) || void 0 === zb ? void 0 : zb.name) && void 0 !== Zb ? Zb : "that part",
-      Vb = Mb ? Yb.typeToString(Yb.getTypeAtLocation(Mb)) : "",
-      Ob = "number" === Vb ? "a number" : "string" === Vb ? "text" : "something else";
-    "string" === sb ? Bb.add(`${Tb} needs ${Cb} as text, but ${qb} is ${Ob} here.`) : "number" === sb ? Bb.add(`${Tb} needs ${Cb} as a number, but ${qb} is ${Ob} here.`) : Bb.add(`${Tb} can't take ${qb} there${rb?`: it takes ${gU(Yb,rb)}`:". Check Show Docs for what it takes"}.`)
+    const nz = null === (Hz = tz.match(/parameter of type '([^']*)'/)) || void 0 === Hz ? void 0 : Hz[1],
+      az = Fz.arguments.findIndex((zz => zz.getStart(Oz) <= yz.start && yz.start < zz.getEnd())),
+      qz = null !== (Bz = null === (Pz = oz.getResolvedSignature(Fz)) || void 0 === Pz || null === (rz = Pz.parameters[az]) || void 0 === rz ? void 0 : rz.name) && void 0 !== Bz ? Bz : "that part",
+      Sz = Wz ? oz.typeToString(oz.getTypeAtLocation(Wz)) : "",
+      Vz = "number" === Sz ? "a number" : "string" === Sz ? "text" : "something else";
+    "string" === nz ? vz.add(`${Xz} needs ${qz} as text, but ${Mz} is ${Vz} here.`) : "number" === nz ? vz.add(`${Xz} needs ${qz} as a number, but ${Mz} is ${Vz} here.`) : vz.add(`${Xz} can't take ${Mz} there${hz?`: it takes ${Vs(oz,hz)}`:". Check Show Docs for what it takes"}.`)
   }
-  var hb, Gb;
-  return [...Bb, ...OU(Eb, Yb)]
+  var jz, Az;
+  return [...vz, ...fs(Oz, oz)]
 }
 
-function Vv(bb) {
-  return bb.replace(/^Line \d+ /, "")
+function EK(zz) {
+  return zz.replace(/^Line \d+ /, "")
 }
 
-function Ov(bb) {
-  const ab = new Map;
-  for (const Mb of bb.split("\n")) {
-    var Ub;
-    const bb = /^(?:async\s+)?function\s*\*?\s*(\w+)\s*\(|^(\w+)\s*=\s*(?:async\s*)?(?:\([^()]*\)\s*=>|function\b|\w+\s*=>)/.exec(Mb),
-      Tb = null !== (Ub = null === bb || void 0 === bb ? void 0 : bb[1]) && void 0 !== Ub ? Ub : null === bb || void 0 === bb ? void 0 : bb[2];
-    var Ab;
-    if (Tb) ab.set(Tb, (null !== (Ab = ab.get(Tb)) && void 0 !== Ab ? Ab : 0) + 1)
+function zu(zz) {
+  const tz = new Map;
+  for (const Wz of zz.split("\n")) {
+    var sz;
+    const zz = /^(?:async\s+)?function\s*\*?\s*(\w+)\s*\(|^(\w+)\s*=\s*(?:async\s*)?(?:\([^()]*\)\s*=>|function\b|\w+\s*=>)/.exec(Wz),
+      Xz = null !== (sz = null === zz || void 0 === zz ? void 0 : zz[1]) && void 0 !== sz ? sz : null === zz || void 0 === zz ? void 0 : zz[2];
+    var Fz;
+    if (Xz) tz.set(Xz, (null !== (Fz = tz.get(Xz)) && void 0 !== Fz ? Fz : 0) + 1)
   }
-  return [...ab].flatMap((bb => {
-    let [ab, Ub] = bb;
-    return Ub > 1 ? [`${ab} is in the code ${Ub} times, so only the last one runs. Put them together in one ${ab}.`] : []
+  return [...tz].flatMap((zz => {
+    let [tz, sz] = zz;
+    return sz > 1 ? [`${tz} is in the code ${sz} times, so only the last one runs. Put them together in one ${tz}.`] : []
   }))
 }
 
-function cv(bb, ab) {
-  var Ub, Ab, Mb, Tb;
-  const Eb = ab.after.split("\n"),
-    Yb = bb => {
-      var ab, Ub;
-      const Ab = null !== (ab = null === (Ub = Eb[bb]) || void 0 === Ub ? void 0 : Ub.trim()) && void 0 !== ab ? ab : "";
-      return "" === Ab ? void 0 : {
-        line: bb + 1,
-        text: Ab.length > 50 ? `${Ab.slice(0,47)}...` : Ab
+function tu(zz, tz) {
+  var sz, Fz, Wz, Xz;
+  const Oz = tz.after.split("\n"),
+    oz = zz => {
+      var tz, sz;
+      const Fz = null !== (tz = null === (sz = Oz[zz]) || void 0 === sz ? void 0 : sz.trim()) && void 0 !== tz ? tz : "";
+      return "" === Fz ? void 0 : {
+        line: zz + 1,
+        text: Fz.length > 50 ? `${Fz.slice(0,47)}...` : Fz
       }
     },
-    Bb = /^Line (\d+) /.exec(bb);
-  if (Bb) return Yb(Number(Bb[1]) - 1);
-  const eb = /^([\w$]+) is in the code \d+ times\b/.exec(bb);
-  if (eb) {
-    const bb = eb[1].replaceAll("$", "\\$"),
-      ab = new RegExp(`^(?:async\\s+)?function\\s*\\*?\\s*${bb}\\s*\\(|^${bb}\\s*=`),
-      Ub = Eb.findIndex((bb => ab.test(bb)));
-    return Ub >= 0 ? Yb(Ub) : void 0
+    vz = /^Line (\d+) /.exec(zz);
+  if (vz) return oz(Number(vz[1]) - 1);
+  const Uz = /^([\w$]+) is in the code \d+ times\b/.exec(zz);
+  if (Uz) {
+    const zz = Uz[1].replaceAll("$", "\\$"),
+      tz = new RegExp(`^(?:async\\s+)?function\\s*\\*?\\s*${zz}\\s*\\(|^${zz}\\s*=`),
+      sz = Oz.findIndex((zz => tz.test(zz)));
+    return sz >= 0 ? oz(sz) : void 0
   }
-  const vb = null !== (Ub = null === (Ab = /"([^"]+)"/.exec(bb)) || void 0 === Ab ? void 0 : Ab[1]) && void 0 !== Ub ? Ub : null === (Mb = /^api\.[\w$]+/.exec(bb)) || void 0 === Mb ? void 0 : Mb[0];
-  if (!vb) return;
-  const Lb = new Set(ab.before.split("\n")),
-    Pb = Eb.flatMap(((bb, ab) => bb.includes(vb) ? [ab] : [])),
-    Xb = null !== (Tb = Pb.find((bb => !Lb.has(Eb[bb])))) && void 0 !== Tb ? Tb : Pb[0];
-  return void 0 === Xb ? void 0 : Yb(Xb)
+  const Kz = null !== (sz = null === (Fz = /"([^"]+)"/.exec(zz)) || void 0 === Fz ? void 0 : Fz[1]) && void 0 !== sz ? sz : null === (Wz = /^api\.[\w$]+/.exec(zz)) || void 0 === Wz ? void 0 : Wz[0];
+  if (!Kz) return;
+  const uz = new Set(tz.before.split("\n")),
+    Nz = Oz.flatMap(((zz, tz) => zz.includes(Kz) ? [tz] : [])),
+    bz = null !== (Xz = Nz.find((zz => !uz.has(Oz[zz])))) && void 0 !== Xz ? Xz : Nz[0];
+  return void 0 === bz ? void 0 : oz(bz)
 }
 
-function Jv(bb) {
-  return /^Line \d+ stops all of this code from running: "/.test(bb)
+function su(zz) {
+  return /^Line \d+ stops all of this code from running: "/.test(zz)
 }
 
-function nv(bb) {
-  return /^Line \d+ (?:stops all of this code from running|never runs): "/.test(bb)
+function Fu(zz) {
+  return /^Line \d+ (?:stops all of this code from running|never runs): "/.test(zz)
 }
 
-function Sv(bb) {
-  return bb.replace(/^Line \d+ (\w)/, ((bb, ab) => ab.toUpperCase()))
+function Wu(zz) {
+  return zz.replace(/^Line \d+ (\w)/, ((zz, tz) => tz.toUpperCase()))
 }
-const bL = new Set([mb().SyntaxKind.EqualsToken, mb().SyntaxKind.QuestionQuestionEqualsToken, mb().SyntaxKind.BarBarEqualsToken]);
+const Xu = new Set([Jz().SyntaxKind.EqualsToken, Jz().SyntaxKind.QuestionQuestionEqualsToken, Jz().SyntaxKind.BarBarEqualsToken]);
 
-function aL(bb) {
-  const ab = mb().createSourceFile("worldCode.js", bb, mb().ScriptTarget.Latest, !0, mb().ScriptKind.JS),
-    Ub = ab.statements.flatMap((bb => mb().isVariableStatement(bb) ? bb.declarationList.declarations.filter((bb => mb().isIdentifier(bb.name) && "CONFIG" === bb.name.text)) : [])),
-    Ab = 1 === Ub.length ? Ub[0].initializer : void 0;
-  if (!Ab || !mb().isObjectLiteralExpression(Ab)) return [];
-  const Mb = new Set;
-  for (const Bb of Ab.properties) {
-    if (!mb().isPropertyAssignment(Bb) && !mb().isShorthandPropertyAssignment(Bb) && !mb().isMethodDeclaration(Bb)) return [];
-    if (mb().isComputedPropertyName(Bb.name)) return [];
-    Mb.add(Bb.name.text)
+function Ou(zz) {
+  const tz = Jz().createSourceFile("worldCode.js", zz, Jz().ScriptTarget.Latest, !0, Jz().ScriptKind.JS),
+    sz = tz.statements.flatMap((zz => Jz().isVariableStatement(zz) ? zz.declarationList.declarations.filter((zz => Jz().isIdentifier(zz.name) && "CONFIG" === zz.name.text)) : [])),
+    Fz = 1 === sz.length ? sz[0].initializer : void 0;
+  if (!Fz || !Jz().isObjectLiteralExpression(Fz)) return [];
+  const Wz = new Set;
+  for (const vz of Fz.properties) {
+    if (!Jz().isPropertyAssignment(vz) && !Jz().isShorthandPropertyAssignment(vz) && !Jz().isMethodDeclaration(vz)) return [];
+    if (Jz().isComputedPropertyName(vz.name)) return [];
+    Wz.add(vz.name.text)
   }
-  const Tb = [],
-    Eb = bb => {
-      if (mb().isPropertyAccessExpression(bb) && mb().isIdentifier(bb.expression) && "CONFIG" === bb.expression.text) {
-        const Ub = bb.name.text,
-          Ab = bb.parent;
-        mb().isBinaryExpression(Ab) && Ab.left === bb && bL.has(Ab.operatorToken.kind) ? Mb.add(Ub) : Tb.push({
-          name: Ub,
-          at: bb.getStart(ab)
+  const Xz = [],
+    Oz = zz => {
+      if (Jz().isPropertyAccessExpression(zz) && Jz().isIdentifier(zz.expression) && "CONFIG" === zz.expression.text) {
+        const sz = zz.name.text,
+          Fz = zz.parent;
+        Jz().isBinaryExpression(Fz) && Fz.left === zz && Xu.has(Fz.operatorToken.kind) ? Wz.add(sz) : Xz.push({
+          name: sz,
+          at: zz.getStart(tz)
         })
       }
-      mb().forEachChild(bb, Eb)
+      Jz().forEachChild(zz, Oz)
     };
-  Eb(ab);
-  const Yb = new Set;
-  return Tb.flatMap((bb => {
-    if (Mb.has(bb.name) || Yb.has(bb.name)) return [];
-    Yb.add(bb.name);
-    return [`Line ${ab.getLineAndCharacterOfPosition(bb.at).line+1} uses "CONFIG.${bb.name}", but CONFIG has no ${bb.name}, so it is undefined there. Add ${bb.name} to CONFIG.`]
+  Oz(tz);
+  const oz = new Set;
+  return Xz.flatMap((zz => {
+    if (Wz.has(zz.name) || oz.has(zz.name)) return [];
+    oz.add(zz.name);
+    return [`Line ${tz.getLineAndCharacterOfPosition(zz.at).line+1} uses "CONFIG.${zz.name}", but CONFIG has no ${zz.name}, so it is undefined there. Add ${zz.name} to CONFIG.`]
   }))
 }
 
-function UL(bb, ab) {
-  var Ub;
-  const Ab = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] && !(void 0 !== ab.path && (0, jb.f)(ab.path)),
-    Mb = !0 === (null === (Ub = ab.path) || void 0 === Ub ? void 0 : Ub.endsWith(".ts")),
-    Tb = ab => [...bb.codeWarnings(ab, Ab), ...Cv(ab, Ab, Mb), ...Ov(ab), ...aL(ab)],
-    Eb = new Set(Tb(ab.before).map(Vv));
-  return Tb(ab.after).filter((bb => !Eb.has(Vv(bb))))
+function ou(zz, tz) {
+  var sz;
+  const Fz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] && !(void 0 !== tz.path && (0, wz.d)(tz.path)),
+    Wz = !0 === (null === (sz = tz.path) || void 0 === sz ? void 0 : sz.endsWith(".ts")),
+    Xz = tz => [...zz.codeWarnings(tz, Fz), ...fK(tz, Fz, Wz), ...zu(tz), ...Ou(tz)],
+    Oz = new Set(Xz(tz.before).map(EK));
+  return Xz(tz.after).filter((zz => !Oz.has(EK(zz))))
 }
-const AL = "Looking up";
+const vu = "Looking up";
 
-function ML(bb) {
+function Uu(zz) {
   return {
-    ...bb,
+    ...zz,
     call: void 0
   }
 }
-const TL = 15e3,
-  EL = new Map;
-const YL = function(bb) {
-    let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "bloxd_worldCodeAi";
-    if ("undefined" === typeof indexedDB) return bb;
-    let Ub = "unknown",
-      Ab = null;
-    const Mb = () => (Ab ??= new Promise(((bb, Ub) => {
-        const Mb = indexedDB.open(ab, 1);
-        Mb.onupgradeneeded = () => {
-          Mb.result.createObjectStore(ae)
-        }, Mb.onsuccess = () => {
-          const ab = Mb.result;
-          ab.onversionchange = () => {
-            ab.close(), Ab = null
-          }, ab.onclose = () => {
-            Ab = null
-          }, bb(ab)
-        }, Mb.onerror = () => {
-          var bb;
-          Ub(null !== (bb = Mb.error) && void 0 !== bb ? bb : new Error("IndexedDB didn't open"))
-        }, Mb.onblocked = () => {
-          Ub(new Error("IndexedDB is blocked"))
+const Ku = 15e3,
+  uu = new Map;
+const Nu = function(zz) {
+    let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "bloxd_worldCodeAi";
+    if ("undefined" === typeof indexedDB) return zz;
+    let sz = "unknown",
+      Fz = null;
+    const Wz = () => (Fz ??= new Promise(((zz, sz) => {
+        const Wz = indexedDB.open(tz, 1);
+        Wz.onupgradeneeded = () => {
+          Wz.result.createObjectStore(OU)
+        }, Wz.onsuccess = () => {
+          const tz = Wz.result;
+          tz.onversionchange = () => {
+            tz.close(), Fz = null
+          }, tz.onclose = () => {
+            Fz = null
+          }, zz(tz)
+        }, Wz.onerror = () => {
+          var zz;
+          sz(null !== (zz = Wz.error) && void 0 !== zz ? zz : new Error("IndexedDB didn't open"))
+        }, Wz.onblocked = () => {
+          sz(new Error("IndexedDB is blocked"))
         }
-      })).catch((bb => {
-        throw Ab = null, bb
-      })), Ab),
-      Tb = async bb => {
+      })).catch((zz => {
+        throw Fz = null, zz
+      })), Fz),
+      Xz = async zz => {
         try {
-          return (await Mb()).transaction(ae, bb)
-        } catch (ab) {
-          if ("indexedDB" !== Ub) throw ab;
-          return Ab = null, (await Mb()).transaction(ae, bb)
+          return (await Wz()).transaction(OU, zz)
+        } catch (tz) {
+          if ("indexedDB" !== sz) throw tz;
+          return Fz = null, (await Wz()).transaction(OU, zz)
         }
-      }, Eb = async () => {
-        if ("unknown" === Ub) try {
-          await Mb(), Ub = "indexedDB"
+      }, Oz = async () => {
+        if ("unknown" === sz) try {
+          await Wz(), sz = "indexedDB"
         } catch {
-          Ub = "fallback"
+          sz = "fallback"
         }
-        return "indexedDB" === Ub
+        return "indexedDB" === sz
       };
     return {
-      getItem: async ab => {
-        if (!await Eb()) return bb.getItem(ab);
-        const Ub = await (async bb => {
-          const ab = await Tb("readonly"),
-            Ub = ab.objectStore(ae).get(bb);
-          return await Ue(ab), Ub.result
-        })(ab);
-        return void 0 === Ub ? bb.getItem(ab) : Ub
+      getItem: async tz => {
+        if (!await Oz()) return zz.getItem(tz);
+        const sz = await (async zz => {
+          const tz = await Xz("readonly"),
+            sz = tz.objectStore(OU).get(zz);
+          return await oU(tz), sz.result
+        })(tz);
+        return void 0 === sz ? zz.getItem(tz) : sz
       },
-      setItem: async (ab, Ub) => {
-        if (!await Eb()) return bb.setItem(ab, Ub);
+      setItem: async (tz, sz) => {
+        if (!await Oz()) return zz.setItem(tz, sz);
         try {
-          const bb = await Tb("readwrite");
-          return bb.objectStore(ae).put(Ub, ab), await Ue(bb), !0
+          const zz = await Xz("readwrite");
+          return zz.objectStore(OU).put(sz, tz), await oU(zz), !0
         } catch {
           return !1
         }
       },
-      update: async (ab, Ub) => {
-        if (!await Eb()) throw new Error("No IndexedDB: read and write localforage instead");
-        const Ab = await bb.getItem(ab).catch((() => null)),
-          Mb = await Tb("readwrite"),
-          Yb = Mb.objectStore(ae);
-        let Bb;
-        const eb = Yb.get(ab);
-        return eb.onsuccess = () => {
-          Bb = Ub(void 0 === eb.result ? Ab : eb.result), Yb.put(Bb, ab)
-        }, await Ue(Mb), Bb
+      update: async (tz, sz) => {
+        if (!await Oz()) throw new Error("No IndexedDB: read and write localforage instead");
+        const Fz = await zz.getItem(tz).catch((() => null)),
+          Wz = await Xz("readwrite"),
+          oz = Wz.objectStore(OU);
+        let vz;
+        const Uz = oz.get(tz);
+        return Uz.onsuccess = () => {
+          vz = sz(void 0 === Uz.result ? Fz : Uz.result), oz.put(vz, tz)
+        }, await oU(Wz), vz
       }
     }
-  }(uT.c),
-  BL = new class {
-    constructor(bb, ab) {
-      this.store = bb, this.signal = ab, this.RX = new Map
+  }(kX.e),
+  bu = new class {
+    constructor(zz, tz) {
+      this.store = zz, this.signal = tz, this.Ow = new Map
     }
-    watch(bb, ab) {
-      var Ub, Ab;
-      return null !== (Ub = null === (Ab = this.signal) || void 0 === Ab ? void 0 : Ab.listen((Ub => {
-        if (Ub !== bb) return;
-        const Ab = this.load(bb).then((async ab => Ye(ab, await this.read(bb))));
-        this.RX.set(bb, Ab), Ab.then(ab)
-      }))) && void 0 !== Ub ? Ub : () => {}
+    watch(zz, tz) {
+      var sz, Fz;
+      return null !== (sz = null === (Fz = this.signal) || void 0 === Fz ? void 0 : Fz.listen((sz => {
+        if (sz !== zz) return;
+        const Fz = this.load(zz).then((async tz => NU(tz, await this.read(zz))));
+        this.Ow.set(zz, Fz), Fz.then(tz)
+      }))) && void 0 !== sz ? sz : () => {}
     }
-    list(bb) {
-      return this.load(bb)
+    list(zz) {
+      return this.load(zz)
     }
-    async add(bb, ab, Ub) {
-      let Ab = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Date.now(),
-        Mb = arguments.length > 4 ? arguments[4] : void 0;
-      const Tb = (bb, Tb) => {
-          const Eb = Ye(bb, Tb),
-            Yb = Eb[Eb.length - 1];
-          if (Yb && function(bb, ab) {
-              const Ub = Object.keys(bb);
-              return Ub.length === Object.keys(ab).length && Ub.every((Ub => bb[Ub] === ab[Ub]))
-            }(Yb.files, Ub)) return Eb;
-          const Bb = Math.max(Ab, ...Eb.map((bb => bb.id + 1)));
-          return [...Eb, {
-            id: Bb,
-            at: Ab,
-            label: ab,
-            ...Mb ? {
-              did: Mb
+    async add(zz, tz, sz) {
+      let Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Date.now(),
+        Wz = arguments.length > 4 ? arguments[4] : void 0;
+      const Xz = (zz, Xz) => {
+          const Oz = NU(zz, Xz),
+            oz = Oz[Oz.length - 1];
+          if (oz && function(zz, tz) {
+              const sz = Object.keys(zz);
+              return sz.length === Object.keys(tz).length && sz.every((sz => zz[sz] === tz[sz]))
+            }(oz.files, sz)) return Oz;
+          const vz = Math.max(Fz, ...Oz.map((zz => zz.id + 1)));
+          return [...Oz, {
+            id: vz,
+            at: Fz,
+            label: tz,
+            ...Wz ? {
+              did: Wz
             } : {},
             files: {
-              ...Ub
+              ...sz
             }
           }].slice(-30)
         },
-        Eb = this.load(bb).then((async ab => this.save(bb, (bb => Tb(ab, bb)))));
-      this.RX.set(bb, Eb.then((bb => {
+        Oz = this.load(zz).then((async tz => this.save(zz, (zz => Xz(tz, zz)))));
+      this.Ow.set(zz, Oz.then((zz => {
         let {
-          snapshots: ab
-        } = bb;
-        return ab
+          snapshots: tz
+        } = zz;
+        return tz
       })));
       const {
-        snapshots: Yb,
-        isSaved: Bb
-      } = await Eb;
-      var eb;
-      Bb && (null === (eb = this.signal) || void 0 === eb || eb.post(bb));
-      return Yb
+        snapshots: oz,
+        isSaved: vz
+      } = await Oz;
+      var Uz;
+      vz && (null === (Uz = this.signal) || void 0 === Uz || Uz.post(zz));
+      return oz
     }
-    async relabel(bb, ab, Ub) {
-      const Ab = this.load(bb).then((async Ab => this.save(bb, (bb => Ye(Ab, bb).map((bb => bb.id === ab ? {
-        ...bb,
-        label: Ub
-      } : bb))))));
-      this.RX.set(bb, Ab.then((bb => {
+    async relabel(zz, tz, sz) {
+      const Fz = this.load(zz).then((async Fz => this.save(zz, (zz => NU(Fz, zz).map((zz => zz.id === tz ? {
+        ...zz,
+        label: sz
+      } : zz))))));
+      this.Ow.set(zz, Fz.then((zz => {
         let {
-          snapshots: ab
-        } = bb;
-        return ab
+          snapshots: tz
+        } = zz;
+        return tz
       })));
       const {
-        snapshots: Mb,
-        isSaved: Tb
-      } = await Ab;
-      var Eb;
-      Tb && (null === (Eb = this.signal) || void 0 === Eb || Eb.post(bb));
-      return Mb
+        snapshots: Wz,
+        isSaved: Xz
+      } = await Fz;
+      var Oz;
+      Xz && (null === (Oz = this.signal) || void 0 === Oz || Oz.post(zz));
+      return Wz
     }
-    async save(bb, ab) {
+    async save(zz, tz) {
       if (this.store.update) try {
         return {
-          snapshots: await this.store.update(this.storeKey(bb), (bb => ab(Ee(bb) ? bb : null))),
+          snapshots: await this.store.update(this.storeKey(zz), (zz => tz(uU(zz) ? zz : null))),
           isSaved: !0
         }
       } catch {}
-      const Ub = ab(await this.read(bb));
+      const sz = tz(await this.read(zz));
       return {
-        snapshots: Ub,
-        isSaved: await this.store.setItem(this.storeKey(bb), Ub).catch((() => !1))
+        snapshots: sz,
+        isSaved: await this.store.setItem(this.storeKey(zz), sz).catch((() => !1))
       }
     }
-    read(bb) {
-      return this.store.getItem(this.storeKey(bb)).then((bb => Ee(bb) ? bb : null)).catch((() => null))
+    read(zz) {
+      return this.store.getItem(this.storeKey(zz)).then((zz => uU(zz) ? zz : null)).catch((() => null))
     }
-    load(bb) {
-      let ab = this.RX.get(bb);
-      return ab || (ab = this.store.getItem(this.storeKey(bb)).then((bb => Ee(bb) ? bb : [])).catch((() => [])), this.RX.set(bb, ab)), ab
+    load(zz) {
+      let tz = this.Ow.get(zz);
+      return tz || (tz = this.store.getItem(this.storeKey(zz)).then((zz => uU(zz) ? zz : [])).catch((() => [])), this.Ow.set(zz, tz)), tz
     }
-    storeKey(bb) {
-      return `worldCodeAiHistory:${bb}`
+    storeKey(zz) {
+      return `worldCodeAiHistory:${zz}`
     }
-  }(YL, Te("bloxd-worldCodeAiHistory")),
-  eL = new class {
-    constructor(bb, ab) {
-      this.store = bb, this.signal = ab, this.RX = new Map
+  }(Nu, KU("bloxd-worldCodeAiHistory")),
+  wu = new class {
+    constructor(zz, tz) {
+      this.store = zz, this.signal = tz, this.Ow = new Map
     }
-    watch(bb, ab) {
-      var Ub, Ab;
-      return null !== (Ub = null === (Ab = this.signal) || void 0 === Ab ? void 0 : Ab.listen((Ub => {
-        if (Ub !== bb) return;
-        const Ab = this.load(bb).then((async ab => {
-          var Ub;
-          return null !== (Ub = await this.read(bb)) && void 0 !== Ub ? Ub : ab
+    watch(zz, tz) {
+      var sz, Fz;
+      return null !== (sz = null === (Fz = this.signal) || void 0 === Fz ? void 0 : Fz.listen((sz => {
+        if (sz !== zz) return;
+        const Fz = this.load(zz).then((async tz => {
+          var sz;
+          return null !== (sz = await this.read(zz)) && void 0 !== sz ? sz : tz
         }));
-        this.RX.set(bb, Ab), Ab.then(ab)
-      }))) && void 0 !== Ub ? Ub : () => {}
+        this.Ow.set(zz, Fz), Fz.then(tz)
+      }))) && void 0 !== sz ? sz : () => {}
     }
-    list(bb) {
-      return this.load(bb)
+    list(zz) {
+      return this.load(zz)
     }
-    add(bb, ab) {
-      return this.update(bb, (bb => bb.includes(ab) || bb.length >= 8 ? bb : [...bb, ab]))
+    add(zz, tz) {
+      return this.update(zz, (zz => zz.includes(tz) || zz.length >= 8 ? zz : [...zz, tz]))
     }
-    remove(bb, ab) {
-      return this.update(bb, (bb => bb.filter((bb => bb !== ab))))
+    remove(zz, tz) {
+      return this.update(zz, (zz => zz.filter((zz => zz !== tz))))
     }
-    async update(bb, ab) {
-      var Ub;
-      const Ab = this.load(bb).then((async Ub => {
-        var Ab;
+    async update(zz, tz) {
+      var sz;
+      const Fz = this.load(zz).then((async sz => {
+        var Fz;
         if (this.store.update) try {
-          return await this.store.update(this.storeKey(bb), (bb => ab(Ea(bb) ? bb.slice(0, 8) : Ub)))
+          return await this.store.update(this.storeKey(zz), (zz => tz(Ot(zz) ? zz.slice(0, 8) : sz)))
         } catch {}
-        const Mb = ab(null !== (Ab = await this.read(bb)) && void 0 !== Ab ? Ab : Ub);
-        return await this.store.setItem(this.storeKey(bb), Mb).catch((() => !1)), Mb
+        const Wz = tz(null !== (Fz = await this.read(zz)) && void 0 !== Fz ? Fz : sz);
+        return await this.store.setItem(this.storeKey(zz), Wz).catch((() => !1)), Wz
       }));
-      this.RX.set(bb, Ab);
-      const Mb = await Ab;
-      return null === (Ub = this.signal) || void 0 === Ub || Ub.post(bb), Mb
+      this.Ow.set(zz, Fz);
+      const Wz = await Fz;
+      return null === (sz = this.signal) || void 0 === sz || sz.post(zz), Wz
     }
-    read(bb) {
-      return this.store.getItem(this.storeKey(bb)).then((bb => Ea(bb) ? bb.slice(0, 8) : null)).catch((() => null))
+    read(zz) {
+      return this.store.getItem(this.storeKey(zz)).then((zz => Ot(zz) ? zz.slice(0, 8) : null)).catch((() => null))
     }
-    load(bb) {
-      let ab = this.RX.get(bb);
-      return ab || (ab = this.read(bb).then((bb => null !== bb && void 0 !== bb ? bb : [])), this.RX.set(bb, ab)), ab
+    load(zz) {
+      let tz = this.Ow.get(zz);
+      return tz || (tz = this.read(zz).then((zz => null !== zz && void 0 !== zz ? zz : [])), this.Ow.set(zz, tz)), tz
     }
-    storeKey(bb) {
-      return `worldCodeAiNotes:${bb}`
+    storeKey(zz) {
+      return `worldCodeAiNotes:${zz}`
     }
-  }(YL, Te("bloxd-worldCodeAiNotes"));
-const vL = ["Next in line", "2nd in line", "3rd in line"];
-let LL = null;
+  }(Nu, KU("bloxd-worldCodeAiNotes"));
+const Du = ["Next in line", "2nd in line", "3rd in line"];
+let gu = null;
 
-function PL() {
-  if (!LL) {
-    var bb, ab, Ub, Ab;
-    const Mb = bb => Xb.d.find((ab => ab.id === bb)),
-      Tb = bb => {
-        var ab, Ub;
-        return null !== (ab = null === (Ub = Mb(bb)) || void 0 === Ub ? void 0 : Ub.content) && void 0 !== ab ? ab : ""
+function Hu() {
+  if (!gu) {
+    var zz, tz, sz, Fz;
+    const Wz = zz => bz.d.find((tz => tz.id === zz)),
+      Xz = zz => {
+        var tz, sz;
+        return null !== (tz = null === (sz = Wz(zz)) || void 0 === sz ? void 0 : sz.content) && void 0 !== tz ? tz : ""
       };
-    LL = new cY({
-      apiReference: Tb("apiReference"),
-      callbacks: Tb("callbacks"),
-      clientOptions: Tb("clientOptions"),
-      snippets: Tb("snippets"),
-      howTo: Tb("howTo"),
-      itemNames: null !== (bb = null === (ab = Mb("itemNames")) || void 0 === ab ? void 0 : ab.raw) && void 0 !== bb ? bb : "",
-      blockNames: null !== (Ub = null === (Ab = Mb("blockNames")) || void 0 === Ab ? void 0 : Ab.raw) && void 0 !== Ub ? Ub : "",
-      mobSettings: Tb("mobSettings")
+    gu = new tv({
+      apiReference: Xz("apiReference"),
+      callbacks: Xz("callbacks"),
+      clientOptions: Xz("clientOptions"),
+      snippets: Xz("snippets"),
+      howTo: Xz("howTo"),
+      itemNames: null !== (zz = null === (tz = Wz("itemNames")) || void 0 === tz ? void 0 : tz.raw) && void 0 !== zz ? zz : "",
+      blockNames: null !== (sz = null === (Fz = Wz("blockNames")) || void 0 === Fz ? void 0 : Fz.raw) && void 0 !== sz ? sz : "",
+      mobSettings: Xz("mobSettings")
     })
   }
-  return LL
+  return gu
 }
-const XL = ["Welcome players when they join", "Give everyone a sword when they join", "Make a /spawn command", "Show a timer on the screen"],
-  jL = ["Give me a diamond sword", "Teleport me onto this block", "Make me jump really high", "Tell everyone I clicked it"],
-  RL = ["Explain these changes", "Make it simpler"],
-  kL = ["Make the change"],
-  yL = ["Explain how it works", "Add a sound or effect", "Make it harder to play"],
-  ZL = ["It didn't work: nothing happened in my world.", "It didn't work: an error showed up.", "It didn't work: it did something different from what I asked."];
+const Bu = ["Welcome players when they join", "Give everyone a sword when they join", "Make a /spawn command", "Show a timer on the screen"],
+  Pu = ["Give me a diamond sword", "Teleport me onto this block", "Make me jump really high", "Tell everyone I clicked it"],
+  ru = ["Explain these changes", "Make it simpler"],
+  Yu = ["Make the change"],
+  xu = ["Explain how it works", "Add a sound or effect", "Make it harder to play"],
+  mu = ["It didn't work: nothing happened in my world.", "It didn't work: an error showed up.", "It didn't work: it did something different from what I asked."];
 
-function DL(bb) {
+function Ju(zz) {
   let {
-    requests: ab,
-    onPick: Ub
-  } = bb;
-  const Mb = (0, Ab.useRef)(null);
-  var Tb;
-  return Tb = Mb, (0, Ab.useLayoutEffect)((() => {
-    const bb = Tb.current,
-      ab = null === bb || void 0 === bb ? void 0 : bb.closest(".WorldCodeAiMessages");
-    if (!bb || !ab) return;
-    const Ub = () => {
-      const Ub = ab.getBoundingClientRect().bottom;
-      for (const ab of Array.from(bb.children)) {
-        const bb = ab.getBoundingClientRect();
-        ab.style.visibility = bb.top < Ub && bb.bottom > Ub + 1 ? "hidden" : ""
+    requests: tz,
+    onPick: sz
+  } = zz;
+  const Wz = (0, Fz.useRef)(null);
+  var Xz;
+  return Xz = Wz, (0, Fz.useLayoutEffect)((() => {
+    const zz = Xz.current,
+      tz = null === zz || void 0 === zz ? void 0 : zz.closest(".WorldCodeAiMessages");
+    if (!zz || !tz) return;
+    const sz = () => {
+      const sz = tz.getBoundingClientRect().bottom;
+      for (const tz of Array.from(zz.children)) {
+        const zz = tz.getBoundingClientRect();
+        tz.style.visibility = zz.top < sz && zz.bottom > sz + 1 ? "hidden" : ""
       }
     };
-    Ub(), ab.addEventListener("scroll", Ub, {
+    sz(), tz.addEventListener("scroll", sz, {
       passive: !0
     });
-    const Ab = "function" === typeof ResizeObserver ? new ResizeObserver(Ub) : null;
-    return null === Ab || void 0 === Ab || Ab.observe(ab), null === Ab || void 0 === Ab || Ab.observe(bb), () => {
-      ab.removeEventListener("scroll", Ub), null === Ab || void 0 === Ab || Ab.disconnect()
+    const Fz = "function" === typeof ResizeObserver ? new ResizeObserver(sz) : null;
+    return null === Fz || void 0 === Fz || Fz.observe(tz), null === Fz || void 0 === Fz || Fz.observe(zz), () => {
+      tz.removeEventListener("scroll", sz), null === Fz || void 0 === Fz || Fz.disconnect()
     }
-  }), [Tb]), (0, Eb.jsx)("div", {
-    ref: Mb,
+  }), [Xz]), (0, Oz.jsx)("div", {
+    ref: Wz,
     className: "WorldCodeAiChips WorldCodeAiFollowUps",
-    children: ab.map((bb => (0, Ab.createElement)("button", {
-      ...jB.g,
-      key: bb,
+    children: tz.map((zz => (0, Fz.createElement)("button", {
+      ...Pv.f,
+      key: zz,
       className: "WorldCodeAiChip",
       onClick: () => {
-        Ub(bb)
+        sz(zz)
       }
-    }, function(bb) {
-      const ab = bb.replace(/^It didn't work: /, "").replace(/\.$/, "");
-      return ab.charAt(0).toUpperCase() + ab.slice(1)
-    }(bb))))
+    }, function(zz) {
+      const tz = zz.replace(/^It didn't work: /, "").replace(/\.$/, "");
+      return tz.charAt(0).toUpperCase() + tz.slice(1)
+    }(zz))))
   })
 }
 
-function zL(bb) {
+function Iu(zz) {
   let {
-    useFree: ab,
-    retryOf: Ub,
-    isAutoFix: Ab,
-    lookupOf: Mb
-  } = bb;
-  return !0 !== ab && (void 0 !== Ub || !0 !== Ab && void 0 === Mb)
+    useFree: tz,
+    retryOf: sz,
+    isAutoFix: Fz,
+    lookupOf: Wz
+  } = zz;
+  return !0 !== tz && (void 0 !== sz || !0 !== Fz && void 0 === Wz)
 }
 
-function xL() {
+function Cu() {
   return "The world's blocks can't be seen from here."
 }
 
-function iL() {
+function eu() {
   return "The world can't be seen from here."
 }
-const fL = "Try the missing change again",
-  mL = 1e4,
-  pL = "I can only help with your game's code. Try asking about something in your world.";
+const Zu = "Try the missing change again",
+  Gu = 1e4,
+  Tu = "I can only help with your game's code. Try asking about something in your world.";
 
-function NL(bb) {
-  return bb ? "Apply this change first, then press Switch to World Code." : "Apply this change first, then ask me again to go to World Code."
+function cu(zz) {
+  return zz ? "Apply this change first, then press Switch to World Code." : "Apply this change first, then ask me again to go to World Code."
 }
-const WL = 1500;
+const ju = 1500;
 
-function HL(bb, ab) {
-  var Ub;
-  return Object.entries(null !== (Ub = bb.leftFiles) && void 0 !== Ub ? Ub : {}).every((bb => {
-    var Ub;
-    let [Ab, Mb] = bb;
-    return (null !== (Ub = ab[Ab]) && void 0 !== Ub ? Ub : "") === Mb
+function Au(zz, tz) {
+  var sz;
+  return Object.entries(null !== (sz = zz.leftFiles) && void 0 !== sz ? sz : {}).every((zz => {
+    var sz;
+    let [Fz, Wz] = zz;
+    return (null !== (sz = tz[Fz]) && void 0 !== sz ? sz : "") === Wz
   }))
 }
-const IL = "Check your code: go through my request part by part and play it in your head as each player, from the start: what do they see and when, and what happens the first time, the last time, and with things that shouldn't count? Only something that stops my request working is wrong: keep everything else as it is (numbers, starting values, how it works) and add no new rules or limits. If anything is wrong, send the fixed file, after playing the normal case through once more with your change. If it's all right, say in one sentence that you played it through and found no mistakes, that they should still try it in their world because you can miss things, and send no file.";
+const yu = "Check your code: go through my request part by part and play it in your head as each player, from the start: what do they see and when, and what happens the first time, the last time, and with things that shouldn't count? Only something that stops my request working is wrong: keep everything else as it is (numbers, starting values, how it works) and add no new rules or limits. If anything is wrong, send the fixed file, after playing the normal case through once more with your change. If it's all right, say in one sentence that you played it through and found no mistakes, that they should still try it in their world because you can miss things, and send no file.";
 
-function dL(bb) {
-  var ab, Ub, Mb, Bb, eb, vb, Lb, Pb;
+function Mu(zz) {
+  var tz, sz, Wz, vz, Uz, Kz, uz, Nz;
   let {
-    entry: Xb,
-    isOutOfDate: jb = !1,
-    canEdit: Rb,
-    onApply: kb,
-    onUndo: yb,
-    onTryIt: Zb,
-    isLatest: Db,
-    canUndo: zb,
-    onFixWarnings: xb,
-    onCheck: ib,
-    busy: fb,
-    checkPicked: mb,
-    onPickedChange: pb,
-    request: Nb,
-    elsewhere: Wb,
-    defaultOpen: Hb
-  } = bb;
-  const Ib = "offered" === Xb.status && jb ? "stale" : Xb.status,
-    [db, Fb] = (0, Ab.useState)(Hb),
-    [hb, Gb] = (0, Ab.useState)(!1),
-    Qb = null !== (ab = Xb.warnings) && void 0 !== ab ? ab : [],
-    qb = Db && ("offered" === Ib || "applied" === Ib) && Rb && Qb.length > 0 && !Xb.warningsSentBack,
-    ub = "applied" === Ib,
-    rb = null !== (Ub = null === (Mb = Xb.swappedTo) || void 0 === Mb ? void 0 : Mb[0]) && void 0 !== Ub ? Ub : qb ? null !== (Bb = null === (eb = /"([^"]+)"/.exec(Qb[0])) || void 0 === eb ? void 0 : eb[1]) && void 0 !== Bb ? Bb : null === (vb = /^api\.[\w$]+/.exec(Qb[0])) || void 0 === vb ? void 0 : vb[0] : void 0,
-    Kb = Qb.every((bb => /never true|no block is ever called that/.test(bb))),
-    ob = (0, Ab.useMemo)((() => {
-      var bb;
-      const [ab] = Xb.changes;
-      return new Map((null !== (bb = Xb.warnings) && void 0 !== bb ? bb : []).map((bb => [bb, 1 === Xb.changes.length && ab ? cv(bb, ab) : void 0])))
-    }), [Xb.warnings, Xb.changes]),
-    lb = 1 === Qb.length ? ob.get(Qb[0]) : void 0,
-    [tb, wb] = (0, Ab.useState)(new Set),
-    sb = tb.size > 0;
-  (0, Ab.useEffect)((() => {
-    null === pb || void 0 === pb || pb(sb)
-  }), [sb, pb]), (0, Ab.useEffect)((() => {
-    wb((bb => 0 === bb.size ? bb : new Set))
-  }), [Xb.changes]);
-  const gb = "offered" === Ib && Rb && Xb.id >= 0,
-    Cb = (0, Ab.useMemo)((() => new Map(Xb.changes.map((bb => [bb.path, bv(bb, Nb)])))), [Xb.changes, Nb]),
-    Vb = [...Cb.values()].reduce(((bb, ab) => bb + ab.length), 0),
-    Ob = gb && Vb >= 2,
-    [cb, Jb] = (0, Ab.useState)(!1),
-    nb = "applied" === Ib && Vb >= 2,
-    Sb = Vb - tb.size,
-    ba = (0, Ab.useMemo)((() => {
-      if (0 !== tb.size) return Xb.changes.flatMap((bb => {
-        var ab;
-        const Ub = new Set((null !== (ab = Cb.get(bb.path)) && void 0 !== ab ? ab : []).filter((ab => !tb.has(`${bb.path}:${ab.index}`))).map((bb => bb.index))),
-          Ab = function(bb, ab) {
-            const Ub = we(bb.before, bb.after),
-              Ab = Ub.flatMap((bb => "same" === bb.kind ? [bb.text] : ab.has(bb.index) ? bb.added : bb.removed));
-            if (0 === Ab.length) return "";
-            const Mb = (Ub.every((bb => "same" === bb.kind || ab.has(bb.index))) ? bb.after : bb.before).endsWith("\n") ? "\n" : "";
-            return `${Ab.join("\n")}${Mb}`
-          }(bb, Ub);
-        return Ab === bb.before ? [] : [{
-          ...bb,
-          after: Ab
+    entry: bz,
+    isOutOfDate: wz = !1,
+    canEdit: Dz,
+    onApply: gz,
+    onUndo: Hz,
+    onTryIt: Bz,
+    isLatest: Pz,
+    canUndo: rz,
+    onFixWarnings: Yz,
+    onCheck: xz,
+    busy: mz,
+    checkPicked: Jz,
+    onPickedChange: Iz,
+    request: Cz,
+    elsewhere: ez,
+    defaultOpen: Zz
+  } = zz;
+  const Gz = "offered" === bz.status && wz ? "stale" : bz.status,
+    [Tz, cz] = (0, Fz.useState)(Zz),
+    [jz, Az] = (0, Fz.useState)(!1),
+    yz = null !== (tz = bz.warnings) && void 0 !== tz ? tz : [],
+    Mz = Pz && ("offered" === Gz || "applied" === Gz) && Dz && yz.length > 0 && !bz.warningsSentBack,
+    dz = "applied" === Gz,
+    hz = null !== (sz = null === (Wz = bz.swappedTo) || void 0 === Wz ? void 0 : Wz[0]) && void 0 !== sz ? sz : Mz ? null !== (vz = null === (Uz = /"([^"]+)"/.exec(yz[0])) || void 0 === Uz ? void 0 : Uz[1]) && void 0 !== vz ? vz : null === (Kz = /^api\.[\w$]+/.exec(yz[0])) || void 0 === Kz ? void 0 : Kz[0] : void 0,
+    Qz = yz.every((zz => /never true|no block is ever called that/.test(zz))),
+    kz = (0, Fz.useMemo)((() => {
+      var zz;
+      const [tz] = bz.changes;
+      return new Map((null !== (zz = bz.warnings) && void 0 !== zz ? zz : []).map((zz => [zz, 1 === bz.changes.length && tz ? tu(zz, tz) : void 0])))
+    }), [bz.warnings, bz.changes]),
+    iz = 1 === yz.length ? kz.get(yz[0]) : void 0,
+    [Lz, lz] = (0, Fz.useState)(new Set),
+    nz = Lz.size > 0;
+  (0, Fz.useEffect)((() => {
+    null === Iz || void 0 === Iz || Iz(nz)
+  }), [nz, Iz]), (0, Fz.useEffect)((() => {
+    lz((zz => 0 === zz.size ? zz : new Set))
+  }), [bz.changes]);
+  const az = "offered" === Gz && Dz && bz.id >= 0,
+    qz = (0, Fz.useMemo)((() => new Map(bz.changes.map((zz => [zz.path, XK(zz, Cz)])))), [bz.changes, Cz]),
+    Sz = [...qz.values()].reduce(((zz, tz) => zz + tz.length), 0),
+    Vz = az && Sz >= 2,
+    [Rz, pz] = (0, Fz.useState)(!1),
+    fz = "applied" === Gz && Sz >= 2,
+    Ez = Sz - Lz.size,
+    zt = (0, Fz.useMemo)((() => {
+      if (0 !== Lz.size) return bz.changes.flatMap((zz => {
+        var tz;
+        const sz = new Set((null !== (tz = qz.get(zz.path)) && void 0 !== tz ? tz : []).filter((tz => !Lz.has(`${zz.path}:${tz.index}`))).map((zz => zz.index))),
+          Fz = function(zz, tz) {
+            const sz = VU(zz.before, zz.after),
+              Fz = sz.flatMap((zz => "same" === zz.kind ? [zz.text] : tz.has(zz.index) ? zz.added : zz.removed));
+            if (0 === Fz.length) return "";
+            const Wz = (sz.every((zz => "same" === zz.kind || tz.has(zz.index))) ? zz.after : zz.before).endsWith("\n") ? "\n" : "";
+            return `${Fz.join("\n")}${Wz}`
+          }(zz, sz);
+        return Fz === zz.before ? [] : [{
+          ...zz,
+          after: Fz
         }]
       }))
-    }), [Xb.changes, Cb, tb]),
-    aa = (0, Ab.useMemo)((() => ba && mb ? mb(ba) : []), [ba, mb]);
-  (0, Ab.useEffect)((() => {
-    "applied" === Ib && Fb(!1)
-  }), [Ib]);
-  const Ua = !!Xb.editedInPlace;
-  (0, Ab.useEffect)((() => {
-    Ua || "offered" !== Xb.status || Fb(!0)
-  }), [Ua, Xb.status]);
-  const Aa = Xb.changes.map((bb => bb.path)).join(", "),
-    Ma = !Ua || qb || aa.length > 0 || "undone" === Ib || "stale" === Ib;
-  return (0, Eb.jsxs)("div", {
+    }), [bz.changes, qz, Lz]),
+    tt = (0, Fz.useMemo)((() => zt && Jz ? Jz(zt) : []), [zt, Jz]);
+  (0, Fz.useEffect)((() => {
+    "applied" === Gz && cz(!1)
+  }), [Gz]);
+  const st = !!bz.editedInPlace;
+  (0, Fz.useEffect)((() => {
+    st || "offered" !== bz.status || cz(!0)
+  }), [st, bz.status]);
+  const Ft = bz.changes.map((zz => zz.path)).join(", "),
+    Wt = !st || Mz || tt.length > 0 || "undone" === Gz || "stale" === Gz;
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiToolCard",
-    children: [(0, Eb.jsx)(Yb, {
+    children: [(0, Oz.jsx)(oz, {
       className: "WorldCodeAiChangeLog",
-      title: Ua ? `Editing code: ${Aa}` : `Code change: ${Aa}`,
+      title: st ? `Editing code: ${Ft}` : `Code change: ${Ft}`,
       isCalm: !0,
-      isElsewhere: !!Wb,
-      isOpen: db,
-      onToggle: Fb,
-      children: (0, Eb.jsx)("div", {
+      isElsewhere: !!ez,
+      isOpen: Tz,
+      onToggle: cz,
+      children: (0, Oz.jsx)("div", {
         className: "WorldCodeAiChanges",
-        children: Xb.changes.map((bb => {
-          var ab, Ub;
+        children: bz.changes.map((zz => {
+          var tz, sz;
           const {
-            added: Ab,
-            removed: Mb
-          } = function(bb) {
-            let ab = 0,
-              Ub = 0;
-            for (const Ab of CA(bb.before, bb.after)) "added" === Ab.kind ? ab++ : "removed" === Ab.kind && Ub++;
+            added: Fz,
+            removed: Wz
+          } = function(zz) {
+            let tz = 0,
+              sz = 0;
+            for (const Fz of RF(zz.before, zz.after)) "added" === Fz.kind ? tz++ : "removed" === Fz.kind && sz++;
             return {
-              added: ab,
-              removed: Ub
+              added: tz,
+              removed: sz
             }
-          }(ba ? null !== (ab = ba.find((ab => ab.path === bb.path))) && void 0 !== ab ? ab : {
-            ...bb,
-            after: bb.before
-          } : bb), Tb = null !== (Ub = Cb.get(bb.path)) && void 0 !== Ub ? Ub : [], Yb = "offered" !== Ib && "applied" !== Ib || "" === bb.before ? [] : function(bb, ab) {
-            const Ub = Ie(ab);
-            return [...Ie(bb)].filter((bb => !Ub.has(bb)))
-          }(bb.before, bb.after);
-          return (0, Eb.jsxs)("div", {
+          }(zt ? null !== (tz = zt.find((tz => tz.path === zz.path))) && void 0 !== tz ? tz : {
+            ...zz,
+            after: zz.before
+          } : zz), Xz = null !== (sz = qz.get(zz.path)) && void 0 !== sz ? sz : [], oz = "offered" !== Gz && "applied" !== Gz || "" === zz.before ? [] : function(zz, tz) {
+            const sz = yU(tz);
+            return [...yU(zz)].filter((zz => !sz.has(zz)))
+          }(zz.before, zz.after);
+          return (0, Oz.jsxs)("div", {
             className: "WorldCodeAiChange",
-            children: [(0, Eb.jsxs)("div", {
+            children: [(0, Oz.jsxs)("div", {
               className: "WorldCodeAiChangeHeader",
-              children: [(0, Eb.jsx)("span", {
+              children: [(0, Oz.jsx)("span", {
                 className: "WorldCodeAiChangePath",
-                children: bb.path
-              }), Ab > 0 && (0, Eb.jsx)("span", {
+                children: zz.path
+              }), Fz > 0 && (0, Oz.jsx)("span", {
                 className: "WorldCodeAiAdded",
-                children: 1 === Ab ? "1 line added" : `${Ab} lines added`
-              }), Mb > 0 && (0, Eb.jsxs)("span", {
+                children: 1 === Fz ? "1 line added" : `${Fz} lines added`
+              }), Wz > 0 && (0, Oz.jsxs)("span", {
                 className: "WorldCodeAiRemoved",
-                children: [Mb, " removed"]
+                children: [Wz, " removed"]
               })]
-            }), Ob && (0, Eb.jsx)("ul", {
+            }), Vz && (0, Oz.jsx)("ul", {
               className: "WorldCodeAiHunks",
-              children: Tb.map((ab => {
-                const Ub = `${bb.path}:${ab.index}`,
-                  Ab = [ab.added.length > 0 ? `+${ab.added.length}` : "", ab.removed.length > 0 ? `\u2212${ab.removed.length}` : ""].filter(Boolean).join(" "),
-                  Mb = [ab.added.length > 0 ? `${ab.added.length} ${1===ab.added.length?"line":"lines"} added` : "", ab.removed.length > 0 ? `${ab.removed.length} taken out` : ""].filter(Boolean).join(", ");
-                return (0, Eb.jsx)("li", {
-                  children: (0, Eb.jsxs)("label", {
-                    children: [(0, Eb.jsx)("input", {
+              children: Xz.map((tz => {
+                const sz = `${zz.path}:${tz.index}`,
+                  Fz = [tz.added.length > 0 ? `+${tz.added.length}` : "", tz.removed.length > 0 ? `\u2212${tz.removed.length}` : ""].filter(Boolean).join(" "),
+                  Wz = [tz.added.length > 0 ? `${tz.added.length} ${1===tz.added.length?"line":"lines"} added` : "", tz.removed.length > 0 ? `${tz.removed.length} taken out` : ""].filter(Boolean).join(", ");
+                return (0, Oz.jsx)("li", {
+                  children: (0, Oz.jsxs)("label", {
+                    children: [(0, Oz.jsx)("input", {
                       type: "checkbox",
-                      checked: !tb.has(Ub),
-                      onChange: bb => {
-                        const ab = new Set(tb);
-                        bb.target.checked ? ab.delete(Ub) : ab.add(Ub), wb(ab)
+                      checked: !Lz.has(sz),
+                      onChange: zz => {
+                        const tz = new Set(Lz);
+                        zz.target.checked ? tz.delete(sz) : tz.add(sz), lz(tz)
                       }
-                    }), (0, Eb.jsxs)("span", {
-                      children: [ab.also && (0, Eb.jsx)("span", {
+                    }), (0, Oz.jsxs)("span", {
+                      children: [tz.also && (0, Oz.jsx)("span", {
                         className: "WorldCodeAiHunkAlso",
                         title: "You didn't ask for this. Untick it to leave it out.",
-                        children: "adds" === ab.also ? "Also adds" : "changes" === ab.also ? "Also changes" : "Also takes out"
-                      }), ab.label, ab.codeNames.length > 0 && (0, Eb.jsx)("code", {
+                        children: "adds" === tz.also ? "Also adds" : "changes" === tz.also ? "Also changes" : "Also takes out"
+                      }), tz.label, tz.codeNames.length > 0 && (0, Oz.jsx)("code", {
                         className: "WorldCodeAiHunkCode",
-                        children: ab.codeNames.join(", ")
-                      }), ab.detail && (0, Eb.jsx)("span", {
+                        children: tz.codeNames.join(", ")
+                      }), tz.detail && (0, Oz.jsx)("span", {
                         className: "WorldCodeAiHunkDetail",
-                        children: ab.detail
+                        children: tz.detail
                       })]
-                    }), (0, Eb.jsx)("span", {
+                    }), (0, Oz.jsx)("span", {
                       className: "WorldCodeAiHunkCount",
-                      title: Mb,
-                      "aria-label": Mb,
-                      children: `${Ab} ${ab.added.length+ab.removed.length===1?"line":"lines"}`
+                      title: Wz,
+                      "aria-label": Wz,
+                      children: `${Fz} ${tz.added.length+tz.removed.length===1?"line":"lines"}`
                     })]
                   })
-                }, Ub)
+                }, sz)
               }))
-            }), Ob && (Tb.some((bb => void 0 !== bb.also)) ? (0, Eb.jsx)("p", {
+            }), Vz && (Xz.some((zz => void 0 !== zz.also)) ? (0, Oz.jsx)("p", {
               className: "WorldCodeAiHint WorldCodeAiHunksHint",
               children: 'You didn\'t ask for the parts marked "Also". Untick one to leave it out.'
-            }) : Tb.some((bb => bb.takesOut.length > 0 || 0 === bb.added.length)) && (0, Eb.jsx)("p", {
+            }) : Xz.some((zz => zz.takesOut.length > 0 || 0 === zz.added.length)) && (0, Oz.jsx)("p", {
               className: "WorldCodeAiHint WorldCodeAiHunksHint",
               children: "Untick a part to keep that bit of your code as it is."
-            })), nb && Tb.length >= 2 && (0, Eb.jsx)("button", {
+            })), fz && Xz.length >= 2 && (0, Oz.jsx)("button", {
               className: "WorldCodeAiLinkButton WorldCodeAiPartsToggle",
               onClick: () => {
-                Jb(!cb)
+                pz(!Rz)
               },
-              children: cb ? `Hide the ${Tb.length} parts` : `Show the ${Tb.length} parts that went in`
-            }), nb && cb && (0, Eb.jsx)("ul", {
+              children: Rz ? `Hide the ${Xz.length} parts` : `Show the ${Xz.length} parts that went in`
+            }), fz && Rz && (0, Oz.jsx)("ul", {
               className: "WorldCodeAiHunks WorldCodeAiHunks-done",
-              children: Tb.map((ab => (0, Eb.jsx)("li", {
-                children: (0, Eb.jsxs)("span", {
-                  children: [ab.label, ab.codeNames.length > 0 && (0, Eb.jsx)("code", {
+              children: Xz.map((tz => (0, Oz.jsx)("li", {
+                children: (0, Oz.jsxs)("span", {
+                  children: [tz.label, tz.codeNames.length > 0 && (0, Oz.jsx)("code", {
                     className: "WorldCodeAiHunkCode",
-                    children: ab.codeNames.join(", ")
-                  }), ab.detail && (0, Eb.jsx)("span", {
+                    children: tz.codeNames.join(", ")
+                  }), tz.detail && (0, Oz.jsx)("span", {
                     className: "WorldCodeAiHunkDetail",
-                    children: ab.detail
+                    children: tz.detail
                   })]
                 })
-              }, `${bb.path}:${ab.index}`)))
-            }), bb.why && !Ob && !(nb && cb) && (0, Eb.jsx)("ul", {
+              }, `${zz.path}:${tz.index}`)))
+            }), zz.why && !Vz && !(fz && Rz) && (0, Oz.jsx)("ul", {
               className: "WorldCodeAiChangeWhy",
-              children: bb.why.map((bb => (0, Eb.jsx)("li", {
-                children: bb.charAt(0).toUpperCase() + bb.slice(1)
-              }, bb)))
-            }), Yb.length > 0 && !(Ob && Yb.every((bb => Tb.some((ab => ab.takesOut.includes(bb)))))) && (0, Eb.jsxs)("p", {
+              children: zz.why.map((zz => (0, Oz.jsx)("li", {
+                children: zz.charAt(0).toUpperCase() + zz.slice(1)
+              }, zz)))
+            }), oz.length > 0 && !(Vz && oz.every((zz => Xz.some((tz => tz.takesOut.includes(zz)))))) && (0, Oz.jsxs)("p", {
               className: "WorldCodeAiChangeTakenOut",
-              children: ["applied" === Ib ? "It took out " : "It also takes out ", Yb.slice(0, 6).map((bb => {
-                var ab;
-                const Ub = null !== (ab = ue(bb)) && void 0 !== ab ? ab : ce(bb);
-                return Ub.charAt(0).toLowerCase() + Ub.slice(1)
-              })).join(", "), Yb.length > 6 ? ` and ${Yb.length-6} more` : "", ".", " ", (0, Eb.jsx)("code", {
+              children: ["applied" === Gz ? "It took out " : "It also takes out ", oz.slice(0, 6).map((zz => {
+                var tz;
+                const sz = null !== (tz = LU(zz)) && void 0 !== tz ? tz : tK(zz);
+                return sz.charAt(0).toLowerCase() + sz.slice(1)
+              })).join(", "), oz.length > 6 ? ` and ${oz.length-6} more` : "", ".", " ", (0, Oz.jsx)("code", {
                 className: "WorldCodeAiHunkCode",
-                children: Yb.slice(0, 6).join(", ")
+                children: oz.slice(0, 6).join(", ")
               })]
-            }), (0, Eb.jsx)(Me, {
-              change: bb,
-              marked: rb
+            }), (0, Oz.jsx)(UU, {
+              change: zz,
+              marked: hz
             })]
-          }, bb.path)
+          }, zz.path)
         }))
       })
-    }), Ma && (0, Eb.jsxs)("div", {
-      className: Tb()("WorldCodeAiChangeActions", Db && "WorldCodeAiChangeActions-sticky"),
-      children: [aa.length > 0 && (0, Eb.jsxs)("div", {
+    }), Wt && (0, Oz.jsxs)("div", {
+      className: Xz()("WorldCodeAiChangeActions", Pz && "WorldCodeAiChangeActions-sticky"),
+      children: [tt.length > 0 && (0, Oz.jsxs)("div", {
         className: "WorldCodeAiWarning",
-        children: [(0, Eb.jsx)("p", {
+        children: [(0, Oz.jsx)("p", {
           className: "WorldCodeAiWarningTitle",
           children: "Leaving that part out breaks this:"
-        }), (0, Eb.jsx)("p", {
-          children: aa[0]
+        }), (0, Oz.jsx)("p", {
+          children: tt[0]
         })]
-      }), qb && (0, Eb.jsxs)("div", {
+      }), Mz && (0, Oz.jsxs)("div", {
         className: "WorldCodeAiWarning",
-        children: [(0, Eb.jsx)("p", {
+        children: [(0, Oz.jsx)("p", {
           className: "WorldCodeAiWarningTitle",
-          children: Kb ? 1 === Qb.length ? `${lb?`Line ${lb.line}`:"This line"} ${ub?"will":"would"} never work:` : `${Qb.length} lines ${ub?"will":"would"} never work:` : 1 === Qb.length ? `${lb?`Line ${lb.line}`:"This line"} ${ub?"will":"would"} break:` : `${Qb.length} lines ${ub?"will":"would"} break:`
-        }), (hb ? Qb : Qb.slice(0, 1)).map((bb => {
-          const ab = ob.get(bb);
-          return (0, Eb.jsxs)(Ab.Fragment, {
-            children: [ab && !nv(bb) && (0, Eb.jsxs)("p", {
+          children: Qz ? 1 === yz.length ? `${iz?`Line ${iz.line}`:"This line"} ${dz?"will":"would"} never work:` : `${yz.length} lines ${dz?"will":"would"} never work:` : 1 === yz.length ? `${iz?`Line ${iz.line}`:"This line"} ${dz?"will":"would"} break:` : `${yz.length} lines ${dz?"will":"would"} break:`
+        }), (jz ? yz : yz.slice(0, 1)).map((zz => {
+          const tz = kz.get(zz);
+          return (0, Oz.jsxs)(Fz.Fragment, {
+            children: [tz && !Fu(zz) && (0, Oz.jsxs)("p", {
               className: "WorldCodeAiWarningWhere",
-              children: [Qb.length > 1 && `Line ${ab.line}: `, (0, Eb.jsx)("code", {
-                children: ab.text
+              children: [yz.length > 1 && `Line ${tz.line}: `, (0, Oz.jsx)("code", {
+                children: tz.text
               })]
-            }), (0, Eb.jsx)("p", {
-              children: !ab || 1 !== Qb.length && nv(bb) ? bb : Sv(bb)
+            }), (0, Oz.jsx)("p", {
+              children: !tz || 1 !== yz.length && Fu(zz) ? zz : Wu(zz)
             })]
-          }, bb)
-        })), !hb && Qb.length > 1 && (0, Eb.jsxs)("button", {
+          }, zz)
+        })), !jz && yz.length > 1 && (0, Oz.jsxs)("button", {
           className: "WorldCodeAiLinkButton",
           onClick: () => {
-            Gb(!0)
+            Az(!0)
           },
-          children: ["Show ", Qb.length - 1, " more"]
+          children: ["Show ", yz.length - 1, " more"]
         })]
-      }), qb && (0, Eb.jsx)("button", {
-        ...eB(null !== (Lb = Xb.warnings) && void 0 !== Lb ? Lb : []) ? {} : jB.g,
+      }), Mz && (0, Oz.jsx)("button", {
+        ...wv(null !== (uz = bz.warnings) && void 0 !== uz ? uz : []) ? {} : Pv.f,
         className: "WorldCodeAiPrimaryButton",
-        disabled: fb,
-        onClick: xb,
-        children: 1 === (null === (Pb = Xb.warnings) || void 0 === Pb ? void 0 : Pb.length) ? "Fix this line" : "Fix these lines"
-      }), "offered" === Ib && Rb && !Ua && (0, Eb.jsx)("button", {
-        className: qb ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
-        disabled: Ob && 0 === Sb || !!Wb && fb,
-        title: Wb && fb ? "You can apply it once the AI is done." : void 0,
+        disabled: mz,
+        onClick: Yz,
+        children: 1 === (null === (Nz = bz.warnings) || void 0 === Nz ? void 0 : Nz.length) ? "Fix this line" : "Fix these lines"
+      }), "offered" === Gz && Dz && !st && (0, Oz.jsx)("button", {
+        className: Mz ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
+        disabled: Vz && 0 === Ez || !!ez && mz,
+        title: ez && mz ? "You can apply it once the AI is done." : void 0,
         onClick: () => {
-          kb(ba)
+          gz(zt)
         },
-        children: Wb ? Wb.codeBlock ? "Apply in that code block" : "Apply in World Code" : Ob && Sb < Vb ? `Apply ${Sb} of ${Vb} changes` : qb ? "Apply anyway" : "Apply to my code"
-      }), "offered" === Ib && !Rb && (0, Eb.jsx)("span", {
+        children: ez ? ez.codeBlock ? "Apply in that code block" : "Apply in World Code" : Vz && Ez < Sz ? `Apply ${Ez} of ${Sz} changes` : Mz ? "Apply anyway" : "Apply to my code"
+      }), "offered" === Gz && !Dz && (0, Oz.jsx)("span", {
         className: "WorldCodeAiHint",
-        children: null !== Wb && void 0 !== Wb && Wb.codeBlock ? "You can't edit that code block." : "You can't edit this world's code."
-      }), "applied" === Ib && !Ua && (0, Eb.jsxs)("div", {
+        children: null !== ez && void 0 !== ez && ez.codeBlock ? "You can't edit that code block." : "You can't edit this world's code."
+      }), "applied" === Gz && !st && (0, Oz.jsxs)("div", {
         className: "WorldCodeAiAppliedRow",
-        children: [(0, Eb.jsx)("span", {
+        children: [(0, Oz.jsx)("span", {
           className: "WorldCodeAiAppliedNote",
           children: "Applied."
-        }), Db && (0, Eb.jsx)("button", {
+        }), Pz && (0, Oz.jsx)("button", {
           className: "WorldCodeAiPrimaryButton",
-          onClick: Zb,
+          onClick: Bz,
           children: "Try it in my world"
-        }), Db && (0, Eb.jsx)("button", {
-          ...jB.g,
+        }), Pz && (0, Oz.jsx)("button", {
+          ...Pv.f,
           className: "WorldCodeAiSecondaryButton",
-          disabled: fb,
-          onClick: ib,
+          disabled: mz,
+          onClick: xz,
           children: "Check for mistakes"
-        }), zb && (0, Eb.jsx)("button", {
+        }), rz && (0, Oz.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiUndoButton",
-          onClick: yb,
+          onClick: Hz,
           children: "Undo"
         })]
-      }), "applied" === Ib && !Ua && !zb && !Wb && (0, Eb.jsx)("span", {
+      }), "applied" === Gz && !st && !rz && !ez && (0, Oz.jsx)("span", {
         className: "WorldCodeAiHint WorldCodeAiUndoOff",
         children: "You've changed this code since, so Undo is off. History can still go back."
-      }), "undone" === Ib && (0, Eb.jsx)("span", {
+      }), "undone" === Gz && (0, Oz.jsx)("span", {
         className: "WorldCodeAiHint",
-        children: Xb.wentBack ? "You went back, so this change is gone." : "Undone."
-      }), "stale" === Ib && (0, Eb.jsx)("span", {
+        children: bz.wentBack ? "You went back, so this change is gone." : "Undone."
+      }), "stale" === Gz && (0, Oz.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "Your code changed since this answer, so ask again to get an up-to-date change."
       })]
@@ -13047,104 +13047,104 @@ function dL(bb) {
   })
 }
 
-function FL(bb) {
+function du(zz) {
   let {
-    target: ab,
-    isOpen: Ub
-  } = bb;
-  return (0, Eb.jsxs)("div", {
-    className: Tb()("WorldCodeAiTargetLabel", Ub && "WorldCodeAiTargetLabel-open"),
-    children: [(0, Eb.jsx)("span", {
-      children: ab.label
-    }), Ub && (0, Eb.jsx)("span", {
+    target: tz,
+    isOpen: sz
+  } = zz;
+  return (0, Oz.jsxs)("div", {
+    className: Xz()("WorldCodeAiTargetLabel", sz && "WorldCodeAiTargetLabel-open"),
+    children: [(0, Oz.jsx)("span", {
+      children: tz.label
+    }), sz && (0, Oz.jsx)("span", {
       className: "WorldCodeAiTargetLabelNote",
       children: "Open now"
     })]
   })
 }
 
-function hL(bb) {
+function hu(zz) {
   let {
-    code: ab,
-    onSwitch: Ub,
-    defaultOpen: Mb,
-    isElsewhere: Tb
-  } = bb;
-  const [Bb, eb] = (0, Ab.useState)(!1), vb = (0, Ab.useMemo)((() => ({
+    code: tz,
+    onSwitch: sz,
+    defaultOpen: Wz,
+    isElsewhere: Xz
+  } = zz;
+  const [vz, Uz] = (0, Fz.useState)(!1), Kz = (0, Fz.useMemo)((() => ({
     path: "World Code",
     before: "",
-    after: ab
-  })), [ab]);
-  return (0, Eb.jsxs)("div", {
+    after: tz
+  })), [tz]);
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiToolCard WorldCodeAiWorldCodePart",
-    children: [(0, Eb.jsx)(Yb, {
+    children: [(0, Oz.jsx)(oz, {
       className: "WorldCodeAiChangeLog",
       title: "Code for World Code",
       isCalm: !0,
-      isElsewhere: Tb,
-      defaultOpen: Mb,
-      children: (0, Eb.jsx)("div", {
+      isElsewhere: Xz,
+      defaultOpen: Wz,
+      children: (0, Oz.jsx)("div", {
         className: "WorldCodeAiChanges",
-        children: (0, Eb.jsx)(Me, {
-          change: vb
+        children: (0, Oz.jsx)(UU, {
+          change: Kz
         })
       })
-    }), (0, Eb.jsxs)("div", {
+    }), (0, Oz.jsxs)("div", {
       className: "WorldCodeAiChangeActions",
-      children: [(0, Eb.jsx)("span", {
+      children: [(0, Oz.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "A code block only runs when clicked, so this part goes in World Code."
-      }), Ub && (0, Eb.jsx)("button", {
+      }), sz && (0, Oz.jsx)("button", {
         className: "WorldCodeAiPrimaryButton",
-        onClick: Ub,
+        onClick: sz,
         children: "Switch to World Code"
-      }), (0, Eb.jsx)("button", {
+      }), (0, Oz.jsx)("button", {
         className: "WorldCodeAiLinkButton",
         onClick: () => {
-          navigator.clipboard.writeText(ab).then((() => {
-            eb(!0)
+          navigator.clipboard.writeText(tz).then((() => {
+            Uz(!0)
           })).catch((() => {}))
         },
-        children: Bb ? "Copied" : "Copy"
+        children: vz ? "Copied" : "Copy"
       })]
     })]
   })
 }
 
-function GL(bb) {
-  var ab;
+function Qu(zz) {
+  var tz;
   let {
-    failed: Ub,
-    nothingChanged: Ab,
-    onRetry: Mb,
-    defaultOpen: Tb,
-    isElsewhere: Bb
-  } = bb;
-  const eb = null === (ab = Ub.find((bb => null !== bb.closest))) || void 0 === ab ? void 0 : ab.closest;
-  return (0, Eb.jsxs)("div", {
+    failed: sz,
+    nothingChanged: Fz,
+    onRetry: Wz,
+    defaultOpen: Xz,
+    isElsewhere: vz
+  } = zz;
+  const Uz = null === (tz = sz.find((zz => null !== zz.closest))) || void 0 === tz ? void 0 : tz.closest;
+  return (0, Oz.jsxs)("div", {
     className: "WorldCodeAiFailedEdits",
-    children: [(0, Eb.jsxs)(Yb, {
-      title: Ab ? "That change didn't work, so your code is the same." : 1 === Ub.length ? "One part didn't work, so it's left out." : `${Ub.length} parts didn't work, so they're left out.`,
-      defaultOpen: Tb,
-      isElsewhere: Bb,
-      children: [eb && (0, Eb.jsxs)(Eb.Fragment, {
-        children: [(0, Eb.jsx)("p", {
+    children: [(0, Oz.jsxs)(oz, {
+      title: Fz ? "That change didn't work, so your code is the same." : 1 === sz.length ? "One part didn't work, so it's left out." : `${sz.length} parts didn't work, so they're left out.`,
+      defaultOpen: Xz,
+      isElsewhere: vz,
+      children: [Uz && (0, Oz.jsxs)(Oz.Fragment, {
+        children: [(0, Oz.jsx)("p", {
           children: "The closest bit in your code:"
-        }), (0, Eb.jsx)("pre", {
+        }), (0, Oz.jsx)("pre", {
           className: "WorldCodeAiFailedLines",
-          children: eb.text.split("\n").length > 4 ? `${eb.text.split("\n").slice(0,4).join("\n")}\n\u2026` : eb.text
+          children: Uz.text.split("\n").length > 4 ? `${Uz.text.split("\n").slice(0,4).join("\n")}\n\u2026` : Uz.text
         })]
-      }), !eb && (0, Eb.jsx)("p", {
+      }), !Uz && (0, Oz.jsx)("p", {
         children: "Try asking for it again, maybe in a different way."
       })]
-    }), Mb && (0, Eb.jsxs)("div", {
+    }), Wz && (0, Oz.jsxs)("div", {
       className: "WorldCodeAiFailedRetry",
-      children: [(0, Eb.jsx)("button", {
-        ...jB.g,
+      children: [(0, Oz.jsx)("button", {
+        ...Pv.f,
         className: "WorldCodeAiSecondaryButton",
-        onClick: Mb,
+        onClick: Wz,
         children: "Ask the AI to try again"
-      }), (0, Eb.jsx)("span", {
+      }), (0, Oz.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "It asks the AI once more."
       })]
@@ -13152,1059 +13152,1059 @@ function GL(bb) {
   })
 }
 
-function QL(bb) {
+function ku(zz) {
   let {
-    lookups: ab,
-    words: Ub,
-    defaultOpen: Ab,
-    isElsewhere: Mb
-  } = bb;
-  return (0, Eb.jsxs)(Yb, {
-    title: AL,
+    lookups: tz,
+    words: sz,
+    defaultOpen: Fz,
+    isElsewhere: Wz
+  } = zz;
+  return (0, Oz.jsxs)(oz, {
+    title: vu,
     isCalm: !0,
-    isElsewhere: Mb,
-    defaultOpen: Ab,
-    children: [Ub && (0, Eb.jsx)("p", {
-      children: Ub
-    }), (0, Eb.jsx)("p", {
+    isElsewhere: Wz,
+    defaultOpen: Fz,
+    children: [sz && (0, Oz.jsx)("p", {
+      children: sz
+    }), (0, Oz.jsx)("p", {
       children: "It looks at:"
-    }), (0, Eb.jsx)("ul", {
+    }), (0, Oz.jsx)("ul", {
       className: "WorldCodeAiLookupList",
-      children: ab.map(((bb, ab) => (0, Eb.jsx)("li", {
-        children: zM(bb)
-      }, ab)))
+      children: tz.map(((zz, tz) => (0, Oz.jsx)("li", {
+        children: mW(zz)
+      }, tz)))
     })]
   })
 }
 
-function qL(bb) {
-  return `Add this to my World Code:\n\`\`\`js\n${bb.join("\n").replace(/\s*$/,"\n")}\`\`\``
+function iu(zz) {
+  return `Add this to my World Code:\n\`\`\`js\n${zz.join("\n").replace(/\s*$/,"\n")}\`\`\``
 }
 
-function uL(bb) {
-  const ab = Math.ceil(bb / 1e3);
-  return `${Math.floor(ab/60)}:${String(ab%60).padStart(2,"0")}`
+function Lu(zz) {
+  const tz = Math.ceil(zz / 1e3);
+  return `${Math.floor(tz/60)}:${String(tz%60).padStart(2,"0")}`
 }
 
-function rL(bb) {
-  return "waiting" === bb.phase ? "You're next" : bb.playingThrough && "writing" !== bb.phase && "screening" !== bb.phase ? "Playing your code through as each player\u2026" : null
+function lu(zz) {
+  return "waiting" === zz.phase ? "You're next" : zz.playingThrough && "writing" !== zz.phase && "screening" !== zz.phase ? "Playing your code through as each player\u2026" : null
 }
 
-function KL(bb) {
-  var ab;
+function nu(zz) {
+  var tz;
   let {
-    busy: Ub
-  } = bb;
-  const Ab = (Mb = Ub.phase, Yb = null !== (ab = Ub.reasoningChars) && void 0 !== ab ? ab : 0, "screening" === Mb ? 3 : "writing" === Mb ? 2 : "thinking" === Mb && Yb >= 400 ? 1 : 0);
-  var Mb, Yb;
-  return (0, Eb.jsx)("ol", {
+    busy: sz
+  } = zz;
+  const Fz = (Wz = sz.phase, oz = null !== (tz = sz.reasoningChars) && void 0 !== tz ? tz : 0, "screening" === Wz ? 3 : "writing" === Wz ? 2 : "thinking" === Wz && oz >= 400 ? 1 : 0);
+  var Wz, oz;
+  return (0, Oz.jsx)("ol", {
     className: "WorldCodeAiSteps",
-    children: Pv.map(((bb, ab) => (0, Eb.jsx)("li", {
-      className: Tb()(ab < Ab && "WorldCodeAiStep-done", ab === Ab && "WorldCodeAiStep-current"),
-      children: ab < Ab ? `\u2713 ${bb}` : bb
-    }, bb)))
+    children: HK.map(((zz, tz) => (0, Oz.jsx)("li", {
+      className: Xz()(tz < Fz && "WorldCodeAiStep-done", tz === Fz && "WorldCodeAiStep-current"),
+      children: tz < Fz ? `\u2713 ${zz}` : zz
+    }, zz)))
   })
 }
-const oL = (0, Ab.memo)((function(bb) {
-    var ab, Mb, Xb, Zb, zb, xb, ib, fb, mb, pb, Nb, Wb, Hb;
+const au = (0, Fz.memo)((function(zz) {
+    var tz, Wz, bz, Bz, rz, Yz, xz, mz, Jz, Iz, Cz, ez, Zz;
     let {
-      files: Ib,
-      activePath: db,
-      canEdit: Fb,
-      errors: hb,
-      errorCount: Gb,
-      applyFiles: Qb,
-      submit: qb,
-      testRun: ub,
-      close: rb,
-      goToLine: Kb,
-      target: ob,
-      chatKey: lb,
-      historyKey: tb,
-      openWorldCode: wb,
-      readWorldCode: sb,
-      viewChunk: gb,
-      viewGameState: Cb,
-      openTarget: Vb,
-      isLoaded: Ob = !0,
-      draft: cb,
-      onDraftUsed: Jb,
-      selection: nb,
-      onSelectionUsed: Sb
-    } = bb;
-    const aa = ob.codeBlock,
-      Ua = ob.key,
-      Ma = function(bb) {
-        let ab = EL.get(bb);
-        return ab || (ab = {
+      files: Gz,
+      activePath: Tz,
+      canEdit: cz,
+      errors: jz,
+      errorCount: Az,
+      applyFiles: yz,
+      submit: Mz,
+      testRun: dz,
+      close: hz,
+      goToLine: Qz,
+      target: kz,
+      chatKey: iz,
+      historyKey: Lz,
+      openWorldCode: lz,
+      readWorldCode: nz,
+      viewChunk: az,
+      viewGameState: qz,
+      openTarget: Sz,
+      isLoaded: Vz = !0,
+      draft: Rz,
+      onDraftUsed: pz,
+      selection: fz,
+      onSelectionUsed: Ez
+    } = zz;
+    const tt = kz.codeBlock,
+      st = kz.key,
+      Wt = function(zz) {
+        let tz = uu.get(zz);
+        return tz || (tz = {
           entries: [],
           nextId: 1,
           dismissedErrorCounts: new Map,
-          turns: new ST
-        }, EL.set(bb, ab)), ab
-      }(lb),
-      [Ta, Ea] = (0, Ab.useState)((() => Ma.entries)),
-      Ya = (0, Ab.useRef)(!0),
-      Ba = (0, Ab.useCallback)((bb => {
-        const ab = "function" === typeof bb ? bb : () => bb;
-        Ya.current ? Ea(ab) : Ma.setEntries ? Ma.setEntries(ab) : Ma.entries = ab(Ma.entries)
-      }), [Ma]);
-    (0, Ab.useEffect)((() => (Ya.current = !0, Ma.setEntries = Ea, () => {
-      Ya.current = !1, Ma.setEntries === Ea && (Ma.setEntries = void 0)
-    })), [Ma]);
-    const [ea, va] = (0, Ab.useState)(null), [La, Pa] = (0, Ab.useState)([]), [Xa, ja] = (0, Ab.useState)(!1), [Ra, ka] = (0, Ab.useState)([]), [ya, Za] = (0, Ab.useState)(!1), [Da, za] = (0, Ab.useState)(!1), [xa, ia] = (0, Ab.useState)(null), [fa, ma] = (0, Ab.useState)(!1), pa = (0, Ab.useRef)("settings"), [Na, Wa] = (0, Ab.useState)(null), Ha = (0, Ab.useRef)(function() {
+          turns: new sO
+        }, uu.set(zz, tz)), tz
+      }(iz),
+      [Xt, Ot] = (0, Fz.useState)((() => Wt.entries)),
+      ot = (0, Fz.useRef)(!0),
+      vt = (0, Fz.useCallback)((zz => {
+        const tz = "function" === typeof zz ? zz : () => zz;
+        ot.current ? Ot(tz) : Wt.setEntries ? Wt.setEntries(tz) : Wt.entries = tz(Wt.entries)
+      }), [Wt]);
+    (0, Fz.useEffect)((() => (ot.current = !0, Wt.setEntries = Ot, () => {
+      ot.current = !1, Wt.setEntries === Ot && (Wt.setEntries = void 0)
+    })), [Wt]);
+    const [Ut, Kt] = (0, Fz.useState)(null), [ut, Nt] = (0, Fz.useState)([]), [bt, wt] = (0, Fz.useState)(!1), [Dt, gt] = (0, Fz.useState)([]), [Ht, Bt] = (0, Fz.useState)(!1), [Pt, rt] = (0, Fz.useState)(!1), [Yt, xt] = (0, Fz.useState)(null), [mt, Jt] = (0, Fz.useState)(!1), It = (0, Fz.useRef)("settings"), [Ct, et] = (0, Fz.useState)(null), Zt = (0, Fz.useRef)(function() {
       try {
-        var bb;
-        const ab = JSON.parse(null !== (bb = localStorage.getItem(Dv)) && void 0 !== bb ? bb : "{}");
-        return "object" !== typeof ab || null === ab ? {} : Object.fromEntries(Object.entries(ab).filter((bb => {
-          let [, ab] = bb;
-          return Array.isArray(ab) && ab.every((bb => "number" === typeof bb))
+        var zz;
+        const tz = JSON.parse(null !== (zz = localStorage.getItem(JK)) && void 0 !== zz ? zz : "{}");
+        return "object" !== typeof tz || null === tz ? {} : Object.fromEntries(Object.entries(tz).filter((zz => {
+          let [, tz] = zz;
+          return Array.isArray(tz) && tz.every((zz => "number" === typeof zz))
         })))
       } catch {
         return {}
       }
-    }()), [Ia, da] = (0, Ab.useState)(mB), Fa = (0, Ab.useRef)(Ia);
-    Fa.current = Ia;
-    const ha = Ia && Fb,
-      Ga = (0, Ab.useRef)(!1),
-      [Qa, qa] = (0, Ab.useState)(null),
-      [ua, ra] = (0, Ab.useState)(""),
-      [Ka, oa] = (0, Ab.useState)([]),
-      [la, ta] = (0, Ab.useState)(null),
-      [wa, sa] = (0, Ab.useState)(new Set),
-      [ga, Ca] = (0, Ab.useState)(null !== (ab = Ma.dismissedErrorCounts.get(ob.key)) && void 0 !== ab ? ab : 0),
-      [Va, Oa] = (0, Ab.useState)(!1),
-      [ca, Ja] = (0, Ab.useState)(Date.now),
-      na = (0, Ab.useRef)(null),
-      Sa = (0, Ab.useRef)(null),
-      bU = (0, Ab.useRef)([]),
-      [aU, UU] = (0, Ab.useState)(0),
-      [AU, MU] = (0, Ab.useState)(null),
-      TU = (0, Ae.p)(lb),
-      EU = null !== AU && void 0 !== AU ? AU : null === TU || void 0 === TU ? void 0 : TU.entryId,
-      YU = Ta.find((bb => bb.id === EU)),
-      BU = (null === YU || void 0 === YU ? void 0 : YU.target.key) === ob.key && (null !== AU || void 0 === (null === TU || void 0 === TU ? void 0 : TU.endedAt)),
-      eU = (bb, ab) => {
-        const Ub = setTimeout((() => {
-          bU.current = bU.current.filter((bb => bb !== Ub)), UU(bU.current.length), bb()
-        }), ab);
-        bU.current.push(Ub), UU(bU.current.length)
+    }()), [Gt, Tt] = (0, Fz.useState)(Gv), ct = (0, Fz.useRef)(Gt);
+    ct.current = Gt;
+    const jt = Gt && cz,
+      At = (0, Fz.useRef)(!1),
+      [yt, Mt] = (0, Fz.useState)(null),
+      [dt, ht] = (0, Fz.useState)(""),
+      [Qt, kt] = (0, Fz.useState)([]),
+      [it, Lt] = (0, Fz.useState)(null),
+      [lt, nt] = (0, Fz.useState)(new Set),
+      [qt, St] = (0, Fz.useState)(null !== (tz = Wt.dismissedErrorCounts.get(kz.key)) && void 0 !== tz ? tz : 0),
+      [Vt, Rt] = (0, Fz.useState)(!1),
+      [pt, ft] = (0, Fz.useState)(Date.now),
+      Et = (0, Fz.useRef)(null),
+      zs = (0, Fz.useRef)(null),
+      ts = (0, Fz.useRef)([]),
+      [ss, Fs] = (0, Fz.useState)(0),
+      [Ws, Xs] = (0, Fz.useState)(null),
+      Os = (0, vU.q)(iz),
+      os = null !== Ws && void 0 !== Ws ? Ws : null === Os || void 0 === Os ? void 0 : Os.entryId,
+      vs = Xt.find((zz => zz.id === os)),
+      Us = (null === vs || void 0 === vs ? void 0 : vs.target.key) === kz.key && (null !== Ws || void 0 === (null === Os || void 0 === Os ? void 0 : Os.endedAt)),
+      Ks = (zz, tz) => {
+        const sz = setTimeout((() => {
+          ts.current = ts.current.filter((zz => zz !== sz)), Fs(ts.current.length), zz()
+        }), tz);
+        ts.current.push(sz), Fs(ts.current.length)
       },
-      LU = () => {
-        for (const bb of bU.current) clearTimeout(bb);
-        bU.current = [], UU(0), MU(null)
+      Ns = () => {
+        for (const zz of ts.current) clearTimeout(zz);
+        ts.current = [], Fs(0), Xs(null)
       },
-      PU = (0, Ab.useRef)(null),
-      XU = (0, Ab.useRef)(null),
-      jU = () => Ma.nextId++,
-      RU = (0, Ab.useRef)(0),
-      kU = (0, Ab.useRef)(Ib);
-    kU.current = Ib;
-    const yU = (0, Ab.useCallback)((bb => {
-        null === bb || void 0 === bb || bb.focus()
+      bs = (0, Fz.useRef)(null),
+      ws = (0, Fz.useRef)(null),
+      Ds = () => Wt.nextId++,
+      gs = (0, Fz.useRef)(0),
+      Hs = (0, Fz.useRef)(Gz);
+    Hs.current = Gz;
+    const Bs = (0, Fz.useCallback)((zz => {
+        null === zz || void 0 === zz || zz.focus()
       }), []),
-      ZU = (0, Ab.useRef)(Gb);
-    ZU.current = Gb;
-    const DU = (0, Ab.useRef)(Ka);
-    DU.current = Ka;
-    const zU = (0, Ab.useRef)(Ta.length);
-    (0, Ab.useEffect)((() => {
-      const bb = PU.current;
-      if (!bb) return;
-      if (Xa) return void bb.scrollTo({
+      Ps = (0, Fz.useRef)(Az);
+    Ps.current = Az;
+    const rs = (0, Fz.useRef)(Qt);
+    rs.current = Qt;
+    const Ys = (0, Fz.useRef)(Xt.length);
+    (0, Fz.useEffect)((() => {
+      const zz = bs.current;
+      if (!zz) return;
+      if (bt) return void zz.scrollTo({
         top: 0
       });
-      if (xa) return;
-      const ab = Ta[Ta.length - 1],
-        Ub = (null === ab || void 0 === ab ? void 0 : ab.target.key) === Ua;
-      Ta.length > zU.current && "assistant" === (null === ab || void 0 === ab ? void 0 : ab.role) && !ab.isNotice && Ub && (Ma.heldAnswerId = ab.id), zU.current = Ta.length;
-      const Ab = void 0 !== ab && Ub && ab.id === Ma.heldAnswerId && "offered" === ab.status && void 0 === ab.trial,
-        Mb = bb.querySelectorAll(".WorldCodeAiEntry"),
-        Tb = Mb[Mb.length - 1];
-      if (Ab && Tb) {
-        var Eb;
-        const Ub = bb.getBoundingClientRect().top,
-          Ab = ab => bb.scrollTop + ab.getBoundingClientRect().top - Ub;
-        let Mb = Ab(Tb);
-        const Yb = Tb.querySelector(".WorldCodeAiDiff-added, .WorldCodeAiDiff-removed"),
-          Bb = Tb.querySelector(".WorldCodeAiChangeHeader"),
-          eb = Tb.querySelector(".WorldCodeAiChangeActions-sticky");
-        if (null !== (Eb = ab.warnings) && void 0 !== Eb && Eb.length && Yb && Bb && eb) {
-          const ab = Tb.querySelector(".WorldCodeAiDiff-marked"),
-            Ub = Yb.getBoundingClientRect().height,
-            Eb = ab ? Ab(ab) + 2 * Ub + eb.offsetHeight - bb.clientHeight : Ab(Yb) + 3 * Ub + eb.offsetHeight - bb.clientHeight;
-          Mb = Math.max(Mb, Math.min(Eb, ab ? Ab(ab) - Ub : Ab(Bb)))
-        } else if (Bb && eb) {
-          const ab = Tb.querySelectorAll(".WorldCodeAiChangeWhy li"),
-            Ub = ab[ab.length - 1];
-          if (Ub) {
-            const ab = Ab(Ub) + Ub.getBoundingClientRect().height + eb.offsetHeight - bb.clientHeight;
-            Mb = Math.max(Mb, Math.min(ab, Ab(Bb)))
+      if (Yt) return;
+      const tz = Xt[Xt.length - 1],
+        sz = (null === tz || void 0 === tz ? void 0 : tz.target.key) === st;
+      Xt.length > Ys.current && "assistant" === (null === tz || void 0 === tz ? void 0 : tz.role) && !tz.isNotice && sz && (Wt.heldAnswerId = tz.id), Ys.current = Xt.length;
+      const Fz = void 0 !== tz && sz && tz.id === Wt.heldAnswerId && "offered" === tz.status && void 0 === tz.trial,
+        Wz = zz.querySelectorAll(".WorldCodeAiEntry"),
+        Xz = Wz[Wz.length - 1];
+      if (Fz && Xz) {
+        var Oz;
+        const sz = zz.getBoundingClientRect().top,
+          Fz = tz => zz.scrollTop + tz.getBoundingClientRect().top - sz;
+        let Wz = Fz(Xz);
+        const oz = Xz.querySelector(".WorldCodeAiDiff-added, .WorldCodeAiDiff-removed"),
+          vz = Xz.querySelector(".WorldCodeAiChangeHeader"),
+          Uz = Xz.querySelector(".WorldCodeAiChangeActions-sticky");
+        if (null !== (Oz = tz.warnings) && void 0 !== Oz && Oz.length && oz && vz && Uz) {
+          const tz = Xz.querySelector(".WorldCodeAiDiff-marked"),
+            sz = oz.getBoundingClientRect().height,
+            Oz = tz ? Fz(tz) + 2 * sz + Uz.offsetHeight - zz.clientHeight : Fz(oz) + 3 * sz + Uz.offsetHeight - zz.clientHeight;
+          Wz = Math.max(Wz, Math.min(Oz, tz ? Fz(tz) - sz : Fz(vz)))
+        } else if (vz && Uz) {
+          const tz = Xz.querySelectorAll(".WorldCodeAiChangeWhy li"),
+            sz = tz[tz.length - 1];
+          if (sz) {
+            const tz = Fz(sz) + sz.getBoundingClientRect().height + Uz.offsetHeight - zz.clientHeight;
+            Wz = Math.max(Wz, Math.min(tz, Fz(vz)))
           }
         }
-        bb.scrollTo({
-          top: Mb
+        zz.scrollTo({
+          top: Wz
         })
-      } else bb.scrollTo({
-        top: bb.scrollHeight
+      } else zz.scrollTo({
+        top: zz.scrollHeight
       })
-    }), [Ma, Ta, ea, Xa, Ua, xa]), (0, Ab.useEffect)((() => {
-      Ma.entries = Ta, Ma.dismissedErrorCounts.set(ob.key, ga)
-    }), [Ma, Ta, ga, ob.key]), (0, Ab.useEffect)((() => () => {
-      var bb;
-      null === (bb = na.current) || void 0 === bb || bb.abort(), LU(),
+    }), [Wt, Xt, Ut, bt, st, Yt]), (0, Fz.useEffect)((() => {
+      Wt.entries = Xt, Wt.dismissedErrorCounts.set(kz.key, qt)
+    }), [Wt, Xt, qt, kz.key]), (0, Fz.useEffect)((() => () => {
+      var zz;
+      null === (zz = Et.current) || void 0 === zz || zz.abort(), Ns(),
         function() {
-          var bb;
-          null === (bb = lT) || void 0 === bb || bb.tearDownNotification()
+          var zz;
+          null === (zz = nX) || void 0 === zz || zz.tearDownNotification()
         }()
-    }), []), (0, Ab.useEffect)((() => {
-      var bb;
-      cb && (cb.send ? Ob && (null === Jb || void 0 === Jb || Jb(), gU.current(cb.text, cb.text, {
+    }), []), (0, Fz.useEffect)((() => {
+      var zz;
+      Rz && (Rz.send ? Vz && (null === pz || void 0 === pz || pz(), Vs.current(Rz.text, Rz.text, {
         check: !1,
         useFree: !1
-      })) : (ra(cb.text), null === (bb = XU.current) || void 0 === bb || bb.focus(), null === Jb || void 0 === Jb || Jb()))
-    }), [cb, Jb, Ob]), (0, Ab.useEffect)((() => function() {
-      let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      const ab = setTimeout((() => {
-        ov(bb)
+      })) : (ht(Rz.text), null === (zz = ws.current) || void 0 === zz || zz.focus(), null === pz || void 0 === pz || pz()))
+    }), [Rz, pz, Vz]), (0, Fz.useEffect)((() => function() {
+      let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      const tz = setTimeout((() => {
+        aK(zz)
       }), 1e3);
       return () => {
-        clearTimeout(ab)
+        clearTimeout(tz)
       }
-    }(aa)), [aa]), (0, Ab.useEffect)((() => {
-      let bb = !0;
-      BL.list(tb).then((ab => {
-        bb && Pa(ab)
-      })).catch((bb => {
-        console.error("World Code AI: couldn't read the version history", bb)
+    }(tt)), [tt]), (0, Fz.useEffect)((() => {
+      let zz = !0;
+      bu.list(Lz).then((tz => {
+        zz && Nt(tz)
+      })).catch((zz => {
+        console.error("World Code AI: couldn't read the version history", zz)
       }));
-      const ab = BL.watch(tb, Pa);
+      const tz = bu.watch(Lz, Nt);
       return () => {
-        bb = !1, ab()
+        zz = !1, tz()
       }
-    }), [tb]), (0, Ab.useEffect)((() => {
-      let bb = !0;
-      eL.list(tb).then((ab => {
-        bb && ka(ab)
-      })).catch((bb => {
-        console.error("World Code AI: couldn't read the notes about the game", bb)
+    }), [Lz]), (0, Fz.useEffect)((() => {
+      let zz = !0;
+      wu.list(Lz).then((tz => {
+        zz && gt(tz)
+      })).catch((zz => {
+        console.error("World Code AI: couldn't read the notes about the game", zz)
       }));
-      const ab = eL.watch(tb, ka);
+      const tz = wu.watch(Lz, gt);
       return () => {
-        bb = !1, ab()
+        zz = !1, tz()
       }
-    }), [tb]);
-    const xU = null !== (Mb = null === (Xb = Ta.findLast((bb => bb.target.key === ob.key))) || void 0 === Xb ? void 0 : Xb.retryAt) && void 0 !== Mb ? Mb : 0,
-      iU = NT(ca),
-      fU = null !== ea || xU > ca || iU > ca;
-    (0, Ab.useEffect)((() => {
-      if (!fU) return;
-      const bb = setInterval((() => {
-        Ja(Date.now())
+    }), [Lz]);
+    const xs = null !== (Wz = null === (bz = Xt.findLast((zz => zz.target.key === kz.key))) || void 0 === bz ? void 0 : bz.retryAt) && void 0 !== Wz ? Wz : 0,
+      ms = GX(pt),
+      Is = null !== Ut || xs > pt || ms > pt;
+    (0, Fz.useEffect)((() => {
+      if (!Is) return;
+      const zz = setInterval((() => {
+        ft(Date.now())
       }), 1e3);
       return () => {
-        clearInterval(bb)
+        clearInterval(zz)
       }
-    }), [fU]);
-    const mU = Gb > ga && hb.length > 0 ? hb[hb.length - 1] : null,
-      pU = (0, Ab.useMemo)((() => mU ? function(bb, ab) {
-        var Ub;
-        let Ab;
-        for (const [Mb, Tb] of Object.entries(ab)) {
+    }), [Is]);
+    const Cs = Az > qt && jz.length > 0 ? jz[jz.length - 1] : null,
+      es = (0, Fz.useMemo)((() => Cs ? function(zz, tz) {
+        var sz;
+        let Fz;
+        for (const [Wz, Xz] of Object.entries(tz)) {
           const {
-            text: ab,
-            line: Ub
-          } = JY(bb, Tb);
-          if (void 0 !== Ub) {
-            if (Ab) return JY(bb);
-            Ab = {
-              text: ab,
-              path: Mb,
-              line: Ub
+            text: tz,
+            line: sz
+          } = sv(zz, Xz);
+          if (void 0 !== sz) {
+            if (Fz) return sv(zz);
+            Fz = {
+              text: tz,
+              path: Wz,
+              line: sz
             }
           }
         }
-        return null !== (Ub = Ab) && void 0 !== Ub ? Ub : JY(bb)
-      }(mU, Ib) : {
+        return null !== (sz = Fz) && void 0 !== sz ? sz : sv(zz)
+      }(Cs, Gz) : {
         text: ""
-      }), [mU, Ib]),
-      NU = function(bb) {
-        let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ob;
-        const Ub = jU();
-        return ja(!1), Za(!1), Ba((Ab => [...Ab, {
-          ...bb,
-          id: Ub,
-          target: ab
-        }])), Ub
+      }), [Cs, Gz]),
+      Zs = function(zz) {
+        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kz;
+        const sz = Ds();
+        return wt(!1), Bt(!1), vt((Fz => [...Fz, {
+          ...zz,
+          id: sz,
+          target: tz
+        }])), sz
       },
-      WU = bb => bb.target.key === ob.key,
-      HU = (bb, ab) => {
-        Ba((Ub => Ub.map((Ub => Ub.id === bb ? {
-          ...Ub,
-          ...ab
-        } : Ub))))
+      Gs = zz => zz.target.key === kz.key,
+      Ts = (zz, tz) => {
+        vt((sz => sz.map((sz => sz.id === zz ? {
+          ...sz,
+          ...tz
+        } : sz))))
       },
-      IU = (bb, ab) => {
-        HU(bb, {
-          status: ab
+      cs = (zz, tz) => {
+        Ts(zz, {
+          status: tz
         })
       },
-      dU = EY();
+      As = Uo();
 
-    function FU(bb) {
-      return !!XY(TY.getState()) && (NY().then((ab => {
-        ab || bb()
+    function ys(zz) {
+      return !!go(vo.getState()) && (Go().then((tz => {
+        tz || zz()
       })), !0)
     }
-    const hU = bb => {
-        !fa && FU(bb) || bb()
+    const Ms = zz => {
+        !mt && ys(zz) || zz()
       },
-      GU = async function(bb, ab) {
-        let Ab = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      ds = async function(zz, tz) {
+        let Fz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         const {
-          check: Mb = void 0 === ab,
-          about: Tb = (null !== ab && void 0 !== ab ? ab : bb.trim()),
-          planStep: Eb,
-          wordsOnly: Yb = !1,
-          asked: Bb,
-          failedEdits: eb,
-          isAutoFix: vb = !1,
-          autoFixRound: Lb = 0,
-          useFree: Pb,
-          retryOf: Xb,
-          continueFrom: Rb,
-          lookups: kb = [],
-          lookupRound: Zb = 0,
-          worldCodeFiles: Db,
-          viewedPaths: zb = [],
-          lookupOf: xb,
-          insertsInto: ib,
-          guardWords: fb
-        } = Ab, mb = bb.trim();
-        if ("" === mb || ea) return;
-        null === oT.get() && (tT || (tT = !0, (async () => {
+          check: Wz = void 0 === tz,
+          about: Xz = (null !== tz && void 0 !== tz ? tz : zz.trim()),
+          planStep: Oz,
+          wordsOnly: oz = !1,
+          asked: vz,
+          failedEdits: Uz,
+          isAutoFix: Kz = !1,
+          autoFixRound: uz = 0,
+          useFree: Nz,
+          retryOf: bz,
+          continueFrom: Dz,
+          lookups: gz = [],
+          lookupRound: Bz = 0,
+          worldCodeFiles: Pz,
+          viewedPaths: rz = [],
+          lookupOf: Yz,
+          insertsInto: xz,
+          guardWords: mz
+        } = Fz, Jz = zz.trim();
+        if ("" === Jz || Ut) return;
+        null === lX.get() && (aX || (aX = !0, (async () => {
           try {
-            if (null !== await oT.refresh() || null === oT.getPlayer()) return;
+            if (null !== await lX.refresh() || null === lX.getPlayer()) return;
             const {
-              NotificationProvider: bb
-            } = await Promise.resolve().then((() => Ub(1260)));
-            lT = bb.showPromptPopup({
+              NotificationProvider: zz
+            } = await Promise.resolve().then((() => sz(1319)));
+            nX = zz.showPromptPopup({
               title: "aiHelperDataSharing:title",
               subtitle: "aiHelperDataSharing:subtitle",
               confirmText: "aiHelperDataSharing:yes",
               cancelText: "aiHelperDataSharing:no"
             });
-            const ab = await lT.getResult();
-            "notificationTornDown" !== ab && oT.set(ab ? "yes" : "no")
-          } catch (bb) {
-            console.warn("AI Helper: couldn't ask about sharing chats", bb)
+            const tz = await nX.getResult();
+            "notificationTornDown" !== tz && lX.set(tz ? "yes" : "no")
+          } catch (zz) {
+            console.warn("AI Helper: couldn't ask about sharing chats", zz)
           } finally {
-            lT = null, tT = !1
+            nX = null, aX = !1
           }
         })()));
-        const pb = null !== Pb && void 0 !== Pb ? Pb : fa && !vb && void 0 === Xb && void 0 === Rb;
-        if (!pb && zL(Ab) && FU((() => {
-            rU.current(bb, ab, Ab)
+        const Iz = null !== Nz && void 0 !== Nz ? Nz : mt && !Kz && void 0 === bz && void 0 === Dz;
+        if (!Iz && Iu(Fz) && ys((() => {
+            is.current(zz, tz, Fz)
           }))) return;
-        const Nb = null !== ib && void 0 !== ib ? ib : db;
-        void 0 === Pb && pb && ma(!1), LU();
-        const Wb = VE.activeKey(),
-          Hb = pb ? null : Wb,
-          Ib = null !== Hb,
-          Gb = null !== Wb && pb,
-          Qb = !Hb && !pb && TY.isAnswering(),
-          qb = void 0 === Xb ? -1 : ((bb, ab) => {
-            for (let Ub = bb.findIndex((bb => bb.id === ab)) - 1; Ub >= 0; Ub--)
-              if ("user" === bb[Ub].role) return Ub;
+        const Cz = null !== xz && void 0 !== xz ? xz : Tz;
+        void 0 === Nz && Iz && Jt(!1), Ns();
+        const ez = pO.activeKey(),
+          Zz = Iz ? null : ez,
+          Gz = null !== Zz,
+          Az = null !== ez && Iz,
+          yz = !Zz && !Iz && vo.isAnswering(),
+          Mz = void 0 === bz ? -1 : ((zz, tz) => {
+            for (let sz = zz.findIndex((zz => zz.id === tz)) - 1; sz >= 0; sz--)
+              if ("user" === zz[sz].role) return sz;
             return -1
-          })(Ta, Xb),
-          ub = (qb < 0 ? Ta : Ta.slice(0, qb)).filter((bb => !bb.isNotice && !bb.leftOut && WU(bb))).slice(-4).map((bb => ({
-            role: bb.role,
-            text: bb.question ? `${bb.text}\n${bb.question.question}` : bb.text
+          })(Xt, bz),
+          dz = (Mz < 0 ? Xt : Xt.slice(0, Mz)).filter((zz => !zz.isNotice && !zz.leftOut && Gs(zz))).slice(-4).map((zz => ({
+            role: zz.role,
+            text: zz.question ? `${zz.text}\n${zz.question.question}` : zz.text
           }))),
-          rb = void 0 === ab,
-          ob = void 0 === Bb ? void 0 === ab ? mb : void 0 : null !== Bb && void 0 !== Bb ? Bb : void 0,
-          lb = void 0 !== Xb && void 0 !== Rb,
-          tb = lb ? Ta.find((bb => bb.id === Xb)) : void 0;
-        let sb;
-        if (lb) sb = qb >= 0 ? Ta[qb].id : -1;
-        else if (void 0 !== xb && qb < 0) sb = xb;
-        else if (qb >= 0) sb = Ta[qb].id, Ba((bb => bb.filter((bb => bb.id !== Xb)).map((bb => bb.id === sb ? {
-          ...bb,
+          hz = void 0 === tz,
+          kz = void 0 === vz ? void 0 === tz ? Jz : void 0 : null !== vz && void 0 !== vz ? vz : void 0,
+          iz = void 0 !== bz && void 0 !== Dz,
+          Lz = iz ? Xt.find((zz => zz.id === bz)) : void 0;
+        let nz;
+        if (iz) nz = Mz >= 0 ? Xt[Mz].id : -1;
+        else if (void 0 !== Yz && Mz < 0) nz = Yz;
+        else if (Mz >= 0) nz = Xt[Mz].id, vt((zz => zz.filter((zz => zz.id !== bz)).map((zz => zz.id === nz ? {
+          ...zz,
           isNotice: void 0
-        } : bb))));
+        } : zz))));
         else {
-          const bb = vb && Lb > 0;
-          sb = NU({
+          const zz = Kz && uz > 0;
+          nz = Zs({
             role: "user",
-            text: bb ? mb : null !== ab && void 0 !== ab ? ab : mb,
+            text: zz ? Jz : null !== tz && void 0 !== tz ? tz : Jz,
             changes: [],
             status: "offered",
-            about: Tb,
-            planStep: Eb,
-            ...ob ? {
-              asked: ob
+            about: Xz,
+            planStep: Oz,
+            ...kz ? {
+              asked: kz
             } : {},
-            ...bb ? {
-              logTitle: eb ? "Part of the AI's change didn't go in, so it was asked to make it again" : "The AI's code had an error, so it was sent back to the AI to fix"
+            ...zz ? {
+              logTitle: Uz ? "Part of the AI's change didn't go in, so it was asked to make it again" : "The AI's code had an error, so it was sent back to the AI to fix"
             } : {}
           })
         }
-        const gb = {
-            lookups: kb,
-            lookupRound: Zb,
-            worldCodeFiles: Db,
-            viewedPaths: zb
+        const az = {
+            lookups: gz,
+            lookupRound: Bz,
+            worldCodeFiles: Pz,
+            viewedPaths: rz
           },
-          Cb = {
-            retry: mb,
-            retryShown: ab,
+          qz = {
+            retry: Jz,
+            retryShown: tz,
             retryOptions: {
-              check: Mb,
-              about: Tb,
-              planStep: Eb,
-              wordsOnly: Yb,
-              useFree: pb,
-              asked: Bb,
-              failedEdits: eb,
-              isAutoFix: vb,
-              autoFixRound: Lb,
-              insertsInto: ib,
-              guardWords: fb,
-              ...gb
+              check: Wz,
+              about: Xz,
+              planStep: Oz,
+              wordsOnly: oz,
+              useFree: Iz,
+              asked: vz,
+              failedEdits: Uz,
+              isAutoFix: Kz,
+              autoFixRound: uz,
+              insertsInto: xz,
+              guardWords: mz,
+              ...az
             }
           },
-          Ob = new AbortController;
-        na.current = Ob;
-        const cb = Ma.turns;
-        cb.requestStarted(sb, void 0 !== xb);
-        const Jb = Fa.current ? "direct" : "offer";
-        var nb, Sb, ba, Ua, Ea;
+          Vz = new AbortController;
+        Et.current = Vz;
+        const Rz = Wt.turns;
+        Rz.requestStarted(nz, void 0 !== Yz);
+        const pz = ct.current ? "direct" : "offer";
+        var fz, Ez, zt, st, Ot;
         try {
-          var Ya;
-          const bb = Date.now(),
-            Ub = mb.startsWith(IL),
-            Ab = null === Hb || void 0 === Hb ? void 0 : Hb.model.name;
-          Ja(bb), va(Qb ? {
+          var ot;
+          const zz = Date.now(),
+            sz = Jz.startsWith(yu),
+            Fz = null === Zz || void 0 === Zz ? void 0 : Zz.model.name;
+          ft(zz), Kt(yz ? {
             phase: "thinking",
-            startedAt: bb,
-            playingThrough: Ub,
+            startedAt: zz,
+            playingThrough: sz,
             isSuperBot: !0
           } : {
             phase: "checking",
-            startedAt: bb,
-            playingThrough: Ub,
-            keyModel: Ab
+            startedAt: zz,
+            playingThrough: sz,
+            keyModel: Fz
           });
-          const Bb = bb => {
-              HU(sb, {
+          const vz = zz => {
+              Ts(nz, {
                 isNotice: !0
-              }), NU({
+              }), Zs({
                 role: "assistant",
-                text: "personalInfo" === bb ? "Please don't share personal details like names, addresses or schools. Ask again without them." : pL,
+                text: "personalInfo" === zz ? "Please don't share personal details like names, addresses or schools. Ask again without them." : Tu,
                 changes: [],
                 status: "offered",
                 isNotice: !0
               })
             },
-            Pb = async () => {
-              if (!Mb && !Hb) return null !== fb && void 0 !== fb ? fb : mb;
-              const bb = Date.now();
-              Ja(bb), va({
+            Nz = async () => {
+              if (!Wz && !Zz) return null !== mz && void 0 !== mz ? mz : Jz;
+              const zz = Date.now();
+              ft(zz), Kt({
                 phase: "checking",
-                startedAt: bb,
-                playingThrough: Ub,
-                keyModel: Ab
+                startedAt: zz,
+                playingThrough: sz,
+                keyModel: Fz
               });
               const {
-                safety: ab,
-                request: Tb
-              } = await async function(bb, ab) {
-                let Ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                const Ab = await QT(bb, ab, Ub),
-                  Mb = NM(bb);
-                if ("unsafe" !== Ab || Mb === bb) return {
-                  safety: Ab,
-                  request: bb
+                safety: tz,
+                request: Xz
+              } = await async function(zz, tz) {
+                let sz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                const Fz = await hX(zz, tz, sz),
+                  Wz = GW(zz);
+                if ("unsafe" !== Fz || Wz === zz) return {
+                  safety: Fz,
+                  request: zz
                 };
-                const Tb = await QT(Mb, ab, !0);
-                return "unchecked" === Tb ? {
-                  safety: Ab,
-                  request: bb
+                const Xz = await hX(Wz, tz, !0);
+                return "unchecked" === Xz ? {
+                  safety: Fz,
+                  request: zz
                 } : {
-                  safety: Tb,
-                  request: Mb
+                  safety: Xz,
+                  request: Wz
                 }
-              }(mb, Ob.signal, Ib);
-              return "unchecked" === ab && Hb ? (NU({
+              }(Jz, Vz.signal, Gz);
+              return "unchecked" === tz && Zz ? (Zs({
                 role: "assistant",
                 text: "",
                 changes: [],
                 status: "offered",
                 isNotice: !0,
-                ...Cb,
+                ...qz,
                 keyNotice: {
                   notice: "unchecked",
-                  model: Hb.model.name,
-                  company: jE(Hb.provider, Hb.baseUrl, !0)
+                  model: Zz.model.name,
+                  company: HO(Zz.provider, Zz.baseUrl, !0)
                 }
-              }), null) : "personalInfo" === ab || "unsafe" === ab ? (Bb(ab), null) : Tb
+              }), null) : "personalInfo" === tz || "unsafe" === tz ? (vz(tz), null) : Xz
             };
-          let Wb = Qb ? null !== fb && void 0 !== fb ? fb : mb : await Pb();
-          if (null === Wb) return;
-          const db = Db ? {
-              ...kU.current,
-              ...Db
-            } : kU.current,
-            ob = {
-              request: mb,
-              files: db,
-              activePath: Nb,
-              errors: hb.slice(-5),
-              history: ub,
-              codeBlock: aa,
-              failedEdits: eb,
-              canAsk: rb,
-              lookups: kb,
-              canLookUp: Zb < 3 && !Yb,
-              canChangeWorldCode: UA(Jb),
-              looksUpDocs: Ib,
-              about: aa ? void 0 : {
-                notes: Ra,
-                outline: (Ea = Aa(db, new Set(PL().callbackNames())), [Ea.callbacks.length > 0 ? `Callbacks: ${Ea.callbacks.join(", ")}` : "", Ea.commands.length > 0 ? `Commands: ${Ea.commands.join(", ")}` : "", Ea.functions.length > 0 ? `Functions: ${Ea.functions.join(", ")}` : ""].filter((bb => "" !== bb)).join("\n")),
-                canRemember: Ra.length < 8
+          let ez = yz ? null !== mz && void 0 !== mz ? mz : Jz : await Nz();
+          if (null === ez) return;
+          const Tz = Pz ? {
+              ...Hs.current,
+              ...Pz
+            } : Hs.current,
+            kz = {
+              request: Jz,
+              files: Tz,
+              activePath: Cz,
+              errors: jz.slice(-5),
+              history: dz,
+              codeBlock: tt,
+              failedEdits: Uz,
+              canAsk: hz,
+              lookups: gz,
+              canLookUp: Bz < 3 && !oz,
+              canChangeWorldCode: XF(pz),
+              looksUpDocs: Gz,
+              about: tt ? void 0 : {
+                notes: Dt,
+                outline: (Ot = Ft(Tz, new Set(Hu().callbackNames())), [Ot.callbacks.length > 0 ? `Callbacks: ${Ot.callbacks.join(", ")}` : "", Ot.commands.length > 0 ? `Commands: ${Ot.commands.join(", ")}` : "", Ot.functions.length > 0 ? `Functions: ${Ot.functions.join(", ")}` : ""].filter((zz => "" !== zz)).join("\n")),
+                canRemember: Dt.length < 8
               }
             },
-            Ma = new Map,
-            ea = bb => {
-              var ab;
-              const Ub = `${bb.format} ${bb.nativeTools}`,
-                Ab = null !== (ab = Ma.get(Ub)) && void 0 !== ab ? ab : ZM(PL(), ob, bb);
-              return Ma.set(Ub, Ab), Ab
+            Wt = new Map,
+            Ut = zz => {
+              var tz;
+              const sz = `${zz.format} ${zz.nativeTools}`,
+                Fz = null !== (tz = Wt.get(sz)) && void 0 !== tz ? tz : YW(Hu(), kz, zz);
+              return Wt.set(sz, Fz), Fz
             },
-            ka = bb => ea(ET(bb)),
-            ya = kM(ob);
-          let Za = 0,
-            Da = null;
-          const za = async () => {
-            const ab = NT();
-            var Ab, Mb;
-            ab > Date.now() && (Ja(Date.now()), va({
+            gt = zz => Ut(UX(zz)),
+            Ht = PW(kz);
+          let Bt = 0,
+            Pt = null;
+          const rt = async () => {
+            const tz = GX();
+            var Fz, Wz;
+            tz > Date.now() && (ft(Date.now()), Kt({
               phase: "waiting",
-              startedAt: bb,
-              until: ab,
-              playingThrough: Ub
-            }), await (Ab = ab - Date.now(), Mb = Ob.signal, new Promise(((bb, ab) => {
-              const Ub = setTimeout(bb, Ab);
-              Mb.addEventListener("abort", (() => {
-                clearTimeout(Ub), ab(new DOMException("The World Code AI request was stopped", "AbortError"))
+              startedAt: zz,
+              until: tz,
+              playingThrough: sz
+            }), await (Fz = tz - Date.now(), Wz = Vz.signal, new Promise(((zz, tz) => {
+              const sz = setTimeout(zz, Fz);
+              Wz.addEventListener("abort", (() => {
+                clearTimeout(sz), tz(new DOMException("The World Code AI request was stopped", "AbortError"))
               }), {
                 once: !0
               })
             }))));
-            const Tb = Date.now();
-            return Ja(Tb), va({
+            const Xz = Date.now();
+            return ft(Xz), Kt({
               phase: "thinking",
-              startedAt: Tb,
-              playingThrough: Ub
-            }), async function(bb) {
-              var ab, Ub;
-              let Ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const Mb = Date.now(),
-                Tb = new AbortController,
-                Eb = () => {
-                  Tb.abort()
+              startedAt: Xz,
+              playingThrough: sz
+            }), async function(zz) {
+              var tz, sz;
+              let Fz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const Wz = Date.now(),
+                Xz = new AbortController,
+                Oz = () => {
+                  Xz.abort()
                 };
-              null !== (ab = Ab.signal) && void 0 !== ab && ab.aborted && Eb(), null === (Ub = Ab.signal) || void 0 === Ub || Ub.addEventListener("abort", Eb, {
+              null !== (tz = Fz.signal) && void 0 !== tz && tz.aborted && Oz(), null === (sz = Fz.signal) || void 0 === sz || sz.addEventListener("abort", Oz, {
                 once: !0
               });
-              const Yb = (0, yb.b)(3e4, Tb.signal);
-              let Bb = !1;
+              const oz = (0, Hz.c)(3e4, Xz.signal);
+              let vz = !1;
               try {
-                const ab = await xT(AT, GT(YT(bb, AT)), Yb.signal, (bb => {
-                  if (!Bb) {
-                    if (FT(bb.answer)) return Bb = !0, void Eb();
-                    var ab;
-                    (!0 === bb.isCalling || hT(bb.answer)) && (null === (ab = Ab.onProgress) || void 0 === ab || ab.call(Ab, bb))
+                const tz = await JX(OX, dX(KX(zz, OX)), oz.signal, (zz => {
+                  if (!vz) {
+                    if (yX(zz.answer)) return vz = !0, void Oz();
+                    var tz;
+                    (!0 === zz.isCalling || MX(zz.answer)) && (null === (tz = Fz.onProgress) || void 0 === tz || tz.call(Fz, zz))
                   }
-                }), Ab.tools);
-                if (zT(ab) && !FT(ab.answer)) {
-                  const Ub = !1 !== Ab.canNudge ? await dT(AT, GT(YT(bb, AT)), ab, Tb.signal, (bb => {
-                    if (!Bb) {
-                      if (FT(bb.answer)) return Bb = !0, void Eb();
-                      var ab;
-                      (!0 === bb.isCalling || hT(bb.answer)) && (null === (ab = Ab.onProgress) || void 0 === ab || ab.call(Ab, bb))
+                }), Fz.tools);
+                if (mX(tz) && !yX(tz.answer)) {
+                  const sz = !1 !== Fz.canNudge ? await AX(OX, dX(KX(zz, OX)), tz, Xz.signal, (zz => {
+                    if (!vz) {
+                      if (yX(zz.answer)) return vz = !0, void Oz();
+                      var tz;
+                      (!0 === zz.isCalling || MX(zz.answer)) && (null === (tz = Fz.onProgress) || void 0 === tz || tz.call(Fz, zz))
                     }
-                  }), Ab.tools, 3e4) : ab;
-                  if (!FT(Ub.answer)) return {
-                    ...Ub,
-                    ms: Date.now() - Mb
+                  }), Fz.tools, 3e4) : tz;
+                  if (!yX(sz.answer)) return {
+                    ...sz,
+                    ms: Date.now() - Wz
                   }
                 }
-              } catch (Lb) {
-                var eb;
-                if (null !== (eb = Ab.signal) && void 0 !== eb && eb.aborted) throw Lb;
-                Bb || console.warn(`World Code AI: ${AT.name} couldn't be reached`, Lb)
+              } catch (uz) {
+                var Uz;
+                if (null !== (Uz = Fz.signal) && void 0 !== Uz && Uz.aborted) throw uz;
+                vz || console.warn(`World Code AI: ${OX.name} couldn't be reached`, uz)
               } finally {
-                var vb;
-                Yb.clear(), null === (vb = Ab.signal) || void 0 === vb || vb.removeEventListener("abort", Eb)
+                var Kz;
+                oz.clear(), null === (Kz = Fz.signal) || void 0 === Kz || Kz.removeEventListener("abort", Oz)
               }
               return {
-                ...await WT(bb, Ab),
-                ms: Date.now() - Mb
+                ...await TX(zz, Fz),
+                ms: Date.now() - Wz
               }
-            }(ka, {
-              signal: Ob.signal,
-              tools: ya,
-              canNudge: !Yb,
-              onProgress: bb => {
-                const ab = Date.now(),
-                  Ab = bb.model !== Da;
-                if (Da = bb.model, !Ab && ab - Za < 150) return;
-                Za = ab;
-                const Mb = function(bb, ab) {
-                  const Ub = function(bb) {
-                      return bb.replace(/<think>[\s\S]*?(?:<\/think>|$)/g, "")
-                    }(bb),
-                    Ab = Lv.exec(Ub);
-                  let Mb = Ab ? Ub.slice(0, Ab.index) : Ub;
-                  Mb = Mb.replace(/<[\w_]*$/, "").trim();
-                  const Tb = Ub.trimEnd(),
-                    Eb = vU(Ub, ab).filter((bb => !/^<(?:tool_call|function=)/.test(bb.source) || /<\/(?:tool_call|invoke|function)>\s*$/.test(bb.source) || !Tb.endsWith(bb.source.trimEnd()))),
-                    Yb = Eb.flatMap((bb => {
-                      var ab;
-                      const Ub = null === (ab = bb.args.why) || void 0 === ab ? void 0 : ab.trim();
-                      return Ub ? [Ub.charAt(0).toUpperCase() + Ub.slice(1)] : []
+            }(gt, {
+              signal: Vz.signal,
+              tools: Ht,
+              canNudge: !oz,
+              onProgress: zz => {
+                const tz = Date.now(),
+                  Fz = zz.model !== Pt;
+                if (Pt = zz.model, !Fz && tz - Bt < 150) return;
+                Bt = tz;
+                const Wz = function(zz, tz) {
+                  const sz = function(zz) {
+                      return zz.replace(/<think>[\s\S]*?(?:<\/think>|$)/g, "")
+                    }(zz),
+                    Fz = gK.exec(sz);
+                  let Wz = Fz ? sz.slice(0, Fz.index) : sz;
+                  Wz = Wz.replace(/<[\w_]*$/, "").trim();
+                  const Xz = sz.trimEnd(),
+                    Oz = us(sz, tz).filter((zz => !/^<(?:tool_call|function=)/.test(zz.source) || /<\/(?:tool_call|invoke|function)>\s*$/.test(zz.source) || !Xz.endsWith(zz.source.trimEnd()))),
+                    oz = Oz.flatMap((zz => {
+                      var tz;
+                      const sz = null === (tz = zz.args.why) || void 0 === tz ? void 0 : tz.trim();
+                      return sz ? [sz.charAt(0).toUpperCase() + sz.slice(1)] : []
                     }));
                   return {
-                    text: Mb,
-                    whys: [...new Set(Yb)],
-                    isWritingCode: null !== Ab,
-                    calls: Eb.length
+                    text: Wz,
+                    whys: [...new Set(oz)],
+                    isWritingCode: null !== Fz,
+                    calls: Oz.length
                   }
-                }(bb.answer, TT(bb.model));
-                va({
-                  phase: "" !== Mb.text || Mb.isWritingCode ? "writing" : "thinking",
-                  startedAt: Tb,
-                  playingThrough: Ub,
-                  reasoningChars: bb.reasoningChars,
-                  model: bb.model
+                }(zz.answer, vX(zz.model));
+                Kt({
+                  phase: "" !== Wz.text || Wz.isWritingCode ? "writing" : "thinking",
+                  startedAt: Xz,
+                  playingThrough: sz,
+                  reasoningChars: zz.reasoningChars,
+                  model: zz.model
                 })
               }
             })
-          }, xa = (Ua = null === (Ya = TY.getState().status) || void 0 === Ya ? void 0 : Ya.provider, bY[null !== Ua && void 0 !== Ua ? Ua : "ovh"]), ia = bb => {
-            Sa.current = null, cb.drop(sb), HU(sb, {
+          }, Yt = (st = null === (ot = vo.getState().status) || void 0 === ot ? void 0 : ot.provider, Fo[null !== st && void 0 !== st ? st : "ovh"]), xt = zz => {
+            zs.current = null, Rz.drop(nz), Ts(nz, {
               isNotice: !0
-            }), NU({
+            }), Zs({
               role: "assistant",
-              text: "unsafe" === bb ? "That answer didn't pass Bloxd's safety check, so it isn't shown. Try again, or ask in a different way." : "Bloxd's safety check couldn't look at that answer, so it isn't shown. Try again in a minute.",
+              text: "unsafe" === zz ? "That answer didn't pass Bloxd's safety check, so it isn't shown. Try again, or ask in a different way." : "Bloxd's safety check couldn't look at that answer, so it isn't shown. Try again in a minute.",
               changes: [],
               status: "offered",
               isNotice: !0,
-              ...Cb
+              ...qz
             })
-          }, fa = async () => {
-            var bb;
-            const ab = Date.now();
-            Ja(ab), va({
+          }, mt = async () => {
+            var zz;
+            const tz = Date.now();
+            ft(tz), Kt({
               phase: "thinking",
-              startedAt: ab,
-              playingThrough: Ub,
+              startedAt: tz,
+              playingThrough: sz,
               isSuperBot: !0
             });
-            const Ab = qb < 0 ? Ta : Ta.slice(0, qb),
-              Tb = Ab.findLastIndex((bb => "assistant" === bb.role && !bb.isNotice && !bb.leftOut && WU(bb))),
-              Eb = Ab[Tb],
-              Yb = Ab.findIndex((bb => bb.id === xb)),
-              vb = Ab.slice(0, Math.max(0, Tb)).findLastIndex((bb => "user" === bb.role)),
-              Lb = void 0 === Xb && (void 0 === xb || Yb >= 0 && Yb < Tb && Yb >= vb) && "object" === typeof(null === Eb || void 0 === Eb ? void 0 : Eb.answeredBy) && !0 === Eb.answeredBy.isSuperBot,
-              Pb = ET(xa),
-              jb = ZM(PL(), ob, Pb, {
+            const Fz = Mz < 0 ? Xt : Xt.slice(0, Mz),
+              Xz = Fz.findLastIndex((zz => "assistant" === zz.role && !zz.isNotice && !zz.leftOut && Gs(zz))),
+              Oz = Fz[Xz],
+              oz = Fz.findIndex((zz => zz.id === Yz)),
+              Kz = Fz.slice(0, Math.max(0, Xz)).findLastIndex((zz => "user" === zz.role)),
+              uz = void 0 === bz && (void 0 === Yz || oz >= 0 && oz < Xz && oz >= Kz) && "object" === typeof(null === Oz || void 0 === Oz ? void 0 : Oz.answeredBy) && !0 === Oz.answeredBy.isSuperBot,
+              Nz = UX(Yt),
+              wz = YW(Hu(), kz, Nz, {
                 docsInTurn: !0
               }),
-              Rb = kM(ob, Pb.format),
-              kb = "deepseek" === Pb.format ? {
-                qR: ZM(PL(), ob, Pb, {
+              Dz = PW(kz, Nz.format),
+              gz = "deepseek" === Nz.format ? {
+                nb: YW(Hu(), kz, Nz, {
                   docsInTurn: !0,
-                  qR: !0
+                  nb: !0
                 }).at(-1),
-                toolResults: [...(null !== eb && void 0 !== eb ? eb : []).flatMap((bb => bb.call ? [{
-                  ...bb.call,
-                  text: SA(bb)
-                }] : [])), ...(null !== (bb = ob.lookups) && void 0 !== bb ? bb : []).flatMap((bb => bb.call ? [{
-                  ...bb.call,
-                  text: `${bb.about}:\n${bb.text}`
+                toolResults: [...(null !== Uz && void 0 !== Uz ? Uz : []).flatMap((zz => zz.call ? [{
+                  ...zz.call,
+                  text: sW(zz)
+                }] : [])), ...(null !== (zz = kz.lookups) && void 0 !== zz ? zz : []).flatMap((zz => zz.call ? [{
+                  ...zz.call,
+                  text: `${zz.about}:\n${zz.text}`
                 }] : []))].slice(-20)
               } : {};
-            let yb;
+            let Hz;
             try {
-              yb = await async function(bb, ab, Ub, Ab, Mb) {
-                var Tb;
+              Hz = await async function(zz, tz, sz, Fz, Wz) {
+                var Xz;
                 let {
-                  qR: Eb,
-                  toolResults: Yb,
-                  request: Bb,
-                  code: eb
+                  nb: Oz,
+                  toolResults: oz,
+                  request: vz,
+                  code: Uz
                 } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-                const vb = Date.now(),
-                  Lb = "system" === (null === (Tb = ab[0]) || void 0 === Tb ? void 0 : Tb.role) ? ab[0].content : "",
-                  Pb = JSON.stringify(DT(Ub)),
-                  Xb = null !== Ab && Ab.system === Lb && Ab.toolsJson === Pb,
-                  jb = null !== Eb && void 0 !== Eb ? Eb : ab[ab.length - 1],
-                  Rb = Yb && Yb.length > 0 ? {
-                    toolResults: Yb
+                const Kz = Date.now(),
+                  uz = "system" === (null === (Xz = tz[0]) || void 0 === Xz ? void 0 : Xz.role) ? tz[0].content : "",
+                  Nz = JSON.stringify(xX(sz)),
+                  bz = null !== Fz && Fz.system === uz && Fz.toolsJson === Nz,
+                  wz = null !== Oz && void 0 !== Oz ? Oz : tz[tz.length - 1],
+                  Dz = oz && oz.length > 0 ? {
+                    toolResults: oz
                   } : {},
-                  kb = {
-                    ...Bb ? {
-                      request: Bb
+                  gz = {
+                    ...vz ? {
+                      request: vz
                     } : {},
-                    ...eb ? {
-                      code: eb
+                    ...Uz ? {
+                      code: Uz
                     } : {}
                   };
-                let yb = await ZY(yY(Xb ? {
-                  chatId: Ab.chatId,
-                  messages: [jb],
-                  ...Rb,
-                  ...kb
+                let Hz = await Yo(ro(bz ? {
+                  chatId: Fz.chatId,
+                  messages: [wz],
+                  ...Dz,
+                  ...gz
                 } : {
-                  messages: ab,
-                  toolsJson: Pb,
-                  ...kb
-                }), Mb);
-                if ("newChat" === yb.outcome && Xb && (yb = await ZY(yY({
-                    messages: ab,
-                    toolsJson: Pb,
-                    ...kb
-                  }), Mb)), "status" in yb && TY.setStatus(yb.status), "refused" === yb.outcome) return {
+                  messages: tz,
+                  toolsJson: Nz,
+                  ...gz
+                }), Wz);
+                if ("newChat" === Hz.outcome && bz && (Hz = await Yo(ro({
+                    messages: tz,
+                    toolsJson: Nz,
+                    ...gz
+                  }), Wz)), "status" in Hz && vo.setStatus(Hz.status), "refused" === Hz.outcome) return {
                   kind: "refused",
-                  safety: yb.safety
+                  safety: Hz.safety
                 };
-                if ("blocked" === yb.outcome) return {
+                if ("blocked" === Hz.outcome) return {
                   kind: "blocked",
-                  safety: yb.safety
+                  safety: Hz.safety
                 };
-                if ("answered" !== yb.outcome) return {
-                  kind: "newChat" === yb.outcome ? "failed" : yb.outcome
+                if ("answered" !== Hz.outcome) return {
+                  kind: "newChat" === Hz.outcome ? "failed" : Hz.outcome
                 };
-                const Zb = iT(bb, yb.answer, yb.reasoning, yb.toolCalls, yb.isCutShort);
-                return null === Zb ? {
+                const Bz = IX(zz, Hz.answer, Hz.reasoning, Hz.toolCalls, Hz.isCutShort);
+                return null === Bz ? {
                   kind: "failed"
                 } : {
                   kind: "answered",
                   reply: {
-                    ...Zb,
-                    ms: Date.now() - vb
+                    ...Bz,
+                    ms: Date.now() - Kz
                   },
                   chat: {
-                    chatId: yb.chatId,
-                    system: Lb,
-                    toolsJson: Pb
+                    chatId: Hz.chatId,
+                    system: uz,
+                    toolsJson: Nz
                   }
                 }
-              }(xa, jb, Rb, Lb ? Sa.current : null, Ob.signal, {
-                ...kb,
-                ...Mb ? {
-                  request: mb
+              }(Yt, wz, Dz, uz ? zs.current : null, Vz.signal, {
+                ...gz,
+                ...Wz ? {
+                  request: Jz
                 } : {},
-                code: XM(ob, Pb.format)
+                code: gW(kz, Nz.format)
               })
-            } catch (zb) {
-              if (Ob.signal.aborted) throw zb;
-              console.warn("AI Helper: Super Bot.xd couldn't be reached", zb), yb = {
+            } catch (rz) {
+              if (Vz.signal.aborted) throw rz;
+              console.warn("AI Helper: Super Bot.xd couldn't be reached", rz), Hz = {
                 kind: "failed"
               }
             }
-            if ("answered" === yb.kind) return Sa.current = yb.chat, {
-              ...yb.reply,
-              promptVersion: cT(jb)
+            if ("answered" === Hz.kind) return zs.current = Hz.chat, {
+              ...Hz.reply,
+              promptVersion: EX(wz)
             };
-            if ("refused" === yb.kind) return Bb(yb.safety), "stopped";
-            if ("blocked" === yb.kind) return ia(yb.safety), "stopped";
-            Sa.current = null, Ia = "free";
-            const Zb = TY.getState(),
-              Db = "unavailable" === yb.kind && XY(Zb);
-            return Db && NY(), {
-              fallbackNotice: Db ? "You don't have any Super Bot.xd usage left, so Bot.xd is answering this one." : kY(yb.kind, Zb.status)
+            if ("refused" === Hz.kind) return vz(Hz.safety), "stopped";
+            if ("blocked" === Hz.kind) return xt(Hz.safety), "stopped";
+            zs.current = null, Gt = "free";
+            const Bz = vo.getState(),
+              Pz = "unavailable" === Hz.kind && go(Bz);
+            return Pz && Go(), {
+              fallbackNotice: Pz ? "You don't have any Super Bot.xd usage left, so Bot.xd is answering this one." : Po(Hz.kind, Bz.status)
             }
           };
-          let ma, pa, Na, Wa, Ia = pb || VE.getState().keys.length > 0 ? "free" : void 0,
-            da = !1;
-          if (Hb) {
-            const ab = {
-              format: RT(Hb.model.callFormat),
-              nativeTools: !0 === Hb.model.nativeTools
+          let Jt, It, Ct, et, Gt = Iz || pO.getState().keys.length > 0 ? "free" : void 0,
+            Tt = !1;
+          if (Zz) {
+            const tz = {
+              format: BX(Zz.model.callFormat),
+              nativeTools: !0 === Zz.model.nativeTools
             };
-            pa = ab.format;
-            const Mb = [...ea(ab)];
-            var La;
-            if (Wa = {
+            It = tz.format;
+            const Wz = [...Ut(tz)];
+            var ut;
+            if (et = {
                 responder: "key",
-                model: Hb.model.name,
-                promptVersion: cT(Mb)
-              }, void 0 !== Rb) "" !== Rb && Mb.push({
+                model: Zz.model.name,
+                promptVersion: EX(Wz)
+              }, void 0 !== Dz) "" !== Dz && Wz.push({
               role: "assistant",
-              content: Rb
-            }), Mb.push({
+              content: Dz
+            }), Wz.push({
               role: "user",
-              content: (ba = null === tb || void 0 === tb || null === (La = tb.cutShort) || void 0 === La ? void 0 : La.cutCall, "Your answer was cut short. Continue exactly where you stopped, from the next character: don't repeat anything or start again, and add nothing before it." + (ba ? ` Your ${ba.name} call${ba.path?` for ${ba.path}`:""} was cut off part way and didn't come through: make that call again in full.` : ""))
+              content: (zt = null === Lz || void 0 === Lz || null === (ut = Lz.cutShort) || void 0 === ut ? void 0 : ut.cutCall, "Your answer was cut short. Continue exactly where you stopped, from the next character: don't repeat anything or start again, and add nothing before it." + (zt ? ` Your ${zt.name} call${zt.path?` for ${zt.path}`:""} was cut off part way and didn't come through: make that call again in full.` : ""))
             });
-            va({
+            Kt({
               phase: "thinking",
-              startedAt: bb,
-              playingThrough: Ub,
-              keyModel: Ab
+              startedAt: zz,
+              playingThrough: sz,
+              keyModel: Fz
             });
-            const Tb = ab => {
-              va({
-                phase: "" === ab.answer ? "thinking" : "writing",
-                startedAt: bb,
-                playingThrough: Ub,
-                keyModel: Ab
+            const Xz = tz => {
+              Kt({
+                phase: "" === tz.answer ? "thinking" : "writing",
+                startedAt: zz,
+                playingThrough: sz,
+                keyModel: Fz
               })
             };
             try {
-              const bb = await JE(Hb, Mb, {
-                signal: Ob.signal,
-                onProgress: Tb,
-                tools: ya,
-                continueFrom: Rb
+              const zz = await zo(Zz, Wz, {
+                signal: Vz.signal,
+                onProgress: Xz,
+                tools: Ht,
+                continueFrom: Dz
               });
-              ma = bb, Ia = {
-                model: Hb.name ? `${Hb.name} \xb7 ${Hb.model.name}` : Hb.model.name
-              }, bb.isCutShort && (Na = function(bb, ab, Ub) {
+              Jt = zz, Gt = {
+                model: Zz.name ? `${Zz.name} \xb7 ${Zz.model.name}` : Zz.model.name
+              }, zz.isCutShort && (Ct = function(zz, tz, sz) {
                 return {
-                  request: Ub,
-                  written: ab.written,
-                  cutCall: ab.cutCall,
-                  keyId: bb.id,
-                  modelId: bb.model.id
+                  request: sz,
+                  written: tz.written,
+                  cutCall: tz.cutCall,
+                  keyId: zz.id,
+                  modelId: zz.model.id
                 }
-              }(Hb, bb, mb))
-            } catch (ja) {
-              if (!(ja instanceof RE) || Ob.signal.aborted) throw ja;
-              return void QU(ja, Hb, sb, Cb)
+              }(Zz, zz, Jz))
+            } catch (wt) {
+              if (!(wt instanceof BO) || Vz.signal.aborted) throw wt;
+              return void hs(wt, Zz, nz, qz)
             }
           } else {
-            const bb = Qb ? await fa() : null;
-            if ("stopped" === bb) return;
-            if (bb && !("fallbackNotice" in bb)) {
-              var Pa;
-              ma = bb, Wa = {
+            const zz = yz ? await mt() : null;
+            if ("stopped" === zz) return;
+            if (zz && !("fallbackNotice" in zz)) {
+              var Nt;
+              Jt = zz, et = {
                 responder: "super_bot_xd",
-                model: xa.name,
-                promptVersion: bb.promptVersion
-              }, pa = null !== (Pa = xa.callFormat) && void 0 !== Pa ? Pa : "simple", Ia = {
-                model: SE,
+                model: Yt.name,
+                promptVersion: zz.promptVersion
+              }, It = null !== (Nt = Yt.callFormat) && void 0 !== Nt ? Nt : "simple", Gt = {
+                model: so,
                 isSuperBot: !0
-              }, da = !0
+              }, Tt = !0
             } else {
-              if (Qb) {
-                const bb = await Pb();
-                if (null === bb) return;
-                Wb = bb
+              if (yz) {
+                const zz = await Nz();
+                if (null === zz) return;
+                ez = zz
               }
-              let ab;
-              bb && "fallbackNotice" in bb && NU({
+              let tz;
+              zz && "fallbackNotice" in zz && Zs({
                 role: "assistant",
-                text: bb.fallbackNotice,
+                text: zz.fallbackNotice,
                 changes: [],
                 status: "offered",
                 isNotice: !0
               });
               try {
-                ab = await za()
-              } catch (ja) {
-                if (!(ja instanceof PT && "busy" === ja.reason)) throw ja;
-                ab = await za()
+                tz = await rt()
+              } catch (wt) {
+                if (!(wt instanceof DX && "busy" === wt.reason)) throw wt;
+                tz = await rt()
               }
-              Ha.current = function(bb, ab, Ub) {
-                  var Ab;
-                  return !Number.isFinite(Ub) || Ub <= 0 ? bb : {
-                    ...bb,
-                    [ab]: [...null !== (Ab = bb[ab]) && void 0 !== Ab ? Ab : [], Ub].slice(-10)
+              Zt.current = function(zz, tz, sz) {
+                  var Fz;
+                  return !Number.isFinite(sz) || sz <= 0 ? zz : {
+                    ...zz,
+                    [tz]: [...null !== (Fz = zz[tz]) && void 0 !== Fz ? Fz : [], sz].slice(-10)
                   }
-                }(Ha.current, ab.model, ab.ms),
-                function(bb) {
+                }(Zt.current, tz.model, tz.ms),
+                function(zz) {
                   try {
-                    localStorage.setItem(Dv, JSON.stringify(bb))
+                    localStorage.setItem(JK, JSON.stringify(zz))
                   } catch {}
-                }(Ha.current), ma = ab, pa = TT(ab.model);
-              const Ub = MT(ab.model);
-              Wa = {
+                }(Zt.current), Jt = tz, It = vX(tz.model);
+              const sz = oX(tz.model);
+              et = {
                 responder: "bot_xd",
-                model: ab.model,
-                promptVersion: Ub ? cT(ka(Ub)) : ""
+                model: tz.model,
+                promptVersion: sz ? EX(gt(sz)) : ""
               }
             }
           }
-          const Fa = PL(),
-            ha = gA(ma.answer, pa, db, Nb, Fa.callbackNames(), aa ? jb.b : void 0, Jb, new Set([LM(db, Nb, aa), Nb, ...zb, ...Object.keys(null !== Db && void 0 !== Db ? Db : {})].filter((bb => null !== bb))), Fa.realName),
-            Ga = Yb ? {
-              ...ha,
+          const ct = Hu(),
+            jt = VF(Jt.answer, It, Tz, Cz, ct.callbackNames(), tt ? wz.c : void 0, pz, new Set([wW(Tz, Cz, tt), Cz, ...rz, ...Object.keys(null !== Pz && void 0 !== Pz ? Pz : {})].filter((zz => null !== zz))), ct.realName),
+            At = oz ? {
+              ...jt,
               changes: [],
               failedEdits: [],
               inPlace: !1,
               worldCode: [],
               plan: [],
               actions: []
-            } : ha;
-          if (!da) {
-            const bb = Date.now();
-            Ja(bb), va({
+            } : jt;
+          if (!Tt) {
+            const zz = Date.now();
+            ft(zz), Kt({
               phase: "screening",
-              startedAt: bb,
-              playingThrough: Ub,
-              keyModel: Ab
+              startedAt: zz,
+              playingThrough: sz,
+              keyModel: Fz
             });
-            const ab = await Zv(Wb, Ga, Ob.signal, (ab => {
-              Ja(Date.now()), va({
+            const tz = await mK(ez, At, Vz.signal, (tz => {
+              ft(Date.now()), Kt({
                 phase: "screening",
-                startedAt: bb,
-                playingThrough: Ub,
-                keyModel: Ab,
-                until: ab
+                startedAt: zz,
+                playingThrough: sz,
+                keyModel: Fz,
+                until: tz
               })
             }));
-            if ("ok" !== ab) return void ia(ab)
+            if ("ok" !== tz) return void xt(tz)
           }
-          cb.answered(sb, {
-            input: ob,
-            responder: Wa.responder,
-            promptVersion: Wa.promptVersion
+          Rz.answered(nz, {
+            input: kz,
+            responder: et.responder,
+            promptVersion: et.promptVersion
           }, {
-            model: Wa.model,
-            text: ma.answer
+            model: et.model,
+            text: Jt.answer
           });
-          const Qa = function(bb) {
-              let ab = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aa;
-              return bb.flatMap((bb => UL(Fa, bb, ab && !(0, jb.f)(bb.path))))
+          const yt = function(zz) {
+              let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tt;
+              return zz.flatMap((zz => ou(ct, zz, tz && !(0, wz.d)(zz.path))))
             },
-            qa = Qa(Ga.changes),
-            ua = "direct" === Jb ? function(bb) {
-              return bb.flatMap((bb => {
-                var ab;
-                return null !== (ab = BB(bb)) && void 0 !== ab ? ab : []
+            Mt = yt(At.changes),
+            dt = "direct" === pz ? function(zz) {
+              return zz.flatMap((zz => {
+                var tz;
+                return null !== (tz = bv(zz)) && void 0 !== tz ? tz : []
               }))
-            }(qa) : [],
-            ra = ua.length > 0 ? {
-              ...Ga,
-              changes: Ga.changes.map((bb => ({
-                ...bb,
-                after: PB(bb.after, ua)
+            }(Mt) : [],
+            ht = dt.length > 0 ? {
+              ...At,
+              changes: At.changes.map((zz => ({
+                ...zz,
+                after: Hv(zz.after, dt)
               })))
-            } : Ga,
-            Ka = ra.changes.filter((bb => aa && (0, jb.f)(bb.path))).map((bb => ({
-              ...bb,
-              path: (0, jb.j)(bb.path)
+            } : At,
+            Qt = ht.changes.filter((zz => tt && (0, wz.d)(zz.path))).map((zz => ({
+              ...zz,
+              path: (0, wz.g)(zz.path)
             }))),
-            la = ra.changes.filter((bb => !aa || !(0, jb.f)(bb.path))),
-            ta = Ka.length > 0 ? {
-              ...ra,
-              changes: la,
-              inPlace: ra.inPlace && la.length > 0
-            } : ra,
-            wa = Ka.length > 0 || ua.length > 0 ? Qa(ta.changes) : qa,
-            sa = wa.filter(Jv),
-            ga = ta.inPlace && Fb && sa.length > 0 && Lb < 3 && !ma.isCutShort && !ma.hasCallsFromReasoning,
-            Ca = "direct" === Jb && Fb,
-            Va = ta.failedEdits.filter((bb => "unread" === bb.reason)),
-            Oa = !Ca || Yb || void 0 !== ib || aa ? [] : Va.flatMap((bb => null !== bb.path && void 0 !== bb.code ? [{
-              path: bb.path,
-              code: bb.code
+            it = ht.changes.filter((zz => !tt || !(0, wz.d)(zz.path))),
+            Lt = Qt.length > 0 ? {
+              ...ht,
+              changes: it,
+              inPlace: ht.inPlace && it.length > 0
+            } : ht,
+            lt = Qt.length > 0 || dt.length > 0 ? yt(Lt.changes) : Mt,
+            nt = lt.filter(su),
+            qt = Lt.inPlace && cz && nt.length > 0 && uz < 3 && !Jt.isCutShort && !Jt.hasCallsFromReasoning,
+            St = "direct" === pz && cz,
+            Vt = Lt.failedEdits.filter((zz => "unread" === zz.reason)),
+            Rt = !St || oz || void 0 !== xz || tt ? [] : Vt.flatMap((zz => null !== zz.path && void 0 !== zz.code ? [{
+              path: zz.path,
+              code: zz.code
             }] : [])),
-            ca = bb => "unread" === bb.reason && Oa.some((ab => ab.path === bb.path)),
-            na = ta.failedEdits.filter((bb => !ca(bb))),
-            bU = Va.filter((bb => !ca(bb))),
-            aU = UA(Jb) && ta.worldCode.length > 0 && !Yb && 0 === Ka.length,
-            UU = Zb < 3 && !Yb && !ma.isCutShort,
-            AU = new Set([...ya.map((bb => bb.name)), ...bU.length > 0 ? ["view_file", "view_world_code"] : []]),
-            MU = !UU || Oa.length > 0 || Ka.length > 0 || ga ? [] : ta.lookups.filter((bb => AU.has(bb.name))),
-            TU = {
-              request: mb,
-              shown: ab,
-              userEntryId: sb,
+            pt = zz => "unread" === zz.reason && Rt.some((tz => tz.path === zz.path)),
+            Et = Lt.failedEdits.filter((zz => !pt(zz))),
+            ts = Vt.filter((zz => !pt(zz))),
+            ss = XF(pz) && Lt.worldCode.length > 0 && !oz && 0 === Qt.length,
+            Fs = Bz < 3 && !oz && !Jt.isCutShort,
+            Ws = new Set([...Ht.map((zz => zz.name)), ...ts.length > 0 ? ["view_file", "view_world_code"] : []]),
+            Xs = !Fs || Rt.length > 0 || Qt.length > 0 || qt ? [] : Lt.lookups.filter((zz => Ws.has(zz.name))),
+            Os = {
+              request: Jz,
+              shown: tz,
+              userEntryId: nz,
               options: {
                 check: !1,
-                about: Tb,
-                planStep: Eb,
-                wordsOnly: Yb,
-                useFree: pb,
-                isAutoFix: vb,
-                autoFixRound: Lb,
-                failedEdits: [...(null !== eb && void 0 !== eb ? eb : []).map(ML), ...bU],
-                ...gb,
-                lookupRound: Zb + 1,
-                lookupOf: sb,
-                insertsInto: ib,
-                guardWords: Wb
+                about: Xz,
+                planStep: Oz,
+                wordsOnly: oz,
+                useFree: Iz,
+                isAutoFix: Kz,
+                autoFixRound: uz,
+                failedEdits: [...(null !== Uz && void 0 !== Uz ? Uz : []).map(Uu), ...ts],
+                ...az,
+                lookupRound: Bz + 1,
+                lookupOf: nz,
+                insertsInto: xz,
+                guardWords: ez
               }
             },
-            EU = 0 === ta.changes.length && 0 === ta.worldCode.length,
-            YU = MU.length > 0 && ("direct" === Jb || Ib && EU && MU.every(fM)),
-            BU = YU && EU && 0 === ta.notes.length,
-            LU = rb ? ta.question : null,
-            PU = ma.isCutShort ? ta.text.replace(/(<tool_call|<function=|<\|channel\||\{\s*"jsonrpc")[\s\S]*$/, "").trim() : ta.text,
-            XU = ma.isCutShort && !Na ? "\n\nThe answer got too long and was cut off, so part of it is missing. Try asking for one thing at a time." : "",
-            RU = na.length > 0 && ta.changes.length > 0 && !ma.isCutShort ? "\n\nPart of this answer couldn't go in, so it isn't in the change." : "",
-            yU = () => ta.changes.length > 0 ? "Here's a change for your code." : Ka.length > 0 ? "This changes your World Code." : ta.worldCode.length > 0 ? "This needs World Code." : Oa.length > 0 ? `I'll put it into ${Oa.map((bb=>bb.path)).join(" and ")}.` : LU ? "Quick question before I build it:" : ta.plan.length > 0 ? "That's a big one, so here's a plan to build it a step at a time." : MU.length > 0 ? `I'll look at ${function(bb){var ab;const Ub=bb.map(zM);return Ub.length<=1?null!==(ab=Ub[0])&&void 0!==ab?ab:"":`${Ub.slice(0,-1).join(", ")} and ${Ub[Ub.length-1]}`}(MU)} first.` : ta.notes.length > 0 ? "Here's something to remember about your game." : ta.actions.length > 0 ? "Sure!" : ma.isCutShort ? "Sorry, that was too much for one answer." : "Sorry, I couldn't work that out. Try asking in a different way.",
-            ZU = {
+            os = 0 === Lt.changes.length && 0 === Lt.worldCode.length,
+            vs = Xs.length > 0 && ("direct" === pz || Gz && os && Xs.every(CW)),
+            Us = vs && os && 0 === Lt.notes.length,
+            Ns = hz ? Lt.question : null,
+            bs = Jt.isCutShort ? Lt.text.replace(/(<tool_call|<function=|<\|channel\||\{\s*"jsonrpc")[\s\S]*$/, "").trim() : Lt.text,
+            ws = Jt.isCutShort && !Ct ? "\n\nThe answer got too long and was cut off, so part of it is missing. Try asking for one thing at a time." : "",
+            gs = Et.length > 0 && Lt.changes.length > 0 && !Jt.isCutShort ? "\n\nPart of this answer couldn't go in, so it isn't in the change." : "",
+            Bs = () => Lt.changes.length > 0 ? "Here's a change for your code." : Qt.length > 0 ? "This changes your World Code." : Lt.worldCode.length > 0 ? "This needs World Code." : Rt.length > 0 ? `I'll put it into ${Rt.map((zz=>zz.path)).join(" and ")}.` : Ns ? "Quick question before I build it:" : Lt.plan.length > 0 ? "That's a big one, so here's a plan to build it a step at a time." : Xs.length > 0 ? `I'll look at ${function(zz){var tz;const sz=zz.map(mW);return sz.length<=1?null!==(tz=sz[0])&&void 0!==tz?tz:"":`${sz.slice(0,-1).join(", ")} and ${sz[sz.length-1]}`}(Xs)} first.` : Lt.notes.length > 0 ? "Here's something to remember about your game." : Lt.actions.length > 0 ? "Sure!" : Jt.isCutShort ? "Sorry, that was too much for one answer." : "Sorry, I couldn't work that out. Try asking in a different way.",
+            Ps = {
               role: "assistant",
-              text: (PU || yU()) + XU + RU,
-              changes: ta.changes,
+              text: (bs || Bs()) + ws + gs,
+              changes: Lt.changes,
               status: "offered",
-              warnings: wa,
-              worldCode: ta.worldCode.length > 0 && !aU ? ta.worldCode : void 0,
-              editedInPlace: ta.inPlace && !ga || void 0,
-              failedEdits: na.length > 0 ? na : void 0,
-              question: null !== LU && void 0 !== LU ? LU : void 0,
-              askedFor: LU ? {
-                request: mb,
-                guardWords: Wb
+              warnings: lt,
+              worldCode: Lt.worldCode.length > 0 && !ss ? Lt.worldCode : void 0,
+              editedInPlace: Lt.inPlace && !qt || void 0,
+              failedEdits: Et.length > 0 ? Et : void 0,
+              question: null !== Ns && void 0 !== Ns ? Ns : void 0,
+              askedFor: Ns ? {
+                request: Jz,
+                guardWords: ez
               } : void 0,
-              note: ta.notes[0],
-              plan: ta.plan.length > 0 ? ta.plan : void 0,
-              noteStatus: ta.notes.length > 0 ? Ca ? "pending" : "asked" : void 0,
-              answeredBy: Ia,
-              oneOff: Gb || void 0,
-              cutShort: Na,
-              byItself: Ca || void 0,
-              ...Na ? {
-                retryShown: Cb.retryShown,
-                retryOptions: Cb.retryOptions
+              note: Lt.notes[0],
+              plan: Lt.plan.length > 0 ? Lt.plan : void 0,
+              noteStatus: Lt.notes.length > 0 ? St ? "pending" : "asked" : void 0,
+              answeredBy: Gt,
+              oneOff: Az || void 0,
+              cutShort: Ct,
+              byItself: St || void 0,
+              ...Ct ? {
+                retryShown: qz.retryShown,
+                retryOptions: qz.retryOptions
               } : {},
-              ...BU ? {
-                logTitle: AL,
+              ...Us ? {
+                logTitle: vu,
                 isCalm: !0
               } : {},
-              ...MU.length > 0 ? {
+              ...Xs.length > 0 ? {
                 lookups: {
-                  lookups: MU,
-                  followUp: TU
+                  lookups: Xs,
+                  followUp: Os
                 },
-                lookedAt: YU || void 0
+                lookedAt: vs || void 0
               } : {}
             },
-            DU = lb && void 0 !== Xb ? (nb = Xb, Sb = ZU, Ba((bb => bb.map((bb => bb.id === nb ? {
-              ...Sb,
-              id: nb,
-              target: bb.target
-            } : bb)))), nb) : NU(ZU),
-            zU = ta.inPlace && Fb && !ga && !ma.isCutShort && !ma.hasCallsFromReasoning,
-            xU = zU && await OU({
-              id: DU,
-              changes: ta.changes
-            }, Tb);
-          !ta.inPlace || ga || xU || HU(DU, {
+            rs = iz && void 0 !== bz ? (fz = bz, Ez = Ps, vt((zz => zz.map((zz => zz.id === fz ? {
+              ...Ez,
+              id: fz,
+              target: zz.target
+            } : zz)))), fz) : Zs(Ps),
+            Ys = Lt.inPlace && cz && !qt && !Jt.isCutShort && !Jt.hasCallsFromReasoning,
+            xs = Ys && await fs({
+              id: rs,
+              changes: Lt.changes
+            }, Xz);
+          !Lt.inPlace || qt || xs || Ts(rs, {
             editedInPlace: void 0
           });
-          const iU = 0 === ta.changes.length && 0 === na.length && 0 === Oa.length && 0 === Ka.length && 0 === ta.worldCode.length;
-          if (Ca && void 0 !== ZU.note && ((xU || ga || iU) && !Ob.signal.aborted ? fA({
-              id: DU,
-              note: ZU.note,
+          const ms = 0 === Lt.changes.length && 0 === Et.length && 0 === Rt.length && 0 === Qt.length && 0 === Lt.worldCode.length;
+          if (St && void 0 !== Ps.note && ((xs || qt || ms) && !Vz.signal.aborted ? CF({
+              id: rs,
+              note: Ps.note,
               changes: [],
               status: "applied"
-            }, !0) : zU && !Ob.signal.aborted ? iA(DU, "declined") : iA(DU, "asked")), Ob.signal.aborted) return void NU({
+            }, !0) : Ys && !Vz.signal.aborted ? IF(rs, "declined") : IF(rs, "asked")), Vz.signal.aborted) return void Zs({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14212,56 +14212,56 @@ const oL = (0, Ab.memo)((function(bb) {
             isNotice: !0,
             isCalm: !0
           });
-          ga && (HU(DU, {
+          qt && (Ts(rs, {
             warningsSentBack: !0
-          }), oa((bb => [{
-            id: jU(),
-            text: (0, Ae.u)(sa),
+          }), kt((zz => [{
+            id: Ds(),
+            text: (0, vU.v)(nt),
             shown: "Fix this line",
             check: !1,
             isAutoFix: !0,
-            autoFixRound: Lb + 1
-          }, ...bb]))), xU && fv(ta.changes, Nb).forEach(((bb, ab) => {
-            const Ub = () => {
-              NU({
+            autoFixRound: uz + 1
+          }, ...zz]))), xs && ZK(Lt.changes, Cz).forEach(((zz, tz) => {
+            const sz = () => {
+              Zs({
                 role: "assistant",
-                text: mv(bb.path),
+                text: GK(zz.path),
                 changes: [],
                 status: "offered",
                 isNotice: !0,
                 isCalm: !0
-              }), Kb(bb.path, bb.line)
+              }), Qz(zz.path, zz.line)
             };
-            0 === ab ? Ub() : eU(Ub, 1200 * ab)
+            0 === tz ? sz() : Ks(sz, 1200 * tz)
           }));
-          const fU = 0 === MU.length && ta.actions.some((bb => "exportGame" === bb.kind));
-          Fb && fU && "direct" === Jb ? SU(ta.changes.length > 0 && !xU) : Fb && (fU || OA(Wb) && !aa) && HU(DU, {
+          const Is = 0 === Xs.length && Lt.actions.some((zz => "exportGame" === zz.kind));
+          cz && Is && "direct" === pz ? sF(Lt.changes.length > 0 && !xs) : cz && (Is || fF(ez) && !tt) && Ts(rs, {
             offerExport: !0
           });
-          const mU = 0 === MU.length ? ta.actions.find((bb => "switchToWorldCode" === bb.kind)) : void 0,
-            pU = ta.changes.length > 0 && !xU && Fb,
-            IU = xU ? ta.changes.map((bb => ({
-              path: bb.path,
-              text: bb.before
+          const Cs = 0 === Xs.length ? Lt.actions.find((zz => "switchToWorldCode" === zz.kind)) : void 0,
+            es = Lt.changes.length > 0 && !xs && cz,
+            cs = xs ? Lt.changes.map((zz => ({
+              path: zz.path,
+              text: zz.before
             }))) : void 0,
-            dU = Ka.length > 0 && Ca && !!Vb,
-            FU = dU && !pU;
-          if (Ka.length > 0) {
-            const bb = NU({
+            As = Qt.length > 0 && St && !!Sz,
+            ys = As && !es;
+          if (Qt.length > 0) {
+            const zz = Zs({
               role: "assistant",
               text: "This is the part of the change that goes in World Code.",
-              changes: Ka,
+              changes: Qt,
               status: "offered",
-              warnings: Qa(Ka, !1),
-              answeredBy: Ia,
-              byItself: FU || void 0
-            }, xv.d);
-            dU && aA(bb, pU)
+              warnings: yt(Qt, !1),
+              answeredBy: Gt,
+              byItself: ys || void 0
+            }, CK.e);
+            As && WF(zz, es)
           }
-          if ("stopped" === (YU ? await MA(MU, TU, {
-              replaced: IU,
-              signal: Ob.signal
-            }) : "none")) return void NU({
+          if ("stopped" === (vs ? await oF(Xs, Os, {
+              replaced: cs,
+              signal: Vz.signal
+            }) : "none")) return void Zs({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14269,108 +14269,108 @@ const oL = (0, Ab.memo)((function(bb) {
             isNotice: !0,
             isCalm: !0
           });
-          const hU = bb => ({
-            request: bb(mb),
-            guardWords: bb(Wb)
+          const Ms = zz => ({
+            request: zz(Jz),
+            guardWords: zz(ez)
           });
-          Oa.length > 0 && oa((bb => [...Oa.map((bb => {
+          Rt.length > 0 && kt((zz => [...Rt.map((zz => {
             const {
-              request: ab,
-              guardWords: Ub
-            } = hU((ab => function(bb, ab, Ub) {
-              return `They asked: "${bb}"\nYour last answer wrote this for ${ab}, but you hadn't seen that file, so it didn't go in. ${ab} is open now, its code above. Put your code into it, keeping everything it already has and changing only what the request needs:\n\`\`\`js\n${Ub.replace(/\s*$/,"")}\n\`\`\``
-            }(ab, bb.path, bb.code)));
+              request: tz,
+              guardWords: sz
+            } = Ms((tz => function(zz, tz, sz) {
+              return `They asked: "${zz}"\nYour last answer wrote this for ${tz}, but you hadn't seen that file, so it didn't go in. ${tz} is open now, its code above. Put your code into it, keeping everything it already has and changing only what the request needs:\n\`\`\`js\n${sz.replace(/\s*$/,"")}\n\`\`\``
+            }(tz, zz.path, zz.code)));
             return {
-              id: jU(),
-              text: ab,
+              id: Ds(),
+              text: tz,
               shown: "Put the code in",
               followUp: {
                 check: !1,
-                about: Tb,
-                planStep: Eb,
-                useFree: pb,
-                lookupRound: Zb,
-                lookupOf: sb,
-                insertsInto: bb.path,
-                guardWords: Ub
+                about: Xz,
+                planStep: Oz,
+                useFree: Iz,
+                lookupRound: Bz,
+                lookupOf: nz,
+                insertsInto: zz.path,
+                guardWords: sz
               },
-              opensPath: bb.path,
-              ...IU ? {
-                replaced: IU,
-                until: Date.now() + mL
+              opensPath: zz.path,
+              ...cs ? {
+                replaced: cs,
+                until: Date.now() + Gu
               } : {}
             }
-          })), ...bb]));
-          const GU = Ca && !!Vb && aa && 0 === Ka.length && (aU || "switchToWorldCode" === (null === mU || void 0 === mU ? void 0 : mU.kind) && !Yb);
-          if (GU && pU) Ba((bb => bb.map((bb => bb.id === DU && ta.worldCode.length > 0 ? {
-            ...bb,
-            worldCode: ta.worldCode
-          } : bb)))), NU({
+          })), ...zz]));
+          const ds = St && !!Sz && tt && 0 === Qt.length && (ss || "switchToWorldCode" === (null === Cs || void 0 === Cs ? void 0 : Cs.kind) && !oz);
+          if (ds && es) vt((zz => zz.map((zz => zz.id === rs && Lt.worldCode.length > 0 ? {
+            ...zz,
+            worldCode: Lt.worldCode
+          } : zz)))), Zs({
             role: "assistant",
-            text: NL(ta.worldCode.length > 0),
+            text: cu(Lt.worldCode.length > 0),
             changes: [],
             status: "offered",
             isNotice: !0
           });
-          else if (GU) {
-            var Xa;
-            const bb = ta.worldCode.join("\n\n"),
-              ab = "switchToWorldCode" === (null === mU || void 0 === mU ? void 0 : mU.kind) ? mU.request : null,
-              Ub = aU ? hU((ab => function(bb, ab) {
-                return `In a code block, they asked: "${bb}"\nThe code block's answer needs this part in World Code, which is open now, its code above. Put it in, keeping everything World Code already has: a callback it already defines is changed, with what it does kept, never defined twice:\n\`\`\`js\n${ab.replace(/\s*$/,"")}\n\`\`\``
-              }(ab, bb))) : null;
-            AA(null !== (Xa = null === Ub || void 0 === Ub ? void 0 : Ub.request) && void 0 !== Xa ? Xa : ab ? function(bb) {
-              return `In a code block, they asked for this in World Code, which is open now: ${bb}`
-            }(ab) : null, {
+          else if (ds) {
+            var bt;
+            const zz = Lt.worldCode.join("\n\n"),
+              tz = "switchToWorldCode" === (null === Cs || void 0 === Cs ? void 0 : Cs.kind) ? Cs.request : null,
+              sz = ss ? Ms((tz => function(zz, tz) {
+                return `In a code block, they asked: "${zz}"\nThe code block's answer needs this part in World Code, which is open now, its code above. Put it in, keeping everything World Code already has: a callback it already defines is changed, with what it does kept, never defined twice:\n\`\`\`js\n${tz.replace(/\s*$/,"")}\n\`\`\``
+              }(tz, zz))) : null;
+            OF(null !== (bt = null === sz || void 0 === sz ? void 0 : sz.request) && void 0 !== bt ? bt : tz ? function(zz) {
+              return `In a code block, they asked for this in World Code, which is open now: ${zz}`
+            }(tz) : null, {
               check: !1,
-              about: Tb,
-              useFree: pb,
-              lookupOf: sb,
-              ...Ub ? {
-                guardWords: Ub.guardWords
+              about: Xz,
+              useFree: Iz,
+              lookupOf: nz,
+              ...sz ? {
+                guardWords: sz.guardWords
               } : {}
-            }, aU ? bb : void 0)
+            }, ss ? zz : void 0)
           }
-          const qU = !!wb && 0 === Ka.length && !GU && ("switchToWorldCode" === (null === mU || void 0 === mU ? void 0 : mU.kind) || Ca && ta.worldCode.length > 0);
-          if (qU) {
-            const bb = "switchToWorldCode" === (null === mU || void 0 === mU ? void 0 : mU.kind) ? mU.request : null;
-            bA(null !== bb && void 0 !== bb ? bb : ta.worldCode.length > 0 ? qL(ta.worldCode) : "", {
-              leavesChangeBehind: pU,
-              hasWorldCodePart: ta.worldCode.length > 0
+          const Qs = !!lz && 0 === Qt.length && !ds && ("switchToWorldCode" === (null === Cs || void 0 === Cs ? void 0 : Cs.kind) || St && Lt.worldCode.length > 0);
+          if (Qs) {
+            const zz = "switchToWorldCode" === (null === Cs || void 0 === Cs ? void 0 : Cs.kind) ? Cs.request : null;
+            FF(null !== zz && void 0 !== zz ? zz : Lt.worldCode.length > 0 ? iu(Lt.worldCode) : "", {
+              leavesChangeBehind: es,
+              hasWorldCodePart: Lt.worldCode.length > 0
             })
           }
-          if (xU && wa.length > 0 && Lb < 3 && (!(qU || dU || GU) || pU) && (HU(DU, {
+          if (xs && lt.length > 0 && uz < 3 && (!(Qs || As || ds) || es) && (Ts(rs, {
               warningsSentBack: !0
-            }), oa((bb => [{
-              id: jU(),
-              text: (0, Ae.G)(wa),
-              shown: 1 === wa.length ? "Fix this line" : "Fix these lines",
+            }), kt((zz => [{
+              id: Ds(),
+              text: (0, vU.G)(lt),
+              shown: 1 === lt.length ? "Fix this line" : "Fix these lines",
               check: !1,
               isAutoFix: !0,
-              autoFixRound: Lb + 1,
-              replaced: IU,
-              until: Date.now() + mL
-            }, ...bb]))), Ca && na.length > 0 && (xU || 0 === ta.changes.length && !ma.isCutShort && !ga && !ma.hasCallsFromReasoning) && !LU && 0 === wa.length && 0 === MU.length && 0 === Oa.length && Lb < 3 && !qU && !dU && !GU && oa((bb => [{
-              id: jU(),
-              text: Ae.q,
-              shown: fL,
-              replaced: IU,
-              until: Date.now() + mL,
+              autoFixRound: uz + 1,
+              replaced: cs,
+              until: Date.now() + Gu
+            }, ...zz]))), St && Et.length > 0 && (xs || 0 === Lt.changes.length && !Jt.isCutShort && !qt && !Jt.hasCallsFromReasoning) && !Ns && 0 === lt.length && 0 === Xs.length && 0 === Rt.length && uz < 3 && !Qs && !As && !ds && kt((zz => [{
+              id: Ds(),
+              text: vU.t,
+              shown: Zu,
+              replaced: cs,
+              until: Date.now() + Gu,
               followUp: {
                 check: !1,
-                about: Tb,
-                planStep: Eb,
-                useFree: pb,
+                about: Xz,
+                planStep: Oz,
+                useFree: Iz,
                 isAutoFix: !0,
-                autoFixRound: Lb + 1,
-                failedEdits: na
+                autoFixRound: uz + 1,
+                failedEdits: Et
               }
-            }, ...bb])), xU && "direct" === Jb && 0 === wa.length && 0 === na.length && 0 === MU.length && 0 === Oa.length && 0 === Ka.length && !GU && !qU) {
-            const bb = fv(ta.changes, Nb).length;
-            EA(DU, Lb, bb > 1 ? 1200 * (bb - 1) + 1500 : 0)
+            }, ...zz])), xs && "direct" === pz && 0 === lt.length && 0 === Et.length && 0 === Xs.length && 0 === Rt.length && 0 === Qt.length && !ds && !Qs) {
+            const zz = ZK(Lt.changes, Cz).length;
+            UF(rs, uz, zz > 1 ? 1200 * (zz - 1) + 1500 : 0)
           }
-        } catch (ja) {
-          if (Ob.signal.aborted) Sa.current = null, NU({
+        } catch (wt) {
+          if (Vz.signal.aborted) zs.current = null, Zs({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14379,356 +14379,356 @@ const oL = (0, Ab.memo)((function(bb) {
             isCalm: !0
           });
           else {
-            const bb = ja instanceof PT ? ja.reason : "failed";
-            NU({
+            const zz = wt instanceof DX ? wt.reason : "failed";
+            Zs({
               role: "assistant",
-              text: XT(bb),
+              text: gX(zz),
               changes: [],
               status: "offered",
               isNotice: !0,
-              ...Cb,
-              retryAt: "busy" === bb ? Date.now() + 6e4 : void 0
-            }), Ja(Date.now())
+              ...qz,
+              retryAt: "busy" === zz ? Date.now() + 6e4 : void 0
+            }), ft(Date.now())
           }
         } finally {
-          na.current = null, va(null), cb.requestEnded(sb)
+          Et.current = null, Kt(null), Rz.requestEnded(nz)
         }
-      }, QU = (bb, ab, Ub, Ab) => {
-        const Mb = function(bb, ab) {
-          return "refused" === bb.problem ? null : {
-            notice: bb.problem,
-            model: ab.model.name,
-            company: jE(ab.provider, ab.baseUrl, !0),
-            isServer: "custom" === ab.provider,
-            detail: bb.detail && kE(bb.detail, ab.key)
+      }, hs = (zz, tz, sz, Fz) => {
+        const Wz = function(zz, tz) {
+          return "refused" === zz.problem ? null : {
+            notice: zz.problem,
+            model: tz.model.name,
+            company: HO(tz.provider, tz.baseUrl, !0),
+            isServer: "custom" === tz.provider,
+            detail: zz.detail && PO(zz.detail, tz.key)
           }
-        }(bb, ab);
-        if (!Mb) return (bb => {
-          HU(bb, {
+        }(zz, tz);
+        if (!Wz) return (zz => {
+          Ts(zz, {
             leftOut: !0
           })
-        })(Ub), void NU({
+        })(sz), void Zs({
           role: "assistant",
-          text: pL,
+          text: Tu,
           changes: [],
           status: "offered",
           isNotice: !0
         });
-        NU({
+        Zs({
           role: "assistant",
           text: "",
           changes: [],
           status: "offered",
           isNotice: !0,
-          ...Ab,
-          keyNotice: Mb
+          ...Fz,
+          keyNotice: Wz
         })
-      }, qU = () => {
-        const bb = ua.trim();
-        if ("" === bb || ea && Ka.length >= 3) return;
-        const ab = fa && null !== uA;
-        if (ab || !FU((() => {
-            uU.current()
+      }, Qs = () => {
+        const zz = dt.trim();
+        if ("" === zz || Ut && Qt.length >= 3) return;
+        const tz = mt && null !== kF;
+        if (tz || !ys((() => {
+            ks.current()
           }))) {
-          if (ma(!1), la) return sU(Wv(la, bb), Hv(la, bb), {
+          if (Jt(!1), it) return Ss(jK(it, zz), AK(it, zz), {
             check: !0,
-            useFree: ab
-          }), ta(null), void ra("");
-          if (ea || null === hA || void 0 === hA || !hA.question) {
-            if (!ea) return ra(""), void GU(bb, void 0, {
-              useFree: ab
+            useFree: tz
+          }), Lt(null), void ht("");
+          if (Ut || null === MF || void 0 === MF || !MF.question) {
+            if (!Ut) return ht(""), void ds(zz, void 0, {
+              useFree: tz
             });
-            Ka.length < 3 && (oa([...Ka, {
-              id: jU(),
-              text: bb,
-              useFree: ab
-            }]), ra(""))
+            Qt.length < 3 && (kt([...Qt, {
+              id: Ds(),
+              text: zz,
+              useFree: tz
+            }]), ht(""))
           } else {
-            var Ub, Ab, Mb;
-            ra("");
-            const Tb = null !== (Ub = null === (Ab = hA.askedFor) || void 0 === Ab ? void 0 : Ab.request) && void 0 !== Ub ? Ub : "",
-              Eb = ye(Tb, hA.question.question, bb);
-            GU(Eb, bb, {
+            var sz, Fz, Wz;
+            ht("");
+            const Xz = null !== (sz = null === (Fz = MF.askedFor) || void 0 === Fz ? void 0 : Fz.request) && void 0 !== sz ? sz : "",
+              Oz = xU(Xz, MF.question.question, zz);
+            ds(Oz, zz, {
               check: !0,
-              about: null === (Mb = hA.askedFor) || void 0 === Mb ? void 0 : Mb.request,
-              asked: `${Tb} ${bb}`,
-              useFree: ab
+              about: null === (Wz = MF.askedFor) || void 0 === Wz ? void 0 : Wz.request,
+              asked: `${Xz} ${zz}`,
+              useFree: tz
             })
           }
         }
-      }, uU = (0, Ab.useRef)(qU);
-    uU.current = qU;
-    const rU = (0, Ab.useRef)(GU);
-    rU.current = GU;
-    const KU = (0, Ab.useRef)(NU);
-    KU.current = NU;
-    const oU = (0, Ab.useRef)(null),
-      [lU, tU] = (0, Ab.useState)(null),
-      wU = Ka.filter((bb => void 0 === bb.followUp));
+      }, ks = (0, Fz.useRef)(Qs);
+    ks.current = Qs;
+    const is = (0, Fz.useRef)(ds);
+    is.current = ds;
+    const Ls = (0, Fz.useRef)(Zs);
+    Ls.current = Zs;
+    const ls = (0, Fz.useRef)(null),
+      [ns, as] = (0, Fz.useState)(null),
+      qs = Qt.filter((zz => void 0 === zz.followUp));
 
-    function sU(bb, ab, Ub) {
-      if (ea) {
-        if (Ka.length < 3) {
-          var Ab;
-          const Mb = null !== (Ab = Ub.useFree) && void 0 !== Ab ? Ab : fa && null !== uA;
-          Mb && ma(!1), oa([...Ka, {
-            id: jU(),
-            text: bb,
-            shown: ab,
-            ...Ub,
-            useFree: Mb
+    function Ss(zz, tz, sz) {
+      if (Ut) {
+        if (Qt.length < 3) {
+          var Fz;
+          const Wz = null !== (Fz = sz.useFree) && void 0 !== Fz ? Fz : mt && null !== kF;
+          Wz && Jt(!1), kt([...Qt, {
+            id: Ds(),
+            text: zz,
+            shown: tz,
+            ...sz,
+            useFree: Wz
           }])
         }
-      } else GU(bb, ab, Ub)
-    }(0, Ab.useEffect)((() => {
-      var bb, ab, Ub;
-      const [Ab, ...Mb] = Ka;
-      if (ea || !Ab || aU > 0) return;
-      const Tb = null === (bb = Ab.followUp) || void 0 === bb ? void 0 : bb.lookupOf;
-      if (void 0 !== Tb && !Ta.some((bb => bb.id === Tb))) return void oa(Mb);
-      if (null === (ab = Ab.replaced) || void 0 === ab ? void 0 : ab.some((bb => {
-          var ab;
+      } else ds(zz, tz, sz)
+    }(0, Fz.useEffect)((() => {
+      var zz, tz, sz;
+      const [Fz, ...Wz] = Qt;
+      if (Ut || !Fz || ss > 0) return;
+      const Xz = null === (zz = Fz.followUp) || void 0 === zz ? void 0 : zz.lookupOf;
+      if (void 0 !== Xz && !Xt.some((zz => zz.id === Xz))) return void kt(Wz);
+      if (null === (tz = Fz.replaced) || void 0 === tz ? void 0 : tz.some((zz => {
+          var tz;
           let {
-            path: Ub,
-            text: Ab
-          } = bb;
-          return (null !== (ab = Ib[Ub]) && void 0 !== ab ? ab : "") === Ab
+            path: sz,
+            text: Fz
+          } = zz;
+          return (null !== (tz = Gz[sz]) && void 0 !== tz ? tz : "") === Fz
         }))) {
-        var Eb;
-        const bb = (null !== (Eb = Ab.until) && void 0 !== Eb ? Eb : 0) - Date.now();
-        if (bb <= 0) return void oa(Mb);
-        const ab = setTimeout((() => {
-          oa((bb => [...bb]))
-        }), bb);
+        var Oz;
+        const zz = (null !== (Oz = Fz.until) && void 0 !== Oz ? Oz : 0) - Date.now();
+        if (zz <= 0) return void kt(Wz);
+        const tz = setTimeout((() => {
+          kt((zz => [...zz]))
+        }), zz);
         return () => {
-          clearTimeout(ab)
+          clearTimeout(tz)
         }
       }
-      if (void 0 !== Ab.opensPath && Ab.opensPath !== db) {
-        var Yb;
-        (null === (Yb = oU.current) || void 0 === Yb ? void 0 : Yb.id) !== Ab.id && (oU.current = {
-          id: Ab.id,
+      if (void 0 !== Fz.opensPath && Fz.opensPath !== Tz) {
+        var oz;
+        (null === (oz = ls.current) || void 0 === oz ? void 0 : oz.id) !== Fz.id && (ls.current = {
+          id: Fz.id,
           until: Date.now() + 3e3
-        }, KU.current({
+        }, Ls.current({
           role: "assistant",
-          text: mv(Ab.opensPath),
+          text: GK(Fz.opensPath),
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), Kb(Ab.opensPath, 1));
-        const bb = oU.current.until - Date.now();
-        if (bb > 0) {
-          const ab = setTimeout((() => {
-            oa((bb => [...bb]))
-          }), bb);
+        }), Qz(Fz.opensPath, 1));
+        const zz = ls.current.until - Date.now();
+        if (zz > 0) {
+          const tz = setTimeout((() => {
+            kt((zz => [...zz]))
+          }), zz);
           return () => {
-            clearTimeout(ab)
+            clearTimeout(tz)
           }
         }
       }
-      const Bb = null !== (Ub = Ab.followUp) && void 0 !== Ub ? Ub : {
-        ...void 0 === Ab.shown ? {} : {
-          check: Ab.check,
-          wordsOnly: Ab.wordsOnly,
-          isAutoFix: Ab.isAutoFix,
-          autoFixRound: Ab.autoFixRound
+      const vz = null !== (sz = Fz.followUp) && void 0 !== sz ? sz : {
+        ...void 0 === Fz.shown ? {} : {
+          check: Fz.check,
+          wordsOnly: Fz.wordsOnly,
+          isAutoFix: Fz.isAutoFix,
+          autoFixRound: Fz.autoFixRound
         },
-        useFree: Ab.useFree
+        useFree: Fz.useFree
       };
-      zL(Bb) && XY(TY.getState()) ? lU !== Ab.id && (tU(Ab.id), NY()) : (oa(Mb), rU.current(Ab.text, Ab.shown, Bb))
-    }), [ea, Ka, aU, Ib, Ta, db, Kb, dU, lU]);
-    const gU = (0, Ab.useRef)(sU);
-    gU.current = sU, (0, Ab.useEffect)((() => {
-      if (nb) {
-        var bb;
-        if (null === Sb || void 0 === Sb || Sb(), "change" === nb.action) return ta(nb), void(null === (bb = XU.current) || void 0 === bb || bb.focus());
-        ta(null), gU.current(Wv(nb), Hv(nb), {
+      Iu(vz) && go(vo.getState()) ? ns !== Fz.id && (as(Fz.id), Go()) : (kt(Wz), is.current(Fz.text, Fz.shown, vz))
+    }), [Ut, Qt, ss, Gz, Xt, Tz, Qz, As, ns]);
+    const Vs = (0, Fz.useRef)(Ss);
+    Vs.current = Ss, (0, Fz.useEffect)((() => {
+      if (fz) {
+        var zz;
+        if (null === Ez || void 0 === Ez || Ez(), "change" === fz.action) return Lt(fz), void(null === (zz = ws.current) || void 0 === zz || zz.focus());
+        Lt(null), Vs.current(jK(fz), AK(fz), {
           check: !1,
-          wordsOnly: "explain" === nb.action
+          wordsOnly: "explain" === fz.action
         })
       }
-    }), [nb, Sb]);
-    const CU = (bb, ab, Ub) => {
-        BL.add(tb, bb, ab, Date.now(), Ub).then(Pa).catch((bb => {
-          console.error("World Code AI: couldn't keep a version of the code", bb)
+    }), [fz, Ez]);
+    const Rs = (zz, tz, sz) => {
+        bu.add(Lz, zz, tz, Date.now(), sz).then(Nt).catch((zz => {
+          console.error("World Code AI: couldn't keep a version of the code", zz)
         }))
       },
-      VU = (0, Ab.useRef)(new Set),
-      OU = async function(bb, ab) {
+      ps = (0, Fz.useRef)(new Set),
+      fs = async function(zz, tz) {
         let {
-          tryAgainLater: Ub = !1
+          tryAgainLater: sz = !1
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Ab = kU.current;
-        if (bb.changes.some((bb => {
-            var ab;
-            return (null !== (ab = Ab[bb.path]) && void 0 !== ab ? ab : "") !== bb.before
-          }))) return IU(bb.id, "stale"), !1;
-        VU.current.add(bb.id);
-        if (!await Qb(bb.changes.map((bb => ({
-            path: bb.path,
-            text: bb.after
+        const Fz = Hs.current;
+        if (zz.changes.some((zz => {
+            var tz;
+            return (null !== (tz = Fz[zz.path]) && void 0 !== tz ? tz : "") !== zz.before
+          }))) return cs(zz.id, "stale"), !1;
+        ps.current.add(zz.id);
+        if (!await yz(zz.changes.map((zz => ({
+            path: zz.path,
+            text: zz.after
           })))).finally((() => {
-            VU.current.delete(bb.id)
-          }))) return Ub || IU(bb.id, "stale"), !1;
-        CU(function(bb) {
-          const ab = bb.replace(/\s+/g, " ").trim();
-          return `Before "${ab.length>200?`${ab.slice(0,200).trimEnd()}\u2026`:ab}"`
-        }(ab), Ab, function(bb) {
-          const ab = [...new Set(bb.flatMap((bb => {
-            var ab;
-            return null !== (ab = bb.why) && void 0 !== ab ? ab : []
+            ps.current.delete(zz.id)
+          }))) return sz || cs(zz.id, "stale"), !1;
+        Rs(function(zz) {
+          const tz = zz.replace(/\s+/g, " ").trim();
+          return `Before "${tz.length>200?`${tz.slice(0,200).trimEnd()}\u2026`:tz}"`
+        }(tz), Fz, function(zz) {
+          const tz = [...new Set(zz.flatMap((zz => {
+            var tz;
+            return null !== (tz = zz.why) && void 0 !== tz ? tz : []
           })))];
-          if (0 === ab.length) return;
-          const Ub = ab.map(((bb, ab) => 0 === ab ? bb.charAt(0).toUpperCase() + bb.slice(1) : bb.charAt(0).toLowerCase() + bb.slice(1))).join(", ");
-          return Ub.length > 400 ? `${Ub.slice(0,400).trimEnd()}\u2026` : Ub
-        }(bb.changes)), IU(bb.id, "applied"), bb.isPartial && HU(bb.id, {
-          changes: bb.changes
+          if (0 === tz.length) return;
+          const sz = tz.map(((zz, tz) => 0 === tz ? zz.charAt(0).toUpperCase() + zz.slice(1) : zz.charAt(0).toLowerCase() + zz.slice(1))).join(", ");
+          return sz.length > 400 ? `${sz.slice(0,400).trimEnd()}\u2026` : sz
+        }(zz.changes)), cs(zz.id, "applied"), zz.isPartial && Ts(zz.id, {
+          changes: zz.changes
         });
-        const Mb = Ta.find((ab => ab.id === bb.id && "pending" === ab.noteStatus));
-        return Mb && bb.isPartial ? iA(bb.id, "asked") : Mb && fA({
-          ...Mb,
+        const Wz = Xt.find((tz => tz.id === zz.id && "pending" === tz.noteStatus));
+        return Wz && zz.isPartial ? IF(zz.id, "asked") : Wz && CF({
+          ...Wz,
           status: "applied"
-        }, !0), Ba((ab => {
-          var Ub;
-          const Ab = null === (Ub = ab.findLast((ab => "user" === ab.role && ab.id < bb.id))) || void 0 === Ub ? void 0 : Ub.planStep;
-          return Ab ? ab.map((bb => {
-            var ab;
-            return bb.id === Ab.planId ? {
-              ...bb,
-              planDone: Math.max(null !== (ab = bb.planDone) && void 0 !== ab ? ab : 0, Ab.index + 1)
-            } : bb
-          })) : ab
-        })), RU.current = Date.now(), !0
-      }, cU = !ea && 0 === aU && (0 === Ka.length || Ka[0].id === lU), JU = (0, Ab.useRef)((() => Promise.resolve(!0)));
-    JU.current = async () => {
-      var bb;
-      const ab = Ma.pendingApply;
-      if (!ab || ab.targetKey !== ob.key) return !0;
-      const Ub = Ta.find((bb => bb.id === ab.entryId));
-      if (!Ub || "offered" !== Ub.status) return Ma.pendingApply = void 0, !0;
-      const Ab = null !== (bb = ab.picked) && void 0 !== bb ? bb : Ub.changes,
-        Mb = Ob && Fb && Ab.every((bb => {
-          var ab;
-          return (null !== (ab = kU.current[bb.path]) && void 0 !== ab ? ab : "") === bb.before
+        }, !0), vt((tz => {
+          var sz;
+          const Fz = null === (sz = tz.findLast((tz => "user" === tz.role && tz.id < zz.id))) || void 0 === sz ? void 0 : sz.planStep;
+          return Fz ? tz.map((zz => {
+            var tz;
+            return zz.id === Fz.planId ? {
+              ...zz,
+              planDone: Math.max(null !== (tz = zz.planDone) && void 0 !== tz ? tz : 0, Fz.index + 1)
+            } : zz
+          })) : tz
+        })), gs.current = Date.now(), !0
+      }, Es = !Ut && 0 === ss && (0 === Qt.length || Qt[0].id === ns), zF = (0, Fz.useRef)((() => Promise.resolve(!0)));
+    zF.current = async () => {
+      var zz;
+      const tz = Wt.pendingApply;
+      if (!tz || tz.targetKey !== kz.key) return !0;
+      const sz = Xt.find((zz => zz.id === tz.entryId));
+      if (!sz || "offered" !== sz.status) return Wt.pendingApply = void 0, !0;
+      const Fz = null !== (zz = tz.picked) && void 0 !== zz ? zz : sz.changes,
+        Wz = Vz && cz && Fz.every((zz => {
+          var tz;
+          return (null !== (tz = Hs.current[zz.path]) && void 0 !== tz ? tz : "") === zz.before
         }));
-      if (Date.now() > ab.until) return Ma.pendingApply = void 0, Mb && NU({
+      if (Date.now() > tz.until) return Wt.pendingApply = void 0, Wz && Zs({
         role: "assistant",
         text: "That change couldn't go in. Press Apply to try again.",
         changes: [],
         status: "offered",
         isNotice: !0
       }), !0;
-      if (!Mb || VU.current.has(Ub.id)) return !1;
-      const Tb = await OU({
-        id: Ub.id,
-        changes: Ab,
-        isPartial: void 0 !== ab.picked
-      }, NA(Ub.id), {
+      if (!Wz || ps.current.has(sz.id)) return !1;
+      const Xz = await fs({
+        id: sz.id,
+        changes: Fz,
+        isPartial: void 0 !== tz.picked
+      }, GF(sz.id), {
         tryAgainLater: !0
       });
-      Tb && Ma.pendingApply === ab && (Ma.pendingApply = void 0), Tb && ab.byItself && HU(Ub.id, {
+      Xz && Wt.pendingApply === tz && (Wt.pendingApply = void 0), Xz && tz.byItself && Ts(sz.id, {
         editedInPlace: !0
       });
-      const Eb = Ab[0];
-      return Tb && Eb && Kb(Eb.path, iv(Eb.before, Eb.after)), Tb
-    }, (0, Ab.useEffect)((() => {
-      var bb;
-      if ((null === (bb = Ma.pendingApply) || void 0 === bb ? void 0 : bb.targetKey) !== ob.key) return;
-      const ab = setInterval((() => {
-        JU.current().then((bb => {
-          bb && clearInterval(ab)
+      const Oz = Fz[0];
+      return Xz && Oz && Qz(Oz.path, eK(Oz.before, Oz.after)), Xz
+    }, (0, Fz.useEffect)((() => {
+      var zz;
+      if ((null === (zz = Wt.pendingApply) || void 0 === zz ? void 0 : zz.targetKey) !== kz.key) return;
+      const tz = setInterval((() => {
+        zF.current().then((zz => {
+          zz && clearInterval(tz)
         }))
       }), 250);
       return () => {
-        clearInterval(ab)
+        clearInterval(tz)
       }
-    }), [Ma, ob.key, Ob, Ib]);
-    const nU = (0, Ab.useRef)((() => !0));
-    nU.current = () => {
-      const bb = Ma.pendingInsert;
-      if (!bb || bb.targetKey !== ob.key) return !0;
-      if (Date.now() > bb.until) return Ma.pendingInsert = void 0, NU({
+    }), [Wt, kz.key, Vz, Gz]);
+    const tF = (0, Fz.useRef)((() => !0));
+    tF.current = () => {
+      const zz = Wt.pendingInsert;
+      if (!zz || zz.targetKey !== kz.key) return !0;
+      if (Date.now() > zz.until) return Wt.pendingInsert = void 0, Zs({
         role: "assistant",
-        text: void 0 === bb.code ? "World Code didn't open in time, so that wasn't asked here. Ask again." : "World Code didn't open in time, so the code block's World Code part isn't in. Here it is to add.",
+        text: void 0 === zz.code ? "World Code didn't open in time, so that wasn't asked here. Ask again." : "World Code didn't open in time, so the code block's World Code part isn't in. Here it is to add.",
         changes: [],
         status: "offered",
-        worldCode: void 0 === bb.code ? void 0 : [bb.code],
-        isNotice: void 0 === bb.code
+        worldCode: void 0 === zz.code ? void 0 : [zz.code],
+        isNotice: void 0 === zz.code
       }), !0;
-      const ab = Object.values(kU.current).some((bb => "" !== bb.trim()));
-      return !(!Ob || !Fb || !ab && Date.now() < bb.readyBy) && (Ma.pendingInsert = void 0, oa((ab => [{
-        id: jU(),
-        text: bb.request,
+      const tz = Object.values(Hs.current).some((zz => "" !== zz.trim()));
+      return !(!Vz || !cz || !tz && Date.now() < zz.readyBy) && (Wt.pendingInsert = void 0, kt((tz => [{
+        id: Ds(),
+        text: zz.request,
         shown: "Put the code in",
         followUp: {
-          ...bb.options,
-          insertsInto: db
+          ...zz.options,
+          insertsInto: Tz
         }
-      }, ...ab])), !0)
-    }, (0, Ab.useEffect)((() => {
-      var bb;
-      if ((null === (bb = Ma.pendingInsert) || void 0 === bb ? void 0 : bb.targetKey) !== ob.key) return;
-      const ab = setInterval((() => {
-        nU.current() && clearInterval(ab)
+      }, ...tz])), !0)
+    }, (0, Fz.useEffect)((() => {
+      var zz;
+      if ((null === (zz = Wt.pendingInsert) || void 0 === zz ? void 0 : zz.targetKey) !== kz.key) return;
+      const tz = setInterval((() => {
+        tF.current() && clearInterval(tz)
       }), 250);
       return () => {
-        clearInterval(ab)
+        clearInterval(tz)
       }
-    }), [Ma, ob.key, Ob, Ib]);
-    const SU = bb => {
-        eU((() => {
-          Bb.gameBridge.send("sendChatMessage", {
-            fE: "//export",
+    }), [Wt, kz.key, Vz, Gz]);
+    const sF = zz => {
+        Ks((() => {
+          vz.gameBridge.send("sendChatMessage", {
+            RO: "//export",
             channelName: null
           })
-        }), Math.max(0, RU.current + 600 - Date.now())), NU({
+        }), Math.max(0, gs.current + 600 - Date.now())), Zs({
           role: "assistant",
-          text: bb ? "Saving your game with //export, without this change. Apply it and ask me to save again to keep it too." : "Saving your game with //export. The chat says when it's saved.",
+          text: zz ? "Saving your game with //export, without this change. Apply it and ask me to save again to keep it too." : "Saving your game with //export. The chat says when it's saved.",
           changes: [],
           status: "offered",
           isNotice: !0,
-          isCalm: !bb || void 0
+          isCalm: !zz || void 0
         })
       },
-      bA = (bb, ab) => {
+      FF = (zz, tz) => {
         let {
-          leavesChangeBehind: Ub,
-          hasWorldCodePart: Ab
-        } = ab;
-        Ub ? NU({
+          leavesChangeBehind: sz,
+          hasWorldCodePart: Fz
+        } = tz;
+        sz ? Zs({
           role: "assistant",
-          text: NL(Ab),
+          text: cu(Fz),
           changes: [],
           status: "offered",
           isNotice: !0
-        }) : (NU({
+        }) : (Zs({
           role: "assistant",
           text: "Taking you to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), eU((() => {
-          null === wb || void 0 === wb || wb(bb, !1)
-        }), WL))
+        }), Ks((() => {
+          null === lz || void 0 === lz || lz(zz, !1)
+        }), ju))
       },
-      aA = (bb, ab) => {
-        !ab && Vb ? (NU({
+      WF = (zz, tz) => {
+        !tz && Sz ? (Zs({
           role: "assistant",
           text: "Moving to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), eU((() => {
-          Ma.pendingApply = {
-            entryId: bb,
-            targetKey: xv.d.key,
-            until: Date.now() + TL,
+        }), Ks((() => {
+          Wt.pendingApply = {
+            entryId: zz,
+            targetKey: CK.e.key,
+            until: Date.now() + Ku,
             byItself: !0
-          }, Vb(xv.d)
-        }), WL)) : NU({
+          }, Sz(CK.e)
+        }), ju)) : Zs({
           role: "assistant",
           text: "Apply this change first, then apply the World Code part.",
           changes: [],
@@ -14736,1441 +14736,1441 @@ const oL = (0, Ab.memo)((function(bb) {
           isNotice: !0
         })
       },
-      UA = bb => aa && "direct" === bb && Fb && !!Vb,
-      AA = (bb, ab, Ub) => {
-        Vb && (NU({
+      XF = zz => tt && "direct" === zz && cz && !!Sz,
+      OF = (zz, tz, sz) => {
+        Sz && (Zs({
           role: "assistant",
           text: "Moving to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), eU((() => {
-          null !== bb && (Ma.pendingInsert = {
-            targetKey: xv.d.key,
-            request: bb,
-            options: ab,
-            code: Ub,
+        }), Ks((() => {
+          null !== zz && (Wt.pendingInsert = {
+            targetKey: CK.e.key,
+            request: zz,
+            options: tz,
+            code: sz,
             readyBy: Date.now() + 4e3,
-            until: Date.now() + TL
-          }), Vb(xv.d)
-        }), WL))
+            until: Date.now() + Ku
+          }), Sz(CK.e)
+        }), ju))
       },
-      MA = async function(bb, ab) {
-        var Ub, Ab, Mb;
+      oF = async function(zz, tz) {
+        var sz, Fz, Wz;
         let {
-          replaced: Tb,
-          signal: Eb
+          replaced: Xz,
+          signal: Oz
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Yb = await async function(bb, ab) {
-          const Ub = [];
-          let Ab = null;
-          for (const Tb of bb) {
-            var Mb;
-            const bb = await mM(Tb, ab);
-            Ub.push(Tb.call ? {
-              ...bb.result,
-              call: Tb.call
-            } : bb.result), Ab = null !== (Mb = bb.worldCodeFiles) && void 0 !== Mb ? Mb : Ab
+        const oz = await async function(zz, tz) {
+          const sz = [];
+          let Fz = null;
+          for (const Xz of zz) {
+            var Wz;
+            const zz = await eW(Xz, tz);
+            sz.push(Xz.call ? {
+              ...zz.result,
+              call: Xz.call
+            } : zz.result), Fz = null !== (Wz = zz.worldCodeFiles) && void 0 !== Wz ? Wz : Fz
           }
           return {
-            results: Ub,
-            worldCodeFiles: Ab
+            results: sz,
+            worldCodeFiles: Fz
           }
-        }(bb, {
-          files: kU.current,
-          docs: PL(),
-          errors: hb,
-          viewChunk: null !== gb && void 0 !== gb ? gb : xL,
-          viewGameState: null !== Cb && void 0 !== Cb ? Cb : iL,
-          readWorldCode: sb,
-          fetchDocsPage: bb => async function(bb, ab, Ub) {
-            if ("" === bb.trim()) return `No url was given: give ${kb.n}, or a page it links to.`;
-            const Ab = Db(bb);
-            if (null === Ab) return bb.includes(kb.f) ? `${bb} is every page at once, too long to read: read ${kb.n}, then the page you need.` : `Only Bloxd's docs can be read: ${kb.n} and the pages it links to.`;
-            const Mb = `There is no docs page at ${bb}. ${kb.n} lists every page with its link.`,
-              Tb = `${bb} couldn't be read just now. Use get_docs instead.`,
-              Eb = (0, yb.b)(2e4, Ub);
-            let Yb;
+        }(zz, {
+          files: Hs.current,
+          docs: Hu(),
+          errors: jz,
+          viewChunk: null !== az && void 0 !== az ? az : Cu,
+          viewGameState: null !== qz && void 0 !== qz ? qz : eu,
+          readWorldCode: nz,
+          fetchDocsPage: zz => async function(zz, tz, sz) {
+            if ("" === zz.trim()) return `No url was given: give ${gz.i}, or a page it links to.`;
+            const Fz = Pz(zz);
+            if (null === Fz) return zz.includes(gz.e) ? `${zz} is every page at once, too long to read: read ${gz.i}, then the page you need.` : `Only Bloxd's docs can be read: ${gz.i} and the pages it links to.`;
+            const Wz = `There is no docs page at ${zz}. ${gz.i} lists every page with its link.`,
+              Xz = `${zz} couldn't be read just now. Use get_docs instead.`,
+              Oz = (0, Hz.c)(2e4, sz);
+            let oz;
             try {
-              var Bb;
-              const bb = await fetch(`${ab}${Ab}`, {
-                signal: Eb.signal
+              var vz;
+              const zz = await fetch(`${tz}${Fz}`, {
+                signal: Oz.signal
               });
-              if (404 === bb.status) return Mb;
-              if (!bb.ok) return console.warn("AI Helper: a docs page couldn't be read", Ab, bb.status), Tb;
-              if (null !== (Bb = bb.headers.get("content-type")) && void 0 !== Bb && Bb.startsWith("text/html")) return Mb;
-              Yb = await bb.text()
-            } catch (vb) {
-              return !0 !== (null === Ub || void 0 === Ub ? void 0 : Ub.aborted) && console.warn("AI Helper: a docs page couldn't be read", Ab, vb), Tb
+              if (404 === zz.status) return Wz;
+              if (!zz.ok) return console.warn("AI Helper: a docs page couldn't be read", Fz, zz.status), Xz;
+              if (null !== (vz = zz.headers.get("content-type")) && void 0 !== vz && vz.startsWith("text/html")) return Wz;
+              oz = await zz.text()
+            } catch (Kz) {
+              return !0 !== (null === sz || void 0 === sz ? void 0 : sz.aborted) && console.warn("AI Helper: a docs page couldn't be read", Fz, Kz), Xz
             } finally {
-              Eb.clear()
+              Oz.clear()
             }
-            const eb = (0, kb.C)(Ab);
-            return null !== eb && null === eb.part && Yb.length > kb.d ? `${bb} is too long to read whole: read the part you need. Its parts start at ${Rb.d}${(0,kb.x)(eb.name,0)}, and ${kb.n} says what each part has.` : Yb.length <= 4e4 ? Yb : (console.warn("AI Helper: a docs file is longer than any should be", Ab, Yb.length), `${Yb.slice(0,4e4)}\n\n(The rest of this page is cut off.)`)
-          }(bb, window.location.origin, Eb)
+            const Uz = (0, gz.t)(Fz);
+            return null !== Uz && null === Uz.part && oz.length > gz.c ? `${zz} is too long to read whole: read the part you need. Its parts start at ${Dz.c}${(0,gz.p)(Uz.name,0)}, and ${gz.i} says what each part has.` : oz.length <= 4e4 ? oz : (console.warn("AI Helper: a docs file is longer than any should be", Fz, oz.length), `${oz.slice(0,4e4)}\n\n(The rest of this page is cut off.)`)
+          }(zz, window.location.origin, Oz)
         });
-        if (null !== Eb && void 0 !== Eb && Eb.aborted) return "stopped";
-        const Bb = Yb.results,
-          eb = bb.flatMap((bb => "view_file" === bb.name && void 0 !== bb.args.path && bb.args.path in kU.current ? [bb.args.path] : [])),
-          vb = {
-            ...ab.options,
-            lookups: [...(null !== (Ub = ab.options.lookups) && void 0 !== Ub ? Ub : []).map(ML), ...Bb],
-            worldCodeFiles: null !== (Ab = Yb.worldCodeFiles) && void 0 !== Ab ? Ab : ab.options.worldCodeFiles,
-            viewedPaths: [...null !== (Mb = ab.options.viewedPaths) && void 0 !== Mb ? Mb : [], ...eb]
+        if (null !== Oz && void 0 !== Oz && Oz.aborted) return "stopped";
+        const vz = oz.results,
+          Uz = zz.flatMap((zz => "view_file" === zz.name && void 0 !== zz.args.path && zz.args.path in Hs.current ? [zz.args.path] : [])),
+          Kz = {
+            ...tz.options,
+            lookups: [...(null !== (sz = tz.options.lookups) && void 0 !== sz ? sz : []).map(Uu), ...vz],
+            worldCodeFiles: null !== (Fz = oz.worldCodeFiles) && void 0 !== Fz ? Fz : tz.options.worldCodeFiles,
+            viewedPaths: [...null !== (Wz = tz.options.viewedPaths) && void 0 !== Wz ? Wz : [], ...Uz]
           };
-        return oa((bb => [{
-          id: jU(),
-          text: ab.request,
-          shown: ab.shown,
-          followUp: vb,
-          ...Tb ? {
-            replaced: Tb,
-            until: Date.now() + mL
+        return kt((zz => [{
+          id: Ds(),
+          text: tz.request,
+          shown: tz.shown,
+          followUp: Kz,
+          ...Xz ? {
+            replaced: Xz,
+            until: Date.now() + Gu
           } : {}
-        }, ...bb])), "asked"
-      }, TA = (bb, ab, Ub) => {
-        Ba((Ab => Ab.map((Ab => Ab.id === bb ? {
-          ...Ab,
-          trial: ab,
-          trialErrors: null !== Ub && void 0 !== Ub ? Ub : Ab.trialErrors
-        } : Ab))))
-      }, EA = function(bb, ab) {
-        let Ub = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        ub && (MU(bb), eU((() => {
-          var Ub;
-          MU(null), na.current || DU.current.length > 0 || null !== (Ub = XU.current) && void 0 !== Ub && Ub.value.trim() || (Ca(ZU.current), ub({
-            chatKey: lb,
-            entryId: bb,
-            autoFixRound: ab
+        }, ...zz])), "asked"
+      }, vF = (zz, tz, sz) => {
+        vt((Fz => Fz.map((Fz => Fz.id === zz ? {
+          ...Fz,
+          trial: tz,
+          trialErrors: null !== sz && void 0 !== sz ? sz : Fz.trialErrors
+        } : Fz))))
+      }, UF = function(zz, tz) {
+        let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        dz && (Xs(zz), Ks((() => {
+          var sz;
+          Xs(null), Et.current || rs.current.length > 0 || null !== (sz = ws.current) && void 0 !== sz && sz.value.trim() || (St(Ps.current), dz({
+            chatKey: iz,
+            entryId: zz,
+            autoFixRound: tz
           }))
-        }), Math.max(Ub, RU.current + 1500 - Date.now())))
-      }, YA = () => {
-        LU(), (0, Ae.c)(lb)
+        }), Math.max(sz, gs.current + 1500 - Date.now())))
+      }, KF = () => {
+        Ns(), (0, vU.b)(iz)
       };
-    (0, Ab.useEffect)((() => {
-      if (!Ob || void 0 === (null === TU || void 0 === TU ? void 0 : TU.endedAt) || (null === YU || void 0 === YU ? void 0 : YU.target.key) !== ob.key) return void(void 0 === (null === TU || void 0 === TU ? void 0 : TU.endedAt) || YU || (0, Ae.n)(lb));
-      const bb = (0, Ae.n)(lb);
-      if (!bb) return;
-      const ab = (0, Ae.A)(bb);
-      KU.current({
+    (0, Fz.useEffect)((() => {
+      if (!Vz || void 0 === (null === Os || void 0 === Os ? void 0 : Os.endedAt) || (null === vs || void 0 === vs ? void 0 : vs.target.key) !== kz.key) return void(void 0 === (null === Os || void 0 === Os ? void 0 : Os.endedAt) || vs || (0, vU.n)(iz));
+      const zz = (0, vU.n)(iz);
+      if (!zz) return;
+      const tz = (0, vU.z)(zz);
+      Ls.current({
         role: "assistant",
-        text: ab.text,
+        text: tz.text,
         changes: [],
         status: "offered",
         isNotice: !0,
-        isCalm: 0 === bb.errors.length && void 0 !== bb.ranAt,
-        logTitle: ab.title
-      }), void 0 !== bb.ranAt && (0 !== bb.errors.length ? bb.autoFixRound >= 3 || (Ca(ZU.current), oa((ab => [{
-        id: jU(),
-        text: (0, Ae.w)(bb.errors),
-        shown: 1 === bb.errors.length ? "Fix the error" : "Fix these errors",
+        isCalm: 0 === zz.errors.length && void 0 !== zz.ranAt,
+        logTitle: tz.title
+      }), void 0 !== zz.ranAt && (0 !== zz.errors.length ? zz.autoFixRound >= 3 || (St(Ps.current), kt((tz => [{
+        id: Ds(),
+        text: (0, vU.w)(zz.errors),
+        shown: 1 === zz.errors.length ? "Fix the error" : "Fix these errors",
         check: !1,
         isAutoFix: !0,
-        autoFixRound: bb.autoFixRound + 1
-      }, ...ab]))) : TA(bb.entryId, "ask", ZU.current))
-    }), [TU, Ob, YU, ob.key, lb]);
-    const BA = async (bb, ab) => {
-      if (HU(bb.id, {
-          forgetStatus: ab ? "forgotten" : "RX"
-        }), ab) try {
-        for (const ab of null !== (Ub = bb.forgetNotes) && void 0 !== Ub ? Ub : []) {
-          var Ub;
-          ka(await eL.remove(tb, ab))
+        autoFixRound: zz.autoFixRound + 1
+      }, ...tz]))) : vF(zz.entryId, "ask", Ps.current))
+    }), [Os, Vz, vs, kz.key, iz]);
+    const uF = async (zz, tz) => {
+      if (Ts(zz.id, {
+          forgetStatus: tz ? "forgotten" : "Ow"
+        }), tz) try {
+        for (const tz of null !== (sz = zz.forgetNotes) && void 0 !== sz ? sz : []) {
+          var sz;
+          gt(await wu.remove(Lz, tz))
         }
-      } catch (Ab) {
-        console.error("World Code AI: couldn't forget a note", Ab), HU(bb.id, {
+      } catch (Fz) {
+        console.error("World Code AI: couldn't forget a note", Fz), Ts(zz.id, {
           forgetStatus: void 0
         })
       }
-    }, eA = (0, Ab.useCallback)((bb => bb.flatMap((bb => UL(PL(), bb, aa)))), [aa]), vA = (0, Ab.useRef)({}), LA = (0, Ab.useRef)({}), PA = (0, Ab.useRef)(Promise.resolve()), XA = (0, Ab.useRef)([]), jA = (0, Ab.useRef)(new Map), RA = (0, Ab.useRef)(new Map), kA = (0, Ab.useRef)(null), yA = () => {
-      Ga.current = !1, XA.current = [], jA.current = new Map, RA.current = new Map, kA.current = null, vA.current = {}, LA.current = {}, qa(null)
-    }, ZA = async () => {
-      if (!Qa) return;
-      const bb = kU.current,
-        ab = function(bb, ab, Ub) {
-          return Object.entries(ab).flatMap((ab => {
-            var Ab;
-            let [Mb, Tb] = ab;
-            const Eb = Ub[Mb];
-            if (void 0 === Eb) return [];
-            const Yb = new Map(ie(null !== (Ab = bb[Mb]) && void 0 !== Ab ? Ab : "").map((bb => [bb.key, bb.value]))),
-              Bb = new Map(ie(Tb).map((bb => [bb.key, bb.value])));
-            let eb = Eb;
-            for (const [bb, Ub] of Yb) {
-              var vb;
-              const ab = ie(eb).find((ab => ab.key === bb));
-              ab && ab.value !== Ub && Bb.get(bb) === ab.value && (eb = null !== (vb = fe(eb, ab, Ub)) && void 0 !== vb ? vb : eb)
+    }, NF = (0, Fz.useCallback)((zz => zz.flatMap((zz => ou(Hu(), zz, tt)))), [tt]), bF = (0, Fz.useRef)({}), wF = (0, Fz.useRef)({}), DF = (0, Fz.useRef)(Promise.resolve()), gF = (0, Fz.useRef)([]), HF = (0, Fz.useRef)(new Map), BF = (0, Fz.useRef)(new Map), PF = (0, Fz.useRef)(null), rF = () => {
+      At.current = !1, gF.current = [], HF.current = new Map, BF.current = new Map, PF.current = null, bF.current = {}, wF.current = {}, Mt(null)
+    }, YF = async () => {
+      if (!yt) return;
+      const zz = Hs.current,
+        tz = function(zz, tz, sz) {
+          return Object.entries(tz).flatMap((tz => {
+            var Fz;
+            let [Wz, Xz] = tz;
+            const Oz = sz[Wz];
+            if (void 0 === Oz) return [];
+            const oz = new Map(eU(null !== (Fz = zz[Wz]) && void 0 !== Fz ? Fz : "").map((zz => [zz.key, zz.value]))),
+              vz = new Map(eU(Xz).map((zz => [zz.key, zz.value])));
+            let Uz = Oz;
+            for (const [zz, sz] of oz) {
+              var Kz;
+              const tz = eU(Uz).find((tz => tz.key === zz));
+              tz && tz.value !== sz && vz.get(zz) === tz.value && (Uz = null !== (Kz = ZU(Uz, tz, sz)) && void 0 !== Kz ? Kz : Uz)
             }
-            return eb === Eb ? [] : [{
-              path: Mb,
-              text: eb
+            return Uz === Oz ? [] : [{
+              path: Wz,
+              text: Uz
             }]
           }))
-        }(Qa, vA.current, bb);
-      if (ab.length > 0) {
-        if (!await Qb(ab)) return;
-        CU(function(bb) {
-          const ab = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).filter((ab => bb.includes(ab.name))).map((bb => ({
-            name: bb.name,
-            from: bb.to,
-            to: bb.from
+        }(yt, bF.current, zz);
+      if (tz.length > 0) {
+        if (!await yz(tz)) return;
+        Rs(function(zz) {
+          const tz = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).filter((tz => zz.includes(tz.name))).map((zz => ({
+            name: zz.name,
+            from: zz.to,
+            to: zz.from
           })));
-          return ab.length > 0 ? We(ab, "undoing") : 0 === bb.length ? "Before undoing settings" : `Before undoing settings: ${(bb.length>3?[...bb.slice(0,3),bb.length-3+" more"]:bb).join(", ")}`
-        }(XA.current, [...jA.current.values()]), bb), RU.current = Date.now()
+          return tz.length > 0 ? jU(tz, "undoing") : 0 === zz.length ? "Before undoing settings" : `Before undoing settings: ${(zz.length>3?[...zz.slice(0,3),zz.length-3+" more"]:zz).join(", ")}`
+        }(gF.current, [...HF.current.values()]), zz), gs.current = Date.now()
       }
-      yA()
-    }, DA = !aa && Object.values(Ib).some((bb => ie(bb).length > 0)), zA = function(bb) {
+      rF()
+    }, xF = !tt && Object.values(Gz).some((zz => eU(zz).length > 0)), mF = function(zz) {
       let {
-        codeBlock: ab,
-        hasSettings: Ub,
-        canEdit: Mb
-      } = bb;
-      return (0, Ab.useEffect)((() => {
-        (0, VB.G)("aiNotes", !ab)
-      }), [ab]), (0, Ab.useEffect)((() => {
-        (0, VB.G)("aiGameSettings", Ub)
-      }), [Ub]), (0, Ab.useEffect)((() => {
-        (0, VB.G)("aiEdits", Mb)
-      }), [Mb]), (0, OB.k)("aiHelperOverview")
+        codeBlock: tz,
+        hasSettings: sz,
+        canEdit: Wz
+      } = zz;
+      return (0, Fz.useEffect)((() => {
+        (0, Ev.H)("aiNotes", !tz)
+      }), [tz]), (0, Fz.useEffect)((() => {
+        (0, Ev.H)("aiGameSettings", sz)
+      }), [sz]), (0, Fz.useEffect)((() => {
+        (0, Ev.H)("aiEdits", Wz)
+      }), [Wz]), (0, zU.j)("aiHelperOverview")
     }({
-      codeBlock: aa,
-      hasSettings: DA,
-      canEdit: Fb
+      codeBlock: tt,
+      hasSettings: xF,
+      canEdit: cz
     });
-    (0, Ab.useEffect)((() => {
-      zA && (ja(!1), Za(!1), za(!1), ia(null))
-    }), [zA]);
-    const xA = async bb => {
-      const ab = ba(bb);
-      return null === ab ? "Notes are only about your game, never personal details." : "ok" !== await QT(ab) ? "This note can't be saved. Notes are only about your game." : (ka(await eL.add(tb, ab)), null)
-    }, iA = (bb, ab) => {
-      HU(bb, {
-        noteStatus: ab
+    (0, Fz.useEffect)((() => {
+      mF && (wt(!1), Bt(!1), rt(!1), xt(null))
+    }), [mF]);
+    const JF = async zz => {
+      const tz = zt(zz);
+      return null === tz ? "Notes are only about your game, never personal details." : "ok" !== await hX(tz) ? "This note can't be saved. Notes are only about your game." : (gt(await wu.add(Lz, tz)), null)
+    }, IF = (zz, tz) => {
+      Ts(zz, {
+        noteStatus: tz
       })
-    }, fA = async (bb, ab) => {
-      if (ab && void 0 !== bb.note)
-        if (bb.changes.length > 0 && "offered" === bb.status) iA(bb.id, "pending");
+    }, CF = async (zz, tz) => {
+      if (tz && void 0 !== zz.note)
+        if (zz.changes.length > 0 && "offered" === zz.status) IF(zz.id, "pending");
         else {
-          iA(bb.id, "checking");
+          IF(zz.id, "checking");
           try {
-            iA(bb.id, null === await xA(bb.note) ? "saved" : "refused")
-          } catch (Ub) {
-            console.error("World Code AI: couldn't keep a note", Ub), iA(bb.id, "asked")
+            IF(zz.id, null === await JF(zz.note) ? "saved" : "refused")
+          } catch (sz) {
+            console.error("World Code AI: couldn't keep a note", sz), IF(zz.id, "asked")
           }
         }
-      else iA(bb.id, "declined")
-    }, mA = bb => {
-      var ab;
-      const Ub = null === (ab = Ta.find((ab => ab.id === bb))) || void 0 === ab ? void 0 : ab.target.key;
-      return Ta.findLast((ab => "user" === ab.role && ab.id < bb && ab.target.key === Ub))
-    }, pA = bb => {
-      var ab;
-      return null === (ab = mA(bb)) || void 0 === ab ? void 0 : ab.asked
-    }, NA = bb => {
-      var ab, Ub;
-      const Ab = mA(bb);
-      return null !== (ab = null !== (Ub = null === Ab || void 0 === Ab ? void 0 : Ab.about) && void 0 !== Ub ? Ub : null === Ab || void 0 === Ab ? void 0 : Ab.text) && void 0 !== ab ? ab : "a change"
-    }, WA = Ta.filter(WU), HA = null === (Zb = WA[WA.length - 1]) || void 0 === Zb ? void 0 : Zb.id, IA = null !== (zb = null === (xb = WA.findLast((bb => "user" === bb.role))) || void 0 === xb ? void 0 : xb.id) && void 0 !== zb ? zb : 0, dA = WA.length < Ta.length, FA = WA[WA.length - 1], hA = null !== FA && void 0 !== FA && null !== (ib = FA.question) && void 0 !== ib && ib.allowOther && !ea ? FA : void 0, GA = (0, Ab.useRef)(!1), QA = () => {
-      GA.current = !0, ia("settings")
-    }, qA = () => {
-      ja(!1), Za(!1), za(!1), pa.current = null, Wa(null), ia("addKey")
+      else IF(zz.id, "declined")
+    }, eF = zz => {
+      var tz;
+      const sz = null === (tz = Xt.find((tz => tz.id === zz))) || void 0 === tz ? void 0 : tz.target.key;
+      return Xt.findLast((tz => "user" === tz.role && tz.id < zz && tz.target.key === sz))
+    }, ZF = zz => {
+      var tz;
+      return null === (tz = eF(zz)) || void 0 === tz ? void 0 : tz.asked
+    }, GF = zz => {
+      var tz, sz;
+      const Fz = eF(zz);
+      return null !== (tz = null !== (sz = null === Fz || void 0 === Fz ? void 0 : Fz.about) && void 0 !== sz ? sz : null === Fz || void 0 === Fz ? void 0 : Fz.text) && void 0 !== tz ? tz : "a change"
+    }, TF = Xt.filter(Gs), cF = null === (Bz = TF[TF.length - 1]) || void 0 === Bz ? void 0 : Bz.id, jF = null !== (rz = null === (Yz = TF.findLast((zz => "user" === zz.role))) || void 0 === Yz ? void 0 : Yz.id) && void 0 !== rz ? rz : 0, AF = TF.length < Xt.length, yF = TF[TF.length - 1], MF = null !== yF && void 0 !== yF && null !== (xz = yF.question) && void 0 !== xz && xz.allowOther && !Ut ? yF : void 0, dF = (0, Fz.useRef)(!1), hF = () => {
+      dF.current = !0, xt("settings")
+    }, QF = () => {
+      wt(!1), Bt(!1), rt(!1), It.current = null, et(null), xt("addKey")
     }, {
-      activeKey: uA,
-      cutShortActions: rA,
-      noticeActions: KA
-    } = function(bb) {
-      var ab;
+      activeKey: kF,
+      cutShortActions: iF,
+      noticeActions: LF
+    } = function(zz) {
+      var tz;
       let {
-        entries: Ub,
-        busy: Ab,
-        send: Mb,
-        onCheckKey: Tb
-      } = bb;
+        entries: sz,
+        busy: Fz,
+        send: Wz,
+        onCheckKey: Xz
+      } = zz;
       const {
-        active: Eb
-      } = OE(), Yb = null === (ab = Ub.findLast((bb => "assistant" === bb.role && !bb.isNotice))) || void 0 === ab ? void 0 : ab.id;
+        active: Oz
+      } = fO(), oz = null === (tz = sz.findLast((zz => "assistant" === zz.role && !zz.isNotice))) || void 0 === tz ? void 0 : tz.id;
       return {
-        activeKey: Eb,
-        cutShortActions: (bb, ab) => ({
-          canFinish: !Ab && bb === Yb && (null === Eb || void 0 === Eb ? void 0 : Eb.id) === ab.keyId && Eb.model.id === ab.modelId,
+        activeKey: Oz,
+        cutShortActions: (zz, tz) => ({
+          canFinish: !Fz && zz === oz && (null === Oz || void 0 === Oz ? void 0 : Oz.id) === tz.keyId && Oz.model.id === tz.modelId,
           onFinish: () => {
-            Mb(ab.request, {
-              retryOf: bb,
-              continueFrom: ab.written
+            Wz(tz.request, {
+              retryOf: zz,
+              continueFrom: tz.written
             })
           }
         }),
-        noticeActions: (bb, ab, Ub) => ({
-          notice: Ub.notice,
+        noticeActions: (zz, tz, sz) => ({
+          notice: sz.notice,
           onRetry: () => {
-            Mb(ab, {
-              retryOf: bb
+            Wz(tz, {
+              retryOf: zz
             })
           },
           onUseFree: () => {
-            Mb(ab, {
+            Wz(tz, {
               useFree: !0,
-              retryOf: bb
+              retryOf: zz
             })
           },
-          onCheckKey: Tb
+          onCheckKey: Xz
         })
       }
     }({
-      entries: WA,
-      busy: !!ea,
-      send: (bb, ab) => {
+      entries: TF,
+      busy: !!Ut,
+      send: (zz, tz) => {
         let {
-          useFree: Ub,
-          retryOf: Ab,
-          continueFrom: Mb
-        } = ab;
-        const Tb = Ta.find((bb => bb.id === Ab));
-        return GU(bb, null === Tb || void 0 === Tb ? void 0 : Tb.retryShown, {
-          ...null === Tb || void 0 === Tb ? void 0 : Tb.retryOptions,
-          useFree: Ub,
-          retryOf: Ab,
-          continueFrom: Mb
+          useFree: sz,
+          retryOf: Fz,
+          continueFrom: Wz
+        } = tz;
+        const Xz = Xt.find((zz => zz.id === Fz));
+        return ds(zz, null === Xz || void 0 === Xz ? void 0 : Xz.retryShown, {
+          ...null === Xz || void 0 === Xz ? void 0 : Xz.retryOptions,
+          useFree: sz,
+          retryOf: Fz,
+          continueFrom: Wz
         })
       },
-      onCheckKey: QA
-    }), oA = PY(dU) ? dU.status : null, lA = null !== oA && void 0 !== oA && oA.isSuper ? oA.resetsAt : null, tA = (0, Ab.useRef)({
+      onCheckKey: hF
+    }), lF = Do(As) ? As.status : null, nF = null !== lF && void 0 !== lF && lF.isSuper ? lF.resetsAt : null, aF = (0, Fz.useRef)({
       resetsAt: 0,
       count: 0,
       nextAt: 0
     });
-    (0, Ab.useEffect)((() => {
-      if (null === lA) return;
-      if (lA <= ca) {
-        tA.current.resetsAt !== lA && (tA.current = {
-          resetsAt: lA,
+    (0, Fz.useEffect)((() => {
+      if (null === nF) return;
+      if (nF <= pt) {
+        aF.current.resetsAt !== nF && (aF.current = {
+          resetsAt: nF,
           count: 0,
           nextAt: 0
         });
-        const bb = tA.current,
-          ab = [15e3, 6e4, 24e4];
-        if (bb.count > ab.length) return;
-        let Ub = !1;
-        const Ab = setTimeout((() => {
-          var Ab;
-          bb.nextAt = Date.now() + (null !== (Ab = ab[bb.count]) && void 0 !== Ab ? Ab : 0), bb.count++, TY.refresh().then((() => {
-            Ub || Ja(Date.now())
+        const zz = aF.current,
+          tz = [15e3, 6e4, 24e4];
+        if (zz.count > tz.length) return;
+        let sz = !1;
+        const Fz = setTimeout((() => {
+          var Fz;
+          zz.nextAt = Date.now() + (null !== (Fz = tz[zz.count]) && void 0 !== Fz ? Fz : 0), zz.count++, vo.refresh().then((() => {
+            sz || ft(Date.now())
           }))
-        }), Math.max(0, bb.nextAt - Date.now()));
+        }), Math.max(0, zz.nextAt - Date.now()));
         return () => {
-          Ub = !0, clearTimeout(Ab)
+          sz = !0, clearTimeout(Fz)
         }
       }
-      const bb = setTimeout((() => {
-        Ja(Date.now())
-      }), Math.max(0, (lA - ca - 1) % 6e4 + 1 - (Date.now() - ca)));
+      const zz = setTimeout((() => {
+        ft(Date.now())
+      }), Math.max(0, (nF - pt - 1) % 6e4 + 1 - (Date.now() - pt)));
       return () => {
-        clearTimeout(bb)
+        clearTimeout(zz)
       }
-    }), [lA, ca]);
-    const wA = uA ? `${uA.id}/${uA.model.id}` : null;
-    (0, Ab.useEffect)((() => {
-      ma(!1)
-    }), [wA]);
-    const sA = Object.values(Ib).some((bb => "" !== bb.trim())),
-      CA = Xa || ya || Da || null !== xa,
-      VA = "aiAnswer" === zA || ("aiNotes" === zA || "aiGameSettings" === zA || "aiGear" === zA) && CA ? zA : "aiPanel",
-      cA = (0, Ab.useRef)(null),
-      JA = (0, Ab.useRef)(null),
-      nA = (0, Ab.useRef)(xa);
-    (0, Ab.useEffect)((() => {
-      if (nA.current === xa) return;
-      nA.current = xa;
+    }), [nF, pt]);
+    const qF = kF ? `${kF.id}/${kF.model.id}` : null;
+    (0, Fz.useEffect)((() => {
+      Jt(!1)
+    }), [qF]);
+    const SF = Object.values(Gz).some((zz => "" !== zz.trim())),
+      RF = bt || Ht || Pt || null !== Yt,
+      pF = "aiAnswer" === mF || ("aiNotes" === mF || "aiGameSettings" === mF || "aiGear" === mF) && RF ? mF : "aiPanel",
+      EF = (0, Fz.useRef)(null),
+      zW = (0, Fz.useRef)(null),
+      tW = (0, Fz.useRef)(Yt);
+    (0, Fz.useEffect)((() => {
+      if (tW.current === Yt) return;
+      tW.current = Yt;
       if (!document.activeElement || document.activeElement === document.body) {
-        var bb;
-        null === (bb = (xa ? cA : JA).current) || void 0 === bb || bb.focus()
+        var zz;
+        null === (zz = (Yt ? EF : zW).current) || void 0 === zz || zz.focus()
       }
-    }), [xa]), (0, Ab.useEffect)((() => {
-      const bb = PU.current;
-      if (!xa || !bb) return;
-      bb.scrollTo({
+    }), [Yt]), (0, Fz.useEffect)((() => {
+      const zz = bs.current;
+      if (!Yt || !zz) return;
+      zz.scrollTo({
         top: 0
       });
-      const ab = "settings" === xa && GA.current ? bb.querySelector(".WorldCodeAiModelRow.Selected") : null;
-      if (ab && ab.getBoundingClientRect().bottom > bb.getBoundingClientRect().bottom && !WB(bb, ab)) {
-        const Ub = bb.getBoundingClientRect(),
-          Ab = ab.getBoundingClientRect();
-        bb.scrollTop += Ab.top - Ub.top - (Ub.height - Ab.height) / 2
+      const tz = "settings" === Yt && dF.current ? zz.querySelector(".WorldCodeAiModelRow.Selected") : null;
+      if (tz && tz.getBoundingClientRect().bottom > zz.getBoundingClientRect().bottom && !jv(zz, tz)) {
+        const sz = zz.getBoundingClientRect(),
+          Fz = tz.getBoundingClientRect();
+        zz.scrollTop += Fz.top - sz.top - (sz.height - Fz.height) / 2
       }
       return () => {
-        bb.style.paddingBottom = ""
+        zz.style.paddingBottom = ""
       }
-    }), [xa]);
+    }), [Yt]);
     const {
-      disclosureRef: bM,
-      gearLabelRef: aM,
-      hasGearLabel: UM
-    } = function(bb, ab) {
-      const Ub = (0, Ab.useRef)(null),
-        Mb = (0, Ab.useRef)(null),
-        Tb = (0, Ab.useRef)(0),
-        [Eb, Yb] = (0, Ab.useState)(!0);
-      return (0, Ab.useLayoutEffect)((() => {
-        const ab = Ub.current;
-        if (!ab || "undefined" === typeof ResizeObserver) return;
-        const Ab = () => {
-          const Ub = document.createRange();
-          if (Ub.selectNodeContents(ab), "function" !== typeof Ub.getBoundingClientRect) return;
-          const Ab = Ub.getBoundingClientRect().width,
-            Eb = Mb.current;
-          if (Eb) {
-            const Ub = bb.current,
-              Mb = Ub && parseFloat(getComputedStyle(Ub).columnGap) || 0;
-            Tb.current = Eb.getBoundingClientRect().width + Mb, Ab > ab.clientWidth + 1 && Yb(!1)
-          } else ab.clientWidth - Ab >= Tb.current && Yb(!0)
+      disclosureRef: FW,
+      gearLabelRef: WW,
+      hasGearLabel: XW
+    } = function(zz, tz) {
+      const sz = (0, Fz.useRef)(null),
+        Wz = (0, Fz.useRef)(null),
+        Xz = (0, Fz.useRef)(0),
+        [Oz, oz] = (0, Fz.useState)(!0);
+      return (0, Fz.useLayoutEffect)((() => {
+        const tz = sz.current;
+        if (!tz || "undefined" === typeof ResizeObserver) return;
+        const Fz = () => {
+          const sz = document.createRange();
+          if (sz.selectNodeContents(tz), "function" !== typeof sz.getBoundingClientRect) return;
+          const Fz = sz.getBoundingClientRect().width,
+            Oz = Wz.current;
+          if (Oz) {
+            const sz = zz.current,
+              Wz = sz && parseFloat(getComputedStyle(sz).columnGap) || 0;
+            Xz.current = Oz.getBoundingClientRect().width + Wz, Fz > tz.clientWidth + 1 && oz(!1)
+          } else tz.clientWidth - Fz >= Xz.current && oz(!0)
         };
-        Ab();
-        const Eb = new ResizeObserver(Ab);
-        return Eb.observe(ab), () => {
-          Eb.disconnect()
+        Fz();
+        const Oz = new ResizeObserver(Fz);
+        return Oz.observe(tz), () => {
+          Oz.disconnect()
         }
-      }), [bb, ab]), {
-        disclosureRef: Ub,
-        gearLabelRef: Mb,
-        hasGearLabel: Eb
+      }), [zz, tz]), {
+        disclosureRef: sz,
+        gearLabelRef: Wz,
+        hasGearLabel: Oz
       }
-    }(JA, CA), AM = () => {
-      var bb;
-      oa([]), null === (bb = na.current) || void 0 === bb || bb.abort(), LU()
-    }, MM = (0, Eb.jsxs)("div", {
-      className: Tb()("WorldCodeAiPanel", xa && "WorldCodeAiPanel-aiView"),
-      children: [(0, Eb.jsxs)("div", {
+    }(zW, RF), OW = () => {
+      var zz;
+      kt([]), null === (zz = Et.current) || void 0 === zz || zz.abort(), Ns()
+    }, oW = (0, Oz.jsxs)("div", {
+      className: Xz()("WorldCodeAiPanel", Yt && "WorldCodeAiPanel-aiView"),
+      children: [(0, Oz.jsxs)("div", {
         className: "WorldCodeAiHeader",
-        children: [(0, Eb.jsx)("span", {
+        children: [(0, Oz.jsx)("span", {
           className: "WorldCodeAiTitle",
           children: "AI Helper"
-        }), (0, Eb.jsx)("span", {
-          ref: bM,
+        }), (0, Oz.jsx)("span", {
+          ref: FW,
           className: "WorldCodeAiDisclosure",
           title: "AI can be wrong. Check its changes.",
           children: "AI can be wrong."
-        }), CA && (0, Eb.jsx)("button", {
-          ref: cA,
+        }), RF && (0, Oz.jsx)("button", {
+          ref: EF,
           className: "WorldCodeAiLinkButton WorldCodeAiBackButton",
           onClick: () => {
-            ja(!1), Za(!1), za(!1), ia("addKey" === xa ? pa.current : null)
+            wt(!1), Bt(!1), rt(!1), xt("addKey" === Yt ? It.current : null)
           },
-          children: "addKey" === xa && pa.current ? "Back" : "Back to chat"
-        }), xa && (0, Eb.jsx)("h3", {
+          children: "addKey" === Yt && It.current ? "Back" : "Back to chat"
+        }), Yt && (0, Oz.jsx)("h3", {
           className: "WorldCodeAiViewTitle",
-          children: "settings" === xa ? "AI settings" : Na ? `Edit ${lE(Na)} key` : "Add an API key"
-        }), "settings" === xa && (0, Eb.jsxs)("span", {
+          children: "settings" === Yt ? "AI settings" : Ct ? `Edit ${nO(Ct)} key` : "Add an API key"
+        }), "settings" === Yt && (0, Oz.jsxs)("span", {
           className: "WorldCodeAiViewUsing",
-          children: [(0, Eb.jsxs)("span", {
+          children: [(0, Oz.jsxs)("span", {
             className: "WorldCodeAiViewUsingModel",
-            children: ["Using:", " ", uA ? fa ? "Bot.xd (free) for the next question" : SB(uA) : oA ? SE : "Bot.xd (free)"]
-          }), (0, Eb.jsxs)("span", {
+            children: ["Using:", " ", kF ? mt ? "Bot.xd (free) for the next question" : WU(kF) : lF ? so : "Bot.xd (free)"]
+          }), (0, Oz.jsxs)("span", {
             className: "WorldCodeAiViewUsingEdits",
-            children: ["Edits: ", ha ? "On" : "Off"]
+            children: ["Edits: ", jt ? "On" : "Off"]
           })]
-        }), CA && ea && (0, Eb.jsx)("button", {
+        }), RF && Ut && (0, Oz.jsx)("button", {
           className: "WorldCodeAiStop WorldCodeAiHeaderStop",
-          onClick: AM,
+          onClick: OW,
           children: "Stop answer"
-        }), !CA && !aa && (0, Eb.jsx)(cB, {
+        }), !RF && !tt && (0, Oz.jsx)(tU, {
           step: "aiNotes",
           placement: "bottom",
-          children: (0, Eb.jsx)("button", {
-            className: Tb()("WorldCodeAiLinkButton", ya && "WorldCodeAiLinkButton-active"),
-            "aria-pressed": ya,
+          children: (0, Oz.jsx)("button", {
+            className: Xz()("WorldCodeAiLinkButton", Ht && "WorldCodeAiLinkButton-active"),
+            "aria-pressed": Ht,
             onClick: () => {
-              ja(!1), za(!1), Za(!ya)
+              wt(!1), rt(!1), Bt(!Ht)
             },
             children: "AI notes"
           })
-        }), !CA && DA && (0, Eb.jsx)(cB, {
+        }), !RF && xF && (0, Oz.jsx)(tU, {
           step: "aiGameSettings",
           placement: "bottom",
-          children: (0, Eb.jsx)("button", {
-            className: Tb()("WorldCodeAiLinkButton", Da && "WorldCodeAiLinkButton-active"),
-            "aria-pressed": Da,
+          children: (0, Oz.jsx)("button", {
+            className: Xz()("WorldCodeAiLinkButton", Pt && "WorldCodeAiLinkButton-active"),
+            "aria-pressed": Pt,
             onClick: () => {
-              yA(), ja(!1), Za(!1), za(!Da)
+              rF(), wt(!1), Bt(!1), rt(!Pt)
             },
             children: "Game settings"
           })
-        }), !CA && La.length > 0 && (0, Eb.jsx)("button", {
-          className: Tb()("WorldCodeAiLinkButton", Xa && "WorldCodeAiLinkButton-active"),
-          "aria-pressed": Xa,
+        }), !RF && ut.length > 0 && (0, Oz.jsx)("button", {
+          className: Xz()("WorldCodeAiLinkButton", bt && "WorldCodeAiLinkButton-active"),
+          "aria-pressed": bt,
           onClick: () => {
-            Ja(Date.now()), Za(!1), za(!1), ja(!Xa)
+            ft(Date.now()), Bt(!1), rt(!1), wt(!bt)
           },
           children: "History"
-        }), !CA && Ta.length > 0 && (0, Eb.jsx)("button", {
+        }), !RF && Xt.length > 0 && (0, Oz.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          disabled: !!ea,
+          disabled: !!Ut,
           onClick: () => {
-            YA(), oa([]), Ba([]), Ma.turns = new ST
+            KF(), kt([]), vt([]), Wt.turns = new sO
           },
           children: "New chat"
-        }), !CA && (0, Eb.jsx)(cB, {
+        }), !RF && (0, Oz.jsx)(tU, {
           step: "aiGear",
           placement: "bottom",
-          children: (0, Eb.jsxs)("button", {
-            ref: JA,
+          children: (0, Oz.jsxs)("button", {
+            ref: zW,
             className: "WorldCodeAiLinkButton WorldCodeAiGear",
             "aria-label": "AI Helper settings",
             title: "AI Helper settings",
             onClick: () => {
-              GA.current = !1, ia("settings")
+              dF.current = !1, xt("settings")
             },
-            children: [(0, Eb.jsx)(Pb.e, {
+            children: [(0, Oz.jsx)(Nz.c, {
               name: "gear"
-            }), UM && (0, Eb.jsx)("span", {
-              ref: aM,
+            }), XW && (0, Oz.jsx)("span", {
+              ref: WW,
               className: "WorldCodeAiGearLabel",
               children: "Settings"
             })]
           })
         })]
-      }), (0, Eb.jsxs)("div", {
+      }), (0, Oz.jsxs)("div", {
         className: "WorldCodeAiMessages",
-        ref: PU,
-        role: CA ? void 0 : "log",
-        "aria-live": CA ? void 0 : "polite",
-        children: [Xa && (0, Eb.jsx)(Pe, {
-          snapshots: La,
-          files: Ib,
-          now: ca,
-          onRestore: Fb && !ea ? bb => {
-            (async bb => {
-              const ab = kU.current,
-                Ub = ee(bb, ab);
-              if (0 === Ub.length) return;
-              if (!await Qb(Ub)) return;
-              CU("Before going back", ab), ja(!1), null !== AU && YA();
-              const Ab = {};
-              for (const Eb of Ub) Ab[Eb.path] = Eb.text;
-              const Mb = bb => WU(bb) && "applied" === bb.status && bb.changes.some((bb => bb.path in Ab && Ab[bb.path] !== bb.after)),
-                Tb = Ta.filter((bb => Mb(bb) && "saved" === bb.noteStatus && void 0 !== bb.note && Ra.includes(bb.note))).map((bb => {
-                  var ab;
-                  return null !== (ab = bb.note) && void 0 !== ab ? ab : ""
+        ref: bs,
+        role: RF ? void 0 : "log",
+        "aria-live": RF ? void 0 : "polite",
+        children: [bt && (0, Oz.jsx)(HU, {
+          snapshots: ut,
+          files: Gz,
+          now: pt,
+          onRestore: cz && !Ut ? zz => {
+            (async zz => {
+              const tz = Hs.current,
+                sz = wU(zz, tz);
+              if (0 === sz.length) return;
+              if (!await yz(sz)) return;
+              Rs("Before going back", tz), wt(!1), null !== Ws && KF();
+              const Fz = {};
+              for (const Oz of sz) Fz[Oz.path] = Oz.text;
+              const Wz = zz => Gs(zz) && "applied" === zz.status && zz.changes.some((zz => zz.path in Fz && Fz[zz.path] !== zz.after)),
+                Xz = Xt.filter((zz => Wz(zz) && "saved" === zz.noteStatus && void 0 !== zz.note && Dt.includes(zz.note))).map((zz => {
+                  var tz;
+                  return null !== (tz = zz.note) && void 0 !== tz ? tz : ""
                 }));
-              Ba((bb => bb.map((bb => Mb(bb) ? {
-                ...bb,
+              vt((zz => zz.map((zz => Wz(zz) ? {
+                ...zz,
                 status: "undone",
                 wentBack: !0,
-                noteStatus: "asked" === bb.noteStatus ? void 0 : bb.noteStatus
-              } : bb)))), NU({
+                noteStatus: "asked" === zz.noteStatus ? void 0 : zz.noteStatus
+              } : zz)))), Zs({
                 role: "assistant",
                 text: "Your code is back to how it was.",
                 changes: [],
                 status: "offered",
                 isNotice: !0,
                 isCalm: !0,
-                undoFiles: ab,
-                leftFiles: Object.fromEntries(Ub.map((bb => [bb.path, bb.text]))),
-                forgetNotes: Tb.length > 0 ? Tb : void 0
+                undoFiles: tz,
+                leftFiles: Object.fromEntries(sz.map((zz => [zz.path, zz.text]))),
+                forgetNotes: Xz.length > 0 ? Xz : void 0
               })
-            })(bb)
+            })(zz)
           } : void 0
-        }), Da && (0, Eb.jsx)(vv, {
-          files: Ib,
-          before: Qa,
-          onWrite: Fb ? (bb, ab, Ub) => {
-            const Ab = PA.current.then((async () => {
-              var Ab, Mb, Tb, Eb;
-              const Yb = kU.current,
-                Bb = vA.current[bb],
-                eb = void 0 !== Bb && (null !== (Ab = Yb[bb]) && void 0 !== Ab ? Ab : "") === LA.current[bb] ? {
-                  ...Yb,
-                  [bb]: Bb
-                } : Yb,
-                vb = fe(null !== (Mb = eb[bb]) && void 0 !== Mb ? Mb : "", ab, Ub);
-              if (null === vb) return !1;
-              if (vb === eb[bb]) return !0;
-              if (!await Qb([{
-                  path: bb,
-                  text: vb
+        }), Pt && (0, Oz.jsx)(DK, {
+          files: Gz,
+          before: yt,
+          onWrite: cz ? (zz, tz, sz) => {
+            const Fz = DF.current.then((async () => {
+              var Fz, Wz, Xz, Oz;
+              const oz = Hs.current,
+                vz = bF.current[zz],
+                Uz = void 0 !== vz && (null !== (Fz = oz[zz]) && void 0 !== Fz ? Fz : "") === wF.current[zz] ? {
+                  ...oz,
+                  [zz]: vz
+                } : oz,
+                Kz = ZU(null !== (Wz = Uz[zz]) && void 0 !== Wz ? Wz : "", tz, sz);
+              if (null === Kz) return !1;
+              if (Kz === Uz[zz]) return !0;
+              if (!await yz([{
+                  path: zz,
+                  text: Kz
                 }])) return !1;
-              const Lb = pe(ab),
-                Pb = `${bb}:${ab.key}`,
-                Xb = null !== (Tb = RA.current.get(Pb)) && void 0 !== Tb ? Tb : ab.value;
-              RA.current.set(Pb, Xb), Xb === Ub ? jA.current.delete(Pb) : jA.current.set(Pb, {
-                name: Lb,
-                from: Ne(Xb),
-                to: Ne(Ub)
+              const uz = TU(tz),
+                Nz = `${zz}:${tz.key}`,
+                bz = null !== (Xz = BF.current.get(Nz)) && void 0 !== Xz ? Xz : tz.value;
+              BF.current.set(Nz, bz), bz === sz ? HF.current.delete(Nz) : HF.current.set(Nz, {
+                name: uz,
+                from: cU(bz),
+                to: cU(sz)
               });
-              const jb = We([...jA.current.values()]);
-              if (Ga.current) {
-                var Rb;
-                null === (Rb = kA.current) || void 0 === Rb || Rb.then((async bb => {
-                  void 0 !== bb && Pa(await BL.relabel(tb, bb, jb))
-                })).catch((bb => {
-                  console.error("World Code AI: couldn't rename a version of the code", bb)
+              const wz = jU([...HF.current.values()]);
+              if (At.current) {
+                var Dz;
+                null === (Dz = PF.current) || void 0 === Dz || Dz.then((async zz => {
+                  void 0 !== zz && Nt(await bu.relabel(Lz, zz, wz))
+                })).catch((zz => {
+                  console.error("World Code AI: couldn't rename a version of the code", zz)
                 }))
               } else {
-                Ga.current = !0;
-                const bb = Date.now();
-                kA.current = BL.add(tb, jb, eb, bb).then((ab => {
-                  var Ub;
-                  return Pa(ab), null === (Ub = ab.find((ab => ab.at === bb && ab.label === jb))) || void 0 === Ub ? void 0 : Ub.id
-                })).catch((bb => {
-                  console.error("World Code AI: couldn't keep a version of the code", bb)
-                })), qa(eb)
+                At.current = !0;
+                const zz = Date.now();
+                PF.current = bu.add(Lz, wz, Uz, zz).then((tz => {
+                  var sz;
+                  return Nt(tz), null === (sz = tz.find((tz => tz.at === zz && tz.label === wz))) || void 0 === sz ? void 0 : sz.id
+                })).catch((zz => {
+                  console.error("World Code AI: couldn't keep a version of the code", zz)
+                })), Mt(Uz)
               }
-              return XA.current.includes(Lb) || XA.current.push(Lb), LA.current[bb] = null !== (Eb = eb[bb]) && void 0 !== Eb ? Eb : "", vA.current[bb] = vb, RU.current = Date.now(), !0
+              return gF.current.includes(uz) || gF.current.push(uz), wF.current[zz] = null !== (Oz = Uz[zz]) && void 0 !== Oz ? Oz : "", bF.current[zz] = Kz, gs.current = Date.now(), !0
             }));
-            return PA.current = Ab.catch((() => !1)), Ab
+            return DF.current = Fz.catch((() => !1)), Fz
           } : void 0,
-          onTryIt: Qa ? () => {
-            eU(qb, Math.max(0, RU.current + 600 - Date.now()))
+          onTryIt: yt ? () => {
+            Ks(Mz, Math.max(0, gs.current + 600 - Date.now()))
           } : void 0,
-          onUndo: Qa && Fb ? () => {
-            ZA()
+          onUndo: yt && cz ? () => {
+            YF()
           } : void 0
-        }), "settings" === xa && (0, Eb.jsx)(rB, {
-          allowEdits: Ia,
-          onAllowEditsChange: Fb ? bb => {
-            da(bb),
-              function(bb) {
+        }), "settings" === Yt && (0, Oz.jsx)(lv, {
+          allowEdits: Gt,
+          onAllowEditsChange: cz ? zz => {
+            Tt(zz),
+              function(zz) {
                 try {
-                  localStorage.setItem(fB, String(bb))
+                  localStorage.setItem(Zv, String(zz))
                 } catch {}
-              }(bb)
+              }(zz)
           } : void 0,
           onAddKey: () => {
-            pa.current = "settings", Wa(null), ia("addKey")
+            It.current = "settings", et(null), xt("addKey")
           },
-          onEditKey: bb => {
-            pa.current = "settings", Wa(bb), ia("addKey")
+          onEditKey: zz => {
+            It.current = "settings", et(zz), xt("addKey")
           }
-        }), "addKey" === xa && (0, Eb.jsx)(gB, {
-          editing: null !== Na && void 0 !== Na ? Na : void 0,
+        }), "addKey" === Yt && (0, Oz.jsx)(pv, {
+          editing: null !== Ct && void 0 !== Ct ? Ct : void 0,
           onAdded: () => {
-            GA.current = !0, ia(pa.current)
+            dF.current = !0, xt(It.current)
           },
           onOpenSettings: () => {
-            GA.current = !1, ia("settings")
+            dF.current = !1, xt("settings")
           }
-        }, null !== (fb = null === Na || void 0 === Na ? void 0 : Na.id) && void 0 !== fb ? fb : "new"), ya && (0, Eb.jsx)(Xe, {
-          notes: Ra,
-          outline: Aa(Ib, new Set(PL().callbackNames())),
-          uZ: xA,
-          onDelete: bb => {
-            eL.remove(tb, bb).then(ka).catch((bb => {
-              console.error("World Code AI: couldn't delete a note", bb)
+        }, null !== (mz = null === Ct || void 0 === Ct ? void 0 : Ct.id) && void 0 !== mz ? mz : "new"), Ht && (0, Oz.jsx)(BU, {
+          notes: Dt,
+          outline: Ft(Gz, new Set(Hu().callbackNames())),
+          Hr: JF,
+          onDelete: zz => {
+            wu.remove(Lz, zz).then(gt).catch((zz => {
+              console.error("World Code AI: couldn't delete a note", zz)
             }))
           }
-        }), !CA && Ta.map(((bb, ab) => {
-          var Ub, Mb, Bb, vb, Lb, Pb, Xb, jb;
-          const Rb = WU(bb),
-            kb = dA && (null === (Ub = Ta[ab - 1]) || void 0 === Ub ? void 0 : Ub.target.key) !== bb.target.key,
-            yb = 0 === bb.changes.length,
-            Zb = yb && !!bb.failedEdits && !bb.question && !bb.worldCode,
-            Db = bb.failedEdits && (0, Eb.jsx)(GL, {
-              failed: bb.failedEdits,
-              nothingChanged: yb,
-              defaultOpen: !bb.byItself,
-              isElsewhere: !Rb,
-              onRetry: bb.id !== HA || ea || 0 !== Ka.length ? void 0 : () => {
-                GU(Ae.q, fL, {
-                  about: NA(bb.id),
-                  failedEdits: bb.failedEdits
+        }), !RF && Xt.map(((zz, tz) => {
+          var sz, Wz, vz, Kz, uz, Nz, bz, wz;
+          const Dz = Gs(zz),
+            gz = AF && (null === (sz = Xt[tz - 1]) || void 0 === sz ? void 0 : sz.target.key) !== zz.target.key,
+            Hz = 0 === zz.changes.length,
+            Bz = Hz && !!zz.failedEdits && !zz.question && !zz.worldCode,
+            Pz = zz.failedEdits && (0, Oz.jsx)(Qu, {
+              failed: zz.failedEdits,
+              nothingChanged: Hz,
+              defaultOpen: !zz.byItself,
+              isElsewhere: !Dz,
+              onRetry: zz.id !== cF || Ut || 0 !== Qt.length ? void 0 : () => {
+                ds(vU.t, Zu, {
+                  about: GF(zz.id),
+                  failedEdits: zz.failedEdits
                 })
               }
             });
-          var zb;
-          return void 0 === bb.logTitle && (!bb.isNotice || "assistant" !== bb.role || "" === bb.text || void 0 !== bb.retry || bb.keyNotice || bb.undoFiles || bb.failedEdits || bb.cutShort || bb.question || bb.worldCode || 0 !== bb.changes.length) ? (0, Eb.jsxs)(Ab.Fragment, {
-            children: [kb && (0, Eb.jsx)(FL, {
-              target: bb.target,
-              isOpen: Rb
-            }), (0, Eb.jsxs)("div", {
-              className: Tb()("WorldCodeAiEntry", `WorldCodeAiEntry-${bb.role}`, {
-                "WorldCodeAiEntry-elsewhere": !Rb,
-                WorldCodeAiNotice: bb.isNotice,
-                "WorldCodeAiNotice-calm": bb.isNotice && bb.isCalm,
-                "WorldCodeAiNotice-past": bb.isNotice && void 0 !== bb.retry && (bb.id !== HA || !!mU)
+          var rz;
+          return void 0 === zz.logTitle && (!zz.isNotice || "assistant" !== zz.role || "" === zz.text || void 0 !== zz.retry || zz.keyNotice || zz.undoFiles || zz.failedEdits || zz.cutShort || zz.question || zz.worldCode || 0 !== zz.changes.length) ? (0, Oz.jsxs)(Fz.Fragment, {
+            children: [gz && (0, Oz.jsx)(du, {
+              target: zz.target,
+              isOpen: Dz
+            }), (0, Oz.jsxs)("div", {
+              className: Xz()("WorldCodeAiEntry", `WorldCodeAiEntry-${zz.role}`, {
+                "WorldCodeAiEntry-elsewhere": !Dz,
+                WorldCodeAiNotice: zz.isNotice,
+                "WorldCodeAiNotice-calm": zz.isNotice && zz.isCalm,
+                "WorldCodeAiNotice-past": zz.isNotice && void 0 !== zz.retry && (zz.id !== cF || !!Cs)
               }),
-              children: [yb && Db, Zb ? null : bb.isNotice && void 0 !== bb.retry && (bb.id !== HA || mU) ? (0, Eb.jsx)("p", {
-                children: bb.keyNotice ? DB(bb.keyNotice) : void 0 !== bb.retryAt ? "Not answered: Bot.xd was busy." : "Not answered: the AI had a problem."
-              }) : bb.keyNotice ? (0, Eb.jsxs)(Eb.Fragment, {
-                children: [(0, Eb.jsx)("p", {
-                  children: ZB(bb.keyNotice)
-                }), bb.keyNotice.detail && (0, Eb.jsx)(kB, {
-                  detail: bb.keyNotice.detail
+              children: [Hz && Pz, Bz ? null : zz.isNotice && void 0 !== zz.retry && (zz.id !== cF || Cs) ? (0, Oz.jsx)("p", {
+                children: zz.keyNotice ? Jv(zz.keyNotice) : void 0 !== zz.retryAt ? "Not answered: Bot.xd was busy." : "Not answered: the AI had a problem."
+              }) : zz.keyNotice ? (0, Oz.jsxs)(Oz.Fragment, {
+                children: [(0, Oz.jsx)("p", {
+                  children: mv(zz.keyNotice)
+                }), zz.keyNotice.detail && (0, Oz.jsx)(Yv, {
+                  detail: zz.keyNotice.detail
                 })]
-              }) : bb.undoFiles ? (0, Eb.jsxs)("div", {
+              }) : zz.undoFiles ? (0, Oz.jsxs)("div", {
                 className: "WorldCodeAiWentBack",
-                children: [(0, Eb.jsx)("span", {
-                  children: "undone" === bb.status ? "Undone: your code is as it was before going back." : bb.text
-                }), Rb && "undone" !== bb.status && HL(bb, Ib) && Fb && (0, Eb.jsx)("button", {
+                children: [(0, Oz.jsx)("span", {
+                  children: "undone" === zz.status ? "Undone: your code is as it was before going back." : zz.text
+                }), Dz && "undone" !== zz.status && Au(zz, Gz) && cz && (0, Oz.jsx)("button", {
                   className: "WorldCodeAiLinkButton WorldCodeAiNoticeUndo",
-                  disabled: !!ea,
-                  title: ea ? "You can undo once the answer is in." : void 0,
+                  disabled: !!Ut,
+                  title: Ut ? "You can undo once the answer is in." : void 0,
                   onClick: () => {
-                    (async bb => {
-                      var ab;
-                      const Ub = kU.current;
-                      if (!HL(bb, Ub)) return;
-                      const Ab = ee({
+                    (async zz => {
+                      var tz;
+                      const sz = Hs.current;
+                      if (!Au(zz, sz)) return;
+                      const Fz = wU({
                         id: 0,
                         at: 0,
                         label: "",
-                        files: null !== (ab = bb.undoFiles) && void 0 !== ab ? ab : {}
-                      }, Ub).filter((ab => void 0 !== bb.leftFiles && ab.path in bb.leftFiles));
-                      if (Ab.length > 0) {
-                        if (!await Qb(Ab)) return;
-                        CU("Before undoing going back", Ub)
+                        files: null !== (tz = zz.undoFiles) && void 0 !== tz ? tz : {}
+                      }, sz).filter((tz => void 0 !== zz.leftFiles && tz.path in zz.leftFiles));
+                      if (Fz.length > 0) {
+                        if (!await yz(Fz)) return;
+                        Rs("Before undoing going back", sz)
                       }
-                      const Mb = {
-                        ...Ub
+                      const Wz = {
+                        ...sz
                       };
-                      for (const Tb of Ab) Mb[Tb.path] = Tb.text;
-                      Ba((ab => ab.map((ab => ab.id === bb.id ? {
-                        ...ab,
+                      for (const Xz of Fz) Wz[Xz.path] = Xz.text;
+                      vt((tz => tz.map((tz => tz.id === zz.id ? {
+                        ...tz,
                         status: "undone"
-                      } : WU(ab) && ab.wentBack && ab.changes.every((bb => {
-                        var ab;
-                        return (null !== (ab = Mb[bb.path]) && void 0 !== ab ? ab : "") === bb.after
+                      } : Gs(tz) && tz.wentBack && tz.changes.every((zz => {
+                        var tz;
+                        return (null !== (tz = Wz[zz.path]) && void 0 !== tz ? tz : "") === zz.after
                       })) ? {
-                        ...ab,
+                        ...tz,
                         status: "applied",
                         wentBack: void 0
-                      } : ab))))
-                    })(bb)
+                      } : tz))))
+                    })(zz)
                   },
-                  children: ea ? "Undo going back after this answer" : "Undo going back"
+                  children: Ut ? "Undo going back after this answer" : "Undo going back"
                 })]
-              }) : "assistant" === bb.role ? (0, Eb.jsx)(eb.e, {
-                markdown: "applied" !== bb.status && !bb.editedInPlace && (bb.changes.length > 0 || null !== (Mb = bb.failedEdits) && void 0 !== Mb && Mb.length) ? Bv(bb.text) : bb.text
-              }) : (0, Eb.jsx)("p", {
-                children: bb.text
-              }), bb.answeredBy && (0, Eb.jsx)(yB, {
-                answeredBy: bb.answeredBy
-              }), bb.oneOff && uA && bb.id === HA && !ea && (0, Eb.jsxs)("p", {
+              }) : "assistant" === zz.role ? (0, Oz.jsx)(Uz.b, {
+                markdown: "applied" !== zz.status && !zz.editedInPlace && (zz.changes.length > 0 || null !== (Wz = zz.failedEdits) && void 0 !== Wz && Wz.length) ? bK(zz.text) : zz.text
+              }) : (0, Oz.jsx)("p", {
+                children: zz.text
+              }), zz.answeredBy && (0, Oz.jsx)(xv, {
+                answeredBy: zz.answeredBy
+              }), zz.oneOff && kF && zz.id === cF && !Ut && (0, Oz.jsxs)("p", {
                 className: "WorldCodeAiBackTo",
-                children: ["Your next question goes back to ", uA.model.name, "."]
-              }), bb.cutShort && (0, Eb.jsx)(iB, {
-                hasCode: bb.changes.length > 0 || !!bb.worldCode,
-                ...rA(bb.id, bb.cutShort)
-              }), bb.forgetNotes && (0, Eb.jsx)("div", {
+                children: ["Your next question goes back to ", kF.model.name, "."]
+              }), zz.cutShort && (0, Oz.jsx)(ev, {
+                hasCode: zz.changes.length > 0 || !!zz.worldCode,
+                ...iF(zz.id, zz.cutShort)
+              }), zz.forgetNotes && (0, Oz.jsx)("div", {
                 className: "WorldCodeAiForget",
-                children: Rb && void 0 === bb.forgetStatus && bb.id > IA ? (0, Eb.jsxs)(Eb.Fragment, {
-                  children: [(0, Eb.jsxs)("span", {
+                children: Dz && void 0 === zz.forgetStatus && zz.id > jF ? (0, Oz.jsxs)(Oz.Fragment, {
+                  children: [(0, Oz.jsxs)("span", {
                     className: "WorldCodeAiForgetAsk",
-                    children: [1 === bb.forgetNotes.length ? "Forget this note in AI notes too? " : "Forget these notes in AI notes too? ", (0, Eb.jsx)("span", {
+                    children: [1 === zz.forgetNotes.length ? "Forget this note in AI notes too? " : "Forget these notes in AI notes too? ", (0, Oz.jsx)("span", {
                       className: "WorldCodeAiForgetNote",
-                      children: bb.forgetNotes.map((bb => `"${bb}"`)).join(", ")
+                      children: zz.forgetNotes.map((zz => `"${zz}"`)).join(", ")
                     })]
-                  }), (0, Eb.jsxs)("div", {
+                  }), (0, Oz.jsxs)("div", {
                     className: "WorldCodeAiNoteButtons",
-                    children: [(0, Eb.jsx)("button", {
+                    children: [(0, Oz.jsx)("button", {
                       className: "WorldCodeAiSecondaryButton",
                       onClick: () => {
-                        BA(bb, !0)
+                        uF(zz, !0)
                       },
                       children: "Forget it"
-                    }), (0, Eb.jsx)("button", {
+                    }), (0, Oz.jsx)("button", {
                       className: "WorldCodeAiLinkButton",
                       onClick: () => {
-                        BA(bb, !1)
+                        uF(zz, !1)
                       },
                       children: "Keep it"
                     })]
                   })]
-                }) : (0, Eb.jsx)("span", {
+                }) : (0, Oz.jsx)("span", {
                   className: "WorldCodeAiHint",
-                  children: "forgotten" === bb.forgetStatus ? "Taken out of AI notes." : "Kept in AI notes."
+                  children: "forgotten" === zz.forgetStatus ? "Taken out of AI notes." : "Kept in AI notes."
                 })
-              }), bb.changes.length > 0 && (0, Eb.jsx)(dL, {
-                entry: bb,
-                defaultOpen: !bb.byItself,
-                elsewhere: Rb ? void 0 : bb.target,
-                isOutOfDate: Rb && !VU.current.has(bb.id) && bb.changes.some((bb => {
-                  var ab;
-                  return (null !== (ab = Ib[bb.path]) && void 0 !== ab ? ab : "") !== bb.before
+              }), zz.changes.length > 0 && (0, Oz.jsx)(Mu, {
+                entry: zz,
+                defaultOpen: !zz.byItself,
+                elsewhere: Dz ? void 0 : zz.target,
+                isOutOfDate: Dz && !ps.current.has(zz.id) && zz.changes.some((zz => {
+                  var tz;
+                  return (null !== (tz = Gz[zz.path]) && void 0 !== tz ? tz : "") !== zz.before
                 })),
-                canEdit: Rb ? Fb : !!Vb && (!bb.target.codeBlock || bb.target.canChangePos),
-                request: pA(bb.id),
-                onApply: ab => {
-                  Rb ? OU(ab ? {
-                    id: bb.id,
-                    changes: ab,
+                canEdit: Dz ? cz : !!Sz && (!zz.target.codeBlock || zz.target.canChangePos),
+                request: ZF(zz.id),
+                onApply: tz => {
+                  Dz ? fs(tz ? {
+                    id: zz.id,
+                    changes: tz,
                     isPartial: !0
-                  } : bb, NA(bb.id)) : ((bb, ab) => {
-                    Vb && cU && (Ma.pendingApply = {
-                      entryId: bb.id,
-                      targetKey: bb.target.key,
-                      picked: ab,
-                      until: Date.now() + TL
-                    }, Vb(bb.target))
-                  })(bb, ab)
+                  } : zz, GF(zz.id)) : ((zz, tz) => {
+                    Sz && Es && (Wt.pendingApply = {
+                      entryId: zz.id,
+                      targetKey: zz.target.key,
+                      picked: tz,
+                      until: Date.now() + Ku
+                    }, Sz(zz.target))
+                  })(zz, tz)
                 },
-                checkPicked: Rb ? eA : void 0,
-                onPickedChange: ab => {
-                  sa((Ub => {
-                    if (Ub.has(bb.id) === ab) return Ub;
-                    const Ab = new Set(Ub);
-                    return ab ? Ab.add(bb.id) : Ab.delete(bb.id), Ab
+                checkPicked: Dz ? NF : void 0,
+                onPickedChange: tz => {
+                  nt((sz => {
+                    if (sz.has(zz.id) === tz) return sz;
+                    const Fz = new Set(sz);
+                    return tz ? Fz.add(zz.id) : Fz.delete(zz.id), Fz
                   }))
                 },
                 onUndo: () => {
-                  (async bb => {
-                    const ab = kU.current;
-                    if (bb.changes.some((bb => {
-                        var Ub;
-                        return (null !== (Ub = ab[bb.path]) && void 0 !== Ub ? Ub : "") !== bb.after
+                  (async zz => {
+                    const tz = Hs.current;
+                    if (zz.changes.some((zz => {
+                        var sz;
+                        return (null !== (sz = tz[zz.path]) && void 0 !== sz ? sz : "") !== zz.after
                       }))) return;
-                    await Qb(bb.changes.map((bb => ({
-                      path: bb.path,
-                      text: bb.before
-                    })))) && (IU(bb.id, "undone"), null !== AU && YA())
-                  })(bb)
+                    await yz(zz.changes.map((zz => ({
+                      path: zz.path,
+                      text: zz.before
+                    })))) && (cs(zz.id, "undone"), null !== Ws && KF())
+                  })(zz)
                 },
                 onTryIt: () => {
-                  (bb => {
-                    const ab = ZU.current;
-                    Ca(ab), TA(bb.id, "ask", ab), eU(qb, Math.max(0, RU.current + 600 - Date.now()))
-                  })(bb)
+                  (zz => {
+                    const tz = Ps.current;
+                    St(tz), vF(zz.id, "ask", tz), Ks(Mz, Math.max(0, gs.current + 600 - Date.now()))
+                  })(zz)
                 },
-                isLatest: Rb && bb.id > IA,
-                canUndo: Rb && bb.changes.every((bb => {
-                  var ab;
-                  return (null !== (ab = Ib[bb.path]) && void 0 !== ab ? ab : "") === bb.after
+                isLatest: Dz && zz.id > jF,
+                canUndo: Dz && zz.changes.every((zz => {
+                  var tz;
+                  return (null !== (tz = Gz[zz.path]) && void 0 !== tz ? tz : "") === zz.after
                 })),
                 onFixWarnings: () => {
-                  (bb => {
-                    var ab;
-                    const Ub = eB(null !== (ab = bb.warnings) && void 0 !== ab ? ab : []);
-                    var Ab;
-                    if (!Ub) return void GU(`Fix this in your change: ${null===(Ab=bb.warnings)||void 0===Ab?void 0:Ab.join(" ")}`);
-                    const Mb = PL(),
-                      Tb = bb.changes.map((ab => ({
-                        ...ab,
-                        before: "applied" === bb.status ? ab.after : ab.before,
-                        after: PB(ab.after, Ub)
+                  (zz => {
+                    var tz;
+                    const sz = wv(null !== (tz = zz.warnings) && void 0 !== tz ? tz : []);
+                    var Fz;
+                    if (!sz) return void ds(`Fix this in your change: ${null===(Fz=zz.warnings)||void 0===Fz?void 0:Fz.join(" ")}`);
+                    const Wz = Hu(),
+                      Xz = zz.changes.map((tz => ({
+                        ...tz,
+                        before: "applied" === zz.status ? tz.after : tz.before,
+                        after: Hv(tz.after, sz)
                       })));
-                    NU({
+                    Zs({
                       role: "user",
-                      text: 1 === Ub.length ? "Fix this line" : "Fix these lines",
+                      text: 1 === sz.length ? "Fix this line" : "Fix these lines",
                       changes: [],
                       status: "offered"
-                    }), NU({
+                    }), Zs({
                       role: "assistant",
-                      text: `Fixed without asking the AI: ${Ub.map(XB).join(" ")}`,
-                      changes: Tb,
+                      text: `Fixed without asking the AI: ${sz.map(Bv).join(" ")}`,
+                      changes: Xz,
                       status: "offered",
-                      swappedTo: Ub.flatMap((bb => {
+                      swappedTo: sz.flatMap((zz => {
                         let {
-                          to: ab
-                        } = bb;
-                        return ab ? [ab] : []
+                          to: tz
+                        } = zz;
+                        return tz ? [tz] : []
                       })),
-                      warnings: Tb.flatMap((bb => UL(Mb, bb, aa)))
+                      warnings: Xz.flatMap((zz => ou(Wz, zz, tt)))
                     })
-                  })(bb)
+                  })(zz)
                 },
                 onCheck: () => {
-                  GU(function(bb) {
-                    const ab = [...new Set(bb)];
-                    return ab.length > 0 ? `${IL} These names were checked against the game and are right, so keep them: ${ab.map((bb=>`"${bb}"`)).join(", ")}.` : IL
-                  }(WA.flatMap((bb => {
-                    var ab;
-                    return null !== (ab = bb.swappedTo) && void 0 !== ab ? ab : []
+                  ds(function(zz) {
+                    const tz = [...new Set(zz)];
+                    return tz.length > 0 ? `${yu} These names were checked against the game and are right, so keep them: ${tz.map((zz=>`"${zz}"`)).join(", ")}.` : yu
+                  }(TF.flatMap((zz => {
+                    var tz;
+                    return null !== (tz = zz.swappedTo) && void 0 !== tz ? tz : []
                   }))), "Check it for mistakes")
                 },
-                busy: Rb ? !!ea : !cU
-              }), bb.question && (0, Eb.jsx)(Ze, {
+                busy: Dz ? !!Ut : !Es
+              }), zz.question && (0, Oz.jsx)(mU, {
                 ownAnswerBelow: !0,
-                question: bb.question,
-                onAnswer: bb.id !== HA || ea ? void 0 : (ab, Ub) => {
-                  var Ab, Mb, Tb, Eb, Yb, Bb, eb;
-                  const vb = null !== (Ab = null === (Mb = bb.question) || void 0 === Mb ? void 0 : Mb.question) && void 0 !== Ab ? Ab : "",
-                    Lb = null !== (Tb = null === (Eb = bb.askedFor) || void 0 === Eb ? void 0 : Eb.request) && void 0 !== Tb ? Tb : "";
-                  GU(ye(Lb, vb, ab), null !== ab && void 0 !== ab ? ab : "Let the AI pick", {
-                    check: Ub,
-                    about: null === (Yb = bb.askedFor) || void 0 === Yb ? void 0 : Yb.request,
-                    asked: Ub && ab ? `${Lb} ${ab}` : null,
-                    guardWords: ye(null !== (Bb = null === (eb = bb.askedFor) || void 0 === eb ? void 0 : eb.guardWords) && void 0 !== Bb ? Bb : "", vb, ab)
+                question: zz.question,
+                onAnswer: zz.id !== cF || Ut ? void 0 : (tz, sz) => {
+                  var Fz, Wz, Xz, Oz, oz, vz, Uz;
+                  const Kz = null !== (Fz = null === (Wz = zz.question) || void 0 === Wz ? void 0 : Wz.question) && void 0 !== Fz ? Fz : "",
+                    uz = null !== (Xz = null === (Oz = zz.askedFor) || void 0 === Oz ? void 0 : Oz.request) && void 0 !== Xz ? Xz : "";
+                  ds(xU(uz, Kz, tz), null !== tz && void 0 !== tz ? tz : "Let the AI pick", {
+                    check: sz,
+                    about: null === (oz = zz.askedFor) || void 0 === oz ? void 0 : oz.request,
+                    asked: sz && tz ? `${uz} ${tz}` : null,
+                    guardWords: xU(null !== (vz = null === (Uz = zz.askedFor) || void 0 === Uz ? void 0 : Uz.guardWords) && void 0 !== vz ? vz : "", Kz, tz)
                   })
                 }
-              }), Rb && bb.offerExport && (0, Eb.jsx)("button", {
+              }), Dz && zz.offerExport && (0, Oz.jsx)("button", {
                 className: "WorldCodeAiSecondaryButton WorldCodeAiSaveGame",
                 onClick: () => {
-                  HU(bb.id, {
+                  Ts(zz.id, {
                     offerExport: !1
-                  }), SU("offered" === bb.status && bb.changes.length > 0)
+                  }), sF("offered" === zz.status && zz.changes.length > 0)
                 },
                 children: "Save my game"
-              }), bb.plan && (0, Eb.jsx)(ke, {
-                steps: bb.plan,
-                built: null !== (Bb = bb.planBuilt) && void 0 !== Bb ? Bb : 0,
-                done: null !== (vb = bb.planDone) && void 0 !== vb ? vb : 0,
-                onBuild: Rb && !ea && Fb ? ab => {
-                  var Ub;
-                  const Ab = null !== (Ub = bb.plan) && void 0 !== Ub ? Ub : [];
-                  hU((() => {
-                    HU(bb.id, {
-                      planBuilt: ab + 1
-                    }), rU.current(function(bb, ab) {
-                      const Ub = bb.map(((bb, Ub) => `${Ub+1}. ${bb}${Ub<ab?" (built)":""}`)).join("\n");
-                      return `Build step ${ab+1} of our plan now: ${bb[ab]}\nThe whole plan:\n${Ub}\nBuild only step ${ab+1}, keeping what earlier steps built, so I can try it before the next.`
-                    }(Ab, ab), `Build step ${ab+1}: ${Ab[ab]}`, {
-                      about: Ab[ab],
-                      asked: Ab[ab],
+              }), zz.plan && (0, Oz.jsx)(YU, {
+                steps: zz.plan,
+                built: null !== (vz = zz.planBuilt) && void 0 !== vz ? vz : 0,
+                done: null !== (Kz = zz.planDone) && void 0 !== Kz ? Kz : 0,
+                onBuild: Dz && !Ut && cz ? tz => {
+                  var sz;
+                  const Fz = null !== (sz = zz.plan) && void 0 !== sz ? sz : [];
+                  Ms((() => {
+                    Ts(zz.id, {
+                      planBuilt: tz + 1
+                    }), is.current(function(zz, tz) {
+                      const sz = zz.map(((zz, sz) => `${sz+1}. ${zz}${sz<tz?" (built)":""}`)).join("\n");
+                      return `Build step ${tz+1} of our plan now: ${zz[tz]}\nThe whole plan:\n${sz}\nBuild only step ${tz+1}, keeping what earlier steps built, so I can try it before the next.`
+                    }(Fz, tz), `Build step ${tz+1}: ${Fz[tz]}`, {
+                      about: Fz[tz],
+                      asked: Fz[tz],
                       planStep: {
-                        planId: bb.id,
-                        index: ab
+                        planId: zz.id,
+                        index: tz
                       }
                     })
                   }))
                 } : void 0
-              }), Rb && bb.note && bb.noteStatus && !(bb.wentBack && "saved" === bb.noteStatus) && (0, Eb.jsx)(Re, {
-                note: bb.note,
-                status: bb.noteStatus,
-                isPartLeftOut: "offered" === bb.status && wa.has(bb.id),
-                defaultOpen: !bb.byItself || "asked" === bb.noteStatus,
-                onAnswer: ab => {
-                  fA(bb, ab)
+              }), Dz && zz.note && zz.noteStatus && !(zz.wentBack && "saved" === zz.noteStatus) && (0, Oz.jsx)(rU, {
+                note: zz.note,
+                status: zz.noteStatus,
+                isPartLeftOut: "offered" === zz.status && lt.has(zz.id),
+                defaultOpen: !zz.byItself || "asked" === zz.noteStatus,
+                onAnswer: tz => {
+                  CF(zz, tz)
                 }
-              }, "asked" === bb.noteStatus ? "asked" : "RX"), !yb && Db, bb.lookups && (0, Eb.jsx)(QL, {
-                lookups: bb.lookups.lookups,
-                defaultOpen: !bb.lookedAt,
-                isElsewhere: !Rb
-              }), Rb && bb.lookups && !bb.lookedAt && (0, Eb.jsx)("div", {
+              }, "asked" === zz.noteStatus ? "asked" : "Ow"), !Hz && Pz, zz.lookups && (0, Oz.jsx)(ku, {
+                lookups: zz.lookups.lookups,
+                defaultOpen: !zz.lookedAt,
+                isElsewhere: !Dz
+              }), Dz && zz.lookups && !zz.lookedAt && (0, Oz.jsx)("div", {
                 className: "WorldCodeAiLookups",
-                children: (0, Eb.jsx)("button", {
+                children: (0, Oz.jsx)("button", {
                   className: "WorldCodeAiSecondaryButton",
-                  disabled: !!ea,
+                  disabled: !!Ut,
                   onClick: () => {
-                    (async bb => {
-                      if (!bb.lookups || bb.lookedAt || ea) return;
-                      HU(bb.id, {
+                    (async zz => {
+                      if (!zz.lookups || zz.lookedAt || Ut) return;
+                      Ts(zz.id, {
                         lookedAt: !0
                       });
-                      const ab = new AbortController;
-                      na.current = ab;
-                      const Ub = Date.now();
-                      Ja(Ub), va({
+                      const tz = new AbortController;
+                      Et.current = tz;
+                      const sz = Date.now();
+                      ft(sz), Kt({
                         phase: "thinking",
-                        startedAt: Ub
+                        startedAt: sz
                       });
                       try {
-                        "stopped" === await MA(bb.lookups.lookups, bb.lookups.followUp, {
-                          signal: ab.signal
-                        }) && HU(bb.id, {
+                        "stopped" === await oF(zz.lookups.lookups, zz.lookups.followUp, {
+                          signal: tz.signal
+                        }) && Ts(zz.id, {
                           lookedAt: !1
                         })
                       } finally {
-                        na.current = null, va(null)
+                        Et.current = null, Kt(null)
                       }
-                    })(bb)
+                    })(zz)
                   },
                   children: "Let the AI look"
                 })
-              }), bb.worldCode && (0, Eb.jsx)(hL, {
-                code: bb.worldCode.join("\n"),
-                defaultOpen: !bb.byItself,
-                isElsewhere: !Rb,
-                onSwitch: Rb && wb ? () => {
-                  var ab;
-                  wb(qL(null !== (ab = bb.worldCode) && void 0 !== ab ? ab : []))
+              }), zz.worldCode && (0, Oz.jsx)(hu, {
+                code: zz.worldCode.join("\n"),
+                defaultOpen: !zz.byItself,
+                isElsewhere: !Dz,
+                onSwitch: Dz && lz ? () => {
+                  var tz;
+                  lz(iu(null !== (tz = zz.worldCode) && void 0 !== tz ? tz : []))
                 } : void 0
-              }), Rb && "ask" === bb.trial && bb.id > IA && Gb <= (null !== (Lb = bb.trialErrors) && void 0 !== Lb ? Lb : 0) && (0, Eb.jsxs)("div", {
+              }), Dz && "ask" === zz.trial && zz.id > jF && Az <= (null !== (uz = zz.trialErrors) && void 0 !== uz ? uz : 0) && (0, Oz.jsxs)("div", {
                 className: "WorldCodeAiTrial",
-                children: [(0, Eb.jsx)("span", {
+                children: [(0, Oz.jsx)("span", {
                   children: "Did your world do what you wanted?"
-                }), (0, Eb.jsxs)("div", {
+                }), (0, Oz.jsxs)("div", {
                   className: "WorldCodeAiTrialButtons",
-                  children: [(0, Eb.jsx)("button", {
-                    ref: yU,
+                  children: [(0, Oz.jsx)("button", {
+                    ref: Bs,
                     className: "WorldCodeAiSecondaryButton",
                     onClick: () => {
-                      TA(bb.id, "worked")
+                      vF(zz.id, "worked")
                     },
                     children: "Yes"
-                  }), (0, Eb.jsx)("button", {
+                  }), (0, Oz.jsx)("button", {
                     className: "WorldCodeAiSecondaryButton",
                     onClick: () => {
-                      var ab;
-                      TA(bb.id, "notQuite"), ra("It didn't work because "), null === (ab = XU.current) || void 0 === ab || ab.focus()
+                      var tz;
+                      vF(zz.id, "notQuite"), ht("It didn't work because "), null === (tz = ws.current) || void 0 === tz || tz.focus()
                     },
                     children: "Not quite"
                   })]
                 })]
-              }), Rb && "worked" === bb.trial && bb.id > IA && (0, Eb.jsxs)("div", {
+              }), Dz && "worked" === zz.trial && zz.id > jF && (0, Oz.jsxs)("div", {
                 className: "WorldCodeAiTrial",
-                children: [(0, Eb.jsx)("span", {
+                children: [(0, Oz.jsx)("span", {
                   children: "Nice! What next?"
-                }), (0, Eb.jsx)(DL, {
-                  requests: yL,
-                  onPick: bb => {
-                    GU(bb, void 0, {
+                }), (0, Oz.jsx)(Ju, {
+                  requests: xu,
+                  onPick: zz => {
+                    ds(zz, void 0, {
                       asked: null
                     })
                   }
                 })]
-              }), Rb && "notQuite" === bb.trial && bb.id > IA && (0, Eb.jsxs)("div", {
+              }), Dz && "notQuite" === zz.trial && zz.id > jF && (0, Oz.jsxs)("div", {
                 className: "WorldCodeAiTrial WorldCodeAiTrial-wrong",
-                children: [(0, Eb.jsx)("span", {
+                children: [(0, Oz.jsx)("span", {
                   children: "What went wrong? Pick one, or say it in your own words below."
-                }), (0, Eb.jsx)(DL, {
-                  requests: ZL,
-                  onPick: bb => {
-                    GU(bb, void 0, {
+                }), (0, Oz.jsx)(Ju, {
+                  requests: mu,
+                  onPick: zz => {
+                    ds(zz, void 0, {
                       asked: null
                     })
                   }
                 })]
-              }), "assistant" === bb.role && bb.changes.length > 0 && "offered" === bb.status && bb.id === HA && !ea && (0, Eb.jsx)(DL, {
-                requests: RL,
-                onPick: bb => {
-                  GU(bb, void 0, {
+              }), "assistant" === zz.role && zz.changes.length > 0 && "offered" === zz.status && zz.id === cF && !Ut && (0, Oz.jsx)(Ju, {
+                requests: ru,
+                onPick: zz => {
+                  ds(zz, void 0, {
                     asked: null
                   })
                 }
-              }), "assistant" === bb.role && void 0 !== bb.answeredBy && "free" !== bb.answeredBy && 0 === bb.changes.length && !bb.worldCode && !bb.cutShort && bb.id === HA && !ea && IT(bb.text) && (0, Eb.jsx)(DL, {
-                requests: kL,
+              }), "assistant" === zz.role && void 0 !== zz.answeredBy && "free" !== zz.answeredBy && 0 === zz.changes.length && !zz.worldCode && !zz.cutShort && zz.id === cF && !Ut && jX(zz.text) && (0, Oz.jsx)(Ju, {
+                requests: Yu,
                 onPick: () => {
-                  GU("You said what you'd change but made no change. Make it now, with the code in full.", "Make the change", {
+                  ds("You said what you'd change but made no change. Make it now, with the code in full.", "Make the change", {
                     asked: null
                   })
                 }
-              }), bb.keyNotice && void 0 !== bb.retry && bb.id === HA && !ea && (0, Eb.jsx)(xB, {
-                ...KA(bb.id, bb.retry, bb.keyNotice)
-              }), void 0 !== bb.retry && !bb.keyNotice && bb.id === HA && !ea && (0, Eb.jsxs)("div", {
+              }), zz.keyNotice && void 0 !== zz.retry && zz.id === cF && !Ut && (0, Oz.jsx)(Cv, {
+                ...LF(zz.id, zz.retry, zz.keyNotice)
+              }), void 0 !== zz.retry && !zz.keyNotice && zz.id === cF && !Ut && (0, Oz.jsxs)("div", {
                 className: "WorldCodeAiRetry",
-                children: [(0, Eb.jsx)("button", {
-                  ...jB.g,
+                children: [(0, Oz.jsx)("button", {
+                  ...Pv.f,
                   className: "WorldCodeAiSecondaryButton",
-                  disabled: (null !== (Pb = bb.retryAt) && void 0 !== Pb ? Pb : 0) > ca,
+                  disabled: (null !== (Nz = zz.retryAt) && void 0 !== Nz ? Nz : 0) > pt,
                   onClick: () => {
-                    var ab;
-                    GU(null !== (ab = bb.retry) && void 0 !== ab ? ab : "", bb.retryShown, {
-                      ...bb.retryOptions,
-                      retryOf: bb.id
+                    var tz;
+                    ds(null !== (tz = zz.retry) && void 0 !== tz ? tz : "", zz.retryShown, {
+                      ...zz.retryOptions,
+                      retryOf: zz.id
                     })
                   },
-                  children: (null !== (Xb = bb.retryAt) && void 0 !== Xb ? Xb : 0) > ca ? `Try again in ${uL((null!==(jb=bb.retryAt)&&void 0!==jb?jb:0)-ca)}` : "Try again"
-                }), uA && (0, Eb.jsxs)("button", {
+                  children: (null !== (bz = zz.retryAt) && void 0 !== bz ? bz : 0) > pt ? `Try again in ${Lu((null!==(wz=zz.retryAt)&&void 0!==wz?wz:0)-pt)}` : "Try again"
+                }), kF && (0, Oz.jsxs)("button", {
                   className: "WorldCodeAiPrimaryButton",
                   onClick: () => {
-                    var ab;
-                    GU(null !== (ab = bb.retry) && void 0 !== ab ? ab : "", bb.retryShown, {
-                      ...bb.retryOptions,
-                      retryOf: bb.id,
+                    var tz;
+                    ds(null !== (tz = zz.retry) && void 0 !== tz ? tz : "", zz.retryShown, {
+                      ...zz.retryOptions,
+                      retryOf: zz.id,
                       useFree: !1
                     })
                   },
-                  children: ["Ask ", uA.model.name, " instead"]
-                }), !uA && (0, Eb.jsx)("button", {
+                  children: ["Ask ", kF.model.name, " instead"]
+                }), !kF && (0, Oz.jsx)("button", {
                   className: "WorldCodeAiLinkButton",
-                  onClick: QA,
+                  onClick: hF,
                   children: "Choose another AI"
                 })]
               })]
             })]
-          }, bb.id) : (0, Eb.jsxs)(Ab.Fragment, {
-            children: [kb && (0, Eb.jsx)(FL, {
-              target: bb.target,
-              isOpen: Rb
-            }), bb.lookups && (0, Eb.jsx)(QL, {
-              lookups: bb.lookups.lookups,
-              words: bb.text,
-              defaultOpen: !bb.lookedAt,
-              isElsewhere: !Rb
-            }), !bb.lookups && (0, Eb.jsx)(Yb, {
-              title: null !== (zb = bb.logTitle) && void 0 !== zb ? zb : bb.isCalm ? "Update" : "Problem",
-              isCalm: bb.isCalm || "user" === bb.role,
-              isElsewhere: !Rb,
-              children: (0, Eb.jsx)("p", {
-                children: bb.text
+          }, zz.id) : (0, Oz.jsxs)(Fz.Fragment, {
+            children: [gz && (0, Oz.jsx)(du, {
+              target: zz.target,
+              isOpen: Dz
+            }), zz.lookups && (0, Oz.jsx)(ku, {
+              lookups: zz.lookups.lookups,
+              words: zz.text,
+              defaultOpen: !zz.lookedAt,
+              isElsewhere: !Dz
+            }), !zz.lookups && (0, Oz.jsx)(oz, {
+              title: null !== (rz = zz.logTitle) && void 0 !== rz ? rz : zz.isCalm ? "Update" : "Problem",
+              isCalm: zz.isCalm || "user" === zz.role,
+              isElsewhere: !Dz,
+              children: (0, Oz.jsx)("p", {
+                children: zz.text
               })
             })]
-          }, bb.id)
-        })), !CA && dA && (null === (mb = Ta[Ta.length - 1]) || void 0 === mb ? void 0 : mb.target.key) !== ob.key && (0, Eb.jsx)(FL, {
-          target: ob,
+          }, zz.id)
+        })), !RF && AF && (null === (Jz = Xt[Xt.length - 1]) || void 0 === Jz ? void 0 : Jz.target.key) !== kz.key && (0, Oz.jsx)(du, {
+          target: kz,
           isOpen: !0
-        }), !CA && 0 === WA.length && (0, Eb.jsxs)("div", {
+        }), !RF && 0 === TF.length && (0, Oz.jsxs)("div", {
           className: "WorldCodeAiEmpty",
-          children: [(0, Eb.jsx)("p", {
-            children: aa ? "What should happen when someone clicks this block? Ask in your own words." : "What do you want your world to do? Ask in your own words."
-          }), (0, Eb.jsxs)("div", {
+          children: [(0, Oz.jsx)("p", {
+            children: tt ? "What should happen when someone clicks this block? Ask in your own words." : "What do you want your world to do? Ask in your own words."
+          }), (0, Oz.jsxs)("div", {
             className: "WorldCodeAiChips",
-            children: [sA && (0, Eb.jsx)("button", {
-              ...jB.g,
+            children: [SF && (0, Oz.jsx)("button", {
+              ...Pv.f,
               className: "WorldCodeAiChip",
               onClick: () => {
-                GU("Explain what my code does")
+                ds("Explain what my code does")
               },
               children: "Explain my code"
-            }), sA && !aa && !DA && Fb && (0, Eb.jsx)("button", {
-              ...jB.g,
+            }), SF && !tt && !xF && cz && (0, Oz.jsx)("button", {
+              ...Pv.f,
               className: "WorldCodeAiChip",
               onClick: () => {
-                GU("Put the numbers and messages in my code that I might want to change (times, amounts, messages) in CONFIG settings at the top, and use them from there. Change nothing else.", "Make settings I can change")
+                ds("Put the numbers and messages in my code that I might want to change (times, amounts, messages) in CONFIG settings at the top, and use them from there. Change nothing else.", "Make settings I can change")
               },
               children: "Make settings I can change"
-            }), (Fb ? aa ? jL : XL : []).map((bb => (0, Ab.createElement)("button", {
-              ...jB.g,
-              key: bb,
+            }), (cz ? tt ? Pu : Bu : []).map((zz => (0, Fz.createElement)("button", {
+              ...Pv.f,
+              key: zz,
               className: "WorldCodeAiChip",
               onClick: () => {
-                GU(bb)
+                ds(zz)
               }
-            }, bb)))]
-          }), (0, Eb.jsxs)("p", {
+            }, zz)))]
+          }), (0, Oz.jsxs)("p", {
             className: "WorldCodeAiPrivacy",
-            children: [uA ? `Bloxd's safety check first makes sure your request is about your game, then it goes with your code to ${uA.model.name} with your key.` : oA ? "deepseek" === oA.provider ? "Your request and code go through Bloxd to Super Bot.xd, run by DeepSeek, which stores them on its servers in China." : "Your request and code go through Bloxd to Super Bot.xd." : "Your request and code go to Bot.xd, which doesn't keep them.", " ", "Never type personal details, like your name, address or school."]
-          }), !uA && (0, Eb.jsxs)("p", {
+            children: [kF ? `Bloxd's safety check first makes sure your request is about your game, then it goes with your code to ${kF.model.name} with your key.` : lF ? "deepseek" === lF.provider ? "Your request and code go through Bloxd to Super Bot.xd, run by DeepSeek, which stores them on its servers in China." : "Your request and code go through Bloxd to Super Bot.xd." : "Your request and code go to Bot.xd, which doesn't keep them.", " ", "Never type personal details, like your name, address or school."]
+          }), !kF && (0, Oz.jsxs)("p", {
             className: "WorldCodeAiPrivacy",
-            children: ["Want a stronger AI?", " ", (0, Eb.jsx)("button", {
+            children: ["Want a stronger AI?", " ", (0, Oz.jsx)("button", {
               className: "WorldCodeAiKeyLearnMore",
-              onClick: qA,
+              onClick: QF,
               children: "Add your own API key"
             })]
           })]
-        }), !CA && ea && (0, Eb.jsx)("div", {
+        }), !RF && Ut && (0, Oz.jsx)("div", {
           className: "WorldCodeAiEntry WorldCodeAiEntry-assistant WorldCodeAiBusyEntry",
-          children: (0, Eb.jsxs)("div", {
+          children: (0, Oz.jsxs)("div", {
             className: "WorldCodeAiBusy",
             role: "status",
-            children: [(0, Eb.jsx)("span", {
+            children: [(0, Oz.jsx)("span", {
               className: "WorldCodeAiSpinner"
-            }), (0, Eb.jsx)("span", {
+            }), (0, Oz.jsx)("span", {
               className: "WorldCodeAiBusyText",
-              children: (0, Eb.jsx)(Yb, {
-                title: null !== (pb = rL(ea)) && void 0 !== pb ? pb : "Thinking\u2026",
+              children: (0, Oz.jsx)(oz, {
+                title: null !== (Iz = lu(Ut)) && void 0 !== Iz ? Iz : "Thinking\u2026",
                 isCalm: !0,
-                children: "waiting" === ea.phase ? (0, Eb.jsxs)("span", {
+                children: "waiting" === Ut.phase ? (0, Oz.jsxs)("span", {
                   className: "WorldCodeAiBusyHint",
-                  children: [Xv((null !== (Nb = ea.until) && void 0 !== Nb ? Nb : ca) - ca), " Lots of people share Bot.xd."]
-                }) : (0, Eb.jsxs)(Eb.Fragment, {
-                  children: [(0, Eb.jsx)(KL, {
-                    busy: ea
-                  }), "screening" === ea.phase && (null !== (Wb = ea.until) && void 0 !== Wb ? Wb : 0) > ca && (0, Eb.jsxs)("span", {
+                  children: [BK((null !== (Cz = Ut.until) && void 0 !== Cz ? Cz : pt) - pt), " Lots of people share Bot.xd."]
+                }) : (0, Oz.jsxs)(Oz.Fragment, {
+                  children: [(0, Oz.jsx)(nu, {
+                    busy: Ut
+                  }), "screening" === Ut.phase && (null !== (ez = Ut.until) && void 0 !== ez ? ez : 0) > pt && (0, Oz.jsxs)("span", {
                     className: "WorldCodeAiBusyHint",
-                    children: [Xv((null !== (Hb = ea.until) && void 0 !== Hb ? Hb : ca) - ca), " Lots of people share the safety check."]
-                  }), "checking" !== ea.phase && "screening" !== ea.phase && (0, Eb.jsx)("span", {
+                    children: [BK((null !== (Zz = Ut.until) && void 0 !== Zz ? Zz : pt) - pt), " Lots of people share the safety check."]
+                  }), "checking" !== Ut.phase && "screening" !== Ut.phase && (0, Oz.jsx)("span", {
                     className: "WorldCodeAiBusyHint",
-                    children: ea.keyModel ? `${ea.keyModel} is answering with your key.` : ea.isSuperBot ? `${SE} is answering from your usage.` : zv(Ha.current, ea.model)
+                    children: Ut.keyModel ? `${Ut.keyModel} is answering with your key.` : Ut.isSuperBot ? `${so} is answering from your usage.` : IK(Zt.current, Ut.model)
                   })]
                 })
               })
-            }), (0, Eb.jsx)("button", {
+            }), (0, Oz.jsx)("button", {
               className: "WorldCodeAiSecondaryButton WorldCodeAiStop",
-              onClick: AM,
+              onClick: OW,
               children: "Stop"
             })]
           })
-        }), !CA && !ea && BU && (0, Eb.jsx)("div", {
+        }), !RF && !Ut && Us && (0, Oz.jsx)("div", {
           className: "WorldCodeAiEntry WorldCodeAiEntry-assistant WorldCodeAiBusyEntry",
-          children: (0, Eb.jsxs)("div", {
+          children: (0, Oz.jsxs)("div", {
             className: "WorldCodeAiBusy",
             role: "status",
-            children: [(0, Eb.jsx)("span", {
+            children: [(0, Oz.jsx)("span", {
               className: "WorldCodeAiSpinner"
-            }), (0, Eb.jsx)("span", {
+            }), (0, Oz.jsx)("span", {
               className: "WorldCodeAiBusyText",
-              children: (0, Eb.jsx)(Yb, {
+              children: (0, Oz.jsx)(oz, {
                 title: "Testing\u2026",
                 isCalm: !0,
-                children: (0, Eb.jsx)("span", {
+                children: (0, Oz.jsx)("span", {
                   className: "WorldCodeAiBusyHint",
-                  children: aa ? "Your code block runs once in your world, as if you clicked it. If it shows an error, the AI fixes it." : `Your change runs in your world for ${Ae.D/1e3} seconds. If it shows an error, the AI fixes it.`
+                  children: tt ? "Your code block runs once in your world, as if you clicked it. If it shows an error, the AI fixes it." : `Your change runs in your world for ${vU.C/1e3} seconds. If it shows an error, the AI fixes it.`
                 })
               })
-            }), (0, Eb.jsx)("button", {
+            }), (0, Oz.jsx)("button", {
               className: "WorldCodeAiSecondaryButton WorldCodeAiStop",
-              onClick: YA,
+              onClick: KF,
               children: "Stop"
             })]
           })
-        }), !CA && wU.map(((bb, ab) => {
-          var Ub, Ab;
-          return (0, Eb.jsxs)("div", {
+        }), !RF && qs.map(((zz, tz) => {
+          var sz, Fz;
+          return (0, Oz.jsxs)("div", {
             className: "WorldCodeAiEntry WorldCodeAiEntry-user WorldCodeAiQueued",
-            children: [(0, Eb.jsx)("p", {
-              children: null !== (Ub = bb.shown) && void 0 !== Ub ? Ub : bb.text
-            }), (0, Eb.jsxs)("span", {
+            children: [(0, Oz.jsx)("p", {
+              children: null !== (sz = zz.shown) && void 0 !== sz ? sz : zz.text
+            }), (0, Oz.jsxs)("span", {
               className: "WorldCodeAiQueuedNote",
-              children: [bb.id === lU ? "Pick Bot.xd to send it" : null !== (Ab = vL[ab]) && void 0 !== Ab ? Ab : "In line", (0, Eb.jsx)("button", {
+              children: [zz.id === ns ? "Pick Bot.xd to send it" : null !== (Fz = Du[tz]) && void 0 !== Fz ? Fz : "In line", (0, Oz.jsx)("button", {
                 className: "WorldCodeAiLinkButton",
                 onClick: () => {
-                  oa((ab => ab.filter((ab => ab.id !== bb.id))))
+                  kt((tz => tz.filter((tz => tz.id !== zz.id))))
                 },
                 children: "Delete"
               })]
             })]
-          }, bb.id)
+          }, zz.id)
         }))]
-      }), mU && !ea && (0, Eb.jsxs)("div", {
+      }), Cs && !Ut && (0, Oz.jsxs)("div", {
         className: "WorldCodeAiErrorBanner",
-        children: [(0, Eb.jsxs)("div", {
+        children: [(0, Oz.jsxs)("div", {
           className: "WorldCodeAiErrorPlain",
-          children: [void 0 !== pU.line && (0, Eb.jsxs)(Eb.Fragment, {
-            children: [(0, Eb.jsxs)("button", {
+          children: [void 0 !== es.line && (0, Oz.jsxs)(Oz.Fragment, {
+            children: [(0, Oz.jsxs)("button", {
               className: "WorldCodeAiLinkButton",
               title: "Show this line in your code",
               onClick: () => {
-                var bb, ab;
-                Kb(null !== (bb = pU.path) && void 0 !== bb ? bb : db, null !== (ab = pU.line) && void 0 !== ab ? ab : 1), (0, Lb.g)() && rb()
+                var zz, tz;
+                Qz(null !== (zz = es.path) && void 0 !== zz ? zz : Tz, null !== (tz = es.line) && void 0 !== tz ? tz : 1), (0, uz.h)() && hz()
               },
-              children: [pU.path && pU.path !== db ? `${pU.path} line` : "Line", " ", pU.line]
+              children: [es.path && es.path !== Tz ? `${es.path} line` : "Line", " ", es.line]
             }), ":", " "]
-          }), pU.text]
-        }), Va && (0, Eb.jsx)("div", {
+          }), es.text]
+        }), Vt && (0, Oz.jsx)("div", {
           className: "WorldCodeAiErrorText",
-          children: mU
-        }), (0, Eb.jsxs)("div", {
+          children: Cs
+        }), (0, Oz.jsxs)("div", {
           className: "WorldCodeAiErrorActions",
-          children: [(0, Eb.jsx)("button", {
-            ...jB.g,
+          children: [(0, Oz.jsx)("button", {
+            ...Pv.f,
             className: "WorldCodeAiPrimaryButton",
             onClick: () => {
-              hU((() => {
-                Ca(Gb), rU.current(`Fix this error: ${mU}`)
+              Ms((() => {
+                St(Az), is.current(`Fix this error: ${Cs}`)
               }))
             },
             children: "Fix the error"
-          }), (0, Eb.jsx)("button", {
-            ...jB.g,
+          }), (0, Oz.jsx)("button", {
+            ...Pv.f,
             className: "WorldCodeAiSecondaryButton",
             onClick: () => {
-              hU((() => {
-                Ca(Gb), rU.current(`Explain this error in simple words, and where it is in my code: ${mU}`)
+              Ms((() => {
+                St(Az), is.current(`Explain this error in simple words, and where it is in my code: ${Cs}`)
               }))
             },
             children: "Explain it"
-          }), (0, Eb.jsx)("button", {
+          }), (0, Oz.jsx)("button", {
             className: "WorldCodeAiLinkButton",
             onClick: () => {
-              Ca(Gb)
+              St(Az)
             },
             children: "Dismiss"
-          }), (0, Eb.jsx)("button", {
+          }), (0, Oz.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiErrorDetailsToggle",
             onClick: () => {
-              Oa(!Va)
+              Rt(!Vt)
             },
-            children: Va ? "Hide details" : "Show details"
+            children: Vt ? "Hide details" : "Show details"
           })]
-        }), (0, Eb.jsx)("div", {
+        }), (0, Oz.jsx)("div", {
           className: "WorldCodeAiErrorNote",
           children: "Fix the error and Explain it send this error and your code to the AI."
         })]
-      }), la && (0, Eb.jsxs)("div", {
+      }), it && (0, Oz.jsxs)("div", {
         className: "WorldCodeAiPicked",
-        children: [(0, Eb.jsxs)("span", {
-          children: ["Changing ", pv(la), " of ", la.path]
-        }), (0, Eb.jsx)("button", {
+        children: [(0, Oz.jsxs)("span", {
+          children: ["Changing ", TK(it), " of ", it.path]
+        }), (0, Oz.jsx)("button", {
           className: "WorldCodeAiLinkButton",
           onClick: () => {
-            ta(null)
+            Lt(null)
           },
           children: "Cancel"
         })]
-      }), (0, Eb.jsx)(cB, {
+      }), (0, Oz.jsx)(tU, {
         step: "aiAskBox",
-        children: (0, Eb.jsx)("form", {
+        children: (0, Oz.jsx)("form", {
           className: "WorldCodeAiInputRow",
-          onSubmit: bb => {
-            bb.preventDefault(), qU()
+          onSubmit: zz => {
+            zz.preventDefault(), Qs()
           },
-          children: (0, Eb.jsxs)("div", {
+          children: (0, Oz.jsxs)("div", {
             className: "WorldCodeAiAsk",
-            children: [(0, Eb.jsx)("textarea", {
-              ref: XU,
+            children: [(0, Oz.jsx)("textarea", {
+              ref: ws,
               className: "WorldCodeAiAskInput",
-              value: ua,
+              value: dt,
               maxLength: 1e3,
               rows: 2,
-              placeholder: la ? `How should ${pv(la)} change?` : hA ? "Or type your own answer here" : "Ask AI",
-              onChange: bb => {
-                ra(bb.target.value)
+              placeholder: it ? `How should ${TK(it)} change?` : MF ? "Or type your own answer here" : "Ask AI",
+              onChange: zz => {
+                ht(zz.target.value)
               },
-              onKeyDown: bb => {
-                bb.stopPropagation(), "Enter" !== bb.key || bb.shiftKey || bb.nativeEvent.isComposing || 229 === bb.nativeEvent.keyCode || (bb.preventDefault(), qU())
+              onKeyDown: zz => {
+                zz.stopPropagation(), "Enter" !== zz.key || zz.shiftKey || zz.nativeEvent.isComposing || 229 === zz.nativeEvent.keyCode || (zz.preventDefault(), Qs())
               }
-            }), (0, Eb.jsx)(vb.m, {
+            }), (0, Oz.jsx)(Kz.p, {
               className: "WorldCodeAiSend",
               ariaLabel: "Send",
-              disabled: "" === ua.trim() || !!ea && Ka.length >= 3,
-              onClick: qU,
-              children: (0, Eb.jsx)(Pb.e, {
+              disabled: "" === dt.trim() || !!Ut && Qt.length >= 3,
+              onClick: Qs,
+              children: (0, Oz.jsx)(Nz.c, {
                 name: "arrow-up"
               })
             })]
           })
         })
-      }), (0, Eb.jsx)(cB, {
+      }), (0, Oz.jsx)(tU, {
         step: "aiModelChip",
-        children: (0, Eb.jsx)("div", {
-          className: Tb()("WorldCodeAiLimit", ea && "WorldCodeAiLimit-busy"),
-          children: (0, Eb.jsx)(be, {
-            editsOn: Fb ? Ia : null,
-            freeOnce: fa,
-            onFreeOnce: ma,
-            onAddKey: qA,
+        children: (0, Oz.jsx)("div", {
+          className: Xz()("WorldCodeAiLimit", Ut && "WorldCodeAiLimit-busy"),
+          children: (0, Oz.jsx)(XU, {
+            editsOn: cz ? Gt : null,
+            freeOnce: mt,
+            onFreeOnce: Jt,
+            onAddKey: QF,
             children: (() => {
-              if (ea) return 0 === wU.length ? "You can type your next request: it sends when this answer is done." : 1 === wU.length ? "1 request waiting: it sends when this answer is done." : `${wU.length} requests waiting: they send one at a time.`;
-              if (uA && fa) return `Your next question goes to Bot.xd, then back to ${uA.model.name}.`;
-              if (uA) return `Your question and code go to ${jE(uA.provider,uA.baseUrl,!0)}.`;
-              if (oA) {
-                const bb = null === lA ? null : function(bb, ab) {
-                  return bb <= ab ? null : `Limit resets in ${(0,nE.b)(Math.ceil((bb-ab)/6e4))}`
-                }(lA, ca);
-                return null === bb ? jY(oA) : (0, Eb.jsxs)(Eb.Fragment, {
-                  children: [(0, Eb.jsx)("span", {
+              if (Ut) return 0 === qs.length ? "You can type your next request: it sends when this answer is done." : 1 === qs.length ? "1 request waiting: it sends when this answer is done." : `${qs.length} requests waiting: they send one at a time.`;
+              if (kF && mt) return `Your next question goes to Bot.xd, then back to ${kF.model.name}.`;
+              if (kF) return `Your question and code go to ${HO(kF.provider,kF.baseUrl,!0)}.`;
+              if (lF) {
+                const zz = null === nF ? null : function(zz, tz) {
+                  return zz <= tz ? null : `Limit resets in ${(0,to.b)(Math.ceil((zz-tz)/6e4))}`
+                }(nF, pt);
+                return null === zz ? Ho(lF) : (0, Oz.jsxs)(Oz.Fragment, {
+                  children: [(0, Oz.jsx)("span", {
                     className: "WorldCodeAiModelChipStatusLine",
-                    children: jY(oA)
-                  }), (0, Eb.jsx)("span", {
+                    children: Ho(lF)
+                  }), (0, Oz.jsx)("span", {
                     className: "WorldCodeAiModelChipStatusLine",
-                    children: bb
+                    children: zz
                   })]
                 })
               }
-              return iU > ca ? `Send now and it starts by itself. ${Xv(iU-ca)}` : null
+              return ms > pt ? `Send now and it starts by itself. ${BK(ms-pt)}` : null
             })()
           })
         })
       })]
     });
-    return (0, Eb.jsx)(cB, {
-      step: VA,
-      onPrevious: "aiPanel" === VA ? rb : void 0,
-      children: MM
+    return (0, Oz.jsx)(tU, {
+      step: pF,
+      onPrevious: "aiPanel" === pF ? hz : void 0,
+      children: oW
     })
   })),
-  lL = oL
-}, 38856: (bb, ab, Ub) => {
-  Ub.d(ab, {
-    e: () => Bb,
-    f: () => Tb,
-    g: () => Mb
+  qu = au
+}, 38964: (zz, tz, sz) => {
+  sz.d(tz, {
+    b: () => vz,
+    e: () => Xz,
+    h: () => Wz
   });
-  const Ab = 6e3;
+  const Fz = 6e3;
 
-  function Mb(bb, ab) {
-    return [Math.floor(bb[0] / ab) * ab, Math.floor(bb[1] / ab) * ab, Math.floor(bb[2] / ab) * ab]
+  function Wz(zz, tz) {
+    return [Math.floor(zz[0] / tz) * tz, Math.floor(zz[1] / tz) * tz, Math.floor(zz[2] / tz) * tz]
   }
 
-  function Tb(bb) {
-    const ab = (null !== bb && void 0 !== bb ? bb : "").match(/-?\d+(?:\.\d+)?/g);
-    return ab && ab.length >= 3 ? [Number(ab[0]), Number(ab[1]), Number(ab[2])] : null
+  function Xz(zz) {
+    const tz = (null !== zz && void 0 !== zz ? zz : "").match(/-?\d+(?:\.\d+)?/g);
+    return tz && tz.length >= 3 ? [Number(tz[0]), Number(tz[1]), Number(tz[2])] : null
   }
 
-  function Eb(bb, ab) {
-    return bb === ab ? String(bb) : `${bb}-${ab}`
+  function Oz(zz, tz) {
+    return zz === tz ? String(zz) : `${zz}-${tz}`
   }
 
-  function Yb(bb, ab, Ub, Ab) {
-    const Mb = [];
-    let Tb = new Map;
-    for (let Eb = bb[2]; Eb < bb[2] + ab; Eb++) {
-      const Yb = new Map;
-      let Bb = bb[0];
-      for (; Bb < bb[0] + ab;) {
-        const Mb = Ab(Bb, Ub, Eb);
-        let eb = Bb;
-        for (; eb + 1 < bb[0] + ab && Ab(eb + 1, Ub, Eb) === Mb;) eb++;
-        if (null !== Mb) {
-          const bb = `${Bb} ${eb} ${Mb}`,
-            ab = Tb.get(bb);
-          ab ? (ab.z1 = Eb, Tb.delete(bb), Yb.set(bb, ab)) : Yb.set(bb, {
-            x0: Bb,
-            x1: eb,
-            z0: Eb,
-            z1: Eb,
-            name: Mb
+  function oz(zz, tz, sz, Fz) {
+    const Wz = [];
+    let Xz = new Map;
+    for (let Oz = zz[2]; Oz < zz[2] + tz; Oz++) {
+      const oz = new Map;
+      let vz = zz[0];
+      for (; vz < zz[0] + tz;) {
+        const Wz = Fz(vz, sz, Oz);
+        let Uz = vz;
+        for (; Uz + 1 < zz[0] + tz && Fz(Uz + 1, sz, Oz) === Wz;) Uz++;
+        if (null !== Wz) {
+          const zz = `${vz} ${Uz} ${Wz}`,
+            tz = Xz.get(zz);
+          tz ? (tz.z1 = Oz, Xz.delete(zz), oz.set(zz, tz)) : oz.set(zz, {
+            x0: vz,
+            x1: Uz,
+            z0: Oz,
+            z1: Oz,
+            name: Wz
           })
         }
-        Bb = eb + 1
+        vz = Uz + 1
       }
-      Mb.push(...Tb.values()), Tb = Yb
+      Wz.push(...Xz.values()), Xz = oz
     }
-    return Mb.push(...Tb.values()), Mb.sort(((bb, ab) => bb.z0 - ab.z0 || bb.x0 - ab.x0)).map((bb => `x${Eb(bb.x0,bb.x1)} z${Eb(bb.z0,bb.z1)} ${bb.name}`))
+    return Wz.push(...Xz.values()), Wz.sort(((zz, tz) => zz.z0 - tz.z0 || zz.x0 - tz.x0)).map((zz => `x${Oz(zz.x0,zz.x1)} z${Oz(zz.z0,zz.z1)} ${zz.name}`))
   }
 
-  function Bb(bb, ab, Ub, Mb) {
-    let Tb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Ab;
-    const Bb = [bb[0] + ab - 1, bb[1] + ab - 1, bb[2] + ab - 1],
-      eb = null !== Mb && Mb.every(((ab, Ub) => Math.floor(ab) >= bb[Ub] && Math.floor(ab) <= Bb[Ub])),
-      vb = [`The chunk from ${bb.join(" ")} to ${Bb.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-    null !== Mb && vb.push(`The player's feet are at ${Mb.map(Math.floor).join(" ")}, ${eb?"in this chunk":"outside this chunk"}.`);
-    const Lb = [];
-    for (let Ab = bb[1]; Ab <= Bb[1]; Ab++) {
-      const Mb = Yb(bb, ab, Ab, Ub).join("; "),
-        Tb = Lb[Lb.length - 1];
-      (null === Tb || void 0 === Tb ? void 0 : Tb.boxes) === Mb ? Tb.to = Ab : Lb.push({
-        from: Ab,
-        to: Ab,
-        boxes: Mb
+  function vz(zz, tz, sz, Wz) {
+    let Xz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Fz;
+    const vz = [zz[0] + tz - 1, zz[1] + tz - 1, zz[2] + tz - 1],
+      Uz = null !== Wz && Wz.every(((tz, sz) => Math.floor(tz) >= zz[sz] && Math.floor(tz) <= vz[sz])),
+      Kz = [`The chunk from ${zz.join(" ")} to ${vz.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+    null !== Wz && Kz.push(`The player's feet are at ${Wz.map(Math.floor).join(" ")}, ${Uz?"in this chunk":"outside this chunk"}.`);
+    const uz = [];
+    for (let Fz = zz[1]; Fz <= vz[1]; Fz++) {
+      const Wz = oz(zz, tz, Fz, sz).join("; "),
+        Xz = uz[uz.length - 1];
+      (null === Xz || void 0 === Xz ? void 0 : Xz.boxes) === Wz ? Xz.to = Fz : uz.push({
+        from: Fz,
+        to: Fz,
+        boxes: Wz
       })
     }
-    const Pb = Lb.filter((bb => "" !== bb.boxes));
-    0 === Pb.length && vb.push("It is all air.");
-    let Xb = vb.join("\n").length;
-    for (const Ab of Pb) {
-      const bb = `y${Eb(Ab.from,Ab.to)}: ${Ab.boxes}`;
-      if (Xb += bb.length + 1, Xb > Tb) {
-        vb.push(`Cut short: the layers from y${Ab.from} up aren't shown, as there are too many blocks.`);
+    const Nz = uz.filter((zz => "" !== zz.boxes));
+    0 === Nz.length && Kz.push("It is all air.");
+    let bz = Kz.join("\n").length;
+    for (const Fz of Nz) {
+      const zz = `y${Oz(Fz.from,Fz.to)}: ${Fz.boxes}`;
+      if (bz += zz.length + 1, bz > Xz) {
+        Kz.push(`Cut short: the layers from y${Fz.from} up aren't shown, as there are too many blocks.`);
         break
       }
-      vb.push(bb)
+      Kz.push(zz)
     }
-    return vb.join("\n")
+    return Kz.join("\n")
   }
-}, 4509: (bb, ab, Ub) => {
-  Ub.d(ab, {
-    B: () => Rb,
-    C: () => Xb,
-    d: () => Mb,
-    f: () => Bb,
-    j: () => Tb,
-    n: () => Eb,
-    q: () => Yb,
-    t: () => kb,
-    v: () => vb,
-    x: () => Lb
+}, 4458: (zz, tz, sz) => {
+  sz.d(tz, {
+    c: () => Wz,
+    e: () => vz,
+    h: () => Xz,
+    i: () => Oz,
+    l: () => oz,
+    n: () => gz,
+    o: () => Kz,
+    p: () => uz,
+    q: () => Dz,
+    t: () => bz
   });
-  var Ab = Ub(1505);
-  const Mb = 24e3,
-    Tb = "/docs/llms.txt",
-    Eb = `${Ab.d}${Tb}`,
-    Yb = "/llms.txt",
-    Bb = "/docs/llms-full.txt";
+  var Fz = sz(1536);
+  const Wz = 24e3,
+    Xz = "/docs/llms.txt",
+    Oz = `${Fz.c}${Xz}`,
+    oz = "/llms.txt",
+    vz = "/docs/llms-full.txt";
 
-  function eb(bb) {
-    return bb || "index"
+  function Uz(zz) {
+    return zz || "index"
   }
 
-  function vb(bb) {
-    return `/docs/${eb(bb)}.md`
+  function Kz(zz) {
+    return `/docs/${Uz(zz)}.md`
   }
 
-  function Lb(bb, ab) {
-    return `/docs/${eb(bb)}/${ab+1}.md`
+  function uz(zz, tz) {
+    return `/docs/${Uz(zz)}/${tz+1}.md`
   }
-  const Pb = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+  const Nz = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-  function Xb(bb) {
-    const ab = Pb.exec(bb);
-    return null === ab ? null : {
-      name: ab[1],
-      part: void 0 === ab[2] ? null : Number(ab[2])
+  function bz(zz) {
+    const tz = Nz.exec(zz);
+    return null === tz ? null : {
+      name: tz[1],
+      part: void 0 === tz[2] ? null : Number(tz[2])
     }
   }
-  const jb = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+  const wz = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-  function Rb(bb) {
-    const ab = jb.exec(bb);
-    if (null === ab) return null;
-    const [, Ub = "", Ab] = ab;
-    return void 0 === Ab ? vb(Ub) : Lb(Ub, Number(Ab) - 1)
+  function Dz(zz) {
+    const tz = wz.exec(zz);
+    if (null === tz) return null;
+    const [, sz = "", Fz] = tz;
+    return void 0 === Fz ? Kz(sz) : uz(sz, Number(Fz) - 1)
   }
 
-  function kb(bb) {
-    return `/docsHtml/${eb(bb)}.html`
+  function gz(zz) {
+    return `/docsHtml/${Uz(zz)}.html`
   }
 }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

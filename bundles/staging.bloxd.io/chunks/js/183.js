@@ -1,15 +1,15 @@
 export const id = 183;
 export const ids = [183];
 export const modules = {
-  8762: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      getLatestPublishedUpdateLog: () => Yb,
-      updateLogsData: () => Eb
+  8687: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      getLatestPublishedUpdateLog: () => oz,
+      updateLogsData: () => Oz
     });
-    var Ab = Ub(765),
-      Mb = Ub(307);
-    const Tb = "\xa0\xa0\xa0\xa0",
-      Eb = [{
+    var Fz = sz(776),
+      Wz = sz(308);
+    const Xz = "\xa0\xa0\xa0\xa0",
+      Oz = [{
         author: ["Oliver", "Harry"],
         date: new Date("2026-11-17T16:00:00Z"),
         title: "\u2728Characters are back in the Store!\u2728",
@@ -17,14 +17,14 @@ export const modules = {
         image: "CosmeticPacks.jpg",
         onClickImage: {
           type: "openMenu",
-          menu: Mb.j.COSMETIC_SHOP
+          menu: Wz.r.COSMETIC_SHOP
         },
         callToAction: {
           color: "rainbow",
           label: "Go to Store!",
           action: {
             type: "openMenu",
-            menu: Mb.j.COSMETIC_SHOP
+            menu: Wz.r.COSMETIC_SHOP
           }
         }
       }, {
@@ -91,7 +91,7 @@ export const modules = {
         }
       }, {
         author: "ellie",
-        date: Ab.f,
+        date: Fz.e,
         title: "Skyblock: Wild Infernos! \ud83d\udd25",
         description: "A fire mage has vanished into the Wild Infernos, and Emberwatch Outpost needs your help!\n\n Climb the Tower of Doom, escape the Shuffling Crypt and earn the Magmaward, the only armour that survives the volcano. Finish Lorenzo's combat lessons in the Hub and he'll show you the way.",
         image: "skyblock_wild_infernos.jpg",
@@ -172,7 +172,7 @@ export const modules = {
         }
       }, {
         author: ["Dirty Flea Sack", "ellie", "Harry"],
-        date: Ab.b,
+        date: Fz.d,
         title: "Skyblock: Cragrock Mines! \u26cf\ufe0f",
         description: "A meteor has struck Cragrock Mines, and the dwarves need your help!\n\n Ride a cannon over a lava lake, drive a gold-mining drill and earn the trust of the wary Elder Crag. Finish Ruby's mining lessons in the Hub and she'll show you the way.",
         image: "skyblock_cragrock_mines.jpg",
@@ -198,7 +198,7 @@ export const modules = {
           label: "Open Social",
           action: {
             type: "openMenu",
-            menu: Mb.j.SOCIAL
+            menu: Wz.r.SOCIAL
           }
         },
         showPopupOnLoad: !1
@@ -866,7 +866,7 @@ export const modules = {
           label: "Go to Shop!",
           action: {
             type: "openMenu",
-            menu: Mb.j.COSMETIC_SHOP
+            menu: Wz.r.COSMETIC_SHOP
           }
         }
       }, {
@@ -880,7 +880,7 @@ export const modules = {
           label: "Go to Shop!",
           action: {
             type: "openMenu",
-            menu: Mb.j.COSMETIC_SHOP
+            menu: Wz.r.COSMETIC_SHOP
           }
         }
       }, {
@@ -956,7 +956,7 @@ export const modules = {
           label: "Go to Shop!",
           action: {
             type: "openMenu",
-            menu: Mb.j.COSMETIC_SHOP
+            menu: Wz.r.COSMETIC_SHOP
           }
         }
       }, {
@@ -1136,7 +1136,7 @@ export const modules = {
           label: "Go to Shop!",
           action: {
             type: "openMenu",
-            menu: Mb.j.COSMETIC_SHOP
+            menu: Wz.r.COSMETIC_SHOP
           }
         }
       }, {
@@ -1428,7 +1428,7 @@ export const modules = {
       }, {
         date: new Date("2026-01-28T14:00:00Z"),
         title: "1v1 Fights Update!",
-        description: `1v1 Fights (previously known as Ranked PvP) has been updated!\n\t${Tb}\u2022\tRANKS! What rank will you be?\n\t${Tb}\u2022\tNew Mode: Build Fight! Use spikes and nets to win in a whole different way!\n\t${Tb}\u2022\tDuels has become Sword Fight! How much can you do with just a sword?\n\t${Tb}\u2022\tNew flat map for Sword Fight and Build Fight!\n\t${Tb}\u2022\tBridge Fight is now 1v1! Can you score without any extra help?`,
+        description: `1v1 Fights (previously known as Ranked PvP) has been updated!\n\t${Xz}\u2022\tRANKS! What rank will you be?\n\t${Xz}\u2022\tNew Mode: Build Fight! Use spikes and nets to win in a whole different way!\n\t${Xz}\u2022\tDuels has become Sword Fight! How much can you do with just a sword?\n\t${Xz}\u2022\tNew flat map for Sword Fight and Build Fight!\n\t${Xz}\u2022\tBridge Fight is now 1v1! Can you score without any extra help?`,
         image: "ranked_pvp.jpg",
         author: ["Slushie"],
         callToAction: {
@@ -1456,7 +1456,7 @@ export const modules = {
       }, {
         date: new Date("2026-01-22T14:00:00Z"),
         title: "Ranked PvP is here!",
-        description: `Ranked PvP is here!\n\t${Tb}\u2022\tPlay 1v1 Duels or 2v2 Bridge to test your skills!\n\t${Tb}\u2022\tPlay your placement games to get an MMR value!\n\t${Tb}\u2022\tCan you get a higher MMR than Arthur? (he's cracked)`,
+        description: `Ranked PvP is here!\n\t${Xz}\u2022\tPlay 1v1 Duels or 2v2 Bridge to test your skills!\n\t${Xz}\u2022\tPlay your placement games to get an MMR value!\n\t${Xz}\u2022\tCan you get a higher MMR than Arthur? (he's cracked)`,
         image: "ranked_pvp.jpg",
         author: ["Slushie"],
         callToAction: {
@@ -1552,7 +1552,7 @@ export const modules = {
       }, {
         date: new Date("2025-12-16T11:15:00Z"),
         title: "One Block Cross-Lobby Islands & Portal Skins!",
-        description: `Bunch of new stuff for One Block for you!\n\t\u2022\tCross-Lobby Islands!\n\t${Tb}\u2022\tYou can now migrate your island to any lobby you want!\n\t${Tb}\u2022\tYou can also freely switch between your different islands at any time.\n\t${Tb}\u2022\tUse the Island Manager category in the shop to manage your saved islands.\n\t\u2022\tPortal Skins!\n\t${Tb}\u2022\tYou can now change what your portal looks like.\n\t${Tb}\u2022\tSelect from a variety of unlockable skins in the shop.\nIs there more to come? Maybe... stay tuned!`,
+        description: `Bunch of new stuff for One Block for you!\n\t\u2022\tCross-Lobby Islands!\n\t${Xz}\u2022\tYou can now migrate your island to any lobby you want!\n\t${Xz}\u2022\tYou can also freely switch between your different islands at any time.\n\t${Xz}\u2022\tUse the Island Manager category in the shop to manage your saved islands.\n\t\u2022\tPortal Skins!\n\t${Xz}\u2022\tYou can now change what your portal looks like.\n\t${Xz}\u2022\tSelect from a variety of unlockable skins in the shop.\nIs there more to come? Maybe... stay tuned!`,
         image: "ob_portal_skins.jpg",
         author: ["Slushie", "jasninus"],
         callToAction: {
@@ -1784,7 +1784,7 @@ export const modules = {
           label: "Try it now",
           action: {
             type: "openMenu",
-            menu: Mb.j.CUSTOMISATION
+            menu: Wz.r.CUSTOMISATION
           }
         }
       }, {
@@ -1804,7 +1804,7 @@ export const modules = {
           label: "Try it now",
           action: {
             type: "openMenu",
-            menu: Mb.j.CUSTOMISATION
+            menu: Wz.r.CUSTOMISATION
           }
         }
       }, {
@@ -2772,13 +2772,13 @@ export const modules = {
         title: "Started Update Log"
       }];
 
-    function Yb(bb) {
-      const ab = Date.now();
-      let Ub = null;
-      for (const Ab of Eb) Ab.date.getTime() > ab || bb && !bb(Ab) || (!Ub || Ab.date.getTime() > Ub.date.getTime()) && (Ub = Ab);
-      return Ub
+    function oz(zz) {
+      const tz = Date.now();
+      let sz = null;
+      for (const Fz of Oz) Fz.date.getTime() > tz || zz && !zz(Fz) || (!sz || Fz.date.getTime() > sz.date.getTime()) && (sz = Fz);
+      return sz
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);

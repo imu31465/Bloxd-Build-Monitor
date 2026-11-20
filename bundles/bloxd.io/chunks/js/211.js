@@ -1,132 +1,132 @@
 export const id = 211;
 export const ids = [211];
 export const modules = {
-  35826: (bb, ab, Ub) => {
-    Ub.r(ab), Ub.d(ab, {
-      default: () => mb
+  35896: (zz, tz, sz) => {
+    sz.r(tz), sz.d(tz, {
+      default: () => Jz
     });
-    var Ab = Ub(984),
-      Mb = Ub.n(Ab),
-      Tb = Ub(1446),
-      Eb = Ub(979),
-      Yb = Ub(714),
-      Bb = Ub(1134),
-      eb = Ub(1352),
-      vb = Ub(1433),
-      Lb = Ub(3223),
-      Pb = Ub(990),
-      Xb = Ub(3161),
-      jb = Ub(2386),
-      Rb = Ub(1023);
-    const kb = 2;
+    var Fz = sz(1020),
+      Wz = sz.n(Fz),
+      Xz = sz(1493),
+      Oz = sz(1014),
+      oz = sz(725),
+      vz = sz(1173),
+      Uz = sz(1419),
+      Kz = sz(1483),
+      uz = sz(3232),
+      Nz = sz(1036),
+      bz = sz(3158),
+      wz = sz(2379),
+      Dz = sz(1087);
+    const gz = 2;
 
-    function yb(bb) {
-      return "firstPartyGame" === bb.type ? {
+    function Hz(zz) {
+      return "firstPartyGame" === zz.type ? {
         type: "game",
-        gameNameWithVariation: bb.gameNameWithVariation
+        gameNameWithVariation: zz.gameNameWithVariation
       } : {
         type: "preview",
-        preview: bb.preview
+        preview: zz.preview
       }
     }
 
-    function Zb(bb) {
+    function Bz(zz) {
       let {
-        game: ab,
-        disabled: Ub,
-        showPlaceholder: Ab
-      } = bb;
-      return null !== ab ? (0, Rb.jsx)(Xb.f, {
-        source: yb(ab),
+        game: tz,
+        disabled: sz,
+        showPlaceholder: Fz
+      } = zz;
+      return null !== tz ? (0, Dz.jsx)(bz.g, {
+        source: Hz(tz),
         gameWidth: "100%",
         useLongRatio: !0,
-        disabled: Ub,
+        disabled: sz,
         entrySource: "customGamePlace"
-      }) : Ab ? (0, Rb.jsx)(Xb.e, {
+      }) : Fz ? (0, Dz.jsx)(bz.e, {
         gameWidth: "100%",
         useLongRatio: !0
       }) : null
     }
 
-    function Db(bb) {
-      var ab;
+    function Pz(zz) {
+      var tz;
       let {
-        category: Ub,
-        title: Ab,
-        tintColour: Mb,
-        layout: Tb,
-        games: Eb,
-        landscape: Yb = !1
-      } = bb;
+        category: sz,
+        title: Fz,
+        tintColour: Wz,
+        layout: Xz,
+        games: Oz,
+        landscape: oz = !1
+      } = zz;
       const {
-        followsLeader: Bb
-      } = (0, jb.f)(), eb = null !== (ab = null === Eb || void 0 === Eb ? void 0 : Eb.slice(0, Tb.gameCount)) && void 0 !== ab ? ab : [], Lb = {
-        "--custom-game-place-tint": Mb
+        followsLeader: vz
+      } = (0, wz.i)(), Uz = null !== (tz = null === Oz || void 0 === Oz ? void 0 : Oz.slice(0, Xz.gameCount)) && void 0 !== tz ? tz : [], uz = {
+        "--custom-game-place-tint": Wz
       };
-      return (0, Rb.jsxs)("div", {
+      return (0, Dz.jsxs)("div", {
         className: "CustomGamePlacePanel AnimFadeIn",
-        style: Lb,
-        children: [(0, Rb.jsx)("h2", {
+        style: uz,
+        children: [(0, Dz.jsx)("h2", {
           className: "CustomGamePlacePanelHeading",
-          children: (0, Rb.jsxs)(vb.LinkPreserveSearch, {
-            to: `/custom-games/${encodeURIComponent(Ub)}`,
+          children: (0, Dz.jsxs)(Kz.LinkPreserveSearch, {
+            to: `/custom-games/${encodeURIComponent(sz)}`,
             className: "CustomGamePlacePanelTitle SmallTextBold",
-            children: [(0, Rb.jsx)("span", {
-              children: Ab
-            }), (0, Rb.jsx)(Pb.e, {
+            children: [(0, Dz.jsx)("span", {
+              children: Fz
+            }), (0, Dz.jsx)(Nz.c, {
               name: "arrow-up"
             })]
           })
-        }), (0, Rb.jsx)("div", {
+        }), (0, Dz.jsx)("div", {
           className: "CustomGamePlacePanelGames",
           style: {
-            gridTemplateColumns: `repeat(${Yb?Tb.columnCount:kb}, ${Yb?"var(--custom-game-place-tile-width)":"minmax(0, 1fr)"})`
+            gridTemplateColumns: `repeat(${oz?Xz.columnCount:gz}, ${oz?"var(--custom-game-place-tile-width)":"minmax(0, 1fr)"})`
           },
           children: Array.from({
-            length: Tb.gameCount
-          }, ((bb, ab) => {
-            var Ub;
-            return (0, Rb.jsx)(Zb, {
-              game: null !== (Ub = eb[ab]) && void 0 !== Ub ? Ub : null,
-              disabled: Bb,
-              showPlaceholder: !Eb
-            }, ab)
+            length: Xz.gameCount
+          }, ((zz, tz) => {
+            var sz;
+            return (0, Dz.jsx)(Bz, {
+              game: null !== (sz = Uz[tz]) && void 0 !== sz ? sz : null,
+              disabled: vz,
+              showPlaceholder: !Oz
+            }, tz)
           }))
         })]
       })
     }
 
-    function zb(bb) {
+    function rz(zz) {
       let {
-        categories: ab
-      } = bb;
+        categories: tz
+      } = zz;
 
-      function Ub(bb) {
-        const Ub = ab[bb];
-        return (0, Rb.jsx)(Db, {
-          ...Ub,
+      function sz(zz) {
+        const sz = tz[zz];
+        return (0, Dz.jsx)(Pz, {
+          ...sz,
           landscape: !0
-        }, Ub.id)
+        }, sz.id)
       }
-      return (0, Rb.jsxs)("div", {
+      return (0, Dz.jsxs)("div", {
         className: "CustomGamePlaceMosaic CustomGamePlaceMosaicLandscape AnimFadeIn",
-        children: [(0, Rb.jsxs)("div", {
+        children: [(0, Dz.jsxs)("div", {
           className: "CustomGamePlaceUpper",
-          children: [(0, Rb.jsxs)("div", {
+          children: [(0, Dz.jsxs)("div", {
             className: "CustomGamePlaceMain",
-            children: [(0, Rb.jsxs)("div", {
+            children: [(0, Dz.jsxs)("div", {
               className: "CustomGamePlaceRow",
-              children: [Ub(0), Ub(2)]
-            }), Ub(1)]
-          }), Ub(4)]
-        }), (0, Rb.jsxs)("div", {
+              children: [sz(0), sz(2)]
+            }), sz(1)]
+          }), sz(4)]
+        }), (0, Dz.jsxs)("div", {
           className: "CustomGamePlaceRow",
-          children: [Ub(3), Ub(5)]
+          children: [sz(3), sz(5)]
         })]
       })
     }
-    const xb = ["section1", "section2", "section3", "section4", "section5", "section6"],
-      ib = {
+    const Yz = ["section1", "section2", "section3", "section4", "section5", "section6"],
+      xz = {
         section1: {
           gameCount: 4,
           columnCount: 2
@@ -152,67 +152,67 @@ export const modules = {
           columnCount: 4
         }
       };
-    var fb = Ub(1047);
+    var mz = sz(1106);
 
-    function mb() {
-      var bb;
+    function Jz() {
+      var zz;
       const {
-        t: ab
-      } = (0, Bb.A)(), Ub = (0, Tb.F)(), Ab = (0, fb.k)(), Pb = (0, Lb.c)({
+        t: tz
+      } = (0, vz.B)(), sz = (0, Xz.C)(), Fz = (0, mz.i)(), Nz = (0, uz.d)({
         refresh: !0
-      }), Xb = Ub.customGamePlace;
-      if (!(0, Eb.i)(Xb)) return (0, Rb.jsx)(vb.NavigatePreserveSearch, {
+      }), bz = sz.customGamePlace;
+      if (!(0, Oz.n)(bz)) return (0, Dz.jsx)(Kz.NavigatePreserveSearch, {
         to: "/"
       });
-      const jb = Yb.d[Xb],
-        kb = Eb.d[Xb],
-        yb = null !== (bb = null === Pb || void 0 === Pb ? void 0 : Pb[Xb]) && void 0 !== bb ? bb : null,
-        Zb = [];
-      for (let Mb = 0; Mb < kb.length; Mb++) {
-        var mb;
-        const bb = xb[Mb];
-        if (!bb) continue;
-        const Ub = kb[Mb];
-        Zb.push({
-          id: Ub.id,
-          category: Ub.category,
-          title: ab(Ub.displayTranslationKey),
-          tintColour: Ub.tintColour,
-          layout: ib[bb],
-          games: null !== (mb = null === yb || void 0 === yb ? void 0 : yb[Ub.id]) && void 0 !== mb ? mb : null
+      const wz = oz.e[bz],
+        gz = Oz.c[bz],
+        Hz = null !== (zz = null === Nz || void 0 === Nz ? void 0 : Nz[bz]) && void 0 !== zz ? zz : null,
+        Bz = [];
+      for (let Wz = 0; Wz < gz.length; Wz++) {
+        var Jz;
+        const zz = Yz[Wz];
+        if (!zz) continue;
+        const sz = gz[Wz];
+        Bz.push({
+          id: sz.id,
+          category: sz.category,
+          title: tz(sz.displayTranslationKey),
+          tintColour: sz.tintColour,
+          layout: xz[zz],
+          games: null !== (Jz = null === Hz || void 0 === Hz ? void 0 : Hz[sz.id]) && void 0 !== Jz ? Jz : null
         })
       }
-      return (0, Rb.jsxs)("div", {
+      return (0, Dz.jsxs)("div", {
         className: "CustomGamePlaceContainer AnimFadeIn",
-        children: [(0, Rb.jsx)("div", {
+        children: [(0, Dz.jsx)("div", {
           className: "BackgroundImage",
           style: {
-            backgroundImage: `url(/textures/games/${Xb}/${jb.largePicture}.png)`
+            backgroundImage: `url(/textures/games/${bz}/${wz.largePicture}.png)`
           }
-        }), (0, Rb.jsx)("h1", {
+        }), (0, Dz.jsx)("h1", {
           className: "VisuallyHidden",
-          children: ab(jb.title)
-        }), (0, Rb.jsx)("div", {
+          children: tz(wz.title)
+        }), (0, Dz.jsx)("div", {
           className: "CustomGamePlaceHeaderContainer",
-          children: (0, Rb.jsx)(eb.e, {
-            onClick: () => (0, vb.navigatePreserveSearch)("/"),
-            children: ab("homePage:backToGames")
+          children: (0, Dz.jsx)(Uz.e, {
+            onClick: () => (0, Kz.navigatePreserveSearch)("/"),
+            children: tz("homePage:backToGames")
           })
-        }), !Ab && (0, Rb.jsx)(zb, {
-          categories: Zb
-        }), Ab && (0, Rb.jsx)("div", {
-          className: Mb()("CustomGamePlaceMosaic", "CustomGamePlaceMosaicPortrait"),
-          children: Zb.map((bb => (0, Rb.jsx)(Db, {
-            category: bb.category,
-            title: bb.title,
-            tintColour: bb.tintColour,
-            layout: bb.layout,
-            games: bb.games
-          }, bb.id)))
+        }), !Fz && (0, Dz.jsx)(rz, {
+          categories: Bz
+        }), Fz && (0, Dz.jsx)("div", {
+          className: Wz()("CustomGamePlaceMosaic", "CustomGamePlaceMosaicPortrait"),
+          children: Bz.map((zz => (0, Dz.jsx)(Pz, {
+            category: zz.category,
+            title: zz.title,
+            tintColour: zz.tintColour,
+            layout: zz.layout,
+            games: zz.games
+          }, zz.id)))
         })]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const zz in modules) Object.freeze(modules[zz]);
