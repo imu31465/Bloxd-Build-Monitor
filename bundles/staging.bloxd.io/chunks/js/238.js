@@ -1,25 +1,25 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  39175: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      default: () => fy
+  39041: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      default: () => kR
     });
-    const Eu = [0, 90, 180, 270],
-      Ku = "plotsblueprint";
-    var Qu = yu(64),
-      mu = yu(36445),
-      Ju = yu(27),
-      Nu = yu(1583),
-      Xu = yu(1661),
-      Vu = yu(34);
-    const ru = [
+    const Rk = [0, 90, 180, 270],
+      tk = "plotsblueprint";
+    var ak = Bk(61),
+      Xk = Bk(36332),
+      bk = Bk(22),
+      wk = Bk(1585),
+      dk = Bk(1650),
+      sk = Bk(29);
+    const Vk = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      Bu = {
+      Jk = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -93,18 +93,18 @@ export const modules = {
           tier: "large"
         }
       },
-      xu = ["small", "medium", "large"].flatMap((uu => ru.flat().filter((Ru => Bu[Ru].tier === uu))));
+      Ak = ["small", "medium", "large"].flatMap((kk => Vk.flat().filter((Fk => Jk[Fk].tier === kk))));
 
-    function Su(uu) {
-      return Bu[uu]
+    function ek(kk) {
+      return Jk[kk]
     }
-    const pu = new Map(ru.flatMap((uu => uu.slice(1).map(((Ru, yu) => [Ru, uu[yu]])))));
+    const yk = new Map(Vk.flatMap((kk => kk.slice(1).map(((Fk, Bk) => [Fk, kk[Bk]])))));
 
-    function Tu(uu) {
-      var Ru;
-      return null !== (Ru = pu.get(uu)) && void 0 !== Ru ? Ru : null
+    function fk(kk) {
+      var Fk;
+      return null !== (Fk = yk.get(kk)) && void 0 !== Fk ? Fk : null
     }
-    const Wu = {
+    const mk = {
       farm_hut: "plotsGame:journalNoteFarmHut",
       rusticHome_tent: "plotsGame:journalNoteRusticHomeTent",
       castle_tower: "plotsGame:journalNoteCastleTower",
@@ -112,180 +112,180 @@ export const modules = {
       farm_barn: "plotsGame:journalNoteFarmBarn"
     };
 
-    function ju(uu, Ru) {
-      const yu = new Set(uu),
-        Eu = function(uu) {
-          const Ru = new Set(uu);
-          return new Set(xu.filter((uu => {
-            const yu = Tu(uu);
-            return null === yu || Ru.has(yu)
+    function Wk(kk, Fk) {
+      const Bk = new Set(kk),
+        Rk = function(kk) {
+          const Fk = new Set(kk);
+          return new Set(Ak.filter((kk => {
+            const Bk = fk(kk);
+            return null === Bk || Fk.has(Bk)
           })))
-        }(yu);
-      return xu.map((uu => {
-        const Ku = uu === Ru;
-        return yu.has(uu) ? {
-          id: uu,
-          active: Ku,
+        }(Bk);
+      return Ak.map((kk => {
+        const tk = kk === Fk;
+        return Bk.has(kk) ? {
+          id: kk,
+          active: tk,
           state: "completed",
           unlockedBy: null
-        } : Eu.has(uu) ? {
-          id: uu,
-          active: Ku,
+        } : Rk.has(kk) ? {
+          id: kk,
+          active: tk,
           state: "open",
           unlockedBy: null
         } : {
-          id: uu,
-          active: Ku,
+          id: kk,
+          active: tk,
           state: "locked",
-          unlockedBy: Tu(uu)
+          unlockedBy: fk(kk)
         }
       }))
     }
-    const Hu = "plotsJournalChanged";
-    class du {
-      constructor(uu, Ru) {
-        this.api = uu, this.placement = Ru, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.Px("journal_opened")
-        }, this.build = uu => {
-          this.Px("placement_started"), this.placement.start(uu), (0, mu.f)()
+    const vk = "plotsJournalChanged";
+    class ik {
+      constructor(kk, Fk) {
+        this.api = kk, this.placement = Fk, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.ve("journal_opened")
+        }, this.build = kk => {
+          this.ve("placement_started"), this.placement.start(kk), (0, Xk.f)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${Ku} cancel`)
+          this.api.sendCommand(`${tk} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      SS(uu) {
-        let [, Ru, yu] = uu;
-        this.pages = ju(Ru, yu), Vu.k.Op(Hu, this.pages, !0)
+      he(kk) {
+        let [, Fk, Bk] = kk;
+        this.pages = Wk(Fk, Bk), sk.o.Hf(vk, this.pages, !0)
       }
       openFromServer() {
-        this.openRequested = !0, this.sr()
+        this.openRequested = !0, this.yJ()
       }
-      sr() {
-        this.openRequested && !Ju.d.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, Nu.p)() || (0, Xu.isTypingInInput)() || null !== this.placement.getView() || (0, mu.q)())
+      yJ() {
+        this.openRequested && !bk.c.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, wk.s)() || (0, dk.isTypingInInput)() || null !== this.placement.getView() || (0, Xk.q)())
       }
-      Px(uu) {
-        this.reported.has(uu) || (this.reported.add(uu), this.api.sendCommand(`${Ku} report ${uu}`))
+      ve(kk) {
+        this.reported.has(kk) || (this.reported.add(kk), this.api.sendCommand(`${tk} report ${kk}`))
       }
     }
-    var bu = yu(1035),
-      Cu = yu.n(bu),
-      ku = yu(1043),
-      eu = yu(1408),
-      Au = yu(4301),
-      Du = yu(3214),
-      Mu = yu(1400),
-      Iu = yu(2003),
-      Gu = yu(1170),
-      Uu = yu(9158);
-    const nu = [0, 90, 180, 270],
-      su = /^(meta\|rot\d)\|([lrud]+)$/,
-      tu = "nesw",
-      lu = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      gu = function(uu) {
-        const Ru = new WeakMap;
-        return (yu, Eu) => {
-          let Ku = Ru.get(yu);
-          return void 0 === Ku && (Ku = uu(yu, Eu), Ru.set(yu, Ku)), Ku
+    var Yk = Bk(1020),
+      Lk = Bk.n(Yk),
+      Ok = Bk(1028),
+      Ek = Bk(1389),
+      Sk = Bk(4268),
+      Nk = Bk(3214),
+      Hk = Bk(1387),
+      uk = Bk(1987),
+      Mk = Bk(1149),
+      gk = Bk(9095);
+    const Uk = [0, 90, 180, 270],
+      ck = /^(meta\|rot\d)\|([lrud]+)$/,
+      Gk = "nesw",
+      Tk = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      rk = function(kk) {
+        const Fk = new WeakMap;
+        return (Bk, Rk) => {
+          let tk = Fk.get(Bk);
+          return void 0 === tk && (tk = kk(Bk, Rk), Fk.set(Bk, tk)), tk
         }
-      }((uu => new cu(uu)));
-    class cu {
-      constructor(uu) {
-        this.blockMetadata = uu, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const Ru = new Set(Object.keys(uu).map((Ru => uu[Ru].id)));
-        Ru.add(0), this.maxBlockId = Math.max(...Ru)
+      }((kk => new Dk(kk)));
+    class Dk {
+      constructor(kk) {
+        this.blockMetadata = kk, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const Fk = new Set(Object.keys(kk).map((Fk => kk[Fk].id)));
+        Fk.add(0), this.maxBlockId = Math.max(...Fk)
       }
       static
-      for (uu) {
-        return gu(uu)
+      for (kk) {
+        return rk(kk)
       }
-      getBlockIdMapping(uu, Ru) {
-        const yu = this.getBlockIdMappingKey(uu, Ru);
-        let Eu = this.blockIdMappings.get(yu);
-        return void 0 === Eu && nu.includes(uu) && (Eu = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, uu, Ru), this.blockIdMappings.set(yu, Eu)), Eu
+      getBlockIdMapping(kk, Fk) {
+        const Bk = this.getBlockIdMappingKey(kk, Fk);
+        let Rk = this.blockIdMappings.get(Bk);
+        return void 0 === Rk && Uk.includes(kk) && (Rk = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, kk, Fk), this.blockIdMappings.set(Bk, Rk)), Rk
       }
-      turnBlockId(uu, Ru, yu) {
-        return this.mapBlockId(this.blockMetadata[uu], Ru, this.getRotationMapping(Ru, yu), yu)
+      turnBlockId(kk, Fk, Bk) {
+        return this.mapBlockId(this.blockMetadata[kk], Fk, this.getRotationMapping(Fk, Bk), Bk)
       }
-      getBlockIdMappingKey(uu, Ru) {
-        return `r${uu}|m${Number(Ru)}`
+      getBlockIdMappingKey(kk, Fk) {
+        return `r${kk}|m${Number(Fk)}`
       }
-      createBlockIdMapping(uu, Ru, yu, Eu) {
-        const Ku = new Uint16Array(Ru + 1),
-          Qu = this.getRotationMapping(yu, Eu);
-        for (const mu in uu) {
-          const Ru = uu[mu];
-          Ku[Ru.id] = this.mapBlockId(Ru, yu, Qu, Eu)
+      createBlockIdMapping(kk, Fk, Bk, Rk) {
+        const tk = new Uint16Array(Fk + 1),
+          ak = this.getRotationMapping(Bk, Rk);
+        for (const Xk in kk) {
+          const Fk = kk[Xk];
+          tk[Fk.id] = this.mapBlockId(Fk, Bk, ak, Rk)
         }
-        return Ku
+        return tk
       }
-      getRotationMapping(uu, Ru) {
-        const yu = Math.round(uu / 90),
-          Eu = new Uint8Array(4);
-        for (let Ku = 0; Ku < 4; Ku++) Eu[Ku] = (4 + Ku - yu) % 4;
-        if (Ru) {
-          let uu = Eu[0];
-          Eu[0] = Eu[1], Eu[1] = uu, uu = Eu[2], Eu[2] = Eu[3], Eu[3] = uu
+      getRotationMapping(kk, Fk) {
+        const Bk = Math.round(kk / 90),
+          Rk = new Uint8Array(4);
+        for (let tk = 0; tk < 4; tk++) Rk[tk] = (4 + tk - Bk) % 4;
+        if (Fk) {
+          let kk = Rk[0];
+          Rk[0] = Rk[1], Rk[1] = kk, kk = Rk[2], Rk[2] = Rk[3], Rk[3] = kk
         }
-        return Eu
+        return Rk
       }
-      mapBlockId(uu, Ru, yu, Eu) {
-        var Ku;
+      mapBlockId(kk, Fk, Bk, Rk) {
+        var tk;
         const {
-          blockMetadata: Qu
-        } = this, mu = Math.round(Ru / 90), {
-          id: Ju,
-          meta: Nu
-        } = uu, {
-          rot: Xu,
-          rootName: Vu,
-          metaStr: ru
-        } = Nu;
-        let Bu;
-        const [, xu, Su] = null !== (Ku = lu.exec(ru)) && void 0 !== Ku ? Ku : [];
-        if (void 0 !== xu) {
-          var pu, Tu;
-          Bu = null !== (pu = null === (Tu = Qu[`${Vu}|meta|${[tu.split("").filter(((uu,Ru)=>xu.split("").some((uu=>{const yu=tu.indexOf(uu);return((Eu?3-yu:yu)+mu)%4===Ru})))).join(""),Su].filter(Boolean).join("|")}`]) || void 0 === Tu ? void 0 : Tu.id) && void 0 !== pu ? pu : Ju
-        } else if (null === Xu) Bu = Ju;
+          blockMetadata: ak
+        } = this, Xk = Math.round(Fk / 90), {
+          id: bk,
+          meta: wk
+        } = kk, {
+          rot: dk,
+          rootName: sk,
+          metaStr: Vk
+        } = wk;
+        let Jk;
+        const [, Ak, ek] = null !== (tk = Tk.exec(Vk)) && void 0 !== tk ? tk : [];
+        if (void 0 !== Ak) {
+          var yk, fk;
+          Jk = null !== (yk = null === (fk = ak[`${sk}|meta|${[Gk.split("").filter(((kk,Fk)=>Ak.split("").some((kk=>{const Bk=Gk.indexOf(kk);return((Rk?3-Bk:Bk)+Xk)%4===Fk})))).join(""),ek].filter(Boolean).join("|")}`]) || void 0 === fk ? void 0 : fk.id) && void 0 !== yk ? yk : bk
+        } else if (null === dk) Jk = bk;
         else {
-          var Wu, ju;
-          const uu = yu[Xu - 1] + 1;
-          let Ru = ru.replace(`rot${Xu}`, `rot${uu}`);
-          Eu && Nu.stairsCorner && (Ru = Ru.replace(/(Left|Right)$/, (uu => "Left" === uu ? "Right" : "Left"))), Eu && "Chest" === Vu && (Ru = Ru.replace(/\|(left|right)$/, ((uu, Ru) => "left" === Ru ? "|right" : "|left")));
-          const Ku = su.exec(Ru);
-          if (Eu && null !== Ku) {
-            const uu = "lrud".split("").filter((uu => Ku[2].includes("l" === uu ? "r" : "r" === uu ? "l" : uu)));
-            Ru = `${Ku[1]}|${uu.join("")}`
+          var mk, Wk;
+          const kk = Bk[dk - 1] + 1;
+          let Fk = Vk.replace(`rot${dk}`, `rot${kk}`);
+          Rk && wk.stairsCorner && (Fk = Fk.replace(/(Left|Right)$/, (kk => "Left" === kk ? "Right" : "Left"))), Rk && "Chest" === sk && (Fk = Fk.replace(/\|(left|right)$/, ((kk, Fk) => "left" === Fk ? "|right" : "|left")));
+          const tk = ck.exec(Fk);
+          if (Rk && null !== tk) {
+            const kk = "lrud".split("").filter((kk => tk[2].includes("l" === kk ? "r" : "r" === kk ? "l" : kk)));
+            Fk = `${tk[1]}|${kk.join("")}`
           }
-          const mu = `${Vu}|${Ru}`;
-          if (Bu = null !== (Wu = null === (ju = Qu[mu]) || void 0 === ju ? void 0 : ju.id) && void 0 !== Wu ? Wu : null, null === Bu) {
-            const uu = Qu[Vu];
-            Bu = uu.rootMetaDesc === mu ? uu.id : Ju
+          const Xk = `${sk}|${Fk}`;
+          if (Jk = null !== (mk = null === (Wk = ak[Xk]) || void 0 === Wk ? void 0 : Wk.id) && void 0 !== mk ? mk : null, null === Jk) {
+            const kk = ak[sk];
+            Jk = kk.rootMetaDesc === Xk ? kk.id : bk
           }
         }
-        return Bu
+        return Jk
       }
     }
 
-    function Lu(uu, Ru, yu) {
+    function zk(kk, Fk, Bk) {
       let {
-        xRotationMappedOrigin: Eu,
-        shouldSwapXZ: Ku
-      } = yu;
-      const Qu = Ku ? Ru : uu;
-      return null === Eu ? Qu : Eu - Qu
+        xRotationMappedOrigin: Rk,
+        shouldSwapXZ: tk
+      } = Bk;
+      const ak = tk ? Fk : kk;
+      return null === Rk ? ak : Rk - ak
     }
 
-    function zu(uu, Ru, yu) {
+    function Pk(kk, Fk, Bk) {
       let {
-        zRotationMappedOrigin: Eu,
-        shouldSwapXZ: Ku
-      } = yu;
-      const Qu = Ku ? uu : Ru;
-      return null === Eu ? Qu : Eu - Qu
+        zRotationMappedOrigin: Rk,
+        shouldSwapXZ: tk
+      } = Bk;
+      const ak = tk ? kk : Fk;
+      return null === Rk ? ak : Rk - ak
     }
-    const Fu = {
+    const hk = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -347,493 +347,493 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      wu = new Map;
+      qk = new Map;
 
-    function Zu(uu, Ru) {
-      const yu = `${uu}|${Ru}`;
-      let Eu = wu.get(yu);
-      if (void 0 === Eu) {
+    function Ck(kk, Fk) {
+      const Bk = `${kk}|${Fk}`;
+      let Rk = qk.get(Bk);
+      if (void 0 === Rk) {
         const {
-          size: Ku,
-          palette: Qu,
-          layers: mu
-        } = Fu[uu], Ju = 90 === Ru || 270 === Ru, [Nu, Xu] = Ju ? [Ku[2], Ku[0]] : [Ku[0], Ku[2]], Vu = function(uu, Ru, yu) {
-          let Eu = null,
-            Ku = null,
-            Qu = !1;
-          switch (uu) {
+          size: tk,
+          palette: ak,
+          layers: Xk
+        } = hk[kk], bk = 90 === Fk || 270 === Fk, [wk, dk] = bk ? [tk[2], tk[0]] : [tk[0], tk[2]], sk = function(kk, Fk, Bk) {
+          let Rk = null,
+            tk = null,
+            ak = !1;
+          switch (kk) {
             case 0:
               break;
             case 90:
-              Eu = Ru - 1, Qu = !0;
+              Rk = Fk - 1, ak = !0;
               break;
             case 180:
-              Eu = Ru - 1, Ku = yu - 1;
+              Rk = Fk - 1, tk = Bk - 1;
               break;
             case 270:
-              Ku = yu - 1, Qu = !0;
+              tk = Bk - 1, ak = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${uu}`)
+              throw new Error(`Invalid rotation: ${kk}`)
           }
           return {
-            xRotationMappedOrigin: Eu,
-            zRotationMappedOrigin: Ku,
-            shouldSwapXZ: Qu
+            xRotationMappedOrigin: Rk,
+            zRotationMappedOrigin: tk,
+            shouldSwapXZ: ak
           }
-        }(Ru, Nu, Xu), ru = cu.for(Uu.j), Bu = Qu.map((uu => (0, Uu.g)(ru.turnBlockId((0, Uu.n)(uu), Ru, !1)))), xu = [];
-        mu.forEach(((uu, Ru) => {
-          uu.split(" ").forEach(((uu, yu) => {
-            for (let Eu = 0; Eu < uu.length; Eu++)
-              if ("." !== uu[Eu]) {
-                const Ku = [Lu(Eu, yu, Vu), Ru, zu(Eu, yu, Vu)];
-                xu.push({
-                  offset: Ku,
-                  block: Bu[uu.charCodeAt(Eu) - "a".charCodeAt(0)]
+        }(Fk, wk, dk), Vk = Dk.for(gk.j), Jk = ak.map((kk => (0, gk.h)(Vk.turnBlockId((0, gk.m)(kk), Fk, !1)))), Ak = [];
+        Xk.forEach(((kk, Fk) => {
+          kk.split(" ").forEach(((kk, Bk) => {
+            for (let Rk = 0; Rk < kk.length; Rk++)
+              if ("." !== kk[Rk]) {
+                const tk = [zk(Rk, Bk, sk), Fk, Pk(Rk, Bk, sk)];
+                Ak.push({
+                  offset: tk,
+                  block: Jk[kk.charCodeAt(Rk) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), Eu = {
-          size: [Nu, Ku[1], Xu],
-          cells: xu
-        }, wu.set(yu, Eu)
+        })), Rk = {
+          size: [wk, tk[1], dk],
+          cells: Ak
+        }, qk.set(Bk, Rk)
       }
-      return Eu
+      return Rk
     }
-    const hu = {
-      farm_hut: yu.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-      farm_house: yu.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-      farm_barn: yu.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-      rusticHome_tent: yu.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-      rusticHome_cabin: yu.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-      rusticHome_house: yu.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-      market_stand: yu.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-      market_stall: yu.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-      market_shop: yu.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-      castle_wall: yu.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-      castle_gate: yu.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-      castle_tower: yu.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    const Zk = {
+      farm_hut: Bk.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+      farm_house: Bk.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+      farm_barn: Bk.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+      rusticHome_tent: Bk.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+      rusticHome_cabin: Bk.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+      rusticHome_house: Bk.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+      market_stand: Bk.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+      market_stall: Bk.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+      market_shop: Bk.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+      castle_wall: Bk.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+      castle_gate: Bk.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+      castle_tower: Bk.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
     };
-    var Pu = yu(1079);
-    const iu = {
+    var pk = Bk(1069);
+    const Kk = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function Yu(uu) {
+    function xk(kk) {
       let {
-        page: Ru,
-        building: yu,
-        onBuild: Eu,
-        onPutAway: Ku
-      } = uu;
+        page: Fk,
+        building: Bk,
+        onBuild: Rk,
+        onPutAway: tk
+      } = kk;
       const {
-        t: Qu
-      } = (0, Gu.E)(), {
-        displayName: mu,
-        tier: Ju
-      } = Su(Ru.id), Nu = Zu(Ru.id, 0).cells.length, Xu = Wu[Ru.id], Vu = "locked" === Ru.state, ru = yu ? eu.e : eu.l;
-      return (0, Pu.jsxs)("article", {
-        className: Cu()("PlotsJournalPage", {
-          Locked: Vu
+        t: ak
+      } = (0, Mk.x)(), {
+        displayName: Xk,
+        tier: bk
+      } = ek(Fk.id), wk = Ck(Fk.id, 0).cells.length, dk = mk[Fk.id], sk = "locked" === Fk.state, Vk = Bk ? Ek.g : Ek.o;
+      return (0, pk.jsxs)("article", {
+        className: Lk()("PlotsJournalPage", {
+          Locked: sk
         }),
-        children: [(0, Pu.jsx)("h3", {
+        children: [(0, pk.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: Qu(mu.translationKey)
-        }), (0, Pu.jsxs)("div", {
+          children: ak(Xk.translationKey)
+        }), (0, pk.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [Qu(iu[Ju]), " \xb7 ", Qu("plotsGame:journalBlocks", {
-            blocks: String(Nu)
+          children: [ak(Kk[bk]), " \xb7 ", ak("plotsGame:journalBlocks", {
+            blocks: String(wk)
           })]
-        }), (0, Pu.jsxs)("div", {
+        }), (0, pk.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [xu.map((uu => (0, Pu.jsx)("img", {
-            className: Cu()({
-              Shown: uu === Ru.id
+          children: [Ak.map((kk => (0, pk.jsx)("img", {
+            className: Lk()({
+              Shown: kk === Fk.id
             }),
-            src: hu[uu],
+            src: Zk[kk],
             alt: "",
             draggable: !1
-          }, uu))), "completed" === Ru.state && (0, Pu.jsx)("span", {
+          }, kk))), "completed" === Fk.state && (0, pk.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: Qu("plotsGame:journalBuilt")
-          }), Vu && (0, Pu.jsx)("span", {
+            children: ak("plotsGame:journalBuilt")
+          }), sk && (0, pk.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, Pu.jsx)(ku.c, {
+            children: (0, pk.jsx)(Ok.d, {
               name: "lock"
             })
           })]
-        }), void 0 !== Xu && "completed" !== Ru.state && (0, Pu.jsx)("p", {
+        }), void 0 !== dk && "completed" !== Fk.state && (0, pk.jsx)("p", {
           className: "PlotsJournalNote",
-          children: Qu(Xu)
-        }), (0, Pu.jsxs)("div", {
+          children: ak(dk)
+        }), (0, pk.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === Ru.state && (0, Pu.jsx)("p", {
+          children: ["locked" === Fk.state && (0, pk.jsx)("p", {
             className: "PlotsJournalHint",
-            children: Qu("plotsGame:journalLocked", {
-              name: Qu(Su(Ru.unlockedBy).displayName.translationKey)
+            children: ak("plotsGame:journalLocked", {
+              name: ak(ek(Fk.unlockedBy).displayName.translationKey)
             })
-          }), Ru.active && (0, Pu.jsxs)(Pu.Fragment, {
-            children: [(0, Pu.jsx)("p", {
+          }), Fk.active && (0, pk.jsxs)(pk.Fragment, {
+            children: [(0, pk.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: Qu("plotsGame:journalBuilding")
-            }), (0, Pu.jsx)(eu.f, {
-              onClick: Ku,
-              children: Qu("plotsGame:journalPutAway")
+              children: ak("plotsGame:journalBuilding")
+            }), (0, pk.jsx)(Ek.j, {
+              onClick: tk,
+              children: ak("plotsGame:journalPutAway")
             })]
-          }), !Vu && !Ru.active && (0, Pu.jsx)(ru, {
+          }), !sk && !Fk.active && (0, pk.jsx)(Vk, {
             onClick: () => {
-              Eu(Ru.id)
+              Rk(Fk.id)
             },
-            children: Qu("plotsGame:placementBuild")
+            children: ak("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function ou(uu) {
+    function jk(kk) {
       let {
-        className: Ru,
-        page: yu,
-        hidden: Eu,
-        building: Ku,
-        journal: Qu
-      } = uu;
-      return (0, Pu.jsxs)("div", {
-        ref: uu => {
-          null !== uu && (uu.inert = Eu)
+        className: Fk,
+        page: Bk,
+        hidden: Rk,
+        building: tk,
+        journal: ak
+      } = kk;
+      return (0, pk.jsxs)("div", {
+        ref: kk => {
+          null !== kk && (kk.inert = Rk)
         },
-        className: Cu()("PlotsJournalSide", Ru),
-        children: [void 0 !== yu && (0, Pu.jsx)(Yu, {
-          page: yu,
-          building: Ku,
-          onBuild: Qu.build,
-          onPutAway: Qu.putAway
-        }), void 0 === yu && (0, Pu.jsx)("div", {
+        className: Lk()("PlotsJournalSide", Fk),
+        children: [void 0 !== Bk && (0, pk.jsx)(xk, {
+          page: Bk,
+          building: tk,
+          onBuild: ak.build,
+          onPutAway: ak.putAway
+        }), void 0 === Bk && (0, pk.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var qu = yu(343),
-      Ou = yu(1823);
+    var lk = Bk(291),
+      nk = Bk(1808);
 
-    function vu(uu) {
-      return Math.cos((0, Ou.i)(uu))
+    function Ik(kk) {
+      return Math.cos((0, nk.k)(kk))
     }
 
-    function au(uu) {
-      return (0, Ou.s)(Math.acos(qu.c.clamp(uu, -1, 1)))
+    function Qk(kk) {
+      return (0, nk.v)(Math.acos(lk.b.clamp(kk, -1, 1)))
     }
 
-    function fu(uu, Ru, yu, Eu, Ku) {
-      const Qu = Math.abs(Ru - uu),
-        mu = (0, Ou.s)(Ku / (yu * Math.abs(Math.sin((0, Ou.i)(uu))))),
-        Ju = 450 * Math.min(1, Qu / Eu),
-        Nu = mu > 0 ? 3 * Qu / mu : 1 / 0;
-      return Math.round(Math.max(120, Math.min(Ju, Nu)))
+    function kF(kk, Fk, Bk, Rk, tk) {
+      const ak = Math.abs(Fk - kk),
+        Xk = (0, nk.v)(tk / (Bk * Math.abs(Math.sin((0, nk.k)(kk))))),
+        bk = 450 * Math.min(1, ak / Rk),
+        wk = Xk > 0 ? 3 * ak / Xk : 1 / 0;
+      return Math.round(Math.max(120, Math.min(bk, wk)))
     }
-    class uR {
+    class FF {
       constructor() {
         this.samples = []
       }
-      add(uu, Ru) {
+      add(kk, Fk) {
         for (this.samples.push({
-            x: uu,
-            at: Ru
-          }); Ru - this.samples[0].at > 100;) this.samples.shift()
+            x: kk,
+            at: Fk
+          }); Fk - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const uu = this.samples[0],
-          Ru = this.samples[this.samples.length - 1];
-        return Ru.at > uu.at ? (Ru.x - uu.x) / (Ru.at - uu.at) : 0
+        const kk = this.samples[0],
+          Fk = this.samples[this.samples.length - 1];
+        return Fk.at > kk.at ? (Fk.x - kk.x) / (Fk.at - kk.at) : 0
       }
     }
 
-    function RR(uu, Ru) {
-      return uu > Ru && uu >= 600
+    function BF(kk, Fk) {
+      return kk > Fk && kk >= 600
     }
 
-    function yR(uu) {
-      return au(new DOMMatrixReadOnly(getComputedStyle(uu).transform).m11)
+    function RF(kk) {
+      return Qk(new DOMMatrixReadOnly(getComputedStyle(kk).transform).m11)
     }
 
-    function ER(uu, Ru) {
-      uu.style.transform = `rotateY(${-Ru}deg)`, uu.classList.add("Turning")
+    function tF(kk, Fk) {
+      kk.style.transform = `rotateY(${-Fk}deg)`, kk.classList.add("Turning")
     }
 
-    function KR(uu) {
+    function aF(kk) {
       let {
-        journal: Ru
-      } = uu;
+        journal: Fk
+      } = kk;
       const {
-        t: yu
-      } = (0, Gu.E)(), Eu = (0, Mu.h)(Hu, Ru.getPages()), Ku = (0, Iu.d)(RR), [Ju, Nu] = (0, Qu.useState)((() => function(uu) {
-        const Ru = uu.findIndex((uu => uu.active));
-        return -1 !== Ru ? Ru : Math.max(0, uu.findIndex((uu => "open" === uu.state)))
-      }(Eu))), Vu = (0, Qu.useRef)(null), ru = (0, Qu.useRef)(null), Bu = (0, Qu.useRef)({
+        t: Bk
+      } = (0, Mk.x)(), Rk = (0, Hk.g)(vk, Fk.getPages()), tk = (0, uk.d)(BF), [bk, wk] = (0, ak.useState)((() => function(kk) {
+        const Fk = kk.findIndex((kk => kk.active));
+        return -1 !== Fk ? Fk : Math.max(0, kk.findIndex((kk => "open" === kk.state)))
+      }(Rk))), sk = (0, ak.useRef)(null), Vk = (0, ak.useRef)(null), Jk = (0, ak.useRef)({
         Forward: null,
         Back: null
-      }), xu = Ku ? 2 : 1, Su = Ku ? 180 : 90, pu = Ju - Ju % xu, Tu = pu > 0, Wu = pu + xu < Eu.length, ju = (0, Qu.useCallback)((() => {
-        const uu = ru.current;
-        return null === uu ? pu : (ru.current = null, uu.animation.cancel(), (Ru = Bu.current[uu.direction]).style.transform = "", Ru.classList.remove("Turning"), null === uu.next ? pu : (Nu(uu.next), uu.next));
-        var Ru
-      }), [pu]), du = (0, Qu.useCallback)(((uu, Ru, yu, Eu) => {
-        const Ku = Bu.current[uu],
-          Qu = yR(Ku),
-          mu = Ru === ("Forward" === uu) ? Su : 0;
-        ER(Ku, mu);
-        const Ju = Ku.animate([{
-          transform: `rotateY(${-Qu}deg)`
+      }), Ak = tk ? 2 : 1, ek = tk ? 180 : 90, yk = bk - bk % Ak, fk = yk > 0, mk = yk + Ak < Rk.length, Wk = (0, ak.useCallback)((() => {
+        const kk = Vk.current;
+        return null === kk ? yk : (Vk.current = null, kk.animation.cancel(), (Fk = Jk.current[kk.direction]).style.transform = "", Fk.classList.remove("Turning"), null === kk.next ? yk : (wk(kk.next), kk.next));
+        var Fk
+      }), [yk]), ik = (0, ak.useCallback)(((kk, Fk, Bk, Rk) => {
+        const tk = Jk.current[kk],
+          ak = RF(tk),
+          Xk = Fk === ("Forward" === kk) ? ek : 0;
+        tF(tk, Xk);
+        const bk = tk.animate([{
+          transform: `rotateY(${-ak}deg)`
         }, {
-          transform: `rotateY(${-mu}deg)`
+          transform: `rotateY(${-Xk}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : fu(Qu, mu, Ku.offsetWidth, Su, mu > Qu ? -yu : yu),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : kF(ak, Xk, tk.offsetWidth, ek, Xk > ak ? -Bk : Bk),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        ru.current = {
-          direction: uu,
-          animation: Ju,
-          next: Ru ? Eu + ("Forward" === uu ? xu : -xu) : null
-        }, Ju.onfinish = () => {
-          var uu;
-          (null === (uu = ru.current) || void 0 === uu ? void 0 : uu.animation) === Ju && ju()
+        Vk.current = {
+          direction: kk,
+          animation: bk,
+          next: Fk ? Rk + ("Forward" === kk ? Ak : -Ak) : null
+        }, bk.onfinish = () => {
+          var kk;
+          (null === (kk = Vk.current) || void 0 === kk ? void 0 : kk.animation) === bk && Wk()
         }
-      }), [xu, Su, ju]), bu = (0, Qu.useCallback)((uu => {
-        if (null !== Vu.current) return;
-        const Ru = ju();
-        ("Forward" === uu ? Ru + xu < Eu.length : Ru > 0) && du(uu, !0, 0, Ru)
-      }), [ju, du, xu, Eu.length]);
-      (0, Qu.useEffect)((() => {
-        Ru.onOpened()
-      }), [Ru]), (0, Qu.useEffect)((() => () => {
-        var uu;
-        null === (uu = ru.current) || void 0 === uu || uu.animation.cancel()
-      }), []), (0, Qu.useEffect)((() => {
-        const uu = uu => {
-          var Ru;
-          uu.pointerId !== (null === (Ru = Vu.current) || void 0 === Ru ? void 0 : Ru.pointerId) || Vu.current.following || (Vu.current = null)
+      }), [Ak, ek, Wk]), Yk = (0, ak.useCallback)((kk => {
+        if (null !== sk.current) return;
+        const Fk = Wk();
+        ("Forward" === kk ? Fk + Ak < Rk.length : Fk > 0) && ik(kk, !0, 0, Fk)
+      }), [Wk, ik, Ak, Rk.length]);
+      (0, ak.useEffect)((() => {
+        Fk.onOpened()
+      }), [Fk]), (0, ak.useEffect)((() => () => {
+        var kk;
+        null === (kk = Vk.current) || void 0 === kk || kk.animation.cancel()
+      }), []), (0, ak.useEffect)((() => {
+        const kk = kk => {
+          var Fk;
+          kk.pointerId !== (null === (Fk = sk.current) || void 0 === Fk ? void 0 : Fk.pointerId) || sk.current.following || (sk.current = null)
         };
-        return window.addEventListener("pointerup", uu), () => {
-          window.removeEventListener("pointerup", uu)
+        return window.addEventListener("pointerup", kk), () => {
+          window.removeEventListener("pointerup", kk)
         }
-      }), []), (0, Du.c)((uu => ("ArrowLeft" === uu.code || "ArrowRight" === uu.code) && !(0, Xu.isTypingInInput)()), (uu => {
-        uu.stopPropagation(), bu("ArrowLeft" === uu.code ? "Back" : "Forward")
+      }), []), (0, Nk.b)((kk => ("ArrowLeft" === kk.code || "ArrowRight" === kk.code) && !(0, dk.isTypingInInput)()), (kk => {
+        kk.stopPropagation(), Yk("ArrowLeft" === kk.code ? "Back" : "Forward")
       }));
-      const ku = (uu, Ru, yu) => {
-          const Eu = function(uu, Ru, yu, Eu) {
-            return (uu < 0 ? yu : Eu) ? qu.c.clampAbs(uu, Ru) : Math.sign(uu) * Ru * (1 - 1 / (.55 * Math.abs(uu) / Ru + 1))
-          }(uu.base + yu, xu * uu.width, Wu, Tu);
-          return "Forward" === Ru ? Math.min(Eu, 0) : Math.max(Eu, 0)
+      const Ok = (kk, Fk, Bk) => {
+          const Rk = function(kk, Fk, Bk, Rk) {
+            return (kk < 0 ? Bk : Rk) ? lk.b.clampAbs(kk, Fk) : Math.sign(kk) * Fk * (1 - 1 / (.55 * Math.abs(kk) / Fk + 1))
+          }(kk.base + Bk, Ak * kk.width, mk, fk);
+          return "Forward" === Fk ? Math.min(Rk, 0) : Math.max(Rk, 0)
         },
-        Uu = (uu, Ru) => {
-          const yu = Vu.current;
-          if (Vu.current = null, null === yu.direction) return;
-          yu.speed.add(uu, Ru);
-          const Eu = yu.speed.get(),
-            Ku = ku(yu, yu.direction, uu - yu.x);
-          du(yu.direction, null !== function(uu, Ru, yu, Eu, Ku) {
-            if (Math.abs(Ru) >= .3 ? Math.sign(Ru) !== Math.sign(uu) : Math.abs(uu) < .5 * yu) return null;
-            const Qu = uu < 0 ? "Forward" : "Back";
-            return ("Forward" === Qu ? Eu : Ku) ? Qu : null
-          }(Ku, Eu, xu * yu.width, Wu, Tu), Eu, pu)
+        gk = (kk, Fk) => {
+          const Bk = sk.current;
+          if (sk.current = null, null === Bk.direction) return;
+          Bk.speed.add(kk, Fk);
+          const Rk = Bk.speed.get(),
+            tk = Ok(Bk, Bk.direction, kk - Bk.x);
+          ik(Bk.direction, null !== function(kk, Fk, Bk, Rk, tk) {
+            if (Math.abs(Fk) >= .3 ? Math.sign(Fk) !== Math.sign(kk) : Math.abs(kk) < .5 * Bk) return null;
+            const ak = kk < 0 ? "Forward" : "Back";
+            return ("Forward" === ak ? Rk : tk) ? ak : null
+          }(tk, Rk, Ak * Bk.width, mk, fk), Rk, yk)
         },
-        nu = Eu.some((uu => uu.active)),
-        su = (uu, yu, Ku) => (0, Pu.jsx)(ou, {
-          className: uu,
-          page: yu >= 0 && yu < Eu.length ? Eu[yu] : void 0,
-          hidden: Ku,
-          building: nu,
-          journal: Ru
+        Uk = Rk.some((kk => kk.active)),
+        ck = (kk, Bk, tk) => (0, pk.jsx)(jk, {
+          className: kk,
+          page: Bk >= 0 && Bk < Rk.length ? Rk[Bk] : void 0,
+          hidden: tk,
+          building: Uk,
+          journal: Fk
         });
-      return (0, Pu.jsx)(Au.e, {
-        close: mu.i,
+      return (0, pk.jsx)(Sk.e, {
+        close: Xk.i,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, Pu.jsxs)("section", {
-          className: Cu()("PlotsJournal", {
-            Spread: Ku
+        children: (0, pk.jsxs)("section", {
+          className: Lk()("PlotsJournal", {
+            Spread: tk
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": yu("plotsGame:journalTitle"),
-          children: [(0, Pu.jsx)(eu.h, {
+          "aria-label": Bk("plotsGame:journalTitle"),
+          children: [(0, pk.jsx)(Ek.k, {
             className: "PlotsJournalClose",
-            onClick: mu.i
-          }), (0, Pu.jsx)(QR, {
+            onClick: Xk.i
+          }), (0, pk.jsx)(XF, {
             direction: "Back",
-            disabled: !Tu,
-            onTurn: bu
-          }), (0, Pu.jsx)("div", {
+            disabled: !fk,
+            onTurn: Yk
+          }), (0, pk.jsx)("div", {
             className: "PlotsJournalBookPages",
-            onPointerDown: uu => {
-              var Ru;
-              if (!uu.isPrimary || 0 !== uu.button || null !== ru.current && null !== uu.target.closest("button")) return;
-              const yu = new uR;
-              yu.add(uu.clientX, uu.timeStamp);
-              const Eu = Bu.current.Forward.offsetWidth,
-                Ku = ru.current;
-              ru.current = null;
-              let Qu = 0;
-              if (null !== Ku) {
-                const Ru = Bu.current[Ku.direction],
-                  yu = yR(Ru);
-                Ku.animation.cancel(), ER(Ru, yu), Qu = function(uu, Ru, yu, Eu) {
-                  return (uu < 0 ? yu : Eu) ? uu : Math.sign(uu) * Ru * (1 / (1 - Math.min(Math.abs(uu) / Ru, .99)) - 1) / .55
-                }(function(uu, Ru, yu, Eu) {
-                  return yu * (vu(Ru) - vu("Forward" === uu ? 0 : Eu))
-                }(Ku.direction, yu, Eu, Su), xu * Eu, Wu, Tu), uu.currentTarget.setPointerCapture(uu.pointerId)
+            onPointerDown: kk => {
+              var Fk;
+              if (!kk.isPrimary || 0 !== kk.button || null !== Vk.current && null !== kk.target.closest("button")) return;
+              const Bk = new FF;
+              Bk.add(kk.clientX, kk.timeStamp);
+              const Rk = Jk.current.Forward.offsetWidth,
+                tk = Vk.current;
+              Vk.current = null;
+              let ak = 0;
+              if (null !== tk) {
+                const Fk = Jk.current[tk.direction],
+                  Bk = RF(Fk);
+                tk.animation.cancel(), tF(Fk, Bk), ak = function(kk, Fk, Bk, Rk) {
+                  return (kk < 0 ? Bk : Rk) ? kk : Math.sign(kk) * Fk * (1 / (1 - Math.min(Math.abs(kk) / Fk, .99)) - 1) / .55
+                }(function(kk, Fk, Bk, Rk) {
+                  return Bk * (Ik(Fk) - Ik("Forward" === kk ? 0 : Rk))
+                }(tk.direction, Bk, Rk, ek), Ak * Rk, mk, fk), kk.currentTarget.setPointerCapture(kk.pointerId)
               }
-              Vu.current = {
-                pointerId: uu.pointerId,
-                x: uu.clientX,
-                y: uu.clientY,
-                base: Qu,
-                width: Eu,
-                following: null !== Ku,
-                direction: null !== (Ru = null === Ku || void 0 === Ku ? void 0 : Ku.direction) && void 0 !== Ru ? Ru : null,
-                speed: yu
+              sk.current = {
+                pointerId: kk.pointerId,
+                x: kk.clientX,
+                y: kk.clientY,
+                base: ak,
+                width: Rk,
+                following: null !== tk,
+                direction: null !== (Fk = null === tk || void 0 === tk ? void 0 : tk.direction) && void 0 !== Fk ? Fk : null,
+                speed: Bk
               }
             },
-            onPointerMove: uu => {
-              const Ru = Vu.current;
-              if (null === Ru || uu.pointerId !== Ru.pointerId) return;
-              if (0 === uu.buttons) return void Uu(uu.clientX, uu.timeStamp);
-              const yu = uu.clientX - Ru.x;
-              !Ru.following && function(uu, Ru) {
-                return Math.abs(uu) > 8 && Math.abs(uu) > Math.abs(Ru)
-              }(yu, uu.clientY - Ru.y) && (Ru.following = !0, Ru.direction = yu < 0 ? "Forward" : "Back", uu.currentTarget.setPointerCapture(uu.pointerId)), null !== Ru.direction && (Ru.speed.add(uu.clientX, uu.timeStamp), ER(Bu.current[Ru.direction], function(uu, Ru, yu, Eu) {
-                const Ku = yu * vu("Forward" === uu ? 0 : Eu) + Ru;
-                return qu.c.clamp(au(Ku / yu), 0, Eu)
-              }(Ru.direction, ku(Ru, Ru.direction, yu), Ru.width, Su)))
+            onPointerMove: kk => {
+              const Fk = sk.current;
+              if (null === Fk || kk.pointerId !== Fk.pointerId) return;
+              if (0 === kk.buttons) return void gk(kk.clientX, kk.timeStamp);
+              const Bk = kk.clientX - Fk.x;
+              !Fk.following && function(kk, Fk) {
+                return Math.abs(kk) > 8 && Math.abs(kk) > Math.abs(Fk)
+              }(Bk, kk.clientY - Fk.y) && (Fk.following = !0, Fk.direction = Bk < 0 ? "Forward" : "Back", kk.currentTarget.setPointerCapture(kk.pointerId)), null !== Fk.direction && (Fk.speed.add(kk.clientX, kk.timeStamp), tF(Jk.current[Fk.direction], function(kk, Fk, Bk, Rk) {
+                const tk = Bk * Ik("Forward" === kk ? 0 : Rk) + Fk;
+                return lk.b.clamp(Qk(tk / Bk), 0, Rk)
+              }(Fk.direction, Ok(Fk, Fk.direction, Bk), Fk.width, ek)))
             },
-            onPointerUp: uu => {
-              var Ru;
-              uu.pointerId === (null === (Ru = Vu.current) || void 0 === Ru ? void 0 : Ru.pointerId) && Uu(uu.clientX, uu.timeStamp)
+            onPointerUp: kk => {
+              var Fk;
+              kk.pointerId === (null === (Fk = sk.current) || void 0 === Fk ? void 0 : Fk.pointerId) && gk(kk.clientX, kk.timeStamp)
             },
-            onPointerCancel: uu => {
-              const Ru = Vu.current;
-              uu.pointerId === (null === Ru || void 0 === Ru ? void 0 : Ru.pointerId) && (Vu.current = null, null !== Ru.direction && du(Ru.direction, !1, 0, pu))
+            onPointerCancel: kk => {
+              const Fk = sk.current;
+              kk.pointerId === (null === Fk || void 0 === Fk ? void 0 : Fk.pointerId) && (sk.current = null, null !== Fk.direction && ik(Fk.direction, !1, 0, yk))
             },
-            children: (0, Pu.jsxs)("div", {
+            children: (0, pk.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [Ku && su("Left", pu - 2, !0), su("Right", pu + 2 * xu - 1, !0), (0, Pu.jsxs)("div", {
-                ref: uu => {
-                  Bu.current.Back = uu
+              children: [tk && ck("Left", yk - 2, !0), ck("Right", yk + 2 * Ak - 1, !0), (0, pk.jsxs)("div", {
+                ref: kk => {
+                  Jk.current.Back = kk
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [su("Recto", pu - 1, !0), Ku && su("Verso", pu, !1)]
-              }), (0, Pu.jsxs)("div", {
-                ref: uu => {
-                  Bu.current.Forward = uu
+                children: [ck("Recto", yk - 1, !0), tk && ck("Verso", yk, !1)]
+              }), (0, pk.jsxs)("div", {
+                ref: kk => {
+                  Jk.current.Forward = kk
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [su("Recto", pu + xu - 1, !1), Ku && su("Verso", pu + xu, !0)]
+                children: [ck("Recto", yk + Ak - 1, !1), tk && ck("Verso", yk + Ak, !0)]
               })]
             })
-          }), (0, Pu.jsx)(QR, {
+          }), (0, pk.jsx)(XF, {
             direction: "Forward",
-            disabled: !Wu,
-            onTurn: bu
+            disabled: !mk,
+            onTurn: Yk
           })]
         })
       })
     }
 
-    function QR(uu) {
+    function XF(kk) {
       let {
-        direction: Ru,
-        disabled: yu,
-        onTurn: Eu
-      } = uu;
+        direction: Fk,
+        disabled: Bk,
+        onTurn: Rk
+      } = kk;
       const {
-        t: Ku
-      } = (0, Gu.E)();
-      return (0, Pu.jsx)("div", {
-        className: Cu()("PlotsJournalArrow", Ru),
-        children: (0, Pu.jsx)(eu.e, {
-          disabled: yu,
-          ariaLabel: Ku("Forward" === Ru ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: tk
+      } = (0, Mk.x)();
+      return (0, pk.jsx)("div", {
+        className: Lk()("PlotsJournalArrow", Fk),
+        children: (0, pk.jsx)(Ek.g, {
+          disabled: Bk,
+          ariaLabel: tk("Forward" === Fk ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            Eu(Ru)
+            Rk(Fk)
           },
-          children: (0, Pu.jsx)(ku.c, {
+          children: (0, pk.jsx)(Ok.d, {
             name: "angle-up"
           })
         })
       })
     }
-    var mR = yu(36436),
-      JR = yu(1841),
-      NR = yu(1908);
-    const XR = "plotsStepChanged",
-      VR = "plotsPlotChanged";
-    class rR {
+    var bF = Bk(36329),
+      wF = Bk(1835),
+      dF = Bk(1879);
+    const sF = "plotsStepChanged",
+      VF = "plotsPlotChanged";
+    class JF {
       constructor() {
         this.step = ["none"], this.plot = ["none"]
       }
       getStep() {
         return this.step
       }
-      receiveStep(uu) {
-        this.step = uu, Vu.k.Op(XR, uu, !0)
+      receiveStep(kk) {
+        this.step = kk, sk.o.Hf(sF, kk, !0)
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(uu) {
-        this.plot = uu, Vu.k.Op(VR, uu, !0)
+      receivePlot(kk) {
+        this.plot = kk, sk.o.Hf(VF, kk, !0)
       }
     }
-    const BR = "KeyJ";
+    const AF = "KeyJ";
 
-    function xR(uu) {
+    function eF(kk) {
       let {
-        hud: Ru,
-        journal: yu
-      } = uu;
-      const Eu = (0, Mu.h)(Hu, yu.getPages()),
-        Ku = (0, Mu.h)(XR, Ru.getStep()),
+        hud: Fk,
+        journal: Bk
+      } = kk;
+      const Rk = (0, Hk.g)(vk, Bk.getPages()),
+        tk = (0, Hk.g)(sF, Fk.getStep()),
         {
-          isTouchScreen: Qu
-        } = (0, Ju.j)(["isTouchScreen"]),
+          isTouchScreen: ak
+        } = (0, bk.h)(["isTouchScreen"]),
         {
-          t: Vu
-        } = (0, Gu.E)(),
-        ru = null !== Eu && "none" === Ku[0];
-      return (0, Du.c)((uu => null !== Eu && uu.code === BR && !uu.repeat && !(0, Xu.isTypingInInput)()), (uu => {
-        (0, Nu.B)(uu, ru, mu.q)
-      })), ru ? (0, Pu.jsx)(mR.d, {
+          t: sk
+        } = (0, Mk.x)(),
+        Vk = null !== Rk && "none" === tk[0];
+      return (0, Nk.b)((kk => null !== Rk && kk.code === AF && !kk.repeat && !(0, dk.isTypingInInput)()), (kk => {
+        (0, wk.F)(kk, Vk, Xk.q)
+      })), Vk ? (0, pk.jsx)(bF.g, {
         placement: "topRight",
-        children: (0, Pu.jsx)("div", {
+        children: (0, pk.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, Pu.jsxs)("button", {
+          children: (0, pk.jsxs)("button", {
             type: "button",
-            className: Cu()("PlotsJournalButton SmallTextBold", {
-              Touch: Qu
+            className: Lk()("PlotsJournalButton SmallTextBold", {
+              Touch: ak
             }),
-            onClick: mu.q,
-            children: [(0, Pu.jsx)("span", {
+            onClick: Xk.q,
+            children: [(0, pk.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, Pu.jsx)(JR.c, {
+              children: (0, pk.jsx)(wF.e, {
                 itemName: "Book",
                 amount: 0
               })
-            }), Vu("plotsGame:journalButton"), !Qu && (0, Pu.jsx)(NR.b, {
+            }), sk("plotsGame:journalButton"), !ak && (0, pk.jsx)(dF.c, {
               className: "PlotsJournalButtonKey",
-              keyCode: BR
+              keyCode: AF
             })]
           })
         })
       }) : null
     }
-    var SR = yu(38185),
-      pR = yu(37936),
-      TR = yu(36702),
-      WR = yu(9195),
-      jR = yu(9211),
-      HR = yu(37569);
-    const dR = new Map([
+    var yF = Bk(38064),
+      fF = Bk(37830),
+      mF = Bk(36605),
+      WF = Bk(9114),
+      vF = Bk(9132),
+      iF = Bk(37497);
+    const YF = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -858,791 +858,791 @@ export const modules = {
         ["White Concrete", [.89, .894, .894]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      bR = [...TR.d.blockRemoveActionRoots, ...pR.b, ...WR.f, "Board", "Code Block", "Custom Lobby Block"],
-      CR = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let kR = null;
+      oF = [...mF.b.blockRemoveActionRoots, ...fF.b, ...WF.g, "Board", "Code Block", "Custom Lobby Block"],
+      LF = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let OF = null;
 
-    function eR() {
-      return kR ??= function() {
-        const uu = AR(),
-          Ru = Math.max(...uu.map((uu => Uu.j[uu].id))) + 1,
-          yu = new Int32Array(Ru),
-          Eu = new Int32Array(Ru),
-          Ku = new Uint8Array(Ru).fill(1),
-          Qu = new Uint8Array(Ru),
-          mu = new Uint8Array(Ru),
-          Ju = new Array(Ru).fill("Air"),
-          Nu = new Map,
-          Xu = uu => {
-            let Ru = Nu.get(uu);
-            return void 0 === Ru && (Ru = Nu.size + 1, Nu.set(uu, Ru)), Ru
+    function EF() {
+      return OF ??= function() {
+        const kk = SF(),
+          Fk = Math.max(...kk.map((kk => gk.j[kk].id))) + 1,
+          Bk = new Int32Array(Fk),
+          Rk = new Int32Array(Fk),
+          tk = new Uint8Array(Fk).fill(1),
+          ak = new Uint8Array(Fk),
+          Xk = new Uint8Array(Fk),
+          bk = new Array(Fk).fill("Air"),
+          wk = new Map,
+          dk = kk => {
+            let Fk = wk.get(kk);
+            return void 0 === Fk && (Fk = wk.size + 1, wk.set(kk, Fk)), Fk
           },
-          Vu = new Set(bR);
-        for (const Bu of uu) {
-          var ru;
+          sk = new Set(oF);
+        for (const Jk of kk) {
+          var Vk;
           const {
-            id: uu,
-            meta: Ru,
-            altActionable: Nu,
-            canBePlacedOver: xu
-          } = Uu.j[Bu];
-          yu[uu] = Xu(DR(Bu));
-          const Su = Ru.stairsCorner;
-          if (null === Su) Eu[uu] = yu[uu];
+            id: kk,
+            meta: Fk,
+            altActionable: wk,
+            canBePlacedOver: Ak
+          } = gk.j[Jk];
+          Bk[kk] = dk(NF(Jk));
+          const ek = Fk.stairsCorner;
+          if (null === ek) Rk[kk] = Bk[kk];
           else {
-            const yu = Su.endsWith("Right");
-            Eu[uu] = Xu(`${Ru.rootName}|rot${yu?Ru.rot%4+1:Ru.rot}|${Ru.halfblockPlacement}|${Su.replace("Right","Left")}`)
+            const Bk = ek.endsWith("Right");
+            Rk[kk] = dk(`${Fk.rootName}|rot${Bk?Fk.rot%4+1:Fk.rot}|${Fk.halfblockPlacement}|${ek.replace("Right","Left")}`)
           }
-          Ku[uu] = xu ? 1 : 0, Qu[uu] = Nu || null !== Ru.open || Bu in HR.c || Vu.has(Ru.rootName) || void 0 !== (0, pR.f)(Ru.rootName) ? 1 : 0;
+          tk[kk] = Ak ? 1 : 0, ak[kk] = wk || null !== Fk.open || Jk in iF.e || sk.has(Fk.rootName) || void 0 !== (0, fF.e)(Fk.rootName) ? 1 : 0;
           const {
-            rootName: pu
-          } = Ru;
-          mu[uu] = null !== Ru.open || pR.b.includes(pu) || pu.includes("Bookshelf") || pu.includes("Mailbox") ? 1 : 0, Ju[uu] = null !== (ru = (0, SR.g)(uu)) && void 0 !== ru ? ru : pu
+            rootName: yk
+          } = Fk;
+          Xk[kk] = null !== Fk.open || fF.b.includes(yk) || yk.includes("Bookshelf") || yk.includes("Mailbox") ? 1 : 0, bk[kk] = null !== (Vk = (0, yF.d)(kk)) && void 0 !== Vk ? Vk : yk
         }
         return {
-          kinds: yu,
-          shapes: Eu,
-          empty: Ku,
-          inUse: Qu,
-          ownAltActionMessage: mu,
-          placingItems: Ju
+          kinds: Bk,
+          shapes: Rk,
+          empty: tk,
+          inUse: ak,
+          ownAltActionMessage: Xk,
+          placingItems: bk
         }
-      }(), kR
+      }(), OF
     }
 
-    function AR() {
-      return Object.keys(Uu.j).filter((uu => Uu.j[uu].name === uu))
+    function SF() {
+      return Object.keys(gk.j).filter((kk => gk.j[kk].name === kk))
     }
 
-    function DR(uu) {
-      var Ru;
-      const yu = Uu.j[uu],
+    function NF(kk) {
+      var Fk;
+      const Bk = gk.j[kk],
         {
-          rootName: Eu,
-          rot: Ku
-        } = yu.meta,
-        [, ...Qu] = (null !== (Ru = yu.rootMetaDesc) && void 0 !== Ru ? Ru : uu).split("|"),
-        mu = Qu.filter((uu => !("meta" === uu || CR.test(uu) || (0, jR.y)(yu) && /^[nesw]+$/.test(uu) || WR.f.includes(Eu) && /^[lrud]+$/.test(uu) || qu.J.includes(Eu) && /^(left|right)$/.test(uu))));
-      return [Eu, ...mu].map((uu => "fenceGate" === yu.model && uu === `rot${Ku}` ? "rot" + ((Ku - 1) % 2 + 1) : uu)).join("|")
+          rootName: Rk,
+          rot: tk
+        } = Bk.meta,
+        [, ...ak] = (null !== (Fk = Bk.rootMetaDesc) && void 0 !== Fk ? Fk : kk).split("|"),
+        Xk = ak.filter((kk => !("meta" === kk || LF.test(kk) || (0, vF.E)(Bk) && /^[nesw]+$/.test(kk) || WF.g.includes(Rk) && /^[lrud]+$/.test(kk) || lk.J.includes(Rk) && /^(left|right)$/.test(kk))));
+      return [Rk, ...Xk].map((kk => "fenceGate" === Bk.model && kk === `rot${tk}` ? "rot" + ((tk - 1) % 2 + 1) : kk)).join("|")
     }
 
-    function MR(uu, Ru) {
+    function HF(kk, Fk) {
       const {
-        kinds: yu,
-        shapes: Eu
-      } = eR();
-      return yu[uu] === yu[Ru] || Eu[uu] === Eu[Ru]
+        kinds: Bk,
+        shapes: Rk
+      } = EF();
+      return Bk[kk] === Bk[Fk] || Rk[kk] === Rk[Fk]
     }
 
-    function IR(uu) {
-      return 1 === eR().empty[uu]
+    function uF(kk) {
+      return 1 === EF().empty[kk]
     }
 
-    function GR(uu) {
-      return eR().placingItems[uu]
+    function MF(kk) {
+      return EF().placingItems[kk]
     }
 
-    function UR(uu) {
-      return dR.get(Uu.j[uu].meta.rootName)
+    function gF(kk) {
+      return YF.get(gk.j[kk].meta.rootName)
     }
-    var nR = yu(9189),
-      sR = yu(9205);
-    const tR = [0, 0, 0, 1, 1, 1],
-      lR = (0, nR.c)([
+    var UF = Bk(9112),
+      cF = Bk(9127);
+    const GF = [0, 0, 0, 1, 1, 1],
+      TF = (0, UF.d)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      gR = (0, nR.c)([
+      rF = (0, UF.d)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      cR = (0, nR.c)([
+      DF = (0, UF.d)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      LR = [0, 1, 2, 3].map((uu => (0, nR.c)((0, nR.n)([
+      zF = [0, 1, 2, 3].map((kk => (0, UF.d)((0, UF.q)([
         [3, 2, 0, 5, 7, 3]
-      ], uu))));
+      ], kk))));
 
-    function zR(uu) {
+    function PF(kk) {
       const {
-        KT: Ru,
-        model: yu,
-        blockModel: Eu,
-        meta: Ku
-      } = Uu.j[uu];
-      return void 0 !== Ru ? Ru : "CentreCross" === yu ? lR : null !== Eu && void 0 !== Eu && Eu.startsWith("torch") ? Ku.halfblockPlacement === sR.d.side ? LR[Ku.rot - 1] : Ku.halfblockPlacement === sR.d.top ? cR : gR : tR
+        nb: Fk,
+        model: Bk,
+        blockModel: Rk,
+        meta: tk
+      } = gk.j[kk];
+      return void 0 !== Fk ? Fk : "CentreCross" === Bk ? TF : null !== Rk && void 0 !== Rk && Rk.startsWith("torch") ? tk.halfblockPlacement === cF.e.side ? zF[tk.rot - 1] : tk.halfblockPlacement === cF.e.top ? DF : rF : GF
     }
-    var FR = yu(36670),
-      wR = yu(212);
+    var hF = Bk(36568),
+      qF = Bk(182);
 
-    function ZR(uu, Ru) {
-      const yu = wR.f.DW / 2;
-      return uu[0] < Ru[0] + yu && uu[0] + 1 > Ru[0] - yu && uu[1] < Ru[1] + wR.f.UW && uu[1] + 1 > Ru[1] && uu[2] < Ru[2] + yu && uu[2] + 1 > Ru[2] - yu
+    function CF(kk, Fk) {
+      const Bk = qF.h.Qm / 2;
+      return kk[0] < Fk[0] + Bk && kk[0] + 1 > Fk[0] - Bk && kk[1] < Fk[1] + qF.h.FW && kk[1] + 1 > Fk[1] && kk[2] < Fk[2] + Bk && kk[2] + 1 > Fk[2] - Bk
     }
 
-    function hR(uu, Ru, yu, Eu, Ku) {
-      const Qu = Math.hypot(...Ru.dir);
-      if (!Number.isFinite(Qu) || 0 === Qu) return -1;
+    function ZF(kk, Fk, Bk, Rk, tk) {
+      const ak = Math.hypot(...Fk.dir);
+      if (!Number.isFinite(ak) || 0 === ak) return -1;
       const {
-        from: mu,
-        reach: Ju,
-        solid: Nu
-      } = Ru, Xu = [Ru.dir[0] / Qu, Ru.dir[1] / Qu, Ru.dir[2] / Qu], Vu = null === Nu ? Ju : Math.min(Ju, function(uu, Ru, yu) {
-        const Eu = PR(uu, Ru, yu);
-        if (Eu !== 1 / 0) return Eu;
-        return (yu[0] + .5 - uu[0]) * Ru[0] + (yu[1] + .5 - uu[1]) * Ru[1] + (yu[2] + .5 - uu[2]) * Ru[2]
-      }(mu, Xu, Nu) + .75);
-      let ru = -1,
-        Bu = 1 / 0,
-        xu = 1 / 0;
-      for (let Su = 0; Su < uu.length; Su += 4) {
-        const Ru = [uu[Su], uu[Su + 1], uu[Su + 2]],
-          Qu = Ku(Su) ? Ju : Vu;
-        let Nu = -1,
-          pu = PR(mu, Xu, Ru);
-        if (pu > Qu) {
-          const uu = [Ru[0] + .5 - mu[0], Ru[1] + .5 - mu[1], Ru[2] + .5 - mu[2]];
-          if (pu = uu[0] * Xu[0] + uu[1] * Xu[1] + uu[2] * Xu[2], pu <= 0 || pu > Qu) continue;
-          if (Nu = Math.hypot(uu[0] - pu * Xu[0], uu[1] - pu * Xu[1], uu[2] - pu * Xu[2]), Nu > .7 || !Eu(Su)) continue
-        }(Nu < Bu || Nu === Bu && pu < xu) && yu(Su) && (ru = Su, Bu = Nu, xu = pu)
+        from: Xk,
+        reach: bk,
+        solid: wk
+      } = Fk, dk = [Fk.dir[0] / ak, Fk.dir[1] / ak, Fk.dir[2] / ak], sk = null === wk ? bk : Math.min(bk, function(kk, Fk, Bk) {
+        const Rk = pF(kk, Fk, Bk);
+        if (Rk !== 1 / 0) return Rk;
+        return (Bk[0] + .5 - kk[0]) * Fk[0] + (Bk[1] + .5 - kk[1]) * Fk[1] + (Bk[2] + .5 - kk[2]) * Fk[2]
+      }(Xk, dk, wk) + .75);
+      let Vk = -1,
+        Jk = 1 / 0,
+        Ak = 1 / 0;
+      for (let ek = 0; ek < kk.length; ek += 4) {
+        const Fk = [kk[ek], kk[ek + 1], kk[ek + 2]],
+          ak = tk(ek) ? bk : sk;
+        let wk = -1,
+          yk = pF(Xk, dk, Fk);
+        if (yk > ak) {
+          const kk = [Fk[0] + .5 - Xk[0], Fk[1] + .5 - Xk[1], Fk[2] + .5 - Xk[2]];
+          if (yk = kk[0] * dk[0] + kk[1] * dk[1] + kk[2] * dk[2], yk <= 0 || yk > ak) continue;
+          if (wk = Math.hypot(kk[0] - yk * dk[0], kk[1] - yk * dk[1], kk[2] - yk * dk[2]), wk > .7 || !Rk(ek)) continue
+        }(wk < Jk || wk === Jk && yk < Ak) && Bk(ek) && (Vk = ek, Jk = wk, Ak = yk)
       }
-      return ru
+      return Vk
     }
 
-    function PR(uu, Ru, yu) {
-      let Eu = 0,
-        Ku = 1 / 0;
-      for (let Qu = 0; Qu < 3; Qu++) {
-        const mu = yu[Qu] - uu[Qu];
-        if (0 === Ru[Qu]) {
-          if (mu > 0 || mu + 1 < 0) return 1 / 0;
+    function pF(kk, Fk, Bk) {
+      let Rk = 0,
+        tk = 1 / 0;
+      for (let ak = 0; ak < 3; ak++) {
+        const Xk = Bk[ak] - kk[ak];
+        if (0 === Fk[ak]) {
+          if (Xk > 0 || Xk + 1 < 0) return 1 / 0;
           continue
         }
-        const Ju = mu / Ru[Qu],
-          Nu = (mu + 1) / Ru[Qu];
-        Eu = Math.max(Eu, Math.min(Ju, Nu)), Ku = Math.min(Ku, Math.max(Ju, Nu))
+        const bk = Xk / Fk[ak],
+          wk = (Xk + 1) / Fk[ak];
+        Rk = Math.max(Rk, Math.min(bk, wk)), tk = Math.min(tk, Math.max(bk, wk))
       }
-      return Eu <= Ku ? Eu : 1 / 0
+      return Rk <= tk ? Rk : 1 / 0
     }
-    var iR = yu(37812),
-      YR = yu(38281);
-    const oR = [1, 1, 1];
-    class qR {
-      constructor(uu) {
-        this.api = uu, this.meshes = null, this.shown = null
+    var KF = Bk(37728),
+      xF = Bk(38157);
+    const jF = [1, 1, 1];
+    class lF {
+      constructor(kk) {
+        this.api = kk, this.meshes = null, this.shown = null
       }
-      show(uu) {
-        if (!(0, FR.f)(uu, this.shown))
-          if (this.shown = null === uu ? null : [uu[0], uu[1], uu[2]], null !== this.meshes)
-            for (const Ru of this.meshes) this.api.setGameMesh(Ru, null === uu ? {
+      show(kk) {
+        if (!(0, hF.c)(kk, this.shown))
+          if (this.shown = null === kk ? null : [kk[0], kk[1], kk[2]], null !== this.meshes)
+            for (const Fk of this.meshes) this.api.setGameMesh(Fk, null === kk ? {
               visible: !1
             } : {
-              anchor: uu,
+              anchor: kk,
               visible: !0
             });
-          else if (null !== uu) {
-          const Ru = [iR.f, iR.f, iR.f, 0, 0, 0];
-          this.meshes = [this.build([Ru], iR.j, uu), this.build((0, iR.b)(), iR.q, uu)]
+          else if (null !== kk) {
+          const Fk = [KF.i, KF.i, KF.i, 0, 0, 0];
+          this.meshes = [this.build([Fk], KF.k, kk), this.build((0, KF.e)(), KF.r, kk)]
         }
       }
       dispose() {
-        for (const Ru of null !== (uu = this.meshes) && void 0 !== uu ? uu : []) {
-          var uu;
-          this.api.disposeGameMesh(Ru)
+        for (const Fk of null !== (kk = this.meshes) && void 0 !== kk ? kk : []) {
+          var kk;
+          this.api.disposeGameMesh(Fk)
         }
         this.meshes = null, this.shown = null
       }
-      build(uu, Ru, yu) {
-        const Eu = [],
-          Ku = [];
-        for (const [Qu, mu, Ju, Nu, Xu, Vu] of uu)(0, YR.i)(Eu, Ku, [Nu + .5, Xu + .5, Vu + .5], [Qu, mu, Ju]);
+      build(kk, Fk, Bk) {
+        const Rk = [],
+          tk = [];
+        for (const [ak, Xk, bk, wk, dk, sk] of kk)(0, xF.g)(Rk, tk, [wk + .5, dk + .5, sk + .5], [ak, Xk, bk]);
         return this.api.createGameMesh({
-          positions: Eu,
-          indices: Ku
+          positions: Rk,
+          indices: tk
         }, {
-          rgb: oR,
-          alpha: Ru,
+          rgb: jF,
+          alpha: Fk,
           onTop: !0
-        }, yu)
+        }, Bk)
       }
     }
-    class OR {
-      constructor(uu) {
-        this.api = uu, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    class nF {
+      constructor(kk) {
+        this.api = kk, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(uu) {
-        const Ru = wR.f.jS;
+      watch(kk) {
+        const Fk = qF.h.Ze;
         this.chunks = [];
-        for (let yu = 0; yu < uu.length; yu += 3) {
-          const Eu = Math.floor(uu[yu] / Ru),
-            Ku = Math.floor(uu[yu + 1] / Ru),
-            Qu = Math.floor(uu[yu + 2] / Ru);
-          this.watches(Eu, Ku, Qu) || this.chunks.push(Eu, Ku, Qu)
+        for (let Bk = 0; Bk < kk.length; Bk += 3) {
+          const Rk = Math.floor(kk[Bk] / Fk),
+            tk = Math.floor(kk[Bk + 1] / Fk),
+            ak = Math.floor(kk[Bk + 2] / Fk);
+          this.watches(Rk, tk, ak) || this.chunks.push(Rk, tk, ak)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const uu = performance.now();
-        if (uu - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = uu;
-        let Ru = !1;
-        for (let yu = 0; yu < this.chunks.length; yu += 3) {
-          const uu = this.api.getChunkVersion(this.chunks[yu], this.chunks[yu + 1], this.chunks[yu + 2]);
-          this.versions[yu / 3] !== uu && (this.versions[yu / 3] = uu, Ru = !0)
+        const kk = performance.now();
+        if (kk - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = kk;
+        let Fk = !1;
+        for (let Bk = 0; Bk < this.chunks.length; Bk += 3) {
+          const kk = this.api.getChunkVersion(this.chunks[Bk], this.chunks[Bk + 1], this.chunks[Bk + 2]);
+          this.versions[Bk / 3] !== kk && (this.versions[Bk / 3] = kk, Fk = !0)
         }
-        return Ru
+        return Fk
       }
-      watches(uu, Ru, yu) {
-        for (let Eu = 0; Eu < this.chunks.length; Eu += 3)
-          if (this.chunks[Eu] === uu && this.chunks[Eu + 1] === Ru && this.chunks[Eu + 2] === yu) return !0;
+      watches(kk, Fk, Bk) {
+        for (let Rk = 0; Rk < this.chunks.length; Rk += 3)
+          if (this.chunks[Rk] === kk && this.chunks[Rk + 1] === Fk && this.chunks[Rk + 2] === Bk) return !0;
         return !1
       }
     }
-    const vR = .35,
-      aR = {
+    const IF = .35,
+      QF = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      fR = {
+      kB = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      uy = [.95, .2, .15];
-    class Ry {
+      FB = [.95, .2, .15];
+    class BB {
       constructor() {
         this.groups = []
       }
-      add(uu, Ru, yu, Eu, Ku) {
-        let Qu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : tR;
-        for (const mu of this.groups)
-          if (Ky(mu, Eu, Ku)) return mu.cells.push(uu, Ru, yu), void mu.boxes.push(Qu);
+      add(kk, Fk, Bk, Rk, tk) {
+        let ak = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : GF;
+        for (const Xk of this.groups)
+          if (aB(Xk, Rk, tk)) return Xk.cells.push(kk, Fk, Bk), void Xk.boxes.push(ak);
         this.groups.push({
-          rgb: Eu,
-          look: Ku,
-          cells: [uu, Ru, yu],
-          boxes: [Qu]
+          rgb: Rk,
+          look: tk,
+          cells: [kk, Fk, Bk],
+          boxes: [ak]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class yy {
-      constructor(uu) {
-        this.api = uu, this.shown = []
+    class RB {
+      constructor(kk) {
+        this.api = kk, this.shown = []
       }
-      show(uu) {
-        const Ru = [];
-        for (const yu of uu) {
-          const uu = this.shown.findIndex((uu => {
+      show(kk) {
+        const Fk = [];
+        for (const Bk of kk) {
+          const kk = this.shown.findIndex((kk => {
             let {
-              group: Ru
-            } = uu;
-            return Ky(Ru, yu.rgb, yu.look) && Qy(Ru, yu)
-          })); - 1 === uu ? Ru.push(this.build(yu)) : (Ru.push(this.shown[uu]), this.shown.splice(uu, 1))
+              group: Fk
+            } = kk;
+            return aB(Fk, Bk.rgb, Bk.look) && XB(Fk, Bk)
+          })); - 1 === kk ? Fk.push(this.build(Bk)) : (Fk.push(this.shown[kk]), this.shown.splice(kk, 1))
         }
-        this.dispose(), this.shown = Ru
+        this.dispose(), this.shown = Fk
       }
       dispose() {
         for (const {
-            meshes: uu
+            meshes: kk
           }
           of this.shown)
-          for (const Ru of uu) this.api.disposeGameMesh(Ru);
+          for (const Fk of kk) this.api.disposeGameMesh(Fk);
         this.shown = []
       }
-      build(uu) {
+      build(kk) {
         const {
-          rgb: Ru,
-          look: yu,
-          boxes: Eu
-        } = uu, Ku = [Ru[0] + (1 - Ru[0]) * vR, Ru[1] + (1 - Ru[1]) * vR, Ru[2] + (1 - Ru[2]) * vR], Qu = [this.buildMesh(uu.cells, Ru, yu.alpha, ((uu, Ru, Ku, Qu) => {
-          Ey(uu, Ru, Ku, Eu[Qu], yu.size, !1)
-        })), this.buildMesh(uu.cells, Ku, yu.alpha, ((uu, Ru, Ku, Qu) => {
-          Ey(uu, Ru, Ku, Eu[Qu], yu.size, !0)
+          rgb: Fk,
+          look: Bk,
+          boxes: Rk
+        } = kk, tk = [Fk[0] + (1 - Fk[0]) * IF, Fk[1] + (1 - Fk[1]) * IF, Fk[2] + (1 - Fk[2]) * IF], ak = [this.buildMesh(kk.cells, Fk, Bk.alpha, ((kk, Fk, tk, ak) => {
+          tB(kk, Fk, tk, Rk[ak], Bk.size, !1)
+        })), this.buildMesh(kk.cells, tk, Bk.alpha, ((kk, Fk, tk, ak) => {
+          tB(kk, Fk, tk, Rk[ak], Bk.size, !0)
         }))];
-        return yu.crossed && Qu.push(this.buildMesh(uu.cells, Ru, .9, ((uu, Ru, Eu) => {
-          (0, YR.l)(uu, Ru, Eu, yu.size + .01, .12)
+        return Bk.crossed && ak.push(this.buildMesh(kk.cells, Fk, .9, ((kk, Fk, Rk) => {
+          (0, xF.k)(kk, Fk, Rk, Bk.size + .01, .12)
         }))), {
-          group: uu,
-          meshes: Qu
+          group: kk,
+          meshes: ak
         }
       }
-      buildMesh(uu, Ru, yu, Eu) {
-        const Ku = [uu[0], uu[1], uu[2]],
-          Qu = [],
-          mu = [];
-        for (let Ju = 0; Ju < uu.length; Ju += 3) Eu(Qu, mu, [uu[Ju] - Ku[0] + .5, uu[Ju + 1] - Ku[1] + .5, uu[Ju + 2] - Ku[2] + .5], Ju / 3);
+      buildMesh(kk, Fk, Bk, Rk) {
+        const tk = [kk[0], kk[1], kk[2]],
+          ak = [],
+          Xk = [];
+        for (let bk = 0; bk < kk.length; bk += 3) Rk(ak, Xk, [kk[bk] - tk[0] + .5, kk[bk + 1] - tk[1] + .5, kk[bk + 2] - tk[2] + .5], bk / 3);
         return this.api.createGameMesh({
-          positions: Qu,
-          indices: mu
+          positions: ak,
+          indices: Xk
         }, {
-          rgb: [Ru[0], Ru[1], Ru[2]],
-          alpha: yu
-        }, Ku)
+          rgb: [Fk[0], Fk[1], Fk[2]],
+          alpha: Bk
+        }, tk)
       }
     }
 
-    function Ey(uu, Ru, yu, Eu, Ku, Qu) {
-      for (let mu = 0; mu < Eu.length; mu += 6) {
-        const Ju = [0, 0, 0],
-          Nu = [0, 0, 0];
-        for (let uu = 0; uu < 3; uu++) Ju[uu] = yu[uu] + ((Eu[mu + uu] + Eu[mu + uu + 3]) / 2 - .5) * Ku, Nu[uu] = (Eu[mu + uu + 3] - Eu[mu + uu]) * Ku;
-        (0, YR.e)(uu, Ru, Ju, Nu, Qu)
+    function tB(kk, Fk, Bk, Rk, tk, ak) {
+      for (let Xk = 0; Xk < Rk.length; Xk += 6) {
+        const bk = [0, 0, 0],
+          wk = [0, 0, 0];
+        for (let kk = 0; kk < 3; kk++) bk[kk] = Bk[kk] + ((Rk[Xk + kk] + Rk[Xk + kk + 3]) / 2 - .5) * tk, wk[kk] = (Rk[Xk + kk + 3] - Rk[Xk + kk]) * tk;
+        (0, xF.e)(kk, Fk, bk, wk, ak)
       }
     }
 
-    function Ky(uu, Ru, yu) {
-      return uu.rgb[0] === Ru[0] && uu.rgb[1] === Ru[1] && uu.rgb[2] === Ru[2] && uu.look === yu
+    function aB(kk, Fk, Bk) {
+      return kk.rgb[0] === Fk[0] && kk.rgb[1] === Fk[1] && kk.rgb[2] === Fk[2] && kk.look === Bk
     }
 
-    function Qy(uu, Ru) {
-      if (uu.cells.length !== Ru.cells.length) return !1;
-      for (let yu = 0; yu < uu.cells.length; yu++)
-        if (uu.cells[yu] !== Ru.cells[yu]) return !1;
-      return uu.boxes.every(((uu, yu) => uu === Ru.boxes[yu]))
+    function XB(kk, Fk) {
+      if (kk.cells.length !== Fk.cells.length) return !1;
+      for (let Bk = 0; Bk < kk.cells.length; Bk++)
+        if (kk.cells[Bk] !== Fk.cells[Bk]) return !1;
+      return kk.boxes.every(((kk, Bk) => kk === Fk.boxes[Bk]))
     }
 
-    function my(uu, Ru) {
-      return uu.getClientOption(Ru, "blockReach") + 1
+    function bB(kk, Fk) {
+      return kk.getClientOption(Fk, "blockReach") + 1
     }
-    class Jy {
-      constructor(uu, Ru, yu) {
-        this.api = uu, this.localPlayerId = Ru, this.pickNext = yu, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class wB {
+      constructor(kk, Fk, Bk) {
+        this.api = kk, this.localPlayerId = Fk, this.pickNext = Bk, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(uu) {
-        const [Ru, , yu] = uu.cameraDirection, Eu = Math.hypot(Ru, yu);
-        Eu > .001 && (this.heading = [Ru / Eu, yu / Eu])
+      look(kk) {
+        const [Fk, , Bk] = kk.cameraDirection, Rk = Math.hypot(Fk, Bk);
+        Rk > .001 && (this.heading = [Fk / Rk, Bk / Rk])
       }
-      tapped(uu, Ru, yu) {
-        const Eu = my(this.api, this.localPlayerId),
+      tapped(kk, Fk, Bk) {
+        const Rk = bB(this.api, this.localPlayerId),
           {
-            origin: Ku,
-            direction: Qu
+            origin: tk,
+            direction: ak
           } = this.api.getActionRay(),
-          mu = [...Ku],
-          Ju = [
-            [mu, [mu[0] + Qu[0] * Eu, mu[1] + Qu[1] * Eu, mu[2] + Qu[2] * Eu]]
+          Xk = [...tk],
+          bk = [
+            [Xk, [Xk[0] + ak[0] * Rk, Xk[1] + ak[1] * Rk, Xk[2] + ak[2] * Rk]]
           ];
-        null !== uu && Ju.push([mu, (0, FR.b)(uu)]), this.tap = {
-          lines: Ju,
-          next: Ru,
-          ms: yu
+        null !== kk && bk.push([Xk, (0, hF.b)(kk)]), this.tap = {
+          lines: bk,
+          next: Fk,
+          ms: Bk
         }
       }
-      filled(uu, Ru) {
-        this.tap = null, this.turnFrom(uu, Ru), this.retry(Ru)
+      filled(kk, Fk) {
+        this.tap = null, this.turnFrom(kk, Fk), this.retry(Fk)
       }
-      arrived(uu, Ru) {
+      arrived(kk, Fk) {
         const {
-          tap: yu
+          tap: Bk
         } = this;
-        if (null === yu || Ru - yu.ms > 1500) return null;
-        const Eu = (0, FR.b)(uu);
-        return (0, FR.f)(yu.next, uu) || yu.lines.some((uu => {
-          let [Ru, yu] = uu;
-          return function(uu, Ru, yu) {
-            const Eu = [yu[0] - Ru[0], yu[1] - Ru[1], yu[2] - Ru[2]],
-              Ku = [uu[0] - Ru[0], uu[1] - Ru[1], uu[2] - Ru[2]],
-              Qu = Eu[0] ** 2 + Eu[1] ** 2 + Eu[2] ** 2,
-              mu = 0 === Qu ? 0 : Math.min(1, Math.max(0, (Ku[0] * Eu[0] + Ku[1] * Eu[1] + Ku[2] * Eu[2]) / Qu));
-            return Math.hypot(Ku[0] - Eu[0] * mu, Ku[1] - Eu[1] * mu, Ku[2] - Eu[2] * mu)
-          }(Eu, Ru, yu) <= .9
-        })) ? (this.tap = null, this.turnFrom(uu, Ru), yu.ms) : null
+        if (null === Bk || Fk - Bk.ms > 1500) return null;
+        const Rk = (0, hF.b)(kk);
+        return (0, hF.c)(Bk.next, kk) || Bk.lines.some((kk => {
+          let [Fk, Bk] = kk;
+          return function(kk, Fk, Bk) {
+            const Rk = [Bk[0] - Fk[0], Bk[1] - Fk[1], Bk[2] - Fk[2]],
+              tk = [kk[0] - Fk[0], kk[1] - Fk[1], kk[2] - Fk[2]],
+              ak = Rk[0] ** 2 + Rk[1] ** 2 + Rk[2] ** 2,
+              Xk = 0 === ak ? 0 : Math.min(1, Math.max(0, (tk[0] * Rk[0] + tk[1] * Rk[1] + tk[2] * Rk[2]) / ak));
+            return Math.hypot(tk[0] - Rk[0] * Xk, tk[1] - Rk[1] * Xk, tk[2] - Rk[2] * Xk)
+          }(Rk, Fk, Bk) <= .9
+        })) ? (this.tap = null, this.turnFrom(kk, Fk), Bk.ms) : null
       }
-      turnFrom(uu, Ru) {
+      turnFrom(kk, Fk) {
         this.pending = {
-          from: uu,
-          ms: Ru,
-          turnMs: Math.max(50, Math.min(250, Ru - this.lastFillMs))
-        }, this.lastFillMs = Ru
+          from: kk,
+          ms: Fk,
+          turnMs: Math.max(50, Math.min(250, Fk - this.lastFillMs))
+        }, this.lastFillMs = Fk
       }
-      retry(uu) {
+      retry(kk) {
         const {
-          pending: Ru
+          pending: Fk
         } = this;
-        if (null === Ru) return;
-        if (uu - Ru.ms > 1500) return void(this.pending = null);
-        const yu = this.pickNext((0, FR.b)(Ru.from), (uu => (0, FR.f)(uu, Ru.from)));
-        if (null === yu) return;
+        if (null === Fk) return;
+        if (kk - Fk.ms > 1500) return void(this.pending = null);
+        const Bk = this.pickNext((0, hF.b)(Fk.from), (kk => (0, hF.c)(kk, Fk.from)));
+        if (null === Bk) return;
         this.pending = null;
         const {
-          turning: Eu
+          turning: Rk
         } = this;
-        if (null !== Eu && uu < Eu.endMs && (0, FR.f)(Eu.to, yu)) return;
-        const Ku = this.api.getActionRay().origin,
-          Qu = [yu[0] + .5 - Ku[0], yu[1] + .5 - Ku[1], yu[2] + .5 - Ku[2]],
-          mu = Math.hypot(Qu[0], Qu[2]);
-        if (mu < .3) {
-          const uu = Math.max(mu, .001);
-          Qu[0] = this.heading[0] * uu, Qu[2] = this.heading[1] * uu
+        if (null !== Rk && kk < Rk.endMs && (0, hF.c)(Rk.to, Bk)) return;
+        const tk = this.api.getActionRay().origin,
+          ak = [Bk[0] + .5 - tk[0], Bk[1] + .5 - tk[1], Bk[2] + .5 - tk[2]],
+          Xk = Math.hypot(ak[0], ak[2]);
+        if (Xk < .3) {
+          const kk = Math.max(Xk, .001);
+          ak[0] = this.heading[0] * kk, ak[2] = this.heading[1] * kk
         }
-        this.api.turnCamera(Qu, Ru.turnMs), this.turning = {
-          to: yu,
-          endMs: uu + Ru.turnMs
+        this.api.turnCamera(ak, Fk.turnMs), this.turning = {
+          to: Bk,
+          endMs: kk + Fk.turnMs
         }
       }
     }
-    class Ny {
-      constructor(uu, Ru, yu) {
-        this.api = uu, this.localPlayerId = Ru, this.juice = yu, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new OR(uu), this.meshes = new yy(uu), this.outline = new qR(uu), this.turn = new Jy(uu, Ru, ((uu, Ru) => this.pickNext(uu, Ru)))
+    class dB {
+      constructor(kk, Fk, Bk) {
+        this.api = kk, this.localPlayerId = Fk, this.juice = Bk, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new nF(kk), this.meshes = new RB(kk), this.outline = new lF(kk), this.turn = new wB(kk, Fk, ((kk, Fk) => this.pickNext(kk, Fk)))
       }
-      SS(uu) {
-        const Ru = "active" === uu[0] ? `${uu[1]}|${uu[3]}|${uu[4]}|${uu[5]}|${uu[6]}` : "";
-        if ("active" !== uu[0]) "built" === uu[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      he(kk) {
+        const Fk = "active" === kk[0] ? `${kk[1]}|${kk[3]}|${kk[4]}|${kk[5]}|${kk[6]}` : "";
+        if ("active" !== kk[0]) "built" === kk[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , yu, Eu, Ku, Qu] = uu;
-          Ru !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = yu) : yu === this.layerY ? this.burstUnlisted(Eu) : yu > this.layerY && this.finishLayer(yu), this.layerY = yu, this.layerCells.has(yu) || this.layerCells.set(yu, Eu.filter(Vy)), this.ghostCells = Eu, this.palette = Ku, this.occupiedCells = Qu
+          const [, , , , , , , Bk, Rk, tk, ak] = kk;
+          Fk !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = Bk) : Bk === this.layerY ? this.burstUnlisted(Rk) : Bk > this.layerY && this.finishLayer(Bk), this.layerY = Bk, this.layerCells.has(Bk) || this.layerCells.set(Bk, Rk.filter(VB)), this.ghostCells = Rk, this.palette = tk, this.occupiedCells = ak
         }
-        Ru !== this.blueprint && (this.blueprint = Ru, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((uu => this.api.blockNameToBlockId(uu))), this.chunkWatch.watch([...this.ghostCells.filter(Vy), ...this.occupiedCells]), this.refresh()
+        Fk !== this.blueprint && (this.blueprint = Fk, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((kk => this.api.blockNameToBlockId(kk))), this.chunkWatch.watch([...this.ghostCells.filter(VB), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(uu) {
-        this.burstUnlisted([]), uu > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = uu)
+      finishLayer(kk) {
+        this.burstUnlisted([]), kk > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = kk)
       }
-      sr() {
+      yJ() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const uu = performance.now();
-        let Ru = !1;
-        for (const [Ku, Qu] of this.foreseen) {
-          var yu;
-          if (uu - Qu > 1e3) this.foreseen.delete(Ku), Ru = !0, (null === (yu = this.lastFilled) || void 0 === yu ? void 0 : yu.join()) === Ku && (this.lastFilled = this.lastSeenFilled)
+        const kk = performance.now();
+        let Fk = !1;
+        for (const [tk, ak] of this.foreseen) {
+          var Bk;
+          if (kk - ak > 1e3) this.foreseen.delete(tk), Fk = !0, (null === (Bk = this.lastFilled) || void 0 === Bk ? void 0 : Bk.join()) === tk && (this.lastFilled = this.lastSeenFilled)
         }
-        const Eu = Xy(this.api.getPositionView(this.localPlayerId));
-        (Ru || Eu.some(((uu, Ru) => uu !== this.playerCells[Ru]))) && this.showNext()
+        const Rk = sB(this.api.getPositionView(this.localPlayerId));
+        (Fk || Rk.some(((kk, Fk) => kk !== this.playerCells[Fk]))) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(uu) {
-        const Ru = new Set;
-        for (let Ku = 0; Ku < uu.length; Ku += 4) Ru.add(`${uu[Ku]},${uu[Ku+1]},${uu[Ku+2]}`);
-        const yu = [],
+      burstUnlisted(kk) {
+        const Fk = new Set;
+        for (let tk = 0; tk < kk.length; tk += 4) Fk.add(`${kk[tk]},${kk[tk+1]},${kk[tk+2]}`);
+        const Bk = [],
           {
-            ghostCells: Eu
+            ghostCells: Rk
           } = this;
-        for (let Ku = 0; Ku < Eu.length; Ku += 4) {
-          const uu = `${Eu[Ku]},${Eu[Ku+1]},${Eu[Ku+2]}`;
-          !Ru.has(uu) && this.open.delete(uu) && yu.push(this.filledCell(Ku))
+        for (let tk = 0; tk < Rk.length; tk += 4) {
+          const kk = `${Rk[tk]},${Rk[tk+1]},${Rk[tk+2]}`;
+          !Fk.has(kk) && this.open.delete(kk) && Bk.push(this.filledCell(tk))
         }
-        this.burst(yu)
+        this.burst(Bk)
       }
       refresh() {
         const {
-          ghostCells: uu,
-          palette: Ru,
-          occupiedCells: yu
-        } = this, Eu = new Ry, Ku = new Set, Qu = [], mu = [];
-        for (let Ju = 0; Ju < uu.length; Ju += 4) {
-          const [yu, Nu, Xu, Vu] = [uu[Ju], uu[Ju + 1], uu[Ju + 2], uu[Ju + 3]], ru = this.api.getBlockId(yu, Nu, Xu), Bu = `${yu},${Nu},${Xu}`, xu = MR(this.blockIds[Vu], ru);
-          !xu && IR(ru) ? Eu.add(yu, Nu, Xu, UR(Ru[Vu]), aR, zR(Ru[Vu])) : xu ? this.open.has(Bu) && Qu.push(this.filledCell(Ju)) : Eu.add(yu, Nu, Xu, uy, fR), !xu && this.api.isBlockInLoadedChunk(yu, Nu, Xu) && (Ku.add(Bu), mu.push(yu, Nu, Xu, IR(ru) ? 0 : 1))
+          ghostCells: kk,
+          palette: Fk,
+          occupiedCells: Bk
+        } = this, Rk = new BB, tk = new Set, ak = [], Xk = [];
+        for (let bk = 0; bk < kk.length; bk += 4) {
+          const [Bk, wk, dk, sk] = [kk[bk], kk[bk + 1], kk[bk + 2], kk[bk + 3]], Vk = this.api.getBlockId(Bk, wk, dk), Jk = `${Bk},${wk},${dk}`, Ak = HF(this.blockIds[sk], Vk);
+          !Ak && uF(Vk) ? Rk.add(Bk, wk, dk, gF(Fk[sk]), QF, PF(Fk[sk])) : Ak ? this.open.has(Jk) && ak.push(this.filledCell(bk)) : Rk.add(Bk, wk, dk, FB, kB), !Ak && this.api.isBlockInLoadedChunk(Bk, wk, dk) && (tk.add(Jk), Xk.push(Bk, wk, dk, uF(Vk) ? 0 : 1))
         }
-        this.open = Ku, this.nextCells = mu;
-        for (let Ju = 0; Ju < yu.length; Ju += 3) {
-          const [uu, Ru, Ku] = [yu[Ju], yu[Ju + 1], yu[Ju + 2]];
-          IR(this.api.getBlockId(uu, Ru, Ku)) || Eu.add(uu, Ru, Ku, uy, fR)
+        this.open = tk, this.nextCells = Xk;
+        for (let bk = 0; bk < Bk.length; bk += 3) {
+          const [kk, Fk, tk] = [Bk[bk], Bk[bk + 1], Bk[bk + 2]];
+          uF(this.api.getBlockId(kk, Fk, tk)) || Rk.add(kk, Fk, tk, FB, kB)
         }
-        this.meshes.show(Eu.toArray()), this.burst(Qu), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(Rk.toArray()), this.burst(ak), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(uu) {
-        const Ru = performance.now(),
-          yu = [];
-        for (const [Ku, Qu, mu] of uu) {
-          const uu = [Ku, Qu, mu];
-          this.lastSeenFilled = uu, this.foreseen.delete(uu.join()) || yu.push(uu)
+      burst(kk) {
+        const Fk = performance.now(),
+          Bk = [];
+        for (const [tk, ak, Xk] of kk) {
+          const kk = [tk, ak, Xk];
+          this.lastSeenFilled = kk, this.foreseen.delete(kk.join()) || Bk.push(kk)
         }
-        const Eu = this.isHolding(Ru);
-        for (const Ku of yu) {
-          if (this.lastFilled = Ku, Eu && this.pressFilled) {
-            this.turn.filled(Ku, Ru);
+        const Rk = this.isHolding(Fk);
+        for (const tk of Bk) {
+          if (this.lastFilled = tk, Rk && this.pressFilled) {
+            this.turn.filled(tk, Fk);
             continue
           }
-          const uu = this.turn.arrived(Ku, Ru);
-          if (null !== uu) {
-            this.pressFilled = Eu;
-            for (const [Ru, yu] of this.foreseen) yu <= uu && this.foreseen.delete(Ru)
+          const kk = this.turn.arrived(tk, Fk);
+          if (null !== kk) {
+            this.pressFilled = Rk;
+            for (const [Fk, Bk] of this.foreseen) Bk <= kk && this.foreseen.delete(Fk)
           }
         }
-        this.juice.filled(uu)
+        this.juice.filled(kk)
       }
       showNext() {
-        var uu;
-        const Ru = this.api.getPositionView(this.localPlayerId);
-        this.playerCells.splice(0, 1 / 0, ...Xy(Ru));
-        const yu = this.lastFilled;
-        this.nextCell = this.pickNext(null === yu ? [Ru[0], Ru[1] + 1, Ru[2]] : (0, FR.b)(yu), (() => !1)), this.outline.show(null !== (uu = this.aimed) && void 0 !== uu ? uu : this.nextCell)
+        var kk;
+        const Fk = this.api.getPositionView(this.localPlayerId);
+        this.playerCells.splice(0, 1 / 0, ...sB(Fk));
+        const Bk = this.lastFilled;
+        this.nextCell = this.pickNext(null === Bk ? [Fk[0], Fk[1] + 1, Fk[2]] : (0, hF.b)(Bk), (() => !1)), this.outline.show(null !== (kk = this.aimed) && void 0 !== kk ? kk : this.nextCell)
       }
-      pickNext(uu, Ru) {
-        const yu = this.api.getPositionView(this.localPlayerId),
-          Eu = [yu[0], yu[1] + wR.f.UW * wR.f.playerEyeToHeightRatio, yu[2]],
-          Ku = my(this.api, this.localPlayerId),
+      pickNext(kk, Fk) {
+        const Bk = this.api.getPositionView(this.localPlayerId),
+          Rk = [Bk[0], Bk[1] + qF.h.FW * qF.h.playerEyeToHeightRatio, Bk[2]],
+          tk = bB(this.api, this.localPlayerId),
           {
-            nextCells: Qu
+            nextCells: ak
           } = this,
-          mu = uu => [Qu[uu], Qu[uu + 1], Qu[uu + 2]],
-          Ju = function(uu, Ru, yu, Eu, Ku, Qu) {
-            let mu = -1,
-              Ju = -1,
-              Nu = 1 / 0;
-            for (let Xu = 0; Xu < uu.length; Xu += Ru) {
-              const Ru = (Qu(Xu) ? 2 : 0) + (Eu(Xu) ? 1 : 0);
-              if (Ru < Ju || Ku(Xu)) continue;
-              const Vu = (uu[Xu] + .5 - yu[0]) ** 2 + (uu[Xu + 1] + .5 - yu[1]) ** 2 + (uu[Xu + 2] + .5 - yu[2]) ** 2;
-              (Ru > Ju || Vu < Nu) && (mu = Xu, Ju = Ru, Nu = Vu)
+          Xk = kk => [ak[kk], ak[kk + 1], ak[kk + 2]],
+          bk = function(kk, Fk, Bk, Rk, tk, ak) {
+            let Xk = -1,
+              bk = -1,
+              wk = 1 / 0;
+            for (let dk = 0; dk < kk.length; dk += Fk) {
+              const Fk = (ak(dk) ? 2 : 0) + (Rk(dk) ? 1 : 0);
+              if (Fk < bk || tk(dk)) continue;
+              const sk = (kk[dk] + .5 - Bk[0]) ** 2 + (kk[dk + 1] + .5 - Bk[1]) ** 2 + (kk[dk + 2] + .5 - Bk[2]) ** 2;
+              (Fk > bk || sk < wk) && (Xk = dk, bk = Fk, wk = sk)
             }
-            return mu
-          }(Qu, 4, uu, (uu => 1 === Qu[uu + 3]), (uu => {
-            const Eu = mu(uu);
-            return ZR(Eu, yu) || this.foreseen.has(Eu.join()) || Ru(Eu)
-          }), (uu => function(uu, Ru, yu) {
-            return (Ru[0] + .5 - uu[0]) ** 2 + (Ru[1] + .5 - uu[1]) ** 2 + (Ru[2] + .5 - uu[2]) ** 2 <= yu ** 2
-          }(Eu, mu(uu), Ku)));
-        return -1 === Ju ? null : mu(Ju)
+            return Xk
+          }(ak, 4, kk, (kk => 1 === ak[kk + 3]), (kk => {
+            const Rk = Xk(kk);
+            return CF(Rk, Bk) || this.foreseen.has(Rk.join()) || Fk(Rk)
+          }), (kk => function(kk, Fk, Bk) {
+            return (Fk[0] + .5 - kk[0]) ** 2 + (Fk[1] + .5 - kk[1]) ** 2 + (Fk[2] + .5 - kk[2]) ** 2 <= Bk ** 2
+          }(Rk, Xk(kk), tk)));
+        return -1 === bk ? null : Xk(bk)
       }
-      afterRender(uu) {
-        var Ru;
-        this.turn.look(uu);
-        const yu = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === yu ? null : yu.position), this.outline.show(null !== (Ru = this.aimed) && void 0 !== Ru ? Ru : this.nextCell)
+      afterRender(kk) {
+        var Fk;
+        this.turn.look(kk);
+        const Bk = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === Bk ? null : Bk.position), this.outline.show(null !== (Fk = this.aimed) && void 0 !== Fk ? Fk : this.nextCell)
       }
-      isHolding(uu) {
-        return null !== this.altMs && uu - this.altMs <= 500
+      isHolding(kk) {
+        return null !== this.altMs && kk - this.altMs <= 500
       }
-      attemptAltAction(uu) {
-        const Ru = performance.now();
-        if (this.isHolding(Ru) || (this.pressFilled = !1), this.altMs = Ru, this.pressFilled) return "preventPlacement";
-        const yu = this.findAimed(uu);
-        if (null !== yu) return this.foreseen.set(yu.join(), Ru), this.lastFilled = yu, this.aimed = null, this.showNext(), this.turn.filled(yu, Ru), this.pressFilled = !0, "preventPlacement";
-        null !== this.nextCell && this.turn.tapped(uu, this.nextCell, Ru)
+      attemptAltAction(kk) {
+        const Fk = performance.now();
+        if (this.isHolding(Fk) || (this.pressFilled = !1), this.altMs = Fk, this.pressFilled) return "preventPlacement";
+        const Bk = this.findAimed(kk);
+        if (null !== Bk) return this.foreseen.set(Bk.join(), Fk), this.lastFilled = Bk, this.aimed = null, this.showNext(), this.turn.filled(Bk, Fk), this.pressFilled = !0, "preventPlacement";
+        null !== this.nextCell && this.turn.tapped(kk, this.nextCell, Fk)
       }
-      findAimed(uu) {
-        return function(uu, Ru, yu, Eu, Ku, Qu, mu) {
-          const Ju = uu.Xyu(Ru),
-            Nu = null === Ju || null === uu.blockNameToBlockId(Ju.name, !0) ? null : Ju.name,
-            Xu = uu.getPositionView(Ru),
+      findAimed(kk) {
+        return function(kk, Fk, Bk, Rk, tk, ak, Xk) {
+          const bk = kk.LFk(Fk),
+            wk = null === bk || null === kk.blockNameToBlockId(bk.name, !0) ? null : bk.name,
+            dk = kk.getPositionView(Fk),
             {
-              origin: Vu,
-              direction: ru
-            } = uu.getActionRay(),
-            Bu = hR(Eu, {
-              from: Vu,
-              dir: ru,
-              reach: my(uu, Ru),
-              solid: yu
-            }, (Ru => {
-              const yu = [Eu[Ru], Eu[Ru + 1], Eu[Ru + 2]];
-              return !MR(Ku[Eu[Ru + 3]], uu.getBlockId(...yu)) && !mu.has(yu.join()) && uu.isBlockInLoadedChunk(...yu) && !ZR(yu, Xu)
-            }), (uu => null === Nu || Nu === GR(Ku[Eu[uu + 3]])), (uu => null !== Qu && Eu[uu] === Qu[0] && Eu[uu + 1] === Qu[1] && Eu[uu + 2] === Qu[2]));
-          return -1 === Bu ? null : [Eu[Bu], Eu[Bu + 1], Eu[Bu + 2]]
-        }(this.api, this.localPlayerId, uu, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
+              origin: sk,
+              direction: Vk
+            } = kk.getActionRay(),
+            Jk = ZF(Rk, {
+              from: sk,
+              dir: Vk,
+              reach: bB(kk, Fk),
+              solid: Bk
+            }, (Fk => {
+              const Bk = [Rk[Fk], Rk[Fk + 1], Rk[Fk + 2]];
+              return !HF(tk[Rk[Fk + 3]], kk.getBlockId(...Bk)) && !Xk.has(Bk.join()) && kk.isBlockInLoadedChunk(...Bk) && !CF(Bk, dk)
+            }), (kk => null === wk || wk === MF(tk[Rk[kk + 3]])), (kk => null !== ak && Rk[kk] === ak[0] && Rk[kk + 1] === ak[1] && Rk[kk + 2] === ak[2]));
+          return -1 === Jk ? null : [Rk[Jk], Rk[Jk + 1], Rk[Jk + 2]]
+        }(this.api, this.localPlayerId, kk, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(uu) {
+      filledCell(kk) {
         const {
-          ghostCells: Ru
-        } = this, [yu, Eu, Ku] = UR(this.palette[Ru[uu + 3]]);
-        return [Ru[uu], Ru[uu + 1], Ru[uu + 2], yu, Eu, Ku]
+          ghostCells: Fk
+        } = this, [Bk, Rk, tk] = gF(this.palette[Fk[kk + 3]]);
+        return [Fk[kk], Fk[kk + 1], Fk[kk + 2], Bk, Rk, tk]
       }
     }
 
-    function Xy(uu) {
-      let [Ru, yu, Eu] = uu;
-      const Ku = wR.f.DW / 2;
-      return [Math.floor(Ru), Math.floor(yu), Math.floor(Eu), Math.floor(Ru - Ku), Math.floor(Ru + Ku), Math.floor(yu + wR.f.UW), Math.floor(Eu - Ku), Math.floor(Eu + Ku)]
+    function sB(kk) {
+      let [Fk, Bk, Rk] = kk;
+      const tk = qF.h.Qm / 2;
+      return [Math.floor(Fk), Math.floor(Bk), Math.floor(Rk), Math.floor(Fk - tk), Math.floor(Fk + tk), Math.floor(Bk + qF.h.FW), Math.floor(Rk - tk), Math.floor(Rk + tk)]
     }
 
-    function Vy(uu, Ru) {
-      return Ru % 4 !== 3
+    function VB(kk, Fk) {
+      return Fk % 4 !== 3
     }
 
-    function ry(uu, Ru, yu, Eu, Ku) {
-      if (!uu.isBlockInLoadedChunk(Ru, Eu - 6, yu) || !uu.isBlockInLoadedChunk(Ru, Eu + 6 + Ku, yu) || !uu.canModifyBlockAt(Ru, Eu, yu)) return NaN;
-      let Qu = Eu - 1;
-      if (0 !== uu.getBlockId(Ru, Qu, yu)) {
-        for (; Qu < Eu + 6 && 0 !== uu.getBlockId(Ru, Qu + 1, yu);) Qu++;
-        return Qu
+    function JB(kk, Fk, Bk, Rk, tk) {
+      if (!kk.isBlockInLoadedChunk(Fk, Rk - 6, Bk) || !kk.isBlockInLoadedChunk(Fk, Rk + 6 + tk, Bk) || !kk.canModifyBlockAt(Fk, Rk, Bk)) return NaN;
+      let ak = Rk - 1;
+      if (0 !== kk.getBlockId(Fk, ak, Bk)) {
+        for (; ak < Rk + 6 && 0 !== kk.getBlockId(Fk, ak + 1, Bk);) ak++;
+        return ak
       }
-      for (; Qu > Eu - 6;)
-        if (Qu--, 0 !== uu.getBlockId(Ru, Qu, yu)) return Qu;
+      for (; ak > Rk - 6;)
+        if (ak--, 0 !== kk.getBlockId(Fk, ak, Bk)) return ak;
       return NaN
     }
 
-    function By(uu, Ru, yu, Eu, Ku) {
-      let Qu = 0;
-      for (let mu = Eu + 1; mu <= Eu + Ku; mu++) 0 !== uu.getBlockId(Ru, mu, yu) && Qu++;
-      return Qu
+    function AB(kk, Fk, Bk, Rk, tk) {
+      let ak = 0;
+      for (let Xk = Rk + 1; Xk <= Rk + tk; Xk++) 0 !== kk.getBlockId(Fk, Xk, Bk) && ak++;
+      return ak
     }
 
-    function xy(uu) {
-      const Ru = new Map;
-      for (const mu of uu) {
-        var yu;
-        if (Number.isNaN(mu)) return null;
-        Ru.set(mu, (null !== (yu = Ru.get(mu)) && void 0 !== yu ? yu : 0) + 1)
+    function eB(kk) {
+      const Fk = new Map;
+      for (const Xk of kk) {
+        var Bk;
+        if (Number.isNaN(Xk)) return null;
+        Fk.set(Xk, (null !== (Bk = Fk.get(Xk)) && void 0 !== Bk ? Bk : 0) + 1)
       }
-      let Eu = NaN,
-        Ku = 0;
-      for (const [mu, Ju] of Ru)(Ju > Ku || Ju === Ku && mu < Eu) && (Eu = mu, Ku = Ju);
-      let Qu = 0;
-      for (const mu of uu) Qu += Math.abs(mu - Eu);
-      return Qu
+      let Rk = NaN,
+        tk = 0;
+      for (const [Xk, bk] of Fk)(bk > tk || bk === tk && Xk < Rk) && (Rk = Xk, tk = bk);
+      let ak = 0;
+      for (const Xk of kk) ak += Math.abs(Xk - Rk);
+      return ak
     }
 
-    function Sy(uu, Ru, yu, Eu) {
+    function yB(kk, Fk, Bk, Rk) {
       const {
-        eye: Ku,
-        forward: Qu,
-        tanHalfFovX: mu,
-        tanHalfFovY: Ju
-      } = uu, [Nu, Xu] = function(uu) {
-        let [Ru, yu, Eu] = uu;
-        const Ku = Math.hypot(Ru, Eu),
-          [Qu, mu] = [Eu / Ku, -Ru / Ku];
+        eye: tk,
+        forward: ak,
+        tanHalfFovX: Xk,
+        tanHalfFovY: bk
+      } = kk, [wk, dk] = function(kk) {
+        let [Fk, Bk, Rk] = kk;
+        const tk = Math.hypot(Fk, Rk),
+          [ak, Xk] = [Rk / tk, -Fk / tk];
         return [
-          [Qu, 0, mu],
-          [yu * mu, Eu * Qu - Ru * mu, -yu * Qu]
+          [ak, 0, Xk],
+          [Bk * Xk, Rk * ak - Fk * Xk, -Bk * ak]
         ]
-      }(Qu), [Vu, ru] = [Ru * mu, yu * Ju], Bu = Qu[0] + Vu * Nu[0] + ru * Xu[0], xu = Qu[1] + ru * Xu[1], Su = Qu[2] + Vu * Nu[2] + ru * Xu[2], pu = (Eu - Ku[1]) / xu;
-      return pu > 0 && pu < 1 / 0 ? [Ku[0] + pu * Bu, Ku[2] + pu * Su] : null
+      }(ak), [sk, Vk] = [Fk * Xk, Bk * bk], Jk = ak[0] + sk * wk[0] + Vk * dk[0], Ak = ak[1] + Vk * dk[1], ek = ak[2] + sk * wk[2] + Vk * dk[2], yk = (Rk - tk[1]) / Ak;
+      return yk > 0 && yk < 1 / 0 ? [tk[0] + yk * Jk, tk[2] + yk * ek] : null
     }
-    const py = "plotsBlueprintPlacementChanged",
-      Ty = {
+    const fB = "plotsBlueprintPlacementChanged",
+      mB = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class Wy {
-      constructor(uu, Ru) {
-        this.api = uu, this.localPlayerId = Ru, this.placing = null, this.view = null, this.camera = {
+    class WB {
+      constructor(kk, Fk) {
+        this.api = kk, this.localPlayerId = Fk, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = uu => {
-          var Ru, yu, Eu, Qu;
-          const mu = null !== (Ru = null === (yu = this.placing) || void 0 === yu ? void 0 : yu.rotation) && void 0 !== Ru ? Ru : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = kk => {
+          var Fk, Bk, Rk, ak;
+          const Xk = null !== (Fk = null === (Bk = this.placing) || void 0 === Bk ? void 0 : Bk.rotation) && void 0 !== Fk ? Fk : 0,
             {
-              size: Ju
-            } = Zu(uu, mu),
-            Nu = this.api.mH(this.localPlayerId),
-            [Xu, Vu] = null !== (Eu = null !== (Qu = function(uu, Ru, yu) {
-              const [Eu, Ku, Qu] = Ru, [mu, Ju, Nu] = [Math.floor(yu[0]), Math.floor(yu[1]), Math.floor(yu[2])], Xu = 6 + Math.max(Eu, Qu) / 2, [Vu, ru] = [Math.ceil(Xu + Eu / 2), Math.ceil(Xu + Qu / 2)], [Bu, xu] = [mu - Vu, Nu - ru], [Su, pu] = [2 * Vu + 1, 2 * ru + 1], Tu = new Float64Array(Su * pu), Wu = new Uint16Array(Su * pu);
-              for (let bu = 0; bu < Su; bu++)
-                for (let Ru = 0; Ru < pu; Ru++) {
-                  const yu = ry(uu, Bu + bu, xu + Ru, Ju, Ku);
-                  Tu[bu * pu + Ru] = yu, Number.isNaN(yu) || (Wu[bu * pu + Ru] = By(uu, Bu + bu, xu + Ru, yu, Ku))
+              size: bk
+            } = Ck(kk, Xk),
+            wk = this.api.rW(this.localPlayerId),
+            [dk, sk] = null !== (Rk = null !== (ak = function(kk, Fk, Bk) {
+              const [Rk, tk, ak] = Fk, [Xk, bk, wk] = [Math.floor(Bk[0]), Math.floor(Bk[1]), Math.floor(Bk[2])], dk = 6 + Math.max(Rk, ak) / 2, [sk, Vk] = [Math.ceil(dk + Rk / 2), Math.ceil(dk + ak / 2)], [Jk, Ak] = [Xk - sk, wk - Vk], [ek, yk] = [2 * sk + 1, 2 * Vk + 1], fk = new Float64Array(ek * yk), mk = new Uint16Array(ek * yk);
+              for (let Yk = 0; Yk < ek; Yk++)
+                for (let Fk = 0; Fk < yk; Fk++) {
+                  const Bk = JB(kk, Jk + Yk, Ak + Fk, bk, tk);
+                  fk[Yk * yk + Fk] = Bk, Number.isNaN(Bk) || (mk[Yk * yk + Fk] = AB(kk, Jk + Yk, Ak + Fk, Bk, tk))
                 }
-              const ju = [];
-              let Hu = null,
-                du = 1 / 0;
-              for (let bu = 0; bu + Eu <= Su; bu++)
-                for (let uu = 0; uu + Qu <= pu; uu++) {
-                  const [Ru, Ku] = [Bu + bu, xu + uu], Ju = Math.hypot(Ru + Eu / 2 - yu[0], Ku + Qu / 2 - yu[2]);
-                  if (Ju > Xu || mu >= Ru - 2 && mu < Ru + Eu + 2 && Nu >= Ku - 2 && Nu < Ku + Qu + 2) continue;
-                  ju.length = 0;
-                  let Vu = 0;
-                  for (let yu = 0; yu < Eu; yu++)
-                    for (let Ru = 0; Ru < Qu; Ru++) ju.push(Tu[(bu + yu) * pu + uu + Ru]), Vu += Wu[(bu + yu) * pu + uu + Ru];
-                  const ru = xy(ju);
-                  if (null === ru) continue;
-                  const Su = Ju + 3 * (ru + Vu);
-                  Su < du && (du = Su, Hu = [Ru, Ku])
+              const Wk = [];
+              let vk = null,
+                ik = 1 / 0;
+              for (let Yk = 0; Yk + Rk <= ek; Yk++)
+                for (let kk = 0; kk + ak <= yk; kk++) {
+                  const [Fk, tk] = [Jk + Yk, Ak + kk], bk = Math.hypot(Fk + Rk / 2 - Bk[0], tk + ak / 2 - Bk[2]);
+                  if (bk > dk || Xk >= Fk - 2 && Xk < Fk + Rk + 2 && wk >= tk - 2 && wk < tk + ak + 2) continue;
+                  Wk.length = 0;
+                  let sk = 0;
+                  for (let Bk = 0; Bk < Rk; Bk++)
+                    for (let Fk = 0; Fk < ak; Fk++) Wk.push(fk[(Yk + Bk) * yk + kk + Fk]), sk += mk[(Yk + Bk) * yk + kk + Fk];
+                  const Vk = eB(Wk);
+                  if (null === Vk) continue;
+                  const ek = bk + 3 * (Vk + sk);
+                  ek < ik && (ik = ek, vk = [Fk, tk])
                 }
-              return Hu
-            }(this.api, Ju, Nu)) && void 0 !== Qu ? Qu : this.cornerOnTarget(Ju)) && void 0 !== Eu ? Eu : [Math.floor(Nu[0]) + 2, Math.floor(Nu[2])];
+              return vk
+            }(this.api, bk, wk)) && void 0 !== ak ? ak : this.cornerOnTarget(bk)) && void 0 !== Rk ? Rk : [Math.floor(wk[0]) + 2, Math.floor(wk[2])];
           this.placing = {
-            id: uu,
-            rotation: mu,
-            corner: [Xu, this.playerLevel(), Vu],
+            id: kk,
+            rotation: Xk,
+            corner: [dk, this.playerLevel(), sk],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null
-          }, this.update(), this.api.sendCommand(`${Ku} preview`)
+          }, this.update(), this.api.sendCommand(`${tk} preview`)
         }, this.rotate = () => {
           const {
-            id: uu,
-            rotation: Ru,
-            corner: yu
-          } = this.placing, Ku = Eu[(Eu.indexOf(Ru) + 1) % Eu.length], [Qu, , mu] = Zu(uu, Ru).size, [Ju, , Nu] = Zu(uu, Ku).size;
-          this.moveTo(yu[0] + Math.floor(Qu / 2) - Math.floor(Ju / 2), yu[2] + Math.floor(mu / 2) - Math.floor(Nu / 2), Ku)
-        }, this.hoverAt = (uu, Ru) => {
-          this.placing.hover = [uu, Ru], this.moveCentreTo(this.camera, uu, Ru)
+            id: kk,
+            rotation: Fk,
+            corner: Bk
+          } = this.placing, tk = Rk[(Rk.indexOf(Fk) + 1) % Rk.length], [ak, , Xk] = Ck(kk, Fk).size, [bk, , wk] = Ck(kk, tk).size;
+          this.moveTo(Bk[0] + Math.floor(ak / 2) - Math.floor(bk / 2), Bk[2] + Math.floor(Xk / 2) - Math.floor(wk / 2), tk)
+        }, this.hoverAt = (kk, Fk) => {
+          this.placing.hover = [kk, Fk], this.moveCentreTo(this.camera, kk, Fk)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (uu, Ru) => {
-          const yu = this.placing,
+        }, this.beginDrag = (kk, Fk) => {
+          const Bk = this.placing,
             {
-              eye: Eu,
-              forward: Ku,
-              tanHalfFovX: Qu,
-              tanHalfFovY: mu
+              eye: Rk,
+              forward: tk,
+              tanHalfFovX: ak,
+              tanHalfFovY: Xk
             } = this.camera,
-            Ju = {
-              eye: [Eu[0], Eu[1], Eu[2]],
-              forward: [Ku[0], Ku[1], Ku[2]],
-              tanHalfFovX: Qu,
-              tanHalfFovY: mu
+            bk = {
+              eye: [Rk[0], Rk[1], Rk[2]],
+              forward: [tk[0], tk[1], tk[2]],
+              tanHalfFovX: ak,
+              tanHalfFovY: Xk
             },
-            Nu = yu.corner[1],
-            Xu = Sy(Ju, uu, Ru, Nu);
-          yu.hover = null, yu.drag = Xu && {
-            view: Ju,
-            ground: Xu,
-            corner: [yu.corner[0], yu.corner[2]],
-            level: Nu
+            wk = Bk.corner[1],
+            dk = yB(bk, kk, Fk, wk);
+          Bk.hover = null, Bk.drag = dk && {
+            view: bk,
+            ground: dk,
+            corner: [Bk.corner[0], Bk.corner[2]],
+            level: wk
           }
-        }, this.dragTo = (uu, Ru) => {
-          const yu = this.placing.drag,
-            Eu = yu && Sy(yu.view, uu, Ru, yu.level);
-          null !== yu && null !== Eu && this.moveTo(yu.corner[0] + Math.round(Eu[0] - yu.ground[0]), yu.corner[1] + Math.round(Eu[1] - yu.ground[1]))
+        }, this.dragTo = (kk, Fk) => {
+          const Bk = this.placing.drag,
+            Rk = Bk && yB(Bk.view, kk, Fk, Bk.level);
+          null !== Bk && null !== Rk && this.moveTo(Bk.corner[0] + Math.round(Rk[0] - Bk.ground[0]), Bk.corner[1] + Math.round(Rk[1] - Bk.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const uu = this.view;
-          uu.waiting || (uu.blocked ? this.Op({
-            ...uu,
+          const kk = this.view;
+          kk.waiting || (kk.blocked ? this.Hf({
+            ...kk,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const uu = this.placing,
+          const kk = this.placing,
             {
-              id: Ru,
-              rotation: yu,
-              corner: Eu
-            } = uu;
-          this.api.sendCommand(`${Ku} place ${Ru} ${Eu.join(" ")} ${yu}`), uu.sent = {
+              id: Fk,
+              rotation: Bk,
+              corner: Rk
+            } = kk;
+          this.api.sendCommand(`${tk} place ${Fk} ${Rk.join(" ")} ${Bk}`), kk.sent = {
             atMs: performance.now(),
-            corner: [...Eu],
-            rotation: yu,
+            corner: [...Rk],
+            rotation: Bk,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${Ku} preview off`))
-        }, this.chunkWatch = new OR(uu), this.meshes = new yy(uu)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${tk} preview off`))
+        }, this.chunkWatch = new nF(kk), this.meshes = new RB(kk)
       }
       getView() {
         return this.view
       }
-      sr() {
-        const uu = this.placing;
-        null !== uu && (null !== uu.sent && !uu.sent.timedOut && performance.now() - uu.sent.atMs > 3e3 ? (uu.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(uu) || this.chunkWatch.changed()) && this.update())
+      yJ() {
+        const kk = this.placing;
+        null !== kk && (null !== kk.sent && !kk.sent.timedOut && performance.now() - kk.sent.atMs > 3e3 ? (kk.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(kk) || this.chunkWatch.changed()) && this.update())
       }
-      afterRender(uu) {
-        const Ru = this.placing;
-        null !== Ru && (! function(uu, Ru) {
-          for (let yu = 0; yu < 3; yu++) Ru.eye[yu] = uu.cameraPosition[yu], Ru.forward[yu] = uu.cameraDirection[yu];
-          Ru.tanHalfFovX = uu.tanHalfFovX, Ru.tanHalfFovY = uu.tanHalfFovY
-        }(uu, this.camera), null !== Ru.hover && this.moveCentreTo(this.camera, Ru.hover[0], Ru.hover[1]))
+      afterRender(kk) {
+        const Fk = this.placing;
+        null !== Fk && (! function(kk, Fk) {
+          for (let Bk = 0; Bk < 3; Bk++) Fk.eye[Bk] = kk.cameraPosition[Bk], Fk.forward[Bk] = kk.cameraDirection[Bk];
+          Fk.tanHalfFovX = kk.tanHalfFovX, Fk.tanHalfFovY = kk.tanHalfFovY
+        }(kk, this.camera), null !== Fk.hover && this.moveCentreTo(this.camera, Fk.hover[0], Fk.hover[1]))
       }
-      SS(uu) {
-        const Ru = this.placing;
-        if (null === Ru || null === Ru.sent || "active" !== uu[0]) return;
+      he(kk) {
+        const Fk = this.placing;
+        if (null === Fk || null === Fk.sent || "active" !== kk[0]) return;
         const {
-          sent: yu
-        } = Ru, [, Eu, Ku, Qu, mu, Ju, Nu] = uu;
-        Ku && Eu === Ru.id && Nu === yu.rotation && Qu === yu.corner[0] && mu === yu.corner[1] && Ju === yu.corner[2] && this.close()
+          sent: Bk
+        } = Fk, [, Rk, tk, ak, Xk, bk, wk] = kk;
+        tk && Rk === Fk.id && wk === Bk.rotation && ak === Bk.corner[0] && Xk === Bk.corner[1] && bk === Bk.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1650,142 +1650,142 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(uu) {
-        let [Ru, , yu] = uu;
-        const Eu = this.api.getTargetedBlock();
-        if (null === Eu) return null;
-        const [Ku, , Qu] = Eu.position;
-        return [Ku - Math.floor(Ru / 2), Qu - Math.floor(yu / 2)]
+      cornerOnTarget(kk) {
+        let [Fk, , Bk] = kk;
+        const Rk = this.api.getTargetedBlock();
+        if (null === Rk) return null;
+        const [tk, , ak] = Rk.position;
+        return [tk - Math.floor(Fk / 2), ak - Math.floor(Bk / 2)]
       }
       playerLevel() {
-        var uu;
-        const [Ru, yu, Eu] = this.api.mH(this.localPlayerId);
-        if (null !== (uu = this.api.getLocalPlayerMovement()) && void 0 !== uu && uu.onGround) return Math.ceil(yu - .01);
-        const [Ku, Qu, mu] = [Math.floor(Ru), Math.floor(yu), Math.floor(Eu)];
-        for (let Ju = Qu; Ju >= Qu - 2; Ju--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(Ku, Ju, mu))) return Ju + 1;
-        return Qu
+        var kk;
+        const [Fk, Bk, Rk] = this.api.rW(this.localPlayerId);
+        if (null !== (kk = this.api.getLocalPlayerMovement()) && void 0 !== kk && kk.onGround) return Math.ceil(Bk - .01);
+        const [tk, ak, Xk] = [Math.floor(Fk), Math.floor(Bk), Math.floor(Rk)];
+        for (let bk = ak; bk >= ak - 2; bk--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(tk, bk, Xk))) return bk + 1;
+        return ak
       }
-      followPlayerLevel(uu) {
-        if (jy(uu)) return !1;
-        const Ru = this.playerLevel();
-        return Ru !== uu.corner[1] && (uu.corner[1] = Ru, !0)
+      followPlayerLevel(kk) {
+        if (vB(kk)) return !1;
+        const Fk = this.playerLevel();
+        return Fk !== kk.corner[1] && (kk.corner[1] = Fk, !0)
       }
-      moveCentreTo(uu, Ru, yu) {
-        const Eu = this.placing,
-          Ku = Sy(uu, Ru, yu, Eu.corner[1]);
-        if (null !== Ku) {
-          const [uu, , Ru] = Zu(Eu.id, Eu.rotation).size;
-          this.moveTo(Math.round(Ku[0] - uu / 2), Math.round(Ku[1] - Ru / 2))
+      moveCentreTo(kk, Fk, Bk) {
+        const Rk = this.placing,
+          tk = yB(kk, Fk, Bk, Rk.corner[1]);
+        if (null !== tk) {
+          const [kk, , Fk] = Ck(Rk.id, Rk.rotation).size;
+          this.moveTo(Math.round(tk[0] - kk / 2), Math.round(tk[1] - Fk / 2))
         }
       }
-      moveTo(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const Eu = this.placing;
-        if (jy(Eu)) return;
-        const [Ku, Qu, mu] = Eu.corner;
-        if (this.centreOnPlot(Ku, mu) && !this.centreOnPlot(uu, Ru, yu))
-          if (this.centreOnPlot(uu, mu, yu)) Ru = mu;
+      moveTo(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const Rk = this.placing;
+        if (vB(Rk)) return;
+        const [tk, ak, Xk] = Rk.corner;
+        if (this.centreOnPlot(tk, Xk) && !this.centreOnPlot(kk, Fk, Bk))
+          if (this.centreOnPlot(kk, Xk, Bk)) Fk = Xk;
           else {
-            if (!this.centreOnPlot(Ku, Ru, yu)) return;
-            uu = Ku
-          } uu === Ku && Ru === mu && yu === Eu.rotation || (Eu.rotation = yu, Eu.corner = [uu, Qu, Ru], this.update())
+            if (!this.centreOnPlot(tk, Fk, Bk)) return;
+            kk = tk
+          } kk === tk && Fk === Xk && Bk === Rk.rotation || (Rk.rotation = Bk, Rk.corner = [kk, ak, Fk], this.update())
       }
-      centreOnPlot(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: Eu,
-          corner: Ku
-        } = this.placing, [Qu, , mu] = Zu(Eu, yu).size;
-        return this.api.canModifyBlockAt(uu + Math.floor(Qu / 2), Ku[1], Ru + Math.floor(mu / 2))
+          id: Rk,
+          corner: tk
+        } = this.placing, [ak, , Xk] = Ck(Rk, Bk).size;
+        return this.api.canModifyBlockAt(kk + Math.floor(ak / 2), tk[1], Fk + Math.floor(Xk / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.Op(null)
+        this.placing = null, this.meshes.dispose(), this.Hf(null)
       }
       update() {
         const {
-          id: uu,
-          rotation: Ru,
-          corner: yu,
-          refusals: Eu
-        } = this.placing, Ku = new Ry, Qu = [];
-        let mu = !1,
-          Ju = 0;
+          id: kk,
+          rotation: Fk,
+          corner: Bk,
+          refusals: Rk
+        } = this.placing, tk = new BB, ak = [];
+        let Xk = !1,
+          bk = 0;
         for (const {
-            offset: Vu,
-            block: ru
+            offset: sk,
+            block: Vk
           }
-          of Zu(uu, Ru).cells) {
-          const [uu, Ru, Eu] = [yu[0] + Vu[0], yu[1] + Vu[1], yu[2] + Vu[2]];
-          Qu.push(uu, Ru, Eu);
-          const Nu = !this.api.canModifyBlockAt(uu, Ru, Eu),
-            Xu = this.api.getBlockId(uu, Ru, Eu),
-            Bu = !IR(Xu) && !MR(this.api.blockNameToBlockId(ru), Xu);
-          mu ||= Nu, Ju += Bu ? 1 : 0, Nu || Bu ? Ku.add(uu, Ru, Eu, uy, fR) : Ku.add(uu, Ru, Eu, UR(ru), Ty, zR(ru))
+          of Ck(kk, Fk).cells) {
+          const [kk, Fk, Rk] = [Bk[0] + sk[0], Bk[1] + sk[1], Bk[2] + sk[2]];
+          ak.push(kk, Fk, Rk);
+          const wk = !this.api.canModifyBlockAt(kk, Fk, Rk),
+            dk = this.api.getBlockId(kk, Fk, Rk),
+            Jk = !uF(dk) && !HF(this.api.blockNameToBlockId(Vk), dk);
+          Xk ||= wk, bk += Jk ? 1 : 0, wk || Jk ? tk.add(kk, Fk, Rk, FB, kB) : tk.add(kk, Fk, Rk, gF(Vk), mB, PF(Vk))
         }
-        this.chunkWatch.watch(Qu), this.meshes.show(Ku.toArray());
-        const Nu = this.view,
-          Xu = jy(this.placing);
-        (null === Nu || void 0 === Nu ? void 0 : Nu.id) === uu && Nu.blocked === mu && Nu.toClear === Ju && Nu.waiting === Xu && Nu.refusals === Eu || this.Op({
-          id: uu,
-          blocked: mu,
-          toClear: Ju,
-          waiting: Xu,
-          refusals: Eu
+        this.chunkWatch.watch(ak), this.meshes.show(tk.toArray());
+        const wk = this.view,
+          dk = vB(this.placing);
+        (null === wk || void 0 === wk ? void 0 : wk.id) === kk && wk.blocked === Xk && wk.toClear === bk && wk.waiting === dk && wk.refusals === Rk || this.Hf({
+          id: kk,
+          blocked: Xk,
+          toClear: bk,
+          waiting: dk,
+          refusals: Rk
         })
       }
-      Op(uu) {
-        this.view = uu, Vu.k.Op(py, uu, !0)
+      Hf(kk) {
+        this.view = kk, sk.o.Hf(fB, kk, !0)
       }
     }
 
-    function jy(uu) {
+    function vB(kk) {
       let {
-        sent: Ru
-      } = uu;
-      return null !== Ru && !Ru.timedOut
+        sent: Fk
+      } = kk;
+      return null !== Fk && !Fk.timedOut
     }
-    var Hy = yu(4053),
-      dy = yu(38891);
+    var iB = Bk(4002),
+      YB = Bk(38766);
 
-    function by(uu, Ru, yu) {
-      const Eu = [255 * uu, 255 * Ru, 255 * yu],
-        [Ku, Qu, mu] = Eu.map((uu => uu + .4 * (255 - uu)));
+    function oB(kk, Fk, Bk) {
+      const Rk = [255 * kk, 255 * Fk, 255 * Bk],
+        [tk, ak, Xk] = Rk.map((kk => kk + .4 * (255 - kk)));
       return {
         texture: "square_particle",
-        Nr: 48,
-        minLifeTime: .3 / dy.e,
-        maxLifeTime: .55 / dy.e,
+        KV: 48,
+        minLifeTime: .3 / YB.b,
+        maxLifeTime: .55 / YB.b,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * dy.e * dy.e, 0],
+        gravity: [0, -14 * YB.b * YB.b, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...Eu, 1],
-          maxColor: [Ku, Qu, mu, 1]
+          minColor: [...Rk, 1],
+          maxColor: [tk, ak, Xk, 1]
         }, {
           timeFraction: 1,
-          minColor: [...Eu, 0],
-          maxColor: [Ku, Qu, mu, 0]
+          minColor: [...Rk, 0],
+          maxColor: [tk, ak, Xk, 0]
         }],
-        blendMode: Hy.g.Standard
+        blendMode: iB.d.Standard
       }
     }
-    const Cy = {
+    const LB = {
       texture: "glint",
       mipmaps: !1,
-      Nr: 96,
-      minLifeTime: .5 / dy.e,
-      maxLifeTime: .9 / dy.e,
+      KV: 96,
+      minLifeTime: .5 / YB.b,
+      maxLifeTime: .9 / YB.b,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * dy.e * dy.e, 0],
+      gravity: [0, 2 * YB.b * YB.b, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -1794,601 +1794,601 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: Hy.g.OneOne
+      blendMode: iB.d.OneOne
     };
-    class ky {
-      constructor(uu, Ru) {
-        this.api = uu, this.localPlayerId = Ru, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class OB {
+      constructor(kk, Fk) {
+        this.api = kk, this.localPlayerId = Fk, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(uu) {
+      filled(kk) {
         if (this.api.particlesEnabled())
-          for (const [Ru, yu, Eu, Ku, Qu, mu] of uu.slice(0, 3)) {
-            const uu = `${Ku},${Qu},${mu}`;
-            let Ju = this.chips.get(uu);
-            void 0 === Ju && (Ju = this.api.createParticles(by(Ku, Qu, mu), {
-              pos: [Ru + .5, yu + .5, Eu + .5]
-            }), this.chips.set(uu, Ju));
-            for (let Ru = 0; Ru < 8; Ru++) this.setPoint(Ru, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            Ju.emitPoints([Ru + .5, yu + .5, Eu + .5], this.points, 8)
+          for (const [Fk, Bk, Rk, tk, ak, Xk] of kk.slice(0, 3)) {
+            const kk = `${tk},${ak},${Xk}`;
+            let bk = this.chips.get(kk);
+            void 0 === bk && (bk = this.api.createParticles(oB(tk, ak, Xk), {
+              pos: [Fk + .5, Bk + .5, Rk + .5]
+            }), this.chips.set(kk, bk));
+            for (let Fk = 0; Fk < 8; Fk++) this.setPoint(Fk, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            bk.emitPoints([Fk + .5, Bk + .5, Rk + .5], this.points, 8)
           }
       }
-      layerDone(uu) {
+      layerDone(kk) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const Ru = uu.length / 3;
-        if (0 === Ru || !this.api.particlesEnabled()) return;
-        const yu = Math.min(Ru, 48),
-          [Eu, Ku, Qu] = [uu[0] + .5, uu[1] + 1, uu[2] + .5];
-        let mu = 0;
-        for (let Ju = 0; Ju < yu; Ju++) {
-          const Nu = 3 * Math.floor(Ju * Ru / yu);
-          for (let Ru = 0; Ru < 2; Ru++) this.setPoint(mu++, uu[Nu] + Math.random() - Eu, uu[Nu + 1] + 1 - Ku, uu[Nu + 2] + Math.random() - Qu, .6 + .8 * Math.random())
+        const Fk = kk.length / 3;
+        if (0 === Fk || !this.api.particlesEnabled()) return;
+        const Bk = Math.min(Fk, 48),
+          [Rk, tk, ak] = [kk[0] + .5, kk[1] + 1, kk[2] + .5];
+        let Xk = 0;
+        for (let bk = 0; bk < Bk; bk++) {
+          const wk = 3 * Math.floor(bk * Fk / Bk);
+          for (let Fk = 0; Fk < 2; Fk++) this.setPoint(Xk++, kk[wk] + Math.random() - Rk, kk[wk + 1] + 1 - tk, kk[wk + 2] + Math.random() - ak, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(Cy, {
-          pos: [Eu, Ku, Qu]
-        }), this.sparkles.emitPoints([Eu, Ku, Qu], this.points, mu)
+        this.sparkles ??= this.api.createParticles(LB, {
+          pos: [Rk, tk, ak]
+        }), this.sparkles.emitPoints([Rk, tk, ak], this.points, Xk)
       }
       dispose() {
-        var uu;
-        for (const Ru of this.chips.values()) Ru.stop();
-        this.chips.clear(), null === (uu = this.sparkles) || void 0 === uu || uu.stop(), this.sparkles = null
+        var kk;
+        for (const Fk of this.chips.values()) Fk.stop();
+        this.chips.clear(), null === (kk = this.sparkles) || void 0 === kk || kk.stop(), this.sparkles = null
       }
-      setPoint(uu, Ru, yu, Eu, Ku) {
-        const Qu = 4 * uu;
-        this.points[Qu] = Ru, this.points[Qu + 1] = yu, this.points[Qu + 2] = Eu, this.points[Qu + 3] = Ku
+      setPoint(kk, Fk, Bk, Rk, tk) {
+        const ak = 4 * kk;
+        this.points[ak] = Fk, this.points[ak + 1] = Bk, this.points[ak + 2] = Rk, this.points[ak + 3] = tk
       }
     }
-    var ey = yu(1915);
-    const Ay = "SpecialAction1",
-      Dy = "KeyY",
-      My = "KeyX";
+    var EB = Bk(1881);
+    const SB = "SpecialAction1",
+      NB = "KeyY",
+      HB = "KeyX";
 
-    function Iy(uu) {
+    function uB(kk) {
       let {
-        placement: Ru
-      } = uu;
-      const yu = (0, Mu.h)(py, Ru.getView()),
+        placement: Fk
+      } = kk;
+      const Bk = (0, Hk.g)(fB, Fk.getView()),
         {
-          t: Eu
-        } = (0, Gu.E)(),
+          t: Rk
+        } = (0, Mk.x)(),
         {
-          isTouchScreen: Ku
-        } = (0, Ju.j)(["isTouchScreen"]),
-        Qu = null !== yu,
-        mu = Qu && !yu.blocked && !yu.waiting;
-      if ((0, Du.c)((uu => Qu && !uu.repeat && !(0, Xu.isTypingInInput)() && !(0, Nu.p)() && !Ku), (uu => {
-          const yu = function(uu, Ru, yu) {
-            if (uu === My) return Ru.stop;
-            if (uu === Dy) return yu ? Ru.build : Uy;
-            return ey.x[Ay].includes(uu) ? Ru.rotate : null
-          }(uu.code, Ru, mu);
-          null !== yu && (uu.stopPropagation(), yu())
-        })), !Qu) return null;
-      let Vu = Ku ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return yu.blocked ? Vu = "plotsGame:placementOffPlot" : yu.toClear > 0 && (Vu = "plotsGame:placementClear"), (0, Pu.jsx)(mR.d, {
+          isTouchScreen: tk
+        } = (0, bk.h)(["isTouchScreen"]),
+        ak = null !== Bk,
+        Xk = ak && !Bk.blocked && !Bk.waiting;
+      if ((0, Nk.b)((kk => ak && !kk.repeat && !(0, dk.isTypingInInput)() && !(0, wk.s)() && !tk), (kk => {
+          const Bk = function(kk, Fk, Bk) {
+            if (kk === HB) return Fk.stop;
+            if (kk === NB) return Bk ? Fk.build : gB;
+            return EB.s[SB].includes(kk) ? Fk.rotate : null
+          }(kk.code, Fk, Xk);
+          null !== Bk && (kk.stopPropagation(), Bk())
+        })), !ak) return null;
+      let sk = tk ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return Bk.blocked ? sk = "plotsGame:placementOffPlot" : Bk.toClear > 0 && (sk = "plotsGame:placementClear"), (0, pk.jsx)(bF.g, {
         placement: "bottom",
-        children: (0, Pu.jsxs)("div", {
+        children: (0, pk.jsxs)("div", {
           className: "PlotsPlacementCard",
-          children: [(0, Pu.jsx)("div", {
+          children: [(0, pk.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: Eu(Su(yu.id).displayName.translationKey)
-          }), (0, Pu.jsx)("div", {
-            className: Cu()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: yu.refusals > 0
+            children: Rk(ek(Bk.id).displayName.translationKey)
+          }), (0, pk.jsx)("div", {
+            className: Lk()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: Bk.refusals > 0
             }),
-            children: Eu(Vu)
-          }, yu.refusals), (0, Pu.jsxs)("div", {
+            children: Rk(sk)
+          }, Bk.refusals), (0, pk.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, Pu.jsxs)(eu.e, {
-              onClick: Ru.rotate,
-              children: [(0, Pu.jsx)(Gy, {
-                noaAction: Ay
-              }), Eu("plotsGame:placementRotate")]
-            }), (0, Pu.jsxs)(eu.F, {
-              onClick: Ru.stop,
-              children: [(0, Pu.jsx)(Gy, {
-                keyCode: My
-              }), Eu("general:cancel")]
-            }), (0, Pu.jsxs)(eu.l, {
-              disabled: !mu,
-              onClick: Ru.build,
-              children: [(0, Pu.jsx)(Gy, {
-                keyCode: Dy
-              }), Eu("plotsGame:placementBuild")]
+            children: [(0, pk.jsxs)(Ek.g, {
+              onClick: Fk.rotate,
+              children: [(0, pk.jsx)(MB, {
+                noaAction: SB
+              }), Rk("plotsGame:placementRotate")]
+            }), (0, pk.jsxs)(Ek.J, {
+              onClick: Fk.stop,
+              children: [(0, pk.jsx)(MB, {
+                keyCode: HB
+              }), Rk("general:cancel")]
+            }), (0, pk.jsxs)(Ek.o, {
+              disabled: !Xk,
+              onClick: Fk.build,
+              children: [(0, pk.jsx)(MB, {
+                keyCode: NB
+              }), Rk("plotsGame:placementBuild")]
             })]
           })]
         })
       })
     }
 
-    function Gy(uu) {
-      return (0, Pu.jsx)(NR.b, {
+    function MB(kk) {
+      return (0, pk.jsx)(dF.c, {
         className: "PlotsPlacementKey",
-        ...uu
+        ...kk
       })
     }
 
-    function Uy() {}
-    var ny = yu(4314);
-    class sy {
-      constructor(uu) {
-        this.placement = uu, this.press = null
+    function gB() {}
+    var UB = Bk(4283);
+    class cB {
+      constructor(kk) {
+        this.placement = kk, this.press = null
       }
-      down(uu) {
+      down(kk) {
         if (null !== this.press) return !1;
         const {
-          id: Ru,
-          mouse: yu,
-          x: Eu,
-          y: Ku,
-          atMs: Qu
-        } = uu;
+          id: Fk,
+          mouse: Bk,
+          x: Rk,
+          y: tk,
+          atMs: ak
+        } = kk;
         return this.press = {
-          id: Ru,
-          mouse: yu,
-          x: Eu,
-          y: Ku,
-          atMs: Qu,
+          id: Fk,
+          mouse: Bk,
+          x: Rk,
+          y: tk,
+          atMs: ak,
           moved: !1
-        }, yu || this.placement.beginDrag(uu.ndcX, uu.ndcY), !0
+        }, Bk || this.placement.beginDrag(kk.ndcX, kk.ndcY), !0
       }
-      move(uu) {
-        const Ru = this.press;
-        null !== Ru && Ru.id === uu.id && (Ru.moved ||= Math.hypot(uu.x - Ru.x, uu.y - Ru.y) > 8), uu.mouse ? this.placement.hoverAt(uu.ndcX, uu.ndcY) : (null === Ru || void 0 === Ru ? void 0 : Ru.id) === uu.id && this.placement.dragTo(uu.ndcX, uu.ndcY)
+      move(kk) {
+        const Fk = this.press;
+        null !== Fk && Fk.id === kk.id && (Fk.moved ||= Math.hypot(kk.x - Fk.x, kk.y - Fk.y) > 8), kk.mouse ? this.placement.hoverAt(kk.ndcX, kk.ndcY) : (null === Fk || void 0 === Fk ? void 0 : Fk.id) === kk.id && this.placement.dragTo(kk.ndcX, kk.ndcY)
       }
-      up(uu) {
-        const Ru = this.press;
-        (null === Ru || void 0 === Ru ? void 0 : Ru.id) === uu.id && (this.move(uu), this.end(), !Ru.moved && (Ru.mouse || uu.atMs - Ru.atMs <= 250) && this.placement.tap())
+      up(kk) {
+        const Fk = this.press;
+        (null === Fk || void 0 === Fk ? void 0 : Fk.id) === kk.id && (this.move(kk), this.end(), !Fk.moved && (Fk.mouse || kk.atMs - Fk.atMs <= 250) && this.placement.tap())
       }
-      cancel(uu) {
-        var Ru;
-        (null === (Ru = this.press) || void 0 === Ru ? void 0 : Ru.id) === uu && this.end()
+      cancel(kk) {
+        var Fk;
+        (null === (Fk = this.press) || void 0 === Fk ? void 0 : Fk.id) === kk && this.end()
       }
-      leave(uu) {
+      leave(kk) {
         let {
-          id: Ru,
-          mouse: yu
-        } = uu;
-        yu && this.placement.endHover(), this.cancel(Ru)
+          id: Fk,
+          mouse: Bk
+        } = kk;
+        Bk && this.placement.endHover(), this.cancel(Fk)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
 
-    function ty(uu) {
+    function GB(kk) {
       let {
-        placement: Ru
-      } = uu;
-      return null === (0, Mu.h)(py, Ru.getView()) ? null : (0, Pu.jsx)(ly, {
-        placement: Ru
+        placement: Fk
+      } = kk;
+      return null === (0, Hk.g)(fB, Fk.getView()) ? null : (0, pk.jsx)(TB, {
+        placement: Fk
       })
     }
 
-    function ly(uu) {
+    function TB(kk) {
       let {
-        placement: Ru
-      } = uu;
-      (0, ny.c)(!0, !0, "PlotsPlacementLayer");
-      const yu = (0, Qu.useMemo)((() => new sy(Ru)), [Ru]);
-      return (0, Pu.jsx)("div", {
+        placement: Fk
+      } = kk;
+      (0, UB.d)(!0, !0, "PlotsPlacementLayer");
+      const Bk = (0, ak.useMemo)((() => new cB(Fk)), [Fk]);
+      return (0, pk.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: uu => {
-          "mouse" === uu.pointerType && 0 !== uu.button || !yu.down(gy(uu)) || uu.currentTarget.setPointerCapture(uu.pointerId)
+        onPointerDown: kk => {
+          "mouse" === kk.pointerType && 0 !== kk.button || !Bk.down(rB(kk)) || kk.currentTarget.setPointerCapture(kk.pointerId)
         },
-        onPointerMove: uu => {
-          yu.move(gy(uu))
+        onPointerMove: kk => {
+          Bk.move(rB(kk))
         },
-        onPointerUp: uu => {
-          yu.up(gy(uu))
+        onPointerUp: kk => {
+          Bk.up(rB(kk))
         },
-        onPointerCancel: uu => {
-          yu.cancel(uu.pointerId)
+        onPointerCancel: kk => {
+          Bk.cancel(kk.pointerId)
         },
-        onLostPointerCapture: uu => {
-          yu.cancel(uu.pointerId)
+        onLostPointerCapture: kk => {
+          Bk.cancel(kk.pointerId)
         },
-        onPointerLeave: uu => {
-          yu.leave(gy(uu))
+        onPointerLeave: kk => {
+          Bk.leave(rB(kk))
         },
         "aria-hidden": !0
       })
     }
 
-    function gy(uu) {
+    function rB(kk) {
       const {
-        left: Ru,
-        top: yu,
-        width: Eu,
-        height: Ku
-      } = uu.currentTarget.getBoundingClientRect();
+        left: Fk,
+        top: Bk,
+        width: Rk,
+        height: tk
+      } = kk.currentTarget.getBoundingClientRect();
       return {
-        id: uu.pointerId,
-        mouse: "mouse" === uu.pointerType,
-        x: uu.clientX,
-        y: uu.clientY,
-        ndcX: (uu.clientX - Ru) / Eu * 2 - 1,
-        ndcY: 1 - (uu.clientY - yu) / Ku * 2,
-        atMs: uu.timeStamp
+        id: kk.pointerId,
+        mouse: "mouse" === kk.pointerType,
+        x: kk.clientX,
+        y: kk.clientY,
+        ndcX: (kk.clientX - Fk) / Rk * 2 - 1,
+        ndcY: 1 - (kk.clientY - Bk) / tk * 2,
+        atMs: kk.timeStamp
       }
     }
-    var cy = yu(2278),
-      Ly = yu(36532),
-      zy = yu(1899),
-      Fy = yu(1232);
-    const wy = {
+    var DB = Bk(2274),
+      zB = Bk(36423),
+      PB = Bk(1876),
+      hB = Bk(1213);
+    const qB = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function Zy(uu) {
+    function CB(kk) {
       let {
-        hud: Ru
-      } = uu;
-      const yu = (0, Mu.h)(VR, Ru.getPlot()),
-        [Eu, Ku] = (0, Qu.useState)(null),
-        mu = (0, Ly.g)(Eu);
-      if ("none" === yu[0]) return null;
-      const [, Ju, Nu, Xu, Vu, ru] = yu;
-      return (0, Pu.jsx)("div", {
-        className: Cu()("PlotsPlotBannerContainer", {
-          Below: mu
+        hud: Fk
+      } = kk;
+      const Bk = (0, Hk.g)(VF, Fk.getPlot()),
+        [Rk, tk] = (0, ak.useState)(null),
+        Xk = (0, zB.q)(Rk);
+      if ("none" === Bk[0]) return null;
+      const [, bk, wk, dk, sk, Vk] = Bk;
+      return (0, pk.jsx)("div", {
+        className: Lk()("PlotsPlotBannerContainer", {
+          Below: Xk
         }),
-        children: (0, Pu.jsx)(hy, {
-          plotX: Ju,
-          plotZ: Nu,
-          ownerName: Xu,
-          ownerId: Vu,
-          relation: ru,
-          plaqueRef: Ku
-        }, `${Ju},${Nu}`)
+        children: (0, pk.jsx)(ZB, {
+          plotX: bk,
+          plotZ: wk,
+          ownerName: dk,
+          ownerId: sk,
+          relation: Vk,
+          plaqueRef: tk
+        }, `${bk},${wk}`)
       })
     }
 
-    function hy(uu) {
-      var Ru, yu;
+    function ZB(kk) {
+      var Fk, Bk;
       let {
-        plotX: Eu,
-        plotZ: Ku,
-        ownerName: Qu,
-        ownerId: mu,
-        relation: Ju,
-        plaqueRef: Nu
-      } = uu;
+        plotX: Rk,
+        plotZ: tk,
+        ownerName: ak,
+        ownerId: Xk,
+        relation: bk,
+        plaqueRef: wk
+      } = kk;
       const {
-        t: Xu
-      } = (0, Gu.E)(), Vu = (0, zy.i)("hiddenPlayerNames"), ru = (0, zy.i)("players"), Bu = null === mu ? null : null !== (Ru = null === (yu = ru.byId[mu]) || void 0 === yu ? void 0 : yu.cosmetics) && void 0 !== Ru ? Ru : null, xu = Xu("plotsGame:plotBannerCoords", {
-        x: Eu,
-        z: Ku
-      }), Su = "own" === Ju || null !== Qu;
-      return (0, Pu.jsxs)("div", {
-        ref: Nu,
-        className: Cu()("PlotsPlotBanner", {
-          Own: "own" === Ju,
-          Shared: "shared" === Ju
+        t: dk
+      } = (0, Mk.x)(), sk = (0, PB.h)("hiddenPlayerNames"), Vk = (0, PB.h)("players"), Jk = null === Xk ? null : null !== (Fk = null === (Bk = Vk.byId[Xk]) || void 0 === Bk ? void 0 : Bk.cosmetics) && void 0 !== Fk ? Fk : null, Ak = dk("plotsGame:plotBannerCoords", {
+        x: Rk,
+        z: tk
+      }), ek = "own" === bk || null !== ak;
+      return (0, pk.jsxs)("div", {
+        ref: wk,
+        className: Lk()("PlotsPlotBanner", {
+          Own: "own" === bk,
+          Shared: "shared" === bk
         }),
         role: "status",
-        children: [(0, Pu.jsxs)("span", {
-          className: Cu()("PlotsPlotBannerSeal", {
-            Face: null !== Bu
+        children: [(0, pk.jsxs)("span", {
+          className: Lk()("PlotsPlotBannerSeal", {
+            Face: null !== Jk
           }),
-          children: [null !== Bu && (0, Pu.jsx)(cy.b, {
-            cosmetics: Bu
-          }), null === Bu && (0, Pu.jsx)(ku.c, {
-            name: wy[Ju]
+          children: [null !== Jk && (0, pk.jsx)(DB.c, {
+            cosmetics: Jk
+          }), null === Jk && (0, pk.jsx)(Ok.d, {
+            name: qB[bk]
           })]
-        }), (0, Pu.jsxs)("div", {
+        }), (0, pk.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, Pu.jsxs)("div", {
+          children: [(0, pk.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === Ju && Xu("plotsGame:plotBannerYours"), "own" !== Ju && null !== Qu && Xu("plotsGame:plotBannerOwner", {
-              name: (0, Fy.e)(Qu, Vu)
-            }), !Su && xu]
-          }), Su && (0, Pu.jsxs)("div", {
+            children: ["own" === bk && dk("plotsGame:plotBannerYours"), "own" !== bk && null !== ak && dk("plotsGame:plotBannerOwner", {
+              name: (0, hB.i)(ak, sk)
+            }), !ek && Ak]
+          }), ek && (0, pk.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [xu, "shared" === Ju && (0, Pu.jsx)("span", {
+            children: [Ak, "shared" === bk && (0, pk.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: Xu("plotsGame:plotBannerShared")
+              children: dk("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
 
-    function Py(uu) {
+    function pB(kk) {
       let {
-        progress: Ru,
-        goal: yu
-      } = uu;
-      const Eu = Math.min(Ru, yu);
-      return (0, Pu.jsxs)("div", {
+        progress: Fk,
+        goal: Bk
+      } = kk;
+      const Rk = Math.min(Fk, Bk);
+      return (0, pk.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, Pu.jsx)("div", {
+        children: [(0, pk.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": yu,
-          "aria-valuenow": Eu,
-          children: (0, Pu.jsx)("div", {
+          "aria-valuemax": Bk,
+          "aria-valuenow": Rk,
+          children: (0, pk.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${Eu/yu})`
+              transform: `scaleX(${Rk/Bk})`
             }
           })
-        }), (0, Pu.jsxs)("span", {
+        }), (0, pk.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [Eu, "/", yu]
+          children: [Rk, "/", Bk]
         })]
       })
     }
 
-    function iy(uu) {
+    function KB(kk) {
       return {
-        translationKey: `plotsGame:${uu}`,
+        translationKey: `plotsGame:${kk}`,
         actions: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []
       }
     }
-    const Yy = {
+    const xB = {
       house: {
         icon: "house",
         titleKey: "plotsGame:starterLotHouseTitle",
-        desktop: iy("starterLotHouseHint", ["alt-fire"]),
-        touch: iy("starterLotHouseHint", ["alt-fire"]),
+        desktop: KB("starterLotHouseHint", ["alt-fire"]),
+        touch: KB("starterLotHouseHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotHousePlain"
       },
       garden: {
         icon: "sparkle",
         titleKey: "plotsGame:starterLotGarden",
-        desktop: iy("starterLotGardenHint", ["alt-fire"]),
-        touch: iy("starterLotGardenHint", ["alt-fire"]),
+        desktop: KB("starterLotGardenHint", ["alt-fire"]),
+        touch: KB("starterLotGardenHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotGardenPlain"
       },
       boulder: {
         icon: "hammer",
         titleKey: "plotsGame:starterLotBoulder",
-        desktop: iy("starterLotBreakHint", ["primary-fire"]),
-        touch: iy("starterLotBreakHintTouch"),
+        desktop: KB("starterLotBreakHint", ["primary-fire"]),
+        touch: KB("starterLotBreakHintTouch"),
         plainKey: "plotsGame:starterLotBreakPlain"
       },
       fly: {
         icon: "angles-up",
         titleKey: "plotsGame:starterLotFly",
-        desktop: iy("starterLotFlyHint", ["jump"]),
-        touch: iy("starterLotFlyHintTouch"),
+        desktop: KB("starterLotFlyHint", ["jump"]),
+        touch: KB("starterLotFlyHintTouch"),
         plainKey: "plotsGame:starterLotFlyPlain"
       },
       backpack: {
         icon: "backpack",
         titleKey: "plotsGame:starterLotBackpack",
-        desktop: iy("starterLotBackpackHint", ["OpenInventory"]),
-        touch: iy("starterLotBackpackHintTouch"),
+        desktop: KB("starterLotBackpackHint", ["OpenInventory"]),
+        touch: KB("starterLotBackpackHintTouch"),
         plainKey: "plotsGame:starterLotBackpackPlain"
       },
       neighbour: {
         icon: "person",
         titleKey: "plotsGame:starterLotNeighbour",
-        desktop: iy("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
-        touch: iy("starterLotNeighbourHintTouch"),
+        desktop: KB("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
+        touch: KB("starterLotNeighbourHintTouch"),
         plainKey: "plotsGame:starterLotNeighbourPlain"
       }
     };
 
-    function oy(uu, Ru, yu) {
+    function jB(kk, Fk, Bk) {
       const {
-        translationKey: Eu,
-        actions: Ku
-      } = yu ? Ru.touch : Ru.desktop;
-      if (0 === Ku.length) return uu(Eu);
-      const Qu = [];
-      for (const mu of Ku) {
-        const Eu = (0, ey.v)(mu, yu),
-          Ku = ey.x[mu][0];
-        if (null === Eu && void 0 === Ku) return uu(Ru.plainKey);
-        Qu.push(null === Eu ? (0, ey.o)(Ku) : uu(Eu.translationKey))
+        translationKey: Rk,
+        actions: tk
+      } = Bk ? Fk.touch : Fk.desktop;
+      if (0 === tk.length) return kk(Rk);
+      const ak = [];
+      for (const Xk of tk) {
+        const Rk = (0, EB.r)(Xk, Bk),
+          tk = EB.s[Xk][0];
+        if (null === Rk && void 0 === tk) return kk(Fk.plainKey);
+        ak.push(null === Rk ? (0, EB.n)(tk) : kk(Rk.translationKey))
       }
-      return uu(Eu, {
-        key: Qu.join("")
+      return kk(Rk, {
+        key: ak.join("")
       })
     }
 
-    function qy(uu) {
+    function lB(kk) {
       let {
-        hud: Ru
-      } = uu;
-      const yu = (0, Mu.h)(XR, Ru.getStep()),
+        hud: Fk
+      } = kk;
+      const Bk = (0, Hk.g)(sF, Fk.getStep()),
         {
-          t: Eu
-        } = (0, Gu.E)();
-      return (0, Pu.jsxs)(mR.d, {
+          t: Rk
+        } = (0, Mk.x)();
+      return (0, pk.jsxs)(bF.g, {
         placement: "bottom",
-        children: ["step" === yu[0] && (0, Pu.jsx)(Oy, {
-          step: yu[1],
-          progress: yu[2],
-          goal: yu[3]
-        }, yu[1]), "celebrate" === yu[0] && (0, Pu.jsx)(vy, {
-          className: Cu()("Celebrate", {
-            Gold: "house" === yu[1]
+        children: ["step" === Bk[0] && (0, pk.jsx)(nB, {
+          step: Bk[1],
+          progress: Bk[2],
+          goal: Bk[3]
+        }, Bk[1]), "celebrate" === Bk[0] && (0, pk.jsx)(IB, {
+          className: Lk()("Celebrate", {
+            Gold: "house" === Bk[1]
           }),
           icon: "star",
-          title: Eu("house" === yu[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
-        }, `celebrate-${yu[1]}`)]
+          title: Rk("house" === Bk[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
+        }, `celebrate-${Bk[1]}`)]
       })
     }
 
-    function Oy(uu) {
+    function nB(kk) {
       let {
-        step: Ru,
-        progress: yu,
-        goal: Eu
-      } = uu;
+        step: Fk,
+        progress: Bk,
+        goal: Rk
+      } = kk;
       const {
-        isTouchScreen: Ku
-      } = (0, Ju.j)(["isTouchScreen"]), {
-        t: Qu
-      } = (0, Gu.E)(), mu = Yy[Ru];
-      return (0, Pu.jsxs)(vy, {
-        icon: mu.icon,
-        title: Qu(mu.titleKey),
-        children: [(0, Pu.jsx)("div", {
+        isTouchScreen: tk
+      } = (0, bk.h)(["isTouchScreen"]), {
+        t: ak
+      } = (0, Mk.x)(), Xk = xB[Fk];
+      return (0, pk.jsxs)(IB, {
+        icon: Xk.icon,
+        title: ak(Xk.titleKey),
+        children: [(0, pk.jsx)("div", {
           className: "PlotsStepCardHint SmallTextLight",
-          children: oy(Qu, mu, Ku)
-        }), Eu > 1 && (0, Pu.jsx)(Py, {
-          progress: yu,
-          goal: Eu
-        }), "backpack" === Ru && Ku && (0, Pu.jsx)(ay, {})]
+          children: jB(ak, Xk, tk)
+        }), Rk > 1 && (0, pk.jsx)(pB, {
+          progress: Bk,
+          goal: Rk
+        }), "backpack" === Fk && tk && (0, pk.jsx)(QB, {})]
       })
     }
 
-    function vy(uu) {
+    function IB(kk) {
       let {
-        className: Ru,
-        icon: yu,
-        title: Eu,
-        children: Ku
-      } = uu;
-      return (0, Pu.jsxs)("div", {
-        className: Cu()("PlotsStepCard", Ru),
+        className: Fk,
+        icon: Bk,
+        title: Rk,
+        children: tk
+      } = kk;
+      return (0, pk.jsxs)("div", {
+        className: Lk()("PlotsStepCard", Fk),
         role: "status",
-        children: [(0, Pu.jsx)("span", {
+        children: [(0, pk.jsx)("span", {
           className: "PlotsStepCardIcon",
-          children: (0, Pu.jsx)(ku.c, {
-            name: yu
+          children: (0, pk.jsx)(Ok.d, {
+            name: Bk
           })
-        }), (0, Pu.jsxs)("div", {
+        }), (0, pk.jsxs)("div", {
           className: "PlotsStepCardBody",
-          children: [(0, Pu.jsx)("div", {
+          children: [(0, pk.jsx)("div", {
             className: "PlotsStepCardTitle SmallTextBold",
-            children: Eu
-          }), Ku]
+            children: Rk
+          }), tk]
         })]
       })
     }
 
-    function ay() {
-      return (0, Qu.useEffect)((() => (Ju.d.set({
+    function QB() {
+      return (0, ak.useEffect)((() => (bk.c.set({
         backpackPointerRequested: !0
       }), () => {
-        Ju.d.set({
+        bk.c.set({
           backpackPointerRequested: !1
         })
       })), []), null
     }
-    const fy = function(uu, Ru, yu, Eu) {
+    const kR = function(kk, Fk, Bk, Rk) {
       let {
-        localPlayerId: Ku
-      } = Eu;
-      const Ju = new rR;
-      let Nu = null,
-        Xu = null,
-        Vu = null,
-        ru = null,
-        Bu = null;
-      const xu = [];
+        localPlayerId: tk
+      } = Rk;
+      const bk = new JF;
+      let wk = null,
+        dk = null,
+        sk = null,
+        Vk = null,
+        Jk = null;
+      const Ak = [];
       return {
-        onCreate: uu => {
-          Nu = new ky(uu, Ku), Xu = new Ny(uu, Ku, Nu), Vu = new Ny(uu, Ku, Nu), ru = new Wy(uu, Ku), Bu = new du(uu, ru), xu.push((0, mu.w)((0, Qu.createElement)(Qu.Fragment, null, (0, Qu.createElement)(Zy, {
-            hud: Ju
-          }), (0, Qu.createElement)(qy, {
-            hud: Ju
-          }), (0, Qu.createElement)(xR, {
-            hud: Ju,
-            journal: Bu
-          }), (0, Qu.createElement)(ty, {
-            placement: ru
-          }), (0, Qu.createElement)(Iy, {
-            placement: ru
+        onCreate: kk => {
+          wk = new OB(kk, tk), dk = new dB(kk, tk, wk), sk = new dB(kk, tk, wk), Vk = new WB(kk, tk), Jk = new ik(kk, Vk), Ak.push((0, Xk.w)((0, ak.createElement)(ak.Fragment, null, (0, ak.createElement)(CB, {
+            hud: bk
+          }), (0, ak.createElement)(lB, {
+            hud: bk
+          }), (0, ak.createElement)(eF, {
+            hud: bk,
+            journal: Jk
+          }), (0, ak.createElement)(GB, {
+            placement: Vk
+          }), (0, ak.createElement)(uB, {
+            placement: Vk
           })), {
-            content: (0, Qu.createElement)(KR, {
-              journal: Bu
+            content: (0, ak.createElement)(aF, {
+              journal: Jk
             })
           }))
         },
-        sr: () => {
-          Xu.sr(), Vu.sr(), ru.sr(), Bu.sr()
+        yJ: () => {
+          dk.yJ(), sk.yJ(), Vk.yJ(), Jk.yJ()
         },
-        onPlayerAttemptAltAction: (uu, Ru, yu, Eu, Ku, Qu) => {
-          var mu;
-          if (null !== Qu) return;
-          const Ju = void 0 === Ru ? null : [Ru, yu, Eu];
-          return null !== (mu = Xu.attemptAltAction(Ju)) && void 0 !== mu ? mu : Vu.attemptAltAction(Ju)
+        onPlayerAttemptAltAction: (kk, Fk, Bk, Rk, tk, ak) => {
+          var Xk;
+          if (null !== ak) return;
+          const bk = void 0 === Fk ? null : [Fk, Bk, Rk];
+          return null !== (Xk = dk.attemptAltAction(bk)) && void 0 !== Xk ? Xk : sk.attemptAltAction(bk)
         },
         onPlayerClickUp: () => {
-          Xu.endPress(), Vu.endPress()
+          dk.endPress(), sk.endPress()
         },
-        onAfterRender: (uu, Ru) => {
-          ru.afterRender(Ru), Xu.afterRender(Ru), Vu.afterRender(Ru)
+        onAfterRender: (kk, Fk) => {
+          Vk.afterRender(Fk), dk.afterRender(Fk), sk.afterRender(Fk)
         },
         onClose: () => {
-          for (const uu of xu) uu();
-          Nu.dispose(), Xu.dispose(), Vu.dispose(), ru.dispose(), Nu = null, Xu = null, Vu = null, ru = null, Bu = null
+          for (const kk of Ak) kk();
+          wk.dispose(), dk.dispose(), sk.dispose(), Vk.dispose(), wk = null, dk = null, sk = null, Vk = null, Jk = null
         },
-        onReceivedMessageFromServer: (uu, Ru) => {
-          if ("plotsStarterLot" === uu) Ju.receiveStep(Ru);
-          else if ("plotsPlot" === uu) Ju.receivePlot(Ru);
-          else if ("plotsStarterHouse" === uu) Xu.SS(Ru);
-          else if ("plotsBlueprint" === uu) {
-            const uu = Ru;
-            Vu.SS(uu), ru.SS(uu)
-          } else "plotsJournal" === uu ? Bu.SS(Ru) : "plotsJournalOpen" === uu ? Bu.openFromServer() : "plotsPreviewEnd" === uu && ru.endFromServer()
+        onReceivedMessageFromServer: (kk, Fk) => {
+          if ("plotsStarterLot" === kk) bk.receiveStep(Fk);
+          else if ("plotsPlot" === kk) bk.receivePlot(Fk);
+          else if ("plotsStarterHouse" === kk) dk.he(Fk);
+          else if ("plotsBlueprint" === kk) {
+            const kk = Fk;
+            sk.he(kk), Vk.he(kk)
+          } else "plotsJournal" === kk ? Jk.he(Fk) : "plotsJournalOpen" === kk ? Jk.openFromServer() : "plotsPreviewEnd" === kk && Vk.endFromServer()
         }
       }
     }
   },
-  38891: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Eu,
-      h: () => Qu
+  38766: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Rk,
+      e: () => ak
     });
-    const Eu = 1 / .6,
-      Ku = {
+    const Rk = 1 / .6,
+      tk = {
         kind: "smokePuff"
       };
-    class Qu {
-      constructor(uu, Ru, yu) {
-        this.style = uu, this.Nr = Ru, this.half = yu, this.particles = null, this.lastFrame = -1
+    class ak {
+      constructor(kk, Fk, Bk) {
+        this.style = kk, this.KV = Fk, this.half = Bk, this.particles = null, this.lastFrame = -1
       }
-      emit(uu, Ru, yu) {
-        let Qu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return yu !== this.lastFrame && (this.lastFrame = yu, this.particles || (this.particles = uu.createParticles(function(uu, Ru) {
+      emit(kk, Fk, Bk) {
+        let ak = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return Bk !== this.lastFrame && (this.lastFrame = Bk, this.particles || (this.particles = kk.createParticles(function(kk, Fk) {
           const [
-            [yu, Qu, mu],
-            [Ju, Nu, Xu]
-          ] = uu.colours;
+            [Bk, ak, Xk],
+            [bk, wk, dk]
+          ] = kk.colours;
           return {
-            texture: uu.soft ? Ku : "square_particle",
-            Nr: Ru,
-            minLifeTime: uu.life[0] / Eu,
-            maxLifeTime: uu.life[1] / Eu,
-            minEmitPower: uu.power[0] * Eu,
-            maxEmitPower: uu.power[1] * Eu,
-            minSize: uu.size[0],
-            maxSize: uu.size[1],
+            texture: kk.soft ? tk : "square_particle",
+            KV: Fk,
+            minLifeTime: kk.life[0] / Rk,
+            maxLifeTime: kk.life[1] / Rk,
+            minEmitPower: kk.power[0] * Rk,
+            maxEmitPower: kk.power[1] * Rk,
+            minSize: kk.size[0],
+            maxSize: kk.size[1],
             emitRate: 0,
-            gravity: [0, uu.lift * Eu * Eu, 0],
-            dir1: [-uu.spread, 1, -uu.spread],
-            dir2: [uu.spread, 1, uu.spread],
+            gravity: [0, kk.lift * Rk * Rk, 0],
+            dir1: [-kk.spread, 1, -kk.spread],
+            dir2: [kk.spread, 1, kk.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [yu, Qu, mu, uu.alpha],
-              maxColor: [Ju, Nu, Xu, uu.alpha]
+              minColor: [Bk, ak, Xk, kk.alpha],
+              maxColor: [bk, wk, dk, kk.alpha]
             }, {
               timeFraction: 1,
-              minColor: [yu, Qu, mu, 0],
-              maxColor: [Ju, Nu, Xu, 0]
+              minColor: [Bk, ak, Xk, 0],
+              maxColor: [bk, wk, dk, 0]
             }],
-            blendMode: uu.blendMode
+            blendMode: kk.blendMode
           }
-        }(this.style, this.Nr), {
-          pos: Ru,
+        }(this.style, this.KV), {
+          pos: Fk,
           half: this.half
-        })), this.particles.moveTo(Ru, this.half), this.particles.emit(Qu), !0)
+        })), this.particles.moveTo(Fk, this.half), this.particles.emit(ak), !0)
       }
       dispose() {
-        var uu;
-        null === (uu = this.particles) || void 0 === uu || uu.stop(), this.particles = null
+        var kk;
+        null === (kk = this.particles) || void 0 === kk || kk.stop(), this.particles = null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

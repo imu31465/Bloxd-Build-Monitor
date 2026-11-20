@@ -1,38 +1,38 @@
 export const id = 56;
 export const ids = [56];
 export const modules = {
-  38401: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ku,
-      f: () => Qu
+  38277: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => tk,
+      e: () => ak
     });
-    const Eu = new WeakMap;
+    const Rk = new WeakMap;
 
-    function Ku(uu, Ru) {
-      return Eu.set(uu, Ru), uu
+    function tk(kk, Fk) {
+      return Rk.set(kk, Fk), kk
     }
 
-    function Qu(uu) {
-      var Ru;
-      return null !== (Ru = Eu.get(uu)) && void 0 !== Ru ? Ru : null
+    function ak(kk) {
+      var Fk;
+      return null !== (Fk = Rk.get(kk)) && void 0 !== Fk ? Fk : null
     }
   },
-  38427: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ju
+  38303: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => bk
     });
-    var Eu = yu(1199);
+    var Rk = Bk(1173);
 
-    function Ku(uu) {
-      const Ru = /(\d*\.?\d+)px/.exec(uu);
-      return Ru ? Number(Ru[1]) : null
+    function tk(kk) {
+      const Fk = /(\d*\.?\d+)px/.exec(kk);
+      return Fk ? Number(Fk[1]) : null
     }
 
-    function Qu(uu) {
-      return uu.split(/[\s,]+/).pop()
+    function ak(kk) {
+      return kk.split(/[\s,]+/).pop()
     }
-    let mu = !1;
-    const Ju = {
+    let Xk = !1;
+    const bk = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -43,569 +43,570 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(uu, Ru, Eu, Ju, Nu, Xu) {
-        if (Nu <= 0 || Xu <= 0 || this.fontSize <= 0) return {
+      drawText: function(kk, Fk, Rk, bk, wk, dk) {
+        if (wk <= 0 || dk <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: Vu,
-          fontVariant: ru,
-          fontWeight: Bu,
-          fontSize: xu,
-          font: Su
-        } = this, pu = [Vu, ru, Bu, `${xu}px`, Su].filter(Boolean).join(" "), Tu = [
-          [Bu, `${xu}px`, Qu(Su)].filter(Boolean).join(" "), `${xu}px sans-serif`
-        ], Wu = uu.font, ju = function(uu, Ru, yu) {
-          for (const Eu of Ru) {
-            uu.font = Eu;
-            const Ru = Ku(uu.font),
-              mu = Qu(Eu);
-            if (null !== Ru && Math.abs(Ru - yu) <= .5 && uu.font.toLowerCase().includes(mu.toLowerCase())) return Eu
+          fontStyle: sk,
+          fontVariant: Vk,
+          fontWeight: Jk,
+          fontSize: Ak,
+          font: ek
+        } = this, yk = [sk, Vk, Jk, `${Ak}px`, ek].filter(Boolean).join(" "), fk = [
+          [Jk, `${Ak}px`, ak(ek)].filter(Boolean).join(" "), `${Ak}px sans-serif`
+        ], mk = kk.font, Wk = function(kk, Fk, Bk) {
+          for (const Rk of Fk) {
+            kk.font = Rk;
+            const Fk = tk(kk.font),
+              Xk = ak(Rk);
+            if (null !== Fk && Math.abs(Fk - Bk) <= .5 && kk.font.toLowerCase().includes(Xk.toLowerCase())) return Rk
           }
           return null
-        }(uu, [pu, ...Tu], xu);
-        ju !== pu && function(uu, Ru, Eu) {
-          mu || (mu = !0, Promise.resolve().then((() => yu(1056))).then((yu => {
+        }(kk, [yk, ...fk], Ak);
+        Wk !== yk && function(kk, Fk, Rk) {
+          Xk || (Xk = !0, Promise.resolve().then((() => Bk(1047))).then((Bk => {
             let {
-              jp: Ku
-            } = yu;
-            Ku(new Error("A canvas didn't take canvasTxt's font"), {
-              font: uu,
-              kx: Ru,
-              drawnWith: null !== Eu && void 0 !== Eu ? Eu : "the kept font, scaled"
+              ly: tk
+            } = Bk;
+            tk(new Error("A canvas didn't take canvasTxt's font"), {
+              font: kk,
+              lA: Fk,
+              drawnWith: null !== Rk && void 0 !== Rk ? Rk : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(pu, Wu, ju);
-        const Hu = Ku(uu.font);
-        if (null === ju && null !== Hu && Hu > 0) {
-          const yu = xu / Hu;
-          uu.save();
+        }(yk, mk, Wk);
+        const vk = tk(kk.font);
+        if (null === Wk && null !== vk && vk > 0) {
+          const Bk = Ak / vk;
+          kk.save();
           try {
-            return uu.scale(yu, yu), {
-              height: this.drawLines(uu, Ru, Eu / yu, Ju / yu, Nu / yu, Xu / yu, Hu).height * yu
+            return kk.scale(Bk, Bk), {
+              height: this.drawLines(kk, Fk, Rk / Bk, bk / Bk, wk / Bk, dk / Bk, vk).height * Bk
             }
           } finally {
-            uu.restore()
+            kk.restore()
           }
         }
-        return this.drawLines(uu, Ru, Eu, Ju, Nu, Xu, xu)
+        return this.drawLines(kk, Fk, Rk, bk, wk, dk, Ak)
       },
-      drawLines: function(uu, Ru, yu, Ku, Qu, mu, Ju) {
-        const Nu = yu + Qu,
-          Xu = Ku + mu;
-        let Vu, ru = Ku + mu / 2 + Ju / 2;
-        "right" === this.align ? (Vu = Nu, uu.textAlign = "right") : "left" === this.align ? (Vu = yu, uu.textAlign = "left") : (Vu = yu + Qu / 2, uu.textAlign = "center");
-        for (const Eu of Ru) {
-          uu.measureText(Eu).width >= Qu && (Ru = Ru.replace(Eu, ""))
+      drawLines: function(kk, Fk, Bk, tk, ak, Xk, bk) {
+        const wk = Bk + ak,
+          dk = tk + Xk;
+        let sk, Vk = tk + Xk / 2 + bk / 2;
+        "right" === this.align ? (sk = wk, kk.textAlign = "right") : "left" === this.align ? (sk = Bk, kk.textAlign = "left") : (sk = Bk + ak / 2, kk.textAlign = "center");
+        for (const Rk of Fk) {
+          kk.measureText(Rk).width >= ak && (Fk = Fk.replace(Rk, ""))
         }
-        Ru = (0, Eu.R)(Ru);
-        const Bu = [],
-          xu = Ru.split("\n"),
-          Su = this.justify ? uu.measureText("\u200a").width : 0;
-        xu.forEach((Ru => {
-          let yu = uu.measureText(Ru).width;
-          if (yu <= Qu) Bu.push(Ru);
+        Fk = (0, Rk.V)(Fk);
+        const Jk = [],
+          Ak = Fk.split("\n"),
+          ek = this.justify ? kk.measureText("\u200a").width : 0;
+        Ak.forEach((Fk => {
+          let Bk = kk.measureText(Fk).width;
+          if (Bk <= ak) Jk.push(Fk);
           else {
-            let Eu = Ru;
-            const Ku = Qu;
-            let mu, Ju, Nu;
-            for (yu = uu.measureText(Eu).width; yu > Ku;) {
-              for (mu = 0, Ju = 0, Nu = ""; Ju < Ku;) mu++, Nu = Eu.substr(0, mu), Ju = uu.measureText(Nu).width;
-              mu--, Nu = Nu.substr(0, mu);
-              const Ru = mu;
-              if (" " !== Eu.substr(mu, 1)) {
+            let Rk = Fk;
+            const tk = ak;
+            let Xk, bk, wk;
+            for (Bk = kk.measureText(Rk).width; Bk > tk;) {
+              for (Xk = 0, bk = 0, wk = ""; bk < tk;) Xk++, wk = Rk.substr(0, Xk), bk = kk.measureText(wk).width;
+              Xk--, wk = wk.substr(0, Xk);
+              const Fk = Xk;
+              if (" " !== Rk.substr(Xk, 1)) {
                 for (;
-                  " " !== Eu.substr(mu, 1) && 0 !== mu;) mu--;
-                0 === mu && (mu = Ru), Nu = Eu.substr(0, mu)
+                  " " !== Rk.substr(Xk, 1) && 0 !== Xk;) Xk--;
+                0 === Xk && (Xk = Fk), wk = Rk.substr(0, Xk)
               }
-              Nu = this.justify ? this.justifyLine(uu, Nu, Su, "\u200a", Qu) : Nu, Eu = Eu.substr(mu), yu = uu.measureText(Eu).width, Bu.push(Nu)
+              wk = this.justify ? this.justifyLine(kk, wk, ek, "\u200a", ak) : wk, Rk = Rk.substr(Xk), Bk = kk.measureText(Rk).width, Jk.push(wk)
             }
-            yu > 0 && Bu.push(Eu)
+            Bk > 0 && Jk.push(Rk)
           }
         }));
-        const pu = this.lineHeight ? this.lineHeight : this.getTextHeight(uu, Ru),
-          Tu = pu * (Bu.length - 1),
-          Wu = Tu / 2;
-        let ju = Ku;
-        "top" === this.vAlign ? ru = Ku + Ju : "bottom" === this.vAlign ? (ru = Xu - Tu, ju = Xu) : (ju = Ku + mu / 2, ru -= Wu), Bu.forEach((Ru => {
-          Ru = Ru.trim(), uu.fillText(Ru, Vu, ru), ru += pu
-        })), this.debug && (uu.lineWidth = 3, uu.strokeStyle = "#00909e", uu.strokeRect(yu, Ku, Qu, mu), uu.lineWidth = 2, uu.strokeStyle = "#f6d743", uu.beginPath(), uu.moveTo(Vu, Ku), uu.lineTo(Vu, Xu), uu.stroke(), uu.strokeStyle = "#ff6363", uu.beginPath(), uu.moveTo(yu, ju), uu.lineTo(Nu, ju), uu.stroke());
+        const yk = this.lineHeight ? this.lineHeight : this.getTextHeight(kk, Fk),
+          fk = yk * (Jk.length - 1),
+          mk = fk / 2;
+        let Wk = tk;
+        "top" === this.vAlign ? Vk = tk + bk : "bottom" === this.vAlign ? (Vk = dk - fk, Wk = dk) : (Wk = tk + Xk / 2, Vk -= mk), Jk.forEach((Fk => {
+          Fk = Fk.trim(), kk.fillText(Fk, sk, Vk), Vk += yk
+        })), this.debug && (kk.lineWidth = 3, kk.strokeStyle = "#00909e", kk.strokeRect(Bk, tk, ak, Xk), kk.lineWidth = 2, kk.strokeStyle = "#f6d743", kk.beginPath(), kk.moveTo(sk, tk), kk.lineTo(sk, dk), kk.stroke(), kk.strokeStyle = "#ff6363", kk.beginPath(), kk.moveTo(Bk, Wk), kk.lineTo(wk, Wk), kk.stroke());
         return {
-          height: Tu + pu
+          height: fk + yk
         }
       },
-      getTextHeight: function(uu, Ru) {
-        const yu = uu.textBaseline;
-        uu.textBaseline = "bottom";
+      getTextHeight: function(kk, Fk) {
+        const Bk = kk.textBaseline;
+        kk.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: Eu
-        } = uu.measureText(Ru);
-        return uu.textBaseline = yu, Eu
+          actualBoundingBoxAscent: Rk
+        } = kk.measureText(Fk);
+        return kk.textBaseline = Bk, Rk
       },
-      justifyLine: function(uu, Ru, yu, Eu, Ku) {
-        const Qu = Ru.trim(),
-          mu = uu.measureText(Qu).width,
-          Ju = Qu.split(/\s+/).length - 1,
-          Nu = Math.floor((Ku - mu) / yu);
-        if (Ju <= 0 || Nu <= 0) return Qu;
-        const Xu = Math.floor(Nu / Ju);
-        let Vu = Nu - Ju * Xu,
-          ru = [];
-        for (let Bu = 0; Bu < Xu; Bu++) ru.push(Eu);
-        ru = ru.join("");
-        return Qu.replace(/\s+/g, (uu => {
-          const Ru = Vu > 0 ? ru + Eu : ru;
-          return Vu--, uu + Ru
+      justifyLine: function(kk, Fk, Bk, Rk, tk) {
+        const ak = Fk.trim(),
+          Xk = kk.measureText(ak).width,
+          bk = ak.split(/\s+/).length - 1,
+          wk = Math.floor((tk - Xk) / Bk);
+        if (bk <= 0 || wk <= 0) return ak;
+        const dk = Math.floor(wk / bk);
+        let sk = wk - bk * dk,
+          Vk = [];
+        for (let Jk = 0; Jk < dk; Jk++) Vk.push(Rk);
+        Vk = Vk.join("");
+        return ak.replace(/\s+/g, (kk => {
+          const Fk = sk > 0 ? Vk + Rk : Vk;
+          return sk--, kk + Fk
         }))
       }
     }
   },
-  38432: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => pu,
-      f: () => Su,
-      g: () => Bu,
-      h: () => Vu,
-      l: () => ru
+  38310: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => yk,
+      e: () => ek,
+      f: () => Jk,
+      g: () => sk,
+      j: () => Vk
     });
-    var Eu = yu(4053),
-      Ku = yu(343);
-    const Qu = 1024,
-      mu = 1536,
-      Ju = 2 * Eu.o + 1,
-      Nu = new Intl.NumberFormat("en", {
+    var Rk = Bk(4002),
+      tk = Bk(291);
+    const ak = 1024,
+      Xk = 1536,
+      bk = 2 * Rk.k + 1,
+      wk = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      Xu = 1.5;
+      dk = 1.5;
 
-    function Vu(uu, Ru, yu) {
-      if ("string" !== typeof uu) return Ru;
+    function sk(kk, Fk, Bk) {
+      if ("string" !== typeof kk) return Fk;
       try {
-        const yu = JSON.parse(uu);
-        return yu && "object" === typeof yu ? yu : Ru
-      } catch (Eu) {
-        return void 0 !== yu && console.error(`Couldn't parse ${yu}`, Eu), Ru
+        const Bk = JSON.parse(kk);
+        return Bk && "object" === typeof Bk ? Bk : Fk
+      } catch (Rk) {
+        return void 0 !== Bk && console.error(`Couldn't parse ${Bk}`, Rk), Fk
       }
     }
 
-    function ru(uu) {
-      return Vu(uu, null, "a leaderboard's rows")
+    function Vk(kk) {
+      return sk(kk, null, "a leaderboard's rows")
     }
 
-    function Bu(uu, Ru) {
-      var yu, Eu;
-      return null !== Ru && void 0 !== Ru ? Ru : {
-        status: null !== (yu = uu.status) && void 0 !== yu ? yu : "loading",
-        entries: null !== (Eu = uu.entries) && void 0 !== Eu ? Eu : []
+    function Jk(kk, Fk) {
+      var Bk, Rk;
+      return null !== Fk && void 0 !== Fk ? Fk : {
+        status: null !== (Bk = kk.status) && void 0 !== Bk ? Bk : "loading",
+        entries: null !== (Rk = kk.entries) && void 0 !== Rk ? Rk : []
       }
     }
 
-    function xu(uu, Ru) {
-      return "number" === typeof uu && Number.isFinite(uu) && uu > 0 ? uu : Ru
+    function Ak(kk, Fk) {
+      return "number" === typeof kk && Number.isFinite(kk) && kk > 0 ? kk : Fk
     }
 
-    function Su(uu, Ru) {
-      const yu = xu(uu.size, 1);
-      let Eu = xu(uu.width, xu(2.5 * yu, 2.5)),
-        Ku = xu(uu.height, xu(3.75 * yu, 3.75));
-      Number.isFinite(Qu * Ku / Eu) && Number.isFinite(mu * Eu / Ku) || (Eu = 2.5, Ku = 3.75);
-      const Ju = Ku / Eu,
-        Nu = Math.max(1, Math.min(Qu, Ru / Ju));
+    function ek(kk, Fk) {
+      const Bk = Ak(kk.size, 1);
+      let Rk = Ak(kk.width, Ak(2.5 * Bk, 2.5)),
+        tk = Ak(kk.height, Ak(3.75 * Bk, 3.75));
+      Number.isFinite(ak * tk / Rk) && Number.isFinite(Xk * Rk / tk) || (Rk = 2.5, tk = 3.75);
+      const bk = tk / Rk,
+        wk = Math.max(1, Math.min(ak, Fk / bk));
       return {
-        width: Eu,
-        height: Ku,
-        layoutWidth: Math.max(Qu, mu / Ju),
-        layoutHeight: Math.max(mu, Qu * Ju),
-        pixelWidth: Math.round(Nu),
-        pixelHeight: Math.round(Math.max(1, Math.min(Ru, Nu * Ju)))
+        width: Rk,
+        height: tk,
+        layoutWidth: Math.max(ak, Xk / bk),
+        layoutHeight: Math.max(Xk, ak * bk),
+        pixelWidth: Math.round(wk),
+        pixelHeight: Math.round(Math.max(1, Math.min(Fk, wk * bk)))
       }
     }
 
-    function pu(uu, Ru, yu, mu, Vu, ru) {
-      uu.setTransform(1, 0, 0, 1, 0, 0), uu.fillStyle = Ku.L.defaultNameTagBackground, uu.fillRect(0, 0, Ru, yu), uu.scale(Ru / mu.layoutWidth, yu / mu.layoutHeight), uu.translate((mu.layoutWidth - Qu) / 2, 0),
-        function(uu, Ru, yu, Qu) {
-          var mu, Vu, ru, Bu;
+    function yk(kk, Fk, Bk, Xk, sk, Vk) {
+      kk.setTransform(1, 0, 0, 1, 0, 0), kk.fillStyle = tk.N.defaultNameTagBackground, kk.fillRect(0, 0, Fk, Bk), kk.scale(Fk / Xk.layoutWidth, Bk / Xk.layoutHeight), kk.translate((Xk.layoutWidth - ak) / 2, 0),
+        function(kk, Fk, Bk, ak) {
+          var Xk, sk, Vk, Jk;
           const {
-            top: xu,
-            around: Su,
-            showPlayerText: pu,
-            localPlayerDbId: ju
-          } = yu, {
-            whiteUiText: Hu,
-            grayUiText: du,
-            yellowUiText: bu
-          } = Ku.L;
-          uu.textBaseline = "middle";
-          const Cu = function(Ru, yu, Eu, Ku, Qu, mu) {
-              let Ju = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              uu.font = `bold ${Ku}px 'Jetbrains Mono', monospace`, uu.fillStyle = Qu, uu.textAlign = Ju;
-              let Nu = Ru.replace(/[\r\n\t]/g, " ");
-              if (uu.measureText(Nu).width > mu) {
-                for (; Nu.length > 0 && uu.measureText(`${Nu}\u2026`).width > mu;) Nu = Nu.slice(0, -1);
-                Nu += "\u2026"
+            top: Ak,
+            around: ek,
+            showPlayerText: yk,
+            localPlayerDbId: Wk
+          } = Bk, {
+            whiteUiText: vk,
+            grayUiText: ik,
+            yellowUiText: Yk
+          } = tk.N;
+          kk.textBaseline = "middle";
+          const Lk = function(Fk, Bk, Rk, tk, ak, Xk) {
+              let bk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              kk.font = `bold ${tk}px 'Jetbrains Mono', monospace`, kk.fillStyle = ak, kk.textAlign = bk;
+              let wk = Fk.replace(/[\r\n\t]/g, " ");
+              if (kk.measureText(wk).width > Xk) {
+                for (; wk.length > 0 && kk.measureText(`${wk}\u2026`).width > Xk;) wk = wk.slice(0, -1);
+                wk += "\u2026"
               }
-              uu.fillText(Nu, yu, Eu)
+              kk.fillText(wk, Bk, Rk)
             },
-            ku = Ru => {
-              uu.fillStyle = Hu, uu.globalAlpha = .15, uu.fillRect(24, Ru, 976, 2), uu.globalAlpha = 1
+            Ok = Fk => {
+              kk.fillStyle = vk, kk.globalAlpha = .15, kk.fillRect(24, Fk, 976, 2), kk.globalAlpha = 1
             },
-            eu = null === ju ? null : (0, Ku.xc)(ju),
-            Au = uu => null !== eu && uu.playerHash === eu,
-            Du = Tu(xu.entries, Eu.s),
-            Mu = "ready" === xu.status && Du.length > 0,
-            Iu = null === Su ? [] : Tu(Su.entries, Ju),
-            Gu = Du.some(Au),
-            Uu = null === Su ? null : function(uu) {
-              const Ru = uu;
-              if (!Ru || !Number.isFinite(Ru.rank) || !Number.isFinite(Ru.tied) || !Number.isFinite(Ru.total)) return null;
-              return Ru
-            }(Su.standing),
-            nu = Iu.find(Au),
-            su = Du.find(Au),
-            tu = null === Uu || void 0 === nu ? null : {
-              value: nu.value,
-              rank: Uu.rank
+            Ek = null === Wk ? null : (0, tk.qc)(Wk),
+            Sk = kk => null !== Ek && kk.playerHash === Ek,
+            Nk = fk(Ak.entries, Rk.n),
+            Hk = "ready" === Ak.status && Nk.length > 0,
+            uk = null === ek ? [] : fk(ek.entries, bk),
+            Mk = Nk.some(Sk),
+            gk = null === ek ? null : function(kk) {
+              const Fk = kk;
+              if (!Fk || !Number.isFinite(Fk.rank) || !Number.isFinite(Fk.tied) || !Number.isFinite(Fk.total)) return null;
+              return Fk
+            }(ek.standing),
+            Uk = uk.find(Sk),
+            ck = Nk.find(Sk),
+            Gk = null === gk || void 0 === Uk ? null : {
+              value: Uk.value,
+              rank: gk.rank
             },
-            lu = Wu(Du, void 0 === su || su.value === (null === tu || void 0 === tu ? void 0 : tu.value) ? tu : null),
-            gu = Wu(Iu, tu),
-            cu = (uu, Ru) => {
-              const yu = uu.findIndex(Au);
-              return yu >= 0 ? Ru[yu] : null
+            Tk = mk(Nk, void 0 === ck || ck.value === (null === Gk || void 0 === Gk ? void 0 : Gk.value) ? Gk : null),
+            rk = mk(uk, Gk),
+            Dk = (kk, Fk) => {
+              const Bk = kk.findIndex(Sk);
+              return Bk >= 0 ? Fk[Bk] : null
             },
-            Lu = null !== (mu = null !== (Vu = null === Uu || void 0 === Uu ? void 0 : Uu.rank) && void 0 !== Vu ? Vu : cu(Iu, gu)) && void 0 !== mu ? mu : cu(Du, lu);
-          uu.font = "bold 34px 'Jetbrains Mono', monospace";
-          const zu = [...Mu ? lu : [], ...Gu ? [] : gu],
-            Fu = Math.min(280, Math.max(0, ...zu.map((Ru => uu.measureText(Nu.format(Ru)).width)))),
-            wu = Fu <= 80,
-            Zu = wu ? 80 : 32 + Fu,
-            hu = wu ? 148 : Zu + 28,
-            Pu = 660 - hu;
-          Cu(`TOP ${Eu.s}  /  ALL TIME`, 24, 52, 28, du, 976), Cu(pu ? String(null !== (ru = Ru.title) && void 0 !== ru ? ru : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Hu, 976), Cu("RANK", 32, 174, 28, du, hu - 40), Cu("PLAYER", hu, 174, 28, du, Pu), Cu(pu ? String(null !== (Bu = Ru.scoreLabel) && void 0 !== Bu ? Bu : "Score").slice(0, 24) : "Score", 992, 174, 28, du, 304, "right"), ku(202);
-          const iu = (Qu - 232) / (Eu.s + Xu + Ju),
-            Yu = 208 + Eu.s * iu,
-            ou = Yu + Xu * iu,
-            qu = (Ru, yu, Eu, Ku) => {
-              const Qu = Au(Ru);
-              uu.fillStyle = Qu ? bu : Hu, uu.globalAlpha = Qu ? .15 : Ku ? .035 : 0, uu.fillRect(24, Eu - iu / 2 + 1, 976, iu - 2), uu.globalAlpha = 1;
-              const mu = Qu ? bu : Hu;
-              Cu(Nu.format(yu), Zu, Eu, 34, mu, wu ? 80 : Fu, wu ? "center" : "right"), Cu(pu ? String(Ru.name).slice(0, 64) : "Player", hu, Eu, 34, mu, Pu);
-              const Ju = Nu.format(Ru.value);
-              Cu(uu.measureText(Ju).width > 304 ? Ru.value.toExponential(6) : Ju, 992, Eu, 34, mu, 304, "right")
+            zk = null !== (Xk = null !== (sk = null === gk || void 0 === gk ? void 0 : gk.rank) && void 0 !== sk ? sk : Dk(uk, rk)) && void 0 !== Xk ? Xk : Dk(Nk, Tk);
+          kk.font = "bold 34px 'Jetbrains Mono', monospace";
+          const Pk = [...Hk ? Tk : [], ...Mk ? [] : rk],
+            hk = Math.min(280, Math.max(0, ...Pk.map((Fk => kk.measureText(wk.format(Fk)).width)))),
+            qk = hk <= 80,
+            Ck = qk ? 80 : 32 + hk,
+            Zk = qk ? 148 : Ck + 28,
+            pk = 660 - Zk;
+          Lk(`TOP ${Rk.n}  /  ALL TIME`, 24, 52, 28, ik, 976), Lk(yk ? String(null !== (Vk = Fk.title) && void 0 !== Vk ? Vk : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, vk, 976), Lk("RANK", 32, 174, 28, ik, Zk - 40), Lk("PLAYER", Zk, 174, 28, ik, pk), Lk(yk ? String(null !== (Jk = Fk.scoreLabel) && void 0 !== Jk ? Jk : "Score").slice(0, 24) : "Score", 992, 174, 28, ik, 304, "right"), Ok(202);
+          const Kk = (ak - 232) / (Rk.n + dk + bk),
+            xk = 208 + Rk.n * Kk,
+            jk = xk + dk * Kk,
+            lk = (Fk, Bk, Rk, tk) => {
+              const ak = Sk(Fk);
+              kk.fillStyle = ak ? Yk : vk, kk.globalAlpha = ak ? .15 : tk ? .035 : 0, kk.fillRect(24, Rk - Kk / 2 + 1, 976, Kk - 2), kk.globalAlpha = 1;
+              const Xk = ak ? Yk : vk;
+              Lk(wk.format(Bk), Ck, Rk, 34, Xk, qk ? 80 : hk, qk ? "center" : "right"), Lk(yk ? String(Fk.name).slice(0, 64) : "Player", Zk, Rk, 34, Xk, pk);
+              const bk = wk.format(Fk.value);
+              Lk(kk.measureText(bk).width > 304 ? Fk.value.toExponential(6) : bk, 992, Rk, 34, Xk, 304, "right")
             };
-          if (Mu)
-            for (const [Eu, Ku] of Du.entries()) qu(Ku, lu[Eu], 208 + (Eu + .5) * iu, Eu % 2 === 0);
+          if (Hk)
+            for (const [Rk, tk] of Nk.entries()) lk(tk, Tk[Rk], 208 + (Rk + .5) * Kk, Rk % 2 === 0);
           else {
-            const uu = "error" === xu.status,
-              Ru = uu ? "Couldn't load leaderboard" : "ready" === xu.status ? "No scores yet" : "Loading leaderboard\u2026",
-              yu = uu ? "Trying again shortly" : "ready" === xu.status ? "Be the first on the board!" : "Fetching the top players",
-              Eu = (208 + Yu) / 2;
-            Cu(Ru, 512, Eu - 28, 40, uu ? Ku.L.redUiText : Hu, 960, "center"), Cu(yu, 512, Eu + 27, 30, du, 960, "center")
+            const kk = "error" === Ak.status,
+              Fk = kk ? "Couldn't load leaderboard" : "ready" === Ak.status ? "No scores yet" : "Loading leaderboard\u2026",
+              Bk = kk ? "Trying again shortly" : "ready" === Ak.status ? "Be the first on the board!" : "Fetching the top players",
+              Rk = (208 + xk) / 2;
+            Lk(Fk, 512, Rk - 28, 40, kk ? tk.N.redUiText : vk, 960, "center"), Lk(Bk, 512, Rk + 27, 30, ik, 960, "center")
           }
-          const Ou = Yu + Xu * iu / 2;
-          if (null === Lu) ku(Ou);
+          const nk = xk + dk * Kk / 2;
+          if (null === zk) Ok(nk);
           else {
-            const Ru = null === Uu ? 0 : Uu.tied - 1,
-              yu = `YOUR RANK #${Nu.format(Lu)}${null===Uu?"":` of ${Nu.format(Uu.total)}`}`;
-            uu.font = "bold 36px 'Jetbrains Mono', monospace";
-            const Eu = Math.max(20, Math.min(36, Math.floor(34560 / uu.measureText(yu).width)));
-            Cu(yu, 512, Ou - (Ru > 0 ? 15 : 0), Eu, bu, 960, "center"), Ru > 0 && Cu(`Tied with ${Nu.format(Ru)} other${1===Ru?"":"s"}`, 512, Ou + 24, 24, du, 960, "center")
+            const Fk = null === gk ? 0 : gk.tied - 1,
+              Bk = `YOUR RANK #${wk.format(zk)}${null===gk?"":` of ${wk.format(gk.total)}`}`;
+            kk.font = "bold 36px 'Jetbrains Mono', monospace";
+            const Rk = Math.max(20, Math.min(36, Math.floor(34560 / kk.measureText(Bk).width)));
+            Lk(Bk, 512, nk - (Fk > 0 ? 15 : 0), Rk, Yk, 960, "center"), Fk > 0 && Lk(`Tied with ${wk.format(Fk)} other${1===Fk?"":"s"}`, 512, nk + 24, 24, ik, 960, "center")
           }
-          if (null === Su) return;
-          const vu = ou + Ju * iu / 2;
-          if (Gu) Cu(`You're in the top ${Eu.s}!`, 512, vu, 40, bu, 960, "center");
-          else if (0 === Iu.length) Cu("You're not on this board yet", 512, vu, 34, du, 960, "center");
+          if (null === ek) return;
+          const Ik = jk + bk * Kk / 2;
+          if (Mk) Lk(`You're in the top ${Rk.n}!`, 512, Ik, 40, Yk, 960, "center");
+          else if (0 === uk.length) Lk("You're not on this board yet", 512, Ik, 34, ik, 960, "center");
           else
-            for (const [Eu, Ku] of Iu.entries()) qu(Ku, gu[Eu], ou + (Eu + .5) * iu, Eu % 2 === 0)
-        }(uu, Vu, ru, mu.layoutHeight)
+            for (const [Rk, tk] of uk.entries()) lk(tk, rk[Rk], jk + (Rk + .5) * Kk, Rk % 2 === 0)
+        }(kk, sk, Vk, Xk.layoutHeight)
     }
 
-    function Tu(uu, Ru) {
-      return Array.isArray(uu) ? uu.slice(0, Ru).filter((uu => uu && Number.isFinite(uu.rank) && Number.isFinite(uu.value))) : []
+    function fk(kk, Fk) {
+      return Array.isArray(kk) ? kk.slice(0, Fk).filter((kk => kk && Number.isFinite(kk.rank) && Number.isFinite(kk.value))) : []
     }
 
-    function Wu(uu, Ru) {
-      const yu = [];
-      let Eu = !1;
-      return uu.forEach(((Ku, Qu) => {
-        if (null !== Ru && Ku.value === Ru.value) return void yu.push(Ru.rank);
-        const mu = Qu > 0 && Ku.value === uu[Qu - 1].value;
-        mu || (Eu = 0 === Qu && 1 !== Ku.rank), yu.push(mu && !Eu ? yu[Qu - 1] : Ku.rank)
-      })), yu
+    function mk(kk, Fk) {
+      const Bk = [];
+      let Rk = !1;
+      return kk.forEach(((tk, ak) => {
+        if (null !== Fk && tk.value === Fk.value) return void Bk.push(Fk.rank);
+        const Xk = ak > 0 && tk.value === kk[ak - 1].value;
+        Xk || (Rk = 0 === ak && 1 !== tk.rank), Bk.push(Xk && !Rk ? Bk[ak - 1] : tk.rank)
+      })), Bk
     }
   },
-  38617: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ku,
-      h: () => Qu
+  38516: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk,
+      e: () => ak
     });
-    const Eu = 32;
+    const Rk = 32;
 
-    function Ku(uu) {
-      return Array.from(uu).length
+    function tk(kk) {
+      return Array.from(kk).length
     }
 
-    function Qu(uu) {
-      const Ru = [""];
-      let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        Ku = "";
-      const Qu = () => {
-        Ru.push(""), yu = 0, Ku = ""
+    function ak(kk) {
+      const Fk = [""];
+      let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        tk = "";
+      const ak = () => {
+        Fk.push(""), Bk = 0, tk = ""
       };
-      for (const mu of uu.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(mu)) Qu();
-        else if (/^\s+$/.test(mu)) Ku += mu;
-      else if (mu.length > 0) {
-        const uu = Array.from(mu);
-        yu > 0 && yu + Ku.length + uu.length > Eu && Qu(), Ru[Ru.length - 1] += Ku, yu += Ku.length, Ku = "";
-        for (const Ku of uu) yu >= Eu && Qu(), Ru[Ru.length - 1] += Ku, yu++
+      for (const Xk of kk.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(Xk)) ak();
+        else if (/^\s+$/.test(Xk)) tk += Xk;
+      else if (Xk.length > 0) {
+        const kk = Array.from(Xk);
+        Bk > 0 && Bk + tk.length + kk.length > Rk && ak(), Fk[Fk.length - 1] += tk, Bk += tk.length, tk = "";
+        for (const tk of kk) Bk >= Rk && ak(), Fk[Fk.length - 1] += tk, Bk++
       }
-      return Ru[Ru.length - 1] += Ku, Ru
+      return Fk[Fk.length - 1] += tk, Fk
     }
   },
-  42850: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      WasmPreviewHost: () => bR,
-      pageBuiltInAnimationPack: () => Bu,
-      pagePreviews: () => uR,
-      previewModule: () => iu
+  42735: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      WasmPreviewHost: () => LF,
+      pageBuiltInAnimationPack: () => Jk,
+      pagePreviews: () => BF,
+      previewModule: () => xk
     });
-    var Eu = yu(3514),
-      Ku = yu(614);
-    const Qu = "[bloxd-wasm-client]";
+    var Rk = Bk(3506),
+      tk = Bk(608);
+    const ak = "[bloxd-wasm-client]";
 
-    function mu(uu) {
-      const Ru = {
+    function Xk(kk) {
+      const Fk = {
         wasm: "unknown",
-        client: String(Ku.c)
+        client: String(tk.e)
       };
       try {
-        var yu;
-        Ru.wasm = null !== (yu = null === uu || void 0 === uu ? void 0 : uu.Qr()) && void 0 !== yu ? yu : Ru.wasm
+        var Bk;
+        Fk.wasm = null !== (Bk = null === kk || void 0 === kk ? void 0 : kk.CV()) && void 0 !== Bk ? Bk : Fk.wasm
       } catch {}
-      return Ru
+      return Fk
     }
-    async function Ju(uu) {
-      if (uu.length < 2 || 31 !== uu[0] || 139 !== uu[1]) return uu;
+    async function bk(kk) {
+      if (kk.length < 2 || 31 !== kk[0] || 139 !== kk[1]) return kk;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: Ru
-        } = await yu.e(218).then((() => yu(36743)));
-        return Ru(uu)
+          ungzip: Fk
+        } = await Bk.e(218).then((() => Bk(36639)));
+        return Fk(kk)
       }
-      const Ru = new Blob([uu]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(Ru).arrayBuffer())
+      const Fk = new Blob([kk]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(Fk).arrayBuffer())
     }
 
-    function Nu(uu, Ru, Eu, Ku) {
-      Promise.resolve().then((() => yu(40513))).then((yu => {
+    function wk(kk, Fk, Rk, tk) {
+      Promise.resolve().then((() => Bk(40355))).then((Bk => {
         let {
-          reportDataLoadFailure: Qu
-        } = yu;
-        Qu(uu, Ru, Eu, Ku)
-      }), (Ru => {
-        console.warn(`${Qu} ${uu} didn't load, and the report couldn't be sent`, Eu.error, Ru)
+          reportDataLoadFailure: ak
+        } = Bk;
+        ak(kk, Fk, Rk, tk)
+      }), (Fk => {
+        console.warn(`${ak} ${kk} didn't load, and the report couldn't be sent`, Rk.error, Fk)
       }))
     }
-    const Xu = [3e4, 12e4, 3e5];
-    class Vu {
-      constructor(uu) {
-        this.deps = uu, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((uu => {
-          this.resolveSet = uu
+    const dk = [3e4, 12e4, 3e5];
+    class sk {
+      constructor(kk) {
+        this.deps = kk, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((kk => {
+          this.resolveSet = kk
         }))
       }
-      provide(uu) {
-        return this.loading ??= this.load(uu), this.loading
+      provide(kk) {
+        return this.loading ??= this.load(kk), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(uu) {
-        const Ru = mu(uu),
-          yu = await async function(uu, Ru) {
-            let yu;
+      async load(kk) {
+        const Fk = Xk(kk),
+          Bk = await async function(kk, Fk) {
+            let Bk;
             try {
-              yu = await uu()
-            } catch (Eu) {
+              Bk = await kk()
+            } catch (Rk) {
               return {
                 stage: "fetch",
-                error: Eu
+                error: Rk
               }
             }
             try {
-              return Ru(yu) ? null : {
+              return Fk(Bk) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (Eu) {
+            } catch (Rk) {
               return {
                 stage: "decode",
-                error: Eu
+                error: Rk
               }
             }
-          }((() => this.deps.fetch()), (Ru => {
-            const yu = uu.nQu(Ru);
-            return yu && this.resolveSet(Ru), yu
+          }((() => this.deps.fetch()), (Fk => {
+            const Bk = kk.jtk(Fk);
+            return Bk && this.resolveSet(Fk), Bk
           }));
-        if (null !== yu) {
-          if ("fetch" === yu.stage) {
+        if (null !== Bk) {
+          if ("fetch" === Bk.stage) {
             this.loading = null;
-            const Ru = Xu[this.retries++];
-            void 0 !== Ru && this.deps.later((() => {
-              this.provide(uu)
-            }), Ru)
+            const Fk = dk[this.retries++];
+            void 0 !== Fk && this.deps.later((() => {
+              this.provide(kk)
+            }), Fk)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(yu, Ru))
+          this.reported || (this.reported = !0, this.deps.onFailed(Bk, Fk))
         }
       }
     }
-    let ru = null;
+    let Vk = null;
 
-    function Bu() {
-      return ru ??= new Vu({
-        fetch: async () => Ju(await (0, Eu.E)(xu(), {
+    function Jk() {
+      return Vk ??= new sk({
+        fetch: async () => bk(await (0, Rk.N)(Ak(), {
           priority: "low"
         })),
-        onFailed: (uu, Ru) => {
-          Nu("builtInAnimations", xu(), uu, Ru)
+        onFailed: (kk, Fk) => {
+          wk("builtInAnimations", Ak(), kk, Fk)
         },
-        later: (uu, Ru) => {
-          setTimeout(uu, Ru)
+        later: (kk, Fk) => {
+          setTimeout(kk, Fk)
         }
-      }), ru
+      }), Vk
     }
 
-    function xu() {
-      return yu(42858)
+    function Ak() {
+      return Bk(42741)
     }
-    var Su = yu(3510),
-      pu = yu(36199),
-      Tu = yu(40341),
-      Wu = yu(1176),
-      ju = yu(325),
-      Hu = yu(40361),
-      du = yu(40590),
-      bu = (yu(40374), yu(40528)),
-      Cu = yu(40535),
-      ku = yu(40544),
-      eu = yu(40371),
-      Au = yu(40605),
-      Du = yu(40607),
-      Mu = yu(40393),
-      Iu = yu(40462),
-      Gu = yu(40470),
-      Uu = yu(40603),
-      nu = yu(42141),
-      su = yu(36176);
-    const tu = "[bloxd-previews]",
-      lu = 4e5,
-      gu = 0,
-      cu = 1,
-      Lu = 2,
-      zu = 1,
-      Fu = 2,
-      wu = 3,
-      Zu = 0,
-      hu = 1,
-      Pu = 2;
+    var ek = Bk(3502),
+      yk = Bk(36046),
+      fk = Bk(40171),
+      mk = Bk(1154),
+      Wk = Bk(276),
+      vk = Bk(40189),
+      ik = Bk(40435),
+      Yk = (Bk(40207), Bk(40379)),
+      Lk = Bk(40387),
+      Ok = Bk(40393),
+      Ek = Bk(40200),
+      Sk = Bk(40448),
+      Nk = Bk(40452),
+      Hk = Bk(40231),
+      uk = Bk(40311),
+      Mk = Bk(40319),
+      gk = Bk(40440),
+      Uk = Bk(42001),
+      ck = Bk(36019),
+      Gk = Bk(3495);
+    const Tk = "[bloxd-previews]",
+      rk = 4e5,
+      Dk = 0,
+      zk = 1,
+      Pk = 2,
+      hk = 1,
+      qk = 2,
+      Ck = 3,
+      Zk = 0,
+      pk = 1,
+      Kk = 2;
 
-    function iu(uu) {
-      const Ru = uu,
-        yu = (0, Hu.F)(uu),
-        Eu = (0, Hu.j)(uu);
-      return null !== yu && null !== Eu && "function" === typeof Ru.IQu && "function" === typeof Ru.GQu && "function" === typeof Ru.UQu ? Ru : null
-    }
-
-    function Yu(uu, Ru, yu) {
-      let [Eu, Ku] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [uu, Ru], Qu = Math.min(Number.isFinite(yu) && yu > 0 ? yu : 1, 2);
-      const mu = Math.max(0, Eu, uu) * Math.max(0, Ku, Ru) * Qu * Qu;
-      return mu > lu && (Qu *= Math.sqrt(lu / mu)), [Math.max(1, Math.floor(Math.max(0, uu) * Qu)), Math.max(1, Math.floor(Math.max(0, Ru) * Qu))]
+    function xk(kk) {
+      const Fk = kk,
+        Bk = (0, vk.C)(kk),
+        Rk = (0, vk.i)(kk);
+      return null !== Bk && null !== Rk && "function" === typeof Fk.ptk && "function" === typeof Fk.Ktk && "function" === typeof Fk.xtk ? Fk : null
     }
 
-    function ou() {
-      return yu(42865)
+    function jk(kk, Fk, Bk) {
+      let [Rk, tk] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [kk, Fk], ak = Math.min(Number.isFinite(Bk) && Bk > 0 ? Bk : 1, 2);
+      const Xk = Math.max(0, Rk, kk) * Math.max(0, tk, Fk) * ak * ak;
+      return Xk > rk && (ak *= Math.sqrt(rk / Xk)), [Math.max(1, Math.floor(Math.max(0, kk) * ak)), Math.max(1, Math.floor(Math.max(0, Fk) * ak))]
     }
-    async function qu(uu, Ru) {
-      "lost" === uu && (0, Mu.x)();
-      const Eu = await (0, Mu.L)();
-      if (null === Eu || (0, Hu.l)(Eu) || (0, Mu.e)()) return;
-      const Ku = "webgpu" === Eu.backend;
-      if (!Ku && "lost" !== uu) return;
-      const Qu = Ku ? (0, Hu.N)(uu) : null;
-      if (null !== Qu) {
-        const yu = `WebGPU failed at home (${uu}${void 0===Ru?"":`: ${Ru instanceof Error?Ru.message:(0,su.k)(Ru)}`}) and ${Qu}`;
-        return console.warn(`${tu} ${yu}: the previews stop`, null !== Ru && void 0 !== Ru ? Ru : ""), void(0, Mu.t)(yu)
-      }(0, Mu.r)();
+
+    function lk() {
+      return Bk(42745)
+    }
+    async function nk(kk, Fk) {
+      "lost" === kk && (0, Hk.C)();
+      const Rk = await (0, Hk.P)();
+      if (null === Rk || (0, vk.k)(Rk) || (0, Hk.e)()) return;
+      const tk = "webgpu" === Rk.backend;
+      if (!tk && "lost" !== kk) return;
+      const ak = tk ? (0, vk.L)(kk) : null;
+      if (null !== ak) {
+        const Bk = `WebGPU failed at home (${kk}${void 0===Fk?"":`: ${Fk instanceof Error?Fk.message:(0,ck.j)(Fk)}`}) and ${ak}`;
+        return console.warn(`${Tk} ${Bk}: the previews stop`, null !== Fk && void 0 !== Fk ? Fk : ""), void(0, Hk.v)(Bk)
+      }(0, Hk.u)();
       try {
-        await async function(uu, Ru, Eu) {
-          var Ku;
+        await async function(kk, Fk, Rk) {
+          var tk;
           let {
-            backend: Qu,
-            adapter: Ju
-          } = uu;
-          const Nu = (0, Su.N)(),
+            backend: ak,
+            adapter: bk
+          } = kk;
+          const wk = (0, ek.N)(),
             {
-              flushCrashReports: Xu,
-              reportRenderReload: Vu
-            } = await Promise.resolve().then((() => yu(40513)));
-          Vu(Qu, "start_failed" === Ru ? 0 : 1, mu(Nu ? (0, Su.w)() : null), {
-            cause: Ru,
-            error: "lost" === Ru && null !== (Ku = (0, Hu.R)(Nu ? (0, Hu.F)((0, Su.w)()) : null)) && void 0 !== Ku ? Ku : Eu,
+              flushCrashReports: dk,
+              reportRenderReload: sk
+            } = await Promise.resolve().then((() => Bk(40355)));
+          sk(ak, "start_failed" === Fk ? 0 : 1, Xk(wk ? (0, ek.y)() : null), {
+            cause: Fk,
+            error: "lost" === Fk && null !== (tk = (0, vk.N)(wk ? (0, vk.C)((0, ek.y)()) : null)) && void 0 !== tk ? tk : Rk,
             context: {
-              adapter: Ju,
-              boundAtMs: "start_failed" === Ru ? null : (0, Mu.I)(),
-              indirectHangs: (0, Mu.z)()
+              adapter: bk,
+              boundAtMs: "start_failed" === Fk ? null : (0, Hk.M)(),
+              indirectHangs: (0, Hk.G)()
             }
-          }), await Xu(Iu.e)
-        }(Eu, uu, Ru)
-      } catch (Ju) {
-        console.warn(`${tu} ${Eu.backend} failed at home (${uu}), and its report couldn't be sent`, Ju)
-      }(0, Iu.k)()
+          }), await dk(uk.e)
+        }(Rk, kk, Fk)
+      } catch (bk) {
+        console.warn(`${Tk} ${Rk.backend} failed at home (${kk}), and its report couldn't be sent`, bk)
+      }(0, uk.k)()
     }
-    async function Ou() {
-      if (!(0, Su.N)()) {
-        const uu = await (0, Mu.L)();
-        if (null === uu || (0, Hu.l)(uu)) return null;
-        if (await (0, pu.h)(await uu.load(), Tu.e), !(0, Su.N)()) return null
+    async function Ik() {
+      if (!(0, ek.N)()) {
+        const kk = await (0, Hk.P)();
+        if (null === kk || (0, vk.k)(kk)) return null;
+        if (await (0, yk.f)(await kk.load(), fk.f), !(0, ek.N)()) return null
       }
-      return iu((0, Su.w)())
+      return xk((0, ek.y)())
     }
-    class vu {
-      constructor(uu, Ru, yu, Eu, Ku, Qu) {
-        this.page = uu, this.host = Ru, this.id = yu, this.canvas = Eu, this.size = Ku, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const mu = {
-            ...Qu.images,
-            glbUrl: uu => {
-              var Ru;
-              return null !== (Ru = this.models.drawnUrl(uu)) && void 0 !== Ru ? Ru : Qu.images.glbUrl(uu)
+    class Qk {
+      constructor(kk, Fk, Bk, Rk, tk, ak) {
+        this.page = kk, this.host = Fk, this.id = Bk, this.canvas = Rk, this.size = tk, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const Xk = {
+            ...ak.images,
+            glbUrl: kk => {
+              var Fk;
+              return null !== (Fk = this.models.drawnUrl(kk)) && void 0 !== Fk ? Fk : ak.images.glbUrl(kk)
             }
           },
-          Ju = Ru => uu.modelFile(Ru);
-        this.images = new du.d(mu, (uu => {
-          console.warn(`${tu} image ${uu.key.kind}:${uu.key.index}:${uu.key.word} failed`, uu.error)
+          bk = Fk => kk.modelFile(Fk);
+        this.images = new ik.g(Xk, (kk => {
+          console.warn(`${Tk} image ${kk.key.kind}:${kk.key.index}:${kk.key.word} failed`, kk.error)
         }), {
-          fetchFile: Ju,
-          fetchImage: Ru => uu.imageFile(Ru)
-        }), uu.startModels(), this.models = new bu.f(Qu.files, ((Ru, yu) => uu.buildModel(Ru, yu)), (uu => {
-          console.warn(`${tu} model file ${uu.file} (${uu.url}) failed`, uu.error)
+          fetchFile: bk,
+          fetchImage: Fk => kk.imageFile(Fk)
+        }), kk.startModels(), this.models = new Yk.i(ak.files, ((Fk, Bk) => kk.buildModel(Fk, Bk)), (kk => {
+          console.warn(`${Tk} model file ${kk.file} (${kk.url}) failed`, kk.error)
         }), {
-          fetchFile: Ju,
-          onWritten: (uu, Ru) => {
-            this.images.glbWritten(uu, Ru)
+          fetchFile: bk,
+          onWritten: (kk, Fk) => {
+            this.images.glbWritten(kk, Fk)
           },
-          onTaken: (uu, Ru) => {
-            this.images.glbTaken(uu, Ru)
+          onTaken: (kk, Fk) => {
+            this.images.glbTaken(kk, Fk)
           }
-        }), this.write = (uu, Ru, yu) => {
+        }), this.write = (kk, Fk, Bk) => {
           if (this.closed) return !0;
-          if (uu === bu.d) {
-            const uu = new DataView(yu.buffer, yu.byteOffset, ku.b),
-              Eu = uu.getUint32(0, !0),
-              Ku = uu.getUint32(ku.d, !0),
-              Qu = this.page.hostCall(Pu, (() => this.host.tmu(this.id, Eu, Ru, yu.subarray(ku.b))));
-            return this.outcomes.push([Ku, Qu]), !0
+          if (kk === Yk.b) {
+            const kk = new DataView(Bk.buffer, Bk.byteOffset, Ok.c),
+              Rk = kk.getUint32(0, !0),
+              tk = kk.getUint32(Ok.f, !0),
+              ak = this.page.hostCall(Kk, (() => this.host.bXk(this.id, Rk, Fk, Bk.subarray(Ok.c))));
+            return this.outcomes.push([tk, ak]), !0
           }
-          return uu === du.c && (this.page.hostCall(void 0, (() => {
-            this.host.gmu(this.id, yu)
+          return kk === ik.d && (this.page.hostCall(void 0, (() => {
+            this.host.dXk(this.id, Bk)
           })), !0)
         }
       }
@@ -615,74 +616,74 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(uu, Ru, yu) {
+      resize(kk, Fk, Bk) {
         if (this.closed) return;
-        const [Eu, Ku] = Yu(uu, Ru, this.page.dpr(), yu);
-        Eu === this.size[0] && Ku === this.size[1] || (this.size = [Eu, Ku], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, Eu, Ku)
+        const [Rk, tk] = jk(kk, Fk, this.page.dpr(), Bk);
+        Rk === this.size[0] && tk === this.size[1] || (this.size = [Rk, tk], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, Rk, tk)
         })))
       }
-      setMob(uu, Ru, yu, Eu) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Zmu(this.id, uu, Ru, yu, Eu))))
+      setMob(kk, Fk, Bk, Rk) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.eXk(this.id, kk, Fk, Bk, Rk))))
       }
-      setPet(uu, Ru, yu, Eu) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Pmu(this.id, uu, Ru, yu, Eu))))
+      setPet(kk, Fk, Bk, Rk) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.fXk(this.id, kk, Fk, Bk, Rk))))
       }
-      setPlayer(uu, Ru, yu) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.zmu(this.id, uu, Ru, yu))))
+      setPlayer(kk, Fk, Bk) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.VXk(this.id, kk, Fk, Bk))))
       }
-      setFigure(uu, Ru, yu, Eu) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Fmu(this.id, uu, Ru, yu, Eu))))
+      setFigure(kk, Fk, Bk, Rk) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.JXk(this.id, kk, Fk, Bk, Rk))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const uu = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === uu || uu.length < 3 ? null : {
-          alpha: uu[0],
-          beta: uu[1],
-          radius: uu[2]
+        const kk = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === kk || kk.length < 3 ? null : {
+          alpha: kk[0],
+          beta: kk[1],
+          radius: kk[2]
         }
       }
-      setOrbit(uu) {
+      setOrbit(kk) {
         let {
-          alpha: Ru,
-          beta: yu,
-          radius: Eu
-        } = uu;
+          alpha: Fk,
+          beta: Bk,
+          radius: Rk
+        } = kk;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.hmu(this.id, Ru, yu, Eu)
+          this.host.yXk(this.id, Fk, Bk, Rk)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((uu => {
-          this.settled.push(uu)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((kk => {
+          this.settled.push(kk)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, Au.g)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, Sk.i)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [uu, Ru] of this.outcomes) {
-          const yu = Ru === Zu ? [] : [Ru === hu ? uu : (uu | bu.e) >>> 0];
-          this.models.taken(uu, yu)
+        for (const [kk, Fk] of this.outcomes) {
+          const Bk = Fk === Zk ? [] : [Fk === pk ? kk : (kk | Yk.f) >>> 0];
+          this.models.taken(kk, Bk)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(uu) {
-        let Ru = !1;
-        if (uu) {
-          const uu = this.host.omu(this.id);
-          for (const Ru of uu) this.models.request(Ru);
-          const yu = this.host.Ymu(this.id);
-          yu.length > 0 && this.images.onEvent(yu), Ru = uu.length > 0 || yu.length > 0
+      collect(kk) {
+        let Fk = !1;
+        if (kk) {
+          const kk = this.host.vXk(this.id);
+          for (const Fk of kk) this.models.request(Fk);
+          const Bk = this.host.WXk(this.id);
+          Bk.length > 0 && this.images.onEvent(Bk), Fk = kk.length > 0 || Bk.length > 0
         }
-        const yu = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          Eu = Ru || yu > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = Eu ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const Bk = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          Rk = Fk || Bk > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = Rk ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -690,418 +691,418 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(uu) {
+      dispose(kk) {
         this.page.hostCall(void 0, (() => {
-          const Ru = this.host.close(this.id);
-          Ru.length > 0 && this.images.onEvent(Ru), this.page.isTrapped || uu.UQu(this.id)
+          const Fk = this.host.close(this.id);
+          Fk.length > 0 && this.images.onEvent(Fk), this.page.isTrapped || kk.xtk(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const uu = this.settled;
+        const kk = this.settled;
         this.settled = [];
-        for (const Ru of uu) Ru()
+        for (const Fk of kk) Fk()
       }
     }
-    class au {
-      constructor(uu) {
-        this.deps = uu, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: uu => {
-            this.modelsFailed(uu)
+    class kF {
+      constructor(kk) {
+        this.deps = kk, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: kk => {
+            this.modelsFailed(kk)
           },
-          onDecoderFailed: uu => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${tu} the Draco decoder didn't load: models waiting on it won't draw`, uu))
+          onDecoderFailed: kk => {
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${Tk} the Draco decoder didn't load: models waiting on it won't draw`, kk))
           },
-          onWorkerLost: uu => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${tu} a model worker was lost: ${uu}`))
+          onWorkerLost: kk => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${Tk} a model worker was lost: ${kk}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.ix = {
-          setShaderPack: (uu, Ru, yu, Eu, Ku) => (this.shaderPackArgs = [uu, Ru, yu, Eu, Ku], this.handOverShaderPack(), !0)
-        }, this.frame = uu => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.ie = {
+          setShaderPack: (kk, Fk, Bk, Rk, tk) => (this.shaderPackArgs = [kk, Fk, Bk, Rk, tk], this.handOverShaderPack(), !0)
+        }, this.frame = kk => {
           this.frameId = null;
-          const Ru = this.host;
-          if (null !== Ru && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(Ru, uu)
-          } catch (yu) {
-            if (!this.stopIfTrapped(yu) && (this.stop(), (0, Hu.o)(yu))) return void this.deps.onRenderFailed("frames_refused", yu);
-            console.warn(`${tu} the previews stopped: their frame threw`, yu)
+          const Fk = this.host;
+          if (null !== Fk && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(Fk, kk)
+          } catch (Bk) {
+            if (!this.stopIfTrapped(Bk) && (this.stop(), (0, vk.m)(Bk))) return void this.deps.onRenderFailed("frames_refused", Bk);
+            console.warn(`${Tk} the previews stopped: their frame threw`, Bk)
           }
-        }, uu.pack.onChange((() => {
+        }, kk.pack.onChange((() => {
           this.packChanged()
-        })), uu.game.onGameChange((() => {
+        })), kk.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const uu of this.previews.values()) uu.packChanged()
+          for (const kk of this.previews.values()) kk.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var uu, Ru;
-        return null !== (uu = null === (Ru = this.host) || void 0 === Ru ? void 0 : Ru.attached()) && void 0 !== uu && uu
+        var kk, Fk;
+        return null !== (kk = null === (Fk = this.host) || void 0 === Fk ? void 0 : Fk.attached()) && void 0 !== kk && kk
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((uu, Ru) => uu + Ru), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((kk, Fk) => kk + Fk), 0) / this.costs.length
       }
-      async bindSession(uu, Ru, yu) {
-        const Eu = this.binding,
-          Ku = this.sessionEnds;
+      async bindSession(kk, Fk, Bk) {
+        const Rk = this.binding,
+          tk = this.sessionEnds;
         try {
-          const Qu = this.hostOf(uu);
-          if (!Qu.lmu()) {
-            const Ru = (0, Gu.f)().sampleCount,
-              mu = await yu(Ru);
-            if (this.sessionEnds !== Ku) return this.keepRendererOfEndedSession(uu, Qu, mu, Ru, Eu), Ru;
-            if (!Qu.Hmu(mu)) throw new Error("the page has a renderer already");
-            (0, Mu.w)(performance.now()), this.samples = Ru, (0, Uu.g)((0, Hu.j)(uu))
+          const ak = this.hostOf(kk);
+          if (!ak.wXk()) {
+            const Fk = (0, Mk.h)().sampleCount,
+              Xk = await Bk(Fk);
+            if (this.sessionEnds !== tk) return this.keepRendererOfEndedSession(kk, ak, Xk, Fk, Rk), Fk;
+            if (!ak.Zak(Xk)) throw new Error("the page has a renderer already");
+            (0, Hk.y)(performance.now()), this.samples = Fk, (0, gk.f)((0, vk.i)(kk))
           }
-          if (!Qu.attach(Ru)) throw new Error("the page's renderer is lent to another session");
+          if (!ak.attach(Fk)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === Eu && this.endBinding()
+          this.binding === Rk && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(uu, Ru, yu, Eu, Ku) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== Ku) try {
-          yu.free()
-        } catch (Qu) {
-          console.warn(`${tu} an ended session's renderer didn't free`, Qu)
-        } else Ru.Hmu(yu) && ((0, Mu.w)(performance.now()), this.samples = Eu, (0, Uu.g)(this.registryOf(uu)))
+      keepRendererOfEndedSession(kk, Fk, Bk, Rk, tk) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== tk) try {
+          Bk.free()
+        } catch (ak) {
+          console.warn(`${Tk} an ended session's renderer didn't free`, ak)
+        } else Fk.Zak(Bk) && ((0, Hk.y)(performance.now()), this.samples = Rk, (0, gk.f)(this.registryOf(kk)))
       }
       async beginSession() {
-        var uu;
-        let Ru = () => {};
-        const yu = new Promise((uu => {
-          Ru = uu
+        var kk;
+        let Fk = () => {};
+        const Bk = new Promise((kk => {
+          Fk = kk
         }));
         this.binding = {
-          done: yu,
-          release: Ru
-        }, await (null === (uu = this.opening) || void 0 === uu ? void 0 : uu.catch((() => null)));
-        const Eu = this.pageCanvas;
-        return this.pageCanvas = null, Eu
+          done: Bk,
+          release: Fk
+        }, await (null === (kk = this.opening) || void 0 === kk ? void 0 : kk.catch((() => null)));
+        const Rk = this.pageCanvas;
+        return this.pageCanvas = null, Rk
       }
-      endSession(uu) {
-        var Ru, yu;
-        if (this.sessionEnds++, this.lastEndReturned = uu, this.endBinding(), uu) {
+      endSession(kk) {
+        var Fk, Bk;
+        if (this.sessionEnds++, this.lastEndReturned = kk, this.endBinding(), kk) {
           try {
-            var Eu;
-            null === (Eu = this.host) || void 0 === Eu || Eu.detach()
-          } catch (Ku) {
-            return void console.warn(`${tu} the session's core kept the page's renderer`, Ku)
-          }!0 === (null === (Ru = this.host) || void 0 === Ru ? void 0 : Ru.attached()) && console.warn(`${tu} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (yu = this.host) || void 0 === yu ? void 0 : yu.lmu()) && (0, Uu.g)(this.registryOf(this.module))
+            var Rk;
+            null === (Rk = this.host) || void 0 === Rk || Rk.detach()
+          } catch (tk) {
+            return void console.warn(`${Tk} the session's core kept the page's renderer`, tk)
+          }!0 === (null === (Fk = this.host) || void 0 === Fk ? void 0 : Fk.attached()) && console.warn(`${Tk} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (Bk = this.host) || void 0 === Bk ? void 0 : Bk.wXk()) && (0, gk.f)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var uu;
-        null === (uu = this.binding) || void 0 === uu || uu.release(), this.binding = null
+        var kk;
+        null === (kk = this.binding) || void 0 === kk || kk.release(), this.binding = null
       }
-      async openPreview(uu, Ru, yu, Eu) {
-        const Ku = await this.renderingHost(),
-          Qu = this.module;
-        if (null === Ku || null === Qu) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(Ku), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(kk, Fk, Bk, Rk) {
+        const tk = await this.renderingHost(),
+          ak = this.module;
+        if (null === tk || null === ak) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(tk), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(Qu)
+          this.deps.provideBuiltInAnimationPack(ak)
         }));
-        const mu = this.nextId++,
-          Ju = this.deps.createCanvas(),
-          [Nu, Xu] = Yu(Ru, yu, this.deps.dpr(), Eu);
-        Ju.width = Nu, Ju.height = Xu;
-        if (!this.guarded((() => (Qu.GQu(mu, Ju), Ku.open(mu, Nu, Xu, uu))))) throw this.hostCall(void 0, (() => {
-          Qu.UQu(mu)
+        const Xk = this.nextId++,
+          bk = this.deps.createCanvas(),
+          [wk, dk] = jk(Fk, Bk, this.deps.dpr(), Rk);
+        bk.width = wk, bk.height = dk;
+        if (!this.guarded((() => (ak.Ktk(Xk, bk), tk.open(Xk, wk, dk, kk))))) throw this.hostCall(void 0, (() => {
+          ak.xtk(Xk)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const Vu = new vu(this, Ku, mu, Ju, [Nu, Xu], this.deps);
-        return this.previews.set(mu, Vu), this.startFrames(), Vu
+        const sk = new Qk(this, tk, Xk, bk, [wk, dk], this.deps);
+        return this.previews.set(Xk, sk), this.startFrames(), sk
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, Mu.e)() || null !== (0, Mu.F)()) return;
+        if (this.prefetched || this.isStopped || (0, Hk.e)() || null !== (0, Hk.J)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((uu => {
-          null === uu || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((kk => {
+          null === kk || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(uu) {
-        return this.prefetchedOr(uu, this.deps.fetchModel)
+      modelFile(kk) {
+        return this.prefetchedOr(kk, this.deps.fetchModel)
       }
-      imageFile(uu) {
-        return this.prefetchedOr(uu, Eu.E)
+      imageFile(kk) {
+        return this.prefetchedOr(kk, Rk.N)
       }
-      prefetchedOr(uu, Ru) {
-        const yu = this.prefetchedFiles.get(uu);
-        return void 0 === yu ? Ru(uu) : yu.catch((() => Ru(uu)))
+      prefetchedOr(kk, Fk) {
+        const Bk = this.prefetchedFiles.get(kk);
+        return void 0 === Bk ? Fk(kk) : Bk.catch((() => Fk(kk)))
       }
       async prefetchPlayerFiles() {
-        const uu = this.deps.playerFile().then((uu => this.deps.files.url(uu))),
-          Ru = await Promise.all([uu, this.deps.images.lifeformAtlasUrl(Au.b)]).catch((() => null));
-        if (null === Ru) return;
-        const [yu, Eu] = Ru, Ku = (uu, Ru) => {
-          if (null === uu) return;
-          const yu = Ru(uu);
-          this.prefetchedFiles.set(uu, yu), yu.catch((() => {
-            this.prefetchedFiles.delete(uu)
+        const kk = this.deps.playerFile().then((kk => this.deps.files.url(kk))),
+          Fk = await Promise.all([kk, this.deps.images.lifeformAtlasUrl(Sk.e)]).catch((() => null));
+        if (null === Fk) return;
+        const [Bk, Rk] = Fk, tk = (kk, Fk) => {
+          if (null === kk) return;
+          const Bk = Fk(kk);
+          this.prefetchedFiles.set(kk, Bk), Bk.catch((() => {
+            this.prefetchedFiles.delete(kk)
           }))
         };
-        Ku(yu, (uu => this.modelFile(uu))), Ku(Eu, (uu => this.imageFile(uu)))
+        tk(Bk, (kk => this.modelFile(kk))), tk(Rk, (kk => this.imageFile(kk)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((uu => (null === uu && (this.moduleLoad = null), uu)), (uu => {
-          throw this.moduleLoad = null, uu
+        return this.moduleLoad ??= this.deps.loadModule().then((kk => (null === kk && (this.moduleLoad = null), kk)), (kk => {
+          throw this.moduleLoad = null, kk
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((uu => {
-          throw this.animationTable = null, uu
+        return this.animationTable ??= this.deps.fetchAnimations().catch((kk => {
+          throw this.animationTable = null, kk
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((uu => (this.modelsFailed(uu), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((kk => (this.modelsFailed(kk), () => new Promise((() => {})))))
       }
-      buildModel(uu, Ru) {
-        return this.startModels(), this.models.then((yu => yu(uu, Ru))).then((uu => this.unavailable ? new Promise((() => {})) : uu))
+      buildModel(kk, Fk) {
+        return this.startModels(), this.models.then((Bk => Bk(kk, Fk))).then((kk => this.unavailable ? new Promise((() => {})) : kk))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(uu) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${tu} the model workers didn't start: models won't draw in the previews`, uu))
+      modelsFailed(kk) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${Tk} the model workers didn't start: models won't draw in the previews`, kk))
       }
-      called(uu) {
-        return 0 !== uu && this.logError(uu, 0), uu
+      called(kk) {
+        return 0 !== kk && this.logError(kk, 0), kk
       }
-      closePreview(uu) {
-        this.previews.delete(uu.id), null !== this.module && uu.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(kk) {
+        this.previews.delete(kk.id), null !== this.module && kk.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(uu) {
-        if (null !== this.module && this.module !== uu) throw new Error("a second renderer module on one page");
-        return this.module = uu, null === this.host && (this.host = this.guarded((() => new uu.IQu)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(kk) {
+        if (null !== this.module && this.module !== kk) throw new Error("a second renderer module on one page");
+        return this.module = kk, null === this.host && (this.host = this.guarded((() => new kk.ptk)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: uu
+          host: kk
         } = this;
-        null !== uu && this.outsideCall("the game's start or end", (() => {
-          uu.wmu(this.deps.game.inGame())
+        null !== kk && this.outsideCall("the game's start or end", (() => {
+          kk.AXk(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: uu,
-          shaderPackArgs: Ru
+          host: kk,
+          shaderPackArgs: Fk
         } = this;
-        null !== uu && null !== Ru && this.outsideCall("the shader pack's hand-over", (() => {
-          uu.IEu(...Ru) || console.warn(`${tu} the host refused the shader pack: previews draw without it at home`)
+        null !== kk && null !== Fk && this.outsideCall("the shader pack's hand-over", (() => {
+          kk.CBk(...Fk) || console.warn(`${Tk} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(uu, Ru) {
+      outsideCall(kk, Fk) {
         try {
-          this.hostCall(void 0, Ru)
-        } catch (yu) {
-          this.stop(), console.warn(`${tu} the previews stopped: ${uu} threw`, yu)
+          this.hostCall(void 0, Fk)
+        } catch (Bk) {
+          this.stop(), console.warn(`${Tk} the previews stopped: ${kk} threw`, Bk)
         }
       }
-      async loadAnimations(uu) {
-        const Ru = mu(null),
-          yu = this.module;
+      async loadAnimations(kk) {
+        const Fk = Xk(null),
+          Bk = this.module;
         try {
-          Ru.wasm = null === yu ? Ru.wasm : this.hostCall(Ru.wasm, (() => yu.Qr()))
+          Fk.wasm = null === Bk ? Fk.wasm : this.hostCall(Fk.wasm, (() => Bk.CV()))
         } catch {}
-        let Eu, Ku;
+        let Rk, tk;
         try {
-          Eu = await this.fetchAnimationTable()
-        } catch (Qu) {
+          Rk = await this.fetchAnimationTable()
+        } catch (ak) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: Qu
-          }, Ru)
+            error: ak
+          }, Fk)
         }
         if (!this.settleIfTrapped()) {
           try {
-            Ku = uu.Lmu(Eu)
-          } catch (Qu) {
-            if (this.stopIfTrapped(Qu)) return;
+            tk = kk.sXk(Rk)
+          } catch (ak) {
+            if (this.stopIfTrapped(ak)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: Qu
-            }, Ru)
+              error: ak
+            }, Fk)
           }
-          Ku || this.deps.onAnimationsFailed({
+          tk || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, Ru)
+          }, Fk)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const uu = this.host;
-        return null !== uu && this.guarded((() => uu.lmu())) ? uu : (this.opening ??= this.openAtHome().finally((() => {
+        const kk = this.host;
+        return null !== kk && this.guarded((() => kk.wXk())) ? kk : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var uu;
-        const Ru = null !== (uu = this.module) && void 0 !== uu ? uu : await this.loadModule();
-        if (null === Ru) return null;
-        const yu = this.hostOf(Ru),
-          Eu = () => this.guarded((() => yu.lmu()));
-        if (Eu()) return yu;
-        if (null !== (0, Mu.F)() || (0, Mu.e)()) return null;
-        const Ku = this.deps.createCanvas();
-        Ku.width = 1, Ku.height = 1;
-        const Qu = await this.deps.openExtras();
+        var kk;
+        const Fk = null !== (kk = this.module) && void 0 !== kk ? kk : await this.loadModule();
+        if (null === Fk) return null;
+        const Bk = this.hostOf(Fk),
+          Rk = () => this.guarded((() => Bk.wXk()));
+        if (Rk()) return Bk;
+        if (null !== (0, Hk.J)() || (0, Hk.e)()) return null;
+        const tk = this.deps.createCanvas();
+        tk.width = 1, tk.height = 1;
+        const ak = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const mu = (0, Gu.f)().sampleCount;
-        let Ju;
+        const Xk = (0, Mk.h)().sampleCount;
+        let bk;
         try {
-          Ju = await (0, Hu.u)(Ru, "previewRenderer", Ku, mu, nu.b, Qu)
-        } catch (Nu) {
-          throw Nu instanceof eu.b ? this.stopForTrap(Nu) : (0, Hu.q)(Nu) && await this.deps.onRenderFailed("start_failed", Nu), Nu
+          bk = await (0, vk.r)(Fk, "previewRenderer", tk, Xk, Uk.b, ak)
+        } catch (wk) {
+          throw wk instanceof Ek.d ? this.stopForTrap(wk) : (0, vk.o)(wk) && await this.deps.onRenderFailed("start_failed", wk), wk
         }
-        return this.guarded((() => yu.Hmu(Ju))) ? ((0, Mu.w)(performance.now()), this.samples = mu, this.pageCanvas = Ku, (0, Uu.g)(this.registryOf(Ru)), yu) : Eu() ? yu : null
+        return this.guarded((() => Bk.Zak(bk))) ? ((0, Hk.y)(performance.now()), this.samples = Xk, this.pageCanvas = tk, (0, gk.f)(this.registryOf(Fk)), Bk) : Rk() ? Bk : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(uu, Ru) {
-        for (const mu of this.previews.values()) mu.feed();
+      drawFrame(kk, Fk) {
+        for (const Xk of this.previews.values()) Xk.feed();
         if (this.stopped) return;
-        const yu = this.deps.now(),
-          Eu = uu.frame(Ru);
-        this.costs.push(this.deps.now() - yu), this.costs.length > 120 && this.costs.shift();
-        const Ku = 0 !== (256 & Eu),
-          Qu = 255 & Eu;
-        for (const mu of this.previews.values()) {
+        const Bk = this.deps.now(),
+          Rk = kk.frame(Fk);
+        this.costs.push(this.deps.now() - Bk), this.costs.length > 120 && this.costs.shift();
+        const tk = 0 !== (256 & Rk),
+          ak = 255 & Rk;
+        for (const Xk of this.previews.values()) {
           if (this.stopped) return;
-          mu.collect(Ku)
+          Xk.collect(tk)
         }
         if (!this.stopped) {
-          if (Ku) {
-            const Ru = uu.imu();
-            for (let uu = 0; uu + 1 < Ru.length; uu += 2) this.logError(Ru[uu], Ru[uu + 1])
+          if (tk) {
+            const Fk = kk.mXk();
+            for (let kk = 0; kk + 1 < Fk.length; kk += 2) this.logError(Fk[kk], Fk[kk + 1])
           }
-          if (Qu === zu) return this.stop(), void this.deps.onRenderFailed("lost");
-          if (Qu === Fu) return this.stop(), void this.deps.onFatal(uu.nmu(), uu.smu());
-          if (Qu === wu) return this.stop(), void console.warn(`${tu} the previews stopped: the page's renderer went with its session`);
-          (0, ju.e)(Ru), this.startFrames()
+          if (ak === hk) return this.stop(), void this.deps.onRenderFailed("lost");
+          if (ak === qk) return this.stop(), void this.deps.onFatal(kk.aXk(), kk.XXk());
+          if (ak === Ck) return this.stop(), void console.warn(`${Tk} the previews stopped: the page's renderer went with its session`);
+          (0, Wk.b)(Fk), this.startFrames()
         }
       }
       get isStopped() {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, eu.h)(this.module) || "failed" === (0, Su.u)())
+        return null !== this.module && ((0, Ek.g)(this.module) || "failed" === (0, ek.v)())
       }
-      hostCall(uu, Ru) {
-        if (this.settleIfTrapped()) return uu;
+      hostCall(kk, Fk) {
+        if (this.settleIfTrapped()) return kk;
         try {
-          return Ru()
-        } catch (yu) {
-          if (this.stopIfTrapped(yu)) return uu;
-          throw yu
+          return Fk()
+        } catch (Bk) {
+          if (this.stopIfTrapped(Bk)) return kk;
+          throw Bk
         }
       }
-      guarded(uu) {
+      guarded(kk) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return uu()
-        } catch (Ru) {
-          throw this.stopIfTrapped(Ru), Ru
+          return kk()
+        } catch (Fk) {
+          throw this.stopIfTrapped(Fk), Fk
         }
       }
-      registryOf(uu) {
+      registryOf(kk) {
         return {
-          xEu: (Ru, yu) => {
+          NBk: (Fk, Bk) => {
             this.hostCall(void 0, (() => {
-              uu.xEu(Ru, yu)
+              kk.NBk(Fk, Bk)
             }))
           },
-          SEu: Ru => {
+          HBk: Fk => {
             this.hostCall(void 0, (() => {
-              uu.SEu(Ru)
+              kk.HBk(Fk)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, Uu.g)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, gk.f)(null)), !0)
       }
-      stopIfTrapped(uu) {
-        return !(null === this.module || !(0, eu.i)(this.module, uu)) && (this.stopForTrap(uu), !0)
+      stopIfTrapped(kk) {
+        return !(null === this.module || !(0, Ek.h)(this.module, kk)) && (this.stopForTrap(kk), !0)
       }
-      stopForTrap(uu) {
-        this.stop(), (0, Uu.g)(null), (0, Su.P)(uu)
+      stopForTrap(kk) {
+        this.stop(), (0, gk.f)(null), (0, Gk.h)("previews", kk)
       }
       stop() {
         this.stopped = !0;
-        for (const uu of this.previews.values()) uu.abandon()
+        for (const kk of this.previews.values()) kk.abandon()
       }
-      logError(uu, Ru) {
-        const yu = `${uu}:${Ru}`;
-        this.loggedErrors.has(yu) || (this.loggedErrors.add(yu), console.warn(`${tu} error ${uu} (detail ${Ru})`))
+      logError(kk, Fk) {
+        const Bk = `${kk}:${Fk}`;
+        this.loggedErrors.has(Bk) || (this.loggedErrors.add(Bk), console.warn(`${Tk} error ${kk} (detail ${Fk})`))
       }
     }
-    let fu = null;
+    let FF = null;
 
-    function uR() {
-      return fu ??= new au(function() {
-        const uu = (0, Cu.t)(Wu.clientSideServerUrls.staticUrl, {
-          packUrl: uu => {
-            var Ru, yu;
-            return null !== (Ru = null === (yu = Au.f.current) || void 0 === yu ? void 0 : yu.modelUrl(uu)) && void 0 !== Ru ? Ru : null
+    function BF() {
+      return FF ??= new kF(function() {
+        const kk = (0, Lk.r)(mk.clientSideServerUrls.staticUrl, {
+          packUrl: kk => {
+            var Fk, Bk;
+            return null !== (Fk = null === (Bk = Sk.h.current) || void 0 === Bk ? void 0 : Bk.modelUrl(kk)) && void 0 !== Fk ? Fk : null
           }
         });
         return {
-          loadModule: Ou,
-          startModels: async uu => {
+          loadModule: Ik,
+          startModels: async kk => {
             const {
-              pageModelPool: Ru
-            } = await yu.e(42).then((() => yu(42935))), {
-              pool: Eu
-            } = Ru(uu);
-            return (uu, Ru) => Eu.build(uu, Ru)
+              pageModelPool: Fk
+            } = await Bk.e(42).then((() => Bk(42819))), {
+              pool: Rk
+            } = Fk(kk);
+            return (kk, Fk) => Rk.build(kk, Fk)
           },
-          fetchAnimations: async () => Ju(await (0, Eu.E)(ou())),
-          playerFile: async () => (await (0, Cu.p)()).PLAYER_FILE,
-          onAnimationsFailed: (uu, Ru) => {
-            Nu("previewAnimations", ou(), uu, Ru)
+          fetchAnimations: async () => bk(await (0, Rk.N)(lk())),
+          playerFile: async () => (await (0, Lk.o)()).PLAYER_FILE,
+          onAnimationsFailed: (kk, Fk) => {
+            wk("previewAnimations", lk(), kk, Fk)
           },
-          provideBuiltInAnimationPack: uu => {
-            Bu().provide(uu)
+          provideBuiltInAnimationPack: kk => {
+            Jk().provide(kk)
           },
-          openExtras: Mu.D,
-          files: uu,
-          images: (0, Au.k)((0, du.l)(uu.url), (() => Au.f.current)),
-          pack: Au.f,
-          game: Du.c,
-          fetchModel: uu => (0, Cu.i)(uu),
+          openExtras: Hk.H,
+          files: kk,
+          images: (0, Sk.k)((0, ik.l)(kk.url), (() => Sk.h.current)),
+          pack: Sk.h,
+          game: Nk.c,
+          fetchModel: kk => (0, Lk.j)(kk),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: uu => requestAnimationFrame(uu),
-          cancelFrame: uu => {
-            cancelAnimationFrame(uu)
+          requestFrame: kk => requestAnimationFrame(kk),
+          cancelFrame: kk => {
+            cancelAnimationFrame(kk)
           },
-          onRenderFailed: qu,
-          onFatal: (uu, Ru) => {
-            console.error(`${tu} the previews stopped: renderer error ${uu} (detail ${Ru})`)
+          onRenderFailed: nk,
+          onFatal: (kk, Fk) => {
+            console.error(`${Tk} the previews stopped: renderer error ${kk} (detail ${Fk})`)
           }
         }
-      }()), fu
+      }()), FF
     }
-    var RR = yu(599),
-      yR = yu(38401),
-      ER = yu(3093);
-    const KR = {
+    var RF = Bk(594),
+      tF = Bk(38277),
+      aF = Bk(3090);
+    const XF = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1119,320 +1120,320 @@ export const modules = {
       gunReady: 14,
       gunAimed: 15
     };
-    const QR = "[bloxd-previews]",
-      mR = new Uint32Array(5);
+    const bF = "[bloxd-previews]",
+      wF = new Uint32Array(5);
 
-    function JR(uu) {
-      return RR.l.indexOf(uu)
+    function dF(kk) {
+      return RF.i.indexOf(kk)
     }
-    const NR = new WeakSet;
+    const sF = new WeakSet;
 
-    function XR(uu) {
-      const Ru = (0, yR.f)(uu),
-        yu = null === Ru ? -1 : VR(Ru);
-      return -1 !== yu ? yu : (NR.has(uu) || (NR.add(uu), console.warn(`${QR} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function VR(uu) {
-      var Ru;
-      return null !== (Ru = KR[uu]) && void 0 !== Ru ? Ru : -1
+    function VF(kk) {
+      const Fk = (0, tF.e)(kk),
+        Bk = null === Fk ? -1 : JF(Fk);
+      return -1 !== Bk ? Bk : (sF.has(kk) || (sF.add(kk), console.warn(`${bF} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function rR(uu, Ru) {
+    function JF(kk) {
+      var Fk;
+      return null !== (Fk = XF[kk]) && void 0 !== Fk ? Fk : -1
+    }
+
+    function AF(kk, Fk) {
       const {
-        canvas: yu
-      } = Ru;
-      yu.style.width = "100%", yu.style.height = "100%", yu.style.display = "block", uu.appendChild(yu)
+        canvas: Bk
+      } = Fk;
+      Bk.style.width = "100%", Bk.style.height = "100%", Bk.style.display = "block", kk.appendChild(Bk)
     }
 
-    function BR(uu) {
-      const Ru = uu.getBoundingClientRect();
-      return [Ru.width, Ru.height]
+    function eF(kk) {
+      const Fk = kk.getBoundingClientRect();
+      return [Fk.width, Fk.height]
     }
-    class xR {
-      constructor(uu, Ru) {
-        this.preview = uu, this.showView = Ru
+    class yF {
+      constructor(kk, Fk) {
+        this.preview = kk, this.showView = Fk
       }
-      show(uu) {
-        this.showView(this.preview, uu)
+      show(kk) {
+        this.showView(this.preview, kk)
       }
-      resize(uu, Ru) {
-        this.preview.resize(uu, Ru)
+      resize(kk, Fk) {
+        this.preview.resize(kk, Fk)
       }
       close() {
         this.preview.close()
       }
     }
-    class SR {
-      constructor(uu) {
-        this.preview = uu, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(uu) {
+    class fF {
+      constructor(kk) {
+        this.preview = kk, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(kk) {
           const {
-            canvas: Ru
-          } = uu;
-          let yu = null;
-          const Eu = uu => {
-              var Eu;
-              yu = {
-                pointer: uu.pointerId,
-                x: uu.clientX,
-                y: uu.clientY
-              }, null === (Eu = Ru.setPointerCapture) || void 0 === Eu || Eu.call(Ru, uu.pointerId)
+            canvas: Fk
+          } = kk;
+          let Bk = null;
+          const Rk = kk => {
+              var Rk;
+              Bk = {
+                pointer: kk.pointerId,
+                x: kk.clientX,
+                y: kk.clientY
+              }, null === (Rk = Fk.setPointerCapture) || void 0 === Rk || Rk.call(Fk, kk.pointerId)
             },
-            Ku = Ru => {
-              var Eu;
-              const Ku = uu.orbit;
-              if ((null === (Eu = yu) || void 0 === Eu ? void 0 : Eu.pointer) !== Ru.pointerId || null === Ku) return;
-              const Qu = Ru.clientX - yu.x,
-                mu = Ru.clientY - yu.y;
-              yu = {
-                ...yu,
-                x: Ru.clientX,
-                y: Ru.clientY
-              }, uu.setOrbit({
-                alpha: Ku.alpha - .01 * Qu,
-                beta: Math.min(Math.PI - .01, Math.max(.01, Ku.beta - .01 * mu)),
-                radius: Ku.radius
+            tk = Fk => {
+              var Rk;
+              const tk = kk.orbit;
+              if ((null === (Rk = Bk) || void 0 === Rk ? void 0 : Rk.pointer) !== Fk.pointerId || null === tk) return;
+              const ak = Fk.clientX - Bk.x,
+                Xk = Fk.clientY - Bk.y;
+              Bk = {
+                ...Bk,
+                x: Fk.clientX,
+                y: Fk.clientY
+              }, kk.setOrbit({
+                alpha: tk.alpha - .01 * ak,
+                beta: Math.min(Math.PI - .01, Math.max(.01, tk.beta - .01 * Xk)),
+                radius: tk.radius
               })
             },
-            Qu = uu => {
-              var Ru;
-              (null === (Ru = yu) || void 0 === Ru ? void 0 : Ru.pointer) === uu.pointerId && (yu = null)
+            ak = kk => {
+              var Fk;
+              (null === (Fk = Bk) || void 0 === Fk ? void 0 : Fk.pointer) === kk.pointerId && (Bk = null)
             },
-            mu = Ru => {
-              const yu = uu.orbit;
-              if (null === yu) return;
-              Ru.preventDefault();
-              const Eu = Ru.deltaY * (Ru.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : Ru.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                Ku = Math.min(100, Math.max(5, yu.radius + .08 * Eu));
-              uu.setOrbit({
-                ...yu,
-                radius: Ku
+            Xk = Fk => {
+              const Bk = kk.orbit;
+              if (null === Bk) return;
+              Fk.preventDefault();
+              const Rk = Fk.deltaY * (Fk.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : Fk.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                tk = Math.min(100, Math.max(5, Bk.radius + .08 * Rk));
+              kk.setOrbit({
+                ...Bk,
+                radius: tk
               })
             };
-          return Ru.style.touchAction = "none", Ru.addEventListener("pointerdown", Eu), Ru.addEventListener("pointermove", Ku), Ru.addEventListener("pointerup", Qu), Ru.addEventListener("pointercancel", Qu), Ru.addEventListener("wheel", mu, {
+          return Fk.style.touchAction = "none", Fk.addEventListener("pointerdown", Rk), Fk.addEventListener("pointermove", tk), Fk.addEventListener("pointerup", ak), Fk.addEventListener("pointercancel", ak), Fk.addEventListener("wheel", Xk, {
             passive: !1
           }), () => {
-            Ru.removeEventListener("pointerdown", Eu), Ru.removeEventListener("pointermove", Ku), Ru.removeEventListener("pointerup", Qu), Ru.removeEventListener("pointercancel", Qu), Ru.removeEventListener("wheel", mu)
+            Fk.removeEventListener("pointerdown", Rk), Fk.removeEventListener("pointermove", tk), Fk.removeEventListener("pointerup", ak), Fk.removeEventListener("pointercancel", ak), Fk.removeEventListener("wheel", Xk)
           }
-        }(uu), this.dev = {
-          canvas: () => uu.canvas,
+        }(kk), this.dev = {
+          canvas: () => kk.canvas,
           isolateHead: () => {
-            console.warn(`${QR} isolateHead: noa's character preview only`)
+            console.warn(`${bF} isolateHead: noa's character preview only`)
           }
-        }, this.apply(), this.ready = uu.untilSettled().then((() => {
-          if (uu.isStopped) throw new Error(`${QR} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = kk.untilSettled().then((() => {
+          if (kk.isStopped) throw new Error(`${bF} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(uu, Ru) {
-        this.cosmetics[uu] = Ru, this.apply()
+      setCosmetic(kk, Fk) {
+        this.cosmetics[kk] = Fk, this.apply()
       }
-      playEmote(uu) {
-        null === uu || uu !== this.emote ? (this.emote = uu, this.apply()) : this.preview.replay()
+      playEmote(kk) {
+        null === kk || kk !== this.emote ? (this.emote = kk, this.apply()) : this.preview.replay()
       }
-      untilDrawn(uu) {
+      untilDrawn(kk) {
         return this.preview.untilSettled()
       }
-      setOrbit(uu) {
+      setOrbit(kk) {
         let {
-          yaw: Ru,
-          pitch: yu,
-          radius: Eu
-        } = uu;
-        const Ku = this.preview.orbit;
-        null !== Ku && this.preview.setOrbit({
-          alpha: Ru,
-          beta: yu,
-          radius: null !== Eu && void 0 !== Eu ? Eu : Ku.radius
+          yaw: Fk,
+          pitch: Bk,
+          radius: Rk
+        } = kk;
+        const tk = this.preview.orbit;
+        null !== tk && this.preview.setOrbit({
+          alpha: Fk,
+          beta: Bk,
+          radius: null !== Rk && void 0 !== Rk ? Rk : tk.radius
         })
       }
       resetCamera() {}
-      resize(uu, Ru) {
-        this.preview.resize(uu, Ru)
+      resize(kk, Fk) {
+        this.preview.resize(kk, Fk)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var uu;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), mR, null === (uu = this.emote) ? -1 : VR(uu))
+        var kk;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), wF, null === (kk = this.emote) ? -1 : JF(kk))
       }
     }
 
-    function pR(uu, Ru) {
+    function mF(kk, Fk) {
       let {
-        mobType: yu,
-        variation: Eu,
-        animation: Ku
-      } = Ru;
-      uu.setMob(JR(yu), null !== Eu && void 0 !== Eu ? Eu : "", 1, XR(Ku))
+        mobType: Bk,
+        variation: Rk,
+        animation: tk
+      } = Fk;
+      kk.setMob(dF(Bk), null !== Rk && void 0 !== Rk ? Rk : "", 1, VF(tk))
     }
 
-    function TR(uu, Ru) {
+    function WF(kk, Fk) {
       let {
-        mobType: yu,
-        variation: Eu,
-        metaInfo: Ku,
-        tamed: Qu
-      } = Ru;
-      uu.setPet(JR(yu), Eu, Ku, Qu)
+        mobType: Bk,
+        variation: Rk,
+        metaInfo: tk,
+        tamed: ak
+      } = Fk;
+      kk.setPet(dF(Bk), Rk, tk, ak)
     }
-    const WR = {
+    const vF = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class jR {
-      constructor(uu, Ru, yu, Eu) {
+    class iF {
+      constructor(kk, Fk, Bk, Rk) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, uu(yu.width, Eu[1], Eu).then((uu => {
-          if (this.closed) return void uu.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, kk(Bk.width, Rk[1], Rk).then((kk => {
+          if (this.closed) return void kk.close();
           const {
-            style: yu
-          } = uu.canvas;
-          yu.position = "absolute", yu.top = "0", yu.visibility = "hidden", rR(Ru, uu), this.preview = uu, this.apply()
-        })).catch((uu => {
-          console.error(`${QR} couldn't open a lineup figure`, uu)
+            style: Bk
+          } = kk.canvas;
+          Bk.position = "absolute", Bk.top = "0", Bk.visibility = "hidden", AF(Fk, kk), this.preview = kk, this.apply()
+        })).catch((kk => {
+          console.error(`${bF} couldn't open a lineup figure`, kk)
         }))
       }
-      update(uu, Ru, yu, Eu, Ku) {
-        this.figure = uu, this.shown = Ru, this.order = yu, this.span = Eu, this.lineup = Ku, this.apply()
+      update(kk, Fk, Bk, Rk, tk) {
+        this.figure = kk, this.shown = Fk, this.order = Bk, this.span = Rk, this.lineup = tk, this.apply()
       }
       close() {
-        var uu;
-        this.closed = !0, null === (uu = this.preview) || void 0 === uu || uu.close(), this.preview = null
+        var kk;
+        this.closed = !0, null === (kk = this.preview) || void 0 === kk || kk.close(), this.preview = null
       }
       apply() {
         const {
-          preview: uu,
-          figure: Ru,
-          lineup: yu
+          preview: kk,
+          figure: Fk,
+          lineup: Bk
         } = this;
-        if (null === uu || null === Ru) return;
-        if (this.given !== Ru) {
-          var Eu;
-          this.given = Ru, this.loaded = !1;
-          const yu = null === Ru.pC ? 0 : null !== (Eu = (0, ER.b)(Ru.pC)) && void 0 !== Eu ? Eu : 0;
-          uu.setFigure(function(uu) {
-            return JSON.stringify(Object.fromEntries(uu.cosmetics))
-          }(Ru), yu, XR(Ru.animation), Ru.size), uu.untilSettled().then((() => {
-            this.given === Ru && (this.loaded = !0, this.apply())
+        if (null === kk || null === Fk) return;
+        if (this.given !== Fk) {
+          var Rk;
+          this.given = Fk, this.loaded = !1;
+          const Bk = null === Fk.TY ? 0 : null !== (Rk = (0, aF.c)(Fk.TY)) && void 0 !== Rk ? Rk : 0;
+          kk.setFigure(function(kk) {
+            return JSON.stringify(Object.fromEntries(kk.cosmetics))
+          }(Fk), Bk, VF(Fk.animation), Fk.size), kk.untilSettled().then((() => {
+            this.given === Fk && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: Ku,
-          width: Qu
+          left: tk,
+          width: ak
         } = this.span;
-        uu.resize(Qu, yu[1], yu);
+        kk.resize(ak, Bk[1], Bk);
         const {
-          style: mu
-        } = uu.canvas;
-        mu.left = `${Ku}px`, mu.width = `${Qu}px`, mu.zIndex = this.order, mu.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: Xk
+        } = kk.canvas;
+        Xk.left = `${tk}px`, Xk.width = `${ak}px`, Xk.zIndex = this.order, Xk.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class HR {
-      constructor(uu, Ru) {
-        this.open = Ru, this.layer = void 0, this.figures = [], this.view = {
+    class YF {
+      constructor(kk, Fk) {
+        this.open = Fk, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = BR(uu), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = eF(kk), this.layer = document.createElement("div");
         const {
-          style: yu
+          style: Bk
         } = this.layer;
-        yu.position = "relative", yu.isolation = "isolate", yu.overflow = "hidden", yu.width = "100%", yu.height = "100%", yu.pointerEvents = "none", uu.appendChild(this.layer)
+        Bk.position = "relative", Bk.isolation = "isolate", Bk.overflow = "hidden", Bk.width = "100%", Bk.height = "100%", Bk.pointerEvents = "none", kk.appendChild(this.layer)
       }
-      show(uu) {
-        this.view = uu, this.place()
+      show(kk) {
+        this.view = kk, this.place()
       }
-      resize(uu, Ru) {
-        this.size = [uu, Ru], this.place()
+      resize(kk, Fk) {
+        this.size = [kk, Fk], this.place()
       }
       close() {
-        for (const uu of this.figures) uu.close();
+        for (const kk of this.figures) kk.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: uu,
-          shown: Ru
+          figures: kk,
+          shown: Fk
         } = this.view;
-        for (const Eu of this.figures.splice(uu.length)) Eu.close();
+        for (const Rk of this.figures.splice(kk.length)) Rk.close();
         const {
-          size: yu
+          size: Bk
         } = this;
-        uu.forEach(((Eu, Ku) => {
-          var Qu;
-          const mu = function(uu, Ru, yu, Eu) {
-            let [Ku, Qu] = Eu;
-            const mu = (uu + .5) * Ku / Ru,
-              Ju = Math.min(Math.max(Ku / Ru, 2 * yu * Qu), 2 * Math.max(mu, Ku - mu));
+        kk.forEach(((Rk, tk) => {
+          var ak;
+          const Xk = function(kk, Fk, Bk, Rk) {
+            let [tk, ak] = Rk;
+            const Xk = (kk + .5) * tk / Fk,
+              bk = Math.min(Math.max(tk / Fk, 2 * Bk * ak), 2 * Math.max(Xk, tk - Xk));
             return {
-              left: mu - Ju / 2,
-              width: Ju
+              left: Xk - bk / 2,
+              width: bk
             }
-          }(Ku, uu.length, function(uu) {
+          }(tk, kk.length, function(kk) {
             let {
-              animation: Ru,
-              size: yu
-            } = uu;
+              animation: Fk,
+              size: Bk
+            } = kk;
             const {
-              aimed: Eu,
-              ready: Ku
-            } = WR;
-            return (XR(Ru) === KR.gunAimed ? Eu : Ku) * yu
-          }(Eu), yu);
-          this.figures[Ku] ??= new jR(this.open, this.layer, mu, yu), this.figures[Ku].update(Eu, null !== (Qu = Ru[Ku]) && void 0 !== Qu && Qu, function(uu, Ru) {
-            return String(Math.round(1e3 * uu) + Ru)
-          }(Eu.size, Ku), mu, yu)
+              aimed: Rk,
+              ready: tk
+            } = vF;
+            return (VF(Fk) === XF.gunAimed ? Rk : tk) * Bk
+          }(Rk), Bk);
+          this.figures[tk] ??= new iF(this.open, this.layer, Xk, Bk), this.figures[tk].update(Rk, null !== (ak = Fk[tk]) && void 0 !== ak && ak, function(kk, Fk) {
+            return String(Math.round(1e3 * kk) + Fk)
+          }(Rk.size, tk), Xk, Bk)
         }))
       }
     }
-    const dR = {
-      player: cu,
-      store: Lu
+    const oF = {
+      player: zk,
+      store: Pk
     };
-    class bR {
-      constructor(uu) {
-        this.page = uu
+    class LF {
+      constructor(kk) {
+        this.page = kk
       }
-      async openMob(uu) {
-        return new xR(await this.open(uu, gu), pR)
+      async openMob(kk) {
+        return new yF(await this.open(kk, Dk), mF)
       }
-      async openPet(uu) {
-        return new xR(await this.open(uu, gu), TR)
+      async openPet(kk) {
+        return new yF(await this.open(kk, Dk), WF)
       }
-      openMobLineup(uu) {
-        return new HR(uu, ((uu, Ru, yu) => this.page.openPreview(gu, uu, Ru, yu)))
+      openMobLineup(kk) {
+        return new YF(kk, ((kk, Fk, Bk) => this.page.openPreview(Dk, kk, Fk, Bk)))
       }
-      async openCharacter(uu, Ru) {
-        return new SR(await this.open(uu, dR[Ru]))
+      async openCharacter(kk, Fk) {
+        return new fF(await this.open(kk, oF[Fk]))
       }
-      async open(uu, Ru) {
-        const [yu, Eu] = BR(uu), Ku = await this.page.openPreview(Ru, yu, Eu);
-        return rR(uu, Ku), Ku
+      async open(kk, Fk) {
+        const [Bk, Rk] = eF(kk), tk = await this.page.openPreview(Fk, Bk, Rk);
+        return AF(kk, tk), tk
       }
     }
   },
-  36541: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      A: () => Xu,
-      B: () => xu,
-      C: () => Su,
-      D: () => pu,
-      G: () => Wu,
-      c: () => Eu,
-      g: () => Ku,
-      j: () => Bu,
-      n: () => Tu,
-      r: () => Vu,
-      v: () => ju,
-      x: () => Nu
+  36436: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Rk,
+      e: () => tk,
+      f: () => Jk,
+      g: () => fk,
+      h: () => sk,
+      l: () => Wk,
+      o: () => wk,
+      p: () => dk,
+      s: () => Ak,
+      w: () => ek,
+      y: () => yk,
+      z: () => mk
     });
-    const Eu = [{
+    const Rk = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1449,64 +1450,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function Ku(uu, Ru) {
+    function tk(kk, Fk) {
       const {
-        numLines: yu,
-        charsPerLine: Ku
-      } = Eu[Ru];
-      return Hu(uu, yu, Ku, !1)
+        numLines: Bk,
+        charsPerLine: tk
+      } = Rk[Fk];
+      return vk(kk, Bk, tk, !1)
     }
-    const Qu = 7 / 8,
-      mu = .25,
-      Ju = 8;
+    const ak = 7 / 8,
+      Xk = .25,
+      bk = 8;
 
-    function Nu(uu, Ru) {
+    function wk(kk, Fk) {
       return {
-        width: Math.min(uu, Ju) - 2 * mu,
-        height: Math.min(Ru, Ju) - 2 * mu
+        width: Math.min(kk, bk) - 2 * Xk,
+        height: Math.min(Fk, bk) - 2 * Xk
       }
     }
 
-    function Xu(uu, Ru, yu) {
-      const Ku = Nu(uu, Ru),
+    function dk(kk, Fk, Bk) {
+      const tk = wk(kk, Fk),
         {
-          numLines: mu,
-          charsPerLine: Ju
-        } = Eu[yu];
+          numLines: Xk,
+          charsPerLine: bk
+        } = Rk[Bk];
       return {
-        numLines: Math.max(1, Math.floor(mu / Qu * Ku.height)),
-        charsPerLine: Math.max(1, Math.floor(Ju * Ku.width))
+        numLines: Math.max(1, Math.floor(Xk / ak * tk.height)),
+        charsPerLine: Math.max(1, Math.floor(bk * tk.width))
       }
     }
 
-    function Vu(uu, Ru, yu, Eu) {
+    function sk(kk, Fk, Bk, Rk) {
       const {
-        numLines: Ku,
-        charsPerLine: Qu
-      } = Xu(yu, Eu, Ru);
-      return Hu(uu, Ku, Qu, !1)
+        numLines: tk,
+        charsPerLine: ak
+      } = dk(Bk, Rk, Fk);
+      return vk(kk, tk, ak, !1)
     }
-    const ru = 32e3;
+    const Vk = 32e3;
 
-    function Bu(uu) {
-      return uu.slice(0, ru)
+    function Jk(kk) {
+      return kk.slice(0, Vk)
     }
-    const xu = 512e3,
-      Su = 64,
-      pu = xu;
+    const Ak = 512e3,
+      ek = 64,
+      yk = Ak;
 
-    function Tu(uu, Ru) {
-      const yu = Math.max(0, pu - Ru),
-        Eu = Math.min(xu, yu);
-      return uu.slice(0, Eu)
+    function fk(kk, Fk) {
+      const Bk = Math.max(0, yk - Fk),
+        Rk = Math.min(Ak, Bk);
+      return kk.slice(0, Rk)
     }
-    const Wu = {
+    const mk = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      pJ: {
+      Eb: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1518,31 +1519,31 @@ export const modules = {
       }
     };
 
-    function ju(uu, Ru) {
+    function Wk(kk, Fk) {
       const {
-        numLines: yu,
-        charsPerLine: Eu
-      } = Wu[Ru];
-      return Hu(uu, yu, Eu, !1)
+        numLines: Bk,
+        charsPerLine: Rk
+      } = mk[Fk];
+      return vk(kk, Bk, Rk, !1)
     }
 
-    function Hu(uu, Ru, yu, Eu, Ku) {
-      (Ku || Eu) && (uu = uu.slice(0, null !== Ku && void 0 !== Ku ? Ku : Ru * yu));
-      const Qu = uu.split("\n");
-      if (Qu.length > Ru && Qu.splice(Ru, Qu.length - Ru), !Eu)
-        for (let mu = 0; mu < Qu.length; mu++) {
-          const uu = Qu[mu];
-          uu.length > yu && (Qu[mu] = uu.substring(0, yu), Qu.length < Ru && Qu.splice(mu + 1, 0, uu.substring(yu)))
+    function vk(kk, Fk, Bk, Rk, tk) {
+      (tk || Rk) && (kk = kk.slice(0, null !== tk && void 0 !== tk ? tk : Fk * Bk));
+      const ak = kk.split("\n");
+      if (ak.length > Fk && ak.splice(Fk, ak.length - Fk), !Rk)
+        for (let Xk = 0; Xk < ak.length; Xk++) {
+          const kk = ak[Xk];
+          kk.length > Bk && (ak[Xk] = kk.substring(0, Bk), ak.length < Fk && ak.splice(Xk + 1, 0, kk.substring(Bk)))
         }
-      return Qu.join("\n")
+      return ak.join("\n")
     }
   },
-  42858: (uu, Ru, yu) => {
-    uu.exports = yu.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
+  42741: (kk, Fk, Bk) => {
+    kk.exports = Bk.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
   },
-  42865: (uu, Ru, yu) => {
-    uu.exports = yu.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
+  42745: (kk, Fk, Bk) => {
+    kk.exports = Bk.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

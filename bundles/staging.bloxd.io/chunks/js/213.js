@@ -1,240 +1,240 @@
-/*! For license information please see q3ynmh.213.46977574.chunk.js.LICENSE.txt */
+/*! For license information please see 6ndy1f.213.19c95412.chunk.js.LICENSE.txt */
 export const id = 213;
 export const ids = [213];
 export const modules = {
-  39276: (uu, Ru, yu) => {
-    uu.exports = Ku;
-    var Eu = yu(352);
+  39133: (kk, Fk, Bk) => {
+    kk.exports = tk;
+    var Rk = Bk(302);
 
-    function Ku(uu, Ru) {
-      if (!(this instanceof Ku)) return new Ku(uu, Ru);
-      var yu = Eu.create();
-      Eu.add(yu, uu, Ru), this.base = Eu.min(Eu.create(), uu, yu), this.vec = Eu.clone(Ru), this.max = Eu.max(Eu.create(), uu, yu), this.mag = Eu.length(this.vec)
+    function tk(kk, Fk) {
+      if (!(this instanceof tk)) return new tk(kk, Fk);
+      var Bk = Rk.create();
+      Rk.add(Bk, kk, Fk), this.base = Rk.min(Rk.create(), kk, Bk), this.vec = Rk.clone(Fk), this.max = Rk.max(Rk.create(), kk, Bk), this.mag = Rk.length(this.vec)
     }
-    var Qu = Ku.prototype;
-    Qu.width = function() {
+    var ak = tk.prototype;
+    ak.width = function() {
       return this.vec[0]
-    }, Qu.height = function() {
+    }, ak.height = function() {
       return this.vec[1]
-    }, Qu.depth = function() {
+    }, ak.depth = function() {
       return this.vec[2]
-    }, Qu.x0 = function() {
+    }, ak.x0 = function() {
       return this.base[0]
-    }, Qu.y0 = function() {
+    }, ak.y0 = function() {
       return this.base[1]
-    }, Qu.z0 = function() {
+    }, ak.z0 = function() {
       return this.base[2]
-    }, Qu.x1 = function() {
+    }, ak.x1 = function() {
       return this.max[0]
-    }, Qu.y1 = function() {
+    }, ak.y1 = function() {
       return this.max[1]
-    }, Qu.z1 = function() {
+    }, ak.z1 = function() {
       return this.max[2]
-    }, Qu.translate = function(uu) {
-      return Eu.add(this.max, this.max, uu), Eu.add(this.base, this.base, uu), this
-    }, Qu.setPosition = function(uu) {
-      return Eu.add(this.max, uu, this.vec), Eu.copy(this.base, uu), this
-    }, Qu.expand = function(uu) {
-      var Ru = Eu.create(),
-        yu = Eu.create();
-      return Eu.max(Ru, uu.max, this.max), Eu.min(yu, uu.base, this.base), Eu.subtract(Ru, Ru, yu), new Ku(yu, Ru)
-    }, Qu.intersects = function(uu) {
-      return !(uu.base[0] > this.max[0]) && (!(uu.base[1] > this.max[1]) && (!(uu.base[2] > this.max[2]) && (!(uu.max[0] < this.base[0]) && (!(uu.max[1] < this.base[1]) && !(uu.max[2] < this.base[2])))))
-    }, Qu.touches = function(uu) {
-      var Ru = this.union(uu);
-      return null !== Ru && (0 == Ru.width() || 0 == Ru.height() || 0 == Ru.depth())
-    }, Qu.union = function(uu) {
-      if (!this.intersects(uu)) return null;
-      var Ru = Math.max(uu.base[0], this.base[0]),
-        yu = Math.max(uu.base[1], this.base[1]),
-        Eu = Math.max(uu.base[2], this.base[2]);
-      return new Ku([Ru, yu, Eu], [Math.min(uu.max[0], this.max[0]) - Ru, Math.min(uu.max[1], this.max[1]) - yu, Math.min(uu.max[2], this.max[2]) - Eu])
+    }, ak.translate = function(kk) {
+      return Rk.add(this.max, this.max, kk), Rk.add(this.base, this.base, kk), this
+    }, ak.setPosition = function(kk) {
+      return Rk.add(this.max, kk, this.vec), Rk.copy(this.base, kk), this
+    }, ak.expand = function(kk) {
+      var Fk = Rk.create(),
+        Bk = Rk.create();
+      return Rk.max(Fk, kk.max, this.max), Rk.min(Bk, kk.base, this.base), Rk.subtract(Fk, Fk, Bk), new tk(Bk, Fk)
+    }, ak.intersects = function(kk) {
+      return !(kk.base[0] > this.max[0]) && (!(kk.base[1] > this.max[1]) && (!(kk.base[2] > this.max[2]) && (!(kk.max[0] < this.base[0]) && (!(kk.max[1] < this.base[1]) && !(kk.max[2] < this.base[2])))))
+    }, ak.touches = function(kk) {
+      var Fk = this.union(kk);
+      return null !== Fk && (0 == Fk.width() || 0 == Fk.height() || 0 == Fk.depth())
+    }, ak.union = function(kk) {
+      if (!this.intersects(kk)) return null;
+      var Fk = Math.max(kk.base[0], this.base[0]),
+        Bk = Math.max(kk.base[1], this.base[1]),
+        Rk = Math.max(kk.base[2], this.base[2]);
+      return new tk([Fk, Bk, Rk], [Math.min(kk.max[0], this.max[0]) - Fk, Math.min(kk.max[1], this.max[1]) - Bk, Math.min(kk.max[2], this.max[2]) - Rk])
     }
   },
-  39274: uu => {
-    uu.exports = function(uu, Ru, yu, Eu, Ku, Qu) {
-      var mu = +Ru[0],
-        Ju = +Ru[1],
-        Nu = +Ru[2],
-        Xu = +yu[0],
-        Vu = +yu[1],
-        ru = +yu[2],
-        Bu = Math.sqrt(Xu * Xu + Vu * Vu + ru * ru);
-      if (0 === Bu) throw new Error("Can't raycast along a zero vector");
-      return function(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu) {
-        for (var Vu = 0, ru = Math.floor, Bu = 0 | ru(Ru), xu = 0 | ru(yu), Su = 0 | ru(Eu), pu = Ku > 0 ? 1 : -1, Tu = Qu > 0 ? 1 : -1, Wu = mu > 0 ? 1 : -1, ju = Math.abs(1 / Ku), Hu = Math.abs(1 / Qu), du = Math.abs(1 / mu), bu = ju < 1 / 0 ? ju * (pu > 0 ? Bu + 1 - Ru : Ru - Bu) : 1 / 0, Cu = Hu < 1 / 0 ? Hu * (Tu > 0 ? xu + 1 - yu : yu - xu) : 1 / 0, ku = du < 1 / 0 ? du * (Wu > 0 ? Su + 1 - Eu : Eu - Su) : 1 / 0, eu = -1; Vu <= Ju;) {
-          var Au = uu(Bu, xu, Su);
-          if (Au) return Nu && (Nu[0] = Ru + Vu * Ku, Nu[1] = yu + Vu * Qu, Nu[2] = Eu + Vu * mu), Xu && (Xu[0] = Xu[1] = Xu[2] = 0, 0 === eu && (Xu[0] = -pu), 1 === eu && (Xu[1] = -Tu), 2 === eu && (Xu[2] = -Wu)), Au;
-          bu < Cu ? bu < ku ? (Bu += pu, Vu = bu, bu += ju, eu = 0) : (Su += Wu, Vu = ku, ku += du, eu = 2) : Cu < ku ? (xu += Tu, Vu = Cu, Cu += Hu, eu = 1) : (Su += Wu, Vu = ku, ku += du, eu = 2)
+  39130: kk => {
+    kk.exports = function(kk, Fk, Bk, Rk, tk, ak) {
+      var Xk = +Fk[0],
+        bk = +Fk[1],
+        wk = +Fk[2],
+        dk = +Bk[0],
+        sk = +Bk[1],
+        Vk = +Bk[2],
+        Jk = Math.sqrt(dk * dk + sk * sk + Vk * Vk);
+      if (0 === Jk) throw new Error("Can't raycast along a zero vector");
+      return function(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk) {
+        for (var sk = 0, Vk = Math.floor, Jk = 0 | Vk(Fk), Ak = 0 | Vk(Bk), ek = 0 | Vk(Rk), yk = tk > 0 ? 1 : -1, fk = ak > 0 ? 1 : -1, mk = Xk > 0 ? 1 : -1, Wk = Math.abs(1 / tk), vk = Math.abs(1 / ak), ik = Math.abs(1 / Xk), Yk = Wk < 1 / 0 ? Wk * (yk > 0 ? Jk + 1 - Fk : Fk - Jk) : 1 / 0, Lk = vk < 1 / 0 ? vk * (fk > 0 ? Ak + 1 - Bk : Bk - Ak) : 1 / 0, Ok = ik < 1 / 0 ? ik * (mk > 0 ? ek + 1 - Rk : Rk - ek) : 1 / 0, Ek = -1; sk <= bk;) {
+          var Sk = kk(Jk, Ak, ek);
+          if (Sk) return wk && (wk[0] = Fk + sk * tk, wk[1] = Bk + sk * ak, wk[2] = Rk + sk * Xk), dk && (dk[0] = dk[1] = dk[2] = 0, 0 === Ek && (dk[0] = -yk), 1 === Ek && (dk[1] = -fk), 2 === Ek && (dk[2] = -mk)), Sk;
+          Yk < Lk ? Yk < Ok ? (Jk += yk, sk = Yk, Yk += Wk, Ek = 0) : (ek += mk, sk = Ok, Ok += ik, Ek = 2) : Lk < Ok ? (Ak += fk, sk = Lk, Lk += vk, Ek = 1) : (ek += mk, sk = Ok, Ok += ik, Ek = 2)
         }
-        return Nu && (Nu[0] = Ru + Vu * Ku, Nu[1] = yu + Vu * Qu, Nu[2] = Eu + Vu * mu), Xu && (Xu[0] = Xu[1] = Xu[2] = 0), 0
-      }(uu, mu, Ju, Nu, Xu /= Bu, Vu /= Bu, ru /= Bu, Eu = "undefined" === typeof Eu ? 64 : +Eu, Ku, Qu)
+        return wk && (wk[0] = Fk + sk * tk, wk[1] = Bk + sk * ak, wk[2] = Rk + sk * Xk), dk && (dk[0] = dk[1] = dk[2] = 0), 0
+      }(kk, Xk, bk, wk, dk /= Jk, sk /= Jk, Vk /= Jk, Rk = "undefined" === typeof Rk ? 64 : +Rk, tk, ak)
     }
   },
-  38855: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ju,
-      g: () => Qu
+  38738: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => bk,
+      h: () => ak
     });
-    var Eu = yu(3895);
-    let Ku = null;
+    var Rk = Bk(3852);
+    let tk = null;
 
-    function Qu(uu) {
-      return null !== Ku && uu === Ku
+    function ak(kk) {
+      return null !== tk && kk === tk
     }
 
-    function mu() {
-      this.vF = !1, this.stopPropagation = !1, this.Kw = !1, this.disabled = !1
+    function Xk() {
+      this.pD = !1, this.stopPropagation = !1, this.jD = !1, this.disabled = !1
     }
-    class Ju {
-      constructor(uu, Ru) {
+    class bk {
+      constructor(kk, Fk) {
         this.version = "0.7.0";
-        var yu = Object.assign({}, new mu, Ru || {});
-        this.element = uu || document, this.vF = !!yu.vF, this.stopPropagation = !!yu.stopPropagation, this.Kw = !!yu.Kw, this.disabled = !!yu.disabled, this.filterEvents = (uu, Ru) => !0, this.down = new Eu.EventEmitter, this.up = new Eu.EventEmitter, this.state = {}, this.Jw = {
+        var Bk = Object.assign({}, new Xk, Fk || {});
+        this.element = kk || document, this.pD = !!Bk.pD, this.stopPropagation = !!Bk.stopPropagation, this.jD = !!Bk.jD, this.disabled = !!Bk.disabled, this.filterEvents = (kk, Fk) => !0, this.down = new Rk.EventEmitter, this.up = new Rk.EventEmitter, this.state = {}, this.nD = {
           dx: 0,
           dy: 0,
-          bRu: 0,
-          CRu: 0,
-          kRu: 0
+          Dkk: 0,
+          zkk: 0,
+          Pkk: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? Xu(this) : document.addEventListener("DOMContentLoaded", (uu => {
-          Xu(this)
+        }, "loading" !== document.readyState ? dk(this) : document.addEventListener("DOMContentLoaded", (kk => {
+          dk(this)
         }), {
           once: !0
         })
       }
-      bind(uu) {
-        for (var Ru = arguments.length, yu = new Array(Ru > 1 ? Ru - 1 : 0), Eu = 1; Eu < Ru; Eu++) yu[Eu - 1] = arguments[Eu];
-        yu.forEach((Ru => {
-          var yu = this._keyBindmap[Ru] || [];
-          yu.includes(uu) || (yu.push(uu), this._keyBindmap[Ru] = yu)
-        })), this.state[uu] = !!this.state[uu], this.pressCount[uu] = this.pressCount[uu] || 0, this.releaseCount[uu] = this.releaseCount[uu] || 0
+      bind(kk) {
+        for (var Fk = arguments.length, Bk = new Array(Fk > 1 ? Fk - 1 : 0), Rk = 1; Rk < Fk; Rk++) Bk[Rk - 1] = arguments[Rk];
+        Bk.forEach((Fk => {
+          var Bk = this._keyBindmap[Fk] || [];
+          Bk.includes(kk) || (Bk.push(kk), this._keyBindmap[Fk] = Bk)
+        })), this.state[kk] = !!this.state[kk], this.pressCount[kk] = this.pressCount[kk] || 0, this.releaseCount[kk] = this.releaseCount[kk] || 0
       }
-      unbind(uu) {
-        for (var Ru in this._keyBindmap) {
-          var yu = this._keyBindmap[Ru],
-            Eu = yu.indexOf(uu);
-          Eu > -1 && yu.splice(Eu, 1)
+      unbind(kk) {
+        for (var Fk in this._keyBindmap) {
+          var Bk = this._keyBindmap[Fk],
+            Rk = Bk.indexOf(kk);
+          Rk > -1 && Bk.splice(Rk, 1)
         }
       }
       getBindings() {
-        var uu = {};
-        for (var Ru in this._keyBindmap) {
-          this._keyBindmap[Ru].forEach((yu => {
-            uu[yu] = uu[yu] || [], uu[yu].push(Ru)
+        var kk = {};
+        for (var Fk in this._keyBindmap) {
+          this._keyBindmap[Fk].forEach((Bk => {
+            kk[Bk] = kk[Bk] || [], kk[Bk].push(Fk)
           }))
         }
-        return uu
+        return kk
       }
-      sr() {
-        Nu(this.Jw), Nu(this.pressCount), Nu(this.releaseCount)
+      yJ() {
+        wk(this.nD), wk(this.pressCount), wk(this.releaseCount)
       }
     }
 
-    function Nu(uu) {
-      for (var Ru in uu) uu[Ru] = 0
+    function wk(kk) {
+      for (var Fk in kk) kk[Fk] = 0
     }
 
-    function Xu(uu) {
-      window.addEventListener("keydown", Tu.bind(null, uu, !0), !1), window.addEventListener("keyup", Tu.bind(null, uu, !1), !1);
-      var Ru = {
+    function dk(kk) {
+      window.addEventListener("keydown", fk.bind(null, kk, !0), !1), window.addEventListener("keyup", fk.bind(null, kk, !1), !1);
+      var Fk = {
         passive: !0
       };
-      uu.element.addEventListener("touchstart", xu.bind(void 0, uu), {
+      kk.element.addEventListener("touchstart", Ak.bind(void 0, kk), {
         passive: !1
-      }), uu.element.addEventListener("touchend", pu.bind(void 0, uu), Ru), uu.element.addEventListener("mousedown", Wu.bind(null, uu, !0), Ru), window.document.addEventListener("mouseup", Wu.bind(null, uu, !1), Ru), uu.element.addEventListener("touchmove", ju.bind(null, uu), Ru), uu.element.addEventListener("mousemove", ju.bind(null, uu), Ru), window.PointerEvent, uu.element.addEventListener("wheel", Hu.bind(null, uu), Ru), uu.element.addEventListener("contextmenu", du.bind(null, uu), !1), window.addEventListener("blur", ku.bind(null, uu), !1)
+      }), kk.element.addEventListener("touchend", yk.bind(void 0, kk), Fk), kk.element.addEventListener("mousedown", mk.bind(null, kk, !0), Fk), window.document.addEventListener("mouseup", mk.bind(null, kk, !1), Fk), kk.element.addEventListener("touchmove", Wk.bind(null, kk), Fk), kk.element.addEventListener("mousemove", Wk.bind(null, kk), Fk), window.PointerEvent, kk.element.addEventListener("wheel", vk.bind(null, kk), Fk), kk.element.addEventListener("contextmenu", ik.bind(null, kk), !1), window.addEventListener("blur", Ok.bind(null, kk), !1)
     }
-    var Vu = 0,
-      ru = 0,
-      Bu = null;
+    var sk = 0,
+      Vk = 0,
+      Jk = null;
 
-    function xu(uu, Ru) {
-      Ru.preventDefault(), Su(Ru)
+    function Ak(kk, Fk) {
+      Fk.preventDefault(), ek(Fk)
     }
 
-    function Su(uu) {
-      let Ru = !1;
-      for (let yu = 0; yu < uu.touches.length; ++yu)
-        if (uu.touches[yu].identifier === Bu) {
-          Ru = !0;
+    function ek(kk) {
+      let Fk = !1;
+      for (let Bk = 0; Bk < kk.touches.length; ++Bk)
+        if (kk.touches[Bk].identifier === Jk) {
+          Fk = !0;
           break
-        } if (!Ru) {
-        const Ru = uu.changedTouches[0];
-        Vu = Ru.clientX, ru = Ru.clientY, Bu = Ru.identifier
+        } if (!Fk) {
+        const Fk = kk.changedTouches[0];
+        sk = Fk.clientX, Vk = Fk.clientY, Jk = Fk.identifier
       }
     }
 
-    function pu(uu, Ru) {
-      for (var yu = Ru.changedTouches, Eu = 0; Eu < yu.length; ++Eu) yu[Eu].identifier === Bu && (Bu = null)
+    function yk(kk, Fk) {
+      for (var Bk = Fk.changedTouches, Rk = 0; Rk < Bk.length; ++Rk) Bk[Rk].identifier === Jk && (Jk = null)
     }
 
-    function Tu(uu, Ru, yu) {
+    function fk(kk, Fk, Bk) {
       try {
-        eu(uu, yu), Ru && yu.isTrusted && !yu.repeat && uu._keyStates[yu.code] && Au(uu, yu.code)
+        Ek(kk, Bk), Fk && Bk.isTrusted && !Bk.repeat && kk._keyStates[Bk.code] && Sk(kk, Bk.code)
       } finally {
-        Du(yu.code, Ru, uu, yu)
+        Nk(Bk.code, Fk, kk, Bk)
       }
     }
 
-    function Wu(uu, Ru, yu) {
+    function mk(kk, Fk, Bk) {
       try {
-        eu(uu, yu)
+        Ek(kk, Bk)
       } finally {
-        ! function(uu, Ru, yu) {
-          if ("pointerId" in yu)
-            if (Ru) {
-              if (null !== uu._touches.currID) return;
-              uu._touches.currID = yu.pointerId
+        ! function(kk, Fk, Bk) {
+          if ("pointerId" in Bk)
+            if (Fk) {
+              if (null !== kk._touches.currID) return;
+              kk._touches.currID = Bk.pointerId
             } else {
-              if (uu._touches.currID !== yu.pointerId) return;
-              uu._touches.currID = null
-            } var Eu = "button" in yu ? yu.button + 1 : 1;
-          Du("Mouse" + Eu, Ru, uu, yu)
-        }(uu, Ru, yu)
+              if (kk._touches.currID !== Bk.pointerId) return;
+              kk._touches.currID = null
+            } var Rk = "button" in Bk ? Bk.button + 1 : 1;
+          Nk("Mouse" + Rk, Fk, kk, Bk)
+        }(kk, Fk, Bk)
       }
     }
 
-    function ju(uu, Ru) {
-      var yu = Ru.movementX || Ru.mozMovementX || 0,
-        Eu = Ru.movementY || Ru.mozMovementY || 0;
-      if (Ru.touches && 0 === (yu | Eu)) {
-        var Ku = function(uu) {
-          Su(uu);
-          for (let Ru = 0; Ru < uu.changedTouches.length; ++Ru)
-            if (uu.changedTouches[Ru].identifier == Bu) {
-              const yu = uu.changedTouches[Ru],
-                Eu = [yu.clientX - Vu, yu.clientY - ru];
-              return Vu = yu.clientX, ru = yu.clientY, Eu
-            } return console.error(`Did not find touch id ${Bu}`), [0, 0]
-        }(Ru);
-        yu = Ku[0], Eu = Ku[1]
+    function Wk(kk, Fk) {
+      var Bk = Fk.movementX || Fk.mozMovementX || 0,
+        Rk = Fk.movementY || Fk.mozMovementY || 0;
+      if (Fk.touches && 0 === (Bk | Rk)) {
+        var tk = function(kk) {
+          ek(kk);
+          for (let Fk = 0; Fk < kk.changedTouches.length; ++Fk)
+            if (kk.changedTouches[Fk].identifier == Jk) {
+              const Bk = kk.changedTouches[Fk],
+                Rk = [Bk.clientX - sk, Bk.clientY - Vk];
+              return sk = Bk.clientX, Vk = Bk.clientY, Rk
+            } return console.error(`Did not find touch id ${Jk}`), [0, 0]
+        }(Fk);
+        Bk = tk[0], Rk = tk[1]
       }
-      uu.Jw.dx += yu, uu.Jw.dy += Eu
+      kk.nD.dx += Bk, kk.nD.dy += Rk
     }
 
-    function Hu(uu, Ru) {
-      eu(uu, Ru);
-      var yu = 1;
-      switch (Ru.deltaMode) {
+    function vk(kk, Fk) {
+      Ek(kk, Fk);
+      var Bk = 1;
+      switch (Fk.deltaMode) {
         case 0:
-          yu = 1;
+          Bk = 1;
           break;
         case 1:
-          yu = 12;
+          Bk = 12;
           break;
         case 2:
-          yu = uu.element.clientHeight || window.innerHeight
+          Bk = kk.element.clientHeight || window.innerHeight
       }
-      uu.Jw.bRu += (Ru.deltaX || 0) * yu, uu.Jw.CRu += (Ru.deltaY || 0) * yu, uu.Jw.kRu += (Ru.deltaZ || 0) * yu
+      kk.nD.Dkk += (Fk.deltaX || 0) * Bk, kk.nD.zkk += (Fk.deltaY || 0) * Bk, kk.nD.Pkk += (Fk.deltaZ || 0) * Bk
     }
 
-    function du(uu, Ru) {
-      if (!uu.Kw) return Ru.preventDefault(), !1
+    function ik(kk, Fk) {
+      if (!kk.jD) return Fk.preventDefault(), !1
     }
-    var bu = {
+    var Yk = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -245,91 +245,91 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function Cu(uu, Ru) {
-      return !!uu[bu[Ru]] || ("AltRight" === Ru || "ControlLeft" === Ru) && "function" === typeof uu.getModifierState && !0 === uu.getModifierState("AltGraph")
+    function Lk(kk, Fk) {
+      return !!kk[Yk[Fk]] || ("AltRight" === Fk || "ControlLeft" === Fk) && "function" === typeof kk.getModifierState && !0 === kk.getModifierState("AltGraph")
     }
 
-    function ku(uu, Ru) {
-      for (var yu in uu._modifiersHeldThroughBlur = {}, bu) uu._keyStates[yu] && (uu._modifiersHeldThroughBlur[yu] = !0);
-      Ru && Ru.isTrusted && function() {
+    function Ok(kk, Fk) {
+      for (var Bk in kk._modifiersHeldThroughBlur = {}, Yk) kk._keyStates[Bk] && (kk._modifiersHeldThroughBlur[Bk] = !0);
+      Fk && Fk.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (uu) {
+        } catch (kk) {
           return !0
         }
-      }() && (clearTimeout(uu._blurRelease), uu._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(kk._blurRelease), kk._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var Ru in uu._modifiersHeldThroughBlur = {}, uu._keyStates) uu._keyStates[Ru] && !/^Mouse\d/.test(Ru) && Au(uu, Ru)
+          for (var Fk in kk._modifiersHeldThroughBlur = {}, kk._keyStates) kk._keyStates[Fk] && !/^Mouse\d/.test(Fk) && Sk(kk, Fk)
       }), 0))
     }
 
-    function eu(uu, Ru) {
-      var yu = uu._modifiersHeldThroughBlur;
-      if (yu && Ru.isTrusted && document.hasFocus())
-        for (var Eu in yu) delete yu[Eu], uu._keyStates[Eu] && Eu !== Ru.code && (Cu(Ru, Eu) || Au(uu, Eu))
+    function Ek(kk, Fk) {
+      var Bk = kk._modifiersHeldThroughBlur;
+      if (Bk && Fk.isTrusted && document.hasFocus())
+        for (var Rk in Bk) delete Bk[Rk], kk._keyStates[Rk] && Rk !== Fk.code && (Lk(Fk, Rk) || Sk(kk, Rk))
     }
 
-    function Au(uu, Ru) {
-      const yu = {
-          code: Ru,
+    function Sk(kk, Fk) {
+      const Bk = {
+          code: Fk,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        Eu = Ku;
-      Ku = yu;
+        Rk = tk;
+      tk = Bk;
       try {
-        Du(Ru, !1, uu, yu)
+        Nk(Fk, !1, kk, Bk)
       } finally {
-        Ku = Eu
+        tk = Rk
       }
     }
 
-    function Du(uu, Ru, yu, Eu) {
-      var Ku = yu._keyBindmap[uu];
-      Ku && (Mu(yu._keyStates[uu], Ru) && (yu._keyStates[uu] = Ru, Ku.forEach((uu => {
-        (!yu.filterEvents || yu.filterEvents(Eu, uu)) && function(uu, Ru, yu, Eu) {
-          var Ku = Ru ? yu.pressCount : yu.releaseCount;
-          Ku[uu] = (Ku[uu] || 0) + 1;
-          var Qu = yu._bindPressCount[uu] || 0;
-          (Qu += Ru ? 1 : -1) < 0 && (Qu = 0);
-          yu._bindPressCount[uu] = Qu;
-          var mu = yu.state[uu];
-          if (Mu(mu, Qu)) {
-            yu.state[uu] = Qu > 0;
-            var Ju = Ru ? yu.down : yu.up;
-            yu.disabled || Ju.emit(uu, Eu)
+    function Nk(kk, Fk, Bk, Rk) {
+      var tk = Bk._keyBindmap[kk];
+      tk && (Hk(Bk._keyStates[kk], Fk) && (Bk._keyStates[kk] = Fk, tk.forEach((kk => {
+        (!Bk.filterEvents || Bk.filterEvents(Rk, kk)) && function(kk, Fk, Bk, Rk) {
+          var tk = Fk ? Bk.pressCount : Bk.releaseCount;
+          tk[kk] = (tk[kk] || 0) + 1;
+          var ak = Bk._bindPressCount[kk] || 0;
+          (ak += Fk ? 1 : -1) < 0 && (ak = 0);
+          Bk._bindPressCount[kk] = ak;
+          var Xk = Bk.state[kk];
+          if (Hk(Xk, ak)) {
+            Bk.state[kk] = ak > 0;
+            var bk = Fk ? Bk.down : Bk.up;
+            Bk.disabled || bk.emit(kk, Rk)
           }
-        }(uu, Ru, yu, Eu)
-      }))), "button" in Eu || (yu.vF && !Eu.defaultPrevented && Eu.preventDefault(), yu.stopPropagation && Eu.stopPropagation()))
+        }(kk, Fk, Bk, Rk)
+      }))), "button" in Rk || (Bk.pD && !Rk.defaultPrevented && Rk.preventDefault(), Bk.stopPropagation && Rk.stopPropagation()))
     }
 
-    function Mu(uu, Ru) {
-      return uu ? !Ru : Ru
+    function Hk(kk, Fk) {
+      return kk ? !Fk : Fk
     }
   },
-  36381: (uu, Ru) => {
-    function yu(uu) {
-      if (uu && "object" === typeof uu) {
-        var Ru = uu.which || uu.keyCode || uu.charCode;
-        Ru && (uu = Ru)
+  36279: (kk, Fk) => {
+    function Bk(kk) {
+      if (kk && "object" === typeof kk) {
+        var Fk = kk.which || kk.keyCode || kk.charCode;
+        Fk && (kk = Fk)
       }
-      if ("number" === typeof uu) return mu[uu];
-      var yu, Qu = String(uu);
-      return (yu = Eu[Qu.toLowerCase()]) ? yu : (yu = Ku[Qu.toLowerCase()]) || (1 === Qu.length ? Qu.charCodeAt(0) : void 0)
+      if ("number" === typeof kk) return Xk[kk];
+      var Bk, ak = String(kk);
+      return (Bk = Rk[ak.toLowerCase()]) ? Bk : (Bk = tk[ak.toLowerCase()]) || (1 === ak.length ? ak.charCodeAt(0) : void 0)
     }
-    yu.isEventKey = function(uu, Ru) {
-      if (uu && "object" === typeof uu) {
-        var yu = uu.which || uu.keyCode || uu.charCode;
-        if (null === yu || void 0 === yu) return !1;
-        if ("string" === typeof Ru) {
-          var Qu;
-          if (Qu = Eu[Ru.toLowerCase()]) return Qu === yu;
-          if (Qu = Ku[Ru.toLowerCase()]) return Qu === yu
-        } else if ("number" === typeof Ru) return Ru === yu;
+    Bk.isEventKey = function(kk, Fk) {
+      if (kk && "object" === typeof kk) {
+        var Bk = kk.which || kk.keyCode || kk.charCode;
+        if (null === Bk || void 0 === Bk) return !1;
+        if ("string" === typeof Fk) {
+          var ak;
+          if (ak = Rk[Fk.toLowerCase()]) return ak === Bk;
+          if (ak = tk[Fk.toLowerCase()]) return ak === Bk
+        } else if ("number" === typeof Fk) return Fk === Bk;
         return !1
       }
     };
-    var Eu = (Ru = uu.exports = yu).code = Ru.codes = {
+    var Rk = (Fk = kk.exports = Bk).code = Fk.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -374,7 +374,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      Ku = Ru.aliases = {
+      tk = Fk.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -396,139 +396,139 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (Qu = 97; Qu < 123; Qu++) Eu[String.fromCharCode(Qu)] = Qu - 32;
-    for (var Qu = 48; Qu < 58; Qu++) Eu[Qu - 48] = Qu;
-    for (Qu = 1; Qu < 13; Qu++) Eu["f" + Qu] = Qu + 111;
-    for (Qu = 0; Qu < 10; Qu++) Eu["numpad " + Qu] = Qu + 96;
-    var mu = Ru.names = Ru.title = {};
-    for (Qu in Eu) mu[Eu[Qu]] = Qu;
-    for (var Ju in Ku) Eu[Ju] = Ku[Ju]
+    for (ak = 97; ak < 123; ak++) Rk[String.fromCharCode(ak)] = ak - 32;
+    for (var ak = 48; ak < 58; ak++) Rk[ak - 48] = ak;
+    for (ak = 1; ak < 13; ak++) Rk["f" + ak] = ak + 111;
+    for (ak = 0; ak < 10; ak++) Rk["numpad " + ak] = ak + 96;
+    var Xk = Fk.names = Fk.title = {};
+    for (ak in Rk) Xk[Rk[ak]] = ak;
+    for (var bk in tk) Rk[bk] = tk[bk]
   },
-  39266: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Eu
+  39120: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Rk
     });
-    class Eu {
+    class Rk {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-        this.hG = !1, this.iG = !1, this.eD = 30, this.WG = 0, this.YG = 100, this.UT = !1, this.fullscreen = !1, this.vW = function(uu) {}, this.vG = function(uu, Ru, yu) {}, this.rU = function() {}, this.fW = function() {}, this.aG = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(uu) {}, this._data = new Ku(Ru),
-          function(uu) {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.bM = !1, this.gM = !1, this.kN = 30, this.Yu = 0, this.rM = 100, this.Df = !1, this.fullscreen = !1, this.EW = function(kk) {}, this.pM = function(kk, Fk, Bk) {}, this.dU = function() {}, this.UW = function() {}, this.kU = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(kk) {}, this._data = new tk(Fk),
+          function(kk) {
             if ("loading" === document.readyState) {
-              var Ru = () => {
-                document.removeEventListener("readystatechange", Ru), uu()
+              var Fk = () => {
+                document.removeEventListener("readystatechange", Fk), kk()
               };
-              document.addEventListener("readystatechange", Ru)
-            } else setTimeout(uu, 0)
+              document.addEventListener("readystatechange", Fk)
+            } else setTimeout(kk, 0)
           }((() => {
-            ! function(uu) {
-              var Ru = uu._data,
-                yu = Ru.nowObject.now();
-              Ru.lastTickStarted = yu, Ru.lastFrameStarted = yu, Ru.lastRenderStarted = yu, Ru.frameCB = () => function(uu) {
-                var Ru = uu._data;
-                requestAnimationFrame(Ru.frameCB), Ju(uu);
-                var yu = Ru.nowObject.now(),
-                  Eu = yu - Ru.lastFrameStarted;
-                if (Ru.lastFrameStarted = yu, uu.WG > 0) {
-                  Ru.renderAccum += Eu;
-                  var Ku = 1e3 / uu.WG;
-                  if (Ru.renderAccum < Ku) return;
-                  Ru.renderAccum -= Ku, Ru.renderAccum > Ku && (Ru.renderAccum = Ku)
+            ! function(kk) {
+              var Fk = kk._data,
+                Bk = Fk.nowObject.now();
+              Fk.lastTickStarted = Bk, Fk.lastFrameStarted = Bk, Fk.lastRenderStarted = Bk, Fk.frameCB = () => function(kk) {
+                var Fk = kk._data;
+                requestAnimationFrame(Fk.frameCB), bk(kk);
+                var Bk = Fk.nowObject.now(),
+                  Rk = Bk - Fk.lastFrameStarted;
+                if (Fk.lastFrameStarted = Bk, kk.Yu > 0) {
+                  Fk.renderAccum += Rk;
+                  var tk = 1e3 / kk.Yu;
+                  if (Fk.renderAccum < tk) return;
+                  Fk.renderAccum -= tk, Fk.renderAccum > tk && (Fk.renderAccum = tk)
                 }
-                var Qu = yu - Ru.lastRenderStarted;
-                Ru.lastRenderStarted = yu;
-                var mu = 1e3 / uu.eD,
-                  Nu = (yu - Ru.lastTickStarted) / mu;
-                Nu < 0 && (Nu = 0);
-                uu.vG(Qu, Nu, mu), setTimeout(Ju, 0, uu, !0)
-              }(uu), Ru.intervalCB = () => Ju(uu), requestAnimationFrame(Ru.frameCB), Ru.pollTime > 0 && (Ru.intervalID = setInterval(Ru.intervalCB, Math.max(Ru.pollTime, 1e3 / uu.eD / 2)))
+                var ak = Bk - Fk.lastRenderStarted;
+                Fk.lastRenderStarted = Bk;
+                var Xk = 1e3 / kk.kN,
+                  wk = (Bk - Fk.lastTickStarted) / Xk;
+                wk < 0 && (wk = 0);
+                kk.pM(ak, wk, Xk), setTimeout(bk, 0, kk, !0)
+              }(kk), Fk.intervalCB = () => bk(kk), requestAnimationFrame(Fk.frameCB), Fk.pollTime > 0 && (Fk.intervalID = setInterval(Fk.intervalCB, Math.max(Fk.pollTime, 1e3 / kk.kN / 2)))
             }(this),
-            function(uu, Ru) {
-              if (!Ru) return;
-              var yu = !1,
-                Eu = !1,
-                Ku = uu => {
-                  if (!!uu !== (yu = Ru === document.pointerLockElement))
-                    if (uu) {
-                      var Eu = Ru.requestPointerLock();
-                      Eu && Eu.catch && Eu.catch((uu => {}))
+            function(kk, Fk) {
+              if (!Fk) return;
+              var Bk = !1,
+                Rk = !1,
+                tk = kk => {
+                  if (!!kk !== (Bk = Fk === document.pointerLockElement))
+                    if (kk) {
+                      var Rk = Fk.requestPointerLock();
+                      Rk && Rk.catch && Rk.catch((kk => {}))
                     } else document.exitPointerLock()
                 },
-                Qu = uu => {
-                  !!uu !== (Eu = Ru === document.fullscreenElement) && (uu ? Ru.requestFullscreen ? Ru.requestFullscreen() : Ru.webkitRequestFullscreen && Ru.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                ak = kk => {
+                  !!kk !== (Rk = Fk === document.fullscreenElement) && (kk ? Fk.requestFullscreen ? Fk.requestFullscreen() : Fk.webkitRequestFullscreen && Fk.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
                 };
-              document.addEventListener("pointerlockchange", (Eu => {
-                yu = Ru === document.pointerLockElement, uu.aG(yu)
-              })), document.addEventListener("fullscreenchange", (yu => {
-                Eu = Ru === document.fullscreenElement, uu.onFullscreenChanged(Eu)
-              })), document.addEventListener("pointerlockerror", (Eu => {
-                yu = Ru === document.pointerLockElement, uu.onPointerLockError(Eu)
-              })), Object.defineProperty(uu, "UT", {
-                get: () => yu,
-                set: Ku
-              }), Object.defineProperty(uu, "fullscreen", {
-                get: () => Eu,
-                set: Qu
-              }), Ru.addEventListener("click", (Ru => {
-                uu.hG && Ku(!0), uu.iG && Qu(!0)
+              document.addEventListener("pointerlockchange", (Rk => {
+                Bk = Fk === document.pointerLockElement, kk.kU(Bk)
+              })), document.addEventListener("fullscreenchange", (Bk => {
+                Rk = Fk === document.fullscreenElement, kk.onFullscreenChanged(Rk)
+              })), document.addEventListener("pointerlockerror", (Rk => {
+                Bk = Fk === document.pointerLockElement, kk.onPointerLockError(Rk)
+              })), Object.defineProperty(kk, "Df", {
+                get: () => Bk,
+                set: tk
+              }), Object.defineProperty(kk, "fullscreen", {
+                get: () => Rk,
+                set: ak
+              }), Fk.addEventListener("click", (Fk => {
+                kk.bM && tk(!0), kk.gM && ak(!0)
               }));
-              var mu = () => uu.fW();
+              var Xk = () => kk.UW();
               if (window.ResizeObserver) {
-                new ResizeObserver(mu).observe(Ru)
-              } else window.addEventListener("resize", mu)
-            }(this, uu), this.rU()
+                new ResizeObserver(Xk).observe(Fk)
+              } else window.addEventListener("resize", Xk)
+            }(this, kk), this.dU()
           }))
       }
     }
 
-    function Ku() {
-      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      this.nowObject = performance || Date, this.pollTime = uu, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    function tk() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = kk, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
     }
-    var Qu = 3,
-      mu = 20;
+    var ak = 3,
+      Xk = 20;
 
-    function Ju(uu) {
-      for (var Ru = uu._data, yu = 1e3 / uu.eD, Eu = Ru.nowObject.now() + mu, Ku = 0; Ru.nowObject.now() >= Ru.lastTickStarted + yu && Ru.nowObject.now() < Eu && ++Ku <= Qu;) uu.vW(yu), Ru.lastTickStarted += yu;
-      var Ju = 5 * (yu + 5),
-        Nu = Ru.nowObject.now();
-      if (Nu - Ru.lastTickStarted > Ju)
-        for (; Nu >= Ru.lastTickStarted + yu;) Ru.lastTickStarted += yu
+    function bk(kk) {
+      for (var Fk = kk._data, Bk = 1e3 / kk.kN, Rk = Fk.nowObject.now() + Xk, tk = 0; Fk.nowObject.now() >= Fk.lastTickStarted + Bk && Fk.nowObject.now() < Rk && ++tk <= ak;) kk.EW(Bk), Fk.lastTickStarted += Bk;
+      var bk = 5 * (Bk + 5),
+        wk = Fk.nowObject.now();
+      if (wk - Fk.lastTickStarted > bk)
+        for (; wk >= Fk.lastTickStarted + Bk;) Fk.lastTickStarted += Bk
     }
   },
-  36539: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => mu
+  36427: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Xk
     });
-    var Eu = yu(64);
-    const Ku = Eu.useLayoutEffect;
-    const Qu = function(uu) {
-      var Ru = (0, Eu.useRef)(uu);
-      return Ku((function() {
-        Ru.current = uu
-      })), Ru
+    var Rk = Bk(61);
+    const tk = Rk.useLayoutEffect;
+    const ak = function(kk) {
+      var Fk = (0, Rk.useRef)(kk);
+      return tk((function() {
+        Fk.current = kk
+      })), Fk
     };
-    var mu = function(uu) {
-      var Ru = Qu(uu);
-      (0, Eu.useEffect)((function() {
-        var uu = function(uu) {
-          var yu;
-          if (null != Ru.current && (yu = Ru.current(uu)), uu.defaultPrevented && (uu.returnValue = ""), "string" === typeof yu) return uu.returnValue = yu, yu
+    var Xk = function(kk) {
+      var Fk = ak(kk);
+      (0, Rk.useEffect)((function() {
+        var kk = function(kk) {
+          var Bk;
+          if (null != Fk.current && (Bk = Fk.current(kk)), kk.defaultPrevented && (kk.returnValue = ""), "string" === typeof Bk) return kk.returnValue = Bk, Bk
         };
-        return window.addEventListener("beforeunload", uu),
+        return window.addEventListener("beforeunload", kk),
           function() {
-            window.removeEventListener("beforeunload", uu)
+            window.removeEventListener("beforeunload", kk)
           }
       }), [])
     }
   },
-  36422: uu => {
-    var Ru, yu = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      Eu = /OS X/.test(yu),
-      Ku = /Opera/.test(yu),
-      Qu = !/like Gecko/.test(yu) && !Ku,
-      mu = uu.exports = {
-        0: Eu ? "<menu>" : "<UNK>",
+  36313: kk => {
+    var Fk, Bk = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Rk = /OS X/.test(Bk),
+      tk = /Opera/.test(Bk),
+      ak = !/like Gecko/.test(Bk) && !tk,
+      Xk = kk.exports = {
+        0: Rk ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -571,7 +571,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: Eu ? "<meta>" : "<menu>",
+        93: Rk ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -594,7 +594,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: Eu && Qu ? "-" : "<volume-mute>",
+        173: Rk && ak ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -620,7 +620,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: Ku ? "`" : "<unicode>",
+        231: tk ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -631,183 +631,183 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (Ru = 58; Ru < 65; ++Ru) mu[Ru] = String.fromCharCode(Ru);
-    for (Ru = 48; Ru < 58; ++Ru) mu[Ru] = Ru - 48 + "";
-    for (Ru = 65; Ru < 91; ++Ru) mu[Ru] = String.fromCharCode(Ru);
-    for (Ru = 96; Ru < 106; ++Ru) mu[Ru] = "<num-" + (Ru - 96) + ">";
-    for (Ru = 112; Ru < 136; ++Ru) mu[Ru] = "F" + (Ru - 111)
+    for (Fk = 58; Fk < 65; ++Fk) Xk[Fk] = String.fromCharCode(Fk);
+    for (Fk = 48; Fk < 58; ++Fk) Xk[Fk] = Fk - 48 + "";
+    for (Fk = 65; Fk < 91; ++Fk) Xk[Fk] = String.fromCharCode(Fk);
+    for (Fk = 96; Fk < 106; ++Fk) Xk[Fk] = "<num-" + (Fk - 96) + ">";
+    for (Fk = 112; Fk < 136; ++Fk) Xk[Fk] = "F" + (Fk - 111)
   },
-  38786: (uu, Ru, yu) => {
-    function Eu(uu, Ru, yu, Eu, Ku) {
-      var Qu = {};
-      return Object.keys(Eu).forEach((function(uu) {
-        Qu[uu] = Eu[uu]
-      })), Qu.enumerable = !!Qu.enumerable, Qu.configurable = !!Qu.configurable, ("value" in Qu || Qu.initializer) && (Qu.writable = !0), Qu = yu.slice().reverse().reduce((function(yu, Eu) {
-        return Eu(uu, Ru, yu) || yu
-      }), Qu), Ku && void 0 !== Qu.initializer && (Qu.value = Qu.initializer ? Qu.initializer.call(Ku) : void 0, Qu.initializer = void 0), void 0 === Qu.initializer && (Object.defineProperty(uu, Ru, Qu), Qu = null), Qu
+  38677: (kk, Fk, Bk) => {
+    function Rk(kk, Fk, Bk, Rk, tk) {
+      var ak = {};
+      return Object.keys(Rk).forEach((function(kk) {
+        ak[kk] = Rk[kk]
+      })), ak.enumerable = !!ak.enumerable, ak.configurable = !!ak.configurable, ("value" in ak || ak.initializer) && (ak.writable = !0), ak = Bk.slice().reverse().reduce((function(Bk, Rk) {
+        return Rk(kk, Fk, Bk) || Bk
+      }), ak), tk && void 0 !== ak.initializer && (ak.value = ak.initializer ? ak.initializer.call(tk) : void 0, ak.initializer = void 0), void 0 === ak.initializer && (Object.defineProperty(kk, Fk, ak), ak = null), ak
     }
-    yu.d(Ru, {
-      c: () => Eu
+    Bk.d(Fk, {
+      c: () => Rk
     })
   },
-  38783: (uu, Ru, yu) => {
-    function Eu(uu, Ru, yu, Eu) {
-      yu && Object.defineProperty(uu, Ru, {
-        enumerable: yu.enumerable,
-        configurable: yu.configurable,
-        writable: yu.writable,
-        value: yu.initializer ? yu.initializer.call(Eu) : void 0
+  38674: (kk, Fk, Bk) => {
+    function Rk(kk, Fk, Bk, Rk) {
+      Bk && Object.defineProperty(kk, Fk, {
+        enumerable: Bk.enumerable,
+        configurable: Bk.configurable,
+        writable: Bk.writable,
+        value: Bk.initializer ? Bk.initializer.call(Rk) : void 0
       })
     }
-    yu.d(Ru, {
-      c: () => Eu
+    Bk.d(Fk, {
+      b: () => Rk
     })
   },
-  38444: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Qu
+  38318: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => ak
     });
-    var Eu = yu(38448);
-    const Ku = (uu, Ru, yu) => uu ? uu.getClassName && "Mesh" === uu.getClassName() ? null : !uu.getClassName || "SubMesh" !== uu.getClassName() && "PhysicsBody" !== uu.getClassName() ? uu.clone ? uu.clone() : Array.isArray(uu) ? uu.slice() : yu && "object" === typeof uu ? {
-      ...uu
-    } : null : uu.clone(Ru) : null;
-    class Qu {
-      static DeepCopy(uu, Ru, yu, Qu) {
-        let mu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Ju = function(uu) {
-          const Ru = [];
+    var Rk = Bk(38320);
+    const tk = (kk, Fk, Bk) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : Bk && "object" === typeof kk ? {
+      ...kk
+    } : null : kk.clone(Fk) : null;
+    class ak {
+      static DeepCopy(kk, Fk, Bk, ak) {
+        let Xk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const bk = function(kk) {
+          const Fk = [];
           do {
-            const yu = Object.getOwnPropertyNames(uu);
-            for (const uu of yu) - 1 === Ru.indexOf(uu) && Ru.push(uu)
-          } while (uu = Object.getPrototypeOf(uu));
-          return Ru
-        }(uu);
-        for (const Xu of Ju) {
-          if ("_" === Xu[0] && (!Qu || -1 === Qu.indexOf(Xu))) continue;
-          if (Xu.endsWith("Observable")) continue;
-          if (yu && -1 !== yu.indexOf(Xu)) continue;
-          const Ju = uu[Xu],
-            Vu = typeof Ju;
-          if ("function" !== Vu) try {
-            if ("object" === Vu)
-              if (Ju instanceof Uint8Array) Ru[Xu] = Uint8Array.from(Ju);
-              else if (Ju instanceof Array) {
-              if (Ru[Xu] = [], Ju.length > 0)
-                if ("object" == typeof Ju[0])
-                  for (let uu = 0; uu < Ju.length; uu++) {
-                    const yu = Ku(Ju[uu], Ru, mu); - 1 === Ru[Xu].indexOf(yu) && Ru[Xu].push(yu)
-                  } else Ru[Xu] = Ju.slice(0)
-            } else Ru[Xu] = Ku(Ju, Ru, mu);
-            else Ru[Xu] = Ju
-          } catch (Nu) {
-            Eu.e.Warn(Nu.message)
+            const Bk = Object.getOwnPropertyNames(kk);
+            for (const kk of Bk) - 1 === Fk.indexOf(kk) && Fk.push(kk)
+          } while (kk = Object.getPrototypeOf(kk));
+          return Fk
+        }(kk);
+        for (const dk of bk) {
+          if ("_" === dk[0] && (!ak || -1 === ak.indexOf(dk))) continue;
+          if (dk.endsWith("Observable")) continue;
+          if (Bk && -1 !== Bk.indexOf(dk)) continue;
+          const bk = kk[dk],
+            sk = typeof bk;
+          if ("function" !== sk) try {
+            if ("object" === sk)
+              if (bk instanceof Uint8Array) Fk[dk] = Uint8Array.from(bk);
+              else if (bk instanceof Array) {
+              if (Fk[dk] = [], bk.length > 0)
+                if ("object" == typeof bk[0])
+                  for (let kk = 0; kk < bk.length; kk++) {
+                    const Bk = tk(bk[kk], Fk, Xk); - 1 === Fk[dk].indexOf(Bk) && Fk[dk].push(Bk)
+                  } else Fk[dk] = bk.slice(0)
+            } else Fk[dk] = tk(bk, Fk, Xk);
+            else Fk[dk] = bk
+          } catch (wk) {
+            Rk.b.Warn(wk.message)
           }
         }
       }
     }
   },
-  38471: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ku,
-      f: () => Qu,
-      g: () => mu,
-      i: () => Ju
+  38344: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => tk,
+      f: () => ak,
+      g: () => Xk,
+      i: () => bk
     });
-    var Eu = yu(36991);
-    class Ku {
-      constructor(uu, Ru, yu) {
-        this.gradient = uu, this.color1 = Ru, this.color2 = yu
+    var Rk = Bk(36917);
+    class tk {
+      constructor(kk, Fk, Bk) {
+        this.gradient = kk, this.color1 = Fk, this.color2 = Bk
       }
-      getColorToRef(uu) {
-        this.color2 ? Eu.h.LerpToRef(this.color1, this.color2, Math.random(), uu) : uu.Oyu(this.color1)
-      }
-    }
-    class Qu {
-      constructor(uu, Ru) {
-        this.gradient = uu, this.color = Ru
+      getColorToRef(kk) {
+        this.color2 ? Rk.i.LerpToRef(this.color1, this.color2, Math.random(), kk) : kk.sBk(this.color1)
       }
     }
-    class mu {
-      constructor(uu, Ru, yu) {
-        this.gradient = uu, this.factor1 = Ru, this.factor2 = yu
+    class ak {
+      constructor(kk, Fk) {
+        this.gradient = kk, this.color = Fk
+      }
+    }
+    class Xk {
+      constructor(kk, Fk, Bk) {
+        this.gradient = kk, this.factor1 = Fk, this.factor2 = Bk
       }
       getFactor() {
         return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
       }
     }
-    class Ju {
-      static GetCurrentGradient(uu, Ru, yu) {
-        if (Ru[0].gradient > uu) return void yu(Ru[0], Ru[0], 1);
-        for (let Ku = 0; Ku < Ru.length - 1; Ku++) {
-          const Eu = Ru[Ku],
-            Qu = Ru[Ku + 1];
-          if (uu >= Eu.gradient && uu <= Qu.gradient) {
-            return void yu(Eu, Qu, (uu - Eu.gradient) / (Qu.gradient - Eu.gradient))
+    class bk {
+      static GetCurrentGradient(kk, Fk, Bk) {
+        if (Fk[0].gradient > kk) return void Bk(Fk[0], Fk[0], 1);
+        for (let tk = 0; tk < Fk.length - 1; tk++) {
+          const Rk = Fk[tk],
+            ak = Fk[tk + 1];
+          if (kk >= Rk.gradient && kk <= ak.gradient) {
+            return void Bk(Rk, ak, (kk - Rk.gradient) / (ak.gradient - Rk.gradient))
           }
         }
-        const Eu = Ru.length - 1;
-        yu(Ru[Eu], Ru[Eu], 1)
+        const Rk = Fk.length - 1;
+        Bk(Fk[Rk], Fk[Rk], 1)
       }
     }
   },
-  38448: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Eu
+  38320: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Rk
     });
-    class Eu {
-      static _CheckLimit(uu, Ru) {
-        let yu = Eu._LogLimitOutputs[uu];
-        return yu ? yu.current++ : (yu = {
-          limit: Ru,
+    class Rk {
+      static _CheckLimit(kk, Fk) {
+        let Bk = Rk._LogLimitOutputs[kk];
+        return Bk ? Bk.current++ : (Bk = {
+          limit: Fk,
           current: 1
-        }, Eu._LogLimitOutputs[uu] = yu), yu.current <= yu.limit
+        }, Rk._LogLimitOutputs[kk] = Bk), Bk.current <= Bk.limit
       }
-      static _GenerateLimitMessage(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const yu = Eu._LogLimitOutputs[uu];
-        if (!yu || !Eu.MessageLimitReached) return;
-        const Ku = this._Levels[Ru];
-        yu.current === yu.limit && Eu[Ku.name](Eu.MessageLimitReached.replace(/%LIMIT%/g, "" + yu.limit).replace(/%TYPE%/g, Ku.name ?? ""))
+      static _GenerateLimitMessage(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const Bk = Rk._LogLimitOutputs[kk];
+        if (!Bk || !Rk.MessageLimitReached) return;
+        const tk = this._Levels[Fk];
+        Bk.current === Bk.limit && Rk[tk.name](Rk.MessageLimitReached.replace(/%LIMIT%/g, "" + Bk.limit).replace(/%TYPE%/g, tk.name ?? ""))
       }
-      static _AddLogEntry(uu) {
-        Eu._LogCache = uu + Eu._LogCache, Eu.OnNewCacheEntry && Eu.OnNewCacheEntry(uu)
+      static _AddLogEntry(kk) {
+        Rk._LogCache = kk + Rk._LogCache, Rk.OnNewCacheEntry && Rk.OnNewCacheEntry(kk)
       }
-      static _FormatMessage(uu) {
-        const Ru = uu => uu < 10 ? "0" + uu : "" + uu,
-          yu = new Date;
-        return "[" + Ru(yu.getHours()) + ":" + Ru(yu.getMinutes()) + ":" + Ru(yu.getSeconds()) + "]: " + uu
+      static _FormatMessage(kk) {
+        const Fk = kk => kk < 10 ? "0" + kk : "" + kk,
+          Bk = new Date;
+        return "[" + Fk(Bk.getHours()) + ":" + Fk(Bk.getMinutes()) + ":" + Fk(Bk.getSeconds()) + "]: " + kk
       }
-      static _LogDisabled(uu, Ru) {}
+      static _LogDisabled(kk, Fk) {}
       static _LogEnabled() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Ru = arguments.length > 1 ? arguments[1] : void 0,
-          yu = arguments.length > 2 ? arguments[2] : void 0;
-        const Ku = Array.isArray(Ru) ? Ru[0] : Ru;
-        if (void 0 !== yu && !Eu._CheckLimit(Ku, yu)) return;
-        const Qu = Eu._FormatMessage(Ku),
-          mu = this._Levels[uu],
-          Ju = Array.isArray(Ru) ? Ru.slice(1) : [];
-        mu.logFunc && mu.logFunc("BJS - " + Qu, ...Ju);
-        const Nu = `<div style='color:${mu.color}'>${Qu}</div><br>`;
-        Eu._AddLogEntry(Nu), Eu._GenerateLimitMessage(Ku, uu)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Bk = arguments.length > 2 ? arguments[2] : void 0;
+        const tk = Array.isArray(Fk) ? Fk[0] : Fk;
+        if (void 0 !== Bk && !Rk._CheckLimit(tk, Bk)) return;
+        const ak = Rk._FormatMessage(tk),
+          Xk = this._Levels[kk],
+          bk = Array.isArray(Fk) ? Fk.slice(1) : [];
+        Xk.logFunc && Xk.logFunc("BJS - " + ak, ...bk);
+        const wk = `<div style='color:${Xk.color}'>${ak}</div><br>`;
+        Rk._AddLogEntry(wk), Rk._GenerateLimitMessage(tk, kk)
       }
       static get LogCache() {
-        return Eu._LogCache
+        return Rk._LogCache
       }
       static ClearLogCache() {
-        Eu._LogCache = "", Eu._LogLimitOutputs = {}, Eu.errorsCount = 0
+        Rk._LogCache = "", Rk._LogLimitOutputs = {}, Rk.errorsCount = 0
       }
-      static set LogLevels(uu) {
-        Eu.Log = Eu._LogDisabled, Eu.Warn = Eu._LogDisabled, Eu.Error = Eu._LogDisabled;
-        const Ru = [Eu.MessageLogLevel, Eu.WarningLogLevel, Eu.ErrorLogLevel];
-        for (const yu of Ru)
-          if ((uu & yu) === yu) {
-            const uu = this._Levels[yu];
-            Eu[uu.name] = Eu._LogEnabled.bind(Eu, yu)
+      static set LogLevels(kk) {
+        Rk.Log = Rk._LogDisabled, Rk.Warn = Rk._LogDisabled, Rk.Error = Rk._LogDisabled;
+        const Fk = [Rk.MessageLogLevel, Rk.WarningLogLevel, Rk.ErrorLogLevel];
+        for (const Bk of Fk)
+          if ((kk & Bk) === Bk) {
+            const kk = this._Levels[Bk];
+            Rk[kk.name] = Rk._LogEnabled.bind(Rk, Bk)
           }
       }
     }
-    Eu.NoneLogLevel = 0, Eu.MessageLogLevel = 1, Eu.WarningLogLevel = 2, Eu.ErrorLogLevel = 4, Eu.AllLogLevel = 7, Eu.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Eu._LogCache = "", Eu._LogLimitOutputs = {}, Eu._Levels = [{}, {
+    Rk.NoneLogLevel = 0, Rk.MessageLogLevel = 1, Rk.WarningLogLevel = 2, Rk.ErrorLogLevel = 4, Rk.AllLogLevel = 7, Rk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Rk._LogCache = "", Rk._LogLimitOutputs = {}, Rk._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -819,42 +819,42 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Eu.errorsCount = 0, Eu.Log = Eu._LogEnabled.bind(Eu, Eu.MessageLogLevel), Eu.Warn = Eu._LogEnabled.bind(Eu, Eu.WarningLogLevel), Eu.Error = Eu._LogEnabled.bind(Eu, Eu.ErrorLogLevel)
+    }], Rk.errorsCount = 0, Rk.Log = Rk._LogEnabled.bind(Rk, Rk.MessageLogLevel), Rk.Warn = Rk._LogEnabled.bind(Rk, Rk.WarningLogLevel), Rk.Error = Rk._LogEnabled.bind(Rk, Rk.ErrorLogLevel)
   },
-  38479: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => mu
+  38350: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Xk
     });
-    var Eu = yu(36830),
-      Ku = yu(36865),
-      Qu = yu(38444);
-    class mu {
+    var Rk = Bk(36758),
+      tk = Bk(36790),
+      ak = Bk(38318);
+    class Xk {
       constructor() {
-        this.direction1 = new Eu.p(0, 1, 0), this.direction2 = new Eu.p(0, 1, 0), this.minEmitBox = new Eu.p(-.5, -.5, -.5), this.maxEmitBox = new Eu.p(.5, .5, .5)
+        this.direction1 = new Rk.s(0, 1, 0), this.direction2 = new Rk.s(0, 1, 0), this.minEmitBox = new Rk.s(-.5, -.5, -.5), this.maxEmitBox = new Rk.s(.5, .5, .5)
       }
-      startDirectionFunction(uu, Ru, yu, Qu) {
-        const mu = (0, Ku.RandomRange)(this.direction1.x, this.direction2.x),
-          Ju = (0, Ku.RandomRange)(this.direction1.y, this.direction2.y),
-          Nu = (0, Ku.RandomRange)(this.direction1.z, this.direction2.z);
-        if (Qu) return Ru.x = mu, Ru.y = Ju, void(Ru.z = Nu);
-        Eu.p.TransformNormalFromFloatsToRef(mu, Ju, Nu, uu, Ru)
+      startDirectionFunction(kk, Fk, Bk, ak) {
+        const Xk = (0, tk.RandomRange)(this.direction1.x, this.direction2.x),
+          bk = (0, tk.RandomRange)(this.direction1.y, this.direction2.y),
+          wk = (0, tk.RandomRange)(this.direction1.z, this.direction2.z);
+        if (ak) return Fk.x = Xk, Fk.y = bk, void(Fk.z = wk);
+        Rk.s.TransformNormalFromFloatsToRef(Xk, bk, wk, kk, Fk)
       }
-      startPositionFunction(uu, Ru, yu, Qu) {
-        const mu = (0, Ku.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
-          Ju = (0, Ku.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
-          Nu = (0, Ku.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
-        if (Qu) return Ru.x = mu, Ru.y = Ju, void(Ru.z = Nu);
-        Eu.p.TransformCoordinatesFromFloatsToRef(mu, Ju, Nu, uu, Ru)
+      startPositionFunction(kk, Fk, Bk, ak) {
+        const Xk = (0, tk.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          bk = (0, tk.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          wk = (0, tk.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (ak) return Fk.x = Xk, Fk.y = bk, void(Fk.z = wk);
+        Rk.s.TransformCoordinatesFromFloatsToRef(Xk, bk, wk, kk, Fk)
       }
       clone() {
-        const uu = new mu;
-        return Qu.e.DeepCopy(this, uu), uu
+        const kk = new Xk;
+        return ak.e.DeepCopy(this, kk), kk
       }
-      applyToShader(uu) {
-        uu.setVector3("direction1", this.direction1), uu.setVector3("direction2", this.direction2), uu.setVector3("minEmitBox", this.minEmitBox), uu.setVector3("maxEmitBox", this.maxEmitBox)
+      applyToShader(kk) {
+        kk.setVector3("direction1", this.direction1), kk.setVector3("direction2", this.direction2), kk.setVector3("minEmitBox", this.minEmitBox), kk.setVector3("maxEmitBox", this.maxEmitBox)
       }
-      buildUniformLayout(uu) {
-        uu.addUniform("direction1", 3), uu.addUniform("direction2", 3), uu.addUniform("minEmitBox", 3), uu.addUniform("maxEmitBox", 3)
+      buildUniformLayout(kk) {
+        kk.addUniform("direction1", 3), kk.addUniform("direction2", 3), kk.addUniform("minEmitBox", 3), kk.addUniform("maxEmitBox", 3)
       }
       getEffectDefines() {
         return "#define BOXEMITTER"
@@ -863,54 +863,54 @@ export const modules = {
         return "BoxParticleEmitter"
       }
       serialize() {
-        const uu = {};
-        return uu.type = this.getClassName(), uu.direction1 = this.direction1.AEu(), uu.direction2 = this.direction2.AEu(), uu.minEmitBox = this.minEmitBox.AEu(), uu.maxEmitBox = this.maxEmitBox.AEu(), uu
+        const kk = {};
+        return kk.type = this.getClassName(), kk.direction1 = this.direction1.PBk(), kk.direction2 = this.direction2.PBk(), kk.minEmitBox = this.minEmitBox.PBk(), kk.maxEmitBox = this.maxEmitBox.PBk(), kk
       }
-      parse(uu) {
-        Eu.p.FromArrayToRef(uu.direction1, 0, this.direction1), Eu.p.FromArrayToRef(uu.direction2, 0, this.direction2), Eu.p.FromArrayToRef(uu.minEmitBox, 0, this.minEmitBox), Eu.p.FromArrayToRef(uu.maxEmitBox, 0, this.maxEmitBox)
+      parse(kk) {
+        Rk.s.FromArrayToRef(kk.direction1, 0, this.direction1), Rk.s.FromArrayToRef(kk.direction2, 0, this.direction2), Rk.s.FromArrayToRef(kk.minEmitBox, 0, this.minEmitBox), Rk.s.FromArrayToRef(kk.maxEmitBox, 0, this.maxEmitBox)
       }
     }
   },
-  38440: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ju,
-      h: () => mu
+  38314: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => bk,
+      c: () => Xk
     });
-    var Eu = yu(36830),
-      Ku = yu(36865),
-      Qu = yu(38444);
-    class mu {
+    var Rk = Bk(36758),
+      tk = Bk(36790),
+      ak = Bk(38318);
+    class Xk {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          Ku = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.radius = uu, this.height = Ru, this.radiusRange = yu, this.directionRandomizer = Ku, this._tempVector = Eu.p.Zero()
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = kk, this.height = Fk, this.radiusRange = Bk, this.directionRandomizer = tk, this._tempVector = Rk.s.Zero()
       }
-      startDirectionFunction(uu, Ru, yu, Qu, mu) {
-        yu.position.subtractToRef(uu.getTranslation(), this._tempVector), this._tempVector.normalize(), Eu.p.TransformNormalToRef(this._tempVector, mu, this._tempVector);
-        const Ju = (0, Ku.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
-        let Nu = Math.atan2(this._tempVector.x, this._tempVector.z);
-        Nu += (0, Ku.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = Ju, this._tempVector.x = Math.sin(Nu), this._tempVector.z = Math.cos(Nu), this._tempVector.normalize(), Qu ? Ru.Oyu(this._tempVector) : Eu.p.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, uu, Ru)
+      startDirectionFunction(kk, Fk, Bk, ak, Xk) {
+        Bk.position.subtractToRef(kk.getTranslation(), this._tempVector), this._tempVector.normalize(), Rk.s.TransformNormalToRef(this._tempVector, Xk, this._tempVector);
+        const bk = (0, tk.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let wk = Math.atan2(this._tempVector.x, this._tempVector.z);
+        wk += (0, tk.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = bk, this._tempVector.x = Math.sin(wk), this._tempVector.z = Math.cos(wk), this._tempVector.normalize(), ak ? Fk.sBk(this._tempVector) : Rk.s.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, kk, Fk)
       }
-      startPositionFunction(uu, Ru, yu, Qu) {
-        const mu = (0, Ku.RandomRange)(-this.height / 2, this.height / 2),
-          Ju = (0, Ku.RandomRange)(0, 2 * Math.PI),
-          Nu = (0, Ku.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
-          Xu = Math.sqrt(Nu) * this.radius,
-          Vu = Xu * Math.cos(Ju),
-          ru = Xu * Math.sin(Ju);
-        Qu ? Ru.muu(Vu, mu, ru) : Eu.p.TransformCoordinatesFromFloatsToRef(Vu, mu, ru, uu, Ru)
+      startPositionFunction(kk, Fk, Bk, ak) {
+        const Xk = (0, tk.RandomRange)(-this.height / 2, this.height / 2),
+          bk = (0, tk.RandomRange)(0, 2 * Math.PI),
+          wk = (0, tk.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          dk = Math.sqrt(wk) * this.radius,
+          sk = dk * Math.cos(bk),
+          Vk = dk * Math.sin(bk);
+        ak ? Fk.E1(sk, Xk, Vk) : Rk.s.TransformCoordinatesFromFloatsToRef(sk, Xk, Vk, kk, Fk)
       }
       clone() {
-        const uu = new mu(this.radius, this.directionRandomizer);
-        return Qu.e.DeepCopy(this, uu), uu
+        const kk = new Xk(this.radius, this.directionRandomizer);
+        return ak.e.DeepCopy(this, kk), kk
       }
-      applyToShader(uu) {
-        uu.setFloat("radius", this.radius), uu.setFloat("height", this.height), uu.setFloat("radiusRange", this.radiusRange), uu.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(kk) {
+        kk.setFloat("radius", this.radius), kk.setFloat("height", this.height), kk.setFloat("radiusRange", this.radiusRange), kk.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(uu) {
-        uu.addUniform("radius", 1), uu.addUniform("height", 1), uu.addUniform("radiusRange", 1), uu.addUniform("directionRandomizer", 1)
+      buildUniformLayout(kk) {
+        kk.addUniform("radius", 1), kk.addUniform("height", 1), kk.addUniform("radiusRange", 1), kk.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER"
@@ -919,37 +919,37 @@ export const modules = {
         return "CylinderParticleEmitter"
       }
       serialize() {
-        const uu = {};
-        return uu.type = this.getClassName(), uu.radius = this.radius, uu.height = this.height, uu.radiusRange = this.radiusRange, uu.directionRandomizer = this.directionRandomizer, uu
+        const kk = {};
+        return kk.type = this.getClassName(), kk.radius = this.radius, kk.height = this.height, kk.radiusRange = this.radiusRange, kk.directionRandomizer = this.directionRandomizer, kk
       }
-      parse(uu) {
-        this.radius = uu.radius, this.height = uu.height, this.radiusRange = uu.radiusRange, this.directionRandomizer = uu.directionRandomizer
+      parse(kk) {
+        this.radius = kk.radius, this.height = kk.height, this.radiusRange = kk.radiusRange, this.directionRandomizer = kk.directionRandomizer
       }
     }
-    class Ju extends mu {
+    class bk extends Xk {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          Ku = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Eu.p(0, 1, 0),
-          Qu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Eu.p(0, 1, 0);
-        super(uu, Ru, yu), this.direction1 = Ku, this.direction2 = Qu
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Rk.s(0, 1, 0),
+          ak = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Rk.s(0, 1, 0);
+        super(kk, Fk, Bk), this.direction1 = tk, this.direction2 = ak
       }
-      startDirectionFunction(uu, Ru, yu, Qu) {
-        const mu = (0, Ku.RandomRange)(this.direction1.x, this.direction2.x),
-          Ju = (0, Ku.RandomRange)(this.direction1.y, this.direction2.y),
-          Nu = (0, Ku.RandomRange)(this.direction1.z, this.direction2.z);
-        Qu ? Ru.muu(mu, Ju, Nu) : Eu.p.TransformNormalFromFloatsToRef(mu, Ju, Nu, uu, Ru)
+      startDirectionFunction(kk, Fk, Bk, ak) {
+        const Xk = (0, tk.RandomRange)(this.direction1.x, this.direction2.x),
+          bk = (0, tk.RandomRange)(this.direction1.y, this.direction2.y),
+          wk = (0, tk.RandomRange)(this.direction1.z, this.direction2.z);
+        ak ? Fk.E1(Xk, bk, wk) : Rk.s.TransformNormalFromFloatsToRef(Xk, bk, wk, kk, Fk)
       }
       clone() {
-        const uu = new Ju(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
-        return Qu.e.DeepCopy(this, uu), uu
+        const kk = new bk(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return ak.e.DeepCopy(this, kk), kk
       }
-      applyToShader(uu) {
-        uu.setFloat("radius", this.radius), uu.setFloat("height", this.height), uu.setFloat("radiusRange", this.radiusRange), uu.setVector3("direction1", this.direction1), uu.setVector3("direction2", this.direction2)
+      applyToShader(kk) {
+        kk.setFloat("radius", this.radius), kk.setFloat("height", this.height), kk.setFloat("radiusRange", this.radiusRange), kk.setVector3("direction1", this.direction1), kk.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(uu) {
-        uu.addUniform("radius", 1), uu.addUniform("height", 1), uu.addUniform("radiusRange", 1), uu.addUniform("direction1", 3), uu.addUniform("direction2", 3)
+      buildUniformLayout(kk) {
+        kk.addUniform("radius", 1), kk.addUniform("height", 1), kk.addUniform("radiusRange", 1), kk.addUniform("direction1", 3), kk.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
@@ -958,239 +958,239 @@ export const modules = {
         return "CylinderDirectedParticleEmitter"
       }
       serialize() {
-        const uu = super.serialize();
-        return uu.direction1 = this.direction1.AEu(), uu.direction2 = this.direction2.AEu(), uu
+        const kk = super.serialize();
+        return kk.direction1 = this.direction1.PBk(), kk.direction2 = this.direction2.PBk(), kk
       }
-      parse(uu) {
-        super.parse(uu), Eu.p.FromArrayToRef(uu.direction1, 0, this.direction1), Eu.p.FromArrayToRef(uu.direction2, 0, this.direction2)
+      parse(kk) {
+        super.parse(kk), Rk.s.FromArrayToRef(kk.direction1, 0, this.direction1), Rk.s.FromArrayToRef(kk.direction2, 0, this.direction2)
       }
     }
   },
-  38553: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => ru
+  38427: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Vk
     });
-    const Eu = .5 * (Math.sqrt(3) - 1),
-      Ku = (3 - Math.sqrt(3)) / 6,
-      Qu = 1 / 3,
-      mu = 1 / 6,
-      Ju = (Math.sqrt(5) - 1) / 4,
-      Nu = (5 - Math.sqrt(5)) / 20,
-      Xu = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
-      Vu = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
-    const ru = class {
+    const Rk = .5 * (Math.sqrt(3) - 1),
+      tk = (3 - Math.sqrt(3)) / 6,
+      ak = 1 / 3,
+      Xk = 1 / 6,
+      bk = (Math.sqrt(5) - 1) / 4,
+      wk = (5 - Math.sqrt(5)) / 20,
+      dk = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      sk = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const Vk = class {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
-        const Ru = "function" == typeof uu ? uu : function(uu) {
-          let Ru = 0,
-            yu = 0,
-            Eu = 0,
-            Ku = 1;
-          const Qu = function() {
-            let uu = 4022871197;
-            return function(Ru) {
-              Ru = Ru.toString();
-              for (let yu = 0; yu < Ru.length; yu++) {
-                uu += Ru.charCodeAt(yu);
-                let Eu = .02519603282416938 * uu;
-                uu = Eu >>> 0, Eu -= uu, Eu *= uu, uu = Eu >>> 0, Eu -= uu, uu += 4294967296 * Eu
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const Fk = "function" == typeof kk ? kk : function(kk) {
+          let Fk = 0,
+            Bk = 0,
+            Rk = 0,
+            tk = 1;
+          const ak = function() {
+            let kk = 4022871197;
+            return function(Fk) {
+              Fk = Fk.toString();
+              for (let Bk = 0; Bk < Fk.length; Bk++) {
+                kk += Fk.charCodeAt(Bk);
+                let Rk = .02519603282416938 * kk;
+                kk = Rk >>> 0, Rk -= kk, Rk *= kk, kk = Rk >>> 0, Rk -= kk, kk += 4294967296 * Rk
               }
-              return 2.3283064365386963e-10 * (uu >>> 0)
+              return 2.3283064365386963e-10 * (kk >>> 0)
             }
           }();
-          Ru = Qu(" "), yu = Qu(" "), Eu = Qu(" "), Ru -= Qu(uu), Ru < 0 && (Ru += 1);
-          yu -= Qu(uu), yu < 0 && (yu += 1);
-          Eu -= Qu(uu), Eu < 0 && (Eu += 1);
+          Fk = ak(" "), Bk = ak(" "), Rk = ak(" "), Fk -= ak(kk), Fk < 0 && (Fk += 1);
+          Bk -= ak(kk), Bk < 0 && (Bk += 1);
+          Rk -= ak(kk), Rk < 0 && (Rk += 1);
           return function() {
-            const uu = 2091639 * Ru + 2.3283064365386963e-10 * Ku;
-            return Ru = yu, yu = Eu, Eu = uu - (Ku = 0 | uu)
+            const kk = 2091639 * Fk + 2.3283064365386963e-10 * tk;
+            return Fk = Bk, Bk = Rk, Rk = kk - (tk = 0 | kk)
           }
-        }(uu);
-        this.p = function(uu) {
-          const Ru = new Uint8Array(256);
-          for (let yu = 0; yu < 256; yu++) Ru[yu] = yu;
-          for (let yu = 0; yu < 255; yu++) {
-            const Eu = yu + ~~(uu() * (256 - yu)),
-              Ku = Ru[yu];
-            Ru[yu] = Ru[Eu], Ru[Eu] = Ku
+        }(kk);
+        this.p = function(kk) {
+          const Fk = new Uint8Array(256);
+          for (let Bk = 0; Bk < 256; Bk++) Fk[Bk] = Bk;
+          for (let Bk = 0; Bk < 255; Bk++) {
+            const Rk = Bk + ~~(kk() * (256 - Bk)),
+              tk = Fk[Bk];
+            Fk[Bk] = Fk[Rk], Fk[Rk] = tk
           }
-          return Ru
-        }(Ru), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
-        for (let yu = 0; yu < 512; yu++) this.perm[yu] = this.p[255 & yu], this.permMod12[yu] = this.perm[yu] % 12
+          return Fk
+        }(Fk), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let Bk = 0; Bk < 512; Bk++) this.perm[Bk] = this.p[255 & Bk], this.permMod12[Bk] = this.perm[Bk] % 12
       }
-      noise2D(uu, Ru) {
-        const yu = this.permMod12,
-          Qu = this.perm;
-        let mu = 0,
-          Ju = 0,
-          Nu = 0;
-        const Vu = (uu + Ru) * Eu,
-          ru = Math.floor(uu + Vu),
-          Bu = Math.floor(Ru + Vu),
-          xu = (ru + Bu) * Ku,
-          Su = uu - (ru - xu),
-          pu = Ru - (Bu - xu);
-        let Tu, Wu;
-        Su > pu ? (Tu = 1, Wu = 0) : (Tu = 0, Wu = 1);
-        const ju = Su - Tu + Ku,
-          Hu = pu - Wu + Ku,
-          du = Su - 1 + 2 * Ku,
-          bu = pu - 1 + 2 * Ku,
-          Cu = 255 & ru,
-          ku = 255 & Bu;
-        let eu = .5 - Su * Su - pu * pu;
-        if (eu >= 0) {
-          const uu = 3 * yu[Cu + Qu[ku]];
-          eu *= eu, mu = eu * eu * (Xu[uu] * Su + Xu[uu + 1] * pu)
+      noise2D(kk, Fk) {
+        const Bk = this.permMod12,
+          ak = this.perm;
+        let Xk = 0,
+          bk = 0,
+          wk = 0;
+        const sk = (kk + Fk) * Rk,
+          Vk = Math.floor(kk + sk),
+          Jk = Math.floor(Fk + sk),
+          Ak = (Vk + Jk) * tk,
+          ek = kk - (Vk - Ak),
+          yk = Fk - (Jk - Ak);
+        let fk, mk;
+        ek > yk ? (fk = 1, mk = 0) : (fk = 0, mk = 1);
+        const Wk = ek - fk + tk,
+          vk = yk - mk + tk,
+          ik = ek - 1 + 2 * tk,
+          Yk = yk - 1 + 2 * tk,
+          Lk = 255 & Vk,
+          Ok = 255 & Jk;
+        let Ek = .5 - ek * ek - yk * yk;
+        if (Ek >= 0) {
+          const kk = 3 * Bk[Lk + ak[Ok]];
+          Ek *= Ek, Xk = Ek * Ek * (dk[kk] * ek + dk[kk + 1] * yk)
         }
-        let Au = .5 - ju * ju - Hu * Hu;
-        if (Au >= 0) {
-          const uu = 3 * yu[Cu + Tu + Qu[ku + Wu]];
-          Au *= Au, Ju = Au * Au * (Xu[uu] * ju + Xu[uu + 1] * Hu)
+        let Sk = .5 - Wk * Wk - vk * vk;
+        if (Sk >= 0) {
+          const kk = 3 * Bk[Lk + fk + ak[Ok + mk]];
+          Sk *= Sk, bk = Sk * Sk * (dk[kk] * Wk + dk[kk + 1] * vk)
         }
-        let Du = .5 - du * du - bu * bu;
-        if (Du >= 0) {
-          const uu = 3 * yu[Cu + 1 + Qu[ku + 1]];
-          Du *= Du, Nu = Du * Du * (Xu[uu] * du + Xu[uu + 1] * bu)
+        let Nk = .5 - ik * ik - Yk * Yk;
+        if (Nk >= 0) {
+          const kk = 3 * Bk[Lk + 1 + ak[Ok + 1]];
+          Nk *= Nk, wk = Nk * Nk * (dk[kk] * ik + dk[kk + 1] * Yk)
         }
-        return 70 * (mu + Ju + Nu)
+        return 70 * (Xk + bk + wk)
       }
-      noise3D(uu, Ru, yu) {
-        const Eu = this.permMod12,
-          Ku = this.perm;
-        let Ju, Nu, Vu, ru;
-        const Bu = (uu + Ru + yu) * Qu,
-          xu = Math.floor(uu + Bu),
-          Su = Math.floor(Ru + Bu),
-          pu = Math.floor(yu + Bu),
-          Tu = (xu + Su + pu) * mu,
-          Wu = uu - (xu - Tu),
-          ju = Ru - (Su - Tu),
-          Hu = yu - (pu - Tu);
-        let du, bu, Cu, ku, eu, Au;
-        Wu >= ju ? ju >= Hu ? (du = 1, bu = 0, Cu = 0, ku = 1, eu = 1, Au = 0) : Wu >= Hu ? (du = 1, bu = 0, Cu = 0, ku = 1, eu = 0, Au = 1) : (du = 0, bu = 0, Cu = 1, ku = 1, eu = 0, Au = 1) : ju < Hu ? (du = 0, bu = 0, Cu = 1, ku = 0, eu = 1, Au = 1) : Wu < Hu ? (du = 0, bu = 1, Cu = 0, ku = 0, eu = 1, Au = 1) : (du = 0, bu = 1, Cu = 0, ku = 1, eu = 1, Au = 0);
-        const Du = Wu - du + mu,
-          Mu = ju - bu + mu,
-          Iu = Hu - Cu + mu,
-          Gu = Wu - ku + 2 * mu,
-          Uu = ju - eu + 2 * mu,
-          nu = Hu - Au + 2 * mu,
-          su = Wu - 1 + .5,
-          tu = ju - 1 + .5,
-          lu = Hu - 1 + .5,
-          gu = 255 & xu,
-          cu = 255 & Su,
-          Lu = 255 & pu;
-        let zu = .6 - Wu * Wu - ju * ju - Hu * Hu;
-        if (zu < 0) Ju = 0;
+      noise3D(kk, Fk, Bk) {
+        const Rk = this.permMod12,
+          tk = this.perm;
+        let bk, wk, sk, Vk;
+        const Jk = (kk + Fk + Bk) * ak,
+          Ak = Math.floor(kk + Jk),
+          ek = Math.floor(Fk + Jk),
+          yk = Math.floor(Bk + Jk),
+          fk = (Ak + ek + yk) * Xk,
+          mk = kk - (Ak - fk),
+          Wk = Fk - (ek - fk),
+          vk = Bk - (yk - fk);
+        let ik, Yk, Lk, Ok, Ek, Sk;
+        mk >= Wk ? Wk >= vk ? (ik = 1, Yk = 0, Lk = 0, Ok = 1, Ek = 1, Sk = 0) : mk >= vk ? (ik = 1, Yk = 0, Lk = 0, Ok = 1, Ek = 0, Sk = 1) : (ik = 0, Yk = 0, Lk = 1, Ok = 1, Ek = 0, Sk = 1) : Wk < vk ? (ik = 0, Yk = 0, Lk = 1, Ok = 0, Ek = 1, Sk = 1) : mk < vk ? (ik = 0, Yk = 1, Lk = 0, Ok = 0, Ek = 1, Sk = 1) : (ik = 0, Yk = 1, Lk = 0, Ok = 1, Ek = 1, Sk = 0);
+        const Nk = mk - ik + Xk,
+          Hk = Wk - Yk + Xk,
+          uk = vk - Lk + Xk,
+          Mk = mk - Ok + 2 * Xk,
+          gk = Wk - Ek + 2 * Xk,
+          Uk = vk - Sk + 2 * Xk,
+          ck = mk - 1 + .5,
+          Gk = Wk - 1 + .5,
+          Tk = vk - 1 + .5,
+          rk = 255 & Ak,
+          Dk = 255 & ek,
+          zk = 255 & yk;
+        let Pk = .6 - mk * mk - Wk * Wk - vk * vk;
+        if (Pk < 0) bk = 0;
         else {
-          const uu = 3 * Eu[gu + Ku[cu + Ku[Lu]]];
-          zu *= zu, Ju = zu * zu * (Xu[uu] * Wu + Xu[uu + 1] * ju + Xu[uu + 2] * Hu)
+          const kk = 3 * Rk[rk + tk[Dk + tk[zk]]];
+          Pk *= Pk, bk = Pk * Pk * (dk[kk] * mk + dk[kk + 1] * Wk + dk[kk + 2] * vk)
         }
-        let Fu = .6 - Du * Du - Mu * Mu - Iu * Iu;
-        if (Fu < 0) Nu = 0;
+        let hk = .6 - Nk * Nk - Hk * Hk - uk * uk;
+        if (hk < 0) wk = 0;
         else {
-          const uu = 3 * Eu[gu + du + Ku[cu + bu + Ku[Lu + Cu]]];
-          Fu *= Fu, Nu = Fu * Fu * (Xu[uu] * Du + Xu[uu + 1] * Mu + Xu[uu + 2] * Iu)
+          const kk = 3 * Rk[rk + ik + tk[Dk + Yk + tk[zk + Lk]]];
+          hk *= hk, wk = hk * hk * (dk[kk] * Nk + dk[kk + 1] * Hk + dk[kk + 2] * uk)
         }
-        let wu = .6 - Gu * Gu - Uu * Uu - nu * nu;
-        if (wu < 0) Vu = 0;
+        let qk = .6 - Mk * Mk - gk * gk - Uk * Uk;
+        if (qk < 0) sk = 0;
         else {
-          const uu = 3 * Eu[gu + ku + Ku[cu + eu + Ku[Lu + Au]]];
-          wu *= wu, Vu = wu * wu * (Xu[uu] * Gu + Xu[uu + 1] * Uu + Xu[uu + 2] * nu)
+          const kk = 3 * Rk[rk + Ok + tk[Dk + Ek + tk[zk + Sk]]];
+          qk *= qk, sk = qk * qk * (dk[kk] * Mk + dk[kk + 1] * gk + dk[kk + 2] * Uk)
         }
-        let Zu = .6 - su * su - tu * tu - lu * lu;
-        if (Zu < 0) ru = 0;
+        let Ck = .6 - ck * ck - Gk * Gk - Tk * Tk;
+        if (Ck < 0) Vk = 0;
         else {
-          const uu = 3 * Eu[gu + 1 + Ku[cu + 1 + Ku[Lu + 1]]];
-          Zu *= Zu, ru = Zu * Zu * (Xu[uu] * su + Xu[uu + 1] * tu + Xu[uu + 2] * lu)
+          const kk = 3 * Rk[rk + 1 + tk[Dk + 1 + tk[zk + 1]]];
+          Ck *= Ck, Vk = Ck * Ck * (dk[kk] * ck + dk[kk + 1] * Gk + dk[kk + 2] * Tk)
         }
-        return 32 * (Ju + Nu + Vu + ru)
+        return 32 * (bk + wk + sk + Vk)
       }
-      noise4D(uu, Ru, yu, Eu) {
-        const Ku = this.perm;
-        let Qu, mu, Xu, ru, Bu;
-        const xu = (uu + Ru + yu + Eu) * Ju,
-          Su = Math.floor(uu + xu),
-          pu = Math.floor(Ru + xu),
-          Tu = Math.floor(yu + xu),
-          Wu = Math.floor(Eu + xu),
-          ju = (Su + pu + Tu + Wu) * Nu,
-          Hu = uu - (Su - ju),
-          du = Ru - (pu - ju),
-          bu = yu - (Tu - ju),
-          Cu = Eu - (Wu - ju);
-        let ku = 0,
-          eu = 0,
-          Au = 0,
-          Du = 0;
-        Hu > du ? ku++ : eu++, Hu > bu ? ku++ : Au++, Hu > Cu ? ku++ : Du++, du > bu ? eu++ : Au++, du > Cu ? eu++ : Du++, bu > Cu ? Au++ : Du++;
-        const Mu = ku >= 3 ? 1 : 0,
-          Iu = eu >= 3 ? 1 : 0,
-          Gu = Au >= 3 ? 1 : 0,
-          Uu = Du >= 3 ? 1 : 0,
-          nu = ku >= 2 ? 1 : 0,
-          su = eu >= 2 ? 1 : 0,
-          tu = Au >= 2 ? 1 : 0,
-          lu = Du >= 2 ? 1 : 0,
-          gu = ku >= 1 ? 1 : 0,
-          cu = eu >= 1 ? 1 : 0,
-          Lu = Au >= 1 ? 1 : 0,
-          zu = Du >= 1 ? 1 : 0,
-          Fu = Hu - Mu + Nu,
-          wu = du - Iu + Nu,
-          Zu = bu - Gu + Nu,
-          hu = Cu - Uu + Nu,
-          Pu = Hu - nu + 2 * Nu,
-          iu = du - su + 2 * Nu,
-          Yu = bu - tu + 2 * Nu,
-          ou = Cu - lu + 2 * Nu,
-          qu = Hu - gu + 3 * Nu,
-          Ou = du - cu + 3 * Nu,
-          vu = bu - Lu + 3 * Nu,
-          au = Cu - zu + 3 * Nu,
-          fu = Hu - 1 + 4 * Nu,
-          uR = du - 1 + 4 * Nu,
-          RR = bu - 1 + 4 * Nu,
-          yR = Cu - 1 + 4 * Nu,
-          ER = 255 & Su,
-          KR = 255 & pu,
-          QR = 255 & Tu,
-          mR = 255 & Wu;
-        let JR = .6 - Hu * Hu - du * du - bu * bu - Cu * Cu;
-        if (JR < 0) Qu = 0;
+      noise4D(kk, Fk, Bk, Rk) {
+        const tk = this.perm;
+        let ak, Xk, dk, Vk, Jk;
+        const Ak = (kk + Fk + Bk + Rk) * bk,
+          ek = Math.floor(kk + Ak),
+          yk = Math.floor(Fk + Ak),
+          fk = Math.floor(Bk + Ak),
+          mk = Math.floor(Rk + Ak),
+          Wk = (ek + yk + fk + mk) * wk,
+          vk = kk - (ek - Wk),
+          ik = Fk - (yk - Wk),
+          Yk = Bk - (fk - Wk),
+          Lk = Rk - (mk - Wk);
+        let Ok = 0,
+          Ek = 0,
+          Sk = 0,
+          Nk = 0;
+        vk > ik ? Ok++ : Ek++, vk > Yk ? Ok++ : Sk++, vk > Lk ? Ok++ : Nk++, ik > Yk ? Ek++ : Sk++, ik > Lk ? Ek++ : Nk++, Yk > Lk ? Sk++ : Nk++;
+        const Hk = Ok >= 3 ? 1 : 0,
+          uk = Ek >= 3 ? 1 : 0,
+          Mk = Sk >= 3 ? 1 : 0,
+          gk = Nk >= 3 ? 1 : 0,
+          Uk = Ok >= 2 ? 1 : 0,
+          ck = Ek >= 2 ? 1 : 0,
+          Gk = Sk >= 2 ? 1 : 0,
+          Tk = Nk >= 2 ? 1 : 0,
+          rk = Ok >= 1 ? 1 : 0,
+          Dk = Ek >= 1 ? 1 : 0,
+          zk = Sk >= 1 ? 1 : 0,
+          Pk = Nk >= 1 ? 1 : 0,
+          hk = vk - Hk + wk,
+          qk = ik - uk + wk,
+          Ck = Yk - Mk + wk,
+          Zk = Lk - gk + wk,
+          pk = vk - Uk + 2 * wk,
+          Kk = ik - ck + 2 * wk,
+          xk = Yk - Gk + 2 * wk,
+          jk = Lk - Tk + 2 * wk,
+          lk = vk - rk + 3 * wk,
+          nk = ik - Dk + 3 * wk,
+          Ik = Yk - zk + 3 * wk,
+          Qk = Lk - Pk + 3 * wk,
+          kF = vk - 1 + 4 * wk,
+          FF = ik - 1 + 4 * wk,
+          BF = Yk - 1 + 4 * wk,
+          RF = Lk - 1 + 4 * wk,
+          tF = 255 & ek,
+          aF = 255 & yk,
+          XF = 255 & fk,
+          bF = 255 & mk;
+        let wF = .6 - vk * vk - ik * ik - Yk * Yk - Lk * Lk;
+        if (wF < 0) ak = 0;
         else {
-          const uu = Ku[ER + Ku[KR + Ku[QR + Ku[mR]]]] % 32 * 4;
-          JR *= JR, Qu = JR * JR * (Vu[uu] * Hu + Vu[uu + 1] * du + Vu[uu + 2] * bu + Vu[uu + 3] * Cu)
+          const kk = tk[tF + tk[aF + tk[XF + tk[bF]]]] % 32 * 4;
+          wF *= wF, ak = wF * wF * (sk[kk] * vk + sk[kk + 1] * ik + sk[kk + 2] * Yk + sk[kk + 3] * Lk)
         }
-        let NR = .6 - Fu * Fu - wu * wu - Zu * Zu - hu * hu;
-        if (NR < 0) mu = 0;
+        let dF = .6 - hk * hk - qk * qk - Ck * Ck - Zk * Zk;
+        if (dF < 0) Xk = 0;
         else {
-          const uu = Ku[ER + Mu + Ku[KR + Iu + Ku[QR + Gu + Ku[mR + Uu]]]] % 32 * 4;
-          NR *= NR, mu = NR * NR * (Vu[uu] * Fu + Vu[uu + 1] * wu + Vu[uu + 2] * Zu + Vu[uu + 3] * hu)
+          const kk = tk[tF + Hk + tk[aF + uk + tk[XF + Mk + tk[bF + gk]]]] % 32 * 4;
+          dF *= dF, Xk = dF * dF * (sk[kk] * hk + sk[kk + 1] * qk + sk[kk + 2] * Ck + sk[kk + 3] * Zk)
         }
-        let XR = .6 - Pu * Pu - iu * iu - Yu * Yu - ou * ou;
-        if (XR < 0) Xu = 0;
+        let sF = .6 - pk * pk - Kk * Kk - xk * xk - jk * jk;
+        if (sF < 0) dk = 0;
         else {
-          const uu = Ku[ER + nu + Ku[KR + su + Ku[QR + tu + Ku[mR + lu]]]] % 32 * 4;
-          XR *= XR, Xu = XR * XR * (Vu[uu] * Pu + Vu[uu + 1] * iu + Vu[uu + 2] * Yu + Vu[uu + 3] * ou)
+          const kk = tk[tF + Uk + tk[aF + ck + tk[XF + Gk + tk[bF + Tk]]]] % 32 * 4;
+          sF *= sF, dk = sF * sF * (sk[kk] * pk + sk[kk + 1] * Kk + sk[kk + 2] * xk + sk[kk + 3] * jk)
         }
-        let VR = .6 - qu * qu - Ou * Ou - vu * vu - au * au;
-        if (VR < 0) ru = 0;
+        let VF = .6 - lk * lk - nk * nk - Ik * Ik - Qk * Qk;
+        if (VF < 0) Vk = 0;
         else {
-          const uu = Ku[ER + gu + Ku[KR + cu + Ku[QR + Lu + Ku[mR + zu]]]] % 32 * 4;
-          VR *= VR, ru = VR * VR * (Vu[uu] * qu + Vu[uu + 1] * Ou + Vu[uu + 2] * vu + Vu[uu + 3] * au)
+          const kk = tk[tF + rk + tk[aF + Dk + tk[XF + zk + tk[bF + Pk]]]] % 32 * 4;
+          VF *= VF, Vk = VF * VF * (sk[kk] * lk + sk[kk + 1] * nk + sk[kk + 2] * Ik + sk[kk + 3] * Qk)
         }
-        let rR = .6 - fu * fu - uR * uR - RR * RR - yR * yR;
-        if (rR < 0) Bu = 0;
+        let JF = .6 - kF * kF - FF * FF - BF * BF - RF * RF;
+        if (JF < 0) Jk = 0;
         else {
-          const uu = Ku[ER + 1 + Ku[KR + 1 + Ku[QR + 1 + Ku[mR + 1]]]] % 32 * 4;
-          rR *= rR, Bu = rR * rR * (Vu[uu] * fu + Vu[uu + 1] * uR + Vu[uu + 2] * RR + Vu[uu + 3] * yR)
+          const kk = tk[tF + 1 + tk[aF + 1 + tk[XF + 1 + tk[bF + 1]]]] % 32 * 4;
+          JF *= JF, Jk = JF * JF * (sk[kk] * kF + sk[kk + 1] * FF + sk[kk + 2] * BF + sk[kk + 3] * RF)
         }
-        return 27 * (Qu + mu + Xu + ru + Bu)
+        return 27 * (ak + Xk + dk + Vk + Jk)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

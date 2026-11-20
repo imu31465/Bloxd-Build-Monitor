@@ -1,14 +1,14 @@
 export const id = 195;
 export const ids = [195];
 export const modules = {
-  9135: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => nu,
-      h: () => Uu,
-      j: () => Gu
+  9077: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Uk,
+      f: () => gk,
+      h: () => Mk
     });
-    var Eu = yu(9143);
-    const Ku = {
+    var Rk = Bk(9079);
+    const tk = {
         fileBytes: 4194304,
         vertices: 65535,
         indices: 196608,
@@ -20,7 +20,7 @@ export const modules = {
         images: 8,
         imageSide: 1024
       },
-      Qu = {
+      ak = {
         items: 1024,
         perFile: 1024,
         surfaces: 256,
@@ -28,453 +28,453 @@ export const modules = {
         bounds: 16,
         attributeMembers: 32
       },
-      mu = 1048576,
-      Ju = "is not a binary glTF 2.0 file",
-      Nu = "loads data from outside the file",
-      Xu = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
-      Vu = {
+      Xk = 1048576,
+      bk = "is not a binary glTF 2.0 file",
+      wk = "loads data from outside the file",
+      dk = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
+      sk = {
         POSITION: "VEC3",
         NORMAL: "VEC3",
         TEXCOORD_0: "VEC2",
         COLOR_0: "VEC4"
       },
-      ru = {
+      Vk = {
         type: "VEC2",
         componentTypes: [5126, 5121, 5123]
       },
-      Bu = {
+      Jk = {
         TANGENT: {
           type: "VEC4",
           componentTypes: [5126]
         },
-        TEXCOORD_1: ru,
-        TEXCOORD_2: ru,
-        TEXCOORD_3: ru,
-        TEXCOORD_4: ru,
-        TEXCOORD_5: ru
+        TEXCOORD_1: Vk,
+        TEXCOORD_2: Vk,
+        TEXCOORD_3: Vk,
+        TEXCOORD_4: Vk,
+        TEXCOORD_5: Vk
       },
-      xu = new Set(Eu.h.map((uu => {
-        let [Ru] = uu;
-        return Ru
+      Ak = new Set(Rk.g.map((kk => {
+        let [Fk] = kk;
+        return Fk
       }))),
-      Su = {
+      ek = {
         1: "line",
         2: "line loop",
         3: "line strip",
         5: "triangle strip",
         6: "triangle fan"
       },
-      pu = 5126;
+      yk = 5126;
 
-    function Tu(uu) {
-      return uu.toLocaleString("en-US")
+    function fk(kk) {
+      return kk.toLocaleString("en-US")
     }
 
-    function Wu(uu, Ru, yu) {
-      return uu > Ru ? `has ${Tu(uu)} ${yu} (the limit is ${Tu(Ru)})` : null
+    function mk(kk, Fk, Bk) {
+      return kk > Fk ? `has ${fk(kk)} ${Bk} (the limit is ${fk(Fk)})` : null
     }
 
-    function ju(uu, Ru) {
-      return Number.isInteger(uu) && uu >= 0 && uu < (null !== Ru && void 0 !== Ru ? Ru : 0)
+    function Wk(kk, Fk) {
+      return Number.isInteger(kk) && kk >= 0 && kk < (null !== Fk && void 0 !== Fk ? Fk : 0)
     }
 
-    function Hu(uu) {
-      return Number.isInteger(uu) && uu >= 0
+    function vk(kk) {
+      return Number.isInteger(kk) && kk >= 0
     }
 
-    function du(uu, Ru) {
-      return void 0 !== uu && (!Array.isArray(uu) || uu.length > Ru)
+    function ik(kk, Fk) {
+      return void 0 !== kk && (!Array.isArray(kk) || kk.length > Fk)
     }
 
-    function bu(uu, Ru) {
-      return "object" === typeof uu && null !== uu && Object.keys(uu).length > Ru
+    function Yk(kk, Fk) {
+      return "object" === typeof kk && null !== kk && Object.keys(kk).length > Fk
     }
 
-    function Cu(uu) {
-      var Ru;
-      return `${uu.normalized?"normalized ":""}${null!==(Ru=Eu.e[uu.componentType])&&void 0!==Ru?Ru:uu.componentType} ${uu.type}`
+    function Lk(kk) {
+      var Fk;
+      return `${kk.normalized?"normalized ":""}${null!==(Fk=Rk.f[kk.componentType])&&void 0!==Fk?Fk:kk.componentType} ${kk.type}`
     }
 
-    function ku(uu) {
-      const Ru = Ru => {
-        var yu;
-        return null !== (yu = uu[Ru]) && void 0 !== yu ? yu : -1
+    function Ok(kk) {
+      const Fk = Fk => {
+        var Bk;
+        return null !== (Bk = kk[Fk]) && void 0 !== Bk ? Bk : -1
       };
-      return 255 === Ru(0) && 216 === Ru(1) ? "JPEG" : 82 === Ru(0) && 73 === Ru(1) && 87 === Ru(8) && 69 === Ru(9) ? "WebP" : 171 === Ru(0) && 75 === Ru(1) && 84 === Ru(2) && 88 === Ru(3) ? "KTX2" : "non-PNG"
+      return 255 === Fk(0) && 216 === Fk(1) ? "JPEG" : 82 === Fk(0) && 73 === Fk(1) && 87 === Fk(8) && 69 === Fk(9) ? "WebP" : 171 === Fk(0) && 75 === Fk(1) && 84 === Fk(2) && 88 === Fk(3) ? "KTX2" : "non-PNG"
     }
 
-    function eu(uu) {
-      return uu.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((Ru, yu) => uu[yu] === Ru)) && 73 === uu[12] && 72 === uu[13] && 68 === uu[14] && 82 === uu[15]
+    function Ek(kk) {
+      return kk.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((Fk, Bk) => kk[Bk] === Fk)) && 73 === kk[12] && 72 === kk[13] && 68 === kk[14] && 82 === kk[15]
     }
 
-    function Au(uu) {
-      return /^[aeiou]/i.test(uu) ? `an ${uu}` : `a ${uu}`
+    function Sk(kk) {
+      return /^[aeiou]/i.test(kk) ? `an ${kk}` : `a ${kk}`
     }
 
-    function Du(uu) {
-      const Ru = uu.byteStride;
-      return void 0 === Ru || Number.isInteger(Ru) && Ru >= 4 && Ru <= 252 && Ru % 4 === 0
+    function Nk(kk) {
+      const Fk = kk.byteStride;
+      return void 0 === Fk || Number.isInteger(Fk) && Fk >= 4 && Fk <= 252 && Fk % 4 === 0
     }
 
-    function Mu(uu, Ru, yu) {
-      var Eu, Ku;
-      const Qu = null === (Eu = uu.bufferViews) || void 0 === Eu ? void 0 : Eu[yu];
-      if (!Qu || !Ru || 0 !== Qu.buffer) return null;
-      const mu = null !== (Ku = Qu.byteOffset) && void 0 !== Ku ? Ku : 0;
-      return !Hu(mu) || !Hu(Qu.byteLength) || mu + Qu.byteLength > Ru.byteLength ? null : Ru.subarray(mu, mu + Qu.byteLength)
+    function Hk(kk, Fk, Bk) {
+      var Rk, tk;
+      const ak = null === (Rk = kk.bufferViews) || void 0 === Rk ? void 0 : Rk[Bk];
+      if (!ak || !Fk || 0 !== ak.buffer) return null;
+      const Xk = null !== (tk = ak.byteOffset) && void 0 !== tk ? tk : 0;
+      return !vk(Xk) || !vk(ak.byteLength) || Xk + ak.byteLength > Fk.byteLength ? null : Fk.subarray(Xk, Xk + ak.byteLength)
     }
 
-    function Iu(uu, Ru) {
-      var yu, Ku, Qu;
-      const mu = Eu.m[Ru.type],
-        Ju = Eu.b[Ru.componentType];
-      if (!mu || !Ju || !Number.isInteger(Ru.count) || Ru.count < 0) return !1;
-      if (void 0 === Ru.bufferView) return !0;
-      const Nu = null === (yu = uu.bufferViews) || void 0 === yu ? void 0 : yu[Ru.bufferView],
-        Xu = null !== (Ku = Ru.byteOffset) && void 0 !== Ku ? Ku : 0;
-      if (!Nu || !Hu(Xu) || Xu % Ju !== 0) return !1;
-      const Vu = mu * Ju,
-        ru = null !== (Qu = Nu.byteStride) && void 0 !== Qu ? Qu : Vu;
-      if (ru < Vu) return !1;
-      return (0 === Ru.count ? 0 : Xu + ru * (Ru.count - 1) + Vu) <= Nu.byteLength
+    function uk(kk, Fk) {
+      var Bk, tk, ak;
+      const Xk = Rk.k[Fk.type],
+        bk = Rk.c[Fk.componentType];
+      if (!Xk || !bk || !Number.isInteger(Fk.count) || Fk.count < 0) return !1;
+      if (void 0 === Fk.bufferView) return !0;
+      const wk = null === (Bk = kk.bufferViews) || void 0 === Bk ? void 0 : Bk[Fk.bufferView],
+        dk = null !== (tk = Fk.byteOffset) && void 0 !== tk ? tk : 0;
+      if (!wk || !vk(dk) || dk % bk !== 0) return !1;
+      const sk = Xk * bk,
+        Vk = null !== (ak = wk.byteStride) && void 0 !== ak ? ak : sk;
+      if (Vk < sk) return !1;
+      return (0 === Fk.count ? 0 : dk + Vk * (Fk.count - 1) + sk) <= wk.byteLength
     }
 
-    function Gu(uu) {
-      return uu > Ku.fileBytes ? `is ${(uu/mu).toFixed(1)} MiB (the limit is ${Ku.fileBytes/mu} MiB)` : null
+    function Mk(kk) {
+      return kk > tk.fileBytes ? `is ${(kk/Xk).toFixed(1)} MiB (the limit is ${tk.fileBytes/Xk} MiB)` : null
     }
 
-    function Uu(uu, Ru) {
+    function gk(kk, Fk) {
       try {
-        return function(uu, Ru) {
-          var yu, mu, ru, Tu, Hu, Gu, Uu, nu, su, tu, lu, gu, cu, Lu, zu, Fu, wu;
-          const Zu = Array.isArray(uu.extensionsUsed) && uu.extensionsUsed.includes("KHR_draco_mesh_compression");
-          if (function(uu, Ru) {
-              var yu, Eu;
+        return function(kk, Fk) {
+          var Bk, Xk, Vk, fk, vk, Mk, gk, Uk, ck, Gk, Tk, rk, Dk, zk, Pk, hk, qk;
+          const Ck = Array.isArray(kk.extensionsUsed) && kk.extensionsUsed.includes("KHR_draco_mesh_compression");
+          if (function(kk, Fk) {
+              var Bk, Rk;
               const {
-                items: Ku,
-                perFile: mu,
-                surfaces: Ju,
-                few: Nu,
-                bounds: Xu,
-                attributeMembers: Vu
-              } = Qu;
-              if (du(uu.extensionsRequired, Nu) || du(uu.animations, 1 / 0) || du(uu.skins, 1 / 0)) return !0;
-              if (null !== (yu = uu.animations) && void 0 !== yu && yu.length || null !== (Eu = uu.skins) && void 0 !== Eu && Eu.length) return !1;
+                items: tk,
+                perFile: Xk,
+                surfaces: bk,
+                few: wk,
+                bounds: dk,
+                attributeMembers: sk
+              } = ak;
+              if (ik(kk.extensionsRequired, wk) || ik(kk.animations, 1 / 0) || ik(kk.skins, 1 / 0)) return !0;
+              if (null !== (Bk = kk.animations) && void 0 !== Bk && Bk.length || null !== (Rk = kk.skins) && void 0 !== Rk && Rk.length) return !1;
               if ([
-                  [uu.buffers, Nu],
-                  [uu.scenes, Nu],
-                  [uu.bufferViews, Ku],
-                  [uu.accessors, Ku],
-                  [uu.nodes, Ku],
-                  [uu.meshes, Ku],
-                  [uu.materials, Ju],
-                  [uu.textures, Ju],
-                  [uu.samplers, Ju],
-                  [uu.images, Ju]
-                ].some((uu => {
-                  let [Ru, yu] = uu;
-                  return du(Ru, yu)
+                  [kk.buffers, wk],
+                  [kk.scenes, wk],
+                  [kk.bufferViews, tk],
+                  [kk.accessors, tk],
+                  [kk.nodes, tk],
+                  [kk.meshes, tk],
+                  [kk.materials, bk],
+                  [kk.textures, bk],
+                  [kk.samplers, bk],
+                  [kk.images, bk]
+                ].some((kk => {
+                  let [Fk, Bk] = kk;
+                  return ik(Fk, Bk)
                 }))) return !0;
-              for (const Qu of null !== (ru = uu.accessors) && void 0 !== ru ? ru : []) {
-                var ru, Bu, xu;
-                if (Number.isInteger(Qu.count) && (!Number.isSafeInteger(Qu.count) || Object.is(Qu.count, -0)) || du(null !== (Bu = Qu.min) && void 0 !== Bu ? Bu : void 0, Xu) || du(null !== (xu = Qu.max) && void 0 !== xu ? xu : void 0, Xu)) return !0
+              for (const ak of null !== (Vk = kk.accessors) && void 0 !== Vk ? Vk : []) {
+                var Vk, Jk, Ak;
+                if (Number.isInteger(ak.count) && (!Number.isSafeInteger(ak.count) || Object.is(ak.count, -0)) || ik(null !== (Jk = ak.min) && void 0 !== Jk ? Jk : void 0, dk) || ik(null !== (Ak = ak.max) && void 0 !== Ak ? Ak : void 0, dk)) return !0
               }
-              for (const Qu of null !== (Su = uu.scenes) && void 0 !== Su ? Su : []) {
-                var Su;
-                if (du(Qu.nodes, Ku)) return !0
+              for (const ak of null !== (ek = kk.scenes) && void 0 !== ek ? ek : []) {
+                var ek;
+                if (ik(ak.nodes, tk)) return !0
               }
-              let pu = 0;
-              for (const Qu of null !== (Tu = uu.nodes) && void 0 !== Tu ? Tu : []) {
-                var Tu, Wu, ju;
-                if (du(Qu.children, mu)) return !0;
-                pu += null !== (Wu = null === (ju = Qu.children) || void 0 === ju ? void 0 : ju.length) && void 0 !== Wu ? Wu : 0
+              let yk = 0;
+              for (const ak of null !== (fk = kk.nodes) && void 0 !== fk ? fk : []) {
+                var fk, mk, Wk;
+                if (ik(ak.children, Xk)) return !0;
+                yk += null !== (mk = null === (Wk = ak.children) || void 0 === Wk ? void 0 : Wk.length) && void 0 !== mk ? mk : 0
               }
-              if (pu > mu) return !0;
-              let Hu = 0;
-              for (const Qu of null !== (Cu = uu.meshes) && void 0 !== Cu ? Cu : []) {
-                var Cu;
-                if (!Array.isArray(Qu.primitives)) return !0;
-                if (Hu += Qu.primitives.length, Hu > mu) return !0;
-                for (const uu of Qu.primitives) {
-                  var ku;
-                  const yu = Ru ? null === (ku = uu.extensions) || void 0 === ku ? void 0 : ku.KHR_draco_mesh_compression : void 0;
-                  if (bu(uu.attributes, Vu) || bu(null === yu || void 0 === yu ? void 0 : yu.attributes, Vu)) return !0
+              if (yk > Xk) return !0;
+              let vk = 0;
+              for (const ak of null !== (Lk = kk.meshes) && void 0 !== Lk ? Lk : []) {
+                var Lk;
+                if (!Array.isArray(ak.primitives)) return !0;
+                if (vk += ak.primitives.length, vk > Xk) return !0;
+                for (const kk of ak.primitives) {
+                  var Ok;
+                  const Bk = Fk ? null === (Ok = kk.extensions) || void 0 === Ok ? void 0 : Ok.KHR_draco_mesh_compression : void 0;
+                  if (Yk(kk.attributes, sk) || Yk(null === Bk || void 0 === Bk ? void 0 : Bk.attributes, sk)) return !0
                 }
               }
               return !1
-            }(uu, Zu)) return Ju;
-          const hu = null === (yu = uu.asset) || void 0 === yu ? void 0 : yu.version;
-          if ("string" !== typeof hu || !/^2\.\d+/.test(hu)) return `uses glTF version ${null!==hu&&void 0!==hu?hu:"(none)"}`;
-          const Pu = null === (mu = uu.asset) || void 0 === mu ? void 0 : mu.minVersion;
-          if (void 0 !== Pu && "2.0" !== Pu) return `uses glTF version ${Pu}`;
-          for (const Eu of null !== (iu = uu.extensionsRequired) && void 0 !== iu ? iu : []) {
-            var iu;
-            if (!Xu.has(Eu)) return `requires the glTF extension ${Eu}`
+            }(kk, Ck)) return bk;
+          const Zk = null === (Bk = kk.asset) || void 0 === Bk ? void 0 : Bk.version;
+          if ("string" !== typeof Zk || !/^2\.\d+/.test(Zk)) return `uses glTF version ${null!==Zk&&void 0!==Zk?Zk:"(none)"}`;
+          const pk = null === (Xk = kk.asset) || void 0 === Xk ? void 0 : Xk.minVersion;
+          if (void 0 !== pk && "2.0" !== pk) return `uses glTF version ${pk}`;
+          for (const Rk of null !== (Kk = kk.extensionsRequired) && void 0 !== Kk ? Kk : []) {
+            var Kk;
+            if (!dk.has(Rk)) return `requires the glTF extension ${Rk}`
           }
-          if (null !== (ru = uu.animations) && void 0 !== ru && ru.length) return "has animations";
-          if (null !== (Tu = uu.skins) && void 0 !== Tu && Tu.length) return "uses skins";
-          const Yu = null !== (Hu = uu.buffers) && void 0 !== Hu ? Hu : [];
-          for (const [Eu, Ku] of Yu.entries()) {
-            if (void 0 !== Ku.uri) return Nu;
-            if (Eu > 0 || !Ru) return Ju
+          if (null !== (Vk = kk.animations) && void 0 !== Vk && Vk.length) return "has animations";
+          if (null !== (fk = kk.skins) && void 0 !== fk && fk.length) return "uses skins";
+          const xk = null !== (vk = kk.buffers) && void 0 !== vk ? vk : [];
+          for (const [Rk, tk] of xk.entries()) {
+            if (void 0 !== tk.uri) return wk;
+            if (Rk > 0 || !Fk) return bk
           }
-          for (const [Eu, Ku] of(null !== (ou = uu.bufferViews) && void 0 !== ou ? ou : []).entries()) {
-            var ou;
-            if (!Mu(uu, Ru, Eu) || !Du(Ku)) return Ju
+          for (const [Rk, tk] of(null !== (jk = kk.bufferViews) && void 0 !== jk ? jk : []).entries()) {
+            var jk;
+            if (!Hk(kk, Fk, Rk) || !Nk(tk)) return bk
           }
-          const qu = null !== (Gu = uu.accessors) && void 0 !== Gu ? Gu : [];
-          for (const Eu of qu) {
-            if (void 0 !== Eu.sparse) return "uses sparse accessors";
-            const Ru = Number.isInteger(Eu.count) ? Wu(Eu.count, Ku.accessorElements, "elements in an accessor") : null;
-            if (Ru) return Ru;
-            if (!Iu(uu, Eu)) return Ju
+          const lk = null !== (Mk = kk.accessors) && void 0 !== Mk ? Mk : [];
+          for (const Rk of lk) {
+            if (void 0 !== Rk.sparse) return "uses sparse accessors";
+            const Fk = Number.isInteger(Rk.count) ? mk(Rk.count, tk.accessorElements, "elements in an accessor") : null;
+            if (Fk) return Fk;
+            if (!uk(kk, Rk)) return bk
           }
-          const Ou = null !== (Uu = uu.scenes) && void 0 !== Uu ? Uu : [];
-          if (1 !== Ou.length) return `has ${Ou.length} scenes`;
-          const vu = (0, Eu.v)(uu);
-          if (void 0 !== vu && 0 !== vu) return Ju;
-          const au = null !== (nu = uu.nodes) && void 0 !== nu ? nu : [],
-            fu = null !== (su = uu.meshes) && void 0 !== su ? su : [],
-            uR = null !== (tu = uu.materials) && void 0 !== tu ? tu : [],
-            RR = null !== (lu = uu.textures) && void 0 !== lu ? lu : [],
-            yR = null !== (gu = uu.images) && void 0 !== gu ? gu : [],
-            ER = null !== (cu = null !== (Lu = null !== (zu = Wu(au.length, Ku.nodes, "nodes")) && void 0 !== zu ? zu : Wu(fu.length, Ku.meshes, "meshes")) && void 0 !== Lu ? Lu : Wu(uR.length, Ku.materials, "materials")) && void 0 !== cu ? cu : Wu(yR.length, Ku.images, "images");
-          if (ER) return ER;
-          const KR = new Set;
-          for (const Eu of au)
-            for (const uu of null !== (QR = Eu.children) && void 0 !== QR ? QR : []) {
-              var QR;
-              if (!ju(uu, au.length) || KR.has(uu)) return Ju;
-              KR.add(uu)
+          const nk = null !== (gk = kk.scenes) && void 0 !== gk ? gk : [];
+          if (1 !== nk.length) return `has ${nk.length} scenes`;
+          const Ik = (0, Rk.t)(kk);
+          if (void 0 !== Ik && 0 !== Ik) return bk;
+          const Qk = null !== (Uk = kk.nodes) && void 0 !== Uk ? Uk : [],
+            kF = null !== (ck = kk.meshes) && void 0 !== ck ? ck : [],
+            FF = null !== (Gk = kk.materials) && void 0 !== Gk ? Gk : [],
+            BF = null !== (Tk = kk.textures) && void 0 !== Tk ? Tk : [],
+            RF = null !== (rk = kk.images) && void 0 !== rk ? rk : [],
+            tF = null !== (Dk = null !== (zk = null !== (Pk = mk(Qk.length, tk.nodes, "nodes")) && void 0 !== Pk ? Pk : mk(kF.length, tk.meshes, "meshes")) && void 0 !== zk ? zk : mk(FF.length, tk.materials, "materials")) && void 0 !== Dk ? Dk : mk(RF.length, tk.images, "images");
+          if (tF) return tF;
+          const aF = new Set;
+          for (const Rk of Qk)
+            for (const kk of null !== (XF = Rk.children) && void 0 !== XF ? XF : []) {
+              var XF;
+              if (!Wk(kk, Qk.length) || aF.has(kk)) return bk;
+              aF.add(kk)
             }
-          const mR = new Set,
-            JR = uu => {
-              var Ru;
-              return !mR.has(uu) && (mR.add(uu), (null !== (Ru = au[uu].children) && void 0 !== Ru ? Ru : []).every(JR))
+          const bF = new Set,
+            wF = kk => {
+              var Fk;
+              return !bF.has(kk) && (bF.add(kk), (null !== (Fk = Qk[kk].children) && void 0 !== Fk ? Fk : []).every(wF))
             };
-          for (const Eu of null !== (NR = Ou[0].nodes) && void 0 !== NR ? NR : []) {
-            var NR;
-            if (!ju(Eu, au.length) || KR.has(Eu) || !JR(Eu)) return Ju
+          for (const Rk of null !== (dF = nk[0].nodes) && void 0 !== dF ? dF : []) {
+            var dF;
+            if (!Wk(Rk, Qk.length) || aF.has(Rk) || !wF(Rk)) return bk
           }
-          for (const Eu of au) {
-            if (void 0 !== Eu.matrix) return "uses node matrices";
-            if (void 0 !== Eu.skin) return "uses skins";
-            if (void 0 !== Eu.weights) return "uses morph targets";
-            if (void 0 !== Eu.mesh && !ju(Eu.mesh, fu.length)) return Ju;
-            const uu = [
-              [Eu.translation, 3],
-              [Eu.rotation, 4],
-              [Eu.scale, 3]
+          for (const Rk of Qk) {
+            if (void 0 !== Rk.matrix) return "uses node matrices";
+            if (void 0 !== Rk.skin) return "uses skins";
+            if (void 0 !== Rk.weights) return "uses morph targets";
+            if (void 0 !== Rk.mesh && !Wk(Rk.mesh, kF.length)) return bk;
+            const kk = [
+              [Rk.translation, 3],
+              [Rk.rotation, 4],
+              [Rk.scale, 3]
             ];
-            for (const [Ru, yu] of uu)
-              if (void 0 !== Ru && (!Array.isArray(Ru) || Ru.length !== yu || !Ru.every((uu => Number.isFinite(uu))))) return Ju
+            for (const [Fk, Bk] of kk)
+              if (void 0 !== Fk && (!Array.isArray(Fk) || Fk.length !== Bk || !Fk.every((kk => Number.isFinite(kk))))) return bk
           }
-          let XR = -1,
-            VR = 0,
-            rR = 0,
-            BR = null;
-          for (const Ku of fu) {
-            if (void 0 !== Ku.weights) return "uses morph targets";
-            if (0 === Ku.primitives.length) return Ju;
-            for (const yu of Ku.primitives) {
-              var xR, SR;
-              const Ku = null !== (xR = yu.mode) && void 0 !== xR ? xR : 4;
-              var pR;
-              if (4 !== Ku && 0 !== Ku) return `uses ${null!==(pR=Su[Ku])&&void 0!==pR?pR:`mode ${Ku}`} primitives`;
-              if (void 0 !== yu.targets) return "uses morph targets";
-              if (void 0 !== yu.material && !ju(yu.material, uR.length)) return Ju;
-              const Qu = Zu ? null === (SR = yu.extensions) || void 0 === SR ? void 0 : SR.KHR_draco_mesh_compression : void 0;
-              if (Qu) {
-                if (4 !== Ku) return "uses Draco-compressed points";
-                if (!Mu(uu, Ru, Qu.bufferView) || "object" !== typeof Qu.attributes) return Ju
+          let sF = -1,
+            VF = 0,
+            JF = 0,
+            AF = null;
+          for (const tk of kF) {
+            if (void 0 !== tk.weights) return "uses morph targets";
+            if (0 === tk.primitives.length) return bk;
+            for (const Bk of tk.primitives) {
+              var eF, yF;
+              const tk = null !== (eF = Bk.mode) && void 0 !== eF ? eF : 4;
+              var fF;
+              if (4 !== tk && 0 !== tk) return `uses ${null!==(fF=ek[tk])&&void 0!==fF?fF:`mode ${tk}`} primitives`;
+              if (void 0 !== Bk.targets) return "uses morph targets";
+              if (void 0 !== Bk.material && !Wk(Bk.material, FF.length)) return bk;
+              const ak = Ck ? null === (yF = Bk.extensions) || void 0 === yF ? void 0 : yF.KHR_draco_mesh_compression : void 0;
+              if (ak) {
+                if (4 !== tk) return "uses Draco-compressed points";
+                if (!Hk(kk, Fk, ak.bufferView) || "object" !== typeof ak.attributes) return bk
               }
-              const mu = yu.attributes;
-              if ("object" !== typeof mu || null === mu) return Ju;
-              if (void 0 === mu.POSITION) return "has a primitive with no positions";
-              if (!ju(mu.POSITION, qu.length)) return Ju;
-              const Nu = qu[mu.POSITION].count;
-              for (const [uu, Ru] of Object.entries(mu)) {
-                if (!ju(Ru, qu.length)) return Ju;
-                if (/^(JOINTS|WEIGHTS)_\d+$/.test(uu)) return "uses skins";
-                const yu = qu[Ru],
-                  Eu = Vu[uu];
-                if (Eu && (yu.componentType !== pu || yu.normalized || yu.type !== Eu)) return `stores ${uu} as ${Cu(yu)}`;
-                const Ku = Bu[uu];
-                if (Ku && (yu.type !== Ku.type || !Ku.componentTypes.includes(yu.componentType) || yu.componentType === pu === !!yu.normalized)) return `stores ${uu} as ${Cu(yu)}`;
-                if (xu.has(uu) && yu.count !== Nu) return "has vertex attributes of different lengths"
+              const Xk = Bk.attributes;
+              if ("object" !== typeof Xk || null === Xk) return bk;
+              if (void 0 === Xk.POSITION) return "has a primitive with no positions";
+              if (!Wk(Xk.POSITION, lk.length)) return bk;
+              const wk = lk[Xk.POSITION].count;
+              for (const [kk, Fk] of Object.entries(Xk)) {
+                if (!Wk(Fk, lk.length)) return bk;
+                if (/^(JOINTS|WEIGHTS)_\d+$/.test(kk)) return "uses skins";
+                const Bk = lk[Fk],
+                  Rk = sk[kk];
+                if (Rk && (Bk.componentType !== yk || Bk.normalized || Bk.type !== Rk)) return `stores ${kk} as ${Lk(Bk)}`;
+                const tk = Jk[kk];
+                if (tk && (Bk.type !== tk.type || !tk.componentTypes.includes(Bk.componentType) || Bk.componentType === yk === !!Bk.normalized)) return `stores ${kk} as ${Lk(Bk)}`;
+                if (Ak.has(kk) && Bk.count !== wk) return "has vertex attributes of different lengths"
               }
-              if (Qu) {
-                if (void 0 === yu.indices) return Ju;
-                for (const Ru in Qu.attributes)
-                  if (xu.has(Ru) && void 0 === mu[Ru]) return Ju;
-                if (void 0 === Qu.attributes.POSITION) return Ju;
-                const uu = ju(yu.indices, qu.length) ? qu[yu.indices].count : -1;
-                if (0 === uu) return Ju;
-                if (-1 === XR) XR = Qu.bufferView, VR = Nu, rR = uu;
+              if (ak) {
+                if (void 0 === Bk.indices) return bk;
+                for (const Fk in ak.attributes)
+                  if (Ak.has(Fk) && void 0 === Xk[Fk]) return bk;
+                if (void 0 === ak.attributes.POSITION) return bk;
+                const kk = Wk(Bk.indices, lk.length) ? lk[Bk.indices].count : -1;
+                if (0 === kk) return bk;
+                if (-1 === sF) sF = ak.bufferView, VF = wk, JF = kk;
                 else {
-                  BR ??= new Map([
-                    [XR, [VR, rR]]
+                  AF ??= new Map([
+                    [sF, [VF, JF]]
                   ]);
-                  const Ru = BR.get(Qu.bufferView);
-                  if (Ru && (Ru[0] !== Nu || Ru[1] !== uu)) return Ju;
-                  BR.set(Qu.bufferView, null !== Ru && void 0 !== Ru ? Ru : [Nu, uu])
+                  const Fk = AF.get(ak.bufferView);
+                  if (Fk && (Fk[0] !== wk || Fk[1] !== kk)) return bk;
+                  AF.set(ak.bufferView, null !== Fk && void 0 !== Fk ? Fk : [wk, kk])
                 }
               }
-              let Xu = Nu;
-              if (void 0 !== yu.indices) {
-                if (!ju(yu.indices, qu.length)) return Ju;
-                const uu = qu[yu.indices];
-                if ("SCALAR" !== uu.type) return Ju;
-                if (5121 === uu.componentType) return "uses 8-bit indices";
-                var TR;
-                if (5123 !== uu.componentType && 5125 !== uu.componentType) return `stores indices as ${null!==(TR=Eu.e[uu.componentType])&&void 0!==TR?TR:uu.componentType}`;
-                if (!Qu && void 0 === uu.bufferView) return Ju;
-                Xu = uu.count
+              let dk = wk;
+              if (void 0 !== Bk.indices) {
+                if (!Wk(Bk.indices, lk.length)) return bk;
+                const kk = lk[Bk.indices];
+                if ("SCALAR" !== kk.type) return bk;
+                if (5121 === kk.componentType) return "uses 8-bit indices";
+                var mF;
+                if (5123 !== kk.componentType && 5125 !== kk.componentType) return `stores indices as ${null!==(mF=Rk.f[kk.componentType])&&void 0!==mF?mF:kk.componentType}`;
+                if (!ak && void 0 === kk.bufferView) return bk;
+                dk = kk.count
               }
-              if (4 === Ku && Xu % 3 !== 0) return Ju
+              if (4 === tk && dk % 3 !== 0) return bk
             }
           }
-          let WR = 0,
-            jR = 0,
-            HR = 0;
-          for (let Eu = 0; Eu < au.length; Eu++) {
-            const uu = au[Eu].mesh;
-            if (void 0 !== uu && mR.has(Eu))
-              for (const Ru of fu[uu].primitives) HR++, WR += qu[Ru.attributes.POSITION].count, void 0 !== Ru.indices && (jR += qu[Ru.indices].count)
+          let WF = 0,
+            vF = 0,
+            iF = 0;
+          for (let Rk = 0; Rk < Qk.length; Rk++) {
+            const kk = Qk[Rk].mesh;
+            if (void 0 !== kk && bF.has(Rk))
+              for (const Fk of kF[kk].primitives) iF++, WF += lk[Fk.attributes.POSITION].count, void 0 !== Fk.indices && (vF += lk[Fk.indices].count)
           }
-          const dR = null !== (Fu = null !== (wu = Wu(WR, Ku.vertices, "vertices")) && void 0 !== wu ? wu : Wu(jR, Ku.indices, "indices")) && void 0 !== Fu ? Fu : Wu(HR, Ku.primitives, "primitives");
-          if (dR) return dR;
-          for (const Eu of uR) {
-            var bR, CR;
-            if (void 0 !== Eu.emissiveTexture) return "uses an emissive texture";
-            const Ru = null !== (bR = Eu.alphaMode) && void 0 !== bR ? bR : "OPAQUE";
-            if ("OPAQUE" !== Ru && "MASK" !== Ru && "BLEND" !== Ru) return Ju;
-            const yu = null === (CR = Eu.pbrMetallicRoughness) || void 0 === CR ? void 0 : CR.baseColorTexture;
-            if (yu) {
-              var kR, eR, AR, DR, MR;
-              const Ru = null !== (kR = uu.extensionsUsed) && void 0 !== kR && kR.includes("KHR_texture_transform") ? null === (eR = yu.extensions) || void 0 === eR ? void 0 : eR.KHR_texture_transform : void 0;
-              if (0 !== (null !== (AR = yu.texCoord) && void 0 !== AR ? AR : 0) || 0 !== (null !== (DR = null === Ru || void 0 === Ru ? void 0 : Ru.texCoord) && void 0 !== DR ? DR : 0)) return "uses a second UV set";
-              const Eu = RR[yu.index];
-              if (!Eu || !ju(Eu.source, yR.length) || void 0 !== Eu.sampler && !ju(Eu.sampler, null === (MR = uu.samplers) || void 0 === MR ? void 0 : MR.length)) return Ju
+          const YF = null !== (hk = null !== (qk = mk(WF, tk.vertices, "vertices")) && void 0 !== qk ? qk : mk(vF, tk.indices, "indices")) && void 0 !== hk ? hk : mk(iF, tk.primitives, "primitives");
+          if (YF) return YF;
+          for (const Rk of FF) {
+            var oF, LF;
+            if (void 0 !== Rk.emissiveTexture) return "uses an emissive texture";
+            const Fk = null !== (oF = Rk.alphaMode) && void 0 !== oF ? oF : "OPAQUE";
+            if ("OPAQUE" !== Fk && "MASK" !== Fk && "BLEND" !== Fk) return bk;
+            const Bk = null === (LF = Rk.pbrMetallicRoughness) || void 0 === LF ? void 0 : LF.baseColorTexture;
+            if (Bk) {
+              var OF, EF, SF, NF, HF;
+              const Fk = null !== (OF = kk.extensionsUsed) && void 0 !== OF && OF.includes("KHR_texture_transform") ? null === (EF = Bk.extensions) || void 0 === EF ? void 0 : EF.KHR_texture_transform : void 0;
+              if (0 !== (null !== (SF = Bk.texCoord) && void 0 !== SF ? SF : 0) || 0 !== (null !== (NF = null === Fk || void 0 === Fk ? void 0 : Fk.texCoord) && void 0 !== NF ? NF : 0)) return "uses a second UV set";
+              const Rk = BF[Bk.index];
+              if (!Rk || !Wk(Rk.source, RF.length) || void 0 !== Rk.sampler && !Wk(Rk.sampler, null === (HF = kk.samplers) || void 0 === HF ? void 0 : HF.length)) return bk
             }
           }
-          for (const Eu of yR) {
-            if (void 0 !== Eu.uri) return Nu;
-            if (void 0 === Eu.bufferView) return Ju;
-            const yu = Mu(uu, Ru, Eu.bufferView);
-            if (!yu) return Ju;
-            if ("image/png" !== Eu.mimeType) {
-              var IR, GR, UR;
-              return `has ${Au(null!==(IR=null!==(GR={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(UR=Eu.mimeType)&&void 0!==UR?UR:""])&&void 0!==GR?GR:Eu.mimeType)&&void 0!==IR?IR:"untyped")} image`
+          for (const Rk of RF) {
+            if (void 0 !== Rk.uri) return wk;
+            if (void 0 === Rk.bufferView) return bk;
+            const Bk = Hk(kk, Fk, Rk.bufferView);
+            if (!Bk) return bk;
+            if ("image/png" !== Rk.mimeType) {
+              var uF, MF, gF;
+              return `has ${Sk(null!==(uF=null!==(MF={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(gF=Rk.mimeType)&&void 0!==gF?gF:""])&&void 0!==MF?MF:Rk.mimeType)&&void 0!==uF?uF:"untyped")} image`
             }
-            if (!eu(yu)) return `has ${Au(ku(yu))} image`;
-            const Qu = new DataView(yu.buffer, yu.byteOffset, yu.byteLength),
-              mu = Qu.getUint32(16),
-              Xu = Qu.getUint32(20);
-            if (mu > Ku.imageSide || Xu > Ku.imageSide) return `has a ${mu} \xd7 ${Xu} image (the limit is ${Ku.imageSide})`
+            if (!Ek(Bk)) return `has ${Sk(Ok(Bk))} image`;
+            const ak = new DataView(Bk.buffer, Bk.byteOffset, Bk.byteLength),
+              Xk = ak.getUint32(16),
+              dk = ak.getUint32(20);
+            if (Xk > tk.imageSide || dk > tk.imageSide) return `has a ${Xk} \xd7 ${dk} image (the limit is ${tk.imageSide})`
           }
           return null
-        }(uu, Ru)
+        }(kk, Fk)
       } catch {
-        return Ju
+        return bk
       }
     }
 
-    function nu(uu) {
-      const Ru = Gu(uu.byteLength);
-      if (Ru) return Ru;
+    function Uk(kk) {
+      const Fk = Mk(kk.byteLength);
+      if (Fk) return Fk;
       try {
         const {
-          json: Ru,
-          bin: yu
-        } = (0, Eu.y)(uu);
-        return Uu(Ru, yu)
-      } catch (yu) {
-        if (yu instanceof Eu.k) return yu.reason;
-        throw yu
+          json: Fk,
+          bin: Bk
+        } = (0, Rk.u)(kk);
+        return gk(Fk, Bk)
+      } catch (Bk) {
+        if (Bk instanceof Rk.i) return Bk.reason;
+        throw Bk
       }
     }
   },
-  9143: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => xu,
-      e: () => Bu,
-      h: () => pu,
-      i: () => Qu,
-      k: () => Ku,
-      m: () => Su,
-      o: () => Vu,
-      s: () => ru,
-      v: () => mu,
-      y: () => Xu
+  9079: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Ak,
+      f: () => Jk,
+      g: () => yk,
+      h: () => ak,
+      i: () => tk,
+      k: () => ek,
+      m: () => sk,
+      p: () => Vk,
+      t: () => Xk,
+      u: () => dk
     });
-    var Eu = yu(9148);
-    class Ku extends Error {
-      constructor(uu) {
-        super(`GLB refused: it ${uu}`), this.reason = uu, this.name = "GlbRefused"
+    var Rk = Bk(9082);
+    class tk extends Error {
+      constructor(kk) {
+        super(`GLB refused: it ${kk}`), this.reason = kk, this.name = "GlbRefused"
       }
     }
-    class Qu extends Error {
-      constructor(uu) {
-        super(uu), this.name = "GlbError"
+    class ak extends Error {
+      constructor(kk) {
+        super(kk), this.name = "GlbError"
       }
     }
 
-    function mu(uu) {
-      return Reflect.get(uu, "scene")
+    function Xk(kk) {
+      return Reflect.get(kk, "scene")
     }
-    const Ju = 5130562,
-      Nu = "is not a binary glTF 2.0 file";
+    const bk = 5130562,
+      wk = "is not a binary glTF 2.0 file";
 
-    function Xu(uu) {
-      var Ru;
-      const yu = uu instanceof Uint8Array ? uu : new Uint8Array(uu),
-        Qu = (0, Eu.g)(yu);
-      if (null === Qu) throw new Ku(Nu);
-      const mu = Qu.json,
+    function dk(kk) {
+      var Fk;
+      const Bk = kk instanceof Uint8Array ? kk : new Uint8Array(kk),
+        ak = (0, Rk.h)(Bk);
+      if (null === ak) throw new tk(wk);
+      const Xk = ak.json,
         {
-          jsonEnd: Xu,
-          length: Vu
-        } = Qu,
-        ru = new DataView(yu.buffer, yu.byteOffset, yu.byteLength);
-      let Bu = -1,
-        xu = 0;
-      for (let Tu = Xu; Tu < Vu;) {
-        if (Tu + 8 > Vu) throw new Ku(Nu);
-        const uu = ru.getUint32(Tu, !0),
-          Ru = ru.getUint32(Tu + 4, !0);
-        if (Tu + 8 + uu > Vu || Ru === Eu.c || Ru === Ju && -1 !== Bu) throw new Ku(Nu);
-        Ru === Ju && (Bu = Tu + 8, xu = uu), Tu += 8 + uu
+          jsonEnd: dk,
+          length: sk
+        } = ak,
+        Vk = new DataView(Bk.buffer, Bk.byteOffset, Bk.byteLength);
+      let Jk = -1,
+        Ak = 0;
+      for (let fk = dk; fk < sk;) {
+        if (fk + 8 > sk) throw new tk(wk);
+        const kk = Vk.getUint32(fk, !0),
+          Fk = Vk.getUint32(fk + 4, !0);
+        if (fk + 8 + kk > sk || Fk === Rk.e || Fk === bk && -1 !== Jk) throw new tk(wk);
+        Fk === bk && (Jk = fk + 8, Ak = kk), fk += 8 + kk
       }
-      let Su = null;
-      const pu = null === (Ru = mu.buffers) || void 0 === Ru ? void 0 : Ru[0];
-      if (-1 !== Bu && pu && void 0 === pu.uri) {
-        if (!(pu.byteLength >= 0) || pu.byteLength > xu) throw new Ku(Nu);
-        Su = new Uint8Array(yu.buffer, yu.byteOffset + Bu, pu.byteLength)
+      let ek = null;
+      const yk = null === (Fk = Xk.buffers) || void 0 === Fk ? void 0 : Fk[0];
+      if (-1 !== Jk && yk && void 0 === yk.uri) {
+        if (!(yk.byteLength >= 0) || yk.byteLength > Ak) throw new tk(wk);
+        ek = new Uint8Array(Bk.buffer, Bk.byteOffset + Jk, yk.byteLength)
       }
       return {
-        json: mu,
-        bin: Su,
-        fileBytes: yu.byteLength
+        json: Xk,
+        bin: ek,
+        fileBytes: Bk.byteLength
       }
     }
 
-    function Vu(uu) {
-      const Ru = uu.slice(uu.indexOf(",") + 1),
-        yu = Uint8Array.fromBase64;
-      if (yu) return yu(Ru).buffer;
-      const Eu = atob(Ru),
-        Ku = new Uint8Array(Eu.length);
-      for (let Qu = 0; Qu < Eu.length; Qu++) Ku[Qu] = Eu.charCodeAt(Qu);
-      return Ku.buffer
+    function sk(kk) {
+      const Fk = kk.slice(kk.indexOf(",") + 1),
+        Bk = Uint8Array.fromBase64;
+      if (Bk) return Bk(Fk).buffer;
+      const Rk = atob(Fk),
+        tk = new Uint8Array(Rk.length);
+      for (let ak = 0; ak < Rk.length; ak++) tk[ak] = Rk.charCodeAt(ak);
+      return tk.buffer
     }
-    async function ru(uu) {
-      if (uu.startsWith("data:")) return Vu(uu);
-      const Ru = await fetch(uu);
-      if (!Ru.ok) throw new Qu(`fetching ${uu} failed: ${Ru.status} ${Ru.statusText}`);
-      return await Ru.arrayBuffer()
+    async function Vk(kk) {
+      if (kk.startsWith("data:")) return sk(kk);
+      const Fk = await fetch(kk);
+      if (!Fk.ok) throw new ak(`fetching ${kk} failed: ${Fk.status} ${Fk.statusText}`);
+      return await Fk.arrayBuffer()
     }
-    const Bu = {
+    const Jk = {
         5120: "i8",
         5121: "u8",
         5122: "i16",
@@ -482,7 +482,7 @@ export const modules = {
         5125: "u32",
         5126: "f32"
       },
-      xu = {
+      Ak = {
         5120: 1,
         5121: 1,
         5122: 2,
@@ -490,7 +490,7 @@ export const modules = {
         5125: 4,
         5126: 4
       },
-      Su = {
+      ek = {
         SCALAR: 1,
         VEC2: 2,
         VEC3: 3,
@@ -499,7 +499,7 @@ export const modules = {
         MAT3: 9,
         MAT4: 16
       },
-      pu = [
+      yk = [
         ["POSITION", "position"],
         ["NORMAL", "normal"],
         ["TANGENT", "tangent"],
@@ -512,48 +512,48 @@ export const modules = {
         ["COLOR_0", "color"]
       ]
   },
-  9148: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ku,
-      g: () => Qu,
-      j: () => mu
+  9082: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => tk,
+      h: () => ak,
+      l: () => Xk
     });
-    const Eu = 1179937895,
-      Ku = 1313821514;
+    const Rk = 1179937895,
+      tk = 1313821514;
 
-    function Qu(uu) {
-      const Ru = new DataView(uu.buffer, uu.byteOffset, uu.byteLength);
-      if (uu.byteLength < 20 || Ru.getUint32(0, !0) !== Eu || 2 !== Ru.getUint32(4, !0)) return null;
-      const yu = Math.min(Ru.getUint32(8, !0), uu.byteLength),
-        Qu = Ru.getUint32(12, !0);
-      if (Ru.getUint32(16, !0) !== Ku || 20 + Qu > yu) return null;
-      let mu;
+    function ak(kk) {
+      const Fk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength);
+      if (kk.byteLength < 20 || Fk.getUint32(0, !0) !== Rk || 2 !== Fk.getUint32(4, !0)) return null;
+      const Bk = Math.min(Fk.getUint32(8, !0), kk.byteLength),
+        ak = Fk.getUint32(12, !0);
+      if (Fk.getUint32(16, !0) !== tk || 20 + ak > Bk) return null;
+      let Xk;
       try {
-        mu = JSON.parse((new TextDecoder).decode(uu.subarray(20, 20 + Qu)))
+        Xk = JSON.parse((new TextDecoder).decode(kk.subarray(20, 20 + ak)))
       } catch {
         return null
       }
-      return "object" === typeof mu && null !== mu ? {
-        json: mu,
-        jsonEnd: 20 + Qu,
-        length: yu
+      return "object" === typeof Xk && null !== Xk ? {
+        json: Xk,
+        jsonEnd: 20 + ak,
+        length: Bk
       } : null
     }
 
-    function mu(uu) {
-      var Ru;
-      const yu = null === (Ru = Qu(uu)) || void 0 === Ru ? void 0 : Ru.json;
-      if (void 0 === yu || !Array.isArray(yu.extensionsUsed) || !yu.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const Eu = yu.meshes;
-      return Array.isArray(Eu) && Eu.some((uu => {
-        const Ru = null === uu || void 0 === uu ? void 0 : uu.primitives;
-        return Array.isArray(Ru) && Ru.some((uu => {
-          const Ru = null === uu || void 0 === uu ? void 0 : uu.extensions;
-          return null != (null === Ru || void 0 === Ru ? void 0 : Ru.KHR_draco_mesh_compression)
+    function Xk(kk) {
+      var Fk;
+      const Bk = null === (Fk = ak(kk)) || void 0 === Fk ? void 0 : Fk.json;
+      if (void 0 === Bk || !Array.isArray(Bk.extensionsUsed) || !Bk.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
+      const Rk = Bk.meshes;
+      return Array.isArray(Rk) && Rk.some((kk => {
+        const Fk = null === kk || void 0 === kk ? void 0 : kk.primitives;
+        return Array.isArray(Fk) && Fk.some((kk => {
+          const Fk = null === kk || void 0 === kk ? void 0 : kk.extensions;
+          return null != (null === Fk || void 0 === Fk ? void 0 : Fk.KHR_draco_mesh_compression)
         }))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

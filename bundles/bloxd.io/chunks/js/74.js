@@ -1,509 +1,509 @@
 export const id = 74;
 export const ids = [74];
 export const modules = {
-  4470: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => wR,
-      d: () => ry,
-      f: () => vR,
-      h: () => Ry,
-      j: () => oR,
-      n: () => aR,
-      q: () => cR,
-      t: () => PR,
-      w: () => IR,
-      A: () => Vy,
-      C: () => Xy,
-      E: () => iR,
-      G: () => gR
+  4425: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => qF,
+      e: () => JB,
+      i: () => IF,
+      j: () => BB,
+      m: () => jF,
+      o: () => QF,
+      q: () => DF,
+      s: () => pF,
+      t: () => uF,
+      v: () => VB,
+      x: () => sB,
+      z: () => KF,
+      A: () => rF
     });
-    var Eu = yu(3510);
-    const Ku = Function.prototype.toString,
-      Qu = RegExp.prototype.exec,
-      mu = Reflect.apply,
-      Ju = Function.prototype.call,
-      Nu = Function.prototype.apply,
-      Xu = Function.prototype.bind,
-      Vu = Object.defineProperty,
-      ru = Uint8Array;
-    let Bu, xu;
+    var Rk = Bk(3502);
+    const tk = Function.prototype.toString,
+      ak = RegExp.prototype.exec,
+      Xk = Reflect.apply,
+      bk = Function.prototype.call,
+      wk = Function.prototype.apply,
+      dk = Function.prototype.bind,
+      sk = Object.defineProperty,
+      Vk = Uint8Array;
+    let Jk, Ak;
     try {
-      Bu = globalThis.crypto, xu = void 0 === Bu || null === Bu ? void 0 : Bu.getRandomValues
+      Jk = globalThis.crypto, Ak = void 0 === Jk || null === Jk ? void 0 : Jk.getRandomValues
     } catch {}
-    const Su = "bloxdBindApply";
-    let pu;
+    const ek = "bloxdBindApply";
+    let yk;
     try {
-      const uu = Ju;
-      Vu(uu, Su, {
+      const kk = bk;
+      sk(kk, ek, {
         __proto__: null,
-        value: Xu,
+        value: dk,
         configurable: !0
       });
       try {
-        pu = uu[Su](Nu)
+        yk = kk[ek](wk)
       } finally {
-        delete uu[Su]
+        delete kk[ek]
       }
     } catch {}
-    const Tu = 16,
-      Wu = 256,
-      ju = 0,
-      Hu = 1,
-      du = 2,
-      bu = 3;
-    let Cu, ku = ju,
-      eu = mu,
-      Au = 0;
+    const fk = 16,
+      mk = 256,
+      Wk = 0,
+      vk = 1,
+      ik = 2,
+      Yk = 3;
+    let Lk, Ok = Wk,
+      Ek = Xk,
+      Sk = 0;
 
-    function Du(uu, Ru) {
-      return uu === `function ${Ru}() { [native code] }` || uu === `function ${Ru}() {\n    [native code]\n}`
+    function Nk(kk, Fk) {
+      return kk === `function ${Fk}() { [native code] }` || kk === `function ${Fk}() {\n    [native code]\n}`
     }
-    const Mu = 0,
-      Iu = 1,
-      Gu = 2;
-    let Uu = Mu;
+    const Hk = 0,
+      uk = 1,
+      Mk = 2;
+    let gk = Hk;
 
-    function nu(uu, Ru, yu) {
-      if (Uu === Gu && ku === Hu && ! function() {
-          const uu = Cu;
-          return Au >= Wu && (eu(xu, Bu, [uu]), Au = 0), uu[Au++] < 256 / Tu
-        }()) return function(uu, Ru, yu) {
-        return eu(uu, Ru, yu ?? 0)
+    function Uk(kk, Fk, Bk) {
+      if (gk === Mk && Ok === vk && ! function() {
+          const kk = Lk;
+          return Sk >= mk && (Ek(Ak, Jk, [kk]), Sk = 0), kk[Sk++] < 256 / fk
+        }()) return function(kk, Fk, Bk) {
+        return Ek(kk, Fk, Bk ?? 0)
       }(...arguments);
-      if (Uu === Mu || ku === du) return mu(uu, Ru, yu);
-      let Eu;
-      Uu = Mu;
+      if (gk === Hk || Ok === ik) return Xk(kk, Fk, Bk);
+      let Rk;
+      gk = Hk;
       try {
-        ku === ju && (ku = bu, ku = function() {
-          const uu = mu(Ku, mu, []);
-          if (Du(uu, "apply")) return du;
-          if (null === mu(Qu, /\(\.\.\.arguments\)/, [uu]) && null === mu(Qu, /^function\s*\(\.\.\.[\w$]+\)/, [uu])) return du;
-          if ("function" !== typeof pu || "function" !== typeof Ju || "function" !== typeof Nu || "function" !== typeof Xu || "function" !== typeof Vu || "function" !== typeof xu || "function" !== typeof ru || !Du(mu(Ku, Ju, []), "call") || !Du(mu(Ku, Nu, []), "apply") || !Du(mu(Ku, Xu, []), "bind") || !Du(mu(Ku, Vu, []), "defineProperty") || !Du(mu(Ku, xu, []), "getRandomValues") || !Du(mu(Ku, ru, []), "Uint8Array")) return du;
-          const Ru = pu,
-            yu = {},
-            Eu = function(uu) {
-              return this === yu && uu === yu
+        Ok === Wk && (Ok = Yk, Ok = function() {
+          const kk = Xk(tk, Xk, []);
+          if (Nk(kk, "apply")) return ik;
+          if (null === Xk(ak, /\(\.\.\.arguments\)/, [kk]) && null === Xk(ak, /^function\s*\(\.\.\.[\w$]+\)/, [kk])) return ik;
+          if ("function" !== typeof yk || "function" !== typeof bk || "function" !== typeof wk || "function" !== typeof dk || "function" !== typeof sk || "function" !== typeof Ak || "function" !== typeof Vk || !Nk(Xk(tk, bk, []), "call") || !Nk(Xk(tk, wk, []), "apply") || !Nk(Xk(tk, dk, []), "bind") || !Nk(Xk(tk, sk, []), "defineProperty") || !Nk(Xk(tk, Ak, []), "getRandomValues") || !Nk(Xk(tk, Vk, []), "Uint8Array")) return ik;
+          const Fk = yk,
+            Bk = {},
+            Rk = function(kk) {
+              return this === Bk && kk === Bk
             };
           try {
-            if (!0 !== Ru(Eu, yu, [yu])) return du;
-            const uu = new ru(Wu);
-            Ru(xu, Bu, [uu]), Cu = uu
+            if (!0 !== Fk(Rk, Bk, [Bk])) return ik;
+            const kk = new Vk(mk);
+            Fk(Ak, Jk, [kk]), Lk = kk
           } catch {
-            return du
+            return ik
           }
-          return eu = Ru, Hu
-        }()), Eu = mu(uu, Ru, yu)
-      } catch (Su) {
-        throw ku = du, Su
+          return Ek = Fk, vk
+        }()), Rk = Xk(kk, Fk, Bk)
+      } catch (ek) {
+        throw Ok = ik, ek
       }
-      return Uu = Gu, Eu
+      return gk = Mk, Rk
     }
-    let su = mu;
+    let ck = Xk;
 
-    function tu() {
-      return (su === mu ? 0 : 3) + Uu
-    }
-
-    function lu() {
-      const uu = tu();
-      return su = mu, uu
+    function Gk() {
+      return (ck === Xk ? 0 : 3) + gk
     }
 
-    function gu(uu) {
-      su = uu >= 3 ? nu : mu, Uu = uu % 3
-    }
-    const cu = Function.prototype.toString,
-      Lu = Object.getOwnPropertyDescriptor,
-      zu = Object.prototype.hasOwnProperty,
-      Fu = RegExp.prototype.exec,
-      wu = TextEncoder.prototype.encodeInto,
-      Zu = String.prototype.startsWith,
-      hu = Number.prototype.toString,
-      Pu = WeakMap.prototype.get,
-      iu = WeakMap.prototype.set,
-      Yu = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      ou = new TextEncoder,
-      qu = new Uint8Array(1024),
-      Ou = 9999999,
-      vu = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      au = new WeakMap;
-
-    function fu(uu) {
-      if ("function" !== typeof uu) return "#a0.0";
-      const Ru = su(Pu, au, [uu]);
-      if (void 0 !== Ru) return Ru;
-      const yu = su(cu, uu, []),
-        Eu = yu.length > Ou ? Ou : yu.length,
-        Ku = `#${function(uu,Ru){const yu=su(Fu,Yu,[Ru]);if(null===yu)return"s";const Eu=yu[1];if("ProxyObject"===Eu)return"p";if(""!==Eu)return su(Zu,Eu,["bound "])?"b":"n";try{const Ru=Lu(uu,"name"),yu=void 0!==Ru&&su(zu,Ru,["value"])?Ru.value:void 0;return"string"===typeof yu&&su(Zu,yu,["bound "])?"b":"p"}catch{return"p"}}(uu,yu)}${Eu}.${function(uu){const{written:Ru}=su(wu,ou,[uu,qu]);let yu=2166136261;for(let Eu=0;Eu<Ru;Eu++)yu=(yu^qu[Eu])>>>0,yu=yu+(yu<<1)+(yu<<4)+(yu<<7)+(yu<<8)+(yu<<24)>>>0;return su(hu,yu,[36])}(yu)}`;
-      return su(iu, au, [uu, Ku]), Ku
+    function Tk() {
+      const kk = Gk();
+      return ck = Xk, kk
     }
 
-    function uR(uu) {
-      const Ru = su(Fu, vu, [uu]);
-      return null === Ru ? uu : Ru[1]
+    function rk(kk) {
+      ck = kk >= 3 ? Uk : Xk, gk = kk % 3
     }
-    var RR = yu(3517);
-    const yR = Function.prototype.toString,
-      ER = Object.getOwnPropertyDescriptor,
-      KR = RegExp.prototype.exec,
-      QR = Object.prototype.hasOwnProperty,
-      mR = Set.prototype.has,
-      JR = WeakMap.prototype.get,
-      NR = WeakMap.prototype.set,
-      XR = Reflect.get,
-      VR = Object.getPrototypeOf,
-      rR = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+    const Dk = Function.prototype.toString,
+      zk = Object.getOwnPropertyDescriptor,
+      Pk = Object.prototype.hasOwnProperty,
+      hk = RegExp.prototype.exec,
+      qk = TextEncoder.prototype.encodeInto,
+      Ck = String.prototype.startsWith,
+      Zk = Number.prototype.toString,
+      pk = WeakMap.prototype.get,
+      Kk = WeakMap.prototype.set,
+      xk = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
+      jk = new TextEncoder,
+      lk = new Uint8Array(1024),
+      nk = 9999999,
+      Ik = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
+      Qk = new WeakMap;
 
-    function BR(uu, Ru, yu) {
+    function kF(kk) {
+      if ("function" !== typeof kk) return "#a0.0";
+      const Fk = ck(pk, Qk, [kk]);
+      if (void 0 !== Fk) return Fk;
+      const Bk = ck(Dk, kk, []),
+        Rk = Bk.length > nk ? nk : Bk.length,
+        tk = `#${function(kk,Fk){const Bk=ck(hk,xk,[Fk]);if(null===Bk)return"s";const Rk=Bk[1];if("ProxyObject"===Rk)return"p";if(""!==Rk)return ck(Ck,Rk,["bound "])?"b":"n";try{const Fk=zk(kk,"name"),Bk=void 0!==Fk&&ck(Pk,Fk,["value"])?Fk.value:void 0;return"string"===typeof Bk&&ck(Ck,Bk,["bound "])?"b":"p"}catch{return"p"}}(kk,Bk)}${Rk}.${function(kk){const{written:Fk}=ck(qk,jk,[kk,lk]);let Bk=2166136261;for(let Rk=0;Rk<Fk;Rk++)Bk=(Bk^lk[Rk])>>>0,Bk=Bk+(Bk<<1)+(Bk<<4)+(Bk<<7)+(Bk<<8)+(Bk<<24)>>>0;return ck(Zk,Bk,[36])}(Bk)}`;
+      return ck(Kk, Qk, [kk, tk]), tk
+    }
+
+    function FF(kk) {
+      const Fk = ck(hk, Ik, [kk]);
+      return null === Fk ? kk : Fk[1]
+    }
+    var BF = Bk(3508);
+    const RF = Function.prototype.toString,
+      tF = Object.getOwnPropertyDescriptor,
+      aF = RegExp.prototype.exec,
+      XF = Object.prototype.hasOwnProperty,
+      bF = Set.prototype.has,
+      wF = WeakMap.prototype.get,
+      dF = WeakMap.prototype.set,
+      sF = Reflect.get,
+      VF = Object.getPrototypeOf,
+      JF = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+
+    function AF(kk, Fk, Bk) {
       return {
-        code: uu,
-        holder: Ru,
-        key: yu,
+        code: kk,
+        holder: Fk,
+        key: Bk,
         ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${yu}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
+        native: new RegExp(`^function (get )?${Bk}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
       }
     }
 
-    function xR() {
-      return rR
+    function eF() {
+      return JF
     }
-    const SR = rR?.Instance.prototype,
-      pR = rR?.Memory.prototype;
+    const yF = JF?.Instance.prototype,
+      fF = JF?.Memory.prototype;
 
-    function TR() {
-      return pR
+    function mF() {
+      return fF
     }
-    let WR, jR;
+    let WF, vF;
     try {
-      const uu = globalThis.crypto,
-        Ru = uu?.subtle;
-      WR = uu ? VR(uu) : void 0, jR = Ru ? VR(Ru) : void 0
+      const kk = globalThis.crypto,
+        Fk = kk?.subtle;
+      WF = kk ? VF(kk) : void 0, vF = Fk ? VF(Fk) : void 0
     } catch {}
 
-    function HR(uu, Ru) {
-      for (let yu = uu; void 0 !== yu && null !== yu; yu = VR(yu)) {
-        const uu = ER(yu, Ru);
-        if (uu) return uu
+    function iF(kk, Fk) {
+      for (let Bk = kk; void 0 !== Bk && null !== Bk; Bk = VF(Bk)) {
+        const kk = tF(Bk, Fk);
+        if (kk) return kk
       }
     }
-    const dR = [BR("in", xR, "instantiate", {
+    const YF = [AF("in", eF, "instantiate", {
       tier: "weighted",
       onNamespace: !0
-    }), BR("is", xR, "instantiateStreaming", {
+    }), AF("is", eF, "instantiateStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), BR("co", xR, "compile", {
+    }), AF("co", eF, "compile", {
       tier: "weighted",
       onNamespace: !0
-    }), BR("cs", xR, "compileStreaming", {
+    }), AF("cs", eF, "compileStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), BR("mo", xR, "Module", {
+    }), AF("mo", eF, "Module", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), BR("it", xR, "Instance", {
+    }), AF("it", eF, "Instance", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), BR("me", xR, "Memory", {
+    }), AF("me", eF, "Memory", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), BR("ex", (function() {
-      return SR
+    }), AF("ex", (function() {
+      return yF
     }), "exports", {
       isGetter: !0,
       tier: "punished"
-    }), BR("bu", TR, "buffer", {
+    }), AF("bu", mF, "buffer", {
       isGetter: !0,
       tier: "punished"
-    }), BR("gr", TR, "grow", {
+    }), AF("gr", mF, "grow", {
       tier: "punished"
-    }), BR("rc", (function() {
+    }), AF("rc", (function() {
       return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), BR("cr", (function() {
+    }), "clone"), AF("cr", (function() {
       return globalThis
     }), "crypto", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), BR("su", (function() {
-      return WR
+    }), AF("su", (function() {
+      return WF
     }), "subtle", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), BR("dg", (function() {
-      return jR
+    }), AF("dg", (function() {
+      return vF
     }), "digest", {
       tier: "punished",
       inSecureContext: !0
     })];
 
-    function bR(uu) {
-      let Ru;
+    function oF(kk) {
+      let Fk;
       try {
-        const yu = XR(globalThis, uu);
-        Ru = "function" === typeof yu ? yu.prototype : void 0
+        const Bk = sF(globalThis, kk);
+        Fk = "function" === typeof Bk ? Bk.prototype : void 0
       } catch {}
-      return () => Ru
+      return () => Fk
     }
 
-    function CR(uu, Ru, yu) {
-      return yu.map((yu => BR(uu, Ru, yu)))
+    function LF(kk, Fk, Bk) {
+      return Bk.map((Bk => AF(kk, Fk, Bk)))
     }
-    const kR = BR("rx", bR("HTMLCanvasElement"), "getContext"),
-      eR = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      AR = {
-        webgpu: [...CR("gd", bR("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...CR("gq", bR("GPUQueue"), ["submit", "writeBuffer"]), ...CR("ge", bR("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...CR("gp", bR("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), kR],
-        webgl: [...CR("g2", bR("WebGL2RenderingContext"), [...eR, "drawArraysInstanced", "drawElementsInstanced"]), kR],
-        webgl1: [...CR("g1", bR("WebGLRenderingContext"), eR), kR]
+    const OF = AF("rx", oF("HTMLCanvasElement"), "getContext"),
+      EF = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
+      SF = {
+        webgpu: [...LF("gd", oF("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...LF("gq", oF("GPUQueue"), ["submit", "writeBuffer"]), ...LF("ge", oF("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...LF("gp", oF("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), OF],
+        webgl: [...LF("g2", oF("WebGL2RenderingContext"), [...EF, "drawArraysInstanced", "drawElementsInstanced"]), OF],
+        webgl1: [...LF("g1", oF("WebGLRenderingContext"), EF), OF]
       };
-    let DR = [];
-    const MR = new WeakMap;
+    let NF = [];
+    const HF = new WeakMap;
 
-    function IR(uu, Ru) {
-      const yu = lu();
+    function uF(kk, Fk) {
+      const Bk = Tk();
       try {
-        su(NR, MR, [uu, Ru])
+        ck(dF, HF, [kk, Fk])
       } finally {
-        gu(yu)
+        rk(Bk)
       }
     }
 
-    function GR(uu) {
+    function MF(kk) {
       try {
-        const Ru = Jy(uu),
-          yu = su(JR, MR, [Ru]);
-        return uy(yu, uu) ? UR(uu, !0) : `${UR(uu,!1)}${fu(yu??Ru)}`
+        const Fk = wB(kk),
+          Bk = ck(wF, HF, [Fk]);
+        return FB(Bk, kk) ? gF(kk, !0) : `${gF(kk,!1)}${kF(Bk??Fk)}`
       } catch {
-        return `${UR(uu,!1)}${fu(void 0)}`
+        return `${gF(kk,!1)}${kF(void 0)}`
       }
     }
 
-    function UR(uu, Ru) {
+    function gF(kk, Fk) {
       let {
-        code: yu,
-        key: Eu
-      } = uu;
-      return `wh:${yu}${Ru?"-dbg":""}:${Eu}`
+        code: Bk,
+        key: Rk
+      } = kk;
+      return `wh:${Bk}${Fk?"-dbg":""}:${Rk}`
     }
 
-    function nR(uu) {
-      return Object.values(AR).flatMap((Ru => Ru.map((Ru => UR(Ru, uu)))))
+    function UF(kk) {
+      return Object.values(SF).flatMap((Fk => Fk.map((Fk => gF(Fk, kk)))))
     }
-    const sR = new Set(nR(!0)),
-      tR = new Set([...nR(!1), ...sR]),
-      lR = UR(kR, !1);
+    const cF = new Set(UF(!0)),
+      GF = new Set([...UF(!1), ...cF]),
+      TF = gF(OF, !1);
 
-    function gR(uu) {
-      DR = AR[uu]
+    function rF(kk) {
+      NF = SF[kk]
     }
 
-    function cR(uu) {
-      const Ru = lu();
+    function DF(kk) {
+      const Fk = Tk();
       try {
-        return LR(uu) || LR(uR(uu))
+        return zF(kk) || zF(FF(kk))
       } finally {
-        gu(Ru)
+        rk(Fk)
       }
     }
 
-    function LR(uu) {
-      return su(mR, tR, [uu])
+    function zF(kk) {
+      return ck(bF, GF, [kk])
     }
 
-    function zR(uu) {
-      return new Set(dR.filter((Ru => Ru.tier === uu)).map((uu => `wh:${uu.code}`)))
+    function PF(kk) {
+      return new Set(YF.filter((Fk => Fk.tier === kk)).map((kk => `wh:${kk.code}`)))
     }
-    const FR = zR("punished"),
-      wR = !1,
-      ZR = new Set(RR.e),
-      hR = zR("weighted");
+    const hF = PF("punished"),
+      qF = !1,
+      CF = new Set(BF.d),
+      ZF = PF("weighted");
 
-    function PR(uu) {
-      const Ru = lu();
+    function pF(kk) {
+      const Fk = Tk();
       try {
-        return YR(uR(uu))
+        return xF(FF(kk))
       } finally {
-        gu(Ru)
+        rk(Fk)
       }
     }
 
-    function iR(uu) {
-      const Ru = lu();
+    function KF(kk) {
+      const Fk = Tk();
       try {
-        return uR(uu)
+        return FF(kk)
       } finally {
-        gu(Ru)
+        rk(Fk)
       }
     }
 
-    function YR(uu) {
-      return su(mR, hR, [uu])
+    function xF(kk) {
+      return ck(bF, ZF, [kk])
     }
 
-    function oR(uu) {
-      const Ru = lu();
+    function jF(kk) {
+      const Fk = Tk();
       try {
-        return qR(uu)
+        return lF(kk)
       } finally {
-        gu(Ru)
+        rk(Fk)
       }
     }
 
-    function qR(uu) {
-      return su(mR, ZR, [uu])
+    function lF(kk) {
+      return ck(bF, CF, [kk])
     }
 
-    function OR(uu) {
-      return "wb" === uu || su(mR, FR, [uu])
+    function nF(kk) {
+      return "wb" === kk || ck(bF, hF, [kk])
     }
 
-    function vR(uu) {
-      const Ru = lu();
+    function IF(kk) {
+      const Fk = Tk();
       try {
-        return OR(uu) || qR(uu)
+        return nF(kk) || lF(kk)
       } finally {
-        gu(Ru)
+        rk(Fk)
       }
     }
 
-    function aR(uu) {
-      const Ru = lu();
+    function QF(kk) {
+      const Fk = Tk();
       try {
-        return "wb" === uu || wR && OR(uu)
+        return "wb" === kk || qF && nF(kk)
       } finally {
-        gu(Ru)
+        rk(Fk)
       }
     }
 
-    function fR(uu, Ru) {
+    function kB(kk, Fk) {
       let {
-        isGetter: yu
-      } = Ru;
-      const Eu = ER(uu, yu ? "get" : "value");
-      return void 0 === Eu ? void 0 : Eu.value
+        isGetter: Bk
+      } = Fk;
+      const Rk = tF(kk, Bk ? "get" : "value");
+      return void 0 === Rk ? void 0 : Rk.value
     }
 
-    function uy(uu, Ru) {
+    function FB(kk, Fk) {
       let {
-        isConstructor: yu,
-        native: Eu
-      } = Ru;
-      return "function" === typeof uu && (!(!yu && su(QR, uu, ["prototype"])) && null !== su(KR, Eu, [su(yR, uu, [])]))
+        isConstructor: Bk,
+        native: Rk
+      } = Fk;
+      return "function" === typeof kk && (!(!Bk && ck(XF, kk, ["prototype"])) && null !== ck(aF, Rk, [ck(RF, kk, [])]))
     }
 
-    function Ry(uu, Ru) {
-      return uy(uu, BR("", (() => {}), Ru, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
+    function BB(kk, Fk) {
+      return FB(kk, AF("", (() => {}), Fk, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
         isConstructor: !0
       } : {}))
     }
-    let yy = null,
-      Ey = !1;
+    let RB = null,
+      tB = !1;
 
-    function Ky() {
+    function aB() {
       try {
-        return globalThis.WebAssembly === rR
+        return globalThis.WebAssembly === JF
       } catch {
         return !1
       }
     }
 
-    function Qy(uu) {
+    function XB(kk) {
       try {
-        return function(uu) {
+        return function(kk) {
           const {
-            holder: Ru,
-            key: yu,
-            onNamespace: Eu,
-            inSecureContext: Ku
-          } = uu, Qu = Ru(), mu = HR(Qu, yu);
-          if (!mu) return !(Ku && !0 === globalThis.isSecureContext);
-          const Ju = fR(mu, uu);
-          if (!uy(Ju, uu)) return !1;
-          if (Eu) {
-            const Ru = globalThis.WebAssembly;
-            if (Ru !== Qu && null !== Ru && ("object" === typeof Ru || "function" === typeof Ru)) {
-              const Eu = XR(Ru, yu);
-              return Eu === Ju || void 0 === Eu || uy(Eu, uu)
+            holder: Fk,
+            key: Bk,
+            onNamespace: Rk,
+            inSecureContext: tk
+          } = kk, ak = Fk(), Xk = iF(ak, Bk);
+          if (!Xk) return !(tk && !0 === globalThis.isSecureContext);
+          const bk = kB(Xk, kk);
+          if (!FB(bk, kk)) return !1;
+          if (Rk) {
+            const Fk = globalThis.WebAssembly;
+            if (Fk !== ak && null !== Fk && ("object" === typeof Fk || "function" === typeof Fk)) {
+              const Rk = sF(Fk, Bk);
+              return Rk === bk || void 0 === Rk || FB(Rk, kk)
             }
           }
           return !0
-        }(uu)
+        }(kk)
       } catch {
         return !1
       }
     }
 
-    function my(uu) {
-      const Ru = `wh:${uu.code}`;
-      if ("punished" === uu.tier) return Ru;
+    function bB(kk) {
+      const Fk = `wh:${kk.code}`;
+      if ("punished" === kk.tier) return Fk;
       try {
-        return `${Ru}${fu(Jy(uu))}`
+        return `${Fk}${kF(wB(kk))}`
       } catch {
-        return `${Ru}${fu(void 0)}`
+        return `${Fk}${kF(void 0)}`
       }
     }
 
-    function Jy(uu) {
-      const Ru = HR(uu.holder(), uu.key),
-        yu = void 0 === Ru ? void 0 : fR(Ru, uu);
-      return uu.onNamespace && !Ky() && uy(yu, uu) ? XR(globalThis.WebAssembly, uu.key) : yu
+    function wB(kk) {
+      const Fk = iF(kk.holder(), kk.key),
+        Bk = void 0 === Fk ? void 0 : kB(Fk, kk);
+      return kk.onNamespace && !aB() && FB(Bk, kk) ? sF(globalThis.WebAssembly, kk.key) : Bk
     }
 
-    function Ny(uu) {
-      if (OR(uu)) return 5;
-      const Ru = uR(uu);
-      return YR(Ru) ? 4 : qR(uu) ? 3 : LR(Ru) ? function(uu) {
-        return su(mR, sR, [uu])
-      }(Ru) ? -1 : Ru === lR ? 0 : 1 : 2
+    function dB(kk) {
+      if (nF(kk)) return 5;
+      const Fk = FF(kk);
+      return xF(Fk) ? 4 : lF(kk) ? 3 : zF(Fk) ? function(kk) {
+        return ck(bF, cF, [kk])
+      }(Fk) ? -1 : Fk === TF ? 0 : 1 : 2
     }
 
-    function Xy() {
-      const uu = function() {
-        const uu = tu();
-        return ku === ju || ku === Hu ? (su = nu, Uu = Iu) : su = mu, uu
+    function sB() {
+      const kk = function() {
+        const kk = Gk();
+        return Ok === Wk || Ok === vk ? (ck = Uk, gk = uk) : ck = Xk, kk
       }();
       try {
-        if (null === yy || !OR(yy)) {
-          const uu = function() {
-            if (void 0 === rR) return null;
-            let uu = Ky() ? null : "wh:wa";
-            const Ru = Ru => {
-              null !== Ru && (null === uu || Ny(Ru) > Ny(uu)) && (uu = Ru)
+        if (null === RB || !nF(RB)) {
+          const kk = function() {
+            if (void 0 === JF) return null;
+            let kk = aB() ? null : "wh:wa";
+            const Fk = Fk => {
+              null !== Fk && (null === kk || dB(Fk) > dB(kk)) && (kk = Fk)
             };
-            for (let yu = 0; yu < dR.length; yu++) {
-              const uu = dR[yu];
-              void 0 === uu || Qy(uu) || Ru(my(uu))
+            for (let Bk = 0; Bk < YF.length; Bk++) {
+              const kk = YF[Bk];
+              void 0 === kk || XB(kk) || Fk(bB(kk))
             }
-            Ru((0, RR.p)());
-            for (let yu = 0; yu < DR.length; yu++) {
-              const uu = DR[yu];
-              void 0 === uu || Qy(uu) || Ru(GR(uu))
+            Fk((0, BF.l)());
+            for (let Bk = 0; Bk < NF.length; Bk++) {
+              const kk = NF[Bk];
+              void 0 === kk || XB(kk) || Fk(MF(kk))
             }
-            return uu
+            return kk
           }();
-          (null === yy || null !== uu && Ny(uu) > Ny(yy)) && (yy = uu)
+          (null === RB || null !== kk && dB(kk) > dB(RB)) && (RB = kk)
         }
       } finally {
-        gu(uu)
+        rk(kk)
       }
     }
 
-    function Vy() {
-      Ey = !0
+    function VB() {
+      tB = !0
     }
 
-    function ry() {
-      if (Ey) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && Xy(), null !== yy) return yy;
-      if (void 0 === rR) return "wn:unsupported";
-      const uu = (0, Eu.l)();
-      return null === uu ? null : `wn:${uu}`
+    function JB() {
+      if (tB) return "wb";
+      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && sB(), null !== RB) return RB;
+      if (void 0 === JF) return "wn:unsupported";
+      const kk = (0, Rk.i)();
+      return null === kk ? null : `wn:${kk}`
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,495 +1,495 @@
 export const id = 88;
 export const ids = [88];
 export const modules = {
-  41068: (uu, Ru, yu) => {
-    async function Eu(uu, Ru) {
+  40905: (kk, Fk, Bk) => {
+    async function Rk(kk, Fk) {
       const [{
-        clientSideServerUrls: Eu
+        clientSideServerUrls: Rk
       }, {
-        postJsonWithMetricsCookiesAndJsonResponse: Ku
+        postJsonWithMetricsCookiesAndJsonResponse: tk
       }, {
-        gameBridge: Qu
-      }] = await Promise.all([Promise.resolve().then((() => yu(1176))), Promise.resolve().then((() => yu(1110))), Promise.resolve().then((() => yu(1855)))]), mu = Qu.latest("connectedGame").websocketUrl;
-      if (!mu) throw new Error("AI Helper: not connected to a game server");
-      const Ju = `${Eu.getHttpUrlFromWebSocketUrl(mu)}${uu}`;
-      return await Ku(Ju, Ru, {
+        gameBridge: ak
+      }] = await Promise.all([Promise.resolve().then((() => Bk(1154))), Promise.resolve().then((() => Bk(1101))), Promise.resolve().then((() => Bk(1847)))]), Xk = ak.latest("connectedGame").websocketUrl;
+      if (!Xk) throw new Error("AI Helper: not connected to a game server");
+      const bk = `${Rk.getHttpUrlFromWebSocketUrl(Xk)}${kk}`;
+      return await tk(bk, Fk, {
         retries: 0
       })
     }
-    yu.r(Ru), yu.d(Ru, {
-      postToGameServer: () => Eu
+    Bk.r(Fk), Bk.d(Fk, {
+      postToGameServer: () => Rk
     })
   },
-  41066: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      WorldCodeAiPanel: () => wr,
-      default: () => Zr
+  40898: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      WorldCodeAiPanel: () => KV,
+      default: () => xV
     });
-    var Eu = yu(64),
-      Ku = yu(1035),
-      Qu = yu.n(Ku),
-      mu = yu(1079);
+    var Rk = Bk(61),
+      tk = Bk(1020),
+      ak = Bk.n(tk),
+      Xk = Bk(1069);
 
-    function Ju(uu) {
+    function bk(kk) {
       let {
-        title: Ru,
-        children: yu,
-        isCalm: Ku = !1,
-        isElsewhere: Ju = !1,
-        defaultOpen: Nu = !1,
-        isOpen: Xu,
-        onToggle: Vu,
-        className: ru
-      } = uu;
-      const [Bu, xu] = (0, Eu.useState)(Nu), Su = null !== Xu && void 0 !== Xu ? Xu : Bu;
-      return (0, mu.jsxs)("div", {
-        className: Qu()("WorldCodeAiLog", Ku && "WorldCodeAiLog-calm", Ju && "WorldCodeAiLog-elsewhere", Su && "WorldCodeAiLog-open", ru),
-        children: [(0, mu.jsxs)("button", {
+        title: Fk,
+        children: Bk,
+        isCalm: tk = !1,
+        isElsewhere: bk = !1,
+        defaultOpen: wk = !1,
+        isOpen: dk,
+        onToggle: sk,
+        className: Vk
+      } = kk;
+      const [Jk, Ak] = (0, Rk.useState)(wk), ek = null !== dk && void 0 !== dk ? dk : Jk;
+      return (0, Xk.jsxs)("div", {
+        className: ak()("WorldCodeAiLog", tk && "WorldCodeAiLog-calm", bk && "WorldCodeAiLog-elsewhere", ek && "WorldCodeAiLog-open", Vk),
+        children: [(0, Xk.jsxs)("button", {
           className: "WorldCodeAiLogToggle",
-          "aria-expanded": Su,
+          "aria-expanded": ek,
           onClick: () => {
-            void 0 === Xu && xu(!Su), null === Vu || void 0 === Vu || Vu(!Su)
+            void 0 === dk && Ak(!ek), null === sk || void 0 === sk || sk(!ek)
           },
-          children: [(0, mu.jsx)("span", {
+          children: [(0, Xk.jsx)("span", {
             className: "WorldCodeAiLogChevron",
             "aria-hidden": "true",
-            children: Su ? "\u25be" : "\u25b8"
-          }), Ru]
-        }), Su && (0, mu.jsx)("div", {
+            children: ek ? "\u25be" : "\u25b8"
+          }), Fk]
+        }), ek && (0, Xk.jsx)("div", {
           className: "WorldCodeAiLogBody",
-          children: yu
+          children: Bk
         })]
       })
     }
-    var Nu = yu(1855),
-      Xu = yu(6284),
-      Vu = yu(1408),
-      ru = yu(36665),
-      Bu = yu(1043),
-      xu = yu(4513),
-      Su = yu(36681),
-      pu = yu(1542),
-      Tu = yu(4593),
-      Wu = yu(6276);
-    const ju = new URL(pu.c).host;
+    var wk = Bk(1847),
+      dk = Bk(6193),
+      sk = Bk(1389),
+      Vk = Bk(36565),
+      Jk = Bk(1028),
+      Ak = Bk(4467),
+      ek = Bk(36582),
+      yk = Bk(1535),
+      fk = Bk(4553),
+      mk = Bk(6175);
+    const Wk = new URL(yk.b).host;
 
-    function Hu(uu) {
-      const Ru = uu.trim();
-      let yu;
+    function vk(kk) {
+      const Fk = kk.trim();
+      let Bk;
       try {
-        const uu = /^docs\//i.test(Ru) ? `${pu.c}/` : `${pu.c}/docs/`,
-          Eu = Ru.toLowerCase().replace(/^www\./, "").startsWith(`${ju}/`);
-        yu = new URL(Eu ? `https://${Ru}` : Ru, uu)
+        const kk = /^docs\//i.test(Fk) ? `${yk.b}/` : `${yk.b}/docs/`,
+          Rk = Fk.toLowerCase().replace(/^www\./, "").startsWith(`${Wk}/`);
+        Bk = new URL(Rk ? `https://${Fk}` : Fk, kk)
       } catch {
         return null
       }
-      if ("https:" !== yu.protocol && "http:" !== yu.protocol || yu.host !== ju && yu.host !== `www.${ju}`) return null;
-      const Eu = yu.pathname.toLowerCase();
-      return du(Eu) || null !== (0, Tu.A)(Eu) ? Eu : (0, Tu.y)(Eu)
+      if ("https:" !== Bk.protocol && "http:" !== Bk.protocol || Bk.host !== Wk && Bk.host !== `www.${Wk}`) return null;
+      const Rk = Bk.pathname.toLowerCase();
+      return ik(Rk) || null !== (0, fk.A)(Rk) ? Rk : (0, fk.w)(Rk)
     }
 
-    function du(uu) {
-      return uu === Tu.h || uu === Tu.m
+    function ik(kk) {
+      return kk === fk.i || kk === fk.k
     }
 
-    function bu(uu) {
-      const Ru = Hu(uu);
-      return null === Ru ? uu : `${pu.c}${Ru}`
+    function Yk(kk) {
+      const Fk = vk(kk);
+      return null === Fk ? kk : `${yk.b}${Fk}`
     }
-    var Cu = yu(228),
-      ku = yu(41006),
-      eu = yu.n(ku);
+    var Lk = Bk(194),
+      Ok = Bk(40827),
+      Ek = Bk.n(Ok);
 
-    function Au(uu) {
-      const Ru = [];
-      let yu = 0;
-      return uu.split("\n").forEach(((uu, Eu) => {
-        Ru.push({
-          text: uu,
-          from: yu,
-          index: Eu
-        }), yu += uu.length + 1
-      })), Ru
-    }
-
-    function Du(uu) {
-      return uu.replace(/^\s*\/\/.*$/, "").replace(/\s+/g, "").replace(/['`]/g, '"').replace(/[;,]+$/, "")
+    function Sk(kk) {
+      const Fk = [];
+      let Bk = 0;
+      return kk.split("\n").forEach(((kk, Rk) => {
+        Fk.push({
+          text: kk,
+          from: Bk,
+          index: Rk
+        }), Bk += kk.length + 1
+      })), Fk
     }
 
-    function Mu(uu, Ru, yu) {
-      if (0 === Ru.length) return null;
-      let Eu = null;
-      for (let Ku = 0; Ku + Ru.length <= uu.length; Ku++) {
-        if (Ru.every(((Ru, Eu) => yu(uu[Ku + Eu].text) === Ru))) {
-          if (Eu) return {
-            ...Eu,
+    function Nk(kk) {
+      return kk.replace(/^\s*\/\/.*$/, "").replace(/\s+/g, "").replace(/['`]/g, '"').replace(/[;,]+$/, "")
+    }
+
+    function Hk(kk, Fk, Bk) {
+      if (0 === Fk.length) return null;
+      let Rk = null;
+      for (let tk = 0; tk + Fk.length <= kk.length; tk++) {
+        if (Fk.every(((Fk, Rk) => Bk(kk[tk + Rk].text) === Fk))) {
+          if (Rk) return {
+            ...Rk,
             isOnly: !1
           };
-          const yu = uu[Ku + Ru.length - 1];
-          Eu = {
-            from: uu[Ku].from,
-            to: yu.from + yu.text.length
+          const Bk = kk[tk + Fk.length - 1];
+          Rk = {
+            from: kk[tk].from,
+            to: Bk.from + Bk.text.length
           }
         }
       }
-      return Eu ? {
-        ...Eu,
+      return Rk ? {
+        ...Rk,
         isOnly: !0
       } : null
     }
 
-    function Iu(uu, Ru) {
-      if ("" === Ru.trim()) return null;
-      const yu = Au(uu),
-        Eu = function(uu) {
-          return uu.split("\n").map((uu => uu.trim())).filter(((uu, Ru, yu) => "" !== uu || Ru > 0 && Ru < yu.length - 1))
-        }(Ru),
-        Ku = Mu(yu, Eu, (uu => uu.trim()));
-      if (null !== Ku) return {
-        from: Ku.from,
-        to: Ku.to,
-        isLoose: !Ku.isOnly
+    function uk(kk, Fk) {
+      if ("" === Fk.trim()) return null;
+      const Bk = Sk(kk),
+        Rk = function(kk) {
+          return kk.split("\n").map((kk => kk.trim())).filter(((kk, Fk, Bk) => "" !== kk || Fk > 0 && Fk < Bk.length - 1))
+        }(Fk),
+        tk = Hk(Bk, Rk, (kk => kk.trim()));
+      if (null !== tk) return {
+        from: tk.from,
+        to: tk.to,
+        isLoose: !tk.isOnly
       };
-      const Qu = uu => uu.trim().replace(/;+$/, ""),
-        mu = Mu(yu, Eu.map(Qu), Qu);
-      if (null !== mu) {
-        const yu = uu.indexOf(Ru),
-          Eu = -1 !== yu && (yu < mu.from || yu >= mu.to);
+      const ak = kk => kk.trim().replace(/;+$/, ""),
+        Xk = Hk(Bk, Rk.map(ak), ak);
+      if (null !== Xk) {
+        const Bk = kk.indexOf(Fk),
+          Rk = -1 !== Bk && (Bk < Xk.from || Bk >= Xk.to);
         return {
-          from: mu.from,
-          to: mu.to,
-          isLoose: !mu.isOnly || Eu
+          from: Xk.from,
+          to: Xk.to,
+          isLoose: !Xk.isOnly || Rk
         }
       }
-      const Ju = uu.indexOf(Ru);
-      if (-1 !== Ju) {
-        var Nu, Xu, Vu;
-        const yu = /\w/.test(Ru[0]) && /\w/.test(null !== (Nu = uu[Ju - 1]) && void 0 !== Nu ? Nu : "") || /\w/.test(null !== (Xu = Ru.at(-1)) && void 0 !== Xu ? Xu : "") && /\w/.test(null !== (Vu = uu[Ju + Ru.length]) && void 0 !== Vu ? Vu : "");
+      const bk = kk.indexOf(Fk);
+      if (-1 !== bk) {
+        var wk, dk, sk;
+        const Bk = /\w/.test(Fk[0]) && /\w/.test(null !== (wk = kk[bk - 1]) && void 0 !== wk ? wk : "") || /\w/.test(null !== (dk = Fk.at(-1)) && void 0 !== dk ? dk : "") && /\w/.test(null !== (sk = kk[bk + Fk.length]) && void 0 !== sk ? sk : "");
         return {
-          from: Ju,
-          to: Ju + Ru.length,
-          isLoose: yu || -1 !== uu.indexOf(Ru, Ju + 1)
+          from: bk,
+          to: bk + Fk.length,
+          isLoose: Bk || -1 !== kk.indexOf(Fk, bk + 1)
         }
       }
-      const ru = Ru.split("\n").map(Du).filter(Boolean),
-        Bu = Mu(yu.filter((uu => "" !== Du(uu.text))), ru, Du);
-      return null === Bu ? null : {
-        from: Bu.from,
-        to: Bu.to,
+      const Vk = Fk.split("\n").map(Nk).filter(Boolean),
+        Jk = Hk(Bk.filter((kk => "" !== Nk(kk.text))), Vk, Nk);
+      return null === Jk ? null : {
+        from: Jk.from,
+        to: Jk.to,
         isLoose: !0
       }
     }
 
-    function Gu(uu) {
-      var Ru, yu;
-      return null !== (Ru = null === (yu = /^[ \t]*/.exec(uu)) || void 0 === yu ? void 0 : yu[0]) && void 0 !== Ru ? Ru : ""
+    function Mk(kk) {
+      var Fk, Bk;
+      return null !== (Fk = null === (Bk = /^[ \t]*/.exec(kk)) || void 0 === Bk ? void 0 : Bk[0]) && void 0 !== Fk ? Fk : ""
     }
 
-    function Uu(uu, Ru, yu, Eu) {
-      if (Ru.from > 0 && "\n" !== uu[Ru.from - 1]) return Eu;
-      const Ku = uu.slice(Ru.from, Ru.to).split("\n").filter((uu => "" !== uu.trim())),
-        Qu = yu.split("\n").filter((uu => "" !== uu.trim()));
-      if (0 === Ku.length || 0 === Qu.length) return Eu;
-      const mu = Gu(Ku[0]),
-        Ju = Gu(Qu[0]);
-      if (mu === Ju) return Eu;
-      const Nu = Qu.length > 1 && Qu.length === Ku.length && Qu.slice(1).every(((uu, Ru) => Gu(uu) === Gu(Ku[Ru + 1]))),
-        Xu = Eu.split("\n"),
-        Vu = Xu.findIndex((uu => "" !== uu.trim()));
-      if (-1 === Vu || Gu(Xu[Vu]) === mu) return Eu;
-      let ru = !1;
-      return Xu.map(((uu, Ru) => {
-        var yu, Eu;
-        const Ku = ru;
-        return (null !== (yu = null === (Eu = uu.replace(/\\`/g, "").match(/`/g)) || void 0 === Eu ? void 0 : Eu.length) && void 0 !== yu ? yu : 0) % 2 === 1 && (ru = !ru), Ku || Nu && Ru !== Vu ? uu : function(uu, Ru, yu) {
-          if ("" === uu.trim()) return uu;
-          const Eu = Gu(uu);
-          return Eu.startsWith(Ru) ? yu + uu.slice(Ru.length) : Ru.startsWith(Eu) ? yu.slice(0, Math.max(0, yu.length - (Ru.length - Eu.length))) + uu.trimStart() : uu
-        }(uu, Ju, mu)
+    function gk(kk, Fk, Bk, Rk) {
+      if (Fk.from > 0 && "\n" !== kk[Fk.from - 1]) return Rk;
+      const tk = kk.slice(Fk.from, Fk.to).split("\n").filter((kk => "" !== kk.trim())),
+        ak = Bk.split("\n").filter((kk => "" !== kk.trim()));
+      if (0 === tk.length || 0 === ak.length) return Rk;
+      const Xk = Mk(tk[0]),
+        bk = Mk(ak[0]);
+      if (Xk === bk) return Rk;
+      const wk = ak.length > 1 && ak.length === tk.length && ak.slice(1).every(((kk, Fk) => Mk(kk) === Mk(tk[Fk + 1]))),
+        dk = Rk.split("\n"),
+        sk = dk.findIndex((kk => "" !== kk.trim()));
+      if (-1 === sk || Mk(dk[sk]) === Xk) return Rk;
+      let Vk = !1;
+      return dk.map(((kk, Fk) => {
+        var Bk, Rk;
+        const tk = Vk;
+        return (null !== (Bk = null === (Rk = kk.replace(/\\`/g, "").match(/`/g)) || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Bk ? Bk : 0) % 2 === 1 && (Vk = !Vk), tk || wk && Fk !== sk ? kk : function(kk, Fk, Bk) {
+          if ("" === kk.trim()) return kk;
+          const Rk = Mk(kk);
+          return Rk.startsWith(Fk) ? Bk + kk.slice(Fk.length) : Fk.startsWith(Rk) ? Bk.slice(0, Math.max(0, Bk.length - (Fk.length - Rk.length))) + kk.trimStart() : kk
+        }(kk, bk, Xk)
       })).join("\n")
     }
 
-    function nu(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const Eu = new Map;
-      for (const Ju of uu.split("\n")) {
-        const uu = Ju.trim(),
-          Ru = uu.replace(/;$/, "");
-        "" === Ru || uu.endsWith(";") || Eu.has(Ru) || Eu.set(Ru, uu)
+    function Uk(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const Rk = new Map;
+      for (const bk of kk.split("\n")) {
+        const kk = bk.trim(),
+          Fk = kk.replace(/;$/, "");
+        "" === Fk || kk.endsWith(";") || Rk.has(Fk) || Rk.set(Fk, kk)
       }
-      const Ku = Ru.split("\n");
-      let Qu = !1;
-      const mu = Ku.map(((uu, Ru) => {
-        var mu, Ju, Nu;
-        const Xu = Qu;
-        (null !== (mu = null === (Ju = uu.replace(/\\`/g, "").match(/`/g)) || void 0 === Ju ? void 0 : Ju.length) && void 0 !== mu ? mu : 0) % 2 === 1 && (Qu = !Qu);
-        const Vu = uu.trim(),
-          ru = Eu.get(Vu.replace(/;$/, ""));
-        if (void 0 === ru || ru === Vu || Xu || Qu) return uu;
-        const Bu = null !== (Nu = Ku.slice(Ru + 1).find((uu => "" !== uu.trim()))) && void 0 !== Nu ? Nu : yu;
-        return /^(?:[([`+-]|\/(?![/*]))/.test(Bu.trim()) ? uu : uu.slice(0, uu.length - uu.trimStart().length) + ru
+      const tk = Fk.split("\n");
+      let ak = !1;
+      const Xk = tk.map(((kk, Fk) => {
+        var Xk, bk, wk;
+        const dk = ak;
+        (null !== (Xk = null === (bk = kk.replace(/\\`/g, "").match(/`/g)) || void 0 === bk ? void 0 : bk.length) && void 0 !== Xk ? Xk : 0) % 2 === 1 && (ak = !ak);
+        const sk = kk.trim(),
+          Vk = Rk.get(sk.replace(/;$/, ""));
+        if (void 0 === Vk || Vk === sk || dk || ak) return kk;
+        const Jk = null !== (wk = tk.slice(Fk + 1).find((kk => "" !== kk.trim()))) && void 0 !== wk ? wk : Bk;
+        return /^(?:[([`+-]|\/(?![/*]))/.test(Jk.trim()) ? kk : kk.slice(0, kk.length - kk.trimStart().length) + Vk
       })).join("\n");
-      return mu.trim() === uu.trim() && Ru.trim() !== uu.trim() ? Ru : mu
+      return Xk.trim() === kk.trim() && Fk.trim() !== kk.trim() ? Fk : Xk
     }
 
-    function su(uu) {
-      var Ru;
-      return null !== (Ru = uu.split("\n").find((uu => "" !== uu.trim()))) && void 0 !== Ru ? Ru : ""
+    function ck(kk) {
+      var Fk;
+      return null !== (Fk = kk.split("\n").find((kk => "" !== kk.trim()))) && void 0 !== Fk ? Fk : ""
     }
 
-    function tu(uu, Ru) {
-      if (uu === Ru) return 1;
-      if (uu.length < 2 || Ru.length < 2) return 0;
-      const yu = new Map;
-      for (let mu = 0; mu < uu.length - 1; mu++) {
-        var Eu;
-        const Ru = uu.slice(mu, mu + 2);
-        yu.set(Ru, (null !== (Eu = yu.get(Ru)) && void 0 !== Eu ? Eu : 0) + 1)
+    function Gk(kk, Fk) {
+      if (kk === Fk) return 1;
+      if (kk.length < 2 || Fk.length < 2) return 0;
+      const Bk = new Map;
+      for (let Xk = 0; Xk < kk.length - 1; Xk++) {
+        var Rk;
+        const Fk = kk.slice(Xk, Xk + 2);
+        Bk.set(Fk, (null !== (Rk = Bk.get(Fk)) && void 0 !== Rk ? Rk : 0) + 1)
       }
-      let Ku = 0;
-      for (let mu = 0; mu < Ru.length - 1; mu++) {
-        var Qu;
-        const uu = Ru.slice(mu, mu + 2),
-          Eu = null !== (Qu = yu.get(uu)) && void 0 !== Qu ? Qu : 0;
-        Eu > 0 && (yu.set(uu, Eu - 1), Ku++)
+      let tk = 0;
+      for (let Xk = 0; Xk < Fk.length - 1; Xk++) {
+        var ak;
+        const kk = Fk.slice(Xk, Xk + 2),
+          Rk = null !== (ak = Bk.get(kk)) && void 0 !== ak ? ak : 0;
+        Rk > 0 && (Bk.set(kk, Rk - 1), tk++)
       }
-      return 2 * Ku / (uu.length + Ru.length - 2)
+      return 2 * tk / (kk.length + Fk.length - 2)
     }
 
-    function lu(uu, Ru) {
-      const yu = Ru.split("\n").map(Du).filter(Boolean),
-        Eu = Au(uu).filter((uu => "" !== Du(uu.text)));
-      if (0 === yu.length || 0 === Eu.length) return null;
-      const Ku = Math.min(yu.length, Eu.length);
-      let Qu = null;
-      for (let Ju = 0; Ju + Ku <= Eu.length; Ju++) {
-        let uu = 0;
-        for (let Ru = 0; Ru < Ku; Ru++) uu += tu(Du(Eu[Ju + Ru].text), yu[Ru]);
-        uu /= yu.length, (null === Qu || uu > Qu.score) && (Qu = {
-          start: Ju,
-          score: uu
+    function Tk(kk, Fk) {
+      const Bk = Fk.split("\n").map(Nk).filter(Boolean),
+        Rk = Sk(kk).filter((kk => "" !== Nk(kk.text)));
+      if (0 === Bk.length || 0 === Rk.length) return null;
+      const tk = Math.min(Bk.length, Rk.length);
+      let ak = null;
+      for (let bk = 0; bk + tk <= Rk.length; bk++) {
+        let kk = 0;
+        for (let Fk = 0; Fk < tk; Fk++) kk += Gk(Nk(Rk[bk + Fk].text), Bk[Fk]);
+        kk /= Bk.length, (null === ak || kk > ak.score) && (ak = {
+          start: bk,
+          score: kk
         })
       }
-      if (null === Qu || Qu.score < .5) return null;
-      const mu = Eu.slice(Qu.start, Qu.start + Ku);
+      if (null === ak || ak.score < .5) return null;
+      const Xk = Rk.slice(ak.start, ak.start + tk);
       return {
-        line: mu[0].index + 1,
-        lastLine: mu[mu.length - 1].index + 1,
-        text: mu.map((uu => uu.text.trim())).join("\n")
+        line: Xk[0].index + 1,
+        lastLine: Xk[Xk.length - 1].index + 1,
+        text: Xk.map((kk => kk.text.trim())).join("\n")
       }
     }
 
-    function gu(uu) {
-      return eu().isFunctionExpression(uu) || eu().isArrowFunction(uu)
+    function rk(kk) {
+      return Ek().isFunctionExpression(kk) || Ek().isArrowFunction(kk)
     }
 
-    function cu(uu) {
-      return eu().isExpressionStatement(uu) && eu().isBinaryExpression(uu.expression) && eu().isPropertyAccessExpression(uu.expression.left) && ! function(uu) {
-        return eu().isIdentifier(uu) && ("globalThis" === uu.text || "window" === uu.text || "self" === uu.text)
-      }(uu.expression.left.expression)
+    function Dk(kk) {
+      return Ek().isExpressionStatement(kk) && Ek().isBinaryExpression(kk.expression) && Ek().isPropertyAccessExpression(kk.expression.left) && ! function(kk) {
+        return Ek().isIdentifier(kk) && ("globalThis" === kk.text || "window" === kk.text || "self" === kk.text)
+      }(kk.expression.left.expression)
     }
 
-    function Lu(uu, Ru, yu) {
-      let Eu = yu;
-      for (const Qu of (null !== (Ku = eu().getLeadingCommentRanges(uu, Ru.getFullStart())) && void 0 !== Ku ? Ku : []).reverse()) {
-        var Ku;
-        if (/\n[^\S\n]*\n/.test(uu.slice(Qu.end, Eu))) break;
-        Eu = Qu.pos
+    function zk(kk, Fk, Bk) {
+      let Rk = Bk;
+      for (const ak of (null !== (tk = Ek().getLeadingCommentRanges(kk, Fk.getFullStart())) && void 0 !== tk ? tk : []).reverse()) {
+        var tk;
+        if (/\n[^\S\n]*\n/.test(kk.slice(ak.end, Rk))) break;
+        Rk = ak.pos
       }
-      return Eu
+      return Rk
     }
 
-    function zu(uu) {
-      var Ru;
+    function Pk(kk) {
+      var Fk;
       const {
-        parseDiagnostics: yu
-      } = uu;
-      return (null !== (Ru = null === yu || void 0 === yu ? void 0 : yu.length) && void 0 !== Ru ? Ru : 0) > 0
+        parseDiagnostics: Bk
+      } = kk;
+      return (null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.length) && void 0 !== Fk ? Fk : 0) > 0
     }
 
-    function Fu(uu) {
-      const Ru = eu().createSourceFile("worldCode.js", uu, eu().ScriptTarget.Latest, !1, eu().ScriptKind.JS),
-        yu = [],
-        Eu = (Ku, Qu) => {
-          const mu = function(uu) {
-            var Ru, yu;
-            if (eu().isFunctionDeclaration(uu)) return null !== (Ru = null === (yu = uu.name) || void 0 === yu ? void 0 : yu.text) && void 0 !== Ru ? Ru : null;
-            if (eu().isVariableStatement(uu) && 1 === uu.declarationList.declarations.length) {
-              const Ru = uu.declarationList.declarations[0];
-              return eu().isIdentifier(Ru.name) && Ru.initializer && gu(Ru.initializer) ? Ru.name.text : null
+    function hk(kk) {
+      const Fk = Ek().createSourceFile("worldCode.js", kk, Ek().ScriptTarget.Latest, !1, Ek().ScriptKind.JS),
+        Bk = [],
+        Rk = (tk, ak) => {
+          const Xk = function(kk) {
+            var Fk, Bk;
+            if (Ek().isFunctionDeclaration(kk)) return null !== (Fk = null === (Bk = kk.name) || void 0 === Bk ? void 0 : Bk.text) && void 0 !== Fk ? Fk : null;
+            if (Ek().isVariableStatement(kk) && 1 === kk.declarationList.declarations.length) {
+              const Fk = kk.declarationList.declarations[0];
+              return Ek().isIdentifier(Fk.name) && Fk.initializer && rk(Fk.initializer) ? Fk.name.text : null
             }
-            if (eu().isExpressionStatement(uu) && eu().isBinaryExpression(uu.expression) && uu.expression.operatorToken.kind === eu().SyntaxKind.EqualsToken && gu(uu.expression.right)) {
-              const Ru = uu.expression.left;
-              return eu().isIdentifier(Ru) ? Ru.text : eu().isPropertyAccessExpression(Ru) ? Ru.name.text : null
+            if (Ek().isExpressionStatement(kk) && Ek().isBinaryExpression(kk.expression) && kk.expression.operatorToken.kind === Ek().SyntaxKind.EqualsToken && rk(kk.expression.right)) {
+              const Fk = kk.expression.left;
+              return Ek().isIdentifier(Fk) ? Fk.text : Ek().isPropertyAccessExpression(Fk) ? Fk.name.text : null
             }
             return null
-          }(Ku);
-          if (null !== mu) {
-            const Eu = Ku.getStart(Ru);
-            yu.push({
-              name: mu,
-              from: Eu,
-              to: Ku.getEnd(),
-              commentFrom: Lu(uu, Ku, Eu),
-              topLevel: Qu,
-              isProperty: cu(Ku)
+          }(tk);
+          if (null !== Xk) {
+            const Rk = tk.getStart(Fk);
+            Bk.push({
+              name: Xk,
+              from: Rk,
+              to: tk.getEnd(),
+              commentFrom: zk(kk, tk, Rk),
+              topLevel: ak,
+              isProperty: Dk(tk)
             })
           }
-          eu().forEachChild(Ku, (uu => {
-            Eu(uu, !1)
+          Ek().forEachChild(tk, (kk => {
+            Rk(kk, !1)
           }))
         };
-      for (const Ku of Ru.statements) Eu(Ku, !0);
+      for (const tk of Fk.statements) Rk(tk, !0);
       return {
-        functions: yu,
-        hasErrors: zu(Ru)
+        functions: Bk,
+        hasErrors: Pk(Fk)
       }
     }
 
-    function wu(uu) {
-      return Fu(uu).functions
+    function qk(kk) {
+      return hk(kk).functions
     }
 
-    function Zu(uu) {
-      return uu.trim().replace(/^(?:callback:|function\s+)/, "").replace(/\s*\(.*$/s, "").trim()
+    function Ck(kk) {
+      return kk.trim().replace(/^(?:callback:|function\s+)/, "").replace(/\s*\(.*$/s, "").trim()
     }
 
-    function hu(uu, Ru) {
-      var yu;
-      const Eu = uu.filter((uu => uu.name === Ru)),
-        Ku = Eu.filter((uu => !uu.isProperty)),
-        Qu = Ku.length > 0 ? Ku : Eu;
-      return null !== (yu = Qu.find((uu => uu.topLevel))) && void 0 !== yu ? yu : Qu[0]
+    function Zk(kk, Fk) {
+      var Bk;
+      const Rk = kk.filter((kk => kk.name === Fk)),
+        tk = Rk.filter((kk => !kk.isProperty)),
+        ak = tk.length > 0 ? tk : Rk;
+      return null !== (Bk = ak.find((kk => kk.topLevel))) && void 0 !== Bk ? Bk : ak[0]
     }
 
-    function Pu(uu, Ru) {
-      return "" === uu.trim() ? `${Ru.trim()}\n` : `${uu.replace(/\s*$/,"")}\n\n${Ru.trim()}\n`
+    function pk(kk, Fk) {
+      return "" === kk.trim() ? `${Fk.trim()}\n` : `${kk.replace(/\s*$/,"")}\n\n${Fk.trim()}\n`
     }
 
-    function iu(uu, Ru, yu) {
-      var Eu, Ku;
-      const Qu = Fu(uu),
+    function Kk(kk, Fk, Bk) {
+      var Rk, tk;
+      const ak = hk(kk),
         {
-          functions: mu
-        } = Qu,
-        Ju = wu(yu),
-        Nu = null !== (Eu = Ju.find((uu => uu.topLevel && !uu.isProperty))) && void 0 !== Eu ? Eu : Ju.find((uu => uu.topLevel)),
-        Xu = Zu(Ru),
-        Vu = Nu ? hu(mu, Nu.name) : void 0,
-        ru = null !== (Ku = void 0 !== Vu && !Ju.some((uu => uu.topLevel && uu.name === Xu)) ? Vu : hu(mu, Xu)) && void 0 !== Ku ? Ku : Vu;
-      return ru ? Yu(uu, Qu, ru, Ju, yu) : Pu(uu, yu)
+          functions: Xk
+        } = ak,
+        bk = qk(Bk),
+        wk = null !== (Rk = bk.find((kk => kk.topLevel && !kk.isProperty))) && void 0 !== Rk ? Rk : bk.find((kk => kk.topLevel)),
+        dk = Ck(Fk),
+        sk = wk ? Zk(Xk, wk.name) : void 0,
+        Vk = null !== (tk = void 0 !== sk && !bk.some((kk => kk.topLevel && kk.name === dk)) ? sk : Zk(Xk, dk)) && void 0 !== tk ? tk : sk;
+      return Vk ? xk(kk, ak, Vk, bk, Bk) : pk(kk, Bk)
     }
 
-    function Yu(uu, Ru, yu, Eu, Ku) {
+    function xk(kk, Fk, Bk, Rk, tk) {
       let {
-        functions: Qu,
-        hasErrors: mu
-      } = Ru;
-      const Ju = Qu.some((uu => uu.from > yu.from && uu.to <= yu.to && !Eu.some((Ru => Ru.name === uu.name))));
-      if (mu && Ju) return null;
-      const Nu = /^\s*(?:\/\/|\/\*)/.test(Ku) ? yu.commentFrom : yu.from;
-      return uu.slice(0, Nu) + nu(uu.slice(Nu, yu.to), Ku.trim(), su(uu.slice(yu.to))) + uu.slice(yu.to)
+        functions: ak,
+        hasErrors: Xk
+      } = Fk;
+      const bk = ak.some((kk => kk.from > Bk.from && kk.to <= Bk.to && !Rk.some((Fk => Fk.name === kk.name))));
+      if (Xk && bk) return null;
+      const wk = /^\s*(?:\/\/|\/\*)/.test(tk) ? Bk.commentFrom : Bk.from;
+      return kk.slice(0, wk) + Uk(kk.slice(wk, Bk.to), tk.trim(), ck(kk.slice(Bk.to))) + kk.slice(Bk.to)
     }
 
-    function ou(uu, Ru, yu, Eu, Ku) {
-      const Qu = Eu.trim();
-      if (Qu.includes("\n") || !Qu.endsWith("{")) return null;
-      const mu = Fu(uu),
-        Ju = mu.functions.find((Eu => Eu.topLevel && qu(uu, Eu.from) <= Ru && yu < Eu.to && !uu.slice(Eu.from, yu).includes("\n"))),
-        Nu = Fu(Ku),
-        Xu = Nu.functions.filter((uu => uu.topLevel)),
-        Vu = !Nu.hasErrors && (1 === Xu.length || Xu.some((uu => uu.name === (null === Ju || void 0 === Ju ? void 0 : Ju.name)))),
-        ru = 1 === Xu.length && Xu[0].name !== (null === Ju || void 0 === Ju ? void 0 : Ju.name) ? Xu[0].name : void 0,
-        Bu = void 0 === ru ? void 0 : mu.functions.find((uu => uu.topLevel && uu.name === ru));
-      return Ju && Vu ? Yu(uu, mu, null !== Bu && void 0 !== Bu ? Bu : Ju, Nu.functions, Ku) : function(uu, Ru, yu, Eu, Ku) {
-        const Qu = eu().createSourceFile("worldCode.js", uu, eu().ScriptTarget.Latest, !0, eu().ScriptKind.JS),
-          mu = Qu.statements.find((Eu => {
-            const Ku = Eu.getStart(Qu);
-            return qu(uu, Ku) <= Ru && yu < Eu.getEnd() && !uu.slice(Ku, yu).includes("\n")
+    function jk(kk, Fk, Bk, Rk, tk) {
+      const ak = Rk.trim();
+      if (ak.includes("\n") || !ak.endsWith("{")) return null;
+      const Xk = hk(kk),
+        bk = Xk.functions.find((Rk => Rk.topLevel && lk(kk, Rk.from) <= Fk && Bk < Rk.to && !kk.slice(Rk.from, Bk).includes("\n"))),
+        wk = hk(tk),
+        dk = wk.functions.filter((kk => kk.topLevel)),
+        sk = !wk.hasErrors && (1 === dk.length || dk.some((kk => kk.name === (null === bk || void 0 === bk ? void 0 : bk.name)))),
+        Vk = 1 === dk.length && dk[0].name !== (null === bk || void 0 === bk ? void 0 : bk.name) ? dk[0].name : void 0,
+        Jk = void 0 === Vk ? void 0 : Xk.functions.find((kk => kk.topLevel && kk.name === Vk));
+      return bk && sk ? xk(kk, Xk, null !== Jk && void 0 !== Jk ? Jk : bk, wk.functions, tk) : function(kk, Fk, Bk, Rk, tk) {
+        const ak = Ek().createSourceFile("worldCode.js", kk, Ek().ScriptTarget.Latest, !0, Ek().ScriptKind.JS),
+          Xk = ak.statements.find((Rk => {
+            const tk = Rk.getStart(ak);
+            return lk(kk, tk) <= Fk && Bk < Rk.getEnd() && !kk.slice(tk, Bk).includes("\n")
           })),
-          Ju = eu().createSourceFile("replace.js", Ku.trim(), eu().ScriptTarget.Latest, !0, eu().ScriptKind.JS),
-          Nu = 1 === Ju.statements.length ? Ju.statements[0] : void 0;
-        if (!mu || !Nu || zu(Ju) || Nu.kind !== mu.kind || !Nu.getText(Ju).startsWith(Eu)) return null;
-        const Xu = mu.getStart(Qu);
-        return uu.slice(0, Xu) + Ku.trim() + uu.slice(mu.getEnd())
-      }(uu, Ru, yu, Qu, Ku)
+          bk = Ek().createSourceFile("replace.js", tk.trim(), Ek().ScriptTarget.Latest, !0, Ek().ScriptKind.JS),
+          wk = 1 === bk.statements.length ? bk.statements[0] : void 0;
+        if (!Xk || !wk || Pk(bk) || wk.kind !== Xk.kind || !wk.getText(bk).startsWith(Rk)) return null;
+        const dk = Xk.getStart(ak);
+        return kk.slice(0, dk) + tk.trim() + kk.slice(Xk.getEnd())
+      }(kk, Fk, Bk, ak, tk)
     }
 
-    function qu(uu, Ru) {
-      let yu = Ru;
-      for (; yu > 0 && (" " === uu[yu - 1] || "\t" === uu[yu - 1]);) yu--;
-      return 0 === yu || "\n" === uu[yu - 1] ? yu : Ru
+    function lk(kk, Fk) {
+      let Bk = Fk;
+      for (; Bk > 0 && (" " === kk[Bk - 1] || "\t" === kk[Bk - 1]);) Bk--;
+      return 0 === Bk || "\n" === kk[Bk - 1] ? Bk : Fk
     }
 
-    function Ou(uu, Ru, yu) {
-      const Eu = Ru.trim().toLowerCase();
-      if ("" !== uu.trim() && ("top" === Eu || "start" === Eu)) return `${yu.trim()}\n\n${uu.replace(/^\s+/,"")}`;
-      const Ku = "end" === Eu ? void 0 : hu(wu(uu), Zu(Ru));
-      return Ku ? `${uu.slice(0,Ku.to)}\n\n${yu.trim()}${uu.slice(Ku.to)}` : Pu(uu, yu)
+    function nk(kk, Fk, Bk) {
+      const Rk = Fk.trim().toLowerCase();
+      if ("" !== kk.trim() && ("top" === Rk || "start" === Rk)) return `${Bk.trim()}\n\n${kk.replace(/^\s+/,"")}`;
+      const tk = "end" === Rk ? void 0 : Zk(qk(kk), Ck(Fk));
+      return tk ? `${kk.slice(0,tk.to)}\n\n${Bk.trim()}${kk.slice(tk.to)}` : pk(kk, Bk)
     }
 
-    function vu(uu) {
-      return [...new Set(wu(uu).filter((uu => uu.topLevel)).map((uu => uu.name)))]
+    function Ik(kk) {
+      return [...new Set(qk(kk).filter((kk => kk.topLevel)).map((kk => kk.name)))]
     }
-    const au = 120,
-      fu = /\b(?:my|his|her|their)\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\b(?:i am|i'm)\s+\d+\b|\b\d+\s+years?\s+old\b|\be-?mail\b|\bphone number\b|\bpassword\b|\bwhere (?:i|we) live\b/i;
+    const Qk = 120,
+      kF = /\b(?:my|his|her|their)\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\b(?:i am|i'm)\s+\d+\b|\b\d+\s+years?\s+old\b|\be-?mail\b|\bphone number\b|\bpassword\b|\bwhere (?:i|we) live\b/i;
 
-    function uR(uu) {
-      let Ru = uu.replace(/\s+/g, " ").trim();
-      if ("" === Ru || fu.test(Ru)) return null;
-      if (Ru.length > au) {
-        const uu = Ru.slice(0, au);
-        Ru = `${uu.slice(0,Math.max(uu.lastIndexOf(" "),60)).trimEnd()}\u2026`
+    function FF(kk) {
+      let Fk = kk.replace(/\s+/g, " ").trim();
+      if ("" === Fk || kF.test(Fk)) return null;
+      if (Fk.length > Qk) {
+        const kk = Fk.slice(0, Qk);
+        Fk = `${kk.slice(0,Math.max(kk.lastIndexOf(" "),60)).trimEnd()}\u2026`
       }
-      return Ru.charAt(0).toUpperCase() + Ru.slice(1)
+      return Fk.charAt(0).toUpperCase() + Fk.slice(1)
     }
-    const RR = /(?:===?\s*|\bcase\s+|startsWith\(\s*)["'`]\/?([a-zA-Z][\w-]{0,20})/g;
+    const BF = /(?:===?\s*|\bcase\s+|startsWith\(\s*)["'`]\/?([a-zA-Z][\w-]{0,20})/g;
 
-    function yR(uu) {
-      var Ru, yu;
-      const Eu = null === (Ru = /\(([^)]*)\)/.exec(uu)) || void 0 === Ru || null === (yu = Ru[1].split(",")[1]) || void 0 === yu ? void 0 : yu.trim();
-      return Eu && /^[A-Za-z_$][\w$]*$/.test(Eu) ? [...uu.matchAll(/\b([A-Za-z_$][\w$]*)\s*\(([^()]*)\)/g)].flatMap((uu => uu[2].split(",").some((uu => uu.trim() === Eu)) ? [uu[1]] : [])) : []
+    function RF(kk) {
+      var Fk, Bk;
+      const Rk = null === (Fk = /\(([^)]*)\)/.exec(kk)) || void 0 === Fk || null === (Bk = Fk[1].split(",")[1]) || void 0 === Bk ? void 0 : Bk.trim();
+      return Rk && /^[A-Za-z_$][\w$]*$/.test(Rk) ? [...kk.matchAll(/\b([A-Za-z_$][\w$]*)\s*\(([^()]*)\)/g)].flatMap((kk => kk[2].split(",").some((kk => kk.trim() === Rk)) ? [kk[1]] : [])) : []
     }
 
-    function ER(uu, Ru) {
-      const yu = new Set,
-        Eu = new Set,
-        Ku = new Set,
-        Qu = Object.values(uu).map((uu => {
-          const Ru = wu(uu),
-            yu = Ru.filter((uu => "playerCommand" === uu.name)).map((Ru => uu.slice(Ru.from, Ru.to)));
+    function tF(kk, Fk) {
+      const Bk = new Set,
+        Rk = new Set,
+        tk = new Set,
+        ak = Object.values(kk).map((kk => {
+          const Fk = qk(kk),
+            Bk = Fk.filter((kk => "playerCommand" === kk.name)).map((Fk => kk.slice(Fk.from, Fk.to)));
           return {
-            text: uu,
-            found: Ru,
-            own: yu
+            text: kk,
+            found: Fk,
+            own: Bk
           }
         })),
-        mu = new Set(Qu.flatMap((uu => {
+        Xk = new Set(ak.flatMap((kk => {
           let {
-            own: Ru
-          } = uu;
-          return Ru.flatMap(yR)
+            own: Fk
+          } = kk;
+          return Fk.flatMap(RF)
         })));
       for (const {
-          text: Nu,
-          found: Xu,
-          own: Vu
+          text: wk,
+          found: dk,
+          own: sk
         }
-        of Qu) {
-        for (const Ku of vu(Nu)) Ru.has(Ku) ? yu.add(Ku) : Eu.add(Ku);
-        const uu = [...Vu, ...Xu.filter((uu => "playerCommand" !== uu.name && mu.has(uu.name))).map((uu => Nu.slice(uu.from, uu.to)))],
-          Qu = uu.length > 0 || !/\bplayerCommand\b/.test(Nu) ? uu : [Nu];
-        for (const Ru of Qu)
-          for (const uu of Ru.matchAll(RR)) Ku.add(`/${uu[1].split(/\s/)[0]}`)
+        of ak) {
+        for (const tk of Ik(wk)) Fk.has(tk) ? Bk.add(tk) : Rk.add(tk);
+        const kk = [...sk, ...dk.filter((kk => "playerCommand" !== kk.name && Xk.has(kk.name))).map((kk => wk.slice(kk.from, kk.to)))],
+          ak = kk.length > 0 || !/\bplayerCommand\b/.test(wk) ? kk : [wk];
+        for (const Fk of ak)
+          for (const kk of Fk.matchAll(BF)) tk.add(`/${kk[1].split(/\s/)[0]}`)
       }
-      const Ju = uu => [...uu].slice(0, 12);
+      const bk = kk => [...kk].slice(0, 12);
       return {
-        callbacks: Ju(yu),
-        commands: Ju(Ku),
-        functions: Ju(Eu)
+        callbacks: bk(Bk),
+        commands: bk(tk),
+        functions: bk(Rk)
       }
     }
-    const KR = new Map([
+    const aF = new Map([
       ["onPlayerJoin", "When a player joins"],
       ["onPlayerLeave", "When a player leaves"],
       ["onPlayerChat", "When a player chats"],
@@ -520,87 +520,87 @@ export const modules = {
       ["doPeriodicSave", "When the game saves"]
     ]);
 
-    function QR(uu) {
-      const Ru = KR.get(uu);
-      if (Ru) return Ru;
-      return `When: ${uu.replace(/^on/,"").replace(/([a-z])([A-Z])/g,"$1 $2").toLowerCase()}`
+    function XF(kk) {
+      const Fk = aF.get(kk);
+      if (Fk) return Fk;
+      return `When: ${kk.replace(/^on/,"").replace(/([a-z])([A-Z])/g,"$1 $2").toLowerCase()}`
     }
 
-    function mR(uu) {
-      return Array.isArray(uu) && uu.every((uu => "string" === typeof uu))
+    function bF(kk) {
+      return Array.isArray(kk) && kk.every((kk => "string" === typeof kk))
     }
-    const JR = /\b(?:game|minigame|tycoon|rpg|simulator|obby|shop|store|upgrades?|levels?|rounds?|teams?|quests?|leaderboards?|lobby|economy|inventory|bosse?s?|waves?|missions?)\b/gi,
-      NR = /,|\band\b|\bthen\b|\bplus\b|\bwith\b|\balso\b/gi;
+    const wF = /\b(?:game|minigame|tycoon|rpg|simulator|obby|shop|store|upgrades?|levels?|rounds?|teams?|quests?|leaderboards?|lobby|economy|inventory|bosse?s?|waves?|missions?)\b/gi,
+      dF = /,|\band\b|\bthen\b|\bplus\b|\bwith\b|\balso\b/gi;
 
-    function XR(uu) {
-      var Ru, yu;
-      const Eu = uu.trim().split(/\s+/).length,
-        Ku = new Set((null !== (Ru = uu.match(JR)) && void 0 !== Ru ? Ru : []).map((uu => uu.toLowerCase().replace(/s$/, "")))).size,
-        Qu = (null !== (yu = uu.match(NR)) && void 0 !== yu ? yu : []).length;
-      return Ku >= 2 && Qu >= 2 || Eu >= 30 && Qu >= 3
-    }
-
-    function VR(uu) {
-      const Ru = uu.split(/\n|\|/).map((uu => uu.replace(/^\s*(?:[-*\u2022]|\d+[.)]|step\s*\d+[:.)]?)\s*/i, "").replace(/\s+/g, " ").trim())).filter((uu => "" !== uu)).slice(0, 5).map((uu => uu.length > 90 ? `${uu.slice(0,89).trimEnd()}\u2026` : uu));
-      return Ru.length >= 2 ? Ru : []
-    }
-    var rR = yu(4640);
-
-    function BR(uu) {
-      return uu.replace(/^on/, "").replace(/^player/i, "").toLowerCase()
+    function sF(kk) {
+      var Fk, Bk;
+      const Rk = kk.trim().split(/\s+/).length,
+        tk = new Set((null !== (Fk = kk.match(wF)) && void 0 !== Fk ? Fk : []).map((kk => kk.toLowerCase().replace(/s$/, "")))).size,
+        ak = (null !== (Bk = kk.match(dF)) && void 0 !== Bk ? Bk : []).length;
+      return tk >= 2 && ak >= 2 || Rk >= 30 && ak >= 3
     }
 
-    function xR(uu) {
-      const Ru = new Set;
-      for (const yu of uu.matchAll(/^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(/gm)) Ru.add(yu[1]);
-      for (const yu of uu.matchAll(/^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|[A-Za-z_$][\w$]*\s*=>)/gm)) Ru.add(yu[1]);
-      return [...Ru]
+    function VF(kk) {
+      const Fk = kk.split(/\n|\|/).map((kk => kk.replace(/^\s*(?:[-*\u2022]|\d+[.)]|step\s*\d+[:.)]?)\s*/i, "").replace(/\s+/g, " ").trim())).filter((kk => "" !== kk)).slice(0, 5).map((kk => kk.length > 90 ? `${kk.slice(0,89).trimEnd()}\u2026` : kk));
+      return Fk.length >= 2 ? Fk : []
+    }
+    var JF = Bk(4583);
+
+    function AF(kk) {
+      return kk.replace(/^on/, "").replace(/^player/i, "").toLowerCase()
     }
 
-    function SR(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const Eu = new Set(Ru),
-        Ku = new Map;
-      for (const ru of Ru) {
-        var Qu;
-        const uu = BR(ru);
-        Ku.set(uu, [...null !== (Qu = Ku.get(uu)) && void 0 !== Qu ? Qu : [], ru])
+    function eF(kk) {
+      const Fk = new Set;
+      for (const Bk of kk.matchAll(/^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(/gm)) Fk.add(Bk[1]);
+      for (const Bk of kk.matchAll(/^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|[A-Za-z_$][\w$]*\s*=>)/gm)) Fk.add(Bk[1]);
+      return [...Fk]
+    }
+
+    function yF(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const Rk = new Set(Fk),
+        tk = new Map;
+      for (const Vk of Fk) {
+        var ak;
+        const kk = AF(Vk);
+        tk.set(kk, [...null !== (ak = tk.get(kk)) && void 0 !== ak ? ak : [], Vk])
       }
-      const mu = xR(uu),
-        Ju = new Set(xR(yu)),
-        Nu = [];
-      let Xu = uu;
-      for (const ru of mu) {
-        var Vu;
-        if (Eu.has(ru) || Ju.has(ru) || !/^(on|player)[A-Z]/.test(ru)) continue;
-        const uu = null !== (Vu = Ku.get(BR(ru))) && void 0 !== Vu ? Vu : [];
-        1 !== uu.length || mu.includes(uu[0]) || (Xu = (0, rR.u)(Xu, new RegExp(`${ru}(?![\\w$])`, "g"), rR.o, (() => uu[0])), Nu.push({
-          from: ru,
-          to: uu[0]
+      const Xk = eF(kk),
+        bk = new Set(eF(Bk)),
+        wk = [];
+      let dk = kk;
+      for (const Vk of Xk) {
+        var sk;
+        if (Rk.has(Vk) || bk.has(Vk) || !/^(on|player)[A-Z]/.test(Vk)) continue;
+        const kk = null !== (sk = tk.get(AF(Vk))) && void 0 !== sk ? sk : [];
+        1 !== kk.length || Xk.includes(kk[0]) || (dk = (0, JF.y)(dk, new RegExp(`${Vk}(?![\\w$])`, "g"), JF.r, (() => kk[0])), wk.push({
+          from: Vk,
+          to: kk[0]
         }))
       }
       return {
-        code: Xu,
-        renames: Nu
+        code: dk,
+        renames: wk
       }
     }
-    const pR = {
+    const fF = {
         functions: "api",
         callbacks: "callback",
         "client options": "clientOption"
       },
-      TR = Object.keys(pR).map((uu => `"${uu}"`)).join(", ").replace(/, ([^,]*)$/, " or $1"),
-      WR = {
+      mF = Object.keys(fF).map((kk => `"${kk}"`)).join(", ").replace(/, ([^,]*)$/, " or $1"),
+      WF = {
         type: "string",
         description: "A few plain words for the creator on what this change does, under 80 characters"
       },
-      jR = {
+      vF = {
         readOnlyHint: !0,
         destructiveHint: !1,
         idempotentHint: !0,
         openWorldHint: !1
       },
-      HR = [{
+      iF = [{
         name: "write_file",
         title: "Write a file",
         description: "Replaces a file with new code, or makes a new file",
@@ -611,7 +611,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: WR,
+            why: WF,
             content: {
               type: "string",
               description: "The whole new file"
@@ -636,7 +636,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: WR,
+            why: WF,
             search: {
               type: "string",
               description: "Lines to find, copied exactly from the current file"
@@ -669,7 +669,7 @@ export const modules = {
               type: "string",
               description: "The function's or callback's name, e.g. onPlayerJoin"
             },
-            why: WR,
+            why: WF,
             code: {
               type: "string",
               description: "The whole new function"
@@ -698,7 +698,7 @@ export const modules = {
               type: "string",
               description: 'Where it goes: "top", "end", or the name of the function to put it after'
             },
-            why: WR,
+            why: WF,
             code: {
               type: "string",
               description: "Only the new code"
@@ -731,7 +731,7 @@ export const modules = {
               type: "string",
               description: "The file's path, e.g. index.js"
             },
-            why: WR
+            why: WF
           },
           required: ["name"]
         },
@@ -768,7 +768,7 @@ export const modules = {
         inputSchema: {
           type: "object",
           properties: {
-            why: WR,
+            why: WF,
             search: {
               type: "string",
               description: "Lines to find, copied exactly from the open code"
@@ -906,7 +906,7 @@ export const modules = {
           },
           required: ["path"]
         },
-        annotations: jR,
+        annotations: vF,
         _meta: {
           isLookup: !0
         }
@@ -919,7 +919,7 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: jR,
+        annotations: vF,
         _meta: {
           isLookup: !0
         }
@@ -937,7 +937,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: jR,
+        annotations: vF,
         _meta: {
           isLookup: !0
         }
@@ -950,25 +950,25 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: jR,
+        annotations: vF,
         _meta: {
           isLookup: !0
         }
       }, {
         name: "fetch_url",
         title: "Read a docs page",
-        description: `Reads a page of Bloxd's docs as Markdown. ${Tu.j} lists every page with its link; then read the page, or the part of a long page, you need`,
+        description: `Reads a page of Bloxd's docs as Markdown. ${fk.j} lists every page with its link; then read the page, or the part of a long page, you need`,
         inputSchema: {
           type: "object",
           properties: {
             url: {
               type: "string",
-              description: `${Tu.j}, or a page it links to`
+              description: `${fk.j}, or a page it links to`
             }
           },
           required: ["url"]
         },
-        annotations: jR,
+        annotations: vF,
         _meta: {
           isLookup: !0
         }
@@ -981,7 +981,7 @@ export const modules = {
           properties: {
             list: {
               type: "string",
-              description: `${TR}, to list every one of them`
+              description: `${mF}, to list every one of them`
             },
             name: {
               type: "string",
@@ -990,7 +990,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: jR,
+        annotations: vF,
         _meta: {
           isLookup: !0
         }
@@ -1008,7 +1008,7 @@ export const modules = {
           },
           required: ["words"]
         },
-        annotations: jR,
+        annotations: vF,
         _meta: {
           isLookup: !0
         }
@@ -1026,7 +1026,7 @@ export const modules = {
           },
           required: []
         },
-        annotations: jR,
+        annotations: vF,
         _meta: {
           isLookup: !0
         }
@@ -1044,7 +1044,7 @@ export const modules = {
           },
           required: ["name"]
         },
-        annotations: jR,
+        annotations: vF,
         _meta: {
           isLookup: !0
         }
@@ -1057,290 +1057,290 @@ export const modules = {
           properties: {},
           required: []
         },
-        annotations: jR,
+        annotations: vF,
         _meta: {
           isLookup: !0
         }
       }];
 
-    function dR(uu) {
-      var Ru;
-      return !0 === (null === (Ru = bR(uu)._meta) || void 0 === Ru ? void 0 : Ru.isLookup)
+    function YF(kk) {
+      var Fk;
+      return !0 === (null === (Fk = oF(kk)._meta) || void 0 === Fk ? void 0 : Fk.isLookup)
     }
 
-    function bR(uu) {
-      const Ru = HR.find((Ru => Ru.name === uu));
-      if (!Ru) throw new Error(`No AI Helper tool ${uu}`);
-      return Ru
+    function oF(kk) {
+      const Fk = iF.find((Fk => Fk.name === kk));
+      if (!Fk) throw new Error(`No AI Helper tool ${kk}`);
+      return Fk
     }
-    const CR = HR.map((uu => uu.name)).filter((uu => "plan" !== uu && "remember" !== uu)).join("|"),
-      kR = new RegExp(String.raw`^(?:\s*(?:We(?:'ll|'d| will| need to| should| must| can(?!'t))|Will use|Need to|Simpler:)(?:[^\n.]*\.(?=[A-Z])|[^\n]*(?:\n+|$))|\s*(?:Now,? )?(?:I'll |I will |[Ll]et's |[Ll]et me )?(?:[Ww]rite|[Mm]ake|[Ss]end|[Oo]utput|[Pp]roduce|[Uu]se|[Dd]o|[Cc]all) (?:the |an? |one )?(?:${CR})\b[^\n.]*\.?[ \t]*\n*)+`),
-      eR = [new RegExp(String.raw`(?:^|[^\w"</=.])(?:${CR})\b(?!\s*\()`), /\btool calls?\b|^(?:so,? )?(?:(?:we(?:'ll| will)?|I'll|let's) (?:produce|output|generate)|now (?:produce|output))\b|^The user (?:wants?|wanted|asks?|asked|requests?|requested|says|said)\b/i, /^We (?:need|have) to\b/, /^(?:Now|Then),? (?:replace|apply) \S+\.?$|^First edit\b|^Provide (?:the )?(?:entire|full)\b/, /^Let's (?:update|write|implement|produce|output|apply|edit) (?:the )?(?:code|edits?|changes?|calls?|function)\b/, /^(?:Implement|Proceed)\.?$/],
-      AR = /[.!?](?=[ \t]|[A-Z]|$)|\n|$/g;
+    const LF = iF.map((kk => kk.name)).filter((kk => "plan" !== kk && "remember" !== kk)).join("|"),
+      OF = new RegExp(String.raw`^(?:\s*(?:We(?:'ll|'d| will| need to| should| must| can(?!'t))|Will use|Need to|Simpler:)(?:[^\n.]*\.(?=[A-Z])|[^\n]*(?:\n+|$))|\s*(?:Now,? )?(?:I'll |I will |[Ll]et's |[Ll]et me )?(?:[Ww]rite|[Mm]ake|[Ss]end|[Oo]utput|[Pp]roduce|[Uu]se|[Dd]o|[Cc]all) (?:the |an? |one )?(?:${LF})\b[^\n.]*\.?[ \t]*\n*)+`),
+      EF = [new RegExp(String.raw`(?:^|[^\w"</=.])(?:${LF})\b(?!\s*\()`), /\btool calls?\b|^(?:so,? )?(?:(?:we(?:'ll| will)?|I'll|let's) (?:produce|output|generate)|now (?:produce|output))\b|^The user (?:wants?|wanted|asks?|asked|requests?|requested|says|said)\b/i, /^We (?:need|have) to\b/, /^(?:Now|Then),? (?:replace|apply) \S+\.?$|^First edit\b|^Provide (?:the )?(?:entire|full)\b/, /^Let's (?:update|write|implement|produce|output|apply|edit) (?:the )?(?:code|edits?|changes?|calls?|function)\b/, /^(?:Implement|Proceed)\.?$/],
+      SF = /[.!?](?=[ \t]|[A-Z]|$)|\n|$/g;
 
-    function DR(uu) {
-      const Ru = uu.trim();
-      return eR.some((uu => uu.test(Ru)))
+    function NF(kk) {
+      const Fk = kk.trim();
+      return EF.some((kk => kk.test(Fk)))
     }
 
-    function MR(uu, Ru) {
-      const yu = uu.replace(kR, "");
-      return Ru ? function(uu) {
-        const Ru = uu.indexOf("```"),
-          yu = -1 === Ru ? uu : uu.slice(0, Ru);
-        let Eu = -1,
-          Ku = -1,
-          Qu = 0;
-        for (const mu of yu.matchAll(AR)) {
-          const uu = mu.index + mu[0].length;
-          DR(yu.slice(Qu, uu)) && (Eu = -1 === Eu ? Qu : Eu, Ku = uu), Qu = uu
+    function HF(kk, Fk) {
+      const Bk = kk.replace(OF, "");
+      return Fk ? function(kk) {
+        const Fk = kk.indexOf("```"),
+          Bk = -1 === Fk ? kk : kk.slice(0, Fk);
+        let Rk = -1,
+          tk = -1,
+          ak = 0;
+        for (const Xk of Bk.matchAll(SF)) {
+          const kk = Xk.index + Xk[0].length;
+          NF(Bk.slice(ak, kk)) && (Rk = -1 === Rk ? ak : Rk, tk = kk), ak = kk
         }
-        return -1 === Ku ? uu : "" !== yu.slice(Ku).trim() ? uu.slice(Ku).trimStart() : `${uu.slice(0,Eu).trimEnd()}\n${uu.slice(yu.length)}`.trim()
-      }(yu) : "" !== yu.trim() ? yu : uu
+        return -1 === tk ? kk : "" !== Bk.slice(tk).trim() ? kk.slice(tk).trimStart() : `${kk.slice(0,Rk).trimEnd()}\n${kk.slice(Bk.length)}`.trim()
+      }(Bk) : "" !== Bk.trim() ? Bk : kk
     }
-    const IR = /^(?=[\s\S]{200})[^\n]*(?:\\n[^\n]*){3}$/,
-      GR = new Set(["content", "code"]);
+    const uF = /^(?=[\s\S]{200})[^\n]*(?:\\n[^\n]*){3}$/,
+      MF = new Set(["content", "code"]);
 
-    function UR(uu) {
-      const Ru = "string" === typeof uu ? uu.split(/[./:]/).pop() : void 0;
-      return function(uu) {
-        return HR.some((Ru => Ru.name === uu))
-      }(Ru) ? Ru : null
+    function gF(kk) {
+      const Fk = "string" === typeof kk ? kk.split(/[./:]/).pop() : void 0;
+      return function(kk) {
+        return iF.some((Fk => Fk.name === kk))
+      }(Fk) ? Fk : null
     }
 
-    function nR(uu, Ru) {
-      return yu => {
-        const Eu = [];
-        let Ku;
-        for (const Nu of yu.matchAll(uu)) {
-          var Qu;
-          const uu = UR(Nu[1]);
-          if (null === uu) continue;
-          const Xu = {};
-          for (const yu of Nu[2].matchAll(Ru)) {
-            var mu, Ju;
-            Xu[null !== (mu = yu[1]) && void 0 !== mu ? mu : yu[2]] = null !== (Ju = yu[3]) && void 0 !== Ju ? Ju : yu[4]
-          }(null === (Qu = Ku) || void 0 === Qu ? void 0 : Qu.call.name) === uu && "" === yu.slice(Ku.index + Ku.call.source.length, Nu.index).trim() ? Eu[Eu.length - 1] = {
+    function UF(kk, Fk) {
+      return Bk => {
+        const Rk = [];
+        let tk;
+        for (const wk of Bk.matchAll(kk)) {
+          var ak;
+          const kk = gF(wk[1]);
+          if (null === kk) continue;
+          const dk = {};
+          for (const Bk of wk[2].matchAll(Fk)) {
+            var Xk, bk;
+            dk[null !== (Xk = Bk[1]) && void 0 !== Xk ? Xk : Bk[2]] = null !== (bk = Bk[3]) && void 0 !== bk ? bk : Bk[4]
+          }(null === (ak = tk) || void 0 === ak ? void 0 : ak.call.name) === kk && "" === Bk.slice(tk.index + tk.call.source.length, wk.index).trim() ? Rk[Rk.length - 1] = {
             call: {
-              name: uu,
-              args: Xu,
-              source: yu.slice(Ku.index, Nu.index + Nu[0].length)
+              name: kk,
+              args: dk,
+              source: Bk.slice(tk.index, wk.index + wk[0].length)
             },
-            index: Ku.index
-          } : Eu.push({
+            index: tk.index
+          } : Rk.push({
             call: {
-              name: uu,
-              args: Xu,
-              source: Nu[0]
+              name: kk,
+              args: dk,
+              source: wk[0]
             },
-            index: Nu.index
-          }), Ku = "" === Nu[2].trim() && bR(uu).inputSchema.required.length > 0 ? Eu.at(-1) : void 0
+            index: wk.index
+          }), tk = "" === wk[2].trim() && oF(kk).inputSchema.required.length > 0 ? Rk.at(-1) : void 0
         }
-        return Eu
+        return Rk
       }
     }
 
-    function sR(uu) {
-      return uu.replace(/\\(["\\nt])/g, ((uu, Ru) => "n" === Ru ? "\n" : "t" === Ru ? "\t" : Ru))
+    function cF(kk) {
+      return kk.replace(/\\(["\\nt])/g, ((kk, Fk) => "n" === Fk ? "\n" : "t" === Fk ? "\t" : Fk))
     }
 
-    function tR(uu) {
-      let Ru = null !== uu && void 0 !== uu ? uu : {};
-      if ("string" === typeof Ru) try {
-        Ru = JSON.parse("" === Ru ? "{}" : Ru)
+    function GF(kk) {
+      let Fk = null !== kk && void 0 !== kk ? kk : {};
+      if ("string" === typeof Fk) try {
+        Fk = JSON.parse("" === Fk ? "{}" : Fk)
       } catch {
         return null
       }
-      if ("object" !== typeof Ru || null === Ru) return null;
-      const yu = {};
-      for (const [Eu, Ku] of Object.entries(Ru)) "string" === typeof Ku ? yu[Eu] = GR.has(Eu) && IR.test(Ku) && !Ku.includes("\n") ? sR(Ku) : Ku : "boolean" === typeof Ku || "number" === typeof Ku ? yu[Eu] = String(Ku) : "object" !== typeof Ku || null === Ku || Array.isArray(Ku) ? Array.isArray(Ku) && Ku.every((uu => "string" === typeof uu)) && (yu[Eu] = Ku.join("\n")) : yu[Eu] = JSON.stringify(Ku);
-      return yu
+      if ("object" !== typeof Fk || null === Fk) return null;
+      const Bk = {};
+      for (const [Rk, tk] of Object.entries(Fk)) "string" === typeof tk ? Bk[Rk] = MF.has(Rk) && uF.test(tk) && !tk.includes("\n") ? cF(tk) : tk : "boolean" === typeof tk || "number" === typeof tk ? Bk[Rk] = String(tk) : "object" !== typeof tk || null === tk || Array.isArray(tk) ? Array.isArray(tk) && tk.every((kk => "string" === typeof kk)) && (Bk[Rk] = tk.join("\n")) : Bk[Rk] = JSON.stringify(tk);
+      return Bk
     }
 
-    function lR(uu, Ru) {
-      let yu = 0,
-        Eu = !1;
-      for (let Ku = Ru; Ku < uu.length; Ku++) {
-        const Ru = uu[Ku];
-        if (Eu) "\\" === Ru ? Ku++ : '"' === Ru && (Eu = !1);
-        else if ('"' === Ru) Eu = !0;
-        else if ("{" === Ru) yu++;
-        else if ("}" === Ru && (yu--, 0 === yu)) return Ku + 1
+    function TF(kk, Fk) {
+      let Bk = 0,
+        Rk = !1;
+      for (let tk = Fk; tk < kk.length; tk++) {
+        const Fk = kk[tk];
+        if (Rk) "\\" === Fk ? tk++ : '"' === Fk && (Rk = !1);
+        else if ('"' === Fk) Rk = !0;
+        else if ("{" === Fk) Bk++;
+        else if ("}" === Fk && (Bk--, 0 === Bk)) return tk + 1
       }
       return null
     }
 
-    function gR(uu, Ru) {
-      let yu = uu;
+    function rF(kk, Fk) {
+      let Bk = kk;
       for (const {
-          call: Eu,
-          index: Ku
+          call: Rk,
+          index: tk
         }
-        of Ru) yu = yu.slice(0, Ku) + " ".repeat(Eu.source.length) + yu.slice(Ku + Eu.source.length);
-      return yu
+        of Fk) Bk = Bk.slice(0, tk) + " ".repeat(Rk.source.length) + Bk.slice(tk + Rk.source.length);
+      return Bk
     }
-    const cR = new RegExp(`\\b(${HR.map((uu=>uu.name)).join("|")})\\s*\\(\\s*(?=\\{)`, "g");
-    const LR = {
-        formatCall: (uu, Ru) => {
-          const yu = Object.fromEntries(Object.entries(Ru).filter((uu => {
-            let [, Ru] = uu;
-            return void 0 !== Ru
+    const DF = new RegExp(`\\b(${iF.map((kk=>kk.name)).join("|")})\\s*\\(\\s*(?=\\{)`, "g");
+    const zF = {
+        formatCall: (kk, Fk) => {
+          const Bk = Object.fromEntries(Object.entries(Fk).filter((kk => {
+            let [, Fk] = kk;
+            return void 0 !== Fk
           })));
-          return `${uu}(${JSON.stringify(yu)})`
+          return `${kk}(${JSON.stringify(Bk)})`
         },
-        declareTools: uu => uu,
+        declareTools: kk => kk,
         callStyle: "Make each call with function calling, its code in full: never write a call, or the code it carries, in your answer's words or in a code fence.",
-        fileResult: (uu, Ru, yu) => `<file path="${uu}"${yu?' open_in_editor="true"':""}>\n${Ru}\n</file>`,
-        editFailure: (uu, Ru) => `${uu} failed: ${Ru}`,
-        lookupResult: (uu, Ru, yu) => `${uu} ${Ru}:\n${yu}`
+        fileResult: (kk, Fk, Bk) => `<file path="${kk}"${Bk?' open_in_editor="true"':""}>\n${Fk}\n</file>`,
+        editFailure: (kk, Fk) => `${kk} failed: ${Fk}`,
+        lookupResult: (kk, Fk, Bk) => `${kk} ${Fk}:\n${Bk}`
       },
-      zR = /(?:<\|start\|>\s*assistant\s*)?<\|channel\|>[^<{]*?\bto=([\w./:-]+)[^{]*?(?=\{)/g;
+      PF = /(?:<\|start\|>\s*assistant\s*)?<\|channel\|>[^<{]*?\bto=([\w./:-]+)[^{]*?(?=\{)/g;
 
-    function FR(uu) {
-      const Ru = [];
-      for (const Ku of uu.matchAll(zR)) {
-        const Qu = UR(Ku[1]),
-          mu = Ku.index + Ku[0].length,
-          Ju = lR(uu, mu),
-          Nu = null === Ju ? null : tR(uu.slice(mu, Ju));
-        if (null !== Qu && null !== Ju && null !== Nu) {
-          var yu, Eu;
-          const mu = null !== (yu = null === (Eu = uu.slice(Ju).match(/^\s*<\|call\|>/)) || void 0 === Eu ? void 0 : Eu[0]) && void 0 !== yu ? yu : "";
-          Ru.push({
+    function hF(kk) {
+      const Fk = [];
+      for (const tk of kk.matchAll(PF)) {
+        const ak = gF(tk[1]),
+          Xk = tk.index + tk[0].length,
+          bk = TF(kk, Xk),
+          wk = null === bk ? null : GF(kk.slice(Xk, bk));
+        if (null !== ak && null !== bk && null !== wk) {
+          var Bk, Rk;
+          const Xk = null !== (Bk = null === (Rk = kk.slice(bk).match(/^\s*<\|call\|>/)) || void 0 === Rk ? void 0 : Rk[0]) && void 0 !== Bk ? Bk : "";
+          Fk.push({
             call: {
-              name: Qu,
-              args: Nu,
-              source: uu.slice(Ku.index, Ju + mu.length)
+              name: ak,
+              args: wk,
+              source: kk.slice(tk.index, bk + Xk.length)
             },
-            index: Ku.index
+            index: tk.index
           })
         }
       }
-      return Ru
+      return Fk
     }
 
-    function wR(uu) {
-      var Ru, yu, Eu, Ku;
-      let Qu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      if ("object" !== typeof uu || null === uu) return [];
-      const mu = uu;
-      if (Array.isArray(mu.tool_calls)) return mu.tool_calls.flatMap((uu => wR(uu, !0)));
-      if (void 0 !== mu.tool_call) return wR(mu.tool_call, !0);
-      if (void 0 !== mu.function) return wR(mu.function, !0);
-      const Ju = null !== (Ru = null !== (yu = null !== (Eu = null !== (Ku = mu.arguments) && void 0 !== Ku ? Ku : mu.params) && void 0 !== Eu ? Eu : mu.param) && void 0 !== yu ? yu : mu.args) && void 0 !== Ru ? Ru : mu.input,
-        Nu = UR(mu.tool);
-      if (null !== Nu) {
+    function qF(kk) {
+      var Fk, Bk, Rk, tk;
+      let ak = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      if ("object" !== typeof kk || null === kk) return [];
+      const Xk = kk;
+      if (Array.isArray(Xk.tool_calls)) return Xk.tool_calls.flatMap((kk => qF(kk, !0)));
+      if (void 0 !== Xk.tool_call) return qF(Xk.tool_call, !0);
+      if (void 0 !== Xk.function) return qF(Xk.function, !0);
+      const bk = null !== (Fk = null !== (Bk = null !== (Rk = null !== (tk = Xk.arguments) && void 0 !== tk ? tk : Xk.params) && void 0 !== Rk ? Rk : Xk.param) && void 0 !== Bk ? Bk : Xk.args) && void 0 !== Fk ? Fk : Xk.input,
+        wk = gF(Xk.tool);
+      if (null !== wk) {
         const {
-          tool: uu,
-          ...Ru
-        } = mu, yu = tR(null !== Ju && void 0 !== Ju ? Ju : Ru);
-        return null === yu ? [] : [{
-          name: Nu,
-          args: yu
+          tool: kk,
+          ...Fk
+        } = Xk, Bk = GF(null !== bk && void 0 !== bk ? bk : Fk);
+        return null === Bk ? [] : [{
+          name: wk,
+          args: Bk
         }]
       }
-      if (!Qu && void 0 === Ju) return [];
-      const Xu = UR(mu.name),
-        Vu = tR(Ju);
-      return null === Xu || null === Vu ? [] : [{
-        name: Xu,
-        args: Vu
+      if (!ak && void 0 === bk) return [];
+      const dk = gF(Xk.name),
+        sk = GF(bk);
+      return null === dk || null === sk ? [] : [{
+        name: dk,
+        args: sk
       }]
     }
 
-    function ZR(uu) {
-      const Ru = [];
-      let yu = uu.indexOf("{");
-      for (; - 1 !== yu;) {
-        const Eu = lR(uu, yu);
-        let Ku = [];
-        if (null !== Eu) try {
-          Ku = wR(JSON.parse(uu.slice(yu, Eu)))
+    function CF(kk) {
+      const Fk = [];
+      let Bk = kk.indexOf("{");
+      for (; - 1 !== Bk;) {
+        const Rk = TF(kk, Bk);
+        let tk = [];
+        if (null !== Rk) try {
+          tk = qF(JSON.parse(kk.slice(Bk, Rk)))
         } catch {}
-        if (null !== Eu && Ku.length > 0) {
-          const Qu = uu.slice(yu, Eu);
-          Ru.push(...Ku.map((uu => ({
+        if (null !== Rk && tk.length > 0) {
+          const ak = kk.slice(Bk, Rk);
+          Fk.push(...tk.map((kk => ({
             call: {
-              ...uu,
-              source: Qu
+              ...kk,
+              source: ak
             },
-            index: yu
-          })))), yu = uu.indexOf("{", Eu)
-        } else yu = uu.indexOf("{", yu + 1)
+            index: Bk
+          })))), Bk = kk.indexOf("{", Rk)
+        } else Bk = kk.indexOf("{", Bk + 1)
       }
-      return Ru
+      return Fk
     }
 
-    function hR(uu) {
-      if (Array.isArray(uu)) return `[${uu.map(hR).join(", ")}]`;
-      if ("object" === typeof uu && null !== uu) {
-        return `{${Object.entries(uu).map((uu=>{let[Ru,yu]=uu;return`${JSON.stringify(Ru)}: ${hR(yu)}`})).join(", ")}}`
+    function ZF(kk) {
+      if (Array.isArray(kk)) return `[${kk.map(ZF).join(", ")}]`;
+      if ("object" === typeof kk && null !== kk) {
+        return `{${Object.entries(kk).map((kk=>{let[Fk,Bk]=kk;return`${JSON.stringify(Fk)}: ${ZF(Bk)}`})).join(", ")}}`
       }
-      return JSON.stringify(uu)
+      return JSON.stringify(kk)
     }
-    const PR = {
-        formatCall: (uu, Ru) => `<tool_call>\n<function=${uu}>\n${Object.entries(Ru).flatMap((uu=>{let[Ru,yu]=uu;return void 0===yu?[]:[`<parameter=${Ru}>\n${yu}\n</parameter>\n`]})).join("")}</function>\n</tool_call>`,
-        declareTools: (uu, Ru, yu) => yu || 0 === Ru.length ? uu : `${function(uu){return`# Tools\n\nYou have access to the following functions:\n\n<tools>${uu.map((uu=>`\n${hR({type:"function",function:{name:uu.name,description:uu.description,parameters:uu.inputSchema}})}`)).join("")}\n</tools>\n\nIf you choose to call a function ONLY reply in the following format with NO suffix:\n\n<tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>\nvalue_1\n</parameter>\n<parameter=example_parameter_2>\nThis is the value for the second parameter\nthat can span\nmultiple lines\n</parameter>\n</function>\n</tool_call>\n\n<IMPORTANT>\nReminder:\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\n- Required parameters MUST be specified\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\n</IMPORTANT>`}(Ru)}\n\n${uu}`,
+    const pF = {
+        formatCall: (kk, Fk) => `<tool_call>\n<function=${kk}>\n${Object.entries(Fk).flatMap((kk=>{let[Fk,Bk]=kk;return void 0===Bk?[]:[`<parameter=${Fk}>\n${Bk}\n</parameter>\n`]})).join("")}</function>\n</tool_call>`,
+        declareTools: (kk, Fk, Bk) => Bk || 0 === Fk.length ? kk : `${function(kk){return`# Tools\n\nYou have access to the following functions:\n\n<tools>${kk.map((kk=>`\n${ZF({type:"function",function:{name:kk.name,description:kk.description,parameters:kk.inputSchema}})}`)).join("")}\n</tools>\n\nIf you choose to call a function ONLY reply in the following format with NO suffix:\n\n<tool_call>\n<function=example_function_name>\n<parameter=example_parameter_1>\nvalue_1\n</parameter>\n<parameter=example_parameter_2>\nThis is the value for the second parameter\nthat can span\nmultiple lines\n</parameter>\n</function>\n</tool_call>\n\n<IMPORTANT>\nReminder:\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\n- Required parameters MUST be specified\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\n</IMPORTANT>`}(Fk)}\n\n${kk}`,
         callStyle: "Write each call in your answer as a <tool_call> holding a <function=name> block with a <parameter=name> for each argument, the code inside as it is, not escaped and in full: never as JSON or inside a code fence.",
-        fileResult: (uu, Ru, yu) => `<tool_response>\nview_file ${uu}${yu?" (open in the editor)":""}:\n${Ru}\n</tool_response>`,
-        editFailure: (uu, Ru) => `<tool_response>\nError: ${Ru}\n</tool_response>`,
-        lookupResult: (uu, Ru, yu) => `<tool_response>\n${uu} ${Ru}:\n${yu}\n</tool_response>`
+        fileResult: (kk, Fk, Bk) => `<tool_response>\nview_file ${kk}${Bk?" (open in the editor)":""}:\n${Fk}\n</tool_response>`,
+        editFailure: (kk, Fk) => `<tool_response>\nError: ${Fk}\n</tool_response>`,
+        lookupResult: (kk, Fk, Bk) => `<tool_response>\n${kk} ${Fk}:\n${Bk}\n</tool_response>`
       },
-      iR = nR(/(?:<tool_call>\s*)?<function=([\w.:/-]+)>((?:(?!<tool_call\b|<function=)[\s\S])*?(?:<\/parameter>(?=\s*(?:<tool_call\b|<function=|$))|(?=<\/function>|<\/tool_call>)))(?:<\/function>(?:\s*<\/tool_call>)?|<\/tool_call>|\s*(?=<tool_call\b|<function=|$))/g, /<parameter(?:=([\w-]+)|\s+name\s*=\s*"([^"]+)")\s*>\n?([\s\S]*?)(?:\n?<\/parameter>|(?=<parameter[=\s])|\n?$)/g),
-      YR = new Set(["path", "why", "name", "after", "question", "allow_other", "note"]),
-      oR = {
-        formatCall: (uu, Ru) => `<tool_call name="${uu}">\n${Object.entries(Ru).flatMap((uu=>{let[Ru,yu]=uu;return void 0===yu?[]:[`<param name="${Ru}">${YR.has(Ru)?yu:`\n${yu}\n`}</param>\n`]})).join("")}</tool_call>`,
-        declareTools: uu => uu,
+      KF = UF(/(?:<tool_call>\s*)?<function=([\w.:/-]+)>((?:(?!<tool_call\b|<function=)[\s\S])*?(?:<\/parameter>(?=\s*(?:<tool_call\b|<function=|$))|(?=<\/function>|<\/tool_call>)))(?:<\/function>(?:\s*<\/tool_call>)?|<\/tool_call>|\s*(?=<tool_call\b|<function=|$))/g, /<parameter(?:=([\w-]+)|\s+name\s*=\s*"([^"]+)")\s*>\n?([\s\S]*?)(?:\n?<\/parameter>|(?=<parameter[=\s])|\n?$)/g),
+      xF = new Set(["path", "why", "name", "after", "question", "allow_other", "note"]),
+      jF = {
+        formatCall: (kk, Fk) => `<tool_call name="${kk}">\n${Object.entries(Fk).flatMap((kk=>{let[Fk,Bk]=kk;return void 0===Bk?[]:[`<param name="${Fk}">${xF.has(Fk)?Bk:`\n${Bk}\n`}</param>\n`]})).join("")}</tool_call>`,
+        declareTools: kk => kk,
         callStyle: "Write each call in your answer as a <tool_call> with a <param> for each argument, the code inside as it is, not escaped and in full: never as JSON, a function call or inside a code fence.",
-        fileResult: (uu, Ru, yu) => `<tool_result name="view_file" path="${uu}"${yu?' open_in_editor="true"':""}>\n${Ru}\n</tool_result>`,
-        editFailure: (uu, Ru) => `<tool_result name="${uu}" is_error="true">\n${Ru}\n</tool_result>`,
-        lookupResult: (uu, Ru, yu) => `<tool_result name="${uu}" about="${Ru.replace(/"/g,"'")}">\n${yu}\n</tool_result>`
+        fileResult: (kk, Fk, Bk) => `<tool_result name="view_file" path="${kk}"${Bk?' open_in_editor="true"':""}>\n${Fk}\n</tool_result>`,
+        editFailure: (kk, Fk) => `<tool_result name="${kk}" is_error="true">\n${Fk}\n</tool_result>`,
+        lookupResult: (kk, Fk, Bk) => `<tool_result name="${kk}" about="${Fk.replace(/"/g,"'")}">\n${Bk}\n</tool_result>`
       },
-      qR = nR(/<tool_call\s+name\s*=\s*"([^"]+)"\s*>((?:(?!<tool_call\b)[\s\S])*?(?:<\/param(?:eter)?>(?=\s*(?:<tool_call\b|$))|(?=<\/(?:tool_call|invoke|function)>)))(?:<\/(?:tool_call|invoke|function)>|\s*(?=<tool_call\b|$))/g, /<(?:param(?:eter)?\s+name\s*=\s*"([^"]+)"|(?:param(?:eter)?(?:=|\s+)|(?=(?:search|replace)>))([\w-]+))\s*>\n?(?:([\s\S]*?)\n?<\/(?:param(?:eter)?|\1\2)>|((?=\s*\S)(?![\s\S]*<\/[\w-]+[^>]*>)[\s\S]*?)\s*$)/g),
-      OR = {
-        simple: oR,
-        qwenXml: PR,
-        deepseek: LR
+      lF = UF(/<tool_call\s+name\s*=\s*"([^"]+)"\s*>((?:(?!<tool_call\b)[\s\S])*?(?:<\/param(?:eter)?>(?=\s*(?:<tool_call\b|$))|(?=<\/(?:tool_call|invoke|function)>)))(?:<\/(?:tool_call|invoke|function)>|\s*(?=<tool_call\b|$))/g, /<(?:param(?:eter)?\s+name\s*=\s*"([^"]+)"|(?:param(?:eter)?(?:=|\s+)|(?=(?:search|replace)>))([\w-]+))\s*>\n?(?:([\s\S]*?)\n?<\/(?:param(?:eter)?|\1\2)>|((?=\s*\S)(?![\s\S]*<\/[\w-]+[^>]*>)[\s\S]*?)\s*$)/g),
+      nF = {
+        simple: jF,
+        qwenXml: pF,
+        deepseek: zF
       },
-      vR = {
-        simple: qR,
-        qwenXml: iR,
-        deepseek: function(uu) {
-          const Ru = [];
-          for (const Ju of uu.matchAll(cR)) {
-            var yu, Eu, Ku, Qu, mu;
-            const Nu = UR(Ju[1]),
-              Xu = Ju.index + Ju[0].length,
-              Vu = lR(uu, Xu);
-            if (null === Nu || null === Vu || (null !== (yu = null === (Eu = Ru.at(-1)) || void 0 === Eu ? void 0 : Eu.index) && void 0 !== yu ? yu : -1) + (null !== (Ku = null === (Qu = Ru.at(-1)) || void 0 === Qu ? void 0 : Qu.call.source.length) && void 0 !== Ku ? Ku : 0) > Ju.index) continue;
-            const ru = tR(uu.slice(Xu, Vu));
-            if (null === ru) continue;
-            const Bu = /^\s*\)/.exec(uu.slice(Vu)),
-              xu = uu.slice(Ju.index, Vu + (null !== (mu = null === Bu || void 0 === Bu ? void 0 : Bu[0].length) && void 0 !== mu ? mu : 0));
-            Ru.push({
+      IF = {
+        simple: lF,
+        qwenXml: KF,
+        deepseek: function(kk) {
+          const Fk = [];
+          for (const bk of kk.matchAll(DF)) {
+            var Bk, Rk, tk, ak, Xk;
+            const wk = gF(bk[1]),
+              dk = bk.index + bk[0].length,
+              sk = TF(kk, dk);
+            if (null === wk || null === sk || (null !== (Bk = null === (Rk = Fk.at(-1)) || void 0 === Rk ? void 0 : Rk.index) && void 0 !== Bk ? Bk : -1) + (null !== (tk = null === (ak = Fk.at(-1)) || void 0 === ak ? void 0 : ak.call.source.length) && void 0 !== tk ? tk : 0) > bk.index) continue;
+            const Vk = GF(kk.slice(dk, sk));
+            if (null === Vk) continue;
+            const Jk = /^\s*\)/.exec(kk.slice(sk)),
+              Ak = kk.slice(bk.index, sk + (null !== (Xk = null === Jk || void 0 === Jk ? void 0 : Jk[0].length) && void 0 !== Xk ? Xk : 0));
+            Fk.push({
               call: {
-                name: Nu,
-                args: ru,
-                source: xu
+                name: wk,
+                args: Vk,
+                source: Ak
               },
-              index: Ju.index
+              index: bk.index
             })
           }
-          return Ru
+          return Fk
         }
       },
-      aR = ["simple", "qwenXml"];
+      QF = ["simple", "qwenXml"];
 
-    function fR(uu) {
-      return "deepseek" === uu ? "simple" : uu
+    function kB(kk) {
+      return "deepseek" === kk ? "simple" : kk
     }
-    const uy = /<\|[a-z_]+\|>/g,
-      Ry = /^[ \t]*`{1,2}[ \t]*$/gm,
-      yy = /^[ \t]*<\/(?:tool_call|invoke|function|param(?:eter)?)>[ \t]*$/gm,
-      Ey = /^[ \t]*(?:Wait|Oops|Hmm)\b[^\n]*\b(?:redo|re-do|the format|let me (?:fix|try|rewrite|write) (?:that|it|this))\b[^\n]*$/gim,
-      Ky = /```[\w-]*/g,
-      Qy = /^[\s[\],]*$/,
-      my = {
+    const FB = /<\|[a-z_]+\|>/g,
+      BB = /^[ \t]*`{1,2}[ \t]*$/gm,
+      RB = /^[ \t]*<\/(?:tool_call|invoke|function|param(?:eter)?)>[ \t]*$/gm,
+      tB = /^[ \t]*(?:Wait|Oops|Hmm)\b[^\n]*\b(?:redo|re-do|the format|let me (?:fix|try|rewrite|write) (?:that|it|this))\b[^\n]*$/gim,
+      aB = /```[\w-]*/g,
+      XB = /^[\s[\],]*$/,
+      bB = {
         use_prefab: 0,
         add_world_code: 1,
         write_file: 2,
@@ -1365,823 +1365,823 @@ export const modules = {
         view_prefab: 21
       };
 
-    function Jy(uu) {
-      return bR(uu.name).inputSchema.required.every((Ru => void 0 !== uu.args[Ru]))
+    function wB(kk) {
+      return oF(kk.name).inputSchema.required.every((Fk => void 0 !== kk.args[Fk]))
     }
 
-    function Ny(uu, Ru) {
-      const yu = UR(uu),
-        Eu = tR(Ru);
-      return null === yu || null === Eu ? null : {
-        name: yu,
-        args: Eu
+    function dB(kk, Fk) {
+      const Bk = gF(kk),
+        Rk = GF(Fk);
+      return null === Bk || null === Rk ? null : {
+        name: Bk,
+        args: Rk
       }
     }
 
-    function Xy(uu, Ru) {
-      const yu = [];
-      for (const Eu of function(uu) {
-          const Ru = fR(uu),
-            yu = aR.filter((uu => uu !== Ru));
-          return [vR[Ru], ...uu === Ru ? [] : [vR[uu]], ...yu.map((uu => vR[uu])), FR, ZR]
-        }(Ru)) yu.push(...Eu(gR(uu, yu)));
-      return yu.map((uu => {
+    function sB(kk, Fk) {
+      const Bk = [];
+      for (const Rk of function(kk) {
+          const Fk = kB(kk),
+            Bk = QF.filter((kk => kk !== Fk));
+          return [IF[Fk], ...kk === Fk ? [] : [IF[kk]], ...Bk.map((kk => IF[kk])), hF, CF]
+        }(Fk)) Bk.push(...Rk(rF(kk, Bk)));
+      return Bk.map((kk => {
         let {
-          call: Ru
-        } = uu;
-        return Ru
+          call: Fk
+        } = kk;
+        return Fk
       }))
     }
 
-    function Vy(uu, Ru) {
-      return Xy(uu, Ru).sort(((uu, Ru) => my[uu.name] - my[Ru.name]))
+    function VB(kk, Fk) {
+      return sB(kk, Fk).sort(((kk, Fk) => bB[kk.name] - bB[Fk.name]))
     }
 
-    function ry(uu) {
-      return function(uu) {
-        const Ru = [...uu.matchAll(Ky)],
-          yu = [];
-        let Eu = 0;
-        for (; Eu < Ru.length;) {
-          const Ku = Ru[Eu],
-            Qu = Ru.at(Eu + 1);
-          void 0 !== Qu && "```" === Qu[0] ? (Qy.test(uu.slice(Ku.index + Ku[0].length, Qu.index)) && yu.push({
-            from: Ku.index,
-            to: Qu.index + Qu[0].length
-          }), Eu += 2) : (yu.push({
-            from: Ku.index,
-            to: Ku.index + Ku[0].length
-          }), Eu++)
+    function JB(kk) {
+      return function(kk) {
+        const Fk = [...kk.matchAll(aB)],
+          Bk = [];
+        let Rk = 0;
+        for (; Rk < Fk.length;) {
+          const tk = Fk[Rk],
+            ak = Fk.at(Rk + 1);
+          void 0 !== ak && "```" === ak[0] ? (XB.test(kk.slice(tk.index + tk[0].length, ak.index)) && Bk.push({
+            from: tk.index,
+            to: ak.index + ak[0].length
+          }), Rk += 2) : (Bk.push({
+            from: tk.index,
+            to: tk.index + tk[0].length
+          }), Rk++)
         }
-        let Ku = uu;
+        let tk = kk;
         for (const {
-            from: Qu,
-            to: mu
+            from: ak,
+            to: Xk
           }
-          of yu.reverse()) Ku = Ku.slice(0, Qu) + Ku.slice(mu);
-        return Ku
-      }(uu.replace(uy, "").replace(Ry, "").replace(yy, "").replace(Ey, ""))
+          of Bk.reverse()) tk = tk.slice(0, ak) + tk.slice(Xk);
+        return tk
+      }(kk.replace(FB, "").replace(BB, "").replace(RB, "").replace(tB, ""))
     }
 
-    function By(uu) {
-      return /^(?:on[A-Z]\w*|tick|playerCommand)$/.test(uu)
+    function AB(kk) {
+      return /^(?:on[A-Z]\w*|tick|playerCommand)$/.test(kk)
     }
-    const xy = new Set(["tick", "onPlayerJoin", "onPlayerLeave", "onMobDespawned", "onBlockStand", "onBlockStandStart", "onBlockStandStop", "onPlayerJump", "onPlayerSelectInventorySlot", "onEntityCollision", "onChunkLoaded", "onClose"]),
-      Sy = {
+    const eB = new Set(["tick", "onPlayerJoin", "onPlayerLeave", "onMobDespawned", "onBlockStand", "onBlockStandStart", "onBlockStandStop", "onPlayerJump", "onPlayerSelectInventorySlot", "onEntityCollision", "onChunkLoaded", "onClose"]),
+      yB = {
         playerCommand: {
-          stopsWhen: uu => `${uu} !== undefined && ${uu} !== false`,
+          stopsWhen: kk => `${kk} !== undefined && ${kk} !== false`,
           passedOn: !1
         },
         onPlayerChat: {
-          stopsWhen: uu => `${uu} === false || ${uu} === null`,
+          stopsWhen: kk => `${kk} === false || ${kk} === null`,
           passedOn: !0
         },
         onPlayerDamagingOtherPlayer: {
-          stopsWhen: uu => `${uu} === "preventDamage"`,
+          stopsWhen: kk => `${kk} === "preventDamage"`,
           passedOn: !0
         }
       };
 
-    function py(uu) {
-      var Ru;
-      const yu = eu().createSourceFile("worldCode.js", uu, eu().ScriptTarget.Latest, !0, eu().ScriptKind.JS),
+    function fB(kk) {
+      var Fk;
+      const Bk = Ek().createSourceFile("worldCode.js", kk, Ek().ScriptTarget.Latest, !0, Ek().ScriptKind.JS),
         {
-          parseDiagnostics: Eu
-        } = yu;
+          parseDiagnostics: Rk
+        } = Bk;
       return {
-        file: yu,
-        hasErrors: (null !== (Ru = null === Eu || void 0 === Eu ? void 0 : Eu.length) && void 0 !== Ru ? Ru : 0) > 0
+        file: Bk,
+        hasErrors: (null !== (Fk = null === Rk || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Fk ? Fk : 0) > 0
       }
     }
 
-    function Ty(uu) {
-      return void 0 !== uu && (eu().isFunctionExpression(uu) || eu().isArrowFunction(uu))
+    function mB(kk) {
+      return void 0 !== kk && (Ek().isFunctionExpression(kk) || Ek().isArrowFunction(kk))
     }
 
-    function Wy(uu) {
-      if (eu().isFunctionDeclaration(uu) && uu.name) return {
-        qx: uu,
-        nameNode: uu.name
+    function WB(kk) {
+      if (Ek().isFunctionDeclaration(kk) && kk.name) return {
+        oe: kk,
+        nameNode: kk.name
       };
-      if (eu().isVariableStatement(uu) && 1 === uu.declarationList.declarations.length) {
-        const Ru = uu.declarationList.declarations[0],
-          yu = Ru.initializer && jy(Ru.initializer);
-        if (eu().isIdentifier(Ru.name) && Ty(yu)) return {
-          qx: yu,
-          nameNode: Ru.name
+      if (Ek().isVariableStatement(kk) && 1 === kk.declarationList.declarations.length) {
+        const Fk = kk.declarationList.declarations[0],
+          Bk = Fk.initializer && vB(Fk.initializer);
+        if (Ek().isIdentifier(Fk.name) && mB(Bk)) return {
+          oe: Bk,
+          nameNode: Fk.name
         }
       }
-      const Ru = Hy(uu),
-        yu = Ru && jy(Ru.value);
-      return Ru && Ty(yu) ? {
-        qx: yu,
-        nameNode: Ru.name
+      const Fk = iB(kk),
+        Bk = Fk && vB(Fk.value);
+      return Fk && mB(Bk) ? {
+        oe: Bk,
+        nameNode: Fk.name
       } : null
     }
 
-    function jy(uu) {
-      return eu().isParenthesizedExpression(uu) ? jy(uu.expression) : uu
+    function vB(kk) {
+      return Ek().isParenthesizedExpression(kk) ? vB(kk.expression) : kk
     }
 
-    function Hy(uu) {
-      return eu().isExpressionStatement(uu) && eu().isBinaryExpression(uu.expression) && uu.expression.operatorToken.kind === eu().SyntaxKind.EqualsToken && eu().isIdentifier(uu.expression.left) ? {
-        name: uu.expression.left,
-        value: uu.expression.right
+    function iB(kk) {
+      return Ek().isExpressionStatement(kk) && Ek().isBinaryExpression(kk.expression) && kk.expression.operatorToken.kind === Ek().SyntaxKind.EqualsToken && Ek().isIdentifier(kk.expression.left) ? {
+        name: kk.expression.left,
+        value: kk.expression.right
       } : null
     }
 
-    function dy(uu) {
-      return eu().isIdentifier(uu) ? [uu.text] : uu.elements.flatMap((uu => eu().isOmittedExpression(uu) ? [] : dy(uu.name)))
+    function YB(kk) {
+      return Ek().isIdentifier(kk) ? [kk.text] : kk.elements.flatMap((kk => Ek().isOmittedExpression(kk) ? [] : YB(kk.name)))
     }
 
-    function by(uu) {
-      if (!eu().isVariableStatement(uu)) return null;
-      const Ru = uu.declarationList.declarations.find((uu => eu().isIdentifier(uu.name) && "CONFIG" === uu.name.text));
-      return null !== Ru && void 0 !== Ru && Ru.initializer && eu().isObjectLiteralExpression(Ru.initializer) ? Ru.initializer : null
+    function oB(kk) {
+      if (!Ek().isVariableStatement(kk)) return null;
+      const Fk = kk.declarationList.declarations.find((kk => Ek().isIdentifier(kk.name) && "CONFIG" === kk.name.text));
+      return null !== Fk && void 0 !== Fk && Fk.initializer && Ek().isObjectLiteralExpression(Fk.initializer) ? Fk.initializer : null
     }
 
-    function Cy(uu, Ru) {
-      return Ru.statements.map((yu => {
-        var Eu;
-        const Ku = function(uu, Ru, yu) {
-            let Eu = yu.getStart(Ru);
-            for (const Qu of (null !== (Ku = eu().getLeadingCommentRanges(uu, yu.getFullStart())) && void 0 !== Ku ? Ku : []).reverse()) {
-              var Ku;
-              if (/\n[^\S\n]*\n/.test(uu.slice(Qu.end, Eu))) break;
-              Eu = Qu.pos
+    function LB(kk, Fk) {
+      return Fk.statements.map((Bk => {
+        var Rk;
+        const tk = function(kk, Fk, Bk) {
+            let Rk = Bk.getStart(Fk);
+            for (const ak of (null !== (tk = Ek().getLeadingCommentRanges(kk, Bk.getFullStart())) && void 0 !== tk ? tk : []).reverse()) {
+              var tk;
+              if (/\n[^\S\n]*\n/.test(kk.slice(ak.end, Rk))) break;
+              Rk = ak.pos
             }
-            return Eu
-          }(uu, Ru, yu),
-          Qu = Wy(yu);
-        if (null !== Qu && void 0 !== Qu && Qu.nameNode) {
-          const uu = Qu.nameNode.text;
+            return Rk
+          }(kk, Fk, Bk),
+          ak = WB(Bk);
+        if (null !== ak && void 0 !== ak && ak.nameNode) {
+          const kk = ak.nameNode.text;
           return {
-            kind: By(uu) ? "callback" : "function",
-            names: [uu],
-            from: Ku,
-            to: yu.getEnd(),
-            node: yu
+            kind: AB(kk) ? "callback" : "function",
+            names: [kk],
+            from: tk,
+            to: Bk.getEnd(),
+            node: Bk
           }
         }
-        const mu = eu().isVariableStatement(yu) ? yu.declarationList.declarations.flatMap((uu => dy(uu.name))) : [];
-        if (by(yu)) {
+        const Xk = Ek().isVariableStatement(Bk) ? Bk.declarationList.declarations.flatMap((kk => YB(kk.name))) : [];
+        if (oB(Bk)) {
           return {
             kind: "config",
-            names: ["CONFIG", ...mu.filter((uu => "CONFIG" !== uu))],
-            from: Ku,
-            to: yu.getEnd(),
-            node: yu
+            names: ["CONFIG", ...Xk.filter((kk => "CONFIG" !== kk))],
+            from: tk,
+            to: Bk.getEnd(),
+            node: Bk
           }
         }
-        if (eu().isVariableStatement(yu)) return {
+        if (Ek().isVariableStatement(Bk)) return {
           kind: "variable",
-          names: mu,
-          from: Ku,
-          to: yu.getEnd(),
-          node: yu
+          names: Xk,
+          from: tk,
+          to: Bk.getEnd(),
+          node: Bk
         };
-        if (eu().isClassDeclaration(yu) && yu.name) return {
+        if (Ek().isClassDeclaration(Bk) && Bk.name) return {
           kind: "function",
-          names: [yu.name.text],
-          from: Ku,
-          to: yu.getEnd(),
-          node: yu
+          names: [Bk.name.text],
+          from: tk,
+          to: Bk.getEnd(),
+          node: Bk
         };
-        const Ju = null === (Eu = Hy(yu)) || void 0 === Eu ? void 0 : Eu.name.text;
+        const bk = null === (Rk = iB(Bk)) || void 0 === Rk ? void 0 : Rk.name.text;
         return {
           kind: "other",
-          names: void 0 !== Ju && By(Ju) ? [Ju] : [],
-          from: Ku,
-          to: yu.getEnd(),
-          node: yu
+          names: void 0 !== bk && AB(bk) ? [bk] : [],
+          from: tk,
+          to: Bk.getEnd(),
+          node: Bk
         }
       }))
     }
 
-    function ky(uu) {
-      if (!eu().isPropertyAssignment(uu) && !eu().isShorthandPropertyAssignment(uu)) return null;
-      const Ru = uu.name;
-      return eu().isIdentifier(Ru) || eu().isStringLiteral(Ru) ? Ru.text : null
+    function OB(kk) {
+      if (!Ek().isPropertyAssignment(kk) && !Ek().isShorthandPropertyAssignment(kk)) return null;
+      const Fk = kk.name;
+      return Ek().isIdentifier(Fk) || Ek().isStringLiteral(Fk) ? Fk.text : null
     }
 
-    function ey(uu, Ru) {
-      return uu.lastIndexOf("\n", Ru - 1) + 1
+    function EB(kk, Fk) {
+      return kk.lastIndexOf("\n", Fk - 1) + 1
     }
 
-    function Ay(uu, Ru) {
-      var yu, Eu;
-      const Ku = uu.slice(ey(uu, Ru), Ru);
-      return /^\s*$/.test(Ku) ? Ku : `${null!==(yu=null===(Eu=/^\s*/.exec(Ku))||void 0===Eu?void 0:Eu[0])&&void 0!==yu?yu:""}\t`
+    function SB(kk, Fk) {
+      var Bk, Rk;
+      const tk = kk.slice(EB(kk, Fk), Fk);
+      return /^\s*$/.test(tk) ? tk : `${null!==(Bk=null===(Rk=/^\s*/.exec(tk))||void 0===Rk?void 0:Rk[0])&&void 0!==Bk?Bk:""}\t`
     }
 
-    function Dy(uu, Ru, yu) {
-      const Eu = uu.slice(ey(uu, Ru.getStart(yu)), function(uu, Ru) {
-          const yu = uu.indexOf("\n", Ru);
-          return -1 === yu ? uu.length : yu
-        }(uu, Ru.getEnd())),
-        Ku = Eu.trim(),
-        Qu = /^[\w$"']+\s*:/.test(Ku) && "" === uu.slice(ey(uu, Ru.getStart(yu)), Ru.getStart(yu)).trim() ? Eu.replace(/^\s*/, "\t") : `\t${Ru.getText(yu)},`;
-      return /,\s*(?:\/\/.*)?$/.test(Qu) ? Qu : Qu.replace(/(\s*(?:\/\/.*)?)$/, ",$1")
+    function NB(kk, Fk, Bk) {
+      const Rk = kk.slice(EB(kk, Fk.getStart(Bk)), function(kk, Fk) {
+          const Bk = kk.indexOf("\n", Fk);
+          return -1 === Bk ? kk.length : Bk
+        }(kk, Fk.getEnd())),
+        tk = Rk.trim(),
+        ak = /^[\w$"']+\s*:/.test(tk) && "" === kk.slice(EB(kk, Fk.getStart(Bk)), Fk.getStart(Bk)).trim() ? Rk.replace(/^\s*/, "\t") : `\t${Fk.getText(Bk)},`;
+      return /,\s*(?:\/\/.*)?$/.test(ak) ? ak : ak.replace(/(\s*(?:\/\/.*)?)$/, ",$1")
     }
 
-    function My(uu, Ru) {
-      let yu = uu;
-      for (const Eu of [...Ru].sort(((uu, Ru) => Ru.from - uu.from))) yu = yu.slice(0, Eu.from) + Eu.text + yu.slice(Eu.to);
-      return yu
+    function HB(kk, Fk) {
+      let Bk = kk;
+      for (const Rk of [...Fk].sort(((kk, Fk) => Fk.from - kk.from))) Bk = Bk.slice(0, Rk.from) + Rk.text + Bk.slice(Rk.to);
+      return Bk
     }
 
-    function Iy(uu) {
-      return uu.charAt(0).toUpperCase() + uu.slice(1)
+    function uB(kk) {
+      return kk.charAt(0).toUpperCase() + kk.slice(1)
     }
 
-    function Gy(uu) {
-      return uu.replace(/[^A-Za-z0-9]+(.)?/g, ((uu, Ru) => Ru ? Ru.toUpperCase() : ""))
+    function MB(kk) {
+      return kk.replace(/[^A-Za-z0-9]+(.)?/g, ((kk, Fk) => Fk ? Fk.toUpperCase() : ""))
     }
 
-    function Uy(uu, Ru) {
-      var yu, Eu;
-      const Ku = uu.filter((uu => uu.names.includes(Ru))),
-        Qu = Ku.filter((uu => !eu().isFunctionDeclaration(uu.node) && function(uu, Ru) {
-          return !eu().isVariableStatement(uu) || uu.declarationList.declarations.some((uu => void 0 !== uu.initializer && dy(uu.name).includes(Ru)))
-        }(uu.node, Ru))),
-        mu = null !== (yu = Qu[Qu.length - 1]) && void 0 !== yu ? yu : Ku[Ku.length - 1];
-      if ("callback" === (null === mu || void 0 === mu ? void 0 : mu.kind)) return Wy(mu.node);
-      const Ju = "other" === (null === mu || void 0 === mu ? void 0 : mu.kind) ? null === (Eu = Hy(mu.node)) || void 0 === Eu ? void 0 : Eu.value : void 0;
-      if (!Ju || !eu().isIdentifier(Ju)) return null;
-      const Nu = uu.filter((uu => {
-          var Ru;
-          const yu = null === (Ru = Hy(uu.node)) || void 0 === Ru ? void 0 : Ru.value;
-          return void 0 !== yu && eu().isIdentifier(yu) && yu.text === Ju.text
+    function gB(kk, Fk) {
+      var Bk, Rk;
+      const tk = kk.filter((kk => kk.names.includes(Fk))),
+        ak = tk.filter((kk => !Ek().isFunctionDeclaration(kk.node) && function(kk, Fk) {
+          return !Ek().isVariableStatement(kk) || kk.declarationList.declarations.some((kk => void 0 !== kk.initializer && YB(kk.name).includes(Fk)))
+        }(kk.node, Fk))),
+        Xk = null !== (Bk = ak[ak.length - 1]) && void 0 !== Bk ? Bk : tk[tk.length - 1];
+      if ("callback" === (null === Xk || void 0 === Xk ? void 0 : Xk.kind)) return WB(Xk.node);
+      const bk = "other" === (null === Xk || void 0 === Xk ? void 0 : Xk.kind) ? null === (Rk = iB(Xk.node)) || void 0 === Rk ? void 0 : Rk.value : void 0;
+      if (!bk || !Ek().isIdentifier(bk)) return null;
+      const wk = kk.filter((kk => {
+          var Fk;
+          const Bk = null === (Fk = iB(kk.node)) || void 0 === Fk ? void 0 : Fk.value;
+          return void 0 !== Bk && Ek().isIdentifier(Bk) && Bk.text === bk.text
         })),
-        Xu = uu.filter((uu => uu.names.includes(Ju.text))),
-        Vu = 1 === Xu.length && "function" === Xu[0].kind ? Wy(Xu[0].node) : null;
-      return 1 === Nu.length ? Vu : null
+        dk = kk.filter((kk => kk.names.includes(bk.text))),
+        sk = 1 === dk.length && "function" === dk[0].kind ? WB(dk[0].node) : null;
+      return 1 === wk.length ? sk : null
     }
 
-    function ny(uu) {
-      return uu.parameters.map((uu => eu().isIdentifier(uu.name) ? uu.name.text : null))
+    function UB(kk) {
+      return kk.parameters.map((kk => Ek().isIdentifier(kk.name) ? kk.name.text : null))
     }
 
-    function sy(uu, Ru, yu, Eu, Ku, Qu, mu) {
-      var Ju;
-      let Nu = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+    function cB(kk, Fk, Bk, Rk, tk, ak, Xk) {
+      var bk;
+      let wk = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
       const {
-        qx: Xu
-      } = yu, Vu = Xu.body;
-      if (!Vu) return [];
-      const ru = [],
-        Bu = ny(Xu),
-        xu = [],
-        Su = new Set([...Bu.filter((uu => null !== uu)), ...gy(Vu)]),
-        pu = (uu, Ru) => {
-          let yu = uu;
-          for (let Eu = Ru; Su.has(yu); Eu++) yu = `${uu}${Eu}`;
-          return Su.add(yu), yu
+        oe: dk
+      } = Bk, sk = dk.body;
+      if (!sk) return [];
+      const Vk = [],
+        Jk = UB(dk),
+        Ak = [],
+        ek = new Set([...Jk.filter((kk => null !== kk)), ...rB(sk)]),
+        yk = (kk, Fk) => {
+          let Bk = kk;
+          for (let Rk = Fk; ek.has(Bk); Rk++) Bk = `${kk}${Rk}`;
+          return ek.add(Bk), Bk
         },
-        Tu = [];
-      for (const [eu, Mu] of Qu.entries()) {
-        var Wu;
-        const uu = Bu[eu];
-        if (void 0 !== uu && null !== (Wu = Xu.parameters[eu]) && void 0 !== Wu && Wu.dotDotDotToken) {
-          xu.push(null === uu ? "undefined" : `...${uu}`);
+        fk = [];
+      for (const [Ek, Hk] of ak.entries()) {
+        var mk;
+        const kk = Jk[Ek];
+        if (void 0 !== kk && null !== (mk = dk.parameters[Ek]) && void 0 !== mk && mk.dotDotDotToken) {
+          Ak.push(null === kk ? "undefined" : `...${kk}`);
           break
         }
-        if (void 0 !== uu) {
-          xu.push(null !== uu && void 0 !== uu ? uu : "undefined");
+        if (void 0 !== kk) {
+          Ak.push(null !== kk && void 0 !== kk ? kk : "undefined");
           continue
         }
-        const Ru = pu(Mu, eu);
-        Tu.push(Ru), xu.push(Ru)
+        const Fk = yk(Hk, Ek);
+        fk.push(Fk), Ak.push(Fk)
       }
-      if (Tu.length > 0) {
-        const uu = Xu.getChildren(Ru).find((uu => uu.kind === eu().SyntaxKind.CloseParenToken)),
-          yu = uu ? uu.getStart(Ru) : -1;
-        if (-1 === yu) {
-          const uu = Xu.parameters[0];
-          if (!uu) return [];
-          ru.push({
-            from: uu.getStart(Ru),
-            to: uu.getEnd(),
-            text: `(${[uu.getText(Ru),...Tu].join(", ")})`
+      if (fk.length > 0) {
+        const kk = dk.getChildren(Fk).find((kk => kk.kind === Ek().SyntaxKind.CloseParenToken)),
+          Bk = kk ? kk.getStart(Fk) : -1;
+        if (-1 === Bk) {
+          const kk = dk.parameters[0];
+          if (!kk) return [];
+          Vk.push({
+            from: kk.getStart(Fk),
+            to: kk.getEnd(),
+            text: `(${[kk.getText(Fk),...fk].join(", ")})`
           })
         } else {
-          const uu = Xu.parameters.hasTrailingComma ? " " : Xu.parameters.length > 0 ? ", " : "";
-          ru.push({
-            from: yu,
-            to: yu,
-            text: `${uu}${Tu.join(", ")}`
+          const kk = dk.parameters.hasTrailingComma ? " " : dk.parameters.length > 0 ? ", " : "";
+          Vk.push({
+            from: Bk,
+            to: Bk,
+            text: `${kk}${fk.join(", ")}`
           })
         }
       }
-      const ju = `${Ku}(${xu.join(", ")})`,
-        Hu = pu(`${Gy(mu)}Result`, 2),
-        du = Sy[Eu],
-        bu = xy.has(Eu) ? [ju] : du ? [`const ${Hu} = ${ju}`, `if (${du.stopsWhen(Hu)}) return ${Hu}`] : [`const ${Hu} = ${ju}`],
-        Cu = !xy.has(Eu) && (null === (Ju = null === du || void 0 === du ? void 0 : du.passedOn) || void 0 === Ju || Ju);
-      if (Cu && eu().isBlock(Vu)) {
-        const yu = function(uu, Ru) {
-            const yu = new Set;
-            for (const Eu of uu.statements) {
-              const uu = eu().isVariableStatement(Eu) ? Eu.declarationList.declarations[0] : void 0;
-              uu && eu().isIdentifier(uu.name) && uu.initializer && ty(uu.initializer, Ru) && yu.add(uu.name.text)
+      const Wk = `${tk}(${Ak.join(", ")})`,
+        vk = yk(`${MB(Xk)}Result`, 2),
+        ik = yB[Rk],
+        Yk = eB.has(Rk) ? [Wk] : ik ? [`const ${vk} = ${Wk}`, `if (${ik.stopsWhen(vk)}) return ${vk}`] : [`const ${vk} = ${Wk}`],
+        Lk = !eB.has(Rk) && (null === (bk = null === ik || void 0 === ik ? void 0 : ik.passedOn) || void 0 === bk || bk);
+      if (Lk && Ek().isBlock(sk)) {
+        const Bk = function(kk, Fk) {
+            const Bk = new Set;
+            for (const Rk of kk.statements) {
+              const kk = Ek().isVariableStatement(Rk) ? Rk.declarationList.declarations[0] : void 0;
+              kk && Ek().isIdentifier(kk.name) && kk.initializer && GB(kk.initializer, Fk) && Bk.add(kk.name.text)
             }
-            return yu
-          }(Vu, Eu),
-          Ku = uu => {
-            if (!eu().isFunctionLike(uu) && ! function(uu, Ru, yu) {
-                if (!eu().isIfStatement(uu) || !eu().isReturnStatement(uu.thenStatement) || !uu.thenStatement.expression) return !1;
-                const Eu = uu.thenStatement.expression;
-                return eu().isIdentifier(Eu) && Ru.has(Eu.text) && uu.expression.getText(yu).startsWith(`${Eu.text} `)
-              }(uu, yu, Ru)) {
-              if (eu().isReturnStatement(uu) && !uu.expression) ru.push({
-                from: uu.getStart(Ru),
-                to: uu.getEnd(),
-                text: `return ${Hu}`
+            return Bk
+          }(sk, Rk),
+          tk = kk => {
+            if (!Ek().isFunctionLike(kk) && ! function(kk, Fk, Bk) {
+                if (!Ek().isIfStatement(kk) || !Ek().isReturnStatement(kk.thenStatement) || !kk.thenStatement.expression) return !1;
+                const Rk = kk.thenStatement.expression;
+                return Ek().isIdentifier(Rk) && Fk.has(Rk.text) && kk.expression.getText(Bk).startsWith(`${Rk.text} `)
+              }(kk, Bk, Fk)) {
+              if (Ek().isReturnStatement(kk) && !kk.expression) Vk.push({
+                from: kk.getStart(Fk),
+                to: kk.getEnd(),
+                text: `return ${vk}`
               });
-              else if (eu().isReturnStatement(uu) && uu.expression) {
-                const Eu = ly(uu.expression, yu);
-                Eu && ru.push({
-                  from: Eu.getStart(Ru),
-                  to: Eu.getEnd(),
-                  text: `${Eu.text} !== undefined ? ${Eu.text} : ${Hu}`
+              else if (Ek().isReturnStatement(kk) && kk.expression) {
+                const Rk = TB(kk.expression, Bk);
+                Rk && Vk.push({
+                  from: Rk.getStart(Fk),
+                  to: Rk.getEnd(),
+                  text: `${Rk.text} !== undefined ? ${Rk.text} : ${vk}`
                 })
               }
-              eu().forEachChild(uu, Ku)
+              Ek().forEachChild(kk, tk)
             }
           };
-        Vu.statements.forEach(Ku);
-        const Qu = Vu.statements[Vu.statements.length - 1];
-        if (!Qu || !eu().isReturnStatement(Qu) && !eu().isThrowStatement(Qu)) {
-          const yu = Vu.getEnd() - 1,
-            Eu = Qu ? Ay(uu, Qu.getStart(Ru)) : `${uu.slice(ey(uu,Xu.getStart(Ru)),Xu.getStart(Ru)).replace(/\S.*$/,"")}\t`,
-            Ku = uu.slice(ey(uu, yu), yu),
-            mu = /^\s*$/.test(Ku) ? `${Eu}return ${Hu}\n${Ku}` : `\n${Eu}return ${Hu}\n`;
-          ru.push({
-            from: /^\s*$/.test(Ku) ? ey(uu, yu) : yu,
-            to: yu,
-            text: mu
+        sk.statements.forEach(tk);
+        const ak = sk.statements[sk.statements.length - 1];
+        if (!ak || !Ek().isReturnStatement(ak) && !Ek().isThrowStatement(ak)) {
+          const Bk = sk.getEnd() - 1,
+            Rk = ak ? SB(kk, ak.getStart(Fk)) : `${kk.slice(EB(kk,dk.getStart(Fk)),dk.getStart(Fk)).replace(/\S.*$/,"")}\t`,
+            tk = kk.slice(EB(kk, Bk), Bk),
+            Xk = /^\s*$/.test(tk) ? `${Rk}return ${vk}\n${tk}` : `\n${Rk}return ${vk}\n`;
+          Vk.push({
+            from: /^\s*$/.test(tk) ? EB(kk, Bk) : Bk,
+            to: Bk,
+            text: Xk
           })
         }
       }
-      const ku = eu().isBlock(Vu) ? [...Vu.statements] : [],
-        Au = ku.findIndex((uu => ! function(uu, Ru) {
-          return eu().isExpressionStatement(uu) && ty(uu.expression, Ru)
-        }(uu, Eu))),
-        Du = ku[(-1 === Au ? ku.length : Au) - 1];
-      if (Nu && xy.has(Eu) && Du) ru.push({
-        from: Du.getEnd(),
-        to: Du.getEnd(),
-        text: `\n${Ay(uu,Du.getStart(Ru))}${ju}`
+      const Ok = Ek().isBlock(sk) ? [...sk.statements] : [],
+        Sk = Ok.findIndex((kk => ! function(kk, Fk) {
+          return Ek().isExpressionStatement(kk) && GB(kk.expression, Fk)
+        }(kk, Rk))),
+        Nk = Ok[(-1 === Sk ? Ok.length : Sk) - 1];
+      if (wk && eB.has(Rk) && Nk) Vk.push({
+        from: Nk.getEnd(),
+        to: Nk.getEnd(),
+        text: `\n${SB(kk,Nk.getStart(Fk))}${Wk}`
       });
-      else if (eu().isBlock(Vu)) {
-        const yu = Vu.statements[0],
-          Eu = yu ? Ay(uu, yu.getStart(Ru)) : `${uu.slice(ey(uu,Xu.getStart(Ru)),Xu.getStart(Ru)).replace(/\S.*$/,"")}\t`,
-          Ku = Vu.getStart(Ru) + 1,
-          Qu = void 0 !== yu && !uu.slice(Ku, yu.getStart(Ru)).includes("\n");
-        ru.push({
-          from: Ku,
-          to: Qu ? yu.getStart(Ru) : Ku,
-          text: `\n${bu.map((uu=>`${Eu}${uu}`)).join("\n")}${yu?Qu?`\n${Eu}`:"":"\n"}`
+      else if (Ek().isBlock(sk)) {
+        const Bk = sk.statements[0],
+          Rk = Bk ? SB(kk, Bk.getStart(Fk)) : `${kk.slice(EB(kk,dk.getStart(Fk)),dk.getStart(Fk)).replace(/\S.*$/,"")}\t`,
+          tk = sk.getStart(Fk) + 1,
+          ak = void 0 !== Bk && !kk.slice(tk, Bk.getStart(Fk)).includes("\n");
+        Vk.push({
+          from: tk,
+          to: ak ? Bk.getStart(Fk) : tk,
+          text: `\n${Yk.map((kk=>`${Rk}${kk}`)).join("\n")}${Bk?ak?`\n${Rk}`:"":"\n"}`
         })
       } else {
-        const yu = uu.slice(ey(uu, Xu.getStart(Ru)), Xu.getStart(Ru)).replace(/\S.*$/, ""),
-          Eu = pu("ownResult", 2),
-          Ku = Cu ? [`const ${Eu} = ${Vu.getText(Ru)}`, `return ${Eu} !== undefined ? ${Eu} : ${Hu}`] : [`return ${Vu.getText(Ru)}`];
-        ru.push({
-          from: Vu.getStart(Ru),
-          to: Vu.getEnd(),
-          text: `{\n${[...bu,...Ku].map((uu=>`${yu}\t${uu}`)).join("\n")}\n${yu}}`
+        const Bk = kk.slice(EB(kk, dk.getStart(Fk)), dk.getStart(Fk)).replace(/\S.*$/, ""),
+          Rk = yk("ownResult", 2),
+          tk = Lk ? [`const ${Rk} = ${sk.getText(Fk)}`, `return ${Rk} !== undefined ? ${Rk} : ${vk}`] : [`return ${sk.getText(Fk)}`];
+        Vk.push({
+          from: sk.getStart(Fk),
+          to: sk.getEnd(),
+          text: `{\n${[...Yk,...tk].map((kk=>`${Bk}\t${kk}`)).join("\n")}\n${Bk}}`
         })
       }
-      return ru
+      return Vk
     }
 
-    function ty(uu, Ru) {
-      return eu().isCallExpression(uu) && eu().isIdentifier(uu.expression) && uu.expression.text.endsWith(Iy(Ru)) && uu.expression.text !== Iy(Ru)
+    function GB(kk, Fk) {
+      return Ek().isCallExpression(kk) && Ek().isIdentifier(kk.expression) && kk.expression.text.endsWith(uB(Fk)) && kk.expression.text !== uB(Fk)
     }
 
-    function ly(uu, Ru) {
-      return eu().isIdentifier(uu) ? Ru.has(uu.text) ? uu : null : eu().isConditionalExpression(uu) ? ly(uu.whenFalse, Ru) : null
+    function TB(kk, Fk) {
+      return Ek().isIdentifier(kk) ? Fk.has(kk.text) ? kk : null : Ek().isConditionalExpression(kk) ? TB(kk.whenFalse, Fk) : null
     }
 
-    function gy(uu) {
-      const Ru = [],
-        yu = uu => {
-          eu().isIdentifier(uu) && Ru.push(uu.text), eu().forEachChild(uu, yu)
+    function rB(kk) {
+      const Fk = [],
+        Bk = kk => {
+          Ek().isIdentifier(kk) && Fk.push(kk.text), Ek().forEachChild(kk, Bk)
         };
-      return yu(uu), Ru
+      return Bk(kk), Fk
     }
 
-    function cy(uu, Ru, yu) {
-      var Eu, Ku;
-      return (0, rR.i)(null !== (Eu = null === (Ku = uu.body) || void 0 === Ku ? void 0 : Ku.getText(Ru)) && void 0 !== Eu ? Eu : "", new RegExp(`${yu}\\s*\\(`), rR.o).length > 0
+    function DB(kk, Fk, Bk) {
+      var Rk, tk;
+      return (0, JF.i)(null !== (Rk = null === (tk = kk.body) || void 0 === tk ? void 0 : tk.getText(Fk)) && void 0 !== Rk ? Rk : "", new RegExp(`${Bk}\\s*\\(`), JF.r).length > 0
     }
 
-    function Ly(uu, Ru, yu) {
-      var Eu;
+    function zB(kk, Fk, Bk) {
+      var Rk;
       const {
-        owner: Ku,
-        heading: Qu
-      } = yu, mu = null !== (Eu = yu.overrides) && void 0 !== Eu ? Eu : new Set;
-      if ("" === uu.trim() && !0 !== yu.chainCallbacks) {
-        const uu = `${Qu?`${Qu}\n`:""}${Ru.trim()}\n`,
+        owner: tk,
+        heading: ak
+      } = Bk, Xk = null !== (Rk = Bk.overrides) && void 0 !== Rk ? Rk : new Set;
+      if ("" === kk.trim() && !0 !== Bk.chainCallbacks) {
+        const kk = `${ak?`${ak}\n`:""}${Fk.trim()}\n`,
           {
-            file: yu,
-            hasErrors: Eu
-          } = py(uu);
-        if (Eu) return null;
-        const Ku = Cy(uu, yu);
+            file: Bk,
+            hasErrors: Rk
+          } = fB(kk);
+        if (Rk) return null;
+        const tk = LB(kk, Bk);
         return {
-          text: uu,
-          added: Ku.flatMap((uu => "config" === uu.kind ? [] : uu.names)),
+          text: kk,
+          added: tk.flatMap((kk => "config" === kk.kind ? [] : kk.names)),
           chained: [],
-          settings: Ku.flatMap((uu => {
-            var Ru;
-            const yu = "config" === uu.kind ? by(uu.node) : null;
-            return (null !== (Ru = null === yu || void 0 === yu ? void 0 : yu.properties) && void 0 !== Ru ? Ru : []).flatMap((uu => {
-              const Ru = ky(uu);
-              return null === Ru ? [] : [Ru]
+          settings: tk.flatMap((kk => {
+            var Fk;
+            const Bk = "config" === kk.kind ? oB(kk.node) : null;
+            return (null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.properties) && void 0 !== Fk ? Fk : []).flatMap((kk => {
+              const Fk = OB(kk);
+              return null === Fk ? [] : [Fk]
             }))
           }))
         }
       }
-      const Ju = py(uu),
-        Nu = py(Ru);
-      if (Ju.hasErrors || Nu.hasErrors) return null;
-      const Xu = Cy(uu, Ju.file),
-        Vu = Cy(Ru, Nu.file),
-        ru = new Set(Xu.flatMap((uu => uu.names))),
-        Bu = new Set(ru),
-        xu = [],
-        Su = [],
-        pu = [],
-        Tu = [];
-      let Wu = [];
-      const ju = Vu.find((uu => "config" === uu.kind)),
-        Hu = Xu.find((uu => "config" === uu.kind));
-      if (ju) {
-        const yu = by(ju.node),
-          Eu = Hu ? by(Hu.node) : null;
-        if (yu && Eu) {
-          const Ku = function(uu, Ru, yu, Eu, Ku, Qu, mu) {
-            const Ju = new Map;
-            for (const Hu of yu.properties) {
-              const uu = ky(Hu);
-              null !== uu && Ju.set(uu, Hu)
+      const bk = fB(kk),
+        wk = fB(Fk);
+      if (bk.hasErrors || wk.hasErrors) return null;
+      const dk = LB(kk, bk.file),
+        sk = LB(Fk, wk.file),
+        Vk = new Set(dk.flatMap((kk => kk.names))),
+        Jk = new Set(Vk),
+        Ak = [],
+        ek = [],
+        yk = [],
+        fk = [];
+      let mk = [];
+      const Wk = sk.find((kk => "config" === kk.kind)),
+        vk = dk.find((kk => "config" === kk.kind));
+      if (Wk) {
+        const Bk = oB(Wk.node),
+          Rk = vk ? oB(vk.node) : null;
+        if (Bk && Rk) {
+          const tk = function(kk, Fk, Bk, Rk, tk, ak, Xk) {
+            const bk = new Map;
+            for (const vk of Bk.properties) {
+              const kk = OB(vk);
+              null !== kk && bk.set(kk, vk)
             }
-            const Nu = [],
-              Xu = [],
-              Vu = [],
-              ru = new Map;
-            for (const Hu of Qu.properties) {
-              const uu = ky(Hu);
-              if (null === uu) continue;
-              const yu = Ju.get(uu);
-              if (yu) {
-                if (mu.has(uu) && eu().isPropertyAssignment(yu) && eu().isPropertyAssignment(Hu)) {
-                  const Eu = Hu.initializer.getText(Ku);
-                  yu.initializer.getText(Ru) !== Eu && (Nu.push({
-                    from: yu.initializer.getStart(Ru),
-                    to: yu.initializer.getEnd(),
-                    text: Eu
-                  }), ru.set(yu, Eu), Xu.push(uu))
+            const wk = [],
+              dk = [],
+              sk = [],
+              Vk = new Map;
+            for (const vk of ak.properties) {
+              const kk = OB(vk);
+              if (null === kk) continue;
+              const Bk = bk.get(kk);
+              if (Bk) {
+                if (Xk.has(kk) && Ek().isPropertyAssignment(Bk) && Ek().isPropertyAssignment(vk)) {
+                  const Rk = vk.initializer.getText(tk);
+                  Bk.initializer.getText(Fk) !== Rk && (wk.push({
+                    from: Bk.initializer.getStart(Fk),
+                    to: Bk.initializer.getEnd(),
+                    text: Rk
+                  }), Vk.set(Bk, Rk), dk.push(kk))
                 }
-              } else Vu.push(Dy(Eu, Hu, Ku)), Xu.push(uu)
+              } else sk.push(NB(Rk, vk, tk)), dk.push(kk)
             }
-            if (0 === Vu.length) return {
-              edits: Nu,
-              settings: Xu
+            if (0 === sk.length) return {
+              edits: wk,
+              settings: dk
             };
-            const Bu = yu.getEnd() - 1,
-              xu = yu.properties[yu.properties.length - 1];
-            if (!uu.slice(yu.getStart(Ru), Bu).includes("\n")) {
-              const uu = yu.properties.map((uu => {
-                const yu = ru.get(uu);
-                return eu().isPropertyAssignment(uu) && void 0 !== yu ? `\t${uu.name.getText(Ru)}: ${yu},` : `\t${uu.getText(Ru)},`
+            const Jk = Bk.getEnd() - 1,
+              Ak = Bk.properties[Bk.properties.length - 1];
+            if (!kk.slice(Bk.getStart(Fk), Jk).includes("\n")) {
+              const kk = Bk.properties.map((kk => {
+                const Bk = Vk.get(kk);
+                return Ek().isPropertyAssignment(kk) && void 0 !== Bk ? `\t${kk.name.getText(Fk)}: ${Bk},` : `\t${kk.getText(Fk)},`
               }));
               return {
                 edits: [{
-                  from: yu.getStart(Ru),
-                  to: yu.getEnd(),
-                  text: `{\n${[...uu,...Vu].join("\n")}\n}`
+                  from: Bk.getStart(Fk),
+                  to: Bk.getEnd(),
+                  text: `{\n${[...kk,...sk].join("\n")}\n}`
                 }],
-                settings: Xu
+                settings: dk
               }
             }
-            const Su = void 0 !== xu && !yu.properties.hasTrailingComma,
-              pu = ey(uu, Bu),
-              Tu = uu.slice(pu, Bu);
-            if ("" === Tu.trim()) return Su && Nu.push({
-              from: xu.getEnd(),
-              to: xu.getEnd(),
+            const ek = void 0 !== Ak && !Bk.properties.hasTrailingComma,
+              yk = EB(kk, Jk),
+              fk = kk.slice(yk, Jk);
+            if ("" === fk.trim()) return ek && wk.push({
+              from: Ak.getEnd(),
+              to: Ak.getEnd(),
               text: ","
-            }), Nu.push({
-              from: pu,
-              to: pu,
-              text: `${Vu.join("\n")}\n`
+            }), wk.push({
+              from: yk,
+              to: yk,
+              text: `${sk.join("\n")}\n`
             }), {
-              edits: Nu,
-              settings: Xu
+              edits: wk,
+              settings: dk
             };
-            const Wu = pu + Tu.trimEnd().length,
-              ju = Su && xu.getEnd() === Wu;
-            return Su && !ju && Nu.push({
-              from: xu.getEnd(),
-              to: xu.getEnd(),
+            const mk = yk + fk.trimEnd().length,
+              Wk = ek && Ak.getEnd() === mk;
+            return ek && !Wk && wk.push({
+              from: Ak.getEnd(),
+              to: Ak.getEnd(),
               text: ","
-            }), Nu.push({
-              from: Wu,
-              to: Bu,
-              text: `${ju?",":""}\n${Vu.join("\n")}\n`
+            }), wk.push({
+              from: mk,
+              to: Jk,
+              text: `${Wk?",":""}\n${sk.join("\n")}\n`
             }), {
-              edits: Nu,
-              settings: Xu
+              edits: wk,
+              settings: dk
             }
-          }(uu, Ju.file, Eu, Ru, Nu.file, yu, mu);
-          xu.push(...Ku.edits), Wu = Ku.settings
-        } else if (yu) {
-          if (Bu.has("CONFIG")) return null;
-          const Eu = function(uu, Ru) {
-              const yu = Ru.statements[0];
-              return yu ? ey(uu, yu.getStart(Ru)) : uu.length
-            }(uu, Ju.file),
-            Ku = Eu > 0 && "\n" !== uu[Eu - 1] ? "\n" : "";
-          xu.push({
-            from: Eu,
-            to: Eu,
-            text: `${Ku}${Ru.slice(ju.from,ju.to)}\n\n`
-          }), Wu = yu.properties.flatMap((uu => {
-            const Ru = ky(uu);
-            return null === Ru ? [] : [Ru]
+          }(kk, bk.file, Rk, Fk, wk.file, Bk, Xk);
+          Ak.push(...tk.edits), mk = tk.settings
+        } else if (Bk) {
+          if (Jk.has("CONFIG")) return null;
+          const Rk = function(kk, Fk) {
+              const Bk = Fk.statements[0];
+              return Bk ? EB(kk, Bk.getStart(Fk)) : kk.length
+            }(kk, bk.file),
+            tk = Rk > 0 && "\n" !== kk[Rk - 1] ? "\n" : "";
+          Ak.push({
+            from: Rk,
+            to: Rk,
+            text: `${tk}${Fk.slice(Wk.from,Wk.to)}\n\n`
+          }), mk = Bk.properties.flatMap((kk => {
+            const Fk = OB(kk);
+            return null === Fk ? [] : [Fk]
           }))
         }
       }
-      const du = [],
-        bu = (uu, yu) => {
-          const Eu = du[du.length - 1],
-            Ku = void 0 !== Eu && Eu >= 0 && Eu === yu - 1 && !/\n[^\S\n]*\n/.test(Ru.slice(Vu[Eu].to, Vu[yu].from)) ? "\n" : "\n\n";
-          Su.push(0 === Su.length ? uu : `${Ku}${uu}`), du.push(yu)
+      const ik = [],
+        Yk = (kk, Bk) => {
+          const Rk = ik[ik.length - 1],
+            tk = void 0 !== Rk && Rk >= 0 && Rk === Bk - 1 && !/\n[^\S\n]*\n/.test(Fk.slice(sk[Rk].to, sk[Bk].from)) ? "\n" : "\n\n";
+          ek.push(0 === ek.length ? kk : `${tk}${kk}`), ik.push(Bk)
         };
-      for (const [ku, eu] of Vu.entries()) {
-        if ("config" === eu.kind) continue;
-        const Eu = Ru.slice(eu.from, eu.to);
-        if ("callback" === eu.kind) {
-          const Ru = eu.names[0],
-            Qu = Uy(Xu, Ru);
-          if (!Qu && ru.has(Ru)) {
-            if (!0 === yu.chainCallbacks) continue;
+      for (const [Ok, Ek] of sk.entries()) {
+        if ("config" === Ek.kind) continue;
+        const Rk = Fk.slice(Ek.from, Ek.to);
+        if ("callback" === Ek.kind) {
+          const Fk = Ek.names[0],
+            ak = gB(dk, Fk);
+          if (!ak && Vk.has(Fk)) {
+            if (!0 === Bk.chainCallbacks) continue;
             return null
           }
-          if (!Qu && !0 !== yu.chainCallbacks) {
-            Bu.has(Ru) || (bu(Eu, ku), pu.push(Ru), Bu.add(Ru));
+          if (!ak && !0 !== Bk.chainCallbacks) {
+            Jk.has(Fk) || (Yk(Rk, Ok), yk.push(Fk), Jk.add(Fk));
             continue
           }
-          const mu = `${Gy(Ku)}${Iy(Ru)}`,
-            Vu = Wy(eu.node);
-          if (null === Vu || void 0 === Vu || !Vu.nameNode) continue;
-          if (!Bu.has(mu)) {
-            const uu = Vu.nameNode.getStart(Nu.file) - eu.from,
-              Ru = Vu.nameNode.getEnd() - eu.from;
-            bu(Eu.slice(0, uu) + mu + Eu.slice(Ru), ku), pu.push(mu), Bu.add(mu)
+          const Xk = `${MB(tk)}${uB(Fk)}`,
+            sk = WB(Ek.node);
+          if (null === sk || void 0 === sk || !sk.nameNode) continue;
+          if (!Jk.has(Xk)) {
+            const kk = sk.nameNode.getStart(wk.file) - Ek.from,
+              Fk = sk.nameNode.getEnd() - Ek.from;
+            Yk(Rk.slice(0, kk) + Xk + Rk.slice(Fk), Ok), yk.push(Xk), Jk.add(Xk)
           }
-          const Su = ny(Vu.qx).map(((uu, Ru) => null !== uu && void 0 !== uu ? uu : `arg${Ru}`));
-          if (!Qu) {
-            const uu = `${mu}(${Su.join(", ")})`,
-              yu = `${Gy(Ku)}Result`;
-            bu(`function ${Ru}(${Su.join(", ")}) {\n\t${xy.has(Ru)?uu:`const ${yu} = ${uu}\n\treturn ${yu}`}\n}`, -1), pu.push(Ru), Bu.add(Ru);
+          const ek = UB(sk.oe).map(((kk, Fk) => null !== kk && void 0 !== kk ? kk : `arg${Fk}`));
+          if (!ak) {
+            const kk = `${Xk}(${ek.join(", ")})`,
+              Bk = `${MB(tk)}Result`;
+            Yk(`function ${Fk}(${ek.join(", ")}) {\n\t${eB.has(Fk)?kk:`const ${Bk} = ${kk}\n\treturn ${Bk}`}\n}`, -1), yk.push(Fk), Jk.add(Fk);
             continue
           }
-          cy(Qu.qx, Ju.file, mu) || (xu.push(...sy(uu, Ju.file, Qu, Ru, mu, Su, Ku, !0 === yu.runsLast)), Tu.push(Ru));
+          DB(ak.oe, bk.file, Xk) || (Ak.push(...cB(kk, bk.file, ak, Fk, Xk, ek, tk, !0 === Bk.runsLast)), fk.push(Fk));
           continue
         }
-        const Qu = eu.names.filter((uu => !Bu.has(uu)));
-        if ("other" === eu.kind || eu.names.length > 0 && Qu.length === eu.names.length) {
-          bu(Eu, ku), pu.push(...Qu);
-          for (const uu of Qu) Bu.add(uu)
+        const ak = Ek.names.filter((kk => !Jk.has(kk)));
+        if ("other" === Ek.kind || Ek.names.length > 0 && ak.length === Ek.names.length) {
+          Yk(Rk, Ok), yk.push(...ak);
+          for (const kk of ak) Jk.add(kk)
         }
       }
-      let Cu = My(uu, xu);
-      if (Su.length > 0) {
-        const uu = Cu.replace(/\s*$/, "");
-        Cu = `${""===uu?"":`${uu}\n\n`}${Qu?`${Qu}\n`:""}${Su.join("")}\n`
+      let Lk = HB(kk, Ak);
+      if (ek.length > 0) {
+        const kk = Lk.replace(/\s*$/, "");
+        Lk = `${""===kk?"":`${kk}\n\n`}${ak?`${ak}\n`:""}${ek.join("")}\n`
       }
-      return py(Cu).hasErrors ? null : {
-        text: Cu,
-        added: pu,
-        chained: Tu,
-        settings: Wu
+      return fB(Lk).hasErrors ? null : {
+        text: Lk,
+        added: yk,
+        chained: fk,
+        settings: mk
       }
     }
 
-    function zy(uu) {
+    function PB(kk) {
       const {
-        file: Ru
-      } = py(uu);
-      return new Set(Cy(uu, Ru).flatMap((uu => uu.names)))
+        file: Fk
+      } = fB(kk);
+      return new Set(LB(kk, Fk).flatMap((kk => kk.names)))
     }
 
-    function Fy(uu) {
+    function hB(kk) {
       const {
-        file: Ru
-      } = py(uu), yu = new Set, Eu = uu => {
-        eu().isCallExpression(uu) && eu().isIdentifier(uu.expression) && yu.add(uu.expression.text), eu().forEachChild(uu, Eu)
+        file: Fk
+      } = fB(kk), Bk = new Set, Rk = kk => {
+        Ek().isCallExpression(kk) && Ek().isIdentifier(kk.expression) && Bk.add(kk.expression.text), Ek().forEachChild(kk, Rk)
       };
-      return Eu(Ru), yu
+      return Rk(Fk), Bk
     }
 
-    function wy(uu) {
-      return !py(uu).hasErrors
+    function qB(kk) {
+      return !fB(kk).hasErrors
     }
 
-    function Zy(uu, Ru) {
-      return eu().isCallExpression(uu) && eu().isPropertyAccessExpression(uu.expression) && "api" === uu.expression.expression.getText(Ru)
+    function CB(kk, Fk) {
+      return Ek().isCallExpression(kk) && Ek().isPropertyAccessExpression(kk.expression) && "api" === kk.expression.expression.getText(Fk)
     }
 
-    function hy(uu, Ru) {
-      var yu;
-      const Eu = uu.getPropertiesOfType(uu.getNonNullableType(Ru)),
-        Ku = null !== (yu = Eu.find((uu => "color" === uu.name))) && void 0 !== yu ? yu : Eu[0];
-      if (!Ku) return;
-      const Qu = uu.typeToString(uu.getNonNullableType(uu.getTypeOfSymbol(Ku))),
-        mu = "color" === Ku.name ? '"red"' : Qu.includes("number") ? "1" : "boolean" === Qu ? "true" : '"..."';
-      return `{ ${Ku.name}: ${mu} }`
+    function ZB(kk, Fk) {
+      var Bk;
+      const Rk = kk.getPropertiesOfType(kk.getNonNullableType(Fk)),
+        tk = null !== (Bk = Rk.find((kk => "color" === kk.name))) && void 0 !== Bk ? Bk : Rk[0];
+      if (!tk) return;
+      const ak = kk.typeToString(kk.getNonNullableType(kk.getTypeOfSymbol(tk))),
+        Xk = "color" === tk.name ? '"red"' : ak.includes("number") ? "1" : "boolean" === ak ? "true" : '"..."';
+      return `{ ${tk.name}: ${Xk} }`
     }
 
-    function Py(uu) {
-      return uu.isUnion() ? uu.types.every((uu => 0 !== (uu.flags & eu().TypeFlags.Object))) : 0 !== (uu.flags & eu().TypeFlags.Object)
+    function pB(kk) {
+      return kk.isUnion() ? kk.types.every((kk => 0 !== (kk.flags & Ek().TypeFlags.Object))) : 0 !== (kk.flags & Ek().TypeFlags.Object)
     }
 
-    function iy(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const Eu = uu.getNonNullableType(Ru);
-      if (Eu.isUnion()) {
-        const Ru = [...new Set(Eu.types.map((Ru => iy(uu, Ru, yu))))];
-        return Ru.length > 7 ? `${Ru.slice(0,7).join(" or ")} or ...` : Ru.join(" or ")
+    function KB(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const Rk = kk.getNonNullableType(Fk);
+      if (Rk.isUnion()) {
+        const Fk = [...new Set(Rk.types.map((Fk => KB(kk, Fk, Bk))))];
+        return Fk.length > 7 ? `${Fk.slice(0,7).join(" or ")} or ...` : Fk.join(" or ")
       }
-      if (Eu.isStringLiteral()) return `"${Eu.value}"`;
-      if (Eu.isNumberLiteral()) return `${Eu.value}`;
-      if (Eu.flags & eu().TypeFlags.StringLike) return "text";
-      if (Eu.flags & eu().TypeFlags.NumberLike) return "a number";
-      if (Eu.flags & eu().TypeFlags.BooleanLike) return "true or false";
-      if (uu.isTupleType(Eu)) {
-        return `[${uu.getTypeArguments(Eu).map((Ru=>iy(uu,Ru,yu+1))).join(", ")}]`
+      if (Rk.isStringLiteral()) return `"${Rk.value}"`;
+      if (Rk.isNumberLiteral()) return `${Rk.value}`;
+      if (Rk.flags & Ek().TypeFlags.StringLike) return "text";
+      if (Rk.flags & Ek().TypeFlags.NumberLike) return "a number";
+      if (Rk.flags & Ek().TypeFlags.BooleanLike) return "true or false";
+      if (kk.isTupleType(Rk)) {
+        return `[${kk.getTypeArguments(Rk).map((Fk=>KB(kk,Fk,Bk+1))).join(", ")}]`
       }
-      if (uu.isArrayType(Eu)) {
-        if (yu > 1) return "a list";
-        const Ru = iy(uu, uu.getTypeArguments(Eu)[0], yu + 1);
-        return `a list of ${Ru.includes(" or ")?`(${Ru})`:Ru}`
+      if (kk.isArrayType(Rk)) {
+        if (Bk > 1) return "a list";
+        const Fk = KB(kk, kk.getTypeArguments(Rk)[0], Bk + 1);
+        return `a list of ${Fk.includes(" or ")?`(${Fk})`:Fk}`
       }
-      if (Eu.getCallSignatures().length > 0) return "a function";
-      const Ku = uu.getPropertiesOfType(Eu);
-      if (0 === Ku.length || yu > 1) return "{ ... }";
-      return `{ ${Ku.slice(0,10).map((uu=>`${uu.name}${uu.flags&eu().SymbolFlags.Optional?"?":""}`)).join(", ")}${Ku.length>10?", ...":""} }`
+      if (Rk.getCallSignatures().length > 0) return "a function";
+      const tk = kk.getPropertiesOfType(Rk);
+      if (0 === tk.length || Bk > 1) return "{ ... }";
+      return `{ ${tk.slice(0,10).map((kk=>`${kk.name}${kk.flags&Ek().SymbolFlags.Optional?"?":""}`)).join(", ")}${tk.length>10?", ...":""} }`
     }
 
-    function Yy(uu, Ru, yu) {
-      const Eu = (Ru, yu) => uu.isTypeAssignableTo(Ru, yu) || Yy(uu, Ru, yu),
-        Ku = Ru => uu.getTypeArguments(Ru)[0];
-      if ("string | number" === uu.typeToString(Ru)) return !0;
-      if (Ru.isUnion() && !(Ru.flags & eu().TypeFlags.Boolean)) return Ru.types.every((uu => Eu(uu, yu)));
-      const Qu = uu.getNonNullableType(yu);
-      return (Qu.isUnion() ? Qu.types : [Qu]).some((yu => uu.isTupleType(yu) ? uu.isArrayType(Ru) && uu.getTypeArguments(yu).every((uu => Eu(Ku(Ru), uu))) : uu.isArrayType(yu) ? uu.isArrayType(Ru) && Eu(Ku(Ru), Ku(yu)) : yu.flags & (eu().TypeFlags.Object | eu().TypeFlags.Intersection) && 0 === yu.getCallSignatures().length ? !!(Ru.flags & (eu().TypeFlags.Object | eu().TypeFlags.Intersection)) && !uu.isArrayType(Ru) && !uu.isTupleType(Ru) && uu.getPropertiesOfType(yu).every((uu => 0 !== (uu.flags & eu().SymbolFlags.Optional) || void 0 !== Ru.getProperty(uu.name))) && uu.getPropertiesOfType(Ru).every((Ru => {
-        var Ku;
-        if (uu.getTypeOfSymbol(Ru).flags & eu().TypeFlags.Undefined) return !0;
-        const Qu = yu.getProperty(Ru.name),
-          mu = Qu ? uu.getTypeOfSymbol(Qu) : null === (Ku = uu.getIndexInfoOfType(yu, eu().IndexKind.String)) || void 0 === Ku ? void 0 : Ku.type;
-        return void 0 !== mu && Eu(uu.getTypeOfSymbol(Ru), mu)
-      })) : yu.isNumberLiteral() && Ru.flags === eu().TypeFlags.Number || yu.isStringLiteral() && Ru.flags === eu().TypeFlags.String))
+    function xB(kk, Fk, Bk) {
+      const Rk = (Fk, Bk) => kk.isTypeAssignableTo(Fk, Bk) || xB(kk, Fk, Bk),
+        tk = Fk => kk.getTypeArguments(Fk)[0];
+      if ("string | number" === kk.typeToString(Fk)) return !0;
+      if (Fk.isUnion() && !(Fk.flags & Ek().TypeFlags.Boolean)) return Fk.types.every((kk => Rk(kk, Bk)));
+      const ak = kk.getNonNullableType(Bk);
+      return (ak.isUnion() ? ak.types : [ak]).some((Bk => kk.isTupleType(Bk) ? kk.isArrayType(Fk) && kk.getTypeArguments(Bk).every((kk => Rk(tk(Fk), kk))) : kk.isArrayType(Bk) ? kk.isArrayType(Fk) && Rk(tk(Fk), tk(Bk)) : Bk.flags & (Ek().TypeFlags.Object | Ek().TypeFlags.Intersection) && 0 === Bk.getCallSignatures().length ? !!(Fk.flags & (Ek().TypeFlags.Object | Ek().TypeFlags.Intersection)) && !kk.isArrayType(Fk) && !kk.isTupleType(Fk) && kk.getPropertiesOfType(Bk).every((kk => 0 !== (kk.flags & Ek().SymbolFlags.Optional) || void 0 !== Fk.getProperty(kk.name))) && kk.getPropertiesOfType(Fk).every((Fk => {
+        var tk;
+        if (kk.getTypeOfSymbol(Fk).flags & Ek().TypeFlags.Undefined) return !0;
+        const ak = Bk.getProperty(Fk.name),
+          Xk = ak ? kk.getTypeOfSymbol(ak) : null === (tk = kk.getIndexInfoOfType(Bk, Ek().IndexKind.String)) || void 0 === tk ? void 0 : tk.type;
+        return void 0 !== Xk && Rk(kk.getTypeOfSymbol(Fk), Xk)
+      })) : Bk.isNumberLiteral() && Fk.flags === Ek().TypeFlags.Number || Bk.isStringLiteral() && Fk.flags === Ek().TypeFlags.String))
     }
 
-    function oy(uu, Ru) {
-      return eu().isTypeReferenceNode(uu) && eu().isIdentifier(uu.typeName) && Ru.has(uu.typeName.text) || !!eu().forEachChild(uu, (uu => oy(uu, Ru) || void 0))
+    function jB(kk, Fk) {
+      return Ek().isTypeReferenceNode(kk) && Ek().isIdentifier(kk.typeName) && Fk.has(kk.typeName.text) || !!Ek().forEachChild(kk, (kk => jB(kk, Fk) || void 0))
     }
 
-    function qy(uu, Ru) {
-      const yu = new Set,
-        Eu = Ku => {
-          if (Zy(Ku, uu)) {
-            var Qu, mu, Ju;
-            const Eu = Ru.getResolvedSignature(Ku),
-              Nu = null !== (Qu = null === Eu || void 0 === Eu ? void 0 : Eu.getParameters()) && void 0 !== Qu ? Qu : [],
-              Xu = new Set((null !== (mu = null === Eu || void 0 === Eu || null === (Ju = Eu.getDeclaration()) || void 0 === Ju ? void 0 : Ju.typeParameters) && void 0 !== mu ? mu : []).map((uu => uu.name.text)));
-            Ku.arguments.forEach(((Ru, Eu) => {
-              var Qu;
-              const mu = null === (Qu = Nu[Eu]) || void 0 === Qu ? void 0 : Qu.valueDeclaration,
-                Ju = mu && eu().isParameter(mu) ? mu.type : void 0;
-              if (Ru.kind === eu().SyntaxKind.NullKeyword && Ju && !oy(Ju, Xu) && !/\b(?:null|any|unknown)\b/.test(Ju.getText())) {
-                const Ru = Eu === Ku.arguments.length - 1;
-                yu.add(`${Ku.expression.getText(uu)} can't take null as ${Nu[Eu].name}: ${Ru?"leave it out":"give undefined instead"}, or it throws when that line runs.`)
+    function lB(kk, Fk) {
+      const Bk = new Set,
+        Rk = tk => {
+          if (CB(tk, kk)) {
+            var ak, Xk, bk;
+            const Rk = Fk.getResolvedSignature(tk),
+              wk = null !== (ak = null === Rk || void 0 === Rk ? void 0 : Rk.getParameters()) && void 0 !== ak ? ak : [],
+              dk = new Set((null !== (Xk = null === Rk || void 0 === Rk || null === (bk = Rk.getDeclaration()) || void 0 === bk ? void 0 : bk.typeParameters) && void 0 !== Xk ? Xk : []).map((kk => kk.name.text)));
+            tk.arguments.forEach(((Fk, Rk) => {
+              var ak;
+              const Xk = null === (ak = wk[Rk]) || void 0 === ak ? void 0 : ak.valueDeclaration,
+                bk = Xk && Ek().isParameter(Xk) ? Xk.type : void 0;
+              if (Fk.kind === Ek().SyntaxKind.NullKeyword && bk && !jB(bk, dk) && !/\b(?:null|any|unknown)\b/.test(bk.getText())) {
+                const Fk = Rk === tk.arguments.length - 1;
+                Bk.add(`${tk.expression.getText(kk)} can't take null as ${wk[Rk].name}: ${Fk?"leave it out":"give undefined instead"}, or it throws when that line runs.`)
               }
             }))
           }
-          eu().forEachChild(Ku, Eu)
+          Ek().forEachChild(tk, Rk)
         };
-      return Eu(uu), [...yu]
+      return Rk(kk), [...Bk]
     }
 
-    function Oy(uu) {
-      return py(uu).file
+    function nB(kk) {
+      return fB(kk).file
     }
 
-    function vy(uu) {
+    function IB(kk) {
       return {
-        from: uu.getFullStart(),
-        to: uu.getEnd()
+        from: kk.getFullStart(),
+        to: kk.getEnd()
       }
     }
 
-    function ay(uu) {
-      if (!/\buse_?prefab\s*\(/i.test(uu)) return {
-        code: uu,
+    function QB(kk) {
+      if (!/\buse_?prefab\s*\(/i.test(kk)) return {
+        code: kk,
         calls: []
       };
-      const Ru = Oy(uu),
-        yu = function(uu) {
-          const Ru = new Map;
-          for (const yu of uu.statements)
-            if (eu().isVariableStatement(yu))
-              for (const uu of yu.declarationList.declarations)
-                if (eu().isIdentifier(uu.name) && "CONFIG" === uu.name.text && uu.initializer && eu().isObjectLiteralExpression(uu.initializer))
-                  for (const yu of uu.initializer.properties) eu().isPropertyAssignment(yu) && (eu().isIdentifier(yu.name) || eu().isStringLiteral(yu.name)) && Ru.set(yu.name.text, yu.initializer.getText());
-          return Ru
-        }(Ru),
-        Eu = [],
-        Ku = [],
-        Qu = uu => {
-          var Ru;
-          return eu().isPropertyAccessExpression(uu) && eu().isIdentifier(uu.expression) && "CONFIG" === uu.expression.text && null !== (Ru = yu.get(uu.name.text)) && void 0 !== Ru ? Ru : uu.getText()
+      const Fk = nB(kk),
+        Bk = function(kk) {
+          const Fk = new Map;
+          for (const Bk of kk.statements)
+            if (Ek().isVariableStatement(Bk))
+              for (const kk of Bk.declarationList.declarations)
+                if (Ek().isIdentifier(kk.name) && "CONFIG" === kk.name.text && kk.initializer && Ek().isObjectLiteralExpression(kk.initializer))
+                  for (const Bk of kk.initializer.properties) Ek().isPropertyAssignment(Bk) && (Ek().isIdentifier(Bk.name) || Ek().isStringLiteral(Bk.name)) && Fk.set(Bk.name.text, Bk.initializer.getText());
+          return Fk
+        }(Fk),
+        Rk = [],
+        tk = [],
+        ak = kk => {
+          var Fk;
+          return Ek().isPropertyAccessExpression(kk) && Ek().isIdentifier(kk.expression) && "CONFIG" === kk.expression.text && null !== (Fk = Bk.get(kk.name.text)) && void 0 !== Fk ? Fk : kk.getText()
         },
-        mu = uu => uu && (eu().isStringLiteral(uu) || eu().isNoSubstitutionTemplateLiteral(uu)) ? uu.text : uu && eu().isObjectLiteralExpression(uu) ? uu.properties.flatMap((uu => eu().isPropertyAssignment(uu) && (eu().isIdentifier(uu.name) || eu().isStringLiteral(uu.name)) ? [`${uu.name.text}: ${Qu(uu.initializer)}`] : eu().isShorthandPropertyAssignment(uu) && yu.has(uu.name.text) ? [`${uu.name.text}: ${yu.get(uu.name.text)}`] : [])).join("\n") : "";
-      for (const Ju of Ru.statements) {
-        const uu = eu().isExpressionStatement(Ju) ? Ju.expression : null;
-        if (!uu || !eu().isCallExpression(uu) || !eu().isIdentifier(uu.expression) || !/^use_?prefab$/i.test(uu.expression.text)) continue;
-        const [Ru, yu] = uu.arguments;
-        if (Ru && (eu().isStringLiteral(Ru) || eu().isNoSubstitutionTemplateLiteral(Ru))) Eu.push({
-          name: Ru.text,
-          settings: mu(yu)
+        Xk = kk => kk && (Ek().isStringLiteral(kk) || Ek().isNoSubstitutionTemplateLiteral(kk)) ? kk.text : kk && Ek().isObjectLiteralExpression(kk) ? kk.properties.flatMap((kk => Ek().isPropertyAssignment(kk) && (Ek().isIdentifier(kk.name) || Ek().isStringLiteral(kk.name)) ? [`${kk.name.text}: ${ak(kk.initializer)}`] : Ek().isShorthandPropertyAssignment(kk) && Bk.has(kk.name.text) ? [`${kk.name.text}: ${Bk.get(kk.name.text)}`] : [])).join("\n") : "";
+      for (const bk of Fk.statements) {
+        const kk = Ek().isExpressionStatement(bk) ? bk.expression : null;
+        if (!kk || !Ek().isCallExpression(kk) || !Ek().isIdentifier(kk.expression) || !/^use_?prefab$/i.test(kk.expression.text)) continue;
+        const [Fk, Bk] = kk.arguments;
+        if (Fk && (Ek().isStringLiteral(Fk) || Ek().isNoSubstitutionTemplateLiteral(Fk))) Rk.push({
+          name: Fk.text,
+          settings: Xk(Bk)
         });
         else {
-          if (!Ru || !eu().isObjectLiteralExpression(Ru)) continue;
+          if (!Fk || !Ek().isObjectLiteralExpression(Fk)) continue;
           {
-            const uu = uu => {
-                var yu;
-                return null === (yu = Ru.properties.find((Ru => eu().isPropertyAssignment(Ru) && eu().isIdentifier(Ru.name) && Ru.name.text === uu))) || void 0 === yu ? void 0 : yu.initializer
+            const kk = kk => {
+                var Bk;
+                return null === (Bk = Fk.properties.find((Fk => Ek().isPropertyAssignment(Fk) && Ek().isIdentifier(Fk.name) && Fk.name.text === kk))) || void 0 === Bk ? void 0 : Bk.initializer
               },
-              yu = uu("name");
-            yu && eu().isStringLiteral(yu) && Eu.push({
-              name: yu.text,
-              settings: mu(uu("settings"))
+              Bk = kk("name");
+            Bk && Ek().isStringLiteral(Bk) && Rk.push({
+              name: Bk.text,
+              settings: Xk(kk("settings"))
             })
           }
         }
-        Ku.push({
-          ...vy(Ju),
+        tk.push({
+          ...IB(bk),
           text: ""
         })
       }
       return {
-        code: My(uu, Ku),
-        calls: Eu
+        code: HB(kk, tk),
+        calls: Rk
       }
     }
 
-    function fy(uu) {
-      if (!/=\s*(?:on[A-Z]\w*|tick|playerCommand)\b/.test(uu)) return uu;
-      const Ru = Oy(uu),
-        yu = new Set(Ru.statements.flatMap((uu => eu().isFunctionDeclaration(uu) && uu.name ? [uu.name.text] : []))),
-        Eu = [];
-      for (const Ku of Ru.statements)
-        if (eu().isExpressionStatement(Ku) && eu().isBinaryExpression(Ku.expression) && Ku.expression.operatorToken.kind === eu().SyntaxKind.EqualsToken && eu().isIdentifier(Ku.expression.left) && yu.add(Ku.expression.left.text), eu().isVariableStatement(Ku))
-          for (const uu of Ku.declarationList.declarations) {
-            const Ru = uu.initializer;
-            Ru && eu().isIdentifier(Ru) && By(Ru.text) && !yu.has(Ru.text) && Eu.push({
-              from: Ru.getStart(),
-              to: Ru.getEnd(),
+    function kR(kk) {
+      if (!/=\s*(?:on[A-Z]\w*|tick|playerCommand)\b/.test(kk)) return kk;
+      const Fk = nB(kk),
+        Bk = new Set(Fk.statements.flatMap((kk => Ek().isFunctionDeclaration(kk) && kk.name ? [kk.name.text] : []))),
+        Rk = [];
+      for (const tk of Fk.statements)
+        if (Ek().isExpressionStatement(tk) && Ek().isBinaryExpression(tk.expression) && tk.expression.operatorToken.kind === Ek().SyntaxKind.EqualsToken && Ek().isIdentifier(tk.expression.left) && Bk.add(tk.expression.left.text), Ek().isVariableStatement(tk))
+          for (const kk of tk.declarationList.declarations) {
+            const Fk = kk.initializer;
+            Fk && Ek().isIdentifier(Fk) && AB(Fk.text) && !Bk.has(Fk.text) && Rk.push({
+              from: Fk.getStart(),
+              to: Fk.getEnd(),
               text: "function () {}"
-            }), Ru && eu().isIdentifier(uu.name) && yu.add(uu.name.text)
+            }), Fk && Ek().isIdentifier(kk.name) && Bk.add(kk.name.text)
           }
-      return My(uu, Eu)
+      return HB(kk, Rk)
     }
 
-    function uE(uu, Ru) {
-      if (!uu.includes("api.setBlockRect(")) return uu;
-      const yu = Oy(uu);
-      if (yu.statements.some((uu => {
-          var Ru;
-          return eu().isFunctionDeclaration(uu) && "fillBox" === (null === (Ru = uu.name) || void 0 === Ru ? void 0 : Ru.text) && 3 !== uu.parameters.length
-        }))) return uu;
-      const Eu = [],
-        Ku = uu => {
-          var Qu;
-          eu().isFunctionDeclaration(uu) && "fillBox" === (null === (Qu = uu.name) || void 0 === Qu ? void 0 : Qu.text) || (Zy(uu, yu) && "setBlockRect" === uu.expression.name.text && 3 === uu.arguments.length && !Ru.includes(uu.getText()) && Eu.push({
-            from: uu.expression.getStart(),
-            to: uu.expression.getEnd(),
+    function FR(kk, Fk) {
+      if (!kk.includes("api.setBlockRect(")) return kk;
+      const Bk = nB(kk);
+      if (Bk.statements.some((kk => {
+          var Fk;
+          return Ek().isFunctionDeclaration(kk) && "fillBox" === (null === (Fk = kk.name) || void 0 === Fk ? void 0 : Fk.text) && 3 !== kk.parameters.length
+        }))) return kk;
+      const Rk = [],
+        tk = kk => {
+          var ak;
+          Ek().isFunctionDeclaration(kk) && "fillBox" === (null === (ak = kk.name) || void 0 === ak ? void 0 : ak.text) || (CB(kk, Bk) && "setBlockRect" === kk.expression.name.text && 3 === kk.arguments.length && !Fk.includes(kk.getText()) && Rk.push({
+            from: kk.expression.getStart(),
+            to: kk.expression.getEnd(),
             text: "fillBox"
-          }), eu().forEachChild(uu, Ku))
+          }), Ek().forEachChild(kk, tk))
         };
-      return Ku(yu), My(uu, Eu)
+      return tk(Bk), HB(kk, Rk)
     }
-    const RE = [{
+    const BR = [{
         name: "parkour",
         kind: "game",
         title: "Parkour / obby",
@@ -4416,7 +4416,7 @@ export const modules = {
         }],
         setup: "Put your own Bloxd name in admins to get the admin commands, and set spawnPosition to where players should start."
       }],
-      yE = [{
+      RR = [{
         group: "timers",
         code: "// Ready-made timers: runLater(seconds, fn) runs fn once after some seconds, repeatEvery(seconds, fn) runs it every\n// few seconds, and cancelTimer(id) stops either. Time is counted in tick. The list is a var made on first use, so\n// they can be called from the top of the file, above this code.\nvar timerList\nvar nextTimerId\n\nfunction runLater(seconds, fn) {\n\treturn addToTimerList(seconds, 0, fn)\n}\n\nfunction repeatEvery(seconds, fn) {\n\treturn addToTimerList(seconds, Math.max(50, seconds * 1000), fn)\n}\n\nfunction addToTimerList(seconds, everyMs, fn) {\n\tif (!timerList) {\n\t\ttimerList = []\n\t\tnextTimerId = 1\n\t}\n\tconst id = nextTimerId++\n\ttimerList.push({ id: id, msLeft: seconds * 1000, everyMs: everyMs, fn: fn })\n\treturn id\n}\n\nfunction cancelTimer(id) {\n\tconst index = timerList ? timerList.findIndex((timer) => timer.id === id) : -1\n\tif (index !== -1) {\n\t\ttimerList.splice(index, 1)\n\t}\n}\n\nfunction tick(ms) {\n\tif (!timerList) {\n\t\treturn\n\t}\n\tfor (const timer of timerList.slice()) {\n\t\tif (!timerList.includes(timer)) {\n\t\t\tcontinue\n\t\t}\n\t\ttimer.msLeft -= ms\n\t\tif (timer.msLeft > 0) {\n\t\t\tcontinue\n\t\t}\n\t\tif (timer.everyMs > 0) {\n\t\t\ttimer.msLeft += timer.everyMs\n\t\t} else {\n\t\t\tcancelTimer(timer.id)\n\t\t}\n\t\ttimer.fn()\n\t}\n}",
         helpers: [{
@@ -5003,180 +5003,180 @@ export const modules = {
           about: "Stops a risingLava (the handle it returned). With clear true it also takes away the blocks it placed, and only those, e.g. for the next round. Returns nothing.",
           example: "stopLava(lava, true)"
         }]
-      }].flatMap((uu => uu.helpers.map((Ru => ({
-        ...Ru,
-        group: uu.group,
-        code: uu.code,
-        ...uu.uses ? {
-          uses: uu.uses
+      }].flatMap((kk => kk.helpers.map((Fk => ({
+        ...Fk,
+        group: kk.group,
+        code: kk.code,
+        ...kk.uses ? {
+          uses: kk.uses
         } : {}
       })))));
 
-    function EE(uu) {
+    function tR(kk) {
       const {
-        file: Ru,
-        hasErrors: yu
-      } = py(`(${uu})`), Eu = Ru.statements[0];
-      if (yu || 1 !== Ru.statements.length || !Eu || !eu().isExpressionStatement(Eu)) return null;
-      const Ku = Eu.expression;
-      return eu().isParenthesizedExpression(Ku) ? Ku.expression : Ku
+        file: Fk,
+        hasErrors: Bk
+      } = fB(`(${kk})`), Rk = Fk.statements[0];
+      if (Bk || 1 !== Fk.statements.length || !Rk || !Ek().isExpressionStatement(Rk)) return null;
+      const tk = Rk.expression;
+      return Ek().isParenthesizedExpression(tk) ? tk.expression : tk
     }
 
-    function KE(uu) {
-      return !!(eu().isNumericLiteral(uu) || eu().isStringLiteral(uu) || eu().isNoSubstitutionTemplateLiteral(uu)) || (uu.kind === eu().SyntaxKind.TrueKeyword || uu.kind === eu().SyntaxKind.FalseKeyword || uu.kind === eu().SyntaxKind.NullKeyword || (!eu().isPrefixUnaryExpression(uu) || uu.operator !== eu().SyntaxKind.MinusToken && uu.operator !== eu().SyntaxKind.PlusToken ? eu().isArrayLiteralExpression(uu) ? uu.elements.every((uu => KE(uu))) : !!eu().isObjectLiteralExpression(uu) && uu.properties.every((uu => eu().isPropertyAssignment(uu) && (eu().isIdentifier(uu.name) || eu().isStringLiteral(uu.name)) && KE(uu.initializer))) : eu().isNumericLiteral(uu.operand)))
+    function aR(kk) {
+      return !!(Ek().isNumericLiteral(kk) || Ek().isStringLiteral(kk) || Ek().isNoSubstitutionTemplateLiteral(kk)) || (kk.kind === Ek().SyntaxKind.TrueKeyword || kk.kind === Ek().SyntaxKind.FalseKeyword || kk.kind === Ek().SyntaxKind.NullKeyword || (!Ek().isPrefixUnaryExpression(kk) || kk.operator !== Ek().SyntaxKind.MinusToken && kk.operator !== Ek().SyntaxKind.PlusToken ? Ek().isArrayLiteralExpression(kk) ? kk.elements.every((kk => aR(kk))) : !!Ek().isObjectLiteralExpression(kk) && kk.properties.every((kk => Ek().isPropertyAssignment(kk) && (Ek().isIdentifier(kk.name) || Ek().isStringLiteral(kk.name)) && aR(kk.initializer))) : Ek().isNumericLiteral(kk.operand)))
     }
 
-    function QE(uu) {
-      return eu().isNumericLiteral(uu) || eu().isPrefixUnaryExpression(uu) && eu().isNumericLiteral(uu.operand)
+    function XR(kk) {
+      return Ek().isNumericLiteral(kk) || Ek().isPrefixUnaryExpression(kk) && Ek().isNumericLiteral(kk.operand)
     }
 
-    function mE(uu) {
-      return eu().isStringLiteral(uu) || eu().isNoSubstitutionTemplateLiteral(uu) ? uu.text : null
+    function bR(kk) {
+      return Ek().isStringLiteral(kk) || Ek().isNoSubstitutionTemplateLiteral(kk) ? kk.text : null
     }
-    const JE = /"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/g;
+    const wR = /"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'/g;
 
-    function NE(uu) {
-      const Ru = uu.trim();
-      if ("" === Ru) return [];
-      if (Ru.startsWith("{")) try {
-        const uu = JSON.parse(Ru);
-        if (uu && "object" === typeof uu && !Array.isArray(uu)) return Object.entries(uu).map((uu => {
-          let [Ru, yu] = uu;
-          return [Ru, JSON.stringify(yu)]
+    function dR(kk) {
+      const Fk = kk.trim();
+      if ("" === Fk) return [];
+      if (Fk.startsWith("{")) try {
+        const kk = JSON.parse(Fk);
+        if (kk && "object" === typeof kk && !Array.isArray(kk)) return Object.entries(kk).map((kk => {
+          let [Fk, Bk] = kk;
+          return [Fk, JSON.stringify(Bk)]
         }))
       } catch {}
-      const yu = function(uu) {
-        const Ru = EE(uu);
-        if (!Ru || !eu().isObjectLiteralExpression(Ru)) return null;
-        const yu = [];
-        for (const Eu of Ru.properties) {
-          if (!eu().isPropertyAssignment(Eu) || !eu().isIdentifier(Eu.name) && !eu().isStringLiteral(Eu.name)) return null;
-          yu.push([Eu.name.text, Eu.initializer.getText()])
+      const Bk = function(kk) {
+        const Fk = tR(kk);
+        if (!Fk || !Ek().isObjectLiteralExpression(Fk)) return null;
+        const Bk = [];
+        for (const Rk of Fk.properties) {
+          if (!Ek().isPropertyAssignment(Rk) || !Ek().isIdentifier(Rk.name) && !Ek().isStringLiteral(Rk.name)) return null;
+          Bk.push([Rk.name.text, Rk.initializer.getText()])
         }
-        return yu
-      }(Ru.startsWith("{") ? Ru : `{${Ru}}`);
-      if (yu) return yu;
-      const Eu = [];
-      let Ku = null,
-        Qu = 0;
-      const mu = Ru.startsWith("{") ? Ru.replace(/^\{/, "").replace(/\}\s*$/, "") : Ru;
-      for (const ru of mu.split("\n")) {
-        var Ju, Nu, Xu, Vu;
-        const uu = /\/\//.exec(ru.replace(JE, (uu => " ".repeat(uu.length)))),
-          Ru = (uu ? ru.slice(0, uu.index) : ru).trim();
-        if ("" === Ru) continue;
-        if (Ku && Qu > 0) Ku[1] += `\n${Ru}`;
+        return Bk
+      }(Fk.startsWith("{") ? Fk : `{${Fk}}`);
+      if (Bk) return Bk;
+      const Rk = [];
+      let tk = null,
+        ak = 0;
+      const Xk = Fk.startsWith("{") ? Fk.replace(/^\{/, "").replace(/\}\s*$/, "") : Fk;
+      for (const Vk of Xk.split("\n")) {
+        var bk, wk, dk, sk;
+        const kk = /\/\//.exec(Vk.replace(wR, (kk => " ".repeat(kk.length)))),
+          Fk = (kk ? Vk.slice(0, kk.index) : Vk).trim();
+        if ("" === Fk) continue;
+        if (tk && ak > 0) tk[1] += `\n${Fk}`;
         else {
-          const uu = /^["']?([A-Za-z_$][\w$]*)["']?\s*[:=]\s*(.*)$/.exec(Ru.replace(/^[-*\u2022]\s*/, ""));
-          if (!uu) continue;
-          Ku = [uu[1], uu[2]], Eu.push(Ku)
+          const kk = /^["']?([A-Za-z_$][\w$]*)["']?\s*[:=]\s*(.*)$/.exec(Fk.replace(/^[-*\u2022]\s*/, ""));
+          if (!kk) continue;
+          tk = [kk[1], kk[2]], Rk.push(tk)
         }
-        const yu = Ru.replace(JE, "");
-        Qu = Math.max(0, Qu + (null !== (Ju = null === (Nu = yu.match(/[[{(]/g)) || void 0 === Nu ? void 0 : Nu.length) && void 0 !== Ju ? Ju : 0) - (null !== (Xu = null === (Vu = yu.match(/[\]})]/g)) || void 0 === Vu ? void 0 : Vu.length) && void 0 !== Xu ? Xu : 0))
+        const Bk = Fk.replace(wR, "");
+        ak = Math.max(0, ak + (null !== (bk = null === (wk = Bk.match(/[[{(]/g)) || void 0 === wk ? void 0 : wk.length) && void 0 !== bk ? bk : 0) - (null !== (dk = null === (sk = Bk.match(/[\]})]/g)) || void 0 === sk ? void 0 : sk.length) && void 0 !== dk ? dk : 0))
       }
-      return Eu.map((uu => {
-        let [Ru, yu] = uu;
-        return [Ru, yu.trim().replace(/[,;]\s*$/, "")]
+      return Rk.map((kk => {
+        let [Fk, Bk] = kk;
+        return [Fk, Bk.trim().replace(/[,;]\s*$/, "")]
       }))
     }
 
-    function XE(uu, Ru, yu) {
-      const Eu = "string" === uu.kind || "block" === uu.kind || "item" === uu.kind || "mob" === uu.kind;
-      let Ku = EE(Ru),
-        Qu = Ru;
-      var mu;
-      if (Ku && KE(Ku) || !Eu || (mu = Ru, Qu = JSON.stringify(mu.replace(/^["'`]|["'`]$/g, "")), Ku = EE(Qu)), !Ku || !KE(Ku)) return {
-        problem: `${uu.key} must be a plain value like ${uu.value}, not ${Ru}`
+    function sR(kk, Fk, Bk) {
+      const Rk = "string" === kk.kind || "block" === kk.kind || "item" === kk.kind || "mob" === kk.kind;
+      let tk = tR(Fk),
+        ak = Fk;
+      var Xk;
+      if (tk && aR(tk) || !Rk || (Xk = Fk, ak = JSON.stringify(Xk.replace(/^["'`]|["'`]$/g, "")), tk = tR(ak)), !tk || !aR(tk)) return {
+        problem: `${kk.key} must be a plain value like ${kk.value}, not ${Fk}`
       };
-      if ("number" === uu.kind && !QE(Ku)) return {
-        problem: `${uu.key} must be a number, like ${uu.value}`
+      if ("number" === kk.kind && !XR(tk)) return {
+        problem: `${kk.key} must be a number, like ${kk.value}`
       };
-      if ("boolean" === uu.kind && Ku.kind !== eu().SyntaxKind.TrueKeyword && Ku.kind !== eu().SyntaxKind.FalseKeyword) return {
-        problem: `${uu.key} must be true or false`
+      if ("boolean" === kk.kind && tk.kind !== Ek().SyntaxKind.TrueKeyword && tk.kind !== Ek().SyntaxKind.FalseKeyword) return {
+        problem: `${kk.key} must be true or false`
       };
-      if ("position" === uu.kind && ! function(uu) {
-          return eu().isArrayLiteralExpression(uu) && 3 === uu.elements.length && uu.elements.every(QE)
-        }(Ku) && (Ku.kind !== eu().SyntaxKind.NullKeyword || "null" !== uu.value)) return {
-        problem: `${uu.key} must be a position [x, y, z], like ${"null"===uu.value?"[0, 10, 0]":uu.value}`
+      if ("position" === kk.kind && ! function(kk) {
+          return Ek().isArrayLiteralExpression(kk) && 3 === kk.elements.length && kk.elements.every(XR)
+        }(tk) && (tk.kind !== Ek().SyntaxKind.NullKeyword || "null" !== kk.value)) return {
+        problem: `${kk.key} must be a position [x, y, z], like ${"null"===kk.value?"[0, 10, 0]":kk.value}`
       };
-      if ("list" === uu.kind && !eu().isArrayLiteralExpression(Ku)) return {
-        problem: `${uu.key} must be a list in [ ], like ${uu.value}`
+      if ("list" === kk.kind && !Ek().isArrayLiteralExpression(tk)) return {
+        problem: `${kk.key} must be a list in [ ], like ${kk.value}`
       };
-      if ("list" === uu.kind && uu.names && yu && eu().isArrayLiteralExpression(Ku)) return function(uu, Ru, yu, Eu) {
-        const Ku = uu => uu.elements.flatMap(((Ru, Eu) => {
-            if (eu().isArrayLiteralExpression(Ru)) return Ku(Ru);
-            if ("item" === yu && eu().isObjectLiteralExpression(Ru)) return Qu(Ru);
-            const mu = uu.elements[Eu + 1],
-              Ju = void 0 !== mu && eu().isArrayLiteralExpression(mu);
-            return null === mE(Ru) || Ju ? [] : [Ru]
+      if ("list" === kk.kind && kk.names && Bk && Ek().isArrayLiteralExpression(tk)) return function(kk, Fk, Bk, Rk) {
+        const tk = kk => kk.elements.flatMap(((Fk, Rk) => {
+            if (Ek().isArrayLiteralExpression(Fk)) return tk(Fk);
+            if ("item" === Bk && Ek().isObjectLiteralExpression(Fk)) return ak(Fk);
+            const Xk = kk.elements[Rk + 1],
+              bk = void 0 !== Xk && Ek().isArrayLiteralExpression(Xk);
+            return null === bR(Fk) || bk ? [] : [Fk]
           })),
-          Qu = uu => uu.properties.flatMap((uu => {
-            if (!eu().isPropertyAssignment(uu) || !["item", "ammo", "projectile", "items"].includes(uu.name.getText().replace(/["']/g, ""))) return [];
-            const Ru = uu.initializer;
-            return eu().isArrayLiteralExpression(Ru) ? Ku(Ru) : null !== mE(Ru) ? [Ru] : []
+          ak = kk => kk.properties.flatMap((kk => {
+            if (!Ek().isPropertyAssignment(kk) || !["item", "ammo", "projectile", "items"].includes(kk.name.getText().replace(/["']/g, ""))) return [];
+            const Fk = kk.initializer;
+            return Ek().isArrayLiteralExpression(Fk) ? tk(Fk) : null !== bR(Fk) ? [Fk] : []
           })),
-          mu = Ku(Ru),
-          Ju = Ru.getStart();
-        let Nu = Ru.getText();
-        const Xu = [],
-          Vu = [],
-          ru = new Map([...uu.value.matchAll(/\{ item: "([^"]+)"[^}]*?action: "(\w+)"/g)].map((uu => [uu[2], uu[1]]))),
-          Bu = uu => {
-            var Ru;
-            const yu = uu.parent,
-              Eu = null === yu || void 0 === yu ? void 0 : yu.parent;
-            if (!eu().isPropertyAssignment(yu) || "item" !== yu.name.getText().replace(/["']/g, "") || !Eu || !eu().isObjectLiteralExpression(Eu)) return;
-            const Ku = uu => Eu.properties.find((Ru => eu().isPropertyAssignment(Ru) && Ru.name.getText().replace(/["']/g, "") === uu)),
-              Qu = Ku("action"),
-              mu = Qu ? ru.get(null !== (Ru = mE(Qu.initializer)) && void 0 !== Ru ? Ru : "") : void 0;
-            return mu ? {
-              property: yu,
-              item: mu,
-              named: void 0 !== Ku("name")
+          Xk = tk(Fk),
+          bk = Fk.getStart();
+        let wk = Fk.getText();
+        const dk = [],
+          sk = [],
+          Vk = new Map([...kk.value.matchAll(/\{ item: "([^"]+)"[^}]*?action: "(\w+)"/g)].map((kk => [kk[2], kk[1]]))),
+          Jk = kk => {
+            var Fk;
+            const Bk = kk.parent,
+              Rk = null === Bk || void 0 === Bk ? void 0 : Bk.parent;
+            if (!Ek().isPropertyAssignment(Bk) || "item" !== Bk.name.getText().replace(/["']/g, "") || !Rk || !Ek().isObjectLiteralExpression(Rk)) return;
+            const tk = kk => Rk.properties.find((Fk => Ek().isPropertyAssignment(Fk) && Fk.name.getText().replace(/["']/g, "") === kk)),
+              ak = tk("action"),
+              Xk = ak ? Vk.get(null !== (Fk = bR(ak.initializer)) && void 0 !== Fk ? Fk : "") : void 0;
+            return Xk ? {
+              property: Bk,
+              item: Xk,
+              named: void 0 !== tk("name")
             } : void 0
           };
-        for (const Su of [...mu].reverse()) {
-          var xu;
-          const uu = null !== (xu = mE(Su)) && void 0 !== xu ? xu : "",
-            Ru = Eu(yu, uu),
-            Ku = null === Ru ? Bu(Su) : void 0;
-          if (Ku) {
-            const Ru = Ku.named ? `item: ${JSON.stringify(Ku.item)}` : `item: ${JSON.stringify(Ku.item)}, name: ${JSON.stringify(uu)}`;
-            Xu.unshift(`"${uu}" isn't an item, so it is a ${Ku.item}${Ku.named?"":` named "${uu}"`}`), Nu = `${Nu.slice(0,Ku.property.getStart()-Ju)}${Ru}${Nu.slice(Ku.property.getEnd()-Ju)}`
-          } else null === Ru ? Vu.unshift(`"${uu}"`) : Ru !== uu && (Xu.unshift(`"${uu}" is "${Ru}"`), Nu = `${Nu.slice(0,Su.getStart()-Ju)}${JSON.stringify(Ru)}${Nu.slice(Su.getEnd()-Ju)}`)
+        for (const ek of [...Xk].reverse()) {
+          var Ak;
+          const kk = null !== (Ak = bR(ek)) && void 0 !== Ak ? Ak : "",
+            Fk = Rk(Bk, kk),
+            tk = null === Fk ? Jk(ek) : void 0;
+          if (tk) {
+            const Fk = tk.named ? `item: ${JSON.stringify(tk.item)}` : `item: ${JSON.stringify(tk.item)}, name: ${JSON.stringify(kk)}`;
+            dk.unshift(`"${kk}" isn't an item, so it is a ${tk.item}${tk.named?"":` named "${kk}"`}`), wk = `${wk.slice(0,tk.property.getStart()-bk)}${Fk}${wk.slice(tk.property.getEnd()-bk)}`
+          } else null === Fk ? sk.unshift(`"${kk}"`) : Fk !== kk && (dk.unshift(`"${kk}" is "${Fk}"`), wk = `${wk.slice(0,ek.getStart()-bk)}${JSON.stringify(Fk)}${wk.slice(ek.getEnd()-bk)}`)
         }
-        if (Vu.length > 0) return {
-          problem: `${Vu.join(", ")} ${1===Vu.length?"item"===yu?"isn't an":"isn't a":"aren't"} ${yu} name${1===Vu.length?"":"s"}, so ${uu.key} kept ${uu.value}`
+        if (sk.length > 0) return {
+          problem: `${sk.join(", ")} ${1===sk.length?"item"===Bk?"isn't an":"isn't a":"aren't"} ${Bk} name${1===sk.length?"":"s"}, so ${kk.key} kept ${kk.value}`
         };
         return {
-          value: Nu,
-          ...Xu.length > 0 ? {
-            fixed: Xu.join(", ")
+          value: wk,
+          ...dk.length > 0 ? {
+            fixed: dk.join(", ")
           } : {}
         }
-      }(uu, Ku, uu.names, yu);
-      if (Eu) {
-        const Ru = mE(Ku);
-        if (null === Ru) return {
-          problem: `${uu.key} must be text in quotes, like ${uu.value}`
+      }(kk, tk, kk.names, Bk);
+      if (Rk) {
+        const Fk = bR(tk);
+        if (null === Fk) return {
+          problem: `${kk.key} must be text in quotes, like ${kk.value}`
         };
-        if (("block" === uu.kind || "item" === uu.kind || "mob" === uu.kind) && yu) {
-          const Eu = yu(uu.kind, Ru);
-          if (null === Eu) return {
-            problem: `"${Ru}" isn't ${"item"===uu.kind?"an":"a"} ${uu.kind} name, so ${uu.key} kept ${uu.value}`
+        if (("block" === kk.kind || "item" === kk.kind || "mob" === kk.kind) && Bk) {
+          const Rk = Bk(kk.kind, Fk);
+          if (null === Rk) return {
+            problem: `"${Fk}" isn't ${"item"===kk.kind?"an":"a"} ${kk.kind} name, so ${kk.key} kept ${kk.value}`
           };
-          if (Eu !== Ru) return {
-            value: JSON.stringify(Eu),
-            fixed: `"${Ru}" is "${Eu}"`
+          if (Rk !== Fk) return {
+            value: JSON.stringify(Rk),
+            fixed: `"${Fk}" is "${Rk}"`
           }
         }
       }
       return {
-        value: Ku.getText()
+        value: tk.getText()
       }
     }
-    const VE = RE,
-      rE = new Map([
+    const VR = BR,
+      JR = new Map([
         ["parkour", "parkour, obbies and races to a finish"],
         ["pvp", "fighting other players: arenas, kills, last one standing"],
         ["teams", "teams against each other"],
@@ -5190,707 +5190,707 @@ export const modules = {
         ["screen", "text on players' screens and announcements"]
       ]);
 
-    function BE(uu) {
-      return uu.toLowerCase().replace(/[^a-z0-9]/g, "")
+    function AR(kk) {
+      return kk.toLowerCase().replace(/[^a-z0-9]/g, "")
     }
 
-    function xE(uu) {
-      var Ru;
-      const yu = BE(uu);
-      return null !== (Ru = VE.find((uu => BE(uu.name) === yu || BE(uu.title) === yu))) && void 0 !== Ru ? Ru : null
+    function eR(kk) {
+      var Fk;
+      const Bk = AR(kk);
+      return null !== (Fk = VR.find((kk => AR(kk.name) === Bk || AR(kk.title) === Bk))) && void 0 !== Fk ? Fk : null
     }
 
-    function SE(uu) {
-      var Ru;
-      return null !== (Ru = yE.find((Ru => Ru.name === uu))) && void 0 !== Ru ? Ru : null
+    function yR(kk) {
+      var Fk;
+      return null !== (Fk = RR.find((Fk => Fk.name === kk))) && void 0 !== Fk ? Fk : null
     }
 
-    function pE(uu) {
-      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-      const yu = function(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return 0 === uu.length ? "" : `const CONFIG = {\n${uu.map((uu=>{var yu;return`\t${uu.key}: ${null!==(yu=Ru.get(uu.key))&&void 0!==yu?yu:uu.value}, // ${uu.about}`})).join("\n")}\n}`
-      }(uu.settings, Ru);
-      return `${""===yu?"":`${yu}\n\n`}${uu.code.trim()}\n`
+    function fR(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+      const Bk = function(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return 0 === kk.length ? "" : `const CONFIG = {\n${kk.map((kk=>{var Bk;return`\t${kk.key}: ${null!==(Bk=Fk.get(kk.key))&&void 0!==Bk?Bk:kk.value}, // ${kk.about}`})).join("\n")}\n}`
+      }(kk.settings, Fk);
+      return `${""===Bk?"":`${Bk}\n\n`}${kk.code.trim()}\n`
     }
 
-    function TE(uu) {
-      const Ru = [],
-        yu = new Set,
-        Eu = uu => {
-          const Ku = SE(uu);
-          if (Ku && !yu.has(Ku.group)) {
-            yu.add(Ku.group);
-            for (const uu of null !== (Qu = Ku.uses) && void 0 !== Qu ? Qu : []) {
-              var Qu;
-              Eu(uu)
+    function mR(kk) {
+      const Fk = [],
+        Bk = new Set,
+        Rk = kk => {
+          const tk = yR(kk);
+          if (tk && !Bk.has(tk.group)) {
+            Bk.add(tk.group);
+            for (const kk of null !== (ak = tk.uses) && void 0 !== ak ? ak : []) {
+              var ak;
+              Rk(kk)
             }
-            Ru.push(Ku)
+            Fk.push(tk)
           }
         };
-      for (const Ku of uu) Eu(Ku);
-      return Ru
+      for (const tk of kk) Rk(tk);
+      return Fk
     }
 
-    function WE(uu, Ru) {
-      const yu = uu => uu.replace(/\s+/g, ""),
-        Eu = new RegExp(`function ${Ru.name}\\s*\\([^)]*\\)\\s*\\{`).exec(uu);
-      return !!Eu && yu(Ru.code).includes(yu(uu.slice(Eu.index, Eu.index + 200)).slice(0, 60))
+    function WR(kk, Fk) {
+      const Bk = kk => kk.replace(/\s+/g, ""),
+        Rk = new RegExp(`function ${Fk.name}\\s*\\([^)]*\\)\\s*\\{`).exec(kk);
+      return !!Rk && Bk(Fk.code).includes(Bk(kk.slice(Rk.index, Rk.index + 200)).slice(0, 60))
     }
 
-    function jE(uu) {
-      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set;
-      if (!wy(uu)) return {
-        text: uu,
+    function vR(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set;
+      if (!qB(kk)) return {
+        text: kk,
         added: []
       };
-      let yu = uu;
-      const Eu = [];
-      for (let Ku = 0; Ku < 4; Ku++) {
-        const uu = zy(yu),
-          Ku = [...Fy(yu)].filter((Eu => {
-            const Ku = SE(Eu);
-            return null !== Ku && !Ru.has(Eu) && (!uu.has(Eu) || WE(yu, Ku))
+      let Bk = kk;
+      const Rk = [];
+      for (let tk = 0; tk < 4; tk++) {
+        const kk = PB(Bk),
+          tk = [...hB(Bk)].filter((Rk => {
+            const tk = yR(Rk);
+            return null !== tk && !Fk.has(Rk) && (!kk.has(Rk) || WR(Bk, tk))
           }));
-        let Qu = !1;
-        for (const Ru of TE(Ku)) {
-          const mu = Ly(yu, Ru.code, {
-            owner: Ru.group,
+        let ak = !1;
+        for (const Fk of mR(tk)) {
+          const Xk = zB(Bk, Fk.code, {
+            owner: Fk.group,
             chainCallbacks: !0
           });
-          mu && mu.text !== yu && (yu = mu.text, Qu = !0, uu.has(Ru.name) || Eu.push(...yE.filter((uu => uu.group === Ru.group && Ku.includes(uu.name))).map((uu => uu.name))))
+          Xk && Xk.text !== Bk && (Bk = Xk.text, ak = !0, kk.has(Fk.name) || Rk.push(...RR.filter((kk => kk.group === Fk.group && tk.includes(kk.name))).map((kk => kk.name))))
         }
-        if (!Qu) break
+        if (!ak) break
       }
       return {
-        text: yu,
-        added: [...new Set(Eu)]
+        text: Bk,
+        added: [...new Set(Rk)]
       }
     }
 
-    function HE(uu, Ru) {
-      const yu = [...zy(Ru.code)].filter((uu => "CONFIG" !== uu && !By(uu)));
-      if (0 === yu.length) return uu.includes(Ru.code.trim().slice(0, 80));
-      const Eu = wy(uu) ? zy(uu) : new Set;
-      return 2 * yu.filter((uu => Eu.has(uu))).length >= yu.length
+    function iR(kk, Fk) {
+      const Bk = [...PB(Fk.code)].filter((kk => "CONFIG" !== kk && !AB(kk)));
+      if (0 === Bk.length) return kk.includes(Fk.code.trim().slice(0, 80));
+      const Rk = qB(kk) ? PB(kk) : new Set;
+      return 2 * Bk.filter((kk => Rk.has(kk))).length >= Bk.length
     }
 
-    function dE(uu) {
-      const Ru = /^const CONFIG = \{\n([\s\S]*?)\n\}/m.exec(uu.code);
-      return Ru ? Ru[1].split("\n").flatMap((uu => {
-        const Ru = /^\t(\w+): (.+?), \/\/ (.*)$/.exec(uu);
-        if (!Ru) return [];
-        const [, yu, Eu, Ku] = Ru;
+    function YR(kk) {
+      const Fk = /^const CONFIG = \{\n([\s\S]*?)\n\}/m.exec(kk.code);
+      return Fk ? Fk[1].split("\n").flatMap((kk => {
+        const Fk = /^\t(\w+): (.+?), \/\/ (.*)$/.exec(kk);
+        if (!Fk) return [];
+        const [, Bk, Rk, tk] = Fk;
         return [{
-          key: yu,
-          kind: /^-?\d/.test(Eu) ? "number" : "true" === Eu || "false" === Eu ? "boolean" : Eu.startsWith("[") ? "list" : "string",
-          value: Eu,
-          about: Ku
+          key: Bk,
+          kind: /^-?\d/.test(Rk) ? "number" : "true" === Rk || "false" === Rk ? "boolean" : Rk.startsWith("[") ? "list" : "string",
+          value: Rk,
+          about: tk
         }]
       })) : []
     }
 
-    function bE(uu) {
-      const Ru = new Set(uu.settings.map((uu => uu.key))),
-        yu = new Map;
-      for (const Eu of TE(Fy(uu.code)))
-        for (const uu of dE(Eu)) Ru.has(uu.key) || yu.set(uu.key, uu);
-      return [...yu.values()]
+    function oR(kk) {
+      const Fk = new Set(kk.settings.map((kk => kk.key))),
+        Bk = new Map;
+      for (const Rk of mR(hB(kk.code)))
+        for (const kk of YR(Rk)) Fk.has(kk.key) || Bk.set(kk.key, kk);
+      return [...Bk.values()]
     }
 
-    function CE(uu, Ru, yu, Eu) {
-      const Ku = bE(Ru),
-        Qu = function(uu, Ru, yu) {
-          const Eu = new Map,
-            Ku = [],
-            Qu = [],
-            mu = new Map(uu.settings.map((uu => [uu.key.toLowerCase(), uu])));
-          for (const [Ju, Nu] of NE(Ru)) {
-            const Ru = mu.get(Ju.toLowerCase());
-            if (!Ru) {
-              Ku.push(`${uu.name} has no setting ${Ju}`);
+    function LR(kk, Fk, Bk, Rk) {
+      const tk = oR(Fk),
+        ak = function(kk, Fk, Bk) {
+          const Rk = new Map,
+            tk = [],
+            ak = [],
+            Xk = new Map(kk.settings.map((kk => [kk.key.toLowerCase(), kk])));
+          for (const [bk, wk] of dR(Fk)) {
+            const Fk = Xk.get(bk.toLowerCase());
+            if (!Fk) {
+              tk.push(`${kk.name} has no setting ${bk}`);
               continue
             }
-            if (/^CONFIG\.\w+$/.test(Nu.trim())) continue;
-            const Xu = XE(Ru, Nu, yu);
-            "problem" in Xu ? Ku.push(Xu.problem) : (Eu.set(Ru.key, Xu.value), Xu.fixed && Qu.push(Xu.fixed))
+            if (/^CONFIG\.\w+$/.test(wk.trim())) continue;
+            const dk = sR(Fk, wk, Bk);
+            "problem" in dk ? tk.push(dk.problem) : (Rk.set(Fk.key, dk.value), dk.fixed && ak.push(dk.fixed))
           }
           return {
-            values: Eu,
-            problems: Ku,
-            fixed: Qu
+            values: Rk,
+            problems: tk,
+            fixed: ak
           }
         }({
-          ...Ru,
-          settings: [...Ru.settings, ...Ku]
-        }, yu, Eu),
-        mu = Ku.filter((uu => Qu.values.has(uu.key))),
-        Ju = Ly(uu, pE({
-          ...Ru,
-          settings: [...Ru.settings, ...mu]
-        }, Qu.values), {
-          owner: Ru.name,
-          overrides: new Set(Qu.values.keys()),
-          heading: "" === uu.trim() ? void 0 : `// ---- ${Ru.title} (ready-made) ----`
+          ...Fk,
+          settings: [...Fk.settings, ...tk]
+        }, Bk, Rk),
+        Xk = tk.filter((kk => ak.values.has(kk.key))),
+        bk = zB(kk, fR({
+          ...Fk,
+          settings: [...Fk.settings, ...Xk]
+        }, ak.values), {
+          owner: Fk.name,
+          overrides: new Set(ak.values.keys()),
+          heading: "" === kk.trim() ? void 0 : `// ---- ${Fk.title} (ready-made) ----`
         });
-      if (!Ju) return {
-        error: wy(uu) ? "The prefab couldn't be fitted into the code around it without breaking it. Put it into an empty file instead." : "The code around it doesn't parse (a bracket is likely missing), so the prefab couldn't be fitted in. Fix the code first."
+      if (!bk) return {
+        error: qB(kk) ? "The prefab couldn't be fitted into the code around it without breaking it. Put it into an empty file instead." : "The code around it doesn't parse (a bracket is likely missing), so the prefab couldn't be fitted in. Fix the code first."
       };
-      const Nu = jE(Ju.text);
+      const wk = vR(bk.text);
       return {
-        prefab: Ru,
-        text: Nu.text,
-        problems: Qu.problems,
-        fixed: Qu.fixed,
-        chained: Ju.chained,
-        helpers: Nu.added
+        prefab: Fk,
+        text: wk.text,
+        problems: ak.problems,
+        fixed: ak.fixed,
+        chained: bk.chained,
+        helpers: wk.added
       }
     }
 
-    function kE(uu) {
-      return `- ${uu.name}: ${uu.summary}. Settings: ${uu.settings.map((uu=>uu.key)).join(", ")}`
+    function OR(kk) {
+      return `- ${kk.name}: ${kk.summary}. Settings: ${kk.settings.map((kk=>kk.key)).join(", ")}`
     }
 
-    function eE(uu) {
-      var Ru;
-      const yu = null !== (Ru = null === uu || void 0 === uu ? void 0 : uu.trim().toLowerCase()) && void 0 !== Ru ? Ru : "",
-        Eu = [...rE.keys()].find((uu => uu === yu)),
-        Ku = Eu ? VE.filter((uu => uu.category === Eu)) : VE,
-        Qu = Eu ? yE.filter((uu => uu.category === Eu)) : [];
-      return `${Eu?`Prefabs for ${rE.get(Eu)}:`:""===yu||"all"===yu?"Every prefab:":`There is no category ${uu}. Every prefab:`}\n${Ku.length>0?Ku.map(kE).join("\n"):"(none yet)"}${Qu.length>0?`\nReady-made functions for it (call them; their code is added by itself):\n${Qu.map((uu=>`- ${uu.signature}: ${uu.about}`)).join("\n")}`:""}${Eu?"":`\nCategories: ${[...rE.keys()].join(", ")}`}`
+    function ER(kk) {
+      var Fk;
+      const Bk = null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.trim().toLowerCase()) && void 0 !== Fk ? Fk : "",
+        Rk = [...JR.keys()].find((kk => kk === Bk)),
+        tk = Rk ? VR.filter((kk => kk.category === Rk)) : VR,
+        ak = Rk ? RR.filter((kk => kk.category === Rk)) : [];
+      return `${Rk?`Prefabs for ${JR.get(Rk)}:`:""===Bk||"all"===Bk?"Every prefab:":`There is no category ${kk}. Every prefab:`}\n${tk.length>0?tk.map(OR).join("\n"):"(none yet)"}${ak.length>0?`\nReady-made functions for it (call them; their code is added by itself):\n${ak.map((kk=>`- ${kk.signature}: ${kk.about}`)).join("\n")}`:""}${Rk?"":`\nCategories: ${[...JR.keys()].join(", ")}`}`
     }
 
-    function AE(uu, Ru) {
-      var yu;
-      const Eu = [...uu.settings, ...bE(uu)].map((uu => `- ${uu.key} (${uu.kind}, default ${uu.value}): ${uu.about}`)).join("\n"),
-        Ku = null !== (yu = uu.changeable) && void 0 !== yu && yu.length ? `\nFunctions to replace by name for a game of their own:\n${uu.changeable.map((uu=>`- ${uu.name}: ${uu.about}`)).join("\n")}` : "",
-        Qu = Ru ? `\nIts code, as it goes in with the default settings:\n${pE(uu)}` : "";
-      return `${uu.name} (${uu.title}): ${uu.summary}.\nHow it plays: ${uu.howItPlays}\nSettings:\n${Eu}${Ku}${uu.setup?`\nThe creator sets up: ${uu.setup}`:""}${Qu}`
+    function SR(kk, Fk) {
+      var Bk;
+      const Rk = [...kk.settings, ...oR(kk)].map((kk => `- ${kk.key} (${kk.kind}, default ${kk.value}): ${kk.about}`)).join("\n"),
+        tk = null !== (Bk = kk.changeable) && void 0 !== Bk && Bk.length ? `\nFunctions to replace by name for a game of their own:\n${kk.changeable.map((kk=>`- ${kk.name}: ${kk.about}`)).join("\n")}` : "",
+        ak = Fk ? `\nIts code, as it goes in with the default settings:\n${fR(kk)}` : "";
+      return `${kk.name} (${kk.title}): ${kk.summary}.\nHow it plays: ${kk.howItPlays}\nSettings:\n${Rk}${tk}${kk.setup?`\nThe creator sets up: ${kk.setup}`:""}${ak}`
     }
 
-    function DE(uu) {
-      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4;
-      const yu = function(uu) {
-          return new Set(uu.toLowerCase().split(/[^a-z0-9]+/).filter((uu => uu.length > 1)))
-        }(uu),
-        Eu = ` ${uu.toLowerCase().replace(/[^a-z0-9]+/g," ")} `;
-      return VE.map((uu => {
-        const Ru = uu.keywords.map((uu => uu.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())).filter((uu => uu.includes(" ") ? Eu.includes(` ${uu} `) : yu.has(uu))),
-          Ku = Math.min(...Ru.map((uu => Eu.indexOf(` ${uu} `))));
+    function NR(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4;
+      const Bk = function(kk) {
+          return new Set(kk.toLowerCase().split(/[^a-z0-9]+/).filter((kk => kk.length > 1)))
+        }(kk),
+        Rk = ` ${kk.toLowerCase().replace(/[^a-z0-9]+/g," ")} `;
+      return VR.map((kk => {
+        const Fk = kk.keywords.map((kk => kk.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())).filter((kk => kk.includes(" ") ? Rk.includes(` ${kk} `) : Bk.has(kk))),
+          tk = Math.min(...Fk.map((kk => Rk.indexOf(` ${kk} `))));
         return {
-          prefab: uu,
-          score: Ru.length,
-          first: Ku
+          prefab: kk,
+          score: Fk.length,
+          first: tk
         }
-      })).filter((uu => uu.score > 0)).sort(((uu, Ru) => Ru.score - uu.score || uu.first - Ru.first)).slice(0, Ru).map((uu => uu.prefab))
+      })).filter((kk => kk.score > 0)).sort(((kk, Fk) => Fk.score - kk.score || kk.first - Fk.first)).slice(0, Fk).map((kk => kk.prefab))
     }
-    const ME = /\byour\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\bhow old\b|\bwhere (?:do )?you live\b|\be-?mail\b|\bphone number\b|\bpassword\b/i;
+    const HR = /\byour\s+(?:real\s+|full\s+|first\s+|last\s+)?(?:name|age|school|address|email|phone|birthday)\b|\bhow old\b|\bwhere (?:do )?you live\b|\be-?mail\b|\bphone number\b|\bpassword\b/i;
 
-    function IE(uu) {
-      var Ru, yu, Eu, Ku, Qu, mu;
-      const Ju = function(uu) {
-          var Ru, yu;
-          const Eu = null === (Ru = uu.questions) || void 0 === Ru ? void 0 : Ru.trim();
-          if (null !== (yu = uu.question) && void 0 !== yu && yu.trim() || !Eu) return uu;
-          const Ku = {
-            ...uu,
-            question: Eu
+    function uR(kk) {
+      var Fk, Bk, Rk, tk, ak, Xk;
+      const bk = function(kk) {
+          var Fk, Bk;
+          const Rk = null === (Fk = kk.questions) || void 0 === Fk ? void 0 : Fk.trim();
+          if (null !== (Bk = kk.question) && void 0 !== Bk && Bk.trim() || !Rk) return kk;
+          const tk = {
+            ...kk,
+            question: Rk
           };
-          if (!/^[[{]/.test(Eu)) return Ku;
+          if (!/^[[{]/.test(Rk)) return tk;
           try {
-            const Ru = JSON.parse(Eu),
-              yu = Array.isArray(Ru) ? Ru[0] : Ru;
-            if ("string" === typeof yu) {
-              const Eu = Array.isArray(Ru) ? Ru.slice(1).filter((uu => "string" === typeof uu)) : [];
+            const Fk = JSON.parse(Rk),
+              Bk = Array.isArray(Fk) ? Fk[0] : Fk;
+            if ("string" === typeof Bk) {
+              const Rk = Array.isArray(Fk) ? Fk.slice(1).filter((kk => "string" === typeof kk)) : [];
               return {
-                ...uu,
-                question: yu,
-                ...Eu.length > 0 && void 0 === uu.choices ? {
-                  choices: Eu.join("\n")
+                ...kk,
+                question: Bk,
+                ...Rk.length > 0 && void 0 === kk.choices ? {
+                  choices: Rk.join("\n")
                 } : {}
               }
             }
-            if ("object" !== typeof yu || null === yu) return Ku;
-            const Qu = yu,
-              mu = uu => "string" === typeof uu ? uu : "boolean" === typeof uu ? String(uu) : Array.isArray(uu) ? uu.filter((uu => "string" === typeof uu)).join("\n") : void 0,
-              Ju = {
-                question: mu(Qu.question),
-                choices: mu(Qu.choices),
-                allow_other: mu(Qu.allow_other)
+            if ("object" !== typeof Bk || null === Bk) return tk;
+            const ak = Bk,
+              Xk = kk => "string" === typeof kk ? kk : "boolean" === typeof kk ? String(kk) : Array.isArray(kk) ? kk.filter((kk => "string" === typeof kk)).join("\n") : void 0,
+              bk = {
+                question: Xk(ak.question),
+                choices: Xk(ak.choices),
+                allow_other: Xk(ak.allow_other)
               };
             return {
-              ...uu,
-              ...Object.fromEntries(Object.entries(Ju).filter((uu => {
-                let [, Ru] = uu;
-                return void 0 !== Ru
+              ...kk,
+              ...Object.fromEntries(Object.entries(bk).filter((kk => {
+                let [, Fk] = kk;
+                return void 0 !== Fk
               })))
             }
           } catch {
-            return Eu.startsWith("[") ? Ku : uu
+            return Rk.startsWith("[") ? tk : kk
           }
-        }(uu),
-        Nu = null !== (Ru = null === (yu = Ju.question) || void 0 === yu ? void 0 : yu.replace(/\s+/g, " ").trim()) && void 0 !== Ru ? Ru : "",
-        Xu = (null !== (Eu = Ju.choices) && void 0 !== Eu ? Eu : "").includes("\n") ? (null !== (Ku = Ju.choices) && void 0 !== Ku ? Ku : "").split("\n") : (null !== (Qu = Ju.choices) && void 0 !== Qu ? Qu : "").split("|"),
-        Vu = [...new Set(Xu.map((uu => uu.replace(/^\s*(?:[-*\u2022]|\d+[.)])\s*/, "").trim())).filter(Boolean))].slice(0, 4),
-        ru = "false" !== (null === (mu = Ju.allow_other) || void 0 === mu ? void 0 : mu.trim().toLowerCase());
-      return "" === Nu || ME.test(Nu) || Vu.length < 2 && !ru ? null : {
-        question: Nu,
-        choices: Vu,
-        allowOther: ru
+        }(kk),
+        wk = null !== (Fk = null === (Bk = bk.question) || void 0 === Bk ? void 0 : Bk.replace(/\s+/g, " ").trim()) && void 0 !== Fk ? Fk : "",
+        dk = (null !== (Rk = bk.choices) && void 0 !== Rk ? Rk : "").includes("\n") ? (null !== (tk = bk.choices) && void 0 !== tk ? tk : "").split("\n") : (null !== (ak = bk.choices) && void 0 !== ak ? ak : "").split("|"),
+        sk = [...new Set(dk.map((kk => kk.replace(/^\s*(?:[-*\u2022]|\d+[.)])\s*/, "").trim())).filter(Boolean))].slice(0, 4),
+        Vk = "false" !== (null === (Xk = bk.allow_other) || void 0 === Xk ? void 0 : Xk.trim().toLowerCase());
+      return "" === wk || HR.test(wk) || sk.length < 2 && !Vk ? null : {
+        question: wk,
+        choices: sk,
+        allowOther: Vk
       }
     }
-    const GE = /^\s*(?:\.\.\.|\u2026)\s*$/,
-      UE = /^[ \t]*(?:\/\/|\/\*)[ \t]*(?:(?:\.\.\.|\u2026)[ \t]*(?:\*\/)?[ \t]*$|(?:\.\.\.|\u2026)?[ \t]*(?:existing code|rest of (?:the |your )?(?:code|file)))/im;
+    const MR = /^\s*(?:\.\.\.|\u2026)\s*$/,
+      gR = /^[ \t]*(?:\/\/|\/\*)[ \t]*(?:(?:\.\.\.|\u2026)[ \t]*(?:\*\/)?[ \t]*$|(?:\.\.\.|\u2026)?[ \t]*(?:existing code|rest of (?:the |your )?(?:code|file)))/im;
 
-    function nE(uu, Ru) {
-      if (GE.test(uu)) return !0;
-      const yu = new Set(Ru.split("\n").map((uu => uu.trim())));
-      return uu.split("\n").some((uu => UE.test(uu) && !yu.has(uu.trim())))
+    function UR(kk, Fk) {
+      if (MR.test(kk)) return !0;
+      const Bk = new Set(Fk.split("\n").map((kk => kk.trim())));
+      return kk.split("\n").some((kk => gR.test(kk) && !Bk.has(kk.trim())))
     }
-    const sE = /```(?:js|javascript|ts|typescript)?\n([\s\S]*?)```/g,
-      tE = String.raw`on[A-Z]\w*|tick|playerCommand`,
-      lE = new RegExp(String.raw`^(?:(?:async\s+)?function\s+(?:${tE})\s*\(|(?:${tE})\s*=\s*(?:async\s+)?(?:function\b|\())`, "m"),
-      gE = new RegExp(`^(?:${tE})$`),
-      cE = new RegExp(String.raw`^(${tE})(\s*\([^()\n]*\)\s*\{)`, "gm"),
-      LE = new RegExp(String.raw`\bapi\.|\bfunction\s+(?:${tE})\b|\buse_?prefab\s*\(`, "i");
+    const cR = /```(?:js|javascript|ts|typescript)?\n([\s\S]*?)```/g,
+      GR = String.raw`on[A-Z]\w*|tick|playerCommand`,
+      TR = new RegExp(String.raw`^(?:(?:async\s+)?function\s+(?:${GR})\s*\(|(?:${GR})\s*=\s*(?:async\s+)?(?:function\b|\())`, "m"),
+      rR = new RegExp(`^(?:${GR})$`),
+      DR = new RegExp(String.raw`^(${GR})(\s*\([^()\n]*\)\s*\{)`, "gm"),
+      zR = new RegExp(String.raw`\bapi\.|\bfunction\s+(?:${GR})\b|\buse_?prefab\s*\(`, "i");
 
-    function zE(uu) {
-      return uu.replace(/^\s*```[\w-]*[^\n]*\n/, "").replace(/\n?```\s*$/, "")
-    }
-
-    function FE(uu) {
-      return zE(uu).replace(/\s*$/, "\n")
+    function PR(kk) {
+      return kk.replace(/^\s*```[\w-]*[^\n]*\n/, "").replace(/\n?```\s*$/, "")
     }
 
-    function wE(uu, Ru) {
-      switch (uu) {
+    function hR(kk) {
+      return PR(kk).replace(/\s*$/, "\n")
+    }
+
+    function qR(kk, Fk) {
+      switch (kk) {
         case "view_file":
-          return void 0 === Ru.path ? Ru : {
-            path: ZE(Ru.path)
+          return void 0 === Fk.path ? Fk : {
+            path: CR(Fk.path)
           };
         case "fetch_url":
-          return void 0 === Ru.url ? Ru : {
-            url: bu(Ru.url)
+          return void 0 === Fk.url ? Fk : {
+            url: Yk(Fk.url)
           };
         default:
-          return Ru
+          return Fk
       }
     }
 
-    function ZE(uu) {
-      return uu.trim().replace(/^\.?\//, "")
+    function CR(kk) {
+      return kk.trim().replace(/^\.?\//, "")
     }
 
-    function hE(uu) {
-      return uu.replace(cE, "function $1$2")
+    function ZR(kk) {
+      return kk.replace(DR, "function $1$2")
     }
 
-    function PE(uu) {
-      return uu.replace(/\bif\s*\(\s*(\/\*(?:(?!\*\/)[^])*\*\/)\s*\)/g, "if (false $1)")
+    function pR(kk) {
+      return kk.replace(/\bif\s*\(\s*(\/\*(?:(?!\*\/)[^])*\*\/)\s*\)/g, "if (false $1)")
     }
 
-    function iE(uu, Ru, yu, Eu) {
-      let Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
-        Qu = arguments.length > 5 ? arguments[5] : void 0,
-        mu = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "offer",
-        Ju = arguments.length > 7 ? arguments[7] : void 0,
-        Nu = arguments.length > 8 ? arguments[8] : void 0;
-      const Xu = {
-          ...yu
+    function KR(kk, Fk, Bk, Rk) {
+      let tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+        ak = arguments.length > 5 ? arguments[5] : void 0,
+        Xk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "offer",
+        bk = arguments.length > 7 ? arguments[7] : void 0,
+        wk = arguments.length > 8 ? arguments[8] : void 0;
+      const dk = {
+          ...Bk
         },
-        Vu = new Set,
-        ru = [];
-      let Bu;
-      const xu = (uu, Ru, yu, Eu) => {
-        ru.push({
-          tool: uu,
-          path: Ru,
-          reason: yu,
+        sk = new Set,
+        Vk = [];
+      let Jk;
+      const Ak = (kk, Fk, Bk, Rk) => {
+        Vk.push({
+          tool: kk,
+          path: Fk,
+          reason: Bk,
           closest: null,
           functions: [],
-          ...Eu,
-          ...Bu ? {
-            call: Bu
+          ...Rk,
+          ...Jk ? {
+            call: Jk
           } : {}
         })
       };
-      let pu = uu;
-      const Tu = Object.keys(yu).some(Su.e),
-        Wu = uu => null !== uu && Tu && (0, Su.e)(uu),
-        ju = uu => Wu(uu) ? `${Su.i}${(0,Su.g)(uu)}` : null !== Qu && void 0 !== Qu ? Qu : ZE(uu),
-        Hu = uu => void 0 === Qu || Wu(uu),
-        du = uu => void 0 !== Ju && !Ju.has(uu),
-        bu = new Set,
-        Cu = uu => JSON.stringify({
-          name: uu.name,
-          args: uu.args
+      let yk = kk;
+      const fk = Object.keys(Bk).some(ek.d),
+        mk = kk => null !== kk && fk && (0, ek.d)(kk),
+        Wk = kk => mk(kk) ? `${ek.i}${(0,ek.g)(kk)}` : null !== ak && void 0 !== ak ? ak : CR(kk),
+        vk = kk => void 0 === ak || mk(kk),
+        ik = kk => void 0 !== bk && !bk.has(kk),
+        Yk = new Set,
+        Lk = kk => JSON.stringify({
+          name: kk.name,
+          args: kk.args
         }),
-        ku = uu => {
-          const Ru = Wu(uu) ? {
+        Ok = kk => {
+          const Fk = mk(kk) ? {
               name: "view_world_code",
               args: {}
             } : {
               name: "view_file",
               args: {
-                path: uu
+                path: kk
               }
             },
-            yu = Bu ? {
-              ...Ru,
-              call: Bu
-            } : Ru;
-          bu.add(Cu(yu)), Au(yu)
+            Bk = Jk ? {
+              ...Fk,
+              call: Jk
+            } : Fk;
+          Yk.add(Lk(Bk)), Sk(Bk)
         },
-        eu = [],
-        Au = uu => {
-          const Ru = Cu(uu);
-          eu.length < 4 && !eu.some((uu => Cu(uu) === Ru)) && eu.push(uu)
+        Ek = [],
+        Sk = kk => {
+          const Fk = Lk(kk);
+          Ek.length < 4 && !Ek.some((kk => Lk(kk) === Fk)) && Ek.push(kk)
         },
-        Du = [],
-        Mu = [],
-        Gu = [],
-        tu = new Map,
-        gu = new Map,
-        cu = (uu, Ru, yu) => {
-          var Eu;
-          const Ku = function(uu) {
-              const Ru = uu.replace(/\s+/g, " ").trim();
-              if (Ru.length <= 80) return Ru;
-              const yu = Ru.slice(0, 80);
-              return `${yu.slice(0,Math.max(yu.lastIndexOf(" "),40)).replace(/[\s,.;:]+$/,"")}\u2026`
-            }(null !== Ru && void 0 !== Ru ? Ru : ""),
-            Qu = null !== (Eu = tu.get(uu)) && void 0 !== Eu ? Eu : [];
-          var mu;
-          ("" === Ku || Qu.includes(Ku) || tu.set(uu, [...Qu, Ku]), "" !== Ku) && gu.set(uu, [...null !== (mu = gu.get(uu)) && void 0 !== mu ? mu : [], {
-            why: Ku,
-            code: yu
+        Nk = [],
+        Hk = [],
+        Mk = [],
+        Gk = new Map,
+        rk = new Map,
+        Dk = (kk, Fk, Bk) => {
+          var Rk;
+          const tk = function(kk) {
+              const Fk = kk.replace(/\s+/g, " ").trim();
+              if (Fk.length <= 80) return Fk;
+              const Bk = Fk.slice(0, 80);
+              return `${Bk.slice(0,Math.max(Bk.lastIndexOf(" "),40)).replace(/[\s,.;:]+$/,"")}\u2026`
+            }(null !== Fk && void 0 !== Fk ? Fk : ""),
+            ak = null !== (Rk = Gk.get(kk)) && void 0 !== Rk ? Rk : [];
+          var Xk;
+          ("" === tk || ak.includes(tk) || Gk.set(kk, [...ak, tk]), "" !== tk) && rk.set(kk, [...null !== (Xk = rk.get(kk)) && void 0 !== Xk ? Xk : [], {
+            why: tk,
+            code: Bk
           }])
         },
-        Lu = new Set,
-        zu = [],
-        Fu = new Map,
-        wu = [];
-      let hu = null;
-      const Pu = [];
-      let Yu = [];
-      const qu = (uu, Ru) => void 0 !== Qu && !Wu(uu) && (null === uu || ZE(uu) !== Qu) && lE.test(Ru),
-        au = (uu, Ru, yu, Eu) => {
-          var Ku, Qu;
-          const mu = function(uu, Ru, yu, Eu) {
-            const Ku = xE(Ru);
-            return Ku ? CE(uu, Ku, yu, Eu) : {
-              error: `There is no prefab called ${Ru}. The prefabs are: ${VE.map((uu=>uu.name)).join(", ")}.`
+        zk = new Set,
+        Pk = [],
+        hk = new Map,
+        qk = [];
+      let Zk = null;
+      const pk = [];
+      let xk = [];
+      const lk = (kk, Fk) => void 0 !== ak && !mk(kk) && (null === kk || CR(kk) !== ak) && TR.test(Fk),
+        Qk = (kk, Fk, Bk, Rk) => {
+          var tk, ak;
+          const Xk = function(kk, Fk, Bk, Rk) {
+            const tk = eR(Fk);
+            return tk ? LR(kk, tk, Bk, Rk) : {
+              error: `There is no prefab called ${Fk}. The prefabs are: ${VR.map((kk=>kk.name)).join(", ")}.`
             }
-          }(null !== (Ku = Xu[uu]) && void 0 !== Ku ? Ku : "", Ru, yu, Nu);
-          return "error" in mu ? (xu("use_prefab", uu, "prefab", {
-            detail: mu.error
-          }), !1) : (Xu[uu] = mu.text, Vu.add(uu), Fu.set(uu, {
-            prefab: mu.prefab,
-            settings: yu
-          }), cu(uu, null !== Eu && void 0 !== Eu ? Eu : mu.prefab.title, mu.text), zu.push({
-            name: mu.prefab.name,
-            title: mu.prefab.title,
-            path: uu,
-            problems: mu.problems,
-            fixed: mu.fixed,
-            setup: null !== (Qu = mu.prefab.setup) && void 0 !== Qu ? Qu : null
+          }(null !== (tk = dk[kk]) && void 0 !== tk ? tk : "", Fk, Bk, wk);
+          return "error" in Xk ? (Ak("use_prefab", kk, "prefab", {
+            detail: Xk.error
+          }), !1) : (dk[kk] = Xk.text, sk.add(kk), hk.set(kk, {
+            prefab: Xk.prefab,
+            settings: Bk
+          }), Dk(kk, null !== Rk && void 0 !== Rk ? Rk : Xk.prefab.title, Xk.text), Pk.push({
+            name: Xk.prefab.name,
+            title: Xk.prefab.title,
+            path: kk,
+            problems: Xk.problems,
+            fixed: Xk.fixed,
+            setup: null !== (ak = Xk.prefab.setup) && void 0 !== ak ? ak : null
           }), !0)
         },
-        fu = (uu, Ru, yu) => {
-          const Eu = ay(Ru);
-          if (0 === Eu.calls.length) return !1;
-          Xu[uu] = Eu.code, Vu.add(uu);
-          for (const Ku of Eu.calls) au(uu, Ku.name, Ku.settings, yu);
-          return cu(uu, yu, Eu.code), !0
+        kF = (kk, Fk, Bk) => {
+          const Rk = QB(Fk);
+          if (0 === Rk.calls.length) return !1;
+          dk[kk] = Rk.code, sk.add(kk);
+          for (const tk of Rk.calls) Qk(kk, tk.name, tk.settings, Bk);
+          return Dk(kk, Bk, Rk.code), !0
         },
-        RR = uu => {
-          const Ru = SR(hE(FE(uu)), Ku);
-          Du.push(Ru.code), Gu.push(...Ru.renames)
+        BF = kk => {
+          const Fk = yF(ZR(hR(kk)), tk);
+          Nk.push(Fk.code), Mk.push(...Fk.renames)
         },
-        yR = Vy(uu, Ru),
-        ER = new Map;
-      for (const Su of yR) {
-        var KR, QR, mR, JR;
-        const uu = null !== (KR = ER.get(Su.name)) && void 0 !== KR ? KR : 0;
-        ER.set(Su.name, uu + 1), Bu = {
-          name: Su.name,
-          nth: uu
+        RF = VB(kk, Fk),
+        tF = new Map;
+      for (const ek of RF) {
+        var aF, XF, bF, wF;
+        const kk = null !== (aF = tF.get(ek.name)) && void 0 !== aF ? aF : 0;
+        tF.set(ek.name, kk + 1), Jk = {
+          name: ek.name,
+          nth: kk
         };
-        const Ru = ("replace_function" === Su.name || "insert_code" === Su.name) && void 0 === Su.args.code && void 0 !== Su.args.content ? {
-            ...Su,
+        const Fk = ("replace_function" === ek.name || "insert_code" === ek.name) && void 0 === ek.args.code && void 0 !== ek.args.content ? {
+            ...ek,
             args: {
-              ...Su.args,
-              code: Su.args.content,
-              path: null !== (QR = null !== (mR = null !== (JR = Su.args.path) && void 0 !== JR ? JR : Qu) && void 0 !== mR ? mR : Eu) && void 0 !== QR ? QR : void 0
+              ...ek.args,
+              code: ek.args.content,
+              path: null !== (XF = null !== (bF = null !== (wF = ek.args.path) && void 0 !== wF ? wF : ak) && void 0 !== bF ? bF : Rk) && void 0 !== XF ? XF : void 0
             }
-          } : Su,
+          } : ek,
           {
-            path: Ku,
-            content: mu,
-            search: Ju,
-            replace: ru,
-            code: Tu
-          } = Ru.args,
-          Wu = bR(Ru.name),
-          bu = `${Ru.name}\n${JSON.stringify({...Ru.args,why:void 0})}`,
-          Cu = Lu.has(bu);
-        if (Wu.annotations.idempotentHint && Cu) pu = pu.replace(Ru.source, "");
+            path: tk,
+            content: Xk,
+            search: bk,
+            replace: Vk,
+            code: fk
+          } = Fk.args,
+          mk = oF(Fk.name),
+          Yk = `${Fk.name}\n${JSON.stringify({...Fk.args,why:void 0})}`,
+          Lk = zk.has(Yk);
+        if (mk.annotations.idempotentHint && Lk) yk = yk.replace(Fk.source, "");
         else {
-          if (Lu.add(bu), dR(Ru.name)) {
-            const uu = Object.fromEntries(Object.entries(Ru.args).flatMap((uu => {
-              let [Ru, yu] = uu;
-              return void 0 === yu || "" === yu.trim() ? [] : [
-                [Ru, yu.trim()]
+          if (zk.add(Yk), YF(Fk.name)) {
+            const kk = Object.fromEntries(Object.entries(Fk.args).flatMap((kk => {
+              let [Fk, Bk] = kk;
+              return void 0 === Bk || "" === Bk.trim() ? [] : [
+                [Fk, Bk.trim()]
               ]
             })));
-            Au({
-              name: Ru.name,
-              args: wE(Ru.name, uu),
-              call: Bu
+            Sk({
+              name: Fk.name,
+              args: qR(Fk.name, kk),
+              call: Jk
             })
-          } else if ("add_world_code" === Ru.name) {
-            if (void 0 === Qu) continue;
-            void 0 !== Tu ? RR(Tu) : xu(Ru.name, null, "missingArgs")
-          } else if ("use_prefab" === Ru.name) {
-            const uu = void 0 !== Ku && "" !== Ku.trim() ? ju(Ku) : void 0 === Qu ? null !== Eu && void 0 !== Eu ? Eu : "index.js" : null;
-            if (void 0 === Ru.args.name || "" === Ru.args.name.trim()) xu(Ru.name, uu, "missingArgs");
-            else if (null !== uu && Hu(uu)) {
-              var NR;
-              au(uu, Ru.args.name, null !== (NR = Ru.args.settings) && void 0 !== NR ? NR : "", Ru.args.why)
-            } else xu(Ru.name, uu, "prefab", {
+          } else if ("add_world_code" === Fk.name) {
+            if (void 0 === ak) continue;
+            void 0 !== fk ? BF(fk) : Ak(Fk.name, null, "missingArgs")
+          } else if ("use_prefab" === Fk.name) {
+            const kk = void 0 !== tk && "" !== tk.trim() ? Wk(tk) : void 0 === ak ? null !== Rk && void 0 !== Rk ? Rk : "index.js" : null;
+            if (void 0 === Fk.args.name || "" === Fk.args.name.trim()) Ak(Fk.name, kk, "missingArgs");
+            else if (null !== kk && vk(kk)) {
+              var dF;
+              Qk(kk, Fk.args.name, null !== (dF = Fk.args.settings) && void 0 !== dF ? dF : "", Fk.args.why)
+            } else Ak(Fk.name, kk, "prefab", {
               detail: "A prefab goes in World Code, not in a code block."
             })
-          } else if ("ask_creator" === Ru.name) hu ??= IE(Ru.args);
-          else if ("plan" === Ru.name) {
-            var XR;
-            if (0 === Yu.length) Yu = VR(null !== (XR = Ru.args.steps) && void 0 !== XR ? XR : "")
-          } else if ("remember" === Ru.name) {
-            var rR;
-            const uu = uR(null !== (rR = Ru.args.note) && void 0 !== rR ? rR : "");
-            null !== uu && 0 === Pu.length && Pu.push(uu)
-          } else if ("export_game" === Ru.name || "switch_to_world_code" === Ru.name) {
-            if ("switch_to_world_code" === Ru.name && void 0 === Qu) continue;
-            const uu = "export_game" === Ru.name ? "exportGame" : "switchToWorldCode";
-            var BR;
-            if (!Mu.some((Ru => Ru.kind === uu))) Mu.push("export_game" === Ru.name ? {
+          } else if ("ask_creator" === Fk.name) Zk ??= uR(Fk.args);
+          else if ("plan" === Fk.name) {
+            var sF;
+            if (0 === xk.length) xk = VF(null !== (sF = Fk.args.steps) && void 0 !== sF ? sF : "")
+          } else if ("remember" === Fk.name) {
+            var JF;
+            const kk = FF(null !== (JF = Fk.args.note) && void 0 !== JF ? JF : "");
+            null !== kk && 0 === pk.length && pk.push(kk)
+          } else if ("export_game" === Fk.name || "switch_to_world_code" === Fk.name) {
+            if ("switch_to_world_code" === Fk.name && void 0 === ak) continue;
+            const kk = "export_game" === Fk.name ? "exportGame" : "switchToWorldCode";
+            var AF;
+            if (!Hk.some((Fk => Fk.kind === kk))) Hk.push("export_game" === Fk.name ? {
               kind: "exportGame"
             } : {
               kind: "switchToWorldCode",
-              request: (null === (BR = Ru.args.request) || void 0 === BR ? void 0 : BR.trim()) || null
+              request: (null === (AF = Fk.args.request) || void 0 === AF ? void 0 : AF.trim()) || null
             })
-          } else if ("write_file" === Ru.name) {
-            var xR, pR;
-            if (Jy(Ru))
-              if (void 0 === mu || "" !== mu.trim() && !nE(zE(mu), void 0 === Ku ? "" : null !== (xR = Xu[ju(Ku)]) && void 0 !== xR ? xR : "")) {
-                if (void 0 !== Ku && void 0 !== mu && qu(Ku, mu)) RR(mu);
-                else if (void 0 !== Ku && du(ju(Ku)) && "" !== (null !== (pR = yu[ju(Ku)]) && void 0 !== pR ? pR : "").trim()) xu(Ru.name, ju(Ku), "unread", void 0 === mu ? void 0 : {
-                  code: FE(mu)
-                }), ku(ju(Ku));
-                else if (void 0 !== Ku && void 0 !== mu) {
-                  const uu = ju(Ku),
-                    yu = fy(FE(mu));
-                  if (!Hu(uu) || !fu(uu, yu, Ru.args.why)) {
-                    const Eu = Fu.get(uu),
-                      Ku = Eu && !HE(yu, Eu.prefab) ? CE(yu, Eu.prefab, Eu.settings, Nu) : null;
-                    Xu[uu] = Ku && !("error" in Ku) ? Ku.text : yu, Vu.add(uu), cu(uu, Ru.args.why, mu)
+          } else if ("write_file" === Fk.name) {
+            var eF, fF;
+            if (wB(Fk))
+              if (void 0 === Xk || "" !== Xk.trim() && !UR(PR(Xk), void 0 === tk ? "" : null !== (eF = dk[Wk(tk)]) && void 0 !== eF ? eF : "")) {
+                if (void 0 !== tk && void 0 !== Xk && lk(tk, Xk)) BF(Xk);
+                else if (void 0 !== tk && ik(Wk(tk)) && "" !== (null !== (fF = Bk[Wk(tk)]) && void 0 !== fF ? fF : "").trim()) Ak(Fk.name, Wk(tk), "unread", void 0 === Xk ? void 0 : {
+                  code: hR(Xk)
+                }), Ok(Wk(tk));
+                else if (void 0 !== tk && void 0 !== Xk) {
+                  const kk = Wk(tk),
+                    Bk = kR(hR(Xk));
+                  if (!vk(kk) || !kF(kk, Bk, Fk.args.why)) {
+                    const Rk = hk.get(kk),
+                      tk = Rk && !iR(Bk, Rk.prefab) ? LR(Bk, Rk.prefab, Rk.settings, wk) : null;
+                    dk[kk] = tk && !("error" in tk) ? tk.text : Bk, sk.add(kk), Dk(kk, Fk.args.why, Xk)
                   }
                 }
-              } else xu(Ru.name, void 0 === Ku ? null : ju(Ku), "placeholder");
-            else xu(Ru.name, void 0 === Ku ? null : ju(Ku), "missingArgs")
-          } else if ("replace_function" === Ru.name || "insert_code" === Ru.name) {
-            var TR, WR, jR;
-            const uu = void 0 === Ku ? null : ju(Ku),
-              yu = "replace_function" === Ru.name ? Ru.args.name : Ru.args.after,
-              Eu = void 0 === yu ? void 0 : Zu(yu),
-              Qu = null === uu ? "" : null !== (TR = Xu[uu]) && void 0 !== TR ? TR : "",
-              mu = void 0 === Tu ? "" : zE(Tu),
-              Ju = null === uu ? void 0 : Fu.get(uu),
-              Nu = "replace_function" === Ru.name && void 0 !== Ju && void 0 !== Eu && gE.test(Eu) && zy(Ju.prefab.code).has(Eu),
-              ru = null === uu || void 0 === Tu || void 0 === yu ? null : Nu ? null !== (WR = null === (jR = Ly(Qu, mu, {
+              } else Ak(Fk.name, void 0 === tk ? null : Wk(tk), "placeholder");
+            else Ak(Fk.name, void 0 === tk ? null : Wk(tk), "missingArgs")
+          } else if ("replace_function" === Fk.name || "insert_code" === Fk.name) {
+            var mF, WF, vF;
+            const kk = void 0 === tk ? null : Wk(tk),
+              Bk = "replace_function" === Fk.name ? Fk.args.name : Fk.args.after,
+              Rk = void 0 === Bk ? void 0 : Ck(Bk),
+              ak = null === kk ? "" : null !== (mF = dk[kk]) && void 0 !== mF ? mF : "",
+              Xk = void 0 === fk ? "" : PR(fk),
+              bk = null === kk ? void 0 : hk.get(kk),
+              wk = "replace_function" === Fk.name && void 0 !== bk && void 0 !== Rk && rR.test(Rk) && PB(bk.prefab.code).has(Rk),
+              Vk = null === kk || void 0 === fk || void 0 === Bk ? null : wk ? null !== (WF = null === (vF = zB(ak, Xk, {
                 owner: "extra",
                 runsLast: !0
-              })) || void 0 === jR ? void 0 : jR.text) && void 0 !== WR ? WR : null : "replace_function" === Ru.name ? iu(Qu, yu, mu) : Ou(Qu, yu, mu);
-            null === uu || null === ru ? xu(Ru.name, uu, Jy(Ru) ? "brokenCode" : "missingArgs") : nE(mu, Qu) ? xu(Ru.name, uu, "placeholder") : "replace_function" === Ru.name && du(uu) && vu(Qu).includes(null !== Eu && void 0 !== Eu ? Eu : "") ? (xu(Ru.name, uu, "unread", {
-              code: FE(mu)
-            }), ku(uu)) : (Xu[uu] = ru, Vu.add(uu), cu(uu, Ru.args.why, mu))
+              })) || void 0 === vF ? void 0 : vF.text) && void 0 !== WF ? WF : null : "replace_function" === Fk.name ? Kk(ak, Bk, Xk) : nk(ak, Bk, Xk);
+            null === kk || null === Vk ? Ak(Fk.name, kk, wB(Fk) ? "brokenCode" : "missingArgs") : UR(Xk, ak) ? Ak(Fk.name, kk, "placeholder") : "replace_function" === Fk.name && ik(kk) && Ik(ak).includes(null !== Rk && void 0 !== Rk ? Rk : "") ? (Ak(Fk.name, kk, "unread", {
+              code: hR(Xk)
+            }), Ok(kk)) : (dk[kk] = Vk, sk.add(kk), Dk(kk, Fk.args.why, Xk))
           } else {
-            var HR, CR;
-            const uu = !0 === (null === (HR = Wu._meta) || void 0 === HR ? void 0 : HR.appliesAtOnce) ? null !== Qu && void 0 !== Qu ? Qu : Eu : void 0 === Ku ? null : ju(Ku),
-              yu = null === uu ? "" : null !== (CR = Xu[uu]) && void 0 !== CR ? CR : "",
-              mu = Jy(Ru) && void 0 !== Ju,
-              Nu = mu ? Iu(yu, Ju) : null,
-              Bu = null === Nu && void 0 !== Ju && Ju.includes("\\n") ? Iu(yu, sR(Ju)) : null,
-              Su = null !== Nu && void 0 !== Nu ? Nu : Bu,
-              pu = null !== Bu ? sR(null !== ru && void 0 !== ru ? ru : "") : null !== ru && void 0 !== ru ? ru : "",
-              Tu = null === Su || void 0 === Ju ? pu : nu(yu.slice(Su.from, Su.to), Uu(yu, Su, null !== Bu ? sR(Ju) : Ju, pu), su(yu.slice(Su.to)));
-            if (null === uu || null === Su) xu(Ru.name, uu, mu ? "noMatch" : "missingArgs", {
-              closest: mu ? lu(yu, Ju) : null,
-              functions: Hu(uu) ? vu(yu) : []
+            var iF, LF;
+            const kk = !0 === (null === (iF = mk._meta) || void 0 === iF ? void 0 : iF.appliesAtOnce) ? null !== ak && void 0 !== ak ? ak : Rk : void 0 === tk ? null : Wk(tk),
+              Bk = null === kk ? "" : null !== (LF = dk[kk]) && void 0 !== LF ? LF : "",
+              Xk = wB(Fk) && void 0 !== bk,
+              wk = Xk ? uk(Bk, bk) : null,
+              Jk = null === wk && void 0 !== bk && bk.includes("\\n") ? uk(Bk, cF(bk)) : null,
+              ek = null !== wk && void 0 !== wk ? wk : Jk,
+              yk = null !== Jk ? cF(null !== Vk && void 0 !== Vk ? Vk : "") : null !== Vk && void 0 !== Vk ? Vk : "",
+              fk = null === ek || void 0 === bk ? yk : Uk(Bk.slice(ek.from, ek.to), gk(Bk, ek, null !== Jk ? cF(bk) : bk, yk), ck(Bk.slice(ek.to)));
+            if (null === kk || null === ek) Ak(Fk.name, kk, Xk ? "noMatch" : "missingArgs", {
+              closest: Xk ? Tk(Bk, bk) : null,
+              functions: vk(kk) ? Ik(Bk) : []
             });
-            else if (nE(Tu, yu.slice(Su.from, Su.to))) xu(Ru.name, uu, "placeholder");
+            else if (UR(fk, Bk.slice(ek.from, ek.to))) Ak(Fk.name, kk, "placeholder");
             else {
-              const Eu = Hu(uu) ? ou(yu, Su.from, Su.to, null !== Ju && void 0 !== Ju ? Ju : "", pu) : null;
-              Xu[uu] = null !== Eu && void 0 !== Eu ? Eu : yu.slice(0, Su.from) + Tu + yu.slice(Su.to), Vu.add(uu), cu(uu, Ru.args.why, Tu)
+              const Rk = vk(kk) ? jk(Bk, ek.from, ek.to, null !== bk && void 0 !== bk ? bk : "", yk) : null;
+              dk[kk] = null !== Rk && void 0 !== Rk ? Rk : Bk.slice(0, ek.from) + fk + Bk.slice(ek.to), sk.add(kk), Dk(kk, Fk.args.why, fk)
             }
           }
-          pu = pu.replace(Ru.source, "")
+          yk = yk.replace(Fk.source, "")
         }
       }
-      if (Bu = void 0, pu = MR(ry(pu), yR.length > 0), 0 === yR.length) {
-        var kR, eR;
-        const Ru = [...uu.matchAll(sE)],
-          yu = 1 === Ru.length ? Ru[0][1] : null,
-          Ku = null !== (kR = null !== Qu && void 0 !== Qu ? Qu : Eu) && void 0 !== kR ? kR : "index.js";
-        if (null !== yu && qu(null, yu)) RR(yu), pu = pu.replace(Ru[0][0], "");
-        else if (null !== yu && LE.test(yu) && !nE(yu, null !== (eR = Xu[Ku]) && void 0 !== eR ? eR : "")) {
-          const uu = fy(FE(yu));
-          Hu(Ku) && fu(Ku, uu, void 0) || (Xu[Ku] = uu, Vu.add(Ku)), pu = pu.replace(Ru[0][0], "")
+      if (Jk = void 0, yk = HF(JB(yk), RF.length > 0), 0 === RF.length) {
+        var OF, EF;
+        const Fk = [...kk.matchAll(cR)],
+          Bk = 1 === Fk.length ? Fk[0][1] : null,
+          tk = null !== (OF = null !== ak && void 0 !== ak ? ak : Rk) && void 0 !== OF ? OF : "index.js";
+        if (null !== Bk && lk(null, Bk)) BF(Bk), yk = yk.replace(Fk[0][0], "");
+        else if (null !== Bk && zR.test(Bk) && !UR(Bk, null !== (EF = dk[tk]) && void 0 !== EF ? EF : "")) {
+          const kk = kR(hR(Bk));
+          vk(tk) && kF(tk, kk, void 0) || (dk[tk] = kk, sk.add(tk)), yk = yk.replace(Fk[0][0], "")
         }
       }
-      for (const Su of Vu) {
-        var AR;
-        if (Hu(Su)) {
-          var DR;
-          const uu = Object.values(Xu).some((uu => /\brequire\s*\(/.test(uu)));
-          Xu[Su] = uE(fy(uu ? Xu[Su] : Xu[Su].replace(/^module\.exports\s*=\s*(?:\{[\s\w$,:]*\}|[\w$]+)\s*;?[ \t]*(?:\n|$)/gm, "")), null !== (DR = yu[Su]) && void 0 !== DR ? DR : "");
-          const Ru = new Set(Object.keys(Xu).filter((uu => uu !== Su && Hu(uu))).flatMap((uu => [...zy(Xu[uu])]))),
-            Eu = jE(Xu[Su], Ru);
-          Xu[Su] = Eu.text, wu.push(...Eu.added)
+      for (const ek of sk) {
+        var SF;
+        if (vk(ek)) {
+          var NF;
+          const kk = Object.values(dk).some((kk => /\brequire\s*\(/.test(kk)));
+          dk[ek] = FR(kR(kk ? dk[ek] : dk[ek].replace(/^module\.exports\s*=\s*(?:\{[\s\w$,:]*\}|[\w$]+)\s*;?[ \t]*(?:\n|$)/gm, "")), null !== (NF = Bk[ek]) && void 0 !== NF ? NF : "");
+          const Fk = new Set(Object.keys(dk).filter((kk => kk !== ek && vk(kk))).flatMap((kk => [...PB(dk[kk])]))),
+            Rk = vR(dk[ek], Fk);
+          dk[ek] = Rk.text, qk.push(...Rk.added)
         }
-        const uu = SR(PE(hE(Xu[Su])), Hu(Su) ? Ku : [], null !== (AR = yu[Su]) && void 0 !== AR ? AR : "");
-        Xu[Su] = uu.code, Gu.push(...uu.renames)
+        const kk = yF(pR(ZR(dk[ek])), vk(ek) ? tk : [], null !== (SF = Bk[ek]) && void 0 !== SF ? SF : "");
+        dk[ek] = kk.code, Mk.push(...kk.renames)
       }
-      for (const Su of zu) {
-        const uu = Su.problems.length > 0 ? ` Kept as it was: ${Su.problems.join("; ")}.` : "",
-          Ru = Su.fixed.length > 0 ? ` Names changed to real ones: ${Su.fixed.join(", ")}.` : "";
-        pu += `\n\nThis uses the ready-made ${Su.title}.${Ru}${uu}${Su.setup?` ${Su.setup}`:""}`
+      for (const ek of Pk) {
+        const kk = ek.problems.length > 0 ? ` Kept as it was: ${ek.problems.join("; ")}.` : "",
+          Fk = ek.fixed.length > 0 ? ` Names changed to real ones: ${ek.fixed.join(", ")}.` : "";
+        yk += `\n\nThis uses the ready-made ${ek.title}.${Fk}${kk}${ek.setup?` ${ek.setup}`:""}`
       }
       for (const {
-          from: Su,
-          to: Iu
+          from: ek,
+          to: uk
         }
-        of Gu) pu += `\n\nI renamed \`${Su}\` to \`${Iu}\`, the name World Code calls.`;
-      const IR = [];
-      for (const Su of Vu) {
-        var GR;
-        const uu = null !== (GR = yu[Su]) && void 0 !== GR ? GR : "";
-        if (Xu[Su] !== uu) {
-          const Ru = tu.get(Su);
-          IR.push(Ru ? {
-            path: Su,
-            before: uu,
-            after: Xu[Su],
-            why: Ru,
-            parts: gu.get(Su)
+        of Mk) yk += `\n\nI renamed \`${ek}\` to \`${uk}\`, the name World Code calls.`;
+      const uF = [];
+      for (const ek of sk) {
+        var MF;
+        const kk = null !== (MF = Bk[ek]) && void 0 !== MF ? MF : "";
+        if (dk[ek] !== kk) {
+          const Fk = Gk.get(ek);
+          uF.push(Fk ? {
+            path: ek,
+            before: kk,
+            after: dk[ek],
+            why: Fk,
+            parts: rk.get(ek)
           } : {
-            path: Su,
-            before: uu,
-            after: Xu[Su]
+            path: ek,
+            before: kk,
+            after: dk[ek]
           })
         }
       }
-      const UR = "direct" === mu && IR.length > 0,
-        nR = IR.length > 0 || Du.length > 0;
+      const gF = "direct" === Xk && uF.length > 0,
+        UF = uF.length > 0 || Nk.length > 0;
       return {
-        text: pu.replace(/\n{3,}/g, "\n\n").trim(),
-        changes: IR,
-        failedEdits: ru,
-        renamedCallbacks: Gu,
-        worldCode: Du,
-        inPlace: UR,
-        actions: Mu,
-        question: nR ? null : hu,
-        notes: Pu,
-        plan: nR ? [] : Yu,
-        lookups: nR ? eu.filter((uu => bu.has(Cu(uu)))) : null !== hu || Yu.length > 0 ? [] : eu,
-        prefabs: zu,
-        helpersAdded: [...new Set(wu)]
+        text: yk.replace(/\n{3,}/g, "\n\n").trim(),
+        changes: uF,
+        failedEdits: Vk,
+        renamedCallbacks: Mk,
+        worldCode: Nk,
+        inPlace: gF,
+        actions: Hk,
+        question: UF ? null : Zk,
+        notes: pk,
+        plan: UF ? [] : xk,
+        lookups: UF ? Ek.filter((kk => Yk.has(Lk(kk)))) : null !== Zk || xk.length > 0 ? [] : Ek,
+        prefabs: Pk,
+        helpersAdded: [...new Set(qk)]
       }
     }
 
-    function YE(uu, Ru) {
-      const yu = "" === uu ? [] : uu.replace(/\n$/, "").split("\n"),
-        Eu = "" === Ru ? [] : Ru.replace(/\n$/, "").split("\n");
-      let Ku = 0;
-      for (; Ku < yu.length && Ku < Eu.length && yu[Ku] === Eu[Ku];) Ku++;
-      let Qu = yu.length,
-        mu = Eu.length;
-      for (; Qu > Ku && mu > Ku && yu[Qu - 1] === Eu[mu - 1];) Qu--, mu--;
-      const Ju = yu.slice(Ku, Qu),
-        Nu = Eu.slice(Ku, mu),
-        Xu = Array.from({
-          length: Ju.length + 1
-        }, (() => new Array(Nu.length + 1).fill(0)));
-      for (let xu = Ju.length - 1; xu >= 0; xu--)
-        for (let uu = Nu.length - 1; uu >= 0; uu--) Xu[xu][uu] = Ju[xu] === Nu[uu] ? Xu[xu + 1][uu + 1] + 1 : Math.max(Xu[xu + 1][uu], Xu[xu][uu + 1]);
-      const Vu = yu.slice(0, Ku).map((uu => ({
+    function xR(kk, Fk) {
+      const Bk = "" === kk ? [] : kk.replace(/\n$/, "").split("\n"),
+        Rk = "" === Fk ? [] : Fk.replace(/\n$/, "").split("\n");
+      let tk = 0;
+      for (; tk < Bk.length && tk < Rk.length && Bk[tk] === Rk[tk];) tk++;
+      let ak = Bk.length,
+        Xk = Rk.length;
+      for (; ak > tk && Xk > tk && Bk[ak - 1] === Rk[Xk - 1];) ak--, Xk--;
+      const bk = Bk.slice(tk, ak),
+        wk = Rk.slice(tk, Xk),
+        dk = Array.from({
+          length: bk.length + 1
+        }, (() => new Array(wk.length + 1).fill(0)));
+      for (let Ak = bk.length - 1; Ak >= 0; Ak--)
+        for (let kk = wk.length - 1; kk >= 0; kk--) dk[Ak][kk] = bk[Ak] === wk[kk] ? dk[Ak + 1][kk + 1] + 1 : Math.max(dk[Ak + 1][kk], dk[Ak][kk + 1]);
+      const sk = Bk.slice(0, tk).map((kk => ({
         kind: "same",
-        text: uu
+        text: kk
       })));
-      let ru = 0,
-        Bu = 0;
-      for (; ru < Ju.length || Bu < Nu.length;) ru < Ju.length && Bu < Nu.length && Ju[ru] === Nu[Bu] ? (Vu.push({
+      let Vk = 0,
+        Jk = 0;
+      for (; Vk < bk.length || Jk < wk.length;) Vk < bk.length && Jk < wk.length && bk[Vk] === wk[Jk] ? (sk.push({
         kind: "same",
-        text: Ju[ru]
-      }), ru++, Bu++) : Bu < Nu.length && (ru === Ju.length || Xu[ru][Bu + 1] > Xu[ru + 1][Bu]) ? (Vu.push({
+        text: bk[Vk]
+      }), Vk++, Jk++) : Jk < wk.length && (Vk === bk.length || dk[Vk][Jk + 1] > dk[Vk + 1][Jk]) ? (sk.push({
         kind: "added",
-        text: Nu[Bu]
-      }), Bu++) : (Vu.push({
+        text: wk[Jk]
+      }), Jk++) : (sk.push({
         kind: "removed",
-        text: Ju[ru]
-      }), ru++);
-      for (const xu of yu.slice(Qu)) Vu.push({
+        text: bk[Vk]
+      }), Vk++);
+      for (const Ak of Bk.slice(ak)) sk.push({
         kind: "same",
-        text: xu
+        text: Ak
       });
-      return Vu
+      return sk
     }
-    const oE = /\b(?:publish|export)\b|\bsave\b.{0,20}\b(?:game|world|map|it|this|work)\b/i;
+    const jR = /\b(?:publish|export)\b|\bsave\b.{0,20}\b(?:game|world|map|it|this|work)\b/i;
 
-    function qE(uu) {
-      return oE.test(uu)
+    function lR(kk) {
+      return jR.test(kk)
     }
-    const OE = {
+    const nR = {
       worldCode: new Set(["write_file", "edit_file", "replace_function", "use_prefab", "edit_code_in_place", "export_game", "ask_creator", "plan", "remember", "view_file", "view_chunk", "view_game_state", "get_docs", "find_names", "view_prefab", "view_errors"]),
       codeBlock: new Set(["write_file", "edit_file", "replace_function", "add_world_code", "edit_code_in_place", "switch_to_world_code", "ask_creator", "view_world_code", "view_chunk", "view_game_state", "get_docs", "find_names", "view_errors"])
     };
 
-    function vE(uu, Ru, yu) {
-      return OR[uu].formatCall(Ru, yu)
+    function IR(kk, Fk, Bk) {
+      return nF[kk].formatCall(Fk, Bk)
     }
 
-    function aE(uu, Ru, yu, Eu) {
-      return OR[yu].declareTools(uu, Ru, Eu)
+    function QR(kk, Fk, Bk, Rk) {
+      return nF[Bk].declareTools(kk, Fk, Rk)
     }
 
-    function fE(uu) {
-      const Ru = null === uu.path ? uu.tool : `${uu.tool} ${uu.path}`;
-      var yu;
-      if ("prefab" === uu.reason) return `${Ru}: ${null!==(yu=uu.detail)&&void 0!==yu?yu:"the prefab couldn't go in."} Nothing changed.`;
-      if ("missingArgs" === uu.reason) return `${Ru}: the call was missing an argument it needs, so nothing changed.`;
-      if ("placeholder" === uu.reason) return "write_file" === uu.tool ? `${Ru}: the content was only "..." or had a line standing in for the rest, so nothing changed. Send the whole file, every line of it.` : `${Ru}: the code had a line standing in for code left out ("// ... existing code ..."), so nothing changed. Write out every line it replaces.`;
-      if ("unread" === uu.reason) return `${Ru}: you hadn't seen this code, so writing it whole could have lost what it has, and nothing changed. Make the change from its code, which ${null!==uu.path&&(0,Su.e)(uu.path)?"view_world_code":"view_file"} shows.`;
-      if ("brokenCode" === uu.reason) return `${Ru}: the code around that function doesn't parse (a bracket is likely missing), so where it ends isn't clear and nothing changed. Send the whole fixed file with write_file instead.`;
-      return `${Ru}: search matched nothing in the file, so nothing changed. ${uu.closest?`The closest lines (${uu.closest.line}-${uu.closest.lastLine}) are:\n${uu.closest.text}`:"No lines in the file are like it."}\nCopy the lines exactly${uu.functions.length>0?`, or use replace_function with one of these names: ${uu.functions.join(", ")}`:""}.`
+    function kt(kk) {
+      const Fk = null === kk.path ? kk.tool : `${kk.tool} ${kk.path}`;
+      var Bk;
+      if ("prefab" === kk.reason) return `${Fk}: ${null!==(Bk=kk.detail)&&void 0!==Bk?Bk:"the prefab couldn't go in."} Nothing changed.`;
+      if ("missingArgs" === kk.reason) return `${Fk}: the call was missing an argument it needs, so nothing changed.`;
+      if ("placeholder" === kk.reason) return "write_file" === kk.tool ? `${Fk}: the content was only "..." or had a line standing in for the rest, so nothing changed. Send the whole file, every line of it.` : `${Fk}: the code had a line standing in for code left out ("// ... existing code ..."), so nothing changed. Write out every line it replaces.`;
+      if ("unread" === kk.reason) return `${Fk}: you hadn't seen this code, so writing it whole could have lost what it has, and nothing changed. Make the change from its code, which ${null!==kk.path&&(0,ek.d)(kk.path)?"view_world_code":"view_file"} shows.`;
+      if ("brokenCode" === kk.reason) return `${Fk}: the code around that function doesn't parse (a bracket is likely missing), so where it ends isn't clear and nothing changed. Send the whole fixed file with write_file instead.`;
+      return `${Fk}: search matched nothing in the file, so nothing changed. ${kk.closest?`The closest lines (${kk.closest.line}-${kk.closest.lastLine}) are:\n${kk.closest.text}`:"No lines in the file are like it."}\nCopy the lines exactly${kk.functions.length>0?`, or use replace_function with one of these names: ${kk.functions.join(", ")}`:""}.`
     }
-    const uK = {
+    const Ft = {
         offer: "matched",
         list: "matched",
         categories: !1,
         helperIndex: !0
       },
-      RK = /\b(?:game|minigame|mini-game|gamemode|game mode|map|server)\b/i;
+      Bt = /\b(?:game|minigame|mini-game|gamemode|game mode|map|server)\b/i;
 
-    function yK(uu) {
-      return Object.values(uu).some((uu => "" !== uu.trim()))
+    function Rt(kk) {
+      return Object.values(kk).some((kk => "" !== kk.trim()))
     }
-    const EK = {
+    const tt = {
         format: "simple",
         nativeTools: !1
       },
-      KK = uu => `You are the coding helper inside Bloxd's World Code editor. Bloxd is a voxel game; World Code is JavaScript that runs on the game server for one world. The person asking is a young creator (13 or older) who is new to coding.\n\nHow World Code works:\n- The engine calls special top-level functions ("callbacks") when things happen: function onPlayerJoin(playerId) {...}, function tick(ms) {...}, function playerCommand(playerId, command) {...} and the others ${uu?"in the docs":"in the callback list"}. Define each callback once; never call callbacks yourself.\n- playerCommand gets the chat line without its "/" (e.g. "speed 2"); return true for a command you handled, so the player isn't told it is unknown, and return nothing (never false) for any other, or the game's own commands (/spawn) stop working.\n- tick(ms) runs 20 times a second, with the milliseconds since the last tick. Count time with it (add up ms) instead of setTimeout, and keep it light.\n- Talk to the game only through the api object: api.sendMessage(playerId, text), api.setClientOption(playerId, option, value) and the other methods ${uu?"in the docs":"in the API list"}. Use only methods, callbacks and client options that are ${uu?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables at the top level keep their values while the world runs. Players are identified by playerId (a string, not their name).\n- Values you keep per player (lists, timers, scores, teams) need a start in onPlayerJoin and removing in onPlayerLeave(playerId), so tick never uses a player who left.\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n- Settings: numbers and messages the creator may want to change (times, amounts, prices, speeds, messages shown to players, on/off switches) go in one const CONFIG = { ... } at the top of the file, each value a plain number, a quoted string or true/false with a short comment saying what it does, e.g. waveSeconds: 30, // seconds between zombie waves. The code uses CONFIG.waveSeconds, and a message that mentions a setting builds it from CONFIG ("You start with " + CONFIG.startCoins + " coins"), so changing the setting changes the message too. If the file has a CONFIG, add new settings to it and change a setting there; never make a second one. Don't move code they didn't ask about into CONFIG.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(playerId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: playerId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(playerId).\n- Flying: api.setClientOption(playerId, "creative", true) (false to stop).\n- Leaderboard: in onPlayerJoin, api.setClientOption(playerId, "lobbyLeaderboardInfo", { name: { displayName: "Name", sortPriority: 0 }, coins: { displayName: "Coins", sortPriority: 1 } }); then whenever a value changes, api.setTargetedPlayerSettingForEveryone(playerId, "lobbyLeaderboardValues", { coins: 5 }, true).\n- Text on the right of the screen: api.setClientOption(playerId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(playerId, api.getClientOption(playerId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(playerId); api.setPosition(playerId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(playerId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- A player who can't play any more (e.g. out of lives): api.setPlayerGamemode(playerId, "spectator"); "survival" brings them back.\n- Mob waves: api.attemptSpawnMob(mobType, x, y, z) returns the mob's id. Keep the ids, and remove each in onMobDespawned(mobId) to know when they are all dead.\n- Removing or changing a block later: count ms in tick, then api.setBlock(x, y, z, "Air").\n- Coins as a currency: make it once in onPlayerJoin, only if they don't have it yet (a saved one comes back by itself, and setCurrency again would reset it): if (api.getCurrencyAmount(playerId, "coins") === null) api.setCurrency(playerId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(playerId, "coins", 5). When the request says anything is saved or kept after leaving (e.g. "it saves if you leave"), the coins are saved too: add persistent: true. Otherwise leave it out.\n- Values the request says must stay after leaving (e.g. when they last claimed a reward): api.setPlayerDbValue(playerId, "lastClaim", Date.now()) and api.getPlayerDbValue(playerId, "lastClaim") (null if never set); a saved value is a string or a number. Only those: lives, scores, checkpoints and timers for one game stay in top-level variables, which reset when they leave.\n- A player dying, from anything: onAttemptKillPlayer(killedPlayerId, attackingLifeformId). onPlayerKilledOtherPlayer only covers kills by players.\n- Stopping one player hurting another (e.g. teammates): onPlayerDamagingOtherPlayer(attackingPlayer, damagedPlayer) returns "preventDamage". onAttemptKillPlayer only stops the death, not the damage.\n- A counter of how long each player has been alive: in tick, count only while api.isAlive(playerId), and start again from 0 in onRespawnRequest (the death screen isn't time alive). Other timers don't need this.\n- A reward for reaching a count (5 kills, 10 coins): give it when the count first reaches it (=== 5, or keep a per-player flag such as rewarded[playerId] = true), never on every count after (>= 5 alone gives it again each time).\n- Telling whether a player moved: compare with where they were after any teleport of yours (update the saved position when you teleport them), or your own teleport counts as them moving.\n- A box around a player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position. A bottom corner at by would fill the block they stand in; replacing the ground under them is fine. If they should be trapped, also stop them breaking it: api.setCantChangeBlockRect(playerId, [bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2]).`,
-      QK = uu => `You are the coding helper inside Bloxd's code block editor. Bloxd is a voxel game; a code block is a block in the world holding JavaScript that runs on the game server when a player clicks it. The person asking is a young creator (13 or older) who is new to coding.\n\nHow code blocks work:\n- Each click runs the whole code once, from top to bottom. A code block has no callbacks: something that has to happen later or by itself (when players join, every tick, on a chat command, when a player breaks a block) needs World Code, the world's main code, where callbacks such as onPlayerJoin(playerId), tick() and playerCommand(playerId, command) are defined as functions. Write that part as World Code (see How to answer), and put what one click does in the code block.\n- myId is the id of the player who clicked the block (a string, not their name), and thisPos is the block's position as [x, y, z].\n- Talk to the game only through the api object: api.sendMessage(myId, text), api.setClientOption(myId, option, value) and the other methods ${uu?"in the docs":"in the API list"}. Use only methods and client options that are ${uu?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables made with const or let start again on every click. A value kept between clicks is assigned without const or let, after checking it is there, e.g. clicks = (typeof clicks === "number" ? clicks : 0) + 1. It lasts until World Code is next saved or the world restarts.\n- When the last line has a value, the player who clicked sees it in chat as "Result: ...".\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(myId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: myId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(myId).\n- Teleporting the player onto this block: api.setPosition(myId, thisPos[0] + 0.5, thisPos[1] + 1, thisPos[2] + 0.5).\n- A block next to this one: api.setBlock(thisPos[0], thisPos[1] + 1, thisPos[2], "Block of Gold").\n- Flying: api.setClientOption(myId, "creative", true) (false to stop).\n- Text on the right of the screen: api.setClientOption(myId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(myId, api.getClientOption(myId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(myId); api.setPosition(myId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(myId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- Coins as a currency: make it only if they don't have it yet (setCurrency again would reset it): if (api.getCurrencyAmount(myId, "coins") === null) api.setCurrency(myId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(myId, "coins", 5).\n- A box around the player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position.`,
-      mK = {
+      Xt = kk => `You are the coding helper inside Bloxd's World Code editor. Bloxd is a voxel game; World Code is JavaScript that runs on the game server for one world. The person asking is a young creator (13 or older) who is new to coding.\n\nHow World Code works:\n- The engine calls special top-level functions ("callbacks") when things happen: function onPlayerJoin(playerId) {...}, function tick(ms) {...}, function playerCommand(playerId, command) {...} and the others ${kk?"in the docs":"in the callback list"}. Define each callback once; never call callbacks yourself.\n- playerCommand gets the chat line without its "/" (e.g. "speed 2"); return true for a command you handled, so the player isn't told it is unknown, and return nothing (never false) for any other, or the game's own commands (/spawn) stop working.\n- tick(ms) runs 20 times a second, with the milliseconds since the last tick. Count time with it (add up ms) instead of setTimeout, and keep it light.\n- Talk to the game only through the api object: api.sendMessage(playerId, text), api.setClientOption(playerId, option, value) and the other methods ${kk?"in the docs":"in the API list"}. Use only methods, callbacks and client options that are ${kk?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables at the top level keep their values while the world runs. Players are identified by playerId (a string, not their name).\n- Values you keep per player (lists, timers, scores, teams) need a start in onPlayerJoin and removing in onPlayerLeave(playerId), so tick never uses a player who left.\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n- Settings: numbers and messages the creator may want to change (times, amounts, prices, speeds, messages shown to players, on/off switches) go in one const CONFIG = { ... } at the top of the file, each value a plain number, a quoted string or true/false with a short comment saying what it does, e.g. waveSeconds: 30, // seconds between zombie waves. The code uses CONFIG.waveSeconds, and a message that mentions a setting builds it from CONFIG ("You start with " + CONFIG.startCoins + " coins"), so changing the setting changes the message too. If the file has a CONFIG, add new settings to it and change a setting there; never make a second one. Don't move code they didn't ask about into CONFIG.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(playerId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: playerId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(playerId).\n- Flying: api.setClientOption(playerId, "creative", true) (false to stop).\n- Leaderboard: in onPlayerJoin, api.setClientOption(playerId, "lobbyLeaderboardInfo", { name: { displayName: "Name", sortPriority: 0 }, coins: { displayName: "Coins", sortPriority: 1 } }); then whenever a value changes, api.setTargetedPlayerSettingForEveryone(playerId, "lobbyLeaderboardValues", { coins: 5 }, true).\n- Text on the right of the screen: api.setClientOption(playerId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(playerId, api.getClientOption(playerId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(playerId); api.setPosition(playerId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(playerId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- A player who can't play any more (e.g. out of lives): api.setPlayerGamemode(playerId, "spectator"); "survival" brings them back.\n- Mob waves: api.attemptSpawnMob(mobType, x, y, z) returns the mob's id. Keep the ids, and remove each in onMobDespawned(mobId) to know when they are all dead.\n- Removing or changing a block later: count ms in tick, then api.setBlock(x, y, z, "Air").\n- Coins as a currency: make it once in onPlayerJoin, only if they don't have it yet (a saved one comes back by itself, and setCurrency again would reset it): if (api.getCurrencyAmount(playerId, "coins") === null) api.setCurrency(playerId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(playerId, "coins", 5). When the request says anything is saved or kept after leaving (e.g. "it saves if you leave"), the coins are saved too: add persistent: true. Otherwise leave it out.\n- Values the request says must stay after leaving (e.g. when they last claimed a reward): api.setPlayerDbValue(playerId, "lastClaim", Date.now()) and api.getPlayerDbValue(playerId, "lastClaim") (null if never set); a saved value is a string or a number. Only those: lives, scores, checkpoints and timers for one game stay in top-level variables, which reset when they leave.\n- A player dying, from anything: onAttemptKillPlayer(killedPlayerId, attackingLifeformId). onPlayerKilledOtherPlayer only covers kills by players.\n- Stopping one player hurting another (e.g. teammates): onPlayerDamagingOtherPlayer(attackingPlayer, damagedPlayer) returns "preventDamage". onAttemptKillPlayer only stops the death, not the damage.\n- A counter of how long each player has been alive: in tick, count only while api.isAlive(playerId), and start again from 0 in onRespawnRequest (the death screen isn't time alive). Other timers don't need this.\n- A reward for reaching a count (5 kills, 10 coins): give it when the count first reaches it (=== 5, or keep a per-player flag such as rewarded[playerId] = true), never on every count after (>= 5 alone gives it again each time).\n- Telling whether a player moved: compare with where they were after any teleport of yours (update the saved position when you teleport them), or your own teleport counts as them moving.\n- A box around a player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position. A bottom corner at by would fill the block they stand in; replacing the ground under them is fine. If they should be trapped, also stop them breaking it: api.setCantChangeBlockRect(playerId, [bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2]).`,
+      bt = kk => `You are the coding helper inside Bloxd's code block editor. Bloxd is a voxel game; a code block is a block in the world holding JavaScript that runs on the game server when a player clicks it. The person asking is a young creator (13 or older) who is new to coding.\n\nHow code blocks work:\n- Each click runs the whole code once, from top to bottom. A code block has no callbacks: something that has to happen later or by itself (when players join, every tick, on a chat command, when a player breaks a block) needs World Code, the world's main code, where callbacks such as onPlayerJoin(playerId), tick() and playerCommand(playerId, command) are defined as functions. Write that part as World Code (see How to answer), and put what one click does in the code block.\n- myId is the id of the player who clicked the block (a string, not their name), and thisPos is the block's position as [x, y, z].\n- Talk to the game only through the api object: api.sendMessage(myId, text), api.setClientOption(myId, option, value) and the other methods ${kk?"in the docs":"in the API list"}. Use only methods and client options that are ${kk?"in the docs":"in the lists below"}, with their exact names.\n- Item, block and mob names are case-sensitive, e.g. "Diamond Sword", "Red Wool", "Block of Gold", "Draugr Zombie". Use only names from the lists below. If what they asked for doesn't exist (e.g. there is no "Golden Apple"), use the closest real one and say so in your answer.\n- Pass arguments exactly as the docs describe. Leave optional arguments out instead of passing null or undefined, and don't pass later optional arguments just to reach one. The style argument of api.sendMessage and api.broadcastMessage is an object, e.g. { color: "green" }; positions are [x, y, z] arrays.\n- Text shown to players (messages, middle text, RightInfoText) must be a string: turn numbers into text with String(n) or a template string.\n- Variables made with const or let start again on every click. A value kept between clicks is assigned without const or let, after checking it is there, e.g. clicks = (typeof clicks === "number" ? clicks : 0) + 1. It lasts until World Code is next saved or the world restarts.\n- When the last line has a value, the player who clicked sees it in chat as "Result: ...".\n- Use plain JavaScript (var/let/const, functions, objects, arrays). No import/export, no await, no DOM, no Node modules.\n\nRecipes for things the docs don't spell out:\n- Sounds: api.playSound(myId, "levelup", 1, 1) or api.broadcastSound("coinsDrop", 1, 1); posSettings is left out or { playerIdOrPos: myId }, never {}. Real names only: levelup, exp_collect, coinsDrop, cashRegister, beep, chestOpen, firecracker1, magicAccent1, horrorFright, ZombieGrunt1.\n- Particles: api.playParticleEffect({ presetId: "aura", pos1: [x, y, z], pos2: [x + 1, y + 2, z + 1] }); a preset takes only presetId, pos1, pos2. Real presetIds: aura, stomp, mobDeath, mobSpawnOrb, speedOuter, glowingOuter, redFirecrackerLarge (or blue, green...); no "portal" or "sparkle".\n- Shapes: customButtons [{ id: "dash", icon: "house", keycode: "KeyR" }] (no text); giveItem attributes { customDisplayName }; configureShopCategory { customTitle, sortPriority } (no icon); editItemCraftingRecipes [{ requires: [{ items: ["Leather"], amt: 3 }], produces: 1 }].\n- A player's name: api.getEntityName(myId).\n- Teleporting the player onto this block: api.setPosition(myId, thisPos[0] + 0.5, thisPos[1] + 1, thisPos[2] + 0.5).\n- A block next to this one: api.setBlock(thisPos[0], thisPos[1] + 1, thisPos[2], "Block of Gold").\n- Flying: api.setClientOption(myId, "creative", true) (false to stop).\n- Text on the right of the screen: api.setClientOption(myId, "RightInfoText", "Coins: 5").\n- Full health: api.setHealth(myId, api.getClientOption(myId, "maxHealth")).\n- Teleporting somewhere nearby: change x and z only, and keep y (or add a little so they drop onto the ground), e.g. const [x, y, z] = api.getPosition(myId); api.setPosition(myId, x + dx, y + 5, z + dz).\n- Positions: api.getPosition(myId) is the player's feet. The block under them is api.getBlock(Math.floor(x), Math.floor(y) - 1, Math.floor(z)).\n- Coins as a currency: make it only if they don't have it yet (setCurrency again would reset it): if (api.getCurrencyAmount(myId, "coins") === null) api.setCurrency(myId, "coins", { amount: 0, icon: "coins" }). Then api.giveCurrencyAmount(myId, "coins", 5).\n- A box around the player: the floor is at Math.floor(y) - 1 (y is their feet) and the roof just above their head at Math.floor(y) + 2 (players are 2 blocks tall), e.g. api.setBlockWalls([bx - 2, by - 1, bz - 2], [bx + 2, by + 2, bz + 2], "Glass", true, true) with bx, by, bz the floored position.`,
+      wt = {
         search: "lines to find",
         replace: "lines to put instead",
         codeBlock: "...all of the code block's code...",
@@ -5898,324 +5898,324 @@ export const modules = {
         worldCode: "...only the World Code to add...",
         function: "function onPlayerJoin(playerId) {\n\t...the whole new function...\n}"
       },
-      JK = Object.values(mK);
-    const NK = `You looked at World Code: its files are below, their paths starting ${Su.i}. Put the part of the request that needs World Code (a callback, or something that happens without a click) straight into World Code with the same calls, its path exactly as shown, e.g. ${Su.i}index.js (in World Code the player is playerId; there is no myId or thisPos). A callback World Code already has is changed in place, with what it already does kept, never defined twice. Keep the code block's own change on the path ${Su.d}, and leave it out if the request is all World Code. They are taken to World Code to see the change.`;
+      dt = Object.values(wt);
+    const st = `You looked at World Code: its files are below, their paths starting ${ek.i}. Put the part of the request that needs World Code (a callback, or something that happens without a click) straight into World Code with the same calls, its path exactly as shown, e.g. ${ek.i}index.js (in World Code the player is playerId; there is no myId or thisPos). A callback World Code already has is changed in place, with what it already does kept, never defined twice. Keep the code block's own change on the path ${ek.c}, and leave it out if the request is all World Code. They are taken to World Code to see the change.`;
 
-    function XK(uu, Ru, yu, Eu) {
-      var Ku, Qu, mu, Ju;
+    function Vt(kk, Fk, Bk, Rk) {
+      var tk, ak, Xk, bk;
       let {
-        hasWorldCodeFiles: Nu,
-        hasLookedUp: Xu,
-        movesToWorldCode: Vu,
-        listedPrefabs: ru,
-        guidesToPrefabs: Bu
-      } = Eu;
-      const xu = Ru ? Su.d : "index.js",
-        pu = Ru ? `${Su.i}index.js` : xu,
-        Wu = (uu, Ru) => vE(yu, uu, Ru),
-        ju = Ru => uu.some((uu => uu.name === Ru)),
-        Hu = uu.filter((uu => ["content", "replace", "code"].some((Ru => Ru in uu.inputSchema.properties)))),
-        du = ju("edit_code_in_place") ? `\nFor a fix of one to a few lines in the code open in the editor, use edit_code_in_place instead: it changes their code straight away, as if they pressed Apply, and they can undo it. search is copied exactly from the open code:\n${Wu("edit_code_in_place",{why:"what this fix does",search:mK.search,replace:mK.replace})}` : "",
-        bu = ju("export_game") ? `\nWhen the creator asks to export, save or publish their world or game, your answer must contain the export_game call; without it nothing is exported. For example, if the creator writes "export the world", your whole answer is:\nSaving your world as your custom game now!\n${Wu("export_game",{})}` : "",
-        Cu = ju("replace_function") ? `\nWhen you change only one or two functions or callbacks of a file that already has code, you can send just those instead of the whole file. replace_function finds a function by its name and puts your whole new function in its place; with a name the file doesn't have yet, it adds your new callback or function at the end, changing nothing already there:\n${Wu("replace_function",{path:pu,name:"onPlayerJoin",why:"what the new function does",code:mK.function})}` : "",
-        ku = ju("edit_file") ? `\nFor a file longer than 6000 characters, don't send it whole: change only the parts that need it, with replace_function where you can, and an edit_file call for each other part, where search is copied exactly from the current file:\n${Wu("edit_file",{path:xu,why:"what this part's change does",search:mK.search,replace:mK.replace})}` : "",
-        eu = Ru ? `2. Then give the whole new code with a write_file call, exactly like this:\n${Wu("write_file",{path:xu,why:"what the change does",content:mK.codeBlock})}` : `2. Then give every file you change, in full, with a write_file call, exactly like this:\n${Wu("write_file",{path:xu,why:"what the change does",content:mK.file})}`,
-        Au = Ru ? "" : ` If there is no code yet, write it in ${xu}.`,
-        Du = Wu("switch_to_world_code", {}),
-        Mu = Ru ? Nu ? `\n${NK}` : `\nIf part of the request needs World Code (a callback, or something that happens without a click), give that part as World Code with an add_world_code call, with its callbacks written as functions (in World Code the player is playerId; there is no myId or thisPos), exactly like this:\n${Wu("add_world_code",{code:mK.worldCode})}\n${Vu?"In your sentences, say which part goes in World Code: they are taken there, and it is put in for them.":"In your sentences, say which part goes in World Code and that they should press the World Code button to switch there and add it."} Leave out the code block's write_file call if the request is all World Code.${ju("view_world_code")?`\nTo see what World Code already has before you write that part (a callback it may already define), look at it first:\n${Wu("view_world_code",{})}`:""}\nWhen the request is all World Code, also call switch_to_world_code after add_world_code: it takes them to World Code, where its AI Helper is asked to add your World Code part. Give a request instead when they asked to go to World Code for something else:\n${Du}` : "",
-        Iu = Bu && ju("use_prefab") && ru.length >= 2,
-        Gu = Iu ? ru.slice(0, 3).map((uu => uu.title)).join("\n") : "A parkour race\nZombie survival\nCapture the flag",
-        Uu = Iu ? " When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles: the one they pick is put in with use_prefab next." : "",
-        nu = ju("ask_creator") ? `\nOnly if the request is too unclear to build anything sensible, ask instead of writing code: call ask_creator with one short question and 2 to 4 short choices, one per line. That is: no idea what kind of thing they want ("make a game"), or asking to make their game better, more fun or cooler without saying how ("make it more fun"): then the choices are 2 to 4 different ideas built on what their code already has, each a short concrete thing to add, not a general word like "more fun" (e.g. for a snowball fight: "Power-ups that drop in", "A score at the top", "Last player standing wins"). Otherwise build it, choosing sensibly, and say in your sentences what you chose so they can ask for something different. Never ask for personal details (name, age, school, where they live).${Uu}\n${Wu("ask_creator",{question:"What kind of game should it be?",choices:Gu,allow_other:"true"})}` : "",
-        su = ju("plan") ? `\n${"deepseek"===yu?"When a request is big, instead of writing it all at once, you may":"This request is big. Instead of writing it all at once, you may"} call plan with 2 to 5 short steps, one per line, each small enough to build and try on its own, the first one playable. Then send no code: the creator builds the steps one at a time. Build it at once instead if it is really only a few lines:\n${Wu("plan",{steps:"Give each player 0 coins when they join, shown on screen\nEarn a coin for each block broken\nA /shop command that sells a sword for 10 coins"})}` : "",
-        tu = null !== (Ku = ru[0]) && void 0 !== Ku ? Ku : xE("parkour"),
-        lu = (null !== (Qu = null === tu || void 0 === tu ? void 0 : tu.settings) && void 0 !== Qu ? Qu : []).slice(0, 2).map((uu => `${uu.key}: ${uu.value}`)).join("\n");
-      return `How to answer:\n1. Start with one or two short, friendly sentences in simple words saying what the change does, in the present tense as they read it before it goes in ("This adds...", "This changes..."; or what was wrong), and anything you had to do differently from what they asked. Don't promise it works: they will press Submit and try it. No long lectures.\n${eu}${Cu}${ku}${du}${Mu}${ju("use_prefab")?`\nFor a game, or a feature (a kit, a shop, rewards...), that a prefab listed below fits, put the prefab in with use_prefab instead of writing that code yourself: it is tested code that works, and it fits around the code they already have: their code stays as it is, and where both have the same callback (onPlayerJoin...) both run, so never rewrite their code to make room for a prefab. Give only the settings the request changes, one per line as key: value, each value written as in JavaScript (text in quotes, positions as [x, y, z]); the rest keep their defaults. For a game like the one asked for but not the same, still use the closest prefab, then in the same answer, after the use_prefab call, change what it doesn't do: replace one of its functions by name, or add a callback, with replace_function. If no prefab fits, write the code yourself:\n${Wu("use_prefab",{name:null!==(mu=null===tu||void 0===tu?void 0:tu.name)&&void 0!==mu?mu:"parkour",settings:lu,why:null!==(Ju=null===tu||void 0===tu?void 0:tu.summary)&&void 0!==Ju?Ju:"a parkour course"})}`:""}${bu}${nu}${su}${ju("remember")?`\nIf the creator tells you something lasting about their game that later requests should know (its idea, its rules, names of teams, items or places in it), also call remember with one short sentence about the game. They are asked before it is kept. Only what they said, never personal details, and not what the code already shows:\n${Wu("remember",{note:"A zombie survival game: a wave comes every 30 seconds and players start with a sword"})}`:""}${function(uu,Ru,yu){const Eu=uu.some((uu=>"fetch_url"===uu.name)),Ku={view_file:`To see another of their files from the list, before you change it:\n${Ru("view_file",{path:"shop.js"})}`,view_world_code:`To see World Code, so you can change it yourself:\n${Ru("view_world_code",{})}`,view_chunk:`To see the blocks around the player (or give a position "x y z" for another chunk near them):\n${Ru("view_chunk",{})}`,view_game_state:`To see where the player is, their health, what they hold and carry, and the players and mobs near them:\n${Ru("view_game_state",{})}`,fetch_url:`To read the docs: ${Tu.j} lists every docs page with its link. Read it, then the page you need (for a long page, the part that has it):\n${Ru("fetch_url",{url:Tu.j})}`,get_docs:Eu?`Or, for a name you already know, read its docs in full, or list every api method, callback or client option by name (${TR}):\n${Ru("get_docs",{name:"setClientOption"})}\n${Ru("get_docs",{list:"callbacks"})}`:`To read the full docs of an api method, callback or client option the lists only name:\n${Ru("get_docs",{name:"setClientOption"})}`,find_names:`To find the exact names of blocks, items or mobs:\n${Ru("find_names",{words:"gold sword"})}`,view_errors:`To see all the errors their world showed, not only the newest:\n${Ru("view_errors",{})}`,list_prefabs:`To see the prefabs for one kind of game, and the ready-made functions for it:\n${Ru("list_prefabs",{category:"pvp"})}`,view_prefab:`To see one prefab in full, every setting and the functions to replace to change it, before you use it:\n${Ru("view_prefab",{name:"parkour"})}`},Qu=uu.flatMap((uu=>{const Ru=Ku[uu.name];return void 0===Ru?[]:[Ru]}));return 0===Qu.length?yu?"\nYou have looked things up as many times as you can: answer now with what you found.":"":`\
+        hasWorldCodeFiles: wk,
+        hasLookedUp: dk,
+        movesToWorldCode: sk,
+        listedPrefabs: Vk,
+        guidesToPrefabs: Jk
+      } = Rk;
+      const Ak = Fk ? ek.c : "index.js",
+        yk = Fk ? `${ek.i}index.js` : Ak,
+        mk = (kk, Fk) => IR(Bk, kk, Fk),
+        Wk = Fk => kk.some((kk => kk.name === Fk)),
+        vk = kk.filter((kk => ["content", "replace", "code"].some((Fk => Fk in kk.inputSchema.properties)))),
+        ik = Wk("edit_code_in_place") ? `\nFor a fix of one to a few lines in the code open in the editor, use edit_code_in_place instead: it changes their code straight away, as if they pressed Apply, and they can undo it. search is copied exactly from the open code:\n${mk("edit_code_in_place",{why:"what this fix does",search:wt.search,replace:wt.replace})}` : "",
+        Yk = Wk("export_game") ? `\nWhen the creator asks to export, save or publish their world or game, your answer must contain the export_game call; without it nothing is exported. For example, if the creator writes "export the world", your whole answer is:\nSaving your world as your custom game now!\n${mk("export_game",{})}` : "",
+        Lk = Wk("replace_function") ? `\nWhen you change only one or two functions or callbacks of a file that already has code, you can send just those instead of the whole file. replace_function finds a function by its name and puts your whole new function in its place; with a name the file doesn't have yet, it adds your new callback or function at the end, changing nothing already there:\n${mk("replace_function",{path:yk,name:"onPlayerJoin",why:"what the new function does",code:wt.function})}` : "",
+        Ok = Wk("edit_file") ? `\nFor a file longer than 6000 characters, don't send it whole: change only the parts that need it, with replace_function where you can, and an edit_file call for each other part, where search is copied exactly from the current file:\n${mk("edit_file",{path:Ak,why:"what this part's change does",search:wt.search,replace:wt.replace})}` : "",
+        Ek = Fk ? `2. Then give the whole new code with a write_file call, exactly like this:\n${mk("write_file",{path:Ak,why:"what the change does",content:wt.codeBlock})}` : `2. Then give every file you change, in full, with a write_file call, exactly like this:\n${mk("write_file",{path:Ak,why:"what the change does",content:wt.file})}`,
+        Sk = Fk ? "" : ` If there is no code yet, write it in ${Ak}.`,
+        Nk = mk("switch_to_world_code", {}),
+        Hk = Fk ? wk ? `\n${st}` : `\nIf part of the request needs World Code (a callback, or something that happens without a click), give that part as World Code with an add_world_code call, with its callbacks written as functions (in World Code the player is playerId; there is no myId or thisPos), exactly like this:\n${mk("add_world_code",{code:wt.worldCode})}\n${sk?"In your sentences, say which part goes in World Code: they are taken there, and it is put in for them.":"In your sentences, say which part goes in World Code and that they should press the World Code button to switch there and add it."} Leave out the code block's write_file call if the request is all World Code.${Wk("view_world_code")?`\nTo see what World Code already has before you write that part (a callback it may already define), look at it first:\n${mk("view_world_code",{})}`:""}\nWhen the request is all World Code, also call switch_to_world_code after add_world_code: it takes them to World Code, where its AI Helper is asked to add your World Code part. Give a request instead when they asked to go to World Code for something else:\n${Nk}` : "",
+        uk = Jk && Wk("use_prefab") && Vk.length >= 2,
+        Mk = uk ? Vk.slice(0, 3).map((kk => kk.title)).join("\n") : "A parkour race\nZombie survival\nCapture the flag",
+        gk = uk ? " When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles: the one they pick is put in with use_prefab next." : "",
+        Uk = Wk("ask_creator") ? `\nOnly if the request is too unclear to build anything sensible, ask instead of writing code: call ask_creator with one short question and 2 to 4 short choices, one per line. That is: no idea what kind of thing they want ("make a game"), or asking to make their game better, more fun or cooler without saying how ("make it more fun"): then the choices are 2 to 4 different ideas built on what their code already has, each a short concrete thing to add, not a general word like "more fun" (e.g. for a snowball fight: "Power-ups that drop in", "A score at the top", "Last player standing wins"). Otherwise build it, choosing sensibly, and say in your sentences what you chose so they can ask for something different. Never ask for personal details (name, age, school, where they live).${gk}\n${mk("ask_creator",{question:"What kind of game should it be?",choices:Mk,allow_other:"true"})}` : "",
+        ck = Wk("plan") ? `\n${"deepseek"===Bk?"When a request is big, instead of writing it all at once, you may":"This request is big. Instead of writing it all at once, you may"} call plan with 2 to 5 short steps, one per line, each small enough to build and try on its own, the first one playable. Then send no code: the creator builds the steps one at a time. Build it at once instead if it is really only a few lines:\n${mk("plan",{steps:"Give each player 0 coins when they join, shown on screen\nEarn a coin for each block broken\nA /shop command that sells a sword for 10 coins"})}` : "",
+        Gk = null !== (tk = Vk[0]) && void 0 !== tk ? tk : eR("parkour"),
+        Tk = (null !== (ak = null === Gk || void 0 === Gk ? void 0 : Gk.settings) && void 0 !== ak ? ak : []).slice(0, 2).map((kk => `${kk.key}: ${kk.value}`)).join("\n");
+      return `How to answer:\n1. Start with one or two short, friendly sentences in simple words saying what the change does, in the present tense as they read it before it goes in ("This adds...", "This changes..."; or what was wrong), and anything you had to do differently from what they asked. Don't promise it works: they will press Submit and try it. No long lectures.\n${Ek}${Lk}${Ok}${ik}${Hk}${Wk("use_prefab")?`\nFor a game, or a feature (a kit, a shop, rewards...), that a prefab listed below fits, put the prefab in with use_prefab instead of writing that code yourself: it is tested code that works, and it fits around the code they already have: their code stays as it is, and where both have the same callback (onPlayerJoin...) both run, so never rewrite their code to make room for a prefab. Give only the settings the request changes, one per line as key: value, each value written as in JavaScript (text in quotes, positions as [x, y, z]); the rest keep their defaults. For a game like the one asked for but not the same, still use the closest prefab, then in the same answer, after the use_prefab call, change what it doesn't do: replace one of its functions by name, or add a callback, with replace_function. If no prefab fits, write the code yourself:\n${mk("use_prefab",{name:null!==(Xk=null===Gk||void 0===Gk?void 0:Gk.name)&&void 0!==Xk?Xk:"parkour",settings:Tk,why:null!==(bk=null===Gk||void 0===Gk?void 0:Gk.summary)&&void 0!==bk?bk:"a parkour course"})}`:""}${Yk}${Uk}${ck}${Wk("remember")?`\nIf the creator tells you something lasting about their game that later requests should know (its idea, its rules, names of teams, items or places in it), also call remember with one short sentence about the game. They are asked before it is kept. Only what they said, never personal details, and not what the code already shows:\n${mk("remember",{note:"A zombie survival game: a wave comes every 30 seconds and players start with a sword"})}`:""}${function(kk,Fk,Bk){const Rk=kk.some((kk=>"fetch_url"===kk.name)),tk={view_file:`To see another of their files from the list, before you change it:\n${Fk("view_file",{path:"shop.js"})}`,view_world_code:`To see World Code, so you can change it yourself:\n${Fk("view_world_code",{})}`,view_chunk:`To see the blocks around the player (or give a position "x y z" for another chunk near them):\n${Fk("view_chunk",{})}`,view_game_state:`To see where the player is, their health, what they hold and carry, and the players and mobs near them:\n${Fk("view_game_state",{})}`,fetch_url:`To read the docs: ${fk.j} lists every docs page with its link. Read it, then the page you need (for a long page, the part that has it):\n${Fk("fetch_url",{url:fk.j})}`,get_docs:Rk?`Or, for a name you already know, read its docs in full, or list every api method, callback or client option by name (${mF}):\n${Fk("get_docs",{name:"setClientOption"})}\n${Fk("get_docs",{list:"callbacks"})}`:`To read the full docs of an api method, callback or client option the lists only name:\n${Fk("get_docs",{name:"setClientOption"})}`,find_names:`To find the exact names of blocks, items or mobs:\n${Fk("find_names",{words:"gold sword"})}`,view_errors:`To see all the errors their world showed, not only the newest:\n${Fk("view_errors",{})}`,list_prefabs:`To see the prefabs for one kind of game, and the ready-made functions for it:\n${Fk("list_prefabs",{category:"pvp"})}`,view_prefab:`To see one prefab in full, every setting and the functions to replace to change it, before you use it:\n${Fk("view_prefab",{name:"parkour"})}`},ak=kk.flatMap((kk=>{const Fk=tk[kk.name];return void 0===Fk?[]:[Fk]}));return 0===ak.length?Bk?"\nYou have looked things up as many times as you can: answer now with what you found.":"":`\
       nIf you need to see something before you can answer well, look it up first: answer with only look - up calls, no other words and no code, and you are asked again with what they found.$ {
-        Eu ? "The docs aren't in this message: before you use an api method, callback or client option, look up any you aren't sure of, with llms.txt where you can. Make every look-up you need in one answer where you can, up to 4." : "Most requests need no look-up: only look when the answer depends on it."
+        Rk ? "The docs aren't in this message: before you use an api method, callback or client option, look up any you aren't sure of, with llms.txt where you can. Make every look-up you need in one answer where you can, up to 4." : "Most requests need no look-up: only look when the answer depends on it."
       }\
       n$ {
-        Qu.join("\n")
+        ak.join("\n")
       }
-      `}(uu,Wu,Xu)}\nGive each call that changes code a why: a few plain words the creator sees beside that change, e.g. "gives everyone a sword when they join".\n3. Keep everything that already works; change only what the request needs. Don't add commands or features they didn't ask for: suggest them in your answer instead.${Au}\n4. If the request is not about their ${Ru?"code block":"World Code"}, or asks for something unsafe or unkind, say briefly that you can only help with their game's code.\nDo not put code anywhere except in ${Hu.map((uu=>uu.name)).join(" or ")} calls. ${function(uu){return OR[uu].callStyle}(yu)}`
+      `}(kk,mk,dk)}\nGive each call that changes code a why: a few plain words the creator sees beside that change, e.g. "gives everyone a sword when they join".\n3. Keep everything that already works; change only what the request needs. Don't add commands or features they didn't ask for: suggest them in your answer instead.${Sk}\n4. If the request is not about their ${Fk?"code block":"World Code"}, or asks for something unsafe or unkind, say briefly that you can only help with their game's code.\nDo not put code anywhere except in ${vk.map((kk=>kk.name)).join(" or ")} calls. ${function(kk){return nF[kk].callStyle}(Bk)}`
     }
 
-    function VK(uu, Ru, yu) {
-      return Object.keys(uu).filter((uu => !yu || !(0, Su.e)(uu))).sort(((uu, yu) => (yu === Ru ? 1 : 0) - (uu === Ru ? 1 : 0) || uu.localeCompare(yu)))
+    function Jt(kk, Fk, Bk) {
+      return Object.keys(kk).filter((kk => !Bk || !(0, ek.d)(kk))).sort(((kk, Bk) => (Bk === Fk ? 1 : 0) - (kk === Fk ? 1 : 0) || kk.localeCompare(Bk)))
     }
 
-    function rK(uu, Ru, yu) {
-      var Eu;
-      const Ku = VK(uu, Ru, yu);
-      return null !== Ru && Ku.includes(Ru) ? Ru : null !== (Eu = Ku[0]) && void 0 !== Eu ? Eu : null
+    function At(kk, Fk, Bk) {
+      var Rk;
+      const tk = Jt(kk, Fk, Bk);
+      return null !== Fk && tk.includes(Fk) ? Fk : null !== (Rk = tk[0]) && void 0 !== Rk ? Rk : null
     }
 
-    function BK(uu) {
-      const Ru = `${arguments.length>1&&void 0!==arguments[1]?arguments[1]:""}${uu.includes("index.ts")?"index.ts":"index.js"}`;
-      return `Only ${Ru} runs by itself: another file runs when ${Ru} imports or requires it, so keep the import, require and export lines their files have (no import/export is for one file), and put callbacks in ${Ru}.\n`
+    function et(kk) {
+      const Fk = `${arguments.length>1&&void 0!==arguments[1]?arguments[1]:""}${kk.includes("index.ts")?"index.ts":"index.js"}`;
+      return `Only ${Fk} runs by itself: another file runs when ${Fk} imports or requires it, so keep the import, require and export lines their files have (no import/export is for one file), and put callbacks in ${Fk}.\n`
     }
 
-    function xK(uu, Ru) {
-      var yu;
+    function yt(kk, Fk) {
+      var Bk;
       const {
-        files: Eu,
-        activePath: Ku
-      } = uu, Qu = !0 === uu.codeBlock, mu = VK(Eu, Ku, Qu);
-      if (0 === mu.length || mu.every((uu => "" === Eu[uu].trim()))) return Qu ? "There is no code yet: the code block is empty." : mu.includes("index.ts") ? "There is no code yet: index.ts is empty. Write it in index.ts." : "There is no code yet: index.js is empty.";
-      const Ju = null !== (yu = rK(Eu, Ku, Qu)) && void 0 !== yu ? yu : mu[0];
-      return `${mu.length>1?`Their files:\n${mu.map((uu=>{const Ru=""===(yu=Eu[uu])?0:yu.replace(/\n$/,"").split("\n").length;var yu;return`- ${uu}: ${1===Ru?"1 line":`${Ru} lines`}${uu===Ju?" (open in the editor, its code below)":""}`})).join("\n")}\n${Qu?"":BK(mu)}\n`:""}${function(uu,Ru,yu,Eu){return Ru.map((Ru=>OR[Eu].fileResult(Ru,uu[Ru],Ru===yu))).join("\n\n")}(Eu,[Ju],Ku,Ru)}`
+        files: Rk,
+        activePath: tk
+      } = kk, ak = !0 === kk.codeBlock, Xk = Jt(Rk, tk, ak);
+      if (0 === Xk.length || Xk.every((kk => "" === Rk[kk].trim()))) return ak ? "There is no code yet: the code block is empty." : Xk.includes("index.ts") ? "There is no code yet: index.ts is empty. Write it in index.ts." : "There is no code yet: index.js is empty.";
+      const bk = null !== (Bk = At(Rk, tk, ak)) && void 0 !== Bk ? Bk : Xk[0];
+      return `${Xk.length>1?`Their files:\n${Xk.map((kk=>{const Fk=""===(Bk=Rk[kk])?0:Bk.replace(/\n$/,"").split("\n").length;var Bk;return`- ${kk}: ${1===Fk?"1 line":`${Fk} lines`}${kk===bk?" (open in the editor, its code below)":""}`})).join("\n")}\n${ak?"":et(Xk)}\n`:""}${function(kk,Fk,Bk,Rk){return Fk.map((Fk=>nF[Rk].fileResult(Fk,kk[Fk],Fk===Bk))).join("\n\n")}(Rk,[bk],tk,Fk)}`
     }
 
-    function SK(uu) {
-      var Ru, yu, Eu, Ku, Qu, mu;
+    function ft(kk) {
+      var Fk, Bk, Rk, tk, ak, Xk;
       return {
-        codeBlock: !0 === uu.codeBlock,
-        hasCode: "" !== (null !== (Ru = uu.files[null !== (yu = uu.activePath) && void 0 !== yu ? yu : ""]) && void 0 !== Ru ? Ru : "").trim(),
-        hasBigFile: Object.values(uu.files).some((uu => uu.length > 6e3)),
-        wantsExport: qE(uu.request),
-        canAsk: !0 === uu.canAsk,
-        canRemember: !0 === (null === (Eu = uu.about) || void 0 === Eu ? void 0 : Eu.canRemember),
-        isBigRequest: XR(uu.request),
-        canLookUp: !0 === uu.canLookUp,
-        hasOtherFiles: Object.keys(uu.files).length > 1,
-        hasErrors: uu.errors.length > 0,
-        canChangeWorldCode: !0 === uu.canChangeWorldCode,
-        hasWorldCodeFiles: Object.keys(uu.files).some(Su.e),
-        offersPrefabs: (Ku = uu.request, Qu = uu.files, mu = pK(uu), "never" !== mu.offer && ("always" === mu.offer || DE(Ku, 1).length > 0 || XR(Ku) || !yK(Qu) && RK.test(Ku))),
-        listsPrefabs: pK(uu).categories,
-        looksUpDocs: !0 === uu.looksUpDocs
+        codeBlock: !0 === kk.codeBlock,
+        hasCode: "" !== (null !== (Fk = kk.files[null !== (Bk = kk.activePath) && void 0 !== Bk ? Bk : ""]) && void 0 !== Fk ? Fk : "").trim(),
+        hasBigFile: Object.values(kk.files).some((kk => kk.length > 6e3)),
+        wantsExport: lR(kk.request),
+        canAsk: !0 === kk.canAsk,
+        canRemember: !0 === (null === (Rk = kk.about) || void 0 === Rk ? void 0 : Rk.canRemember),
+        isBigRequest: sF(kk.request),
+        canLookUp: !0 === kk.canLookUp,
+        hasOtherFiles: Object.keys(kk.files).length > 1,
+        hasErrors: kk.errors.length > 0,
+        canChangeWorldCode: !0 === kk.canChangeWorldCode,
+        hasWorldCodeFiles: Object.keys(kk.files).some(ek.d),
+        offersPrefabs: (tk = kk.request, ak = kk.files, Xk = mt(kk), "never" !== Xk.offer && ("always" === Xk.offer || NR(tk, 1).length > 0 || sF(tk) || !Rt(ak) && Bt.test(tk))),
+        listsPrefabs: mt(kk).categories,
+        looksUpDocs: !0 === kk.looksUpDocs
       }
     }
 
-    function pK(uu) {
-      var Ru;
-      return null !== (Ru = uu.prefabs) && void 0 !== Ru ? Ru : uK
+    function mt(kk) {
+      var Fk;
+      return null !== (Fk = kk.prefabs) && void 0 !== Fk ? Fk : Ft
     }
 
-    function TK(uu, Ru) {
-      return "deepseek" === Ru ? function(uu) {
-        const Ru = OE[uu ? "codeBlock" : "worldCode"];
-        return HR.filter((uu => Ru.has(uu.name)))
-      }(!0 === uu.codeBlock) : function(uu) {
-        const Ru = (uu.hasCode || uu.hasBigFile) && !uu.codeBlock || !0 === uu.hasWorldCodeFiles,
-          yu = !0 === uu.canLookUp,
-          Eu = uu.codeBlock && !0 === uu.canChangeWorldCode && !0 !== uu.hasWorldCodeFiles && yu,
-          Ku = {
+    function Wt(kk, Fk) {
+      return "deepseek" === Fk ? function(kk) {
+        const Fk = nR[kk ? "codeBlock" : "worldCode"];
+        return iF.filter((kk => Fk.has(kk.name)))
+      }(!0 === kk.codeBlock) : function(kk) {
+        const Fk = (kk.hasCode || kk.hasBigFile) && !kk.codeBlock || !0 === kk.hasWorldCodeFiles,
+          Bk = !0 === kk.canLookUp,
+          Rk = kk.codeBlock && !0 === kk.canChangeWorldCode && !0 !== kk.hasWorldCodeFiles && Bk,
+          tk = {
             write_file: !0,
-            edit_file: uu.hasBigFile,
-            replace_function: Ru,
+            edit_file: kk.hasBigFile,
+            replace_function: Fk,
             insert_code: !1,
-            add_world_code: uu.codeBlock && !0 !== uu.hasWorldCodeFiles,
-            edit_code_in_place: uu.hasCode,
-            export_game: uu.wantsExport,
-            switch_to_world_code: uu.codeBlock,
-            ask_creator: uu.canAsk,
-            remember: !0 === uu.canRemember && !uu.codeBlock,
-            plan: !0 === uu.isBigRequest && uu.canAsk && !uu.codeBlock,
-            view_file: yu && !0 === uu.hasOtherFiles && !uu.codeBlock,
-            view_world_code: Eu,
-            view_chunk: yu,
-            view_game_state: yu,
-            get_docs: yu,
-            fetch_url: yu && !0 === uu.looksUpDocs,
-            find_names: yu,
-            view_errors: yu && !0 === uu.hasErrors,
-            use_prefab: !0 === uu.offersPrefabs && !uu.codeBlock,
-            list_prefabs: yu && !0 === uu.listsPrefabs && !uu.codeBlock,
-            view_prefab: yu && !0 === uu.offersPrefabs && !uu.codeBlock
+            add_world_code: kk.codeBlock && !0 !== kk.hasWorldCodeFiles,
+            edit_code_in_place: kk.hasCode,
+            export_game: kk.wantsExport,
+            switch_to_world_code: kk.codeBlock,
+            ask_creator: kk.canAsk,
+            remember: !0 === kk.canRemember && !kk.codeBlock,
+            plan: !0 === kk.isBigRequest && kk.canAsk && !kk.codeBlock,
+            view_file: Bk && !0 === kk.hasOtherFiles && !kk.codeBlock,
+            view_world_code: Rk,
+            view_chunk: Bk,
+            view_game_state: Bk,
+            get_docs: Bk,
+            fetch_url: Bk && !0 === kk.looksUpDocs,
+            find_names: Bk,
+            view_errors: Bk && !0 === kk.hasErrors,
+            use_prefab: !0 === kk.offersPrefabs && !kk.codeBlock,
+            list_prefabs: Bk && !0 === kk.listsPrefabs && !kk.codeBlock,
+            view_prefab: Bk && !0 === kk.offersPrefabs && !kk.codeBlock
           };
-        let Qu = HR.filter((uu => Ku[uu.name]));
-        for (const mu of ["remember", "plan"]) Qu.filter((uu => !dR(uu.name))).length > 7 && (Qu = Qu.filter((uu => uu.name !== mu)));
-        return Qu
-      }(SK(uu))
+        let ak = iF.filter((kk => tk[kk.name]));
+        for (const Xk of ["remember", "plan"]) ak.filter((kk => !YF(kk.name))).length > 7 && (ak = ak.filter((kk => kk.name !== Xk)));
+        return ak
+      }(ft(kk))
     }
 
-    function WK(uu, Ru) {
-      var yu, Eu;
-      const Ku = SK(uu),
-        Qu = !0 === Ku.canLookUp,
-        mu = (null !== (yu = null === (Eu = uu.lookups) || void 0 === Eu ? void 0 : Eu.length) && void 0 !== yu ? yu : 0) > 0,
-        Ju = !0 === Ku.hasWorldCodeFiles,
-        Nu = [Ku.hasCode ? "" : "No open file has code, so don't call edit_code_in_place.", Ku.hasBigFile ? "" : "Every file is short, so change them with write_file or replace_function, not edit_file.", Qu ? "" : mu ? "You have looked things up as many times as you can: answer now with what you found, calling no view_ tool, get_docs or find_names." : "Answer with what you have: call no view_ tool, get_docs or find_names.", Qu && !0 !== Ku.hasErrors ? "Their world showed no errors, so don't call view_errors." : "", ...Ku.codeBlock ? [Ku.canAsk ? "" : "Build what they asked: don't call ask_creator.", Ju ? `${NK} So don't call add_world_code or view_world_code.` : "", Ju || !0 !== Ku.canChangeWorldCode ? "" : "When part of it needs World Code, say which part goes there: they are taken to World Code, and it is put in for them.", Ju || !0 === Ku.canChangeWorldCode && Qu ? "" : "Don't call view_world_code.", Ju ? "" : "The code block has no functions, so don't call replace_function."] : [Ku.canAsk ? "" : "Build what they asked: don't call ask_creator or plan.", Ku.canAsk && !0 !== Ku.isBigRequest ? "This request isn't big, so build it rather than calling plan." : "", Ku.wantsExport ? "" : "They haven't asked to save, so don't call export_game.", !0 === Ku.canRemember ? "" : "Their AI notes are full, so don't call remember.", Qu && !0 !== Ku.hasOtherFiles ? "They have only the one file, so don't call view_file." : "", !0 === Ku.offersPrefabs ? "" : "No prefab fits this request, so don't call use_prefab or view_prefab.", Ku.canAsk && !0 === pK(uu).guide && Ru.length >= 2 ? `When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles (${Ru.slice(0,3).map((uu=>uu.title)).join(", ")}...): the one they pick is put in with use_prefab next.` : ""]].filter((uu => "" !== uu));
-      return Nu.length > 0 ? `\n\nFor this request: ${Nu.join(" ")}` : ""
+    function vt(kk, Fk) {
+      var Bk, Rk;
+      const tk = ft(kk),
+        ak = !0 === tk.canLookUp,
+        Xk = (null !== (Bk = null === (Rk = kk.lookups) || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Bk ? Bk : 0) > 0,
+        bk = !0 === tk.hasWorldCodeFiles,
+        wk = [tk.hasCode ? "" : "No open file has code, so don't call edit_code_in_place.", tk.hasBigFile ? "" : "Every file is short, so change them with write_file or replace_function, not edit_file.", ak ? "" : Xk ? "You have looked things up as many times as you can: answer now with what you found, calling no view_ tool, get_docs or find_names." : "Answer with what you have: call no view_ tool, get_docs or find_names.", ak && !0 !== tk.hasErrors ? "Their world showed no errors, so don't call view_errors." : "", ...tk.codeBlock ? [tk.canAsk ? "" : "Build what they asked: don't call ask_creator.", bk ? `${st} So don't call add_world_code or view_world_code.` : "", bk || !0 !== tk.canChangeWorldCode ? "" : "When part of it needs World Code, say which part goes there: they are taken to World Code, and it is put in for them.", bk || !0 === tk.canChangeWorldCode && ak ? "" : "Don't call view_world_code.", bk ? "" : "The code block has no functions, so don't call replace_function."] : [tk.canAsk ? "" : "Build what they asked: don't call ask_creator or plan.", tk.canAsk && !0 !== tk.isBigRequest ? "This request isn't big, so build it rather than calling plan." : "", tk.wantsExport ? "" : "They haven't asked to save, so don't call export_game.", !0 === tk.canRemember ? "" : "Their AI notes are full, so don't call remember.", ak && !0 !== tk.hasOtherFiles ? "They have only the one file, so don't call view_file." : "", !0 === tk.offersPrefabs ? "" : "No prefab fits this request, so don't call use_prefab or view_prefab.", tk.canAsk && !0 === mt(kk).guide && Fk.length >= 2 ? `When you ask what kind of game they want, the choices are the 2 to 4 listed prefabs that fit the request best, by their titles (${Fk.slice(0,3).map((kk=>kk.title)).join(", ")}...): the one they pick is put in with use_prefab next.` : ""]].filter((kk => "" !== kk));
+      return wk.length > 0 ? `\n\nFor this request: ${wk.join(" ")}` : ""
     }
 
-    function jK(uu, Ru) {
-      var yu, Eu, Ku, Qu, mu, Ju;
-      let Nu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : EK,
+    function it(kk, Fk) {
+      var Bk, Rk, tk, ak, Xk, bk;
+      let wk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tt,
         {
-          docsInTurn: Xu = !1,
-          NT: Vu = !1
+          docsInTurn: dk = !1,
+          ws: sk = !1
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const ru = "deepseek" === Nu.format,
-        Bu = Object.values(Ru.files).join("\n"),
-        xu = Ru.history.slice(-2).map((uu => uu.text)).join("\n"),
-        Su = `${Ru.request}\n${xu}\n${Ru.errors.join("\n")}`,
-        pu = !0 === Ru.looksUpDocs,
-        Tu = pu && !0 === Ru.canLookUp ? [] : uu.find(Su, Bu, 12),
-        Wu = uu.matchItemAndBlockNames(Su, 12),
-        ju = !0 === Ru.codeBlock,
-        Hu = ju ? "myId" : "playerId",
-        du = TK(Ru, Nu.format),
-        bu = du.some((uu => "use_prefab" === uu.name)),
-        Cu = !bu || ru && !0 !== SK(Ru).offersPrefabs ? [] : function(uu, Ru, yu) {
-          if ("never" === yu.offer || "none" === yu.list) return [];
-          if ("all" === yu.list) return [...VE];
-          const Eu = DE(uu, 4);
-          if (yK(Ru) || !RK.test(uu) && !XR(uu)) return Eu;
-          const Ku = VE.filter((uu => "game" === uu.kind && !Eu.includes(uu)));
-          return [...Eu, ...Ku]
-        }(Ru.request, Ru.files, pK(Ru)),
-        ku = bu ? function(uu, Ru, yu) {
-          const Eu = Ru ? `\nOther kinds of game have prefabs too: look them up with list_prefabs (${[...rE.keys()].join(", ")}).` : "";
-          if (0 === uu.length) return Ru ? `## Prefabs (ready-made games)${Eu}` : "";
-          const Ku = yu && uu.includes(yu) ? `\nThis request fits ${yu.name}: put it in with use_prefab, then change only what the request wants differently: what it already does needs no code of yours (its sidebar is the text on the right of the screen).\n${AE(yu,!1)}` : "";
-          return `## Prefabs: ready-made games and features to start from (use_prefab)\n${uu.map(kE).join("\n")}${Ku}${Eu}`
-        }(Cu, pK(Ru).categories, DE(Ru.request, 1)[0]) : "",
-        eu = ju || !0 !== pK(Ru).inlineCode ? "" : function(uu) {
-          const Ru = DE(uu, 1)[0];
-          if (!Ru) return "";
-          const yu = jE(pE(Ru)).text;
-          return `## Tested code for this kind of game (${Ru.title})\nThis code works. Start from it: put it in the file, keeping what the file already has, and change what the request needs. Change settings in its CONFIG.\n\`\`\`js\n${yu}\`\`\``
-        }(Ru.request),
-        Au = [Tu.length > 0 ? `## Docs for this request\n${Tu.map((uu=>uu.text)).join("\n\n")}` : "", Wu.length > 0 ? `## Exact item and block names that match the request\n${Wu.join(", ")}` : ""].filter((uu => "" !== uu)),
-        Du = [{
+      const Vk = "deepseek" === wk.format,
+        Jk = Object.values(Fk.files).join("\n"),
+        Ak = Fk.history.slice(-2).map((kk => kk.text)).join("\n"),
+        ek = `${Fk.request}\n${Ak}\n${Fk.errors.join("\n")}`,
+        yk = !0 === Fk.looksUpDocs,
+        fk = yk && !0 === Fk.canLookUp ? [] : kk.find(ek, Jk, 12),
+        mk = kk.matchItemAndBlockNames(ek, 12),
+        Wk = !0 === Fk.codeBlock,
+        vk = Wk ? "myId" : "playerId",
+        ik = Wt(Fk, wk.format),
+        Yk = ik.some((kk => "use_prefab" === kk.name)),
+        Lk = !Yk || Vk && !0 !== ft(Fk).offersPrefabs ? [] : function(kk, Fk, Bk) {
+          if ("never" === Bk.offer || "none" === Bk.list) return [];
+          if ("all" === Bk.list) return [...VR];
+          const Rk = NR(kk, 4);
+          if (Rt(Fk) || !Bt.test(kk) && !sF(kk)) return Rk;
+          const tk = VR.filter((kk => "game" === kk.kind && !Rk.includes(kk)));
+          return [...Rk, ...tk]
+        }(Fk.request, Fk.files, mt(Fk)),
+        Ok = Yk ? function(kk, Fk, Bk) {
+          const Rk = Fk ? `\nOther kinds of game have prefabs too: look them up with list_prefabs (${[...JR.keys()].join(", ")}).` : "";
+          if (0 === kk.length) return Fk ? `## Prefabs (ready-made games)${Rk}` : "";
+          const tk = Bk && kk.includes(Bk) ? `\nThis request fits ${Bk.name}: put it in with use_prefab, then change only what the request wants differently: what it already does needs no code of yours (its sidebar is the text on the right of the screen).\n${SR(Bk,!1)}` : "";
+          return `## Prefabs: ready-made games and features to start from (use_prefab)\n${kk.map(OR).join("\n")}${tk}${Rk}`
+        }(Lk, mt(Fk).categories, NR(Fk.request, 1)[0]) : "",
+        Ek = Wk || !0 !== mt(Fk).inlineCode ? "" : function(kk) {
+          const Fk = NR(kk, 1)[0];
+          if (!Fk) return "";
+          const Bk = vR(fR(Fk)).text;
+          return `## Tested code for this kind of game (${Fk.title})\nThis code works. Start from it: put it in the file, keeping what the file already has, and change what the request needs. Change settings in its CONFIG.\n\`\`\`js\n${Bk}\`\`\``
+        }(Fk.request),
+        Sk = [fk.length > 0 ? `## Docs for this request\n${fk.map((kk=>kk.text)).join("\n\n")}` : "", mk.length > 0 ? `## Exact item and block names that match the request\n${mk.join(", ")}` : ""].filter((kk => "" !== kk)),
+        Nk = [{
           role: "system",
-          content: aE([ju ? QK(pu) : KK(pu), ...pu ? [] : [ju ? `## World Code callbacks (all of them; only for World Code, never in the code block)\n${uu.index("callback")}` : `## Callbacks (all of them)\n${uu.index("callback")}`, `## API methods (all of them, call as api.name(...))\n${uu.index("api")}`, `## Client options (all of them, set with api.setClientOption(${Hu}, name, value))\n${uu.index("clientOption")}`], ...Xu ? [] : Au, uu.mobTypes.length > 0 ? `## Mob types (for api.attemptSpawnMob)\n${uu.mobTypes.join(", ")}` : "", ru ? "" : ku, !ju && pK(Ru).helperIndex ? `## Ready-made functions (call them by name, without api. and without writing them: their code is added to the file by itself; get_docs shows one)\n${yE.map((uu=>uu.signature)).join(", ")}` : "", ru ? "" : eu, XK(du, ju, Nu.format, ru ? {
+          content: QR([Wk ? bt(yk) : Xt(yk), ...yk ? [] : [Wk ? `## World Code callbacks (all of them; only for World Code, never in the code block)\n${kk.index("callback")}` : `## Callbacks (all of them)\n${kk.index("callback")}`, `## API methods (all of them, call as api.name(...))\n${kk.index("api")}`, `## Client options (all of them, set with api.setClientOption(${vk}, name, value))\n${kk.index("clientOption")}`], ...dk ? [] : Sk, kk.mobTypes.length > 0 ? `## Mob types (for api.attemptSpawnMob)\n${kk.mobTypes.join(", ")}` : "", Vk ? "" : Ok, !Wk && mt(Fk).helperIndex ? `## Ready-made functions (call them by name, without api. and without writing them: their code is added to the file by itself; get_docs shows one)\n${RR.map((kk=>kk.signature)).join(", ")}` : "", Vk ? "" : Ek, Vt(ik, Wk, wk.format, Vk ? {
             hasWorldCodeFiles: !1,
             hasLookedUp: !1,
             movesToWorldCode: !1,
             listedPrefabs: [],
             guidesToPrefabs: !1
           } : {
-            hasWorldCodeFiles: !0 === SK(Ru).hasWorldCodeFiles,
-            hasLookedUp: (null !== (yu = null === (Eu = Ru.lookups) || void 0 === Eu ? void 0 : Eu.length) && void 0 !== yu ? yu : 0) > 0,
-            movesToWorldCode: !0 === Ru.canChangeWorldCode,
-            listedPrefabs: Cu,
-            guidesToPrefabs: !0 === pK(Ru).guide
-          })].filter((uu => "" !== uu)).join("\n\n"), du, Nu.format, Nu.nativeTools)
+            hasWorldCodeFiles: !0 === ft(Fk).hasWorldCodeFiles,
+            hasLookedUp: (null !== (Bk = null === (Rk = Fk.lookups) || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Bk ? Bk : 0) > 0,
+            movesToWorldCode: !0 === Fk.canChangeWorldCode,
+            listedPrefabs: Lk,
+            guidesToPrefabs: !0 === mt(Fk).guide
+          })].filter((kk => "" !== kk)).join("\n\n"), ik, wk.format, wk.nativeTools)
         }];
-      if (!ru)
-        for (const cu of Ru.history) Du.push({
-          role: cu.role,
-          content: cu.text
+      if (!Vk)
+        for (const Dk of Fk.history) Nk.push({
+          role: Dk.role,
+          content: Dk.text
         });
-      const Mu = ru && !Vu && Ru.history.length > 0 ? `Earlier in this chat:\n${Ru.history.map((uu=>`${"user"===uu.role?"They asked":"You answered"}: ${uu.text}`)).join("\n")}\n\n` : "",
-        Iu = null !== (Ku = Ru.about) && void 0 !== Ku && Ku.notes.length ? `AI notes (notes they kept):\n${Ru.about.notes.map((uu=>`- ${uu}`)).join("\n")}\n\n` : "",
-        Gu = null !== (Qu = Ru.about) && void 0 !== Qu && Qu.outline ? `Outline of their code:\n${Ru.about.outline}\n\n` : "",
-        Uu = Ru.errors.length > 0 ? `\n\nErrors their world showed recently:\n${Ru.errors.slice(-5).join("\n")}` : "",
-        nu = null === (mu = Ru.failedEdits) || void 0 === mu || !mu.length || ru && Vu ? "" : `\n\nWhat happened to your last answer's changes:\n${function(uu,Ru){return uu.map((uu=>OR[Ru].editFailure(uu.tool,fE(uu)))).join("\n\n")}(Ru.failedEdits,Nu.format)}`,
-        su = [...Xu ? Au : [], ...ru ? [ku, eu] : []].filter((uu => "" !== uu)).map((uu => `${uu}\n\n`)).join(""),
-        tu = null === (Ju = Ru.lookups) || void 0 === Ju || !Ju.length || ru && Vu ? "" : `\n\nWhat you looked up for this request:\n${lu=Ru.lookups,gu=Nu.format,lu.map((uu=>OR[gu].lookupResult(uu.tool,uu.about,uu.text))).join("\n\n")}`;
-      var lu, gu;
-      return Du.push({
+      const Hk = Vk && !sk && Fk.history.length > 0 ? `Earlier in this chat:\n${Fk.history.map((kk=>`${"user"===kk.role?"They asked":"You answered"}: ${kk.text}`)).join("\n")}\n\n` : "",
+        uk = null !== (tk = Fk.about) && void 0 !== tk && tk.notes.length ? `AI notes (notes they kept):\n${Fk.about.notes.map((kk=>`- ${kk}`)).join("\n")}\n\n` : "",
+        Mk = null !== (ak = Fk.about) && void 0 !== ak && ak.outline ? `Outline of their code:\n${Fk.about.outline}\n\n` : "",
+        gk = Fk.errors.length > 0 ? `\n\nErrors their world showed recently:\n${Fk.errors.slice(-5).join("\n")}` : "",
+        Uk = null === (Xk = Fk.failedEdits) || void 0 === Xk || !Xk.length || Vk && sk ? "" : `\n\nWhat happened to your last answer's changes:\n${function(kk,Fk){return kk.map((kk=>nF[Fk].editFailure(kk.tool,kt(kk)))).join("\n\n")}(Fk.failedEdits,wk.format)}`,
+        ck = [...dk ? Sk : [], ...Vk ? [Ok, Ek] : []].filter((kk => "" !== kk)).map((kk => `${kk}\n\n`)).join(""),
+        Gk = null === (bk = Fk.lookups) || void 0 === bk || !bk.length || Vk && sk ? "" : `\n\nWhat you looked up for this request:\n${Tk=Fk.lookups,rk=wk.format,Tk.map((kk=>nF[rk].lookupResult(kk.tool,kk.about,kk.text))).join("\n\n")}`;
+      var Tk, rk;
+      return Nk.push({
         role: "user",
-        content: `${su}${Iu}${Gu}${Mu}Their code now:\n${xK(Ru,Nu.format)}${Uu}${nu}${tu}${ru?WK(Ru,Cu):""}\n\nTheir request: ${Ru.request}`
-      }), Du
+        content: `${ck}${uk}${Mk}${Hk}Their code now:\n${yt(Fk,wk.format)}${gk}${Uk}${Gk}${Vk?vt(Fk,Lk):""}\n\nTheir request: ${Fk.request}`
+      }), Nk
     }
-    var HK = yu(39340);
+    var Yt = Bk(39199);
 
-    function dK(uu) {
-      var Ru, yu, Eu, Ku, Qu, mu;
+    function ot(kk) {
+      var Fk, Bk, Rk, tk, ak, Xk;
       const {
-        args: Ju
-      } = uu;
-      switch (uu.name) {
+        args: bk
+      } = kk;
+      switch (kk.name) {
         case "view_file":
-          return null !== (Ru = Ju.path) && void 0 !== Ru ? Ru : "a file";
+          return null !== (Fk = bk.path) && void 0 !== Fk ? Fk : "a file";
         case "view_world_code":
           return "your World Code";
         case "view_chunk":
-          return Ju.position ? `the blocks near ${null!==(yu=null===(Eu=(0,HK.g)(Ju.position))||void 0===Eu?void 0:Eu.map(Math.floor).join(", "))&&void 0!==yu?yu:Ju.position}` : "the blocks around you";
+          return bk.position ? `the blocks near ${null!==(Bk=null===(Rk=(0,Yt.e)(bk.position))||void 0===Rk?void 0:Rk.map(Math.floor).join(", "))&&void 0!==Bk?Bk:bk.position}` : "the blocks around you";
         case "view_game_state":
           return "what you see in your world";
         case "get_docs":
-          return Ju.name ? `the docs for ${Ju.name}` : `the list of ${CK(null!==(Ku=Ju.list)&&void 0!==Ku?Ku:bK)}`;
+          return bk.name ? `the docs for ${bk.name}` : `the list of ${Ot(null!==(tk=bk.list)&&void 0!==tk?tk:Lt)}`;
         case "fetch_url":
-          return function(uu) {
-            const Ru = void 0 === uu ? null : Hu(uu);
-            if (null === Ru) return null !== uu && void 0 !== uu ? uu : "a docs page";
-            return du(Ru) ? "the list of docs pages" : `the docs page ${function(uu){const Ru=(0,Tu.A)(uu);return null===Ru?uu:`${Ru.name}${null===Ru.part?"":`/${Ru.part}`}`}(Ru)}`
-          }(Ju.url);
+          return function(kk) {
+            const Fk = void 0 === kk ? null : vk(kk);
+            if (null === Fk) return null !== kk && void 0 !== kk ? kk : "a docs page";
+            return ik(Fk) ? "the list of docs pages" : `the docs page ${function(kk){const Fk=(0,fk.A)(kk);return null===Fk?kk:`${Fk.name}${null===Fk.part?"":`/${Fk.part}`}`}(Fk)}`
+          }(bk.url);
         case "find_names":
-          return `names for "${null!==(Qu=Ju.words)&&void 0!==Qu?Qu:""}"`;
+          return `names for "${null!==(ak=bk.words)&&void 0!==ak?ak:""}"`;
         case "view_errors":
           return "your world's errors";
         case "list_prefabs":
-          return Ju.category ? `the ready-made ${Ju.category} games` : "the ready-made games";
+          return bk.category ? `the ready-made ${bk.category} games` : "the ready-made games";
         case "view_prefab":
-          return `the ready-made ${null!==(mu=Ju.name)&&void 0!==mu?mu:"game"}`
+          return `the ready-made ${null!==(Xk=bk.name)&&void 0!==Xk?Xk:"game"}`
       }
     }
-    const bK = "functions";
+    const Lt = "functions";
 
-    function CK(uu) {
-      return uu.trim().toLowerCase().replace(/[\s_]+/g, " ").replace(/s?$/, "s")
+    function Ot(kk) {
+      return kk.trim().toLowerCase().replace(/[\s_]+/g, " ").replace(/s?$/, "s")
     }
 
-    function kK(uu) {
-      return "get_docs" === uu.name || "fetch_url" === uu.name
+    function Et(kk) {
+      return "get_docs" === kk.name || "fetch_url" === kk.name
     }
-    async function eK(uu, Ru) {
-      var yu;
-      const Eu = dK(uu),
-        Ku = Ru => ({
+    async function St(kk, Fk) {
+      var Bk;
+      const Rk = ot(kk),
+        tk = Fk => ({
           result: {
-            tool: uu.name,
-            about: Eu,
-            text: Ru
+            tool: kk.name,
+            about: Rk,
+            text: Fk
           }
         });
-      switch (uu.name) {
+      switch (kk.name) {
         case "view_file":
-          return Ku((Ju = uu.args.path, Nu = Ru.files, void 0 === Ju ? "No path was given: give the path of a file from the list." : Object.hasOwn(Nu, Ju) ? "" === Nu[Ju] ? `${Ju} is empty.` : Nu[Ju] : `There is no file called ${Ju}. Their files are: ${Object.keys(Nu).join(", ")}.`));
+          return tk((bk = kk.args.path, wk = Fk.files, void 0 === bk ? "No path was given: give the path of a file from the list." : Object.hasOwn(wk, bk) ? "" === wk[bk] ? `${bk} is empty.` : wk[bk] : `There is no file called ${bk}. Their files are: ${Object.keys(wk).join(", ")}.`));
         case "view_world_code": {
-          const uu = Ru.readWorldCode ? await Ru.readWorldCode() : null;
-          if (null === uu) return Ku("World Code couldn't be read, so it can't be changed from here. Give its part with add_world_code instead.");
-          const yu = Object.keys(uu).sort(),
-            Eu = Object.fromEntries(yu.map((Ru => [`${Su.i}${Ru}`, uu[Ru]]))),
-            Qu = yu.map((Ru => `${Su.i}${Ru}:\n${""===uu[Ru]?"(empty)":uu[Ru]}`)).join("\n\n"),
-            mu = yu.length > 1 ? `\n\n${BK(yu,Su.i)}` : "";
+          const kk = Fk.readWorldCode ? await Fk.readWorldCode() : null;
+          if (null === kk) return tk("World Code couldn't be read, so it can't be changed from here. Give its part with add_world_code instead.");
+          const Bk = Object.keys(kk).sort(),
+            Rk = Object.fromEntries(Bk.map((Fk => [`${ek.i}${Fk}`, kk[Fk]]))),
+            ak = Bk.map((Fk => `${ek.i}${Fk}:\n${""===kk[Fk]?"(empty)":kk[Fk]}`)).join("\n\n"),
+            Xk = Bk.length > 1 ? `\n\n${et(Bk,ek.i)}` : "";
           return {
-            ...Ku("" === Qu ? `World Code has no code yet: ${Su.i}index.js is empty.` : `${Qu}${mu}`),
-            worldCodeFiles: Eu
+            ...tk("" === ak ? `World Code has no code yet: ${ek.i}index.js is empty.` : `${ak}${Xk}`),
+            worldCodeFiles: Rk
           }
         }
         case "view_chunk":
-          return Ku(await Ru.viewChunk((0, HK.g)(uu.args.position)));
+          return tk(await Fk.viewChunk((0, Yt.e)(kk.args.position)));
         case "view_game_state":
-          return Ku(await Ru.viewGameState());
+          return tk(await Fk.viewGameState());
         case "get_docs":
-          return Ku(function(uu, Ru, yu) {
-            if (void 0 === uu) {
-              const uu = (0, Cu.b)(pR, CK(null !== Ru && void 0 !== Ru ? Ru : bK));
-              return void 0 === uu ? `There is no list called ${Ru}: ask for ${TR}.` : yu.index(uu)
+          return tk(function(kk, Fk, Bk) {
+            if (void 0 === kk) {
+              const kk = (0, Lk.d)(fF, Ot(null !== Fk && void 0 !== Fk ? Fk : Lt));
+              return void 0 === kk ? `There is no list called ${Fk}: ask for ${mF}.` : Bk.index(kk)
             }
-            const Eu = yu.section(uu);
-            if (Eu) return Eu.text;
-            const Ku = yu.find(uu, "", 3).map((uu => uu.name)).join(", ");
-            return `Nothing is called ${uu}.${""===Ku?"":` The closest names are: ${Ku}.`}`
-          }(uu.args.name, uu.args.list, Ru.docs));
+            const Rk = Bk.section(kk);
+            if (Rk) return Rk.text;
+            const tk = Bk.find(kk, "", 3).map((kk => kk.name)).join(", ");
+            return `Nothing is called ${kk}.${""===tk?"":` The closest names are: ${tk}.`}`
+          }(kk.args.name, kk.args.list, Fk.docs));
         case "fetch_url":
-          return Ku(await Ru.fetchDocsPage(null !== (yu = uu.args.url) && void 0 !== yu ? yu : ""));
+          return tk(await Fk.fetchDocsPage(null !== (Bk = kk.args.url) && void 0 !== Bk ? Bk : ""));
         case "find_names": {
-          var Qu, mu;
-          const yu = Ru.docs.searchNames(null !== (Qu = uu.args.words) && void 0 !== Qu ? Qu : "", 20);
-          return Ku(yu.length > 0 ? yu.join(", ") : `No block, item or mob name has any of the words "${null!==(mu=uu.args.words)&&void 0!==mu?mu:""}".`)
+          var ak, Xk;
+          const Bk = Fk.docs.searchNames(null !== (ak = kk.args.words) && void 0 !== ak ? ak : "", 20);
+          return tk(Bk.length > 0 ? Bk.join(", ") : `No block, item or mob name has any of the words "${null!==(Xk=kk.args.words)&&void 0!==Xk?Xk:""}".`)
         }
         case "view_errors":
-          return Ku(Ru.errors.length > 0 ? Ru.errors.slice(-30).join("\n") : "Their world showed no errors recently.");
+          return tk(Fk.errors.length > 0 ? Fk.errors.slice(-30).join("\n") : "Their world showed no errors recently.");
         case "list_prefabs":
-          return Ku(eE(uu.args.category));
+          return tk(ER(kk.args.category));
         case "view_prefab":
-          return Ku(function(uu, Ru) {
-            const yu = void 0 === uu ? null : xE(uu);
-            return yu ? AE(yu, Ru) : `There is no prefab called ${null!==uu&&void 0!==uu?uu:"that"}.\n${eE()}`
-          }(uu.args.name, !0 === Ru.showPrefabCode))
+          return tk(function(kk, Fk) {
+            const Bk = void 0 === kk ? null : eR(kk);
+            return Bk ? SR(Bk, Fk) : `There is no prefab called ${null!==kk&&void 0!==kk?kk:"that"}.\n${ER()}`
+          }(kk.args.name, !0 === Fk.showPrefabCode))
       }
-      var Ju, Nu
+      var bk, wk
     }
-    const AK = [
+    const Nt = [
       [/\bme\b/gi, "the player"],
       [/\bmyself\b/gi, "the player"],
       [/\bmy\b/gi, "the player's"],
@@ -6241,206 +6241,206 @@ export const modules = {
       [/\bstolen\b/gi, "taken"]
     ];
 
-    function DK(uu) {
-      let Ru = uu;
-      for (const [yu, Eu] of AK) Ru = Ru.replace(yu, (uu => uu.length > 1 && uu[0] !== uu[0].toLowerCase() && uu.slice(1) === uu.slice(1).toLowerCase() ? Eu[0].toUpperCase() + Eu.slice(1) : Eu));
-      return Ru
+    function Ht(kk) {
+      let Fk = kk;
+      for (const [Bk, Rk] of Nt) Fk = Fk.replace(Bk, (kk => kk.length > 1 && kk[0] !== kk[0].toLowerCase() && kk.slice(1) === kk.slice(1).toLowerCase() ? Rk[0].toUpperCase() + Rk.slice(1) : Rk));
+      return Fk
     }
-    const MK = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      IK = ["Qwen3Guard-Gen-0.6B", "Qwen3Guard-Gen-8B"],
-      GK = ["Qwen3Guard-Gen-8B", "Qwen3Guard-Gen-0.6B"],
-      UK = 12e3,
-      nK = new Set(["Violent", "Non-violent Illegal Acts", "Unethical Acts"]);
+    const ut = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      Mt = ["Qwen3Guard-Gen-0.6B", "Qwen3Guard-Gen-8B"],
+      gt = ["Qwen3Guard-Gen-8B", "Qwen3Guard-Gen-0.6B"],
+      Ut = 12e3,
+      ct = new Set(["Violent", "Non-violent Illegal Acts", "Unethical Acts"]);
 
-    function sK(uu) {
-      var Ru, yu, Eu;
-      const Ku = null === (Ru = /Safety:\s*(\w+)/.exec(uu)) || void 0 === Ru ? void 0 : Ru[1],
-        Qu = null !== (yu = null === (Eu = /Categories:\s*(.+)/.exec(uu)) || void 0 === Eu ? void 0 : Eu[1]) && void 0 !== yu ? yu : "";
-      return /PII/.test(Qu) ? "personalInfo" : "Unsafe" === Ku || /Jailbreak|Sexual|Suicide|Self-Harm/i.test(Qu) ? "unsafe" : "ok"
-    }
-
-    function tK(uu) {
-      var Ru, yu, Eu;
-      const Ku = null === (Ru = /Safety:\s*(\w+)/.exec(uu)) || void 0 === Ru ? void 0 : Ru[1];
-      if (!Ku) return null;
-      const Qu = (null !== (yu = null === (Eu = /Categories:\s*(.+)/.exec(uu)) || void 0 === Eu ? void 0 : Eu[1]) && void 0 !== yu ? yu : "").split(",").map((uu => uu.trim())).filter((uu => "" !== uu && "None" !== uu));
-      return "Safe" !== Ku && Qu.some((uu => /Sexual/.test(uu))) ? "unsafe" : "Unsafe" !== Ku ? "ok" : Qu.length > 0 && Qu.every((uu => nK.has(uu))) ? "maybeGame" : "unsafe"
-    }
-    async function lK(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Eu = await Ru(uu),
-        Ku = null === Eu ? null : tK(Eu);
-      if (null === Ku) return "unchecked";
-      if ("ok" === Ku || "unsafe" === Ku && (!yu || null === Eu || /Sexual/.test(Eu))) return Ku;
-      const Qu = DK(uu);
-      if (Qu === uu) return "unsafe";
-      const mu = await Ru(Qu),
-        Ju = null === mu ? null : tK(mu);
-      return null === Ju ? "unchecked" : "ok" === Ju ? "ok" : "unsafe"
+    function Gt(kk) {
+      var Fk, Bk, Rk;
+      const tk = null === (Fk = /Safety:\s*(\w+)/.exec(kk)) || void 0 === Fk ? void 0 : Fk[1],
+        ak = null !== (Bk = null === (Rk = /Categories:\s*(.+)/.exec(kk)) || void 0 === Rk ? void 0 : Rk[1]) && void 0 !== Bk ? Bk : "";
+      return /PII/.test(ak) ? "personalInfo" : "Unsafe" === tk || /Jailbreak|Sexual|Suicide|Self-Harm/i.test(ak) ? "unsafe" : "ok"
     }
 
-    function gK(uu) {
-      const Ru = [];
-      return FK(uu, 0, !1, Ru), Ru.map((uu => uu.trim())).filter((uu => "" !== uu))
+    function Tt(kk) {
+      var Fk, Bk, Rk;
+      const tk = null === (Fk = /Safety:\s*(\w+)/.exec(kk)) || void 0 === Fk ? void 0 : Fk[1];
+      if (!tk) return null;
+      const ak = (null !== (Bk = null === (Rk = /Categories:\s*(.+)/.exec(kk)) || void 0 === Rk ? void 0 : Rk[1]) && void 0 !== Bk ? Bk : "").split(",").map((kk => kk.trim())).filter((kk => "" !== kk && "None" !== kk));
+      return "Safe" !== tk && ak.some((kk => /Sexual/.test(kk))) ? "unsafe" : "Unsafe" !== tk ? "ok" : ak.length > 0 && ak.every((kk => ct.has(kk))) ? "maybeGame" : "unsafe"
     }
-    const cK = new Set(["return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"]);
-
-    function LK(uu, Ru) {
-      let yu = Ru - 1;
-      for (; yu >= 0 && /\s/.test(uu[yu]);) yu--;
-      if (yu < 0 || /[(,=:[!&|?{};+\-*%<>~^]/.test(uu[yu])) return !0;
-      let Eu = yu;
-      for (; Eu > 0 && /[\w$]/.test(uu[Eu - 1]);) Eu--;
-      return cK.has(uu.slice(Eu, yu + 1))
+    async function rt(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Rk = await Fk(kk),
+        tk = null === Rk ? null : Tt(Rk);
+      if (null === tk) return "unchecked";
+      if ("ok" === tk || "unsafe" === tk && (!Bk || null === Rk || /Sexual/.test(Rk))) return tk;
+      const ak = Ht(kk);
+      if (ak === kk) return "unsafe";
+      const Xk = await Fk(ak),
+        bk = null === Xk ? null : Tt(Xk);
+      return null === bk ? "unchecked" : "ok" === bk ? "ok" : "unsafe"
     }
 
-    function zK(uu, Ru) {
-      let yu = !1;
-      for (let Eu = Ru + 1; Eu < uu.length; Eu++) {
-        const Ru = uu[Eu];
-        if ("\\" === Ru) Eu++;
+    function Dt(kk) {
+      const Fk = [];
+      return qt(kk, 0, !1, Fk), Fk.map((kk => kk.trim())).filter((kk => "" !== kk))
+    }
+    const zt = new Set(["return", "typeof", "case", "do", "else", "in", "of", "new", "delete", "void", "throw", "instanceof", "yield", "await"]);
+
+    function Pt(kk, Fk) {
+      let Bk = Fk - 1;
+      for (; Bk >= 0 && /\s/.test(kk[Bk]);) Bk--;
+      if (Bk < 0 || /[(,=:[!&|?{};+\-*%<>~^]/.test(kk[Bk])) return !0;
+      let Rk = Bk;
+      for (; Rk > 0 && /[\w$]/.test(kk[Rk - 1]);) Rk--;
+      return zt.has(kk.slice(Rk, Bk + 1))
+    }
+
+    function ht(kk, Fk) {
+      let Bk = !1;
+      for (let Rk = Fk + 1; Rk < kk.length; Rk++) {
+        const Fk = kk[Rk];
+        if ("\\" === Fk) Rk++;
         else {
-          if ("\n" === Ru) break;
-          if (yu) yu = "]" !== Ru;
-          else if ("[" === Ru) yu = !0;
-          else if ("/" === Ru) return Eu + 1
+          if ("\n" === Fk) break;
+          if (Bk) Bk = "]" !== Fk;
+          else if ("[" === Fk) Bk = !0;
+          else if ("/" === Fk) return Rk + 1
         }
       }
-      return Ru + 1
+      return Fk + 1
     }
 
-    function FK(uu, Ru, yu, Eu) {
-      let Ku = Ru,
-        Qu = 0;
-      for (; Ku < uu.length;) {
-        const Ru = uu[Ku],
-          mu = uu[Ku + 1];
-        if ("/" === Ru && "/" === mu) {
-          const Ru = uu.indexOf("\n", Ku);
-          Eu.push(uu.slice(Ku + 2, -1 === Ru ? uu.length : Ru)), Ku = -1 === Ru ? uu.length : Ru
-        } else if ("/" === Ru && "*" === mu) {
-          const Ru = uu.indexOf("*/", Ku + 2);
-          Eu.push(uu.slice(Ku + 2, -1 === Ru ? uu.length : Ru)), Ku = -1 === Ru ? uu.length : Ru + 2
-        } else if ("/" === Ru && LK(uu, Ku)) Ku = zK(uu, Ku);
-        else if ('"' === Ru || "'" === Ru || "`" === Ru) {
-          const yu = Eu.length;
-          Eu.push("");
-          let Qu = "";
-          for (Ku++; Ku < uu.length && uu[Ku] !== Ru;) "\\" === uu[Ku] ? (Qu += uu.slice(Ku, Ku + 2), Ku += 2) : "`" === Ru && "$" === uu[Ku] && "{" === uu[Ku + 1] ? (Qu += " ", Ku = FK(uu, Ku + 2, !0, Eu)) : (Qu += uu[Ku], Ku++);
-          Eu[yu] = Qu, Ku++
+    function qt(kk, Fk, Bk, Rk) {
+      let tk = Fk,
+        ak = 0;
+      for (; tk < kk.length;) {
+        const Fk = kk[tk],
+          Xk = kk[tk + 1];
+        if ("/" === Fk && "/" === Xk) {
+          const Fk = kk.indexOf("\n", tk);
+          Rk.push(kk.slice(tk + 2, -1 === Fk ? kk.length : Fk)), tk = -1 === Fk ? kk.length : Fk
+        } else if ("/" === Fk && "*" === Xk) {
+          const Fk = kk.indexOf("*/", tk + 2);
+          Rk.push(kk.slice(tk + 2, -1 === Fk ? kk.length : Fk)), tk = -1 === Fk ? kk.length : Fk + 2
+        } else if ("/" === Fk && Pt(kk, tk)) tk = ht(kk, tk);
+        else if ('"' === Fk || "'" === Fk || "`" === Fk) {
+          const Bk = Rk.length;
+          Rk.push("");
+          let ak = "";
+          for (tk++; tk < kk.length && kk[tk] !== Fk;) "\\" === kk[tk] ? (ak += kk.slice(tk, tk + 2), tk += 2) : "`" === Fk && "$" === kk[tk] && "{" === kk[tk + 1] ? (ak += " ", tk = qt(kk, tk + 2, !0, Rk)) : (ak += kk[tk], tk++);
+          Rk[Bk] = ak, tk++
         } else {
-          if (yu && "{" === Ru) Qu++;
-          else if (yu && "}" === Ru) {
-            if (0 === Qu) return Ku + 1;
-            Qu--
+          if (Bk && "{" === Fk) ak++;
+          else if (Bk && "}" === Fk) {
+            if (0 === ak) return tk + 1;
+            ak--
           }
-          Ku++
+          tk++
         }
       }
-      return Ku
+      return tk
     }
-    const wK = 4e5;
-    var ZK = yu(41068);
-    const hK = 15e3;
-    let PK = [],
-      iK = null;
+    const Ct = 4e5;
+    var Zt = Bk(40905);
+    const pt = 15e3;
+    let Kt = [],
+      xt = null;
 
-    function YK(uu) {
-      return Math.ceil(uu.length / 4)
-    }
-
-    function oK(uu) {
-      return "number" === typeof uu && Number.isInteger(uu) && uu >= 0
+    function jt(kk) {
+      return Math.ceil(kk.length / 4)
     }
 
-    function qK(uu, Ru, yu) {
-      var Eu;
-      let Ku = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      ! function(uu) {
+    function lt(kk) {
+      return "number" === typeof kk && Number.isInteger(kk) && kk >= 0
+    }
+
+    function nt(kk, Fk, Bk) {
+      var Rk;
+      let tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      ! function(kk) {
         if ("undefined" === typeof window) return;
-        if (PK.push(uu), PK.length >= 40) return void OK();
-        iK ??= setTimeout((() => {
-          OK()
-        }), hK)
-      }(null !== (Eu = function(uu) {
-        if (null === uu || "object" !== typeof uu) return null;
+        if (Kt.push(kk), Kt.length >= 40) return void It();
+        xt ??= setTimeout((() => {
+          It()
+        }), pt)
+      }(null !== (Rk = function(kk) {
+        if (null === kk || "object" !== typeof kk) return null;
         const {
-          prompt_tokens: Ru,
-          completion_tokens: yu,
-          prompt_tokens_details: Eu
-        } = uu;
-        if (!oK(Ru) || !oK(yu)) return null;
-        const Ku = null !== Eu && "object" === typeof Eu ? Eu.cached_tokens : void 0;
+          prompt_tokens: Fk,
+          completion_tokens: Bk,
+          prompt_tokens_details: Rk
+        } = kk;
+        if (!lt(Fk) || !lt(Bk)) return null;
+        const tk = null !== Rk && "object" === typeof Rk ? Rk.cached_tokens : void 0;
         return {
-          sent: Ru,
-          cached: oK(Ku) ? Ku : 0,
-          received: yu
+          sent: Fk,
+          cached: lt(tk) ? tk : 0,
+          received: Bk
         }
-      }(uu)) && void 0 !== Eu ? Eu : {
-        sent: YK(JSON.stringify(Ru)),
+      }(kk)) && void 0 !== Rk ? Rk : {
+        sent: jt(JSON.stringify(Fk)),
         cached: 0,
-        received: YK(yu) + Ku
+        received: jt(Bk) + tk
       })
     }
-    async function OK() {
-      null !== iK && (clearTimeout(iK), iK = null);
-      const uu = PK.slice(0, 40);
-      if (PK = PK.slice(40), PK.length > 0 && (iK = setTimeout((() => {
-          OK()
-        }), hK)), 0 !== uu.length) try {
-        await (0, ZK.postToGameServer)("/ai-helper/usage", {
-          calls: uu
+    async function It() {
+      null !== xt && (clearTimeout(xt), xt = null);
+      const kk = Kt.slice(0, 40);
+      if (Kt = Kt.slice(40), Kt.length > 0 && (xt = setTimeout((() => {
+          It()
+        }), pt)), 0 !== kk.length) try {
+        await (0, Zt.postToGameServer)("/ai-helper/usage", {
+          calls: kk
         })
       } catch {}
     }
-    const vK = 6e4;
-    const aK = new class {
+    const Qt = 6e4;
+    const ka = new class {
         constructor() {
           this.calls = new Map, this.fullUntil = new Map
         }
-        record(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          this.calls.set(uu, [...this.recent(uu, Ru), Ru])
+        record(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          this.calls.set(kk, [...this.recent(kk, Fk), Fk])
         }
-        markFull(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          this.fullUntil.set(uu, Ru + vK)
+        markFull(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          this.fullUntil.set(kk, Fk + Qt)
         }
-        callsInLastMinute(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          return this.recent(uu, Ru).length
+        callsInLastMinute(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          return this.recent(kk, Fk).length
         }
-        freeAt(uu) {
-          var Ru;
-          let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          const Eu = this.recent(uu, yu),
-            Ku = Eu.length < 2 ? yu : Eu[Eu.length - 2] + vK;
-          return Math.max(Ku, null !== (Ru = this.fullUntil.get(uu)) && void 0 !== Ru ? Ru : 0, yu)
+        freeAt(kk) {
+          var Fk;
+          let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          const Rk = this.recent(kk, Bk),
+            tk = Rk.length < 2 ? Bk : Rk[Rk.length - 2] + Qt;
+          return Math.max(tk, null !== (Fk = this.fullUntil.get(kk)) && void 0 !== Fk ? Fk : 0, Bk)
         }
-        firstFreeAt(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-          return Math.min(...uu.map((uu => this.freeAt(uu, Ru))))
+        firstFreeAt(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+          return Math.min(...kk.map((kk => this.freeAt(kk, Fk))))
         }
         clear() {
           this.calls.clear(), this.fullUntil.clear()
         }
-        recent(uu, Ru) {
-          var yu;
-          return (null !== (yu = this.calls.get(uu)) && void 0 !== yu ? yu : []).filter((uu => Ru - uu < vK))
+        recent(kk, Fk) {
+          var Bk;
+          return (null !== (Bk = this.calls.get(kk)) && void 0 !== Bk ? Bk : []).filter((kk => Fk - kk < Qt))
         }
       },
-      fK = /\n{3,}/,
-      uQ = /<tool_call\b|<function=/;
+      Fa = /\n{3,}/,
+      Ba = /<tool_call\b|<function=/;
 
-    function RQ(uu) {
-      const Ru = uu.trimStart(),
-        yu = fK.exec(Ru),
-        Eu = uQ.exec(Ru);
-      if (null === yu || null !== Eu && Eu.index < yu.index) return null;
-      const Ku = Ru.slice(yu.index + yu[0].length);
-      return "" === Ku.trim() ? null : Ku
+    function Ra(kk) {
+      const Fk = kk.trimStart(),
+        Bk = Fa.exec(Fk),
+        Rk = Ba.exec(Fk);
+      if (null === Bk || null !== Rk && Rk.index < Bk.index) return null;
+      const tk = Fk.slice(Bk.index + Bk[0].length);
+      return "" === tk.trim() ? null : tk
     }
-    const yQ = [{
+    const ta = [{
       name: "Qwen3.8-27B",
       temperature: .6,
       nativeTools: !0,
@@ -6459,45 +6459,45 @@ export const modules = {
       temperature: 1,
       reasoningEffort: "high"
     }];
-    const EQ = {
+    const aa = {
       name: "Qwen3.6-27B",
       temperature: .6,
       nativeTools: !0,
       callFormat: "qwenXml"
     };
 
-    function KQ(uu) {
-      return [...yQ, EQ].find((Ru => Ru.name === uu))
+    function Xa(kk) {
+      return [...ta, aa].find((Fk => Fk.name === kk))
     }
 
-    function QQ(uu) {
-      var Ru, yu;
-      return null !== (Ru = null === (yu = KQ(uu)) || void 0 === yu ? void 0 : yu.callFormat) && void 0 !== Ru ? Ru : "simple"
+    function ba(kk) {
+      var Fk, Bk;
+      return null !== (Fk = null === (Bk = Xa(kk)) || void 0 === Bk ? void 0 : Bk.callFormat) && void 0 !== Fk ? Fk : "simple"
     }
 
-    function mQ(uu) {
-      var Ru;
+    function wa(kk) {
+      var Fk;
       return {
-        format: null !== (Ru = uu.callFormat) && void 0 !== Ru ? Ru : "simple",
-        nativeTools: !0 === uu.nativeTools
+        format: null !== (Fk = kk.callFormat) && void 0 !== Fk ? Fk : "simple",
+        nativeTools: !0 === kk.nativeTools
       }
     }
 
-    function JQ(uu, Ru) {
-      return "function" === typeof uu ? uu(Ru) : uu
+    function da(kk, Fk) {
+      return "function" === typeof kk ? kk(Fk) : kk
     }
-    const NQ = "TOO_COMPLEX",
-      XQ = `\n\nYou are the quick helper: answer only small requests yourself, and pass everything else to a bigger model by replying with exactly ${NQ} and nothing else.\nAnswer yourself only when the whole change is a few lines doing one or two simple things, such as giving an item, sending a message, teleporting, setting a block or a client option, or one callback that does one of those.\nReply ${NQ} for anything more: a game or minigame, anything where players make choices, take turns or type commands with options, scores, timers, rounds or values that must be kept, more than about 10 new lines, a fix for an error, a question about what the code does, or exporting, saving or publishing the game. Reply ${NQ} too if you aren't sure of an exact api method, option or item name.\nCode runs fresh each time: nothing you write remembers anything from one click or event to the next. So reply ${NQ} to any request that says once, again, already, count, how many, total, times, score, every few seconds, until, wait, after or each player, whatever else it asks. "Everyone" alone is fine.\nThese are too complex: reply ${NQ} to each of them, and to anything like them:\n- "Count how many times each player clicked this block", "Show how many times this block has been clicked in total": a count kept between clicks\n- "Give me a sword but only once", "Give me a sword, but only once" or "only every 10 seconds": remembering who already got it, or when\n- "Make a rock paper scissors game", "Make a parkour course", "Make a quiz": any game, round or win and lose\n- "Make a /give command" or "a /tp command that takes a player's name": commands with options to read\n- "Make a shop where I buy a sword for 10 coins": currencies, prices and checking what a player has\n- "Start a 60 second countdown", "Spawn a zombie every 5 seconds": timers and things that repeat\n- "Put players into two teams", "Show a leaderboard of the top players": sorting or grouping players\n- "Build me a house" or "a tower": many blocks placed in loops\n- "Teleport me somewhere random but safe": finding the ground or a free space\n- "Why doesn't my code work?", "Fix this error", "What does this line do?"\n- "Export the world", "Save my game", "Publish this": exporting the game is for the bigger model\nThese are small enough to answer yourself:\n- "Give me a diamond sword", "Teleport me onto this block", "Put a gold block on top of this one", "Let me fly", "Heal me", "Say hello to everyone"\n- "Welcome players when they join" (one callback with one message)`,
-      VQ = 24e4,
-      rQ = ["tooLarge", "busy", "timeout", "turnedAway", "failed"];
-    class BQ extends Error {
-      constructor(uu) {
-        super(`World Code AI ${uu}`), this.reason = uu
+    const sa = "TOO_COMPLEX",
+      Va = `\n\nYou are the quick helper: answer only small requests yourself, and pass everything else to a bigger model by replying with exactly ${sa} and nothing else.\nAnswer yourself only when the whole change is a few lines doing one or two simple things, such as giving an item, sending a message, teleporting, setting a block or a client option, or one callback that does one of those.\nReply ${sa} for anything more: a game or minigame, anything where players make choices, take turns or type commands with options, scores, timers, rounds or values that must be kept, more than about 10 new lines, a fix for an error, a question about what the code does, or exporting, saving or publishing the game. Reply ${sa} too if you aren't sure of an exact api method, option or item name.\nCode runs fresh each time: nothing you write remembers anything from one click or event to the next. So reply ${sa} to any request that says once, again, already, count, how many, total, times, score, every few seconds, until, wait, after or each player, whatever else it asks. "Everyone" alone is fine.\nThese are too complex: reply ${sa} to each of them, and to anything like them:\n- "Count how many times each player clicked this block", "Show how many times this block has been clicked in total": a count kept between clicks\n- "Give me a sword but only once", "Give me a sword, but only once" or "only every 10 seconds": remembering who already got it, or when\n- "Make a rock paper scissors game", "Make a parkour course", "Make a quiz": any game, round or win and lose\n- "Make a /give command" or "a /tp command that takes a player's name": commands with options to read\n- "Make a shop where I buy a sword for 10 coins": currencies, prices and checking what a player has\n- "Start a 60 second countdown", "Spawn a zombie every 5 seconds": timers and things that repeat\n- "Put players into two teams", "Show a leaderboard of the top players": sorting or grouping players\n- "Build me a house" or "a tower": many blocks placed in loops\n- "Teleport me somewhere random but safe": finding the ground or a free space\n- "Why doesn't my code work?", "Fix this error", "What does this line do?"\n- "Export the world", "Save my game", "Publish this": exporting the game is for the bigger model\nThese are small enough to answer yourself:\n- "Give me a diamond sword", "Teleport me onto this block", "Put a gold block on top of this one", "Let me fly", "Heal me", "Say hello to everyone"\n- "Welcome players when they join" (one callback with one message)`,
+      Ja = 24e4,
+      Aa = ["tooLarge", "busy", "timeout", "turnedAway", "failed"];
+    class ea extends Error {
+      constructor(kk) {
+        super(`World Code AI ${kk}`), this.reason = kk
       }
     }
 
-    function xQ(uu) {
-      switch (uu) {
+    function ya(kk) {
+      switch (kk) {
         case "busy":
           return "Bot.xd is busy right now.";
         case "tooLarge":
@@ -6510,421 +6510,421 @@ export const modules = {
       }
     }
 
-    function SQ(uu, Ru) {
-      var yu, Eu, Ku, Qu, mu;
-      const Ju = uu[null !== (yu = Ru.index) && void 0 !== yu ? yu : 0] ??= {
+    function fa(kk, Fk) {
+      var Bk, Rk, tk, ak, Xk;
+      const bk = kk[null !== (Bk = Fk.index) && void 0 !== Bk ? Bk : 0] ??= {
         name: "",
         args: ""
       };
-      Ju.name += null !== (Eu = null === (Ku = Ru.function) || void 0 === Ku ? void 0 : Ku.name) && void 0 !== Eu ? Eu : "", Ju.args += null !== (Qu = null === (mu = Ru.function) || void 0 === mu ? void 0 : mu.arguments) && void 0 !== Qu ? Qu : ""
+      bk.name += null !== (Rk = null === (tk = Fk.function) || void 0 === tk ? void 0 : tk.name) && void 0 !== Rk ? Rk : "", bk.args += null !== (ak = null === (Xk = Fk.function) || void 0 === Xk ? void 0 : Xk.arguments) && void 0 !== ak ? ak : ""
     }
 
-    function pQ(uu) {
-      return "mcp" === uu ? "simple" : uu
+    function ma(kk) {
+      return "mcp" === kk ? "simple" : kk
     }
 
-    function TQ(uu, Ru, yu, Eu) {
-      let Ku = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      return WQ(uu, Ru, yu, pQ(Eu), Ku).answer
+    function Wa(kk, Fk, Bk, Rk) {
+      let tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      return va(kk, Fk, Bk, ma(Rk), tk).answer
     }
 
-    function WQ(uu, Ru, yu, Eu, Ku) {
-      const Qu = yu.flatMap((uu => {
-        const Ru = Ny(uu.name, uu.args);
-        return null === Ru ? [] : [vE(fR(Eu), Ru.name, Ru.args)]
+    function va(kk, Fk, Bk, Rk, tk) {
+      const ak = Bk.flatMap((kk => {
+        const Fk = dB(kk.name, kk.args);
+        return null === Fk ? [] : [IR(kB(Rk), Fk.name, Fk.args)]
       }));
-      let mu = !1;
-      return 0 !== Qu.length || 0 !== Vy(uu, Eu).length || uu.includes("```") || (Qu.push(...Ku ? [] : function(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        const Eu = new Map;
-        for (const Ju of Xy(uu, Ru)) {
-          const uu = Object.values(Ju.args).some((uu => void 0 !== uu && yu.includes(uu.trim())));
-          var Ku, Qu, mu;
-          "export_game" === Ju.name || "switch_to_world_code" === Ju.name || dR(Ju.name) || uu || Eu.set(`${Ju.name} ${null!==(Ku=Ju.args.path)&&void 0!==Ku?Ku:""} ${null!==(Qu=Ju.args.search)&&void 0!==Qu?Qu:""} ${null!==(mu=Ju.args.name)&&void 0!==mu?mu:""}`, Ju.source)
+      let Xk = !1;
+      return 0 !== ak.length || 0 !== VB(kk, Rk).length || kk.includes("```") || (ak.push(...tk ? [] : function(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+        const Rk = new Map;
+        for (const bk of sB(kk, Fk)) {
+          const kk = Object.values(bk.args).some((kk => void 0 !== kk && Bk.includes(kk.trim())));
+          var tk, ak, Xk;
+          "export_game" === bk.name || "switch_to_world_code" === bk.name || YF(bk.name) || kk || Rk.set(`${bk.name} ${null!==(tk=bk.args.path)&&void 0!==tk?tk:""} ${null!==(ak=bk.args.search)&&void 0!==ak?ak:""} ${null!==(Xk=bk.args.name)&&void 0!==Xk?Xk:""}`, bk.source)
         }
-        return [...new Set(Eu.values())]
-      }(Ru, Eu, JK)), mu = Qu.length > 0), {
-        answer: [uu, ...Qu].join("\n\n").trim(),
-        hasCallsFromReasoning: mu
+        return [...new Set(Rk.values())]
+      }(Fk, Rk, dt)), Xk = ak.length > 0), {
+        answer: [kk, ...ak].join("\n\n").trim(),
+        hasCallsFromReasoning: Xk
       }
     }
-    async function jQ(uu, Ru) {
-      const yu = uu.getReader(),
-        Eu = new TextDecoder;
-      let Ku = "";
+    async function ia(kk, Fk) {
+      const Bk = kk.getReader(),
+        Rk = new TextDecoder;
+      let tk = "";
       for (;;) {
         const {
-          done: uu,
-          value: Qu
-        } = await yu.read();
-        if (uu) break;
-        Ku += Eu.decode(Qu, {
+          done: kk,
+          value: ak
+        } = await Bk.read();
+        if (kk) break;
+        tk += Rk.decode(ak, {
           stream: !0
         });
-        let mu = Ku.indexOf("\n");
-        for (; - 1 !== mu;) {
-          const uu = Ku.slice(0, mu).trim();
-          if (Ku = Ku.slice(mu + 1), mu = Ku.indexOf("\n"), !uu.startsWith("data:")) continue;
-          const yu = uu.slice(5).trim();
-          if ("[DONE]" === yu) return;
-          let Eu;
+        let Xk = tk.indexOf("\n");
+        for (; - 1 !== Xk;) {
+          const kk = tk.slice(0, Xk).trim();
+          if (tk = tk.slice(Xk + 1), Xk = tk.indexOf("\n"), !kk.startsWith("data:")) continue;
+          const Bk = kk.slice(5).trim();
+          if ("[DONE]" === Bk) return;
+          let Rk;
           try {
-            Eu = JSON.parse(yu)
+            Rk = JSON.parse(Bk)
           } catch {
             continue
           }
-          Ru(Eu)
+          Fk(Rk)
         }
       }
     }
 
-    function HQ(uu) {
-      return uu.map((uu => ({
+    function Ya(kk) {
+      return kk.map((kk => ({
         type: "function",
         function: {
-          name: uu.name,
-          description: uu.description,
-          parameters: uu.inputSchema
+          name: kk.name,
+          description: kk.description,
+          parameters: kk.inputSchema
         }
       })))
     }
 
-    function dQ(uu) {
-      return "object" === typeof uu
+    function oa(kk) {
+      return "object" === typeof kk
     }
-    async function bQ(uu, Ru, yu, Eu) {
-      var Ku;
-      let Qu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-      if (aK.freeAt(uu.name) > Date.now()) return "busy";
-      aK.record(uu.name);
-      const mu = await fetch(MK, {
+    async function La(kk, Fk, Bk, Rk) {
+      var tk;
+      let ak = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
+      if (ka.freeAt(kk.name) > Date.now()) return "busy";
+      ka.record(kk.name);
+      const Xk = await fetch(ut, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: uu.name,
-          messages: Ru,
+          model: kk.name,
+          messages: Fk,
           max_tokens: 16e3,
-          temperature: uu.temperature,
-          reasoning_effort: uu.reasoningEffort,
+          temperature: kk.temperature,
+          reasoning_effort: kk.reasoningEffort,
           stream: !0,
           stream_options: {
             include_usage: !0
           },
-          ...uu.nativeTools && Qu.length > 0 ? {
-            tools: HQ(Qu)
+          ...kk.nativeTools && ak.length > 0 ? {
+            tools: Ya(ak)
           } : {}
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: yu
+        signal: Bk
       });
-      if (429 === mu.status) return aK.markFull(uu.name), "busy";
-      if (!mu.ok || !mu.body) return console.warn(`World Code AI: ${uu.name} answered ${mu.status}`), mu.ok ? "failed" : 429 === (Ju = mu.status) ? "busy" : 400 === Ju || 413 === Ju ? "tooLarge" : 401 === Ju || 403 === Ju ? "turnedAway" : "failed";
-      var Ju;
-      let Nu = "",
-        Xu = "";
-      const Vu = [];
-      let ru = !1,
-        Bu = !1,
-        xu = null;
+      if (429 === Xk.status) return ka.markFull(kk.name), "busy";
+      if (!Xk.ok || !Xk.body) return console.warn(`World Code AI: ${kk.name} answered ${Xk.status}`), Xk.ok ? "failed" : 429 === (bk = Xk.status) ? "busy" : 400 === bk || 413 === bk ? "tooLarge" : 401 === bk || 403 === bk ? "turnedAway" : "failed";
+      var bk;
+      let wk = "",
+        dk = "";
+      const sk = [];
+      let Vk = !1,
+        Jk = !1,
+        Ak = null;
       try {
-        await async function(uu, Ru, yu) {
-          await jQ(uu, (uu => {
-            var Eu;
-            const Ku = uu,
-              Qu = null === (Eu = Ku.choices) || void 0 === Eu ? void 0 : Eu[0];
-            var mu, Ju;
-            Qu && Ru(null !== (mu = Qu.delta) && void 0 !== mu ? mu : {}, null !== (Ju = Qu.finish_reason) && void 0 !== Ju ? Ju : null), Ku.usage && (null === yu || void 0 === yu || yu(Ku.usage))
+        await async function(kk, Fk, Bk) {
+          await ia(kk, (kk => {
+            var Rk;
+            const tk = kk,
+              ak = null === (Rk = tk.choices) || void 0 === Rk ? void 0 : Rk[0];
+            var Xk, bk;
+            ak && Fk(null !== (Xk = ak.delta) && void 0 !== Xk ? Xk : {}, null !== (bk = ak.finish_reason) && void 0 !== bk ? bk : null), tk.usage && (null === Bk || void 0 === Bk || Bk(tk.usage))
           }))
-        }(mu.body, ((Ru, yu) => {
-          var Ku, Qu, mu, Ju;
-          ru ||= "length" === yu, Xu += null !== (Ku = null !== (Qu = Ru.reasoning) && void 0 !== Qu ? Qu : Ru.reasoning_content) && void 0 !== Ku ? Ku : "", Nu += null !== (mu = Ru.content) && void 0 !== mu ? mu : "";
-          for (const uu of null !== (xu = Ru.tool_calls) && void 0 !== xu ? xu : []) {
-            var xu;
-            Bu ||= "" !== Xu && "" === Nu.trim(), SQ(Vu, uu)
+        }(Xk.body, ((Fk, Bk) => {
+          var tk, ak, Xk, bk;
+          Vk ||= "length" === Bk, dk += null !== (tk = null !== (ak = Fk.reasoning) && void 0 !== ak ? ak : Fk.reasoning_content) && void 0 !== tk ? tk : "", wk += null !== (Xk = Fk.content) && void 0 !== Xk ? Xk : "";
+          for (const kk of null !== (Ak = Fk.tool_calls) && void 0 !== Ak ? Ak : []) {
+            var Ak;
+            Jk ||= "" !== dk && "" === wk.trim(), fa(sk, kk)
           }
-          const Su = uu.nativeTools && Bu ? null !== (Ju = RQ(Nu)) && void 0 !== Ju ? Ju : "" : Nu;
-          null === Eu || void 0 === Eu || Eu({
-            model: uu.name,
-            reasoningChars: Xu.length,
-            answer: Su,
-            isCalling: Vu.length > 0
+          const ek = kk.nativeTools && Jk ? null !== (bk = Ra(wk)) && void 0 !== bk ? bk : "" : wk;
+          null === Rk || void 0 === Rk || Rk({
+            model: kk.name,
+            reasoningChars: dk.length,
+            answer: ek,
+            isCalling: sk.length > 0
           })
-        }), (uu => {
-          xu = uu
+        }), (kk => {
+          Ak = kk
         }))
       } finally {
-        qK(xu, Ru, Nu + Xu, 20 * Vu.length)
+        nt(Ak, Fk, wk + dk, 20 * sk.length)
       }
-      return null !== (Ku = CQ(uu, Nu, Xu, Vu, ru, Bu)) && void 0 !== Ku ? Ku : "failed"
+      return null !== (tk = Oa(kk, wk, dk, sk, Vk, Jk)) && void 0 !== tk ? tk : "failed"
     }
 
-    function CQ(uu, Ru, yu, Eu, Ku) {
-      var Qu;
-      let mu = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        Ju = Ru;
-      var Nu;
-      uu.nativeTools && mu && (Ju = null !== (Nu = RQ(Ju)) && void 0 !== Nu ? Nu : Ju);
-      Ju = Ju.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-      const Xu = WQ(Ju, yu, Eu, null !== (Qu = uu.callFormat) && void 0 !== Qu ? Qu : "simple", Ku);
-      return "" === Xu.answer ? null : {
-        model: uu.name,
-        answer: Xu.answer,
-        reasoning: yu,
-        isCutShort: Ku,
-        hasCallsFromReasoning: Xu.hasCallsFromReasoning
+    function Oa(kk, Fk, Bk, Rk, tk) {
+      var ak;
+      let Xk = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        bk = Fk;
+      var wk;
+      kk.nativeTools && Xk && (bk = null !== (wk = Ra(bk)) && void 0 !== wk ? wk : bk);
+      bk = bk.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+      const dk = va(bk, Bk, Rk, null !== (ak = kk.callFormat) && void 0 !== ak ? ak : "simple", tk);
+      return "" === dk.answer ? null : {
+        model: kk.name,
+        answer: dk.answer,
+        reasoning: Bk,
+        isCutShort: tk,
+        hasCallsFromReasoning: dk.hasCallsFromReasoning
       }
     }
 
-    function kQ(uu) {
-      return uu.replace(/<think>[\s\S]*?(<\/think>|$)/g, "")
+    function Ea(kk) {
+      return kk.replace(/<think>[\s\S]*?(<\/think>|$)/g, "")
     }
 
-    function eQ(uu) {
-      return dQ(uu) && !uu.isCutShort
+    function Sa(kk) {
+      return oa(kk) && !kk.isCutShort
     }
-    async function AQ(uu, Ru, yu, Eu, Ku) {
-      const Qu = uu.map((() => new AbortController)),
-        mu = () => {
-          for (const uu of Qu) uu.abort()
+    async function Na(kk, Fk, Bk, Rk, tk) {
+      const ak = kk.map((() => new AbortController)),
+        Xk = () => {
+          for (const kk of ak) kk.abort()
         };
-      null !== yu && void 0 !== yu && yu.aborted && mu(), null === yu || void 0 === yu || yu.addEventListener("abort", mu, {
+      null !== Bk && void 0 !== Bk && Bk.aborted && Xk(), null === Bk || void 0 === Bk || Bk.addEventListener("abort", Xk, {
         once: !0
       });
-      const Ju = uu.map((() => {})),
-        Nu = uu.map((() => {}));
-      let Xu = null;
-      const Vu = uu => void 0 !== uu && ("" !== kQ(uu.answer).trim() || !0 === uu.isCalling);
-      let ru = () => {};
-      uu.forEach(((uu, yu) => {
-        const mu = (0, Wu.e)(VQ, Qu[yu].signal);
-        bQ(uu, JQ(Ru, uu), mu.signal, (uu => {
-          Nu[yu] = uu, null === Xu && Vu(uu) && (Xu = yu), Xu === yu && (null === Eu || void 0 === Eu || Eu(uu))
-        }), Ku).catch((Ru => {
-          if (Qu[yu].signal.aborted) return "failed";
-          const Eu = mu.signal.aborted;
-          return console.warn(`World Code AI: ${uu.name} ${Eu?"took longer than 240 s":"couldn't be reached"}`, Ru), Eu ? "timeout" : "failed"
-        })).then((uu => {
-          mu.clear(), Ju[yu] = uu, Xu !== yu || eQ(uu) || (Xu = null), ru()
+      const bk = kk.map((() => {})),
+        wk = kk.map((() => {}));
+      let dk = null;
+      const sk = kk => void 0 !== kk && ("" !== Ea(kk.answer).trim() || !0 === kk.isCalling);
+      let Vk = () => {};
+      kk.forEach(((kk, Bk) => {
+        const Xk = (0, mk.e)(Ja, ak[Bk].signal);
+        La(kk, da(Fk, kk), Xk.signal, (kk => {
+          wk[Bk] = kk, null === dk && sk(kk) && (dk = Bk), dk === Bk && (null === Rk || void 0 === Rk || Rk(kk))
+        }), tk).catch((Fk => {
+          if (ak[Bk].signal.aborted) return "failed";
+          const Rk = Xk.signal.aborted;
+          return console.warn(`World Code AI: ${kk.name} ${Rk?"took longer than 240 s":"couldn't be reached"}`, Fk), Rk ? "timeout" : "failed"
+        })).then((kk => {
+          Xk.clear(), bk[Bk] = kk, dk !== Bk || Sa(kk) || (dk = null), Vk()
         }))
       }));
-      const Bu = () => {
-        var uu;
-        if (null !== Xu) {
-          const uu = Ju[Xu];
-          return eQ(uu) ? {
-            reply: uu
+      const Jk = () => {
+        var kk;
+        if (null !== dk) {
+          const kk = bk[dk];
+          return Sa(kk) ? {
+            reply: kk
           } : void 0
         }
-        const Ru = Ju.find(eQ);
-        if (Ru) return {
-          reply: Ru
+        const Fk = bk.find(Sa);
+        if (Fk) return {
+          reply: Fk
         };
-        if (!Ju.includes(void 0)) return {
-          reply: null !== (uu = Ju.find(dQ)) && void 0 !== uu ? uu : null
+        if (!bk.includes(void 0)) return {
+          reply: null !== (kk = bk.find(oa)) && void 0 !== kk ? kk : null
         };
         {
-          const uu = Ju.findIndex(((uu, Ru) => void 0 === uu && Vu(Nu[Ru])));
-          if (-1 !== uu) {
-            Xu = uu;
-            const Ru = Nu[uu];
-            Ru && (null === Eu || void 0 === Eu || Eu(Ru))
+          const kk = bk.findIndex(((kk, Fk) => void 0 === kk && sk(wk[Fk])));
+          if (-1 !== kk) {
+            dk = kk;
+            const Fk = wk[kk];
+            Fk && (null === Rk || void 0 === Rk || Rk(Fk))
           }
         }
       };
       try {
         for (;;) {
-          if (null !== yu && void 0 !== yu && yu.aborted) throw new DOMException("The World Code AI request was stopped", "AbortError");
-          const uu = Bu();
-          if (uu) {
-            const Ru = Ju.filter((uu => "string" === typeof uu));
+          if (null !== Bk && void 0 !== Bk && Bk.aborted) throw new DOMException("The World Code AI request was stopped", "AbortError");
+          const kk = Jk();
+          if (kk) {
+            const Fk = bk.filter((kk => "string" === typeof kk));
             return {
-              reply: uu.reply,
-              failures: Ru
+              reply: kk.reply,
+              failures: Fk
             }
           }
-          await new Promise((uu => {
-            ru = uu
+          await new Promise((kk => {
+            Vk = kk
           }))
         }
       } finally {
-        null === yu || void 0 === yu || yu.removeEventListener("abort", mu), mu()
+        null === Bk || void 0 === Bk || Bk.removeEventListener("abort", Xk), Xk()
       }
     }
 
-    function DQ() {
-      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-      return aK.firstFreeAt(yQ.map((uu => uu.name)), uu)
+    function Ha() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
+      return ka.firstFreeAt(ta.map((kk => kk.name)), kk)
     }
-    async function MQ(uu) {
-      var Ru;
-      let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const Eu = Date.now(),
-        Ku = null !== (Ru = yu.models) && void 0 !== Ru ? Ru : yQ,
-        Qu = void 0 === yu.models ? function(uu, Ru) {
-          let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-          const Eu = uu.map((uu => ({
-              model: uu,
-              key: yu()
-            }))).sort(((uu, Ru) => uu.key - Ru.key)).map((uu => {
+    async function ua(kk) {
+      var Fk;
+      let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const Rk = Date.now(),
+        tk = null !== (Fk = Bk.models) && void 0 !== Fk ? Fk : ta,
+        ak = void 0 === Bk.models ? function(kk, Fk) {
+          let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+          const Rk = kk.map((kk => ({
+              model: kk,
+              key: Bk()
+            }))).sort(((kk, Fk) => kk.key - Fk.key)).map((kk => {
               let {
-                model: Ru
-              } = uu;
-              return Ru
+                model: Fk
+              } = kk;
+              return Fk
             })),
-            Ku = [...Eu.filter((uu => Ru(uu))), ...Eu.filter((uu => !Ru(uu)))],
-            Qu = [];
-          for (let mu = 0; mu < Ku.length; mu += 2) Qu.push(Ku.slice(mu, mu + 2));
-          return Qu
-        }(Ku, (uu => aK.freeAt(uu.name) <= Eu)) : Ku.map((uu => [uu])),
-        mu = [];
-      for (const Nu of Qu) {
-        const Ru = await AQ(Nu, uu, yu.signal, yu.onProgress, yu.tools);
-        if (null !== Ru.reply) {
-          const Ku = Nu.find((uu => {
-            var yu;
-            return uu.name === (null === (yu = Ru.reply) || void 0 === yu ? void 0 : yu.model)
+            tk = [...Rk.filter((kk => Fk(kk))), ...Rk.filter((kk => !Fk(kk)))],
+            ak = [];
+          for (let Xk = 0; Xk < tk.length; Xk += 2) ak.push(tk.slice(Xk, Xk + 2));
+          return ak
+        }(tk, (kk => ka.freeAt(kk.name) <= Rk)) : tk.map((kk => [kk])),
+        Xk = [];
+      for (const wk of ak) {
+        const Fk = await Na(wk, kk, Bk.signal, Bk.onProgress, Bk.tools);
+        if (null !== Fk.reply) {
+          const tk = wk.find((kk => {
+            var Bk;
+            return kk.name === (null === (Bk = Fk.reply) || void 0 === Bk ? void 0 : Bk.model)
           }));
           return {
-            ...Ku && !1 !== yu.canNudge ? await UQ(Ku, JQ(uu, Ku), Ru.reply, yu.signal, yu.onProgress, yu.tools) : Ru.reply,
-            ms: Date.now() - Eu
+            ...tk && !1 !== Bk.canNudge ? await Ua(tk, da(kk, tk), Fk.reply, Bk.signal, Bk.onProgress, Bk.tools) : Fk.reply,
+            ms: Date.now() - Rk
           }
         }
-        mu.push(...Ru.failures)
+        Xk.push(...Fk.failures)
       }
-      const Ju = rQ.find((uu => mu.includes(uu)));
-      throw new BQ(null !== Ju && void 0 !== Ju ? Ju : "failed")
+      const bk = Aa.find((kk => Xk.includes(kk)));
+      throw new ea(null !== bk && void 0 !== bk ? bk : "failed")
     }
-    const IQ = "You said what you'd change but made no call, so nothing changed. Make the call now, with the code in full.";
+    const Ma = "You said what you'd change but made no call, so nothing changed. Make the call now, with the code in full.";
 
-    function GQ(uu) {
-      const Ru = uu.trim();
-      return Ru.length <= 400 && !/<tool_call|<function=|<\|channel\|>|```/.test(Ru) && !/^\s*(?:\d+[.)]|[-*\u2022])\s/m.test(Ru) && /^(?:I['\u2019]ll|I will|I['\u2019]m going to|We(?:['\u2019]ll| will| need to| should)|Let me(?! know)|Will|Need to)\s(?!not\b|never\b)[^.!?\n]*\b(?:add|change|replace|update|fix|rewrite|write|create|make|edit|remove|put)\b/i.test(Ru)
+    function ga(kk) {
+      const Fk = kk.trim();
+      return Fk.length <= 400 && !/<tool_call|<function=|<\|channel\|>|```/.test(Fk) && !/^\s*(?:\d+[.)]|[-*\u2022])\s/m.test(Fk) && /^(?:I['\u2019]ll|I will|I['\u2019]m going to|We(?:['\u2019]ll| will| need to| should)|Let me(?! know)|Will|Need to)\s(?!not\b|never\b)[^.!?\n]*\b(?:add|change|replace|update|fix|rewrite|write|create|make|edit|remove|put)\b/i.test(Fk)
     }
-    async function UQ(uu, Ru, yu, Eu, Ku, Qu) {
-      var mu;
-      let Ju = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : VQ;
-      if (! function(uu, Ru) {
-          return !uu.isCutShort && GQ(uu.answer) && !uu.answer.includes("?") && 0 === Vy(uu.answer, Ru).length
-        }(yu, null !== (mu = uu.callFormat) && void 0 !== mu ? mu : "simple")) return yu;
-      const Nu = [...Ru, {
+    async function Ua(kk, Fk, Bk, Rk, tk, ak) {
+      var Xk;
+      let bk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Ja;
+      if (! function(kk, Fk) {
+          return !kk.isCutShort && ga(kk.answer) && !kk.answer.includes("?") && 0 === VB(kk.answer, Fk).length
+        }(Bk, null !== (Xk = kk.callFormat) && void 0 !== Xk ? Xk : "simple")) return Bk;
+      const wk = [...Fk, {
           role: "assistant",
-          content: yu.answer
+          content: Bk.answer
         }, {
           role: "user",
-          content: IQ
+          content: Ma
         }],
-        Xu = (0, Wu.e)(Ju, Eu);
+        dk = (0, mk.e)(bk, Rk);
       try {
-        const Ru = await bQ(uu, Nu, Xu.signal, Ku, Qu);
-        return dQ(Ru) && "" !== Ru.answer.trim() ? Ru : yu
-      } catch (Vu) {
-        if (null !== Eu && void 0 !== Eu && Eu.aborted) throw Vu;
-        return yu
+        const Fk = await La(kk, wk, dk.signal, tk, ak);
+        return oa(Fk) && "" !== Fk.answer.trim() ? Fk : Bk
+      } catch (sk) {
+        if (null !== Rk && void 0 !== Rk && Rk.aborted) throw sk;
+        return Bk
       } finally {
-        Xu.clear()
+        dk.clear()
       }
     }
 
-    function nQ(uu) {
-      const Ru = kQ(uu);
-      return /too_complex/i.test(Ru) || /^\W*too[\s_-]*complex\W*$/i.test(Ru.trim())
+    function ca(kk) {
+      const Fk = Ea(kk);
+      return /too_complex/i.test(Fk) || /^\W*too[\s_-]*complex\W*$/i.test(Fk.trim())
     }
 
-    function sQ(uu) {
-      const Ru = kQ(uu).trim();
-      return Ru.length > 19 && !/^\W*too[\s_-]*complex/i.test(Ru)
+    function Ga(kk) {
+      const Fk = Ea(kk).trim();
+      return Fk.length > 19 && !/^\W*too[\s_-]*complex/i.test(Fk)
     }
 
-    function tQ(uu) {
-      return uu.map(((uu, Ru) => 0 === Ru && "system" === uu.role ? {
-        ...uu,
-        content: uu.content + XQ
-      } : uu))
+    function Ta(kk) {
+      return kk.map(((kk, Fk) => 0 === Fk && "system" === kk.role ? {
+        ...kk,
+        content: kk.content + Va
+      } : kk))
     }
-    async function lQ(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      for (const Eu of IK) {
-        const yu = await gQ(Eu, [{
+    async function ra(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      for (const Rk of Mt) {
+        const Bk = await Da(Rk, [{
           role: "user",
-          content: uu
-        }], Ru);
-        if (null !== yu && "busy" !== yu) return sK(yu)
+          content: kk
+        }], Fk);
+        if (null !== Bk && "busy" !== Bk) return Gt(Bk)
       }
-      return yu ? "unchecked" : "ok"
+      return Bk ? "unchecked" : "ok"
     }
-    async function gQ(uu, Ru, yu) {
-      const Eu = (0, Wu.e)(2e4, yu);
-      aK.record(uu);
+    async function Da(kk, Fk, Bk) {
+      const Rk = (0, mk.e)(2e4, Bk);
+      ka.record(kk);
       try {
-        var Ku, Qu, mu, Ju;
-        const yu = await fetch(MK, {
+        var tk, ak, Xk, bk;
+        const Bk = await fetch(ut, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            model: uu,
-            messages: Ru,
+            model: kk,
+            messages: Fk,
             max_tokens: 40
           }),
           credentials: "omit",
           referrerPolicy: "no-referrer",
-          signal: Eu.signal
+          signal: Rk.signal
         });
-        if (429 === yu.status) return aK.markFull(uu), "busy";
-        if (!yu.ok) return null;
-        const Nu = await yu.json(),
-          Xu = String(null !== (Ku = null === (Qu = Nu.choices) || void 0 === Qu || null === (mu = Qu[0]) || void 0 === mu || null === (Ju = mu.message) || void 0 === Ju ? void 0 : Ju.content) && void 0 !== Ku ? Ku : "");
-        return qK(Nu.usage, Ru, Xu),
-          function(uu) {
-            return /Safety:/.test(uu)
-          }(Xu) ? Xu : null
-      } catch (Nu) {
-        if (null !== yu && void 0 !== yu && yu.aborted) throw Nu;
+        if (429 === Bk.status) return ka.markFull(kk), "busy";
+        if (!Bk.ok) return null;
+        const wk = await Bk.json(),
+          dk = String(null !== (tk = null === (ak = wk.choices) || void 0 === ak || null === (Xk = ak[0]) || void 0 === Xk || null === (bk = Xk.message) || void 0 === bk ? void 0 : bk.content) && void 0 !== tk ? tk : "");
+        return nt(wk.usage, Fk, dk),
+          function(kk) {
+            return /Safety:/.test(kk)
+          }(dk) ? dk : null
+      } catch (wk) {
+        if (null !== Bk && void 0 !== Bk && Bk.aborted) throw wk;
         return null
       } finally {
-        Eu.clear()
+        Rk.clear()
       }
     }
-    var cQ = yu(47);
-    const LQ = "aiHelperDataSharing";
+    var za = Bk(42);
+    const Pa = "aiHelperDataSharing";
 
-    function zQ() {
-      const uu = cQ.i.getItem(LQ);
-      return null !== uu && "object" === typeof uu ? uu : {}
+    function ha() {
+      const kk = za.i.getItem(Pa);
+      return null !== kk && "object" === typeof kk ? kk : {}
     }
-    const FQ = new class {
+    const qa = new class {
       constructor() {
-        this.player = null, this.unsaved = new Map, this.listeners = new Set, this.listening = !1, this.subscribe = uu => (this.listen(), this.listeners.add(uu), () => {
-          this.listeners.delete(uu)
+        this.player = null, this.unsaved = new Map, this.listeners = new Set, this.listening = !1, this.subscribe = kk => (this.listen(), this.listeners.add(kk), () => {
+          this.listeners.delete(kk)
         })
       }
       get() {
-        var uu, Ru;
-        return null === this.player ? null : null !== (uu = null !== (Ru = this.unsaved.get(this.player)) && void 0 !== Ru ? Ru : zQ()[this.player]) && void 0 !== uu ? uu : null
+        var kk, Fk;
+        return null === this.player ? null : null !== (kk = null !== (Fk = this.unsaved.get(this.player)) && void 0 !== Fk ? Fk : ha()[this.player]) && void 0 !== kk ? kk : null
       }
       getPlayer() {
         return this.player
       }
       async refresh() {
         this.listen();
-        const uu = await async function() {
-          var uu, Ru;
+        const kk = await async function() {
+          var kk, Fk;
           const {
-            userContextManager: Eu
-          } = await Promise.resolve().then((() => yu(1110)));
-          return null !== (uu = null === (Ru = Eu.peekCurrentUserContext()) || void 0 === Ru ? void 0 : Ru.whamm) && void 0 !== uu ? uu : null
-        }().catch((uu => (console.error("AI Helper: couldn't look up the player for sharing chats", uu), null)));
-        return uu !== this.player && (this.player = uu, this.notify()), this.get()
+            userContextManager: Rk
+          } = await Promise.resolve().then((() => Bk(1101)));
+          return null !== (kk = null === (Fk = Rk.peekCurrentUserContext()) || void 0 === Fk ? void 0 : Fk.whamm) && void 0 !== kk ? kk : null
+        }().catch((kk => (console.error("AI Helper: couldn't look up the player for sharing chats", kk), null)));
+        return kk !== this.player && (this.player = kk, this.notify()), this.get()
       }
-      set(uu) {
-        null !== this.player && (cQ.i.setItem(LQ, {
-          ...zQ(),
-          [this.player]: uu
-        }) ? this.unsaved.delete(this.player) : this.unsaved.set(this.player, uu), this.notify())
+      set(kk) {
+        null !== this.player && (za.i.setItem(Pa, {
+          ...ha(),
+          [this.player]: kk
+        }) ? this.unsaved.delete(this.player) : this.unsaved.set(this.player, kk), this.notify())
       }
       listen() {
         this.listening || (this.listening = !0, window.addEventListener("storage", (() => {
@@ -6932,133 +6932,133 @@ export const modules = {
         })))
       }
       notify() {
-        for (const uu of this.listeners) uu()
+        for (const kk of this.listeners) kk()
       }
     };
-    let wQ = null,
-      ZQ = !1;
-    const hQ = 4e5,
-      PQ = 6e4,
-      iQ = 12,
-      YQ = 9e5;
+    let Ca = null,
+      Za = !1;
+    const pa = 4e5,
+      Ka = 6e4,
+      xa = 12,
+      ja = 9e5;
 
-    function oQ(uu, Ru) {
-      if (uu.length <= Ru) return uu;
-      const yu = `\n[... ${uu.length-Ru} more characters cut]`;
-      let Eu = Math.max(0, Ru - yu.length);
-      const Ku = uu.charCodeAt(Eu - 1);
-      return Ku >= 55296 && Ku <= 56319 && Eu--, uu.slice(0, Eu) + yu
+    function la(kk, Fk) {
+      if (kk.length <= Fk) return kk;
+      const Bk = `\n[... ${kk.length-Fk} more characters cut]`;
+      let Rk = Math.max(0, Fk - Bk.length);
+      const tk = kk.charCodeAt(Rk - 1);
+      return tk >= 55296 && tk <= 56319 && Rk--, kk.slice(0, Rk) + Bk
     }
-    var qQ = yu(614);
+    var na = Bk(608);
 
-    function OQ(uu) {
-      var Ru;
-      return "system" === (null === (Ru = uu[0]) || void 0 === Ru ? void 0 : Ru.role) ? function(uu) {
-        let Ru = 2166136261;
-        for (let yu = 0; yu < uu.length; yu++) Ru ^= uu.charCodeAt(yu), Ru = Math.imul(Ru, 16777619);
-        return (Ru >>> 0).toString(16).padStart(8, "0")
-      }(uu[0].content.split("\n\n## ")[0]) : ""
+    function Ia(kk) {
+      var Fk;
+      return "system" === (null === (Fk = kk[0]) || void 0 === Fk ? void 0 : Fk.role) ? function(kk) {
+        let Fk = 2166136261;
+        for (let Bk = 0; Bk < kk.length; Bk++) Fk ^= kk.charCodeAt(Bk), Fk = Math.imul(Fk, 16777619);
+        return (Fk >>> 0).toString(16).padStart(8, "0")
+      }(kk[0].content.split("\n\n## ")[0]) : ""
     }
 
-    function vQ(uu, Ru, yu) {
-      const Eu = (Ku = Ru.input, JSON.stringify({
-        ...Ku,
+    function Qa(kk, Fk, Bk) {
+      const Rk = (tk = Fk.input, JSON.stringify({
+        ...tk,
         prefabs: void 0
       }));
-      var Ku;
-      return Eu.length > hQ ? null : {
+      var tk;
+      return Rk.length > pa ? null : {
         sentAt: Date.now(),
-        chatId: uu,
-        responder: Ru.responder,
-        promptVersion: Ru.promptVersion,
-        clientVersion: String(qQ.c),
-        request: Eu,
-        responses: [aQ(yu)]
+        chatId: kk,
+        responder: Fk.responder,
+        promptVersion: Fk.promptVersion,
+        clientVersion: String(na.e),
+        request: Rk,
+        responses: [kX(Bk)]
       }
     }
 
-    function aQ(uu) {
+    function kX(kk) {
       return {
-        model: uu.model,
-        text: oQ(uu.text, PQ)
+        model: kk.model,
+        text: la(kk.text, Ka)
       }
     }
-    class fQ {
+    class FX {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Em;
-        this.Px = uu, this.chatId = function() {
-          const uu = new Uint8Array(12);
-          return crypto.getRandomValues(uu), Array.from(uu, (uu => uu.toString(16).padStart(2, "0"))).join("")
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aX;
+        this.ve = kk, this.chatId = function() {
+          const kk = new Uint8Array(12);
+          return crypto.getRandomValues(kk), Array.from(kk, (kk => kk.toString(16).padStart(2, "0"))).join("")
         }(), this.open = new Map
       }
-      requestStarted(uu, Ru) {
-        const yu = this.open.get(uu);
-        yu && (clearTimeout(yu.timer), Ru || (this.open.delete(uu), this.send(yu.Px)))
+      requestStarted(kk, Fk) {
+        const Bk = this.open.get(kk);
+        Bk && (clearTimeout(Bk.timer), Fk || (this.open.delete(kk), this.send(Bk.ve)))
       }
-      answered(uu, Ru, yu) {
-        if ("" === yu.text.trim()) return;
-        const Eu = this.open.get(uu);
-        if (Eu) return void(Eu.Px.responses.length < iQ && Eu.Px.responses.push(aQ(yu)));
-        const Ku = vQ(this.chatId, Ru, yu);
-        Ku && this.open.set(uu, {
-          Px: Ku
+      answered(kk, Fk, Bk) {
+        if ("" === Bk.text.trim()) return;
+        const Rk = this.open.get(kk);
+        if (Rk) return void(Rk.ve.responses.length < xa && Rk.ve.responses.push(kX(Bk)));
+        const tk = Qa(this.chatId, Fk, Bk);
+        tk && this.open.set(kk, {
+          ve: tk
         })
       }
-      drop(uu) {
-        var Ru;
-        clearTimeout(null === (Ru = this.open.get(uu)) || void 0 === Ru ? void 0 : Ru.timer), this.open.delete(uu)
+      drop(kk) {
+        var Fk;
+        clearTimeout(null === (Fk = this.open.get(kk)) || void 0 === Fk ? void 0 : Fk.timer), this.open.delete(kk)
       }
-      requestEnded(uu) {
-        const Ru = this.open.get(uu);
-        Ru && (clearTimeout(Ru.timer), Ru.timer = setTimeout((() => {
-          this.open.delete(uu), this.send(Ru.Px)
+      requestEnded(kk) {
+        const Fk = this.open.get(kk);
+        Fk && (clearTimeout(Fk.timer), Fk.timer = setTimeout((() => {
+          this.open.delete(kk), this.send(Fk.ve)
         }), 2e4))
       }
-      send(uu) {
-        (function(uu) {
-          return (new TextEncoder).encode(JSON.stringify(uu)).length <= YQ
-        })(uu) && this.Px(uu)
+      send(kk) {
+        (function(kk) {
+          return (new TextEncoder).encode(JSON.stringify(kk)).length <= ja
+        })(kk) && this.ve(kk)
       }
     }
-    const um = [],
-      Rm = 5;
-    let ym = !1;
+    const BX = [],
+      RX = 5;
+    let tX = !1;
 
-    function Em(uu) {
+    function aX(kk) {
       (async () => {
-        const Ru = await FQ.refresh(),
-          yu = FQ.getPlayer();
-        "yes" === Ru ? await Qm([uu]) : null === Ru && null !== yu && function(uu, Ru) {
-          ym || (ym = !0, FQ.subscribe(Km));
-          um.push({
-            player: uu,
-            Px: Ru
-          }), um.length > Rm && um.shift()
-        }(yu, uu)
+        const Fk = await qa.refresh(),
+          Bk = qa.getPlayer();
+        "yes" === Fk ? await bX([kk]) : null === Fk && null !== Bk && function(kk, Fk) {
+          tX || (tX = !0, qa.subscribe(XX));
+          BX.push({
+            player: kk,
+            ve: Fk
+          }), BX.length > RX && BX.shift()
+        }(Bk, kk)
       })()
     }
 
-    function Km() {
-      const uu = FQ.get();
-      if (null === uu) return;
-      const Ru = FQ.getPlayer(),
-        yu = um.splice(0).filter((uu => uu.player === Ru));
-      "yes" === uu && yu.length > 0 && Qm(yu.map((uu => uu.Px)))
+    function XX() {
+      const kk = qa.get();
+      if (null === kk) return;
+      const Fk = qa.getPlayer(),
+        Bk = BX.splice(0).filter((kk => kk.player === Fk));
+      "yes" === kk && Bk.length > 0 && bX(Bk.map((kk => kk.ve)))
     }
-    async function Qm(uu) {
-      const Ru = Promise.resolve().then((() => yu(41068)));
-      for (const yu of uu) try {
+    async function bX(kk) {
+      const Fk = Promise.resolve().then((() => Bk(40905)));
+      for (const Bk of kk) try {
         const {
-          postToGameServer: uu
-        } = await Ru;
-        await uu("/ai-helper/turn", yu)
-      } catch (Eu) {
-        console.warn("AI Helper: couldn't share a turn", Eu)
+          postToGameServer: kk
+        } = await Fk;
+        await kk("/ai-helper/turn", Bk)
+      } catch (Rk) {
+        console.warn("AI Helper: couldn't share a turn", Rk)
       }
     }
-    var mm = yu(343),
-      Jm = yu(174);
-    const Nm = {
+    var wX = Bk(291),
+      dX = Bk(152);
+    const sX = {
         openrouter: {
           id: "openrouter",
           name: "OpenRouter",
@@ -7095,292 +7095,292 @@ export const modules = {
           keyPage: ""
         }
       },
-      Xm = ["openrouter", "anthropic", "openai", "gemini", "custom"],
-      Vm = new Set(Object.values(Nm).flatMap((uu => "" === uu.baseUrl ? [] : [new URL(uu.baseUrl).host])));
+      VX = ["openrouter", "anthropic", "openai", "gemini", "custom"],
+      JX = new Set(Object.values(sX).flatMap((kk => "" === kk.baseUrl ? [] : [new URL(kk.baseUrl).host])));
 
-    function rm(uu) {
-      return uu.trim().replace(/^[A-Z_]+\s*=\s*/, "").replace(/^["'`]+|["'`]+$/g, "").replace(/^Bearer\s+/i, "").replace(/\s+/g, "")
+    function AX(kk) {
+      return kk.trim().replace(/^[A-Z_]+\s*=\s*/, "").replace(/^["'`]+|["'`]+$/g, "").replace(/^Bearer\s+/i, "").replace(/\s+/g, "")
     }
 
-    function Bm(uu) {
-      return uu.startsWith("sk-or-") ? "openrouter" : uu.startsWith("sk-ant-") ? "anthropic" : uu.startsWith("AIza") ? "gemini" : uu.startsWith("sk-") ? "openai" : null
+    function eX(kk) {
+      return kk.startsWith("sk-or-") ? "openrouter" : kk.startsWith("sk-ant-") ? "anthropic" : kk.startsWith("AIza") ? "gemini" : kk.startsWith("sk-") ? "openai" : null
     }
 
-    function xm(uu) {
-      let Ru;
+    function yX(kk) {
+      let Fk;
       try {
-        Ru = new URL(uu.trim())
+        Fk = new URL(kk.trim())
       } catch {
         return null
       }
-      const yu = "localhost" === Ru.hostname || "127.0.0.1" === Ru.hostname;
-      return "https:" !== Ru.protocol && ("http:" !== Ru.protocol || !yu) || Ru.username || Ru.password || Ru.search ? null : `${Ru.origin}${Ru.pathname}`.replace(/\/chat\/completions\/?$/, "").replace(/\/+$/, "")
+      const Bk = "localhost" === Fk.hostname || "127.0.0.1" === Fk.hostname;
+      return "https:" !== Fk.protocol && ("http:" !== Fk.protocol || !Bk) || Fk.username || Fk.password || Fk.search ? null : `${Fk.origin}${Fk.pathname}`.replace(/\/chat\/completions\/?$/, "").replace(/\/+$/, "")
     }
 
-    function Sm(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      return "custom" === uu && Ru ? new URL(Ru).host : yu ? Nm[uu].shortName : Nm[uu].name
+    function fX(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      return "custom" === kk && Fk ? new URL(Fk).host : Bk ? sX[kk].shortName : sX[kk].name
     }
-    class pm extends Error {
-      constructor(uu, Ru, yu, Eu) {
-        super(`AI key request: ${uu}`), this.problem = uu, this.retryAfterMs = Ru, this.status = yu, this.detail = Eu
+    class mX extends Error {
+      constructor(kk, Fk, Bk, Rk) {
+        super(`AI key request: ${kk}`), this.problem = kk, this.retryAfterMs = Fk, this.status = Bk, this.detail = Rk
       }
     }
 
-    function Tm(uu, Ru) {
-      return ("" === Ru ? uu : uu.split(Ru).join("\u2026")).replace(/[\w-]{24,}/g, "\u2026")
+    function WX(kk, Fk) {
+      return ("" === Fk ? kk : kk.split(Fk).join("\u2026")).replace(/[\w-]{24,}/g, "\u2026")
     }
 
-    function Wm(uu, Ru) {
-      const yu = "custom" === Ru ? "That server" : Nm[Ru].shortName;
-      switch (uu) {
+    function vX(kk, Fk) {
+      const Bk = "custom" === Fk ? "That server" : sX[Fk].shortName;
+      switch (kk) {
         case "badKey":
-          return `${yu} didn't accept your key: it may be wrong or deleted. Check you copied all of it.`;
+          return `${Bk} didn't accept your key: it may be wrong or deleted. Check you copied all of it.`;
         case "busy":
           return "Too many requests right now. Wait a minute and try again.";
         case "noModel":
-          return `${yu} can't find that model. Check its name.`;
+          return `${Bk} can't find that model. Check its name.`;
         case "unreachable":
-          return "anthropic" === Ru ? "Claude didn't accept your key: check it, or make a new one." : "custom" === Ru ? "Couldn't reach that address. Check it's typed right and the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help." : `Couldn't reach ${yu}. Check your internet and try again.`;
+          return "anthropic" === Fk ? "Claude didn't accept your key: check it, or make a new one." : "custom" === Fk ? "Couldn't reach that address. Check it's typed right and the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help." : `Couldn't reach ${Bk}. Check your internet and try again.`;
         case "noCredit":
-          return "custom" === Ru ? "That server stopped your key for now: it has used all it can." : `${yu} stopped your key for now: it has used all it can. Check it on ${yu}'s website.`;
+          return "custom" === Fk ? "That server stopped your key for now: it has used all it can." : `${Bk} stopped your key for now: it has used all it can. Check it on ${Bk}'s website.`;
         case "blocked":
-          return `${yu} doesn't work from where you are.`;
+          return `${Bk} doesn't work from where you are.`;
         case "timeout":
           return "That took too long. Try again.";
         default:
-          return `${yu} had a problem with that. Try again in a minute.`
+          return `${Bk} had a problem with that. Try again in a minute.`
       }
     }
 
-    function jm(uu) {
-      var Ru;
-      const yu = uu.at(-1);
-      if (!yu || null !== Ny(yu.name, yu.args) || function(uu) {
+    function iX(kk) {
+      var Fk;
+      const Bk = kk.at(-1);
+      if (!Bk || null !== dB(Bk.name, Bk.args) || function(kk) {
           try {
-            return JSON.parse(uu), !0
+            return JSON.parse(kk), !0
           } catch {
             return !1
           }
-        }(yu.args)) return;
-      const Eu = null === (Ru = /"path"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(yu.args)) || void 0 === Ru ? void 0 : Ru[1];
+        }(Bk.args)) return;
+      const Rk = null === (Fk = /"path"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(Bk.args)) || void 0 === Fk ? void 0 : Fk[1];
       return {
-        name: yu.name || "write_file",
-        path: Eu
+        name: Bk.name || "write_file",
+        path: Rk
       }
     }
-    const Hm = 1e4,
-      dm = 3e5,
-      bm = 16e3;
-    async function Cm(uu, Ru, yu, Eu) {
-      if ("custom" !== uu && ! function(uu) {
-          return Vm.has(new URL(uu).host)
-        }(Ru)) throw new Error(`AI key request to an unknown host for ${uu}`);
-      const Ku = await fetch(Ru, {
-        ...yu,
+    const YX = 1e4,
+      oX = 3e5,
+      LX = 16e3;
+    async function OX(kk, Fk, Bk, Rk) {
+      if ("custom" !== kk && ! function(kk) {
+          return JX.has(new URL(kk).host)
+        }(Fk)) throw new Error(`AI key request to an unknown host for ${kk}`);
+      const tk = await fetch(Fk, {
+        ...Bk,
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: Eu
+        signal: Rk
       });
-      if (!Ku.ok) {
-        const Ru = await Ku.text().catch((() => ""));
-        throw console.warn(`AI key request: ${uu} answered ${Ku.status}`), new pm(function(uu, Ru, yu) {
-          const Eu = !("gemini" === uu && 429 === Ru) && /credit|quota|billing|balance|payment|spend|budget|limit[ _]exceeded|key limit/i.test(yu);
-          return 401 === Ru ? "badKey" : 404 !== Ru && 400 !== Ru || !/model_not_found|not_found_error[^\n]{0,80}model:|models?\b[^\n]{0,80}?(does not exist|not found)|no such model|unknown model|(invalid|not a valid) model/i.test(yu) ? 402 === Ru || (400 === Ru || 403 === Ru || 429 === Ru) && Eu && !/rate[ _-]?limit/i.test(yu) ? "noCredit" : 400 === Ru && /(location|region|country|territory)[^\n]{0,40}not supported|unsupported_country/i.test(yu) ? "blocked" : 400 === Ru && /api[ _-]?key/i.test(yu) ? "badKey" : 403 === Ru ? /moderat|flagged/i.test(yu) ? "refused" : /region|country|territor|location/i.test(yu) ? "blocked" : "badKey" : 429 === Ru ? "busy" : "failed" : "noModel"
-        }(uu, Ku.status, Ru), function(uu) {
-          const Ru = uu.headers.get("retry-after");
-          if (!Ru) return;
-          const yu = Number(Ru);
-          return Number.isFinite(yu) ? 1e3 * yu : Math.max(0, Date.parse(Ru) - Date.now()) || void 0
-        }(Ku), Ku.status, function(uu, Ru) {
-          let yu = uu;
+      if (!tk.ok) {
+        const Fk = await tk.text().catch((() => ""));
+        throw console.warn(`AI key request: ${kk} answered ${tk.status}`), new mX(function(kk, Fk, Bk) {
+          const Rk = !("gemini" === kk && 429 === Fk) && /credit|quota|billing|balance|payment|spend|budget|limit[ _]exceeded|key limit/i.test(Bk);
+          return 401 === Fk ? "badKey" : 404 !== Fk && 400 !== Fk || !/model_not_found|not_found_error[^\n]{0,80}model:|models?\b[^\n]{0,80}?(does not exist|not found)|no such model|unknown model|(invalid|not a valid) model/i.test(Bk) ? 402 === Fk || (400 === Fk || 403 === Fk || 429 === Fk) && Rk && !/rate[ _-]?limit/i.test(Bk) ? "noCredit" : 400 === Fk && /(location|region|country|territory)[^\n]{0,40}not supported|unsupported_country/i.test(Bk) ? "blocked" : 400 === Fk && /api[ _-]?key/i.test(Bk) ? "badKey" : 403 === Fk ? /moderat|flagged/i.test(Bk) ? "refused" : /region|country|territor|location/i.test(Bk) ? "blocked" : "badKey" : 429 === Fk ? "busy" : "failed" : "noModel"
+        }(kk, tk.status, Fk), function(kk) {
+          const Fk = kk.headers.get("retry-after");
+          if (!Fk) return;
+          const Bk = Number(Fk);
+          return Number.isFinite(Bk) ? 1e3 * Bk : Math.max(0, Date.parse(Fk) - Date.now()) || void 0
+        }(tk), tk.status, function(kk, Fk) {
+          let Bk = kk;
           try {
-            const Ru = JSON.parse(uu),
-              Eu = Ru.error && "object" === typeof Ru.error ? Ru.error.message : void 0,
-              Ku = [Ru.error, Eu, Ru.message].find((uu => "string" === typeof uu));
-            yu = "string" === typeof Ku ? Ku : uu
+            const Fk = JSON.parse(kk),
+              Rk = Fk.error && "object" === typeof Fk.error ? Fk.error.message : void 0,
+              tk = [Fk.error, Rk, Fk.message].find((kk => "string" === typeof kk));
+            Bk = "string" === typeof tk ? tk : kk
           } catch {}
-          const Eu = Ru.reduce(((uu, Ru) => Tm(uu, Ru)), yu.replace(/\s+/g, " ").trim()).slice(0, 200);
-          return "" === Eu ? void 0 : Eu
-        }(Ru, function(uu) {
-          const Ru = [];
-          return new Headers(uu.headers).forEach(((uu, yu) => {
-            /authorization|key/i.test(yu) && Ru.push(uu, uu.replace(/^Bearer\s+/i, ""))
-          })), Ru.filter((uu => uu.length >= 6))
-        }(yu)))
+          const Rk = Fk.reduce(((kk, Fk) => WX(kk, Fk)), Bk.replace(/\s+/g, " ").trim()).slice(0, 200);
+          return "" === Rk ? void 0 : Rk
+        }(Fk, function(kk) {
+          const Fk = [];
+          return new Headers(kk.headers).forEach(((kk, Bk) => {
+            /authorization|key/i.test(Bk) && Fk.push(kk, kk.replace(/^Bearer\s+/i, ""))
+          })), Fk.filter((kk => kk.length >= 6))
+        }(Bk)))
       }
-      return Ku
+      return tk
     }
-    async function km(uu, Ru, yu) {
-      const Eu = (0, Wu.e)(uu, Ru);
+    async function EX(kk, Fk, Bk) {
+      const Rk = (0, mk.e)(kk, Fk);
       try {
-        return await yu(Eu.signal)
-      } catch (Ku) {
-        if (Ku instanceof pm || null !== Ru && void 0 !== Ru && Ru.aborted) throw Ku;
-        throw Eu.signal.aborted || console.warn("AI key request couldn't be read", Ku), new pm(Eu.signal.aborted ? "timeout" : "unreachable")
+        return await Bk(Rk.signal)
+      } catch (tk) {
+        if (tk instanceof mX || null !== Fk && void 0 !== Fk && Fk.aborted) throw tk;
+        throw Rk.signal.aborted || console.warn("AI key request couldn't be read", tk), new mX(Rk.signal.aborted ? "timeout" : "unreachable")
       } finally {
-        Eu.clear()
+        Rk.clear()
       }
     }
 
-    function em(uu) {
-      let Ru = uu.length;
-      const yu = uu.lastIndexOf("<tool_call"); - 1 === yu || uu.includes("</tool_call>", yu) || (Ru = yu);
-      const Eu = [...uu.matchAll(/\{\s*"(?:jsonrpc|name|tool|method|function)"/g)].find((Ru => null === function(uu, Ru) {
-        let yu = 0,
-          Eu = !1;
-        for (let Ku = Ru; Ku < uu.length; Ku++) {
-          const Ru = uu[Ku];
-          if (Eu) "\\" === Ru ? Ku++ : '"' === Ru && (Eu = !1);
-          else if ('"' === Ru) Eu = !0;
-          else if ("{" === Ru) yu++;
-          else if ("}" === Ru && (yu--, 0 === yu)) return Ku + 1
+    function SX(kk) {
+      let Fk = kk.length;
+      const Bk = kk.lastIndexOf("<tool_call"); - 1 === Bk || kk.includes("</tool_call>", Bk) || (Fk = Bk);
+      const Rk = [...kk.matchAll(/\{\s*"(?:jsonrpc|name|tool|method|function)"/g)].find((Fk => null === function(kk, Fk) {
+        let Bk = 0,
+          Rk = !1;
+        for (let tk = Fk; tk < kk.length; tk++) {
+          const Fk = kk[tk];
+          if (Rk) "\\" === Fk ? tk++ : '"' === Fk && (Rk = !1);
+          else if ('"' === Fk) Rk = !0;
+          else if ("{" === Fk) Bk++;
+          else if ("}" === Fk && (Bk--, 0 === Bk)) return tk + 1
         }
         return null
-      }(uu, Ru.index)));
-      return Eu && Eu.index < Ru && (Ru = Eu.index), uu.slice(0, Ru).replace(/```[\w-]*\s*$/, "").trim()
+      }(kk, Fk.index)));
+      return Rk && Rk.index < Fk && (Fk = Rk.index), kk.slice(0, Fk).replace(/```[\w-]*\s*$/, "").trim()
     }
 
-    function Am(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "simple",
-        Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
+    function NX(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "simple",
+        Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
       const {
-        answer: Ku,
-        reasoning: Qu,
-        UEu: mu,
-        isCutShort: Ju,
-        nativeCalls: Nu = []
-      } = Ru, Xu = Ku.replace(/<think>[\s\S]*?<\/think>/g, ""), Vu = "" === Eu ? Xu.trim() : function(uu, Ru) {
-        var yu, Eu;
-        const Ku = Ru.trimStart(),
-          Qu = uu.trimStart();
-        if (Qu.length >= 16 && Ku.startsWith(Qu.slice(0, 240))) return Ku;
-        const mu = null !== (yu = null === (Eu = uu.match(/```/g)) || void 0 === Eu ? void 0 : Eu.length) && void 0 !== yu ? yu : 0,
-          Ju = em(uu) !== uu.trim() || mu % 2 === 1 ? 48 : 16;
-        for (let Nu = Math.min(uu.length, Ku.length, 4e3); Nu >= Ju; Nu--)
-          if (uu.endsWith(Ku.slice(0, Nu))) return uu + Ku.slice(Nu);
-        return uu + Ru
-      }(Eu, Xu).trim(), ru = TQ(Vu, "", Nu, yu), Bu = TQ(Ju ? em(Vu) : Vu, Qu, Nu, yu, Ju), xu = Ju ? jm(Nu) : void 0;
-      if (mu && "" === Bu) throw new pm("refused");
-      if ("" === Bu && (!Ju || "" === ru && !xu)) throw new pm("failed");
+        answer: tk,
+        reasoning: ak,
+        pBk: Xk,
+        isCutShort: bk,
+        nativeCalls: wk = []
+      } = Fk, dk = tk.replace(/<think>[\s\S]*?<\/think>/g, ""), sk = "" === Rk ? dk.trim() : function(kk, Fk) {
+        var Bk, Rk;
+        const tk = Fk.trimStart(),
+          ak = kk.trimStart();
+        if (ak.length >= 16 && tk.startsWith(ak.slice(0, 240))) return tk;
+        const Xk = null !== (Bk = null === (Rk = kk.match(/```/g)) || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Bk ? Bk : 0,
+          bk = SX(kk) !== kk.trim() || Xk % 2 === 1 ? 48 : 16;
+        for (let wk = Math.min(kk.length, tk.length, 4e3); wk >= bk; wk--)
+          if (kk.endsWith(tk.slice(0, wk))) return kk + tk.slice(wk);
+        return kk + Fk
+      }(Rk, dk).trim(), Vk = Wa(sk, "", wk, Bk), Jk = Wa(bk ? SX(sk) : sk, ak, wk, Bk, bk), Ak = bk ? iX(wk) : void 0;
+      if (Xk && "" === Jk) throw new mX("refused");
+      if ("" === Jk && (!bk || "" === Vk && !Ak)) throw new mX("failed");
       return {
-        model: uu,
-        answer: Bu,
-        reasoning: Qu,
-        isCutShort: Ju,
-        written: Ju ? ru : void 0,
-        cutCall: xu
+        model: kk,
+        answer: Jk,
+        reasoning: ak,
+        isCutShort: bk,
+        written: bk ? Vk : void 0,
+        cutCall: Ak
       }
     }
 
-    function Dm(uu) {
-      const Ru = uu.findIndex((uu => "user" === uu.role));
-      return -1 === Ru ? [] : uu.slice(Ru)
+    function HX(kk) {
+      const Fk = kk.findIndex((kk => "user" === kk.role));
+      return -1 === Fk ? [] : kk.slice(Fk)
     }
 
-    function Mm(uu, Ru) {
-      var yu;
-      const Eu = null !== (yu = Ru.tools) && void 0 !== yu ? yu : [];
-      if (0 === Eu.length) return {};
-      switch (uu) {
+    function uX(kk, Fk) {
+      var Bk;
+      const Rk = null !== (Bk = Fk.tools) && void 0 !== Bk ? Bk : [];
+      if (0 === Rk.length) return {};
+      switch (kk) {
         case "openai":
           return {
-            tools: HQ(Eu)
+            tools: Ya(Rk)
           };
         case "anthropic":
           return {
-            tools: Eu.map((uu => ({
-              name: uu.name,
-              description: uu.description,
-              input_schema: uu.inputSchema
+            tools: Rk.map((kk => ({
+              name: kk.name,
+              description: kk.description,
+              input_schema: kk.inputSchema
             })))
           };
         case "gemini":
           return {
             tools: [{
-              functionDeclarations: Eu.map((uu => {
+              functionDeclarations: Rk.map((kk => {
                 return {
-                  name: uu.name,
-                  description: uu.description,
-                  parameters: (Ru = uu.inputSchema, {
+                  name: kk.name,
+                  description: kk.description,
+                  parameters: (Fk = kk.inputSchema, {
                     type: "OBJECT",
-                    properties: Object.fromEntries(Object.entries(Ru.properties).map((uu => {
-                      let [Ru, yu] = uu;
-                      return [Ru, {
+                    properties: Object.fromEntries(Object.entries(Fk.properties).map((kk => {
+                      let [Fk, Bk] = kk;
+                      return [Fk, {
                         type: "STRING",
-                        description: yu.description
+                        description: Bk.description
                       }]
                     }))),
-                    required: Ru.required
+                    required: Fk.required
                   })
                 };
-                var Ru
+                var Fk
               }))
             }]
           }
       }
     }
-    class Im {
-      constructor(uu, Ru, yu) {
-        this.provider = uu, this.baseUrl = Ru, this.key = yu
+    class MX {
+      constructor(kk, Fk, Bk) {
+        this.provider = kk, this.baseUrl = Fk, this.key = Bk
       }
-      async check(uu) {
-        return km(Hm, uu, (async uu => {
-          var Ru;
-          const yu = await Cm(this.provider, `${this.baseUrl}/models`, {
+      async check(kk) {
+        return EX(YX, kk, (async kk => {
+          var Fk;
+          const Bk = await OX(this.provider, `${this.baseUrl}/models`, {
             headers: this.headers()
-          }, uu);
+          }, kk);
           return {
-            models: (null !== (Ru = (await yu.json()).data) && void 0 !== Ru ? Ru : []).map((uu => ({
-              id: uu.id,
-              name: uu.name
+            models: (null !== (Fk = (await Bk.json()).data) && void 0 !== Fk ? Fk : []).map((kk => ({
+              id: kk.id,
+              name: kk.name
             })))
           }
         }))
       }
-      async ask(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return km(dm, yu.signal, (async Eu => {
-          var Ku;
-          const Qu = await Cm(this.provider, `${this.baseUrl}/chat/completions`, {
+      async ask(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return EX(oX, Bk.signal, (async Rk => {
+          var tk;
+          const ak = await OX(this.provider, `${this.baseUrl}/chat/completions`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
-              model: uu,
-              messages: Ru,
-              ["openai" === this.provider ? "max_completion_tokens" : "max_tokens"]: bm,
+              model: kk,
+              messages: Fk,
+              ["openai" === this.provider ? "max_completion_tokens" : "max_tokens"]: LX,
               stream: !0,
-              ...Mm("openai", yu)
+              ...uX("openai", Bk)
             })
-          }, Eu);
-          let mu = "",
-            Ju = "",
-            Nu = !1,
-            Xu = !1;
-          const Vu = [];
-          return await jQ(null !== (Ku = Qu.body) && void 0 !== Ku ? Ku : new ReadableStream, (Ru => {
-            var Eu, Ku, Qu, ru, Bu, xu, Su, pu;
-            const Tu = Ru;
-            if (Tu.error) throw new pm(402 === Number(Tu.error.code) ? "noCredit" : "failed");
-            const Wu = null === (Eu = Tu.choices) || void 0 === Eu ? void 0 : Eu[0];
-            Ju += null !== (Ku = null !== (Qu = null === Wu || void 0 === Wu || null === (ru = Wu.delta) || void 0 === ru ? void 0 : ru.reasoning) && void 0 !== Qu ? Qu : null === Wu || void 0 === Wu || null === (Bu = Wu.delta) || void 0 === Bu ? void 0 : Bu.reasoning_content) && void 0 !== Ku ? Ku : "", mu += null !== (xu = null === Wu || void 0 === Wu || null === (Su = Wu.delta) || void 0 === Su ? void 0 : Su.content) && void 0 !== xu ? xu : "";
-            for (const uu of null !== (ju = null === Wu || void 0 === Wu || null === (Hu = Wu.delta) || void 0 === Hu ? void 0 : Hu.tool_calls) && void 0 !== ju ? ju : []) {
-              var ju, Hu;
-              SQ(Vu, uu)
+          }, Rk);
+          let Xk = "",
+            bk = "",
+            wk = !1,
+            dk = !1;
+          const sk = [];
+          return await ia(null !== (tk = ak.body) && void 0 !== tk ? tk : new ReadableStream, (Fk => {
+            var Rk, tk, ak, Vk, Jk, Ak, ek, yk;
+            const fk = Fk;
+            if (fk.error) throw new mX(402 === Number(fk.error.code) ? "noCredit" : "failed");
+            const mk = null === (Rk = fk.choices) || void 0 === Rk ? void 0 : Rk[0];
+            bk += null !== (tk = null !== (ak = null === mk || void 0 === mk || null === (Vk = mk.delta) || void 0 === Vk ? void 0 : Vk.reasoning) && void 0 !== ak ? ak : null === mk || void 0 === mk || null === (Jk = mk.delta) || void 0 === Jk ? void 0 : Jk.reasoning_content) && void 0 !== tk ? tk : "", Xk += null !== (Ak = null === mk || void 0 === mk || null === (ek = mk.delta) || void 0 === ek ? void 0 : ek.content) && void 0 !== Ak ? Ak : "";
+            for (const kk of null !== (Wk = null === mk || void 0 === mk || null === (vk = mk.delta) || void 0 === vk ? void 0 : vk.tool_calls) && void 0 !== Wk ? Wk : []) {
+              var Wk, vk;
+              fa(sk, kk)
             }
-            Nu ||= "content_filter" === (null === Wu || void 0 === Wu ? void 0 : Wu.finish_reason), Xu ||= "length" === (null === Wu || void 0 === Wu ? void 0 : Wu.finish_reason), null === (pu = yu.onProgress) || void 0 === pu || pu.call(yu, {
-              model: uu,
-              reasoningChars: Ju.length,
-              answer: mu,
-              isCalling: Vu.length > 0
+            wk ||= "content_filter" === (null === mk || void 0 === mk ? void 0 : mk.finish_reason), dk ||= "length" === (null === mk || void 0 === mk ? void 0 : mk.finish_reason), null === (yk = Bk.onProgress) || void 0 === yk || yk.call(Bk, {
+              model: kk,
+              reasoningChars: bk.length,
+              answer: Xk,
+              isCalling: sk.length > 0
             })
-          })), Am(uu, {
-            answer: mu,
-            reasoning: Ju,
-            UEu: Nu,
-            isCutShort: Xu,
-            nativeCalls: Vu
-          }, yu.callFormat, yu.continueFrom)
+          })), NX(kk, {
+            answer: Xk,
+            reasoning: bk,
+            pBk: wk,
+            isCutShort: dk,
+            nativeCalls: sk
+          }, Bk.callFormat, Bk.continueFrom)
         }))
       }
       headers() {
@@ -7392,99 +7392,99 @@ export const modules = {
         }
       }
     }
-    class Gm {
-      constructor(uu) {
-        this.key = uu, this.chat = void 0, this.chat = new Im("openrouter", Nm.openrouter.baseUrl, uu)
+    class gX {
+      constructor(kk) {
+        this.key = kk, this.chat = void 0, this.chat = new MX("openrouter", sX.openrouter.baseUrl, kk)
       }
-      async check(uu) {
-        return await km(Hm, uu, (async uu => Cm("openrouter", `${Nm.openrouter.baseUrl}/key`, {
+      async check(kk) {
+        return await EX(YX, kk, (async kk => OX("openrouter", `${sX.openrouter.baseUrl}/key`, {
           headers: {
             Authorization: `Bearer ${this.key}`
           }
-        }, uu))), this.chat.check(uu)
+        }, kk))), this.chat.check(kk)
       }
-      ask(uu, Ru, yu) {
-        return this.chat.ask(uu, Ru, yu)
+      ask(kk, Fk, Bk) {
+        return this.chat.ask(kk, Fk, Bk)
       }
     }
-    class Um {
-      constructor(uu) {
-        this.key = uu, this.baseUrl = Nm.anthropic.baseUrl
+    class UX {
+      constructor(kk) {
+        this.key = kk, this.baseUrl = sX.anthropic.baseUrl
       }
-      async check(uu) {
-        return km(Hm, uu, (async uu => {
-          var Ru;
-          const yu = await Cm("anthropic", `${this.baseUrl}/models?limit=1000`, {
+      async check(kk) {
+        return EX(YX, kk, (async kk => {
+          var Fk;
+          const Bk = await OX("anthropic", `${this.baseUrl}/models?limit=1000`, {
             headers: this.headers()
-          }, uu);
+          }, kk);
           return {
-            models: (null !== (Ru = (await yu.json()).data) && void 0 !== Ru ? Ru : []).map((uu => ({
-              id: uu.id,
-              name: uu.display_name
+            models: (null !== (Fk = (await Bk.json()).data) && void 0 !== Fk ? Fk : []).map((kk => ({
+              id: kk.id,
+              name: kk.display_name
             })))
           }
         }))
       }
-      async ask(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Eu = Ru.filter((uu => "system" === uu.role)).map((uu => uu.content)).join("\n\n"),
-          Ku = Dm(Ru).map((uu => ({
-            role: uu.role,
-            content: uu.content
+      async ask(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Rk = Fk.filter((kk => "system" === kk.role)).map((kk => kk.content)).join("\n\n"),
+          tk = HX(Fk).map((kk => ({
+            role: kk.role,
+            content: kk.content
           })));
-        return km(dm, yu.signal, (async Ru => {
-          var Qu;
-          const mu = await Cm("anthropic", `${this.baseUrl}/messages`, {
+        return EX(oX, Bk.signal, (async Fk => {
+          var ak;
+          const Xk = await OX("anthropic", `${this.baseUrl}/messages`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
-              model: uu,
-              max_tokens: bm,
-              system: Eu,
-              messages: Ku,
+              model: kk,
+              max_tokens: LX,
+              system: Rk,
+              messages: tk,
               stream: !0,
-              ...Mm("anthropic", yu)
+              ...uX("anthropic", Bk)
             })
-          }, Ru);
-          let Ju = "",
-            Nu = "",
-            Xu = !1,
-            Vu = !1;
-          const ru = new Map;
-          await jQ(null !== (Qu = mu.body) && void 0 !== Qu ? Qu : new ReadableStream, (Ru => {
-            var Eu, Ku;
-            const Qu = Ru;
-            var mu, Bu, xu, Su;
-            if ("error" === Qu.type) throw new pm("overloaded_error" === (null === (mu = Qu.error) || void 0 === mu ? void 0 : mu.type) || "rate_limit_error" === (null === (Bu = Qu.error) || void 0 === Bu ? void 0 : Bu.type) ? "busy" : "failed");
-            if ("content_block_start" === Qu.type && "tool_use" === (null === (Eu = Qu.content_block) || void 0 === Eu ? void 0 : Eu.type)) ru.set(null !== (xu = Qu.index) && void 0 !== xu ? xu : ru.size, {
-              name: null !== (Su = Qu.content_block.name) && void 0 !== Su ? Su : "",
+          }, Fk);
+          let bk = "",
+            wk = "",
+            dk = !1,
+            sk = !1;
+          const Vk = new Map;
+          await ia(null !== (ak = Xk.body) && void 0 !== ak ? ak : new ReadableStream, (Fk => {
+            var Rk, tk;
+            const ak = Fk;
+            var Xk, Jk, Ak, ek;
+            if ("error" === ak.type) throw new mX("overloaded_error" === (null === (Xk = ak.error) || void 0 === Xk ? void 0 : Xk.type) || "rate_limit_error" === (null === (Jk = ak.error) || void 0 === Jk ? void 0 : Jk.type) ? "busy" : "failed");
+            if ("content_block_start" === ak.type && "tool_use" === (null === (Rk = ak.content_block) || void 0 === Rk ? void 0 : Rk.type)) Vk.set(null !== (Ak = ak.index) && void 0 !== Ak ? Ak : Vk.size, {
+              name: null !== (ek = ak.content_block.name) && void 0 !== ek ? ek : "",
               args: ""
             });
-            else if ("content_block_delta" === Qu.type) {
-              var pu, Tu, Wu, ju, Hu, du;
-              Ju += null !== (pu = null === (Tu = Qu.delta) || void 0 === Tu ? void 0 : Tu.text) && void 0 !== pu ? pu : "", Nu += null !== (Wu = null === (ju = Qu.delta) || void 0 === ju ? void 0 : ju.thinking) && void 0 !== Wu ? Wu : "";
-              const uu = ru.get(null !== (Hu = Qu.index) && void 0 !== Hu ? Hu : -1);
-              var bu;
-              if (uu && "input_json_delta" === (null === (du = Qu.delta) || void 0 === du ? void 0 : du.type)) uu.args += null !== (bu = Qu.delta.partial_json) && void 0 !== bu ? bu : ""
-            } else if ("message_delta" === Qu.type) {
-              var Cu, ku;
-              Xu ||= "refusal" === (null === (Cu = Qu.delta) || void 0 === Cu ? void 0 : Cu.stop_reason), Vu ||= "max_tokens" === (null === (ku = Qu.delta) || void 0 === ku ? void 0 : ku.stop_reason)
+            else if ("content_block_delta" === ak.type) {
+              var yk, fk, mk, Wk, vk, ik;
+              bk += null !== (yk = null === (fk = ak.delta) || void 0 === fk ? void 0 : fk.text) && void 0 !== yk ? yk : "", wk += null !== (mk = null === (Wk = ak.delta) || void 0 === Wk ? void 0 : Wk.thinking) && void 0 !== mk ? mk : "";
+              const kk = Vk.get(null !== (vk = ak.index) && void 0 !== vk ? vk : -1);
+              var Yk;
+              if (kk && "input_json_delta" === (null === (ik = ak.delta) || void 0 === ik ? void 0 : ik.type)) kk.args += null !== (Yk = ak.delta.partial_json) && void 0 !== Yk ? Yk : ""
+            } else if ("message_delta" === ak.type) {
+              var Lk, Ok;
+              dk ||= "refusal" === (null === (Lk = ak.delta) || void 0 === Lk ? void 0 : Lk.stop_reason), sk ||= "max_tokens" === (null === (Ok = ak.delta) || void 0 === Ok ? void 0 : Ok.stop_reason)
             }
-            null === (Ku = yu.onProgress) || void 0 === Ku || Ku.call(yu, {
-              model: uu,
-              reasoningChars: Nu.length,
-              answer: Ju,
-              isCalling: ru.size > 0
+            null === (tk = Bk.onProgress) || void 0 === tk || tk.call(Bk, {
+              model: kk,
+              reasoningChars: wk.length,
+              answer: bk,
+              isCalling: Vk.size > 0
             })
           }));
-          const Bu = [...ru.values()];
-          return Am(uu, {
-            answer: Ju,
-            reasoning: Nu,
-            UEu: Xu,
-            isCutShort: Vu,
-            nativeCalls: Bu
-          }, yu.callFormat, yu.continueFrom)
+          const Jk = [...Vk.values()];
+          return NX(kk, {
+            answer: bk,
+            reasoning: wk,
+            pBk: dk,
+            isCutShort: sk,
+            nativeCalls: Jk
+          }, Bk.callFormat, Bk.continueFrom)
         }))
       }
       headers() {
@@ -7496,90 +7496,90 @@ export const modules = {
         }
       }
     }
-    class nm {
-      constructor(uu) {
-        this.key = uu, this.baseUrl = Nm.gemini.baseUrl
+    class cX {
+      constructor(kk) {
+        this.key = kk, this.baseUrl = sX.gemini.baseUrl
       }
-      async check(uu) {
-        return km(Hm, uu, (async uu => {
-          var Ru;
-          const yu = await Cm("gemini", `${this.baseUrl}/models?pageSize=1000`, {
+      async check(kk) {
+        return EX(YX, kk, (async kk => {
+          var Fk;
+          const Bk = await OX("gemini", `${this.baseUrl}/models?pageSize=1000`, {
             headers: this.headers()
-          }, uu);
+          }, kk);
           return {
-            models: (null !== (Ru = (await yu.json()).models) && void 0 !== Ru ? Ru : []).filter((uu => {
-              var Ru, yu;
-              return null === (Ru = null === (yu = uu.supportedGenerationMethods) || void 0 === yu ? void 0 : yu.includes("generateContent")) || void 0 === Ru || Ru
-            })).map((uu => ({
-              id: uu.name.replace(/^models\//, ""),
-              name: uu.displayName
+            models: (null !== (Fk = (await Bk.json()).models) && void 0 !== Fk ? Fk : []).filter((kk => {
+              var Fk, Bk;
+              return null === (Fk = null === (Bk = kk.supportedGenerationMethods) || void 0 === Bk ? void 0 : Bk.includes("generateContent")) || void 0 === Fk || Fk
+            })).map((kk => ({
+              id: kk.name.replace(/^models\//, ""),
+              name: kk.displayName
             })))
           }
         }))
       }
-      async ask(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Eu = Ru.filter((uu => "system" === uu.role)).map((uu => ({
-            text: uu.content
+      async ask(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Rk = Fk.filter((kk => "system" === kk.role)).map((kk => ({
+            text: kk.content
           }))),
-          Ku = Dm(Ru).map((uu => ({
-            role: "assistant" === uu.role ? "model" : "user",
+          tk = HX(Fk).map((kk => ({
+            role: "assistant" === kk.role ? "model" : "user",
             parts: [{
-              text: uu.content
+              text: kk.content
             }]
           })));
-        return km(dm, yu.signal, (async Ru => {
-          var Qu;
-          const mu = await Cm("gemini", `${this.baseUrl}/models/${encodeURIComponent(uu)}:streamGenerateContent?alt=sse`, {
+        return EX(oX, Bk.signal, (async Fk => {
+          var ak;
+          const Xk = await OX("gemini", `${this.baseUrl}/models/${encodeURIComponent(kk)}:streamGenerateContent?alt=sse`, {
             method: "POST",
             headers: this.headers(),
             body: JSON.stringify({
               systemInstruction: {
-                parts: Eu
+                parts: Rk
               },
-              contents: Ku,
+              contents: tk,
               generationConfig: {
-                maxOutputTokens: bm
+                maxOutputTokens: LX
               },
-              ...Mm("gemini", yu)
+              ...uX("gemini", Bk)
             })
-          }, Ru);
-          let Ju = "",
-            Nu = "",
-            Xu = !1,
-            Vu = !1;
-          const ru = [];
-          return await jQ(null !== (Qu = mu.body) && void 0 !== Qu ? Qu : new ReadableStream, (Ru => {
-            var Eu, Ku, Qu;
-            const mu = Ru,
-              Bu = null === (Eu = mu.candidates) || void 0 === Eu ? void 0 : Eu[0];
-            for (const uu of null !== (xu = null === Bu || void 0 === Bu || null === (Su = Bu.content) || void 0 === Su ? void 0 : Su.parts) && void 0 !== xu ? xu : []) {
-              var xu, Su, pu, Tu;
-              if (uu.functionCall) ru.push({
-                name: null !== (pu = uu.functionCall.name) && void 0 !== pu ? pu : "",
-                args: JSON.stringify(null !== (Tu = uu.functionCall.args) && void 0 !== Tu ? Tu : {})
+          }, Fk);
+          let bk = "",
+            wk = "",
+            dk = !1,
+            sk = !1;
+          const Vk = [];
+          return await ia(null !== (ak = Xk.body) && void 0 !== ak ? ak : new ReadableStream, (Fk => {
+            var Rk, tk, ak;
+            const Xk = Fk,
+              Jk = null === (Rk = Xk.candidates) || void 0 === Rk ? void 0 : Rk[0];
+            for (const kk of null !== (Ak = null === Jk || void 0 === Jk || null === (ek = Jk.content) || void 0 === ek ? void 0 : ek.parts) && void 0 !== Ak ? Ak : []) {
+              var Ak, ek, yk, fk;
+              if (kk.functionCall) Vk.push({
+                name: null !== (yk = kk.functionCall.name) && void 0 !== yk ? yk : "",
+                args: JSON.stringify(null !== (fk = kk.functionCall.args) && void 0 !== fk ? fk : {})
               });
-              else if (uu.thought) {
-                var Wu;
-                Nu += null !== (Wu = uu.text) && void 0 !== Wu ? Wu : ""
+              else if (kk.thought) {
+                var mk;
+                wk += null !== (mk = kk.text) && void 0 !== mk ? mk : ""
               } else {
-                var ju;
-                Ju += null !== (ju = uu.text) && void 0 !== ju ? ju : ""
+                var Wk;
+                bk += null !== (Wk = kk.text) && void 0 !== Wk ? Wk : ""
               }
             }
-            Xu ||= void 0 !== (null === (Ku = mu.promptFeedback) || void 0 === Ku ? void 0 : Ku.blockReason) || "SAFETY" === (null === Bu || void 0 === Bu ? void 0 : Bu.finishReason) || "PROHIBITED_CONTENT" === (null === Bu || void 0 === Bu ? void 0 : Bu.finishReason), Vu ||= "MAX_TOKENS" === (null === Bu || void 0 === Bu ? void 0 : Bu.finishReason), null === (Qu = yu.onProgress) || void 0 === Qu || Qu.call(yu, {
-              model: uu,
-              reasoningChars: Nu.length,
-              answer: Ju,
-              isCalling: ru.length > 0
+            dk ||= void 0 !== (null === (tk = Xk.promptFeedback) || void 0 === tk ? void 0 : tk.blockReason) || "SAFETY" === (null === Jk || void 0 === Jk ? void 0 : Jk.finishReason) || "PROHIBITED_CONTENT" === (null === Jk || void 0 === Jk ? void 0 : Jk.finishReason), sk ||= "MAX_TOKENS" === (null === Jk || void 0 === Jk ? void 0 : Jk.finishReason), null === (ak = Bk.onProgress) || void 0 === ak || ak.call(Bk, {
+              model: kk,
+              reasoningChars: wk.length,
+              answer: bk,
+              isCalling: Vk.length > 0
             })
-          })), Am(uu, {
-            answer: Ju,
-            reasoning: Nu,
-            UEu: Xu,
-            isCutShort: Vu,
-            nativeCalls: ru
-          }, yu.callFormat, yu.continueFrom)
+          })), NX(kk, {
+            answer: bk,
+            reasoning: wk,
+            pBk: dk,
+            isCutShort: sk,
+            nativeCalls: Vk
+          }, Bk.callFormat, Bk.continueFrom)
         }))
       }
       headers() {
@@ -7590,26 +7590,26 @@ export const modules = {
       }
     }
 
-    function sm(uu, Ru, yu) {
-      switch (uu) {
+    function GX(kk, Fk, Bk) {
+      switch (kk) {
         case "openrouter":
-          return new Gm(Ru);
+          return new gX(Fk);
         case "anthropic":
-          return new Um(Ru);
+          return new UX(Fk);
         case "gemini":
-          return new nm(Ru);
+          return new cX(Fk);
         case "openai":
-          return new Im("openai", Nm.openai.baseUrl, Ru);
+          return new MX("openai", sX.openai.baseUrl, Fk);
         case "custom":
-          return new Im("custom", null !== yu && void 0 !== yu ? yu : "", Ru)
+          return new MX("custom", null !== Bk && void 0 !== Bk ? Bk : "", Fk)
       }
     }
-    const tm = {
+    const TX = {
         fast: "Fast",
         smart: "Smart",
         smartest: "Smartest"
       },
-      lm = {
+      rX = {
         anthropic: {
           fast: [{
             id: "claude-haiku-5-5",
@@ -7716,436 +7716,436 @@ export const modules = {
         }
       };
 
-    function gm(uu) {
-      return /claude-(sonnet|opus|fable)|gpt-5(\.\d+)?($|-codex|-pro|-sol)|gpt-6(\.\d+)?-(sol|astra)|gemini-[\d.]+-pro|gemini-4/.test(uu) ? "mcp" : "simple"
+    function DX(kk) {
+      return /claude-(sonnet|opus|fable)|gpt-5(\.\d+)?($|-codex|-pro|-sol)|gpt-6(\.\d+)?-(sol|astra)|gemini-[\d.]+-pro|gemini-4/.test(kk) ? "mcp" : "simple"
     }
 
-    function cm(uu, Ru) {
-      return "custom" !== uu && /claude-|gpt-|gemini-/.test(Ru)
+    function zX(kk, Fk) {
+      return "custom" !== kk && /claude-|gpt-|gemini-/.test(Fk)
     }
 
-    function Lm(uu, Ru, yu) {
-      var Eu;
-      const Ku = yu.find((uu => uu.id === Ru));
+    function PX(kk, Fk, Bk) {
+      var Rk;
+      const tk = Bk.find((kk => kk.id === Fk));
       return {
-        id: Ru,
-        name: null !== (Eu = null === Ku || void 0 === Ku ? void 0 : Ku.name) && void 0 !== Eu ? Eu : Ru,
-        callFormat: gm(Ru),
-        nativeTools: cm(uu, Ru)
+        id: Fk,
+        name: null !== (Rk = null === tk || void 0 === tk ? void 0 : tk.name) && void 0 !== Rk ? Rk : Fk,
+        callFormat: DX(Fk),
+        nativeTools: zX(kk, Fk)
       }
     }
 
-    function zm(uu, Ru) {
-      return "custom" !== uu ? function(uu, Ru) {
-        if ("custom" === uu) return [];
-        const yu = new Set(Ru.map((uu => uu.id))),
-          Eu = lm[uu];
-        return Object.keys(Eu).flatMap((Ku => {
-          const Qu = Eu[Ku].find((uu => yu.has(uu.id)));
-          return Qu ? [{
-            ...Lm(uu, Qu.id, Ru),
-            name: Qu.name,
-            tier: Ku
+    function hX(kk, Fk) {
+      return "custom" !== kk ? function(kk, Fk) {
+        if ("custom" === kk) return [];
+        const Bk = new Set(Fk.map((kk => kk.id))),
+          Rk = rX[kk];
+        return Object.keys(Rk).flatMap((tk => {
+          const ak = Rk[tk].find((kk => Bk.has(kk.id)));
+          return ak ? [{
+            ...PX(kk, ak.id, Fk),
+            name: ak.name,
+            tier: tk
           }] : []
         }))
-      }(uu, Ru) : Ru.slice(0, 20).map((yu => Lm(uu, yu.id, Ru)))
+      }(kk, Fk) : Fk.slice(0, 20).map((Bk => PX(kk, Bk.id, Fk)))
     }
 
-    function Fm(uu) {
-      var Ru;
-      return null !== (Ru = uu.find((uu => "smart" === uu.tier))) && void 0 !== Ru ? Ru : uu[0]
+    function qX(kk) {
+      var Fk;
+      return null !== (Fk = kk.find((kk => "smart" === kk.tier))) && void 0 !== Fk ? Fk : kk[0]
     }
 
-    function wm(uu) {
-      var Ru;
-      let yu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      return null !== (Ru = uu.name) && void 0 !== Ru ? Ru : Sm(uu.provider, uu.baseUrl, yu)
+    function CX(kk) {
+      var Fk;
+      let Bk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      return null !== (Fk = kk.name) && void 0 !== Fk ? Fk : fX(kk.provider, kk.baseUrl, Bk)
     }
-    const Zm = "bloxdAiHelperKeys",
-      hm = {
+    const ZX = "bloxdAiHelperKeys",
+      pX = {
         keys: [],
         selected: null,
         remember: !1
       };
 
-    function Pm(uu, Ru) {
-      return uu.id === Ru.id || "custom" === uu.provider && "custom" === Ru.provider && uu.baseUrl === Ru.baseUrl
+    function KX(kk, Fk) {
+      return kk.id === Fk.id || "custom" === kk.provider && "custom" === Fk.provider && kk.baseUrl === Fk.baseUrl
     }
 
-    function im(uu) {
-      if ("custom" !== uu.provider) return !0;
+    function xX(kk) {
+      if ("custom" !== kk.provider) return !0;
       try {
-        var Ru;
-        return new URL(null !== (Ru = uu.baseUrl) && void 0 !== Ru ? Ru : "").protocol.startsWith("http")
+        var Fk;
+        return new URL(null !== (Fk = kk.baseUrl) && void 0 !== Fk ? Fk : "").protocol.startsWith("http")
       } catch {
         return !1
       }
     }
 
-    function Ym(uu) {
+    function jX(kk) {
       try {
-        return "undefined" === typeof window ? null : window[uu]
-      } catch (Ru) {
-        return console.warn(`AI Helper: no ${uu}`, Ru), null
+        return "undefined" === typeof window ? null : window[kk]
+      } catch (Fk) {
+        return console.warn(`AI Helper: no ${kk}`, Fk), null
       }
     }
-    const om = new class {
-      constructor(uu, Ru) {
-        var yu;
-        this.session = uu, this.local = Ru, this.state = void 0, this.listeners = new Set, this.ownsRemembered = !1, this.lastUsedAt = 0, this.getState = () => this.state, this.subscribe = uu => (this.listeners.add(uu), () => {
-          this.listeners.delete(uu)
+    const lX = new class {
+      constructor(kk, Fk) {
+        var Bk;
+        this.session = kk, this.local = Fk, this.state = void 0, this.listeners = new Set, this.ownsRemembered = !1, this.lastUsedAt = 0, this.getState = () => this.state, this.subscribe = kk => (this.listeners.add(kk), () => {
+          this.listeners.delete(kk)
         });
-        for (const Qu of [uu, Ru]) null !== Qu && void 0 !== Qu && Qu.getItem(Zm) && !this.read(Qu) && Qu.removeItem(Zm);
-        const Eu = this.read(uu),
-          Ku = this.read(Ru);
-        this.state = null !== Eu && void 0 !== Eu && Eu.remember ? null !== Ku && void 0 !== Ku && Ku.remember ? Ku : {
-          ...Eu,
+        for (const ak of [kk, Fk]) null !== ak && void 0 !== ak && ak.getItem(ZX) && !this.read(ak) && ak.removeItem(ZX);
+        const Rk = this.read(kk),
+          tk = this.read(Fk);
+        this.state = null !== Rk && void 0 !== Rk && Rk.remember ? null !== tk && void 0 !== tk && tk.remember ? tk : {
+          ...Rk,
           remember: !1
-        } : null !== (yu = null !== Eu && void 0 !== Eu ? Eu : Ku) && void 0 !== yu ? yu : hm, this.ownsRemembered = this.state.remember && null !== Ku
+        } : null !== (Bk = null !== Rk && void 0 !== Rk ? Rk : tk) && void 0 !== Bk ? Bk : pX, this.ownsRemembered = this.state.remember && null !== tk
       }
       nextUsedAt() {
         return this.lastUsedAt = Math.max(Date.now(), this.lastUsedAt + 1), this.lastUsedAt
       }
       activeKey() {
-        const uu = this.state.selected,
-          Ru = uu ? this.state.keys.find((Ru => Ru.id === uu.keyId)) : void 0,
-          yu = null === Ru || void 0 === Ru ? void 0 : Ru.models.find((Ru => Ru.id === (null === uu || void 0 === uu ? void 0 : uu.modelId)));
-        return Ru && yu ? {
-          ...Ru,
-          model: yu
+        const kk = this.state.selected,
+          Fk = kk ? this.state.keys.find((Fk => Fk.id === kk.keyId)) : void 0,
+          Bk = null === Fk || void 0 === Fk ? void 0 : Fk.models.find((Fk => Fk.id === (null === kk || void 0 === kk ? void 0 : kk.modelId)));
+        return Fk && Bk ? {
+          ...Fk,
+          model: Bk
         } : null
       }
-      addKey(uu, Ru, yu) {
-        var Eu, Ku, Qu;
-        const mu = this.state.keys.find((Ru => "custom" === Ru.provider && Ru.baseUrl === uu.baseUrl)),
-          Ju = "custom" !== uu.provider ? uu.provider : null !== (Eu = null === mu || void 0 === mu ? void 0 : mu.id) && void 0 !== Eu ? Eu : `custom-${Date.now().toString(36)}${Math.random().toString(36).slice(2,6)}`,
-          Nu = void 0 === Ru ? Fm(uu.models) : null !== (Ku = uu.models.find((uu => uu.id === Ru))) && void 0 !== Ku ? Ku : uu.models[0],
-          Xu = this.state.keys.find((uu => uu.id === Ju)),
-          Vu = {
-            ...uu,
-            id: Ju,
+      addKey(kk, Fk, Bk) {
+        var Rk, tk, ak;
+        const Xk = this.state.keys.find((Fk => "custom" === Fk.provider && Fk.baseUrl === kk.baseUrl)),
+          bk = "custom" !== kk.provider ? kk.provider : null !== (Rk = null === Xk || void 0 === Xk ? void 0 : Xk.id) && void 0 !== Rk ? Rk : `custom-${Date.now().toString(36)}${Math.random().toString(36).slice(2,6)}`,
+          wk = void 0 === Fk ? qX(kk.models) : null !== (tk = kk.models.find((kk => kk.id === Fk))) && void 0 !== tk ? tk : kk.models[0],
+          dk = this.state.keys.find((kk => kk.id === bk)),
+          sk = {
+            ...kk,
+            id: bk,
             usedAt: this.nextUsedAt(),
-            ...Nu ? {
-              usedModelId: Nu.id
+            ...wk ? {
+              usedModelId: wk.id
             } : {},
-            ...null !== Xu && void 0 !== Xu && Xu.name && !uu.name ? {
-              name: Xu.name
+            ...null !== dk && void 0 !== dk && dk.name && !kk.name ? {
+              name: dk.name
             } : {}
           },
-          ru = this.state.keys.every((uu => uu.id !== Ju)),
-          Bu = void 0 !== yu && yu !== Ju && this.state.keys.some((uu => uu.id === yu)),
-          xu = Bu ? this.state.keys.filter((uu => uu.id !== Ju)).map((uu => uu.id === yu ? Vu : uu)) : ru ? [...this.state.keys, Vu] : this.state.keys.map((uu => uu.id === Ju ? Vu : uu)),
-          Su = Nu ? {
-            keyId: Ju,
-            modelId: Nu.id
-          } : (null === (Qu = this.state.selected) || void 0 === Qu ? void 0 : Qu.keyId) === yu && Bu ? null : this.state.selected;
+          Vk = this.state.keys.every((kk => kk.id !== bk)),
+          Jk = void 0 !== Bk && Bk !== bk && this.state.keys.some((kk => kk.id === Bk)),
+          Ak = Jk ? this.state.keys.filter((kk => kk.id !== bk)).map((kk => kk.id === Bk ? sk : kk)) : Vk ? [...this.state.keys, sk] : this.state.keys.map((kk => kk.id === bk ? sk : kk)),
+          ek = wk ? {
+            keyId: bk,
+            modelId: wk.id
+          } : (null === (ak = this.state.selected) || void 0 === ak ? void 0 : ak.keyId) === Bk && Jk ? null : this.state.selected;
         return this.update({
-          keys: xu,
-          selected: Su
-        }), Ju
+          keys: Ak,
+          selected: ek
+        }), bk
       }
-      renameKey(uu, Ru) {
-        const yu = Ru.replace(/\s+/g, " ").trim().slice(0, 30);
+      renameKey(kk, Fk) {
+        const Bk = Fk.replace(/\s+/g, " ").trim().slice(0, 30);
         this.update({
-          keys: this.state.keys.map((Ru => {
-            if (Ru.id !== uu) return Ru;
+          keys: this.state.keys.map((Fk => {
+            if (Fk.id !== kk) return Fk;
             const {
-              name: Eu,
-              ...Ku
-            } = Ru;
-            return "" === yu ? Ku : {
-              ...Ku,
-              name: yu
+              name: Rk,
+              ...tk
+            } = Fk;
+            return "" === Bk ? tk : {
+              ...tk,
+              name: Bk
             }
           }))
         })
       }
-      select(uu) {
-        const Ru = this.nextUsedAt(),
-          yu = null === uu ? this.state.keys : this.state.keys.map((yu => yu.id === uu.keyId ? {
-            ...yu,
-            usedAt: Ru,
-            usedModelId: uu.modelId
-          } : yu));
+      select(kk) {
+        const Fk = this.nextUsedAt(),
+          Bk = null === kk ? this.state.keys : this.state.keys.map((Bk => Bk.id === kk.keyId ? {
+            ...Bk,
+            usedAt: Fk,
+            usedModelId: kk.modelId
+          } : Bk));
         this.update({
-          keys: yu,
-          selected: uu
+          keys: Bk,
+          selected: kk
         })
       }
-      refreshModels(uu, Ru, yu) {
-        const Eu = this.state.keys.find((Ru => Ru.id === uu));
-        if (!Eu || yu && (Eu.key !== yu.key || Eu.baseUrl !== yu.baseUrl)) return !1;
-        const Ku = [...Ru.map((uu => {
-            const Ru = Eu.models.find((Ru => Ru.id === uu.id));
+      refreshModels(kk, Fk, Bk) {
+        const Rk = this.state.keys.find((Fk => Fk.id === kk));
+        if (!Rk || Bk && (Rk.key !== Bk.key || Rk.baseUrl !== Bk.baseUrl)) return !1;
+        const tk = [...Fk.map((kk => {
+            const Fk = Rk.models.find((Fk => Fk.id === kk.id));
             return {
-              ...uu,
-              ...!1 === (null === Ru || void 0 === Ru ? void 0 : Ru.nativeTools) ? {
+              ...kk,
+              ...!1 === (null === Fk || void 0 === Fk ? void 0 : Fk.nativeTools) ? {
                 nativeTools: !1
               } : {},
-              ...null !== Ru && void 0 !== Ru && Ru.typed ? {
+              ...null !== Fk && void 0 !== Fk && Fk.typed ? {
                 typed: !0
               } : {}
             }
-          })), ...Eu.models.filter((uu => uu.typed && !Ru.some((Ru => Ru.id === uu.id))))],
-          Qu = this.state.selected,
-          mu = (null === Qu || void 0 === Qu ? void 0 : Qu.keyId) === uu && !Ku.some((uu => uu.id === Qu.modelId)),
-          Ju = Fm(Ku);
+          })), ...Rk.models.filter((kk => kk.typed && !Fk.some((Fk => Fk.id === kk.id))))],
+          ak = this.state.selected,
+          Xk = (null === ak || void 0 === ak ? void 0 : ak.keyId) === kk && !tk.some((kk => kk.id === ak.modelId)),
+          bk = qX(tk);
         return this.update({
-          keys: this.state.keys.map((Ru => Ru.id === uu ? {
-            ...Ru,
-            models: Ku
-          } : Ru)),
-          selected: mu ? Ju ? {
-            keyId: uu,
-            modelId: Ju.id
-          } : null : Qu
+          keys: this.state.keys.map((Fk => Fk.id === kk ? {
+            ...Fk,
+            models: tk
+          } : Fk)),
+          selected: Xk ? bk ? {
+            keyId: kk,
+            modelId: bk.id
+          } : null : ak
         }), !0
       }
-      stopNativeTools(uu, Ru) {
+      stopNativeTools(kk, Fk) {
         this.update({
-          keys: this.state.keys.map((yu => {
-            if (yu.id !== uu) return yu;
-            const Eu = yu.models.map((uu => uu.id === Ru ? {
-              ...uu,
+          keys: this.state.keys.map((Bk => {
+            if (Bk.id !== kk) return Bk;
+            const Rk = Bk.models.map((kk => kk.id === Fk ? {
+              ...kk,
               nativeTools: !1
-            } : uu));
+            } : kk));
             return {
-              ...yu,
-              models: Eu
+              ...Bk,
+              models: Rk
             }
           }))
         })
       }
-      removeKey(uu) {
-        var Ru;
-        const yu = this.state,
-          Eu = yu.keys.findIndex((Ru => Ru.id === uu)),
-          Ku = yu.keys[Eu];
-        if (!Ku) return () => {};
-        const Qu = yu.keys.filter((Ru => Ru.id !== uu)),
-          mu = (null === (Ru = yu.selected) || void 0 === Ru ? void 0 : Ru.keyId) === uu ? null : yu.selected;
+      removeKey(kk) {
+        var Fk;
+        const Bk = this.state,
+          Rk = Bk.keys.findIndex((Fk => Fk.id === kk)),
+          tk = Bk.keys[Rk];
+        if (!tk) return () => {};
+        const ak = Bk.keys.filter((Fk => Fk.id !== kk)),
+          Xk = (null === (Fk = Bk.selected) || void 0 === Fk ? void 0 : Fk.keyId) === kk ? null : Bk.selected;
         return this.update({
-          keys: Qu,
-          selected: mu,
-          remember: Qu.length > 0 && yu.remember
+          keys: ak,
+          selected: Xk,
+          remember: ak.length > 0 && Bk.remember
         }), () => {
-          var Ru;
-          const Qu = this.state.keys.some((uu => Pm(uu, Ku)));
-          if (Qu) return;
-          const mu = [...this.state.keys];
-          mu.splice(Math.min(Eu, mu.length), 0, Ku);
-          const Ju = (null === (Ru = yu.selected) || void 0 === Ru ? void 0 : Ru.keyId) === uu && null === this.state.selected;
+          var Fk;
+          const ak = this.state.keys.some((kk => KX(kk, tk)));
+          if (ak) return;
+          const Xk = [...this.state.keys];
+          Xk.splice(Math.min(Rk, Xk.length), 0, tk);
+          const bk = (null === (Fk = Bk.selected) || void 0 === Fk ? void 0 : Fk.keyId) === kk && null === this.state.selected;
           this.update({
-            keys: mu,
-            selected: Ju ? yu.selected : this.state.selected,
-            remember: this.state.remember || yu.remember
+            keys: Xk,
+            selected: bk ? Bk.selected : this.state.selected,
+            remember: this.state.remember || Bk.remember
           })
         }
       }
       removeAll() {
-        this.update(hm), this.local && null !== this.local.getItem(Zm) && (this.local.setItem(Zm, JSON.stringify(hm)), this.local.removeItem(Zm))
+        this.update(pX), this.local && null !== this.local.getItem(ZX) && (this.local.setItem(ZX, JSON.stringify(pX)), this.local.removeItem(ZX))
       }
-      setRemember(uu) {
-        var Ru;
-        const yu = uu && !this.ownsRemembered ? this.read(this.local) : null,
-          Eu = (null !== (Ru = null === yu || void 0 === yu ? void 0 : yu.keys) && void 0 !== Ru ? Ru : []).filter((uu => this.state.keys.every((Ru => !Pm(Ru, uu)))));
+      setRemember(kk) {
+        var Fk;
+        const Bk = kk && !this.ownsRemembered ? this.read(this.local) : null,
+          Rk = (null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.keys) && void 0 !== Fk ? Fk : []).filter((kk => this.state.keys.every((Fk => !KX(Fk, kk)))));
         this.update({
-          remember: uu,
-          keys: [...Eu, ...this.state.keys]
+          remember: kk,
+          keys: [...Rk, ...this.state.keys]
         })
       }
-      otherTabChanged(uu) {
-        var Ru;
+      otherTabChanged(kk) {
+        var Fk;
         if (!this.state.remember) return;
-        const yu = uu ? this.parse(uu) : null;
-        yu ? (this.state = yu, this.ownsRemembered = yu.remember) : (this.ownsRemembered = !1, this.state = {
+        const Bk = kk ? this.parse(kk) : null;
+        Bk ? (this.state = Bk, this.ownsRemembered = Bk.remember) : (this.ownsRemembered = !1, this.state = {
           ...this.state,
           remember: !1
-        }), null === (Ru = this.session) || void 0 === Ru || Ru.setItem(Zm, JSON.stringify(this.state)), this.notify()
+        }), null === (Fk = this.session) || void 0 === Fk || Fk.setItem(ZX, JSON.stringify(this.state)), this.notify()
       }
       notify() {
-        for (const uu of this.listeners) uu()
+        for (const kk of this.listeners) kk()
       }
-      update(uu) {
-        var Ru;
+      update(kk) {
+        var Fk;
         this.state = {
           ...this.state,
-          ...uu
+          ...kk
         };
-        const yu = JSON.stringify(this.state);
-        var Eu;
-        if (null === (Ru = this.session) || void 0 === Ru || Ru.setItem(Zm, yu), this.state.remember && this.state.keys.length > 0) null === (Eu = this.local) || void 0 === Eu || Eu.setItem(Zm, yu), this.ownsRemembered = !0;
+        const Bk = JSON.stringify(this.state);
+        var Rk;
+        if (null === (Fk = this.session) || void 0 === Fk || Fk.setItem(ZX, Bk), this.state.remember && this.state.keys.length > 0) null === (Rk = this.local) || void 0 === Rk || Rk.setItem(ZX, Bk), this.ownsRemembered = !0;
         else if (this.ownsRemembered) {
-          var Ku, Qu;
-          if (0 === this.state.keys.length) null === (Qu = this.local) || void 0 === Qu || Qu.setItem(Zm, JSON.stringify(hm));
-          null === (Ku = this.local) || void 0 === Ku || Ku.removeItem(Zm), this.ownsRemembered = !1
+          var tk, ak;
+          if (0 === this.state.keys.length) null === (ak = this.local) || void 0 === ak || ak.setItem(ZX, JSON.stringify(pX));
+          null === (tk = this.local) || void 0 === tk || tk.removeItem(ZX), this.ownsRemembered = !1
         }
         this.notify()
       }
-      read(uu) {
-        const Ru = null === uu || void 0 === uu ? void 0 : uu.getItem(Zm);
-        return Ru ? this.parse(Ru) : null
+      read(kk) {
+        const Fk = null === kk || void 0 === kk ? void 0 : kk.getItem(ZX);
+        return Fk ? this.parse(Fk) : null
       }
-      parse(uu) {
+      parse(kk) {
         try {
-          const Ru = {
-            ...hm,
-            ...JSON.parse(uu)
+          const Fk = {
+            ...pX,
+            ...JSON.parse(kk)
           };
-          return Array.isArray(Ru.keys) && Ru.keys.every(im) ? Ru : (console.warn("AI Helper: saved keys are in a form this version doesn't read"), null)
-        } catch (Ru) {
-          return console.warn("AI Helper: saved keys couldn't be read", Ru instanceof Error ? Ru.name : "error"), null
+          return Array.isArray(Fk.keys) && Fk.keys.every(xX) ? Fk : (console.warn("AI Helper: saved keys are in a form this version doesn't read"), null)
+        } catch (Fk) {
+          return console.warn("AI Helper: saved keys couldn't be read", Fk instanceof Error ? Fk.name : "error"), null
         }
       }
-    }(Ym("sessionStorage"), Ym("localStorage"));
+    }(jX("sessionStorage"), jX("localStorage"));
 
-    function qm() {
-      const uu = function() {
-          const [uu, Ru] = (0, Eu.useState)(om.getState);
-          return (0, Eu.useEffect)((() => (Ru(om.getState()), om.subscribe((() => {
-            Ru(om.getState())
-          })))), []), uu
+    function nX() {
+      const kk = function() {
+          const [kk, Fk] = (0, Rk.useState)(lX.getState);
+          return (0, Rk.useEffect)((() => (Fk(lX.getState()), lX.subscribe((() => {
+            Fk(lX.getState())
+          })))), []), kk
         }(),
-        Ru = om.activeKey();
+        Fk = lX.activeKey();
       return {
-        ...uu,
-        active: Ru,
-        isSelected: yu => {
-          return (Eu = Ru ? uu.selected : null) === (Ku = yu) || null !== Eu && null !== Ku && Eu.keyId === Ku.keyId && Eu.modelId === Ku.modelId;
-          var Eu, Ku
+        ...kk,
+        active: Fk,
+        isSelected: Bk => {
+          return (Rk = Fk ? kk.selected : null) === (tk = Bk) || null !== Rk && null !== tk && Rk.keyId === tk.keyId && Rk.modelId === tk.modelId;
+          var Rk, tk
         },
-        select: uu => {
-          om.select(uu)
+        select: kk => {
+          lX.select(kk)
         },
-        removeKey: uu => om.removeKey(uu),
-        renameKey: (uu, Ru) => {
-          om.renameKey(uu, Ru)
+        removeKey: kk => lX.removeKey(kk),
+        renameKey: (kk, Fk) => {
+          lX.renameKey(kk, Fk)
         },
-        setRemember: uu => {
-          om.setRemember(uu)
+        setRemember: kk => {
+          lX.setRemember(kk)
         }
       }
     }
-    async function Om(uu, Ru) {
-      var yu;
+    async function IX(kk, Fk) {
+      var Bk;
       let {
-        provider: Eu,
-        key: Ku,
-        baseUrl: Qu,
-        modelName: mu
-      } = uu;
-      const Ju = null !== (yu = null === mu || void 0 === mu ? void 0 : mu.trim()) && void 0 !== yu ? yu : "";
-      let Nu = [];
+        provider: Rk,
+        key: tk,
+        baseUrl: ak,
+        modelName: Xk
+      } = kk;
+      const bk = null !== (Bk = null === Xk || void 0 === Xk ? void 0 : Xk.trim()) && void 0 !== Bk ? Bk : "";
+      let wk = [];
       try {
-        Nu = (await sm(Eu, Ku, Qu).check(Ru)).models
-      } catch (Xu) {
-        if (!("custom" === Eu && Xu instanceof pm && ("failed" === Xu.problem || "noModel" === Xu.problem))) throw Xu
+        wk = (await GX(Rk, tk, ak).check(Fk)).models
+      } catch (dk) {
+        if (!("custom" === Rk && dk instanceof mX && ("failed" === dk.problem || "noModel" === dk.problem))) throw dk
       }
-      if (null !== Ru && void 0 !== Ru && Ru.aborted) throw new DOMException("The AI key test was stopped", "AbortError");
-      return "" !== Ju ? [{
-        ...Lm(Eu, Ju, Nu),
+      if (null !== Fk && void 0 !== Fk && Fk.aborted) throw new DOMException("The AI key test was stopped", "AbortError");
+      return "" !== bk ? [{
+        ...PX(Rk, bk, wk),
         typed: !0
-      }] : zm(Eu, Nu)
+      }] : hX(Rk, wk)
     }
-    "undefined" !== typeof window && window.addEventListener("storage", (uu => {
-      uu.storageArea === Ym("localStorage") && uu.key === Zm && om.otherTabChanged(uu.newValue)
+    "undefined" !== typeof window && window.addEventListener("storage", (kk => {
+      kk.storageArea === jX("localStorage") && kk.key === ZX && lX.otherTabChanged(kk.newValue)
     }));
-    async function am(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Eu = sm(uu.provider, uu.key, uu.baseUrl);
-      let Ku = {
-        ...yu,
-        callFormat: uu.model.callFormat,
-        tools: uu.model.nativeTools ? yu.tools : void 0
+    async function QX(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const Rk = GX(kk.provider, kk.key, kk.baseUrl);
+      let tk = {
+        ...Bk,
+        callFormat: kk.model.callFormat,
+        tools: kk.model.nativeTools ? Bk.tools : void 0
       };
-      const Qu = async () => {
+      const ak = async () => {
         try {
-          return await Eu.ask(uu.model.id, Ru, Ku)
-        } catch (yu) {
-          if (! function(uu, Ru) {
-              var yu, Eu, Ku;
-              return 0 !== (null !== (yu = null === (Eu = Ru.tools) || void 0 === Eu ? void 0 : Eu.length) && void 0 !== yu ? yu : 0) && uu instanceof pm && "failed" === uu.problem && (400 === uu.status || 404 === uu.status && /\btool/i.test(null !== (Ku = uu.detail) && void 0 !== Ku ? Ku : ""))
-            }(yu, Ku)) throw yu;
-          const Qu = {
-              ...Ku,
+          return await Rk.ask(kk.model.id, Fk, tk)
+        } catch (Bk) {
+          if (! function(kk, Fk) {
+              var Bk, Rk, tk;
+              return 0 !== (null !== (Bk = null === (Rk = Fk.tools) || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Bk ? Bk : 0) && kk instanceof mX && "failed" === kk.problem && (400 === kk.status || 404 === kk.status && /\btool/i.test(null !== (tk = kk.detail) && void 0 !== tk ? tk : ""))
+            }(Bk, tk)) throw Bk;
+          const ak = {
+              ...tk,
               tools: void 0
             },
-            mu = await Eu.ask(uu.model.id, Ru, Qu);
-          return om.stopNativeTools(uu.id, uu.model.id), Ku = Qu, mu
+            Xk = await Rk.ask(kk.model.id, Fk, ak);
+          return lX.stopNativeTools(kk.id, kk.model.id), tk = ak, Xk
         }
       };
       try {
-        return await Qu()
-      } catch (ru) {
-        var mu, Ju;
-        if (!((Vu = ru) instanceof pm && void 0 !== Vu.status && "noCredit" !== Vu.problem && (429 === Vu.status || 408 === Vu.status || Vu.status >= 500))) throw ru;
-        return await (Nu = Math.min(null !== (mu = null !== (Ju = ru.retryAfterMs) && void 0 !== Ju ? Ju : yu.retryWaitMs) && void 0 !== mu ? mu : 3e3, 2e4), Xu = yu.signal, new Promise(((uu, Ru) => {
-          if (null !== Xu && void 0 !== Xu && Xu.aborted) return void Ru(new DOMException("The AI key request was stopped", "AbortError"));
-          const yu = setTimeout(uu, Nu);
-          null === Xu || void 0 === Xu || Xu.addEventListener("abort", (() => {
-            clearTimeout(yu), Ru(new DOMException("The AI key request was stopped", "AbortError"))
+        return await ak()
+      } catch (Vk) {
+        var Xk, bk;
+        if (!((sk = Vk) instanceof mX && void 0 !== sk.status && "noCredit" !== sk.problem && (429 === sk.status || 408 === sk.status || sk.status >= 500))) throw Vk;
+        return await (wk = Math.min(null !== (Xk = null !== (bk = Vk.retryAfterMs) && void 0 !== bk ? bk : Bk.retryWaitMs) && void 0 !== Xk ? Xk : 3e3, 2e4), dk = Bk.signal, new Promise(((kk, Fk) => {
+          if (null !== dk && void 0 !== dk && dk.aborted) return void Fk(new DOMException("The AI key request was stopped", "AbortError"));
+          const Bk = setTimeout(kk, wk);
+          null === dk || void 0 === dk || dk.addEventListener("abort", (() => {
+            clearTimeout(Bk), Fk(new DOMException("The AI key request was stopped", "AbortError"))
           }), {
             once: !0
           })
-        }))), Qu()
+        }))), ak()
       }
-      var Nu, Xu, Vu
+      var wk, dk, sk
     }
-    var fm = yu(3459);
-    const uJ = "Super Bot.xd",
-      RJ = {
+    var kb = Bk(3439);
+    const Fb = "Super Bot.xd",
+      Bb = {
         ovh: {
-          name: uJ,
+          name: Fb,
           temperature: .6,
           nativeTools: !0,
           callFormat: "qwenXml"
         },
         deepseek: {
-          name: uJ,
+          name: Fb,
           temperature: 1,
           nativeTools: !0,
           callFormat: "deepseek"
         }
       };
-    const yJ = "bloxdAiHelperSuperBot",
-      EJ = "bloxdAiHelperDeepSeekNotice";
+    const Rb = "bloxdAiHelperSuperBot",
+      tb = "bloxdAiHelperDeepSeekNotice";
 
-    function KJ(uu) {
-      if ("deepseek" !== uu) return !0;
+    function ab(kk) {
+      if ("deepseek" !== kk) return !0;
       try {
-        return "undefined" !== typeof window && "1" === window.localStorage.getItem(EJ)
+        return "undefined" !== typeof window && "1" === window.localStorage.getItem(tb)
       } catch {
         return !1
       }
     }
 
-    function QJ() {
+    function Xb() {
       try {
-        return "undefined" !== typeof window && "1" === window.sessionStorage.getItem(yJ)
+        return "undefined" !== typeof window && "1" === window.sessionStorage.getItem(Rb)
       } catch {
         return !1
       }
     }
-    const mJ = new class {
+    const bb = new class {
       constructor() {
-        this.state = void 0, this.listeners = new Set, this.refreshing = null, this.getState = () => this.state, this.subscribe = uu => (this.listeners.add(uu), () => {
-          this.listeners.delete(uu)
+        this.state = void 0, this.listeners = new Set, this.refreshing = null, this.getState = () => this.state, this.subscribe = kk => (this.listeners.add(kk), () => {
+          this.listeners.delete(kk)
         }), this.state = {
-          picked: QJ(),
+          picked: Xb(),
           status: null,
           canBuySuperRank: null
-        }, om.subscribe((() => {
-          null !== om.getState().selected && this.state.picked && this.update({
+        }, lX.subscribe((() => {
+          null !== lX.getState().selected && this.state.picked && this.update({
             picked: !1
           })
         }))
       }
       isAnswering() {
-        var uu;
-        return this.state.picked && "ok" === (null === (uu = this.state.status) || void 0 === uu ? void 0 : uu.availability)
+        var kk;
+        return this.state.picked && "ok" === (null === (kk = this.state.status) || void 0 === kk ? void 0 : kk.availability)
       }
-      cB() {
-        om.select(null), this.update({
+      AA() {
+        lX.select(null), this.update({
           picked: !0
         })
       }
@@ -8154,105 +8154,105 @@ export const modules = {
           picked: !1
         })
       }
-      setStatus(uu) {
-        const Ru = this.state.picked && VJ(uu, this.state.canBuySuperRank) && KJ(uu.provider);
+      setStatus(kk) {
+        const Fk = this.state.picked && Vb(kk, this.state.canBuySuperRank) && ab(kk.provider);
         this.update({
-          status: uu,
-          picked: Ru
+          status: kk,
+          picked: Fk
         })
       }
-      setCanBuySuperRank(uu) {
+      setCanBuySuperRank(kk) {
         const {
-          status: Ru
+          status: Fk
         } = this.state;
         this.update({
-          canBuySuperRank: uu,
-          picked: this.state.picked && (null === Ru || VJ(Ru, uu))
+          canBuySuperRank: kk,
+          picked: this.state.picked && (null === Fk || Vb(Fk, kk))
         })
       }
       async refresh() {
-        return this.refreshing ??= (0, ZK.postToGameServer)("/ai-helper/super-bot-xd/status", {}).then((uu => {
-          this.setStatus(uu)
-        })).catch((uu => {
-          console.warn("AI Helper: Super Bot.xd's usage couldn't be checked", uu)
+        return this.refreshing ??= (0, Zt.postToGameServer)("/ai-helper/super-bot-xd/status", {}).then((kk => {
+          this.setStatus(kk)
+        })).catch((kk => {
+          console.warn("AI Helper: Super Bot.xd's usage couldn't be checked", kk)
         })).finally((() => {
           this.refreshing = null
         })), this.refreshing
       }
-      update(uu) {
+      update(kk) {
         this.state = {
           ...this.state,
-          ...uu
+          ...kk
         };
         try {
-          window.sessionStorage.setItem(yJ, this.state.picked ? "1" : "0")
+          window.sessionStorage.setItem(Rb, this.state.picked ? "1" : "0")
         } catch {}
-        for (const Ru of this.listeners) Ru()
+        for (const Fk of this.listeners) Fk()
       }
     };
 
-    function JJ() {
-      const [uu, Ru] = (0, Eu.useState)(mJ.getState);
-      return (0, Eu.useEffect)((() => (Ru(mJ.getState()), mJ.subscribe((() => {
-        Ru(mJ.getState())
-      })))), []), uu
+    function wb() {
+      const [kk, Fk] = (0, Rk.useState)(bb.getState);
+      return (0, Rk.useEffect)((() => (Fk(bb.getState()), bb.subscribe((() => {
+        Fk(bb.getState())
+      })))), []), kk
     }
 
-    function NJ(uu) {
-      var Ru;
-      let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-      if (null === uu) return "Checking whether Super Bot.xd can answer for you\u2026";
-      switch (uu.availability) {
+    function db(kk) {
+      var Fk;
+      let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+      if (null === kk) return "Checking whether Super Bot.xd can answer for you\u2026";
+      switch (kk.availability) {
         case "ok":
           return null;
         case "guest":
           return "Log in to use Super Bot.xd.";
         case "tooNew":
-          return `Super Bot.xd opens once your account is a week old: ${TJ((null!==(Ru=uu.availableFrom)&&void 0!==Ru?Ru:yu)-yu)} to go.`;
+          return `Super Bot.xd opens once your account is a week old: ${mb((null!==(Fk=kk.availableFrom)&&void 0!==Fk?Fk:Bk)-Bk)} to go.`;
         case "noUsageLeft":
-          return uu.isSuper ? `You've used this week's Super Bot.xd usage. It comes back ${function(uu,Ru){const yu=Math.ceil((uu-Ru)/36e5);if(yu<=24)return yu<=1?"within the hour":`in ${yu} hours`;return`in ${TJ(uu-Ru)}`}(uu.resetsAt,yu)}.` : "0 usage remaining - upgrade to Super for a more powerful AI.";
+          return kk.isSuper ? `You've used this week's Super Bot.xd usage. It comes back ${function(kk,Fk){const Bk=Math.ceil((kk-Fk)/36e5);if(Bk<=24)return Bk<=1?"within the hour":`in ${Bk} hours`;return`in ${mb(kk-Fk)}`}(kk.resetsAt,Bk)}.` : "0 usage remaining - upgrade to Super for a more powerful AI.";
         case "unavailable":
           return "Super Bot.xd can't answer right now. Try again later."
       }
     }
 
-    function XJ(uu) {
-      return null !== uu && !uu.isSuper && "noUsageLeft" === uu.availability
+    function sb(kk) {
+      return null !== kk && !kk.isSuper && "noUsageLeft" === kk.availability
     }
 
-    function VJ(uu, Ru) {
-      return "ok" === uu.availability || !1 !== Ru && XJ(uu)
+    function Vb(kk, Fk) {
+      return "ok" === kk.availability || !1 !== Fk && sb(kk)
     }
 
-    function rJ(uu) {
-      return !0 === uu.canBuySuperRank && XJ(uu.status)
+    function Jb(kk) {
+      return !0 === kk.canBuySuperRank && sb(kk.status)
     }
 
-    function BJ(uu) {
-      return rJ(uu) ? null : NJ(uu.status)
+    function Ab(kk) {
+      return Jb(kk) ? null : db(kk.status)
     }
 
-    function xJ(uu) {
-      return uu.picked && null === BJ(uu)
+    function eb(kk) {
+      return kk.picked && null === Ab(kk)
     }
 
-    function SJ(uu) {
-      return uu.picked && rJ(uu)
+    function yb(kk) {
+      return kk.picked && Jb(kk)
     }
 
-    function pJ(uu) {
-      return `Usage left: ${uu.left}`
+    function fb(kk) {
+      return `Usage left: ${kk.left}`
     }
 
-    function TJ(uu) {
-      const Ru = Math.max(1, Math.ceil(uu / mm.g));
-      return 1 === Ru ? "1 day" : `${Ru} days`
+    function mb(kk) {
+      const Fk = Math.max(1, Math.ceil(kk / wX.f));
+      return 1 === Fk ? "1 day" : `${Fk} days`
     }
 
-    function WJ(uu, Ru) {
-      const yu = "unavailable" === uu ? NJ(Ru) : null;
-      if (yu) return `${yu} Bot.xd is answering instead.`;
-      switch (uu) {
+    function Wb(kk, Fk) {
+      const Bk = "unavailable" === kk ? db(Fk) : null;
+      if (Bk) return `${Bk} Bot.xd is answering instead.`;
+      switch (kk) {
         case "busy":
           return "Super Bot.xd is busy, so Bot.xd is answering this one.";
         case "tooLong":
@@ -8267,91 +8267,91 @@ export const modules = {
           return "Super Bot.xd couldn't answer, so Bot.xd is answering this one."
       }
     }
-    async function jJ(uu) {
-      if (function(uu) {
-          var Ru, yu, Eu, Ku, Qu, mu, Ju;
-          return uu.messages.length > 12 || uu.messages.some((uu => uu.content.length > wK)) || (null !== (Ru = null === (yu = uu.toolsJson) || void 0 === yu ? void 0 : yu.length) && void 0 !== Ru ? Ru : 0) > 1e5 || (null !== (Eu = null === (Ku = uu.request) || void 0 === Ku ? void 0 : Ku.length) && void 0 !== Eu ? Eu : 0) > wK || (null !== (Qu = null === (mu = uu.code) || void 0 === mu ? void 0 : mu.length) && void 0 !== Qu ? Qu : 0) > wK || (null !== (Ju = uu.toolResults) && void 0 !== Ju ? Ju : []).some((uu => uu.text.length > 1e5))
-        }(uu)) return {
+    async function vb(kk) {
+      if (function(kk) {
+          var Fk, Bk, Rk, tk, ak, Xk, bk;
+          return kk.messages.length > 12 || kk.messages.some((kk => kk.content.length > Ct)) || (null !== (Fk = null === (Bk = kk.toolsJson) || void 0 === Bk ? void 0 : Bk.length) && void 0 !== Fk ? Fk : 0) > 1e5 || (null !== (Rk = null === (tk = kk.request) || void 0 === tk ? void 0 : tk.length) && void 0 !== Rk ? Rk : 0) > Ct || (null !== (ak = null === (Xk = kk.code) || void 0 === Xk ? void 0 : Xk.length) && void 0 !== ak ? ak : 0) > Ct || (null !== (bk = kk.toolResults) && void 0 !== bk ? bk : []).some((kk => kk.text.length > 1e5))
+        }(kk)) return {
         outcome: "tooLarge"
       };
       try {
-        return await (0, ZK.postToGameServer)("/ai-helper/super-bot-xd/ask", uu)
-      } catch (Ru) {
-        if (Ru instanceof Jm.e && 413 === Ru.httpCode) return {
+        return await (0, Zt.postToGameServer)("/ai-helper/super-bot-xd/ask", kk)
+      } catch (Fk) {
+        if (Fk instanceof dX.c && 413 === Fk.httpCode) return {
           outcome: "tooLarge"
         };
-        throw Ru
+        throw Fk
       }
     }
-    async function HJ(uu, Ru) {
-      return Ru ? await new Promise(((yu, Eu) => {
-        const Ku = () => {
-          Eu(new DOMException("The Super Bot.xd request was stopped", "AbortError"))
+    async function ib(kk, Fk) {
+      return Fk ? await new Promise(((Bk, Rk) => {
+        const tk = () => {
+          Rk(new DOMException("The Super Bot.xd request was stopped", "AbortError"))
         };
-        Ru.aborted ? Ku() : (Ru.addEventListener("abort", Ku, {
+        Fk.aborted ? tk() : (Fk.addEventListener("abort", tk, {
           once: !0
-        }), uu.then(yu, Eu).finally((() => {
-          Ru.removeEventListener("abort", Ku)
+        }), kk.then(Bk, Rk).finally((() => {
+          Fk.removeEventListener("abort", tk)
         })))
-      })) : await uu
+      })) : await kk
     }
-    var dJ = yu(34),
-      bJ = yu(27),
-      CJ = yu(2162);
-    let kJ = null;
+    var Yb = Bk(29),
+      ob = Bk(22),
+      Lb = Bk(2170);
+    let Ob = null;
 
-    function eJ() {
-      kJ ??= Promise.resolve().then((() => yu(2180))), kJ.then((uu => {
+    function Eb() {
+      Ob ??= Promise.resolve().then((() => Bk(2182))), Ob.then((kk => {
         let {
-          purchasesAllowed: Ru
-        } = uu;
-        mJ.setCanBuySuperRank(Ru())
-      }), (uu => {
-        kJ = null, console.warn("AI Helper: couldn't find out whether Super rank is sold here", uu)
+          purchasesAllowed: Fk
+        } = kk;
+        bb.setCanBuySuperRank(Fk())
+      }), (kk => {
+        Ob = null, console.warn("AI Helper: couldn't find out whether Super rank is sold here", kk)
       }))
     }
-    let AJ = !1,
-      DJ = null;
-    async function MJ() {
-      if (AJ) return !0;
-      AJ = !0;
+    let Sb = !1,
+      Nb = null;
+    async function Hb() {
+      if (Sb) return !0;
+      Sb = !0;
       try {
-        var uu;
-        if (await mJ.refresh(), !SJ(mJ.getState())) return !1;
+        var kk;
+        if (await bb.refresh(), !yb(bb.getState())) return !1;
         document.activeElement instanceof HTMLElement && document.activeElement.blur();
         const [{
-          NotificationProvider: Ru
+          NotificationProvider: Fk
         }, {
-          WorldCodeAiOutOfUsage: Eu
-        }] = await Promise.all([Promise.resolve().then((() => yu(1311))), yu.e(346).then((() => yu(61027)))]);
-        null === (uu = DJ) || void 0 === uu || uu.tearDownNotification();
-        const Ku = Ru.showCustomPopup({
-          body: uu => (0, mu.jsx)(Eu, {
+          WorldCodeAiOutOfUsage: Rk
+        }] = await Promise.all([Promise.resolve().then((() => Bk(1300))), Bk.e(346).then((() => Bk(60936)))]);
+        null === (kk = Nb) || void 0 === kk || kk.tearDownNotification();
+        const tk = Fk.showCustomPopup({
+          body: kk => (0, Xk.jsx)(Rk, {
             onGetSuperRank: () => {
-              uu(),
+              kk(),
                 function() {
-                  dJ.k.Op("OpenStoreFromCodeEditor"), (0, CJ.n)({
+                  Yb.o.Hf("OpenStoreFromCodeEditor"), (0, Lb.m)({
                     mode: "self",
                     source: "codeEditorAi",
                     openItem: "superRank"
                   });
-                  const uu = dJ.k.subscribe("appManagerUpdated|openEverythingMenuName", (() => {
-                    null === bJ.d.get("openEverythingMenuName") && (dJ.k.unsubscribe(uu), mJ.refresh())
+                  const kk = Yb.o.subscribe("appManagerUpdated|openEverythingMenuName", (() => {
+                    null === ob.c.get("openEverythingMenuName") && (Yb.o.unsubscribe(kk), bb.refresh())
                   }))
                 }()
             }
           })
         });
-        return DJ = Ku, Ku.getResult().finally((() => {
-          DJ === Ku && (DJ = null)
+        return Nb = tk, tk.getResult().finally((() => {
+          Nb === tk && (Nb = null)
         })), !0
-      } catch (Ru) {
-        return console.warn("AI Helper: the out of usage popup couldn't be opened", Ru), !0
+      } catch (Fk) {
+        return console.warn("AI Helper: the out of usage popup couldn't be opened", Fk), !0
       } finally {
-        AJ = !1
+        Sb = !1
       }
     }
-    const IJ = {
+    const ub = {
         wood: ["Maple Log"],
         log: ["Maple Log"],
         logs: ["Maple Log"],
@@ -8429,7 +8429,7 @@ export const modules = {
         glowstone: ["Glow Lamp"],
         "sea lantern": ["Glow Lamp", "Lantern"]
       },
-      GJ = {
+      Mb = {
         wooden: "wood",
         golden: "gold",
         oak: "maple",
@@ -8441,7 +8441,7 @@ export const modules = {
         egg: "orb",
         stained: ""
       },
-      UJ = {
+      gb = {
         teleport: ["setPosition"],
         tp: ["setPosition"],
         heal: ["setHealth", "getHealth"],
@@ -8504,1240 +8504,1240 @@ export const modules = {
         green: ["sendMessage"],
         red: ["sendMessage"]
       },
-      nJ = new Set("a an and are as at be but by can do does for from get got give go has have he her his how i if in into is it its make me my no not of on or our please so that the their them then there they this to u up us was we what when where which who will with you your want wanna like just also add let lets makes".split(" "));
+      Ub = new Set("a an and are as at be but by can do does for from get got give go has have he her his how i if in into is it its make me my no not of on or our please so that the their them then there they this to u up us was we what when where which who will with you your want wanna like just also add let lets makes".split(" "));
 
-    function sJ(uu) {
-      return uu.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9]+/).filter((uu => uu.length > 1))
+    function cb(kk) {
+      return kk.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9]+/).filter((kk => kk.length > 1))
     }
 
-    function tJ(uu) {
-      return uu.length > 4 && uu.endsWith("ies") ? `${uu.slice(0,-3)}y` : uu.length > 3 && uu.endsWith("s") && !uu.endsWith("ss") ? uu.slice(0, -1) : uu
+    function Gb(kk) {
+      return kk.length > 4 && kk.endsWith("ies") ? `${kk.slice(0,-3)}y` : kk.length > 3 && kk.endsWith("s") && !kk.endsWith("ss") ? kk.slice(0, -1) : kk
     }
 
-    function lJ(uu) {
-      return new Set(sJ(uu).map((uu => tJ(uu))))
+    function Tb(kk) {
+      return new Set(cb(kk).map((kk => Gb(kk))))
     }
-    const gJ = /^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(|^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/gm;
+    const rb = /^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\(|^([A-Za-z_$][\w$]*)\s*=\s*(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/gm;
 
-    function cJ(uu) {
-      return uu.split("\n").map((uu => uu.replace(/\/\/.*$/, "").replace(/(["'`])(?:\\.|(?!\1).)*\1/g, '""'))).join("\n").replace(/\/\*[^]*?\*\//g, (uu => uu.replace(/[^\n]/g, ""))).split("\n")
-    }
-
-    function LJ(uu) {
-      let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const yu = [],
-        Eu = new Set,
-        Ku = cJ(Ru ? uu : (0, rR.u)(uu, /require(?=\s*\(\s*["'`](?:\.\.?\/|@plugins\/))/g, rR.o, (() => "projectRequire"))),
-        Qu = new Set([...Ku.join("\n").matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)/g)].map((uu => uu[1])));
-      return Ku.forEach(((uu, Ru) => {
-        for (const Ku of (0, rR.i)(uu, /(global|window|document|process|require)\b\s*[.([]/g, rR.o)) Eu.has(Ku[1]) || Qu.has(Ku[1]) || (Eu.add(Ku[1]), yu.push(`Line ${Ru+1} uses "${Ku[1]}", which World Code doesn't have, so it throws there. Callbacks need no export: function onPlayerJoin(playerId) {} is enough.`))
-      })), yu
+    function Db(kk) {
+      return kk.split("\n").map((kk => kk.replace(/\/\/.*$/, "").replace(/(["'`])(?:\\.|(?!\1).)*\1/g, '""'))).join("\n").replace(/\/\*[^]*?\*\//g, (kk => kk.replace(/[^\n]/g, ""))).split("\n")
     }
 
-    function zJ(uu) {
-      const Ru = uu.split("\n"),
-        yu = [];
-      return Ru.forEach(((uu, Eu) => {
-        var Ku, Qu, mu, Ju, Nu;
-        const Xu = uu.indexOf("api.setCurrency(");
-        if (-1 === Xu) return;
-        const Vu = Ru.slice(Eu, Eu + 3).join(" ").slice(Xu),
-          ru = Vu.slice(0, Vu.indexOf("}") + 1 || void 0),
-          Bu = null === (Ku = /amount\s*:\s*(\d+)/.exec(ru)) || void 0 === Ku ? void 0 : Ku[1];
-        if (!/persistent\s*:\s*true/.test(ru) || void 0 === Bu) return;
-        const xu = [null !== (Qu = Ru[Eu - 2]) && void 0 !== Qu ? Qu : "", null !== (mu = Ru[Eu - 1]) && void 0 !== mu ? mu : "", uu.slice(0, Xu)].join(" ");
-        if (/\bif\s*\(|\belse\b|\?\s*$|&&\s*$/.test(xu)) return;
-        const Su = null !== (Ju = null === (Nu = /api\.setCurrency\(\s*[^,]+,\s*["']([^"']+)["']/.exec(ru)) || void 0 === Nu ? void 0 : Nu[1]) && void 0 !== Ju ? Ju : "coins";
-        yu.push(`Line ${Eu+1} sets the saved "${Su}" back to ${Bu} each time it runs, so a player who rejoins loses what they had. Set it only when api.getCurrencyAmount(playerId, "${Su}") is null.`)
-      })), yu
+    function zb(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const Bk = [],
+        Rk = new Set,
+        tk = Db(Fk ? kk : (0, JF.y)(kk, /require(?=\s*\(\s*["'`](?:\.\.?\/|@plugins\/))/g, JF.r, (() => "projectRequire"))),
+        ak = new Set([...tk.join("\n").matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)/g)].map((kk => kk[1])));
+      return tk.forEach(((kk, Fk) => {
+        for (const tk of (0, JF.i)(kk, /(global|window|document|process|require)\b\s*[.([]/g, JF.r)) Rk.has(tk[1]) || ak.has(tk[1]) || (Rk.add(tk[1]), Bk.push(`Line ${Fk+1} uses "${tk[1]}", which World Code doesn't have, so it throws there. Callbacks need no export: function onPlayerJoin(playerId) {} is enough.`))
+      })), Bk
     }
 
-    function FJ(uu) {
-      var Ru, yu;
-      const Eu = null !== (Ru = null === (yu = uu.split("### Parameters:")[1]) || void 0 === yu ? void 0 : yu.split("###")[0]) && void 0 !== Ru ? Ru : "",
-        Ku = [];
-      for (const Qu of Eu.split("\n")) {
-        const uu = /^\|\s*([A-Za-z_$][\w$]*)\s*\|(?:\s*`([^`]*)`)?/.exec(Qu);
-        uu && "Parameter" !== uu[1] && Ku.push({
-          name: uu[1],
-          type: uu[2]
+    function Pb(kk) {
+      const Fk = kk.split("\n"),
+        Bk = [];
+      return Fk.forEach(((kk, Rk) => {
+        var tk, ak, Xk, bk, wk;
+        const dk = kk.indexOf("api.setCurrency(");
+        if (-1 === dk) return;
+        const sk = Fk.slice(Rk, Rk + 3).join(" ").slice(dk),
+          Vk = sk.slice(0, sk.indexOf("}") + 1 || void 0),
+          Jk = null === (tk = /amount\s*:\s*(\d+)/.exec(Vk)) || void 0 === tk ? void 0 : tk[1];
+        if (!/persistent\s*:\s*true/.test(Vk) || void 0 === Jk) return;
+        const Ak = [null !== (ak = Fk[Rk - 2]) && void 0 !== ak ? ak : "", null !== (Xk = Fk[Rk - 1]) && void 0 !== Xk ? Xk : "", kk.slice(0, dk)].join(" ");
+        if (/\bif\s*\(|\belse\b|\?\s*$|&&\s*$/.test(Ak)) return;
+        const ek = null !== (bk = null === (wk = /api\.setCurrency\(\s*[^,]+,\s*["']([^"']+)["']/.exec(Vk)) || void 0 === wk ? void 0 : wk[1]) && void 0 !== bk ? bk : "coins";
+        Bk.push(`Line ${Rk+1} sets the saved "${ek}" back to ${Jk} each time it runs, so a player who rejoins loses what they had. Set it only when api.getCurrencyAmount(playerId, "${ek}") is null.`)
+      })), Bk
+    }
+
+    function hb(kk) {
+      var Fk, Bk;
+      const Rk = null !== (Fk = null === (Bk = kk.split("### Parameters:")[1]) || void 0 === Bk ? void 0 : Bk.split("###")[0]) && void 0 !== Fk ? Fk : "",
+        tk = [];
+      for (const ak of Rk.split("\n")) {
+        const kk = /^\|\s*([A-Za-z_$][\w$]*)\s*\|(?:\s*`([^`]*)`)?/.exec(ak);
+        kk && "Parameter" !== kk[1] && tk.push({
+          name: kk[1],
+          type: kk[2]
         })
       }
-      return Ku
+      return tk
     }
 
-    function wJ(uu) {
-      return FJ(uu).map((uu => uu.name))
+    function qb(kk) {
+      return hb(kk).map((kk => kk.name))
     }
-    const ZJ = "(\"[^\"\\n]*\"|'[^'\\n]*')";
+    const Cb = "(\"[^\"\\n]*\"|'[^'\\n]*')";
 
-    function hJ(uu, Ru) {
-      const yu = [];
-      let Eu = 0,
-        Ku = "",
-        Qu = "",
-        mu = Ru;
-      for (let Ju = Ru; Ju < uu.length; Ju++) {
-        const Ru = uu[Ju];
-        if (Ku) "\\" === Ru ? Ju++ : Ru === Ku && (Ku = "");
-        else if ("/" === Ru && "/" === uu[Ju + 1]) {
-          Qu += uu.slice(mu, Ju);
-          const Ru = uu.indexOf("\n", Ju);
-          Ju = -1 === Ru ? uu.length : Ru, mu = Ju
-        } else if ('"' === Ru || "'" === Ru || "`" === Ru) Ku = Ru;
-        else if ("[" === Ru || "{" === Ru || "(" === Ru) Eu++;
-        else if (("]" === Ru || "}" === Ru || ")" === Ru) && Eu > 0) Eu--;
+    function Zb(kk, Fk) {
+      const Bk = [];
+      let Rk = 0,
+        tk = "",
+        ak = "",
+        Xk = Fk;
+      for (let bk = Fk; bk < kk.length; bk++) {
+        const Fk = kk[bk];
+        if (tk) "\\" === Fk ? bk++ : Fk === tk && (tk = "");
+        else if ("/" === Fk && "/" === kk[bk + 1]) {
+          ak += kk.slice(Xk, bk);
+          const Fk = kk.indexOf("\n", bk);
+          bk = -1 === Fk ? kk.length : Fk, Xk = bk
+        } else if ('"' === Fk || "'" === Fk || "`" === Fk) tk = Fk;
+        else if ("[" === Fk || "{" === Fk || "(" === Fk) Rk++;
+        else if (("]" === Fk || "}" === Fk || ")" === Fk) && Rk > 0) Rk--;
         else {
-          if (")" === Ru) {
-            const Ru = (Qu + uu.slice(mu, Ju)).trim();
-            return "" !== Ru || yu.length > 0 ? [...yu, Ru] : yu
+          if (")" === Fk) {
+            const Fk = (ak + kk.slice(Xk, bk)).trim();
+            return "" !== Fk || Bk.length > 0 ? [...Bk, Fk] : Bk
           }
-          "," === Ru && 0 === Eu && (yu.push((Qu + uu.slice(mu, Ju)).trim()), Qu = "", mu = Ju + 1)
+          "," === Fk && 0 === Rk && (Bk.push((ak + kk.slice(Xk, bk)).trim()), ak = "", Xk = bk + 1)
         }
       }
       return []
     }
 
-    function PJ(uu, Ru) {
-      var yu;
-      if (!/^[A-Za-z_$][\w$]*$/.test(Ru)) return;
-      const Eu = Ru.replaceAll("$", "\\$"),
-        Ku = `\\((?:[^()]*[\\s,])?${Eu}(?![\\w$])[^()]*\\)`,
-        Qu = new RegExp(`(?:const|let|var)\\s+${Eu}(?![\\w$])|${Eu}\\s*(?:\\+?=(?![=>])|=>)|${Ku}\\s*=>|function\\s*[\\w$]*\\s*${Ku}`, "g");
-      return 1 === (0, rR.i)(uu, Qu, rR.o).length ? null === (yu = new RegExp(`\\b(?:const|let|var)\\s+${Eu}\\s*=\\s*${ZJ}\\s*(?:;|//|$)`, "m").exec(uu)) || void 0 === yu ? void 0 : yu[1] : void 0
+    function pb(kk, Fk) {
+      var Bk;
+      if (!/^[A-Za-z_$][\w$]*$/.test(Fk)) return;
+      const Rk = Fk.replaceAll("$", "\\$"),
+        tk = `\\((?:[^()]*[\\s,])?${Rk}(?![\\w$])[^()]*\\)`,
+        ak = new RegExp(`(?:const|let|var)\\s+${Rk}(?![\\w$])|${Rk}\\s*(?:\\+?=(?![=>])|=>)|${tk}\\s*=>|function\\s*[\\w$]*\\s*${tk}`, "g");
+      return 1 === (0, JF.i)(kk, ak, JF.r).length ? null === (Bk = new RegExp(`\\b(?:const|let|var)\\s+${Rk}\\s*=\\s*${Cb}\\s*(?:;|//|$)`, "m").exec(kk)) || void 0 === Bk ? void 0 : Bk[1] : void 0
     }
 
-    function iJ(uu, Ru, yu) {
-      let Eu;
-      const Ku = function(uu) {
-        const Ru = uu.split("\n").slice(1).map((uu => uu.trim())).find((uu => "" !== uu && !uu.startsWith("#") && !uu.startsWith("|") && !uu.startsWith("**") && !uu.startsWith("```")));
-        if (!Ru) return "";
-        const yu = Ru.search(/\.\s/),
-          Eu = -1 === yu ? Ru : Ru.slice(0, yu + 1);
-        return Eu.length > 110 ? `${Eu.slice(0,107)}...` : Eu
-      }(yu);
-      return Eu = "api" === uu ? `api.${Ru}(${wJ(yu).join(", ")})${Ku?` \u2014 ${Ku}`:""}` : "callback" === uu ? `${Ru}(${wJ(yu).join(", ")})${Ku?` \u2014 ${Ku}`:""}` : "clientOption" === uu ? `${Ru}: ${function(uu){var Ru,yu;return null!==(Ru=null===(yu=/\*\*Type:\*\*\s*`([^`]+)`/.exec(uu))||void 0===yu?void 0:yu[1])&&void 0!==Ru?Ru:""}(yu)}${Ku?` \u2014 ${Ku}`:""}`:Ru,{kind:uu,name:Ru,text:yu,line:Eu,nameWords:lJ(Ru),textWords:lJ(yu)}}function YJ(uu){return uu.toLowerCase().split(/[^a-z0-9]+/).filter((uu=>""!==uu&&"of"!==uu&&"the"!==uu)).sort().join(" ")}const oJ=new Set(["block","item"]);function qJ(uu){let{names:Ru,isSure:yu}=uu;return 0===Ru.length?"":1!==Ru.length||yu?`
+    function Kb(kk, Fk, Bk) {
+      let Rk;
+      const tk = function(kk) {
+        const Fk = kk.split("\n").slice(1).map((kk => kk.trim())).find((kk => "" !== kk && !kk.startsWith("#") && !kk.startsWith("|") && !kk.startsWith("**") && !kk.startsWith("```")));
+        if (!Fk) return "";
+        const Bk = Fk.search(/\.\s/),
+          Rk = -1 === Bk ? Fk : Fk.slice(0, Bk + 1);
+        return Rk.length > 110 ? `${Rk.slice(0,107)}...` : Rk
+      }(Bk);
+      return Rk = "api" === kk ? `api.${Fk}(${qb(Bk).join(", ")})${tk?` \u2014 ${tk}`:""}` : "callback" === kk ? `${Fk}(${qb(Bk).join(", ")})${tk?` \u2014 ${tk}`:""}` : "clientOption" === kk ? `${Fk}: ${function(kk){var Fk,Bk;return null!==(Fk=null===(Bk=/\*\*Type:\*\*\s*`([^`]+)`/.exec(kk))||void 0===Bk?void 0:Bk[1])&&void 0!==Fk?Fk:""}(Bk)}${tk?` \u2014 ${tk}`:""}`:Fk,{kind:kk,name:Fk,text:Bk,line:Rk,nameWords:Tb(Fk),textWords:Tb(Bk)}}function xb(kk){return kk.toLowerCase().split(/[^a-z0-9]+/).filter((kk=>""!==kk&&"of"!==kk&&"the"!==kk)).sort().join(" ")}const jb=new Set(["block","item"]);function lb(kk){let{names:Fk,isSure:Bk}=kk;return 0===Fk.length?"":1!==Fk.length||Bk?`
       Did you mean $ {
-        Ru.map((uu => `"${uu}"`)).join(" or ")
+        Fk.map((kk => `"${kk}"`)).join(" or ")
       } ? `:`
-      The closest name is "${Ru[0]}", which may be something
+      The closest name is "${Fk[0]}", which may be something
       else.
-      `}function OJ(uu){return uu.split("\n").slice(1).map((uu=>uu.replace(/\s*\[[A-Z]+(?:,[A-Z]+)*\]\s*$/,"").trim())).filter((uu=>""!==uu&&!uu.startsWith("#")))}class vJ{constructor(uu){this.sections=void 0,this.mobTypes=void 0,this.byName=new Map,this.itemAndBlockNames=void 0,this.blockNames=void 0,this.namesByLowerCase=void 0,this.wordCounts=new Map,this.realName=(uu,Ru)=>{if("mob"===uu){var yu;const uu=Ru.trim().toLowerCase();return null!==(yu=this.mobTypes.find((Ru=>Ru.toLowerCase()===uu)))&&void 0!==yu?yu:null}const Eu=this.suggestNames(Ru),Ku=Eu.isSure?Eu.names[0]:void 0;return void 0===Ku||"item"!==uu&&!this.blockNames.has(Ku)?null:Ku};const Ru=[],yu=(uu,yu)=>{for(const{name:Eu,text:Ku}of function(uu){const Ru=[],yu=uu.split(/^## /m).slice(1);for(const Eu of yu){const uu=Eu.indexOf("\n"),yu=(-1===uu?Eu:Eu.slice(0,uu)).trim(),Ku=`
+      `}function nb(kk){return kk.split("\n").slice(1).map((kk=>kk.replace(/\s*\[[A-Z]+(?:,[A-Z]+)*\]\s*$/,"").trim())).filter((kk=>""!==kk&&!kk.startsWith("#")))}class Ib{constructor(kk){this.sections=void 0,this.mobTypes=void 0,this.byName=new Map,this.itemAndBlockNames=void 0,this.blockNames=void 0,this.namesByLowerCase=void 0,this.wordCounts=new Map,this.realName=(kk,Fk)=>{if("mob"===kk){var Bk;const kk=Fk.trim().toLowerCase();return null!==(Bk=this.mobTypes.find((Fk=>Fk.toLowerCase()===kk)))&&void 0!==Bk?Bk:null}const Rk=this.suggestNames(Fk),tk=Rk.isSure?Rk.names[0]:void 0;return void 0===tk||"item"!==kk&&!this.blockNames.has(tk)?null:tk};const Fk=[],Bk=(kk,Bk)=>{for(const{name:Rk,text:tk}of function(kk){const Fk=[],Bk=kk.split(/^## /m).slice(1);for(const Rk of Bk){const kk=Rk.indexOf("\n"),Bk=(-1===kk?Rk:Rk.slice(0,kk)).trim(),tk=`
       # # $ {
-        Eu
+        Rk
       }
-      `.replace(/\n\s*\n(\s*\n)+/g,"\n\n").trim();Ru.push({name:yu,text:Ku})}return Ru}(yu))Ru.push(iJ(uu,Eu,Ku))};yu("api",uu.apiReference),yu("callback",uu.callbacks),yu("clientOption",uu.clientOptions),yu("snippet",uu.snippets),yu("howTo",uu.howTo);const Eu=function(){const uu=yE.map((uu=>`
+      `.replace(/\n\s*\n(\s*\n)+/g,"\n\n").trim();Fk.push({name:Bk,text:tk})}return Fk}(Bk))Fk.push(Kb(kk,Rk,tk))};Bk("api",kk.apiReference),Bk("callback",kk.callbacks),Bk("clientOption",kk.clientOptions),Bk("snippet",kk.snippets),Bk("howTo",kk.howTo);const Rk=function(){const kk=RR.map((kk=>`
       # # $ {
-        uu.name
+        kk.name
       }\
       nReady - made
       function($ {
-        uu.category
+        kk.category
       }) : call it as it is, without api.and without writing it;
       its code is added to the file by itself.\n$ {
-        uu.about
+        kk.about
       }\
-      n\ nUsage: \`${uu.signature}\`\n\n\`\`\`js\n${uu.example}\n\`\`\``)),
-  Ru = VE.map((uu => `## ${uu.name}\nPrefab (${uu.kind}, ${uu.category}): put in with use_prefab. ${AE(uu,!1)}`));
+      n\ nUsage: \`${kk.signature}\`\n\n\`\`\`js\n${kk.example}\n\`\`\``)),
+  Fk = VR.map((kk => `## ${kk.name}\nPrefab (${kk.kind}, ${kk.category}): put in with use_prefab. ${SR(kk,!1)}`));
   return {
-    helpers: `# Ready-made functions\n\n${uu.join("\n\n")}\n`,
-    prefabs: `# Prefabs\n\n${Ru.join("\n\n")}\n`
+    helpers: `# Ready-made functions\n\n${kk.join("\n\n")}\n`,
+    prefabs: `# Prefabs\n\n${Fk.join("\n\n")}\n`
   }
 }();
-yu("helper", Eu.helpers), yu("prefab", Eu.prefabs), this.sections = Ru;
-for (const Qu of Ru) {
-  this.byName.has(Qu.name) || this.byName.set(Qu.name, Qu);
-  for (const uu of Qu.textWords) {
-    var Ku;
-    this.wordCounts.set(uu, (null !== (Ku = this.wordCounts.get(uu)) && void 0 !== Ku ? Ku : 0) + 1)
+Bk("helper", Rk.helpers), Bk("prefab", Rk.prefabs), this.sections = Fk;
+for (const ak of Fk) {
+  this.byName.has(ak.name) || this.byName.set(ak.name, ak);
+  for (const kk of ak.textWords) {
+    var tk;
+    this.wordCounts.set(kk, (null !== (tk = this.wordCounts.get(kk)) && void 0 !== tk ? tk : 0) + 1)
   }
 }
-this.itemAndBlockNames = [...new Set([...OJ(uu.itemNames), ...OJ(uu.blockNames)])], this.blockNames = new Set(OJ(uu.blockNames)), this.namesByLowerCase = new Map(this.itemAndBlockNames.map((uu => [uu.toLowerCase(), uu]))), this.mobTypes = function(uu) {
-  var Ru, yu;
-  const Eu = null !== (Ru = null === (yu = uu.split("## Mob Variations")[1]) || void 0 === yu ? void 0 : yu.split("```")[1]) && void 0 !== Ru ? Ru : "",
-    Ku = [];
-  for (const Qu of Eu.split("\n")) {
-    const uu = /^([A-Z][\w ]*?):\s*"/.exec(Qu.trim());
-    uu && Ku.push(uu[1])
+this.itemAndBlockNames = [...new Set([...nb(kk.itemNames), ...nb(kk.blockNames)])], this.blockNames = new Set(nb(kk.blockNames)), this.namesByLowerCase = new Map(this.itemAndBlockNames.map((kk => [kk.toLowerCase(), kk]))), this.mobTypes = function(kk) {
+  var Fk, Bk;
+  const Rk = null !== (Fk = null === (Bk = kk.split("## Mob Variations")[1]) || void 0 === Bk ? void 0 : Bk.split("```")[1]) && void 0 !== Fk ? Fk : "",
+    tk = [];
+  for (const ak of Rk.split("\n")) {
+    const kk = /^([A-Z][\w ]*?):\s*"/.exec(ak.trim());
+    kk && tk.push(kk[1])
   }
-  return Ku
-}(uu.mobSettings)
+  return tk
+}(kk.mobSettings)
 }
-index(uu) {
-  return this.sections.filter((Ru => Ru.kind === uu)).map((uu => uu.line)).join("\n")
+index(kk) {
+  return this.sections.filter((Fk => Fk.kind === kk)).map((kk => kk.line)).join("\n")
 }
 callbackNames() {
-  return this.sections.filter((uu => "callback" === uu.kind)).map((uu => uu.name))
+  return this.sections.filter((kk => "callback" === kk.kind)).map((kk => kk.name))
 }
-get(uu) {
-  return this.byName.get(uu)
+get(kk) {
+  return this.byName.get(kk)
 }
-unprefixedApiCalls(uu) {
-  const Ru = cJ(uu),
-    yu = Ru.join("\n"),
-    Eu = new Set([...yu.matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)|^([\w$]+)\s*=/gm)].map((uu => {
-      var Ru;
-      return null !== (Ru = uu[1]) && void 0 !== Ru ? Ru : uu[2]
+unprefixedApiCalls(kk) {
+  const Fk = Db(kk),
+    Bk = Fk.join("\n"),
+    Rk = new Set([...Bk.matchAll(/\b(?:function\s+|(?:const|let|var)\s+)([\w$]+)|^([\w$]+)\s*=/gm)].map((kk => {
+      var Fk;
+      return null !== (Fk = kk[1]) && void 0 !== Fk ? Fk : kk[2]
     }))),
-    Ku = [...yu.matchAll(/\b(?:const|let|var)\s*([{[][^=]*?[}\]])\s*=/g), ...yu.matchAll(/\bimport\s+([\w$\s{},*]+?)\s+from\b/g)];
-  for (const mu of Ku)
-    for (const uu of mu[1].matchAll(/([\w$]+)\s*(?=[,}\]=]|$)/g)) Eu.add(uu[1]);
-  const Qu = new Map;
-  return Ru.forEach(((uu, Ru) => {
-    for (const Ku of (0, rR.i)(uu, /([\w$]+)\s*\(/g, rR.o)) {
-      var yu;
-      const mu = Ku[1],
-        Ju = /^\s*(?:async\s+)?$/.test(uu.slice(0, Ku.index)) && /^[\w$]+\s*\([^()]*\)\s*\{/.test(uu.slice(Ku.index));
-      Qu.has(mu) || Eu.has(mu) || Ju || "api" !== (null === (yu = this.byName.get(mu)) || void 0 === yu ? void 0 : yu.kind) || Qu.set(mu, `Line ${Ru+1} calls ${mu} without "api.", so it throws there. Did you mean api.${mu}?`)
+    tk = [...Bk.matchAll(/\b(?:const|let|var)\s*([{[][^=]*?[}\]])\s*=/g), ...Bk.matchAll(/\bimport\s+([\w$\s{},*]+?)\s+from\b/g)];
+  for (const Xk of tk)
+    for (const kk of Xk[1].matchAll(/([\w$]+)\s*(?=[,}\]=]|$)/g)) Rk.add(kk[1]);
+  const ak = new Map;
+  return Fk.forEach(((kk, Fk) => {
+    for (const tk of (0, JF.i)(kk, /([\w$]+)\s*\(/g, JF.r)) {
+      var Bk;
+      const Xk = tk[1],
+        bk = /^\s*(?:async\s+)?$/.test(kk.slice(0, tk.index)) && /^[\w$]+\s*\([^()]*\)\s*\{/.test(kk.slice(tk.index));
+      ak.has(Xk) || Rk.has(Xk) || bk || "api" !== (null === (Bk = this.byName.get(Xk)) || void 0 === Bk ? void 0 : Bk.kind) || ak.set(Xk, `Line ${Fk+1} calls ${Xk} without "api.", so it throws there. Did you mean api.${Xk}?`)
     }
-  })), [...Qu.values()]
+  })), [...ak.values()]
 }
-unknownApiMethods(uu) {
-  return [...new Set([...uu.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)].map((uu => uu[1])))].filter((uu => {
-    var Ru;
-    return "api" !== (null === (Ru = this.byName.get(uu)) || void 0 === Ru ? void 0 : Ru.kind)
-  })).map((uu => {
-    const Ru = this.find(uu.replace(/([a-z])([A-Z])/g, "$1 $2"), "", 20).filter((uu => "api" === uu.kind)).slice(0, 2).map((uu => `api.${uu.name}`));
-    return `api.${uu} doesn't exist.${Ru.length?` Did you mean ${Ru.join(" or ")}?`:""}`
+unknownApiMethods(kk) {
+  return [...new Set([...kk.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)].map((kk => kk[1])))].filter((kk => {
+    var Fk;
+    return "api" !== (null === (Fk = this.byName.get(kk)) || void 0 === Fk ? void 0 : Fk.kind)
+  })).map((kk => {
+    const Fk = this.find(kk.replace(/([a-z])([A-Z])/g, "$1 $2"), "", 20).filter((kk => "api" === kk.kind)).slice(0, 2).map((kk => `api.${kk.name}`));
+    return `api.${kk} doesn't exist.${Fk.length?` Did you mean ${Fk.join(" or ")}?`:""}`
   }))
 }
-unknownItemNames(uu) {
-  const Ru = new Set([...this.itemAndBlockNames, "Air"]),
-    yu = new Set;
-  for (const Eu of uu.matchAll(/\bapi\.([A-Za-z_$][\w$]*)\(/g)) {
-    const Ku = this.byName.get(Eu[1]);
-    if ("api" !== (null === Ku || void 0 === Ku ? void 0 : Ku.kind)) continue;
-    const Qu = FJ(Ku.text).map((uu => {
+unknownItemNames(kk) {
+  const Fk = new Set([...this.itemAndBlockNames, "Air"]),
+    Bk = new Set;
+  for (const Rk of kk.matchAll(/\bapi\.([A-Za-z_$][\w$]*)\(/g)) {
+    const tk = this.byName.get(Rk[1]);
+    if ("api" !== (null === tk || void 0 === tk ? void 0 : tk.kind)) continue;
+    const ak = hb(tk.text).map((kk => {
         let {
-          type: Ru
-        } = uu;
-        return void 0 !== Ru && /^(ItemName|BlockName)\b/.test(Ru)
+          type: Fk
+        } = kk;
+        return void 0 !== Fk && /^(ItemName|BlockName)\b/.test(Fk)
       })),
-      mu = hJ(uu, Eu.index + Eu[0].length);
-    mu.forEach(((Eu, Ku) => {
-      var Ju, Nu, Xu, Vu;
-      if (!Qu[Ku] && (Ku !== mu.length - 1 || !Qu[Qu.length - 1])) return;
-      const ru = null === (Ju = /^CONFIG\.([\w$]+)$/.exec(Eu)) || void 0 === Ju ? void 0 : Ju[1],
-        Bu = ru ? null === (Nu = new RegExp(`(?:^|[{,])\\s*${ru.replaceAll("$","\\$")}\\s*:\\s*${ZJ}`, "m").exec(uu)) || void 0 === Nu ? void 0 : Nu[1] : void 0,
-        xu = PJ(uu, Eu),
-        Su = null !== (Xu = null === (Vu = new RegExp(`\\?\\s*${ZJ}\\s*:\\s*${ZJ}$`).exec(Eu)) || void 0 === Vu ? void 0 : Vu.slice(1)) && void 0 !== Xu ? Xu : [];
-      for (const uu of [null !== (pu = null !== Bu && void 0 !== Bu ? Bu : xu) && void 0 !== pu ? pu : Eu, ...Su]) {
-        var pu;
-        const Eu = /^(["'`])([^"'`]+)\1$/.exec(uu),
-          Ku = "`" === (null === Eu || void 0 === Eu ? void 0 : Eu[1]) && Eu[2].includes("${");
-        !Eu || Ku || Ru.has(Eu[2]) || yu.add(Eu[2])
+      Xk = Zb(kk, Rk.index + Rk[0].length);
+    Xk.forEach(((Rk, tk) => {
+      var bk, wk, dk, sk;
+      if (!ak[tk] && (tk !== Xk.length - 1 || !ak[ak.length - 1])) return;
+      const Vk = null === (bk = /^CONFIG\.([\w$]+)$/.exec(Rk)) || void 0 === bk ? void 0 : bk[1],
+        Jk = Vk ? null === (wk = new RegExp(`(?:^|[{,])\\s*${Vk.replaceAll("$","\\$")}\\s*:\\s*${Cb}`, "m").exec(kk)) || void 0 === wk ? void 0 : wk[1] : void 0,
+        Ak = pb(kk, Rk),
+        ek = null !== (dk = null === (sk = new RegExp(`\\?\\s*${Cb}\\s*:\\s*${Cb}$`).exec(Rk)) || void 0 === sk ? void 0 : sk.slice(1)) && void 0 !== dk ? dk : [];
+      for (const kk of [null !== (yk = null !== Jk && void 0 !== Jk ? Jk : Ak) && void 0 !== yk ? yk : Rk, ...ek]) {
+        var yk;
+        const Rk = /^(["'`])([^"'`]+)\1$/.exec(kk),
+          tk = "`" === (null === Rk || void 0 === Rk ? void 0 : Rk[1]) && Rk[2].includes("${");
+        !Rk || tk || Fk.has(Rk[2]) || Bk.add(Rk[2])
       }
     }))
   }
-  return [...yu].map((uu => `"${uu}" isn't an item or block name.${qJ(this.suggestNames(uu))}`))
+  return [...Bk].map((kk => `"${kk}" isn't an item or block name.${lb(this.suggestNames(kk))}`))
 }
-reorderedComparedNames(uu) {
-  const Ru = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
-    yu = new Map(this.itemAndBlockNames.map((uu => [YJ(uu), uu]))),
-    Eu = new Map,
-    Ku = [/[!=]==?\s*(["'])([^"'\n]{3,40})\1/g, /(["'])([^"'\n]{3,40})\1\s*[!=]==?/g, /\bcase\s+(["'])([^"'\n]{3,40})\1\s*:/g, /\.includes\(\s*(["'])([^"'\n]{3,40})\1\s*\)/g];
-  for (const Ju of Ku)
-    for (const Ku of uu.matchAll(Ju)) {
-      const uu = Ku[2],
-        Qu = Ru.has(uu) || !/\s/.test(uu.trim()) ? void 0 : yu.get(YJ(uu));
-      Qu && Eu.set(uu, Qu)
+reorderedComparedNames(kk) {
+  const Fk = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
+    Bk = new Map(this.itemAndBlockNames.map((kk => [xb(kk), kk]))),
+    Rk = new Map,
+    tk = [/[!=]==?\s*(["'])([^"'\n]{3,40})\1/g, /(["'])([^"'\n]{3,40})\1\s*[!=]==?/g, /\bcase\s+(["'])([^"'\n]{3,40})\1\s*:/g, /\.includes\(\s*(["'])([^"'\n]{3,40})\1\s*\)/g];
+  for (const bk of tk)
+    for (const tk of kk.matchAll(bk)) {
+      const kk = tk[2],
+        ak = Fk.has(kk) || !/\s/.test(kk.trim()) ? void 0 : Bk.get(xb(kk));
+      ak && Rk.set(kk, ak)
     }
-  const Qu = [...Eu].map((uu => {
-      let [Ru, yu] = uu;
-      return `"${Ru}" isn't a block or item name, so comparing with it is never true. Did you mean "${yu}"?`
+  const ak = [...Rk].map((kk => {
+      let [Fk, Bk] = kk;
+      return `"${Fk}" isn't a block or item name, so comparing with it is never true. Did you mean "${Bk}"?`
     })),
-    mu = new Map;
-  for (const Ju of uu.matchAll(/\b\w*block\w*\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) {
-    const Ru = Ju[2],
-      yu = this.blockNames.has(Ru) || !this.itemAndBlockNames.includes(Ru) ? void 0 : [`Block of ${Ru}`, `${Ru} Block`].find((uu => this.blockNames.has(uu)));
-    !yu || uu.includes(`"${yu}"`) || uu.includes(`'${yu}'`) || mu.set(Ru, yu)
+    Xk = new Map;
+  for (const bk of kk.matchAll(/\b\w*block\w*\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) {
+    const Fk = bk[2],
+      Bk = this.blockNames.has(Fk) || !this.itemAndBlockNames.includes(Fk) ? void 0 : [`Block of ${Fk}`, `${Fk} Block`].find((kk => this.blockNames.has(kk)));
+    !Bk || kk.includes(`"${Bk}"`) || kk.includes(`'${Bk}'`) || Xk.set(Fk, Bk)
   }
-  return [...Qu, ...[...mu].map((uu => {
-    let [Ru, yu] = uu;
-    return `"${Ru}" is an item, not a block, so no block is ever called that. Did you mean "${yu}"?`
+  return [...ak, ...[...Xk].map((kk => {
+    let [Fk, Bk] = kk;
+    return `"${Fk}" is an item, not a block, so no block is ever called that. Did you mean "${Bk}"?`
   }))]
 }
-unknownComparedBlockNames(uu) {
-  const Ru = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
-    yu = new Set(this.itemAndBlockNames.map((uu => YJ(uu)))),
-    Eu = new Set;
-  for (const Ku of uu.matchAll(/\b\w*block(?:name|type)?\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) Eu.add(Ku[2]);
-  for (const Ku of uu.matchAll(/(["'])([^"'\n]+)\1\s*[!=]==?\s*\w*block(?:name|type)?\b/gi)) Eu.add(Ku[2]);
-  return [...Eu].filter((uu => !Ru.has(uu) && !(/\s/.test(uu.trim()) && yu.has(YJ(uu))))).map((uu => {
-    const Ru = this.itemAndBlockNames.filter((Ru => YJ(Ru) === YJ(uu))),
-      yu = this.itemAndBlockNames.filter((Ru => sJ(Ru).includes(uu.toLowerCase()))),
-      Eu = this.suggestNames(uu),
-      Ku = Ru.length > 0 ? {
-        names: Ru,
-        isSure: 1 === Ru.length,
+unknownComparedBlockNames(kk) {
+  const Fk = new Set([...this.itemAndBlockNames, "Air", "Unloaded"]),
+    Bk = new Set(this.itemAndBlockNames.map((kk => xb(kk)))),
+    Rk = new Set;
+  for (const tk of kk.matchAll(/\b\w*block(?:name|type)?\s*[!=]==?\s*(["'])([^"'\n]+)\1/gi)) Rk.add(tk[2]);
+  for (const tk of kk.matchAll(/(["'])([^"'\n]+)\1\s*[!=]==?\s*\w*block(?:name|type)?\b/gi)) Rk.add(tk[2]);
+  return [...Rk].filter((kk => !Fk.has(kk) && !(/\s/.test(kk.trim()) && Bk.has(xb(kk))))).map((kk => {
+    const Fk = this.itemAndBlockNames.filter((Fk => xb(Fk) === xb(kk))),
+      Bk = this.itemAndBlockNames.filter((Fk => cb(Fk).includes(kk.toLowerCase()))),
+      Rk = this.suggestNames(kk),
+      tk = Fk.length > 0 ? {
+        names: Fk,
+        isSure: 1 === Fk.length,
         isDecided: !0
-      } : Eu.names.length > 0 || Eu.isDecided ? Eu : {
-        names: yu.length <= 2 ? yu : [],
-        isSure: 1 === yu.length,
+      } : Rk.names.length > 0 || Rk.isDecided ? Rk : {
+        names: Bk.length <= 2 ? Bk : [],
+        isSure: 1 === Bk.length,
         isDecided: !1
       };
-    return `"${uu}" isn't a block or item name, so comparing a block with it is never true.${qJ(Ku)}`
+    return `"${kk}" isn't a block or item name, so comparing a block with it is never true.${lb(tk)}`
   }))
 }
-madeUpStopValues(uu) {
-  const Ru = new Set;
+madeUpStopValues(kk) {
+  const Fk = new Set;
   for (const {
-      name: yu,
-      body: Eu
+      name: Bk,
+      body: Rk
     }
     of
-    function(uu) {
-      const Ru = [...uu.matchAll(gJ)];
-      return Ru.map(((yu, Eu) => {
-        var Ku, Qu, mu;
+    function(kk) {
+      const Fk = [...kk.matchAll(rb)];
+      return Fk.map(((Bk, Rk) => {
+        var tk, ak, Xk;
         return {
-          name: null !== (Ku = yu[1]) && void 0 !== Ku ? Ku : yu[2],
-          body: uu.slice(yu.index, null !== (Qu = null === (mu = Ru[Eu + 1]) || void 0 === mu ? void 0 : mu.index) && void 0 !== Qu ? Qu : uu.length)
+          name: null !== (tk = Bk[1]) && void 0 !== tk ? tk : Bk[2],
+          body: kk.slice(Bk.index, null !== (ak = null === (Xk = Fk[Rk + 1]) || void 0 === Xk ? void 0 : Xk.index) && void 0 !== ak ? ak : kk.length)
         }
       }))
-    }(uu)) {
-    const uu = this.byName.get(yu);
-    if ("callback" === (null === uu || void 0 === uu ? void 0 : uu.kind))
-      for (const Ku of Eu.matchAll(/\breturn\s+["']((?:[Pp]revent|[Cc]ancel|[Ss]top|[Bb]lock|[Dd]eny)\w*)["']/g)) {
-        const Eu = Ku[1];
-        if (uu.text.includes(`"${Eu}"`)) continue;
-        const Qu = [...new Set([...uu.text.matchAll(/Return "(prevent[A-Za-z]*)"/g)].map((uu => uu[1])))],
-          mu = Qu.length > 0 ? `Did you mean ${Qu.map((uu=>`"${uu}"`)).join(" or ")}?` : /Return false/i.test(uu.text) ? `To stop it, return false instead of "${Eu}".` : "Check Show Docs for what it can return.";
-        Ru.add(`${yu} can't use "${Eu}" to stop anything. ${mu}`)
+    }(kk)) {
+    const kk = this.byName.get(Bk);
+    if ("callback" === (null === kk || void 0 === kk ? void 0 : kk.kind))
+      for (const tk of Rk.matchAll(/\breturn\s+["']((?:[Pp]revent|[Cc]ancel|[Ss]top|[Bb]lock|[Dd]eny)\w*)["']/g)) {
+        const Rk = tk[1];
+        if (kk.text.includes(`"${Rk}"`)) continue;
+        const ak = [...new Set([...kk.text.matchAll(/Return "(prevent[A-Za-z]*)"/g)].map((kk => kk[1])))],
+          Xk = ak.length > 0 ? `Did you mean ${ak.map((kk=>`"${kk}"`)).join(" or ")}?` : /Return false/i.test(kk.text) ? `To stop it, return false instead of "${Rk}".` : "Check Show Docs for what it can return.";
+        Fk.add(`${Bk} can't use "${Rk}" to stop anything. ${Xk}`)
       }
   }
-  return [...Ru]
+  return [...Fk]
 }
-codeWarnings(uu) {
-  let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return [...this.unknownApiMethods(uu), ...this.unprefixedApiCalls(uu), ...this.unknownItemNames(uu), ...this.reorderedComparedNames(uu), ...this.unknownComparedBlockNames(uu), ...this.madeUpStopValues(uu), ...zJ(uu), ...LJ(uu, Ru)]
+codeWarnings(kk) {
+  let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  return [...this.unknownApiMethods(kk), ...this.unprefixedApiCalls(kk), ...this.unknownItemNames(kk), ...this.reorderedComparedNames(kk), ...this.unknownComparedBlockNames(kk), ...this.madeUpStopValues(kk), ...Pb(kk), ...zb(kk, Fk)]
 }
-suggestNames(uu) {
-  var Ru;
-  const yu = uu.trim().toLowerCase().replace(/\s+/g, " "),
-    Eu = Object.hasOwn(IJ, yu) ? IJ[yu] : void 0;
-  if (Eu) {
-    const uu = Eu.filter((uu => this.namesByLowerCase.has(uu.toLowerCase())));
+suggestNames(kk) {
+  var Fk;
+  const Bk = kk.trim().toLowerCase().replace(/\s+/g, " "),
+    Rk = Object.hasOwn(ub, Bk) ? ub[Bk] : void 0;
+  if (Rk) {
+    const kk = Rk.filter((kk => this.namesByLowerCase.has(kk.toLowerCase())));
     return {
-      names: uu,
-      isSure: 1 === uu.length,
+      names: kk,
+      isSure: 1 === kk.length,
       isDecided: !0
     }
   }
-  const Ku = uu.trim().replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/\s+/).map((uu => Object.hasOwn(GJ, uu) ? GJ[uu] : uu)).filter(Boolean).join(" "),
-    Qu = null !== (Ru = this.namesByLowerCase.get(yu)) && void 0 !== Ru ? Ru : this.namesByLowerCase.get(Ku);
-  if (Qu) return {
-    names: [Qu],
+  const tk = kk.trim().replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().split(/\s+/).map((kk => Object.hasOwn(Mb, kk) ? Mb[kk] : kk)).filter(Boolean).join(" "),
+    ak = null !== (Fk = this.namesByLowerCase.get(Bk)) && void 0 !== Fk ? Fk : this.namesByLowerCase.get(tk);
+  if (ak) return {
+    names: [ak],
     isSure: !0,
     isDecided: !0
   };
-  const mu = this.closestItemAndBlockNames(Ku),
-    Ju = uu => sJ(uu).filter((uu => !nJ.has(uu) && !oJ.has(uu))).map(tJ),
-    Nu = 1 === mu.length ? Ju(mu[0]) : [];
+  const Xk = this.closestItemAndBlockNames(tk),
+    bk = kk => cb(kk).filter((kk => !Ub.has(kk) && !jb.has(kk))).map(Gb),
+    wk = 1 === Xk.length ? bk(Xk[0]) : [];
   return {
-    names: mu,
-    isSure: 1 === mu.length && Ju(Ku).every((uu => Nu.includes(uu))),
+    names: Xk,
+    isSure: 1 === Xk.length && bk(tk).every((kk => wk.includes(kk))),
     isDecided: !1
   }
 }
-closestItemAndBlockNames(uu) {
-  const Ru = new Set(sJ(uu).filter((uu => !nJ.has(uu))).map(tJ)),
-    yu = this.itemAndBlockNames.map((uu => {
-      const yu = sJ(uu).filter((uu => !nJ.has(uu))).map(tJ),
-        Eu = yu.filter((uu => Ru.has(uu))).length;
+closestItemAndBlockNames(kk) {
+  const Fk = new Set(cb(kk).filter((kk => !Ub.has(kk))).map(Gb)),
+    Bk = this.itemAndBlockNames.map((kk => {
+      const Bk = cb(kk).filter((kk => !Ub.has(kk))).map(Gb),
+        Rk = Bk.filter((kk => Fk.has(kk))).length;
       return {
-        candidate: uu,
-        score: 2 * Eu - (yu.length - Eu)
+        candidate: kk,
+        score: 2 * Rk - (Bk.length - Rk)
       }
-    })).filter((uu => uu.score > 0)),
-    Eu = Math.max(...yu.map((uu => uu.score)));
-  return yu.filter((uu => uu.score === Eu)).slice(0, 2).map((uu => uu.candidate))
+    })).filter((kk => kk.score > 0)),
+    Rk = Math.max(...Bk.map((kk => kk.score)));
+  return Bk.filter((kk => kk.score === Rk)).slice(0, 2).map((kk => kk.candidate))
 }
-find(uu, Ru, yu) {
-  const Eu = new Map,
-    Ku = (uu, Ru) => {
-      var yu;
-      uu && Eu.set(uu, (null !== (yu = Eu.get(uu)) && void 0 !== yu ? yu : 0) + Ru)
+find(kk, Fk, Bk) {
+  const Rk = new Map,
+    tk = (kk, Fk) => {
+      var Bk;
+      kk && Rk.set(kk, (null !== (Bk = Rk.get(kk)) && void 0 !== Bk ? Bk : 0) + Fk)
     },
-    Qu = sJ(uu),
-    mu = Qu.filter((uu => !nJ.has(uu)));
-  for (const ru of Qu)
-    for (const uu of Object.hasOwn(UJ, ru) ? UJ[ru] : []) Ku(this.byName.get(uu), 6);
-  for (const ru of `${uu}\n${Ru}`.matchAll(/\bapi\.(\w+)|\b(on[A-Z]\w+|tick|playerCommand)\b|"(\w+)"/g)) {
-    var Ju, Nu;
-    Ku(this.byName.get(null !== (Ju = null !== (Nu = ru[1]) && void 0 !== Nu ? Nu : ru[2]) && void 0 !== Ju ? Ju : ru[3]), ru[1] || ru[2] ? 4 : 2)
+    ak = cb(kk),
+    Xk = ak.filter((kk => !Ub.has(kk)));
+  for (const Vk of ak)
+    for (const kk of Object.hasOwn(gb, Vk) ? gb[Vk] : []) tk(this.byName.get(kk), 6);
+  for (const Vk of `${kk}\n${Fk}`.matchAll(/\bapi\.(\w+)|\b(on[A-Z]\w+|tick|playerCommand)\b|"(\w+)"/g)) {
+    var bk, wk;
+    tk(this.byName.get(null !== (bk = null !== (wk = Vk[1]) && void 0 !== wk ? wk : Vk[2]) && void 0 !== bk ? bk : Vk[3]), Vk[1] || Vk[2] ? 4 : 2)
   }
-  for (const ru of (0, rR.i)(Ru, /([A-Za-z_$][\w$]*)\s*\(/g, rR.o)) {
-    const uu = this.byName.get(ru[1]);
-    "helper" === (null === uu || void 0 === uu ? void 0 : uu.kind) && Ku(uu, 3)
+  for (const Vk of (0, JF.i)(Fk, /([A-Za-z_$][\w$]*)\s*\(/g, JF.r)) {
+    const kk = this.byName.get(Vk[1]);
+    "helper" === (null === kk || void 0 === kk ? void 0 : kk.kind) && tk(kk, 3)
   }
-  const Xu = new Set(mu.map(tJ));
-  for (const ru of this.sections) {
-    let uu = 0;
-    for (const Ru of Xu) {
-      var Vu;
-      const yu = 1 / Math.log2(2 + (null !== (Vu = this.wordCounts.get(Ru)) && void 0 !== Vu ? Vu : 0));
-      ru.nameWords.has(Ru) ? uu += 3 * yu : ru.textWords.has(Ru) && (uu += yu)
+  const dk = new Set(Xk.map(Gb));
+  for (const Vk of this.sections) {
+    let kk = 0;
+    for (const Fk of dk) {
+      var sk;
+      const Bk = 1 / Math.log2(2 + (null !== (sk = this.wordCounts.get(Fk)) && void 0 !== sk ? sk : 0));
+      Vk.nameWords.has(Fk) ? kk += 3 * Bk : Vk.textWords.has(Fk) && (kk += Bk)
     }
-    Ku(ru, uu)
+    tk(Vk, kk)
   }
-  return [...Eu.entries()].filter((uu => {
-    let [Ru, yu] = uu;
-    return yu > .5 && "prefab" !== Ru.kind
-  })).sort(((uu, Ru) => Ru[1] - uu[1])).slice(0, yu).map((uu => {
-    let [Ru] = uu;
-    return Ru
+  return [...Rk.entries()].filter((kk => {
+    let [Fk, Bk] = kk;
+    return Bk > .5 && "prefab" !== Fk.kind
+  })).sort(((kk, Fk) => Fk[1] - kk[1])).slice(0, Bk).map((kk => {
+    let [Fk] = kk;
+    return Fk
   }))
 }
-section(uu) {
-  var Ru, yu;
-  const Eu = uu.trim().replace(/^api\./, "").replace(/\(.*$/, ""),
-    Ku = Eu.toLowerCase();
-  return null !== (Ru = null !== (yu = this.byName.get(Eu)) && void 0 !== yu ? yu : this.sections.find((uu => uu.name.toLowerCase() === Ku))) && void 0 !== Ru ? Ru : null
+section(kk) {
+  var Fk, Bk;
+  const Rk = kk.trim().replace(/^api\./, "").replace(/\(.*$/, ""),
+    tk = Rk.toLowerCase();
+  return null !== (Fk = null !== (Bk = this.byName.get(Rk)) && void 0 !== Bk ? Bk : this.sections.find((kk => kk.name.toLowerCase() === tk))) && void 0 !== Fk ? Fk : null
 }
-searchNames(uu, Ru) {
-  const yu = sJ(uu).filter((uu => !nJ.has(uu))).map(tJ);
-  if (0 === yu.length) return [];
-  const Eu = [...this.itemAndBlockNames, ...this.mobTypes].flatMap((uu => {
-      const Ru = new Set(sJ(uu).map(tJ)),
-        Eu = yu.filter((uu => Ru.has(uu))).length;
-      return 0 === Eu ? [] : [{
-        name: uu,
-        found: Eu,
-        length: Ru.size
+searchNames(kk, Fk) {
+  const Bk = cb(kk).filter((kk => !Ub.has(kk))).map(Gb);
+  if (0 === Bk.length) return [];
+  const Rk = [...this.itemAndBlockNames, ...this.mobTypes].flatMap((kk => {
+      const Fk = new Set(cb(kk).map(Gb)),
+        Rk = Bk.filter((kk => Fk.has(kk))).length;
+      return 0 === Rk ? [] : [{
+        name: kk,
+        found: Rk,
+        length: Fk.size
       }]
     })),
-    Ku = Math.max(0, ...Eu.map((uu => uu.found)));
-  return [...new Set(Eu.filter((uu => uu.found === Ku)).sort(((uu, Ru) => uu.length - Ru.length || uu.name.localeCompare(Ru.name))).map((uu => uu.name)))].slice(0, Ru)
+    tk = Math.max(0, ...Rk.map((kk => kk.found)));
+  return [...new Set(Rk.filter((kk => kk.found === tk)).sort(((kk, Fk) => kk.length - Fk.length || kk.name.localeCompare(Fk.name))).map((kk => kk.name)))].slice(0, Fk)
 }
-matchItemAndBlockNames(uu, Ru) {
-  const yu = new Set(sJ(uu).map(tJ)),
-    Eu = [];
-  for (const Ku of this.itemAndBlockNames) {
-    const uu = sJ(Ku).filter((uu => !nJ.has(uu))).map(tJ);
-    uu.length > 0 && uu.every((uu => yu.has(uu))) && Eu.push({
-      name: Ku,
-      length: uu.length
+matchItemAndBlockNames(kk, Fk) {
+  const Bk = new Set(cb(kk).map(Gb)),
+    Rk = [];
+  for (const tk of this.itemAndBlockNames) {
+    const kk = cb(tk).filter((kk => !Ub.has(kk))).map(Gb);
+    kk.length > 0 && kk.every((kk => Bk.has(kk))) && Rk.push({
+      name: tk,
+      length: kk.length
     })
   }
-  return Eu.sort(((uu, Ru) => Ru.length - uu.length)).slice(0, Ru).map((uu => uu.name))
+  return Rk.sort(((kk, Fk) => Fk.length - kk.length)).slice(0, Fk).map((kk => kk.name))
 }
 }
 
-function aJ(uu, Ru) {
-  var yu;
-  const Eu = fJ(uu, !0),
-    Ku = null === (yu = /^([\w$.]+) (?:needs|couldn't|didn't|isn't a function)/.exec(Eu)) || void 0 === yu ? void 0 : yu[1],
-    Qu = Ku && void 0 !== Ru ? function(uu, Ru) {
-      const yu = Ru.replace(/[$.]/g, "\\$&"),
-        Eu = new RegExp(`(^|[^\\w$.])${yu}\\s*\\(`),
-        Ku = uu.split("\n").flatMap(((uu, Ru) => Eu.test(uu) ? [Ru + 1] : []));
-      return 1 === Ku.length ? Ku[0] : void 0
-    }(Ru, Ku) : void 0;
-  return Qu ? {
-    text: fJ(uu, !1),
-    line: Qu
+function Qb(kk, Fk) {
+  var Bk;
+  const Rk = kw(kk, !0),
+    tk = null === (Bk = /^([\w$.]+) (?:needs|couldn't|didn't|isn't a function)/.exec(Rk)) || void 0 === Bk ? void 0 : Bk[1],
+    ak = tk && void 0 !== Fk ? function(kk, Fk) {
+      const Bk = Fk.replace(/[$.]/g, "\\$&"),
+        Rk = new RegExp(`(^|[^\\w$.])${Bk}\\s*\\(`),
+        tk = kk.split("\n").flatMap(((kk, Fk) => Rk.test(kk) ? [Fk + 1] : []));
+      return 1 === tk.length ? tk[0] : void 0
+    }(Fk, tk) : void 0;
+  return ak ? {
+    text: kw(kk, !1),
+    line: ak
   } : {
-    text: Eu
+    text: Rk
   }
 }
 
-function fJ(uu, Ru) {
-  const yu = uu.replace(/^Logging too many errors\n/, "").replace(/^(First|Last) error of \d+ errors:\n/, ""),
-    [Eu, ...Ku] = yu.split("\n"),
+function kw(kk, Fk) {
+  const Bk = kk.replace(/^Logging too many errors\n/, "").replace(/^(First|Last) error of \d+ errors:\n/, ""),
+    [Rk, ...tk] = Bk.split("\n"),
     {
-      when: Qu,
-      rest: mu
-    } = function(uu) {
-      const Ru = /^Error in world code init:\s*/.exec(uu);
-      if (Ru) return {
+      when: ak,
+      rest: Xk
+    } = function(kk) {
+      const Fk = /^Error in world code init:\s*/.exec(kk);
+      if (Fk) return {
         when: "when your world started",
-        rest: uu.slice(Ru[0].length)
+        rest: kk.slice(Fk[0].length)
       };
-      const yu = /^Error in (?:callback )?(\w+):\s*/.exec(uu);
-      return yu ? {
-        when: `in ${yu[1]}`,
-        rest: uu.slice(yu[0].length)
+      const Bk = /^Error in (?:callback )?(\w+):\s*/.exec(kk);
+      return Bk ? {
+        when: `in ${Bk[1]}`,
+        rest: kk.slice(Bk[0].length)
       } : {
         when: "",
-        rest: uu
+        rest: kk
       }
-    }(Eu.trim()),
-    Ju = Qu && Ru ? ` ${Qu}` : "",
-    Nu = /(?:ApiError:\s*)?(\w+) didn't work/.exec(mu);
-  if (Nu) {
-    var Xu, Vu, ru, Bu, xu;
-    const uu = /^Invalid argument #(\d+)(?:\s*\(([^)]*)\))?:?\s*(.*)$/.exec(null !== (Xu = null === (Vu = Ku[0]) || void 0 === Vu ? void 0 : Vu.trim()) && void 0 !== Xu ? Xu : ""),
-      Ru = null === (ru = /^Expected(?: type)?:?\s*(.*)$/.exec(null !== (Bu = null === (xu = Ku[1]) || void 0 === xu ? void 0 : xu.trim()) && void 0 !== Bu ? Bu : "")) || void 0 === ru ? void 0 : ru[1],
-      yu = Ru ? function(uu) {
-        const Ru = uu.split(/\s+or\s+/)[0].trim();
-        return /^(a|an|the)\s/i.test(Ru) || !/^[a-z]/i.test(Ru) ? Ru : `${/^[aeiou]/i.test(Ru)?"an":"a"} ${Ru}`
-      }(Ru) : void 0;
-    return yu && null !== uu && void 0 !== uu && uu[3] ? `api.${Nu[1]} needs ${yu}, but it got ${uu[3]}${Ju}.` : uu ? `api.${Nu[1]} couldn't use its ${Su=Number(uu[1]),1===Su?"first":2===Su?"second":3===Su?"third":4===Su?"fourth":`#${Su}`} argument${Ju}.${yu?` It needs ${yu}.`:""}` : `api.${Nu[1]} didn't work${Ju}.`
+    }(Rk.trim()),
+    bk = ak && Fk ? ` ${ak}` : "",
+    wk = /(?:ApiError:\s*)?(\w+) didn't work/.exec(Xk);
+  if (wk) {
+    var dk, sk, Vk, Jk, Ak;
+    const kk = /^Invalid argument #(\d+)(?:\s*\(([^)]*)\))?:?\s*(.*)$/.exec(null !== (dk = null === (sk = tk[0]) || void 0 === sk ? void 0 : sk.trim()) && void 0 !== dk ? dk : ""),
+      Fk = null === (Vk = /^Expected(?: type)?:?\s*(.*)$/.exec(null !== (Jk = null === (Ak = tk[1]) || void 0 === Ak ? void 0 : Ak.trim()) && void 0 !== Jk ? Jk : "")) || void 0 === Vk ? void 0 : Vk[1],
+      Bk = Fk ? function(kk) {
+        const Fk = kk.split(/\s+or\s+/)[0].trim();
+        return /^(a|an|the)\s/i.test(Fk) || !/^[a-z]/i.test(Fk) ? Fk : `${/^[aeiou]/i.test(Fk)?"an":"a"} ${Fk}`
+      }(Fk) : void 0;
+    return Bk && null !== kk && void 0 !== kk && kk[3] ? `api.${wk[1]} needs ${Bk}, but it got ${kk[3]}${bk}.` : kk ? `api.${wk[1]} couldn't use its ${ek=Number(kk[1]),1===ek?"first":2===ek?"second":3===ek?"third":4===ek?"fourth":`#${ek}`} argument${bk}.${Bk?` It needs ${Bk}.`:""}` : `api.${wk[1]} didn't work${bk}.`
   }
-  var Su;
-  const pu = /TypeError:\s*(?:(.+?) is )?not a function/.exec(mu);
-  if (pu) return pu[1] ? `${pu[1]} isn't a function${Ju}. Check its name is spelt exactly right.` : `Your code called something that isn't a function${Ju}. Check each name it calls is spelt exactly right.`;
-  const Tu = /ReferenceError:\s*'?([^'\s]+)'? is not defined/.exec(mu);
-  if (Tu) return `${Tu[1]} isn't defined${Ju}. Check the spelling, or create it before using it.`;
-  const Wu = /TypeError:\s*[Cc]annot read propert(?:y|ies) (?:'([^']+)' )?of (undefined|null)(?: \(reading '([^']+)'\))?/.exec(mu);
-  if (Wu) {
-    var ju;
-    const uu = null !== (ju = Wu[1]) && void 0 !== ju ? ju : Wu[3];
-    return `Your code tried to read${uu?` .${uu}`:" something"} from ${Wu[2]}${Ju}: a value it expected wasn't there.`
+  var ek;
+  const yk = /TypeError:\s*(?:(.+?) is )?not a function/.exec(Xk);
+  if (yk) return yk[1] ? `${yk[1]} isn't a function${bk}. Check its name is spelt exactly right.` : `Your code called something that isn't a function${bk}. Check each name it calls is spelt exactly right.`;
+  const fk = /ReferenceError:\s*'?([^'\s]+)'? is not defined/.exec(Xk);
+  if (fk) return `${fk[1]} isn't defined${bk}. Check the spelling, or create it before using it.`;
+  const mk = /TypeError:\s*[Cc]annot read propert(?:y|ies) (?:'([^']+)' )?of (undefined|null)(?: \(reading '([^']+)'\))?/.exec(Xk);
+  if (mk) {
+    var Wk;
+    const kk = null !== (Wk = mk[1]) && void 0 !== Wk ? Wk : mk[3];
+    return `Your code tried to read${kk?` .${kk}`:" something"} from ${mk[2]}${bk}: a value it expected wasn't there.`
   }
-  return `Your code hit an error${Ju}: ${mu.replace(/^\w*Error:\s*/,"")}`
+  return `Your code hit an error${bk}: ${Xk.replace(/^\w*Error:\s*/,"")}`
 }
-const uN = /^"([^"]+)" isn't an item or block name\..*Did you mean "([^"]+)"\?$/,
-  RN = /^"([^"]+)" isn't a block or item name, so comparing with it\b.*Did you mean "([^"]+)"\?$/,
-  yN = /^"([^"]+)" (?:is an item, not a block|isn't a block or item name, so comparing a block with it)\b.*Did you mean "([^"]+)"\?$/,
-  EN = /^([\w$]+) can't use "([^"]+)" to stop anything\. Did you mean "([^"]+)"\?$/,
-  KN = /^Line \d+ calls ([\w$]+) without "api\.", so it throws there\. Did you mean (api\.[\w$]+)\?$/,
-  QN = /^Line \d+ uses "([\w$]+)", which is never set, so it throws there\. Did you mean "([\w$]+)"\?$/,
-  mN = /^Line \d+ uses "global", which World Code doesn't have\b/,
-  JN = /^[ \t]*global\.([\w$]+)[ \t]*=[ \t]*\1[ \t]*;?[ \t]*(?:\/\/.*)?(?:\r?\n|$)/gm,
-  NN = /^([ \t]*)global\.([\w$]+)([ \t]*=(?!=))/gm;
+const Fw = /^"([^"]+)" isn't an item or block name\..*Did you mean "([^"]+)"\?$/,
+  Bw = /^"([^"]+)" isn't a block or item name, so comparing with it\b.*Did you mean "([^"]+)"\?$/,
+  Rw = /^"([^"]+)" (?:is an item, not a block|isn't a block or item name, so comparing a block with it)\b.*Did you mean "([^"]+)"\?$/,
+  tw = /^([\w$]+) can't use "([^"]+)" to stop anything\. Did you mean "([^"]+)"\?$/,
+  aw = /^Line \d+ calls ([\w$]+) without "api\.", so it throws there\. Did you mean (api\.[\w$]+)\?$/,
+  Xw = /^Line \d+ uses "([\w$]+)", which is never set, so it throws there\. Did you mean "([\w$]+)"\?$/,
+  bw = /^Line \d+ uses "global", which World Code doesn't have\b/,
+  ww = /^[ \t]*global\.([\w$]+)[ \t]*=[ \t]*\1[ \t]*;?[ \t]*(?:\/\/.*)?(?:\r?\n|$)/gm,
+  dw = /^([ \t]*)global\.([\w$]+)([ \t]*=(?!=))/gm;
 
-function XN(uu) {
-  const Ru = KN.exec(uu);
-  if (Ru) return {
-    from: Ru[1],
-    to: Ru[2],
+function sw(kk) {
+  const Fk = aw.exec(kk);
+  if (Fk) return {
+    from: Fk[1],
+    to: Fk[2],
     kind: "call"
   };
-  const yu = QN.exec(uu);
-  if (yu) return {
-    from: yu[1],
-    to: yu[2],
+  const Bk = Xw.exec(kk);
+  if (Bk) return {
+    from: Bk[1],
+    to: Bk[2],
     kind: "variable"
   };
-  if (mN.test(uu)) return {
+  if (bw.test(kk)) return {
     from: "global",
     to: "",
     kind: "export"
   };
-  const Eu = EN.exec(uu);
-  if (Eu) return {
-    from: Eu[2],
-    to: Eu[3],
-    callback: Eu[1]
+  const Rk = tw.exec(kk);
+  if (Rk) return {
+    from: Rk[2],
+    to: Rk[3],
+    callback: Rk[1]
   };
-  const Ku = RN.exec(uu);
-  if (Ku) return {
-    from: Ku[1],
-    to: Ku[2],
+  const tk = Bw.exec(kk);
+  if (tk) return {
+    from: tk[1],
+    to: tk[2],
     kind: "compared"
   };
-  const Qu = yN.exec(uu);
-  if (Qu) return {
-    from: Qu[1],
-    to: Qu[2],
+  const ak = Rw.exec(kk);
+  if (ak) return {
+    from: ak[1],
+    to: ak[2],
     kind: "comparedBlock"
   };
-  const mu = uN.exec(uu);
-  return mu ? {
-    from: mu[1],
-    to: mu[2]
+  const Xk = Fw.exec(kk);
+  return Xk ? {
+    from: Xk[1],
+    to: Xk[2]
   } : void 0
 }
 
-function VN(uu) {
-  const Ru = uu.map(XN);
-  return Ru.length > 0 && !Ru.includes(void 0) ? Ru : void 0
+function Vw(kk) {
+  const Fk = kk.map(sw);
+  return Fk.length > 0 && !Fk.includes(void 0) ? Fk : void 0
 }
 
-function rN(uu, Ru, yu) {
-  return uu.replaceAll(`"${Ru}"`, `"${yu}"`).replaceAll(`'${Ru}'`, `'${yu}'`)
+function Jw(kk, Fk, Bk) {
+  return kk.replaceAll(`"${Fk}"`, `"${Bk}"`).replaceAll(`'${Fk}'`, `'${Bk}'`)
 }
 
-function BN(uu, Ru) {
-  const yu = uu => eu().isIdentifier(uu) ? uu.text === Ru : uu.elements.some((uu => !eu().isOmittedExpression(uu) && yu(uu.name))),
-    Eu = uu => void 0 !== uu && eu().isVariableDeclarationList(uu) && uu.declarations.some((uu => yu(uu.name))),
-    Ku = uu => {
-      const Ru = uu => !eu().isFunctionLike(uu) && !eu().isClassStaticBlockDeclaration(uu) && (!(!eu().isVariableDeclarationList(uu) || 0 !== (uu.flags & eu().NodeFlags.BlockScoped) || !Eu(uu)) || !0 === eu().forEachChild(uu, Ru));
-      return void 0 !== uu && !0 === eu().forEachChild(uu, Ru)
+function Aw(kk, Fk) {
+  const Bk = kk => Ek().isIdentifier(kk) ? kk.text === Fk : kk.elements.some((kk => !Ek().isOmittedExpression(kk) && Bk(kk.name))),
+    Rk = kk => void 0 !== kk && Ek().isVariableDeclarationList(kk) && kk.declarations.some((kk => Bk(kk.name))),
+    tk = kk => {
+      const Fk = kk => !Ek().isFunctionLike(kk) && !Ek().isClassStaticBlockDeclaration(kk) && (!(!Ek().isVariableDeclarationList(kk) || 0 !== (kk.flags & Ek().NodeFlags.BlockScoped) || !Rk(kk)) || !0 === Ek().forEachChild(kk, Fk));
+      return void 0 !== kk && !0 === Ek().forEachChild(kk, Fk)
     };
-  var Qu;
-  if (eu().isFunctionLike(uu)) return uu.parameters.some((uu => yu(uu.name))) || eu().isFunctionExpression(uu) && (null === (Qu = uu.name) || void 0 === Qu ? void 0 : Qu.text) === Ru || "body" in uu && Ku(uu.body);
-  return !(!eu().isSourceFile(uu) || !Ku(uu)) || (eu().isSourceFile(uu) || eu().isBlock(uu) || eu().isCaseClause(uu) || eu().isDefaultClause(uu) ? uu.statements.some((uu => {
-    var yu;
-    return eu().isVariableStatement(uu) && Eu(uu.declarationList) || (eu().isFunctionDeclaration(uu) || eu().isClassDeclaration(uu)) && (null === (yu = uu.name) || void 0 === yu ? void 0 : yu.text) === Ru || eu().isImportDeclaration(uu) && (uu => {
-      var yu;
-      const Eu = null === uu || void 0 === uu ? void 0 : uu.namedBindings;
-      return (null === uu || void 0 === uu || null === (yu = uu.name) || void 0 === yu ? void 0 : yu.text) === Ru || void 0 !== Eu && (eu().isNamespaceImport(Eu) ? Eu.name.text === Ru : Eu.elements.some((uu => uu.name.text === Ru)))
-    })(uu.importClause)
-  })) : eu().isForStatement(uu) || eu().isForInStatement(uu) || eu().isForOfStatement(uu) ? Eu(uu.initializer) : eu().isCatchClause(uu) && void 0 !== uu.variableDeclaration && yu(uu.variableDeclaration.name))
+  var ak;
+  if (Ek().isFunctionLike(kk)) return kk.parameters.some((kk => Bk(kk.name))) || Ek().isFunctionExpression(kk) && (null === (ak = kk.name) || void 0 === ak ? void 0 : ak.text) === Fk || "body" in kk && tk(kk.body);
+  return !(!Ek().isSourceFile(kk) || !tk(kk)) || (Ek().isSourceFile(kk) || Ek().isBlock(kk) || Ek().isCaseClause(kk) || Ek().isDefaultClause(kk) ? kk.statements.some((kk => {
+    var Bk;
+    return Ek().isVariableStatement(kk) && Rk(kk.declarationList) || (Ek().isFunctionDeclaration(kk) || Ek().isClassDeclaration(kk)) && (null === (Bk = kk.name) || void 0 === Bk ? void 0 : Bk.text) === Fk || Ek().isImportDeclaration(kk) && (kk => {
+      var Bk;
+      const Rk = null === kk || void 0 === kk ? void 0 : kk.namedBindings;
+      return (null === kk || void 0 === kk || null === (Bk = kk.name) || void 0 === Bk ? void 0 : Bk.text) === Fk || void 0 !== Rk && (Ek().isNamespaceImport(Rk) ? Rk.name.text === Fk : Rk.elements.some((kk => kk.name.text === Fk)))
+    })(kk.importClause)
+  })) : Ek().isForStatement(kk) || Ek().isForInStatement(kk) || Ek().isForOfStatement(kk) ? Rk(kk.initializer) : Ek().isCatchClause(kk) && void 0 !== kk.variableDeclaration && Bk(kk.variableDeclaration.name))
 }
 
-function xN(uu, Ru) {
-  return Ru.reduce(((uu, Ru) => {
+function ew(kk, Fk) {
+  return Fk.reduce(((kk, Fk) => {
     let {
-      from: yu,
-      to: Eu,
-      kind: Ku,
-      callback: Qu
-    } = Ru;
-    if ("export" === Ku) return uu.replace(JN, "").replace(NN, "$1$2$3");
-    if ("call" === Ku || "variable" === Ku) return function(uu, Ru, yu, Eu) {
-      const Ku = eu().createSourceFile("worldCode.js", uu, eu().ScriptTarget.Latest, !0, eu().ScriptKind.JS),
-        Qu = [],
-        mu = (uu, Ju) => {
-          const Nu = Ju || BN(uu, Ru),
-            Xu = uu.parent;
-          if (eu().isIdentifier(uu) && uu.text === Ru && !Nu && Xu) {
-            const mu = eu().isBindingElement(Xu) && Xu.propertyName === uu || (eu().isPropertyAccessExpression(Xu) || eu().isPropertyAssignment(Xu) || eu().isMethodDeclaration(Xu) || eu().isPropertyDeclaration(Xu) || eu().isGetAccessorDeclaration(Xu) || eu().isSetAccessorDeclaration(Xu)) && Xu.name === uu,
-              Ju = eu().isCallExpression(Xu) && Xu.expression === uu;
-            mu || Eu && !Ju || Qu.push({
-              at: uu.getStart(Ku),
-              text: eu().isShorthandPropertyAssignment(Xu) ? `${Ru}: ${yu}` : yu
+      from: Bk,
+      to: Rk,
+      kind: tk,
+      callback: ak
+    } = Fk;
+    if ("export" === tk) return kk.replace(ww, "").replace(dw, "$1$2$3");
+    if ("call" === tk || "variable" === tk) return function(kk, Fk, Bk, Rk) {
+      const tk = Ek().createSourceFile("worldCode.js", kk, Ek().ScriptTarget.Latest, !0, Ek().ScriptKind.JS),
+        ak = [],
+        Xk = (kk, bk) => {
+          const wk = bk || Aw(kk, Fk),
+            dk = kk.parent;
+          if (Ek().isIdentifier(kk) && kk.text === Fk && !wk && dk) {
+            const Xk = Ek().isBindingElement(dk) && dk.propertyName === kk || (Ek().isPropertyAccessExpression(dk) || Ek().isPropertyAssignment(dk) || Ek().isMethodDeclaration(dk) || Ek().isPropertyDeclaration(dk) || Ek().isGetAccessorDeclaration(dk) || Ek().isSetAccessorDeclaration(dk)) && dk.name === kk,
+              bk = Ek().isCallExpression(dk) && dk.expression === kk;
+            Xk || Rk && !bk || ak.push({
+              at: kk.getStart(tk),
+              text: Ek().isShorthandPropertyAssignment(dk) ? `${Fk}: ${Bk}` : Bk
             })
           }
-          eu().forEachChild(uu, (uu => {
-            mu(uu, Nu)
+          Ek().forEachChild(kk, (kk => {
+            Xk(kk, wk)
           }))
         };
-      return mu(Ku, !1), Qu.reduceRight(((uu, yu) => uu.slice(0, yu.at) + yu.text + uu.slice(yu.at + Ru.length)), uu)
-    }(uu, yu, Eu, "call" === Ku);
-    if ("compared" === Ku || "comparedBlock" === Ku) {
-      const Ru = `(["'])${function(uu){return uu.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(yu)}\\1`;
-      return ("comparedBlock" === Ku ? [`\\b\\w*[Bb]lock\\w*\\s*[!=]==?\\s*${Ru}`, `${Ru}\\s*[!=]==?\\s*\\w*[Bb]lock\\w*\\b`] : [`[!=]==?\\s*${Ru}`, `${Ru}\\s*[!=]==?`, `\\bcase\\s+${Ru}\\s*:`, `\\.includes\\(\\s*${Ru}\\s*\\)`]).reduce(((uu, Ru) => uu.replace(new RegExp(Ru, "g"), (uu => rN(uu, yu, Eu)))), uu)
+      return Xk(tk, !1), ak.reduceRight(((kk, Bk) => kk.slice(0, Bk.at) + Bk.text + kk.slice(Bk.at + Fk.length)), kk)
+    }(kk, Bk, Rk, "call" === tk);
+    if ("compared" === tk || "comparedBlock" === tk) {
+      const Fk = `(["'])${function(kk){return kk.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}(Bk)}\\1`;
+      return ("comparedBlock" === tk ? [`\\b\\w*[Bb]lock\\w*\\s*[!=]==?\\s*${Fk}`, `${Fk}\\s*[!=]==?\\s*\\w*[Bb]lock\\w*\\b`] : [`[!=]==?\\s*${Fk}`, `${Fk}\\s*[!=]==?`, `\\bcase\\s+${Fk}\\s*:`, `\\.includes\\(\\s*${Fk}\\s*\\)`]).reduce(((kk, Fk) => kk.replace(new RegExp(Fk, "g"), (kk => Jw(kk, Bk, Rk)))), kk)
     }
-    if (void 0 !== Qu) {
-      return wu(uu).filter((uu => uu.name === Qu && uu.topLevel)).reduceRight(((uu, Ru) => uu.slice(0, Ru.from) + rN(uu.slice(Ru.from, Ru.to), yu, Eu) + uu.slice(Ru.to)), uu)
+    if (void 0 !== ak) {
+      return qk(kk).filter((kk => kk.name === ak && kk.topLevel)).reduceRight(((kk, Fk) => kk.slice(0, Fk.from) + Jw(kk.slice(Fk.from, Fk.to), Bk, Rk) + kk.slice(Fk.to)), kk)
     }
-    return rN(uu, yu, Eu)
-  }), uu)
+    return Jw(kk, Bk, Rk)
+  }), kk)
 }
 
-function SN(uu) {
+function yw(kk) {
   let {
-    from: Ru,
-    to: yu,
-    kind: Eu
-  } = uu;
-  return "export" === Eu ? 'The "global." lines are gone: World Code finds your callbacks by their names.' : `"${Ru}" is now "${yu}".`
+    from: Fk,
+    to: Bk,
+    kind: Rk
+  } = kk;
+  return "export" === Rk ? 'The "global." lines are gone: World Code finds your callbacks by their names.' : `"${Fk}" is now "${Bk}".`
 }
-var pN = yu(41060);
+var fw = Bk(40886);
 
-function TN() {
-  return (0, mu.jsxs)("svg", {
+function mw() {
+  return (0, Xk.jsxs)("svg", {
     className: "WorldCodeAiKeyIcon",
     viewBox: "0 0 16 16",
     "aria-hidden": "true",
-    children: [(0, mu.jsx)("circle", {
+    children: [(0, Xk.jsx)("circle", {
       cx: "4.5",
       cy: "8",
       r: "3"
-    }), (0, mu.jsx)("path", {
+    }), (0, Xk.jsx)("path", {
       d: "M7.5 8h7.5M12.5 8v3M15 8v2.5"
     })]
   })
 }
 
-function WN(uu) {
+function Ww(kk) {
   let {
-    detail: Ru,
-    onOpen: yu
-  } = uu;
-  return (0, mu.jsxs)("details", {
+    detail: Fk,
+    onOpen: Bk
+  } = kk;
+  return (0, Xk.jsxs)("details", {
     className: "WorldCodeAiKeyDetails",
-    onToggle: uu => {
-      uu.currentTarget.open && (null === yu || void 0 === yu || yu())
+    onToggle: kk => {
+      kk.currentTarget.open && (null === Bk || void 0 === Bk || Bk())
     },
-    children: [(0, mu.jsx)("summary", {
+    children: [(0, Xk.jsx)("summary", {
       children: "Details"
-    }), (0, mu.jsx)("p", {
-      children: Ru
+    }), (0, Xk.jsx)("p", {
+      children: Fk
     })]
   })
 }
 
-function jN(uu) {
+function vw(kk) {
   let {
-    answeredBy: Ru
-  } = uu;
-  return "free" === Ru ? (0, mu.jsx)("div", {
+    answeredBy: Fk
+  } = kk;
+  return "free" === Fk ? (0, Xk.jsx)("div", {
     className: "WorldCodeAiAnsweredBy",
     children: "Bot.xd (free)"
-  }) : (0, mu.jsxs)("div", {
-    className: Ru.isSuperBot ? "WorldCodeAiAnsweredBy" : "WorldCodeAiAnsweredBy WorldCodeAiAnsweredBy-key",
-    children: [!Ru.isSuperBot && (0, mu.jsx)(TN, {}), Ru.model]
+  }) : (0, Xk.jsxs)("div", {
+    className: Fk.isSuperBot ? "WorldCodeAiAnsweredBy" : "WorldCodeAiAnsweredBy WorldCodeAiAnsweredBy-key",
+    children: [!Fk.isSuperBot && (0, Xk.jsx)(mw, {}), Fk.model]
   })
 }
 
-function HN(uu) {
+function iw(kk) {
   let {
-    notice: Ru,
-    model: yu,
-    company: Eu,
-    isServer: Ku
-  } = uu;
-  switch (Ru) {
+    notice: Fk,
+    model: Bk,
+    company: Rk,
+    isServer: tk
+  } = kk;
+  switch (Fk) {
     case "badKey":
-      return Ku ? `${Eu} didn't accept your key: it may be wrong or deleted.` : `${Eu} didn't accept your key: it may be wrong or deleted. Check it on ${Eu}'s website.`;
+      return tk ? `${Rk} didn't accept your key: it may be wrong or deleted.` : `${Rk} didn't accept your key: it may be wrong or deleted. Check it on ${Rk}'s website.`;
     case "noCredit":
-      return Ku ? `${Eu} stopped your key for now: it has used all it can.` : `${Eu} stopped your key for now: it has used all it can. Check it on ${Eu}'s website.`;
+      return tk ? `${Rk} stopped your key for now: it has used all it can.` : `${Rk} stopped your key for now: it has used all it can. Check it on ${Rk}'s website.`;
     case "busy":
-      return `Too many requests to ${yu} right now. Wait a minute and try again.`;
+      return `Too many requests to ${Bk} right now. Wait a minute and try again.`;
     case "noModel":
-      return `${Eu} can't find ${yu}. Pick another model, or press Check for new models in AI settings.`;
+      return `${Rk} can't find ${Bk}. Pick another model, or press Check for new models in AI settings.`;
     case "timeout":
-      return `${yu} took too long to answer.`;
+      return `${Bk} took too long to answer.`;
     case "unreachable":
-      return Ku ? `Couldn't reach ${Eu}. Check the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help.` : `Couldn't reach ${Eu}. Check your internet and your key.`;
+      return tk ? `Couldn't reach ${Rk}. Check the server is running. Your server must allow web pages to use it. In LM Studio turn on CORS; for Ollama see its help.` : `Couldn't reach ${Rk}. Check your internet and your key.`;
     case "blocked":
-      return `${Eu} doesn't work from where you are.`;
+      return `${Rk} doesn't work from where you are.`;
     case "unchecked":
       return "Bloxd's safety check didn't answer, so your key wasn't used.";
     default:
-      return `${yu} can't be used right now. Try again in a minute.`
+      return `${Bk} can't be used right now. Try again in a minute.`
   }
 }
 
-function dN(uu) {
+function Yw(kk) {
   let {
-    notice: Ru,
-    model: yu,
-    company: Eu
-  } = uu;
-  switch (Ru) {
+    notice: Fk,
+    model: Bk,
+    company: Rk
+  } = kk;
+  switch (Fk) {
     case "badKey":
-      return `Not answered: ${Eu} didn't accept your key.`;
+      return `Not answered: ${Rk} didn't accept your key.`;
     case "noModel":
-      return `Not answered: ${Eu} couldn't find ${yu}.`;
+      return `Not answered: ${Rk} couldn't find ${Bk}.`;
     case "noCredit":
-      return `Not answered: ${Eu} stopped your key for now.`;
+      return `Not answered: ${Rk} stopped your key for now.`;
     case "busy":
-      return `Not answered: too many requests to ${yu}.`;
+      return `Not answered: too many requests to ${Bk}.`;
     case "timeout":
-      return `Not answered: ${yu} took too long.`;
+      return `Not answered: ${Bk} took too long.`;
     case "unreachable":
-      return `Not answered: couldn't reach ${Eu}.`;
+      return `Not answered: couldn't reach ${Rk}.`;
     case "blocked":
-      return `Not answered: ${Eu} doesn't work from where you are.`;
+      return `Not answered: ${Rk} doesn't work from where you are.`;
     case "unchecked":
       return "Not answered: the safety check didn't answer.";
     default:
-      return `Not answered: ${yu} couldn't be used.`
+      return `Not answered: ${Bk} couldn't be used.`
   }
 }
 
-function bN(uu) {
-  return "busy" === uu || "timeout" === uu || "failed" === uu || "unchecked" === uu
+function ow(kk) {
+  return "busy" === kk || "timeout" === kk || "failed" === kk || "unchecked" === kk
 }
 
-function CN(uu) {
+function Lw(kk) {
   let {
-    notice: Ru,
-    onRetry: yu,
-    onUseFree: Eu,
-    onCheckKey: Ku
-  } = uu;
-  return (0, mu.jsxs)("div", {
+    notice: Fk,
+    onRetry: Bk,
+    onUseFree: Rk,
+    onCheckKey: tk
+  } = kk;
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiKeyNoticeActions",
-    children: [(0, mu.jsx)("button", {
-      ...pN.f,
+    children: [(0, Xk.jsx)("button", {
+      ...fw.h,
       className: "WorldCodeAiPrimaryButton",
-      onClick: Eu,
+      onClick: Rk,
       children: "Use Bot.xd for this one"
-    }), bN(Ru) && (0, mu.jsx)("button", {
+    }), ow(Fk) && (0, Xk.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: yu,
+      onClick: Bk,
       children: "Try again"
-    }), "unchecked" !== Ru && (0, mu.jsx)("button", {
+    }), "unchecked" !== Fk && (0, Xk.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: Ku,
+      onClick: tk,
       children: "Open AI settings"
     })]
   })
 }
 
-function kN(uu) {
+function Ow(kk) {
   let {
-    hasCode: Ru,
-    canFinish: yu,
-    onFinish: Eu
-  } = uu;
-  return (0, mu.jsxs)("div", {
+    hasCode: Fk,
+    canFinish: Bk,
+    onFinish: Rk
+  } = kk;
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiCutShort",
-    children: [(0, mu.jsx)("p", {
-      children: Ru ? "The answer was cut short because it was too long." : "The answer was cut short before its code because it was too long."
-    }), yu && (0, mu.jsx)("button", {
+    children: [(0, Xk.jsx)("p", {
+      children: Fk ? "The answer was cut short because it was too long." : "The answer was cut short before its code because it was too long."
+    }), Bk && (0, Xk.jsx)("button", {
       className: "WorldCodeAiSecondaryButton",
-      onClick: Eu,
+      onClick: Rk,
       children: "Finish the answer"
     })]
   })
 }
-const eN = "worldCodeAiAllowEdits";
+const Ew = "worldCodeAiAllowEdits";
 
-function AN() {
+function Sw() {
   try {
-    return "false" !== localStorage.getItem(eN)
+    return "false" !== localStorage.getItem(Ew)
   } catch {
     return !0
   }
 }
 
-function DN(uu) {
+function Nw(kk) {
   let {
-    allow: Ru,
-    onChange: yu
-  } = uu;
-  return (0, mu.jsxs)("label", {
+    allow: Fk,
+    onChange: Bk
+  } = kk;
+  return (0, Xk.jsxs)("label", {
     className: "WorldCodeAiAllowEdits",
-    children: [(0, mu.jsx)("input", {
+    children: [(0, Xk.jsx)("input", {
       type: "checkbox",
       role: "switch",
-      checked: Ru,
-      onChange: uu => {
-        yu(uu.target.checked)
+      checked: Fk,
+      onChange: kk => {
+        Bk(kk.target.checked)
       }
-    }), (0, mu.jsx)("span", {
+    }), (0, Xk.jsx)("span", {
       children: "Allow AI to make edits to my code"
     })]
   })
 }
-const MN = {
+const Hw = {
   keyId: "bloxd",
   modelId: "superbotxd"
 };
 
-function IN(uu, Ru) {
-  const yu = Array.from(uu.querySelectorAll(".WorldCodeAiModelGroup")),
-    Eu = yu.findIndex((uu => uu.contains(Ru)));
-  if (Eu < 0) return !1;
-  const Ku = uu.getBoundingClientRect(),
-    Qu = Ru => uu.scrollTop + Ru.top - Ku.top,
-    mu = Qu(Ru.getBoundingClientRect()) + Ru.getBoundingClientRect().height,
-    Ju = uu.scrollHeight - uu.clientHeight,
-    Nu = yu.slice(0, Eu + 1).map((uu => Qu(uu.getBoundingClientRect()))).filter((uu => mu - uu <= Ku.height + 1));
-  if (0 === Nu.length) return !1;
-  const Xu = Nu.filter((uu => uu <= Ju + 1)),
-    Vu = Xu.length > 0 ? Math.max(...Xu) : Math.min(...Nu);
-  return Vu > Ju && (uu.style.paddingBottom = (parseFloat(getComputedStyle(uu).paddingBottom) || 0) + Vu - Ju + "px"), uu.scrollTop = Vu, !0
+function uw(kk, Fk) {
+  const Bk = Array.from(kk.querySelectorAll(".WorldCodeAiModelGroup")),
+    Rk = Bk.findIndex((kk => kk.contains(Fk)));
+  if (Rk < 0) return !1;
+  const tk = kk.getBoundingClientRect(),
+    ak = Fk => kk.scrollTop + Fk.top - tk.top,
+    Xk = ak(Fk.getBoundingClientRect()) + Fk.getBoundingClientRect().height,
+    bk = kk.scrollHeight - kk.clientHeight,
+    wk = Bk.slice(0, Rk + 1).map((kk => ak(kk.getBoundingClientRect()))).filter((kk => Xk - kk <= tk.height + 1));
+  if (0 === wk.length) return !1;
+  const dk = wk.filter((kk => kk <= bk + 1)),
+    sk = dk.length > 0 ? Math.max(...dk) : Math.min(...wk);
+  return sk > bk && (kk.style.paddingBottom = (parseFloat(getComputedStyle(kk).paddingBottom) || 0) + sk - bk + "px"), kk.scrollTop = sk, !0
 }
 
-function GN(uu) {
+function Mw(kk) {
   let {
-    keyName: Ru,
-    placeholder: yu,
-    onDone: Ku
-  } = uu;
-  const [Qu, Ju] = (0, Eu.useState)(Ru);
-  return (0, mu.jsxs)("form", {
+    keyName: Fk,
+    placeholder: Bk,
+    onDone: tk
+  } = kk;
+  const [ak, bk] = (0, Rk.useState)(Fk);
+  return (0, Xk.jsxs)("form", {
     className: "WorldCodeAiKeyRename",
-    onSubmit: uu => {
-      uu.preventDefault(), Ku(Qu)
+    onSubmit: kk => {
+      kk.preventDefault(), tk(ak)
     },
-    children: [(0, mu.jsx)("input", {
+    children: [(0, Xk.jsx)("input", {
       className: "WorldCodeAiAddKeyInput",
       "aria-label": "Name for this key",
-      value: Qu,
+      value: ak,
       maxLength: 30,
-      placeholder: yu,
+      placeholder: Bk,
       autoFocus: !0,
-      onChange: uu => {
-        Ju(uu.target.value)
+      onChange: kk => {
+        bk(kk.target.value)
       },
-      onKeyDown: uu => {
-        uu.stopPropagation(), "Escape" === uu.key && (uu.preventDefault(), Ku(null))
+      onKeyDown: kk => {
+        kk.stopPropagation(), "Escape" === kk.key && (kk.preventDefault(), tk(null))
       }
-    }), (0, mu.jsx)("button", {
+    }), (0, Xk.jsx)("button", {
       type: "submit",
       className: "WorldCodeAiLinkButton",
       children: "Save"
-    }), (0, mu.jsx)("button", {
+    }), (0, Xk.jsx)("button", {
       type: "button",
       className: "WorldCodeAiKeyLearnMore",
       onClick: () => {
-        Ku(null)
+        tk(null)
       },
       children: "Cancel"
     })]
   })
 }
 
-function UN(uu) {
+function gw(kk) {
   let {
-    savedKey: Ru,
-    isInUse: yu,
-    onRename: Eu,
-    onEdit: Ku
-  } = uu;
-  const Qu = wm(Ru),
-    Ju = Sm(Ru.provider, Ru.baseUrl, !0),
-    Nu = function(uu, Ru) {
-      var yu, Eu;
-      return "" === uu ? "no key needed" : uu.length <= 12 ? "\u2022\u2022\u2022\u2022" : "custom" === Ru ? `key \u2026${uu.slice(-4)}` : `${(null!==(yu=null===(Eu=/^[a-zA-Z]+-/.exec(uu))||void 0===Eu?void 0:Eu[0])&&void 0!==yu?yu:uu.slice(0,4)).slice(0,6)}\u2026${uu.slice(-4)}`
-    }(Ru.key, Ru.provider);
-  return (0, mu.jsxs)("span", {
+    savedKey: Fk,
+    isInUse: Bk,
+    onRename: Rk,
+    onEdit: tk
+  } = kk;
+  const ak = CX(Fk),
+    bk = fX(Fk.provider, Fk.baseUrl, !0),
+    wk = function(kk, Fk) {
+      var Bk, Rk;
+      return "" === kk ? "no key needed" : kk.length <= 12 ? "\u2022\u2022\u2022\u2022" : "custom" === Fk ? `key \u2026${kk.slice(-4)}` : `${(null!==(Bk=null===(Rk=/^[a-zA-Z]+-/.exec(kk))||void 0===Rk?void 0:Rk[0])&&void 0!==Bk?Bk:kk.slice(0,4)).slice(0,6)}\u2026${kk.slice(-4)}`
+    }(Fk.key, Fk.provider);
+  return (0, Xk.jsxs)("span", {
     className: "WorldCodeAiModelGroupName",
-    title: Ru.baseUrl,
-    children: [Qu, " ", Ru.name && (0, mu.jsxs)("span", {
+    title: Fk.baseUrl,
+    children: [ak, " ", Fk.name && (0, Xk.jsxs)("span", {
       className: "WorldCodeAiModelHint",
-      children: ["\xb7 ", Ju, " "]
-    }), "" === Ru.key ? (0, mu.jsx)("span", {
+      children: ["\xb7 ", bk, " "]
+    }), "" === Fk.key ? (0, Xk.jsx)("span", {
       className: "WorldCodeAiModelHint",
-      children: Nu
-    }) : (0, mu.jsx)("code", {
-      children: Nu
-    }), yu && (0, mu.jsxs)(mu.Fragment, {
-      children: [" ", (0, mu.jsx)("span", {
+      children: wk
+    }) : (0, Xk.jsx)("code", {
+      children: wk
+    }), Bk && (0, Xk.jsxs)(Xk.Fragment, {
+      children: [" ", (0, Xk.jsx)("span", {
         className: "WorldCodeAiInUseTag",
         children: "In use"
       })]
-    }), (Ku || Eu) && (0, mu.jsxs)("span", {
+    }), (tk || Rk) && (0, Xk.jsxs)("span", {
       className: "WorldCodeAiKeyLinks",
-      children: [Ku && (0, mu.jsx)("button", {
+      children: [tk && (0, Xk.jsx)("button", {
         className: "WorldCodeAiKeyLearnMore",
-        "aria-label": `Edit ${Qu} key`,
-        onClick: Ku,
+        "aria-label": `Edit ${ak} key`,
+        onClick: tk,
         children: "Edit"
-      }), Eu && (0, mu.jsx)("button", {
+      }), Rk && (0, Xk.jsx)("button", {
         className: "WorldCodeAiKeyLearnMore",
-        "aria-label": `Rename ${Qu} key`,
-        onClick: Eu,
+        "aria-label": `Rename ${ak} key`,
+        onClick: Rk,
         children: "Rename"
       })]
     })]
   })
 }
 
-function nN(uu) {
-  var Ru, yu, Ku, Ju;
+function Uw(kk) {
+  var Fk, Bk, tk, bk;
   let {
-    name: Nu,
-    hint: Xu,
-    choice: Vu,
-    selected: ru,
-    radioName: Bu,
-    onSelect: xu,
-    onChosen: Su,
-    disabledWhy: pu
-  } = uu;
-  const Tu = (0, Eu.useRef)(!1),
-    Wu = `${Bu}-${null!==(Ru=null===Vu||void 0===Vu?void 0:Vu.keyId)&&void 0!==Ru?Ru:"botxd"}-${null!==(yu=null===Vu||void 0===Vu?void 0:Vu.modelId)&&void 0!==yu?yu:"botxd"}`.replace(/[^\w-]/g, "_"),
-    ju = !!pu;
-  return (0, mu.jsxs)("label", {
-    className: Qu()("WorldCodeAiModelRow", ru && "Selected", ju && "Disabled"),
-    "data-key-id": null !== (Ku = null === Vu || void 0 === Vu ? void 0 : Vu.keyId) && void 0 !== Ku ? Ku : "botxd",
-    "data-model-id": null !== (Ju = null === Vu || void 0 === Vu ? void 0 : Vu.modelId) && void 0 !== Ju ? Ju : "botxd",
-    title: null !== pu && void 0 !== pu ? pu : void 0,
+    name: wk,
+    hint: dk,
+    choice: sk,
+    selected: Vk,
+    radioName: Jk,
+    onSelect: Ak,
+    onChosen: ek,
+    disabledWhy: yk
+  } = kk;
+  const fk = (0, Rk.useRef)(!1),
+    mk = `${Jk}-${null!==(Fk=null===sk||void 0===sk?void 0:sk.keyId)&&void 0!==Fk?Fk:"botxd"}-${null!==(Bk=null===sk||void 0===sk?void 0:sk.modelId)&&void 0!==Bk?Bk:"botxd"}`.replace(/[^\w-]/g, "_"),
+    Wk = !!yk;
+  return (0, Xk.jsxs)("label", {
+    className: ak()("WorldCodeAiModelRow", Vk && "Selected", Wk && "Disabled"),
+    "data-key-id": null !== (tk = null === sk || void 0 === sk ? void 0 : sk.keyId) && void 0 !== tk ? tk : "botxd",
+    "data-model-id": null !== (bk = null === sk || void 0 === sk ? void 0 : sk.modelId) && void 0 !== bk ? bk : "botxd",
+    title: null !== yk && void 0 !== yk ? yk : void 0,
     onPointerDown: () => {
-      Tu.current = !ju
+      fk.current = !Wk
     },
-    children: [(0, mu.jsx)("input", {
+    children: [(0, Xk.jsx)("input", {
       type: "radio",
-      name: Bu,
-      "aria-label": Nu,
-      "aria-describedby": Xu ? Wu : void 0,
-      checked: ru,
-      disabled: ju,
-      onChange: xu,
+      name: Jk,
+      "aria-label": wk,
+      "aria-describedby": dk ? mk : void 0,
+      checked: Vk,
+      disabled: Wk,
+      onChange: Ak,
       onClick: () => {
-        Tu.current && (null === Su || void 0 === Su || Su()), Tu.current = !1
+        fk.current && (null === ek || void 0 === ek || ek()), fk.current = !1
       },
-      onKeyDown: uu => {
-        "Enter" === uu.key && (null === Su || void 0 === Su || Su())
+      onKeyDown: kk => {
+        "Enter" === kk.key && (null === ek || void 0 === ek || ek())
       }
-    }), (0, mu.jsx)("span", {
+    }), (0, Xk.jsx)("span", {
       className: "WorldCodeAiModelName",
-      children: Nu
-    }), Xu && (0, mu.jsx)("span", {
-      id: Wu,
+      children: wk
+    }), dk && (0, Xk.jsx)("span", {
+      id: mk,
       className: "WorldCodeAiModelHint",
-      children: Xu
+      children: dk
     })]
   })
 }
 
-function sN(uu) {
+function Gw(kk) {
   let {
-    labelledBy: Ru,
-    onPicked: Ku,
-    canRename: Qu = !1,
-    onEdit: Ju,
-    JA: Nu,
-    onRefresh: Xu,
-    refreshingIds: Vu,
-    keyNote: ru
-  } = uu;
+    labelledBy: Fk,
+    onPicked: tk,
+    canRename: ak = !1,
+    onEdit: bk,
+    yE: wk,
+    onRefresh: dk,
+    refreshingIds: sk,
+    keyNote: Vk
+  } = kk;
   const {
-    keys: Bu,
-    isSelected: xu,
-    select: Su,
-    renameKey: pu
-  } = qm(), Tu = JJ();
-  (0, Eu.useEffect)((() => {
-    mJ.refresh(), eJ()
+    keys: Jk,
+    isSelected: Ak,
+    select: ek,
+    renameKey: yk
+  } = nX(), fk = wb();
+  (0, Rk.useEffect)((() => {
+    bb.refresh(), Eb()
   }), []);
-  const Wu = BJ(Tu),
-    [ju, Hu] = (0, Eu.useState)(null),
-    [du, bu] = (0, Eu.useState)(null),
-    [Cu, ku] = (0, Eu.useState)({}),
-    [eu] = (0, Eu.useState)((() => function(uu) {
-      const Ru = uu.map(((uu, Ru) => {
-        var yu;
+  const mk = Ab(fk),
+    [Wk, vk] = (0, Rk.useState)(null),
+    [ik, Yk] = (0, Rk.useState)(null),
+    [Lk, Ok] = (0, Rk.useState)({}),
+    [Ek] = (0, Rk.useState)((() => function(kk) {
+      const Fk = kk.map(((kk, Fk) => {
+        var Bk;
         return {
-          id: uu.id,
-          at: null !== (yu = uu.usedAt) && void 0 !== yu ? yu : 0,
-          i: Ru
+          id: kk.id,
+          at: null !== (Bk = kk.usedAt) && void 0 !== Bk ? Bk : 0,
+          i: Fk
         }
-      })).sort(((uu, Ru) => Ru.at - uu.at || Ru.i - uu.i));
-      return new Set(Ru.slice(0, 2).map((uu => {
+      })).sort(((kk, Fk) => Fk.at - kk.at || Fk.i - kk.i));
+      return new Set(Fk.slice(0, 2).map((kk => {
         let {
-          id: Ru
-        } = uu;
-        return Ru
+          id: Fk
+        } = kk;
+        return Fk
       })))
-    }(Bu))),
-    [Au, Du] = (0, Eu.useState)(new Set),
-    Mu = uu => uu.models.some((Ru => xu({
-      keyId: uu.id,
-      modelId: Ru.id
+    }(Jk))),
+    [Sk, Nk] = (0, Rk.useState)(new Set),
+    Hk = kk => kk.models.some((Fk => Ak({
+      keyId: kk.id,
+      modelId: Fk.id
     }))),
-    Iu = uu => {
-      const Ru = uu.closest(".WorldCodeAiModelGroupHeader");
-      bu(null), setTimeout((() => {
-        var uu;
-        null === Ru || void 0 === Ru || null === (uu = Ru.querySelector(".WorldCodeAiModelRemove")) || void 0 === uu || uu.focus()
+    uk = kk => {
+      const Fk = kk.closest(".WorldCodeAiModelGroupHeader");
+      Yk(null), setTimeout((() => {
+        var kk;
+        null === Fk || void 0 === Fk || null === (kk = Fk.querySelector(".WorldCodeAiModelRemove")) || void 0 === kk || kk.focus()
       }))
     },
-    Gu = `${Ru}-model`,
-    Uu = (uu, Ru, yu) => {
-      var Eu;
-      return (0, mu.jsx)(nN, {
-        name: uu,
-        hint: Ru,
-        choice: yu,
-        selected: xu(yu) && !(null === yu && Tu.picked && null === Wu),
-        radioName: Gu,
+    Mk = `${Fk}-model`,
+    gk = (kk, Fk, Bk) => {
+      var Rk;
+      return (0, Xk.jsx)(Uw, {
+        name: kk,
+        hint: Fk,
+        choice: Bk,
+        selected: Ak(Bk) && !(null === Bk && fk.picked && null === mk),
+        radioName: Mk,
         onSelect: () => {
-          Su(yu), mJ.unpick()
+          ek(Bk), bb.unpick()
         },
-        onChosen: Ku
-      }, null !== (Eu = null === yu || void 0 === yu ? void 0 : yu.modelId) && void 0 !== Eu ? Eu : "botxd")
+        onChosen: tk
+      }, null !== (Rk = null === Bk || void 0 === Bk ? void 0 : Bk.modelId) && void 0 !== Rk ? Rk : "botxd")
     };
-  return (0, mu.jsxs)("div", {
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiModelList",
     role: "radiogroup",
-    "aria-labelledby": Ru,
-    children: [Uu("Bot.xd (free)", "Bloxd's own AI.", null), (0, mu.jsx)(nN, {
-      name: uJ,
-      hint: null !== Wu && void 0 !== Wu ? Wu : `Bloxd's better AI. ${Tu.status?pJ(Tu.status):""}`.trim(),
-      choice: MN,
-      selected: Tu.picked && null === Wu,
-      radioName: Gu,
+    "aria-labelledby": Fk,
+    children: [gk("Bot.xd (free)", "Bloxd's own AI.", null), (0, Xk.jsx)(Uw, {
+      name: Fb,
+      hint: null !== mk && void 0 !== mk ? mk : `Bloxd's better AI. ${fk.status?fb(fk.status):""}`.trim(),
+      choice: Hw,
+      selected: fk.picked && null === mk,
+      radioName: Mk,
       onSelect: () => {
-        var uu, Ru;
-        KJ(null !== (uu = null === (Ru = Tu.status) || void 0 === Ru ? void 0 : Ru.provider) && void 0 !== uu ? uu : "ovh") && mJ.cB()
+        var kk, Fk;
+        ab(null !== (kk = null === (Fk = fk.status) || void 0 === Fk ? void 0 : Fk.provider) && void 0 !== kk ? kk : "ovh") && bb.AA()
       },
       onChosen: () => {
-        (async function(uu) {
-          var Ru;
-          if (KJ(null !== (Ru = null === uu || void 0 === uu ? void 0 : uu.provider) && void 0 !== Ru ? Ru : "ovh")) return mJ.cB(), !0;
-          if (tN) return !1;
-          tN = !0;
+        (async function(kk) {
+          var Fk;
+          if (ab(null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.provider) && void 0 !== Fk ? Fk : "ovh")) return bb.AA(), !0;
+          if (Tw) return !1;
+          Tw = !0;
           try {
             const [{
-              NotificationProvider: uu
+              NotificationProvider: kk
             }, {
-              WorldCodeAiDeepSeekNotice: Ru
-            }] = await Promise.all([Promise.resolve().then((() => yu(1311))), yu.e(347).then((() => yu(61036)))]), Eu = uu.showPromptPopup({
+              WorldCodeAiDeepSeekNotice: Fk
+            }] = await Promise.all([Promise.resolve().then((() => Bk(1300))), Bk.e(347).then((() => Bk(60940)))]), Rk = kk.showPromptPopup({
               title: "superBotXd:deepSeekTitle",
-              subtitle: (0, mu.jsx)(Ru, {}),
+              subtitle: (0, Xk.jsx)(Fk, {}),
               confirmText: "superBotXd:use",
               cancelText: "general:cancel"
             });
-            lN = Eu.tearDownNotification;
-            return !0 === await Eu.getResult() && (function() {
+            rw = Rk.tearDownNotification;
+            return !0 === await Rk.getResult() && (function() {
               try {
-                window.localStorage.setItem(EJ, "1")
+                window.localStorage.setItem(tb, "1")
               } catch {}
-            }(), mJ.cB(), !0)
+            }(), bb.AA(), !0)
           } finally {
-            tN = !1, lN = null
+            Tw = !1, rw = null
           }
-        })(Tu.status).then((uu => {
-          uu && (null === Ku || void 0 === Ku || Ku())
+        })(fk.status).then((kk => {
+          kk && (null === tk || void 0 === tk || tk())
         }))
       },
-      disabledWhy: Wu
-    }), Bu.map((uu => {
-      var Ru, yu, Eu, Ku, Su;
-      const Tu = wm(uu),
-        Wu = Bu.length >= 4 && !Mu(uu) && !eu.has(uu.id) && !Au.has(uu.id),
-        Gu = Wu ? null !== (Ru = uu.models.find((Ru => Ru.id === uu.usedModelId))) && void 0 !== Ru ? Ru : Fm(uu.models) : void 0,
-        nu = null !== (yu = null === (Eu = Cu[uu.id]) || void 0 === Eu ? void 0 : Eu.trim().toLowerCase()) && void 0 !== yu ? yu : "",
-        su = Gu ? [Gu] : "" === nu ? uu.models : uu.models.filter((Ru => Ru.name.toLowerCase().includes(nu) || xu({
-          keyId: uu.id,
-          modelId: Ru.id
+      disabledWhy: mk
+    }), Jk.map((kk => {
+      var Fk, Bk, Rk, tk, ek;
+      const fk = CX(kk),
+        mk = Jk.length >= 4 && !Hk(kk) && !Ek.has(kk.id) && !Sk.has(kk.id),
+        Mk = mk ? null !== (Fk = kk.models.find((Fk => Fk.id === kk.usedModelId))) && void 0 !== Fk ? Fk : qX(kk.models) : void 0,
+        Uk = null !== (Bk = null === (Rk = Lk[kk.id]) || void 0 === Rk ? void 0 : Rk.trim().toLowerCase()) && void 0 !== Bk ? Bk : "",
+        ck = Mk ? [Mk] : "" === Uk ? kk.models : kk.models.filter((Fk => Fk.name.toLowerCase().includes(Uk) || Ak({
+          keyId: kk.id,
+          modelId: Fk.id
         })));
-      return (0, mu.jsxs)("div", {
+      return (0, Xk.jsxs)("div", {
         className: "WorldCodeAiModelGroup",
         role: "group",
-        "aria-label": Tu,
-        "data-key-id": uu.id,
-        children: [(0, mu.jsxs)("div", {
+        "aria-label": fk,
+        "data-key-id": kk.id,
+        children: [(0, Xk.jsxs)("div", {
           className: "WorldCodeAiModelGroupHeader",
-          children: [ju === uu.id ? (0, mu.jsx)(GN, {
-            keyName: null !== (Ku = uu.name) && void 0 !== Ku ? Ku : "",
-            placeholder: Sm(uu.provider, uu.baseUrl),
-            onDone: Ru => {
-              null !== Ru && pu(uu.id, Ru), Hu(null)
+          children: [Wk === kk.id ? (0, Xk.jsx)(Mw, {
+            keyName: null !== (tk = kk.name) && void 0 !== tk ? tk : "",
+            placeholder: fX(kk.provider, kk.baseUrl),
+            onDone: Fk => {
+              null !== Fk && yk(kk.id, Fk), vk(null)
             }
-          }) : (0, mu.jsx)(UN, {
-            savedKey: uu,
-            isInUse: Mu(uu),
-            onEdit: Ju ? () => {
-              Ju(uu)
+          }) : (0, Xk.jsx)(gw, {
+            savedKey: kk,
+            isInUse: Hk(kk),
+            onEdit: bk ? () => {
+              bk(kk)
             } : void 0,
-            onRename: Qu ? () => {
-              Hu(uu.id)
+            onRename: ak ? () => {
+              vk(kk.id)
             } : void 0
-          }), Xu && du !== uu.id && (0, mu.jsx)("button", {
+          }), dk && ik !== kk.id && (0, Xk.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRefresh",
-            "aria-label": `Check ${Tu} for new models`,
-            disabled: null === Vu || void 0 === Vu ? void 0 : Vu.has(uu.id),
+            "aria-label": `Check ${fk} for new models`,
+            disabled: null === sk || void 0 === sk ? void 0 : sk.has(kk.id),
             onClick: () => {
-              Xu(uu)
+              dk(kk)
             },
-            children: null !== Vu && void 0 !== Vu && Vu.has(uu.id) ? "Checking\u2026" : "Check for new models"
-          }), Nu && du !== uu.id && (0, mu.jsx)("button", {
+            children: null !== sk && void 0 !== sk && sk.has(kk.id) ? "Checking\u2026" : "Check for new models"
+          }), wk && ik !== kk.id && (0, Xk.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
-            "aria-label": `Remove ${Tu} key`,
+            "aria-label": `Remove ${fk} key`,
             onClick: () => {
-              bu(uu.id)
+              Yk(kk.id)
             },
             children: "Remove"
-          }), Nu && du === uu.id && (0, mu.jsxs)("span", {
+          }), wk && ik === kk.id && (0, Xk.jsxs)("span", {
             className: "WorldCodeAiKeyConfirm",
             role: "group",
-            "aria-label": `Remove ${Tu} key?`,
-            onKeyDown: uu => {
-              "Escape" === uu.key && (uu.stopPropagation(), uu.preventDefault(), Iu(uu.currentTarget))
+            "aria-label": `Remove ${fk} key?`,
+            onKeyDown: kk => {
+              "Escape" === kk.key && (kk.stopPropagation(), kk.preventDefault(), uk(kk.currentTarget))
             },
-            children: ["Remove key?", (0, mu.jsx)("button", {
+            children: ["Remove key?", (0, Xk.jsx)("button", {
               className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
-              "aria-label": `Yes, remove ${Tu} key`,
+              "aria-label": `Yes, remove ${fk} key`,
               onClick: () => {
-                bu(null), Nu(uu)
+                Yk(null), wk(kk)
               },
               children: "Yes"
-            }), (0, mu.jsx)("button", {
+            }), (0, Xk.jsx)("button", {
               className: "WorldCodeAiLinkButton",
-              "aria-label": `No, keep ${Tu} key`,
+              "aria-label": `No, keep ${fk} key`,
               autoFocus: !0,
-              onClick: uu => {
-                Iu(uu.currentTarget)
+              onClick: kk => {
+                uk(kk.currentTarget)
               },
               children: "No"
             })]
           })]
-        }), (null === ru || void 0 === ru ? void 0 : ru.keyId) === uu.id && (0, mu.jsx)("p", {
+        }), (null === Vk || void 0 === Vk ? void 0 : Vk.keyId) === kk.id && (0, Xk.jsx)("p", {
           className: "WorldCodeAiAiSettingsNote",
           role: "status",
-          children: ru.text
-        }), !Wu && uu.models.length > 12 && (0, mu.jsx)("input", {
+          children: Vk.text
+        }), !mk && kk.models.length > 12 && (0, Xk.jsx)("input", {
           className: "WorldCodeAiAddKeyInput WorldCodeAiModelFilter",
-          "aria-label": `Find a model from ${Tu}`,
-          placeholder: `Find a model (${uu.models.length})`,
-          value: null !== (Su = Cu[uu.id]) && void 0 !== Su ? Su : "",
-          onKeyDown: uu => {
-            uu.stopPropagation()
+          "aria-label": `Find a model from ${fk}`,
+          placeholder: `Find a model (${kk.models.length})`,
+          value: null !== (ek = Lk[kk.id]) && void 0 !== ek ? ek : "",
+          onKeyDown: kk => {
+            kk.stopPropagation()
           },
-          onChange: Ru => {
-            const yu = Ru.target.value;
-            ku((Ru => ({
-              ...Ru,
-              [uu.id]: yu
+          onChange: Fk => {
+            const Bk = Fk.target.value;
+            Ok((Fk => ({
+              ...Fk,
+              [kk.id]: Bk
             })))
           }
-        }), su.map((Ru => Uu(Ru.name, Ru.tier ? tm[Ru.tier] : "", {
-          keyId: uu.id,
-          modelId: Ru.id
-        }))), Wu && uu.models.length > 1 && (0, mu.jsxs)("button", {
+        }), ck.map((Fk => gk(Fk.name, Fk.tier ? TX[Fk.tier] : "", {
+          keyId: kk.id,
+          modelId: Fk.id
+        }))), mk && kk.models.length > 1 && (0, Xk.jsxs)("button", {
           className: "WorldCodeAiKeyLearnMore WorldCodeAiModelUnfold",
-          "aria-label": `Show all ${Tu} models`,
-          onClick: Ru => {
-            const yu = Ru.currentTarget.closest(".WorldCodeAiModelGroup");
-            Du((Ru => new Set(Ru).add(uu.id))), setTimeout((() => {
-              var uu;
-              null === yu || void 0 === yu || null === (uu = yu.querySelector("input")) || void 0 === uu || uu.focus()
+          "aria-label": `Show all ${fk} models`,
+          onClick: Fk => {
+            const Bk = Fk.currentTarget.closest(".WorldCodeAiModelGroup");
+            Nk((Fk => new Set(Fk).add(kk.id))), setTimeout((() => {
+              var kk;
+              null === Bk || void 0 === Bk || null === (kk = Bk.querySelector("input")) || void 0 === kk || kk.focus()
             }))
           },
-          children: ["Show all ", uu.models.length, " models"]
+          children: ["Show all ", kk.models.length, " models"]
         })]
-      }, uu.id)
+      }, kk.id)
     }))]
   })
 }
-let tN = !1,
-  lN = null;
+let Tw = !1,
+  rw = null;
 
-function gN(uu) {
+function Dw(kk) {
   let {
-    checked: Ru,
-    onChange: yu,
-    title: Eu,
-    onNote: Ku,
-    offNote: Qu
-  } = uu;
-  return (0, mu.jsxs)("label", {
+    checked: Fk,
+    onChange: Bk,
+    title: Rk,
+    onNote: tk,
+    offNote: ak
+  } = kk;
+  return (0, Xk.jsxs)("label", {
     className: "WorldCodeAiSettingSwitch",
-    children: [(0, mu.jsx)("input", {
+    children: [(0, Xk.jsx)("input", {
       type: "checkbox",
-      checked: Ru,
-      onChange: uu => {
-        yu(uu.target.checked)
+      checked: Fk,
+      onChange: kk => {
+        Bk(kk.target.checked)
       }
-    }), (0, mu.jsxs)("span", {
-      children: [Eu, (0, mu.jsx)("span", {
+    }), (0, Xk.jsxs)("span", {
+      children: [Rk, (0, Xk.jsx)("span", {
         className: "WorldCodeAiAiSettingsNote",
-        children: Ru ? Ku : Qu
+        children: Fk ? tk : ak
       })]
     })]
   })
 }
 
-function cN() {
+function zw() {
   const {
-    remember: uu,
-    setRemember: Ru
-  } = qm();
-  return (0, mu.jsx)(gN, {
-    checked: uu,
-    onChange: Ru,
+    remember: kk,
+    setRemember: Fk
+  } = nX();
+  return (0, Xk.jsx)(Dw, {
+    checked: kk,
+    onChange: Fk,
     title: "Remember my keys in this browser",
     onNote: "On: saved only in this browser, not synced, for all your keys. Not for shared computers.",
     offNote: "Off: you'll paste your keys again next time. Best on shared computers."
   })
 }
 
-function LN() {
+function Pw() {
   const {
-    answer: uu,
-    hasPlayer: Ru
+    answer: kk,
+    hasPlayer: Fk
   } = function() {
-    const uu = () => ({
-        answer: FQ.get(),
-        hasPlayer: null !== FQ.getPlayer()
+    const kk = () => ({
+        answer: qa.get(),
+        hasPlayer: null !== qa.getPlayer()
       }),
-      [Ru, yu] = (0, Eu.useState)(uu);
-    return (0, Eu.useEffect)((() => {
-      const Ru = FQ.subscribe((() => {
-        yu(uu())
+      [Fk, Bk] = (0, Rk.useState)(kk);
+    return (0, Rk.useEffect)((() => {
+      const Fk = qa.subscribe((() => {
+        Bk(kk())
       }));
-      return FQ.refresh(), Ru
-    }), []), Ru
+      return qa.refresh(), Fk
+    }), []), Fk
   }();
-  return Ru ? (0, mu.jsx)("div", {
+  return Fk ? (0, Xk.jsx)("div", {
     className: "WorldCodeAiAiSettingsSection",
-    children: (0, mu.jsx)(gN, {
-      checked: "yes" === uu,
-      onChange: uu => {
-        FQ.set(uu ? "yes" : "no")
+    children: (0, Xk.jsx)(Dw, {
+      checked: "yes" === kk,
+      onChange: kk => {
+        qa.set(kk ? "yes" : "no")
       },
       title: "Help make the AI Helper better",
       onNote: "On: Bloxd keeps your questions, code and the AI's answers for 30 days to improve the AI Helper.",
@@ -9746,258 +9746,258 @@ function LN() {
   }) : null
 }
 
-function zN(uu) {
+function hw(kk) {
   let {
-    allowEdits: Ru,
-    onAllowEditsChange: yu,
-    onAddKey: Ku,
-    onEditKey: Qu
-  } = uu;
+    allowEdits: Fk,
+    onAllowEditsChange: Bk,
+    onAddKey: tk,
+    onEditKey: ak
+  } = kk;
   const {
-    keys: Ju,
-    removeKey: Nu
-  } = qm(), [Xu, Vu] = (0, Eu.useState)(null), [ru, Bu] = (0, Eu.useState)(!1), [xu, Su] = (0, Eu.useState)(!1), pu = (0, Eu.useRef)(null);
-  (0, Eu.useEffect)((() => {
-    var uu, Ru;
-    (Xu || xu) && (null === (uu = pu.current) || void 0 === uu || uu.scrollIntoView({
+    keys: bk,
+    removeKey: wk
+  } = nX(), [dk, sk] = (0, Rk.useState)(null), [Vk, Jk] = (0, Rk.useState)(!1), [Ak, ek] = (0, Rk.useState)(!1), yk = (0, Rk.useRef)(null);
+  (0, Rk.useEffect)((() => {
+    var kk, Fk;
+    (dk || Ak) && (null === (kk = yk.current) || void 0 === kk || kk.scrollIntoView({
       block: "nearest"
-    }), null === (Ru = pu.current) || void 0 === Ru || Ru.focus({
+    }), null === (Fk = yk.current) || void 0 === Fk || Fk.focus({
       preventScroll: !0
     }))
-  }), [Xu, xu]);
-  const Tu = (0, Eu.useRef)(null),
-    Wu = () => {
-      Bu(!1), setTimeout((() => {
-        var uu;
-        null === (uu = Tu.current) || void 0 === uu || uu.focus()
+  }), [dk, Ak]);
+  const fk = (0, Rk.useRef)(null),
+    mk = () => {
+      Jk(!1), setTimeout((() => {
+        var kk;
+        null === (kk = fk.current) || void 0 === kk || kk.focus()
       }))
     },
-    [ju, Hu] = (0, Eu.useState)(new Set),
-    [du, bu] = (0, Eu.useState)(null);
-  return (0, mu.jsxs)("div", {
+    [Wk, vk] = (0, Rk.useState)(new Set),
+    [ik, Yk] = (0, Rk.useState)(null);
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiAiSettings",
-    children: [yu && (0, mu.jsxs)("div", {
+    children: [Bk && (0, Xk.jsxs)("div", {
       className: "WorldCodeAiAiSettingsSection",
-      children: [(0, mu.jsx)(DN, {
-        allow: Ru,
-        onChange: uu => {
-          Vu(null), yu(uu)
+      children: [(0, Xk.jsx)(Nw, {
+        allow: Fk,
+        onChange: kk => {
+          sk(null), Bk(kk)
         }
-      }), (0, mu.jsx)("p", {
+      }), (0, Xk.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote",
-        children: Ru ? "On: the AI changes this game's code right away, without asking; Undo is under each change. It can't touch other games or your account." : "Off: the AI shows each change to this game's code first, and you press Apply."
+        children: Fk ? "On: the AI changes this game's code right away, without asking; Undo is under each change. It can't touch other games or your account." : "Off: the AI shows each change to this game's code first, and you press Apply."
       })]
-    }), (0, mu.jsxs)("div", {
+    }), (0, Xk.jsxs)("div", {
       className: "WorldCodeAiAiSettingsSection",
-      children: [(0, mu.jsxs)("div", {
+      children: [(0, Xk.jsxs)("div", {
         className: "WorldCodeAiAiSettingsHeading",
-        children: [(0, mu.jsx)("h3", {
+        children: [(0, Xk.jsx)("h3", {
           id: "WorldCodeAiModelTitle",
           className: "WorldCodeAiAiSettingsTitle",
           children: "AI model"
-        }), (0, mu.jsxs)("button", {
+        }), (0, Xk.jsxs)("button", {
           className: "WorldCodeAiSecondaryButton WorldCodeAiAddKeyButton",
-          onClick: Ku,
-          children: [(0, mu.jsx)("span", {
+          onClick: tk,
+          children: [(0, Xk.jsx)("span", {
             "aria-hidden": "true",
             children: "+ "
           }), "Add API key"]
         })]
-      }), 0 === Ju.length && (0, mu.jsx)("p", {
+      }), 0 === bk.length && (0, Xk.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote",
         children: "Use a stronger AI with your own key."
-      }), (0, mu.jsx)(cN, {}), Ju.length > 0 && (0, mu.jsx)("p", {
+      }), (0, Xk.jsx)(zw, {}), bk.length > 0 && (0, Xk.jsx)("p", {
         className: "WorldCodeAiAiSettingsNote WorldCodeAiForgetAll",
-        children: ru ? (0, mu.jsxs)("span", {
+        children: Vk ? (0, Xk.jsxs)("span", {
           className: "WorldCodeAiKeyConfirm",
           role: "group",
           "aria-label": "Forget all keys?",
-          onKeyDown: uu => {
-            "Escape" === uu.key && (uu.stopPropagation(), uu.preventDefault(), Wu())
+          onKeyDown: kk => {
+            "Escape" === kk.key && (kk.stopPropagation(), kk.preventDefault(), mk())
           },
-          children: [1 === Ju.length ? "Forget your key" : `Forget all ${Ju.length} keys`, " in this browser?", (0, mu.jsx)("button", {
+          children: [1 === bk.length ? "Forget your key" : `Forget all ${bk.length} keys`, " in this browser?", (0, Xk.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiModelRemove",
             onClick: () => {
-              om.removeAll(), Bu(!1), Vu(null), Su(!0)
+              lX.removeAll(), Jk(!1), sk(null), ek(!0)
             },
             children: "Yes"
-          }), (0, mu.jsx)("button", {
+          }), (0, Xk.jsx)("button", {
             className: "WorldCodeAiLinkButton",
             autoFocus: !0,
-            onClick: Wu,
+            onClick: mk,
             children: "No"
           })]
-        }) : (0, mu.jsx)("button", {
-          ref: Tu,
+        }) : (0, Xk.jsx)("button", {
+          ref: fk,
           className: "WorldCodeAiKeyLearnMore",
           onClick: () => {
-            Bu(!0)
+            Jk(!0)
           },
           children: "Forget all keys"
         })
-      }), 0 === Ju.length && xu && (0, mu.jsx)("p", {
-        ref: pu,
+      }), 0 === bk.length && Ak && (0, Xk.jsx)("p", {
+        ref: yk,
         className: "WorldCodeAiAiSettingsNote WorldCodeAiKeyRemoved",
         tabIndex: -1,
         children: "All keys forgotten in this browser. Bot.xd answers now. To stop a key working everywhere, delete it on its company's website."
-      }), Xu && (0, mu.jsxs)("p", {
-        ref: pu,
+      }), dk && (0, Xk.jsxs)("p", {
+        ref: yk,
         className: "WorldCodeAiAiSettingsNote WorldCodeAiKeyRemoved",
         tabIndex: -1,
-        children: [Xu.name, " removed.", Xu.wasInUse && " Bot.xd answers now.", Xu.keyPage && (0, mu.jsxs)(mu.Fragment, {
-          children: [" ", "To stop it working everywhere, delete it on", " ", (0, mu.jsxs)("a", {
-            href: Xu.keyPage,
+        children: [dk.name, " removed.", dk.wasInUse && " Bot.xd answers now.", dk.keyPage && (0, Xk.jsxs)(Xk.Fragment, {
+          children: [" ", "To stop it working everywhere, delete it on", " ", (0, Xk.jsxs)("a", {
+            href: dk.keyPage,
             target: "_blank",
             rel: "noreferrer noopener",
-            children: [Xu.label, "'s website"]
+            children: [dk.label, "'s website"]
           }), "."]
-        }), " ", (0, mu.jsx)("button", {
+        }), " ", (0, Xk.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiModelUndo",
           onClick: () => {
-            Xu.undo(), Vu(null)
+            dk.undo(), sk(null)
           },
           children: "Undo"
         })]
-      }), (0, mu.jsx)(sN, {
+      }), (0, Xk.jsx)(Gw, {
         labelledBy: "WorldCodeAiModelTitle",
         onPicked: () => {
-          Vu(null), bu(null)
+          sk(null), Yk(null)
         },
         canRename: !0,
-        onEdit: Qu,
-        refreshingIds: ju,
-        keyNote: du,
-        onRefresh: uu => {
-          (async uu => {
-            const Ru = Sm(uu.provider, uu.baseUrl, !0);
-            Hu((Ru => new Set(Ru).add(uu.id))), bu(null);
+        onEdit: ak,
+        refreshingIds: Wk,
+        keyNote: ik,
+        onRefresh: kk => {
+          (async kk => {
+            const Fk = fX(kk.provider, kk.baseUrl, !0);
+            vk((Fk => new Set(Fk).add(kk.id))), Yk(null);
             try {
-              const yu = await Om({
-                provider: uu.provider,
-                key: uu.key,
-                baseUrl: uu.baseUrl
+              const Bk = await IX({
+                provider: kk.provider,
+                key: kk.key,
+                baseUrl: kk.baseUrl
               });
-              0 === yu.length ? bu({
-                keyId: uu.id,
-                text: `${Ru} listed no models, so your models stay as they were.`
-              }) : om.refreshModels(uu.id, yu, {
-                key: uu.key,
-                baseUrl: uu.baseUrl
-              }) && bu({
-                keyId: uu.id,
-                text: `${Ru}'s models are up to date.`
+              0 === Bk.length ? Yk({
+                keyId: kk.id,
+                text: `${Fk} listed no models, so your models stay as they were.`
+              }) : lX.refreshModels(kk.id, Bk, {
+                key: kk.key,
+                baseUrl: kk.baseUrl
+              }) && Yk({
+                keyId: kk.id,
+                text: `${Fk}'s models are up to date.`
               })
-            } catch (yu) {
-              bu({
-                keyId: uu.id,
-                text: Wm(yu instanceof pm ? yu.problem : "failed", uu.provider)
+            } catch (Bk) {
+              Yk({
+                keyId: kk.id,
+                text: vX(Bk instanceof mX ? Bk.problem : "failed", kk.provider)
               })
             }
-            Hu((Ru => {
-              const yu = new Set(Ru);
-              return yu.delete(uu.id), yu
+            vk((Fk => {
+              const Bk = new Set(Fk);
+              return Bk.delete(kk.id), Bk
             }))
-          })(uu)
+          })(kk)
         },
-        JA: uu => {
-          var Ru;
-          const yu = (null === (Ru = om.activeKey()) || void 0 === Ru ? void 0 : Ru.id) === uu.id,
-            Eu = Nu(uu.id);
-          Vu({
-            name: wm(uu, !0),
-            label: Sm(uu.provider, uu.baseUrl, !0),
-            keyPage: Nm[uu.provider].keyPage,
-            wasInUse: yu,
-            undo: Eu
+        yE: kk => {
+          var Fk;
+          const Bk = (null === (Fk = lX.activeKey()) || void 0 === Fk ? void 0 : Fk.id) === kk.id,
+            Rk = wk(kk.id);
+          sk({
+            name: CX(kk, !0),
+            label: fX(kk.provider, kk.baseUrl, !0),
+            keyPage: sX[kk.provider].keyPage,
+            wasInUse: Bk,
+            undo: Rk
           })
         }
       })]
-    }), (0, mu.jsx)(LN, {})]
+    }), (0, Xk.jsx)(Pw, {})]
   })
 }
-const FN = ["anthropic", "openai", "gemini", "openrouter"];
+const qw = ["anthropic", "openai", "gemini", "openrouter"];
 
-function wN(uu) {
+function Cw(kk) {
   let {
-    provider: Ru,
-    children: yu
-  } = uu;
-  return (0, mu.jsx)("a", {
-    href: Nm[Ru].keyPage,
+    provider: Fk,
+    children: Bk
+  } = kk;
+  return (0, Xk.jsx)("a", {
+    href: sX[Fk].keyPage,
     target: "_blank",
     rel: "noreferrer noopener",
-    children: yu
+    children: Bk
   })
 }
 
-function ZN() {
-  return (0, mu.jsxs)(mu.Fragment, {
-    children: [FN.map(((uu, Ru) => {
-      const yu = 0 === Ru ? "" : Ru === FN.length - 1 ? " or " : ", ";
-      return (0, mu.jsxs)("span", {
-        children: [yu, (0, mu.jsx)(wN, {
-          provider: uu,
-          children: Nm[uu].shortName
+function Zw() {
+  return (0, Xk.jsxs)(Xk.Fragment, {
+    children: [qw.map(((kk, Fk) => {
+      const Bk = 0 === Fk ? "" : Fk === qw.length - 1 ? " or " : ", ";
+      return (0, Xk.jsxs)("span", {
+        children: [Bk, (0, Xk.jsx)(Cw, {
+          provider: kk,
+          children: sX[kk].shortName
         })]
-      }, uu)
+      }, kk)
     })), "'s website"]
   })
 }
 
-function hN(uu) {
-  var Ru;
+function pw(kk) {
+  var Fk;
   let {
-    provider: yu
-  } = uu;
-  const [Ku, Qu] = (0, Eu.useState)(!1), Ju = (0, Eu.useRef)(null);
-  if ((0, Eu.useEffect)((() => {
-      if (Ku) {
-        var uu, Ru, yu;
-        const Eu = null === (uu = Ju.current) || void 0 === uu || null === (Ru = uu.closest("form")) || void 0 === Ru ? void 0 : Ru.querySelector(".WorldCodeAiAddKeyActions");
-        null === (yu = null !== Eu && void 0 !== Eu ? Eu : Ju.current) || void 0 === yu || yu.scrollIntoView({
+    provider: Bk
+  } = kk;
+  const [tk, ak] = (0, Rk.useState)(!1), bk = (0, Rk.useRef)(null);
+  if ((0, Rk.useEffect)((() => {
+      if (tk) {
+        var kk, Fk, Bk;
+        const Rk = null === (kk = bk.current) || void 0 === kk || null === (Fk = kk.closest("form")) || void 0 === Fk ? void 0 : Fk.querySelector(".WorldCodeAiAddKeyActions");
+        null === (Bk = null !== Rk && void 0 !== Rk ? Rk : bk.current) || void 0 === Bk || Bk.scrollIntoView({
           block: "nearest",
           behavior: "smooth"
         })
       }
-    }), [Ku]), "custom" === yu) return (0, mu.jsx)("div", {
+    }), [tk]), "custom" === Bk) return (0, Xk.jsx)("div", {
     className: "WorldCodeAiKeyExplainer",
-    children: (0, mu.jsx)("p", {
+    children: (0, Xk.jsx)("p", {
       className: "WorldCodeAiAiSettingsNote",
       children: "Paste the key for that server, or leave it empty if it doesn't need one. It goes only to that server, never to Bloxd."
     })
   });
-  const Nu = yu ? Nm[yu] : null;
-  return (0, mu.jsxs)("div", {
+  const wk = Bk ? sX[Bk] : null;
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiKeyExplainer",
-    children: [(0, mu.jsxs)("ul", {
-      ref: Ju,
+    children: [(0, Xk.jsxs)("ul", {
+      ref: bk,
       id: "WorldCodeAiKeyExplainerLines",
       className: "WorldCodeAiKeyExplainerLines",
-      children: [(0, mu.jsx)("li", {
-        children: Nu ? `An API key works like a password for ${Nu.shortName}'s AI (it isn't your ${Nu.shortName} login password). Keep it secret.` : "An API key works like a password for an AI company's AI (it isn't your login password). Keep it secret."
-      }), (0, mu.jsxs)("li", {
-        children: ["You make it on ", Nu ? `${Nu.shortName}'s website` : (0, mu.jsx)(ZN, {}), ", and see how much you've used or delete it there."]
-      }), Ku && (0, mu.jsxs)("li", {
-        children: ["Your key stays in this browser and only goes to ", null !== (Ru = null === Nu || void 0 === Nu ? void 0 : Nu.shortName) && void 0 !== Ru ? Ru : "that company", ", never to Bloxd."]
-      }), (0, mu.jsx)("li", {
+      children: [(0, Xk.jsx)("li", {
+        children: wk ? `An API key works like a password for ${wk.shortName}'s AI (it isn't your ${wk.shortName} login password). Keep it secret.` : "An API key works like a password for an AI company's AI (it isn't your login password). Keep it secret."
+      }), (0, Xk.jsxs)("li", {
+        children: ["You make it on ", wk ? `${wk.shortName}'s website` : (0, Xk.jsx)(Zw, {}), ", and see how much you've used or delete it there."]
+      }), tk && (0, Xk.jsxs)("li", {
+        children: ["Your key stays in this browser and only goes to ", null !== (Fk = null === wk || void 0 === wk ? void 0 : wk.shortName) && void 0 !== Fk ? Fk : "that company", ", never to Bloxd."]
+      }), (0, Xk.jsx)("li", {
         className: "WorldCodeAiKeyExplainerMore",
-        children: (0, mu.jsx)("button", {
+        children: (0, Xk.jsx)("button", {
           type: "button",
           className: "WorldCodeAiKeyLearnMore",
-          "aria-expanded": Ku,
+          "aria-expanded": tk,
           "aria-controls": "WorldCodeAiKeyExplainerLines",
           onClick: () => {
-            Qu(!Ku)
+            ak(!tk)
           },
-          children: Ku ? "Less about keys" : "More about keys"
+          children: tk ? "Less about keys" : "More about keys"
         })
       })]
-    }), Nu && (0, mu.jsxs)("a", {
+    }), wk && (0, Xk.jsxs)("a", {
       className: "WorldCodeAiKeyPageLink",
-      href: Nu.keyPage,
+      href: wk.keyPage,
       target: "_blank",
       rel: "noreferrer noopener",
-      children: ["Get a key on ", Nu.shortName, "'s website ", (0, mu.jsx)("span", {
+      children: ["Get a key on ", wk.shortName, "'s website ", (0, Xk.jsx)("span", {
         "aria-hidden": "true",
         children: "\u2197"
       })]
@@ -10005,473 +10005,473 @@ function hN(uu) {
   })
 }
 
-function PN() {
-  const [uu, Ru] = (0, Eu.useState)(!1);
-  return (0, mu.jsxs)("span", {
+function Kw() {
+  const [kk, Fk] = (0, Rk.useState)(!1);
+  return (0, Xk.jsxs)("span", {
     className: "WorldCodeAiAiSettingsNote",
-    children: ["Any server that works like OpenAI's, such as LM Studio or Ollama.", " ", (0, mu.jsx)("button", {
+    children: ["Any server that works like OpenAI's, such as LM Studio or Ollama.", " ", (0, Xk.jsx)("button", {
       type: "button",
       className: "WorldCodeAiKeyLearnMore",
-      "aria-expanded": uu,
+      "aria-expanded": kk,
       onClick: () => {
-        Ru(!uu)
+        Fk(!kk)
       },
-      children: uu ? "Hide tips" : "Server tips"
-    }), uu && (0, mu.jsx)("span", {
+      children: kk ? "Hide tips" : "Server tips"
+    }), kk && (0, Xk.jsx)("span", {
       className: "WorldCodeAiServerTips",
       children: "Use https://, or http:// for one on this computer, like http://localhost:1234/v1. It must allow web pages to use it: in LM Studio turn on CORS; for Ollama see its help."
     })]
   })
 }
 
-function iN(uu) {
-  uu.stopPropagation()
+function xw(kk) {
+  kk.stopPropagation()
 }
 
-function YN(uu) {
-  var Ru, yu, Ku, Qu, Ju;
+function jw(kk) {
+  var Fk, Bk, tk, ak, bk;
   let {
-    editing: Nu,
-    onAdded: Xu,
-    onOpenSettings: Vu
-  } = uu;
+    editing: wk,
+    onAdded: dk,
+    onOpenSettings: sk
+  } = kk;
   const {
-    remember: ru
-  } = qm(), [Bu, xu] = (0, Eu.useState)(null !== (Ru = null === Nu || void 0 === Nu ? void 0 : Nu.provider) && void 0 !== Ru ? Ru : null), [Su, pu] = (0, Eu.useState)(!!Nu), [Tu, Wu] = (0, Eu.useState)(""), ju = null !== (yu = null === Nu || void 0 === Nu ? void 0 : Nu.key) && void 0 !== yu ? yu : "", [Hu, du] = (0, Eu.useState)(!1), [bu, Cu] = (0, Eu.useState)(null !== (Ku = null === Nu || void 0 === Nu ? void 0 : Nu.baseUrl) && void 0 !== Ku ? Ku : ""), ku = uu => {
-    var Ru, yu;
-    return uu === (null === Nu || void 0 === Nu ? void 0 : Nu.provider) && ("custom" !== uu || (null !== (Ru = xm(bu)) && void 0 !== Ru ? Ru : "") === (null !== (yu = Nu.baseUrl) && void 0 !== yu ? yu : ""))
-  }, eu = "" !== ju && ku(Bu), Au = function(uu) {
-    let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rm(Tu);
-    return "" === Ru && "" !== ju && ku(uu) ? ju : Ru
-  }, [Du, Mu] = (0, Eu.useState)(""), [Iu, Gu] = (0, Eu.useState)(null !== (Qu = null === Nu || void 0 === Nu ? void 0 : Nu.name) && void 0 !== Qu ? Qu : ""), [Uu, nu] = (0, Eu.useState)(!1), [su, tu] = (0, Eu.useState)(null), [lu, gu] = (0, Eu.useState)(""), [cu, Lu] = (0, Eu.useState)(!1), [zu, Fu] = (0, Eu.useState)(null), [wu, Zu] = (0, Eu.useState)(null), hu = "custom" === Bu && "" === Au(Bu), Pu = (0, Eu.useRef)(null), iu = (0, Eu.useRef)(null), Yu = (0, Eu.useRef)(null);
-  (0, Eu.useEffect)((() => {
-    var uu, Ru;
-    su && (null === (uu = iu.current) || void 0 === uu || uu.scrollIntoView({
+    remember: Vk
+  } = nX(), [Jk, Ak] = (0, Rk.useState)(null !== (Fk = null === wk || void 0 === wk ? void 0 : wk.provider) && void 0 !== Fk ? Fk : null), [ek, yk] = (0, Rk.useState)(!!wk), [fk, mk] = (0, Rk.useState)(""), Wk = null !== (Bk = null === wk || void 0 === wk ? void 0 : wk.key) && void 0 !== Bk ? Bk : "", [vk, ik] = (0, Rk.useState)(!1), [Yk, Lk] = (0, Rk.useState)(null !== (tk = null === wk || void 0 === wk ? void 0 : wk.baseUrl) && void 0 !== tk ? tk : ""), Ok = kk => {
+    var Fk, Bk;
+    return kk === (null === wk || void 0 === wk ? void 0 : wk.provider) && ("custom" !== kk || (null !== (Fk = yX(Yk)) && void 0 !== Fk ? Fk : "") === (null !== (Bk = wk.baseUrl) && void 0 !== Bk ? Bk : ""))
+  }, Ek = "" !== Wk && Ok(Jk), Sk = function(kk) {
+    let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AX(fk);
+    return "" === Fk && "" !== Wk && Ok(kk) ? Wk : Fk
+  }, [Nk, Hk] = (0, Rk.useState)(""), [uk, Mk] = (0, Rk.useState)(null !== (ak = null === wk || void 0 === wk ? void 0 : wk.name) && void 0 !== ak ? ak : ""), [gk, Uk] = (0, Rk.useState)(!1), [ck, Gk] = (0, Rk.useState)(null), [Tk, rk] = (0, Rk.useState)(""), [Dk, zk] = (0, Rk.useState)(!1), [Pk, hk] = (0, Rk.useState)(null), [qk, Ck] = (0, Rk.useState)(null), Zk = "custom" === Jk && "" === Sk(Jk), pk = (0, Rk.useRef)(null), Kk = (0, Rk.useRef)(null), xk = (0, Rk.useRef)(null);
+  (0, Rk.useEffect)((() => {
+    var kk, Fk;
+    ck && (null === (kk = Kk.current) || void 0 === kk || kk.scrollIntoView({
       block: "start"
-    }), null === (Ru = Yu.current) || void 0 === Ru || Ru.scrollIntoView({
+    }), null === (Fk = xk.current) || void 0 === Fk || Fk.scrollIntoView({
       block: "nearest"
     }))
-  }), [su]), (0, Eu.useEffect)((() => () => {
-    var uu;
-    null === (uu = Pu.current) || void 0 === uu || uu.abort()
-  }), []), (0, Eu.useEffect)((() => {
-    var uu;
-    zu && (null === (uu = Yu.current) || void 0 === uu || uu.scrollIntoView({
+  }), [ck]), (0, Rk.useEffect)((() => () => {
+    var kk;
+    null === (kk = pk.current) || void 0 === kk || kk.abort()
+  }), []), (0, Rk.useEffect)((() => {
+    var kk;
+    Pk && (null === (kk = xk.current) || void 0 === kk || kk.scrollIntoView({
       block: "nearest"
     }))
-  }), [zu]);
-  const ou = () => {
-      var uu;
-      null === (uu = Pu.current) || void 0 === uu || uu.abort(), Lu(!1), tu(null), Fu(null), Zu(null)
+  }), [Pk]);
+  const jk = () => {
+      var kk;
+      null === (kk = pk.current) || void 0 === kk || kk.abort(), zk(!1), Gk(null), hk(null), Ck(null)
     },
-    qu = null === su || void 0 === su ? void 0 : su.find((uu => uu.id === lu));
-  return (0, mu.jsxs)("form", {
+    lk = null === ck || void 0 === ck ? void 0 : ck.find((kk => kk.id === Tk));
+  return (0, Xk.jsxs)("form", {
     className: "WorldCodeAiAddKey",
-    onSubmit: uu => {
-      uu.preventDefault(), su ? (() => {
-        var uu;
-        if (!Bu || !su) return;
-        const Ru = om.addKey({
-          provider: Bu,
-          key: Au(Bu),
-          baseUrl: "custom" === Bu && null !== (uu = xm(bu)) && void 0 !== uu ? uu : void 0,
-          models: su
-        }, lu, null === Nu || void 0 === Nu ? void 0 : Nu.id);
-        ("" !== Iu.trim() || Nu) && om.renameKey(Ru, Iu), Xu()
+    onSubmit: kk => {
+      kk.preventDefault(), ck ? (() => {
+        var kk;
+        if (!Jk || !ck) return;
+        const Fk = lX.addKey({
+          provider: Jk,
+          key: Sk(Jk),
+          baseUrl: "custom" === Jk && null !== (kk = yX(Yk)) && void 0 !== kk ? kk : void 0,
+          models: ck
+        }, Tk, null === wk || void 0 === wk ? void 0 : wk.id);
+        ("" !== uk.trim() || wk) && lX.renameKey(Fk, uk), dk()
       })() : (async () => {
-        const Ru = rm(Tu);
-        Wu(Ru), Zu(null);
-        const yu = null !== Bu && void 0 !== Bu ? Bu : Bm(Ru),
-          Eu = Au(yu, Ru);
-        if ("" === Eu && "custom" !== yu) return void Fu("Paste your key first.");
-        if (!yu) return void Fu("Pick the company your key is from.");
-        const Ku = "custom" === yu ? xm(bu) : null;
-        if ("custom" === yu && null === Ku) return void Fu("That address doesn't look right. It should start with https://");
-        if (Uu && "" === Du.trim()) return void Fu("Type the name of the model to use.");
-        xu(yu), Lu(!0), Fu(null);
-        const Qu = new AbortController;
-        Pu.current = Qu;
+        const Fk = AX(fk);
+        mk(Fk), Ck(null);
+        const Bk = null !== Jk && void 0 !== Jk ? Jk : eX(Fk),
+          Rk = Sk(Bk, Fk);
+        if ("" === Rk && "custom" !== Bk) return void hk("Paste your key first.");
+        if (!Bk) return void hk("Pick the company your key is from.");
+        const tk = "custom" === Bk ? yX(Yk) : null;
+        if ("custom" === Bk && null === tk) return void hk("That address doesn't look right. It should start with https://");
+        if (gk && "" === Nk.trim()) return void hk("Type the name of the model to use.");
+        Ak(Bk), zk(!0), hk(null);
+        const ak = new AbortController;
+        pk.current = ak;
         try {
-          var mu, Ju;
-          const uu = await Om({
-            provider: yu,
-            key: Eu,
-            baseUrl: null !== Ku && void 0 !== Ku ? Ku : void 0,
-            modelName: Uu ? Du : void 0
-          }, Qu.signal);
-          if (Lu(!1), 0 === uu.length) return nu(!0), void Fu("custom" === yu ? "This address doesn't list its models. Type the name of the model to use." : "Type the name of the model to use.");
-          tu(uu);
-          const Ru = om.getState().selected,
-            Xu = Nu && (null === Ru || void 0 === Ru ? void 0 : Ru.keyId) === Nu.id ? uu.find((uu => uu.id === Ru.modelId)) : void 0;
-          gu(null !== (mu = null === (Ju = null !== Xu && void 0 !== Xu ? Xu : Fm(uu)) || void 0 === Ju ? void 0 : Ju.id) && void 0 !== mu ? mu : "")
-        } catch (uu) {
-          if (Qu.signal.aborted) return;
-          Lu(!1);
-          const Ku = uu instanceof pm ? uu.problem : "failed";
-          if (Zu(uu instanceof pm && uu.detail ? Tm(uu.detail, Eu) : null), "badKey" === Ku && "" === Eu) return void Fu("This address needs a key.");
-          const mu = "badKey" !== Ku || Su ? "" : ` If it isn't from ${Nm[yu].shortName}, pick the company it's from.`;
-          Fu(`${Wm(Ku,yu)}${mu}`)
+          var Xk, bk;
+          const kk = await IX({
+            provider: Bk,
+            key: Rk,
+            baseUrl: null !== tk && void 0 !== tk ? tk : void 0,
+            modelName: gk ? Nk : void 0
+          }, ak.signal);
+          if (zk(!1), 0 === kk.length) return Uk(!0), void hk("custom" === Bk ? "This address doesn't list its models. Type the name of the model to use." : "Type the name of the model to use.");
+          Gk(kk);
+          const Fk = lX.getState().selected,
+            dk = wk && (null === Fk || void 0 === Fk ? void 0 : Fk.keyId) === wk.id ? kk.find((kk => kk.id === Fk.modelId)) : void 0;
+          rk(null !== (Xk = null === (bk = null !== dk && void 0 !== dk ? dk : qX(kk)) || void 0 === bk ? void 0 : bk.id) && void 0 !== Xk ? Xk : "")
+        } catch (kk) {
+          if (ak.signal.aborted) return;
+          zk(!1);
+          const tk = kk instanceof mX ? kk.problem : "failed";
+          if (Ck(kk instanceof mX && kk.detail ? WX(kk.detail, Rk) : null), "badKey" === tk && "" === Rk) return void hk("This address needs a key.");
+          const Xk = "badKey" !== tk || ek ? "" : ` If it isn't from ${sX[Bk].shortName}, pick the company it's from.`;
+          hk(`${vX(tk,Bk)}${Xk}`)
         }
       })()
     },
-    children: [(0, mu.jsxs)("label", {
+    children: [(0, Xk.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, mu.jsx)("span", {
+      children: [(0, Xk.jsx)("span", {
         children: "Company"
-      }), (0, mu.jsxs)("select", {
+      }), (0, Xk.jsxs)("select", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyCompany",
-        value: null !== Bu && void 0 !== Bu ? Bu : "",
-        onChange: uu => {
-          xu(uu.target.value), pu(!0), nu(!1), ou()
+        value: null !== Jk && void 0 !== Jk ? Jk : "",
+        onChange: kk => {
+          Ak(kk.target.value), yk(!0), Uk(!1), jk()
         },
-        onKeyDown: iN,
-        children: [null === Bu && (0, mu.jsx)("option", {
+        onKeyDown: xw,
+        children: [null === Jk && (0, Xk.jsx)("option", {
           value: "",
           disabled: !0,
           children: "Pick one, or paste your key below"
-        }), Xm.map((uu => (0, mu.jsx)("option", {
-          value: uu,
-          children: Nm[uu].name
-        }, uu)))]
+        }), VX.map((kk => (0, Xk.jsx)("option", {
+          value: kk,
+          children: sX[kk].name
+        }, kk)))]
       })]
-    }), "custom" === Bu && (0, mu.jsxs)("label", {
+    }), "custom" === Jk && (0, Xk.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, mu.jsx)("span", {
+      children: [(0, Xk.jsx)("span", {
         children: "Server address"
-      }), (0, mu.jsx)("input", {
+      }), (0, Xk.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyEndpoint",
-        value: bu,
+        value: Yk,
         placeholder: "https://ai.example.com/v1",
         autoComplete: "off",
         spellCheck: !1,
-        onChange: uu => {
-          Cu(uu.target.value), nu(!1), ou()
+        onChange: kk => {
+          Lk(kk.target.value), Uk(!1), jk()
         },
-        onKeyDown: iN
-      }), (!Nu || bu !== (null !== (Ju = Nu.baseUrl) && void 0 !== Ju ? Ju : "")) && (0, mu.jsx)(PN, {})]
-    }), (0, mu.jsxs)("div", {
+        onKeyDown: xw
+      }), (!wk || Yk !== (null !== (bk = wk.baseUrl) && void 0 !== bk ? bk : "")) && (0, Xk.jsx)(Kw, {})]
+    }), (0, Xk.jsxs)("div", {
       className: "WorldCodeAiAddKeyField",
-      children: [eu && (0, mu.jsxs)("span", {
+      children: [Ek && (0, Xk.jsxs)("span", {
         className: "WorldCodeAiAddKeySavedKey",
-        children: ["Key ends ", (0, mu.jsxs)("code", {
-          children: ["\u2026", ju.slice(-4)]
+        children: ["Key ends ", (0, Xk.jsxs)("code", {
+          children: ["\u2026", Wk.slice(-4)]
         })]
-      }), (0, mu.jsx)("label", {
+      }), (0, Xk.jsx)("label", {
         htmlFor: "WorldCodeAiAddKeyKey",
-        children: eu ? "Paste a new key to replace it (optional)" : "Your key"
-      }), (0, mu.jsxs)("span", {
+        children: Ek ? "Paste a new key to replace it (optional)" : "Your key"
+      }), (0, Xk.jsxs)("span", {
         className: "WorldCodeAiAddKeyPaste",
-        children: [(0, mu.jsx)("input", {
+        children: [(0, Xk.jsx)("input", {
           id: "WorldCodeAiAddKeyKey",
           className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyKey",
-          type: Hu ? "text" : "password",
-          value: Tu,
-          placeholder: eu ? "Leave empty to keep it" : "custom" === Bu ? "Paste the key, or leave empty" : "Paste the key here",
+          type: vk ? "text" : "password",
+          value: fk,
+          placeholder: Ek ? "Leave empty to keep it" : "custom" === Jk ? "Paste the key, or leave empty" : "Paste the key here",
           autoComplete: "off",
           spellCheck: !1,
-          onChange: uu => {
-            Wu(uu.target.value), Su || xu(Bm(rm(uu.target.value))), ou()
+          onChange: kk => {
+            mk(kk.target.value), ek || Ak(eX(AX(kk.target.value))), jk()
           },
-          onKeyDown: iN
-        }), (0, mu.jsx)("button", {
+          onKeyDown: xw
+        }), (0, Xk.jsx)("button", {
           type: "button",
           className: "WorldCodeAiSecondaryButton",
           onClick: () => {
-            du(!Hu)
+            ik(!vk)
           },
-          children: Hu ? "Hide" : "Show"
+          children: vk ? "Hide" : "Show"
         })]
-      }), (0, mu.jsx)(hN, {
-        provider: Bu
+      }), (0, Xk.jsx)(pw, {
+        provider: Jk
       })]
-    }), !Nu && (0, mu.jsxs)("p", {
+    }), !wk && (0, Xk.jsxs)("p", {
       className: "WorldCodeAiAiSettingsNote WorldCodeAiAddKeyRemember",
-      children: [ru ? "Your keys are remembered in this browser. Change it in " : "Your keys are kept until you close this tab. To remember them, see ", (0, mu.jsx)("button", {
+      children: [Vk ? "Your keys are remembered in this browser. Change it in " : "Your keys are kept until you close this tab. To remember them, see ", (0, Xk.jsx)("button", {
         type: "button",
         className: "WorldCodeAiKeyLearnMore",
-        onClick: Vu,
+        onClick: sk,
         children: "AI settings"
       }), "."]
-    }), Uu && (0, mu.jsxs)("label", {
+    }), gk && (0, Xk.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, mu.jsx)("span", {
+      children: [(0, Xk.jsx)("span", {
         children: "Model name"
-      }), (0, mu.jsx)("input", {
+      }), (0, Xk.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyModel",
-        value: Du,
+        value: Nk,
         placeholder: "llama-3.3-70b-versatile",
         autoComplete: "off",
         spellCheck: !1,
-        onChange: uu => {
-          Mu(uu.target.value), ou()
+        onChange: kk => {
+          Hk(kk.target.value), jk()
         },
-        onKeyDown: iN
+        onKeyDown: xw
       })]
-    }), su && (0, mu.jsxs)("div", {
-      ref: iu,
+    }), ck && (0, Xk.jsxs)("div", {
+      ref: Kk,
       className: "WorldCodeAiModelList WorldCodeAiAddKeyModels",
       role: "radiogroup",
       "aria-labelledby": "WorldCodeAiAddKeyModelsTitle",
-      children: [(0, mu.jsxs)("p", {
+      children: [(0, Xk.jsxs)("p", {
         id: "WorldCodeAiAddKeyModelsTitle",
         className: "WorldCodeAiAddKeyWorks",
-        children: ["" === Au(Bu) ? "It works." : "Your key works.", " Pick a model:"]
-      }), su.map((uu => (0, mu.jsx)(nN, {
-        name: uu.name,
-        hint: uu.tier ? tm[uu.tier] : "",
+        children: ["" === Sk(Jk) ? "It works." : "Your key works.", " Pick a model:"]
+      }), ck.map((kk => (0, Xk.jsx)(Uw, {
+        name: kk.name,
+        hint: kk.tier ? TX[kk.tier] : "",
         choice: {
-          keyId: null !== Bu && void 0 !== Bu ? Bu : "",
-          modelId: uu.id
+          keyId: null !== Jk && void 0 !== Jk ? Jk : "",
+          modelId: kk.id
         },
-        selected: uu.id === lu,
+        selected: kk.id === Tk,
         radioName: "WorldCodeAiAddKeyModelPick",
         onSelect: () => {
-          gu(uu.id)
+          rk(kk.id)
         }
-      }, uu.id))), (0, mu.jsx)("button", {
+      }, kk.id))), (0, Xk.jsx)("button", {
         type: "button",
         className: "WorldCodeAiKeyLearnMore",
         onClick: () => {
-          nu(!0), ou()
+          Uk(!0), jk()
         },
         children: "Type a model name yourself"
       })]
-    }), su && (0, mu.jsxs)("label", {
+    }), ck && (0, Xk.jsxs)("label", {
       className: "WorldCodeAiAddKeyField",
-      children: [(0, mu.jsx)("span", {
+      children: [(0, Xk.jsx)("span", {
         children: "Name it (optional)"
-      }), (0, mu.jsx)("input", {
+      }), (0, Xk.jsx)("input", {
         className: "WorldCodeAiAddKeyInput WorldCodeAiAddKeyName",
-        value: Iu,
+        value: uk,
         maxLength: 30,
-        placeholder: Bu && "custom" !== Bu ? `Like My ${Nm[Bu].shortName}` : "Like Home server",
+        placeholder: Jk && "custom" !== Jk ? `Like My ${sX[Jk].shortName}` : "Like Home server",
         autoComplete: "off",
-        onChange: uu => {
-          Gu(uu.target.value)
+        onChange: kk => {
+          Mk(kk.target.value)
         },
-        onKeyDown: iN
+        onKeyDown: xw
       })]
-    }), (0, mu.jsxs)("div", {
-      ref: Yu,
+    }), (0, Xk.jsxs)("div", {
+      ref: xk,
       className: "WorldCodeAiAddKeyActions",
-      children: [zu && (0, mu.jsx)("p", {
+      children: [Pk && (0, Xk.jsx)("p", {
         className: "WorldCodeAiAddKeyError",
         role: "alert",
-        children: zu
-      }), zu && wu && (0, mu.jsx)(WN, {
-        detail: wu,
+        children: Pk
+      }), Pk && qk && (0, Xk.jsx)(Ww, {
+        detail: qk,
         onOpen: () => {
-          var uu, Ru;
-          null === (uu = Yu.current) || void 0 === uu || null === (Ru = uu.querySelector(".WorldCodeAiAddKeySave")) || void 0 === Ru || Ru.scrollIntoView({
+          var kk, Fk;
+          null === (kk = xk.current) || void 0 === kk || null === (Fk = kk.querySelector(".WorldCodeAiAddKeySave")) || void 0 === Fk || Fk.scrollIntoView({
             block: "nearest"
           })
         }
-      }), (0, mu.jsx)("button", {
+      }), (0, Xk.jsx)("button", {
         type: "submit",
         className: "WorldCodeAiPrimaryButton WorldCodeAiAddKeySave",
-        disabled: cu,
-        children: cu ? hu ? "Testing the connection\u2026" : "Testing your key\u2026" : qu ? `Save and use ${qu.name}` : hu ? "Test connection" : "Test key"
+        disabled: Dk,
+        children: Dk ? Zk ? "Testing the connection\u2026" : "Testing your key\u2026" : lk ? `Save and use ${lk.name}` : Zk ? "Test connection" : "Test key"
       })]
     })]
   })
 }
-var oN = yu(1170),
-  qN = yu(36656),
-  ON = yu(36650);
+var lw = Bk(1149),
+  nw = Bk(36563),
+  Iw = Bk(36555);
 
-function vN(uu) {
+function Qw(kk) {
   let {
-    step: Ru,
-    placement: yu = "left",
-    onPrevious: Eu,
-    children: Ku
-  } = uu;
+    step: Fk,
+    placement: Bk = "left",
+    onPrevious: Rk,
+    children: tk
+  } = kk;
   const {
-    t: Qu
-  } = (0, oN.E)();
-  return (0, mu.jsx)(ON.h, {
+    t: ak
+  } = (0, lw.x)();
+  return (0, Xk.jsx)(Iw.f, {
     tutorial: "aiHelperOverview",
-    step: Ru,
-    text: Qu(`codeEditorAiTutorial:${Ru}`),
-    placement: yu,
-    onPrevious: Eu,
-    children: Ku
+    step: Fk,
+    text: ak(`codeEditorAiTutorial:${Fk}`),
+    placement: Bk,
+    onPrevious: Rk,
+    children: tk
   })
 }
 
-function aN(uu, Ru) {
-  if (uu.scrollHeight <= uu.clientHeight + 1) fN(uu);
+function kd(kk, Fk) {
+  if (kk.scrollHeight <= kk.clientHeight + 1) Fd(kk);
   else {
-    if (!IN(uu, Ru)) {
-      const yu = Ru.getBoundingClientRect().bottom - uu.getBoundingClientRect().bottom;
-      yu > 0 && (uu.scrollTop += yu),
-        function(uu, Ru) {
-          const yu = uu.getBoundingClientRect(),
-            Eu = Math.max(yu.top, ...Array.from(uu.querySelectorAll(".WorldCodeAiModelGroupHeader"), (uu => {
-              const Ru = uu.getBoundingClientRect();
-              return Ru.top <= yu.top + 1 ? Ru.bottom : yu.top
+    if (!uw(kk, Fk)) {
+      const Bk = Fk.getBoundingClientRect().bottom - kk.getBoundingClientRect().bottom;
+      Bk > 0 && (kk.scrollTop += Bk),
+        function(kk, Fk) {
+          const Bk = kk.getBoundingClientRect(),
+            Rk = Math.max(Bk.top, ...Array.from(kk.querySelectorAll(".WorldCodeAiModelGroupHeader"), (kk => {
+              const Fk = kk.getBoundingClientRect();
+              return Fk.top <= Bk.top + 1 ? Fk.bottom : Bk.top
             })));
-          if (Eu <= yu.top) return;
-          const Ku = Ru.closest(".WorldCodeAiModelGroup"),
-            Qu = Ku && parseFloat(getComputedStyle(Ku).rowGap) || 6,
-            mu = Array.from(uu.querySelectorAll(".WorldCodeAiModelRow, .WorldCodeAiModelUnfold")).find((uu => {
-              const Ru = uu.getBoundingClientRect();
-              return Ru.top < Eu + Qu - 1 && Ru.bottom > Eu - Qu
+          if (Rk <= Bk.top) return;
+          const tk = Fk.closest(".WorldCodeAiModelGroup"),
+            ak = tk && parseFloat(getComputedStyle(tk).rowGap) || 6,
+            Xk = Array.from(kk.querySelectorAll(".WorldCodeAiModelRow, .WorldCodeAiModelUnfold")).find((kk => {
+              const Fk = kk.getBoundingClientRect();
+              return Fk.top < Rk + ak - 1 && Fk.bottom > Rk - ak
             }));
-          if (!mu || mu === Ru) return;
-          const Ju = uu.scrollTop;
-          uu.scrollTop -= Eu + Qu - mu.getBoundingClientRect().top, Ru.getBoundingClientRect().bottom > yu.bottom && (uu.scrollTop = Ju, uu.scrollTop += Math.max(0, mu.getBoundingClientRect().bottom - Eu))
-        }(uu, Ru)
+          if (!Xk || Xk === Fk) return;
+          const bk = kk.scrollTop;
+          kk.scrollTop -= Rk + ak - Xk.getBoundingClientRect().top, Fk.getBoundingClientRect().bottom > Bk.bottom && (kk.scrollTop = bk, kk.scrollTop += Math.max(0, Xk.getBoundingClientRect().bottom - Rk))
+        }(kk, Fk)
     }
-    fN(uu)
+    Fd(kk)
   }
 }
 
-function fN(uu) {
-  const Ru = uu.getBoundingClientRect().top;
-  for (const yu of Array.from(uu.querySelectorAll(".WorldCodeAiModelGroup"))) {
-    const uu = yu.querySelector(".WorldCodeAiModelGroupHeader");
-    if (!uu) continue;
-    const Eu = Ru + uu.offsetHeight,
-      Ku = Array.from(yu.querySelectorAll(".WorldCodeAiModelRow")).some((uu => uu.getBoundingClientRect().bottom > Eu + 2));
-    uu.classList.toggle("Unpinned", !Ku)
+function Fd(kk) {
+  const Fk = kk.getBoundingClientRect().top;
+  for (const Bk of Array.from(kk.querySelectorAll(".WorldCodeAiModelGroup"))) {
+    const kk = Bk.querySelector(".WorldCodeAiModelGroupHeader");
+    if (!kk) continue;
+    const Rk = Fk + kk.offsetHeight,
+      tk = Array.from(Bk.querySelectorAll(".WorldCodeAiModelRow")).some((kk => kk.getBoundingClientRect().bottom > Rk + 2));
+    kk.classList.toggle("Unpinned", !tk)
   }
 }
 
-function uX(uu) {
-  const Ru = wm(uu, !0);
-  return uu.model.name.toLowerCase().startsWith(Ru.toLowerCase()) ? uu.model.name : `${Ru} \xb7 ${uu.model.name}`
+function Bd(kk) {
+  const Fk = CX(kk, !0);
+  return kk.model.name.toLowerCase().startsWith(Fk.toLowerCase()) ? kk.model.name : `${Fk} \xb7 ${kk.model.name}`
 }
 
-function RX(uu) {
+function Rd(kk) {
   let {
-    onAddKey: Ru,
-    editsOn: yu,
-    freeOnce: Ku = !1,
-    onFreeOnce: Ju,
-    children: Nu
-  } = uu;
+    onAddKey: Fk,
+    editsOn: Bk,
+    freeOnce: tk = !1,
+    onFreeOnce: bk,
+    children: wk
+  } = kk;
   const {
-    active: Xu,
-    select: Vu
-  } = qm(), ru = xJ(JJ());
-  (0, Eu.useEffect)((() => {
-    mJ.refresh(), eJ()
+    active: dk,
+    select: sk
+  } = nX(), Vk = eb(wb());
+  (0, Rk.useEffect)((() => {
+    bb.refresh(), Eb()
   }), []);
-  const [Bu, xu] = (0, Eu.useState)(!1), Su = (0, Eu.useRef)(null), pu = (0, Eu.useRef)(null), Tu = (0, Eu.useRef)(null), Wu = () => {
-    var uu;
-    xu(!1), null === (uu = pu.current) || void 0 === uu || uu.focus()
+  const [Jk, Ak] = (0, Rk.useState)(!1), ek = (0, Rk.useRef)(null), yk = (0, Rk.useRef)(null), fk = (0, Rk.useRef)(null), mk = () => {
+    var kk;
+    Ak(!1), null === (kk = yk.current) || void 0 === kk || kk.focus()
   };
-  (0, Eu.useEffect)((() => {
-    var uu, Ru;
-    if (!Bu) return;
-    const yu = null === (uu = Tu.current) || void 0 === uu ? void 0 : uu.querySelector("input:checked");
-    null === yu || void 0 === yu || yu.focus({
+  (0, Rk.useEffect)((() => {
+    var kk, Fk;
+    if (!Jk) return;
+    const Bk = null === (kk = fk.current) || void 0 === kk ? void 0 : kk.querySelector("input:checked");
+    null === Bk || void 0 === Bk || Bk.focus({
       preventScroll: !0
     });
-    const Eu = null === (Ru = Tu.current) || void 0 === Ru ? void 0 : Ru.querySelector(".WorldCodeAiModelMenuList"),
-      Ku = null === yu || void 0 === yu ? void 0 : yu.closest(".WorldCodeAiModelRow");
-    Eu && Ku && aN(Eu, Ku);
-    const Qu = () => {
-      Eu && fN(Eu)
+    const Rk = null === (Fk = fk.current) || void 0 === Fk ? void 0 : Fk.querySelector(".WorldCodeAiModelMenuList"),
+      tk = null === Bk || void 0 === Bk ? void 0 : Bk.closest(".WorldCodeAiModelRow");
+    Rk && tk && kd(Rk, tk);
+    const ak = () => {
+      Rk && Fd(Rk)
     };
-    null === Eu || void 0 === Eu || Eu.addEventListener("scroll", Qu, {
+    null === Rk || void 0 === Rk || Rk.addEventListener("scroll", ak, {
       passive: !0
     });
-    const mu = uu => {
-        var Ru;
-        null !== (Ru = Su.current) && void 0 !== Ru && Ru.contains(uu.target) || xu(!1)
+    const Xk = kk => {
+        var Fk;
+        null !== (Fk = ek.current) && void 0 !== Fk && Fk.contains(kk.target) || Ak(!1)
       },
-      Ju = uu => {
-        "Escape" === uu.key && (uu.stopPropagation(), uu.preventDefault(), lN && (lN(), 1) || Wu())
+      bk = kk => {
+        "Escape" === kk.key && (kk.stopPropagation(), kk.preventDefault(), rw && (rw(), 1) || mk())
       };
-    return document.addEventListener("pointerdown", mu), document.addEventListener("keydown", Ju, !0), () => {
-      null === Eu || void 0 === Eu || Eu.removeEventListener("scroll", Qu), document.removeEventListener("pointerdown", mu), document.removeEventListener("keydown", Ju, !0)
+    return document.addEventListener("pointerdown", Xk), document.addEventListener("keydown", bk, !0), () => {
+      null === Rk || void 0 === Rk || Rk.removeEventListener("scroll", ak), document.removeEventListener("pointerdown", Xk), document.removeEventListener("keydown", bk, !0)
     }
-  }), [Bu]);
-  const ju = Ku && null !== Xu,
-    Hu = ju ? "Bot.xd (free) \xb7 once" : Xu ? uX(Xu) : ru ? uJ : "Bot.xd (free)";
-  return (0, mu.jsxs)("div", {
-    ref: Su,
+  }), [Jk]);
+  const Wk = tk && null !== dk,
+    vk = Wk ? "Bot.xd (free) \xb7 once" : dk ? Bd(dk) : Vk ? Fb : "Bot.xd (free)";
+  return (0, Xk.jsxs)("div", {
+    ref: ek,
     className: "WorldCodeAiModelChipRow",
-    onBlur: uu => {
-      var Ru;
-      !Bu || !uu.relatedTarget || null !== (Ru = Su.current) && void 0 !== Ru && Ru.contains(uu.relatedTarget) || xu(!1)
+    onBlur: kk => {
+      var Fk;
+      !Jk || !kk.relatedTarget || null !== (Fk = ek.current) && void 0 !== Fk && Fk.contains(kk.relatedTarget) || Ak(!1)
     },
-    children: [(0, mu.jsxs)("button", {
-      ref: pu,
-      className: Qu()("WorldCodeAiModelChip", Bu && "Open"),
-      "aria-expanded": Bu,
-      "aria-label": `AI model: ${Hu}`,
+    children: [(0, Xk.jsxs)("button", {
+      ref: yk,
+      className: ak()("WorldCodeAiModelChip", Jk && "Open"),
+      "aria-expanded": Jk,
+      "aria-label": `AI model: ${vk}`,
       title: "Change AI model",
       onClick: () => {
-        xu(!Bu)
+        Ak(!Jk)
       },
-      children: [Xu && !ju && "" !== Xu.key && (0, mu.jsx)(TN, {}), (0, mu.jsx)("span", {
+      children: [dk && !Wk && "" !== dk.key && (0, Xk.jsx)(mw, {}), (0, Xk.jsx)("span", {
         className: "WorldCodeAiModelChipName",
-        children: Hu
-      }), (0, mu.jsx)("span", {
+        children: vk
+      }), (0, Xk.jsx)("span", {
         className: "WorldCodeAiModelChipCaret",
         "aria-hidden": "true",
         children: "\u25be"
       })]
-    }), null !== yu && (0, mu.jsx)(vN, {
+    }), null !== Bk && (0, Xk.jsx)(Qw, {
       step: "aiEdits",
       placement: "top",
-      children: (0, mu.jsx)("span", {
-        className: Qu()("WorldCodeAiEditsTag", !yu && "WorldCodeAiEditsTag-off"),
-        title: `Allow AI to make edits to my code is ${yu?"on":"off"}, in AI settings`,
-        children: yu ? "Edits on" : "Edits off"
+      children: (0, Xk.jsx)("span", {
+        className: ak()("WorldCodeAiEditsTag", !Bk && "WorldCodeAiEditsTag-off"),
+        title: `Allow AI to make edits to my code is ${Bk?"on":"off"}, in AI settings`,
+        children: Bk ? "Edits on" : "Edits off"
       })
-    }), (0, mu.jsx)("span", {
+    }), (0, Xk.jsx)("span", {
       className: "WorldCodeAiModelChipStatus",
-      children: Nu
-    }), Bu && (0, mu.jsxs)("div", {
-      ref: Tu,
+      children: wk
+    }), Jk && (0, Xk.jsxs)("div", {
+      ref: fk,
       className: "WorldCodeAiModelMenu",
       role: "dialog",
       "aria-labelledby": "WorldCodeAiModelMenuTitle",
-      children: [(0, mu.jsx)("h3", {
+      children: [(0, Xk.jsx)("h3", {
         id: "WorldCodeAiModelMenuTitle",
         className: "WorldCodeAiAiSettingsTitle",
         children: "AI model"
-      }), (0, mu.jsx)("div", {
+      }), (0, Xk.jsx)("div", {
         className: "WorldCodeAiModelMenuList",
-        children: (0, mu.jsx)(sN, {
+        children: (0, Xk.jsx)(Gw, {
           labelledBy: "WorldCodeAiModelMenuTitle",
           onPicked: () => {
-            null === Ju || void 0 === Ju || Ju(!1), Wu()
+            null === bk || void 0 === bk || bk(!1), mk()
           }
         })
-      }), (0, mu.jsxs)("div", {
+      }), (0, Xk.jsxs)("div", {
         className: "WorldCodeAiModelMenuActions",
-        children: [(0, mu.jsxs)("button", {
+        children: [(0, Xk.jsxs)("button", {
           className: "WorldCodeAiSecondaryButton WorldCodeAiAddKeyButton",
           onClick: () => {
-            xu(!1), Ru()
+            Ak(!1), Fk()
           },
-          children: [(0, mu.jsx)("span", {
+          children: [(0, Xk.jsx)("span", {
             "aria-hidden": "true",
             children: "+ "
           }), "Add API key"]
-        }), Xu && (0, mu.jsxs)("span", {
+        }), dk && (0, Xk.jsxs)("span", {
           className: "WorldCodeAiModelMenuBotxd",
-          children: [Ju && (ju ? (0, mu.jsxs)("button", {
+          children: [bk && (Wk ? (0, Xk.jsxs)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              Ju(!1), Wu()
+              bk(!1), mk()
             },
-            children: ["Back to ", Xu.model.name]
-          }) : (0, mu.jsx)("button", {
+            children: ["Back to ", dk.model.name]
+          }) : (0, Xk.jsx)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              Ju(!0), Wu()
+              bk(!0), mk()
             },
             children: "Ask Bot.xd once"
-          })), (0, mu.jsx)("button", {
+          })), (0, Xk.jsx)("button", {
             className: "WorldCodeAiKeyLearnMore",
             onClick: () => {
-              Vu(null), Wu()
+              sk(null), mk()
             },
             children: "Use Bot.xd from now on"
           })]
@@ -10480,379 +10480,379 @@ function RX(uu) {
     })]
   })
 }
-const yX = "kv";
+const td = "kv";
 
-function EX(uu) {
-  return new Promise(((Ru, yu) => {
-    uu.oncomplete = () => {
-      Ru()
-    }, uu.onerror = () => {
-      var Ru;
-      yu(null !== (Ru = uu.error) && void 0 !== Ru ? Ru : new Error("IndexedDB transaction failed"))
-    }, uu.onabort = () => {
-      var Ru;
-      yu(null !== (Ru = uu.error) && void 0 !== Ru ? Ru : new Error("IndexedDB transaction aborted"))
+function ad(kk) {
+  return new Promise(((Fk, Bk) => {
+    kk.oncomplete = () => {
+      Fk()
+    }, kk.onerror = () => {
+      var Fk;
+      Bk(null !== (Fk = kk.error) && void 0 !== Fk ? Fk : new Error("IndexedDB transaction failed"))
+    }, kk.onabort = () => {
+      var Fk;
+      Bk(null !== (Fk = kk.error) && void 0 !== Fk ? Fk : new Error("IndexedDB transaction aborted"))
     }
   }))
 }
-var KX = yu(36683);
-const QX = (0, Eu.memo)((function(uu) {
+var Xd = Bk(36586);
+const bd = (0, Rk.memo)((function(kk) {
   let {
-    change: Ru,
-    marked: yu
-  } = uu;
-  const Ku = (0, Eu.useMemo)((() => YE(Ru.before, Ru.after)), [Ru]),
-    Ju = [];
-  for (let Eu = 0; Eu < Ku.length; Eu++) {
-    if ("same" !== Ku[Eu].kind) {
-      Ju.push(Ku[Eu]);
+    change: Fk,
+    marked: Bk
+  } = kk;
+  const tk = (0, Rk.useMemo)((() => xR(Fk.before, Fk.after)), [Fk]),
+    bk = [];
+  for (let Rk = 0; Rk < tk.length; Rk++) {
+    if ("same" !== tk[Rk].kind) {
+      bk.push(tk[Rk]);
       continue
     }
-    let uu = Eu;
-    for (; uu + 1 < Ku.length && "same" === Ku[uu + 1].kind;) uu++;
-    const Ru = Ku.slice(Eu, uu + 1),
-      yu = 0 === Eu ? 0 : 2,
-      Qu = uu === Ku.length - 1 ? 0 : 2;
-    Ru.length > yu + Qu + 1 ? Ju.push(...Ru.slice(0, yu), {
+    let kk = Rk;
+    for (; kk + 1 < tk.length && "same" === tk[kk + 1].kind;) kk++;
+    const Fk = tk.slice(Rk, kk + 1),
+      Bk = 0 === Rk ? 0 : 2,
+      ak = kk === tk.length - 1 ? 0 : 2;
+    Fk.length > Bk + ak + 1 ? bk.push(...Fk.slice(0, Bk), {
       kind: "fold",
-      count: Ru.length - yu - Qu
-    }, ...Ru.slice(Ru.length - Qu)) : Ju.push(...Ru), Eu = uu
+      count: Fk.length - Bk - ak
+    }, ...Fk.slice(Fk.length - ak)) : bk.push(...Fk), Rk = kk
   }
-  return (0, mu.jsx)("pre", {
+  return (0, Xk.jsx)("pre", {
     className: "WorldCodeAiDiff",
-    children: Ju.map(((uu, Ru) => {
-      if ("fold" === uu.kind) return (0, mu.jsxs)("div", {
+    children: bk.map(((kk, Fk) => {
+      if ("fold" === kk.kind) return (0, Xk.jsxs)("div", {
         className: "WorldCodeAiDiffFold",
-        children: ["\u22ef ", uu.count, " unchanged lines"]
-      }, Ru);
-      const Eu = "added" === uu.kind ? function(uu, Ru) {
-          if (Ru) return uu.includes(`"${Ru}"`) ? `"${Ru}"` : uu.includes(Ru) ? Ru : void 0
-        }(uu.text, yu) : void 0,
-        Ku = Eu ? uu.text.indexOf(Eu) : -1;
-      return (0, mu.jsxs)("div", {
-        className: Qu()("WorldCodeAiDiffLine", `WorldCodeAiDiff-${uu.kind}`, Eu && "WorldCodeAiDiff-marked"),
-        children: [(0, mu.jsx)("span", {
+        children: ["\u22ef ", kk.count, " unchanged lines"]
+      }, Fk);
+      const Rk = "added" === kk.kind ? function(kk, Fk) {
+          if (Fk) return kk.includes(`"${Fk}"`) ? `"${Fk}"` : kk.includes(Fk) ? Fk : void 0
+        }(kk.text, Bk) : void 0,
+        tk = Rk ? kk.text.indexOf(Rk) : -1;
+      return (0, Xk.jsxs)("div", {
+        className: ak()("WorldCodeAiDiffLine", `WorldCodeAiDiff-${kk.kind}`, Rk && "WorldCodeAiDiff-marked"),
+        children: [(0, Xk.jsx)("span", {
           className: "WorldCodeAiDiffMark",
-          children: "added" === uu.kind ? "+" : "removed" === uu.kind ? "\u2212" : " "
-        }), (0, mu.jsx)("span", {
+          children: "added" === kk.kind ? "+" : "removed" === kk.kind ? "\u2212" : " "
+        }), (0, Xk.jsx)("span", {
           className: "WorldCodeAiDiffText",
-          children: Eu ? (0, mu.jsxs)(mu.Fragment, {
-            children: [uu.text.slice(0, Ku), (0, mu.jsx)("mark", {
-              children: Eu
-            }), uu.text.slice(Ku + Eu.length)]
-          }) : uu.text || " "
+          children: Rk ? (0, Xk.jsxs)(Xk.Fragment, {
+            children: [kk.text.slice(0, tk), (0, Xk.jsx)("mark", {
+              children: Rk
+            }), kk.text.slice(tk + Rk.length)]
+          }) : kk.text || " "
         })]
-      }, Ru)
+      }, Fk)
     }))
   })
 }));
 
-function mX(uu) {
-  var Ru, yu;
+function wd(kk) {
+  var Fk, Bk;
   if ("undefined" === typeof BroadcastChannel) return;
-  const Eu = new BroadcastChannel(uu);
-  return null === (Ru = (yu = Eu).unref) || void 0 === Ru || Ru.call(yu), {
-    post: uu => {
-      Eu.postMessage(uu)
+  const Rk = new BroadcastChannel(kk);
+  return null === (Fk = (Bk = Rk).unref) || void 0 === Fk || Fk.call(Bk), {
+    post: kk => {
+      Rk.postMessage(kk)
     },
-    listen: uu => {
-      const Ru = Ru => {
-        "string" === typeof Ru.data && uu(Ru.data)
+    listen: kk => {
+      const Fk = Fk => {
+        "string" === typeof Fk.data && kk(Fk.data)
       };
-      return Eu.addEventListener("message", Ru), () => {
-        Eu.removeEventListener("message", Ru)
+      return Rk.addEventListener("message", Fk), () => {
+        Rk.removeEventListener("message", Fk)
       }
     }
   }
 }
 
-function JX(uu) {
-  return Array.isArray(uu) && uu.every((uu => {
-    if ("object" !== typeof uu || null === uu || !("id" in uu) || !("at" in uu) || !("label" in uu) || !("files" in uu)) return !1;
-    const Ru = uu.files;
-    return "object" === typeof Ru && null !== Ru && Object.values(Ru).every((uu => "string" === typeof uu))
+function dd(kk) {
+  return Array.isArray(kk) && kk.every((kk => {
+    if ("object" !== typeof kk || null === kk || !("id" in kk) || !("at" in kk) || !("label" in kk) || !("files" in kk)) return !1;
+    const Fk = kk.files;
+    return "object" === typeof Fk && null !== Fk && Object.values(Fk).every((kk => "string" === typeof kk))
   }))
 }
 
-function NX(uu, Ru) {
-  return Ru ? function(uu, Ru) {
-    if (!Ru) return [...uu];
-    const yu = new Map;
-    for (const Eu of [...Ru, ...uu]) yu.set(Eu.id, Eu);
-    return [...yu.values()].sort(((uu, Ru) => uu.at - Ru.at || uu.id - Ru.id)).slice(-30)
-  }(Ru, uu) : [...uu]
+function sd(kk, Fk) {
+  return Fk ? function(kk, Fk) {
+    if (!Fk) return [...kk];
+    const Bk = new Map;
+    for (const Rk of [...Fk, ...kk]) Bk.set(Rk.id, Rk);
+    return [...Bk.values()].sort(((kk, Fk) => kk.at - Fk.at || kk.id - Fk.id)).slice(-30)
+  }(Fk, kk) : [...kk]
 }
 
-function XX(uu, Ru) {
-  let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  const Eu = new Date(uu).toLocaleTimeString("en-US", {
+function Vd(kk, Fk) {
+  let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  const Rk = new Date(kk).toLocaleTimeString("en-US", {
       hour: "numeric",
       minute: "2-digit",
-      ...yu ? {
+      ...Bk ? {
         second: "2-digit"
       } : {}
     }).toLowerCase(),
-    Ku = uu => new Date(uu).toDateString();
-  return Ku(uu) === Ku(Ru) ? Eu : Ku(uu) === Ku(Ru - 864e5) ? `yesterday ${Eu}` : function(uu, Ru) {
-    const yu = Math.floor((Ru - uu) / 6e4);
-    if (yu < 1) return "just now";
-    if (yu < 60) return `${yu} min ago`;
-    const Eu = Math.floor(yu / 60);
-    if (Eu < 24) return `${Eu} h ago`;
-    const Ku = Math.floor(Eu / 24);
-    return 1 === Ku ? "1 day ago" : `${Ku} days ago`
-  }(uu, Ru)
+    tk = kk => new Date(kk).toDateString();
+  return tk(kk) === tk(Fk) ? Rk : tk(kk) === tk(Fk - 864e5) ? `yesterday ${Rk}` : function(kk, Fk) {
+    const Bk = Math.floor((Fk - kk) / 6e4);
+    if (Bk < 1) return "just now";
+    if (Bk < 60) return `${Bk} min ago`;
+    const Rk = Math.floor(Bk / 60);
+    if (Rk < 24) return `${Rk} h ago`;
+    const tk = Math.floor(Rk / 24);
+    return 1 === tk ? "1 day ago" : `${tk} days ago`
+  }(kk, Fk)
 }
 
-function VX(uu, Ru) {
-  return [...new Set([...Object.keys(Ru), ...Object.keys(uu.files)])].flatMap((yu => {
-    var Eu, Ku;
-    const Qu = null !== (Eu = uu.files[yu]) && void 0 !== Eu ? Eu : "";
-    return (null !== (Ku = Ru[yu]) && void 0 !== Ku ? Ku : "") === Qu ? [] : [{
-      path: yu,
-      text: Qu
+function Jd(kk, Fk) {
+  return [...new Set([...Object.keys(Fk), ...Object.keys(kk.files)])].flatMap((Bk => {
+    var Rk, tk;
+    const ak = null !== (Rk = kk.files[Bk]) && void 0 !== Rk ? Rk : "";
+    return (null !== (tk = Fk[Bk]) && void 0 !== tk ? tk : "") === ak ? [] : [{
+      path: Bk,
+      text: ak
     }]
   }))
 }
 
-function rX(uu) {
-  let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 120;
-  if (uu.length <= Ru) return null;
-  const yu = uu.slice(0, Ru),
-    Eu = yu.lastIndexOf(" ");
-  return `${(Eu>Ru/2?yu.slice(0,Eu):yu).replace(/[\s,;:.]+$/,"")}\u2026`
+function Ad(kk) {
+  let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 120;
+  if (kk.length <= Fk) return null;
+  const Bk = kk.slice(0, Fk),
+    Rk = Bk.lastIndexOf(" ");
+  return `${(Rk>Fk/2?Bk.slice(0,Rk):Bk).replace(/[\s,;:.]+$/,"")}\u2026`
 }
 
-function BX(uu) {
+function ed(kk) {
   let {
-    snapshot: Ru,
-    files: yu,
-    now: Ku,
-    withSeconds: Ju,
-    onRestore: Nu
-  } = uu;
-  const [Xu, Vu] = (0, Eu.useState)(!1), [ru, Bu] = (0, Eu.useState)(!1), xu = Ru.did ? `Before: ${Ru.did}` : Ru.label, Su = rX(xu), pu = Ru.did && Ru.label.startsWith('Before "') ? Ru.label.slice(7) : null, Tu = null === pu ? null : rX(pu, 50), Wu = null !== Tu && null !== pu && void 0 !== pu && pu.startsWith('"') ? `${Tu}"` : Tu, ju = (0, Eu.useRef)(null);
-  (0, Eu.useEffect)((() => {
-    const uu = ju.current,
-      Ru = null === uu || void 0 === uu ? void 0 : uu.closest(".WorldCodeAiMessages");
-    if (!Xu || !uu || !Ru) return;
-    const yu = Ru.getBoundingClientRect(),
-      Eu = uu.getBoundingClientRect(),
-      Ku = Eu.bottom - (yu.bottom - 28),
-      Qu = Eu.top - (yu.top + 16);
-    Ku > 0 && Ru.scrollBy({
-      top: Math.min(Ku, Qu),
+    snapshot: Fk,
+    files: Bk,
+    now: tk,
+    withSeconds: bk,
+    onRestore: wk
+  } = kk;
+  const [dk, sk] = (0, Rk.useState)(!1), [Vk, Jk] = (0, Rk.useState)(!1), Ak = Fk.did ? `Before: ${Fk.did}` : Fk.label, ek = Ad(Ak), yk = Fk.did && Fk.label.startsWith('Before "') ? Fk.label.slice(7) : null, fk = null === yk ? null : Ad(yk, 50), mk = null !== fk && null !== yk && void 0 !== yk && yk.startsWith('"') ? `${fk}"` : fk, Wk = (0, Rk.useRef)(null);
+  (0, Rk.useEffect)((() => {
+    const kk = Wk.current,
+      Fk = null === kk || void 0 === kk ? void 0 : kk.closest(".WorldCodeAiMessages");
+    if (!dk || !kk || !Fk) return;
+    const Bk = Fk.getBoundingClientRect(),
+      Rk = kk.getBoundingClientRect(),
+      tk = Rk.bottom - (Bk.bottom - 28),
+      ak = Rk.top - (Bk.top + 16);
+    tk > 0 && Fk.scrollBy({
+      top: Math.min(tk, ak),
       behavior: "smooth"
     })
-  }), [Xu]);
-  const Hu = (0, Eu.useRef)(null),
-    [du, bu] = (0, Eu.useState)(!1),
-    Cu = (0, Eu.useCallback)((() => {
-      const uu = Hu.current;
-      bu(null !== uu && uu.scrollTop + uu.clientHeight >= uu.scrollHeight - 24)
+  }), [dk]);
+  const vk = (0, Rk.useRef)(null),
+    [ik, Yk] = (0, Rk.useState)(!1),
+    Lk = (0, Rk.useCallback)((() => {
+      const kk = vk.current;
+      Yk(null !== kk && kk.scrollTop + kk.clientHeight >= kk.scrollHeight - 24)
     }), []);
-  (0, Eu.useEffect)((() => {
-    Xu && Cu()
-  }), [Xu, Cu]);
-  const ku = (0, Eu.useMemo)((() => [...new Set([...Object.keys(Ru.files), ...Object.keys(yu)])].flatMap((uu => {
-    var Eu, Ku;
-    const Qu = null !== (Eu = Ru.files[uu]) && void 0 !== Eu ? Eu : "",
-      mu = null !== (Ku = yu[uu]) && void 0 !== Ku ? Ku : "";
-    return Qu === mu ? [] : [{
-      path: uu,
-      before: Qu,
-      after: mu
+  (0, Rk.useEffect)((() => {
+    dk && Lk()
+  }), [dk, Lk]);
+  const Ok = (0, Rk.useMemo)((() => [...new Set([...Object.keys(Fk.files), ...Object.keys(Bk)])].flatMap((kk => {
+    var Rk, tk;
+    const ak = null !== (Rk = Fk.files[kk]) && void 0 !== Rk ? Rk : "",
+      Xk = null !== (tk = Bk[kk]) && void 0 !== tk ? tk : "";
+    return ak === Xk ? [] : [{
+      path: kk,
+      before: ak,
+      after: Xk
     }]
-  }))), [Ru, yu]);
-  return (0, mu.jsxs)("li", {
-    ref: ju,
+  }))), [Fk, Bk]);
+  return (0, Xk.jsxs)("li", {
+    ref: Wk,
     className: "WorldCodeAiSnapshot",
-    children: [(0, mu.jsxs)("div", {
+    children: [(0, Xk.jsxs)("div", {
       className: "WorldCodeAiSnapshotRow",
-      children: [(0, mu.jsxs)("span", {
+      children: [(0, Xk.jsxs)("span", {
         className: "WorldCodeAiSnapshotLabel",
-        children: [ru || !Su ? xu : Su, (Su || Wu) && (0, mu.jsx)("button", {
+        children: [Vk || !ek ? Ak : ek, (ek || mk) && (0, Xk.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiSnapshotMore",
-          "aria-expanded": ru,
+          "aria-expanded": Vk,
           onClick: () => {
-            Bu(!ru)
+            Jk(!Vk)
           },
-          children: ru ? "less" : "more"
-        }), (0, mu.jsxs)("span", {
+          children: Vk ? "less" : "more"
+        }), (0, Xk.jsxs)("span", {
           className: "WorldCodeAiSnapshotAge",
-          children: [" \xb7 ", XX(Ru.at, Ku, Ju)]
-        }), null !== pu && (0, mu.jsxs)("span", {
+          children: [" \xb7 ", Vd(Fk.at, tk, bk)]
+        }), null !== yk && (0, Xk.jsxs)("span", {
           className: "WorldCodeAiSnapshotAsked",
-          children: ["You asked: ", ru || !Wu ? pu : Wu]
+          children: ["You asked: ", Vk || !mk ? yk : mk]
         })]
-      }), ku.length > 0 && (0, mu.jsx)("button", {
+      }), Ok.length > 0 && (0, Xk.jsx)("button", {
         className: "WorldCodeAiLinkButton",
         onClick: () => {
-          Vu(!Xu)
+          sk(!dk)
         },
-        children: Xu ? "Hide" : "Compare"
-      }), ku.length > 0 && Nu && (0, mu.jsx)("button", {
+        children: dk ? "Hide" : "Compare"
+      }), Ok.length > 0 && wk && (0, Xk.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
-        onClick: Nu,
+        onClick: wk,
         children: "Go back to this code"
-      }), 0 === ku.length && (0, mu.jsx)("span", {
+      }), 0 === Ok.length && (0, Xk.jsx)("span", {
         className: "WorldCodeAiSnapshotNow",
         children: "Same as your code now"
       })]
-    }), Xu && (0, mu.jsxs)("div", {
+    }), dk && (0, Xk.jsxs)("div", {
       className: "WorldCodeAiChanges",
-      children: [(0, mu.jsx)("p", {
+      children: [(0, Xk.jsx)("p", {
         className: "WorldCodeAiSnapshotCompareNote",
         children: "What changed since then:"
-      }), (0, mu.jsx)("div", {
-        ref: Hu,
-        className: Qu()("WorldCodeAiSnapshotCompare", du && "WorldCodeAiSnapshotCompare-end"),
-        onScroll: Cu,
-        children: ku.map((uu => (0, mu.jsxs)("div", {
+      }), (0, Xk.jsx)("div", {
+        ref: vk,
+        className: ak()("WorldCodeAiSnapshotCompare", ik && "WorldCodeAiSnapshotCompare-end"),
+        onScroll: Lk,
+        children: Ok.map((kk => (0, Xk.jsxs)("div", {
           className: "WorldCodeAiChange",
-          children: [(0, mu.jsx)("div", {
+          children: [(0, Xk.jsx)("div", {
             className: "WorldCodeAiChangeHeader",
-            children: (0, mu.jsx)("span", {
+            children: (0, Xk.jsx)("span", {
               className: "WorldCodeAiChangePath",
-              children: uu.path
+              children: kk.path
             })
-          }), (0, mu.jsx)(QX, {
-            change: uu
+          }), (0, Xk.jsx)(bd, {
+            change: kk
           })]
-        }, uu.path)))
+        }, kk.path)))
       })]
     })]
   })
 }
 
-function xX(uu) {
+function yd(kk) {
   let {
-    snapshots: Ru,
-    files: yu,
-    now: Eu,
-    onRestore: Ku
-  } = uu;
-  return (0, mu.jsxs)("div", {
+    snapshots: Fk,
+    files: Bk,
+    now: Rk,
+    onRestore: tk
+  } = kk;
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiHistory",
-    children: [(0, mu.jsx)("div", {
+    children: [(0, Xk.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, mu.jsx)("span", {
+      children: (0, Xk.jsx)("span", {
         children: "Your code before each change"
       })
-    }), 0 === Ru.length ? (0, mu.jsx)("p", {
+    }), 0 === Fk.length ? (0, Xk.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Nothing here yet. Each time a change goes into your code, your code from before it is kept here."
-    }) : (0, mu.jsx)("ul", {
+    }) : (0, Xk.jsx)("ul", {
       className: "WorldCodeAiSnapshots",
-      children: [...Ru].reverse().map((uu => {
-        const Qu = Ru.some((Ru => Ru.id !== uu.id && XX(Ru.at, Eu) === XX(uu.at, Eu)));
-        return (0, mu.jsx)(BX, {
-          snapshot: uu,
-          files: yu,
-          now: Eu,
-          withSeconds: Qu,
-          onRestore: Ku && (() => {
-            Ku(uu)
+      children: [...Fk].reverse().map((kk => {
+        const ak = Fk.some((Fk => Fk.id !== kk.id && Vd(Fk.at, Rk) === Vd(kk.at, Rk)));
+        return (0, Xk.jsx)(ed, {
+          snapshot: kk,
+          files: Bk,
+          now: Rk,
+          withSeconds: ak,
+          onRestore: tk && (() => {
+            tk(kk)
           })
-        }, uu.id)
+        }, kk.id)
       }))
     })]
   })
 }
 
-function SX(uu) {
+function fd(kk) {
   let {
-    notes: Ru,
-    outline: yu,
-    UH: Ku,
-    onDelete: Qu
-  } = uu;
-  const [Ju, Nu] = (0, Eu.useState)(""), [Xu, Vu] = (0, Eu.useState)(null), [ru, Bu] = (0, Eu.useState)(!1), xu = Ru.length >= 8, Su = yu.callbacks.length + yu.commands.length + yu.functions.length > 0;
-  return (0, mu.jsxs)("div", {
+    notes: Fk,
+    outline: Bk,
+    Av: tk,
+    onDelete: ak
+  } = kk;
+  const [bk, wk] = (0, Rk.useState)(""), [dk, sk] = (0, Rk.useState)(null), [Vk, Jk] = (0, Rk.useState)(!1), Ak = Fk.length >= 8, ek = Bk.callbacks.length + Bk.commands.length + Bk.functions.length > 0;
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiHistory WorldCodeAiAbout",
-    children: [(0, mu.jsx)("div", {
+    children: [(0, Xk.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, mu.jsx)("span", {
+      children: (0, Xk.jsx)("span", {
         children: "AI notes"
       })
-    }), (0, mu.jsx)("p", {
+    }), (0, Xk.jsx)("p", {
       className: "WorldCodeAiAboutNote",
       children: "The AI reads these notes with every request, so it remembers what your game is."
-    }), 0 === Ru.length && (0, mu.jsx)("p", {
+    }), 0 === Fk.length && (0, Xk.jsx)("p", {
       className: "WorldCodeAiHint",
       children: 'No notes yet. Add one, like "Two teams, red and blue, race to the flag".'
-    }), (0, mu.jsx)("ul", {
+    }), (0, Xk.jsx)("ul", {
       className: "WorldCodeAiAboutList",
-      children: Ru.map((uu => (0, mu.jsxs)("li", {
-        children: [(0, mu.jsx)("span", {
-          children: uu
-        }), (0, mu.jsx)("button", {
+      children: Fk.map((kk => (0, Xk.jsxs)("li", {
+        children: [(0, Xk.jsx)("span", {
+          children: kk
+        }), (0, Xk.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          "aria-label": `Delete note: ${uu}`,
+          "aria-label": `Delete note: ${kk}`,
           onClick: () => {
-            Qu(uu)
+            ak(kk)
           },
           children: "Delete"
         })]
-      }, uu)))
-    }), Ku && !xu && (0, mu.jsxs)("form", {
+      }, kk)))
+    }), tk && !Ak && (0, Xk.jsxs)("form", {
       className: "WorldCodeAiQuestionOther",
-      onSubmit: uu => {
-        uu.preventDefault(), "" === Ju.trim() || ru || (Bu(!0), Vu(null), Ku(Ju).then((uu => {
-          Vu(uu), null === uu && Nu("")
+      onSubmit: kk => {
+        kk.preventDefault(), "" === bk.trim() || Vk || (Jk(!0), sk(null), tk(bk).then((kk => {
+          sk(kk), null === kk && wk("")
         })).catch((() => {
-          Vu("That note couldn't be kept. Try again.")
+          sk("That note couldn't be kept. Try again.")
         })).finally((() => {
-          Bu(!1)
+          Jk(!1)
         })))
       },
-      children: [(0, mu.jsx)("input", {
+      children: [(0, Xk.jsx)("input", {
         className: "WorldCodeAiInput WorldCodeAiQuestionInput",
-        value: Ju,
-        maxLength: au,
+        value: bk,
+        maxLength: Qk,
         placeholder: "Add a note about your game",
         "aria-label": "Add a note about your game",
-        onChange: uu => {
-          Nu(uu.target.value)
+        onChange: kk => {
+          wk(kk.target.value)
         },
-        onKeyDown: uu => {
-          uu.stopPropagation()
+        onKeyDown: kk => {
+          kk.stopPropagation()
         }
-      }), (0, mu.jsx)("button", {
+      }), (0, Xk.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
         type: "submit",
-        disabled: "" === Ju.trim() || ru,
-        children: ru ? "Adding\u2026" : "Add"
+        disabled: "" === bk.trim() || Vk,
+        children: Vk ? "Adding\u2026" : "Add"
       })]
-    }), xu && (0, mu.jsxs)("p", {
+    }), Ak && (0, Xk.jsxs)("p", {
       className: "WorldCodeAiHint",
       children: ["That's ", 8, " notes, the most it keeps: delete one to add another."]
-    }), Xu && (0, mu.jsx)("p", {
+    }), dk && (0, Xk.jsx)("p", {
       className: "WorldCodeAiAboutError",
-      children: Xu
-    }), (0, mu.jsx)("p", {
+      children: dk
+    }), (0, Xk.jsx)("p", {
       className: "WorldCodeAiAboutHeading",
       children: "In your code now"
-    }), Su ? (0, mu.jsxs)("ul", {
+    }), ek ? (0, Xk.jsxs)("ul", {
       className: "WorldCodeAiOutline",
-      children: [yu.callbacks.map((uu => (0, mu.jsxs)("li", {
-        children: [QR(uu), " ", (0, mu.jsx)("code", {
-          children: uu
+      children: [Bk.callbacks.map((kk => (0, Xk.jsxs)("li", {
+        children: [XF(kk), " ", (0, Xk.jsx)("code", {
+          children: kk
         })]
-      }, uu))), yu.commands.length > 0 && (0, mu.jsxs)("li", {
-        children: ["Chat commands: ", yu.commands.join(", ")]
-      }), yu.functions.length > 0 && (0, mu.jsxs)("li", {
-        children: ["Your own functions: ", (0, mu.jsx)("code", {
-          children: yu.functions.join(", ")
+      }, kk))), Bk.commands.length > 0 && (0, Xk.jsxs)("li", {
+        children: ["Chat commands: ", Bk.commands.join(", ")]
+      }), Bk.functions.length > 0 && (0, Xk.jsxs)("li", {
+        children: ["Your own functions: ", (0, Xk.jsx)("code", {
+          children: Bk.functions.join(", ")
         })]
       })]
-    }) : (0, mu.jsx)("p", {
+    }) : (0, Xk.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Nothing yet. Ask the AI to make something."
     })]
   })
 }
-const pX = {
+const md = {
   asked: "Remember this about your game?",
   pending: "A note to remember, once the change is in",
   checking: "Saving a note\u2026",
@@ -10861,42 +10861,42 @@ const pX = {
   refused: "Note not saved"
 };
 
-function TX(uu) {
+function Wd(kk) {
   let {
-    note: Ru,
-    status: yu,
-    onAnswer: Eu,
-    isPartLeftOut: Ku = !1,
-    defaultOpen: Qu
-  } = uu;
-  const Nu = Ku && ("asked" === yu || "pending" === yu);
-  return (0, mu.jsxs)("div", {
+    note: Fk,
+    status: Bk,
+    onAnswer: Rk,
+    isPartLeftOut: tk = !1,
+    defaultOpen: ak
+  } = kk;
+  const wk = tk && ("asked" === Bk || "pending" === Bk);
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiToolCard",
-    children: [(0, mu.jsxs)(Ju, {
-      title: pX[yu],
-      isCalm: "refused" !== yu,
-      defaultOpen: Qu,
-      children: [Nu && (0, mu.jsx)("p", {
+    children: [(0, Xk.jsxs)(bk, {
+      title: md[Bk],
+      isCalm: "refused" !== Bk,
+      defaultOpen: ak,
+      children: [wk && (0, Xk.jsx)("p", {
         children: "The note to remember is hidden while a part is unticked. Tick every part to see it."
-      }), !Nu && (0, mu.jsxs)("p", {
-        children: ['"', Ru, '"']
-      }), !Nu && "pending" === yu && (0, mu.jsx)("p", {
+      }), !wk && (0, Xk.jsxs)("p", {
+        children: ['"', Fk, '"']
+      }), !wk && "pending" === Bk && (0, Xk.jsx)("p", {
         children: "It goes into AI notes once the change is in."
-      }), "refused" === yu && (0, mu.jsx)("p", {
+      }), "refused" === Bk && (0, Xk.jsx)("p", {
         children: "This note can't be saved. Notes are only about your game."
       })]
-    }), !Nu && "asked" === yu && Eu && (0, mu.jsxs)("div", {
+    }), !wk && "asked" === Bk && Rk && (0, Xk.jsxs)("div", {
       className: "WorldCodeAiChangeActions",
-      children: [(0, mu.jsx)("button", {
+      children: [(0, Xk.jsx)("button", {
         className: "WorldCodeAiPrimaryButton",
         onClick: () => {
-          Eu(!0)
+          Rk(!0)
         },
         children: "Yes, remember it"
-      }), (0, mu.jsx)("button", {
+      }), (0, Xk.jsx)("button", {
         className: "WorldCodeAiSecondaryButton",
         onClick: () => {
-          Eu(!1)
+          Rk(!1)
         },
         children: "No"
       })]
@@ -10904,148 +10904,148 @@ function TX(uu) {
   })
 }
 
-function WX(uu) {
+function vd(kk) {
   let {
-    steps: Ru,
-    built: yu,
-    done: Eu,
-    onBuild: Ku
-  } = uu;
-  return (0, mu.jsxs)("div", {
+    steps: Fk,
+    built: Bk,
+    done: Rk,
+    onBuild: tk
+  } = kk;
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiQuestion WorldCodeAiPlan",
-    children: [(0, mu.jsx)("p", {
+    children: [(0, Xk.jsx)("p", {
       className: "WorldCodeAiQuestionText",
       children: "The plan: one step at a time"
-    }), (0, mu.jsx)("ol", {
+    }), (0, Xk.jsx)("ol", {
       className: "WorldCodeAiPlanSteps",
-      children: Ru.map(((uu, Ru) => (0, mu.jsxs)("li", {
-        className: Ru < Eu ? "WorldCodeAiPlanStep-built" : void 0,
-        children: [Ru < Eu && (0, mu.jsx)("span", {
+      children: Fk.map(((kk, Fk) => (0, Xk.jsxs)("li", {
+        className: Fk < Rk ? "WorldCodeAiPlanStep-built" : void 0,
+        children: [Fk < Rk && (0, Xk.jsx)("span", {
           className: "WorldCodeAiPlanTick",
           children: "\u2713 "
-        }), uu, Ru < yu && Ru >= Eu && (0, mu.jsx)("span", {
+        }), kk, Fk < Bk && Fk >= Rk && (0, Xk.jsx)("span", {
           className: "WorldCodeAiPlanAsked",
           children: " (apply it to tick it off)"
         })]
-      }, `${Ru}:${uu}`)))
-    }), yu < Ru.length && Eu < yu && (0, mu.jsxs)("span", {
+      }, `${Fk}:${kk}`)))
+    }), Bk < Fk.length && Rk < Bk && (0, Xk.jsxs)("span", {
       className: "WorldCodeAiHint",
-      children: ["Apply ", yu - Eu > 1 ? `steps ${Eu+1} to ${yu}` : `step ${yu}`, " to your code and try it, then build step ", yu + 1, "."]
-    }), yu < Ru.length && Ku && (0, mu.jsx)("button", {
-      ...pN.f,
-      className: Eu < yu ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
+      children: ["Apply ", Bk - Rk > 1 ? `steps ${Rk+1} to ${Bk}` : `step ${Bk}`, " to your code and try it, then build step ", Bk + 1, "."]
+    }), Bk < Fk.length && tk && (0, Xk.jsx)("button", {
+      ...fw.h,
+      className: Rk < Bk ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
       onClick: () => {
-        Ku(yu)
+        tk(Bk)
       },
-      children: Eu < yu ? `Build step ${yu+1} anyway` : `Build step ${yu+1}`
-    }), yu < Ru.length && yu > 0 && Eu >= yu && (0, mu.jsx)("span", {
+      children: Rk < Bk ? `Build step ${Bk+1} anyway` : `Build step ${Bk+1}`
+    }), Bk < Fk.length && Bk > 0 && Rk >= Bk && (0, Xk.jsx)("span", {
       className: "WorldCodeAiHint",
       children: "Try each step in your world before the next."
-    }), yu === Ru.length && (0, mu.jsx)("span", {
+    }), Bk === Fk.length && (0, Xk.jsx)("span", {
       className: "WorldCodeAiHint",
       children: "Every step is asked for."
     })]
   })
 }
 
-function jX(uu, Ru, yu) {
-  return `${uu}\n\nYou asked me: "${Ru}" ${null===yu?"I don't mind: choose what works best.":`My answer: ${yu.replace(/\.$/,"")}.`} Build it now, without asking again.`
+function Yd(kk, Fk, Bk) {
+  return `${kk}\n\nYou asked me: "${Fk}" ${null===Bk?"I don't mind: choose what works best.":`My answer: ${Bk.replace(/\.$/,"")}.`} Build it now, without asking again.`
 }
 
-function HX(uu) {
+function od(kk) {
   let {
-    question: Ru,
-    onAnswer: yu,
-    ownAnswerBelow: Ku = !1
-  } = uu;
-  const [Qu, Ju] = (0, Eu.useState)("");
-  return (0, mu.jsxs)("div", {
+    question: Fk,
+    onAnswer: Bk,
+    ownAnswerBelow: tk = !1
+  } = kk;
+  const [ak, bk] = (0, Rk.useState)("");
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiQuestion",
-    children: [(0, mu.jsx)("p", {
+    children: [(0, Xk.jsx)("p", {
       className: "WorldCodeAiQuestionText",
-      children: Ru.question
-    }), yu && (0, mu.jsxs)(mu.Fragment, {
-      children: [(0, mu.jsx)("div", {
+      children: Fk.question
+    }), Bk && (0, Xk.jsxs)(Xk.Fragment, {
+      children: [(0, Xk.jsx)("div", {
         className: "WorldCodeAiQuestionChoices",
-        children: Ru.choices.map(((uu, Ru) => (0, Eu.createElement)("button", {
-          ...pN.f,
-          key: `${Ru}:${uu}`,
+        children: Fk.choices.map(((kk, Fk) => (0, Rk.createElement)("button", {
+          ...fw.h,
+          key: `${Fk}:${kk}`,
           className: "WorldCodeAiQuestionChoice",
           onClick: () => {
-            yu(uu, !1)
+            Bk(kk, !1)
           }
-        }, uu)))
-      }), Ru.allowOther && Ku && (0, mu.jsx)("span", {
+        }, kk)))
+      }), Fk.allowOther && tk && (0, Xk.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "Or type your own answer in the box below."
-      }), Ru.allowOther && !Ku && (0, mu.jsxs)("form", {
+      }), Fk.allowOther && !tk && (0, Xk.jsxs)("form", {
         className: "WorldCodeAiQuestionOther",
-        onSubmit: uu => {
-          uu.preventDefault(), "" !== Qu.trim() && yu(Qu.trim(), !0)
+        onSubmit: kk => {
+          kk.preventDefault(), "" !== ak.trim() && Bk(ak.trim(), !0)
         },
-        children: [(0, mu.jsx)("input", {
+        children: [(0, Xk.jsx)("input", {
           className: "WorldCodeAiInput",
-          value: Qu,
+          value: ak,
           maxLength: 200,
           placeholder: "Or type your own answer",
           "aria-label": "Your own answer",
-          onChange: uu => {
-            Ju(uu.target.value)
+          onChange: kk => {
+            bk(kk.target.value)
           },
-          onKeyDown: uu => {
-            uu.stopPropagation()
+          onKeyDown: kk => {
+            kk.stopPropagation()
           }
-        }), (0, mu.jsx)("button", {
+        }), (0, Xk.jsx)("button", {
           className: "WorldCodeAiSecondaryButton",
           type: "submit",
-          disabled: "" === Qu.trim(),
+          disabled: "" === ak.trim(),
           children: "Send"
         })]
-      }), (0, mu.jsx)("button", {
-        ...pN.f,
+      }), (0, Xk.jsx)("button", {
+        ...fw.h,
         className: "WorldCodeAiSecondaryButton WorldCodeAiQuestionAiPicks",
         onClick: () => {
-          yu(null, !1)
+          Bk(null, !1)
         },
         children: "Let the AI pick"
       })]
     })]
   })
 }
-const dX = /^(?:const|let|var)\s+CONFIG\s*=\s*\{/gm;
+const Ld = /^(?:const|let|var)\s+CONFIG\s*=\s*\{/gm;
 
-function bX(uu, Ru) {
-  let yu = 0;
-  for (; yu < Ru;) {
-    const Eu = uu[yu],
-      Ku = uu[yu + 1];
-    let Qu = yu + 1;
-    if ("/" === Eu && "/" === Ku) {
-      const Ru = uu.indexOf("\n", yu);
-      Qu = -1 === Ru ? uu.length : Ru
-    } else if ("/" === Eu && "*" === Ku) {
-      const Ru = uu.indexOf("*/", yu + 2);
-      Qu = -1 === Ru ? uu.length : Ru + 2
-    } else if ('"' === Eu || "'" === Eu || "`" === Eu) {
-      for (Qu = yu + 1; Qu < uu.length && uu[Qu] !== Eu && ("`" === Eu || "\n" !== uu[Qu]);) Qu += "\\" === uu[Qu] ? 2 : 1;
-      Qu++
+function Od(kk, Fk) {
+  let Bk = 0;
+  for (; Bk < Fk;) {
+    const Rk = kk[Bk],
+      tk = kk[Bk + 1];
+    let ak = Bk + 1;
+    if ("/" === Rk && "/" === tk) {
+      const Fk = kk.indexOf("\n", Bk);
+      ak = -1 === Fk ? kk.length : Fk
+    } else if ("/" === Rk && "*" === tk) {
+      const Fk = kk.indexOf("*/", Bk + 2);
+      ak = -1 === Fk ? kk.length : Fk + 2
+    } else if ('"' === Rk || "'" === Rk || "`" === Rk) {
+      for (ak = Bk + 1; ak < kk.length && kk[ak] !== Rk && ("`" === Rk || "\n" !== kk[ak]);) ak += "\\" === kk[ak] ? 2 : 1;
+      ak++
     }
-    if (Qu > Ru) return !0;
-    yu = Qu
+    if (ak > Fk) return !0;
+    Bk = ak
   }
   return !1
 }
 
-function CX(uu) {
-  const Ru = uu.slice(1, -1);
-  let yu = "";
-  for (let Eu = 0; Eu < Ru.length; Eu++) {
-    if ("\\" !== Ru[Eu]) {
-      yu += Ru[Eu];
+function Ed(kk) {
+  const Fk = kk.slice(1, -1);
+  let Bk = "";
+  for (let Rk = 0; Rk < Fk.length; Rk++) {
+    if ("\\" !== Fk[Rk]) {
+      Bk += Fk[Rk];
       continue
     }
-    const uu = Ru[++Eu],
-      Ku = {
+    const kk = Fk[++Rk],
+      tk = {
         n: "\n",
         t: "\t",
         r: "\r",
@@ -11053,223 +11053,223 @@ function CX(uu) {
         '"': '"',
         "'": "'"
       },
-      Qu = "u" === uu ? Ru.slice(Eu + 1, Eu + 5) : "x" === uu ? Ru.slice(Eu + 1, Eu + 3) : "";
-    if (uu in Ku) yu += Ku[uu];
+      ak = "u" === kk ? Fk.slice(Rk + 1, Rk + 5) : "x" === kk ? Fk.slice(Rk + 1, Rk + 3) : "";
+    if (kk in tk) Bk += tk[kk];
     else {
-      if ("" === Qu || !/^[\da-f]+$/i.test(Qu) || Qu.length !== ("u" === uu ? 4 : 2)) return null;
-      yu += String.fromCharCode(parseInt(Qu, 16)), Eu += Qu.length
+      if ("" === ak || !/^[\da-f]+$/i.test(ak) || ak.length !== ("u" === kk ? 4 : 2)) return null;
+      Bk += String.fromCharCode(parseInt(ak, 16)), Rk += ak.length
     }
   }
-  return yu
+  return Bk
 }
 
-function kX(uu) {
-  const Ru = function(uu) {
-    dX.lastIndex = 0;
-    for (let Ru = dX.exec(uu); Ru; Ru = dX.exec(uu))
-      if (!bX(uu, Ru.index)) return Ru;
+function Sd(kk) {
+  const Fk = function(kk) {
+    Ld.lastIndex = 0;
+    for (let Fk = Ld.exec(kk); Fk; Fk = Ld.exec(kk))
+      if (!Od(kk, Fk.index)) return Fk;
     return null
-  }(uu);
-  if (!Ru) return [];
-  const yu = function(uu, Ru) {
-    const yu = [];
-    let Eu = 0,
-      Ku = Ru;
-    for (; Ku < uu.length;) {
-      var Qu;
-      const Ru = uu[Ku];
-      if (/\s/.test(Ru)) {
-        Ku++;
+  }(kk);
+  if (!Fk) return [];
+  const Bk = function(kk, Fk) {
+    const Bk = [];
+    let Rk = 0,
+      tk = Fk;
+    for (; tk < kk.length;) {
+      var ak;
+      const Fk = kk[tk];
+      if (/\s/.test(Fk)) {
+        tk++;
         continue
       }
-      const mu = Ku;
-      if ("/" === Ru && "/" === uu[Ku + 1]) {
-        const Ru = uu.indexOf("\n", Ku);
-        Ku = -1 === Ru ? uu.length : Ru, yu.push({
+      const Xk = tk;
+      if ("/" === Fk && "/" === kk[tk + 1]) {
+        const Fk = kk.indexOf("\n", tk);
+        tk = -1 === Fk ? kk.length : Fk, Bk.push({
           type: "comment",
-          text: uu.slice(mu + 2, Ku).trim(),
-          start: mu,
-          end: Ku
+          text: kk.slice(Xk + 2, tk).trim(),
+          start: Xk,
+          end: tk
         });
         continue
       }
-      if ("/" === Ru && "*" === uu[Ku + 1]) {
-        const Ru = uu.indexOf("*/", Ku + 2);
-        if (-1 === Ru) return null;
-        Ku = Ru + 2, yu.push({
+      if ("/" === Fk && "*" === kk[tk + 1]) {
+        const Fk = kk.indexOf("*/", tk + 2);
+        if (-1 === Fk) return null;
+        tk = Fk + 2, Bk.push({
           type: "comment",
-          text: uu.slice(mu + 2, Ru).trim(),
-          start: mu,
-          end: Ku
+          text: kk.slice(Xk + 2, Fk).trim(),
+          start: Xk,
+          end: tk
         });
         continue
       }
-      if ('"' === Ru || "'" === Ru || "`" === Ru) {
-        for (Ku++; Ku < uu.length && uu[Ku] !== Ru;) {
-          if ("\\" === uu[Ku]) Ku++;
-          else if ("\n" === uu[Ku] && "`" !== Ru) return null;
-          Ku++
+      if ('"' === Fk || "'" === Fk || "`" === Fk) {
+        for (tk++; tk < kk.length && kk[tk] !== Fk;) {
+          if ("\\" === kk[tk]) tk++;
+          else if ("\n" === kk[tk] && "`" !== Fk) return null;
+          tk++
         }
-        if (Ku >= uu.length) return null;
-        Ku++, yu.push({
-          type: "`" === Ru ? "template" : "string",
-          text: uu.slice(mu, Ku),
-          start: mu,
-          end: Ku
+        if (tk >= kk.length) return null;
+        tk++, Bk.push({
+          type: "`" === Fk ? "template" : "string",
+          text: kk.slice(Xk, tk),
+          start: Xk,
+          end: tk
         });
         continue
       }
-      const Ju = /^-?(?:\d[\d_]*(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?\b/i.exec(uu.slice(Ku, Ku + 40));
-      if (Ju && ("-" !== Ru || ":" === (null === (Qu = yu[yu.length - 1]) || void 0 === Qu ? void 0 : Qu.text))) {
-        Ku += Ju[0].length, yu.push({
+      const bk = /^-?(?:\d[\d_]*(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?\b/i.exec(kk.slice(tk, tk + 40));
+      if (bk && ("-" !== Fk || ":" === (null === (ak = Bk[Bk.length - 1]) || void 0 === ak ? void 0 : ak.text))) {
+        tk += bk[0].length, Bk.push({
           type: "number",
-          text: Ju[0],
-          start: mu,
-          end: Ku
+          text: bk[0],
+          start: Xk,
+          end: tk
         });
         continue
       }
-      const Nu = /^[A-Za-z_$][\w$]*/.exec(uu.slice(Ku, Ku + 80));
-      if (Nu) Ku += Nu[0].length, yu.push({
+      const wk = /^[A-Za-z_$][\w$]*/.exec(kk.slice(tk, tk + 80));
+      if (wk) tk += wk[0].length, Bk.push({
         type: "word",
-        text: Nu[0],
-        start: mu,
-        end: Ku
+        text: wk[0],
+        start: Xk,
+        end: tk
       });
-      else if (Ku++, yu.push({
+      else if (tk++, Bk.push({
           type: "punct",
-          text: Ru,
-          start: mu,
-          end: Ku
-        }), "{[(".includes(Ru)) Eu++;
-      else if ("}])".includes(Ru) && (Eu--, 0 === Eu)) return yu
+          text: Fk,
+          start: Xk,
+          end: tk
+        }), "{[(".includes(Fk)) Rk++;
+      else if ("}])".includes(Fk) && (Rk--, 0 === Rk)) return Bk
     }
     return null
-  }(uu, Ru.index + Ru[0].length - 1);
-  if (!yu) return [];
-  const Eu = [];
-  let Ku, Qu = 1;
-  for (; Qu < yu.length - 1;) {
-    var mu, Ju, Nu, Xu, Vu, ru;
-    const Ru = yu[Qu];
-    if ("comment" === Ru.type) {
-      Ku = Ru.text, Qu++;
+  }(kk, Fk.index + Fk[0].length - 1);
+  if (!Bk) return [];
+  const Rk = [];
+  let tk, ak = 1;
+  for (; ak < Bk.length - 1;) {
+    var Xk, bk, wk, dk, sk, Vk;
+    const Fk = Bk[ak];
+    if ("comment" === Fk.type) {
+      tk = Fk.text, ak++;
       continue
     }
-    if ("," === Ru.text) {
-      Qu++;
+    if ("," === Fk.text) {
+      ak++;
       continue
     }
-    const Bu = Ru,
-      xu = "word" === Bu.type ? Bu.text : "string" === Bu.type ? CX(Bu.text) : null;
-    if (null === xu || ":" !== (null === (mu = yu[Qu + 1]) || void 0 === mu ? void 0 : mu.text)) return [];
-    let Su = Qu + 2,
-      pu = 0;
-    const Tu = [];
-    for (; Su < yu.length - 1;) {
-      const uu = yu[Su];
-      if (0 === pu && "," === uu.text) break;
-      "punct" === uu.type && "{[(".includes(uu.text) ? pu++ : "punct" === uu.type && "}])".includes(uu.text) && pu--, "comment" !== uu.type && Tu.push(uu), Su++
+    const Jk = Fk,
+      Ak = "word" === Jk.type ? Jk.text : "string" === Jk.type ? Ed(Jk.text) : null;
+    if (null === Ak || ":" !== (null === (Xk = Bk[ak + 1]) || void 0 === Xk ? void 0 : Xk.text)) return [];
+    let ek = ak + 2,
+      yk = 0;
+    const fk = [];
+    for (; ek < Bk.length - 1;) {
+      const kk = Bk[ek];
+      if (0 === yk && "," === kk.text) break;
+      "punct" === kk.type && "{[(".includes(kk.text) ? yk++ : "punct" === kk.type && "}])".includes(kk.text) && yk--, "comment" !== kk.type && fk.push(kk), ek++
     }
-    const Wu = Tu.at(-1),
-      ju = "," === (null === (Ju = yu[Su]) || void 0 === Ju ? void 0 : Ju.text) ? yu[Su + 1] : yu.slice(Qu + 2, Su).find((uu => "comment" === uu.type && void 0 !== Wu && uu.start >= Wu.end)),
-      Hu = "comment" !== (null === ju || void 0 === ju ? void 0 : ju.type) || void 0 === Wu || uu.slice(Wu.end, ju.start).includes("\n") ? void 0 : ju.text,
-      du = 1 === Tu.length ? Tu[0] : void 0,
-      bu = null !== Hu && void 0 !== Hu ? Hu : Ku;
-    Ku = void 0;
-    const Cu = {
-      key: xu,
-      raw: null !== (Nu = null === du || void 0 === du ? void 0 : du.text) && void 0 !== Nu ? Nu : "",
-      start: null !== (Xu = null === du || void 0 === du ? void 0 : du.start) && void 0 !== Xu ? Xu : 0,
-      end: null !== (Vu = null === du || void 0 === du ? void 0 : du.end) && void 0 !== Vu ? Vu : 0,
-      ...bu ? {
-        comment: bu
+    const mk = fk.at(-1),
+      Wk = "," === (null === (bk = Bk[ek]) || void 0 === bk ? void 0 : bk.text) ? Bk[ek + 1] : Bk.slice(ak + 2, ek).find((kk => "comment" === kk.type && void 0 !== mk && kk.start >= mk.end)),
+      vk = "comment" !== (null === Wk || void 0 === Wk ? void 0 : Wk.type) || void 0 === mk || kk.slice(mk.end, Wk.start).includes("\n") ? void 0 : Wk.text,
+      ik = 1 === fk.length ? fk[0] : void 0,
+      Yk = null !== vk && void 0 !== vk ? vk : tk;
+    tk = void 0;
+    const Lk = {
+      key: Ak,
+      raw: null !== (wk = null === ik || void 0 === ik ? void 0 : ik.text) && void 0 !== wk ? wk : "",
+      start: null !== (dk = null === ik || void 0 === ik ? void 0 : ik.start) && void 0 !== dk ? dk : 0,
+      end: null !== (sk = null === ik || void 0 === ik ? void 0 : ik.end) && void 0 !== sk ? sk : 0,
+      ...Yk ? {
+        comment: Yk
       } : {}
     };
-    if ("number" === (null === du || void 0 === du ? void 0 : du.type)) {
-      const uu = Number(du.text.replace(/_/g, ""));
-      Number.isFinite(uu) && Eu.push({
-        ...Cu,
+    if ("number" === (null === ik || void 0 === ik ? void 0 : ik.type)) {
+      const kk = Number(ik.text.replace(/_/g, ""));
+      Number.isFinite(kk) && Rk.push({
+        ...Lk,
         kind: "number",
-        value: uu
+        value: kk
       })
-    } else if ("string" === (null === du || void 0 === du ? void 0 : du.type)) {
-      const uu = CX(du.text);
-      null !== uu && Eu.push({
-        ...Cu,
+    } else if ("string" === (null === ik || void 0 === ik ? void 0 : ik.type)) {
+      const kk = Ed(ik.text);
+      null !== kk && Rk.push({
+        ...Lk,
         kind: "string",
-        value: uu
+        value: kk
       })
-    } else "word" !== (null === du || void 0 === du ? void 0 : du.type) || "true" !== du.text && "false" !== du.text || Eu.push({
-      ...Cu,
+    } else "word" !== (null === ik || void 0 === ik ? void 0 : ik.type) || "true" !== ik.text && "false" !== ik.text || Rk.push({
+      ...Lk,
       kind: "boolean",
-      value: "true" === du.text
+      value: "true" === ik.text
     });
-    Qu = Su, Hu && "," === (null === (ru = yu[Qu]) || void 0 === ru ? void 0 : ru.text) && (Qu += 2)
+    ak = ek, vk && "," === (null === (Vk = Bk[ak]) || void 0 === Vk ? void 0 : Vk.text) && (ak += 2)
   }
-  return Eu.slice(0, 30)
+  return Rk.slice(0, 30)
 }
 
-function eX(uu, Ru, yu) {
-  const Eu = kX(uu).find((uu => uu.key === Ru.key));
-  if (!Eu || Eu.kind !== Ru.kind || Eu.raw !== Ru.raw) return null;
-  let Ku;
-  if ("number" === Ru.kind) {
-    if ("number" !== typeof yu || !Number.isFinite(yu)) return null;
-    Ku = String(Number(yu.toPrecision(12)))
-  } else if ("boolean" === Ru.kind) {
-    if ("boolean" !== typeof yu) return null;
-    Ku = yu ? "true" : "false"
+function Nd(kk, Fk, Bk) {
+  const Rk = Sd(kk).find((kk => kk.key === Fk.key));
+  if (!Rk || Rk.kind !== Fk.kind || Rk.raw !== Fk.raw) return null;
+  let tk;
+  if ("number" === Fk.kind) {
+    if ("number" !== typeof Bk || !Number.isFinite(Bk)) return null;
+    tk = String(Number(Bk.toPrecision(12)))
+  } else if ("boolean" === Fk.kind) {
+    if ("boolean" !== typeof Bk) return null;
+    tk = Bk ? "true" : "false"
   } else {
-    if ("string" !== typeof yu) return null;
-    const uu = Ru.raw.startsWith("'") ? "'" : '"',
-      Eu = "'" === uu ? '"' : "'";
-    Qu = yu, Ku = `${mu=yu.includes(uu)&&!yu.includes(Eu)?Eu:uu}${Qu.slice(0,200).replace(/\\/g,"\\\\").replace('"'===mu?/"/g:/'/g,`\\${mu}`).replace(/\n/g,"\\n").replace(/\r/g,"\\r").replace(/\t/g,"\\t").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029").replace(/[\u0000-\u001f\u007f]/g,(uu=>`\\u${uu.charCodeAt(0).toString(16).padStart(4,"0")}`))}${mu}`
+    if ("string" !== typeof Bk) return null;
+    const kk = Fk.raw.startsWith("'") ? "'" : '"',
+      Rk = "'" === kk ? '"' : "'";
+    ak = Bk, tk = `${Xk=Bk.includes(kk)&&!Bk.includes(Rk)?Rk:kk}${ak.slice(0,200).replace(/\\/g,"\\\\").replace('"'===Xk?/"/g:/'/g,`\\${Xk}`).replace(/\n/g,"\\n").replace(/\r/g,"\\r").replace(/\t/g,"\\t").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029").replace(/[\u0000-\u001f\u007f]/g,(kk=>`\\u${kk.charCodeAt(0).toString(16).padStart(4,"0")}`))}${Xk}`
   }
-  var Qu, mu;
-  return uu.slice(0, Eu.start) + Ku + uu.slice(Eu.end)
+  var ak, Xk;
+  return kk.slice(0, Rk.start) + tk + kk.slice(Rk.end)
 }
 
-function AX(uu) {
-  if (!Number.isInteger(uu)) {
-    var Ru;
-    const yu = Math.min(3, (null !== (Ru = String(uu).split(".")[1]) && void 0 !== Ru ? Ru : "").length);
-    return 10 ** -Math.max(1, yu)
+function Hd(kk) {
+  if (!Number.isInteger(kk)) {
+    var Fk;
+    const Bk = Math.min(3, (null !== (Fk = String(kk).split(".")[1]) && void 0 !== Fk ? Fk : "").length);
+    return 10 ** -Math.max(1, Bk)
   }
-  const yu = Math.abs(uu);
-  return yu >= 100 ? 10 ** (Math.floor(Math.log10(yu)) - 1) : 1
+  const Bk = Math.abs(kk);
+  return Bk >= 100 ? 10 ** (Math.floor(Math.log10(Bk)) - 1) : 1
 }
 
-function DX(uu) {
-  return uu.comment ? uu.comment.charAt(0).toUpperCase() + uu.comment.slice(1) : function(uu) {
-    const Ru = uu.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase();
-    return Ru.charAt(0).toUpperCase() + Ru.slice(1)
-  }(uu.key)
+function ud(kk) {
+  return kk.comment ? kk.comment.charAt(0).toUpperCase() + kk.comment.slice(1) : function(kk) {
+    const Fk = kk.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase();
+    return Fk.charAt(0).toUpperCase() + Fk.slice(1)
+  }(kk.key)
 }
 
-function MX(uu) {
-  return "boolean" === typeof uu ? uu ? "on" : "off" : "number" === typeof uu ? String(uu) : uu.length > 20 ? `\u201c${uu.slice(0,19)}\u2026\u201d` : `\u201c${uu}\u201d`
+function Md(kk) {
+  return "boolean" === typeof kk ? kk ? "on" : "off" : "number" === typeof kk ? String(kk) : kk.length > 20 ? `\u201c${kk.slice(0,19)}\u2026\u201d` : `\u201c${kk}\u201d`
 }
 
-function IX(uu) {
-  let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "changing";
-  if (0 === uu.length) return `Before ${Ru} settings`;
-  const yu = 3 === uu.length ? 3 : 2,
-    Eu = uu.slice(0, yu).map((uu => `${uu.name} ${uu.from} \u2192 ${uu.to}`)),
-    Ku = uu.length > yu ? ` and ${uu.length-yu} more` : "";
-  return `Before ${Ru} settings: ${Eu.join(", ")}${Ku}`
+function gd(kk) {
+  let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "changing";
+  if (0 === kk.length) return `Before ${Fk} settings`;
+  const Bk = 3 === kk.length ? 3 : 2,
+    Rk = kk.slice(0, Bk).map((kk => `${kk.name} ${kk.from} \u2192 ${kk.to}`)),
+    tk = kk.length > Bk ? ` and ${kk.length-Bk} more` : "";
+  return `Before ${Fk} settings: ${Rk.join(", ")}${tk}`
 }
-const GX = /^(?:(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)|(?:const|let|var)\s+([A-Za-z_$][\w$]*)|([A-Za-z_$][\w$]*)\s*=(?!=))/gm;
+const Ud = /^(?:(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)|(?:const|let|var)\s+([A-Za-z_$][\w$]*)|([A-Za-z_$][\w$]*)\s*=(?!=))/gm;
 
-function UX(uu) {
-  const Ru = new Set;
-  for (const Ku of uu.matchAll(GX)) {
-    var yu, Eu;
-    Ru.add(null !== (yu = null !== (Eu = Ku[1]) && void 0 !== Eu ? Eu : Ku[2]) && void 0 !== yu ? yu : Ku[3])
+function cd(kk) {
+  const Fk = new Set;
+  for (const tk of kk.matchAll(Ud)) {
+    var Bk, Rk;
+    Fk.add(null !== (Bk = null !== (Rk = tk[1]) && void 0 !== Rk ? Rk : tk[2]) && void 0 !== Bk ? Bk : tk[3])
   }
-  return Ru
+  return Fk
 }
-const nX = new Map([
+const Gd = new Map([
     ["tick", ["second", "minute", "timer", "time", "every", "countdown", "wave", "always", "clock"]],
     ["playerCommand", ["command", "/"]],
     ["onPlayerJoin", ["join", "start", "welcome", "spawn", "enter", "arrive"]],
@@ -11292,27 +11292,27 @@ const nX = new Map([
     ["onPlayerDropItem", ["drop"]],
     ["CONFIG", ["setting", "config", "number", "value"]]
   ]),
-  sX = new Set("a an and the to of in on at for with from by as is are be it its it's this that these those my your their our me you they them we i so if then than when while each all any some more most less make makes made let lets get gets add adds added put puts change changes changed use uses using new now also just only can could should would will want like say says said tell tells told show shows game player players someone everyone people thing things code function part bit way one two three".split(" "));
+  Td = new Set("a an and the to of in on at for with from by as is are be it its it's this that these those my your their our me you they them we i so if then than when while each all any some more most less make makes made let lets get gets add adds added put puts change changes changed use uses using new now also just only can could should would will want like say says said tell tells told show shows game player players someone everyone people thing things code function part bit way one two three".split(" "));
 
-function tX(uu) {
-  return uu.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9/]+/).filter((uu => uu.length >= 3 && !sX.has(uu)))
+function rd(kk) {
+  return kk.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z0-9/]+/).filter((kk => kk.length >= 3 && !Td.has(kk)))
 }
 
-function lX(uu, Ru) {
-  return uu.some((uu => Ru.some((Ru => function(uu, Ru) {
-    return uu.startsWith(Ru) || Ru.startsWith(uu)
-  }(uu, Ru)))))
+function Dd(kk, Fk) {
+  return kk.some((kk => Fk.some((Fk => function(kk, Fk) {
+    return kk.startsWith(Fk) || Fk.startsWith(kk)
+  }(kk, Fk)))))
 }
 
-function gX(uu, Ru, yu) {
-  const Eu = Ru.toLowerCase();
-  return uu.names.some((Ru => {
-    var Ku;
-    const Qu = null !== (Ku = nX.get(Ru)) && void 0 !== Ku ? Ku : [];
-    return !!(Eu.includes(Ru.toLowerCase()) || Qu.includes("/") && Eu.includes("/")) || lX(yu, [...Qu.flatMap(tX), ...tX(uu.plainWords.join(" ")), ...uu.configKeys.flatMap(tX)])
+function zd(kk, Fk, Bk) {
+  const Rk = Fk.toLowerCase();
+  return kk.names.some((Fk => {
+    var tk;
+    const ak = null !== (tk = Gd.get(Fk)) && void 0 !== tk ? tk : [];
+    return !!(Rk.includes(Fk.toLowerCase()) || ak.includes("/") && Rk.includes("/")) || Dd(Bk, [...ak.flatMap(rd), ...rd(kk.plainWords.join(" ")), ...kk.configKeys.flatMap(rd)])
   }))
 }
-const cX = new Map([
+const Pd = new Map([
   ["tick", "Runs all the time"],
   ["playerCommand", "Chat commands like /help"],
   ["onPlayerJoin", "When a player joins"],
@@ -11358,382 +11358,382 @@ const cX = new Map([
   ["onClose", "When the game closes"]
 ]);
 
-function LX(uu) {
-  var Ru;
-  return null !== (Ru = cX.get(uu)) && void 0 !== Ru ? Ru : "CONFIG" === uu ? "Settings" : void 0
+function hd(kk) {
+  var Fk;
+  return null !== (Fk = Pd.get(kk)) && void 0 !== Fk ? Fk : "CONFIG" === kk ? "Settings" : void 0
 }
-cX.keys();
-const zX = /^(?:export\s+)?(?:async\s+)?function\b|^(?:(?:const|let|var)\s+)?\w+\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/;
+Pd.keys();
+const qd = /^(?:export\s+)?(?:async\s+)?function\b|^(?:(?:const|let|var)\s+)?\w+\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/;
 
-function FX(uu) {
-  const Ru = uu.trim();
-  return "" === Ru || /^(?:\/\/|\/\*|\*)/.test(Ru)
+function Cd(kk) {
+  const Fk = kk.trim();
+  return "" === Fk || /^(?:\/\/|\/\*|\*)/.test(Fk)
 }
 
-function wX(uu) {
-  const Ru = uu.map((uu => uu.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "").replace(/\/\/.*$/, ""))).join("\n");
-  return ["{}", "()", "[]"].every((uu => {
-    let [yu, Eu] = uu;
-    return Ru.split(yu).length === Ru.split(Eu).length
+function Zd(kk) {
+  const Fk = kk.map((kk => kk.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "").replace(/\/\/.*$/, ""))).join("\n");
+  return ["{}", "()", "[]"].every((kk => {
+    let [Bk, Rk] = kk;
+    return Fk.split(Bk).length === Fk.split(Rk).length
   }))
 }
 
-function ZX(uu) {
-  const Ru = [];
-  let yu = 0;
-  const Eu = Eu => {
-    if (Eu > yu) {
-      var Ku;
-      const Qu = uu.slice(yu, Eu).find((uu => zX.test(uu)));
-      Ru.push({
-        name: void 0 === Qu ? null : null !== (Ku = iX(Qu)) && void 0 !== Ku ? Ku : null,
-        lines: uu.slice(yu, Eu)
-      }), yu = Eu
+function pd(kk) {
+  const Fk = [];
+  let Bk = 0;
+  const Rk = Rk => {
+    if (Rk > Bk) {
+      var tk;
+      const ak = kk.slice(Bk, Rk).find((kk => qd.test(kk)));
+      Fk.push({
+        name: void 0 === ak ? null : null !== (tk = jd(ak)) && void 0 !== tk ? tk : null,
+        lines: kk.slice(Bk, Rk)
+      }), Bk = Rk
     }
   };
-  for (let Ku = 1; Ku < uu.length; Ku++)
-    if (zX.test(uu[Ku])) {
-      let Ru = Ku;
-      for (; Ru > yu && FX(uu[Ru - 1]);) Ru--;
-      Eu(Ru)
-    } return Eu(uu.length), Ru
+  for (let tk = 1; tk < kk.length; tk++)
+    if (qd.test(kk[tk])) {
+      let Fk = tk;
+      for (; Fk > Bk && Cd(kk[Fk - 1]);) Fk--;
+      Rk(Fk)
+    } return Rk(kk.length), Fk
 }
 
-function hX(uu) {
-  const Ru = ZX(uu.removed),
-    yu = ZX(uu.added);
-  if (Ru.length + yu.length <= 1) return [uu];
-  const Eu = [];
-  let Ku = 0,
-    Qu = 0;
-  const mu = (uu, Ru, yu) => Ru.slice(yu).some((Ru => Ru.name === uu));
-  for (; Ku < Ru.length || Qu < yu.length;)
-    if (Ku < Ru.length && Qu < yu.length && Ru[Ku].name === yu[Qu].name) Eu.push({
-      removed: Ru[Ku++].lines,
-      added: yu[Qu++].lines
+function Kd(kk) {
+  const Fk = pd(kk.removed),
+    Bk = pd(kk.added);
+  if (Fk.length + Bk.length <= 1) return [kk];
+  const Rk = [];
+  let tk = 0,
+    ak = 0;
+  const Xk = (kk, Fk, Bk) => Fk.slice(Bk).some((Fk => Fk.name === kk));
+  for (; tk < Fk.length || ak < Bk.length;)
+    if (tk < Fk.length && ak < Bk.length && Fk[tk].name === Bk[ak].name) Rk.push({
+      removed: Fk[tk++].lines,
+      added: Bk[ak++].lines
     });
-    else if (Ku < Ru.length && !mu(Ru[Ku].name, yu, Qu)) Eu.push({
-    removed: Ru[Ku++].lines,
+    else if (tk < Fk.length && !Xk(Fk[tk].name, Bk, ak)) Rk.push({
+    removed: Fk[tk++].lines,
     added: []
   });
   else {
-    if (!(Qu < yu.length) || mu(yu[Qu].name, Ru, Ku)) {
-      Eu.push({
-        removed: Ru.slice(Ku).flatMap((uu => uu.lines)),
-        added: yu.slice(Qu).flatMap((uu => uu.lines))
+    if (!(ak < Bk.length) || Xk(Bk[ak].name, Fk, tk)) {
+      Rk.push({
+        removed: Fk.slice(tk).flatMap((kk => kk.lines)),
+        added: Bk.slice(ak).flatMap((kk => kk.lines))
       });
       break
     }
-    Eu.push({
+    Rk.push({
       removed: [],
-      added: yu[Qu++].lines
+      added: Bk[ak++].lines
     })
   }
-  const Ju = [];
-  for (const Nu of Eu) {
-    const uu = Ju[Ju.length - 1],
-      Ru = [...Nu.removed, ...Nu.added].every(FX);
-    uu && (Ru || [...uu.removed, ...uu.added].every(FX)) ? Ju[Ju.length - 1] = {
-      removed: [...uu.removed, ...Nu.removed],
-      added: [...uu.added, ...Nu.added]
-    } : Ju.push(Nu)
+  const bk = [];
+  for (const wk of Rk) {
+    const kk = bk[bk.length - 1],
+      Fk = [...wk.removed, ...wk.added].every(Cd);
+    kk && (Fk || [...kk.removed, ...kk.added].every(Cd)) ? bk[bk.length - 1] = {
+      removed: [...kk.removed, ...wk.removed],
+      added: [...kk.added, ...wk.added]
+    } : bk.push(wk)
   }
-  return Ju.every((uu => wX(uu.removed) && wX(uu.added))) ? Ju : [uu]
+  return bk.every((kk => Zd(kk.removed) && Zd(kk.added))) ? bk : [kk]
 }
 
-function PX(uu, Ru) {
-  const yu = [];
-  for (const Qu of YE(uu, Ru)) {
-    const uu = yu[yu.length - 1];
-    "same" === Qu.kind ? yu.push({
+function xd(kk, Fk) {
+  const Bk = [];
+  for (const ak of xR(kk, Fk)) {
+    const kk = Bk[Bk.length - 1];
+    "same" === ak.kind ? Bk.push({
       kind: "same",
-      text: Qu.text
-    }) : "hunk" === (null === uu || void 0 === uu ? void 0 : uu.kind) ? uu[Qu.kind].push(Qu.text) : yu.push({
+      text: ak.text
+    }) : "hunk" === (null === kk || void 0 === kk ? void 0 : kk.kind) ? kk[ak.kind].push(ak.text) : Bk.push({
       kind: "hunk",
-      removed: "removed" === Qu.kind ? [Qu.text] : [],
-      added: "added" === Qu.kind ? [Qu.text] : []
+      removed: "removed" === ak.kind ? [ak.text] : [],
+      added: "added" === ak.kind ? [ak.text] : []
     })
   }
-  const Eu = [];
-  let Ku = 0;
-  for (let Qu = 0; Qu < yu.length; Qu++) {
-    const uu = yu[Qu];
-    if ("same" === uu.kind) {
-      Eu.push(uu);
+  const Rk = [];
+  let tk = 0;
+  for (let ak = 0; ak < Bk.length; ak++) {
+    const kk = Bk[ak];
+    if ("same" === kk.kind) {
+      Rk.push(kk);
       continue
     }
-    let Ru = hX(uu);
-    if (1 === Ru.length) {
-      let Eu = Qu + 1;
-      const Ku = [];
-      for (; Eu < yu.length; Eu++) {
-        const uu = yu[Eu];
-        if ("same" !== uu.kind || !/^[\s})\];,]+$/.test(uu.text)) break;
-        Ku.push(uu.text)
+    let Fk = Kd(kk);
+    if (1 === Fk.length) {
+      let Rk = ak + 1;
+      const tk = [];
+      for (; Rk < Bk.length; Rk++) {
+        const kk = Bk[Rk];
+        if ("same" !== kk.kind || !/^[\s})\];,]+$/.test(kk.text)) break;
+        tk.push(kk.text)
       }
-      const mu = Ku.length > 0 ? hX({
-        removed: [...uu.removed, ...Ku],
-        added: [...uu.added, ...Ku]
-      }) : Ru;
-      mu.length > 1 && (Ru = mu, Qu = Eu - 1)
+      const Xk = tk.length > 0 ? Kd({
+        removed: [...kk.removed, ...tk],
+        added: [...kk.added, ...tk]
+      }) : Fk;
+      Xk.length > 1 && (Fk = Xk, ak = Rk - 1)
     }
-    for (const yu of Ru) Eu.push({
+    for (const Bk of Fk) Rk.push({
       kind: "hunk",
-      index: Ku++,
-      removed: yu.removed,
-      added: yu.added
+      index: tk++,
+      removed: Bk.removed,
+      added: Bk.added
     })
   }
-  return Eu
+  return Rk
 }
 
-function iX(uu) {
-  var Ru, yu;
-  const Eu = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^\s*(?:export\s+)?(?:const|let|var|class)\s+(\w+)|^(\w+)\s*=(?!=)/.exec(uu);
-  return Eu ? null !== (Ru = null !== (yu = Eu[1]) && void 0 !== yu ? yu : Eu[2]) && void 0 !== Ru ? Ru : Eu[3] : void 0
+function jd(kk) {
+  var Fk, Bk;
+  const Rk = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^\s*(?:export\s+)?(?:const|let|var|class)\s+(\w+)|^(\w+)\s*=(?!=)/.exec(kk);
+  return Rk ? null !== (Fk = null !== (Bk = Rk[1]) && void 0 !== Bk ? Bk : Rk[2]) && void 0 !== Fk ? Fk : Rk[3] : void 0
 }
 
-function YX(uu) {
-  const Ru = iX(uu);
-  if (!Ru || /^\s/.test(uu)) return;
-  return /^(?:export\s+)?(?:async\s+)?function\b/.test(uu) || /=\s*(?:async\s+)?(?:function\b|\(|\w+\s*=>)/.test(uu) || "CONFIG" === Ru ? LX(Ru) : void 0
+function ld(kk) {
+  const Fk = jd(kk);
+  if (!Fk || /^\s/.test(kk)) return;
+  return /^(?:export\s+)?(?:async\s+)?function\b/.test(kk) || /=\s*(?:async\s+)?(?:function\b|\(|\w+\s*=>)/.test(kk) || "CONFIG" === Fk ? hd(Fk) : void 0
 }
 
-function oX(uu) {
-  const Ru = new Map;
-  for (const yu of uu) {
-    const uu = YX(yu),
-      Eu = iX(yu);
-    uu && Eu && Ru.set(Eu, uu)
+function nd(kk) {
+  const Fk = new Map;
+  for (const Bk of kk) {
+    const kk = ld(Bk),
+      Rk = jd(Bk);
+    kk && Rk && Fk.set(Rk, kk)
   }
-  return Ru
+  return Fk
 }
 
-function qX(uu) {
-  return [...new Set(uu.flatMap((uu => {
-    const Ru = /^\s/.test(uu) ? void 0 : iX(uu);
-    return Ru ? [Ru] : []
+function Id(kk) {
+  return [...new Set(kk.flatMap((kk => {
+    const Fk = /^\s/.test(kk) ? void 0 : jd(kk);
+    return Fk ? [Fk] : []
   })))]
 }
 
-function OX(uu) {
-  var Ru;
-  return uu.length <= 1 ? null !== (Ru = uu[0]) && void 0 !== Ru ? Ru : "" : `${uu.slice(0,-1).join(", ")} and ${uu[uu.length-1]}`
+function Qd(kk) {
+  var Fk;
+  return kk.length <= 1 ? null !== (Fk = kk[0]) && void 0 !== Fk ? Fk : "" : `${kk.slice(0,-1).join(", ")} and ${kk[kk.length-1]}`
 }
 
-function vX(uu) {
-  return uu.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase()
+function ks(kk) {
+  return kk.replace(/_/g, " ").replace(/([a-z\d])([A-Z])/g, "$1 $2").trim().toLowerCase()
 }
 
-function aX(uu) {
-  return uu.charAt(0).toUpperCase() + uu.slice(1)
+function Fs(kk) {
+  return kk.charAt(0).toUpperCase() + kk.slice(1)
 }
-const fX = new Set("api const let var function return if else for of in new true false null undefined this typeof while break continue playerId attacker killed damaged command ms Math Date JSON String Number Object Array console length push".split(" "));
+const Bs = new Set("api const let var function return if else for of in new true false null undefined this typeof while break continue playerId attacker killed damaged command ms Math Date JSON String Number Object Array console length push".split(" "));
 
-function uV(uu) {
-  return [...new Set(uu.flatMap((uu => {
-    const Ru = uu.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "");
-    return (0, rR.i)(Ru, /[A-Za-z_$][\w$]{2,}(?!\s*:(?!:))/g, rR.o).map((uu => uu[0])).filter((uu => !fX.has(uu)))
+function Rs(kk) {
+  return [...new Set(kk.flatMap((kk => {
+    const Fk = kk.replace(/(["'`])(?:\\.|(?!\1).)*\1/g, "");
+    return (0, JF.i)(Fk, /[A-Za-z_$][\w$]{2,}(?!\s*:(?!:))/g, JF.r).map((kk => kk[0])).filter((kk => !Bs.has(kk)))
   })))]
 }
 
-function RV(uu, Ru) {
-  var yu;
-  const Eu = (null !== (yu = uu.parts) && void 0 !== yu ? yu : []).map((uu => {
+function ts(kk, Fk) {
+  var Bk;
+  const Rk = (null !== (Bk = kk.parts) && void 0 !== Bk ? Bk : []).map((kk => {
       return {
-        why: uu.why,
-        lines: (Ru = uu.code, new Set(Ru.split("\n").map((uu => uu.trim())).filter((uu => uu.length > 1))))
+        why: kk.why,
+        lines: (Fk = kk.code, new Set(Fk.split("\n").map((kk => kk.trim())).filter((kk => kk.length > 1))))
       };
-      var Ru
+      var Fk
     })),
-    Ku = PX(uu.before, uu.after);
-  let Qu = 1;
-  const mu = Ku.flatMap(((uu, Ru) => {
-      if ("hunk" !== uu.kind) return Qu++, [];
-      let yu;
-      for (const Ku of Eu) {
-        const Ru = uu.added.filter((uu => Ku.lines.has(uu.trim()))).length;
-        Ru > 0 && (!yu || Ru > yu.score) && (yu = {
-          why: Ku.why,
-          score: Ru
+    tk = xd(kk.before, kk.after);
+  let ak = 1;
+  const Xk = tk.flatMap(((kk, Fk) => {
+      if ("hunk" !== kk.kind) return ak++, [];
+      let Bk;
+      for (const tk of Rk) {
+        const Fk = kk.added.filter((kk => tk.lines.has(kk.trim()))).length;
+        Fk > 0 && (!Bk || Fk > Bk.score) && (Bk = {
+          why: tk.why,
+          score: Fk
         })
       }
-      const mu = function(uu, Ru, yu) {
-          const Eu = qX(uu.added),
-            Ku = qX(uu.removed),
-            Qu = Eu.filter((uu => Ku.includes(uu))),
-            mu = Eu.filter((uu => !Qu.includes(uu))),
-            Ju = Ku.filter((uu => !Qu.includes(uu))),
-            Nu = new Map([...oX(uu.removed), ...oX(uu.added)]),
-            Xu = [...Qu, ...mu].filter((uu => Nu.has(uu))),
-            Vu = (Ru, yu) => {
+      const Xk = function(kk, Fk, Bk) {
+          const Rk = Id(kk.added),
+            tk = Id(kk.removed),
+            ak = Rk.filter((kk => tk.includes(kk))),
+            Xk = Rk.filter((kk => !ak.includes(kk))),
+            bk = tk.filter((kk => !ak.includes(kk))),
+            wk = new Map([...nd(kk.removed), ...nd(kk.added)]),
+            dk = [...ak, ...Xk].filter((kk => wk.has(kk))),
+            sk = (Fk, Bk) => {
               return {
-                names: Ru,
-                configKeys: Ru.includes("CONFIG") ? (Eu = uu.added, Eu.flatMap((uu => {
-                  const Ru = /^\s+(\w+)\s*:/.exec(uu);
-                  return Ru ? [Ru[1]] : []
+                names: Fk,
+                configKeys: Fk.includes("CONFIG") ? (Rk = kk.added, Rk.flatMap((kk => {
+                  const Fk = /^\s+(\w+)\s*:/.exec(kk);
+                  return Fk ? [Fk[1]] : []
                 }))) : [],
-                plainWords: Ru.flatMap((uu => {
-                  const Ru = Nu.get(uu);
-                  return Ru ? [Ru] : []
+                plainWords: Fk.flatMap((kk => {
+                  const Fk = wk.get(kk);
+                  return Fk ? [Fk] : []
                 })),
-                onlyAdds: yu,
-                uses: uV(uu.added),
-                takesOut: Ju,
-                removedUses: uV(uu.removed)
+                onlyAdds: Bk,
+                uses: Rs(kk.added),
+                takesOut: bk,
+                removedUses: Rs(kk.removed)
               };
-              var Eu
+              var Rk
             },
-            ru = new Set([...uu.added, ...uu.removed].flatMap((uu => {
-              var Ru;
-              const yu = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^(\w+)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/.exec(uu);
-              return yu ? [null !== (Ru = yu[1]) && void 0 !== Ru ? Ru : yu[2]] : []
+            Vk = new Set([...kk.added, ...kk.removed].flatMap((kk => {
+              var Fk;
+              const Bk = /^\s*(?:export\s+)?(?:async\s+)?function\s*\*?\s*(\w+)|^(\w+)\s*=\s*(?:async\s+)?(?:function\b|\([^)]*\)\s*=>|\w+\s*=>)/.exec(kk);
+              return Bk ? [null !== (Fk = Bk[1]) && void 0 !== Fk ? Fk : Bk[2]] : []
             }))),
-            Bu = uu => {
-              const Ru = vX(uu);
-              return ru.has(uu) ? `"${Ru}"` : Ru
+            Jk = kk => {
+              const Fk = ks(kk);
+              return Vk.has(kk) ? `"${Fk}"` : Fk
             },
-            xu = [...Qu, ...mu, ...Ju];
-          if (xu.some((uu => Nu.has(uu)))) {
-            const uu = uu => {
-                const Ru = uu.filter((uu => Nu.has(uu)));
-                return OX(Ru.length > 0 ? Ru.map((uu => {
-                  var Ru;
-                  return null !== (Ru = Nu.get(uu)) && void 0 !== Ru ? Ru : uu
-                })) : uu.map(Bu))
+            Ak = [...ak, ...Xk, ...bk];
+          if (Ak.some((kk => wk.has(kk)))) {
+            const kk = kk => {
+                const Fk = kk.filter((kk => wk.has(kk)));
+                return Qd(Fk.length > 0 ? Fk.map((kk => {
+                  var Fk;
+                  return null !== (Fk = wk.get(kk)) && void 0 !== Fk ? Fk : kk
+                })) : kk.map(Jk))
               },
-              Ru = [Qu.length > 0 ? `${uu(Qu)} \u2014 changed` : "", mu.length > 0 ? `${uu(mu)} \u2014 added` : "", Ju.length > 0 ? `${uu(Ju)} \u2014 taken out` : ""].filter(Boolean),
-              yu = [...xu.filter((uu => Nu.has(uu))), ...xu.filter((uu => !Nu.has(uu)))],
-              Eu = Xu.every((uu => mu.includes(uu)));
+              Fk = [ak.length > 0 ? `${kk(ak)} \u2014 changed` : "", Xk.length > 0 ? `${kk(Xk)} \u2014 added` : "", bk.length > 0 ? `${kk(bk)} \u2014 taken out` : ""].filter(Boolean),
+              Bk = [...Ak.filter((kk => wk.has(kk))), ...Ak.filter((kk => !wk.has(kk)))],
+              Rk = dk.every((kk => Xk.includes(kk)));
             return {
-              named: aX(Ru.join("; ")),
-              codeNames: yu,
-              takesOut: Ju,
+              named: Fs(Fk.join("; ")),
+              codeNames: Bk,
+              takesOut: bk,
               isPlain: !0,
-              about: Vu(Xu, Eu)
+              about: sk(dk, Rk)
             }
           }
-          const Su = [Qu.length > 0 ? `changes ${OX(Qu.map(Bu))}` : "", mu.length > 0 ? `adds ${OX(mu.map(Bu))}` : "", Ju.length > 0 ? `takes out ${OX(Ju.map(Bu))}` : ""].filter(Boolean);
-          if (Su.length > 0) return {
-            named: aX(Su.join(", ")),
-            codeNames: xu,
-            takesOut: Ju,
+          const ek = [ak.length > 0 ? `changes ${Qd(ak.map(Jk))}` : "", Xk.length > 0 ? `adds ${Qd(Xk.map(Jk))}` : "", bk.length > 0 ? `takes out ${Qd(bk.map(Jk))}` : ""].filter(Boolean);
+          if (ek.length > 0) return {
+            named: Fs(ek.join(", ")),
+            codeNames: Ak,
+            takesOut: bk,
             isPlain: !1,
-            about: Vu([], !1)
+            about: sk([], !1)
           };
-          const pu = Ru.flatMap((uu => "same" === uu.kind ? [uu.text] : uu.added));
-          for (let Tu = pu.length - 1; Tu >= 0; Tu--) {
-            const uu = pu[Tu],
-              Ru = /^\s/.test(uu) ? void 0 : iX(uu);
-            if (!Ru && "" !== uu.trim() && !/^\s/.test(uu) && !/^(?:\/\/|\/\*|\*)/.test(uu.trim())) break;
-            if (Ru) {
-              const yu = YX(uu);
-              return yu ? (Nu.set(Ru, yu), {
-                named: `${yu} \u2014 changed`,
-                codeNames: [Ru],
+          const yk = Fk.flatMap((kk => "same" === kk.kind ? [kk.text] : kk.added));
+          for (let fk = yk.length - 1; fk >= 0; fk--) {
+            const kk = yk[fk],
+              Fk = /^\s/.test(kk) ? void 0 : jd(kk);
+            if (!Fk && "" !== kk.trim() && !/^\s/.test(kk) && !/^(?:\/\/|\/\*|\*)/.test(kk.trim())) break;
+            if (Fk) {
+              const Bk = ld(kk);
+              return Bk ? (wk.set(Fk, Bk), {
+                named: `${Bk} \u2014 changed`,
+                codeNames: [Fk],
                 takesOut: [],
                 isPlain: !0,
-                about: Vu([Ru], !1)
+                about: sk([Fk], !1)
               }) : {
-                named: `Changes ${/\bfunction\b|=>/.test(uu)?`"${vX(Ru)}"`:vX(Ru)}`,
-                codeNames: [Ru],
+                named: `Changes ${/\bfunction\b|=>/.test(kk)?`"${ks(Fk)}"`:ks(Fk)}`,
+                codeNames: [Fk],
                 takesOut: [],
                 isPlain: !1,
-                about: Vu([], !1)
+                about: sk([], !1)
               }
             }
           }
           return {
-            named: 0 === uu.added.length ? `Takes out lines from line ${yu}` : `Changes line ${yu}`,
+            named: 0 === kk.added.length ? `Takes out lines from line ${Bk}` : `Changes line ${Bk}`,
             codeNames: [],
             takesOut: [],
             isPlain: !1,
-            about: Vu([], !1)
+            about: sk([], !1)
           }
-        }(uu, Ku.slice(0, Ru), Qu),
-        Ju = Qu;
-      return Qu += uu.added.length, [{
-        index: uu.index,
-        removed: uu.removed,
-        added: uu.added,
-        line: Ju,
-        ...mu,
-        ...yu ? {
-          why: yu.why
+        }(kk, tk.slice(0, Fk), ak),
+        bk = ak;
+      return ak += kk.added.length, [{
+        index: kk.index,
+        removed: kk.removed,
+        added: kk.added,
+        line: bk,
+        ...Xk,
+        ...Bk ? {
+          why: Bk.why
         } : {}
       }]
     })),
-    Ju = function(uu, Ru) {
-      const yu = Ru ? tX(Ru) : [];
-      if (!Ru || 0 === yu.length) return uu.map((() => {}));
-      const Eu = uu.map((uu => gX(uu, Ru, yu) || void 0 !== uu.why && lX(yu, tX(uu.why)))),
-        Ku = new Set(uu.flatMap(((uu, Ru) => {
-          var yu;
-          return Eu[Ru] && null !== (yu = uu.uses) && void 0 !== yu ? yu : []
+    bk = function(kk, Fk) {
+      const Bk = Fk ? rd(Fk) : [];
+      if (!Fk || 0 === Bk.length) return kk.map((() => {}));
+      const Rk = kk.map((kk => zd(kk, Fk, Bk) || void 0 !== kk.why && Dd(Bk, rd(kk.why)))),
+        tk = new Set(kk.flatMap(((kk, Fk) => {
+          var Bk;
+          return Rk[Fk] && null !== (Bk = kk.uses) && void 0 !== Bk ? Bk : []
         }))),
-        Qu = uu.map(((uu, Ru) => {
-          var yu;
-          return Eu[Ru] || (null !== (yu = uu.uses) && void 0 !== yu ? yu : []).some((uu => Ku.has(uu)))
+        ak = kk.map(((kk, Fk) => {
+          var Bk;
+          return Rk[Fk] || (null !== (Bk = kk.uses) && void 0 !== Bk ? Bk : []).some((kk => tk.has(kk)))
         }));
-      if (!Eu.includes(!0)) return uu.map((() => {}));
-      const mu = new Set(uu.flatMap((uu => uu.names)));
-      return uu.map(((uu, Eu) => {
-        if (0 === uu.names.length) {
-          var Ju, Nu;
-          const Eu = (null !== (Ju = uu.takesOut) && void 0 !== Ju ? Ju : []).filter((uu => ("CONFIG" === uu || nX.has(uu)) && !mu.has(uu)));
-          return 0 === Eu.length || gX({
-            ...uu,
-            names: Eu
-          }, Ru, yu) || void 0 !== uu.why && lX(yu, tX(uu.why)) || (null !== (Nu = uu.removedUses) && void 0 !== Nu ? Nu : []).some((uu => Ku.has(uu))) ? void 0 : "takesOut"
+      if (!Rk.includes(!0)) return kk.map((() => {}));
+      const Xk = new Set(kk.flatMap((kk => kk.names)));
+      return kk.map(((kk, Rk) => {
+        if (0 === kk.names.length) {
+          var bk, wk;
+          const Rk = (null !== (bk = kk.takesOut) && void 0 !== bk ? bk : []).filter((kk => ("CONFIG" === kk || Gd.has(kk)) && !Xk.has(kk)));
+          return 0 === Rk.length || zd({
+            ...kk,
+            names: Rk
+          }, Fk, Bk) || void 0 !== kk.why && Dd(Bk, rd(kk.why)) || (null !== (wk = kk.removedUses) && void 0 !== wk ? wk : []).some((kk => tk.has(kk))) ? void 0 : "takesOut"
         }
-        if (!Qu[Eu]) return uu.onlyAdds ? "adds" : "changes"
+        if (!ak[Rk]) return kk.onlyAdds ? "adds" : "changes"
       }))
-    }(mu.map((uu => ({
-      ...uu.about,
-      ...uu.why ? {
-        why: uu.why
+    }(Xk.map((kk => ({
+      ...kk.about,
+      ...kk.why ? {
+        why: kk.why
       } : {}
-    }))), Ru),
-    Nu = mu.map(((uu, Ru) => {
+    }))), Fk),
+    wk = Xk.map(((kk, Fk) => {
       let {
-        named: yu,
-        codeNames: Eu,
-        isPlain: Ku,
-        about: Qu,
-        ...Nu
-      } = uu;
-      const Xu = void 0 !== Nu.why && 1 === mu.filter((uu => uu.why === Nu.why)).length && Nu.why ? Nu.why.charAt(0).toUpperCase() + Nu.why.slice(1) : void 0,
-        Vu = !Ku && Xu ? Xu : yu,
-        ru = Ju[Ru],
-        Bu = ru ? Vu.replace(/ \u2014 (added|changed|taken out)$/, "") : Vu;
+        named: Bk,
+        codeNames: Rk,
+        isPlain: tk,
+        about: ak,
+        ...wk
+      } = kk;
+      const dk = void 0 !== wk.why && 1 === Xk.filter((kk => kk.why === wk.why)).length && wk.why ? wk.why.charAt(0).toUpperCase() + wk.why.slice(1) : void 0,
+        sk = !tk && dk ? dk : Bk,
+        Vk = bk[Fk],
+        Jk = Vk ? sk.replace(/ \u2014 (added|changed|taken out)$/, "") : sk;
       return {
-        ...Nu,
-        label: Bu,
-        codeNames: Eu,
-        ...Ku && Xu ? {
-          detail: Xu
+        ...wk,
+        label: Jk,
+        codeNames: Rk,
+        ...tk && dk ? {
+          detail: dk
         } : {},
-        ...ru ? {
-          also: ru
+        ...Vk ? {
+          also: Vk
         } : {}
       }
     })),
-    Xu = uu => {
-      var Ru, yu;
-      return `${null!==(Ru=uu.also)&&void 0!==Ru?Ru:""}|${uu.label}|${null!==(yu=uu.detail)&&void 0!==yu?yu:""}`
+    dk = kk => {
+      var Fk, Bk;
+      return `${null!==(Fk=kk.also)&&void 0!==Fk?Fk:""}|${kk.label}|${null!==(Bk=kk.detail)&&void 0!==Bk?Bk:""}`
     };
-  return Nu.map((uu => {
+  return wk.map((kk => {
     let {
-      line: Ru,
-      ...yu
-    } = uu;
-    return Nu.filter((uu => Xu(uu) === Xu(yu))).length > 1 ? {
-      ...yu,
-      label: `${yu.label} (line ${Ru})`
-    } : yu
+      line: Fk,
+      ...Bk
+    } = kk;
+    return wk.filter((kk => dk(kk) === dk(Bk))).length > 1 ? {
+      ...Bk,
+      label: `${Bk.label} (line ${Fk})`
+    } : Bk
   }))
 }
-const yV = {
+const as = {
     added: "adds",
     changed: "changes",
     updated: "updates",
@@ -11745,1301 +11745,1301 @@ const yV = {
     gave: "gives",
     moved: "moves"
   },
-  EV = Object.keys(yV).join("|"),
-  KV = new Set(["is", "its", "this", "was", "as", "us", "always", "less", "plus", "across", "yours", "theirs"]),
-  QV = /(?:^|[,;:(]|\b(?:and|so|but|or|then|right|because|until|since|just|even))\s*$/i;
-const mV = /```[\s\S]*?(?:```|$)|`[^`\n]*`|"[^"\n]*"|\u201c[^\u201d\n]*\u201d|['\u2018][^'\u2019\n]*['\u2019](?![\w])/g;
+  Xs = Object.keys(as).join("|"),
+  bs = new Set(["is", "its", "this", "was", "as", "us", "always", "less", "plus", "across", "yours", "theirs"]),
+  ws = /(?:^|[,;:(]|\b(?:and|so|but|or|then|right|because|until|since|just|even))\s*$/i;
+const ds = /```[\s\S]*?(?:```|$)|`[^`\n]*`|"[^"\n]*"|\u201c[^\u201d\n]*\u201d|['\u2018][^'\u2019\n]*['\u2019](?![\w])/g;
 
-function JV(uu) {
-  return !/^['\u2018]/.test(uu[0]) || !(0, rR.e)(uu, "\\w\u2019'")
+function ss(kk) {
+  return !/^['\u2018]/.test(kk[0]) || !(0, JF.e)(kk, "\\w\u2019'")
 }
-const NV = /\b(?:last time|before|earlier|previous(?:ly)?|already|in my last|a mistake|an error|wrong)\b/i;
+const Vs = /\b(?:last time|before|earlier|previous(?:ly)?|already|in my last|a mistake|an error|wrong)\b/i;
 
-function XV(uu) {
-  const Ru = function(uu) {
-      return (0, rR.i)(uu, mV, JV).map((uu => [uu.index, uu.index + uu[0].length]))
-    }(uu),
-    yu = uu => Ru.some((Ru => {
-      let [yu, Eu] = Ru;
-      return uu >= yu && uu < Eu
+function As(kk) {
+  const Fk = function(kk) {
+      return (0, JF.i)(kk, ds, ss).map((kk => [kk.index, kk.index + kk[0].length]))
+    }(kk),
+    Bk = kk => Fk.some((Fk => {
+      let [Bk, Rk] = Fk;
+      return kk >= Bk && kk < Rk
     })),
-    Eu = [];
-  for (const Qu of uu.matchAll(new RegExp(`(^|[.!?]\\s+|\\n\\s*)I(?:'ve|\u2019ve| have)?( also)? (${EV})\\b`, "g"))) {
-    const Ru = Qu.index + Qu[1].length,
-      Ku = Qu.index + Qu[0].length,
-      mu = uu.slice(Ku),
-      Ju = /[.!?](?=\s|$)|\n/.exec(mu),
-      Nu = Ju ? mu.slice(0, Ju.index) : mu;
-    if (!yu(Ru) && !NV.test(Nu)) {
-      Eu.push({
-        at: Ru,
-        length: Ku - Ru,
-        words: `${Qu[2]?"It also":"This"} ${yV[Qu[3]]}`
+    Rk = [];
+  for (const ak of kk.matchAll(new RegExp(`(^|[.!?]\\s+|\\n\\s*)I(?:'ve|\u2019ve| have)?( also)? (${Xs})\\b`, "g"))) {
+    const Fk = ak.index + ak[1].length,
+      tk = ak.index + ak[0].length,
+      Xk = kk.slice(tk),
+      bk = /[.!?](?=\s|$)|\n/.exec(Xk),
+      wk = bk ? Xk.slice(0, bk.index) : Xk;
+    if (!Bk(Fk) && !Vs.test(wk)) {
+      Rk.push({
+        at: Fk,
+        length: tk - Fk,
+        words: `${ak[2]?"It also":"This"} ${as[ak[3]]}`
       });
-      for (const uu of Nu.matchAll(new RegExp(`\\b(and|then|also) (${EV})\\b(?!\\s+(?:of|by|from|with|when|if|in|on|at|to|for|so|as|after|before|into)\\b)`, "g"))) yu(Ku + uu.index) || Eu.push({
-        at: Ku + uu.index,
-        length: uu[0].length,
-        words: `${uu[1]} ${yV[uu[2]]}`
+      for (const kk of wk.matchAll(new RegExp(`\\b(and|then|also) (${Xs})\\b(?!\\s+(?:of|by|from|with|when|if|in|on|at|to|for|so|as|after|before|into)\\b)`, "g"))) Bk(tk + kk.index) || Rk.push({
+        at: tk + kk.index,
+        length: kk[0].length,
+        words: `${kk[1]} ${as[kk[2]]}`
       })
     }
   }
-  for (const Qu of uu.matchAll(/\bnow ([a-z]{2,}s)\b/g)) {
-    const Ru = Math.max(uu.lastIndexOf(".", Qu.index), uu.lastIndexOf("\n", Qu.index)) + 1,
-      mu = /[.!?](?=\s|$)|\n/.exec(uu.slice(Qu.index)),
-      Ju = uu.slice(Ru, mu ? Qu.index + mu.index : uu.length),
-      Nu = Eu.some((uu => Qu.index < uu.at + uu.length && uu.at < Qu.index + Qu[0].length)),
-      Xu = QV.test(uu.slice(Ru, Qu.index));
-    KV.has(Qu[1]) || Xu || yu(Qu.index) || NV.test(Ju) || Nu || Eu.push({
-      at: Qu.index,
-      length: Qu[0].length,
-      words: `will ${Ku=Qu[1],"has"===Ku?"have":Ku.endsWith("ies")?`${Ku.slice(0,-3)}y`:/(?:ch|sh|x|zz|o|ss)es$/.test(Ku)?Ku.slice(0,-2):Ku.slice(0,-1)}`
+  for (const ak of kk.matchAll(/\bnow ([a-z]{2,}s)\b/g)) {
+    const Fk = Math.max(kk.lastIndexOf(".", ak.index), kk.lastIndexOf("\n", ak.index)) + 1,
+      Xk = /[.!?](?=\s|$)|\n/.exec(kk.slice(ak.index)),
+      bk = kk.slice(Fk, Xk ? ak.index + Xk.index : kk.length),
+      wk = Rk.some((kk => ak.index < kk.at + kk.length && kk.at < ak.index + ak[0].length)),
+      dk = ws.test(kk.slice(Fk, ak.index));
+    bs.has(ak[1]) || dk || Bk(ak.index) || Vs.test(bk) || wk || Rk.push({
+      at: ak.index,
+      length: ak[0].length,
+      words: `will ${tk=ak[1],"has"===tk?"have":tk.endsWith("ies")?`${tk.slice(0,-3)}y`:/(?:ch|sh|x|zz|o|ss)es$/.test(tk)?tk.slice(0,-2):tk.slice(0,-1)}`
     })
   }
-  var Ku;
-  return Eu.sort(((uu, Ru) => Ru.at - uu.at)).reduce(((uu, Ru) => uu.slice(0, Ru.at) + Ru.words + uu.slice(Ru.at + Ru.length)), uu)
+  var tk;
+  return Rk.sort(((kk, Fk) => Fk.at - kk.at)).reduce(((kk, Fk) => kk.slice(0, Fk.at) + Fk.words + kk.slice(Fk.at + Fk.length)), kk)
 }
 
-function VV(uu) {
+function es(kk) {
   let {
-    path: Ru,
-    field: yu,
-    onWrite: Ku,
-    isChanged: Qu
-  } = uu;
-  const [Ju, Nu] = (0, Eu.useState)(null), [Xu, Vu] = (0, Eu.useState)(null), ru = DX(yu), [Bu, xu] = (0, Eu.useState)(!1), Su = (0, Eu.useRef)(null), pu = async uu => {
-    if (Ku && !Bu) {
-      Nu(null), xu(!0);
+    path: Fk,
+    field: Bk,
+    onWrite: tk,
+    isChanged: ak
+  } = kk;
+  const [bk, wk] = (0, Rk.useState)(null), [dk, sk] = (0, Rk.useState)(null), Vk = ud(Bk), [Jk, Ak] = (0, Rk.useState)(!1), ek = (0, Rk.useRef)(null), yk = async kk => {
+    if (tk && !Jk) {
+      wk(null), Ak(!0);
       try {
-        const mu = await Ku(Ru, yu, uu);
-        var Eu, Qu;
-        if (Vu(mu ? null : "Your code changed here. Look at it again."), mu) null === (Eu = Su.current) || void 0 === Eu || null === (Qu = Eu.scrollIntoView) || void 0 === Qu || Qu.call(Eu, {
+        const Xk = await tk(Fk, Bk, kk);
+        var Rk, ak;
+        if (sk(Xk ? null : "Your code changed here. Look at it again."), Xk) null === (Rk = ek.current) || void 0 === Rk || null === (ak = Rk.scrollIntoView) || void 0 === ak || ak.call(Rk, {
           block: "nearest"
         })
       } finally {
-        xu(!1)
+        Ak(!1)
       }
     }
-  }, Tu = () => {
-    if (null !== Ju)
-      if ("number" === yu.kind) {
-        const uu = Number(Ju.trim());
-        if ("" === Ju.trim() || !Number.isFinite(uu)) return Vu("That needs to be a number."), void Nu(null);
-        pu(uu)
-      } else pu(Ju)
-  }, Wu = `WorldCodeAiSetting-${Ru}-${yu.key}`;
-  return (0, mu.jsxs)("li", {
-    ref: Su,
+  }, fk = () => {
+    if (null !== bk)
+      if ("number" === Bk.kind) {
+        const kk = Number(bk.trim());
+        if ("" === bk.trim() || !Number.isFinite(kk)) return sk("That needs to be a number."), void wk(null);
+        yk(kk)
+      } else yk(bk)
+  }, mk = `WorldCodeAiSetting-${Fk}-${Bk.key}`;
+  return (0, Xk.jsxs)("li", {
+    ref: ek,
     className: "WorldCodeAiSetting",
-    children: [(0, mu.jsxs)("label", {
+    children: [(0, Xk.jsxs)("label", {
       className: "WorldCodeAiSettingLabel",
-      htmlFor: Wu,
-      children: [ru, yu.comment && (0, mu.jsx)("code", {
-        children: yu.key
+      htmlFor: mk,
+      children: [Vk, Bk.comment && (0, Xk.jsx)("code", {
+        children: Bk.key
       })]
-    }), "boolean" === yu.kind ? (0, mu.jsxs)("label", {
+    }), "boolean" === Bk.kind ? (0, Xk.jsxs)("label", {
       className: "WorldCodeAiSwitch",
-      children: [(0, mu.jsx)("input", {
-        id: Wu,
+      children: [(0, Xk.jsx)("input", {
+        id: mk,
         type: "checkbox",
         role: "switch",
-        checked: !0 === yu.value,
-        disabled: !Ku,
-        onChange: uu => {
-          pu(uu.target.checked)
+        checked: !0 === Bk.value,
+        disabled: !tk,
+        onChange: kk => {
+          yk(kk.target.checked)
         }
-      }), (0, mu.jsx)("span", {
-        children: yu.value ? "On" : "Off"
+      }), (0, Xk.jsx)("span", {
+        children: Bk.value ? "On" : "Off"
       })]
-    }) : (0, mu.jsxs)("div", {
+    }) : (0, Xk.jsxs)("div", {
       className: "WorldCodeAiSettingControl",
-      children: ["number" === yu.kind && (0, mu.jsx)("button", {
+      children: ["number" === Bk.kind && (0, Xk.jsx)("button", {
         className: "WorldCodeAiSecondaryButton WorldCodeAiStepper",
-        "aria-label": `Less ${ru}`,
-        disabled: !Ku,
+        "aria-label": `Less ${Vk}`,
+        disabled: !tk,
         onClick: () => {
-          pu(yu.value - AX(yu.value))
+          yk(Bk.value - Hd(Bk.value))
         },
         children: "\u2212"
-      }), (0, mu.jsx)("input", {
-        id: Wu,
+      }), (0, Xk.jsx)("input", {
+        id: mk,
         className: "WorldCodeAiInput WorldCodeAiSettingInput",
-        type: "number" === yu.kind ? "number" : "text",
-        inputMode: "number" === yu.kind ? "decimal" : void 0,
-        maxLength: "string" === yu.kind ? 200 : void 0,
-        value: null !== Ju && void 0 !== Ju ? Ju : String(yu.value),
-        disabled: !Ku,
-        onChange: uu => {
-          Nu(uu.target.value)
+        type: "number" === Bk.kind ? "number" : "text",
+        inputMode: "number" === Bk.kind ? "decimal" : void 0,
+        maxLength: "string" === Bk.kind ? 200 : void 0,
+        value: null !== bk && void 0 !== bk ? bk : String(Bk.value),
+        disabled: !tk,
+        onChange: kk => {
+          wk(kk.target.value)
         },
-        onBlur: Tu,
-        onKeyDown: uu => {
-          uu.stopPropagation(), "Enter" === uu.key ? Tu() : "Escape" === uu.key && Nu(null)
+        onBlur: fk,
+        onKeyDown: kk => {
+          kk.stopPropagation(), "Enter" === kk.key ? fk() : "Escape" === kk.key && wk(null)
         }
-      }), "number" === yu.kind && (0, mu.jsx)("button", {
+      }), "number" === Bk.kind && (0, Xk.jsx)("button", {
         className: "WorldCodeAiSecondaryButton WorldCodeAiStepper",
-        "aria-label": `More ${ru}`,
-        disabled: !Ku,
+        "aria-label": `More ${Vk}`,
+        disabled: !tk,
         onClick: () => {
-          pu(yu.value + AX(yu.value))
+          yk(Bk.value + Hd(Bk.value))
         },
         children: "+"
       })]
-    }), Xu && (0, mu.jsx)("span", {
+    }), dk && (0, Xk.jsx)("span", {
       className: "WorldCodeAiAboutError",
-      children: Xu
-    }), Qu && !Xu && (0, mu.jsx)("span", {
+      children: dk
+    }), ak && !dk && (0, Xk.jsx)("span", {
       className: "WorldCodeAiSettingDone",
       children: "\u2713 Changed in your code"
     })]
   })
 }
 
-function rV(uu) {
+function ys(kk) {
   let {
-    files: Ru,
-    onWrite: yu,
-    onTryIt: Eu,
-    onUndo: Ku,
-    before: Qu
-  } = uu;
-  const Ju = Object.entries(Ru).flatMap((uu => {
-    let [Ru, yu] = uu;
-    const Eu = kX(yu);
-    return Eu.length > 0 ? [{
-      path: Ru,
-      fields: Eu
+    files: Fk,
+    onWrite: Bk,
+    onTryIt: Rk,
+    onUndo: tk,
+    before: ak
+  } = kk;
+  const bk = Object.entries(Fk).flatMap((kk => {
+    let [Fk, Bk] = kk;
+    const Rk = Sd(Bk);
+    return Rk.length > 0 ? [{
+      path: Fk,
+      fields: Rk
     }] : []
   }));
-  return (0, mu.jsxs)("div", {
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiHistory WorldCodeAiSettings",
-    children: [(0, mu.jsx)("div", {
+    children: [(0, Xk.jsx)("div", {
       className: "WorldCodeAiHistoryTitle",
-      children: (0, mu.jsx)("span", {
+      children: (0, Xk.jsx)("span", {
         children: "Settings of my game"
       })
-    }), 0 === Ju.length ? (0, mu.jsx)("p", {
+    }), 0 === bk.length ? (0, Xk.jsx)("p", {
       className: "WorldCodeAiHint",
       children: "Your code has no settings yet. Settings are the numbers and messages at the top of your code, in CONFIG."
-    }) : (0, mu.jsxs)(mu.Fragment, {
-      children: [(0, mu.jsx)("p", {
+    }) : (0, Xk.jsxs)(Xk.Fragment, {
+      children: [(0, Xk.jsx)("p", {
         className: "WorldCodeAiAboutNote",
         children: "Changes go into your code straight away. Try them in your world."
-      }), (Eu || Ku) && (0, mu.jsxs)("div", {
+      }), (Rk || tk) && (0, Xk.jsxs)("div", {
         className: "WorldCodeAiSettingActions",
-        children: [Eu && (0, mu.jsx)("button", {
+        children: [Rk && (0, Xk.jsx)("button", {
           className: "WorldCodeAiPrimaryButton",
-          onClick: Eu,
+          onClick: Rk,
           children: "Try it in my world"
-        }), Ku && (0, mu.jsx)("button", {
+        }), tk && (0, Xk.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          onClick: Ku,
+          onClick: tk,
           children: "Undo these changes"
         })]
-      }), Ju.map((uu => {
+      }), bk.map((kk => {
         let {
-          path: Ru,
-          fields: Eu
-        } = uu;
-        return (0, mu.jsxs)("div", {
-          children: [Ju.length > 1 && (0, mu.jsx)("p", {
+          path: Fk,
+          fields: Rk
+        } = kk;
+        return (0, Xk.jsxs)("div", {
+          children: [bk.length > 1 && (0, Xk.jsx)("p", {
             className: "WorldCodeAiAboutHeading",
-            children: Ru
-          }), (0, mu.jsx)("ul", {
+            children: Fk
+          }), (0, Xk.jsx)("ul", {
             className: "WorldCodeAiSettingList",
-            children: Eu.map((uu => {
-              const Eu = void 0 === (null === Qu || void 0 === Qu ? void 0 : Qu[Ru]) ? void 0 : kX(Qu[Ru]).find((Ru => Ru.key === uu.key));
-              return (0, mu.jsx)(VV, {
-                isChanged: !!Qu && (null === Eu || void 0 === Eu ? void 0 : Eu.value) !== uu.value,
-                path: Ru,
-                field: uu,
-                onWrite: yu
-              }, uu.key)
+            children: Rk.map((kk => {
+              const Rk = void 0 === (null === ak || void 0 === ak ? void 0 : ak[Fk]) ? void 0 : Sd(ak[Fk]).find((Fk => Fk.key === kk.key));
+              return (0, Xk.jsx)(es, {
+                isChanged: !!ak && (null === Rk || void 0 === Rk ? void 0 : Rk.value) !== kk.value,
+                path: Fk,
+                field: kk,
+                onWrite: Bk
+              }, kk.key)
             }))
           })]
-        }, Ru)
+        }, Fk)
       }))]
     })]
   })
 }
-const BV = /<tool_call\b|<function=|```|^\s*\{|<\|/m;
-const xV = ["Reading your code", "Planning", "Writing", "Safety check"];
+const fs = /<tool_call\b|<function=|```|^\s*\{|<\|/m;
+const ms = ["Reading your code", "Planning", "Writing", "Safety check"];
 
-function SV(uu) {
-  if (uu <= 1e4) return "It starts in a few seconds.";
-  const Ru = 10 * Math.ceil(uu / 1e4);
-  return Ru >= 60 ? "It starts in about a minute." : `It starts in about ${Ru} seconds.`
+function Ws(kk) {
+  if (kk <= 1e4) return "It starts in a few seconds.";
+  const Fk = 10 * Math.ceil(kk / 1e4);
+  return Fk >= 60 ? "It starts in about a minute." : `It starts in about ${Fk} seconds.`
 }
-var pV = yu(1739);
+var vs = Bk(1733);
 
-function TV(uu, Ru) {
-  const yu = new Map;
-  for (const Ku of gK(uu)) {
-    var Eu;
-    yu.set(Ku, (null !== (Eu = yu.get(Ku)) && void 0 !== Eu ? Eu : 0) + 1)
+function is(kk, Fk) {
+  const Bk = new Map;
+  for (const tk of Dt(kk)) {
+    var Rk;
+    Bk.set(tk, (null !== (Rk = Bk.get(tk)) && void 0 !== Rk ? Rk : 0) + 1)
   }
-  return gK(Ru).filter((uu => {
-    var Ru;
-    const Eu = null !== (Ru = yu.get(uu)) && void 0 !== Ru ? Ru : 0;
-    return yu.set(uu, Eu - 1), Eu <= 0
+  return Dt(Fk).filter((kk => {
+    var Fk;
+    const Rk = null !== (Fk = Bk.get(kk)) && void 0 !== Fk ? Fk : 0;
+    return Bk.set(kk, Rk - 1), Rk <= 0
   }))
 }
 
-function WV(uu, Ru) {
-  return new Promise(((yu, Eu) => {
-    if (null !== Ru && void 0 !== Ru && Ru.aborted) return void Eu((0, pV.e)(Ru));
-    const Ku = setTimeout(yu, uu);
-    null === Ru || void 0 === Ru || Ru.addEventListener("abort", (() => {
-      clearTimeout(Ku), Eu((0, pV.e)(Ru))
+function Ys(kk, Fk) {
+  return new Promise(((Bk, Rk) => {
+    if (null !== Fk && void 0 !== Fk && Fk.aborted) return void Rk((0, vs.e)(Fk));
+    const tk = setTimeout(Bk, kk);
+    null === Fk || void 0 === Fk || Fk.addEventListener("abort", (() => {
+      clearTimeout(tk), Rk((0, vs.e)(Fk))
     }), {
       once: !0
     })
   }))
 }
-async function jV(uu, Ru, yu, Eu, Ku) {
-  const Qu = new Set;
-  for (; Date.now() < yu;) {
-    var mu;
-    const Ju = GK.filter((uu => !Qu.has(uu)));
-    if (0 === Ju.length) return null;
-    const Nu = aK.firstFreeAt(Ju);
-    if (Nu > Date.now()) {
-      if (Nu > yu) return null;
-      null === Ku || void 0 === Ku || Ku(Nu), await WV(Nu - Date.now(), Eu)
+async function os(kk, Fk, Bk, Rk, tk) {
+  const ak = new Set;
+  for (; Date.now() < Bk;) {
+    var Xk;
+    const bk = gt.filter((kk => !ak.has(kk)));
+    if (0 === bk.length) return null;
+    const wk = ka.firstFreeAt(bk);
+    if (wk > Date.now()) {
+      if (wk > Bk) return null;
+      null === tk || void 0 === tk || tk(wk), await Ys(wk - Date.now(), Rk)
     }
-    const Xu = null !== (mu = Ju.find((uu => aK.freeAt(uu) <= Date.now()))) && void 0 !== mu ? mu : Ju[0],
-      Vu = await gQ(Xu, [{
+    const dk = null !== (Xk = bk.find((kk => ka.freeAt(kk) <= Date.now()))) && void 0 !== Xk ? Xk : bk[0],
+      sk = await Da(dk, [{
         role: "user",
-        content: uu
+        content: kk
       }, {
         role: "assistant",
-        content: Ru
-      }], Eu);
-    if (null === Vu) Qu.add(Xu);
-    else if ("busy" !== Vu) return Vu
+        content: Fk
+      }], Rk);
+    if (null === sk) ak.add(dk);
+    else if ("busy" !== sk) return sk
   }
   return null
 }
-async function HV(uu, Ru, yu, Eu) {
-  const Ku = function(uu) {
-    const Ru = [uu.text, ...uu.question ? [uu.question.question, ...uu.question.choices] : [], ...uu.plan, ...uu.notes, ...uu.actions.flatMap((uu => "switchToWorldCode" === uu.kind && uu.request ? [uu.request] : [])), ...uu.lookups.flatMap((uu => Object.values(uu.args).filter((uu => void 0 !== uu)))), ...uu.changes.flatMap((uu => {
-      var Ru, yu;
-      return [...null !== (Ru = uu.why) && void 0 !== Ru ? Ru : [], ...(null !== (yu = uu.parts) && void 0 !== yu ? yu : []).map((uu => uu.why)), ...TV(uu.before, uu.after)]
-    })), ...uu.worldCode.flatMap((uu => gK(uu)))];
-    return Ru.map((uu => uu.trim())).filter((uu => "" !== uu)).join("\n")
-  }(Ru);
-  if ("" === Ku) return "ok";
-  const Qu = Date.now() + 75e3;
-  for (const mu of function(uu) {
-      const Ru = [];
-      let yu = uu;
-      for (; yu.length > UK;) {
-        const uu = yu.lastIndexOf("\n", UK),
-          Eu = uu > 6e3 ? uu : UK;
-        Ru.push(yu.slice(0, Eu)), yu = yu.slice(Eu)
+async function Ls(kk, Fk, Bk, Rk) {
+  const tk = function(kk) {
+    const Fk = [kk.text, ...kk.question ? [kk.question.question, ...kk.question.choices] : [], ...kk.plan, ...kk.notes, ...kk.actions.flatMap((kk => "switchToWorldCode" === kk.kind && kk.request ? [kk.request] : [])), ...kk.lookups.flatMap((kk => Object.values(kk.args).filter((kk => void 0 !== kk)))), ...kk.changes.flatMap((kk => {
+      var Fk, Bk;
+      return [...null !== (Fk = kk.why) && void 0 !== Fk ? Fk : [], ...(null !== (Bk = kk.parts) && void 0 !== Bk ? Bk : []).map((kk => kk.why)), ...is(kk.before, kk.after)]
+    })), ...kk.worldCode.flatMap((kk => Dt(kk)))];
+    return Fk.map((kk => kk.trim())).filter((kk => "" !== kk)).join("\n")
+  }(Fk);
+  if ("" === tk) return "ok";
+  const ak = Date.now() + 75e3;
+  for (const Xk of function(kk) {
+      const Fk = [];
+      let Bk = kk;
+      for (; Bk.length > Ut;) {
+        const kk = Bk.lastIndexOf("\n", Ut),
+          Rk = kk > 6e3 ? kk : Ut;
+        Fk.push(Bk.slice(0, Rk)), Bk = Bk.slice(Rk)
       }
-      return [...Ru, yu]
-    }(Ku)) {
-    const Ru = await lK(mu, (Ru => jV(uu, Ru, Qu, yu, Eu)));
-    if ("ok" !== Ru) return Ru
+      return [...Fk, Bk]
+    }(tk)) {
+    const Fk = await rt(Xk, (Fk => os(kk, Fk, ak, Bk, Rk)));
+    if ("ok" !== Fk) return Fk
   }
   return "ok"
 }
-const dV = "worldCodeAiAnswerTimes";
+const Os = "worldCodeAiAnswerTimes";
 
-function bV(uu, Ru) {
-  var yu;
-  const Eu = Ru && null !== (yu = uu[Ru]) && void 0 !== yu ? yu : [],
-    Ku = Eu.length >= 2 ? Eu : Object.values(uu).flat();
-  return Ku.length < 2 ? "Usually under a minute." : `Usually ${function(uu){const Ru=Math.max(5,5*Math.round(uu/5e3));if(Ru<60)return`about ${Ru} seconds`;const yu=10*Math.round(uu/1e4),Eu=Math.floor(yu/60),Ku=yu%60,Qu=`${Eu} ${1===Eu?"minute":"minutes"}`;return 0===Ku?`about ${Qu}`:`about ${Qu} ${Ku} seconds`}(function(uu){const Ru=[...uu].sort(((uu,Ru)=>uu-Ru)),yu=Math.floor(Ru.length/2);return Ru.length%2===1?Ru[yu]:(Ru[yu-1]+Ru[yu])/2}(Ku))}.`
+function Es(kk, Fk) {
+  var Bk;
+  const Rk = Fk && null !== (Bk = kk[Fk]) && void 0 !== Bk ? Bk : [],
+    tk = Rk.length >= 2 ? Rk : Object.values(kk).flat();
+  return tk.length < 2 ? "Usually under a minute." : `Usually ${function(kk){const Fk=Math.max(5,5*Math.round(kk/5e3));if(Fk<60)return`about ${Fk} seconds`;const Bk=10*Math.round(kk/1e4),Rk=Math.floor(Bk/60),tk=Bk%60,ak=`${Rk} ${1===Rk?"minute":"minutes"}`;return 0===tk?`about ${ak}`:`about ${ak} ${tk} seconds`}(function(kk){const Fk=[...kk].sort(((kk,Fk)=>kk-Fk)),Bk=Math.floor(Fk.length/2);return Fk.length%2===1?Fk[Bk]:(Fk[Bk-1]+Fk[Bk])/2}(tk))}.`
 }
-var CV = yu(36687);
+var Ss = Bk(36591);
 
-function kV(uu, Ru) {
-  const yu = uu.split("\n"),
-    Eu = Ru.split("\n"),
-    Ku = Eu.findIndex(((uu, Ru) => uu !== yu[Ru]));
-  return (-1 === Ku ? Math.min(yu.length, Eu.length) - 1 : Ku) + 1
+function Ns(kk, Fk) {
+  const Bk = kk.split("\n"),
+    Rk = Fk.split("\n"),
+    tk = Rk.findIndex(((kk, Fk) => kk !== Bk[Fk]));
+  return (-1 === tk ? Math.min(Bk.length, Rk.length) - 1 : tk) + 1
 }
 
-function eV(uu, Ru) {
-  return uu.filter((uu => uu.path !== Ru)).map((uu => ({
-    path: uu.path,
-    line: kV(uu.before, uu.after)
+function Hs(kk, Fk) {
+  return kk.filter((kk => kk.path !== Fk)).map((kk => ({
+    path: kk.path,
+    line: Ns(kk.before, kk.after)
   })))
 }
 
-function AV(uu) {
-  return `Moving to ${uu} code\u2026`
+function us(kk) {
+  return `Moving to ${kk} code\u2026`
 }
 
-function DV(uu) {
-  return uu.fromLine === uu.toLine ? `line ${uu.fromLine}` : `lines ${uu.fromLine}-${uu.toLine}`
+function Ms(kk) {
+  return kk.fromLine === kk.toLine ? `line ${kk.fromLine}` : `lines ${kk.fromLine}-${kk.toLine}`
 }
 
-function MV(uu) {
-  const Ru = uu.text.length > 4e3 ? `${uu.text.slice(0,4e3)}\n...` : uu.text;
-  return `The part I picked (${uu.path}, ${DV(uu)}):\n\`\`\`\n${Ru}\n\`\`\``
+function gs(kk) {
+  const Fk = kk.text.length > 4e3 ? `${kk.text.slice(0,4e3)}\n...` : kk.text;
+  return `The part I picked (${kk.path}, ${Ms(kk)}):\n\`\`\`\n${Fk}\n\`\`\``
 }
 
-function IV(uu) {
-  let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-  switch (uu.action) {
+function Us(kk) {
+  let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+  switch (kk.action) {
     case "explain":
-      return `Explain what this part of my code does, in 2 or 3 short sentences. Don't change any code.\n\n${MV(uu)}`;
+      return `Explain what this part of my code does, in 2 or 3 short sentences. Don't change any code.\n\n${gs(kk)}`;
     case "fix":
-      return `Fix what is wrong in this part of my code. Change only what it needs.\n\n${MV(uu)}`;
+      return `Fix what is wrong in this part of my code. Change only what it needs.\n\n${gs(kk)}`;
     case "change":
-      return `${Ru.trim()}\n\nChange only this part of my code, unless more is needed for it to work.\n\n${MV(uu)}`
+      return `${Fk.trim()}\n\nChange only this part of my code, unless more is needed for it to work.\n\n${gs(kk)}`
   }
 }
 
-function GV(uu) {
-  let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-  const yu = DV(uu);
-  switch (uu.action) {
+function cs(kk) {
+  let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+  const Bk = Ms(kk);
+  switch (kk.action) {
     case "explain":
-      return `Explain ${yu}`;
+      return `Explain ${Bk}`;
     case "fix":
-      return `Fix ${yu}`;
+      return `Fix ${Bk}`;
     case "change":
-      return `${Ru.trim()} (${yu})`
+      return `${Fk.trim()} (${Bk})`
   }
 }
-var UV = yu(40991),
-  nV = yu(4532),
-  sV = yu(40970),
-  tV = yu(40982),
-  lV = yu(40979);
+var Gs = Bk(40811),
+  Ts = Bk(4487),
+  rs = Bk(40792),
+  Ds = Bk(40802),
+  zs = Bk(40799);
 
-function gV(uu) {
-  return uu ? "/worldCodeAiCheck.ts" : "/worldCodeAiCheck.js"
+function Ps(kk) {
+  return kk ? "/worldCodeAiCheck.ts" : "/worldCodeAiCheck.js"
 }
-const cV = new Set([2345, 2559, 2353, 2554, 2322, 2820]),
-  LV = new Set([2304, 2552]),
-  zV = new Set(["Date", "isNaN", "isFinite", "parseInt", "parseFloat"]),
-  FV = {};
+const hs = new Set([2345, 2559, 2353, 2554, 2322, 2820]),
+  qs = new Set([2304, 2552]),
+  Cs = new Set(["Date", "isNaN", "isFinite", "parseInt", "parseFloat"]),
+  Zs = {};
 
-function wV() {
-  let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  const Ru = uu ? "codeBlock" : arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "worldCodeTs" : "worldCode";
-  let yu = FV[Ru];
-  if (!yu) {
-    const Eu = gV("worldCodeTs" === Ru),
-      Ku = new Map(uu ? [
-        [Eu, "\n"],
-        ["/globals.d.ts", sV.d],
-        ["/lib.d.ts", tV.c]
+function ps() {
+  let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+  const Fk = kk ? "codeBlock" : arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "worldCodeTs" : "worldCode";
+  let Bk = Zs[Fk];
+  if (!Bk) {
+    const Rk = Ps("worldCodeTs" === Fk),
+      tk = new Map(kk ? [
+        [Rk, "\n"],
+        ["/globals.d.ts", rs.d],
+        ["/lib.d.ts", Ds.d]
       ] : [
-        [Eu, "\n"],
-        ["/node_modules/@bloxd/index.d.ts", nV.default],
-        ["/globals.d.ts", lV.d],
-        ["/lib.d.ts", tV.c]
+        [Rk, "\n"],
+        ["/node_modules/@bloxd/index.d.ts", Ts.default],
+        ["/globals.d.ts", zs.b],
+        ["/lib.d.ts", Ds.d]
       ]);
-    yu = UV.f(UV.e(Ku), [...Ku.keys()], eu(), {
+    Bk = Gs.f(Gs.b(tk), [...tk.keys()], Ek(), {
       allowJs: !0,
       checkJs: !0,
       noLib: !0,
       strict: !1,
-      module: eu().ModuleKind.ESNext,
-      moduleResolution: eu().ModuleResolutionKind.Bundler,
-      target: eu().ScriptTarget.ES2015,
+      module: Ek().ModuleKind.ESNext,
+      moduleResolution: Ek().ModuleResolutionKind.Bundler,
+      target: Ek().ScriptTarget.ES2015,
       allowUnreachableCode: !1,
       paths: {
         "@bloxd": ["/node_modules/@bloxd/index.d.ts"]
       }
-    }), FV[Ru] = yu
+    }), Zs[Fk] = Bk
   }
-  return yu
+  return Bk
 }
 
-function ZV(uu, Ru, yu) {
-  let Eu;
-  const Ku = Qu => {
-    Ru < Qu.getStart(uu) || Ru >= Qu.getEnd() || (eu().isFunctionLike(Qu) && Ru > Qu.getStart(uu) && (Eu = void 0), eu().isCallExpression(Qu) && (Ru >= Qu.expression.getEnd() || yu <= Qu.expression.getEnd()) && (Eu = Qu), eu().forEachChild(Qu, Ku))
+function Ks(kk, Fk, Bk) {
+  let Rk;
+  const tk = ak => {
+    Fk < ak.getStart(kk) || Fk >= ak.getEnd() || (Ek().isFunctionLike(ak) && Fk > ak.getStart(kk) && (Rk = void 0), Ek().isCallExpression(ak) && (Fk >= ak.expression.getEnd() || Bk <= ak.expression.getEnd()) && (Rk = ak), Ek().forEachChild(ak, tk))
   };
-  return Ku(uu), Eu && Zy(Eu, uu) ? Eu : void 0
+  return tk(kk), Rk && CB(Rk, kk) ? Rk : void 0
 }
 
-function hV(uu, Ru, yu) {
-  let Eu;
-  const Ku = Qu => {
-    Ru < Qu.getStart(uu) || yu > Qu.getEnd() || (Eu = Qu, eu().forEachChild(Qu, Ku))
+function xs(kk, Fk, Bk) {
+  let Rk;
+  const tk = ak => {
+    Fk < ak.getStart(kk) || Bk > ak.getEnd() || (Rk = ak, Ek().forEachChild(ak, tk))
   };
-  return Ku(uu), Eu
+  return tk(kk), Rk
 }
 
-function PV(uu) {
-  return uu.toLowerCase().replace(/[^a-z0-9]/g, "")
+function ls(kk) {
+  return kk.toLowerCase().replace(/[^a-z0-9]/g, "")
 }
 
-function iV(uu, Ru) {
-  const yu = PV(uu);
-  if (!yu) return;
-  const Eu = Ru.find((uu => PV(uu) === yu));
-  if (Eu) return `"${Eu}"`;
-  const Ku = Ru.filter((uu => {
-    const Ru = PV(uu);
-    return Ru.includes(yu) || yu.includes(Ru)
-  })).sort(((uu, Ru) => uu.length - Ru.length));
-  if (Ku.length > 0) return Ku.slice(0, 2).map((uu => `"${uu}"`)).join(" or ");
-  const Qu = new Set(uu.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
-  let mu;
-  for (const Ju of Ru) {
-    const uu = Ju.toLowerCase().split(/[^a-z0-9]+/).filter((uu => Qu.has(uu))).length;
-    uu > 0 && (!mu || uu > mu.shared) && (mu = {
-      option: Ju,
-      shared: uu
+function ns(kk, Fk) {
+  const Bk = ls(kk);
+  if (!Bk) return;
+  const Rk = Fk.find((kk => ls(kk) === Bk));
+  if (Rk) return `"${Rk}"`;
+  const tk = Fk.filter((kk => {
+    const Fk = ls(kk);
+    return Fk.includes(Bk) || Bk.includes(Fk)
+  })).sort(((kk, Fk) => kk.length - Fk.length));
+  if (tk.length > 0) return tk.slice(0, 2).map((kk => `"${kk}"`)).join(" or ");
+  const ak = new Set(kk.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+  let Xk;
+  for (const bk of Fk) {
+    const kk = bk.toLowerCase().split(/[^a-z0-9]+/).filter((kk => ak.has(kk))).length;
+    kk > 0 && (!Xk || kk > Xk.shared) && (Xk = {
+      option: bk,
+      shared: kk
     })
   }
-  return mu ? `"${mu.option}"` : void 0
+  return Xk ? `"${Xk.option}"` : void 0
 }
 
-function YV(uu) {
-  for (let Ru = uu; Ru && !eu().isSourceFile(Ru); Ru = Ru.parent)
-    if (eu().isExpressionWithTypeArguments(Ru)) {
-      if (eu().isHeritageClause(Ru.parent) && Ru.parent.token === eu().SyntaxKind.ImplementsKeyword) return !0
-    } else if (eu().isTypeNode(Ru)) return !0;
+function Is(kk) {
+  for (let Fk = kk; Fk && !Ek().isSourceFile(Fk); Fk = Fk.parent)
+    if (Ek().isExpressionWithTypeArguments(Fk)) {
+      if (Ek().isHeritageClause(Fk.parent) && Fk.parent.token === Ek().SyntaxKind.ImplementsKeyword) return !0
+    } else if (Ek().isTypeNode(Fk)) return !0;
   return !1
 }
 
-function oV(uu) {
-  var Ru;
-  let yu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    Eu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  const Ku = gV(Eu && !yu),
-    Qu = wV(yu, Eu);
-  Qu.updateFile(Ku, uu || "\n");
-  const mu = Qu.getSourceFile(Ku),
-    Ju = null === (Ru = Qu.languageService.getProgram()) || void 0 === Ru ? void 0 : Ru.getTypeChecker();
-  if (!mu || !Ju) return [];
-  const Nu = new Set,
-    Xu = Qu.languageService.getSyntacticDiagnostics(Ku)[0];
-  if (void 0 !== (null === Xu || void 0 === Xu ? void 0 : Xu.start)) {
-    var Vu, ru;
-    const Ru = mu.getLineAndCharacterOfPosition(Xu.start).line,
-      yu = null !== (Vu = null === (ru = uu.split("\n")[Ru]) || void 0 === ru ? void 0 : ru.trim()) && void 0 !== Vu ? Vu : "",
-      Eu = yu.length > 40 ? `${yu.slice(0,37)}...` : yu,
-      Ku = eu().flattenDiagnosticMessageText(Xu.messageText, " ").replace(/\.$/, "");
-    Nu.add(`Line ${Ru+1} stops all of this code from running: "${Eu}" (${Ku}).`)
+function Qs(kk) {
+  var Fk;
+  let Bk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    Rk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+  const tk = Ps(Rk && !Bk),
+    ak = ps(Bk, Rk);
+  ak.updateFile(tk, kk || "\n");
+  const Xk = ak.getSourceFile(tk),
+    bk = null === (Fk = ak.languageService.getProgram()) || void 0 === Fk ? void 0 : Fk.getTypeChecker();
+  if (!Xk || !bk) return [];
+  const wk = new Set,
+    dk = ak.languageService.getSyntacticDiagnostics(tk)[0];
+  if (void 0 !== (null === dk || void 0 === dk ? void 0 : dk.start)) {
+    var sk, Vk;
+    const Fk = Xk.getLineAndCharacterOfPosition(dk.start).line,
+      Bk = null !== (sk = null === (Vk = kk.split("\n")[Fk]) || void 0 === Vk ? void 0 : Vk.trim()) && void 0 !== sk ? sk : "",
+      Rk = Bk.length > 40 ? `${Bk.slice(0,37)}...` : Bk,
+      tk = Ek().flattenDiagnosticMessageText(dk.messageText, " ").replace(/\.$/, "");
+    wk.add(`Line ${Fk+1} stops all of this code from running: "${Rk}" (${tk}).`)
   }
-  const Bu = new Set;
-  for (const lu of Qu.languageService.getSemanticDiagnostics(Ku)) {
-    var xu, Su, pu, Tu, Wu, ju, Hu, du;
-    if (7027 === lu.code && void 0 !== lu.start) {
-      var bu, Cu;
-      const Ru = mu.getLineAndCharacterOfPosition(lu.start).line,
-        yu = null !== (bu = null === (Cu = uu.split("\n")[Ru]) || void 0 === Cu ? void 0 : Cu.trim()) && void 0 !== bu ? bu : "",
-        Eu = yu.length > 40 ? `${yu.slice(0,37)}...` : yu;
-      Nu.add(`Line ${Ru+1} never runs: "${Eu}" comes after a return, which ends the function first.`);
+  const Jk = new Set;
+  for (const Tk of ak.languageService.getSemanticDiagnostics(tk)) {
+    var Ak, ek, yk, fk, mk, Wk, vk, ik;
+    if (7027 === Tk.code && void 0 !== Tk.start) {
+      var Yk, Lk;
+      const Fk = Xk.getLineAndCharacterOfPosition(Tk.start).line,
+        Bk = null !== (Yk = null === (Lk = kk.split("\n")[Fk]) || void 0 === Lk ? void 0 : Lk.trim()) && void 0 !== Yk ? Yk : "",
+        Rk = Bk.length > 40 ? `${Bk.slice(0,37)}...` : Bk;
+      wk.add(`Line ${Fk+1} never runs: "${Rk}" comes after a return, which ends the function first.`);
       continue
     }
-    if (LV.has(lu.code) && void 0 !== lu.start) {
-      var ku, Au;
-      const Ru = lu.start + (null !== (ku = lu.length) && void 0 !== ku ? ku : 0),
-        yu = uu.slice(lu.start, Ru),
-        Eu = /^\s*\(/.test(uu.slice(Ru)),
-        Ku = new RegExp(`^${yu.replaceAll("$","\\$")}\\s*=[^=]`, "m").test(uu),
-        Qu = uu.slice(0, lu.start),
-        Ju = Qu.lastIndexOf("/*") > Qu.lastIndexOf("*/") || Qu.slice(Qu.lastIndexOf("\n")).includes("//"),
-        Vu = new RegExp(`//\\s*(?:const|let|var)\\s+${yu.replaceAll("$","\\$")}\\b`).test(uu),
-        ru = new RegExp(`typeof\\s+${yu.replaceAll("$","\\$")}\\b`).test(uu);
-      if (zV.has(yu) || Bu.has(yu) || Eu || Ku || Ju || Vu || ru || Xu || YV(hV(mu, lu.start, Ru))) continue;
-      Bu.add(yu);
-      const xu = mu.getLineAndCharacterOfPosition(lu.start).line,
-        Su = null === (Au = /Did you mean '([\w$]+)'\?/.exec(eu().flattenDiagnosticMessageText(lu.messageText, " "))) || void 0 === Au ? void 0 : Au[1];
-      Nu.add(Su ? `Line ${xu+1} uses "${yu}", which is never set, so it throws there. Did you mean "${Su}"?` : `Line ${xu+1} uses "${yu}", which isn't set there, so it throws when that line runs.`);
+    if (qs.has(Tk.code) && void 0 !== Tk.start) {
+      var Ok, Sk;
+      const Fk = Tk.start + (null !== (Ok = Tk.length) && void 0 !== Ok ? Ok : 0),
+        Bk = kk.slice(Tk.start, Fk),
+        Rk = /^\s*\(/.test(kk.slice(Fk)),
+        tk = new RegExp(`^${Bk.replaceAll("$","\\$")}\\s*=[^=]`, "m").test(kk),
+        ak = kk.slice(0, Tk.start),
+        bk = ak.lastIndexOf("/*") > ak.lastIndexOf("*/") || ak.slice(ak.lastIndexOf("\n")).includes("//"),
+        sk = new RegExp(`//\\s*(?:const|let|var)\\s+${Bk.replaceAll("$","\\$")}\\b`).test(kk),
+        Vk = new RegExp(`typeof\\s+${Bk.replaceAll("$","\\$")}\\b`).test(kk);
+      if (Cs.has(Bk) || Jk.has(Bk) || Rk || tk || bk || sk || Vk || dk || Is(xs(Xk, Tk.start, Fk))) continue;
+      Jk.add(Bk);
+      const Ak = Xk.getLineAndCharacterOfPosition(Tk.start).line,
+        ek = null === (Sk = /Did you mean '([\w$]+)'\?/.exec(Ek().flattenDiagnosticMessageText(Tk.messageText, " "))) || void 0 === Sk ? void 0 : Sk[1];
+      wk.add(ek ? `Line ${Ak+1} uses "${Bk}", which is never set, so it throws there. Did you mean "${ek}"?` : `Line ${Ak+1} uses "${Bk}", which isn't set there, so it throws when that line runs.`);
       continue
     }
-    if (!cV.has(lu.code) || void 0 === lu.start) continue;
-    const Ru = eu().flattenDiagnosticMessageText(lu.messageText, " ");
-    if (Ru.includes("'string | number'")) continue;
-    const yu = lu.start + (null !== (xu = lu.length) && void 0 !== xu ? xu : 0),
-      Eu = ZV(mu, lu.start, yu);
-    if (!Eu) continue;
-    const Ku = hV(mu, lu.start, yu),
-      Qu = Eu.expression.getText(mu),
-      Vu = null !== Ku && void 0 !== Ku && Ku.parent && eu().isPropertyAssignment(Ku.parent) && Ku.parent.name === Ku ? Ku.parent : void 0,
-      ru = (Vu ? Vu.getText(mu) : uu.slice(lu.start, yu)).replace(/\s+/g, " "),
-      gu = ru.length > 40 ? `${ru.slice(0,37)}...` : ru;
-    if (2554 === lu.code) {
-      var Du, Mu, Iu;
-      const uu = Ru.match(/Expected (\S+) arguments?, but got (\d+)/),
-        yu = null !== (Du = null === uu || void 0 === uu || null === (Mu = uu[1]) || void 0 === Mu ? void 0 : Mu.replace("-", " to ")) && void 0 !== Du ? Du : "a different number of",
-        Ku = Number(null !== (Iu = null === uu || void 0 === uu ? void 0 : uu[2]) && void 0 !== Iu ? Iu : Eu.arguments.length);
-      Nu.add(`${Qu} needs ${yu} ${"1"===yu?"value":"values"}, but this line gives it ${Ku}.`);
+    if (!hs.has(Tk.code) || void 0 === Tk.start) continue;
+    const Fk = Ek().flattenDiagnosticMessageText(Tk.messageText, " ");
+    if (Fk.includes("'string | number'")) continue;
+    const Bk = Tk.start + (null !== (Ak = Tk.length) && void 0 !== Ak ? Ak : 0),
+      Rk = Ks(Xk, Tk.start, Bk);
+    if (!Rk) continue;
+    const tk = xs(Xk, Tk.start, Bk),
+      ak = Rk.expression.getText(Xk),
+      sk = null !== tk && void 0 !== tk && tk.parent && Ek().isPropertyAssignment(tk.parent) && tk.parent.name === tk ? tk.parent : void 0,
+      Vk = (sk ? sk.getText(Xk) : kk.slice(Tk.start, Bk)).replace(/\s+/g, " "),
+      rk = Vk.length > 40 ? `${Vk.slice(0,37)}...` : Vk;
+    if (2554 === Tk.code) {
+      var Nk, Hk, uk;
+      const kk = Fk.match(/Expected (\S+) arguments?, but got (\d+)/),
+        Bk = null !== (Nk = null === kk || void 0 === kk || null === (Hk = kk[1]) || void 0 === Hk ? void 0 : Hk.replace("-", " to ")) && void 0 !== Nk ? Nk : "a different number of",
+        tk = Number(null !== (uk = null === kk || void 0 === kk ? void 0 : kk[2]) && void 0 !== uk ? uk : Rk.arguments.length);
+      wk.add(`${ak} needs ${Bk} ${"1"===Bk?"value":"values"}, but this line gives it ${tk}.`);
       continue
     }
-    if (2353 === lu.code) {
-      var Gu, Uu;
-      const uu = null !== (Gu = null === (Uu = Ru.match(/'([^']*)' does not exist/)) || void 0 === Uu ? void 0 : Uu[1]) && void 0 !== Gu ? Gu : gu,
-        yu = null !== Ku && void 0 !== Ku && Ku.parent && eu().isPropertyAssignment(Ku.parent) ? Ku.parent.parent : null === Ku || void 0 === Ku ? void 0 : Ku.parent,
-        Eu = yu && eu().isObjectLiteralExpression(yu) ? Ju.getContextualType(yu) : void 0,
-        mu = iV(uu, Eu && !Ju.isArrayType(Ju.getNonNullableType(Eu)) ? Ju.getPropertiesOfType(Ju.getNonNullableType(Eu)).map((uu => uu.name)) : []),
-        Xu = Eu ? ` It takes ${iy(Ju,Eu)}.` : " Check Show Docs for its settings.";
-      Nu.add(`${Qu} has no setting called "${uu}".${mu?` Did you mean ${mu}?`:Xu}`);
+    if (2353 === Tk.code) {
+      var Mk, gk;
+      const kk = null !== (Mk = null === (gk = Fk.match(/'([^']*)' does not exist/)) || void 0 === gk ? void 0 : gk[1]) && void 0 !== Mk ? Mk : rk,
+        Bk = null !== tk && void 0 !== tk && tk.parent && Ek().isPropertyAssignment(tk.parent) ? tk.parent.parent : null === tk || void 0 === tk ? void 0 : tk.parent,
+        Rk = Bk && Ek().isObjectLiteralExpression(Bk) ? bk.getContextualType(Bk) : void 0,
+        Xk = ns(kk, Rk && !bk.isArrayType(bk.getNonNullableType(Rk)) ? bk.getPropertiesOfType(bk.getNonNullableType(Rk)).map((kk => kk.name)) : []),
+        dk = Rk ? ` It takes ${KB(bk,Rk)}.` : " Check Show Docs for its settings.";
+      wk.add(`${ak} has no setting called "${kk}".${Xk?` Did you mean ${Xk}?`:dk}`);
       continue
     }
-    const cu = null !== (Su = null === Vu || void 0 === Vu ? void 0 : Vu.initializer) && void 0 !== Su ? Su : Ku,
-      Lu = cu && eu().isExpression(cu) ? Ju.getContextualType(cu) : void 0,
-      zu = (null !== (tu = Lu) && void 0 !== tu && tu.isUnion() ? tu.types : tu ? [tu] : []).filter((uu => uu.isStringLiteral())).map((uu => uu.value)),
-      Fu = Ru.includes("keyof ") ? "setting" : "name",
-      wu = null !== (pu = null === cu || void 0 === cu ? void 0 : cu.getText(mu)) && void 0 !== pu ? pu : ru,
-      Zu = zu.length > 0 ? null === (Tu = /^CONFIG\.([\w$]+)$/.exec(wu)) || void 0 === Tu ? void 0 : Tu[1] : void 0;
-    if (void 0 !== Zu) {
-      var nu;
-      const Ru = null === (nu = new RegExp(`(?:^|[{,])\\s*${Zu.replaceAll("$","\\$")}\\s*:\\s*(["'])([^"'\\n]*)\\1`, "m").exec(uu)) || void 0 === nu ? void 0 : nu[2];
-      if (void 0 !== Ru && !zu.includes(Ru)) {
-        const uu = iV(Ru, zu);
-        Nu.add(`${Qu} has no ${Fu} called "${Ru}" (${wu}).${uu?` Did you mean ${uu}?`:""}`)
+    const Dk = null !== (ek = null === sk || void 0 === sk ? void 0 : sk.initializer) && void 0 !== ek ? ek : tk,
+      zk = Dk && Ek().isExpression(Dk) ? bk.getContextualType(Dk) : void 0,
+      Pk = (null !== (Gk = zk) && void 0 !== Gk && Gk.isUnion() ? Gk.types : Gk ? [Gk] : []).filter((kk => kk.isStringLiteral())).map((kk => kk.value)),
+      hk = Fk.includes("keyof ") ? "setting" : "name",
+      qk = null !== (yk = null === Dk || void 0 === Dk ? void 0 : Dk.getText(Xk)) && void 0 !== yk ? yk : Vk,
+      Ck = Pk.length > 0 ? null === (fk = /^CONFIG\.([\w$]+)$/.exec(qk)) || void 0 === fk ? void 0 : fk[1] : void 0;
+    if (void 0 !== Ck) {
+      var Uk;
+      const Fk = null === (Uk = new RegExp(`(?:^|[{,])\\s*${Ck.replaceAll("$","\\$")}\\s*:\\s*(["'])([^"'\\n]*)\\1`, "m").exec(kk)) || void 0 === Uk ? void 0 : Uk[2];
+      if (void 0 !== Fk && !Pk.includes(Fk)) {
+        const kk = ns(Fk, Pk);
+        wk.add(`${ak} has no ${hk} called "${Fk}" (${qk}).${kk?` Did you mean ${kk}?`:""}`)
       }
       continue
     }
-    if (Lu && cu && Yy(Ju, Ju.getTypeAtLocation(cu), Lu)) continue;
-    if (zu.length > 0) {
-      const uu = cu && eu().isStringLiteral(cu) ? cu : void 0,
-        Ru = uu ? iV(uu.text, zu) : void 0,
-        yu = uu && !Vu ? `${Qu} has no ${Fu} called ${su=gu,su.startsWith('"')?su:`"${su}"`}.` : `${Qu} can't take ${gu} there.`;
-      Nu.add(`${yu}${Ru?` Did you mean ${Ru}?`:" Check Show Docs for what it takes."}`);
+    if (zk && Dk && xB(bk, bk.getTypeAtLocation(Dk), zk)) continue;
+    if (Pk.length > 0) {
+      const kk = Dk && Ek().isStringLiteral(Dk) ? Dk : void 0,
+        Fk = kk ? ns(kk.text, Pk) : void 0,
+        Bk = kk && !sk ? `${ak} has no ${hk} called ${ck=rk,ck.startsWith('"')?ck:`"${ck}"`}.` : `${ak} can't take ${rk} there.`;
+      wk.add(`${Bk}${Fk?` Did you mean ${Fk}?`:" Check Show Docs for what it takes."}`);
       continue
     }
-    if (Lu && cu && Py(Ju.getTypeAtLocation(cu))) {
-      Nu.add(`${Qu} can't take ${gu} there: it takes ${iy(Ju,Lu)}.`);
+    if (zk && Dk && pB(bk.getTypeAtLocation(Dk))) {
+      wk.add(`${ak} can't take ${rk} there: it takes ${KB(bk,zk)}.`);
       continue
     }
-    const hu = Lu && Ju.getNonNullableType(Lu);
-    if (hu && Py(hu) && !Ju.isArrayType(hu) && !Ju.isTupleType(hu)) {
-      const uu = hy(Ju, Lu);
-      Nu.add(`${Qu} needs settings in { } there${uu?`, like ${uu}`:""}, not ${gu}.`);
+    const Zk = zk && bk.getNonNullableType(zk);
+    if (Zk && pB(Zk) && !bk.isArrayType(Zk) && !bk.isTupleType(Zk)) {
+      const kk = ZB(bk, zk);
+      wk.add(`${ak} needs settings in { } there${kk?`, like ${kk}`:""}, not ${rk}.`);
       continue
     }
-    const Pu = null === (Wu = Ru.match(/parameter of type '([^']*)'/)) || void 0 === Wu ? void 0 : Wu[1],
-      iu = Eu.arguments.findIndex((uu => uu.getStart(mu) <= lu.start && lu.start < uu.getEnd())),
-      Yu = null !== (ju = null === (Hu = Ju.getResolvedSignature(Eu)) || void 0 === Hu || null === (du = Hu.parameters[iu]) || void 0 === du ? void 0 : du.name) && void 0 !== ju ? ju : "that part",
-      ou = Ku ? Ju.typeToString(Ju.getTypeAtLocation(Ku)) : "",
-      qu = "number" === ou ? "a number" : "string" === ou ? "text" : "something else";
-    "string" === Pu ? Nu.add(`${Qu} needs ${Yu} as text, but ${gu} is ${qu} here.`) : "number" === Pu ? Nu.add(`${Qu} needs ${Yu} as a number, but ${gu} is ${qu} here.`) : Nu.add(`${Qu} can't take ${gu} there${Lu?`: it takes ${iy(Ju,Lu)}`:". Check Show Docs for what it takes"}.`)
+    const pk = null === (mk = Fk.match(/parameter of type '([^']*)'/)) || void 0 === mk ? void 0 : mk[1],
+      Kk = Rk.arguments.findIndex((kk => kk.getStart(Xk) <= Tk.start && Tk.start < kk.getEnd())),
+      xk = null !== (Wk = null === (vk = bk.getResolvedSignature(Rk)) || void 0 === vk || null === (ik = vk.parameters[Kk]) || void 0 === ik ? void 0 : ik.name) && void 0 !== Wk ? Wk : "that part",
+      jk = tk ? bk.typeToString(bk.getTypeAtLocation(tk)) : "",
+      lk = "number" === jk ? "a number" : "string" === jk ? "text" : "something else";
+    "string" === pk ? wk.add(`${ak} needs ${xk} as text, but ${rk} is ${lk} here.`) : "number" === pk ? wk.add(`${ak} needs ${xk} as a number, but ${rk} is ${lk} here.`) : wk.add(`${ak} can't take ${rk} there${zk?`: it takes ${KB(bk,zk)}`:". Check Show Docs for what it takes"}.`)
   }
-  var su, tu;
-  return [...Nu, ...qy(mu, Ju)]
+  var ck, Gk;
+  return [...wk, ...lB(Xk, bk)]
 }
 
-function qV(uu) {
-  return uu.replace(/^Line \d+ /, "")
+function kV(kk) {
+  return kk.replace(/^Line \d+ /, "")
 }
 
-function OV(uu) {
-  const Ru = new Map;
-  for (const Ku of uu.split("\n")) {
-    var yu;
-    const uu = /^(?:async\s+)?function\s*\*?\s*(\w+)\s*\(|^(\w+)\s*=\s*(?:async\s*)?(?:\([^()]*\)\s*=>|function\b|\w+\s*=>)/.exec(Ku),
-      Qu = null !== (yu = null === uu || void 0 === uu ? void 0 : uu[1]) && void 0 !== yu ? yu : null === uu || void 0 === uu ? void 0 : uu[2];
-    var Eu;
-    if (Qu) Ru.set(Qu, (null !== (Eu = Ru.get(Qu)) && void 0 !== Eu ? Eu : 0) + 1)
+function FV(kk) {
+  const Fk = new Map;
+  for (const tk of kk.split("\n")) {
+    var Bk;
+    const kk = /^(?:async\s+)?function\s*\*?\s*(\w+)\s*\(|^(\w+)\s*=\s*(?:async\s*)?(?:\([^()]*\)\s*=>|function\b|\w+\s*=>)/.exec(tk),
+      ak = null !== (Bk = null === kk || void 0 === kk ? void 0 : kk[1]) && void 0 !== Bk ? Bk : null === kk || void 0 === kk ? void 0 : kk[2];
+    var Rk;
+    if (ak) Fk.set(ak, (null !== (Rk = Fk.get(ak)) && void 0 !== Rk ? Rk : 0) + 1)
   }
-  return [...Ru].flatMap((uu => {
-    let [Ru, yu] = uu;
-    return yu > 1 ? [`${Ru} is in the code ${yu} times, so only the last one runs. Put them together in one ${Ru}.`] : []
+  return [...Fk].flatMap((kk => {
+    let [Fk, Bk] = kk;
+    return Bk > 1 ? [`${Fk} is in the code ${Bk} times, so only the last one runs. Put them together in one ${Fk}.`] : []
   }))
 }
 
-function vV(uu, Ru) {
-  var yu, Eu, Ku, Qu;
-  const mu = Ru.after.split("\n"),
-    Ju = uu => {
-      var Ru, yu;
-      const Eu = null !== (Ru = null === (yu = mu[uu]) || void 0 === yu ? void 0 : yu.trim()) && void 0 !== Ru ? Ru : "";
-      return "" === Eu ? void 0 : {
-        line: uu + 1,
-        text: Eu.length > 50 ? `${Eu.slice(0,47)}...` : Eu
+function BV(kk, Fk) {
+  var Bk, Rk, tk, ak;
+  const Xk = Fk.after.split("\n"),
+    bk = kk => {
+      var Fk, Bk;
+      const Rk = null !== (Fk = null === (Bk = Xk[kk]) || void 0 === Bk ? void 0 : Bk.trim()) && void 0 !== Fk ? Fk : "";
+      return "" === Rk ? void 0 : {
+        line: kk + 1,
+        text: Rk.length > 50 ? `${Rk.slice(0,47)}...` : Rk
       }
     },
-    Nu = /^Line (\d+) /.exec(uu);
-  if (Nu) return Ju(Number(Nu[1]) - 1);
-  const Xu = /^([\w$]+) is in the code \d+ times\b/.exec(uu);
-  if (Xu) {
-    const uu = Xu[1].replaceAll("$", "\\$"),
-      Ru = new RegExp(`^(?:async\\s+)?function\\s*\\*?\\s*${uu}\\s*\\(|^${uu}\\s*=`),
-      yu = mu.findIndex((uu => Ru.test(uu)));
-    return yu >= 0 ? Ju(yu) : void 0
+    wk = /^Line (\d+) /.exec(kk);
+  if (wk) return bk(Number(wk[1]) - 1);
+  const dk = /^([\w$]+) is in the code \d+ times\b/.exec(kk);
+  if (dk) {
+    const kk = dk[1].replaceAll("$", "\\$"),
+      Fk = new RegExp(`^(?:async\\s+)?function\\s*\\*?\\s*${kk}\\s*\\(|^${kk}\\s*=`),
+      Bk = Xk.findIndex((kk => Fk.test(kk)));
+    return Bk >= 0 ? bk(Bk) : void 0
   }
-  const Vu = null !== (yu = null === (Eu = /"([^"]+)"/.exec(uu)) || void 0 === Eu ? void 0 : Eu[1]) && void 0 !== yu ? yu : null === (Ku = /^api\.[\w$]+/.exec(uu)) || void 0 === Ku ? void 0 : Ku[0];
-  if (!Vu) return;
-  const ru = new Set(Ru.before.split("\n")),
-    Bu = mu.flatMap(((uu, Ru) => uu.includes(Vu) ? [Ru] : [])),
-    xu = null !== (Qu = Bu.find((uu => !ru.has(mu[uu])))) && void 0 !== Qu ? Qu : Bu[0];
-  return void 0 === xu ? void 0 : Ju(xu)
+  const sk = null !== (Bk = null === (Rk = /"([^"]+)"/.exec(kk)) || void 0 === Rk ? void 0 : Rk[1]) && void 0 !== Bk ? Bk : null === (tk = /^api\.[\w$]+/.exec(kk)) || void 0 === tk ? void 0 : tk[0];
+  if (!sk) return;
+  const Vk = new Set(Fk.before.split("\n")),
+    Jk = Xk.flatMap(((kk, Fk) => kk.includes(sk) ? [Fk] : [])),
+    Ak = null !== (ak = Jk.find((kk => !Vk.has(Xk[kk])))) && void 0 !== ak ? ak : Jk[0];
+  return void 0 === Ak ? void 0 : bk(Ak)
 }
 
-function aV(uu) {
-  return /^Line \d+ stops all of this code from running: "/.test(uu)
+function RV(kk) {
+  return /^Line \d+ stops all of this code from running: "/.test(kk)
 }
 
-function fV(uu) {
-  return /^Line \d+ (?:stops all of this code from running|never runs): "/.test(uu)
+function tV(kk) {
+  return /^Line \d+ (?:stops all of this code from running|never runs): "/.test(kk)
 }
 
-function ur(uu) {
-  return uu.replace(/^Line \d+ (\w)/, ((uu, Ru) => Ru.toUpperCase()))
+function aV(kk) {
+  return kk.replace(/^Line \d+ (\w)/, ((kk, Fk) => Fk.toUpperCase()))
 }
-const Rr = new Set([eu().SyntaxKind.EqualsToken, eu().SyntaxKind.QuestionQuestionEqualsToken, eu().SyntaxKind.BarBarEqualsToken]);
+const XV = new Set([Ek().SyntaxKind.EqualsToken, Ek().SyntaxKind.QuestionQuestionEqualsToken, Ek().SyntaxKind.BarBarEqualsToken]);
 
-function yr(uu) {
-  const Ru = eu().createSourceFile("worldCode.js", uu, eu().ScriptTarget.Latest, !0, eu().ScriptKind.JS),
-    yu = Ru.statements.flatMap((uu => eu().isVariableStatement(uu) ? uu.declarationList.declarations.filter((uu => eu().isIdentifier(uu.name) && "CONFIG" === uu.name.text)) : [])),
-    Eu = 1 === yu.length ? yu[0].initializer : void 0;
-  if (!Eu || !eu().isObjectLiteralExpression(Eu)) return [];
-  const Ku = new Set;
-  for (const Nu of Eu.properties) {
-    if (!eu().isPropertyAssignment(Nu) && !eu().isShorthandPropertyAssignment(Nu) && !eu().isMethodDeclaration(Nu)) return [];
-    if (eu().isComputedPropertyName(Nu.name)) return [];
-    Ku.add(Nu.name.text)
+function bV(kk) {
+  const Fk = Ek().createSourceFile("worldCode.js", kk, Ek().ScriptTarget.Latest, !0, Ek().ScriptKind.JS),
+    Bk = Fk.statements.flatMap((kk => Ek().isVariableStatement(kk) ? kk.declarationList.declarations.filter((kk => Ek().isIdentifier(kk.name) && "CONFIG" === kk.name.text)) : [])),
+    Rk = 1 === Bk.length ? Bk[0].initializer : void 0;
+  if (!Rk || !Ek().isObjectLiteralExpression(Rk)) return [];
+  const tk = new Set;
+  for (const wk of Rk.properties) {
+    if (!Ek().isPropertyAssignment(wk) && !Ek().isShorthandPropertyAssignment(wk) && !Ek().isMethodDeclaration(wk)) return [];
+    if (Ek().isComputedPropertyName(wk.name)) return [];
+    tk.add(wk.name.text)
   }
-  const Qu = [],
-    mu = uu => {
-      if (eu().isPropertyAccessExpression(uu) && eu().isIdentifier(uu.expression) && "CONFIG" === uu.expression.text) {
-        const yu = uu.name.text,
-          Eu = uu.parent;
-        eu().isBinaryExpression(Eu) && Eu.left === uu && Rr.has(Eu.operatorToken.kind) ? Ku.add(yu) : Qu.push({
-          name: yu,
-          at: uu.getStart(Ru)
+  const ak = [],
+    Xk = kk => {
+      if (Ek().isPropertyAccessExpression(kk) && Ek().isIdentifier(kk.expression) && "CONFIG" === kk.expression.text) {
+        const Bk = kk.name.text,
+          Rk = kk.parent;
+        Ek().isBinaryExpression(Rk) && Rk.left === kk && XV.has(Rk.operatorToken.kind) ? tk.add(Bk) : ak.push({
+          name: Bk,
+          at: kk.getStart(Fk)
         })
       }
-      eu().forEachChild(uu, mu)
+      Ek().forEachChild(kk, Xk)
     };
-  mu(Ru);
-  const Ju = new Set;
-  return Qu.flatMap((uu => {
-    if (Ku.has(uu.name) || Ju.has(uu.name)) return [];
-    Ju.add(uu.name);
-    return [`Line ${Ru.getLineAndCharacterOfPosition(uu.at).line+1} uses "CONFIG.${uu.name}", but CONFIG has no ${uu.name}, so it is undefined there. Add ${uu.name} to CONFIG.`]
+  Xk(Fk);
+  const bk = new Set;
+  return ak.flatMap((kk => {
+    if (tk.has(kk.name) || bk.has(kk.name)) return [];
+    bk.add(kk.name);
+    return [`Line ${Fk.getLineAndCharacterOfPosition(kk.at).line+1} uses "CONFIG.${kk.name}", but CONFIG has no ${kk.name}, so it is undefined there. Add ${kk.name} to CONFIG.`]
   }))
 }
 
-function Er(uu, Ru) {
-  var yu;
-  const Eu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] && !(void 0 !== Ru.path && (0, Su.e)(Ru.path)),
-    Ku = !0 === (null === (yu = Ru.path) || void 0 === yu ? void 0 : yu.endsWith(".ts")),
-    Qu = Ru => [...uu.codeWarnings(Ru, Eu), ...oV(Ru, Eu, Ku), ...OV(Ru), ...yr(Ru)],
-    mu = new Set(Qu(Ru.before).map(qV));
-  return Qu(Ru.after).filter((uu => !mu.has(qV(uu))))
+function wV(kk, Fk) {
+  var Bk;
+  const Rk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] && !(void 0 !== Fk.path && (0, ek.d)(Fk.path)),
+    tk = !0 === (null === (Bk = Fk.path) || void 0 === Bk ? void 0 : Bk.endsWith(".ts")),
+    ak = Fk => [...kk.codeWarnings(Fk, Rk), ...Qs(Fk, Rk, tk), ...FV(Fk), ...bV(Fk)],
+    Xk = new Set(ak(Fk.before).map(kV));
+  return ak(Fk.after).filter((kk => !Xk.has(kV(kk))))
 }
-const Kr = "Looking up";
+const dV = "Looking up";
 
-function Qr(uu) {
+function sV(kk) {
   return {
-    ...uu,
+    ...kk,
     call: void 0
   }
 }
-const mr = 15e3,
-  Jr = new Map;
-const Nr = function(uu) {
-    let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "bloxd_worldCodeAi";
-    if ("undefined" === typeof indexedDB) return uu;
-    let yu = "unknown",
-      Eu = null;
-    const Ku = () => (Eu ??= new Promise(((uu, yu) => {
-        const Ku = indexedDB.open(Ru, 1);
-        Ku.onupgradeneeded = () => {
-          Ku.result.createObjectStore(yX)
-        }, Ku.onsuccess = () => {
-          const Ru = Ku.result;
-          Ru.onversionchange = () => {
-            Ru.close(), Eu = null
-          }, Ru.onclose = () => {
-            Eu = null
-          }, uu(Ru)
-        }, Ku.onerror = () => {
-          var uu;
-          yu(null !== (uu = Ku.error) && void 0 !== uu ? uu : new Error("IndexedDB didn't open"))
-        }, Ku.onblocked = () => {
-          yu(new Error("IndexedDB is blocked"))
+const VV = 15e3,
+  JV = new Map;
+const AV = function(kk) {
+    let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "bloxd_worldCodeAi";
+    if ("undefined" === typeof indexedDB) return kk;
+    let Bk = "unknown",
+      Rk = null;
+    const tk = () => (Rk ??= new Promise(((kk, Bk) => {
+        const tk = indexedDB.open(Fk, 1);
+        tk.onupgradeneeded = () => {
+          tk.result.createObjectStore(td)
+        }, tk.onsuccess = () => {
+          const Fk = tk.result;
+          Fk.onversionchange = () => {
+            Fk.close(), Rk = null
+          }, Fk.onclose = () => {
+            Rk = null
+          }, kk(Fk)
+        }, tk.onerror = () => {
+          var kk;
+          Bk(null !== (kk = tk.error) && void 0 !== kk ? kk : new Error("IndexedDB didn't open"))
+        }, tk.onblocked = () => {
+          Bk(new Error("IndexedDB is blocked"))
         }
-      })).catch((uu => {
-        throw Eu = null, uu
-      })), Eu),
-      Qu = async uu => {
+      })).catch((kk => {
+        throw Rk = null, kk
+      })), Rk),
+      ak = async kk => {
         try {
-          return (await Ku()).transaction(yX, uu)
-        } catch (Ru) {
-          if ("indexedDB" !== yu) throw Ru;
-          return Eu = null, (await Ku()).transaction(yX, uu)
+          return (await tk()).transaction(td, kk)
+        } catch (Fk) {
+          if ("indexedDB" !== Bk) throw Fk;
+          return Rk = null, (await tk()).transaction(td, kk)
         }
-      }, mu = async () => {
-        if ("unknown" === yu) try {
-          await Ku(), yu = "indexedDB"
+      }, Xk = async () => {
+        if ("unknown" === Bk) try {
+          await tk(), Bk = "indexedDB"
         } catch {
-          yu = "fallback"
+          Bk = "fallback"
         }
-        return "indexedDB" === yu
+        return "indexedDB" === Bk
       };
     return {
-      getItem: async Ru => {
-        if (!await mu()) return uu.getItem(Ru);
-        const yu = await (async uu => {
-          const Ru = await Qu("readonly"),
-            yu = Ru.objectStore(yX).get(uu);
-          return await EX(Ru), yu.result
-        })(Ru);
-        return void 0 === yu ? uu.getItem(Ru) : yu
+      getItem: async Fk => {
+        if (!await Xk()) return kk.getItem(Fk);
+        const Bk = await (async kk => {
+          const Fk = await ak("readonly"),
+            Bk = Fk.objectStore(td).get(kk);
+          return await ad(Fk), Bk.result
+        })(Fk);
+        return void 0 === Bk ? kk.getItem(Fk) : Bk
       },
-      setItem: async (Ru, yu) => {
-        if (!await mu()) return uu.setItem(Ru, yu);
+      setItem: async (Fk, Bk) => {
+        if (!await Xk()) return kk.setItem(Fk, Bk);
         try {
-          const uu = await Qu("readwrite");
-          return uu.objectStore(yX).put(yu, Ru), await EX(uu), !0
+          const kk = await ak("readwrite");
+          return kk.objectStore(td).put(Bk, Fk), await ad(kk), !0
         } catch {
           return !1
         }
       },
-      update: async (Ru, yu) => {
-        if (!await mu()) throw new Error("No IndexedDB: read and write localforage instead");
-        const Eu = await uu.getItem(Ru).catch((() => null)),
-          Ku = await Qu("readwrite"),
-          Ju = Ku.objectStore(yX);
-        let Nu;
-        const Xu = Ju.get(Ru);
-        return Xu.onsuccess = () => {
-          Nu = yu(void 0 === Xu.result ? Eu : Xu.result), Ju.put(Nu, Ru)
-        }, await EX(Ku), Nu
+      update: async (Fk, Bk) => {
+        if (!await Xk()) throw new Error("No IndexedDB: read and write localforage instead");
+        const Rk = await kk.getItem(Fk).catch((() => null)),
+          tk = await ak("readwrite"),
+          bk = tk.objectStore(td);
+        let wk;
+        const dk = bk.get(Fk);
+        return dk.onsuccess = () => {
+          wk = Bk(void 0 === dk.result ? Rk : dk.result), bk.put(wk, Fk)
+        }, await ad(tk), wk
       }
     }
-  }(cQ.f),
-  Xr = new class {
-    constructor(uu, Ru) {
-      this.store = uu, this.signal = Ru, this.kx = new Map
+  }(za.f),
+  eV = new class {
+    constructor(kk, Fk) {
+      this.store = kk, this.signal = Fk, this.lA = new Map
     }
-    watch(uu, Ru) {
-      var yu, Eu;
-      return null !== (yu = null === (Eu = this.signal) || void 0 === Eu ? void 0 : Eu.listen((yu => {
-        if (yu !== uu) return;
-        const Eu = this.load(uu).then((async Ru => NX(Ru, await this.read(uu))));
-        this.kx.set(uu, Eu), Eu.then(Ru)
-      }))) && void 0 !== yu ? yu : () => {}
+    watch(kk, Fk) {
+      var Bk, Rk;
+      return null !== (Bk = null === (Rk = this.signal) || void 0 === Rk ? void 0 : Rk.listen((Bk => {
+        if (Bk !== kk) return;
+        const Rk = this.load(kk).then((async Fk => sd(Fk, await this.read(kk))));
+        this.lA.set(kk, Rk), Rk.then(Fk)
+      }))) && void 0 !== Bk ? Bk : () => {}
     }
-    list(uu) {
-      return this.load(uu)
+    list(kk) {
+      return this.load(kk)
     }
-    async add(uu, Ru, yu) {
-      let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Date.now(),
-        Ku = arguments.length > 4 ? arguments[4] : void 0;
-      const Qu = (uu, Qu) => {
-          const mu = NX(uu, Qu),
-            Ju = mu[mu.length - 1];
-          if (Ju && function(uu, Ru) {
-              const yu = Object.keys(uu);
-              return yu.length === Object.keys(Ru).length && yu.every((yu => uu[yu] === Ru[yu]))
-            }(Ju.files, yu)) return mu;
-          const Nu = Math.max(Eu, ...mu.map((uu => uu.id + 1)));
-          return [...mu, {
-            id: Nu,
-            at: Eu,
-            label: Ru,
-            ...Ku ? {
-              did: Ku
+    async add(kk, Fk, Bk) {
+      let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Date.now(),
+        tk = arguments.length > 4 ? arguments[4] : void 0;
+      const ak = (kk, ak) => {
+          const Xk = sd(kk, ak),
+            bk = Xk[Xk.length - 1];
+          if (bk && function(kk, Fk) {
+              const Bk = Object.keys(kk);
+              return Bk.length === Object.keys(Fk).length && Bk.every((Bk => kk[Bk] === Fk[Bk]))
+            }(bk.files, Bk)) return Xk;
+          const wk = Math.max(Rk, ...Xk.map((kk => kk.id + 1)));
+          return [...Xk, {
+            id: wk,
+            at: Rk,
+            label: Fk,
+            ...tk ? {
+              did: tk
             } : {},
             files: {
-              ...yu
+              ...Bk
             }
           }].slice(-30)
         },
-        mu = this.load(uu).then((async Ru => this.save(uu, (uu => Qu(Ru, uu)))));
-      this.kx.set(uu, mu.then((uu => {
+        Xk = this.load(kk).then((async Fk => this.save(kk, (kk => ak(Fk, kk)))));
+      this.lA.set(kk, Xk.then((kk => {
         let {
-          snapshots: Ru
-        } = uu;
-        return Ru
+          snapshots: Fk
+        } = kk;
+        return Fk
       })));
       const {
-        snapshots: Ju,
-        isSaved: Nu
-      } = await mu;
-      var Xu;
-      Nu && (null === (Xu = this.signal) || void 0 === Xu || Xu.post(uu));
-      return Ju
+        snapshots: bk,
+        isSaved: wk
+      } = await Xk;
+      var dk;
+      wk && (null === (dk = this.signal) || void 0 === dk || dk.post(kk));
+      return bk
     }
-    async relabel(uu, Ru, yu) {
-      const Eu = this.load(uu).then((async Eu => this.save(uu, (uu => NX(Eu, uu).map((uu => uu.id === Ru ? {
-        ...uu,
-        label: yu
-      } : uu))))));
-      this.kx.set(uu, Eu.then((uu => {
+    async relabel(kk, Fk, Bk) {
+      const Rk = this.load(kk).then((async Rk => this.save(kk, (kk => sd(Rk, kk).map((kk => kk.id === Fk ? {
+        ...kk,
+        label: Bk
+      } : kk))))));
+      this.lA.set(kk, Rk.then((kk => {
         let {
-          snapshots: Ru
-        } = uu;
-        return Ru
+          snapshots: Fk
+        } = kk;
+        return Fk
       })));
       const {
-        snapshots: Ku,
-        isSaved: Qu
-      } = await Eu;
-      var mu;
-      Qu && (null === (mu = this.signal) || void 0 === mu || mu.post(uu));
-      return Ku
+        snapshots: tk,
+        isSaved: ak
+      } = await Rk;
+      var Xk;
+      ak && (null === (Xk = this.signal) || void 0 === Xk || Xk.post(kk));
+      return tk
     }
-    async save(uu, Ru) {
+    async save(kk, Fk) {
       if (this.store.update) try {
         return {
-          snapshots: await this.store.update(this.storeKey(uu), (uu => Ru(JX(uu) ? uu : null))),
+          snapshots: await this.store.update(this.storeKey(kk), (kk => Fk(dd(kk) ? kk : null))),
           isSaved: !0
         }
       } catch {}
-      const yu = Ru(await this.read(uu));
+      const Bk = Fk(await this.read(kk));
       return {
-        snapshots: yu,
-        isSaved: await this.store.setItem(this.storeKey(uu), yu).catch((() => !1))
+        snapshots: Bk,
+        isSaved: await this.store.setItem(this.storeKey(kk), Bk).catch((() => !1))
       }
     }
-    read(uu) {
-      return this.store.getItem(this.storeKey(uu)).then((uu => JX(uu) ? uu : null)).catch((() => null))
+    read(kk) {
+      return this.store.getItem(this.storeKey(kk)).then((kk => dd(kk) ? kk : null)).catch((() => null))
     }
-    load(uu) {
-      let Ru = this.kx.get(uu);
-      return Ru || (Ru = this.store.getItem(this.storeKey(uu)).then((uu => JX(uu) ? uu : [])).catch((() => [])), this.kx.set(uu, Ru)), Ru
+    load(kk) {
+      let Fk = this.lA.get(kk);
+      return Fk || (Fk = this.store.getItem(this.storeKey(kk)).then((kk => dd(kk) ? kk : [])).catch((() => [])), this.lA.set(kk, Fk)), Fk
     }
-    storeKey(uu) {
-      return `worldCodeAiHistory:${uu}`
+    storeKey(kk) {
+      return `worldCodeAiHistory:${kk}`
     }
-  }(Nr, mX("bloxd-worldCodeAiHistory")),
-  Vr = new class {
-    constructor(uu, Ru) {
-      this.store = uu, this.signal = Ru, this.kx = new Map
+  }(AV, wd("bloxd-worldCodeAiHistory")),
+  yV = new class {
+    constructor(kk, Fk) {
+      this.store = kk, this.signal = Fk, this.lA = new Map
     }
-    watch(uu, Ru) {
-      var yu, Eu;
-      return null !== (yu = null === (Eu = this.signal) || void 0 === Eu ? void 0 : Eu.listen((yu => {
-        if (yu !== uu) return;
-        const Eu = this.load(uu).then((async Ru => {
-          var yu;
-          return null !== (yu = await this.read(uu)) && void 0 !== yu ? yu : Ru
+    watch(kk, Fk) {
+      var Bk, Rk;
+      return null !== (Bk = null === (Rk = this.signal) || void 0 === Rk ? void 0 : Rk.listen((Bk => {
+        if (Bk !== kk) return;
+        const Rk = this.load(kk).then((async Fk => {
+          var Bk;
+          return null !== (Bk = await this.read(kk)) && void 0 !== Bk ? Bk : Fk
         }));
-        this.kx.set(uu, Eu), Eu.then(Ru)
-      }))) && void 0 !== yu ? yu : () => {}
+        this.lA.set(kk, Rk), Rk.then(Fk)
+      }))) && void 0 !== Bk ? Bk : () => {}
     }
-    list(uu) {
-      return this.load(uu)
+    list(kk) {
+      return this.load(kk)
     }
-    add(uu, Ru) {
-      return this.update(uu, (uu => uu.includes(Ru) || uu.length >= 8 ? uu : [...uu, Ru]))
+    add(kk, Fk) {
+      return this.update(kk, (kk => kk.includes(Fk) || kk.length >= 8 ? kk : [...kk, Fk]))
     }
-    remove(uu, Ru) {
-      return this.update(uu, (uu => uu.filter((uu => uu !== Ru))))
+    remove(kk, Fk) {
+      return this.update(kk, (kk => kk.filter((kk => kk !== Fk))))
     }
-    async update(uu, Ru) {
-      var yu;
-      const Eu = this.load(uu).then((async yu => {
-        var Eu;
+    async update(kk, Fk) {
+      var Bk;
+      const Rk = this.load(kk).then((async Bk => {
+        var Rk;
         if (this.store.update) try {
-          return await this.store.update(this.storeKey(uu), (uu => Ru(mR(uu) ? uu.slice(0, 8) : yu)))
+          return await this.store.update(this.storeKey(kk), (kk => Fk(bF(kk) ? kk.slice(0, 8) : Bk)))
         } catch {}
-        const Ku = Ru(null !== (Eu = await this.read(uu)) && void 0 !== Eu ? Eu : yu);
-        return await this.store.setItem(this.storeKey(uu), Ku).catch((() => !1)), Ku
+        const tk = Fk(null !== (Rk = await this.read(kk)) && void 0 !== Rk ? Rk : Bk);
+        return await this.store.setItem(this.storeKey(kk), tk).catch((() => !1)), tk
       }));
-      this.kx.set(uu, Eu);
-      const Ku = await Eu;
-      return null === (yu = this.signal) || void 0 === yu || yu.post(uu), Ku
+      this.lA.set(kk, Rk);
+      const tk = await Rk;
+      return null === (Bk = this.signal) || void 0 === Bk || Bk.post(kk), tk
     }
-    read(uu) {
-      return this.store.getItem(this.storeKey(uu)).then((uu => mR(uu) ? uu.slice(0, 8) : null)).catch((() => null))
+    read(kk) {
+      return this.store.getItem(this.storeKey(kk)).then((kk => bF(kk) ? kk.slice(0, 8) : null)).catch((() => null))
     }
-    load(uu) {
-      let Ru = this.kx.get(uu);
-      return Ru || (Ru = this.read(uu).then((uu => null !== uu && void 0 !== uu ? uu : [])), this.kx.set(uu, Ru)), Ru
+    load(kk) {
+      let Fk = this.lA.get(kk);
+      return Fk || (Fk = this.read(kk).then((kk => null !== kk && void 0 !== kk ? kk : [])), this.lA.set(kk, Fk)), Fk
     }
-    storeKey(uu) {
-      return `worldCodeAiNotes:${uu}`
+    storeKey(kk) {
+      return `worldCodeAiNotes:${kk}`
     }
-  }(Nr, mX("bloxd-worldCodeAiNotes"));
-const rr = ["Next in line", "2nd in line", "3rd in line"];
-let Br = null;
+  }(AV, wd("bloxd-worldCodeAiNotes"));
+const fV = ["Next in line", "2nd in line", "3rd in line"];
+let mV = null;
 
-function xr() {
-  if (!Br) {
-    var uu, Ru, yu, Eu;
-    const Ku = uu => xu.c.find((Ru => Ru.id === uu)),
-      Qu = uu => {
-        var Ru, yu;
-        return null !== (Ru = null === (yu = Ku(uu)) || void 0 === yu ? void 0 : yu.content) && void 0 !== Ru ? Ru : ""
+function WV() {
+  if (!mV) {
+    var kk, Fk, Bk, Rk;
+    const tk = kk => Ak.e.find((Fk => Fk.id === kk)),
+      ak = kk => {
+        var Fk, Bk;
+        return null !== (Fk = null === (Bk = tk(kk)) || void 0 === Bk ? void 0 : Bk.content) && void 0 !== Fk ? Fk : ""
       };
-    Br = new vJ({
-      apiReference: Qu("apiReference"),
-      callbacks: Qu("callbacks"),
-      clientOptions: Qu("clientOptions"),
-      snippets: Qu("snippets"),
-      howTo: Qu("howTo"),
-      itemNames: null !== (uu = null === (Ru = Ku("itemNames")) || void 0 === Ru ? void 0 : Ru.raw) && void 0 !== uu ? uu : "",
-      blockNames: null !== (yu = null === (Eu = Ku("blockNames")) || void 0 === Eu ? void 0 : Eu.raw) && void 0 !== yu ? yu : "",
-      mobSettings: Qu("mobSettings")
+    mV = new Ib({
+      apiReference: ak("apiReference"),
+      callbacks: ak("callbacks"),
+      clientOptions: ak("clientOptions"),
+      snippets: ak("snippets"),
+      howTo: ak("howTo"),
+      itemNames: null !== (kk = null === (Fk = tk("itemNames")) || void 0 === Fk ? void 0 : Fk.raw) && void 0 !== kk ? kk : "",
+      blockNames: null !== (Bk = null === (Rk = tk("blockNames")) || void 0 === Rk ? void 0 : Rk.raw) && void 0 !== Bk ? Bk : "",
+      mobSettings: ak("mobSettings")
     })
   }
-  return Br
+  return mV
 }
-const Sr = ["Welcome players when they join", "Give everyone a sword when they join", "Make a /spawn command", "Show a timer on the screen"],
-  pr = ["Give me a diamond sword", "Teleport me onto this block", "Make me jump really high", "Tell everyone I clicked it"],
-  Tr = ["Explain these changes", "Make it simpler"],
-  Wr = ["Make the change"],
-  jr = ["Explain how it works", "Add a sound or effect", "Make it harder to play"],
-  Hr = ["It didn't work: nothing happened in my world.", "It didn't work: an error showed up.", "It didn't work: it did something different from what I asked."];
+const vV = ["Welcome players when they join", "Give everyone a sword when they join", "Make a /spawn command", "Show a timer on the screen"],
+  iV = ["Give me a diamond sword", "Teleport me onto this block", "Make me jump really high", "Tell everyone I clicked it"],
+  YV = ["Explain these changes", "Make it simpler"],
+  oV = ["Make the change"],
+  LV = ["Explain how it works", "Add a sound or effect", "Make it harder to play"],
+  OV = ["It didn't work: nothing happened in my world.", "It didn't work: an error showed up.", "It didn't work: it did something different from what I asked."];
 
-function dr(uu) {
+function EV(kk) {
   let {
-    requests: Ru,
-    onPick: yu
-  } = uu;
-  const Ku = (0, Eu.useRef)(null);
-  var Qu;
-  return Qu = Ku, (0, Eu.useLayoutEffect)((() => {
-    const uu = Qu.current,
-      Ru = null === uu || void 0 === uu ? void 0 : uu.closest(".WorldCodeAiMessages");
-    if (!uu || !Ru) return;
-    const yu = () => {
-      const yu = Ru.getBoundingClientRect().bottom;
-      for (const Ru of Array.from(uu.children)) {
-        const uu = Ru.getBoundingClientRect();
-        Ru.style.visibility = uu.top < yu && uu.bottom > yu + 1 ? "hidden" : ""
+    requests: Fk,
+    onPick: Bk
+  } = kk;
+  const tk = (0, Rk.useRef)(null);
+  var ak;
+  return ak = tk, (0, Rk.useLayoutEffect)((() => {
+    const kk = ak.current,
+      Fk = null === kk || void 0 === kk ? void 0 : kk.closest(".WorldCodeAiMessages");
+    if (!kk || !Fk) return;
+    const Bk = () => {
+      const Bk = Fk.getBoundingClientRect().bottom;
+      for (const Fk of Array.from(kk.children)) {
+        const kk = Fk.getBoundingClientRect();
+        Fk.style.visibility = kk.top < Bk && kk.bottom > Bk + 1 ? "hidden" : ""
       }
     };
-    yu(), Ru.addEventListener("scroll", yu, {
+    Bk(), Fk.addEventListener("scroll", Bk, {
       passive: !0
     });
-    const Eu = "function" === typeof ResizeObserver ? new ResizeObserver(yu) : null;
-    return null === Eu || void 0 === Eu || Eu.observe(Ru), null === Eu || void 0 === Eu || Eu.observe(uu), () => {
-      Ru.removeEventListener("scroll", yu), null === Eu || void 0 === Eu || Eu.disconnect()
+    const Rk = "function" === typeof ResizeObserver ? new ResizeObserver(Bk) : null;
+    return null === Rk || void 0 === Rk || Rk.observe(Fk), null === Rk || void 0 === Rk || Rk.observe(kk), () => {
+      Fk.removeEventListener("scroll", Bk), null === Rk || void 0 === Rk || Rk.disconnect()
     }
-  }), [Qu]), (0, mu.jsx)("div", {
-    ref: Ku,
+  }), [ak]), (0, Xk.jsx)("div", {
+    ref: tk,
     className: "WorldCodeAiChips WorldCodeAiFollowUps",
-    children: Ru.map((uu => (0, Eu.createElement)("button", {
-      ...pN.f,
-      key: uu,
+    children: Fk.map((kk => (0, Rk.createElement)("button", {
+      ...fw.h,
+      key: kk,
       className: "WorldCodeAiChip",
       onClick: () => {
-        yu(uu)
+        Bk(kk)
       }
-    }, function(uu) {
-      const Ru = uu.replace(/^It didn't work: /, "").replace(/\.$/, "");
-      return Ru.charAt(0).toUpperCase() + Ru.slice(1)
-    }(uu))))
+    }, function(kk) {
+      const Fk = kk.replace(/^It didn't work: /, "").replace(/\.$/, "");
+      return Fk.charAt(0).toUpperCase() + Fk.slice(1)
+    }(kk))))
   })
 }
 
-function br(uu) {
+function SV(kk) {
   let {
-    useFree: Ru,
-    retryOf: yu,
-    isAutoFix: Eu,
-    lookupOf: Ku
-  } = uu;
-  return !0 !== Ru && (void 0 !== yu || !0 !== Eu && void 0 === Ku)
+    useFree: Fk,
+    retryOf: Bk,
+    isAutoFix: Rk,
+    lookupOf: tk
+  } = kk;
+  return !0 !== Fk && (void 0 !== Bk || !0 !== Rk && void 0 === tk)
 }
 
-function Cr() {
+function NV() {
   return "The world's blocks can't be seen from here."
 }
 
-function kr() {
+function HV() {
   return "The world can't be seen from here."
 }
-const er = "Try the missing change again",
-  Ar = 1e4,
-  Dr = "I can only help with your game's code. Try asking about something in your world.";
+const uV = "Try the missing change again",
+  MV = 1e4,
+  gV = "I can only help with your game's code. Try asking about something in your world.";
 
-function Mr(uu) {
-  return uu ? "Apply this change first, then press Switch to World Code." : "Apply this change first, then ask me again to go to World Code."
+function UV(kk) {
+  return kk ? "Apply this change first, then press Switch to World Code." : "Apply this change first, then ask me again to go to World Code."
 }
-const Ir = 1500;
+const cV = 1500;
 
-function Gr(uu, Ru) {
-  var yu;
-  return Object.entries(null !== (yu = uu.leftFiles) && void 0 !== yu ? yu : {}).every((uu => {
-    var yu;
-    let [Eu, Ku] = uu;
-    return (null !== (yu = Ru[Eu]) && void 0 !== yu ? yu : "") === Ku
+function GV(kk, Fk) {
+  var Bk;
+  return Object.entries(null !== (Bk = kk.leftFiles) && void 0 !== Bk ? Bk : {}).every((kk => {
+    var Bk;
+    let [Rk, tk] = kk;
+    return (null !== (Bk = Fk[Rk]) && void 0 !== Bk ? Bk : "") === tk
   }))
 }
-const Ur = "Check your code: go through my request part by part and play it in your head as each player, from the start: what do they see and when, and what happens the first time, the last time, and with things that shouldn't count? Only something that stops my request working is wrong: keep everything else as it is (numbers, starting values, how it works) and add no new rules or limits. If anything is wrong, send the fixed file, after playing the normal case through once more with your change. If it's all right, say in one sentence that you played it through and found no mistakes, that they should still try it in their world because you can miss things, and send no file.";
+const TV = "Check your code: go through my request part by part and play it in your head as each player, from the start: what do they see and when, and what happens the first time, the last time, and with things that shouldn't count? Only something that stops my request working is wrong: keep everything else as it is (numbers, starting values, how it works) and add no new rules or limits. If anything is wrong, send the fixed file, after playing the normal case through once more with your change. If it's all right, say in one sentence that you played it through and found no mistakes, that they should still try it in their world because you can miss things, and send no file.";
 
-function nr(uu) {
-  var Ru, yu, Ku, Nu, Xu, Vu, ru, Bu;
+function rV(kk) {
+  var Fk, Bk, tk, wk, dk, sk, Vk, Jk;
   let {
-    entry: xu,
-    isOutOfDate: Su = !1,
-    canEdit: pu,
-    onApply: Tu,
-    onUndo: Wu,
-    onTryIt: ju,
-    isLatest: Hu,
-    canUndo: du,
-    onFixWarnings: bu,
-    onCheck: Cu,
-    busy: ku,
-    checkPicked: eu,
-    onPickedChange: Au,
-    request: Du,
-    elsewhere: Mu,
-    defaultOpen: Iu
-  } = uu;
-  const Gu = "offered" === xu.status && Su ? "stale" : xu.status,
-    [Uu, nu] = (0, Eu.useState)(Iu),
-    [su, tu] = (0, Eu.useState)(!1),
-    lu = null !== (Ru = xu.warnings) && void 0 !== Ru ? Ru : [],
-    gu = Hu && ("offered" === Gu || "applied" === Gu) && pu && lu.length > 0 && !xu.warningsSentBack,
-    cu = "applied" === Gu,
-    Lu = null !== (yu = null === (Ku = xu.swappedTo) || void 0 === Ku ? void 0 : Ku[0]) && void 0 !== yu ? yu : gu ? null !== (Nu = null === (Xu = /"([^"]+)"/.exec(lu[0])) || void 0 === Xu ? void 0 : Xu[1]) && void 0 !== Nu ? Nu : null === (Vu = /^api\.[\w$]+/.exec(lu[0])) || void 0 === Vu ? void 0 : Vu[0] : void 0,
-    zu = lu.every((uu => /never true|no block is ever called that/.test(uu))),
-    Fu = (0, Eu.useMemo)((() => {
-      var uu;
-      const [Ru] = xu.changes;
-      return new Map((null !== (uu = xu.warnings) && void 0 !== uu ? uu : []).map((uu => [uu, 1 === xu.changes.length && Ru ? vV(uu, Ru) : void 0])))
-    }), [xu.warnings, xu.changes]),
-    wu = 1 === lu.length ? Fu.get(lu[0]) : void 0,
-    [Zu, hu] = (0, Eu.useState)(new Set),
-    Pu = Zu.size > 0;
-  (0, Eu.useEffect)((() => {
-    null === Au || void 0 === Au || Au(Pu)
-  }), [Pu, Au]), (0, Eu.useEffect)((() => {
-    hu((uu => 0 === uu.size ? uu : new Set))
-  }), [xu.changes]);
-  const iu = "offered" === Gu && pu && xu.id >= 0,
-    Yu = (0, Eu.useMemo)((() => new Map(xu.changes.map((uu => [uu.path, RV(uu, Du)])))), [xu.changes, Du]),
-    ou = [...Yu.values()].reduce(((uu, Ru) => uu + Ru.length), 0),
-    qu = iu && ou >= 2,
-    [Ou, vu] = (0, Eu.useState)(!1),
-    au = "applied" === Gu && ou >= 2,
-    fu = ou - Zu.size,
-    uR = (0, Eu.useMemo)((() => {
-      if (0 !== Zu.size) return xu.changes.flatMap((uu => {
-        var Ru;
-        const yu = new Set((null !== (Ru = Yu.get(uu.path)) && void 0 !== Ru ? Ru : []).filter((Ru => !Zu.has(`${uu.path}:${Ru.index}`))).map((uu => uu.index))),
-          Eu = function(uu, Ru) {
-            const yu = PX(uu.before, uu.after),
-              Eu = yu.flatMap((uu => "same" === uu.kind ? [uu.text] : Ru.has(uu.index) ? uu.added : uu.removed));
-            if (0 === Eu.length) return "";
-            const Ku = (yu.every((uu => "same" === uu.kind || Ru.has(uu.index))) ? uu.after : uu.before).endsWith("\n") ? "\n" : "";
-            return `${Eu.join("\n")}${Ku}`
-          }(uu, yu);
-        return Eu === uu.before ? [] : [{
-          ...uu,
-          after: Eu
+    entry: Ak,
+    isOutOfDate: ek = !1,
+    canEdit: yk,
+    onApply: fk,
+    onUndo: mk,
+    onTryIt: Wk,
+    isLatest: vk,
+    canUndo: ik,
+    onFixWarnings: Yk,
+    onCheck: Lk,
+    busy: Ok,
+    checkPicked: Ek,
+    onPickedChange: Sk,
+    request: Nk,
+    elsewhere: Hk,
+    defaultOpen: uk
+  } = kk;
+  const Mk = "offered" === Ak.status && ek ? "stale" : Ak.status,
+    [gk, Uk] = (0, Rk.useState)(uk),
+    [ck, Gk] = (0, Rk.useState)(!1),
+    Tk = null !== (Fk = Ak.warnings) && void 0 !== Fk ? Fk : [],
+    rk = vk && ("offered" === Mk || "applied" === Mk) && yk && Tk.length > 0 && !Ak.warningsSentBack,
+    Dk = "applied" === Mk,
+    zk = null !== (Bk = null === (tk = Ak.swappedTo) || void 0 === tk ? void 0 : tk[0]) && void 0 !== Bk ? Bk : rk ? null !== (wk = null === (dk = /"([^"]+)"/.exec(Tk[0])) || void 0 === dk ? void 0 : dk[1]) && void 0 !== wk ? wk : null === (sk = /^api\.[\w$]+/.exec(Tk[0])) || void 0 === sk ? void 0 : sk[0] : void 0,
+    Pk = Tk.every((kk => /never true|no block is ever called that/.test(kk))),
+    hk = (0, Rk.useMemo)((() => {
+      var kk;
+      const [Fk] = Ak.changes;
+      return new Map((null !== (kk = Ak.warnings) && void 0 !== kk ? kk : []).map((kk => [kk, 1 === Ak.changes.length && Fk ? BV(kk, Fk) : void 0])))
+    }), [Ak.warnings, Ak.changes]),
+    qk = 1 === Tk.length ? hk.get(Tk[0]) : void 0,
+    [Ck, Zk] = (0, Rk.useState)(new Set),
+    pk = Ck.size > 0;
+  (0, Rk.useEffect)((() => {
+    null === Sk || void 0 === Sk || Sk(pk)
+  }), [pk, Sk]), (0, Rk.useEffect)((() => {
+    Zk((kk => 0 === kk.size ? kk : new Set))
+  }), [Ak.changes]);
+  const Kk = "offered" === Mk && yk && Ak.id >= 0,
+    xk = (0, Rk.useMemo)((() => new Map(Ak.changes.map((kk => [kk.path, ts(kk, Nk)])))), [Ak.changes, Nk]),
+    jk = [...xk.values()].reduce(((kk, Fk) => kk + Fk.length), 0),
+    lk = Kk && jk >= 2,
+    [nk, Ik] = (0, Rk.useState)(!1),
+    Qk = "applied" === Mk && jk >= 2,
+    kF = jk - Ck.size,
+    FF = (0, Rk.useMemo)((() => {
+      if (0 !== Ck.size) return Ak.changes.flatMap((kk => {
+        var Fk;
+        const Bk = new Set((null !== (Fk = xk.get(kk.path)) && void 0 !== Fk ? Fk : []).filter((Fk => !Ck.has(`${kk.path}:${Fk.index}`))).map((kk => kk.index))),
+          Rk = function(kk, Fk) {
+            const Bk = xd(kk.before, kk.after),
+              Rk = Bk.flatMap((kk => "same" === kk.kind ? [kk.text] : Fk.has(kk.index) ? kk.added : kk.removed));
+            if (0 === Rk.length) return "";
+            const tk = (Bk.every((kk => "same" === kk.kind || Fk.has(kk.index))) ? kk.after : kk.before).endsWith("\n") ? "\n" : "";
+            return `${Rk.join("\n")}${tk}`
+          }(kk, Bk);
+        return Rk === kk.before ? [] : [{
+          ...kk,
+          after: Rk
         }]
       }))
-    }), [xu.changes, Yu, Zu]),
-    RR = (0, Eu.useMemo)((() => uR && eu ? eu(uR) : []), [uR, eu]);
-  (0, Eu.useEffect)((() => {
-    "applied" === Gu && nu(!1)
-  }), [Gu]);
-  const yR = !!xu.editedInPlace;
-  (0, Eu.useEffect)((() => {
-    yR || "offered" !== xu.status || nu(!0)
-  }), [yR, xu.status]);
-  const ER = xu.changes.map((uu => uu.path)).join(", "),
-    KR = !yR || gu || RR.length > 0 || "undone" === Gu || "stale" === Gu;
-  return (0, mu.jsxs)("div", {
+    }), [Ak.changes, xk, Ck]),
+    BF = (0, Rk.useMemo)((() => FF && Ek ? Ek(FF) : []), [FF, Ek]);
+  (0, Rk.useEffect)((() => {
+    "applied" === Mk && Uk(!1)
+  }), [Mk]);
+  const RF = !!Ak.editedInPlace;
+  (0, Rk.useEffect)((() => {
+    RF || "offered" !== Ak.status || Uk(!0)
+  }), [RF, Ak.status]);
+  const tF = Ak.changes.map((kk => kk.path)).join(", "),
+    aF = !RF || rk || BF.length > 0 || "undone" === Mk || "stale" === Mk;
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiToolCard",
-    children: [(0, mu.jsx)(Ju, {
+    children: [(0, Xk.jsx)(bk, {
       className: "WorldCodeAiChangeLog",
-      title: yR ? `Editing code: ${ER}` : `Code change: ${ER}`,
+      title: RF ? `Editing code: ${tF}` : `Code change: ${tF}`,
       isCalm: !0,
-      isElsewhere: !!Mu,
-      isOpen: Uu,
-      onToggle: nu,
-      children: (0, mu.jsx)("div", {
+      isElsewhere: !!Hk,
+      isOpen: gk,
+      onToggle: Uk,
+      children: (0, Xk.jsx)("div", {
         className: "WorldCodeAiChanges",
-        children: xu.changes.map((uu => {
-          var Ru, yu;
+        children: Ak.changes.map((kk => {
+          var Fk, Bk;
           const {
-            added: Eu,
-            removed: Ku
-          } = function(uu) {
-            let Ru = 0,
-              yu = 0;
-            for (const Eu of YE(uu.before, uu.after)) "added" === Eu.kind ? Ru++ : "removed" === Eu.kind && yu++;
+            added: Rk,
+            removed: tk
+          } = function(kk) {
+            let Fk = 0,
+              Bk = 0;
+            for (const Rk of xR(kk.before, kk.after)) "added" === Rk.kind ? Fk++ : "removed" === Rk.kind && Bk++;
             return {
-              added: Ru,
-              removed: yu
+              added: Fk,
+              removed: Bk
             }
-          }(uR ? null !== (Ru = uR.find((Ru => Ru.path === uu.path))) && void 0 !== Ru ? Ru : {
-            ...uu,
-            after: uu.before
-          } : uu), Qu = null !== (yu = Yu.get(uu.path)) && void 0 !== yu ? yu : [], Ju = "offered" !== Gu && "applied" !== Gu || "" === uu.before ? [] : function(uu, Ru) {
-            const yu = UX(Ru);
-            return [...UX(uu)].filter((uu => !yu.has(uu)))
-          }(uu.before, uu.after);
-          return (0, mu.jsxs)("div", {
+          }(FF ? null !== (Fk = FF.find((Fk => Fk.path === kk.path))) && void 0 !== Fk ? Fk : {
+            ...kk,
+            after: kk.before
+          } : kk), ak = null !== (Bk = xk.get(kk.path)) && void 0 !== Bk ? Bk : [], bk = "offered" !== Mk && "applied" !== Mk || "" === kk.before ? [] : function(kk, Fk) {
+            const Bk = cd(Fk);
+            return [...cd(kk)].filter((kk => !Bk.has(kk)))
+          }(kk.before, kk.after);
+          return (0, Xk.jsxs)("div", {
             className: "WorldCodeAiChange",
-            children: [(0, mu.jsxs)("div", {
+            children: [(0, Xk.jsxs)("div", {
               className: "WorldCodeAiChangeHeader",
-              children: [(0, mu.jsx)("span", {
+              children: [(0, Xk.jsx)("span", {
                 className: "WorldCodeAiChangePath",
-                children: uu.path
-              }), Eu > 0 && (0, mu.jsx)("span", {
+                children: kk.path
+              }), Rk > 0 && (0, Xk.jsx)("span", {
                 className: "WorldCodeAiAdded",
-                children: 1 === Eu ? "1 line added" : `${Eu} lines added`
-              }), Ku > 0 && (0, mu.jsxs)("span", {
+                children: 1 === Rk ? "1 line added" : `${Rk} lines added`
+              }), tk > 0 && (0, Xk.jsxs)("span", {
                 className: "WorldCodeAiRemoved",
-                children: [Ku, " removed"]
+                children: [tk, " removed"]
               })]
-            }), qu && (0, mu.jsx)("ul", {
+            }), lk && (0, Xk.jsx)("ul", {
               className: "WorldCodeAiHunks",
-              children: Qu.map((Ru => {
-                const yu = `${uu.path}:${Ru.index}`,
-                  Eu = [Ru.added.length > 0 ? `+${Ru.added.length}` : "", Ru.removed.length > 0 ? `\u2212${Ru.removed.length}` : ""].filter(Boolean).join(" "),
-                  Ku = [Ru.added.length > 0 ? `${Ru.added.length} ${1===Ru.added.length?"line":"lines"} added` : "", Ru.removed.length > 0 ? `${Ru.removed.length} taken out` : ""].filter(Boolean).join(", ");
-                return (0, mu.jsx)("li", {
-                  children: (0, mu.jsxs)("label", {
-                    children: [(0, mu.jsx)("input", {
+              children: ak.map((Fk => {
+                const Bk = `${kk.path}:${Fk.index}`,
+                  Rk = [Fk.added.length > 0 ? `+${Fk.added.length}` : "", Fk.removed.length > 0 ? `\u2212${Fk.removed.length}` : ""].filter(Boolean).join(" "),
+                  tk = [Fk.added.length > 0 ? `${Fk.added.length} ${1===Fk.added.length?"line":"lines"} added` : "", Fk.removed.length > 0 ? `${Fk.removed.length} taken out` : ""].filter(Boolean).join(", ");
+                return (0, Xk.jsx)("li", {
+                  children: (0, Xk.jsxs)("label", {
+                    children: [(0, Xk.jsx)("input", {
                       type: "checkbox",
-                      checked: !Zu.has(yu),
-                      onChange: uu => {
-                        const Ru = new Set(Zu);
-                        uu.target.checked ? Ru.delete(yu) : Ru.add(yu), hu(Ru)
+                      checked: !Ck.has(Bk),
+                      onChange: kk => {
+                        const Fk = new Set(Ck);
+                        kk.target.checked ? Fk.delete(Bk) : Fk.add(Bk), Zk(Fk)
                       }
-                    }), (0, mu.jsxs)("span", {
-                      children: [Ru.also && (0, mu.jsx)("span", {
+                    }), (0, Xk.jsxs)("span", {
+                      children: [Fk.also && (0, Xk.jsx)("span", {
                         className: "WorldCodeAiHunkAlso",
                         title: "You didn't ask for this. Untick it to leave it out.",
-                        children: "adds" === Ru.also ? "Also adds" : "changes" === Ru.also ? "Also changes" : "Also takes out"
-                      }), Ru.label, Ru.codeNames.length > 0 && (0, mu.jsx)("code", {
+                        children: "adds" === Fk.also ? "Also adds" : "changes" === Fk.also ? "Also changes" : "Also takes out"
+                      }), Fk.label, Fk.codeNames.length > 0 && (0, Xk.jsx)("code", {
                         className: "WorldCodeAiHunkCode",
-                        children: Ru.codeNames.join(", ")
-                      }), Ru.detail && (0, mu.jsx)("span", {
+                        children: Fk.codeNames.join(", ")
+                      }), Fk.detail && (0, Xk.jsx)("span", {
                         className: "WorldCodeAiHunkDetail",
-                        children: Ru.detail
+                        children: Fk.detail
                       })]
-                    }), (0, mu.jsx)("span", {
+                    }), (0, Xk.jsx)("span", {
                       className: "WorldCodeAiHunkCount",
-                      title: Ku,
-                      "aria-label": Ku,
-                      children: `${Eu} ${Ru.added.length+Ru.removed.length===1?"line":"lines"}`
+                      title: tk,
+                      "aria-label": tk,
+                      children: `${Rk} ${Fk.added.length+Fk.removed.length===1?"line":"lines"}`
                     })]
                   })
-                }, yu)
+                }, Bk)
               }))
-            }), qu && (Qu.some((uu => void 0 !== uu.also)) ? (0, mu.jsx)("p", {
+            }), lk && (ak.some((kk => void 0 !== kk.also)) ? (0, Xk.jsx)("p", {
               className: "WorldCodeAiHint WorldCodeAiHunksHint",
               children: 'You didn\'t ask for the parts marked "Also". Untick one to leave it out.'
-            }) : Qu.some((uu => uu.takesOut.length > 0 || 0 === uu.added.length)) && (0, mu.jsx)("p", {
+            }) : ak.some((kk => kk.takesOut.length > 0 || 0 === kk.added.length)) && (0, Xk.jsx)("p", {
               className: "WorldCodeAiHint WorldCodeAiHunksHint",
               children: "Untick a part to keep that bit of your code as it is."
-            })), au && Qu.length >= 2 && (0, mu.jsx)("button", {
+            })), Qk && ak.length >= 2 && (0, Xk.jsx)("button", {
               className: "WorldCodeAiLinkButton WorldCodeAiPartsToggle",
               onClick: () => {
-                vu(!Ou)
+                Ik(!nk)
               },
-              children: Ou ? `Hide the ${Qu.length} parts` : `Show the ${Qu.length} parts that went in`
-            }), au && Ou && (0, mu.jsx)("ul", {
+              children: nk ? `Hide the ${ak.length} parts` : `Show the ${ak.length} parts that went in`
+            }), Qk && nk && (0, Xk.jsx)("ul", {
               className: "WorldCodeAiHunks WorldCodeAiHunks-done",
-              children: Qu.map((Ru => (0, mu.jsx)("li", {
-                children: (0, mu.jsxs)("span", {
-                  children: [Ru.label, Ru.codeNames.length > 0 && (0, mu.jsx)("code", {
+              children: ak.map((Fk => (0, Xk.jsx)("li", {
+                children: (0, Xk.jsxs)("span", {
+                  children: [Fk.label, Fk.codeNames.length > 0 && (0, Xk.jsx)("code", {
                     className: "WorldCodeAiHunkCode",
-                    children: Ru.codeNames.join(", ")
-                  }), Ru.detail && (0, mu.jsx)("span", {
+                    children: Fk.codeNames.join(", ")
+                  }), Fk.detail && (0, Xk.jsx)("span", {
                     className: "WorldCodeAiHunkDetail",
-                    children: Ru.detail
+                    children: Fk.detail
                   })]
                 })
-              }, `${uu.path}:${Ru.index}`)))
-            }), uu.why && !qu && !(au && Ou) && (0, mu.jsx)("ul", {
+              }, `${kk.path}:${Fk.index}`)))
+            }), kk.why && !lk && !(Qk && nk) && (0, Xk.jsx)("ul", {
               className: "WorldCodeAiChangeWhy",
-              children: uu.why.map((uu => (0, mu.jsx)("li", {
-                children: uu.charAt(0).toUpperCase() + uu.slice(1)
-              }, uu)))
-            }), Ju.length > 0 && !(qu && Ju.every((uu => Qu.some((Ru => Ru.takesOut.includes(uu)))))) && (0, mu.jsxs)("p", {
+              children: kk.why.map((kk => (0, Xk.jsx)("li", {
+                children: kk.charAt(0).toUpperCase() + kk.slice(1)
+              }, kk)))
+            }), bk.length > 0 && !(lk && bk.every((kk => ak.some((Fk => Fk.takesOut.includes(kk)))))) && (0, Xk.jsxs)("p", {
               className: "WorldCodeAiChangeTakenOut",
-              children: ["applied" === Gu ? "It took out " : "It also takes out ", Ju.slice(0, 6).map((uu => {
-                var Ru;
-                const yu = null !== (Ru = LX(uu)) && void 0 !== Ru ? Ru : vX(uu);
-                return yu.charAt(0).toLowerCase() + yu.slice(1)
-              })).join(", "), Ju.length > 6 ? ` and ${Ju.length-6} more` : "", ".", " ", (0, mu.jsx)("code", {
+              children: ["applied" === Mk ? "It took out " : "It also takes out ", bk.slice(0, 6).map((kk => {
+                var Fk;
+                const Bk = null !== (Fk = hd(kk)) && void 0 !== Fk ? Fk : ks(kk);
+                return Bk.charAt(0).toLowerCase() + Bk.slice(1)
+              })).join(", "), bk.length > 6 ? ` and ${bk.length-6} more` : "", ".", " ", (0, Xk.jsx)("code", {
                 className: "WorldCodeAiHunkCode",
-                children: Ju.slice(0, 6).join(", ")
+                children: bk.slice(0, 6).join(", ")
               })]
-            }), (0, mu.jsx)(QX, {
-              change: uu,
-              marked: Lu
+            }), (0, Xk.jsx)(bd, {
+              change: kk,
+              marked: zk
             })]
-          }, uu.path)
+          }, kk.path)
         }))
       })
-    }), KR && (0, mu.jsxs)("div", {
-      className: Qu()("WorldCodeAiChangeActions", Hu && "WorldCodeAiChangeActions-sticky"),
-      children: [RR.length > 0 && (0, mu.jsxs)("div", {
+    }), aF && (0, Xk.jsxs)("div", {
+      className: ak()("WorldCodeAiChangeActions", vk && "WorldCodeAiChangeActions-sticky"),
+      children: [BF.length > 0 && (0, Xk.jsxs)("div", {
         className: "WorldCodeAiWarning",
-        children: [(0, mu.jsx)("p", {
+        children: [(0, Xk.jsx)("p", {
           className: "WorldCodeAiWarningTitle",
           children: "Leaving that part out breaks this:"
-        }), (0, mu.jsx)("p", {
-          children: RR[0]
+        }), (0, Xk.jsx)("p", {
+          children: BF[0]
         })]
-      }), gu && (0, mu.jsxs)("div", {
+      }), rk && (0, Xk.jsxs)("div", {
         className: "WorldCodeAiWarning",
-        children: [(0, mu.jsx)("p", {
+        children: [(0, Xk.jsx)("p", {
           className: "WorldCodeAiWarningTitle",
-          children: zu ? 1 === lu.length ? `${wu?`Line ${wu.line}`:"This line"} ${cu?"will":"would"} never work:` : `${lu.length} lines ${cu?"will":"would"} never work:` : 1 === lu.length ? `${wu?`Line ${wu.line}`:"This line"} ${cu?"will":"would"} break:` : `${lu.length} lines ${cu?"will":"would"} break:`
-        }), (su ? lu : lu.slice(0, 1)).map((uu => {
-          const Ru = Fu.get(uu);
-          return (0, mu.jsxs)(Eu.Fragment, {
-            children: [Ru && !fV(uu) && (0, mu.jsxs)("p", {
+          children: Pk ? 1 === Tk.length ? `${qk?`Line ${qk.line}`:"This line"} ${Dk?"will":"would"} never work:` : `${Tk.length} lines ${Dk?"will":"would"} never work:` : 1 === Tk.length ? `${qk?`Line ${qk.line}`:"This line"} ${Dk?"will":"would"} break:` : `${Tk.length} lines ${Dk?"will":"would"} break:`
+        }), (ck ? Tk : Tk.slice(0, 1)).map((kk => {
+          const Fk = hk.get(kk);
+          return (0, Xk.jsxs)(Rk.Fragment, {
+            children: [Fk && !tV(kk) && (0, Xk.jsxs)("p", {
               className: "WorldCodeAiWarningWhere",
-              children: [lu.length > 1 && `Line ${Ru.line}: `, (0, mu.jsx)("code", {
-                children: Ru.text
+              children: [Tk.length > 1 && `Line ${Fk.line}: `, (0, Xk.jsx)("code", {
+                children: Fk.text
               })]
-            }), (0, mu.jsx)("p", {
-              children: !Ru || 1 !== lu.length && fV(uu) ? uu : ur(uu)
+            }), (0, Xk.jsx)("p", {
+              children: !Fk || 1 !== Tk.length && tV(kk) ? kk : aV(kk)
             })]
-          }, uu)
-        })), !su && lu.length > 1 && (0, mu.jsxs)("button", {
+          }, kk)
+        })), !ck && Tk.length > 1 && (0, Xk.jsxs)("button", {
           className: "WorldCodeAiLinkButton",
           onClick: () => {
-            tu(!0)
+            Gk(!0)
           },
-          children: ["Show ", lu.length - 1, " more"]
+          children: ["Show ", Tk.length - 1, " more"]
         })]
-      }), gu && (0, mu.jsx)("button", {
-        ...VN(null !== (ru = xu.warnings) && void 0 !== ru ? ru : []) ? {} : pN.f,
+      }), rk && (0, Xk.jsx)("button", {
+        ...Vw(null !== (Vk = Ak.warnings) && void 0 !== Vk ? Vk : []) ? {} : fw.h,
         className: "WorldCodeAiPrimaryButton",
-        disabled: ku,
-        onClick: bu,
-        children: 1 === (null === (Bu = xu.warnings) || void 0 === Bu ? void 0 : Bu.length) ? "Fix this line" : "Fix these lines"
-      }), "offered" === Gu && pu && !yR && (0, mu.jsx)("button", {
-        className: gu ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
-        disabled: qu && 0 === fu || !!Mu && ku,
-        title: Mu && ku ? "You can apply it once the AI is done." : void 0,
+        disabled: Ok,
+        onClick: Yk,
+        children: 1 === (null === (Jk = Ak.warnings) || void 0 === Jk ? void 0 : Jk.length) ? "Fix this line" : "Fix these lines"
+      }), "offered" === Mk && yk && !RF && (0, Xk.jsx)("button", {
+        className: rk ? "WorldCodeAiLinkButton" : "WorldCodeAiPrimaryButton",
+        disabled: lk && 0 === kF || !!Hk && Ok,
+        title: Hk && Ok ? "You can apply it once the AI is done." : void 0,
         onClick: () => {
-          Tu(uR)
+          fk(FF)
         },
-        children: Mu ? Mu.codeBlock ? "Apply in that code block" : "Apply in World Code" : qu && fu < ou ? `Apply ${fu} of ${ou} changes` : gu ? "Apply anyway" : "Apply to my code"
-      }), "offered" === Gu && !pu && (0, mu.jsx)("span", {
+        children: Hk ? Hk.codeBlock ? "Apply in that code block" : "Apply in World Code" : lk && kF < jk ? `Apply ${kF} of ${jk} changes` : rk ? "Apply anyway" : "Apply to my code"
+      }), "offered" === Mk && !yk && (0, Xk.jsx)("span", {
         className: "WorldCodeAiHint",
-        children: null !== Mu && void 0 !== Mu && Mu.codeBlock ? "You can't edit that code block." : "You can't edit this world's code."
-      }), "applied" === Gu && !yR && (0, mu.jsxs)("div", {
+        children: null !== Hk && void 0 !== Hk && Hk.codeBlock ? "You can't edit that code block." : "You can't edit this world's code."
+      }), "applied" === Mk && !RF && (0, Xk.jsxs)("div", {
         className: "WorldCodeAiAppliedRow",
-        children: [(0, mu.jsx)("span", {
+        children: [(0, Xk.jsx)("span", {
           className: "WorldCodeAiAppliedNote",
           children: "Applied."
-        }), Hu && (0, mu.jsx)("button", {
+        }), vk && (0, Xk.jsx)("button", {
           className: "WorldCodeAiPrimaryButton",
-          onClick: ju,
+          onClick: Wk,
           children: "Try it in my world"
-        }), Hu && (0, mu.jsx)("button", {
-          ...pN.f,
+        }), vk && (0, Xk.jsx)("button", {
+          ...fw.h,
           className: "WorldCodeAiSecondaryButton",
-          disabled: ku,
-          onClick: Cu,
+          disabled: Ok,
+          onClick: Lk,
           children: "Check for mistakes"
-        }), du && (0, mu.jsx)("button", {
+        }), ik && (0, Xk.jsx)("button", {
           className: "WorldCodeAiLinkButton WorldCodeAiUndoButton",
-          onClick: Wu,
+          onClick: mk,
           children: "Undo"
         })]
-      }), "applied" === Gu && !yR && !du && !Mu && (0, mu.jsx)("span", {
+      }), "applied" === Mk && !RF && !ik && !Hk && (0, Xk.jsx)("span", {
         className: "WorldCodeAiHint WorldCodeAiUndoOff",
         children: "You've changed this code since, so Undo is off. History can still go back."
-      }), "undone" === Gu && (0, mu.jsx)("span", {
+      }), "undone" === Mk && (0, Xk.jsx)("span", {
         className: "WorldCodeAiHint",
-        children: xu.wentBack ? "You went back, so this change is gone." : "Undone."
-      }), "stale" === Gu && (0, mu.jsx)("span", {
+        children: Ak.wentBack ? "You went back, so this change is gone." : "Undone."
+      }), "stale" === Mk && (0, Xk.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "Your code changed since this answer, so ask again to get an up-to-date change."
       })]
@@ -13047,104 +13047,104 @@ function nr(uu) {
   })
 }
 
-function sr(uu) {
+function DV(kk) {
   let {
-    target: Ru,
-    isOpen: yu
-  } = uu;
-  return (0, mu.jsxs)("div", {
-    className: Qu()("WorldCodeAiTargetLabel", yu && "WorldCodeAiTargetLabel-open"),
-    children: [(0, mu.jsx)("span", {
-      children: Ru.label
-    }), yu && (0, mu.jsx)("span", {
+    target: Fk,
+    isOpen: Bk
+  } = kk;
+  return (0, Xk.jsxs)("div", {
+    className: ak()("WorldCodeAiTargetLabel", Bk && "WorldCodeAiTargetLabel-open"),
+    children: [(0, Xk.jsx)("span", {
+      children: Fk.label
+    }), Bk && (0, Xk.jsx)("span", {
       className: "WorldCodeAiTargetLabelNote",
       children: "Open now"
     })]
   })
 }
 
-function tr(uu) {
+function zV(kk) {
   let {
-    code: Ru,
-    onSwitch: yu,
-    defaultOpen: Ku,
-    isElsewhere: Qu
-  } = uu;
-  const [Nu, Xu] = (0, Eu.useState)(!1), Vu = (0, Eu.useMemo)((() => ({
+    code: Fk,
+    onSwitch: Bk,
+    defaultOpen: tk,
+    isElsewhere: ak
+  } = kk;
+  const [wk, dk] = (0, Rk.useState)(!1), sk = (0, Rk.useMemo)((() => ({
     path: "World Code",
     before: "",
-    after: Ru
-  })), [Ru]);
-  return (0, mu.jsxs)("div", {
+    after: Fk
+  })), [Fk]);
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiToolCard WorldCodeAiWorldCodePart",
-    children: [(0, mu.jsx)(Ju, {
+    children: [(0, Xk.jsx)(bk, {
       className: "WorldCodeAiChangeLog",
       title: "Code for World Code",
       isCalm: !0,
-      isElsewhere: Qu,
-      defaultOpen: Ku,
-      children: (0, mu.jsx)("div", {
+      isElsewhere: ak,
+      defaultOpen: tk,
+      children: (0, Xk.jsx)("div", {
         className: "WorldCodeAiChanges",
-        children: (0, mu.jsx)(QX, {
-          change: Vu
+        children: (0, Xk.jsx)(bd, {
+          change: sk
         })
       })
-    }), (0, mu.jsxs)("div", {
+    }), (0, Xk.jsxs)("div", {
       className: "WorldCodeAiChangeActions",
-      children: [(0, mu.jsx)("span", {
+      children: [(0, Xk.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "A code block only runs when clicked, so this part goes in World Code."
-      }), yu && (0, mu.jsx)("button", {
+      }), Bk && (0, Xk.jsx)("button", {
         className: "WorldCodeAiPrimaryButton",
-        onClick: yu,
+        onClick: Bk,
         children: "Switch to World Code"
-      }), (0, mu.jsx)("button", {
+      }), (0, Xk.jsx)("button", {
         className: "WorldCodeAiLinkButton",
         onClick: () => {
-          navigator.clipboard.writeText(Ru).then((() => {
-            Xu(!0)
+          navigator.clipboard.writeText(Fk).then((() => {
+            dk(!0)
           })).catch((() => {}))
         },
-        children: Nu ? "Copied" : "Copy"
+        children: wk ? "Copied" : "Copy"
       })]
     })]
   })
 }
 
-function lr(uu) {
-  var Ru;
+function PV(kk) {
+  var Fk;
   let {
-    failed: yu,
-    nothingChanged: Eu,
-    onRetry: Ku,
-    defaultOpen: Qu,
-    isElsewhere: Nu
-  } = uu;
-  const Xu = null === (Ru = yu.find((uu => null !== uu.closest))) || void 0 === Ru ? void 0 : Ru.closest;
-  return (0, mu.jsxs)("div", {
+    failed: Bk,
+    nothingChanged: Rk,
+    onRetry: tk,
+    defaultOpen: ak,
+    isElsewhere: wk
+  } = kk;
+  const dk = null === (Fk = Bk.find((kk => null !== kk.closest))) || void 0 === Fk ? void 0 : Fk.closest;
+  return (0, Xk.jsxs)("div", {
     className: "WorldCodeAiFailedEdits",
-    children: [(0, mu.jsxs)(Ju, {
-      title: Eu ? "That change didn't work, so your code is the same." : 1 === yu.length ? "One part didn't work, so it's left out." : `${yu.length} parts didn't work, so they're left out.`,
-      defaultOpen: Qu,
-      isElsewhere: Nu,
-      children: [Xu && (0, mu.jsxs)(mu.Fragment, {
-        children: [(0, mu.jsx)("p", {
+    children: [(0, Xk.jsxs)(bk, {
+      title: Rk ? "That change didn't work, so your code is the same." : 1 === Bk.length ? "One part didn't work, so it's left out." : `${Bk.length} parts didn't work, so they're left out.`,
+      defaultOpen: ak,
+      isElsewhere: wk,
+      children: [dk && (0, Xk.jsxs)(Xk.Fragment, {
+        children: [(0, Xk.jsx)("p", {
           children: "The closest bit in your code:"
-        }), (0, mu.jsx)("pre", {
+        }), (0, Xk.jsx)("pre", {
           className: "WorldCodeAiFailedLines",
-          children: Xu.text.split("\n").length > 4 ? `${Xu.text.split("\n").slice(0,4).join("\n")}\n\u2026` : Xu.text
+          children: dk.text.split("\n").length > 4 ? `${dk.text.split("\n").slice(0,4).join("\n")}\n\u2026` : dk.text
         })]
-      }), !Xu && (0, mu.jsx)("p", {
+      }), !dk && (0, Xk.jsx)("p", {
         children: "Try asking for it again, maybe in a different way."
       })]
-    }), Ku && (0, mu.jsxs)("div", {
+    }), tk && (0, Xk.jsxs)("div", {
       className: "WorldCodeAiFailedRetry",
-      children: [(0, mu.jsx)("button", {
-        ...pN.f,
+      children: [(0, Xk.jsx)("button", {
+        ...fw.h,
         className: "WorldCodeAiSecondaryButton",
-        onClick: Ku,
+        onClick: tk,
         children: "Ask the AI to try again"
-      }), (0, mu.jsx)("span", {
+      }), (0, Xk.jsx)("span", {
         className: "WorldCodeAiHint",
         children: "It asks the AI once more."
       })]
@@ -13152,1059 +13152,1059 @@ function lr(uu) {
   })
 }
 
-function gr(uu) {
+function hV(kk) {
   let {
-    lookups: Ru,
-    words: yu,
-    defaultOpen: Eu,
-    isElsewhere: Ku
-  } = uu;
-  return (0, mu.jsxs)(Ju, {
-    title: Kr,
+    lookups: Fk,
+    words: Bk,
+    defaultOpen: Rk,
+    isElsewhere: tk
+  } = kk;
+  return (0, Xk.jsxs)(bk, {
+    title: dV,
     isCalm: !0,
-    isElsewhere: Ku,
-    defaultOpen: Eu,
-    children: [yu && (0, mu.jsx)("p", {
-      children: yu
-    }), (0, mu.jsx)("p", {
+    isElsewhere: tk,
+    defaultOpen: Rk,
+    children: [Bk && (0, Xk.jsx)("p", {
+      children: Bk
+    }), (0, Xk.jsx)("p", {
       children: "It looks at:"
-    }), (0, mu.jsx)("ul", {
+    }), (0, Xk.jsx)("ul", {
       className: "WorldCodeAiLookupList",
-      children: Ru.map(((uu, Ru) => (0, mu.jsx)("li", {
-        children: dK(uu)
-      }, Ru)))
+      children: Fk.map(((kk, Fk) => (0, Xk.jsx)("li", {
+        children: ot(kk)
+      }, Fk)))
     })]
   })
 }
 
-function cr(uu) {
-  return `Add this to my World Code:\n\`\`\`js\n${uu.join("\n").replace(/\s*$/,"\n")}\`\`\``
+function qV(kk) {
+  return `Add this to my World Code:\n\`\`\`js\n${kk.join("\n").replace(/\s*$/,"\n")}\`\`\``
 }
 
-function Lr(uu) {
-  const Ru = Math.ceil(uu / 1e3);
-  return `${Math.floor(Ru/60)}:${String(Ru%60).padStart(2,"0")}`
+function CV(kk) {
+  const Fk = Math.ceil(kk / 1e3);
+  return `${Math.floor(Fk/60)}:${String(Fk%60).padStart(2,"0")}`
 }
 
-function zr(uu) {
-  return "waiting" === uu.phase ? "You're next" : uu.playingThrough && "writing" !== uu.phase && "screening" !== uu.phase ? "Playing your code through as each player\u2026" : null
+function ZV(kk) {
+  return "waiting" === kk.phase ? "You're next" : kk.playingThrough && "writing" !== kk.phase && "screening" !== kk.phase ? "Playing your code through as each player\u2026" : null
 }
 
-function Fr(uu) {
-  var Ru;
+function pV(kk) {
+  var Fk;
   let {
-    busy: yu
-  } = uu;
-  const Eu = (Ku = yu.phase, Ju = null !== (Ru = yu.reasoningChars) && void 0 !== Ru ? Ru : 0, "screening" === Ku ? 3 : "writing" === Ku ? 2 : "thinking" === Ku && Ju >= 400 ? 1 : 0);
-  var Ku, Ju;
-  return (0, mu.jsx)("ol", {
+    busy: Bk
+  } = kk;
+  const Rk = (tk = Bk.phase, bk = null !== (Fk = Bk.reasoningChars) && void 0 !== Fk ? Fk : 0, "screening" === tk ? 3 : "writing" === tk ? 2 : "thinking" === tk && bk >= 400 ? 1 : 0);
+  var tk, bk;
+  return (0, Xk.jsx)("ol", {
     className: "WorldCodeAiSteps",
-    children: xV.map(((uu, Ru) => (0, mu.jsx)("li", {
-      className: Qu()(Ru < Eu && "WorldCodeAiStep-done", Ru === Eu && "WorldCodeAiStep-current"),
-      children: Ru < Eu ? `\u2713 ${uu}` : uu
-    }, uu)))
+    children: ms.map(((kk, Fk) => (0, Xk.jsx)("li", {
+      className: ak()(Fk < Rk && "WorldCodeAiStep-done", Fk === Rk && "WorldCodeAiStep-current"),
+      children: Fk < Rk ? `\u2713 ${kk}` : kk
+    }, kk)))
   })
 }
-const wr = (0, Eu.memo)((function(uu) {
-    var Ru, Ku, xu, ju, du, bu, Cu, ku, eu, Au, Du, Mu, Iu;
+const KV = (0, Rk.memo)((function(kk) {
+    var Fk, tk, Ak, Wk, ik, Yk, Lk, Ok, Ek, Sk, Nk, Hk, uk;
     let {
-      files: Gu,
-      activePath: Uu,
-      canEdit: nu,
-      errors: su,
-      errorCount: tu,
-      applyFiles: lu,
-      submit: gu,
-      testRun: cu,
-      close: Lu,
-      goToLine: zu,
-      target: Fu,
-      chatKey: wu,
-      historyKey: Zu,
-      openWorldCode: hu,
-      readWorldCode: Pu,
-      viewChunk: iu,
-      viewGameState: Yu,
-      openTarget: ou,
-      isLoaded: qu = !0,
-      draft: Ou,
-      onDraftUsed: vu,
-      selection: au,
-      onSelectionUsed: fu
-    } = uu;
-    const RR = Fu.codeBlock,
-      yR = Fu.key,
-      KR = function(uu) {
-        let Ru = Jr.get(uu);
-        return Ru || (Ru = {
+      files: Mk,
+      activePath: gk,
+      canEdit: Uk,
+      errors: ck,
+      errorCount: Gk,
+      applyFiles: Tk,
+      submit: rk,
+      testRun: Dk,
+      close: zk,
+      goToLine: Pk,
+      target: hk,
+      chatKey: qk,
+      historyKey: Ck,
+      openWorldCode: Zk,
+      readWorldCode: pk,
+      viewChunk: Kk,
+      viewGameState: xk,
+      openTarget: jk,
+      isLoaded: lk = !0,
+      draft: nk,
+      onDraftUsed: Ik,
+      selection: Qk,
+      onSelectionUsed: kF
+    } = kk;
+    const BF = hk.codeBlock,
+      RF = hk.key,
+      aF = function(kk) {
+        let Fk = JV.get(kk);
+        return Fk || (Fk = {
           entries: [],
           nextId: 1,
           dismissedErrorCounts: new Map,
-          turns: new fQ
-        }, Jr.set(uu, Ru)), Ru
-      }(wu),
-      [QR, mR] = (0, Eu.useState)((() => KR.entries)),
-      JR = (0, Eu.useRef)(!0),
-      NR = (0, Eu.useCallback)((uu => {
-        const Ru = "function" === typeof uu ? uu : () => uu;
-        JR.current ? mR(Ru) : KR.setEntries ? KR.setEntries(Ru) : KR.entries = Ru(KR.entries)
-      }), [KR]);
-    (0, Eu.useEffect)((() => (JR.current = !0, KR.setEntries = mR, () => {
-      JR.current = !1, KR.setEntries === mR && (KR.setEntries = void 0)
-    })), [KR]);
-    const [XR, VR] = (0, Eu.useState)(null), [rR, BR] = (0, Eu.useState)([]), [xR, SR] = (0, Eu.useState)(!1), [pR, TR] = (0, Eu.useState)([]), [WR, jR] = (0, Eu.useState)(!1), [HR, dR] = (0, Eu.useState)(!1), [bR, CR] = (0, Eu.useState)(null), [kR, eR] = (0, Eu.useState)(!1), AR = (0, Eu.useRef)("settings"), [DR, MR] = (0, Eu.useState)(null), IR = (0, Eu.useRef)(function() {
+          turns: new FX
+        }, JV.set(kk, Fk)), Fk
+      }(qk),
+      [XF, bF] = (0, Rk.useState)((() => aF.entries)),
+      wF = (0, Rk.useRef)(!0),
+      dF = (0, Rk.useCallback)((kk => {
+        const Fk = "function" === typeof kk ? kk : () => kk;
+        wF.current ? bF(Fk) : aF.setEntries ? aF.setEntries(Fk) : aF.entries = Fk(aF.entries)
+      }), [aF]);
+    (0, Rk.useEffect)((() => (wF.current = !0, aF.setEntries = bF, () => {
+      wF.current = !1, aF.setEntries === bF && (aF.setEntries = void 0)
+    })), [aF]);
+    const [sF, VF] = (0, Rk.useState)(null), [JF, AF] = (0, Rk.useState)([]), [eF, yF] = (0, Rk.useState)(!1), [fF, mF] = (0, Rk.useState)([]), [WF, vF] = (0, Rk.useState)(!1), [iF, YF] = (0, Rk.useState)(!1), [oF, LF] = (0, Rk.useState)(null), [OF, EF] = (0, Rk.useState)(!1), SF = (0, Rk.useRef)("settings"), [NF, HF] = (0, Rk.useState)(null), uF = (0, Rk.useRef)(function() {
       try {
-        var uu;
-        const Ru = JSON.parse(null !== (uu = localStorage.getItem(dV)) && void 0 !== uu ? uu : "{}");
-        return "object" !== typeof Ru || null === Ru ? {} : Object.fromEntries(Object.entries(Ru).filter((uu => {
-          let [, Ru] = uu;
-          return Array.isArray(Ru) && Ru.every((uu => "number" === typeof uu))
+        var kk;
+        const Fk = JSON.parse(null !== (kk = localStorage.getItem(Os)) && void 0 !== kk ? kk : "{}");
+        return "object" !== typeof Fk || null === Fk ? {} : Object.fromEntries(Object.entries(Fk).filter((kk => {
+          let [, Fk] = kk;
+          return Array.isArray(Fk) && Fk.every((kk => "number" === typeof kk))
         })))
       } catch {
         return {}
       }
-    }()), [GR, UR] = (0, Eu.useState)(AN), nR = (0, Eu.useRef)(GR);
-    nR.current = GR;
-    const sR = GR && nu,
-      tR = (0, Eu.useRef)(!1),
-      [lR, gR] = (0, Eu.useState)(null),
-      [cR, LR] = (0, Eu.useState)(""),
-      [zR, FR] = (0, Eu.useState)([]),
-      [wR, ZR] = (0, Eu.useState)(null),
-      [hR, PR] = (0, Eu.useState)(new Set),
-      [iR, YR] = (0, Eu.useState)(null !== (Ru = KR.dismissedErrorCounts.get(Fu.key)) && void 0 !== Ru ? Ru : 0),
-      [oR, qR] = (0, Eu.useState)(!1),
-      [OR, vR] = (0, Eu.useState)(Date.now),
-      aR = (0, Eu.useRef)(null),
-      fR = (0, Eu.useRef)(null),
-      uy = (0, Eu.useRef)([]),
-      [Ry, yy] = (0, Eu.useState)(0),
-      [Ey, Ky] = (0, Eu.useState)(null),
-      Qy = (0, KX.q)(wu),
-      my = null !== Ey && void 0 !== Ey ? Ey : null === Qy || void 0 === Qy ? void 0 : Qy.entryId,
-      Jy = QR.find((uu => uu.id === my)),
-      Ny = (null === Jy || void 0 === Jy ? void 0 : Jy.target.key) === Fu.key && (null !== Ey || void 0 === (null === Qy || void 0 === Qy ? void 0 : Qy.endedAt)),
-      Xy = (uu, Ru) => {
-        const yu = setTimeout((() => {
-          uy.current = uy.current.filter((uu => uu !== yu)), yy(uy.current.length), uu()
-        }), Ru);
-        uy.current.push(yu), yy(uy.current.length)
+    }()), [MF, gF] = (0, Rk.useState)(Sw), UF = (0, Rk.useRef)(MF);
+    UF.current = MF;
+    const cF = MF && Uk,
+      GF = (0, Rk.useRef)(!1),
+      [TF, rF] = (0, Rk.useState)(null),
+      [DF, zF] = (0, Rk.useState)(""),
+      [PF, hF] = (0, Rk.useState)([]),
+      [qF, CF] = (0, Rk.useState)(null),
+      [ZF, pF] = (0, Rk.useState)(new Set),
+      [KF, xF] = (0, Rk.useState)(null !== (Fk = aF.dismissedErrorCounts.get(hk.key)) && void 0 !== Fk ? Fk : 0),
+      [jF, lF] = (0, Rk.useState)(!1),
+      [nF, IF] = (0, Rk.useState)(Date.now),
+      QF = (0, Rk.useRef)(null),
+      kB = (0, Rk.useRef)(null),
+      FB = (0, Rk.useRef)([]),
+      [BB, RB] = (0, Rk.useState)(0),
+      [tB, aB] = (0, Rk.useState)(null),
+      XB = (0, Xd.m)(qk),
+      bB = null !== tB && void 0 !== tB ? tB : null === XB || void 0 === XB ? void 0 : XB.entryId,
+      wB = XF.find((kk => kk.id === bB)),
+      dB = (null === wB || void 0 === wB ? void 0 : wB.target.key) === hk.key && (null !== tB || void 0 === (null === XB || void 0 === XB ? void 0 : XB.endedAt)),
+      sB = (kk, Fk) => {
+        const Bk = setTimeout((() => {
+          FB.current = FB.current.filter((kk => kk !== Bk)), RB(FB.current.length), kk()
+        }), Fk);
+        FB.current.push(Bk), RB(FB.current.length)
       },
-      ry = () => {
-        for (const uu of uy.current) clearTimeout(uu);
-        uy.current = [], yy(0), Ky(null)
+      JB = () => {
+        for (const kk of FB.current) clearTimeout(kk);
+        FB.current = [], RB(0), aB(null)
       },
-      By = (0, Eu.useRef)(null),
-      xy = (0, Eu.useRef)(null),
-      Sy = () => KR.nextId++,
-      py = (0, Eu.useRef)(0),
-      Ty = (0, Eu.useRef)(Gu);
-    Ty.current = Gu;
-    const Wy = (0, Eu.useCallback)((uu => {
-        null === uu || void 0 === uu || uu.focus()
+      AB = (0, Rk.useRef)(null),
+      eB = (0, Rk.useRef)(null),
+      yB = () => aF.nextId++,
+      fB = (0, Rk.useRef)(0),
+      mB = (0, Rk.useRef)(Mk);
+    mB.current = Mk;
+    const WB = (0, Rk.useCallback)((kk => {
+        null === kk || void 0 === kk || kk.focus()
       }), []),
-      jy = (0, Eu.useRef)(tu);
-    jy.current = tu;
-    const Hy = (0, Eu.useRef)(zR);
-    Hy.current = zR;
-    const dy = (0, Eu.useRef)(QR.length);
-    (0, Eu.useEffect)((() => {
-      const uu = By.current;
-      if (!uu) return;
-      if (xR) return void uu.scrollTo({
+      vB = (0, Rk.useRef)(Gk);
+    vB.current = Gk;
+    const iB = (0, Rk.useRef)(PF);
+    iB.current = PF;
+    const YB = (0, Rk.useRef)(XF.length);
+    (0, Rk.useEffect)((() => {
+      const kk = AB.current;
+      if (!kk) return;
+      if (eF) return void kk.scrollTo({
         top: 0
       });
-      if (bR) return;
-      const Ru = QR[QR.length - 1],
-        yu = (null === Ru || void 0 === Ru ? void 0 : Ru.target.key) === yR;
-      QR.length > dy.current && "assistant" === (null === Ru || void 0 === Ru ? void 0 : Ru.role) && !Ru.isNotice && yu && (KR.heldAnswerId = Ru.id), dy.current = QR.length;
-      const Eu = void 0 !== Ru && yu && Ru.id === KR.heldAnswerId && "offered" === Ru.status && void 0 === Ru.trial,
-        Ku = uu.querySelectorAll(".WorldCodeAiEntry"),
-        Qu = Ku[Ku.length - 1];
-      if (Eu && Qu) {
-        var mu;
-        const yu = uu.getBoundingClientRect().top,
-          Eu = Ru => uu.scrollTop + Ru.getBoundingClientRect().top - yu;
-        let Ku = Eu(Qu);
-        const Ju = Qu.querySelector(".WorldCodeAiDiff-added, .WorldCodeAiDiff-removed"),
-          Nu = Qu.querySelector(".WorldCodeAiChangeHeader"),
-          Xu = Qu.querySelector(".WorldCodeAiChangeActions-sticky");
-        if (null !== (mu = Ru.warnings) && void 0 !== mu && mu.length && Ju && Nu && Xu) {
-          const Ru = Qu.querySelector(".WorldCodeAiDiff-marked"),
-            yu = Ju.getBoundingClientRect().height,
-            mu = Ru ? Eu(Ru) + 2 * yu + Xu.offsetHeight - uu.clientHeight : Eu(Ju) + 3 * yu + Xu.offsetHeight - uu.clientHeight;
-          Ku = Math.max(Ku, Math.min(mu, Ru ? Eu(Ru) - yu : Eu(Nu)))
-        } else if (Nu && Xu) {
-          const Ru = Qu.querySelectorAll(".WorldCodeAiChangeWhy li"),
-            yu = Ru[Ru.length - 1];
-          if (yu) {
-            const Ru = Eu(yu) + yu.getBoundingClientRect().height + Xu.offsetHeight - uu.clientHeight;
-            Ku = Math.max(Ku, Math.min(Ru, Eu(Nu)))
+      if (oF) return;
+      const Fk = XF[XF.length - 1],
+        Bk = (null === Fk || void 0 === Fk ? void 0 : Fk.target.key) === RF;
+      XF.length > YB.current && "assistant" === (null === Fk || void 0 === Fk ? void 0 : Fk.role) && !Fk.isNotice && Bk && (aF.heldAnswerId = Fk.id), YB.current = XF.length;
+      const Rk = void 0 !== Fk && Bk && Fk.id === aF.heldAnswerId && "offered" === Fk.status && void 0 === Fk.trial,
+        tk = kk.querySelectorAll(".WorldCodeAiEntry"),
+        ak = tk[tk.length - 1];
+      if (Rk && ak) {
+        var Xk;
+        const Bk = kk.getBoundingClientRect().top,
+          Rk = Fk => kk.scrollTop + Fk.getBoundingClientRect().top - Bk;
+        let tk = Rk(ak);
+        const bk = ak.querySelector(".WorldCodeAiDiff-added, .WorldCodeAiDiff-removed"),
+          wk = ak.querySelector(".WorldCodeAiChangeHeader"),
+          dk = ak.querySelector(".WorldCodeAiChangeActions-sticky");
+        if (null !== (Xk = Fk.warnings) && void 0 !== Xk && Xk.length && bk && wk && dk) {
+          const Fk = ak.querySelector(".WorldCodeAiDiff-marked"),
+            Bk = bk.getBoundingClientRect().height,
+            Xk = Fk ? Rk(Fk) + 2 * Bk + dk.offsetHeight - kk.clientHeight : Rk(bk) + 3 * Bk + dk.offsetHeight - kk.clientHeight;
+          tk = Math.max(tk, Math.min(Xk, Fk ? Rk(Fk) - Bk : Rk(wk)))
+        } else if (wk && dk) {
+          const Fk = ak.querySelectorAll(".WorldCodeAiChangeWhy li"),
+            Bk = Fk[Fk.length - 1];
+          if (Bk) {
+            const Fk = Rk(Bk) + Bk.getBoundingClientRect().height + dk.offsetHeight - kk.clientHeight;
+            tk = Math.max(tk, Math.min(Fk, Rk(wk)))
           }
         }
-        uu.scrollTo({
-          top: Ku
+        kk.scrollTo({
+          top: tk
         })
-      } else uu.scrollTo({
-        top: uu.scrollHeight
+      } else kk.scrollTo({
+        top: kk.scrollHeight
       })
-    }), [KR, QR, XR, xR, yR, bR]), (0, Eu.useEffect)((() => {
-      KR.entries = QR, KR.dismissedErrorCounts.set(Fu.key, iR)
-    }), [KR, QR, iR, Fu.key]), (0, Eu.useEffect)((() => () => {
-      var uu;
-      null === (uu = aR.current) || void 0 === uu || uu.abort(), ry(),
+    }), [aF, XF, sF, eF, RF, oF]), (0, Rk.useEffect)((() => {
+      aF.entries = XF, aF.dismissedErrorCounts.set(hk.key, KF)
+    }), [aF, XF, KF, hk.key]), (0, Rk.useEffect)((() => () => {
+      var kk;
+      null === (kk = QF.current) || void 0 === kk || kk.abort(), JB(),
         function() {
-          var uu;
-          null === (uu = wQ) || void 0 === uu || uu.tearDownNotification()
+          var kk;
+          null === (kk = Ca) || void 0 === kk || kk.tearDownNotification()
         }()
-    }), []), (0, Eu.useEffect)((() => {
-      var uu;
-      Ou && (Ou.send ? qu && (null === vu || void 0 === vu || vu(), iy.current(Ou.text, Ou.text, {
+    }), []), (0, Rk.useEffect)((() => {
+      var kk;
+      nk && (nk.send ? lk && (null === Ik || void 0 === Ik || Ik(), KB.current(nk.text, nk.text, {
         check: !1,
         useFree: !1
-      })) : (LR(Ou.text), null === (uu = xy.current) || void 0 === uu || uu.focus(), null === vu || void 0 === vu || vu()))
-    }), [Ou, vu, qu]), (0, Eu.useEffect)((() => function() {
-      let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      const Ru = setTimeout((() => {
-        wV(uu)
+      })) : (zF(nk.text), null === (kk = eB.current) || void 0 === kk || kk.focus(), null === Ik || void 0 === Ik || Ik()))
+    }), [nk, Ik, lk]), (0, Rk.useEffect)((() => function() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      const Fk = setTimeout((() => {
+        ps(kk)
       }), 1e3);
       return () => {
-        clearTimeout(Ru)
+        clearTimeout(Fk)
       }
-    }(RR)), [RR]), (0, Eu.useEffect)((() => {
-      let uu = !0;
-      Xr.list(Zu).then((Ru => {
-        uu && BR(Ru)
-      })).catch((uu => {
-        console.error("World Code AI: couldn't read the version history", uu)
+    }(BF)), [BF]), (0, Rk.useEffect)((() => {
+      let kk = !0;
+      eV.list(Ck).then((Fk => {
+        kk && AF(Fk)
+      })).catch((kk => {
+        console.error("World Code AI: couldn't read the version history", kk)
       }));
-      const Ru = Xr.watch(Zu, BR);
+      const Fk = eV.watch(Ck, AF);
       return () => {
-        uu = !1, Ru()
+        kk = !1, Fk()
       }
-    }), [Zu]), (0, Eu.useEffect)((() => {
-      let uu = !0;
-      Vr.list(Zu).then((Ru => {
-        uu && TR(Ru)
-      })).catch((uu => {
-        console.error("World Code AI: couldn't read the notes about the game", uu)
+    }), [Ck]), (0, Rk.useEffect)((() => {
+      let kk = !0;
+      yV.list(Ck).then((Fk => {
+        kk && mF(Fk)
+      })).catch((kk => {
+        console.error("World Code AI: couldn't read the notes about the game", kk)
       }));
-      const Ru = Vr.watch(Zu, TR);
+      const Fk = yV.watch(Ck, mF);
       return () => {
-        uu = !1, Ru()
+        kk = !1, Fk()
       }
-    }), [Zu]);
-    const by = null !== (Ku = null === (xu = QR.findLast((uu => uu.target.key === Fu.key))) || void 0 === xu ? void 0 : xu.retryAt) && void 0 !== Ku ? Ku : 0,
-      Cy = DQ(OR),
-      ky = null !== XR || by > OR || Cy > OR;
-    (0, Eu.useEffect)((() => {
-      if (!ky) return;
-      const uu = setInterval((() => {
-        vR(Date.now())
+    }), [Ck]);
+    const oB = null !== (tk = null === (Ak = XF.findLast((kk => kk.target.key === hk.key))) || void 0 === Ak ? void 0 : Ak.retryAt) && void 0 !== tk ? tk : 0,
+      LB = Ha(nF),
+      OB = null !== sF || oB > nF || LB > nF;
+    (0, Rk.useEffect)((() => {
+      if (!OB) return;
+      const kk = setInterval((() => {
+        IF(Date.now())
       }), 1e3);
       return () => {
-        clearInterval(uu)
+        clearInterval(kk)
       }
-    }), [ky]);
-    const ey = tu > iR && su.length > 0 ? su[su.length - 1] : null,
-      Ay = (0, Eu.useMemo)((() => ey ? function(uu, Ru) {
-        var yu;
-        let Eu;
-        for (const [Ku, Qu] of Object.entries(Ru)) {
+    }), [OB]);
+    const EB = Gk > KF && ck.length > 0 ? ck[ck.length - 1] : null,
+      SB = (0, Rk.useMemo)((() => EB ? function(kk, Fk) {
+        var Bk;
+        let Rk;
+        for (const [tk, ak] of Object.entries(Fk)) {
           const {
-            text: Ru,
-            line: yu
-          } = aJ(uu, Qu);
-          if (void 0 !== yu) {
-            if (Eu) return aJ(uu);
-            Eu = {
-              text: Ru,
-              path: Ku,
-              line: yu
+            text: Fk,
+            line: Bk
+          } = Qb(kk, ak);
+          if (void 0 !== Bk) {
+            if (Rk) return Qb(kk);
+            Rk = {
+              text: Fk,
+              path: tk,
+              line: Bk
             }
           }
         }
-        return null !== (yu = Eu) && void 0 !== yu ? yu : aJ(uu)
-      }(ey, Gu) : {
+        return null !== (Bk = Rk) && void 0 !== Bk ? Bk : Qb(kk)
+      }(EB, Mk) : {
         text: ""
-      }), [ey, Gu]),
-      Dy = function(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fu;
-        const yu = Sy();
-        return SR(!1), jR(!1), NR((Eu => [...Eu, {
-          ...uu,
-          id: yu,
-          target: Ru
-        }])), yu
+      }), [EB, Mk]),
+      NB = function(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hk;
+        const Bk = yB();
+        return yF(!1), vF(!1), dF((Rk => [...Rk, {
+          ...kk,
+          id: Bk,
+          target: Fk
+        }])), Bk
       },
-      My = uu => uu.target.key === Fu.key,
-      Iy = (uu, Ru) => {
-        NR((yu => yu.map((yu => yu.id === uu ? {
-          ...yu,
-          ...Ru
-        } : yu))))
+      HB = kk => kk.target.key === hk.key,
+      uB = (kk, Fk) => {
+        dF((Bk => Bk.map((Bk => Bk.id === kk ? {
+          ...Bk,
+          ...Fk
+        } : Bk))))
       },
-      Gy = (uu, Ru) => {
-        Iy(uu, {
-          status: Ru
+      MB = (kk, Fk) => {
+        uB(kk, {
+          status: Fk
         })
       },
-      Uy = JJ();
+      gB = wb();
 
-    function ny(uu) {
-      return !!SJ(mJ.getState()) && (MJ().then((Ru => {
-        Ru || uu()
+    function UB(kk) {
+      return !!yb(bb.getState()) && (Hb().then((Fk => {
+        Fk || kk()
       })), !0)
     }
-    const sy = uu => {
-        !kR && ny(uu) || uu()
+    const cB = kk => {
+        !OF && UB(kk) || kk()
       },
-      ty = async function(uu, Ru) {
-        let Eu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      GB = async function(kk, Fk) {
+        let Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         const {
-          check: Ku = void 0 === Ru,
-          about: Qu = (null !== Ru && void 0 !== Ru ? Ru : uu.trim()),
-          planStep: mu,
-          wordsOnly: Ju = !1,
-          asked: Nu,
-          failedEdits: Xu,
-          isAutoFix: Vu = !1,
-          autoFixRound: ru = 0,
-          useFree: Bu,
-          retryOf: xu,
-          continueFrom: pu,
-          lookups: Tu = [],
-          lookupRound: ju = 0,
-          worldCodeFiles: Hu,
-          viewedPaths: du = [],
-          lookupOf: bu,
-          insertsInto: Cu,
-          guardWords: ku
-        } = Eu, eu = uu.trim();
-        if ("" === eu || XR) return;
-        null === FQ.get() && (ZQ || (ZQ = !0, (async () => {
+          check: tk = void 0 === Fk,
+          about: ak = (null !== Fk && void 0 !== Fk ? Fk : kk.trim()),
+          planStep: Xk,
+          wordsOnly: bk = !1,
+          asked: wk,
+          failedEdits: dk,
+          isAutoFix: sk = !1,
+          autoFixRound: Vk = 0,
+          useFree: Jk,
+          retryOf: Ak,
+          continueFrom: yk,
+          lookups: fk = [],
+          lookupRound: Wk = 0,
+          worldCodeFiles: vk,
+          viewedPaths: ik = [],
+          lookupOf: Yk,
+          insertsInto: Lk,
+          guardWords: Ok
+        } = Rk, Ek = kk.trim();
+        if ("" === Ek || sF) return;
+        null === qa.get() && (Za || (Za = !0, (async () => {
           try {
-            if (null !== await FQ.refresh() || null === FQ.getPlayer()) return;
+            if (null !== await qa.refresh() || null === qa.getPlayer()) return;
             const {
-              NotificationProvider: uu
-            } = await Promise.resolve().then((() => yu(1311)));
-            wQ = uu.showPromptPopup({
+              NotificationProvider: kk
+            } = await Promise.resolve().then((() => Bk(1300)));
+            Ca = kk.showPromptPopup({
               title: "aiHelperDataSharing:title",
               subtitle: "aiHelperDataSharing:subtitle",
               confirmText: "aiHelperDataSharing:yes",
               cancelText: "aiHelperDataSharing:no"
             });
-            const Ru = await wQ.getResult();
-            "notificationTornDown" !== Ru && FQ.set(Ru ? "yes" : "no")
-          } catch (uu) {
-            console.warn("AI Helper: couldn't ask about sharing chats", uu)
+            const Fk = await Ca.getResult();
+            "notificationTornDown" !== Fk && qa.set(Fk ? "yes" : "no")
+          } catch (kk) {
+            console.warn("AI Helper: couldn't ask about sharing chats", kk)
           } finally {
-            wQ = null, ZQ = !1
+            Ca = null, Za = !1
           }
         })()));
-        const Au = null !== Bu && void 0 !== Bu ? Bu : kR && !Vu && void 0 === xu && void 0 === pu;
-        if (!Au && br(Eu) && ny((() => {
-            Ly.current(uu, Ru, Eu)
+        const Sk = null !== Jk && void 0 !== Jk ? Jk : OF && !sk && void 0 === Ak && void 0 === yk;
+        if (!Sk && SV(Rk) && UB((() => {
+            zB.current(kk, Fk, Rk)
           }))) return;
-        const Du = null !== Cu && void 0 !== Cu ? Cu : Uu;
-        void 0 === Bu && Au && eR(!1), ry();
-        const Mu = om.activeKey(),
-          Iu = Au ? null : Mu,
-          Gu = null !== Iu,
-          tu = null !== Mu && Au,
-          lu = !Iu && !Au && mJ.isAnswering(),
-          gu = void 0 === xu ? -1 : ((uu, Ru) => {
-            for (let yu = uu.findIndex((uu => uu.id === Ru)) - 1; yu >= 0; yu--)
-              if ("user" === uu[yu].role) return yu;
+        const Nk = null !== Lk && void 0 !== Lk ? Lk : gk;
+        void 0 === Jk && Sk && EF(!1), JB();
+        const Hk = lX.activeKey(),
+          uk = Sk ? null : Hk,
+          Mk = null !== uk,
+          Gk = null !== Hk && Sk,
+          Tk = !uk && !Sk && bb.isAnswering(),
+          rk = void 0 === Ak ? -1 : ((kk, Fk) => {
+            for (let Bk = kk.findIndex((kk => kk.id === Fk)) - 1; Bk >= 0; Bk--)
+              if ("user" === kk[Bk].role) return Bk;
             return -1
-          })(QR, xu),
-          cu = (gu < 0 ? QR : QR.slice(0, gu)).filter((uu => !uu.isNotice && !uu.leftOut && My(uu))).slice(-4).map((uu => ({
-            role: uu.role,
-            text: uu.question ? `${uu.text}\n${uu.question.question}` : uu.text
+          })(XF, Ak),
+          Dk = (rk < 0 ? XF : XF.slice(0, rk)).filter((kk => !kk.isNotice && !kk.leftOut && HB(kk))).slice(-4).map((kk => ({
+            role: kk.role,
+            text: kk.question ? `${kk.text}\n${kk.question.question}` : kk.text
           }))),
-          Lu = void 0 === Ru,
-          Fu = void 0 === Nu ? void 0 === Ru ? eu : void 0 : null !== Nu && void 0 !== Nu ? Nu : void 0,
-          wu = void 0 !== xu && void 0 !== pu,
-          Zu = wu ? QR.find((uu => uu.id === xu)) : void 0;
-        let Pu;
-        if (wu) Pu = gu >= 0 ? QR[gu].id : -1;
-        else if (void 0 !== bu && gu < 0) Pu = bu;
-        else if (gu >= 0) Pu = QR[gu].id, NR((uu => uu.filter((uu => uu.id !== xu)).map((uu => uu.id === Pu ? {
-          ...uu,
+          zk = void 0 === Fk,
+          hk = void 0 === wk ? void 0 === Fk ? Ek : void 0 : null !== wk && void 0 !== wk ? wk : void 0,
+          qk = void 0 !== Ak && void 0 !== yk,
+          Ck = qk ? XF.find((kk => kk.id === Ak)) : void 0;
+        let pk;
+        if (qk) pk = rk >= 0 ? XF[rk].id : -1;
+        else if (void 0 !== Yk && rk < 0) pk = Yk;
+        else if (rk >= 0) pk = XF[rk].id, dF((kk => kk.filter((kk => kk.id !== Ak)).map((kk => kk.id === pk ? {
+          ...kk,
           isNotice: void 0
-        } : uu))));
+        } : kk))));
         else {
-          const uu = Vu && ru > 0;
-          Pu = Dy({
+          const kk = sk && Vk > 0;
+          pk = NB({
             role: "user",
-            text: uu ? eu : null !== Ru && void 0 !== Ru ? Ru : eu,
+            text: kk ? Ek : null !== Fk && void 0 !== Fk ? Fk : Ek,
             changes: [],
             status: "offered",
-            about: Qu,
-            planStep: mu,
-            ...Fu ? {
-              asked: Fu
+            about: ak,
+            planStep: Xk,
+            ...hk ? {
+              asked: hk
             } : {},
-            ...uu ? {
-              logTitle: Xu ? "Part of the AI's change didn't go in, so it was asked to make it again" : "The AI's code had an error, so it was sent back to the AI to fix"
+            ...kk ? {
+              logTitle: dk ? "Part of the AI's change didn't go in, so it was asked to make it again" : "The AI's code had an error, so it was sent back to the AI to fix"
             } : {}
           })
         }
-        const iu = {
-            lookups: Tu,
-            lookupRound: ju,
-            worldCodeFiles: Hu,
-            viewedPaths: du
+        const Kk = {
+            lookups: fk,
+            lookupRound: Wk,
+            worldCodeFiles: vk,
+            viewedPaths: ik
           },
-          Yu = {
-            retry: eu,
-            retryShown: Ru,
+          xk = {
+            retry: Ek,
+            retryShown: Fk,
             retryOptions: {
-              check: Ku,
-              about: Qu,
-              planStep: mu,
-              wordsOnly: Ju,
-              useFree: Au,
-              asked: Nu,
-              failedEdits: Xu,
-              isAutoFix: Vu,
-              autoFixRound: ru,
-              insertsInto: Cu,
-              guardWords: ku,
-              ...iu
+              check: tk,
+              about: ak,
+              planStep: Xk,
+              wordsOnly: bk,
+              useFree: Sk,
+              asked: wk,
+              failedEdits: dk,
+              isAutoFix: sk,
+              autoFixRound: Vk,
+              insertsInto: Lk,
+              guardWords: Ok,
+              ...Kk
             }
           },
-          qu = new AbortController;
-        aR.current = qu;
-        const Ou = KR.turns;
-        Ou.requestStarted(Pu, void 0 !== bu);
-        const vu = nR.current ? "direct" : "offer";
-        var au, fu, uR, yR, mR;
+          lk = new AbortController;
+        QF.current = lk;
+        const nk = aF.turns;
+        nk.requestStarted(pk, void 0 !== Yk);
+        const Ik = UF.current ? "direct" : "offer";
+        var Qk, kF, FF, RF, bF;
         try {
-          var JR;
-          const uu = Date.now(),
-            yu = eu.startsWith(Ur),
-            Eu = null === Iu || void 0 === Iu ? void 0 : Iu.model.name;
-          vR(uu), VR(lu ? {
+          var wF;
+          const kk = Date.now(),
+            Bk = Ek.startsWith(TV),
+            Rk = null === uk || void 0 === uk ? void 0 : uk.model.name;
+          IF(kk), VF(Tk ? {
             phase: "thinking",
-            startedAt: uu,
-            playingThrough: yu,
+            startedAt: kk,
+            playingThrough: Bk,
             isSuperBot: !0
           } : {
             phase: "checking",
-            startedAt: uu,
-            playingThrough: yu,
-            keyModel: Eu
+            startedAt: kk,
+            playingThrough: Bk,
+            keyModel: Rk
           });
-          const Nu = uu => {
-              Iy(Pu, {
+          const wk = kk => {
+              uB(pk, {
                 isNotice: !0
-              }), Dy({
+              }), NB({
                 role: "assistant",
-                text: "personalInfo" === uu ? "Please don't share personal details like names, addresses or schools. Ask again without them." : Dr,
+                text: "personalInfo" === kk ? "Please don't share personal details like names, addresses or schools. Ask again without them." : gV,
                 changes: [],
                 status: "offered",
                 isNotice: !0
               })
             },
-            Bu = async () => {
-              if (!Ku && !Iu) return null !== ku && void 0 !== ku ? ku : eu;
-              const uu = Date.now();
-              vR(uu), VR({
+            Jk = async () => {
+              if (!tk && !uk) return null !== Ok && void 0 !== Ok ? Ok : Ek;
+              const kk = Date.now();
+              IF(kk), VF({
                 phase: "checking",
-                startedAt: uu,
-                playingThrough: yu,
-                keyModel: Eu
+                startedAt: kk,
+                playingThrough: Bk,
+                keyModel: Rk
               });
               const {
-                safety: Ru,
-                request: Qu
-              } = await async function(uu, Ru) {
-                let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                const Eu = await lQ(uu, Ru, yu),
-                  Ku = DK(uu);
-                if ("unsafe" !== Eu || Ku === uu) return {
-                  safety: Eu,
-                  request: uu
+                safety: Fk,
+                request: ak
+              } = await async function(kk, Fk) {
+                let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                const Rk = await ra(kk, Fk, Bk),
+                  tk = Ht(kk);
+                if ("unsafe" !== Rk || tk === kk) return {
+                  safety: Rk,
+                  request: kk
                 };
-                const Qu = await lQ(Ku, Ru, !0);
-                return "unchecked" === Qu ? {
-                  safety: Eu,
-                  request: uu
+                const ak = await ra(tk, Fk, !0);
+                return "unchecked" === ak ? {
+                  safety: Rk,
+                  request: kk
                 } : {
-                  safety: Qu,
-                  request: Ku
+                  safety: ak,
+                  request: tk
                 }
-              }(eu, qu.signal, Gu);
-              return "unchecked" === Ru && Iu ? (Dy({
+              }(Ek, lk.signal, Mk);
+              return "unchecked" === Fk && uk ? (NB({
                 role: "assistant",
                 text: "",
                 changes: [],
                 status: "offered",
                 isNotice: !0,
-                ...Yu,
+                ...xk,
                 keyNotice: {
                   notice: "unchecked",
-                  model: Iu.model.name,
-                  company: Sm(Iu.provider, Iu.baseUrl, !0)
+                  model: uk.model.name,
+                  company: fX(uk.provider, uk.baseUrl, !0)
                 }
-              }), null) : "personalInfo" === Ru || "unsafe" === Ru ? (Nu(Ru), null) : Qu
+              }), null) : "personalInfo" === Fk || "unsafe" === Fk ? (wk(Fk), null) : ak
             };
-          let Mu = lu ? null !== ku && void 0 !== ku ? ku : eu : await Bu();
-          if (null === Mu) return;
-          const Uu = Hu ? {
-              ...Ty.current,
-              ...Hu
-            } : Ty.current,
-            Fu = {
-              request: eu,
-              files: Uu,
-              activePath: Du,
-              errors: su.slice(-5),
-              history: cu,
-              codeBlock: RR,
-              failedEdits: Xu,
-              canAsk: Lu,
-              lookups: Tu,
-              canLookUp: ju < 3 && !Ju,
-              canChangeWorldCode: yE(vu),
-              looksUpDocs: Gu,
-              about: RR ? void 0 : {
-                notes: pR,
-                outline: (mR = ER(Uu, new Set(xr().callbackNames())), [mR.callbacks.length > 0 ? `Callbacks: ${mR.callbacks.join(", ")}` : "", mR.commands.length > 0 ? `Commands: ${mR.commands.join(", ")}` : "", mR.functions.length > 0 ? `Functions: ${mR.functions.join(", ")}` : ""].filter((uu => "" !== uu)).join("\n")),
-                canRemember: pR.length < 8
+          let Hk = Tk ? null !== Ok && void 0 !== Ok ? Ok : Ek : await Jk();
+          if (null === Hk) return;
+          const gk = vk ? {
+              ...mB.current,
+              ...vk
+            } : mB.current,
+            hk = {
+              request: Ek,
+              files: gk,
+              activePath: Nk,
+              errors: ck.slice(-5),
+              history: Dk,
+              codeBlock: BF,
+              failedEdits: dk,
+              canAsk: zk,
+              lookups: fk,
+              canLookUp: Wk < 3 && !bk,
+              canChangeWorldCode: RR(Ik),
+              looksUpDocs: Mk,
+              about: BF ? void 0 : {
+                notes: fF,
+                outline: (bF = tF(gk, new Set(WV().callbackNames())), [bF.callbacks.length > 0 ? `Callbacks: ${bF.callbacks.join(", ")}` : "", bF.commands.length > 0 ? `Commands: ${bF.commands.join(", ")}` : "", bF.functions.length > 0 ? `Functions: ${bF.functions.join(", ")}` : ""].filter((kk => "" !== kk)).join("\n")),
+                canRemember: fF.length < 8
               }
             },
-            KR = new Map,
-            XR = uu => {
-              var Ru;
-              const yu = `${uu.format} ${uu.nativeTools}`,
-                Eu = null !== (Ru = KR.get(yu)) && void 0 !== Ru ? Ru : jK(xr(), Fu, uu);
-              return KR.set(yu, Eu), Eu
+            aF = new Map,
+            sF = kk => {
+              var Fk;
+              const Bk = `${kk.format} ${kk.nativeTools}`,
+                Rk = null !== (Fk = aF.get(Bk)) && void 0 !== Fk ? Fk : it(WV(), hk, kk);
+              return aF.set(Bk, Rk), Rk
             },
-            TR = uu => XR(mQ(uu)),
-            WR = TK(Fu);
-          let jR = 0,
-            HR = null;
-          const dR = async () => {
-            const Ru = DQ();
-            var Eu, Ku;
-            Ru > Date.now() && (vR(Date.now()), VR({
+            mF = kk => sF(wa(kk)),
+            WF = Wt(hk);
+          let vF = 0,
+            iF = null;
+          const YF = async () => {
+            const Fk = Ha();
+            var Rk, tk;
+            Fk > Date.now() && (IF(Date.now()), VF({
               phase: "waiting",
-              startedAt: uu,
-              until: Ru,
-              playingThrough: yu
-            }), await (Eu = Ru - Date.now(), Ku = qu.signal, new Promise(((uu, Ru) => {
-              const yu = setTimeout(uu, Eu);
-              Ku.addEventListener("abort", (() => {
-                clearTimeout(yu), Ru(new DOMException("The World Code AI request was stopped", "AbortError"))
+              startedAt: kk,
+              until: Fk,
+              playingThrough: Bk
+            }), await (Rk = Fk - Date.now(), tk = lk.signal, new Promise(((kk, Fk) => {
+              const Bk = setTimeout(kk, Rk);
+              tk.addEventListener("abort", (() => {
+                clearTimeout(Bk), Fk(new DOMException("The World Code AI request was stopped", "AbortError"))
               }), {
                 once: !0
               })
             }))));
-            const Qu = Date.now();
-            return vR(Qu), VR({
+            const ak = Date.now();
+            return IF(ak), VF({
               phase: "thinking",
-              startedAt: Qu,
-              playingThrough: yu
-            }), async function(uu) {
-              var Ru, yu;
-              let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const Ku = Date.now(),
-                Qu = new AbortController,
-                mu = () => {
-                  Qu.abort()
+              startedAt: ak,
+              playingThrough: Bk
+            }), async function(kk) {
+              var Fk, Bk;
+              let Rk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const tk = Date.now(),
+                ak = new AbortController,
+                Xk = () => {
+                  ak.abort()
                 };
-              null !== (Ru = Eu.signal) && void 0 !== Ru && Ru.aborted && mu(), null === (yu = Eu.signal) || void 0 === yu || yu.addEventListener("abort", mu, {
+              null !== (Fk = Rk.signal) && void 0 !== Fk && Fk.aborted && Xk(), null === (Bk = Rk.signal) || void 0 === Bk || Bk.addEventListener("abort", Xk, {
                 once: !0
               });
-              const Ju = (0, Wu.e)(3e4, Qu.signal);
-              let Nu = !1;
+              const bk = (0, mk.e)(3e4, ak.signal);
+              let wk = !1;
               try {
-                const Ru = await bQ(EQ, tQ(JQ(uu, EQ)), Ju.signal, (uu => {
-                  if (!Nu) {
-                    if (nQ(uu.answer)) return Nu = !0, void mu();
-                    var Ru;
-                    (!0 === uu.isCalling || sQ(uu.answer)) && (null === (Ru = Eu.onProgress) || void 0 === Ru || Ru.call(Eu, uu))
+                const Fk = await La(aa, Ta(da(kk, aa)), bk.signal, (kk => {
+                  if (!wk) {
+                    if (ca(kk.answer)) return wk = !0, void Xk();
+                    var Fk;
+                    (!0 === kk.isCalling || Ga(kk.answer)) && (null === (Fk = Rk.onProgress) || void 0 === Fk || Fk.call(Rk, kk))
                   }
-                }), Eu.tools);
-                if (dQ(Ru) && !nQ(Ru.answer)) {
-                  const yu = !1 !== Eu.canNudge ? await UQ(EQ, tQ(JQ(uu, EQ)), Ru, Qu.signal, (uu => {
-                    if (!Nu) {
-                      if (nQ(uu.answer)) return Nu = !0, void mu();
-                      var Ru;
-                      (!0 === uu.isCalling || sQ(uu.answer)) && (null === (Ru = Eu.onProgress) || void 0 === Ru || Ru.call(Eu, uu))
+                }), Rk.tools);
+                if (oa(Fk) && !ca(Fk.answer)) {
+                  const Bk = !1 !== Rk.canNudge ? await Ua(aa, Ta(da(kk, aa)), Fk, ak.signal, (kk => {
+                    if (!wk) {
+                      if (ca(kk.answer)) return wk = !0, void Xk();
+                      var Fk;
+                      (!0 === kk.isCalling || Ga(kk.answer)) && (null === (Fk = Rk.onProgress) || void 0 === Fk || Fk.call(Rk, kk))
                     }
-                  }), Eu.tools, 3e4) : Ru;
-                  if (!nQ(yu.answer)) return {
-                    ...yu,
-                    ms: Date.now() - Ku
+                  }), Rk.tools, 3e4) : Fk;
+                  if (!ca(Bk.answer)) return {
+                    ...Bk,
+                    ms: Date.now() - tk
                   }
                 }
-              } catch (ru) {
-                var Xu;
-                if (null !== (Xu = Eu.signal) && void 0 !== Xu && Xu.aborted) throw ru;
-                Nu || console.warn(`World Code AI: ${EQ.name} couldn't be reached`, ru)
+              } catch (Vk) {
+                var dk;
+                if (null !== (dk = Rk.signal) && void 0 !== dk && dk.aborted) throw Vk;
+                wk || console.warn(`World Code AI: ${aa.name} couldn't be reached`, Vk)
               } finally {
-                var Vu;
-                Ju.clear(), null === (Vu = Eu.signal) || void 0 === Vu || Vu.removeEventListener("abort", mu)
+                var sk;
+                bk.clear(), null === (sk = Rk.signal) || void 0 === sk || sk.removeEventListener("abort", Xk)
               }
               return {
-                ...await MQ(uu, Eu),
-                ms: Date.now() - Ku
+                ...await ua(kk, Rk),
+                ms: Date.now() - tk
               }
-            }(TR, {
-              signal: qu.signal,
-              tools: WR,
-              canNudge: !Ju,
-              onProgress: uu => {
-                const Ru = Date.now(),
-                  Eu = uu.model !== HR;
-                if (HR = uu.model, !Eu && Ru - jR < 150) return;
-                jR = Ru;
-                const Ku = function(uu, Ru) {
-                  const yu = function(uu) {
-                      return uu.replace(/<think>[\s\S]*?(?:<\/think>|$)/g, "")
-                    }(uu),
-                    Eu = BV.exec(yu);
-                  let Ku = Eu ? yu.slice(0, Eu.index) : yu;
-                  Ku = Ku.replace(/<[\w_]*$/, "").trim();
-                  const Qu = yu.trimEnd(),
-                    mu = Vy(yu, Ru).filter((uu => !/^<(?:tool_call|function=)/.test(uu.source) || /<\/(?:tool_call|invoke|function)>\s*$/.test(uu.source) || !Qu.endsWith(uu.source.trimEnd()))),
-                    Ju = mu.flatMap((uu => {
-                      var Ru;
-                      const yu = null === (Ru = uu.args.why) || void 0 === Ru ? void 0 : Ru.trim();
-                      return yu ? [yu.charAt(0).toUpperCase() + yu.slice(1)] : []
+            }(mF, {
+              signal: lk.signal,
+              tools: WF,
+              canNudge: !bk,
+              onProgress: kk => {
+                const Fk = Date.now(),
+                  Rk = kk.model !== iF;
+                if (iF = kk.model, !Rk && Fk - vF < 150) return;
+                vF = Fk;
+                const tk = function(kk, Fk) {
+                  const Bk = function(kk) {
+                      return kk.replace(/<think>[\s\S]*?(?:<\/think>|$)/g, "")
+                    }(kk),
+                    Rk = fs.exec(Bk);
+                  let tk = Rk ? Bk.slice(0, Rk.index) : Bk;
+                  tk = tk.replace(/<[\w_]*$/, "").trim();
+                  const ak = Bk.trimEnd(),
+                    Xk = VB(Bk, Fk).filter((kk => !/^<(?:tool_call|function=)/.test(kk.source) || /<\/(?:tool_call|invoke|function)>\s*$/.test(kk.source) || !ak.endsWith(kk.source.trimEnd()))),
+                    bk = Xk.flatMap((kk => {
+                      var Fk;
+                      const Bk = null === (Fk = kk.args.why) || void 0 === Fk ? void 0 : Fk.trim();
+                      return Bk ? [Bk.charAt(0).toUpperCase() + Bk.slice(1)] : []
                     }));
                   return {
-                    text: Ku,
-                    whys: [...new Set(Ju)],
-                    isWritingCode: null !== Eu,
-                    calls: mu.length
+                    text: tk,
+                    whys: [...new Set(bk)],
+                    isWritingCode: null !== Rk,
+                    calls: Xk.length
                   }
-                }(uu.answer, QQ(uu.model));
-                VR({
-                  phase: "" !== Ku.text || Ku.isWritingCode ? "writing" : "thinking",
-                  startedAt: Qu,
-                  playingThrough: yu,
-                  reasoningChars: uu.reasoningChars,
-                  model: uu.model
+                }(kk.answer, ba(kk.model));
+                VF({
+                  phase: "" !== tk.text || tk.isWritingCode ? "writing" : "thinking",
+                  startedAt: ak,
+                  playingThrough: Bk,
+                  reasoningChars: kk.reasoningChars,
+                  model: kk.model
                 })
               }
             })
-          }, bR = (yR = null === (JR = mJ.getState().status) || void 0 === JR ? void 0 : JR.provider, RJ[null !== yR && void 0 !== yR ? yR : "ovh"]), CR = uu => {
-            fR.current = null, Ou.drop(Pu), Iy(Pu, {
+          }, oF = (RF = null === (wF = bb.getState().status) || void 0 === wF ? void 0 : wF.provider, Bb[null !== RF && void 0 !== RF ? RF : "ovh"]), LF = kk => {
+            kB.current = null, nk.drop(pk), uB(pk, {
               isNotice: !0
-            }), Dy({
+            }), NB({
               role: "assistant",
-              text: "unsafe" === uu ? "That answer didn't pass Bloxd's safety check, so it isn't shown. Try again, or ask in a different way." : "Bloxd's safety check couldn't look at that answer, so it isn't shown. Try again in a minute.",
+              text: "unsafe" === kk ? "That answer didn't pass Bloxd's safety check, so it isn't shown. Try again, or ask in a different way." : "Bloxd's safety check couldn't look at that answer, so it isn't shown. Try again in a minute.",
               changes: [],
               status: "offered",
               isNotice: !0,
-              ...Yu
+              ...xk
             })
-          }, kR = async () => {
-            var uu;
-            const Ru = Date.now();
-            vR(Ru), VR({
+          }, OF = async () => {
+            var kk;
+            const Fk = Date.now();
+            IF(Fk), VF({
               phase: "thinking",
-              startedAt: Ru,
-              playingThrough: yu,
+              startedAt: Fk,
+              playingThrough: Bk,
               isSuperBot: !0
             });
-            const Eu = gu < 0 ? QR : QR.slice(0, gu),
-              Qu = Eu.findLastIndex((uu => "assistant" === uu.role && !uu.isNotice && !uu.leftOut && My(uu))),
-              mu = Eu[Qu],
-              Ju = Eu.findIndex((uu => uu.id === bu)),
-              Vu = Eu.slice(0, Math.max(0, Qu)).findLastIndex((uu => "user" === uu.role)),
-              ru = void 0 === xu && (void 0 === bu || Ju >= 0 && Ju < Qu && Ju >= Vu) && "object" === typeof(null === mu || void 0 === mu ? void 0 : mu.answeredBy) && !0 === mu.answeredBy.isSuperBot,
-              Bu = mQ(bR),
-              Su = jK(xr(), Fu, Bu, {
+            const Rk = rk < 0 ? XF : XF.slice(0, rk),
+              ak = Rk.findLastIndex((kk => "assistant" === kk.role && !kk.isNotice && !kk.leftOut && HB(kk))),
+              Xk = Rk[ak],
+              bk = Rk.findIndex((kk => kk.id === Yk)),
+              sk = Rk.slice(0, Math.max(0, ak)).findLastIndex((kk => "user" === kk.role)),
+              Vk = void 0 === Ak && (void 0 === Yk || bk >= 0 && bk < ak && bk >= sk) && "object" === typeof(null === Xk || void 0 === Xk ? void 0 : Xk.answeredBy) && !0 === Xk.answeredBy.isSuperBot,
+              Jk = wa(oF),
+              ek = it(WV(), hk, Jk, {
                 docsInTurn: !0
               }),
-              pu = TK(Fu, Bu.format),
-              Tu = "deepseek" === Bu.format ? {
-                NT: jK(xr(), Fu, Bu, {
+              yk = Wt(hk, Jk.format),
+              fk = "deepseek" === Jk.format ? {
+                ws: it(WV(), hk, Jk, {
                   docsInTurn: !0,
-                  NT: !0
+                  ws: !0
                 }).at(-1),
-                toolResults: [...(null !== Xu && void 0 !== Xu ? Xu : []).flatMap((uu => uu.call ? [{
-                  ...uu.call,
-                  text: fE(uu)
-                }] : [])), ...(null !== (uu = Fu.lookups) && void 0 !== uu ? uu : []).flatMap((uu => uu.call ? [{
-                  ...uu.call,
-                  text: `${uu.about}:\n${uu.text}`
+                toolResults: [...(null !== dk && void 0 !== dk ? dk : []).flatMap((kk => kk.call ? [{
+                  ...kk.call,
+                  text: kt(kk)
+                }] : [])), ...(null !== (kk = hk.lookups) && void 0 !== kk ? kk : []).flatMap((kk => kk.call ? [{
+                  ...kk.call,
+                  text: `${kk.about}:\n${kk.text}`
                 }] : []))].slice(-20)
               } : {};
-            let Wu;
+            let mk;
             try {
-              Wu = await async function(uu, Ru, yu, Eu, Ku) {
-                var Qu;
+              mk = await async function(kk, Fk, Bk, Rk, tk) {
+                var ak;
                 let {
-                  NT: mu,
-                  toolResults: Ju,
-                  request: Nu,
-                  code: Xu
+                  ws: Xk,
+                  toolResults: bk,
+                  request: wk,
+                  code: dk
                 } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-                const Vu = Date.now(),
-                  ru = "system" === (null === (Qu = Ru[0]) || void 0 === Qu ? void 0 : Qu.role) ? Ru[0].content : "",
-                  Bu = JSON.stringify(HQ(yu)),
-                  xu = null !== Eu && Eu.system === ru && Eu.toolsJson === Bu,
-                  Su = null !== mu && void 0 !== mu ? mu : Ru[Ru.length - 1],
-                  pu = Ju && Ju.length > 0 ? {
-                    toolResults: Ju
+                const sk = Date.now(),
+                  Vk = "system" === (null === (ak = Fk[0]) || void 0 === ak ? void 0 : ak.role) ? Fk[0].content : "",
+                  Jk = JSON.stringify(Ya(Bk)),
+                  Ak = null !== Rk && Rk.system === Vk && Rk.toolsJson === Jk,
+                  ek = null !== Xk && void 0 !== Xk ? Xk : Fk[Fk.length - 1],
+                  yk = bk && bk.length > 0 ? {
+                    toolResults: bk
                   } : {},
-                  Tu = {
-                    ...Nu ? {
-                      request: Nu
+                  fk = {
+                    ...wk ? {
+                      request: wk
                     } : {},
-                    ...Xu ? {
-                      code: Xu
+                    ...dk ? {
+                      code: dk
                     } : {}
                   };
-                let Wu = await HJ(jJ(xu ? {
-                  chatId: Eu.chatId,
-                  messages: [Su],
-                  ...pu,
-                  ...Tu
+                let mk = await ib(vb(Ak ? {
+                  chatId: Rk.chatId,
+                  messages: [ek],
+                  ...yk,
+                  ...fk
                 } : {
-                  messages: Ru,
-                  toolsJson: Bu,
-                  ...Tu
-                }), Ku);
-                if ("newChat" === Wu.outcome && xu && (Wu = await HJ(jJ({
-                    messages: Ru,
-                    toolsJson: Bu,
-                    ...Tu
-                  }), Ku)), "status" in Wu && mJ.setStatus(Wu.status), "refused" === Wu.outcome) return {
+                  messages: Fk,
+                  toolsJson: Jk,
+                  ...fk
+                }), tk);
+                if ("newChat" === mk.outcome && Ak && (mk = await ib(vb({
+                    messages: Fk,
+                    toolsJson: Jk,
+                    ...fk
+                  }), tk)), "status" in mk && bb.setStatus(mk.status), "refused" === mk.outcome) return {
                   kind: "refused",
-                  safety: Wu.safety
+                  safety: mk.safety
                 };
-                if ("blocked" === Wu.outcome) return {
+                if ("blocked" === mk.outcome) return {
                   kind: "blocked",
-                  safety: Wu.safety
+                  safety: mk.safety
                 };
-                if ("answered" !== Wu.outcome) return {
-                  kind: "newChat" === Wu.outcome ? "failed" : Wu.outcome
+                if ("answered" !== mk.outcome) return {
+                  kind: "newChat" === mk.outcome ? "failed" : mk.outcome
                 };
-                const ju = CQ(uu, Wu.answer, Wu.reasoning, Wu.toolCalls, Wu.isCutShort);
-                return null === ju ? {
+                const Wk = Oa(kk, mk.answer, mk.reasoning, mk.toolCalls, mk.isCutShort);
+                return null === Wk ? {
                   kind: "failed"
                 } : {
                   kind: "answered",
                   reply: {
-                    ...ju,
-                    ms: Date.now() - Vu
+                    ...Wk,
+                    ms: Date.now() - sk
                   },
                   chat: {
-                    chatId: Wu.chatId,
-                    system: ru,
-                    toolsJson: Bu
+                    chatId: mk.chatId,
+                    system: Vk,
+                    toolsJson: Jk
                   }
                 }
-              }(bR, Su, pu, ru ? fR.current : null, qu.signal, {
-                ...Tu,
-                ...Ku ? {
-                  request: eu
+              }(oF, ek, yk, Vk ? kB.current : null, lk.signal, {
+                ...fk,
+                ...tk ? {
+                  request: Ek
                 } : {},
-                code: xK(Fu, Bu.format)
+                code: yt(hk, Jk.format)
               })
-            } catch (du) {
-              if (qu.signal.aborted) throw du;
-              console.warn("AI Helper: Super Bot.xd couldn't be reached", du), Wu = {
+            } catch (ik) {
+              if (lk.signal.aborted) throw ik;
+              console.warn("AI Helper: Super Bot.xd couldn't be reached", ik), mk = {
                 kind: "failed"
               }
             }
-            if ("answered" === Wu.kind) return fR.current = Wu.chat, {
-              ...Wu.reply,
-              promptVersion: OQ(Su)
+            if ("answered" === mk.kind) return kB.current = mk.chat, {
+              ...mk.reply,
+              promptVersion: Ia(ek)
             };
-            if ("refused" === Wu.kind) return Nu(Wu.safety), "stopped";
-            if ("blocked" === Wu.kind) return CR(Wu.safety), "stopped";
-            fR.current = null, GR = "free";
-            const ju = mJ.getState(),
-              Hu = "unavailable" === Wu.kind && SJ(ju);
-            return Hu && MJ(), {
-              fallbackNotice: Hu ? "You don't have any Super Bot.xd usage left, so Bot.xd is answering this one." : WJ(Wu.kind, ju.status)
+            if ("refused" === mk.kind) return wk(mk.safety), "stopped";
+            if ("blocked" === mk.kind) return LF(mk.safety), "stopped";
+            kB.current = null, MF = "free";
+            const Wk = bb.getState(),
+              vk = "unavailable" === mk.kind && yb(Wk);
+            return vk && Hb(), {
+              fallbackNotice: vk ? "You don't have any Super Bot.xd usage left, so Bot.xd is answering this one." : Wb(mk.kind, Wk.status)
             }
           };
-          let eR, AR, DR, MR, GR = Au || om.getState().keys.length > 0 ? "free" : void 0,
-            UR = !1;
-          if (Iu) {
-            const Ru = {
-              format: pQ(Iu.model.callFormat),
-              nativeTools: !0 === Iu.model.nativeTools
+          let EF, SF, NF, HF, MF = Sk || lX.getState().keys.length > 0 ? "free" : void 0,
+            gF = !1;
+          if (uk) {
+            const Fk = {
+              format: ma(uk.model.callFormat),
+              nativeTools: !0 === uk.model.nativeTools
             };
-            AR = Ru.format;
-            const Ku = [...XR(Ru)];
-            var rR;
-            if (MR = {
+            SF = Fk.format;
+            const tk = [...sF(Fk)];
+            var JF;
+            if (HF = {
                 responder: "key",
-                model: Iu.model.name,
-                promptVersion: OQ(Ku)
-              }, void 0 !== pu) "" !== pu && Ku.push({
+                model: uk.model.name,
+                promptVersion: Ia(tk)
+              }, void 0 !== yk) "" !== yk && tk.push({
               role: "assistant",
-              content: pu
-            }), Ku.push({
+              content: yk
+            }), tk.push({
               role: "user",
-              content: (uR = null === Zu || void 0 === Zu || null === (rR = Zu.cutShort) || void 0 === rR ? void 0 : rR.cutCall, "Your answer was cut short. Continue exactly where you stopped, from the next character: don't repeat anything or start again, and add nothing before it." + (uR ? ` Your ${uR.name} call${uR.path?` for ${uR.path}`:""} was cut off part way and didn't come through: make that call again in full.` : ""))
+              content: (FF = null === Ck || void 0 === Ck || null === (JF = Ck.cutShort) || void 0 === JF ? void 0 : JF.cutCall, "Your answer was cut short. Continue exactly where you stopped, from the next character: don't repeat anything or start again, and add nothing before it." + (FF ? ` Your ${FF.name} call${FF.path?` for ${FF.path}`:""} was cut off part way and didn't come through: make that call again in full.` : ""))
             });
-            VR({
+            VF({
               phase: "thinking",
-              startedAt: uu,
-              playingThrough: yu,
-              keyModel: Eu
+              startedAt: kk,
+              playingThrough: Bk,
+              keyModel: Rk
             });
-            const Qu = Ru => {
-              VR({
-                phase: "" === Ru.answer ? "thinking" : "writing",
-                startedAt: uu,
-                playingThrough: yu,
-                keyModel: Eu
+            const ak = Fk => {
+              VF({
+                phase: "" === Fk.answer ? "thinking" : "writing",
+                startedAt: kk,
+                playingThrough: Bk,
+                keyModel: Rk
               })
             };
             try {
-              const uu = await am(Iu, Ku, {
-                signal: qu.signal,
-                onProgress: Qu,
-                tools: WR,
-                continueFrom: pu
+              const kk = await QX(uk, tk, {
+                signal: lk.signal,
+                onProgress: ak,
+                tools: WF,
+                continueFrom: yk
               });
-              eR = uu, GR = {
-                model: Iu.name ? `${Iu.name} \xb7 ${Iu.model.name}` : Iu.model.name
-              }, uu.isCutShort && (DR = function(uu, Ru, yu) {
+              EF = kk, MF = {
+                model: uk.name ? `${uk.name} \xb7 ${uk.model.name}` : uk.model.name
+              }, kk.isCutShort && (NF = function(kk, Fk, Bk) {
                 return {
-                  request: yu,
-                  written: Ru.written,
-                  cutCall: Ru.cutCall,
-                  keyId: uu.id,
-                  modelId: uu.model.id
+                  request: Bk,
+                  written: Fk.written,
+                  cutCall: Fk.cutCall,
+                  keyId: kk.id,
+                  modelId: kk.model.id
                 }
-              }(Iu, uu, eu))
-            } catch (SR) {
-              if (!(SR instanceof pm) || qu.signal.aborted) throw SR;
-              return void ly(SR, Iu, Pu, Yu)
+              }(uk, kk, Ek))
+            } catch (yF) {
+              if (!(yF instanceof mX) || lk.signal.aborted) throw yF;
+              return void TB(yF, uk, pk, xk)
             }
           } else {
-            const uu = lu ? await kR() : null;
-            if ("stopped" === uu) return;
-            if (uu && !("fallbackNotice" in uu)) {
-              var BR;
-              eR = uu, MR = {
+            const kk = Tk ? await OF() : null;
+            if ("stopped" === kk) return;
+            if (kk && !("fallbackNotice" in kk)) {
+              var AF;
+              EF = kk, HF = {
                 responder: "super_bot_xd",
-                model: bR.name,
-                promptVersion: uu.promptVersion
-              }, AR = null !== (BR = bR.callFormat) && void 0 !== BR ? BR : "simple", GR = {
-                model: uJ,
+                model: oF.name,
+                promptVersion: kk.promptVersion
+              }, SF = null !== (AF = oF.callFormat) && void 0 !== AF ? AF : "simple", MF = {
+                model: Fb,
                 isSuperBot: !0
-              }, UR = !0
+              }, gF = !0
             } else {
-              if (lu) {
-                const uu = await Bu();
-                if (null === uu) return;
-                Mu = uu
+              if (Tk) {
+                const kk = await Jk();
+                if (null === kk) return;
+                Hk = kk
               }
-              let Ru;
-              uu && "fallbackNotice" in uu && Dy({
+              let Fk;
+              kk && "fallbackNotice" in kk && NB({
                 role: "assistant",
-                text: uu.fallbackNotice,
+                text: kk.fallbackNotice,
                 changes: [],
                 status: "offered",
                 isNotice: !0
               });
               try {
-                Ru = await dR()
-              } catch (SR) {
-                if (!(SR instanceof BQ && "busy" === SR.reason)) throw SR;
-                Ru = await dR()
+                Fk = await YF()
+              } catch (yF) {
+                if (!(yF instanceof ea && "busy" === yF.reason)) throw yF;
+                Fk = await YF()
               }
-              IR.current = function(uu, Ru, yu) {
-                  var Eu;
-                  return !Number.isFinite(yu) || yu <= 0 ? uu : {
-                    ...uu,
-                    [Ru]: [...null !== (Eu = uu[Ru]) && void 0 !== Eu ? Eu : [], yu].slice(-10)
+              uF.current = function(kk, Fk, Bk) {
+                  var Rk;
+                  return !Number.isFinite(Bk) || Bk <= 0 ? kk : {
+                    ...kk,
+                    [Fk]: [...null !== (Rk = kk[Fk]) && void 0 !== Rk ? Rk : [], Bk].slice(-10)
                   }
-                }(IR.current, Ru.model, Ru.ms),
-                function(uu) {
+                }(uF.current, Fk.model, Fk.ms),
+                function(kk) {
                   try {
-                    localStorage.setItem(dV, JSON.stringify(uu))
+                    localStorage.setItem(Os, JSON.stringify(kk))
                   } catch {}
-                }(IR.current), eR = Ru, AR = QQ(Ru.model);
-              const yu = KQ(Ru.model);
-              MR = {
+                }(uF.current), EF = Fk, SF = ba(Fk.model);
+              const Bk = Xa(Fk.model);
+              HF = {
                 responder: "bot_xd",
-                model: Ru.model,
-                promptVersion: yu ? OQ(TR(yu)) : ""
+                model: Fk.model,
+                promptVersion: Bk ? Ia(mF(Bk)) : ""
               }
             }
           }
-          const nR = xr(),
-            sR = iE(eR.answer, AR, Uu, Du, nR.callbackNames(), RR ? Su.d : void 0, vu, new Set([rK(Uu, Du, RR), Du, ...du, ...Object.keys(null !== Hu && void 0 !== Hu ? Hu : {})].filter((uu => null !== uu))), nR.realName),
-            tR = Ju ? {
-              ...sR,
+          const UF = WV(),
+            cF = KR(EF.answer, SF, gk, Nk, UF.callbackNames(), BF ? ek.c : void 0, Ik, new Set([At(gk, Nk, BF), Nk, ...ik, ...Object.keys(null !== vk && void 0 !== vk ? vk : {})].filter((kk => null !== kk))), UF.realName),
+            GF = bk ? {
+              ...cF,
               changes: [],
               failedEdits: [],
               inPlace: !1,
               worldCode: [],
               plan: [],
               actions: []
-            } : sR;
-          if (!UR) {
-            const uu = Date.now();
-            vR(uu), VR({
+            } : cF;
+          if (!gF) {
+            const kk = Date.now();
+            IF(kk), VF({
               phase: "screening",
-              startedAt: uu,
-              playingThrough: yu,
-              keyModel: Eu
+              startedAt: kk,
+              playingThrough: Bk,
+              keyModel: Rk
             });
-            const Ru = await HV(Mu, tR, qu.signal, (Ru => {
-              vR(Date.now()), VR({
+            const Fk = await Ls(Hk, GF, lk.signal, (Fk => {
+              IF(Date.now()), VF({
                 phase: "screening",
-                startedAt: uu,
-                playingThrough: yu,
-                keyModel: Eu,
-                until: Ru
+                startedAt: kk,
+                playingThrough: Bk,
+                keyModel: Rk,
+                until: Fk
               })
             }));
-            if ("ok" !== Ru) return void CR(Ru)
+            if ("ok" !== Fk) return void LF(Fk)
           }
-          Ou.answered(Pu, {
-            input: Fu,
-            responder: MR.responder,
-            promptVersion: MR.promptVersion
+          nk.answered(pk, {
+            input: hk,
+            responder: HF.responder,
+            promptVersion: HF.promptVersion
           }, {
-            model: MR.model,
-            text: eR.answer
+            model: HF.model,
+            text: EF.answer
           });
-          const lR = function(uu) {
-              let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RR;
-              return uu.flatMap((uu => Er(nR, uu, Ru && !(0, Su.e)(uu.path))))
+          const TF = function(kk) {
+              let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BF;
+              return kk.flatMap((kk => wV(UF, kk, Fk && !(0, ek.d)(kk.path))))
             },
-            gR = lR(tR.changes),
-            cR = "direct" === vu ? function(uu) {
-              return uu.flatMap((uu => {
-                var Ru;
-                return null !== (Ru = XN(uu)) && void 0 !== Ru ? Ru : []
+            rF = TF(GF.changes),
+            DF = "direct" === Ik ? function(kk) {
+              return kk.flatMap((kk => {
+                var Fk;
+                return null !== (Fk = sw(kk)) && void 0 !== Fk ? Fk : []
               }))
-            }(gR) : [],
-            LR = cR.length > 0 ? {
-              ...tR,
-              changes: tR.changes.map((uu => ({
-                ...uu,
-                after: xN(uu.after, cR)
+            }(rF) : [],
+            zF = DF.length > 0 ? {
+              ...GF,
+              changes: GF.changes.map((kk => ({
+                ...kk,
+                after: ew(kk.after, DF)
               })))
-            } : tR,
-            zR = LR.changes.filter((uu => RR && (0, Su.e)(uu.path))).map((uu => ({
-              ...uu,
-              path: (0, Su.g)(uu.path)
+            } : GF,
+            PF = zF.changes.filter((kk => BF && (0, ek.d)(kk.path))).map((kk => ({
+              ...kk,
+              path: (0, ek.g)(kk.path)
             }))),
-            wR = LR.changes.filter((uu => !RR || !(0, Su.e)(uu.path))),
-            ZR = zR.length > 0 ? {
-              ...LR,
-              changes: wR,
-              inPlace: LR.inPlace && wR.length > 0
-            } : LR,
-            hR = zR.length > 0 || cR.length > 0 ? lR(ZR.changes) : gR,
-            PR = hR.filter(aV),
-            iR = ZR.inPlace && nu && PR.length > 0 && ru < 3 && !eR.isCutShort && !eR.hasCallsFromReasoning,
-            YR = "direct" === vu && nu,
-            oR = ZR.failedEdits.filter((uu => "unread" === uu.reason)),
-            qR = !YR || Ju || void 0 !== Cu || RR ? [] : oR.flatMap((uu => null !== uu.path && void 0 !== uu.code ? [{
-              path: uu.path,
-              code: uu.code
+            qF = zF.changes.filter((kk => !BF || !(0, ek.d)(kk.path))),
+            CF = PF.length > 0 ? {
+              ...zF,
+              changes: qF,
+              inPlace: zF.inPlace && qF.length > 0
+            } : zF,
+            ZF = PF.length > 0 || DF.length > 0 ? TF(CF.changes) : rF,
+            pF = ZF.filter(RV),
+            KF = CF.inPlace && Uk && pF.length > 0 && Vk < 3 && !EF.isCutShort && !EF.hasCallsFromReasoning,
+            xF = "direct" === Ik && Uk,
+            jF = CF.failedEdits.filter((kk => "unread" === kk.reason)),
+            lF = !xF || bk || void 0 !== Lk || BF ? [] : jF.flatMap((kk => null !== kk.path && void 0 !== kk.code ? [{
+              path: kk.path,
+              code: kk.code
             }] : [])),
-            OR = uu => "unread" === uu.reason && qR.some((Ru => Ru.path === uu.path)),
-            aR = ZR.failedEdits.filter((uu => !OR(uu))),
-            uy = oR.filter((uu => !OR(uu))),
-            Ry = yE(vu) && ZR.worldCode.length > 0 && !Ju && 0 === zR.length,
-            yy = ju < 3 && !Ju && !eR.isCutShort,
-            Ey = new Set([...WR.map((uu => uu.name)), ...uy.length > 0 ? ["view_file", "view_world_code"] : []]),
-            Ky = !yy || qR.length > 0 || zR.length > 0 || iR ? [] : ZR.lookups.filter((uu => Ey.has(uu.name))),
-            Qy = {
-              request: eu,
-              shown: Ru,
-              userEntryId: Pu,
+            nF = kk => "unread" === kk.reason && lF.some((Fk => Fk.path === kk.path)),
+            QF = CF.failedEdits.filter((kk => !nF(kk))),
+            FB = jF.filter((kk => !nF(kk))),
+            BB = RR(Ik) && CF.worldCode.length > 0 && !bk && 0 === PF.length,
+            RB = Wk < 3 && !bk && !EF.isCutShort,
+            tB = new Set([...WF.map((kk => kk.name)), ...FB.length > 0 ? ["view_file", "view_world_code"] : []]),
+            aB = !RB || lF.length > 0 || PF.length > 0 || KF ? [] : CF.lookups.filter((kk => tB.has(kk.name))),
+            XB = {
+              request: Ek,
+              shown: Fk,
+              userEntryId: pk,
               options: {
                 check: !1,
-                about: Qu,
-                planStep: mu,
-                wordsOnly: Ju,
-                useFree: Au,
-                isAutoFix: Vu,
-                autoFixRound: ru,
-                failedEdits: [...(null !== Xu && void 0 !== Xu ? Xu : []).map(Qr), ...uy],
-                ...iu,
-                lookupRound: ju + 1,
-                lookupOf: Pu,
-                insertsInto: Cu,
-                guardWords: Mu
+                about: ak,
+                planStep: Xk,
+                wordsOnly: bk,
+                useFree: Sk,
+                isAutoFix: sk,
+                autoFixRound: Vk,
+                failedEdits: [...(null !== dk && void 0 !== dk ? dk : []).map(sV), ...FB],
+                ...Kk,
+                lookupRound: Wk + 1,
+                lookupOf: pk,
+                insertsInto: Lk,
+                guardWords: Hk
               }
             },
-            my = 0 === ZR.changes.length && 0 === ZR.worldCode.length,
-            Jy = Ky.length > 0 && ("direct" === vu || Gu && my && Ky.every(kK)),
-            Ny = Jy && my && 0 === ZR.notes.length,
-            ry = Lu ? ZR.question : null,
-            By = eR.isCutShort ? ZR.text.replace(/(<tool_call|<function=|<\|channel\||\{\s*"jsonrpc")[\s\S]*$/, "").trim() : ZR.text,
-            xy = eR.isCutShort && !DR ? "\n\nThe answer got too long and was cut off, so part of it is missing. Try asking for one thing at a time." : "",
-            py = aR.length > 0 && ZR.changes.length > 0 && !eR.isCutShort ? "\n\nPart of this answer couldn't go in, so it isn't in the change." : "",
-            Wy = () => ZR.changes.length > 0 ? "Here's a change for your code." : zR.length > 0 ? "This changes your World Code." : ZR.worldCode.length > 0 ? "This needs World Code." : qR.length > 0 ? `I'll put it into ${qR.map((uu=>uu.path)).join(" and ")}.` : ry ? "Quick question before I build it:" : ZR.plan.length > 0 ? "That's a big one, so here's a plan to build it a step at a time." : Ky.length > 0 ? `I'll look at ${function(uu){var Ru;const yu=uu.map(dK);return yu.length<=1?null!==(Ru=yu[0])&&void 0!==Ru?Ru:"":`${yu.slice(0,-1).join(", ")} and ${yu[yu.length-1]}`}(Ky)} first.` : ZR.notes.length > 0 ? "Here's something to remember about your game." : ZR.actions.length > 0 ? "Sure!" : eR.isCutShort ? "Sorry, that was too much for one answer." : "Sorry, I couldn't work that out. Try asking in a different way.",
-            jy = {
+            bB = 0 === CF.changes.length && 0 === CF.worldCode.length,
+            wB = aB.length > 0 && ("direct" === Ik || Mk && bB && aB.every(Et)),
+            dB = wB && bB && 0 === CF.notes.length,
+            JB = zk ? CF.question : null,
+            AB = EF.isCutShort ? CF.text.replace(/(<tool_call|<function=|<\|channel\||\{\s*"jsonrpc")[\s\S]*$/, "").trim() : CF.text,
+            eB = EF.isCutShort && !NF ? "\n\nThe answer got too long and was cut off, so part of it is missing. Try asking for one thing at a time." : "",
+            fB = QF.length > 0 && CF.changes.length > 0 && !EF.isCutShort ? "\n\nPart of this answer couldn't go in, so it isn't in the change." : "",
+            WB = () => CF.changes.length > 0 ? "Here's a change for your code." : PF.length > 0 ? "This changes your World Code." : CF.worldCode.length > 0 ? "This needs World Code." : lF.length > 0 ? `I'll put it into ${lF.map((kk=>kk.path)).join(" and ")}.` : JB ? "Quick question before I build it:" : CF.plan.length > 0 ? "That's a big one, so here's a plan to build it a step at a time." : aB.length > 0 ? `I'll look at ${function(kk){var Fk;const Bk=kk.map(ot);return Bk.length<=1?null!==(Fk=Bk[0])&&void 0!==Fk?Fk:"":`${Bk.slice(0,-1).join(", ")} and ${Bk[Bk.length-1]}`}(aB)} first.` : CF.notes.length > 0 ? "Here's something to remember about your game." : CF.actions.length > 0 ? "Sure!" : EF.isCutShort ? "Sorry, that was too much for one answer." : "Sorry, I couldn't work that out. Try asking in a different way.",
+            vB = {
               role: "assistant",
-              text: (By || Wy()) + xy + py,
-              changes: ZR.changes,
+              text: (AB || WB()) + eB + fB,
+              changes: CF.changes,
               status: "offered",
-              warnings: hR,
-              worldCode: ZR.worldCode.length > 0 && !Ry ? ZR.worldCode : void 0,
-              editedInPlace: ZR.inPlace && !iR || void 0,
-              failedEdits: aR.length > 0 ? aR : void 0,
-              question: null !== ry && void 0 !== ry ? ry : void 0,
-              askedFor: ry ? {
-                request: eu,
-                guardWords: Mu
+              warnings: ZF,
+              worldCode: CF.worldCode.length > 0 && !BB ? CF.worldCode : void 0,
+              editedInPlace: CF.inPlace && !KF || void 0,
+              failedEdits: QF.length > 0 ? QF : void 0,
+              question: null !== JB && void 0 !== JB ? JB : void 0,
+              askedFor: JB ? {
+                request: Ek,
+                guardWords: Hk
               } : void 0,
-              note: ZR.notes[0],
-              plan: ZR.plan.length > 0 ? ZR.plan : void 0,
-              noteStatus: ZR.notes.length > 0 ? YR ? "pending" : "asked" : void 0,
-              answeredBy: GR,
-              oneOff: tu || void 0,
-              cutShort: DR,
-              byItself: YR || void 0,
-              ...DR ? {
-                retryShown: Yu.retryShown,
-                retryOptions: Yu.retryOptions
+              note: CF.notes[0],
+              plan: CF.plan.length > 0 ? CF.plan : void 0,
+              noteStatus: CF.notes.length > 0 ? xF ? "pending" : "asked" : void 0,
+              answeredBy: MF,
+              oneOff: Gk || void 0,
+              cutShort: NF,
+              byItself: xF || void 0,
+              ...NF ? {
+                retryShown: xk.retryShown,
+                retryOptions: xk.retryOptions
               } : {},
-              ...Ny ? {
-                logTitle: Kr,
+              ...dB ? {
+                logTitle: dV,
                 isCalm: !0
               } : {},
-              ...Ky.length > 0 ? {
+              ...aB.length > 0 ? {
                 lookups: {
-                  lookups: Ky,
-                  followUp: Qy
+                  lookups: aB,
+                  followUp: XB
                 },
-                lookedAt: Jy || void 0
+                lookedAt: wB || void 0
               } : {}
             },
-            Hy = wu && void 0 !== xu ? (au = xu, fu = jy, NR((uu => uu.map((uu => uu.id === au ? {
-              ...fu,
-              id: au,
-              target: uu.target
-            } : uu)))), au) : Dy(jy),
-            dy = ZR.inPlace && nu && !iR && !eR.isCutShort && !eR.hasCallsFromReasoning,
-            by = dy && await qy({
-              id: Hy,
-              changes: ZR.changes
-            }, Qu);
-          !ZR.inPlace || iR || by || Iy(Hy, {
+            iB = qk && void 0 !== Ak ? (Qk = Ak, kF = vB, dF((kk => kk.map((kk => kk.id === Qk ? {
+              ...kF,
+              id: Qk,
+              target: kk.target
+            } : kk)))), Qk) : NB(vB),
+            YB = CF.inPlace && Uk && !KF && !EF.isCutShort && !EF.hasCallsFromReasoning,
+            oB = YB && await lB({
+              id: iB,
+              changes: CF.changes
+            }, ak);
+          !CF.inPlace || KF || oB || uB(iB, {
             editedInPlace: void 0
           });
-          const Cy = 0 === ZR.changes.length && 0 === aR.length && 0 === qR.length && 0 === zR.length && 0 === ZR.worldCode.length;
-          if (YR && void 0 !== jy.note && ((by || iR || Cy) && !qu.signal.aborted ? kE({
-              id: Hy,
-              note: jy.note,
+          const LB = 0 === CF.changes.length && 0 === QF.length && 0 === lF.length && 0 === PF.length && 0 === CF.worldCode.length;
+          if (xF && void 0 !== vB.note && ((oB || KF || LB) && !lk.signal.aborted ? OR({
+              id: iB,
+              note: vB.note,
               changes: [],
               status: "applied"
-            }, !0) : dy && !qu.signal.aborted ? CE(Hy, "declined") : CE(Hy, "asked")), qu.signal.aborted) return void Dy({
+            }, !0) : YB && !lk.signal.aborted ? LR(iB, "declined") : LR(iB, "asked")), lk.signal.aborted) return void NB({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14212,56 +14212,56 @@ const wr = (0, Eu.memo)((function(uu) {
             isNotice: !0,
             isCalm: !0
           });
-          iR && (Iy(Hy, {
+          KF && (uB(iB, {
             warningsSentBack: !0
-          }), FR((uu => [{
-            id: Sy(),
-            text: (0, KX.t)(PR),
+          }), hF((kk => [{
+            id: yB(),
+            text: (0, Xd.s)(pF),
             shown: "Fix this line",
             check: !1,
             isAutoFix: !0,
-            autoFixRound: ru + 1
-          }, ...uu]))), by && eV(ZR.changes, Du).forEach(((uu, Ru) => {
-            const yu = () => {
-              Dy({
+            autoFixRound: Vk + 1
+          }, ...kk]))), oB && Hs(CF.changes, Nk).forEach(((kk, Fk) => {
+            const Bk = () => {
+              NB({
                 role: "assistant",
-                text: AV(uu.path),
+                text: us(kk.path),
                 changes: [],
                 status: "offered",
                 isNotice: !0,
                 isCalm: !0
-              }), zu(uu.path, uu.line)
+              }), Pk(kk.path, kk.line)
             };
-            0 === Ru ? yu() : Xy(yu, 1200 * Ru)
+            0 === Fk ? Bk() : sB(Bk, 1200 * Fk)
           }));
-          const ky = 0 === Ky.length && ZR.actions.some((uu => "exportGame" === uu.kind));
-          nu && ky && "direct" === vu ? fy(ZR.changes.length > 0 && !by) : nu && (ky || qE(Mu) && !RR) && Iy(Hy, {
+          const OB = 0 === aB.length && CF.actions.some((kk => "exportGame" === kk.kind));
+          Uk && OB && "direct" === Ik ? kR(CF.changes.length > 0 && !oB) : Uk && (OB || lR(Hk) && !BF) && uB(iB, {
             offerExport: !0
           });
-          const ey = 0 === Ky.length ? ZR.actions.find((uu => "switchToWorldCode" === uu.kind)) : void 0,
-            Ay = ZR.changes.length > 0 && !by && nu,
-            Gy = by ? ZR.changes.map((uu => ({
-              path: uu.path,
-              text: uu.before
+          const EB = 0 === aB.length ? CF.actions.find((kk => "switchToWorldCode" === kk.kind)) : void 0,
+            SB = CF.changes.length > 0 && !oB && Uk,
+            MB = oB ? CF.changes.map((kk => ({
+              path: kk.path,
+              text: kk.before
             }))) : void 0,
-            Uy = zR.length > 0 && YR && !!ou,
-            ny = Uy && !Ay;
-          if (zR.length > 0) {
-            const uu = Dy({
+            gB = PF.length > 0 && xF && !!jk,
+            UB = gB && !SB;
+          if (PF.length > 0) {
+            const kk = NB({
               role: "assistant",
               text: "This is the part of the change that goes in World Code.",
-              changes: zR,
+              changes: PF,
               status: "offered",
-              warnings: lR(zR, !1),
-              answeredBy: GR,
-              byItself: ny || void 0
-            }, CV.e);
-            Uy && RE(uu, Ay)
+              warnings: TF(PF, !1),
+              answeredBy: MF,
+              byItself: UB || void 0
+            }, Ss.i);
+            gB && BR(kk, SB)
           }
-          if ("stopped" === (Jy ? await KE(Ky, Qy, {
-              replaced: Gy,
-              signal: qu.signal
-            }) : "none")) return void Dy({
+          if ("stopped" === (wB ? await aR(aB, XB, {
+              replaced: MB,
+              signal: lk.signal
+            }) : "none")) return void NB({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14269,108 +14269,108 @@ const wr = (0, Eu.memo)((function(uu) {
             isNotice: !0,
             isCalm: !0
           });
-          const sy = uu => ({
-            request: uu(eu),
-            guardWords: uu(Mu)
+          const cB = kk => ({
+            request: kk(Ek),
+            guardWords: kk(Hk)
           });
-          qR.length > 0 && FR((uu => [...qR.map((uu => {
+          lF.length > 0 && hF((kk => [...lF.map((kk => {
             const {
-              request: Ru,
-              guardWords: yu
-            } = sy((Ru => function(uu, Ru, yu) {
-              return `They asked: "${uu}"\nYour last answer wrote this for ${Ru}, but you hadn't seen that file, so it didn't go in. ${Ru} is open now, its code above. Put your code into it, keeping everything it already has and changing only what the request needs:\n\`\`\`js\n${yu.replace(/\s*$/,"")}\n\`\`\``
-            }(Ru, uu.path, uu.code)));
+              request: Fk,
+              guardWords: Bk
+            } = cB((Fk => function(kk, Fk, Bk) {
+              return `They asked: "${kk}"\nYour last answer wrote this for ${Fk}, but you hadn't seen that file, so it didn't go in. ${Fk} is open now, its code above. Put your code into it, keeping everything it already has and changing only what the request needs:\n\`\`\`js\n${Bk.replace(/\s*$/,"")}\n\`\`\``
+            }(Fk, kk.path, kk.code)));
             return {
-              id: Sy(),
-              text: Ru,
+              id: yB(),
+              text: Fk,
               shown: "Put the code in",
               followUp: {
                 check: !1,
-                about: Qu,
-                planStep: mu,
-                useFree: Au,
-                lookupRound: ju,
-                lookupOf: Pu,
-                insertsInto: uu.path,
-                guardWords: yu
+                about: ak,
+                planStep: Xk,
+                useFree: Sk,
+                lookupRound: Wk,
+                lookupOf: pk,
+                insertsInto: kk.path,
+                guardWords: Bk
               },
-              opensPath: uu.path,
-              ...Gy ? {
-                replaced: Gy,
-                until: Date.now() + Ar
+              opensPath: kk.path,
+              ...MB ? {
+                replaced: MB,
+                until: Date.now() + MV
               } : {}
             }
-          })), ...uu]));
-          const ty = YR && !!ou && RR && 0 === zR.length && (Ry || "switchToWorldCode" === (null === ey || void 0 === ey ? void 0 : ey.kind) && !Ju);
-          if (ty && Ay) NR((uu => uu.map((uu => uu.id === Hy && ZR.worldCode.length > 0 ? {
-            ...uu,
-            worldCode: ZR.worldCode
-          } : uu)))), Dy({
+          })), ...kk]));
+          const GB = xF && !!jk && BF && 0 === PF.length && (BB || "switchToWorldCode" === (null === EB || void 0 === EB ? void 0 : EB.kind) && !bk);
+          if (GB && SB) dF((kk => kk.map((kk => kk.id === iB && CF.worldCode.length > 0 ? {
+            ...kk,
+            worldCode: CF.worldCode
+          } : kk)))), NB({
             role: "assistant",
-            text: Mr(ZR.worldCode.length > 0),
+            text: UV(CF.worldCode.length > 0),
             changes: [],
             status: "offered",
             isNotice: !0
           });
-          else if (ty) {
-            var xR;
-            const uu = ZR.worldCode.join("\n\n"),
-              Ru = "switchToWorldCode" === (null === ey || void 0 === ey ? void 0 : ey.kind) ? ey.request : null,
-              yu = Ry ? sy((Ru => function(uu, Ru) {
-                return `In a code block, they asked: "${uu}"\nThe code block's answer needs this part in World Code, which is open now, its code above. Put it in, keeping everything World Code already has: a callback it already defines is changed, with what it does kept, never defined twice:\n\`\`\`js\n${Ru.replace(/\s*$/,"")}\n\`\`\``
-              }(Ru, uu))) : null;
-            EE(null !== (xR = null === yu || void 0 === yu ? void 0 : yu.request) && void 0 !== xR ? xR : Ru ? function(uu) {
-              return `In a code block, they asked for this in World Code, which is open now: ${uu}`
-            }(Ru) : null, {
+          else if (GB) {
+            var eF;
+            const kk = CF.worldCode.join("\n\n"),
+              Fk = "switchToWorldCode" === (null === EB || void 0 === EB ? void 0 : EB.kind) ? EB.request : null,
+              Bk = BB ? cB((Fk => function(kk, Fk) {
+                return `In a code block, they asked: "${kk}"\nThe code block's answer needs this part in World Code, which is open now, its code above. Put it in, keeping everything World Code already has: a callback it already defines is changed, with what it does kept, never defined twice:\n\`\`\`js\n${Fk.replace(/\s*$/,"")}\n\`\`\``
+              }(Fk, kk))) : null;
+            tR(null !== (eF = null === Bk || void 0 === Bk ? void 0 : Bk.request) && void 0 !== eF ? eF : Fk ? function(kk) {
+              return `In a code block, they asked for this in World Code, which is open now: ${kk}`
+            }(Fk) : null, {
               check: !1,
-              about: Qu,
-              useFree: Au,
-              lookupOf: Pu,
-              ...yu ? {
-                guardWords: yu.guardWords
+              about: ak,
+              useFree: Sk,
+              lookupOf: pk,
+              ...Bk ? {
+                guardWords: Bk.guardWords
               } : {}
-            }, Ry ? uu : void 0)
+            }, BB ? kk : void 0)
           }
-          const gy = !!hu && 0 === zR.length && !ty && ("switchToWorldCode" === (null === ey || void 0 === ey ? void 0 : ey.kind) || YR && ZR.worldCode.length > 0);
-          if (gy) {
-            const uu = "switchToWorldCode" === (null === ey || void 0 === ey ? void 0 : ey.kind) ? ey.request : null;
-            uE(null !== uu && void 0 !== uu ? uu : ZR.worldCode.length > 0 ? cr(ZR.worldCode) : "", {
-              leavesChangeBehind: Ay,
-              hasWorldCodePart: ZR.worldCode.length > 0
+          const rB = !!Zk && 0 === PF.length && !GB && ("switchToWorldCode" === (null === EB || void 0 === EB ? void 0 : EB.kind) || xF && CF.worldCode.length > 0);
+          if (rB) {
+            const kk = "switchToWorldCode" === (null === EB || void 0 === EB ? void 0 : EB.kind) ? EB.request : null;
+            FR(null !== kk && void 0 !== kk ? kk : CF.worldCode.length > 0 ? qV(CF.worldCode) : "", {
+              leavesChangeBehind: SB,
+              hasWorldCodePart: CF.worldCode.length > 0
             })
           }
-          if (by && hR.length > 0 && ru < 3 && (!(gy || Uy || ty) || Ay) && (Iy(Hy, {
+          if (oB && ZF.length > 0 && Vk < 3 && (!(rB || gB || GB) || SB) && (uB(iB, {
               warningsSentBack: !0
-            }), FR((uu => [{
-              id: Sy(),
-              text: (0, KX.G)(hR),
-              shown: 1 === hR.length ? "Fix this line" : "Fix these lines",
+            }), hF((kk => [{
+              id: yB(),
+              text: (0, Xd.E)(ZF),
+              shown: 1 === ZF.length ? "Fix this line" : "Fix these lines",
               check: !1,
               isAutoFix: !0,
-              autoFixRound: ru + 1,
-              replaced: Gy,
-              until: Date.now() + Ar
-            }, ...uu]))), YR && aR.length > 0 && (by || 0 === ZR.changes.length && !eR.isCutShort && !iR && !eR.hasCallsFromReasoning) && !ry && 0 === hR.length && 0 === Ky.length && 0 === qR.length && ru < 3 && !gy && !Uy && !ty && FR((uu => [{
-              id: Sy(),
-              text: KX.s,
-              shown: er,
-              replaced: Gy,
-              until: Date.now() + Ar,
+              autoFixRound: Vk + 1,
+              replaced: MB,
+              until: Date.now() + MV
+            }, ...kk]))), xF && QF.length > 0 && (oB || 0 === CF.changes.length && !EF.isCutShort && !KF && !EF.hasCallsFromReasoning) && !JB && 0 === ZF.length && 0 === aB.length && 0 === lF.length && Vk < 3 && !rB && !gB && !GB && hF((kk => [{
+              id: yB(),
+              text: Xd.p,
+              shown: uV,
+              replaced: MB,
+              until: Date.now() + MV,
               followUp: {
                 check: !1,
-                about: Qu,
-                planStep: mu,
-                useFree: Au,
+                about: ak,
+                planStep: Xk,
+                useFree: Sk,
                 isAutoFix: !0,
-                autoFixRound: ru + 1,
-                failedEdits: aR
+                autoFixRound: Vk + 1,
+                failedEdits: QF
               }
-            }, ...uu])), by && "direct" === vu && 0 === hR.length && 0 === aR.length && 0 === Ky.length && 0 === qR.length && 0 === zR.length && !ty && !gy) {
-            const uu = eV(ZR.changes, Du).length;
-            mE(Hy, ru, uu > 1 ? 1200 * (uu - 1) + 1500 : 0)
+            }, ...kk])), oB && "direct" === Ik && 0 === ZF.length && 0 === QF.length && 0 === aB.length && 0 === lF.length && 0 === PF.length && !GB && !rB) {
+            const kk = Hs(CF.changes, Nk).length;
+            bR(iB, Vk, kk > 1 ? 1200 * (kk - 1) + 1500 : 0)
           }
-        } catch (SR) {
-          if (qu.signal.aborted) fR.current = null, Dy({
+        } catch (yF) {
+          if (lk.signal.aborted) kB.current = null, NB({
             role: "assistant",
             text: "Stopped.",
             changes: [],
@@ -14379,356 +14379,356 @@ const wr = (0, Eu.memo)((function(uu) {
             isCalm: !0
           });
           else {
-            const uu = SR instanceof BQ ? SR.reason : "failed";
-            Dy({
+            const kk = yF instanceof ea ? yF.reason : "failed";
+            NB({
               role: "assistant",
-              text: xQ(uu),
+              text: ya(kk),
               changes: [],
               status: "offered",
               isNotice: !0,
-              ...Yu,
-              retryAt: "busy" === uu ? Date.now() + 6e4 : void 0
-            }), vR(Date.now())
+              ...xk,
+              retryAt: "busy" === kk ? Date.now() + 6e4 : void 0
+            }), IF(Date.now())
           }
         } finally {
-          aR.current = null, VR(null), Ou.requestEnded(Pu)
+          QF.current = null, VF(null), nk.requestEnded(pk)
         }
-      }, ly = (uu, Ru, yu, Eu) => {
-        const Ku = function(uu, Ru) {
-          return "refused" === uu.problem ? null : {
-            notice: uu.problem,
-            model: Ru.model.name,
-            company: Sm(Ru.provider, Ru.baseUrl, !0),
-            isServer: "custom" === Ru.provider,
-            detail: uu.detail && Tm(uu.detail, Ru.key)
+      }, TB = (kk, Fk, Bk, Rk) => {
+        const tk = function(kk, Fk) {
+          return "refused" === kk.problem ? null : {
+            notice: kk.problem,
+            model: Fk.model.name,
+            company: fX(Fk.provider, Fk.baseUrl, !0),
+            isServer: "custom" === Fk.provider,
+            detail: kk.detail && WX(kk.detail, Fk.key)
           }
-        }(uu, Ru);
-        if (!Ku) return (uu => {
-          Iy(uu, {
+        }(kk, Fk);
+        if (!tk) return (kk => {
+          uB(kk, {
             leftOut: !0
           })
-        })(yu), void Dy({
+        })(Bk), void NB({
           role: "assistant",
-          text: Dr,
+          text: gV,
           changes: [],
           status: "offered",
           isNotice: !0
         });
-        Dy({
+        NB({
           role: "assistant",
           text: "",
           changes: [],
           status: "offered",
           isNotice: !0,
-          ...Eu,
-          keyNotice: Ku
+          ...Rk,
+          keyNotice: tk
         })
-      }, gy = () => {
-        const uu = cR.trim();
-        if ("" === uu || XR && zR.length >= 3) return;
-        const Ru = kR && null !== cE;
-        if (Ru || !ny((() => {
-            cy.current()
+      }, rB = () => {
+        const kk = DF.trim();
+        if ("" === kk || sF && PF.length >= 3) return;
+        const Fk = OF && null !== DR;
+        if (Fk || !UB((() => {
+            DB.current()
           }))) {
-          if (eR(!1), wR) return Py(IV(wR, uu), GV(wR, uu), {
+          if (EF(!1), qF) return pB(Us(qF, kk), cs(qF, kk), {
             check: !0,
-            useFree: Ru
-          }), ZR(null), void LR("");
-          if (XR || null === sE || void 0 === sE || !sE.question) {
-            if (!XR) return LR(""), void ty(uu, void 0, {
-              useFree: Ru
+            useFree: Fk
+          }), CF(null), void zF("");
+          if (sF || null === cR || void 0 === cR || !cR.question) {
+            if (!sF) return zF(""), void GB(kk, void 0, {
+              useFree: Fk
             });
-            zR.length < 3 && (FR([...zR, {
-              id: Sy(),
-              text: uu,
-              useFree: Ru
-            }]), LR(""))
+            PF.length < 3 && (hF([...PF, {
+              id: yB(),
+              text: kk,
+              useFree: Fk
+            }]), zF(""))
           } else {
-            var yu, Eu, Ku;
-            LR("");
-            const Qu = null !== (yu = null === (Eu = sE.askedFor) || void 0 === Eu ? void 0 : Eu.request) && void 0 !== yu ? yu : "",
-              mu = jX(Qu, sE.question.question, uu);
-            ty(mu, uu, {
+            var Bk, Rk, tk;
+            zF("");
+            const ak = null !== (Bk = null === (Rk = cR.askedFor) || void 0 === Rk ? void 0 : Rk.request) && void 0 !== Bk ? Bk : "",
+              Xk = Yd(ak, cR.question.question, kk);
+            GB(Xk, kk, {
               check: !0,
-              about: null === (Ku = sE.askedFor) || void 0 === Ku ? void 0 : Ku.request,
-              asked: `${Qu} ${uu}`,
-              useFree: Ru
+              about: null === (tk = cR.askedFor) || void 0 === tk ? void 0 : tk.request,
+              asked: `${ak} ${kk}`,
+              useFree: Fk
             })
           }
         }
-      }, cy = (0, Eu.useRef)(gy);
-    cy.current = gy;
-    const Ly = (0, Eu.useRef)(ty);
-    Ly.current = ty;
-    const zy = (0, Eu.useRef)(Dy);
-    zy.current = Dy;
-    const Fy = (0, Eu.useRef)(null),
-      [wy, Zy] = (0, Eu.useState)(null),
-      hy = zR.filter((uu => void 0 === uu.followUp));
+      }, DB = (0, Rk.useRef)(rB);
+    DB.current = rB;
+    const zB = (0, Rk.useRef)(GB);
+    zB.current = GB;
+    const PB = (0, Rk.useRef)(NB);
+    PB.current = NB;
+    const hB = (0, Rk.useRef)(null),
+      [qB, CB] = (0, Rk.useState)(null),
+      ZB = PF.filter((kk => void 0 === kk.followUp));
 
-    function Py(uu, Ru, yu) {
-      if (XR) {
-        if (zR.length < 3) {
-          var Eu;
-          const Ku = null !== (Eu = yu.useFree) && void 0 !== Eu ? Eu : kR && null !== cE;
-          Ku && eR(!1), FR([...zR, {
-            id: Sy(),
-            text: uu,
-            shown: Ru,
-            ...yu,
-            useFree: Ku
+    function pB(kk, Fk, Bk) {
+      if (sF) {
+        if (PF.length < 3) {
+          var Rk;
+          const tk = null !== (Rk = Bk.useFree) && void 0 !== Rk ? Rk : OF && null !== DR;
+          tk && EF(!1), hF([...PF, {
+            id: yB(),
+            text: kk,
+            shown: Fk,
+            ...Bk,
+            useFree: tk
           }])
         }
-      } else ty(uu, Ru, yu)
-    }(0, Eu.useEffect)((() => {
-      var uu, Ru, yu;
-      const [Eu, ...Ku] = zR;
-      if (XR || !Eu || Ry > 0) return;
-      const Qu = null === (uu = Eu.followUp) || void 0 === uu ? void 0 : uu.lookupOf;
-      if (void 0 !== Qu && !QR.some((uu => uu.id === Qu))) return void FR(Ku);
-      if (null === (Ru = Eu.replaced) || void 0 === Ru ? void 0 : Ru.some((uu => {
-          var Ru;
+      } else GB(kk, Fk, Bk)
+    }(0, Rk.useEffect)((() => {
+      var kk, Fk, Bk;
+      const [Rk, ...tk] = PF;
+      if (sF || !Rk || BB > 0) return;
+      const ak = null === (kk = Rk.followUp) || void 0 === kk ? void 0 : kk.lookupOf;
+      if (void 0 !== ak && !XF.some((kk => kk.id === ak))) return void hF(tk);
+      if (null === (Fk = Rk.replaced) || void 0 === Fk ? void 0 : Fk.some((kk => {
+          var Fk;
           let {
-            path: yu,
-            text: Eu
-          } = uu;
-          return (null !== (Ru = Gu[yu]) && void 0 !== Ru ? Ru : "") === Eu
+            path: Bk,
+            text: Rk
+          } = kk;
+          return (null !== (Fk = Mk[Bk]) && void 0 !== Fk ? Fk : "") === Rk
         }))) {
-        var mu;
-        const uu = (null !== (mu = Eu.until) && void 0 !== mu ? mu : 0) - Date.now();
-        if (uu <= 0) return void FR(Ku);
-        const Ru = setTimeout((() => {
-          FR((uu => [...uu]))
-        }), uu);
+        var Xk;
+        const kk = (null !== (Xk = Rk.until) && void 0 !== Xk ? Xk : 0) - Date.now();
+        if (kk <= 0) return void hF(tk);
+        const Fk = setTimeout((() => {
+          hF((kk => [...kk]))
+        }), kk);
         return () => {
-          clearTimeout(Ru)
+          clearTimeout(Fk)
         }
       }
-      if (void 0 !== Eu.opensPath && Eu.opensPath !== Uu) {
-        var Ju;
-        (null === (Ju = Fy.current) || void 0 === Ju ? void 0 : Ju.id) !== Eu.id && (Fy.current = {
-          id: Eu.id,
+      if (void 0 !== Rk.opensPath && Rk.opensPath !== gk) {
+        var bk;
+        (null === (bk = hB.current) || void 0 === bk ? void 0 : bk.id) !== Rk.id && (hB.current = {
+          id: Rk.id,
           until: Date.now() + 3e3
-        }, zy.current({
+        }, PB.current({
           role: "assistant",
-          text: AV(Eu.opensPath),
+          text: us(Rk.opensPath),
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), zu(Eu.opensPath, 1));
-        const uu = Fy.current.until - Date.now();
-        if (uu > 0) {
-          const Ru = setTimeout((() => {
-            FR((uu => [...uu]))
-          }), uu);
+        }), Pk(Rk.opensPath, 1));
+        const kk = hB.current.until - Date.now();
+        if (kk > 0) {
+          const Fk = setTimeout((() => {
+            hF((kk => [...kk]))
+          }), kk);
           return () => {
-            clearTimeout(Ru)
+            clearTimeout(Fk)
           }
         }
       }
-      const Nu = null !== (yu = Eu.followUp) && void 0 !== yu ? yu : {
-        ...void 0 === Eu.shown ? {} : {
-          check: Eu.check,
-          wordsOnly: Eu.wordsOnly,
-          isAutoFix: Eu.isAutoFix,
-          autoFixRound: Eu.autoFixRound
+      const wk = null !== (Bk = Rk.followUp) && void 0 !== Bk ? Bk : {
+        ...void 0 === Rk.shown ? {} : {
+          check: Rk.check,
+          wordsOnly: Rk.wordsOnly,
+          isAutoFix: Rk.isAutoFix,
+          autoFixRound: Rk.autoFixRound
         },
-        useFree: Eu.useFree
+        useFree: Rk.useFree
       };
-      br(Nu) && SJ(mJ.getState()) ? wy !== Eu.id && (Zy(Eu.id), MJ()) : (FR(Ku), Ly.current(Eu.text, Eu.shown, Nu))
-    }), [XR, zR, Ry, Gu, QR, Uu, zu, Uy, wy]);
-    const iy = (0, Eu.useRef)(Py);
-    iy.current = Py, (0, Eu.useEffect)((() => {
-      if (au) {
-        var uu;
-        if (null === fu || void 0 === fu || fu(), "change" === au.action) return ZR(au), void(null === (uu = xy.current) || void 0 === uu || uu.focus());
-        ZR(null), iy.current(IV(au), GV(au), {
+      SV(wk) && yb(bb.getState()) ? qB !== Rk.id && (CB(Rk.id), Hb()) : (hF(tk), zB.current(Rk.text, Rk.shown, wk))
+    }), [sF, PF, BB, Mk, XF, gk, Pk, gB, qB]);
+    const KB = (0, Rk.useRef)(pB);
+    KB.current = pB, (0, Rk.useEffect)((() => {
+      if (Qk) {
+        var kk;
+        if (null === kF || void 0 === kF || kF(), "change" === Qk.action) return CF(Qk), void(null === (kk = eB.current) || void 0 === kk || kk.focus());
+        CF(null), KB.current(Us(Qk), cs(Qk), {
           check: !1,
-          wordsOnly: "explain" === au.action
+          wordsOnly: "explain" === Qk.action
         })
       }
-    }), [au, fu]);
-    const Yy = (uu, Ru, yu) => {
-        Xr.add(Zu, uu, Ru, Date.now(), yu).then(BR).catch((uu => {
-          console.error("World Code AI: couldn't keep a version of the code", uu)
+    }), [Qk, kF]);
+    const xB = (kk, Fk, Bk) => {
+        eV.add(Ck, kk, Fk, Date.now(), Bk).then(AF).catch((kk => {
+          console.error("World Code AI: couldn't keep a version of the code", kk)
         }))
       },
-      oy = (0, Eu.useRef)(new Set),
-      qy = async function(uu, Ru) {
+      jB = (0, Rk.useRef)(new Set),
+      lB = async function(kk, Fk) {
         let {
-          tryAgainLater: yu = !1
+          tryAgainLater: Bk = !1
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Eu = Ty.current;
-        if (uu.changes.some((uu => {
-            var Ru;
-            return (null !== (Ru = Eu[uu.path]) && void 0 !== Ru ? Ru : "") !== uu.before
-          }))) return Gy(uu.id, "stale"), !1;
-        oy.current.add(uu.id);
-        if (!await lu(uu.changes.map((uu => ({
-            path: uu.path,
-            text: uu.after
+        const Rk = mB.current;
+        if (kk.changes.some((kk => {
+            var Fk;
+            return (null !== (Fk = Rk[kk.path]) && void 0 !== Fk ? Fk : "") !== kk.before
+          }))) return MB(kk.id, "stale"), !1;
+        jB.current.add(kk.id);
+        if (!await Tk(kk.changes.map((kk => ({
+            path: kk.path,
+            text: kk.after
           })))).finally((() => {
-            oy.current.delete(uu.id)
-          }))) return yu || Gy(uu.id, "stale"), !1;
-        Yy(function(uu) {
-          const Ru = uu.replace(/\s+/g, " ").trim();
-          return `Before "${Ru.length>200?`${Ru.slice(0,200).trimEnd()}\u2026`:Ru}"`
-        }(Ru), Eu, function(uu) {
-          const Ru = [...new Set(uu.flatMap((uu => {
-            var Ru;
-            return null !== (Ru = uu.why) && void 0 !== Ru ? Ru : []
+            jB.current.delete(kk.id)
+          }))) return Bk || MB(kk.id, "stale"), !1;
+        xB(function(kk) {
+          const Fk = kk.replace(/\s+/g, " ").trim();
+          return `Before "${Fk.length>200?`${Fk.slice(0,200).trimEnd()}\u2026`:Fk}"`
+        }(Fk), Rk, function(kk) {
+          const Fk = [...new Set(kk.flatMap((kk => {
+            var Fk;
+            return null !== (Fk = kk.why) && void 0 !== Fk ? Fk : []
           })))];
-          if (0 === Ru.length) return;
-          const yu = Ru.map(((uu, Ru) => 0 === Ru ? uu.charAt(0).toUpperCase() + uu.slice(1) : uu.charAt(0).toLowerCase() + uu.slice(1))).join(", ");
-          return yu.length > 400 ? `${yu.slice(0,400).trimEnd()}\u2026` : yu
-        }(uu.changes)), Gy(uu.id, "applied"), uu.isPartial && Iy(uu.id, {
-          changes: uu.changes
+          if (0 === Fk.length) return;
+          const Bk = Fk.map(((kk, Fk) => 0 === Fk ? kk.charAt(0).toUpperCase() + kk.slice(1) : kk.charAt(0).toLowerCase() + kk.slice(1))).join(", ");
+          return Bk.length > 400 ? `${Bk.slice(0,400).trimEnd()}\u2026` : Bk
+        }(kk.changes)), MB(kk.id, "applied"), kk.isPartial && uB(kk.id, {
+          changes: kk.changes
         });
-        const Ku = QR.find((Ru => Ru.id === uu.id && "pending" === Ru.noteStatus));
-        return Ku && uu.isPartial ? CE(uu.id, "asked") : Ku && kE({
-          ...Ku,
+        const tk = XF.find((Fk => Fk.id === kk.id && "pending" === Fk.noteStatus));
+        return tk && kk.isPartial ? LR(kk.id, "asked") : tk && OR({
+          ...tk,
           status: "applied"
-        }, !0), NR((Ru => {
-          var yu;
-          const Eu = null === (yu = Ru.findLast((Ru => "user" === Ru.role && Ru.id < uu.id))) || void 0 === yu ? void 0 : yu.planStep;
-          return Eu ? Ru.map((uu => {
-            var Ru;
-            return uu.id === Eu.planId ? {
-              ...uu,
-              planDone: Math.max(null !== (Ru = uu.planDone) && void 0 !== Ru ? Ru : 0, Eu.index + 1)
-            } : uu
-          })) : Ru
-        })), py.current = Date.now(), !0
-      }, Oy = !XR && 0 === Ry && (0 === zR.length || zR[0].id === wy), vy = (0, Eu.useRef)((() => Promise.resolve(!0)));
-    vy.current = async () => {
-      var uu;
-      const Ru = KR.pendingApply;
-      if (!Ru || Ru.targetKey !== Fu.key) return !0;
-      const yu = QR.find((uu => uu.id === Ru.entryId));
-      if (!yu || "offered" !== yu.status) return KR.pendingApply = void 0, !0;
-      const Eu = null !== (uu = Ru.picked) && void 0 !== uu ? uu : yu.changes,
-        Ku = qu && nu && Eu.every((uu => {
-          var Ru;
-          return (null !== (Ru = Ty.current[uu.path]) && void 0 !== Ru ? Ru : "") === uu.before
+        }, !0), dF((Fk => {
+          var Bk;
+          const Rk = null === (Bk = Fk.findLast((Fk => "user" === Fk.role && Fk.id < kk.id))) || void 0 === Bk ? void 0 : Bk.planStep;
+          return Rk ? Fk.map((kk => {
+            var Fk;
+            return kk.id === Rk.planId ? {
+              ...kk,
+              planDone: Math.max(null !== (Fk = kk.planDone) && void 0 !== Fk ? Fk : 0, Rk.index + 1)
+            } : kk
+          })) : Fk
+        })), fB.current = Date.now(), !0
+      }, nB = !sF && 0 === BB && (0 === PF.length || PF[0].id === qB), IB = (0, Rk.useRef)((() => Promise.resolve(!0)));
+    IB.current = async () => {
+      var kk;
+      const Fk = aF.pendingApply;
+      if (!Fk || Fk.targetKey !== hk.key) return !0;
+      const Bk = XF.find((kk => kk.id === Fk.entryId));
+      if (!Bk || "offered" !== Bk.status) return aF.pendingApply = void 0, !0;
+      const Rk = null !== (kk = Fk.picked) && void 0 !== kk ? kk : Bk.changes,
+        tk = lk && Uk && Rk.every((kk => {
+          var Fk;
+          return (null !== (Fk = mB.current[kk.path]) && void 0 !== Fk ? Fk : "") === kk.before
         }));
-      if (Date.now() > Ru.until) return KR.pendingApply = void 0, Ku && Dy({
+      if (Date.now() > Fk.until) return aF.pendingApply = void 0, tk && NB({
         role: "assistant",
         text: "That change couldn't go in. Press Apply to try again.",
         changes: [],
         status: "offered",
         isNotice: !0
       }), !0;
-      if (!Ku || oy.current.has(yu.id)) return !1;
-      const Qu = await qy({
-        id: yu.id,
-        changes: Eu,
-        isPartial: void 0 !== Ru.picked
-      }, DE(yu.id), {
+      if (!tk || jB.current.has(Bk.id)) return !1;
+      const ak = await lB({
+        id: Bk.id,
+        changes: Rk,
+        isPartial: void 0 !== Fk.picked
+      }, NR(Bk.id), {
         tryAgainLater: !0
       });
-      Qu && KR.pendingApply === Ru && (KR.pendingApply = void 0), Qu && Ru.byItself && Iy(yu.id, {
+      ak && aF.pendingApply === Fk && (aF.pendingApply = void 0), ak && Fk.byItself && uB(Bk.id, {
         editedInPlace: !0
       });
-      const mu = Eu[0];
-      return Qu && mu && zu(mu.path, kV(mu.before, mu.after)), Qu
-    }, (0, Eu.useEffect)((() => {
-      var uu;
-      if ((null === (uu = KR.pendingApply) || void 0 === uu ? void 0 : uu.targetKey) !== Fu.key) return;
-      const Ru = setInterval((() => {
-        vy.current().then((uu => {
-          uu && clearInterval(Ru)
+      const Xk = Rk[0];
+      return ak && Xk && Pk(Xk.path, Ns(Xk.before, Xk.after)), ak
+    }, (0, Rk.useEffect)((() => {
+      var kk;
+      if ((null === (kk = aF.pendingApply) || void 0 === kk ? void 0 : kk.targetKey) !== hk.key) return;
+      const Fk = setInterval((() => {
+        IB.current().then((kk => {
+          kk && clearInterval(Fk)
         }))
       }), 250);
       return () => {
-        clearInterval(Ru)
+        clearInterval(Fk)
       }
-    }), [KR, Fu.key, qu, Gu]);
-    const ay = (0, Eu.useRef)((() => !0));
-    ay.current = () => {
-      const uu = KR.pendingInsert;
-      if (!uu || uu.targetKey !== Fu.key) return !0;
-      if (Date.now() > uu.until) return KR.pendingInsert = void 0, Dy({
+    }), [aF, hk.key, lk, Mk]);
+    const QB = (0, Rk.useRef)((() => !0));
+    QB.current = () => {
+      const kk = aF.pendingInsert;
+      if (!kk || kk.targetKey !== hk.key) return !0;
+      if (Date.now() > kk.until) return aF.pendingInsert = void 0, NB({
         role: "assistant",
-        text: void 0 === uu.code ? "World Code didn't open in time, so that wasn't asked here. Ask again." : "World Code didn't open in time, so the code block's World Code part isn't in. Here it is to add.",
+        text: void 0 === kk.code ? "World Code didn't open in time, so that wasn't asked here. Ask again." : "World Code didn't open in time, so the code block's World Code part isn't in. Here it is to add.",
         changes: [],
         status: "offered",
-        worldCode: void 0 === uu.code ? void 0 : [uu.code],
-        isNotice: void 0 === uu.code
+        worldCode: void 0 === kk.code ? void 0 : [kk.code],
+        isNotice: void 0 === kk.code
       }), !0;
-      const Ru = Object.values(Ty.current).some((uu => "" !== uu.trim()));
-      return !(!qu || !nu || !Ru && Date.now() < uu.readyBy) && (KR.pendingInsert = void 0, FR((Ru => [{
-        id: Sy(),
-        text: uu.request,
+      const Fk = Object.values(mB.current).some((kk => "" !== kk.trim()));
+      return !(!lk || !Uk || !Fk && Date.now() < kk.readyBy) && (aF.pendingInsert = void 0, hF((Fk => [{
+        id: yB(),
+        text: kk.request,
         shown: "Put the code in",
         followUp: {
-          ...uu.options,
-          insertsInto: Uu
+          ...kk.options,
+          insertsInto: gk
         }
-      }, ...Ru])), !0)
-    }, (0, Eu.useEffect)((() => {
-      var uu;
-      if ((null === (uu = KR.pendingInsert) || void 0 === uu ? void 0 : uu.targetKey) !== Fu.key) return;
-      const Ru = setInterval((() => {
-        ay.current() && clearInterval(Ru)
+      }, ...Fk])), !0)
+    }, (0, Rk.useEffect)((() => {
+      var kk;
+      if ((null === (kk = aF.pendingInsert) || void 0 === kk ? void 0 : kk.targetKey) !== hk.key) return;
+      const Fk = setInterval((() => {
+        QB.current() && clearInterval(Fk)
       }), 250);
       return () => {
-        clearInterval(Ru)
+        clearInterval(Fk)
       }
-    }), [KR, Fu.key, qu, Gu]);
-    const fy = uu => {
-        Xy((() => {
-          Nu.gameBridge.send("sendChatMessage", {
-            Dm: "//export",
+    }), [aF, hk.key, lk, Mk]);
+    const kR = kk => {
+        sB((() => {
+          wk.gameBridge.send("sendChatMessage", {
+            UX: "//export",
             channelName: null
           })
-        }), Math.max(0, py.current + 600 - Date.now())), Dy({
+        }), Math.max(0, fB.current + 600 - Date.now())), NB({
           role: "assistant",
-          text: uu ? "Saving your game with //export, without this change. Apply it and ask me to save again to keep it too." : "Saving your game with //export. The chat says when it's saved.",
+          text: kk ? "Saving your game with //export, without this change. Apply it and ask me to save again to keep it too." : "Saving your game with //export. The chat says when it's saved.",
           changes: [],
           status: "offered",
           isNotice: !0,
-          isCalm: !uu || void 0
+          isCalm: !kk || void 0
         })
       },
-      uE = (uu, Ru) => {
+      FR = (kk, Fk) => {
         let {
-          leavesChangeBehind: yu,
-          hasWorldCodePart: Eu
-        } = Ru;
-        yu ? Dy({
+          leavesChangeBehind: Bk,
+          hasWorldCodePart: Rk
+        } = Fk;
+        Bk ? NB({
           role: "assistant",
-          text: Mr(Eu),
+          text: UV(Rk),
           changes: [],
           status: "offered",
           isNotice: !0
-        }) : (Dy({
+        }) : (NB({
           role: "assistant",
           text: "Taking you to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), Xy((() => {
-          null === hu || void 0 === hu || hu(uu, !1)
-        }), Ir))
+        }), sB((() => {
+          null === Zk || void 0 === Zk || Zk(kk, !1)
+        }), cV))
       },
-      RE = (uu, Ru) => {
-        !Ru && ou ? (Dy({
+      BR = (kk, Fk) => {
+        !Fk && jk ? (NB({
           role: "assistant",
           text: "Moving to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), Xy((() => {
-          KR.pendingApply = {
-            entryId: uu,
-            targetKey: CV.e.key,
-            until: Date.now() + mr,
+        }), sB((() => {
+          aF.pendingApply = {
+            entryId: kk,
+            targetKey: Ss.i.key,
+            until: Date.now() + VV,
             byItself: !0
-          }, ou(CV.e)
-        }), Ir)) : Dy({
+          }, jk(Ss.i)
+        }), cV)) : NB({
           role: "assistant",
           text: "Apply this change first, then apply the World Code part.",
           changes: [],
@@ -14736,1441 +14736,1441 @@ const wr = (0, Eu.memo)((function(uu) {
           isNotice: !0
         })
       },
-      yE = uu => RR && "direct" === uu && nu && !!ou,
-      EE = (uu, Ru, yu) => {
-        ou && (Dy({
+      RR = kk => BF && "direct" === kk && Uk && !!jk,
+      tR = (kk, Fk, Bk) => {
+        jk && (NB({
           role: "assistant",
           text: "Moving to World Code\u2026",
           changes: [],
           status: "offered",
           isNotice: !0,
           isCalm: !0
-        }), Xy((() => {
-          null !== uu && (KR.pendingInsert = {
-            targetKey: CV.e.key,
-            request: uu,
-            options: Ru,
-            code: yu,
+        }), sB((() => {
+          null !== kk && (aF.pendingInsert = {
+            targetKey: Ss.i.key,
+            request: kk,
+            options: Fk,
+            code: Bk,
             readyBy: Date.now() + 4e3,
-            until: Date.now() + mr
-          }), ou(CV.e)
-        }), Ir))
+            until: Date.now() + VV
+          }), jk(Ss.i)
+        }), cV))
       },
-      KE = async function(uu, Ru) {
-        var yu, Eu, Ku;
+      aR = async function(kk, Fk) {
+        var Bk, Rk, tk;
         let {
-          replaced: Qu,
-          signal: mu
+          replaced: ak,
+          signal: Xk
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Ju = await async function(uu, Ru) {
-          const yu = [];
-          let Eu = null;
-          for (const Qu of uu) {
-            var Ku;
-            const uu = await eK(Qu, Ru);
-            yu.push(Qu.call ? {
-              ...uu.result,
-              call: Qu.call
-            } : uu.result), Eu = null !== (Ku = uu.worldCodeFiles) && void 0 !== Ku ? Ku : Eu
+        const bk = await async function(kk, Fk) {
+          const Bk = [];
+          let Rk = null;
+          for (const ak of kk) {
+            var tk;
+            const kk = await St(ak, Fk);
+            Bk.push(ak.call ? {
+              ...kk.result,
+              call: ak.call
+            } : kk.result), Rk = null !== (tk = kk.worldCodeFiles) && void 0 !== tk ? tk : Rk
           }
           return {
-            results: yu,
-            worldCodeFiles: Eu
+            results: Bk,
+            worldCodeFiles: Rk
           }
-        }(uu, {
-          files: Ty.current,
-          docs: xr(),
-          errors: su,
-          viewChunk: null !== iu && void 0 !== iu ? iu : Cr,
-          viewGameState: null !== Yu && void 0 !== Yu ? Yu : kr,
-          readWorldCode: Pu,
-          fetchDocsPage: uu => async function(uu, Ru, yu) {
-            if ("" === uu.trim()) return `No url was given: give ${Tu.j}, or a page it links to.`;
-            const Eu = Hu(uu);
-            if (null === Eu) return uu.includes(Tu.e) ? `${uu} is every page at once, too long to read: read ${Tu.j}, then the page you need.` : `Only Bloxd's docs can be read: ${Tu.j} and the pages it links to.`;
-            const Ku = `There is no docs page at ${uu}. ${Tu.j} lists every page with its link.`,
-              Qu = `${uu} couldn't be read just now. Use get_docs instead.`,
-              mu = (0, Wu.e)(2e4, yu);
-            let Ju;
+        }(kk, {
+          files: mB.current,
+          docs: WV(),
+          errors: ck,
+          viewChunk: null !== Kk && void 0 !== Kk ? Kk : NV,
+          viewGameState: null !== xk && void 0 !== xk ? xk : HV,
+          readWorldCode: pk,
+          fetchDocsPage: kk => async function(kk, Fk, Bk) {
+            if ("" === kk.trim()) return `No url was given: give ${fk.j}, or a page it links to.`;
+            const Rk = vk(kk);
+            if (null === Rk) return kk.includes(fk.f) ? `${kk} is every page at once, too long to read: read ${fk.j}, then the page you need.` : `Only Bloxd's docs can be read: ${fk.j} and the pages it links to.`;
+            const tk = `There is no docs page at ${kk}. ${fk.j} lists every page with its link.`,
+              ak = `${kk} couldn't be read just now. Use get_docs instead.`,
+              Xk = (0, mk.e)(2e4, Bk);
+            let bk;
             try {
-              var Nu;
-              const uu = await fetch(`${Ru}${Eu}`, {
-                signal: mu.signal
+              var wk;
+              const kk = await fetch(`${Fk}${Rk}`, {
+                signal: Xk.signal
               });
-              if (404 === uu.status) return Ku;
-              if (!uu.ok) return console.warn("AI Helper: a docs page couldn't be read", Eu, uu.status), Qu;
-              if (null !== (Nu = uu.headers.get("content-type")) && void 0 !== Nu && Nu.startsWith("text/html")) return Ku;
-              Ju = await uu.text()
-            } catch (Vu) {
-              return !0 !== (null === yu || void 0 === yu ? void 0 : yu.aborted) && console.warn("AI Helper: a docs page couldn't be read", Eu, Vu), Qu
+              if (404 === kk.status) return tk;
+              if (!kk.ok) return console.warn("AI Helper: a docs page couldn't be read", Rk, kk.status), ak;
+              if (null !== (wk = kk.headers.get("content-type")) && void 0 !== wk && wk.startsWith("text/html")) return tk;
+              bk = await kk.text()
+            } catch (sk) {
+              return !0 !== (null === Bk || void 0 === Bk ? void 0 : Bk.aborted) && console.warn("AI Helper: a docs page couldn't be read", Rk, sk), ak
             } finally {
-              mu.clear()
+              Xk.clear()
             }
-            const Xu = (0, Tu.A)(Eu);
-            return null !== Xu && null === Xu.part && Ju.length > Tu.b ? `${uu} is too long to read whole: read the part you need. Its parts start at ${pu.c}${(0,Tu.w)(Xu.name,0)}, and ${Tu.j} says what each part has.` : Ju.length <= 4e4 ? Ju : (console.warn("AI Helper: a docs file is longer than any should be", Eu, Ju.length), `${Ju.slice(0,4e4)}\n\n(The rest of this page is cut off.)`)
-          }(uu, window.location.origin, mu)
+            const dk = (0, fk.A)(Rk);
+            return null !== dk && null === dk.part && bk.length > fk.c ? `${kk} is too long to read whole: read the part you need. Its parts start at ${yk.b}${(0,fk.t)(dk.name,0)}, and ${fk.j} says what each part has.` : bk.length <= 4e4 ? bk : (console.warn("AI Helper: a docs file is longer than any should be", Rk, bk.length), `${bk.slice(0,4e4)}\n\n(The rest of this page is cut off.)`)
+          }(kk, window.location.origin, Xk)
         });
-        if (null !== mu && void 0 !== mu && mu.aborted) return "stopped";
-        const Nu = Ju.results,
-          Xu = uu.flatMap((uu => "view_file" === uu.name && void 0 !== uu.args.path && uu.args.path in Ty.current ? [uu.args.path] : [])),
-          Vu = {
-            ...Ru.options,
-            lookups: [...(null !== (yu = Ru.options.lookups) && void 0 !== yu ? yu : []).map(Qr), ...Nu],
-            worldCodeFiles: null !== (Eu = Ju.worldCodeFiles) && void 0 !== Eu ? Eu : Ru.options.worldCodeFiles,
-            viewedPaths: [...null !== (Ku = Ru.options.viewedPaths) && void 0 !== Ku ? Ku : [], ...Xu]
+        if (null !== Xk && void 0 !== Xk && Xk.aborted) return "stopped";
+        const wk = bk.results,
+          dk = kk.flatMap((kk => "view_file" === kk.name && void 0 !== kk.args.path && kk.args.path in mB.current ? [kk.args.path] : [])),
+          sk = {
+            ...Fk.options,
+            lookups: [...(null !== (Bk = Fk.options.lookups) && void 0 !== Bk ? Bk : []).map(sV), ...wk],
+            worldCodeFiles: null !== (Rk = bk.worldCodeFiles) && void 0 !== Rk ? Rk : Fk.options.worldCodeFiles,
+            viewedPaths: [...null !== (tk = Fk.options.viewedPaths) && void 0 !== tk ? tk : [], ...dk]
           };
-        return FR((uu => [{
-          id: Sy(),
-          text: Ru.request,
-          shown: Ru.shown,
-          followUp: Vu,
-          ...Qu ? {
-            replaced: Qu,
-            until: Date.now() + Ar
+        return hF((kk => [{
+          id: yB(),
+          text: Fk.request,
+          shown: Fk.shown,
+          followUp: sk,
+          ...ak ? {
+            replaced: ak,
+            until: Date.now() + MV
           } : {}
-        }, ...uu])), "asked"
-      }, QE = (uu, Ru, yu) => {
-        NR((Eu => Eu.map((Eu => Eu.id === uu ? {
-          ...Eu,
-          trial: Ru,
-          trialErrors: null !== yu && void 0 !== yu ? yu : Eu.trialErrors
-        } : Eu))))
-      }, mE = function(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        cu && (Ky(uu), Xy((() => {
-          var yu;
-          Ky(null), aR.current || Hy.current.length > 0 || null !== (yu = xy.current) && void 0 !== yu && yu.value.trim() || (YR(jy.current), cu({
-            chatKey: wu,
-            entryId: uu,
-            autoFixRound: Ru
+        }, ...kk])), "asked"
+      }, XR = (kk, Fk, Bk) => {
+        dF((Rk => Rk.map((Rk => Rk.id === kk ? {
+          ...Rk,
+          trial: Fk,
+          trialErrors: null !== Bk && void 0 !== Bk ? Bk : Rk.trialErrors
+        } : Rk))))
+      }, bR = function(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        Dk && (aB(kk), sB((() => {
+          var Bk;
+          aB(null), QF.current || iB.current.length > 0 || null !== (Bk = eB.current) && void 0 !== Bk && Bk.value.trim() || (xF(vB.current), Dk({
+            chatKey: qk,
+            entryId: kk,
+            autoFixRound: Fk
           }))
-        }), Math.max(yu, py.current + 1500 - Date.now())))
-      }, JE = () => {
-        ry(), (0, KX.e)(wu)
+        }), Math.max(Bk, fB.current + 1500 - Date.now())))
+      }, wR = () => {
+        JB(), (0, Xd.b)(qk)
       };
-    (0, Eu.useEffect)((() => {
-      if (!qu || void 0 === (null === Qy || void 0 === Qy ? void 0 : Qy.endedAt) || (null === Jy || void 0 === Jy ? void 0 : Jy.target.key) !== Fu.key) return void(void 0 === (null === Qy || void 0 === Qy ? void 0 : Qy.endedAt) || Jy || (0, KX.m)(wu));
-      const uu = (0, KX.m)(wu);
-      if (!uu) return;
-      const Ru = (0, KX.y)(uu);
-      zy.current({
+    (0, Rk.useEffect)((() => {
+      if (!lk || void 0 === (null === XB || void 0 === XB ? void 0 : XB.endedAt) || (null === wB || void 0 === wB ? void 0 : wB.target.key) !== hk.key) return void(void 0 === (null === XB || void 0 === XB ? void 0 : XB.endedAt) || wB || (0, Xd.i)(qk));
+      const kk = (0, Xd.i)(qk);
+      if (!kk) return;
+      const Fk = (0, Xd.w)(kk);
+      PB.current({
         role: "assistant",
-        text: Ru.text,
+        text: Fk.text,
         changes: [],
         status: "offered",
         isNotice: !0,
-        isCalm: 0 === uu.errors.length && void 0 !== uu.ranAt,
-        logTitle: Ru.title
-      }), void 0 !== uu.ranAt && (0 !== uu.errors.length ? uu.autoFixRound >= 3 || (YR(jy.current), FR((Ru => [{
-        id: Sy(),
-        text: (0, KX.w)(uu.errors),
-        shown: 1 === uu.errors.length ? "Fix the error" : "Fix these errors",
+        isCalm: 0 === kk.errors.length && void 0 !== kk.ranAt,
+        logTitle: Fk.title
+      }), void 0 !== kk.ranAt && (0 !== kk.errors.length ? kk.autoFixRound >= 3 || (xF(vB.current), hF((Fk => [{
+        id: yB(),
+        text: (0, Xd.t)(kk.errors),
+        shown: 1 === kk.errors.length ? "Fix the error" : "Fix these errors",
         check: !1,
         isAutoFix: !0,
-        autoFixRound: uu.autoFixRound + 1
-      }, ...Ru]))) : QE(uu.entryId, "ask", jy.current))
-    }), [Qy, qu, Jy, Fu.key, wu]);
-    const NE = async (uu, Ru) => {
-      if (Iy(uu.id, {
-          forgetStatus: Ru ? "forgotten" : "kx"
-        }), Ru) try {
-        for (const Ru of null !== (yu = uu.forgetNotes) && void 0 !== yu ? yu : []) {
-          var yu;
-          TR(await Vr.remove(Zu, Ru))
+        autoFixRound: kk.autoFixRound + 1
+      }, ...Fk]))) : XR(kk.entryId, "ask", vB.current))
+    }), [XB, lk, wB, hk.key, qk]);
+    const dR = async (kk, Fk) => {
+      if (uB(kk.id, {
+          forgetStatus: Fk ? "forgotten" : "lA"
+        }), Fk) try {
+        for (const Fk of null !== (Bk = kk.forgetNotes) && void 0 !== Bk ? Bk : []) {
+          var Bk;
+          mF(await yV.remove(Ck, Fk))
         }
-      } catch (Eu) {
-        console.error("World Code AI: couldn't forget a note", Eu), Iy(uu.id, {
+      } catch (Rk) {
+        console.error("World Code AI: couldn't forget a note", Rk), uB(kk.id, {
           forgetStatus: void 0
         })
       }
-    }, XE = (0, Eu.useCallback)((uu => uu.flatMap((uu => Er(xr(), uu, RR)))), [RR]), VE = (0, Eu.useRef)({}), rE = (0, Eu.useRef)({}), BE = (0, Eu.useRef)(Promise.resolve()), xE = (0, Eu.useRef)([]), SE = (0, Eu.useRef)(new Map), pE = (0, Eu.useRef)(new Map), TE = (0, Eu.useRef)(null), WE = () => {
-      tR.current = !1, xE.current = [], SE.current = new Map, pE.current = new Map, TE.current = null, VE.current = {}, rE.current = {}, gR(null)
-    }, jE = async () => {
-      if (!lR) return;
-      const uu = Ty.current,
-        Ru = function(uu, Ru, yu) {
-          return Object.entries(Ru).flatMap((Ru => {
-            var Eu;
-            let [Ku, Qu] = Ru;
-            const mu = yu[Ku];
-            if (void 0 === mu) return [];
-            const Ju = new Map(kX(null !== (Eu = uu[Ku]) && void 0 !== Eu ? Eu : "").map((uu => [uu.key, uu.value]))),
-              Nu = new Map(kX(Qu).map((uu => [uu.key, uu.value])));
-            let Xu = mu;
-            for (const [uu, yu] of Ju) {
-              var Vu;
-              const Ru = kX(Xu).find((Ru => Ru.key === uu));
-              Ru && Ru.value !== yu && Nu.get(uu) === Ru.value && (Xu = null !== (Vu = eX(Xu, Ru, yu)) && void 0 !== Vu ? Vu : Xu)
+    }, sR = (0, Rk.useCallback)((kk => kk.flatMap((kk => wV(WV(), kk, BF)))), [BF]), VR = (0, Rk.useRef)({}), JR = (0, Rk.useRef)({}), AR = (0, Rk.useRef)(Promise.resolve()), eR = (0, Rk.useRef)([]), yR = (0, Rk.useRef)(new Map), fR = (0, Rk.useRef)(new Map), mR = (0, Rk.useRef)(null), WR = () => {
+      GF.current = !1, eR.current = [], yR.current = new Map, fR.current = new Map, mR.current = null, VR.current = {}, JR.current = {}, rF(null)
+    }, vR = async () => {
+      if (!TF) return;
+      const kk = mB.current,
+        Fk = function(kk, Fk, Bk) {
+          return Object.entries(Fk).flatMap((Fk => {
+            var Rk;
+            let [tk, ak] = Fk;
+            const Xk = Bk[tk];
+            if (void 0 === Xk) return [];
+            const bk = new Map(Sd(null !== (Rk = kk[tk]) && void 0 !== Rk ? Rk : "").map((kk => [kk.key, kk.value]))),
+              wk = new Map(Sd(ak).map((kk => [kk.key, kk.value])));
+            let dk = Xk;
+            for (const [kk, Bk] of bk) {
+              var sk;
+              const Fk = Sd(dk).find((Fk => Fk.key === kk));
+              Fk && Fk.value !== Bk && wk.get(kk) === Fk.value && (dk = null !== (sk = Nd(dk, Fk, Bk)) && void 0 !== sk ? sk : dk)
             }
-            return Xu === mu ? [] : [{
-              path: Ku,
-              text: Xu
+            return dk === Xk ? [] : [{
+              path: tk,
+              text: dk
             }]
           }))
-        }(lR, VE.current, uu);
-      if (Ru.length > 0) {
-        if (!await lu(Ru)) return;
-        Yy(function(uu) {
-          const Ru = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).filter((Ru => uu.includes(Ru.name))).map((uu => ({
-            name: uu.name,
-            from: uu.to,
-            to: uu.from
+        }(TF, VR.current, kk);
+      if (Fk.length > 0) {
+        if (!await Tk(Fk)) return;
+        xB(function(kk) {
+          const Fk = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).filter((Fk => kk.includes(Fk.name))).map((kk => ({
+            name: kk.name,
+            from: kk.to,
+            to: kk.from
           })));
-          return Ru.length > 0 ? IX(Ru, "undoing") : 0 === uu.length ? "Before undoing settings" : `Before undoing settings: ${(uu.length>3?[...uu.slice(0,3),uu.length-3+" more"]:uu).join(", ")}`
-        }(xE.current, [...SE.current.values()]), uu), py.current = Date.now()
+          return Fk.length > 0 ? gd(Fk, "undoing") : 0 === kk.length ? "Before undoing settings" : `Before undoing settings: ${(kk.length>3?[...kk.slice(0,3),kk.length-3+" more"]:kk).join(", ")}`
+        }(eR.current, [...yR.current.values()]), kk), fB.current = Date.now()
       }
-      WE()
-    }, HE = !RR && Object.values(Gu).some((uu => kX(uu).length > 0)), dE = function(uu) {
+      WR()
+    }, iR = !BF && Object.values(Mk).some((kk => Sd(kk).length > 0)), YR = function(kk) {
       let {
-        codeBlock: Ru,
-        hasSettings: yu,
-        canEdit: Ku
-      } = uu;
-      return (0, Eu.useEffect)((() => {
-        (0, qN.A)("aiNotes", !Ru)
-      }), [Ru]), (0, Eu.useEffect)((() => {
-        (0, qN.A)("aiGameSettings", yu)
-      }), [yu]), (0, Eu.useEffect)((() => {
-        (0, qN.A)("aiEdits", Ku)
-      }), [Ku]), (0, ON.l)("aiHelperOverview")
+        codeBlock: Fk,
+        hasSettings: Bk,
+        canEdit: tk
+      } = kk;
+      return (0, Rk.useEffect)((() => {
+        (0, nw.E)("aiNotes", !Fk)
+      }), [Fk]), (0, Rk.useEffect)((() => {
+        (0, nw.E)("aiGameSettings", Bk)
+      }), [Bk]), (0, Rk.useEffect)((() => {
+        (0, nw.E)("aiEdits", tk)
+      }), [tk]), (0, Iw.h)("aiHelperOverview")
     }({
-      codeBlock: RR,
-      hasSettings: HE,
-      canEdit: nu
+      codeBlock: BF,
+      hasSettings: iR,
+      canEdit: Uk
     });
-    (0, Eu.useEffect)((() => {
-      dE && (SR(!1), jR(!1), dR(!1), CR(null))
-    }), [dE]);
-    const bE = async uu => {
-      const Ru = uR(uu);
-      return null === Ru ? "Notes are only about your game, never personal details." : "ok" !== await lQ(Ru) ? "This note can't be saved. Notes are only about your game." : (TR(await Vr.add(Zu, Ru)), null)
-    }, CE = (uu, Ru) => {
-      Iy(uu, {
-        noteStatus: Ru
+    (0, Rk.useEffect)((() => {
+      YR && (yF(!1), vF(!1), YF(!1), LF(null))
+    }), [YR]);
+    const oR = async kk => {
+      const Fk = FF(kk);
+      return null === Fk ? "Notes are only about your game, never personal details." : "ok" !== await ra(Fk) ? "This note can't be saved. Notes are only about your game." : (mF(await yV.add(Ck, Fk)), null)
+    }, LR = (kk, Fk) => {
+      uB(kk, {
+        noteStatus: Fk
       })
-    }, kE = async (uu, Ru) => {
-      if (Ru && void 0 !== uu.note)
-        if (uu.changes.length > 0 && "offered" === uu.status) CE(uu.id, "pending");
+    }, OR = async (kk, Fk) => {
+      if (Fk && void 0 !== kk.note)
+        if (kk.changes.length > 0 && "offered" === kk.status) LR(kk.id, "pending");
         else {
-          CE(uu.id, "checking");
+          LR(kk.id, "checking");
           try {
-            CE(uu.id, null === await bE(uu.note) ? "saved" : "refused")
-          } catch (yu) {
-            console.error("World Code AI: couldn't keep a note", yu), CE(uu.id, "asked")
+            LR(kk.id, null === await oR(kk.note) ? "saved" : "refused")
+          } catch (Bk) {
+            console.error("World Code AI: couldn't keep a note", Bk), LR(kk.id, "asked")
           }
         }
-      else CE(uu.id, "declined")
-    }, eE = uu => {
-      var Ru;
-      const yu = null === (Ru = QR.find((Ru => Ru.id === uu))) || void 0 === Ru ? void 0 : Ru.target.key;
-      return QR.findLast((Ru => "user" === Ru.role && Ru.id < uu && Ru.target.key === yu))
-    }, AE = uu => {
-      var Ru;
-      return null === (Ru = eE(uu)) || void 0 === Ru ? void 0 : Ru.asked
-    }, DE = uu => {
-      var Ru, yu;
-      const Eu = eE(uu);
-      return null !== (Ru = null !== (yu = null === Eu || void 0 === Eu ? void 0 : Eu.about) && void 0 !== yu ? yu : null === Eu || void 0 === Eu ? void 0 : Eu.text) && void 0 !== Ru ? Ru : "a change"
-    }, ME = QR.filter(My), IE = null === (ju = ME[ME.length - 1]) || void 0 === ju ? void 0 : ju.id, GE = null !== (du = null === (bu = ME.findLast((uu => "user" === uu.role))) || void 0 === bu ? void 0 : bu.id) && void 0 !== du ? du : 0, UE = ME.length < QR.length, nE = ME[ME.length - 1], sE = null !== nE && void 0 !== nE && null !== (Cu = nE.question) && void 0 !== Cu && Cu.allowOther && !XR ? nE : void 0, tE = (0, Eu.useRef)(!1), lE = () => {
-      tE.current = !0, CR("settings")
-    }, gE = () => {
-      SR(!1), jR(!1), dR(!1), AR.current = null, MR(null), CR("addKey")
+      else LR(kk.id, "declined")
+    }, ER = kk => {
+      var Fk;
+      const Bk = null === (Fk = XF.find((Fk => Fk.id === kk))) || void 0 === Fk ? void 0 : Fk.target.key;
+      return XF.findLast((Fk => "user" === Fk.role && Fk.id < kk && Fk.target.key === Bk))
+    }, SR = kk => {
+      var Fk;
+      return null === (Fk = ER(kk)) || void 0 === Fk ? void 0 : Fk.asked
+    }, NR = kk => {
+      var Fk, Bk;
+      const Rk = ER(kk);
+      return null !== (Fk = null !== (Bk = null === Rk || void 0 === Rk ? void 0 : Rk.about) && void 0 !== Bk ? Bk : null === Rk || void 0 === Rk ? void 0 : Rk.text) && void 0 !== Fk ? Fk : "a change"
+    }, HR = XF.filter(HB), uR = null === (Wk = HR[HR.length - 1]) || void 0 === Wk ? void 0 : Wk.id, MR = null !== (ik = null === (Yk = HR.findLast((kk => "user" === kk.role))) || void 0 === Yk ? void 0 : Yk.id) && void 0 !== ik ? ik : 0, gR = HR.length < XF.length, UR = HR[HR.length - 1], cR = null !== UR && void 0 !== UR && null !== (Lk = UR.question) && void 0 !== Lk && Lk.allowOther && !sF ? UR : void 0, GR = (0, Rk.useRef)(!1), TR = () => {
+      GR.current = !0, LF("settings")
+    }, rR = () => {
+      yF(!1), vF(!1), YF(!1), SF.current = null, HF(null), LF("addKey")
     }, {
-      activeKey: cE,
-      cutShortActions: LE,
-      noticeActions: zE
-    } = function(uu) {
-      var Ru;
+      activeKey: DR,
+      cutShortActions: zR,
+      noticeActions: PR
+    } = function(kk) {
+      var Fk;
       let {
-        entries: yu,
-        busy: Eu,
-        send: Ku,
-        onCheckKey: Qu
-      } = uu;
+        entries: Bk,
+        busy: Rk,
+        send: tk,
+        onCheckKey: ak
+      } = kk;
       const {
-        active: mu
-      } = qm(), Ju = null === (Ru = yu.findLast((uu => "assistant" === uu.role && !uu.isNotice))) || void 0 === Ru ? void 0 : Ru.id;
+        active: Xk
+      } = nX(), bk = null === (Fk = Bk.findLast((kk => "assistant" === kk.role && !kk.isNotice))) || void 0 === Fk ? void 0 : Fk.id;
       return {
-        activeKey: mu,
-        cutShortActions: (uu, Ru) => ({
-          canFinish: !Eu && uu === Ju && (null === mu || void 0 === mu ? void 0 : mu.id) === Ru.keyId && mu.model.id === Ru.modelId,
+        activeKey: Xk,
+        cutShortActions: (kk, Fk) => ({
+          canFinish: !Rk && kk === bk && (null === Xk || void 0 === Xk ? void 0 : Xk.id) === Fk.keyId && Xk.model.id === Fk.modelId,
           onFinish: () => {
-            Ku(Ru.request, {
-              retryOf: uu,
-              continueFrom: Ru.written
+            tk(Fk.request, {
+              retryOf: kk,
+              continueFrom: Fk.written
             })
           }
         }),
-        noticeActions: (uu, Ru, yu) => ({
-          notice: yu.notice,
+        noticeActions: (kk, Fk, Bk) => ({
+          notice: Bk.notice,
           onRetry: () => {
-            Ku(Ru, {
-              retryOf: uu
+            tk(Fk, {
+              retryOf: kk
             })
           },
           onUseFree: () => {
-            Ku(Ru, {
+            tk(Fk, {
               useFree: !0,
-              retryOf: uu
+              retryOf: kk
             })
           },
-          onCheckKey: Qu
+          onCheckKey: ak
         })
       }
     }({
-      entries: ME,
-      busy: !!XR,
-      send: (uu, Ru) => {
+      entries: HR,
+      busy: !!sF,
+      send: (kk, Fk) => {
         let {
-          useFree: yu,
-          retryOf: Eu,
-          continueFrom: Ku
-        } = Ru;
-        const Qu = QR.find((uu => uu.id === Eu));
-        return ty(uu, null === Qu || void 0 === Qu ? void 0 : Qu.retryShown, {
-          ...null === Qu || void 0 === Qu ? void 0 : Qu.retryOptions,
-          useFree: yu,
-          retryOf: Eu,
-          continueFrom: Ku
+          useFree: Bk,
+          retryOf: Rk,
+          continueFrom: tk
+        } = Fk;
+        const ak = XF.find((kk => kk.id === Rk));
+        return GB(kk, null === ak || void 0 === ak ? void 0 : ak.retryShown, {
+          ...null === ak || void 0 === ak ? void 0 : ak.retryOptions,
+          useFree: Bk,
+          retryOf: Rk,
+          continueFrom: tk
         })
       },
-      onCheckKey: lE
-    }), FE = xJ(Uy) ? Uy.status : null, wE = null !== FE && void 0 !== FE && FE.isSuper ? FE.resetsAt : null, ZE = (0, Eu.useRef)({
+      onCheckKey: TR
+    }), hR = eb(gB) ? gB.status : null, qR = null !== hR && void 0 !== hR && hR.isSuper ? hR.resetsAt : null, CR = (0, Rk.useRef)({
       resetsAt: 0,
       count: 0,
       nextAt: 0
     });
-    (0, Eu.useEffect)((() => {
-      if (null === wE) return;
-      if (wE <= OR) {
-        ZE.current.resetsAt !== wE && (ZE.current = {
-          resetsAt: wE,
+    (0, Rk.useEffect)((() => {
+      if (null === qR) return;
+      if (qR <= nF) {
+        CR.current.resetsAt !== qR && (CR.current = {
+          resetsAt: qR,
           count: 0,
           nextAt: 0
         });
-        const uu = ZE.current,
-          Ru = [15e3, 6e4, 24e4];
-        if (uu.count > Ru.length) return;
-        let yu = !1;
-        const Eu = setTimeout((() => {
-          var Eu;
-          uu.nextAt = Date.now() + (null !== (Eu = Ru[uu.count]) && void 0 !== Eu ? Eu : 0), uu.count++, mJ.refresh().then((() => {
-            yu || vR(Date.now())
+        const kk = CR.current,
+          Fk = [15e3, 6e4, 24e4];
+        if (kk.count > Fk.length) return;
+        let Bk = !1;
+        const Rk = setTimeout((() => {
+          var Rk;
+          kk.nextAt = Date.now() + (null !== (Rk = Fk[kk.count]) && void 0 !== Rk ? Rk : 0), kk.count++, bb.refresh().then((() => {
+            Bk || IF(Date.now())
           }))
-        }), Math.max(0, uu.nextAt - Date.now()));
+        }), Math.max(0, kk.nextAt - Date.now()));
         return () => {
-          yu = !0, clearTimeout(Eu)
+          Bk = !0, clearTimeout(Rk)
         }
       }
-      const uu = setTimeout((() => {
-        vR(Date.now())
-      }), Math.max(0, (wE - OR - 1) % 6e4 + 1 - (Date.now() - OR)));
+      const kk = setTimeout((() => {
+        IF(Date.now())
+      }), Math.max(0, (qR - nF - 1) % 6e4 + 1 - (Date.now() - nF)));
       return () => {
-        clearTimeout(uu)
+        clearTimeout(kk)
       }
-    }), [wE, OR]);
-    const hE = cE ? `${cE.id}/${cE.model.id}` : null;
-    (0, Eu.useEffect)((() => {
-      eR(!1)
-    }), [hE]);
-    const PE = Object.values(Gu).some((uu => "" !== uu.trim())),
-      YE = xR || WR || HR || null !== bR,
-      oE = "aiAnswer" === dE || ("aiNotes" === dE || "aiGameSettings" === dE || "aiGear" === dE) && YE ? dE : "aiPanel",
-      OE = (0, Eu.useRef)(null),
-      vE = (0, Eu.useRef)(null),
-      aE = (0, Eu.useRef)(bR);
-    (0, Eu.useEffect)((() => {
-      if (aE.current === bR) return;
-      aE.current = bR;
+    }), [qR, nF]);
+    const ZR = DR ? `${DR.id}/${DR.model.id}` : null;
+    (0, Rk.useEffect)((() => {
+      EF(!1)
+    }), [ZR]);
+    const pR = Object.values(Mk).some((kk => "" !== kk.trim())),
+      xR = eF || WF || iF || null !== oF,
+      jR = "aiAnswer" === YR || ("aiNotes" === YR || "aiGameSettings" === YR || "aiGear" === YR) && xR ? YR : "aiPanel",
+      nR = (0, Rk.useRef)(null),
+      IR = (0, Rk.useRef)(null),
+      QR = (0, Rk.useRef)(oF);
+    (0, Rk.useEffect)((() => {
+      if (QR.current === oF) return;
+      QR.current = oF;
       if (!document.activeElement || document.activeElement === document.body) {
-        var uu;
-        null === (uu = (bR ? OE : vE).current) || void 0 === uu || uu.focus()
+        var kk;
+        null === (kk = (oF ? nR : IR).current) || void 0 === kk || kk.focus()
       }
-    }), [bR]), (0, Eu.useEffect)((() => {
-      const uu = By.current;
-      if (!bR || !uu) return;
-      uu.scrollTo({
+    }), [oF]), (0, Rk.useEffect)((() => {
+      const kk = AB.current;
+      if (!oF || !kk) return;
+      kk.scrollTo({
         top: 0
       });
-      const Ru = "settings" === bR && tE.current ? uu.querySelector(".WorldCodeAiModelRow.Selected") : null;
-      if (Ru && Ru.getBoundingClientRect().bottom > uu.getBoundingClientRect().bottom && !IN(uu, Ru)) {
-        const yu = uu.getBoundingClientRect(),
-          Eu = Ru.getBoundingClientRect();
-        uu.scrollTop += Eu.top - yu.top - (yu.height - Eu.height) / 2
+      const Fk = "settings" === oF && GR.current ? kk.querySelector(".WorldCodeAiModelRow.Selected") : null;
+      if (Fk && Fk.getBoundingClientRect().bottom > kk.getBoundingClientRect().bottom && !uw(kk, Fk)) {
+        const Bk = kk.getBoundingClientRect(),
+          Rk = Fk.getBoundingClientRect();
+        kk.scrollTop += Rk.top - Bk.top - (Bk.height - Rk.height) / 2
       }
       return () => {
-        uu.style.paddingBottom = ""
+        kk.style.paddingBottom = ""
       }
-    }), [bR]);
+    }), [oF]);
     const {
-      disclosureRef: uK,
-      gearLabelRef: RK,
-      hasGearLabel: yK
-    } = function(uu, Ru) {
-      const yu = (0, Eu.useRef)(null),
-        Ku = (0, Eu.useRef)(null),
-        Qu = (0, Eu.useRef)(0),
-        [mu, Ju] = (0, Eu.useState)(!0);
-      return (0, Eu.useLayoutEffect)((() => {
-        const Ru = yu.current;
-        if (!Ru || "undefined" === typeof ResizeObserver) return;
-        const Eu = () => {
-          const yu = document.createRange();
-          if (yu.selectNodeContents(Ru), "function" !== typeof yu.getBoundingClientRect) return;
-          const Eu = yu.getBoundingClientRect().width,
-            mu = Ku.current;
-          if (mu) {
-            const yu = uu.current,
-              Ku = yu && parseFloat(getComputedStyle(yu).columnGap) || 0;
-            Qu.current = mu.getBoundingClientRect().width + Ku, Eu > Ru.clientWidth + 1 && Ju(!1)
-          } else Ru.clientWidth - Eu >= Qu.current && Ju(!0)
+      disclosureRef: Ft,
+      gearLabelRef: Bt,
+      hasGearLabel: Rt
+    } = function(kk, Fk) {
+      const Bk = (0, Rk.useRef)(null),
+        tk = (0, Rk.useRef)(null),
+        ak = (0, Rk.useRef)(0),
+        [Xk, bk] = (0, Rk.useState)(!0);
+      return (0, Rk.useLayoutEffect)((() => {
+        const Fk = Bk.current;
+        if (!Fk || "undefined" === typeof ResizeObserver) return;
+        const Rk = () => {
+          const Bk = document.createRange();
+          if (Bk.selectNodeContents(Fk), "function" !== typeof Bk.getBoundingClientRect) return;
+          const Rk = Bk.getBoundingClientRect().width,
+            Xk = tk.current;
+          if (Xk) {
+            const Bk = kk.current,
+              tk = Bk && parseFloat(getComputedStyle(Bk).columnGap) || 0;
+            ak.current = Xk.getBoundingClientRect().width + tk, Rk > Fk.clientWidth + 1 && bk(!1)
+          } else Fk.clientWidth - Rk >= ak.current && bk(!0)
         };
-        Eu();
-        const mu = new ResizeObserver(Eu);
-        return mu.observe(Ru), () => {
-          mu.disconnect()
+        Rk();
+        const Xk = new ResizeObserver(Rk);
+        return Xk.observe(Fk), () => {
+          Xk.disconnect()
         }
-      }), [uu, Ru]), {
-        disclosureRef: yu,
-        gearLabelRef: Ku,
-        hasGearLabel: mu
+      }), [kk, Fk]), {
+        disclosureRef: Bk,
+        gearLabelRef: tk,
+        hasGearLabel: Xk
       }
-    }(vE, YE), EK = () => {
-      var uu;
-      FR([]), null === (uu = aR.current) || void 0 === uu || uu.abort(), ry()
-    }, KK = (0, mu.jsxs)("div", {
-      className: Qu()("WorldCodeAiPanel", bR && "WorldCodeAiPanel-aiView"),
-      children: [(0, mu.jsxs)("div", {
+    }(IR, xR), tt = () => {
+      var kk;
+      hF([]), null === (kk = QF.current) || void 0 === kk || kk.abort(), JB()
+    }, Xt = (0, Xk.jsxs)("div", {
+      className: ak()("WorldCodeAiPanel", oF && "WorldCodeAiPanel-aiView"),
+      children: [(0, Xk.jsxs)("div", {
         className: "WorldCodeAiHeader",
-        children: [(0, mu.jsx)("span", {
+        children: [(0, Xk.jsx)("span", {
           className: "WorldCodeAiTitle",
           children: "AI Helper"
-        }), (0, mu.jsx)("span", {
-          ref: uK,
+        }), (0, Xk.jsx)("span", {
+          ref: Ft,
           className: "WorldCodeAiDisclosure",
           title: "AI can be wrong. Check its changes.",
           children: "AI can be wrong."
-        }), YE && (0, mu.jsx)("button", {
-          ref: OE,
+        }), xR && (0, Xk.jsx)("button", {
+          ref: nR,
           className: "WorldCodeAiLinkButton WorldCodeAiBackButton",
           onClick: () => {
-            SR(!1), jR(!1), dR(!1), CR("addKey" === bR ? AR.current : null)
+            yF(!1), vF(!1), YF(!1), LF("addKey" === oF ? SF.current : null)
           },
-          children: "addKey" === bR && AR.current ? "Back" : "Back to chat"
-        }), bR && (0, mu.jsx)("h3", {
+          children: "addKey" === oF && SF.current ? "Back" : "Back to chat"
+        }), oF && (0, Xk.jsx)("h3", {
           className: "WorldCodeAiViewTitle",
-          children: "settings" === bR ? "AI settings" : DR ? `Edit ${wm(DR)} key` : "Add an API key"
-        }), "settings" === bR && (0, mu.jsxs)("span", {
+          children: "settings" === oF ? "AI settings" : NF ? `Edit ${CX(NF)} key` : "Add an API key"
+        }), "settings" === oF && (0, Xk.jsxs)("span", {
           className: "WorldCodeAiViewUsing",
-          children: [(0, mu.jsxs)("span", {
+          children: [(0, Xk.jsxs)("span", {
             className: "WorldCodeAiViewUsingModel",
-            children: ["Using:", " ", cE ? kR ? "Bot.xd (free) for the next question" : uX(cE) : FE ? uJ : "Bot.xd (free)"]
-          }), (0, mu.jsxs)("span", {
+            children: ["Using:", " ", DR ? OF ? "Bot.xd (free) for the next question" : Bd(DR) : hR ? Fb : "Bot.xd (free)"]
+          }), (0, Xk.jsxs)("span", {
             className: "WorldCodeAiViewUsingEdits",
-            children: ["Edits: ", sR ? "On" : "Off"]
+            children: ["Edits: ", cF ? "On" : "Off"]
           })]
-        }), YE && XR && (0, mu.jsx)("button", {
+        }), xR && sF && (0, Xk.jsx)("button", {
           className: "WorldCodeAiStop WorldCodeAiHeaderStop",
-          onClick: EK,
+          onClick: tt,
           children: "Stop answer"
-        }), !YE && !RR && (0, mu.jsx)(vN, {
+        }), !xR && !BF && (0, Xk.jsx)(Qw, {
           step: "aiNotes",
           placement: "bottom",
-          children: (0, mu.jsx)("button", {
-            className: Qu()("WorldCodeAiLinkButton", WR && "WorldCodeAiLinkButton-active"),
-            "aria-pressed": WR,
+          children: (0, Xk.jsx)("button", {
+            className: ak()("WorldCodeAiLinkButton", WF && "WorldCodeAiLinkButton-active"),
+            "aria-pressed": WF,
             onClick: () => {
-              SR(!1), dR(!1), jR(!WR)
+              yF(!1), YF(!1), vF(!WF)
             },
             children: "AI notes"
           })
-        }), !YE && HE && (0, mu.jsx)(vN, {
+        }), !xR && iR && (0, Xk.jsx)(Qw, {
           step: "aiGameSettings",
           placement: "bottom",
-          children: (0, mu.jsx)("button", {
-            className: Qu()("WorldCodeAiLinkButton", HR && "WorldCodeAiLinkButton-active"),
-            "aria-pressed": HR,
+          children: (0, Xk.jsx)("button", {
+            className: ak()("WorldCodeAiLinkButton", iF && "WorldCodeAiLinkButton-active"),
+            "aria-pressed": iF,
             onClick: () => {
-              WE(), SR(!1), jR(!1), dR(!HR)
+              WR(), yF(!1), vF(!1), YF(!iF)
             },
             children: "Game settings"
           })
-        }), !YE && rR.length > 0 && (0, mu.jsx)("button", {
-          className: Qu()("WorldCodeAiLinkButton", xR && "WorldCodeAiLinkButton-active"),
-          "aria-pressed": xR,
+        }), !xR && JF.length > 0 && (0, Xk.jsx)("button", {
+          className: ak()("WorldCodeAiLinkButton", eF && "WorldCodeAiLinkButton-active"),
+          "aria-pressed": eF,
           onClick: () => {
-            vR(Date.now()), jR(!1), dR(!1), SR(!xR)
+            IF(Date.now()), vF(!1), YF(!1), yF(!eF)
           },
           children: "History"
-        }), !YE && QR.length > 0 && (0, mu.jsx)("button", {
+        }), !xR && XF.length > 0 && (0, Xk.jsx)("button", {
           className: "WorldCodeAiLinkButton",
-          disabled: !!XR,
+          disabled: !!sF,
           onClick: () => {
-            JE(), FR([]), NR([]), KR.turns = new fQ
+            wR(), hF([]), dF([]), aF.turns = new FX
           },
           children: "New chat"
-        }), !YE && (0, mu.jsx)(vN, {
+        }), !xR && (0, Xk.jsx)(Qw, {
           step: "aiGear",
           placement: "bottom",
-          children: (0, mu.jsxs)("button", {
-            ref: vE,
+          children: (0, Xk.jsxs)("button", {
+            ref: IR,
             className: "WorldCodeAiLinkButton WorldCodeAiGear",
             "aria-label": "AI Helper settings",
             title: "AI Helper settings",
             onClick: () => {
-              tE.current = !1, CR("settings")
+              GR.current = !1, LF("settings")
             },
-            children: [(0, mu.jsx)(Bu.c, {
+            children: [(0, Xk.jsx)(Jk.d, {
               name: "gear"
-            }), yK && (0, mu.jsx)("span", {
-              ref: RK,
+            }), Rt && (0, Xk.jsx)("span", {
+              ref: Bt,
               className: "WorldCodeAiGearLabel",
               children: "Settings"
             })]
           })
         })]
-      }), (0, mu.jsxs)("div", {
+      }), (0, Xk.jsxs)("div", {
         className: "WorldCodeAiMessages",
-        ref: By,
-        role: YE ? void 0 : "log",
-        "aria-live": YE ? void 0 : "polite",
-        children: [xR && (0, mu.jsx)(xX, {
-          snapshots: rR,
-          files: Gu,
-          now: OR,
-          onRestore: nu && !XR ? uu => {
-            (async uu => {
-              const Ru = Ty.current,
-                yu = VX(uu, Ru);
-              if (0 === yu.length) return;
-              if (!await lu(yu)) return;
-              Yy("Before going back", Ru), SR(!1), null !== Ey && JE();
-              const Eu = {};
-              for (const mu of yu) Eu[mu.path] = mu.text;
-              const Ku = uu => My(uu) && "applied" === uu.status && uu.changes.some((uu => uu.path in Eu && Eu[uu.path] !== uu.after)),
-                Qu = QR.filter((uu => Ku(uu) && "saved" === uu.noteStatus && void 0 !== uu.note && pR.includes(uu.note))).map((uu => {
-                  var Ru;
-                  return null !== (Ru = uu.note) && void 0 !== Ru ? Ru : ""
+        ref: AB,
+        role: xR ? void 0 : "log",
+        "aria-live": xR ? void 0 : "polite",
+        children: [eF && (0, Xk.jsx)(yd, {
+          snapshots: JF,
+          files: Mk,
+          now: nF,
+          onRestore: Uk && !sF ? kk => {
+            (async kk => {
+              const Fk = mB.current,
+                Bk = Jd(kk, Fk);
+              if (0 === Bk.length) return;
+              if (!await Tk(Bk)) return;
+              xB("Before going back", Fk), yF(!1), null !== tB && wR();
+              const Rk = {};
+              for (const Xk of Bk) Rk[Xk.path] = Xk.text;
+              const tk = kk => HB(kk) && "applied" === kk.status && kk.changes.some((kk => kk.path in Rk && Rk[kk.path] !== kk.after)),
+                ak = XF.filter((kk => tk(kk) && "saved" === kk.noteStatus && void 0 !== kk.note && fF.includes(kk.note))).map((kk => {
+                  var Fk;
+                  return null !== (Fk = kk.note) && void 0 !== Fk ? Fk : ""
                 }));
-              NR((uu => uu.map((uu => Ku(uu) ? {
-                ...uu,
+              dF((kk => kk.map((kk => tk(kk) ? {
+                ...kk,
                 status: "undone",
                 wentBack: !0,
-                noteStatus: "asked" === uu.noteStatus ? void 0 : uu.noteStatus
-              } : uu)))), Dy({
+                noteStatus: "asked" === kk.noteStatus ? void 0 : kk.noteStatus
+              } : kk)))), NB({
                 role: "assistant",
                 text: "Your code is back to how it was.",
                 changes: [],
                 status: "offered",
                 isNotice: !0,
                 isCalm: !0,
-                undoFiles: Ru,
-                leftFiles: Object.fromEntries(yu.map((uu => [uu.path, uu.text]))),
-                forgetNotes: Qu.length > 0 ? Qu : void 0
+                undoFiles: Fk,
+                leftFiles: Object.fromEntries(Bk.map((kk => [kk.path, kk.text]))),
+                forgetNotes: ak.length > 0 ? ak : void 0
               })
-            })(uu)
+            })(kk)
           } : void 0
-        }), HR && (0, mu.jsx)(rV, {
-          files: Gu,
-          before: lR,
-          onWrite: nu ? (uu, Ru, yu) => {
-            const Eu = BE.current.then((async () => {
-              var Eu, Ku, Qu, mu;
-              const Ju = Ty.current,
-                Nu = VE.current[uu],
-                Xu = void 0 !== Nu && (null !== (Eu = Ju[uu]) && void 0 !== Eu ? Eu : "") === rE.current[uu] ? {
-                  ...Ju,
-                  [uu]: Nu
-                } : Ju,
-                Vu = eX(null !== (Ku = Xu[uu]) && void 0 !== Ku ? Ku : "", Ru, yu);
-              if (null === Vu) return !1;
-              if (Vu === Xu[uu]) return !0;
-              if (!await lu([{
-                  path: uu,
-                  text: Vu
+        }), iF && (0, Xk.jsx)(ys, {
+          files: Mk,
+          before: TF,
+          onWrite: Uk ? (kk, Fk, Bk) => {
+            const Rk = AR.current.then((async () => {
+              var Rk, tk, ak, Xk;
+              const bk = mB.current,
+                wk = VR.current[kk],
+                dk = void 0 !== wk && (null !== (Rk = bk[kk]) && void 0 !== Rk ? Rk : "") === JR.current[kk] ? {
+                  ...bk,
+                  [kk]: wk
+                } : bk,
+                sk = Nd(null !== (tk = dk[kk]) && void 0 !== tk ? tk : "", Fk, Bk);
+              if (null === sk) return !1;
+              if (sk === dk[kk]) return !0;
+              if (!await Tk([{
+                  path: kk,
+                  text: sk
                 }])) return !1;
-              const ru = DX(Ru),
-                Bu = `${uu}:${Ru.key}`,
-                xu = null !== (Qu = pE.current.get(Bu)) && void 0 !== Qu ? Qu : Ru.value;
-              pE.current.set(Bu, xu), xu === yu ? SE.current.delete(Bu) : SE.current.set(Bu, {
-                name: ru,
-                from: MX(xu),
-                to: MX(yu)
+              const Vk = ud(Fk),
+                Jk = `${kk}:${Fk.key}`,
+                Ak = null !== (ak = fR.current.get(Jk)) && void 0 !== ak ? ak : Fk.value;
+              fR.current.set(Jk, Ak), Ak === Bk ? yR.current.delete(Jk) : yR.current.set(Jk, {
+                name: Vk,
+                from: Md(Ak),
+                to: Md(Bk)
               });
-              const Su = IX([...SE.current.values()]);
-              if (tR.current) {
-                var pu;
-                null === (pu = TE.current) || void 0 === pu || pu.then((async uu => {
-                  void 0 !== uu && BR(await Xr.relabel(Zu, uu, Su))
-                })).catch((uu => {
-                  console.error("World Code AI: couldn't rename a version of the code", uu)
+              const ek = gd([...yR.current.values()]);
+              if (GF.current) {
+                var yk;
+                null === (yk = mR.current) || void 0 === yk || yk.then((async kk => {
+                  void 0 !== kk && AF(await eV.relabel(Ck, kk, ek))
+                })).catch((kk => {
+                  console.error("World Code AI: couldn't rename a version of the code", kk)
                 }))
               } else {
-                tR.current = !0;
-                const uu = Date.now();
-                TE.current = Xr.add(Zu, Su, Xu, uu).then((Ru => {
-                  var yu;
-                  return BR(Ru), null === (yu = Ru.find((Ru => Ru.at === uu && Ru.label === Su))) || void 0 === yu ? void 0 : yu.id
-                })).catch((uu => {
-                  console.error("World Code AI: couldn't keep a version of the code", uu)
-                })), gR(Xu)
+                GF.current = !0;
+                const kk = Date.now();
+                mR.current = eV.add(Ck, ek, dk, kk).then((Fk => {
+                  var Bk;
+                  return AF(Fk), null === (Bk = Fk.find((Fk => Fk.at === kk && Fk.label === ek))) || void 0 === Bk ? void 0 : Bk.id
+                })).catch((kk => {
+                  console.error("World Code AI: couldn't keep a version of the code", kk)
+                })), rF(dk)
               }
-              return xE.current.includes(ru) || xE.current.push(ru), rE.current[uu] = null !== (mu = Xu[uu]) && void 0 !== mu ? mu : "", VE.current[uu] = Vu, py.current = Date.now(), !0
+              return eR.current.includes(Vk) || eR.current.push(Vk), JR.current[kk] = null !== (Xk = dk[kk]) && void 0 !== Xk ? Xk : "", VR.current[kk] = sk, fB.current = Date.now(), !0
             }));
-            return BE.current = Eu.catch((() => !1)), Eu
+            return AR.current = Rk.catch((() => !1)), Rk
           } : void 0,
-          onTryIt: lR ? () => {
-            Xy(gu, Math.max(0, py.current + 600 - Date.now()))
+          onTryIt: TF ? () => {
+            sB(rk, Math.max(0, fB.current + 600 - Date.now()))
           } : void 0,
-          onUndo: lR && nu ? () => {
-            jE()
+          onUndo: TF && Uk ? () => {
+            vR()
           } : void 0
-        }), "settings" === bR && (0, mu.jsx)(zN, {
-          allowEdits: GR,
-          onAllowEditsChange: nu ? uu => {
-            UR(uu),
-              function(uu) {
+        }), "settings" === oF && (0, Xk.jsx)(hw, {
+          allowEdits: MF,
+          onAllowEditsChange: Uk ? kk => {
+            gF(kk),
+              function(kk) {
                 try {
-                  localStorage.setItem(eN, String(uu))
+                  localStorage.setItem(Ew, String(kk))
                 } catch {}
-              }(uu)
+              }(kk)
           } : void 0,
           onAddKey: () => {
-            AR.current = "settings", MR(null), CR("addKey")
+            SF.current = "settings", HF(null), LF("addKey")
           },
-          onEditKey: uu => {
-            AR.current = "settings", MR(uu), CR("addKey")
+          onEditKey: kk => {
+            SF.current = "settings", HF(kk), LF("addKey")
           }
-        }), "addKey" === bR && (0, mu.jsx)(YN, {
-          editing: null !== DR && void 0 !== DR ? DR : void 0,
+        }), "addKey" === oF && (0, Xk.jsx)(jw, {
+          editing: null !== NF && void 0 !== NF ? NF : void 0,
           onAdded: () => {
-            tE.current = !0, CR(AR.current)
+            GR.current = !0, LF(SF.current)
           },
           onOpenSettings: () => {
-            tE.current = !1, CR("settings")
+            GR.current = !1, LF("settings")
           }
-        }, null !== (ku = null === DR || void 0 === DR ? void 0 : DR.id) && void 0 !== ku ? ku : "new"), WR && (0, mu.jsx)(SX, {
-          notes: pR,
-          outline: ER(Gu, new Set(xr().callbackNames())),
-          UH: bE,
-          onDelete: uu => {
-            Vr.remove(Zu, uu).then(TR).catch((uu => {
-              console.error("World Code AI: couldn't delete a note", uu)
+        }, null !== (Ok = null === NF || void 0 === NF ? void 0 : NF.id) && void 0 !== Ok ? Ok : "new"), WF && (0, Xk.jsx)(fd, {
+          notes: fF,
+          outline: tF(Mk, new Set(WV().callbackNames())),
+          Av: oR,
+          onDelete: kk => {
+            yV.remove(Ck, kk).then(mF).catch((kk => {
+              console.error("World Code AI: couldn't delete a note", kk)
             }))
           }
-        }), !YE && QR.map(((uu, Ru) => {
-          var yu, Ku, Nu, Vu, ru, Bu, xu, Su;
-          const pu = My(uu),
-            Tu = UE && (null === (yu = QR[Ru - 1]) || void 0 === yu ? void 0 : yu.target.key) !== uu.target.key,
-            Wu = 0 === uu.changes.length,
-            ju = Wu && !!uu.failedEdits && !uu.question && !uu.worldCode,
-            Hu = uu.failedEdits && (0, mu.jsx)(lr, {
-              failed: uu.failedEdits,
-              nothingChanged: Wu,
-              defaultOpen: !uu.byItself,
-              isElsewhere: !pu,
-              onRetry: uu.id !== IE || XR || 0 !== zR.length ? void 0 : () => {
-                ty(KX.s, er, {
-                  about: DE(uu.id),
-                  failedEdits: uu.failedEdits
+        }), !xR && XF.map(((kk, Fk) => {
+          var Bk, tk, wk, sk, Vk, Jk, Ak, ek;
+          const yk = HB(kk),
+            fk = gR && (null === (Bk = XF[Fk - 1]) || void 0 === Bk ? void 0 : Bk.target.key) !== kk.target.key,
+            mk = 0 === kk.changes.length,
+            Wk = mk && !!kk.failedEdits && !kk.question && !kk.worldCode,
+            vk = kk.failedEdits && (0, Xk.jsx)(PV, {
+              failed: kk.failedEdits,
+              nothingChanged: mk,
+              defaultOpen: !kk.byItself,
+              isElsewhere: !yk,
+              onRetry: kk.id !== uR || sF || 0 !== PF.length ? void 0 : () => {
+                GB(Xd.p, uV, {
+                  about: NR(kk.id),
+                  failedEdits: kk.failedEdits
                 })
               }
             });
-          var du;
-          return void 0 === uu.logTitle && (!uu.isNotice || "assistant" !== uu.role || "" === uu.text || void 0 !== uu.retry || uu.keyNotice || uu.undoFiles || uu.failedEdits || uu.cutShort || uu.question || uu.worldCode || 0 !== uu.changes.length) ? (0, mu.jsxs)(Eu.Fragment, {
-            children: [Tu && (0, mu.jsx)(sr, {
-              target: uu.target,
-              isOpen: pu
-            }), (0, mu.jsxs)("div", {
-              className: Qu()("WorldCodeAiEntry", `WorldCodeAiEntry-${uu.role}`, {
-                "WorldCodeAiEntry-elsewhere": !pu,
-                WorldCodeAiNotice: uu.isNotice,
-                "WorldCodeAiNotice-calm": uu.isNotice && uu.isCalm,
-                "WorldCodeAiNotice-past": uu.isNotice && void 0 !== uu.retry && (uu.id !== IE || !!ey)
+          var ik;
+          return void 0 === kk.logTitle && (!kk.isNotice || "assistant" !== kk.role || "" === kk.text || void 0 !== kk.retry || kk.keyNotice || kk.undoFiles || kk.failedEdits || kk.cutShort || kk.question || kk.worldCode || 0 !== kk.changes.length) ? (0, Xk.jsxs)(Rk.Fragment, {
+            children: [fk && (0, Xk.jsx)(DV, {
+              target: kk.target,
+              isOpen: yk
+            }), (0, Xk.jsxs)("div", {
+              className: ak()("WorldCodeAiEntry", `WorldCodeAiEntry-${kk.role}`, {
+                "WorldCodeAiEntry-elsewhere": !yk,
+                WorldCodeAiNotice: kk.isNotice,
+                "WorldCodeAiNotice-calm": kk.isNotice && kk.isCalm,
+                "WorldCodeAiNotice-past": kk.isNotice && void 0 !== kk.retry && (kk.id !== uR || !!EB)
               }),
-              children: [Wu && Hu, ju ? null : uu.isNotice && void 0 !== uu.retry && (uu.id !== IE || ey) ? (0, mu.jsx)("p", {
-                children: uu.keyNotice ? dN(uu.keyNotice) : void 0 !== uu.retryAt ? "Not answered: Bot.xd was busy." : "Not answered: the AI had a problem."
-              }) : uu.keyNotice ? (0, mu.jsxs)(mu.Fragment, {
-                children: [(0, mu.jsx)("p", {
-                  children: HN(uu.keyNotice)
-                }), uu.keyNotice.detail && (0, mu.jsx)(WN, {
-                  detail: uu.keyNotice.detail
+              children: [mk && vk, Wk ? null : kk.isNotice && void 0 !== kk.retry && (kk.id !== uR || EB) ? (0, Xk.jsx)("p", {
+                children: kk.keyNotice ? Yw(kk.keyNotice) : void 0 !== kk.retryAt ? "Not answered: Bot.xd was busy." : "Not answered: the AI had a problem."
+              }) : kk.keyNotice ? (0, Xk.jsxs)(Xk.Fragment, {
+                children: [(0, Xk.jsx)("p", {
+                  children: iw(kk.keyNotice)
+                }), kk.keyNotice.detail && (0, Xk.jsx)(Ww, {
+                  detail: kk.keyNotice.detail
                 })]
-              }) : uu.undoFiles ? (0, mu.jsxs)("div", {
+              }) : kk.undoFiles ? (0, Xk.jsxs)("div", {
                 className: "WorldCodeAiWentBack",
-                children: [(0, mu.jsx)("span", {
-                  children: "undone" === uu.status ? "Undone: your code is as it was before going back." : uu.text
-                }), pu && "undone" !== uu.status && Gr(uu, Gu) && nu && (0, mu.jsx)("button", {
+                children: [(0, Xk.jsx)("span", {
+                  children: "undone" === kk.status ? "Undone: your code is as it was before going back." : kk.text
+                }), yk && "undone" !== kk.status && GV(kk, Mk) && Uk && (0, Xk.jsx)("button", {
                   className: "WorldCodeAiLinkButton WorldCodeAiNoticeUndo",
-                  disabled: !!XR,
-                  title: XR ? "You can undo once the answer is in." : void 0,
+                  disabled: !!sF,
+                  title: sF ? "You can undo once the answer is in." : void 0,
                   onClick: () => {
-                    (async uu => {
-                      var Ru;
-                      const yu = Ty.current;
-                      if (!Gr(uu, yu)) return;
-                      const Eu = VX({
+                    (async kk => {
+                      var Fk;
+                      const Bk = mB.current;
+                      if (!GV(kk, Bk)) return;
+                      const Rk = Jd({
                         id: 0,
                         at: 0,
                         label: "",
-                        files: null !== (Ru = uu.undoFiles) && void 0 !== Ru ? Ru : {}
-                      }, yu).filter((Ru => void 0 !== uu.leftFiles && Ru.path in uu.leftFiles));
-                      if (Eu.length > 0) {
-                        if (!await lu(Eu)) return;
-                        Yy("Before undoing going back", yu)
+                        files: null !== (Fk = kk.undoFiles) && void 0 !== Fk ? Fk : {}
+                      }, Bk).filter((Fk => void 0 !== kk.leftFiles && Fk.path in kk.leftFiles));
+                      if (Rk.length > 0) {
+                        if (!await Tk(Rk)) return;
+                        xB("Before undoing going back", Bk)
                       }
-                      const Ku = {
-                        ...yu
+                      const tk = {
+                        ...Bk
                       };
-                      for (const Qu of Eu) Ku[Qu.path] = Qu.text;
-                      NR((Ru => Ru.map((Ru => Ru.id === uu.id ? {
-                        ...Ru,
+                      for (const ak of Rk) tk[ak.path] = ak.text;
+                      dF((Fk => Fk.map((Fk => Fk.id === kk.id ? {
+                        ...Fk,
                         status: "undone"
-                      } : My(Ru) && Ru.wentBack && Ru.changes.every((uu => {
-                        var Ru;
-                        return (null !== (Ru = Ku[uu.path]) && void 0 !== Ru ? Ru : "") === uu.after
+                      } : HB(Fk) && Fk.wentBack && Fk.changes.every((kk => {
+                        var Fk;
+                        return (null !== (Fk = tk[kk.path]) && void 0 !== Fk ? Fk : "") === kk.after
                       })) ? {
-                        ...Ru,
+                        ...Fk,
                         status: "applied",
                         wentBack: void 0
-                      } : Ru))))
-                    })(uu)
+                      } : Fk))))
+                    })(kk)
                   },
-                  children: XR ? "Undo going back after this answer" : "Undo going back"
+                  children: sF ? "Undo going back after this answer" : "Undo going back"
                 })]
-              }) : "assistant" === uu.role ? (0, mu.jsx)(Xu.c, {
-                markdown: "applied" !== uu.status && !uu.editedInPlace && (uu.changes.length > 0 || null !== (Ku = uu.failedEdits) && void 0 !== Ku && Ku.length) ? XV(uu.text) : uu.text
-              }) : (0, mu.jsx)("p", {
-                children: uu.text
-              }), uu.answeredBy && (0, mu.jsx)(jN, {
-                answeredBy: uu.answeredBy
-              }), uu.oneOff && cE && uu.id === IE && !XR && (0, mu.jsxs)("p", {
+              }) : "assistant" === kk.role ? (0, Xk.jsx)(dk.e, {
+                markdown: "applied" !== kk.status && !kk.editedInPlace && (kk.changes.length > 0 || null !== (tk = kk.failedEdits) && void 0 !== tk && tk.length) ? As(kk.text) : kk.text
+              }) : (0, Xk.jsx)("p", {
+                children: kk.text
+              }), kk.answeredBy && (0, Xk.jsx)(vw, {
+                answeredBy: kk.answeredBy
+              }), kk.oneOff && DR && kk.id === uR && !sF && (0, Xk.jsxs)("p", {
                 className: "WorldCodeAiBackTo",
-                children: ["Your next question goes back to ", cE.model.name, "."]
-              }), uu.cutShort && (0, mu.jsx)(kN, {
-                hasCode: uu.changes.length > 0 || !!uu.worldCode,
-                ...LE(uu.id, uu.cutShort)
-              }), uu.forgetNotes && (0, mu.jsx)("div", {
+                children: ["Your next question goes back to ", DR.model.name, "."]
+              }), kk.cutShort && (0, Xk.jsx)(Ow, {
+                hasCode: kk.changes.length > 0 || !!kk.worldCode,
+                ...zR(kk.id, kk.cutShort)
+              }), kk.forgetNotes && (0, Xk.jsx)("div", {
                 className: "WorldCodeAiForget",
-                children: pu && void 0 === uu.forgetStatus && uu.id > GE ? (0, mu.jsxs)(mu.Fragment, {
-                  children: [(0, mu.jsxs)("span", {
+                children: yk && void 0 === kk.forgetStatus && kk.id > MR ? (0, Xk.jsxs)(Xk.Fragment, {
+                  children: [(0, Xk.jsxs)("span", {
                     className: "WorldCodeAiForgetAsk",
-                    children: [1 === uu.forgetNotes.length ? "Forget this note in AI notes too? " : "Forget these notes in AI notes too? ", (0, mu.jsx)("span", {
+                    children: [1 === kk.forgetNotes.length ? "Forget this note in AI notes too? " : "Forget these notes in AI notes too? ", (0, Xk.jsx)("span", {
                       className: "WorldCodeAiForgetNote",
-                      children: uu.forgetNotes.map((uu => `"${uu}"`)).join(", ")
+                      children: kk.forgetNotes.map((kk => `"${kk}"`)).join(", ")
                     })]
-                  }), (0, mu.jsxs)("div", {
+                  }), (0, Xk.jsxs)("div", {
                     className: "WorldCodeAiNoteButtons",
-                    children: [(0, mu.jsx)("button", {
+                    children: [(0, Xk.jsx)("button", {
                       className: "WorldCodeAiSecondaryButton",
                       onClick: () => {
-                        NE(uu, !0)
+                        dR(kk, !0)
                       },
                       children: "Forget it"
-                    }), (0, mu.jsx)("button", {
+                    }), (0, Xk.jsx)("button", {
                       className: "WorldCodeAiLinkButton",
                       onClick: () => {
-                        NE(uu, !1)
+                        dR(kk, !1)
                       },
                       children: "Keep it"
                     })]
                   })]
-                }) : (0, mu.jsx)("span", {
+                }) : (0, Xk.jsx)("span", {
                   className: "WorldCodeAiHint",
-                  children: "forgotten" === uu.forgetStatus ? "Taken out of AI notes." : "Kept in AI notes."
+                  children: "forgotten" === kk.forgetStatus ? "Taken out of AI notes." : "Kept in AI notes."
                 })
-              }), uu.changes.length > 0 && (0, mu.jsx)(nr, {
-                entry: uu,
-                defaultOpen: !uu.byItself,
-                elsewhere: pu ? void 0 : uu.target,
-                isOutOfDate: pu && !oy.current.has(uu.id) && uu.changes.some((uu => {
-                  var Ru;
-                  return (null !== (Ru = Gu[uu.path]) && void 0 !== Ru ? Ru : "") !== uu.before
+              }), kk.changes.length > 0 && (0, Xk.jsx)(rV, {
+                entry: kk,
+                defaultOpen: !kk.byItself,
+                elsewhere: yk ? void 0 : kk.target,
+                isOutOfDate: yk && !jB.current.has(kk.id) && kk.changes.some((kk => {
+                  var Fk;
+                  return (null !== (Fk = Mk[kk.path]) && void 0 !== Fk ? Fk : "") !== kk.before
                 })),
-                canEdit: pu ? nu : !!ou && (!uu.target.codeBlock || uu.target.canChangePos),
-                request: AE(uu.id),
-                onApply: Ru => {
-                  pu ? qy(Ru ? {
-                    id: uu.id,
-                    changes: Ru,
+                canEdit: yk ? Uk : !!jk && (!kk.target.codeBlock || kk.target.canChangePos),
+                request: SR(kk.id),
+                onApply: Fk => {
+                  yk ? lB(Fk ? {
+                    id: kk.id,
+                    changes: Fk,
                     isPartial: !0
-                  } : uu, DE(uu.id)) : ((uu, Ru) => {
-                    ou && Oy && (KR.pendingApply = {
-                      entryId: uu.id,
-                      targetKey: uu.target.key,
-                      picked: Ru,
-                      until: Date.now() + mr
-                    }, ou(uu.target))
-                  })(uu, Ru)
+                  } : kk, NR(kk.id)) : ((kk, Fk) => {
+                    jk && nB && (aF.pendingApply = {
+                      entryId: kk.id,
+                      targetKey: kk.target.key,
+                      picked: Fk,
+                      until: Date.now() + VV
+                    }, jk(kk.target))
+                  })(kk, Fk)
                 },
-                checkPicked: pu ? XE : void 0,
-                onPickedChange: Ru => {
-                  PR((yu => {
-                    if (yu.has(uu.id) === Ru) return yu;
-                    const Eu = new Set(yu);
-                    return Ru ? Eu.add(uu.id) : Eu.delete(uu.id), Eu
+                checkPicked: yk ? sR : void 0,
+                onPickedChange: Fk => {
+                  pF((Bk => {
+                    if (Bk.has(kk.id) === Fk) return Bk;
+                    const Rk = new Set(Bk);
+                    return Fk ? Rk.add(kk.id) : Rk.delete(kk.id), Rk
                   }))
                 },
                 onUndo: () => {
-                  (async uu => {
-                    const Ru = Ty.current;
-                    if (uu.changes.some((uu => {
-                        var yu;
-                        return (null !== (yu = Ru[uu.path]) && void 0 !== yu ? yu : "") !== uu.after
+                  (async kk => {
+                    const Fk = mB.current;
+                    if (kk.changes.some((kk => {
+                        var Bk;
+                        return (null !== (Bk = Fk[kk.path]) && void 0 !== Bk ? Bk : "") !== kk.after
                       }))) return;
-                    await lu(uu.changes.map((uu => ({
-                      path: uu.path,
-                      text: uu.before
-                    })))) && (Gy(uu.id, "undone"), null !== Ey && JE())
-                  })(uu)
+                    await Tk(kk.changes.map((kk => ({
+                      path: kk.path,
+                      text: kk.before
+                    })))) && (MB(kk.id, "undone"), null !== tB && wR())
+                  })(kk)
                 },
                 onTryIt: () => {
-                  (uu => {
-                    const Ru = jy.current;
-                    YR(Ru), QE(uu.id, "ask", Ru), Xy(gu, Math.max(0, py.current + 600 - Date.now()))
-                  })(uu)
+                  (kk => {
+                    const Fk = vB.current;
+                    xF(Fk), XR(kk.id, "ask", Fk), sB(rk, Math.max(0, fB.current + 600 - Date.now()))
+                  })(kk)
                 },
-                isLatest: pu && uu.id > GE,
-                canUndo: pu && uu.changes.every((uu => {
-                  var Ru;
-                  return (null !== (Ru = Gu[uu.path]) && void 0 !== Ru ? Ru : "") === uu.after
+                isLatest: yk && kk.id > MR,
+                canUndo: yk && kk.changes.every((kk => {
+                  var Fk;
+                  return (null !== (Fk = Mk[kk.path]) && void 0 !== Fk ? Fk : "") === kk.after
                 })),
                 onFixWarnings: () => {
-                  (uu => {
-                    var Ru;
-                    const yu = VN(null !== (Ru = uu.warnings) && void 0 !== Ru ? Ru : []);
-                    var Eu;
-                    if (!yu) return void ty(`Fix this in your change: ${null===(Eu=uu.warnings)||void 0===Eu?void 0:Eu.join(" ")}`);
-                    const Ku = xr(),
-                      Qu = uu.changes.map((Ru => ({
-                        ...Ru,
-                        before: "applied" === uu.status ? Ru.after : Ru.before,
-                        after: xN(Ru.after, yu)
+                  (kk => {
+                    var Fk;
+                    const Bk = Vw(null !== (Fk = kk.warnings) && void 0 !== Fk ? Fk : []);
+                    var Rk;
+                    if (!Bk) return void GB(`Fix this in your change: ${null===(Rk=kk.warnings)||void 0===Rk?void 0:Rk.join(" ")}`);
+                    const tk = WV(),
+                      ak = kk.changes.map((Fk => ({
+                        ...Fk,
+                        before: "applied" === kk.status ? Fk.after : Fk.before,
+                        after: ew(Fk.after, Bk)
                       })));
-                    Dy({
+                    NB({
                       role: "user",
-                      text: 1 === yu.length ? "Fix this line" : "Fix these lines",
+                      text: 1 === Bk.length ? "Fix this line" : "Fix these lines",
                       changes: [],
                       status: "offered"
-                    }), Dy({
+                    }), NB({
                       role: "assistant",
-                      text: `Fixed without asking the AI: ${yu.map(SN).join(" ")}`,
-                      changes: Qu,
+                      text: `Fixed without asking the AI: ${Bk.map(yw).join(" ")}`,
+                      changes: ak,
                       status: "offered",
-                      swappedTo: yu.flatMap((uu => {
+                      swappedTo: Bk.flatMap((kk => {
                         let {
-                          to: Ru
-                        } = uu;
-                        return Ru ? [Ru] : []
+                          to: Fk
+                        } = kk;
+                        return Fk ? [Fk] : []
                       })),
-                      warnings: Qu.flatMap((uu => Er(Ku, uu, RR)))
+                      warnings: ak.flatMap((kk => wV(tk, kk, BF)))
                     })
-                  })(uu)
+                  })(kk)
                 },
                 onCheck: () => {
-                  ty(function(uu) {
-                    const Ru = [...new Set(uu)];
-                    return Ru.length > 0 ? `${Ur} These names were checked against the game and are right, so keep them: ${Ru.map((uu=>`"${uu}"`)).join(", ")}.` : Ur
-                  }(ME.flatMap((uu => {
-                    var Ru;
-                    return null !== (Ru = uu.swappedTo) && void 0 !== Ru ? Ru : []
+                  GB(function(kk) {
+                    const Fk = [...new Set(kk)];
+                    return Fk.length > 0 ? `${TV} These names were checked against the game and are right, so keep them: ${Fk.map((kk=>`"${kk}"`)).join(", ")}.` : TV
+                  }(HR.flatMap((kk => {
+                    var Fk;
+                    return null !== (Fk = kk.swappedTo) && void 0 !== Fk ? Fk : []
                   }))), "Check it for mistakes")
                 },
-                busy: pu ? !!XR : !Oy
-              }), uu.question && (0, mu.jsx)(HX, {
+                busy: yk ? !!sF : !nB
+              }), kk.question && (0, Xk.jsx)(od, {
                 ownAnswerBelow: !0,
-                question: uu.question,
-                onAnswer: uu.id !== IE || XR ? void 0 : (Ru, yu) => {
-                  var Eu, Ku, Qu, mu, Ju, Nu, Xu;
-                  const Vu = null !== (Eu = null === (Ku = uu.question) || void 0 === Ku ? void 0 : Ku.question) && void 0 !== Eu ? Eu : "",
-                    ru = null !== (Qu = null === (mu = uu.askedFor) || void 0 === mu ? void 0 : mu.request) && void 0 !== Qu ? Qu : "";
-                  ty(jX(ru, Vu, Ru), null !== Ru && void 0 !== Ru ? Ru : "Let the AI pick", {
-                    check: yu,
-                    about: null === (Ju = uu.askedFor) || void 0 === Ju ? void 0 : Ju.request,
-                    asked: yu && Ru ? `${ru} ${Ru}` : null,
-                    guardWords: jX(null !== (Nu = null === (Xu = uu.askedFor) || void 0 === Xu ? void 0 : Xu.guardWords) && void 0 !== Nu ? Nu : "", Vu, Ru)
+                question: kk.question,
+                onAnswer: kk.id !== uR || sF ? void 0 : (Fk, Bk) => {
+                  var Rk, tk, ak, Xk, bk, wk, dk;
+                  const sk = null !== (Rk = null === (tk = kk.question) || void 0 === tk ? void 0 : tk.question) && void 0 !== Rk ? Rk : "",
+                    Vk = null !== (ak = null === (Xk = kk.askedFor) || void 0 === Xk ? void 0 : Xk.request) && void 0 !== ak ? ak : "";
+                  GB(Yd(Vk, sk, Fk), null !== Fk && void 0 !== Fk ? Fk : "Let the AI pick", {
+                    check: Bk,
+                    about: null === (bk = kk.askedFor) || void 0 === bk ? void 0 : bk.request,
+                    asked: Bk && Fk ? `${Vk} ${Fk}` : null,
+                    guardWords: Yd(null !== (wk = null === (dk = kk.askedFor) || void 0 === dk ? void 0 : dk.guardWords) && void 0 !== wk ? wk : "", sk, Fk)
                   })
                 }
-              }), pu && uu.offerExport && (0, mu.jsx)("button", {
+              }), yk && kk.offerExport && (0, Xk.jsx)("button", {
                 className: "WorldCodeAiSecondaryButton WorldCodeAiSaveGame",
                 onClick: () => {
-                  Iy(uu.id, {
+                  uB(kk.id, {
                     offerExport: !1
-                  }), fy("offered" === uu.status && uu.changes.length > 0)
+                  }), kR("offered" === kk.status && kk.changes.length > 0)
                 },
                 children: "Save my game"
-              }), uu.plan && (0, mu.jsx)(WX, {
-                steps: uu.plan,
-                built: null !== (Nu = uu.planBuilt) && void 0 !== Nu ? Nu : 0,
-                done: null !== (Vu = uu.planDone) && void 0 !== Vu ? Vu : 0,
-                onBuild: pu && !XR && nu ? Ru => {
-                  var yu;
-                  const Eu = null !== (yu = uu.plan) && void 0 !== yu ? yu : [];
-                  sy((() => {
-                    Iy(uu.id, {
-                      planBuilt: Ru + 1
-                    }), Ly.current(function(uu, Ru) {
-                      const yu = uu.map(((uu, yu) => `${yu+1}. ${uu}${yu<Ru?" (built)":""}`)).join("\n");
-                      return `Build step ${Ru+1} of our plan now: ${uu[Ru]}\nThe whole plan:\n${yu}\nBuild only step ${Ru+1}, keeping what earlier steps built, so I can try it before the next.`
-                    }(Eu, Ru), `Build step ${Ru+1}: ${Eu[Ru]}`, {
-                      about: Eu[Ru],
-                      asked: Eu[Ru],
+              }), kk.plan && (0, Xk.jsx)(vd, {
+                steps: kk.plan,
+                built: null !== (wk = kk.planBuilt) && void 0 !== wk ? wk : 0,
+                done: null !== (sk = kk.planDone) && void 0 !== sk ? sk : 0,
+                onBuild: yk && !sF && Uk ? Fk => {
+                  var Bk;
+                  const Rk = null !== (Bk = kk.plan) && void 0 !== Bk ? Bk : [];
+                  cB((() => {
+                    uB(kk.id, {
+                      planBuilt: Fk + 1
+                    }), zB.current(function(kk, Fk) {
+                      const Bk = kk.map(((kk, Bk) => `${Bk+1}. ${kk}${Bk<Fk?" (built)":""}`)).join("\n");
+                      return `Build step ${Fk+1} of our plan now: ${kk[Fk]}\nThe whole plan:\n${Bk}\nBuild only step ${Fk+1}, keeping what earlier steps built, so I can try it before the next.`
+                    }(Rk, Fk), `Build step ${Fk+1}: ${Rk[Fk]}`, {
+                      about: Rk[Fk],
+                      asked: Rk[Fk],
                       planStep: {
-                        planId: uu.id,
-                        index: Ru
+                        planId: kk.id,
+                        index: Fk
                       }
                     })
                   }))
                 } : void 0
-              }), pu && uu.note && uu.noteStatus && !(uu.wentBack && "saved" === uu.noteStatus) && (0, mu.jsx)(TX, {
-                note: uu.note,
-                status: uu.noteStatus,
-                isPartLeftOut: "offered" === uu.status && hR.has(uu.id),
-                defaultOpen: !uu.byItself || "asked" === uu.noteStatus,
-                onAnswer: Ru => {
-                  kE(uu, Ru)
+              }), yk && kk.note && kk.noteStatus && !(kk.wentBack && "saved" === kk.noteStatus) && (0, Xk.jsx)(Wd, {
+                note: kk.note,
+                status: kk.noteStatus,
+                isPartLeftOut: "offered" === kk.status && ZF.has(kk.id),
+                defaultOpen: !kk.byItself || "asked" === kk.noteStatus,
+                onAnswer: Fk => {
+                  OR(kk, Fk)
                 }
-              }, "asked" === uu.noteStatus ? "asked" : "kx"), !Wu && Hu, uu.lookups && (0, mu.jsx)(gr, {
-                lookups: uu.lookups.lookups,
-                defaultOpen: !uu.lookedAt,
-                isElsewhere: !pu
-              }), pu && uu.lookups && !uu.lookedAt && (0, mu.jsx)("div", {
+              }, "asked" === kk.noteStatus ? "asked" : "lA"), !mk && vk, kk.lookups && (0, Xk.jsx)(hV, {
+                lookups: kk.lookups.lookups,
+                defaultOpen: !kk.lookedAt,
+                isElsewhere: !yk
+              }), yk && kk.lookups && !kk.lookedAt && (0, Xk.jsx)("div", {
                 className: "WorldCodeAiLookups",
-                children: (0, mu.jsx)("button", {
+                children: (0, Xk.jsx)("button", {
                   className: "WorldCodeAiSecondaryButton",
-                  disabled: !!XR,
+                  disabled: !!sF,
                   onClick: () => {
-                    (async uu => {
-                      if (!uu.lookups || uu.lookedAt || XR) return;
-                      Iy(uu.id, {
+                    (async kk => {
+                      if (!kk.lookups || kk.lookedAt || sF) return;
+                      uB(kk.id, {
                         lookedAt: !0
                       });
-                      const Ru = new AbortController;
-                      aR.current = Ru;
-                      const yu = Date.now();
-                      vR(yu), VR({
+                      const Fk = new AbortController;
+                      QF.current = Fk;
+                      const Bk = Date.now();
+                      IF(Bk), VF({
                         phase: "thinking",
-                        startedAt: yu
+                        startedAt: Bk
                       });
                       try {
-                        "stopped" === await KE(uu.lookups.lookups, uu.lookups.followUp, {
-                          signal: Ru.signal
-                        }) && Iy(uu.id, {
+                        "stopped" === await aR(kk.lookups.lookups, kk.lookups.followUp, {
+                          signal: Fk.signal
+                        }) && uB(kk.id, {
                           lookedAt: !1
                         })
                       } finally {
-                        aR.current = null, VR(null)
+                        QF.current = null, VF(null)
                       }
-                    })(uu)
+                    })(kk)
                   },
                   children: "Let the AI look"
                 })
-              }), uu.worldCode && (0, mu.jsx)(tr, {
-                code: uu.worldCode.join("\n"),
-                defaultOpen: !uu.byItself,
-                isElsewhere: !pu,
-                onSwitch: pu && hu ? () => {
-                  var Ru;
-                  hu(cr(null !== (Ru = uu.worldCode) && void 0 !== Ru ? Ru : []))
+              }), kk.worldCode && (0, Xk.jsx)(zV, {
+                code: kk.worldCode.join("\n"),
+                defaultOpen: !kk.byItself,
+                isElsewhere: !yk,
+                onSwitch: yk && Zk ? () => {
+                  var Fk;
+                  Zk(qV(null !== (Fk = kk.worldCode) && void 0 !== Fk ? Fk : []))
                 } : void 0
-              }), pu && "ask" === uu.trial && uu.id > GE && tu <= (null !== (ru = uu.trialErrors) && void 0 !== ru ? ru : 0) && (0, mu.jsxs)("div", {
+              }), yk && "ask" === kk.trial && kk.id > MR && Gk <= (null !== (Vk = kk.trialErrors) && void 0 !== Vk ? Vk : 0) && (0, Xk.jsxs)("div", {
                 className: "WorldCodeAiTrial",
-                children: [(0, mu.jsx)("span", {
+                children: [(0, Xk.jsx)("span", {
                   children: "Did your world do what you wanted?"
-                }), (0, mu.jsxs)("div", {
+                }), (0, Xk.jsxs)("div", {
                   className: "WorldCodeAiTrialButtons",
-                  children: [(0, mu.jsx)("button", {
-                    ref: Wy,
+                  children: [(0, Xk.jsx)("button", {
+                    ref: WB,
                     className: "WorldCodeAiSecondaryButton",
                     onClick: () => {
-                      QE(uu.id, "worked")
+                      XR(kk.id, "worked")
                     },
                     children: "Yes"
-                  }), (0, mu.jsx)("button", {
+                  }), (0, Xk.jsx)("button", {
                     className: "WorldCodeAiSecondaryButton",
                     onClick: () => {
-                      var Ru;
-                      QE(uu.id, "notQuite"), LR("It didn't work because "), null === (Ru = xy.current) || void 0 === Ru || Ru.focus()
+                      var Fk;
+                      XR(kk.id, "notQuite"), zF("It didn't work because "), null === (Fk = eB.current) || void 0 === Fk || Fk.focus()
                     },
                     children: "Not quite"
                   })]
                 })]
-              }), pu && "worked" === uu.trial && uu.id > GE && (0, mu.jsxs)("div", {
+              }), yk && "worked" === kk.trial && kk.id > MR && (0, Xk.jsxs)("div", {
                 className: "WorldCodeAiTrial",
-                children: [(0, mu.jsx)("span", {
+                children: [(0, Xk.jsx)("span", {
                   children: "Nice! What next?"
-                }), (0, mu.jsx)(dr, {
-                  requests: jr,
-                  onPick: uu => {
-                    ty(uu, void 0, {
+                }), (0, Xk.jsx)(EV, {
+                  requests: LV,
+                  onPick: kk => {
+                    GB(kk, void 0, {
                       asked: null
                     })
                   }
                 })]
-              }), pu && "notQuite" === uu.trial && uu.id > GE && (0, mu.jsxs)("div", {
+              }), yk && "notQuite" === kk.trial && kk.id > MR && (0, Xk.jsxs)("div", {
                 className: "WorldCodeAiTrial WorldCodeAiTrial-wrong",
-                children: [(0, mu.jsx)("span", {
+                children: [(0, Xk.jsx)("span", {
                   children: "What went wrong? Pick one, or say it in your own words below."
-                }), (0, mu.jsx)(dr, {
-                  requests: Hr,
-                  onPick: uu => {
-                    ty(uu, void 0, {
+                }), (0, Xk.jsx)(EV, {
+                  requests: OV,
+                  onPick: kk => {
+                    GB(kk, void 0, {
                       asked: null
                     })
                   }
                 })]
-              }), "assistant" === uu.role && uu.changes.length > 0 && "offered" === uu.status && uu.id === IE && !XR && (0, mu.jsx)(dr, {
-                requests: Tr,
-                onPick: uu => {
-                  ty(uu, void 0, {
+              }), "assistant" === kk.role && kk.changes.length > 0 && "offered" === kk.status && kk.id === uR && !sF && (0, Xk.jsx)(EV, {
+                requests: YV,
+                onPick: kk => {
+                  GB(kk, void 0, {
                     asked: null
                   })
                 }
-              }), "assistant" === uu.role && void 0 !== uu.answeredBy && "free" !== uu.answeredBy && 0 === uu.changes.length && !uu.worldCode && !uu.cutShort && uu.id === IE && !XR && GQ(uu.text) && (0, mu.jsx)(dr, {
-                requests: Wr,
+              }), "assistant" === kk.role && void 0 !== kk.answeredBy && "free" !== kk.answeredBy && 0 === kk.changes.length && !kk.worldCode && !kk.cutShort && kk.id === uR && !sF && ga(kk.text) && (0, Xk.jsx)(EV, {
+                requests: oV,
                 onPick: () => {
-                  ty("You said what you'd change but made no change. Make it now, with the code in full.", "Make the change", {
+                  GB("You said what you'd change but made no change. Make it now, with the code in full.", "Make the change", {
                     asked: null
                   })
                 }
-              }), uu.keyNotice && void 0 !== uu.retry && uu.id === IE && !XR && (0, mu.jsx)(CN, {
-                ...zE(uu.id, uu.retry, uu.keyNotice)
-              }), void 0 !== uu.retry && !uu.keyNotice && uu.id === IE && !XR && (0, mu.jsxs)("div", {
+              }), kk.keyNotice && void 0 !== kk.retry && kk.id === uR && !sF && (0, Xk.jsx)(Lw, {
+                ...PR(kk.id, kk.retry, kk.keyNotice)
+              }), void 0 !== kk.retry && !kk.keyNotice && kk.id === uR && !sF && (0, Xk.jsxs)("div", {
                 className: "WorldCodeAiRetry",
-                children: [(0, mu.jsx)("button", {
-                  ...pN.f,
+                children: [(0, Xk.jsx)("button", {
+                  ...fw.h,
                   className: "WorldCodeAiSecondaryButton",
-                  disabled: (null !== (Bu = uu.retryAt) && void 0 !== Bu ? Bu : 0) > OR,
+                  disabled: (null !== (Jk = kk.retryAt) && void 0 !== Jk ? Jk : 0) > nF,
                   onClick: () => {
-                    var Ru;
-                    ty(null !== (Ru = uu.retry) && void 0 !== Ru ? Ru : "", uu.retryShown, {
-                      ...uu.retryOptions,
-                      retryOf: uu.id
+                    var Fk;
+                    GB(null !== (Fk = kk.retry) && void 0 !== Fk ? Fk : "", kk.retryShown, {
+                      ...kk.retryOptions,
+                      retryOf: kk.id
                     })
                   },
-                  children: (null !== (xu = uu.retryAt) && void 0 !== xu ? xu : 0) > OR ? `Try again in ${Lr((null!==(Su=uu.retryAt)&&void 0!==Su?Su:0)-OR)}` : "Try again"
-                }), cE && (0, mu.jsxs)("button", {
+                  children: (null !== (Ak = kk.retryAt) && void 0 !== Ak ? Ak : 0) > nF ? `Try again in ${CV((null!==(ek=kk.retryAt)&&void 0!==ek?ek:0)-nF)}` : "Try again"
+                }), DR && (0, Xk.jsxs)("button", {
                   className: "WorldCodeAiPrimaryButton",
                   onClick: () => {
-                    var Ru;
-                    ty(null !== (Ru = uu.retry) && void 0 !== Ru ? Ru : "", uu.retryShown, {
-                      ...uu.retryOptions,
-                      retryOf: uu.id,
+                    var Fk;
+                    GB(null !== (Fk = kk.retry) && void 0 !== Fk ? Fk : "", kk.retryShown, {
+                      ...kk.retryOptions,
+                      retryOf: kk.id,
                       useFree: !1
                     })
                   },
-                  children: ["Ask ", cE.model.name, " instead"]
-                }), !cE && (0, mu.jsx)("button", {
+                  children: ["Ask ", DR.model.name, " instead"]
+                }), !DR && (0, Xk.jsx)("button", {
                   className: "WorldCodeAiLinkButton",
-                  onClick: lE,
+                  onClick: TR,
                   children: "Choose another AI"
                 })]
               })]
             })]
-          }, uu.id) : (0, mu.jsxs)(Eu.Fragment, {
-            children: [Tu && (0, mu.jsx)(sr, {
-              target: uu.target,
-              isOpen: pu
-            }), uu.lookups && (0, mu.jsx)(gr, {
-              lookups: uu.lookups.lookups,
-              words: uu.text,
-              defaultOpen: !uu.lookedAt,
-              isElsewhere: !pu
-            }), !uu.lookups && (0, mu.jsx)(Ju, {
-              title: null !== (du = uu.logTitle) && void 0 !== du ? du : uu.isCalm ? "Update" : "Problem",
-              isCalm: uu.isCalm || "user" === uu.role,
-              isElsewhere: !pu,
-              children: (0, mu.jsx)("p", {
-                children: uu.text
+          }, kk.id) : (0, Xk.jsxs)(Rk.Fragment, {
+            children: [fk && (0, Xk.jsx)(DV, {
+              target: kk.target,
+              isOpen: yk
+            }), kk.lookups && (0, Xk.jsx)(hV, {
+              lookups: kk.lookups.lookups,
+              words: kk.text,
+              defaultOpen: !kk.lookedAt,
+              isElsewhere: !yk
+            }), !kk.lookups && (0, Xk.jsx)(bk, {
+              title: null !== (ik = kk.logTitle) && void 0 !== ik ? ik : kk.isCalm ? "Update" : "Problem",
+              isCalm: kk.isCalm || "user" === kk.role,
+              isElsewhere: !yk,
+              children: (0, Xk.jsx)("p", {
+                children: kk.text
               })
             })]
-          }, uu.id)
-        })), !YE && UE && (null === (eu = QR[QR.length - 1]) || void 0 === eu ? void 0 : eu.target.key) !== Fu.key && (0, mu.jsx)(sr, {
-          target: Fu,
+          }, kk.id)
+        })), !xR && gR && (null === (Ek = XF[XF.length - 1]) || void 0 === Ek ? void 0 : Ek.target.key) !== hk.key && (0, Xk.jsx)(DV, {
+          target: hk,
           isOpen: !0
-        }), !YE && 0 === ME.length && (0, mu.jsxs)("div", {
+        }), !xR && 0 === HR.length && (0, Xk.jsxs)("div", {
           className: "WorldCodeAiEmpty",
-          children: [(0, mu.jsx)("p", {
-            children: RR ? "What should happen when someone clicks this block? Ask in your own words." : "What do you want your world to do? Ask in your own words."
-          }), (0, mu.jsxs)("div", {
+          children: [(0, Xk.jsx)("p", {
+            children: BF ? "What should happen when someone clicks this block? Ask in your own words." : "What do you want your world to do? Ask in your own words."
+          }), (0, Xk.jsxs)("div", {
             className: "WorldCodeAiChips",
-            children: [PE && (0, mu.jsx)("button", {
-              ...pN.f,
+            children: [pR && (0, Xk.jsx)("button", {
+              ...fw.h,
               className: "WorldCodeAiChip",
               onClick: () => {
-                ty("Explain what my code does")
+                GB("Explain what my code does")
               },
               children: "Explain my code"
-            }), PE && !RR && !HE && nu && (0, mu.jsx)("button", {
-              ...pN.f,
+            }), pR && !BF && !iR && Uk && (0, Xk.jsx)("button", {
+              ...fw.h,
               className: "WorldCodeAiChip",
               onClick: () => {
-                ty("Put the numbers and messages in my code that I might want to change (times, amounts, messages) in CONFIG settings at the top, and use them from there. Change nothing else.", "Make settings I can change")
+                GB("Put the numbers and messages in my code that I might want to change (times, amounts, messages) in CONFIG settings at the top, and use them from there. Change nothing else.", "Make settings I can change")
               },
               children: "Make settings I can change"
-            }), (nu ? RR ? pr : Sr : []).map((uu => (0, Eu.createElement)("button", {
-              ...pN.f,
-              key: uu,
+            }), (Uk ? BF ? iV : vV : []).map((kk => (0, Rk.createElement)("button", {
+              ...fw.h,
+              key: kk,
               className: "WorldCodeAiChip",
               onClick: () => {
-                ty(uu)
+                GB(kk)
               }
-            }, uu)))]
-          }), (0, mu.jsxs)("p", {
+            }, kk)))]
+          }), (0, Xk.jsxs)("p", {
             className: "WorldCodeAiPrivacy",
-            children: [cE ? `Bloxd's safety check first makes sure your request is about your game, then it goes with your code to ${cE.model.name} with your key.` : FE ? "deepseek" === FE.provider ? "Your request and code go through Bloxd to Super Bot.xd, run by DeepSeek, which stores them on its servers in China." : "Your request and code go through Bloxd to Super Bot.xd." : "Your request and code go to Bot.xd, which doesn't keep them.", " ", "Never type personal details, like your name, address or school."]
-          }), !cE && (0, mu.jsxs)("p", {
+            children: [DR ? `Bloxd's safety check first makes sure your request is about your game, then it goes with your code to ${DR.model.name} with your key.` : hR ? "deepseek" === hR.provider ? "Your request and code go through Bloxd to Super Bot.xd, run by DeepSeek, which stores them on its servers in China." : "Your request and code go through Bloxd to Super Bot.xd." : "Your request and code go to Bot.xd, which doesn't keep them.", " ", "Never type personal details, like your name, address or school."]
+          }), !DR && (0, Xk.jsxs)("p", {
             className: "WorldCodeAiPrivacy",
-            children: ["Want a stronger AI?", " ", (0, mu.jsx)("button", {
+            children: ["Want a stronger AI?", " ", (0, Xk.jsx)("button", {
               className: "WorldCodeAiKeyLearnMore",
-              onClick: gE,
+              onClick: rR,
               children: "Add your own API key"
             })]
           })]
-        }), !YE && XR && (0, mu.jsx)("div", {
+        }), !xR && sF && (0, Xk.jsx)("div", {
           className: "WorldCodeAiEntry WorldCodeAiEntry-assistant WorldCodeAiBusyEntry",
-          children: (0, mu.jsxs)("div", {
+          children: (0, Xk.jsxs)("div", {
             className: "WorldCodeAiBusy",
             role: "status",
-            children: [(0, mu.jsx)("span", {
+            children: [(0, Xk.jsx)("span", {
               className: "WorldCodeAiSpinner"
-            }), (0, mu.jsx)("span", {
+            }), (0, Xk.jsx)("span", {
               className: "WorldCodeAiBusyText",
-              children: (0, mu.jsx)(Ju, {
-                title: null !== (Au = zr(XR)) && void 0 !== Au ? Au : "Thinking\u2026",
+              children: (0, Xk.jsx)(bk, {
+                title: null !== (Sk = ZV(sF)) && void 0 !== Sk ? Sk : "Thinking\u2026",
                 isCalm: !0,
-                children: "waiting" === XR.phase ? (0, mu.jsxs)("span", {
+                children: "waiting" === sF.phase ? (0, Xk.jsxs)("span", {
                   className: "WorldCodeAiBusyHint",
-                  children: [SV((null !== (Du = XR.until) && void 0 !== Du ? Du : OR) - OR), " Lots of people share Bot.xd."]
-                }) : (0, mu.jsxs)(mu.Fragment, {
-                  children: [(0, mu.jsx)(Fr, {
-                    busy: XR
-                  }), "screening" === XR.phase && (null !== (Mu = XR.until) && void 0 !== Mu ? Mu : 0) > OR && (0, mu.jsxs)("span", {
+                  children: [Ws((null !== (Nk = sF.until) && void 0 !== Nk ? Nk : nF) - nF), " Lots of people share Bot.xd."]
+                }) : (0, Xk.jsxs)(Xk.Fragment, {
+                  children: [(0, Xk.jsx)(pV, {
+                    busy: sF
+                  }), "screening" === sF.phase && (null !== (Hk = sF.until) && void 0 !== Hk ? Hk : 0) > nF && (0, Xk.jsxs)("span", {
                     className: "WorldCodeAiBusyHint",
-                    children: [SV((null !== (Iu = XR.until) && void 0 !== Iu ? Iu : OR) - OR), " Lots of people share the safety check."]
-                  }), "checking" !== XR.phase && "screening" !== XR.phase && (0, mu.jsx)("span", {
+                    children: [Ws((null !== (uk = sF.until) && void 0 !== uk ? uk : nF) - nF), " Lots of people share the safety check."]
+                  }), "checking" !== sF.phase && "screening" !== sF.phase && (0, Xk.jsx)("span", {
                     className: "WorldCodeAiBusyHint",
-                    children: XR.keyModel ? `${XR.keyModel} is answering with your key.` : XR.isSuperBot ? `${uJ} is answering from your usage.` : bV(IR.current, XR.model)
+                    children: sF.keyModel ? `${sF.keyModel} is answering with your key.` : sF.isSuperBot ? `${Fb} is answering from your usage.` : Es(uF.current, sF.model)
                   })]
                 })
               })
-            }), (0, mu.jsx)("button", {
+            }), (0, Xk.jsx)("button", {
               className: "WorldCodeAiSecondaryButton WorldCodeAiStop",
-              onClick: EK,
+              onClick: tt,
               children: "Stop"
             })]
           })
-        }), !YE && !XR && Ny && (0, mu.jsx)("div", {
+        }), !xR && !sF && dB && (0, Xk.jsx)("div", {
           className: "WorldCodeAiEntry WorldCodeAiEntry-assistant WorldCodeAiBusyEntry",
-          children: (0, mu.jsxs)("div", {
+          children: (0, Xk.jsxs)("div", {
             className: "WorldCodeAiBusy",
             role: "status",
-            children: [(0, mu.jsx)("span", {
+            children: [(0, Xk.jsx)("span", {
               className: "WorldCodeAiSpinner"
-            }), (0, mu.jsx)("span", {
+            }), (0, Xk.jsx)("span", {
               className: "WorldCodeAiBusyText",
-              children: (0, mu.jsx)(Ju, {
+              children: (0, Xk.jsx)(bk, {
                 title: "Testing\u2026",
                 isCalm: !0,
-                children: (0, mu.jsx)("span", {
+                children: (0, Xk.jsx)("span", {
                   className: "WorldCodeAiBusyHint",
-                  children: RR ? "Your code block runs once in your world, as if you clicked it. If it shows an error, the AI fixes it." : `Your change runs in your world for ${KX.C/1e3} seconds. If it shows an error, the AI fixes it.`
+                  children: BF ? "Your code block runs once in your world, as if you clicked it. If it shows an error, the AI fixes it." : `Your change runs in your world for ${Xd.A/1e3} seconds. If it shows an error, the AI fixes it.`
                 })
               })
-            }), (0, mu.jsx)("button", {
+            }), (0, Xk.jsx)("button", {
               className: "WorldCodeAiSecondaryButton WorldCodeAiStop",
-              onClick: JE,
+              onClick: wR,
               children: "Stop"
             })]
           })
-        }), !YE && hy.map(((uu, Ru) => {
-          var yu, Eu;
-          return (0, mu.jsxs)("div", {
+        }), !xR && ZB.map(((kk, Fk) => {
+          var Bk, Rk;
+          return (0, Xk.jsxs)("div", {
             className: "WorldCodeAiEntry WorldCodeAiEntry-user WorldCodeAiQueued",
-            children: [(0, mu.jsx)("p", {
-              children: null !== (yu = uu.shown) && void 0 !== yu ? yu : uu.text
-            }), (0, mu.jsxs)("span", {
+            children: [(0, Xk.jsx)("p", {
+              children: null !== (Bk = kk.shown) && void 0 !== Bk ? Bk : kk.text
+            }), (0, Xk.jsxs)("span", {
               className: "WorldCodeAiQueuedNote",
-              children: [uu.id === wy ? "Pick Bot.xd to send it" : null !== (Eu = rr[Ru]) && void 0 !== Eu ? Eu : "In line", (0, mu.jsx)("button", {
+              children: [kk.id === qB ? "Pick Bot.xd to send it" : null !== (Rk = fV[Fk]) && void 0 !== Rk ? Rk : "In line", (0, Xk.jsx)("button", {
                 className: "WorldCodeAiLinkButton",
                 onClick: () => {
-                  FR((Ru => Ru.filter((Ru => Ru.id !== uu.id))))
+                  hF((Fk => Fk.filter((Fk => Fk.id !== kk.id))))
                 },
                 children: "Delete"
               })]
             })]
-          }, uu.id)
+          }, kk.id)
         }))]
-      }), ey && !XR && (0, mu.jsxs)("div", {
+      }), EB && !sF && (0, Xk.jsxs)("div", {
         className: "WorldCodeAiErrorBanner",
-        children: [(0, mu.jsxs)("div", {
+        children: [(0, Xk.jsxs)("div", {
           className: "WorldCodeAiErrorPlain",
-          children: [void 0 !== Ay.line && (0, mu.jsxs)(mu.Fragment, {
-            children: [(0, mu.jsxs)("button", {
+          children: [void 0 !== SB.line && (0, Xk.jsxs)(Xk.Fragment, {
+            children: [(0, Xk.jsxs)("button", {
               className: "WorldCodeAiLinkButton",
               title: "Show this line in your code",
               onClick: () => {
-                var uu, Ru;
-                zu(null !== (uu = Ay.path) && void 0 !== uu ? uu : Uu, null !== (Ru = Ay.line) && void 0 !== Ru ? Ru : 1), (0, ru.f)() && Lu()
+                var kk, Fk;
+                Pk(null !== (kk = SB.path) && void 0 !== kk ? kk : gk, null !== (Fk = SB.line) && void 0 !== Fk ? Fk : 1), (0, Vk.h)() && zk()
               },
-              children: [Ay.path && Ay.path !== Uu ? `${Ay.path} line` : "Line", " ", Ay.line]
+              children: [SB.path && SB.path !== gk ? `${SB.path} line` : "Line", " ", SB.line]
             }), ":", " "]
-          }), Ay.text]
-        }), oR && (0, mu.jsx)("div", {
+          }), SB.text]
+        }), jF && (0, Xk.jsx)("div", {
           className: "WorldCodeAiErrorText",
-          children: ey
-        }), (0, mu.jsxs)("div", {
+          children: EB
+        }), (0, Xk.jsxs)("div", {
           className: "WorldCodeAiErrorActions",
-          children: [(0, mu.jsx)("button", {
-            ...pN.f,
+          children: [(0, Xk.jsx)("button", {
+            ...fw.h,
             className: "WorldCodeAiPrimaryButton",
             onClick: () => {
-              sy((() => {
-                YR(tu), Ly.current(`Fix this error: ${ey}`)
+              cB((() => {
+                xF(Gk), zB.current(`Fix this error: ${EB}`)
               }))
             },
             children: "Fix the error"
-          }), (0, mu.jsx)("button", {
-            ...pN.f,
+          }), (0, Xk.jsx)("button", {
+            ...fw.h,
             className: "WorldCodeAiSecondaryButton",
             onClick: () => {
-              sy((() => {
-                YR(tu), Ly.current(`Explain this error in simple words, and where it is in my code: ${ey}`)
+              cB((() => {
+                xF(Gk), zB.current(`Explain this error in simple words, and where it is in my code: ${EB}`)
               }))
             },
             children: "Explain it"
-          }), (0, mu.jsx)("button", {
+          }), (0, Xk.jsx)("button", {
             className: "WorldCodeAiLinkButton",
             onClick: () => {
-              YR(tu)
+              xF(Gk)
             },
             children: "Dismiss"
-          }), (0, mu.jsx)("button", {
+          }), (0, Xk.jsx)("button", {
             className: "WorldCodeAiLinkButton WorldCodeAiErrorDetailsToggle",
             onClick: () => {
-              qR(!oR)
+              lF(!jF)
             },
-            children: oR ? "Hide details" : "Show details"
+            children: jF ? "Hide details" : "Show details"
           })]
-        }), (0, mu.jsx)("div", {
+        }), (0, Xk.jsx)("div", {
           className: "WorldCodeAiErrorNote",
           children: "Fix the error and Explain it send this error and your code to the AI."
         })]
-      }), wR && (0, mu.jsxs)("div", {
+      }), qF && (0, Xk.jsxs)("div", {
         className: "WorldCodeAiPicked",
-        children: [(0, mu.jsxs)("span", {
-          children: ["Changing ", DV(wR), " of ", wR.path]
-        }), (0, mu.jsx)("button", {
+        children: [(0, Xk.jsxs)("span", {
+          children: ["Changing ", Ms(qF), " of ", qF.path]
+        }), (0, Xk.jsx)("button", {
           className: "WorldCodeAiLinkButton",
           onClick: () => {
-            ZR(null)
+            CF(null)
           },
           children: "Cancel"
         })]
-      }), (0, mu.jsx)(vN, {
+      }), (0, Xk.jsx)(Qw, {
         step: "aiAskBox",
-        children: (0, mu.jsx)("form", {
+        children: (0, Xk.jsx)("form", {
           className: "WorldCodeAiInputRow",
-          onSubmit: uu => {
-            uu.preventDefault(), gy()
+          onSubmit: kk => {
+            kk.preventDefault(), rB()
           },
-          children: (0, mu.jsxs)("div", {
+          children: (0, Xk.jsxs)("div", {
             className: "WorldCodeAiAsk",
-            children: [(0, mu.jsx)("textarea", {
-              ref: xy,
+            children: [(0, Xk.jsx)("textarea", {
+              ref: eB,
               className: "WorldCodeAiAskInput",
-              value: cR,
+              value: DF,
               maxLength: 1e3,
               rows: 2,
-              placeholder: wR ? `How should ${DV(wR)} change?` : sE ? "Or type your own answer here" : "Ask AI",
-              onChange: uu => {
-                LR(uu.target.value)
+              placeholder: qF ? `How should ${Ms(qF)} change?` : cR ? "Or type your own answer here" : "Ask AI",
+              onChange: kk => {
+                zF(kk.target.value)
               },
-              onKeyDown: uu => {
-                uu.stopPropagation(), "Enter" !== uu.key || uu.shiftKey || uu.nativeEvent.isComposing || 229 === uu.nativeEvent.keyCode || (uu.preventDefault(), gy())
+              onKeyDown: kk => {
+                kk.stopPropagation(), "Enter" !== kk.key || kk.shiftKey || kk.nativeEvent.isComposing || 229 === kk.nativeEvent.keyCode || (kk.preventDefault(), rB())
               }
-            }), (0, mu.jsx)(Vu.l, {
+            }), (0, Xk.jsx)(sk.o, {
               className: "WorldCodeAiSend",
               ariaLabel: "Send",
-              disabled: "" === cR.trim() || !!XR && zR.length >= 3,
-              onClick: gy,
-              children: (0, mu.jsx)(Bu.c, {
+              disabled: "" === DF.trim() || !!sF && PF.length >= 3,
+              onClick: rB,
+              children: (0, Xk.jsx)(Jk.d, {
                 name: "arrow-up"
               })
             })]
           })
         })
-      }), (0, mu.jsx)(vN, {
+      }), (0, Xk.jsx)(Qw, {
         step: "aiModelChip",
-        children: (0, mu.jsx)("div", {
-          className: Qu()("WorldCodeAiLimit", XR && "WorldCodeAiLimit-busy"),
-          children: (0, mu.jsx)(RX, {
-            editsOn: nu ? GR : null,
-            freeOnce: kR,
-            onFreeOnce: eR,
-            onAddKey: gE,
+        children: (0, Xk.jsx)("div", {
+          className: ak()("WorldCodeAiLimit", sF && "WorldCodeAiLimit-busy"),
+          children: (0, Xk.jsx)(Rd, {
+            editsOn: Uk ? MF : null,
+            freeOnce: OF,
+            onFreeOnce: EF,
+            onAddKey: rR,
             children: (() => {
-              if (XR) return 0 === hy.length ? "You can type your next request: it sends when this answer is done." : 1 === hy.length ? "1 request waiting: it sends when this answer is done." : `${hy.length} requests waiting: they send one at a time.`;
-              if (cE && kR) return `Your next question goes to Bot.xd, then back to ${cE.model.name}.`;
-              if (cE) return `Your question and code go to ${Sm(cE.provider,cE.baseUrl,!0)}.`;
-              if (FE) {
-                const uu = null === wE ? null : function(uu, Ru) {
-                  return uu <= Ru ? null : `Limit resets in ${(0,fm.c)(Math.ceil((uu-Ru)/6e4))}`
-                }(wE, OR);
-                return null === uu ? pJ(FE) : (0, mu.jsxs)(mu.Fragment, {
-                  children: [(0, mu.jsx)("span", {
+              if (sF) return 0 === ZB.length ? "You can type your next request: it sends when this answer is done." : 1 === ZB.length ? "1 request waiting: it sends when this answer is done." : `${ZB.length} requests waiting: they send one at a time.`;
+              if (DR && OF) return `Your next question goes to Bot.xd, then back to ${DR.model.name}.`;
+              if (DR) return `Your question and code go to ${fX(DR.provider,DR.baseUrl,!0)}.`;
+              if (hR) {
+                const kk = null === qR ? null : function(kk, Fk) {
+                  return kk <= Fk ? null : `Limit resets in ${(0,kb.b)(Math.ceil((kk-Fk)/6e4))}`
+                }(qR, nF);
+                return null === kk ? fb(hR) : (0, Xk.jsxs)(Xk.Fragment, {
+                  children: [(0, Xk.jsx)("span", {
                     className: "WorldCodeAiModelChipStatusLine",
-                    children: pJ(FE)
-                  }), (0, mu.jsx)("span", {
+                    children: fb(hR)
+                  }), (0, Xk.jsx)("span", {
                     className: "WorldCodeAiModelChipStatusLine",
-                    children: uu
+                    children: kk
                   })]
                 })
               }
-              return Cy > OR ? `Send now and it starts by itself. ${SV(Cy-OR)}` : null
+              return LB > nF ? `Send now and it starts by itself. ${Ws(LB-nF)}` : null
             })()
           })
         })
       })]
     });
-    return (0, mu.jsx)(vN, {
-      step: oE,
-      onPrevious: "aiPanel" === oE ? Lu : void 0,
-      children: KK
+    return (0, Xk.jsx)(Qw, {
+      step: jR,
+      onPrevious: "aiPanel" === jR ? zk : void 0,
+      children: Xt
     })
   })),
-  Zr = wr
-}, 39340: (uu, Ru, yu) => {
-  yu.d(Ru, {
-    c: () => Nu,
-    g: () => Qu,
-    k: () => Ku
+  xV = KV
+}, 39199: (kk, Fk, Bk) => {
+  Bk.d(Fk, {
+    b: () => wk,
+    e: () => ak,
+    i: () => tk
   });
-  const Eu = 6e3;
+  const Rk = 6e3;
 
-  function Ku(uu, Ru) {
-    return [Math.floor(uu[0] / Ru) * Ru, Math.floor(uu[1] / Ru) * Ru, Math.floor(uu[2] / Ru) * Ru]
+  function tk(kk, Fk) {
+    return [Math.floor(kk[0] / Fk) * Fk, Math.floor(kk[1] / Fk) * Fk, Math.floor(kk[2] / Fk) * Fk]
   }
 
-  function Qu(uu) {
-    const Ru = (null !== uu && void 0 !== uu ? uu : "").match(/-?\d+(?:\.\d+)?/g);
-    return Ru && Ru.length >= 3 ? [Number(Ru[0]), Number(Ru[1]), Number(Ru[2])] : null
+  function ak(kk) {
+    const Fk = (null !== kk && void 0 !== kk ? kk : "").match(/-?\d+(?:\.\d+)?/g);
+    return Fk && Fk.length >= 3 ? [Number(Fk[0]), Number(Fk[1]), Number(Fk[2])] : null
   }
 
-  function mu(uu, Ru) {
-    return uu === Ru ? String(uu) : `${uu}-${Ru}`
+  function Xk(kk, Fk) {
+    return kk === Fk ? String(kk) : `${kk}-${Fk}`
   }
 
-  function Ju(uu, Ru, yu, Eu) {
-    const Ku = [];
-    let Qu = new Map;
-    for (let mu = uu[2]; mu < uu[2] + Ru; mu++) {
-      const Ju = new Map;
-      let Nu = uu[0];
-      for (; Nu < uu[0] + Ru;) {
-        const Ku = Eu(Nu, yu, mu);
-        let Xu = Nu;
-        for (; Xu + 1 < uu[0] + Ru && Eu(Xu + 1, yu, mu) === Ku;) Xu++;
-        if (null !== Ku) {
-          const uu = `${Nu} ${Xu} ${Ku}`,
-            Ru = Qu.get(uu);
-          Ru ? (Ru.z1 = mu, Qu.delete(uu), Ju.set(uu, Ru)) : Ju.set(uu, {
-            x0: Nu,
-            x1: Xu,
-            z0: mu,
-            z1: mu,
-            name: Ku
+  function bk(kk, Fk, Bk, Rk) {
+    const tk = [];
+    let ak = new Map;
+    for (let Xk = kk[2]; Xk < kk[2] + Fk; Xk++) {
+      const bk = new Map;
+      let wk = kk[0];
+      for (; wk < kk[0] + Fk;) {
+        const tk = Rk(wk, Bk, Xk);
+        let dk = wk;
+        for (; dk + 1 < kk[0] + Fk && Rk(dk + 1, Bk, Xk) === tk;) dk++;
+        if (null !== tk) {
+          const kk = `${wk} ${dk} ${tk}`,
+            Fk = ak.get(kk);
+          Fk ? (Fk.z1 = Xk, ak.delete(kk), bk.set(kk, Fk)) : bk.set(kk, {
+            x0: wk,
+            x1: dk,
+            z0: Xk,
+            z1: Xk,
+            name: tk
           })
         }
-        Nu = Xu + 1
+        wk = dk + 1
       }
-      Ku.push(...Qu.values()), Qu = Ju
+      tk.push(...ak.values()), ak = bk
     }
-    return Ku.push(...Qu.values()), Ku.sort(((uu, Ru) => uu.z0 - Ru.z0 || uu.x0 - Ru.x0)).map((uu => `x${mu(uu.x0,uu.x1)} z${mu(uu.z0,uu.z1)} ${uu.name}`))
+    return tk.push(...ak.values()), tk.sort(((kk, Fk) => kk.z0 - Fk.z0 || kk.x0 - Fk.x0)).map((kk => `x${Xk(kk.x0,kk.x1)} z${Xk(kk.z0,kk.z1)} ${kk.name}`))
   }
 
-  function Nu(uu, Ru, yu, Ku) {
-    let Qu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Eu;
-    const Nu = [uu[0] + Ru - 1, uu[1] + Ru - 1, uu[2] + Ru - 1],
-      Xu = null !== Ku && Ku.every(((Ru, yu) => Math.floor(Ru) >= uu[yu] && Math.floor(Ru) <= Nu[yu])),
-      Vu = [`The chunk from ${uu.join(" ")} to ${Nu.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-    null !== Ku && Vu.push(`The player's feet are at ${Ku.map(Math.floor).join(" ")}, ${Xu?"in this chunk":"outside this chunk"}.`);
-    const ru = [];
-    for (let Eu = uu[1]; Eu <= Nu[1]; Eu++) {
-      const Ku = Ju(uu, Ru, Eu, yu).join("; "),
-        Qu = ru[ru.length - 1];
-      (null === Qu || void 0 === Qu ? void 0 : Qu.boxes) === Ku ? Qu.to = Eu : ru.push({
-        from: Eu,
-        to: Eu,
-        boxes: Ku
+  function wk(kk, Fk, Bk, tk) {
+    let ak = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Rk;
+    const wk = [kk[0] + Fk - 1, kk[1] + Fk - 1, kk[2] + Fk - 1],
+      dk = null !== tk && tk.every(((Fk, Bk) => Math.floor(Fk) >= kk[Bk] && Math.floor(Fk) <= wk[Bk])),
+      sk = [`The chunk from ${kk.join(" ")} to ${wk.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+    null !== tk && sk.push(`The player's feet are at ${tk.map(Math.floor).join(" ")}, ${dk?"in this chunk":"outside this chunk"}.`);
+    const Vk = [];
+    for (let Rk = kk[1]; Rk <= wk[1]; Rk++) {
+      const tk = bk(kk, Fk, Rk, Bk).join("; "),
+        ak = Vk[Vk.length - 1];
+      (null === ak || void 0 === ak ? void 0 : ak.boxes) === tk ? ak.to = Rk : Vk.push({
+        from: Rk,
+        to: Rk,
+        boxes: tk
       })
     }
-    const Bu = ru.filter((uu => "" !== uu.boxes));
-    0 === Bu.length && Vu.push("It is all air.");
-    let xu = Vu.join("\n").length;
-    for (const Eu of Bu) {
-      const uu = `y${mu(Eu.from,Eu.to)}: ${Eu.boxes}`;
-      if (xu += uu.length + 1, xu > Qu) {
-        Vu.push(`Cut short: the layers from y${Eu.from} up aren't shown, as there are too many blocks.`);
+    const Jk = Vk.filter((kk => "" !== kk.boxes));
+    0 === Jk.length && sk.push("It is all air.");
+    let Ak = sk.join("\n").length;
+    for (const Rk of Jk) {
+      const kk = `y${Xk(Rk.from,Rk.to)}: ${Rk.boxes}`;
+      if (Ak += kk.length + 1, Ak > ak) {
+        sk.push(`Cut short: the layers from y${Rk.from} up aren't shown, as there are too many blocks.`);
         break
       }
-      Vu.push(uu)
+      sk.push(kk)
     }
-    return Vu.join("\n")
+    return sk.join("\n")
   }
-}, 4593: (uu, Ru, yu) => {
-  yu.d(Ru, {
-    A: () => xu,
-    b: () => Ku,
-    e: () => Nu,
-    h: () => Qu,
-    j: () => mu,
-    m: () => Ju,
-    q: () => Tu,
-    u: () => Vu,
-    w: () => ru,
-    y: () => pu
+}, 4553: (kk, Fk, Bk) => {
+  Bk.d(Fk, {
+    A: () => Ak,
+    c: () => tk,
+    f: () => wk,
+    i: () => ak,
+    j: () => Xk,
+    k: () => bk,
+    l: () => fk,
+    p: () => sk,
+    t: () => Vk,
+    w: () => yk
   });
-  var Eu = yu(1542);
-  const Ku = 24e3,
-    Qu = "/docs/llms.txt",
-    mu = `${Eu.c}${Qu}`,
-    Ju = "/llms.txt",
-    Nu = "/docs/llms-full.txt";
+  var Rk = Bk(1535);
+  const tk = 24e3,
+    ak = "/docs/llms.txt",
+    Xk = `${Rk.b}${ak}`,
+    bk = "/llms.txt",
+    wk = "/docs/llms-full.txt";
 
-  function Xu(uu) {
-    return uu || "index"
+  function dk(kk) {
+    return kk || "index"
   }
 
-  function Vu(uu) {
-    return `/docs/${Xu(uu)}.md`
+  function sk(kk) {
+    return `/docs/${dk(kk)}.md`
   }
 
-  function ru(uu, Ru) {
-    return `/docs/${Xu(uu)}/${Ru+1}.md`
+  function Vk(kk, Fk) {
+    return `/docs/${dk(kk)}/${Fk+1}.md`
   }
-  const Bu = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+  const Jk = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-  function xu(uu) {
-    const Ru = Bu.exec(uu);
-    return null === Ru ? null : {
-      name: Ru[1],
-      part: void 0 === Ru[2] ? null : Number(Ru[2])
+  function Ak(kk) {
+    const Fk = Jk.exec(kk);
+    return null === Fk ? null : {
+      name: Fk[1],
+      part: void 0 === Fk[2] ? null : Number(Fk[2])
     }
   }
-  const Su = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+  const ek = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-  function pu(uu) {
-    const Ru = Su.exec(uu);
-    if (null === Ru) return null;
-    const [, yu = "", Eu] = Ru;
-    return void 0 === Eu ? Vu(yu) : ru(yu, Number(Eu) - 1)
+  function yk(kk) {
+    const Fk = ek.exec(kk);
+    if (null === Fk) return null;
+    const [, Bk = "", Rk] = Fk;
+    return void 0 === Rk ? sk(Bk) : Vk(Bk, Number(Rk) - 1)
   }
 
-  function Tu(uu) {
-    return `/docsHtml/${Xu(uu)}.html`
+  function fk(kk) {
+    return `/docsHtml/${dk(kk)}.html`
   }
 }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,183 +1,183 @@
 export const id = 46;
 export const ids = [46];
 export const modules = {
-  39340: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Nu,
-      g: () => Qu,
-      k: () => Ku
+  39199: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => wk,
+      e: () => ak,
+      i: () => tk
     });
-    const Eu = 6e3;
+    const Rk = 6e3;
 
-    function Ku(uu, Ru) {
-      return [Math.floor(uu[0] / Ru) * Ru, Math.floor(uu[1] / Ru) * Ru, Math.floor(uu[2] / Ru) * Ru]
+    function tk(kk, Fk) {
+      return [Math.floor(kk[0] / Fk) * Fk, Math.floor(kk[1] / Fk) * Fk, Math.floor(kk[2] / Fk) * Fk]
     }
 
-    function Qu(uu) {
-      const Ru = (null !== uu && void 0 !== uu ? uu : "").match(/-?\d+(?:\.\d+)?/g);
-      return Ru && Ru.length >= 3 ? [Number(Ru[0]), Number(Ru[1]), Number(Ru[2])] : null
+    function ak(kk) {
+      const Fk = (null !== kk && void 0 !== kk ? kk : "").match(/-?\d+(?:\.\d+)?/g);
+      return Fk && Fk.length >= 3 ? [Number(Fk[0]), Number(Fk[1]), Number(Fk[2])] : null
     }
 
-    function mu(uu, Ru) {
-      return uu === Ru ? String(uu) : `${uu}-${Ru}`
+    function Xk(kk, Fk) {
+      return kk === Fk ? String(kk) : `${kk}-${Fk}`
     }
 
-    function Ju(uu, Ru, yu, Eu) {
-      const Ku = [];
-      let Qu = new Map;
-      for (let mu = uu[2]; mu < uu[2] + Ru; mu++) {
-        const Ju = new Map;
-        let Nu = uu[0];
-        for (; Nu < uu[0] + Ru;) {
-          const Ku = Eu(Nu, yu, mu);
-          let Xu = Nu;
-          for (; Xu + 1 < uu[0] + Ru && Eu(Xu + 1, yu, mu) === Ku;) Xu++;
-          if (null !== Ku) {
-            const uu = `${Nu} ${Xu} ${Ku}`,
-              Ru = Qu.get(uu);
-            Ru ? (Ru.z1 = mu, Qu.delete(uu), Ju.set(uu, Ru)) : Ju.set(uu, {
-              x0: Nu,
-              x1: Xu,
-              z0: mu,
-              z1: mu,
-              name: Ku
+    function bk(kk, Fk, Bk, Rk) {
+      const tk = [];
+      let ak = new Map;
+      for (let Xk = kk[2]; Xk < kk[2] + Fk; Xk++) {
+        const bk = new Map;
+        let wk = kk[0];
+        for (; wk < kk[0] + Fk;) {
+          const tk = Rk(wk, Bk, Xk);
+          let dk = wk;
+          for (; dk + 1 < kk[0] + Fk && Rk(dk + 1, Bk, Xk) === tk;) dk++;
+          if (null !== tk) {
+            const kk = `${wk} ${dk} ${tk}`,
+              Fk = ak.get(kk);
+            Fk ? (Fk.z1 = Xk, ak.delete(kk), bk.set(kk, Fk)) : bk.set(kk, {
+              x0: wk,
+              x1: dk,
+              z0: Xk,
+              z1: Xk,
+              name: tk
             })
           }
-          Nu = Xu + 1
+          wk = dk + 1
         }
-        Ku.push(...Qu.values()), Qu = Ju
+        tk.push(...ak.values()), ak = bk
       }
-      return Ku.push(...Qu.values()), Ku.sort(((uu, Ru) => uu.z0 - Ru.z0 || uu.x0 - Ru.x0)).map((uu => `x${mu(uu.x0,uu.x1)} z${mu(uu.z0,uu.z1)} ${uu.name}`))
+      return tk.push(...ak.values()), tk.sort(((kk, Fk) => kk.z0 - Fk.z0 || kk.x0 - Fk.x0)).map((kk => `x${Xk(kk.x0,kk.x1)} z${Xk(kk.z0,kk.z1)} ${kk.name}`))
     }
 
-    function Nu(uu, Ru, yu, Ku) {
-      let Qu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Eu;
-      const Nu = [uu[0] + Ru - 1, uu[1] + Ru - 1, uu[2] + Ru - 1],
-        Xu = null !== Ku && Ku.every(((Ru, yu) => Math.floor(Ru) >= uu[yu] && Math.floor(Ru) <= Nu[yu])),
-        Vu = [`The chunk from ${uu.join(" ")} to ${Nu.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== Ku && Vu.push(`The player's feet are at ${Ku.map(Math.floor).join(" ")}, ${Xu?"in this chunk":"outside this chunk"}.`);
-      const ru = [];
-      for (let Eu = uu[1]; Eu <= Nu[1]; Eu++) {
-        const Ku = Ju(uu, Ru, Eu, yu).join("; "),
-          Qu = ru[ru.length - 1];
-        (null === Qu || void 0 === Qu ? void 0 : Qu.boxes) === Ku ? Qu.to = Eu : ru.push({
-          from: Eu,
-          to: Eu,
-          boxes: Ku
+    function wk(kk, Fk, Bk, tk) {
+      let ak = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Rk;
+      const wk = [kk[0] + Fk - 1, kk[1] + Fk - 1, kk[2] + Fk - 1],
+        dk = null !== tk && tk.every(((Fk, Bk) => Math.floor(Fk) >= kk[Bk] && Math.floor(Fk) <= wk[Bk])),
+        sk = [`The chunk from ${kk.join(" ")} to ${wk.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== tk && sk.push(`The player's feet are at ${tk.map(Math.floor).join(" ")}, ${dk?"in this chunk":"outside this chunk"}.`);
+      const Vk = [];
+      for (let Rk = kk[1]; Rk <= wk[1]; Rk++) {
+        const tk = bk(kk, Fk, Rk, Bk).join("; "),
+          ak = Vk[Vk.length - 1];
+        (null === ak || void 0 === ak ? void 0 : ak.boxes) === tk ? ak.to = Rk : Vk.push({
+          from: Rk,
+          to: Rk,
+          boxes: tk
         })
       }
-      const Bu = ru.filter((uu => "" !== uu.boxes));
-      0 === Bu.length && Vu.push("It is all air.");
-      let xu = Vu.join("\n").length;
-      for (const Eu of Bu) {
-        const uu = `y${mu(Eu.from,Eu.to)}: ${Eu.boxes}`;
-        if (xu += uu.length + 1, xu > Qu) {
-          Vu.push(`Cut short: the layers from y${Eu.from} up aren't shown, as there are too many blocks.`);
+      const Jk = Vk.filter((kk => "" !== kk.boxes));
+      0 === Jk.length && sk.push("It is all air.");
+      let Ak = sk.join("\n").length;
+      for (const Rk of Jk) {
+        const kk = `y${Xk(Rk.from,Rk.to)}: ${Rk.boxes}`;
+        if (Ak += kk.length + 1, Ak > ak) {
+          sk.push(`Cut short: the layers from y${Rk.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        Vu.push(uu)
+        sk.push(kk)
       }
-      return Vu.join("\n")
+      return sk.join("\n")
     }
   },
-  8516: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ku
+  8471: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => tk
     });
-    var Eu = yu(27);
+    var Rk = Bk(22);
 
-    function Ku() {
-      return !Eu.d.get("isTouchScreen") && null !== document.pointerLockElement
+    function tk() {
+      return !Rk.c.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  36720: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => mu,
-      h: () => Qu,
-      i: () => Ku
+  36621: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Xk,
+      g: () => ak,
+      j: () => tk
     });
-    const Eu = [.25, .5, 1, 2, 4, 8, 16];
+    const Rk = [.25, .5, 1, 2, 4, 8, 16];
 
-    function Ku(uu, Ru) {
-      const yu = Eu;
-      let Ku = yu.indexOf(uu);
-      return -1 === Ku && (Ku = yu.findIndex((Ru => Ru >= uu)), -1 === Ku && (Ku = yu.length - 1)), "up" === Ru ? yu[Math.min(Ku + 1, yu.length - 1)] : yu[Math.max(Ku - 1, 0)]
+    function tk(kk, Fk) {
+      const Bk = Rk;
+      let tk = Bk.indexOf(kk);
+      return -1 === tk && (tk = Bk.findIndex((Fk => Fk >= kk)), -1 === tk && (tk = Bk.length - 1)), "up" === Fk ? Bk[Math.min(tk + 1, Bk.length - 1)] : Bk[Math.max(tk - 1, 0)]
     }
 
-    function Qu(uu) {
-      return uu <= Eu[0]
+    function ak(kk) {
+      return kk <= Rk[0]
     }
 
-    function mu(uu) {
-      return uu >= Eu[Eu.length - 1]
+    function Xk(kk) {
+      return kk >= Rk[Rk.length - 1]
     }
   },
-  36341: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ku,
-      g: () => Qu
+  36232: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => tk,
+      f: () => ak
     });
-    let Eu = !1;
+    let Rk = !1;
 
-    function Ku() {
-      return Eu
+    function tk() {
+      return Rk
     }
 
-    function Qu(uu) {
-      return Eu !== uu && (Eu = uu, !0)
+    function ak(kk) {
+      return Rk !== kk && (Rk = kk, !0)
     }
   },
-  38710: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu
+  38617: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => ak
     });
-    var Eu = yu(34),
-      Ku = yu(1878);
+    var Rk = Bk(29),
+      tk = Bk(1863);
 
-    function Qu(uu) {
+    function ak(kk) {
       let {
-        taskId: Ru,
-        progress: yu
-      } = uu;
-      const Eu = Ku.b.get("_tasks");
-      null !== Eu && void 0 !== Eu && Eu[Ru] && Ku.b.apply({
+        taskId: Fk,
+        progress: Bk
+      } = kk;
+      const Rk = tk.b.get("_tasks");
+      null !== Rk && void 0 !== Rk && Rk[Fk] && tk.b.apply({
         _tasks: {
-          ...Eu,
-          [Ru]: {
-            ...Eu[Ru],
-            progress: yu
+          ...Rk,
+          [Fk]: {
+            ...Rk[Fk],
+            progress: Bk
           }
         }
       })
     }
-    Eu.k.subscribe("clientTaskProgress", (uu => {
-      Qu(uu)
+    Rk.o.subscribe("clientTaskProgress", (kk => {
+      ak(kk)
     }))
   },
-  39313: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Bu,
-      i: () => Su,
-      j: () => Xu,
-      k: () => ru,
-      m: () => Nu,
-      n: () => mu,
-      r: () => Vu,
-      u: () => pu
+  39168: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Jk,
+      d: () => ek,
+      g: () => dk,
+      j: () => Vk,
+      n: () => wk,
+      q: () => Xk,
+      u: () => sk,
+      w: () => yk
     });
-    var Eu = yu(1878),
-      Ku = yu(34),
-      Qu = yu(1895);
-    const mu = (0, Qu.l)((function() {
-        var uu, Ru, yu, Ku;
+    var Rk = Bk(1863),
+      tk = Bk(29),
+      ak = Bk(1873);
+    const Xk = (0, ak.n)((function() {
+        var kk, Fk, Bk, tk;
         return {
-          health: null !== (uu = Eu.b.get("_health")) && void 0 !== uu ? uu : null,
-          maxHealth: null !== (Ru = Eu.b.get("_totalMaxHealth")) && void 0 !== Ru ? Ru : null,
-          shield: null !== (yu = Eu.b.get("_shield")) && void 0 !== yu ? yu : null,
-          maxShield: null !== (Ku = Eu.b.get("maxShield")) && void 0 !== Ku ? Ku : null
+          health: null !== (kk = Rk.b.get("_health")) && void 0 !== kk ? kk : null,
+          maxHealth: null !== (Fk = Rk.b.get("_totalMaxHealth")) && void 0 !== Fk ? Fk : null,
+          shield: null !== (Bk = Rk.b.get("_shield")) && void 0 !== Bk ? Bk : null,
+          maxShield: null !== (tk = Rk.b.get("maxShield")) && void 0 !== tk ? tk : null
         }
-      }), [], (0, Qu.i)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      Ju = [{
+      }), [], (0, ak.k)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      bk = [{
         canFly: !1,
         flying: !1
       }, {
@@ -191,1059 +191,1059 @@ export const modules = {
         flying: !0
       }];
 
-    function Nu(uu, Ru) {
-      return Ju[(uu ? 2 : 0) + (Ru ? 1 : 0)]
+    function wk(kk, Fk) {
+      return bk[(kk ? 2 : 0) + (Fk ? 1 : 0)]
     }
-    const Xu = (0, Qu.l)((function() {
-      var uu;
-      return null !== (uu = Eu.b.get("_aura")) && void 0 !== uu ? uu : null
-    }), [], (0, Qu.i)("_aura"));
+    const dk = (0, ak.n)((function() {
+      var kk;
+      return null !== (kk = Rk.b.get("_aura")) && void 0 !== kk ? kk : null
+    }), [], (0, ak.k)("_aura"));
 
-    function Vu(uu) {
+    function sk(kk) {
       return {
-        watch: Ru => (0, Ku.n)("shotPlayer", (yu => {
+        watch: Fk => (0, tk.p)("shotPlayer", (Bk => {
           let {
-            playerId: Eu,
-            damage: Ku,
-            wasCrit: Qu,
-            distance: mu
-          } = yu;
-          uu(Eu) && Ru({
-            damage: Ku,
-            wasCrit: Qu,
-            distance: mu
+            playerId: Rk,
+            damage: tk,
+            wasCrit: ak,
+            distance: Xk
+          } = Bk;
+          kk(Rk) && Fk({
+            damage: tk,
+            wasCrit: ak,
+            distance: Xk
           })
         }))
       }
     }
 
-    function ru(uu) {
-      return (0, Qu.c)("chat", (Ru => {
+    function Vk(kk) {
+      return (0, ak.c)("chat", (Fk => {
         let {
-          serverChatMsgId: yu,
-          content: Eu,
-          chatterEId: Ku
-        } = Ru;
+          serverChatMsgId: Bk,
+          content: Rk,
+          chatterEId: tk
+        } = Fk;
         return {
-          serverChatMsgId: null !== yu && void 0 !== yu ? yu : null,
-          content: Eu,
-          author: Ku ? uu(Ku) : null
+          serverChatMsgId: null !== Bk && void 0 !== Bk ? Bk : null,
+          content: Rk,
+          author: tk ? kk(tk) : null
         }
       }))
     }
-    class Bu {
+    class Jk {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const yu = this.shown;
-        return uu !== this.needed && (this.needed = uu, this.neededSince = Ru, null === uu && (this.shown = null)), this.shown !== this.needed && Ru - this.neededSince > 200 && (this.shown = this.needed), this.shown !== yu
+      update(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const Bk = this.shown;
+        return kk !== this.needed && (this.needed = kk, this.neededSince = Fk, null === kk && (this.shown = null)), this.shown !== this.needed && Fk - this.neededSince > 200 && (this.shown = this.needed), this.shown !== Bk
       }
     }
 
-    function xu(uu) {
+    function Ak(kk) {
       return [{
-        translationKey: `touchKeys:${uu}`
+        translationKey: `touchKeys:${kk}`
       }]
     }
-    const Su = {
-      open: xu("open"),
-      close: xu("close"),
-      milk: xu("milk"),
-      shear: xu("shear"),
-      tame: xu("tame"),
-      feed: xu("feed"),
-      ride: xu("ride")
+    const ek = {
+      open: Ak("open"),
+      close: Ak("close"),
+      milk: Ak("milk"),
+      shear: Ak("shear"),
+      tame: Ak("tame"),
+      feed: Ak("feed"),
+      ride: Ak("ride")
     };
 
-    function pu(uu) {
+    function yk(kk) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: uu
+        icon: kk
       }]
     }
   },
-  40328: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ju,
-      f: () => mu
+  40161: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => bk,
+      e: () => Xk
     });
-    var Eu = yu(3101);
-    let Ku = null,
-      Qu = null;
+    var Rk = Bk(3097);
+    let tk = null,
+      ak = null;
 
-    function mu() {
-      return Qu ??= yu.e(208).then((() => yu(36206))).then((uu => {
+    function Xk() {
+      return ak ??= Bk.e(208).then((() => Bk(36056))).then((kk => {
         let {
-          ITEM_SPRITES: Ru,
-          ITEM_SPRITES_WITHOUT_FILE: yu,
-          ITEM_FILES_WITHOUT_SPRITE: Qu
-        } = uu;
-        Ku = function(uu, Ru, yu) {
-          const Ku = new Set,
-            Qu = (0, Eu.w)(Ru);
-          let mu = 0;
-          for (const [Eu, Ju] of uu.entries()) Eu === Qu[mu] ? mu++ : Ku.add(Ju);
-          if ("" !== yu)
-            for (const Ju of yu.split(Eu.s)) Ku.add(Ju);
-          return Ku
-        }(Ru.split(Eu.s), yu, Qu)
-      }), (uu => {
-        throw Qu = null, uu
-      })), Qu
+          ITEM_SPRITES: Fk,
+          ITEM_SPRITES_WITHOUT_FILE: Bk,
+          ITEM_FILES_WITHOUT_SPRITE: ak
+        } = kk;
+        tk = function(kk, Fk, Bk) {
+          const tk = new Set,
+            ak = (0, Rk.v)(Fk);
+          let Xk = 0;
+          for (const [Rk, bk] of kk.entries()) Rk === ak[Xk] ? Xk++ : tk.add(bk);
+          if ("" !== Bk)
+            for (const bk of Bk.split(Rk.o)) tk.add(bk);
+          return tk
+        }(Fk.split(Rk.o), Bk, ak)
+      }), (kk => {
+        throw ak = null, kk
+      })), ak
     }
 
-    function Ju(uu) {
-      var Ru, yu;
-      return null !== (Ru = null === (yu = Ku) || void 0 === yu ? void 0 : yu.has(uu)) && void 0 !== Ru && Ru
+    function bk(kk) {
+      var Fk, Bk;
+      return null !== (Fk = null === (Bk = tk) || void 0 === Bk ? void 0 : Bk.has(kk)) && void 0 !== Fk && Fk
     }
   },
-  39330: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Eu,
-      f: () => Qu,
-      j: () => Ku
+  39186: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Rk,
+      h: () => ak,
+      i: () => tk
     });
-    const Eu = 128;
+    const Rk = 128;
 
-    function Ku(uu, Ru, yu, Eu) {
-      const Ku = 2 * Ru - 1,
-        Qu = 1 - 2 * yu,
-        mu = uu(0) - Ku * uu(3),
-        Ju = uu(4) - Ku * uu(7),
-        Nu = uu(8) - Ku * uu(11),
-        Xu = uu(1) - Qu * uu(3),
-        Vu = uu(5) - Qu * uu(7),
-        ru = uu(9) - Qu * uu(11);
-      Eu[0] = Ju * ru - Nu * Vu, Eu[1] = Nu * Xu - mu * ru, Eu[2] = mu * Vu - Ju * Xu;
-      const Bu = Eu[0] * uu(3) + Eu[1] * uu(7) + Eu[2] * uu(11) < 0 ? -1 : 1,
-        xu = Math.hypot(Eu[0], Eu[1], Eu[2]) * Bu;
-      return Eu[0] /= xu, Eu[1] /= xu, Eu[2] /= xu, Eu
+    function tk(kk, Fk, Bk, Rk) {
+      const tk = 2 * Fk - 1,
+        ak = 1 - 2 * Bk,
+        Xk = kk(0) - tk * kk(3),
+        bk = kk(4) - tk * kk(7),
+        wk = kk(8) - tk * kk(11),
+        dk = kk(1) - ak * kk(3),
+        sk = kk(5) - ak * kk(7),
+        Vk = kk(9) - ak * kk(11);
+      Rk[0] = bk * Vk - wk * sk, Rk[1] = wk * dk - Xk * Vk, Rk[2] = Xk * sk - bk * dk;
+      const Jk = Rk[0] * kk(3) + Rk[1] * kk(7) + Rk[2] * kk(11) < 0 ? -1 : 1,
+        Ak = Math.hypot(Rk[0], Rk[1], Rk[2]) * Jk;
+      return Rk[0] /= Ak, Rk[1] /= Ak, Rk[2] /= Ak, Rk
     }
 
-    function Qu(uu, Ru, yu, Eu, Ku, Qu) {
-      const mu = [Math.floor(Ru[0]), Math.floor(Ru[1]), Math.floor(Ru[2])],
-        Ju = [0, 0, 0],
-        Nu = [1 / 0, 1 / 0, 1 / 0],
-        Xu = [1 / 0, 1 / 0, 1 / 0];
-      for (let Bu = 0; Bu < 3; Bu++) Ju[Bu] = Math.sign(yu[Bu]), 0 !== Ju[Bu] && (Xu[Bu] = Math.abs(1 / yu[Bu]), Nu[Bu] = (mu[Bu] + (Ju[Bu] > 0 ? 1 : 0) - Ru[Bu]) / yu[Bu]);
-      let Vu = 0,
-        ru = Math.abs(yu[0]) > Math.abs(yu[1]) ? 0 : 1;
-      for (Math.abs(yu[2]) > Math.abs(yu[ru]) && (ru = 2); Vu <= Eu;) {
-        if (uu(mu[0], mu[1], mu[2])) return Ku[0] = mu[0], Ku[1] = mu[1], Ku[2] = mu[2], Qu[0] = 0, Qu[1] = 0, Qu[2] = 0, Qu[ru] = -Ju[ru], !0;
-        ru = Nu[0] < Nu[1] ? 0 : 1, Nu[2] < Nu[ru] && (ru = 2), Vu = Nu[ru], mu[ru] += Ju[ru], Nu[ru] += Xu[ru]
+    function ak(kk, Fk, Bk, Rk, tk, ak) {
+      const Xk = [Math.floor(Fk[0]), Math.floor(Fk[1]), Math.floor(Fk[2])],
+        bk = [0, 0, 0],
+        wk = [1 / 0, 1 / 0, 1 / 0],
+        dk = [1 / 0, 1 / 0, 1 / 0];
+      for (let Jk = 0; Jk < 3; Jk++) bk[Jk] = Math.sign(Bk[Jk]), 0 !== bk[Jk] && (dk[Jk] = Math.abs(1 / Bk[Jk]), wk[Jk] = (Xk[Jk] + (bk[Jk] > 0 ? 1 : 0) - Fk[Jk]) / Bk[Jk]);
+      let sk = 0,
+        Vk = Math.abs(Bk[0]) > Math.abs(Bk[1]) ? 0 : 1;
+      for (Math.abs(Bk[2]) > Math.abs(Bk[Vk]) && (Vk = 2); sk <= Rk;) {
+        if (kk(Xk[0], Xk[1], Xk[2])) return tk[0] = Xk[0], tk[1] = Xk[1], tk[2] = Xk[2], ak[0] = 0, ak[1] = 0, ak[2] = 0, ak[Vk] = -bk[Vk], !0;
+        Vk = wk[0] < wk[1] ? 0 : 1, wk[2] < wk[Vk] && (Vk = 2), sk = wk[Vk], Xk[Vk] += bk[Vk], wk[Vk] += dk[Vk]
       }
       return !1
     }
   },
-  39305: (uu, Ru, yu) => {
-    function Eu(uu, Ru, yu) {
-      return Math.hypot(uu[0] - Ru[0], uu[1] - Ru[1], uu[2] - Ru[2]) < yu + .5
+  39162: (kk, Fk, Bk) => {
+    function Rk(kk, Fk, Bk) {
+      return Math.hypot(kk[0] - Fk[0], kk[1] - Fk[1], kk[2] - Fk[2]) < Bk + .5
     }
-    yu.d(Ru, {
-      c: () => Eu
+    Bk.d(Fk, {
+      e: () => Rk
     })
   },
-  38723: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Vu
+  38640: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => sk
     });
-    var Eu = yu(1199),
-      Ku = yu(1289),
-      Qu = yu(27),
-      mu = yu(1269),
-      Ju = yu(1280),
-      Nu = yu(1467),
-      Xu = yu(36322);
+    var Rk = Bk(1173),
+      tk = Bk(1273),
+      ak = Bk(22),
+      Xk = Bk(1259),
+      bk = Bk(1267),
+      wk = Bk(1459),
+      dk = Bk(36202);
 
-    function Vu(uu) {
+    function sk(kk) {
       let {
-        uu: Ru,
-        Ru: yu
-      } = uu;
-      const Vu = null !== Ru && void 0 !== Ru ? Ru : (0, Ju.c)().gameNameWithVariation;
-      (0, Eu.J)(Vu) && ((0, Xu.n)(), (0, mu.lb)((() => {
-        console.log("Received matchmaking order from game server to game", Ru), (0, Qu.i)("inGameReplay"), (0, Nu.navigatePreserveSearch)((0, Ku.b)(Vu, null !== yu && void 0 !== yu ? yu : void 0))
+        kk: Fk,
+        Fk: Bk
+      } = kk;
+      const sk = null !== Fk && void 0 !== Fk ? Fk : (0, bk.e)().gameNameWithVariation;
+      (0, Rk.J)(sk) && ((0, dk.k)(), (0, Xk.R)((() => {
+        console.log("Received matchmaking order from game server to game", Fk), (0, ak.f)("inGameReplay"), (0, wk.navigatePreserveSearch)((0, tk.b)(sk, null !== Bk && void 0 !== Bk ? Bk : void 0))
       }), "video_start"))
     }
   },
-  38923: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu
+  38783: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => ak
     });
-    var Eu = yu(34),
-      Ku = yu(1915);
+    var Rk = Bk(29),
+      tk = Bk(1881);
 
-    function Qu(uu) {
-      var Ru, yu;
-      const Qu = (0, Ku.o)(null !== (Ru = null === (yu = Ku.x.toggleFreeCam) || void 0 === yu ? void 0 : yu[0]) && void 0 !== Ru ? Ru : null);
-      Eu.k.Op("showBottomMessage", {
-        message: `Free Camera ${uu?"Enabled":"Disabled"}${Qu?` - Press ${Qu} to toggle`:""}`,
+    function ak(kk) {
+      var Fk, Bk;
+      const ak = (0, tk.n)(null !== (Fk = null === (Bk = tk.s.toggleFreeCam) || void 0 === Bk ? void 0 : Bk[0]) && void 0 !== Fk ? Fk : null);
+      Rk.o.Hf("showBottomMessage", {
+        message: `Free Camera ${kk?"Enabled":"Disabled"}${ak?` - Press ${ak} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  38714: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Nu,
-      f: () => mu,
-      i: () => Ju,
-      m: () => Xu
+  38624: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => wk,
+      f: () => Xk,
+      j: () => bk,
+      n: () => dk
     });
-    var Eu = yu(34),
-      Ku = yu(1311);
-    const Qu = new Map;
+    var Rk = Bk(29),
+      tk = Bk(1300);
+    const ak = new Map;
 
-    function mu(uu, Ru) {
-      Eu.k.Op("newUiRequest", {
-        id: uu,
-        clientParameters: Ru
+    function Xk(kk, Fk) {
+      Rk.o.Hf("newUiRequest", {
+        id: kk,
+        clientParameters: Fk
       }, !0)
     }
 
-    function Ju(uu) {
-      Eu.k.Op("removeUiRequest", uu, !0);
-      const Ru = Qu.get(uu);
-      Ru && (Ru.tearDownNotification(), Qu.delete(uu))
+    function bk(kk) {
+      Rk.o.Hf("removeUiRequest", kk, !0);
+      const Fk = ak.get(kk);
+      Fk && (Fk.tearDownNotification(), ak.delete(kk))
     }
 
-    function Nu() {
-      Eu.k.Op("clearUiRequests");
-      for (const uu of Qu.values()) uu.tearDownNotification();
-      Qu.clear()
+    function wk() {
+      Rk.o.Hf("clearUiRequests");
+      for (const kk of ak.values()) kk.tearDownNotification();
+      ak.clear()
     }
 
-    function Xu(uu, Ru, yu) {
-      const Eu = Ku.NotificationProvider.showPromptPopup({
-        title: Ru,
+    function dk(kk, Fk, Bk) {
+      const Rk = tk.NotificationProvider.showPromptPopup({
+        title: Fk,
         confirmText: "general:yes",
         cancelText: "general:no",
         unlockPointerKey: "uiRequestPopup"
       });
-      Qu.set(uu, Eu), Eu.getResult().then((Ru => {
-        Qu.delete(uu), "notificationTornDown" !== Ru && yu(Ru)
+      ak.set(kk, Rk), Rk.getResult().then((Fk => {
+        ak.delete(kk), "notificationTornDown" !== Fk && Bk(Fk)
       }))
     }
   },
-  39337: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => ru,
-      c: () => Bu
+  39190: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Vk,
+      f: () => Jk
     });
-    var Eu = yu(212),
-      Ku = yu(39340);
-    const Qu = 20;
+    var Rk = Bk(182),
+      tk = Bk(39199);
+    const ak = 20;
 
-    function mu(uu) {
-      return uu.map(Math.floor).join(" ")
+    function Xk(kk) {
+      return kk.map(Math.floor).join(" ")
     }
 
-    function Ju(uu) {
-      return null === uu.amount || 1 === uu.amount ? uu.name : `${uu.amount} ${uu.name}`
+    function bk(kk) {
+      return null === kk.amount || 1 === kk.amount ? kk.name : `${kk.amount} ${kk.name}`
     }
-    var Nu = yu(39346),
-      Xu = yu(1878),
-      Vu = yu(1280);
+    var wk = Bk(39203),
+      dk = Bk(1863),
+      sk = Bk(1267);
 
-    function ru(uu, Ru) {
-      if (!uu) return Nu.d;
-      const yu = uu.playerFeet();
-      if (!yu) return "The player isn't in the world yet, so no blocks can be seen.";
-      const Qu = Eu.f.jS,
-        mu = (0, Ku.k)(null !== Ru && void 0 !== Ru ? Ru : yu, Qu),
-        Ju = uu.chunkBlocks(mu);
-      return Ju ? (0, Ku.c)(mu, Qu, ((Ru, yu, Eu) => {
-        const Ku = Ju(Ru, yu, Eu);
-        return 0 === Ku ? null : uu.blockName(Ku).split("|")[0]
-      }), yu) : `The chunk from ${mu.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${yu.map(Math.floor).join(" ")}.`
+    function Vk(kk, Fk) {
+      if (!kk) return wk.d;
+      const Bk = kk.playerFeet();
+      if (!Bk) return "The player isn't in the world yet, so no blocks can be seen.";
+      const ak = Rk.h.Ze,
+        Xk = (0, tk.i)(null !== Fk && void 0 !== Fk ? Fk : Bk, ak),
+        bk = kk.chunkBlocks(Xk);
+      return bk ? (0, tk.b)(Xk, ak, ((Fk, Bk, Rk) => {
+        const tk = bk(Fk, Bk, Rk);
+        return 0 === tk ? null : kk.blockName(tk).split("|")[0]
+      }), Bk) : `The chunk from ${Xk.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${Bk.map(Math.floor).join(" ")}.`
     }
 
-    function Bu(uu) {
-      var Ru, yu, Eu;
-      if (!uu) return Nu.e;
-      const Ku = uu.playerFeet();
-      if (!Ku) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function Jk(kk) {
+      var Fk, Bk, Rk;
+      if (!kk) return wk.e;
+      const tk = kk.playerFeet();
+      if (!tk) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: ru,
-        heldSlot: Bu
-      } = uu.inventory();
-      return function(uu) {
-        const Ru = [];
-        null !== uu.game && Ru.push(`Game: ${uu.game}.`);
-        const yu = null === uu.health ? "" : `, health ${Math.round(uu.health)}${null===uu.maxHealth?"":` of ${Math.round(uu.maxHealth)}`}`;
-        Ru.push(`The player (the creator) stands at ${mu(uu.position)}${yu}, ${uu.creative?"in":"not in"} creative mode.`);
-        const Eu = uu.slots[uu.heldSlot];
-        Ru.push(Eu ? `Holding (slot ${uu.heldSlot}): ${Ju(Eu)}.` : `Holding nothing (slot ${uu.heldSlot} is empty).`);
-        const Ku = uu.slots.flatMap(((uu, Ru) => uu ? [`slot ${Ru}: ${Ju(uu)}`] : []));
-        Ru.push(Ku.length > 0 ? `Inventory: ${Ku.join(", ")}.` : "Inventory: empty.");
-        const Nu = Ru => Math.hypot(Ru.position[0] - uu.position[0], Ru.position[1] - uu.position[1], Ru.position[2] - uu.position[2]),
-          Xu = [...uu.nearby].sort(((uu, Ru) => Nu(uu) - Nu(Ru)));
-        if (0 === Xu.length) Ru.push("No other players or mobs are near enough to see.");
+        slots: Vk,
+        heldSlot: Jk
+      } = kk.inventory();
+      return function(kk) {
+        const Fk = [];
+        null !== kk.game && Fk.push(`Game: ${kk.game}.`);
+        const Bk = null === kk.health ? "" : `, health ${Math.round(kk.health)}${null===kk.maxHealth?"":` of ${Math.round(kk.maxHealth)}`}`;
+        Fk.push(`The player (the creator) stands at ${Xk(kk.position)}${Bk}, ${kk.creative?"in":"not in"} creative mode.`);
+        const Rk = kk.slots[kk.heldSlot];
+        Fk.push(Rk ? `Holding (slot ${kk.heldSlot}): ${bk(Rk)}.` : `Holding nothing (slot ${kk.heldSlot} is empty).`);
+        const tk = kk.slots.flatMap(((kk, Fk) => kk ? [`slot ${Fk}: ${bk(kk)}`] : []));
+        Fk.push(tk.length > 0 ? `Inventory: ${tk.join(", ")}.` : "Inventory: empty.");
+        const wk = Fk => Math.hypot(Fk.position[0] - kk.position[0], Fk.position[1] - kk.position[1], Fk.position[2] - kk.position[2]),
+          dk = [...kk.nearby].sort(((kk, Fk) => wk(kk) - wk(Fk)));
+        if (0 === dk.length) Fk.push("No other players or mobs are near enough to see.");
         else {
-          Ru.push("Near them, nearest first:");
-          for (const uu of Xu.slice(0, Qu)) {
-            const yu = "player" === uu.kind ? `player "${uu.name||"?"}"` : uu.name && uu.name !== uu.kind ? `${uu.kind} "${uu.name}"` : uu.kind,
-              Eu = Math.round(Nu(uu));
-            Ru.push(`- ${yu} at ${mu(uu.position)}, ${Eu} block${1===Eu?"":"s"} away`)
+          Fk.push("Near them, nearest first:");
+          for (const kk of dk.slice(0, ak)) {
+            const Bk = "player" === kk.kind ? `player "${kk.name||"?"}"` : kk.name && kk.name !== kk.kind ? `${kk.kind} "${kk.name}"` : kk.kind,
+              Rk = Math.round(wk(kk));
+            Fk.push(`- ${Bk} at ${Xk(kk.position)}, ${Rk} block${1===Rk?"":"s"} away`)
           }
-          Xu.length > Qu && Ru.push(`- and ${Xu.length-Qu} more further away`)
+          dk.length > ak && Fk.push(`- and ${dk.length-ak} more further away`)
         }
-        return uu.droppedItems > 0 && Ru.push(`${uu.droppedItems} dropped item${1===uu.droppedItems?" is":"s are"} on the ground nearby.`), Ru.join("\n")
+        return kk.droppedItems > 0 && Fk.push(`${kk.droppedItems} dropped item${1===kk.droppedItems?" is":"s are"} on the ground nearby.`), Fk.join("\n")
       }({
-        game: null !== (Ru = (0, Vu.c)().gameNameWithVariation) && void 0 !== Ru ? Ru : null,
-        position: Ku,
-        health: null !== (yu = Xu.b.get("_health")) && void 0 !== yu ? yu : null,
-        maxHealth: null !== (Eu = Xu.b.get("_totalMaxHealth")) && void 0 !== Eu ? Eu : null,
-        creative: !0 === Xu.b.get("creative"),
-        heldSlot: Bu,
-        slots: ru,
-        nearby: uu.nearby(),
-        droppedItems: uu.droppedItems()
+        game: null !== (Fk = (0, sk.e)().gameNameWithVariation) && void 0 !== Fk ? Fk : null,
+        position: tk,
+        health: null !== (Bk = dk.b.get("_health")) && void 0 !== Bk ? Bk : null,
+        maxHealth: null !== (Rk = dk.b.get("_totalMaxHealth")) && void 0 !== Rk ? Rk : null,
+        creative: !0 === dk.b.get("creative"),
+        heldSlot: Jk,
+        slots: Vk,
+        nearby: kk.nearby(),
+        droppedItems: kk.droppedItems()
       })
     }
   },
-  38746: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ju,
-      i: () => Nu,
-      l: () => Xu
+  38651: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => bk,
+      f: () => wk,
+      h: () => dk
     });
-    var Eu = yu(1199),
-      Ku = yu(1001),
-      Qu = yu(36632),
-      mu = yu(34);
+    var Rk = Bk(1173),
+      tk = Bk(994),
+      ak = Bk(36536),
+      Xk = Bk(29);
 
-    function Ju(uu) {
+    function bk(kk) {
       let {
-        lobbyName: Ru,
-        gameNameWithVariation: yu
-      } = uu;
-      return !(0, Eu.N)(Ru) || null !== yu && (yu.startsWith("testGym") || (0, Ku.i)(yu))
+        lobbyName: Fk,
+        gameNameWithVariation: Bk
+      } = kk;
+      return !(0, Rk.N)(Fk) || null !== Bk && (Bk.startsWith("testGym") || (0, tk.n)(Bk))
     }
 
-    function Nu(uu) {
-      return uu.WR === Qu.e.Leave || uu.WR === Qu.e.Cursor
+    function wk(kk) {
+      return kk.WF === ak.b.Leave || kk.WF === ak.b.Cursor
     }
 
-    function Xu(uu) {
-      mu.k.Op("codeCollab", {
-        type: uu.WR,
-        docKey: uu.jR,
-        version: uu.HR,
-        editorCount: uu.dR,
-        peers: uu.bR,
-        updates: uu.CR,
-        playerId: uu.kR,
-        playerName: uu.eR,
-        colour: uu.AR,
-        anchor: uu.DR,
-        head: uu.MR,
-        existingCursors: uu.IR,
-        files: uu.GR,
-        engineSettings: uu.UR
+    function dk(kk) {
+      Xk.o.Hf("codeCollab", {
+        type: kk.WF,
+        docKey: kk.vF,
+        version: kk.iF,
+        editorCount: kk.YF,
+        peers: kk.oF,
+        updates: kk.LF,
+        playerId: kk.EF,
+        playerName: kk.SF,
+        colour: kk.NF,
+        anchor: kk.HF,
+        head: kk.uF,
+        existingCursors: kk.MF,
+        files: kk.gF,
+        engineSettings: kk.UF
       })
     }
   },
-  40286: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      B: () => gu,
-      F: () => Gu,
-      I: () => lu,
-      L: () => Iu,
-      N: () => Pu,
-      O: () => hu,
-      S: () => nu,
-      d: () => iu,
-      e: () => Lu,
-      g: () => Du,
-      h: () => Yu,
-      j: () => Mu,
-      m: () => Au,
-      p: () => cu,
-      s: () => Uu,
-      t: () => tu,
-      v: () => su,
-      x: () => Ou
+  40122: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      A: () => ck,
+      C: () => nk,
+      E: () => rk,
+      I: () => Mk,
+      K: () => Tk,
+      L: () => uk,
+      M: () => pk,
+      O: () => Zk,
+      P: () => Uk,
+      c: () => Kk,
+      e: () => zk,
+      h: () => Nk,
+      j: () => xk,
+      n: () => Hk,
+      o: () => Sk,
+      p: () => Dk,
+      s: () => gk,
+      w: () => Gk
     });
-    var Eu = yu(1354),
-      Ku = yu(34),
-      Qu = yu(1250),
-      mu = yu(2306),
-      Ju = yu(4586),
-      Nu = yu(4549);
-    let Xu, Vu = !1,
-      ru = !1,
-      Bu = !1,
-      xu = !1;
-    const Su = 1300,
-      pu = 3e3;
-    let Tu = 0,
-      Wu = !1,
-      ju = !1,
-      Hu = 0;
-    const du = 2;
-    let bu = !1,
-      Cu = !1;
-    const ku = new Set,
-      eu = new Set;
+    var Rk = Bk(1344),
+      tk = Bk(29),
+      ak = Bk(1239),
+      Xk = Bk(2303),
+      bk = Bk(4546),
+      wk = Bk(4511);
+    let dk, sk = !1,
+      Vk = !1,
+      Jk = !1,
+      Ak = !1;
+    const ek = 1300,
+      yk = 3e3;
+    let fk = 0,
+      mk = !1,
+      Wk = !1,
+      vk = 0;
+    const ik = 2;
+    let Yk = !1,
+      Lk = !1;
+    const Ok = new Set,
+      Ek = new Set;
 
-    function Au() {
-      return Vu
+    function Sk() {
+      return sk
     }
 
-    function Du() {
-      return ju
+    function Nk() {
+      return Wk
     }
 
-    function Mu() {
-      return Cu
+    function Hk() {
+      return Lk
     }
 
-    function Iu() {
-      return (0, Qu.r)() && !Cu
+    function uk() {
+      return (0, ak.o)() && !Lk
     }
 
-    function Gu(uu) {
-      let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (uu !== Cu) {
-        Cu = uu;
-        for (const uu of [...eu]) uu(Cu);
-        Ru && hu()
+    function Mk(kk) {
+      let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (kk !== Lk) {
+        Lk = kk;
+        for (const kk of [...Ek]) kk(Lk);
+        Fk && Zk()
       }
     }
 
-    function Uu(uu) {
-      return eu.add(uu), () => {
-        eu.delete(uu)
+    function gk(kk) {
+      return Ek.add(kk), () => {
+        Ek.delete(kk)
       }
     }
 
-    function nu() {
-      (0, Ju.h)(mu.t.Menu, (0, Qu.r)() ? 0 : mu.t.Menu)
+    function Uk() {
+      (0, bk.i)(Xk.A.Menu, (0, ak.o)() ? 0 : Xk.A.Menu)
     }
 
-    function su() {
-      ju = !1, Hu = 0, nu(), hu()
+    function ck() {
+      Wk = !1, vk = 0, Uk(), Zk()
     }
 
-    function tu(uu) {
-      return ku.add(uu), () => {
-        ku.delete(uu)
+    function Gk(kk) {
+      return Ok.add(kk), () => {
+        Ok.delete(kk)
       }
     }
 
-    function lu(uu) {
-      ru = !1, uu !== Vu && (Vu = uu, xu = !1, clearTimeout(Xu), Bu = !Vu && bu, Vu ? (Wu = !1, ju = !1, Hu = 0) : Iu() && !bu && (ju = !0), bu = !1, Vu && !Iu() && qu(), vu(), Bu && hu())
+    function Tk(kk) {
+      Vk = !1, kk !== sk && (sk = kk, Ak = !1, clearTimeout(dk), Jk = !sk && Yk, sk ? (mk = !1, Wk = !1, vk = 0) : uk() && !Yk && (Wk = !0), Yk = !1, sk && !uk() && lk(), Ik(), Jk && Zk())
     }
 
-    function gu(uu) {
-      uu !== Wu && (Wu = uu, uu || hu())
+    function rk(kk) {
+      kk !== mk && (mk = kk, kk || Zk())
     }
 
-    function cu() {
-      ru = !1, xu || !0 !== wu() || (xu = !0, clearTimeout(Xu), Xu = setTimeout(zu, Su))
+    function Dk() {
+      Vk = !1, Ak || !0 !== qk() || (Ak = !0, clearTimeout(dk), dk = setTimeout(Pk, ek))
     }
 
-    function Lu() {
-      return (!ru || performance.now() - Tu > pu) && (ru = (0, Nu.I)().lockPointer(), Tu = performance.now()), ru
+    function zk() {
+      return (!Vk || performance.now() - fk > yk) && (Vk = (0, wk.J)().lockPointer(), fk = performance.now()), Vk
     }
 
-    function zu() {
-      Fu() && Zu() && Lu()
+    function Pk() {
+      hk() && Ck() && zk()
     }
 
-    function Fu() {
-      return Iu() && !Vu && !Wu && !(0, Eu.g)()
+    function hk() {
+      return uk() && !sk && !mk && !(0, Rk.h)()
     }
 
-    function wu() {
-      var uu;
-      return "undefined" === typeof navigator || null === (uu = navigator.userActivation) || void 0 === uu ? void 0 : uu.isActive
+    function qk() {
+      var kk;
+      return "undefined" === typeof navigator || null === (kk = navigator.userActivation) || void 0 === kk ? void 0 : kk.isActive
     }
 
-    function Zu() {
-      return Bu && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== wu()
+    function Ck() {
+      return Jk && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== qk()
     }
 
-    function hu() {
-      Iu() ? Fu() && !ju && Zu() && Lu() : Vu && !bu && qu()
+    function Zk() {
+      uk() ? hk() && !Wk && Ck() && zk() : sk && !Yk && lk()
     }
 
-    function Pu() {
-      ju ? navigator.vendor.startsWith("Apple") ? ou() : Hu = du : hu()
+    function pk() {
+      Wk ? navigator.vendor.startsWith("Apple") ? jk() : vk = ik : Zk()
     }
 
-    function iu() {
-      Hu > 0 && 0 === --Hu && ou()
+    function Kk() {
+      vk > 0 && 0 === --vk && jk()
     }
 
-    function Yu() {
-      Hu = 0
+    function xk() {
+      vk = 0
     }
 
-    function ou() {
-      Fu() && !0 === wu() && Lu()
+    function jk() {
+      hk() && !0 === qk() && zk()
     }
 
-    function qu() {
-      bu = !0, (0, Nu.I)().unlockPointer()
+    function lk() {
+      Yk = !0, (0, wk.J)().unlockPointer()
     }
 
-    function Ou() {
-      ru = !1, Bu = !1, xu = !1, clearTimeout(Xu), Wu = !1, ju = !1, Hu = 0, bu = !1;
-      const uu = Vu;
-      Vu = !1, uu && vu()
+    function nk() {
+      Vk = !1, Jk = !1, Ak = !1, clearTimeout(dk), mk = !1, Wk = !1, vk = 0, Yk = !1;
+      const kk = sk;
+      sk = !1, kk && Ik()
     }
 
-    function vu() {
-      for (const uu of [...ku]) uu(Vu);
-      Ku.k.Op("pointerLockUpdate", Vu)
+    function Ik() {
+      for (const kk of [...Ok]) kk(sk);
+      tk.o.Hf("pointerLockUpdate", sk)
     }
   },
-  40256: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Bu,
-      e: () => Ju,
-      f: () => ru,
-      i: () => Xu,
-      k: () => mu,
-      m: () => Vu,
-      o: () => Nu
+  40097: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Jk,
+      d: () => bk,
+      e: () => Vk,
+      i: () => dk,
+      k: () => Xk,
+      m: () => sk,
+      q: () => wk
     });
-    let Eu = null,
-      Ku = null,
-      Qu = null;
+    let Rk = null,
+      tk = null,
+      ak = null;
 
-    function mu(uu) {
-      Eu = uu
+    function Xk(kk) {
+      Rk = kk
     }
 
-    function Ju() {
-      return Eu
+    function bk() {
+      return Rk
     }
 
-    function Nu(uu) {
-      Ku = uu
+    function wk(kk) {
+      tk = kk
     }
 
-    function Xu() {
-      return Ku
+    function dk() {
+      return tk
     }
 
-    function Vu(uu) {
-      Qu = uu
+    function sk(kk) {
+      ak = kk
     }
 
-    function ru() {
-      return Qu
+    function Vk() {
+      return ak
     }
 
-    function Bu() {
-      var uu, Ru;
-      return !0 === (null === (uu = Ku) || void 0 === uu || null === (Ru = uu.currentViewer) || void 0 === Ru ? void 0 : Ru.inPlayback)
+    function Jk() {
+      var kk, Fk;
+      return !0 === (null === (kk = tk) || void 0 === kk || null === (Fk = kk.currentViewer) || void 0 === Fk ? void 0 : Fk.inPlayback)
     }
   },
-  40311: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => mu,
-      d: () => Qu,
-      f: () => Ju
+  40147: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Xk,
+      h: () => ak,
+      i: () => bk
     });
-    var Eu = yu(40160),
-      Ku = yu(40173);
+    var Rk = Bk(4e4),
+      tk = Bk(40015);
 
-    function Qu(uu) {
-      if (uu.queries.drawCensus() < Eu.Hb.BYTES) return null;
-      const Ru = uu.memoryData(uu.scratch(), Eu.Hb.BYTES, 4, "the draw census");
-      return null === Ru ? null : {
-        terrainOpaque: Eu.Hb.terrainOpaque(Ru, 0),
-        terrainTransparent: Eu.Hb.terrainTransparent(Ru, 0),
-        terrainPack: Eu.Hb.terrainPack(Ru, 0),
-        earthSky: Eu.Hb.earthSky(Ru, 0),
-        skyMeshes: Eu.Hb.skyMeshes(Ru, 0),
-        regular: Eu.Hb.regular(Ru, 0),
-        thin: Eu.Hb.thin(Ru, 0),
-        line: Eu.Hb.line(Ru, 0),
-        text: Eu.Hb.text(Ru, 0),
-        particles: Eu.Hb.particles(Ru, 0)
+    function ak(kk) {
+      if (kk.queries.drawCensus() < Rk.Hb.BYTES) return null;
+      const Fk = kk.memoryData(kk.scratch(), Rk.Hb.BYTES, 4, "the draw census");
+      return null === Fk ? null : {
+        terrainOpaque: Rk.Hb.terrainOpaque(Fk, 0),
+        terrainTransparent: Rk.Hb.terrainTransparent(Fk, 0),
+        terrainPack: Rk.Hb.terrainPack(Fk, 0),
+        earthSky: Rk.Hb.earthSky(Fk, 0),
+        skyMeshes: Rk.Hb.skyMeshes(Fk, 0),
+        regular: Rk.Hb.regular(Fk, 0),
+        thin: Rk.Hb.thin(Fk, 0),
+        line: Rk.Hb.line(Fk, 0),
+        text: Rk.Hb.text(Fk, 0),
+        particles: Rk.Hb.particles(Fk, 0)
       }
     }
 
-    function mu(uu) {
+    function Xk(kk) {
       const {
-        terrainOpaque: Ru,
-        terrainTransparent: yu,
-        earthSky: Eu,
-        skyMeshes: Ku,
-        regular: Qu,
-        thin: mu,
-        line: Ju,
-        text: Nu,
-        particles: Xu
-      } = uu;
-      return Ru + yu + Eu + Ku + Qu + mu + Ju + Nu + Xu
+        terrainOpaque: Fk,
+        terrainTransparent: Bk,
+        earthSky: Rk,
+        skyMeshes: tk,
+        regular: ak,
+        thin: Xk,
+        line: bk,
+        text: wk,
+        particles: dk
+      } = kk;
+      return Fk + Bk + Rk + tk + ak + Xk + bk + wk + dk
     }
 
-    function Ju() {
-      const uu = (0, Ku.i)();
-      return !0 === (null === uu || void 0 === uu ? void 0 : uu.isCoreRunning) ? function(uu) {
-        const Ru = Qu(uu);
-        if (null === Ru) return [];
+    function bk() {
+      const kk = (0, tk.g)();
+      return !0 === (null === kk || void 0 === kk ? void 0 : kk.isCoreRunning) ? function(kk) {
+        const Fk = ak(kk);
+        if (null === Fk) return [];
         const {
-          terrainOpaque: yu,
-          terrainTransparent: Eu,
-          terrainPack: Ku,
-          earthSky: Ju,
-          skyMeshes: Nu,
-          regular: Xu,
-          thin: Vu,
-          line: ru,
-          text: Bu,
-          particles: xu
-        } = Ru;
+          terrainOpaque: Bk,
+          terrainTransparent: Rk,
+          terrainPack: tk,
+          earthSky: bk,
+          skyMeshes: wk,
+          regular: dk,
+          thin: sk,
+          line: Vk,
+          text: Jk,
+          particles: Ak
+        } = Fk;
         return [{
           label: "Drawn",
-          value: `${mu(Ru)}`
+          value: `${Xk(Fk)}`
         }, {
           label: "Terrain",
-          value: `${yu} opaque / ${Eu} transparent (${Ku} shader pack)`
+          value: `${Bk} opaque / ${Rk} transparent (${tk} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${Xu} / ${Vu}`
+          value: `${dk} / ${sk}`
         }, {
           label: "Text / Lines",
-          value: `${Bu} / ${ru}`
+          value: `${Jk} / ${Vk}`
         }, {
           label: "Sky / Particles",
-          value: `${Ju+Nu} / ${xu}`
+          value: `${bk+wk} / ${Ak}`
         }]
-      }(uu.api) : []
+      }(kk.api) : []
     }
   },
-  40313: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      loadIcons: () => Mu,
-      setIconFileOverrides: () => Iu,
-      wasmIconLookups: () => Lu,
-      wasmIconQueries: () => cu
+  40150: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      loadIcons: () => Hk,
+      setIconFileOverrides: () => uk,
+      wasmIconLookups: () => zk,
+      wasmIconQueries: () => Dk
     });
-    var Eu = yu(4254),
-      Ku = yu(4231),
-      Qu = yu(40316),
-      mu = yu(1867),
-      Ju = yu(1855),
-      Nu = yu(3093),
-      Xu = yu(3101);
-    let Vu = null,
-      ru = null;
+    var Rk = Bk(4235),
+      tk = Bk(4204),
+      ak = Bk(40154),
+      Xk = Bk(1858),
+      bk = Bk(1847),
+      wk = Bk(3090),
+      dk = Bk(3097);
+    let sk = null,
+      Vk = null;
 
-    function Bu(uu) {
-      const Ru = uu.startsWith(Xu.j),
-        [yu, Eu = yu, Ku = yu] = (Ru ? uu.slice(Xu.j.length) : uu).split(Xu.g);
+    function Jk(kk) {
+      const Fk = kk.startsWith(dk.i),
+        [Bk, Rk = Bk, tk = Bk] = (Fk ? kk.slice(dk.i.length) : kk).split(dk.f);
       return {
-        top: yu,
-        left: Eu,
-        right: Ku,
-        half: Ru
+        top: Bk,
+        left: Rk,
+        right: tk,
+        half: Fk
       }
     }
 
-    function xu(uu) {
-      const Ru = null === Vu ? void 0 : (0, Nu.b)(uu),
-        yu = void 0 === Ru ? 0 : Vu.codes[Ru];
-      return 0 === yu ? void 0 : Vu.pool[yu - 1]
+    function Ak(kk) {
+      const Fk = null === sk ? void 0 : (0, wk.c)(kk),
+        Bk = void 0 === Fk ? 0 : sk.codes[Fk];
+      return 0 === Bk ? void 0 : sk.pool[Bk - 1]
     }
-    var Su = yu(3088),
-      pu = yu(4218),
-      Tu = yu(4247),
-      Wu = yu(40324);
-    const ju = "item:";
-    let Hu = null,
-      du = null,
-      bu = null,
-      Cu = null,
-      ku = !1,
-      eu = !1,
-      Au = null,
-      Du = 0;
+    var ek = Bk(3083),
+      yk = Bk(4190),
+      fk = Bk(4228),
+      mk = Bk(40156);
+    const Wk = "item:";
+    let vk = null,
+      ik = null,
+      Yk = null,
+      Lk = null,
+      Ok = !1,
+      Ek = !1,
+      Sk = null,
+      Nk = 0;
 
-    function Mu() {
-      return eu || (eu = !0, (0, Tu.g)().then((uu => {
-        uu && (0, mu.d)()
-      }))), bu ??= Promise.all([(0, Su.h)(), (ru ??= yu.e(1).then((() => yu(42180))).then((uu => {
+    function Hk() {
+      return Ek || (Ek = !0, (0, fk.j)().then((kk => {
+        kk && (0, Xk.b)()
+      }))), Yk ??= Promise.all([(0, ek.e)(), (Vk ??= Bk.e(1).then((() => Bk(42030))).then((kk => {
         let {
-          BLOCK_FACE_RUNS: Ru,
-          BLOCK_FACES: yu,
-          MAX_FACE_ITEM_ID: Eu
-        } = uu;
-        Vu = {
-          codes: (0, Xu.A)(Ru, Eu + 1),
-          pool: yu.split(Xu.s).map(Bu)
+          BLOCK_FACE_RUNS: Fk,
+          BLOCK_FACES: Bk,
+          MAX_FACE_ITEM_ID: Rk
+        } = kk;
+        sk = {
+          codes: (0, dk.x)(Fk, Rk + 1),
+          pool: Bk.split(dk.o).map(Jk)
         }
-      }), (uu => {
-        throw ru = null, uu
-      })), ru), (0, Wu.g)(), yu.e(189).then((() => yu(9079)))]).then((uu => {
-        let [, , Ru, yu] = uu;
-        Ru.followBundledTextures(), Hu = Ru, du = yu, (0, mu.d)()
-      }), (uu => {
-        bu = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", uu)
-      })), bu
+      }), (kk => {
+        throw Vk = null, kk
+      })), Vk), (0, mk.e)(), Bk.e(189).then((() => Bk(9022)))]).then((kk => {
+        let [, , Fk, Bk] = kk;
+        Fk.followBundledTextures(), vk = Fk, ik = Bk, (0, Xk.b)()
+      }), (kk => {
+        Yk = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", kk)
+      })), Yk
     }
 
-    function Iu(uu) {
-      Au = uu, Du++, (0, mu.d)()
+    function uk(kk) {
+      Sk = kk, Nk++, (0, Xk.b)()
     }
 
-    function Gu(uu) {
-      var Ru, yu;
-      return null !== (Ru = null === (yu = Au) || void 0 === yu ? void 0 : yu.itemSprite(uu)) && void 0 !== Ru ? Ru : Hu.itemSpriteUrl(uu)
+    function Mk(kk) {
+      var Fk, Bk;
+      return null !== (Fk = null === (Bk = Sk) || void 0 === Bk ? void 0 : Bk.itemSprite(kk)) && void 0 !== Fk ? Fk : vk.itemSpriteUrl(kk)
     }
 
-    function Uu(uu) {
-      var Ru, yu;
-      return null !== (Ru = null === (yu = Au) || void 0 === yu ? void 0 : yu.blockTexture(uu)) && void 0 !== Ru ? Ru : Hu.blockTextureUrl(uu)
+    function gk(kk) {
+      var Fk, Bk;
+      return null !== (Fk = null === (Bk = Sk) || void 0 === Bk ? void 0 : Bk.blockTexture(kk)) && void 0 !== Fk ? Fk : vk.blockTextureUrl(kk)
     }
 
-    function nu(uu) {
-      var Ru;
-      return null !== (Ru = (0, Su.e)(uu)) && void 0 !== Ru ? Ru : uu
+    function Uk(kk) {
+      var Fk;
+      return null !== (Fk = (0, ek.c)(kk)) && void 0 !== Fk ? Fk : kk
     }
 
-    function su(uu, Ru) {
-      var yu, Eu, Ku;
-      return null !== (yu = null !== (Eu = null !== (Ku = Uu(uu)) && void 0 !== Ku ? Ku : null === Ru || void 0 === Ru ? void 0 : Ru.rotated[uu]) && void 0 !== Eu ? Eu : null === Ru || void 0 === Ru ? void 0 : Ru.animated[uu]) && void 0 !== yu ? yu : Hu.notFoundUrl()
+    function ck(kk, Fk) {
+      var Bk, Rk, tk;
+      return null !== (Bk = null !== (Rk = null !== (tk = gk(kk)) && void 0 !== tk ? tk : null === Fk || void 0 === Fk ? void 0 : Fk.rotated[kk]) && void 0 !== Rk ? Rk : null === Fk || void 0 === Fk ? void 0 : Fk.animated[kk]) && void 0 !== Bk ? Bk : vk.notFoundUrl()
     }
 
-    function tu(uu) {
-      return void 0 !== (0, Nu.b)(uu) ? uu : /^[1-9][0-9]*$/.test(uu) ? (0, Nu.f)(Number(uu)) : void 0
+    function Gk(kk) {
+      return void 0 !== (0, wk.c)(kk) ? kk : /^[1-9][0-9]*$/.test(kk) ? (0, wk.f)(Number(kk)) : void 0
     }
 
-    function lu(uu) {
-      var Ru;
-      if (uu.startsWith(ju)) {
-        var yu;
-        const Ru = (0, Su.e)(uu.slice(5));
-        return null !== (yu = void 0 === Ru ? null : Gu(Ru)) && void 0 !== yu ? yu : Hu.notFoundUrl()
+    function Tk(kk) {
+      var Fk;
+      if (kk.startsWith(Wk)) {
+        var Bk;
+        const Fk = (0, ek.c)(kk.slice(5));
+        return null !== (Bk = void 0 === Fk ? null : Mk(Fk)) && void 0 !== Bk ? Bk : vk.notFoundUrl()
       }
-      return null !== (Ru = Hu.particleUrl(uu)) && void 0 !== Ru ? Ru : Hu.notFoundUrl()
+      return null !== (Fk = vk.particleUrl(kk)) && void 0 !== Fk ? Fk : vk.notFoundUrl()
     }
 
-    function gu(uu, Ru) {
-      return "StairsBlock" === uu ? uu : Ru ? "SlabBlock" : "CubeBlock"
+    function rk(kk, Fk) {
+      return "StairsBlock" === kk ? kk : Fk ? "SlabBlock" : "CubeBlock"
     }
-    const cu = {
-        async blockIcon(uu) {
-          var Ru;
+    const Dk = {
+        async blockIcon(kk) {
+          var Fk;
           let {
-            name: Eu,
-            size: Ku,
-            lineWidth: Qu
-          } = uu;
-          await Mu();
-          const Ju = null !== (Ru = tu(Eu)) && void 0 !== Ru ? Ru : Eu,
-            Xu = (0, Tu.b)(Ju, Ku, Qu);
-          if (null !== Xu) return Xu;
-          const Vu = xu(Ju),
-            ru = (0, Nu.b)(Ju),
-            Bu = void 0 === ru || null === du ? void 0 : du.itemTypeNameOf(ru);
-          if (null === Hu || void 0 === Vu) return "";
-          const Su = [Vu.top, Vu.left, Vu.right].some((uu => null === Uu(uu))),
-            Wu = Su ? await (Cu ??= yu.e(201).then((() => yu(34131))).then((uu => (ku && (ku = !1, (0, mu.d)()), {
-              rotated: uu.rotatedBlockTextures,
-              animated: uu.animatedBlockTextures
-            })), (uu => (Cu = null, ku = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", uu), null))), Cu) : null;
-          if (Su && null === Wu) return "";
-          const ju = {
-              top: su(Vu.top, Wu),
-              left: su(Vu.left, Wu),
-              right: su(Vu.right, Wu),
-              itemType: gu(Bu, Vu.half)
+            name: Rk,
+            size: tk,
+            lineWidth: ak
+          } = kk;
+          await Hk();
+          const bk = null !== (Fk = Gk(Rk)) && void 0 !== Fk ? Fk : Rk,
+            dk = (0, fk.c)(bk, tk, ak);
+          if (null !== dk) return dk;
+          const sk = Ak(bk),
+            Vk = (0, wk.c)(bk),
+            Jk = void 0 === Vk || null === ik ? void 0 : ik.itemTypeNameOf(Vk);
+          if (null === vk || void 0 === sk) return "";
+          const ek = [sk.top, sk.left, sk.right].some((kk => null === gk(kk))),
+            mk = ek ? await (Lk ??= Bk.e(201).then((() => Bk(34024))).then((kk => (Ok && (Ok = !1, (0, Xk.b)()), {
+              rotated: kk.rotatedBlockTextures,
+              animated: kk.animatedBlockTextures
+            })), (kk => (Lk = null, Ok = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", kk), null))), Lk) : null;
+          if (ek && null === mk) return "";
+          const Wk = {
+              top: ck(sk.top, mk),
+              left: ck(sk.left, mk),
+              right: ck(sk.right, mk),
+              itemType: rk(Jk, sk.half)
             },
-            bu = 0 === Du ? Ju : `${Ju}#${Du}`;
-          return (await (0, pu.d)()).drawBlockIconUrl(bu, Ku, Qu, (() => ju))
+            Yk = 0 === Nk ? bk : `${bk}#${Nk}`;
+          return (await (0, yk.d)()).drawBlockIconUrl(Yk, tk, ak, (() => Wk))
         }
       },
-      Lu = {
-        itemIcon: function(uu) {
-          var Ru, yu;
-          if (null === Hu) return Mu(), Ju.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(uu);
-          if ((0, Ku.f)(uu)) return {
+      zk = {
+        itemIcon: function(kk) {
+          var Fk, Bk;
+          if (null === vk) return Hk(), bk.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(kk);
+          if ((0, tk.h)(kk)) return {
             kind: "icon",
-            url: null !== (yu = Hu.ingameIconUrl(uu)) && void 0 !== yu ? yu : Hu.notFoundUrl()
+            url: null !== (Bk = vk.ingameIconUrl(kk)) && void 0 !== Bk ? Bk : vk.notFoundUrl()
           };
-          if (uu.startsWith(Ku.b)) return {
+          if (kk.startsWith(tk.d)) return {
             kind: "icon",
-            url: lu(uu.slice(Ku.b.length))
+            url: Tk(kk.slice(tk.d.length))
           };
-          if (0 === (0, Nu.g)()) return (0, Qu.e)(), Ju.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(uu);
-          const mu = null !== (Ru = tu(uu)) && void 0 !== Ru ? Ru : uu,
-            Xu = (0, Nu.b)(mu),
-            Vu = void 0 === Xu ? void 0 : du.itemTypeNameOf(Xu);
-          if (void 0 !== xu(mu)) return {
+          if (0 === (0, wk.h)()) return (0, ak.c)(), bk.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(kk);
+          const Xk = null !== (Fk = Gk(kk)) && void 0 !== Fk ? Fk : kk,
+            dk = (0, wk.c)(Xk),
+            sk = void 0 === dk ? void 0 : ik.itemTypeNameOf(dk);
+          if (void 0 !== Ak(Xk)) return {
             kind: "drawnBlock"
           };
-          const ru = function(uu) {
-            var Ru;
-            return null !== (Ru = Gu(nu(uu))) && void 0 !== Ru ? Ru : Hu.notFoundUrl()
-          }(mu);
-          if ((0, Tu.e)(mu) && ! function(uu) {
-              return null !== Au && (null !== Au.itemSprite(nu(uu)) || null !== Au.model(uu))
-            }(mu)) return {
+          const Vk = function(kk) {
+            var Fk;
+            return null !== (Fk = Mk(Uk(kk))) && void 0 !== Fk ? Fk : vk.notFoundUrl()
+          }(Xk);
+          if ((0, fk.g)(Xk) && ! function(kk) {
+              return null !== Sk && (null !== Sk.itemSprite(Uk(kk)) || null !== Sk.model(kk))
+            }(Xk)) return {
             kind: "model",
-            url: ru
+            url: Vk
           };
-          if ("Gun" === Vu) return {
+          if ("Gun" === sk) return {
             kind: "gun",
-            url: ru
+            url: Vk
           };
-          if (void 0 !== Xu && "GrayscaleArmour" === du.itemTypeOf(Xu) || Object.hasOwn(Eu.d, mu)) {
-            var Bu;
-            const Ru = null !== (Bu = (0, Eu.g)(uu)) && void 0 !== Bu ? Bu : (0, Eu.g)(mu);
-            if (Ru) return {
+          if (void 0 !== dk && "GrayscaleArmour" === ik.itemTypeOf(dk) || Object.hasOwn(Rk.b, Xk)) {
+            var Jk;
+            const Fk = null !== (Jk = (0, Rk.c)(kk)) && void 0 !== Jk ? Jk : (0, Rk.c)(Xk);
+            if (Fk) return {
               kind: "item",
-              url: ru,
-              tint: Ru
+              url: Vk,
+              tint: Fk
             }
           }
           return {
             kind: "item",
-            url: ru
+            url: Vk
           }
         },
-        hasIcon: function(uu) {
-          return void 0 !== tu(uu) || (0, Ku.f)(uu) || uu.startsWith(Ku.b)
+        hasIcon: function(kk) {
+          return void 0 !== Gk(kk) || (0, tk.h)(kk) || kk.startsWith(tk.d)
         },
-        isItemName: function(uu) {
-          return void 0 !== tu(uu)
+        isItemName: function(kk) {
+          return void 0 !== Gk(kk)
         }
       }
   },
-  40253: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      attachPlayGameSources: () => hy,
-      playGameSources: () => Zy
+  40095: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      attachPlayGameSources: () => ZB,
+      playGameSources: () => CB
     });
-    var Eu = yu(1855),
-      Ku = yu(40256),
-      Qu = yu(4549),
-      mu = yu(40173),
-      Ju = yu(40265),
-      Nu = yu(39313),
-      Xu = yu(34),
-      Vu = yu(4564),
-      ru = yu(4562),
-      Bu = yu(40205),
-      xu = yu(40235),
-      Su = yu(40274),
-      pu = yu(40217);
-    (0, pu.m)(Vu.$b.Chat, (uu => {
-      if (uu.payloadKind !== ru.ac.Msgpack) return;
-      const Ru = function(uu) {
-        if (null === uu || "object" !== typeof uu || !("content" in uu)) return null;
+    var Rk = Bk(1847),
+      tk = Bk(40097),
+      ak = Bk(4511),
+      Xk = Bk(40015),
+      bk = Bk(40100),
+      wk = Bk(39168),
+      dk = Bk(29),
+      sk = Bk(4531),
+      Vk = Bk(4524),
+      Jk = Bk(40051),
+      Ak = Bk(40073),
+      ek = Bk(40107),
+      yk = Bk(40063);
+    (0, yk.k)(sk.Tb.Chat, (kk => {
+      if (kk.payloadKind !== Vk.Nb.Msgpack) return;
+      const Fk = function(kk) {
+        if (null === kk || "object" !== typeof kk || !("content" in kk)) return null;
         const {
-          chatMsgId: Ru,
-          content: yu,
-          chatterEId: Eu
-        } = uu;
+          chatMsgId: Fk,
+          content: Bk,
+          chatterEId: Rk
+        } = kk;
         return {
-          serverChatMsgId: null !== Ru && void 0 !== Ru ? Ru : void 0,
-          content: yu,
-          chatterEId: void 0 === Eu || null === Eu ? void 0 : String(Eu)
+          serverChatMsgId: null !== Fk && void 0 !== Fk ? Fk : void 0,
+          content: Bk,
+          chatterEId: void 0 === Rk || null === Rk ? void 0 : String(Rk)
         }
-      }((0, Bu.e)(uu.payload));
-      null !== Ru && Xu.k.Op("chat", Ru, !0)
+      }((0, Jk.e)(kk.payload));
+      null !== Fk && dk.o.Hf("chat", Fk, !0)
     }));
-    const Tu = {
-        chatReceived: (0, Nu.k)((function(uu) {
-          var Ru, yu, Eu;
+    const fk = {
+        chatReceived: (0, wk.j)((function(kk) {
+          var Fk, Bk, Rk;
           return {
-            id: uu,
-            name: null !== (Ru = Su.g.getName(uu)) && void 0 !== Ru ? Ru : null,
-            local: (0, xu.h)() === uu,
-            profileEffect: null !== (yu = null === (Eu = (0, Su.i)(uu)) || void 0 === Eu ? void 0 : Eu.profileEffect) && void 0 !== yu ? yu : null
+            id: kk,
+            name: null !== (Fk = ek.g.getName(kk)) && void 0 !== Fk ? Fk : null,
+            local: (0, Ak.e)() === kk,
+            profileEffect: null !== (Bk = null === (Rk = (0, ek.i)(kk)) || void 0 === Rk ? void 0 : Rk.profileEffect) && void 0 !== Bk ? Bk : null
           }
         }))
       },
-      Wu = {
-        sendChatMessage(uu) {
-          var Ru;
+      mk = {
+        sendChatMessage(kk) {
+          var Fk;
           let {
-            Dm: yu,
-            channelName: Eu
-          } = uu;
-          null === (Ru = (0, mu.i)()) || void 0 === Ru || Ru.clientApi.sendChat(yu, Eu)
+            UX: Bk,
+            channelName: Rk
+          } = kk;
+          null === (Fk = (0, Xk.g)()) || void 0 === Fk || Fk.clientApi.sendChat(Bk, Rk)
         }
       };
-    var ju = yu(212),
-      Hu = yu(1878),
-      du = yu(40160),
-      bu = yu(39305);
-    const Cu = [0, 0, 0],
-      ku = {
-        codeBlockClickable(uu) {
-          var Ru;
-          const yu = (0, mu.i)();
-          if (null === yu || void 0 === yu || !yu.isSessionLive) return !1;
-          const Eu = yu.api;
-          if (0 !== (du.v.playerFlags(Eu.apiView, 0) & du.Nd.Crouching)) return !1;
-          const Ku = Eu.queries.directorEntity(Eu.localId) >= du.Ab.BYTES ? Eu.memoryData(Eu.scratch(), du.Ab.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === Ku) return !1;
-          for (let Qu = 0; Qu < 3; Qu++) Cu[Qu] = du.Ab.feet(Ku, 0, Qu);
-          return Cu[1] += du.Ab.eyeHeight(Ku, 0), (0, bu.c)(Cu, uu, null !== (Ru = Hu.b.get("blockReach")) && void 0 !== Ru ? Ru : ju.f.zW)
+    var Wk = Bk(182),
+      vk = Bk(1863),
+      ik = Bk(4e4),
+      Yk = Bk(39162);
+    const Lk = [0, 0, 0],
+      Ok = {
+        codeBlockClickable(kk) {
+          var Fk;
+          const Bk = (0, Xk.g)();
+          if (null === Bk || void 0 === Bk || !Bk.isSessionLive) return !1;
+          const Rk = Bk.api;
+          if (0 !== (ik.w.playerFlags(Rk.apiView, 0) & ik.Ed.Crouching)) return !1;
+          const tk = Rk.queries.directorEntity(Rk.localId) >= ik.zb.BYTES ? Rk.memoryData(Rk.scratch(), ik.zb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === tk) return !1;
+          for (let ak = 0; ak < 3; ak++) Lk[ak] = ik.zb.feet(tk, 0, ak);
+          return Lk[1] += ik.zb.eyeHeight(tk, 0), (0, Yk.e)(Lk, kk, null !== (Fk = vk.b.get("blockReach")) && void 0 !== Fk ? Fk : Wk.h.fW)
         }
       },
-      eu = {
-        clickCodeBlock(uu) {
-          var Ru;
-          null === (Ru = (0, mu.i)()) || void 0 === Ru || Ru.clickCodeBlock(uu)
+      Ek = {
+        clickCodeBlock(kk) {
+          var Fk;
+          null === (Fk = (0, Xk.g)()) || void 0 === Fk || Fk.clickCodeBlock(kk)
         }
       };
-    var Au = yu(40185),
-      Du = yu(40276),
-      Mu = yu(1001),
-      Iu = yu(38792),
-      Gu = yu(4546),
-      Uu = yu(40197),
-      nu = yu(40177),
-      su = yu(40199);
+    var Sk = Bk(40023),
+      Nk = Bk(40109),
+      Hk = Bk(994),
+      uk = Bk(38685),
+      Mk = Bk(4507),
+      gk = Bk(40037),
+      Uk = Bk(40021),
+      ck = Bk(40043);
 
-    function tu(uu) {
-      if (null === uu) return null;
-      const Ru = [];
-      for (const yu of uu) {
-        const uu = Object.keys(yu)[0];
-        if ("cu" === uu) {
+    function Gk(kk) {
+      if (null === kk) return null;
+      const Fk = [];
+      for (const Bk of kk) {
+        const kk = Object.keys(Bk)[0];
+        if ("Dk" === kk) {
           const {
-            str: uu,
-            style: Eu,
-            clickableUrl: Ku
-          } = yu.cu, Qu = Object.keys(uu)[0], mu = uu[Qu];
-          "string" !== Qu && "styledEntityName" !== Qu && "styledTranslatedText" !== Qu || Ru.push({
-            str: mu,
-            style: Eu,
-            clickableUrl: Ku
+            str: kk,
+            style: Rk,
+            clickableUrl: tk
+          } = Bk.Dk, ak = Object.keys(kk)[0], Xk = kk[ak];
+          "string" !== ak && "styledEntityName" !== ak && "styledTranslatedText" !== ak || Fk.push({
+            str: Xk,
+            style: Rk,
+            clickableUrl: tk
           })
-        } else Ru.push(yu[uu])
+        } else Fk.push(Bk[kk])
       }
-      return Ru
+      return Fk
     }
-    const lu = {
-      screenPos(uu) {
-        var Ru, yu;
-        return null !== (Ru = null === (yu = (0, mu.i)()) || void 0 === yu ? void 0 : yu.renderFrame.projectWorldPosToScreenPos(uu)) && void 0 !== Ru ? Ru : {
+    const Tk = {
+      screenPos(kk) {
+        var Fk, Bk;
+        return null !== (Fk = null === (Bk = (0, Xk.g)()) || void 0 === Bk ? void 0 : Bk.renderFrame.projectWorldPosToScreenPos(kk)) && void 0 !== Fk ? Fk : {
           x: 0,
           y: 0
         }
       }
     };
-    let gu = !1;
+    let rk = !1;
 
-    function cu() {
-      gu || (gu = !0, (0, pu.m)(Vu.$b.ProgressBarUpdate, (uu => {
-        const Ru = (0, su.g)(uu);
-        (0, su.d)(Ru) && Xu.k.Op("progressBarUpdate", Ru, !0)
-      })), (0, pu.m)(Uu.y, (uu => {
-        const Ru = (0, su.f)(Uu.y, uu);
-        Ru && Xu.k.Op("middleScreenBarInitiate", {
-          duration: Ru.VE,
-          rE: Ru.rE,
-          horizBarRemOffset: Ru.xE
+    function Dk() {
+      rk || (rk = !0, (0, yk.k)(sk.Tb.ProgressBarUpdate, (kk => {
+        const Fk = (0, ck.j)(kk);
+        (0, ck.e)(Fk) && dk.o.Hf("progressBarUpdate", Fk, !0)
+      })), (0, yk.k)(gk.v, (kk => {
+        const Fk = (0, ck.f)(gk.v, kk);
+        Fk && dk.o.Hf("middleScreenBarInitiate", {
+          duration: Fk.aR,
+          XR: Fk.XR,
+          horizBarRemOffset: Fk.bR
         }, !0)
-      })), (0, pu.m)(Vu.$b.RemoveMiddleScreenBar, (() => {
-        Xu.k.Op("middleScreenBarRemove")
-      })), (0, pu.m)(Uu.db, (uu => {
-        const Ru = (0, su.f)(Uu.db, uu);
-        if (Ru) {
-          var yu;
-          const uu = Ru.yy ? null === (yu = (0, mu.i)()) || void 0 === yu ? void 0 : yu.renderFrame.projectDirectionToScreenPos(Ru.yy) : void 0;
-          Xu.k.Op("sendHitmarker", {
-            Ry: Ru.Ry,
-            screenPos: uu
+      })), (0, yk.k)(sk.Tb.RemoveMiddleScreenBar, (() => {
+        dk.o.Hf("middleScreenBarRemove")
+      })), (0, yk.k)(gk.gb, (kk => {
+        const Fk = (0, ck.f)(gk.gb, kk);
+        if (Fk) {
+          var Bk;
+          const kk = Fk.RB ? null === (Bk = (0, Xk.g)()) || void 0 === Bk ? void 0 : Bk.renderFrame.projectDirectionToScreenPos(Fk.RB) : void 0;
+          dk.o.Hf("sendHitmarker", {
+            BB: Fk.BB,
+            screenPos: kk
           }, !0)
         }
-      })), (0, pu.m)(Uu.ib, (uu => {
-        const Ru = (0, su.f)(Uu.ib, uu);
-        if (Ru) {
+      })), (0, yk.k)(gk.lb, (kk => {
+        const Fk = (0, ck.f)(gk.lb, kk);
+        if (Fk) {
           const {
-            id: uu,
-            position: yu,
-            style: Eu,
-            aK: Ku,
-            uQ: Qu
-          } = Ru;
-          Xu.k.Op("setDirectionArrow", {
-            id: uu,
-            position: yu,
-            style: Eu,
-            text: tu(Ku),
-            uQ: Qu
+            id: kk,
+            position: Bk,
+            style: Rk,
+            Ra: tk,
+            Xa: ak
+          } = Fk;
+          dk.o.Hf("setDirectionArrow", {
+            id: kk,
+            position: Bk,
+            style: Rk,
+            text: Gk(tk),
+            Xa: ak
           }, !0)
         }
-      })), (0, pu.m)(Uu.f, (uu => {
-        const Ru = (0, su.f)(Uu.f, uu);
-        Ru && Xu.k.Op("clearDirectionArrow", {
-          id: Ru.id
+      })), (0, yk.k)(gk.f, (kk => {
+        const Fk = (0, ck.f)(gk.f, kk);
+        Fk && dk.o.Hf("clearDirectionArrow", {
+          id: Fk.id
         }, !0)
-      })), (0, pu.m)(Uu.s, (uu => {
-        const Ru = (0, su.f)(Uu.s, uu);
-        Ru && Xu.k.Op("flyingMiddleMessage", {
-          content: tu(Ru.MQ),
-          IQ: Ru.IQ,
-          GQ: Ru.GQ
+      })), (0, yk.k)(gk.n, (kk => {
+        const Fk = (0, ck.f)(gk.n, kk);
+        Fk && dk.o.Hf("flyingMiddleMessage", {
+          content: Gk(Fk.Ga),
+          Ta: Fk.Ta,
+          ra: Fk.ra
         }, !0)
-      })), (0, pu.m)(Vu.$b.WorldVariation, (uu => {
-        const Ru = (0, su.g)(uu);
-        if ("string" === typeof Ru) {
-          const uu = Ru === Mu.d ? null : {
-            message: `Currently loaded as variation: ${Ru}`,
+      })), (0, yk.k)(sk.Tb.WorldVariation, (kk => {
+        const Fk = (0, ck.j)(kk);
+        if ("string" === typeof Fk) {
+          const kk = Fk === Hk.g ? null : {
+            message: `Currently loaded as variation: ${Fk}`,
             type: "Warning"
           };
-          Xu.k.Op("showPermanentBottomMessage", uu, !0)
+          dk.o.Hf("showPermanentBottomMessage", kk, !0)
         }
-      })), (0, pu.m)(Uu.N, (uu => {
-        const Ru = (0, su.f)(Uu.N, uu);
-        Ru && function(uu, Ru) {
+      })), (0, yk.k)(gk.I, (kk => {
+        const Fk = (0, ck.f)(gk.I, kk);
+        Fk && function(kk, Fk) {
           const {
-            type: yu,
-            params: Eu
-          } = (0, Iu.d)(Ru), Ku = {
-            ...Eu
+            type: Bk,
+            params: Rk
+          } = (0, uk.i)(Fk), tk = {
+            ...Rk
           };
-          for (const Qu of Iu.b) Ku[Qu] && (Ku[Qu] = tu(Ku[Qu]));
-          Gu.d.queueQTE(uu, yu, Ku).getResult().then((Ru => {
-            var yu;
-            "boolean" === typeof Ru && (null === (yu = (0, mu.i)()) || void 0 === yu || yu.send(nu.d.QteResponse, {
-              qteId: uu,
-              qteResponse: Ru
+          for (const ak of uk.e) tk[ak] && (tk[ak] = Gk(tk[ak]));
+          Mk.b.queueQTE(kk, Bk, tk).getResult().then((Fk => {
+            var Bk;
+            "boolean" === typeof Fk && (null === (Bk = (0, Xk.g)()) || void 0 === Bk || Bk.send(Uk.b.QteResponse, {
+              qteId: kk,
+              qteResponse: Fk
             }))
           }))
-        }(Ru.id, Ru.Mu)
-      })), (0, pu.m)(Uu.Y, (uu => {
-        const Ru = (0, su.f)(Uu.Y, uu);
-        "number" === typeof Ru && Gu.d.cancelQTE(Ru)
-      })), (0, pu.g)((() => {
-        Gu.d.reset(), Xu.k.Op("showPermanentBottomMessage", null, !0)
-      })), (0, pu.i)((() => {
-        Gu.d.reset()
-      })), (0, pu.m)(Vu.$b.EditItemCraftingRecipes, (uu => {
-        const Ru = (0, su.g)(uu);
-        (0, su.d)(Ru) && Xu.k.Op("craftingRecipesEdited", {
-          itemName: Ru.craftingRecipeItemName,
-          recipesForItem: Ru.recipesForItem
+        }(Fk.id, Fk.Hk)
+      })), (0, yk.k)(gk.Y, (kk => {
+        const Fk = (0, ck.f)(gk.Y, kk);
+        "number" === typeof Fk && Mk.b.cancelQTE(Fk)
+      })), (0, yk.d)((() => {
+        Mk.b.reset(), dk.o.Hf("showPermanentBottomMessage", null, !0)
+      })), (0, yk.g)((() => {
+        Mk.b.reset()
+      })), (0, yk.k)(sk.Tb.EditItemCraftingRecipes, (kk => {
+        const Fk = (0, ck.j)(kk);
+        (0, ck.e)(Fk) && dk.o.Hf("craftingRecipesEdited", {
+          itemName: Fk.craftingRecipeItemName,
+          recipesForItem: Fk.recipesForItem
         })
-      })), (0, pu.m)(Uu.X, (uu => {
-        const Ru = (0, su.f)(Uu.X, uu);
-        Ru && Xu.k.Op("craftingRecipesEdited", {
-          itemName: Ru.eK,
+      })), (0, yk.k)(gk.V, (kk => {
+        const Fk = (0, ck.f)(gk.V, kk);
+        Fk && dk.o.Hf("craftingRecipesEdited", {
+          itemName: Fk.St,
           recipesForItem: []
         })
       })))
     }
-    var Lu = yu(27);
-    const zu = [{
+    var zk = Bk(22);
+    const Pk = [{
       allowed: !1,
       movesFly: !1
     }, {
@@ -1257,1308 +1257,1308 @@ export const modules = {
       movesFly: !0
     }];
 
-    function Fu(uu) {
-      return du.v.playerFlags(uu.api.apiView, 0)
+    function hk(kk) {
+      return ik.w.playerFlags(kk.api.apiView, 0)
     }
-    const wu = {
-        freeCamera: (0, xu.e)((uu => () => {
-          const Ru = uu.isSessionLive && 0 !== (Fu(uu) & du.Nd.FreeCamMoves),
-            yu = uu.freeCameraAllowed() && null === Lu.d.get("scriptedCameraFacing");
-          return zu[(yu ? 2 : 0) + (Ru ? 1 : 0)]
-        }), zu[0], (uu => (0, Qu.v)(uu)))
+    const qk = {
+        freeCamera: (0, Ak.c)((kk => () => {
+          const Fk = kk.isSessionLive && 0 !== (hk(kk) & ik.Ed.FreeCamMoves),
+            Bk = kk.freeCameraAllowed() && null === zk.c.get("scriptedCameraFacing");
+          return Pk[(Bk ? 2 : 0) + (Fk ? 1 : 0)]
+        }), Pk[0], (kk => (0, ak.t)(kk)))
       },
-      Zu = {
-        setFreeCameraMovesFly: uu => {
-          var Ru;
-          null === (Ru = (0, mu.i)()) || void 0 === Ru || Ru.setFreeCameraMovesFly(uu)
+      Ck = {
+        setFreeCameraMovesFly: kk => {
+          var Fk;
+          null === (Fk = (0, Xk.g)()) || void 0 === Fk || Fk.setFreeCameraMovesFly(kk)
         }
       },
-      hu = {
+      Zk = {
         freeCameraPos: () => {
-          const uu = (0, mu.i)();
-          return null !== uu && void 0 !== uu && uu.isSessionLive && uu.renderFrame.hasView && 0 !== (Fu(uu) & du.Nd.FreeCam) ? uu.renderFrame.cameraPosition : null
+          const kk = (0, Xk.g)();
+          return null !== kk && void 0 !== kk && kk.isSessionLive && kk.renderFrame.hasView && 0 !== (hk(kk) & ik.Ed.FreeCam) ? kk.renderFrame.cameraPosition : null
         }
       };
-    var Pu = yu(38923);
-    let iu = !1,
-      Yu = !1;
+    var pk = Bk(38783);
+    let Kk = !1,
+      xk = !1;
 
-    function ou() {
-      const uu = (0, mu.i)();
-      if (null === uu || void 0 === uu || !uu.isSessionLive) return void(iu = !1);
-      const Ru = 0 !== (du.v.playerFlags(uu.api.apiView, 0) & du.Nd.FreeCam);
-      Ru !== iu && (iu = Ru, (0, Pu.c)(Ru))
+    function jk() {
+      const kk = (0, Xk.g)();
+      if (null === kk || void 0 === kk || !kk.isSessionLive) return void(Kk = !1);
+      const Fk = 0 !== (ik.w.playerFlags(kk.api.apiView, 0) & ik.Ed.FreeCam);
+      Fk !== Kk && (Kk = Fk, (0, pk.c)(Fk))
     }
-    var qu = yu(343),
-      Ou = yu(36788),
-      vu = yu(1895);
-    var au = yu(40280),
-      fu = yu(40232);
-    const uR = {
+    var lk = Bk(291),
+      nk = Bk(36708),
+      Ik = Bk(1873);
+    var Qk = Bk(40114),
+      kF = Bk(40070);
+    const FF = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let RR = "off";
+    let BF = "off";
 
-    function yR(uu) {
-      var Ru;
-      return null === uu ? null : {
-        label: null !== (Ru = (0, au.e)(uu, "interactionPrompt")) && void 0 !== Ru ? Ru : null
+    function RF(kk) {
+      var Fk;
+      return null === kk ? null : {
+        label: null !== (Fk = (0, Qk.c)(kk, "interactionPrompt")) && void 0 !== Fk ? Fk : null
       }
     }
-    const ER = new Map([
-      [du.wc.Open, {
-        label: Nu.i.open
+    const tF = new Map([
+      [ik.yc.Open, {
+        label: wk.d.open
       }],
-      [du.wc.Close, {
-        label: Nu.i.close
+      [ik.yc.Close, {
+        label: wk.d.close
       }],
-      [du.wc.Milk, {
-        label: Nu.i.milk
+      [ik.yc.Milk, {
+        label: wk.d.milk
       }],
-      [du.wc.Shear, {
-        label: Nu.i.shear
+      [ik.yc.Shear, {
+        label: wk.d.shear
       }],
-      [du.wc.Tame, {
-        label: Nu.i.tame
+      [ik.yc.Tame, {
+        label: wk.d.tame
       }],
-      [du.wc.Feed, {
-        label: Nu.i.feed
+      [ik.yc.Feed, {
+        label: wk.d.feed
       }],
-      [du.wc.Ride, {
-        label: Nu.i.ride
+      [ik.yc.Ride, {
+        label: wk.d.ride
       }]
     ]);
-    class KR {
+    class aF {
       constructor() {
-        this.target = uR, this.yV = du.ad, this.optionName = null, this.pickaxe = new Nu.e
+        this.target = FF, this.Ts = ik._c, this.optionName = null, this.pickaxe = new wk.b
       }
-      read(uu) {
-        var Ru;
-        const yu = du.v.targetBlockId(uu.api.apiView, 0);
-        yu !== this.yV && (this.yV = yu, this.optionName = yu === du.ad ? null : `${uu.tables.getMetaInfo(yu).rootName}CrosshairText`);
-        const Eu = null === this.optionName ? null : null !== (Ru = uu.tables.getClientOption(this.optionName)) && void 0 !== Ru ? Ru : null;
-        this.pickaxe.update(function(uu, Ru) {
-          var yu, Eu, Ku;
-          if (0 === (du.v.playerFlags(uu.api.apiView, 0) & du.Nd.Breaking) || Ru === du.ad || 0 === Ru) return null;
+      read(kk) {
+        var Fk;
+        const Bk = ik.w.targetBlockId(kk.api.apiView, 0);
+        Bk !== this.Ts && (this.Ts = Bk, this.optionName = Bk === ik._c ? null : `${kk.tables.getMetaInfo(Bk).rootName}CrosshairText`);
+        const Rk = null === this.optionName ? null : null !== (Fk = kk.tables.getClientOption(this.optionName)) && void 0 !== Fk ? Fk : null;
+        this.pickaxe.update(function(kk, Fk) {
+          var Bk, Rk, tk;
+          if (0 === (ik.w.playerFlags(kk.api.apiView, 0) & ik.Ed.Breaking) || Fk === ik._c || 0 === Fk) return null;
           const {
-            tables: Qu
-          } = uu;
-          if (!0 === Qu.getClientOption("creative")) return null;
-          const mu = Qu.nameOfId(Ru),
-            Ju = null === (yu = uu.items.jJ()) || void 0 === yu ? void 0 : yu.name,
-            Nu = null !== (Eu = Qu.getItemStat(mu, "harvestLevel")) && void 0 !== Eu ? Eu : 0;
-          return (0, qu.Oc)({
-            blockHarvestType: Qu.getDefaultItemStat(mu, "harvestType"),
-            blockHarvestLevel: Qu.getDefaultItemStat(mu, "harvestLevel"),
-            harvestLevel: Nu,
-            heldToolType: void 0 === Ju ? void 0 : Qu.getDefaultItemStat(Ju, "harvests"),
-            heldToolLevel: void 0 === Ju ? void 0 : Qu.getDefaultItemStat(Ju, "level")
-          }) && null !== (Ku = Ou.o[Nu]) && void 0 !== Ku ? Ku : null
-        }(uu, yu)), uu.watchPromptPick(RR);
-        const Ku = "touch" === RR ? function(uu) {
-          var Ru;
-          const yu = uu.interactLabel;
-          return yu === du.wc.Entity ? yR(uu.promptEntity) : yu === du.wc.TameWith ? {
-            label: (0, Nu.u)(uu.tables.nameOfId(uu.interactIcon))
-          } : null !== (Ru = ER.get(yu)) && void 0 !== Ru ? Ru : null
-        }(uu) : yR(uu.promptEntity);
-        return this.target = (0, vu.p)(this.target, {
-          interactPrompt: Ku,
-          blockText: Eu,
+            tables: ak
+          } = kk;
+          if (!0 === ak.getClientOption("creative")) return null;
+          const Xk = ak.nameOfId(Fk),
+            bk = null === (Bk = kk.items.Hb()) || void 0 === Bk ? void 0 : Bk.name,
+            wk = null !== (Rk = ak.getItemStat(Xk, "harvestLevel")) && void 0 !== Rk ? Rk : 0;
+          return (0, lk.Fc)({
+            blockHarvestType: ak.getDefaultItemStat(Xk, "harvestType"),
+            blockHarvestLevel: ak.getDefaultItemStat(Xk, "harvestLevel"),
+            harvestLevel: wk,
+            heldToolType: void 0 === bk ? void 0 : ak.getDefaultItemStat(bk, "harvests"),
+            heldToolLevel: void 0 === bk ? void 0 : ak.getDefaultItemStat(bk, "level")
+          }) && null !== (tk = nk.p[wk]) && void 0 !== tk ? tk : null
+        }(kk, Bk)), kk.watchPromptPick(BF);
+        const tk = "touch" === BF ? function(kk) {
+          var Fk;
+          const Bk = kk.interactLabel;
+          return Bk === ik.yc.Entity ? RF(kk.promptEntity) : Bk === ik.yc.TameWith ? {
+            label: (0, wk.w)(kk.tables.nameOfId(kk.interactIcon))
+          } : null !== (Fk = tF.get(Bk)) && void 0 !== Fk ? Fk : null
+        }(kk) : RF(kk.promptEntity);
+        return this.target = (0, Ik.o)(this.target, {
+          interactPrompt: tk,
+          blockText: Rk,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let QR = null;
-    const mR = {
+    let XF = null;
+    const bF = {
       current: () => {
-        var uu, Ru;
-        return null !== (uu = null === (Ru = QR) || void 0 === Ru ? void 0 : Ru.target) && void 0 !== uu ? uu : uR
+        var kk, Fk;
+        return null !== (kk = null === (Fk = XF) || void 0 === Fk ? void 0 : Fk.target) && void 0 !== kk ? kk : FF
       },
-      watch: uu => {
-        const Ru = new KR;
-        QR = Ru;
-        const yu = (0, xu.l)((yu => {
-          let Eu = Ru.read(yu);
-          uu(Eu);
-          const Ku = (0, Qu.y)((() => {
-            const Ku = Ru.read(yu);
-            Ku !== Eu && (Eu = Ku, uu(Ku))
+      watch: kk => {
+        const Fk = new aF;
+        XF = Fk;
+        const Bk = (0, Ak.f)((Bk => {
+          let Rk = Fk.read(Bk);
+          kk(Rk);
+          const tk = (0, ak.x)((() => {
+            const tk = Fk.read(Bk);
+            tk !== Rk && (Rk = tk, kk(tk))
           }));
           return () => {
-            Ku(), yu.watchPromptPick("off")
+            tk(), Bk.watchPromptPick("off")
           }
         }));
         return () => {
-          yu(), QR === Ru && (QR = null)
+          Bk(), XF === Fk && (XF = null)
         }
       }
     };
-    let JR = 0,
-      NR = 0;
-    const XR = {
-        health: Nu.n,
-        aura: Nu.j,
-        hotbar: fu.e.states.hotbar,
-        heldItemAim: fu.e.states.heldItemAim,
-        crouching: (0, xu.e)((uu => function(uu) {
-          const Ru = () => 0 !== (du.v.playerFlags(uu.apiView, 0) & du.Nd.Crouching);
+    let wF = 0,
+      dF = 0;
+    const sF = {
+        health: wk.q,
+        aura: wk.g,
+        hotbar: kF.d.states.hotbar,
+        heldItemAim: kF.d.states.heldItemAim,
+        crouching: (0, Ak.c)((kk => function(kk) {
+          const Fk = () => 0 !== (ik.w.playerFlags(kk.apiView, 0) & ik.Ed.Crouching);
           return {
-            current: Ru,
-            watch(uu) {
-              let yu = Ru();
-              return (0, Qu.v)((() => {
-                const Eu = Ru();
-                Eu !== yu && (yu = Eu, uu(Eu))
+            current: Fk,
+            watch(kk) {
+              let Bk = Fk();
+              return (0, ak.t)((() => {
+                const Rk = Fk();
+                Rk !== Bk && (Bk = Rk, kk(Rk))
               }))
             }
           }
-        }(uu.api).current), !1, (uu => (0, Qu.v)(uu))),
-        flight: (0, xu.e)((uu => () => function(uu) {
-          const Ru = du.v.playerFlags(uu.apiView, 0);
-          return (0, Nu.m)(0 !== (Ru & du.Nd.CanFly), 0 !== (Ru & du.Nd.Flying))
-        }(uu.api)), (0, Nu.m)(!1, !1), (uu => (0, Qu.v)(uu))),
-        gliderBoostFuel: (0, xu.e)((uu => () => du.v.gliderBoostFuel(uu.api.apiView, 0)), 0, (uu => (0, Qu.v)(uu))),
-        crosshairTarget: mR
+        }(kk.api).current), !1, (kk => (0, ak.t)(kk))),
+        flight: (0, Ak.c)((kk => () => function(kk) {
+          const Fk = ik.w.playerFlags(kk.apiView, 0);
+          return (0, wk.n)(0 !== (Fk & ik.Ed.CanFly), 0 !== (Fk & ik.Ed.Flying))
+        }(kk.api)), (0, wk.n)(!1, !1), (kk => (0, ak.t)(kk))),
+        gliderBoostFuel: (0, Ak.c)((kk => () => ik.w.gliderBoostFuel(kk.api.apiView, 0)), 0, (kk => (0, ak.t)(kk))),
+        crosshairTarget: bF
       },
-      VR = {
-        hotbarSlotRequested: fu.e.events.hotbarSlotRequested,
-        hotbarScrolled: fu.e.events.hotbarScrolled,
-        numberKeyPressed: fu.e.events.numberKeyPressed,
-        shotDamageToShow: (0, Nu.r)((uu => !0 === (0, au.e)(uu, "showDamageAmounts")))
+      VF = {
+        hotbarSlotRequested: kF.d.events.hotbarSlotRequested,
+        hotbarScrolled: kF.d.events.hotbarScrolled,
+        numberKeyPressed: kF.d.events.numberKeyPressed,
+        shotDamageToShow: (0, wk.u)((kk => !0 === (0, Qk.c)(kk, "showDamageAmounts")))
       },
-      rR = {
-        selectHotbarSlot: fu.e.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: uu => {
-          RR = uu
+      JF = {
+        selectHotbarSlot: kF.d.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: kk => {
+          BF = kk
         }
       },
-      BR = {
+      AF = {
         momentumFrac: function() {
-          var uu, Ru, yu;
-          const Eu = (0, mu.i)(),
-            Ku = performance.now(),
-            Qu = null === Eu || void 0 === Eu || null === (uu = Eu.items.jJ()) || void 0 === uu || null === (Ru = uu.attributes) || void 0 === Ru || null === (yu = Ru.customAttributes) || void 0 === yu ? void 0 : yu.enchantments;
-          return JR = null !== Eu && null !== Qu && void 0 !== Qu && Qu.Momentum ? 0 !== (du.v.playerFlags(Eu.api.apiView, 0) & du.Nd.Breaking) ? Math.max(0, du.v.momentumFrac(Eu.api.apiView, 0)) : Math.max(0, JR - (Ku - NR) / 1500) : 0, NR = Ku, JR
+          var kk, Fk, Bk;
+          const Rk = (0, Xk.g)(),
+            tk = performance.now(),
+            ak = null === Rk || void 0 === Rk || null === (kk = Rk.items.Hb()) || void 0 === kk || null === (Fk = kk.attributes) || void 0 === Fk || null === (Bk = Fk.customAttributes) || void 0 === Bk ? void 0 : Bk.enchantments;
+          return wF = null !== Rk && null !== ak && void 0 !== ak && ak.Momentum ? 0 !== (ik.w.playerFlags(Rk.api.apiView, 0) & ik.Ed.Breaking) ? Math.max(0, ik.w.momentumFrac(Rk.api.apiView, 0)) : Math.max(0, wF - (tk - dF) / 1500) : 0, dF = tk, wF
         }
       };
-    var xR = yu(40166),
-      SR = yu(1215),
-      pR = yu(36341),
-      TR = yu(8516),
-      WR = yu(1583),
-      jR = yu(2306),
-      HR = yu(4573);
-    let dR = !1;
+    var eF = Bk(40007),
+      yF = Bk(1192),
+      fF = Bk(36232),
+      mF = Bk(8471),
+      WF = Bk(1585),
+      vF = Bk(2303),
+      iF = Bk(4533);
+    let YF = !1;
 
-    function bR(uu) {
-      dR = uu
+    function oF(kk) {
+      YF = kk
     }
 
-    function CR() {
-      "inGame" !== Lu.d.get("gameState") || (0, WR.t)() || Xu.k.Op("ctrlCrouchWithoutFullscreen")
+    function LF() {
+      "inGame" !== zk.c.get("gameState") || (0, WF.v)() || dk.o.Hf("ctrlCrouchWithoutFullscreen")
     }
-    let kR = !1;
-    const eR = {
+    let OF = !1;
+    const EF = {
         OpenEmoteWheel: () => {
-          bR(!0), kR = !0, queueMicrotask((() => {
-            kR && (kR = !1, Xu.k.Op("requestEmoteWheelHoldOpen"))
+          oF(!0), OF = !0, queueMicrotask((() => {
+            OF && (OF = !1, dk.o.Hf("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          Xu.k.Op("toggleFullCoordinateOverlay")
+          dk.o.Hf("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, pR.e)() || Xu.k.Op("YKeyPressed")
+          (0, fF.d)() || dk.o.Hf("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, pR.e)() || Xu.k.Op("XKeyPressed")
+          (0, fF.d)() || dk.o.Hf("XKeyPressed")
         },
-        CtrlCrouch: CR,
+        CtrlCrouch: LF,
         "primary-fire": () => {
-          Xu.k.Op("mouseState", {
-            VV: SR.e.DownFirePrimary,
+          dk.o.Hf("mouseState", {
+            Ks: yF.b.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          Xu.k.Op("mouseState", {
-            VV: SR.e.DownFireSecondary,
+          dk.o.Hf("mouseState", {
+            Ks: yF.b.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          Xu.k.Op("mouseState", {
-            VV: SR.e.TouchDownLong,
+          dk.o.Hf("mouseState", {
+            Ks: yF.b.TouchDownLong,
             isDown: !0
           })
         }
       },
-      AR = {
+      SF = {
         OpenEmoteWheel: () => {
-          bR(!1), kR ? (kR = !1, (0, TR.e)() || Xu.k.Op("requestEmoteWheelHoldOpen")) : Xu.k.Op("requestEmoteWheelHoldRelease")
+          oF(!1), OF ? (OF = !1, (0, mF.b)() || dk.o.Hf("requestEmoteWheelHoldOpen")) : dk.o.Hf("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: CR,
+        CtrlCrouch: LF,
         "primary-fire": () => {
-          Xu.k.Op("mouseState", {
-            VV: SR.e.UpFirePrimary,
+          dk.o.Hf("mouseState", {
+            Ks: yF.b.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          Xu.k.Op("mouseState", {
-            VV: SR.e.UpFireSecondary,
+          dk.o.Hf("mouseState", {
+            Ks: yF.b.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          Xu.k.Op("mouseState", {
-            VV: SR.e.UpFirePrimary,
+          dk.o.Hf("mouseState", {
+            Ks: yF.b.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let DR = !1;
+    let NF = !1;
 
-    function MR() {
-      DR || (DR = !0, (0, HR.h)((uu => {
-        if ((0, Ku.d)()) return;
-        const Ru = (0, HR.g)(uu) ? "primary-fire" : uu.action;
-        var yu;
-        if (uu.down) {
-          if (0 === (uu.flags & jR.b.Synthetic)) {
-            var Eu;
-            null === (Eu = eR[Ru]) || void 0 === Eu || Eu.call(eR)
+    function HF() {
+      NF || (NF = !0, (0, iF.l)((kk => {
+        if ((0, tk.c)()) return;
+        const Fk = (0, iF.h)(kk) ? "primary-fire" : kk.action;
+        var Bk;
+        if (kk.down) {
+          if (0 === (kk.flags & vF.d.Synthetic)) {
+            var Rk;
+            null === (Rk = EF[Fk]) || void 0 === Rk || Rk.call(EF)
           }
-        } else null === (yu = AR[Ru]) || void 0 === yu || yu.call(AR)
+        } else null === (Bk = SF[Fk]) || void 0 === Bk || Bk.call(SF)
       })))
     }
-    var IR = yu(330),
-      GR = yu(106),
-      UR = yu(47),
-      nR = yu(40286),
-      sR = yu(1280),
-      tR = yu(38746);
-    let lR = !1;
-    const gR = {
-      sendCodeCollab(uu) {
-        var Ru;
-        null === (Ru = (0, mu.i)()) || void 0 === Ru || Ru.send(nu.d.CodeCollab, (0, nu.l)(uu), (0, tR.i)(uu))
+    var uF = Bk(279),
+      MF = Bk(98),
+      gF = Bk(42),
+      UF = Bk(40122),
+      cF = Bk(1267),
+      GF = Bk(38651);
+    let TF = !1;
+    const rF = {
+      sendCodeCollab(kk) {
+        var Fk;
+        null === (Fk = (0, Xk.g)()) || void 0 === Fk || Fk.send(Uk.b.CodeCollab, (0, Uk.n)(kk), (0, GF.f)(kk))
       }
     };
-    let cR = null,
-      LR = !1,
-      zR = null;
+    let DF = null,
+      zF = !1,
+      PF = null;
 
-    function FR() {
-      return "inGame" === Lu.d.get("gameState") && !(0, pR.e)()
+    function hF() {
+      return "inGame" === zk.c.get("gameState") && !(0, fF.d)()
     }
-    const wR = {
-        OpenInventory: uu => {
-          (0, WR.y)(uu, "inventory", (0, xR.k)())
+    const qF = {
+        OpenInventory: kk => {
+          (0, WF.B)(kk, "inventory", (0, eF.p)())
         },
-        OpenShop: uu => {
-          cR && FR() && (0, WR.u)(uu, IR.s.SHOP, !cR.shopIsEmpty(Hu.b.get("shopInfo")))
+        OpenShop: kk => {
+          DF && hF() && (0, WF.x)(kk, uF.p.SHOP, !DF.shopIsEmpty(vk.b.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: uu => {
-          FR() && (0, WR.u)(uu, IR.s.LOBBY_LEADERBOARD, !!Hu.b.get("lobbyLeaderboardInfo"))
+        OpenLobbyLeaderboard: kk => {
+          hF() && (0, WF.x)(kk, uF.p.LOBBY_LEADERBOARD, !!vk.b.get("lobbyLeaderboardInfo"))
         },
-        OpenTasksAndLeaderboard: uu => {
-          var Ru;
-          const yu = null === (Ru = cR) || void 0 === Ru ? void 0 : Ru.getClientGameMapKey();
-          yu ? (0, WR.B)(uu, !0, yu) : (0, WR.y)(uu, "retentionFeatures", !(!Hu.b.get("_tasks") && !Hu.b.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: kk => {
+          var Fk;
+          const Bk = null === (Fk = DF) || void 0 === Fk ? void 0 : Fk.getClientGameMapKey();
+          Bk ? (0, WF.F)(kk, !0, Bk) : (0, WF.B)(kk, "retentionFeatures", !(!vk.b.get("_tasks") && !vk.b.get("_availableLeaderboards")))
         },
-        OpenInviteLink: uu => {
-          (0, WR.y)(uu, "inviteLink", GR.featureFlags.canUseInviteLinks)
+        OpenInviteLink: kk => {
+          (0, WF.B)(kk, "inviteLink", MF.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: uu => {
-          FR() && function(uu) {
-            var Ru;
-            const yu = (0, mu.i)(),
-              Eu = null !== yu && void 0 !== yu && yu.isSessionLive ? yu.api : null,
-              Ku = Eu ? Eu.mH(Eu.localId) : null,
-              Qu = null !== (Ru = null === Ku || void 0 === Ku ? void 0 : Ku.map((uu => Math.floor(uu)))) && void 0 !== Ru ? Ru : null;
-            (0, WR.B)(uu, null !== Qu && (0, tR.e)((0, sR.c)()), (() => {
-              Xu.k.Op("EditLobbyCode", Qu)
+        OpenCodeEditor: kk => {
+          hF() && function(kk) {
+            var Fk;
+            const Bk = (0, Xk.g)(),
+              Rk = null !== Bk && void 0 !== Bk && Bk.isSessionLive ? Bk.api : null,
+              tk = Rk ? Rk.rW(Rk.localId) : null,
+              ak = null !== (Fk = null === tk || void 0 === tk ? void 0 : tk.map((kk => Math.floor(kk)))) && void 0 !== Fk ? Fk : null;
+            (0, WF.F)(kk, null !== ak && (0, GF.b)((0, cF.e)()), (() => {
+              dk.o.Hf("EditLobbyCode", ak)
             }))
-          }(uu)
+          }(kk)
         },
         HideUi: () => {
-          Xu.k.Op("showUi", !1)
+          dk.o.Hf("showUi", !1)
         }
       },
-      ZR = {
+      CF = {
         HideUi: () => {
-          Xu.k.Op("showUi", !0)
+          dk.o.Hf("showUi", !0)
         }
       };
 
-    function hR() {
-      LR || (LR = !0, yu.e(151).then((() => yu(42160))).then((uu => {
-        cR = uu
-      }), (uu => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", uu)
-      })), (0, nR.t)((uu => {
-        uu || !(0, nR.g)() || (0, GR.isMobile)() || !UR.i.getItem("disableFullscreen") || (0, WR.p)() || Lu.d.set({
-          openEverythingMenuName: IR.s.SETTINGS
+    function ZF() {
+      zF || (zF = !0, Bk.e(151).then((() => Bk(42018))).then((kk => {
+        DF = kk
+      }), (kk => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", kk)
+      })), (0, UF.w)((kk => {
+        kk || !(0, UF.h)() || (0, MF.isMobile)() || !gF.i.getItem("disableFullscreen") || (0, WF.s)() || zk.c.set({
+          openEverythingMenuName: uF.p.SETTINGS
         })
-      })), (0, HR.h)((uu => {
+      })), (0, iF.l)((kk => {
         let {
-          action: Ru,
-          down: yu,
-          press: Eu
-        } = uu;
-        var Qu, mu;
-        (0, Ku.d)() || (yu ? null === (Qu = wR[Ru]) || void 0 === Qu || Qu.call(wR, function(uu) {
-          var Ru;
-          if (0 === uu || (null === (Ru = zR) || void 0 === Ru ? void 0 : Ru.press) !== uu) {
-            const Ru = {
-              press: uu,
+          action: Fk,
+          down: Bk,
+          press: Rk
+        } = kk;
+        var ak, Xk;
+        (0, tk.c)() || (Bk ? null === (ak = qF[Fk]) || void 0 === ak || ak.call(qF, function(kk) {
+          var Fk;
+          if (0 === kk || (null === (Fk = PF) || void 0 === Fk ? void 0 : Fk.press) !== kk) {
+            const Fk = {
+              press: kk,
               event: new Event("inputAction")
             };
-            zR = Ru, queueMicrotask((() => {
-              zR === Ru && (zR = null)
+            PF = Fk, queueMicrotask((() => {
+              PF === Fk && (PF = null)
             }))
           }
-          return zR.event
-        }(Eu)) : null === (mu = ZR[Ru]) || void 0 === mu || mu.call(ZR))
+          return PF.event
+        }(Rk)) : null === (Xk = CF[Fk]) || void 0 === Xk || Xk.call(CF))
       })))
     }
-    var PR = yu(38710),
-      iR = yu(38723),
-      YR = yu(38714);
-    const oR = {
-      completeTask(uu) {
-        var Ru;
-        null === (Ru = (0, mu.i)()) || void 0 === Ru || Ru.send(nu.d.CompleteTask, (0, nu.n)(uu))
+    var pF = Bk(38617),
+      KF = Bk(38640),
+      xF = Bk(38624);
+    const jF = {
+      completeTask(kk) {
+        var Fk;
+        null === (Fk = (0, Xk.g)()) || void 0 === Fk || Fk.send(Uk.b.CompleteTask, (0, Uk.p)(kk))
       },
-      setServerCookie(uu) {
-        var Ru;
+      setServerCookie(kk) {
+        var Fk;
         let {
-          key: yu,
-          value: Eu
-        } = uu;
-        null === (Ru = (0, mu.i)()) || void 0 === Ru || Ru.send(nu.d.GeneralCookieSet, (0, nu.q)({
-          Rm: yu,
-          ym: Eu
+          key: Bk,
+          value: Rk
+        } = kk;
+        null === (Fk = (0, Xk.g)()) || void 0 === Fk || Fk.send(Uk.b.GeneralCookieSet, (0, Uk.v)({
+          dX: Bk,
+          sX: Rk
         }))
       },
-      answerUiRequest(uu) {
-        var Ru;
+      answerUiRequest(kk) {
+        var Fk;
         let {
-          id: yu,
-          Jm: Eu
-        } = uu;
-        null === (Ru = (0, mu.i)()) || void 0 === Ru || Ru.send(nu.d.UiRequestResp, (0, nu.R)({
-          dJ: yu,
-          bJ: Eu,
-          CJ: 5
+          id: Bk,
+          eX: Rk
+        } = kk;
+        null === (Fk = (0, Xk.g)()) || void 0 === Fk || Fk.send(Uk.b.UiRequestResp, (0, Uk.R)({
+          Mb: Bk,
+          gb: Rk,
+          Ub: 5
         }))
       },
-      chooseRewardedAd(uu) {
-        var Ru;
+      chooseRewardedAd(kk) {
+        var Fk;
         let {
-          id: yu,
-          Jm: Eu
-        } = uu;
-        null === (Ru = (0, mu.i)()) || void 0 === Ru || Ru.send(nu.d.UiRequestResponded, (0, nu.N)({
-          id: yu,
-          Jm: Eu
+          id: Bk,
+          eX: Rk
+        } = kk;
+        null === (Fk = (0, Xk.g)()) || void 0 === Fk || Fk.send(Uk.b.UiRequestResponded, (0, Uk.O)({
+          id: Bk,
+          eX: Rk
         }))
       },
-      requestLeaderboard(uu) {
-        var Ru;
+      requestLeaderboard(kk) {
+        var Fk;
         let {
-          category: yu,
-          timeframe: Eu,
-          seeTop: Ku
-        } = uu;
-        null === (Ru = (0, mu.i)()) || void 0 === Ru || Ru.send(nu.d.LeaderboardRequest, {
-          category: yu,
-          timeframe: Eu,
-          seeTop: Ku
+          category: Bk,
+          timeframe: Rk,
+          seeTop: tk
+        } = kk;
+        null === (Fk = (0, Xk.g)()) || void 0 === Fk || Fk.send(Uk.b.LeaderboardRequest, {
+          category: Bk,
+          timeframe: Rk,
+          seeTop: tk
         })
       }
     };
-    let qR = !1;
-    const OR = ju.f.DW / 2,
-      vR = [OR, -OR, -OR, -OR, OR, OR, -OR, OR],
-      aR = [0, 0, 0];
+    let lF = !1;
+    const nF = Wk.h.Qm / 2,
+      IF = [nF, -nF, -nF, -nF, nF, nF, -nF, nF],
+      QF = [0, 0, 0];
 
-    function fR(uu, Ru, yu) {
-      for (let Eu = 0; Eu < uu.length; Eu += 2)
-        if (uu[Eu] === Ru && uu[Eu + 1] === yu) return !0;
+    function kB(kk, Fk, Bk) {
+      for (let Rk = 0; Rk < kk.length; Rk += 2)
+        if (kk[Rk] === Fk && kk[Rk + 1] === Bk) return !0;
       return !1
     }
-    const uy = {
+    const FB = {
       blocksStandingOn: function() {
-        const uu = (0, mu.i)();
-        if (null === uu) return [];
+        const kk = (0, Xk.g)();
+        if (null === kk) return [];
         const {
-          api: Ru,
-          chunks: yu,
-          tables: Eu
-        } = uu;
-        if (!Ru.readPosition(Ru.localId, aR)) return [];
-        const [Ku, Qu, Ju] = aR, Nu = Math.ceil(Qu) - 1, Xu = [], Vu = [];
-        for (let mu = 0; mu < vR.length; mu += 2) {
-          const uu = Ku + vR[mu],
-            Ru = Ju + vR[mu + 1];
-          if (Number.isInteger(uu) || Number.isInteger(Ru)) continue;
-          const Qu = Math.floor(uu),
-            ru = Math.floor(Ru);
-          if (fR(Vu, Qu, ru)) continue;
-          const Bu = yu.yV(Qu, Nu, ru);
-          Eu.isSolidBlockId(Bu) && (Vu.push(Qu, ru), Xu.push(Eu.nameOfId(Bu)))
+          api: Fk,
+          chunks: Bk,
+          tables: Rk
+        } = kk;
+        if (!Fk.readPosition(Fk.localId, QF)) return [];
+        const [tk, ak, bk] = QF, wk = Math.ceil(ak) - 1, dk = [], sk = [];
+        for (let Xk = 0; Xk < IF.length; Xk += 2) {
+          const kk = tk + IF[Xk],
+            Fk = bk + IF[Xk + 1];
+          if (Number.isInteger(kk) || Number.isInteger(Fk)) continue;
+          const ak = Math.floor(kk),
+            Vk = Math.floor(Fk);
+          if (kB(sk, ak, Vk)) continue;
+          const Jk = Bk.Ts(ak, wk, Vk);
+          Rk.isSolidBlockId(Jk) && (sk.push(ak, Vk), dk.push(Rk.nameOfId(Jk)))
         }
-        return Xu
+        return dk
       },
       dropAhead: function() {
-        const uu = (0, mu.i)();
-        return null !== uu && 0 !== (du.v.playerFlags(uu.api.apiView, 0) & du.Nd.DropAhead)
+        const kk = (0, Xk.g)();
+        return null !== kk && 0 !== (ik.w.playerFlags(kk.api.apiView, 0) & ik.Ed.DropAhead)
       }
     };
-    var Ry = yu(36720),
-      yy = yu(38836),
-      Ey = yu(1311),
-      Ky = yu(40241);
-    const Qy = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      my = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var BB = Bk(36621),
+      RB = Bk(38719),
+      tB = Bk(1300),
+      aB = Bk(40077);
+    const XB = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      bB = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function Jy() {
-      const uu = new Set;
+    function wB() {
+      const kk = new Set;
       return {
-        add: Ru => (uu.add(Ru), () => {
-          uu.delete(Ru)
+        add: Fk => (kk.add(Fk), () => {
+          kk.delete(Fk)
         }),
         fire() {
-          for (const Ru of uu) Ru()
+          for (const Fk of kk) Fk()
         }
       }
     }
-    const Ny = Object.freeze([]);
+    const dB = Object.freeze([]);
 
-    function Xy(uu, Ru) {
-      let yu, {
-        rereads: Eu,
-        followLocalId: Ku
-      } = Ru;
-      const mu = () => (yu = (0, vu.p)(yu, uu()), yu);
+    function sB(kk, Fk) {
+      let Bk, {
+        rereads: Rk,
+        followLocalId: tk
+      } = Fk;
+      const Xk = () => (Bk = (0, Ik.o)(Bk, kk()), Bk);
       return {
-        current: mu,
-        watch(uu) {
-          const Ru = (0, Su.d)((Ru => {
-            Eu(Ru) && uu(mu())
+        current: Xk,
+        watch(kk) {
+          const Fk = (0, ek.e)((Fk => {
+            Rk(Fk) && kk(Xk())
           }));
-          if (!Ku) return Ru;
-          let yu = (0, xu.h)();
-          const Ju = (0, Qu.y)((() => {
-            const Ru = (0, xu.h)();
-            Ru !== yu && (yu = Ru, uu(mu()))
+          if (!tk) return Fk;
+          let Bk = (0, Ak.e)();
+          const bk = (0, ak.x)((() => {
+            const Fk = (0, Ak.e)();
+            Fk !== Bk && (Bk = Fk, kk(Xk()))
           }));
           return () => {
-            Ru(), Ju()
+            Fk(), bk()
           }
         }
       }
     }
-    const Vy = {
-        players: Xy((function() {
-          const uu = Su.g.ids(),
-            Ru = {};
-          for (const Qu of uu) {
-            var yu, Eu, Ku;
-            Ru[Qu] = {
-              name: null !== (yu = Su.g.getName(Qu)) && void 0 !== yu ? yu : null,
-              ranks: null !== (Eu = Su.g.getSetting(Qu, "ranks")) && void 0 !== Eu ? Eu : Ny,
-              cosmetics: null !== (Ku = (0, Su.i)(Qu)) && void 0 !== Ku ? Ku : null
+    const VB = {
+        players: sB((function() {
+          const kk = ek.g.ids(),
+            Fk = {};
+          for (const ak of kk) {
+            var Bk, Rk, tk;
+            Fk[ak] = {
+              name: null !== (Bk = ek.g.getName(ak)) && void 0 !== Bk ? Bk : null,
+              ranks: null !== (Rk = ek.g.getSetting(ak, "ranks")) && void 0 !== Rk ? Rk : dB,
+              cosmetics: null !== (tk = (0, ek.i)(ak)) && void 0 !== tk ? tk : null
             }
           }
           return {
-            ids: uu,
-            byId: Ru,
-            localId: (0, xu.h)()
+            ids: kk,
+            byId: Fk,
+            localId: (0, Ak.e)()
           }
         }), {
-          rereads: uu => "roster" !== uu.kind || uu.members || uu.settings.has("ranks"),
+          rereads: kk => "roster" !== kk.kind || kk.members || kk.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: Xy((function() {
-          const uu = {};
-          for (const Ku of Su.g.ids()) {
-            var Ru, yu, Eu;
-            uu[Ku] = {
-              colour: null !== (Ru = Su.g.getSetting(Ku, "colorInLobbyLeaderboard")) && void 0 !== Ru ? Ru : null,
-              values: null !== (yu = Su.g.getSetting(Ku, "lobbyLeaderboardValues")) && void 0 !== yu ? yu : null,
-              tags: null !== (Eu = Su.g.getSetting(Ku, "lobbyLeaderboardTags")) && void 0 !== Eu ? Eu : null
+        lobbyLeaderboardRows: sB((function() {
+          const kk = {};
+          for (const tk of ek.g.ids()) {
+            var Fk, Bk, Rk;
+            kk[tk] = {
+              colour: null !== (Fk = ek.g.getSetting(tk, "colorInLobbyLeaderboard")) && void 0 !== Fk ? Fk : null,
+              values: null !== (Bk = ek.g.getSetting(tk, "lobbyLeaderboardValues")) && void 0 !== Bk ? Bk : null,
+              tags: null !== (Rk = ek.g.getSetting(tk, "lobbyLeaderboardTags")) && void 0 !== Rk ? Rk : null
             }
           }
-          return uu
+          return kk
         }), {
-          rereads: function(uu) {
-            if ("roster" !== uu.kind) return "reset" === uu.kind;
+          rereads: function(kk) {
+            if ("roster" !== kk.kind) return "reset" === kk.kind;
             const {
-              members: Ru,
-              settings: yu
-            } = uu;
-            return Ru || yu.has("colorInLobbyLeaderboard") || yu.has("lobbyLeaderboardValues") || yu.has("lobbyLeaderboardTags")
+              members: Fk,
+              settings: Bk
+            } = kk;
+            return Fk || Bk.has("colorInLobbyLeaderboard") || Bk.has("lobbyLeaderboardValues") || Bk.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      ry = {
+      JB = {
         cosmeticsUpdated: {
-          watch: uu => (0, Su.d)((Ru => {
-            if ("cosmetics" !== Ru.kind) return;
-            const yu = (0, xu.h)();
-            uu(Ru.updates.map((uu => {
+          watch: kk => (0, ek.e)((Fk => {
+            if ("cosmetics" !== Fk.kind) return;
+            const Bk = (0, Ak.e)();
+            kk(Fk.updates.map((kk => {
               let {
-                hy: Ru,
-                Py: Eu,
-                iy: Ku
-              } = uu;
+                PB: Fk,
+                hB: Rk,
+                qB: tk
+              } = kk;
               return {
-                local: Ru === yu,
-                Py: Eu,
-                iy: Ku
+                local: Fk === Bk,
+                hB: Rk,
+                qB: tk
               }
             })))
           }))
         }
       };
-    var By = yu(2719),
-      xy = yu(1661),
-      Sy = yu(640),
-      py = yu(40292);
-    let Ty = !1,
-      Wy = null;
-    const jy = {
-      setShopOpen(uu) {
-        var Ru;
-        null === (Ru = (0, mu.i)()) || void 0 === Ru || Ru.send(nu.d.ShopMenuChanged, (0, nu.H)(uu))
+    var AB = Bk(2728),
+      eB = Bk(1650),
+      yB = Bk(633),
+      fB = Bk(40131);
+    let mB = !1,
+      WB = null;
+    const vB = {
+      setShopOpen(kk) {
+        var Fk;
+        null === (Fk = (0, Xk.g)()) || void 0 === Fk || Fk.send(Uk.b.ShopMenuChanged, (0, Uk.I)(kk))
       },
-      buyShopItem(uu) {
-        var Ru;
+      buyShopItem(kk) {
+        var Fk;
         let {
-          categoryKey: yu,
-          itemKey: Eu,
-          userInput: Ku
-        } = uu;
-        null === (Ru = (0, mu.i)()) || void 0 === Ru || Ru.send(nu.d.ItemBought, {
-          categoryKey: yu,
-          itemKey: Eu,
-          shopVersion: Hu.b.get("_shopVersion"),
-          userInput: Ku
+          categoryKey: Bk,
+          itemKey: Rk,
+          userInput: tk
+        } = kk;
+        null === (Fk = (0, Xk.g)()) || void 0 === Fk || Fk.send(Uk.b.ItemBought, {
+          categoryKey: Bk,
+          itemKey: Rk,
+          shopVersion: vk.b.get("_shopVersion"),
+          userInput: tk
         })
       }
     };
-    let Hy = !1;
-    var dy = yu(4586);
-    const by = jR.t.LookFrozen | jR.t.ClicksSuppressed;
+    let iB = !1;
+    var YB = Bk(4546);
+    const oB = vF.A.LookFrozen | vF.A.ClicksSuppressed;
 
-    function Cy(uu, Ru) {
-      var yu;
-      null !== (yu = (0, mu.i)()) && void 0 !== yu && yu.send(uu, Ru) || console.warn(`[bloxd-wasm-client] message ${uu} not sent: no live game or the core's command ring is full`)
-    }(0, pu.m)(Uu.jb, (uu => {
-      const Ru = (0, su.f)(Uu.jb, uu);
-      void 0 !== Ru && Xu.k.Op("setDiscordReportKey", Ru)
+    function LB(kk, Fk) {
+      var Bk;
+      null !== (Bk = (0, Xk.g)()) && void 0 !== Bk && Bk.send(kk, Fk) || console.warn(`[bloxd-wasm-client] message ${kk} not sent: no live game or the core's command ring is full`)
+    }(0, yk.k)(gk.pb, (kk => {
+      const Fk = (0, ck.f)(gk.pb, kk);
+      void 0 !== Fk && dk.o.Hf("setDiscordReportKey", Fk)
     }));
-    const ky = {
-      ignorePlayer(uu) {
-        Cy(nu.d.IgnoreUser, (0, nu.r)({
-          Im: uu
+    const OB = {
+      ignorePlayer(kk) {
+        LB(Uk.b.IgnoreUser, (0, Uk.x)({
+          GX: kk
         }))
       },
-      reportPlayer(uu) {
+      reportPlayer(kk) {
         let {
-          playerId: Ru,
-          chatMsgId: yu,
-          vQ: Eu,
-          details: Ku
-        } = uu;
-        Cy(nu.d.UserReport, (0, nu.W)({
-          IV: Ru,
-          GV: yu,
-          vQ: Eu,
-          aQ: Ku
+          playerId: Fk,
+          chatMsgId: Bk,
+          aX: Rk,
+          details: tk
+        } = kk;
+        LB(Uk.b.UserReport, (0, Uk.Z)({
+          AV: Fk,
+          eV: Bk,
+          aX: Rk,
+          XX: tk
         }))
       },
-      reportWorldCodeChat(uu) {
+      reportWorldCodeChat(kk) {
         let {
-          chatMsgId: Ru,
-          vQ: yu,
-          details: Eu
-        } = uu;
-        Cy(nu.d.UserReport, (0, nu.W)({
-          IV: "",
-          GV: Ru,
-          vQ: yu,
-          aQ: Eu
+          chatMsgId: Fk,
+          aX: Bk,
+          details: Rk
+        } = kk;
+        LB(Uk.b.UserReport, (0, Uk.Z)({
+          AV: "",
+          eV: Fk,
+          aX: Bk,
+          XX: Rk
         }))
       },
-      requestDiscordReportKey(uu) {
-        Cy(nu.d.ReqDiscordReportKey, (0, nu.C)(uu))
+      requestDiscordReportKey(kk) {
+        LB(Uk.b.ReqDiscordReportKey, (0, Uk.E)(kk))
       },
-      reportLobbyOrGame(uu) {
+      reportLobbyOrGame(kk) {
         let {
-          target: Ru,
-          vQ: yu,
-          details: Eu
-        } = uu;
-        "customGame" === Ru ? Cy(nu.d.CustomGameReport, (0, nu.p)({
-          vQ: yu,
-          aQ: Eu
-        })) : Cy(nu.d.LobbyReport, (0, nu.v)({
-          vQ: yu,
-          aQ: Eu
+          target: Fk,
+          aX: Bk,
+          details: Rk
+        } = kk;
+        "customGame" === Fk ? LB(Uk.b.CustomGameReport, (0, Uk.r)({
+          aX: Bk,
+          XX: Rk
+        })) : LB(Uk.b.LobbyReport, (0, Uk.y)({
+          aX: Bk,
+          XX: Rk
         }))
       },
-      updateMyCosmetic(uu) {
-        Cy(nu.d.UpdateMyCosmetic, (0, nu.V)(uu))
+      updateMyCosmetic(kk) {
+        LB(Uk.b.UpdateMyCosmetic, (0, Uk.X)(kk))
       },
-      holdEmoteWheel(uu) {
-        !uu || dR ? (0, dy.h)(by, uu ? by : 0) : Xu.k.Op("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(kk) {
+        !kk || YF ? (0, YB.i)(oB, kk ? oB : 0) : dk.o.Hf("requestEmoteWheelHoldRelease")
       }
     };
-    var ey = yu(40298),
-      Ay = yu(9158),
-      Dy = yu(39330);
-    const My = [0, 0, 0],
-      Iy = [0, 0, 0],
-      Gy = [0, 0, 0],
-      Uy = {
-        blockAtViewPoint(uu) {
+    var EB = Bk(40137),
+      SB = Bk(9095),
+      NB = Bk(39186);
+    const HB = [0, 0, 0],
+      uB = [0, 0, 0],
+      MB = [0, 0, 0],
+      gB = {
+        blockAtViewPoint(kk) {
           let {
-            x: Ru,
-            y: yu
-          } = uu;
-          const Eu = (0, mu.i)();
-          if (null === Eu || void 0 === Eu || !Eu.renderFrame.hasView) return null;
+            x: Fk,
+            y: Bk
+          } = kk;
+          const Rk = (0, Xk.g)();
+          if (null === Rk || void 0 === Rk || !Rk.renderFrame.hasView) return null;
           const {
-            renderFrame: Ku,
-            clientApi: Qu,
-            api: Ju
-          } = Eu;
-          let Nu = 0;
-          return (0, Dy.f)(((uu, Ru, yu) => (Nu = Qu.getBlockId(uu, Ru, yu), 0 !== Nu)), Ku.cameraPosition, (0, Dy.j)((uu => du.v.viewProj(Ju.apiView, 0, uu)), Ru, yu, My), Dy.c, Iy, Gy) ? {
-            pos: [Iy[0], Iy[1], Iy[2]],
-            normal: [Gy[0], Gy[1], Gy[2]],
-            name: (0, Ay.g)(Nu)
+            renderFrame: tk,
+            clientApi: ak,
+            api: bk
+          } = Rk;
+          let wk = 0;
+          return (0, NB.h)(((kk, Fk, Bk) => (wk = ak.getBlockId(kk, Fk, Bk), 0 !== wk)), tk.cameraPosition, (0, NB.i)((kk => ik.w.viewProj(bk.apiView, 0, kk)), Fk, Bk, HB), NB.d, uB, MB) ? {
+            pos: [uB[0], uB[1], uB[2]],
+            normal: [MB[0], MB[1], MB[2]],
+            name: (0, SB.h)(wk)
           } : null
         }
       },
-      ny = {
-        setBlockHighlight(uu) {
-          var Ru;
-          null === (Ru = (0, mu.i)()) || void 0 === Ru || Ru.setBlockHighlight(uu)
+      UB = {
+        setBlockHighlight(kk) {
+          var Fk;
+          null === (Fk = (0, Xk.g)()) || void 0 === Fk || Fk.setBlockHighlight(kk)
         }
       };
-    var sy = yu(1867),
-      ty = yu(40302),
-      ly = yu(40311),
-      gy = yu(40313);
-    var cy = yu(599),
-      Ly = yu(39337);
+    var cB = Bk(1858),
+      GB = Bk(40141),
+      TB = Bk(40147),
+      rB = Bk(40150);
+    var DB = Bk(594),
+      zB = Bk(39190);
 
-    function zy(uu) {
-      if (null === uu || void 0 === uu || !uu.isCoreRunning) return null;
+    function PB(kk) {
+      if (null === kk || void 0 === kk || !kk.isCoreRunning) return null;
       const {
-        api: Ru,
-        chunks: yu,
-        items: Eu,
-        tables: Ku
-      } = uu;
+        api: Fk,
+        chunks: Bk,
+        items: Rk,
+        tables: tk
+      } = kk;
       return {
         playerFeet() {
-          const uu = Ru.mH(Ru.localId);
-          return null !== uu && void 0 !== uu && uu.every(Number.isFinite) ? uu : null
+          const kk = Fk.rW(Fk.localId);
+          return null !== kk && void 0 !== kk && kk.every(Number.isFinite) ? kk : null
         },
-        chunkBlocks: uu => yu.isLoaded(uu[0], uu[1], uu[2]) ? (uu, Ru, Eu) => yu.yV(uu, Ru, Eu) : null,
-        blockName: uu => Ku.nameOfId(uu),
+        chunkBlocks: kk => Bk.isLoaded(kk[0], kk[1], kk[2]) ? (kk, Fk, Rk) => Bk.Ts(kk, Fk, Rk) : null,
+        blockName: kk => tk.nameOfId(kk),
         inventory: () => ({
-          slots: Eu.playerItems().map((uu => uu ? {
-            name: uu.name,
-            amount: uu.amount
+          slots: Rk.playerItems().map((kk => kk ? {
+            name: kk.name,
+            amount: kk.amount
           } : null)),
-          heldSlot: Eu.selectedSlot
+          heldSlot: Rk.selectedSlot
         }),
         nearby() {
-          const yu = [];
-          for (let Ku = 0; Ku < Ru.idStr.length; Ku++) {
-            var Eu;
-            const Qu = Ru.idStr[Ku],
-              mu = Ru.serverIds[Ku],
-              Ju = Ru.kinds[Ku];
-            if (null === Qu || Ru.isLocal(mu) || Ju >>> du.c !== du.t.Lifeform) continue;
-            const Nu = Ru.mH(mu),
-              Xu = cy.l[Ju & du.f];
-            Nu && void 0 !== Xu && yu.push({
-              kind: "Player" === Xu ? "player" : Xu,
-              name: null !== (Eu = uu.clientApi.getEntityName(Qu)) && void 0 !== Eu ? Eu : null,
-              position: Nu
+          const Bk = [];
+          for (let tk = 0; tk < Fk.idStr.length; tk++) {
+            var Rk;
+            const ak = Fk.idStr[tk],
+              Xk = Fk.serverIds[tk],
+              bk = Fk.kinds[tk];
+            if (null === ak || Fk.isLocal(Xk) || bk >>> ik.e !== ik.t.Lifeform) continue;
+            const wk = Fk.rW(Xk),
+              dk = DB.i[bk & ik.g];
+            wk && void 0 !== dk && Bk.push({
+              kind: "Player" === dk ? "player" : dk,
+              name: null !== (Rk = kk.clientApi.getEntityName(ak)) && void 0 !== Rk ? Rk : null,
+              position: wk
             })
           }
-          return yu
+          return Bk
         },
         droppedItems() {
-          let uu = 0;
-          for (let yu = 0; yu < Ru.idStr.length; yu++) null !== Ru.idStr[yu] && Ru.kinds[yu] >>> du.c === du.t.Item && uu++;
-          return uu
+          let kk = 0;
+          for (let Bk = 0; Bk < Fk.idStr.length; Bk++) null !== Fk.idStr[Bk] && Fk.kinds[Bk] >>> ik.e === ik.t.Item && kk++;
+          return kk
         }
       }
     }
-    const Fy = {
-        worldCodeAiChunk: uu => Promise.resolve((0, Ly.b)(zy((0, mu.i)()), uu)),
-        worldCodeAiGameState: () => Promise.resolve((0, Ly.c)(zy((0, mu.i)())))
+    const hB = {
+        worldCodeAiChunk: kk => Promise.resolve((0, zB.e)(PB((0, Xk.g)()), kk)),
+        worldCodeAiGameState: () => Promise.resolve((0, zB.f)(PB((0, Xk.g)())))
       },
-      wy = function(uu) {
-        const Ru = Jy(),
-          Eu = Jy(),
-          Ku = new Set,
-          Qu = new Set,
-          mu = () => {
-            var Ru, yu;
-            return null !== (Ru = null === (yu = uu.runtime()) || void 0 === yu ? void 0 : yu.currentViewer) && void 0 !== Ru ? Ru : null
+      qB = function(kk) {
+        const Fk = wB(),
+          Rk = wB(),
+          tk = new Set,
+          ak = new Set,
+          Xk = () => {
+            var Fk, Bk;
+            return null !== (Fk = null === (Bk = kk.runtime()) || void 0 === Bk ? void 0 : Bk.currentViewer) && void 0 !== Fk ? Fk : null
           };
-        let Ju = null,
-          Nu = null;
-        const Vu = (uu, Ru) => ({
-            current: uu,
-            watch(yu) {
-              let Eu = uu();
-              return Ru.add((() => {
-                const Ru = uu();
-                Ru !== Eu && (Eu = Ru, yu(Ru))
+        let bk = null,
+          wk = null;
+        const sk = (kk, Fk) => ({
+            current: kk,
+            watch(Bk) {
+              let Rk = kk();
+              return Fk.add((() => {
+                const Fk = kk();
+                Fk !== Rk && (Rk = Fk, Bk(Fk))
               }))
             }
           }),
-          Bu = uu => ({
-            watch: Ru => (uu.add(Ru), () => {
-              uu.delete(Ru)
+          Jk = kk => ({
+            watch: Fk => (kk.add(Fk), () => {
+              kk.delete(Fk)
             })
           }),
-          xu = uu => {
-            const Ru = mu(),
-              yu = null === Ru || void 0 === Ru ? void 0 : Ru.view;
-            Ru && yu && Ru.seek(Math.max(0, Math.min(yu.totalTicks - 1, yu.sr + uu * ru.od)))
+          Ak = kk => {
+            const Fk = Xk(),
+              Bk = null === Fk || void 0 === Fk ? void 0 : Fk.view;
+            Fk && Bk && Fk.seek(Math.max(0, Math.min(Bk.totalTicks - 1, Bk.yJ + kk * Vk.Pc)))
           },
-          Su = {
-            replay: Vu((() => {
-              var uu;
-              const Ru = mu(),
-                yu = null !== (uu = null === Ru || void 0 === Ru ? void 0 : Ru.view) && void 0 !== uu ? uu : null;
-              return null === Ru || null === yu || yu.state === ru.bd.None ? (Ju = null, null) : (Ju = (0, vu.p)(Ju, {
-                id: Ru.id,
-                sr: yu.sr,
-                totalTicks: yu.totalTicks,
-                eD: ru.od,
-                playing: yu.state === ru.bd.Playing,
-                speed: yu.speed,
-                cameraMode: yu.cameraMode,
-                freecam: "freecam" === yu.cameraMode
-              }), Ju)
-            }), Ru),
-            replayEdits: Vu((() => {
-              var uu;
-              const Ru = mu(),
-                yu = null !== (uu = null === Ru || void 0 === Ru ? void 0 : Ru.view) && void 0 !== uu ? uu : null;
-              return null === Ru || null === yu || yu.state === ru.bd.None ? (Nu = null, null) : (Nu = (0, vu.p)(Nu, {
-                cameraKeyframes: [...Ru.keyframes],
-                playbackMark: yu.mark,
-                fileName: Ru.fileName,
-                unsavedChanges: Ru.unsavedChanges,
-                suggestSaveAs: Ru.suggestSaveAs
-              }), Nu)
-            }), Ru),
-            replayRecorder: Vu((() => {
-              var Ru, yu;
-              return null !== (Ru = null === (yu = uu.runtime()) || void 0 === yu ? void 0 : yu.recorder.current) && void 0 !== Ru ? Ru : Ky.b.states.replayRecorder.current()
-            }), Eu),
+          ek = {
+            replay: sk((() => {
+              var kk;
+              const Fk = Xk(),
+                Bk = null !== (kk = null === Fk || void 0 === Fk ? void 0 : Fk.view) && void 0 !== kk ? kk : null;
+              return null === Fk || null === Bk || Bk.state === Vk.Cc.None ? (bk = null, null) : (bk = (0, Ik.o)(bk, {
+                id: Fk.id,
+                yJ: Bk.yJ,
+                totalTicks: Bk.totalTicks,
+                kN: Vk.Pc,
+                playing: Bk.state === Vk.Cc.Playing,
+                speed: Bk.speed,
+                cameraMode: Bk.cameraMode,
+                freecam: "freecam" === Bk.cameraMode
+              }), bk)
+            }), Fk),
+            replayEdits: sk((() => {
+              var kk;
+              const Fk = Xk(),
+                Bk = null !== (kk = null === Fk || void 0 === Fk ? void 0 : Fk.view) && void 0 !== kk ? kk : null;
+              return null === Fk || null === Bk || Bk.state === Vk.Cc.None ? (wk = null, null) : (wk = (0, Ik.o)(wk, {
+                cameraKeyframes: [...Fk.keyframes],
+                playbackMark: Bk.mark,
+                fileName: Fk.fileName,
+                unsavedChanges: Fk.unsavedChanges,
+                suggestSaveAs: Fk.suggestSaveAs
+              }), wk)
+            }), Fk),
+            replayRecorder: sk((() => {
+              var Fk, Bk;
+              return null !== (Fk = null === (Bk = kk.runtime()) || void 0 === Bk ? void 0 : Bk.recorder.current) && void 0 !== Fk ? Fk : aB.d.states.replayRecorder.current()
+            }), Rk),
             replayVideoExporting: {
-              current: yy.b,
-              watch: uu => (0, Xu.n)("replayViewer|videoExportChanged", (() => {
-                uu((0, yy.b)())
+              current: RB.b,
+              watch: kk => (0, dk.p)("replayViewer|videoExportChanged", (() => {
+                kk((0, RB.b)())
               }))
             }
           },
-          pu = {
-            replayUiActionRequested: Bu(Qu),
-            replayViewerRequested: Bu(Ku)
+          yk = {
+            replayUiActionRequested: Jk(ak),
+            replayViewerRequested: Jk(tk)
           },
-          Tu = uu => {
-            for (const Ru of Ku) Ru(uu)
+          fk = kk => {
+            for (const Fk of tk) Fk(kk)
           },
-          Wu = () => {
-            var Eu;
-            !0 === (null === (Eu = mu()) || void 0 === Eu ? void 0 : Eu.isOpen) && Promise.all([yu.e(94), yu.e(63)]).then((() => yu(42168))).then((yu => {
+          mk = () => {
+            var Rk;
+            !0 === (null === (Rk = Xk()) || void 0 === Rk ? void 0 : Rk.isOpen) && Promise.all([Bk.e(94), Bk.e(63)]).then((() => Bk(42020))).then((Bk => {
               let {
-                startWasmReplayVideoExport: Eu
-              } = yu;
-              return Eu({
-                viewer: mu,
+                startWasmReplayVideoExport: Rk
+              } = Bk;
+              return Rk({
+                viewer: Xk,
                 canvas: () => {
-                  var Ru, yu;
-                  return null !== (Ru = null === (yu = uu.canvas) || void 0 === yu ? void 0 : yu.call(uu)) && void 0 !== Ru ? Ru : null
+                  var Fk, Bk;
+                  return null !== (Fk = null === (Bk = kk.canvas) || void 0 === Bk ? void 0 : Bk.call(kk)) && void 0 !== Fk ? Fk : null
                 },
-                watchViewer: Ru.add,
-                requestViewer: Tu
+                watchViewer: Fk.add,
+                requestViewer: fk
               })
-            }), (uu => {
-              console.error("Couldn't load the video export", uu), Ey.NotificationProvider.showAlertPopup({
+            }), (kk => {
+              console.error("Couldn't load the video export", kk), tB.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((uu => {
-              console.error("The video export failed", uu)
+            })).catch((kk => {
+              console.error("The video export failed", kk)
             }))
           },
-          ju = {
-            replayAction(uu) {
-              if ((0, yy.b)()) return;
-              const Ru = mu();
-              switch (uu) {
+          Wk = {
+            replayAction(kk) {
+              if ((0, RB.b)()) return;
+              const Fk = Xk();
+              switch (kk) {
                 case "replaySkipBack":
-                  xu(-1);
+                  Ak(-1);
                   break;
                 case "replaySkipForward":
-                  xu(1);
+                  Ak(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== Ru && void 0 !== Ru && Ru.view && Ru.setSpeed((0, Ry.i)(Ru.view.speed, "replaySpeedUp" === uu ? "up" : "down"));
+                  null !== Fk && void 0 !== Fk && Fk.view && Fk.setSpeed((0, BB.j)(Fk.view.speed, "replaySpeedUp" === kk ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === Ru || void 0 === Ru || Ru.addKeyframe()
+                  null === Fk || void 0 === Fk || Fk.addKeyframe()
               }
             },
-            setReplayPlaying(uu) {
-              var Ru, yu;
-              (0, yy.b)() || (uu ? null === (Ru = mu()) || void 0 === Ru || Ru.play() : null === (yu = mu()) || void 0 === yu || yu.pause())
+            setReplayPlaying(kk) {
+              var Fk, Bk;
+              (0, RB.b)() || (kk ? null === (Fk = Xk()) || void 0 === Fk || Fk.play() : null === (Bk = Xk()) || void 0 === Bk || Bk.pause())
             },
-            seekReplay(uu) {
-              var Ru;
+            seekReplay(kk) {
+              var Fk;
               let {
-                sr: yu,
-                ignorePlaybackMark: Eu
-              } = uu;
-              null === (Ru = mu()) || void 0 === Ru || Ru.seek(yu, null !== Eu && void 0 !== Eu && Eu)
+                yJ: Bk,
+                ignorePlaybackMark: Rk
+              } = kk;
+              null === (Fk = Xk()) || void 0 === Fk || Fk.seek(Bk, null !== Rk && void 0 !== Rk && Rk)
             },
-            setReplayCameraMode(uu) {
-              var Ru;
-              null === (Ru = mu()) || void 0 === Ru || Ru.setCameraMode(uu)
+            setReplayCameraMode(kk) {
+              var Fk;
+              null === (Fk = Xk()) || void 0 === Fk || Fk.setCameraMode(kk)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(uu) {
-              var Ru;
-              null === (Ru = mu()) || void 0 === Ru || Ru.setKeyframe(uu)
+            setReplayCameraKeyframe(kk) {
+              var Fk;
+              null === (Fk = Xk()) || void 0 === Fk || Fk.setKeyframe(kk)
             },
-            moveReplayCameraKeyframe(uu) {
-              var Ru;
+            moveReplayCameraKeyframe(kk) {
+              var Fk;
               let {
-                from: yu,
-                to: Eu
-              } = uu;
-              null === (Ru = mu()) || void 0 === Ru || Ru.moveKeyframe(yu, Eu)
+                from: Bk,
+                to: Rk
+              } = kk;
+              null === (Fk = Xk()) || void 0 === Fk || Fk.moveKeyframe(Bk, Rk)
             },
-            deleteReplayCameraKeyframes(uu) {
-              var Ru;
+            deleteReplayCameraKeyframes(kk) {
+              var Fk;
               let {
-                start: yu,
-                end: Eu
-              } = uu;
-              null === (Ru = mu()) || void 0 === Ru || Ru.deleteKeyframes(yu, Eu)
+                start: Bk,
+                end: Rk
+              } = kk;
+              null === (Fk = Xk()) || void 0 === Fk || Fk.deleteKeyframes(Bk, Rk)
             },
-            setReplayPlaybackMark(uu) {
-              var Ru;
-              null === (Ru = mu()) || void 0 === Ru || Ru.setMark(uu)
+            setReplayPlaybackMark(kk) {
+              var Fk;
+              null === (Fk = Xk()) || void 0 === Fk || Fk.setMark(kk)
             },
-            cropReplay(uu) {
-              var Ru, yu;
+            cropReplay(kk) {
+              var Fk, Bk;
               let {
-                start: Eu,
-                end: Ku
-              } = uu;
-              return !(0, yy.b)() && (null !== (Ru = null === (yu = mu()) || void 0 === yu ? void 0 : yu.crop(Eu, Ku)) && void 0 !== Ru && Ru)
+                start: Rk,
+                end: tk
+              } = kk;
+              return !(0, RB.b)() && (null !== (Fk = null === (Bk = Xk()) || void 0 === Bk ? void 0 : Bk.crop(Rk, tk)) && void 0 !== Fk && Fk)
             },
-            holdReplayForShaderPackFailure(uu) {
-              const Ru = mu();
-              Ru && (Ru.holdForShaderPackFailure(), function(uu) {
-                yu.e(129).then((() => yu(38963))).then((Ru => {
+            holdReplayForShaderPackFailure(kk) {
+              const Fk = Xk();
+              Fk && (Fk.holdForShaderPackFailure(), function(kk) {
+                Bk.e(129).then((() => Bk(38817))).then((Fk => {
                   let {
-                    shaderPackPage: yu
-                  } = Ru;
-                  yu.block(uu)
-                })).catch((uu => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", uu)
+                    shaderPackPage: Bk
+                  } = Fk;
+                  Bk.block(kk)
+                })).catch((kk => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", kk)
                 }))
-              }(uu))
+              }(kk))
             },
             exportReplayVideo() {
-              Wu()
+              mk()
             },
             toggleRecording() {
-              var Ru;
-              null === (Ru = uu.runtime()) || void 0 === Ru || Ru.recorder.toggleRecording()
+              var Fk;
+              null === (Fk = kk.runtime()) || void 0 === Fk || Fk.recorder.toggleRecording()
             },
             saveClip() {
-              var Ru;
-              null === (Ru = uu.runtime()) || void 0 === Ru || Ru.recorder.saveClip()
+              var Fk;
+              null === (Fk = kk.runtime()) || void 0 === Fk || Fk.recorder.saveClip()
             },
-            setRecorderPrefs(Ru) {
-              var yu;
+            setRecorderPrefs(Fk) {
+              var Bk;
               let {
-                clipping: Eu,
-                clipSeconds: Ku
-              } = Ru;
-              null === (yu = uu.runtime()) || void 0 === yu || yu.recorder.setPrefs(Eu, Ku)
+                clipping: Rk,
+                clipSeconds: tk
+              } = Fk;
+              null === (Bk = kk.runtime()) || void 0 === Bk || Bk.recorder.setPrefs(Rk, tk)
             },
-            setReplayViewerOpen(Ru) {
-              var yu;
-              (0, pR.g)(Ru) && (null === (yu = uu.runtime()) || void 0 === yu || yu.recorder.viewerShown(Ru))
+            setReplayViewerOpen(Fk) {
+              var Bk;
+              (0, fF.f)(Fk) && (null === (Bk = kk.runtime()) || void 0 === Bk || Bk.recorder.viewerShown(Fk))
             },
-            recordFlyingMiddleText(Ru) {
-              var yu;
+            recordFlyingMiddleText(Fk) {
+              var Bk;
               let {
-                content: Eu,
-                IQ: Ku,
-                angle: Qu,
-                GQ: mu
-              } = Ru;
-              null === (yu = uu.runtime()) || void 0 === yu || yu.recorder.recordFlyingText(JSON.stringify(Eu), Ku, Qu, mu)
+                content: Rk,
+                Ta: tk,
+                angle: ak,
+                ra: Xk
+              } = Fk;
+              null === (Bk = kk.runtime()) || void 0 === Bk || Bk.recorder.recordFlyingText(JSON.stringify(Rk), tk, ak, Xk)
             },
-            dragReplayCamera(Ru) {
-              var yu;
+            dragReplayCamera(Fk) {
+              var Bk;
               let {
-                dx: Eu,
-                dy: Ku
-              } = Ru;
-              null === (yu = uu.freecam()) || void 0 === yu || yu.drag(Eu, Ku)
+                dx: Rk,
+                dy: tk
+              } = Fk;
+              null === (Bk = kk.freecam()) || void 0 === Bk || Bk.drag(Rk, tk)
             },
-            moveReplayFreecam(Ru) {
-              var yu;
-              null === (yu = uu.freecam()) || void 0 === yu || yu.move(Ru)
+            moveReplayFreecam(Fk) {
+              var Bk;
+              null === (Bk = kk.freecam()) || void 0 === Bk || Bk.move(Fk)
             },
-            holdReplayFreecamVertical(Ru) {
-              var yu;
+            holdReplayFreecamVertical(Fk) {
+              var Bk;
               let {
-                action: Eu,
-                jJ: Ku
-              } = Ru;
-              null === (yu = uu.freecam()) || void 0 === yu || yu.holdVertical(Eu, Ku)
+                action: Rk,
+                Hb: tk
+              } = Fk;
+              null === (Bk = kk.freecam()) || void 0 === Bk || Bk.holdVertical(Rk, tk)
             }
           },
-          Hu = uu => {
-            var Ru;
-            const yu = mu(),
-              Eu = null !== (Ru = null === yu || void 0 === yu ? void 0 : yu.view) && void 0 !== Ru ? Ru : null;
-            Qy.has(uu) ? (uu => {
-              for (const Ru of Qu) Ru(uu)
-            })(uu) : my.has(uu) ? ju.replayAction(uu) : "replayPlayPause" === uu ? yu && Eu && Eu.state !== ru.bd.None && ju.setReplayPlaying(Eu.state !== ru.bd.Playing) : "replayChangeCameraMode" === uu ? null === yu || void 0 === yu || yu.cycleCameraMode() : "replayExit" === uu ? !0 === (null === yu || void 0 === yu ? void 0 : yu.inPlayback) && (0, sR.j)("/") : "replayExportVideo" === uu && Wu()
+          vk = kk => {
+            var Fk;
+            const Bk = Xk(),
+              Rk = null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.view) && void 0 !== Fk ? Fk : null;
+            XB.has(kk) ? (kk => {
+              for (const Fk of ak) Fk(kk)
+            })(kk) : bB.has(kk) ? Wk.replayAction(kk) : "replayPlayPause" === kk ? Bk && Rk && Rk.state !== Vk.Cc.None && Wk.setReplayPlaying(Rk.state !== Vk.Cc.Playing) : "replayChangeCameraMode" === kk ? null === Bk || void 0 === Bk || Bk.cycleCameraMode() : "replayExit" === kk ? !0 === (null === Bk || void 0 === Bk ? void 0 : Bk.inPlayback) && (0, cF.o)("/") : "replayExportVideo" === kk && mk()
           };
-        let du = !1;
+        let ik = !1;
         return {
-          states: Su,
-          events: pu,
-          commands: ju,
+          states: ek,
+          events: yk,
+          commands: Wk,
           lookups: {
             replayCamera() {
-              var Ru, yu, Eu;
-              return !0 !== (null === (Ru = mu()) || void 0 === Ru ? void 0 : Ru.isOpen) ? null : null !== (yu = null === (Eu = uu.cameraView) || void 0 === Eu ? void 0 : Eu.call(uu)) && void 0 !== yu ? yu : null
+              var Fk, Bk, Rk;
+              return !0 !== (null === (Fk = Xk()) || void 0 === Fk ? void 0 : Fk.isOpen) ? null : null !== (Bk = null === (Rk = kk.cameraView) || void 0 === Rk ? void 0 : Rk.call(kk)) && void 0 !== Bk ? Bk : null
             },
             leaveGameReloadsPage() {
-              var uu;
-              return !0 === (null === (uu = mu()) || void 0 === uu ? void 0 : uu.inPlayback)
+              var kk;
+              return !0 === (null === (kk = Xk()) || void 0 === kk ? void 0 : kk.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var uu;
-              const yu = !0 === (null === (uu = mu()) || void 0 === uu ? void 0 : uu.inPlayback);
-              yu !== du && (du = yu, Xu.k.Op("connectedGameChanged")), Ru.fire()
+              var kk;
+              const Bk = !0 === (null === (kk = Xk()) || void 0 === kk ? void 0 : kk.inPlayback);
+              Bk !== ik && (ik = Bk, dk.o.Hf("connectedGameChanged")), Fk.fire()
             },
-            recorderChanged: Eu.fire,
-            keyDown: uu => {
-              var Ru;
-              switch (uu) {
+            recorderChanged: Rk.fire,
+            keyDown: kk => {
+              var Fk;
+              switch (kk) {
                 case "recordGame":
-                  return void ju.toggleRecording();
+                  return void Wk.toggleRecording();
                 case "recordClip":
-                  return void((0, pR.e)() || ju.saveClip())
-              }(0, yy.b)() || ("replayViewerOpen" !== uu ? uu.startsWith("replay") && ((0, pR.e)() || !0 === (null === (Ru = mu()) || void 0 === Ru ? void 0 : Ru.inPlayback)) && Hu(uu) : Tu("toggle"))
+                  return void((0, fF.d)() || Wk.saveClip())
+              }(0, RB.b)() || ("replayViewerOpen" !== kk ? kk.startsWith("replay") && ((0, fF.d)() || !0 === (null === (Fk = Xk()) || void 0 === Fk ? void 0 : Fk.inPlayback)) && vk(kk) : fk("toggle"))
             }
           }
         }
       }({
-        runtime: Ku.i,
+        runtime: tk.i,
         cameraView: () => {
-          var uu;
-          const Ru = null === (uu = (0, mu.i)()) || void 0 === uu ? void 0 : uu.renderFrame;
-          if (!Ru) return null;
-          const [yu, Eu, Ku] = Ru.cameraPosition, [Qu, Ju, Nu] = Ru.cameraDirection;
+          var kk;
+          const Fk = null === (kk = (0, Xk.g)()) || void 0 === kk ? void 0 : kk.renderFrame;
+          if (!Fk) return null;
+          const [Bk, Rk, tk] = Fk.cameraPosition, [ak, bk, wk] = Fk.cameraDirection;
           return {
-            position: [yu, Eu, Ku],
-            direction: [Qu, Ju, Nu]
+            position: [Bk, Rk, tk],
+            direction: [ak, bk, wk]
           }
         },
         canvas: () => {
-          var uu, Ru, yu;
-          return null !== (uu = null === (Ru = (yu = (0, Qu.I)()).canvas) || void 0 === Ru ? void 0 : Ru.call(yu)) && void 0 !== uu ? uu : null
+          var kk, Fk, Bk;
+          return null !== (kk = null === (Fk = (Bk = (0, ak.J)()).canvas) || void 0 === Fk ? void 0 : Fk.call(Bk)) && void 0 !== kk ? kk : null
         },
-        freecam: Ku.f
+        freecam: tk.e
       }),
-      Zy = {
+      CB = {
         states: {
-          ...XR,
-          ...xR.i,
-          ...wy.states,
-          ...Vy,
-          ...wu
+          ...sF,
+          ...eF.m,
+          ...qB.states,
+          ...VB,
+          ...qk
         },
         events: {
-          ...VR,
-          ...Tu,
-          ...xR.f,
-          ...Du.c,
-          ...ey.m,
-          ...wy.events,
-          ...ry,
-          ...Au.k
+          ...VF,
+          ...fk,
+          ...eF.g,
+          ...Nk.e,
+          ...EB.j,
+          ...qB.events,
+          ...JB,
+          ...Sk.g
         },
         commands: {
-          ...eu,
-          ...rR,
-          ...Wu,
-          ...xR.b,
-          ...oR,
-          ...ky,
-          ...Au.h,
-          ...gR,
-          ...wy.commands,
-          ...jy,
-          ...Zu,
-          ...ny
+          ...Ek,
+          ...JF,
+          ...mk,
+          ...eF.e,
+          ...jF,
+          ...OB,
+          ...Sk.f,
+          ...rF,
+          ...qB.commands,
+          ...vB,
+          ...Ck,
+          ...UB
         },
         queries: {
-          ...xR.h,
-          ...Fy
+          ...eF.k,
+          ...hB
         },
         lookups: {
-          ...BR,
-          ...lu,
-          ...ey.o,
-          ...wy.lookups,
-          ...ku,
-          ...uy,
-          ...Uy,
-          ...hu
+          ...AF,
+          ...Tk,
+          ...EB.l,
+          ...qB.lookups,
+          ...Ok,
+          ...FB,
+          ...gB,
+          ...Zk
         }
       };
 
-    function hy() {
-      (0, Ju.g)(pu.q), (0, Ku.k)(wy.feed), (0, Du.f)(), qR || (qR = !0, (0, pu.m)(Uu.l, (uu => {
-        const Ru = (0, su.f)(Uu.l, uu);
-        "string" === typeof Ru && Promise.resolve().then((() => yu(3465))).then((uu => {
+    function ZB() {
+      (0, bk.e)(yk.n), (0, tk.k)(qB.feed), (0, Nk.i)(), lF || (lF = !0, (0, yk.k)(gk.k, (kk => {
+        const Fk = (0, ck.f)(gk.k, kk);
+        "string" === typeof Fk && Promise.resolve().then((() => Bk(3449))).then((kk => {
           let {
-            onCosmeticPackGranted: yu
-          } = uu;
-          yu(Ru)
+            onCosmeticPackGranted: Bk
+          } = kk;
+          Bk(Fk)
         }))
-      })), (0, pu.m)(Uu.hb, (uu => {
-        const Ru = (0, su.f)(Uu.hb, uu);
-        "number" === typeof Ru && Xu.k.Op("serverUpdating", Date.now() + Ru, !0)
-      })), (0, pu.m)(Uu.J, (uu => {
-        const Ru = (0, su.f)(Uu.J, uu);
-        if ((0, su.d)(Ru)) {
+      })), (0, yk.k)(gk.ib, (kk => {
+        const Fk = (0, ck.f)(gk.ib, kk);
+        "number" === typeof Fk && dk.o.Hf("serverUpdating", Date.now() + Fk, !0)
+      })), (0, yk.k)(gk.G, (kk => {
+        const Fk = (0, ck.f)(gk.G, kk);
+        if ((0, ck.e)(Fk)) {
           const {
-            uu: uu,
-            Ru: yu
-          } = Ru;
-          (0, iR.e)({
-            uu: "string" === typeof uu ? uu : null,
-            Ru: "string" === typeof yu ? yu : null
+            kk: kk,
+            Fk: Bk
+          } = Fk;
+          (0, KF.e)({
+            kk: "string" === typeof kk ? kk : null,
+            Fk: "string" === typeof Bk ? Bk : null
           })
         }
-      })), (0, pu.m)(Vu.$b.NewUiRequest, (uu => {
-        const Ru = (0, su.g)(uu);
-        (0, su.d)(Ru) && "number" === typeof Ru.id && (0, su.d)(Ru.clientParameters) && (0, YR.f)(Ru.id, Ru.clientParameters)
-      })), (0, pu.m)(Uu.ab, (uu => {
-        const Ru = (0, su.f)(Uu.ab, uu);
-        "number" === typeof Ru && (0, YR.i)(Ru)
-      })), (0, pu.i)(YR.b), (0, pu.m)(Vu.$b.UiRequestPopup, (uu => {
-        const Ru = (0, su.g)(uu);
-        if ((0, su.d)(Ru) && "number" === typeof Ru.id && "string" === typeof Ru.text) {
-          const uu = Ru.id;
-          (0, YR.m)(uu, Ru.text, (Ru => {
-            oR.answerUiRequest({
-              id: uu,
-              Jm: Ru
+      })), (0, yk.k)(sk.Tb.NewUiRequest, (kk => {
+        const Fk = (0, ck.j)(kk);
+        (0, ck.e)(Fk) && "number" === typeof Fk.id && (0, ck.e)(Fk.clientParameters) && (0, xF.f)(Fk.id, Fk.clientParameters)
+      })), (0, yk.k)(gk.ab, (kk => {
+        const Fk = (0, ck.f)(gk.ab, kk);
+        "number" === typeof Fk && (0, xF.j)(Fk)
+      })), (0, yk.g)(xF.d), (0, yk.k)(sk.Tb.UiRequestPopup, (kk => {
+        const Fk = (0, ck.j)(kk);
+        if ((0, ck.e)(Fk) && "number" === typeof Fk.id && "string" === typeof Fk.text) {
+          const kk = Fk.id;
+          (0, xF.n)(kk, Fk.text, (Fk => {
+            jF.answerUiRequest({
+              id: kk,
+              eX: Fk
             })
           }))
         }
-      })), (0, pu.m)(Vu.$b.TopRightHelper, (uu => {
-        const Ru = (0, su.g)(uu);
-        void 0 !== Ru && Xu.k.Op("TopRightHelper", Ru, !0)
-      })), (0, pu.m)(Vu.$b.TaskProgress, (uu => {
-        const Ru = (0, su.g)(uu);
-        (0, su.d)(Ru) && "string" === typeof Ru.taskId && "number" === typeof Ru.progress && (0, PR.c)({
-          taskId: Ru.taskId,
-          progress: Ru.progress
+      })), (0, yk.k)(sk.Tb.TopRightHelper, (kk => {
+        const Fk = (0, ck.j)(kk);
+        void 0 !== Fk && dk.o.Hf("TopRightHelper", Fk, !0)
+      })), (0, yk.k)(sk.Tb.TaskProgress, (kk => {
+        const Fk = (0, ck.j)(kk);
+        (0, ck.e)(Fk) && "string" === typeof Fk.taskId && "number" === typeof Fk.progress && (0, pF.e)({
+          taskId: Fk.taskId,
+          progress: Fk.progress
         })
-      }))), Hy || (Hy = !0, (0, pu.m)(Uu.u, (uu => {
-        const Ru = (0, su.f)(Uu.u, uu);
-        (0, su.d)(Ru) && Xu.k.Op("showShopFromServer", {
-          toggle: Ru.BR,
-          xR: Ru.xR
+      }))), iB || (iB = !0, (0, yk.k)(gk.p, (kk => {
+        const Fk = (0, ck.f)(gk.p, kk);
+        (0, ck.e)(Fk) && dk.o.Hf("showShopFromServer", {
+          toggle: Fk.AF,
+          eF: Fk.eF
         }, !0)
-      })), (0, pu.m)(Vu.$b.OverShopInfo, (uu => {
-        const Ru = (0, su.g)(uu);
-        (0, su.d)(Ru) && Xu.k.Op("overShopInfo", Ru.info, !0)
-      })), (0, pu.m)(Vu.$b.ShowShopTutorial, (() => {
-        Xu.k.Op("showShopTutorial", null, !0)
-      }))), Ty || (Ty = !0, (0, pu.g)((() => {
-        var uu;
-        (0, By.D)(), null === (uu = Wy) || void 0 === uu || uu(), Wy = (0, pu.e)() ? (0, Sy.f)(pu.e) : null
-      })), (0, pu.m)(Vu.$b.SetCookie, (uu => {
-        const Ru = (0, su.g)(uu),
-          yu = (0, sR.c)().gameNameWithVariation;
-        (0, su.d)(Ru) && "string" === typeof Ru.key && null !== yu && (0, xy.setCookie)(yu, Ru.key, Ru.value)
-      })), (0, pu.m)(Vu.$b.LeaveValues, (uu => {
-        const Ru = (0, su.g)(uu);
-        if ((0, su.d)(Ru) && "string" === typeof Ru.leaveEventType) {
+      })), (0, yk.k)(sk.Tb.OverShopInfo, (kk => {
+        const Fk = (0, ck.j)(kk);
+        (0, ck.e)(Fk) && dk.o.Hf("overShopInfo", Fk.info, !0)
+      })), (0, yk.k)(sk.Tb.ShowShopTutorial, (() => {
+        dk.o.Hf("showShopTutorial", null, !0)
+      }))), mB || (mB = !0, (0, yk.d)((() => {
+        var kk;
+        (0, AB.C)(), null === (kk = WB) || void 0 === kk || kk(), WB = (0, yk.b)() ? (0, yB.i)(yk.b) : null
+      })), (0, yk.k)(sk.Tb.SetCookie, (kk => {
+        const Fk = (0, ck.j)(kk),
+          Bk = (0, cF.e)().gameNameWithVariation;
+        (0, ck.e)(Fk) && "string" === typeof Fk.key && null !== Bk && (0, eB.setCookie)(Bk, Fk.key, Fk.value)
+      })), (0, yk.k)(sk.Tb.LeaveValues, (kk => {
+        const Fk = (0, ck.j)(kk);
+        if ((0, ck.e)(Fk) && "string" === typeof Fk.leaveEventType) {
           const {
-            leaveEventType: uu,
-            category: yu,
-            subCategory: Eu,
-            value: Ku
-          } = Ru;
-          (0, By.I)({
-            leaveEventType: uu,
-            category: yu,
-            subCategory: Eu,
-            value: Ku
+            leaveEventType: kk,
+            category: Bk,
+            subCategory: Rk,
+            value: tk
+          } = Fk;
+          (0, AB.I)({
+            leaveEventType: kk,
+            category: Bk,
+            subCategory: Rk,
+            value: tk
           })
         }
-      })), (0, pu.m)(Vu.$b.CustomAnalyticsEvent, (uu => {
-        const Ru = (0, su.g)(uu);
-        if ((0, su.d)(Ru) && "string" === typeof Ru.cat1) {
+      })), (0, yk.k)(sk.Tb.CustomAnalyticsEvent, (kk => {
+        const Fk = (0, ck.j)(kk);
+        if ((0, ck.e)(Fk) && "string" === typeof Fk.cat1) {
           const {
-            cat1: uu,
-            cat2: yu,
-            cat3: Eu,
-            value: Ku
-          } = Ru;
-          (0, By.r)({
-            cat1: uu,
-            cat2: yu,
-            cat3: Eu,
-            value: Ku
+            cat1: kk,
+            cat2: Bk,
+            cat3: Rk,
+            value: tk
+          } = Fk;
+          (0, AB.r)({
+            cat1: kk,
+            cat2: Bk,
+            cat3: Rk,
+            value: tk
           })
         }
-      })), (0, pu.m)(Vu.$b.ProgressionEvent, (uu => {
-        const Ru = (0, su.g)(uu);
-        if ((0, su.d)(Ru)) {
+      })), (0, yk.k)(sk.Tb.ProgressionEvent, (kk => {
+        const Fk = (0, ck.j)(kk);
+        if ((0, ck.e)(Fk)) {
           const {
-            type: uu,
-            location1: yu,
-            location2: Eu,
-            location3: Ku,
-            score: Qu
-          } = Ru;
-          (0, By.w)({
-            type: uu,
-            location1: yu,
-            location2: Eu,
-            location3: Ku,
-            score: Qu
+            type: kk,
+            location1: Bk,
+            location2: Rk,
+            location3: tk,
+            score: ak
+          } = Fk;
+          (0, AB.v)({
+            type: kk,
+            location1: Bk,
+            location2: Rk,
+            location3: tk,
+            score: ak
           })
         }
-      })), (0, pu.m)(Vu.$b.ResourceEvent, (uu => {
-        const Ru = (0, su.g)(uu);
-        if ((0, su.d)(Ru)) {
+      })), (0, yk.k)(sk.Tb.ResourceEvent, (kk => {
+        const Fk = (0, ck.j)(kk);
+        if ((0, ck.e)(Fk)) {
           const {
-            type: uu,
-            resourceType: yu,
-            amount: Eu,
-            category: Ku,
-            itemName: Qu
-          } = Ru;
-          (0, By.y)({
-            type: uu,
-            resourceType: yu,
-            amount: Eu,
-            category: Ku,
-            itemName: Qu
+            type: kk,
+            resourceType: Bk,
+            amount: Rk,
+            category: tk,
+            itemName: ak
+          } = Fk;
+          (0, AB.z)({
+            type: kk,
+            resourceType: Bk,
+            amount: Rk,
+            category: tk,
+            itemName: ak
           })
         }
-      })), (0, pu.m)(Vu.$b.LeaderboardResponse, (uu => {
-        const Ru = (0, su.g)(uu);
-        if ((0, su.d)(Ru)) {
+      })), (0, yk.k)(sk.Tb.LeaderboardResponse, (kk => {
+        const Fk = (0, ck.j)(kk);
+        if ((0, ck.e)(Fk)) {
           const {
-            category: uu,
-            timeframe: yu,
-            data: Eu
-          } = Ru;
-          Xu.k.Op("leaderboardResponse", {
-            category: uu,
-            timeframe: yu,
-            data: Eu
+            category: kk,
+            timeframe: Bk,
+            data: Rk
+          } = Fk;
+          dk.o.Hf("leaderboardResponse", {
+            category: kk,
+            timeframe: Bk,
+            data: Rk
           })
         }
-      })), (0, pu.m)(Uu.C, (uu => {
-        const Ru = (0, su.f)(Uu.C, uu);
-        "string" === typeof Ru && (0, py.d)(uu.conn, Ru)
-      })), (0, pu.m)(Uu.F, (uu => {
-        const Ru = (0, su.f)(Uu.F, uu);
-        "string" === typeof Ru && console.error(`[logErrorToConsole]: ${Ru}`)
-      }))), cu(), (0, ey.e)(), lR || (lR = !0, (0, pu.m)(Uu.j, (uu => {
-        const Ru = (0, su.f)(Uu.j, uu);
-        void 0 !== Ru && (0, tR.l)(Ru)
-      }))), hR(), MR(), Yu || (Yu = !0, (0, Qu.v)(ou)), Eu.gameBridge.attach(Zy), (0, Eu.installPageSources)({
+      })), (0, yk.k)(gk.x, (kk => {
+        const Fk = (0, ck.f)(gk.x, kk);
+        "string" === typeof Fk && (0, fB.b)(kk.conn, Fk)
+      })), (0, yk.k)(gk.z, (kk => {
+        const Fk = (0, ck.f)(gk.z, kk);
+        "string" === typeof Fk && console.error(`[logErrorToConsole]: ${Fk}`)
+      }))), Dk(), (0, EB.e)(), TF || (TF = !0, (0, yk.k)(gk.g, (kk => {
+        const Fk = (0, ck.f)(gk.g, kk);
+        void 0 !== Fk && (0, GF.h)(Fk)
+      }))), ZF(), HF(), xk || (xk = !0, (0, ak.t)(jk)), Rk.gameBridge.attach(CB), (0, Rk.installPageSources)({
         commands: {
-          ...Eu.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: ty.k
+          ...Rk.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: GB.e
         },
-        queries: gy.wasmIconQueries,
+        queries: rB.wasmIconQueries,
         lookups: {
-          ...Eu.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...gy.wasmIconLookups,
-          DH: ty.c,
-          drawCallStats: ly.f
+          ...Rk.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...rB.wasmIconLookups,
+          jW: GB.b,
+          drawCallStats: TB.i
         }
-      }), (0, sy.d)(), (0, gy.loadIcons)()
+      }), (0, cB.b)(), (0, rB.loadIcons)()
     }
   },
-  40324: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => mu,
-      g: () => Ju
+  40156: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Xk,
+      e: () => bk
     });
-    var Eu = yu(40328);
-    let Ku = null,
-      Qu = null;
+    var Rk = Bk(40161);
+    let tk = null,
+      ak = null;
 
-    function mu() {
-      return Ku ??= yu.e(58).then((() => yu(42183))).catch((uu => {
-        throw Ku = null, uu
-      })), Ku
+    function Xk() {
+      return tk ??= Bk.e(58).then((() => Bk(42039))).catch((kk => {
+        throw tk = null, kk
+      })), tk
     }
 
-    function Ju() {
-      return Qu ??= Promise.all([mu(), (0, Eu.f)()]).then((uu => {
-        let [Ru] = uu;
-        return Ru
-      }), (uu => {
-        throw Qu = null, uu
-      })), Qu
+    function bk() {
+      return ak ??= Promise.all([Xk(), (0, Rk.e)()]).then((kk => {
+        let [Fk] = kk;
+        return Fk
+      }), (kk => {
+        throw ak = null, kk
+      })), ak
     }
   },
-  36807: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Eu
+  36728: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Rk
     });
-    const Eu = {
+    const Rk = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -2718,87 +2718,87 @@ export const modules = {
       }
     }
   },
-  36632: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      B: () => mu,
-      e: () => Ku,
-      f: () => Qu,
-      j: () => Bu,
-      n: () => Ju,
-      p: () => Nu,
-      s: () => Xu,
-      v: () => ru,
-      x: () => Vu
+  36536: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => tk,
+      f: () => ak,
+      g: () => Jk,
+      i: () => bk,
+      k: () => wk,
+      o: () => dk,
+      q: () => Vk,
+      t: () => sk,
+      v: () => Xk
     });
-    var Eu = yu(1215);
-    let Ku = function(uu) {
-        return uu[uu.Join = 0] = "Join", uu[uu.Leave = 1] = "Leave", uu[uu.Push = 2] = "Push", uu[uu.Cursor = 3] = "Cursor", uu[uu.Submit = 4] = "Submit", uu[uu.ReloadAsVariation = 5] = "ReloadAsVariation", uu[uu.CreateFile = 6] = "CreateFile", uu[uu.RenameFile = 7] = "RenameFile", uu[uu.DeleteFile = 8] = "DeleteFile", uu[uu.SetEngine = 9] = "SetEngine", uu[uu.RenameFolder = 10] = "RenameFolder", uu
+    var Rk = Bk(1192);
+    let tk = function(kk) {
+        return kk[kk.Join = 0] = "Join", kk[kk.Leave = 1] = "Leave", kk[kk.Push = 2] = "Push", kk[kk.Cursor = 3] = "Cursor", kk[kk.Submit = 4] = "Submit", kk[kk.ReloadAsVariation = 5] = "ReloadAsVariation", kk[kk.CreateFile = 6] = "CreateFile", kk[kk.RenameFile = 7] = "RenameFile", kk[kk.DeleteFile = 8] = "DeleteFile", kk[kk.SetEngine = 9] = "SetEngine", kk[kk.RenameFolder = 10] = "RenameFolder", kk
       }({}),
-      Qu = function(uu) {
-        return uu[uu.Joined = 0] = "Joined", uu[uu.Updates = 1] = "Updates", uu[uu.Presence = 2] = "Presence", uu[uu.RemoteCursor = 3] = "RemoteCursor", uu[uu.ForceClose = 4] = "ForceClose", uu[uu.LobbyFilesChanged = 5] = "LobbyFilesChanged", uu[uu.EngineSettings = 6] = "EngineSettings", uu
+      ak = function(kk) {
+        return kk[kk.Joined = 0] = "Joined", kk[kk.Updates = 1] = "Updates", kk[kk.Presence = 2] = "Presence", kk[kk.RemoteCursor = 3] = "RemoteCursor", kk[kk.ForceClose = 4] = "ForceClose", kk[kk.LobbyFilesChanged = 5] = "LobbyFilesChanged", kk[kk.EngineSettings = 6] = "EngineSettings", kk
       }({});
 
-    function mu(uu) {
-      return "lobby" === uu.kind ? `lobby:${uu.path}` : `codeBlock:${uu.pos[0]},${uu.pos[1]},${uu.pos[2]}`
+    function Xk(kk) {
+      return "lobby" === kk.kind ? `lobby:${kk.path}` : `codeBlock:${kk.pos[0]},${kk.pos[1]},${kk.pos[2]}`
     }
 
-    function Ju(uu) {
-      if ("lobby" === uu) return {
+    function bk(kk) {
+      if ("lobby" === kk) return {
         kind: "lobby",
-        path: Eu.k
+        path: Rk.h
       };
-      if (uu.startsWith("lobby:")) {
-        const Ru = uu.slice(6);
-        return ru(Ru) ? {
+      if (kk.startsWith("lobby:")) {
+        const Fk = kk.slice(6);
+        return Vk(Fk) ? {
           kind: "lobby",
-          path: Ru
+          path: Fk
         } : null
       }
-      const Ru = uu.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
-      return Ru ? {
+      const Fk = kk.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
+      return Fk ? {
         kind: "codeBlock",
-        pos: [parseInt(Ru[1]), parseInt(Ru[2]), parseInt(Ru[3])]
+        pos: [parseInt(Fk[1]), parseInt(Fk[2]), parseInt(Fk[3])]
       } : null
     }
 
-    function Nu(uu) {
-      return uu.endsWith(".d.ts")
+    function wk(kk) {
+      return kk.endsWith(".d.ts")
     }
 
-    function Xu(uu) {
-      return uu.endsWith(".ts") && !Nu(uu)
+    function dk(kk) {
+      return kk.endsWith(".ts") && !wk(kk)
     }
-    const Vu = 64;
+    const sk = 64;
 
-    function ru(uu) {
-      if (!uu || uu !== uu.trim()) return !1;
-      if (uu.length > Vu) return !1;
-      if (uu.startsWith("/") || uu.includes("\\") || uu.includes("\0")) return !1;
-      if (!Nu(uu) && !Xu(uu) && ! function(uu) {
-          return uu.endsWith(".js") && !uu.endsWith(".min.js") && !uu.endsWith(".bundle.js")
-        }(uu)) return !1;
-      const Ru = uu.split("/");
-      for (const yu of Ru)
-        if ("" === yu || "." === yu || ".." === yu) return !1;
+    function Vk(kk) {
+      if (!kk || kk !== kk.trim()) return !1;
+      if (kk.length > sk) return !1;
+      if (kk.startsWith("/") || kk.includes("\\") || kk.includes("\0")) return !1;
+      if (!wk(kk) && !dk(kk) && ! function(kk) {
+          return kk.endsWith(".js") && !kk.endsWith(".min.js") && !kk.endsWith(".bundle.js")
+        }(kk)) return !1;
+      const Fk = kk.split("/");
+      for (const Bk of Fk)
+        if ("" === Bk || "." === Bk || ".." === Bk) return !1;
       return !0
     }
-    const Bu = 14e3
+    const Jk = 14e3
   },
-  38792: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Eu,
-      d: () => Ku
+  38685: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Rk,
+      i: () => tk
     });
-    const Eu = ["description", "label"];
+    const Rk = ["description", "label"];
 
-    function Ku(uu) {
-      const Ru = uu.type;
+    function tk(kk) {
+      const Fk = kk.type;
       return {
-        type: Ru,
-        params: uu[Ru]
+        type: Fk,
+        params: kk[Fk]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,35 +1,35 @@
 export const id = 12;
 export const ids = [12];
 export const modules = {
-  38264: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => mu
+  38141: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Xk
     });
-    var Eu = yu(38273);
-    const Ku = [0, 0, 0];
-    class Qu {
-      constructor(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ku;
-        this.pool = uu, this.origin = Ru, this.count = 0, this.free = []
+    var Rk = Bk(38146);
+    const tk = [0, 0, 0];
+    class ak {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tk;
+        this.pool = kk, this.origin = Fk, this.count = 0, this.free = []
       }
       take() {
-        var uu;
-        const Ru = null !== (uu = this.free.pop()) && void 0 !== uu ? uu : this.count++;
-        return Ru >= this.pool.Nr && this.pool.grow(Math.max(2 * this.pool.Nr, Ru + 1)), this.hide(Ru), Ru
+        var kk;
+        const Fk = null !== (kk = this.free.pop()) && void 0 !== kk ? kk : this.count++;
+        return Fk >= this.pool.KV && this.pool.grow(Math.max(2 * this.pool.KV, Fk + 1)), this.hide(Fk), Fk
       }
-      release(uu) {
-        this.hide(uu), this.free.push(uu)
+      release(kk) {
+        this.hide(kk), this.free.push(kk)
       }
-      write(uu, Ru, yu, Ku) {
+      write(kk, Fk, Bk, tk) {
         const {
-          records: Qu
+          records: ak
         } = this.pool, {
-          origin: mu
-        } = this, Ju = uu * Eu.c;
-        Qu[Ju] = Ru - mu[0], Qu[Ju + 1] = yu - mu[1], Qu[Ju + 2] = Ku - mu[2], Qu[Ju + Eu.f] = 0, this.pool.markDirty(uu)
+          origin: Xk
+        } = this, bk = kk * Rk.c;
+        ak[bk] = Fk - Xk[0], ak[bk + 1] = Bk - Xk[1], ak[bk + 2] = tk - Xk[2], ak[bk + Rk.d] = 0, this.pool.markDirty(kk)
       }
-      hide(uu) {
-        this.pool.records[uu * Eu.c + Eu.f] = 1, this.pool.markDirty(uu)
+      hide(kk) {
+        this.pool.records[kk * Rk.c + Rk.d] = 1, this.pool.markDirty(kk)
       }
       commit() {
         this.pool.commit(this.count)
@@ -38,159 +38,159 @@ export const modules = {
         this.pool.dispose()
       }
     }
-    class mu {
-      constructor(uu, Ru, yu) {
-        this.api = uu, this.model = Ru, this.initialCapacity = yu, this.kinds = new Map, this.origin = [0, 0, 0]
+    class Xk {
+      constructor(kk, Fk, Bk) {
+        this.api = kk, this.model = Fk, this.initialCapacity = Bk, this.kinds = new Map, this.origin = [0, 0, 0]
       }
-      kindOf(uu) {
-        let Ru = this.kinds.get(uu);
-        if (void 0 === Ru) {
-          const yu = this.api.createInstancePool({
+      kindOf(kk) {
+        let Fk = this.kinds.get(kk);
+        if (void 0 === Fk) {
+          const Bk = this.api.createInstancePool({
             ...this.model,
-            item: uu
+            item: kk
           }, this.initialCapacity);
-          null === yu || void 0 === yu || yu.setOrigin(this.origin[0], this.origin[1], this.origin[2]), Ru = yu && new Qu(yu, this.origin), this.kinds.set(uu, Ru)
+          null === Bk || void 0 === Bk || Bk.setOrigin(this.origin[0], this.origin[1], this.origin[2]), Fk = Bk && new ak(Bk, this.origin), this.kinds.set(kk, Fk)
         }
-        return Ru
+        return Fk
       }
-      follow(uu) {
+      follow(kk) {
         const {
-          origin: Ru
+          origin: Fk
         } = this;
-        if (Math.abs(uu[0] - Ru[0]) <= 512 && Math.abs(uu[1] - Ru[1]) <= 512 && Math.abs(uu[2] - Ru[2]) <= 512) return !1;
-        Ru[0] = Math.floor(uu[0]), Ru[1] = Math.floor(uu[1]), Ru[2] = Math.floor(uu[2]);
-        for (const yu of this.kinds.values()) null === yu || void 0 === yu || yu.pool.setOrigin(Ru[0], Ru[1], Ru[2]);
+        if (Math.abs(kk[0] - Fk[0]) <= 512 && Math.abs(kk[1] - Fk[1]) <= 512 && Math.abs(kk[2] - Fk[2]) <= 512) return !1;
+        Fk[0] = Math.floor(kk[0]), Fk[1] = Math.floor(kk[1]), Fk[2] = Math.floor(kk[2]);
+        for (const Bk of this.kinds.values()) null === Bk || void 0 === Bk || Bk.pool.setOrigin(Fk[0], Fk[1], Fk[2]);
         return !0
       }
       commit() {
-        for (const uu of this.kinds.values()) null === uu || void 0 === uu || uu.commit()
+        for (const kk of this.kinds.values()) null === kk || void 0 === kk || kk.commit()
       }
       dispose() {
-        for (const uu of this.kinds.values()) null === uu || void 0 === uu || uu.dispose();
+        for (const kk of this.kinds.values()) null === kk || void 0 === kk || kk.dispose();
         this.kinds.clear()
       }
     }
   },
-  39018: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      default: () => ru
+  38876: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      default: () => Vk
     });
-    const Eu = "Pipe",
-      Ku = "Extractor Pipe",
-      Qu = (new Set([Eu, Ku]), new Set([Eu, Ku, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
-    var mu = yu(38264);
-    class Ju {
-      constructor(uu) {
-        this.api = uu, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new mu.e(uu, {
+    const Rk = "Pipe",
+      tk = "Extractor Pipe",
+      ak = (new Set([Rk, tk]), new Set([Rk, tk, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
+    var Xk = Bk(38141);
+    class bk {
+      constructor(kk) {
+        this.api = kk, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new Xk.d(kk, {
           scale: .3,
           yaw: 0
         }, 16)
       }
-      onSpawn(uu) {
-        if (uu.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${uu.id} with < 2 waypoints`);
-        const Ru = this.kinds.kindOf(uu.itemName);
-        if (!Ru) return void(this.unshown.has(uu.itemName) || (this.unshown.add(uu.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${uu.itemName}"`)));
-        this.remove(uu.id);
-        const yu = function(uu) {
-          return (uu.waypoints.length - 1) / 2 * 1e3
-        }(uu);
-        if (Date.now() - uu.startTimeMs > yu + 2e3) return;
-        const Eu = Ru.take();
-        this.items.set(uu.id, {
-          kind: Ru,
-          slot: Eu,
-          waypoints: uu.waypoints,
-          startTimeMs: uu.startTimeMs,
-          durationMs: yu
+      onSpawn(kk) {
+        if (kk.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${kk.id} with < 2 waypoints`);
+        const Fk = this.kinds.kindOf(kk.itemName);
+        if (!Fk) return void(this.unshown.has(kk.itemName) || (this.unshown.add(kk.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${kk.itemName}"`)));
+        this.remove(kk.id);
+        const Bk = function(kk) {
+          return (kk.waypoints.length - 1) / 2 * 1e3
+        }(kk);
+        if (Date.now() - kk.startTimeMs > Bk + 2e3) return;
+        const Rk = Fk.take();
+        this.items.set(kk.id, {
+          kind: Fk,
+          slot: Rk,
+          waypoints: kk.waypoints,
+          startTimeMs: kk.startTimeMs,
+          durationMs: Bk
         })
       }
-      onEnd(uu) {
-        this.remove(uu.id)
+      onEnd(kk) {
+        this.remove(kk.id)
       }
-      vW() {
+      EW() {
         if (0 === this.items.size) return void this.kinds.commit();
-        const uu = Date.now();
+        const kk = Date.now();
         this.kinds.follow(this.api.getCameraPosition());
-        for (const [Ru, yu] of this.items) uu - yu.startTimeMs > yu.durationMs + 2e3 ? this.remove(Ru) : this.write(yu, uu);
+        for (const [Fk, Bk] of this.items) kk - Bk.startTimeMs > Bk.durationMs + 2e3 ? this.remove(Fk) : this.write(Bk, kk);
         this.kinds.commit()
       }
       dispose() {
         this.kinds.dispose(), this.items.clear()
       }
-      remove(uu) {
-        const Ru = this.items.get(uu);
-        Ru && (Ru.kind.release(Ru.slot), this.items.delete(uu))
+      remove(kk) {
+        const Fk = this.items.get(kk);
+        Fk && (Fk.kind.release(Fk.slot), this.items.delete(kk))
       }
-      write(uu, Ru) {
-        const yu = uu.waypoints.length - 1;
-        let Eu = (Ru - uu.startTimeMs) / uu.durationMs;
-        Eu < 0 ? Eu = 0 : Eu > 1 && (Eu = 1);
-        const Ku = Eu * yu;
-        let Qu = Math.floor(Ku);
-        Qu >= yu && (Qu = yu - 1);
-        const mu = Ku - Qu,
-          [Ju, Nu, Xu] = uu.waypoints[Qu],
-          [Vu, ru, Bu] = uu.waypoints[Qu + 1];
-        uu.kind.write(uu.slot, Ju + (Vu - Ju) * mu + .5, Nu + (ru - Nu) * mu + .5, Xu + (Bu - Xu) * mu + .5)
+      write(kk, Fk) {
+        const Bk = kk.waypoints.length - 1;
+        let Rk = (Fk - kk.startTimeMs) / kk.durationMs;
+        Rk < 0 ? Rk = 0 : Rk > 1 && (Rk = 1);
+        const tk = Rk * Bk;
+        let ak = Math.floor(tk);
+        ak >= Bk && (ak = Bk - 1);
+        const Xk = tk - ak,
+          [bk, wk, dk] = kk.waypoints[ak],
+          [sk, Vk, Jk] = kk.waypoints[ak + 1];
+        kk.kind.write(kk.slot, bk + (sk - bk) * Xk + .5, wk + (Vk - wk) * Xk + .5, dk + (Jk - dk) * Xk + .5)
       }
     }
-    const Nu = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
-      Xu = new Set(Nu);
-    class Vu {
+    const wk = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
+      dk = new Set(wk);
+    class sk {
       constructor() {
         this.pipeVisualizer = null, this.api = void 0
       }
-      onCreate(uu) {
-        this.api = uu, this.pipeVisualizer = new Ju(uu)
+      onCreate(kk) {
+        this.api = kk, this.pipeVisualizer = new bk(kk)
       }
       onClose() {
-        var uu;
-        null === (uu = this.pipeVisualizer) || void 0 === uu || uu.dispose(), this.pipeVisualizer = null
+        var kk;
+        null === (kk = this.pipeVisualizer) || void 0 === kk || kk.dispose(), this.pipeVisualizer = null
       }
-      onReceivedMessageFromServer(uu, Ru) {
+      onReceivedMessageFromServer(kk, Fk) {
         const {
-          pipeVisualizer: yu
+          pipeVisualizer: Bk
         } = this;
-        if (yu)
-          if ("pipeItemSpawnBatch" === uu)
-            for (const Eu of Ru.items) yu.onSpawn(Eu);
-          else if ("pipeItemEndBatch" === uu)
-          for (const Eu of Ru.items) yu.onEnd(Eu)
+        if (Bk)
+          if ("pipeItemSpawnBatch" === kk)
+            for (const Rk of Fk.items) Bk.onSpawn(Rk);
+          else if ("pipeItemEndBatch" === kk)
+          for (const Rk of Fk.items) Bk.onEnd(Rk)
       }
-      vW() {
-        var uu;
-        null === (uu = this.pipeVisualizer) || void 0 === uu || uu.vW()
+      EW() {
+        var kk;
+        null === (kk = this.pipeVisualizer) || void 0 === kk || kk.EW()
       }
-      onPlayerAttemptAltAction(uu, Ru, yu, Eu, Ku, mu) {
-        var Ju;
-        if (!Xu.has(this.api.getMetaInfo(Ku).rootName)) return;
-        const Nu = null === (Ju = this.api.Xyu(uu)) || void 0 === Ju ? void 0 : Ju.name;
-        return void 0 !== Nu && Qu.has(Nu) ? "preventAction" : void 0
+      onPlayerAttemptAltAction(kk, Fk, Bk, Rk, tk, Xk) {
+        var bk;
+        if (!dk.has(this.api.getMetaInfo(tk).rootName)) return;
+        const wk = null === (bk = this.api.LFk(kk)) || void 0 === bk ? void 0 : bk.name;
+        return void 0 !== wk && ak.has(wk) ? "preventAction" : void 0
       }
     }
-    const ru = function(uu, Ru, yu) {
-      if ("survivalFactory" !== yu && "survivalFactoryPersistent" !== yu) {
+    const Vk = function(kk, Fk, Bk) {
+      if ("survivalFactory" !== Bk && "survivalFactoryPersistent" !== Bk) {
         return {}
       }
-      const Eu = new Vu;
+      const Rk = new sk;
       return {
-        onCreate: uu => {
-          Eu.onCreate(uu)
+        onCreate: kk => {
+          Rk.onCreate(kk)
         },
         onClose: () => {
-          Eu.onClose()
+          Rk.onClose()
         },
-        onReceivedMessageFromServer: (uu, Ru) => {
-          Eu.onReceivedMessageFromServer(uu, Ru)
+        onReceivedMessageFromServer: (kk, Fk) => {
+          Rk.onReceivedMessageFromServer(kk, Fk)
         },
-        sr: () => {
-          Eu.vW()
+        yJ: () => {
+          Rk.EW()
         },
-        altVetoBlocks: Nu,
-        onPlayerAttemptAltAction: (uu, Ru, yu, Ku, Qu, mu) => Eu.onPlayerAttemptAltAction(uu, Ru, yu, Ku, Qu, mu)
+        altVetoBlocks: wk,
+        onPlayerAttemptAltAction: (kk, Fk, Bk, tk, ak, Xk) => Rk.onPlayerAttemptAltAction(kk, Fk, Bk, tk, ak, Xk)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

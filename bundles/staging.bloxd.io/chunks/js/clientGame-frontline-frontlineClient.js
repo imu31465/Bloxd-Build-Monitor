@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  36436: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => xu,
-      d: () => Su,
-      g: () => Bu,
-      h: () => ru
+  36329: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Ak,
+      g: () => ek,
+      j: () => Jk,
+      n: () => Vk
     });
-    var Eu = yu(9048),
-      Ku = yu(36445),
-      Qu = yu(36449),
-      mu = yu(8447),
-      Ju = yu(1400),
-      Nu = yu(64),
-      Xu = yu(80),
-      Vu = yu(1079);
+    var Rk = Bk(9004),
+      tk = Bk(36332),
+      ak = Bk(36340),
+      Xk = Bk(8372),
+      bk = Bk(1387),
+      wk = Bk(61),
+      dk = Bk(67),
+      sk = Bk(1069);
 
-    function ru() {
-      var uu;
-      return (0, Ju.h)(Ku.c, (0, Ku.o)()), (0, Vu.jsx)(Vu.Fragment, {
-        children: null === (uu = (0, Ku.o)()) || void 0 === uu ? void 0 : uu.content
+    function Vk() {
+      var kk;
+      return (0, bk.g)(tk.c, (0, tk.o)()), (0, sk.jsx)(sk.Fragment, {
+        children: null === (kk = (0, tk.o)()) || void 0 === kk ? void 0 : kk.content
       })
     }
 
-    function Bu(uu) {
-      var Ru;
+    function Jk(kk) {
+      var Fk;
       let {
-        show: yu
-      } = uu;
-      (0, Ju.h)(Ku.c, (0, Ku.o)());
-      const Xu = null === (Ru = (0, Ku.o)()) || void 0 === Ru ? void 0 : Ru.menu;
-      return (0, Nu.useEffect)((() => {
-        var uu;
-        yu || (null === Xu || void 0 === Xu || null === (uu = Xu.onClose) || void 0 === uu || uu.call(Xu), (0, Qu.p)())
-      }), [yu, Xu]), (0, Nu.useEffect)((() => yu ? (0, mu.g)(Qu.v, Qu.d) : void 0), [yu]), (0, Vu.jsx)(Eu.c, {
-        showing: yu,
+        show: Bk
+      } = kk;
+      (0, bk.g)(tk.c, (0, tk.o)());
+      const dk = null === (Fk = (0, tk.o)()) || void 0 === Fk ? void 0 : Fk.menu;
+      return (0, wk.useEffect)((() => {
+        var kk;
+        Bk || (null === dk || void 0 === dk || null === (kk = dk.onClose) || void 0 === kk || kk.call(dk), (0, ak.u)())
+      }), [Bk, dk]), (0, wk.useEffect)((() => Bk ? (0, Xk.h)(ak.C, ak.h) : void 0), [Bk]), (0, sk.jsx)(Rk.d, {
+        showing: Bk,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Xu || void 0 === Xu ? void 0 : Xu.content
+        children: null === dk || void 0 === dk ? void 0 : dk.content
       })
     }
 
-    function xu(uu) {
+    function Ak(kk) {
       let {
-        placement: Ru = "bottom"
-      } = uu;
-      return (0, Vu.jsx)("div", {
-        id: `clientGameHud-${Ru}`,
+        placement: Fk = "bottom"
+      } = kk;
+      return (0, sk.jsx)("div", {
+        id: `clientGameHud-${Fk}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Su(uu) {
+    function ek(kk) {
       let {
-        children: Ru,
-        placement: yu = "bottom"
-      } = uu;
-      const [Eu, Ku] = (0, Nu.useState)(null);
-      return (0, Nu.useEffect)((() => {
-        Ku(document.getElementById(`clientGameHud-${yu}`))
-      }), [yu]), Eu ? (0, Xu.createPortal)(Ru, Eu) : null
+        children: Fk,
+        placement: Bk = "bottom"
+      } = kk;
+      const [Rk, tk] = (0, wk.useState)(null);
+      return (0, wk.useEffect)((() => {
+        tk(document.getElementById(`clientGameHud-${Bk}`))
+      }), [Bk]), Rk ? (0, dk.createPortal)(Fk, Rk) : null
     }
   },
-  9048: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu
+  9004: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => ak
     });
-    var Eu = yu(4307),
-      Ku = yu(4314);
+    var Rk = Bk(4277),
+      tk = Bk(4283);
 
-    function Qu(uu) {
+    function ak(kk) {
       let {
-        children: Ru,
-        showing: yu,
-        globallyUniqueKey: Qu,
-        alwaysMountChildren: mu = !1,
-        doGameplayStartStopOnShow: Ju = !0,
-        keepsMovement: Nu = !1
-      } = uu;
-      return (0, Ku.c)(!0, yu, Qu, Nu), (0, Eu.e)(Ju, yu), yu || mu ? Ru : null
+        children: Fk,
+        showing: Bk,
+        globallyUniqueKey: ak,
+        alwaysMountChildren: Xk = !1,
+        doGameplayStartStopOnShow: bk = !0,
+        keepsMovement: wk = !1
+      } = kk;
+      return (0, tk.d)(!0, Bk, ak, wk), (0, Rk.e)(bk, Bk), Bk || Xk ? Fk : null
     }
   },
-  36532: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Qu,
-      c: () => mu,
-      d: () => Ju,
-      g: () => Nu
+  36423: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => ak,
+      i: () => Xk,
+      m: () => bk,
+      q: () => wk
     });
-    var Eu = yu(64),
-      Ku = yu(1100);
-    const Qu = 8,
-      mu = "InGameHeaderContainer",
-      Ju = "TopRightElements";
+    var Rk = Bk(61),
+      tk = Bk(1090);
+    const ak = 8,
+      Xk = "InGameHeaderContainer",
+      bk = "TopRightElements";
 
-    function Nu(uu) {
-      const [Ru] = (0, Ku.d)(), [yu, Nu] = (0, Eu.useState)(!1);
-      return (0, Eu.useLayoutEffect)((() => {
-        if (!uu) return;
-        const Ru = document.querySelector(`.${mu}`),
-          yu = document.querySelector(`.${Ju}`),
-          Eu = () => {
-            const Eu = uu.getBoundingClientRect(),
-              Ku = Ru ? Ru.getBoundingClientRect().right : 0,
-              mu = yu ? yu.getBoundingClientRect().left : window.innerWidth,
-              Ju = Eu.left < Ku + Qu,
-              Xu = Eu.right > mu - Qu;
-            Nu(Ju || Xu)
+    function wk(kk) {
+      const [Fk] = (0, tk.c)(), [Bk, wk] = (0, Rk.useState)(!1);
+      return (0, Rk.useLayoutEffect)((() => {
+        if (!kk) return;
+        const Fk = document.querySelector(`.${Xk}`),
+          Bk = document.querySelector(`.${bk}`),
+          Rk = () => {
+            const Rk = kk.getBoundingClientRect(),
+              tk = Fk ? Fk.getBoundingClientRect().right : 0,
+              Xk = Bk ? Bk.getBoundingClientRect().left : window.innerWidth,
+              bk = Rk.left < tk + ak,
+              dk = Rk.right > Xk - ak;
+            wk(bk || dk)
           };
-        Eu();
-        const Ku = new ResizeObserver(Eu);
-        return Ku.observe(uu), Ru && Ku.observe(Ru), yu && Ku.observe(yu), () => {
-          Ku.disconnect()
+        Rk();
+        const tk = new ResizeObserver(Rk);
+        return tk.observe(kk), Fk && tk.observe(Fk), Bk && tk.observe(Bk), () => {
+          tk.disconnect()
         }
-      }), [uu, Ru]), yu
+      }), [kk, Fk]), Bk
     }
   },
-  36524: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Ku
+  36421: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => tk
     });
-    const Eu = [{
+    const Rk = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function Ku(uu, Ru, yu) {
-      const Ku = Math.abs(uu - Ru),
-        Qu = Date.now() - yu;
-      for (const mu of Eu)
-        if (uu < mu.maxDist) return Ku >= mu.hardUpdateDist || Qu > mu.timeBetweenSoftChecks && Ku >= mu.softUpdateDist;
+    function tk(kk, Fk, Bk) {
+      const tk = Math.abs(kk - Fk),
+        ak = Date.now() - Bk;
+      for (const Xk of Rk)
+        if (kk < Xk.maxDist) return tk >= Xk.hardUpdateDist || ak > Xk.timeBetweenSoftChecks && tk >= Xk.softUpdateDist;
       return !1
     }
   },
-  8447: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu,
-      g: () => Ku
+  8372: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => ak,
+      h: () => tk
     });
-    let Eu = null;
-    const Ku = function(uu) {
-        const Ru = {
-          cycle: uu,
+    let Rk = null;
+    const tk = function(kk) {
+        const Fk = {
+          cycle: kk,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Eu = Ru, () => {
-          Eu === Ru && (Eu = null)
+        return Rk = Fk, () => {
+          Rk === Fk && (Rk = null)
         }
       },
-      Qu = () => {
-        var uu;
-        return null !== (uu = Eu) && void 0 !== uu && uu.canCycle() ? Eu.cycle : null
+      ak = () => {
+        var kk;
+        return null !== (kk = Rk) && void 0 !== kk && kk.canCycle() ? Rk.cycle : null
       }
   },
-  38303: (uu, Ru, yu) => {
-    function Eu(uu, Ru, yu) {
-      var Eu;
+  38173: (kk, Fk, Bk) => {
+    function Rk(kk, Fk, Bk) {
+      var Rk;
       const {
-        width: Ku,
-        height: Qu
-      } = yu, mu = null !== (Eu = uu.text) && void 0 !== Eu ? Eu : uu, Ju = (mu.x / 100 - .5) * Ku, Nu = (mu.y / 100 - .5) * Qu, Xu = Ku / 2 - Ru.x;
-      if (null !== uu.text && Math.abs(Ju) <= Xu && Nu >= Ru.top - Qu / 2 && Nu <= Qu / 2 - Ru.bottom) return {
-        x: mu.x,
-        y: mu.y
+        width: tk,
+        height: ak
+      } = Bk, Xk = null !== (Rk = kk.text) && void 0 !== Rk ? Rk : kk, bk = (Xk.x / 100 - .5) * tk, wk = (Xk.y / 100 - .5) * ak, dk = tk / 2 - Fk.x;
+      if (null !== kk.text && Math.abs(bk) <= dk && wk >= Fk.top - ak / 2 && wk <= ak / 2 - Fk.bottom) return {
+        x: Xk.x,
+        y: Xk.y
       };
-      const Vu = Math.min(0 === Ju ? 1 / 0 : Xu / Math.abs(Ju), Nu > 0 ? (Qu / 2 - Ru.bottom) / Nu : Nu < 0 ? (Ru.top - Qu / 2) / Nu : 1 / 0);
-      return !Number.isFinite(Vu) || Vu < 0 ? {
+      const sk = Math.min(0 === bk ? 1 / 0 : dk / Math.abs(bk), wk > 0 ? (ak / 2 - Fk.bottom) / wk : wk < 0 ? (Fk.top - ak / 2) / wk : 1 / 0);
+      return !Number.isFinite(sk) || sk < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + Ju * Vu / Ku * 100,
-        y: 50 + Nu * Vu / Qu * 100
+        x: 50 + bk * sk / tk * 100,
+        y: 50 + wk * sk / ak * 100
       }
     }
-    yu.d(Ru, {
-      d: () => Eu
+    Bk.d(Fk, {
+      e: () => Rk
     })
   },
-  36449: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu,
-      d: () => pu,
-      h: () => Tu,
-      k: () => Ju,
-      o: () => Bu,
-      p: () => Wu,
-      q: () => ru,
-      u: () => Hu,
-      v: () => Su,
-      w: () => ju
+  36340: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      C: () => ek,
+      G: () => Wk,
+      d: () => ak,
+      h: () => yk,
+      l: () => fk,
+      p: () => bk,
+      s: () => Jk,
+      u: () => mk,
+      w: () => Vk,
+      z: () => vk
     });
-    var Eu = yu(27),
-      Ku = yu(34);
-    const Qu = "clientGameInventoryButtonsChanged",
-      mu = new Map;
+    var Rk = Bk(22),
+      tk = Bk(29);
+    const ak = "clientGameInventoryButtonsChanged",
+      Xk = new Map;
 
-    function Ju() {
-      return [...mu.values()].sort(((uu, Ru) => {
-        var yu, Eu;
-        return (null !== (yu = uu.order) && void 0 !== yu ? yu : 0) - (null !== (Eu = Ru.order) && void 0 !== Eu ? Eu : 0)
+    function bk() {
+      return [...Xk.values()].sort(((kk, Fk) => {
+        var Bk, Rk;
+        return (null !== (Bk = kk.order) && void 0 !== Bk ? Bk : 0) - (null !== (Rk = Fk.order) && void 0 !== Rk ? Rk : 0)
       }))
     }
-    let Nu = null;
+    let wk = null;
 
-    function Xu(uu) {
-      Nu = uu
+    function dk(kk) {
+      wk = kk
     }
-    let Vu = !1;
+    let sk = !1;
 
-    function ru(uu) {
-      Vu = !0;
+    function Vk(kk) {
+      sk = !0;
       try {
-        uu.onClick()
+        kk.onClick()
       } finally {
-        Vu = !1
+        sk = !1
       }
-      uu.panel && "clientGame" === Eu.d.get("openInGameMenuName") && Xu(uu.id)
+      kk.panel && "clientGame" === Rk.c.get("openInGameMenuName") && dk(kk.id)
     }
 
-    function Bu() {
-      return Vu
+    function Jk() {
+      return sk
     }
 
-    function xu() {
-      return Ju().filter((uu => uu.panel && !uu.disabled))
+    function Ak() {
+      return bk().filter((kk => kk.panel && !kk.disabled))
     }
 
-    function Su(uu) {
-      const Ru = xu(),
-        yu = Ru.findIndex((uu => uu.id === Nu));
-      return !(yu < 0 || Ru.length < 2) && (ru(Ru[(yu + uu + Ru.length) % Ru.length]), !0)
+    function ek(kk) {
+      const Fk = Ak(),
+        Bk = Fk.findIndex((kk => kk.id === wk));
+      return !(Bk < 0 || Fk.length < 2) && (Vk(Fk[(Bk + kk + Fk.length) % Fk.length]), !0)
     }
 
-    function pu() {
-      return null !== Nu && xu().length > 1
+    function yk() {
+      return null !== wk && Ak().length > 1
     }
 
-    function Tu() {
-      Xu(null)
+    function fk() {
+      dk(null)
     }
 
-    function Wu() {
-      "inventory" !== Eu.d.get("openInGameMenuName") && Xu(null)
+    function mk() {
+      "inventory" !== Rk.c.get("openInGameMenuName") && dk(null)
     }
 
-    function ju() {
-      const uu = Nu;
-      return Xu(null), uu
+    function Wk() {
+      const kk = wk;
+      return dk(null), kk
     }
 
-    function Hu(uu) {
-      return mu.set(uu.id, uu), Ku.k.Op(Qu, Ju(), !0), () => {
-        mu.get(uu.id) === uu && (mu.delete(uu.id), Ku.k.Op(Qu, Ju()))
+    function vk(kk) {
+      return Xk.set(kk.id, kk), tk.o.Hf(ak, bk(), !0), () => {
+        Xk.get(kk.id) === kk && (Xk.delete(kk.id), tk.o.Hf(ak, bk()))
       }
     }
   },
-  36445: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ju,
-      f: () => Tu,
-      i: () => Wu,
-      m: () => Bu,
-      o: () => Xu,
-      q: () => pu,
-      u: () => xu,
-      w: () => Vu
+  36332: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => bk,
+      f: () => fk,
+      i: () => mk,
+      l: () => Jk,
+      o: () => dk,
+      q: () => yk,
+      s: () => Ak,
+      w: () => sk
     });
-    var Eu = yu(27),
-      Ku = yu(34),
-      Qu = yu(1250),
-      mu = yu(36449);
-    const Ju = "clientGameUiChanged";
-    let Nu = null;
+    var Rk = Bk(22),
+      tk = Bk(29),
+      ak = Bk(1239),
+      Xk = Bk(36340);
+    const bk = "clientGameUiChanged";
+    let wk = null;
 
-    function Xu() {
-      return Nu
+    function dk() {
+      return wk
     }
 
-    function Vu(uu, Ru) {
-      const yu = {
-        content: uu,
-        menu: Ru
+    function sk(kk, Fk) {
+      const Bk = {
+        content: kk,
+        menu: Fk
       };
-      return Nu = yu, Ku.k.Op(Ju, Nu, !0), () => {
-        Nu === yu && (Nu = null, Su = !1, Tu(), Ku.k.Op(Ju, null))
+      return wk = Bk, tk.o.Hf(bk, wk, !0), () => {
+        wk === Bk && (wk = null, ek = !1, fk(), tk.o.Hf(bk, null))
       }
     }
-    let ru = null;
+    let Vk = null;
 
-    function Bu() {
-      return ru
+    function Jk() {
+      return Vk
     }
 
-    function xu(uu) {
-      return ru = uu, () => {
-        ru === uu && (ru = null)
+    function Ak(kk) {
+      return Vk = kk, () => {
+        Vk === kk && (Vk = null)
       }
     }
-    let Su = !1;
+    let ek = !1;
 
-    function pu() {
-      const uu = Eu.d.get("openInGameMenuName");
-      "clientGame" !== uu && (Su = "inventory" === uu), (0, mu.o)() || (0, mu.h)(), (0, Qu.o)(Qu.b), Eu.d.set({
+    function yk() {
+      const kk = Rk.c.get("openInGameMenuName");
+      "clientGame" !== kk && (ek = "inventory" === kk), (0, Xk.s)() || (0, Xk.l)(), (0, ak.m)(ak.e), Rk.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Tu() {
-      ju(!1)
+    function fk() {
+      Wk(!1)
     }
 
-    function Wu() {
-      ju(Su)
+    function mk() {
+      Wk(ek)
     }
 
-    function ju(uu) {
-      "clientGame" === Eu.d.get("openInGameMenuName") && Eu.d.set({
-        openInGameMenuName: uu ? "inventory" : null
-      }), uu || (0, mu.h)(), Su = !1
+    function Wk(kk) {
+      "clientGame" === Rk.c.get("openInGameMenuName") && Rk.c.set({
+        openInGameMenuName: kk ? "inventory" : null
+      }), kk || (0, Xk.l)(), ek = !1
     }
   },
-  39143: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      default: () => TR
+  39012: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      default: () => mF
     });
-    const Eu = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var Ku = yu(64),
-      Qu = yu(36445),
-      mu = yu(36788),
-      Ju = yu(36457),
-      Nu = yu(1661),
-      Xu = yu(34);
-    const Vu = {
+    const Rk = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var tk = Bk(61),
+      ak = Bk(36332),
+      Xk = Bk(36708),
+      bk = Bk(36355),
+      wk = Bk(1650),
+      dk = Bk(29);
+    const sk = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const ru = 32;
+    const Vk = 32;
 
-    function Bu(uu, Ru, yu, Eu) {
+    function Jk(kk, Fk, Bk, Rk) {
       return {
         tag: "line",
         attrs: {
-          x1: uu,
-          y1: Ru,
-          x2: yu,
-          y2: Eu,
+          x1: kk,
+          y1: Fk,
+          x2: Bk,
+          y2: Rk,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function xu(uu) {
+    function Ak(kk) {
       return {
         tag: "circle",
         attrs: {
-          cx: ru,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ru,
-          r: uu,
+          cx: Vk,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Vk,
+          r: kk,
           class: "Fill"
         }
       }
     }
 
-    function Su(uu, Ru) {
+    function ek(kk, Fk) {
       return {
         tag: "path",
         attrs: {
-          d: uu,
-          "stroke-width": Ru
+          d: kk,
+          "stroke-width": Fk
         }
       }
     }
 
-    function pu(uu, Ru, yu) {
+    function yk(kk, Fk, Bk) {
       return {
         tag: "circle",
         attrs: {
-          cx: ru,
-          cy: ru,
-          r: uu,
-          "stroke-width": Ru,
-          class: yu
+          cx: Vk,
+          cy: Vk,
+          r: kk,
+          "stroke-width": Fk,
+          class: Bk
         }
       }
     }
 
-    function Tu(uu, Ru, yu) {
+    function fk(kk, Fk, Bk) {
       return {
         tag: "text",
         attrs: {
-          x: uu,
-          y: Ru,
+          x: kk,
+          y: Fk,
           class: "Fill Label"
         },
-        text: yu
+        text: Bk
       }
     }
-    const Wu = {
-      pistol: uu => [Bu(ru, ru - uu - 5, ru, ru - uu), Bu(ru - uu - 5, ru, ru - uu, ru), Bu(ru + uu, ru, ru + uu + 5, ru), xu(1.4)],
-      rifle: uu => [Bu(ru, ru - uu - 8, ru, ru - uu), Bu(ru, ru + uu, ru, ru + uu + 8), Bu(ru - uu - 8, ru, ru - uu, ru), Bu(ru + uu, ru, ru + uu + 8, ru), xu(1)],
-      smg: uu => {
-        const Ru = Math.PI / 2,
-          yu = [];
-        for (let mu = 0; mu < 4; mu++) yu.push((Ku = mu * Ru + .35, Qu = (mu + 1) * Ru - .35, Su(`M${ru+(Eu=6+uu)*Math.cos(Ku)} ${ru+Eu*Math.sin(Ku)} A${Eu} ${Eu} 0 0 1 ${ru+Eu*Math.cos(Qu)} ${ru+Eu*Math.sin(Qu)}`, 2)));
-        var Eu, Ku, Qu;
-        return [...yu, xu(1.4)]
+    const mk = {
+      pistol: kk => [Jk(Vk, Vk - kk - 5, Vk, Vk - kk), Jk(Vk - kk - 5, Vk, Vk - kk, Vk), Jk(Vk + kk, Vk, Vk + kk + 5, Vk), Ak(1.4)],
+      rifle: kk => [Jk(Vk, Vk - kk - 8, Vk, Vk - kk), Jk(Vk, Vk + kk, Vk, Vk + kk + 8), Jk(Vk - kk - 8, Vk, Vk - kk, Vk), Jk(Vk + kk, Vk, Vk + kk + 8, Vk), Ak(1)],
+      smg: kk => {
+        const Fk = Math.PI / 2,
+          Bk = [];
+        for (let Xk = 0; Xk < 4; Xk++) Bk.push((tk = Xk * Fk + .35, ak = (Xk + 1) * Fk - .35, ek(`M${Vk+(Rk=6+kk)*Math.cos(tk)} ${Vk+Rk*Math.sin(tk)} A${Rk} ${Rk} 0 0 1 ${Vk+Rk*Math.cos(ak)} ${Vk+Rk*Math.sin(ak)}`, 2)));
+        var Rk, tk, ak;
+        return [...Bk, Ak(1.4)]
       },
-      shotgun: uu => [pu(uu, 3, "Ring Outline"), pu(uu, 1.5, "Ring")],
-      marksman: uu => [Su(`M${26-uu/2} ${39+uu/2} L32 33 L${38+uu/2} ${39+uu/2}`, 2), Bu(14 - uu, ru, 24 - uu, ru, 1.5), Bu(40 + uu, ru, 50 + uu, ru, 1.5), Bu(14 - uu, 30, 14 - uu, 34, 1.5), Bu(50 + uu, 30, 50 + uu, 34, 1.5)],
-      machineGun: uu => {
-        const Ru = 10 + uu,
-          yu = [];
-        for (const [Eu, Ku] of [
+      shotgun: kk => [yk(kk, 3, "Ring Outline"), yk(kk, 1.5, "Ring")],
+      marksman: kk => [ek(`M${26-kk/2} ${39+kk/2} L32 33 L${38+kk/2} ${39+kk/2}`, 2), Jk(14 - kk, Vk, 24 - kk, Vk, 1.5), Jk(40 + kk, Vk, 50 + kk, Vk, 1.5), Jk(14 - kk, 30, 14 - kk, 34, 1.5), Jk(50 + kk, 30, 50 + kk, 34, 1.5)],
+      machineGun: kk => {
+        const Fk = 10 + kk,
+          Bk = [];
+        for (const [Rk, tk] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) yu.push(Su(`M${ru+Eu*Ru} ${ru+Ku*(Ru-5)} L${ru+Eu*Ru} ${ru+Ku*Ru} L${ru+Eu*(Ru-5)} ${ru+Ku*Ru}`, 2));
-        return [...yu, Bu(ru, 28, ru, 36, 1.5), Bu(28, ru, 36, ru, 1.5)]
+          ]) Bk.push(ek(`M${Vk+Rk*Fk} ${Vk+tk*(Fk-5)} L${Vk+Rk*Fk} ${Vk+tk*Fk} L${Vk+Rk*(Fk-5)} ${Vk+tk*Fk}`, 2));
+        return [...Bk, Jk(Vk, 28, Vk, 36, 1.5), Jk(28, Vk, 36, Vk, 1.5)]
       },
-      launcher: () => [Bu(14, 30, 50, 30, 1.5), Bu(ru, 24, ru, 52, 1.5), Bu(28, 38, 36, 38, 1.5), Bu(29, 44, 35, 44, 1.5), Bu(30, 50, 34, 50, 1.5), Tu(38, 40, "100"), Tu(37, 46, "200"), xu(1.4, 30)],
-      melee: () => [Su("M32 26 L38 32 L32 38 L26 32 Z", 1.5), xu(1.2)],
-      throwable: () => [xu(1.6)]
+      launcher: () => [Jk(14, 30, 50, 30, 1.5), Jk(Vk, 24, Vk, 52, 1.5), Jk(28, 38, 36, 38, 1.5), Jk(29, 44, 35, 44, 1.5), Jk(30, 50, 34, 50, 1.5), fk(38, 40, "100"), fk(37, 46, "200"), Ak(1.4, 30)],
+      melee: () => [ek("M32 26 L38 32 L32 38 L26 32 Z", 1.5), Ak(1.2)],
+      throwable: () => [Ak(1.6)]
     };
 
-    function ju(uu) {
+    function Wk(kk) {
       let {
-        tag: Ru,
-        attrs: yu,
-        text: Eu
-      } = uu, Ku = `<${Ru}`;
-      for (const [Qu, mu] of Object.entries(yu)) Ku += ` ${Qu}="${mu}"`;
-      return void 0 === Eu ? `${Ku}/>` : `${Ku}>${Eu}</${Ru}>`
+        tag: Fk,
+        attrs: Bk,
+        text: Rk
+      } = kk, tk = `<${Fk}`;
+      for (const [ak, Xk] of Object.entries(Bk)) tk += ` ${ak}="${Xk}"`;
+      return void 0 === Rk ? `${tk}/>` : `${tk}>${Rk}</${Fk}>`
     }
-    class Hu {
-      constructor(uu, Ru) {
-        this.api = uu, this.localPlayerId = Ru, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = uu => {
-          this.element = uu, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, uu && !this.enabled && (uu.style.display = "none")
+    class vk {
+      constructor(kk, Fk) {
+        this.api = kk, this.localPlayerId = Fk, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = kk => {
+          this.element = kk, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, kk && !this.enabled && (kk.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, Nu.getRemInPx)()))
-        }, this.tokens = [Xu.k.subscribe("aimingOverlay", (uu => {
-          this.sniperOverlay = "sniper" === uu
-        })), Xu.k.subscribe("mouseState", (uu => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, wk.getRemInPx)()))
+        }, this.tokens = [dk.o.subscribe("aimingOverlay", (kk => {
+          this.sniperOverlay = "sniper" === kk
+        })), dk.o.subscribe("mouseState", (kk => {
           let {
-            isDown: Ru
-          } = uu;
-          this.mouseDown = Ru
+            isDown: Fk
+          } = kk;
+          this.mouseDown = Fk
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      tC(uu) {
-        uu !== this.enabled && (this.enabled = uu, this.drawnVisible = null, uu || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      lY(kk) {
+        kk !== this.enabled && (this.enabled = kk, this.drawnVisible = null, kk || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(uu, Ru) {
-        var yu, Eu;
+      frame(kk, Fk) {
+        var Bk, Rk;
         if (!this.enabled) return;
         const {
-          api: Ku
-        } = this, Qu = Ku.isAlive(this.localPlayerId) && null !== (yu = null === (Eu = Ku.Xyu(this.localPlayerId)) || void 0 === Eu ? void 0 : Eu.name) && void 0 !== yu ? yu : null, mu = (Ju = Qu) && Vu[Ju] || null;
-        var Ju;
-        if (this.setOwnsCrosshair(null !== mu), !this.element) return;
-        const Nu = Ku.getHeldGunInaccuracy(),
-          Xu = null !== Nu,
-          ru = null !== mu && !this.sniperOverlay && Ku.isCrosshairShown();
-        if (ru !== this.drawnVisible && (this.drawnVisible = ru, this.element.style.display = ru ? "block" : "none"), !ru) return;
-        const Bu = Xu ? function(uu) {
-            return "launcher" === uu || "melee" === uu || "throwable" === uu ? "none" : "shotgun" === uu ? "cone" : "offset"
-          }(mu) : "none",
-          xu = null !== Nu && void 0 !== Nu ? Nu : 0;
-        "cone" === Bu ? this.drawCone(mu, this.coneRadiusVh(xu, Ru) * this.gapPerVh, uu) : (this.coneDrawn = !1, this.draw(mu, "none" === Bu ? 2 : this.offsetGap(xu)));
-        const Su = !Xu && this.mouseDown;
-        Su !== this.drawnPressed && (this.drawnPressed = Su, this.element.classList.toggle("Pressed", Su))
+          api: tk
+        } = this, ak = tk.isAlive(this.localPlayerId) && null !== (Bk = null === (Rk = tk.LFk(this.localPlayerId)) || void 0 === Rk ? void 0 : Rk.name) && void 0 !== Bk ? Bk : null, Xk = (bk = ak) && sk[bk] || null;
+        var bk;
+        if (this.setOwnsCrosshair(null !== Xk), !this.element) return;
+        const wk = tk.getHeldGunInaccuracy(),
+          dk = null !== wk,
+          Vk = null !== Xk && !this.sniperOverlay && tk.isCrosshairShown();
+        if (Vk !== this.drawnVisible && (this.drawnVisible = Vk, this.element.style.display = Vk ? "block" : "none"), !Vk) return;
+        const Jk = dk ? function(kk) {
+            return "launcher" === kk || "melee" === kk || "throwable" === kk ? "none" : "shotgun" === kk ? "cone" : "offset"
+          }(Xk) : "none",
+          Ak = null !== wk && void 0 !== wk ? wk : 0;
+        "cone" === Jk ? this.drawCone(Xk, this.coneRadiusVh(Ak, Fk) * this.gapPerVh, kk) : (this.coneDrawn = !1, this.draw(Xk, "none" === Jk ? 2 : this.offsetGap(Ak)));
+        const ek = !dk && this.mouseDown;
+        ek !== this.drawnPressed && (this.drawnPressed = ek, this.element.classList.toggle("Pressed", ek))
       }
       dispose() {
-        for (const uu of this.tokens) Xu.k.unsubscribe(uu);
+        for (const kk of this.tokens) dk.o.unsubscribe(kk);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(uu, Ru) {
-        var yu, Eu;
-        uu !== this.drawnFamily ? (this.drawnFamily = uu, this.drawnGap = Ru, this.element.innerHTML = function(uu, Ru) {
-          return `<svg viewBox="0 0 64 64">${Wu[uu](Ru).map(ju).join("")}</svg>`
-        }(uu, Ru), this.shapes = Array.from(null !== (yu = null === (Eu = this.element.firstElementChild) || void 0 === Eu ? void 0 : Eu.children) && void 0 !== yu ? yu : [])) : Ru !== this.drawnGap && (this.drawnGap = Ru, function(uu, Ru, yu) {
-          const Eu = Wu[Ru](yu);
-          for (let Ku = 0; Ku < Eu.length; Ku++)
-            for (const [Ru, yu] of Object.entries(Eu[Ku].attrs)) {
-              const Eu = String(yu);
-              uu[Ku].getAttribute(Ru) !== Eu && uu[Ku].setAttribute(Ru, Eu)
+      draw(kk, Fk) {
+        var Bk, Rk;
+        kk !== this.drawnFamily ? (this.drawnFamily = kk, this.drawnGap = Fk, this.element.innerHTML = function(kk, Fk) {
+          return `<svg viewBox="0 0 64 64">${mk[kk](Fk).map(Wk).join("")}</svg>`
+        }(kk, Fk), this.shapes = Array.from(null !== (Bk = null === (Rk = this.element.firstElementChild) || void 0 === Rk ? void 0 : Rk.children) && void 0 !== Bk ? Bk : [])) : Fk !== this.drawnGap && (this.drawnGap = Fk, function(kk, Fk, Bk) {
+          const Rk = mk[Fk](Bk);
+          for (let tk = 0; tk < Rk.length; tk++)
+            for (const [Fk, Bk] of Object.entries(Rk[tk].attrs)) {
+              const Rk = String(Bk);
+              kk[tk].getAttribute(Fk) !== Rk && kk[tk].setAttribute(Fk, Rk)
             }
-        }(this.shapes, uu, Ru))
+        }(this.shapes, kk, Fk))
       }
-      drawCone(uu, Ru, yu) {
-        uu === this.drawnFamily && this.coneDrawn ? this.shownRadius += (Ru - this.shownRadius) * (1 - Math.exp(-yu / 80)) : this.shownRadius = Ru, this.coneDrawn = !0, this.draw(uu, Math.round(4 * this.shownRadius) / 4)
+      drawCone(kk, Fk, Bk) {
+        kk === this.drawnFamily && this.coneDrawn ? this.shownRadius += (Fk - this.shownRadius) * (1 - Math.exp(-Bk / 80)) : this.shownRadius = Fk, this.coneDrawn = !0, this.draw(kk, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(uu, Ru) {
-        if (!(Ru > 0)) return 1;
-        const yu = uu * mu.g / 2;
-        return Math.max(50 * Math.tan(yu) / Ru, 1)
+      coneRadiusVh(kk, Fk) {
+        if (!(Fk > 0)) return 1;
+        const Bk = kk * Xk.h / 2;
+        return Math.max(50 * Math.tan(Bk) / Fk, 1)
       }
-      offsetGap(uu) {
-        const Ru = 2 + ((0, Ju.e)(uu) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * Ru) / 2)
+      offsetGap(kk) {
+        const Fk = 2 + ((0, bk.e)(kk) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * Fk) / 2)
       }
-      setOwnsCrosshair(uu) {
-        uu !== this.ownsCrosshair && (this.ownsCrosshair = uu, document.body.classList.toggle("FrontlineCustomCrosshair", uu))
+      setOwnsCrosshair(kk) {
+        kk !== this.ownsCrosshair && (this.ownsCrosshair = kk, document.body.classList.toggle("FrontlineCustomCrosshair", kk))
       }
     }
-    const du = "FrontlineCustomDamage",
-      bu = .45,
-      Cu = .2;
-    class ku {
-      constructor(uu, Ru) {
-        this.api = uu, this.localPlayerId = Ru, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const ik = "FrontlineCustomDamage",
+      Yk = .45,
+      Lk = .2;
+    class Ok {
+      constructor(kk, Fk) {
+        this.api = kk, this.localPlayerId = Fk, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.kK = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = uu => {
-          var Ru, yu;
-          this.clearHits(), this.root = uu, this.lowLayer = null !== (Ru = null === uu || void 0 === uu ? void 0 : uu.querySelector(".FrontlineDamageLow")) && void 0 !== Ru ? Ru : null, this.arcLayer = null !== (yu = null === uu || void 0 === uu ? void 0 : uu.querySelector(".FrontlineDamageArcs")) && void 0 !== yu ? yu : null, this.showRoot(), this.drawLow()
-        }, this.token = Xu.k.subscribe("damagedByOtherPlayer", (uu => {
+        }, this.maxHealth = null, this.Et = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = kk => {
+          var Fk, Bk;
+          this.clearHits(), this.root = kk, this.lowLayer = null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.querySelector(".FrontlineDamageLow")) && void 0 !== Fk ? Fk : null, this.arcLayer = null !== (Bk = null === kk || void 0 === kk ? void 0 : kk.querySelector(".FrontlineDamageArcs")) && void 0 !== Bk ? Bk : null, this.showRoot(), this.drawLow()
+        }, this.token = dk.o.subscribe("damagedByOtherPlayer", (kk => {
           let {
-            direction: Ru,
-            bK: yu
-          } = uu;
-          this.onHurt(Ru, yu)
-        })), this.syncHealth(), document.body.classList.add(du)
+            direction: Fk,
+            Lt: Bk
+          } = kk;
+          this.onHurt(Fk, Bk)
+        })), this.syncHealth(), document.body.classList.add(ik)
       }
-      tC(uu) {
-        uu !== this.enabled && (this.enabled = uu, document.body.classList.toggle(du, uu), uu || this.clearHits(), this.showRoot())
+      lY(kk) {
+        kk !== this.enabled && (this.enabled = kk, document.body.classList.toggle(ik, kk), kk || this.clearHits(), this.showRoot())
       }
-      frame(uu) {
-        this.syncHealth(), this.cameraHeading = uu;
-        for (const Ru of this.arcs) this.drawArcAngle(Ru)
+      frame(kk) {
+        this.syncHealth(), this.cameraHeading = kk;
+        for (const Fk of this.arcs) this.drawArcAngle(Fk)
       }
       dispose() {
-        Xu.k.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(du)
+        dk.o.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(ik)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const uu = this.api.getClientOption(this.localPlayerId, "_health"),
-          Ru = this.api.getClientOption(this.localPlayerId, "_shield"),
-          yu = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(uu, this.readHealth) && Object.is(Ru, this.readShield) && Object.is(yu, this.readMaxHealth)) return;
-        if (this.readHealth = uu, this.readShield = Ru, this.readMaxHealth = yu, null === uu || void 0 === uu || !yu) return this.lastHealthPool = null, this.maxHealth = null, this.kK = 1, this.dead = !1, void this.drawLow();
-        const Eu = uu + (null !== Ru && void 0 !== Ru ? Ru : 0);
-        if (null !== this.lastHealthPool && Eu < this.lastHealthPool) {
-          const uu = performance.now(),
-            Ru = (this.lastHealthPool - Eu) / yu;
-          this.lastDrop = uu - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + Ru,
+        const kk = this.api.getClientOption(this.localPlayerId, "_health"),
+          Fk = this.api.getClientOption(this.localPlayerId, "_shield"),
+          Bk = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(kk, this.readHealth) && Object.is(Fk, this.readShield) && Object.is(Bk, this.readMaxHealth)) return;
+        if (this.readHealth = kk, this.readShield = Fk, this.readMaxHealth = Bk, null === kk || void 0 === kk || !Bk) return this.lastHealthPool = null, this.maxHealth = null, this.Et = 1, this.dead = !1, void this.drawLow();
+        const Rk = kk + (null !== Fk && void 0 !== Fk ? Fk : 0);
+        if (null !== this.lastHealthPool && Rk < this.lastHealthPool) {
+          const kk = performance.now(),
+            Fk = (this.lastHealthPool - Rk) / Bk;
+          this.lastDrop = kk - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + Fk,
             at: this.lastDrop.at
           } : {
-            frac: Ru,
-            at: uu
+            frac: Fk,
+            at: kk
           }
         }
-        this.dead = uu <= 0, this.dead && this.clearHits(), this.lastHealthPool = Eu, this.maxHealth = yu, this.kK = uu > 0 ? uu / yu : 1, this.drawLow()
+        this.dead = kk <= 0, this.dead && this.clearHits(), this.lastHealthPool = Rk, this.maxHealth = Bk, this.Et = kk > 0 ? kk / Bk : 1, this.drawLow()
       }
-      onHurt(uu, Ru) {
+      onHurt(kk, Fk) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const yu = Math.min(1, this.takeDamageFrac(Ru) / .3);
-        null !== uu && this.showArc(uu, yu), this.flashEdge(null === uu ? null : uu - this.cameraHeading, .4 + .6 * yu)
+        const Bk = Math.min(1, this.takeDamageFrac(Fk) / .3);
+        null !== kk && this.showArc(kk, Bk), this.flashEdge(null === kk ? null : kk - this.cameraHeading, .4 + .6 * Bk)
       }
-      takeDamageFrac(uu) {
-        if (void 0 !== uu && this.maxHealth) return uu / this.maxHealth;
+      takeDamageFrac(kk) {
+        if (void 0 !== kk && this.maxHealth) return kk / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: Ru
+          frac: Fk
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, Ru
+        }, Fk
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const uu = Au((bu - this.kK) / .25),
-          Ru = Au((Cu - this.kK) / .15000000000000002),
-          yu = this.kK < bu;
-        this.lowLayer.classList.toggle("Active", yu), this.lowLayer.classList.toggle("Critical", this.kK < Cu), this.lowLayer.style.opacity = String(yu ? .55 + .3 * uu + .15 * Ru : 0)
+        const kk = Sk((Yk - this.Et) / .25),
+          Fk = Sk((Lk - this.Et) / .15000000000000002),
+          Bk = this.Et < Yk;
+        this.lowLayer.classList.toggle("Active", Bk), this.lowLayer.classList.toggle("Critical", this.Et < Lk), this.lowLayer.style.opacity = String(Bk ? .55 + .3 * kk + .15 * Fk : 0)
       }
-      showArc(uu, Ru) {
-        var yu, Eu;
+      showArc(kk, Fk) {
+        var Bk, Rk;
         if (!this.arcLayer) return;
-        let Ku = this.arcs.find((Ru => eu(Ru.direction, uu) < .6));
-        if (!Ku) {
-          const Ru = document.createElement("div");
-          Ru.className = "FrontlineDamageArc", Ru.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(Ru), Ku = {
-            element: Ru,
-            direction: uu,
+        let tk = this.arcs.find((Fk => Ek(Fk.direction, kk) < .6));
+        if (!tk) {
+          const Fk = document.createElement("div");
+          Fk.className = "FrontlineDamageArc", Fk.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(Fk), tk = {
+            element: Fk,
+            direction: kk,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(Ku)
+          }, this.arcs.push(tk)
         }
-        Ku.direction = uu, this.drawArcAngle(Ku);
-        const Qu = Ku.fade ? Number(getComputedStyle(Ku.element).opacity) : 0;
-        null === (yu = Ku.fade) || void 0 === yu || yu.cancel(), null === (Eu = Ku.pop) || void 0 === Eu || Eu.cancel(), Ku.element.style.opacity = "1";
-        const mu = Ku.element.animate([{
-          opacity: Qu
+        tk.direction = kk, this.drawArcAngle(tk);
+        const ak = tk.fade ? Number(getComputedStyle(tk.element).opacity) : 0;
+        null === (Bk = tk.fade) || void 0 === Bk || Bk.cancel(), null === (Rk = tk.pop) || void 0 === Rk || Rk.cancel(), tk.element.style.opacity = "1";
+        const Xk = tk.element.animate([{
+          opacity: ak
         }, {
           opacity: 1
         }], 144);
-        Ku.fade = mu, Ku.pop = Ku.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * Ru
+        tk.fade = Xk, tk.pop = tk.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * Fk
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const Ju = Ku;
-        mu.onfinish = () => {
-          if (Ju.fade !== mu) return;
-          const uu = Ju.element.animate([{
+        const bk = tk;
+        Xk.onfinish = () => {
+          if (bk.fade !== Xk) return;
+          const kk = bk.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          uu.startTime = mu.startTime, Ju.fade = uu, uu.onfinish = () => {
-            Ju.fade === uu && (Ju.element.remove(), Du(this.arcs, Ju))
+          kk.startTime = Xk.startTime, bk.fade = kk, kk.onfinish = () => {
+            bk.fade === kk && (bk.element.remove(), Nk(this.arcs, bk))
           }
         }
       }
-      drawArcAngle(uu) {
-        const Ru = uu.direction - this.cameraHeading;
-        (null === uu.drawnAngle || Math.abs(Ru - uu.drawnAngle) > .005) && (uu.drawnAngle = Ru, uu.element.style.rotate = `${Ru}rad`)
+      drawArcAngle(kk) {
+        const Fk = kk.direction - this.cameraHeading;
+        (null === kk.drawnAngle || Math.abs(Fk - kk.drawnAngle) > .005) && (kk.drawnAngle = Fk, kk.element.style.rotate = `${Fk}rad`)
       }
-      flashEdge(uu, Ru) {
-        var yu, Eu, Ku;
+      flashEdge(kk, Fk) {
+        var Bk, Rk, tk;
         if (!this.root) return;
-        let Qu = this.flashes.find((Ru => null === Ru.angle || null === uu ? Ru.angle === uu : eu(Ru.angle, uu) < .5));
-        if (!Qu) {
-          const Ru = document.createElement("div");
-          Ru.className = "FrontlineDamageFlash";
-          const yu = Ru.appendChild(document.createElement("div"));
-          yu.className = "FrontlineDamageFlashGlow", this.root.insertBefore(Ru, this.arcLayer), Qu = {
-            element: Ru,
-            glow: yu,
-            angle: uu,
+        let ak = this.flashes.find((Fk => null === Fk.angle || null === kk ? Fk.angle === kk : Ek(Fk.angle, kk) < .5));
+        if (!ak) {
+          const Fk = document.createElement("div");
+          Fk.className = "FrontlineDamageFlash";
+          const Bk = Fk.appendChild(document.createElement("div"));
+          Bk.className = "FrontlineDamageFlashGlow", this.root.insertBefore(Fk, this.arcLayer), ak = {
+            element: Fk,
+            glow: Bk,
+            angle: kk,
             level: 0,
             animation: null
-          }, this.flashes.push(Qu)
+          }, this.flashes.push(ak)
         }
-        const mu = null === (yu = Qu.animation) || void 0 === yu || null === (Eu = yu.effect) || void 0 === Eu ? void 0 : Eu.getComputedTiming().progress,
-          Ju = null === mu || void 0 === mu ? 0 : Qu.level * (1 - mu);
-        Qu.level = Math.min(1, Math.max(Ru, Ju + .6 * Ru)), Qu.angle = uu;
+        const Xk = null === (Bk = ak.animation) || void 0 === Bk || null === (Rk = Bk.effect) || void 0 === Rk ? void 0 : Rk.getComputedTiming().progress,
+          bk = null === Xk || void 0 === Xk ? 0 : ak.level * (1 - Xk);
+        ak.level = Math.min(1, Math.max(Fk, bk + .6 * Fk)), ak.angle = kk;
         const {
-          x: Nu,
-          y: Xu,
-          rx: Vu,
-          ry: ru
-        } = function(uu, Ru) {
-          const yu = window.innerWidth,
-            Eu = window.innerHeight;
-          if (null === uu) return {
-            x: yu / 2,
-            y: Eu / 2,
+          x: wk,
+          y: dk,
+          rx: sk,
+          ry: Vk
+        } = function(kk, Fk) {
+          const Bk = window.innerWidth,
+            Rk = window.innerHeight;
+          if (null === kk) return {
+            x: Bk / 2,
+            y: Rk / 2,
             rx: 0,
             ry: 0
           };
-          const Ku = Math.sin(uu),
-            Qu = -Math.cos(uu),
-            mu = yu / 2 / Math.max(1e-6, Math.abs(Ku)),
-            Ju = Eu / 2 / Math.max(1e-6, Math.abs(Qu)),
-            Nu = Math.min(mu, Ju),
-            Xu = Math.round(yu / 2 + Ku * Nu),
-            Vu = Math.round(Eu / 2 + Qu * Nu),
-            ru = Eu / 100 * (.85 + .25 * Ru),
-            Bu = mu <= Ju,
-            xu = Math.round((Bu ? 30 : 74) * ru),
-            Su = Math.round((Bu ? 58 : 26) * ru);
+          const tk = Math.sin(kk),
+            ak = -Math.cos(kk),
+            Xk = Bk / 2 / Math.max(1e-6, Math.abs(tk)),
+            bk = Rk / 2 / Math.max(1e-6, Math.abs(ak)),
+            wk = Math.min(Xk, bk),
+            dk = Math.round(Bk / 2 + tk * wk),
+            sk = Math.round(Rk / 2 + ak * wk),
+            Vk = Rk / 100 * (.85 + .25 * Fk),
+            Jk = Xk <= bk,
+            Ak = Math.round((Jk ? 30 : 74) * Vk),
+            ek = Math.round((Jk ? 58 : 26) * Vk);
           return {
-            x: Xu,
-            y: Vu,
-            rx: xu,
-            ry: Su
+            x: dk,
+            y: sk,
+            rx: Ak,
+            ry: ek
           }
-        }(uu, Qu.level), {
-          style: Bu
-        } = Qu.glow;
-        Qu.glow.classList.toggle("Everywhere", null === uu), Bu.setProperty("--glowX", `${Nu}px`), Bu.setProperty("--glowY", `${Xu}px`), Bu.setProperty("--glowRx", `${Vu}px`), Bu.setProperty("--glowRy", `${ru}px`), Qu.element.style.transformOrigin = `${Nu}px ${Xu}px`, null === (Ku = Qu.animation) || void 0 === Ku || Ku.cancel();
-        const xu = Qu.element.animate([{
+        }(kk, ak.level), {
+          style: Jk
+        } = ak.glow;
+        ak.glow.classList.toggle("Everywhere", null === kk), Jk.setProperty("--glowX", `${wk}px`), Jk.setProperty("--glowY", `${dk}px`), Jk.setProperty("--glowRx", `${sk}px`), Jk.setProperty("--glowRy", `${Vk}px`), ak.element.style.transformOrigin = `${wk}px ${dk}px`, null === (tk = ak.animation) || void 0 === tk || tk.cancel();
+        const Ak = ak.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: Qu.level,
+          opacity: ak.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * Qu.level,
+          opacity: .8 * ak.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * Qu.level
+          duration: 520 + 180 * ak.level
         });
-        Qu.animation = xu;
-        const Su = Qu;
-        xu.onfinish = () => {
-          Su.animation === xu && (Su.element.remove(), Du(this.flashes, Su))
+        ak.animation = Ak;
+        const ek = ak;
+        Ak.onfinish = () => {
+          ek.animation === Ak && (ek.element.remove(), Nk(this.flashes, ek))
         }
       }
       clearHits() {
-        for (const Eu of this.arcs) {
-          var uu, Ru;
-          null === (uu = Eu.fade) || void 0 === uu || uu.cancel(), Eu.fade = null, null === (Ru = Eu.pop) || void 0 === Ru || Ru.cancel(), Eu.element.remove()
+        for (const Rk of this.arcs) {
+          var kk, Fk;
+          null === (kk = Rk.fade) || void 0 === kk || kk.cancel(), Rk.fade = null, null === (Fk = Rk.pop) || void 0 === Fk || Fk.cancel(), Rk.element.remove()
         }
         this.arcs.length = 0;
-        for (const Eu of this.flashes) {
-          var yu;
-          null === (yu = Eu.animation) || void 0 === yu || yu.cancel(), Eu.element.remove()
+        for (const Rk of this.flashes) {
+          var Bk;
+          null === (Bk = Rk.animation) || void 0 === Bk || Bk.cancel(), Rk.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function eu(uu, Ru) {
-      return Math.abs(Math.atan2(Math.sin(uu - Ru), Math.cos(uu - Ru)))
+    function Ek(kk, Fk) {
+      return Math.abs(Math.atan2(Math.sin(kk - Fk), Math.cos(kk - Fk)))
     }
 
-    function Au(uu) {
-      return Math.max(0, Math.min(1, uu))
+    function Sk(kk) {
+      return Math.max(0, Math.min(1, kk))
     }
 
-    function Du(uu, Ru) {
-      const yu = uu.indexOf(Ru); - 1 !== yu && uu.splice(yu, 1)
+    function Nk(kk, Fk) {
+      const Bk = kk.indexOf(Fk); - 1 !== Bk && kk.splice(Bk, 1)
     }
-    var Mu = yu(1035),
-      Iu = yu.n(Mu),
-      Gu = yu(36436),
-      Uu = yu(36532),
-      nu = yu(1170),
-      su = yu(1400);
-    const tu = "frontlineHudChanged",
-      lu = "frontlineScoreboardChanged";
-    class gu {
+    var Hk = Bk(1020),
+      uk = Bk.n(Hk),
+      Mk = Bk(36329),
+      gk = Bk(36423),
+      Uk = Bk(1149),
+      ck = Bk(1387);
+    const Gk = "frontlineHudChanged",
+      Tk = "frontlineScoreboardChanged";
+    class rk {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      SS(uu) {
-        this.wire = uu, Xu.k.Op(tu, uu, !0)
+      he(kk) {
+        this.wire = kk, dk.o.Hf(Gk, kk, !0)
       }
-      receiveScoreboard(uu) {
-        let Ru = "scoreboard" === uu[0] ? performance.now() + uu[5] : 0;
-        const yu = this.scoreboard.endsAt;
-        0 !== Ru && 0 !== yu && Math.abs(Ru - yu) < 1e3 && (Ru = yu), this.scoreboard = {
-          wire: uu,
-          endsAt: Ru
-        }, Xu.k.Op(lu, this.scoreboard, !0)
+      receiveScoreboard(kk) {
+        let Fk = "scoreboard" === kk[0] ? performance.now() + kk[5] : 0;
+        const Bk = this.scoreboard.endsAt;
+        0 !== Fk && 0 !== Bk && Math.abs(Fk - Bk) < 1e3 && (Fk = Bk), this.scoreboard = {
+          wire: kk,
+          endsAt: Fk
+        }, dk.o.Hf(Tk, this.scoreboard, !0)
       }
     }
-    var cu = yu(1079);
-    const Lu = {
+    var Dk = Bk(1069);
+    const zk = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function zu(uu) {
-      const [Ru, yu] = (0, Ku.useState)((() => (uu - performance.now()) / 1e3));
-      return (0, Ku.useEffect)((() => {
-        if (0 === uu) return;
-        const Ru = () => {
-          yu((uu - performance.now()) / 1e3)
+    function Pk(kk) {
+      const [Fk, Bk] = (0, tk.useState)((() => (kk - performance.now()) / 1e3));
+      return (0, tk.useEffect)((() => {
+        if (0 === kk) return;
+        const Fk = () => {
+          Bk((kk - performance.now()) / 1e3)
         };
-        Ru();
-        const Eu = window.setInterval(Ru, 250);
+        Fk();
+        const Rk = window.setInterval(Fk, 250);
         return () => {
-          window.clearInterval(Eu)
+          window.clearInterval(Rk)
         }
-      }), [uu]), Ru
+      }), [kk]), Fk
     }
 
-    function Fu(uu) {
+    function hk(kk) {
       let {
-        className: Ru,
-        point: yu
-      } = uu;
-      const [Eu, Ku, Qu, mu, Ju, Nu] = yu;
-      return (0, cu.jsxs)("div", {
-        className: Iu()(Ru, `Owner-${Ku||"None"}`, `Leader-${mu||"None"}`, {
-          Contested: Ju,
-          Here: Nu
+        className: Fk,
+        point: Bk
+      } = kk;
+      const [Rk, tk, ak, Xk, bk, wk] = Bk;
+      return (0, Dk.jsxs)("div", {
+        className: uk()(Fk, `Owner-${tk||"None"}`, `Leader-${Xk||"None"}`, {
+          Contested: bk,
+          Here: wk
         }),
-        children: [(0, cu.jsx)("span", {
+        children: [(0, Dk.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: Eu
-        }), (0, cu.jsx)("i", {
+          children: Rk
+        }), (0, Dk.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${Qu}%`
+            width: `${ak}%`
           }
         })]
       })
     }
-    const wu = (0, Ku.memo)((function(uu) {
+    const qk = (0, tk.memo)((function(kk) {
         let {
-          points: Ru,
-          markers: yu
-        } = uu;
+          points: Fk,
+          markers: Bk
+        } = kk;
         const {
-          t: Eu
-        } = (0, nu.E)();
-        return Ru ? (0, cu.jsx)("div", {
+          t: Rk
+        } = (0, Uk.x)();
+        return Fk ? (0, Dk.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: Ru.map((uu => {
-            const [Ru, , , , , , , Ku] = uu;
-            return (0, cu.jsxs)("div", {
-              ref: yu.bindMarker(Ru),
+          children: Fk.map((kk => {
+            const [Fk, , , , , , , tk] = kk;
+            return (0, Dk.jsxs)("div", {
+              ref: Bk.bindMarker(Fk),
               className: "FrontlinePointMarker",
-              children: [(0, cu.jsx)(Fu, {
+              children: [(0, Dk.jsx)(hk, {
                 className: "FrontlinePointMarkerTile",
-                point: uu
-              }), (0, cu.jsxs)("div", {
+                point: kk
+              }), (0, Dk.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [Ku && (0, cu.jsx)("span", {
-                  className: Iu()("FrontlinePointMarkerHomeTurf", `Team-${Ku}`),
-                  children: Eu("frontlineHud:homeTurf", {
-                    team: Eu(Lu[Ku])
+                children: [tk && (0, Dk.jsx)("span", {
+                  className: uk()("FrontlinePointMarkerHomeTurf", `Team-${tk}`),
+                  children: Rk("frontlineHud:homeTurf", {
+                    team: Rk(zk[tk])
                   })
-                }), (0, cu.jsx)("span", {
+                }), (0, Dk.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, Ru)
+            }, Fk)
           }))
         }) : null
       })),
-      Zu = {
+      Ck = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      hu = {
+      Zk = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function Pu(uu) {
+    function pk(kk) {
       let {
-        hud: Ru,
-        crosshair: yu,
-        damage: Eu,
-        markers: Ku
-      } = uu;
-      const Qu = (0, su.h)(tu, Ru.getWire()),
-        mu = (0, su.h)(lu, Ru.getScoreboard());
-      return (0, cu.jsxs)(cu.Fragment, {
-        children: [(0, cu.jsx)(iu, {
-          damage: Eu
-        }), (0, cu.jsx)(wu, {
-          points: "scoreboard" === mu.wire[0] ? mu.wire[6] : null,
-          markers: Ku
-        }), (0, cu.jsx)(ou, {
-          view: mu
-        }), (0, cu.jsx)("div", {
+        hud: Fk,
+        crosshair: Bk,
+        damage: Rk,
+        markers: tk
+      } = kk;
+      const ak = (0, ck.g)(Gk, Fk.getWire()),
+        Xk = (0, ck.g)(Tk, Fk.getScoreboard());
+      return (0, Dk.jsxs)(Dk.Fragment, {
+        children: [(0, Dk.jsx)(Kk, {
+          damage: Rk
+        }), (0, Dk.jsx)(qk, {
+          points: "scoreboard" === Xk.wire[0] ? Xk.wire[6] : null,
+          markers: tk
+        }), (0, Dk.jsx)(jk, {
+          view: Xk
+        }), (0, Dk.jsx)("div", {
           className: "FrontlineReticle",
-          ref: yu.bindElement
-        }), (0, cu.jsx)(Gu.d, {
-          children: (0, cu.jsx)(Yu, {
-            wire: Qu
+          ref: Bk.bindElement
+        }), (0, Dk.jsx)(Mk.g, {
+          children: (0, Dk.jsx)(xk, {
+            wire: ak
           })
         })]
       })
     }
-    const iu = (0, Ku.memo)((function(uu) {
+    const Kk = (0, tk.memo)((function(kk) {
         let {
-          damage: Ru
-        } = uu;
-        return (0, cu.jsxs)("div", {
+          damage: Fk
+        } = kk;
+        return (0, Dk.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: Ru.bindElement,
-          children: [(0, cu.jsx)("div", {
+          ref: Fk.bindElement,
+          children: [(0, Dk.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, cu.jsx)("div", {
+            children: (0, Dk.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, cu.jsx)("div", {
+          }), (0, Dk.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      Yu = (0, Ku.memo)((function(uu) {
+      xk = (0, tk.memo)((function(kk) {
         let {
-          wire: Ru
-        } = uu;
+          wire: Fk
+        } = kk;
         const {
-          t: yu
-        } = (0, nu.E)();
-        if ("capture" === Ru[0]) {
-          const [, uu, Eu, Ku, Qu, mu, Ju] = Ru, Nu = Math.round(Ku / 100 * 24);
-          return (0, cu.jsxs)("div", {
-            className: Iu()("FrontlinePlate", `Status-${Eu}`, `Leader-${Qu||"None"}`),
-            children: [(0, cu.jsx)(au, {}), (0, cu.jsxs)("div", {
+          t: Bk
+        } = (0, Uk.x)();
+        if ("capture" === Fk[0]) {
+          const [, kk, Rk, tk, ak, Xk, bk] = Fk, wk = Math.round(tk / 100 * 24);
+          return (0, Dk.jsxs)("div", {
+            className: uk()("FrontlinePlate", `Status-${Rk}`, `Leader-${ak||"None"}`),
+            children: [(0, Dk.jsx)(Qk, {}), (0, Dk.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, cu.jsx)("span", {
+              children: [(0, Dk.jsx)("span", {
                 className: "FrontlineObjective",
-                children: uu
-              }), (0, cu.jsxs)("div", {
+                children: kk
+              }), (0, Dk.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, cu.jsx)("div", {
+                children: [(0, Dk.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: yu("frontlineHud:objective", {
-                    point: uu,
-                    friendly: mu,
-                    enemy: Ju
+                  children: Bk("frontlineHud:objective", {
+                    point: kk,
+                    friendly: Xk,
+                    enemy: bk
                   })
-                }), (0, cu.jsx)("div", {
+                }), (0, Dk.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: yu(Zu[Eu])
+                  children: Bk(Ck[Rk])
                 })]
-              }), (0, cu.jsxs)("span", {
+              }), (0, Dk.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(Ku).padStart(3, "0"), (0, cu.jsx)("small", {
+                children: [String(tk).padStart(3, "0"), (0, Dk.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, cu.jsx)(Ou, {
+            }), (0, Dk.jsx)(nk, {
               segments: 24,
-              lit: Nu
+              lit: wk
             })]
           })
         }
-        if ("alert" === Ru[0]) {
-          const [, uu, Eu, Ku] = Ru;
-          return (0, cu.jsxs)("div", {
-            className: Iu()("FrontlinePlate", "FrontlineAlert", `Tone-${Ku}`),
-            children: [(0, cu.jsx)(au, {}), (0, cu.jsx)("div", {
+        if ("alert" === Fk[0]) {
+          const [, kk, Rk, tk] = Fk;
+          return (0, Dk.jsxs)("div", {
+            className: uk()("FrontlinePlate", "FrontlineAlert", `Tone-${tk}`),
+            children: [(0, Dk.jsx)(Qk, {}), (0, Dk.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: yu(hu[uu])
-            }), (0, cu.jsx)("div", {
+              children: Bk(Zk[kk])
+            }), (0, Dk.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: Eu
+              children: Rk
             })]
           })
         }
         return null
       })),
-      ou = (0, Ku.memo)((function(uu) {
+      jk = (0, tk.memo)((function(kk) {
         let {
-          view: Ru
-        } = uu;
+          view: Fk
+        } = kk;
         const {
-          t: yu
-        } = (0, nu.E)(), Eu = (0, Ku.useRef)(null), Qu = function(uu, Ru) {
-          const [yu, Eu] = (0, Ku.useState)(!1);
-          return (0, Ku.useLayoutEffect)((() => {
-            const Ru = uu.current;
-            if (!Ru) return;
-            const yu = document.querySelector(`.${Uu.c}`),
-              Ku = document.querySelector(`.${Uu.d}`),
-              Qu = () => {
-                var uu;
-                const Qu = Ru.querySelector(".FrontlineTeamTrack"),
-                  mu = (0, Nu.getRemInPx)(),
-                  Ju = Ru.getBoundingClientRect().width - 2 * (null !== (uu = null === Qu || void 0 === Qu ? void 0 : Qu.getBoundingClientRect().width) && void 0 !== uu ? uu : 0),
-                  Xu = window.innerWidth / 2,
-                  Vu = yu ? yu.getBoundingClientRect().right : 0,
-                  ru = Ku ? Ku.getBoundingClientRect().left : window.innerWidth,
-                  Bu = Math.min(Xu - Vu, ru - Xu) - Uu.b - Ju / 2,
-                  xu = Bu < 6 * mu,
-                  Su = xu ? (window.innerWidth - Ju) / 2 - Uu.b : Bu;
-                Ru.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(Su,14*mu)))}px`), Eu(xu)
+          t: Bk
+        } = (0, Uk.x)(), Rk = (0, tk.useRef)(null), ak = function(kk, Fk) {
+          const [Bk, Rk] = (0, tk.useState)(!1);
+          return (0, tk.useLayoutEffect)((() => {
+            const Fk = kk.current;
+            if (!Fk) return;
+            const Bk = document.querySelector(`.${gk.i}`),
+              tk = document.querySelector(`.${gk.m}`),
+              ak = () => {
+                var kk;
+                const ak = Fk.querySelector(".FrontlineTeamTrack"),
+                  Xk = (0, wk.getRemInPx)(),
+                  bk = Fk.getBoundingClientRect().width - 2 * (null !== (kk = null === ak || void 0 === ak ? void 0 : ak.getBoundingClientRect().width) && void 0 !== kk ? kk : 0),
+                  dk = window.innerWidth / 2,
+                  sk = Bk ? Bk.getBoundingClientRect().right : 0,
+                  Vk = tk ? tk.getBoundingClientRect().left : window.innerWidth,
+                  Jk = Math.min(dk - sk, Vk - dk) - gk.e - bk / 2,
+                  Ak = Jk < 6 * Xk,
+                  ek = Ak ? (window.innerWidth - bk) / 2 - gk.e : Jk;
+                Fk.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(ek,14*Xk)))}px`), Rk(Ak)
               };
-            Qu();
-            const mu = new ResizeObserver(Qu);
-            for (const uu of [Ru, yu, Ku]) uu && mu.observe(uu);
-            return window.addEventListener("resize", Qu), () => {
-              mu.disconnect(), window.removeEventListener("resize", Qu)
+            ak();
+            const Xk = new ResizeObserver(ak);
+            for (const kk of [Fk, Bk, tk]) kk && Xk.observe(kk);
+            return window.addEventListener("resize", ak), () => {
+              Xk.disconnect(), window.removeEventListener("resize", ak)
             }
-          }), [uu, Ru]), yu
-        }(Eu, "scoreboard" === Ru.wire[0]);
-        if ("scoreboard" !== Ru.wire[0]) return null;
-        const [, mu, Ju, Xu, Vu, , ru] = Ru.wire, Bu = "Red" === mu ? "Blue" : "Red";
-        return (0, cu.jsxs)("div", {
-          className: Iu()("FrontlineScoreboardContainer", {
-            Below: Qu
+          }), [kk, Fk]), Bk
+        }(Rk, "scoreboard" === Fk.wire[0]);
+        if ("scoreboard" !== Fk.wire[0]) return null;
+        const [, Xk, bk, dk, sk, , Vk] = Fk.wire, Jk = "Red" === Xk ? "Blue" : "Red";
+        return (0, Dk.jsxs)("div", {
+          className: uk()("FrontlineScoreboardContainer", {
+            Below: ak
           }),
-          children: [(0, cu.jsxs)("div", {
-            ref: Eu,
+          children: [(0, Dk.jsxs)("div", {
+            ref: Rk,
             className: "FrontlineScoreboard",
-            children: [(0, cu.jsx)(au, {}), (0, cu.jsx)(qu, {
-              team: mu,
-              tickets: Ju,
-              goal: Vu,
+            children: [(0, Dk.jsx)(Qk, {}), (0, Dk.jsx)(lk, {
+              team: Xk,
+              tickets: bk,
+              goal: sk,
               side: "Friendly"
-            }), (0, cu.jsx)("div", {
+            }), (0, Dk.jsx)("div", {
               className: "FrontlinePoints",
-              children: ru.map((uu => (0, cu.jsx)(Fu, {
+              children: Vk.map((kk => (0, Dk.jsx)(hk, {
                 className: "FrontlinePoint",
-                point: uu
-              }, uu[0])))
-            }), (0, cu.jsx)(qu, {
-              team: Bu,
-              tickets: Xu,
-              goal: Vu,
+                point: kk
+              }, kk[0])))
+            }), (0, Dk.jsx)(lk, {
+              team: Jk,
+              tickets: dk,
+              goal: sk,
               side: "Enemy"
             })]
-          }), (0, cu.jsxs)("div", {
+          }), (0, Dk.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, cu.jsx)(vu, {
-              endsAt: Ru.endsAt
-            }), (0, cu.jsx)("div", {
+            children: [(0, Dk.jsx)(Ik, {
+              endsAt: Fk.endsAt
+            }), (0, Dk.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: yu("frontlineHud:ticketGoal", {
-                goal: Vu
+              children: Bk("frontlineHud:ticketGoal", {
+                goal: sk
               })
             })]
           })]
         })
       }));
 
-    function qu(uu) {
+    function lk(kk) {
       let {
-        team: Ru,
-        tickets: yu,
-        goal: Eu,
-        side: Ku
-      } = uu;
+        team: Fk,
+        tickets: Bk,
+        goal: Rk,
+        side: tk
+      } = kk;
       const {
-        t: Qu
-      } = (0, nu.E)(), mu = String(yu).padStart(3, "0"), Ju = mu.search(/[1-9]/), Nu = -1 === Ju ? mu : mu.slice(0, Ju), Xu = Math.min(20, Math.floor(yu / Eu * 20));
-      return (0, cu.jsxs)("div", {
-        className: Iu()("FrontlineTeamScore", Ku, `Team-${Ru}`),
-        children: [(0, cu.jsxs)("div", {
+        t: ak
+      } = (0, Uk.x)(), Xk = String(Bk).padStart(3, "0"), bk = Xk.search(/[1-9]/), wk = -1 === bk ? Xk : Xk.slice(0, bk), dk = Math.min(20, Math.floor(Bk / Rk * 20));
+      return (0, Dk.jsxs)("div", {
+        className: uk()("FrontlineTeamScore", tk, `Team-${Fk}`),
+        children: [(0, Dk.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, cu.jsx)("span", {
+          children: [(0, Dk.jsx)("span", {
             className: "Lead",
-            children: Nu
-          }), -1 !== Ju && mu.slice(Ju)]
-        }), (0, cu.jsxs)("div", {
+            children: wk
+          }), -1 !== bk && Xk.slice(bk)]
+        }), (0, Dk.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, cu.jsx)("div", {
+          children: [(0, Dk.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: Qu(Lu[Ru])
-          }), (0, cu.jsx)(Ou, {
+            children: ak(zk[Fk])
+          }), (0, Dk.jsx)(nk, {
             segments: 20,
-            lit: Xu
+            lit: dk
           })]
         })]
       })
     }
 
-    function Ou(uu) {
+    function nk(kk) {
       let {
-        segments: Ru,
-        lit: yu
-      } = uu;
-      return (0, cu.jsx)("div", {
+        segments: Fk,
+        lit: Bk
+      } = kk;
+      return (0, Dk.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: Ru
-        }, ((uu, Ru) => (0, cu.jsx)("i", {
-          className: Iu()({
-            Lit: Ru < yu
+          length: Fk
+        }, ((kk, Fk) => (0, Dk.jsx)("i", {
+          className: uk()({
+            Lit: Fk < Bk
           })
-        }, Ru)))
+        }, Fk)))
       })
     }
 
-    function vu(uu) {
+    function Ik(kk) {
       let {
-        endsAt: Ru
-      } = uu;
-      const yu = Math.max(0, Math.ceil(zu(Ru)));
-      return (0, cu.jsxs)("div", {
-        className: Iu()("FrontlineClock", {
-          Urgent: yu <= 60
+        endsAt: Fk
+      } = kk;
+      const Bk = Math.max(0, Math.ceil(Pk(Fk)));
+      return (0, Dk.jsxs)("div", {
+        className: uk()("FrontlineClock", {
+          Urgent: Bk <= 60
         }),
-        children: [Math.floor(yu / 60), ":", String(yu % 60).padStart(2, "0")]
+        children: [Math.floor(Bk / 60), ":", String(Bk % 60).padStart(2, "0")]
       })
     }
 
-    function au() {
-      return (0, cu.jsxs)(cu.Fragment, {
-        children: [(0, cu.jsx)("i", {
+    function Qk() {
+      return (0, Dk.jsxs)(Dk.Fragment, {
+        children: [(0, Dk.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, cu.jsx)("i", {
+        }), (0, Dk.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var fu = yu(36524),
-      uR = yu(1224),
-      RR = yu(38260),
-      yR = yu(38303);
-    class ER {
-      constructor(uu) {
-        var Ru;
-        this.hud = uu, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var kF = Bk(36421),
+      FF = Bk(1203),
+      BF = Bk(38136),
+      RF = Bk(38173);
+    class tF {
+      constructor(kk) {
+        var Fk;
+        this.hud = kk, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.VS = !1, this.fW = () => {
+        }, this.render = null, this.Te = !1, this.UW = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.fW), null === (Ru = window.visualViewport) || void 0 === Ru || Ru.addEventListener("resize", this.fW)
+        }, window.addEventListener("resize", this.UW), null === (Fk = window.visualViewport) || void 0 === Fk || Fk.addEventListener("resize", this.UW)
       }
-      bindMarker(uu) {
-        let Ru = this.refs.get(uu);
-        return Ru || (Ru = Ru => {
-          var yu;
-          null === (yu = this.markers.get(uu)) || void 0 === yu || yu.stopObserving(), this.markers.delete(uu), Ru && !this.VS && this.markers.set(uu, this.mount(Ru))
-        }, this.refs.set(uu, Ru)), Ru
+      bindMarker(kk) {
+        let Fk = this.refs.get(kk);
+        return Fk || (Fk = Fk => {
+          var Bk;
+          null === (Bk = this.markers.get(kk)) || void 0 === Bk || Bk.stopObserving(), this.markers.delete(kk), Fk && !this.Te && this.markers.set(kk, this.mount(Fk))
+        }, this.refs.set(kk, Fk)), Fk
       }
-      frame(uu, Ru) {
-        this.render = uu;
-        const yu = this.hud.getScoreboard().wire;
-        if ("scoreboard" === yu[0] && 0 !== this.markers.size)
-          for (const [Eu, , , , , , Ku] of yu[6]) {
-            const uu = this.markers.get(Eu);
-            uu && Ku && (uu.target ??= [0, 0, 0], uu.target[0] = Ku[0], uu.target[1] = Ku[1] + 2.5, uu.target[2] = Ku[2], this.place(uu), this.uQ(uu, Ru && Math.hypot(Ku[0] - Ru[0], Ku[1] - Ru[1], Ku[2] - Ru[2])))
+      frame(kk, Fk) {
+        this.render = kk;
+        const Bk = this.hud.getScoreboard().wire;
+        if ("scoreboard" === Bk[0] && 0 !== this.markers.size)
+          for (const [Rk, , , , , , tk] of Bk[6]) {
+            const kk = this.markers.get(Rk);
+            kk && tk && (kk.target ??= [0, 0, 0], kk.target[0] = tk[0], kk.target[1] = tk[1] + 2.5, kk.target[2] = tk[2], this.place(kk), this.Xa(kk, Fk && Math.hypot(tk[0] - Fk[0], tk[1] - Fk[1], tk[2] - Fk[2])))
           }
       }
       dispose() {
-        var uu;
-        this.VS = !0, window.removeEventListener("resize", this.fW), null === (uu = window.visualViewport) || void 0 === uu || uu.removeEventListener("resize", this.fW);
-        for (const Ru of this.markers.values()) Ru.stopObserving();
+        var kk;
+        this.Te = !0, window.removeEventListener("resize", this.UW), null === (kk = window.visualViewport) || void 0 === kk || kk.removeEventListener("resize", this.UW);
+        for (const Fk of this.markers.values()) Fk.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(uu) {
+      place(kk) {
         const {
-          render: Ru,
-          viewport: yu
+          render: Fk,
+          viewport: Bk
         } = this;
-        if (!Ru || !uu.target) return;
-        const Eu = (50 - Ru.screenBandPct.y) / 100 * yu.height,
-          Ku = {
-            x: uu.halfSize.width + 8,
-            top: uu.halfSize.height + 8,
-            bottom: uu.halfSize.height + uu.labelsBelow + Eu
+        if (!Fk || !kk.target) return;
+        const Rk = (50 - Fk.screenBandPct.y) / 100 * Bk.height,
+          tk = {
+            x: kk.halfSize.width + 8,
+            top: kk.halfSize.height + 8,
+            bottom: kk.halfSize.height + kk.labelsBelow + Rk
           },
-          Qu = Ru.projectWorldPosToViewport(uu.target),
-          mu = null !== Qu && void 0 !== Qu ? Qu : Ru.projectWorldPosToScreenPos(uu.target),
-          Ju = (0, yR.d)({
-            x: mu.x,
-            y: mu.y,
-            text: Qu
-          }, Ku, yu);
-        (0, RR.e)(uu.root, Math.round(100 * Ju.x) / 100, Math.round(100 * Ju.y) / 100)
+          ak = Fk.projectWorldPosToViewport(kk.target),
+          Xk = null !== ak && void 0 !== ak ? ak : Fk.projectWorldPosToScreenPos(kk.target),
+          bk = (0, RF.e)({
+            x: Xk.x,
+            y: Xk.y,
+            text: ak
+          }, tk, Bk);
+        (0, BF.c)(kk.root, Math.round(100 * bk.x) / 100, Math.round(100 * bk.y) / 100)
       }
-      uQ(uu, Ru) {
-        if (null === Ru) return void(null !== uu.metres && (uu.metres = null, uu.distance.textContent = ""));
-        const yu = Date.now();
-        (null === uu.metres || (0, fu.b)(Ru, uu.metres, uu.metresShownAt)) && (uu.metres = Math.round(Ru), uu.metresShownAt = yu, uu.distance.textContent = (0, nu.w)(uR.f.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(uu.metres)
+      Xa(kk, Fk) {
+        if (null === Fk) return void(null !== kk.metres && (kk.metres = null, kk.distance.textContent = ""));
+        const Bk = Date.now();
+        (null === kk.metres || (0, kF.b)(Fk, kk.metres, kk.metresShownAt)) && (kk.metres = Math.round(Fk), kk.metresShownAt = Bk, kk.distance.textContent = (0, Uk.r)(FF.c.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(kk.metres)
         }))
       }
-      mount(uu) {
-        const Ru = {
-            root: uu,
-            distance: uu.querySelector(".FrontlinePointMarkerDistance"),
+      mount(kk) {
+        const Fk = {
+            root: kk,
+            distance: kk.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          yu = uu.querySelector(".FrontlinePointMarkerLabels"),
-          Eu = new ResizeObserver((() => {
-            Ru.halfSize = {
-              width: Math.max(uu.offsetWidth, yu.offsetWidth) / 2,
-              height: uu.offsetHeight / 2
-            }, Ru.labelsBelow = yu.offsetTop + yu.offsetHeight - uu.offsetHeight, this.place(Ru)
+          Bk = kk.querySelector(".FrontlinePointMarkerLabels"),
+          Rk = new ResizeObserver((() => {
+            Fk.halfSize = {
+              width: Math.max(kk.offsetWidth, Bk.offsetWidth) / 2,
+              height: kk.offsetHeight / 2
+            }, Fk.labelsBelow = Bk.offsetTop + Bk.offsetHeight - kk.offsetHeight, this.place(Fk)
           }));
-        return Eu.observe(uu, {
+        return Rk.observe(kk, {
           box: "border-box"
-        }), Eu.observe(yu, {
+        }), Rk.observe(Bk, {
           box: "border-box"
-        }), Ru.stopObserving = () => {
-          Eu.disconnect()
-        }, Ru
+        }), Fk.stopObserving = () => {
+          Rk.disconnect()
+        }, Fk
       }
     }
-    var KR = yu(6234),
-      QR = yu(2481);
-    const mR = "frontlineRoundEndChanged";
-    class JR {
+    var aF = Bk(6134),
+      XF = Bk(2466);
+    const bF = "frontlineRoundEndChanged";
+    class wF {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      SS(uu) {
-        const Ru = "roundEnd" === uu[0] ? performance.now() + uu[5] : 0;
+      he(kk) {
+        const Fk = "roundEnd" === kk[0] ? performance.now() + kk[5] : 0;
         this.view = {
-          wire: uu,
+          wire: kk,
           key: this.view.key + 1,
-          endsAt: Ru
-        }, Xu.k.Op(mR, this.view, !0)
+          endsAt: Fk
+        }, dk.o.Hf(bF, this.view, !0)
       }
     }
-    const NR = (0, Ku.lazy)((() => (0, QR.d)(yu.e(191).then((() => yu(41334))), (uu => uu.FrontlineMvpLineup)))),
-      XR = [4800, 4e3, 3200],
-      VR = [1, 0, 2],
-      rR = {
+    const dF = (0, tk.lazy)((() => (0, XF.e)(Bk.e(191).then((() => Bk(41169))), (kk => kk.FrontlineMvpLineup)))),
+      sF = [4800, 4e3, 3200],
+      VF = [1, 0, 2],
+      JF = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      BR = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      AF = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function xR(uu) {
+    function eF(kk) {
       let {
-        controller: Ru
-      } = uu;
-      const yu = (0, su.h)(mR, Ru.getView()),
-        Eu = zu(yu.endsAt);
-      return "roundEnd" !== yu.wire[0] || 1e3 * Eu < -2e3 ? null : (0, cu.jsx)(SR, {
-        wire: yu.wire,
-        secondsLeft: Math.max(0, Math.ceil(Eu))
-      }, yu.key)
+        controller: Fk
+      } = kk;
+      const Bk = (0, ck.g)(bF, Fk.getView()),
+        Rk = Pk(Bk.endsAt);
+      return "roundEnd" !== Bk.wire[0] || 1e3 * Rk < -2e3 ? null : (0, Dk.jsx)(yF, {
+        wire: Bk.wire,
+        secondsLeft: Math.max(0, Math.ceil(Rk))
+      }, Bk.key)
     }
-    const SR = (0, Ku.memo)((function(uu) {
+    const yF = (0, tk.memo)((function(kk) {
       let {
-        wire: Ru,
-        secondsLeft: yu
-      } = uu;
+        wire: Fk,
+        secondsLeft: Bk
+      } = kk;
       const {
-        t: Qu
-      } = (0, nu.E)(), [, mu, Ju, Nu, Xu, , Vu, ru] = Ru, Bu = (0, Ku.useMemo)((() => VR.filter((uu => uu < ru.length))), [ru]), xu = (0, Ku.useMemo)((() => Bu.map((uu => {
-        const [, , , , , Ru, yu] = ru[uu];
+        t: ak
+      } = (0, Uk.x)(), [, Xk, bk, wk, dk, , sk, Vk] = Fk, Jk = (0, tk.useMemo)((() => VF.filter((kk => kk < Vk.length))), [Vk]), Ak = (0, tk.useMemo)((() => Jk.map((kk => {
+        const [, , , , , Fk, Bk] = Vk[kk];
         return {
-          cosmetics: Eu.map(((uu, yu) => [uu, Ru[yu]])),
-          size: 0 === uu ? 1.15 : .85,
+          cosmetics: Rk.map(((kk, Bk) => [kk, Fk[Bk]])),
+          size: 0 === kk ? 1.15 : .85,
           heldGun: {
-            name: yu,
-            aimed: 0 === uu
+            name: Bk,
+            aimed: 0 === kk
           },
-          showAfterMs: XR[uu]
+          showAfterMs: sF[kk]
         }
-      }))), [ru, Bu]);
-      return (0, cu.jsxs)("div", {
-        className: Iu()("FrontlineRoundEnd", `Result-${mu}`),
+      }))), [Vk, Jk]);
+      return (0, Dk.jsxs)("div", {
+        className: uk()("FrontlineRoundEnd", `Result-${Xk}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, cu.jsx)("div", {
+        children: [(0, Dk.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, cu.jsxs)("div", {
+        }), (0, Dk.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, cu.jsxs)("div", {
+          children: [(0, Dk.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, cu.jsx)("i", {
+            children: [(0, Dk.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, cu.jsx)("i", {
+            }), (0, Dk.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (Su = Qu(rR[mu]), /\p{Script=Arabic}/u.test(Su) ? [Su] : (0, KR.b)(Su)).map(((uu, Ru) => (0, cu.jsx)("span", {
+            }), (ek = ak(JF[Xk]), /\p{Script=Arabic}/u.test(ek) ? [ek] : (0, aF.d)(ek)).map(((kk, Fk) => (0, Dk.jsx)("span", {
               style: {
-                "--letter": Ru
+                "--letter": Fk
               },
-              children: uu
-            }, Ru)))]
-          }), (0, cu.jsxs)("div", {
+              children: kk
+            }, Fk)))]
+          }), (0, Dk.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [Ju && "victory" === mu && (0, cu.jsx)("span", {
+            children: [bk && "victory" === Xk && (0, Dk.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: Qu("frontlineRoundEnd:comeback")
-            }), (0, cu.jsxs)("span", {
+              children: ak("frontlineRoundEnd:comeback")
+            }), (0, Dk.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, cu.jsx)("b", {
+              children: [(0, Dk.jsx)("b", {
                 className: "Friendly",
-                children: Nu
-              }), " \u2013 ", (0, cu.jsx)("b", {
+                children: wk
+              }), " \u2013 ", (0, Dk.jsx)("b", {
                 className: "Enemy",
-                children: Xu
+                children: dk
               })]
             })]
           })]
-        }), Bu.length > 0 && (0, cu.jsxs)("div", {
+        }), Jk.length > 0 && (0, Dk.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": Bu.length
+            "--columns": Jk.length
           },
-          children: [(0, cu.jsx)(Ku.Suspense, {
+          children: [(0, Dk.jsx)(tk.Suspense, {
             fallback: null,
-            children: (0, cu.jsx)(NR, {
+            children: (0, Dk.jsx)(dF, {
               className: "FrontlineRoundEndLineup",
-              players: xu
+              players: Ak
             })
-          }), Bu.map((uu => (0, cu.jsx)(pR, {
-            mvp: ru[uu],
-            place: uu
-          }, uu)))]
-        }), (0, cu.jsx)("div", {
+          }), Jk.map((kk => (0, Dk.jsx)(fF, {
+            mvp: Vk[kk],
+            place: kk
+          }, kk)))]
+        }), (0, Dk.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: Qu("frontlineRoundEnd:nextFront", {
-            map: Vu,
-            seconds: String(yu)
+          children: ak("frontlineRoundEnd:nextFront", {
+            map: sk,
+            seconds: String(Bk)
           })
         })]
       });
-      var Su
+      var ek
     }));
 
-    function pR(uu) {
+    function fF(kk) {
       let {
-        mvp: Ru,
-        place: yu
-      } = uu;
+        mvp: Fk,
+        place: Bk
+      } = kk;
       const {
-        t: Eu
-      } = (0, nu.E)(), [Ku, Qu, mu, Ju, Nu] = Ru, [Xu, Vu] = Eu(function(uu, Ru) {
-        return 1 === Ru && "damage" !== uu ? `frontlineRoundEnd:${uu}One` : `frontlineRoundEnd:${uu}`
-      }(mu, Ju), {
+        t: Rk
+      } = (0, Uk.x)(), [tk, ak, Xk, bk, wk] = Fk, [dk, sk] = Rk(function(kk, Fk) {
+        return 1 === Fk && "damage" !== kk ? `frontlineRoundEnd:${kk}One` : `frontlineRoundEnd:${kk}`
+      }(Xk, bk), {
         name: "\0",
-        count: Ju.toLocaleString()
+        count: bk.toLocaleString()
       }).split("\0");
-      return (0, cu.jsxs)("div", {
-        className: Iu()("FrontlineMvpCard", `Place-${yu+1}`, `Team-${Qu}`),
+      return (0, Dk.jsxs)("div", {
+        className: uk()("FrontlineMvpCard", `Place-${Bk+1}`, `Team-${ak}`),
         style: {
-          "--revealMs": `${XR[yu]}ms`
+          "--revealMs": `${sF[Bk]}ms`
         },
-        children: [(0, cu.jsx)("i", {
+        children: [(0, Dk.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, cu.jsx)("i", {
+        }), (0, Dk.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, cu.jsx)("div", {
+        }), (0, Dk.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: Eu(BR[yu])
-        }), (0, cu.jsxs)("div", {
+          children: Rk(AF[Bk])
+        }), (0, Dk.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [Xu, (0, cu.jsx)("span", {
+          children: [dk, (0, Dk.jsx)("span", {
             className: "FrontlineMvpName",
-            children: Ku
-          }), Vu]
-        }), (0, cu.jsx)("div", {
+            children: tk
+          }), sk]
+        }), (0, Dk.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: Nu
+          children: wk
         })]
       })
     }
-    const TR = function(uu, Ru, yu, Eu) {
+    const mF = function(kk, Fk, Bk, Rk) {
       let {
-        localPlayerId: mu
-      } = Eu;
-      const Ju = new gu,
-        Nu = new JR;
-      let Xu = null,
-        Vu = null,
-        ru = null,
-        Bu = null,
-        xu = null,
-        Su = [!1, !1];
-      const pu = () => {
-        var uu, Ru;
-        const [yu, Eu] = Su;
-        null === (uu = Vu) || void 0 === uu || uu.tC(!yu), null === (Ru = ru) || void 0 === Ru || Ru.tC(!Eu)
+        localPlayerId: Xk
+      } = Rk;
+      const bk = new rk,
+        wk = new wF;
+      let dk = null,
+        sk = null,
+        Vk = null,
+        Jk = null,
+        Ak = null,
+        ek = [!1, !1];
+      const yk = () => {
+        var kk, Fk;
+        const [Bk, Rk] = ek;
+        null === (kk = sk) || void 0 === kk || kk.lY(!Bk), null === (Fk = Vk) || void 0 === Fk || Fk.lY(!Rk)
       };
       return {
-        onCreate: uu => {
-          Xu = uu, Vu = new Hu(uu, mu), ru = new ku(uu, mu), Bu = new ER(Ju), pu(), xu = (0, Qu.w)((0, Ku.createElement)(Ku.Fragment, null, (0, Ku.createElement)(Pu, {
-            hud: Ju,
-            crosshair: Vu,
-            damage: ru,
-            markers: Bu
-          }), (0, Ku.createElement)(xR, {
-            controller: Nu
+        onCreate: kk => {
+          dk = kk, sk = new vk(kk, Xk), Vk = new Ok(kk, Xk), Jk = new tF(bk), yk(), Ak = (0, ak.w)((0, tk.createElement)(tk.Fragment, null, (0, tk.createElement)(pk, {
+            hud: bk,
+            crosshair: sk,
+            damage: Vk,
+            markers: Jk
+          }), (0, tk.createElement)(eF, {
+            controller: wk
           })))
         },
         onClose: () => {
-          var uu, Ru, yu, Eu;
-          null === (uu = xu) || void 0 === uu || uu(), null === (Ru = Vu) || void 0 === Ru || Ru.dispose(), Vu = null, null === (yu = ru) || void 0 === yu || yu.dispose(), ru = null, null === (Eu = Bu) || void 0 === Eu || Eu.dispose(), Bu = null, Xu = null
+          var kk, Fk, Bk, Rk;
+          null === (kk = Ak) || void 0 === kk || kk(), null === (Fk = sk) || void 0 === Fk || Fk.dispose(), sk = null, null === (Bk = Vk) || void 0 === Bk || Bk.dispose(), Vk = null, null === (Rk = Jk) || void 0 === Rk || Rk.dispose(), Jk = null, dk = null
         },
-        onAfterRender: (uu, Ru) => {
-          var yu, Eu, Ku, Qu;
-          null === (yu = Vu) || void 0 === yu || yu.frame(uu, Ru.tanHalfFovY), null === (Eu = ru) || void 0 === Eu || Eu.frame(Ru.cameraHeading), null === (Ku = Bu) || void 0 === Ku || Ku.frame(Ru, null !== (Qu = Xu) && void 0 !== Qu && Qu.checkValid(mu) ? Xu.mH(mu) : null)
+        onAfterRender: (kk, Fk) => {
+          var Bk, Rk, tk, ak;
+          null === (Bk = sk) || void 0 === Bk || Bk.frame(kk, Fk.tanHalfFovY), null === (Rk = Vk) || void 0 === Rk || Rk.frame(Fk.cameraHeading), null === (tk = Jk) || void 0 === tk || tk.frame(Fk, null !== (ak = dk) && void 0 !== ak && ak.checkValid(Xk) ? dk.rW(Xk) : null)
         },
-        onReceivedMessageFromServer: (uu, Ru) => {
-          "frontlineHud" === uu ? Ju.SS(Ru) : "frontlineScoreboard" === uu ? Ju.receiveScoreboard(Ru) : "frontlineRoundEnd" === uu ? Nu.SS(Ru) : "frontlinePrefs" === uu && (Su = Ru, pu())
+        onReceivedMessageFromServer: (kk, Fk) => {
+          "frontlineHud" === kk ? bk.he(Fk) : "frontlineScoreboard" === kk ? bk.receiveScoreboard(Fk) : "frontlineRoundEnd" === kk ? wk.he(Fk) : "frontlinePrefs" === kk && (ek = Fk, yk())
         }
       }
     }
   },
-  6234: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Ku
+  6134: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => tk
     });
-    const Eu = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const Rk = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function Ku(uu) {
-      return null === Eu ? Array.from(uu) : Array.from(Eu.segment(uu), (uu => {
+    function tk(kk) {
+      return null === Rk ? Array.from(kk) : Array.from(Rk.segment(kk), (kk => {
         let {
-          segment: Ru
-        } = uu;
-        return Ru
+          segment: Fk
+        } = kk;
+        return Fk
       }))
     }
   },
-  38260: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => mu,
-      i: () => Qu
+  38136: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Xk,
+      e: () => ak
     });
-    const Eu = new WeakMap;
+    const Rk = new WeakMap;
 
-    function Ku(uu) {
-      let Ru = Eu.get(uu);
-      return Ru || (Ru = {
-        hidden: uu.hidden,
+    function tk(kk) {
+      let Fk = Rk.get(kk);
+      return Fk || (Fk = {
+        hidden: kk.hidden,
         x: NaN,
         y: NaN
-      }, Eu.set(uu, Ru)), Ru
+      }, Rk.set(kk, Fk)), Fk
     }
 
-    function Qu(uu, Ru) {
-      const yu = Ku(uu);
-      yu.hidden !== Ru && (yu.hidden = Ru, uu.hidden = Ru)
+    function ak(kk, Fk) {
+      const Bk = tk(kk);
+      Bk.hidden !== Fk && (Bk.hidden = Fk, kk.hidden = Fk)
     }
 
-    function mu(uu, Ru, yu) {
-      const Eu = Ku(uu);
-      Eu.x === Ru && Eu.y === yu || (Eu.x = Ru, Eu.y = yu, uu.style.translate = `${Ru}vw ${yu}vh`)
+    function Xk(kk, Fk, Bk) {
+      const Rk = tk(kk);
+      Rk.x === Fk && Rk.y === Bk || (Rk.x = Fk, Rk.y = Bk, kk.style.translate = `${Fk}vw ${Bk}vh`)
     }
   },
-  36807: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Eu
+  36728: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Rk
     });
-    const Eu = {
+    const Rk = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

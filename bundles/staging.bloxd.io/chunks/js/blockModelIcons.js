@@ -1,321 +1,321 @@
 export const id = 4;
 export const ids = [4];
 export const modules = {
-  36271: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      getBlockModelIconUrl: () => Bu,
-      hasBlockModelIcon: () => Xu
+  36141: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      getBlockModelIconUrl: () => Jk,
+      hasBlockModelIcon: () => dk
     });
-    var Eu = yu(36263),
-      Ku = yu(36260);
-    const Qu = yu(36274),
-      mu = new Map(Qu.keys().filter((uu => uu.startsWith("./"))).map((uu => [uu.slice(2, -5), uu]))),
-      Ju = new Map,
-      Nu = new Map;
+    var Rk = Bk(36123),
+      tk = Bk(36117);
+    const ak = Bk(36148),
+      Xk = new Map(ak.keys().filter((kk => kk.startsWith("./"))).map((kk => [kk.slice(2, -5), kk]))),
+      bk = new Map,
+      wk = new Map;
 
-    function Xu(uu) {
-      return mu.has(uu)
+    function dk(kk) {
+      return Xk.has(kk)
     }
 
-    function Vu(uu) {
-      return Qu(mu.get(uu))
+    function sk(kk) {
+      return ak(Xk.get(kk))
     }
-    async function ru(uu, Ru, yu) {
+    async function Vk(kk, Fk, Bk) {
       const {
-        data: Eu,
-        texture: Qu
+        data: Rk,
+        texture: ak
       } = await
-      function(uu) {
-        let Ru = Ju.get(uu);
-        return Ru || (Ru = Vu(uu).then((async uu => {
-          const Ru = new Image;
-          Ru.src = uu.texture, await Ru.decode();
-          const yu = document.createElement("canvas");
-          yu.width = Ru.width, yu.height = Ru.height;
-          const Eu = yu.getContext("2d");
-          return Eu.drawImage(Ru, 0, 0), {
-            data: uu,
+      function(kk) {
+        let Fk = bk.get(kk);
+        return Fk || (Fk = sk(kk).then((async kk => {
+          const Fk = new Image;
+          Fk.src = kk.texture, await Fk.decode();
+          const Bk = document.createElement("canvas");
+          Bk.width = Fk.width, Bk.height = Fk.height;
+          const Rk = Bk.getContext("2d");
+          return Rk.drawImage(Fk, 0, 0), {
+            data: kk,
             texture: {
-              width: Ru.width,
-              height: Ru.height,
-              pixels: Eu.getImageData(0, 0, Ru.width, Ru.height).data
+              width: Fk.width,
+              height: Fk.height,
+              pixels: Rk.getImageData(0, 0, Fk.width, Fk.height).data
             }
           }
-        })), Ru.catch((() => {
-          Ju.delete(uu)
-        })), Ju.set(uu, Ru)), Ru
-      }(uu), mu = document.createElement("canvas");
-      return mu.width = Ru, mu.height = Ru, mu.getContext("2d").putImageData(new ImageData((0, Ku.j)(Eu, Qu, Ru, yu), Ru, Ru), 0, 0), mu.toDataURL()
+        })), Fk.catch((() => {
+          bk.delete(kk)
+        })), bk.set(kk, Fk)), Fk
+      }(kk), Xk = document.createElement("canvas");
+      return Xk.width = Fk, Xk.height = Fk, Xk.getContext("2d").putImageData(new ImageData((0, tk.i)(Rk, ak, Fk, Bk), Fk, Fk), 0, 0), Xk.toDataURL()
     }
 
-    function Bu(uu, Ru, yu) {
-      const Ku = `${Ru}|${yu}|${uu}`;
-      let Qu = Nu.get(Ku);
-      return Qu || (Qu = (0, Eu.d)(uu, (() => Vu(uu)), Ru, yu).then((Eu => null !== Eu && void 0 !== Eu ? Eu : ru(uu, Ru, yu))), Qu.catch((() => {
-        Nu.delete(Ku)
-      })), Nu.set(Ku, Qu)), Qu
+    function Jk(kk, Fk, Bk) {
+      const tk = `${Fk}|${Bk}|${kk}`;
+      let ak = wk.get(tk);
+      return ak || (ak = (0, Rk.g)(kk, (() => sk(kk)), Fk, Bk).then((Rk => null !== Rk && void 0 !== Rk ? Rk : Vk(kk, Fk, Bk))), ak.catch((() => {
+        wk.delete(tk)
+      })), wk.set(tk, ak)), ak
     }
   },
-  36263: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Du,
-      d: () => Mu,
-      e: () => Hu
+  36123: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Nk,
+      g: () => Hk,
+      j: () => vk
     });
-    var Eu = yu(312),
-      Ku = yu(106);
-    const Qu = new(yu(36266).e)(new URL(yu.p + yu.u(3), yu.b), {
+    var Rk = Bk(271),
+      tk = Bk(98);
+    const ak = new(Bk(36132).c)(new URL(Bk.p + Bk.u(3), Bk.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var mu = yu(1699),
-      Ju = yu(2995);
-    const Nu = 1e4,
-      Xu = 3e4;
-    let Vu = null,
-      ru = null,
-      Bu = null,
-      xu = !1,
-      Su = 0;
-    const pu = new Map;
-    let Tu = null;
-    const Wu = new Map,
-      ju = new Map;
+    var Xk = Bk(1698),
+      bk = Bk(2994);
+    const wk = 1e4,
+      dk = 3e4;
+    let sk = null,
+      Vk = null,
+      Jk = null,
+      Ak = !1,
+      ek = 0;
+    const yk = new Map;
+    let fk = null;
+    const mk = new Map,
+      Wk = new Map;
 
-    function Hu(uu) {
-      const Ru = new Promise(((Ru, yu) => {
-        const Eu = new Image;
-        Eu.crossOrigin = "anonymous", Eu.fetchPriority = "high", Eu.onload = () => {
-          Ru(Eu)
-        }, Eu.onerror = () => {
-          yu(new Error(`A block icon's texture did not load: ${uu.slice(0,100)}`))
-        }, Eu.src = uu
+    function vk(kk) {
+      const Fk = new Promise(((Fk, Bk) => {
+        const Rk = new Image;
+        Rk.crossOrigin = "anonymous", Rk.fetchPriority = "high", Rk.onload = () => {
+          Fk(Rk)
+        }, Rk.onerror = () => {
+          Bk(new Error(`A block icon's texture did not load: ${kk.slice(0,100)}`))
+        }, Rk.src = kk
       }));
-      return (0, Ju.h)(Ru)
+      return (0, bk.d)(Fk)
     }
 
-    function du(uu) {
-      var Ru, yu;
-      xu || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${uu}`), xu = !0, null === (Ru = Vu) || void 0 === Ru || Ru.terminate(), Vu = null, ru = null, Wu.clear(), ju.clear();
-      for (const Eu of pu.values()) Eu(null);
-      pu.clear(), null === (yu = Tu) || void 0 === yu || yu()
+    function ik(kk) {
+      var Fk, Bk;
+      Ak || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${kk}`), Ak = !0, null === (Fk = sk) || void 0 === Fk || Fk.terminate(), sk = null, Vk = null, mk.clear(), Wk.clear();
+      for (const Rk of yk.values()) Rk(null);
+      yk.clear(), null === (Bk = fk) || void 0 === Bk || Bk()
     }
 
-    function bu() {
-      return Bu ??= async function() {
+    function Yk() {
+      return Jk ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === Eu.c.ios_icon_worker_v1 && (0, Ku.isWebKit)()) return;
+        if ("page" === Rk.d.ios_icon_worker_v1 && (0, tk.isWebKit)()) return;
         try {
-          Vu = await async function() {
-            return await Qu.ready(), Qu.start()
+          sk = await async function() {
+            return await ak.ready(), ak.start()
           }()
-        } catch (Ju) {
-          return void du(`did not start (${String(Ju)})`)
+        } catch (bk) {
+          return void ik(`did not start (${String(bk)})`)
         }
-        let uu = () => {};
-        const Ru = new Promise((Ru => {
-          uu = Ru
+        let kk = () => {};
+        const Fk = new Promise((Fk => {
+          kk = Fk
         }));
-        Vu.onmessage = Ru => {
+        sk.onmessage = Fk => {
           let {
-            data: yu
-          } = Ru;
-          if ("started" === yu.type) ru = Vu, uu();
-          else if ("failed" === yu.type) du(`failed a draw (${yu.message})`);
+            data: Bk
+          } = Fk;
+          if ("started" === Bk.type) Vk = sk, kk();
+          else if ("failed" === Bk.type) ik(`failed a draw (${Bk.message})`);
           else {
-            var Eu, Ku;
-            null === (Eu = pu.get(yu.id)) || void 0 === Eu || Eu(yu.url), pu.delete(yu.id), null === (Ku = Tu) || void 0 === Ku || Ku()
+            var Rk, tk;
+            null === (Rk = yk.get(Bk.id)) || void 0 === Rk || Rk(Bk.url), yk.delete(Bk.id), null === (tk = fk) || void 0 === tk || tk()
           }
-        }, Vu.onerror = Ru => {
-          Ru.preventDefault(), du(`stopped (${Ru.message||"its script did not load or run"})`), uu()
+        }, sk.onerror = Fk => {
+          Fk.preventDefault(), ik(`stopped (${Fk.message||"its script did not load or run"})`), kk()
         };
-        const yu = `did not start in ${Xu/1e3} s`;
-        await (0, mu.i)(Ru, Xu, yu).catch((() => {
-          du(yu)
+        const Bk = `did not start in ${dk/1e3} s`;
+        await (0, Xk.m)(Fk, dk, Bk).catch((() => {
+          ik(Bk)
         }))
-      }(), Bu
+      }(), Jk
     }
 
-    function Cu() {
-      if (null !== Tu || 0 === pu.size) return;
-      const uu = new Promise((uu => {
-          Tu = uu
+    function Lk() {
+      if (null !== fk || 0 === yk.size) return;
+      const kk = new Promise((kk => {
+          fk = kk
         })),
-        Ru = `did not answer in ${Nu/1e3} s`;
-      (0, mu.i)(uu, Nu, Ru).then((() => {
-        Tu = null, Cu()
+        Fk = `did not answer in ${wk/1e3} s`;
+      (0, Xk.m)(kk, wk, Fk).then((() => {
+        fk = null, Lk()
       }), (() => {
-        Tu = null, du(Ru)
+        fk = null, ik(Fk)
       }))
     }
 
-    function ku(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      uu.postMessage(Ru, yu)
+    function Ok(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      kk.postMessage(Fk, Bk)
     }
 
-    function eu(uu, Ru, yu, Eu) {
-      let Ku = Ru.get(yu);
-      return void 0 === Ku && (Ku = Eu().then((async Ru => {
+    function Ek(kk, Fk, Bk, Rk) {
+      let tk = Fk.get(Bk);
+      return void 0 === tk && (tk = Rk().then((async Fk => {
         let {
-          image: yu,
-          request: Eu
-        } = Ru;
+          image: Bk,
+          request: Rk
+        } = Fk;
         try {
-          const Ru = await createImageBitmap(yu);
-          ku(uu, Eu(Ru), [Ru])
-        } catch (Ku) {
-          du(`could not take an image (${String(Ku)})`)
+          const Fk = await createImageBitmap(Bk);
+          Ok(kk, Rk(Fk), [Fk])
+        } catch (tk) {
+          ik(`could not take an image (${String(tk)})`)
         }
-      })), Ku.catch((() => {
-        Ru.get(yu) === Ku && Ru.delete(yu)
-      })), Ru.set(yu, Ku)), Ku
+      })), tk.catch((() => {
+        Fk.get(Bk) === tk && Fk.delete(Bk)
+      })), Fk.set(Bk, tk)), tk
     }
-    async function Au(uu, Ru) {
-      bu();
-      const yu = ru;
-      if (null === yu) return null;
-      if (await uu(yu), ru !== yu) return null;
-      const Eu = ++Su;
-      return new Promise((uu => {
-        pu.set(Eu, uu), ku(yu, Ru(Eu)), Cu()
+    async function Sk(kk, Fk) {
+      Yk();
+      const Bk = Vk;
+      if (null === Bk) return null;
+      if (await kk(Bk), Vk !== Bk) return null;
+      const Rk = ++ek;
+      return new Promise((kk => {
+        yk.set(Rk, kk), Ok(Bk, Fk(Rk)), Lk()
       }))
     }
 
-    function Du(uu, Ru, yu) {
-      return Au((Ru => Promise.all([uu.top, uu.left, uu.right].map((uu => function(uu, Ru) {
-        return eu(uu, Wu, Ru, (async () => ({
-          image: await Hu(Ru),
-          request: uu => ({
+    function Nk(kk, Fk, Bk) {
+      return Sk((Fk => Promise.all([kk.top, kk.left, kk.right].map((kk => function(kk, Fk) {
+        return Ek(kk, mk, Fk, (async () => ({
+          image: await vk(Fk),
+          request: kk => ({
             type: "texture",
-            url: Ru,
-            bitmap: uu
+            url: Fk,
+            bitmap: kk
           })
         })))
-      }(Ru, uu))))), (Eu => ({
+      }(Fk, kk))))), (Rk => ({
         type: "draw",
-        id: Eu,
-        ...uu,
-        size: Ru,
-        outlineWidth: yu
+        id: Rk,
+        ...kk,
+        size: Fk,
+        outlineWidth: Bk
       })))
     }
 
-    function Mu(uu, Ru, yu, Eu) {
-      return Au((yu => function(uu, Ru, yu) {
-        return eu(uu, ju, Ru, (async () => {
+    function Hk(kk, Fk, Bk, Rk) {
+      return Sk((Bk => function(kk, Fk, Bk) {
+        return Ek(kk, Wk, Fk, (async () => {
           const {
-            texture: uu,
-            ...Eu
-          } = await yu();
+            texture: kk,
+            ...Rk
+          } = await Bk();
           return {
-            image: await Hu(uu),
-            request: uu => ({
+            image: await vk(kk),
+            request: kk => ({
               type: "model",
-              name: Ru,
-              bitmap: uu,
-              geometry: Eu
+              name: Fk,
+              bitmap: kk,
+              geometry: Rk
             })
           }
         }))
-      }(yu, uu, Ru)), (Ru => ({
+      }(Bk, kk, Fk)), (Fk => ({
         type: "drawModel",
-        id: Ru,
-        name: uu,
-        size: yu,
-        outlineWidth: Eu
+        id: Fk,
+        name: kk,
+        size: Bk,
+        outlineWidth: Rk
       })))
     }
   },
-  36260: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Qu,
-      g: () => Ju,
-      j: () => mu
+  36117: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => ak,
+      g: () => bk,
+      i: () => Xk
     });
-    const Eu = 1 / 32,
-      Ku = [15, 15, 15],
-      Qu = {
+    const Rk = 1 / 32,
+      tk = [15, 15, 15],
+      ak = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function mu(uu, Ru, yu, Ku) {
+    function Xk(kk, Fk, Bk, tk) {
       const {
-        vertices: Qu,
-        uvs: mu,
-        indices: Nu,
-        shades: Xu
-      } = uu, Vu = yu * Eu, ru = yu - 2 * Vu, Bu = new Float32Array(Qu.length);
-      for (let Eu = 0; Eu < Qu.length; Eu += 3) Bu[Eu] = Vu + Qu[Eu] * ru, Bu[Eu + 1] = Vu + Qu[Eu + 1] * ru, Bu[Eu + 2] = Qu[Eu + 2];
-      const xu = new Float32Array(yu * yu).fill(-1 / 0),
-        Su = new Uint8ClampedArray(yu * yu * 4),
-        pu = 255 * uu.alphaCutoff;
-      for (let Eu = 0; Eu < Nu.length; Eu += 3) {
-        const [uu, Ku, Qu] = [Nu[Eu], Nu[Eu + 1], Nu[Eu + 2]], [Ju, Vu, ru] = [3 * uu, 3 * Ku, 3 * Qu], [Tu, Wu, ju, Hu, du, bu] = [Bu[Ju], Bu[Ju + 1], Bu[Vu], Bu[Vu + 1], Bu[ru], Bu[ru + 1]], Cu = (ju - Tu) * (bu - Wu) - (du - Tu) * (Hu - Wu);
-        if (Math.abs(Cu) < 1e-9) continue;
-        const ku = Xu[Eu / 3],
-          [eu, Au, Du, Mu, Iu, Gu] = [mu[2 * uu], mu[2 * uu + 1], mu[2 * Ku], mu[2 * Ku + 1], mu[2 * Qu], mu[2 * Qu + 1]],
-          Uu = Math.max(0, Math.floor(Math.min(Tu, ju, du))),
-          nu = Math.min(yu - 1, Math.ceil(Math.max(Tu, ju, du))),
-          su = Math.max(0, Math.floor(Math.min(Wu, Hu, bu))),
-          tu = Math.min(yu - 1, Math.ceil(Math.max(Wu, Hu, bu)));
-        for (let Eu = su; Eu <= tu; Eu++)
-          for (let uu = Uu; uu <= nu; uu++) {
-            const [Ku, Qu] = [uu + .5, Eu + .5], mu = ((Ku - Tu) * (bu - Wu) - (du - Tu) * (Qu - Wu)) / Cu, Nu = ((ju - Tu) * (Qu - Wu) - (Ku - Tu) * (Hu - Wu)) / Cu, Xu = 1 - mu - Nu;
-            if (Xu < 0 || mu < 0 || Nu < 0) continue;
-            const Uu = Xu * Bu[Ju + 2] + mu * Bu[Vu + 2] + Nu * Bu[ru + 2],
-              nu = Eu * yu + uu;
-            if (Uu <= xu[nu]) continue;
-            const su = Math.max(0, Math.min(Ru.width - 1, Math.floor((Xu * eu + mu * Du + Nu * Iu) * Ru.width))),
-              tu = 4 * (Math.max(0, Math.min(Ru.height - 1, Math.floor((Xu * Au + mu * Mu + Nu * Gu) * Ru.height))) * Ru.width + su);
-            Ru.pixels[tu + 3] < pu || (xu[nu] = Uu, Su[4 * nu] = Ru.pixels[tu] * ku, Su[4 * nu + 1] = Ru.pixels[tu + 1] * ku, Su[4 * nu + 2] = Ru.pixels[tu + 2] * ku, Su[4 * nu + 3] = 255)
+        vertices: ak,
+        uvs: Xk,
+        indices: wk,
+        shades: dk
+      } = kk, sk = Bk * Rk, Vk = Bk - 2 * sk, Jk = new Float32Array(ak.length);
+      for (let Rk = 0; Rk < ak.length; Rk += 3) Jk[Rk] = sk + ak[Rk] * Vk, Jk[Rk + 1] = sk + ak[Rk + 1] * Vk, Jk[Rk + 2] = ak[Rk + 2];
+      const Ak = new Float32Array(Bk * Bk).fill(-1 / 0),
+        ek = new Uint8ClampedArray(Bk * Bk * 4),
+        yk = 255 * kk.alphaCutoff;
+      for (let Rk = 0; Rk < wk.length; Rk += 3) {
+        const [kk, tk, ak] = [wk[Rk], wk[Rk + 1], wk[Rk + 2]], [bk, sk, Vk] = [3 * kk, 3 * tk, 3 * ak], [fk, mk, Wk, vk, ik, Yk] = [Jk[bk], Jk[bk + 1], Jk[sk], Jk[sk + 1], Jk[Vk], Jk[Vk + 1]], Lk = (Wk - fk) * (Yk - mk) - (ik - fk) * (vk - mk);
+        if (Math.abs(Lk) < 1e-9) continue;
+        const Ok = dk[Rk / 3],
+          [Ek, Sk, Nk, Hk, uk, Mk] = [Xk[2 * kk], Xk[2 * kk + 1], Xk[2 * tk], Xk[2 * tk + 1], Xk[2 * ak], Xk[2 * ak + 1]],
+          gk = Math.max(0, Math.floor(Math.min(fk, Wk, ik))),
+          Uk = Math.min(Bk - 1, Math.ceil(Math.max(fk, Wk, ik))),
+          ck = Math.max(0, Math.floor(Math.min(mk, vk, Yk))),
+          Gk = Math.min(Bk - 1, Math.ceil(Math.max(mk, vk, Yk)));
+        for (let Rk = ck; Rk <= Gk; Rk++)
+          for (let kk = gk; kk <= Uk; kk++) {
+            const [tk, ak] = [kk + .5, Rk + .5], Xk = ((tk - fk) * (Yk - mk) - (ik - fk) * (ak - mk)) / Lk, wk = ((Wk - fk) * (ak - mk) - (tk - fk) * (vk - mk)) / Lk, dk = 1 - Xk - wk;
+            if (dk < 0 || Xk < 0 || wk < 0) continue;
+            const gk = dk * Jk[bk + 2] + Xk * Jk[sk + 2] + wk * Jk[Vk + 2],
+              Uk = Rk * Bk + kk;
+            if (gk <= Ak[Uk]) continue;
+            const ck = Math.max(0, Math.min(Fk.width - 1, Math.floor((dk * Ek + Xk * Nk + wk * uk) * Fk.width))),
+              Gk = 4 * (Math.max(0, Math.min(Fk.height - 1, Math.floor((dk * Sk + Xk * Hk + wk * Mk) * Fk.height))) * Fk.width + ck);
+            Fk.pixels[Gk + 3] < yk || (Ak[Uk] = gk, ek[4 * Uk] = Fk.pixels[Gk] * Ok, ek[4 * Uk + 1] = Fk.pixels[Gk + 1] * Ok, ek[4 * Uk + 2] = Fk.pixels[Gk + 2] * Ok, ek[4 * Uk + 3] = 255)
           }
       }
-      return Ju(Su, yu, Ku), Su
+      return bk(ek, Bk, tk), ek
     }
 
-    function Ju(uu, Ru, yu) {
-      let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Ru => 0 !== uu[4 * Ru + 3];
-      const Qu = (uu, yu) => uu < 0 || yu < 0 || uu >= Ru || yu >= Ru || !Eu(yu * Ru + uu),
-        mu = [];
-      for (let Ku = 0; Ku < Ru; Ku++)
-        for (let uu = 0; uu < Ru; uu++)
-          if (!Qu(uu, Ku)) uu: for (let Eu = -yu; Eu <= yu; Eu++) {
-            const Ju = yu - Math.abs(Eu);
-            for (let yu = -Ju; yu <= Ju; yu++)
-              if (Qu(uu + yu, Ku + Eu)) {
-                mu.push(Ku * Ru + uu);
-                break uu
+    function bk(kk, Fk, Bk) {
+      let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Fk => 0 !== kk[4 * Fk + 3];
+      const ak = (kk, Bk) => kk < 0 || Bk < 0 || kk >= Fk || Bk >= Fk || !Rk(Bk * Fk + kk),
+        Xk = [];
+      for (let tk = 0; tk < Fk; tk++)
+        for (let kk = 0; kk < Fk; kk++)
+          if (!ak(kk, tk)) kk: for (let Rk = -Bk; Rk <= Bk; Rk++) {
+            const bk = Bk - Math.abs(Rk);
+            for (let Bk = -bk; Bk <= bk; Bk++)
+              if (ak(kk + Bk, tk + Rk)) {
+                Xk.push(tk * Fk + kk);
+                break kk
               }
           }
-      for (const Ju of mu) uu.set(Ku, 4 * Ju), uu[4 * Ju + 3] = 255
+      for (const bk of Xk) kk.set(tk, 4 * bk), kk[4 * bk + 3] = 255
     }
   },
-  36266: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ku
+  36132: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk
     });
-    const Eu = {
-      wait: function(uu) {
-        return new Promise((Ru => {
-          setTimeout(Ru, uu)
+    const Rk = {
+      wait: function(kk) {
+        return new Promise((Fk => {
+          setTimeout(Fk, kk)
         }))
       },
       stallMs: 2e4
     };
-    class Ku {
-      constructor(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Eu;
-        this.url = uu, this.options = Ru, this.timing = yu, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = uu
+    class tk {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Rk;
+        this.url = kk, this.options = Fk, this.timing = Bk, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = kk
       }
       ready() {
         if (null === this.fetched) {
-          const uu = new AbortController;
-          this.fetchAbort = uu, this.fetched = this.fetchWithRetries(uu.signal).finally((() => {
-            this.fetchAbort === uu && (this.fetchAbort = null)
+          const kk = new AbortController;
+          this.fetchAbort = kk, this.fetched = this.fetchWithRetries(kk.signal).finally((() => {
+            this.fetchAbort === kk && (this.fetchAbort = null)
           }))
         }
         return this.fetched
@@ -326,82 +326,82 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(uu) {
-        for (let Ru = 0;; Ru++) {
-          const yu = new URL(this.url);
-          if (Ru > 0 && yu.searchParams.set("cache-bust", `${Date.now()}-${Ru}`), await this.fetchWhole(yu, uu)) return void(this.scriptUrl = yu);
-          if (Ru >= 3 || uu.aborted) return;
-          if (await this.timing.wait(500 * 2 ** Ru), uu.aborted) return
+      async fetchWithRetries(kk) {
+        for (let Fk = 0;; Fk++) {
+          const Bk = new URL(this.url);
+          if (Fk > 0 && Bk.searchParams.set("cache-bust", `${Date.now()}-${Fk}`), await this.fetchWhole(Bk, kk)) return void(this.scriptUrl = Bk);
+          if (Fk >= 3 || kk.aborted) return;
+          if (await this.timing.wait(500 * 2 ** Fk), kk.aborted) return
         }
       }
-      async fetchWhole(uu, Ru) {
-        const yu = new AbortController;
-        let Eu;
-        const Ku = () => {
-            clearTimeout(Eu), Eu = setTimeout((() => {
-              yu.abort()
+      async fetchWhole(kk, Fk) {
+        const Bk = new AbortController;
+        let Rk;
+        const tk = () => {
+            clearTimeout(Rk), Rk = setTimeout((() => {
+              Bk.abort()
             }), this.timing.stallMs)
           },
-          Qu = () => {
-            yu.abort()
+          ak = () => {
+            Bk.abort()
           };
-        Ru.addEventListener("abort", Qu, {
+        Fk.addEventListener("abort", ak, {
           once: !0
-        }), Ku();
+        }), tk();
         try {
-          var mu;
-          const Ru = await fetch(uu, {
-            signal: yu.signal
+          var Xk;
+          const Fk = await fetch(kk, {
+            signal: Bk.signal
           });
-          if (!Ru.ok) return !1;
-          const Eu = null === (mu = Ru.body) || void 0 === mu ? void 0 : mu.getReader();
-          if (!Eu) return !1;
+          if (!Fk.ok) return !1;
+          const Rk = null === (Xk = Fk.body) || void 0 === Xk ? void 0 : Xk.getReader();
+          if (!Rk) return !1;
           for (;;) {
             const {
-              done: uu
-            } = await Eu.read();
-            if (uu) return !0;
-            Ku()
+              done: kk
+            } = await Rk.read();
+            if (kk) return !0;
+            tk()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(Eu), Ru.removeEventListener("abort", Qu)
+          clearTimeout(Rk), Fk.removeEventListener("abort", ak)
         }
       }
     }
   },
-  36274: (uu, Ru, yu) => {
-    var Eu = {
-      "./Artisan Bench.json": [40767, 265],
-      "./Aspen Item Pedestal.json": [40769, 266],
-      "./Cedar Item Pedestal.json": [40776, 267],
-      "./Cherry Item Pedestal.json": [40784, 268],
-      "./Furnace.json": [40786, 269],
-      "./Jungle Item Pedestal.json": [40792, 270],
-      "./Mango Item Pedestal.json": [40801, 271],
-      "./Palm Item Pedestal.json": [40804, 272],
-      "./Pear Item Pedestal.json": [40811, 273],
-      "./Pine Item Pedestal.json": [40819, 274],
-      "./Plum Item Pedestal.json": [40825, 275],
-      "./Potion Table.json": [40831, 276],
-      "./Salvaging Table.json": [40836, 277],
-      "./Showcase.json": [40842, 278],
-      "./Spectral Item Pedestal.json": [40845, 279],
-      "./Workbench.json": [40852, 280]
+  36148: (kk, Fk, Bk) => {
+    var Rk = {
+      "./Artisan Bench.json": [40619, 265],
+      "./Aspen Item Pedestal.json": [40627, 266],
+      "./Cedar Item Pedestal.json": [40634, 267],
+      "./Cherry Item Pedestal.json": [40637, 268],
+      "./Furnace.json": [40640, 269],
+      "./Jungle Item Pedestal.json": [40649, 270],
+      "./Mango Item Pedestal.json": [40657, 271],
+      "./Palm Item Pedestal.json": [40661, 272],
+      "./Pear Item Pedestal.json": [40666, 273],
+      "./Pine Item Pedestal.json": [40674, 274],
+      "./Plum Item Pedestal.json": [40680, 275],
+      "./Potion Table.json": [40686, 276],
+      "./Salvaging Table.json": [40691, 277],
+      "./Showcase.json": [40700, 278],
+      "./Spectral Item Pedestal.json": [40703, 279],
+      "./Workbench.json": [40707, 280]
     };
 
-    function Ku(uu) {
-      if (!yu.o(Eu, uu)) return Promise.resolve().then((() => {
-        var Ru = new Error("Cannot find module '" + uu + "'");
-        throw Ru.code = "MODULE_NOT_FOUND", Ru
+    function tk(kk) {
+      if (!Bk.o(Rk, kk)) return Promise.resolve().then((() => {
+        var Fk = new Error("Cannot find module '" + kk + "'");
+        throw Fk.code = "MODULE_NOT_FOUND", Fk
       }));
-      var Ru = Eu[uu],
-        Ku = Ru[0];
-      return yu.e(Ru[1]).then((() => yu(Ku)))
+      var Fk = Rk[kk],
+        tk = Fk[0];
+      return Bk.e(Fk[1]).then((() => Bk(tk)))
     }
-    Ku.keys = () => Object.keys(Eu), Ku.id = 36274, uu.exports = Ku
+    tk.keys = () => Object.keys(Rk), tk.id = 36148, kk.exports = tk
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

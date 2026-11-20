@@ -1,217 +1,217 @@
 export const id = 191;
 export const ids = [191];
 export const modules = {
-  41103: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu
+  40954: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => ak
     });
-    var Eu = yu(64),
-      Ku = yu(2615);
+    var Rk = Bk(61),
+      tk = Bk(2607);
 
-    function Qu(uu, Ru, yu) {
-      const Qu = (0, Eu.useRef)(null),
+    function ak(kk, Fk, Bk) {
+      const ak = (0, Rk.useRef)(null),
         {
-          width: mu,
-          height: Ju
-        } = (0, Ku.d)(uu);
-      (0, Eu.useEffect)((() => {
-        const yu = Ru(uu.current);
-        return Qu.current = yu, () => {
-          yu.close(), Qu.current = null
+          width: Xk,
+          height: bk
+        } = (0, tk.e)(kk);
+      (0, Rk.useEffect)((() => {
+        const Bk = Fk(kk.current);
+        return ak.current = Bk, () => {
+          Bk.close(), ak.current = null
         }
-      }), [uu, Ru]), (0, Eu.useEffect)((() => {
-        mu <= 0 || Ju <= 0 || Qu.current.resize(mu, Ju)
-      }), [mu, Ju]), (0, Eu.useEffect)((() => {
-        Qu.current.show(yu)
-      }), [yu])
+      }), [kk, Fk]), (0, Rk.useEffect)((() => {
+        Xk <= 0 || bk <= 0 || ak.current.resize(Xk, bk)
+      }), [Xk, bk]), (0, Rk.useEffect)((() => {
+        ak.current.show(Bk)
+      }), [Bk])
     }
   },
-  41110: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Bu,
-      g: () => ru,
-      k: () => Nu
+  40957: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Jk,
+      e: () => Vk,
+      i: () => wk
     });
-    var Eu = yu(36889),
-      Ku = yu(38401);
+    var Rk = Bk(36813),
+      tk = Bk(38277);
 
-    function Qu(uu, Ru) {
-      let [yu, Eu, Ku] = uu;
-      return [0, .5, 1].map((uu => ({
-        timeFraction: uu,
+    function ak(kk, Fk) {
+      let [Bk, Rk, tk] = kk;
+      return [0, .5, 1].map((kk => ({
+        timeFraction: kk,
         rotation: {
-          bQ: "catmull-rom-spline",
-          point: [yu, Eu, Ku + (.5 === uu ? Ru : 0)]
+          Ha: "catmull-rom-spline",
+          point: [Bk, Rk, tk + (.5 === kk ? Fk : 0)]
         }
       })))
     }
 
-    function mu(uu, Ru, yu) {
+    function Xk(kk, Fk, Bk) {
       return {
-        TQ: 3200,
+        La: 3200,
         loop: !0,
-        jQ: {
+        Ea: {
           Root: {
-            timeline: [0, .5, 1].map((uu => ({
-              timeFraction: uu,
+            timeline: [0, .5, 1].map((kk => ({
+              timeFraction: kk,
               position: {
-                bQ: "catmull-rom-spline",
-                point: [0, .5 === uu ? .18 : 0, 0]
+                Ha: "catmull-rom-spline",
+                point: [0, .5 === kk ? .18 : 0, 0]
               }
             })))
           },
           HeadMesh: {
-            timeline: [0, .25, .75, 1].map((uu => ({
-              timeFraction: uu,
+            timeline: [0, .25, .75, 1].map((kk => ({
+              timeFraction: kk,
               rotation: {
-                bQ: "catmull-rom-spline",
-                point: [0, .25 === uu ? .12 : .75 === uu ? -.12 : 0, 0]
+                Ha: "catmull-rom-spline",
+                point: [0, .25 === kk ? .12 : .75 === kk ? -.12 : 0, 0]
               }
             })))
           },
           ArmLeftMesh: {
-            timeline: Qu(uu, yu)
+            timeline: ak(kk, Bk)
           },
           ArmRightMesh: {
-            timeline: Qu(Ru, -yu)
+            timeline: ak(Fk, -Bk)
           }
         }
       }
     }
-    const Ju = mu([0, 0, 0], [0, 0, 0], .07),
-      Nu = (0, Ku.c)((0, Eu.e)(Ju), "mobIdle"),
-      Xu = mu([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      Vu = mu([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      ru = (0, Ku.c)((0, Eu.e)(Xu), "gunReady"),
-      Bu = (0, Ku.c)((0, Eu.e)(Vu), "gunAimed")
+    const bk = Xk([0, 0, 0], [0, 0, 0], .07),
+      wk = (0, tk.b)((0, Rk.c)(bk), "mobIdle"),
+      dk = Xk([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
+      sk = Xk([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
+      Vk = (0, tk.b)((0, Rk.c)(dk), "gunReady"),
+      Jk = (0, tk.b)((0, Rk.c)(sk), "gunAimed")
   },
-  38401: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ku,
-      f: () => Qu
+  38277: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => tk,
+      e: () => ak
     });
-    const Eu = new WeakMap;
+    const Rk = new WeakMap;
 
-    function Ku(uu, Ru) {
-      return Eu.set(uu, Ru), uu
+    function tk(kk, Fk) {
+      return Rk.set(kk, Fk), kk
     }
 
-    function Qu(uu) {
-      var Ru;
-      return null !== (Ru = Eu.get(uu)) && void 0 !== Ru ? Ru : null
+    function ak(kk) {
+      var Fk;
+      return null !== (Fk = Rk.get(kk)) && void 0 !== Fk ? Fk : null
     }
   },
-  9100: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => mu,
-      c: () => Ku,
-      e: () => Vu
+  9045: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Xk,
+      f: () => tk,
+      i: () => sk
     });
-    var Eu = yu(1517);
+    var Rk = Bk(1512);
 
-    function Ku(uu) {
-      var Ru;
+    function tk(kk) {
+      var Fk;
       return {
-        ...mu.store,
-        yaw: mu.store.yaw + (null !== (Ru = Eu.b[uu].previewYaw) && void 0 !== Ru ? Ru : 0)
+        ...Xk.store,
+        yaw: Xk.store.yaw + (null !== (Fk = Rk.d[kk].previewYaw) && void 0 !== Fk ? Fk : 0)
       }
     }
-    const Qu = {
+    const ak = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      mu = {
-        player: Qu,
+      Xk = {
+        player: ak,
         store: {
-          ...Qu,
+          ...ak,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function Ju(uu, Ru) {
-      uu instanceof Promise ? uu.then(Ru).catch((uu => {
-        console.error("Couldn't open the preview", uu)
-      })) : Ru(uu)
+    function bk(kk, Fk) {
+      kk instanceof Promise ? kk.then(Fk).catch((kk => {
+        console.error("Couldn't open the preview", kk)
+      })) : Fk(kk)
     }
-    class Nu {
-      constructor(uu) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, Ju(uu, (uu => {
-          this.closed ? uu.close() : (this.opened = uu, null !== this.size && uu.resize(this.size.width, this.size.height), null !== this.view && uu.show(this.view))
+    class wk {
+      constructor(kk) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, bk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height), null !== this.view && kk.show(this.view))
         }))
       }
-      show(uu) {
-        var Ru;
-        this.view = uu, null === (Ru = this.opened) || void 0 === Ru || Ru.show(uu)
+      show(kk) {
+        var Fk;
+        this.view = kk, null === (Fk = this.opened) || void 0 === Fk || Fk.show(kk)
       }
-      resize(uu, Ru) {
-        var yu;
+      resize(kk, Fk) {
+        var Bk;
         this.size = {
-          width: uu,
-          height: Ru
-        }, null === (yu = this.opened) || void 0 === yu || yu.resize(uu, Ru)
+          width: kk,
+          height: Fk
+        }, null === (Bk = this.opened) || void 0 === Bk || Bk.resize(kk, Fk)
       }
       close() {
-        var uu;
-        this.closed = !0, null === (uu = this.opened) || void 0 === uu || uu.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    class Xu {
-      constructor(uu) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(uu).then((uu => uu.ready)), Ju(uu, (uu => {
-          this.closed ? uu.close() : (this.opened = uu, null !== this.size && uu.resize(this.size.width, this.size.height))
+    class dk {
+      constructor(kk) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(kk).then((kk => kk.ready)), bk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var uu, Ru;
-        return null !== (uu = null === (Ru = this.opened) || void 0 === Ru ? void 0 : Ru.isReady()) && void 0 !== uu && uu
+        var kk, Fk;
+        return null !== (kk = null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.isReady()) && void 0 !== kk && kk
       }
-      setCosmetic(uu, Ru) {
-        var yu;
-        null === (yu = this.opened) || void 0 === yu || yu.setCosmetic(uu, Ru)
+      setCosmetic(kk, Fk) {
+        var Bk;
+        null === (Bk = this.opened) || void 0 === Bk || Bk.setCosmetic(kk, Fk)
       }
-      playEmote(uu) {
-        var Ru;
-        null === (Ru = this.opened) || void 0 === Ru || Ru.playEmote(uu)
+      playEmote(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.playEmote(kk)
       }
-      setOrbit(uu) {
-        var Ru;
-        null === (Ru = this.opened) || void 0 === Ru || Ru.setOrbit(uu)
+      setOrbit(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.setOrbit(kk)
       }
       resetCamera() {
-        var uu;
-        null === (uu = this.opened) || void 0 === uu || uu.resetCamera()
+        var kk;
+        null === (kk = this.opened) || void 0 === kk || kk.resetCamera()
       }
-      async untilDrawn(uu) {
-        var Ru;
-        await this.ready, await (null === (Ru = this.opened) || void 0 === Ru ? void 0 : Ru.untilDrawn(uu))
+      async untilDrawn(kk) {
+        var Fk;
+        await this.ready, await (null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.untilDrawn(kk))
       }
-      resize(uu, Ru) {
-        var yu;
+      resize(kk, Fk) {
+        var Bk;
         this.size = {
-          width: uu,
-          height: Ru
-        }, null === (yu = this.opened) || void 0 === yu || yu.resize(uu, Ru)
+          width: kk,
+          height: Fk
+        }, null === (Bk = this.opened) || void 0 === Bk || Bk.resize(kk, Fk)
       }
       close() {
-        var uu;
-        this.closed = !0, null === (uu = this.opened) || void 0 === uu || uu.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    const Vu = new class {
+    const sk = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(uu) {
-        this.host = uu
+      setHost(kk) {
+        this.host = kk
       }
-      setDefaultHost(uu) {
-        this.makeDefault = uu
+      setDefaultHost(kk) {
+        this.makeDefault = kk
       }
       current() {
         if (null === this.host) {
@@ -220,426 +220,426 @@ export const modules = {
         }
         return this.host
       }
-      openMob(uu) {
-        return new Nu(this.current().openMob(uu))
+      openMob(kk) {
+        return new wk(this.current().openMob(kk))
       }
-      openPet(uu) {
-        return new Nu(this.current().openPet(uu))
+      openPet(kk) {
+        return new wk(this.current().openPet(kk))
       }
-      openMobLineup(uu) {
-        return new Nu(this.current().openMobLineup(uu))
+      openMobLineup(kk) {
+        return new wk(this.current().openMobLineup(kk))
       }
-      openCharacter(uu, Ru) {
-        return new Xu(this.current().openCharacter(uu, Ru))
+      openCharacter(kk, Fk) {
+        return new dk(this.current().openCharacter(kk, Fk))
       }
     }
   },
-  9098: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Eu.b,
-      f: () => Eu.c,
-      g: () => Eu.e
+  9039: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Rk.b,
+      f: () => Rk.f,
+      h: () => Rk.i
     });
-    var Eu = yu(9100);
-    class Ku {
-      constructor(uu) {
-        this.load = uu, this.loaded = null, this.loading = null
+    var Rk = Bk(9045);
+    class tk {
+      constructor(kk) {
+        this.load = kk, this.loaded = null, this.loading = null
       }
-      run(uu) {
-        return null !== this.loaded ? uu(this.loaded) : (this.loading ??= this.load().then((uu => (this.loaded = uu, uu)), (uu => {
-          throw this.loading = null, uu
-        })), this.loading.then(uu))
+      run(kk) {
+        return null !== this.loaded ? kk(this.loaded) : (this.loading ??= this.load().then((kk => (this.loaded = kk, kk)), (kk => {
+          throw this.loading = null, kk
+        })), this.loading.then(kk))
       }
     }
-    class Qu {
+    class ak {
       constructor() {
-        this.mobScene = new Ku((() => Promise.all([yu.e(69), yu.e(226), yu.e(225), yu.e(244), yu.e(94), yu.e(245), yu.e(72), yu.e(71), yu.e(242), yu.e(70), yu.e(252), yu.e(246), yu.e(251), yu.e(249), yu.e(241), yu.e(218), yu.e(264), yu.e(222), yu.e(236), yu.e(247), yu.e(250), yu.e(74), yu.e(196), yu.e(215), yu.e(219), yu.e(93), yu.e(113), yu.e(234), yu.e(73), yu.e(112), yu.e(153)]).then((() => yu(40647))))), this.characterScene = new Ku((() => Promise.all([yu.e(69), yu.e(226), yu.e(225), yu.e(244), yu.e(94), yu.e(245), yu.e(72), yu.e(71), yu.e(242), yu.e(70), yu.e(252), yu.e(246), yu.e(251), yu.e(249), yu.e(241), yu.e(218), yu.e(264), yu.e(222), yu.e(236), yu.e(247), yu.e(250), yu.e(74), yu.e(196), yu.e(215), yu.e(219), yu.e(93), yu.e(113), yu.e(234), yu.e(73), yu.e(112), yu.e(152)]).then((() => yu(40755)))))
+        this.mobScene = new tk((() => Promise.all([Bk.e(69), Bk.e(226), Bk.e(225), Bk.e(244), Bk.e(94), Bk.e(245), Bk.e(72), Bk.e(71), Bk.e(242), Bk.e(70), Bk.e(252), Bk.e(246), Bk.e(251), Bk.e(249), Bk.e(241), Bk.e(218), Bk.e(264), Bk.e(222), Bk.e(236), Bk.e(247), Bk.e(250), Bk.e(74), Bk.e(196), Bk.e(215), Bk.e(219), Bk.e(93), Bk.e(113), Bk.e(234), Bk.e(73), Bk.e(112), Bk.e(153)]).then((() => Bk(40499))))), this.characterScene = new tk((() => Promise.all([Bk.e(69), Bk.e(226), Bk.e(225), Bk.e(244), Bk.e(94), Bk.e(245), Bk.e(72), Bk.e(71), Bk.e(242), Bk.e(70), Bk.e(252), Bk.e(246), Bk.e(251), Bk.e(249), Bk.e(241), Bk.e(218), Bk.e(264), Bk.e(222), Bk.e(236), Bk.e(247), Bk.e(250), Bk.e(74), Bk.e(196), Bk.e(215), Bk.e(219), Bk.e(93), Bk.e(113), Bk.e(234), Bk.e(73), Bk.e(112), Bk.e(152)]).then((() => Bk(40612)))))
       }
-      openMob(uu) {
-        return this.mobScene.run((Ru => Ru.openMobPreview(uu)))
+      openMob(kk) {
+        return this.mobScene.run((Fk => Fk.openMobPreview(kk)))
       }
-      openPet(uu) {
-        return this.mobScene.run((Ru => Ru.openPetPreview(uu)))
+      openPet(kk) {
+        return this.mobScene.run((Fk => Fk.openPetPreview(kk)))
       }
-      openMobLineup(uu) {
-        return this.mobScene.run((Ru => Ru.openMobLineupPreview(uu)))
+      openMobLineup(kk) {
+        return this.mobScene.run((Fk => Fk.openMobLineupPreview(kk)))
       }
-      openCharacter(uu, Ru) {
-        return this.characterScene.run((yu => yu.openCharacterPreview(uu, Ru)))
+      openCharacter(kk, Fk) {
+        return this.characterScene.run((Bk => Bk.openCharacterPreview(kk, Fk)))
       }
     }
-    Eu.e.setDefaultHost((() => new Qu))
+    Rk.i.setDefaultHost((() => new ak))
   },
-  41334: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      FrontlineMvpLineup: () => ru
+  41169: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      FrontlineMvpLineup: () => Vk
     });
-    var Eu = yu(64),
-      Ku = yu(1035),
-      Qu = yu.n(Ku),
-      mu = yu(9098),
-      Ju = yu(41110),
-      Nu = yu(41103),
-      Xu = yu(1079);
+    var Rk = Bk(61),
+      tk = Bk(1020),
+      ak = Bk.n(tk),
+      Xk = Bk(9039),
+      bk = Bk(40957),
+      wk = Bk(40954),
+      dk = Bk(1069);
 
-    function Vu(uu) {
-      return mu.g.openMobLineup(uu)
+    function sk(kk) {
+      return Xk.h.openMobLineup(kk)
     }
-    const ru = (0, Eu.memo)((function(uu) {
+    const Vk = (0, Rk.memo)((function(kk) {
       let {
-        players: Ru,
-        className: yu
-      } = uu;
-      const Ku = (0, Eu.useRef)(null),
-        mu = (0, Eu.useMemo)((() => Ru.map((uu => {
+        players: Fk,
+        className: Bk
+      } = kk;
+      const tk = (0, Rk.useRef)(null),
+        Xk = (0, Rk.useMemo)((() => Fk.map((kk => {
           let {
-            cosmetics: Ru,
-            size: yu,
-            heldGun: Eu
-          } = uu;
+            cosmetics: Fk,
+            size: Bk,
+            heldGun: Rk
+          } = kk;
           return {
-            cosmetics: Ru,
-            size: yu,
-            pC: Eu.name,
-            animation: Eu.aimed ? Ju.d : Ju.g
+            cosmetics: Fk,
+            size: Bk,
+            TY: Rk.name,
+            animation: Rk.aimed ? bk.d : bk.e
           }
-        }))), [Ru]),
-        ru = function(uu) {
-          const [Ru, yu] = (0, Eu.useState)([]);
-          return (0, Eu.useEffect)((() => {
-            yu(uu.map((() => !1)));
-            const Ru = uu.map(((uu, Ru) => {
+        }))), [Fk]),
+        Vk = function(kk) {
+          const [Fk, Bk] = (0, Rk.useState)([]);
+          return (0, Rk.useEffect)((() => {
+            Bk(kk.map((() => !1)));
+            const Fk = kk.map(((kk, Fk) => {
               let {
-                showAfterMs: Eu
-              } = uu;
+                showAfterMs: Rk
+              } = kk;
               return window.setTimeout((() => {
-                yu((uu => uu.map(((uu, yu) => uu || yu === Ru))))
-              }), Eu)
+                Bk((kk => kk.map(((kk, Bk) => kk || Bk === Fk))))
+              }), Rk)
             }));
             return () => {
-              for (const uu of Ru) window.clearTimeout(uu)
+              for (const kk of Fk) window.clearTimeout(kk)
             }
-          }), [uu]), Ru
-        }(Ru),
-        Bu = (0, Eu.useMemo)((() => ({
-          figures: mu,
-          shown: ru
-        })), [mu, ru]);
-      return (0, Nu.c)(Ku, Vu, Bu), (0, Xu.jsx)("div", {
-        className: Qu()("MobPreview", yu),
-        ref: Ku
+          }), [kk]), Fk
+        }(Fk),
+        Jk = (0, Rk.useMemo)((() => ({
+          figures: Xk,
+          shown: Vk
+        })), [Xk, Vk]);
+      return (0, wk.b)(tk, sk, Jk), (0, dk.jsx)("div", {
+        className: ak()("MobPreview", Bk),
+        ref: tk
       })
     }))
   },
-  36889: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Ju,
-      e: () => mu
+  36813: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => bk,
+      c: () => Xk
     });
-    var Eu = yu(36882),
-      Ku = yu(343),
-      Qu = yu(1823);
+    var Rk = Bk(36805),
+      tk = Bk(291),
+      ak = Bk(1808);
 
-    function mu(uu) {
-      if ("TQ" in uu) return Cu.createAnimationScript(uu);
-      return new Xu(uu).createAnimationScript()
+    function Xk(kk) {
+      if ("La" in kk) return Lk.createAnimationScript(kk);
+      return new dk(kk).createAnimationScript()
     }
 
-    function Ju(uu, Ru, yu, Ku) {
-      const Qu = uu.TQ <= 0 ? 1 : Ru + yu * Math.max(0, Ku) / uu.TQ;
-      return uu.WQ === Eu.j.LoopOnLastFrame ? Qu % 1 : uu.WQ === Eu.j.NoLoop && Qu >= 1 ? null : Math.min(1, Qu)
+    function bk(kk, Fk, Bk, tk) {
+      const ak = kk.La <= 0 ? 1 : Fk + Bk * Math.max(0, tk) / kk.La;
+      return kk.Oa === Rk.n.LoopOnLastFrame ? ak % 1 : kk.Oa === Rk.n.NoLoop && ak >= 1 ? null : Math.min(1, ak)
     }
-    class Nu {
-      createAnimationScript(uu) {
+    class wk {
+      createAnimationScript(kk) {
         const {
-          TQ: Ru,
-          loop: yu,
-          jQ: Eu
-        } = uu;
+          La: Fk,
+          loop: Bk,
+          Ea: Rk
+        } = kk;
         return {
-          TQ: Math.round(Ru),
-          WQ: this.createLoopMode(null !== yu && void 0 !== yu && yu),
-          jQ: this.createNodeSkeletonAnimationScript(null !== Eu && void 0 !== Eu ? Eu : null)
+          La: Math.round(Fk),
+          Oa: this.createLoopMode(null !== Bk && void 0 !== Bk && Bk),
+          Ea: this.createNodeSkeletonAnimationScript(null !== Rk && void 0 !== Rk ? Rk : null)
         }
       }
-      createLoopMode(uu) {
-        switch (uu) {
+      createLoopMode(kk) {
+        switch (kk) {
           case !1:
-            return Eu.j.NoLoop;
+            return Rk.n.NoLoop;
           case !0:
-            return Eu.j.LoopOnLastFrame;
+            return Rk.n.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return Eu.j.HoldOnLastFrame
+            return Rk.n.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${uu}`)
+        throw new Error(`Invalid loop mode schema: ${kk}`)
       }
-      createNodeSkeletonAnimationScript(uu) {
-        if (null === uu) return null;
-        const Ru = {};
-        for (const yu in uu) {
-          const Eu = uu[yu];
-          Ru[yu] = this.createNodeAnimationScript(Eu)
+      createNodeSkeletonAnimationScript(kk) {
+        if (null === kk) return null;
+        const Fk = {};
+        for (const Bk in kk) {
+          const Rk = kk[Bk];
+          Fk[Bk] = this.createNodeAnimationScript(Rk)
         }
-        return Ru
+        return Fk
       }
-      createNodeAnimationScript(uu) {
+      createNodeAnimationScript(kk) {
         const {
-          timeline: Ru
-        } = uu, yu = Ru.filter((uu => Number.isFinite(uu.timeFraction)));
-        return yu.sort(((uu, Ru) => uu.timeFraction - Ru.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(yu, "rotation", Bu),
-          position: this.createTimelineFromKeyframes(yu, "position", Su)
+          timeline: Fk
+        } = kk, Bk = Fk.filter((kk => Number.isFinite(kk.timeFraction)));
+        return Bk.sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(Bk, "rotation", Jk),
+          position: this.createTimelineFromKeyframes(Bk, "position", ek)
         }
       }
-      createTimelineFromKeyframes(uu, Ru, yu) {
-        const Eu = [];
-        for (const Nu of uu) {
-          const uu = Nu[Ru];
-          if (uu) {
-            const Ru = this.createAnimationFrameWithoutPrecomputes(Nu.timeFraction, uu);
-            Vu(Ru) && Eu.push(Ru)
+      createTimelineFromKeyframes(kk, Fk, Bk) {
+        const Rk = [];
+        for (const wk of kk) {
+          const kk = wk[Fk];
+          if (kk) {
+            const Fk = this.createAnimationFrameWithoutPrecomputes(wk.timeFraction, kk);
+            sk(Fk) && Rk.push(Fk)
           }
         }
-        const Ku = [];
-        for (let Nu = 0; Nu < Eu.length; Nu++) {
-          var Qu, mu, Ju;
-          const uu = Eu[Nu],
-            Ru = null !== (Qu = Eu[Nu - 1]) && void 0 !== Qu ? Qu : uu,
-            Xu = null !== (mu = Eu[Nu + 1]) && void 0 !== mu ? mu : uu,
-            Vu = null !== (Ju = Eu[Nu + 2]) && void 0 !== Ju ? Ju : Xu;
-          Ku.push({
-            ...uu,
-            ...yu(Ru.post, Ru.timeFraction, uu.post, uu.timeFraction, Xu.pre, Xu.timeFraction, Vu.pre, Vu.timeFraction)
+        const tk = [];
+        for (let wk = 0; wk < Rk.length; wk++) {
+          var ak, Xk, bk;
+          const kk = Rk[wk],
+            Fk = null !== (ak = Rk[wk - 1]) && void 0 !== ak ? ak : kk,
+            dk = null !== (Xk = Rk[wk + 1]) && void 0 !== Xk ? Xk : kk,
+            sk = null !== (bk = Rk[wk + 2]) && void 0 !== bk ? bk : dk;
+          tk.push({
+            ...kk,
+            ...Bk(Fk.post, Fk.timeFraction, kk.post, kk.timeFraction, dk.pre, dk.timeFraction, sk.pre, sk.timeFraction)
           })
         }
-        return Ku
+        return tk
       }
-      createAnimationFrameWithoutPrecomputes(uu, Ru) {
-        let yu, Eu, Ku = null;
-        var Qu;
-        if ("object" === typeof Ru && "point" in Ru) Ku = null !== (Qu = Ru.bQ) && void 0 !== Qu ? Qu : null, yu = Ru.point, Eu = Ru.point;
-        else if ("object" === typeof Ru && "pre" in Ru) {
-          var mu;
-          Ku = null !== (mu = Ru.bQ) && void 0 !== mu ? mu : null, yu = Ru.pre, Eu = Ru.post
-        } else yu = Ru, Eu = Ru;
+      createAnimationFrameWithoutPrecomputes(kk, Fk) {
+        let Bk, Rk, tk = null;
+        var ak;
+        if ("object" === typeof Fk && "point" in Fk) tk = null !== (ak = Fk.Ha) && void 0 !== ak ? ak : null, Bk = Fk.point, Rk = Fk.point;
+        else if ("object" === typeof Fk && "pre" in Fk) {
+          var Xk;
+          tk = null !== (Xk = Fk.Ha) && void 0 !== Xk ? Xk : null, Bk = Fk.pre, Rk = Fk.post
+        } else Bk = Fk, Rk = Fk;
         return {
-          timeFraction: uu,
-          bQ: this.createLerpMode(Ku),
-          pre: yu,
-          post: Eu
+          timeFraction: kk,
+          Ha: this.createLerpMode(tk),
+          pre: Bk,
+          post: Rk
         }
       }
-      createLerpMode(uu) {
-        return null === uu ? Eu.g.Linear : Nu.LERP_MODE_SCHEMA_MAPPING[uu]
+      createLerpMode(kk) {
+        return null === kk ? Rk.l.Linear : wk.LERP_MODE_SCHEMA_MAPPING[kk]
       }
     }
-    Nu.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Eu.g.Linear,
-      "catmull-rom-spline": Eu.g.CatmullRomSpline
+    wk.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Rk.l.Linear,
+      "catmull-rom-spline": Rk.l.CatmullRomSpline
     };
-    class Xu {
-      constructor(uu) {
-        this.animationSchema = uu
+    class dk {
+      constructor(kk) {
+        this.animationSchema = kk
       }
       createAnimationScript() {
         const {
-          animation_length: uu,
-          loop: Ru,
-          bones: yu
+          animation_length: kk,
+          loop: Fk,
+          bones: Bk
         } = this.animationSchema;
         return {
-          TQ: Math.round(1e3 * uu),
-          WQ: this.createLoopMode(null !== Ru && void 0 !== Ru && Ru),
-          jQ: this.createNodeSkeletonAnimationScript(null !== yu && void 0 !== yu ? yu : null)
+          La: Math.round(1e3 * kk),
+          Oa: this.createLoopMode(null !== Fk && void 0 !== Fk && Fk),
+          Ea: this.createNodeSkeletonAnimationScript(null !== Bk && void 0 !== Bk ? Bk : null)
         }
       }
-      createLoopMode(uu) {
-        switch (uu) {
+      createLoopMode(kk) {
+        switch (kk) {
           case !1:
-            return Eu.j.NoLoop;
+            return Rk.n.NoLoop;
           case !0:
-            return Eu.j.LoopOnLastFrame;
+            return Rk.n.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return Eu.j.HoldOnLastFrame
+            return Rk.n.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${uu}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${kk}`)
       }
-      createNodeSkeletonAnimationScript(uu) {
-        if (null === uu) return null;
-        const Ru = {};
-        for (const yu in uu) {
-          const Eu = uu[yu];
-          Ru[yu] = this.createNodeAnimationScript(Eu)
+      createNodeSkeletonAnimationScript(kk) {
+        if (null === kk) return null;
+        const Fk = {};
+        for (const Bk in kk) {
+          const Rk = kk[Bk];
+          Fk[Bk] = this.createNodeAnimationScript(Rk)
         }
-        return Ru
+        return Fk
       }
-      createNodeAnimationScript(uu) {
+      createNodeAnimationScript(kk) {
         const {
-          rotation: Ru,
-          position: yu
-        } = uu;
+          rotation: Fk,
+          position: Bk
+        } = kk;
         return {
-          rotation: this.createAnimationTimeline(null !== Ru && void 0 !== Ru ? Ru : null, Tu, Bu, !0),
-          position: this.createAnimationTimeline(null !== yu && void 0 !== yu ? yu : null, ju, Su, !1)
+          rotation: this.createAnimationTimeline(null !== Fk && void 0 !== Fk ? Fk : null, fk, Jk, !0),
+          position: this.createAnimationTimeline(null !== Bk && void 0 !== Bk ? Bk : null, Wk, ek, !1)
         }
       }
-      createAnimationTimeline(uu, Ru, yu, Eu) {
-        if (null === uu) return [];
-        if (Array.isArray(uu)) {
-          uu = {
-            "0.0": uu
+      createAnimationTimeline(kk, Fk, Bk, Rk) {
+        if (null === kk) return [];
+        if (Array.isArray(kk)) {
+          kk = {
+            "0.0": kk
           }
         }
-        const Ku = Object.entries(uu).map((uu => {
-          let [yu, Eu] = uu;
-          const Ku = Number(yu) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(Ku, Eu, Ru)
-        })).filter(Vu);
-        Ku.sort(((uu, Ru) => uu.timeFraction - Ru.timeFraction)), Eu && function(uu) {
-          for (let Ru = 1; Ru < uu.length; Ru++) {
-            const yu = uu[Ru - 1].post,
-              Eu = uu[Ru],
-              Ku = Hu(Eu.pre),
-              Qu = Hu(Eu.post),
-              mu = bu(yu, Eu.pre);
-            bu(yu, Ku) < mu && (uu[Ru] = {
-              ...Eu,
-              pre: Ku,
-              post: Qu
+        const tk = Object.entries(kk).map((kk => {
+          let [Bk, Rk] = kk;
+          const tk = Number(Bk) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(tk, Rk, Fk)
+        })).filter(sk);
+        tk.sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)), Rk && function(kk) {
+          for (let Fk = 1; Fk < kk.length; Fk++) {
+            const Bk = kk[Fk - 1].post,
+              Rk = kk[Fk],
+              tk = vk(Rk.pre),
+              ak = vk(Rk.post),
+              Xk = Yk(Bk, Rk.pre);
+            Yk(Bk, tk) < Xk && (kk[Fk] = {
+              ...Rk,
+              pre: tk,
+              post: ak
             })
           }
-        }(Ku);
-        const Qu = [];
-        for (let Xu = 0; Xu < Ku.length; Xu++) {
-          var mu, Ju, Nu;
-          const uu = Ku[Xu],
-            Ru = null !== (mu = Ku[Xu - 1]) && void 0 !== mu ? mu : uu,
-            Eu = null !== (Ju = Ku[Xu + 1]) && void 0 !== Ju ? Ju : uu,
-            Vu = null !== (Nu = Ku[Xu + 2]) && void 0 !== Nu ? Nu : Eu;
-          Qu.push({
-            ...uu,
-            ...yu(Ru.post, Ru.timeFraction, uu.post, uu.timeFraction, Eu.pre, Eu.timeFraction, Vu.pre, Vu.timeFraction)
+        }(tk);
+        const ak = [];
+        for (let dk = 0; dk < tk.length; dk++) {
+          var Xk, bk, wk;
+          const kk = tk[dk],
+            Fk = null !== (Xk = tk[dk - 1]) && void 0 !== Xk ? Xk : kk,
+            Rk = null !== (bk = tk[dk + 1]) && void 0 !== bk ? bk : kk,
+            sk = null !== (wk = tk[dk + 2]) && void 0 !== wk ? wk : Rk;
+          ak.push({
+            ...kk,
+            ...Bk(Fk.post, Fk.timeFraction, kk.post, kk.timeFraction, Rk.pre, Rk.timeFraction, sk.pre, sk.timeFraction)
           })
         }
-        return Qu
+        return ak
       }
-      createAnimationFrameWithoutPrecomputes(uu, Ru, yu) {
-        let Eu, Ku, Qu = null;
-        if ("object" === typeof Ru && "post" in Ru) {
-          var mu;
-          Qu = null !== (mu = Ru.lerp_mode) && void 0 !== mu ? mu : null, Ku = pu(Ru.post, yu), Eu = Ru.pre ? pu(Ru.pre, yu) : Ku
+      createAnimationFrameWithoutPrecomputes(kk, Fk, Bk) {
+        let Rk, tk, ak = null;
+        if ("object" === typeof Fk && "post" in Fk) {
+          var Xk;
+          ak = null !== (Xk = Fk.lerp_mode) && void 0 !== Xk ? Xk : null, tk = yk(Fk.post, Bk), Rk = Fk.pre ? yk(Fk.pre, Bk) : tk
         } else {
-          const uu = pu(Ru, yu);
-          Ku = uu, Eu = uu
+          const kk = yk(Fk, Bk);
+          tk = kk, Rk = kk
         }
         return {
-          timeFraction: uu,
-          bQ: this.createLerpMode(Qu),
-          pre: Eu,
-          post: Ku
+          timeFraction: kk,
+          Ha: this.createLerpMode(ak),
+          pre: Rk,
+          post: tk
         }
       }
-      createLerpMode(uu) {
-        return null === uu ? Eu.g.Linear : Xu.LERP_MODE_SCHEMA_MAPPING[uu]
+      createLerpMode(kk) {
+        return null === kk ? Rk.l.Linear : dk.LERP_MODE_SCHEMA_MAPPING[kk]
       }
     }
 
-    function Vu(uu) {
-      return Number.isFinite(uu.timeFraction) && ru(uu.pre) && ru(uu.post)
+    function sk(kk) {
+      return Number.isFinite(kk.timeFraction) && Vk(kk.pre) && Vk(kk.post)
     }
 
-    function ru(uu) {
-      return Number.isFinite(uu[0]) && Number.isFinite(uu[1]) && Number.isFinite(uu[2])
+    function Vk(kk) {
+      return Number.isFinite(kk[0]) && Number.isFinite(kk[1]) && Number.isFinite(kk[2])
     }
 
-    function Bu(uu, Ru, yu, Eu, Ku, Qu, mu, Ju) {
-      const Nu = Qu - Ru,
-        Xu = Qu - Eu,
-        Vu = Ju - Eu,
-        ru = [null, null, null];
-      for (let Bu = 0; Bu < ru.length; Bu++) ru[Bu] = xu(uu[Bu], yu[Bu], Ku[Bu], mu[Bu], Nu, Vu);
+    function Jk(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
+      const wk = ak - Fk,
+        dk = ak - Rk,
+        sk = bk - Rk,
+        Vk = [null, null, null];
+      for (let Jk = 0; Jk < Vk.length; Jk++) Vk[Jk] = Ak(kk[Jk], Bk[Jk], tk[Jk], Xk[Jk], wk, sk);
       return {
-        CQ: Xu,
-        kQ: ru
+        ua: dk,
+        Ma: Vk
       }
     }
 
-    function xu(uu, Ru, yu, Eu, Qu, mu) {
+    function Ak(kk, Fk, Bk, Rk, ak, Xk) {
       return {
-        AQ: Ku.c.computeShortestRotation(uu, yu) / Qu,
-        DQ: Ku.c.computeShortestRotation(Ru, Eu) / mu,
-        delta: Ku.c.computeShortestRotation(Ru, yu)
+        Ua: tk.b.computeShortestRotation(kk, Bk) / ak,
+        ca: tk.b.computeShortestRotation(Fk, Rk) / Xk,
+        delta: tk.b.computeShortestRotation(Fk, Bk)
       }
     }
 
-    function Su(uu, Ru, yu, Eu, Ku, Qu, mu, Ju) {
-      const Nu = Qu - Ru,
-        Xu = Qu - Eu,
-        Vu = Ju - Eu,
-        ru = [null, null, null];
-      for (let Bu = 0; Bu < ru.length; Bu++) ru[Bu] = {
-        AQ: (Ku[Bu] - uu[Bu]) / Nu,
-        DQ: (mu[Bu] - yu[Bu]) / Vu,
-        delta: Ku[Bu] - yu[Bu]
+    function ek(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
+      const wk = ak - Fk,
+        dk = ak - Rk,
+        sk = bk - Rk,
+        Vk = [null, null, null];
+      for (let Jk = 0; Jk < Vk.length; Jk++) Vk[Jk] = {
+        Ua: (tk[Jk] - kk[Jk]) / wk,
+        ca: (Xk[Jk] - Bk[Jk]) / sk,
+        delta: tk[Jk] - Bk[Jk]
       };
       return {
-        CQ: Xu,
-        kQ: ru
+        ua: dk,
+        Ma: Vk
       }
     }
 
-    function pu(uu, Ru) {
-      return null === Ru ? uu : Ru(uu)
+    function yk(kk, Fk) {
+      return null === Fk ? kk : Fk(kk)
     }
 
-    function Tu(uu) {
-      const [Ru, yu, Eu] = uu, mu = -(0, Qu.i)(Ru), Ju = -(0, Qu.i)(yu), Nu = (0, Qu.i)(Eu), Xu = Ku.c.quaternionFromEulerZYX(mu, Ju, Nu);
-      return Ku.c.eulerYXZFromQuaternion(Xu)
+    function fk(kk) {
+      const [Fk, Bk, Rk] = kk, Xk = -(0, ak.k)(Fk), bk = -(0, ak.k)(Bk), wk = (0, ak.k)(Rk), dk = tk.b.quaternionFromEulerZYX(Xk, bk, wk);
+      return tk.b.eulerYXZFromQuaternion(dk)
     }
-    Xu.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Eu.g.Linear,
-      catmullrom: Eu.g.CatmullRomSpline
+    dk.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Rk.l.Linear,
+      catmullrom: Rk.l.CatmullRomSpline
     };
-    const Wu = 1 / 16;
+    const mk = 1 / 16;
 
-    function ju(uu) {
-      return [-uu[0] * Wu, uu[1] * Wu, uu[2] * Wu]
+    function Wk(kk) {
+      return [-kk[0] * mk, kk[1] * mk, kk[2] * mk]
     }
 
-    function Hu(uu) {
-      const [Ru, yu, Eu] = uu;
-      return [Ru >= 0 ? Math.PI - Ru : -Math.PI - Ru, du(yu + Math.PI), du(Eu + Math.PI)]
+    function vk(kk) {
+      const [Fk, Bk, Rk] = kk;
+      return [Fk >= 0 ? Math.PI - Fk : -Math.PI - Fk, ik(Bk + Math.PI), ik(Rk + Math.PI)]
     }
 
-    function du(uu) {
-      return Ku.c.mod(uu + Math.PI, 2 * Math.PI) - Math.PI
+    function ik(kk) {
+      return tk.b.mod(kk + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function bu(uu, Ru) {
-      return Math.abs(Ku.c.computeShortestRotation(uu[0], Ru[0])) + Math.abs(Ku.c.computeShortestRotation(uu[1], Ru[1])) + Math.abs(Ku.c.computeShortestRotation(uu[2], Ru[2]))
+    function Yk(kk, Fk) {
+      return Math.abs(tk.b.computeShortestRotation(kk[0], Fk[0])) + Math.abs(tk.b.computeShortestRotation(kk[1], Fk[1])) + Math.abs(tk.b.computeShortestRotation(kk[2], Fk[2]))
     }
-    const Cu = new Nu
+    const Lk = new wk
   },
-  36882: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => mu,
-      f: () => Qu,
-      g: () => Eu,
-      j: () => Ku
+  36805: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Xk,
+      h: () => ak,
+      l: () => Rk,
+      n: () => tk
     });
-    let Eu = function(uu) {
-        return uu[uu.Linear = 0] = "Linear", uu[uu.CatmullRomSpline = 1] = "CatmullRomSpline", uu
+    let Rk = function(kk) {
+        return kk[kk.Linear = 0] = "Linear", kk[kk.CatmullRomSpline = 1] = "CatmullRomSpline", kk
       }({}),
-      Ku = function(uu) {
-        return uu[uu.NoLoop = 0] = "NoLoop", uu[uu.LoopOnLastFrame = 1] = "LoopOnLastFrame", uu[uu.HoldOnLastFrame = 2] = "HoldOnLastFrame", uu
+      tk = function(kk) {
+        return kk[kk.NoLoop = 0] = "NoLoop", kk[kk.LoopOnLastFrame = 1] = "LoopOnLastFrame", kk[kk.HoldOnLastFrame = 2] = "HoldOnLastFrame", kk
       }({}),
-      Qu = function(uu) {
-        return uu[uu.Movement = 0] = "Movement", uu[uu.Action = 1] = "Action", uu[uu.Emote = 2] = "Emote", uu[uu.Custom = 3] = "Custom", uu
+      ak = function(kk) {
+        return kk[kk.Movement = 0] = "Movement", kk[kk.Action = 1] = "Action", kk[kk.Emote = 2] = "Emote", kk[kk.Custom = 3] = "Custom", kk
       }({}),
-      mu = function(uu) {
-        return uu[uu.Start = 0] = "Start", uu[uu.Stop = 1] = "Stop", uu
+      Xk = function(kk) {
+        return kk[kk.Start = 0] = "Start", kk[kk.Stop = 1] = "Stop", kk
       }({})
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

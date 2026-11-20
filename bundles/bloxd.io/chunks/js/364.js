@@ -1,19 +1,19 @@
 export const id = 364;
 export const ids = [364];
 export const modules = {
-  61323: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      passPixelShader: () => mu
+  61212: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      passPixelShader: () => Xk
     });
-    var Eu = yu(39403);
-    const Ku = "passPixelShader",
-      Qu = "varying vec2 vUV;uniform sampler2D textureSampler;\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{gl_FragColor=texture2D(textureSampler,vUV);}";
-    Eu.e.ShadersStore[Ku] || (Eu.e.ShadersStore[Ku] = Qu);
-    const mu = {
-      name: Ku,
-      shader: Qu
+    var Rk = Bk(39270);
+    const tk = "passPixelShader",
+      ak = "varying vec2 vUV;uniform sampler2D textureSampler;\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{gl_FragColor=texture2D(textureSampler,vUV);}";
+    Rk.d.ShadersStore[tk] || (Rk.d.ShadersStore[tk] = ak);
+    const Xk = {
+      name: tk,
+      shader: ak
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

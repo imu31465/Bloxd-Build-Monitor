@@ -1,128 +1,128 @@
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  39346: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Eu,
-      e: () => Ku
+  39203: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Rk,
+      e: () => tk
     });
-    const Eu = "The world isn't loaded, so no blocks can be seen.",
-      Ku = "The world isn't loaded, so nothing in it can be seen."
+    const Rk = "The world isn't loaded, so no blocks can be seen.",
+      tk = "The world isn't loaded, so nothing in it can be seen."
   },
-  38847: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => pu,
-      d: () => Tu,
-      e: () => Su
+  38731: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => yk,
+      f: () => fk,
+      i: () => ek
     });
-    var Eu = yu(2707);
-    const Ku = 0,
-      Qu = 2,
-      mu = 3,
-      Ju = 4;
-    class Nu {
-      constructor(uu, Ru) {
-        this.width = uu, this.Nr = Ru, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(uu * Ru)
+    var Rk = Bk(2711);
+    const tk = 0,
+      ak = 2,
+      Xk = 3,
+      bk = 4;
+    class wk {
+      constructor(kk, Fk) {
+        this.width = kk, this.KV = Fk, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(kk * Fk)
       }
-      push(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const yu = this.data.subarray(this.next * this.width, (this.next + 1) * this.width);
-        for (let Eu = 0; Eu < this.width; Eu++) yu[Eu] = uu[Ru + Eu];
-        return this.next = (this.next + 1) % this.Nr, this.size = Math.min(this.size + 1, this.Nr), yu
+      push(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const Bk = this.data.subarray(this.next * this.width, (this.next + 1) * this.width);
+        for (let Rk = 0; Rk < this.width; Rk++) Bk[Rk] = kk[Fk + Rk];
+        return this.next = (this.next + 1) % this.KV, this.size = Math.min(this.size + 1, this.KV), Bk
       }
       lines() {
-        const uu = [],
-          Ru = (this.next - this.size + this.Nr) % this.Nr;
-        for (let yu = 0; yu < this.size; yu++) {
-          const Eu = (Ru + yu) % this.Nr * this.width;
-          uu.push(Array.from(this.data.subarray(Eu, Eu + this.width)).join(","))
+        const kk = [],
+          Fk = (this.next - this.size + this.KV) % this.KV;
+        for (let Bk = 0; Bk < this.size; Bk++) {
+          const Rk = (Fk + Bk) % this.KV * this.width;
+          kk.push(Array.from(this.data.subarray(Rk, Rk + this.width)).join(","))
         }
-        return uu
+        return kk
       }
     }
 
-    function Xu(uu) {
-      return Number.isFinite(uu) ? String(Math.round(10 * uu) / 10) : String(uu)
+    function dk(kk) {
+      return Number.isFinite(kk) ? String(Math.round(10 * kk) / 10) : String(kk)
     }
 
-    function Vu(uu) {
-      return Number.isFinite(uu) ? uu.toFixed(1) : String(uu)
+    function sk(kk) {
+      return Number.isFinite(kk) ? kk.toFixed(1) : String(kk)
     }
-    class ru {
+    class Vk {
       constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.KF = 0, this.pastLimit = 0, this.lockSkips = 0, this.NT = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+        this.frames = 0, this.looked = 0, this.idle = 0, this.dD = 0, this.pastLimit = 0, this.lockSkips = 0, this.ws = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
       }
     }
-    class Bu {
+    class Jk {
       constructor() {
-        var uu = this;
-        this.tally = new ru, this.records = new Nu(10, 3600), this.events = new Nu(4, 12e3), this.event = new Float64Array(4), this.take = null, this.client = "js", this.started = !1, this.record = function(Ru) {
-          let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          const [Eu, Nu, ru, Bu, xu, Su, pu, Tu, Wu, ju] = uu.records.push(Ru, yu), Hu = uu.tally;
-          switch (Hu.frames++, pu) {
-            case Ku:
-              return void Hu.idle++;
-            case Ju:
-              return void Hu.NT++;
-            case mu:
-              return Hu.lockSkips++, void(0 === ru && 0 === Bu || uu.outlier(`lock skip dropped raw (${Xu(ru)}, ${Xu(Bu)}) at ${Vu(Eu)} ms`))
+        var kk = this;
+        this.tally = new Vk, this.records = new wk(10, 3600), this.events = new wk(4, 12e3), this.event = new Float64Array(4), this.take = null, this.client = "js", this.started = !1, this.record = function(Fk) {
+          let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          const [Rk, wk, Vk, Jk, Ak, ek, yk, fk, mk, Wk] = kk.records.push(Fk, Bk), vk = kk.tally;
+          switch (vk.frames++, yk) {
+            case tk:
+              return void vk.idle++;
+            case bk:
+              return void vk.ws++;
+            case Xk:
+              return vk.lockSkips++, void(0 === Vk && 0 === Jk || kk.outlier(`lock skip dropped raw (${dk(Vk)}, ${dk(Jk)}) at ${sk(Rk)} ms`))
           }
-          Hu.looked++, Number.isFinite(Nu) && (Hu.dtMin = Math.min(Hu.dtMin, Nu), Hu.dtMax = Math.max(Hu.dtMax, Nu), Hu.dtSum += Nu, Nu > 0 && (Hu.peakRate = Math.max(Hu.peakRate, Math.hypot(xu, Su) / Nu))), Hu.raw[0] += ru, Hu.raw[1] += Bu, Hu.turned[0] += xu, Hu.turned[1] += Su;
-          const du = Math.abs(ru) > ju || Math.abs(Bu) > ju,
-            bu = `raw (${Xu(ru)}, ${Xu(Bu)}) over ${Vu(Nu)} ms, limit ${Xu(ju)}, filter v (${Tu.toFixed(3)}, ${Wu.toFixed(3)}) px/ms, at ${Vu(Eu)} ms`;
-          pu === Qu ? (Hu.KF++, uu.outlier(`spike put right: ${bu} -> turned (${Xu(xu)}, ${Xu(Su)})`)) : du ? (Hu.pastLimit++, uu.outlier(`kept past limit: ${bu}`)) : Nu > 50 && (Hu.longFrames++, uu.outlier(`long frame: ${bu}, turned in full`))
-        }, this.onMouseMove = uu => {
-          const Ru = this.tally,
+          vk.looked++, Number.isFinite(wk) && (vk.dtMin = Math.min(vk.dtMin, wk), vk.dtMax = Math.max(vk.dtMax, wk), vk.dtSum += wk, wk > 0 && (vk.peakRate = Math.max(vk.peakRate, Math.hypot(Ak, ek) / wk))), vk.raw[0] += Vk, vk.raw[1] += Jk, vk.turned[0] += Ak, vk.turned[1] += ek;
+          const ik = Math.abs(Vk) > Wk || Math.abs(Jk) > Wk,
+            Yk = `raw (${dk(Vk)}, ${dk(Jk)}) over ${sk(wk)} ms, limit ${dk(Wk)}, filter v (${fk.toFixed(3)}, ${mk.toFixed(3)}) px/ms, at ${sk(Rk)} ms`;
+          yk === ak ? (vk.dD++, kk.outlier(`spike put right: ${Yk} -> turned (${dk(Ak)}, ${dk(ek)})`)) : ik ? (vk.pastLimit++, kk.outlier(`kept past limit: ${Yk}`)) : wk > 50 && (vk.longFrames++, kk.outlier(`long frame: ${Yk}, turned in full`))
+        }, this.onMouseMove = kk => {
+          const Fk = this.tally,
             {
-              movementX: yu,
-              movementY: Eu
-            } = uu;
-          Ru.events++;
-          const Ku = Math.max(Math.abs(yu), Math.abs(Eu));
-          Ru.eventMax = Math.max(Ru.eventMax, Ku);
-          const Qu = null !== document.pointerLockElement,
-            mu = this.event;
-          mu[0] = uu.timeStamp, mu[1] = yu, mu[2] = Eu, mu[3] = Qu ? 1 : 0, this.events.push(mu), Ku >= 200 && (Ru.bigEvents++, this.eventOutlier(`big mousemove (${yu}, ${Eu}) at ${Vu(uu.timeStamp)} ms, lock ${Qu?"jJ":"free"}`))
+              movementX: Bk,
+              movementY: Rk
+            } = kk;
+          Fk.events++;
+          const tk = Math.max(Math.abs(Bk), Math.abs(Rk));
+          Fk.eventMax = Math.max(Fk.eventMax, tk);
+          const ak = null !== document.pointerLockElement,
+            Xk = this.event;
+          Xk[0] = kk.timeStamp, Xk[1] = Bk, Xk[2] = Rk, Xk[3] = ak ? 1 : 0, this.events.push(Xk), tk >= 200 && (Fk.bigEvents++, this.eventOutlier(`big mousemove (${Bk}, ${Rk}) at ${sk(kk.timeStamp)} ms, lock ${ak?"Hb":"free"}`))
         }, this.onLockChange = () => {
-          const uu = document.pointerLockElement;
-          (0, Eu.i)("look", `pointer lock ${uu?`gained (${uu.tagName.toLowerCase()})`:"lost"} at ${Vu(performance.now())} ms`)
+          const kk = document.pointerLockElement;
+          (0, Rk.k)("look", `pointer lock ${kk?`gained (${kk.tagName.toLowerCase()})`:"lost"} at ${sk(performance.now())} ms`)
         }, this.onLockError = () => {
-          (0, Eu.i)("look", `pointer lock request failed at ${Vu(performance.now())} ms`)
+          (0, Rk.k)("look", `pointer lock request failed at ${sk(performance.now())} ms`)
         }, this.onVisibility = () => {
-          (0, Eu.i)("look", `page ${document.visibilityState} at ${Vu(performance.now())} ms`)
+          (0, Rk.k)("look", `page ${document.visibilityState} at ${sk(performance.now())} ms`)
         }, this.flush = () => {
           this.takeRecords();
-          const uu = this.tally;
-          if (this.tally = new ru, 0 === uu.events && 0 === uu.raw[0] && 0 === uu.raw[1] && 0 === uu.lockSkips && 0 === uu.KF && 0 === uu.dropped) return;
-          const Ru = uu.looked > 0 ? uu.dtSum / uu.looked : NaN,
-            yu = [`${uu.frames} frames (${uu.looked} looked, ${uu.idle} idle${"wasm"===this.client?`, ${uu.NT} carried`:""})`, `dt avg ${Vu(Ru)} min ${Vu(uu.dtMin)} max ${Vu(uu.dtMax)}, ${uu.longFrames} long`, `${uu.events} mousemoves (max ${Xu(uu.eventMax)} px, ${uu.bigEvents} big)`, `raw (${Xu(uu.raw[0])}, ${Xu(uu.raw[1])}) turned (${Xu(uu.turned[0])}, ${Xu(uu.turned[1])})`, `peak ${uu.peakRate.toFixed(2)} px/ms`, `put right ${uu.KF}, past limit ${uu.pastLimit}, lock skips ${uu.lockSkips}`, "lock " + (document.pointerLockElement ? "jJ" : "free")];
-          uu.dropped > 0 && yu.push(`${uu.dropped} doubled spike copies dropped`), uu.lost > 0 && yu.push(`${uu.lost} records lost`), uu.suppressed > 0 && yu.push(`${uu.suppressed} outlier lines not shown`), (0, Eu.i)("look", `1s: ${yu.join("; ")}`)
+          const kk = this.tally;
+          if (this.tally = new Vk, 0 === kk.events && 0 === kk.raw[0] && 0 === kk.raw[1] && 0 === kk.lockSkips && 0 === kk.dD && 0 === kk.dropped) return;
+          const Fk = kk.looked > 0 ? kk.dtSum / kk.looked : NaN,
+            Bk = [`${kk.frames} frames (${kk.looked} looked, ${kk.idle} idle${"wasm"===this.client?`, ${kk.ws} carried`:""})`, `dt avg ${sk(Fk)} min ${sk(kk.dtMin)} max ${sk(kk.dtMax)}, ${kk.longFrames} long`, `${kk.events} mousemoves (max ${dk(kk.eventMax)} px, ${kk.bigEvents} big)`, `raw (${dk(kk.raw[0])}, ${dk(kk.raw[1])}) turned (${dk(kk.turned[0])}, ${dk(kk.turned[1])})`, `peak ${kk.peakRate.toFixed(2)} px/ms`, `put right ${kk.dD}, past limit ${kk.pastLimit}, lock skips ${kk.lockSkips}`, "lock " + (document.pointerLockElement ? "Hb" : "free")];
+          kk.dropped > 0 && Bk.push(`${kk.dropped} doubled spike copies dropped`), kk.lost > 0 && Bk.push(`${kk.lost} records lost`), kk.suppressed > 0 && Bk.push(`${kk.suppressed} outlier lines not shown`), (0, Rk.k)("look", `1s: ${Bk.join("; ")}`)
         }, this.dump = () => [`look records (${this.client}): nowMs,dtMs,rawX,rawY,turnedX,turnedY,outcome,vX,vY,limit`, ...this.records.lines(), "mousemove events: timeStamp,movementX,movementY,locked", ...this.events.lines()].join("\n")
       }
-      start(uu, Ru) {
-        this.client = uu, this.take = Ru;
+      start(kk, Fk) {
+        this.client = kk, this.take = Fk;
         const {
-          screen: yu
+          screen: Bk
         } = window;
-        (0, Eu.i)("look", `start: ${uu} client, dpr ${window.devicePixelRatio}, screen ${yu.width}x${yu.height}, pointer lock ${document.pointerLockElement?"jJ":"free"}`), this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
+        (0, Rk.k)("look", `start: ${kk} client, dpr ${window.devicePixelRatio}, screen ${Bk.width}x${Bk.height}, pointer lock ${document.pointerLockElement?"Hb":"free"}`), this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
           capture: !0,
           passive: !0
-        }), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), (0, Eu.g)("look", this.dump))
+        }), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), (0, Rk.i)("look", this.dump))
       }
-      outlier(uu) {
-        const Ru = this.tally;
-        Ru.outliers >= 20 ? Ru.suppressed++ : (Ru.outliers++, (0, Eu.i)("look", uu))
+      outlier(kk) {
+        const Fk = this.tally;
+        Fk.outliers >= 20 ? Fk.suppressed++ : (Fk.outliers++, (0, Rk.k)("look", kk))
       }
-      eventOutlier(uu) {
-        const Ru = this.tally;
-        Ru.eventLines >= 10 ? Ru.suppressed++ : (Ru.eventLines++, (0, Eu.i)("look", uu))
+      eventOutlier(kk) {
+        const Fk = this.tally;
+        Fk.eventLines >= 10 ? Fk.suppressed++ : (Fk.eventLines++, (0, Rk.k)("look", kk))
       }
       takeRecords() {
-        var uu;
-        const Ru = null === (uu = this.take) || void 0 === uu ? void 0 : uu.call(this);
-        if (Ru && Ru.length >= 2) {
-          this.tally.lost += Ru[0], this.tally.dropped += Ru[1];
-          for (let uu = 2; uu + 10 <= Ru.length; uu += 10) this.record(Ru, uu)
+        var kk;
+        const Fk = null === (kk = this.take) || void 0 === kk ? void 0 : kk.call(this);
+        if (Fk && Fk.length >= 2) {
+          this.tally.lost += Fk[0], this.tally.dropped += Fk[1];
+          for (let kk = 2; kk + 10 <= Fk.length; kk += 10) this.record(Fk, kk)
         }
       }
       droppedCopy() {
@@ -132,140 +132,140 @@ export const modules = {
         this.takeRecords(), this.take = null
       }
     }
-    let xu = null;
+    let Ak = null;
 
-    function Su(uu) {
-      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return xu ??= new Bu, xu.start(uu, Ru), xu.record
+    function ek(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return Ak ??= new Jk, Ak.start(kk, Fk), Ak.record
     }
 
-    function pu() {
-      var uu;
-      null === (uu = xu) || void 0 === uu || uu.endTake()
+    function yk() {
+      var kk;
+      null === (kk = Ak) || void 0 === kk || kk.endTake()
     }
 
-    function Tu() {
-      var uu;
-      null === (uu = xu) || void 0 === uu || uu.droppedCopy()
+    function fk() {
+      var kk;
+      null === (kk = Ak) || void 0 === kk || kk.droppedCopy()
     }
   },
-  8949: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Eu
+  8894: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Rk
     });
-    const Eu = new Set(["chunkBorders"])
+    const Rk = new Set(["chunkBorders"])
   },
-  9100: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => mu,
-      c: () => Ku,
-      e: () => Vu
+  9045: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Xk,
+      f: () => tk,
+      i: () => sk
     });
-    var Eu = yu(1517);
+    var Rk = Bk(1512);
 
-    function Ku(uu) {
-      var Ru;
+    function tk(kk) {
+      var Fk;
       return {
-        ...mu.store,
-        yaw: mu.store.yaw + (null !== (Ru = Eu.b[uu].previewYaw) && void 0 !== Ru ? Ru : 0)
+        ...Xk.store,
+        yaw: Xk.store.yaw + (null !== (Fk = Rk.d[kk].previewYaw) && void 0 !== Fk ? Fk : 0)
       }
     }
-    const Qu = {
+    const ak = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      mu = {
-        player: Qu,
+      Xk = {
+        player: ak,
         store: {
-          ...Qu,
+          ...ak,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function Ju(uu, Ru) {
-      uu instanceof Promise ? uu.then(Ru).catch((uu => {
-        console.error("Couldn't open the preview", uu)
-      })) : Ru(uu)
+    function bk(kk, Fk) {
+      kk instanceof Promise ? kk.then(Fk).catch((kk => {
+        console.error("Couldn't open the preview", kk)
+      })) : Fk(kk)
     }
-    class Nu {
-      constructor(uu) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, Ju(uu, (uu => {
-          this.closed ? uu.close() : (this.opened = uu, null !== this.size && uu.resize(this.size.width, this.size.height), null !== this.view && uu.show(this.view))
+    class wk {
+      constructor(kk) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, bk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height), null !== this.view && kk.show(this.view))
         }))
       }
-      show(uu) {
-        var Ru;
-        this.view = uu, null === (Ru = this.opened) || void 0 === Ru || Ru.show(uu)
+      show(kk) {
+        var Fk;
+        this.view = kk, null === (Fk = this.opened) || void 0 === Fk || Fk.show(kk)
       }
-      resize(uu, Ru) {
-        var yu;
+      resize(kk, Fk) {
+        var Bk;
         this.size = {
-          width: uu,
-          height: Ru
-        }, null === (yu = this.opened) || void 0 === yu || yu.resize(uu, Ru)
+          width: kk,
+          height: Fk
+        }, null === (Bk = this.opened) || void 0 === Bk || Bk.resize(kk, Fk)
       }
       close() {
-        var uu;
-        this.closed = !0, null === (uu = this.opened) || void 0 === uu || uu.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    class Xu {
-      constructor(uu) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(uu).then((uu => uu.ready)), Ju(uu, (uu => {
-          this.closed ? uu.close() : (this.opened = uu, null !== this.size && uu.resize(this.size.width, this.size.height))
+    class dk {
+      constructor(kk) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(kk).then((kk => kk.ready)), bk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var uu, Ru;
-        return null !== (uu = null === (Ru = this.opened) || void 0 === Ru ? void 0 : Ru.isReady()) && void 0 !== uu && uu
+        var kk, Fk;
+        return null !== (kk = null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.isReady()) && void 0 !== kk && kk
       }
-      setCosmetic(uu, Ru) {
-        var yu;
-        null === (yu = this.opened) || void 0 === yu || yu.setCosmetic(uu, Ru)
+      setCosmetic(kk, Fk) {
+        var Bk;
+        null === (Bk = this.opened) || void 0 === Bk || Bk.setCosmetic(kk, Fk)
       }
-      playEmote(uu) {
-        var Ru;
-        null === (Ru = this.opened) || void 0 === Ru || Ru.playEmote(uu)
+      playEmote(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.playEmote(kk)
       }
-      setOrbit(uu) {
-        var Ru;
-        null === (Ru = this.opened) || void 0 === Ru || Ru.setOrbit(uu)
+      setOrbit(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.setOrbit(kk)
       }
       resetCamera() {
-        var uu;
-        null === (uu = this.opened) || void 0 === uu || uu.resetCamera()
+        var kk;
+        null === (kk = this.opened) || void 0 === kk || kk.resetCamera()
       }
-      async untilDrawn(uu) {
-        var Ru;
-        await this.ready, await (null === (Ru = this.opened) || void 0 === Ru ? void 0 : Ru.untilDrawn(uu))
+      async untilDrawn(kk) {
+        var Fk;
+        await this.ready, await (null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.untilDrawn(kk))
       }
-      resize(uu, Ru) {
-        var yu;
+      resize(kk, Fk) {
+        var Bk;
         this.size = {
-          width: uu,
-          height: Ru
-        }, null === (yu = this.opened) || void 0 === yu || yu.resize(uu, Ru)
+          width: kk,
+          height: Fk
+        }, null === (Bk = this.opened) || void 0 === Bk || Bk.resize(kk, Fk)
       }
       close() {
-        var uu;
-        this.closed = !0, null === (uu = this.opened) || void 0 === uu || uu.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    const Vu = new class {
+    const sk = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(uu) {
-        this.host = uu
+      setHost(kk) {
+        this.host = kk
       }
-      setDefaultHost(uu) {
-        this.makeDefault = uu
+      setDefaultHost(kk) {
+        this.makeDefault = kk
       }
       current() {
         if (null === this.host) {
@@ -274,79 +274,79 @@ export const modules = {
         }
         return this.host
       }
-      openMob(uu) {
-        return new Nu(this.current().openMob(uu))
+      openMob(kk) {
+        return new wk(this.current().openMob(kk))
       }
-      openPet(uu) {
-        return new Nu(this.current().openPet(uu))
+      openPet(kk) {
+        return new wk(this.current().openPet(kk))
       }
-      openMobLineup(uu) {
-        return new Nu(this.current().openMobLineup(uu))
+      openMobLineup(kk) {
+        return new wk(this.current().openMobLineup(kk))
       }
-      openCharacter(uu, Ru) {
-        return new Xu(this.current().openCharacter(uu, Ru))
+      openCharacter(kk, Fk) {
+        return new dk(this.current().openCharacter(kk, Fk))
       }
     }
   },
-  38994: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => ru,
-      f: () => Bu
+  38856: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Vk,
+      h: () => Jk
     });
-    var Eu = yu(174),
-      Ku = yu(203),
-      Qu = yu(1439),
-      mu = yu(3032),
-      Ju = yu(1447),
-      Nu = yu(36322),
-      Xu = yu(640),
-      Vu = yu(38963);
+    var Rk = Bk(152),
+      tk = Bk(176),
+      ak = Bk(1434),
+      Xk = Bk(3037),
+      bk = Bk(1441),
+      wk = Bk(36202),
+      dk = Bk(633),
+      sk = Bk(38817);
 
-    function ru(uu) {
-      (0, mu.e)("matchmake_failed", uu, Eu.p[Eu.p.SHADER_PACK])
+    function Vk(kk) {
+      (0, Xk.g)("matchmake_failed", kk, Rk.k[Rk.k.SHADER_PACK])
     }
-    async function Bu(uu, Ru) {
-      var yu;
-      const Eu = null === (yu = await Vu.shaderPackPage.preload()) || void 0 === yu ? void 0 : yu.listing,
-        mu = (0, Nu.e)();
-      Eu && null !== mu && await Ju.e.reportShaderPackSession(uu, {
-        packId: Eu.packId,
-        sourceHash: Eu.sourceHash,
-        game: (0, Qu.f)(Ru, Ku.w, "other"),
-        playSessionId: mu,
-        visitSessionId: (0, Xu.e)()
+    async function Jk(kk, Fk) {
+      var Bk;
+      const Rk = null === (Bk = await sk.shaderPackPage.preload()) || void 0 === Bk ? void 0 : Bk.listing,
+        Xk = (0, wk.e)();
+      Rk && null !== Xk && await bk.b.reportShaderPackSession(kk, {
+        packId: Rk.packId,
+        sourceHash: Rk.sourceHash,
+        game: (0, ak.c)(Fk, tk.z, "other"),
+        playSessionId: Xk,
+        visitSessionId: (0, dk.e)()
       })
     }
   },
-  38797: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Ju
+  38692: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => bk
     });
-    var Eu = yu(34),
-      Ku = yu(1250),
-      Qu = yu(3273);
-    const mu = "Reconnecting";
-    class Ju {
-      constructor(uu) {
-        this.hooks = uu, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
+    var Rk = Bk(29),
+      tk = Bk(1239),
+      ak = Bk(3272);
+    const Xk = "Reconnecting";
+    class bk {
+      constructor(kk) {
+        this.hooks = kk, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
           "visible" === document.visibilityState && this.controller.retryNow()
-        }, this.onPageHide = uu => {
-          uu.persisted || this.leave()
-        }, this.controller = new Qu.d((Ru => uu.reconnect(Ru)), {
-          isSessionLive: () => !this.ended && uu.isLive(),
-          onPhaseChanged: uu => {
-            this.onPhaseChanged(uu)
+        }, this.onPageHide = kk => {
+          kk.persisted || this.leave()
+        }, this.controller = new ak.e((Fk => kk.reconnect(Fk)), {
+          isSessionLive: () => !this.ended && kk.isLive(),
+          onPhaseChanged: kk => {
+            this.onPhaseChanged(kk)
           },
-          onReconnected: Ru => {
-            uu.onReconnected(Ru)
+          onReconnected: Fk => {
+            kk.onReconnected(Fk)
           },
-          onGaveUp: Ru => {
-            !this.ended && uu.isLive() && uu.onGaveUp(this.sessionBased, Ru)
+          onGaveUp: Fk => {
+            !this.ended && kk.isLive() && kk.onGaveUp(this.sessionBased, Fk)
           }
         })
       }
-      onInitialInfo(uu, Ru) {
-        this.graceMs = uu, this.sessionBased = Ru
+      onInitialInfo(kk, Fk) {
+        this.graceMs = kk, this.sessionBased = Fk
       }
       canHoldSeat() {
         return this.graceMs > 0 && !this.ended
@@ -354,8 +354,8 @@ export const modules = {
       isResuming() {
         return "connected" !== this.controller.phase
       }
-      onConnectionLost(uu) {
-        this.ended || this.controller.onConnectionLost(uu, this.graceMs)
+      onConnectionLost(kk) {
+        this.ended || this.controller.onConnectionLost(kk, this.graceMs)
       }
       onResuming() {
         this.ended || this.controller.onResuming()
@@ -364,38 +364,38 @@ export const modules = {
         this.controller.stop()
       }
       leave() {
-        const uu = this.isResuming() && !this.controller.awaitingResumeOnRoom,
-          Ru = this.controller.heldToken;
-        this.end(), uu && "" !== Ru && this.hooks.releaseSeat(Ru)
+        const kk = this.isResuming() && !this.controller.awaitingResumeOnRoom,
+          Fk = this.controller.heldToken;
+        this.end(), kk && "" !== Fk && this.hooks.releaseSeat(Fk)
       }
       end() {
         this.ended = !0, this.controller.stop()
       }
-      onPhaseChanged(uu) {
-        const Ru = "frozen" === uu || "resuming" === uu;
-        Ru !== this.stopped && (this.stopped = Ru, this.hooks.freeze(Ru));
-        const yu = "frozen" === uu || "resuming" === uu && this.frozen;
-        yu && !this.frozen ? (0, Ku.o)(mu) : !yu && this.frozen && (0, Ku.m)(mu), this.frozen = yu, this.setListening("connected" !== uu), Eu.k.Op(Qu.n, yu ? "frozen" : uu)
+      onPhaseChanged(kk) {
+        const Fk = "frozen" === kk || "resuming" === kk;
+        Fk !== this.stopped && (this.stopped = Fk, this.hooks.freeze(Fk));
+        const Bk = "frozen" === kk || "resuming" === kk && this.frozen;
+        Bk && !this.frozen ? (0, tk.m)(Xk) : !Bk && this.frozen && (0, tk.l)(Xk), this.frozen = Bk, this.setListening("connected" !== kk), Rk.o.Hf(ak.o, Bk ? "frozen" : kk)
       }
-      setListening(uu) {
-        uu !== this.listening && (this.listening = uu, uu ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
+      setListening(kk) {
+        kk !== this.listening && (this.listening = kk, kk ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
       }
     }
   },
-  38802: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Eu
+  38696: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Rk
     });
-    class Eu {
-      constructor(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.onSilent = uu, this.now = Ru, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
-          const uu = this.now(),
-            Ru = uu - this.lastCheckAt <= 2e3;
-          this.lastCheckAt = uu;
-          const yu = "visible" === document.visibilityState;
-          !yu || Ru && this.wasVisible || (this.resumedAt = uu), this.wasVisible = yu, yu && uu - this.lastHeardAt > 12e3 && uu - this.resumedAt > 2e3 && this.onSilent()
-        }, this.lastHeardAt = Ru(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
+    class Rk {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.onSilent = kk, this.now = Fk, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
+          const kk = this.now(),
+            Fk = kk - this.lastCheckAt <= 2e3;
+          this.lastCheckAt = kk;
+          const Bk = "visible" === document.visibilityState;
+          !Bk || Fk && this.wasVisible || (this.resumedAt = kk), this.wasVisible = Bk, Bk && kk - this.lastHeardAt > 12e3 && kk - this.resumedAt > 2e3 && this.onSilent()
+        }, this.lastHeardAt = Fk(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
       }
       heard() {
         this.lastHeardAt = this.now()
@@ -405,28 +405,28 @@ export const modules = {
       }
     }
   },
-  8984: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Qu
+  8939: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => ak
     });
-    var Eu = yu(1056);
+    var Rk = Bk(1047);
 
-    function Ku() {
-      var uu, Ru;
-      return null !== (uu = null === (Ru = screen.orientation) || void 0 === Ru ? void 0 : Ru.type) && void 0 !== uu ? uu : innerWidth > innerHeight ? "landscape" : "portrait"
+    function tk() {
+      var kk, Fk;
+      return null !== (kk = null === (Fk = screen.orientation) || void 0 === Fk ? void 0 : Fk.type) && void 0 !== kk ? kk : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const Qu = new class {
+    const ak = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && Ku() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && tk() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = Ku(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, Eu.jp)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = tk(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, Rk.ly)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -434,340 +434,340 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const uu of this.resizers) uu()
+            for (const kk of this.resizers) kk()
           }
         }), 1e3)
       }
-      heldSizer(uu) {
-        let Ru = !1;
+      heldSizer(kk) {
+        let Fk = !1;
         return () => {
-          if (Ru && this.isHeld()) return null;
-          const yu = uu();
-          return Ru ||= null !== yu, yu
+          if (Fk && this.isHeld()) return null;
+          const Bk = kk();
+          return Fk ||= null !== Bk, Bk
         }
       }
-      onRelease(uu) {
-        return this.resizers.add(uu), () => {
-          this.resizers.delete(uu)
+      onRelease(kk) {
+        return this.resizers.add(kk), () => {
+          this.resizers.delete(kk)
         }
       }
     }
   },
-  38984: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ku
+  38849: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => tk
     });
-    let Eu = !1;
-    async function Ku(uu, Ru) {
-      if (!Eu) {
-        Eu = !0;
+    let Rk = !1;
+    async function tk(kk, Fk) {
+      if (!Rk) {
+        Rk = !0;
         try {
           const [{
-            reloadBloxd: Eu
+            reloadBloxd: Rk
           }, {
-            NotificationProvider: Ku
-          }] = await Promise.all([Promise.resolve().then((() => yu(1661))), Promise.resolve().then((() => yu(1311)))]);
-          if (!uu || !0 === await Ku.showPromptPopup({
+            NotificationProvider: tk
+          }] = await Promise.all([Promise.resolve().then((() => Bk(1650))), Promise.resolve().then((() => Bk(1300)))]);
+          if (!kk || !0 === await tk.showPromptPopup({
               title: "Unsaved changes",
               subtitle: "Exit and lose your unsaved changes?",
               confirmText: "Exit",
               destructive: !0,
               cancelText: "Cancel",
               unlockPointerKey: "replayExitUnsavedChanges"
-            }).getResult()) return void Eu(Ru)
-        } catch (Ku) {
-          console.error("Leaving the replay failed", Ku)
+            }).getResult()) return void Rk(Fk)
+        } catch (tk) {
+          console.error("Leaving the replay failed", tk)
         }
-        Eu = !1
+        Rk = !1
       }
     }
   },
-  38812: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Xu,
-      d: () => Vu
+  38701: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => dk,
+      i: () => sk
     });
-    var Eu = yu(1646),
-      Ku = yu(212),
-      Qu = yu(1626),
-      mu = yu(1690),
-      Ju = yu(1176),
-      Nu = yu(1110);
-    async function Xu(uu, Ru) {
-      return function(uu) {
-        return "object" === typeof uu && null !== uu && uu.code === Ku.c.VpnIp.code
-      }(Ru) && function(uu) {
-        return Qu.d.supports("appCheck") && uu.isLoggedIn() && !uu.hasTriedAppAttestation()
-      }(uu) && await async function(uu) {
+    var Rk = Bk(1644),
+      tk = Bk(182),
+      ak = Bk(1625),
+      Xk = Bk(1693),
+      bk = Bk(1154),
+      wk = Bk(1101);
+    async function dk(kk, Fk) {
+      return function(kk) {
+        return "object" === typeof kk && null !== kk && kk.code === tk.e.VpnIp.code
+      }(Fk) && function(kk) {
+        return ak.d.supports("appCheck") && kk.isLoggedIn() && !kk.hasTriedAppAttestation()
+      }(kk) && await async function(kk) {
         try {
           const {
-            token: Ru
-          } = await (0, mu.e)(), {
-            "3PSIDMCPP": yu
-          } = await (0, Nu.postJsonWithMetricsCookiesAndJsonResponse)(`${Ju.clientSideServerUrls.indexUrl}/index/app-attestation`, {
-            appCheckToken: Ru
+            token: Fk
+          } = await (0, Xk.e)(), {
+            "3PSIDMCPP": Bk
+          } = await (0, wk.postJsonWithMetricsCookiesAndJsonResponse)(`${bk.clientSideServerUrls.indexUrl}/index/app-attestation`, {
+            appCheckToken: Fk
           }, {
             retries: 0
-          }, uu.getMetricsCookies());
-          return uu.setAppAttestedAuthJwt(yu), !0
-        } catch (Ru) {
-          return Ru instanceof Eu.c && "failed" === Ru.code ? (console.warn("The app couldn't get an App Check token:", Ru), uu.markAppAttestationTried()) : console.error("Failed to attest the app:", Ru), !1
+          }, kk.getMetricsCookies());
+          return kk.setAppAttestedAuthJwt(Bk), !0
+        } catch (Fk) {
+          return Fk instanceof Rk.e && "failed" === Fk.code ? (console.warn("The app couldn't get an App Check token:", Fk), kk.markAppAttestationTried()) : console.error("Failed to attest the app:", Fk), !1
         }
-      }(uu)
+      }(kk)
     }
-    async function Vu(uu, Ru) {
+    async function sk(kk, Fk) {
       try {
-        return await Ru()
-      } catch (yu) {
-        if (!await Xu(uu, yu)) throw yu
+        return await Fk()
+      } catch (Bk) {
+        if (!await dk(kk, Bk)) throw Bk
       }
-      return Ru()
+      return Fk()
     }
   },
-  40616: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Nu
+  40467: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => wk
     });
-    var Eu = yu(1670);
-    const Ku = 33177600,
-      Qu = 3e4;
-    let mu = !1;
+    var Rk = Bk(1663);
+    const tk = 33177600,
+      ak = 3e4;
+    let Xk = !1;
 
-    function Ju(uu, Ru, yu) {
-      if (!uu.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (mu) return Promise.reject(new Error("A screenshot is already being taken"));
-      mu = !0;
-      const Eu = function(uu, Ru, yu) {
-        const Eu = Math.max(1, uu),
-          Qu = Math.max(1, Ru),
-          mu = Math.min(1, yu / Math.max(Eu, Qu), Math.sqrt(Ku / (Eu * Qu)));
+    function bk(kk, Fk, Bk) {
+      if (!kk.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (Xk) return Promise.reject(new Error("A screenshot is already being taken"));
+      Xk = !0;
+      const Rk = function(kk, Fk, Bk) {
+        const Rk = Math.max(1, kk),
+          ak = Math.max(1, Fk),
+          Xk = Math.min(1, Bk / Math.max(Rk, ak), Math.sqrt(tk / (Rk * ak)));
         return {
-          width: Math.max(1, Math.floor(Eu * mu)),
-          height: Math.max(1, Math.floor(Qu * mu))
+          width: Math.max(1, Math.floor(Rk * Xk)),
+          height: Math.max(1, Math.floor(ak * Xk))
         }
-      }(Ru, yu, uu.maxTextureSize);
-      return uu.resize(Eu.width, Eu.height), new Promise(((Ru, yu) => {
-        let Eu, Ku = 2,
-          Ju = null;
-        const Nu = () => {
-          var Ru;
-          mu = !1, null === (Ru = Ju) || void 0 === Ru || Ru(), clearTimeout(Eu), uu.restoreSize()
+      }(Fk, Bk, kk.maxTextureSize);
+      return kk.resize(Rk.width, Rk.height), new Promise(((Fk, Bk) => {
+        let Rk, tk = 2,
+          bk = null;
+        const wk = () => {
+          var Fk;
+          Xk = !1, null === (Fk = bk) || void 0 === Fk || Fk(), clearTimeout(Rk), kk.restoreSize()
         };
-        Eu = setTimeout((() => {
-          Nu(), yu(new Error("No frame was drawn to capture"))
-        }), Qu), Ju = uu.onFrameDrawn((() => {
-          if (Ku--, Ku > 0) return;
+        Rk = setTimeout((() => {
+          wk(), Bk(new Error("No frame was drawn to capture"))
+        }), ak), bk = kk.onFrameDrawn((() => {
+          if (tk--, tk > 0) return;
           const {
-            canvas: Eu
-          } = uu, Qu = {
-            width: Eu.width,
-            height: Eu.height
+            canvas: Rk
+          } = kk, ak = {
+            width: Rk.width,
+            height: Rk.height
           };
           try {
-            Eu.toBlob((uu => {
-              uu ? Ru({
-                blob: uu,
-                ...Qu
-              }) : yu(new Error("The canvas gave no image"))
+            Rk.toBlob((kk => {
+              kk ? Fk({
+                blob: kk,
+                ...ak
+              }) : Bk(new Error("The canvas gave no image"))
             }), "image/png")
-          } catch (mu) {
-            yu(mu)
+          } catch (Xk) {
+            Bk(Xk)
           } finally {
-            Nu()
+            wk()
           }
         }))
       }))
     }
-    async function Nu(uu, Ru, yu) {
+    async function wk(kk, Fk, Bk) {
       try {
-        const Ku = await Ju(uu, Ru, yu);
-        (0, Eu.c)(Ku.blob, `bloxd-screenshot-${Ku.width}x${Ku.height}-${Date.now()}.png`)
-      } catch (Ku) {
-        console.error("Error taking screenshot:", Ku)
+        const tk = await bk(kk, Fk, Bk);
+        (0, Rk.e)(tk.blob, `bloxd-screenshot-${tk.width}x${tk.height}-${Date.now()}.png`)
+      } catch (tk) {
+        console.error("Error taking screenshot:", tk)
       }
     }
   },
-  38808: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Bu,
-      e: () => Vu
+  38699: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Jk,
+      f: () => sk
     });
-    var Eu = yu(212),
-      Ku = yu(1731),
-      Qu = yu(1739),
-      mu = yu(8652);
-    const Ju = [250, 500, 1e3, 2e3, 1250],
-      Nu = 406;
+    var Rk = Bk(182),
+      tk = Bk(1727),
+      ak = Bk(1733),
+      Xk = Bk(8577);
+    const bk = [250, 500, 1e3, 2e3, 1250],
+      wk = 406;
 
-    function Xu(uu) {
-      if ("object" !== typeof uu || null === uu) return !1;
+    function dk(kk) {
+      if ("object" !== typeof kk || null === kk) return !1;
       const {
-        code: Ru,
-        message: yu
-      } = uu, Ku = Eu.c.duplicateLobbyNameError;
-      return (Ru === Ku.code || Ru === Nu) && (yu === Ku.text || yu === Ku.text + Eu.j)
+        code: Fk,
+        message: Bk
+      } = kk, tk = Rk.e.duplicateLobbyNameError;
+      return (Fk === tk.code || Fk === wk) && (Bk === tk.text || Bk === tk.text + Rk.p)
     }
-    async function Vu(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ku.d;
-      for (let Ku = 0;; Ku++) {
-        let mu;
-        (0, Qu.p)(Ru);
+    async function sk(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tk.b;
+      for (let tk = 0;; tk++) {
+        let Xk;
+        (0, ak.k)(Fk);
         try {
-          return await uu()
-        } catch (Eu) {
-          if (mu = Ju[Ku], void 0 === mu || !Xu(Eu)) throw Eu
+          return await kk()
+        } catch (Rk) {
+          if (Xk = bk[tk], void 0 === Xk || !dk(Rk)) throw Rk
         }
-        await yu(mu, Ru)
+        await Bk(Xk, Fk)
       }
     }
-    const ru = new Set([Eu.c.duplicateLobbyNameError.code, Eu.c.lobbyCantBeCreated.code, Eu.c.roomDisposedEarlyError.code, Eu.c.roomDisposedLateError.code, Eu.c.serverRoomLimitReached.code]);
+    const Vk = new Set([Rk.e.duplicateLobbyNameError.code, Rk.e.lobbyCantBeCreated.code, Rk.e.roomDisposedEarlyError.code, Rk.e.roomDisposedLateError.code, Rk.e.serverRoomLimitReached.code]);
 
-    function Bu(uu) {
-      if (Xu(uu)) return !0;
-      const Ru = (0, mu.g)(uu);
-      return "number" === typeof Ru && ru.has(Ru)
+    function Jk(kk) {
+      if (dk(kk)) return !0;
+      const Fk = (0, Xk.f)(kk);
+      return "number" === typeof Fk && Vk.has(Fk)
     }
   },
-  8652: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu,
-      g: () => mu,
-      j: () => Ju,
-      l: () => Xu,
-      p: () => Nu
+  8577: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => ak,
+      f: () => Xk,
+      i: () => bk,
+      m: () => dk,
+      o: () => wk
     });
-    var Eu = yu(212),
-      Ku = yu(4409);
+    var Rk = Bk(182),
+      tk = Bk(4366);
 
-    function Qu(uu) {
-      return mu(uu) === Eu.c.gameOrPluginOnPlayerAuthRejected.code
+    function ak(kk) {
+      return Xk(kk) === Rk.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function mu(uu) {
-      return "object" === typeof uu && null !== uu ? uu.code : void 0
+    function Xk(kk) {
+      return "object" === typeof kk && null !== kk ? kk.code : void 0
     }
 
-    function Ju(uu) {
-      var Ru;
-      return null !== (Ru = Object.keys(Ku.e).find((Ru => Ku.e[Ru] === uu))) && void 0 !== Ru ? Ru : null
+    function bk(kk) {
+      var Fk;
+      return null !== (Fk = Object.keys(tk.c).find((Fk => tk.c[Fk] === kk))) && void 0 !== Fk ? Fk : null
     }
 
-    function Nu(uu) {
-      return "notWhitelisted" === uu ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function wk(kk) {
+      return "notWhitelisted" === kk ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const Xu = {
+    const dk = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  38906: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => mu
+  38773: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Xk
     });
-    var Eu = yu(330),
-      Ku = yu(145),
-      Qu = yu(47);
+    var Rk = Bk(279),
+      tk = Bk(132),
+      ak = Bk(42);
 
-    function mu() {
-      Qu.i.setItem(Eu.Nb, Qu.i.getItem(Eu.Nb) + 1), (0, Ku.n)() && Qu.i.setItem(Eu.Kb, Qu.i.getItem(Eu.Kb) + 1)
+    function Xk() {
+      ak.i.setItem(Rk.Ib, ak.i.getItem(Rk.Ib) + 1), (0, tk.h)() && ak.i.setItem(Rk.Hb, ak.i.getItem(Rk.Hb) + 1)
     }
   },
-  36316: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => ju,
-      c: () => Hu
+  36194: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Wk,
+      f: () => vk
     });
-    var Eu = yu(1001),
-      Ku = yu(614),
-      Qu = yu(343),
-      mu = yu(1008),
-      Ju = yu(624),
-      Nu = yu(654),
-      Xu = yu(4291),
-      Vu = yu(106),
-      ru = yu(145),
-      Bu = yu(1661),
-      xu = yu(125),
-      Su = yu(36322),
-      pu = yu(47),
-      Tu = yu(640),
-      Wu = yu(36324);
+    var Rk = Bk(994),
+      tk = Bk(608),
+      ak = Bk(291),
+      Xk = Bk(1e3),
+      bk = Bk(624),
+      wk = Bk(646),
+      dk = Bk(4258),
+      sk = Bk(98),
+      Vk = Bk(132),
+      Jk = Bk(1650),
+      Ak = Bk(112),
+      ek = Bk(36202),
+      yk = Bk(42),
+      fk = Bk(633),
+      mk = Bk(36204);
 
-    function ju() {
-      var uu, Ru;
-      return [...null !== (uu = navigator.languages) && void 0 !== uu ? uu : [null !== (Ru = navigator.language) && void 0 !== Ru ? Ru : "none"], "en-Gb"]
+    function Wk() {
+      var kk, Fk;
+      return [...null !== (kk = navigator.languages) && void 0 !== kk ? kk : [null !== (Fk = navigator.language) && void 0 !== Fk ? Fk : "none"], "en-Gb"]
     }
 
-    function Hu(uu, Ru, yu, Hu, du) {
-      const bu = (0, Eu.i)(Ru) ? (0, Eu.n)(Ru) : null,
-        Cu = {
-          cookies: (0, Bu.getAllCookiesForGameNameWithVariation)(Ru),
-          isMobile: (0, Vu.isMobile)(),
-          isUsingCustomGameTexturePack: null !== bu && du(bu),
+    function vk(kk, Fk, Bk, vk, ik) {
+      const Yk = (0, Rk.n)(Fk) ? (0, Rk.v)(Fk) : null,
+        Lk = {
+          cookies: (0, Jk.getAllCookiesForGameNameWithVariation)(Fk),
+          isMobile: (0, sk.isMobile)(),
+          isUsingCustomGameTexturePack: null !== Yk && ik(Yk),
           generalCookies: {
-            joinDiscord: !!pu.i.getItem("DiscordPressed"),
-            newGo: Xu.b,
-            ...uu.getMetricsCookies(),
-            trafficCode: Hu,
-            compliance: Vu.compliance
+            joinDiscord: !!yk.i.getItem("DiscordPressed"),
+            newGo: dk.b,
+            ...kk.getMetricsCookies(),
+            trafficCode: vk,
+            compliance: sk.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, Vu.getBrowserName)(),
-            version: (0, Vu.getBrowserVersion)(),
+            name: (0, sk.getBrowserName)(),
+            version: (0, sk.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, Vu.getPlatformType)(),
-            deviceType: (0, xu.c)()
+            platformType: (0, sk.getPlatformType)(),
+            deviceType: (0, Ak.c)()
           },
-          isLoggedIn: uu.isLoggedIn(),
-          lobbyName: yu,
-          languages: ju(),
-          version: Ku.c,
-          siteUsed: ru.v,
-          subsiteUsed: ru.C,
-          playSessionId: (0, Su.l)(Ru),
-          visitSessionId: (0, Tu.e)(),
-          clientReason: Ju.i.reason,
-          budgetBasis: (0, Wu.f)(),
-          ...null !== Nu.n && {
-            diagClaim: Nu.n.claimId
+          isLoggedIn: kk.isLoggedIn(),
+          lobbyName: Bk,
+          languages: Wk(),
+          version: tk.e,
+          siteUsed: Vk.q,
+          subsiteUsed: Vk.z,
+          playSessionId: (0, ek.j)(Fk),
+          visitSessionId: (0, fk.e)(),
+          clientReason: bk.i.reason,
+          budgetBasis: (0, mk.g)(),
+          ...null !== wk.l && {
+            diagClaim: wk.l.claimId
           }
         };
-      return null !== bu && (0, Qu.Qc)(bu) ? (Cu.lobbyName = (0, Eu.h)(bu, (0, Eu.m)(Ru), yu), {
-        roomName: `classic_${mu.e}`,
-        joinOptions: Cu
+      return null !== Yk && (0, ak.Gc)(Yk) ? (Lk.lobbyName = (0, Rk.j)(Yk, (0, Rk.r)(Fk), Bk), {
+        roomName: `classic_${Xk.c}`,
+        joinOptions: Lk
       }) : {
-        roomName: Ru,
-        joinOptions: Cu
+        roomName: Fk,
+        joinOptions: Lk
       }
     }
   },
-  40241: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Ju
+  40077: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => bk
     });
-    var Eu = yu(39346);
+    var Rk = Bk(39203);
 
-    function Ku(uu) {
+    function tk(kk) {
       return {
-        current: () => uu,
+        current: () => kk,
         watch: () => () => {}
       }
     }
 
-    function Qu() {}
-    const mu = Object.freeze([0, 0, 0]),
-      Ju = {
+    function ak() {}
+    const Xk = Object.freeze([0, 0, 0]),
+      bk = {
         states: {
-          health: Ku({
+          health: tk({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: Ku({
+          inventory: tk({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -775,63 +775,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: Ku({
+          hotbar: tk({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: Ku({
+          stationItems: tk({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: Ku({}),
-          creativeVisibility: Ku({
+          itemInfo: tk({}),
+          creativeVisibility: tk({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: Ku(null),
-          heldItemAim: Ku({
+          aura: tk(null),
+          heldItemAim: tk({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: Ku(!1),
-          gliderBoostFuel: Ku(0),
-          flight: Ku({
+          crouching: tk(!1),
+          gliderBoostFuel: tk(0),
+          flight: tk({
             canFly: !1,
             flying: !1
           }),
-          crafting: Ku({
+          crafting: tk({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: Ku({
+          players: tk({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: Ku({}),
-          fullInventory: Ku(!1),
-          crosshairTarget: Ku({
+          lobbyLeaderboardRows: tk({}),
+          fullInventory: tk(!1),
+          crosshairTarget: tk({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: Ku(!0),
-          freeCamera: Ku({
+          localPlayerAlive: tk(!0),
+          freeCamera: tk({
             allowed: !1,
             movesFly: !1
           }),
-          replay: Ku(null),
-          replayEdits: Ku(null),
-          replayRecorder: Ku({
+          replay: tk(null),
+          replayEdits: tk(null),
+          replayRecorder: tk({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: Ku(!1)
+          replayVideoExporting: tk(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -893,86 +893,86 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: Qu,
+          selectHotbarSlot: ak,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: Qu,
-          setInventoryOpen: Qu,
-          changeIronChestPasskey: Qu,
-          dragReplayCamera: Qu,
-          applyTemporaryThirdPerson: Qu,
-          holdEmoteWheel: Qu,
-          recordFlyingMiddleText: Qu,
-          focusCrafting: Qu,
+          closeChest: ak,
+          setInventoryOpen: ak,
+          changeIronChestPasskey: ak,
+          dragReplayCamera: ak,
+          applyTemporaryThirdPerson: ak,
+          holdEmoteWheel: ak,
+          recordFlyingMiddleText: ak,
+          focusCrafting: ak,
           craftRecipe: () => ({
-            QV: 0,
-            nV: null,
+            Ps: 0,
+            fV: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: Qu,
-          setShopOpen: Qu,
-          buyShopItem: Qu,
-          sendChatMessage: Qu,
-          ignorePlayer: Qu,
-          reportPlayer: Qu,
-          reportWorldCodeChat: Qu,
-          requestDiscordReportKey: Qu,
-          reportLobbyOrGame: Qu,
-          playEmote: Qu,
-          updateMyCosmetic: Qu,
-          writeOnBoard: Qu,
-          writeBook: Qu,
-          writeNameTag: Qu,
-          setCustomLobbyBlock: Qu,
-          openIronChest: Qu,
-          sendCodeCollab: Qu,
-          clickCodeBlock: Qu,
-          bindCustomButtonKeys: Qu,
-          pressCustomButton: Qu,
-          moveReplayFreecam: Qu,
-          holdReplayFreecamVertical: Qu,
-          respawn: Qu,
-          wakeUp: Qu,
-          requestLeaderboard: Qu,
-          completeTask: Qu,
-          setServerCookie: Qu,
-          answerUiRequest: Qu,
-          chooseRewardedAd: Qu,
-          setCameraZoom: Qu,
-          setFreeCameraMovesFly: Qu,
-          setBlockHighlight: Qu,
-          setCrosshairInteractPrompt: Qu,
-          setLookSensitivity: Qu,
-          replayAction: Qu,
-          setReplayPlaying: Qu,
-          seekReplay: Qu,
-          setReplayCameraMode: Qu,
-          syncReplayCameraMode: Qu,
-          setReplayCameraKeyframe: Qu,
-          moveReplayCameraKeyframe: Qu,
-          deleteReplayCameraKeyframes: Qu,
-          setReplayPlaybackMark: Qu,
+          enchantItem: ak,
+          setShopOpen: ak,
+          buyShopItem: ak,
+          sendChatMessage: ak,
+          ignorePlayer: ak,
+          reportPlayer: ak,
+          reportWorldCodeChat: ak,
+          requestDiscordReportKey: ak,
+          reportLobbyOrGame: ak,
+          playEmote: ak,
+          updateMyCosmetic: ak,
+          writeOnBoard: ak,
+          writeBook: ak,
+          writeNameTag: ak,
+          setCustomLobbyBlock: ak,
+          openIronChest: ak,
+          sendCodeCollab: ak,
+          clickCodeBlock: ak,
+          bindCustomButtonKeys: ak,
+          pressCustomButton: ak,
+          moveReplayFreecam: ak,
+          holdReplayFreecamVertical: ak,
+          respawn: ak,
+          wakeUp: ak,
+          requestLeaderboard: ak,
+          completeTask: ak,
+          setServerCookie: ak,
+          answerUiRequest: ak,
+          chooseRewardedAd: ak,
+          setCameraZoom: ak,
+          setFreeCameraMovesFly: ak,
+          setBlockHighlight: ak,
+          setCrosshairInteractPrompt: ak,
+          setLookSensitivity: ak,
+          replayAction: ak,
+          setReplayPlaying: ak,
+          seekReplay: ak,
+          setReplayCameraMode: ak,
+          syncReplayCameraMode: ak,
+          setReplayCameraKeyframe: ak,
+          moveReplayCameraKeyframe: ak,
+          deleteReplayCameraKeyframes: ak,
+          setReplayPlaybackMark: ak,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: Qu,
-          exportReplayVideo: Qu,
-          toggleRecording: Qu,
-          saveClip: Qu,
-          setRecorderPrefs: Qu,
-          setReplayViewerOpen: Qu
+          holdReplayForShaderPackFailure: ak,
+          exportReplayVideo: ak,
+          toggleRecording: ak,
+          saveClip: ak,
+          setRecorderPrefs: ak,
+          setReplayViewerOpen: ak
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => Eu.d,
-          worldCodeAiGameState: () => Eu.e
+          worldCodeAiChunk: () => Rk.d,
+          worldCodeAiGameState: () => Rk.e
         },
         lookups: {
-          localPos: () => mu,
+          localPos: () => Xk,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -990,222 +990,222 @@ export const modules = {
         }
       }
   },
-  36324: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Cu,
-      f: () => bu,
-      g: () => du
+  36204: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Lk,
+      g: () => Yk,
+      k: () => ik
     });
-    var Eu = yu(212),
-      Ku = yu(106),
-      Qu = yu(2716),
-      mu = yu(4164),
-      Ju = yu(629),
-      Nu = yu(36328);
-    const Xu = 1048576,
-      Vu = 1024 * Xu,
-      ru = 400 * Xu,
-      Bu = 147456,
-      xu = .5,
-      Su = 1.5 * Vu,
-      pu = 768 * Xu;
+    var Rk = Bk(182),
+      tk = Bk(98),
+      ak = Bk(2722),
+      Xk = Bk(4143),
+      bk = Bk(629),
+      wk = Bk(36209);
+    const dk = 1048576,
+      sk = 1024 * dk,
+      Vk = 400 * dk,
+      Jk = 147456,
+      Ak = .5,
+      ek = 1.5 * sk,
+      yk = 768 * dk;
 
-    function Tu(uu) {
-      return ru + uu * Bu
+    function fk(kk) {
+      return Vk + kk * Jk
     }
 
-    function Wu(uu, Ru, yu) {
-      var Ku, mu;
+    function mk(kk, Fk, Bk) {
+      var tk, Xk;
       let {
-        footprintBytes: Ju,
-        basis: Xu,
-        namesLimit: Wu
-      } = function(uu) {
+        footprintBytes: bk,
+        basis: dk,
+        namesLimit: mk
+      } = function(kk) {
         const {
-          os: Ru,
-          deviceMemory: yu
-        } = uu;
-        if ("ios" === Ru) switch ((0, Qu.f)(uu)) {
+          os: Fk,
+          deviceMemory: Bk
+        } = kk;
+        if ("ios" === Fk) switch ((0, ak.d)(kk)) {
           case "ipad_m":
             return {
-              footprintBytes: Tu(Nu.e), basis: "ipad-m", namesLimit: !1
+              footprintBytes: fk(wk.b), basis: "ipad-m", namesLimit: !1
             };
           case "ipad":
             return {
-              footprintBytes: pu, basis: "ipad", namesLimit: !0
+              footprintBytes: yk, basis: "ipad", namesLimit: !0
             };
           case "iphone_6gb":
             return {
-              footprintBytes: Su, basis: "iphone-6gb", namesLimit: !0
+              footprintBytes: ek, basis: "iphone-6gb", namesLimit: !0
             };
           case "iphone":
             return {
-              footprintBytes: pu, basis: "iphone", namesLimit: !0
+              footprintBytes: yk, basis: "iphone", namesLimit: !0
             }
         }
-        return "number" === typeof yu && Number.isFinite(yu) && yu > 0 ? {
-          footprintBytes: yu * Vu * xu,
-          basis: `memory-${yu}`,
+        return "number" === typeof Bk && Number.isFinite(Bk) && Bk > 0 ? {
+          footprintBytes: Bk * sk * Ak,
+          basis: `memory-${Bk}`,
           namesLimit: !0
-        } : "android" === Ru ? {
-          footprintBytes: pu,
+        } : "android" === Fk ? {
+          footprintBytes: yk,
           basis: "android",
           namesLimit: !0
         } : {
-          footprintBytes: Tu(Nu.i),
+          footprintBytes: fk(wk.f),
           basis: "unreported",
           namesLimit: !1
         }
-      }(uu);
-      if (yu) {
-        const uu = Math.min(Ju, Tu(Nu.e));
-        Ju = ru + Math.max(0, uu - ru) / 2, Xu += "+killed", Wu = !0
+      }(kk);
+      if (Bk) {
+        const kk = Math.min(bk, fk(wk.b));
+        bk = Vk + Math.max(0, kk - Vk) / 2, dk += "+killed", mk = !0
       }
-      null !== Ru && Tu(Ru) < Ju && (Ju = Tu(Ru), Xu += "+learned", Wu = !0);
-      const ju = function(uu) {
-          const Ru = Math.floor((uu - ru) / Bu);
-          return Math.min(Nu.e, Math.max(Nu.g, Ru))
-        }(Ju),
-        Hu = (0, Nu.l)(ju);
+      null !== Fk && fk(Fk) < bk && (bk = fk(Fk), dk += "+learned", mk = !0);
+      const Wk = function(kk) {
+          const Fk = Math.floor((kk - Vk) / Jk);
+          return Math.min(wk.b, Math.max(wk.e, Fk))
+        }(bk),
+        vk = (0, wk.l)(Wk);
       return {
-        footprintBytes: Ju,
-        shedFootprintBytes: Wu ? Math.max(Ju, Tu(ju)) : null,
-        chunkCap: ju,
-        maxHorizDistance: null !== (Ku = null === Hu || void 0 === Hu ? void 0 : Hu.horizontal) && void 0 !== Ku ? Ku : Eu.f.maxChunkHorizAddDistance,
-        maxVertDistance: null !== (mu = null === Hu || void 0 === Hu ? void 0 : Hu.vertical) && void 0 !== mu ? mu : Eu.f.maxChunkVertAddDistance,
-        basis: Xu
+        footprintBytes: bk,
+        shedFootprintBytes: mk ? Math.max(bk, fk(Wk)) : null,
+        chunkCap: Wk,
+        maxHorizDistance: null !== (tk = null === vk || void 0 === vk ? void 0 : vk.horizontal) && void 0 !== tk ? tk : Rk.h.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (Xk = null === vk || void 0 === vk ? void 0 : vk.vertical) && void 0 !== Xk ? Xk : Rk.h.maxChunkVertAddDistance,
+        basis: dk
       }
     }
-    let ju = null;
+    let Wk = null;
 
-    function Hu() {
-      return Wu({
-        os: (0, Ku.getOperatingSystem)(),
+    function vk() {
+      return mk({
+        os: (0, tk.getOperatingSystem)(),
         deviceMemory: navigator.deviceMemory,
-        ...(0, Qu.i)()
-      }, (0, mu.g)(), (0, Ju.F)("wasm").length > 0)
+        ...(0, ak.g)()
+      }, (0, Xk.g)(), (0, bk.I)("wasm").length > 0)
     }
 
-    function du() {
-      return ju ??= Hu(), ju
+    function ik() {
+      return Wk ??= vk(), Wk
     }
 
-    function bu() {
-      var uu;
-      return (null !== (uu = ju) && void 0 !== uu ? uu : Hu()).basis
+    function Yk() {
+      var kk;
+      return (null !== (kk = Wk) && void 0 !== kk ? kk : vk()).basis
     }
 
-    function Cu(uu, Ru) {
-      return uu.setChunkCap(Ru.chunkCap)
+    function Lk(kk, Fk) {
+      return kk.setChunkCap(Fk.chunkCap)
     }
   },
-  40613: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => mu,
-      d: () => Qu
+  40460: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Xk,
+      e: () => ak
     });
-    var Eu = yu(2950),
-      Ku = yu(1001);
+    var Rk = Bk(2954),
+      tk = Bk(994);
 
-    function Qu(uu, Ru) {
-      return null !== uu.gameSource && (0, Eu.o)(Ru, uu.gameSource)
+    function ak(kk, Fk) {
+      return null !== kk.gameSource && (0, Rk.m)(Fk, kk.gameSource)
     }
 
-    function mu(uu, Ru) {
-      if (null === uu.gameSource || "" === uu.gameSource || null === Ru) return !0;
-      const yu = (0, Ku.i)(Ru) ? (0, Ku.n)(Ru) : null;
-      return null !== yu && Qu(uu, yu)
+    function Xk(kk, Fk) {
+      if (null === kk.gameSource || "" === kk.gameSource || null === Fk) return !0;
+      const Bk = (0, tk.n)(Fk) ? (0, tk.v)(Fk) : null;
+      return null !== Bk && ak(kk, Bk)
     }
   },
-  40597: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ju
+  40437: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => bk
     });
-    var Eu = yu(599),
-      Ku = yu(40603),
-      Qu = yu(40559);
-    async function mu(uu) {
-      const Ru = await (0, Ku.h)({
-        Helmet: yu(37703),
-        Chestplate: yu(37705),
-        Gauntlets: yu(37723),
-        Leggings: yu(37714),
-        Boots: yu(37720)
-      } [Eu.e[uu]]);
+    var Rk = Bk(594),
+      tk = Bk(40440),
+      ak = Bk(40407);
+    async function Xk(kk) {
+      const Fk = await (0, tk.j)({
+        Helmet: Bk(37647),
+        Chestplate: Bk(37649),
+        Gauntlets: Bk(37659),
+        Leggings: Bk(37651),
+        Boots: Bk(37657)
+      } [Rk.b[kk]]);
       try {
-        return (0, Qu.k)(Ru)
+        return (0, ak.s)(Fk)
       } finally {
-        Ru.close()
+        Fk.close()
       }
     }
-    const Ju = new class {
+    const bk = new class {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mu,
-          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ku.l;
-        this.decode = uu, this.register = Ru, this.decoded = new Map
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xk,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tk.q;
+        this.decode = kk, this.register = Fk, this.decoded = new Map
       }
       warm() {
-        for (let uu = 0; uu < Eu.e.length; uu++) this.part(uu).catch((Ru => {
-          console.warn(`The grayscale armour ${Eu.e[uu]} image didn't decode ahead of use`, Ru)
+        for (let kk = 0; kk < Rk.b.length; kk++) this.part(kk).catch((Fk => {
+          console.warn(`The grayscale armour ${Rk.b[kk]} image didn't decode ahead of use`, Fk)
         }))
       }
-      async load(uu, Ru) {
+      async load(kk, Fk) {
         const {
-          width: yu,
-          height: Qu,
-          pixels: mu
-        } = await this.part(uu), Ju = new ImageData(function(uu, Ru) {
-          const yu = new Uint8ClampedArray(uu.length);
-          for (let Eu = 0; Eu < uu.length; Eu += 4) yu[Eu] = Math.round(uu[Eu] * Ru[0] / 255), yu[Eu + 1] = Math.round(uu[Eu + 1] * Ru[1] / 255), yu[Eu + 2] = Math.round(uu[Eu + 2] * Ru[2] / 255), yu[Eu + 3] = uu[Eu + 3];
-          return yu
-        }(mu, function(uu) {
-          return [uu >>> 16 & 255, uu >>> 8 & 255, 255 & uu]
-        }(Ru)), yu, Qu);
-        let Nu;
+          width: Bk,
+          height: ak,
+          pixels: Xk
+        } = await this.part(kk), bk = new ImageData(function(kk, Fk) {
+          const Bk = new Uint8ClampedArray(kk.length);
+          for (let Rk = 0; Rk < kk.length; Rk += 4) Bk[Rk] = Math.round(kk[Rk] * Fk[0] / 255), Bk[Rk + 1] = Math.round(kk[Rk + 1] * Fk[1] / 255), Bk[Rk + 2] = Math.round(kk[Rk + 2] * Fk[2] / 255), Bk[Rk + 3] = kk[Rk + 3];
+          return Bk
+        }(Xk, function(kk) {
+          return [kk >>> 16 & 255, kk >>> 8 & 255, 255 & kk]
+        }(Fk)), Bk, ak);
+        let wk;
         try {
-          Nu = await createImageBitmap(Ju, {
+          wk = await createImageBitmap(bk, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
           })
-        } catch (Xu) {
-          throw new Ku.e("decode", `grayscale armour ${Eu.e[uu]}`, {
-            cause: Xu
+        } catch (dk) {
+          throw new tk.c("decode", `grayscale armour ${Rk.b[kk]}`, {
+            cause: dk
           })
         }
         return {
-          id: this.register(Nu),
-          width: yu,
-          height: Qu
+          id: this.register(wk),
+          width: Bk,
+          height: ak
         }
       }
-      part(uu) {
-        const Ru = this.decoded.get(uu);
-        if (void 0 !== Ru) return Ru;
-        const yu = this.decode(uu).catch((Ru => {
-          throw this.decoded.delete(uu), Ru instanceof Ku.e ? Ru : new Ku.e("decode", `grayscale armour ${Eu.e[uu]}`, {
-            cause: Ru
+      part(kk) {
+        const Fk = this.decoded.get(kk);
+        if (void 0 !== Fk) return Fk;
+        const Bk = this.decode(kk).catch((Fk => {
+          throw this.decoded.delete(kk), Fk instanceof tk.c ? Fk : new tk.c("decode", `grayscale armour ${Rk.b[kk]}`, {
+            cause: Fk
           })
         }));
-        return this.decoded.set(uu, yu), yu
+        return this.decoded.set(kk, Bk), Bk
       }
     }
   },
-  40590: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => mu,
-      d: () => Tu,
-      g: () => Vu,
-      h: () => ru,
-      l: () => pu
+  40435: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Xk,
+      g: () => fk,
+      h: () => sk,
+      j: () => Vk,
+      l: () => yk
     });
-    var Eu = yu(40535),
-      Ku = yu(40597),
-      Qu = yu(40603);
-    const mu = 396,
-      Ju = 1,
-      Nu = 2,
-      Xu = 3,
-      Vu = {
+    var Rk = Bk(40387),
+      tk = Bk(40437),
+      ak = Bk(40440);
+    const Xk = 396,
+      bk = 1,
+      wk = 2,
+      dk = 3,
+      sk = {
         Glb: 1,
         LifeformAtlas: 2,
         ArmourAtlas: 3,
@@ -1216,37 +1216,37 @@ export const modules = {
         BlockImage: 8,
         GreyscaleArmour: 9
       },
-      ru = {
+      Vk = {
         File: 0,
         Item: 1
       },
-      Bu = 0,
-      xu = 1,
-      Su = 2;
+      Jk = 0,
+      Ak = 1,
+      ek = 2;
 
-    function pu(uu) {
-      const Ru = (0, Eu.p)();
-      Ru.catch((() => {}));
-      let Ku = null;
+    function yk(kk) {
+      const Fk = (0, Rk.o)();
+      Fk.catch((() => {}));
+      let tk = null;
       return {
-        glbUrl: uu,
-        lifeformAtlasUrl: async uu => (await Ru).lifeformAtlasUrl(uu),
-        armourAtlasUrl: async () => (await yu.e(201).then((() => yu(34131)))).armourAtlasUrl,
-        capeUrl: async uu => (await Ru).capeUrl(uu),
-        attachmentImageUrl: async uu => (await Ru).attachmentImageUrl(uu),
-        blockImageUrl: async uu => (await Ru).blockImageUrl(uu),
-        groupAtlasUrl: async uu => (await Ru).groupAtlasUrl(uu),
-        particleTextureUrl: async uu => (await Ru).particleTextureUrl(uu),
-        particleItemUrl: async uu => (Ku ??= yu.e(38).then((() => yu(51462))).catch((uu => {
-          throw Ku = null, uu
-        })), (await Ku).particleItemUrl(uu))
+        glbUrl: kk,
+        lifeformAtlasUrl: async kk => (await Fk).lifeformAtlasUrl(kk),
+        armourAtlasUrl: async () => (await Bk.e(201).then((() => Bk(34024)))).armourAtlasUrl,
+        capeUrl: async kk => (await Fk).capeUrl(kk),
+        attachmentImageUrl: async kk => (await Fk).attachmentImageUrl(kk),
+        blockImageUrl: async kk => (await Fk).blockImageUrl(kk),
+        groupAtlasUrl: async kk => (await Fk).groupAtlasUrl(kk),
+        particleTextureUrl: async kk => (await Fk).particleTextureUrl(kk),
+        particleItemUrl: async kk => (tk ??= Bk.e(38).then((() => Bk(51219))).catch((kk => {
+          throw tk = null, kk
+        })), (await tk).particleItemUrl(kk))
       }
     }
-    class Tu {
-      constructor(uu, Ru) {
-        var yu, mu, Ju, Nu;
-        let Xu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.sources = uu, this.onFailure = Ru, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.VS = !1, this.load = null !== (yu = Xu.load) && void 0 !== yu ? yu : (uu, Ru) => (0, Qu.i)(uu, Xu.fetchImage, Ru), this.release = null !== (mu = Xu.release) && void 0 !== mu ? mu : Qu.o, this.fetchFile = null !== (Ju = Xu.fetchFile) && void 0 !== Ju ? Ju : uu => (0, Eu.i)(uu), this.greyscaleArmour = null !== (Nu = Xu.greyscaleArmour) && void 0 !== Nu ? Nu : Ku.e
+    class fk {
+      constructor(kk, Fk) {
+        var Bk, Xk, bk, wk;
+        let dk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.sources = kk, this.onFailure = Fk, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.Te = !1, this.load = null !== (Bk = dk.load) && void 0 !== Bk ? Bk : (kk, Fk) => (0, ak.n)(kk, dk.fetchImage, Fk), this.release = null !== (Xk = dk.release) && void 0 !== Xk ? Xk : ak.r, this.fetchFile = null !== (bk = dk.fetchFile) && void 0 !== bk ? bk : kk => (0, Rk.j)(kk), this.greyscaleArmour = null !== (wk = dk.greyscaleArmour) && void 0 !== wk ? wk : tk.b
       }
       get waiting() {
         return this.ready.length
@@ -1254,238 +1254,238 @@ export const modules = {
       get inFlight() {
         return this.loading.size
       }
-      glbWritten(uu, Ru) {
-        this.glbWrittenImages.set(uu, ku(Ru))
+      glbWritten(kk, Fk) {
+        this.glbWrittenImages.set(kk, Ok(Fk))
       }
-      glbTaken(uu, Ru) {
-        const yu = this.glbWrittenImages.get(uu);
-        this.glbWrittenImages.delete(uu), Ru && this.setGlbImages(uu, void 0 !== yu && yu.length > 0 ? yu : void 0)
+      glbTaken(kk, Fk) {
+        const Bk = this.glbWrittenImages.get(kk);
+        this.glbWrittenImages.delete(kk), Fk && this.setGlbImages(kk, void 0 !== Bk && Bk.length > 0 ? Bk : void 0)
       }
-      setGlbImages(uu, Ru) {
-        var yu;
-        this.glbTakenCount.set(uu, (null !== (yu = this.glbTakenCount.get(uu)) && void 0 !== yu ? yu : 0) + 1), void 0 === Ru ? this.glbImages.delete(uu) : this.glbImages.set(uu, Ru);
-        const Eu = [];
+      setGlbImages(kk, Fk) {
+        var Bk;
+        this.glbTakenCount.set(kk, (null !== (Bk = this.glbTakenCount.get(kk)) && void 0 !== Bk ? Bk : 0) + 1), void 0 === Fk ? this.glbImages.delete(kk) : this.glbImages.set(kk, Fk);
+        const Rk = [];
         for (const {
-            key: Ku
+            key: tk
           }
-          of this.loading.values()) Ku.kind === Vu.Glb && Ku.word === uu && Eu.push(Ku);
-        for (let Ku = this.ready.length - 1; Ku >= 0; Ku--) {
+          of this.loading.values()) tk.kind === sk.Glb && tk.word === kk && Rk.push(tk);
+        for (let tk = this.ready.length - 1; tk >= 0; tk--) {
           const {
-            key: Ru,
-            id: yu
-          } = this.ready[Ku];
-          Ru.kind === Vu.Glb && Ru.word === uu && (this.ready.splice(Ku, 1), null !== yu && (this.answered.delete(yu), this.release(yu)), Eu.push(Ru))
+            key: Fk,
+            id: Bk
+          } = this.ready[tk];
+          Fk.kind === sk.Glb && Fk.word === kk && (this.ready.splice(tk, 1), null !== Bk && (this.answered.delete(Bk), this.release(Bk)), Rk.push(Fk))
         }
-        this.loadAgain(Eu)
+        this.loadAgain(Rk)
       }
-      onEvent(uu) {
-        if (this.VS) return;
-        const Ru = new DataView(uu.buffer, uu.byteOffset, uu.byteLength);
-        for (let yu = 0; yu + 8 <= uu.byteLength; yu += 8) {
-          const uu = Ru.getUint8(yu),
-            Eu = Ru.getUint32(yu + 4, !0);
-          if (uu === Xu) {
-            this.answered.delete(Eu), this.release(Eu);
+      onEvent(kk) {
+        if (this.Te) return;
+        const Fk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength);
+        for (let Bk = 0; Bk + 8 <= kk.byteLength; Bk += 8) {
+          const kk = Fk.getUint8(Bk),
+            Rk = Fk.getUint32(Bk + 4, !0);
+          if (kk === dk) {
+            this.answered.delete(Rk), this.release(Rk);
             continue
           }
-          const Ku = {
-            kind: Ru.getUint8(yu + 1),
-            index: Ru.getUint8(yu + 2),
-            word: Eu
+          const tk = {
+            kind: Fk.getUint8(Bk + 1),
+            index: Fk.getUint8(Bk + 2),
+            word: Rk
           };
-          uu === Ju ? this.want(Ku) : uu === Nu && this.loading.delete(Wu(Ku))
+          kk === bk ? this.want(tk) : kk === wk && this.loading.delete(mk(tk))
         }
       }
-      reload(uu, Ru) {
-        const yu = yu => uu.includes(yu.kind) && (void 0 === Ru || Ru(yu)),
-          Eu = new Map;
-        for (const Ku of this.answered.values()) yu(Ku) && Eu.set(Wu(Ku), Ku);
-        for (const [Ku, {
-            key: Qu
-          }] of this.loading) yu(Qu) && Eu.set(Ku, Qu);
-        this.loadAgain(Eu.values())
+      reload(kk, Fk) {
+        const Bk = Bk => kk.includes(Bk.kind) && (void 0 === Fk || Fk(Bk)),
+          Rk = new Map;
+        for (const tk of this.answered.values()) Bk(tk) && Rk.set(mk(tk), tk);
+        for (const [tk, {
+            key: ak
+          }] of this.loading) Bk(ak) && Rk.set(tk, ak);
+        this.loadAgain(Rk.values())
       }
-      loadAgain(uu) {
-        for (const Ru of uu) this.loading.delete(Wu(Ru)), this.want(Ru)
+      loadAgain(kk) {
+        for (const Fk of kk) this.loading.delete(mk(Fk)), this.want(Fk)
       }
-      drain(uu) {
-        if (null !== uu)
+      drain(kk) {
+        if (null !== kk)
           for (; this.ready.length > 0;) {
-            if (!uu(mu, 0, this.ready[0].record)) return;
+            if (!kk(Xk, 0, this.ready[0].record)) return;
             this.ready.shift()
           }
       }
       dispose() {
-        this.VS = !0, this.loading.clear(), this.ready.length = 0;
-        for (const uu of this.answered.keys()) this.release(uu);
+        this.Te = !0, this.loading.clear(), this.ready.length = 0;
+        for (const kk of this.answered.keys()) this.release(kk);
         this.answered.clear()
       }
-      want(uu) {
-        const Ru = Wu(uu);
-        if (this.loading.has(Ru)) return;
-        const yu = {
-          key: uu
+      want(kk) {
+        const Fk = mk(kk);
+        if (this.loading.has(Fk)) return;
+        const Bk = {
+          key: kk
         };
-        this.loading.set(Ru, yu), this.loadKey(uu).then((Eu => {
-          this.VS || this.loading.get(Ru) !== yu ? this.release(Eu.id) : (this.loading.delete(Ru), this.answered.set(Eu.id, uu), this.ready.push({
-            record: Hu(uu, Bu, Eu),
-            key: uu,
-            id: Eu.id
+        this.loading.set(Fk, Bk), this.loadKey(kk).then((Rk => {
+          this.Te || this.loading.get(Fk) !== Bk ? this.release(Rk.id) : (this.loading.delete(Fk), this.answered.set(Rk.id, kk), this.ready.push({
+            record: vk(kk, Jk, Rk),
+            key: kk,
+            id: Rk.id
           }))
-        }), (Eu => {
-          if (this.VS || this.loading.get(Ru) !== yu) return;
-          this.loading.delete(Ru), this.onFailure({
-            key: uu,
-            error: Eu
+        }), (Rk => {
+          if (this.Te || this.loading.get(Fk) !== Bk) return;
+          this.loading.delete(Fk), this.onFailure({
+            key: kk,
+            error: Rk
           });
-          const Ku = Eu instanceof Qu.e && "decode" === Eu.stage ? xu : Su;
+          const tk = Rk instanceof ak.c && "decode" === Rk.stage ? Ak : ek;
           this.ready.push({
-            record: Hu(uu, Ku, null),
-            key: uu,
+            record: vk(kk, tk, null),
+            key: kk,
             id: null
           })
         }))
       }
-      async loadKey(uu) {
-        switch (uu.kind) {
-          case Vu.Glb:
-            return this.load(await this.glbImage(uu), "none");
-          case Vu.LifeformAtlas:
-            return this.load(ju(await this.sources.lifeformAtlasUrl(uu.word), uu), "none");
-          case Vu.ArmourAtlas:
-            return this.load(ju(await this.sources.armourAtlasUrl(), uu), "none");
-          case Vu.Cape:
-            return this.load(ju(await this.sources.capeUrl(uu.word), uu), "none");
-          case Vu.AttachmentImage:
-            return this.load(ju(await this.sources.attachmentImageUrl(uu.word), uu), "none");
-          case Vu.GroupAtlas:
-            return this.load(ju(await this.sources.groupAtlasUrl(uu.word), uu), "none");
-          case Vu.BlockImage:
-            return this.load(ju(await this.sources.blockImageUrl(uu.word), uu), "none");
-          case Vu.Particle: {
-            const Ru = await (uu.index === ru.Item ? this.sources.particleItemUrl(uu.word) : this.sources.particleTextureUrl(uu.word));
-            return this.load(ju(Ru, uu), "flipY")
+      async loadKey(kk) {
+        switch (kk.kind) {
+          case sk.Glb:
+            return this.load(await this.glbImage(kk), "none");
+          case sk.LifeformAtlas:
+            return this.load(Wk(await this.sources.lifeformAtlasUrl(kk.word), kk), "none");
+          case sk.ArmourAtlas:
+            return this.load(Wk(await this.sources.armourAtlasUrl(), kk), "none");
+          case sk.Cape:
+            return this.load(Wk(await this.sources.capeUrl(kk.word), kk), "none");
+          case sk.AttachmentImage:
+            return this.load(Wk(await this.sources.attachmentImageUrl(kk.word), kk), "none");
+          case sk.GroupAtlas:
+            return this.load(Wk(await this.sources.groupAtlasUrl(kk.word), kk), "none");
+          case sk.BlockImage:
+            return this.load(Wk(await this.sources.blockImageUrl(kk.word), kk), "none");
+          case sk.Particle: {
+            const Fk = await (kk.index === Vk.Item ? this.sources.particleItemUrl(kk.word) : this.sources.particleTextureUrl(kk.word));
+            return this.load(Wk(Fk, kk), "flipY")
           }
-          case Vu.GreyscaleArmour:
-            return this.greyscaleArmour.load(uu.index, uu.word);
+          case sk.GreyscaleArmour:
+            return this.greyscaleArmour.load(kk.index, kk.word);
           default:
-            throw new Qu.e("fetch", `image kind ${uu.kind}`, {
+            throw new ak.c("fetch", `image kind ${kk.kind}`, {
               cause: null
             })
         }
       }
-      async glbImage(uu) {
-        var Ru;
-        let yu = this.glbImages.get(uu.word);
-        if (void 0 === yu) {
-          const Ru = this.glbTakenCount.get(uu.word),
-            Eu = ju(await this.sources.glbUrl(uu.word), uu);
+      async glbImage(kk) {
+        var Fk;
+        let Bk = this.glbImages.get(kk.word);
+        if (void 0 === Bk) {
+          const Fk = this.glbTakenCount.get(kk.word),
+            Rk = Wk(await this.sources.glbUrl(kk.word), kk);
           try {
-            yu = ku(await this.fetchFile(Eu))
-          } catch (Ku) {
-            throw new Qu.e("fetch", Eu, {
-              cause: Ku
+            Bk = Ok(await this.fetchFile(Rk))
+          } catch (tk) {
+            throw new ak.c("fetch", Rk, {
+              cause: tk
             })
           }
-          this.glbTakenCount.get(uu.word) === Ru && this.glbImages.set(uu.word, yu)
+          this.glbTakenCount.get(kk.word) === Fk && this.glbImages.set(kk.word, Bk)
         }
-        const Eu = null === (Ru = yu) || void 0 === Ru ? void 0 : Ru[uu.index];
-        if (!Eu) throw new Qu.e("decode", `image ${uu.index} of file ${2147483647&uu.word}`, {
+        const Rk = null === (Fk = Bk) || void 0 === Fk ? void 0 : Fk[kk.index];
+        if (!Rk) throw new ak.c("decode", `image ${kk.index} of file ${2147483647&kk.word}`, {
           cause: null
         });
-        return Eu
+        return Rk
       }
     }
 
-    function Wu(uu) {
+    function mk(kk) {
       let {
-        kind: Ru,
-        index: yu,
-        word: Eu
-      } = uu;
-      return `${Ru}:${yu}:${Eu}`
+        kind: Fk,
+        index: Bk,
+        word: Rk
+      } = kk;
+      return `${Fk}:${Bk}:${Rk}`
     }
 
-    function ju(uu, Ru) {
-      if (null === uu) throw new Qu.e("fetch", `no URL for image ${Wu(Ru)}`, {
+    function Wk(kk, Fk) {
+      if (null === kk) throw new ak.c("fetch", `no URL for image ${mk(Fk)}`, {
         cause: null
       });
-      return uu
+      return kk
     }
 
-    function Hu(uu, Ru, yu) {
-      var Eu, Ku, Qu;
-      const mu = new Uint8Array(16),
-        Ju = new DataView(mu.buffer);
-      return Ju.setUint8(0, uu.kind), Ju.setUint8(1, uu.index), Ju.setUint8(2, Ru), Ju.setUint32(4, uu.word, !0), Ju.setUint32(8, null !== (Eu = null === yu || void 0 === yu ? void 0 : yu.id) && void 0 !== Eu ? Eu : 0, !0), Ju.setUint16(12, Math.min(null !== (Ku = null === yu || void 0 === yu ? void 0 : yu.width) && void 0 !== Ku ? Ku : 0, 65535), !0), Ju.setUint16(14, Math.min(null !== (Qu = null === yu || void 0 === yu ? void 0 : yu.height) && void 0 !== Qu ? Qu : 0, 65535), !0), mu
+    function vk(kk, Fk, Bk) {
+      var Rk, tk, ak;
+      const Xk = new Uint8Array(16),
+        bk = new DataView(Xk.buffer);
+      return bk.setUint8(0, kk.kind), bk.setUint8(1, kk.index), bk.setUint8(2, Fk), bk.setUint32(4, kk.word, !0), bk.setUint32(8, null !== (Rk = null === Bk || void 0 === Bk ? void 0 : Bk.id) && void 0 !== Rk ? Rk : 0, !0), bk.setUint16(12, Math.min(null !== (tk = null === Bk || void 0 === Bk ? void 0 : Bk.width) && void 0 !== tk ? tk : 0, 65535), !0), bk.setUint16(14, Math.min(null !== (ak = null === Bk || void 0 === Bk ? void 0 : Bk.height) && void 0 !== ak ? ak : 0, 65535), !0), Xk
     }
-    const du = 1179937895,
-      bu = 1313821514,
-      Cu = 5130562;
+    const ik = 1179937895,
+      Yk = 1313821514,
+      Lk = 5130562;
 
-    function ku(uu) {
-      var Ru;
-      const yu = new DataView(uu.buffer, uu.byteOffset, uu.byteLength);
-      if (uu.byteLength < 20 || yu.getUint32(0, !0) !== du || yu.getUint32(16, !0) !== bu) return [];
-      let Eu, Ku = 20 + yu.getUint32(12, !0);
+    function Ok(kk) {
+      var Fk;
+      const Bk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength);
+      if (kk.byteLength < 20 || Bk.getUint32(0, !0) !== ik || Bk.getUint32(16, !0) !== Yk) return [];
+      let Rk, tk = 20 + Bk.getUint32(12, !0);
       try {
-        Eu = JSON.parse((new TextDecoder).decode(uu.subarray(20, Ku)))
+        Rk = JSON.parse((new TextDecoder).decode(kk.subarray(20, tk)))
       } catch {
         return []
       }
-      for (; Ku + 8 <= uu.byteLength && yu.getUint32(Ku + 4, !0) !== Cu;) Ku += 8 + yu.getUint32(Ku, !0);
-      const Qu = null !== (Ru = Eu.images) && void 0 !== Ru ? Ru : [];
-      if (0 === Qu.length || Ku + 8 > uu.byteLength) return Qu.map((() => null));
-      const mu = uu.subarray(Ku + 8, Math.min(uu.byteLength, Ku + 8 + yu.getUint32(Ku, !0)));
-      return Qu.map((uu => {
-        var Ru, yu, Ku;
-        const Qu = void 0 === uu.bufferView || null === (Ru = Eu.bufferViews) || void 0 === Ru ? void 0 : Ru[uu.bufferView];
-        if (!Qu || 0 !== (null !== (yu = Qu.buffer) && void 0 !== yu ? yu : 0) || void 0 === Qu.byteLength) return null;
-        const Ju = null !== (Ku = Qu.byteOffset) && void 0 !== Ku ? Ku : 0,
-          Nu = Ju + Qu.byteLength;
-        return Nu <= mu.byteLength ? mu.slice(Ju, Nu) : null
+      for (; tk + 8 <= kk.byteLength && Bk.getUint32(tk + 4, !0) !== Lk;) tk += 8 + Bk.getUint32(tk, !0);
+      const ak = null !== (Fk = Rk.images) && void 0 !== Fk ? Fk : [];
+      if (0 === ak.length || tk + 8 > kk.byteLength) return ak.map((() => null));
+      const Xk = kk.subarray(tk + 8, Math.min(kk.byteLength, tk + 8 + Bk.getUint32(tk, !0)));
+      return ak.map((kk => {
+        var Fk, Bk, tk;
+        const ak = void 0 === kk.bufferView || null === (Fk = Rk.bufferViews) || void 0 === Fk ? void 0 : Fk[kk.bufferView];
+        if (!ak || 0 !== (null !== (Bk = ak.buffer) && void 0 !== Bk ? Bk : 0) || void 0 === ak.byteLength) return null;
+        const bk = null !== (tk = ak.byteOffset) && void 0 !== tk ? tk : 0,
+          wk = bk + ak.byteLength;
+        return wk <= Xk.byteLength ? Xk.slice(bk, wk) : null
       }))
     }
   },
-  40243: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => mu,
-      i: () => Qu,
-      k: () => Ku
+  40080: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Xk,
+      g: () => ak,
+      h: () => tk
     });
-    let Eu = null;
+    let Rk = null;
 
-    function Ku(uu) {
-      Eu = uu
+    function tk(kk) {
+      Rk = kk
     }
 
-    function Qu(uu) {
-      Eu === uu && (Eu = null)
+    function ak(kk) {
+      Rk === kk && (Rk = null)
     }
 
-    function mu() {
-      var uu;
-      null === (uu = Eu) || void 0 === uu || uu()
+    function Xk() {
+      var kk;
+      null === (kk = Rk) || void 0 === kk || kk()
     }
   },
-  36431: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Vu,
-      g: () => Bu,
-      k: () => Wu,
-      m: () => Xu
+  36322: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => sk,
+      d: () => Jk,
+      h: () => mk,
+      j: () => dk
     });
-    var Eu = yu(27),
-      Ku = yu(2306),
-      Qu = yu(2312),
-      mu = yu(2320),
-      Ju = yu(2368),
-      Nu = yu(34);
+    var Rk = Bk(22),
+      tk = Bk(2303),
+      ak = Bk(2305),
+      Xk = Bk(2309),
+      bk = Bk(2359),
+      wk = Bk(29);
 
-    function Xu(uu, Ru) {
-      return (!(0, mu.b)() || 0 === uu && 0 === Ru) && (0, Qu.D)(Ku.f.Joystick, 0, uu, Ru, 0)
+    function dk(kk, Fk) {
+      return (!(0, Xk.d)() || 0 === kk && 0 === Fk) && (0, ak.u)(tk.j.Joystick, 0, kk, Fk, 0)
     }
-    const Vu = {
+    const sk = {
       Action1: 1,
       Action2: 2,
       Action3: 3,
@@ -1495,592 +1495,592 @@ export const modules = {
       Boost: 7
     };
 
-    function ru(uu) {
-      return uu.classList.contains("TouchKeyHit") && xu() ? null : uu.firstElementChild
+    function Vk(kk) {
+      return kk.classList.contains("TouchKeyHit") && Ak() ? null : kk.firstElementChild
     }
 
-    function Bu(uu) {
-      return uu.classList.contains("TouchKeyHit") && !uu.classList.contains("CanvasZone") ? {
-        whole: !xu(),
+    function Jk(kk) {
+      return kk.classList.contains("TouchKeyHit") && !kk.classList.contains("CanvasZone") ? {
+        whole: !Ak(),
         keyBox: null
       } : {
         whole: !1,
-        keyBox: Su(ru(uu))
+        keyBox: ek(Vk(kk))
       }
     }
 
-    function xu() {
-      return document.documentElement.classList.contains(Ju.k)
+    function Ak() {
+      return document.documentElement.classList.contains(bk.l)
     }
 
-    function Su(uu) {
-      return !(uu instanceof HTMLElement) || uu.offsetWidth <= 0 || uu.offsetHeight <= 0 ? null : {
-        width: uu.offsetWidth,
-        height: uu.offsetHeight
+    function ek(kk) {
+      return !(kk instanceof HTMLElement) || kk.offsetWidth <= 0 || kk.offsetHeight <= 0 ? null : {
+        width: kk.offsetWidth,
+        height: kk.offsetHeight
       }
     }
 
-    function pu(uu, Ru) {
-      const yu = uu => Math.min(65535, Math.round(4 * uu));
-      return (yu(uu) | yu(Ru) << 16) >>> 0
+    function yk(kk, Fk) {
+      const Bk = kk => Math.min(65535, Math.round(4 * kk));
+      return (Bk(kk) | Bk(Fk) << 16) >>> 0
     }
 
-    function Tu(uu) {
+    function fk(kk) {
       return {
-        x: uu.left + uu.width / 2,
-        y: uu.top + uu.height / 2,
-        radius: Math.min(uu.width, uu.height) / 2
+        x: kk.left + kk.width / 2,
+        y: kk.top + kk.height / 2,
+        radius: Math.min(kk.width, kk.height) / 2
       }
     }
-    const Wu = new class {
-      constructor(uu) {
-        this.write = uu, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
+    const mk = new class {
+      constructor(kk) {
+        this.write = kk, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
       }
-      set(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        Ru ? this.elements.set(uu, {
-          element: Ru,
-          hidden: yu
-        }) : this.elements.delete(uu), this.measureOne(uu)
+      set(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        Fk ? this.elements.set(kk, {
+          element: Fk,
+          hidden: Bk
+        }) : this.elements.delete(kk), this.measureOne(kk)
       }
       measure() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
           left: this.canvasLeft,
           top: this.canvasTop
         };
-        this.canvasLeft = uu.left, this.canvasTop = uu.top;
-        for (const Ru of this.elements.keys()) this.measureOne(Ru)
+        this.canvasLeft = kk.left, this.canvasTop = kk.top;
+        for (const Fk of this.elements.keys()) this.measureOne(Fk)
       }
-      hitZone(uu, Ru) {
-        let yu = null,
-          Eu = 1;
-        for (const Ku of this.elements.keys()) {
-          const Qu = this.shown(Ku);
-          if (!Qu) continue;
+      hitZone(kk, Fk) {
+        let Bk = null,
+          Rk = 1;
+        for (const tk of this.elements.keys()) {
+          const ak = this.shown(tk);
+          if (!ak) continue;
           const {
-            rect: mu,
-            element: Ju
-          } = Qu, Nu = Tu(mu), Xu = Math.max(0, mu.width / 2 - Nu.radius), Vu = Math.max(0, mu.height / 2 - Nu.radius), Bu = Math.max(0, Math.abs(uu - Nu.x) - Xu), xu = Math.max(0, Math.abs(Ru - Nu.y) - Vu), pu = Ju.firstElementChild;
-          let Wu = Math.hypot(Bu, xu) / Nu.radius;
-          const ju = Su(ru(Ju));
-          ju && (Wu = Math.min(Wu, Math.max(2 * Math.abs(uu - Nu.x) / ju.width, 2 * Math.abs(Ru - Nu.y) / ju.height))), Wu < Eu && (yu = {
-            code: Ku,
-            element: Ju,
-            key: pu,
-            ...Nu
-          }, Eu = Wu)
+            rect: Xk,
+            element: bk
+          } = ak, wk = fk(Xk), dk = Math.max(0, Xk.width / 2 - wk.radius), sk = Math.max(0, Xk.height / 2 - wk.radius), Jk = Math.max(0, Math.abs(kk - wk.x) - dk), Ak = Math.max(0, Math.abs(Fk - wk.y) - sk), yk = bk.firstElementChild;
+          let mk = Math.hypot(Jk, Ak) / wk.radius;
+          const Wk = ek(Vk(bk));
+          Wk && (mk = Math.min(mk, Math.max(2 * Math.abs(kk - wk.x) / Wk.width, 2 * Math.abs(Fk - wk.y) / Wk.height))), mk < Rk && (Bk = {
+            code: tk,
+            element: bk,
+            key: yk,
+            ...wk
+          }, Rk = mk)
         }
-        return yu
+        return Bk
       }
-      measureOne(uu) {
-        const Ru = this.shown(uu);
-        if (!Ru) return void this.write(Ku.f.TouchZone, uu, 0, 0, 0);
+      measureOne(kk) {
+        const Fk = this.shown(kk);
+        if (!Fk) return void this.write(tk.j.TouchZone, kk, 0, 0, 0);
         const {
-          rect: yu,
-          element: Eu
-        } = Ru, Qu = Tu(yu);
-        this.write(Ku.f.TouchZone, uu, Qu.x - this.canvasLeft, Qu.y - this.canvasTop, pu(yu.width, yu.height));
-        const mu = Su(ru(Eu));
-        this.write(Ku.f.TouchZone, 256 | uu, 0, 0, mu ? pu(mu.width, mu.height) : 0)
+          rect: Bk,
+          element: Rk
+        } = Fk, ak = fk(Bk);
+        this.write(tk.j.TouchZone, kk, ak.x - this.canvasLeft, ak.y - this.canvasTop, yk(Bk.width, Bk.height));
+        const Xk = ek(Vk(Rk));
+        this.write(tk.j.TouchZone, 256 | kk, 0, 0, Xk ? yk(Xk.width, Xk.height) : 0)
       }
-      shown(uu) {
-        const Ru = this.elements.get(uu),
-          yu = Eu.d.get("worldPanelHud");
-        if (!Ru || Ru.hidden || "none" === yu) return null;
-        const Ku = Ru.element.getBoundingClientRect();
-        return Ku.width <= 0 || Ku.height <= 0 ? null : {
-          rect: Ku,
-          element: Ru.element
+      shown(kk) {
+        const Fk = this.elements.get(kk),
+          Bk = Rk.c.get("worldPanelHud");
+        if (!Fk || Fk.hidden || "none" === Bk) return null;
+        const tk = Fk.element.getBoundingClientRect();
+        return tk.width <= 0 || tk.height <= 0 ? null : {
+          rect: tk,
+          element: Fk.element
         }
       }
-    }(Qu.D);
-    (0, Nu.n)(Ju.e, (() => {
-      Wu.measure()
+    }(ak.u);
+    (0, wk.p)(bk.f, (() => {
+      mk.measure()
     }))
   },
-  40446: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Nu,
-      e: () => Xu
+  40297: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => wk,
+      e: () => dk
     });
-    var Eu = yu(40454),
-      Ku = yu(38812),
-      Qu = yu(36316),
-      mu = yu(40393),
-      Ju = yu(40433);
-    const Nu = Eu.b.timeForPlayerToConnect - 1e4;
-    async function Xu(uu, Ru, yu, Eu) {
-      let Nu;
+    var Rk = Bk(40305),
+      tk = Bk(38701),
+      ak = Bk(36194),
+      Xk = Bk(40231),
+      bk = Bk(40284);
+    const wk = Rk.b.timeForPlayerToConnect - 1e4;
+    async function dk(kk, Fk, Bk, Rk) {
+      let wk;
       try {
-        Nu = await uu.getTrafficCode()
-      } catch (Su) {
-        throw console.error("[bloxd-wasm-client] could not get a traffic code", Su), new Ju.v(Su)
+        wk = await kk.getTrafficCode()
+      } catch (ek) {
+        throw console.error("[bloxd-wasm-client] could not get a traffic code", ek), new bk.y(ek)
       }
       const {
-        gameNameWithVariation: Xu,
-        lobbyName: Vu
-      } = Ru, ru = () => {
-        const Ru = (0, Qu.c)(uu, Xu, Vu, Nu, (uu => {
-          var Ru;
-          return null !== (Ru = null === yu || void 0 === yu ? void 0 : yu.isUsingCustomGameTexturePack(uu)) && void 0 !== Ru && Ru
+        gameNameWithVariation: dk,
+        lobbyName: sk
+      } = Fk, Vk = () => {
+        const Fk = (0, ak.f)(kk, dk, sk, wk, (kk => {
+          var Fk;
+          return null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.isUsingCustomGameTexturePack(kk)) && void 0 !== Fk && Fk
         }));
-        Ru.joinOptions.wasmClient = !0;
-        const Ku = (0, mu.E)();
-        return null !== Ku && (Ru.joinOptions.renderBackend = Ku), Ru.joinOptions.joinAdHold = Eu, Ru
+        Fk.joinOptions.wasmClient = !0;
+        const tk = (0, Xk.I)();
+        return null !== tk && (Fk.joinOptions.renderBackend = tk), Fk.joinOptions.joinAdHold = Rk, Fk
       }, {
-        roomName: Bu,
-        joinOptions: xu
-      } = ru();
+        roomName: Jk,
+        joinOptions: Ak
+      } = Vk();
       return {
-        endpoint: Ru.endpoint,
-        roomName: Bu,
-        joinOptions: xu,
+        endpoint: Fk.endpoint,
+        roomName: Jk,
+        joinOptions: Ak,
         session: {
-          gameNameWithVariation: Xu,
-          lobbyName: Vu,
-          playerDbId: uu.whamm
+          gameNameWithVariation: dk,
+          lobbyName: sk,
+          playerDbId: kk.whamm
         },
-        optionsAfterRefusal: async Ru => await (0, Ku.c)(uu, Ru) ? ru().joinOptions : null
+        optionsAfterRefusal: async Fk => await (0, tk.e)(kk, Fk) ? Vk().joinOptions : null
       }
     }
   },
-  4827: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ju,
-      f: () => mu
+  4726: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => bk,
+      e: () => Xk
     });
-    var Eu = yu(2950),
-      Ku = yu(4836);
-    let Qu = null;
+    var Rk = Bk(2954),
+      tk = Bk(4732);
+    let ak = null;
 
-    function mu(uu, Ru) {
-      Qu = {
-        pack: uu.metaData.id === Eu.e ? null : uu,
-        prompt: Ru
+    function Xk(kk, Fk) {
+      ak = {
+        pack: kk.metaData.id === Rk.c ? null : kk,
+        prompt: Fk
       }
     }
 
-    function Ju(uu, Ru) {
-      const yu = Qu;
-      null !== yu && (0, Ku.e)(yu.pack, uu) && (Qu = null, Ru && yu.prompt())
+    function bk(kk, Fk) {
+      const Bk = ak;
+      null !== Bk && (0, tk.c)(Bk.pack, kk) && (ak = null, Fk && Bk.prompt())
     }
   },
-  40605: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Vu,
-      f: () => Qu,
-      g: () => ru,
-      k: () => mu
+  40448: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => sk,
+      h: () => ak,
+      i: () => Vk,
+      k: () => Xk
     });
-    var Eu = yu(40590),
-      Ku = yu(40535);
-    const Qu = new class {
+    var Rk = Bk(40435),
+      tk = Bk(40387);
+    const ak = new class {
       constructor() {
         this.page = null, this.session = void 0, this.follower = null, this.isWanted = !1, this.listeners = new Set, this.pageListeners = new Set, this.wantedListeners = new Set
       }
       get current() {
         return void 0 === this.session ? this.page : this.session
       }
-      setPageFiles(uu) {
+      setPageFiles(kk) {
         this.change((() => {
-          this.page = uu
+          this.page = kk
         }))
       }
-      setSessionFiles(uu) {
-        const Ru = void 0 !== this.session && void 0 === uu;
+      setSessionFiles(kk) {
+        const Fk = void 0 !== this.session && void 0 === kk;
         if (this.change((() => {
-            this.session = uu
-          })), Ru)
-          for (const yu of [...this.pageListeners]) yu()
+            this.session = kk
+          })), Fk)
+          for (const Bk of [...this.pageListeners]) Bk()
       }
       showsPage() {
         return void 0 === this.session
       }
-      onPageShown(uu) {
-        return this.pageListeners.add(uu), () => {
-          this.pageListeners.delete(uu)
+      onPageShown(kk) {
+        return this.pageListeners.add(kk), () => {
+          this.pageListeners.delete(kk)
         }
       }
-      setFollower(uu) {
-        this.follower = uu, this.startFollower()
+      setFollower(kk) {
+        this.follower = kk, this.startFollower()
       }
       wanted() {
         this.isWanted = !0;
-        for (const uu of [...this.wantedListeners]) uu();
+        for (const kk of [...this.wantedListeners]) kk();
         this.startFollower()
       }
-      onWanted(uu) {
-        return this.wantedListeners.add(uu), () => {
-          this.wantedListeners.delete(uu)
+      onWanted(kk) {
+        return this.wantedListeners.add(kk), () => {
+          this.wantedListeners.delete(kk)
         }
       }
-      onChange(uu) {
-        return this.listeners.add(uu), () => {
-          this.listeners.delete(uu)
+      onChange(kk) {
+        return this.listeners.add(kk), () => {
+          this.listeners.delete(kk)
         }
       }
       startFollower() {
-        const uu = this.follower;
-        this.isWanted && null !== uu && (this.follower = null, uu((() => {
-          this.follower = uu
+        const kk = this.follower;
+        this.isWanted && null !== kk && (this.follower = null, kk((() => {
+          this.follower = kk
         })))
       }
-      change(uu) {
-        const Ru = this.current;
-        if (uu(), this.current !== Ru)
-          for (const yu of this.listeners) yu()
+      change(kk) {
+        const Fk = this.current;
+        if (kk(), this.current !== Fk)
+          for (const Bk of this.listeners) Bk()
       }
     };
 
-    function mu(uu, Ru) {
+    function Xk(kk, Fk) {
       return {
-        ...uu,
+        ...kk,
         armourAtlasUrl: () => {
-          var yu, Eu;
-          return null !== (yu = null === (Eu = Ru()) || void 0 === Eu ? void 0 : Eu.armourAtlasUrl()) && void 0 !== yu ? yu : uu.armourAtlasUrl()
+          var Bk, Rk;
+          return null !== (Bk = null === (Rk = Fk()) || void 0 === Rk ? void 0 : Rk.armourAtlasUrl()) && void 0 !== Bk ? Bk : kk.armourAtlasUrl()
         },
-        lifeformAtlasUrl: yu => Nu(Ru(), (uu => uu.LIFEFORM_ATLAS_PATHS[yu]), (() => uu.lifeformAtlasUrl(yu))),
-        groupAtlasUrl: yu => Nu(Ru(), (uu => uu.GROUP_ATLAS_PATHS[yu]), (() => uu.groupAtlasUrl(yu))),
-        particleItemUrl: Eu => Xu(Ru(), (async () => {
-          const uu = await yu.e(38).then((() => yu(51462))).catch((() => null));
-          return (null === uu || void 0 === uu ? void 0 : uu.particleItemSprite(Eu)) || null
-        }), (() => uu.particleItemUrl(Eu))),
-        blockImageUrl: yu => Xu(Ru(), (async () => {
-          var uu, Ru;
-          return null !== (uu = null === (Ru = await Ju()) || void 0 === Ru ? void 0 : Ru.blockImageName(yu)) && void 0 !== uu ? uu : null
-        }), (() => uu.blockImageUrl(yu)))
+        lifeformAtlasUrl: Bk => wk(Fk(), (kk => kk.LIFEFORM_ATLAS_PATHS[Bk]), (() => kk.lifeformAtlasUrl(Bk))),
+        groupAtlasUrl: Bk => wk(Fk(), (kk => kk.GROUP_ATLAS_PATHS[Bk]), (() => kk.groupAtlasUrl(Bk))),
+        particleItemUrl: Rk => dk(Fk(), (async () => {
+          const kk = await Bk.e(38).then((() => Bk(51219))).catch((() => null));
+          return (null === kk || void 0 === kk ? void 0 : kk.particleItemSprite(Rk)) || null
+        }), (() => kk.particleItemUrl(Rk))),
+        blockImageUrl: Bk => dk(Fk(), (async () => {
+          var kk, Fk;
+          return null !== (kk = null === (Fk = await bk()) || void 0 === Fk ? void 0 : Fk.blockImageName(Bk)) && void 0 !== kk ? kk : null
+        }), (() => kk.blockImageUrl(Bk)))
       }
     }
 
-    function Ju() {
-      return (0, Ku.p)().catch((() => null))
+    function bk() {
+      return (0, tk.o)().catch((() => null))
     }
 
-    function Nu(uu, Ru, yu) {
-      return Xu(uu, (async () => {
-        var uu;
-        const yu = await Ju(),
-          Eu = null === yu ? null : Ru(yu),
-          Ku = null !== (uu = null === Eu || void 0 === Eu ? void 0 : Eu.slice(Eu.lastIndexOf("/") + 1)) && void 0 !== uu ? uu : null;
-        return "Player_Atlas" === Ku ? null : Ku
-      }), yu)
+    function wk(kk, Fk, Bk) {
+      return dk(kk, (async () => {
+        var kk;
+        const Bk = await bk(),
+          Rk = null === Bk ? null : Fk(Bk),
+          tk = null !== (kk = null === Rk || void 0 === Rk ? void 0 : Rk.slice(Rk.lastIndexOf("/") + 1)) && void 0 !== kk ? kk : null;
+        return "Player_Atlas" === tk ? null : tk
+      }), Bk)
     }
-    async function Xu(uu, Ru, yu) {
-      if (null !== uu) {
-        const yu = await Ru(),
-          Eu = null === yu ? null : uu.textureUrl(yu);
-        if (null !== Eu) return Eu
+    async function dk(kk, Fk, Bk) {
+      if (null !== kk) {
+        const Bk = await Fk(),
+          Rk = null === Bk ? null : kk.textureUrl(Bk);
+        if (null !== Rk) return Rk
       }
-      return yu()
+      return Bk()
     }
-    const Vu = 0;
+    const sk = 0;
 
-    function ru(uu) {
-      const Ru = [Eu.g.ArmourAtlas, Eu.g.LifeformAtlas, Eu.g.GroupAtlas, Eu.g.BlockImage, Eu.g.Particle];
-      uu.reload(Ru, (uu => {
-        switch (uu.kind) {
-          case Eu.g.Particle:
-            return uu.index === Eu.h.Item;
-          case Eu.g.LifeformAtlas:
-            return uu.word !== Vu;
+    function Vk(kk) {
+      const Fk = [Rk.h.ArmourAtlas, Rk.h.LifeformAtlas, Rk.h.GroupAtlas, Rk.h.BlockImage, Rk.h.Particle];
+      kk.reload(Fk, (kk => {
+        switch (kk.kind) {
+          case Rk.h.Particle:
+            return kk.index === Rk.j.Item;
+          case Rk.h.LifeformAtlas:
+            return kk.word !== sk;
           default:
             return !0
         }
       }))
     }
   },
-  40462: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Eu,
-      g: () => Ju,
-      j: () => mu,
-      k: () => Ku,
-      l: () => Qu
+  40311: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Rk,
+      f: () => bk,
+      i: () => Xk,
+      k: () => tk,
+      m: () => ak
     });
-    const Eu = 1e3;
+    const Rk = 1e3;
 
-    function Ku() {
-      Nu((() => {
+    function tk() {
+      wk((() => {
         window.location.reload()
       }))
     }
 
-    function Qu() {
+    function ak() {
       return new Promise((() => {}))
     }
 
-    function mu(uu) {
-      Nu((() => {
-        window.location.replace(uu(window.location.href))
+    function Xk(kk) {
+      wk((() => {
+        window.location.replace(kk(window.location.href))
       }))
     }
 
-    function Ju(uu) {
-      Promise.resolve().then((() => yu(122))).then((Ru => {
+    function bk(kk) {
+      Promise.resolve().then((() => Bk(109))).then((Fk => {
         let {
-          currentUrl: yu
-        } = Ru;
-        mu((() => yu.mergeSearchParamsInto(uu)))
+          currentUrl: Bk
+        } = Fk;
+        Xk((() => Bk.mergeSearchParamsInto(kk)))
       }), (() => {
-        mu((() => uu))
+        Xk((() => kk))
       }))
     }
 
-    function Nu(uu) {
-      null !== window.onbeforeunload ? Promise.resolve().then((() => yu(1661))).then((Ru => {
+    function wk(kk) {
+      null !== window.onbeforeunload ? Promise.resolve().then((() => Bk(1650))).then((Fk => {
         let {
-          prepareForUnloadWithoutConfirmation: yu
-        } = Ru;
+          prepareForUnloadWithoutConfirmation: Bk
+        } = Fk;
         try {
-          yu()
-        } catch (Eu) {
-          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", Eu), window.onbeforeunload = null
+          Bk()
+        } catch (Rk) {
+          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", Rk), window.onbeforeunload = null
         }
-        uu()
+        kk()
       }), (() => {
-        window.onbeforeunload = null, uu()
-      })) : uu()
+        window.onbeforeunload = null, kk()
+      })) : kk()
     }
   },
-  4836: (uu, Ru, yu) => {
-    function Eu(uu, Ru) {
-      return Ku(uu, Ru)
+  4732: (kk, Fk, Bk) => {
+    function Rk(kk, Fk) {
+      return tk(kk, Fk)
     }
 
-    function Ku(uu, Ru) {
-      if (uu === Ru) return !0;
-      if ("object" !== typeof uu || "object" !== typeof Ru || null === uu || null === Ru || Array.isArray(uu) !== Array.isArray(Ru)) return !1;
-      const yu = uu,
-        Eu = Ru,
-        Qu = Object.keys(yu);
-      return Qu.length === Object.keys(Eu).length && Qu.every((uu => Object.prototype.hasOwnProperty.call(Eu, uu) && Ku(yu[uu], Eu[uu])))
+    function tk(kk, Fk) {
+      if (kk === Fk) return !0;
+      if ("object" !== typeof kk || "object" !== typeof Fk || null === kk || null === Fk || Array.isArray(kk) !== Array.isArray(Fk)) return !1;
+      const Bk = kk,
+        Rk = Fk,
+        ak = Object.keys(Bk);
+      return ak.length === Object.keys(Rk).length && ak.every((kk => Object.prototype.hasOwnProperty.call(Rk, kk) && tk(Bk[kk], Rk[kk])))
     }
-    yu.d(Ru, {
-      e: () => Eu
+    Bk.d(Fk, {
+      c: () => Rk
     })
   },
-  40505: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => ku,
-      i: () => bu,
-      j: () => Tu,
-      k: () => pu
+  40352: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Ok,
+      d: () => Yk,
+      h: () => fk,
+      i: () => yk
     });
-    var Eu = yu(1731),
-      Ku = yu(1739),
-      Qu = yu(38808),
-      mu = yu(38818),
-      Ju = yu(1699),
-      Nu = yu(40424),
-      Xu = yu(40433);
-    const Vu = {
+    var Rk = Bk(1727),
+      tk = Bk(1733),
+      ak = Bk(38699),
+      Xk = Bk(38708),
+      bk = Bk(1698),
+      wk = Bk(40280),
+      dk = Bk(40284);
+    const sk = {
         "X-Requested-With": "XMLHtttpRequest"
       },
-      ru = 3,
-      Bu = [500, 1500];
+      Vk = 3,
+      Jk = [500, 1500];
 
-    function xu(uu) {
-      const Ru = new URL(uu);
+    function Ak(kk) {
+      const Fk = new URL(kk);
       return {
-        secure: "https:" === Ru.protocol || "wss:" === Ru.protocol,
-        host: Ru.host,
-        pathname: Ru.pathname.replace(/\/+$/, ""),
-        search: Ru.searchParams.toString()
+        secure: "https:" === Fk.protocol || "wss:" === Fk.protocol,
+        host: Fk.host,
+        pathname: Fk.pathname.replace(/\/+$/, ""),
+        search: Fk.searchParams.toString()
       }
     }
 
-    function Su(uu, Ru, yu) {
+    function ek(kk, Fk, Bk) {
       const {
-        secure: Eu,
-        host: Ku,
-        pathname: Qu,
-        search: mu
-      } = xu(uu);
-      return `${Eu?"https":"http"}://${Ku}${Qu}/matchmake/${Ru}/${encodeURIComponent(yu)}${mu?`?${mu}`:""}`
+        secure: Rk,
+        host: tk,
+        pathname: ak,
+        search: Xk
+      } = Ak(kk);
+      return `${Rk?"https":"http"}://${tk}${ak}/matchmake/${Fk}/${encodeURIComponent(Bk)}${Xk?`?${Xk}`:""}`
     }
 
-    function pu(uu, Ru) {
-      var yu;
-      const Eu = null !== (yu = Ru.protocol) && void 0 !== yu ? yu : "ws";
-      if ("ws" !== Eu) throw new Error(`seat reservation asks for the ${Eu} transport`);
+    function yk(kk, Fk) {
+      var Bk;
+      const Rk = null !== (Bk = Fk.protocol) && void 0 !== Bk ? Bk : "ws";
+      if ("ws" !== Rk) throw new Error(`seat reservation asks for the ${Rk} transport`);
       const {
-        secure: Ku,
-        host: Qu,
-        pathname: mu,
-        search: Ju
-      } = xu(uu), Nu = new URLSearchParams(Ju);
-      Nu.append("sessionId", Ru.sessionId), Ru.reconnectionToken && Nu.append("reconnectionToken", Ru.reconnectionToken);
-      return `${Ku?"wss":"ws"}://${Ru.room.publicAddress||`${Qu}${mu}`}/${Ru.room.processId}/${Ru.room.roomId}?${Nu.toString()}`
+        secure: tk,
+        host: ak,
+        pathname: Xk,
+        search: bk
+      } = Ak(kk), wk = new URLSearchParams(bk);
+      wk.append("sessionId", Fk.sessionId), Fk.reconnectionToken && wk.append("reconnectionToken", Fk.reconnectionToken);
+      return `${tk?"wss":"ws"}://${Fk.room.publicAddress||`${ak}${Xk}`}/${Fk.room.processId}/${Fk.room.roomId}?${wk.toString()}`
     }
-    async function Tu(uu, Ru, yu) {
-      var Nu;
-      let Vu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const xu = null !== (Nu = Vu.sleep) && void 0 !== Nu ? Nu : Eu.d,
-        pu = new Ku.b(Vu.signal),
-        Tu = new Ju.c(mu.e, (() => {
-          (0, Ku.i)(pu.controller, new mu.i)
+    async function fk(kk, Fk, Bk) {
+      var wk;
+      let sk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const Ak = null !== (wk = sk.sleep) && void 0 !== wk ? wk : Rk.b,
+        yk = new tk.d(sk.signal),
+        fk = new bk.e(Xk.d, (() => {
+          (0, tk.i)(yk.controller, new Xk.e)
         })),
         {
-          signal: du
-        } = pu;
+          signal: ik
+        } = yk;
       try {
-        return await (0, Qu.e)((() => async function(uu, Ru, yu, Eu) {
-          var Qu;
+        return await (0, ak.f)((() => async function(kk, Fk, Bk, Rk) {
+          var ak;
           const {
-            signal: mu,
-            sleep: Ju
-          } = Eu, Nu = Su(uu, "joinOrCreate", Ru), Vu = JSON.stringify(yu);
-          let xu = null;
-          for (let Su = 0; Su < ru; Su++) {
-            var pu;
-            if (Su > 0) await Ju(null !== (pu = Bu[Su - 1]) && void 0 !== pu ? pu : 1500, mu);
-            let uu;
-            (0, Ku.p)(mu);
+            signal: Xk,
+            sleep: bk
+          } = Rk, wk = ek(kk, "joinOrCreate", Fk), sk = JSON.stringify(Bk);
+          let Ak = null;
+          for (let ek = 0; ek < Vk; ek++) {
+            var yk;
+            if (ek > 0) await bk(null !== (yk = Jk[ek - 1]) && void 0 !== yk ? yk : 1500, Xk);
+            let kk;
+            (0, tk.k)(Xk);
             try {
-              uu = await ju(Nu, Vu, Eu)
-            } catch (Tu) {
-              (0, Ku.p)(mu), xu = Wu(Tu);
+              kk = await Wk(wk, sk, Rk)
+            } catch (fk) {
+              (0, tk.k)(Xk), Ak = mk(fk);
               continue
             }
             const {
-              response: Ru,
-              answer: yu,
-              refusal: Qu,
-              lost: ru
-            } = uu;
-            if (null === ru) {
-              if (null !== Qu) throw Hu(Qu, yu);
-              if (Ru.ok && null !== yu && eu(yu)) return yu;
-              xu = new Xu.s(`seat request answered HTTP ${Ru.status}${null===yu?" without JSON":" without a seat"}`, !1)
-            } else xu = Wu(ru.error)
+              response: Fk,
+              answer: Bk,
+              refusal: ak,
+              lost: Vk
+            } = kk;
+            if (null === Vk) {
+              if (null !== ak) throw vk(ak, Bk);
+              if (Fk.ok && null !== Bk && Ek(Bk)) return Bk;
+              Ak = new dk.u(`seat request answered HTTP ${Fk.status}${null===Bk?" without JSON":" without a seat"}`, !1)
+            } else Ak = mk(Vk.error)
           }
-          throw null !== (Qu = xu) && void 0 !== Qu ? Qu : new Xu.s("seat request made no attempt", !1)
-        }(uu, Ru, yu, {
-          ...Vu,
-          signal: du,
-          sleep: xu
-        })), du, xu)
+          throw null !== (ak = Ak) && void 0 !== ak ? ak : new dk.u("seat request made no attempt", !1)
+        }(kk, Fk, Bk, {
+          ...sk,
+          signal: ik,
+          sleep: Ak
+        })), ik, Ak)
       } finally {
-        Tu.stop(), pu.unfollow()
+        fk.stop(), yk.unfollow()
       }
     }
 
-    function Wu(uu) {
-      return new Xu.s(uu instanceof Error ? uu.message : String(uu), !0, uu)
+    function mk(kk) {
+      return new dk.u(kk instanceof Error ? kk.message : String(kk), !0, kk)
     }
-    async function ju(uu, Ru, yu) {
-      var Eu;
+    async function Wk(kk, Fk, Bk) {
+      var Rk;
       const {
-        signal: Qu
-      } = yu, mu = null !== (Eu = yu.fetch) && void 0 !== Eu ? Eu : fetch, Ju = await mu(uu, {
+        signal: ak
+      } = Bk, Xk = null !== (Rk = Bk.fetch) && void 0 !== Rk ? Rk : fetch, bk = await Xk(kk, {
         method: "POST",
         headers: {
-          ...Vu,
+          ...sk,
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-        body: Ru,
+        body: Fk,
         credentials: "include",
-        signal: Qu
+        signal: ak
       }), {
-        answer: Nu,
-        lost: Xu
-      } = await async function(uu) {
+        answer: wk,
+        lost: dk
+      } = await async function(kk) {
         try {
-          const Ru = await uu.json();
+          const Fk = await kk.json();
           return {
-            answer: "object" === typeof Ru && null !== Ru ? Ru : null,
+            answer: "object" === typeof Fk && null !== Fk ? Fk : null,
             lost: null
           }
-        } catch (Ru) {
+        } catch (Fk) {
           return {
             answer: null,
-            lost: Ru instanceof SyntaxError ? null : {
-              error: Ru
+            lost: Fk instanceof SyntaxError ? null : {
+              error: Fk
             }
           }
         }
-      }(Ju), ru = null !== Nu && "string" === typeof Nu.error ? Nu.error : null;
-      var Bu;
-      null !== ru && (null === (Bu = yu.onRefusal) || void 0 === Bu || Bu.call(yu));
-      return (0, Ku.p)(Qu), {
-        response: Ju,
-        answer: Nu,
-        refusal: ru,
-        lost: Xu
+      }(bk), Vk = null !== wk && "string" === typeof wk.error ? wk.error : null;
+      var Jk;
+      null !== Vk && (null === (Jk = Bk.onRefusal) || void 0 === Jk || Jk.call(Bk));
+      return (0, tk.k)(ak), {
+        response: bk,
+        answer: wk,
+        refusal: Vk,
+        lost: dk
       }
     }
 
-    function Hu(uu, Ru) {
-      return new Xu.l(uu, "number" === typeof(null === Ru || void 0 === Ru ? void 0 : Ru.code) ? Ru.code : 0, (0, Nu.r)(uu).text)
+    function vk(kk, Fk) {
+      return new dk.n(kk, "number" === typeof(null === Fk || void 0 === Fk ? void 0 : Fk.code) ? Fk.code : 0, (0, wk.l)(kk).text)
     }
-    class du extends Error {
-      constructor(uu, Ru) {
-        super(uu), this.code = Ru, this.name = "SeatHttpError"
+    class ik extends Error {
+      constructor(kk, Fk) {
+        super(kk), this.code = Fk, this.name = "SeatHttpError"
       }
     }
-    async function bu(uu, Ru, yu) {
-      let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function Yk(kk, Fk, Bk) {
+      let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        response: Ku,
-        answer: Qu,
-        refusal: mu,
-        lost: Ju
-      } = await ju(Su(uu, "reconnect", Ru), JSON.stringify({
-        reconnectionToken: yu
-      }), Eu);
-      if (null !== Ju) throw Ju.error;
-      if (!Ku.ok) {
-        const uu = null !== Qu && "number" === typeof Qu.code && 0 !== Qu.code ? Qu.code : Ku.status;
-        throw new du(`the seat's reconnect was refused: ${null!==mu&&void 0!==mu?mu:`HTTP ${Ku.status}`}`, uu)
+        response: tk,
+        answer: ak,
+        refusal: Xk,
+        lost: bk
+      } = await Wk(ek(kk, "reconnect", Fk), JSON.stringify({
+        reconnectionToken: Bk
+      }), Rk);
+      if (null !== bk) throw bk.error;
+      if (!tk.ok) {
+        const kk = null !== ak && "number" === typeof ak.code && 0 !== ak.code ? ak.code : tk.status;
+        throw new ik(`the seat's reconnect was refused: ${null!==Xk&&void 0!==Xk?Xk:`HTTP ${tk.status}`}`, kk)
       }
-      if (null !== mu) throw Hu(mu, Qu);
-      if (null === Qu || !eu(Qu)) throw new Error("the seat's reconnect answered " + (null === Qu ? "without JSON" : "without a seat"));
+      if (null !== Xk) throw vk(Xk, ak);
+      if (null === ak || !Ek(ak)) throw new Error("the seat's reconnect answered " + (null === ak ? "without JSON" : "without a seat"));
       return {
-        ...Qu,
-        reconnectionToken: yu
+        ...ak,
+        reconnectionToken: Bk
       }
     }
-    const Cu = 10;
+    const Lk = 10;
 
-    function ku(uu) {
-      if (uu.byteLength < 2 || uu[0] !== Cu) return null;
-      const Ru = 2 + uu[1];
-      return Ru > uu.byteLength ? null : (new TextDecoder).decode(uu.subarray(2, Ru))
+    function Ok(kk) {
+      if (kk.byteLength < 2 || kk[0] !== Lk) return null;
+      const Fk = 2 + kk[1];
+      return Fk > kk.byteLength ? null : (new TextDecoder).decode(kk.subarray(2, Fk))
     }
 
-    function eu(uu) {
-      const Ru = uu.room;
-      return "string" === typeof uu.sessionId && "object" === typeof Ru && null !== Ru && "string" === typeof Ru.roomId && "string" === typeof Ru.processId && "string" === typeof Ru.name
+    function Ek(kk) {
+      const Fk = kk.room;
+      return "string" === typeof kk.sessionId && "object" === typeof Fk && null !== Fk && "string" === typeof Fk.roomId && "string" === typeof Fk.processId && "string" === typeof Fk.name
     }
   },
-  40177: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      A: () => du,
-      C: () => bu,
-      E: () => Tu,
-      H: () => Du,
-      L: () => nu,
-      N: () => Su,
-      R: () => tu,
-      T: () => ju,
-      U: () => Wu,
-      V: () => Hu,
-      W: () => Cu,
-      d: () => Ku,
-      e: () => su,
-      g: () => Uu,
-      i: () => xu,
-      l: () => pu,
-      n: () => Iu,
-      p: () => eu,
-      q: () => Mu,
-      r: () => Au,
-      v: () => ku,
-      x: () => Gu
+  40021: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      A: () => Mk,
+      B: () => ik,
+      E: () => Yk,
+      G: () => fk,
+      I: () => Nk,
+      L: () => Uk,
+      O: () => ek,
+      R: () => Gk,
+      S: () => Wk,
+      T: () => mk,
+      X: () => vk,
+      Z: () => Lk,
+      b: () => tk,
+      f: () => ck,
+      g: () => gk,
+      k: () => Ak,
+      n: () => yk,
+      p: () => uk,
+      r: () => Ek,
+      v: () => Hk,
+      x: () => Sk,
+      y: () => Ok
     });
-    var Eu = yu(2772);
-    const Ku = {
+    var Rk = Bk(2778);
+    const tk = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -2108,218 +2108,218 @@ export const modules = {
       UpdateNameTag: 53
     };
 
-    function Qu(uu, Ru) {
-      return !ArrayBuffer.isView(uu) || uu instanceof DataView ? Array.isArray(uu) ? uu.map((uu => Ru(uu))) : uu : Array.from(uu, (uu => Ru(uu)))
+    function ak(kk, Fk) {
+      return !ArrayBuffer.isView(kk) || kk instanceof DataView ? Array.isArray(kk) ? kk.map((kk => Fk(kk))) : kk : Array.from(kk, (kk => Fk(kk)))
     }
 
-    function mu(uu) {
-      if ("string" !== typeof uu) return uu;
-      for (let Ru = 0; Ru < uu.length; Ru++) {
-        const yu = uu.charCodeAt(Ru);
-        if (yu >= 55296 && yu <= 57343) return Nu.decode(Ju.encode(uu))
+    function Xk(kk) {
+      if ("string" !== typeof kk) return kk;
+      for (let Fk = 0; Fk < kk.length; Fk++) {
+        const Bk = kk.charCodeAt(Fk);
+        if (Bk >= 55296 && Bk <= 57343) return wk.decode(bk.encode(kk))
       }
-      return uu
+      return kk
     }
-    const Ju = new TextEncoder,
-      Nu = new TextDecoder;
+    const bk = new TextEncoder,
+      wk = new TextDecoder;
 
-    function Xu(uu) {
-      return uu
+    function dk(kk) {
+      return kk
     }
-    let Vu;
+    let sk;
 
-    function ru(uu) {
-      return null === uu || "object" !== typeof uu ? uu : [mu(uu.vQ), mu(uu.aQ)]
-    }
-
-    function Bu(uu) {
-      return null === uu || "object" !== typeof uu ? uu : [Qu(uu.zQ, Xu), Qu(uu.SX, Xu)]
+    function Vk(kk) {
+      return null === kk || "object" !== typeof kk ? kk : [Xk(kk.aX), Xk(kk.XX)]
     }
 
-    function xu(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [mu(Ru.Dm), mu(Ru.Mm)];
-      var Ru
+    function Jk(kk) {
+      return null === kk || "object" !== typeof kk ? kk : [ak(kk.xa, dk), ak(kk.Gd, dk)]
     }
 
-    function Su(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [Ru.id, Ru.Jm];
-      var Ru
+    function Ak(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Xk(Fk.UX), Xk(Fk.cX)];
+      var Fk
     }
 
-    function pu(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [Ru.WR, mu(Ru.jR), Ru.HR, mu(Ru.CR), Ru.DR, Ru.MR, Ru.Cm, mu(Ru.km), mu(Ru.Am)];
-      var Ru
+    function ek(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Fk.id, Fk.eX];
+      var Fk
     }
 
-    function Tu(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [Qu(Ru.RV, Xu), Ru.yV];
-      var Ru
+    function yk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Fk.WF, Xk(Fk.vF), Fk.iF, Xk(Fk.LF), Fk.HF, Fk.uF, Fk.uX, Xk(Fk.MX), Xk(Fk.gX)];
+      var Fk
     }
 
-    function Wu(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [Qu(Ru.SJ, (uu => mu(uu))), mu(Ru.pJ), Ru.TJ];
-      var Ru
+    function fk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [ak(Fk.Gs, dk), Fk.Ts];
+      var Fk
     }
 
-    function ju(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [Qu(Ru.Nm, Xu), mu(Ru.Xm), Ru.Vm];
-      var Ru
+    function mk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [ak(Fk.Ob, (kk => Xk(kk))), Xk(Fk.Eb), Fk.Sb];
+      var Fk
     }
 
-    function Hu(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [mu(Ru.Py), mu(Ru.iy)];
-      var Ru
+    function Wk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [ak(Fk.yX, dk), Xk(Fk.fX), Fk.mX];
+      var Fk
     }
 
-    function du(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [mu(Ru.NJ)];
-      var Ru
+    function vk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Xk(Fk.hB), Xk(Fk.qB)];
+      var Fk
     }
 
-    function bu(uu) {
-      return mu(uu)
+    function ik(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Xk(Fk.fb)];
+      var Fk
     }
 
-    function Cu(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [mu(Ru.IV), mu(Ru.GV), mu(Ru.vQ), mu(Ru.aQ)];
-      var Ru
+    function Yk(kk) {
+      return Xk(kk)
     }
 
-    function ku(uu) {
-      return ru(uu)
+    function Lk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Xk(Fk.AV), Xk(Fk.eV), Xk(Fk.aX), Xk(Fk.XX)];
+      var Fk
     }
 
-    function eu(uu) {
-      return ru(uu)
+    function Ok(kk) {
+      return Vk(kk)
     }
 
-    function Au(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [mu(Ru.Im)];
-      var Ru
+    function Ek(kk) {
+      return Vk(kk)
     }
 
-    function Du(uu) {
-      return uu
+    function Sk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Xk(Fk.GX)];
+      var Fk
     }
 
-    function Mu(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [mu(Ru.Rm), mu(Ru.ym)];
-      var Ru
+    function Nk(kk) {
+      return kk
     }
 
-    function Iu(uu) {
-      return mu(uu)
+    function Hk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Xk(Fk.dX), Xk(Fk.sX)];
+      var Fk
     }
 
-    function Gu(uu) {
-      return Bu(uu)
+    function uk(kk) {
+      return Xk(kk)
     }
 
-    function Uu(uu) {
-      return Bu(uu)
+    function Mk(kk) {
+      return Jk(kk)
     }
 
-    function nu(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [mu(Ru.BJ)];
-      var Ru
+    function gk(kk) {
+      return Jk(kk)
     }
 
-    function su(uu) {
-      return (Vu ??= (0, Eu.f)().map((uu => uu.name)), Vu).map((Ru => {
-        return "string" === typeof(yu = uu[Ru]) ? mu(yu) : Qu(yu, Xu);
-        var yu
+    function Uk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Xk(Fk.ob)];
+      var Fk
+    }
+
+    function ck(kk) {
+      return (sk ??= (0, Rk.d)().map((kk => kk.name)), sk).map((Fk => {
+        return "string" === typeof(Bk = kk[Fk]) ? Xk(Bk) : ak(Bk, dk);
+        var Bk
       }))
     }
 
-    function tu(uu) {
-      return null === (Ru = uu) || "object" !== typeof Ru ? Ru : [Ru.dJ, Ru.bJ, Ru.CJ];
-      var Ru
+    function Gk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Fk.Mb, Fk.gb, Fk.Ub];
+      var Fk
     }
   },
-  40607: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu
+  40452: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => ak
     });
-    var Eu = yu(40613),
-      Ku = yu(40605);
-    const Qu = new class {
-      constructor(uu) {
-        this.pack = uu, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, uu.onWanted((() => {
+    var Rk = Bk(40460),
+      tk = Bk(40448);
+    const ak = new class {
+      constructor(kk) {
+        this.pack = kk, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, kk.onWanted((() => {
           this.release()
         }))
       }
-      setGame(uu) {
-        if (void 0 === uu && null !== this.hold) return void(this.endedWhileHeld = !0);
+      setGame(kk) {
+        if (void 0 === kk && null !== this.hold) return void(this.endedWhileHeld = !0);
         this.hold = null, this.endedWhileHeld = !1;
-        const Ru = this.inGame();
-        if (this.game = uu, this.update(), this.inGame() !== Ru)
-          for (const yu of this.gameListeners) yu()
+        const Fk = this.inGame();
+        if (this.game = kk, this.update(), this.inGame() !== Fk)
+          for (const Bk of this.gameListeners) Bk()
       }
       inGame() {
         return void 0 !== this.game
       }
-      onGameChange(uu) {
-        return this.gameListeners.add(uu), () => {
-          this.gameListeners.delete(uu)
+      onGameChange(kk) {
+        return this.gameListeners.add(kk), () => {
+          this.gameListeners.delete(kk)
         }
       }
-      unwantedLeave(uu) {
-        uu && void 0 !== this.game ? this.hold = {
+      unwantedLeave(kk) {
+        kk && void 0 !== this.game ? this.hold = {
           game: this.game
         } : this.release()
       }
       rejoinHold() {
         return this.hold
       }
-      releaseHold(uu) {
-        null !== uu && uu === this.hold && this.release()
+      releaseHold(kk) {
+        null !== kk && kk === this.hold && this.release()
       }
       release() {
         if (null === this.hold) return;
-        const uu = this.endedWhileHeld;
-        this.hold = null, this.endedWhileHeld = !1, uu && this.setGame(void 0)
+        const kk = this.endedWhileHeld;
+        this.hold = null, this.endedWhileHeld = !1, kk && this.setGame(void 0)
       }
-      setSettled(uu) {
-        this.settle = uu, this.update()
+      setSettled(kk) {
+        this.settle = kk, this.update()
       }
       update() {
-        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, Eu.c)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
+        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, Rk.d)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
       }
-    }(Ku.f)
+    }(tk.h)
   },
-  40418: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      followPageUiPack: () => MX,
-      packForGame: () => DX,
-      playWasmGame: () => FX,
-      prefetchWasmPreviews: () => FJ,
-      setGamePackConfirm: () => oN,
-      startWasmPlay: () => sX,
-      startWasmPreviews: () => zJ
+  40278: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      followPageUiPack: () => gd,
+      packForGame: () => Md,
+      playWasmGame: () => Zd,
+      prefetchWasmPreviews: () => qb,
+      setGamePackConfirm: () => nw,
+      startWasmPlay: () => rd,
+      startWasmPreviews: () => hb
     });
-    var Eu = yu(212),
-      Ku = yu(1217),
-      Qu = yu(174),
-      mu = yu(38836),
-      Ju = yu(1855),
-      Nu = yu(34),
-      Xu = yu(4461),
-      Vu = yu(1269),
-      ru = yu(1652),
-      Bu = yu(1280),
-      xu = yu(38984),
-      Su = yu(38994),
-      pu = yu(38906),
-      Tu = yu(36322),
-      Wu = yu(38808),
-      ju = yu(8652),
-      Hu = yu(38818),
-      du = yu(40256),
-      bu = yu(4549),
-      Cu = yu(40173),
-      ku = yu(40241),
-      eu = yu(40177);
-    const Au = {
+    var Rk = Bk(182),
+      tk = Bk(1195),
+      ak = Bk(152),
+      Xk = Bk(38719),
+      bk = Bk(1847),
+      wk = Bk(29),
+      dk = Bk(4409),
+      sk = Bk(1259),
+      Vk = Bk(1646),
+      Jk = Bk(1267),
+      Ak = Bk(38849),
+      ek = Bk(38856),
+      yk = Bk(38773),
+      fk = Bk(36202),
+      mk = Bk(38699),
+      Wk = Bk(8577),
+      vk = Bk(38708),
+      ik = Bk(40097),
+      Yk = Bk(4511),
+      Lk = Bk(40015),
+      Ok = Bk(40077),
+      Ek = Bk(40021);
+    const Sk = {
       states: {
         health: !0,
         aura: !0,
@@ -2441,350 +2441,350 @@ export const modules = {
       }
     };
 
-    function Du(uu) {
-      const Ru = {
-        ...ku.b[uu]
+    function Nk(kk) {
+      const Fk = {
+        ...Ok.d[kk]
       };
-      for (const yu of Object.keys(Au[uu])) delete Ru[yu];
-      return Ru
+      for (const Bk of Object.keys(Sk[kk])) delete Fk[Bk];
+      return Fk
     }
 
-    function Mu() {
-      var uu, Ru;
-      return null === (uu = null === (Ru = (0, Cu.i)()) || void 0 === Ru ? void 0 : Ru.localPlayerAlive()) || void 0 === uu || uu
+    function Hk() {
+      var kk, Fk;
+      return null === (kk = null === (Fk = (0, Lk.g)()) || void 0 === Fk ? void 0 : Fk.localPlayerAlive()) || void 0 === kk || kk
     }
 
-    function Iu() {
-      var uu, Ru;
-      return null !== (uu = null === (Ru = (0, Cu.i)()) || void 0 === Ru ? void 0 : Ru.localDeaths()) && void 0 !== uu ? uu : null
+    function uk() {
+      var kk, Fk;
+      return null !== (kk = null === (Fk = (0, Lk.g)()) || void 0 === Fk ? void 0 : Fk.localDeaths()) && void 0 !== kk ? kk : null
     }
-    const Gu = {
-        current: Mu,
-        watch: uu => {
-          let Ru = Mu(),
-            yu = Iu();
-          return (0, bu.y)((() => {
-            const Eu = Mu(),
-              Ku = Iu(),
-              Qu = null !== Ku && null !== yu && Ku !== yu;
-            yu = Ku, Qu ? (Ru || uu(!0), uu(!1), Eu && uu(!0), Ru = Eu) : Eu !== Ru && (Ru = Eu, uu(Eu))
+    const Mk = {
+        current: Hk,
+        watch: kk => {
+          let Fk = Hk(),
+            Bk = uk();
+          return (0, Yk.x)((() => {
+            const Rk = Hk(),
+              tk = uk(),
+              ak = null !== tk && null !== Bk && tk !== Bk;
+            Bk = tk, ak ? (Fk || kk(!0), kk(!1), Rk && kk(!0), Fk = Rk) : Rk !== Fk && (Fk = Rk, kk(Rk))
           }))
         }
       },
-      Uu = {
+      gk = {
         states: {
-          ...Du("states"),
-          localPlayerAlive: Gu
+          ...Nk("states"),
+          localPlayerAlive: Mk
         },
         events: {
-          ...Du("events"),
+          ...Nk("events"),
           localPlayerAliveSet: {
-            watch: Gu.watch
+            watch: Mk.watch
           }
         },
         commands: {
-          ...Du("commands"),
+          ...Nk("commands"),
           respawn: () => {
-            var uu;
-            null === (uu = (0, Cu.i)()) || void 0 === uu || uu.respawn()
+            var kk;
+            null === (kk = (0, Lk.g)()) || void 0 === kk || kk.respawn()
           },
-          playEmote: uu => {
-            var Ru;
-            null === (Ru = (0, Cu.i)()) || void 0 === Ru || Ru.send(eu.d.PlayEmote, (0, eu.A)({
-              NJ: uu
+          playEmote: kk => {
+            var Fk;
+            null === (Fk = (0, Lk.g)()) || void 0 === Fk || Fk.send(Ek.b.PlayEmote, (0, Ek.B)({
+              fb: kk
             }))
           },
-          applyTemporaryThirdPerson: uu => {
-            var Ru;
+          applyTemporaryThirdPerson: kk => {
+            var Fk;
             let {
-              durationMs: yu
-            } = uu;
-            null === (Ru = (0, Cu.i)()) || void 0 === Ru || Ru.thirdPersonFor(yu)
+              durationMs: Bk
+            } = kk;
+            null === (Fk = (0, Lk.g)()) || void 0 === Fk || Fk.thirdPersonFor(Bk)
           },
-          bindCustomButtonKeys: uu => {
-            var Ru;
-            null === (Ru = (0, Cu.i)()) || void 0 === Ru || Ru.bindCustomButtonKeys(uu)
+          bindCustomButtonKeys: kk => {
+            var Fk;
+            null === (Fk = (0, Lk.g)()) || void 0 === Fk || Fk.bindCustomButtonKeys(kk)
           },
-          pressCustomButton: uu => {
-            var Ru;
+          pressCustomButton: kk => {
+            var Fk;
             let {
-              id: yu,
-              down: Eu
-            } = uu;
-            null === (Ru = (0, Cu.i)()) || void 0 === Ru || Ru.pressCustomButton(yu, Eu)
+              id: Bk,
+              down: Rk
+            } = kk;
+            null === (Fk = (0, Lk.g)()) || void 0 === Fk || Fk.pressCustomButton(Bk, Rk)
           },
           setLookSensitivity: () => {},
-          wakeUp: uu => {
-            const Ru = (0, eu.L)({
-                BJ: uu
+          wakeUp: kk => {
+            const Fk = (0, Ek.L)({
+                ob: kk
               }),
-              yu = () => {
-                const uu = (0, Cu.i)();
-                return !(null !== uu && void 0 !== uu && uu.isSessionLive) || uu.send(eu.d.StopSleeping, Ru)
+              Bk = () => {
+                const kk = (0, Lk.g)();
+                return !(null !== kk && void 0 !== kk && kk.isSessionLive) || kk.send(Ek.b.StopSleeping, Fk)
               };
-            if (!yu()) {
-              const uu = (0, bu.y)((() => {
-                yu() && uu()
+            if (!Bk()) {
+              const kk = (0, Yk.x)((() => {
+                Bk() && kk()
               }))
             }
           },
-          setCameraZoom: uu => {
-            var Ru;
-            null === (Ru = (0, Cu.i)()) || void 0 === Ru || Ru.setCameraZoom(uu)
+          setCameraZoom: kk => {
+            var Fk;
+            null === (Fk = (0, Lk.g)()) || void 0 === Fk || Fk.setCameraZoom(kk)
           }
         },
-        queries: Du("queries"),
+        queries: Nk("queries"),
         lookups: {
-          ...Du("lookups"),
+          ...Nk("lookups"),
           cameraZoom: () => {
-            var uu, Ru;
-            return null !== (uu = null === (Ru = (0, Cu.i)()) || void 0 === Ru ? void 0 : Ru.cameraZoom()) && void 0 !== uu ? uu : 0
+            var kk, Fk;
+            return null !== (kk = null === (Fk = (0, Lk.g)()) || void 0 === Fk ? void 0 : Fk.cameraZoom()) && void 0 !== kk ? kk : 0
           }
         }
       };
-    var nu = yu(40424),
-      su = yu(40433),
-      tu = yu(40440),
-      lu = yu(40446),
-      gu = yu(1228),
-      cu = yu(122),
-      Lu = yu(4291),
-      zu = yu(3538),
-      Fu = yu(1136);
-    const wu = {
-      uV: () => (0, gu.b)(),
-      inbuiltOverwritten: () => Lu.c,
-      reflectApplyHit: () => Fu.b,
-      definerHit: () => cu.currentUrl.c,
-      emitReplaced: () => (0, Nu.d)(),
-      confirmMesh: () => (0, zu.e)()
+    var Uk = Bk(40280),
+      ck = Bk(40284),
+      Gk = Bk(40288),
+      Tk = Bk(40297),
+      rk = Bk(1209),
+      Dk = Bk(109),
+      zk = Bk(4258),
+      Pk = Bk(3515),
+      hk = Bk(1132);
+    const qk = {
+      Us: () => (0, rk.e)(),
+      inbuiltOverwritten: () => zk.d,
+      reflectApplyHit: () => hk.b,
+      definerHit: () => Dk.currentUrl.c,
+      emitReplaced: () => (0, wk.c)(),
+      confirmMesh: () => (0, Pk.d)()
     };
-    var Zu = yu(40442),
-      hu = yu(40462);
-    var Pu = yu(27),
-      iu = yu(1862),
-      Yu = yu(1915),
-      ou = yu(1587),
-      qu = yu(1955),
-      Ou = yu(1170),
-      vu = yu(1224),
-      au = yu(40410);
+    var Ck = Bk(40290),
+      Zk = Bk(40311);
+    var pk = Bk(22),
+      Kk = Bk(1849),
+      xk = Bk(1881),
+      jk = Bk(1594),
+      lk = Bk(1933),
+      nk = Bk(1149),
+      Ik = Bk(1203),
+      Qk = Bk(40254);
 
-    function fu() {
-      return vu.f.get().getCurrentLanguageCode()
+    function kF() {
+      return Ik.c.get().getCurrentLanguageCode()
     }
 
-    function uR(uu) {
-      const Ru = () => {
-        uu({
-          translate: (uu, Ru) => (0, Ou.s)(fu(), uu, Ru),
-          keyBindingText: uu => {
-            const Ru = (0, Yu.v)(uu, Pu.d.get("isTouchScreen"));
-            return null !== Ru ? (0, Ou.w)(fu(), Ru.translationKey, Ru.params) : (0, Yu.o)((0, Yu.r)(uu))
+    function FF(kk) {
+      const Fk = () => {
+        kk({
+          translate: (kk, Fk) => (0, nk.o)(kF(), kk, Fk),
+          keyBindingText: kk => {
+            const Fk = (0, xk.r)(kk, pk.c.get("isTouchScreen"));
+            return null !== Fk ? (0, nk.r)(kF(), Fk.translationKey, Fk.params) : (0, xk.n)((0, xk.o)(kk))
           },
-          isFriend: qu.d,
-          hiddenNames: iu.d.shown,
-          loadsFontRest: (0, au.c)(fu())
+          isFriend: lk.e,
+          hiddenNames: Kk.b.shown,
+          loadsFontRest: (0, Qk.d)(kF())
         })
       };
-      let yu = !1;
-      const Eu = () => {
-          const uu = fu();
-          (0, Ou.m)(uu).then((() => {
-            yu || uu !== fu() || Ru()
+      let Bk = !1;
+      const Rk = () => {
+          const kk = kF();
+          (0, nk.h)(kk).then((() => {
+            Bk || kk !== kF() || Fk()
           }))
         },
-        Ku = () => ou.c.getSocialState().friends.map((uu => uu.name.toLowerCase())).sort().join(" ");
-      let Qu = Ku();
-      Ru(), Eu();
-      const mu = [(0, vu.h)((() => {
-        Ru(), Eu()
-      })), (0, Nu.n)("customBindingsChanged", Ru), (0, Nu.n)("appManagerUpdated|isTouchScreen", Ru), (0, qu.b)((() => {
-        const uu = Ku();
-        uu !== Qu && (Qu = uu, Ru())
-      })), iu.d.subscribe(Ru)];
+        tk = () => jk.b.getSocialState().friends.map((kk => kk.name.toLowerCase())).sort().join(" ");
+      let ak = tk();
+      Fk(), Rk();
+      const Xk = [(0, Ik.f)((() => {
+        Fk(), Rk()
+      })), (0, wk.p)("customBindingsChanged", Fk), (0, wk.p)("appManagerUpdated|isTouchScreen", Fk), (0, lk.d)((() => {
+        const kk = tk();
+        kk !== ak && (ak = kk, Fk())
+      })), Kk.b.subscribe(Fk)];
       return () => {
-        yu = !0;
-        for (const uu of mu) uu()
+        Bk = !0;
+        for (const kk of Xk) kk()
       }
     }
-    var RR = yu(614),
-      yR = yu(1001),
-      ER = yu(1887),
-      KR = yu(330),
-      QR = yu(3510),
-      mR = yu(36199),
-      JR = yu(3514),
-      NR = yu(38496),
-      XR = yu(4470),
-      VR = yu(40341),
-      rR = yu(624),
-      BR = yu(673),
-      xR = yu(680),
-      SR = yu(1878),
-      pR = yu(3543),
-      TR = yu(3088);
-    let WR = null;
-    var jR = yu(1176),
-      HR = yu(1739),
-      dR = yu(4187),
-      bR = yu(3252),
-      CR = yu(60),
-      kR = yu(325),
-      eR = yu(305),
-      AR = yu(40286),
-      DR = yu(4558);
-    var MR = yu(40470);
-    class IR {
-      constructor(uu, Ru) {
-        this.showView = uu, this.holdForAd = Ru
+    var BF = Bk(608),
+      RF = Bk(994),
+      tF = Bk(1870),
+      aF = Bk(279),
+      XF = Bk(3502),
+      bF = Bk(36046),
+      wF = Bk(3506),
+      dF = Bk(38369),
+      sF = Bk(4425),
+      VF = Bk(40171),
+      JF = Bk(624),
+      AF = Bk(665),
+      eF = Bk(670),
+      yF = Bk(1863),
+      fF = Bk(3519),
+      mF = Bk(3083);
+    let WF = null;
+    var vF = Bk(1154),
+      iF = Bk(1733),
+      YF = Bk(4166),
+      oF = Bk(3250),
+      LF = Bk(55),
+      OF = Bk(276),
+      EF = Bk(267),
+      SF = Bk(40122),
+      NF = Bk(4517);
+    var HF = Bk(40319);
+    class uF {
+      constructor(kk, Fk) {
+        this.showView = kk, this.holdForAd = Fk
       }
       pointerUnlockRequestsChanged() {
-        (0, AR.v)()
+        (0, SF.A)()
       }
       pointerLockDebugEntries() {
         return [{
           label: "Locked to the canvas",
-          value: String((0, AR.m)())
+          value: String((0, SF.o)())
         }]
       }
-      setGameViewShown(uu) {
-        this.showView(uu)
+      setGameViewShown(kk) {
+        this.showView(kk)
       }
-      setGameView(uu) {
-        (0, MR.m)(uu)
+      setGameView(kk) {
+        (0, HF.p)(kk)
       }
-      videoAdHold(uu, Ru) {
-        this.holdForAd(uu, Ru)
+      videoAdHold(kk, Fk) {
+        this.holdForAd(kk, Fk)
       }
     }
-    class GR {
-      leave(uu) {
-        ! function(uu) {
-          if (null !== (0, Bu.c)().websocketUrl) try {
-            (0, bu.I)().leaveGame(uu)
+    class MF {
+      leave(kk) {
+        ! function(kk) {
+          if (null !== (0, Jk.e)().websocketUrl) try {
+            (0, Yk.J)().leaveGame(kk)
           } finally {
-            (0, Bu.n)({
+            (0, Jk.u)({
               websocketUrl: null
             })
           }
-        }(uu)
+        }(kk)
       }
       isReplay() {
         return !1
       }
     }
-    class UR {
-      watchFrameStarts(uu) {
-        return (0, bu.r)(uu)
+    class gF {
+      watchFrameStarts(kk) {
+        return (0, Yk.s)(kk)
       }
-      watchFrames(uu) {
-        return (0, bu.o)(uu)
+      watchFrames(kk) {
+        return (0, Yk.p)(kk)
       }
-      watchTicks(uu) {
-        return (0, bu.y)(uu)
+      watchTicks(kk) {
+        return (0, Yk.x)(kk)
       }
     }
-    var nR = yu(1257),
-      sR = yu(40472);
+    var UF = Bk(1245),
+      cF = Bk(40322);
 
-    function tR(uu) {
-      return uu >= 0 ? Math.min(1, uu) : 0
+    function GF(kk) {
+      return kk >= 0 ? Math.min(1, kk) : 0
     }
 
-    function lR(uu, Ru) {
+    function TF(kk, Fk) {
       const {
-        fade: yu
-      } = uu;
-      return null === yu || Ru - yu.at >= yu.ms ? uu.volume : yu.from + (uu.volume - yu.from) * Math.max(0, (Ru - yu.at) / yu.ms)
+        fade: Bk
+      } = kk;
+      return null === Bk || Fk - Bk.at >= Bk.ms ? kk.volume : Bk.from + (kk.volume - Bk.from) * Math.max(0, (Fk - Bk.at) / Bk.ms)
     }
 
-    function gR(uu) {
-      const Ru = Object.entries(uu),
-        yu = new Uint32Array(Ru.length);
-      let Eu = 0;
-      for (const [mu, [, Ju]] of Ru.entries()) yu[mu] = Ju.length, Eu += Ju.length;
-      const Ku = new Float64Array(3 * Eu);
-      let Qu = 0;
-      for (const [, mu] of Ru)
-        for (const uu of mu) Ku.set(uu, Qu), Qu += 3;
+    function rF(kk) {
+      const Fk = Object.entries(kk),
+        Bk = new Uint32Array(Fk.length);
+      let Rk = 0;
+      for (const [Xk, [, bk]] of Fk.entries()) Bk[Xk] = bk.length, Rk += bk.length;
+      const tk = new Float64Array(3 * Rk);
+      let ak = 0;
+      for (const [, Xk] of Fk)
+        for (const kk of Xk) tk.set(kk, ak), ak += 3;
       return {
-        blocks: Ru.map((uu => {
-          let [Ru] = uu;
-          return Ru
+        blocks: Fk.map((kk => {
+          let [Fk] = kk;
+          return Fk
         })).join("\0"),
-        counts: yu,
-        values: Ku
+        counts: Bk,
+        values: tk
       }
     }
-    class cR {
-      constructor(uu, Ru) {
-        this.core = uu, this.warn = Ru, this.latest = 0
+    class DF {
+      constructor(kk, Fk) {
+        this.core = kk, this.warn = Fk, this.latest = 0
       }
       async feed() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : LR;
-        const Ru = ++this.latest;
-        let yu;
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zF;
+        const Fk = ++this.latest;
+        let Bk;
         try {
-          yu = await uu()
-        } catch (Eu) {
-          return void(this.core.isStopped || Ru !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", Eu))
+          Bk = await kk()
+        } catch (Rk) {
+          return void(this.core.isStopped || Fk !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", Rk))
         }
-        Ru === this.latest && (this.core.setBlockColours(yu) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
+        Fk === this.latest && (this.core.setBlockColours(Bk) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
       }
     }
-    async function LR() {
-      return gR((await yu.e(201).then((() => yu(34131)))).averageColors)
+    async function zF() {
+      return rF((await Bk.e(201).then((() => Bk(34024)))).averageColors)
     }
-    var zR = yu(4562),
-      FR = yu(4564),
-      wR = yu(40223),
-      ZR = yu(36170),
-      hR = yu(40401),
-      PR = yu(602),
-      iR = yu(36797),
-      YR = yu(599),
-      oR = yu(343),
-      qR = yu(40371);
-    const OR = [3e4, 12e4, 3e5];
-    class vR extends Error {}
-    const aR = {
-      mobTypes: PR.k,
-      vehicleTypes: iR.e,
-      mobAiStates: PR.h,
-      playerPoses: YR.q
+    var PF = Bk(4524),
+      hF = Bk(4531),
+      qF = Bk(40065),
+      CF = Bk(36011),
+      ZF = Bk(40239),
+      pF = Bk(597),
+      KF = Bk(36724),
+      xF = Bk(594),
+      jF = Bk(291),
+      lF = Bk(40200);
+    const nF = [3e4, 12e4, 3e5];
+    class IF extends Error {}
+    const QF = {
+      mobTypes: pF.p,
+      vehicleTypes: KF.e,
+      mobAiStates: pF.l,
+      playerPoses: xF.o
     };
-    var fR = yu(40361),
-      uy = yu(40480),
-      Ry = yu(40492),
-      yy = yu(40499),
-      Ey = yu(3273),
-      Ky = yu(38797),
-      Qy = yu(4586),
-      my = yu(2306);
-    const Jy = my.t.KeysDisabled | my.t.LookFrozen | my.t.ClicksSuppressed,
-      Ny = Ey.f;
-    var Xy = (0, yy.b)("resumingConn");
-    class Vy {
-      constructor(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.shell = uu, this.now = Ru, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, Xy, {
+    var kB = Bk(40189),
+      FB = Bk(40330),
+      BB = Bk(40342),
+      RB = Bk(40346),
+      tB = Bk(3272),
+      aB = Bk(38692),
+      XB = Bk(4546),
+      bB = Bk(2303);
+    const wB = bB.A.KeysDisabled | bB.A.LookFrozen | bB.A.ClicksSuppressed,
+      dB = tB.h;
+    var sB = (0, RB.c)("resumingConn");
+    class VB {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.shell = kk, this.now = Fk, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, sB, {
           writable: !0,
           value: 0
-        }), this.drops = 0, this.session = new Ky.b({
-          reconnect: uu => this.reconnect(uu),
-          isLive: () => uu.isLive(),
-          onReconnected: Ru => {
-            this.landed = Ru, uu.onReconnected(Ru), this.landIfResumed()
+        }), this.drops = 0, this.session = new aB.b({
+          reconnect: kk => this.reconnect(kk),
+          isLive: () => kk.isLive(),
+          onReconnected: Fk => {
+            this.landed = Fk, kk.onReconnected(Fk), this.landIfResumed()
           },
-          onGaveUp: (Ru, yu) => {
-            this.abortAttempt(), uu.onGaveUp(Ru, yu)
+          onGaveUp: (Fk, Bk) => {
+            this.abortAttempt(), kk.onGaveUp(Fk, Bk)
           },
-          freeze: Ru => {
-            uu.Dk(Ru), (0, Qy.h)(Jy, Ru ? Jy : 0, "reconnectFreeze")
+          freeze: Fk => {
+            kk.lL(Fk), (0, XB.i)(wB, Fk ? wB : 0, "reconnectFreeze")
           },
-          releaseSeat: uu => {
-            this.releaseSeat(uu)
+          releaseSeat: kk => {
+            this.releaseSeat(kk)
           }
         })
       }
@@ -2792,119 +2792,119 @@ export const modules = {
         return this.session.isResuming()
       }
       get resumingConn() {
-        return (0, Ry.e)(this, Xy)[Xy]
+        return (0, BB.b)(this, sB)[sB]
       }
       canHoldSeat() {
         return this.session.canHoldSeat()
       }
-      onInitialInfo(uu) {
+      onInitialInfo(kk) {
         let {
-          conn: Ru,
-          graceMs: yu,
-          sessionBased: Eu,
-          replayOffer: Ku
-        } = uu;
-        this.session.onInitialInfo(yu, Eu), this.isResuming() && (this.initialInfoConn = Ru, this.initialInfoOffer = Ku, this.landIfResumed())
+          conn: Fk,
+          graceMs: Bk,
+          sessionBased: Rk,
+          replayOffer: tk
+        } = kk;
+        this.session.onInitialInfo(Bk, Rk), this.isResuming() && (this.initialInfoConn = Fk, this.initialInfoOffer = tk, this.landIfResumed())
       }
-      onResumeComplete(uu) {
-        0 !== uu && (uu === (0, Ry.e)(this, Xy)[Xy] ? ((0, Ry.e)(this, Xy)[Xy] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = uu))
+      onResumeComplete(kk) {
+        0 !== kk && (kk === (0, BB.b)(this, sB)[sB] ? ((0, BB.b)(this, sB)[sB] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = kk))
       }
-      onDropped(uu) {
-        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, Ry.e)(this, Xy)[Xy] = 0, this.session.onConnectionLost(uu)
+      onDropped(kk) {
+        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, BB.b)(this, sB)[sB] = 0, this.session.onConnectionLost(kk)
       }
       leave() {
         this.session.leave(), this.dispose()
       }
       dispose() {
-        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, Ry.e)(this, Xy)[Xy] = 0, this.session.end()
+        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, BB.b)(this, sB)[sB] = 0, this.session.end()
       }
-      reconnect(uu) {
-        const Ru = this.attempt;
-        if (null !== Ru && this.awaitingJoinRoom(Ru)) return Ru.result;
+      reconnect(kk) {
+        const Fk = this.attempt;
+        if (null !== Fk && this.awaitingJoinRoom(Fk)) return Fk.result;
         this.abortAttempt();
-        const yu = new AbortController,
-          Eu = this.drops,
-          Ku = {
+        const Bk = new AbortController,
+          Rk = this.drops,
+          tk = {
             attachedAt: null
           },
-          Qu = this.shell.reconnect(uu, yu.signal, (() => {
-            Ku.attachedAt = this.now()
-          })).then((uu => {
-            if (this.clearAttempt(mu), this.drops !== Eu) throw new Error("the resumed room dropped before its attempt settled");
-            return uu
-          }), (uu => {
-            throw this.clearAttempt(mu), uu
+          ak = this.shell.reconnect(kk, Bk.signal, (() => {
+            tk.attachedAt = this.now()
+          })).then((kk => {
+            if (this.clearAttempt(Xk), this.drops !== Rk) throw new Error("the resumed room dropped before its attempt settled");
+            return kk
+          }), (kk => {
+            throw this.clearAttempt(Xk), kk
           })),
-          mu = {
-            abort: yu,
-            socket: Ku,
-            result: Qu
+          Xk = {
+            abort: Bk,
+            socket: tk,
+            result: ak
           };
-        return this.attempt = mu, Qu
+        return this.attempt = Xk, ak
       }
-      clearAttempt(uu) {
-        this.attempt === uu && (this.attempt = null)
+      clearAttempt(kk) {
+        this.attempt === kk && (this.attempt = null)
       }
       abortAttempt() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
-        const Ru = this.attempt;
-        this.attempt = null, null === Ru || void 0 === Ru || Ru.abort.abort(uu)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
+        const Fk = this.attempt;
+        this.attempt = null, null === Fk || void 0 === Fk || Fk.abort.abort(kk)
       }
-      awaitingJoinRoom(uu) {
-        const Ru = uu.socket.attachedAt;
-        return null !== Ru && this.now() - Ru < Ny
+      awaitingJoinRoom(kk) {
+        const Fk = kk.socket.attachedAt;
+        return null !== Fk && this.now() - Fk < dB
       }
-      releaseSeat(uu) {
-        const Ru = this.attempt,
-          yu = null !== Ru && this.awaitingJoinRoom(Ru);
-        this.abortAttempt(new su.o), yu || this.shell.releaseSeat(uu)
+      releaseSeat(kk) {
+        const Fk = this.attempt,
+          Bk = null !== Fk && this.awaitingJoinRoom(Fk);
+        this.abortAttempt(new ck.t), Bk || this.shell.releaseSeat(kk)
       }
       landIfResumed() {
-        const uu = this.landed;
-        if (null !== uu && uu.conn === this.initialInfoConn) {
-          const Ru = this.initialInfoOffer && this.completedEarlyConn !== uu.conn;
-          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !Ru) return void this.session.onResumed();
-          (0, Ry.e)(this, Xy)[Xy] = uu.conn, this.session.onResuming()
+        const kk = this.landed;
+        if (null !== kk && kk.conn === this.initialInfoConn) {
+          const Fk = this.initialInfoOffer && this.completedEarlyConn !== kk.conn;
+          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !Fk) return void this.session.onResumed();
+          (0, BB.b)(this, sB)[sB] = kk.conn, this.session.onResuming()
         }
       }
     }
-    var ry = yu(38802),
-      By = yu(40505),
-      xy = yu(36328),
-      Sy = yu(36324),
-      py = yu(4827),
-      Ty = yu(4179),
-      Wy = yu(3077),
-      jy = yu(40302),
-      Hy = yu(629),
-      dy = yu(4263),
-      by = yu(47),
-      Cy = yu(40513),
-      ky = yu(40553),
-      ey = yu(4204),
-      Ay = yu(2312),
-      Dy = yu(1583),
-      My = yu(1611),
-      Iy = yu(1250),
-      Gy = yu(125),
-      Uy = yu(2677),
-      ny = yu(2320),
-      sy = yu(4578);
-    const ty = new Set([zR.yb.KeyDown, zR.yb.MouseMove, zR.yb.MouseDown, zR.yb.Wheel, zR.yb.TouchStart, zR.yb.TouchMove]);
+    var JB = Bk(38696),
+      AB = Bk(40352),
+      eB = Bk(36209),
+      yB = Bk(36204),
+      fB = Bk(4726),
+      mB = Bk(4154),
+      WB = Bk(3073),
+      vB = Bk(40141),
+      iB = Bk(629),
+      YB = Bk(4242),
+      oB = Bk(42),
+      LB = Bk(40355),
+      OB = Bk(40401),
+      EB = Bk(4179),
+      SB = Bk(2305),
+      NB = Bk(1585),
+      HB = Bk(1614),
+      uB = Bk(1239),
+      MB = Bk(112),
+      gB = Bk(2672),
+      UB = Bk(2309),
+      cB = Bk(4541);
+    const GB = new Set([PF.hb.KeyDown, PF.hb.MouseMove, PF.hb.MouseDown, PF.hb.Wheel, PF.hb.TouchStart, PF.hb.TouchMove]);
 
-    function ly(uu) {
-      return (uu.shiftKey ? zR.Ib.Shift : 0) | (uu.ctrlKey ? zR.Ib.Ctrl : 0) | (uu.altKey ? zR.Ib.Alt : 0) | (uu.metaKey ? zR.Ib.Meta : 0) | ("repeat" in uu && uu.repeat ? zR.Ib.Repeat : 0) | (uu.isTrusted ? 0 : zR.Ib.Untrusted)
+    function TB(kk) {
+      return (kk.shiftKey ? PF.qb.Shift : 0) | (kk.ctrlKey ? PF.qb.Ctrl : 0) | (kk.altKey ? PF.qb.Alt : 0) | (kk.metaKey ? PF.qb.Meta : 0) | ("repeat" in kk && kk.repeat ? PF.qb.Repeat : 0) | (kk.isTrusted ? 0 : PF.qb.Untrusted)
     }
 
-    function gy(uu) {
-      return "touchOnly" !== (0, Gy.c)() && "function" === typeof uu.requestPointerLock
+    function rB(kk) {
+      return "touchOnly" !== (0, MB.c)() && "function" === typeof kk.requestPointerLock
     }
 
-    function cy(uu) {
-      return 0 === uu.button ? uu.altKey ? sy.j["Alt+Left Click"] : sy.j.Mouse1 : 1 === uu.button ? sy.j.Mouse2 : sy.j.Mouse3
+    function DB(kk) {
+      return 0 === kk.button ? kk.altKey ? cB.m["Alt+Left Click"] : cB.m.Mouse1 : 1 === kk.button ? cB.m.Mouse2 : cB.m.Mouse3
     }
-    const Ly = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
-      zy = new Map([
+    const zB = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
+      PB = new Map([
         ["AltLeft", "altKey"],
         ["AltRight", "altKey"],
         ["ControlLeft", "ctrlKey"],
@@ -2914,370 +2914,370 @@ export const modules = {
         ["MetaLeft", "metaKey"],
         ["MetaRight", "metaKey"]
       ]),
-      Fy = 32768,
-      wy = 1;
+      hB = 32768,
+      qB = 1;
 
-    function Zy(uu) {
-      return Math.min(Math.max(Math.round(uu), 0), 65535)
+    function CB(kk) {
+      return Math.min(Math.max(Math.round(kk), 0), 65535)
     }
 
-    function hy(uu, Ru, yu) {
-      const Eu = [],
-        Ku = (uu, Ru, yu, Ku) => {
-          const Qu = uu => {
-            (0, My.j)(uu) || yu(uu)
+    function ZB(kk, Fk, Bk) {
+      const Rk = [],
+        tk = (kk, Fk, Bk, tk) => {
+          const ak = kk => {
+            (0, HB.r)(kk) || Bk(kk)
           };
-          uu.addEventListener(Ru, Qu, Ku), Eu.push((() => {
-            uu.removeEventListener(Ru, Qu, Ku)
+          kk.addEventListener(Fk, ak, tk), Rk.push((() => {
+            kk.removeEventListener(Fk, ak, tk)
           }))
         },
-        Qu = {
+        ak = {
           capture: !0,
           passive: !0
         },
-        mu = (uu, yu, Eu, Ku, Qu) => (!(0, ny.b)() || !ty.has(uu)) && (Ru(uu, yu, Eu, Ku, Qu), !0),
-        Ju = () => document.pointerLockElement === uu,
-        Nu = (0, Uy.c)(),
-        Xu = uu => {
-          uu.ctrlKey && yu.ctrlCombosAreGames() && !(0, Qy.f)(uu.target) && uu.preventDefault()
+        Xk = (kk, Bk, Rk, tk, ak) => (!(0, UB.d)() || !GB.has(kk)) && (Fk(kk, Bk, Rk, tk, ak), !0),
+        bk = () => document.pointerLockElement === kk,
+        wk = (0, gB.d)(),
+        dk = kk => {
+          kk.ctrlKey && Bk.ctrlCombosAreGames() && !(0, XB.g)(kk.target) && kk.preventDefault()
         },
-        Vu = (uu, Eu, Ku) => {
-          yu.inspect(uu, Eu, !1), Ru(zR.yb.KeyUp, Eu, 0, 0, (0, Ay.v)(Ku, uu.timeStamp)), yu.keyReleased(Eu)
+        sk = (kk, Rk, tk) => {
+          Bk.inspect(kk, Rk, !1), Fk(PF.hb.KeyUp, Rk, 0, 0, (0, SB.n)(tk, kk.timeStamp)), Bk.keyReleased(Rk)
         },
-        ru = new Map,
-        Bu = (uu, Ru, yu) => uu[yu] || ("AltRight" === Ru || "ControlLeft" === Ru) && uu.getModifierState("AltGraph"),
-        xu = new Map,
-        Su = () => {
-          ru.clear(), xu.clear()
+        Vk = new Map,
+        Jk = (kk, Fk, Bk) => kk[Bk] || ("AltRight" === Fk || "ControlLeft" === Fk) && kk.getModifierState("AltGraph"),
+        Ak = new Map,
+        ek = () => {
+          Vk.clear(), Ak.clear()
         },
-        pu = uu => {
+        yk = kk => {
           if (document.hasFocus())
-            for (const [Ru, yu] of xu) xu.delete(Ru), Bu(uu, Ru, yu) || (ru.delete(Ru), Vu(uu, sy.j[Ru], ly(uu)))
+            for (const [Fk, Bk] of Ak) Ak.delete(Fk), Jk(kk, Fk, Bk) || (Vk.delete(Fk), sk(kk, cB.m[Fk], TB(kk)))
         };
-      uu.tabIndex = -1;
-      let Tu = 0,
-        Wu = 0;
-      const ju = () => {
-        const Ru = uu.getBoundingClientRect();
-        Tu = Ru.left, Wu = Ru.top
+      kk.tabIndex = -1;
+      let fk = 0,
+        mk = 0;
+      const Wk = () => {
+        const Fk = kk.getBoundingClientRect();
+        fk = Fk.left, mk = Fk.top
       };
-      let Hu = "mouse";
-      const du = () => !Ju() && ("mouse" === Hu || !yu.touchUiShown()),
-        bu = (uu, Ru, yu) => {
-          const Eu = (Zy(uu.clientX - Tu) | Zy(uu.clientY - Wu) << 16) >>> 0;
-          mu(zR.yb.MouseMove, zR.Kb.Point, Ru, yu, Eu)
+      let vk = "mouse";
+      const ik = () => !bk() && ("mouse" === vk || !Bk.touchUiShown()),
+        Yk = (kk, Fk, Bk) => {
+          const Rk = (CB(kk.clientX - fk) | CB(kk.clientY - mk) << 16) >>> 0;
+          Xk(PF.hb.MouseMove, PF.rb.Point, Fk, Bk, Rk)
         };
-      let Cu = !1,
-        ku = 0;
-      const eu = () => {
-        Cu && (Cu = !1, yu.viewShown() && (0, AR.N)())
+      let Lk = !1,
+        Ok = 0;
+      const Ek = () => {
+        Lk && (Lk = !1, Bk.viewShown() && (0, SF.M)())
       };
-      Eu.push((() => {
-        clearTimeout(ku)
-      })), Ku(window, "keydown", (uu => {
-        "Escape" === uu.key ? (0, AR.B)(!0) : uu.repeat || (0, Qy.f)(uu.target) || (Cu = !0, clearTimeout(ku), ku = window.setTimeout(eu, 0))
-      }), Qu), Ku(window, "keydown", (uu => {
-        eu(), Xu(uu), pu(uu);
-        const Ru = sy.j[uu.code];
-        if ("number" !== typeof Ru || !yu.viewShown()) return;
-        const Eu = (0, Qy.f)(uu.target);
-        Eu || !yu.prevents(Ru) && !Ly.has(uu.code) || uu.preventDefault(), uu.repeat || yu.inspect(uu, Ru, !0), mu(zR.yb.KeyDown, Ru, 0, 0, (0, Ay.v)(ly(uu), uu.timeStamp)) && ru.set(uu.code, Ru), Eu || yu.keyPressed(Ru)
+      Rk.push((() => {
+        clearTimeout(Ok)
+      })), tk(window, "keydown", (kk => {
+        "Escape" === kk.key ? (0, SF.E)(!0) : kk.repeat || (0, XB.g)(kk.target) || (Lk = !0, clearTimeout(Ok), Ok = window.setTimeout(Ek, 0))
+      }), ak), tk(window, "keydown", (kk => {
+        Ek(), dk(kk), yk(kk);
+        const Fk = cB.m[kk.code];
+        if ("number" !== typeof Fk || !Bk.viewShown()) return;
+        const Rk = (0, XB.g)(kk.target);
+        Rk || !Bk.prevents(Fk) && !zB.has(kk.code) || kk.preventDefault(), kk.repeat || Bk.inspect(kk, Fk, !0), Xk(PF.hb.KeyDown, Fk, 0, 0, (0, SB.n)(TB(kk), kk.timeStamp)) && Vk.set(kk.code, Fk), Rk || Bk.keyPressed(Fk)
       }), {
         capture: !1,
         passive: !1
-      }), Ku(window, "keyup", (uu => {
-        "Escape" === uu.key && (0, AR.B)(!1), Xu(uu), ru.delete(uu.code), xu.delete(uu.code), pu(uu);
-        const Ru = sy.j[uu.code];
-        "number" === typeof Ru && Vu(uu, Ru, ly(uu))
+      }), tk(window, "keyup", (kk => {
+        "Escape" === kk.key && (0, SF.E)(!1), dk(kk), Vk.delete(kk.code), Ak.delete(kk.code), yk(kk);
+        const Fk = cB.m[kk.code];
+        "number" === typeof Fk && sk(kk, Fk, TB(kk))
       }), {
         capture: !0,
         passive: !1
-      }), Ku(window, "mousemove", (uu => {
-        "mouse" === Hu && du() ? bu(uu, uu.movementX, uu.movementY) : Ju() ? mu(zR.yb.MouseMove, zR.Kb.Stamped, uu.movementX, uu.movementY, (0, Ay.v)(0, uu.timeStamp)) : mu(zR.yb.MouseMove, 0, uu.movementX, uu.movementY, 0)
-      }), Qu);
-      let Au = 0,
-        Du = 0;
-      const Mu = [];
-      let Iu = !1,
-        Gu = !1;
-      Ku(uu, "mousedown", (uu => {
-        if ((0, ny.b)()) return;
-        pu(uu);
-        const Eu = 1 << uu.button;
-        if (!Ju() && (0, AR.L)() && (0, AR.e)() && (Gu = !0, !Iu)) return void(Au |= Eu);
-        Au &= ~Eu;
-        const Ku = uu.button <= 2 ? cy(uu) : void 0;
-        void 0 !== Ku && (Mu[uu.button] = Ku, yu.inspect(uu, Ku, !0)), du() && bu(uu, 0, 0), Ru(zR.yb.MouseDown, uu.button, uu.clientX, uu.clientY, (0, Ay.v)(ly(uu), uu.timeStamp)), Du |= Eu, void 0 !== Ku && yu.keyPressed(Ku)
-      }), Qu), Ku(window, "mouseup", (uu => {
-        var Eu;
-        pu(uu);
-        const Ku = 1 << uu.button,
-          Qu = 0 !== (Au & ~Du & Ku);
-        if (Au &= ~Ku, Du &= ~Ku, Qu) return;
-        const mu = uu.button <= 2 ? null !== (Eu = Mu[uu.button]) && void 0 !== Eu ? Eu : cy(uu) : void 0;
-        void 0 !== mu && yu.inspect(uu, mu, !1), Ru(zR.yb.MouseUp, uu.button, uu.clientX, uu.clientY, (0, Ay.v)(ly(uu), uu.timeStamp)), void 0 !== mu && yu.keyReleased(mu)
-      }), Qu), Ku(uu, "contextmenu", (uu => {
-        uu.preventDefault()
+      }), tk(window, "mousemove", (kk => {
+        "mouse" === vk && ik() ? Yk(kk, kk.movementX, kk.movementY) : bk() ? Xk(PF.hb.MouseMove, PF.rb.Stamped, kk.movementX, kk.movementY, (0, SB.n)(0, kk.timeStamp)) : Xk(PF.hb.MouseMove, 0, kk.movementX, kk.movementY, 0)
+      }), ak);
+      let Sk = 0,
+        Nk = 0;
+      const Hk = [];
+      let uk = !1,
+        Mk = !1;
+      tk(kk, "mousedown", (kk => {
+        if ((0, UB.d)()) return;
+        yk(kk);
+        const Rk = 1 << kk.button;
+        if (!bk() && (0, SF.L)() && (0, SF.e)() && (Mk = !0, !uk)) return void(Sk |= Rk);
+        Sk &= ~Rk;
+        const tk = kk.button <= 2 ? DB(kk) : void 0;
+        void 0 !== tk && (Hk[kk.button] = tk, Bk.inspect(kk, tk, !0)), ik() && Yk(kk, 0, 0), Fk(PF.hb.MouseDown, kk.button, kk.clientX, kk.clientY, (0, SB.n)(TB(kk), kk.timeStamp)), Nk |= Rk, void 0 !== tk && Bk.keyPressed(tk)
+      }), ak), tk(window, "mouseup", (kk => {
+        var Rk;
+        yk(kk);
+        const tk = 1 << kk.button,
+          ak = 0 !== (Sk & ~Nk & tk);
+        if (Sk &= ~tk, Nk &= ~tk, ak) return;
+        const Xk = kk.button <= 2 ? null !== (Rk = Hk[kk.button]) && void 0 !== Rk ? Rk : DB(kk) : void 0;
+        void 0 !== Xk && Bk.inspect(kk, Xk, !1), Fk(PF.hb.MouseUp, kk.button, kk.clientX, kk.clientY, (0, SB.n)(TB(kk), kk.timeStamp)), void 0 !== Xk && Bk.keyReleased(Xk)
+      }), ak), tk(kk, "contextmenu", (kk => {
+        kk.preventDefault()
       }), {
         passive: !1
       });
-      const Uu = uu => {
-        (Ju() || (0, AR.j)() && (0, Iy.r)()) && (uu.ctrlKey || Nu && !document.fullscreenElement) && uu.preventDefault()
+      const gk = kk => {
+        (bk() || (0, SF.n)() && (0, uB.o)()) && (kk.ctrlKey || wk && !document.fullscreenElement) && kk.preventDefault()
       };
-      Ku(uu, "wheel", (uu => {
-        Uu(uu), pu(uu), mu(zR.yb.Wheel, uu.deltaMode, uu.deltaX, uu.deltaY, 0)
+      tk(kk, "wheel", (kk => {
+        gk(kk), yk(kk), Xk(PF.hb.Wheel, kk.deltaMode, kk.deltaX, kk.deltaY, 0)
       }), {
         capture: !0,
         passive: !1
       });
-      const nu = {
+      const Uk = {
           capture: !0,
           passive: !1
         },
-        su = uu => {
-          uu ? window.addEventListener("wheel", Uu, nu) : window.removeEventListener("wheel", Uu, nu)
+        ck = kk => {
+          kk ? window.addEventListener("wheel", gk, Uk) : window.removeEventListener("wheel", gk, Uk)
         };
-      su((0, AR.j)()), Eu.push((0, AR.s)(su)), Eu.push((() => {
-        su(!1)
+      ck((0, SF.n)()), Rk.push((0, SF.s)(ck)), Rk.push((() => {
+        ck(!1)
       }));
-      const tu = new Map,
-        lu = new Set,
-        gu = uu => {
-          const Ru = "stylus" === uu.touchType;
-          for (const yu of tu.values())
-            if (!yu.touched && (Ru || Math.abs(uu.clientX - yu.x) <= wy && Math.abs(uu.clientY - yu.y) <= wy)) return yu.touched = !0, !0;
+      const Gk = new Map,
+        Tk = new Set,
+        rk = kk => {
+          const Fk = "stylus" === kk.touchType;
+          for (const Bk of Gk.values())
+            if (!Bk.touched && (Fk || Math.abs(kk.clientX - Bk.x) <= qB && Math.abs(kk.clientY - Bk.y) <= qB)) return Bk.touched = !0, !0;
           return !1
         },
-        cu = uu => 32767 & uu,
-        Lu = new Set,
-        zu = uu => yu => {
-          const Eu = (0, Ay.v)(ly(yu), yu.timeStamp);
-          uu !== zR.yb.TouchStart && uu !== zR.yb.TouchMove || ((uu, yu) => {
-            const Eu = uu.touches;
-            if (Eu)
-              for (const Ku of Lu) {
-                let uu = !1;
-                for (let Ru = 0; Ru < Eu.length && !uu; Ru++) uu = cu(Eu[Ru].identifier) === Ku;
-                uu || (Lu.delete(Ku), Ru(zR.yb.TouchCancel, Ku, 0, 0, yu))
+        Dk = kk => 32767 & kk,
+        zk = new Set,
+        Pk = kk => Bk => {
+          const Rk = (0, SB.n)(TB(Bk), Bk.timeStamp);
+          kk !== PF.hb.TouchStart && kk !== PF.hb.TouchMove || ((kk, Bk) => {
+            const Rk = kk.touches;
+            if (Rk)
+              for (const tk of zk) {
+                let kk = !1;
+                for (let Fk = 0; Fk < Rk.length && !kk; Fk++) kk = Dk(Rk[Fk].identifier) === tk;
+                kk || (zk.delete(tk), Fk(PF.hb.TouchCancel, tk, 0, 0, Bk))
               }
-          })(yu, Eu);
-          const Ku = yu.changedTouches;
-          for (let Ru = 0; Ru < Ku.length; Ru++) {
-            const yu = Ku[Ru];
-            if (uu === zR.yb.TouchStart && gu(yu) && lu.add(yu.identifier), lu.has(yu.identifier)) {
-              uu !== zR.yb.TouchEnd && uu !== zR.yb.TouchCancel || lu.delete(yu.identifier);
+          })(Bk, Rk);
+          const tk = Bk.changedTouches;
+          for (let Fk = 0; Fk < tk.length; Fk++) {
+            const Bk = tk[Fk];
+            if (kk === PF.hb.TouchStart && rk(Bk) && Tk.add(Bk.identifier), Tk.has(Bk.identifier)) {
+              kk !== PF.hb.TouchEnd && kk !== PF.hb.TouchCancel || Tk.delete(Bk.identifier);
               continue
             }
-            const Qu = cu(yu.identifier),
-              Ju = mu(uu, Qu, yu.clientX - Tu, yu.clientY - Wu, Eu);
-            uu === zR.yb.TouchStart ? Ju && Lu.add(Qu) : uu !== zR.yb.TouchMove && Lu.delete(Qu)
+            const ak = Dk(Bk.identifier),
+              bk = Xk(kk, ak, Bk.clientX - fk, Bk.clientY - mk, Rk);
+            kk === PF.hb.TouchStart ? bk && zk.add(ak) : kk !== PF.hb.TouchMove && zk.delete(ak)
           }
         },
-        Fu = zu(zR.yb.TouchStart);
-      Ku(uu, "touchstart", (uu => {
-        uu.preventDefault(), (0, ny.b)() || (yu.touchStarting(), Fu(uu))
+        hk = Pk(PF.hb.TouchStart);
+      tk(kk, "touchstart", (kk => {
+        kk.preventDefault(), (0, UB.d)() || (Bk.touchStarting(), hk(kk))
       }), {
         passive: !1
-      }), Ku(uu, "touchmove", zu(zR.yb.TouchMove), Qu), Ku(uu, "touchend", zu(zR.yb.TouchEnd), Qu), Ku(uu, "touchcancel", zu(zR.yb.TouchCancel), Qu);
-      const wu = uu => Fy | 32767 & uu,
-        Zu = (uu, Ru) => {
-          mu(uu, wu(Ru.pointerId), Ru.clientX - Tu, Ru.clientY - Wu, (0, Ay.v)(ly(Ru), Ru.timeStamp))
+      }), tk(kk, "touchmove", Pk(PF.hb.TouchMove), ak), tk(kk, "touchend", Pk(PF.hb.TouchEnd), ak), tk(kk, "touchcancel", Pk(PF.hb.TouchCancel), ak);
+      const qk = kk => hB | 32767 & kk,
+        Ck = (kk, Fk) => {
+          Xk(kk, qk(Fk.pointerId), Fk.clientX - fk, Fk.clientY - mk, (0, SB.n)(TB(Fk), Fk.timeStamp))
         };
-      Ku(window, "pointerdown", (Ru => {
-        Hu = Ru.pointerType, "mouse" === Ru.pointerType && Ru.target !== uu && yu.viewShown() && (0, AR.O)()
-      }), Qu), Ku(uu, "pointerdown", (uu => {
-        "pen" === uu.pointerType && 0 === uu.button && (0, AR.j)() && (0, Iy.r)() && (uu.preventDefault(), (0, ny.b)() || (tu.set(uu.pointerId, {
-          x: uu.clientX,
-          y: uu.clientY,
+      tk(window, "pointerdown", (Fk => {
+        vk = Fk.pointerType, "mouse" === Fk.pointerType && Fk.target !== kk && Bk.viewShown() && (0, SF.O)()
+      }), ak), tk(kk, "pointerdown", (kk => {
+        "pen" === kk.pointerType && 0 === kk.button && (0, SF.n)() && (0, uB.o)() && (kk.preventDefault(), (0, UB.d)() || (Gk.set(kk.pointerId, {
+          x: kk.clientX,
+          y: kk.clientY,
           touched: !1
-        }), yu.touchStarting(), Zu(zR.yb.TouchStart, uu)))
+        }), Bk.touchStarting(), Ck(PF.hb.TouchStart, kk)))
       }), {
         passive: !1
-      }), Ku(window, "pointermove", (uu => {
-        Hu = uu.pointerType, tu.has(uu.pointerId) && Zu(zR.yb.TouchMove, uu), "mouse" !== uu.pointerType && du() && bu(uu, 0, 0)
-      }), Qu);
-      const hu = uu => Ru => {
-        tu.delete(Ru.pointerId) && Zu(uu, Ru)
+      }), tk(window, "pointermove", (kk => {
+        vk = kk.pointerType, Gk.has(kk.pointerId) && Ck(PF.hb.TouchMove, kk), "mouse" !== kk.pointerType && ik() && Yk(kk, 0, 0)
+      }), ak);
+      const Zk = kk => Fk => {
+        Gk.delete(Fk.pointerId) && Ck(kk, Fk)
       };
-      Ku(window, "pointerup", hu(zR.yb.TouchEnd), Qu), Ku(window, "pointercancel", hu(zR.yb.TouchCancel), Qu);
-      let Pu = 0;
-      const iu = () => {
-          Pu = 0, ju(), yu.resized()
+      tk(window, "pointerup", Zk(PF.hb.TouchEnd), ak), tk(window, "pointercancel", Zk(PF.hb.TouchCancel), ak);
+      let pk = 0;
+      const Kk = () => {
+          pk = 0, Wk(), Bk.resized()
         },
-        Yu = () => {
-          const uu = yu.sizeCanvas();
-          null !== uu && Ru(zR.yb.Resize, 0, uu.cssWidth, uu.cssHeight, (0, Ay.m)(uu.renderScale)), ju(), yu.resized(), 0 === Pu && (Pu = requestAnimationFrame(iu))
+        xk = () => {
+          const kk = Bk.sizeCanvas();
+          null !== kk && Fk(PF.hb.Resize, 0, kk.cssWidth, kk.cssHeight, (0, SB.f)(kk.renderScale)), Wk(), Bk.resized(), 0 === pk && (pk = requestAnimationFrame(Kk))
         };
-      Ku(window, "resize", Yu, Qu), Eu.push(yu.watchRenderScale(Yu)), Eu.push((() => {
-        cancelAnimationFrame(Pu)
-      })), Ku(window, "focus", (uu => {
-        uu.isTrusted && (Ru(zR.yb.Focus, 0, 0, 0, 0), yu.viewShown() && (0, AR.O)())
+      tk(window, "resize", xk, ak), Rk.push(Bk.watchRenderScale(xk)), Rk.push((() => {
+        cancelAnimationFrame(pk)
+      })), tk(window, "focus", (kk => {
+        kk.isTrusted && (Fk(PF.hb.Focus, 0, 0, 0, 0), Bk.viewShown() && (0, SF.O)())
       }), {
         passive: !0
       });
-      const ou = () => {
-          (0, AR.B)(!1), Au = 0
+      const jk = () => {
+          (0, SF.E)(!1), Sk = 0
         },
-        qu = () => {
-          Lu.clear(), tu.clear(), lu.clear()
+        lk = () => {
+          zk.clear(), Gk.clear(), Tk.clear()
         };
-      let Ou = 0,
-        vu = 0;
-      Ku(window, "blur", (Eu => {
-        ou(), (0, AR.h)();
-        for (const uu of ru.keys()) {
-          const Ru = zy.get(uu);
-          void 0 !== Ru && xu.set(uu, Ru)
+      let nk = 0,
+        Ik = 0;
+      tk(window, "blur", (Rk => {
+        jk(), (0, SF.j)();
+        for (const kk of Vk.keys()) {
+          const Fk = PB.get(kk);
+          void 0 !== Fk && Ak.set(kk, Fk)
         }
-        Eu.isTrusted && ((uu => {
-          for (const [yu, Eu] of tu) Ru(zR.yb.TouchCancel, wu(yu), Eu.x, Eu.y, (0, Ay.v)(0, uu));
-          tu.clear()
-        })(Eu.timeStamp), Ru(zR.yb.Blur, zR.t.KeepTouches, 0, 0, 0)), Nu && Eu.isTrusted && (clearTimeout(vu), vu = window.setTimeout((() => {
+        Rk.isTrusted && ((kk => {
+          for (const [Bk, Rk] of Gk) Fk(PF.hb.TouchCancel, qk(Bk), Rk.x, Rk.y, (0, SB.n)(0, kk));
+          Gk.clear()
+        })(Rk.timeStamp), Fk(PF.hb.Blur, PF.m.KeepTouches, 0, 0, 0)), wk && Rk.isTrusted && (clearTimeout(Ik), Ik = window.setTimeout((() => {
           if (!document.hasFocus()) {
-            for (const uu of ru.values()) Vu(Eu, uu, 0);
-            Su()
+            for (const kk of Vk.values()) sk(Rk, kk, 0);
+            ek()
           }
-        }), 0)), clearTimeout(Ou), Ou = window.setTimeout((() => {
-          document.activeElement instanceof HTMLIFrameElement && (0, Iy.r)() && yu.viewShown() && uu.focus({
+        }), 0)), clearTimeout(nk), nk = window.setTimeout((() => {
+          document.activeElement instanceof HTMLIFrameElement && (0, uB.o)() && Bk.viewShown() && kk.focus({
             preventScroll: !0
           })
         }), 0)
       }), {
         passive: !0
-      }), Eu.push((() => {
-        clearTimeout(Ou), clearTimeout(vu)
-      })), Ku(window, "mousedown", (Ru => {
-        Nu && Ru.isTrusted && !document.hasFocus() && (0, Iy.r)() && yu.viewShown() && (window.focus(), uu.focus({
+      }), Rk.push((() => {
+        clearTimeout(nk), clearTimeout(Ik)
+      })), tk(window, "mousedown", (Fk => {
+        wk && Fk.isTrusted && !document.hasFocus() && (0, uB.o)() && Bk.viewShown() && (window.focus(), kk.focus({
           preventScroll: !0
         }))
-      }), Qu), Ku(document, "visibilitychange", (() => {
-        document.hidden ? (Ru(zR.yb.Blur, 0, 0, 0, 0), qu()) : document.hasFocus() && Ru(zR.yb.Focus, 0, 0, 0, 0)
+      }), ak), tk(document, "visibilitychange", (() => {
+        document.hidden ? (Fk(PF.hb.Blur, 0, 0, 0, 0), lk()) : document.hasFocus() && Fk(PF.hb.Focus, 0, 0, 0, 0)
       }), {
         passive: !0
-      }), Eu.push((0, ny.f)((() => {
-        ou(), Ru(zR.yb.Blur, zR.t.Release, 0, 0, 0), yu.keysReleased(), Su(), Du = 0, qu(), Ru(zR.yb.Joystick, 0, 0, 0, 0), document.hasFocus() && Ru(zR.yb.Focus, 0, 0, 0, 0)
+      }), Rk.push((0, UB.g)((() => {
+        jk(), Fk(PF.hb.Blur, PF.m.Release, 0, 0, 0), Bk.keysReleased(), ek(), Nk = 0, lk(), Fk(PF.hb.Joystick, 0, 0, 0, 0), document.hasFocus() && Fk(PF.hb.Focus, 0, 0, 0, 0)
       })));
-      const au = !yu.canLock(),
-        fu = () => au && !(0, AR.j)() ? zR.bc.Lockless : zR.bc.Released,
-        uR = () => {
-          Ju() && (Iu = !1, Gu = !1), Ru(zR.yb.PointerLock, Ju() ? zR.bc.Locked : fu(), 0, 0, 0), (0, AR.I)(Ju())
+      const Qk = !Bk.canLock(),
+        kF = () => Qk && !(0, SF.n)() ? PF.Ob.Lockless : PF.Ob.Released,
+        FF = () => {
+          bk() && (uk = !1, Mk = !1), Fk(PF.hb.PointerLock, bk() ? PF.Ob.Locked : kF(), 0, 0, 0), (0, SF.K)(bk())
         };
-      return Ku(document, "pointerlockchange", uR, {
+      return tk(document, "pointerlockchange", FF, {
         passive: !0
-      }), Ku(document, "pointerlockerror", (() => {
-        Iu ||= Gu, Gu = !1, (0, AR.p)()
+      }), tk(document, "pointerlockerror", (() => {
+        uk ||= Mk, Mk = !1, (0, SF.p)()
       }), {
         passive: !0
-      }), au && Eu.push((0, AR.s)((() => {
-        Ru(zR.yb.PointerLock, fu(), 0, 0, 0)
-      }))), Yu(), Ru(document.hasFocus() ? zR.yb.Focus : zR.yb.Blur, 0, 0, 0, 0), uR(), () => {
-        for (const uu of Eu.splice(0)) uu()
+      }), Qk && Rk.push((0, SF.s)((() => {
+        Fk(PF.hb.PointerLock, kF(), 0, 0, 0)
+      }))), xk(), Fk(document.hasFocus() ? PF.hb.Focus : PF.hb.Blur, 0, 0, 0, 0), FF(), () => {
+        for (const kk of Rk.splice(0)) kk()
       }
     }
-    var Py = yu(8984),
-      iy = yu(8973),
-      Yy = yu(1920);
-    const oy = new Map(sy.b.map(((uu, Ru) => [uu, Ru]))),
-      qy = ["jump", "primary-fire", "alt-fire"],
-      Oy = ["primary-fire", "alt-fire"];
+    var pB = Bk(8939),
+      KB = Bk(8926),
+      xB = Bk(1887);
+    const jB = new Map(cB.c.map(((kk, Fk) => [kk, Fk]))),
+      lB = ["jump", "primary-fire", "alt-fire"],
+      nB = ["primary-fire", "alt-fire"];
 
-    function vy(uu) {
-      return `${Yy.d}${uu}`
+    function IB(kk) {
+      return `${xB.c}${kk}`
     }
-    const ay = ["forward", "backward", "left", "right", "sprint", "jump"];
+    const QB = ["forward", "backward", "left", "right", "sprint", "jump"];
 
-    function fy(uu) {
-      const Ru = [];
-      for (const yu of uu) {
-        const uu = "string" === typeof yu ? sy.j[yu] : void 0;
-        "number" === typeof uu && Ru.push(uu)
+    function kR(kk) {
+      const Fk = [];
+      for (const Bk of kk) {
+        const kk = "string" === typeof Bk ? cB.m[Bk] : void 0;
+        "number" === typeof kk && Fk.push(kk)
       }
-      return Ru
+      return Fk
     }
-    class uE {
+    class FR {
       constructor() {
         this.keys = new Map, this.preventKeys = new Set, this.movementKeys = new Set, this.checkedDown = new Set, this.checkedUp = new Set;
-        for (const [uu, Ru] of Object.entries(sy.e)) this.keys.set(uu, Ru);
+        for (const [kk, Fk] of Object.entries(cB.f)) this.keys.set(kk, Fk);
         this.updateKeySets()
       }
-      prevents(uu) {
-        return this.preventKeys.has(uu)
+      prevents(kk) {
+        return this.preventKeys.has(kk)
       }
-      moves(uu) {
-        return this.movementKeys.has(uu)
+      moves(kk) {
+        return this.movementKeys.has(kk)
       }
-      checks(uu, Ru) {
-        return (Ru ? this.checkedDown : this.checkedUp).has(uu)
+      checks(kk, Fk) {
+        return (Fk ? this.checkedDown : this.checkedUp).has(kk)
       }
-      sync(uu, Ru) {
-        for (const [yu, Eu] of this.keys) {
-          const Ku = uu(vy(yu)),
-            Qu = Array.isArray(Ku) ? fy(Ku) : sy.e[yu];
-          (Qu.length !== Eu.length || Qu.some(((uu, Ru) => uu !== Eu[Ru]))) && this.bind(yu, Qu, Ru)
+      sync(kk, Fk) {
+        for (const [Bk, Rk] of this.keys) {
+          const tk = kk(IB(Bk)),
+            ak = Array.isArray(tk) ? kR(tk) : cB.f[Bk];
+          (ak.length !== Rk.length || ak.some(((kk, Fk) => kk !== Rk[Fk]))) && this.bind(Bk, ak, Fk)
         }
       }
-      bind(uu, Ru, yu) {
-        const Eu = oy.get(uu);
-        if (void 0 !== Eu) {
-          yu(zR.yb.Binding, 0, 0, 0, Eu | zR.p.Clear << 8);
-          for (const Qu of [...Ru, ...null !== (Ku = sy.f[uu]) && void 0 !== Ku ? Ku : []]) {
-            var Ku;
-            yu(zR.yb.Binding, Qu, 0, 0, Eu | zR.p.Add << 8)
+      bind(kk, Fk, Bk) {
+        const Rk = jB.get(kk);
+        if (void 0 !== Rk) {
+          Bk(PF.hb.Binding, 0, 0, 0, Rk | PF.l.Clear << 8);
+          for (const ak of [...Fk, ...null !== (tk = cB.j[kk]) && void 0 !== tk ? tk : []]) {
+            var tk;
+            Bk(PF.hb.Binding, ak, 0, 0, Rk | PF.l.Add << 8)
           }
-          this.keys.set(uu, Ru), this.updateKeySets()
+          this.keys.set(kk, Fk), this.updateKeySets()
         }
       }
       updateKeySets() {
         this.preventKeys.clear();
-        for (const Eu of sy.k)
-          for (const Ru of null !== (uu = this.keys.get(sy.b[Eu])) && void 0 !== uu ? uu : []) {
-            var uu;
-            this.preventKeys.add(Ru)
+        for (const Rk of cB.o)
+          for (const Fk of null !== (kk = this.keys.get(cB.c[Rk])) && void 0 !== kk ? kk : []) {
+            var kk;
+            this.preventKeys.add(Fk)
           }
         this.movementKeys.clear();
-        for (const Eu of ay)
-          for (const uu of null !== (Ru = this.keys.get(Eu)) && void 0 !== Ru ? Ru : []) {
-            var Ru;
-            this.movementKeys.add(uu)
+        for (const Rk of QB)
+          for (const kk of null !== (Fk = this.keys.get(Rk)) && void 0 !== Fk ? Fk : []) {
+            var Fk;
+            this.movementKeys.add(kk)
           }
-        for (const [Eu, Ku] of [
-            [this.checkedDown, qy],
-            [this.checkedUp, Oy]
+        for (const [Rk, tk] of [
+            [this.checkedDown, lB],
+            [this.checkedUp, nB]
           ]) {
-          Eu.clear();
-          for (const uu of Ku)
-            for (const Ru of null !== (yu = this.keys.get(uu)) && void 0 !== yu ? yu : []) {
-              var yu;
-              Eu.add(Ru)
+          Rk.clear();
+          for (const kk of tk)
+            for (const Fk of null !== (Bk = this.keys.get(kk)) && void 0 !== Bk ? Bk : []) {
+              var Bk;
+              Rk.add(Fk)
             }
         }
       }
     }
-    var RE = yu(4573),
-      yE = yu(36431);
-    const EE = "[bloxd-wasm-client]";
+    var BR = Bk(4533),
+      RR = Bk(36322);
+    const tR = "[bloxd-wasm-client]";
 
-    function KE() {
-      return "inGame" === Pu.d.get("gameState") && !(0, Dy.t)()
+    function aR() {
+      return "inGame" === pk.c.get("gameState") && !(0, NB.v)()
     }
-    let QE = null;
+    let XR = null;
 
-    function mE(uu, Ru) {
-      QE && Ru.writePendingInput() && QE.push(function(uu, Ru) {
-        let yu = "";
-        for (const Eu of Ru) yu += Eu.toString(16).padStart(2, "0");
-        return yu ? `${uu} ${yu}` : String(uu)
-      }(uu, Ru.rings.input.written()))
+    function bR(kk, Fk) {
+      XR && Fk.writePendingInput() && XR.push(function(kk, Fk) {
+        let Bk = "";
+        for (const Rk of Fk) Bk += Rk.toString(16).padStart(2, "0");
+        return Bk ? `${kk} ${Bk}` : String(kk)
+      }(kk, Fk.rings.input.written()))
     }
-    const JE = [];
+    const wR = [];
 
-    function NE(uu, Ru, yu, Eu) {
-      uu === zR.ab.InputAction && Eu === zR.ub && JE.push(Ru.getUint32(yu, !0))
+    function dR(kk, Fk, Bk, Rk) {
+      kk === PF.M.InputAction && Rk === PF.db && wR.push(Fk.getUint32(Bk, !0))
     }
-    var XE = yu(40578),
-      VE = yu(1173),
-      rE = yu(36615);
-    const BE = {
+    var sR = Bk(40427),
+      VR = Bk(1151),
+      JR = Bk(36522);
+    const AR = {
       general: {
         ok: "OK",
         tryAgain: "Try Again",
@@ -3285,187 +3285,304 @@ export const modules = {
         reload: "Reload",
         reconnect: "Rejoin"
       },
-      wasmScreens: VE.wasmScreens
+      wasmScreens: VR.wasmScreens
     };
 
-    function xE(uu) {
-      var Ru, yu;
-      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const [Ku, Qu] = uu.split(":");
-      return (null !== (Ru = null === (yu = BE[Ku]) || void 0 === yu ? void 0 : yu[Qu]) && void 0 !== Ru ? Ru : uu).replace(/\{\{(\w+)\}\}/g, ((uu, Ru) => {
-        var yu;
-        return null !== (yu = Eu[Ru]) && void 0 !== yu ? yu : uu
+    function eR(kk) {
+      var Fk, Bk;
+      let Rk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const [tk, ak] = kk.split(":");
+      return (null !== (Fk = null === (Bk = AR[tk]) || void 0 === Bk ? void 0 : Bk[ak]) && void 0 !== Fk ? Fk : kk).replace(/\{\{(\w+)\}\}/g, ((kk, Fk) => {
+        var Bk;
+        return null !== (Bk = Rk[Fk]) && void 0 !== Bk ? Bk : kk
       }))
     }
 
-    function SE(uu, Ru) {
-      (0, ey.c)();
-      const yu = document.createElement("div");
-      yu.setAttribute("role", "alertdialog"), yu.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
-      const Eu = document.createElement("div");
-      Eu.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
-      const Ku = document.createElement("h2");
-      Ku.textContent = xE(uu.title);
-      const Qu = document.createElement("p");
-      if (Qu.textContent = xE(uu.help, uu.helpValues), Qu.style.whiteSpace = "pre-line", Eu.append(Ku, Qu), uu.discordLink) {
-        const uu = document.createElement("a");
-        uu.href = rE.c, uu.target = "_blank", uu.rel = "noreferrer", uu.style.color = "#8ab4ff", uu.textContent = xE("wasmScreens:reportOnDiscord"), Eu.append(uu)
+    function yR(kk, Fk) {
+      (0, EB.d)();
+      const Bk = document.createElement("div");
+      Bk.setAttribute("role", "alertdialog"), Bk.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
+      const Rk = document.createElement("div");
+      Rk.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
+      const tk = document.createElement("h2");
+      tk.textContent = eR(kk.title);
+      const ak = document.createElement("p");
+      if (ak.textContent = eR(kk.help, kk.helpValues), ak.style.whiteSpace = "pre-line", Rk.append(tk, ak), kk.discordLink) {
+        const kk = document.createElement("a");
+        kk.href = JR.d, kk.target = "_blank", kk.rel = "noreferrer", kk.style.color = "#8ab4ff", kk.textContent = eR("wasmScreens:reportOnDiscord"), Rk.append(kk)
       }
-      const mu = document.createElement("div");
-      return mu.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", Eu.append(mu), yu.append(Eu), document.body.append(yu), new Promise((Eu => {
-        const Ku = uu => {
-            null === Ru || void 0 === Ru || Ru.removeEventListener("abort", Qu), yu.remove(), Eu(uu)
+      const Xk = document.createElement("div");
+      return Xk.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", Rk.append(Xk), Bk.append(Rk), document.body.append(Bk), new Promise((Rk => {
+        const tk = kk => {
+            null === Fk || void 0 === Fk || Fk.removeEventListener("abort", ak), Bk.remove(), Rk(kk)
           },
-          Qu = () => {
-            Ku(!1)
+          ak = () => {
+            tk(!1)
           };
-        null === Ru || void 0 === Ru || Ru.addEventListener("abort", Qu, {
+        null === Fk || void 0 === Fk || Fk.addEventListener("abort", ak, {
           once: !0
         });
-        const Ju = (uu, Ru) => {
-          const yu = document.createElement("button");
-          yu.textContent = xE(uu), yu.style.cssText = "padding:0.5rem 1.25rem;font:inherit", yu.addEventListener("click", (() => {
-            Ku(Ru)
-          })), mu.append(yu)
+        const bk = (kk, Fk) => {
+          const Bk = document.createElement("button");
+          Bk.textContent = eR(kk), Bk.style.cssText = "padding:0.5rem 1.25rem;font:inherit", Bk.addEventListener("click", (() => {
+            tk(Fk)
+          })), Xk.append(Bk)
         };
-        null !== uu.cancel && Ju(uu.cancel, !1), Ju(uu.confirm, !0)
+        null !== kk.cancel && bk(kk.cancel, !1), bk(kk.confirm, !0)
       }))
     }
-    var pE = yu(40384);
-    const TE = 6e4,
-      WE = 3e5;
-    var jE = yu(3462);
-    var HE = yu(40292),
-      dE = yu(631),
-      bE = yu(13);
+    var fR = Bk(40224);
+    const mR = 6e4,
+      WR = 3e5;
+    var vR = Bk(3442);
+    var iR = Bk(40131),
+      YR = Bk(631),
+      oR = Bk(6);
 
-    function CE(uu, Ru) {
-      const yu = bE.ab.encode(Ru);
-      ! function(uu, Ru) {
-        let yu = Ru >= 0 ? 2 * Ru : 2 * -Ru - 1;
-        for (; yu >= 128;) uu.push(yu % 128 | 128), yu = Math.floor(yu / 128);
-        uu.push(yu)
-      }(uu, yu.length);
-      for (const Eu of yu) uu.push(Eu)
+    function LR(kk, Fk) {
+      const Bk = oR.bb.encode(Fk);
+      ! function(kk, Fk) {
+        let Bk = Fk >= 0 ? 2 * Fk : 2 * -Fk - 1;
+        for (; Bk >= 128;) kk.push(Bk % 128 | 128), Bk = Math.floor(Bk / 128);
+        kk.push(Bk)
+      }(kk, Bk.length);
+      for (const Rk of Bk) kk.push(Rk)
     }
-    let kE, eE, AE;
+    let OR, ER, SR;
     (() => {
-      const uu = [0, "t", "resolv", "e", "then", "length", 1, "a", "postCo", "okies", "b", 235, 3, 5, 2, 217, void 0, !1, !0, 33554432, 67108864, "d", 161, "f", "g", "c", null, 212, 10];
+      const kk = [0, "q", "length", 1, 33554432, 67108864, 2, "b", 133, "d", 4, "e", 185, "resolv", "then", void 0, 86, "c", 83, 1023, 3, "a", 65536, 224, 42, 10, 55296, 56320, 6, 12, 63, 128, 55, 25, 5, 192, "Invalid byte index", 137, 255, 31, "Invalid continuation byte", 240, 15, 109, 7, 18, 52, !1, 188, "postCo", "okies", 216, 181, 77, 65, null, 69, 131, 46, !0, 56, "Q", ".", 84, 232];
 
-      function Ru() {}
-      const Eu = (0, bE[uu[1]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=="),
-        Ku = (0, bE[uu[1]])("QkFCWUxPTg=="),
-        Qu = (0, bE[uu[1]])("QW5kZXNpdGU="),
-        mu = (0, bE[uu[1]])("U21vb3RoIEdyYW5pdGU="),
-        Ju = (0, bE[uu[1]])("RGlvcml0ZQ=="),
-        Nu = async (Eu, Ku, Qu, mu) => {
-          const [{
-            clientSideServerUrls: Ju
-          }, {
-            postJsonWithMetricsCookiesAndJsonResponse: Nu
-          }] = await Promise.all([Promise[uu[2] + uu[3]]()[uu[4]]((() => yu(1176))), Promise[uu[2] + uu[3]]()[uu[4]](((...Eu) => (Eu[uu[5]] = uu[0], "dJIiFk" in Ru && function(...Ru) {
-            Vu(Ru[uu[5]] = uu[0], Ru[uu[7]] = function(Ru) {
-              var yu, Eu, Ku, Qu, mu, Ju, Nu, Xu, ru, Bu, xu = Ru.length;
-              if (xu < uu[14]) return uu[0];
-              if (Vu(yu = Math.max(...Ru), Eu = Math.min(...Ru)), yu === Eu) return uu[0];
-              for (Vu(Ku = Array(xu - uu[6]).fill(Number.MAX_SAFE_INTEGER), Qu = Array(xu - uu[6]).fill(Number.MIN_SAFE_INTEGER), mu = Math.ceil((yu - Eu) / (xu - uu[6])), Ju = uu[0]), Nu = uu[0]; Nu < xu; Nu++) Ru[Nu] !== Eu && Ru[Nu] !== yu && Vu(Ju = Math.floor((Ru[Nu] - Eu) / mu), Ku[Ju] = Math.min(Ku[Ju], Ru[Nu]), Qu[Ju] = Math.max(Qu[Ju], Ru[Nu]));
-              for (Vu(Xu = Number.MIN_SAFE_INTEGER, ru = Eu), Bu = uu[0]; Bu < xu - uu[6]; Bu++) Ku[Bu] === Number.MAX_SAFE_INTEGER && Qu[Bu] === Number.MIN_SAFE_INTEGER || Vu(Xu = Math.max(Xu, Ku[Bu] - ru), ru = Qu[Bu]);
-              return Xu = Math.max(Xu, yu - ru)
-            }, console.log(Ru[uu[7]]))
-          }(), yu(1110))))]), Xu = Ju.getHttpUrlFromWebSocketUrl(Eu.endpoint), ru = Eu[uu[8] + uu[9]] === uu[26] ? uu[16] : await Eu[uu[8] + uu[9]]();
-          await Nu("" + Xu + Ku, Qu, {
-            retries: mu
-          }, ru)
-        };
-      kE = async (yu, Eu) => {
-        const Ku = function(uu, Ru, yu, Eu) {
-          const Ku = [];
-          CE(Ku, uu), CE(Ku, Ru), CE(Ku, yu);
-          for (const Qu of Eu) Ku.push(Qu);
-          return Ku
-        }(yu.game, yu.lobby, (0, dE[uu[21]])(), Eu);
-        try {
-          await Nu(yu, "/persisted/keep-alive", {
-            type: "XS",
-            data: Ku
-          }, uu[12])
-        } catch (mu) {
-          function Ju(...Ru) {
-            Vu(Ru[uu[5]] = uu[0], Ru[uu[7]] = function(...yu) {
-              return yu[uu[5]] = uu[14], Ru[-uu[15]]({}, yu[uu[0]], yu[uu[6]])
-            }, Ru[-uu[15]] = function(yu, Eu, Ku) {
-              var Qu, mu, Ju, Nu = {};
-              if (yu[Eu + Ku] !== uu[16]) return yu[Eu + Ku];
-              if (Eu === Ku) return uu[18];
-              for (Qu = uu[0]; Qu < Eu.length; Qu++) Nu[Eu[Qu]] === uu[16] && (Nu[Eu[Qu]] = uu[0]), Nu[Ku[Qu]] === uu[16] && (Nu[Ku[Qu]] = uu[0]), Vu(Nu[Eu[Qu]]++, Nu[Ku[Qu]]--);
-              for (mu in Nu)
-                if (Nu[mu] !== uu[0]) return yu[Eu + Ku] = uu[17], uu[17];
-              for (Ju = uu[6]; Ju < Eu.length; Ju++)
-                if (Ru[-uu[15]](yu, Eu.substr(uu[0], Ju), Ku.substr(uu[0], Ju)) && Ru[-uu[15]](yu, Eu.substr(Ju), Ku.substr(Ju)) || Ru[-uu[15]](yu, Eu.substr(uu[0], Ju), Ku.substr(Ku.length - Ju)) && Ru[-uu[15]](yu, Eu.substr(Ju), Ku.substr(uu[0], Ku.length - Ju))) return yu[Eu + Ku] = uu[18], uu[18];
-              return yu[Eu + Ku] = uu[17], uu[17]
-            }, console.log(Ru[uu[7]]))
-          }
-          "UlDXqV" in Ru && Ju(), console.warn(mu)
-        }
-      };
-      const Xu = (...Ru) => (Ru[uu[5]] = uu[14], Object.getOwnPropertyDescriptor(Ru[uu[0]], Ru[uu[6]]));
-
-      function Vu() {
-        Vu = function() {}
-      }
-      eE = () => {
-        if ((0, bE.J)(), Xu(navigator, Eu) !== uu[16]) {
-          function yu(...Ru) {
-            function yu(...Ru) {
-              return Ru[uu[5]] = uu[6], Ru[uu[0]][uu[6]] * uu[20] + (Ru[uu[0]][uu[0]] < uu[0] ? uu[19] | Ru[uu[0]][uu[0]] : Ru[uu[0]][uu[0]])
+      function Fk() {}
+      const Rk = (kk[0], oR[kk[1]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=="),
+        tk = (kk[0], oR[kk[1]])("QkFCWUxPTg=="),
+        ak = (kk[0], oR[kk[1]])("QW5kZXNpdGU="),
+        Xk = (kk[0], oR[kk[1]])("U21vb3RoIEdyYW5pdGU="),
+        bk = (kk[0], oR[kk[1]])("RGlvcml0ZQ=="),
+        wk = async (Rk, tk, ak, Xk) => {
+          "NAU8g4" in Fk && function(...Fk) {
+            function Bk(...Fk) {
+              return Fk[kk[2]] = kk[3], Fk[kk[0]][kk[3]] * kk[5] + (Fk[kk[0]][kk[0]] < kk[0] ? kk[4] | Fk[kk[0]][kk[0]] : Fk[kk[0]][kk[0]])
             }
 
-            function Eu(...Ru) {
-              switch (Ru[uu[5]] = uu[6], ((Ru[uu[0]] & uu[19]) !== uu[0]) * uu[6] + (Ru[uu[0]] < uu[0]) * uu[14]) {
-                case uu[0]:
-                  return [Ru[uu[0]] % uu[19], Math.trunc(Ru[uu[0]] / uu[20])];
-                case uu[6]:
-                  return [Ru[uu[0]] % uu[19] - uu[19], Math.trunc(Ru[uu[0]] / uu[20]) + uu[6]];
-                case uu[14]:
-                  return [((Ru[uu[0]] + uu[19]) % uu[19] + uu[19]) % uu[19], Math.round(Ru[uu[0]] / uu[20])];
-                case uu[12]:
-                  return [Ru[uu[0]] % uu[19], Math.trunc(Ru[uu[0]] / uu[20])]
+            function Rk(...Fk) {
+              switch (Fk[kk[2]] = kk[3], ((Fk[kk[0]] & kk[4]) !== kk[0]) * kk[3] + (Fk[kk[0]] < kk[0]) * kk[6]) {
+                case kk[0]:
+                  return [Fk[kk[0]] % kk[4], Math.trunc(Fk[kk[0]] / kk[5])];
+                case kk[3]:
+                  return [Fk[kk[0]] % kk[4] - kk[4], Math.trunc(Fk[kk[0]] / kk[5]) + kk[3]];
+                case kk[6]:
+                  return [((Fk[kk[0]] + kk[4]) % kk[4] + kk[4]) % kk[4], Math.round(Fk[kk[0]] / kk[5])];
+                case kk[20]:
+                  return [Fk[kk[0]] % kk[4], Math.trunc(Fk[kk[0]] / kk[5])]
               }
             }
-            Ru[uu[5]] = uu[0], Vu(Ru[uu[10]] = yu([uu[14], 4]), Ru[uu[6]] = yu([uu[6], uu[14]]), Ru[uu[21]] = Ru[uu[10]] + Ru[uu[6]], Ru[-uu[22]] = Ru[uu[21]] - Ru[uu[6]], Ru[uu[23]] = Ru[-uu[22]] * uu[14], Ru[uu[24]] = Ru[uu[23]] / uu[14], console.log(Eu(Ru[uu[21]])), console.log(Eu(Ru[-uu[22]])), console.log(Eu(Ru[uu[23]])), console.log(Eu(Ru[uu[24]])))
+            Fk[kk[2]] = kk[0], sk(Fk[kk[7]] = Bk([kk[6], kk[10]]), Fk[kk[8]] = Bk([kk[3], kk[6]]), Fk[kk[9]] = Fk[kk[7]] + Fk[kk[8]], Fk[kk[11]] = Fk[kk[9]] - Fk[kk[8]], Fk[kk[10]] = Fk[kk[11]] * kk[6], Fk[-kk[12]] = Fk[kk[10]] / kk[6], console.log(Rk(Fk[kk[9]])), console.log(Rk(Fk[kk[11]])), console.log(Rk(Fk[kk[10]])), console.log(Rk(Fk[-kk[12]])))
+          }();
+          const [{
+            clientSideServerUrls: bk
+          }, {
+            ["postJsonWithMetricsCookiesAndJsonRespons" + kk[11]]: wk
+          }] = await Promise.all([Promise[kk[13] + kk[11]]()[kk[14]](((...Rk) => (Rk[kk[2]] = kk[0], "uP7lvg" in Fk && function(...Fk) {
+            Fk[kk[2]] = kk[0]
+          }(), Bk(1154)))), Promise[kk[13] + kk[11]]()[kk[14]](((...Rk) => (Rk[kk[2]] = kk[0], "piup1u" in Fk && function() {
+            ! function(...Fk) {
+              function Bk(...Fk) {
+                for (sk(Fk[kk[2]] = kk[3], Fk[kk[3]] = [], Fk[kk[16]] = kk[0], Fk[kk[17]] = Fk[kk[0]].length, Fk[kk[9]] = kk[15], Fk[-kk[18]] = kk[15]); Fk[kk[16]] < Fk[kk[17]];) sk(Fk[kk[9]] = Fk[kk[0]].charCodeAt(Fk[kk[16]]++), Fk[kk[9]] >= kk[26] && Fk[kk[9]] <= 56319 && Fk[kk[16]] < Fk[kk[17]] ? (Fk[-kk[18]] = Fk[kk[0]].charCodeAt(Fk[kk[16]]++), (64512 & Fk[-kk[18]]) == kk[27] ? Fk[kk[3]].push(((Fk[kk[9]] & kk[19]) << kk[25]) + (Fk[-kk[18]] & kk[19]) + kk[22]) : (Fk[kk[3]].push(Fk[kk[9]]), Fk[kk[16]]--)) : Fk[kk[3]].push(Fk[kk[9]]));
+                return Fk[kk[3]]
+              }
+
+              function Rk(...Bk) {
+                for (sk(Bk[kk[2]] = kk[3], Bk[kk[21]] = Bk[kk[0]].length, Bk[kk[7]] = -kk[3], Bk[kk[20]] = kk[15], Bk[kk[23]] = ""); ++Bk[kk[7]] < Bk[kk[21]];) Bk[kk[20]] = Bk[kk[0]][Bk[kk[7]]], Bk[kk[20]] > 65535 && sk(Bk[kk[20]] -= kk[22], Bk[kk[23]] += Fk[-kk[24]](Bk[kk[20]] >>> kk[25] & kk[19] | kk[26]), Bk[kk[20]] = kk[27] | Bk[kk[20]] & kk[19]), Bk[kk[23]] += Fk[-kk[24]](Bk[kk[20]]);
+                return Bk[kk[23]]
+              }
+
+              function tk(...Fk) {
+                if (Fk[kk[2]] = kk[3], Fk[kk[0]] >= kk[26] && Fk[kk[0]] <= 57343) throw Error("Lone surrogate U+" + Fk[kk[0]].toString(16).toUpperCase() + " is not a scalar value")
+              }
+
+              function ak(...Bk) {
+                return Bk[kk[2]] = kk[6], Fk[-kk[24]](Bk[kk[0]] >> Bk[kk[3]] & kk[30] | kk[31])
+              }
+
+              function Xk(...Bk) {
+                return Bk[kk[2]] = kk[3], (4294967168 & Bk[kk[0]]) == kk[0] ? Fk[-kk[24]](Bk[kk[0]]) : (Bk[kk[3]] = "", (4294965248 & Bk[kk[0]]) == kk[0] ? Bk[kk[3]] = Fk[-kk[24]](Bk[kk[0]] >> kk[28] & kk[39] | kk[35]) : (4294901760 & Bk[kk[0]]) == kk[0] ? sk(tk(Bk[kk[0]]), Bk[kk[3]] = Fk[-kk[24]](Bk[kk[0]] >> kk[29] & kk[42] | kk[23]), Bk[kk[3]] += ak(Bk[kk[0]], kk[28])) : (4292870144 & Bk[kk[0]]) == kk[0] && sk(Bk[kk[3]] = Fk[-kk[24]](Bk[kk[0]] >> kk[45] & kk[44] | kk[41]), Bk[kk[3]] += ak(Bk[kk[0]], kk[29]), Bk[kk[3]] += ak(Bk[kk[0]], kk[28])), Bk[kk[3]] += Fk[-kk[24]](Bk[kk[0]] & kk[30] | kk[31]), Bk[kk[3]])
+              }
+
+              function bk(...Fk) {
+                for (sk(Fk[kk[2]] = kk[3], Fk[-kk[32]] = Bk(Fk[kk[0]]), Fk[-kk[33]] = Fk[-kk[32]].length, Fk[-kk[23]] = -kk[3], Fk[kk[9]] = kk[15], Fk[kk[34]] = ""); ++Fk[-kk[23]] < Fk[-kk[33]];) sk(Fk[kk[9]] = Fk[-kk[32]][Fk[-kk[23]]], Fk[kk[34]] += Xk(Fk[kk[9]]));
+                return Fk[kk[34]]
+              }
+
+              function wk(...Bk) {
+                if (Bk[kk[2]] = kk[0], Fk[kk[7]] >= Fk[kk[17]]) throw Error(kk[36]);
+                if (sk(Bk[kk[21]] = Fk[kk[10]][Fk[kk[7]]] & kk[38], Fk[kk[7]]++), (Bk[kk[21]] & kk[35]) == kk[31]) return Bk[kk[21]] & kk[30];
+                throw Error(kk[40])
+              }
+
+              function dk(...Bk) {
+                if (sk(Bk[kk[2]] = kk[0], Bk[-kk[37]] = kk[15], Bk[kk[7]] = kk[15], Bk[kk[6]] = kk[15], Bk[-kk[43]] = kk[15], Bk[kk[10]] = kk[15]), Fk[kk[7]] > Fk[kk[17]]) throw Error(kk[36]);
+                if (Fk[kk[7]] == Fk[kk[17]]) return kk[47];
+                if (sk(Bk[-kk[37]] = Fk[kk[10]][Fk[kk[7]]] & kk[38], Fk[kk[7]]++), (Bk[-kk[37]] & kk[31]) == kk[0]) return Bk[-kk[37]];
+                if ((Bk[-kk[37]] & kk[23]) == kk[35]) {
+                  if (sk(Bk[kk[7]] = wk(), Bk[kk[10]] = (Bk[-kk[37]] & kk[39]) << kk[28] | Bk[kk[7]]), Bk[kk[10]] >= kk[31]) return Bk[kk[10]];
+                  throw Error(kk[40])
+                }
+                if ((Bk[-kk[37]] & kk[41]) == kk[23]) {
+                  if (sk(Bk[kk[7]] = wk(), Bk[kk[6]] = wk(), Bk[kk[10]] = (Bk[-kk[37]] & kk[42]) << kk[29] | Bk[kk[7]] << kk[28] | Bk[kk[6]]), Bk[kk[10]] >= 2048) return tk(Bk[kk[10]]), Bk[kk[10]];
+                  throw Error(kk[40])
+                }
+                if ((248 & Bk[-kk[37]]) == kk[41] && (sk(Bk[kk[7]] = wk(), Bk[kk[6]] = wk(), Bk[-kk[43]] = wk(), Bk[kk[10]] = (Bk[-kk[37]] & kk[44]) << kk[45] | Bk[kk[7]] << kk[29] | Bk[kk[6]] << kk[28] | Bk[-kk[43]]), Bk[kk[10]] >= kk[22] && Bk[kk[10]] <= 1114111)) return Bk[kk[10]];
+                throw Error("Invalid UTF-8 detected")
+              }
+
+              function Vk(...tk) {
+                for (sk(tk[kk[2]] = kk[3], Fk[kk[10]] = Bk(tk[kk[0]]), Fk[kk[17]] = Fk[kk[10]].length, Fk[kk[7]] = kk[0], tk[kk[48]] = [], tk[-kk[46]] = kk[15]);
+                  (tk[-kk[46]] = dk()) !== kk[47];) tk[kk[48]].push(tk[-kk[46]]);
+                return Rk(tk[kk[48]])
+              }
+              sk(Fk[kk[2]] = kk[3], Fk[-kk[24]] = String.fromCharCode), sk(Fk[kk[10]] = kk[15], Fk[kk[17]] = kk[15], Fk[kk[7]] = kk[15]), sk(Fk[kk[0]].version = "3.0.0", Fk[kk[0]].encode = bk, Fk[kk[0]].decode = Vk)
+            }("undefined" === typeof exports ? this.utf8 = {} : exports)
+          }(), Bk(1101))))]), dk = bk.getHttpUrlFromWebSocketUrl(Rk.endpoint), Vk = Rk[kk[49] + kk[50]] === kk[55] ? kk[15] : await Rk[kk[49] + kk[50]]();
+          await wk("" + dk + tk, ak, {
+            retries: Xk
+          }, Vk)
+        };
+      OR = async (Bk, Rk) => {
+        const tk = function(kk, Fk, Bk, Rk) {
+          const tk = [];
+          LR(tk, kk), LR(tk, Fk), LR(tk, Bk);
+          for (const ak of Rk) tk.push(ak);
+          return tk
+        }(Bk.game, Bk.lobby, (kk[0], YR[kk[9]])(), Rk);
+        try {
+          await wk(Bk, "/persisted/keep-alive", {
+            type: "Ge",
+            data: tk
+          }, kk[20])
+        } catch (ak) {
+          function bk(...Fk) {
+            sk(Fk[kk[2]] = kk[0], Fk[-kk[52]] = function(...Bk) {
+              return sk(Bk[kk[2]] = kk[3], Bk[-kk[51]] = []), (Bk[kk[0]] === kk[3] || Bk[kk[0]] >= kk[10]) && Fk[kk[3]](Bk[-kk[51]], [], Bk[kk[0]], kk[0]), Bk[-kk[51]]
+            }, Fk[kk[3]] = function(...Bk) {
+              for (Bk[kk[2]] = kk[10], Bk[kk[21]] = Bk[kk[20]]; Bk[kk[21]] < Bk[kk[6]]; Bk[kk[21]]++) {
+                if (Bk[kk[3]].length !== Bk[kk[21]]) return;
+                for (Bk[kk[52]] = kk[0]; Bk[kk[52]] < Bk[kk[6]]; Bk[kk[52]]++) Fk[kk[6]](Bk[kk[3]], [Bk[kk[21]], Bk[kk[52]]]) && (sk(Bk[kk[3]].push([Bk[kk[21]], Bk[kk[52]]]), Fk[kk[3]](Bk[kk[0]], Bk[kk[3]], Bk[kk[6]], Bk[kk[21]] + kk[3])), Bk[kk[3]].length === Bk[kk[6]] && Bk[kk[0]].push(Fk[-kk[30]](Bk[kk[3]])), Bk[kk[3]].pop())
+              }
+            }, Fk[-kk[30]] = function(...Fk) {
+              for (sk(Fk[kk[2]] = kk[3], Fk[kk[53]] = [], Fk[kk[6]] = Fk[kk[0]].length), Fk[kk[17]] = kk[0]; Fk[kk[17]] < Fk[kk[6]]; Fk[kk[17]]++)
+                for (Fk[kk[53]][Fk[kk[17]]] = "", Fk[kk[10]] = kk[0]; Fk[kk[10]] < Fk[kk[6]]; Fk[kk[10]]++) Fk[kk[53]][Fk[kk[17]]] += Fk[kk[0]][Fk[kk[17]]][kk[3]] === Fk[kk[10]] ? kk[61] : kk[62];
+              return Fk[kk[53]]
+            }, Fk[kk[6]] = function(Fk, Bk) {
+              var Rk, tk = Fk.length;
+              for (Rk = kk[0]; Rk < tk; Rk++) {
+                if (Fk[Rk][kk[0]] === Bk[kk[0]] || Fk[Rk][kk[3]] === Bk[kk[3]]) return kk[47];
+                if (Math.abs((Fk[Rk][kk[0]] - Bk[kk[0]]) / (Fk[Rk][kk[3]] - Bk[kk[3]])) === kk[3]) return kk[47]
+              }
+              return kk[59]
+            }, console.log(Fk[-kk[52]]))
           }
-          return "YYcLjJ" in Ru && yu(), Qu
+          "xU0j5C" in Fk && bk(), console.warn(ak)
         }
-        return Xu(window, Ku) === uu[16] ? mu : Ju
-      }, AE = async yu => {
-        "DA6wVBx" in Ru && function(...Ru) {
-          function yu() {}
-          Ru[uu[5]] = uu[0], Vu(Ru[uu[7]] = function(...Ru) {
-            for (Vu(Ru[uu[5]] = uu[14], Ru[uu[7]] = uu[0], Ru[uu[27]] = uu[0], Ru[uu[25]] = new yu(uu[0]), Ru[uu[21]] = Ru[uu[25]], Ru[uu[3]] = Ru[uu[0]], Ru[uu[23]] = Ru[uu[6]]); Ru[uu[3]] !== uu[26] || Ru[uu[23]] !== uu[26];) Vu(Ru[uu[27]] = (Ru[uu[3]] ? Ru[uu[3]].val : uu[0]) + (Ru[uu[23]] ? Ru[uu[23]].val : uu[0]) + Ru[uu[7]], Ru[uu[7]] = Math.floor(Ru[uu[27]] / uu[28]), Ru[uu[21]].next = new yu(Ru[uu[27]] % uu[28]), Ru[uu[21]] = Ru[uu[21]].next, Ru[uu[3]] = Ru[uu[3]] ? Ru[uu[3]].next : uu[26], Ru[uu[23]] = Ru[uu[23]] ? Ru[uu[23]].next : uu[26]);
-            return Ru[uu[7]] && (Ru[uu[21]].next = new yu(Ru[uu[7]])), Ru[uu[25]].next
-          }, console.log(Ru[uu[7]]))
+      };
+      const dk = (...Bk) => (Bk[kk[2]] = kk[6], "zEvGTru" in Fk && function(...Fk) {
+        function Bk() {}
+        Fk[kk[2]] = kk[0], sk(Fk[kk[58]] = function(...Fk) {
+          for (sk(Fk[kk[2]] = kk[6], Fk[kk[6]] = kk[0], Fk[-kk[57]] = kk[0], Fk[-kk[54]] = new Bk(kk[0]), Fk[kk[9]] = Fk[-kk[54]], Fk[kk[11]] = Fk[kk[0]], Fk[-kk[56]] = Fk[kk[3]]); Fk[kk[11]] !== kk[55] || Fk[-kk[56]] !== kk[55];) sk(Fk[-kk[57]] = (Fk[kk[11]] ? Fk[kk[11]].val : kk[0]) + (Fk[-kk[56]] ? Fk[-kk[56]].val : kk[0]) + Fk[kk[6]], Fk[kk[6]] = Math.floor(Fk[-kk[57]] / kk[25]), Fk[kk[9]].next = new Bk(Fk[-kk[57]] % kk[25]), Fk[kk[9]] = Fk[kk[9]].next, Fk[kk[11]] = Fk[kk[11]] ? Fk[kk[11]].next : kk[55], Fk[-kk[56]] = Fk[-kk[56]] ? Fk[-kk[56]].next : kk[55]);
+          return Fk[kk[6]] && (Fk[kk[9]].next = new Bk(Fk[kk[6]])), Fk[-kk[54]].next
+        }, console.log(Fk[kk[58]]))
+      }(), Object.getOwnPropertyDescriptor(Bk[kk[0]], Bk[kk[3]]));
+
+      function sk() {
+        sk = function() {}
+      }
+      ER = () => {
+        if ((kk[0], oR.H)(), dk(navigator, Rk) !== kk[15]) {
+          function Bk() {
+            var Fk;
+            sk(Fk = function(Bk, Rk, tk, ak, Xk, bk, wk) {
+              var dk = kk[47];
+              return bk >= tk.length ? kk[59] : wk["" + ak + Xk + bk] !== kk[15] ? wk["" + ak + Xk + bk] : (tk[bk] === Bk[ak] && tk[bk] === Rk[Xk] ? dk = Fk(Bk, Rk, tk, ak + kk[3], Xk, bk + kk[3], wk) || Fk(Bk, Rk, tk, ak, Xk + kk[3], bk + kk[3], wk) : tk[bk] === Bk[ak] ? dk = Fk(Bk, Rk, tk, ak + kk[3], Xk, bk + kk[3], wk) : tk[bk] === Rk[Xk] && (dk = Fk(Bk, Rk, tk, ak, Xk + kk[3], bk + kk[3], wk)), wk["" + ak + Xk + bk] = dk, dk)
+            }, console.log((function(...Bk) {
+              return sk(Bk[kk[2]] = kk[20], Bk[kk[21]] = {}), Bk[kk[6]].length !== Bk[kk[0]].length + Bk[kk[3]].length ? kk[47] : Fk(Bk[kk[0]], Bk[kk[3]], Bk[kk[6]], kk[0], kk[0], kk[0], Bk[kk[21]])
+            })))
+          }
+          return "my5ERy" in Fk && Bk(), ak
+        }
+        if (dk(window, tk) === kk[15]) {
+          function wk(...Fk) {
+            sk(Fk[kk[2]] = kk[0], Fk[kk[7]] = function(Bk) {
+              var Rk = [];
+              return (Bk === kk[3] || Bk >= kk[10]) && Fk[-kk[60]](Rk, [], Bk, kk[0]), Rk
+            }, Fk[-kk[60]] = function(...Bk) {
+              for (Bk[kk[2]] = kk[10], Bk[kk[21]] = Bk[kk[20]]; Bk[kk[21]] < Bk[kk[6]]; Bk[kk[21]]++) {
+                if (Bk[kk[3]].length !== Bk[kk[21]]) return;
+                for (Bk[kk[7]] = kk[0]; Bk[kk[7]] < Bk[kk[6]]; Bk[kk[7]]++) Fk[kk[9]](Bk[kk[3]], [Bk[kk[21]], Bk[kk[7]]]) && (sk(Bk[kk[3]].push([Bk[kk[21]], Bk[kk[7]]]), Fk[-kk[60]](Bk[kk[0]], Bk[kk[3]], Bk[kk[6]], Bk[kk[21]] + kk[3])), Bk[kk[3]].length === Bk[kk[6]] && Bk[kk[0]].push(Fk[kk[20]](Bk[kk[3]])), Bk[kk[3]].pop())
+              }
+            }, Fk[kk[20]] = function(Fk) {
+              var Bk, Rk, tk = [];
+              for (Bk = Fk.length, Rk = kk[0]; Rk < Bk; Rk++) {
+                var ak;
+                for (tk[Rk] = "", ak = kk[0]; ak < Bk; ak++) tk[Rk] += Fk[Rk][kk[3]] === ak ? kk[61] : kk[62]
+              }
+              return tk
+            }, Fk[kk[9]] = function(Fk, Bk) {
+              var Rk, tk = Fk.length;
+              for (Rk = kk[0]; Rk < tk; Rk++) {
+                if (Fk[Rk][kk[0]] === Bk[kk[0]] || Fk[Rk][kk[3]] === Bk[kk[3]]) return kk[47];
+                if (Math.abs((Fk[Rk][kk[0]] - Bk[kk[0]]) / (Fk[Rk][kk[3]] - Bk[kk[3]])) === kk[3]) return kk[47]
+              }
+              return kk[59]
+            }, console.log(Fk[kk[7]]))
+          }
+          return "wcHxKgz" in Fk && wk(), Xk
+        }
+        return bk
+      }, SR = async Bk => {
+        "U89q2E" in Fk && function(...Fk) {
+          Fk[kk[2]] = kk[0]
         }();
         try {
-          const Ru = eE();
-          await Nu(yu, "/images/" + Ru + ".png", {
-            block: Ru
-          }, uu[0])
-        } catch {}
+          const Rk = ER();
+          await wk(Bk, "/images/" + Rk + ".png", {
+            block: Rk
+          }, kk[0])
+        } catch {
+          function tk(...Fk) {
+            function Bk(Fk) {
+              return Fk[kk[3]] * kk[5] + (Fk[kk[0]] < kk[0] ? kk[4] | Fk[kk[0]] : Fk[kk[0]])
+            }
+
+            function Rk(...Fk) {
+              switch (Fk[kk[2]] = kk[3], ((Fk[kk[0]] & kk[4]) !== kk[0]) * kk[3] + (Fk[kk[0]] < kk[0]) * kk[6]) {
+                case kk[0]:
+                  return [Fk[kk[0]] % kk[4], Math.trunc(Fk[kk[0]] / kk[5])];
+                case kk[3]:
+                  return [Fk[kk[0]] % kk[4] - kk[4], Math.trunc(Fk[kk[0]] / kk[5]) + kk[3]];
+                case kk[6]:
+                  return [((Fk[kk[0]] + kk[4]) % kk[4] + kk[4]) % kk[4], Math.round(Fk[kk[0]] / kk[5])];
+                case kk[20]:
+                  return [Fk[kk[0]] % kk[4], Math.trunc(Fk[kk[0]] / kk[5])]
+              }
+            }
+            Fk[kk[2]] = kk[0], sk(Fk[-kk[63]] = Bk([kk[6], kk[10]]), Fk[kk[7]] = Bk([kk[3], kk[6]]), Fk[kk[17]] = Fk[-kk[63]] + Fk[kk[7]], Fk[kk[9]] = Fk[kk[17]] - Fk[kk[7]], Fk[kk[10]] = Fk[kk[9]] * kk[6], Fk[kk[64]] = Fk[kk[10]] / kk[6], console.log(Rk(Fk[kk[17]])), console.log(Rk(Fk[kk[9]])), console.log(Rk(Fk[kk[10]])), console.log(Rk(Fk[kk[64]])))
+          }
+          "z71jK_" in Fk && tk()
+        }
       }
     })();
-    var DE = yu(40454),
-      ME = yu(1731);
-    const IE = 1e3 * DE.b.seatReservationSeconds - 3e3;
-    class GE {
-      constructor(uu) {
-        var Ru, yu, Eu, Ku;
-        let Qu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (Ru = Qu.wallNow) && void 0 !== Ru ? Ru : Date.now, this.monoNow = null !== (yu = Qu.monoNow) && void 0 !== yu ? yu : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (Eu = Qu.sleep) && void 0 !== Eu ? Eu : ME.d, this.follow = new HR.b(Qu.signal);
-        const mu = null !== (Ku = Qu.fetch) && void 0 !== Ku ? Ku : fetch;
-        this.seat = (0, By.j)(uu.endpoint, uu.roomName, uu.joinOptions, {
+    var NR = Bk(40305),
+      HR = Bk(1727);
+    const uR = 1e3 * NR.b.seatReservationSeconds - 3e3;
+    class MR {
+      constructor(kk) {
+        var Fk, Bk, Rk, tk;
+        let ak = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (Fk = ak.wallNow) && void 0 !== Fk ? Fk : Date.now, this.monoNow = null !== (Bk = ak.monoNow) && void 0 !== Bk ? Bk : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (Rk = ak.sleep) && void 0 !== Rk ? Rk : HR.b, this.follow = new iF.d(ak.signal);
+        const Xk = null !== (tk = ak.fetch) && void 0 !== tk ? tk : fetch;
+        this.seat = (0, AB.h)(kk.endpoint, kk.roomName, kk.joinOptions, {
           sleep: this.sleep,
           signal: this.follow.signal,
-          fetch: (uu, Ru) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), mu(uu, Ru)),
+          fetch: (kk, Fk) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), Xk(kk, Fk)),
           onRefusal: () => {
             this.refusals++
           }
@@ -3481,45 +3598,45 @@ export const modules = {
       rematched() {
         "unused" === this.use && (this.use = "rematched"), this.abort()
       }
-      async take(uu) {
+      async take(kk) {
         if ("rematched" === this.use) return;
-        (0, HR.p)(uu);
-        const Ru = "pending" !== this.request,
-          yu = () => {
-            this.abort((0, HR.e)(uu))
+        (0, iF.k)(kk);
+        const Fk = "pending" !== this.request,
+          Bk = () => {
+            this.abort((0, iF.e)(kk))
           };
-        let Eu;
-        null === uu || void 0 === uu || uu.addEventListener("abort", yu, {
+        let Rk;
+        null === kk || void 0 === kk || kk.addEventListener("abort", Bk, {
           once: !0
         });
         try {
-          Eu = await this.seat
-        } catch (Ku) {
-          if ((0, HR.p)(uu), !Ru) throw Ku;
+          Rk = await this.seat
+        } catch (tk) {
+          if ((0, iF.k)(kk), !Fk) throw tk;
           return void(this.use = "lost")
         } finally {
-          null === uu || void 0 === uu || uu.removeEventListener("abort", yu)
+          null === kk || void 0 === kk || kk.removeEventListener("abort", Bk)
         }
-        if ((0, HR.p)(uu), !(this.ageMs() > IE)) return this.use = "taken", Eu;
+        if ((0, iF.k)(kk), !(this.ageMs() > uR)) return this.use = "taken", Rk;
         this.use = "renewed"
       }
-      async reserveInstead(uu, Ru) {
+      async reserveInstead(kk, Fk) {
         try {
-          return await uu()
-        } catch (yu) {
-          const Ku = this.holdLeftMs();
-          if (!(yu instanceof su.l) || yu.code !== Eu.c.duplicateLobbyNameError.code || 0 === Ku) throw yu;
-          return await this.sleep(Ku + 500, Ru), uu()
+          return await kk()
+        } catch (Bk) {
+          const tk = this.holdLeftMs();
+          if (!(Bk instanceof ck.n) || Bk.code !== Rk.e.duplicateLobbyNameError.code || 0 === tk) throw Bk;
+          return await this.sleep(tk + 500, Fk), kk()
         }
       }
       release() {
         const {
-          request: uu,
-          use: Ru
-        } = this, yu = this.holdsNoSeat();
-        return this.abort(), "taken" === Ru || yu ? null : {
-          unused: "unused" === Ru ? "abandoned" : Ru,
-          answered: "answered" === uu,
+          request: kk,
+          use: Fk
+        } = this, Bk = this.holdsNoSeat();
+        return this.abort(), "taken" === Fk || Bk ? null : {
+          unused: "unused" === Fk ? "abandoned" : Fk,
+          answered: "answered" === kk,
           heldMs: Math.round(this.ageMs())
         }
       }
@@ -3527,36 +3644,36 @@ export const modules = {
         return this.posts === this.refusals
       }
       holdLeftMs() {
-        var uu;
+        var kk;
         if ("taken" === this.use || this.holdsNoSeat()) return 0;
-        const Ru = null !== (uu = this.answeredAt) && void 0 !== uu ? uu : {
+        const Fk = null !== (kk = this.answeredAt) && void 0 !== kk ? kk : {
             wall: this.wallAt,
             mono: this.monoAt
           },
-          yu = Math.max(this.wallNow() - Ru.wall, this.monoNow() - Ru.mono);
-        return Math.max(0, 1e3 * DE.b.seatReservationSeconds - yu)
+          Bk = Math.max(this.wallNow() - Fk.wall, this.monoNow() - Fk.mono);
+        return Math.max(0, 1e3 * NR.b.seatReservationSeconds - Bk)
       }
       ageMs() {
         return Math.max(this.wallNow() - this.wallAt, this.monoNow() - this.monoAt)
       }
-      abort(uu) {
-        (0, HR.i)(this.follow.controller, uu)
+      abort(kk) {
+        (0, iF.i)(this.follow.controller, kk)
       }
     }
-    var UE = yu(1823),
-      nE = yu(40582);
-    const sE = new Uint8Array(0);
-    class tE {
-      constructor(uu) {
-        if (this.options = uu, this.slots = [], this.createWorker = null, this.stopped = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === uu.module) return this.stopped = !0, void uu.fail("no wasm module for the meshing workers");
-        uu.loadWorkers().then((uu => {
+    var gR = Bk(1808),
+      UR = Bk(40431);
+    const cR = new Uint8Array(0);
+    class GR {
+      constructor(kk) {
+        if (this.options = kk, this.slots = [], this.createWorker = null, this.stopped = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === kk.module) return this.stopped = !0, void kk.fail("no wasm module for the meshing workers");
+        kk.loadWorkers().then((kk => {
           let {
-            create: Ru,
-            count: yu
-          } = uu;
+            create: Fk,
+            count: Bk
+          } = kk;
           if (!this.stopped) {
-            this.createWorker = Ru;
-            for (let uu = 0; uu < yu; uu++) this.slots.push({
+            this.createWorker = Fk;
+            for (let kk = 0; kk < Bk; kk++) this.slots.push({
               worker: null,
               started: !1,
               watch: null,
@@ -3566,365 +3683,365 @@ export const modules = {
               gone: !1,
               goneFor: null
             });
-            for (let uu = 0; uu < yu; uu++) this.start(uu)
+            for (let kk = 0; kk < Bk; kk++) this.start(kk)
           }
-        }), (uu => {
-          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", uu))
+        }), (kk => {
+          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", kk))
         }))
       }
-      take(uu, Ru, yu) {
-        const Eu = this.slots[Ru];
-        if (uu === zR.Jd.Retire) {
-          var Ku, Qu, mu;
-          if (Eu && !Eu.gone) null === (Ku = Eu.worker) || void 0 === Ku || Ku.terminate(), Eu.worker = null, Eu.started = !1, null === (Qu = (mu = this.options).onMemoryGone) || void 0 === Qu || Qu.call(mu, Ru), this.giveUp(Ru, "had its tables trap twice", "every meshing worker's tables trapped twice");
+      take(kk, Fk, Bk) {
+        const Rk = this.slots[Fk];
+        if (kk === PF.ed.Retire) {
+          var tk, ak, Xk;
+          if (Rk && !Rk.gone) null === (tk = Rk.worker) || void 0 === tk || tk.terminate(), Rk.worker = null, Rk.started = !1, null === (ak = (Xk = this.options).onMemoryGone) || void 0 === ak || ak.call(Xk, Fk), this.giveUp(Fk, "had its tables trap twice", "every meshing worker's tables trapped twice");
           return
         }
-        const Ju = null === Eu || void 0 === Eu ? void 0 : Eu.worker;
-        if (!Ju || !Eu.started) return;
-        const Nu = yu.byteLength;
-        let Xu = null;
-        uu === zR.Jd.Mesh && Eu.heapRetries > 0 && (Eu.heapRetries--, Xu = this.pooled(Nu, !0)), Xu ??= this.buffer(Nu), new Uint8Array(Xu, 0, Nu).set(yu), Ju.postMessage({
+        const bk = null === Rk || void 0 === Rk ? void 0 : Rk.worker;
+        if (!bk || !Rk.started) return;
+        const wk = Bk.byteLength;
+        let dk = null;
+        kk === PF.ed.Mesh && Rk.heapRetries > 0 && (Rk.heapRetries--, dk = this.pooled(wk, !0)), dk ??= this.buffer(wk), new Uint8Array(dk, 0, wk).set(Bk), bk.postMessage({
           type: "job",
-          kind: uu,
-          bytes: Xu,
-          len: Nu
-        }, [Xu])
+          kind: kk,
+          bytes: dk,
+          len: wk
+        }, [dk])
       }
       takeFailedMeshJobs() {
-        const uu = this.failedJobs;
-        return this.failedJobs = 0, uu
+        const kk = this.failedJobs;
+        return this.failedJobs = 0, kk
       }
       newGame() {
         this.memoryFailureCounted = !1
       }
       stop() {
         this.stopped = !0;
-        for (const Ru of this.slots) {
-          var uu;
-          lE(Ru), null === (uu = Ru.worker) || void 0 === uu || uu.terminate(), Ru.worker = null, Ru.started = !1
+        for (const Fk of this.slots) {
+          var kk;
+          TR(Fk), null === (kk = Fk.worker) || void 0 === kk || kk.terminate(), Fk.worker = null, Fk.started = !1
         }
       }
-      start(uu) {
-        const Ru = this.slots[uu],
+      start(kk) {
+        const Fk = this.slots[kk],
           {
-            module: yu
+            module: Bk
           } = this.options,
-          Eu = this.createWorker;
-        if (this.stopped || Ru.gone || null === yu || null === Eu) return;
-        if (Ru.startsWithoutResult >= 3) return void this.giveUp(uu, "failed to start 3 times in a row", "no meshing worker would start");
-        let Ku;
-        Ru.startsWithoutResult++;
+          Rk = this.createWorker;
+        if (this.stopped || Fk.gone || null === Bk || null === Rk) return;
+        if (Fk.startsWithoutResult >= 3) return void this.giveUp(kk, "failed to start 3 times in a row", "no meshing worker would start");
+        let tk;
+        Fk.startsWithoutResult++;
         try {
-          Ku = Eu()
-        } catch (Qu) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${uu} did not start`, Qu), void this.start(uu)
+          tk = Rk()
+        } catch (ak) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${kk} did not start`, ak), void this.start(kk)
         }
-        Ru.worker = Ku, Ku.onmessage = yu => {
+        Fk.worker = tk, tk.onmessage = Bk => {
           let {
-            data: Eu
-          } = yu;
-          Ru.worker === Ku && this.onReply(uu, Eu)
-        }, Ku.onmessageerror = () => {
-          Ru.worker === Ku && this.lose(uu, "a reply could not be read")
-        }, Ku.onerror = yu => {
-          yu.preventDefault(), Ru.worker === Ku && this.lose(uu, yu.message || "its script failed")
+            data: Rk
+          } = Bk;
+          Fk.worker === tk && this.onReply(kk, Rk)
+        }, tk.onmessageerror = () => {
+          Fk.worker === tk && this.lose(kk, "a reply could not be read")
+        }, tk.onerror = Bk => {
+          Bk.preventDefault(), Fk.worker === tk && this.lose(kk, Bk.message || "its script failed")
         };
         try {
-          Ku.postMessage({
+          tk.postMessage({
             type: "start",
-            module: yu
+            module: Bk
           })
-        } catch (Qu) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${uu} could not be sent the module`, Qu), Ku.terminate(), Ru.worker = null, void this.start(uu)
+        } catch (ak) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${kk} could not be sent the module`, ak), tk.terminate(), Fk.worker = null, void this.start(kk)
         }
-        Ru.watch = new nE.i(nE.d, (Ru => {
-          this.lose(uu, (0, nE.m)(Ru), (() => {
-            this.options.onStartTimeout(Ru)
+        Fk.watch = new UR.f(UR.c, (Fk => {
+          this.lose(kk, (0, UR.i)(Fk), (() => {
+            this.options.onStartTimeout(Fk)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(uu, Ru) {
-        const yu = this.slots[uu];
-        switch (Ru.type) {
+      onReply(kk, Fk) {
+        const Bk = this.slots[kk];
+        switch (Fk.type) {
           case "started":
-            lE(yu), yu.started = !0, this.options.write(0, zR.Id.WorkerStarted, 0, uu, 0, sE);
+            TR(Bk), Bk.started = !0, this.options.write(0, PF.dd.WorkerStarted, 0, kk, 0, cR);
             break;
           case "lost":
-            this.lose(uu, Ru.reason);
+            this.lose(kk, Fk.reason);
             break;
           case "memory":
-            var Eu, Ku;
-            null === (Eu = (Ku = this.options).onMemoryStats) || void 0 === Eu || Eu.call(Ku, uu, Ru.stats);
+            var Rk, tk;
+            null === (Rk = (tk = this.options).onMemoryStats) || void 0 === Rk || Rk.call(tk, kk, Fk.stats);
             break;
           case "result": {
-            const Eu = Ru.status === zR.Bb.Trapped;
-            if (0 !== Ru.jobId) {
-              if (Eu) this.countFailedJob(Ru.outOfMemory, "light_trap", Ru.trap);
-              else if (yu.startsWithoutResult = 0, yu.trapsWithoutResult = 0, Ru.status === zR.Bb.Refused) {
-                const yu = function(uu) {
-                  if (uu.byteLength < 32) return "(no reason)";
-                  const Ru = new DataView(uu.buffer, uu.byteOffset, uu.byteLength),
-                    yu = Math.min(Ru.getUint32(28, !0), uu.byteLength - 28 - 4);
-                  return (new TextDecoder).decode(uu.subarray(32, 32 + yu)).slice(0, 200)
-                }(new Uint8Array(Ru.bytes, 0, Ru.len));
-                this.countFailedJob(ZR.e.test(yu), "light_refused_input", yu), this.logRefusal(uu, yu)
+            const Rk = Fk.status === PF.ib.Trapped;
+            if (0 !== Fk.jobId) {
+              if (Rk) this.countFailedJob(Fk.outOfMemory, "light_trap", Fk.trap);
+              else if (Bk.startsWithoutResult = 0, Bk.trapsWithoutResult = 0, Fk.status === PF.ib.Refused) {
+                const Bk = function(kk) {
+                  if (kk.byteLength < 32) return "(no reason)";
+                  const Fk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength),
+                    Bk = Math.min(Fk.getUint32(28, !0), kk.byteLength - 28 - 4);
+                  return (new TextDecoder).decode(kk.subarray(32, 32 + Bk)).slice(0, 200)
+                }(new Uint8Array(Fk.bytes, 0, Fk.len));
+                this.countFailedJob(CF.c.test(Bk), "light_refused_input", Bk), this.logRefusal(kk, Bk)
               }
-              Ru.status === zR.Bb.HeapRefused && (yu.heapRetries = Math.min(yu.heapRetries + 1, 4), this.logHeapRefusal(uu))
+              Fk.status === PF.ib.HeapRefused && (Bk.heapRetries = Math.min(Bk.heapRetries + 1, 4), this.logHeapRefusal(kk))
             }
-            if (this.options.write(Ru.jobId, zR.Id.JobResult, Ru.status, uu, Ru.workerUs, new Uint8Array(Ru.bytes, 0, Ru.len)), this.recycle(Ru.bytes), Ru.spare && this.recycle(Ru.spare), !Eu) break;
-            if (yu.startsWithoutResult = 0, 0 === Ru.jobId) {
-              this.lose(uu, `the tables trapped its wasm: ${Ru.trap}`);
+            if (this.options.write(Fk.jobId, PF.dd.JobResult, Fk.status, kk, Fk.workerUs, new Uint8Array(Fk.bytes, 0, Fk.len)), this.recycle(Fk.bytes), Fk.spare && this.recycle(Fk.spare), !Rk) break;
+            if (Bk.startsWithoutResult = 0, 0 === Fk.jobId) {
+              this.lose(kk, `the tables trapped its wasm: ${Fk.trap}`);
               break
             }
-            yu.trapsWithoutResult++;
-            const Ku = yu.trapsWithoutResult > 6;
-            yu.gone ||= Ku, this.lose(uu, `a job trapped its wasm: ${Ru.trap}`), Ku && this.giveUp(uu, `trapped ${yu.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
+            Bk.trapsWithoutResult++;
+            const tk = Bk.trapsWithoutResult > 6;
+            Bk.gone ||= tk, this.lose(kk, `a job trapped its wasm: ${Fk.trap}`), tk && this.giveUp(kk, `trapped ${Bk.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
             break
           }
         }
       }
-      countFailedJob(uu, Ru, yu) {
-        if (uu) {
+      countFailedJob(kk, Fk, Bk) {
+        if (kk) {
           if (this.memoryFailureCounted) return;
           this.memoryFailureCounted = !0
-        } else this.faultsReported.has(Ru) || (this.faultsReported.add(Ru), this.options.onLightFault(Ru, yu));
+        } else this.faultsReported.has(Fk) || (this.faultsReported.add(Fk), this.options.onLightFault(Fk, Bk));
         this.failedJobs++
       }
-      logRefusal(uu, Ru) {
-        var yu;
-        !this.refusals.has(Ru) && this.refusals.size >= 16 && (Ru = "(other reasons)");
-        const Eu = (null !== (yu = this.refusals.get(Ru)) && void 0 !== yu ? yu : 0) + 1;
-        this.refusals.set(Ru, Eu), (0, UE.q)(Eu) && console.warn(`[bloxd-wasm-client] meshing worker ${uu} refused a chunk (${Eu} so far for this reason): ${Ru}`)
+      logRefusal(kk, Fk) {
+        var Bk;
+        !this.refusals.has(Fk) && this.refusals.size >= 16 && (Fk = "(other reasons)");
+        const Rk = (null !== (Bk = this.refusals.get(Fk)) && void 0 !== Bk ? Bk : 0) + 1;
+        this.refusals.set(Fk, Rk), (0, gR.t)(Rk) && console.warn(`[bloxd-wasm-client] meshing worker ${kk} refused a chunk (${Rk} so far for this reason): ${Fk}`)
       }
-      logHeapRefusal(uu) {
-        this.heapRefusals++, (0, UE.q)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${uu} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
+      logHeapRefusal(kk) {
+        this.heapRefusals++, (0, gR.t)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${kk} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
       }
-      giveUp(uu, Ru, yu) {
-        const Eu = this.slots[uu];
-        if (Eu.gone = !0, Eu.goneFor = {
-            why: Ru,
-            failure: yu
-          }, console.warn(`[bloxd-wasm-client] meshing worker ${uu} ${Ru}: giving up on it`), this.slots.every((uu => uu.gone))) {
+      giveUp(kk, Fk, Bk) {
+        const Rk = this.slots[kk];
+        if (Rk.gone = !0, Rk.goneFor = {
+            why: Fk,
+            failure: Bk
+          }, console.warn(`[bloxd-wasm-client] meshing worker ${kk} ${Fk}: giving up on it`), this.slots.every((kk => kk.gone))) {
           this.stop();
-          const uu = new Set(this.slots.map((uu => {
-              var Ru;
-              return null === (Ru = uu.goneFor) || void 0 === Ru ? void 0 : Ru.failure
+          const kk = new Set(this.slots.map((kk => {
+              var Fk;
+              return null === (Fk = kk.goneFor) || void 0 === Fk ? void 0 : Fk.failure
             }))),
-            Ru = this.slots.map(((uu, Ru) => {
-              var yu, Eu;
-              return `worker ${Ru} ${null!==(yu=null===(Eu=uu.goneFor)||void 0===Eu?void 0:Eu.why)&&void 0!==yu?yu:"went"}`
+            Fk = this.slots.map(((kk, Fk) => {
+              var Bk, Rk;
+              return `worker ${Fk} ${null!==(Bk=null===(Rk=kk.goneFor)||void 0===Rk?void 0:Rk.why)&&void 0!==Bk?Bk:"went"}`
             }));
-          this.options.fail(1 === uu.size ? yu : `no meshing worker is left (${Ru.join(", ")})`)
+          this.options.fail(1 === kk.size ? Bk : `no meshing worker is left (${Fk.join(", ")})`)
         }
       }
-      lose(uu, Ru, yu) {
-        var Eu, Ku, Qu;
-        const mu = this.slots[uu];
-        console.warn(`[bloxd-wasm-client] meshing worker ${uu} was lost: ${Ru}`), lE(mu), null === (Eu = mu.worker) || void 0 === Eu || Eu.terminate(), mu.worker = null, mu.heapRetries = 0, null === (Ku = (Qu = this.options).onMemoryGone) || void 0 === Ku || Ku.call(Qu, uu), this.stopped || (yu ? yu() : this.options.onWorkerLost(Ru), mu.started && (mu.started = !1, this.options.write(0, zR.Id.WorkerLost, 0, uu, 0, sE)), this.start(uu))
+      lose(kk, Fk, Bk) {
+        var Rk, tk, ak;
+        const Xk = this.slots[kk];
+        console.warn(`[bloxd-wasm-client] meshing worker ${kk} was lost: ${Fk}`), TR(Xk), null === (Rk = Xk.worker) || void 0 === Rk || Rk.terminate(), Xk.worker = null, Xk.heapRetries = 0, null === (tk = (ak = this.options).onMemoryGone) || void 0 === tk || tk.call(ak, kk), this.stopped || (Bk ? Bk() : this.options.onWorkerLost(Fk), Xk.started && (Xk.started = !1, this.options.write(0, PF.dd.WorkerLost, 0, kk, 0, cR)), this.start(kk))
       }
-      buffer(uu) {
-        var Ru;
-        return null !== (Ru = this.pooled(uu)) && void 0 !== Ru ? Ru : new ArrayBuffer(Math.max(16384, uu))
+      buffer(kk) {
+        var Fk;
+        return null !== (Fk = this.pooled(kk)) && void 0 !== Fk ? Fk : new ArrayBuffer(Math.max(16384, kk))
       }
-      pooled(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          yu = -1;
-        for (let Ku = 0; Ku < this.pool.length; Ku++) {
-          const Eu = this.pool[Ku].byteLength;
-          Eu >= uu && (yu < 0 || (Ru ? Eu > this.pool[yu].byteLength : Eu < this.pool[yu].byteLength)) && (yu = Ku)
+      pooled(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Bk = -1;
+        for (let tk = 0; tk < this.pool.length; tk++) {
+          const Rk = this.pool[tk].byteLength;
+          Rk >= kk && (Bk < 0 || (Fk ? Rk > this.pool[Bk].byteLength : Rk < this.pool[Bk].byteLength)) && (Bk = tk)
         }
-        if (yu < 0) return null;
-        const Eu = this.pool[yu];
-        return this.pool[yu] = this.pool[this.pool.length - 1], this.pool.pop(), Eu
+        if (Bk < 0) return null;
+        const Rk = this.pool[Bk];
+        return this.pool[Bk] = this.pool[this.pool.length - 1], this.pool.pop(), Rk
       }
-      recycle(uu) {
-        this.pool.length < 4 * this.slots.length && uu.byteLength > 0 && uu.byteLength <= 1048576 && this.pool.push(uu)
+      recycle(kk) {
+        this.pool.length < 4 * this.slots.length && kk.byteLength > 0 && kk.byteLength <= 1048576 && this.pool.push(kk)
       }
     }
 
-    function lE(uu) {
-      var Ru;
-      null === (Ru = uu.watch) || void 0 === Ru || Ru.cancel(), uu.watch = null
+    function TR(kk) {
+      var Fk;
+      null === (Fk = kk.watch) || void 0 === Fk || Fk.cancel(), kk.watch = null
     }
-    var gE = yu(40525),
-      cE = yu(40520),
-      LE = yu(40590),
-      zE = yu(40597),
-      FE = (yu(40374), yu(40603)),
-      wE = yu(40559);
+    var rR = Bk(40370),
+      DR = Bk(40362),
+      zR = Bk(40435),
+      PR = Bk(40437),
+      hR = (Bk(40207), Bk(40440)),
+      qR = Bk(40407);
 
-    function ZE(uu) {
-      const Ru = new Uint8Array(uu.length >> 2);
-      for (let yu = 0; yu < Ru.length; yu++) Ru[yu] = uu[4 * yu + 3];
-      return Ru
+    function CR(kk) {
+      const Fk = new Uint8Array(kk.length >> 2);
+      for (let Bk = 0; Bk < Fk.length; Bk++) Fk[Bk] = kk[4 * Bk + 3];
+      return Fk
     }
-    async function hE(uu) {
-      const Ru = await (0, FE.h)(uu);
+    async function ZR(kk) {
+      const Fk = await (0, hR.j)(kk);
       try {
         const {
-          width: uu,
-          height: yu,
-          pixels: Eu
-        } = (0, wE.k)(Ru);
+          width: kk,
+          height: Bk,
+          pixels: Rk
+        } = (0, qR.s)(Fk);
         return {
-          width: uu,
-          height: yu,
-          alpha: ZE(Eu)
+          width: kk,
+          height: Bk,
+          alpha: CR(Rk)
         }
       } finally {
-        Ru.close()
+        Fk.close()
       }
     }
-    class PE {
-      constructor(uu, Ru, yu) {
-        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : hE;
-        this.session = uu, this.sources = Ru, this.warn = yu, this.load = Eu, this.nextPoll = 0, this.VS = !1, this.warned = new Set
+    class pR {
+      constructor(kk, Fk, Bk) {
+        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ZR;
+        this.session = kk, this.sources = Fk, this.warn = Bk, this.load = Rk, this.nextPoll = 0, this.Te = !1, this.warned = new Set
       }
-      drain(uu) {
-        if (uu < this.nextPoll) return;
-        this.nextPoll = uu + 250;
-        const Ru = this.session.sunShadowWantedTextures();
-        if (Ru)
-          for (let yu = 0; yu + 1 < Ru.length; yu += 2) this.hand(Ru[yu], Ru[yu + 1]);
-        for (const yu of this.session.takeSunShadowWarnings()) this.warn(yu)
+      drain(kk) {
+        if (kk < this.nextPoll) return;
+        this.nextPoll = kk + 250;
+        const Fk = this.session.sunShadowWantedTextures();
+        if (Fk)
+          for (let Bk = 0; Bk + 1 < Fk.length; Bk += 2) this.hand(Fk[Bk], Fk[Bk + 1]);
+        for (const Bk of this.session.takeSunShadowWarnings()) this.warn(Bk)
       }
       dispose() {
-        this.VS = !0
+        this.Te = !0
       }
-      async hand(uu, Ru) {
-        var yu, Eu, Ku, Qu, mu;
-        let Ju, Nu = null;
+      async hand(kk, Fk) {
+        var Bk, Rk, tk, ak, Xk;
+        let bk, wk = null;
         try {
-          if (Nu = await this.sources.blockImageUrl(uu), null === Nu) throw new Error(`block image ${uu} has no URL`);
-          Ju = await this.load(Nu)
-        } catch (Vu) {
-          var Xu;
-          const Ru = null !== (Xu = Nu) && void 0 !== Xu ? Xu : `block image ${uu}`;
-          this.warned.has(Ru) || (this.warned.add(Ru), this.warn(`sun shadow plane texture ${Ru} didn't load: its blocks cast no shadow`, Vu))
+          if (wk = await this.sources.blockImageUrl(kk), null === wk) throw new Error(`block image ${kk} has no URL`);
+          bk = await this.load(wk)
+        } catch (sk) {
+          var dk;
+          const Fk = null !== (dk = wk) && void 0 !== dk ? dk : `block image ${kk}`;
+          this.warned.has(Fk) || (this.warned.add(Fk), this.warn(`sun shadow plane texture ${Fk} didn't load: its blocks cast no shadow`, sk))
         }
-        this.VS || this.session.setSunShadowTexture(uu, Ru, null !== (yu = null === (Eu = Ju) || void 0 === Eu ? void 0 : Eu.width) && void 0 !== yu ? yu : 0, null !== (Ku = null === (Qu = Ju) || void 0 === Qu ? void 0 : Qu.height) && void 0 !== Ku ? Ku : 0, null === (mu = Ju) || void 0 === mu ? void 0 : mu.alpha)
+        this.Te || this.session.setSunShadowTexture(kk, Fk, null !== (Bk = null === (Rk = bk) || void 0 === Rk ? void 0 : Rk.width) && void 0 !== Bk ? Bk : 0, null !== (tk = null === (ak = bk) || void 0 === ak ? void 0 : ak.height) && void 0 !== tk ? tk : 0, null === (Xk = bk) || void 0 === Xk ? void 0 : Xk.alpha)
       }
     }
-    var iE = yu(40528),
-      YE = yu(40605),
-      oE = yu(40607),
-      qE = yu(40535),
-      OE = yu(40544),
-      vE = yu(9100),
-      aE = yu(8949),
-      fE = yu(40616);
-    const uK = 8192,
-      RK = new Set;
-    const yK = new Set([...aE.d, "sceneDownload"]);
-    var EK = yu(40393),
-      KK = yu(40265);
-    const QK = new Uint8Array(0);
-    let mK = null;
+    var KR = Bk(40379),
+      xR = Bk(40448),
+      jR = Bk(40452),
+      lR = Bk(40387),
+      nR = Bk(40393),
+      IR = Bk(9045),
+      QR = Bk(8894),
+      kt = Bk(40467);
+    const Ft = 8192,
+      Bt = new Set;
+    const Rt = new Set([...QR.e, "sceneDownload"]);
+    var tt = Bk(40231),
+      Xt = Bk(40100);
+    const bt = new Uint8Array(0);
+    let wt = null;
 
-    function JK(uu) {
+    function dt(kk) {
       return {
-        aux: zR.Wb.AdStart | (uu ? zR.Wb.PreventMovement : 0),
-        payload: QK
+        aux: PF.Hb.AdStart | (kk ? PF.Hb.PreventMovement : 0),
+        payload: bt
       }
     }
-    var NK = yu(2662),
-      XK = yu(2668);
-    const VK = "__bloxdSceneCapture";
-    var rK = yu(1711),
-      BK = yu(2730);
-    let xK = null,
-      SK = null,
-      pK = null,
-      TK = !1;
+    var st = Bk(2660),
+      Vt = Bk(2667);
+    const Jt = "__bloxdSceneCapture";
+    var At = Bk(1708),
+      et = Bk(2745);
+    let yt = null,
+      ft = null,
+      mt = null,
+      Wt = !1;
 
-    function WK() {
-      xK ??= performance.now()
+    function vt() {
+      yt ??= performance.now()
     }
-    var jK = yu(40621);
-    class HK {
-      constructor(uu) {
-        var Ru, yu;
-        this.host = uu, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((uu => {
-          this.landRequest = uu
-        })), this.follow = uu => {
-          let Ru = uu;
+    var it = Bk(40476);
+    class Yt {
+      constructor(kk) {
+        var Fk, Bk;
+        this.host = kk, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((kk => {
+          this.landRequest = kk
+        })), this.follow = kk => {
+          let Fk = kk;
           return Promise.race([this.startRead, this.landing]).then((async () => {
-            const uu = null === this.requested && null !== Ru;
-            var yu;
-            uu && (null === (yu = Ru) || void 0 === yu || yu(null));
-            const Eu = await this.landing;
-            var Ku;
-            null === Eu && uu || (null === (Ku = Ru) || void 0 === Ku || Ku(Eu))
+            const kk = null === this.requested && null !== Fk;
+            var Bk;
+            kk && (null === (Bk = Fk) || void 0 === Bk || Bk(null));
+            const Rk = await this.landing;
+            var tk;
+            null === Rk && kk || (null === (tk = Fk) || void 0 === tk || tk(Rk))
           })), () => {
-            Ru = null
+            Fk = null
           }
-        }, this.startRead = (yu = uu.store, yu.keys().then((uu => ({
-          own: uu.includes(Wy.b),
-          oneShot: uu.includes(Wy.f)
+        }, this.startRead = (Bk = kk.store, Bk.keys().then((kk => ({
+          own: kk.includes(WB.d),
+          oneShot: kk.includes(WB.h)
         })), (() => ({
           own: !0,
           oneShot: !0
-        })))).then((uu => {
+        })))).then((kk => {
           let {
-            own: Ru,
-            oneShot: yu
-          } = uu;
-          this.oneShotStored = yu, (Ru || yu) && this.request()
-        })), this.channel = (null !== (Ru = uu.openChannel) && void 0 !== Ru ? Ru : Wy.t)(), null !== this.channel && (this.channel.onmessage = () => {
+            own: Fk,
+            oneShot: Bk
+          } = kk;
+          this.oneShotStored = Bk, (Fk || Bk) && this.request()
+        })), this.channel = (null !== (Fk = kk.openChannel) && void 0 !== Fk ? Fk : WB.v)(), null !== this.channel && (this.channel.onmessage = () => {
           this.request()
         })
       }
       request() {
-        var uu;
+        var kk;
         if (null !== this.requested) return this.requested;
-        null === (uu = this.channel) || void 0 === uu || uu.close(), this.channel = null;
-        const Ru = this.oneShotStored;
-        return this.requested = function(uu, Ru, yu) {
-          return new Promise((Ru => {
-            Ru(uu())
-          })).catch((uu => (null !== Ru && (0, Wy.o)(Ru), yu(uu), null)))
-        }((() => this.host.load(Ru).then((uu => (uu.setGamePackConfirm(this.confirm), this.landed = uu, uu)))), Ru ? this.host.store : null, this.host.Px), this.landRequest(this.requested), this.requested
+        null === (kk = this.channel) || void 0 === kk || kk.close(), this.channel = null;
+        const Fk = this.oneShotStored;
+        return this.requested = function(kk, Fk, Bk) {
+          return new Promise((Fk => {
+            Fk(kk())
+          })).catch((kk => (null !== Fk && (0, WB.r)(Fk), Bk(kk), null)))
+        }((() => this.host.load(Fk).then((kk => (kk.setGamePackConfirm(this.confirm), this.landed = kk, kk)))), Fk ? this.host.store : null, this.host.ve), this.landRequest(this.requested), this.requested
       }
       loaded() {
         return this.landed
       }
       forJoin() {
         return null !== this.requested ? this.requested : Promise.race([this.startRead, this.landing]).then((() => {
-          var uu;
-          return null !== (uu = this.requested) && void 0 !== uu ? uu : null
+          var kk;
+          return null !== (kk = this.requested) && void 0 !== kk ? kk : null
         }))
       }
-      setGamePackConfirm(uu) {
-        var Ru;
-        this.confirm = uu, null === (Ru = this.landed) || void 0 === Ru || Ru.setGamePackConfirm(uu)
+      setGamePackConfirm(kk) {
+        var Fk;
+        this.confirm = kk, null === (Fk = this.landed) || void 0 === Fk || Fk.setGamePackConfirm(kk)
       }
     }
-    var dK = yu(36330);
-    const bK = 216 * dK.g,
-      CK = 92 * dK.d,
-      kK = 64 * dK.g,
-      eK = 16 * dK.g;
+    var ot = Bk(36217);
+    const Lt = 216 * ot.e,
+      Ot = 92 * ot.c,
+      Et = 64 * ot.e,
+      St = 16 * ot.e;
 
-    function AK() {
-      var uu, Ru;
-      return null !== (uu = null === (Ru = performance.memory) || void 0 === Ru ? void 0 : Ru.FW) && void 0 !== uu ? uu : null
+    function Nt() {
+      var kk, Fk;
+      return null !== (kk = null === (Fk = performance.memory) || void 0 === Fk ? void 0 : Fk.vW) && void 0 !== kk ? kk : null
     }
-    class DK {
-      constructor(uu, Ru) {
-        this.budgetBytes = uu, this.reads = Ru, this.estimate = null, this.shedAt = null
+    class Ht {
+      constructor(kk, Fk) {
+        this.budgetBytes = kk, this.reads = Fk, this.estimate = null, this.shedAt = null
       }
-      read(uu) {
-        var Ru;
-        const yu = this.reads.storedChunks(),
-          Eu = this.reads.gpuBytes(),
-          Ku = Math.max(null !== (Ru = this.reads.jsHeapBytes()) && void 0 !== Ru ? Ru : 0, kK),
-          Qu = bK + uu + Ku + Eu + yu * CK;
+      read(kk) {
+        var Fk;
+        const Bk = this.reads.storedChunks(),
+          Rk = this.reads.gpuBytes(),
+          tk = Math.max(null !== (Fk = this.reads.jsHeapBytes()) && void 0 !== Fk ? Fk : 0, Et),
+          ak = Lt + kk + tk + Rk + Bk * Ot;
         this.estimate = {
-          wasmBytes: uu,
-          jsHeapBytes: Ku,
-          gpuBytes: Eu,
-          storedChunks: yu,
-          totalBytes: Qu
+          wasmBytes: kk,
+          jsHeapBytes: tk,
+          gpuBytes: Rk,
+          storedChunks: Bk,
+          totalBytes: ak
         }
       }
       last() {
@@ -3932,347 +4049,347 @@ export const modules = {
       }
       takeShed() {
         const {
-          estimate: uu,
-          budgetBytes: Ru,
-          shedAt: yu
+          estimate: kk,
+          budgetBytes: Fk,
+          shedAt: Bk
         } = this;
-        return !(null === uu || null === Ru || uu.totalBytes < Ru || null !== yu && uu.totalBytes < yu + eK) && (this.shedAt = uu.totalBytes, !0)
+        return !(null === kk || null === Fk || kk.totalBytes < Fk || null !== Bk && kk.totalBytes < Bk + St) && (this.shedAt = kk.totalBytes, !0)
       }
       describe() {
         const {
-          estimate: uu,
-          budgetBytes: Ru
+          estimate: kk,
+          budgetBytes: Fk
         } = this;
-        return null === uu ? null : `estimate ${(0,dK.h)(uu.totalBytes)} MiB of budget ${null===Ru?"none":(0,dK.h)(Ru)}: wasm ${(0,dK.h)(uu.wasmBytes)} js ${(0,dK.h)(uu.jsHeapBytes)} gpu ${(0,dK.h)(uu.gpuBytes)} chunks ${uu.storedChunks}`
+        return null === kk ? null : `estimate ${(0,ot.f)(kk.totalBytes)} MiB of budget ${null===Fk?"none":(0,ot.f)(Fk)}: wasm ${(0,ot.f)(kk.wasmBytes)} js ${(0,ot.f)(kk.jsHeapBytes)} gpu ${(0,ot.f)(kk.gpuBytes)} chunks ${kk.storedChunks}`
       }
       snapshot() {
         const {
-          estimate: uu,
-          budgetBytes: Ru
+          estimate: kk,
+          budgetBytes: Fk
         } = this;
         return {
-          ...null === uu ? {} : {
-            footprintMiB: Number((0, dK.h)(uu.totalBytes)),
-            gpuMiB: Number((0, dK.h)(uu.gpuBytes)),
-            storedChunks: uu.storedChunks
+          ...null === kk ? {} : {
+            footprintMiB: Number((0, ot.f)(kk.totalBytes)),
+            gpuMiB: Number((0, ot.f)(kk.gpuBytes)),
+            storedChunks: kk.storedChunks
           },
-          footprintBudgetMiB: null === Ru ? -1 : Number((0, dK.h)(Ru))
+          footprintBudgetMiB: null === Fk ? -1 : Number((0, ot.f)(Fk))
         }
       }
     }
-    var MK = yu(2707),
-      IK = yu(4284),
-      GK = yu(38847),
-      UK = yu(37692);
-    const nK = FR.S + 1,
-      sK = 4096 * nK;
-    class tK {
-      constructor(uu, Ru) {
-        this.log = uu, this.take = Ru, this.jJ = [], this.unshown = new Map, this.latest = new Map
+    var ut = Bk(2711),
+      Mt = Bk(4255),
+      gt = Bk(38731),
+      Ut = Bk(37625);
+    const ct = hF.N + 1,
+      Gt = 4096 * ct;
+    class Tt {
+      constructor(kk, Fk) {
+        this.log = kk, this.take = Fk, this.Hb = [], this.unshown = new Map, this.latest = new Map
       }
-      afterFrame(uu, Ru) {
-        const yu = this.take();
-        yu.length >= FR.R && yu[0] > 0 && (0, MK.i)("remesh", `${yu[0]} core records lost to a full log`);
-        const Eu = this.jJ;
-        for (let Ku = FR.R; Ku + FR.S <= yu.length; Ku += FR.S) {
-          for (let uu = Ku; uu < Ku + FR.S; uu++) Eu.push(yu[uu]);
-          Eu.push(uu)
+      afterFrame(kk, Fk) {
+        const Bk = this.take();
+        Bk.length >= hF.L && Bk[0] > 0 && (0, ut.k)("remesh", `${Bk[0]} core records lost to a full log`);
+        const Rk = this.Hb;
+        for (let tk = hF.L; tk + hF.N <= Bk.length; tk += hF.N) {
+          for (let kk = tk; kk < tk + hF.N; kk++) Rk.push(Bk[kk]);
+          Rk.push(kk)
         }
-        if (Ru || !(Eu.length < sK)) {
-          for (let Ru = 0; Ru < Eu.length; Ru += nK) this.feed(Ru, uu);
-          Eu.length = 0, Ru && this.log.frame(uu)
+        if (Fk || !(Rk.length < Gt)) {
+          for (let Fk = 0; Fk < Rk.length; Fk += ct) this.feed(Fk, kk);
+          Rk.length = 0, Fk && this.log.frame(kk)
         }
       }
-      feed(uu, Ru) {
-        var yu;
-        const Eu = this.jJ,
-          Ku = (0, UK.f)(Eu[uu + 1], Eu[uu + 2], Eu[uu + 3]),
-          Qu = Eu[uu + 4],
-          mu = Eu[uu + FR.S];
-        switch (Eu[uu]) {
-          case FR.Ab.Edit:
-            this.log.edit(Ku, mu);
+      feed(kk, Fk) {
+        var Bk;
+        const Rk = this.Hb,
+          tk = (0, Ut.f)(Rk[kk + 1], Rk[kk + 2], Rk[kk + 3]),
+          ak = Rk[kk + 4],
+          Xk = Rk[kk + hF.N];
+        switch (Rk[kk]) {
+          case hF.qb.Edit:
+            this.log.edit(tk, Xk);
             break;
-          case FR.Ab.Sent:
-            this.latest.set(Ku, Qu), this.log.sent(Ku, Qu, Eu[uu + 5], Eu[uu + 6], Eu[uu + 7], null !== (yu = this.unshown.get(Ku)) && void 0 !== yu ? yu : UK.b, mu);
+          case hF.qb.Sent:
+            this.latest.set(tk, ak), this.log.sent(tk, ak, Rk[kk + 5], Rk[kk + 6], Rk[kk + 7], null !== (Bk = this.unshown.get(tk)) && void 0 !== Bk ? Bk : Ut.b, Xk);
             break;
-          case FR.Ab.Done: {
-            this.log.received(Qu, Eu[uu + 5] / 1e3, mu);
-            const Ru = this.unshown.get(Ku);
-            void 0 === Ru ? this.unshown.set(Ku, [Qu]) : Ru.push(Qu);
+          case hF.qb.Done: {
+            this.log.received(ak, Rk[kk + 5] / 1e3, Xk);
+            const Fk = this.unshown.get(tk);
+            void 0 === Fk ? this.unshown.set(tk, [ak]) : Fk.push(ak);
             break
           }
-          case FR.Ab.Failed: {
-            const uu = this.latest.get(Ku);
-            void 0 !== uu && uu !== Qu ? this.log.reassign(Ku, Qu, uu) : this.log.failed(Qu), this.ended(Ku, Qu);
+          case hF.qb.Failed: {
+            const kk = this.latest.get(tk);
+            void 0 !== kk && kk !== ak ? this.log.reassign(tk, ak, kk) : this.log.failed(ak), this.ended(tk, ak);
             break
           }
-          case FR.Ab.Shown:
-            this.log.applied(Ku, Qu, Ru), this.ended(Ku, Qu);
+          case hF.qb.Shown:
+            this.log.applied(tk, ak, Fk), this.ended(tk, ak);
             break;
-          case FR.Ab.Replaced:
-            this.log.reassign(Ku, Qu, Eu[uu + 5]), this.ended(Ku, Qu);
+          case hF.qb.Replaced:
+            this.log.reassign(tk, ak, Rk[kk + 5]), this.ended(tk, ak);
             break;
-          case FR.Ab.Emptied:
-            this.log.emptied(Ku, Ru);
+          case hF.qb.Emptied:
+            this.log.emptied(tk, Fk);
             break;
           default:
-            console.warn(`[debug:remesh] unknown core record kind ${Eu[uu]}`)
+            console.warn(`[debug:remesh] unknown core record kind ${Rk[kk]}`)
         }
       }
-      ended(uu, Ru) {
-        this.latest.get(uu) === Ru && this.latest.delete(uu);
-        const yu = this.unshown.get(uu);
-        if (void 0 === yu) return;
-        const Eu = yu.indexOf(Ru);
-        Eu >= 0 && yu.splice(Eu, 1), 0 === yu.length && this.unshown.delete(uu)
+      ended(kk, Fk) {
+        this.latest.get(kk) === Fk && this.latest.delete(kk);
+        const Bk = this.unshown.get(kk);
+        if (void 0 === Bk) return;
+        const Rk = Bk.indexOf(Fk);
+        Rk >= 0 && Bk.splice(Rk, 1), 0 === Bk.length && this.unshown.delete(kk)
       }
     }
-    let lK = null;
-    var gK = yu(3044);
-    const cK = new Uint8Array(0);
-    class LK {
-      constructor(uu) {
-        this.options = uu, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.jJ = [], this.startsWithoutResult = 0, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== uu.module ? uu.write(0, zR.Id.WorldgenStarted, 0, 0, cK) : this.giveUp()
+    let rt = null;
+    var Dt = Bk(3052);
+    const zt = new Uint8Array(0);
+    class Pt {
+      constructor(kk) {
+        this.options = kk, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.Hb = [], this.startsWithoutResult = 0, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== kk.module ? kk.write(0, PF.dd.WorldgenStarted, 0, 0, zt) : this.giveUp()
       }
-      take(uu, Ru) {
-        if (!(this.gone || null === this.worker && null === this.jJ))
-          if (uu === zR.Jd.WorldgenSeed) {
-            const uu = 0 === Ru.byteLength ? null : this.options.decodeSettings(Ru);
-            null === uu || function(uu, Ru) {
-              if ((null === uu || void 0 === uu ? void 0 : uu.byteLength) !== Ru.byteLength) return !1;
-              for (let yu = 0; yu < uu.byteLength; yu++)
-                if (uu[yu] !== Ru[yu]) return !1;
+      take(kk, Fk) {
+        if (!(this.gone || null === this.worker && null === this.Hb))
+          if (kk === PF.ed.WorldgenSeed) {
+            const kk = 0 === Fk.byteLength ? null : this.options.decodeSettings(Fk);
+            null === kk || function(kk, Fk) {
+              if ((null === kk || void 0 === kk ? void 0 : kk.byteLength) !== Fk.byteLength) return !1;
+              for (let Bk = 0; Bk < kk.byteLength; Bk++)
+                if (kk[Bk] !== Fk[Bk]) return !1;
               return !0
-            }(this.seed, Ru) || (this.seed = Ru.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
+            }(this.seed, Fk) || (this.seed = Fk.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
               type: "seed",
-              settings: uu
-            }, []), null !== uu ? this.load() : this.loading || this.options.onMapWithoutWorldgen()
-          } else if (uu === zR.Jd.Generate) {
-          var yu;
-          const uu = new DataView(Ru.buffer, Ru.byteOffset, zR.Dd),
-            Eu = null !== (yu = this.pool.pop()) && void 0 !== yu ? yu : new ArrayBuffer(8192);
+              settings: kk
+            }, []), null !== kk ? this.load() : this.loading || this.options.onMapWithoutWorldgen()
+          } else if (kk === PF.ed.Generate) {
+          var Bk;
+          const kk = new DataView(Fk.buffer, Fk.byteOffset, PF.Xc),
+            Rk = null !== (Bk = this.pool.pop()) && void 0 !== Bk ? Bk : new ArrayBuffer(8192);
           this.post({
             type: "generate",
-            ticket: uu.getUint32(0, !0),
-            x: uu.getInt32(4, !0),
-            y: uu.getInt32(8, !0),
-            z: uu.getInt32(12, !0),
-            bytes: Eu
-          }, [Eu])
+            ticket: kk.getUint32(0, !0),
+            x: kk.getInt32(4, !0),
+            y: kk.getInt32(8, !0),
+            z: kk.getInt32(12, !0),
+            bytes: Rk
+          }, [Rk])
         }
       }
       stop() {
-        var uu;
-        this.gone = !0, this.dropHeld(), this.endWatch(), null === (uu = this.worker) || void 0 === uu || uu.terminate(), this.worker = null
+        var kk;
+        this.gone = !0, this.dropHeld(), this.endWatch(), null === (kk = this.worker) || void 0 === kk || kk.terminate(), this.worker = null
       }
-      post(uu, Ru) {
-        var yu;
-        null !== this.jJ ? this.jJ.push({
-          message: uu,
-          transfer: Ru
-        }) : null === (yu = this.worker) || void 0 === yu || yu.postMessage(uu, Ru)
+      post(kk, Fk) {
+        var Bk;
+        null !== this.Hb ? this.Hb.push({
+          message: kk,
+          transfer: Fk
+        }) : null === (Bk = this.worker) || void 0 === Bk || Bk.postMessage(kk, Fk)
       }
       load() {
-        this.loading || (this.loading = !0, this.options.loadWorker().then((uu => {
-          this.createWorker = uu, this.start()
-        }), (uu => {
-          this.gone || (this.giveUp(), this.options.onLoadFailed(uu))
+        this.loading || (this.loading = !0, this.options.loadWorker().then((kk => {
+          this.createWorker = kk, this.start()
+        }), (kk => {
+          this.gone || (this.giveUp(), this.options.onLoadFailed(kk))
         })))
       }
       start() {
         const {
-          module: uu
-        } = this.options, Ru = this.createWorker;
-        if (this.gone || null === uu || null === Ru) return;
+          module: kk
+        } = this.options, Fk = this.createWorker;
+        if (this.gone || null === kk || null === Fk) return;
         if (this.startsWithoutResult >= 3) return this.giveUp(), void this.options.onGaveUp(this.lastLoss);
-        let yu;
+        let Bk;
         this.startsWithoutResult++;
         try {
-          yu = Ru()
-        } catch (Ku) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", Ku), this.lastLoss = `it did not start (${String(Ku)})`, void this.start()
+          Bk = Fk()
+        } catch (tk) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", tk), this.lastLoss = `it did not start (${String(tk)})`, void this.start()
         }
-        this.worker = yu, yu.onmessage = uu => {
+        this.worker = Bk, Bk.onmessage = kk => {
           let {
-            data: Ru
-          } = uu;
-          this.worker === yu && this.onReply(yu, Ru)
-        }, yu.onerror = uu => {
-          uu.preventDefault(), this.worker === yu && this.lose(uu.message || "its script failed")
+            data: Fk
+          } = kk;
+          this.worker === Bk && this.onReply(Bk, Fk)
+        }, Bk.onerror = kk => {
+          kk.preventDefault(), this.worker === Bk && this.lose(kk.message || "its script failed")
         };
         try {
-          yu.postMessage({
+          Bk.postMessage({
             type: "start",
-            module: uu,
-            jS: Eu.f.jS
+            module: kk,
+            Ze: Rk.h.Ze
           })
-        } catch (Ku) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", Ku), this.lastLoss = `it could not be sent the module (${String(Ku)})`, yu.terminate(), this.worker = null, void this.start()
+        } catch (tk) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", tk), this.lastLoss = `it could not be sent the module (${String(tk)})`, Bk.terminate(), this.worker = null, void this.start()
         }
-        this.watch = new nE.i(nE.e, (uu => {
-          this.lose((0, nE.m)(uu), (() => {
-            this.options.onStartTimeout(uu)
+        this.watch = new UR.f(UR.d, (kk => {
+          this.lose((0, UR.i)(kk), (() => {
+            this.options.onStartTimeout(kk)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(uu, Ru) {
-        switch (Ru.type) {
+      onReply(kk, Fk) {
+        switch (Fk.type) {
           case "started": {
             this.endWatch();
-            const Ru = this.jJ;
-            if (null === Ru) {
-              this.options.write(0, zR.Id.WorldgenStarted, 0, 0, cK);
+            const Fk = this.Hb;
+            if (null === Fk) {
+              this.options.write(0, PF.dd.WorldgenStarted, 0, 0, zt);
               break
             }
-            this.jJ = null;
+            this.Hb = null;
             for (const {
-                message: yu,
-                transfer: Eu
+                message: Bk,
+                transfer: Rk
               }
-              of Ru) uu.postMessage(yu, Eu);
+              of Fk) kk.postMessage(Bk, Rk);
             break
           }
           case "lost":
-            this.lose(Ru.reason);
+            this.lose(Fk.reason);
             break;
           case "memory":
-            var yu, Eu;
-            null === (yu = (Eu = this.options).onMemoryStats) || void 0 === yu || yu.call(Eu, Ru.stats);
+            var Bk, Rk;
+            null === (Bk = (Rk = this.options).onMemoryStats) || void 0 === Bk || Bk.call(Rk, Fk.stats);
             break;
           case "result":
-            Ru.status !== zR.Bb.Trapped && (this.startsWithoutResult = 0), this.options.write(Ru.ticket, zR.Id.WorldgenResult, Ru.status, Ru.workerUs, new Uint8Array(Ru.bytes, 0, Ru.len)), this.recycle(Ru.bytes), Ru.spare && this.recycle(Ru.spare)
+            Fk.status !== PF.ib.Trapped && (this.startsWithoutResult = 0), this.options.write(Fk.ticket, PF.dd.WorldgenResult, Fk.status, Fk.workerUs, new Uint8Array(Fk.bytes, 0, Fk.len)), this.recycle(Fk.bytes), Fk.spare && this.recycle(Fk.spare)
         }
       }
-      lose(uu, Ru) {
-        var yu, Eu, Ku;
-        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${uu}`), this.lastLoss = uu, this.endWatch(), null === (yu = this.worker) || void 0 === yu || yu.terminate(), this.worker = null, null === (Eu = (Ku = this.options).onMemoryGone) || void 0 === Eu || Eu.call(Ku), this.gone || (Ru ? Ru() : this.options.onWorkerLost(uu), this.dropHeld(), this.jJ = null, this.options.write(0, zR.Id.WorldgenLost, zR.Nd.Lost, 0, cK), this.start())
+      lose(kk, Fk) {
+        var Bk, Rk, tk;
+        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${kk}`), this.lastLoss = kk, this.endWatch(), null === (Bk = this.worker) || void 0 === Bk || Bk.terminate(), this.worker = null, null === (Rk = (tk = this.options).onMemoryGone) || void 0 === Rk || Rk.call(tk), this.gone || (Fk ? Fk() : this.options.onWorkerLost(kk), this.dropHeld(), this.Hb = null, this.options.write(0, PF.dd.WorldgenLost, PF.fd.Lost, 0, zt), this.start())
       }
       giveUp() {
-        this.gone = !0, this.dropHeld(), this.options.write(0, zR.Id.WorldgenLost, zR.Nd.Gone, 0, cK)
+        this.gone = !0, this.dropHeld(), this.options.write(0, PF.dd.WorldgenLost, PF.fd.Gone, 0, zt)
       }
       endWatch() {
-        var uu;
-        null === (uu = this.watch) || void 0 === uu || uu.cancel(), this.watch = null
+        var kk;
+        null === (kk = this.watch) || void 0 === kk || kk.cancel(), this.watch = null
       }
       dropHeld() {
-        if (null !== this.jJ) {
+        if (null !== this.Hb) {
           for (const {
-              message: uu
+              message: kk
             }
-            of this.jJ) "generate" === uu.type && this.recycle(uu.bytes);
-          this.jJ.length = 0
+            of this.Hb) "generate" === kk.type && this.recycle(kk.bytes);
+          this.Hb.length = 0
         }
       }
-      recycle(uu) {
-        this.pool.length < 16 && uu.byteLength > 0 && uu.byteLength <= 16384 && this.pool.push(uu)
+      recycle(kk) {
+        this.pool.length < 16 && kk.byteLength > 0 && kk.byteLength <= 16384 && this.pool.push(kk)
       }
     }
-    var zK = yu(37507),
-      FK = yu(3531),
-      wK = yu(40243),
-      ZK = yu(40627),
-      hK = yu(40487);
-    const PK = /[(@\s]([^\s(@]+)$/,
-      iK = /:\d/;
+    var ht = Bk(37428),
+      qt = Bk(3512),
+      Ct = Bk(40080),
+      Zt = Bk(40481),
+      pt = Bk(40337);
+    const Kt = /[(@\s]([^\s(@]+)$/,
+      xt = /:\d/;
 
-    function YK(uu, Ru) {
-      for (let yu = 0; yu + Ru.length <= uu.length; yu++) {
-        let Eu = 0;
-        for (; Eu < Ru.length && uu[yu + Eu] === Ru[Eu];) Eu++;
-        if (Eu === Ru.length) return yu
+    function jt(kk, Fk) {
+      for (let Bk = 0; Bk + Fk.length <= kk.length; Bk++) {
+        let Rk = 0;
+        for (; Rk < Fk.length && kk[Bk + Rk] === Fk[Rk];) Rk++;
+        if (Rk === Fk.length) return Bk
       }
       return -1
     }
 
-    function oK(uu) {
-      return "(" === uu || ")" === uu || "@" === uu || "," === uu || " " === uu || "\t" === uu
+    function lt(kk) {
+      return "(" === kk || ")" === kk || "@" === kk || "," === kk || " " === kk || "\t" === kk
     }
 
-    function qK(uu, Ru) {
-      let yu = Ru;
-      for (; yu > 0 && !oK(uu[yu - 1]);) yu--;
-      let Eu = Ru;
-      for (; Eu < uu.length && !oK(uu[Eu]);) Eu++;
-      let Ku = "";
-      for (let Qu = yu; Qu < Eu; Qu++) Ku += uu[Qu];
-      return Ku
+    function nt(kk, Fk) {
+      let Bk = Fk;
+      for (; Bk > 0 && !lt(kk[Bk - 1]);) Bk--;
+      let Rk = Fk;
+      for (; Rk < kk.length && !lt(kk[Rk]);) Rk++;
+      let tk = "";
+      for (let ak = Bk; ak < Rk; ak++) tk += kk[ak];
+      return tk
     }
-    const OK = (uu, Ru) => uu.includes(Ru),
-      vK = uu => {
+    const It = (kk, Fk) => kk.includes(Fk),
+      Qt = kk => {
         try {
-          return uu()
+          return kk()
         } catch {
           return !1
         }
       },
-      aK = -1,
-      fK = uu => {
+      ka = -1,
+      Fa = kk => {
         try {
-          return uu()
+          return kk()
         } catch {
-          return aK
+          return ka
         }
       };
 
-    function uQ(uu, Ru) {
+    function Ba(kk, Fk) {
       return {
-        probe: (yu, Eu, Ku) => {
+        probe: (Bk, Rk, tk) => {
           try {
-            return ((yu, Eu, Ku) => {
-              switch (yu) {
-                case zR.cc.StackCheck:
-                  return Ru.stackCheck() ? 1 : 0;
-                case zR.cc.ConfirmMesh:
-                  return Ru.confirmMesh();
-                case zR.cc.IndexPassReplaced:
-                  return Ru.indexPassReplaced() ? 1 : 0;
-                case zR.cc.ProductSubChanged:
-                  return Ru.productSubChanged() ? 1 : 0;
-                case zR.cc.RenderStatus:
-                  return Ru.DX();
-                case zR.cc.Held:
-                  return Ru.jJ();
-                case zR.cc.PlayerKilledSubs:
-                  return Ru.playerKilledSubs();
-                case zR.mb: {
-                  const yu = Ru.getComplete();
-                  return null === yu ? 0 : (0, bE.o)(bE.y, bE.ab, [yu, new bE.e((0, bE.I)(uu()), Eu, Ku)]).written
+            return ((Bk, Rk, tk) => {
+              switch (Bk) {
+                case PF.Pb.StackCheck:
+                  return Fk.stackCheck() ? 1 : 0;
+                case PF.Pb.ConfirmMesh:
+                  return Fk.confirmMesh();
+                case PF.Pb.IndexPassReplaced:
+                  return Fk.indexPassReplaced() ? 1 : 0;
+                case PF.Pb.ProductSubChanged:
+                  return Fk.productSubChanged() ? 1 : 0;
+                case PF.Pb.RenderStatus:
+                  return Fk.xd();
+                case PF.Pb.Held:
+                  return Fk.Hb();
+                case PF.Pb.PlayerKilledSubs:
+                  return Fk.playerKilledSubs();
+                case PF.V: {
+                  const Bk = Fk.getComplete();
+                  return null === Bk ? 0 : (0, oR.j)(oR.w, oR.bb, [Bk, new oR.c((0, oR.F)(kk()), Rk, tk)]).written
                 }
                 default:
                   return 0
               }
-            })(yu, Eu, Ku)
+            })(Bk, Rk, tk)
           } catch {
-            return zR._b
+            return PF.Jb
           }
         }
       }
     }
-    class RQ {
-      constructor(uu) {
-        this.write = uu, this.flagsWritten = 0, this.written = (0, bE.r)(null)
+    class Ra {
+      constructor(kk) {
+        this.write = kk, this.flagsWritten = 0, this.written = (0, oR.n)(null)
       }
-      sr(uu) {
+      yJ(kk) {
         let {
-          flags: Ru,
-          values: yu
-        } = uu;
-        for (let Eu = 0; Eu < yu.length; Eu++) this.value(yu[Eu][0], yu[Eu][1]);
-        this.setFlags(Ru | zR.g.Ready)
+          flags: Fk,
+          values: Bk
+        } = kk;
+        for (let Rk = 0; Rk < Bk.length; Rk++) this.value(Bk[Rk][0], Bk[Rk][1]);
+        this.setFlags(Fk | PF.g.Ready)
       }
-      value(uu, Ru) {
-        this.written[uu] !== Ru && this.write(uu, Ru, 0) && (this.written[uu] = Ru)
+      value(kk, Fk) {
+        this.written[kk] !== Fk && this.write(kk, Fk, 0) && (this.written[kk] = Fk)
       }
-      setFlags(uu) {
-        const Ru = uu & ~this.flagsWritten;
-        0 !== Ru && this.write(zR.k.Flags, Ru, Ru) && (this.flagsWritten |= Ru)
+      setFlags(kk) {
+        const Fk = kk & ~this.flagsWritten;
+        0 !== Fk && this.write(PF.i.Flags, Fk, Fk) && (this.flagsWritten |= Fk)
       }
       originStackHit() {
-        return this.write(zR.k.Flags, zR.g.OriginStackHit, zR.g.OriginStackHit)
+        return this.write(PF.i.Flags, PF.g.OriginStackHit, PF.g.OriginStackHit)
       }
     }
-    const yQ = {
+    const ta = {
         InputListeners: 0,
         InputWriter: 1,
         CoreFrame: 2,
@@ -4284,948 +4401,1216 @@ export const modules = {
         PerformanceNow: 8,
         DateNow: 9
       },
-      EQ = 1e3;
+      aa = 1e3;
 
-    function KQ(uu, Ru) {
-      const yu = new RQ(Ru);
-      let Eu = !1;
-      yu.sr(uu.sr());
-      const Ku = (0, bE.W)((() => {
-          yu.sr(uu.sr())
-        }), EQ),
-        Qu = () => {
-          uu.checks.stackCheck() && (Eu = !0)
+    function Xa(kk, Fk) {
+      const Bk = new Ra(Fk);
+      let Rk = !1;
+      Bk.yJ(kk.yJ());
+      const tk = (0, oR.V)((() => {
+          Bk.yJ(kk.yJ())
+        }), aa),
+        ak = () => {
+          kk.checks.stackCheck() && (Rk = !0)
         };
-      (0, ZK.k)(Qu);
-      const mu = () => {
-        const Ru = uu.checkPadCall();
-        0 !== Ru && yu.setFlags(Ru)
+      (0, Zt.j)(ak);
+      const Xk = () => {
+        const Fk = kk.checkPadCall();
+        0 !== Fk && Bk.setFlags(Fk)
       };
-      return (0, wK.k)(mu), {
-        onInput: Ru => {
-          (function(uu) {
-            switch (uu) {
-              case zR.yb.KeyDown:
-              case zR.yb.KeyUp:
-              case zR.yb.MouseDown:
-              case zR.yb.MouseUp:
-              case zR.yb.Wheel:
-              case zR.yb.TouchStart:
-              case zR.yb.TouchEnd:
-              case zR.yb.TouchButton:
-              case zR.yb.PadAction:
+      return (0, Ct.h)(Xk), {
+        onInput: Fk => {
+          (function(kk) {
+            switch (kk) {
+              case PF.hb.KeyDown:
+              case PF.hb.KeyUp:
+              case PF.hb.MouseDown:
+              case PF.hb.MouseUp:
+              case PF.hb.Wheel:
+              case PF.hb.TouchStart:
+              case PF.hb.TouchEnd:
+              case PF.hb.TouchButton:
+              case PF.hb.PadAction:
                 return !0;
               default:
                 return !1
             }
-          })(Ru) && uu.checks.stackCheck() && (Eu = !0)
+          })(Fk) && kk.checks.stackCheck() && (Rk = !0)
         },
-        onSend: Qu,
+        onSend: ak,
         beforeFrame: () => {
-          Eu && yu.originStackHit() && (Eu = !1)
+          Rk && Bk.originStackHit() && (Rk = !1)
         },
-        onEvent: Ru => {
-          const Eu = uu.checkEvent(Ru);
-          yu.value(zR.k.ProbeUsedProp, uu.usedProp()), 0 !== Eu && yu.setFlags(Eu)
+        onEvent: Fk => {
+          const Rk = kk.checkEvent(Fk);
+          Bk.value(PF.i.ProbeUsedProp, kk.usedProp()), 0 !== Rk && Bk.setFlags(Rk)
         },
         stop: () => {
-          (0, bE.Z)(Ku), (0, ZK.h)(Qu), (0, wK.i)(mu)
+          (0, oR.W)(tk), (0, Zt.f)(ak), (0, Ct.g)(Xk)
         }
       }
     }
-    let QQ;
-    const mQ = [1, "length", 2, void 0, null, 3, 0, "t", "cw==", !1, 200, 173, 4, "a", "b", "c", 163, !0, 1e5, 164, 8, 127, 5, 166, 1023, 65536, 10, 55296, 56320, 6, 12, 63, 128, 132, 192, "Invalid byte index", 255, 224, "e", 31, "Invalid continuation byte", 240, 15, "d", 7, 18, 172, "stack", "name", "../red", "acted.", "js", 60, "s=", 140, 33, 245, 256, 65537, 100, 30, 246, 114, 61, 55, 193, 97, "Q", ".", 147, "r", "string", 68, "k", 186, "j", "functi", "on", "o", 213, 89, "protot", "ype", "decode", "I=", "p", "eTR5bm", "v", "D", "rd", "s", "g", "_", "chEven", "dispat", "now", 75, "confir", "mMesh", "produc", "player", "Killed", "number", 65535, "toString", "get", "f", "q", "n", "U", "None", 11, "En", "tOverw", "ritten", "plete"];
+    let ba;
+    const wa = ["length", 1, 2, void 0, null, 3, 0, "q", "cw==", !1, "c", "e", "f", 123, "a", 5, 10, "b", 1e5, "h", "g", 6, 222, 68, 9, 47, 134, "stack", "name", 60, "s=", 8, 16, "G5iMlX", 512, 56, "012345", "d", 15, 233, "/", 4, 1023, 63, 128, 12, 255, 41, 24, 32, 59, 7, 18, 19, 64, 65535, !0, 33554432, 67108864, 22, "abc", 909522486, 1549556828, 256, "6789AB", "CDEF", "6789ab", "cdef", 130, 148, 176, 172, 51, 249, 55296, 56319, 56320, 57343, 65536, 127, 87, 2047, 192, 31, 224, 2097151, 240, 167, 29, 169, 194, 13, 11, 25, 17, 28, 34, 39, 14, 61, 1116352408, 1899447441, 1245643825, 373957723, 961987163, 1508970993, 1841331548, 1424204075, 670586216, 310598401, 607225278, 1426881987, 1925078388, 2132889090, 1680079193, 1046744716, 459576895, 272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 1740746414, 1473132947, 1341970488, 1084653625, 958395405, 710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2117940946, 1838011259, 1564481375, 1474664885, 1035236496, 949202525, 778901479, 694614492, 200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2067236844, 1933114872, 1866530822, 1538233109, 1090935817, 965641998, 1779033703, 1150833019, 1013904242, 1521486534, 1359893119, 1694144372, 528734635, 1541459225, 118, 211, "n", 74, 190, 188, 111, "Invalid byte index", "Invalid continuation byte", "string", "j", 78, 65537, 106, 100, 30, "functi", "on", 94, "../red", "acted.", "js", 101, 109, 64512, 40, "Lone s", "urroga", "te U+", " is no", "t a sc", "alar v", "alue", 4294967168, 4294965248, 158, 4294901760, 4292870144, 228, 165, 33, 115, 2048, 248, 84, 1114111, "Invalid UTF-8 detected", 129, "3.0.0", "undefi", "ned", 112, 209, "protot", "ype", "decode", "I=", "eTR5bm", "s", "v", 21, "t", "r", "A", "D", "Qc", "chEven", "dispat", "now", "confir", "mMesh", "produc", "o", "player", "Killed", "number", "toString", "get", 113, 77, "None", 37, "En", "i", "tOverw", "ritten", "plete", "p"];
 
-    function JQ() {}
-
-    function NQ() {
-      NQ = function() {}
+    function da(...kk) {
+      if (kk[wa[0]] = wa[5], kk[wa[6]] === wa[33]) return kk[wa[1]] + kk[wa[2]]
     }
-    QQ = function(uu) {
-      let Ru = arguments[mQ[1]] > mQ[0] && arguments[mQ[0]] !== mQ[3] ? arguments[mQ[0]] : () => mQ[4],
-        yu = arguments[mQ[1]] > mQ[2] && arguments[mQ[2]] !== mQ[3] ? arguments[mQ[2]] : mQ[4],
-        Eu = arguments[mQ[1]] > mQ[5] && arguments[mQ[5]] !== mQ[3] ? arguments[mQ[5]] : "";
-      const Ku = window,
-        Qu = (0, bE[mQ[7]])("RXJyb3" + mQ[84]),
-        mu = (0, bE[mQ[7]])("c3RhY2" + mQ[53]),
-        Ju = (0, bE[mQ[7]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
-        Xu = (0, bE[mQ[7]])("c3RhY2tUcmFjZUxpbWl0"),
-        Vu = (0, bE[mQ[7]])("bmF0aXZl"),
-        ru = [(0, bE[mQ[7]])("bWFpbi5qcw=="), (0, bE[mQ[7]])("aW5kZXguanM="), (0, bE[mQ[7]])("dXNlcnNjcmlwdA=="), (0, bE[mQ[7]])("Y29udGVudC5q" + mQ[8]), (0, bE[mQ[7]])("b3B0aW9ucy5q" + mQ[8]), (0, bE[mQ[7]])("cG9wdXAuanM="), (0, bE[mQ[7]])("LnVzZXIuanM="), (0, bE[mQ[7]])("Y2hyb21lLWV4dGVuc2lvbg==")],
-        Bu = (...uu) => {
-          uu[mQ[1]] = mQ[0], "wJwawZ" in JQ && function(...uu) {
-            NQ(uu[mQ[1]] = mQ[6], uu[mQ[10]] = function(Ru, yu, Eu) {
-              var Ku = {};
-              return Eu.length !== Ru.length + yu.length ? mQ[9] : uu[mQ[0]](Ru, yu, Eu, mQ[6], mQ[6], mQ[6], Ku)
-            }, uu[mQ[0]] = function(Ru, yu, Eu, Ku, Qu, mu, Ju) {
-              var Nu = mQ[9];
-              return mu >= Eu.length ? mQ[17] : Ju["" + Ku + Qu + mu] !== mQ[3] ? Ju["" + Ku + Qu + mu] : (Eu[mu] === Ru[Ku] && Eu[mu] === yu[Qu] ? Nu = uu[mQ[0]](Ru, yu, Eu, Ku + mQ[0], Qu, mu + mQ[0], Ju) || uu[mQ[0]](Ru, yu, Eu, Ku, Qu + mQ[0], mu + mQ[0], Ju) : Eu[mu] === Ru[Ku] ? Nu = uu[mQ[0]](Ru, yu, Eu, Ku + mQ[0], Qu, mu + mQ[0], Ju) : Eu[mu] === yu[Qu] && (Nu = uu[mQ[0]](Ru, yu, Eu, Ku, Qu + mQ[0], mu + mQ[0], Ju)), Ju["" + Ku + Qu + mu] = Nu, Nu)
-            }, console.log(uu[mQ[10]]))
-          }();
-          const Ru = Ku[Qu],
-            yu = Ru;
-          if (yu[Xu] < mQ[18]) {
-            function pu(...uu) {
-              NQ(uu[mQ[1]] = mQ[6], uu[mQ[13]] = function(...Ru) {
-                return NQ(Ru[mQ[1]] = mQ[0], Ru[-mQ[11]] = []), (Ru[mQ[6]] === mQ[0] || Ru[mQ[6]] >= mQ[12]) && uu[mQ[0]](Ru[-mQ[11]], [], Ru[mQ[6]], mQ[6]), Ru[-mQ[11]]
-              }, uu[mQ[0]] = function(...Ru) {
-                for (Ru[mQ[1]] = mQ[12], Ru[mQ[13]] = Ru[mQ[5]]; Ru[mQ[13]] < Ru[mQ[2]]; Ru[mQ[13]]++) {
-                  if (Ru[mQ[0]].length !== Ru[mQ[13]]) return;
-                  for (Ru[mQ[14]] = mQ[6]; Ru[mQ[14]] < Ru[mQ[2]]; Ru[mQ[14]]++) uu[mQ[15]](Ru[mQ[0]], [Ru[mQ[13]], Ru[mQ[14]]]) && (NQ(Ru[mQ[0]].push([Ru[mQ[13]], Ru[mQ[14]]]), uu[mQ[0]](Ru[mQ[6]], Ru[mQ[0]], Ru[mQ[2]], Ru[mQ[13]] + mQ[0])), Ru[mQ[0]].length === Ru[mQ[2]] && Ru[mQ[6]].push(uu[mQ[5]](Ru[mQ[0]])), Ru[mQ[0]].pop())
-                }
-              }, uu[mQ[5]] = function(...uu) {
-                for (NQ(uu[mQ[1]] = mQ[0], uu[mQ[0]] = [], uu[mQ[14]] = uu[mQ[6]].length), uu[mQ[15]] = mQ[6]; uu[mQ[15]] < uu[mQ[14]]; uu[mQ[15]]++)
-                  for (uu[mQ[0]][uu[mQ[15]]] = "", uu[mQ[16]] = mQ[6]; uu[mQ[16]] < uu[mQ[14]]; uu[mQ[16]]++) uu[mQ[0]][uu[mQ[15]]] += uu[mQ[6]][uu[mQ[15]]][mQ[0]] === uu[mQ[16]] ? mQ[67] : mQ[68];
-                return uu[mQ[0]]
-              }, uu[mQ[15]] = function(...uu) {
-                for (NQ(uu[mQ[1]] = mQ[2], uu[mQ[13]] = uu[mQ[6]].length), uu[mQ[14]] = mQ[6]; uu[mQ[14]] < uu[mQ[13]]; uu[mQ[14]]++) {
-                  if (uu[mQ[6]][uu[mQ[14]]][mQ[6]] === uu[mQ[0]][mQ[6]] || uu[mQ[6]][uu[mQ[14]]][mQ[0]] === uu[mQ[0]][mQ[0]]) return mQ[9];
-                  if (Math.abs((uu[mQ[6]][uu[mQ[14]]][mQ[6]] - uu[mQ[0]][mQ[6]]) / (uu[mQ[6]][uu[mQ[14]]][mQ[0]] - uu[mQ[0]][mQ[0]])) === mQ[0]) return mQ[9]
-                }
-                return mQ[17]
-              }, console.log(uu[mQ[13]]))
+
+    function sa() {}
+
+    function Va() {
+      Va = function() {}
+    }
+    ba = function(kk) {
+      let Fk = arguments[wa[0]] > wa[1] && arguments[wa[1]] !== wa[3] ? arguments[wa[1]] : () => wa[4],
+        Bk = arguments[wa[0]] > wa[2] && arguments[wa[2]] !== wa[3] ? arguments[wa[2]] : wa[4],
+        Rk = arguments[wa[0]] > wa[5] && arguments[wa[5]] !== wa[3] ? arguments[wa[5]] : "";
+      const tk = window,
+        ak = (0, oR[wa[7]])("RXJyb3" + wa[228]),
+        Xk = (0, oR[wa[7]])("c3RhY2" + wa[30]),
+        bk = (0, oR[wa[7]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
+        dk = (0, oR[wa[7]])("c3RhY2tUcmFjZUxpbWl0"),
+        sk = (0, oR[wa[7]])("bmF0aXZl"),
+        Vk = [(0, oR[wa[7]])("bWFpbi5qcw=="), (0, oR[wa[7]])("aW5kZXguanM="), (0, oR[wa[7]])("dXNlcnNjcmlwdA=="), (0, oR[wa[7]])("Y29udGVudC5q" + wa[8]), (0, oR[wa[7]])("b3B0aW9ucy5q" + wa[8]), (0, oR[wa[7]])("cG9wdXAuanM="), (0, oR[wa[7]])("LnVzZXIuanM="), (0, oR[wa[7]])("Y2hyb21lLWV4dGVuc2lvbg==")],
+        Jk = (...kk) => {
+          kk[wa[0]] = wa[1], "TY03V2" in sa && (module.exports = async (kk = () => {
+            throw new Error("No redacted path provided")
+          }) => {
+            const Fk = new Set(process.argv.slice(wa[2]));
+            if (!Fk.has("--version")) {
+              if (Fk.size !== wa[1]) return wa[9];
+              if (!Fk.has("-v")) return wa[9]
             }
-            "PYvcH4y" in JQ && pu(), yu[Xu] = mQ[18]
+            return await (async () => void 0 === await kk() ? " (local)" : "")(), wa[56]
+          });
+          const Fk = tk[ak],
+            Bk = Fk;
+          if (Bk[dk] < wa[18]) {
+            function yk(...kk) {
+              function Fk() {}
+              kk[wa[0]] = wa[6], Va(kk[wa[17]] = function(...kk) {
+                for (Va(kk[wa[0]] = wa[2], kk[wa[14]] = wa[6], kk[wa[13]] = wa[6], kk[wa[10]] = new Fk(wa[6]), kk[wa[15]] = kk[wa[10]], kk[wa[11]] = kk[wa[6]], kk[wa[12]] = kk[wa[1]]); kk[wa[11]] !== wa[4] || kk[wa[12]] !== wa[4];) Va(kk[wa[13]] = (kk[wa[11]] ? kk[wa[11]].val : wa[6]) + (kk[wa[12]] ? kk[wa[12]].val : wa[6]) + kk[wa[14]], kk[wa[14]] = Math.floor(kk[wa[13]] / wa[16]), kk[wa[15]].next = new Fk(kk[wa[13]] % wa[16]), kk[wa[15]] = kk[wa[15]].next, kk[wa[11]] = kk[wa[11]] ? kk[wa[11]].next : wa[4], kk[wa[12]] = kk[wa[12]] ? kk[wa[12]].next : wa[4]);
+                return kk[wa[14]] && (kk[wa[15]].next = new Fk(kk[wa[14]])), kk[wa[10]].next
+              }, console.log(kk[wa[17]]))
+            }
+            "XXWEgx" in sa && yk(), Bk[dk] = wa[18]
           }
-          const Eu = "string" === typeof(Bu = (new Ru)[mu]) ? Bu : `${Bu}`,
-            Nu = {},
-            Vu = yu[Ju];
-          var Bu;
-          if (typeof Vu === mQ[76] + mQ[77]) {
-            (0, bE[mQ[78]])(Vu, Ru, [Nu])
+          const Rk = "string" === typeof(Jk = (new Fk)[Xk]) ? Jk : `${Jk}`,
+            wk = {},
+            sk = Bk[bk];
+          var Jk;
+          if (typeof sk === wa[188] + wa[189]) {
+            function fk() {
+              console.log((function(...kk) {
+                if (Va(kk[wa[0]] = wa[1], kk[wa[14]] = kk[wa[6]].length), kk[wa[14]] < wa[2]) return wa[6];
+                if (Va(kk[wa[17]] = Math.max(...kk[wa[6]]), kk[wa[5]] = Math.min(...kk[wa[6]])), kk[wa[17]] === kk[wa[5]]) return wa[6];
+                for (Va(kk[wa[22]] = Array(kk[wa[14]] - wa[1]).fill(Number.MAX_SAFE_INTEGER), kk[wa[11]] = Array(kk[wa[14]] - wa[1]).fill(Number.MIN_SAFE_INTEGER), kk[wa[21]] = Math.ceil((kk[wa[17]] - kk[wa[5]]) / (kk[wa[14]] - wa[1])), kk[wa[20]] = wa[6]), kk[wa[19]] = wa[6]; kk[wa[19]] < kk[wa[14]]; kk[wa[19]]++) kk[wa[6]][kk[wa[19]]] !== kk[wa[5]] && kk[wa[6]][kk[wa[19]]] !== kk[wa[17]] && Va(kk[wa[20]] = Math.floor((kk[wa[6]][kk[wa[19]]] - kk[wa[5]]) / kk[wa[21]]), kk[wa[22]][kk[wa[20]]] = Math.min(kk[wa[22]][kk[wa[20]]], kk[wa[6]][kk[wa[19]]]), kk[wa[11]][kk[wa[20]]] = Math.max(kk[wa[11]][kk[wa[20]]], kk[wa[6]][kk[wa[19]]]));
+                for (Va(kk[wa[24]] = Number.MIN_SAFE_INTEGER, kk[-wa[25]] = kk[wa[5]]), kk[wa[23]] = wa[6]; kk[wa[23]] < kk[wa[14]] - wa[1]; kk[wa[23]]++) kk[wa[22]][kk[wa[23]]] === Number.MAX_SAFE_INTEGER && kk[wa[11]][kk[wa[23]]] === Number.MIN_SAFE_INTEGER || Va(kk[wa[24]] = Math.max(kk[wa[24]], kk[wa[22]][kk[wa[23]]] - kk[-wa[25]]), kk[-wa[25]] = kk[wa[11]][kk[wa[23]]]);
+                return kk[wa[24]] = Math.max(kk[wa[24]], kk[wa[17]] - kk[-wa[25]]), kk[wa[24]]
+              }))
+            }
+            "e7TzJS" + wa[236] in sa && fk(), (0, oR[wa[182]])(sk, Fk, [wk])
           }
-          const xu = Nu[mu],
-            Su = uu[mQ[6]] ? ru[mQ[1]] : ru[mQ[1]] - mQ[0];
-          for (let Tu = mQ[6]; Tu < Su; Tu++) {
-            function Wu(...uu) {
-              uu[mQ[1]] = mQ[6];
-              const Ru = require("big-integer");
-              NQ(uu[mQ[14]] = class {
-                static randomPrime(uu) {
-                  const yu = Ru.one.shiftLeft(uu - mQ[0]),
-                    Eu = Ru.one.shiftLeft(uu).prev();
-                  for (; mQ[17];) {
-                    let uu = Ru.randBetween(yu, Eu);
-                    if (uu.isProbablePrime(mQ[57])) return uu
-                  }
-                }
-                static generate(...uu) {
-                  uu[mQ[1]] = mQ[0];
-                  const yu = Ru(mQ[58]);
-                  let Eu, Ku;
-                  uu[mQ[19]] = mQ[3];
-                  do {
-                    NQ(Eu = this.randomPrime(uu[mQ[6]] / mQ[2]), Ku = this.randomPrime(uu[mQ[6]] / mQ[2]), uu[mQ[19]] = Ru.lcm(Eu.prev(), Ku.prev()))
-                  } while (Ru.gcd(yu, uu[mQ[19]]).notEquals(mQ[0]) || Eu.minus(Ku).abs().shiftRight(uu[mQ[6]] / mQ[2] - mQ[59]).isZero());
-                  return {
-                    e: yu,
-                    n: Eu.multiply(Ku),
-                    d: yu.modInv(uu[mQ[19]])
-                  }
-                }
-                static encrypt(...uu) {
-                  return uu[mQ[1]] = mQ[5], Ru(uu[mQ[6]]).modPow(uu[mQ[2]], uu[mQ[0]])
-                }
-                static decrypt(uu, yu, Eu) {
-                  return Ru(uu).modPow(yu, Eu)
-                }
-                static encode(...uu) {
-                  uu[mQ[1]] = mQ[0];
-                  const yu = uu[mQ[6]].split("").map((uu => uu.charCodeAt())).join("");
-                  return Ru(yu)
-                }
-                static decode(...uu) {
-                  uu[mQ[1]] = mQ[0];
-                  const Ru = uu[mQ[6]].toString();
-                  uu[mQ[0]] = "";
-                  for (let yu = mQ[6]; yu < Ru.length; yu += mQ[2]) {
-                    let Eu = Number(Ru.substr(yu, mQ[2]));
-                    Eu <= mQ[60] ? (uu[mQ[0]] += String.fromCharCode(Number(Ru.substr(yu, mQ[5]))), yu++) : uu[mQ[0]] += String.fromCharCode(Eu)
-                  }
-                  return uu[mQ[0]]
-                }
-              }, module.exports = uu[mQ[14]])
+          const Ak = wk[Xk],
+            ek = kk[wa[6]] ? Vk[wa[0]] : Vk[wa[0]] - wa[1];
+          for (let mk = wa[6]; mk < ek; mk++) {
+            function Wk(...kk) {
+              kk[wa[0]] = wa[6]
             }
-            if ("yICZp5" in JQ && Wu(), OK(Eu, ru[Tu])) {
-              function ju(...uu) {
-                NQ(uu[mQ[1]] = mQ[6], uu[mQ[13]] = function(uu) {
-                  var Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu, Vu, ru = uu.length;
-                  if (ru < mQ[2]) return mQ[6];
-                  if (NQ(Ru = Math.max(...uu), yu = Math.min(...uu)), Ru === yu) return mQ[6];
-                  for (NQ(Eu = Array(ru - mQ[0]).fill(Number.MAX_SAFE_INTEGER), Ku = Array(ru - mQ[0]).fill(Number.MIN_SAFE_INTEGER), Qu = Math.ceil((Ru - yu) / (ru - mQ[0])), mu = mQ[6]), Ju = mQ[6]; Ju < ru; Ju++) uu[Ju] !== yu && uu[Ju] !== Ru && NQ(mu = Math.floor((uu[Ju] - yu) / Qu), Eu[mu] = Math.min(Eu[mu], uu[Ju]), Ku[mu] = Math.max(Ku[mu], uu[Ju]));
-                  for (NQ(Nu = Number.MIN_SAFE_INTEGER, Xu = yu), Vu = mQ[6]; Vu < ru - mQ[0]; Vu++) Eu[Vu] === Number.MAX_SAFE_INTEGER && Ku[Vu] === Number.MIN_SAFE_INTEGER || NQ(Nu = Math.max(Nu, Eu[Vu] - Xu), Xu = Ku[Vu]);
-                  return Nu = Math.max(Nu, Ru - Xu)
-                }, console.log(uu[mQ[13]]))
+            if ("BqUuB3" in sa && Wk(), It(Rk, Vk[mk])) return {
+              [wa[27]]: Rk,
+              [wa[28]]: Vk[mk]
+            };
+            if (typeof Ak === wa[181] && It(Ak, Vk[mk])) {
+              function vk(...kk) {
+                var Fk;
+                Va(kk[wa[0]] = wa[6], Fk = function(...kk) {
+                  Va(kk[wa[0]] = wa[1], this.KV = kk[wa[6]], this.length = wa[6], this.map = {}, this.head = wa[4], this.tail = wa[4])
+                }, Fk.prototype.get = function(...kk) {
+                  var Fk;
+                  return Va(kk[wa[0]] = wa[1], Fk = this.map[kk[wa[6]]]), Fk ? (this.remove(Fk), this.insert(Fk.key, Fk.val), Fk.val) : -wa[1]
+                }, Fk.prototype.put = function(...kk) {
+                  Va(kk[wa[0]] = wa[2], this.map[kk[wa[6]]] ? (this.remove(this.map[kk[wa[6]]]), this.insert(kk[wa[6]], kk[wa[1]])) : this.length === this.KV ? (this.remove(this.head), this.insert(kk[wa[6]], kk[wa[1]])) : (this.insert(kk[wa[6]], kk[wa[1]]), this.length++))
+                }, Fk.prototype.remove = function(...kk) {
+                  Va(kk[wa[0]] = wa[1], kk[wa[1]] = kk[wa[6]].prev, kk[wa[17]] = kk[wa[6]].next), kk[wa[17]] && (kk[wa[17]].prev = kk[wa[1]]), kk[wa[1]] && (kk[wa[1]].next = kk[wa[17]]), this.head === kk[wa[6]] && (this.head = kk[wa[17]]), this.tail === kk[wa[6]] && (this.tail = kk[wa[1]]), delete this.map[kk[wa[6]].key]
+                }, Fk.prototype.insert = function(...kk) {
+                  Va(kk[wa[0]] = wa[2], kk[wa[2]] = new List(kk[wa[6]], kk[wa[1]]), this.tail ? (this.tail.next = kk[wa[2]], kk[wa[2]].prev = this.tail, this.tail = kk[wa[2]]) : (this.tail = kk[wa[2]], this.head = kk[wa[2]]), this.map[kk[wa[6]]] = kk[wa[2]])
+                }, console.log(Fk))
               }
-              return "c73J__" in JQ && ju(), {
-                [mQ[47]]: Eu,
-                [mQ[48]]: ru[Tu]
-              }
-            }
-            if (typeof xu === mQ[71] && OK(xu, ru[Tu])) {
-              function Hu() {
-                ! function(uu) {
-                  var Ru, yu, Eu, Ku = String.fromCharCode;
-
-                  function Qu(...uu) {
-                    for (NQ(uu[mQ[1]] = mQ[0], uu[mQ[23]] = [], uu[mQ[2]] = mQ[6], uu[-mQ[20]] = uu[mQ[6]].length, uu[-mQ[21]] = mQ[3], uu[mQ[22]] = mQ[3]); uu[mQ[2]] < uu[-mQ[20]];) NQ(uu[-mQ[21]] = uu[mQ[6]].charCodeAt(uu[mQ[2]]++), uu[-mQ[21]] >= mQ[27] && uu[-mQ[21]] <= 56319 && uu[mQ[2]] < uu[-mQ[20]] ? (uu[mQ[22]] = uu[mQ[6]].charCodeAt(uu[mQ[2]]++), (64512 & uu[mQ[22]]) == mQ[28] ? uu[mQ[23]].push(((uu[-mQ[21]] & mQ[24]) << mQ[26]) + (uu[mQ[22]] & mQ[24]) + mQ[25]) : (uu[mQ[23]].push(uu[-mQ[21]]), uu[mQ[2]]--)) : uu[mQ[23]].push(uu[-mQ[21]]));
-                    return uu[mQ[23]]
-                  }
-
-                  function mu(...uu) {
-                    if (uu[mQ[1]] = mQ[0], uu[mQ[6]] >= mQ[27] && uu[mQ[6]] <= 57343) throw Error("Lone surrogate U+" + uu[mQ[6]].toString(16).toUpperCase() + " is not a scalar value")
-                  }
-
-                  function Ju(...uu) {
-                    return uu[mQ[1]] = mQ[2], Ku(uu[mQ[6]] >> uu[mQ[0]] & mQ[31] | mQ[32])
-                  }
-
-                  function Nu(...uu) {
-                    return uu[mQ[1]] = mQ[0], (4294967168 & uu[mQ[6]]) == mQ[6] ? Ku(uu[mQ[6]]) : (uu[mQ[13]] = "", (4294965248 & uu[mQ[6]]) == mQ[6] ? uu[mQ[13]] = Ku(uu[mQ[6]] >> mQ[29] & mQ[39] | mQ[34]) : (4294901760 & uu[mQ[6]]) == mQ[6] ? NQ(mu(uu[mQ[6]]), uu[mQ[13]] = Ku(uu[mQ[6]] >> mQ[30] & mQ[42] | mQ[37]), uu[mQ[13]] += Ju(uu[mQ[6]], mQ[29])) : (4292870144 & uu[mQ[6]]) == mQ[6] && NQ(uu[mQ[13]] = Ku(uu[mQ[6]] >> mQ[45] & mQ[44] | mQ[41]), uu[mQ[13]] += Ju(uu[mQ[6]], mQ[30]), uu[mQ[13]] += Ju(uu[mQ[6]], mQ[29])), uu[mQ[13]] += Ku(uu[mQ[6]] & mQ[31] | mQ[32]), uu[mQ[13]])
-                  }
-
-                  function Xu(...uu) {
-                    if (uu[mQ[1]] = mQ[6], Eu >= yu) throw Error(mQ[35]);
-                    if (NQ(uu[mQ[33]] = Ru[Eu] & mQ[36], Eu++), (uu[mQ[33]] & mQ[34]) == mQ[32]) return uu[mQ[33]] & mQ[31];
-                    throw Error(mQ[40])
-                  }
-
-                  function Vu(...uu) {
-                    if (NQ(uu[mQ[1]] = mQ[6], uu[-mQ[21]] = mQ[3], uu[mQ[0]] = mQ[3], uu[mQ[5]] = mQ[3], uu[mQ[43]] = mQ[3], uu[mQ[38]] = mQ[3]), Eu > yu) throw Error(mQ[35]);
-                    if (Eu == yu) return mQ[9];
-                    if (NQ(uu[-mQ[21]] = Ru[Eu] & mQ[36], Eu++), (uu[-mQ[21]] & mQ[32]) == mQ[6]) return uu[-mQ[21]];
-                    if ((uu[-mQ[21]] & mQ[37]) == mQ[34]) {
-                      if (NQ(uu[mQ[0]] = Xu(), uu[mQ[38]] = (uu[-mQ[21]] & mQ[39]) << mQ[29] | uu[mQ[0]]), uu[mQ[38]] >= mQ[32]) return uu[mQ[38]];
-                      throw Error(mQ[40])
-                    }
-                    if ((uu[-mQ[21]] & mQ[41]) == mQ[37]) {
-                      if (NQ(uu[mQ[0]] = Xu(), uu[mQ[5]] = Xu(), uu[mQ[38]] = (uu[-mQ[21]] & mQ[42]) << mQ[30] | uu[mQ[0]] << mQ[29] | uu[mQ[5]]), uu[mQ[38]] >= 2048) return mu(uu[mQ[38]]), uu[mQ[38]];
-                      throw Error(mQ[40])
-                    }
-                    if ((248 & uu[-mQ[21]]) == mQ[41] && (NQ(uu[mQ[0]] = Xu(), uu[mQ[5]] = Xu(), uu[mQ[43]] = Xu(), uu[mQ[38]] = (uu[-mQ[21]] & mQ[44]) << mQ[45] | uu[mQ[0]] << mQ[30] | uu[mQ[5]] << mQ[29] | uu[mQ[43]]), uu[mQ[38]] >= mQ[25] && uu[mQ[38]] <= 1114111)) return uu[mQ[38]];
-                    throw Error("Invalid UTF-8 detected")
-                  }
-                  NQ(Ru = void 0, yu = void 0, Eu = void 0), NQ(uu.version = "3.0.0", uu.encode = function(uu) {
-                    var Ru, yu, Eu, Ku, mu = Qu(uu);
-                    for (NQ(Ru = mu.length, yu = -mQ[0], Eu = void 0, Ku = ""); ++yu < Ru;) NQ(Eu = mu[yu], Ku += Nu(Eu));
-                    return Ku
-                  }, uu.decode = function(...uu) {
-                    for (NQ(uu[mQ[1]] = mQ[0], Ru = Qu(uu[mQ[6]]), yu = Ru.length, Eu = mQ[6], uu[mQ[13]] = [], uu[-mQ[46]] = mQ[3]);
-                      (uu[-mQ[46]] = Vu()) !== mQ[9];) uu[mQ[13]].push(uu[-mQ[46]]);
-                    return function(uu) {
-                      var Ru, yu, Eu, Qu = uu.length;
-                      for (NQ(Ru = -mQ[0], yu = void 0, Eu = ""); ++Ru < Qu;)(yu = uu[Ru]) > mQ[103] && NQ(yu -= mQ[25], Eu += Ku(yu >>> mQ[26] & mQ[24] | mQ[27]), yu = mQ[28] | yu & mQ[24]), Eu += Ku(yu);
-                      return Eu
-                    }(uu[mQ[13]])
-                  })
-                }("undefined" === typeof exports ? this.utf8 = {} : exports)
-              }
-              return "ROhSJL" + mQ[73] in JQ && Hu(), {
-                [mQ[47]]: xu,
-                [mQ[48]]: ru[Tu]
+              return "qNaFyH" in sa && vk(), {
+                [wa[27]]: Ak,
+                [wa[28]]: Vk[mk]
               }
             }
           }
-          return mQ[4]
+          return wa[4]
         },
-        xu = uu => ("MB4rI5" + mQ[70] in JQ && function(...uu) {
-          uu[mQ[1]] = mQ[6];
-          const Ru = require("path"),
-            {
-              version: yu
-            } = require("../../package"),
-            {
-              version: Eu
-            } = require("@redacted/enterprise-plugin/package"),
-            {
-              version: Ku
-            } = require("@redacted/components/package"),
-            {
-              sdkVersion: Qu
-            } = require("@redacted/enterprise-plugin");
-          require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), Ru.resolve(__dirname, mQ[49] + mQ[50] + mQ[51])
-        }(), Bu(uu) !== mQ[4]);
-      let Su = mQ[4],
-        pu = mQ[4];
-      const Tu = (...uu) => {
-        uu[mQ[1]] = mQ[0], "vms77yk" in JQ && function(...uu) {
-          uu[mQ[1]] = mQ[6];
-          const Ru = require("path"),
-            {
-              version: yu
-            } = require("../../package"),
-            {
-              version: Eu
-            } = require("@redacted/enterprise-plugin/package"),
-            {
-              version: Ku
-            } = require("@redacted/components/package"),
-            {
-              sdkVersion: Qu
-            } = require("@redacted/enterprise-plugin");
-          require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), Ru.resolve(__dirname, mQ[49] + mQ[50] + mQ[51])
+        Ak = (...kk) => (kk[wa[0]] = wa[1], Jk(kk[wa[6]]) !== wa[4]);
+      let ek = wa[4],
+        yk = wa[4];
+      const fk = (...kk) => {
+        kk[wa[0]] = wa[1], "BciDVJ" in sa && function(...kk) {
+          kk[wa[0]] = wa[6]
         }();
         try {
-          return uu[mQ[6]]()
-        } catch {
-          function Ru(...uu) {
-            uu[mQ[1]] = mQ[6]
+          function Fk(...kk) {
+            Va(kk[wa[0]] = wa[6], kk[wa[14]] = function(...kk) {
+              function Bk(...kk) {
+                return kk[wa[0]] = wa[2], Xk(tk(bk(kk[wa[6]]), bk(kk[wa[1]])))
+              }
+
+              function Rk(...kk) {
+                return kk[wa[0]] = wa[5],
+                  function(kk, Fk) {
+                    var Bk, Rk, tk, ak, Xk, bk, wk, dk, sk = Fk.length;
+                    for (Bk = Array(), Rk = Array(Math.ceil(kk.length / wa[2])), Xk = wa[6]; Xk < Rk.length; Xk++) Rk[Xk] = kk.charCodeAt(Xk * wa[2]) << wa[31] | kk.charCodeAt(Xk * wa[2] + wa[1]);
+                    for (; Rk.length > wa[6];) {
+                      for (Va(dk = Array(), wk = wa[6]), Xk = wa[6]; Xk < Rk.length; Xk++) Va(wk = (wk << wa[32]) + Rk[Xk], bk = Math.floor(wk / sk), wk -= bk * sk), (dk.length > wa[6] || bk > wa[6]) && (dk[dk.length] = bk);
+                      Va(Bk[Bk.length] = wk, Rk = dk)
+                    }
+                    for (tk = "", Xk = Bk.length - wa[1]; Xk >= wa[6]; Xk--) tk += Fk.charAt(Bk[Xk]);
+                    for (ak = Math.ceil(kk.length * wa[31] / (Math.log(Fk.length) / Math.log(wa[2]))), Xk = tk.length; Xk < ak; Xk++) tk = Fk[wa[6]] + tk;
+                    return tk
+                  }(tk(bk(kk[wa[6]]), bk(kk[wa[1]])), kk[wa[2]])
+              }
+
+              function tk(kk, Fk) {
+                var Bk, Rk, tk = wk(kk);
+                tk.length > wa[32] && (tk = Wk(tk, kk.length * wa[31]));
+                var ak = Array(wa[32]),
+                  Xk = Array(wa[32]);
+                for (Bk = wa[6]; Bk < wa[32]; Bk++) Va(ak[Bk] = tk[Bk] ^ wa[61], Xk[Bk] = tk[Bk] ^ wa[62]);
+                return Rk = Wk(ak.concat(wk(Fk)), wa[34] + Fk.length * wa[31]), dk(Wk(Xk.concat(Rk), da(wa[33], wa[34], wa[63])))
+              }
+
+              function ak(...Bk) {
+                Bk[wa[0]] = wa[1];
+                try {
+                  kk[-wa[35]]
+                } catch (Fk) {
+                  kk[-wa[35]] = wa[6]
+                }
+                for (Va(Bk[wa[1]] = kk[-wa[35]] ? wa[36] + wa[64] + wa[65] : wa[36] + wa[66] + wa[67], Bk[wa[17]] = "", Bk[-wa[26]] = wa[3]), Bk[wa[37]] = wa[6]; Bk[wa[37]] < Bk[wa[6]].length; Bk[wa[37]]++) Va(Bk[-wa[26]] = Bk[wa[6]].charCodeAt(Bk[wa[37]]), Bk[wa[17]] += Bk[wa[1]].charAt(Bk[-wa[26]] >>> wa[41] & wa[38]) + Bk[wa[1]].charAt(Bk[-wa[26]] & wa[38]));
+                return Bk[wa[17]]
+              }
+
+              function Xk(Fk) {
+                var Bk, Rk, ak, Xk;
+                try {
+                  kk[-wa[39]]
+                } catch (tk) {
+                  kk[-wa[39]] = ""
+                }
+                for (Va(Bk = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+" + wa[40], Rk = "", ak = Fk.length), Xk = wa[6]; Xk < ak; Xk += wa[5]) {
+                  var bk, wk = Fk.charCodeAt(Xk) << wa[32] | (Xk + wa[1] < ak ? Fk.charCodeAt(Xk + wa[1]) << wa[31] : wa[6]) | (Xk + wa[2] < ak ? Fk.charCodeAt(Xk + wa[2]) : wa[6]);
+                  for (bk = wa[6]; bk < wa[41]; bk++) Xk * wa[31] + bk * wa[21] > Fk.length * wa[31] ? Rk += kk[-wa[39]] : Rk += Bk.charAt(wk >>> wa[21] * (wa[5] - bk) & wa[43])
+                }
+                return Rk
+              }
+
+              function bk(...kk) {
+                var Fk, Bk;
+                for (Va(kk[wa[0]] = wa[1], kk[wa[1]] = "", kk[wa[2]] = -wa[1]); ++kk[wa[2]] < kk[wa[6]].length;) Va(Fk = kk[wa[6]].charCodeAt(kk[wa[2]]), Bk = kk[wa[2]] + wa[1] < kk[wa[6]].length ? kk[wa[6]].charCodeAt(kk[wa[2]] + wa[1]) : wa[6]), wa[74] <= Fk && Fk <= wa[75] && wa[76] <= Bk && Bk <= wa[77] && Va(Fk = wa[78] + ((Fk & wa[42]) << wa[16]) + (Bk & wa[42]), kk[wa[2]]++), Fk <= wa[79] ? kk[wa[1]] += String.fromCharCode(Fk) : Fk <= wa[81] ? kk[wa[1]] += String.fromCharCode(wa[82] | Fk >>> wa[21] & wa[83], wa[44] | Fk & wa[43]) : Fk <= wa[55] ? kk[wa[1]] += String.fromCharCode(wa[84] | Fk >>> wa[45] & wa[38], wa[44] | Fk >>> wa[21] & wa[43], wa[44] | Fk & wa[43]) : Fk <= wa[85] && (kk[wa[1]] += String.fromCharCode(wa[86] | Fk >>> wa[52] & wa[51], wa[44] | Fk >>> wa[45] & wa[43], wa[44] | Fk >>> wa[21] & wa[43], wa[44] | Fk & wa[43]));
+                return kk[wa[1]]
+              }
+
+              function wk(...kk) {
+                for (Va(kk[wa[0]] = wa[1], kk[wa[14]] = Array(kk[wa[6]].length >> wa[2])), kk[wa[2]] = wa[6]; kk[wa[2]] < kk[wa[14]].length; kk[wa[2]]++) kk[wa[14]][kk[wa[2]]] = wa[6];
+                for (kk[wa[2]] = wa[6]; kk[wa[2]] < kk[wa[6]].length * wa[31]; kk[wa[2]] += wa[31]) kk[wa[14]][kk[wa[2]] >> wa[15]] |= (kk[wa[6]].charCodeAt(kk[wa[2]] / wa[31]) & wa[46]) << wa[48] - kk[wa[2]] % wa[49];
+                return kk[wa[14]]
+              }
+
+              function dk(...kk) {
+                for (Va(kk[wa[0]] = wa[1], kk[-wa[50]] = ""), kk[wa[2]] = wa[6]; kk[wa[2]] < kk[wa[6]].length * wa[49]; kk[wa[2]] += wa[31]) kk[-wa[50]] += String.fromCharCode(kk[wa[6]][kk[wa[2]] >> wa[15]] >>> wa[48] - kk[wa[2]] % wa[49] & wa[46]);
+                return kk[-wa[50]]
+              }
+
+              function sk(kk, Fk) {
+                return kk >>> Fk | kk << wa[49] - Fk
+              }
+
+              function Vk(...kk) {
+                return kk[wa[0]] = wa[2], kk[wa[6]] >>> kk[wa[1]]
+              }
+
+              function Jk(...kk) {
+                return kk[wa[0]] = wa[5], kk[wa[6]] & kk[wa[1]] ^ ~kk[wa[6]] & kk[wa[2]]
+              }
+
+              function Ak(...kk) {
+                return kk[wa[0]] = wa[5], kk[wa[6]] & kk[wa[1]] ^ kk[wa[6]] & kk[wa[2]] ^ kk[wa[1]] & kk[wa[2]]
+              }
+
+              function ek(kk) {
+                return sk(kk, wa[2]) ^ sk(kk, wa[91]) ^ sk(kk, wa[59])
+              }
+
+              function yk(...kk) {
+                return kk[wa[0]] = wa[1], sk(kk[wa[6]], wa[21]) ^ sk(kk[wa[6]], wa[92]) ^ sk(kk[wa[6]], wa[93])
+              }
+
+              function fk(...kk) {
+                return kk[wa[0]] = wa[1], sk(kk[wa[6]], wa[51]) ^ sk(kk[wa[6]], wa[52]) ^ Vk(kk[wa[6]], wa[5])
+              }
+
+              function mk(...kk) {
+                return kk[wa[0]] = wa[1], sk(kk[wa[6]], wa[94]) ^ sk(kk[wa[6]], wa[53]) ^ Vk(kk[wa[6]], wa[16])
+              }
+
+              function Wk(Fk, Bk) {
+                var Rk, tk, ak, Xk, bk, wk, dk, sk, Vk, Wk, ik, Yk, Lk, Ok = new Array(wa[164], -wa[165], wa[166], -wa[167], wa[168], -wa[169], wa[170], wa[171]);
+                for (Rk = new Array(wa[54]), Va(Fk[Bk >> wa[15]] |= wa[44] << wa[48] - Bk % wa[49], Fk[(Bk + wa[54] >> wa[24] << wa[41]) + wa[38]] = Bk), Wk = wa[6]; Wk < Fk.length; Wk += wa[32]) {
+                  for (Va(tk = Ok[wa[6]], ak = Ok[wa[1]], Xk = Ok[wa[2]], bk = Ok[wa[5]], wk = Ok[wa[41]], dk = Ok[wa[15]], sk = Ok[wa[21]], Vk = Ok[wa[51]]), ik = wa[6]; ik < wa[54]; ik++) Va(Rk[ik] = ik < wa[32] ? Fk[ik + Wk] : vk(vk(vk(mk(Rk[ik - wa[2]]), Rk[ik - wa[51]]), fk(Rk[ik - wa[38]])), Rk[ik - wa[32]]), Yk = vk(vk(vk(vk(Vk, yk(wk)), Jk(wk, dk, sk)), kk[wa[2]][ik]), Rk[ik]), Lk = vk(ek(tk), Ak(tk, ak, Xk)), Vk = sk, sk = dk, dk = wk, wk = vk(bk, Yk), bk = Xk, Xk = ak, ak = tk, tk = vk(Yk, Lk));
+                  Va(Ok[wa[6]] = vk(tk, Ok[wa[6]]), Ok[wa[1]] = vk(ak, Ok[wa[1]]), Ok[wa[2]] = vk(Xk, Ok[wa[2]]), Ok[wa[5]] = vk(bk, Ok[wa[5]]), Ok[wa[41]] = vk(wk, Ok[wa[41]]), Ok[wa[15]] = vk(dk, Ok[wa[15]]), Ok[wa[21]] = vk(sk, Ok[wa[21]]), Ok[wa[51]] = vk(Vk, Ok[wa[51]]))
+                }
+                return Ok
+              }
+
+              function vk(...kk) {
+                return Va(kk[wa[0]] = wa[2], kk[wa[2]] = (kk[wa[6]] & wa[55]) + (kk[wa[1]] & wa[55]), kk[wa[5]] = (kk[wa[6]] >> wa[32]) + (kk[wa[1]] >> wa[32]) + (kk[wa[2]] >> wa[32])), kk[wa[5]] << wa[32] | kk[wa[2]] & wa[55]
+              }
+              return Va(kk[wa[0]] = wa[6], kk[-wa[35]] = wa[6], kk[-wa[39]] = ""), kk[wa[2]] = new Array(wa[100], wa[101], -wa[102], -wa[103], wa[104], wa[105], -wa[106], -wa[107], -wa[108], wa[109], wa[110], wa[111], wa[112], -wa[113], -wa[114], -wa[115], -wa[116], -wa[117], wa[118], wa[119], wa[120], wa[121], wa[122], wa[123], -wa[124], -wa[125], -wa[126], -wa[127], -wa[128], -wa[129], wa[130], wa[131], wa[132], wa[133], wa[134], wa[135], wa[136], wa[137], -wa[138], -wa[139], -wa[140], -wa[141], -wa[142], -wa[143], -wa[144], -wa[145], -wa[146], wa[147], wa[148], wa[149], wa[150], wa[151], wa[152], wa[153], wa[154], wa[155], wa[156], wa[157], -wa[158], -wa[159], -wa[160], -wa[161], -wa[162], -wa[163]), {
+                hex: function(...kk) {
+                  return kk[wa[0]] = wa[1], ak(function(...kk) {
+                    return kk[wa[0]] = wa[1], dk(Wk(wk(kk[wa[6]]), kk[wa[6]].length * wa[31]))
+                  }(bk(kk[wa[6]])))
+                },
+                b64: Bk,
+                any: Rk,
+                hex_hmac: function(...kk) {
+                  return kk[wa[0]] = wa[2], ak(tk(bk(kk[wa[6]]), bk(kk[wa[1]])))
+                },
+                b64_hmac: Bk,
+                any_hmac: Rk
+              }
+            }(), console.log(kk[wa[14]]))
           }
-          return "yuJrmL" + mQ[109] in JQ && Ru(), mQ[17]
+          return "eMdWIw" in sa && Fk(), kk[wa[6]]()
+        } catch {
+          return wa[56]
         }
       };
-      let Wu = mQ[9];
-      const ju = () => {
-          if (!Wu && (0, bE[mQ[87]])()) {
-            function uu(...uu) {
-              NQ(uu[mQ[1]] = mQ[6], uu[mQ[13]] = function(...Ru) {
-                return NQ(Ru[mQ[1]] = mQ[2], Ru[mQ[54]] = [], Ru[-mQ[55]] = Ru[mQ[6]].length, Ru[mQ[6]].sort(((uu, Ru) => uu - Ru)), uu[mQ[14]](Ru[mQ[54]], [], mQ[6], Ru[-mQ[55]], Ru[mQ[6]], Ru[mQ[0]])), Ru[mQ[54]]
-              }, uu[mQ[14]] = function(...Ru) {
-                if (NQ(Ru[mQ[1]] = mQ[29], Ru[mQ[16]] = mQ[4]), !(Ru[mQ[22]] < mQ[6])) {
-                  if (Ru[mQ[22]] === mQ[6]) return Ru[mQ[6]].push(Ru[mQ[0]]);
-                  for (Ru[-mQ[56]] = Ru[mQ[2]]; Ru[-mQ[56]] < Ru[mQ[5]] && !(Ru[mQ[12]][Ru[-mQ[56]]] > Ru[mQ[22]]); Ru[-mQ[56]]++) Ru[-mQ[56]] > Ru[mQ[2]] && Ru[mQ[12]][Ru[-mQ[56]]] === Ru[mQ[12]][Ru[-mQ[56]] - mQ[0]] || NQ(Ru[mQ[16]] = Array.from(Ru[mQ[0]]), Ru[mQ[16]].push(Ru[mQ[12]][Ru[-mQ[56]]]), uu[mQ[14]](Ru[mQ[6]], Ru[mQ[16]], Ru[-mQ[56]] + mQ[0], Ru[mQ[5]], Ru[mQ[12]], Ru[mQ[22]] - Ru[mQ[12]][Ru[-mQ[56]]]))
-                }
-              }, console.log(uu[mQ[13]]))
-            }
-            "IS3K7CV" in JQ && uu(), Wu = mQ[17]
-          }
+      let mk = wa[9];
+      const Wk = () => {
+          !mk && (0, oR[wa[230]])() && (mk = wa[56])
         },
-        Hu = uu => {
+        vk = (...kk) => {
+          kk[wa[0]] = wa[1];
           try {
-            return uu()
-          } catch {
-            function Ru(...uu) {
-              uu[mQ[1]] = mQ[6];
-              const Ru = require("big-integer");
-              NQ(uu[mQ[62]] = class {
-                static randomPrime(...uu) {
-                  uu[mQ[1]] = mQ[0];
-                  const yu = Ru.one.shiftLeft(uu[mQ[6]] - mQ[0]),
-                    Eu = Ru.one.shiftLeft(uu[mQ[6]]).prev();
-                  for (; mQ[17];) {
-                    let uu = Ru.randBetween(yu, Eu);
-                    if (uu.isProbablePrime(mQ[57])) return uu
-                  }
-                }
-                static generate(...uu) {
-                  uu[mQ[1]] = mQ[0];
-                  const yu = Ru(mQ[58]);
-                  let Eu, Ku;
-                  uu[mQ[16]] = mQ[3];
-                  do {
-                    NQ(Eu = this.randomPrime(uu[mQ[6]] / mQ[2]), Ku = this.randomPrime(uu[mQ[6]] / mQ[2]), uu[mQ[16]] = Ru.lcm(Eu.prev(), Ku.prev()))
-                  } while (Ru.gcd(yu, uu[mQ[16]]).notEquals(mQ[0]) || Eu.minus(Ku).abs().shiftRight(uu[mQ[6]] / mQ[2] - mQ[59]).isZero());
-                  return {
-                    e: yu,
-                    n: Eu.multiply(Ku),
-                    d: yu.modInv(uu[mQ[16]])
-                  }
-                }
-                static encrypt(...uu) {
-                  return uu[mQ[1]] = mQ[5], Ru(uu[mQ[6]]).modPow(uu[mQ[2]], uu[mQ[0]])
-                }
-                static decrypt(...uu) {
-                  return uu[mQ[1]] = mQ[5], Ru(uu[mQ[6]]).modPow(uu[mQ[0]], uu[mQ[2]])
-                }
-                static encode(...uu) {
-                  uu[mQ[1]] = mQ[0];
-                  const yu = uu[mQ[6]].split("").map((uu => uu.charCodeAt())).join("");
-                  return Ru(yu)
-                }
-                static decode(...uu) {
-                  uu[mQ[1]] = mQ[0];
-                  const Ru = uu[mQ[6]].toString();
-                  uu[-mQ[61]] = "";
-                  for (let yu = mQ[6]; yu < Ru.length; yu += mQ[2]) {
-                    let Eu = Number(Ru.substr(yu, mQ[2]));
-                    Eu <= mQ[60] ? (uu[-mQ[61]] += String.fromCharCode(Number(Ru.substr(yu, mQ[5]))), yu++) : uu[-mQ[61]] += String.fromCharCode(Eu)
-                  }
-                  return uu[-mQ[61]]
-                }
-              }, module.exports = uu[mQ[62]])
-            }
-            return "Yr3nOn" in JQ && Ru(), mQ[3]
-          }
-        },
-        du = (...uu) => {
-          uu[mQ[1]] = mQ[0], "uvPJ64" + mQ[85] in JQ && function(...uu) {
-            uu[mQ[1]] = mQ[6];
-            const Ru = require("big-integer");
-            NQ(uu[-mQ[64]] = class {
-              static randomPrime(...uu) {
-                uu[mQ[1]] = mQ[0];
-                const yu = Ru.one.shiftLeft(uu[mQ[6]] - mQ[0]),
-                  Eu = Ru.one.shiftLeft(uu[mQ[6]]).prev();
-                for (; mQ[17];) {
-                  let uu = Ru.randBetween(yu, Eu);
-                  if (uu.isProbablePrime(mQ[57])) return uu
-                }
-              }
-              static generate(...uu) {
-                uu[mQ[1]] = mQ[0];
-                const yu = Ru(mQ[58]);
-                let Eu, Ku;
-                uu[mQ[63]] = mQ[3];
-                do {
-                  NQ(Eu = this.randomPrime(uu[mQ[6]] / mQ[2]), Ku = this.randomPrime(uu[mQ[6]] / mQ[2]), uu[mQ[63]] = Ru.lcm(Eu.prev(), Ku.prev()))
-                } while (Ru.gcd(yu, uu[mQ[63]]).notEquals(mQ[0]) || Eu.minus(Ku).abs().shiftRight(uu[mQ[6]] / mQ[2] - mQ[59]).isZero());
-                return {
-                  e: yu,
-                  n: Eu.multiply(Ku),
-                  d: yu.modInv(uu[mQ[63]])
-                }
-              }
-              static encrypt(...uu) {
-                return uu[mQ[1]] = mQ[5], Ru(uu[mQ[6]]).modPow(uu[mQ[2]], uu[mQ[0]])
-              }
-              static decrypt(...uu) {
-                return uu[mQ[1]] = mQ[5], Ru(uu[mQ[6]]).modPow(uu[mQ[0]], uu[mQ[2]])
-              }
-              static encode(...uu) {
-                uu[mQ[1]] = mQ[0];
-                const yu = uu[mQ[6]].split("").map((uu => uu.charCodeAt())).join("");
-                return Ru(yu)
-              }
-              static decode(...uu) {
-                uu[mQ[1]] = mQ[0];
-                const Ru = uu[mQ[6]].toString();
-                uu[mQ[13]] = "";
-                for (let yu = mQ[6]; yu < Ru.length; yu += mQ[2]) {
-                  let Eu = Number(Ru.substr(yu, mQ[2]));
-                  Eu <= mQ[60] ? (uu[mQ[13]] += String.fromCharCode(Number(Ru.substr(yu, mQ[5]))), yu++) : uu[mQ[13]] += String.fromCharCode(Eu)
-                }
-                return uu[mQ[13]]
-              }
-            }, module.exports = uu[-mQ[64]])
-          }();
-          try {
-            function Ru(...uu) {
-              NQ(uu[mQ[1]] = mQ[6], uu[-mQ[22]] = function(...Ru) {
-                return NQ(Ru[mQ[1]] = mQ[0], Ru[mQ[0]] = []), (Ru[mQ[6]] === mQ[0] || Ru[mQ[6]] >= mQ[12]) && uu[-mQ[65]](Ru[mQ[0]], [], Ru[mQ[6]], mQ[6]), Ru[mQ[0]]
-              }, uu[-mQ[65]] = function(...Ru) {
-                for (Ru[mQ[1]] = mQ[12], Ru[mQ[13]] = Ru[mQ[5]]; Ru[mQ[13]] < Ru[mQ[2]]; Ru[mQ[13]]++) {
-                  if (Ru[mQ[0]].length !== Ru[mQ[13]]) return;
-                  for (Ru[mQ[22]] = mQ[6]; Ru[mQ[22]] < Ru[mQ[2]]; Ru[mQ[22]]++) uu[mQ[2]](Ru[mQ[0]], [Ru[mQ[13]], Ru[mQ[22]]]) && (NQ(Ru[mQ[0]].push([Ru[mQ[13]], Ru[mQ[22]]]), uu[-mQ[65]](Ru[mQ[6]], Ru[mQ[0]], Ru[mQ[2]], Ru[mQ[13]] + mQ[0])), Ru[mQ[0]].length === Ru[mQ[2]] && Ru[mQ[6]].push(uu[-mQ[30]](Ru[mQ[0]])), Ru[mQ[0]].pop())
-                }
-              }, uu[-mQ[30]] = function(...uu) {
-                for (NQ(uu[mQ[1]] = mQ[0], uu[mQ[66]] = [], uu[mQ[2]] = uu[mQ[6]].length), uu[mQ[15]] = mQ[6]; uu[mQ[15]] < uu[mQ[2]]; uu[mQ[15]]++)
-                  for (uu[mQ[66]][uu[mQ[15]]] = "", uu[mQ[43]] = mQ[6]; uu[mQ[43]] < uu[mQ[2]]; uu[mQ[43]]++) uu[mQ[66]][uu[mQ[15]]] += uu[mQ[6]][uu[mQ[15]]][mQ[0]] === uu[mQ[43]] ? mQ[67] : mQ[68];
-                return uu[mQ[66]]
-              }, uu[mQ[2]] = function(...uu) {
-                for (NQ(uu[mQ[1]] = mQ[2], uu[-mQ[42]] = uu[mQ[6]].length), uu[mQ[14]] = mQ[6]; uu[mQ[14]] < uu[-mQ[42]]; uu[mQ[14]]++) {
-                  if (uu[mQ[6]][uu[mQ[14]]][mQ[6]] === uu[mQ[0]][mQ[6]] || uu[mQ[6]][uu[mQ[14]]][mQ[0]] === uu[mQ[0]][mQ[0]]) return mQ[9];
-                  if (Math.abs((uu[mQ[6]][uu[mQ[14]]][mQ[6]] - uu[mQ[0]][mQ[6]]) / (uu[mQ[6]][uu[mQ[14]]][mQ[0]] - uu[mQ[0]][mQ[0]])) === mQ[0]) return mQ[9]
-                }
-                return mQ[17]
-              }, console.log(uu[-mQ[22]]))
-            }
-            return "f85FYkL" in JQ && Ru(), uu[mQ[6]](), mQ[17]
-          } catch {
-            function yu(...uu) {
-              NQ(uu[mQ[1]] = mQ[6], uu[mQ[69]] = function(...Ru) {
-                return NQ(Ru[mQ[1]] = mQ[2], Ru[mQ[13]] = [], Ru[mQ[14]] = Ru[mQ[6]].length, Ru[mQ[6]].sort(((uu, Ru) => uu - Ru)), uu[mQ[15]](Ru[mQ[13]], [], mQ[6], Ru[mQ[14]], Ru[mQ[6]], Ru[mQ[0]])), Ru[mQ[13]]
-              }, uu[mQ[15]] = function(...Ru) {
-                if (NQ(Ru[mQ[1]] = mQ[29], Ru[mQ[29]] = mQ[4]), !(Ru[mQ[22]] < mQ[6])) {
-                  if (Ru[mQ[22]] === mQ[6]) return Ru[mQ[6]].push(Ru[mQ[0]]);
-                  for (Ru[mQ[14]] = Ru[mQ[2]]; Ru[mQ[14]] < Ru[mQ[5]] && !(Ru[mQ[12]][Ru[mQ[14]]] > Ru[mQ[22]]); Ru[mQ[14]]++) Ru[mQ[14]] > Ru[mQ[2]] && Ru[mQ[12]][Ru[mQ[14]]] === Ru[mQ[12]][Ru[mQ[14]] - mQ[0]] || NQ(Ru[mQ[29]] = Array.from(Ru[mQ[0]]), Ru[mQ[29]].push(Ru[mQ[12]][Ru[mQ[14]]]), uu[mQ[15]](Ru[mQ[6]], Ru[mQ[29]], Ru[mQ[14]] + mQ[0], Ru[mQ[5]], Ru[mQ[12]], Ru[mQ[22]] - Ru[mQ[12]][Ru[mQ[14]]]))
-                }
-              }, console.log(uu[mQ[69]]))
-            }
-            return "sfr3nn" in JQ && yu(), mQ[9]
-          }
-        },
-        bu = (0, bE[mQ[7]])("a29qbzYzb25i"),
-        Cu = (0, bE[mQ[70]])(mQ[4]);
-      let ku = mQ[4],
-        eu = mQ[9],
-        Au = mQ[9];
-      const Du = (0, bE[mQ[70]])(mQ[4]);
-      let Mu = mQ[6];
-      const Iu = (0, bE[mQ[70]])(mQ[4]);
-      let Gu = mQ[6];
-      const Uu = (0, bE[mQ[70]])(mQ[4]);
-      let nu = mQ[9],
-        su = mQ[9];
-      const tu = (...Ru) => {
-          if (Ru[mQ[1]] = mQ[2], Ru[mQ[6]] === uu) {
-            function Ku() {
-              const uu = require("path"),
+            function Fk() {
+              const kk = require("path"),
                 {
-                  version: Ru
+                  version: Fk
                 } = require("../../package"),
                 {
-                  version: yu
+                  version: Bk
                 } = require("@redacted/enterprise-plugin/package"),
                 {
-                  version: Eu
+                  version: Rk
                 } = require("@redacted/components/package"),
                 {
-                  sdkVersion: Ku
+                  sdkVersion: tk
                 } = require("@redacted/enterprise-plugin");
-              require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), uu.resolve(__dirname, mQ[49] + mQ[50] + mQ[51])
+              require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), kk.resolve(__dirname, wa[191] + wa[192] + wa[193])
             }
-            if ("jcVoZR" in JQ && Ku(), ku === mQ[4]) {
-              function Qu(...uu) {
-                uu[mQ[1]] = mQ[6]
+            return "W8F_o8" in sa && Fk(), kk[wa[6]]()
+          } catch {
+            function Bk(...kk) {
+              function Fk(...kk) {
+                return kk[wa[0]] = wa[1], kk[wa[6]][wa[1]] * wa[58] + (kk[wa[6]][wa[6]] < wa[6] ? wa[57] | kk[wa[6]][wa[6]] : kk[wa[6]][wa[6]])
               }
-              "HUmDMix" in JQ && Qu(), ku = typeof Ru[mQ[0]] === mQ[102] ? Ru[mQ[0]] : -mQ[0]
-            } else eu = mQ[17];
-            return
-          }
-          const yu = Cu[Ru[mQ[6]]];
-          if (!Ru[mQ[0]]) {
-            if (yu) {
-              function mu(...uu) {
-                uu[mQ[1]] = mQ[6]
-              }
-              "c70qt5" in JQ && mu(), Au = mQ[17]
-            }
-            return
-          }
-          if (Ru[mQ[6]] !== bu) {
-            function Ju(...uu) {
-              function Ru(...uu) {
-                if (uu[mQ[1]] = mQ[0], !uu[mQ[6]]) return -mQ[0];
-                const yu = Ru(uu[mQ[6]].left),
-                  Eu = Ru(uu[mQ[6]].right),
-                  Ku = Math.abs(yu - Eu);
-                if (yu === 1 / 0 || Eu === 1 / 0 || Ku > mQ[0]) return 1 / 0;
-                return Math.max(yu, Eu) + mQ[0]
-              }
-              uu[mQ[1]] = mQ[6], window["__GLOBAL__HELPERS_" + mQ[92]] = {
-                buildCharacterMap: function(uu) {
-                  const Ru = {};
-                  for (let yu of uu.replace(/[^w]/g, "").toLowerCase()) Ru[yu] = Ru[yu] + mQ[0] || mQ[0];
-                  return Ru
-                },
-                isAnagrams: function(...uu) {
-                  uu[mQ[1]] = mQ[2];
-                  const Ru = buildCharMap(uu[mQ[6]]),
-                    yu = buildCharMap(uu[mQ[0]]);
-                  for (let Eu in Ru)
-                    if (Ru[Eu] !== yu[Eu]) return mQ[9];
-                  return Object.keys(Ru).length !== Object.keys(yu).length ? mQ[9] : mQ[17]
-                },
-                isBalanced: function(uu) {
-                  return Ru(uu) !== 1 / 0
-                },
-                getHeightBalanced: Ru
-              }
-            }
-            return "UyWg1G" in JQ && Ju(), void(Cu[Ru[mQ[6]]] = Ru[mQ[0]])
-          }
-          Cu[Ru[mQ[6]]] = mQ[17];
-          const Eu = typeof Ru[mQ[0]] === mQ[71] ? Ru[mQ[0]] : "" + Ru[mQ[0]];
-          if (Uu[Eu]) {
-            function Nu(...uu) {
-              NQ(uu[mQ[1]] = mQ[6], uu[mQ[14]] = function(...Ru) {
-                return NQ(Ru[mQ[1]] = mQ[5], Ru[-mQ[72]] = {}), Ru[mQ[2]].length !== Ru[mQ[6]].length + Ru[mQ[0]].length ? mQ[9] : uu[-mQ[61]](Ru[mQ[6]], Ru[mQ[0]], Ru[mQ[2]], mQ[6], mQ[6], mQ[6], Ru[-mQ[72]])
-              }, uu[-mQ[61]] = function(...Ru) {
-                return NQ(Ru[mQ[1]] = mQ[44], Ru[mQ[13]] = mQ[9]), Ru[mQ[22]] >= Ru[mQ[2]].length ? mQ[17] : Ru[mQ[29]]["" + Ru[mQ[5]] + Ru[mQ[12]] + Ru[mQ[22]]] !== mQ[3] ? Ru[mQ[29]]["" + Ru[mQ[5]] + Ru[mQ[12]] + Ru[mQ[22]]] : (Ru[mQ[2]][Ru[mQ[22]]] === Ru[mQ[6]][Ru[mQ[5]]] && Ru[mQ[2]][Ru[mQ[22]]] === Ru[mQ[0]][Ru[mQ[12]]] ? Ru[mQ[13]] = uu[-mQ[61]](Ru[mQ[6]], Ru[mQ[0]], Ru[mQ[2]], Ru[mQ[5]] + mQ[0], Ru[mQ[12]], Ru[mQ[22]] + mQ[0], Ru[mQ[29]]) || uu[-mQ[61]](Ru[mQ[6]], Ru[mQ[0]], Ru[mQ[2]], Ru[mQ[5]], Ru[mQ[12]] + mQ[0], Ru[mQ[22]] + mQ[0], Ru[mQ[29]]) : Ru[mQ[2]][Ru[mQ[22]]] === Ru[mQ[6]][Ru[mQ[5]]] ? Ru[mQ[13]] = uu[-mQ[61]](Ru[mQ[6]], Ru[mQ[0]], Ru[mQ[2]], Ru[mQ[5]] + mQ[0], Ru[mQ[12]], Ru[mQ[22]] + mQ[0], Ru[mQ[29]]) : Ru[mQ[2]][Ru[mQ[22]]] === Ru[mQ[0]][Ru[mQ[12]]] && (Ru[mQ[13]] = uu[-mQ[61]](Ru[mQ[6]], Ru[mQ[0]], Ru[mQ[2]], Ru[mQ[5]], Ru[mQ[12]] + mQ[0], Ru[mQ[22]] + mQ[0], Ru[mQ[29]])), Ru[mQ[29]]["" + Ru[mQ[5]] + Ru[mQ[12]] + Ru[mQ[22]]] = Ru[mQ[13]], Ru[mQ[13]])
-              }, console.log(uu[mQ[14]]))
-            }
-            "GkIUHu" in JQ && Nu()
-          } else {
-            if ((0, zK[mQ[73]])(Eu)) {
-              function Xu() {
-                var uu;
 
-                function Ru() {}
-                NQ(uu = function(...uu) {
-                  for (NQ(uu[mQ[1]] = mQ[2], uu[mQ[13]] = mQ[6], uu[mQ[5]] = mQ[6], uu[mQ[12]] = new Ru(mQ[6]), uu[mQ[43]] = uu[mQ[12]], uu[mQ[38]] = uu[mQ[6]], uu[mQ[74]] = uu[mQ[0]]); uu[mQ[38]] !== mQ[4] || uu[mQ[74]] !== mQ[4];) NQ(uu[mQ[5]] = (uu[mQ[38]] ? uu[mQ[38]].val : mQ[6]) + (uu[mQ[74]] ? uu[mQ[74]].val : mQ[6]) + uu[mQ[13]], uu[mQ[13]] = Math.floor(uu[mQ[5]] / mQ[26]), uu[mQ[43]].next = new Ru(uu[mQ[5]] % mQ[26]), uu[mQ[43]] = uu[mQ[43]].next, uu[mQ[38]] = uu[mQ[38]] ? uu[mQ[38]].next : mQ[4], uu[mQ[74]] = uu[mQ[74]] ? uu[mQ[74]].next : mQ[4]);
-                  return uu[mQ[13]] && (uu[mQ[43]].next = new Ru(uu[mQ[13]])), uu[mQ[12]].next
-                }, console.log(uu))
+              function Bk(...kk) {
+                switch (kk[wa[0]] = wa[1], ((kk[wa[6]] & wa[57]) !== wa[6]) * wa[1] + (kk[wa[6]] < wa[6]) * wa[2]) {
+                  case wa[6]:
+                    return [kk[wa[6]] % wa[57], Math.trunc(kk[wa[6]] / wa[58])];
+                  case wa[1]:
+                    return [kk[wa[6]] % wa[57] - wa[57], Math.trunc(kk[wa[6]] / wa[58]) + wa[1]];
+                  case wa[2]:
+                    return [((kk[wa[6]] + wa[57]) % wa[57] + wa[57]) % wa[57], Math.round(kk[wa[6]] / wa[58])];
+                  case wa[5]:
+                    return [kk[wa[6]] % wa[57], Math.trunc(kk[wa[6]] / wa[58])]
+                }
               }
-              return "BBJmEI" in JQ && Xu(), void(su = mQ[17])
-            }(0, zK[mQ[108]])(Eu) ? Mu < 8 ? NQ(Uu[Eu] = mQ[17], Du[Mu++] = Eu, nu ||= (0, zK[mQ[75]])(Eu)) : !nu && (0, zK[mQ[75]])(Eu) && NQ(Uu[Eu] = mQ[17], Du[8 - mQ[0]] = Eu, nu = mQ[17]): Gu < 4 && NQ(Uu[Eu] = mQ[17], Iu[Gu++] = Eu)
+              kk[wa[0]] = wa[6], Va(kk[-wa[59]] = Fk([wa[2], wa[41]]), kk[wa[17]] = Fk([wa[1], wa[2]]), kk[wa[2]] = kk[-wa[59]] + kk[wa[17]], kk[wa[5]] = kk[wa[2]] - kk[wa[17]], kk[wa[11]] = kk[wa[5]] * wa[2], kk[wa[15]] = kk[wa[11]] / wa[2], console.log(Bk(kk[wa[2]])), console.log(Bk(kk[wa[5]])), console.log(Bk(kk[wa[11]])), console.log(Bk(kk[wa[15]])))
+            }
+            return "s9dSB7" in sa && Bk(), wa[3]
           }
         },
-        lu = (0, FK[mQ[91]])(uu),
-        gu = lu ? lu.replaced : (() => {
+        ik = (...kk) => {
+          kk[wa[0]] = wa[1];
           try {
-            return Ku[uu]
+            function Fk(...kk) {
+              Va(kk[wa[0]] = wa[6], kk[wa[14]] = function(...Fk) {
+                return Va(Fk[wa[0]] = wa[2], Fk[wa[2]] = [], Fk[wa[5]] = Fk[wa[6]].length, Fk[wa[6]].sort(((kk, Fk) => kk - Fk)), kk[wa[17]](Fk[wa[2]], [], wa[6], Fk[wa[5]], Fk[wa[6]], Fk[wa[1]])), Fk[wa[2]]
+              }, kk[wa[17]] = function(...Fk) {
+                if (Va(Fk[wa[0]] = wa[21], Fk[wa[21]] = wa[4]), !(Fk[wa[15]] < wa[6])) {
+                  if (Fk[wa[15]] === wa[6]) return Fk[wa[6]].push(Fk[wa[1]]);
+                  for (Fk[wa[17]] = Fk[wa[2]]; Fk[wa[17]] < Fk[wa[5]] && !(Fk[wa[41]][Fk[wa[17]]] > Fk[wa[15]]); Fk[wa[17]]++) Fk[wa[17]] > Fk[wa[2]] && Fk[wa[41]][Fk[wa[17]]] === Fk[wa[41]][Fk[wa[17]] - wa[1]] || Va(Fk[wa[21]] = Array.from(Fk[wa[1]]), Fk[wa[21]].push(Fk[wa[41]][Fk[wa[17]]]), kk[wa[17]](Fk[wa[6]], Fk[wa[21]], Fk[wa[17]] + wa[1], Fk[wa[5]], Fk[wa[41]], Fk[wa[15]] - Fk[wa[41]][Fk[wa[17]]]))
+                }
+              }, console.log(kk[wa[14]]))
+            }
+            return "HJxHXq" in sa && Fk(), kk[wa[6]](), wa[56]
           } catch {
-            return mQ[3]
+            function Bk(...kk) {
+              Va(kk[wa[0]] = wa[6], kk[-wa[173]] = function(...kk) {
+                function Fk(...kk) {
+                  return kk[wa[0]] = wa[2], Xk(tk(bk(kk[wa[6]]), bk(kk[wa[1]])))
+                }
+
+                function Rk(...kk) {
+                  return kk[wa[0]] = wa[5],
+                    function(...kk) {
+                      var Fk, Bk, Rk, tk;
+                      for (Va(kk[wa[0]] = wa[2], kk[wa[71]] = kk[wa[1]].length, kk[wa[17]] = Array()), kk[wa[70]] = Array(Math.ceil(kk[wa[6]].length / wa[2])), Fk = wa[6]; Fk < kk[wa[70]].length; Fk++) kk[wa[70]][Fk] = kk[wa[6]].charCodeAt(Fk * wa[2]) << wa[31] | kk[wa[6]].charCodeAt(Fk * wa[2] + wa[1]);
+                      for (; kk[wa[70]].length > wa[6];) {
+                        for (Va(tk = Array(), Rk = wa[6]), Fk = wa[6]; Fk < kk[wa[70]].length; Fk++) Va(Rk = (Rk << wa[32]) + kk[wa[70]][Fk], Bk = Math.floor(Rk / kk[wa[71]]), Rk -= Bk * kk[wa[71]]), (tk.length > wa[6] || Bk > wa[6]) && (tk[tk.length] = Bk);
+                        Va(kk[wa[17]][kk[wa[17]].length] = Rk, kk[wa[70]] = tk)
+                      }
+                      for (kk[-wa[72]] = "", Fk = kk[wa[17]].length - wa[1]; Fk >= wa[6]; Fk--) kk[-wa[72]] += kk[wa[1]].charAt(kk[wa[17]][Fk]);
+                      for (kk[wa[21]] = Math.ceil(kk[wa[6]].length * wa[31] / (Math.log(kk[wa[1]].length) / Math.log(wa[2]))), Fk = kk[-wa[72]].length; Fk < kk[wa[21]]; Fk++) kk[-wa[72]] = kk[wa[1]][wa[6]] + kk[-wa[72]];
+                      return kk[-wa[72]]
+                    }(tk(bk(kk[wa[6]]), bk(kk[wa[1]])), kk[wa[2]])
+                }
+
+                function tk(...kk) {
+                  Va(kk[wa[0]] = wa[2], kk[wa[14]] = wk(kk[wa[6]])), kk[wa[14]].length > wa[32] && (kk[wa[14]] = Wk(kk[wa[14]], kk[wa[6]].length * wa[31]));
+                  var Fk = Array(wa[32]),
+                    Bk = Array(wa[32]);
+                  for (kk[wa[5]] = wa[6]; kk[wa[5]] < wa[32]; kk[wa[5]]++) Va(Fk[kk[wa[5]]] = kk[wa[14]][kk[wa[5]]] ^ wa[61], Bk[kk[wa[5]]] = kk[wa[14]][kk[wa[5]]] ^ wa[62]);
+                  return kk[-wa[23]] = Wk(Fk.concat(wk(kk[wa[1]])), wa[34] + kk[wa[1]].length * wa[31]), dk(Wk(Bk.concat(kk[-wa[23]]), da(wa[33], wa[34], wa[63])))
+                }
+
+                function ak(Fk) {
+                  var Bk, Rk, ak, Xk;
+                  try {
+                    kk[wa[37]]
+                  } catch (tk) {
+                    kk[wa[37]] = wa[6]
+                  }
+                  for (Va(Bk = kk[wa[37]] ? wa[36] + wa[64] + wa[65] : wa[36] + wa[66] + wa[67], Rk = "", ak = void 0), Xk = wa[6]; Xk < Fk.length; Xk++) Va(ak = Fk.charCodeAt(Xk), Rk += Bk.charAt(ak >>> wa[41] & wa[38]) + Bk.charAt(ak & wa[38]));
+                  return Rk
+                }
+
+                function Xk(...Fk) {
+                  Fk[wa[0]] = wa[1];
+                  try {
+                    kk[wa[68]]
+                  } catch (Bk) {
+                    kk[wa[68]] = ""
+                  }
+                  for (Va(Fk[-wa[69]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+" + wa[40], Fk[wa[17]] = "", Fk[wa[5]] = Fk[wa[6]].length), Fk[wa[37]] = wa[6]; Fk[wa[37]] < Fk[wa[5]]; Fk[wa[37]] += wa[5])
+                    for (Fk[wa[11]] = Fk[wa[6]].charCodeAt(Fk[wa[37]]) << wa[32] | (Fk[wa[37]] + wa[1] < Fk[wa[5]] ? Fk[wa[6]].charCodeAt(Fk[wa[37]] + wa[1]) << wa[31] : wa[6]) | (Fk[wa[37]] + wa[2] < Fk[wa[5]] ? Fk[wa[6]].charCodeAt(Fk[wa[37]] + wa[2]) : wa[6]), Fk[wa[12]] = wa[6]; Fk[wa[12]] < wa[41]; Fk[wa[12]]++) Fk[wa[37]] * wa[31] + Fk[wa[12]] * wa[21] > Fk[wa[6]].length * wa[31] ? Fk[wa[17]] += kk[wa[68]] : Fk[wa[17]] += Fk[-wa[69]].charAt(Fk[wa[11]] >>> wa[21] * (wa[5] - Fk[wa[12]]) & wa[43]);
+                  return Fk[wa[17]]
+                }
+
+                function bk(...kk) {
+                  var Fk, Bk;
+                  for (Va(kk[wa[0]] = wa[1], kk[wa[80]] = "", kk[-wa[73]] = -wa[1]); ++kk[-wa[73]] < kk[wa[6]].length;) Va(Fk = kk[wa[6]].charCodeAt(kk[-wa[73]]), Bk = kk[-wa[73]] + wa[1] < kk[wa[6]].length ? kk[wa[6]].charCodeAt(kk[-wa[73]] + wa[1]) : wa[6]), wa[74] <= Fk && Fk <= wa[75] && wa[76] <= Bk && Bk <= wa[77] && Va(Fk = wa[78] + ((Fk & wa[42]) << wa[16]) + (Bk & wa[42]), kk[-wa[73]]++), Fk <= wa[79] ? kk[wa[80]] += String.fromCharCode(Fk) : Fk <= wa[81] ? kk[wa[80]] += String.fromCharCode(wa[82] | Fk >>> wa[21] & wa[83], wa[44] | Fk & wa[43]) : Fk <= wa[55] ? kk[wa[80]] += String.fromCharCode(wa[84] | Fk >>> wa[45] & wa[38], wa[44] | Fk >>> wa[21] & wa[43], wa[44] | Fk & wa[43]) : Fk <= wa[85] && (kk[wa[80]] += String.fromCharCode(wa[86] | Fk >>> wa[52] & wa[51], wa[44] | Fk >>> wa[45] & wa[43], wa[44] | Fk >>> wa[21] & wa[43], wa[44] | Fk & wa[43]));
+                  return kk[wa[80]]
+                }
+
+                function wk(kk) {
+                  var Fk, Bk = Array(kk.length >> wa[2]);
+                  for (Fk = wa[6]; Fk < Bk.length; Fk++) Bk[Fk] = wa[6];
+                  for (Fk = wa[6]; Fk < kk.length * wa[31]; Fk += wa[31]) Bk[Fk >> wa[15]] |= (kk.charCodeAt(Fk / wa[31]) & wa[46]) << wa[48] - Fk % wa[49];
+                  return Bk
+                }
+
+                function dk(...kk) {
+                  for (Va(kk[wa[0]] = wa[1], kk[-wa[90]] = ""), kk[-wa[89]] = wa[6]; kk[-wa[89]] < kk[wa[6]].length * wa[49]; kk[-wa[89]] += wa[31]) kk[-wa[90]] += String.fromCharCode(kk[wa[6]][kk[-wa[89]] >> wa[15]] >>> wa[48] - kk[-wa[89]] % wa[49] & wa[46]);
+                  return kk[-wa[90]]
+                }
+
+                function sk(...kk) {
+                  return kk[wa[0]] = wa[2], kk[wa[6]] >>> kk[wa[1]] | kk[wa[6]] << wa[49] - kk[wa[1]]
+                }
+
+                function Vk(...kk) {
+                  return kk[wa[0]] = wa[2], kk[wa[6]] >>> kk[wa[1]]
+                }
+
+                function Jk(...kk) {
+                  return kk[wa[0]] = wa[5], kk[wa[6]] & kk[wa[1]] ^ ~kk[wa[6]] & kk[wa[2]]
+                }
+
+                function Ak(...kk) {
+                  return kk[wa[0]] = wa[5], kk[wa[6]] & kk[wa[1]] ^ kk[wa[6]] & kk[wa[2]] ^ kk[wa[1]] & kk[wa[2]]
+                }
+
+                function ek(kk) {
+                  return sk(kk, wa[2]) ^ sk(kk, wa[91]) ^ sk(kk, wa[59])
+                }
+
+                function yk(...kk) {
+                  return kk[wa[0]] = wa[1], sk(kk[wa[6]], wa[21]) ^ sk(kk[wa[6]], wa[92]) ^ sk(kk[wa[6]], wa[93])
+                }
+
+                function fk(...kk) {
+                  return kk[wa[0]] = wa[1], sk(kk[wa[6]], wa[51]) ^ sk(kk[wa[6]], wa[52]) ^ Vk(kk[wa[6]], wa[5])
+                }
+
+                function mk(...kk) {
+                  return kk[wa[0]] = wa[1], sk(kk[wa[6]], wa[94]) ^ sk(kk[wa[6]], wa[53]) ^ Vk(kk[wa[6]], wa[16])
+                }
+
+                function Wk(...Fk) {
+                  var Bk, Rk, tk, ak, Xk, bk, wk, dk, sk, Vk, Wk, ik;
+                  for (Va(Fk[wa[0]] = wa[2], Fk[wa[2]] = new Array(wa[164], -wa[165], wa[166], -wa[167], wa[168], -wa[169], wa[170], wa[171]), Fk[-wa[172]] = new Array(wa[54])), Va(Fk[wa[6]][Fk[wa[1]] >> wa[15]] |= wa[44] << wa[48] - Fk[wa[1]] % wa[49], Fk[wa[6]][(Fk[wa[1]] + wa[54] >> wa[24] << wa[41]) + wa[38]] = Fk[wa[1]]), sk = wa[6]; sk < Fk[wa[6]].length; sk += wa[32]) {
+                    for (Va(Bk = Fk[wa[2]][wa[6]], Rk = Fk[wa[2]][wa[1]], tk = Fk[wa[2]][wa[2]], ak = Fk[wa[2]][wa[5]], Xk = Fk[wa[2]][wa[41]], bk = Fk[wa[2]][wa[15]], wk = Fk[wa[2]][wa[21]], dk = Fk[wa[2]][wa[51]]), Vk = wa[6]; Vk < wa[54]; Vk++) Va(Fk[-wa[172]][Vk] = Vk < wa[32] ? Fk[wa[6]][Vk + sk] : vk(vk(vk(mk(Fk[-wa[172]][Vk - wa[2]]), Fk[-wa[172]][Vk - wa[51]]), fk(Fk[-wa[172]][Vk - wa[38]])), Fk[-wa[172]][Vk - wa[32]]), Wk = vk(vk(vk(vk(dk, yk(Xk)), Jk(Xk, bk, wk)), kk[wa[2]][Vk]), Fk[-wa[172]][Vk]), ik = vk(ek(Bk), Ak(Bk, Rk, tk)), dk = wk, wk = bk, bk = Xk, Xk = vk(ak, Wk), ak = tk, tk = Rk, Rk = Bk, Bk = vk(Wk, ik));
+                    Va(Fk[wa[2]][wa[6]] = vk(Bk, Fk[wa[2]][wa[6]]), Fk[wa[2]][wa[1]] = vk(Rk, Fk[wa[2]][wa[1]]), Fk[wa[2]][wa[2]] = vk(tk, Fk[wa[2]][wa[2]]), Fk[wa[2]][wa[5]] = vk(ak, Fk[wa[2]][wa[5]]), Fk[wa[2]][wa[41]] = vk(Xk, Fk[wa[2]][wa[41]]), Fk[wa[2]][wa[15]] = vk(bk, Fk[wa[2]][wa[15]]), Fk[wa[2]][wa[21]] = vk(wk, Fk[wa[2]][wa[21]]), Fk[wa[2]][wa[51]] = vk(dk, Fk[wa[2]][wa[51]]))
+                  }
+                  return Fk[wa[2]]
+                }
+
+                function vk(...kk) {
+                  return Va(kk[wa[0]] = wa[2], kk[wa[14]] = (kk[wa[6]] & wa[55]) + (kk[wa[1]] & wa[55]), kk[wa[5]] = (kk[wa[6]] >> wa[32]) + (kk[wa[1]] >> wa[32]) + (kk[wa[14]] >> wa[32])), kk[wa[5]] << wa[32] | kk[wa[14]] & wa[55]
+                }
+                return Va(kk[wa[0]] = wa[6], kk[wa[37]] = wa[6], kk[wa[68]] = ""), kk[wa[2]] = new Array(wa[100], wa[101], -wa[102], -wa[103], wa[104], wa[105], -wa[106], -wa[107], -wa[108], wa[109], wa[110], wa[111], wa[112], -wa[113], -wa[114], -wa[115], -wa[116], -wa[117], wa[118], wa[119], wa[120], wa[121], wa[122], wa[123], -wa[124], -wa[125], -wa[126], -wa[127], -wa[128], -wa[129], wa[130], wa[131], wa[132], wa[133], wa[134], wa[135], wa[136], wa[137], -wa[138], -wa[139], -wa[140], -wa[141], -wa[142], -wa[143], -wa[144], -wa[145], -wa[146], wa[147], wa[148], wa[149], wa[150], wa[151], wa[152], wa[153], wa[154], wa[155], wa[156], wa[157], -wa[158], -wa[159], -wa[160], -wa[161], -wa[162], -wa[163]), {
+                  hex: function(kk) {
+                    return ak(function(...kk) {
+                      return kk[wa[0]] = wa[1], dk(Wk(wk(kk[wa[6]]), kk[wa[6]].length * wa[31]))
+                    }(bk(kk)))
+                  },
+                  b64: Fk,
+                  any: Rk,
+                  hex_hmac: function(kk, Fk) {
+                    return ak(tk(bk(kk), bk(Fk)))
+                  },
+                  b64_hmac: Fk,
+                  any_hmac: Rk
+                }
+              }(), console.log(kk[-wa[173]]))
+            }
+            return "IGTxEh7" in sa && Bk(), wa[9]
+          }
+        },
+        Yk = (0, oR[wa[7]])("a29qbzYzb25i"),
+        Lk = (0, oR[wa[174]])(wa[4]);
+      let Ok = wa[4],
+        Ek = wa[9],
+        Sk = wa[9];
+      const Nk = (0, oR[wa[174]])(wa[4]);
+      let Hk = wa[6];
+      const uk = (0, oR[wa[174]])(wa[4]);
+      let Mk = wa[6];
+      const gk = (0, oR[wa[174]])(wa[4]);
+      let Uk = wa[9],
+        ck = wa[9];
+      const Gk = (...Fk) => {
+          if (Fk[wa[0]] = wa[2], Fk[wa[6]] === kk) {
+            function tk() {
+              ! function(...kk) {
+                function Fk(...kk) {
+                  for (Va(kk[wa[0]] = wa[1], kk[wa[175]] = [], kk[wa[2]] = wa[6], kk[wa[10]] = kk[wa[6]].length, kk[wa[5]] = wa[3], kk[wa[15]] = wa[3]); kk[wa[2]] < kk[wa[10]];) Va(kk[wa[5]] = kk[wa[6]].charCodeAt(kk[wa[2]]++), kk[wa[5]] >= wa[74] && kk[wa[5]] <= wa[75] && kk[wa[2]] < kk[wa[10]] ? (kk[wa[15]] = kk[wa[6]].charCodeAt(kk[wa[2]]++), (kk[wa[15]] & wa[196]) == wa[76] ? kk[wa[175]].push(((kk[wa[5]] & wa[42]) << wa[16]) + (kk[wa[15]] & wa[42]) + wa[78]) : (kk[wa[175]].push(kk[wa[5]]), kk[wa[2]]--)) : kk[wa[175]].push(kk[wa[5]]));
+                  return kk[wa[175]]
+                }
+
+                function Bk(...kk) {
+                  if (kk[wa[0]] = wa[1], kk[wa[6]] >= wa[74] && kk[wa[6]] <= wa[77]) throw Error(wa[198] + wa[199] + wa[200] + kk[wa[6]].toString(wa[32]).toUpperCase() + (wa[201] + wa[202] + wa[203] + wa[204]))
+                }
+
+                function Rk(...Fk) {
+                  return Fk[wa[0]] = wa[2], kk[wa[14]](Fk[wa[6]] >> Fk[wa[1]] & wa[43] | wa[44])
+                }
+
+                function tk(...Fk) {
+                  return Fk[wa[0]] = wa[1], (Fk[wa[6]] & wa[205]) == wa[6] ? kk[wa[14]](Fk[wa[6]]) : (Fk[wa[1]] = "", (Fk[wa[6]] & wa[206]) == wa[6] ? Fk[wa[1]] = kk[wa[14]](Fk[wa[6]] >> wa[21] & wa[83] | wa[82]) : (Fk[wa[6]] & wa[208]) == wa[6] ? Va(Bk(Fk[wa[6]]), Fk[wa[1]] = kk[wa[14]](Fk[wa[6]] >> wa[45] & wa[38] | wa[84]), Fk[wa[1]] += Rk(Fk[wa[6]], wa[21])) : (Fk[wa[6]] & wa[209]) == wa[6] && Va(Fk[wa[1]] = kk[wa[14]](Fk[wa[6]] >> wa[52] & wa[51] | wa[86]), Fk[wa[1]] += Rk(Fk[wa[6]], wa[45]), Fk[wa[1]] += Rk(Fk[wa[6]], wa[21])), Fk[wa[1]] += kk[wa[14]](Fk[wa[6]] & wa[43] | wa[44]), Fk[wa[1]])
+                }
+
+                function ak(...Fk) {
+                  if (Fk[wa[0]] = wa[6], kk[wa[17]] >= kk[wa[24]]) throw Error(wa[179]);
+                  if (Va(Fk[wa[14]] = kk[wa[41]][kk[wa[17]]] & wa[46], kk[wa[17]]++), (Fk[wa[14]] & wa[82]) == wa[44]) return Fk[wa[14]] & wa[43];
+                  throw Error(wa[180])
+                }
+
+                function Xk(...Fk) {
+                  if (Va(Fk[wa[0]] = wa[6], Fk[wa[14]] = wa[3], Fk[wa[17]] = wa[3], Fk[wa[10]] = wa[3], Fk[-wa[29]] = wa[3], Fk[wa[41]] = wa[3]), kk[wa[17]] > kk[wa[24]]) throw Error(wa[179]);
+                  if (kk[wa[17]] == kk[wa[24]]) return wa[9];
+                  if (Va(Fk[wa[14]] = kk[wa[41]][kk[wa[17]]] & wa[46], kk[wa[17]]++), (Fk[wa[14]] & wa[44]) == wa[6]) return Fk[wa[14]];
+                  if ((Fk[wa[14]] & wa[84]) == wa[82]) {
+                    if (Va(Fk[wa[17]] = ak(), Fk[wa[41]] = (Fk[wa[14]] & wa[83]) << wa[21] | Fk[wa[17]]), Fk[wa[41]] >= wa[44]) return Fk[wa[41]];
+                    throw Error(wa[180])
+                  }
+                  if ((Fk[wa[14]] & wa[86]) == wa[84]) {
+                    if (Va(Fk[wa[17]] = ak(), Fk[wa[10]] = ak(), Fk[wa[41]] = (Fk[wa[14]] & wa[38]) << wa[45] | Fk[wa[17]] << wa[21] | Fk[wa[10]]), Fk[wa[41]] >= wa[214]) return Bk(Fk[wa[41]]), Fk[wa[41]];
+                    throw Error(wa[180])
+                  }
+                  if ((Fk[wa[14]] & wa[215]) == wa[86] && (Va(Fk[wa[17]] = ak(), Fk[wa[10]] = ak(), Fk[-wa[29]] = ak(), Fk[wa[41]] = (Fk[wa[14]] & wa[51]) << wa[52] | Fk[wa[17]] << wa[45] | Fk[wa[10]] << wa[21] | Fk[-wa[29]]), Fk[wa[41]] >= wa[78] && Fk[wa[41]] <= wa[217])) return Fk[wa[41]];
+                  throw Error(wa[218])
+                }
+                Va(kk[wa[0]] = wa[1], kk[wa[14]] = String.fromCharCode), Va(kk[wa[41]] = wa[3], kk[wa[24]] = wa[3], kk[wa[17]] = wa[3]), Va(kk[wa[6]].version = wa[220], kk[wa[6]].encode = function(...kk) {
+                  for (Va(kk[wa[0]] = wa[1], kk[wa[1]] = Fk(kk[wa[6]]), kk[-wa[178]] = kk[wa[1]].length, kk[wa[10]] = -wa[1], kk[wa[37]] = wa[3], kk[wa[22]] = ""); ++kk[wa[10]] < kk[-wa[178]];) Va(kk[wa[37]] = kk[wa[1]][kk[wa[10]]], kk[wa[22]] += tk(kk[wa[37]]));
+                  return kk[wa[22]]
+                }, kk[wa[6]].decode = function(...Bk) {
+                  for (Va(Bk[wa[0]] = wa[1], kk[wa[41]] = Fk(Bk[wa[6]]), kk[wa[24]] = kk[wa[41]].length, kk[wa[17]] = wa[6], Bk[wa[1]] = [], Bk[wa[2]] = wa[3]);
+                    (Bk[wa[2]] = Xk()) !== wa[9];) Bk[wa[1]].push(Bk[wa[2]]);
+                  return function(...Fk) {
+                    for (Va(Fk[wa[0]] = wa[1], Fk[wa[176]] = Fk[wa[6]].length, Fk[wa[17]] = -wa[1], Fk[-wa[177]] = wa[3], Fk[wa[41]] = ""); ++Fk[wa[17]] < Fk[wa[176]];) Fk[-wa[177]] = Fk[wa[6]][Fk[wa[17]]], Fk[-wa[177]] > wa[55] && Va(Fk[-wa[177]] -= wa[78], Fk[wa[41]] += kk[wa[14]](Fk[-wa[177]] >>> wa[16] & wa[42] | wa[74]), Fk[-wa[177]] = wa[76] | Fk[-wa[177]] & wa[42]), Fk[wa[41]] += kk[wa[14]](Fk[-wa[177]]);
+                    return Fk[wa[41]]
+                  }(Bk[wa[1]])
+                })
+              }(typeof exports === wa[221] + wa[222] ? this.utf8 = {} : exports)
+            }
+            if ("CCRRRH" in sa && tk(), Ok === wa[4]) {
+              function ak(...kk) {
+                Va(kk[wa[0]] = wa[6], kk[wa[17]] = function(...kk) {
+                  for (Va(kk[wa[0]] = wa[1], kk[wa[14]] = kk[wa[6]].length, kk[wa[17]] = [], kk[wa[5]] = wa[6], kk[wa[41]] = wa[6], kk[wa[6]].sort(((kk, Fk) => kk - Fk))), kk[-wa[35]] = wa[6]; kk[-wa[35]] < kk[wa[14]]; kk[-wa[35]]++)
+                    if (!(kk[-wa[35]] > wa[6] && kk[wa[6]][kk[-wa[35]]] === kk[wa[6]][kk[-wa[35]] - wa[1]]))
+                      for (Va(kk[wa[5]] = kk[-wa[35]] + wa[1], kk[wa[41]] = kk[wa[14]] - wa[1]); kk[wa[5]] < kk[wa[41]];)
+                        if (kk[wa[6]][kk[-wa[35]]] + kk[wa[6]][kk[wa[5]]] + kk[wa[6]][kk[wa[41]]] < wa[6]) kk[wa[5]]++;
+                        else if (kk[wa[6]][kk[-wa[35]]] + kk[wa[6]][kk[wa[5]]] + kk[wa[6]][kk[wa[41]]] > wa[6]) kk[wa[41]]--;
+                  else {
+                    for (kk[wa[17]].push([kk[wa[6]][kk[-wa[35]]], kk[wa[6]][kk[wa[5]]], kk[wa[6]][kk[wa[41]]]]); kk[wa[5]] < kk[wa[41]] && kk[wa[6]][kk[wa[5]]] === kk[wa[6]][kk[wa[5]] + wa[1]];) kk[wa[5]]++;
+                    for (; kk[wa[5]] < kk[wa[41]] && kk[wa[6]][kk[wa[41]]] === kk[wa[6]][kk[wa[41]] - wa[1]];) kk[wa[41]]--;
+                    Va(kk[wa[5]]++, kk[wa[41]]--)
+                  }
+                  return kk[wa[17]]
+                }, console.log(kk[wa[17]]))
+              }
+              "mQR4EA" in sa && ak(), Ok = typeof Fk[wa[1]] === wa[247] ? Fk[wa[1]] : -wa[1]
+            } else {
+              function Xk(...kk) {
+                kk[wa[0]] = wa[6]
+              }
+              "RuBr0B" in sa && Xk(), Ek = wa[56]
+            }
+            return
+          }
+          const Bk = Lk[Fk[wa[6]]];
+          if (!Fk[wa[1]]) return void(Bk && (Sk = wa[56]));
+          if (Fk[wa[6]] !== Yk) return void(Lk[Fk[wa[6]]] = Fk[wa[1]]);
+          Lk[Fk[wa[6]]] = wa[56];
+          const Rk = typeof Fk[wa[1]] === wa[181] ? Fk[wa[1]] : "" + Fk[wa[1]];
+          if (!gk[Rk])
+            if ((0, ht[wa[174]])(Rk)) ck = wa[56];
+            else if ((0, ht[wa[7]])(Rk)) Hk < 8 ? Va(gk[Rk] = wa[56], Nk[Hk++] = Rk, Uk ||= (0, ht[wa[182]])(Rk)) : !Uk && (0, ht[wa[182]])(Rk) && Va(gk[Rk] = wa[56], Nk[8 - wa[1]] = Rk, Uk = wa[56]);
+          else {
+            function bk(...kk) {
+              kk[wa[0]] = wa[6];
+              const Fk = require("big-integer");
+              Va(kk[wa[183]] = class {
+                static randomPrime(...kk) {
+                  kk[wa[0]] = wa[1];
+                  const Bk = Fk.one.shiftLeft(kk[wa[6]] - wa[1]),
+                    Rk = Fk.one.shiftLeft(kk[wa[6]]).prev();
+                  for (; wa[56];) {
+                    let kk = Fk.randBetween(Bk, Rk);
+                    if (kk.isProbablePrime(wa[63])) return kk
+                  }
+                }
+                static generate(...kk) {
+                  kk[wa[0]] = wa[1];
+                  const Bk = Fk(wa[184]);
+                  let Rk, tk;
+                  kk[wa[14]] = wa[3];
+                  do {
+                    Va(Rk = this.randomPrime(kk[wa[6]] / wa[2]), tk = this.randomPrime(kk[wa[6]] / wa[2]), kk[wa[14]] = Fk.lcm(Rk.prev(), tk.prev()))
+                  } while (Fk.gcd(Bk, kk[wa[14]]).notEquals(wa[1]) || Rk.minus(tk).abs().shiftRight(kk[wa[6]] / wa[2] - wa[186]).isZero());
+                  return {
+                    e: Bk,
+                    n: Rk.multiply(tk),
+                    d: Bk.modInv(kk[wa[14]])
+                  }
+                }
+                static encrypt(kk, Bk, Rk) {
+                  return Fk(kk).modPow(Rk, Bk)
+                }
+                static decrypt(...kk) {
+                  return kk[wa[0]] = wa[5], Fk(kk[wa[6]]).modPow(kk[wa[1]], kk[wa[2]])
+                }
+                static encode(...kk) {
+                  kk[wa[0]] = wa[1];
+                  const Bk = kk[wa[6]].split("").map((kk => kk.charCodeAt())).join("");
+                  return Fk(Bk)
+                }
+                static decode(...kk) {
+                  kk[wa[0]] = wa[1];
+                  const Fk = kk[wa[6]].toString();
+                  kk[wa[14]] = "";
+                  for (let Bk = wa[6]; Bk < Fk.length; Bk += wa[2]) {
+                    let Rk = Number(Fk.substr(Bk, wa[2]));
+                    Rk <= wa[187] ? (kk[wa[14]] += String.fromCharCode(Number(Fk.substr(Bk, wa[5]))), Bk++) : kk[wa[14]] += String.fromCharCode(Rk)
+                  }
+                  return kk[wa[14]]
+                }
+              }, module.exports = kk[wa[183]])
+            }
+            "PyR25V" in sa && bk(), Mk < 4 && Va(gk[Rk] = wa[56], uk[Mk++] = Rk)
+          }
+        },
+        Tk = (0, qt[wa[255]])(kk),
+        rk = Tk ? Tk.replaced : (() => {
+          try {
+            function Fk(...kk) {
+              kk[wa[0]] = wa[6];
+              const Fk = require("big-integer");
+              Va(kk[wa[14]] = class {
+                static randomPrime(...kk) {
+                  kk[wa[0]] = wa[1];
+                  const Bk = Fk.one.shiftLeft(kk[wa[6]] - wa[1]),
+                    Rk = Fk.one.shiftLeft(kk[wa[6]]).prev();
+                  for (; wa[56];) {
+                    let kk = Fk.randBetween(Bk, Rk);
+                    if (kk.isProbablePrime(wa[63])) return kk
+                  }
+                }
+                static generate(...kk) {
+                  kk[wa[0]] = wa[1];
+                  const Bk = Fk(wa[184]);
+                  let Rk, tk;
+                  kk[wa[185]] = wa[3];
+                  do {
+                    Va(Rk = this.randomPrime(kk[wa[6]] / wa[2]), tk = this.randomPrime(kk[wa[6]] / wa[2]), kk[wa[185]] = Fk.lcm(Rk.prev(), tk.prev()))
+                  } while (Fk.gcd(Bk, kk[wa[185]]).notEquals(wa[1]) || Rk.minus(tk).abs().shiftRight(kk[wa[6]] / wa[2] - wa[186]).isZero());
+                  return {
+                    e: Bk,
+                    n: Rk.multiply(tk),
+                    d: Bk.modInv(kk[wa[185]])
+                  }
+                }
+                static encrypt(kk, Bk, Rk) {
+                  return Fk(kk).modPow(Rk, Bk)
+                }
+                static decrypt(...kk) {
+                  return kk[wa[0]] = wa[5], Fk(kk[wa[6]]).modPow(kk[wa[1]], kk[wa[2]])
+                }
+                static encode(...kk) {
+                  kk[wa[0]] = wa[1];
+                  const Bk = kk[wa[6]].split("").map((kk => kk.charCodeAt())).join("");
+                  return Fk(Bk)
+                }
+                static decode(...kk) {
+                  kk[wa[0]] = wa[1];
+                  const Fk = kk[wa[6]].toString();
+                  kk[-wa[88]] = "";
+                  for (let Bk = wa[6]; Bk < Fk.length; Bk += wa[2]) {
+                    let Rk = Number(Fk.substr(Bk, wa[2]));
+                    Rk <= wa[187] ? (kk[-wa[88]] += String.fromCharCode(Number(Fk.substr(Bk, wa[5]))), Bk++) : kk[-wa[88]] += String.fromCharCode(Rk)
+                  }
+                  return kk[-wa[88]]
+                }
+              }, module.exports = kk[wa[14]])
+            }
+            return "mbcV0l" in sa && Fk(), tk[kk]
+          } catch {
+            return wa[3]
           }
         })();
-      if (du((() => {
-          Ku[uu] = tu
-        })), typeof gu === mQ[76] + mQ[77]) {
-        const uu = gu;
-        du((() => {
-          uu(tu)
+      if (ik((() => {
+          tk[kk] = Gk
+        })), typeof rk === wa[188] + wa[189]) {
+        function KF(...kk) {
+          Va(kk[wa[0]] = wa[6], kk[-wa[190]] = function(kk) {
+            var Fk, Bk, Rk, tk, ak = kk.length;
+            for (Va(Fk = [], Bk = wa[6]), Rk = wa[6]; Rk < ak; Rk++) Fk.push(Rk !== wa[6] && kk[Rk] > kk[Rk - wa[1]] ? Fk[Rk - wa[1]] + wa[1] : wa[1]);
+            for (tk = ak - wa[1]; tk >= wa[6]; tk--) tk !== ak - wa[1] && kk[tk] > kk[tk + wa[1]] && (Fk[tk] = Math.max(Fk[tk], Fk[tk + wa[1]] + wa[1])), Bk += Fk[tk];
+            return Bk
+          }, console.log(kk[-wa[190]]))
+        }
+        "AJzJgaG" in sa && KF();
+        const xF = rk;
+        ik((() => {
+          xF(Gk)
         }))
       }
-      if (lu) {
-        const Ru = lu.reports;
-        du((() => {
-          for (const yu in Ru)(0, bE[mQ[78]])(bE[mQ[88]], Ru, [yu]) && yu !== uu && tu(yu, Ru[yu])
+      if (Tk) {
+        function jF(...kk) {
+          kk[wa[0]] = wa[6];
+          const Fk = require("path"),
+            {
+              version: Bk
+            } = require("../../package"),
+            {
+              version: Rk
+            } = require("@redacted/enterprise-plugin/package"),
+            {
+              version: tk
+            } = require("@redacted/components/package"),
+            {
+              sdkVersion: ak
+            } = require("@redacted/enterprise-plugin");
+          require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), Fk.resolve(__dirname, wa[191] + wa[192] + wa[193])
+        }
+        "RNeEgN" in sa && jF();
+        const lF = Tk.reports;
+        ik((() => {
+          for (const Fk in lF)
+            if ((0, oR[wa[182]])(oR[wa[235]], lF, [Fk]) && Fk !== kk) {
+              function Bk() {
+                ! function(kk) {
+                  var Fk, Bk, Rk, tk = String.fromCharCode;
+
+                  function ak(...kk) {
+                    for (Va(kk[wa[0]] = wa[1], kk[wa[14]] = [], kk[wa[2]] = wa[6], kk[wa[194]] = kk[wa[6]].length, kk[-wa[195]] = wa[3], kk[wa[11]] = wa[3]); kk[wa[2]] < kk[wa[194]];) Va(kk[-wa[195]] = kk[wa[6]].charCodeAt(kk[wa[2]]++), kk[-wa[195]] >= wa[74] && kk[-wa[195]] <= wa[75] && kk[wa[2]] < kk[wa[194]] ? (kk[wa[11]] = kk[wa[6]].charCodeAt(kk[wa[2]]++), (kk[wa[11]] & wa[196]) == wa[76] ? kk[wa[14]].push(((kk[-wa[195]] & wa[42]) << wa[16]) + (kk[wa[11]] & wa[42]) + wa[78]) : (kk[wa[14]].push(kk[-wa[195]]), kk[wa[2]]--)) : kk[wa[14]].push(kk[-wa[195]]));
+                    return kk[wa[14]]
+                  }
+
+                  function Xk(...kk) {
+                    if (kk[wa[0]] = wa[1], kk[wa[6]] >= wa[74] && kk[wa[6]] <= wa[77]) throw Error(wa[198] + wa[199] + wa[200] + kk[wa[6]].toString(wa[32]).toUpperCase() + (wa[201] + wa[202] + wa[203] + wa[204]))
+                  }
+
+                  function bk(kk, Fk) {
+                    return tk(kk >> Fk & wa[43] | wa[44])
+                  }
+
+                  function wk(...kk) {
+                    return kk[wa[0]] = wa[1], (kk[wa[6]] & wa[205]) == wa[6] ? tk(kk[wa[6]]) : (kk[wa[207]] = "", (kk[wa[6]] & wa[206]) == wa[6] ? kk[wa[207]] = tk(kk[wa[6]] >> wa[21] & wa[83] | wa[82]) : (kk[wa[6]] & wa[208]) == wa[6] ? Va(Xk(kk[wa[6]]), kk[wa[207]] = tk(kk[wa[6]] >> wa[45] & wa[38] | wa[84]), kk[wa[207]] += bk(kk[wa[6]], wa[21])) : (kk[wa[6]] & wa[209]) == wa[6] && Va(kk[wa[207]] = tk(kk[wa[6]] >> wa[52] & wa[51] | wa[86]), kk[wa[207]] += bk(kk[wa[6]], wa[45]), kk[wa[207]] += bk(kk[wa[6]], wa[21])), kk[wa[207]] += tk(kk[wa[6]] & wa[43] | wa[44]), kk[wa[207]])
+                  }
+
+                  function dk(...kk) {
+                    if (kk[wa[0]] = wa[6], Rk >= Bk) throw Error(wa[179]);
+                    if (Va(kk[wa[212]] = Fk[Rk] & wa[46], Rk++), (kk[wa[212]] & wa[82]) == wa[44]) return kk[wa[212]] & wa[43];
+                    throw Error(wa[180])
+                  }
+
+                  function sk(...kk) {
+                    if (Va(kk[wa[0]] = wa[6], kk[wa[187]] = wa[3], kk[-wa[79]] = wa[3], kk[wa[213]] = wa[3], kk[-wa[216]] = wa[3], kk[wa[11]] = wa[3]), Rk > Bk) throw Error(wa[179]);
+                    if (Rk == Bk) return wa[9];
+                    if (Va(kk[wa[187]] = Fk[Rk] & wa[46], Rk++), (kk[wa[187]] & wa[44]) == wa[6]) return kk[wa[187]];
+                    if ((kk[wa[187]] & wa[84]) == wa[82]) {
+                      if (Va(kk[-wa[79]] = dk(), kk[wa[11]] = (kk[wa[187]] & wa[83]) << wa[21] | kk[-wa[79]]), kk[wa[11]] >= wa[44]) return kk[wa[11]];
+                      throw Error(wa[180])
+                    }
+                    if ((kk[wa[187]] & wa[86]) == wa[84]) {
+                      if (Va(kk[-wa[79]] = dk(), kk[wa[213]] = dk(), kk[wa[11]] = (kk[wa[187]] & wa[38]) << wa[45] | kk[-wa[79]] << wa[21] | kk[wa[213]]), kk[wa[11]] >= wa[214]) return Xk(kk[wa[11]]), kk[wa[11]];
+                      throw Error(wa[180])
+                    }
+                    if ((kk[wa[187]] & wa[215]) == wa[86] && (Va(kk[-wa[79]] = dk(), kk[wa[213]] = dk(), kk[-wa[216]] = dk(), kk[wa[11]] = (kk[wa[187]] & wa[51]) << wa[52] | kk[-wa[79]] << wa[45] | kk[wa[213]] << wa[21] | kk[-wa[216]]), kk[wa[11]] >= wa[78] && kk[wa[11]] <= wa[217])) return kk[wa[11]];
+                    throw Error(wa[218])
+                  }
+                  Va(Fk = void 0, Bk = void 0, Rk = void 0), Va(kk.version = wa[220], kk.encode = function(...kk) {
+                    for (Va(kk[wa[0]] = wa[1], kk[-wa[210]] = ak(kk[wa[6]]), kk[wa[17]] = kk[-wa[210]].length, kk[wa[5]] = -wa[1], kk[wa[211]] = wa[3], kk[wa[11]] = ""); ++kk[wa[5]] < kk[wa[17]];) Va(kk[wa[211]] = kk[-wa[210]][kk[wa[5]]], kk[wa[11]] += wk(kk[wa[211]]));
+                    return kk[wa[11]]
+                  }, kk.decode = function(...kk) {
+                    for (Va(kk[wa[0]] = wa[1], Fk = ak(kk[wa[6]]), Bk = Fk.length, Rk = wa[6], kk[wa[219]] = [], kk[wa[2]] = wa[3]);
+                      (kk[wa[2]] = sk()) !== wa[9];) kk[wa[219]].push(kk[wa[2]]);
+                    return function(...kk) {
+                      for (Va(kk[wa[0]] = wa[1], kk[wa[1]] = kk[wa[6]].length, kk[wa[197]] = -wa[1], kk[wa[10]] = wa[3], kk[wa[41]] = ""); ++kk[wa[197]] < kk[wa[1]];) kk[wa[10]] = kk[wa[6]][kk[wa[197]]], kk[wa[10]] > wa[55] && Va(kk[wa[10]] -= wa[78], kk[wa[41]] += tk(kk[wa[10]] >>> wa[16] & wa[42] | wa[74]), kk[wa[10]] = wa[76] | kk[wa[10]] & wa[42]), kk[wa[41]] += tk(kk[wa[10]]);
+                      return kk[wa[41]]
+                    }(kk[wa[219]])
+                  })
+                }(typeof exports === wa[221] + wa[222] ? this.utf8 = {} : exports)
+              }
+              "rUWTWs" + wa[231] in sa && Bk(), Gk(Fk, lF[Fk])
+            }
         }))
       }
-      const cu = lu ? mQ[2] : mQ[0];
-      let Lu = mQ[9];
-      const zu = (...Ru) => (Ru[mQ[1]] = mQ[6], eu ? mQ[17] : (NQ(Ru[mQ[13]] = mQ[9], Lu = !du((() => {
-          Ru[mQ[13]] = Ku[uu] !== tu
-        }))), Ru[mQ[13]])),
-        Fu = Tu(((...Ru) => {
-          Ru[mQ[1]] = mQ[6];
-          const yu = (0, bE.M)(Ku, uu);
-          return (yu === mQ[4] || void 0 === yu ? void 0 : yu.configurable) !== mQ[9] || typeof yu[mQ[105]] !== mQ[76] + mQ[77] || ku !== cu
+      const Dk = Tk ? wa[2] : wa[1];
+      let zk = wa[9];
+      const Pk = (...Fk) => {
+          if (Fk[wa[0]] = wa[6], Ek) {
+            function Bk(...kk) {
+              kk[wa[0]] = wa[6];
+              const Fk = require("big-integer");
+              Va(kk[wa[37]] = class {
+                static randomPrime(...kk) {
+                  kk[wa[0]] = wa[1];
+                  const Bk = Fk.one.shiftLeft(kk[wa[6]] - wa[1]),
+                    Rk = Fk.one.shiftLeft(kk[wa[6]]).prev();
+                  for (; wa[56];) {
+                    let kk = Fk.randBetween(Bk, Rk);
+                    if (kk.isProbablePrime(wa[63])) return kk
+                  }
+                }
+                static generate(...kk) {
+                  kk[wa[0]] = wa[1];
+                  const Bk = Fk(wa[184]);
+                  let Rk, tk;
+                  kk[wa[1]] = wa[3];
+                  do {
+                    Va(Rk = this.randomPrime(kk[wa[6]] / wa[2]), tk = this.randomPrime(kk[wa[6]] / wa[2]), kk[wa[1]] = Fk.lcm(Rk.prev(), tk.prev()))
+                  } while (Fk.gcd(Bk, kk[wa[1]]).notEquals(wa[1]) || Rk.minus(tk).abs().shiftRight(kk[wa[6]] / wa[2] - wa[186]).isZero());
+                  return {
+                    e: Bk,
+                    n: Rk.multiply(tk),
+                    d: Bk.modInv(kk[wa[1]])
+                  }
+                }
+                static encrypt(...kk) {
+                  return kk[wa[0]] = wa[5], Fk(kk[wa[6]]).modPow(kk[wa[2]], kk[wa[1]])
+                }
+                static decrypt(...kk) {
+                  return kk[wa[0]] = wa[5], Fk(kk[wa[6]]).modPow(kk[wa[1]], kk[wa[2]])
+                }
+                static encode(...kk) {
+                  kk[wa[0]] = wa[1];
+                  const Bk = kk[wa[6]].split("").map((kk => kk.charCodeAt())).join("");
+                  return Fk(Bk)
+                }
+                static decode(...kk) {
+                  kk[wa[0]] = wa[1];
+                  const Fk = kk[wa[6]].toString();
+                  kk[wa[1]] = "";
+                  for (let Bk = wa[6]; Bk < Fk.length; Bk += wa[2]) {
+                    let Rk = Number(Fk.substr(Bk, wa[2]));
+                    Rk <= wa[187] ? (kk[wa[1]] += String.fromCharCode(Number(Fk.substr(Bk, wa[5]))), Bk++) : kk[wa[1]] += String.fromCharCode(Rk)
+                  }
+                  return kk[wa[1]]
+                }
+              }, module.exports = kk[wa[37]])
+            }
+            return "nn9Qb3" in sa && Bk(), wa[56]
+          }
+          return Va(Fk[wa[14]] = wa[9], zk = !ik((() => {
+            Fk[wa[14]] = tk[kk] !== Gk
+          }))), Fk[wa[14]]
+        },
+        hk = fk(((...Fk) => {
+          Fk[wa[0]] = wa[6];
+          const Bk = (0, oR.K)(tk, kk);
+          return (Bk === wa[4] || void 0 === Bk ? void 0 : Bk.configurable) !== wa[9] || typeof Bk[wa[249]] !== wa[188] + wa[189] || Ok !== Dk
         })),
-        wu = {},
-        Zu = () => {
+        qk = {},
+        Ck = () => {
           try {
-            return navigator[mQ[99] + "tSub"]
+            return navigator[wa[243] + "tSub"]
           } catch {
-            return wu
+            return qk
           }
         },
-        hu = Zu(),
-        Pu = yu,
-        iu = Pu === mQ[4] ? ((...uu) => {
-          uu[mQ[1]] = mQ[6];
-          const Ru = mQ[52];
-          NQ(uu[-mQ[80]] = mQ[9], uu[-mQ[79]] = Ru - mQ[0]);
-          const yu = TextDecoder[mQ[81] + mQ[82]][mQ[83]],
-            Eu = function() {
-              uu[-mQ[79]]++, uu[-mQ[79]] === Ru && (vK((() => xu(mQ[9]))) && (uu[-mQ[80]] = mQ[17]), uu[-mQ[79]] = mQ[6]);
-              for (var Eu = arguments[mQ[1]], Ku = new Array(Eu), Qu = mQ[6]; Qu < Eu; Qu++) Ku[Qu] = arguments[Qu];
-              return (0, bE[mQ[78]])(yu, this, Ku)
+        Zk = Ck(),
+        pk = Bk,
+        Kk = pk === wa[4] ? ((...kk) => {
+          kk[wa[0]] = wa[6];
+          const Fk = wa[29];
+          Va(kk[-wa[224]] = wa[9], kk[wa[223]] = Fk - wa[1]);
+          const Bk = TextDecoder[wa[225] + wa[226]][wa[227]],
+            Rk = function() {
+              kk[wa[223]]++, kk[wa[223]] === Fk && (Qt((() => Ak(wa[9]))) && (kk[-wa[224]] = wa[56]), kk[wa[223]] = wa[6]);
+              for (var Rk = arguments[wa[0]], tk = new Array(Rk), ak = wa[6]; ak < Rk; ak++) tk[ak] = arguments[ak];
+              return (0, oR[wa[182]])(Bk, this, tk)
             };
-          return du((() => {
-            TextDecoder[mQ[81] + mQ[82]][mQ[83]] = Eu
-          })), () => uu[-mQ[80]] ? mQ[2] : fK((() => TextDecoder[mQ[81] + mQ[82]][mQ[83]] !== Eu ? mQ[29] : mQ[6]))
-        })() : () => fK((() => Pu[mQ[97] + mQ[98]]())),
-        Yu = (0, bR[mQ[106]])(),
-        ou = (0, bE[mQ[70]])(mQ[4]),
-        qu = (0, bE[mQ[70]])(mQ[4]);
-      let Ou = mQ[6],
-        vu = mQ[6],
-        au = mQ[6];
-      const fu = (0, bE[mQ[70]])(mQ[4]),
-        uR = (0, bE[mQ[70]])(mQ[4]);
-      let RR = mQ[4],
-        yR = (0, bE[mQ[70]])(mQ[4]);
-      const ER = (...uu) => {
-          NQ(uu[mQ[1]] = mQ[2], ou[Ou] = uu[mQ[6]], qu[Ou] = uu[mQ[0]], Ou++)
+          return ik((() => {
+            TextDecoder[wa[225] + wa[226]][wa[227]] = Rk
+          })), () => kk[-wa[224]] ? wa[2] : Fa((() => TextDecoder[wa[225] + wa[226]][wa[227]] !== Rk ? wa[21] : wa[6]))
+        })() : () => Fa((() => pk[wa[241] + wa[242]]())),
+        xk = (0, oF[wa[12]])(),
+        jk = (0, oR[wa[174]])(wa[4]),
+        lk = (0, oR[wa[174]])(wa[4]);
+      let nk = wa[6],
+        Ik = wa[6],
+        Qk = wa[6];
+      const kF = (0, oR[wa[174]])(wa[4]),
+        FF = (0, oR[wa[174]])(wa[4]);
+      let BF = wa[4],
+        RF = (0, oR[wa[174]])(wa[4]);
+      const tF = (...kk) => {
+          Va(kk[wa[0]] = wa[2], jk[nk] = kk[wa[6]], lk[nk] = kk[wa[1]], nk++)
         },
-        KR = uu => {
-          var Ru;
-          return (Ru = (qu[uu] ? uR : fu)[ou[uu]]) !== mQ[4] && void 0 !== Ru ? Ru : -mQ[0]
+        aF = kk => {
+          var Fk;
+          return (Fk = (lk[kk] ? FF : kF)[jk[kk]]) !== wa[4] && void 0 !== Fk ? Fk : -wa[1]
         },
-        QR = (0, bE[mQ[7]])("d2lvNjQz"),
-        mR = (0, bE[mQ[7]])("amtsa2plZndu"),
-        JR = [
-          [(0, bE[mQ[7]])("aW9qZndlODNq"), "2"],
-          [(0, bE[mQ[7]])("a3Bq"), "4"],
-          [(0, bE[mQ[7]])("dXJocmZm"), "5"]
+        XF = (0, oR[wa[7]])("d2lvNjQz"),
+        bF = (0, oR[wa[7]])("amtsa2plZndu"),
+        wF = [
+          [(0, oR[wa[7]])("aW9qZndlODNq"), "2"],
+          [(0, oR[wa[7]])("a3Bq"), "4"],
+          [(0, oR[wa[7]])("dXJocmZm"), "5"]
         ],
-        NR = [
-          [(0, bE[mQ[7]])(mQ[86] + mQ[84]), mQ[85]],
-          [(0, bE[mQ[7]])(mQ[86] + "w="), mQ[78]]
+        dF = [
+          [(0, oR[wa[7]])(wa[229] + wa[228]), wa[259]],
+          [(0, oR[wa[7]])(wa[229] + "w="), wa[244]]
         ],
-        VR = (0, bE[mQ[7]])("eTR5bnM="),
-        rR = (0, bE[mQ[7]])("aHRleWpldA=="),
-        BR = (0, bE[mQ[7]])("c2RmbGpneGxmY2pr"),
-        xR = [
-          [(0, bE[mQ[7]])("a3NhZmR1"), mQ[70]],
-          [(0, bE[mQ[7]])("ZGZnYWFzZGFz"), mQ[90]],
-          [BR, mQ[7]],
-          [(0, bE[mQ[7]])("bGFzZWRraGFz"), "u"],
-          [(0, bE[mQ[7]])("cW16ZjhrM24="), mQ[13]]
+        VF = (0, oR[wa[7]])("eTR5bnM="),
+        JF = (0, oR[wa[7]])("aHRleWpldA=="),
+        AF = (0, oR[wa[7]])("c2RmbGpneGxmY2pr"),
+        eF = [
+          [(0, oR[wa[7]])("a3NhZmR1"), wa[234]],
+          [(0, oR[wa[7]])("ZGZnYWFzZGFz"), wa[230]],
+          [AF, wa[233]],
+          [(0, oR[wa[7]])("bGFzZWRraGFz"), "u"],
+          [(0, oR[wa[7]])("cW16ZjhrM24="), wa[14]]
         ],
-        SR = [
-          [VR, mQ[87]],
-          [rR, mQ[107]],
-          [(0, bE[mQ[7]])("bmI3ZnEy"), mQ[14]]
+        yF = [
+          [VF, wa[231]],
+          [JF, wa[7]],
+          [(0, oR[wa[7]])("bmI3ZnEy"), wa[17]]
         ],
-        pR = (0, bE[mQ[7]])("bGtxM20="),
-        TR = (0, bE[mQ[7]])("bWtxN3" + mQ[84]),
-        WR = ["mk:tw", "mk:jf"],
-        jR = ((...uu) => {
-          uu[mQ[1]] = mQ[6];
+        fF = (0, oR[wa[7]])("bGtxM20="),
+        mF = (0, oR[wa[7]])("bWtxN3" + wa[228]),
+        WF = ["mk:tw", "mk:jf"],
+        vF = ((...kk) => {
+          kk[wa[0]] = wa[6];
           try {
-            return uu[mQ[14]] = mQ[3], (uu[mQ[14]] = Ku[(0, bE[mQ[7]])("V2ViU29ja2V0")]) === mQ[4] || void 0 === uu[mQ[14]] ? void 0 : uu[mQ[14]][mQ[81] + mQ[82]]
+            return kk[wa[232]] = wa[3], (kk[wa[232]] = tk[(0, oR[wa[7]])("V2ViU29ja2V0")]) === wa[4] || void 0 === kk[wa[232]] ? void 0 : kk[wa[232]][wa[225] + wa[226]]
           } catch {
-            return mQ[3]
+            return wa[3]
           }
         })(),
-        HR = ["send", "close", "addEventListener", "removeEventListener", mQ[94] + mQ[93] + mQ[7]],
-        dR = ["onmessage", "onopen", "onclos" + mQ[38], "onerro" + mQ[70]];
-      let CR = mQ[9];
-      const kR = (...uu) => {
-          uu[mQ[1]] = mQ[6];
-          const yu = Ru();
-          yu === mQ[4] || CR || (CR = Tu((() => {
-            if (jR !== mQ[3] && (0, bE[mQ[67]])(yu) !== jR) return mQ[17];
-            for (let uu = mQ[6]; uu < HR[mQ[1]]; uu++)
-              if ((0, bE[mQ[78]])(bE[mQ[88]], yu, [HR[uu]])) return mQ[17];
-            for (let uu = mQ[6]; uu < dR[mQ[1]]; uu++)
-              if (yu[dR[uu]] !== mQ[4] && yu[dR[uu]] !== mQ[3]) return mQ[17];
-            return mQ[9]
+        iF = ["send", "close", "addEventListener", "removeEventListener", wa[239] + wa[238] + wa[233]],
+        YF = ["onmessage", "onopen", "onclos" + wa[11], "onerro" + wa[234]];
+      let LF = wa[9];
+      const OF = (...kk) => {
+          kk[wa[0]] = wa[6];
+          const Bk = Fk();
+          Bk === wa[4] || LF || (LF = fk((() => {
+            if (vF !== wa[3] && (0, oR.L)(Bk) !== vF) return wa[56];
+            for (let kk = wa[6]; kk < iF[wa[0]]; kk++)
+              if ((0, oR[wa[182]])(oR[wa[235]], Bk, [iF[kk]])) return wa[56];
+            for (let kk = wa[6]; kk < YF[wa[0]]; kk++)
+              if (Bk[YF[kk]] !== wa[4] && Bk[YF[kk]] !== wa[3]) return wa[56];
+            return wa[9]
           })))
         },
-        eR = (0, bE[mQ[7]])("RXZlbnQ=");
-      let AR = zR[mQ[89]][mQ[110]],
-        DR = mQ[6];
-      const MR = () => DR++ === mQ[22] ? (DR = mQ[6], xu(mQ[9]) ? zR[mQ[91]].CheckFuncHit : mQ[6]) : mQ[6],
-        IR = (0, bE[mQ[70]])(mQ[4]),
-        GR = Eu[mQ[1]];
-      for (let Nu = mQ[6]; Nu < GR; Nu++) {
-        const uu = (0, bE[mQ[78]])(bE[mQ[92]], Eu, [Nu]);
-        IR[Nu] = uu >= 99 && uu <= 122 ? uu : mQ[6]
+        EF = (0, oR[wa[7]])("RXZlbnQ=");
+      let SF = PF[wa[237]][wa[252]],
+        NF = wa[6];
+      const HF = () => NF++ === wa[15] ? (NF = wa[6], Ak(wa[9]) ? PF[wa[20]].CheckFuncHit : wa[6]) : wa[6],
+        uF = (0, oR[wa[174]])(wa[4]),
+        MF = Rk[wa[0]];
+      for (let nF = wa[6]; nF < MF; nF++) {
+        const IF = (0, oR[wa[182]])(oR.Z, Rk, [nF]);
+        uF[nF] = IF >= 99 && IF <= 122 ? IF : wa[6]
       }
-      const UR = (...uu) => {
-          return uu[mQ[1]] = mQ[2], typeof uu[mQ[6]] === mQ[76] + mQ[77] && (0, bE[mQ[78]])(bE.R, uu[mQ[0]], [(Ru = uu[mQ[6]], (0, bE.o)(bE.B, Ru, []))]) !== mQ[4];
-          var Ru
+      const gF = (kk, Fk) => {
+          return typeof kk === wa[188] + wa[189] && (0, oR[wa[182]])(oR.P, Fk, [(Bk = kk, (0, oR.j)(oR.z, Bk, []))]) !== wa[4];
+          var Bk
         },
-        nR = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        sR = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        tR = [
-          [yQ["Dispat" + mQ[93] + mQ[7]], () => !UR(EventTarget[mQ[81] + mQ[82]][mQ[94] + mQ[93] + mQ[7]], nR)],
-          [yQ.PerformanceNow, () => !UR(performance[mQ[95]], sR)],
-          [yQ.DateNow, () => !UR(Date[mQ[95]], sR)]
+        UF = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        cF = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        GF = [
+          [ta["Dispat" + wa[238] + wa[233]], () => !gF(EventTarget[wa[225] + wa[226]][wa[239] + wa[238] + wa[233]], UF)],
+          [ta.PerformanceNow, () => !gF(performance[wa[240]], cF)],
+          [ta.DateNow, () => !gF(Date[wa[240]], cF)]
         ],
-        lR = (0, bE[mQ[70]])(mQ[4]);
-      let gR = mQ[6];
-      const cR = {
-        stackCheck: (...uu) => {
-          NQ(uu[mQ[1]] = mQ[6], uu[-mQ[96]] = mQ[4]);
-          const Ru = vK((() => (uu[-mQ[96]] = Bu(mQ[17]), uu[-mQ[96]] !== mQ[4])));
-          return uu[-mQ[96]] !== mQ[4] && Su === mQ[4] && (Su = function(uu, Ru) {
-            var yu;
-            const Eu = /[^\n]+/g,
-              Ku = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
-              Qu = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
-            let mu = null,
-              Ju = null,
-              Nu = (0, bE.o)(bE.R, Eu, [uu]);
-            for (; null !== Nu;) {
-              const yu = (0, bE.o)(bE.R, Ku, [Nu[0]]),
-                Xu = YK(Nu[0], Ru);
-              if (-1 !== Xu) {
-                if (null !== yu) return (0, zK.p)(yu[0]);
-                const uu = qK(Nu[0], Xu),
-                  Ru = (0, bE.o)(bE.R, PK, [Nu[0]]),
-                  Eu = null !== (0, bE.o)(bE.R, iK, [uu]) ? uu : null === Ru ? null : Ru[1],
-                  Ku = null === Eu ? null : (0, bE.o)(bE.R, Qu, [Eu]);
-                if (null !== Ku && "" !== Ku[1]) return (0, zK.p)(Ku[1])
+        TF = (0, oR[wa[174]])(wa[4]);
+      let rF = wa[6];
+      const DF = {
+        stackCheck: () => {
+          let kk = wa[4];
+          const Fk = Qt((() => (kk = Jk(wa[56]), kk !== wa[4])));
+          return kk !== wa[4] && ek === wa[4] && (ek = function(kk, Fk) {
+            var Bk;
+            const Rk = /[^\n]+/g,
+              tk = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
+              ak = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
+            let Xk = null,
+              bk = null,
+              wk = (0, oR.j)(oR.P, Rk, [kk]);
+            for (; null !== wk;) {
+              const Bk = (0, oR.j)(oR.P, tk, [wk[0]]),
+                dk = jt(wk[0], Fk);
+              if (-1 !== dk) {
+                if (null !== Bk) return (0, ht.u)(Bk[0]);
+                const kk = nt(wk[0], dk),
+                  Fk = (0, oR.j)(oR.P, Kt, [wk[0]]),
+                  Rk = null !== (0, oR.j)(oR.P, xt, [kk]) ? kk : null === Fk ? null : Fk[1],
+                  tk = null === Rk ? null : (0, oR.j)(oR.P, ak, [Rk]);
+                if (null !== tk && "" !== tk[1]) return (0, ht.u)(tk[1])
               }
-              null !== yu && (null === mu ? mu = yu[0] : null === Ju && yu[0] !== mu && (Ju = yu[0])), Nu = (0, bE.o)(bE.R, Eu, [uu])
+              null !== Bk && (null === Xk ? Xk = Bk[0] : null === bk && Bk[0] !== Xk && (bk = Bk[0])), wk = (0, oR.j)(oR.P, Rk, [kk])
             }
-            return (0, zK.p)(null !== (yu = Ju) && void 0 !== yu ? yu : null === mu ? "none" : "own")
-          }(uu[-mQ[96]][mQ[47]], uu[-mQ[96]][mQ[48]])), Ru
+            return (0, ht.u)(null !== (Bk = bk) && void 0 !== Bk ? Bk : null === Xk ? "none" : "own")
+          }(kk[wa[27]], kk[wa[28]])), Fk
         },
-        [mQ[97] + mQ[98]]: (...uu) => {
-          uu[mQ[1]] = mQ[6];
-          const Ru = iu();
-          if (Ru === mQ[2]) return mQ[2];
-          if (Cu[QR]) return mQ[5];
-          const yu = fK((() => Ku[mR] ? mQ[12] : mQ[6]));
-          return yu !== mQ[6] ? yu === mQ[12] ? mQ[12] : mQ[6] : Ru === aK ? mQ[6] : Ru === mQ[29] ? mQ[29] : (ju(), Eu = Function[mQ[81] + mQ[82]], Qu = mQ[104], mu = uu => uu.writable !== mQ[17], vK((() => {
-            const uu = Object.getOwnPropertyDescriptor(Eu, Qu);
-            return void 0 !== uu && mu(uu)
-          })) ? mQ[44] : mQ[6]);
-          var Eu, Qu, mu
+        [wa[241] + wa[242]]: (...kk) => {
+          kk[wa[0]] = wa[6];
+          const Fk = Kk();
+          if (Fk === wa[2]) return wa[2];
+          if (Lk[XF]) return wa[5];
+          const Bk = Fa((() => tk[bF] ? wa[41] : wa[6]));
+          return Bk !== wa[6] ? Bk === wa[41] ? wa[41] : wa[6] : Fk === ka ? wa[6] : Fk === wa[21] ? wa[21] : (Wk(), Rk = Function[wa[225] + wa[226]], ak = wa[248], Xk = (...kk) => (kk[wa[0]] = wa[1], kk[wa[6]].writable !== wa[56]), Qt((() => {
+            const kk = Object.getOwnPropertyDescriptor(Rk, ak);
+            return void 0 !== kk && Xk(kk)
+          })) ? wa[51] : wa[6]);
+          var Rk, ak, Xk
         },
-        indexPassReplaced: zu,
-        [mQ[99] + "tSubChanged"]: (...uu) => {
-          if (uu[mQ[1]] = mQ[6], hu === wu || Lu) return mQ[9];
-          const Ru = Zu();
-          return Ru !== wu && Ru !== hu
+        indexPassReplaced: Pk,
+        [wa[243] + "tSubChanged"]: (...kk) => {
+          if (kk[wa[0]] = wa[6], Zk === qk || zk) return wa[9];
+          const Fk = Ck();
+          return Fk !== qk && Fk !== Zk
         },
-        jJ: () => {
-          let uu = GR;
-          for (let Ru = mQ[6]; Ru < tR[mQ[1]] + gR; Ru++) {
-            const yu = Ru < tR[mQ[1]] ? tR[Ru] : lR[Ru - tR[mQ[1]]];
-            yu[mQ[6]] < uu && Tu(yu[mQ[0]]) && (uu = yu[mQ[6]])
+        Hb: (...kk) => {
+          Va(kk[wa[0]] = wa[6], kk[wa[17]] = MF);
+          for (let Fk = wa[6]; Fk < GF[wa[0]] + rF; Fk++) {
+            const Bk = Fk < GF[wa[0]] ? GF[Fk] : TF[Fk - GF[wa[0]]];
+            Bk[wa[6]] < kk[wa[17]] && fk(Bk[wa[1]]) && (kk[wa[17]] = Bk[wa[6]])
           }
-          return uu < GR ? IR[uu] : mQ[6]
+          return kk[wa[17]] < MF ? uF[kk[wa[17]]] : wa[6]
         },
-        DX: () => Yu ? bR.i : mQ[20],
-        [mQ[100] + mQ[101] + "Subs"]: (...uu) => {
-          uu[mQ[1]] = mQ[6];
-          const Ru = Nu[mQ[73]].hT[mQ[100] + mQ[101]];
-          return typeof Ru === mQ[102] && Ru > mQ[6] ? Ru > mQ[103] ? mQ[103] : Ru : mQ[6]
+        xd: () => xk ? oF[wa[20]] : wa[31],
+        [wa[245] + wa[246] + "Subs"]: () => {
+          const kk = wk[wa[244]].Am[wa[245] + wa[246]];
+          return typeof kk === wa[247] && kk > wa[6] ? kk > wa[55] ? wa[55] : kk : wa[6]
         },
-        ["getCom" + mQ[115]]: () => {
-          var uu;
-          Ou = mQ[6];
-          for (let yu = mQ[6]; yu < Mu; yu++) ER(Du[yu], mQ[17]);
-          for (let yu = mQ[6]; yu < JR[mQ[1]]; yu++) Cu[JR[yu][mQ[6]]] && ER(JR[yu][mQ[0]], mQ[17]);
-          const Ru = fK((() => OK(atob[mQ[104]](), Vu) ? mQ[6] : mQ[0]));
-          Ru === mQ[0] && ER(mQ[91], mQ[17]), ju();
-          const Eu = Ru === aK ? aK : fK((() => {
-            const uu = Object.getOwnPropertyDescriptor(window, "atob");
-            return uu === mQ[3] ? aK : uu[mQ[105]] !== mQ[3] ? mQ[0] : mQ[6]
+        ["getCom" + wa[258]]: (...kk) => {
+          Va(kk[wa[0]] = wa[6], kk[-wa[49]] = wa[3], nk = wa[6]);
+          for (let Bk = wa[6]; Bk < Hk; Bk++) tF(Nk[Bk], wa[56]);
+          for (let Bk = wa[6]; Bk < wF[wa[0]]; Bk++) Lk[wF[Bk][wa[6]]] && tF(wF[Bk][wa[1]], wa[56]);
+          const Fk = Fa((() => It(atob[wa[248]](), sk) ? wa[6] : wa[1]));
+          Fk === wa[1] && tF(wa[20], wa[56]), Wk();
+          const Rk = Fk === ka ? ka : Fa(((...kk) => {
+            kk[wa[0]] = wa[6];
+            const Fk = Object.getOwnPropertyDescriptor(window, "atob");
+            return Fk === wa[3] ? ka : Fk[wa[249]] !== wa[3] ? wa[1] : wa[6]
           }));
-          Eu === mQ[0] && ER(mQ[106], mQ[17]);
-          const Ku = Eu === aK;
-          for (let yu = mQ[6]; yu < NR[mQ[1]] && !Ku; yu++) Cu[NR[yu][mQ[6]]] && ER(NR[yu][mQ[0]], mQ[17]);
-          const Qu = Ou > Mu;
-          let mu = mQ[4];
-          Mu === mQ[6] && (Gu > mQ[6] ? mu = Iu[mQ[6]] : su ? mu = "fp" : Qu || (mu = Cu[VR] ? mQ[87] : Cu[rR] ? mQ[107] : mQ[4]));
-          for (let yu = mQ[6]; yu < xR[mQ[1]] && !Ku; yu++) Cu[xR[yu][mQ[6]]] && ER(xR[yu][mQ[0]], mQ[17]);
-          const Ju = Ou,
-            Nu = (0, hK[mQ[14]])(),
-            Xu = Nu !== mQ[4] && (0, XR[mQ[108]])(Nu);
-          Xu && !Ku && ER(Nu, mQ[9]), Fu && ER("ix", mQ[9]), Au && ER("il", mQ[9]);
-          for (let yu = mQ[6]; yu < Gu; yu++) ER(Iu[yu], mQ[17]);
-          for (let yu = mQ[6]; yu < SR[mQ[1]]; yu++) Cu[SR[yu][mQ[6]]] && ER(SR[yu][mQ[0]], mQ[17]);
-          Cu[pR] && ER("mk:lk", mQ[17]);
-          const ru = ((...uu) => {
-            uu[mQ[1]] = mQ[0];
-            for (let Ru = mQ[6]; Ru < WR[mQ[1]]; Ru++)
-              if (uu[mQ[6]] === WR[Ru]) return WR[Ru];
-            return mQ[4]
-          })(Cu[TR]);
-          if (ru !== mQ[4] && ER(ru, mQ[17]), yu !== mQ[4] && Hu(yu.emitReplaced) === mQ[17] && ER("mk:em", mQ[17]), CR && ER("3s", mQ[9]), bE[mQ[109]] && ER("3b", mQ[9]), ju(), Wu && ER("3d", mQ[9]), Ku && ER("3g", mQ[9]), Nu === mQ[4] || Xu || ER(Nu, mQ[9]), Su !== mQ[4] && ER(Su, mQ[9]), pu === mQ[4] && bR[mQ[15]] !== mQ[4] && (pu = function(uu) {
-              const Ru = /[^\n]+/g,
-                yu = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)/i;
-              let Eu = null,
-                Ku = "",
-                Qu = !1,
-                mu = (0, bE.o)(bE.R, Ru, [uu]);
-              for (; null !== mu;) {
-                const Ju = (0, bE.o)(bE.R, yu, [mu[0]]),
-                  Nu = null === Ju ? (0, bE.o)(bE.R, PK, [mu[0]]) : null,
-                  Xu = null !== Nu && null !== (0, bE.o)(bE.R, iK, [Nu[1]]) && 0 !== YK(Nu[1], "wasm:") ? Nu[1] : null;
-                if (null === Eu) null !== Ju ? (Eu = Ju[2], Ku = Ju[4]) : null !== Xu && (Eu = "");
-                else if (null !== Ju) {
-                  Qu = !0;
-                  const uu = Ju[2] === Eu;
-                  if ("" !== Ju[1] || !uu || Ju[4] !== Ku) {
-                    const Ru = "moz-extension" === Ju[3] || "safari-web-extension" === Ju[3];
-                    return (0, zK.h)("" !== Ju[1] || uu ? "inline" : Ru ? Ju[3] : Ju[2])
+          Rk === wa[1] && tF(wa[12], wa[56]);
+          const tk = Rk === ka;
+          for (let Bk = wa[6]; Bk < dF[wa[0]] && !tk; Bk++) Lk[dF[Bk][wa[6]]] && tF(dF[Bk][wa[1]], wa[56]);
+          const ak = nk > Hk;
+          kk[wa[1]] = wa[4], Hk === wa[6] && (Mk > wa[6] ? kk[wa[1]] = uk[wa[6]] : ck ? kk[wa[1]] = "fp" : ak || (kk[wa[1]] = Lk[VF] ? wa[231] : Lk[JF] ? wa[7] : wa[4]));
+          for (let Bk = wa[6]; Bk < eF[wa[0]] && !tk; Bk++) Lk[eF[Bk][wa[6]]] && tF(eF[Bk][wa[1]], wa[56]);
+          const Xk = nk,
+            bk = (0, pt[wa[10]])(),
+            wk = bk !== wa[4] && (0, sF[wa[244]])(bk);
+          wk && !tk && tF(bk, wa[9]), hk && tF("ix", wa[9]), Sk && tF("il", wa[9]);
+          for (let Bk = wa[6]; Bk < Mk; Bk++) tF(uk[Bk], wa[56]);
+          for (let Bk = wa[6]; Bk < yF[wa[0]]; Bk++) Lk[yF[Bk][wa[6]]] && tF(yF[Bk][wa[1]], wa[56]);
+          Lk[fF] && tF("mk:lk", wa[56]);
+          const dk = ((...kk) => {
+            kk[wa[0]] = wa[1];
+            for (let Fk = wa[6]; Fk < WF[wa[0]]; Fk++)
+              if (kk[wa[6]] === WF[Fk]) return WF[Fk];
+            return wa[4]
+          })(Lk[mF]);
+          if (dk !== wa[4] && tF(dk, wa[56]), Bk !== wa[4] && vk(Bk.emitReplaced) === wa[56] && tF("mk:em", wa[56]), LF && tF("3s", wa[9]), oR.T && tF("3b", wa[9]), Wk(), mk && tF("3d", wa[9]), tk && tF("3g", wa[9]), bk === wa[4] || wk || tF(bk, wa[9]), ek !== wa[4] && tF(ek, wa[9]), yk === wa[4] && oF[wa[11]] !== wa[4] && (yk = function(kk) {
+              const Fk = /[^\n]+/g,
+                Bk = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)/i;
+              let Rk = null,
+                tk = "",
+                ak = !1,
+                Xk = (0, oR.j)(oR.P, Fk, [kk]);
+              for (; null !== Xk;) {
+                const bk = (0, oR.j)(oR.P, Bk, [Xk[0]]),
+                  wk = null === bk ? (0, oR.j)(oR.P, Kt, [Xk[0]]) : null,
+                  dk = null !== wk && null !== (0, oR.j)(oR.P, xt, [wk[1]]) && 0 !== jt(wk[1], "wasm:") ? wk[1] : null;
+                if (null === Rk) null !== bk ? (Rk = bk[2], tk = bk[4]) : null !== dk && (Rk = "");
+                else if (null !== bk) {
+                  ak = !0;
+                  const kk = bk[2] === Rk;
+                  if ("" !== bk[1] || !kk || bk[4] !== tk) {
+                    const Fk = "moz-extension" === bk[3] || "safari-web-extension" === bk[3];
+                    return (0, ht.h)("" !== bk[1] || kk ? "inline" : Fk ? bk[3] : bk[2])
                   }
-                } else if (null !== Xu) {
-                  const uu = -1 !== YK(mu[0], "userscript") || -1 !== YK(mu[0], ".user.js");
-                  return (0, zK.h)(uu ? "userscript" : "inline")
+                } else if (null !== dk) {
+                  const kk = -1 !== jt(Xk[0], "userscript") || -1 !== jt(Xk[0], ".user.js");
+                  return (0, ht.h)(kk ? "userscript" : "inline")
                 }
-                mu = (0, bE.o)(bE.R, Ru, [uu])
+                Xk = (0, oR.j)(oR.P, Fk, [kk])
               }
-              return (0, zK.h)(Qu ? "own" : "unknown")
-            }(bR[mQ[15]])), pu !== mQ[4] && ER(pu, mQ[9]), Ou === mQ[6]) return mQ[4];
-          if (mu === mQ[4] && qu[mQ[6]] && !(0, zK[mQ[75]])(ou[mQ[6]]))
-            for (let yu = mQ[0]; yu < Ju; yu++)
-              if (qu[yu] && (0, zK[mQ[75]])(ou[yu])) {
-                const uu = ou[yu];
-                for (let Ru = yu; Ru > mQ[6]; Ru--) NQ(ou[Ru] = ou[Ru - mQ[0]], qu[Ru] = qu[Ru - mQ[0]]);
-                NQ(ou[mQ[6]] = uu, qu[mQ[6]] = mQ[17]);
+              return (0, ht.h)(ak ? "own" : "unknown")
+            }(oF[wa[11]])), yk !== wa[4] && tF(yk, wa[9]), nk === wa[6]) return wa[4];
+          if (kk[wa[1]] === wa[4] && lk[wa[6]] && !(0, ht[wa[182]])(jk[wa[6]]))
+            for (let Bk = wa[1]; Bk < Xk; Bk++)
+              if (lk[Bk] && (0, ht[wa[182]])(jk[Bk])) {
+                const kk = jk[Bk];
+                for (let Fk = Bk; Fk > wa[6]; Fk--) Va(jk[Fk] = jk[Fk - wa[1]], lk[Fk] = lk[Fk - wa[1]]);
+                Va(jk[wa[6]] = kk, lk[wa[6]] = wa[56]);
                 break
-              } let Bu = mQ[6],
-            xu = mu === mQ[4] ? mQ[6] : Ju;
-          if (xu > mQ[6] && Nu !== mQ[4] && Xu && !Ku) {
-            for (let uu = xu; uu > mQ[6]; uu--) NQ(ou[uu] = ou[uu - mQ[0]], qu[uu] = qu[uu - mQ[0]]);
-            NQ(ou[mQ[6]] = Nu, qu[mQ[6]] = mQ[9], Bu = mQ[0], xu++)
+              } if (Va(kk[wa[251]] = wa[6], kk[-wa[250]] = kk[wa[1]] === wa[4] ? wa[6] : Xk), kk[-wa[250]] > wa[6] && bk !== wa[4] && wk && !tk) {
+            for (let Fk = kk[-wa[250]]; Fk > wa[6]; Fk--) Va(jk[Fk] = jk[Fk - wa[1]], lk[Fk] = lk[Fk - wa[1]]);
+            Va(jk[wa[6]] = bk, lk[wa[6]] = wa[9], kk[wa[251]] = wa[1], kk[-wa[250]]++)
           }
-          let Tu = mQ[6];
-          if (vu++ % mQ[2] === mQ[0])
-            for (let yu = mQ[0]; yu < Ou; yu++) KR(yu) < KR(Tu) && (Tu = yu);
-          const du = ou[Tu];
-          (qu[Tu] ? uR : fu)[du] = au++;
-          const bu = Tu >= Bu && Tu < xu;
-          if (!qu[Tu] || du === mu || Tu === mQ[6] && !bu) return du === mQ[7] ? (0, zK[mQ[7]])(Cu[BR], zK[mQ[38]]) : du;
-          const ku = (uu = mu) !== mQ[4] && void 0 !== uu ? uu : ou[mQ[6]];
-          return ku !== RR && NQ(RR = ku, yR = (0, bE[mQ[70]])(mQ[4])), yR[du] ??= (0, zK[mQ[78]])(du, ku)
+          if (kk[wa[41]] = wa[6], Ik++ % wa[2] === wa[1])
+            for (let Bk = wa[1]; Bk < nk; Bk++) aF(Bk) < aF(kk[wa[41]]) && (kk[wa[41]] = Bk);
+          const Vk = jk[kk[wa[41]]];
+          (lk[kk[wa[41]]] ? FF : kF)[Vk] = Qk++;
+          const Jk = kk[wa[41]] >= kk[wa[251]] && kk[wa[41]] < kk[-wa[250]];
+          if (!lk[kk[wa[41]]] || Vk === kk[wa[1]] || kk[wa[41]] === wa[6] && !Jk) return Vk === wa[233] ? (0, ht.y)(Lk[AF], ht[wa[37]]) : Vk;
+          const Ak = (kk[-wa[49]] = kk[wa[1]]) !== wa[4] && void 0 !== kk[-wa[49]] ? kk[-wa[49]] : jk[wa[6]];
+          return Ak !== BF && Va(BF = Ak, RF = (0, oR[wa[174]])(wa[4])), RF[Vk] ??= (0, ht[wa[230]])(Vk, Ak)
         }
       };
-      let LR = zR[mQ[89]][mQ[110]];
-      const FR = () => AR !== zR[mQ[89]][mQ[110]] ? AR : LR;
-      let wR = mQ[6],
-        ZR = mQ[2],
-        hR = mQ[6],
-        PR = mQ[6];
+      let zF = PF[wa[237]][wa[252]];
+      const hF = () => SF !== PF[wa[237]][wa[252]] ? SF : zF;
+      let qF = wa[6],
+        CF = wa[2],
+        ZF = wa[6],
+        pF = wa[6];
       return {
-        checks: cR,
-        checkEvent: uu => {
+        checks: DF,
+        checkEvent: kk => {
           try {
-            const Ru = Ku[eR];
-            if (typeof Ru === mQ[76] + mQ[77] && !(uu instanceof Ru) && !(0, bE.H)(uu)) return AR = zR[mQ[89]].NotEvent, mQ[6];
-            if (uu.isTrusted === mQ[9]) return mQ[6];
-            let yu = mQ[6];
-            for (const Eu in uu) yu++;
-            return yu < mQ[26] ? (AR = zR[mQ[89]]["FewPropertie" + mQ[90]], mQ[6]) : MR()
+            const Fk = tk[EF];
+            if (typeof Fk === wa[188] + wa[189] && !(kk instanceof Fk) && !(0, oR[wa[236]])(kk)) return SF = PF[wa[237]].NotEvent, wa[6];
+            if (kk.isTrusted === wa[9]) return wa[6];
+            let Bk = wa[6];
+            for (const Rk in kk) Bk++;
+            return Bk < wa[16] ? (SF = PF[wa[237]]["FewPropertie" + wa[230]], wa[6]) : HF()
           } catch {}
-          return mQ[6]
+          return wa[6]
         },
         checkPadCall: () => {
           try {
-            return MR()
+            return HF()
           } catch {
-            return mQ[6]
+            return wa[6]
           }
         },
-        usedProp: FR,
-        watchHeld: (...uu) => {
-          NQ(uu[mQ[1]] = mQ[2], uu[mQ[2]] = mQ[3]);
-          const Ru = du((() => {
-            uu[mQ[2]] = uu[mQ[0]]()
+        usedProp: hF,
+        watchHeld: (...kk) => {
+          Va(kk[wa[0]] = wa[2], kk[wa[14]] = wa[3]);
+          const Fk = ik((() => {
+            kk[wa[14]] = kk[wa[1]]()
           }));
-          lR[gR++] = [uu[mQ[6]], () => !Ru || uu[mQ[0]]() !== uu[mQ[2]]]
+          TF[rF++] = [kk[wa[6]], () => !Fk || kk[wa[1]]() !== kk[wa[14]]]
         },
-        sr: (...uu) => {
-          uu[mQ[1]] = mQ[6];
-          const Ru = zu();
-          return ((...uu) => {
-            if (NQ(uu[mQ[1]] = mQ[0], uu[mQ[0]] = mQ[3], uu[mQ[14]] = mQ[3]), yu !== mQ[4]) {
-              const Ru = Hu(yu.uV),
-                Eu = "v3" === Ru ? mQ[5] : "v5" === Ru ? mQ[22] : "v6" === Ru ? mQ[29] : mQ[2];
-              Eu !== mQ[2] && (ZR = Eu);
-              const Ku = Hu(yu["inbuil" + mQ[113] + mQ[114]]);
-              typeof Ku === mQ[102] && Ku >= mQ[6] && Ku <= mQ[111] && (Ku | mQ[6]) === Ku && (hR = Ku), NQ(uu[mQ[0]] = Hu(yu.reflectApplyHit), uu[mQ[14]] = Hu(yu.definerHit))
+        yJ: (...kk) => {
+          kk[wa[0]] = wa[6];
+          const Fk = Pk();
+          return ((...kk) => {
+            if (Va(kk[wa[0]] = wa[1], kk[-wa[253]] = wa[3], kk[wa[2]] = wa[3]), Bk !== wa[4]) {
+              const Fk = vk(Bk.Us),
+                Rk = "v3" === Fk ? wa[5] : "v5" === Fk ? wa[15] : "v6" === Fk ? wa[21] : wa[2];
+              Rk !== wa[2] && (CF = Rk);
+              const tk = vk(Bk["inbuil" + wa[256] + wa[257]]);
+              typeof tk === wa[247] && tk >= wa[6] && tk <= wa[92] && (tk | wa[6]) === tk && (ZF = tk), Va(kk[-wa[253]] = vk(Bk.reflectApplyHit), kk[wa[2]] = vk(Bk.definerHit))
             }
-            const Ru = uu[mQ[6]] ? mQ[42] : "11" === uu[mQ[14]] ? mQ[111] : "13" === uu[mQ[14]] ? 13 : uu[mQ[0]] !== mQ[3] && uu[mQ[0]] !== mQ[4] ? mQ[2] : "10" === uu[mQ[14]] ? mQ[26] : "12" === uu[mQ[14]] ? mQ[30] : mQ[6];
-            Ru !== mQ[6] && (PR = Ru)
-          })(Ru), wR++ % 10 === mQ[6] && (kR(), vK((() => !OK(Ku[Qu][mQ[104]][mQ[104]](), Vu))) && (LR = LR === zR[mQ[89]][mQ[112]] ? zR[mQ[89]][mQ[112]] : zR[mQ[89]].Fr), vK((() => !OK(Ku[Qu][mQ[104]](), Vu))) && (LR = zR[mQ[89]][mQ[112]])), {
-            flags: Ru ? zR[mQ[91]].Butto : mQ[6],
+            const Fk = kk[wa[6]] ? wa[38] : "11" === kk[wa[2]] ? wa[92] : "13" === kk[wa[2]] ? wa[91] : kk[-wa[253]] !== wa[3] && kk[-wa[253]] !== wa[4] ? wa[2] : "10" === kk[wa[2]] ? wa[16] : "12" === kk[wa[2]] ? wa[45] : wa[6];
+            Fk !== wa[6] && (pF = Fk)
+          })(Fk), qF++ % 10 === wa[6] && (OF(), Qt((() => !It(tk[ak][wa[248]][wa[248]](), sk))) && (zF = zF === PF[wa[237]][wa[254]] ? PF[wa[237]][wa[254]] : PF[wa[237]].Fr), Qt((() => !It(tk[ak][wa[248]](), sk))) && (zF = PF[wa[237]][wa[254]])), {
+            flags: Fk ? PF[wa[20]].Butto : wa[6],
             values: [
-              [zR[mQ[73]].PhysicsVersion, ZR],
-              [zR[mQ[73]]["Inbuil" + mQ[113] + mQ[114]], hR],
-              [zR[mQ[73]]["AltCom" + mQ[115]], PR],
-              [zR[mQ[73]]["ProbeUsedPro" + mQ[85]], FR()]
+              [PF[wa[255]].PhysicsVersion, CF],
+              [PF[wa[255]]["Inbuil" + wa[256] + wa[257]], ZF],
+              [PF[wa[255]]["AltCom" + wa[258]], pF],
+              [PF[wa[255]]["ProbeUsedPro" + wa[259]], hF()]
             ]
           }
         }
       }
     };
-    const XQ = "[bloxd-wasm-client]",
-      VQ = "bloxdWasmDownloadFailed",
-      rQ = fR.d,
-      BQ = "boot",
-      xQ = "playSources",
-      SQ = "wasmBuild",
-      pQ = "bloxd-wasm-joined",
-      TQ = "bloxd-wasm-first-view",
-      WQ = "bloxd-wasm-playable-legacy",
-      jQ = 1048576,
-      HQ = 8 * jQ,
-      dQ = 8,
-      bQ = 1006,
-      CQ = 1e3,
-      kQ = "You lost connection to the server.",
-      eQ = "general:lostConnection",
-      AQ = 1048576,
-      DQ = 5e3,
-      MQ = 100,
-      IQ = [2e3, 1e4, 3e4],
-      GQ = 3e4;
-    let UQ = null,
-      nQ = null,
-      sQ = !1,
-      tQ = !1,
-      lQ = !1,
-      gQ = null,
-      cQ = null,
-      LQ = null,
-      zQ = null,
-      FQ = null,
-      wQ = null,
-      ZQ = null;
-    const hQ = new class {
-      constructor(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
-        this.master = uu, this.soundOn = Ru, this.now = yu, this.player = null, this.local = [], this.stopped = !1
+    const Ja = "[bloxd-wasm-client]",
+      Aa = "bloxdWasmDownloadFailed",
+      ea = kB.c,
+      ya = "boot",
+      fa = "playSources",
+      ma = "wasmBuild",
+      Wa = "bloxd-wasm-joined",
+      va = "bloxd-wasm-first-view",
+      ia = "bloxd-wasm-playable-legacy",
+      Ya = 1048576,
+      oa = 8 * Ya,
+      La = 8,
+      Oa = 1006,
+      Ea = 1e3,
+      Sa = "You lost connection to the server.",
+      Na = "general:lostConnection",
+      Ha = 1048576,
+      ua = 5e3,
+      Ma = 100,
+      ga = [2e3, 1e4, 3e4],
+      Ua = 3e4;
+    let ca = null,
+      Ga = null,
+      Ta = !1,
+      ra = !1,
+      Da = !1,
+      za = null,
+      Pa = null,
+      ha = null,
+      qa = null,
+      Ca = null,
+      Za = null,
+      pa = null;
+    const Ka = new class {
+      constructor(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
+        this.master = kk, this.soundOn = Fk, this.now = Bk, this.player = null, this.local = [], this.stopped = !1
       }
       get loaded() {
         return null !== this.player
@@ -5234,2470 +5619,2470 @@ export const modules = {
         return this.local.length
       }
       prepare() {
-        var uu;
-        null === (uu = this.player) || void 0 === uu || uu.prepare()
+        var kk;
+        null === (kk = this.player) || void 0 === kk || kk.prepare()
       }
-      preload(uu) {
-        var Ru;
-        this.stopped || (null === (Ru = this.player) || void 0 === Ru || Ru.preload(uu))
+      preload(kk) {
+        var Fk;
+        this.stopped || (null === (Fk = this.player) || void 0 === Fk || Fk.preload(kk))
       }
       cancelPreload() {
-        var uu;
-        null === (uu = this.player) || void 0 === uu || uu.cancelPreload()
+        var kk;
+        null === (kk = this.player) || void 0 === kk || kk.cancelPreload()
       }
-      load(uu) {
+      load(kk) {
         if (null !== this.player || this.stopped) return;
-        this.player = uu, uu.setMaster(this.master, this.soundOn);
-        const Ru = this.now(),
-          yu = this.local;
+        this.player = kk, kk.setMaster(this.master, this.soundOn);
+        const Fk = this.now(),
+          Bk = this.local;
         this.local = [];
-        for (const Ku of yu)
-          if (!(Ku.stopped || !Ku.loop && Ru - Ku.at >= 300)) try {
-            this.start(Ku, uu, Ru)
-          } catch (Eu) {
-            console.error("[bloxd-wasm-client] a queued sound wouldn't start", Eu)
+        for (const tk of Bk)
+          if (!(tk.stopped || !tk.loop && Fk - tk.at >= 300)) try {
+            this.start(tk, kk, Fk)
+          } catch (Rk) {
+            console.error("[bloxd-wasm-client] a queued sound wouldn't start", Rk)
           }
       }
-      start(uu, Ru, yu) {
+      start(kk, Fk, Bk) {
         const {
-          name: Eu,
-          pos: Ku,
-          ear: Qu,
-          maxHearDist: mu,
-          refDistance: Ju,
-          loop: Nu,
-          fade: Xu
-        } = uu, Vu = Ru.playGame(Eu, lR(uu, yu), Ku, Qu, mu, Ju, Nu);
-        if (uu.sound = Vu, 1 !== uu.rate && Vu.rate(uu.rate), null !== uu.panner && Vu.setPannerAttr(uu.panner), null !== uu.moved && Vu.setPosition(uu.moved), null !== Xu && yu - Xu.at < Xu.ms) {
-          const Ru = tR(this.master);
-          Ru > 0 ? Vu.fade(0, uu.volume * Ru, Xu.at + Xu.ms - yu) : Vu.setRelativeVolume(uu.volume)
+          name: Rk,
+          pos: tk,
+          ear: ak,
+          maxHearDist: Xk,
+          refDistance: bk,
+          loop: wk,
+          fade: dk
+        } = kk, sk = Fk.playGame(Rk, TF(kk, Bk), tk, ak, Xk, bk, wk);
+        if (kk.sound = sk, 1 !== kk.rate && sk.rate(kk.rate), null !== kk.panner && sk.setPannerAttr(kk.panner), null !== kk.moved && sk.setPosition(kk.moved), null !== dk && Bk - dk.at < dk.ms) {
+          const Fk = GF(this.master);
+          Fk > 0 ? sk.fade(0, kk.volume * Fk, dk.at + dk.ms - Bk) : sk.setRelativeVolume(kk.volume)
         }
       }
-      onAudioEvent(uu, Ru, yu, Eu) {
-        var Ku, Qu;
-        return null === (Ku = null === (Qu = this.player) || void 0 === Qu ? void 0 : Qu.onAudioEvent(uu, Ru, yu, Eu)) || void 0 === Ku || Ku
+      onAudioEvent(kk, Fk, Bk, Rk) {
+        var tk, ak;
+        return null === (tk = null === (ak = this.player) || void 0 === ak ? void 0 : ak.onAudioEvent(kk, Fk, Bk, Rk)) || void 0 === tk || tk
       }
-      applyListener(uu) {
-        var Ru;
-        null === (Ru = this.player) || void 0 === Ru || Ru.applyListener(uu)
+      applyListener(kk) {
+        var Fk;
+        null === (Fk = this.player) || void 0 === Fk || Fk.applyListener(kk)
       }
-      playGame(uu, Ru, yu, Eu, Ku, Qu, mu) {
-        if (this.stopped) return sR.b;
-        if (this.player) return this.player.playGame(uu, Ru, yu, Eu, Ku, Qu, mu);
-        const Ju = this.now();
-        this.local = this.local.filter((uu => !uu.stopped && (uu.loop || Ju - uu.at < 300)));
-        const Nu = {
-          name: uu,
-          volume: tR(Ru),
+      playGame(kk, Fk, Bk, Rk, tk, ak, Xk) {
+        if (this.stopped) return cF.d;
+        if (this.player) return this.player.playGame(kk, Fk, Bk, Rk, tk, ak, Xk);
+        const bk = this.now();
+        this.local = this.local.filter((kk => !kk.stopped && (kk.loop || bk - kk.at < 300)));
+        const wk = {
+          name: kk,
+          volume: GF(Fk),
           fade: null,
-          pos: yu && [yu[0], yu[1], yu[2]],
-          ear: Eu && [Eu[0], Eu[1], Eu[2]],
-          maxHearDist: Ku,
-          refDistance: Qu,
-          loop: mu,
+          pos: Bk && [Bk[0], Bk[1], Bk[2]],
+          ear: Rk && [Rk[0], Rk[1], Rk[2]],
+          maxHearDist: tk,
+          refDistance: ak,
+          loop: Xk,
           rate: 1,
           panner: null,
           moved: null,
-          at: Ju,
+          at: bk,
           stopped: !1,
           sound: null
         };
-        this.local.push(Nu);
-        const Xu = {
+        this.local.push(wk);
+        const dk = {
           stop: () => {
-            var uu;
-            return Nu.stopped = !0, null === (uu = Nu.sound) || void 0 === uu || uu.stop(), Xu
+            var kk;
+            return wk.stopped = !0, null === (kk = wk.sound) || void 0 === kk || kk.stop(), dk
           },
-          fade: (uu, Ru, yu) => {
-            if (Nu.sound) return Nu.sound.fade(uu, Ru, yu), Xu;
-            const Eu = tR(this.master),
-              Ku = tR(Eu > 0 ? Ru / Eu : Ru > 0 ? Nu.volume : 0),
-              Qu = this.now(),
-              mu = lR(Nu, Qu);
-            return Nu.volume = Ku, Nu.fade = yu > 0 && mu !== Ku ? {
-              from: mu,
-              at: Qu,
-              ms: yu
-            } : null, Xu
+          fade: (kk, Fk, Bk) => {
+            if (wk.sound) return wk.sound.fade(kk, Fk, Bk), dk;
+            const Rk = GF(this.master),
+              tk = GF(Rk > 0 ? Fk / Rk : Fk > 0 ? wk.volume : 0),
+              ak = this.now(),
+              Xk = TF(wk, ak);
+            return wk.volume = tk, wk.fade = Bk > 0 && Xk !== tk ? {
+              from: Xk,
+              at: ak,
+              ms: Bk
+            } : null, dk
           },
-          rate: uu => (Nu.sound ? Nu.sound.rate(uu) : Nu.rate = uu, Xu),
-          getVolume: () => Nu.sound ? Nu.sound.getVolume() : Nu.volume * tR(this.master),
-          getRelativeVolume: () => Nu.sound ? Nu.sound.getRelativeVolume() : Nu.volume,
-          setRelativeVolume: uu => (Nu.sound ? Nu.sound.setRelativeVolume(uu) : (Nu.volume = tR(uu), Nu.fade = null), Xu),
-          setPannerAttr: uu => (Nu.sound ? Nu.sound.setPannerAttr(uu) : Nu.panner = {
-            ...uu
-          }, Xu),
-          setPosition: uu => (Nu.sound ? Nu.sound.setPosition(uu) : Nu.moved = [uu[0], uu[1], uu[2]], Xu)
+          rate: kk => (wk.sound ? wk.sound.rate(kk) : wk.rate = kk, dk),
+          getVolume: () => wk.sound ? wk.sound.getVolume() : wk.volume * GF(this.master),
+          getRelativeVolume: () => wk.sound ? wk.sound.getRelativeVolume() : wk.volume,
+          setRelativeVolume: kk => (wk.sound ? wk.sound.setRelativeVolume(kk) : (wk.volume = GF(kk), wk.fade = null), dk),
+          setPannerAttr: kk => (wk.sound ? wk.sound.setPannerAttr(kk) : wk.panner = {
+            ...kk
+          }, dk),
+          setPosition: kk => (wk.sound ? wk.sound.setPosition(kk) : wk.moved = [kk[0], kk[1], kk[2]], dk)
         };
-        return Xu
+        return dk
       }
-      setMaster(uu, Ru) {
-        var yu;
-        this.master = uu, this.soundOn = Ru, null === (yu = this.player) || void 0 === yu || yu.setMaster(uu, Ru)
+      setMaster(kk, Fk) {
+        var Bk;
+        this.master = kk, this.soundOn = Fk, null === (Bk = this.player) || void 0 === Bk || Bk.setMaster(kk, Fk)
       }
       stop() {
-        var uu;
-        this.stopped = !0, null === (uu = this.player) || void 0 === uu || uu.stopAll();
-        for (const Ru of this.local) Ru.stopped = !0;
+        var kk;
+        this.stopped = !0, null === (kk = this.player) || void 0 === kk || kk.stopAll();
+        for (const Fk of this.local) Fk.stopped = !0;
         this.local = []
       }
-    }((0, CR.b)(), !0);
-    let PQ = {
+    }((0, LF.d)(), !0);
+    let xa = {
         wasm: "unknown",
-        client: String(RR.c)
+        client: String(BF.e)
       },
-      iQ = null,
-      YQ = () => {};
-    const oQ = new Promise((uu => {
-      YQ = uu
+      ja = null,
+      la = () => {};
+    const na = new Promise((kk => {
+      la = kk
     }));
-    let qQ = () => {};
-    const OQ = new Promise((uu => {
-      qQ = uu
+    let Ia = () => {};
+    const Qa = new Promise((kk => {
+      Ia = kk
     }));
-    let vQ, aQ = null,
-      fQ = null,
-      um = null,
-      Rm = null,
-      ym = null,
-      Em = null,
-      Km = null,
-      Qm = null,
-      mm = null,
-      Jm = null,
-      Nm = null,
-      Xm = null,
-      Vm = null,
-      rm = null,
-      Bm = null,
-      xm = null,
-      Sm = null,
-      pm = null,
-      Tm = !1,
-      Wm = null;
-    const jm = new Set,
-      Hm = new Set;
+    let kX, FX = null,
+      BX = null,
+      RX = null,
+      tX = null,
+      aX = null,
+      XX = null,
+      bX = null,
+      wX = null,
+      dX = null,
+      sX = null,
+      VX = null,
+      JX = null,
+      AX = null,
+      eX = null,
+      yX = null,
+      fX = null,
+      mX = null,
+      WX = null,
+      vX = !1,
+      iX = null;
+    const YX = new Set,
+      oX = new Set;
 
-    function dm(uu) {
-      if (!jm.has(uu)) {
-        jm.add(uu);
-        for (const yu of Hm) try {
-          yu(uu)
-        } catch (Ru) {
-          console.error(`${XQ} a startup listener threw`, Ru)
+    function LX(kk) {
+      if (!YX.has(kk)) {
+        YX.add(kk);
+        for (const Bk of oX) try {
+          Bk(kk)
+        } catch (Fk) {
+          console.error(`${Ja} a startup listener threw`, Fk)
         }
       }
     }
 
-    function bm(uu) {
-      Tm = !0, uu.isStopped || dm("texturesIn")
+    function OX(kk) {
+      vX = !0, kk.isStopped || LX("texturesIn")
     }
-    let Cm = 1,
-      km = -1 / 0,
-      em = !1,
-      Am = !1,
-      Dm = 0,
-      Mm = null,
-      Im = !1;
-    const Gm = {
+    let EX = 1,
+      SX = -1 / 0,
+      NX = !1,
+      HX = !1,
+      uX = 0,
+      MX = null,
+      gX = !1;
+    const UX = {
       dropped: -1 / 0,
       pause: -1 / 0
     };
-    let Um = 0,
-      nm = 0,
-      sm = null,
-      tm = null,
-      lm = null,
-      gm = null;
-    const cm = new WeakMap;
-    let Lm = null,
-      zm = null,
-      Fm = null,
-      wm = null,
-      Zm = null,
-      hm = null,
-      Pm = null,
-      im = 0,
-      Ym = null,
-      om = null,
-      qm = null,
-      Om = null,
-      am = -1 / 0,
-      fm = null;
-    const uJ = new Set;
-    let RJ = !1,
-      yJ = null;
-    const EJ = new Map,
-      KJ = new Set;
-    let QJ = !1;
-    const mJ = {
+    let cX = 0,
+      GX = 0,
+      TX = null,
+      rX = null,
+      DX = null,
+      zX = null;
+    const PX = new WeakMap;
+    let hX = null,
+      qX = null,
+      CX = null,
+      ZX = null,
+      pX = null,
+      KX = null,
+      xX = null,
+      jX = 0,
+      lX = null,
+      nX = null,
+      IX = null,
+      QX = null,
+      kb = -1 / 0,
+      Fb = null;
+    const Bb = new Set;
+    let Rb = !1,
+      tb = null;
+    const ab = new Map,
+      Xb = new Set;
+    let bb = !1;
+    const wb = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null
     };
-    let JJ = null,
-      NJ = () => [0, 0],
-      XJ = () => {},
-      VJ = () => {},
-      rJ = null,
-      BJ = null;
-    const xJ = new class {
-      constructor(uu) {
-        this.reached = uu, this.next = 1
+    let db = null,
+      sb = () => [0, 0],
+      Vb = () => {},
+      Jb = () => {},
+      Ab = null,
+      eb = null;
+    const yb = new class {
+      constructor(kk) {
+        this.reached = kk, this.next = 1
       }
-      observe(uu) {
-        if (!(uu < this.next)) {
-          for (; this.next <= uu;) this.next *= 2;
-          this.reached(uu)
+      observe(kk) {
+        if (!(kk < this.next)) {
+          for (; this.next <= kk;) this.next *= 2;
+          this.reached(kk)
         }
       }
-    }((uu => {
-      console.warn(`${XQ} chunk cancels from the server this session: ${uu}`)
+    }((kk => {
+      console.warn(`${Ja} chunk cancels from the server this session: ${kk}`)
     }));
-    let SJ = 1,
-      pJ = null,
-      TJ = null,
-      WJ = null,
-      jJ = null,
-      HJ = null,
-      dJ = !1,
-      bJ = !1,
-      CJ = 0,
-      kJ = null,
-      eJ = !1,
-      AJ = null,
-      DJ = null,
-      MJ = !1;
-    const IJ = new class {
-      constructor(uu) {
-        this.Op = uu, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
+    let fb = 1,
+      mb = null,
+      Wb = null,
+      vb = null,
+      ib = null,
+      Yb = null,
+      ob = !1,
+      Lb = !1,
+      Ob = 0,
+      Eb = null,
+      Sb = !1,
+      Nb = null,
+      Hb = null,
+      ub = !1;
+    const Mb = new class {
+      constructor(kk) {
+        this.Hf = kk, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
       }
       deviceLost() {
         this.lossPending = !0
       }
-      frame(uu, Ru, yu) {
-        (0, DR.b)(uu) && (this.lossPending = !1);
-        const Eu = yu - this.lastFrameMs;
-        this.lastFrameMs = yu, this.lossPending && Ru && (0, DR.g)(uu) ? (null === this.undrawnSinceMs || Eu > 1e3) && (this.undrawnSinceMs = yu) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && yu - this.undrawnSinceMs >= 2e3)
+      frame(kk, Fk, Bk) {
+        (0, NF.d)(kk) && (this.lossPending = !1);
+        const Rk = Bk - this.lastFrameMs;
+        this.lastFrameMs = Bk, this.lossPending && Fk && (0, NF.i)(kk) ? (null === this.undrawnSinceMs || Rk > 1e3) && (this.undrawnSinceMs = Bk) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && Bk - this.undrawnSinceMs >= 2e3)
       }
       stop() {
         this.lossPending = !1, this.undrawnSinceMs = null, this.show(!1)
       }
-      show(uu) {
-        uu !== this.shown && (this.shown = uu, this.Op(uu))
+      show(kk) {
+        kk !== this.shown && (this.shown = kk, this.Hf(kk))
       }
-    }((uu => {
-      Nu.k.Op(nR.c, uu)
+    }((kk => {
+      wk.o.Hf(UF.b, kk)
     }));
-    let GJ = !1,
-      UJ = !0,
-      nJ = null,
-      sJ = !1,
-      tJ = !1,
-      lJ = !1;
+    let gb = !1,
+      Ub = !0,
+      cb = null,
+      Gb = !1,
+      Tb = !1,
+      rb = !1;
 
-    function gJ() {
-      return LQ ??= Promise.all([yu.e(189), yu.e(136), yu.e(56)]).then((() => yu(42850))).then((uu => (cQ = uu, Object.assign(globalThis, {
-        bloxdPreviewPage: uu.pagePreviews()
-      }), uu)), (uu => {
-        throw LQ = null, uu
-      })), LQ
+    function Db() {
+      return ha ??= Promise.all([Bk.e(189), Bk.e(136), Bk.e(56)]).then((() => Bk(42735))).then((kk => (Pa = kk, Object.assign(globalThis, {
+        bloxdPreviewPage: kk.pagePreviews()
+      }), kk)), (kk => {
+        throw ha = null, kk
+      })), ha
     }
 
-    function cJ() {
-      return gQ ??= yu.e(54).then((() => yu(42872))).catch((uu => {
-        throw gQ = null, new Cu.e(uu)
-      })), gQ
+    function zb() {
+      return za ??= Bk.e(54).then((() => Bk(42754))).catch((kk => {
+        throw za = null, new Lk.c(kk)
+      })), za
     }
-    class LJ {
+    class Pb {
       constructor() {
         this.host = null
       }
-      open(uu) {
-        return null !== this.host ? uu(this.host) : gJ().then((Ru => (this.host ??= new Ru.WasmPreviewHost(Ru.pagePreviews()), uu(this.host))))
+      open(kk) {
+        return null !== this.host ? kk(this.host) : Db().then((Fk => (this.host ??= new Fk.WasmPreviewHost(Fk.pagePreviews()), kk(this.host))))
       }
-      openMob(uu) {
-        return this.open((Ru => Ru.openMob(uu)))
+      openMob(kk) {
+        return this.open((Fk => Fk.openMob(kk)))
       }
-      openPet(uu) {
-        return this.open((Ru => Ru.openPet(uu)))
+      openPet(kk) {
+        return this.open((Fk => Fk.openPet(kk)))
       }
-      openMobLineup(uu) {
-        return this.open((Ru => Ru.openMobLineup(uu)))
+      openMobLineup(kk) {
+        return this.open((Fk => Fk.openMobLineup(kk)))
       }
-      openCharacter(uu, Ru) {
-        return this.open((yu => yu.openCharacter(uu, Ru)))
+      openCharacter(kk, Fk) {
+        return this.open((Bk => Bk.openCharacter(kk, Fk)))
       }
     }
 
-    function zJ() {
-      lQ || (lQ = !0, vE.e.setHost(new LJ), (0, Wy.n)(), YE.f.setFollower(FN), Object.assign(globalThis, {
-        bloxdPreviews: vE.e
+    function hb() {
+      Da || (Da = !0, IR.i.setHost(new Pb), (0, WB.p)(), xR.h.setFollower(Cw), Object.assign(globalThis, {
+        bloxdPreviews: IR.i
       }))
     }
 
-    function FJ() {
-      gJ().then((uu => {
-        uu.pagePreviews().prefetch()
+    function qb() {
+      Db().then((kk => {
+        kk.pagePreviews().prefetch()
       }), (() => {}))
     }
 
-    function wJ() {
-      let uu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      if (tQ) return;
-      tQ = !0, GJ = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), UJ = !GJ, console.info(`${XQ} starting`), sQ || (sQ = !0, (0, nR.L)(new IR(QN, xN)), (0, Bu.k)(new GR), (0, nR.I)(new UR), (0, nR.y)()), zJ(), (0, Cy.setCrashScreen)((uu => {
+    function Cb() {
+      let kk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      if (ra) return;
+      ra = !0, gb = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), Ub = !gb, console.info(`${Ja} starting`), Ta || (Ta = !0, (0, UF.E)(new uF(bw, yw)), (0, Jk.s)(new MF), (0, UF.A)(new gF), (0, UF.t)()), hb(), (0, LB.setCrashScreen)((kk => {
         let {
-          text: Ru,
-          reload: yu
-        } = uu;
-        ! function(uu, Ru) {
-          var yu, Eu;
-          if (sJ) return;
-          sJ = !0, (0, Hy.g)(), null === (yu = fm) || void 0 === yu || yu.abort(), fm = null, oE.c.release();
-          const Ku = GJ ? null !== (Eu = uu.cancel) && void 0 !== Eu ? Eu : "general:back" : null;
-          SE({
-            ...uu,
-            cancel: Ku
-          }).then((uu => {
-            uu && Ru && tJ ? ((0, rR.l)("reloadOntoJs"), (0, hu.j)(rR.t)) : uu && Ru ? (0, hu.k)() : GJ && (0, hu.g)("/")
+          text: Fk,
+          reload: Bk
+        } = kk;
+        ! function(kk, Fk) {
+          var Bk, Rk;
+          if (Gb) return;
+          Gb = !0, (0, iB.d)(), null === (Bk = Fb) || void 0 === Bk || Bk.abort(), Fb = null, jR.c.release();
+          const tk = gb ? null !== (Rk = kk.cancel) && void 0 !== Rk ? Rk : "general:back" : null;
+          yR({
+            ...kk,
+            cancel: tk
+          }).then((kk => {
+            kk && Fk && Tb ? ((0, JF.k)("reloadOntoJs"), (0, Zk.i)(JF.t)) : kk && Fk ? (0, Zk.k)() : gb && (0, Zk.f)("/")
           }))
-        }(Ru, yu)
-      })), (0, cE.i)(), (0, bR.f)();
-      let Ru = null;
+        }(Fk, Bk)
+      })), (0, DR.k)(), (0, oF.f)();
+      let Fk = null;
       try {
-        Ru = QQ("nbusw871zw", (() => {
-          var uu, Ru;
-          return null !== (uu = null === (Ru = aQ) || void 0 === Ru ? void 0 : Ru.ws) && void 0 !== uu ? uu : null
-        }), uu, "zmnluctdxq")
-      } catch (Ku) {
-        console.error(`${XQ} probes`, Ku)
+        Fk = ba("wezdh007x9c", (() => {
+          var kk, Fk;
+          return null !== (kk = null === (Fk = FX) || void 0 === Fk ? void 0 : Fk.ws) && void 0 !== kk ? kk : null
+        }), kk, "zmnluctdxq")
+      } catch (tk) {
+        console.error(`${Ja} probes`, tk)
       }
-      const Eu = function() {
-        const uu = (0, jE.j)(),
-          Ru = (0, jE.f)();
-        let yu = !1;
-        return Eu => {
-          uu && !yu && (yu = !0, (0, Cy.reportStaleBuildReload)(uu, Ru, Eu))
+      const Rk = function() {
+        const kk = (0, vR.l)(),
+          Fk = (0, vR.f)();
+        let Bk = !1;
+        return Rk => {
+          kk && !Bk && (Bk = !0, (0, LB.reportStaleBuildReload)(kk, Fk, Rk))
         }
       }();
-      ZN(), GJ || function() {
-        const uu = function(uu) {
-          var Ru;
-          const yu = new URLSearchParams(uu),
-            Eu = yu.get("game");
-          return Eu ? {
-            game: Eu,
-            lobby: null !== (Ru = yu.get("lobby")) && void 0 !== Ru ? Ru : null
+      pw(), gb || function() {
+        const kk = function(kk) {
+          var Fk;
+          const Bk = new URLSearchParams(kk),
+            Rk = Bk.get("game");
+          return Rk ? {
+            game: Rk,
+            lobby: null !== (Fk = Bk.get("lobby")) && void 0 !== Fk ? Fk : null
           } : null
         }(window.location.search);
-        if (uu) return (0, yR.i)(uu.game) && ZN().request(), void PJ(uu.game, uu.lobby);
-        const Ru = new URLSearchParams(window.location.search).get("ws");
-        if (!Ru) return;
-        oQ.then((uu => {
-          uu && async function(uu, Ru) {
+        if (kk) return (0, RF.n)(kk.game) && pw().request(), void Kb(kk.game, kk.lobby);
+        const Fk = new URLSearchParams(window.location.search).get("ws");
+        if (!Fk) return;
+        na.then((kk => {
+          kk && async function(kk, Fk) {
             try {
-              await (0, Cu.m)(uu), zm = jN(new WebSocket(Ru)), null !== zm && oE.c.setGame(null), ZJ()
-            } catch (Ku) {
-              console.error(`${XQ} ?ws=${Ru} did not attach`, Ku)
+              await (0, Lk.h)(kk), qX = iw(new WebSocket(Fk)), null !== qX && jR.c.setGame(null), Zb()
+            } catch (tk) {
+              console.error(`${Ja} ?ws=${Fk} did not attach`, tk)
             }
-          }(uu, Ru)
+          }(kk, Fk)
         }))
-      }(), async function(uu) {
-        var Ru, Eu, Qu, mu, Ju;
-        if ("undefined" === typeof WebAssembly) return sN("noWebAssembly", "This browser has no WebAssembly"), null;
-        const Xu = await (0, EK.L)();
-        if ((0, Cy.setCrashBackend)((0, fR.l)(Xu) ? "unsupported" : null !== (Ru = null === Xu || void 0 === Xu ? void 0 : Xu.backend) && void 0 !== Ru ? Ru : "none"), (0, fR.l)(Xu)) return sN("browser", `No WebGPU or WebGL2, and WebGL1 lacks ${Xu.missing.join(", ")}`, {
-          missing: Xu.missing.join(",")
+      }(), async function(kk) {
+        var Fk, Rk, ak, Xk, bk;
+        if ("undefined" === typeof WebAssembly) return Tw("noWebAssembly", "This browser has no WebAssembly"), null;
+        const dk = await (0, tt.P)();
+        if ((0, LB.setCrashBackend)((0, kB.k)(dk) ? "unsupported" : null !== (Fk = null === dk || void 0 === dk ? void 0 : dk.backend) && void 0 !== Fk ? Fk : "none"), (0, kB.k)(dk)) return Tw("browser", `No WebGPU or WebGL2, and WebGL1 lacks ${dk.missing.join(", ")}`, {
+          missing: dk.missing.join(",")
         }), null;
-        if ((0, MK.m)("render")) try {
+        if ((0, ut.p)("render")) try {
           const {
-            startRenderDebug: uu
-          } = await Promise.all([yu.e(74), yu.e(47)]).then((() => yu(4464)));
-          uu(Xu)
-        } catch (kR) {
-          console.warn("The render debug topic didn't load", kR)
+            startRenderDebug: kk
+          } = await Promise.all([Bk.e(74), Bk.e(47)]).then((() => Bk(4416)));
+          kk(dk)
+        } catch (OF) {
+          console.warn("The render debug topic didn't load", OF)
         }
-        if ((0, MK.m)("renderlite")) try {
+        if ((0, ut.p)("renderlite")) try {
           const {
-            startRenderLite: uu
-          } = await Promise.all([yu.e(259), yu.e(48)]).then((() => yu(42891)));
-          WJ = uu(Xu)
-        } catch (kR) {
-          console.warn("The renderlite debug topic didn't load", kR)
+            startRenderLite: kk
+          } = await Promise.all([Bk.e(259), Bk.e(48)]).then((() => Bk(42773)));
+          vb = kk(dk)
+        } catch (OF) {
+          console.warn("The renderlite debug topic didn't load", OF)
         }
-        let Vu = null;
-        if (null !== Xu && tN()) {
-          const uu = (0, pE.e)(Xu, !0);
-          "webgl" === Xu.backend && null !== uu && (0, xR.m)(uu, Cy.reportGpuWasmPopulation), null !== uu && (0, BR.t)(uu), Vu = (0, pE.b)(Xu, uu)
+        let sk = null;
+        if (null !== dk && rw()) {
+          const kk = (0, fR.f)(dk, !0);
+          "webgl" === dk.backend && null !== kk && (0, eF.k)(kk, LB.reportGpuWasmPopulation), null !== kk && (0, AF.q)(kk), sk = (0, fR.c)(dk, kk)
         }
-        if (null !== Xu && null !== Vu) return (0, Cy.reportGpuFallback)(Vu, Xu.backend), lN(`the wasm client's renderer plays this GPU (${Vu}) on ${Xu.backend} worse than the JS client`, "gpu"), null;
-        const ru = null !== (Eu = null === Xu || void 0 === Xu ? void 0 : Xu.backend) && void 0 !== Eu ? Eu : null;
-        mJ.adapter = null !== (Qu = null === Xu || void 0 === Xu ? void 0 : Xu.adapter) && void 0 !== Qu ? Qu : null, mJ.boundAtMs = null, mJ.indirectHangs = null;
-        const Bu = !(0, fR.V)();
-        null !== Xu && "none" !== Xu.reason && console.info(`${XQ} drawing with ${Xu.backend}: ${Xu.reason}`);
-        const xu = (0, EK.D)();
-        qQ(!0), (0, Cu.z)((uu => {
+        if (null !== dk && null !== sk) return (0, LB.reportGpuFallback)(sk, dk.backend), Dw(`the wasm client's renderer plays this GPU (${sk}) on ${dk.backend} worse than the JS client`, "gpu"), null;
+        const Vk = null !== (Rk = null === dk || void 0 === dk ? void 0 : dk.backend) && void 0 !== Rk ? Rk : null;
+        wb.adapter = null !== (ak = null === dk || void 0 === dk ? void 0 : dk.adapter) && void 0 !== ak ? ak : null, wb.boundAtMs = null, wb.indirectHangs = null;
+        const Jk = !(0, kB.P)();
+        null !== dk && "none" !== dk.reason && console.info(`${Ja} drawing with ${dk.backend}: ${dk.reason}`);
+        const Ak = (0, tt.H)();
+        Ia(!0), (0, Lk.o)((kk => {
           try {
-            null !== ru && (rJ = uu.startSkyFeed, cN(), function(uu) {
-              var Ru, yu;
-              NJ = uu.rasterText, wm = uu.setTextLocalPlayer, uu.setTextLocalPlayer(null !== (Ru = null === (yu = Fm) || void 0 === yu ? void 0 : yu.info.playerDbId) && void 0 !== Ru ? Ru : null), XJ = uu.drainTextRerasters, VJ = uu.loadTextIcons, uu.warmText((() => dJ)), uu.textChanged(), dJ && setTimeout(VJ, 0)
-            }(uu), BJ = uu.startShellAnalytics, qN())
+            null !== Vk && (Ab = kk.startSkyFeed, Pw(), function(kk) {
+              var Fk, Bk;
+              sb = kk.rasterText, ZX = kk.setTextLocalPlayer, kk.setTextLocalPlayer(null !== (Fk = null === (Bk = CX) || void 0 === Bk ? void 0 : Bk.info.playerDbId) && void 0 !== Fk ? Fk : null), Vb = kk.drainTextRerasters, Jb = kk.loadTextIcons, kk.warmText((() => ob)), kk.textChanged(), ob && setTimeout(Jb, 0)
+            }(kk), eb = kk.startShellAnalytics, Iw())
           } finally {
-            lJ || (jJ = uu.followMenuPrefs({
-              setSoundPrefs: pN,
-              setEnvPrefs: TN,
-              setUiPrefs: SN,
-              setLookPrefs: WN
+            rb || (ib = kk.followMenuPrefs({
+              setSoundPrefs: mw,
+              setEnvPrefs: Ww,
+              setUiPrefs: fw,
+              setLookPrefs: vw
             }))
           }
-        })), (0, Cu.p)(hQ).catch((uu => {
-          console.warn(`${XQ} the game code did not load: a join asks again`, uu)
+        })), (0, Lk.k)(Ka).catch((kk => {
+          console.warn(`${Ja} the game code did not load: a join asks again`, kk)
         }));
-        const Su = (0, EK.m)(Xu);
-        let pu, Tu;
-        Su.catch((() => {})), "loading" === (0, QR.u)() && WK();
+        const ek = (0, tt.o)(dk);
+        let yk, fk;
+        ek.catch((() => {})), "loading" === (0, XF.v)() && vt();
         try {
-          pu = function(uu) {
-            const Ru = null !== uu && void 0 !== uu ? uu : document.createElement("canvas");
-            Ru.id = "wasm-game-canvas", (0, XK.g)();
-            const yu = (0, MR.f)(),
-              Eu = (0, MR.i)(yu);
-            return Ru.style.cssText = "position:fixed;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, NK.i)(Ru, Eu), (0, MR.e)(Ru, yu), Ru.width = Eu.bufferWidth, Ru.height = Eu.bufferHeight, mN(Ru, UJ), nJ = Ru, document.body.append(Ru), Ru
-          }(null === ru ? null : await (await gJ()).pagePreviews().beginSession())
-        } catch (Ku) {
-          return await eX({
-            site: SQ,
-            error: Ku
+          yk = function(kk) {
+            const Fk = null !== kk && void 0 !== kk ? kk : document.createElement("canvas");
+            Fk.id = "wasm-game-canvas", (0, Vt.n)();
+            const Bk = (0, HF.h)(),
+              Rk = (0, HF.l)(Bk);
+            return Fk.style.cssText = "position:fixed;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, st.f)(Fk, Rk), (0, HF.e)(Fk, Bk), Fk.width = Rk.bufferWidth, Fk.height = Rk.bufferHeight, ww(Fk, Ub), cb = Fk, document.body.append(Fk), Fk
+          }(null === Vk ? null : await (await Db()).pagePreviews().beginSession())
+        } catch (tk) {
+          return await Hd({
+            site: ma,
+            error: tk
           }, (() => {
-            (0, Cy.showUnsupported)((0, rE.o)("fetch"), gK.h.fetch, `the previews did not load: ${String(Ku)}`)
+            (0, LB.showUnsupported)((0, JR.o)("fetch"), Dt.f.fetch, `the previews did not load: ${String(tk)}`)
           })), null
         }
-        WK();
+        vt();
         try {
-          Tu = await Su
-        } catch (Ku) {
-          return await eX({
-            site: SQ,
-            error: Ku
+          fk = await ek
+        } catch (tk) {
+          return await Hd({
+            site: ma,
+            error: tk
           }, (() => {
-            (0, Cy.showUnsupported)((0, rE.o)("fetch"), gK.h.fetch, `the ${null!==ru&&void 0!==ru?ru:"client"} build did not load: ${String(Ku)}`)
+            (0, LB.showUnsupported)((0, JR.o)("fetch"), Dt.f.fetch, `the ${null!==Vk&&void 0!==Vk?Vk:"client"} build did not load: ${String(tk)}`)
           })), null
         }
-        const Wu = (0, EK.g)(),
-          ju = !Wu && !0 !== by.j.getItem(VQ),
-          Hu = !Wu && "loading" === (0, QR.u)();
-        await (0, mR.h)(Tu, VR.e, {
-          reloadFailedDownload: ju
-        }), Hu && !(0, QR.N)() && await (0, mR.h)(Tu, VR.e, {
-          reloadFailedDownload: ju
+        const mk = (0, tt.i)(),
+          Wk = !mk && !0 !== oB.j.getItem(Aa),
+          vk = !mk && "loading" === (0, XF.v)();
+        await (0, bF.f)(fk, VF.f, {
+          reloadFailedDownload: Wk
+        }), vk && !(0, XF.N)() && await (0, bF.f)(fk, VF.f, {
+          reloadFailedDownload: Wk
         });
-        SK = performance.now();
-        const du = PQ;
-        if (!(0, QR.N)()) {
-          (0, QR.K)() && by.j.setItem(VQ, !0);
-          const uu = (0, QR.l)();
-          if ("call" === uu) SX({
-            site: uy.o,
-            error: (0, QR.i)(),
+        ft = performance.now();
+        const ik = xa;
+        if (!(0, XF.N)()) {
+          (0, XF.J)() && oB.j.setItem(Aa, !0);
+          const kk = (0, XF.i)();
+          if ("call" === kk) md({
+            site: FB.r,
+            error: (0, XF.g)(),
             header: null
-          }, du);
+          }, ik);
           else {
-            const Ru = null !== uu && void 0 !== uu ? uu : "instantiate",
-              yu = () => {
-                (0, Cy.showUnsupported)((0, rE.o)(Ru), gK.h[Ru], (0, QR.g)())
+            const Fk = null !== kk && void 0 !== kk ? kk : "instantiate",
+              Bk = () => {
+                (0, LB.showUnsupported)((0, JR.o)(Fk), Dt.f[Fk], (0, XF.e)())
               };
-            if ("compile" !== uu && "instantiate" !== uu || !tN())
-              if ("fetch" === Ru) {
-                const uu = [Tu.url().href, VR.e.url().href];
-                await eX({
-                  site: SQ,
-                  error: (0, QR.g)(),
-                  urls: uu
-                }, yu)
-              } else yu();
+            if ("compile" !== kk && "instantiate" !== kk || !rw())
+              if ("fetch" === Fk) {
+                const kk = [fk.url().href, VF.f.url().href];
+                await Hd({
+                  site: ma,
+                  error: (0, XF.e)(),
+                  urls: kk
+                }, Bk)
+              } else Bk();
             else {
-              const Ru = (0, QR.g)(),
-                yu = (0, wR.j)((0, QR.i)());
-              (0, Cy.reportCountedLoadFallback)((0, rE.o)(uu), gK.h[uu], Ru, yu), lN(`the wasm client did not ${uu} here (${Ru})`, yu ? "oom" : null)
+              const Fk = (0, XF.e)(),
+                Bk = (0, qF.k)((0, XF.g)());
+              (0, LB.reportCountedLoadFallback)((0, JR.o)(kk), Dt.f[kk], Fk, Bk), Dw(`the wasm client did not ${kk} here (${Fk})`, Bk ? "oom" : null)
             }
           }
           return null
-        }(0, JR.N)(Tu.url()) && (0, Cy.reportUnstreamedCoreLoad)();
-        const ku = (0, QR.w)();
-        let eu, Au = du;
+        }(0, wF.T)(fk.url()) && (0, LB.reportUnstreamedCoreLoad)();
+        const Ok = (0, XF.y)();
+        let Ek, Sk = ik;
         try {
-          Au = {
-            ...du,
-            wasm: ku.Qr()
+          Sk = {
+            ...ik,
+            wasm: Ok.CV()
           };
           const {
-            AT: uu
-          } = Tu.bindings, Ru = uu.WEu();
-          if (Ru !== zR.E) return SX({
-            site: uy.d,
-            error: `core ABI ${Ru}, page ABI ${zR.E}`,
+            gf: kk
+          } = fk.bindings, Fk = kk.gBk();
+          if (Fk !== PF.s) return md({
+            site: FB.b,
+            error: `core ABI ${Fk}, page ABI ${PF.s}`,
             header: null
-          }, Au), null;
-          const [yu, Eu] = (0, zR.ee)();
-          eu = new uu(yu, Eu)
-        } catch (Ku) {
-          return SX({
-            site: uy.d,
-            error: Ku,
+          }, Sk), null;
+          const [Bk, Rk] = (0, PF.rd)();
+          Ek = new kk(Bk, Rk)
+        } catch (tk) {
+          return md({
+            site: FB.b,
+            error: tk,
             header: null
-          }, Au), null
+          }, Sk), null
         }
-        PQ = Au, iQ = Tu.bindings;
-        const Du = new uy.f(eu, QR.r, {
-          onCrash: uu => {
-            var Ru;
-            null === (Ru = WJ) || void 0 === Ru || Ru.crashed(uu), Bu && function(uu, Ru, yu) {
-              if ("webgpu" !== Ru || (0, EK.e)()) return !1;
-              const Eu = function(uu) {
-                if (uu.site === uy.e && (0, fR.o)(uu.error)) return "frames_refused";
-                return uu.site === rQ && (0, fR.q)(uu.error) ? "start_failed" : null
-              }(uu);
-              if (null === Eu || !(0, fR.Q)(Eu)) return !1;
-              return (0, Cy.reportRenderReload)("webgpu", "start_failed" === Eu ? 0 : 1, yu, {
-                cause: Eu,
-                error: uu.error,
-                context: mJ,
-                session: WX(null)
-              }), uX(), !0
-            }(uu, ru, Au) || SX(uu, Au)
+        xa = Sk, ja = fk.bindings;
+        const Nk = new FB.e(Ek, XF.p, {
+          onCrash: kk => {
+            var Fk;
+            null === (Fk = vb) || void 0 === Fk || Fk.crashed(kk), Jk && function(kk, Fk, Bk) {
+              if ("webgpu" !== Fk || (0, tt.e)()) return !1;
+              const Rk = function(kk) {
+                if (kk.site === FB.d && (0, kB.m)(kk.error)) return "frames_refused";
+                return kk.site === ea && (0, kB.o)(kk.error) ? "start_failed" : null
+              }(kk);
+              if (null === Rk || !(0, kB.M)(Rk)) return !1;
+              return (0, LB.reportRenderReload)("webgpu", "start_failed" === Rk ? 0 : 1, Bk, {
+                cause: Rk,
+                error: kk.error,
+                context: wb,
+                session: Yd(null)
+              }), Rd(), !0
+            }(kk, Vk, Sk) || md(kk, Sk)
           },
-          onNetEvent: fN,
-          onReconnectGrace: GN,
-          onCoreErrors: (uu, Ru) => {
-            var yu, Eu;
-            uu.some((uu => {
+          onNetEvent: Bd,
+          onReconnectGrace: gw,
+          onCoreErrors: (kk, Fk) => {
+            var Bk, Rk;
+            kk.some((kk => {
               let {
-                code: Ru
-              } = uu;
-              return Ru === zR.O.RenderDeviceLost
-            })) && ((0, EK.x)(), IJ.deviceLost()), null === (yu = WJ) || void 0 === yu || yu.coreErrors(uu), (0, Cy.reportCoreErrors)(uu, Ru, Au, ((uu, Ru) => {
-              var yu;
-              return null === (yu = JJ) || void 0 === yu ? void 0 : yu.jEu(uu, Ru)
-            })), null === (Eu = Wm) || void 0 === Eu || Eu.coreErrors(uu)
+                code: Fk
+              } = kk;
+              return Fk === PF.B.RenderDeviceLost
+            })) && ((0, tt.C)(), Mb.deviceLost()), null === (Bk = vb) || void 0 === Bk || Bk.coreErrors(kk), (0, LB.reportCoreErrors)(kk, Fk, Sk, ((kk, Fk) => {
+              var Bk;
+              return null === (Bk = db) || void 0 === Bk ? void 0 : Bk.UBk(kk, Fk)
+            })), null === (Rk = iX) || void 0 === Rk || Rk.coreErrors(kk)
           },
-          onRenderReload: (uu, Ru, yu) => {
-            ! function(uu, Ru, yu, Eu, Ku, Qu) {
-              var mu;
-              if ((0, EK.e)()) return;
-              const Ju = Ru === zR.Uc.WEBGPU,
-                Nu = Eu === zR.Uc.PIPELINE_FAILED ? "pipeline_failed" : "lost",
-                Xu = (0, fR.R)(JJ);
-              null === (mu = WJ) || void 0 === mu || mu.reload(Ju, yu, Nu, null === Xu || void 0 === Xu ? void 0 : Xu.message);
-              const Vu = Ju ? (0, fR.N)(Nu, Ku) : null;
-              if (null !== Vu) {
-                const Ru = void 0 === Xu ? "" : ` (${Xu.message})`;
-                return void uu.crash(Cy.RENDER_RELOAD_SITE, new Error(`${(0,Cy.renderReloadMessage)("webgpu",Nu,yu)} and ${Vu}${Ru}`))
+          onRenderReload: (kk, Fk, Bk) => {
+            ! function(kk, Fk, Bk, Rk, tk, ak) {
+              var Xk;
+              if ((0, tt.e)()) return;
+              const bk = Fk === PF.nc.WEBGPU,
+                wk = Rk === PF.nc.PIPELINE_FAILED ? "pipeline_failed" : "lost",
+                dk = (0, kB.N)(db);
+              null === (Xk = vb) || void 0 === Xk || Xk.reload(bk, Bk, wk, null === dk || void 0 === dk ? void 0 : dk.message);
+              const sk = bk ? (0, kB.L)(wk, tk) : null;
+              if (null !== sk) {
+                const Fk = void 0 === dk ? "" : ` (${dk.message})`;
+                return void kk.crash(LB.RENDER_RELOAD_SITE, new Error(`${(0,LB.renderReloadMessage)("webgpu",wk,Bk)} and ${sk}${Fk}`))
               }
-              const ru = Ju ? "webgpu" : "webgl1" === Qu ? "webgl1" : "webgl";
-              "lost" === Nu && (0, EK.x)();
-              (0, Cy.reportRenderReload)(ru, yu, PQ, {
-                cause: Nu,
-                error: Xu,
-                context: mJ,
-                session: WX(uu.sunShadowsHeld())
-              }), uX()
-            }(Du, uu, Ru, yu, Bu, ru)
+              const Vk = bk ? "webgpu" : "webgl1" === ak ? "webgl1" : "webgl";
+              "lost" === wk && (0, tt.C)();
+              (0, LB.reportRenderReload)(Vk, Bk, xa, {
+                cause: wk,
+                error: dk,
+                context: wb,
+                session: Yd(kk.sunShadowsHeld())
+              }), Rd()
+            }(Nk, kk, Fk, Bk, Jk, Vk)
           },
-          onEnvEvent: uu => {
-            var Ru;
-            uu.kind === zR.ab.SkyImages && (null === (Ru = xm) || void 0 === Ru || Ru.onEvent(uu.payload))
+          onEnvEvent: kk => {
+            var Fk;
+            kk.kind === PF.M.SkyImages && (null === (Fk = fX) || void 0 === Fk || Fk.onEvent(kk.payload))
           },
-          onImages: uu => {
-            var Ru;
-            null === (Ru = Sm) || void 0 === Ru || Ru.onEvent(uu)
+          onImages: kk => {
+            var Fk;
+            null === (Fk = mX) || void 0 === Fk || Fk.onEvent(kk)
           },
-          onModelRequest: uu => {
-            var Ru;
-            null === (Ru = Vm) || void 0 === Ru || Ru.request(uu)
+          onModelRequest: kk => {
+            var Fk;
+            null === (Fk = AX) || void 0 === Fk || Fk.request(kk)
           },
-          onModelTaken: (uu, Ru) => {
-            var yu;
-            null === (yu = Vm) || void 0 === yu || yu.taken(uu, Ru)
+          onModelTaken: (kk, Fk) => {
+            var Bk;
+            null === (Bk = AX) || void 0 === Bk || Bk.taken(kk, Fk)
           },
           onTerrainTexturesWanted: () => {
             queueMicrotask((() => {
-              ! function(uu, Ru) {
-                const yu = ZQ;
-                if (null === yu || uu.isStopped) return;
-                yu.restore((uu => {
-                  (0, Cy.reportTerrainTextureFailure)(uu, Ru)
-                })).then((Ru => {
-                  !1 !== Ru || uu.isStopped ? !0 === Ru && console.info(`${XQ} terrain textures handed over again after the renderer lost them`) : console.warn(`${XQ} the terrain textures couldn't be handed over again: the terrain draws blank`)
+              ! function(kk, Fk) {
+                const Bk = pa;
+                if (null === Bk || kk.isStopped) return;
+                Bk.restore((kk => {
+                  (0, LB.reportTerrainTextureFailure)(kk, Fk)
+                })).then((Fk => {
+                  !1 !== Fk || kk.isStopped ? !0 === Fk && console.info(`${Ja} terrain textures handed over again after the renderer lost them`) : console.warn(`${Ja} the terrain textures couldn't be handed over again: the terrain draws blank`)
                 }))
-              }(Du, Au)
+              }(Nk, Sk)
             }))
           },
-          onKeepAlive: uu => {
-            const Ru = null === gm ? void 0 : cm.get(gm);
-            void 0 !== Ru && kE(Ru, uu)
+          onKeepAlive: kk => {
+            const Fk = null === zX ? void 0 : PX.get(zX);
+            void 0 !== Fk && OR(Fk, kk)
           }
         });
-        if (zQ = Du, null !== uu) {
-          Du.setAntiCheatProbes(uQ(QR.r, uu.checks)), uu.watchHeld(yQ.CoreFrame, (() => Du.frame)), uu.watchHeld(yQ.GlueFrame, (() => eu.frame));
-          const Ru = KQ(uu, ((uu, Ru, yu) => {
-            let Eu = !1;
-            return dX(Du, (() => {
-              Eu = Du.rings.input.writeRecord(zR.yb.AntiCheat, uu, Ru, yu, 0)
-            })), Eu
+        if (qa = Nk, null !== kk) {
+          Nk.setAntiCheatProbes(Ba(XF.p, kk.checks)), kk.watchHeld(ta.CoreFrame, (() => Nk.frame)), kk.watchHeld(ta.GlueFrame, (() => Ek.frame));
+          const Fk = Xa(kk, ((kk, Fk, Bk) => {
+            let Rk = !1;
+            return Od(Nk, (() => {
+              Rk = Nk.rings.input.writeRecord(PF.hb.AntiCheat, kk, Fk, Bk, 0)
+            })), Rk
           }));
-          Du.isStopped ? Ru.stop() : Nm = Ru
+          Nk.isStopped ? Fk.stop() : VX = Fk
         }
-        UQ = (uu, Ru, yu) => Du.rings.cmd.writeCmd(uu, Ru, yu), nQ = uu => Du.rings.cmd.growForCmd(uu), Im = !1, cN(), (0, Cu.B)(Du, {
-          core: eu,
-          memory: QR.r,
-          staleOr: (uu, Ru, yu) => eX({
-            site: uu,
-            error: Ru
-          }, yu),
-          reportReplayFault: (uu, Ru) => {
-            (0, Cy.reportReplayFault)(uu, Ru, PQ)
+        ca = (kk, Fk, Bk) => Nk.rings.cmd.writeCmd(kk, Fk, Bk), Ga = kk => Nk.rings.cmd.growForCmd(kk), gX = !1, Pw(), (0, Lk.r)(Nk, {
+          core: Ek,
+          memory: XF.p,
+          staleOr: (kk, Fk, Bk) => Hd({
+            site: kk,
+            error: Fk
+          }, Bk),
+          reportReplayFault: (kk, Fk) => {
+            (0, LB.reportReplayFault)(kk, Fk, xa)
           },
-          audio: hQ,
-          options: SR.b,
-          onNetEvent: fN,
-          sessionInfo: uu => {
-            var Ru;
-            return (null === (Ru = Fm) || void 0 === Ru ? void 0 : Ru.conn) === uu ? Fm.info : null
+          audio: Ka,
+          options: yF.b,
+          onNetEvent: Bd,
+          sessionInfo: kk => {
+            var Fk;
+            return (null === (Fk = CX) || void 0 === Fk ? void 0 : Fk.conn) === kk ? CX.info : null
           },
-          onEventOverflow: EN,
-          replayShaderPack: uu => {
-            var Ru;
-            null === (Ru = Wm) || void 0 === Ru || Ru.replay(uu)
+          onEventOverflow: aw,
+          replayShaderPack: kk => {
+            var Fk;
+            null === (Fk = iX) || void 0 === Fk || Fk.replay(kk)
           },
-          hasPackModel: uu => {
-            var Ru, yu;
-            return null !== (null !== (Ru = null === (yu = LN()) || void 0 === yu ? void 0 : yu.modelUrl(uu)) && void 0 !== Ru ? Ru : null)
+          hasPackModel: kk => {
+            var Fk, Bk;
+            return null !== (null !== (Fk = null === (Bk = hw()) || void 0 === Bk ? void 0 : Bk.modelUrl(kk)) && void 0 !== Fk ? Fk : null)
           },
-          beforeWrite: () => (!em && Du.rings.net.cursor > 0 && EX(Du, !1, "all"), !Du.isStopped),
-          beforeOp: () => (!em && Du.netWrittenSinceFrame > 0 && EX(Du, !1, "budget"), !Du.isStopped)
-        }), (0, bu.G)({
+          beforeWrite: () => (!NX && Nk.rings.net.cursor > 0 && Xd(Nk, !1, "all"), !Nk.isStopped),
+          beforeOp: () => (!NX && Nk.netWrittenSinceFrame > 0 && Xd(Nk, !1, "budget"), !Nk.isStopped)
+        }), (0, Yk.G)({
           lockPointer: () => {
-            if (!gy(pu)) return !1;
+            if (!rB(yk)) return !1;
             try {
-              Promise.resolve(pu.requestPointerLock()).catch((() => {}))
+              Promise.resolve(yk.requestPointerLock()).catch((() => {}))
             } catch {
               return !1
             }
             return !0
           },
           unlockPointer: () => {
-            (0, ey.c)()
+            (0, EB.d)()
           },
           leaveGame: () => {
-            yN()
+            tw()
           },
-          canvas: () => pu
-        }), Xm = (0, bu.y)((() => {
-          var uu;
-          const Ru = (0, Cu.i)();
-          null === (uu = (0, Cu.v)()) || void 0 === uu || uu.followCursorAim(!0 === (null === Ru || void 0 === Ru ? void 0 : Ru.isSessionLive) ? Ru : null)
-        })), sm && Du.setUiPrefs(sm);
-        tm && Du.setEnvPrefs(tm);
-        lm && Du.setLookPrefs(lm);
-        const Mu = mK ? JK(mK.preventMovement) : null;
-        Mu && BN(Mu);
-        const Iu = (0, Sy.g)(),
-          Gu = (0, Sy.c)(Du, Iu);
-        mm = Iu.basis, (0, dy.f)(null === Gu ? null : (0, xy.l)(Gu)), Qm = Gu;
-        const Uu = (0, NR.e)();
-        let nu = 1 / 0,
-          su = !0,
-          tu = Iu.shedFootprintBytes;
-        const lu = new gE.d(Uu, (() => eu.sT()), (uu => {
-          Du.crash(uy.j, uu)
+          canvas: () => yk
+        }), JX = (0, Yk.x)((() => {
+          var kk;
+          const Fk = (0, Lk.g)();
+          null === (kk = (0, Lk.n)()) || void 0 === kk || kk.followCursorAim(!0 === (null === Fk || void 0 === Fk ? void 0 : Fk.isSessionLive) ? Fk : null)
+        })), TX && Nk.setUiPrefs(TX);
+        rX && Nk.setEnvPrefs(rX);
+        DX && Nk.setLookPrefs(DX);
+        const Hk = wt ? dt(wt.preventMovement) : null;
+        Hk && ew(Hk);
+        const uk = (0, yB.k)(),
+          Mk = (0, yB.e)(Nk, uk);
+        dX = uk.basis, (0, YB.h)(null === Mk ? null : (0, eB.l)(Mk)), wX = Mk;
+        const gk = (0, dF.c)();
+        let Uk = 1 / 0,
+          ck = !0,
+          Gk = uk.shedFootprintBytes;
+        const Tk = new rR.d(gk, (() => Ek.Pf()), (kk => {
+          Nk.crash(FB.k, kk)
         }));
-        Em = lu, Km = lu, null !== Gu && lu.setCeiling(Math.min((0, gE.n)(Gu), nu));
-        if (su) {
-          lu.setShed((uu => {
-            const Ru = Du.shedMemory("joinReserve" !== uu);
-            return null !== Ru && (null === Qm || Ru < Qm) && (Qm = Ru, (0, dy.f)((0, xy.l)(Ru))), Ru
-          }), ((uu, Ru, yu) => {
-            1 === Ru ? (0, Cy.reportMemoryShed)(uu, yu, PQ) : console.warn(`${XQ} wasm memory: shed again (${uu}): shed ${Ru}`, yu.wasmMemoryShed)
-          }), (() => Du.addDistanceInUse()));
-          const uu = (0, fR.F)(ku);
-          lu.setFootprint(new DK(tu, {
-            storedChunks: () => eu.HEu(),
+        XX = Tk, bX = Tk, null !== Mk && Tk.setCeiling(Math.min((0, rR.l)(Mk), Uk));
+        if (ck) {
+          Tk.setShed((kk => {
+            const Fk = Nk.shedMemory("joinReserve" !== kk);
+            return null !== Fk && (null === wX || Fk < wX) && (wX = Fk, (0, YB.h)((0, eB.l)(Fk))), Fk
+          }), ((kk, Fk, Bk) => {
+            1 === Fk ? (0, LB.reportMemoryShed)(kk, Bk, xa) : console.warn(`${Ja} wasm memory: shed again (${kk}): shed ${Fk}`, Bk.wasmMemoryShed)
+          }), (() => Nk.addDistanceInUse()));
+          const kk = (0, kB.C)(Ok);
+          Tk.setFootprint(new Ht(Gk, {
+            storedChunks: () => Ek.cBk(),
             gpuBytes: () => {
-              var Ru;
-              return null !== (Ru = null === uu || void 0 === uu ? void 0 : uu.dEu()) && void 0 !== Ru ? Ru : 0
+              var Fk;
+              return null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.GBk()) && void 0 !== Fk ? Fk : 0
             },
-            jsHeapBytes: AK
+            jsHeapBytes: Nt
           }))
         }
         window.addEventListener("pagehide", (() => {
-          Em === lu && (lu.refreshStats(), HX(lu))
-        })), window.addEventListener("pagehide", RX), window.addEventListener("pagehide", yX), !1;
-        const [gu, cu] = (0, Ty.c)();
-        HJ = (0, jy.g)((uu => Du.setChunkAddDistance(uu.horizontal, uu.vertical)), {
-          horizontal: gu,
-          vertical: cu
-        }), Du.setAmbientOcclusion(!0 !== by.i.getItem("disableAmbientOcclusion")), Du.setPoseLod(!0 !== by.i.getItem(KR.P)), (0, MK.m)("look") && (Du.setDebugLog(zR.R.Look, !0), (0, GK.e)("wasm", (() => Du.takeDebugLog(zR.R.Look))));
-        (0, MK.m)("remesh") && (Du.setDebugLog(zR.R.Remesh, !0), Lu = () => Du.takeDebugLog(zR.R.Remesh), lK = new tK((0, UK.m)(), Lu));
-        var Lu;
-        const zu = function(uu, Ru, yu, Eu) {
-          const Ku = new uE,
-            Qu = uu => by.i.getItem(uu);
-          Ku.sync(Qu, Ru), (0, AR.S)();
-          const mu = (0, Nu.n)("customBindingsChanged", (() => {
-            Ku.sync(Qu, Ru)
+          XX === Tk && (Tk.refreshStats(), Ld(Tk))
+        })), window.addEventListener("pagehide", td), window.addEventListener("pagehide", ad), !1;
+        const [rk, Dk] = (0, mB.g)();
+        Yb = (0, vB.d)((kk => Nk.setChunkAddDistance(kk.horizontal, kk.vertical)), {
+          horizontal: rk,
+          vertical: Dk
+        }), Nk.setAmbientOcclusion(!0 !== oB.i.getItem("disableAmbientOcclusion")), Nk.setPoseLod(!0 !== oB.i.getItem(aF.L)), (0, ut.p)("look") && (Nk.setDebugLog(PF.G.Look, !0), (0, gt.i)("wasm", (() => Nk.takeDebugLog(PF.G.Look))));
+        (0, ut.p)("remesh") && (Nk.setDebugLog(PF.G.Remesh, !0), zk = () => Nk.takeDebugLog(PF.G.Remesh), rt = new Tt((0, Ut.m)(), zk));
+        var zk;
+        const Pk = function(kk, Fk, Bk, Rk) {
+          const tk = new FR,
+            ak = kk => oB.i.getItem(kk);
+          tk.sync(ak, Fk), (0, SF.P)();
+          const Xk = (0, wk.p)("customBindingsChanged", (() => {
+            tk.sync(ak, Fk)
           }));
-          (0, Ay.r)(Ru);
-          const Ju = new Set,
-            Xu = (0, bu.y)((() => {
-              var uu;
-              Ju.size > 0 && KE() && !0 === (null === (uu = (0, Cu.i)()) || void 0 === uu ? void 0 : uu.localPlayerAlive()) && Nu.k.Op("usedKeyboard")
+          (0, SB.j)(Fk);
+          const bk = new Set,
+            dk = (0, Yk.x)((() => {
+              var kk;
+              bk.size > 0 && aR() && !0 === (null === (kk = (0, Lk.g)()) || void 0 === kk ? void 0 : kk.localPlayerAlive()) && wk.o.Hf("usedKeyboard")
             })),
-            Vu = Py.e.heldSizer((() => (0, MR.p)(uu))),
-            ru = hy(uu, Ru, {
-              prevents: uu => Ku.prevents(uu),
-              keyPressed: uu => {
-                Ku.moves(uu) && (Ju.add(uu), KE() && Nu.k.Op("usedKeyboard"))
+            sk = pB.b.heldSizer((() => (0, HF.q)(kk))),
+            Vk = ZB(kk, Fk, {
+              prevents: kk => tk.prevents(kk),
+              keyPressed: kk => {
+                tk.moves(kk) && (bk.add(kk), aR() && wk.o.Hf("usedKeyboard"))
               },
-              keyReleased: uu => {
-                Ju.delete(uu)
+              keyReleased: kk => {
+                bk.delete(kk)
               },
               keysReleased: () => {
-                Ju.clear()
+                bk.clear()
               },
               resized: () => {
-                yE.k.measure(uu.getBoundingClientRect()), (0, iy.p)()
+                RR.h.measure(kk.getBoundingClientRect()), (0, KB.k)()
               },
-              sizeCanvas: Vu,
-              watchRenderScale: Ru => {
-                const yu = (0, MR.q)(uu, Ru),
-                  Eu = Py.e.onRelease(Ru);
+              sizeCanvas: sk,
+              watchRenderScale: Fk => {
+                const Bk = (0, HF.r)(kk, Fk),
+                  Rk = pB.b.onRelease(Fk);
                 return () => {
-                  yu(), Eu()
+                  Bk(), Rk()
                 }
               },
               touchStarting: () => {
-                yE.k.measure(uu.getBoundingClientRect())
+                RR.h.measure(kk.getBoundingClientRect())
               },
-              viewShown: yu,
-              touchUiShown: () => Pu.d.get("isTouchScreen"),
-              ctrlCombosAreGames: KE,
-              inspect: (uu, Ru, yu) => {
-                Ku.checks(Ru, yu) && Eu(uu)
+              viewShown: Bk,
+              touchUiShown: () => pk.c.get("isTouchScreen"),
+              ctrlCombosAreGames: aR,
+              inspect: (kk, Fk, Bk) => {
+                tk.checks(Fk, Bk) && Rk(kk)
               },
-              canLock: () => gy(uu)
+              canLock: () => rB(kk)
             }),
-            Bu = (0, Qy.e)(Ru);
+            Jk = (0, XB.e)(Fk);
           return () => {
-            mu(), Xu(), (0, Ay.r)(null), Bu(), ru()
+            Xk(), dk(), (0, SB.j)(null), Jk(), Vk()
           }
-        }(pu, ((uu, Ru, yu, Eu, Ku) => {
-          var Qu;
-          dX(Du, (() => {
-            Du.rings.input.writeRecord(uu, Ru, yu, Eu, Ku)
-          })), null === (Qu = Nm) || void 0 === Qu || Qu.onInput(uu), !Am && (0, XE.g)(uu, Ku) && (0, XE.c)((() => {
-            zQ !== Du || lJ || Du.isStopped || !XX() || EX(Du, !1, "budget", !1)
+        }(yk, ((kk, Fk, Bk, Rk, tk) => {
+          var ak;
+          Od(Nk, (() => {
+            Nk.rings.input.writeRecord(kk, Fk, Bk, Rk, tk)
+          })), null === (ak = VX) || void 0 === ak || ak.onInput(kk), !HX && (0, sR.c)(kk, tk) && (0, sR.b)((() => {
+            qa !== Nk || rb || Nk.isStopped || !Jd() || Xd(Nk, !1, "budget", !1)
           }))
-        }), (() => UJ), (uu => {
-          var Ru;
-          null === (Ru = Nm) || void 0 === Ru || Ru.onEvent(uu)
+        }), (() => Ub), (kk => {
+          var Fk;
+          null === (Fk = VX) || void 0 === Fk || Fk.onEvent(kk)
         }));
-        if (Du.isStopped) return zu(), null;
-        fQ = zu;
-        const Fu = () => !Du.isStopped && !sJ;
-        if (Du.isStopped) return null;
-        (0, QR.S)((() => {
-          "call" === (0, QR.l)() && Du.crash(uy.o, (0, QR.i)())
+        if (Nk.isStopped) return Pk(), null;
+        BX = Pk;
+        const hk = () => !Nk.isStopped && !Gb;
+        if (Nk.isStopped) return null;
+        (0, XF.T)((() => {
+          "call" === (0, XF.i)() && Nk.crash(FB.r, (0, XF.g)())
         }));
-        const wu = (0, uy.H)(Du.rings.worker, (() => {
-          EX(Du, !1, "budget")
+        const qk = (0, FB.L)(Nk.rings.worker, (() => {
+          Xd(Nk, !1, "budget")
         }));
-        um = function(uu, Ru) {
-          return bX().then((uu => {
+        RX = function(kk, Fk) {
+          return Ed().then((kk => {
             let {
-              prefetchWorldgenWorker: Ru
-            } = uu;
-            Ru()
-          }), (() => {})), new LK({
-            module: (0, QR.s)(),
-            decodeSettings: uu => {
-              const Ru = (0, Cu.v)();
-              if (null === Ru) throw new Error("no game code to decode the world-gen seed with");
-              return Ru.decodeMapSettings(uu)
+              prefetchWorldgenWorker: Fk
+            } = kk;
+            Fk()
+          }), (() => {})), new Pt({
+            module: (0, XF.r)(),
+            decodeSettings: kk => {
+              const Fk = (0, Lk.n)();
+              if (null === Fk) throw new Error("no game code to decode the world-gen seed with");
+              return Fk.decodeMapSettings(kk)
             },
-            loadWorker: CX,
+            loadWorker: Sd,
             onMapWithoutWorldgen: () => {
-              kX((uu => {
+              Nd((kk => {
                 let {
-                  stopWorldgenWorkerPrefetch: Ru
-                } = uu;
-                Ru()
+                  stopWorldgenWorkerPrefetch: Fk
+                } = kk;
+                Fk()
               }))
             },
-            onLoadFailed: uu => {
-              (0, Cy.reportWorldgenLoadFailure)(uu, PQ)
+            onLoadFailed: kk => {
+              (0, LB.reportWorldgenLoadFailure)(kk, xa)
             },
-            onWorkerLost: uu => {
-              (0, Cy.reportWorkerLost)(uy.x, uu, PQ)
+            onWorkerLost: kk => {
+              (0, LB.reportWorkerLost)(FB.C, kk, xa)
             },
-            onStartTimeout: uu => {
-              (0, Cy.reportWorkerStartTimeout)(uy.x, uu, PQ)
+            onStartTimeout: kk => {
+              (0, LB.reportWorkerStartTimeout)(FB.C, kk, xa)
             },
-            onGaveUp: uu => {
-              (0, Cy.reportWorldgenGaveUp)(uu, PQ)
+            onGaveUp: kk => {
+              (0, LB.reportWorldgenGaveUp)(kk, xa)
             },
-            onMemoryStats: uu => {
-              var Ru;
-              null === (Ru = Em) || void 0 === Ru || Ru.noteWorldgen(uu)
+            onMemoryStats: kk => {
+              var Fk;
+              null === (Fk = XX) || void 0 === Fk || Fk.noteWorldgen(kk)
             },
             onMemoryGone: () => {
-              var uu;
-              null === (uu = Em) || void 0 === uu || uu.worldgenGone()
+              var kk;
+              null === (kk = XX) || void 0 === kk || kk.worldgenGone()
             },
-            write: (yu, Eu, Ku, Qu, mu) => {
-              dX(uu, (() => {
-                uu.rings.worker.writeWorkerRecord(yu, Eu, Ku, 0, Qu, mu) || uu.crash(uy.x, `a world-gen record of kind ${Eu} did not fit the worker-in ring`)
-              })), Ru()
+            write: (Bk, Rk, tk, ak, Xk) => {
+              Od(kk, (() => {
+                kk.rings.worker.writeWorkerRecord(Bk, Rk, tk, 0, ak, Xk) || kk.crash(FB.C, `a world-gen record of kind ${Rk} did not fit the worker-in ring`)
+              })), Fk()
             }
           })
-        }(Du, wu), ym = function(uu, Ru) {
-          return new tE({
-            module: (0, QR.s)(),
+        }(Nk, qk), aX = function(kk, Fk) {
+          return new GR({
+            module: (0, XF.r)(),
             loadWorkers: async () => {
               const [{
-                createMeshWorker: uu
-              }, Ru] = await Promise.all([yu.e(40).then((() => yu(42929))), Promise.resolve().then((() => yu(106))).then((uu => {
+                createMeshWorker: kk
+              }, Fk] = await Promise.all([Bk.e(40).then((() => Bk(42813))), Promise.resolve().then((() => Bk(98))).then((kk => {
                 let {
-                  isMobile: Ru
-                } = uu;
-                return Ru()
+                  isMobile: Fk
+                } = kk;
+                return Fk()
               }), (() => !1))]);
               return {
-                create: uu,
-                count: (0, dR.e)(navigator.hardwareConcurrency, Ru)
+                create: kk,
+                count: (0, YF.c)(navigator.hardwareConcurrency, Fk)
               }
             },
-            write: (yu, Eu, Ku, Qu, mu, Ju) => {
-              (0, iy.m)(), dX(uu, (() => {
-                uu.rings.worker.writeWorkerRecord(yu, Eu, Ku, Qu, mu, Ju) || uu.crash(uy.l, `a meshing record of kind ${Eu} did not fit the worker-in ring`)
-              })), Ru()
+            write: (Bk, Rk, tk, ak, Xk, bk) => {
+              (0, KB.j)(), Od(kk, (() => {
+                kk.rings.worker.writeWorkerRecord(Bk, Rk, tk, ak, Xk, bk) || kk.crash(FB.m, `a meshing record of kind ${Rk} did not fit the worker-in ring`)
+              })), Fk()
             },
-            onWorkerLost: uu => {
-              (0, Cy.reportWorkerLost)(uy.l, uu, PQ)
+            onWorkerLost: kk => {
+              (0, LB.reportWorkerLost)(FB.m, kk, xa)
             },
-            onLightFault: (uu, Ru) => {
-              (0, Cy.reportLightFault)(uu, Ru, PQ)
+            onLightFault: (kk, Fk) => {
+              (0, LB.reportLightFault)(kk, Fk, xa)
             },
-            onStartTimeout: uu => {
-              (0, Cy.reportWorkerStartTimeout)(uy.l, uu, PQ)
+            onStartTimeout: kk => {
+              (0, LB.reportWorkerStartTimeout)(FB.m, kk, xa)
             },
-            onMemoryStats: (uu, Ru) => {
-              var yu;
-              null === (yu = Em) || void 0 === yu || yu.noteMeshWorker(uu, Ru)
+            onMemoryStats: (kk, Fk) => {
+              var Bk;
+              null === (Bk = XX) || void 0 === Bk || Bk.noteMeshWorker(kk, Fk)
             },
-            onMemoryGone: uu => {
-              var Ru;
-              null === (Ru = Em) || void 0 === Ru || Ru.meshWorkerGone(uu)
+            onMemoryGone: kk => {
+              var Fk;
+              null === (Fk = XX) || void 0 === Fk || Fk.meshWorkerGone(kk)
             },
-            fail: (Ru, yu) => {
-              const Eu = () => {
-                uu.crash(uy.l, void 0 === yu ? Ru : new Error(Ru, {
-                  cause: yu
+            fail: (Fk, Bk) => {
+              const Rk = () => {
+                kk.crash(FB.m, void 0 === Bk ? Fk : new Error(Fk, {
+                  cause: Bk
                 }))
               };
-              void 0 !== yu ? eX({
-                site: uy.l,
-                error: yu
-              }, Eu) : Eu()
+              void 0 !== Bk ? Hd({
+                site: FB.m,
+                error: Bk
+              }, Rk) : Rk()
             }
           })
-        }(Du, wu);
-        const iu = (0, qE.t)(jR.clientSideServerUrls.staticUrl, {
-            onTableFailed: uu => {
-              eX({
-                site: Cy.MODEL_FEED_SITE,
-                error: uu
-              }, (() => {}), Fu)
+        }(Nk, qk);
+        const Kk = (0, lR.r)(vF.clientSideServerUrls.staticUrl, {
+            onTableFailed: kk => {
+              Hd({
+                site: LB.MODEL_FEED_SITE,
+                error: kk
+              }, (() => {}), hk)
             },
-            packUrl: uu => {
-              var Ru, yu;
-              return null !== (Ru = null === (yu = LN()) || void 0 === yu ? void 0 : yu.modelUrl(uu)) && void 0 !== Ru ? Ru : null
+            packUrl: kk => {
+              var Fk, Bk;
+              return null !== (Fk = null === (Bk = hw()) || void 0 === Bk ? void 0 : Bk.modelUrl(kk)) && void 0 !== Fk ? Fk : null
             }
           }),
-          Yu = function(uu, Ru, yu) {
-            const Eu = yu => {
-              var Eu, Ku;
-              return null !== (Eu = null === (Ku = Ru()) || void 0 === Ku ? void 0 : Ku.drawnUrl(yu)) && void 0 !== Eu ? Eu : uu.url(yu)
+          xk = function(kk, Fk, Bk) {
+            const Rk = Bk => {
+              var Rk, tk;
+              return null !== (Rk = null === (tk = Fk()) || void 0 === tk ? void 0 : tk.drawnUrl(Bk)) && void 0 !== Rk ? Rk : kk.url(Bk)
             };
-            return (0, YE.k)((0, LE.l)(Eu), yu)
-          }(iu, (() => Vm), LN),
-          ou = new LE.d(Yu, (uu => {
-            console.warn(`${XQ} image ${uu.key.kind}:${uu.key.index}:${uu.key.word} failed`, uu.error)
+            return (0, xR.k)((0, zR.l)(Rk), Bk)
+          }(Kk, (() => AX), hw),
+          jk = new zR.g(xk, (kk => {
+            console.warn(`${Ja} image ${kk.key.kind}:${kk.key.index}:${kk.key.word} failed`, kk.error)
           }));
-        Sm = ou, pm = new PE(Du, Yu, ((uu, Ru) => {
-          void 0 === Ru ? console.warn(`${XQ} ${uu}`) : wN(uu, Ru)
+        mX = jk, WX = new pR(Nk, xk, ((kk, Fk) => {
+          void 0 === Fk ? console.warn(`${Ja} ${kk}`) : Zw(kk, Fk)
         }));
-        const qu = new iE.f(iu, function(uu, Ru) {
-          let Eu = !1,
-            Ku = null,
-            Qu = null;
-          const mu = {
-              onUnavailable: (yu, Eu) => {
-                Qu ??= eX({
-                  site: Cy.MODEL_POOL_SITE,
-                  error: yu,
-                  urls: Eu
+        const lk = new KR.i(Kk, function(kk, Fk) {
+          let Rk = !1,
+            tk = null,
+            ak = null;
+          const Xk = {
+              onUnavailable: (Bk, Rk) => {
+                ak ??= Hd({
+                  site: LB.MODEL_POOL_SITE,
+                  error: Bk,
+                  urls: Rk
                 }, (() => {
-                  (0, Cy.reportModelPoolFailure)(yu, uu)
-                }), Ru)
+                  (0, LB.reportModelPoolFailure)(Bk, kk)
+                }), Fk)
               },
-              onDecoderFailed: (yu, Eu) => {
-                const Ku = () => {
-                  (0, Cy.reportDracoDecoderFailure)(yu, uu)
+              onDecoderFailed: (Bk, Rk) => {
+                const tk = () => {
+                  (0, LB.reportDracoDecoderFailure)(Bk, kk)
                 };
-                void 0 !== Eu ? eX({
-                  site: Cy.MODEL_POOL_SITE,
-                  error: yu,
-                  urls: Eu
-                }, Ku, Ru) : Ku()
+                void 0 !== Rk ? Hd({
+                  site: LB.MODEL_POOL_SITE,
+                  error: Bk,
+                  urls: Rk
+                }, tk, Fk) : tk()
               },
-              onWorkerLost: Ru => {
-                (0, Cy.reportWorkerLost)(Cy.MODEL_POOL_SITE, Ru, uu)
+              onWorkerLost: Fk => {
+                (0, LB.reportWorkerLost)(LB.MODEL_POOL_SITE, Fk, kk)
               },
-              onModuleRetry: (Ru, yu) => {
-                (0, Cy.reportModelsModuleRetry)(Ru, yu, uu)
+              onModuleRetry: (Fk, Bk) => {
+                (0, LB.reportModelsModuleRetry)(Fk, Bk, kk)
               }
             },
-            Ju = yu.e(42).then((() => yu(42935))).then((uu => {
+            bk = Bk.e(42).then((() => Bk(42819))).then((kk => {
               let {
-                pageModelPool: Ru
-              } = uu;
-              if (Eu) return null;
-              const yu = Ru(mu);
-              return Ku = yu.unlisten, rm = yu.pool, yu.pool
-            }), (uu => (Eu || mu.onUnavailable(uu, void 0), null)));
-          return Bm = () => {
-            var uu;
-            Eu = !0, null === (uu = Ku) || void 0 === uu || uu(), rm = null
-          }, (uu, Ru) => Ju.then((yu => {
-            var Eu;
-            return null !== (Eu = null === yu || void 0 === yu ? void 0 : yu.build(uu, Ru)) && void 0 !== Eu ? Eu : (0, OE.o)(uu, "the model workers did not load")
-          })).then((uu => null !== Qu && (0, OE.i)(uu) ? Qu.then((() => uu)) : uu))
-        }(Au, Fu), (uu => {
-          uu.startup ? (xX(), eX({
-            site: Cy.MODEL_FEED_SITE,
-            error: uu.error,
-            urls: "" === uu.url ? void 0 : [uu.url]
+                pageModelPool: Fk
+              } = kk;
+              if (Rk) return null;
+              const Bk = Fk(Xk);
+              return tk = Bk.unlisten, eX = Bk.pool, Bk.pool
+            }), (kk => (Rk || Xk.onUnavailable(kk, void 0), null)));
+          return yX = () => {
+            var kk;
+            Rk = !0, null === (kk = tk) || void 0 === kk || kk(), eX = null
+          }, (kk, Fk) => bk.then((Bk => {
+            var Rk;
+            return null !== (Rk = null === Bk || void 0 === Bk ? void 0 : Bk.build(kk, Fk)) && void 0 !== Rk ? Rk : (0, nR.p)(kk, "the model workers did not load")
+          })).then((kk => null !== ak && (0, nR.k)(kk) ? ak.then((() => kk)) : kk))
+        }(Sk, hk), (kk => {
+          kk.startup ? (fd(), Hd({
+            site: LB.MODEL_FEED_SITE,
+            error: kk.error,
+            urls: "" === kk.url ? void 0 : [kk.url]
           }, (() => {
-            (0, Cy.reportModelFailure)(uu, Au)
-          }))) : (0, Cy.reportModelFailure)(uu, Au)
+            (0, LB.reportModelFailure)(kk, Sk)
+          }))) : (0, LB.reportModelFailure)(kk, Sk)
         }), {
-          onWritten: (uu, Ru) => {
-            ou.glbWritten(uu, Ru)
+          onWritten: (kk, Fk) => {
+            jk.glbWritten(kk, Fk)
           },
-          onTaken: (uu, Ru) => {
-            ou.glbTaken(uu, Ru)
+          onTaken: (kk, Fk) => {
+            jk.glbTaken(kk, Fk)
           },
-          onPackFileFailed: (uu, Ru) => {
-            console.warn(`${XQ} the texture pack's model file ${uu} failed: the shipped one loads`, Ru)
+          onPackFileFailed: (kk, Fk) => {
+            console.warn(`${Ja} the texture pack's model file ${kk} failed: the shipped one loads`, Fk)
           }
         });
-        Vm = qu;
-        const Ou = new wE.e(Du);
-        ZQ = Ou, Ou.swap((uu => {
-          const Ru = () => {
-            (0, Cy.reportTerrainTextureFailure)(uu, Au)
+        AX = lk;
+        const nk = new qR.g(Nk);
+        pa = nk, nk.swap((kk => {
+          const Fk = () => {
+            (0, LB.reportTerrainTextureFailure)(kk, Sk)
           };
-          if (dJ) return void Ru();
-          const yu = () => !dJ,
-            Eu = null === uu.url ? void 0 : [uu.url];
-          eX({
-            site: uy.u,
-            error: uu.error,
-            urls: Eu
-          }, Ru, yu)
-        })).then((uu => {
-          null !== uu && (uu || Du.isStopped || console.warn(`${XQ} the core refused the terrain textures: terrain draws untextured`), bm(Du))
+          if (ob) return void Fk();
+          const Bk = () => !ob,
+            Rk = null === kk.url ? void 0 : [kk.url];
+          Hd({
+            site: FB.y,
+            error: kk.error,
+            urls: Rk
+          }, Fk, Bk)
+        })).then((kk => {
+          null !== kk && (kk || Nk.isStopped || console.warn(`${Ja} the core refused the terrain textures: terrain draws untextured`), OX(Nk))
         }));
-        const vu = new cR(Du, ((uu, Ru) => {
-          console.warn(`${XQ} ${uu}`, ...void 0 === Ru ? [] : [Ru])
+        const Ik = new DF(Nk, ((kk, Fk) => {
+          console.warn(`${Ja} ${kk}`, ...void 0 === Fk ? [] : [Fk])
         }));
-        vu.feed(), null !== ru && function(uu, Ru, Eu, Ku, Qu, mu) {
-          let Ju = null,
-            Nu = null,
-            Xu = !1;
-          const Vu = {
+        Ik.feed(), null !== Vk && function(kk, Fk, Rk, tk, ak, Xk) {
+          let bk = null,
+            wk = null,
+            dk = !1;
+          const sk = {
             textures: null,
             stop: () => {
-              var uu, Ru;
-              Xu = !0, null === (uu = Nu) || void 0 === uu || uu(), null === (Ru = Ju) || void 0 === Ru || Ru(), oE.c.setSettled(null), null !== iQ && hJ.clear(iQ)
+              var kk, Fk;
+              dk = !0, null === (kk = wk) || void 0 === kk || kk(), null === (Fk = bk) || void 0 === Fk || Fk(), jR.c.setSettled(null), null !== ja && pb.clear(ja)
             }
           };
-          wQ = Vu, Nu = ZN().follow((Nu => {
-            null !== Nu && Promise.all([yu.e(193), yu.e(45)]).then((() => yu(42898))).then((yu => {
+          Za = sk, wk = pw().follow((wk => {
+            null !== wk && Promise.all([Bk.e(193), Bk.e(45)]).then((() => Bk(42778))).then((Bk => {
               let {
-                PackTextures: ru
-              } = yu;
-              if (Xu || uu.isStopped) return;
-              const Bu = new ru({
-                feed: Nu,
-                terrain: Ru,
-                backend: Eu,
-                stopped: () => uu.isStopped,
+                PackTextures: Vk
+              } = Bk;
+              if (dk || kk.isStopped) return;
+              const Jk = new Vk({
+                feed: wk,
+                terrain: Fk,
+                backend: Rk,
+                stopped: () => kk.isStopped,
                 landed: () => {
-                  bm(uu)
+                  OX(kk)
                 },
                 packSwapped: () => {
-                  (0, YE.g)(Ku), mu.feed((() => async function(uu) {
-                    const Ru = null === uu ? null : await uu.averageColours;
-                    return null === Ru ? LR() : gR(Ru)
-                  }(Bu.assets))), zN(Bu.iconOverrides()), Qu.refresh().then((uu => {
-                    null !== uu && console.info(`${XQ} texture pack models: ${uu.resent} of ${uu.delivered} files written again, ${uu.refetched} refetched`)
+                  (0, xR.i)(tk), Xk.feed((() => async function(kk) {
+                    const Fk = null === kk ? null : await kk.averageColours;
+                    return null === Fk ? zF() : rF(Fk)
+                  }(Jk.assets))), qw(Jk.iconOverrides()), ak.refresh().then((kk => {
+                    null !== kk && console.info(`${Ja} texture pack models: ${kk.resent} of ${kk.delivered} files written again, ${kk.refetched} refetched`)
                   }))
                 },
-                settled: (uu, Ru, yu) => {
-                  var Eu;
-                  (oE.c.setSettled({
-                    state: uu,
-                    files: Ru
-                  }), null === uu.gameSource && (0, py.e)(uu.pack, yu), yu) || function(uu) {
-                    const Ru = iQ;
-                    null !== Ru && hJ.apply(Ru, uu).then((Ru => {
-                      Ru && uu && console.info(`${XQ} the texture pack's animations are in (${Object.keys(uu).length} files)`)
+                settled: (kk, Fk, Bk) => {
+                  var Rk;
+                  (jR.c.setSettled({
+                    state: kk,
+                    files: Fk
+                  }), null === kk.gameSource && (0, fB.c)(kk.pack, Bk), Bk) || function(kk) {
+                    const Fk = ja;
+                    null !== Fk && pb.apply(Fk, kk).then((Fk => {
+                      Fk && kk && console.info(`${Ja} the texture pack's animations are in (${Object.keys(kk).length} files)`)
                     }))
-                  }(null === (Eu = uu.pack) || void 0 === Eu ? void 0 : Eu.animations)
+                  }(null === (Rk = kk.pack) || void 0 === Rk ? void 0 : Rk.animations)
                 },
                 settling: () => {
-                  oE.c.setSettled(null)
+                  jR.c.setSettled(null)
                 },
-                warn: wN,
-                maxTextureSize: () => Promise.resolve((0, fR.X)(document.createElement("canvas")))
+                warn: Zw,
+                maxTextureSize: () => Promise.resolve((0, kB.R)(document.createElement("canvas")))
               });
-              Vu.textures = Bu, Ju = Bu.start()
-            }), (uu => {
-              console.warn(`${XQ} the texture pack's terrain didn't load: the built atlas stays`, uu)
+              sk.textures = Jk, bk = Jk.start()
+            }), (kk => {
+              console.warn(`${Ja} the texture pack's terrain didn't load: the built atlas stays`, kk)
             }))
           }))
-        }(Du, Ou, ru, ou, qu, vu);
-        const au = () => {
-            Du.setTextureLayers("")
+        }(Nk, nk, Vk, jk, lk, Ik);
+        const Qk = () => {
+            Nk.setTextureLayers("")
           },
-          fu = uu => {
-            (WR ??= yu.e(50).then((() => yu(42942))).then((uu => {
+          kF = kk => {
+            (WF ??= Bk.e(50).then((() => Bk(42821))).then((kk => {
               let {
-                TEXTURE_NAMES: Ru
-              } = uu;
-              return Ru
-            }), (uu => {
-              throw WR = null, uu
-            })), WR).then((uu => {
-              Du.setTextureLayers(uu) || Du.isStopped || (console.warn(`${XQ} the core refused the texture names: textured Boxes draw textureNotFound`), au())
-            }), (Ru => {
-              if (Du.isStopped) return;
-              const [yu, ...Eu] = uu;
-              void 0 === yu ? eX({
-                site: Cy.TEXTURE_NAMES_SITE,
-                error: Ru
+                TEXTURE_NAMES: Fk
+              } = kk;
+              return Fk
+            }), (kk => {
+              throw WF = null, kk
+            })), WF).then((kk => {
+              Nk.setTextureLayers(kk) || Nk.isStopped || (console.warn(`${Ja} the core refused the texture names: textured Boxes draw textureNotFound`), Qk())
+            }), (Fk => {
+              if (Nk.isStopped) return;
+              const [Bk, ...Rk] = kk;
+              void 0 === Bk ? Hd({
+                site: LB.TEXTURE_NAMES_SITE,
+                error: Fk
               }, (() => {
-                console.warn(`${XQ} the texture names didn't load, so textured Boxes draw textureNotFound`, Ru), au()
-              }), Fu) : setTimeout((() => {
-                fu(Eu)
-              }), yu)
+                console.warn(`${Ja} the texture names didn't load, so textured Boxes draw textureNotFound`, Fk), Qk()
+              }), hk) : setTimeout((() => {
+                kF(Rk)
+              }), Bk)
             }))
           };
-        if (fu(IQ), null !== ru && !await async function(uu, Ru, yu, Eu, Qu, mu) {
-            var Ju;
-            const Nu = (0, fR.F)(yu);
-            if (null === Nu) return uu.crash(rQ, new Error(`this ${Eu} build has no openRenderer`)), !1;
-            let Xu;
-            JJ = Nu;
+        if (kF(ga), null !== Vk && !await async function(kk, Fk, Bk, Rk, ak, Xk) {
+            var bk;
+            const wk = (0, kB.C)(Bk);
+            if (null === wk) return kk.crash(ea, new Error(`this ${Rk} build has no openRenderer`)), !1;
+            let dk;
+            db = wk;
             try {
-              var Vu, ru, Bu, xu;
-              const Ku = null !== (Vu = null === (ru = cQ) || void 0 === ru ? void 0 : ru.pagePreviews()) && void 0 !== Vu ? Vu : null,
-                Ju = null !== (Bu = null === (xu = cQ) || void 0 === xu ? void 0 : xu.previewModule(yu)) && void 0 !== Bu ? Bu : null;
-              if (null === Ku || null === Ju) {
-                null === Ku || void 0 === Ku || Ku.endSession(!1), Xu = (0, MR.f)().sampleCount, await (0, fR.f)(Ru, Nu, mu, gN, Xu, await Qu);
-                const uu = (0, fR.j)(yu);
-                null === uu && console.warn(`${XQ} this ${Eu} build has no image registry: sky and model images won't show`), (0, FE.g)(uu)
+              var sk, Vk, Jk, Ak;
+              const tk = null !== (sk = null === (Vk = Pa) || void 0 === Vk ? void 0 : Vk.pagePreviews()) && void 0 !== sk ? sk : null,
+                bk = null !== (Jk = null === (Ak = Pa) || void 0 === Ak ? void 0 : Ak.previewModule(Bk)) && void 0 !== Jk ? Jk : null;
+              if (null === tk || null === bk) {
+                null === tk || void 0 === tk || tk.endSession(!1), dk = (0, HF.h)().sampleCount, await (0, kB.d)(Fk, wk, Xk, zw, dk, await ak);
+                const kk = (0, kB.i)(Bk);
+                null === kk && console.warn(`${Ja} this ${Rk} build has no image registry: sky and model images won't show`), (0, hR.f)(kk)
               } else {
-                (0, EK.e)() && await (0, hu.l)();
-                const yu = (0, EK.F)();
-                if (null !== yu) {
-                  const Ru = (0, fR.R)(Nu);
-                  return uu.crash(Cy.RENDER_RELOAD_SITE, new Error(`${yu}${void 0===Ru?"":` (${Ru.message})`}`)), !1
+                (0, tt.e)() && await (0, Zk.m)();
+                const Bk = (0, tt.J)();
+                if (null !== Bk) {
+                  const Fk = (0, kB.N)(wk);
+                  return kk.crash(LB.RENDER_RELOAD_SITE, new Error(`${Bk}${void 0===Fk?"":` (${Fk.message})`}`)), !1
                 }
-                Xu = await Ku.bindSession(Ju, Ru, (async uu => (0, fR.u)(Nu, rQ, mu, uu, gN, await Qu)))
+                dk = await tk.bindSession(bk, Fk, (async kk => (0, kB.r)(wk, ea, Xk, kk, zw, await ak)))
               }
-            } catch (Ku) {
-              return uu.crash(rQ, Ku), !1
-            }(function(uu, Ru) {
-              const yu = uu,
+            } catch (tk) {
+              return kk.crash(ea, tk), !1
+            }(function(kk, Fk) {
+              const Bk = kk,
                 {
-                  requestCapture: Eu,
-                  takeCapture: Ku
-                } = yu;
-              if ("function" !== typeof Eu || "function" !== typeof Ku) return;
-              const Qu = {
+                  requestCapture: Rk,
+                  takeCapture: tk
+                } = Bk;
+              if ("function" !== typeof Rk || "function" !== typeof tk) return;
+              const ak = {
                 request() {
-                  Eu.call(yu, Ru)
+                  Rk.call(Bk, Fk)
                 },
                 take() {
-                  var uu;
-                  return null !== (uu = Ku.call(yu)) && void 0 !== uu ? uu : null
+                  var kk;
+                  return null !== (kk = tk.call(Bk)) && void 0 !== kk ? kk : null
                 }
               };
-              window[VK] = Qu
-            })(Ru, Xu), SJ = Xu, QJ = !0;
-            const Su = performance.now();
-            return mJ.boundAtMs = null !== (Ju = (0, EK.I)()) && void 0 !== Ju ? Ju : Su, mJ.indirectHangs = (0, EK.z)(), console.info(`${XQ} ${Eu} renderer bound at ${Math.round(Su)} ms`), !uu.isStopped
-          }(Du, eu, ku, ru, xu, pu)) return null;
-        if (null !== ru) {
-          var uR, RR, yR;
-          (0, XR.G)(ru);
-          const uu = () => !Du.isStopped && NX();
-          yu.e(185).then((() => yu(8946))).then((Ru => {
+              window[Jt] = ak
+            })(Fk, dk), fb = dk, bb = !0;
+            const ek = performance.now();
+            return wb.boundAtMs = null !== (bk = (0, tt.M)()) && void 0 !== bk ? bk : ek, wb.indirectHangs = (0, tt.G)(), console.info(`${Ja} ${Rk} renderer bound at ${Math.round(ek)} ms`), !kk.isStopped
+          }(Nk, Ek, Ok, Vk, Ak, yk)) return null;
+        if (null !== Vk) {
+          var FF, BF, RF;
+          (0, sF.A)(Vk);
+          const kk = () => !Nk.isStopped && Vd();
+          Bk.e(185).then((() => Bk(8891))).then((Fk => {
             let {
-              devTools: yu
-            } = Ru;
-            Du.isStopped || yu.setHost(function(uu) {
+              devTools: Bk
+            } = Fk;
+            Nk.isStopped || Bk.setHost(function(kk) {
               return {
-                tools: yK,
-                async downloadScene(Ru, yu) {
+                tools: Rt,
+                async downloadScene(Fk, Bk) {
                   let {
-                    width: Eu,
-                    height: Ku,
-                    colouring: Qu
-                  } = yu;
-                  "screenshot" === Ru && null === Qu ? await (0, fE.b)(uu, Eu, Ku) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
+                    width: Rk,
+                    height: tk,
+                    colouring: ak
+                  } = Bk;
+                  "screenshot" === Fk && null === ak ? await (0, kt.b)(kk, Rk, tk) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
                 },
                 setAmbientLightIntensity: () => (console.warn("The Rust client's renderer has no ambient light setting"), Promise.resolve())
               }
-            }(function(uu, Ru) {
+            }(function(kk, Fk) {
               return {
-                canvas: uu,
-                maxTextureSize: uK,
-                drawing: Ru,
-                resize: (uu, Ru) => {
-                  (0, Ay.D)(zR.yb.Resize, 0, uu, Ru, (0, Ay.m)(1))
+                canvas: kk,
+                maxTextureSize: Ft,
+                drawing: Fk,
+                resize: (kk, Fk) => {
+                  (0, SB.u)(PF.hb.Resize, 0, kk, Fk, (0, SB.f)(1))
                 },
                 restoreSize: () => {
-                  const Ru = (0, MR.p)(uu);
-                  null !== Ru && (0, Ay.D)(zR.yb.Resize, 0, Ru.cssWidth, Ru.cssHeight, (0, Ay.m)(Ru.renderScale))
+                  const Fk = (0, HF.q)(kk);
+                  null !== Fk && (0, SB.u)(PF.hb.Resize, 0, Fk.cssWidth, Fk.cssHeight, (0, SB.f)(Fk.renderScale))
                 },
-                onFrameDrawn: uu => (RK.add(uu), () => {
-                  RK.delete(uu)
+                onFrameDrawn: kk => (Bt.add(kk), () => {
+                  Bt.delete(kk)
                 })
               }
-            }(pu, uu)))
-          }), (uu => {
-            console.warn(`${XQ} the developer tools didn't load: no captures this session`, uu)
+            }(yk, kk)))
+          }), (kk => {
+            console.warn(`${Ja} the developer tools didn't load: no captures this session`, kk)
           }));
-          const Ru = "webgpu" === ru && null !== (uR = null === Xu || void 0 === Xu || null === (RR = Xu.adapter) || void 0 === RR ? void 0 : RR.vendor) && void 0 !== uR ? uR : null;
-          pJ = {
-            backend: ru,
-            canvas: pu,
-            fallbackReason: null !== (yR = null === Xu || void 0 === Xu ? void 0 : Xu.reason) && void 0 !== yR ? yR : null,
-            adapterVendor: Ru
-          }, qN();
+          const Fk = "webgpu" === Vk && null !== (FF = null === dk || void 0 === dk || null === (BF = dk.adapter) || void 0 === BF ? void 0 : BF.vendor) && void 0 !== FF ? FF : null;
+          mb = {
+            backend: Vk,
+            canvas: yk,
+            fallbackReason: null !== (RF = null === dk || void 0 === dk ? void 0 : dk.reason) && void 0 !== RF ? RF : null,
+            adapterVendor: Fk
+          }, Iw();
           try {
-            (0, iy.u)(ru, pu, Ru)
-          } catch (Ku) {
-            (0, iy.y)(), console.error(`${XQ} the quality steps didn't start`, Ku)
+            (0, KB.p)(Vk, yk, Fk)
+          } catch (tk) {
+            (0, KB.s)(), console.error(`${Ja} the quality steps didn't start`, tk)
           }
         }
         const {
-          storagePullBreaks: ER,
-          splitPassBreaks: rR
-        } = await xu;
-        rR && console.warn(`${XQ} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
-        const pR = ER ? Zu.e : (0, Zu.m)(Xu, (0, eR.f)());
-        if ((0, MK.m)("webgpuloss")) {
-          var TR, HR;
-          const uu = {
-            backend: ru,
-            reason: null !== (TR = null === Xu || void 0 === Xu ? void 0 : Xu.reason) && void 0 !== TR ? TR : null,
-            source: null !== (HR = null === Xu || void 0 === Xu ? void 0 : Xu.source) && void 0 !== HR ? HR : null,
-            storagePullBreaks: ER,
-            noWebGpu: pR.messageKey
+          storagePullBreaks: tF,
+          splitPassBreaks: JF
+        } = await Ak;
+        JF && console.warn(`${Ja} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
+        const fF = tF ? Ck.b : (0, Ck.g)(dk, (0, EF.c)());
+        if ((0, ut.p)("webgpuloss")) {
+          var mF, iF;
+          const kk = {
+            backend: Vk,
+            reason: null !== (mF = null === dk || void 0 === dk ? void 0 : dk.reason) && void 0 !== mF ? mF : null,
+            source: null !== (iF = null === dk || void 0 === dk ? void 0 : dk.source) && void 0 !== iF ? iF : null,
+            storagePullBreaks: tF,
+            noWebGpu: fF.messageKey
           };
-          (0, IK.d)((Ru => {
-            Ru.noteWasmPick(uu)
+          (0, Mt.e)((Fk => {
+            Fk.noteWasmPick(kk)
           }))
         }
-        const bR = "webgpu" === ru && !ER;
-        if (Wm = (0, Zu.n)(bR ? Du : null, bR && null !== (mu = null === (Ju = cQ) || void 0 === Ju ? void 0 : Ju.pagePreviews().ix) && void 0 !== mu ? mu : null, pR, wN), lJ) return null;
-        if (lu.reserveAtJoin((0, gE.k)(null !== Gu && void 0 !== Gu ? Gu : xy.g)), Du.isStopped) return null;
-        const CR = uu => {
-          if (null !== TJ) try {
-            TJ.animationFrame(uu)
-          } catch (Ku) {
-            aN(Ku)
+        const oF = "webgpu" === Vk && !tF;
+        if (iX = (0, Ck.h)(oF ? Nk : null, oF && null !== (Xk = null === (bk = Pa) || void 0 === bk ? void 0 : bk.pagePreviews().ie) && void 0 !== Xk ? Xk : null, fF, Zw), rb) return null;
+        if (Tk.reserveAtJoin((0, rR.j)(null !== Mk && void 0 !== Mk ? Mk : eB.e)), Nk.isStopped) return null;
+        const LF = kk => {
+          if (null !== Wb) try {
+            Wb.animationFrame(kk)
+          } catch (tk) {
+            Fd(tk)
           }
-          if (function(uu, Ru) {
-              return Ru && !lJ && !Am && XX() && NX() && uu.framePaces(performance.now())
-            }(Du, UJ)) return Du.writePendingInput(), (0, bu.g)(uu, KX), ON(!1, uu), void requestAnimationFrame(CR);
-          EX(Du, UJ, "budget") && ((0, DR.g)(Du.lastFrameKind) && NX() && (0, bu.g)(uu, KX), ON(UJ && MJ, uu), IJ.frame(Du.lastFrameKind, UJ && NX(), uu), pX(Du), lu.afterFrame(), requestAnimationFrame(CR))
+          if (function(kk, Fk) {
+              return Fk && !rb && !HX && Jd() && Vd() && kk.framePaces(performance.now())
+            }(Nk, Ub)) return Nk.writePendingInput(), (0, Yk.e)(kk, bd), Qw(!1, kk), void requestAnimationFrame(LF);
+          Xd(Nk, Ub, "budget") && ((0, NF.i)(Nk.lastFrameKind) && Vd() && (0, Yk.e)(kk, bd), Qw(Ub && ub, kk), Mb.frame(Nk.lastFrameKind, Ub && Vd(), kk), Wd(Nk), Tk.afterFrame(), requestAnimationFrame(LF))
         };
-        requestAnimationFrame(CR);
-        return function(uu) {
-          if (uu.has("inputLog") && (0, RE.h)((uu => {
+        requestAnimationFrame(LF);
+        return function(kk) {
+          if (kk.has("inputLog") && (0, BR.l)((kk => {
               let {
-                action: Ru,
-                down: yu,
-                press: Eu
-              } = uu;
-              console.info(`${EE} input ${Ru} ${yu?"down":"up"} press ${Eu} at ${performance.now().toFixed(1)}`)
-            })), uu.has("inputDump")) {
-            const uu = [];
-            QE = uu, Object.assign(window, {
-              bloxdInputDump: () => uu.join("\n")
+                action: Fk,
+                down: Bk,
+                press: Rk
+              } = kk;
+              console.info(`${tR} input ${Fk} ${Bk?"down":"up"} press ${Rk} at ${performance.now().toFixed(1)}`)
+            })), kk.has("inputDump")) {
+            const kk = [];
+            XR = kk, Object.assign(window, {
+              bloxdInputDump: () => kk.join("\n")
             })
           }
-        }(new URLSearchParams(window.location.search)), Jm = function(uu, Ru) {
-          let yu = null;
-          const Eu = () => {
-              null !== yu && (clearInterval(yu), yu = null)
+        }(new URLSearchParams(window.location.search)), sX = function(kk, Fk) {
+          let Bk = null;
+          const Rk = () => {
+              null !== Bk && (clearInterval(Bk), Bk = null)
             },
-            Ku = () => {
-              document.hidden ? yu ??= setInterval((() => {
-                EX(uu, !1, "budget") ? (pX(uu), Ru.afterFrame()) : Eu()
-              }), MQ) : Eu()
+            tk = () => {
+              document.hidden ? Bk ??= setInterval((() => {
+                Xd(kk, !1, "budget") ? (Wd(kk), Fk.afterFrame()) : Rk()
+              }), Ma) : Rk()
             };
-          return document.addEventListener("visibilitychange", Ku), Ku(), () => {
-            Eu(), document.removeEventListener("visibilitychange", Ku)
+          return document.addEventListener("visibilitychange", tk), tk(), () => {
+            Rk(), document.removeEventListener("visibilitychange", tk)
           }
-        }(Du, lu), Du
-      }(Ru).then((uu => {
-        var Ru;
-        (Eu(PQ), qQ(null !== uu), null !== uu && (pK = performance.now()), YQ(uu), null === uu) ? null === (Ru = cQ) || void 0 === Ru || Ru.pagePreviews().endSession(null === (0, QR.l)()): dm("booted")
-      }), (uu => {
-        Eu(PQ), qQ(!1), YQ(null), SX({
-          site: BQ,
-          error: uu,
+        }(Nk, Tk), Nk
+      }(Fk).then((kk => {
+        var Fk;
+        (Rk(xa), Ia(null !== kk), null !== kk && (mt = performance.now()), la(kk), null === kk) ? null === (Fk = Pa) || void 0 === Fk || Fk.pagePreviews().endSession(null === (0, XF.i)()): LX("booted")
+      }), (kk => {
+        Rk(xa), Ia(!1), la(null), md({
+          site: ya,
+          error: kk,
           header: null
-        }, PQ)
+        }, xa)
       }))
     }
 
-    function ZJ() {
-      const uu = iQ;
-      null !== uu && gJ().then((Ru => {
+    function Zb() {
+      const kk = ja;
+      null !== kk && Db().then((Fk => {
         let {
-          pageBuiltInAnimationPack: yu
-        } = Ru;
-        yu().provide(uu)
-      }), (uu => {
-        console.warn(`${XQ} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, uu)
+          pageBuiltInAnimationPack: Bk
+        } = Fk;
+        Bk().provide(kk)
+      }), (kk => {
+        console.warn(`${Ja} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, kk)
       }))
     }
-    const hJ = new class {
-      constructor(uu) {
-        this.deps = uu, this.latest = 0, this.jJ = null
+    const pb = new class {
+      constructor(kk) {
+        this.deps = kk, this.latest = 0, this.Hb = null
       }
-      apply(uu, Ru) {
-        return this.load(uu, Ru, 0)
+      apply(kk, Fk) {
+        return this.load(kk, Fk, 0)
       }
-      async load(uu, Ru, yu) {
-        var Eu;
-        const Ku = ++this.latest,
-          Qu = this.deps.compiler;
-        if (void 0 === Ru || null === Ru || "object" !== typeof Ru || 0 === Object.keys(Ru).length || null === Qu) return this.drop(uu), !1;
-        if ((null === (Eu = this.jJ) || void 0 === Eu ? void 0 : Eu.module) === uu && (0, oR.ge)(this.jJ.files, Ru)) return !1;
+      async load(kk, Fk, Bk) {
+        var Rk;
+        const tk = ++this.latest,
+          ak = this.deps.compiler;
+        if (void 0 === Fk || null === Fk || "object" !== typeof Fk || 0 === Object.keys(Fk).length || null === ak) return this.drop(kk), !1;
+        if ((null === (Rk = this.Hb) || void 0 === Rk ? void 0 : Rk.module) === kk && (0, jF.ge)(this.Hb.files, Fk)) return !1;
         try {
-          const [yu, Eu] = await Promise.all([Qu(), this.deps.builtIns()]);
-          if (Ku !== this.latest) return !1;
-          const mu = await yu(Ru, aR, {
-            builtIns: Eu
+          const [Bk, Rk] = await Promise.all([ak(), this.deps.builtIns()]);
+          if (tk !== this.latest) return !1;
+          const Xk = await Bk(Fk, QF, {
+            builtIns: Rk
           });
-          if (Ku !== this.latest) return !1;
-          const Ju = this.call(uu, mu);
-          if (void 0 === Ju) throw new vR("the compiled animations didn't read against the built-in pack");
-          return this.jJ = {
-              module: uu,
-              files: Ru
+          if (tk !== this.latest) return !1;
+          const bk = this.call(kk, Xk);
+          if (void 0 === bk) throw new IF("the compiled animations didn't read against the built-in pack");
+          return this.Hb = {
+              module: kk,
+              files: Fk
             },
-            function(uu) {
-              for (let Ru = 0; Ru + 2 < uu.length; Ru += 3) {
-                ("error" === uu[Ru] ? console.error : console.warn)(`Animation for the texture pack: ${uu[Ru+1]}: ${uu[Ru+2]}`)
+            function(kk) {
+              for (let Fk = 0; Fk + 2 < kk.length; Fk += 3) {
+                ("error" === kk[Fk] ? console.error : console.warn)(`Animation for the texture pack: ${kk[Fk+1]}: ${kk[Fk+2]}`)
               }
-            }(Ju), !0
-        } catch (Ju) {
-          var mu;
-          if (Ku !== this.latest) return !1;
-          this.drop(uu), 0 === yu && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", Ju);
-          const Eu = (null !== (mu = this.deps.retryAfterMs) && void 0 !== mu ? mu : OR)[yu];
-          return void 0 === Eu || Ju instanceof vR || (0, qR.h)(uu) || setTimeout((() => {
-            Ku === this.latest && this.load(uu, Ru, yu + 1)
-          }), Eu), !1
+            }(bk), !0
+        } catch (bk) {
+          var Xk;
+          if (tk !== this.latest) return !1;
+          this.drop(kk), 0 === Bk && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", bk);
+          const Rk = (null !== (Xk = this.deps.retryAfterMs) && void 0 !== Xk ? Xk : nF)[Bk];
+          return void 0 === Rk || bk instanceof IF || (0, lF.g)(kk) || setTimeout((() => {
+            tk === this.latest && this.load(kk, Fk, Bk + 1)
+          }), Rk), !1
         }
       }
-      call(uu, Ru) {
+      call(kk, Fk) {
         try {
-          return uu.TEu(Ru)
-        } catch (yu) {
-          throw (0, qR.i)(uu, yu), yu
+          return kk.MBk(Fk)
+        } catch (Bk) {
+          throw (0, lF.h)(kk, Bk), Bk
         }
       }
-      clear(uu) {
-        this.latest++, this.drop(uu)
+      clear(kk) {
+        this.latest++, this.drop(kk)
       }
-      drop(uu) {
-        const Ru = this.jJ;
-        if (this.jJ = null, (null === Ru || void 0 === Ru ? void 0 : Ru.module) === uu && !(0, qR.h)(uu)) try {
-          this.call(uu, null)
+      drop(kk) {
+        const Fk = this.Hb;
+        if (this.Hb = null, (null === Fk || void 0 === Fk ? void 0 : Fk.module) === kk && !(0, lF.g)(kk)) try {
+          this.call(kk, null)
         } catch {}
       }
     }({
-      compiler: hR.c,
+      compiler: ZF.e,
       builtIns: async () => {
         const {
-          pageBuiltInAnimationPack: uu
-        } = await gJ();
-        return uu().whenSet()
+          pageBuiltInAnimationPack: kk
+        } = await Db();
+        return kk().whenSet()
       },
-      warn: wN
+      warn: Zw
     });
-    async function PJ(uu, Ru) {
-      let Eu = !1;
-      await iJ({
+    async function Kb(kk, Fk) {
+      let Rk = !1;
+      await xb({
         matchmake: async () => {
           const {
-            guestJoinTarget: Ku,
-            guestJoinWithPack: Qu
-          } = await yu.e(342).then((() => yu(42876)));
-          return Eu ? Ku(uu, Ru, PN()) : (Eu = !0, Qu(uu, Ru, (Ru => iN(uu, Ru)), PN))
+            guestJoinTarget: tk,
+            guestJoinWithPack: ak
+          } = await Bk.e(342).then((() => Bk(42762)));
+          return Rk ? tk(kk, Fk, xw()) : (Rk = !0, ak(kk, Fk, (Fk => jw(kk, Fk)), xw))
         },
-        onFailure: uu => {
-          (0, Cy.showJoinFailure)(uu, PQ)
+        onFailure: kk => {
+          (0, LB.showJoinFailure)(kk, xa)
         },
-        rejoin: JN,
-        invalidateTrafficCode: NN
+        rejoin: dw,
+        invalidateTrafficCode: sw
       })
     }
-    async function iJ(uu) {
+    async function xb(kk) {
       let {
-        matchmake: Ru,
-        onFailure: yu,
-        rejoin: Ku,
-        invalidateTrafficCode: Qu,
-        pageReady: mu,
-        signal: Ju
-      } = uu;
-      const Nu = () => !0 === (null === Ju || void 0 === Ju ? void 0 : Ju.aborted);
-      let Xu;
-      const Vu = oE.c.rejoinHold(),
-        ru = (0, Hy.L)("wasm", jX);
-      let Bu = !1,
-        xu = performance.now();
+        matchmake: Fk,
+        onFailure: Bk,
+        rejoin: tk,
+        invalidateTrafficCode: ak,
+        pageReady: Xk,
+        signal: bk
+      } = kk;
+      const wk = () => !0 === (null === bk || void 0 === bk ? void 0 : bk.aborted);
+      let dk;
+      const sk = jR.c.rejoinHold(),
+        Vk = (0, iB.T)("wasm", od);
+      let Jk = !1,
+        Ak = performance.now();
       try {
-        if (!await OQ) return {
+        if (!await Qa) return {
           kind: "stopped"
         };
-        if (Nu()) return {
-          kind: "Ty"
+        if (wk()) return {
+          kind: "yB"
         };
-        cJ().catch((() => {}));
-        let uu = await Ru();
-        xu = performance.now();
-        const yu = () => performance.now() - uu.matchedAt <= uu.freshMs,
-          Eu = oJ(uu.target).catch((() => {}));
-        yu() && !Nu() && (Xu = new GE(uu.target, {
-          signal: Ju
+        zb().catch((() => {}));
+        let kk = await Fk();
+        Ak = performance.now();
+        const Bk = () => performance.now() - kk.matchedAt <= kk.freshMs,
+          Rk = lb(kk.target).catch((() => {}));
+        Bk() && !wk() && (dk = new MR(kk.target, {
+          signal: bk
         }));
-        const Qu = performance.now();
-        if (null === await oQ) return {
+        const ak = performance.now();
+        if (null === await na) return {
           kind: "stopped"
         };
-        var Su;
-        if (function(uu) {
-            var Ru, yu;
-            if (rK.b.markGameEngineConstructed(), TK) return;
-            TK = !0;
-            const Eu = Math.max(uu, null !== (Ru = xK) && void 0 !== Ru ? Ru : uu);
-            (0, BK.m)("ready", Math.max(0, (null !== (yu = SK) && void 0 !== yu ? yu : Eu) - Eu) / 1e3)
-          }(Qu), Nu() || (null !== SK && null !== pK ? ((0, nR.m)("wasm_loaded", SK), (0, nR.m)("wasm_core_ready", pK)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps")), await Eu, !yu() && !Nu()) null === (Su = Xu) || void 0 === Su || Su.rematched(), uu = await Ru(), xu = performance.now();
-        if (Nu()) return {
-          kind: "Ty"
+        var ek;
+        if (function(kk) {
+            var Fk, Bk;
+            if (At.d.markGameEngineConstructed(), Wt) return;
+            Wt = !0;
+            const Rk = Math.max(kk, null !== (Fk = yt) && void 0 !== Fk ? Fk : kk);
+            (0, et.j)("ready", Math.max(0, (null !== (Bk = ft) && void 0 !== Bk ? Bk : Rk) - Rk) / 1e3)
+          }(ak), wk() || (null !== ft && null !== mt ? ((0, UF.g)("wasm_loaded", ft), (0, UF.g)("wasm_core_ready", mt)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps")), await Rk, !Bk() && !wk()) null === (ek = dk) || void 0 === ek || ek.rematched(), kk = await Fk(), Ak = performance.now();
+        if (wk()) return {
+          kind: "yB"
         };
-        const Vu = await async function(uu) {
-          var Ru, yu, Eu;
+        const sk = await async function(kk) {
+          var Fk, Bk, Rk;
           let {
-            signal: Ku,
-            rejoin: Qu = null,
-            early: mu,
-            pageReady: Ju
+            signal: tk,
+            rejoin: ak = null,
+            early: Xk,
+            pageReady: bk
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (null !== Ku && void 0 !== Ku && Ku.aborted) throw new DOMException("the join was left", "AbortError");
-          const Nu = (Xu = om, Vu = performance.now(), null !== Xu && Vu - Xu < TE);
-          var Xu, Vu;
-          om = null;
-          const ru = new AbortController;
-          vJ({
-            controller: ru,
-            game: null !== (Ru = null === (yu = uu.session) || void 0 === yu ? void 0 : yu.gameNameWithVariation) && void 0 !== Ru ? Ru : null
-          }), qm = null, null === (Eu = fm) || void 0 === Eu || Eu.abort(), fm = null, RJ = !1, yJ = null, EJ.clear();
-          const Bu = () => {
-            (0, HR.i)(ru, (0, HR.e)(Ku))
+          if (null !== tk && void 0 !== tk && tk.aborted) throw new DOMException("the join was left", "AbortError");
+          const wk = (dk = nX, sk = performance.now(), null !== dk && sk - dk < mR);
+          var dk, sk;
+          nX = null;
+          const Vk = new AbortController;
+          Qb({
+            controller: Vk,
+            game: null !== (Fk = null === (Bk = kk.session) || void 0 === Bk ? void 0 : Bk.gameNameWithVariation) && void 0 !== Fk ? Fk : null
+          }), IX = null, null === (Rk = Fb) || void 0 === Rk || Rk.abort(), Fb = null, Rb = !1, tb = null, ab.clear();
+          const Jk = () => {
+            (0, iF.i)(Vk, (0, iF.e)(tk))
           };
-          null === Ku || void 0 === Ku || Ku.addEventListener("abort", Bu, {
+          null === tk || void 0 === tk || tk.addEventListener("abort", Jk, {
             once: !0
           });
           try {
-            var xu, Su, pu;
-            const Ru = await oQ;
-            if (null === Ru || Ru.isStopped || lJ) throw new Error("no core is running to join a game with");
-            if (uu.session && null !== Wm) {
-              const Ru = await qJ(Wm.join(uu.session.gameNameWithVariation), ru.signal);
-              if ((0, MK.m)("webgpuloss")) {
-                const yu = uu.session.gameNameWithVariation,
-                  Eu = Wm.couldntRunInJoinedGame();
-                (0, IK.d)((uu => uu.noteWasmJoin(yu, Ru, Eu)))
+            var Ak, ek, yk;
+            const Fk = await na;
+            if (null === Fk || Fk.isStopped || rb) throw new Error("no core is running to join a game with");
+            if (kk.session && null !== iX) {
+              const Fk = await nb(iX.join(kk.session.gameNameWithVariation), Vk.signal);
+              if ((0, ut.p)("webgpuloss")) {
+                const Bk = kk.session.gameNameWithVariation,
+                  Rk = iX.couldntRunInJoinedGame();
+                (0, Mt.e)((kk => kk.noteWasmJoin(Bk, Fk, Rk)))
               }
-              if (null !== Ru) throw new Zu.i(Ru)
+              if (null !== Fk) throw new Ck.e(Fk)
             }
             const [, , , {
-              joinRoom: yu
-            }] = await qJ(Promise.all([(0, Cu.m)(Ru), oJ(uu), null === Ju || void 0 === Ju ? void 0 : Ju(), cJ()]), ru.signal), Eu = uu.session, Ku = Eu ? {
-              ...rN,
-              attachSocket: Ru => {
-                const yu = jN(Ru, uu.endpoint);
-                var Ku;
-                null !== yu && (Fm = {
-                  conn: yu,
-                  info: Eu
-                }, null === (Ku = wm) || void 0 === Ku || Ku(Eu.playerDbId));
-                return yu
+              joinRoom: Bk
+            }] = await nb(Promise.all([(0, Lk.h)(Fk), lb(kk), null === bk || void 0 === bk ? void 0 : bk(), zb()]), Vk.signal), Rk = kk.session, tk = Rk ? {
+              ...Aw,
+              attachSocket: Fk => {
+                const Bk = iw(Fk, kk.endpoint);
+                var tk;
+                null !== Bk && (CX = {
+                  conn: Bk,
+                  info: Rk
+                }, null === (tk = ZX) || void 0 === tk || tk(Rk.playerDbId));
+                return Bk
               }
-            } : rN, Xu = await yu(Ku, uu, {
-              signal: ru.signal,
-              early: mu
-            }).catch((uu => {
-              throw function(uu) {
-                if (!(uu instanceof su.b)) return uu;
-                if ("roomError" === uu.stage && null !== yJ) return YJ(new su.b(uu.message, uu.stage, uu.code, yJ), uu);
-                const Ru = "closed" === uu.stage && null !== Om ? EJ.get(Om.conn) : void 0;
-                return void 0 === Ru ? uu : YJ(new su.b(uu.message, uu.stage, Ru.code), uu)
-              }(uu)
+            } : Aw, dk = await Bk(tk, kk, {
+              signal: Vk.signal,
+              early: Xk
+            }).catch((kk => {
+              throw function(kk) {
+                if (!(kk instanceof ck.e)) return kk;
+                if ("roomError" === kk.stage && null !== tb) return jb(new ck.e(kk.message, kk.stage, kk.code, tb), kk);
+                const Fk = "closed" === kk.stage && null !== QX ? ab.get(QX.conn) : void 0;
+                return void 0 === Fk ? kk : jb(new ck.e(kk.message, kk.stage, Fk.code), kk)
+              }(kk)
             }));
-            if (Lm !== ru) throw Xu.leave(), new DOMException("the join was left", "AbortError");
-            fJ(Xu), null === (xu = ym) || void 0 === xu || xu.newGame();
-            const Vu = function(uu) {
-              var Ru, yu;
+            if (hX !== Vk) throw dk.leave(), new DOMException("the join was left", "AbortError");
+            Fw(dk), null === (Ak = aX) || void 0 === Ak || Ak.newGame();
+            const sk = function(kk) {
+              var Fk, Bk;
               const {
-                session: Eu
-              } = uu, Ku = void 0 === Eu ? uu.joinOptions.lobbyName : Eu.lobbyName;
+                session: Rk
+              } = kk, tk = void 0 === Rk ? kk.joinOptions.lobbyName : Rk.lobbyName;
               return {
-                endpoint: uu.endpoint,
-                game: null !== (Ru = null === Eu || void 0 === Eu ? void 0 : Eu.gameNameWithVariation) && void 0 !== Ru ? Ru : uu.roomName,
-                lobby: String(null !== Ku && void 0 !== Ku ? Ku : null),
-                postCookies: null !== (yu = uu.postCookies) && void 0 !== yu ? yu : null
+                endpoint: kk.endpoint,
+                game: null !== (Fk = null === Rk || void 0 === Rk ? void 0 : Rk.gameNameWithVariation) && void 0 !== Fk ? Fk : kk.roomName,
+                lobby: String(null !== tk && void 0 !== tk ? tk : null),
+                postCookies: null !== (Bk = kk.postCookies) && void 0 !== Bk ? Bk : null
               }
-            }(uu);
-            cm.set(Xu, Vu), AE(Vu);
-            const Bu = performance.now(),
-              Tu = {
-                conn: Xu.conn,
-                rejoin: Qu,
-                game: null !== (Su = null === (pu = uu.session) || void 0 === pu ? void 0 : pu.gameNameWithVariation) && void 0 !== Su ? Su : "",
-                joinedAt: Bu,
-                rejoinedAt: Nu ? Bu : null,
+            }(kk);
+            PX.set(dk, sk), SR(sk);
+            const Jk = performance.now(),
+              fk = {
+                conn: dk.conn,
+                rejoin: ak,
+                game: null !== (ek = null === (yk = kk.session) || void 0 === yk ? void 0 : yk.gameNameWithVariation) && void 0 !== ek ? ek : "",
+                joinedAt: Jk,
+                rejoinedAt: wk ? Jk : null,
                 overflow: null
               };
-            Zm = Tu,
-              function(uu, Ru) {
-                DN();
-                const yu = {
-                  endpoint: Ru,
-                  roomId: uu.seat.room.roomId,
+            pX = fk,
+              function(kk, Fk) {
+                Hw();
+                const Bk = {
+                  endpoint: Fk,
+                  roomId: kk.seat.room.roomId,
                   heldConn: 0,
                   dropCode: 0,
                   pendingHold: null,
-                  resume: new Vy({
-                    reconnect: (uu, Ru, Eu) => async function(uu, Ru, yu, Eu) {
+                  resume: new VB({
+                    reconnect: (kk, Fk, Rk) => async function(kk, Fk, Bk, Rk) {
                       const {
-                        roomId: Ku,
-                        roomToken: Qu
-                      } = IN(uu, Ru), mu = zQ;
-                      if (null === mu || mu.isStopped || lJ) throw new Error("no core is running to resume the game on");
+                        roomId: tk,
+                        roomToken: ak
+                      } = Mw(kk, Fk), Xk = qa;
+                      if (null === Xk || Xk.isStopped || rb) throw new Error("no core is running to resume the game on");
                       const {
-                        resumeRoom: Ju
-                      } = await qJ(cJ(), yu), Nu = {
-                        ...rN,
-                        attachSocket: Ru => hm !== uu || 0 === uu.heldConn ? (Ru.close(), null) : jN(Ru, uu.endpoint, !0)
+                        resumeRoom: bk
+                      } = await nb(zb(), Bk), wk = {
+                        ...Aw,
+                        attachSocket: Fk => KX !== kk || 0 === kk.heldConn ? (Fk.close(), null) : iw(Fk, kk.endpoint, !0)
                       };
-                      return Ju(Nu, uu.endpoint, Ku, Qu, {
-                        signal: yu,
-                        onAttached: Eu
+                      return bk(wk, kk.endpoint, tk, ak, {
+                        signal: Bk,
+                        onAttached: Rk
                       })
-                    }(yu, uu, Ru, Eu),
-                    releaseSeat: uu => {
-                      !async function(uu, Ru) {
+                    }(Bk, kk, Fk, Rk),
+                    releaseSeat: kk => {
+                      !async function(kk, Fk) {
                         const {
-                          roomId: yu,
-                          roomToken: Eu
-                        } = IN(uu, Ru);
+                          roomId: Bk,
+                          roomToken: Rk
+                        } = Mw(kk, Fk);
                         try {
                           const {
-                            leaveHeldSeat: Ru
-                          } = await cJ();
-                          await Ru(uu.endpoint, yu, Eu)
-                        } catch (Ku) {
-                          console.warn(`${XQ} the held seat of a game left while it reconnected couldn't be released`, Ku)
+                            leaveHeldSeat: Fk
+                          } = await zb();
+                          await Fk(kk.endpoint, Bk, Rk)
+                        } catch (tk) {
+                          console.warn(`${Ja} the held seat of a game left while it reconnected couldn't be released`, tk)
                         }
-                      }(yu, uu)
+                      }(Bk, kk)
                     },
-                    isLive: () => hm === yu && null !== Zm && !lJ,
-                    Dk: uu => {
-                      Ym = uu, AN()
+                    isLive: () => KX === Bk && null !== pX && !rb,
+                    lL: kk => {
+                      lX = kk, Nw()
                     },
-                    onReconnected: uu => {
-                      ! function(uu) {
-                        const Ru = gm;
-                        if (null !== Ru && Ru !== uu) {
-                          const yu = cm.get(Ru);
-                          void 0 !== yu && cm.set(uu, yu), DJ === Ru && (DJ = uu), Ru.detach()
+                    onReconnected: kk => {
+                      ! function(kk) {
+                        const Fk = zX;
+                        if (null !== Fk && Fk !== kk) {
+                          const Bk = PX.get(Fk);
+                          void 0 !== Bk && PX.set(kk, Bk), Hb === Fk && (Hb = kk), Fk.detach()
                         }
-                        fJ(uu)
-                      }(uu)
+                        Fw(kk)
+                      }(kk)
                     },
-                    onGaveUp: (uu, Ru) => {
-                      ! function(uu, Ru, yu) {
-                        var Eu, Ku;
-                        console.warn(`${XQ} gave up reconnecting (${yu.reason}, ${yu.attempts} attempts)`, yu.lastError), (0, Cy.reportReconnectGaveUp)(yu, PQ);
-                        const Qu = null !== (Eu = null === (Ku = Zm) || void 0 === Ku ? void 0 : Ku.rejoin) && void 0 !== Eu ? Eu : null;
-                        MN(uu, "gaveUp"), RN();
-                        const mu = {
-                          code: uu.dropCode,
+                    onGaveUp: (kk, Fk) => {
+                      ! function(kk, Fk, Bk) {
+                        var Rk, tk;
+                        console.warn(`${Ja} gave up reconnecting (${Bk.reason}, ${Bk.attempts} attempts)`, Bk.lastError), (0, LB.reportReconnectGaveUp)(Bk, xa);
+                        const ak = null !== (Rk = null === (tk = pX) || void 0 === tk ? void 0 : tk.rejoin) && void 0 !== Rk ? Rk : null;
+                        uw(kk, "gaveUp"), Rw();
+                        const Xk = {
+                          code: kk.dropCode,
                           name: null,
-                          reason: kQ,
-                          canReconnect: !Ru,
+                          reason: Sa,
+                          canReconnect: !Fk,
                           automaticallyReconnect: !1,
                           requiresRefresh: !1
                         };
-                        VN(mu, Ru ? null : Qu, !1, {
-                          reasonKey: eQ,
-                          canPlayAgain: Ru
+                        Jw(Xk, Fk ? null : ak, !1, {
+                          reasonKey: Na,
+                          canPlayAgain: Fk
                         })
-                      }(yu, uu, Ru)
+                      }(Bk, kk, Fk)
                     }
                   })
                 };
-                hm = yu, null !== Pm && Pm.conn === uu.conn && yu.resume.onInitialInfo(Pm)
-              }(Xu, uu.endpoint), performance.mark(pQ), (0, nR.m)("wasm_joined", Bu), setTimeout((() => {
-                gm === Xu && (0, nR.g)()
-              }), 0), ZJ(), console.info(`${XQ} joined ${uu.roomName} as ${Xu.seat.sessionId} at ${Math.round(performance.now())} ms`);
-            const Wu = qm;
-            qm = null, null !== Wu && KN(Tu, Wu.mask, Wu.frames);
-            const ju = EJ.get(Xu.conn);
-            return EJ.clear(), void 0 !== ju && (fJ(null), XN(Xu.conn, ju.code, ju.reason)), Xu
+                KX = Bk, null !== xX && xX.conn === kk.conn && Bk.resume.onInitialInfo(xX)
+              }(dk, kk.endpoint), performance.mark(Wa), (0, UF.g)("wasm_joined", Jk), setTimeout((() => {
+                zX === dk && (0, UF.c)()
+              }), 0), Zb(), console.info(`${Ja} joined ${kk.roomName} as ${dk.seat.sessionId} at ${Math.round(performance.now())} ms`);
+            const mk = IX;
+            IX = null, null !== mk && Xw(fk, mk.mask, mk.frames);
+            const Wk = ab.get(dk.conn);
+            return ab.clear(), void 0 !== Wk && (Fw(null), Vw(dk.conn, Wk.code, Wk.reason)), dk
           } finally {
-            var Tu;
-            null === Ku || void 0 === Ku || Ku.removeEventListener("abort", Bu), Lm === ru && aJ(gm, null), (null === (Tu = Om) || void 0 === Tu ? void 0 : Tu.join) === ru && (Om = null)
+            var fk;
+            null === tk || void 0 === tk || tk.removeEventListener("abort", Jk), hX === Vk && kw(zX, null), (null === (fk = QX) || void 0 === fk ? void 0 : fk.join) === Vk && (QX = null)
           }
-        }(uu.target, {
-          signal: Ju,
-          rejoin: Ku(uu.target),
-          early: Xu,
-          pageReady: mu
+        }(kk.target, {
+          signal: bk,
+          rejoin: tk(kk.target),
+          early: dk,
+          pageReady: Xk
         });
-        return Bu = !0, {
+        return Jk = !0, {
           kind: "joined",
-          game: Vu
+          game: sk
         }
-      } catch (Tu) {
-        if (Tu instanceof DOMException && "AbortError" === Tu.name || Nu()) return {
-          kind: "Ty"
+      } catch (fk) {
+        if (fk instanceof DOMException && "AbortError" === fk.name || wk()) return {
+          kind: "yB"
         };
-        if (lJ) return {
+        if (rb) return {
           kind: "stopped"
         };
-        if (RJ && (RJ = !1, await Qu().catch((uu => {
-            console.warn(`${XQ} the cached traffic code could not be dropped`, uu)
-          }))), null === await oQ) return {
+        if (Rb && (Rb = !1, await ak().catch((kk => {
+            console.warn(`${Ja} the cached traffic code could not be dropped`, kk)
+          }))), null === await na) return {
           kind: "stopped"
         };
-        if (Tu instanceof Zu.i) return yu(Tu, performance.now() - xu), {
+        if (fk instanceof Ck.e) return Bk(fk, performance.now() - Ak), {
           kind: "failed",
-          error: Tu,
+          error: fk,
           reloading: !1
         };
-        if (Tu instanceof su.b && Tu.code === Eu.c.wasmClientNotAllowed.code && GJ) return lN("this server refused the wasm client to this account", "refused"), {
+        if (fk instanceof ck.e && fk.code === Rk.e.wasmClientNotAllowed.code && gb) return Dw("this server refused the wasm client to this account", "refused"), {
           kind: "failed",
-          error: Tu,
+          error: fk,
           reloading: !0
         };
-        const uu = Tu instanceof su.b && Tu.code === Eu.c.outdatedVersion.code,
-          Ru = () => null === gm,
-          Ku = await eX({
-            site: Cy.JOIN_SITE,
-            error: Tu,
-            outdated: uu
+        const kk = fk instanceof ck.e && fk.code === Rk.e.outdatedVersion.code,
+          Fk = () => null === zX,
+          tk = await Hd({
+            site: LB.JOIN_SITE,
+            error: fk,
+            outdated: kk
           }, (() => {
-            yu(Tu, performance.now() - xu)
-          }), Ru);
+            Bk(fk, performance.now() - Ak)
+          }), Fk);
         return {
           kind: "failed",
-          error: Tu,
-          reloading: Ku
+          error: fk,
+          reloading: tk
         }
       } finally {
-        var pu;
-        Bu || ru.end(), oE.c.releaseHold(Vu);
-        const uu = null === (pu = Xu) || void 0 === pu ? void 0 : pu.release();
-        uu && (0, Cy.reportUnusedSeat)(uu, PQ)
+        var yk;
+        Jk || Vk.end(), jR.c.releaseHold(sk);
+        const kk = null === (yk = dk) || void 0 === yk ? void 0 : yk.release();
+        kk && (0, LB.reportUnusedSeat)(kk, xa)
       }
     }
 
-    function YJ(uu, Ru) {
-      return uu.stack = Ru.stack, uu
+    function jb(kk, Fk) {
+      return kk.stack = Fk.stack, kk
     }
 
-    function oJ(uu) {
-      return uu.session ? (0, Cu.t)(hQ, uu.session.gameNameWithVariation) : Promise.resolve()
+    function lb(kk) {
+      return kk.session ? (0, Lk.l)(Ka, kk.session.gameNameWithVariation) : Promise.resolve()
     }
 
-    function qJ(uu, Ru) {
-      return (0, HR.p)(Ru), new Promise(((yu, Eu) => {
-        const Ku = () => {
-          Eu((0, HR.e)(Ru))
+    function nb(kk, Fk) {
+      return (0, iF.k)(Fk), new Promise(((Bk, Rk) => {
+        const tk = () => {
+          Rk((0, iF.e)(Fk))
         };
-        Ru.addEventListener("abort", Ku, {
+        Fk.addEventListener("abort", tk, {
           once: !0
-        }), uu.then((uu => {
-          Ru.removeEventListener("abort", Ku), yu(uu)
-        }), (uu => {
-          Ru.removeEventListener("abort", Ku), Eu(uu)
+        }), kk.then((kk => {
+          Fk.removeEventListener("abort", tk), Bk(kk)
+        }), (kk => {
+          Fk.removeEventListener("abort", tk), Rk(kk)
         }))
       }))
     }
 
-    function OJ() {
-      vJ(null)
+    function Ib() {
+      Qb(null)
     }
 
-    function vJ(uu) {
-      var Ru, yu, Eu;
+    function Qb(kk) {
+      var Fk, Bk, Rk;
       (function() {
-        const uu = hm;
-        null !== uu && MN(uu, "left")
-      }(), null === aQ || aQ.left) || (aQ.left = !0, null === (Eu = (0, Cu.i)()) || void 0 === Eu || Eu.socketLeft(), (0, Bu.n)({
+        const kk = KX;
+        null !== kk && uw(kk, "left")
+      }(), null === FX || FX.left) || (FX.left = !0, null === (Rk = (0, Lk.g)()) || void 0 === Rk || Rk.socketLeft(), (0, Jk.u)({
         websocketUrl: null
       }));
-      Lm && (0, HR.i)(Lm, new DOMException("the join was left", "AbortError")), RN(null !== uu), null === (Ru = Wm) || void 0 === Ru || Ru.leave();
-      const Ku = gm;
-      null !== uu && oE.c.setGame(uu.game), aJ(null, null !== (yu = null === uu || void 0 === uu ? void 0 : uu.controller) && void 0 !== yu ? yu : null), null === Ku || void 0 === Ku || Ku.leave(), uN(0), (0, pR.i)()
+      hX && (0, iF.i)(hX, new DOMException("the join was left", "AbortError")), Rw(null !== kk), null === (Fk = iX) || void 0 === Fk || Fk.leave();
+      const tk = zX;
+      null !== kk && jR.c.setGame(kk.game), kw(null, null !== (Bk = null === kk || void 0 === kk ? void 0 : kk.controller) && void 0 !== Bk ? Bk : null), null === tk || void 0 === tk || tk.leave(), Bw(0), (0, fF.d)()
     }
 
-    function aJ(uu, Ru) {
-      gm = uu, Lm = Ru, null === gm && null === Lm && oE.c.setGame(void 0)
+    function kw(kk, Fk) {
+      zX = kk, hX = Fk, null === zX && null === hX && jR.c.setGame(void 0)
     }
 
-    function fJ(uu) {
-      aJ(uu, Lm)
+    function Fw(kk) {
+      kw(kk, hX)
     }
 
-    function uN(uu) {
-      const Ru = zQ;
-      return null !== UQ && !lJ && null !== Ru && !Ru.isStopped && (!!UQ(su.e, 0, (0, su.w)(uu)) && (Im = !0, 0 === uu || Am || EX(Ru, !1, "all"), !0))
+    function Bw(kk) {
+      const Fk = qa;
+      return null !== ca && !rb && null !== Fk && !Fk.isStopped && (!!ca(ck.j, 0, (0, ck.z)(kk)) && (gX = !0, 0 === kk || HX || Xd(Fk, !1, "all"), !0))
     }
 
-    function RN() {
-      var uu, Ru;
-      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, Hy.g)();
-      const yu = null !== (uu = null === (Ru = Zm) || void 0 === Ru ? void 0 : Ru.overflow) && void 0 !== uu ? uu : null;
-      Zm = null, null !== yu && (0, Cy.reportEventOverflow)(yu, PQ)
+    function Rw() {
+      var kk, Fk;
+      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, iB.d)();
+      const Bk = null !== (kk = null === (Fk = pX) || void 0 === Fk ? void 0 : Fk.overflow) && void 0 !== kk ? kk : null;
+      pX = null, null !== Bk && (0, LB.reportEventOverflow)(Bk, xa)
     }
 
-    function yN() {
-      null !== gm || null !== Lm ? OJ() : HN()
+    function tw() {
+      null !== zX || null !== hX ? Ib() : Yw()
     }
 
-    function EN(uu, Ru) {
-      console.warn(`${XQ} the event buffer refused records in ${Ru} frames (categories ${uu})`), lJ || (null !== Zm ? KN(Zm, uu, Ru) : null !== Lm && function(uu, Ru, yu) {
-        var Eu;
-        const Ku = function(uu, Ru) {
-          return null === uu ? "drop" : uu.activated ? "keep" : 0 !== (Ru & FR.p.NetSession) ? "fail" : "drop"
-        }((null === (Eu = Om) || void 0 === Eu ? void 0 : Eu.join) === uu ? Om : null, Ru);
-        "keep" === Ku ? qm = {
-          mask: Ru,
-          frames: yu
-        } : "fail" === Ku && (0, HR.i)(uu, new Error("the join's net session was lost to an event overflow"))
-      }(Lm, uu, Ru))
+    function aw(kk, Fk) {
+      console.warn(`${Ja} the event buffer refused records in ${Fk} frames (categories ${kk})`), rb || (null !== pX ? Xw(pX, kk, Fk) : null !== hX && function(kk, Fk, Bk) {
+        var Rk;
+        const tk = function(kk, Fk) {
+          return null === kk ? "drop" : kk.activated ? "keep" : 0 !== (Fk & hF.m.NetSession) ? "fail" : "drop"
+        }((null === (Rk = QX) || void 0 === Rk ? void 0 : Rk.join) === kk ? QX : null, Fk);
+        "keep" === tk ? IX = {
+          mask: Fk,
+          frames: Bk
+        } : "fail" === tk && (0, iF.i)(kk, new Error("the join's net session was lost to an event overflow"))
+      }(hX, kk, Fk))
     }
 
-    function KN(uu, Ru, yu) {
-      const Eu = uu.overflow ??= {
+    function Xw(kk, Fk, Bk) {
+      const Rk = kk.overflow ??= {
         frames: 0,
         acks: 0,
         mask: 0,
         outcome: null
       };
-      Eu.frames += yu, Eu.acks++, Eu.mask |= Ru;
-      const Ku = function(uu, Ru, yu) {
-        if (0 === (uu & FR.p.NetSession)) return "none";
-        const Eu = null !== Ru.rejoinedAt && yu - Ru.rejoinedAt < WE;
-        return null === Ru.rejoin || Eu ? "fail" : "rejoin"
-      }(Ru, uu, performance.now());
-      "none" !== Ku && queueMicrotask((() => {
-        if (Zm !== uu) return;
-        const Ru = "rejoin" === Ku && performance.now() - am >= nu.i;
-        Eu.outcome = Ru ? "rejoined" : "failed", VN(function(uu, Ru) {
+      Rk.frames += Bk, Rk.acks++, Rk.mask |= Fk;
+      const tk = function(kk, Fk, Bk) {
+        if (0 === (kk & hF.m.NetSession)) return "none";
+        const Rk = null !== Fk.rejoinedAt && Bk - Fk.rejoinedAt < WR;
+        return null === Fk.rejoin || Rk ? "fail" : "rejoin"
+      }(Fk, kk, performance.now());
+      "none" !== tk && queueMicrotask((() => {
+        if (pX !== kk) return;
+        const Fk = "rejoin" === tk && performance.now() - kb >= Uk.e;
+        Rk.outcome = Fk ? "rejoined" : "failed", Jw(function(kk, Fk) {
           return {
             code: 0,
             name: "eventOverflow",
             reason: "Your game fell behind the server.",
-            canReconnect: uu,
-            automaticallyReconnect: Ru,
+            canReconnect: kk,
+            automaticallyReconnect: Fk,
             requiresRefresh: !1
           }
-        }(null !== uu.rejoin, Ru), uu.rejoin, Ru), OJ(), Ru && (om = performance.now())
+        }(null !== kk.rejoin, Fk), kk.rejoin, Fk), Ib(), Fk && (nX = performance.now())
       }))
     }
 
-    function QN(uu) {
-      UJ = uu, nJ && mN(nJ, uu)
+    function bw(kk) {
+      Ub = kk, cb && ww(cb, kk)
     }
 
-    function mN(uu, Ru) {
-      uu.style.visibility = Ru ? "visible" : "hidden"
+    function ww(kk, Fk) {
+      kk.style.visibility = Fk ? "visible" : "hidden"
     }
 
-    function JN(uu) {
-      var Ru;
-      const yu = uu.roomName,
-        Eu = null !== (Ru = uu.joinOptions.lobbyName) && void 0 !== Ru ? Ru : null;
+    function dw(kk) {
+      var Fk;
+      const Bk = kk.roomName,
+        Rk = null !== (Fk = kk.joinOptions.lobbyName) && void 0 !== Fk ? Fk : null;
       return () => {
-        PJ(yu, Eu)
+        Kb(Bk, Rk)
       }
     }
 
-    function NN() {
-      return yu.e(342).then((() => yu(42876))).then((uu => {
+    function sw() {
+      return Bk.e(342).then((() => Bk(42762))).then((kk => {
         let {
-          invalidateGuestTrafficCode: Ru
-        } = uu;
-        return Ru()
-      })).catch((uu => {
-        console.warn(`${XQ} the cached traffic code could not be dropped`, uu)
+          invalidateGuestTrafficCode: Fk
+        } = kk;
+        return Fk()
+      })).catch((kk => {
+        console.warn(`${Ja} the cached traffic code could not be dropped`, kk)
       }))
     }
 
-    function XN(uu, Ru, yu) {
-      var Ku, Qu;
-      let mu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (lJ) return;
-      if ((null === (Ku = Zm) || void 0 === Ku ? void 0 : Ku.conn) !== uu) return void(null !== Lm && EJ.set(uu, {
-        code: Ru,
-        reason: yu
+    function Vw(kk, Fk, Bk) {
+      var tk, ak;
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (rb) return;
+      if ((null === (tk = pX) || void 0 === tk ? void 0 : tk.conn) !== kk) return void(null !== hX && ab.set(kk, {
+        code: Fk,
+        reason: Bk
       }));
       const {
-        rejoin: Ju,
-        game: Nu,
-        joinedAt: Xu
-      } = Zm;
-      RN(), DN();
-      const Vu = (0, nu.m)(Ru, (0, HE.g)(uu));
-      if (console.info(`${XQ} the game's connection closed with code ${Ru} (${null!==(Qu=Vu.name)&&void 0!==Qu?Qu:"unrecognised"})`), Ru === Eu.c.gameOrPluginKick.code || mu || (0, Cy.reportDisconnect)(Vu, PQ, {
-          closeReason: yu,
-          sinceJoinedMs: performance.now() - Xu,
-          game: Nu
-        }), Vu.requiresRefresh) {
-        const uu = "outdatedVersion" === Vu.name,
-          yu = new Error(`the game's connection closed with code ${Ru}`),
-          Eu = () => null === Zm && null === Lm;
-        return void eX({
-          site: Cy.JOIN_SITE,
-          error: yu,
-          outdated: uu
+        rejoin: bk,
+        game: wk,
+        joinedAt: dk
+      } = pX;
+      Rw(), Hw();
+      const sk = (0, Uk.g)(Fk, (0, iR.c)(kk));
+      if (console.info(`${Ja} the game's connection closed with code ${Fk} (${null!==(ak=sk.name)&&void 0!==ak?ak:"unrecognised"})`), Fk === Rk.e.gameOrPluginKick.code || Xk || (0, LB.reportDisconnect)(sk, xa, {
+          closeReason: Bk,
+          sinceJoinedMs: performance.now() - dk,
+          game: wk
+        }), sk.requiresRefresh) {
+        const kk = "outdatedVersion" === sk.name,
+          Bk = new Error(`the game's connection closed with code ${Fk}`),
+          Rk = () => null === pX && null === hX;
+        return void Hd({
+          site: LB.JOIN_SITE,
+          error: Bk,
+          outdated: kk
         }, (() => {
-          Eu() && VN(Vu, null, !1)
-        }), Eu)
+          Rk() && Jw(sk, null, !1)
+        }), Rk)
       }
-      const ru = Vu.canReconnect ? Ju : null,
-        Bu = null !== ru && Vu.automaticallyReconnect && performance.now() - am >= nu.i;
-      VN(Vu, ru, Bu)
+      const Vk = sk.canReconnect ? bk : null,
+        Jk = null !== Vk && sk.automaticallyReconnect && performance.now() - kb >= Uk.e;
+      Jw(sk, Vk, Jk)
     }
 
-    function VN(uu, Ru, yu) {
-      var Eu;
-      let Ku = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+    function Jw(kk, Fk, Bk) {
+      var Rk;
+      let tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
         reasonKey: null,
         canPlayAgain: !1
       };
-      if (sJ) return;
-      oE.c.unwantedLeave(yu && null !== Ru && 0 === uJ.size), null === (Eu = fm) || void 0 === Eu || Eu.abort();
-      const Qu = new AbortController;
-      fm = Qu;
-      const mu = null === Ru ? null : () => {
-        Qu.signal.aborted || (Qu.abort(), Ru())
+      if (Gb) return;
+      jR.c.unwantedLeave(Bk && null !== Fk && 0 === Bb.size), null === (Rk = Fb) || void 0 === Rk || Rk.abort();
+      const ak = new AbortController;
+      Fb = ak;
+      const Xk = null === Fk ? null : () => {
+        ak.signal.aborted || (ak.abort(), Fk())
       };
-      if (yu && null !== mu) {
-        am = performance.now();
-        const uu = setTimeout(mu, nu.e);
-        Qu.signal.addEventListener("abort", (() => {
-          clearTimeout(uu)
+      if (Bk && null !== Xk) {
+        kb = performance.now();
+        const kk = setTimeout(Xk, Uk.b);
+        ak.signal.addEventListener("abort", (() => {
+          clearTimeout(kk)
         }))
       }
-      const Ju = {
-        code: uu.code,
-        name: uu.name,
-        reason: uu.reason,
-        reasonKey: Ku.reasonKey,
-        reconnect: mu,
-        reconnecting: yu,
-        requiresRefresh: uu.requiresRefresh,
-        canPlayAgain: Ku.canPlayAgain
+      const bk = {
+        code: kk.code,
+        name: kk.name,
+        reason: kk.reason,
+        reasonKey: tk.reasonKey,
+        reconnect: Xk,
+        reconnecting: Bk,
+        requiresRefresh: kk.requiresRefresh,
+        canPlayAgain: tk.canPlayAgain
       };
-      if (uJ.size > 0)
-        for (const Xu of [...uJ]) try {
-          Xu(Ju)
-        } catch (Nu) {
-          console.error(`${XQ} an unwanted-leave listener threw`, Nu)
-        } else SE((0, rE.i)(uu, null !== mu, yu), Qu.signal).then((Ru => {
-          Ru && (null !== mu ? mu() : uu.requiresRefresh && (0, hu.k)())
+      if (Bb.size > 0)
+        for (const dk of [...Bb]) try {
+          dk(bk)
+        } catch (wk) {
+          console.error(`${Ja} an unwanted-leave listener threw`, wk)
+        } else yR((0, JR.h)(kk, null !== Xk, Bk), ak.signal).then((Fk => {
+          Fk && (null !== Xk ? Xk() : kk.requiresRefresh && (0, Zk.k)())
         }))
     }
-    const rN = {
-      attachSocket: uu => jN(uu),
-      onConnection: uu => (KJ.add(uu), () => {
-        KJ.delete(uu)
+    const Aw = {
+      attachSocket: kk => iw(kk),
+      onConnection: kk => (Xb.add(kk), () => {
+        Xb.delete(kk)
       }),
-      sendRaw: (uu, Ru) => {
-        const yu = aQ;
-        return null !== yu && yu.conn === uu && BX(yu, Ru)
+      sendRaw: (kk, Fk) => {
+        const Bk = FX;
+        return null !== Bk && Bk.conn === kk && yd(Bk, Fk)
       },
-      leaveRoom: uN,
-      closeSocket: uu => {
-        var Ru;
-        (null === (Ru = aQ) || void 0 === Ru ? void 0 : Ru.conn) === uu && HN()
+      leaveRoom: Bw,
+      closeSocket: kk => {
+        var Fk;
+        (null === (Fk = FX) || void 0 === Fk ? void 0 : Fk.conn) === kk && Yw()
       },
-      flushNet: dN
+      flushNet: ow
     };
 
-    function BN(uu) {
-      var Ru;
+    function ew(kk) {
+      var Fk;
       let {
-        aux: yu,
-        payload: Eu
-      } = uu;
-      null === (Ru = zQ) || void 0 === Ru || Ru.queueOptions(yu, Eu)
+        aux: Bk,
+        payload: Rk
+      } = kk;
+      null === (Fk = qa) || void 0 === Fk || Fk.queueOptions(Bk, Rk)
     }
 
-    function xN(uu, Ru) {
-      BN(function(uu, Ru) {
-        return mK = uu ? {
-          preventMovement: Ru
-        } : null, uu ? JK(Ru) : {
-          aux: zR.Wb.AdEnd,
-          payload: QK
+    function yw(kk, Fk) {
+      ew(function(kk, Fk) {
+        return wt = kk ? {
+          preventMovement: Fk
+        } : null, kk ? dt(Fk) : {
+          aux: PF.Hb.AdEnd,
+          payload: bt
         }
-      }(uu, Ru))
+      }(kk, Fk))
     }
 
-    function SN(uu) {
-      var Ru;
-      sm = uu, null === (Ru = zQ) || void 0 === Ru || Ru.setUiPrefs(uu)
+    function fw(kk) {
+      var Fk;
+      TX = kk, null === (Fk = qa) || void 0 === Fk || Fk.setUiPrefs(kk)
     }
 
-    function pN(uu, Ru) {
-      hQ.setMaster(uu, Ru)
+    function mw(kk, Fk) {
+      Ka.setMaster(kk, Fk)
     }
 
-    function TN(uu) {
-      var Ru;
-      tm = uu, null === (Ru = zQ) || void 0 === Ru || Ru.setEnvPrefs(uu)
+    function Ww(kk) {
+      var Fk;
+      rX = kk, null === (Fk = qa) || void 0 === Fk || Fk.setEnvPrefs(kk)
     }
 
-    function WN(uu) {
-      var Ru;
-      lm = uu, null === (Ru = zQ) || void 0 === Ru || Ru.setLookPrefs(uu)
+    function vw(kk) {
+      var Fk;
+      DX = kk, null === (Fk = qa) || void 0 === Fk || Fk.setLookPrefs(kk)
     }
 
-    function jN(uu) {
-      var Ru;
-      let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(uu.url).origin,
-        Eu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      if (uu.readyState === WebSocket.CLOSING || uu.readyState === WebSocket.CLOSED) return console.warn(`${XQ} a closing or closed socket can't be attached`), null;
-      const Ku = zQ;
-      if (!Ku || Ku.isStopped) return console.warn(`${XQ} no core is running to attach a socket to`), uu.close(), null;
-      if (null === (0, Cu.i)()) return console.warn(`${XQ} the game has not started to attach a socket to`), uu.close(), null;
-      if (Cm > zR.B) return console.warn(`${XQ} this core has attached all the sockets it can; reload to play on`), uu.close(), null;
-      if (Im && !Am && (EX(Ku, !1, "all"), Ku.isStopped || lJ)) return uu.close(), null;
-      HN();
-      const Qu = Cm++;
-      if (!nN(Ku, "open", Qu, Eu ? zR.Vb.Resume : 0)) return uu.close(), null;
-      Eu || SR.b.reset(), Om = null === Lm ? null : {
-        join: Lm,
-        conn: Qu,
+    function iw(kk) {
+      var Fk;
+      let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(kk.url).origin,
+        Rk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      if (kk.readyState === WebSocket.CLOSING || kk.readyState === WebSocket.CLOSED) return console.warn(`${Ja} a closing or closed socket can't be attached`), null;
+      const tk = qa;
+      if (!tk || tk.isStopped) return console.warn(`${Ja} no core is running to attach a socket to`), kk.close(), null;
+      if (null === (0, Lk.g)()) return console.warn(`${Ja} the game has not started to attach a socket to`), kk.close(), null;
+      if (EX > PF.q) return console.warn(`${Ja} this core has attached all the sockets it can; reload to play on`), kk.close(), null;
+      if (gX && !HX && (Xd(tk, !1, "all"), tk.isStopped || rb)) return kk.close(), null;
+      Yw();
+      const ak = EX++;
+      if (!Gw(tk, "open", ak, Rk ? PF.Eb.Resume : 0)) return kk.close(), null;
+      Rk || yF.b.reset(), QX = null === hX ? null : {
+        join: hX,
+        conn: ak,
         activated: !1
-      }, uu.binaryType = "arraybuffer";
-      const mu = new ry.e((() => {
-          ! function(uu, Ru) {
-            if (aQ !== Ru || uu.isStopped || null === kN(Ru, bQ)) return;
-            Ru.detach(), aQ = null, CN(uu, Ru, bQ, "", !0), Ru.ws.close()
-          }(Ku, Ju)
+      }, kk.binaryType = "arraybuffer";
+      const Xk = new JB.e((() => {
+          ! function(kk, Fk) {
+            if (FX !== Fk || kk.isStopped || null === Ew(Fk, Oa)) return;
+            Fk.detach(), FX = null, Ow(kk, Fk, Oa, "", !0), Fk.ws.close()
+          }(tk, bk)
         })),
-        Ju = {
-          ws: uu,
-          conn: Qu,
+        bk = {
+          ws: kk,
+          conn: ak,
           pending: [],
           pendingBytes: 0,
           left: !1,
-          resume: Eu,
+          resume: Rk,
           token: null,
           detach: () => {
-            mu.dispose(), uu.removeEventListener("message", Nu), uu.removeEventListener("open", Xu), uu.removeEventListener("close", Vu)
+            Xk.dispose(), kk.removeEventListener("message", wk), kk.removeEventListener("open", dk), kk.removeEventListener("close", sk)
           }
         },
-        Nu = uu => {
-          if (uu.data instanceof ArrayBuffer) {
-            var Ru;
-            const yu = new Uint8Array(uu.data);
-            mu.heard(), Ju.token = null !== (Ru = (0, By.e)(yu)) && void 0 !== Ru ? Ru : Ju.token,
-              function(uu, Ru, yu) {
-                dX(uu, (() => {
-                  uu.rings.net.writeFrame(Ru, yu) || uu.crash(uy.n, `a socket frame of ${yu.byteLength} bytes did not fit the net-in ring`)
+        wk = kk => {
+          if (kk.data instanceof ArrayBuffer) {
+            var Fk;
+            const Bk = new Uint8Array(kk.data);
+            Xk.heard(), bk.token = null !== (Fk = (0, AB.c)(Bk)) && void 0 !== Fk ? Fk : bk.token,
+              function(kk, Fk, Bk) {
+                Od(kk, (() => {
+                  kk.rings.net.writeFrame(Fk, Bk) || kk.crash(FB.q, `a socket frame of ${Bk.byteLength} bytes did not fit the net-in ring`)
                 }));
-                const Eu = uu.rings.net.cursor >= HQ;
-                (Eu || uu.netWrittenSinceFrame >= jQ || document.hidden && performance.now() - km >= MQ) && EX(uu, !1, "budget")
-              }(Ku, Qu, yu)
+                const Rk = kk.rings.net.cursor >= oa;
+                (Rk || kk.netWrittenSinceFrame >= Ya || document.hidden && performance.now() - SX >= Ma) && Xd(kk, !1, "budget")
+              }(tk, ak, Bk)
           }
         },
-        Xu = () => {
-          Eu || (0, nR.m)("wasm_socket_open", performance.now());
-          for (const Ru of Ju.pending.splice(0)) uu.send(Ru);
-          Ju.pendingBytes = 0
+        dk = () => {
+          Rk || (0, UF.g)("wasm_socket_open", performance.now());
+          for (const Fk of bk.pending.splice(0)) kk.send(Fk);
+          bk.pendingBytes = 0
         },
-        Vu = uu => {
-          if (aQ === Ju && Ku.rings.net.cursor > 0 && EX(Ku, !1, "all"), aQ === Ju) {
-            if (Ju.detach(), aQ = null, CN(Ku, Ju, uu.code, uu.reason) || bN(Ku, Ju)) return;
-            nN(Ku, "close", Qu), eN(Qu, Ju.left), XN(Qu, uu.code, uu.reason)
+        sk = kk => {
+          if (FX === bk && tk.rings.net.cursor > 0 && Xd(tk, !1, "all"), FX === bk) {
+            if (bk.detach(), FX = null, Ow(tk, bk, kk.code, kk.reason) || Lw(tk, bk)) return;
+            Gw(tk, "close", ak), Sw(ak, bk.left), Vw(ak, kk.code, kk.reason)
           }
         };
-      return uu.addEventListener("message", Nu), uu.addEventListener("open", Xu), uu.addEventListener("close", Vu), aQ = Ju, null === (Ru = (0, Cu.i)()) || void 0 === Ru || Ru.socketAttached(Qu), (0, Bu.n)({
-        websocketUrl: yu
-      }), Qu
+      return kk.addEventListener("message", wk), kk.addEventListener("open", dk), kk.addEventListener("close", sk), FX = bk, null === (Fk = (0, Lk.g)()) || void 0 === Fk || Fk.socketAttached(ak), (0, Jk.u)({
+        websocketUrl: Bk
+      }), ak
     }
 
-    function HN() {
-      const uu = aQ;
-      if (!uu) return;
-      const Ru = zQ,
-        yu = uu.resume;
-      yu && (dN(), aQ !== uu) || (aQ = null, uu.detach(), uu.ws.close(), null !== Ru && (bN(Ru, uu) || yu && CN(Ru, uu, CQ)) || (null !== Ru && nN(Ru, "close", uu.conn), eN(uu.conn, uu.left)))
+    function Yw() {
+      const kk = FX;
+      if (!kk) return;
+      const Fk = qa,
+        Bk = kk.resume;
+      Bk && (ow(), FX !== kk) || (FX = null, kk.detach(), kk.ws.close(), null !== Fk && (Lw(Fk, kk) || Bk && Ow(Fk, kk, Ea)) || (null !== Fk && Gw(Fk, "close", kk.conn), Sw(kk.conn, kk.left)))
     }
 
-    function dN() {
-      const uu = zQ;
-      null !== uu && !uu.isStopped && !lJ && !Am && uu.rings.net.cursor > 0 && EX(uu, !1, "all")
+    function ow() {
+      const kk = qa;
+      null !== kk && !kk.isStopped && !rb && !HX && kk.rings.net.cursor > 0 && Xd(kk, !1, "all")
     }
 
-    function bN(uu, Ru) {
-      var yu;
-      if (!Ru.resume) return !1;
-      const Eu = hm;
-      return null !== Eu && null !== Ru.token && "" !== Ru.token && (Eu.pendingHold = {
-        conn: Ru.conn,
-        token: `${Eu.roomId}:${Ru.token}`
-      }), nN(uu, "close", Ru.conn), null === (yu = (0, Cu.i)()) || void 0 === yu || yu.socketDetached(Ru.conn), !0
+    function Lw(kk, Fk) {
+      var Bk;
+      if (!Fk.resume) return !1;
+      const Rk = KX;
+      return null !== Rk && null !== Fk.token && "" !== Fk.token && (Rk.pendingHold = {
+        conn: Fk.conn,
+        token: `${Rk.roomId}:${Fk.token}`
+      }), Gw(kk, "close", Fk.conn), null === (Bk = (0, Lk.g)()) || void 0 === Bk || Bk.socketDetached(Fk.conn), !0
     }
 
-    function CN(uu, Ru, yu) {
-      let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
-        Ku = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      const Qu = kN(Ru, yu);
-      if (null === Qu) return !1;
+    function Ow(kk, Fk, Bk) {
+      let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
+        tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      const ak = Ew(Fk, Bk);
+      if (null === ak) return !1;
       const {
-        jJ: mu,
-        token: Ju,
-        game: Nu,
-        joinedAt: Xu
-      } = Qu;
-      if (!nN(uu, "close", Ru.conn, zR.F.Held)) return !0;
-      console.warn(`${XQ} the game's connection ${Ku?"went silent":`dropped with code ${yu}`}, holding it`);
-      const Vu = {
-        closeReason: Eu,
-        sinceJoinedMs: performance.now() - Xu,
-        game: Nu
+        Hb: Xk,
+        token: bk,
+        game: wk,
+        joinedAt: dk
+      } = ak;
+      if (!Gw(kk, "close", Fk.conn, PF.u.Held)) return !0;
+      console.warn(`${Ja} the game's connection ${tk?"went silent":`dropped with code ${Bk}`}, holding it`);
+      const sk = {
+        closeReason: Rk,
+        sinceJoinedMs: performance.now() - dk,
+        game: wk
       };
-      return (0, Cy.reportDisconnect)((0, nu.m)(yu), PQ, Vu, Ku ? "silent" : void 0), mu.heldConn = Ru.conn, mu.dropCode = yu, mu.pendingHold = {
-        conn: Ru.conn,
-        token: `${mu.roomId}:${Ju}`
-      }, Am || EX(uu, !1, "all"), !0
+      return (0, LB.reportDisconnect)((0, Uk.g)(Bk), xa, sk, tk ? "silent" : void 0), Xk.heldConn = Fk.conn, Xk.dropCode = Bk, Xk.pendingHold = {
+        conn: Fk.conn,
+        token: `${Xk.roomId}:${bk}`
+      }, HX || Xd(kk, !1, "all"), !0
     }
 
-    function kN(uu, Ru) {
-      const yu = hm,
-        Ku = Zm,
-        Qu = uu.token;
-      return null === yu || null === Ku || lJ || uu.left || Ku.conn !== uu.conn || null === Qu || "" === Qu ? null : (0, Eu.h)(Ru) && yu.resume.canHoldSeat() ? {
-        jJ: yu,
-        token: Qu,
-        game: Ku.game,
-        joinedAt: Ku.joinedAt
+    function Ew(kk, Fk) {
+      const Bk = KX,
+        tk = pX,
+        ak = kk.token;
+      return null === Bk || null === tk || rb || kk.left || tk.conn !== kk.conn || null === ak || "" === ak ? null : (0, Rk.l)(Fk) && Bk.resume.canHoldSeat() ? {
+        Hb: Bk,
+        token: ak,
+        game: tk.game,
+        joinedAt: tk.joinedAt
       } : null
     }
 
-    function eN(uu, Ru) {
-      var yu;
-      null === (yu = (0, Cu.i)()) || void 0 === yu || yu.closeGame(uu), (0, KK.c)().close(uu), Ru || (0, Bu.n)({
+    function Sw(kk, Fk) {
+      var Bk;
+      null === (Bk = (0, Lk.g)()) || void 0 === Bk || Bk.closeGame(kk), (0, Xt.c)().close(kk), Fk || (0, Jk.u)({
         websocketUrl: null
       })
     }
 
-    function AN() {
-      const uu = Ym;
-      if (null === uu) return;
-      const Ru = (0, Cu.i)();
-      lJ || null === Ru || Ru.Dk(uu) ? Ym = null : performance.now() - Gm.pause >= DQ && (Gm.pause = performance.now(), console.warn(`${XQ} the cmd ring had no room for SetPaused(${uu}): written before the next frame`))
+    function Nw() {
+      const kk = lX;
+      if (null === kk) return;
+      const Fk = (0, Lk.g)();
+      rb || null === Fk || Fk.lL(kk) ? lX = null : performance.now() - UX.pause >= ua && (UX.pause = performance.now(), console.warn(`${Ja} the cmd ring had no room for SetPaused(${kk}): written before the next frame`))
     }
 
-    function DN() {
-      const uu = hm;
-      hm = null, null === uu || void 0 === uu || uu.resume.dispose()
+    function Hw() {
+      const kk = KX;
+      KX = null, null === kk || void 0 === kk || kk.resume.dispose()
     }
 
-    function MN(uu, Ru) {
-      var yu, Eu;
+    function uw(kk, Fk) {
+      var Bk, Rk;
       const {
-        heldConn: Ku
-      } = uu, Qu = uu.resume.resumingConn;
-      uu.heldConn = 0, uu.pendingHold = null, hm === uu && (hm = null), "left" === Ru ? uu.resume.leave() : uu.resume.dispose(), 0 === im || (null === (yu = aQ) || void 0 === yu ? void 0 : yu.conn) !== im || "left" === Ru && (null === (Eu = gm) || void 0 === Eu ? void 0 : Eu.conn) === im || UN(im), "gaveUp" === Ru && 0 !== Qu && UN(Qu), 0 !== Ku && "refused" !== Ru && (console.info(`${XQ} the game held through its drop ${"left"===Ru?"was left":"is given up"}`), null === zQ || zQ.isStopped || nN(zQ, "close", Ku), eN(Ku, !1))
+        heldConn: tk
+      } = kk, ak = kk.resume.resumingConn;
+      kk.heldConn = 0, kk.pendingHold = null, KX === kk && (KX = null), "left" === Fk ? kk.resume.leave() : kk.resume.dispose(), 0 === jX || (null === (Bk = FX) || void 0 === Bk ? void 0 : Bk.conn) !== jX || "left" === Fk && (null === (Rk = zX) || void 0 === Rk ? void 0 : Rk.conn) === jX || Uw(jX), "gaveUp" === Fk && 0 !== ak && Uw(ak), 0 !== tk && "refused" !== Fk && (console.info(`${Ja} the game held through its drop ${"left"===Fk?"was left":"is given up"}`), null === qa || qa.isStopped || Gw(qa, "close", tk), Sw(tk, !1))
     }
 
-    function IN(uu, Ru) {
-      const yu = Ru.indexOf(":");
+    function Mw(kk, Fk) {
+      const Bk = Fk.indexOf(":");
       return {
-        roomId: yu < 0 ? uu.roomId : Ru.slice(0, yu),
-        roomToken: Ru.slice(yu + 1)
+        roomId: Bk < 0 ? kk.roomId : Fk.slice(0, Bk),
+        roomToken: Fk.slice(Bk + 1)
       }
     }
 
-    function GN(uu) {
-      var Ru;
-      Pm = uu, uu.conn === im && (im = 0);
-      const yu = hm;
-      null !== yu && (null === (Ru = Zm) || void 0 === Ru ? void 0 : Ru.conn) === uu.conn && yu.resume.onInitialInfo(uu)
+    function gw(kk) {
+      var Fk;
+      xX = kk, kk.conn === jX && (jX = 0);
+      const Bk = KX;
+      null !== Bk && (null === (Fk = pX) || void 0 === Fk ? void 0 : Fk.conn) === kk.conn && Bk.resume.onInitialInfo(kk)
     }
 
-    function UN(uu) {
-      var Ru;
-      const yu = aQ;
-      (null === yu || void 0 === yu ? void 0 : yu.conn) === uu && (yu.left = !0, null === (Ru = (0, Cu.i)()) || void 0 === Ru || Ru.socketLeft(), (0, Bu.n)({
+    function Uw(kk) {
+      var Fk;
+      const Bk = FX;
+      (null === Bk || void 0 === Bk ? void 0 : Bk.conn) === kk && (Bk.left = !0, null === (Fk = (0, Lk.g)()) || void 0 === Fk || Fk.socketLeft(), (0, Jk.u)({
         websocketUrl: null
-      }), uN(uu) ? setTimeout((() => {
-        aQ === yu && HN()
-      }), su.c) : HN())
+      }), Bw(kk) ? setTimeout((() => {
+        FX === Bk && Yw()
+      }), ck.i) : Yw())
     }
 
-    function nN(uu, Ru, yu) {
-      let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        Ku = !1;
-      return dX(uu, (() => {
+    function Gw(kk, Fk, Bk) {
+      let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        tk = !1;
+      return Od(kk, (() => {
         const {
-          net: Qu
-        } = uu.rings;
-        Ku = "open" === Ru ? Qu.writeOpen(yu, Eu) : Qu.writeClose(yu, Eu), Ku || uu.crash(uy.n, `a socket ${Ru} did not fit the net-in ring`)
-      })), Ku
+          net: ak
+        } = kk.rings;
+        tk = "open" === Fk ? ak.writeOpen(Bk, Rk) : ak.writeClose(Bk, Rk), tk || kk.crash(FB.q, `a socket ${Fk} did not fit the net-in ring`)
+      })), tk
     }
 
-    function sN(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      if (tN()) {
-        const Eu = "browser" === uu && (0, EK.P)() ? "blockedAfterLoss" : "unsupported";
-        return (0, Cy.reportUnsupportedFallback)(uu, Eu, Ru, yu), void lN(`the wasm client can't run here (${Ru}; ${Eu})`, Eu)
-      }(0, Cy.showUnsupported)(uu, "unsupported", Ru, yu)
+    function Tw(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      if (rw()) {
+        const Rk = "browser" === kk && (0, tt.T)() ? "blockedAfterLoss" : "unsupported";
+        return (0, LB.reportUnsupportedFallback)(kk, Rk, Fk, Bk), void Dw(`the wasm client can't run here (${Fk}; ${Rk})`, Rk)
+      }(0, LB.showUnsupported)(kk, "unsupported", Fk, Bk)
     }
 
-    function tN() {
-      return GJ && "wasm" !== (0, rR.e)(window.location.search)
+    function rw() {
+      return gb && "wasm" !== (0, JF.e)(window.location.search)
     }
 
-    function lN(uu, Ru) {
-      console.warn(`${XQ} ${uu}: reloading on the JS client`), null !== Ru && (0, rR.p)(Ru), (0, rR.l)(null === Ru ? "reloadOntoJs" : "decline");
-      const yu = () => {
-        (0, hu.j)(rR.t)
+    function Dw(kk, Fk) {
+      console.warn(`${Ja} ${kk}: reloading on the JS client`), null !== Fk && (0, JF.o)(Fk), (0, JF.k)(null === Fk ? "reloadOntoJs" : "decline");
+      const Bk = () => {
+        (0, Zk.i)(JF.t)
       };
-      (0, Cy.flushCrashReports)(hu.e).then(yu, yu)
+      (0, LB.flushCrashReports)(Zk.e).then(Bk, Bk)
     }
 
-    function gN(uu, Ru, yu, Eu) {
-      return NJ(uu, Ru, yu, Eu)
+    function zw(kk, Fk, Bk, Rk) {
+      return sb(kk, Fk, Bk, Rk)
     }
 
-    function cN() {
-      null === rJ || null === zQ || zQ.isStopped || lJ || null !== xm || null === UQ || (xm = rJ(UQ, wN, ZN().follow))
+    function Pw() {
+      null === Ab || null === qa || qa.isStopped || rb || null !== fX || null === ca || (fX = Ab(ca, Zw, pw().follow))
     }
 
-    function LN() {
-      var uu, Ru, yu;
-      return null !== (uu = null === (Ru = wQ) || void 0 === Ru || null === (yu = Ru.textures) || void 0 === yu ? void 0 : yu.files()) && void 0 !== uu ? uu : null
+    function hw() {
+      var kk, Fk, Bk;
+      return null !== (kk = null === (Fk = Za) || void 0 === Fk || null === (Bk = Fk.textures) || void 0 === Bk ? void 0 : Bk.files()) && void 0 !== kk ? kk : null
     }
 
-    function zN(uu) {
-      yu.e(260).then((() => yu(40313))).then((Ru => {
+    function qw(kk) {
+      Bk.e(260).then((() => Bk(40150))).then((Fk => {
         let {
-          setIconFileOverrides: yu
-        } = Ru;
-        yu(uu)
-      }), (uu => {
-        console.warn(`${XQ} the item icons couldn't take the texture pack's files`, uu)
+          setIconFileOverrides: Bk
+        } = Fk;
+        Bk(kk)
+      }), (kk => {
+        console.warn(`${Ja} the item icons couldn't take the texture pack's files`, kk)
       }))
     }
 
-    function FN(uu) {
-      ZN().follow((Ru => {
-        null !== Ru && Promise.all([Promise.all([yu.e(193), yu.e(45)]).then((() => yu(42912))), (0, EK.L)()]).then((uu => {
+    function Cw(kk) {
+      pw().follow((Fk => {
+        null !== Fk && Promise.all([Promise.all([Bk.e(193), Bk.e(45)]).then((() => Bk(42797))), (0, tt.P)()]).then((kk => {
           let [{
-            followPagePackFiles: yu
-          }, Eu] = uu;
-          const Ku = null === Eu || (0, fR.l)(Eu) ? "webgl" : Eu.backend;
-          yu(Ru, YE.f, Ku, (uu => {
-            YE.f.setPageFiles(uu)
-          }), wN)
-        }), (Ru => {
-          console.warn(`${XQ} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, Ru), uu()
+            followPagePackFiles: Bk
+          }, Rk] = kk;
+          const tk = null === Rk || (0, kB.k)(Rk) ? "webgl" : Rk.backend;
+          Bk(Fk, xR.h, tk, (kk => {
+            xR.h.setPageFiles(kk)
+          }), Zw)
+        }), (Fk => {
+          console.warn(`${Ja} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, Fk), kk()
         }))
       }))
     }
 
-    function wN(uu, Ru) {
-      console.warn(`${XQ} ${uu}`, Ru)
+    function Zw(kk, Fk) {
+      console.warn(`${Ja} ${kk}`, Fk)
     }
 
-    function ZN() {
-      return FQ ??= new HK({
-        load: uu => Promise.all([yu.e(193), yu.e(51)]).then((() => yu(42914))).then((Ru => {
+    function pw() {
+      return Ca ??= new Yt({
+        load: kk => Promise.all([Bk.e(193), Bk.e(51)]).then((() => Bk(42800))).then((Fk => {
           let {
-            startPageTexturePackFeed: yu
-          } = Ru;
-          return yu(wN, uu)
+            startPageTexturePackFeed: Bk
+          } = Fk;
+          return Bk(Zw, kk)
         })),
-        store: by.f,
-        Px: uu => {
-          oQ.then((() => {
-            (0, Cy.reportTexturePackFeedLoadFailure)(uu, PQ)
+        store: oB.f,
+        ve: kk => {
+          na.then((() => {
+            (0, LB.reportTexturePackFeedLoadFailure)(kk, xa)
           }))
         }
-      }), FQ
+      }), Ca
     }
-    const hN = uu => ZN().follow(uu);
+    const Kw = kk => pw().follow(kk);
 
-    function PN() {
-      return ZN().loaded()
+    function xw() {
+      return pw().loaded()
     }
-    const iN = function(uu, Ru, yu) {
-        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
-          Ku = 0;
-        return async function(Qu, mu) {
-          let Ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
-          const Nu = ++Ku,
-            Xu = Eu() + Ru,
-            Vu = await
-          function(uu, Ru) {
-            let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
-            return new Promise((Eu => {
-              const Ku = setTimeout((() => {
-                Eu(null), uu.then((uu => {
-                  null !== uu && (uu.joinedWithout(), yu(uu))
+    const jw = function(kk, Fk, Bk) {
+        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
+          tk = 0;
+        return async function(ak, Xk) {
+          let bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
+          const wk = ++tk,
+            dk = Rk() + Fk,
+            sk = await
+          function(kk, Fk) {
+            let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
+            return new Promise((Rk => {
+              const tk = setTimeout((() => {
+                Rk(null), kk.then((kk => {
+                  null !== kk && (kk.joinedWithout(), Bk(kk))
                 }))
-              }), Ru);
-              uu.then((uu => {
-                clearTimeout(Ku), Eu(uu)
+              }), Fk);
+              kk.then((kk => {
+                clearTimeout(tk), Rk(kk)
               }))
             }))
-          }(uu(Qu), Ru, (uu => {
-            Nu === Ku && Ju() && mu(uu, Eu() + Ru).catch((uu => {
-              yu("the texture pack step after the join failed", uu)
+          }(kk(ak), Fk, (kk => {
+            wk === tk && bk() && Xk(kk, Rk() + Fk).catch((kk => {
+              Bk("the texture pack step after the join failed", kk)
             }))
           }));
-          return null === Vu ? null : mu(Vu, Xu)
+          return null === sk ? null : Xk(sk, dk)
         }
-      }((uu => (0, yR.i)(uu) ? ZN().request() : ZN().forJoin()), jK.b, wN),
-      YN = function(uu, Ru) {
-        let yu = !1;
+      }((kk => (0, RF.n)(kk) ? pw().request() : pw().forJoin()), it.d, Zw),
+      lw = function(kk, Fk) {
+        let Bk = !1;
         return {
-          setGamePackConfirm: uu => {
-            yu = null !== uu, Ru(uu)
+          setGamePackConfirm: kk => {
+            Bk = null !== kk, Fk(kk)
           },
-          packStep: (Ru, Eu, Ku) => uu(Ru, Eu, (() => yu && Ku()))
+          packStep: (Fk, Rk, tk) => kk(Fk, Rk, (() => Bk && tk()))
         }
-      }(iN, (uu => {
-        ZN().setGamePackConfirm(uu)
+      }(jw, (kk => {
+        pw().setGamePackConfirm(kk)
       }));
 
-    function oN(uu) {
-      YN.setGamePackConfirm(uu)
+    function nw(kk) {
+      lw.setGamePackConfirm(kk)
     }
 
-    function qN() {
-      if (lJ || null !== TJ || null === BJ || null === pJ) return;
+    function Iw() {
+      if (rb || null !== Wb || null === eb || null === mb) return;
       const {
-        backend: uu,
-        canvas: Ru,
-        fallbackReason: yu,
-        adapterVendor: Eu
-      } = pJ, Ku = BJ;
-      BJ = null;
+        backend: kk,
+        canvas: Fk,
+        fallbackReason: Bk,
+        adapterVendor: Rk
+      } = mb, tk = eb;
+      eb = null;
       try {
-        TJ = Ku({
-          backend: uu,
-          canvas: Ru,
-          fallbackReason: yu,
-          adapterVendor: Eu,
-          joinedGame: () => lJ ? null : gm,
-          inGame: vN,
+        Wb = tk({
+          backend: kk,
+          canvas: Fk,
+          fallbackReason: Bk,
+          adapterVendor: Rk,
+          joinedGame: () => rb ? null : zX,
+          inGame: kd,
           shaderPackReach: () => {
-            var uu, Ru;
-            return null !== (uu = null === (Ru = Wm) || void 0 === Ru ? void 0 : Ru.reachInJoinedGame()) && void 0 !== uu ? uu : null
+            var kk, Fk;
+            return null !== (kk = null === (Fk = iX) || void 0 === Fk ? void 0 : Fk.reachInJoinedGame()) && void 0 !== kk ? kk : null
           },
-          msaa: () => SJ > 1,
-          writeCmd: (uu, Ru, yu) => null !== UQ && UQ(uu, Ru, yu),
+          msaa: () => fb > 1,
+          writeCmd: (kk, Fk, Bk) => null !== ca && ca(kk, Fk, Bk),
           takeFailedMeshJobs: () => {
-            var uu, Ru;
-            return null !== (uu = null === (Ru = ym) || void 0 === Ru ? void 0 : Ru.takeFailedMeshJobs()) && void 0 !== uu ? uu : 0
+            var kk, Fk;
+            return null !== (kk = null === (Fk = aX) || void 0 === Fk ? void 0 : Fk.takeFailedMeshJobs()) && void 0 !== kk ? kk : 0
           }
         })
-      } catch (Qu) {
-        console.error(`${XQ} the frame telemetry didn't start`, Qu)
+      } catch (ak) {
+        console.error(`${Ja} the frame telemetry didn't start`, ak)
       }
     }
 
-    function ON(uu, Ru) {
+    function Qw(kk, Fk) {
       try {
-        var yu, Eu, Ku;
-        const Qu = QJ && null !== (yu = null === (Eu = zQ) || void 0 === Eu || null === (Ku = Eu.lastHeader) || void 0 === Ku ? void 0 : Ku.renderPending) && void 0 !== yu ? yu : 0;
-        (0, iy.k)(Ru, uu, vN() && !(null !== mK), Qu)
-      } catch (Qu) {
-        (0, iy.y)(), console.error(`${XQ} the quality steps stopped`, Qu)
+        var Bk, Rk, tk;
+        const ak = bb && null !== (Bk = null === (Rk = qa) || void 0 === Rk || null === (tk = Rk.lastHeader) || void 0 === tk ? void 0 : tk.renderPending) && void 0 !== Bk ? Bk : 0;
+        (0, KB.h)(Fk, kk, kd() && !(null !== wt), ak)
+      } catch (ak) {
+        (0, KB.s)(), console.error(`${Ja} the quality steps stopped`, ak)
       }
     }
 
-    function vN() {
-      return null !== gm && DJ === gm && !lJ
+    function kd() {
+      return null !== zX && Hb === zX && !rb
     }
 
-    function aN(uu) {
-      const Ru = TJ;
-      TJ = null;
+    function Fd(kk) {
+      const Fk = Wb;
+      Wb = null;
       try {
-        null === Ru || void 0 === Ru || Ru.stop()
+        null === Fk || void 0 === Fk || Fk.stop()
       } catch {}
-      console.error(`${XQ} the frame telemetry threw: it stops`, uu)
+      console.error(`${Ja} the frame telemetry threw: it stops`, kk)
     }
 
-    function fN(uu) {
-      var Ru, yu, Eu, Ku;
-      if ((0, KK.c)().fire(uu), "message" === uu.type) {
-        if (Dm++, uu.Dm === zR.Ic.ERROR && null !== Lm) {
-          var Qu;
+    function Bd(kk) {
+      var Fk, Bk, Rk, tk;
+      if ((0, Xt.c)().fire(kk), "message" === kk.type) {
+        if (uX++, kk.UX === PF.ec.ERROR && null !== hX) {
+          var ak;
           const {
-            text: Ru,
-            dropsCache: yu
-          } = (0, nu.r)((new TextDecoder).decode(uu.payload));
-          RJ ||= yu, (null === (Qu = Om) || void 0 === Qu ? void 0 : Qu.conn) === uu.conn && (yJ = Ru)
-        } else if (uu.Dm === FR.$b.ResumeComplete) {
-          var mu;
-          null === (mu = hm) || void 0 === mu || mu.resume.onResumeComplete(uu.conn)
+            text: Fk,
+            dropsCache: Bk
+          } = (0, Uk.l)((new TextDecoder).decode(kk.payload));
+          Rb ||= Bk, (null === (ak = QX) || void 0 === ak ? void 0 : ak.conn) === kk.conn && (tb = Fk)
+        } else if (kk.UX === hF.Tb.ResumeComplete) {
+          var Xk;
+          null === (Xk = KX) || void 0 === Xk || Xk.resume.onResumeComplete(kk.conn)
         }
         return
       }
-      uu.phase === zR.J.Left ? Mm = uu.conn : uu.phase === zR.J.Activated && (null === (Ru = Om) || void 0 === Ru ? void 0 : Ru.conn) === uu.conn ? Om.activated = !0 : uu.phase === zR.J.Resumed ? function(uu) {
-        var Ru, yu;
-        im = uu;
-        const Eu = hm;
-        if (null === Eu || 0 === Eu.heldConn || (null === (Ru = aQ) || void 0 === Ru ? void 0 : Ru.conn) !== uu || !aQ.resume || null === Zm) return;
-        console.info(`${XQ} the game resumed on conn ${uu}, waiting for its InitialInfo`);
-        const Ku = Eu.heldConn;
-        Eu.heldConn = 0, aQ.resume = !1, Zm.conn = uu, (null === (yu = Fm) || void 0 === yu ? void 0 : yu.conn) === Ku && (Fm = {
-          conn: uu,
-          info: Fm.info
-        }), SR.b.apply({
+      kk.phase === PF.y.Left ? MX = kk.conn : kk.phase === PF.y.Activated && (null === (Fk = QX) || void 0 === Fk ? void 0 : Fk.conn) === kk.conn ? QX.activated = !0 : kk.phase === PF.y.Resumed ? function(kk) {
+        var Fk, Bk;
+        jX = kk;
+        const Rk = KX;
+        if (null === Rk || 0 === Rk.heldConn || (null === (Fk = FX) || void 0 === Fk ? void 0 : Fk.conn) !== kk || !FX.resume || null === pX) return;
+        console.info(`${Ja} the game resumed on conn ${kk}, waiting for its InitialInfo`);
+        const tk = Rk.heldConn;
+        Rk.heldConn = 0, FX.resume = !1, pX.conn = kk, (null === (Bk = CX) || void 0 === Bk ? void 0 : Bk.conn) === tk && (CX = {
+          conn: kk,
+          info: CX.info
+        }), yF.b.apply({
           shopInfo: null,
-          _shopVersion: ER.b
+          _shopVersion: tF.d
         })
-      }(uu.conn) : uu.phase === zR.J.Held ? function(uu) {
-        var Ru;
-        const yu = hm,
-          Eu = null !== (Ru = null === yu || void 0 === yu ? void 0 : yu.pendingHold) && void 0 !== Ru ? Ru : null;
-        if (null !== yu && null !== Eu && Eu.conn === uu) return yu.pendingHold = null, yu.heldConn = uu, im = 0, console.warn(`${XQ} the core holds the game, reconnecting`), void yu.resume.onDropped(Eu.token);
-        if (uu === im) {
-          im = 0;
-          const Ru = zQ;
-          null === Ru || Ru.isStopped || (console.info(`${XQ} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), nN(Ru, "close", uu))
+      }(kk.conn) : kk.phase === PF.y.Held ? function(kk) {
+        var Fk;
+        const Bk = KX,
+          Rk = null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.pendingHold) && void 0 !== Fk ? Fk : null;
+        if (null !== Bk && null !== Rk && Rk.conn === kk) return Bk.pendingHold = null, Bk.heldConn = kk, jX = 0, console.warn(`${Ja} the core holds the game, reconnecting`), void Bk.resume.onDropped(Rk.token);
+        if (kk === jX) {
+          jX = 0;
+          const Fk = qa;
+          null === Fk || Fk.isStopped || (console.info(`${Ja} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), Gw(Fk, "close", kk))
         }
-      }(uu.conn) : uu.phase === zR.J.Closed && (null === (yu = hm) || void 0 === yu || null === (Eu = yu.pendingHold) || void 0 === Eu ? void 0 : Eu.conn) === uu.conn && (hm.heldConn === uu.conn ? function(uu) {
-        const Ru = uu.heldConn,
-          yu = uu.dropCode;
-        MN(uu, "refused"), console.info(`${XQ} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
-          eN(Ru, !1), XN(Ru, yu, "", !0)
+      }(kk.conn) : kk.phase === PF.y.Closed && (null === (Bk = KX) || void 0 === Bk || null === (Rk = Bk.pendingHold) || void 0 === Rk ? void 0 : Rk.conn) === kk.conn && (KX.heldConn === kk.conn ? function(kk) {
+        const Fk = kk.heldConn,
+          Bk = kk.dropCode;
+        uw(kk, "refused"), console.info(`${Ja} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
+          Sw(Fk, !1), Vw(Fk, Bk, "", !0)
         }))
-      }(hm) : hm.pendingHold = null);
-      const Ju = Object.keys(zR.J).find((Ru => zR.J[Ru] === uu.phase)),
-        Nu = 0 === uu.code ? "" : ` (code ${uu.code})`;
-      console.info(`${XQ} conn ${uu.conn}: ${null!==Ju&&void 0!==Ju?Ju:uu.phase}${Nu}, ${Dm} raw messages so far`), (null === (Ku = gm) || void 0 === Ku ? void 0 : Ku.conn) !== uu.conn || uu.phase !== zR.J.Left && uu.phase !== zR.J.Closed || fJ(null), zm !== uu.conn || uu.phase !== zR.J.Left && uu.phase !== zR.J.Closed || (zm = null, null === gm && null === Lm && oE.c.setGame(void 0));
-      for (const Vu of [...KJ]) try {
-        Vu(uu.conn, uu.phase, uu.code)
-      } catch (Xu) {
-        (0, wR.m)(Xu, `${XQ} a connection listener threw`)
+      }(KX) : KX.pendingHold = null);
+      const bk = Object.keys(PF.y).find((Fk => PF.y[Fk] === kk.phase)),
+        wk = 0 === kk.code ? "" : ` (code ${kk.code})`;
+      console.info(`${Ja} conn ${kk.conn}: ${null!==bk&&void 0!==bk?bk:kk.phase}${wk}, ${uX} raw messages so far`), (null === (tk = zX) || void 0 === tk ? void 0 : tk.conn) !== kk.conn || kk.phase !== PF.y.Left && kk.phase !== PF.y.Closed || Fw(null), qX !== kk.conn || kk.phase !== PF.y.Left && kk.phase !== PF.y.Closed || (qX = null, null === zX && null === hX && jR.c.setGame(void 0));
+      for (const sk of [...Xb]) try {
+        sk(kk.conn, kk.phase, kk.code)
+      } catch (dk) {
+        (0, qF.r)(dk, `${Ja} a connection listener threw`)
       }
     }
 
-    function uX() {
-      (0, EK.r)(), queueMicrotask((() => {
+    function Rd() {
+      (0, tt.u)(), queueMicrotask((() => {
         try {
-          xX()
-        } catch (uu) {
-          console.warn(`${XQ} stopping before the reload threw`, uu)
-        }(0, Cy.flushCrashReports)(hu.e).then(hu.k, hu.k)
+          fd()
+        } catch (kk) {
+          console.warn(`${Ja} stopping before the reload threw`, kk)
+        }(0, LB.flushCrashReports)(Zk.e).then(Zk.k, Zk.k)
       }))
     }
 
-    function RX() {
-      const uu = zQ;
-      null === uu || uu.isStopped || null === aQ || Am || !uu.hasPendingCommands() || EX(uu, !1, "budget")
+    function td() {
+      const kk = qa;
+      null === kk || kk.isStopped || null === FX || HX || !kk.hasPendingCommands() || Xd(kk, !1, "budget")
     }
 
-    function yX(uu) {
-      var Ru;
-      const yu = gm;
-      uu.persisted || null === yu || (null === (Ru = aQ) || void 0 === Ru ? void 0 : Ru.conn) !== yu.conn || aQ.left || yu.leave()
+    function ad(kk) {
+      var Fk;
+      const Bk = zX;
+      kk.persisted || null === Bk || (null === (Fk = FX) || void 0 === Fk ? void 0 : Fk.conn) !== Bk.conn || FX.left || Bk.leave()
     }
 
-    function EX(uu, Ru, Eu) {
-      let Ku = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const Qu = Am;
-      Am = !0;
+    function Xd(kk, Fk, Rk) {
+      let tk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const ak = HX;
+      HX = !0;
       try {
-        return function(uu, Ru, Eu, Ku) {
-          var Qu, mu, Ju, Nu;
-          if (lJ) return !1;
-          if (dX(uu, QX), lJ || uu.isStopped) return !1;
-          VX() && dm("modelsIn");
-          AN(), km = performance.now(), Mm = null, Im = !1, (0, bu.J)(), null === (Qu = Nm) || void 0 === Qu || Qu.beforeFrame(), mE(km, uu), (0, bu.E)(km, mX), em = !0;
-          const Xu = Ru && XX();
-          let Vu;
+        return function(kk, Fk, Rk, tk) {
+          var ak, Xk, bk, wk;
+          if (rb) return !1;
+          if (Od(kk, wd), rb || kk.isStopped) return !1;
+          Ad() && LX("modelsIn");
+          Nw(), SX = performance.now(), MX = null, gX = !1, (0, Yk.N)(), null === (ak = VX) || void 0 === ak || ak.beforeFrame(), bR(SX, kk), (0, Yk.D)(SX, dd), NX = !0;
+          const dk = Fk && Jd();
+          let sk;
           try {
-            Vu = uu.frame(km, Xu, Eu)
+            sk = kk.frame(SX, dk, Rk)
           } finally {
-            em = !1
+            NX = !1
           }
-          if (!Vu) return !1;
-          xJ.observe(null !== (mu = null === (Ju = uu.lastHeader) || void 0 === Ju ? void 0 : Ju.chunksCancelled) && void 0 !== mu ? mu : 0);
-          const ru = uu.lastFrameKind,
-            Bu = (0, DR.b)(ru);
-          (function(uu) {
-            null !== lK && lK.afterFrame(performance.now(), uu)
-          })(Bu), null === (Nu = WJ) || void 0 === Nu || Nu.frame(uu, km, ru), Ru && (MJ = Bu);
-          Bu && (0, kR.e)(km);
-          if (null !== TJ) try {
-            TJ.frameRan(uu, km, performance.now(), ru)
-          } catch (Su) {
-            aN(Su)
+          if (!sk) return !1;
+          yb.observe(null !== (Xk = null === (bk = kk.lastHeader) || void 0 === bk ? void 0 : bk.chunksCancelled) && void 0 !== Xk ? Xk : 0);
+          const Vk = kk.lastFrameKind,
+            Jk = (0, NF.d)(Vk);
+          (function(kk) {
+            null !== rt && rt.afterFrame(performance.now(), kk)
+          })(Jk), null === (wk = vb) || void 0 === wk || wk.frame(kk, SX, Vk), Fk && (ub = Jk);
+          Jk && (0, OF.b)(SX);
+          if (null !== Wb) try {
+            Wb.frameRan(kk, SX, performance.now(), Vk)
+          } catch (ek) {
+            Fd(ek)
           }
-          "drawn" === ru && NX() && function() {
-            for (const uu of [...RK]) uu()
+          "drawn" === Vk && Vd() && function() {
+            for (const kk of [...Bt]) kk()
           }();
-          uu.forEachNetOut(rX);
-          const xu = aQ;
-          null !== Mm && (null === xu || void 0 === xu ? void 0 : xu.conn) === Mm && BX(xu, su.h);
-          (function(uu) {
-            var Ru;
-            if (dJ) return;
-            null === kJ && XX() && (kJ = performance.now());
-            if (null === Lm && null === gm) return;
-            null === kJ || eJ || (eJ = !0, (0, nR.m)("wasm_startup_loaded", kJ));
-            let yu = 0;
-            null !== gm ? yu = -1 : !0 === (null === (Ru = Om) || void 0 === Ru ? void 0 : Ru.activated) && (yu = ~FR.L.TerrainDrawn);
-            const Eu = uu.headerWord(FR.E.LoadSteps) & yu & ~CJ;
-            if (0 === Eu) return;
-            CJ |= Eu;
-            const Ku = performance.now();
-            for (const [Qu, mu] of Object.entries(JX)) 0 !== (Eu & FR.L[Qu]) && (0, nR.m)(mu, Ku)
-          })(uu), Ru && function(uu) {
-            var Ru, Eu, Ku;
-            if (null === gm || !XX()) return;
-            null === AJ || DJ === gm && !AJ.frame(km, 0 !== (uu.headerWord(FR.E.LoadSteps) & FR.L.TerrainDrawn)) || (AJ = null);
-            const Qu = uu.lastHeader,
-              mu = !QJ || 0 === (null === Qu || void 0 === Qu ? void 0 : Qu.renderPending);
-            !bJ && mu && (bJ = !0, performance.mark(WQ));
-            if (DJ === gm) return;
-            const Ju = null !== (Ru = null === Qu || void 0 === Qu ? void 0 : Qu.firstView) && void 0 !== Ru ? Ru : zR.bb.NotYet;
-            if (QJ && Ju === zR.bb.NotYet) return;
-            if (dJ && (!0 !== (null === (Eu = (0, Cu.i)()) || void 0 === Eu ? void 0 : Eu.isSessionLive) || !mu)) return;
-            DJ = gm;
-            const Nu = gm;
+          kk.forEachNetOut(ed);
+          const Ak = FX;
+          null !== MX && (null === Ak || void 0 === Ak ? void 0 : Ak.conn) === MX && yd(Ak, ck.k);
+          (function(kk) {
+            var Fk;
+            if (ob) return;
+            null === Eb && Jd() && (Eb = performance.now());
+            if (null === hX && null === zX) return;
+            null === Eb || Sb || (Sb = !0, (0, UF.g)("wasm_startup_loaded", Eb));
+            let Bk = 0;
+            null !== zX ? Bk = -1 : !0 === (null === (Fk = QX) || void 0 === Fk ? void 0 : Fk.activated) && (Bk = ~hF.F.TerrainDrawn);
+            const Rk = kk.headerWord(hF.z.LoadSteps) & Bk & ~Ob;
+            if (0 === Rk) return;
+            Ob |= Rk;
+            const tk = performance.now();
+            for (const [ak, Xk] of Object.entries(sd)) 0 !== (Rk & hF.F[ak]) && (0, UF.g)(Xk, tk)
+          })(kk), Fk && function(kk) {
+            var Fk, Rk, tk;
+            if (null === zX || !Jd()) return;
+            null === Nb || Hb === zX && !Nb.frame(SX, 0 !== (kk.headerWord(hF.z.LoadSteps) & hF.F.TerrainDrawn)) || (Nb = null);
+            const ak = kk.lastHeader,
+              Xk = !bb || 0 === (null === ak || void 0 === ak ? void 0 : ak.renderPending);
+            !Lb && Xk && (Lb = !0, performance.mark(ia));
+            if (Hb === zX) return;
+            const bk = null !== (Fk = null === ak || void 0 === ak ? void 0 : ak.firstView) && void 0 !== Fk ? Fk : PF.P.NotYet;
+            if (bb && bk === PF.P.NotYet) return;
+            if (ob && (!0 !== (null === (Rk = (0, Lk.g)()) || void 0 === Rk ? void 0 : Rk.isSessionLive) || !Xk)) return;
+            Hb = zX;
+            const wk = zX;
             if (setTimeout((() => {
-                gm === Nu && (0, nR.k)()
-              }), 0), null === (Ku = Wm) || void 0 === Ku || Ku.playable(), function() {
-                clearTimeout(vQ), vQ = setTimeout((() => {
-                  vN() && kX((uu => {
+                zX === wk && (0, UF.e)()
+              }), 0), null === (tk = iX) || void 0 === tk || tk.playable(), function() {
+                clearTimeout(kX), kX = setTimeout((() => {
+                  kd() && Nd((kk => {
                     let {
-                      prefetchWorldgenWorker: Ru
-                    } = uu;
-                    Ru()
+                      prefetchWorldgenWorker: Fk
+                    } = kk;
+                    Fk()
                   }))
-                }), GQ)
-              }(), dJ) return;
-            dJ = !0, performance.mark(TQ), (0, MK.m)("render") && Promise.all([yu.e(74), yu.e(47)]).then((() => yu(4464))).then((uu => {
+                }), Ua)
+              }(), ob) return;
+            ob = !0, performance.mark(va), (0, ut.p)("render") && Promise.all([Bk.e(74), Bk.e(47)]).then((() => Bk(4416))).then((kk => {
               let {
-                renderDebugPlayable: Ru
-              } = uu;
-              Ru()
-            }), (uu => {
-              console.warn("The render debug topic didn't load", uu)
+                renderDebugPlayable: Fk
+              } = kk;
+              Fk()
+            }), (kk => {
+              console.warn("The render debug topic didn't load", kk)
             }));
-            const Xu = Math.round(performance.now());
-            if (QJ && Ju !== zR.bb.Drawn) {
-              const uu = Ju === zR.bb.HeldBackstop ? "held_draws" : "long";
-              if (console.warn(`${XQ} playable at ${Xu} ms on the first view's ${uu} backstop: it wasn't drawn whole in time`), (0, nR.m)("wasm_view_backstop", Xu, uu), "long" === uu) {
-                var Vu, ru;
-                const uu = null !== (Vu = null === (ru = Zm) || void 0 === ru ? void 0 : ru.game) && void 0 !== Vu ? Vu : "";
-                AJ = new ky.e((() => {
-                  (0, Cy.reportFirstViewNoTerrain)(uu, PQ)
+            const dk = Math.round(performance.now());
+            if (bb && bk !== PF.P.Drawn) {
+              const kk = bk === PF.P.HeldBackstop ? "held_draws" : "long";
+              if (console.warn(`${Ja} playable at ${dk} ms on the first view's ${kk} backstop: it wasn't drawn whole in time`), (0, UF.g)("wasm_view_backstop", dk, kk), "long" === kk) {
+                var sk, Vk;
+                const kk = null !== (sk = null === (Vk = pX) || void 0 === Vk ? void 0 : Vk.game) && void 0 !== sk ? sk : "";
+                Nb = new OB.c((() => {
+                  (0, LB.reportFirstViewNoTerrain)(kk, xa)
                 }))
               }
-            } else console.info(`${XQ} playable at ${Xu} ms${QJ?"":" (no renderer)"}`);
-            setTimeout(VJ, 0), (0, TR.h)().catch((uu => {
-              console.error(`${XQ} item sprites didn't load, so item particles show the missing texture`, uu)
-            })), zE.e.warm()
-          }(uu);
-          (0, uy.E)(uu, {
-            worldgen: um,
-            mesh: ym
+            } else console.info(`${Ja} playable at ${dk} ms${bb?"":" (no renderer)"}`);
+            setTimeout(Jb, 0), (0, mF.e)().catch((kk => {
+              console.error(`${Ja} item sprites didn't load, so item particles show the missing texture`, kk)
+            })), PR.b.warm()
+          }(kk);
+          (0, FB.J)(kk, {
+            worldgen: RX,
+            mesh: aX
           }),
-          function(uu) {
-            uu.forEachEvent(NE);
-            for (const Ru of JE) try {
-              (0, RE.d)(Ru)
-            } catch (Su) {
-              if ((0, wR.g)(Su)) {
-                uu.crashOn(uy.i, Su);
+          function(kk) {
+            kk.forEachEvent(dR);
+            for (const Fk of wR) try {
+              (0, BR.d)(Fk)
+            } catch (ek) {
+              if ((0, qF.h)(ek)) {
+                kk.crashOn(FB.i, ek);
                 break
               }
-              console.error(`${EE} an input action listener threw`, Su)
+              console.error(`${tR} an input action listener threw`, ek)
             }
-            JE.length = 0
-          }(uu), Ku && (0, AR.d)();
-          return !uu.isStopped
-        }(uu, Ru, "all" === Eu || uu.rings.net.cursor >= HQ || uu.netKeptFrames >= dQ, Ku)
+            wR.length = 0
+          }(kk), tk && (0, SF.c)();
+          return !kk.isStopped
+        }(kk, Fk, "all" === Rk || kk.rings.net.cursor >= oa || kk.netKeptFrames >= La, tk)
       } finally {
-        Am = Qu
+        HX = ak
       }
     }
 
-    function KX(uu) {
-      console.error(`${XQ} a frame-start listener threw`, uu)
+    function bd(kk) {
+      console.error(`${Ja} a frame-start listener threw`, kk)
     }
 
-    function QX() {
-      var uu, Ru, yu, Eu;
-      null === (uu = Vm) || void 0 === uu || uu.drain(UQ, nQ), null === (Ru = Sm) || void 0 === Ru || Ru.drain(UQ), null === (yu = pm) || void 0 === yu || yu.drain(performance.now()), XJ(UQ), null === (Eu = xm) || void 0 === Eu || Eu.drain()
+    function wd() {
+      var kk, Fk, Bk, Rk;
+      null === (kk = AX) || void 0 === kk || kk.drain(ca, Ga), null === (Fk = mX) || void 0 === Fk || Fk.drain(ca), null === (Bk = WX) || void 0 === Bk || Bk.drain(performance.now()), Vb(ca), null === (Rk = fX) || void 0 === Rk || Rk.drain()
     }
 
-    function mX(uu) {
-      console.error(`${XQ} a before-frame listener threw`, uu)
+    function dd(kk) {
+      console.error(`${Ja} a before-frame listener threw`, kk)
     }
-    const JX = {
+    const sd = {
       ChunkRequested: "wasm_chunk_requested",
       ChunkStored: "wasm_chunk_stored",
       MeshLanded: "wasm_mesh_landed",
@@ -7705,452 +8090,452 @@ export const modules = {
       TerrainDrawn: "wasm_terrain_drawn"
     };
 
-    function NX() {
-      return QJ && XX()
+    function Vd() {
+      return bb && Jd()
     }
 
-    function XX() {
-      return Tm && VX()
+    function Jd() {
+      return vX && Ad()
     }
 
-    function VX() {
-      return null === Vm || Vm.startupDone
+    function Ad() {
+      return null === AX || AX.startupDone
     }
 
-    function rX(uu, Ru) {
-      const yu = aQ;
-      (null === yu || void 0 === yu ? void 0 : yu.conn) === uu ? BX(yu, Ru) : nm++
+    function ed(kk, Fk) {
+      const Bk = FX;
+      (null === Bk || void 0 === Bk ? void 0 : Bk.conn) === kk ? yd(Bk, Fk) : GX++
     }
 
-    function BX(uu, Ru) {
+    function yd(kk, Fk) {
       const {
-        ws: yu
-      } = uu;
-      return yu.readyState === WebSocket.OPEN ? (yu.send(Ru), !0) : yu.readyState === WebSocket.CONNECTING && uu.pendingBytes + Ru.byteLength <= AQ ? (uu.pending.push(Ru.slice()), uu.pendingBytes += Ru.byteLength, !0) : (nm++, !1)
+        ws: Bk
+      } = kk;
+      return Bk.readyState === WebSocket.OPEN ? (Bk.send(Fk), !0) : Bk.readyState === WebSocket.CONNECTING && kk.pendingBytes + Fk.byteLength <= Ha ? (kk.pending.push(Fk.slice()), kk.pendingBytes += Fk.byteLength, !0) : (GX++, !1)
     }
 
-    function xX() {
-      var uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su, pu, Tu;
-      lJ = !0, IJ.stop(), (0, GK.b)(), lK = null, DN(), (0, bu.I)().unlockPointer(), (0, bu.G)(null), null === (uu = Xm) || void 0 === uu || uu(), Xm = null, null === (Ru = (0, Cu.v)()) || void 0 === Ru || Ru.followCursorAim(null), (0, AR.x)(), (0, Cu.g)(), hQ.stop(), null === (yu = jJ) || void 0 === yu || yu(), jJ = null, null === (Eu = HJ) || void 0 === Eu || Eu(), HJ = null, null === (Ku = TJ) || void 0 === Ku || Ku.stop(), TJ = null, (0, Ay.r)(null), null === (Qu = fQ) || void 0 === Qu || Qu(), fQ = null, null === (mu = um) || void 0 === mu || mu.stop(), um = null, null === (Ju = ym) || void 0 === Ju || Ju.stop(), ym = null, null !== (Nu = wQ) && void 0 !== Nu && null !== (Xu = Nu.textures) && void 0 !== Xu && Xu.assets && zN(null), null === (Vu = wQ) || void 0 === Vu || Vu.stop(), wQ = null, ZQ = null;
-      const Wu = Em;
-      Em = null, Wu && (Wu.stop(), HX(Wu)), null === (ru = Sm) || void 0 === ru || ru.dispose(), Sm = null, null === (Bu = pm) || void 0 === Bu || Bu.dispose(), pm = null, Vm = null, null === (xu = Bm) || void 0 === xu || xu(), Bm = null, null === (Su = Jm) || void 0 === Su || Su(), Jm = null, null === (pu = Nm) || void 0 === pu || pu.stop(), Nm = null, OJ(), oE.c.release(), HN();
-      const ju = xm;
-      xm = null;
+    function fd() {
+      var kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk, sk, Vk, Jk, Ak, ek, yk, fk;
+      rb = !0, Mb.stop(), (0, gt.d)(), rt = null, Hw(), (0, Yk.J)().unlockPointer(), (0, Yk.G)(null), null === (kk = JX) || void 0 === kk || kk(), JX = null, null === (Fk = (0, Lk.n)()) || void 0 === Fk || Fk.followCursorAim(null), (0, SF.C)(), (0, Lk.d)(), Ka.stop(), null === (Bk = ib) || void 0 === Bk || Bk(), ib = null, null === (Rk = Yb) || void 0 === Rk || Rk(), Yb = null, null === (tk = Wb) || void 0 === tk || tk.stop(), Wb = null, (0, SB.j)(null), null === (ak = BX) || void 0 === ak || ak(), BX = null, null === (Xk = RX) || void 0 === Xk || Xk.stop(), RX = null, null === (bk = aX) || void 0 === bk || bk.stop(), aX = null, null !== (wk = Za) && void 0 !== wk && null !== (dk = wk.textures) && void 0 !== dk && dk.assets && qw(null), null === (sk = Za) || void 0 === sk || sk.stop(), Za = null, pa = null;
+      const mk = XX;
+      XX = null, mk && (mk.stop(), Ld(mk)), null === (Vk = mX) || void 0 === Vk || Vk.dispose(), mX = null, null === (Jk = WX) || void 0 === Jk || Jk.dispose(), WX = null, AX = null, null === (Ak = yX) || void 0 === Ak || Ak(), yX = null, null === (ek = sX) || void 0 === ek || ek(), sX = null, null === (yk = VX) || void 0 === yk || yk.stop(), VX = null, Ib(), jR.c.release(), Yw();
+      const Wk = fX;
+      fX = null;
       try {
-        null === ju || void 0 === ju || ju.dispose()
-      } catch (Hu) {
-        console.warn(`${XQ} the sky's images didn't release`, Hu)
-      }(0, FE.g)(null), null === (Tu = cQ) || void 0 === Tu || Tu.pagePreviews().endSession(null === (0, QR.l)())
+        null === Wk || void 0 === Wk || Wk.dispose()
+      } catch (vk) {
+        console.warn(`${Ja} the sky's images didn't release`, vk)
+      }(0, hR.f)(null), null === (fk = Pa) || void 0 === fk || fk.pagePreviews().endSession(null === (0, XF.i)())
     }
 
-    function SX(uu, Ru) {
-      var yu, Eu;
-      const Ku = null !== (yu = null === (Eu = Em) || void 0 === Eu ? void 0 : Eu.details()) && void 0 !== yu ? yu : {},
-        Qu = uu.site === rQ || uu.site === BQ || uu.site === Cy.RENDER_RELOAD_SITE || uu.site === xQ ? uu.error instanceof WebAssembly.RuntimeError || uu.error instanceof qR.b : !(0, fR.o)(uu.error) && (0, uy.z)(uu);
-      Qu && uu.error instanceof Error && (0, QR.P)(uu.error);
-      const mu = Qu || uu.site === uy.o ? (0, Cy.readTrap)(uu.error) : null,
-        Ju = null !== mu && (0, ZR.g)(mu.kind, mu.refusedBytes) ? mu.refusedBytes : 0,
-        Nu = null === Km ? (0, gE.o)(function() {
+    function md(kk, Fk) {
+      var Bk, Rk;
+      const tk = null !== (Bk = null === (Rk = XX) || void 0 === Rk ? void 0 : Rk.details()) && void 0 !== Bk ? Bk : {},
+        ak = kk.site === ea || kk.site === ya || kk.site === LB.RENDER_RELOAD_SITE || kk.site === fa ? kk.error instanceof WebAssembly.RuntimeError || kk.error instanceof lF.d : !(0, kB.m)(kk.error) && (0, FB.D)(kk);
+      ak && kk.error instanceof Error && (0, XF.P)(kk.error);
+      const Xk = ak || kk.site === FB.r ? (0, LB.readTrap)(kk.error) : null,
+        bk = null !== Xk && (0, CF.e)(Xk.kind, Xk.refusedBytes) ? Xk.refusedBytes : 0,
+        wk = null === bX ? (0, rR.p)(function() {
           try {
-            return (0, QR.r)().buffer.byteLength
+            return (0, XF.p)().buffer.byteLength
           } catch {
             return 0
           }
-        }(), Ju, null) : Km.ceilingMayRefuse(Ju),
-        Xu = Ju > 0 && !Nu && tN();
-      var Vu;
-      if (Xu && ((0, rR.p)("oom"), (0, rR.l)("decline"), tJ = !0), xX(), (0, EK.e)()) return console.warn(`${XQ} the session stopped at ${uu.site} as the page reloads`, uu.error), void((0, fR.o)(uu.error) || (null === (Vu = uu.header) || void 0 === Vu ? void 0 : Vu.lastError) === zR.O.CoreBusy || (0, Cy.reportStoppedCore)(uu, Ru, mu, {
-        memoryDetails: Ku,
-        declined: Xu
+        }(), bk, null) : bX.ceilingMayRefuse(bk),
+        dk = bk > 0 && !wk && rw();
+      var sk;
+      if (dk && ((0, JF.o)("oom"), (0, JF.k)("decline"), Tb = !0), fd(), (0, tt.e)()) return console.warn(`${Ja} the session stopped at ${kk.site} as the page reloads`, kk.error), void((0, kB.m)(kk.error) || (null === (sk = kk.header) || void 0 === sk ? void 0 : sk.lastError) === PF.B.CoreBusy || (0, LB.reportStoppedCore)(kk, Fk, Xk, {
+        memoryDetails: tk,
+        declined: dk
       }));
-      (0, Cy.showCrash)(uu, Ru, mu, {
-        memoryDetails: Ku,
-        declined: Xu
+      (0, LB.showCrash)(kk, Fk, Xk, {
+        memoryDetails: tk,
+        declined: dk
       })
     }
 
-    function pX(uu) {
+    function Wd(kk) {
       const {
-        input: Ru,
-        net: yu,
-        worker: Eu
-      } = uu.rings, Ku = uu.optionsDropped, Qu = Ru.dropped + Ku + yu.dropped + Eu.dropped + nm;
-      Qu !== Um && function(uu, Ru) {
-        const yu = performance.now();
-        return !(yu - Gm[uu] < DQ) && (Gm[uu] = yu, console.warn(`${XQ} ${Ru}`), !0)
-      }("dropped", `${Qu} records dropped so far (input ${Ru.dropped}, options ${Ku}, net ${yu.dropped}, worker ${Eu.dropped}, net-out ${nm})`) && (Um = Qu)
+        input: Fk,
+        net: Bk,
+        worker: Rk
+      } = kk.rings, tk = kk.optionsDropped, ak = Fk.dropped + tk + Bk.dropped + Rk.dropped + GX;
+      ak !== cX && function(kk, Fk) {
+        const Bk = performance.now();
+        return !(Bk - UX[kk] < ua) && (UX[kk] = Bk, console.warn(`${Ja} ${Fk}`), !0)
+      }("dropped", `${ak} records dropped so far (input ${Fk.dropped}, options ${tk}, net ${Bk.dropped}, worker ${Rk.dropped}, net-out ${GX})`) && (cX = ak)
     }
 
-    function TX() {
-      var uu, Ru;
-      const yu = (0, jy.c)();
-      if (null === yu) return null;
-      const Eu = (0, dy.g)(yu);
+    function vd() {
+      var kk, Fk;
+      const Bk = (0, vB.b)();
+      if (null === Bk) return null;
+      const Rk = (0, YB.j)(Bk);
       return {
-        ...Eu,
-        horizontal: Math.min(Eu.horizontal, null !== (uu = null === (Ru = Em) || void 0 === Ru ? void 0 : Ru.shedDistanceInUse()) && void 0 !== uu ? uu : 1 / 0)
+        ...Rk,
+        horizontal: Math.min(Rk.horizontal, null !== (kk = null === (Fk = XX) || void 0 === Fk ? void 0 : Fk.shedDistanceInUse()) && void 0 !== kk ? kk : 1 / 0)
       }
     }
 
-    function WX(uu) {
-      var Ru, yu;
+    function Yd(kk) {
+      var Fk, Bk;
       return {
-        samples: QJ ? SJ : null,
-        sunShadows: uu,
-        renderDistance: null !== (Ru = null === (yu = TX()) || void 0 === yu ? void 0 : yu.horizontal) && void 0 !== Ru ? Ru : null
+        samples: bb ? fb : null,
+        sunShadows: kk,
+        renderDistance: null !== (Fk = null === (Bk = vd()) || void 0 === Bk ? void 0 : Bk.horizontal) && void 0 !== Fk ? Fk : null
       }
     }
 
-    function jX() {
-      var uu, Ru, yu;
-      const Eu = TX();
+    function od() {
+      var kk, Fk, Bk;
+      const Rk = vd();
       return {
-        ...null === (uu = Em) || void 0 === uu ? void 0 : uu.pageKillSnapshot(),
-        renderDistance: null !== (Ru = null === Eu || void 0 === Eu ? void 0 : Eu.horizontal) && void 0 !== Ru ? Ru : null,
-        renderDistanceVertical: null !== (yu = null === Eu || void 0 === Eu ? void 0 : Eu.vertical) && void 0 !== yu ? yu : null,
-        chunkCap: Qm,
-        budgetBasis: mm,
-        renderBackend: (0, EK.E)()
+        ...null === (kk = XX) || void 0 === kk ? void 0 : kk.pageKillSnapshot(),
+        renderDistance: null !== (Fk = null === Rk || void 0 === Rk ? void 0 : Rk.horizontal) && void 0 !== Fk ? Fk : null,
+        renderDistanceVertical: null !== (Bk = null === Rk || void 0 === Rk ? void 0 : Rk.vertical) && void 0 !== Bk ? Bk : null,
+        chunkCap: wX,
+        budgetBasis: dX,
+        renderBackend: (0, tt.I)()
       }
     }
 
-    function HX(uu) {
-      console.info(`${XQ} wasm memory at the session's end`, uu.details())
+    function Ld(kk) {
+      console.info(`${Ja} wasm memory at the session's end`, kk.details())
     }
 
-    function dX(uu, Ru) {
-      if (!uu.isStopped) try {
-        Ru()
-      } catch (yu) {
-        uu.crash(uy.q, yu)
+    function Od(kk, Fk) {
+      if (!kk.isStopped) try {
+        Fk()
+      } catch (Bk) {
+        kk.crash(FB.v, Bk)
       }
     }
 
-    function bX() {
-      return Rm ??= yu.e(68).then((() => yu(42923))).catch((uu => {
-        throw Rm = null, uu
-      })), Rm
+    function Ed() {
+      return tX ??= Bk.e(68).then((() => Bk(42804))).catch((kk => {
+        throw tX = null, kk
+      })), tX
     }
-    async function CX() {
+    async function Sd() {
       const {
-        createWorldgenWorker: uu,
-        worldgenWorkerReady: Ru
-      } = await bX();
-      return await Ru(), uu
+        createWorldgenWorker: kk,
+        worldgenWorkerReady: Fk
+      } = await Ed();
+      return await Fk(), kk
     }
 
-    function kX(uu) {
-      var Ru;
-      null === (Ru = Rm) || void 0 === Ru || Ru.then(uu, (() => {}))
+    function Nd(kk) {
+      var Fk;
+      null === (Fk = tX) || void 0 === Fk || Fk.then(kk, (() => {}))
     }
 
-    function eX(uu, Ru, yu) {
-      return async function(uu, Ru, yu) {
+    function Hd(kk, Fk, Bk) {
+      return async function(kk, Fk, Bk) {
         let {
-          stop: Eu,
-          stillWanted: Ku
-        } = yu;
-        const Qu = await (0, jE.h)(uu, {
-          stillWanted: Ku,
+          stop: Rk,
+          stillWanted: tk
+        } = Bk;
+        const ak = await (0, vR.j)(kk, {
+          stillWanted: tk,
           beforeReload: async () => {
-            Eu(), await (0, Cy.flushCrashReports)(hu.e)
+            Rk(), await (0, LB.flushCrashReports)(Zk.e)
           },
-          reload: hu.k
+          reload: Zk.k
         });
-        return Qu || Ru(), Qu
-      }(uu, Ru, {
-        stop: xX,
-        stillWanted: yu
+        return ak || Fk(), ak
+      }(kk, Fk, {
+        stop: fd,
+        stillWanted: Bk
       })
     }
-    let AX = !1;
+    let ud = !1;
 
-    function DX() {
-      return AX = !0, async function(uu, Ru, Eu) {
+    function Md() {
+      return ud = !0, async function(kk, Fk, Rk) {
         const {
-          gamePackSource: Ku
-        } = await yu.e(343).then((() => yu(42885)));
-        await YN.packStep(uu, ((yu, Eu) => yu.packForGame(uu, Ku(Ru), Eu)), Eu)
+          gamePackSource: tk
+        } = await Bk.e(343).then((() => Bk(42770)));
+        await lw.packStep(kk, ((Bk, Rk) => Bk.packForGame(kk, tk(Fk), Rk)), Rk)
       }(...arguments)
     }
 
-    function MX(uu) {
-      ! function(uu, Ru) {
-        uu((uu => {
-          null === uu || void 0 === uu || uu.subscribe((uu => {
+    function gd(kk) {
+      ! function(kk, Fk) {
+        kk((kk => {
+          null === kk || void 0 === kk || kk.subscribe((kk => {
             let {
-              pack: yu,
-              gameSource: Eu
-            } = uu;
-            Ru(null === Eu || null === yu ? null : {
-              pack: yu,
-              source: "" === Eu ? null : Eu
+              pack: Bk,
+              gameSource: Rk
+            } = kk;
+            Fk(null === Rk || null === Bk ? null : {
+              pack: Bk,
+              source: "" === Rk ? null : Rk
             })
           }))
         }))
-      }(hN, uu)
+      }(Kw, kk)
     }
-    let IX = !1,
-      GX = null,
-      UX = !1,
-      nX = !1;
+    let Ud = !1,
+      cd = null,
+      Gd = !1,
+      Td = !1;
 
-    function sX() {
-      var uu;
-      IX || (IX = !0, wJ("play", wu), (0, Bu.k)(new iX), Ju.gameBridge.attach(Uu), zX().catch((() => {})), (0, Cu.z)((uu => {
-        uR(uu.setTextHost)
-      })), uu = gX, uJ.add(uu), function(uu) {
-        for (const Ru of jm) uu(Ru);
-        Hm.add(uu)
-      }((uu => {
-        lX(tX[uu])
+    function rd() {
+      var kk;
+      Ud || (Ud = !0, Cb("play", qk), (0, Jk.s)(new ld), bk.gameBridge.attach(gk), Cd().catch((() => {})), (0, Lk.o)((kk => {
+        FF(kk.setTextHost)
+      })), kk = Pd, Bb.add(kk), function(kk) {
+        for (const Fk of YX) kk(Fk);
+        oX.add(kk)
+      }((kk => {
+        zd(Dd[kk])
       })))
     }
-    const tX = {
-      booted: Qu.p.INITIALISE_NOA,
-      texturesIn: Qu.p.REGISTRATION,
-      modelsIn: Qu.p.SETUP_LIFEFORMS
+    const Dd = {
+      booted: ak.k.INITIALISE_NOA,
+      texturesIn: ak.k.REGISTRATION,
+      modelsIn: ak.k.SETUP_LIFEFORMS
     };
 
-    function lX(uu) {
-      Nu.k.Op("matchmakeAndPlayStepCompleted", {
-        step: uu,
+    function zd(kk) {
+      wk.o.Hf("matchmakeAndPlayStepCompleted", {
+        step: kk,
         totalSubSteps: 1
       })
     }
 
-    function gX(uu) {
-      if (!UX) return;
+    function Pd(kk) {
+      if (!Gd) return;
       const {
-        gameNameWithVariation: Ru,
-        lobbyName: yu
-      } = (0, Bu.c)();
-      if (uu.code === Eu.c.serverUpdating.code) return (new iX).leaveLive(), void LX(Ru, yu);
-      Nu.k.Op("unwantedLeftGame", {
-        reason: cX(uu),
-        requiresRefresh: uu.requiresRefresh,
-        canReconnect: null !== uu.reconnect,
-        automaticallyReconnect: uu.reconnecting,
-        canPlayAgain: uu.canPlayAgain,
-        gameNameWithVariation: Ru,
-        lobbyName: yu
-      }), (new iX).leaveLive()
+        gameNameWithVariation: Fk,
+        lobbyName: Bk
+      } = (0, Jk.e)();
+      if (kk.code === Rk.e.serverUpdating.code) return (new ld).leaveLive(), void qd(Fk, Bk);
+      wk.o.Hf("unwantedLeftGame", {
+        reason: hd(kk),
+        requiresRefresh: kk.requiresRefresh,
+        canReconnect: null !== kk.reconnect,
+        automaticallyReconnect: kk.reconnecting,
+        canPlayAgain: kk.canPlayAgain,
+        gameNameWithVariation: Fk,
+        lobbyName: Bk
+      }), (new ld).leaveLive()
     }
 
-    function cX(uu) {
-      return null !== uu.reasonKey ? {
-        translationKey: uu.reasonKey
-      } : "gameOrPluginKick" === uu.name ? uu.reason : `You have disconnected from the server.\n${uu.reason}`
+    function hd(kk) {
+      return null !== kk.reasonKey ? {
+        translationKey: kk.reasonKey
+      } : "gameOrPluginKick" === kk.name ? kk.reason : `You have disconnected from the server.\n${kk.reason}`
     }
 
-    function LX(uu, Ru) {
-      var Eu;
-      Eu = (0, Xu.u)(uu, Ru), Promise.resolve().then((() => yu(1467))).then((uu => {
+    function qd(kk, Fk) {
+      var Rk;
+      Rk = (0, dk.D)(kk, Fk), Promise.resolve().then((() => Bk(1459))).then((kk => {
         let {
-          navigatePreserveSearch: Ru
-        } = uu;
-        Ru(Eu)
-      })).catch((uu => {
-        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", uu), (0, hu.g)(Eu)
+          navigatePreserveSearch: Fk
+        } = kk;
+        Fk(Rk)
+      })).catch((kk => {
+        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", kk), (0, Zk.f)(Rk)
       }))
     }
 
-    function zX() {
-      return GX ??= Promise.all([yu.e(69), yu.e(72), yu.e(71), yu.e(70), yu.e(83), yu.e(259), yu.e(199), yu.e(216), yu.e(237), yu.e(212), yu.e(46)]).then((() => yu(40253))).then((uu => {
+    function Cd() {
+      return cd ??= Promise.all([Bk.e(69), Bk.e(72), Bk.e(71), Bk.e(70), Bk.e(83), Bk.e(259), Bk.e(199), Bk.e(216), Bk.e(237), Bk.e(212), Bk.e(46)]).then((() => Bk(40095))).then((kk => {
         try {
-          uu.attachPlayGameSources()
-        } catch (Ru) {
-          throw console.error("[bloxd-wasm-client] the play sources did not attach", Ru),
-            function(uu) {
-              oQ.then((Ru => {
-                null === Ru || Ru.isStopped || lJ ? console.warn(`${XQ} the play sources threw as they attached, after the client stopped`, uu) : SX({
-                  site: xQ,
-                  error: uu,
+          kk.attachPlayGameSources()
+        } catch (Fk) {
+          throw console.error("[bloxd-wasm-client] the play sources did not attach", Fk),
+            function(kk) {
+              na.then((Fk => {
+                null === Fk || Fk.isStopped || rb ? console.warn(`${Ja} the play sources threw as they attached, after the client stopped`, kk) : md({
+                  site: fa,
+                  error: kk,
                   header: null
-                }, PQ)
+                }, xa)
               }))
-            }(Ru), Ru
+            }(Fk), Fk
         }
-      }), (uu => {
-        throw GX = null, new Cu.e(uu)
-      })), GX
+      }), (kk => {
+        throw cd = null, new Lk.c(kk)
+      })), cd
     }
-    async function FX(uu, Ru) {
-      sX(), AX = !0, UX = !0;
-      let yu = {
-          place: uu.place,
-          matchedAt: uu.matchedAt
+    async function Zd(kk, Fk) {
+      rd(), ud = !0, Gd = !0;
+      let Bk = {
+          place: kk.place,
+          matchedAt: kk.matchedAt
         },
-        mu = uu.place.gameNameWithVariation;
-      const Ju = (0, ru.h)();
-      let Nu = null;
-      const Xu = await iJ({
+        Xk = kk.place.gameNameWithVariation;
+      const bk = (0, Vk.f)();
+      let wk = null;
+      const dk = await xb({
         matchmake: async () => {
-          let Ru = yu;
-          if (yu = null, null === Ru) {
-            const yu = await uu.rematch();
-            if (yu.isError()) throw Nu = yu.asError().forward(), new Error(yu.asError().message);
-            Ru = {
-              place: yu.getValue(),
+          let Fk = Bk;
+          if (Bk = null, null === Fk) {
+            const Bk = await kk.rematch();
+            if (Bk.isError()) throw wk = Bk.asError().forward(), new Error(Bk.asError().message);
+            Fk = {
+              place: Bk.getValue(),
               matchedAt: performance.now()
             }
           }
-          mu = Ru.place.gameNameWithVariation;
+          Xk = Fk.place.gameNameWithVariation;
           return {
-            target: await (0, lu.e)(uu.userContext, Ru.place, PN(), Ju),
-            matchedAt: Ru.matchedAt,
-            freshMs: lu.b
+            target: await (0, Tk.e)(kk.userContext, Fk.place, xw(), bk),
+            matchedAt: Fk.matchedAt,
+            freshMs: Tk.c
           }
         },
-        pageReady: zX,
-        onFailure: (uu, Ru) => {
-          null === Nu && function(uu, Ru) {
-            (0, Cy.reportPageJoinFailure)(uu, PQ, Ru)
-          }(uu, {
-            sinceJoinStartMs: Ru,
-            game: mu
+        pageReady: Cd,
+        onFailure: (kk, Fk) => {
+          null === wk && function(kk, Fk) {
+            (0, LB.reportPageJoinFailure)(kk, xa, Fk)
+          }(kk, {
+            sinceJoinStartMs: Fk,
+            game: Xk
           })
         },
         rejoin: () => () => {},
-        invalidateTrafficCode: () => uu.userContext.invalidateTrafficCode(),
-        signal: Ru
+        invalidateTrafficCode: () => kk.userContext.invalidateTrafficCode(),
+        signal: Fk
       });
-      switch (Xu.kind) {
+      switch (dk.kind) {
         case "joined":
-          if (Ju) {
+          if (bk) {
             const {
-              game: uu
-            } = Xu;
-            (0, ru.u)((() => {
-              uu.endJoinAd()
+              game: kk
+            } = dk;
+            (0, Vk.t)((() => {
+              kk.endJoinAd()
             }))
           }
-          return nX || (nX = !0, (0, pu.d)()), UX ? (lX(Qu.p.CONNECT_TO_GAME_SERVER), lX(Qu.p.SHADER_PACK), function() {
-            var uu, Ru;
-            return null !== (uu = null === (Ru = Wm) || void 0 === Ru ? void 0 : Ru.runsInJoinedGame()) && void 0 !== uu && uu
-          }() && (0, Su.f)(uu.userContext, mu).catch((uu => {
-            console.error("Failed to report the shader pack session", uu)
+          return Td || (Td = !0, (0, yk.b)()), Gd ? (zd(ak.k.CONNECT_TO_GAME_SERVER), zd(ak.k.SHADER_PACK), function() {
+            var kk, Fk;
+            return null !== (kk = null === (Fk = iX) || void 0 === Fk ? void 0 : Fk.runsInJoinedGame()) && void 0 !== kk && kk
+          }() && (0, ek.h)(kk.userContext, Xk).catch((kk => {
+            console.error("Failed to report the shader pack session", kk)
           })), function() {
-            const uu = function() {
-              var uu, Ru;
-              return null !== (uu = null === (Ru = Wm) || void 0 === Ru ? void 0 : Ru.couldntRunInJoinedGame()) && void 0 !== uu ? uu : null
+            const kk = function() {
+              var kk, Fk;
+              return null !== (kk = null === (Fk = iX) || void 0 === Fk ? void 0 : Fk.couldntRunInJoinedGame()) && void 0 !== kk ? kk : null
             }();
-            null !== uu && (0, Su.e)(uu)
-          }(), Ku.c.value(void 0)) : PX("The server ended the game as it joined");
+            null !== kk && (0, ek.e)(kk)
+          }(), tk.c.value(void 0)) : jd("The server ended the game as it joined");
         case "failed":
-          if (!Xu.reloading) {
-            if (null !== Nu) return Nu;
-            if ((Xu.error instanceof su.l || Xu.error instanceof su.b) && Xu.error.code === Eu.c.serverUpdating.code) {
-              if (Ru.aborted) return PX("Left the game while it loaded");
+          if (!dk.reloading) {
+            if (null !== wk) return wk;
+            if ((dk.error instanceof ck.n || dk.error instanceof ck.e) && dk.error.code === Rk.e.serverUpdating.code) {
+              if (Fk.aborted) return jd("Left the game while it loaded");
               const {
-                gameNameWithVariation: uu,
-                lobbyName: yu
-              } = (0, Bu.c)();
-              return LX(uu, yu), PX("The server is updating")
+                gameNameWithVariation: kk,
+                lobbyName: Bk
+              } = (0, Jk.e)();
+              return qd(kk, Bk), jd("The server is updating")
             }
-            return Xu.error instanceof Zu.i ? Ku.c.errorWithCode(Xu.error.messageKey, Qu.p.SHADER_PACK, {
+            return dk.error instanceof Ck.e ? tk.c.errorWithCode(dk.error.messageKey, ak.k.SHADER_PACK, {
               severity: "medium"
-            }) : Ku.c.errorWithCode(function(uu) {
-              if (uu instanceof su.v || uu instanceof Hu.i) return uu.message;
-              if (wX(uu)) return (0, nu.p)(uu.code, uu.serverText);
-              return nu.j
-            }(Xu.error), Qu.p.CONNECT_TO_GAME_SERVER, {
-              error: ZX(Xu.error) ? Xu.error : void 0,
-              severity: hX(Xu.error),
-              gameServerUnreachable: (0, tu.e)(Xu.error),
-              rematch: (0, Wu.c)(Xu.error),
-              gameRefused: (0, ju.c)(Xu.error)
+            }) : tk.c.errorWithCode(function(kk) {
+              if (kk instanceof ck.y || kk instanceof vk.e) return kk.message;
+              if (pd(kk)) return (0, Uk.j)(kk.code, kk.serverText);
+              return Uk.f
+            }(dk.error), ak.k.CONNECT_TO_GAME_SERVER, {
+              error: Kd(dk.error) ? dk.error : void 0,
+              severity: xd(dk.error),
+              gameServerUnreachable: (0, Gk.d)(dk.error),
+              rematch: (0, mk.e)(dk.error),
+              gameRefused: (0, Wk.c)(dk.error)
             })
           }
-          return PX("Reloading into the new build");
+          return jd("Reloading into the new build");
         case "stopped":
-          return PX("The game client stopped, and shows why");
-        case "Ty":
-          return PX("Left the game while it loaded")
+          return jd("The game client stopped, and shows why");
+        case "yB":
+          return jd("Left the game while it loaded")
       }
     }
 
-    function wX(uu) {
-      return uu instanceof su.l || uu instanceof su.b && "attach" !== uu.stage
+    function pd(kk) {
+      return kk instanceof ck.n || kk instanceof ck.e && "attach" !== kk.stage
     }
 
-    function ZX(uu) {
-      return !(uu instanceof su.v) && !wX(uu) && void 0 === (0, tu.e)(uu)
+    function Kd(kk) {
+      return !(kk instanceof ck.y) && !pd(kk) && void 0 === (0, Gk.d)(kk)
     }
 
-    function hX(uu) {
-      return wX(uu) ? uu instanceof su.b && (0, nu.m)(uu.code).requiresRefresh ? "medium" : "low" : ZX(uu) || uu instanceof su.v ? "medium" : "low"
+    function xd(kk) {
+      return pd(kk) ? kk instanceof ck.e && (0, Uk.g)(kk.code).requiresRefresh ? "medium" : "low" : Kd(kk) || kk instanceof ck.y ? "medium" : "low"
     }
 
-    function PX(uu) {
-      return Ku.c.errorWithCode(uu, Qu.p.CONNECT_TO_GAME_SERVER, {
+    function jd(kk) {
+      return tk.c.errorWithCode(kk, ak.k.CONNECT_TO_GAME_SERVER, {
         severity: "low",
-        Ty: !0
+        yB: !0
       })
     }
-    class iX {
-      leave(uu) {
-        if ((0, du.d)()) {
-          var Ru, yu;
-          if ((0, mu.b)()) return;
-          (0, xu.d)(!0 === (null === (Ru = (0, du.i)()) || void 0 === Ru || null === (yu = Ru.currentViewer) || void 0 === yu ? void 0 : yu.unsavedChanges), uu)
+    class ld {
+      leave(kk) {
+        if ((0, ik.c)()) {
+          var Fk, Bk;
+          if ((0, Xk.b)()) return;
+          (0, Ak.b)(!0 === (null === (Fk = (0, ik.i)()) || void 0 === Fk || null === (Bk = Fk.currentViewer) || void 0 === Bk ? void 0 : Bk.unsavedChanges), kk)
         } else this.leaveLive()
       }
       leaveLive() {
-        var uu;
-        AX && (null === (uu = PN()) || void 0 === uu || uu.endGamePack());
-        if (!UX) return;
-        UX = !1, (0, Tu.h)();
+        var kk;
+        ud && (null === (kk = xw()) || void 0 === kk || kk.endGamePack());
+        if (!Gd) return;
+        Gd = !1, (0, fk.i)();
         try {
-          var Ru;
-          null === (Ru = (0, Cu.v)()) || void 0 === Ru || Ru.clearWasmCameraScreen()
-        } catch (Eu) {
-          console.error("[bloxd-wasm-client] the camera screen didn't clear", Eu)
+          var Fk;
+          null === (Fk = (0, Lk.n)()) || void 0 === Fk || Fk.clearWasmCameraScreen()
+        } catch (Rk) {
+          console.error("[bloxd-wasm-client] the camera screen didn't clear", Rk)
         }
         const {
-          gameNameWithVariation: yu
-        } = (0, Bu.c)();
+          gameNameWithVariation: Bk
+        } = (0, Jk.e)();
         try {
-          yN()
+          tw()
         } finally {
-          (0, Bu.n)({
+          (0, Jk.u)({
             websocketUrl: null
-          }), Nu.k.Op("leaveGame", {
-            gameNameWithVariation: yu
-          }), (0, Vu.Y)()
+          }), wk.o.Hf("leaveGame", {
+            gameNameWithVariation: Bk
+          }), (0, sk.H)()
         }
       }
       isReplay() {
-        return (0, du.d)()
+        return (0, ik.c)()
       }
     }
   },
-  40582: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ku,
-      e: () => Eu,
-      i: () => Ju,
-      m: () => mu
+  40431: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk,
+      d: () => Rk,
+      f: () => bk,
+      i: () => Xk
     });
-    const Eu = 12e4,
-      Ku = 3e4,
-      Qu = {
+    const Rk = 12e4,
+      tk = 3e4,
+      ak = {
         hidden: () => "undefined" !== typeof document && document.hidden,
-        listen: uu => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", uu), () => {
-          document.removeEventListener("visibilitychange", uu)
+        listen: kk => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", kk), () => {
+          document.removeEventListener("visibilitychange", kk)
         })
       };
 
-    function mu(uu) {
-      return `it sent no start within ${Math.round(uu)} ms`
+    function Xk(kk) {
+      return `it sent no start within ${Math.round(kk)} ms`
     }
-    class Ju {
-      constructor(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
-          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Qu;
-        this.timeoutMs = uu, this.onTimeout = Ru, this.now = yu, this.visibility = Eu, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = Eu.listen((() => {
+    class bk {
+      constructor(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ak;
+        this.timeoutMs = kk, this.onTimeout = Fk, this.now = Bk, this.visibility = Rk, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = Rk.listen((() => {
           this.onVisibility()
-        })), Eu.hidden() || this.next()
+        })), Rk.hidden() || this.next()
       }
       cancel() {
         this.pause(), this.unlisten()
@@ -8159,37 +8544,37 @@ export const modules = {
         this.visibility.hidden() ? (this.counted += this.credit(), this.pause()) : null === this.timer && this.next()
       }
       credit() {
-        const uu = this.step;
-        return null === uu ? 0 : Math.min(this.now() - uu.at, uu.ms)
+        const kk = this.step;
+        return null === kk ? 0 : Math.min(this.now() - kk.at, kk.ms)
       }
       pause() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null), this.step = null
       }
       next() {
-        const uu = this.timeoutMs - this.counted;
-        if (uu <= 0) return void this.arm(1e3, (() => {
+        const kk = this.timeoutMs - this.counted;
+        if (kk <= 0) return void this.arm(1e3, (() => {
           this.cancel(), this.onTimeout(this.counted)
         }));
-        const Ru = Math.min(uu, 5e3);
+        const Fk = Math.min(kk, 5e3);
         this.step = {
           at: this.now(),
-          ms: Ru
-        }, this.arm(Ru, (() => {
+          ms: Fk
+        }, this.arm(Fk, (() => {
           this.counted += this.credit(), this.step = null, this.next()
         }))
       }
-      arm(uu, Ru) {
+      arm(kk, Fk) {
         this.timer = setTimeout((() => {
-          this.timer = null, Ru()
-        }), uu)
+          this.timer = null, Fk()
+        }), kk)
       }
     }
   },
-  40454: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Eu
+  40305: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Rk
     });
-    const Eu = {
+    const Rk = {
       roomsPerServerMax: 30,
       timeForPlayerToConnect: 3e4,
       seatReservationSeconds: 15,
@@ -8213,51 +8598,51 @@ export const modules = {
       drainingSessionLobbyFillMs: 3e5
     }
   },
-  38496: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Qu
+  38369: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => ak
     });
-    var Eu = yu(3510);
-    const Ku = ["none", "idle", "now"];
+    var Rk = Bk(3502);
+    const tk = ["none", "idle", "now"];
 
-    function Qu() {
-      const uu = () => (0, Eu.w)();
+    function ak() {
+      const kk = () => (0, Rk.y)();
       return {
-        memoryBytes: () => (0, Eu.r)().buffer.byteLength,
-        reserveUpFront: Ru => uu().qV(Ru),
-        reserveAhead: Ru => uu().oV(Ru),
-        setCeiling: Ru => {
-          uu().OV(Ru)
+        memoryBytes: () => (0, Rk.p)().buffer.byteLength,
+        reserveUpFront: Fk => kk().UV(Fk),
+        reserveAhead: Fk => kk().gV(Fk),
+        setCeiling: Fk => {
+          kk().cV(Fk)
         },
-        lowWater: () => Ku[uu().YV()] ?? "none",
-        stats: () => function(uu) {
-          const Ru = new Uint32Array((0, Eu.r)().buffer, uu, 17),
-            yu = uu => Ru[uu] ?? 0,
-            Ku = uu => ({
-              upFront: yu(uu),
-              ahead: yu(uu + 1),
-              onDemandInFrame: yu(uu + 2),
-              onDemand: yu(uu + 3)
+        lowWater: () => tk[kk().MV()] ?? "none",
+        stats: () => function(kk) {
+          const Fk = new Uint32Array((0, Rk.p)().buffer, kk, 17),
+            Bk = kk => Fk[kk] ?? 0,
+            tk = kk => ({
+              upFront: Bk(kk),
+              ahead: Bk(kk + 1),
+              onDemandInFrame: Bk(kk + 2),
+              onDemand: Bk(kk + 3)
             });
           return {
-            memoryBytes: yu(0),
-            initialBytes: yu(1),
-            liveBytes: yu(2),
-            peakLiveBytes: yu(3),
-            headroomBytes: yu(4),
-            unusedBytes: yu(5),
-            ceilingBytes: yu(6),
-            reservesRefused: yu(7),
-            grows: Ku(8),
-            grownBytes: Ku(12),
-            allocationsRefused: yu(16)
+            memoryBytes: Bk(0),
+            initialBytes: Bk(1),
+            liveBytes: Bk(2),
+            peakLiveBytes: Bk(3),
+            headroomBytes: Bk(4),
+            unusedBytes: Bk(5),
+            ceilingBytes: Bk(6),
+            reservesRefused: Bk(7),
+            grows: tk(8),
+            grownBytes: tk(12),
+            allocationsRefused: Bk(16)
           }
-        }(uu().vV()),
-        takeBallast: () => uu().aV(),
-        takePressure: () => uu().fV()
+        }(kk().GV()),
+        takeBallast: () => kk().TV(),
+        takePressure: () => kk().rV()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

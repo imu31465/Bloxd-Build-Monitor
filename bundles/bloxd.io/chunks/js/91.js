@@ -1,80 +1,80 @@
 export const id = 91;
 export const ids = [91];
 export const modules = {
-  4630: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      Howl: () => Ku.Howl,
-      Howler: () => Ku.Howler,
-      iosAudio: () => Nu,
-      musicOutput: () => Tu,
-      readyAudioContext: () => Wu
+  4575: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      Howl: () => tk.Howl,
+      Howler: () => tk.Howler,
+      iosAudio: () => wk,
+      musicOutput: () => fk,
+      readyAudioContext: () => mk
     });
-    var Eu, Ku = yu(4638),
-      Qu = yu(106);
-    const mu = Ku.Howler;
-    let Ju;
+    var Rk, tk = Bk(4579),
+      ak = Bk(98);
+    const Xk = tk.Howler;
+    let bk;
 
-    function Nu() {
-      return Ju ??= "ios" === (0, Qu.getOperatingSystem)(), Ju
+    function wk() {
+      return bk ??= "ios" === (0, ak.getOperatingSystem)(), bk
     }
 
-    function Xu() {
-      var uu, Ru;
-      if (mu.ctx || !mu.usingWebAudio || "undefined" === typeof AudioContext || !Nu()) return;
-      const yu = navigator.audioSession;
-      let Eu;
-      "auto" === (null === yu || void 0 === yu ? void 0 : yu.type) && (yu.type = "ambient");
+    function dk() {
+      var kk, Fk;
+      if (Xk.ctx || !Xk.usingWebAudio || "undefined" === typeof AudioContext || !wk()) return;
+      const Bk = navigator.audioSession;
+      let Rk;
+      "auto" === (null === Bk || void 0 === Bk ? void 0 : Bk.type) && (Bk.type = "ambient");
       try {
-        Eu = new AudioContext({
+        Rk = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const Ku = Eu.createGain();
-      Ku.gain.setValueAtTime(mu._muted ? 0 : null !== (uu = mu._volume) && void 0 !== uu ? uu : 1, Eu.currentTime), Ku.connect(Eu.destination), mu.ctx = Eu, mu.masterGain = Ku, null === (Ru = mu._setup) || void 0 === Ru || Ru.call(mu)
+      const tk = Rk.createGain();
+      tk.gain.setValueAtTime(Xk._muted ? 0 : null !== (kk = Xk._volume) && void 0 !== kk ? kk : 1, Rk.currentTime), tk.connect(Rk.destination), Xk.ctx = Rk, Xk.masterGain = tk, null === (Fk = Xk._setup) || void 0 === Fk || Fk.call(Xk)
     }
-    mu._mobileUnloaded = !0;
-    const Vu = mu.volume.bind(Ku.Howler);
-    mu.volume = function() {
-      return Xu(), Vu(...arguments)
+    Xk._mobileUnloaded = !0;
+    const sk = Xk.volume.bind(tk.Howler);
+    Xk.volume = function() {
+      return dk(), sk(...arguments)
     };
-    const ru = mu.mute.bind(Ku.Howler);
-    mu.mute = uu => (Xu(), ru(uu));
-    const Bu = Ku.Howl.prototype,
-      xu = Bu.init;
-    Bu.init = function(uu) {
-      return Xu(), xu.call(this, uu)
+    const Vk = Xk.mute.bind(tk.Howler);
+    Xk.mute = kk => (dk(), Vk(kk));
+    const Jk = tk.Howl.prototype,
+      Ak = Jk.init;
+    Jk.init = function(kk) {
+      return dk(), Ak.call(this, kk)
     };
-    let Su = 0;
-    const pu = null === (Eu = mu._autoSuspend) || void 0 === Eu ? void 0 : Eu.bind(Ku.Howler);
+    let ek = 0;
+    const yk = null === (Rk = Xk._autoSuspend) || void 0 === Rk ? void 0 : Rk.bind(tk.Howler);
 
-    function Tu() {
-      Wu();
+    function fk() {
+      mk();
       const {
-        ctx: uu,
-        masterGain: Ru
-      } = mu;
-      return uu && Ru ? {
-        ctx: uu,
-        destination: Ru,
-        holdAwake: uu => {
-          var Ru, yu;
-          (Su += uu ? 1 : -1, uu) ? null === (Ru = mu._autoResume) || void 0 === Ru || Ru.call(mu): null === (yu = mu._autoSuspend) || void 0 === yu || yu.call(mu)
+        ctx: kk,
+        masterGain: Fk
+      } = Xk;
+      return kk && Fk ? {
+        ctx: kk,
+        destination: Fk,
+        holdAwake: kk => {
+          var Fk, Bk;
+          (ek += kk ? 1 : -1, kk) ? null === (Fk = Xk._autoResume) || void 0 === Fk || Fk.call(Xk): null === (Bk = Xk._autoSuspend) || void 0 === Bk || Bk.call(Xk)
         },
         wake: () => {
-          var Ru;
-          "running" !== uu.state && (null === (Ru = mu._autoResume) || void 0 === Ru || Ru.call(mu), uu.resume().catch((() => {})))
+          var Fk;
+          "running" !== kk.state && (null === (Fk = Xk._autoResume) || void 0 === Fk || Fk.call(Xk), kk.resume().catch((() => {})))
         }
       } : null
     }
 
-    function Wu() {
-      var uu;
-      (mu.volume(), mu.ctx && mu.autoUnlock) && (null === (uu = mu._unlockAudio) || void 0 === uu || uu.call(mu))
+    function mk() {
+      var kk;
+      (Xk.volume(), Xk.ctx && Xk.autoUnlock) && (null === (kk = Xk._unlockAudio) || void 0 === kk || kk.call(Xk))
     }
-    pu && (mu._autoSuspend = () => Su > 0 ? Ku.Howler : pu())
+    yk && (Xk._autoSuspend = () => ek > 0 ? tk.Howler : yk())
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

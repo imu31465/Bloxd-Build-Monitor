@@ -1,30 +1,30 @@
-/*! For license information please see q3ynmh.wasmMatchmaking.9182a1c1.chunk.js.LICENSE.txt */
+/*! For license information please see 6ndy1f.wasmMatchmaking.3ef714e7.chunk.js.LICENSE.txt */
 export const id = 59;
 export const ids = [59, 91];
 export const modules = {
-  36381: (uu, Ru) => {
-    function yu(uu) {
-      if (uu && "object" === typeof uu) {
-        var Ru = uu.which || uu.keyCode || uu.charCode;
-        Ru && (uu = Ru)
+  36279: (kk, Fk) => {
+    function Bk(kk) {
+      if (kk && "object" === typeof kk) {
+        var Fk = kk.which || kk.keyCode || kk.charCode;
+        Fk && (kk = Fk)
       }
-      if ("number" === typeof uu) return mu[uu];
-      var yu, Qu = String(uu);
-      return (yu = Eu[Qu.toLowerCase()]) ? yu : (yu = Ku[Qu.toLowerCase()]) || (1 === Qu.length ? Qu.charCodeAt(0) : void 0)
+      if ("number" === typeof kk) return Xk[kk];
+      var Bk, ak = String(kk);
+      return (Bk = Rk[ak.toLowerCase()]) ? Bk : (Bk = tk[ak.toLowerCase()]) || (1 === ak.length ? ak.charCodeAt(0) : void 0)
     }
-    yu.isEventKey = function(uu, Ru) {
-      if (uu && "object" === typeof uu) {
-        var yu = uu.which || uu.keyCode || uu.charCode;
-        if (null === yu || void 0 === yu) return !1;
-        if ("string" === typeof Ru) {
-          var Qu;
-          if (Qu = Eu[Ru.toLowerCase()]) return Qu === yu;
-          if (Qu = Ku[Ru.toLowerCase()]) return Qu === yu
-        } else if ("number" === typeof Ru) return Ru === yu;
+    Bk.isEventKey = function(kk, Fk) {
+      if (kk && "object" === typeof kk) {
+        var Bk = kk.which || kk.keyCode || kk.charCode;
+        if (null === Bk || void 0 === Bk) return !1;
+        if ("string" === typeof Fk) {
+          var ak;
+          if (ak = Rk[Fk.toLowerCase()]) return ak === Bk;
+          if (ak = tk[Fk.toLowerCase()]) return ak === Bk
+        } else if ("number" === typeof Fk) return Fk === Bk;
         return !1
       }
     };
-    var Eu = (Ru = uu.exports = yu).code = Ru.codes = {
+    var Rk = (Fk = kk.exports = Bk).code = Fk.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      Ku = Ru.aliases = {
+      tk = Fk.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (Qu = 97; Qu < 123; Qu++) Eu[String.fromCharCode(Qu)] = Qu - 32;
-    for (var Qu = 48; Qu < 58; Qu++) Eu[Qu - 48] = Qu;
-    for (Qu = 1; Qu < 13; Qu++) Eu["f" + Qu] = Qu + 111;
-    for (Qu = 0; Qu < 10; Qu++) Eu["numpad " + Qu] = Qu + 96;
-    var mu = Ru.names = Ru.title = {};
-    for (Qu in Eu) mu[Eu[Qu]] = Qu;
-    for (var Ju in Ku) Eu[Ju] = Ku[Ju]
+    for (ak = 97; ak < 123; ak++) Rk[String.fromCharCode(ak)] = ak - 32;
+    for (var ak = 48; ak < 58; ak++) Rk[ak - 48] = ak;
+    for (ak = 1; ak < 13; ak++) Rk["f" + ak] = ak + 111;
+    for (ak = 0; ak < 10; ak++) Rk["numpad " + ak] = ak + 96;
+    var Xk = Fk.names = Fk.title = {};
+    for (ak in Rk) Xk[Rk[ak]] = ak;
+    for (var bk in tk) Rk[bk] = tk[bk]
   },
-  36539: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => mu
+  36427: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Xk
     });
-    var Eu = yu(64);
-    const Ku = Eu.useLayoutEffect;
-    const Qu = function(uu) {
-      var Ru = (0, Eu.useRef)(uu);
-      return Ku((function() {
-        Ru.current = uu
-      })), Ru
+    var Rk = Bk(61);
+    const tk = Rk.useLayoutEffect;
+    const ak = function(kk) {
+      var Fk = (0, Rk.useRef)(kk);
+      return tk((function() {
+        Fk.current = kk
+      })), Fk
     };
-    var mu = function(uu) {
-      var Ru = Qu(uu);
-      (0, Eu.useEffect)((function() {
-        var uu = function(uu) {
-          var yu;
-          if (null != Ru.current && (yu = Ru.current(uu)), uu.defaultPrevented && (uu.returnValue = ""), "string" === typeof yu) return uu.returnValue = yu, yu
+    var Xk = function(kk) {
+      var Fk = ak(kk);
+      (0, Rk.useEffect)((function() {
+        var kk = function(kk) {
+          var Bk;
+          if (null != Fk.current && (Bk = Fk.current(kk)), kk.defaultPrevented && (kk.returnValue = ""), "string" === typeof Bk) return kk.returnValue = Bk, Bk
         };
-        return window.addEventListener("beforeunload", uu),
+        return window.addEventListener("beforeunload", kk),
           function() {
-            window.removeEventListener("beforeunload", uu)
+            window.removeEventListener("beforeunload", kk)
           }
       }), [])
     }
   },
-  36422: uu => {
-    var Ru, yu = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      Eu = /OS X/.test(yu),
-      Ku = /Opera/.test(yu),
-      Qu = !/like Gecko/.test(yu) && !Ku,
-      mu = uu.exports = {
-        0: Eu ? "<menu>" : "<UNK>",
+  36313: kk => {
+    var Fk, Bk = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Rk = /OS X/.test(Bk),
+      tk = /Opera/.test(Bk),
+      ak = !/like Gecko/.test(Bk) && !tk,
+      Xk = kk.exports = {
+        0: Rk ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: Eu ? "<meta>" : "<menu>",
+        93: Rk ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: Eu && Qu ? "-" : "<volume-mute>",
+        173: Rk && ak ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: Ku ? "`" : "<unicode>",
+        231: tk ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,454 +234,454 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (Ru = 58; Ru < 65; ++Ru) mu[Ru] = String.fromCharCode(Ru);
-    for (Ru = 48; Ru < 58; ++Ru) mu[Ru] = Ru - 48 + "";
-    for (Ru = 65; Ru < 91; ++Ru) mu[Ru] = String.fromCharCode(Ru);
-    for (Ru = 96; Ru < 106; ++Ru) mu[Ru] = "<num-" + (Ru - 96) + ">";
-    for (Ru = 112; Ru < 136; ++Ru) mu[Ru] = "F" + (Ru - 111)
+    for (Fk = 58; Fk < 65; ++Fk) Xk[Fk] = String.fromCharCode(Fk);
+    for (Fk = 48; Fk < 58; ++Fk) Xk[Fk] = Fk - 48 + "";
+    for (Fk = 65; Fk < 91; ++Fk) Xk[Fk] = String.fromCharCode(Fk);
+    for (Fk = 96; Fk < 106; ++Fk) Xk[Fk] = "<num-" + (Fk - 96) + ">";
+    for (Fk = 112; Fk < 136; ++Fk) Xk[Fk] = "F" + (Fk - 111)
   },
-  36457: (uu, Ru, yu) => {
-    function Eu(uu, Ru, yu, Eu) {
-      return !(yu && !uu.aimable) && (!Ru || uu.gun && "head" !== Eu)
+  36355: (kk, Fk, Bk) => {
+    function Rk(kk, Fk, Bk, Rk) {
+      return !(Bk && !kk.aimable) && (!Fk || kk.gun && "head" !== Rk)
     }
 
-    function Ku(uu) {
-      return Math.max(.1 * uu, 1)
+    function tk(kk) {
+      return Math.max(.1 * kk, 1)
     }
 
-    function Qu(uu, Ru) {
-      return !uu && Ru
+    function ak(kk, Fk) {
+      return !kk && Fk
     }
-    yu.d(Ru, {
-      c: () => Qu,
-      e: () => Ku,
-      g: () => Eu
+    Bk.d(Fk, {
+      b: () => ak,
+      e: () => tk,
+      h: () => Rk
     })
   },
-  36459: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ju,
-      f: () => mu
+  36359: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => bk,
+      g: () => Xk
     });
-    let Eu = null;
-    const Ku = {
+    let Rk = null;
+    const tk = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      Qu = {
-        crosshairAccuracy: uu => {
-          const Ru = Ku.crosshairAccuracy.at(-1);
-          Ru ? Ru.hook(uu) : Eu = uu
+      ak = {
+        crosshairAccuracy: kk => {
+          const Fk = tk.crosshairAccuracy.at(-1);
+          Fk ? Fk.hook(kk) : Rk = kk
         },
-        turnDamageIndicators: uu => {
-          var Ru;
-          null === (Ru = Ku.turnDamageIndicators.at(-1)) || void 0 === Ru || Ru.hook(uu)
+        turnDamageIndicators: kk => {
+          var Fk;
+          null === (Fk = tk.turnDamageIndicators.at(-1)) || void 0 === Fk || Fk.hook(kk)
         }
       };
 
-    function mu(uu, Ru) {
-      const yu = {
-          hook: Ru
+    function Xk(kk, Fk) {
+      const Bk = {
+          hook: Fk
         },
-        mu = Ku[uu];
-      if (mu.push(yu), "crosshairAccuracy" === uu && null !== Eu) {
-        const uu = Eu;
-        Eu = null, Qu.crosshairAccuracy(uu)
+        Xk = tk[kk];
+      if (Xk.push(Bk), "crosshairAccuracy" === kk && null !== Rk) {
+        const kk = Rk;
+        Rk = null, ak.crosshairAccuracy(kk)
       }
       return () => {
-        const uu = mu.indexOf(yu); - 1 !== uu && mu.splice(uu, 1)
+        const kk = Xk.indexOf(Bk); - 1 !== kk && Xk.splice(kk, 1)
       }
     }
 
-    function Ju() {
-      return Qu
+    function bk() {
+      return ak
     }
   },
-  6436: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ku,
-      h: () => Qu
+  6361: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => tk,
+      e: () => ak
     });
-    var Eu = yu(47);
-    const Ku = "shaderPack";
-    async function Qu() {
-      var uu;
-      let Ru = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (uu = await Eu.f.getItem(Ku, Ru)) && void 0 !== uu ? uu : null
+    var Rk = Bk(42);
+    const tk = "shaderPack";
+    async function ak() {
+      var kk;
+      let Fk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (kk = await Rk.f.getItem(tk, Fk)) && void 0 !== kk ? kk : null
     }
   },
-  8663: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu,
-      f: () => Ku
+  8583: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => ak,
+      d: () => tk
     });
-    let Eu = !1;
+    let Rk = !1;
 
-    function Ku() {
-      Eu = !0
+    function tk() {
+      Rk = !0
     }
 
-    function Qu() {
-      return Eu
+    function ak() {
+      return Rk
     }
   },
-  36300: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      InGameUi: () => Hu.c,
-      LobbyLeaderboard: () => du.b,
-      loadCharacterCustomisationUI: () => bu,
-      loadCharacterPreview: () => Cu,
-      matchmakeAndPlay: () => Du,
-      setUpGame: () => ku
+  36173: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      InGameUi: () => vk.b,
+      LobbyLeaderboard: () => ik.d,
+      loadCharacterCustomisationUI: () => Yk,
+      loadCharacterPreview: () => Lk,
+      matchmakeAndPlay: () => Nk,
+      setUpGame: () => Ok
     });
-    var Eu = yu(1217),
-      Ku = yu(174),
-      Qu = yu(27),
-      mu = yu(36304),
-      Ju = yu(36312),
-      Nu = yu(1878),
-      Xu = yu(36332);
+    var Rk = Bk(1195),
+      tk = Bk(152),
+      ak = Bk(22),
+      Xk = Bk(36179),
+      bk = Bk(36188),
+      wk = Bk(1863),
+      dk = Bk(36225);
 
-    function Vu() {
-      return !1 !== Nu.b.get("canCustomiseChar")
+    function sk() {
+      return !1 !== wk.b.get("canCustomiseChar")
     }
-    let ru = !1;
-    var Bu = yu(1280),
-      xu = yu(1224),
-      Su = yu(684),
-      pu = yu(8663);
-    var Tu = yu(8654),
-      Wu = yu(3394),
-      ju = yu(1718);
-    var Hu = yu(36344),
-      du = yu(36766);
+    let Vk = !1;
+    var Jk = Bk(1267),
+      Ak = Bk(1203),
+      ek = Bk(672),
+      yk = Bk(8583);
+    var fk = Bk(8580),
+      mk = Bk(3374),
+      Wk = Bk(1716);
+    var vk = Bk(36240),
+      ik = Bk(36683);
 
-    function bu() {
-      return Promise.all([yu.e(281), yu.e(387)]).then((() => yu(40877)))
-    }
-
-    function Cu() {
-      return yu.e(282).then((() => yu(40884)))
+    function Yk() {
+      return Promise.all([Bk.e(281), Bk.e(387)]).then((() => Bk(40717)))
     }
 
-    function ku() {
-      return (0, Tu.e)()
+    function Lk() {
+      return Bk.e(282).then((() => Bk(40720)))
     }
-    ru || (ru = !0, document.addEventListener("keydown", (uu => {
-        (0, Xu.d)(uu, Vu)
+
+    function Ok() {
+      return (0, fk.e)()
+    }
+    Vk || (Vk = !0, document.addEventListener("keydown", (kk => {
+        (0, dk.b)(kk, sk)
       }))),
-      function(uu) {
-        var Ru;
-        return !0 !== (null === uu || void 0 === uu ? void 0 : uu.saveData) && !/2g$/.test(null !== (Ru = null === uu || void 0 === uu ? void 0 : uu.effectiveType) && void 0 !== Ru ? Ru : "")
-      }(navigator.connection) && (0, Su.c)((() => {
-        (0, pu.c)() || Promise.all([yu.e(74), yu.e(132), yu.e(87), yu.e(55)]).then((() => yu(40334))).then((uu => {
-          (0, pu.c)() || uu.startLoadAheadOfJoin({
-            joinStarted: pu.c,
-            language: xu.f.get().getCurrentLanguageCode()
+      function(kk) {
+        var Fk;
+        return !0 !== (null === kk || void 0 === kk ? void 0 : kk.saveData) && !/2g$/.test(null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.effectiveType) && void 0 !== Fk ? Fk : "")
+      }(navigator.connection) && (0, ek.e)((() => {
+        (0, yk.c)() || Promise.all([Bk.e(74), Bk.e(132), Bk.e(87), Bk.e(55)]).then((() => Bk(40163))).then((kk => {
+          (0, yk.c)() || kk.startLoadAheadOfJoin({
+            joinStarted: yk.c,
+            language: Ak.c.get().getCurrentLanguageCode()
           })
-        }), (uu => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", uu)
+        }), (kk => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", kk)
         }))
       }));
-    const eu = Qu.d.get("router");
-    null === eu ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function uu(Ru) {
-      if ((0, ju.c)(Ru.state.location.pathname)) return void(0, Tu.c)().catch((() => {}));
-      const yu = Ru.subscribe((Eu => {
-        (0, ju.c)(Eu.location.pathname) && (yu(), (0, Wu.b)().then((() => {
-          uu(Ru)
+    const Ek = ak.c.get("router");
+    null === Ek ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function kk(Fk) {
+      if ((0, Wk.b)(Fk.state.location.pathname)) return void(0, fk.d)().catch((() => {}));
+      const Bk = Fk.subscribe((Rk => {
+        (0, Wk.b)(Rk.location.pathname) && (Bk(), (0, mk.d)().then((() => {
+          kk(Fk)
         })))
       }))
-    }(eu), (0, mu.c)();
-    const Au = (0, Ju.e)((async function(uu, Ru) {
+    }(Ek), (0, Xk.b)();
+    const Sk = (0, bk.b)((async function(kk, Fk) {
       let {
-        place: yu,
-        userContext: Qu,
-        direct: mu,
-        rematch: Ju
-      } = uu;
-      const Nu = mu ? 1 / 0 : performance.now();
-      let Xu;
+        place: Bk,
+        userContext: ak,
+        direct: Xk,
+        rematch: bk
+      } = kk;
+      const wk = Xk ? 1 / 0 : performance.now();
+      let dk;
       try {
-        Xu = await (0, Tu.c)()
-      } catch (Vu) {
-        return console.error("The wasm client did not load:", Vu), (0, Bu.n)({
+        dk = await (0, fk.d)()
+      } catch (sk) {
+        return console.error("The wasm client did not load:", sk), (0, Jk.u)({
           websocketUrl: null
-        }), Eu.c.errorWithCode(String(Vu), Ku.p.CONNECT_TO_GAME_SERVER, {
-          error: Vu,
-          severity: Ru.aborted ? "low" : "medium",
-          Ty: Ru.aborted
+        }), Rk.c.errorWithCode(String(sk), tk.k.CONNECT_TO_GAME_SERVER, {
+          error: sk,
+          severity: Fk.aborted ? "low" : "medium",
+          yB: Fk.aborted
         })
       }
-      return Xu.playWasmGame({
-        userContext: Qu,
-        place: yu,
-        matchedAt: Nu,
-        rematch: Ju
-      }, Ru)
+      return dk.playWasmGame({
+        userContext: ak,
+        place: Bk,
+        matchedAt: wk,
+        rematch: bk
+      }, Fk)
     }));
 
-    function Du() {
-      return (0, Tu.c)().catch((() => {})), Au(...arguments)
+    function Nk() {
+      return (0, fk.d)().catch((() => {})), Sk(...arguments)
     }
   },
-  8654: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Vu,
-      e: () => ru
+  8580: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => sk,
+      e: () => Vk
     });
-    var Eu = yu(2936),
-      Ku = yu(2184),
-      Qu = yu(2990),
-      mu = yu(4427),
-      Ju = yu(3318),
-      Nu = yu(8663);
-    let Xu = null;
+    var Rk = Bk(2943),
+      tk = Bk(2190),
+      ak = Bk(2992),
+      Xk = Bk(4389),
+      bk = Bk(3309),
+      wk = Bk(8583);
+    let dk = null;
 
-    function Vu() {
-      return mu.c.cancelDownloadForJoin(), (0, Ju.c)(), (0, Ku.g)(), (0, Nu.f)(), (0, Qu.i)(), Promise.all([yu.e(69), yu.e(72), yu.e(71), yu.e(70), yu.e(83), yu.e(259), yu.e(199), yu.e(216), yu.e(237), yu.e(212), yu.e(46)]).then((() => yu(40253))).catch((() => {})), Promise.all([yu.e(74), yu.e(132), yu.e(87), yu.e(55)]).then((() => yu(40334))).then((uu => {
+    function sk() {
+      return Xk.b.cancelDownloadForJoin(), (0, bk.e)(), (0, tk.g)(), (0, wk.d)(), (0, ak.e)(), Promise.all([Bk.e(69), Bk.e(72), Bk.e(71), Bk.e(70), Bk.e(83), Bk.e(259), Bk.e(199), Bk.e(216), Bk.e(237), Bk.e(212), Bk.e(46)]).then((() => Bk(40095))).catch((() => {})), Promise.all([Bk.e(74), Bk.e(132), Bk.e(87), Bk.e(55)]).then((() => Bk(40163))).then((kk => {
         let {
-          startJoinLoad: Ru
-        } = uu;
-        Ru()
-      }), (() => {})), Xu ??= Promise.all([yu.e(71), yu.e(74), yu.e(129), yu.e(73), yu.e(132), yu.e(262), yu.e(186), yu.e(87), yu.e(86), yu.e(85), yu.e(212), yu.e(60)]).then((() => yu(40418))).then((uu => (uu.startWasmPlay(), uu.followPageUiPack((uu => {
-        Eu.c.showGamePack(uu)
-      })), uu)), (uu => {
-        throw Xu = null, uu
-      })), Xu
+          startJoinLoad: Fk
+        } = kk;
+        Fk()
+      }), (() => {})), dk ??= Promise.all([Bk.e(71), Bk.e(74), Bk.e(129), Bk.e(73), Bk.e(132), Bk.e(262), Bk.e(186), Bk.e(87), Bk.e(86), Bk.e(85), Bk.e(212), Bk.e(60)]).then((() => Bk(40278))).then((kk => (kk.startWasmPlay(), kk.followPageUiPack((kk => {
+        Rk.e.showGamePack(kk)
+      })), kk)), (kk => {
+        throw dk = null, kk
+      })), dk
     }
 
-    function ru() {
-      return Promise.all([yu.e(71), yu.e(74), yu.e(129), yu.e(73), yu.e(132), yu.e(262), yu.e(186), yu.e(87), yu.e(86), yu.e(85), yu.e(212), yu.e(60)]).then((() => yu(40418))).then((uu => {
-        uu.startWasmPreviews(), uu.prefetchWasmPreviews()
+    function Vk() {
+      return Promise.all([Bk.e(71), Bk.e(74), Bk.e(129), Bk.e(73), Bk.e(132), Bk.e(262), Bk.e(186), Bk.e(87), Bk.e(86), Bk.e(85), Bk.e(212), Bk.e(60)]).then((() => Bk(40278))).then((kk => {
+        kk.startWasmPreviews(), kk.prefetchWasmPreviews()
       }))
     }
   },
-  4630: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      Howl: () => Ku.Howl,
-      Howler: () => Ku.Howler,
-      iosAudio: () => Nu,
-      musicOutput: () => Tu,
-      readyAudioContext: () => Wu
+  4575: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      Howl: () => tk.Howl,
+      Howler: () => tk.Howler,
+      iosAudio: () => wk,
+      musicOutput: () => fk,
+      readyAudioContext: () => mk
     });
-    var Eu, Ku = yu(4638),
-      Qu = yu(106);
-    const mu = Ku.Howler;
-    let Ju;
+    var Rk, tk = Bk(4579),
+      ak = Bk(98);
+    const Xk = tk.Howler;
+    let bk;
 
-    function Nu() {
-      return Ju ??= "ios" === (0, Qu.getOperatingSystem)(), Ju
+    function wk() {
+      return bk ??= "ios" === (0, ak.getOperatingSystem)(), bk
     }
 
-    function Xu() {
-      var uu, Ru;
-      if (mu.ctx || !mu.usingWebAudio || "undefined" === typeof AudioContext || !Nu()) return;
-      const yu = navigator.audioSession;
-      let Eu;
-      "auto" === (null === yu || void 0 === yu ? void 0 : yu.type) && (yu.type = "ambient");
+    function dk() {
+      var kk, Fk;
+      if (Xk.ctx || !Xk.usingWebAudio || "undefined" === typeof AudioContext || !wk()) return;
+      const Bk = navigator.audioSession;
+      let Rk;
+      "auto" === (null === Bk || void 0 === Bk ? void 0 : Bk.type) && (Bk.type = "ambient");
       try {
-        Eu = new AudioContext({
+        Rk = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const Ku = Eu.createGain();
-      Ku.gain.setValueAtTime(mu._muted ? 0 : null !== (uu = mu._volume) && void 0 !== uu ? uu : 1, Eu.currentTime), Ku.connect(Eu.destination), mu.ctx = Eu, mu.masterGain = Ku, null === (Ru = mu._setup) || void 0 === Ru || Ru.call(mu)
+      const tk = Rk.createGain();
+      tk.gain.setValueAtTime(Xk._muted ? 0 : null !== (kk = Xk._volume) && void 0 !== kk ? kk : 1, Rk.currentTime), tk.connect(Rk.destination), Xk.ctx = Rk, Xk.masterGain = tk, null === (Fk = Xk._setup) || void 0 === Fk || Fk.call(Xk)
     }
-    mu._mobileUnloaded = !0;
-    const Vu = mu.volume.bind(Ku.Howler);
-    mu.volume = function() {
-      return Xu(), Vu(...arguments)
+    Xk._mobileUnloaded = !0;
+    const sk = Xk.volume.bind(tk.Howler);
+    Xk.volume = function() {
+      return dk(), sk(...arguments)
     };
-    const ru = mu.mute.bind(Ku.Howler);
-    mu.mute = uu => (Xu(), ru(uu));
-    const Bu = Ku.Howl.prototype,
-      xu = Bu.init;
-    Bu.init = function(uu) {
-      return Xu(), xu.call(this, uu)
+    const Vk = Xk.mute.bind(tk.Howler);
+    Xk.mute = kk => (dk(), Vk(kk));
+    const Jk = tk.Howl.prototype,
+      Ak = Jk.init;
+    Jk.init = function(kk) {
+      return dk(), Ak.call(this, kk)
     };
-    let Su = 0;
-    const pu = null === (Eu = mu._autoSuspend) || void 0 === Eu ? void 0 : Eu.bind(Ku.Howler);
+    let ek = 0;
+    const yk = null === (Rk = Xk._autoSuspend) || void 0 === Rk ? void 0 : Rk.bind(tk.Howler);
 
-    function Tu() {
-      Wu();
+    function fk() {
+      mk();
       const {
-        ctx: uu,
-        masterGain: Ru
-      } = mu;
-      return uu && Ru ? {
-        ctx: uu,
-        destination: Ru,
-        holdAwake: uu => {
-          var Ru, yu;
-          (Su += uu ? 1 : -1, uu) ? null === (Ru = mu._autoResume) || void 0 === Ru || Ru.call(mu): null === (yu = mu._autoSuspend) || void 0 === yu || yu.call(mu)
+        ctx: kk,
+        masterGain: Fk
+      } = Xk;
+      return kk && Fk ? {
+        ctx: kk,
+        destination: Fk,
+        holdAwake: kk => {
+          var Fk, Bk;
+          (ek += kk ? 1 : -1, kk) ? null === (Fk = Xk._autoResume) || void 0 === Fk || Fk.call(Xk): null === (Bk = Xk._autoSuspend) || void 0 === Bk || Bk.call(Xk)
         },
         wake: () => {
-          var Ru;
-          "running" !== uu.state && (null === (Ru = mu._autoResume) || void 0 === Ru || Ru.call(mu), uu.resume().catch((() => {})))
+          var Fk;
+          "running" !== kk.state && (null === (Fk = Xk._autoResume) || void 0 === Fk || Fk.call(Xk), kk.resume().catch((() => {})))
         }
       } : null
     }
 
-    function Wu() {
-      var uu;
-      (mu.volume(), mu.ctx && mu.autoUnlock) && (null === (uu = mu._unlockAudio) || void 0 === uu || uu.call(mu))
+    function mk() {
+      var kk;
+      (Xk.volume(), Xk.ctx && Xk.autoUnlock) && (null === (kk = Xk._unlockAudio) || void 0 === kk || kk.call(Xk))
     }
-    pu && (mu._autoSuspend = () => Su > 0 ? Ku.Howler : pu())
+    yk && (Xk._autoSuspend = () => ek > 0 ? tk.Howler : yk())
   },
-  36560: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => mu,
-      d: () => Ku,
-      g: () => Eu
+  36460: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Xk,
+      h: () => tk,
+      i: () => Rk
     });
 
-    function Eu(uu) {
-      return uu.replace(/[_\-\s]*\d+$/, "") || uu
+    function Rk(kk) {
+      return kk.replace(/[_\-\s]*\d+$/, "") || kk
     }
 
-    function Ku(uu, Ru, yu) {
-      return yu <= 0 ? 0 : uu * yu / Math.max(Ru, yu)
+    function tk(kk, Fk, Bk) {
+      return Bk <= 0 ? 0 : kk * Bk / Math.max(Fk, Bk)
     }
 
-    function Qu(uu, Ru) {
-      const yu = uu.getDurationMs();
-      return yu > 0 ? uu.loudness * Math.max(0, 1 - (Ru - uu.startMs) / yu) : 0
+    function ak(kk, Fk) {
+      const Bk = kk.getDurationMs();
+      return Bk > 0 ? kk.loudness * Math.max(0, 1 - (Fk - kk.startMs) / Bk) : 0
     }
-    class mu {
+    class Xk {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = uu, this.maxPerGroup = Ru, this.voices = []
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = kk, this.maxPerGroup = Fk, this.voices = []
       }
-      admit(uu) {
-        if (this.voices = this.voices.filter((uu => uu.isAlive())), null !== uu.group) {
-          const Ru = this.voices.filter((Ru => Ru.group === uu.group));
-          if (Ru.length >= this.maxPerGroup && !this.dropLeastWorth(Ru, uu)) return !1
+      admit(kk) {
+        if (this.voices = this.voices.filter((kk => kk.isAlive())), null !== kk.group) {
+          const Fk = this.voices.filter((Fk => Fk.group === kk.group));
+          if (Fk.length >= this.maxPerGroup && !this.dropLeastWorth(Fk, kk)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, uu)) && (this.voices.push(uu), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, kk)) && (this.voices.push(kk), !0)
       }
-      dropLeastWorth(uu, Ru) {
-        let yu = null,
-          Eu = 1 / 0;
-        for (const Ku of uu) {
-          if (!Ku.canStop()) continue;
-          const uu = Qu(Ku, Ru.startMs);
-          uu < Eu && (yu = Ku, Eu = uu)
+      dropLeastWorth(kk, Fk) {
+        let Bk = null,
+          Rk = 1 / 0;
+        for (const tk of kk) {
+          if (!tk.canStop()) continue;
+          const kk = ak(tk, Fk.startMs);
+          kk < Rk && (Bk = tk, Rk = kk)
         }
-        return !(!yu || Ru.loudness < Eu) && (this.voices.splice(this.voices.indexOf(yu), 1), yu.stop(), !0)
+        return !(!Bk || Fk.loudness < Rk) && (this.voices.splice(this.voices.indexOf(Bk), 1), Bk.stop(), !0)
       }
     }
   },
-  36571: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Qu,
-      g: () => mu,
-      h: () => Eu
+  36469: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => ak,
+      d: () => Xk,
+      e: () => Rk
     });
-    class Eu {
-      constructor(uu) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = uu
+    class Rk {
+      constructor(kk) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = kk
       }
-      setMultiplierType(uu, Ru) {
-        var yu;
-        this.multipliers[uu] = Ru, null === (yu = this._onUpdate) || void 0 === yu || yu.call(this)
+      setMultiplierType(kk, Fk) {
+        var Bk;
+        this.multipliers[kk] = Fk, null === (Bk = this._onUpdate) || void 0 === Bk || Bk.call(this)
       }
-      removeMultiplier(uu) {
-        var Ru;
-        delete this.multipliers[uu], null === (Ru = this._onUpdate) || void 0 === Ru || Ru.call(this)
+      removeMultiplier(kk) {
+        var Fk;
+        delete this.multipliers[kk], null === (Fk = this._onUpdate) || void 0 === Fk || Fk.call(this)
       }
-      getMultiplierType(uu) {
-        return this.multipliers[uu]
+      getMultiplierType(kk) {
+        return this.multipliers[kk]
       }
       getTotalMultipliedVal() {
-        let uu = 1;
-        for (const Ru in this.multipliers) uu *= this.multipliers[Ru];
-        return uu
+        let kk = 1;
+        for (const Fk in this.multipliers) kk *= this.multipliers[Fk];
+        return kk
       }
     }
-    class Ku {
+    class tk {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = uu
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = kk
       }
-      setBooleanType(uu, Ru) {
-        const yu = this._getTotalBooleanVal();
-        this.booleans[uu] = !!Ru;
-        const Eu = this.getTotalBooleanVal();
-        var Ku;
-        Eu !== yu && (null === (Ku = this._onUpdate) || void 0 === Ku || Ku.call(this, Eu, this.booleans));
-        return Eu
+      setBooleanType(kk, Fk) {
+        const Bk = this._getTotalBooleanVal();
+        this.booleans[kk] = !!Fk;
+        const Rk = this.getTotalBooleanVal();
+        var tk;
+        Rk !== Bk && (null === (tk = this._onUpdate) || void 0 === tk || tk.call(this, Rk, this.booleans));
+        return Rk
       }
-      removeBoolean(uu) {
-        const Ru = this._getTotalBooleanVal();
-        delete this.booleans[uu];
-        const yu = this._getTotalBooleanVal();
-        var Eu;
-        null !== yu && yu !== Ru && (null === (Eu = this._onUpdate) || void 0 === Eu || Eu.call(this, yu, this.booleans));
-        return null !== yu && void 0 !== yu && yu
+      removeBoolean(kk) {
+        const Fk = this._getTotalBooleanVal();
+        delete this.booleans[kk];
+        const Bk = this._getTotalBooleanVal();
+        var Rk;
+        null !== Bk && Bk !== Fk && (null === (Rk = this._onUpdate) || void 0 === Rk || Rk.call(this, Bk, this.booleans));
+        return null !== Bk && void 0 !== Bk && Bk
       }
-      getBooleanType(uu) {
-        return this.booleans[uu]
+      getBooleanType(kk) {
+        return this.booleans[kk]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var uu;
-        null === (uu = this._onUpdate) || void 0 === uu || uu.call(this, this.getTotalBooleanVal(), this.booleans)
+        var kk;
+        null === (kk = this._onUpdate) || void 0 === kk || kk.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class Qu extends Ku {
+    class ak extends tk {
       getTotalBooleanVal() {
-        const uu = this._getTotalBooleanVal();
-        if (null === uu) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return uu
+        const kk = this._getTotalBooleanVal();
+        if (null === kk) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return kk
       }
       _getTotalBooleanVal() {
-        let uu = !1,
-          Ru = !0;
-        for (const yu in this.booleans) uu = !0, Ru &&= this.booleans[yu];
-        return uu ? Ru : null
+        let kk = !1,
+          Fk = !0;
+        for (const Bk in this.booleans) kk = !0, Fk &&= this.booleans[Bk];
+        return kk ? Fk : null
       }
     }
-    class mu extends Ku {
+    class Xk extends tk {
       getTotalBooleanVal() {
-        const uu = this._getTotalBooleanVal();
-        if (null === uu) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return uu
+        const kk = this._getTotalBooleanVal();
+        if (null === kk) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return kk
       }
       _getTotalBooleanVal() {
-        let uu = !1,
-          Ru = !1;
-        for (const yu in this.booleans) uu = !0, Ru ||= this.booleans[yu];
-        return uu ? Ru : null
+        let kk = !1,
+          Fk = !1;
+        for (const Bk in this.booleans) kk = !0, Fk ||= this.booleans[Bk];
+        return kk ? Fk : null
       }
     }
   },
-  9247: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ku,
-      h: () => Qu
+  9169: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk,
+      d: () => ak
     });
-    var Eu = yu(9205);
-    const Ku = "Air",
-      Qu = Object.freeze(new Eu.e(Ku, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var Rk = Bk(9127);
+    const tk = "Air",
+      ak = Object.freeze(new Rk.g(tk, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  36565: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Qu,
-      e: () => Eu,
-      h: () => Ku
+  36466: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => ak,
+      d: () => Rk,
+      g: () => tk
     });
-    const Eu = 15,
-      Ku = 3,
-      Qu = 30
+    const Rk = 15,
+      tk = 3,
+      ak = 30
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

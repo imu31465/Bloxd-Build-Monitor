@@ -1,248 +1,248 @@
 export const id = 232;
 export const ids = [232];
 export const modules = {
-  37525: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ku
+  37459: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk
     });
-    var Eu = yu(37528);
-    class Ku {
-      static GetPlanes(uu) {
-        const Ru = [];
-        for (let yu = 0; yu < 6; yu++) Ru.push(new Eu.d(0, 0, 0, 0));
-        return Ku.GetPlanesToRef(uu, Ru), Ru
+    var Rk = Bk(37467);
+    class tk {
+      static GetPlanes(kk) {
+        const Fk = [];
+        for (let Bk = 0; Bk < 6; Bk++) Fk.push(new Rk.c(0, 0, 0, 0));
+        return tk.GetPlanesToRef(kk, Fk), Fk
       }
-      static GetNearPlaneToRef(uu, Ru) {
-        const yu = uu.m;
-        Ru.normal.x = yu[3] + yu[2], Ru.normal.y = yu[7] + yu[6], Ru.normal.z = yu[11] + yu[10], Ru.d = yu[15] + yu[14], Ru.normalize()
+      static GetNearPlaneToRef(kk, Fk) {
+        const Bk = kk.m;
+        Fk.normal.x = Bk[3] + Bk[2], Fk.normal.y = Bk[7] + Bk[6], Fk.normal.z = Bk[11] + Bk[10], Fk.d = Bk[15] + Bk[14], Fk.normalize()
       }
-      static GetFarPlaneToRef(uu, Ru) {
-        const yu = uu.m;
-        Ru.normal.x = yu[3] - yu[2], Ru.normal.y = yu[7] - yu[6], Ru.normal.z = yu[11] - yu[10], Ru.d = yu[15] - yu[14], Ru.normalize()
+      static GetFarPlaneToRef(kk, Fk) {
+        const Bk = kk.m;
+        Fk.normal.x = Bk[3] - Bk[2], Fk.normal.y = Bk[7] - Bk[6], Fk.normal.z = Bk[11] - Bk[10], Fk.d = Bk[15] - Bk[14], Fk.normalize()
       }
-      static GetLeftPlaneToRef(uu, Ru) {
-        const yu = uu.m;
-        Ru.normal.x = yu[3] + yu[0], Ru.normal.y = yu[7] + yu[4], Ru.normal.z = yu[11] + yu[8], Ru.d = yu[15] + yu[12], Ru.normalize()
+      static GetLeftPlaneToRef(kk, Fk) {
+        const Bk = kk.m;
+        Fk.normal.x = Bk[3] + Bk[0], Fk.normal.y = Bk[7] + Bk[4], Fk.normal.z = Bk[11] + Bk[8], Fk.d = Bk[15] + Bk[12], Fk.normalize()
       }
-      static GetRightPlaneToRef(uu, Ru) {
-        const yu = uu.m;
-        Ru.normal.x = yu[3] - yu[0], Ru.normal.y = yu[7] - yu[4], Ru.normal.z = yu[11] - yu[8], Ru.d = yu[15] - yu[12], Ru.normalize()
+      static GetRightPlaneToRef(kk, Fk) {
+        const Bk = kk.m;
+        Fk.normal.x = Bk[3] - Bk[0], Fk.normal.y = Bk[7] - Bk[4], Fk.normal.z = Bk[11] - Bk[8], Fk.d = Bk[15] - Bk[12], Fk.normalize()
       }
-      static GetTopPlaneToRef(uu, Ru) {
-        const yu = uu.m;
-        Ru.normal.x = yu[3] - yu[1], Ru.normal.y = yu[7] - yu[5], Ru.normal.z = yu[11] - yu[9], Ru.d = yu[15] - yu[13], Ru.normalize()
+      static GetTopPlaneToRef(kk, Fk) {
+        const Bk = kk.m;
+        Fk.normal.x = Bk[3] - Bk[1], Fk.normal.y = Bk[7] - Bk[5], Fk.normal.z = Bk[11] - Bk[9], Fk.d = Bk[15] - Bk[13], Fk.normalize()
       }
-      static GetBottomPlaneToRef(uu, Ru) {
-        const yu = uu.m;
-        Ru.normal.x = yu[3] + yu[1], Ru.normal.y = yu[7] + yu[5], Ru.normal.z = yu[11] + yu[9], Ru.d = yu[15] + yu[13], Ru.normalize()
+      static GetBottomPlaneToRef(kk, Fk) {
+        const Bk = kk.m;
+        Fk.normal.x = Bk[3] + Bk[1], Fk.normal.y = Bk[7] + Bk[5], Fk.normal.z = Bk[11] + Bk[9], Fk.d = Bk[15] + Bk[13], Fk.normalize()
       }
-      static GetPlanesToRef(uu, Ru) {
-        Ku.GetNearPlaneToRef(uu, Ru[0]), Ku.GetFarPlaneToRef(uu, Ru[1]), Ku.GetLeftPlaneToRef(uu, Ru[2]), Ku.GetRightPlaneToRef(uu, Ru[3]), Ku.GetTopPlaneToRef(uu, Ru[4]), Ku.GetBottomPlaneToRef(uu, Ru[5])
+      static GetPlanesToRef(kk, Fk) {
+        tk.GetNearPlaneToRef(kk, Fk[0]), tk.GetFarPlaneToRef(kk, Fk[1]), tk.GetLeftPlaneToRef(kk, Fk[2]), tk.GetRightPlaneToRef(kk, Fk[3]), tk.GetTopPlaneToRef(kk, Fk[4]), tk.GetBottomPlaneToRef(kk, Fk[5])
       }
-      static IsPointInFrustum(uu, Ru) {
-        for (let yu = 0; yu < 6; yu++)
-          if (Ru[yu].dotCoordinate(uu) < 0) return !1;
+      static IsPointInFrustum(kk, Fk) {
+        for (let Bk = 0; Bk < 6; Bk++)
+          if (Fk[Bk].dotCoordinate(kk) < 0) return !1;
         return !0
       }
     }
   },
-  37528: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ku
+  37467: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk
     });
-    var Eu = yu(36830);
-    class Ku {
-      constructor(uu, Ru, yu, Ku) {
-        this.normal = new Eu.p(uu, Ru, yu), this.d = Ku
+    var Rk = Bk(36758);
+    class tk {
+      constructor(kk, Fk, Bk, tk) {
+        this.normal = new Rk.s(kk, Fk, Bk), this.d = tk
       }
-      AEu() {
+      PBk() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new Ku(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new tk(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let uu = this.normal.getHashCode();
-        return uu = 397 * uu ^ this.d, uu
+        let kk = this.normal.getHashCode();
+        return kk = 397 * kk ^ this.d, kk
       }
       normalize() {
-        const uu = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let Ru = 0;
-        return 0 !== uu && (Ru = 1 / uu), this.normal.x *= Ru, this.normal.y *= Ru, this.normal.z *= Ru, this.d *= Ru, this
+        const kk = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let Fk = 0;
+        return 0 !== kk && (Fk = 1 / kk), this.normal.x *= Fk, this.normal.y *= Fk, this.normal.z *= Fk, this.d *= Fk, this
       }
-      transform(uu) {
-        const Ru = Ku._TmpMatrix;
-        uu.invertToRef(Ru);
-        const yu = Ru.m,
-          Eu = this.normal.x,
-          Qu = this.normal.y,
-          mu = this.normal.z,
-          Ju = this.d,
-          Nu = Eu * yu[0] + Qu * yu[1] + mu * yu[2] + Ju * yu[3],
-          Xu = Eu * yu[4] + Qu * yu[5] + mu * yu[6] + Ju * yu[7],
-          Vu = Eu * yu[8] + Qu * yu[9] + mu * yu[10] + Ju * yu[11],
-          ru = Eu * yu[12] + Qu * yu[13] + mu * yu[14] + Ju * yu[15];
-        return new Ku(Nu, Xu, Vu, ru)
+      transform(kk) {
+        const Fk = tk._TmpMatrix;
+        kk.invertToRef(Fk);
+        const Bk = Fk.m,
+          Rk = this.normal.x,
+          ak = this.normal.y,
+          Xk = this.normal.z,
+          bk = this.d,
+          wk = Rk * Bk[0] + ak * Bk[1] + Xk * Bk[2] + bk * Bk[3],
+          dk = Rk * Bk[4] + ak * Bk[5] + Xk * Bk[6] + bk * Bk[7],
+          sk = Rk * Bk[8] + ak * Bk[9] + Xk * Bk[10] + bk * Bk[11],
+          Vk = Rk * Bk[12] + ak * Bk[13] + Xk * Bk[14] + bk * Bk[15];
+        return new tk(wk, dk, sk, Vk)
       }
-      dotCoordinate(uu) {
-        return this.normal.x * uu.x + this.normal.y * uu.y + this.normal.z * uu.z + this.d
+      dotCoordinate(kk) {
+        return this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z + this.d
       }
-      copyFromPoints(uu, Ru, yu) {
-        const Eu = Ru.x - uu.x,
-          Ku = Ru.y - uu.y,
-          Qu = Ru.z - uu.z,
-          mu = yu.x - uu.x,
-          Ju = yu.y - uu.y,
-          Nu = yu.z - uu.z,
-          Xu = Ku * Nu - Qu * Ju,
-          Vu = Qu * mu - Eu * Nu,
-          ru = Eu * Ju - Ku * mu,
-          Bu = Math.sqrt(Xu * Xu + Vu * Vu + ru * ru);
-        let xu;
-        return xu = 0 !== Bu ? 1 / Bu : 0, this.normal.x = Xu * xu, this.normal.y = Vu * xu, this.normal.z = ru * xu, this.d = -(this.normal.x * uu.x + this.normal.y * uu.y + this.normal.z * uu.z), this
+      copyFromPoints(kk, Fk, Bk) {
+        const Rk = Fk.x - kk.x,
+          tk = Fk.y - kk.y,
+          ak = Fk.z - kk.z,
+          Xk = Bk.x - kk.x,
+          bk = Bk.y - kk.y,
+          wk = Bk.z - kk.z,
+          dk = tk * wk - ak * bk,
+          sk = ak * Xk - Rk * wk,
+          Vk = Rk * bk - tk * Xk,
+          Jk = Math.sqrt(dk * dk + sk * sk + Vk * Vk);
+        let Ak;
+        return Ak = 0 !== Jk ? 1 / Jk : 0, this.normal.x = dk * Ak, this.normal.y = sk * Ak, this.normal.z = Vk * Ak, this.d = -(this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z), this
       }
-      isFrontFacingTo(uu, Ru) {
-        return Eu.p.Dot(this.normal, uu) <= Ru
+      isFrontFacingTo(kk, Fk) {
+        return Rk.s.Dot(this.normal, kk) <= Fk
       }
-      signedDistanceTo(uu) {
-        return Eu.p.Dot(uu, this.normal) + this.d
+      signedDistanceTo(kk) {
+        return Rk.s.Dot(kk, this.normal) + this.d
       }
-      static FromArray(uu) {
-        return new Ku(uu[0], uu[1], uu[2], uu[3])
+      static FromArray(kk) {
+        return new tk(kk[0], kk[1], kk[2], kk[3])
       }
-      static FromPoints(uu, Ru, yu) {
-        const Eu = new Ku(0, 0, 0, 0);
-        return Eu.copyFromPoints(uu, Ru, yu), Eu
+      static FromPoints(kk, Fk, Bk) {
+        const Rk = new tk(0, 0, 0, 0);
+        return Rk.copyFromPoints(kk, Fk, Bk), Rk
       }
-      static FromPositionAndNormal(uu, Ru) {
-        const yu = new Ku(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(uu, Ru, yu)
+      static FromPositionAndNormal(kk, Fk) {
+        const Bk = new tk(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(kk, Fk, Bk)
       }
-      static FromPositionAndNormalToRef(uu, Ru, yu) {
-        return yu.normal.Oyu(Ru), yu.normal.normalize(), yu.d = -uu.dot(yu.normal), yu
+      static FromPositionAndNormalToRef(kk, Fk, Bk) {
+        return Bk.normal.sBk(Fk), Bk.normal.normalize(), Bk.d = -kk.dot(Bk.normal), Bk
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(uu, Ru, yu) {
-        const Ku = -(Ru.x * uu.x + Ru.y * uu.y + Ru.z * uu.z);
-        return Eu.p.Dot(yu, Ru) + Ku
+      static SignedDistanceToPlaneFromPositionAndNormal(kk, Fk, Bk) {
+        const tk = -(Fk.x * kk.x + Fk.y * kk.y + Fk.z * kk.z);
+        return Rk.s.Dot(Bk, Fk) + tk
       }
     }
-    Ku._TmpMatrix = Eu.d.Identity()
+    tk._TmpMatrix = Rk.c.Identity()
   },
-  38444: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Qu
+  38318: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => ak
     });
-    var Eu = yu(38448);
-    const Ku = (uu, Ru, yu) => uu ? uu.getClassName && "Mesh" === uu.getClassName() ? null : !uu.getClassName || "SubMesh" !== uu.getClassName() && "PhysicsBody" !== uu.getClassName() ? uu.clone ? uu.clone() : Array.isArray(uu) ? uu.slice() : yu && "object" === typeof uu ? {
-      ...uu
-    } : null : uu.clone(Ru) : null;
-    class Qu {
-      static DeepCopy(uu, Ru, yu, Qu) {
-        let mu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Ju = function(uu) {
-          const Ru = [];
+    var Rk = Bk(38320);
+    const tk = (kk, Fk, Bk) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : Bk && "object" === typeof kk ? {
+      ...kk
+    } : null : kk.clone(Fk) : null;
+    class ak {
+      static DeepCopy(kk, Fk, Bk, ak) {
+        let Xk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const bk = function(kk) {
+          const Fk = [];
           do {
-            const yu = Object.getOwnPropertyNames(uu);
-            for (const uu of yu) - 1 === Ru.indexOf(uu) && Ru.push(uu)
-          } while (uu = Object.getPrototypeOf(uu));
-          return Ru
-        }(uu);
-        for (const Xu of Ju) {
-          if ("_" === Xu[0] && (!Qu || -1 === Qu.indexOf(Xu))) continue;
-          if (Xu.endsWith("Observable")) continue;
-          if (yu && -1 !== yu.indexOf(Xu)) continue;
-          const Ju = uu[Xu],
-            Vu = typeof Ju;
-          if ("function" !== Vu) try {
-            if ("object" === Vu)
-              if (Ju instanceof Uint8Array) Ru[Xu] = Uint8Array.from(Ju);
-              else if (Ju instanceof Array) {
-              if (Ru[Xu] = [], Ju.length > 0)
-                if ("object" == typeof Ju[0])
-                  for (let uu = 0; uu < Ju.length; uu++) {
-                    const yu = Ku(Ju[uu], Ru, mu); - 1 === Ru[Xu].indexOf(yu) && Ru[Xu].push(yu)
-                  } else Ru[Xu] = Ju.slice(0)
-            } else Ru[Xu] = Ku(Ju, Ru, mu);
-            else Ru[Xu] = Ju
-          } catch (Nu) {
-            Eu.e.Warn(Nu.message)
+            const Bk = Object.getOwnPropertyNames(kk);
+            for (const kk of Bk) - 1 === Fk.indexOf(kk) && Fk.push(kk)
+          } while (kk = Object.getPrototypeOf(kk));
+          return Fk
+        }(kk);
+        for (const dk of bk) {
+          if ("_" === dk[0] && (!ak || -1 === ak.indexOf(dk))) continue;
+          if (dk.endsWith("Observable")) continue;
+          if (Bk && -1 !== Bk.indexOf(dk)) continue;
+          const bk = kk[dk],
+            sk = typeof bk;
+          if ("function" !== sk) try {
+            if ("object" === sk)
+              if (bk instanceof Uint8Array) Fk[dk] = Uint8Array.from(bk);
+              else if (bk instanceof Array) {
+              if (Fk[dk] = [], bk.length > 0)
+                if ("object" == typeof bk[0])
+                  for (let kk = 0; kk < bk.length; kk++) {
+                    const Bk = tk(bk[kk], Fk, Xk); - 1 === Fk[dk].indexOf(Bk) && Fk[dk].push(Bk)
+                  } else Fk[dk] = bk.slice(0)
+            } else Fk[dk] = tk(bk, Fk, Xk);
+            else Fk[dk] = bk
+          } catch (wk) {
+            Rk.b.Warn(wk.message)
           }
         }
       }
     }
   },
-  37665: (uu, Ru, yu) => {
-    function Eu() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (uu => {
-        const Ru = 16 * Math.random() | 0;
-        return ("x" === uu ? Ru : 3 & Ru | 8).toString(16)
+  37578: (kk, Fk, Bk) => {
+    function Rk() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (kk => {
+        const Fk = 16 * Math.random() | 0;
+        return ("x" === kk ? Fk : 3 & Fk | 8).toString(16)
       }))
     }
-    yu.d(Ru, {
-      b: () => Eu
+    Bk.d(Fk, {
+      e: () => Rk
     })
   },
-  38448: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Eu
+  38320: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Rk
     });
-    class Eu {
-      static _CheckLimit(uu, Ru) {
-        let yu = Eu._LogLimitOutputs[uu];
-        return yu ? yu.current++ : (yu = {
-          limit: Ru,
+    class Rk {
+      static _CheckLimit(kk, Fk) {
+        let Bk = Rk._LogLimitOutputs[kk];
+        return Bk ? Bk.current++ : (Bk = {
+          limit: Fk,
           current: 1
-        }, Eu._LogLimitOutputs[uu] = yu), yu.current <= yu.limit
+        }, Rk._LogLimitOutputs[kk] = Bk), Bk.current <= Bk.limit
       }
-      static _GenerateLimitMessage(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const yu = Eu._LogLimitOutputs[uu];
-        if (!yu || !Eu.MessageLimitReached) return;
-        const Ku = this._Levels[Ru];
-        yu.current === yu.limit && Eu[Ku.name](Eu.MessageLimitReached.replace(/%LIMIT%/g, "" + yu.limit).replace(/%TYPE%/g, Ku.name ?? ""))
+      static _GenerateLimitMessage(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const Bk = Rk._LogLimitOutputs[kk];
+        if (!Bk || !Rk.MessageLimitReached) return;
+        const tk = this._Levels[Fk];
+        Bk.current === Bk.limit && Rk[tk.name](Rk.MessageLimitReached.replace(/%LIMIT%/g, "" + Bk.limit).replace(/%TYPE%/g, tk.name ?? ""))
       }
-      static _AddLogEntry(uu) {
-        Eu._LogCache = uu + Eu._LogCache, Eu.OnNewCacheEntry && Eu.OnNewCacheEntry(uu)
+      static _AddLogEntry(kk) {
+        Rk._LogCache = kk + Rk._LogCache, Rk.OnNewCacheEntry && Rk.OnNewCacheEntry(kk)
       }
-      static _FormatMessage(uu) {
-        const Ru = uu => uu < 10 ? "0" + uu : "" + uu,
-          yu = new Date;
-        return "[" + Ru(yu.getHours()) + ":" + Ru(yu.getMinutes()) + ":" + Ru(yu.getSeconds()) + "]: " + uu
+      static _FormatMessage(kk) {
+        const Fk = kk => kk < 10 ? "0" + kk : "" + kk,
+          Bk = new Date;
+        return "[" + Fk(Bk.getHours()) + ":" + Fk(Bk.getMinutes()) + ":" + Fk(Bk.getSeconds()) + "]: " + kk
       }
-      static _LogDisabled(uu, Ru) {}
+      static _LogDisabled(kk, Fk) {}
       static _LogEnabled() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Ru = arguments.length > 1 ? arguments[1] : void 0,
-          yu = arguments.length > 2 ? arguments[2] : void 0;
-        const Ku = Array.isArray(Ru) ? Ru[0] : Ru;
-        if (void 0 !== yu && !Eu._CheckLimit(Ku, yu)) return;
-        const Qu = Eu._FormatMessage(Ku),
-          mu = this._Levels[uu],
-          Ju = Array.isArray(Ru) ? Ru.slice(1) : [];
-        mu.logFunc && mu.logFunc("BJS - " + Qu, ...Ju);
-        const Nu = `<div style='color:${mu.color}'>${Qu}</div><br>`;
-        Eu._AddLogEntry(Nu), Eu._GenerateLimitMessage(Ku, uu)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Bk = arguments.length > 2 ? arguments[2] : void 0;
+        const tk = Array.isArray(Fk) ? Fk[0] : Fk;
+        if (void 0 !== Bk && !Rk._CheckLimit(tk, Bk)) return;
+        const ak = Rk._FormatMessage(tk),
+          Xk = this._Levels[kk],
+          bk = Array.isArray(Fk) ? Fk.slice(1) : [];
+        Xk.logFunc && Xk.logFunc("BJS - " + ak, ...bk);
+        const wk = `<div style='color:${Xk.color}'>${ak}</div><br>`;
+        Rk._AddLogEntry(wk), Rk._GenerateLimitMessage(tk, kk)
       }
       static get LogCache() {
-        return Eu._LogCache
+        return Rk._LogCache
       }
       static ClearLogCache() {
-        Eu._LogCache = "", Eu._LogLimitOutputs = {}, Eu.errorsCount = 0
+        Rk._LogCache = "", Rk._LogLimitOutputs = {}, Rk.errorsCount = 0
       }
-      static set LogLevels(uu) {
-        Eu.Log = Eu._LogDisabled, Eu.Warn = Eu._LogDisabled, Eu.Error = Eu._LogDisabled;
-        const Ru = [Eu.MessageLogLevel, Eu.WarningLogLevel, Eu.ErrorLogLevel];
-        for (const yu of Ru)
-          if ((uu & yu) === yu) {
-            const uu = this._Levels[yu];
-            Eu[uu.name] = Eu._LogEnabled.bind(Eu, yu)
+      static set LogLevels(kk) {
+        Rk.Log = Rk._LogDisabled, Rk.Warn = Rk._LogDisabled, Rk.Error = Rk._LogDisabled;
+        const Fk = [Rk.MessageLogLevel, Rk.WarningLogLevel, Rk.ErrorLogLevel];
+        for (const Bk of Fk)
+          if ((kk & Bk) === Bk) {
+            const kk = this._Levels[Bk];
+            Rk[kk.name] = Rk._LogEnabled.bind(Rk, Bk)
           }
       }
     }
-    Eu.NoneLogLevel = 0, Eu.MessageLogLevel = 1, Eu.WarningLogLevel = 2, Eu.ErrorLogLevel = 4, Eu.AllLogLevel = 7, Eu.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Eu._LogCache = "", Eu._LogLimitOutputs = {}, Eu._Levels = [{}, {
+    Rk.NoneLogLevel = 0, Rk.MessageLogLevel = 1, Rk.WarningLogLevel = 2, Rk.ErrorLogLevel = 4, Rk.AllLogLevel = 7, Rk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Rk._LogCache = "", Rk._LogLimitOutputs = {}, Rk._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -254,8 +254,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Eu.errorsCount = 0, Eu.Log = Eu._LogEnabled.bind(Eu, Eu.MessageLogLevel), Eu.Warn = Eu._LogEnabled.bind(Eu, Eu.WarningLogLevel), Eu.Error = Eu._LogEnabled.bind(Eu, Eu.ErrorLogLevel)
+    }], Rk.errorsCount = 0, Rk.Log = Rk._LogEnabled.bind(Rk, Rk.MessageLogLevel), Rk.Warn = Rk._LogEnabled.bind(Rk, Rk.WarningLogLevel), Rk.Error = Rk._LogEnabled.bind(Rk, Rk.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

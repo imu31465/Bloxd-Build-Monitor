@@ -1,116 +1,116 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  39261: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      default: () => Ju
+  39114: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      default: () => bk
     });
-    var Eu = yu(9087);
-    const Ku = 1e3 / 3;
+    var Rk = Bk(9029);
+    const tk = 1e3 / 3;
 
-    function Qu(uu, Ru, yu) {
-      if ("parenthetical-seconds" === Ru) return ` (${uu}s)`;
-      const Eu = `${Math.floor(uu/60)}:${(uu%60).toString().padStart(2,"0")}`;
-      return yu ? `${yu}${Eu}` : Eu
+    function ak(kk, Fk, Bk) {
+      if ("parenthetical-seconds" === Fk) return ` (${kk}s)`;
+      const Rk = `${Math.floor(kk/60)}:${(kk%60).toString().padStart(2,"0")}`;
+      return Bk ? `${Bk}${Rk}` : Rk
     }
 
-    function mu(uu, Ru, yu, Ku, Qu) {
-      var mu;
-      const Ju = {
-        ...Ku.baseNametag
+    function Xk(kk, Fk, Bk, tk, ak) {
+      var Xk;
+      const bk = {
+        ...tk.baseNametag
       };
-      Ju.content = [...null !== (mu = Ku.baseNametag.content) && void 0 !== mu ? mu : [], {
+      bk.content = [...null !== (Xk = tk.baseNametag.content) && void 0 !== Xk ? Xk : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,Eu.d)(Qu)}`
-      }], uu.setOtherEntitySetting(Ru, yu, "nameTagInfo", Ju)
+        str: `: ${(0,Rk.e)(ak)}`
+      }], kk.setOtherEntitySetting(Fk, Bk, "nameTagInfo", bk)
     }
-    const Ju = function(uu, Ru, yu, Eu) {
-      let Ju, {
-        localPlayerId: Nu
-      } = Eu;
-      const Xu = new Map,
-        Vu = new Map;
-      let ru = 0,
-        Bu = 0;
+    const bk = function(kk, Fk, Bk, Rk) {
+      let bk, {
+        localPlayerId: wk
+      } = Rk;
+      const dk = new Map,
+        sk = new Map;
+      let Vk = 0,
+        Jk = 0;
       return {
-        onCreate: uu => {
-          Ju = uu
+        onCreate: kk => {
+          bk = kk
         },
-        sr: uu => {
-          const Ru = Date.now();
-          for (const [Eu, Ku] of Xu) {
-            const uu = Math.floor((Ru - Ku.startTime) / 1e3),
-              mu = Math.max(0, Ku.remainingSeconds - uu);
-            if (mu === Ku.lastRenderedSecond) continue;
-            Ku.lastRenderedSecond = mu;
-            const Vu = {
-                str: Qu(mu, Ku.format, Ku.prefix),
-                style: Ku.style
+        yJ: kk => {
+          const Fk = Date.now();
+          for (const [Rk, tk] of dk) {
+            const kk = Math.floor((Fk - tk.startTime) / 1e3),
+              Xk = Math.max(0, tk.remainingSeconds - kk);
+            if (Xk === tk.lastRenderedSecond) continue;
+            tk.lastRenderedSecond = Xk;
+            const sk = {
+                str: ak(Xk, tk.format, tk.prefix),
+                style: tk.style
               },
-              ru = {
-                ...Ku.baseNametag
+              Vk = {
+                ...tk.baseNametag
               };
-            var yu;
-            if ("content" === Ku.location) ru.content = [...null !== (yu = Ku.baseNametag.content) && void 0 !== yu ? yu : [], Vu];
-            else ru.subtitle = [Vu];
-            Ju.setOtherEntitySetting(Nu, Eu, "nameTagInfo", ru), mu <= 0 && Xu.delete(Eu)
+            var Bk;
+            if ("content" === tk.location) Vk.content = [...null !== (Bk = tk.baseNametag.content) && void 0 !== Bk ? Bk : [], sk];
+            else Vk.subtitle = [sk];
+            bk.setOtherEntitySetting(wk, Rk, "nameTagInfo", Vk), Xk <= 0 && dk.delete(Rk)
           }
-          if (Vu.size > 0 && Ru - ru >= Ku) {
-            ru = Ru, Bu = (Bu + 1) % 3;
-            let uu = 0;
-            for (const [yu, Eu] of Vu) {
-              if (uu++ % 3 !== Bu) continue;
-              const Ku = Math.floor((Ru - Eu.startTime) / 1e3);
-              if (Ku === Eu.lastRenderedSecond) continue;
-              Eu.lastRenderedSecond = Ku;
-              const Qu = Eu.accumulatedIncome + Eu.incomePerSecond * BigInt(Ku);
-              mu(Ju, Nu, yu, Eu, Qu)
+          if (sk.size > 0 && Fk - Vk >= tk) {
+            Vk = Fk, Jk = (Jk + 1) % 3;
+            let kk = 0;
+            for (const [Bk, Rk] of sk) {
+              if (kk++ % 3 !== Jk) continue;
+              const tk = Math.floor((Fk - Rk.startTime) / 1e3);
+              if (tk === Rk.lastRenderedSecond) continue;
+              Rk.lastRenderedSecond = tk;
+              const ak = Rk.accumulatedIncome + Rk.incomePerSecond * BigInt(tk);
+              Xk(bk, wk, Bk, Rk, ak)
             }
           }
         },
-        onReceivedMessageFromServer: (uu, Ru) => {
-          if ("startCountdown" === uu) Xu.set(Ru.eId, {
-            baseNametag: Ru.baseNametag,
-            remainingSeconds: Ru.remainingSeconds,
+        onReceivedMessageFromServer: (kk, Fk) => {
+          if ("startCountdown" === kk) dk.set(Fk.eId, {
+            baseNametag: Fk.baseNametag,
+            remainingSeconds: Fk.remainingSeconds,
             startTime: Date.now(),
-            format: Ru.format,
-            location: Ru.location,
-            prefix: Ru.prefix,
-            style: Ru.style,
+            format: Fk.format,
+            location: Fk.location,
+            prefix: Fk.prefix,
+            style: Fk.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === uu) Xu.delete(Ru.eId);
-          else if ("startIncomeTicking" === uu) {
-            const uu = {
-              baseNametag: Ru.baseNametag,
-              accumulatedIncome: BigInt(Ru.accumulatedIncome),
-              incomePerSecond: BigInt(Ru.incomePerSecond),
+          else if ("stopCountdown" === kk) dk.delete(Fk.eId);
+          else if ("startIncomeTicking" === kk) {
+            const kk = {
+              baseNametag: Fk.baseNametag,
+              accumulatedIncome: BigInt(Fk.accumulatedIncome),
+              incomePerSecond: BigInt(Fk.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            Vu.set(Ru.eId, uu), mu(Ju, Nu, Ru.eId, uu, uu.accumulatedIncome)
-          } else "stopIncomeTicking" === uu && Vu.delete(Ru.eId) && Ju.setOtherEntitySetting(Nu, Ru.eId, "nameTagInfo", {
+            sk.set(Fk.eId, kk), Xk(bk, wk, Fk.eId, kk, kk.accumulatedIncome)
+          } else "stopIncomeTicking" === kk && sk.delete(Fk.eId) && bk.setOtherEntitySetting(wk, Fk.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (uu, Ru, yu, Eu, Ku, Qu) => {
-          if (Qu && "Mesh" === Ju.getEntityType(Qu)) {
-            const Ru = Ju.getEntityName(Qu);
-            "Upgrades" === Ru ? Ju.openShop(uu, !1, "Upgrades") : "Items" === Ru ? Ju.openShop(uu, !1, "Items") : "Prestige" === Ru ? Ju.openShop(uu, !1, "Prestige") : "Collections" === Ru ? Ju.openShop(uu, !1, "Collections") : "Base Skins" === Ru ? Ju.openShop(uu, !1, "Base Skins") : "Gauntlet" === Ru ? Ju.openShop(uu, !1, "Gauntlet") : "Diamond Shop" === Ru && Ju.openShop(uu, !1, "Diamond Shop")
+        onPlayerAltAction: (kk, Fk, Bk, Rk, tk, ak) => {
+          if (ak && "Mesh" === bk.getEntityType(ak)) {
+            const Fk = bk.getEntityName(ak);
+            "Upgrades" === Fk ? bk.openShop(kk, !1, "Upgrades") : "Items" === Fk ? bk.openShop(kk, !1, "Items") : "Prestige" === Fk ? bk.openShop(kk, !1, "Prestige") : "Collections" === Fk ? bk.openShop(kk, !1, "Collections") : "Base Skins" === Fk ? bk.openShop(kk, !1, "Base Skins") : "Gauntlet" === Fk ? bk.openShop(kk, !1, "Gauntlet") : "Diamond Shop" === Fk && bk.openShop(kk, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  9087: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ku,
-      g: () => mu
+  9029: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => tk,
+      f: () => Xk
     });
-    const Eu = [{
+    const Rk = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Ku(uu) {
-      let Ru, yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof uu) {
-        if (!Number.isFinite(uu)) return "0";
-        if (Math.abs(uu) < 100) {
-          const Ru = uu < 0 ? "-" : "",
-            yu = Math.abs(uu);
-          return yu >= 10 ? `${Ru}${yu.toFixed(1).replace(/\.0$/,"")}` : `${Ru}${yu.toFixed(2).replace(/\.?0+$/,"")}`
+    function tk(kk) {
+      let Fk, Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof kk) {
+        if (!Number.isFinite(kk)) return "0";
+        if (Math.abs(kk) < 100) {
+          const Fk = kk < 0 ? "-" : "",
+            Bk = Math.abs(kk);
+          return Bk >= 10 ? `${Fk}${Bk.toFixed(1).replace(/\.0$/,"")}` : `${Fk}${Bk.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        Ru = BigInt(Math.floor(uu))
-      } else Ru = uu;
-      const Ku = Ru < 0n ? -Ru : Ru,
-        Qu = Ru < 0n ? "-" : "",
-        mu = Ku.toString();
-      if (mu.length <= yu) return `${Qu}${mu}`;
-      const Ju = 3 * Math.floor((mu.length - 1) / 3);
-      if (Ju < 3) return `${Qu}${mu}`;
-      if (Ju > 3 * Eu.length) {
-        const uu = mu[0],
-          Ru = mu.slice(1, 3).replace(/0+$/, "");
-        return `${Qu}${Ru?`${uu}.${Ru}`:uu}e${mu.length-1}`
+        Fk = BigInt(Math.floor(kk))
+      } else Fk = kk;
+      const tk = Fk < 0n ? -Fk : Fk,
+        ak = Fk < 0n ? "-" : "",
+        Xk = tk.toString();
+      if (Xk.length <= Bk) return `${ak}${Xk}`;
+      const bk = 3 * Math.floor((Xk.length - 1) / 3);
+      if (bk < 3) return `${ak}${Xk}`;
+      if (bk > 3 * Rk.length) {
+        const kk = Xk[0],
+          Fk = Xk.slice(1, 3).replace(/0+$/, "");
+        return `${ak}${Fk?`${kk}.${Fk}`:kk}e${Xk.length-1}`
       }
       const {
-        threshold: Nu,
-        suffix: Xu
-      } = Eu[Eu.length - Ju / 3], Vu = Ku / Nu, ru = Number(1000n * (Ku % Nu) / Nu), Bu = Number(Vu) + ru / 1e3;
-      let xu;
-      return xu = Bu >= 100 ? Math.floor(Bu).toString() : Bu >= 10 ? Bu.toFixed(1).replace(/\.0$/, "") : Bu.toFixed(2).replace(/\.?0+$/, ""), `${Qu}${xu}${Xu}`
+        threshold: wk,
+        suffix: dk
+      } = Rk[Rk.length - bk / 3], sk = tk / wk, Vk = Number(1000n * (tk % wk) / wk), Jk = Number(sk) + Vk / 1e3;
+      let Ak;
+      return Ak = Jk >= 100 ? Math.floor(Jk).toString() : Jk >= 10 ? Jk.toFixed(1).replace(/\.0$/, "") : Jk.toFixed(2).replace(/\.?0+$/, ""), `${ak}${Ak}${dk}`
     }
-    const Qu = Eu.map((uu => {
+    const ak = Rk.map((kk => {
       let {
-        threshold: Ru,
-        suffix: yu
-      } = uu;
+        threshold: Fk,
+        suffix: Bk
+      } = kk;
       return {
-        threshold: Number(Ru),
-        suffix: yu
+        threshold: Number(Fk),
+        suffix: Bk
       }
-    })).filter((uu => {
+    })).filter((kk => {
       let {
-        threshold: Ru
-      } = uu;
-      return Number.isFinite(Ru)
+        threshold: Fk
+      } = kk;
+      return Number.isFinite(Fk)
     }));
 
-    function mu(uu) {
-      const Ru = Math.abs(uu),
-        yu = uu < 0 ? "-" : "";
+    function Xk(kk) {
+      const Fk = Math.abs(kk),
+        Bk = kk < 0 ? "-" : "";
       for (const {
-          threshold: Eu,
-          suffix: Ku
+          threshold: Rk,
+          suffix: tk
         }
-        of Qu)
-        if (Ru >= Eu) {
-          const uu = Ru / Eu;
-          if (uu >= 1e3) return `${yu}${Ru.toExponential(2).replace("e+","e")}`;
-          let Qu;
-          return Qu = uu >= 100 ? Math.floor(uu).toString() : uu >= 10 ? uu.toFixed(1).replace(/\.0$/, "") : uu.toFixed(2).replace(/\.?0+$/, ""), `${yu}${Qu}${Ku}`
-        } return `${yu}${Ru}`
+        of ak)
+        if (Fk >= Rk) {
+          const kk = Fk / Rk;
+          if (kk >= 1e3) return `${Bk}${Fk.toExponential(2).replace("e+","e")}`;
+          let ak;
+          return ak = kk >= 100 ? Math.floor(kk).toString() : kk >= 10 ? kk.toFixed(1).replace(/\.0$/, "") : kk.toFixed(2).replace(/\.?0+$/, ""), `${Bk}${ak}${tk}`
+        } return `${Bk}${Fk}`
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

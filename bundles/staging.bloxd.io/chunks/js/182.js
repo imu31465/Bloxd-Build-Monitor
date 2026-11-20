@@ -1,2445 +1,2445 @@
 export const id = 182;
 export const ids = [182];
 export const modules = {
-  8909: (uu, Ru) => {
-    Ru.discordURLBuilder = function(uu) {
-      var Ru;
-      const yu = (null === (Ru = null === window || void 0 === window ? void 0 : window.location) || void 0 === Ru ? void 0 : Ru.hostname) || "localhost",
-        Eu = uu.hostname.split("."),
-        Ku = !uu.hostname.includes("trycloudflare.com") && !uu.hostname.includes("discordsays.com") && Eu.length > 2 ? `/${Eu[0]}` : "";
-      return uu.pathname.startsWith("/.proxy") ? `${uu.protocol}//${yu}${Ku}${uu.pathname}${uu.search}` : `${uu.protocol}//${yu}/.proxy/colyseus${Ku}${uu.pathname}${uu.search}`
+  8856: (kk, Fk) => {
+    Fk.discordURLBuilder = function(kk) {
+      var Fk;
+      const Bk = (null === (Fk = null === window || void 0 === window ? void 0 : window.location) || void 0 === Fk ? void 0 : Fk.hostname) || "localhost",
+        Rk = kk.hostname.split("."),
+        tk = !kk.hostname.includes("trycloudflare.com") && !kk.hostname.includes("discordsays.com") && Rk.length > 2 ? `/${Rk[0]}` : "";
+      return kk.pathname.startsWith("/.proxy") ? `${kk.protocol}//${Bk}${tk}${kk.pathname}${kk.search}` : `${kk.protocol}//${Bk}/.proxy/colyseus${tk}${kk.pathname}${kk.search}`
     }
   },
-  8898: (uu, Ru, yu) => {
-    var Eu, Ku, Qu, mu, Ju = yu(8832),
-      Nu = yu(8903),
-      Xu = yu(8874);
-    Eu = new WeakMap, Ku = new WeakMap, Qu = new WeakMap, mu = new WeakMap, Ru.Auth = class {
-      constructor(uu) {
-        this.http = uu, this.settings = {
+  8842: (kk, Fk, Bk) => {
+    var Rk, tk, ak, Xk, bk = Bk(8758),
+      wk = Bk(8849),
+      dk = Bk(8810);
+    Rk = new WeakMap, tk = new WeakMap, ak = new WeakMap, Xk = new WeakMap, Fk.Auth = class {
+      constructor(kk) {
+        this.http = kk, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, Eu.set(this, !1), Ku.set(this, void 0), Qu.set(this, void 0), mu.set(this, Xu.createNanoEvents()), Nu.getItem(this.settings.key, (uu => this.token = uu))
+        }, Rk.set(this, !1), tk.set(this, void 0), ak.set(this, void 0), Xk.set(this, dk.createNanoEvents()), wk.getItem(this.settings.key, (kk => this.token = kk))
       }
-      set token(uu) {
-        this.http.authToken = uu
+      set token(kk) {
+        this.http.authToken = kk
       }
       get token() {
         return this.http.authToken
       }
-      onChange(uu) {
-        const Ru = Ju.__classPrivateFieldGet(this, mu, "f").on("change", uu);
-        return Ju.__classPrivateFieldGet(this, Eu, "f") || Ju.__classPrivateFieldSet(this, Ku, new Promise(((uu, Ru) => {
-          this.getUserData().then((uu => {
-            this.emitChange(Object.assign(Object.assign({}, uu), {
+      onChange(kk) {
+        const Fk = bk.__classPrivateFieldGet(this, Xk, "f").on("change", kk);
+        return bk.__classPrivateFieldGet(this, Rk, "f") || bk.__classPrivateFieldSet(this, tk, new Promise(((kk, Fk) => {
+          this.getUserData().then((kk => {
+            this.emitChange(Object.assign(Object.assign({}, kk), {
               token: this.token
             }))
-          })).catch((uu => {
+          })).catch((kk => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            uu()
+            kk()
           }))
-        })), "f"), Ju.__classPrivateFieldSet(this, Eu, !0, "f"), Ru
+        })), "f"), bk.__classPrivateFieldSet(this, Rk, !0, "f"), Fk
       }
       getUserData() {
-        return Ju.__awaiter(this, void 0, void 0, (function*() {
+        return bk.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(uu, Ru, yu) {
-        return Ju.__awaiter(this, void 0, void 0, (function*() {
-          const Eu = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(kk, Fk, Bk) {
+        return bk.__awaiter(this, void 0, void 0, (function*() {
+          const Rk = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: uu,
-              password: Ru,
-              options: yu
+              email: kk,
+              password: Fk,
+              options: Bk
             }
           })).data;
-          return this.emitChange(Eu), Eu
+          return this.emitChange(Rk), Rk
         }))
       }
-      signInWithEmailAndPassword(uu, Ru) {
-        return Ju.__awaiter(this, void 0, void 0, (function*() {
-          const yu = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(kk, Fk) {
+        return bk.__awaiter(this, void 0, void 0, (function*() {
+          const Bk = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: uu,
-              password: Ru
+              email: kk,
+              password: Fk
             }
           })).data;
-          return this.emitChange(yu), yu
+          return this.emitChange(Bk), Bk
         }))
       }
-      signInAnonymously(uu) {
-        return Ju.__awaiter(this, void 0, void 0, (function*() {
-          const Ru = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(kk) {
+        return bk.__awaiter(this, void 0, void 0, (function*() {
+          const Fk = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: uu
+              options: kk
             }
           })).data;
-          return this.emitChange(Ru), Ru
+          return this.emitChange(Fk), Fk
         }))
       }
-      sendPasswordResetEmail(uu) {
-        return Ju.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(kk) {
+        return bk.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: uu
+              email: kk
             }
           })).data
         }))
       }
-      signInWithProvider(uu) {
-        return Ju.__awaiter(this, arguments, void 0, (function*(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((yu, Eu) => {
-            const Ku = Ru.width || 480,
-              mu = Ru.height || 768,
-              Nu = this.token ? `?token=${this.token}` : "",
-              Xu = `Login with ${uu[0].toUpperCase()+uu.substring(1)}`,
-              Vu = this.http.client.getHttpEndpoint(`${Ru.prefix||`${this.settings.path}/provider`}/${uu}${Nu}`),
-              ru = screen.width / 2 - Ku / 2,
-              Bu = screen.height / 2 - mu / 2;
-            Ju.__classPrivateFieldSet(this, Qu, window.open(Vu, Xu, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Ku + ", height=" + mu + ", top=" + Bu + ", left=" + ru), "f");
-            const xu = uu => {
-                void 0 === uu.data.user && void 0 === uu.data.token || (clearInterval(Su), Ju.__classPrivateFieldGet(this, Qu, "f").close(), Ju.__classPrivateFieldSet(this, Qu, void 0, "f"), window.removeEventListener("message", xu), void 0 !== uu.data.error ? Eu(uu.data.error) : (yu(uu.data), this.emitChange(uu.data)))
+      signInWithProvider(kk) {
+        return bk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((Bk, Rk) => {
+            const tk = Fk.width || 480,
+              Xk = Fk.height || 768,
+              wk = this.token ? `?token=${this.token}` : "",
+              dk = `Login with ${kk[0].toUpperCase()+kk.substring(1)}`,
+              sk = this.http.client.getHttpEndpoint(`${Fk.prefix||`${this.settings.path}/provider`}/${kk}${wk}`),
+              Vk = screen.width / 2 - tk / 2,
+              Jk = screen.height / 2 - Xk / 2;
+            bk.__classPrivateFieldSet(this, ak, window.open(sk, dk, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + tk + ", height=" + Xk + ", top=" + Jk + ", left=" + Vk), "f");
+            const Ak = kk => {
+                void 0 === kk.data.user && void 0 === kk.data.token || (clearInterval(ek), bk.__classPrivateFieldGet(this, ak, "f").close(), bk.__classPrivateFieldSet(this, ak, void 0, "f"), window.removeEventListener("message", Ak), void 0 !== kk.data.error ? Rk(kk.data.error) : (Bk(kk.data), this.emitChange(kk.data)))
               },
-              Su = setInterval((() => {
-                Ju.__classPrivateFieldGet(this, Qu, "f") && !Ju.__classPrivateFieldGet(this, Qu, "f").closed || (Ju.__classPrivateFieldSet(this, Qu, void 0, "f"), Eu("Ty"), window.removeEventListener("message", xu))
+              ek = setInterval((() => {
+                bk.__classPrivateFieldGet(this, ak, "f") && !bk.__classPrivateFieldGet(this, ak, "f").closed || (bk.__classPrivateFieldSet(this, ak, void 0, "f"), Rk("yB"), window.removeEventListener("message", Ak))
               }), 200);
-            window.addEventListener("message", xu)
+            window.addEventListener("message", Ak)
           }))
         }))
       }
       signOut() {
-        return Ju.__awaiter(this, void 0, void 0, (function*() {
+        return bk.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(uu) {
-        void 0 !== uu.token && (this.token = uu.token, null === uu.token ? Nu.removeItem(this.settings.key) : Nu.setItem(this.settings.key, uu.token)), Ju.__classPrivateFieldGet(this, mu, "f").emit("change", uu)
+      emitChange(kk) {
+        void 0 !== kk.token && (this.token = kk.token, null === kk.token ? wk.removeItem(this.settings.key) : wk.setItem(this.settings.key, kk.token)), bk.__classPrivateFieldGet(this, Xk, "f").emit("change", kk)
       }
     }
   },
-  8824: (uu, Ru, yu) => {
-    var Eu, Ku = yu(8832),
-      Qu = yu(8836),
-      mu = yu(8839),
-      Ju = yu(8889),
-      Nu = yu(8898),
-      Xu = yu(8909);
-    class Vu extends Error {
-      constructor(uu, Ru) {
-        super(uu), this.code = Ru, this.name = "MatchMakeError", Object.setPrototypeOf(this, Vu.prototype)
+  8754: (kk, Fk, Bk) => {
+    var Rk, tk = Bk(8758),
+      ak = Bk(8760),
+      Xk = Bk(8767),
+      bk = Bk(8833),
+      wk = Bk(8842),
+      dk = Bk(8856);
+    class sk extends Error {
+      constructor(kk, Fk) {
+        super(kk), this.code = Fk, this.name = "MatchMakeError", Object.setPrototypeOf(this, sk.prototype)
       }
     }
-    const ru = "undefined" !== typeof window && "undefined" !== typeof(null === (Eu = null === window || void 0 === window ? void 0 : window.location) || void 0 === Eu ? void 0 : Eu.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class Bu {
+    const Vk = "undefined" !== typeof window && "undefined" !== typeof(null === (Rk = null === window || void 0 === window ? void 0 : window.location) || void 0 === Rk ? void 0 : Rk.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class Jk {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ru,
-          Ru = arguments.length > 1 ? arguments[1] : void 0;
-        var yu, Eu;
-        if ("string" === typeof uu) {
-          const Ru = uu.startsWith("/") ? new URL(uu, ru) : new URL(uu),
-            yu = "https:" === Ru.protocol || "wss:" === Ru.protocol,
-            Eu = Number(Ru.port || (yu ? 443 : 80));
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Vk,
+          Fk = arguments.length > 1 ? arguments[1] : void 0;
+        var Bk, Rk;
+        if ("string" === typeof kk) {
+          const Fk = kk.startsWith("/") ? new URL(kk, Vk) : new URL(kk),
+            Bk = "https:" === Fk.protocol || "wss:" === Fk.protocol,
+            Rk = Number(Fk.port || (Bk ? 443 : 80));
           this.settings = {
-            hostname: Ru.hostname,
-            pathname: Ru.pathname,
-            port: Eu,
-            secure: yu,
-            searchParams: Ru.searchParams.toString() || void 0
+            hostname: Fk.hostname,
+            pathname: Fk.pathname,
+            port: Rk,
+            secure: Bk,
+            searchParams: Fk.searchParams.toString() || void 0
           }
-        } else void 0 === uu.port && (uu.port = uu.secure ? 443 : 80), void 0 === uu.pathname && (uu.pathname = ""), this.settings = uu;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new Ju.HTTP(this, (null === Ru || void 0 === Ru ? void 0 : Ru.headers) || {}), this.auth = new Nu.Auth(this.http), this.urlBuilder = null === Ru || void 0 === Ru ? void 0 : Ru.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Eu = null === (yu = null === window || void 0 === window ? void 0 : window.location) || void 0 === yu ? void 0 : yu.hostname) || void 0 === Eu ? void 0 : Eu.includes("discordsays.com")) && (this.urlBuilder = Xu.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === kk.port && (kk.port = kk.secure ? 443 : 80), void 0 === kk.pathname && (kk.pathname = ""), this.settings = kk;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new bk.HTTP(this, (null === Fk || void 0 === Fk ? void 0 : Fk.headers) || {}), this.auth = new wk.Auth(this.http), this.urlBuilder = null === Fk || void 0 === Fk ? void 0 : Fk.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Rk = null === (Bk = null === window || void 0 === window ? void 0 : window.location) || void 0 === Bk ? void 0 : Bk.hostname) || void 0 === Rk ? void 0 : Rk.includes("discordsays.com")) && (this.urlBuilder = dk.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(uu) {
-        return Ku.__awaiter(this, arguments, void 0, (function*(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            yu = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", uu, Ru, yu)
+      joinOrCreate(kk) {
+        return tk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Bk = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", kk, Fk, Bk)
         }))
       }
-      create(uu) {
-        return Ku.__awaiter(this, arguments, void 0, (function*(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            yu = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", uu, Ru, yu)
+      create(kk) {
+        return tk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Bk = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", kk, Fk, Bk)
         }))
       }
-      join(uu) {
-        return Ku.__awaiter(this, arguments, void 0, (function*(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            yu = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", uu, Ru, yu)
+      join(kk) {
+        return tk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Bk = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", kk, Fk, Bk)
         }))
       }
-      joinById(uu) {
-        return Ku.__awaiter(this, arguments, void 0, (function*(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            yu = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", uu, Ru, yu)
+      joinById(kk) {
+        return tk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Bk = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", kk, Fk, Bk)
         }))
       }
-      reconnect(uu, Ru) {
-        return Ku.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof uu && "string" === typeof Ru) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [yu, Eu] = uu.split(":");
-          if (!yu || !Eu) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", yu, {
-            reconnectionToken: Eu
-          }, Ru)
+      reconnect(kk, Fk) {
+        return tk.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof kk && "string" === typeof Fk) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [Bk, Rk] = kk.split(":");
+          if (!Bk || !Rk) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", Bk, {
+            reconnectionToken: Rk
+          }, Fk)
         }))
       }
-      consumeSeatReservation(uu, Ru, yu) {
-        return Ku.__awaiter(this, void 0, void 0, (function*() {
-          const Eu = this.createRoom(uu.room.name, Ru);
-          Eu.roomId = uu.room.roomId, Eu.sessionId = uu.sessionId;
-          const mu = {
-            sessionId: Eu.sessionId
+      consumeSeatReservation(kk, Fk, Bk) {
+        return tk.__awaiter(this, void 0, void 0, (function*() {
+          const Rk = this.createRoom(kk.room.name, Fk);
+          Rk.roomId = kk.room.roomId, Rk.sessionId = kk.sessionId;
+          const Xk = {
+            sessionId: Rk.sessionId
           };
-          uu.reconnectionToken && (mu.reconnectionToken = uu.reconnectionToken);
-          const Ju = yu || Eu;
-          return Eu.connect(this.buildEndpoint(uu.room, mu, uu.protocol), uu.devMode && (() => Ku.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Eu.roomId}'...`);
-            let yu = 0;
-            const Qu = () => Ku.__awaiter(this, void 0, void 0, (function*() {
-              yu++;
+          kk.reconnectionToken && (Xk.reconnectionToken = kk.reconnectionToken);
+          const bk = Bk || Rk;
+          return Rk.connect(this.buildEndpoint(kk.room, Xk, kk.protocol), kk.devMode && (() => tk.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Rk.roomId}'...`);
+            let Bk = 0;
+            const ak = () => tk.__awaiter(this, void 0, void 0, (function*() {
+              Bk++;
               try {
-                yield this.consumeSeatReservation(uu, Ru, Ju), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Eu.roomId}'`)
-              } catch (Ku) {
-                yu < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${yu} out of 8)`), setTimeout(Qu, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(kk, Fk, bk), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Rk.roomId}'`)
+              } catch (tk) {
+                Bk < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${Bk} out of 8)`), setTimeout(ak, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(Qu, 2e3)
-          }))), Ju, uu, this.http.headers), new Promise(((uu, Ru) => {
-            const yu = (uu, yu) => Ru(new Qu.ServerError(uu, yu));
-            Ju.onError.once(yu), Ju.onJoin.once((() => {
-              Ju.onError.remove(yu), setTimeout((() => {
+            setTimeout(ak, 2e3)
+          }))), bk, kk, this.http.headers), new Promise(((kk, Fk) => {
+            const Bk = (kk, Bk) => Fk(new ak.ServerError(kk, Bk));
+            bk.onError.once(Bk), bk.onJoin.once((() => {
+              bk.onError.remove(Bk), setTimeout((() => {
                 try {
-                  const uu = [141, 56, 86, 101, 253, 220, 201, 166, 141, 79, 179, 74, 197, 208, 102, 129, 163, 98, 16, 23];
-                  uu && Ju.Rk(128, new Uint8Array(uu))
+                  const kk = [141, 56, 86, 101, 253, 220, 201, 166, 141, 79, 179, 74, 197, 208, 102, 129, 163, 98, 16, 23];
+                  kk && bk.uL(128, new Uint8Array(kk))
                 } catch {}
-              }), 3e3), uu(Ju)
+              }), 3e3), kk(bk)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(uu, Ru) {
-        return Ku.__awaiter(this, arguments, void 0, (function*(uu, Ru) {
-          let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            Eu = arguments.length > 3 ? arguments[3] : void 0,
-            Ku = arguments.length > 4 ? arguments[4] : void 0;
-          const Qu = (yield this.http.post(`matchmake/${uu}/${Ru}`, {
+      createMatchMakeRequest(kk, Fk) {
+        return tk.__awaiter(this, arguments, void 0, (function*(kk, Fk) {
+          let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            Rk = arguments.length > 3 ? arguments[3] : void 0,
+            tk = arguments.length > 4 ? arguments[4] : void 0;
+          const ak = (yield this.http.post(`matchmake/${kk}/${Fk}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(yu)
+            body: JSON.stringify(Bk)
           })).data;
-          if (Qu.error) throw new Vu(Qu.error, Qu.code);
-          return "reconnect" === uu && (Qu.reconnectionToken = yu.reconnectionToken), yield this.consumeSeatReservation(Qu, Eu, Ku)
+          if (ak.error) throw new sk(ak.error, ak.code);
+          return "reconnect" === kk && (ak.reconnectionToken = Bk.reconnectionToken), yield this.consumeSeatReservation(ak, Rk, tk)
         }))
       }
-      createRoom(uu, Ru) {
-        return new mu.Mr(uu, Ru)
+      createRoom(kk, Fk) {
+        return new Xk.sJ(kk, Fk)
       }
-      buildEndpoint(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          Eu = this.settings.searchParams || "";
-        this.http.authToken && (Ru._authToken = this.http.authToken);
-        for (const mu in Ru) Ru.hasOwnProperty(mu) && (Eu += (Eu ? "&" : "") + `${mu}=${Ru[mu]}`);
-        "h3" === yu && (yu = "http");
-        let Ku = this.settings.secure ? `${yu}s://` : `${yu}://`;
-        uu.publicAddress ? Ku += `${uu.publicAddress}` : Ku += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const Qu = `${Ku}/${uu.processId}/${uu.roomId}?${Eu}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(Qu)) : Qu
+      buildEndpoint(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          Rk = this.settings.searchParams || "";
+        this.http.authToken && (Fk._authToken = this.http.authToken);
+        for (const Xk in Fk) Fk.hasOwnProperty(Xk) && (Rk += (Rk ? "&" : "") + `${Xk}=${Fk[Xk]}`);
+        "h3" === Bk && (Bk = "http");
+        let tk = this.settings.secure ? `${Bk}s://` : `${Bk}://`;
+        kk.publicAddress ? tk += `${kk.publicAddress}` : tk += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const ak = `${tk}/${kk.processId}/${kk.roomId}?${Rk}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(ak)) : ak
       }
       getHttpEndpoint() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const Ru = uu.startsWith("/") ? uu : `/${uu}`;
-        let yu = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${Ru}`;
-        return this.settings.searchParams && (yu += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(yu)) : yu
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const Fk = kk.startsWith("/") ? kk : `/${kk}`;
+        let Bk = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${Fk}`;
+        return this.settings.searchParams && (Bk += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(Bk)) : Bk
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    Bu.VERSION = "0.16.22", Ru.Client = Bu, Ru.MatchMakeError = Vu
+    Jk.VERSION = "0.16.22", Fk.Client = Jk, Fk.MatchMakeError = sk
   },
-  8843: (uu, Ru, yu) => {
-    var Eu = yu(8845),
-      Ku = yu(8853);
-    Ru.Connection = class {
-      constructor(uu) {
-        if (this.events = {}, "h3" === uu) this.transport = new Eu.H3TransportTransport(this.events);
-        else this.transport = new Ku.WebSocketTransport(this.events)
+  8772: (kk, Fk, Bk) => {
+    var Rk = Bk(8781),
+      tk = Bk(8787);
+    Fk.Connection = class {
+      constructor(kk) {
+        if (this.events = {}, "h3" === kk) this.transport = new Rk.H3TransportTransport(this.events);
+        else this.transport = new tk.WebSocketTransport(this.events)
       }
-      connect(uu, Ru) {
-        this.transport.connect.call(this.transport, uu, Ru)
+      connect(kk, Fk) {
+        this.transport.connect.call(this.transport, kk, Fk)
       }
-      send(uu) {
-        this.transport.send(uu)
+      send(kk) {
+        this.transport.send(kk)
       }
-      sendUnreliable(uu) {
-        this.transport.sendUnreliable(uu)
+      sendUnreliable(kk) {
+        this.transport.sendUnreliable(kk)
       }
-      close(uu, Ru) {
-        this.transport.close(uu, Ru)
+      close(kk, Fk) {
+        this.transport.close(kk, Fk)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  8889: (uu, Ru, yu) => {
-    var Eu = yu(8836);
+  8833: (kk, Fk, Bk) => {
+    var Rk = Bk(8760);
 
-    function Ku(uu) {
-      var Ru = Object.create(null);
-      return uu && Object.keys(uu).forEach((function(yu) {
-        if ("default" !== yu) {
-          var Eu = Object.getOwnPropertyDescriptor(uu, yu);
-          Object.defineProperty(Ru, yu, Eu.get ? Eu : {
+    function tk(kk) {
+      var Fk = Object.create(null);
+      return kk && Object.keys(kk).forEach((function(Bk) {
+        if ("default" !== Bk) {
+          var Rk = Object.getOwnPropertyDescriptor(kk, Bk);
+          Object.defineProperty(Fk, Bk, Rk.get ? Rk : {
             enumerable: !0,
             get: function() {
-              return uu[yu]
+              return kk[Bk]
             }
           })
         }
-      })), Ru.default = uu, Object.freeze(Ru)
+      })), Fk.default = kk, Object.freeze(Fk)
     }
-    var Qu = Ku(yu(8891));
-    Ru.HTTP = class {
-      constructor(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = uu, this.headers = Ru
+    var ak = tk(Bk(8838));
+    Fk.HTTP = class {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = kk, this.headers = Fk
       }
-      get(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", uu, Ru)
+      get(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", kk, Fk)
       }
-      post(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", uu, Ru)
+      post(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", kk, Fk)
       }
-      del(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", uu, Ru)
+      del(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", kk, Fk)
       }
-      put(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", uu, Ru)
+      put(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", kk, Fk)
       }
-      request(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return Qu[uu](this.client.getHttpEndpoint(Ru), this.getOptions(yu)).catch((uu => {
-          var Ru;
-          if (uu.aborted) throw new Eu.AbortError("Request aborted");
-          const yu = uu.statusCode,
-            Ku = (null === (Ru = uu.data) || void 0 === Ru ? void 0 : Ru.error) || uu.statusMessage || uu.message;
-          if (!yu && !Ku) throw uu;
-          throw new Eu.ServerError(yu, Ku)
+      request(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return ak[kk](this.client.getHttpEndpoint(Fk), this.getOptions(Bk)).catch((kk => {
+          var Fk;
+          if (kk.aborted) throw new Rk.AbortError("Request aborted");
+          const Bk = kk.statusCode,
+            tk = (null === (Fk = kk.data) || void 0 === Fk ? void 0 : Fk.error) || kk.statusMessage || kk.message;
+          if (!Bk && !tk) throw kk;
+          throw new Rk.ServerError(Bk, tk)
         }))
       }
-      getOptions(uu) {
-        return uu.headers = Object.assign({}, this.headers, uu.headers), this.authToken && (uu.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (uu.withCredentials = !0), uu
+      getOptions(kk) {
+        return kk.headers = Object.assign({}, this.headers, kk.headers), this.authToken && (kk.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (kk.withCredentials = !0), kk
       }
     }
   },
-  8864: (uu, Ru) => {
-    var yu, Eu;
-    Ru.Protocol = void 0, (yu = Ru.Protocol || (Ru.Protocol = {}))[yu.HANDSHAKE = 9] = "HANDSHAKE", yu[yu.JOIN_ROOM = 10] = "JOIN_ROOM", yu[yu.ERROR = 11] = "ERROR", yu[yu.LEAVE_ROOM = 12] = "LEAVE_ROOM", yu[yu.ROOM_DATA = 13] = "ROOM_DATA", yu[yu.ROOM_STATE = 14] = "ROOM_STATE", yu[yu.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", yu[yu.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", yu[yu.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", Ru.ErrorCode = void 0, (Eu = Ru.ErrorCode || (Ru.ErrorCode = {}))[Eu.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Eu[Eu.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Eu[Eu.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Eu[Eu.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Eu[Eu.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Eu[Eu.AUTH_FAILED = 4215] = "AUTH_FAILED", Eu[Eu.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  8799: (kk, Fk) => {
+    var Bk, Rk;
+    Fk.Protocol = void 0, (Bk = Fk.Protocol || (Fk.Protocol = {}))[Bk.HANDSHAKE = 9] = "HANDSHAKE", Bk[Bk.JOIN_ROOM = 10] = "JOIN_ROOM", Bk[Bk.ERROR = 11] = "ERROR", Bk[Bk.LEAVE_ROOM = 12] = "LEAVE_ROOM", Bk[Bk.ROOM_DATA = 13] = "ROOM_DATA", Bk[Bk.ROOM_STATE = 14] = "ROOM_STATE", Bk[Bk.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", Bk[Bk.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", Bk[Bk.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", Fk.ErrorCode = void 0, (Rk = Fk.ErrorCode || (Fk.ErrorCode = {}))[Rk.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Rk[Rk.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Rk[Rk.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Rk[Rk.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Rk[Rk.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Rk[Rk.AUTH_FAILED = 4215] = "AUTH_FAILED", Rk[Rk.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  8839: (uu, Ru, yu) => {
-    var Eu = yu(8843),
-      Ku = yu(8864),
-      Qu = yu(8871),
-      mu = yu(8874),
-      Ju = yu(8876),
-      Nu = yu(8851),
-      Xu = yu(8884),
-      Vu = yu(8836),
-      ru = yu(8887);
-    class Bu {
-      constructor(uu, Ru) {
-        this.onStateChange = Ju.createSignal(), this.onError = Ju.createSignal(), this.jH = Ju.createSignal(), this.onJoin = Ju.createSignal(), this.hasJoined = !1, this.onMessageHandlers = mu.createNanoEvents(), this.roomId = null, this.name = uu, this.packr = new ru.Packr, this.packr.encode(void 0), Ru && (this.pW = new(Qu.getSerializer("schema")), this.rootSchema = Ru, this.pW.state = new Ru), this.onError(((uu, Ru) => {
-          var yu;
-          return null === (yu = console.warn) || void 0 === yu ? void 0 : yu.call(console, `colyseus.js - onError => (${uu}) ${Ru}`)
-        })), this.jH((() => this.rW()))
+  8767: (kk, Fk, Bk) => {
+    var Rk = Bk(8772),
+      tk = Bk(8799),
+      ak = Bk(8801),
+      Xk = Bk(8810),
+      bk = Bk(8815),
+      wk = Bk(8783),
+      dk = Bk(8822),
+      sk = Bk(8760),
+      Vk = Bk(8825);
+    class Jk {
+      constructor(kk, Fk) {
+        this.onStateChange = bk.createSignal(), this.onError = bk.createSignal(), this.pW = bk.createSignal(), this.onJoin = bk.createSignal(), this.hasJoined = !1, this.onMessageHandlers = Xk.createNanoEvents(), this.roomId = null, this.name = kk, this.packr = new Vk.Packr, this.packr.encode(void 0), Fk && (this.Zm = new(ak.getSerializer("schema")), this.rootSchema = Fk, this.Zm.state = new Fk), this.onError(((kk, Fk) => {
+          var Bk;
+          return null === (Bk = console.warn) || void 0 === Bk ? void 0 : Bk.call(console, `colyseus.js - onError => (${kk}) ${Fk}`)
+        })), this.pW((() => this.qm()))
       }
-      connect(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          Ku = arguments.length > 3 ? arguments[3] : void 0,
-          Qu = arguments.length > 4 ? arguments[4] : void 0;
-        const mu = new Eu.Connection(Ku.protocol);
-        if (yu.connection = mu, mu.events.onmessage = Bu.prototype.onMessageCallback.bind(yu), mu.events.onclose = function(uu) {
-            var Eu;
-            if (!yu.hasJoined) return null === (Eu = console.warn) || void 0 === Eu || Eu.call(console, `Room connection was closed unexpectedly (${uu.code}): ${uu.reason}`), void yu.onError.invoke(uu.code, uu.reason);
-            uu.code === Vu.CloseCode.DEVMODE_RESTART && Ru ? Ru() : (yu.jH.invoke(uu.code, uu.reason), yu.destroy())
-          }, mu.events.onerror = function(uu) {
-            var Ru;
-            null === (Ru = console.warn) || void 0 === Ru || Ru.call(console, `Room, onError (${uu.code}): ${uu.reason}`), yu.onError.invoke(uu.code, uu.reason)
-          }, "h3" === Ku.protocol) {
-          const Ru = new URL(uu);
-          mu.connect(Ru.origin, Ku)
-        } else mu.connect(uu, Qu)
+      connect(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          tk = arguments.length > 3 ? arguments[3] : void 0,
+          ak = arguments.length > 4 ? arguments[4] : void 0;
+        const Xk = new Rk.Connection(tk.protocol);
+        if (Bk.connection = Xk, Xk.events.onmessage = Jk.prototype.onMessageCallback.bind(Bk), Xk.events.onclose = function(kk) {
+            var Rk;
+            if (!Bk.hasJoined) return null === (Rk = console.warn) || void 0 === Rk || Rk.call(console, `Room connection was closed unexpectedly (${kk.code}): ${kk.reason}`), void Bk.onError.invoke(kk.code, kk.reason);
+            kk.code === sk.CloseCode.DEVMODE_RESTART && Fk ? Fk() : (Bk.pW.invoke(kk.code, kk.reason), Bk.destroy())
+          }, Xk.events.onerror = function(kk) {
+            var Fk;
+            null === (Fk = console.warn) || void 0 === Fk || Fk.call(console, `Room, onError (${kk.code}): ${kk.reason}`), Bk.onError.invoke(kk.code, kk.reason)
+          }, "h3" === tk.protocol) {
+          const Fk = new URL(kk);
+          Xk.connect(Fk.origin, tk)
+        } else Xk.connect(kk, ak)
       }
       leave() {
-        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((Ru => {
-          this.jH((uu => Ru(uu))), this.connection ? uu ? (this.packr.buffer[0] = Ku.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.jH.invoke(Vu.CloseCode.CONSENTED)
+        let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((Fk => {
+          this.pW((kk => Fk(kk))), this.connection ? kk ? (this.packr.buffer[0] = tk.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.pW.invoke(sk.CloseCode.CONSENTED)
         }))
       }
-      WH(uu, Ru) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(uu), Ru)
+      zW(kk, Fk) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(kk), Fk)
       }
-      send(uu, Ru) {
-        const yu = {
+      send(kk, Fk) {
+        const Bk = {
           offset: 1
         };
-        this.packr.buffer[0] = Ku.Protocol.ROOM_DATA, "string" === typeof uu ? Nu.encode.string(this.packr.buffer, uu, yu) : Nu.encode.number(this.packr.buffer, uu, yu), this.packr.position = 0;
-        const Eu = void 0 !== Ru ? this.packr.pack(Ru, 2048 + yu.offset) : this.packr.buffer.subarray(0, yu.offset);
-        this.connection.send(Eu)
+        this.packr.buffer[0] = tk.Protocol.ROOM_DATA, "string" === typeof kk ? wk.encode.string(this.packr.buffer, kk, Bk) : wk.encode.number(this.packr.buffer, kk, Bk), this.packr.position = 0;
+        const Rk = void 0 !== Fk ? this.packr.pack(Fk, 2048 + Bk.offset) : this.packr.buffer.subarray(0, Bk.offset);
+        this.connection.send(Rk)
       }
-      sendUnreliable(uu, Ru) {
-        const yu = {
+      sendUnreliable(kk, Fk) {
+        const Bk = {
           offset: 1
         };
-        this.packr.buffer[0] = Ku.Protocol.ROOM_DATA, "string" === typeof uu ? Nu.encode.string(this.packr.buffer, uu, yu) : Nu.encode.number(this.packr.buffer, uu, yu), this.packr.position = 0;
-        const Eu = void 0 !== Ru ? this.packr.pack(Ru, 2048 + yu.offset) : this.packr.buffer.subarray(0, yu.offset);
-        this.connection.sendUnreliable(Eu)
+        this.packr.buffer[0] = tk.Protocol.ROOM_DATA, "string" === typeof kk ? wk.encode.string(this.packr.buffer, kk, Bk) : wk.encode.number(this.packr.buffer, kk, Bk), this.packr.position = 0;
+        const Rk = void 0 !== Fk ? this.packr.pack(Fk, 2048 + Bk.offset) : this.packr.buffer.subarray(0, Bk.offset);
+        this.connection.sendUnreliable(Rk)
       }
-      Rk(uu, Ru) {
-        const yu = {
+      uL(kk, Fk) {
+        const Bk = {
           offset: 1
         };
-        if (this.packr.buffer[0] = Ku.Protocol.ROOM_DATA_BYTES, "string" === typeof uu ? Nu.encode.string(this.packr.buffer, uu, yu) : Nu.encode.number(this.packr.buffer, uu, yu), Ru.byteLength + yu.offset > this.packr.buffer.byteLength) {
-          const uu = new Uint8Array(yu.offset + Ru.byteLength);
-          uu.set(this.packr.buffer), this.packr.useBuffer(uu)
+        if (this.packr.buffer[0] = tk.Protocol.ROOM_DATA_BYTES, "string" === typeof kk ? wk.encode.string(this.packr.buffer, kk, Bk) : wk.encode.number(this.packr.buffer, kk, Bk), Fk.byteLength + Bk.offset > this.packr.buffer.byteLength) {
+          const kk = new Uint8Array(Bk.offset + Fk.byteLength);
+          kk.set(this.packr.buffer), this.packr.useBuffer(kk)
         }
-        this.packr.buffer.set(Ru, yu.offset), this.connection.send(this.packr.buffer.subarray(0, yu.offset + Ru.byteLength))
+        this.packr.buffer.set(Fk, Bk.offset), this.connection.send(this.packr.buffer.subarray(0, Bk.offset + Fk.byteLength))
       }
       get state() {
-        return this.pW.getState()
+        return this.Zm.getState()
       }
-      rW() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.jH.clear(), this.onMessageHandlers.events = {}, this.pW instanceof Xu.rD && (this.pW.Ox.root.callbacks = {})
+      qm() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.pW.clear(), this.onMessageHandlers.events = {}, this.Zm instanceof dk.QE && (this.Zm.Le.root.callbacks = {})
       }
-      onMessageCallback(uu) {
-        const Ru = new Uint8Array(uu.data),
-          yu = {
+      onMessageCallback(kk) {
+        const Fk = new Uint8Array(kk.data),
+          Bk = {
             offset: 1
           },
-          Eu = Ru[0];
-        if (Eu === Ku.Protocol.JOIN_ROOM) {
-          const uu = Nu.decode.utf8Read(Ru, yu, Ru[yu.offset++]);
-          if (this.serializerId = Nu.decode.utf8Read(Ru, yu, Ru[yu.offset++]), !this.pW) {
-            const uu = Qu.getSerializer(this.serializerId);
-            this.pW = new uu
+          Rk = Fk[0];
+        if (Rk === tk.Protocol.JOIN_ROOM) {
+          const kk = wk.decode.utf8Read(Fk, Bk, Fk[Bk.offset++]);
+          if (this.serializerId = wk.decode.utf8Read(Fk, Bk, Fk[Bk.offset++]), !this.Zm) {
+            const kk = ak.getSerializer(this.serializerId);
+            this.Zm = new kk
           }
-          Ru.byteLength > yu.offset && this.pW.handshake && this.pW.handshake(Ru, yu), this.reconnectionToken = `${this.roomId}:${uu}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Ku.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (Eu === Ku.Protocol.ERROR) {
-          const uu = Nu.decode.number(Ru, yu),
-            Eu = Nu.decode.string(Ru, yu);
-          this.onError.invoke(uu, Eu)
-        } else if (Eu === Ku.Protocol.LEAVE_ROOM) this.leave();
-        else if (Eu === Ku.Protocol.ROOM_STATE) this.pW.setState(Ru, yu), this.onStateChange.invoke(this.pW.getState());
-        else if (Eu === Ku.Protocol.ROOM_STATE_PATCH) this.pW.patch(Ru, yu), this.onStateChange.invoke(this.pW.getState());
-        else if (Eu === Ku.Protocol.ROOM_DATA) {
-          const uu = Nu.decode.stringCheck(Ru, yu) ? Nu.decode.string(Ru, yu) : Nu.decode.number(Ru, yu),
-            Eu = Ru.byteLength > yu.offset ? ru.unpack(Ru, {
-              start: yu.offset
+          Fk.byteLength > Bk.offset && this.Zm.handshake && this.Zm.handshake(Fk, Bk), this.reconnectionToken = `${this.roomId}:${kk}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = tk.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (Rk === tk.Protocol.ERROR) {
+          const kk = wk.decode.number(Fk, Bk),
+            Rk = wk.decode.string(Fk, Bk);
+          this.onError.invoke(kk, Rk)
+        } else if (Rk === tk.Protocol.LEAVE_ROOM) this.leave();
+        else if (Rk === tk.Protocol.ROOM_STATE) this.Zm.setState(Fk, Bk), this.onStateChange.invoke(this.Zm.getState());
+        else if (Rk === tk.Protocol.ROOM_STATE_PATCH) this.Zm.patch(Fk, Bk), this.onStateChange.invoke(this.Zm.getState());
+        else if (Rk === tk.Protocol.ROOM_DATA) {
+          const kk = wk.decode.stringCheck(Fk, Bk) ? wk.decode.string(Fk, Bk) : wk.decode.number(Fk, Bk),
+            Rk = Fk.byteLength > Bk.offset ? Vk.unpack(Fk, {
+              start: Bk.offset
             }) : void 0;
-          this.dispatchMessage(uu, Eu)
-        } else if (Eu === Ku.Protocol.ROOM_DATA_BYTES) {
-          const uu = Nu.decode.stringCheck(Ru, yu) ? Nu.decode.string(Ru, yu) : Nu.decode.number(Ru, yu);
-          this.dispatchMessage(uu, Ru.subarray(yu.offset))
+          this.dispatchMessage(kk, Rk)
+        } else if (Rk === tk.Protocol.ROOM_DATA_BYTES) {
+          const kk = wk.decode.stringCheck(Fk, Bk) ? wk.decode.string(Fk, Bk) : wk.decode.number(Fk, Bk);
+          this.dispatchMessage(kk, Fk.subarray(Bk.offset))
         }
       }
-      dispatchMessage(uu, Ru) {
-        var yu;
-        const Eu = this.getMessageHandlerKey(uu);
-        this.onMessageHandlers.events[Eu] ? this.onMessageHandlers.emit(Eu, Ru) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", uu, Ru) : null === (yu = console.warn) || void 0 === yu || yu.call(console, `colyseus.js: onMessage() not registered for type '${uu}'.`)
+      dispatchMessage(kk, Fk) {
+        var Bk;
+        const Rk = this.getMessageHandlerKey(kk);
+        this.onMessageHandlers.events[Rk] ? this.onMessageHandlers.emit(Rk, Fk) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", kk, Fk) : null === (Bk = console.warn) || void 0 === Bk || Bk.call(console, `colyseus.js: onMessage() not registered for type '${kk}'.`)
       }
       destroy() {
-        this.pW && this.pW.teardown()
+        this.Zm && this.Zm.teardown()
       }
-      getMessageHandlerKey(uu) {
-        switch (typeof uu) {
+      getMessageHandlerKey(kk) {
+        switch (typeof kk) {
           case "string":
-            return uu;
+            return kk;
           case "number":
-            return `i${uu}`;
+            return `i${kk}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    Ru.Mr = Bu
+    Fk.sJ = Jk
   },
-  8903: (uu, Ru, yu) => {
-    var Eu = yu(8832);
-    let Ku;
+  8849: (kk, Fk, Bk) => {
+    var Rk = Bk(8758);
+    let tk;
 
-    function Qu() {
-      if (!Ku) try {
-        Ku = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (uu) {}
-      return Ku || "undefined" === typeof globalThis.indexedDB || (Ku = new mu), Ku || (Ku = {
+    function ak() {
+      if (!tk) try {
+        tk = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (kk) {}
+      return tk || "undefined" === typeof globalThis.indexedDB || (tk = new Xk), tk || (tk = {
         cache: {},
-        setItem: function(uu, Ru) {
-          this.cache[uu] = Ru
+        setItem: function(kk, Fk) {
+          this.cache[kk] = Fk
         },
-        getItem: function(uu) {
-          this.cache[uu]
+        getItem: function(kk) {
+          this.cache[kk]
         },
-        removeItem: function(uu) {
-          delete this.cache[uu]
+        removeItem: function(kk) {
+          delete this.cache[kk]
         }
-      }), Ku
+      }), tk
     }
-    class mu {
+    class Xk {
       constructor() {
-        this.dbPromise = new Promise((uu => {
-          const Ru = indexedDB.open("_colyseus_storage", 1);
-          Ru.onupgradeneeded = () => Ru.result.createObjectStore("store"), Ru.onsuccess = () => uu(Ru.result)
+        this.dbPromise = new Promise((kk => {
+          const Fk = indexedDB.open("_colyseus_storage", 1);
+          Fk.onupgradeneeded = () => Fk.result.createObjectStore("store"), Fk.onsuccess = () => kk(Fk.result)
         }))
       }
-      tx(uu, Ru) {
-        return Eu.__awaiter(this, void 0, void 0, (function*() {
-          const yu = (yield this.dbPromise).transaction("store", uu).objectStore("store");
-          return Ru(yu)
+      tx(kk, Fk) {
+        return Rk.__awaiter(this, void 0, void 0, (function*() {
+          const Bk = (yield this.dbPromise).transaction("store", kk).objectStore("store");
+          return Fk(Bk)
         }))
       }
-      setItem(uu, Ru) {
-        return this.tx("readwrite", (yu => yu.put(Ru, uu))).then()
+      setItem(kk, Fk) {
+        return this.tx("readwrite", (Bk => Bk.put(Fk, kk))).then()
       }
-      getItem(uu) {
-        return Eu.__awaiter(this, void 0, void 0, (function*() {
-          const Ru = yield this.tx("readonly", (Ru => Ru.get(uu)));
-          return new Promise((uu => {
-            Ru.onsuccess = () => uu(Ru.result)
+      getItem(kk) {
+        return Rk.__awaiter(this, void 0, void 0, (function*() {
+          const Fk = yield this.tx("readonly", (Fk => Fk.get(kk)));
+          return new Promise((kk => {
+            Fk.onsuccess = () => kk(Fk.result)
           }))
         }))
       }
-      removeItem(uu) {
-        return this.tx("readwrite", (Ru => Ru.delete(uu))).then()
+      removeItem(kk) {
+        return this.tx("readwrite", (Fk => Fk.delete(kk))).then()
       }
     }
-    Ru.getItem = function(uu, Ru) {
-      const yu = Qu().getItem(uu);
-      "undefined" !== typeof Promise && yu instanceof Promise ? yu.then((uu => Ru(uu))) : Ru(yu)
-    }, Ru.removeItem = function(uu) {
-      Qu().removeItem(uu)
-    }, Ru.setItem = function(uu, Ru) {
-      Qu().setItem(uu, Ru)
+    Fk.getItem = function(kk, Fk) {
+      const Bk = ak().getItem(kk);
+      "undefined" !== typeof Promise && Bk instanceof Promise ? Bk.then((kk => Fk(kk))) : Fk(Bk)
+    }, Fk.removeItem = function(kk) {
+      ak().removeItem(kk)
+    }, Fk.setItem = function(kk, Fk) {
+      ak().setItem(kk, Fk)
     }
   },
-  8874: (uu, Ru) => {
-    Ru.createNanoEvents = () => ({
-      emit(uu) {
-        let Ru = this.events[uu] || [];
-        for (var yu = arguments.length, Eu = new Array(yu > 1 ? yu - 1 : 0), Ku = 1; Ku < yu; Ku++) Eu[Ku - 1] = arguments[Ku];
-        for (let Qu = 0, mu = Ru.length; Qu < mu; Qu++) Ru[Qu](...Eu)
+  8810: (kk, Fk) => {
+    Fk.createNanoEvents = () => ({
+      emit(kk) {
+        let Fk = this.events[kk] || [];
+        for (var Bk = arguments.length, Rk = new Array(Bk > 1 ? Bk - 1 : 0), tk = 1; tk < Bk; tk++) Rk[tk - 1] = arguments[tk];
+        for (let ak = 0, Xk = Fk.length; ak < Xk; ak++) Fk[ak](...Rk)
       },
       events: {},
-      on(uu, Ru) {
-        var yu;
-        return (null === (yu = this.events[uu]) || void 0 === yu ? void 0 : yu.push(Ru)) || (this.events[uu] = [Ru]), () => {
-          var yu;
-          this.events[uu] = null === (yu = this.events[uu]) || void 0 === yu ? void 0 : yu.filter((uu => Ru !== uu))
+      on(kk, Fk) {
+        var Bk;
+        return (null === (Bk = this.events[kk]) || void 0 === Bk ? void 0 : Bk.push(Fk)) || (this.events[kk] = [Fk]), () => {
+          var Bk;
+          this.events[kk] = null === (Bk = this.events[kk]) || void 0 === Bk ? void 0 : Bk.filter((kk => Fk !== kk))
         }
       }
     })
   },
-  8876: (uu, Ru) => {
-    class yu {
+  8815: (kk, Fk) => {
+    class Bk {
       constructor() {
         this.handlers = []
       }
-      register(uu) {
-        return this.handlers.push(uu), this
+      register(kk) {
+        return this.handlers.push(kk), this
       }
       invoke() {
-        for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
-        this.handlers.forEach((uu => uu.apply(this, Ru)))
+        for (var kk = arguments.length, Fk = new Array(kk), Bk = 0; Bk < kk; Bk++) Fk[Bk] = arguments[Bk];
+        this.handlers.forEach((kk => kk.apply(this, Fk)))
       }
       invokeAsync() {
-        for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
-        return Promise.all(this.handlers.map((uu => uu.apply(this, Ru))))
+        for (var kk = arguments.length, Fk = new Array(kk), Bk = 0; Bk < kk; Bk++) Fk[Bk] = arguments[Bk];
+        return Promise.all(this.handlers.map((kk => kk.apply(this, Fk))))
       }
-      remove(uu) {
-        const Ru = this.handlers.indexOf(uu);
-        this.handlers[Ru] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(kk) {
+        const Fk = this.handlers.indexOf(kk);
+        this.handlers[Fk] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    Ru.EventEmitter = yu, Ru.createSignal = function() {
-      const uu = new yu;
+    Fk.EventEmitter = Bk, Fk.createSignal = function() {
+      const kk = new Bk;
 
-      function Ru(Ru) {
-        return uu.register(Ru, null === this)
+      function Fk(Fk) {
+        return kk.register(Fk, null === this)
       }
-      return Ru.once = Ru => {
-        const yu = function() {
-          for (var Eu = arguments.length, Ku = new Array(Eu), Qu = 0; Qu < Eu; Qu++) Ku[Qu] = arguments[Qu];
-          Ru.apply(this, Ku), uu.remove(yu)
+      return Fk.once = Fk => {
+        const Bk = function() {
+          for (var Rk = arguments.length, tk = new Array(Rk), ak = 0; ak < Rk; ak++) tk[ak] = arguments[ak];
+          Fk.apply(this, tk), kk.remove(Bk)
         };
-        uu.register(yu)
-      }, Ru.remove = Ru => uu.remove(Ru), Ru.invoke = function() {
-        return uu.invoke(...arguments)
-      }, Ru.invokeAsync = function() {
-        return uu.invokeAsync(...arguments)
-      }, Ru.clear = () => uu.clear(), Ru
+        kk.register(Bk)
+      }, Fk.remove = Fk => kk.remove(Fk), Fk.invoke = function() {
+        return kk.invoke(...arguments)
+      }, Fk.invokeAsync = function() {
+        return kk.invokeAsync(...arguments)
+      }, Fk.clear = () => kk.clear(), Fk
     }
   },
-  8836: (uu, Ru) => {
-    var yu;
-    Ru.CloseCode = void 0, (yu = Ru.CloseCode || (Ru.CloseCode = {}))[yu.CONSENTED = 4e3] = "CONSENTED", yu[yu.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class Eu extends Error {
-      constructor(uu, Ru) {
-        super(Ru), this.name = "ServerError", this.code = uu
+  8760: (kk, Fk) => {
+    var Bk;
+    Fk.CloseCode = void 0, (Bk = Fk.CloseCode || (Fk.CloseCode = {}))[Bk.CONSENTED = 4e3] = "CONSENTED", Bk[Bk.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class Rk extends Error {
+      constructor(kk, Fk) {
+        super(Fk), this.name = "ServerError", this.code = kk
       }
     }
-    class Ku extends Error {
-      constructor(uu) {
-        super(uu), this.name = "AbortError"
+    class tk extends Error {
+      constructor(kk) {
+        super(kk), this.name = "AbortError"
       }
     }
-    Ru.AbortError = Ku, Ru.ServerError = Eu
+    Fk.AbortError = tk, Fk.ServerError = Rk
   },
-  8811: (uu, Ru, yu) => {
-    yu(8815);
-    var Eu = yu(8824),
-      Ku = yu(8864),
-      Qu = yu(8839),
-      mu = yu(8898),
-      Ju = yu(8836),
-      Nu = yu(8884),
-      Xu = yu(8912),
-      Vu = yu(8871);
-    Vu.registerSerializer("schema", Nu.rD), Vu.registerSerializer("none", Xu.NoneSerializer), Ru.Client = Eu.Client, Ru.MatchMakeError = Eu.MatchMakeError, Object.defineProperty(Ru, "ErrorCode", {
+  8745: (kk, Fk, Bk) => {
+    Bk(8749);
+    var Rk = Bk(8754),
+      tk = Bk(8799),
+      ak = Bk(8767),
+      Xk = Bk(8842),
+      bk = Bk(8760),
+      wk = Bk(8822),
+      dk = Bk(8862),
+      sk = Bk(8801);
+    sk.registerSerializer("schema", wk.QE), sk.registerSerializer("none", dk.NoneSerializer), Fk.Client = Rk.Client, Fk.MatchMakeError = Rk.MatchMakeError, Object.defineProperty(Fk, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return Ku.ErrorCode
+        return tk.ErrorCode
       }
-    }), Object.defineProperty(Ru, "Protocol", {
+    }), Object.defineProperty(Fk, "Protocol", {
       enumerable: !0,
       get: function() {
-        return Ku.Protocol
+        return tk.Protocol
       }
-    }), Ru.Mr = Qu.Mr, Ru.Auth = mu.Auth, Ru.ServerError = Ju.ServerError, Ru.rD = Nu.rD, Ru.getStateCallbacks = Nu.getStateCallbacks, Ru.registerSerializer = Vu.registerSerializer
+    }), Fk.sJ = ak.sJ, Fk.Auth = Xk.Auth, Fk.ServerError = bk.ServerError, Fk.QE = wk.QE, Fk.getStateCallbacks = wk.getStateCallbacks, Fk.registerSerializer = sk.registerSerializer
   },
-  8815: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = uu => null !== uu && "object" === typeof uu && uu.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  8749: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = kk => null !== kk && "object" === typeof kk && kk.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  8912: (uu, Ru) => {
-    Ru.NoneSerializer = class {
-      setState(uu) {}
+  8862: (kk, Fk) => {
+    Fk.NoneSerializer = class {
+      setState(kk) {}
       getState() {
         return null
       }
-      patch(uu) {}
+      patch(kk) {}
       teardown() {}
-      handshake(uu) {}
+      handshake(kk) {}
     }
   },
-  8884: (uu, Ru, yu) => {
-    var Eu = yu(8851);
-    Ru.rD = class {
-      setState(uu, Ru) {
-        this.Ox.decode(uu, Ru)
+  8822: (kk, Fk, Bk) => {
+    var Rk = Bk(8783);
+    Fk.QE = class {
+      setState(kk, Fk) {
+        this.Le.decode(kk, Fk)
       }
       getState() {
         return this.state
       }
-      patch(uu, Ru) {
-        return this.Ox.decode(uu, Ru)
+      patch(kk, Fk) {
+        return this.Le.decode(kk, Fk)
       }
       teardown() {
-        this.Ox.root.clearRefs()
+        this.Le.root.clearRefs()
       }
-      handshake(uu, Ru) {
-        this.state ? (Eu.Reflection.decode(uu, Ru), this.Ox = new Eu.Decoder(this.state)) : (this.Ox = Eu.Reflection.decode(uu, Ru), this.state = this.Ox.state)
+      handshake(kk, Fk) {
+        this.state ? (Rk.Reflection.decode(kk, Fk), this.Le = new Rk.Decoder(this.state)) : (this.Le = Rk.Reflection.decode(kk, Fk), this.state = this.Le.state)
       }
-    }, Ru.getStateCallbacks = function(uu) {
+    }, Fk.getStateCallbacks = function(kk) {
       try {
-        return Eu.getDecoderStateCallbacks(uu.pW.Ox)
-      } catch (Ru) {
+        return Rk.getDecoderStateCallbacks(kk.Zm.Le)
+      } catch (Fk) {
         return
       }
     }
   },
-  8871: (uu, Ru) => {
-    const yu = {};
-    Ru.getSerializer = function(uu) {
-      const Ru = yu[uu];
-      if (!Ru) throw new Error("missing serializer: " + uu);
-      return Ru
-    }, Ru.registerSerializer = function(uu, Ru) {
-      yu[uu] = Ru
+  8801: (kk, Fk) => {
+    const Bk = {};
+    Fk.getSerializer = function(kk) {
+      const Fk = Bk[kk];
+      if (!Fk) throw new Error("missing serializer: " + kk);
+      return Fk
+    }, Fk.registerSerializer = function(kk, Fk) {
+      Bk[kk] = Fk
     }
   },
-  8845: (uu, Ru, yu) => {
-    var Eu = yu(8832),
-      Ku = yu(8851);
-    Ru.H3TransportTransport = class {
-      constructor(uu) {
-        this.events = uu, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  8781: (kk, Fk, Bk) => {
+    var Rk = Bk(8758),
+      tk = Bk(8783);
+    Fk.H3TransportTransport = class {
+      constructor(kk) {
+        this.events = kk, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const yu = Ru.fingerprint && {
+      connect(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const Bk = Fk.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(Ru.fingerprint).buffer
+            value: new Uint8Array(Fk.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(uu, yu), this.wt.ready.then((uu => {
-          console.log("WebTransport ready!", uu), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((uu => {
-            this.reader = uu.value.readable.getReader(), this.writer = uu.value.writable.getWriter(), this.sendSeatReservation(Ru.room.roomId, Ru.sessionId, Ru.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((uu => {
-            console.error("failed to read incoming stream", uu), console.error("TODO: close the connection")
+        this.wt = new WebTransport(kk, Bk), this.wt.ready.then((kk => {
+          console.log("WebTransport ready!", kk), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((kk => {
+            this.reader = kk.value.readable.getReader(), this.writer = kk.value.writable.getWriter(), this.sendSeatReservation(Fk.room.roomId, Fk.sessionId, Fk.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((kk => {
+            console.error("failed to read incoming stream", kk), console.error("TODO: close the connection")
           }))
-        })).catch((uu => {
-          console.log("WebTransport not ready!", uu), this._close()
-        })), this.wt.closed.then((uu => {
-          console.log("WebTransport closed w/ success", uu), this.events.onclose({
-            code: uu.closeCode,
-            reason: uu.reason
+        })).catch((kk => {
+          console.log("WebTransport not ready!", kk), this._close()
+        })), this.wt.closed.then((kk => {
+          console.log("WebTransport closed w/ success", kk), this.events.onclose({
+            code: kk.closeCode,
+            reason: kk.reason
           })
-        })).catch((uu => {
-          console.log("WebTransport closed w/ error", uu), this.events.onerror(uu), this.events.onclose({
-            code: uu.closeCode,
-            reason: uu.reason
+        })).catch((kk => {
+          console.log("WebTransport closed w/ error", kk), this.events.onerror(kk), this.events.onclose({
+            code: kk.closeCode,
+            reason: kk.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(uu) {
-        const Ru = Ku.encode.number(this.lengthPrefixBuffer, uu.length, {
+      send(kk) {
+        const Fk = tk.encode.number(this.lengthPrefixBuffer, kk.length, {
             offset: 0
           }),
-          yu = new Uint8Array(Ru + uu.length);
-        yu.set(this.lengthPrefixBuffer.subarray(0, Ru), 0), yu.set(uu, Ru), this.writer.write(yu)
+          Bk = new Uint8Array(Fk + kk.length);
+        Bk.set(this.lengthPrefixBuffer.subarray(0, Fk), 0), Bk.set(kk, Fk), this.writer.write(Bk)
       }
-      sendUnreliable(uu) {
-        const Ru = Ku.encode.number(this.lengthPrefixBuffer, uu.length, {
+      sendUnreliable(kk) {
+        const Fk = tk.encode.number(this.lengthPrefixBuffer, kk.length, {
             offset: 0
           }),
-          yu = new Uint8Array(Ru + uu.length);
-        yu.set(this.lengthPrefixBuffer.subarray(0, Ru), 0), yu.set(uu, Ru), this.unreliableWriter.write(yu)
+          Bk = new Uint8Array(Fk + kk.length);
+        Bk.set(this.lengthPrefixBuffer.subarray(0, Fk), 0), Bk.set(kk, Fk), this.unreliableWriter.write(Bk)
       }
-      close(uu, Ru) {
+      close(kk, Fk) {
         try {
           this.wt.close({
-            closeCode: uu,
-            reason: Ru
+            closeCode: kk,
+            reason: Fk
           })
-        } catch (yu) {
-          console.error(yu)
+        } catch (Bk) {
+          console.error(Bk)
         }
       }
       readIncomingData() {
-        return Eu.__awaiter(this, void 0, void 0, (function*() {
-          let uu;
+        return Rk.__awaiter(this, void 0, void 0, (function*() {
+          let kk;
           for (; this.isOpen;) {
             try {
-              uu = yield this.reader.read();
-              const Ru = uu.value,
-                yu = {
+              kk = yield this.reader.read();
+              const Fk = kk.value,
+                Bk = {
                   offset: 0
                 };
               do {
-                const uu = Ku.decode.number(Ru, yu);
+                const kk = tk.decode.number(Fk, Bk);
                 this.events.onmessage({
-                  data: Ru.subarray(yu.offset, yu.offset + uu)
-                }), yu.offset += uu
-              } while (yu.offset < Ru.length)
-            } catch (Ru) {
-              -1 === Ru.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Ru);
+                  data: Fk.subarray(Bk.offset, Bk.offset + kk)
+                }), Bk.offset += kk
+              } while (Bk.offset < Fk.length)
+            } catch (Fk) {
+              -1 === Fk.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Fk);
               break
             }
-            if (uu.done) break
+            if (kk.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return Eu.__awaiter(this, void 0, void 0, (function*() {
-          let uu;
+        return Rk.__awaiter(this, void 0, void 0, (function*() {
+          let kk;
           for (; this.isOpen;) {
             try {
-              uu = yield this.unreliableReader.read();
-              const Ru = uu.value,
-                yu = {
+              kk = yield this.unreliableReader.read();
+              const Fk = kk.value,
+                Bk = {
                   offset: 0
                 };
               do {
-                const uu = Ku.decode.number(Ru, yu);
+                const kk = tk.decode.number(Fk, Bk);
                 this.events.onmessage({
-                  data: Ru.subarray(yu.offset, yu.offset + uu)
-                }), yu.offset += uu
-              } while (yu.offset < Ru.length)
-            } catch (Ru) {
-              -1 === Ru.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Ru);
+                  data: Fk.subarray(Bk.offset, Bk.offset + kk)
+                }), Bk.offset += kk
+              } while (Bk.offset < Fk.length)
+            } catch (Fk) {
+              -1 === Fk.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Fk);
               break
             }
-            if (uu.done) break
+            if (kk.done) break
           }
         }))
       }
-      sendSeatReservation(uu, Ru, yu) {
-        const Eu = {
+      sendSeatReservation(kk, Fk, Bk) {
+        const Rk = {
             offset: 0
           },
-          Qu = [];
-        Ku.encode.string(Qu, uu, Eu), Ku.encode.string(Qu, Ru, Eu), yu && Ku.encode.string(Qu, yu, Eu), this.writer.write(new Uint8Array(Qu).buffer)
+          ak = [];
+        tk.encode.string(ak, kk, Rk), tk.encode.string(ak, Fk, Rk), Bk && tk.encode.string(ak, Bk, Rk), this.writer.write(new Uint8Array(ak).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  8853: (uu, Ru, yu) => {
-    var Eu = yu(8860);
-    const Ku = globalThis.WebSocket || Eu;
-    Ru.WebSocketTransport = class {
-      constructor(uu) {
-        this.events = uu
+  8787: (kk, Fk, Bk) => {
+    var Rk = Bk(8794);
+    const tk = globalThis.WebSocket || Rk;
+    Fk.WebSocketTransport = class {
+      constructor(kk) {
+        this.events = kk
       }
-      send(uu) {
-        this.ws.send(uu)
+      send(kk) {
+        this.ws.send(kk)
       }
-      sendUnreliable(uu) {
+      sendUnreliable(kk) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(uu, Ru) {
+      connect(kk, Fk) {
         try {
-          this.ws = new Ku(uu, {
-            headers: Ru,
+          this.ws = new tk(kk, {
+            headers: Fk,
             protocols: this.protocols
           })
-        } catch (yu) {
-          this.ws = new Ku(uu, this.protocols)
+        } catch (Bk) {
+          this.ws = new tk(kk, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(uu, Ru) {
-        this.ws.close(uu, Ru)
+      close(kk, Fk) {
+        this.ws.close(kk, Fk)
       }
       get isOpen() {
-        return this.ws.readyState === Ku.OPEN
+        return this.ws.readyState === tk.OPEN
       }
     }
   },
-  8860: uu => {
-    uu.exports = function() {
+  8794: kk => {
+    kk.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  8891: (uu, Ru, yu) => {
-    function Eu(uu, Ru) {
-      Ru.headers = uu.headers || {}, Ru.statusMessage = uu.statusText, Ru.statusCode = uu.status, Ru.data = uu.response
+  8838: (kk, Fk, Bk) => {
+    function Rk(kk, Fk) {
+      Fk.headers = kk.headers || {}, Fk.statusMessage = kk.statusText, Fk.statusCode = kk.status, Fk.data = kk.response
     }
 
-    function Ku(uu, Ru, yu) {
-      return new Promise((function(Ku, Qu) {
-        yu = yu || {};
-        var mu, Ju, Nu, Xu = new XMLHttpRequest,
-          Vu = yu.body,
-          ru = yu.headers || {};
-        for (mu in yu.timeout && (Xu.timeout = yu.timeout), Xu.ontimeout = Xu.onerror = function(uu) {
-            uu.timeout = "timeout" == uu.type, Qu(uu)
-          }, Xu.onabort = function(uu) {
-            uu.aborted = !0, Qu(uu)
-          }, Xu.open(uu, Ru.href || Ru), Xu.onload = function() {
-            for (Nu = Xu.getAllResponseHeaders().trim().split(/[\r\n]+/), Eu(Xu, Xu); Ju = Nu.shift();) Ju = Ju.split(": "), Xu.headers[Ju.shift().toLowerCase()] = Ju.join(": ");
-            if ((Ju = Xu.headers["content-type"]) && ~Ju.indexOf("application/json")) try {
-              Xu.data = JSON.parse(Xu.data, yu.reviver)
-            } catch (uu) {
-              return Eu(Xu, uu), Qu(uu)
-            }(Xu.status >= 400 ? Qu : Ku)(Xu)
-          }, typeof FormData < "u" && Vu instanceof FormData || Vu && "object" == typeof Vu && (ru["content-type"] = "application/json", Vu = JSON.stringify(Vu)), Xu.withCredentials = !!yu.withCredentials, ru) Xu.setRequestHeader(mu, ru[mu]);
-        Xu.send(Vu), yu.signal && yu.signal.addEventListener("abort", (function() {
-          Xu.abort()
+    function tk(kk, Fk, Bk) {
+      return new Promise((function(tk, ak) {
+        Bk = Bk || {};
+        var Xk, bk, wk, dk = new XMLHttpRequest,
+          sk = Bk.body,
+          Vk = Bk.headers || {};
+        for (Xk in Bk.timeout && (dk.timeout = Bk.timeout), dk.ontimeout = dk.onerror = function(kk) {
+            kk.timeout = "timeout" == kk.type, ak(kk)
+          }, dk.onabort = function(kk) {
+            kk.aborted = !0, ak(kk)
+          }, dk.open(kk, Fk.href || Fk), dk.onload = function() {
+            for (wk = dk.getAllResponseHeaders().trim().split(/[\r\n]+/), Rk(dk, dk); bk = wk.shift();) bk = bk.split(": "), dk.headers[bk.shift().toLowerCase()] = bk.join(": ");
+            if ((bk = dk.headers["content-type"]) && ~bk.indexOf("application/json")) try {
+              dk.data = JSON.parse(dk.data, Bk.reviver)
+            } catch (kk) {
+              return Rk(dk, kk), ak(kk)
+            }(dk.status >= 400 ? ak : tk)(dk)
+          }, typeof FormData < "u" && sk instanceof FormData || sk && "object" == typeof sk && (Vk["content-type"] = "application/json", sk = JSON.stringify(sk)), dk.withCredentials = !!Bk.withCredentials, Vk) dk.setRequestHeader(Xk, Vk[Xk]);
+        dk.send(sk), Bk.signal && Bk.signal.addEventListener("abort", (function() {
+          dk.abort()
         }))
       }))
     }
-    yu.r(Ru), yu.d(Ru, {
-      del: () => Nu,
-      get: () => Qu,
-      patch: () => Ju,
-      post: () => mu,
-      put: () => Xu,
-      send: () => Ku
+    Bk.r(Fk), Bk.d(Fk, {
+      del: () => wk,
+      get: () => ak,
+      patch: () => bk,
+      post: () => Xk,
+      put: () => dk,
+      send: () => tk
     });
-    var Qu = Ku.bind(Ku, "GET"),
-      mu = Ku.bind(Ku, "POST"),
-      Ju = Ku.bind(Ku, "PATCH"),
-      Nu = Ku.bind(Ku, "DELETE"),
-      Xu = Ku.bind(Ku, "PUT")
+    var ak = tk.bind(tk, "GET"),
+      Xk = tk.bind(tk, "POST"),
+      bk = tk.bind(tk, "PATCH"),
+      wk = tk.bind(tk, "DELETE"),
+      dk = tk.bind(tk, "PUT")
   },
-  8887: (uu, Ru, yu) => {
-    var Eu, Ku, Qu;
-    yu.r(Ru), yu.d(Ru, {
-      ALWAYS: () => YR,
-      C1: () => bu,
-      DECIMAL_FIT: () => qR,
-      DECIMAL_ROUND: () => oR,
-      Decoder: () => NR,
-      Encoder: () => PR,
-      FLOAT32_OPTIONS: () => xR,
-      NEVER: () => iR,
-      Packr: () => tR,
-      RESERVE_START_SPACE: () => aR,
-      RESET_BUFFER_MODE: () => vR,
-      REUSE_BUFFER_MODE: () => OR,
-      Unpackr: () => Mu,
-      addExtension: () => zR,
-      clearSource: () => mR,
-      decode: () => BR,
-      decodeIter: () => fR,
-      encode: () => hR,
-      encodeIter: () => uy,
-      isNativeAccelerationEnabled: () => Fu,
-      mapsAsObjects: () => yy,
-      pack: () => ZR,
-      roundFloat32: () => HR,
-      unpack: () => VR,
-      unpackMultiple: () => rR,
-      useRecords: () => Ry
+  8825: (kk, Fk, Bk) => {
+    var Rk, tk, ak;
+    Bk.r(Fk), Bk.d(Fk, {
+      ALWAYS: () => xF,
+      C1: () => Yk,
+      DECIMAL_FIT: () => lF,
+      DECIMAL_ROUND: () => jF,
+      Decoder: () => dF,
+      Encoder: () => pF,
+      FLOAT32_OPTIONS: () => eF,
+      NEVER: () => KF,
+      Packr: () => GF,
+      RESERVE_START_SPACE: () => QF,
+      RESET_BUFFER_MODE: () => IF,
+      REUSE_BUFFER_MODE: () => nF,
+      Unpackr: () => Hk,
+      addExtension: () => PF,
+      clearSource: () => bF,
+      decode: () => AF,
+      decodeIter: () => kB,
+      encode: () => ZF,
+      encodeIter: () => FB,
+      isNativeAccelerationEnabled: () => hk,
+      mapsAsObjects: () => RB,
+      pack: () => CF,
+      roundFloat32: () => iF,
+      unpack: () => VF,
+      unpackMultiple: () => JF,
+      useRecords: () => BB
     });
     try {
-      Eu = new TextDecoder
-    } catch (Ey) {}
-    var mu = 0;
-    const Ju = [];
-    var Nu, Xu, Vu, ru, Bu, xu = Ju,
-      Su = 0,
-      pu = {},
-      Tu = 0,
-      Wu = 0,
-      ju = [],
-      Hu = {
+      Rk = new TextDecoder
+    } catch (tB) {}
+    var Xk = 0;
+    const bk = [];
+    var wk, dk, sk, Vk, Jk, Ak = bk,
+      ek = 0,
+      yk = {},
+      fk = 0,
+      mk = 0,
+      Wk = [],
+      vk = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class du {}
-    const bu = new du;
-    bu.name = "MessagePack 0xC1";
-    var Cu, ku, eu, Au = !1,
-      Du = 2;
+    class ik {}
+    const Yk = new ik;
+    Yk.name = "MessagePack 0xC1";
+    var Lk, Ok, Ek, Sk = !1,
+      Nk = 2;
     try {
       new Function("")
-    } catch (Ey) {
-      Du = 1 / 0
+    } catch (tB) {
+      Nk = 1 / 0
     }
-    class Mu {
-      constructor(uu) {
-        uu && (!1 === uu.useRecords && void 0 === uu.mapsAsObjects && (uu.mapsAsObjects = !0), uu.sequential && !1 !== uu.trusted && (uu.trusted = !0, uu.structures || 0 == uu.useRecords || (uu.structures = [], uu.maxSharedStructures || (uu.maxSharedStructures = 0))), uu.structures ? uu.structures.sharedLength = uu.structures.length : uu.getStructures && ((uu.structures = []).uninitialized = !0, uu.structures.sharedLength = 0), uu.int64AsNumber && (uu.int64AsType = "number")), Object.assign(this, uu)
+    class Hk {
+      constructor(kk) {
+        kk && (!1 === kk.useRecords && void 0 === kk.mapsAsObjects && (kk.mapsAsObjects = !0), kk.sequential && !1 !== kk.trusted && (kk.trusted = !0, kk.structures || 0 == kk.useRecords || (kk.structures = [], kk.maxSharedStructures || (kk.maxSharedStructures = 0))), kk.structures ? kk.structures.sharedLength = kk.structures.length : kk.getStructures && ((kk.structures = []).uninitialized = !0, kk.structures.sharedLength = 0), kk.int64AsNumber && (kk.int64AsType = "number")), Object.assign(this, kk)
       }
-      unpack(uu, Ru) {
-        if (Ku) return QR((() => (mR(), this ? this.unpack(uu, Ru) : Mu.prototype.unpack.call(Hu, uu, Ru))));
-        uu.buffer || uu.constructor !== ArrayBuffer || (uu = "undefined" !== typeof Buffer ? Buffer.from(uu) : new Uint8Array(uu)), "object" === typeof Ru ? (Qu = Ru.end || uu.length, mu = Ru.start || 0) : (mu = 0, Qu = Ru > -1 ? Ru : uu.length), Su = 0, Wu = 0, Xu = null, xu = Ju, Vu = null, Ku = uu;
+      unpack(kk, Fk) {
+        if (tk) return XF((() => (bF(), this ? this.unpack(kk, Fk) : Hk.prototype.unpack.call(vk, kk, Fk))));
+        kk.buffer || kk.constructor !== ArrayBuffer || (kk = "undefined" !== typeof Buffer ? Buffer.from(kk) : new Uint8Array(kk)), "object" === typeof Fk ? (ak = Fk.end || kk.length, Xk = Fk.start || 0) : (Xk = 0, ak = Fk > -1 ? Fk : kk.length), ek = 0, mk = 0, dk = null, Ak = bk, sk = null, tk = kk;
         try {
-          Bu = uu.dataView || (uu.dataView = new DataView(uu.buffer, uu.byteOffset, uu.byteLength))
-        } catch (Ey) {
-          if (Ku = null, uu instanceof Uint8Array) throw Ey;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (uu && "object" == typeof uu ? uu.constructor.name : typeof uu))
+          Jk = kk.dataView || (kk.dataView = new DataView(kk.buffer, kk.byteOffset, kk.byteLength))
+        } catch (tB) {
+          if (tk = null, kk instanceof Uint8Array) throw tB;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (kk && "object" == typeof kk ? kk.constructor.name : typeof kk))
         }
-        if (this instanceof Mu) {
-          if (pu = this, this.structures) return Nu = this.structures, Iu(Ru);
-          (!Nu || Nu.length > 0) && (Nu = [])
-        } else pu = Hu, (!Nu || Nu.length > 0) && (Nu = []);
-        return Iu(Ru)
+        if (this instanceof Hk) {
+          if (yk = this, this.structures) return wk = this.structures, uk(Fk);
+          (!wk || wk.length > 0) && (wk = [])
+        } else yk = vk, (!wk || wk.length > 0) && (wk = []);
+        return uk(Fk)
       }
-      unpackMultiple(uu, Ru) {
-        let yu, Eu = 0;
+      unpackMultiple(kk, Fk) {
+        let Bk, Rk = 0;
         try {
-          Au = !0;
-          let Ku = uu.length,
-            Qu = this ? this.unpack(uu, Ku) : XR.unpack(uu, Ku);
-          if (!Ru) {
-            for (yu = [Qu]; mu < Ku;) Eu = mu, yu.push(Iu());
-            return yu
+          Sk = !0;
+          let tk = kk.length,
+            ak = this ? this.unpack(kk, tk) : sF.unpack(kk, tk);
+          if (!Fk) {
+            for (Bk = [ak]; Xk < tk;) Rk = Xk, Bk.push(uk());
+            return Bk
           }
-          if (!1 === Ru(Qu, Eu, mu)) return;
-          for (; mu < Ku;)
-            if (Eu = mu, !1 === Ru(Iu(), Eu, mu)) return
-        } catch (Ey) {
-          throw Ey.lastPosition = Eu, Ey.values = yu, Ey
+          if (!1 === Fk(ak, Rk, Xk)) return;
+          for (; Xk < tk;)
+            if (Rk = Xk, !1 === Fk(uk(), Rk, Xk)) return
+        } catch (tB) {
+          throw tB.lastPosition = Rk, tB.values = Bk, tB
         } finally {
-          Au = !1, mR()
+          Sk = !1, bF()
         }
       }
-      _mergeStructures(uu, Ru) {
-        ku && (uu = ku.call(this, uu)), uu = uu || [], Object.isFrozen(uu) && (uu = uu.map((uu => uu.slice(0))));
-        for (let yu = 0, Eu = uu.length; yu < Eu; yu++) {
-          let Ru = uu[yu];
-          Ru && (Ru.isShared = !0, yu >= 32 && (Ru.highByte = yu - 32 >> 5))
+      _mergeStructures(kk, Fk) {
+        Ok && (kk = Ok.call(this, kk)), kk = kk || [], Object.isFrozen(kk) && (kk = kk.map((kk => kk.slice(0))));
+        for (let Bk = 0, Rk = kk.length; Bk < Rk; Bk++) {
+          let Fk = kk[Bk];
+          Fk && (Fk.isShared = !0, Bk >= 32 && (Fk.highByte = Bk - 32 >> 5))
         }
-        uu.sharedLength = uu.length;
-        for (let yu in Ru || [])
-          if (yu >= 0) {
-            let Eu = uu[yu],
-              Ku = Ru[yu];
-            Ku && (Eu && ((uu.restoreStructures || (uu.restoreStructures = []))[yu] = Eu), uu[yu] = Ku)
-          } return this.structures = uu
+        kk.sharedLength = kk.length;
+        for (let Bk in Fk || [])
+          if (Bk >= 0) {
+            let Rk = kk[Bk],
+              tk = Fk[Bk];
+            tk && (Rk && ((kk.restoreStructures || (kk.restoreStructures = []))[Bk] = Rk), kk[Bk] = tk)
+          } return this.structures = kk
       }
-      decode(uu, Ru) {
-        return this.unpack(uu, Ru)
+      decode(kk, Fk) {
+        return this.unpack(kk, Fk)
       }
     }
 
-    function Iu(uu) {
+    function uk(kk) {
       try {
-        if (!pu.trusted && !Au) {
-          let uu = Nu.sharedLength || 0;
-          uu < Nu.length && (Nu.length = uu)
+        if (!yk.trusted && !Sk) {
+          let kk = wk.sharedLength || 0;
+          kk < wk.length && (wk.length = kk)
         }
-        let Ru;
-        if (pu.randomAccessStructure && Ku[mu] < 64 && Ku[mu] >= 32 && Cu ? (Ru = Cu(Ku, mu, Qu, pu), Ku = null, uu && uu.lazy || !Ru || (Ru = Ru.toJSON()), mu = Qu) : Ru = Uu(), Vu && (mu = Vu.postBundlePosition, Vu = null), Au && (Nu.restoreStructures = null), mu == Qu) Nu && Nu.restoreStructures && Gu(), Nu = null, Ku = null, ru && (ru = null);
+        let Fk;
+        if (yk.randomAccessStructure && tk[Xk] < 64 && tk[Xk] >= 32 && Lk ? (Fk = Lk(tk, Xk, ak, yk), tk = null, kk && kk.lazy || !Fk || (Fk = Fk.toJSON()), Xk = ak) : Fk = gk(), sk && (Xk = sk.postBundlePosition, sk = null), Sk && (wk.restoreStructures = null), Xk == ak) wk && wk.restoreStructures && Mk(), wk = null, tk = null, Vk && (Vk = null);
         else {
-          if (mu > Qu) throw new Error("Unexpected end of MessagePack data");
-          if (!Au) {
-            let uu;
+          if (Xk > ak) throw new Error("Unexpected end of MessagePack data");
+          if (!Sk) {
+            let kk;
             try {
-              uu = JSON.stringify(Ru, ((uu, Ru) => "bigint" === typeof Ru ? `${Ru}n` : Ru)).slice(0, 100)
-            } catch (Ey) {
-              uu = "(JSON view not available " + Ey + ")"
+              kk = JSON.stringify(Fk, ((kk, Fk) => "bigint" === typeof Fk ? `${Fk}n` : Fk)).slice(0, 100)
+            } catch (tB) {
+              kk = "(JSON view not available " + tB + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + uu)
+            throw new Error("Data read, but end of buffer not reached " + kk)
           }
         }
-        return Ru
-      } catch (Ey) {
-        throw Nu && Nu.restoreStructures && Gu(), mR(), (Ey instanceof RangeError || Ey.message.startsWith("Unexpected end of buffer") || mu > Qu) && (Ey.incomplete = !0), Ey
+        return Fk
+      } catch (tB) {
+        throw wk && wk.restoreStructures && Mk(), bF(), (tB instanceof RangeError || tB.message.startsWith("Unexpected end of buffer") || Xk > ak) && (tB.incomplete = !0), tB
       }
     }
 
-    function Gu() {
-      for (let uu in Nu.restoreStructures) Nu[uu] = Nu.restoreStructures[uu];
-      Nu.restoreStructures = null
+    function Mk() {
+      for (let kk in wk.restoreStructures) wk[kk] = wk.restoreStructures[kk];
+      wk.restoreStructures = null
     }
 
-    function Uu() {
-      let uu = Ku[mu++];
-      if (uu < 160) {
-        if (uu < 128) {
-          if (uu < 64) return uu;
+    function gk() {
+      let kk = tk[Xk++];
+      if (kk < 160) {
+        if (kk < 128) {
+          if (kk < 64) return kk;
           {
-            let Ru = Nu[63 & uu] || pu.getStructures && lu()[63 & uu];
-            return Ru ? (Ru.read || (Ru.read = su(Ru, 63 & uu)), Ru.read()) : uu
+            let Fk = wk[63 & kk] || yk.getStructures && Tk()[63 & kk];
+            return Fk ? (Fk.read || (Fk.read = ck(Fk, 63 & kk)), Fk.read()) : kk
           }
         }
-        if (uu < 144) {
-          if (uu -= 128, pu.mapsAsObjects) {
-            let Ru = {};
-            for (let yu = 0; yu < uu; yu++) {
-              let uu = au();
-              "__proto__" === uu && (uu = "__proto_"), Ru[uu] = Uu()
+        if (kk < 144) {
+          if (kk -= 128, yk.mapsAsObjects) {
+            let Fk = {};
+            for (let Bk = 0; Bk < kk; Bk++) {
+              let kk = Qk();
+              "__proto__" === kk && (kk = "__proto_"), Fk[kk] = gk()
             }
-            return Ru
+            return Fk
           } {
-            let Ru = new Map;
-            for (let yu = 0; yu < uu; yu++) Ru.set(Uu(), Uu());
-            return Ru
+            let Fk = new Map;
+            for (let Bk = 0; Bk < kk; Bk++) Fk.set(gk(), gk());
+            return Fk
           }
         } {
-          uu -= 144;
-          let Ru = new Array(uu);
-          for (let yu = 0; yu < uu; yu++) Ru[yu] = Uu();
-          return pu.freezeData ? Object.freeze(Ru) : Ru
+          kk -= 144;
+          let Fk = new Array(kk);
+          for (let Bk = 0; Bk < kk; Bk++) Fk[Bk] = gk();
+          return yk.freezeData ? Object.freeze(Fk) : Fk
         }
       }
-      if (uu < 192) {
-        let Ru = uu - 160;
-        if (Wu >= mu) return Xu.slice(mu - Tu, (mu += Ru) - Tu);
-        if (0 == Wu && Qu < 140) {
-          let uu = Ru < 16 ? Yu(Ru) : iu(Ru);
-          if (null != uu) return uu
+      if (kk < 192) {
+        let Fk = kk - 160;
+        if (mk >= Xk) return dk.slice(Xk - fk, (Xk += Fk) - fk);
+        if (0 == mk && ak < 140) {
+          let kk = Fk < 16 ? xk(Fk) : Kk(Fk);
+          if (null != kk) return kk
         }
-        return gu(Ru)
+        return rk(Fk)
       } {
-        let Ru;
-        switch (uu) {
+        let Fk;
+        switch (kk) {
           case 192:
             return null;
           case 193:
-            return Vu ? (Ru = Uu(), Ru > 0 ? Vu[1].slice(Vu.position1, Vu.position1 += Ru) : Vu[0].slice(Vu.position0, Vu.position0 -= Ru)) : bu;
+            return sk ? (Fk = gk(), Fk > 0 ? sk[1].slice(sk.position1, sk.position1 += Fk) : sk[0].slice(sk.position0, sk.position0 -= Fk)) : Yk;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (Ru = Ku[mu++], void 0 === Ru) throw new Error("Unexpected end of buffer");
-            return qu(Ru);
+            if (Fk = tk[Xk++], void 0 === Fk) throw new Error("Unexpected end of buffer");
+            return lk(Fk);
           case 197:
-            return Ru = Bu.getUint16(mu), mu += 2, qu(Ru);
+            return Fk = Jk.getUint16(Xk), Xk += 2, lk(Fk);
           case 198:
-            return Ru = Bu.getUint32(mu), mu += 4, qu(Ru);
+            return Fk = Jk.getUint32(Xk), Xk += 4, lk(Fk);
           case 199:
-            return Ou(Ku[mu++]);
+            return nk(tk[Xk++]);
           case 200:
-            return Ru = Bu.getUint16(mu), mu += 2, Ou(Ru);
+            return Fk = Jk.getUint16(Xk), Xk += 2, nk(Fk);
           case 201:
-            return Ru = Bu.getUint32(mu), mu += 4, Ou(Ru);
+            return Fk = Jk.getUint32(Xk), Xk += 4, nk(Fk);
           case 202:
-            if (Ru = Bu.getFloat32(mu), pu.useFloat32 > 2) {
-              let uu = JR[(127 & Ku[mu]) << 1 | Ku[mu + 1] >> 7];
-              return mu += 4, (uu * Ru + (Ru > 0 ? .5 : -.5) | 0) / uu
+            if (Fk = Jk.getFloat32(Xk), yk.useFloat32 > 2) {
+              let kk = wF[(127 & tk[Xk]) << 1 | tk[Xk + 1] >> 7];
+              return Xk += 4, (kk * Fk + (Fk > 0 ? .5 : -.5) | 0) / kk
             }
-            return mu += 4, Ru;
+            return Xk += 4, Fk;
           case 203:
-            return Ru = Bu.getFloat64(mu), mu += 8, Ru;
+            return Fk = Jk.getFloat64(Xk), Xk += 8, Fk;
           case 204:
-            return Ku[mu++];
+            return tk[Xk++];
           case 205:
-            return Ru = Bu.getUint16(mu), mu += 2, Ru;
+            return Fk = Jk.getUint16(Xk), Xk += 2, Fk;
           case 206:
-            return Ru = Bu.getUint32(mu), mu += 4, Ru;
+            return Fk = Jk.getUint32(Xk), Xk += 4, Fk;
           case 207:
-            return "number" === pu.int64AsType ? (Ru = 4294967296 * Bu.getUint32(mu), Ru += Bu.getUint32(mu + 4)) : "string" === pu.int64AsType ? Ru = Bu.getBigUint64(mu).toString() : "auto" === pu.int64AsType ? (Ru = Bu.getBigUint64(mu), Ru <= BigInt(2) << BigInt(52) && (Ru = Number(Ru))) : Ru = Bu.getBigUint64(mu), mu += 8, Ru;
+            return "number" === yk.int64AsType ? (Fk = 4294967296 * Jk.getUint32(Xk), Fk += Jk.getUint32(Xk + 4)) : "string" === yk.int64AsType ? Fk = Jk.getBigUint64(Xk).toString() : "auto" === yk.int64AsType ? (Fk = Jk.getBigUint64(Xk), Fk <= BigInt(2) << BigInt(52) && (Fk = Number(Fk))) : Fk = Jk.getBigUint64(Xk), Xk += 8, Fk;
           case 208:
-            return Bu.getInt8(mu++);
+            return Jk.getInt8(Xk++);
           case 209:
-            return Ru = Bu.getInt16(mu), mu += 2, Ru;
+            return Fk = Jk.getInt16(Xk), Xk += 2, Fk;
           case 210:
-            return Ru = Bu.getInt32(mu), mu += 4, Ru;
+            return Fk = Jk.getInt32(Xk), Xk += 4, Fk;
           case 211:
-            return "number" === pu.int64AsType ? (Ru = 4294967296 * Bu.getInt32(mu), Ru += Bu.getUint32(mu + 4)) : "string" === pu.int64AsType ? Ru = Bu.getBigInt64(mu).toString() : "auto" === pu.int64AsType ? (Ru = Bu.getBigInt64(mu), Ru >= BigInt(-2) << BigInt(52) && Ru <= BigInt(2) << BigInt(52) && (Ru = Number(Ru))) : Ru = Bu.getBigInt64(mu), mu += 8, Ru;
+            return "number" === yk.int64AsType ? (Fk = 4294967296 * Jk.getInt32(Xk), Fk += Jk.getUint32(Xk + 4)) : "string" === yk.int64AsType ? Fk = Jk.getBigInt64(Xk).toString() : "auto" === yk.int64AsType ? (Fk = Jk.getBigInt64(Xk), Fk >= BigInt(-2) << BigInt(52) && Fk <= BigInt(2) << BigInt(52) && (Fk = Number(Fk))) : Fk = Jk.getBigInt64(Xk), Xk += 8, Fk;
           case 212:
-            if (Ru = Ku[mu++], 114 == Ru) return uR(63 & Ku[mu++]);
+            if (Fk = tk[Xk++], 114 == Fk) return FF(63 & tk[Xk++]);
             {
-              let uu = ju[Ru];
-              if (uu) return uu.read ? (mu++, uu.read(Uu())) : uu.noBuffer ? (mu++, uu()) : uu(Ku.subarray(mu, ++mu));
-              throw new Error("Unknown extension " + Ru)
+              let kk = Wk[Fk];
+              if (kk) return kk.read ? (Xk++, kk.read(gk())) : kk.noBuffer ? (Xk++, kk()) : kk(tk.subarray(Xk, ++Xk));
+              throw new Error("Unknown extension " + Fk)
             }
           case 213:
-            return Ru = Ku[mu], 114 == Ru ? (mu++, uR(63 & Ku[mu++], Ku[mu++])) : Ou(2);
+            return Fk = tk[Xk], 114 == Fk ? (Xk++, FF(63 & tk[Xk++], tk[Xk++])) : nk(2);
           case 214:
-            return Ou(4);
+            return nk(4);
           case 215:
-            return Ou(8);
+            return nk(8);
           case 216:
-            return Ou(16);
+            return nk(16);
           case 217:
-            return Ru = Ku[mu++], Wu >= mu ? Xu.slice(mu - Tu, (mu += Ru) - Tu) : cu(Ru);
+            return Fk = tk[Xk++], mk >= Xk ? dk.slice(Xk - fk, (Xk += Fk) - fk) : Dk(Fk);
           case 218:
-            return Ru = Bu.getUint16(mu), Wu >= (mu += 2) ? Xu.slice(mu - Tu, (mu += Ru) - Tu) : Lu(Ru);
+            return Fk = Jk.getUint16(Xk), mk >= (Xk += 2) ? dk.slice(Xk - fk, (Xk += Fk) - fk) : zk(Fk);
           case 219:
-            return Ru = Bu.getUint32(mu), Wu >= (mu += 4) ? Xu.slice(mu - Tu, (mu += Ru) - Tu) : zu(Ru);
+            return Fk = Jk.getUint32(Xk), mk >= (Xk += 4) ? dk.slice(Xk - fk, (Xk += Fk) - fk) : Pk(Fk);
           case 220:
-            return Ru = Bu.getUint16(mu), mu += 2, Zu(Ru);
+            return Fk = Jk.getUint16(Xk), Xk += 2, Ck(Fk);
           case 221:
-            return Ru = Bu.getUint32(mu), mu += 4, Zu(Ru);
+            return Fk = Jk.getUint32(Xk), Xk += 4, Ck(Fk);
           case 222:
-            return Ru = Bu.getUint16(mu), mu += 2, hu(Ru);
+            return Fk = Jk.getUint16(Xk), Xk += 2, Zk(Fk);
           case 223:
-            return Ru = Bu.getUint32(mu), mu += 4, hu(Ru);
+            return Fk = Jk.getUint32(Xk), Xk += 4, Zk(Fk);
           default:
-            if (uu >= 224) return uu - 256;
-            if (void 0 === uu) {
-              let uu = new Error("Unexpected end of MessagePack data");
-              throw uu.incomplete = !0, uu
+            if (kk >= 224) return kk - 256;
+            if (void 0 === kk) {
+              let kk = new Error("Unexpected end of MessagePack data");
+              throw kk.incomplete = !0, kk
             }
-            throw new Error("Unknown MessagePack token " + uu)
+            throw new Error("Unknown MessagePack token " + kk)
         }
       }
     }
-    const nu = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const Uk = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function su(uu, Ru) {
-      function yu() {
-        if (yu.count++ > Du) {
-          let yu = uu.read = new Function("r", "return function(){return " + (pu.freezeData ? "Object.freeze" : "") + "({" + uu.map((uu => "__proto__" === uu ? "__proto_:r()" : nu.test(uu) ? uu + ":r()" : "[" + JSON.stringify(uu) + "]:r()")).join(",") + "})}")(Uu);
-          return 0 === uu.highByte && (uu.read = tu(Ru, uu.read)), yu()
+    function ck(kk, Fk) {
+      function Bk() {
+        if (Bk.count++ > Nk) {
+          let Bk = kk.read = new Function("r", "return function(){return " + (yk.freezeData ? "Object.freeze" : "") + "({" + kk.map((kk => "__proto__" === kk ? "__proto_:r()" : Uk.test(kk) ? kk + ":r()" : "[" + JSON.stringify(kk) + "]:r()")).join(",") + "})}")(gk);
+          return 0 === kk.highByte && (kk.read = Gk(Fk, kk.read)), Bk()
         }
-        let Eu = {};
-        for (let Ru = 0, yu = uu.length; Ru < yu; Ru++) {
-          let yu = uu[Ru];
-          "__proto__" === yu && (yu = "__proto_"), Eu[yu] = Uu()
+        let Rk = {};
+        for (let Fk = 0, Bk = kk.length; Fk < Bk; Fk++) {
+          let Bk = kk[Fk];
+          "__proto__" === Bk && (Bk = "__proto_"), Rk[Bk] = gk()
         }
-        return pu.freezeData ? Object.freeze(Eu) : Eu
+        return yk.freezeData ? Object.freeze(Rk) : Rk
       }
-      return yu.count = 0, 0 === uu.highByte ? tu(Ru, yu) : yu
+      return Bk.count = 0, 0 === kk.highByte ? Gk(Fk, Bk) : Bk
     }
-    const tu = (uu, Ru) => function() {
-      let yu = Ku[mu++];
-      if (0 === yu) return Ru();
-      let Eu = uu < 32 ? -(uu + (yu << 5)) : uu + (yu << 5),
-        Qu = Nu[Eu] || lu()[Eu];
-      if (!Qu) throw new Error("Record id is not defined for " + Eu);
-      return Qu.read || (Qu.read = su(Qu, uu)), Qu.read()
+    const Gk = (kk, Fk) => function() {
+      let Bk = tk[Xk++];
+      if (0 === Bk) return Fk();
+      let Rk = kk < 32 ? -(kk + (Bk << 5)) : kk + (Bk << 5),
+        ak = wk[Rk] || Tk()[Rk];
+      if (!ak) throw new Error("Record id is not defined for " + Rk);
+      return ak.read || (ak.read = ck(ak, kk)), ak.read()
     };
 
-    function lu() {
-      let uu = QR((() => (Ku = null, pu.getStructures())));
-      return Nu = pu._mergeStructures(uu, Nu)
+    function Tk() {
+      let kk = XF((() => (tk = null, yk.getStructures())));
+      return wk = yk._mergeStructures(kk, wk)
     }
-    var gu = wu,
-      cu = wu,
-      Lu = wu,
-      zu = wu;
-    let Fu = !1;
+    var rk = qk,
+      Dk = qk,
+      zk = qk,
+      Pk = qk;
+    let hk = !1;
 
-    function wu(uu) {
-      let Ru;
-      if (uu < 16 && (Ru = Yu(uu))) return Ru;
-      if (uu > 64 && Eu) return Eu.decode(Ku.subarray(mu, mu += uu));
-      const yu = mu + uu,
-        Qu = [];
-      for (Ru = ""; mu < yu;) {
-        const uu = Ku[mu++];
-        if (0 === (128 & uu)) Qu.push(uu);
-        else if (192 === (224 & uu)) {
-          const Ru = 63 & Ku[mu++];
-          Qu.push((31 & uu) << 6 | Ru)
-        } else if (224 === (240 & uu)) {
-          const Ru = 63 & Ku[mu++],
-            yu = 63 & Ku[mu++];
-          Qu.push((31 & uu) << 12 | Ru << 6 | yu)
-        } else if (240 === (248 & uu)) {
-          let Ru = (7 & uu) << 18 | (63 & Ku[mu++]) << 12 | (63 & Ku[mu++]) << 6 | 63 & Ku[mu++];
-          Ru > 65535 && (Ru -= 65536, Qu.push(Ru >>> 10 & 1023 | 55296), Ru = 56320 | 1023 & Ru), Qu.push(Ru)
-        } else Qu.push(uu);
-        Qu.length >= 4096 && (Ru += Pu.apply(String, Qu), Qu.length = 0)
+    function qk(kk) {
+      let Fk;
+      if (kk < 16 && (Fk = xk(kk))) return Fk;
+      if (kk > 64 && Rk) return Rk.decode(tk.subarray(Xk, Xk += kk));
+      const Bk = Xk + kk,
+        ak = [];
+      for (Fk = ""; Xk < Bk;) {
+        const kk = tk[Xk++];
+        if (0 === (128 & kk)) ak.push(kk);
+        else if (192 === (224 & kk)) {
+          const Fk = 63 & tk[Xk++];
+          ak.push((31 & kk) << 6 | Fk)
+        } else if (224 === (240 & kk)) {
+          const Fk = 63 & tk[Xk++],
+            Bk = 63 & tk[Xk++];
+          ak.push((31 & kk) << 12 | Fk << 6 | Bk)
+        } else if (240 === (248 & kk)) {
+          let Fk = (7 & kk) << 18 | (63 & tk[Xk++]) << 12 | (63 & tk[Xk++]) << 6 | 63 & tk[Xk++];
+          Fk > 65535 && (Fk -= 65536, ak.push(Fk >>> 10 & 1023 | 55296), Fk = 56320 | 1023 & Fk), ak.push(Fk)
+        } else ak.push(kk);
+        ak.length >= 4096 && (Fk += pk.apply(String, ak), ak.length = 0)
       }
-      return Qu.length > 0 && (Ru += Pu.apply(String, Qu)), Ru
+      return ak.length > 0 && (Fk += pk.apply(String, ak)), Fk
     }
 
-    function Zu(uu) {
-      let Ru = new Array(uu);
-      for (let yu = 0; yu < uu; yu++) Ru[yu] = Uu();
-      return pu.freezeData ? Object.freeze(Ru) : Ru
+    function Ck(kk) {
+      let Fk = new Array(kk);
+      for (let Bk = 0; Bk < kk; Bk++) Fk[Bk] = gk();
+      return yk.freezeData ? Object.freeze(Fk) : Fk
     }
 
-    function hu(uu) {
-      if (pu.mapsAsObjects) {
-        let Ru = {};
-        for (let yu = 0; yu < uu; yu++) {
-          let uu = au();
-          "__proto__" === uu && (uu = "__proto_"), Ru[uu] = Uu()
+    function Zk(kk) {
+      if (yk.mapsAsObjects) {
+        let Fk = {};
+        for (let Bk = 0; Bk < kk; Bk++) {
+          let kk = Qk();
+          "__proto__" === kk && (kk = "__proto_"), Fk[kk] = gk()
         }
-        return Ru
+        return Fk
       } {
-        let Ru = new Map;
-        for (let yu = 0; yu < uu; yu++) Ru.set(Uu(), Uu());
-        return Ru
+        let Fk = new Map;
+        for (let Bk = 0; Bk < kk; Bk++) Fk.set(gk(), gk());
+        return Fk
       }
     }
-    var Pu = String.fromCharCode;
+    var pk = String.fromCharCode;
 
-    function iu(uu) {
-      let Ru = mu,
-        yu = new Array(uu);
-      for (let Eu = 0; Eu < uu; Eu++) {
-        const uu = Ku[mu++];
-        if ((128 & uu) > 0) return void(mu = Ru);
-        yu[Eu] = uu
+    function Kk(kk) {
+      let Fk = Xk,
+        Bk = new Array(kk);
+      for (let Rk = 0; Rk < kk; Rk++) {
+        const kk = tk[Xk++];
+        if ((128 & kk) > 0) return void(Xk = Fk);
+        Bk[Rk] = kk
       }
-      return Pu.apply(String, yu)
+      return pk.apply(String, Bk)
     }
 
-    function Yu(uu) {
-      if (uu < 4) {
-        if (uu < 2) {
-          if (0 === uu) return "";
+    function xk(kk) {
+      if (kk < 4) {
+        if (kk < 2) {
+          if (0 === kk) return "";
           {
-            let uu = Ku[mu++];
-            return (128 & uu) > 1 ? void(mu -= 1) : Pu(uu)
+            let kk = tk[Xk++];
+            return (128 & kk) > 1 ? void(Xk -= 1) : pk(kk)
           }
         } {
-          let Ru = Ku[mu++],
-            yu = Ku[mu++];
-          if ((128 & Ru) > 0 || (128 & yu) > 0) return void(mu -= 2);
-          if (uu < 3) return Pu(Ru, yu);
-          let Eu = Ku[mu++];
-          return (128 & Eu) > 0 ? void(mu -= 3) : Pu(Ru, yu, Eu)
+          let Fk = tk[Xk++],
+            Bk = tk[Xk++];
+          if ((128 & Fk) > 0 || (128 & Bk) > 0) return void(Xk -= 2);
+          if (kk < 3) return pk(Fk, Bk);
+          let Rk = tk[Xk++];
+          return (128 & Rk) > 0 ? void(Xk -= 3) : pk(Fk, Bk, Rk)
         }
       } {
-        let Ru = Ku[mu++],
-          yu = Ku[mu++],
-          Eu = Ku[mu++],
-          Qu = Ku[mu++];
-        if ((128 & Ru) > 0 || (128 & yu) > 0 || (128 & Eu) > 0 || (128 & Qu) > 0) return void(mu -= 4);
-        if (uu < 6) {
-          if (4 === uu) return Pu(Ru, yu, Eu, Qu);
+        let Fk = tk[Xk++],
+          Bk = tk[Xk++],
+          Rk = tk[Xk++],
+          ak = tk[Xk++];
+        if ((128 & Fk) > 0 || (128 & Bk) > 0 || (128 & Rk) > 0 || (128 & ak) > 0) return void(Xk -= 4);
+        if (kk < 6) {
+          if (4 === kk) return pk(Fk, Bk, Rk, ak);
           {
-            let uu = Ku[mu++];
-            return (128 & uu) > 0 ? void(mu -= 5) : Pu(Ru, yu, Eu, Qu, uu)
+            let kk = tk[Xk++];
+            return (128 & kk) > 0 ? void(Xk -= 5) : pk(Fk, Bk, Rk, ak, kk)
           }
         }
-        if (uu < 8) {
-          let Ju = Ku[mu++],
-            Nu = Ku[mu++];
-          if ((128 & Ju) > 0 || (128 & Nu) > 0) return void(mu -= 6);
-          if (uu < 7) return Pu(Ru, yu, Eu, Qu, Ju, Nu);
-          let Xu = Ku[mu++];
-          return (128 & Xu) > 0 ? void(mu -= 7) : Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu)
+        if (kk < 8) {
+          let bk = tk[Xk++],
+            wk = tk[Xk++];
+          if ((128 & bk) > 0 || (128 & wk) > 0) return void(Xk -= 6);
+          if (kk < 7) return pk(Fk, Bk, Rk, ak, bk, wk);
+          let dk = tk[Xk++];
+          return (128 & dk) > 0 ? void(Xk -= 7) : pk(Fk, Bk, Rk, ak, bk, wk, dk)
         } {
-          let Ju = Ku[mu++],
-            Nu = Ku[mu++],
-            Xu = Ku[mu++],
-            Vu = Ku[mu++];
-          if ((128 & Ju) > 0 || (128 & Nu) > 0 || (128 & Xu) > 0 || (128 & Vu) > 0) return void(mu -= 8);
-          if (uu < 10) {
-            if (8 === uu) return Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu);
+          let bk = tk[Xk++],
+            wk = tk[Xk++],
+            dk = tk[Xk++],
+            sk = tk[Xk++];
+          if ((128 & bk) > 0 || (128 & wk) > 0 || (128 & dk) > 0 || (128 & sk) > 0) return void(Xk -= 8);
+          if (kk < 10) {
+            if (8 === kk) return pk(Fk, Bk, Rk, ak, bk, wk, dk, sk);
             {
-              let uu = Ku[mu++];
-              return (128 & uu) > 0 ? void(mu -= 9) : Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, uu)
+              let kk = tk[Xk++];
+              return (128 & kk) > 0 ? void(Xk -= 9) : pk(Fk, Bk, Rk, ak, bk, wk, dk, sk, kk)
             }
           }
-          if (uu < 12) {
-            let ru = Ku[mu++],
-              Bu = Ku[mu++];
-            if ((128 & ru) > 0 || (128 & Bu) > 0) return void(mu -= 10);
-            if (uu < 11) return Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, ru, Bu);
-            let xu = Ku[mu++];
-            return (128 & xu) > 0 ? void(mu -= 11) : Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, ru, Bu, xu)
+          if (kk < 12) {
+            let Vk = tk[Xk++],
+              Jk = tk[Xk++];
+            if ((128 & Vk) > 0 || (128 & Jk) > 0) return void(Xk -= 10);
+            if (kk < 11) return pk(Fk, Bk, Rk, ak, bk, wk, dk, sk, Vk, Jk);
+            let Ak = tk[Xk++];
+            return (128 & Ak) > 0 ? void(Xk -= 11) : pk(Fk, Bk, Rk, ak, bk, wk, dk, sk, Vk, Jk, Ak)
           } {
-            let ru = Ku[mu++],
-              Bu = Ku[mu++],
-              xu = Ku[mu++],
-              Su = Ku[mu++];
-            if ((128 & ru) > 0 || (128 & Bu) > 0 || (128 & xu) > 0 || (128 & Su) > 0) return void(mu -= 12);
-            if (uu < 14) {
-              if (12 === uu) return Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su);
+            let Vk = tk[Xk++],
+              Jk = tk[Xk++],
+              Ak = tk[Xk++],
+              ek = tk[Xk++];
+            if ((128 & Vk) > 0 || (128 & Jk) > 0 || (128 & Ak) > 0 || (128 & ek) > 0) return void(Xk -= 12);
+            if (kk < 14) {
+              if (12 === kk) return pk(Fk, Bk, Rk, ak, bk, wk, dk, sk, Vk, Jk, Ak, ek);
               {
-                let uu = Ku[mu++];
-                return (128 & uu) > 0 ? void(mu -= 13) : Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su, uu)
+                let kk = tk[Xk++];
+                return (128 & kk) > 0 ? void(Xk -= 13) : pk(Fk, Bk, Rk, ak, bk, wk, dk, sk, Vk, Jk, Ak, ek, kk)
               }
             } {
-              let pu = Ku[mu++],
-                Tu = Ku[mu++];
-              if ((128 & pu) > 0 || (128 & Tu) > 0) return void(mu -= 14);
-              if (uu < 15) return Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su, pu, Tu);
-              let Wu = Ku[mu++];
-              return (128 & Wu) > 0 ? void(mu -= 15) : Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su, pu, Tu, Wu)
+              let yk = tk[Xk++],
+                fk = tk[Xk++];
+              if ((128 & yk) > 0 || (128 & fk) > 0) return void(Xk -= 14);
+              if (kk < 15) return pk(Fk, Bk, Rk, ak, bk, wk, dk, sk, Vk, Jk, Ak, ek, yk, fk);
+              let mk = tk[Xk++];
+              return (128 & mk) > 0 ? void(Xk -= 15) : pk(Fk, Bk, Rk, ak, bk, wk, dk, sk, Vk, Jk, Ak, ek, yk, fk, mk)
             }
           }
         }
       }
     }
 
-    function ou() {
-      let uu, Ru = Ku[mu++];
-      if (Ru < 192) uu = Ru - 160;
-      else switch (Ru) {
+    function jk() {
+      let kk, Fk = tk[Xk++];
+      if (Fk < 192) kk = Fk - 160;
+      else switch (Fk) {
         case 217:
-          uu = Ku[mu++];
+          kk = tk[Xk++];
           break;
         case 218:
-          uu = Bu.getUint16(mu), mu += 2;
+          kk = Jk.getUint16(Xk), Xk += 2;
           break;
         case 219:
-          uu = Bu.getUint32(mu), mu += 4;
+          kk = Jk.getUint32(Xk), Xk += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return wu(uu)
+      return qk(kk)
     }
 
-    function qu(uu) {
-      return pu.copyBuffers ? Uint8Array.prototype.slice.call(Ku, mu, mu += uu) : Ku.subarray(mu, mu += uu)
+    function lk(kk) {
+      return yk.copyBuffers ? Uint8Array.prototype.slice.call(tk, Xk, Xk += kk) : tk.subarray(Xk, Xk += kk)
     }
 
-    function Ou(uu) {
-      let Ru = Ku[mu++];
-      if (ju[Ru]) {
-        let yu;
-        return ju[Ru](Ku.subarray(mu, yu = mu += uu), (uu => {
-          mu = uu;
+    function nk(kk) {
+      let Fk = tk[Xk++];
+      if (Wk[Fk]) {
+        let Bk;
+        return Wk[Fk](tk.subarray(Xk, Bk = Xk += kk), (kk => {
+          Xk = kk;
           try {
-            return Uu()
+            return gk()
           } finally {
-            mu = yu
+            Xk = Bk
           }
         }))
       }
-      throw new Error("Unknown extension type " + Ru)
+      throw new Error("Unknown extension type " + Fk)
     }
-    var vu = new Array(4096);
+    var Ik = new Array(4096);
 
-    function au() {
-      let uu = Ku[mu++];
-      if (!(uu >= 160 && uu < 192)) return mu--, fu(Uu());
-      if (uu -= 160, Wu >= mu) return Xu.slice(mu - Tu, (mu += uu) - Tu);
-      if (!(0 == Wu && Qu < 180)) return gu(uu);
-      let Ru, yu = 4095 & (uu << 5 ^ (uu > 1 ? Bu.getUint16(mu) : uu > 0 ? Ku[mu] : 0)),
-        Eu = vu[yu],
-        Ju = mu,
-        Nu = mu + uu - 3,
-        Vu = 0;
-      if (Eu && Eu.bytes == uu) {
-        for (; Ju < Nu;) {
-          if (Ru = Bu.getUint32(Ju), Ru != Eu[Vu++]) {
-            Ju = 1879048192;
+    function Qk() {
+      let kk = tk[Xk++];
+      if (!(kk >= 160 && kk < 192)) return Xk--, kF(gk());
+      if (kk -= 160, mk >= Xk) return dk.slice(Xk - fk, (Xk += kk) - fk);
+      if (!(0 == mk && ak < 180)) return rk(kk);
+      let Fk, Bk = 4095 & (kk << 5 ^ (kk > 1 ? Jk.getUint16(Xk) : kk > 0 ? tk[Xk] : 0)),
+        Rk = Ik[Bk],
+        bk = Xk,
+        wk = Xk + kk - 3,
+        sk = 0;
+      if (Rk && Rk.bytes == kk) {
+        for (; bk < wk;) {
+          if (Fk = Jk.getUint32(bk), Fk != Rk[sk++]) {
+            bk = 1879048192;
             break
           }
-          Ju += 4
+          bk += 4
         }
-        for (Nu += 3; Ju < Nu;)
-          if (Ru = Ku[Ju++], Ru != Eu[Vu++]) {
-            Ju = 1879048192;
+        for (wk += 3; bk < wk;)
+          if (Fk = tk[bk++], Fk != Rk[sk++]) {
+            bk = 1879048192;
             break
-          } if (Ju === Nu) return mu = Ju, Eu.string;
-        Nu -= 3, Ju = mu
+          } if (bk === wk) return Xk = bk, Rk.string;
+        wk -= 3, bk = Xk
       }
-      for (Eu = [], vu[yu] = Eu, Eu.bytes = uu; Ju < Nu;) Ru = Bu.getUint32(Ju), Eu.push(Ru), Ju += 4;
-      for (Nu += 3; Ju < Nu;) Ru = Ku[Ju++], Eu.push(Ru);
-      let ru = uu < 16 ? Yu(uu) : iu(uu);
-      return Eu.string = null != ru ? ru : gu(uu)
+      for (Rk = [], Ik[Bk] = Rk, Rk.bytes = kk; bk < wk;) Fk = Jk.getUint32(bk), Rk.push(Fk), bk += 4;
+      for (wk += 3; bk < wk;) Fk = tk[bk++], Rk.push(Fk);
+      let Vk = kk < 16 ? xk(kk) : Kk(kk);
+      return Rk.string = null != Vk ? Vk : rk(kk)
     }
 
-    function fu(uu) {
-      if ("string" === typeof uu) return uu;
-      if ("number" === typeof uu || "boolean" === typeof uu || "bigint" === typeof uu) return uu.toString();
-      if (null == uu) return uu + "";
-      if (pu.allowArraysInMapKeys && Array.isArray(uu) && uu.flat().every((uu => ["string", "number", "boolean", "bigint"].includes(typeof uu)))) return uu.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof uu)
+    function kF(kk) {
+      if ("string" === typeof kk) return kk;
+      if ("number" === typeof kk || "boolean" === typeof kk || "bigint" === typeof kk) return kk.toString();
+      if (null == kk) return kk + "";
+      if (yk.allowArraysInMapKeys && Array.isArray(kk) && kk.flat().every((kk => ["string", "number", "boolean", "bigint"].includes(typeof kk)))) return kk.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof kk)
     }
-    const uR = (uu, Ru) => {
-      let yu = Uu().map(fu),
-        Eu = uu;
-      void 0 !== Ru && (uu = uu < 32 ? -((Ru << 5) + uu) : (Ru << 5) + uu, yu.highByte = Ru);
-      let Ku = Nu[uu];
-      return Ku && (Ku.isShared || Au) && ((Nu.restoreStructures || (Nu.restoreStructures = []))[uu] = Ku), Nu[uu] = yu, yu.read = su(yu, Eu), yu.read()
+    const FF = (kk, Fk) => {
+      let Bk = gk().map(kF),
+        Rk = kk;
+      void 0 !== Fk && (kk = kk < 32 ? -((Fk << 5) + kk) : (Fk << 5) + kk, Bk.highByte = Fk);
+      let tk = wk[kk];
+      return tk && (tk.isShared || Sk) && ((wk.restoreStructures || (wk.restoreStructures = []))[kk] = tk), wk[kk] = Bk, Bk.read = ck(Bk, Rk), Bk.read()
     };
-    ju[0] = () => {}, ju[0].noBuffer = !0, ju[66] = uu => {
-      let Ru = uu.length,
-        yu = BigInt(128 & uu[0] ? uu[0] - 256 : uu[0]);
-      for (let Eu = 1; Eu < Ru; Eu++) yu <<= BigInt(8), yu += BigInt(uu[Eu]);
-      return yu
+    Wk[0] = () => {}, Wk[0].noBuffer = !0, Wk[66] = kk => {
+      let Fk = kk.length,
+        Bk = BigInt(128 & kk[0] ? kk[0] - 256 : kk[0]);
+      for (let Rk = 1; Rk < Fk; Rk++) Bk <<= BigInt(8), Bk += BigInt(kk[Rk]);
+      return Bk
     };
-    let RR = {
+    let BF = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    ju[101] = () => {
-      let uu = Uu();
-      return (RR[uu[0]] || Error)(uu[1], {
-        cause: uu[2]
+    Wk[101] = () => {
+      let kk = gk();
+      return (BF[kk[0]] || Error)(kk[1], {
+        cause: kk[2]
       })
-    }, ju[105] = uu => {
-      if (!1 === pu.structuredClone) throw new Error("Structured clone extension is disabled");
-      let Ru = Bu.getUint32(mu - 4);
-      ru || (ru = new Map);
-      let yu, Eu = Ku[mu];
-      yu = Eu >= 144 && Eu < 160 || 220 == Eu || 221 == Eu ? [] : {};
-      let Qu = {
-        target: yu
+    }, Wk[105] = kk => {
+      if (!1 === yk.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Fk = Jk.getUint32(Xk - 4);
+      Vk || (Vk = new Map);
+      let Bk, Rk = tk[Xk];
+      Bk = Rk >= 144 && Rk < 160 || 220 == Rk || 221 == Rk ? [] : {};
+      let ak = {
+        target: Bk
       };
-      ru.set(Ru, Qu);
-      let Ju = Uu();
-      return Qu.used ? Object.assign(yu, Ju) : (Qu.target = Ju, Ju)
-    }, ju[112] = uu => {
-      if (!1 === pu.structuredClone) throw new Error("Structured clone extension is disabled");
-      let Ru = Bu.getUint32(mu - 4),
-        yu = ru.get(Ru);
-      return yu.used = !0, yu.target
-    }, ju[115] = () => new Set(Uu());
-    const yR = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((uu => uu + "Array"));
-    let ER = "object" === typeof globalThis ? globalThis : window;
-    ju[116] = uu => {
-      let Ru = uu[0],
-        yu = yR[Ru];
-      if (!yu) {
-        if (16 === Ru) {
-          let Ru = new ArrayBuffer(uu.length - 1);
-          return new Uint8Array(Ru).set(uu.subarray(1)), Ru
+      Vk.set(Fk, ak);
+      let bk = gk();
+      return ak.used ? Object.assign(Bk, bk) : (ak.target = bk, bk)
+    }, Wk[112] = kk => {
+      if (!1 === yk.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Fk = Jk.getUint32(Xk - 4),
+        Bk = Vk.get(Fk);
+      return Bk.used = !0, Bk.target
+    }, Wk[115] = () => new Set(gk());
+    const RF = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((kk => kk + "Array"));
+    let tF = "object" === typeof globalThis ? globalThis : window;
+    Wk[116] = kk => {
+      let Fk = kk[0],
+        Bk = RF[Fk];
+      if (!Bk) {
+        if (16 === Fk) {
+          let Fk = new ArrayBuffer(kk.length - 1);
+          return new Uint8Array(Fk).set(kk.subarray(1)), Fk
         }
-        throw new Error("Could not find typed array for code " + Ru)
+        throw new Error("Could not find typed array for code " + Fk)
       }
-      return new ER[yu](Uint8Array.prototype.slice.call(uu, 1).buffer)
-    }, ju[120] = () => {
-      let uu = Uu();
-      return new RegExp(uu[0], uu[1])
+      return new tF[Bk](Uint8Array.prototype.slice.call(kk, 1).buffer)
+    }, Wk[120] = () => {
+      let kk = gk();
+      return new RegExp(kk[0], kk[1])
     };
-    const KR = [];
+    const aF = [];
 
-    function QR(uu) {
-      eu && eu();
-      let Ru = Qu,
-        yu = mu,
-        Eu = Su,
-        Ju = Tu,
-        ju = Wu,
-        Hu = Xu,
-        du = xu,
-        bu = ru,
-        Cu = Vu,
-        ku = new Uint8Array(Ku.slice(0, Qu)),
-        Du = Nu,
-        Mu = Nu.slice(0, Nu.length),
-        Iu = pu,
-        Gu = Au,
-        Uu = uu();
-      return Qu = Ru, mu = yu, Su = Eu, Tu = Ju, Wu = ju, Xu = Hu, xu = du, ru = bu, Vu = Cu, Ku = ku, Au = Gu, (Nu = Du).splice(0, Nu.length, ...Mu), pu = Iu, Bu = new DataView(Ku.buffer, Ku.byteOffset, Ku.byteLength), Uu
+    function XF(kk) {
+      Ek && Ek();
+      let Fk = ak,
+        Bk = Xk,
+        Rk = ek,
+        bk = fk,
+        Wk = mk,
+        vk = dk,
+        ik = Ak,
+        Yk = Vk,
+        Lk = sk,
+        Ok = new Uint8Array(tk.slice(0, ak)),
+        Nk = wk,
+        Hk = wk.slice(0, wk.length),
+        uk = yk,
+        Mk = Sk,
+        gk = kk();
+      return ak = Fk, Xk = Bk, ek = Rk, fk = bk, mk = Wk, dk = vk, Ak = ik, Vk = Yk, sk = Lk, tk = Ok, Sk = Mk, (wk = Nk).splice(0, wk.length, ...Hk), yk = uk, Jk = new DataView(tk.buffer, tk.byteOffset, tk.byteLength), gk
     }
 
-    function mR() {
-      Ku = null, ru = null, Nu = null
+    function bF() {
+      tk = null, Vk = null, wk = null
     }
-    ju[98] = uu => {
-      let Ru = (uu[0] << 24) + (uu[1] << 16) + (uu[2] << 8) + uu[3],
-        yu = mu;
-      return mu += Ru - uu.length, Vu = KR, (Vu = [ou(), ou()]).position0 = 0, Vu.position1 = 0, Vu.postBundlePosition = mu, mu = yu, Uu()
-    }, ju[255] = uu => 4 == uu.length ? new Date(1e3 * (16777216 * uu[0] + (uu[1] << 16) + (uu[2] << 8) + uu[3])) : 8 == uu.length ? new Date(((uu[0] << 22) + (uu[1] << 14) + (uu[2] << 6) + (uu[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & uu[3]) + 16777216 * uu[4] + (uu[5] << 16) + (uu[6] << 8) + uu[7])) : 12 == uu.length ? new Date(((uu[0] << 24) + (uu[1] << 16) + (uu[2] << 8) + uu[3]) / 1e6 + 1e3 * ((128 & uu[4] ? -281474976710656 : 0) + 1099511627776 * uu[6] + 4294967296 * uu[7] + 16777216 * uu[8] + (uu[9] << 16) + (uu[10] << 8) + uu[11])) : new Date("invalid");
-    const JR = new Array(147);
-    for (let Ky = 0; Ky < 256; Ky++) JR[Ky] = +("1e" + Math.floor(45.15 - .30103 * Ky));
-    const NR = Mu;
-    var XR = new Mu({
+    Wk[98] = kk => {
+      let Fk = (kk[0] << 24) + (kk[1] << 16) + (kk[2] << 8) + kk[3],
+        Bk = Xk;
+      return Xk += Fk - kk.length, sk = aF, (sk = [jk(), jk()]).position0 = 0, sk.position1 = 0, sk.postBundlePosition = Xk, Xk = Bk, gk()
+    }, Wk[255] = kk => 4 == kk.length ? new Date(1e3 * (16777216 * kk[0] + (kk[1] << 16) + (kk[2] << 8) + kk[3])) : 8 == kk.length ? new Date(((kk[0] << 22) + (kk[1] << 14) + (kk[2] << 6) + (kk[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & kk[3]) + 16777216 * kk[4] + (kk[5] << 16) + (kk[6] << 8) + kk[7])) : 12 == kk.length ? new Date(((kk[0] << 24) + (kk[1] << 16) + (kk[2] << 8) + kk[3]) / 1e6 + 1e3 * ((128 & kk[4] ? -281474976710656 : 0) + 1099511627776 * kk[6] + 4294967296 * kk[7] + 16777216 * kk[8] + (kk[9] << 16) + (kk[10] << 8) + kk[11])) : new Date("invalid");
+    const wF = new Array(147);
+    for (let aB = 0; aB < 256; aB++) wF[aB] = +("1e" + Math.floor(45.15 - .30103 * aB));
+    const dF = Hk;
+    var sF = new Hk({
       useRecords: !1
     });
-    const VR = XR.unpack,
-      rR = XR.unpackMultiple,
-      BR = XR.unpack,
-      xR = {
+    const VF = sF.unpack,
+      JF = sF.unpackMultiple,
+      AF = sF.unpack,
+      eF = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let SR, pR, TR, WR = new Float32Array(1),
-      jR = new Uint8Array(WR.buffer, 0, 4);
+    let yF, fF, mF, WF = new Float32Array(1),
+      vF = new Uint8Array(WF.buffer, 0, 4);
 
-    function HR(uu) {
-      WR[0] = uu;
-      let Ru = JR[(127 & jR[3]) << 1 | jR[2] >> 7];
-      return (Ru * uu + (uu > 0 ? .5 : -.5) | 0) / Ru
+    function iF(kk) {
+      WF[0] = kk;
+      let Fk = wF[(127 & vF[3]) << 1 | vF[2] >> 7];
+      return (Fk * kk + (kk > 0 ? .5 : -.5) | 0) / Fk
     }
     try {
-      SR = new TextEncoder
-    } catch (Ey) {}
-    const dR = "undefined" !== typeof Buffer,
-      bR = dR ? function(uu) {
-        return Buffer.allocUnsafeSlow(uu)
+      yF = new TextEncoder
+    } catch (tB) {}
+    const YF = "undefined" !== typeof Buffer,
+      oF = YF ? function(kk) {
+        return Buffer.allocUnsafeSlow(kk)
       } : Uint8Array,
-      CR = dR ? Buffer : Uint8Array,
-      kR = dR ? 4294967296 : 2144337920;
-    let eR, AR, DR, MR, IR, GR = 0,
-      UR = null;
-    const nR = /[\u0080-\uFFFF]/,
-      sR = Symbol("record-id");
-    class tR extends Mu {
-      constructor(uu) {
-        let Ru, yu, Eu, Ku;
-        super(uu), this.offset = 0;
-        let Qu = CR.prototype.utf8Write ? function(uu, Ru) {
-            return eR.utf8Write(uu, Ru, eR.byteLength - Ru)
-          } : !(!SR || !SR.encodeInto) && function(uu, Ru) {
-            return SR.encodeInto(uu, eR.subarray(Ru)).written
+      LF = YF ? Buffer : Uint8Array,
+      OF = YF ? 4294967296 : 2144337920;
+    let EF, SF, NF, HF, uF, MF = 0,
+      gF = null;
+    const UF = /[\u0080-\uFFFF]/,
+      cF = Symbol("record-id");
+    class GF extends Hk {
+      constructor(kk) {
+        let Fk, Bk, Rk, tk;
+        super(kk), this.offset = 0;
+        let ak = LF.prototype.utf8Write ? function(kk, Fk) {
+            return EF.utf8Write(kk, Fk, EF.byteLength - Fk)
+          } : !(!yF || !yF.encodeInto) && function(kk, Fk) {
+            return yF.encodeInto(kk, EF.subarray(Fk)).written
           },
-          mu = this;
-        uu || (uu = {});
-        let Ju = uu && uu.sequential,
-          Nu = uu.structures || uu.saveStructures,
-          Xu = uu.maxSharedStructures;
-        if (null == Xu && (Xu = Nu ? 32 : 0), Xu > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        uu.structuredClone && void 0 == uu.moreTypes && (this.moreTypes = !0);
-        let Vu = uu.maxOwnStructures;
-        null == Vu && (Vu = Nu ? 32 : 64), this.structures || 0 == uu.useRecords || (this.structures = []);
-        let ru = Xu > 32 || Vu + Xu > 64,
-          Bu = Xu + 64,
-          xu = Xu + Vu + 64;
-        if (xu > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let Su = [],
-          pu = 0,
-          Tu = 0;
-        this.pack = this.encode = function(uu, Qu) {
-          if (eR || (eR = new bR(8192), DR = eR.dataView || (eR.dataView = new DataView(eR.buffer, 0, 8192)), GR = 0), MR = eR.length - 10, MR - GR < 2048 ? (eR = new bR(eR.length), DR = eR.dataView || (eR.dataView = new DataView(eR.buffer, 0, eR.length)), MR = eR.length - 10, GR = 0) : GR = GR + 7 & 2147483640, Ru = GR, Qu & aR && (GR += 255 & Qu), Ku = mu.structuredClone ? new Map : null, mu.bundleStrings && "string" !== typeof uu ? (UR = [], UR.size = 1 / 0) : UR = null, Eu = mu.structures, Eu) {
-            Eu.uninitialized && (Eu = mu._mergeStructures(mu.getStructures()));
-            let uu = Eu.sharedLength || 0;
-            if (uu > Xu) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Eu.sharedLength);
-            if (!Eu.transitions) {
-              Eu.transitions = Object.create(null);
-              for (let Ru = 0; Ru < uu; Ru++) {
-                let uu = Eu[Ru];
-                if (!uu) continue;
-                let yu, Ku = Eu.transitions;
-                for (let Ru = 0, Eu = uu.length; Ru < Eu; Ru++) {
-                  let Eu = uu[Ru];
-                  yu = Ku[Eu], yu || (yu = Ku[Eu] = Object.create(null)), Ku = yu
+          Xk = this;
+        kk || (kk = {});
+        let bk = kk && kk.sequential,
+          wk = kk.structures || kk.saveStructures,
+          dk = kk.maxSharedStructures;
+        if (null == dk && (dk = wk ? 32 : 0), dk > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        kk.structuredClone && void 0 == kk.moreTypes && (this.moreTypes = !0);
+        let sk = kk.maxOwnStructures;
+        null == sk && (sk = wk ? 32 : 64), this.structures || 0 == kk.useRecords || (this.structures = []);
+        let Vk = dk > 32 || sk + dk > 64,
+          Jk = dk + 64,
+          Ak = dk + sk + 64;
+        if (Ak > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let ek = [],
+          yk = 0,
+          fk = 0;
+        this.pack = this.encode = function(kk, ak) {
+          if (EF || (EF = new oF(8192), NF = EF.dataView || (EF.dataView = new DataView(EF.buffer, 0, 8192)), MF = 0), HF = EF.length - 10, HF - MF < 2048 ? (EF = new oF(EF.length), NF = EF.dataView || (EF.dataView = new DataView(EF.buffer, 0, EF.length)), HF = EF.length - 10, MF = 0) : MF = MF + 7 & 2147483640, Fk = MF, ak & QF && (MF += 255 & ak), tk = Xk.structuredClone ? new Map : null, Xk.bundleStrings && "string" !== typeof kk ? (gF = [], gF.size = 1 / 0) : gF = null, Rk = Xk.structures, Rk) {
+            Rk.uninitialized && (Rk = Xk._mergeStructures(Xk.getStructures()));
+            let kk = Rk.sharedLength || 0;
+            if (kk > dk) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Rk.sharedLength);
+            if (!Rk.transitions) {
+              Rk.transitions = Object.create(null);
+              for (let Fk = 0; Fk < kk; Fk++) {
+                let kk = Rk[Fk];
+                if (!kk) continue;
+                let Bk, tk = Rk.transitions;
+                for (let Fk = 0, Rk = kk.length; Fk < Rk; Fk++) {
+                  let Rk = kk[Fk];
+                  Bk = tk[Rk], Bk || (Bk = tk[Rk] = Object.create(null)), tk = Bk
                 }
-                Ku[sR] = Ru + 64
+                tk[cF] = Fk + 64
               }
-              this.lastNamedStructuresLength = uu
+              this.lastNamedStructuresLength = kk
             }
-            Ju || (Eu.nextId = uu + 64)
+            bk || (Rk.nextId = kk + 64)
           }
-          let Nu;
-          yu && (yu = !1);
+          let wk;
+          Bk && (Bk = !1);
           try {
-            mu.randomAccessStructure && uu && uu.constructor && uu.constructor === Object ? Mu(uu) : Hu(uu);
-            let yu = UR;
-            if (UR && LR(Ru, Hu, 0), Ku && Ku.idsToInsert) {
-              let uu = Ku.idsToInsert.sort(((uu, Ru) => uu.offset > Ru.offset ? 1 : -1)),
-                Eu = uu.length,
-                Qu = -1;
-              for (; yu && Eu > 0;) {
-                let Ku = uu[--Eu].offset + Ru;
-                Ku < yu.stringsPosition + Ru && -1 === Qu && (Qu = 0), Ku > yu.position + Ru ? Qu >= 0 && (Qu += 6) : (Qu >= 0 && (DR.setUint32(yu.position + Ru, DR.getUint32(yu.position + Ru) + Qu), Qu = -1), yu = yu.previous, Eu++)
+            Xk.randomAccessStructure && kk && kk.constructor && kk.constructor === Object ? Hk(kk) : vk(kk);
+            let Bk = gF;
+            if (gF && zF(Fk, vk, 0), tk && tk.idsToInsert) {
+              let kk = tk.idsToInsert.sort(((kk, Fk) => kk.offset > Fk.offset ? 1 : -1)),
+                Rk = kk.length,
+                ak = -1;
+              for (; Bk && Rk > 0;) {
+                let tk = kk[--Rk].offset + Fk;
+                tk < Bk.stringsPosition + Fk && -1 === ak && (ak = 0), tk > Bk.position + Fk ? ak >= 0 && (ak += 6) : (ak >= 0 && (NF.setUint32(Bk.position + Fk, NF.getUint32(Bk.position + Fk) + ak), ak = -1), Bk = Bk.previous, Rk++)
               }
-              Qu >= 0 && yu && DR.setUint32(yu.position + Ru, DR.getUint32(yu.position + Ru) + Qu), GR += 6 * uu.length, GR > MR && eu(GR), mu.offset = GR;
-              let Ju = function(uu, Ru) {
-                let yu, Eu = 6 * Ru.length,
-                  Ku = uu.length - Eu;
-                for (; yu = Ru.pop();) {
-                  let Ru = yu.offset,
-                    Qu = yu.id;
-                  uu.copyWithin(Ru + Eu, Ru, Ku), Eu -= 6;
-                  let mu = Ru + Eu;
-                  uu[mu++] = 214, uu[mu++] = 105, uu[mu++] = Qu >> 24, uu[mu++] = Qu >> 16 & 255, uu[mu++] = Qu >> 8 & 255, uu[mu++] = 255 & Qu, Ku = Ru
+              ak >= 0 && Bk && NF.setUint32(Bk.position + Fk, NF.getUint32(Bk.position + Fk) + ak), MF += 6 * kk.length, MF > HF && Ek(MF), Xk.offset = MF;
+              let bk = function(kk, Fk) {
+                let Bk, Rk = 6 * Fk.length,
+                  tk = kk.length - Rk;
+                for (; Bk = Fk.pop();) {
+                  let Fk = Bk.offset,
+                    ak = Bk.id;
+                  kk.copyWithin(Fk + Rk, Fk, tk), Rk -= 6;
+                  let Xk = Fk + Rk;
+                  kk[Xk++] = 214, kk[Xk++] = 105, kk[Xk++] = ak >> 24, kk[Xk++] = ak >> 16 & 255, kk[Xk++] = ak >> 8 & 255, kk[Xk++] = 255 & ak, tk = Fk
                 }
-                return uu
-              }(eR.subarray(Ru, GR), uu);
-              return Ku = null, Ju
+                return kk
+              }(EF.subarray(Fk, MF), kk);
+              return tk = null, bk
             }
-            return mu.offset = GR, Qu & OR ? (eR.start = Ru, eR.end = GR, eR) : eR.subarray(Ru, GR)
-          } catch (Ey) {
-            throw Nu = Ey, Ey
+            return Xk.offset = MF, ak & nF ? (EF.start = Fk, EF.end = MF, EF) : EF.subarray(Fk, MF)
+          } catch (tB) {
+            throw wk = tB, tB
           } finally {
-            if (Eu && (Wu(), yu && mu.saveStructures)) {
-              let yu = Eu.sharedLength || 0,
-                Ku = eR.subarray(Ru, GR),
-                Ju = FR(Eu, mu);
-              if (!Nu) return !1 === mu.saveStructures(Ju, Ju.isCompatible) ? mu.pack(uu, Qu) : (mu.lastNamedStructuresLength = yu, eR.length > 1073741824 && (eR = null), Ku)
+            if (Rk && (mk(), Bk && Xk.saveStructures)) {
+              let Bk = Rk.sharedLength || 0,
+                tk = EF.subarray(Fk, MF),
+                bk = hF(Rk, Xk);
+              if (!wk) return !1 === Xk.saveStructures(bk, bk.isCompatible) ? Xk.pack(kk, ak) : (Xk.lastNamedStructuresLength = Bk, EF.length > 1073741824 && (EF = null), tk)
             }
-            eR.length > 1073741824 && (eR = null), Qu & vR && (GR = Ru)
+            EF.length > 1073741824 && (EF = null), ak & IF && (MF = Fk)
           }
         };
-        const Wu = () => {
-            Tu < 10 && Tu++;
-            let uu = Eu.sharedLength || 0;
-            if (Eu.length > uu && !Ju && (Eu.length = uu), pu > 1e4) Eu.transitions = null, Tu = 0, pu = 0, Su.length > 0 && (Su = []);
-            else if (Su.length > 0 && !Ju) {
-              for (let uu = 0, Ru = Su.length; uu < Ru; uu++) Su[uu][sR] = 0;
-              Su = []
+        const mk = () => {
+            fk < 10 && fk++;
+            let kk = Rk.sharedLength || 0;
+            if (Rk.length > kk && !bk && (Rk.length = kk), yk > 1e4) Rk.transitions = null, fk = 0, yk = 0, ek.length > 0 && (ek = []);
+            else if (ek.length > 0 && !bk) {
+              for (let kk = 0, Fk = ek.length; kk < Fk; kk++) ek[kk][cF] = 0;
+              ek = []
             }
           },
-          ju = uu => {
-            var Ru = uu.length;
-            Ru < 16 ? eR[GR++] = 144 | Ru : Ru < 65536 ? (eR[GR++] = 220, eR[GR++] = Ru >> 8, eR[GR++] = 255 & Ru) : (eR[GR++] = 221, DR.setUint32(GR, Ru), GR += 4);
-            for (let yu = 0; yu < Ru; yu++) Hu(uu[yu])
+          Wk = kk => {
+            var Fk = kk.length;
+            Fk < 16 ? EF[MF++] = 144 | Fk : Fk < 65536 ? (EF[MF++] = 220, EF[MF++] = Fk >> 8, EF[MF++] = 255 & Fk) : (EF[MF++] = 221, NF.setUint32(MF, Fk), MF += 4);
+            for (let Bk = 0; Bk < Fk; Bk++) vk(kk[Bk])
           },
-          Hu = uu => {
-            GR > MR && (eR = eu(GR));
-            var yu, Eu = typeof uu;
-            if ("string" === Eu) {
-              let Eu, Ku = uu.length;
-              if (UR && Ku >= 4 && Ku < 4096) {
-                if ((UR.size += Ku) > 21760) {
-                  let uu, yu, Eu = (UR[0] ? 3 * UR[0].length + UR[1].length : 0) + 10;
-                  GR + Eu > MR && (eR = eu(GR + Eu)), UR.position ? (yu = UR, eR[GR] = 200, GR += 3, eR[GR++] = 98, uu = GR - Ru, GR += 4, LR(Ru, Hu, 0), DR.setUint16(uu + Ru - 3, GR - Ru - uu)) : (eR[GR++] = 214, eR[GR++] = 98, uu = GR - Ru, GR += 4), UR = ["", ""], UR.previous = yu, UR.size = 0, UR.position = uu
+          vk = kk => {
+            MF > HF && (EF = Ek(MF));
+            var Bk, Rk = typeof kk;
+            if ("string" === Rk) {
+              let Rk, tk = kk.length;
+              if (gF && tk >= 4 && tk < 4096) {
+                if ((gF.size += tk) > 21760) {
+                  let kk, Bk, Rk = (gF[0] ? 3 * gF[0].length + gF[1].length : 0) + 10;
+                  MF + Rk > HF && (EF = Ek(MF + Rk)), gF.position ? (Bk = gF, EF[MF] = 200, MF += 3, EF[MF++] = 98, kk = MF - Fk, MF += 4, zF(Fk, vk, 0), NF.setUint16(kk + Fk - 3, MF - Fk - kk)) : (EF[MF++] = 214, EF[MF++] = 98, kk = MF - Fk, MF += 4), gF = ["", ""], gF.previous = Bk, gF.size = 0, gF.position = kk
                 }
-                let yu = nR.test(uu);
-                return UR[yu ? 0 : 1] += uu, eR[GR++] = 193, void Hu(yu ? -Ku : Ku)
+                let Bk = UF.test(kk);
+                return gF[Bk ? 0 : 1] += kk, EF[MF++] = 193, void vk(Bk ? -tk : tk)
               }
-              Eu = Ku < 32 ? 1 : Ku < 256 ? 2 : Ku < 65536 ? 3 : 5;
-              let mu = 3 * Ku;
-              if (GR + mu > MR && (eR = eu(GR + mu)), Ku < 64 || !Qu) {
-                let Ru, Qu, mu, Ju = GR + Eu;
-                for (Ru = 0; Ru < Ku; Ru++) Qu = uu.charCodeAt(Ru), Qu < 128 ? eR[Ju++] = Qu : Qu < 2048 ? (eR[Ju++] = Qu >> 6 | 192, eR[Ju++] = 63 & Qu | 128) : 55296 === (64512 & Qu) && 56320 === (64512 & (mu = uu.charCodeAt(Ru + 1))) ? (Qu = 65536 + ((1023 & Qu) << 10) + (1023 & mu), Ru++, eR[Ju++] = Qu >> 18 | 240, eR[Ju++] = Qu >> 12 & 63 | 128, eR[Ju++] = Qu >> 6 & 63 | 128, eR[Ju++] = 63 & Qu | 128) : (eR[Ju++] = Qu >> 12 | 224, eR[Ju++] = Qu >> 6 & 63 | 128, eR[Ju++] = 63 & Qu | 128);
-                yu = Ju - GR - Eu
-              } else yu = Qu(uu, GR + Eu);
-              yu < 32 ? eR[GR++] = 160 | yu : yu < 256 ? (Eu < 2 && eR.copyWithin(GR + 2, GR + 1, GR + 1 + yu), eR[GR++] = 217, eR[GR++] = yu) : yu < 65536 ? (Eu < 3 && eR.copyWithin(GR + 3, GR + 2, GR + 2 + yu), eR[GR++] = 218, eR[GR++] = yu >> 8, eR[GR++] = 255 & yu) : (Eu < 5 && eR.copyWithin(GR + 5, GR + 3, GR + 3 + yu), eR[GR++] = 219, DR.setUint32(GR, yu), GR += 4), GR += yu
-            } else if ("number" === Eu)
-              if (uu >>> 0 === uu) uu < 32 || uu < 128 && !1 === this.useRecords || uu < 64 && !this.randomAccessStructure ? eR[GR++] = uu : uu < 256 ? (eR[GR++] = 204, eR[GR++] = uu) : uu < 65536 ? (eR[GR++] = 205, eR[GR++] = uu >> 8, eR[GR++] = 255 & uu) : (eR[GR++] = 206, DR.setUint32(GR, uu), GR += 4);
-              else if ((uu | 0) === uu) uu >= -32 ? eR[GR++] = 256 + uu : uu >= -128 ? (eR[GR++] = 208, eR[GR++] = uu + 256) : uu >= -32768 ? (eR[GR++] = 209, DR.setInt16(GR, uu), GR += 2) : (eR[GR++] = 210, DR.setInt32(GR, uu), GR += 4);
+              Rk = tk < 32 ? 1 : tk < 256 ? 2 : tk < 65536 ? 3 : 5;
+              let Xk = 3 * tk;
+              if (MF + Xk > HF && (EF = Ek(MF + Xk)), tk < 64 || !ak) {
+                let Fk, ak, Xk, bk = MF + Rk;
+                for (Fk = 0; Fk < tk; Fk++) ak = kk.charCodeAt(Fk), ak < 128 ? EF[bk++] = ak : ak < 2048 ? (EF[bk++] = ak >> 6 | 192, EF[bk++] = 63 & ak | 128) : 55296 === (64512 & ak) && 56320 === (64512 & (Xk = kk.charCodeAt(Fk + 1))) ? (ak = 65536 + ((1023 & ak) << 10) + (1023 & Xk), Fk++, EF[bk++] = ak >> 18 | 240, EF[bk++] = ak >> 12 & 63 | 128, EF[bk++] = ak >> 6 & 63 | 128, EF[bk++] = 63 & ak | 128) : (EF[bk++] = ak >> 12 | 224, EF[bk++] = ak >> 6 & 63 | 128, EF[bk++] = 63 & ak | 128);
+                Bk = bk - MF - Rk
+              } else Bk = ak(kk, MF + Rk);
+              Bk < 32 ? EF[MF++] = 160 | Bk : Bk < 256 ? (Rk < 2 && EF.copyWithin(MF + 2, MF + 1, MF + 1 + Bk), EF[MF++] = 217, EF[MF++] = Bk) : Bk < 65536 ? (Rk < 3 && EF.copyWithin(MF + 3, MF + 2, MF + 2 + Bk), EF[MF++] = 218, EF[MF++] = Bk >> 8, EF[MF++] = 255 & Bk) : (Rk < 5 && EF.copyWithin(MF + 5, MF + 3, MF + 3 + Bk), EF[MF++] = 219, NF.setUint32(MF, Bk), MF += 4), MF += Bk
+            } else if ("number" === Rk)
+              if (kk >>> 0 === kk) kk < 32 || kk < 128 && !1 === this.useRecords || kk < 64 && !this.randomAccessStructure ? EF[MF++] = kk : kk < 256 ? (EF[MF++] = 204, EF[MF++] = kk) : kk < 65536 ? (EF[MF++] = 205, EF[MF++] = kk >> 8, EF[MF++] = 255 & kk) : (EF[MF++] = 206, NF.setUint32(MF, kk), MF += 4);
+              else if ((kk | 0) === kk) kk >= -32 ? EF[MF++] = 256 + kk : kk >= -128 ? (EF[MF++] = 208, EF[MF++] = kk + 256) : kk >= -32768 ? (EF[MF++] = 209, NF.setInt16(MF, kk), MF += 2) : (EF[MF++] = 210, NF.setInt32(MF, kk), MF += 4);
             else {
-              let Ru;
-              if ((Ru = this.useFloat32) > 0 && uu < 4294967296 && uu >= -2147483648) {
-                let yu;
-                if (eR[GR++] = 202, DR.setFloat32(GR, uu), Ru < 4 || ((yu = uu * JR[(127 & eR[GR]) << 1 | eR[GR + 1] >> 7]) | 0) === yu) return void(GR += 4);
-                GR--
+              let Fk;
+              if ((Fk = this.useFloat32) > 0 && kk < 4294967296 && kk >= -2147483648) {
+                let Bk;
+                if (EF[MF++] = 202, NF.setFloat32(MF, kk), Fk < 4 || ((Bk = kk * wF[(127 & EF[MF]) << 1 | EF[MF + 1] >> 7]) | 0) === Bk) return void(MF += 4);
+                MF--
               }
-              eR[GR++] = 203, DR.setFloat64(GR, uu), GR += 8
-            } else if ("object" === Eu || "function" === Eu)
-              if (uu) {
-                if (Ku) {
-                  let yu = Ku.get(uu);
-                  if (yu) {
-                    if (!yu.id) {
-                      let uu = Ku.idsToInsert || (Ku.idsToInsert = []);
-                      yu.id = uu.push(yu)
+              EF[MF++] = 203, NF.setFloat64(MF, kk), MF += 8
+            } else if ("object" === Rk || "function" === Rk)
+              if (kk) {
+                if (tk) {
+                  let Bk = tk.get(kk);
+                  if (Bk) {
+                    if (!Bk.id) {
+                      let kk = tk.idsToInsert || (tk.idsToInsert = []);
+                      Bk.id = kk.push(Bk)
                     }
-                    return eR[GR++] = 214, eR[GR++] = 112, DR.setUint32(GR, yu.id), void(GR += 4)
+                    return EF[MF++] = 214, EF[MF++] = 112, NF.setUint32(MF, Bk.id), void(MF += 4)
                   }
-                  Ku.set(uu, {
-                    offset: GR - Ru
+                  tk.set(kk, {
+                    offset: MF - Fk
                   })
                 }
-                let Qu = uu.constructor;
-                if (Qu === Object) ku(uu);
-                else if (Qu === Array) ju(uu);
-                else if (Qu === Map)
-                  if (this.mapAsEmptyObject) eR[GR++] = 128;
+                let ak = kk.constructor;
+                if (ak === Object) Ok(kk);
+                else if (ak === Array) Wk(kk);
+                else if (ak === Map)
+                  if (this.mapAsEmptyObject) EF[MF++] = 128;
                   else {
-                    (yu = uu.size) < 16 ? eR[GR++] = 128 | yu : yu < 65536 ? (eR[GR++] = 222, eR[GR++] = yu >> 8, eR[GR++] = 255 & yu) : (eR[GR++] = 223, DR.setUint32(GR, yu), GR += 4);
-                    for (let [Ru, yu] of uu) Hu(Ru), Hu(yu)
+                    (Bk = kk.size) < 16 ? EF[MF++] = 128 | Bk : Bk < 65536 ? (EF[MF++] = 222, EF[MF++] = Bk >> 8, EF[MF++] = 255 & Bk) : (EF[MF++] = 223, NF.setUint32(MF, Bk), MF += 4);
+                    for (let [Fk, Bk] of kk) vk(Fk), vk(Bk)
                   }
                 else {
-                  for (let Ru = 0, yu = pR.length; Ru < yu; Ru++) {
-                    if (uu instanceof TR[Ru]) {
-                      let yu = pR[Ru];
-                      if (yu.write) {
-                        yu.type && (eR[GR++] = 212, eR[GR++] = yu.type, eR[GR++] = 0);
-                        let Ru = yu.write.call(this, uu);
-                        return void(Ru === uu ? Array.isArray(uu) ? ju(uu) : ku(uu) : Hu(Ru))
+                  for (let Fk = 0, Bk = fF.length; Fk < Bk; Fk++) {
+                    if (kk instanceof mF[Fk]) {
+                      let Bk = fF[Fk];
+                      if (Bk.write) {
+                        Bk.type && (EF[MF++] = 212, EF[MF++] = Bk.type, EF[MF++] = 0);
+                        let Fk = Bk.write.call(this, kk);
+                        return void(Fk === kk ? Array.isArray(kk) ? Wk(kk) : Ok(kk) : vk(Fk))
                       }
-                      let Eu, Ku = eR,
-                        Qu = DR,
-                        mu = GR;
-                      eR = null;
+                      let Rk, tk = EF,
+                        ak = NF,
+                        Xk = MF;
+                      EF = null;
                       try {
-                        Eu = yu.pack.call(this, uu, (uu => (eR = Ku, Ku = null, GR += uu, GR > MR && eu(GR), {
-                          target: eR,
-                          targetView: DR,
-                          position: GR - uu
-                        })), Hu)
+                        Rk = Bk.pack.call(this, kk, (kk => (EF = tk, tk = null, MF += kk, MF > HF && Ek(MF), {
+                          target: EF,
+                          targetView: NF,
+                          position: MF - kk
+                        })), vk)
                       } finally {
-                        Ku && (eR = Ku, DR = Qu, GR = mu, MR = eR.length - 10)
+                        tk && (EF = tk, NF = ak, MF = Xk, HF = EF.length - 10)
                       }
-                      return void(Eu && (Eu.length + GR > MR && eu(Eu.length + GR), GR = cR(Eu, eR, GR, yu.type)))
+                      return void(Rk && (Rk.length + MF > HF && Ek(Rk.length + MF), MF = DF(Rk, EF, MF, Bk.type)))
                     }
                   }
-                  if (Array.isArray(uu)) ju(uu);
+                  if (Array.isArray(kk)) Wk(kk);
                   else {
-                    if (uu.toJSON) {
-                      const Ru = uu.toJSON();
-                      if (Ru !== uu) return Hu(Ru)
+                    if (kk.toJSON) {
+                      const Fk = kk.toJSON();
+                      if (Fk !== kk) return vk(Fk)
                     }
-                    if ("function" === Eu) return Hu(this.writeFunction && this.writeFunction(uu));
-                    ku(uu)
+                    if ("function" === Rk) return vk(this.writeFunction && this.writeFunction(kk));
+                    Ok(kk)
                   }
                 }
-              } else eR[GR++] = 192;
-            else if ("boolean" === Eu) eR[GR++] = uu ? 195 : 194;
-            else if ("bigint" === Eu) {
-              if (uu < BigInt(1) << BigInt(63) && uu >= -(BigInt(1) << BigInt(63))) eR[GR++] = 211, DR.setBigInt64(GR, uu);
-              else if (uu < BigInt(1) << BigInt(64) && uu > 0) eR[GR++] = 207, DR.setBigUint64(GR, uu);
+              } else EF[MF++] = 192;
+            else if ("boolean" === Rk) EF[MF++] = kk ? 195 : 194;
+            else if ("bigint" === Rk) {
+              if (kk < BigInt(1) << BigInt(63) && kk >= -(BigInt(1) << BigInt(63))) EF[MF++] = 211, NF.setBigInt64(MF, kk);
+              else if (kk < BigInt(1) << BigInt(64) && kk > 0) EF[MF++] = 207, NF.setBigUint64(MF, kk);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return Hu(uu.toString());
-                  if (this.useBigIntExtension && uu < BigInt(2) ** BigInt(1023) && uu > -(BigInt(2) ** BigInt(1023))) {
-                    eR[GR++] = 199, GR++, eR[GR++] = 66;
-                    let Ru, yu = [];
+                  if (this.largeBigIntToString) return vk(kk.toString());
+                  if (this.useBigIntExtension && kk < BigInt(2) ** BigInt(1023) && kk > -(BigInt(2) ** BigInt(1023))) {
+                    EF[MF++] = 199, MF++, EF[MF++] = 66;
+                    let Fk, Bk = [];
                     do {
-                      let Eu = uu & BigInt(255);
-                      Ru = (Eu & BigInt(128)) === (uu < BigInt(0) ? BigInt(128) : BigInt(0)), yu.push(Eu), uu >>= BigInt(8)
-                    } while (uu !== BigInt(0) && uu !== BigInt(-1) || !Ru);
-                    eR[GR - 2] = yu.length;
-                    for (let uu = yu.length; uu > 0;) eR[GR++] = Number(yu[--uu]);
+                      let Rk = kk & BigInt(255);
+                      Fk = (Rk & BigInt(128)) === (kk < BigInt(0) ? BigInt(128) : BigInt(0)), Bk.push(Rk), kk >>= BigInt(8)
+                    } while (kk !== BigInt(0) && kk !== BigInt(-1) || !Fk);
+                    EF[MF - 2] = Bk.length;
+                    for (let kk = Bk.length; kk > 0;) EF[MF++] = Number(Bk[--kk]);
                     return
                   }
-                  throw new RangeError(uu + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(kk + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                eR[GR++] = 203, DR.setFloat64(GR, Number(uu))
+                EF[MF++] = 203, NF.setFloat64(MF, Number(kk))
               }
-              GR += 8
+              MF += 8
             } else {
-              if ("undefined" !== Eu) throw new Error("Unknown type: " + Eu);
-              this.encodeUndefinedAsNil ? eR[GR++] = 192 : (eR[GR++] = 212, eR[GR++] = 0, eR[GR++] = 0)
+              if ("undefined" !== Rk) throw new Error("Unknown type: " + Rk);
+              this.encodeUndefinedAsNil ? EF[MF++] = 192 : (EF[MF++] = 212, EF[MF++] = 0, EF[MF++] = 0)
             }
           },
-          du = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? uu => {
-            let Ru;
+          ik = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? kk => {
+            let Fk;
             if (this.skipValues) {
-              Ru = [];
-              for (let yu in uu) "function" === typeof uu.hasOwnProperty && !uu.hasOwnProperty(yu) || this.skipValues.includes(uu[yu]) || Ru.push(yu)
-            } else Ru = Object.keys(uu);
-            let yu, Eu = Ru.length;
-            if (Eu < 16 ? eR[GR++] = 128 | Eu : Eu < 65536 ? (eR[GR++] = 222, eR[GR++] = Eu >> 8, eR[GR++] = 255 & Eu) : (eR[GR++] = 223, DR.setUint32(GR, Eu), GR += 4), this.coercibleKeyAsNumber)
-              for (let Ku = 0; Ku < Eu; Ku++) {
-                yu = Ru[Ku];
-                let Eu = Number(yu);
-                Hu(isNaN(Eu) ? yu : Eu), Hu(uu[yu])
+              Fk = [];
+              for (let Bk in kk) "function" === typeof kk.hasOwnProperty && !kk.hasOwnProperty(Bk) || this.skipValues.includes(kk[Bk]) || Fk.push(Bk)
+            } else Fk = Object.keys(kk);
+            let Bk, Rk = Fk.length;
+            if (Rk < 16 ? EF[MF++] = 128 | Rk : Rk < 65536 ? (EF[MF++] = 222, EF[MF++] = Rk >> 8, EF[MF++] = 255 & Rk) : (EF[MF++] = 223, NF.setUint32(MF, Rk), MF += 4), this.coercibleKeyAsNumber)
+              for (let tk = 0; tk < Rk; tk++) {
+                Bk = Fk[tk];
+                let Rk = Number(Bk);
+                vk(isNaN(Rk) ? Bk : Rk), vk(kk[Bk])
               } else
-                for (let Ku = 0; Ku < Eu; Ku++) Hu(yu = Ru[Ku]), Hu(uu[yu])
-          } : uu => {
-            eR[GR++] = 222;
-            let yu = GR - Ru;
-            GR += 2;
-            let Eu = 0;
-            for (let Ru in uu)("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(Ru)) && (Hu(Ru), Hu(uu[Ru]), Eu++);
-            if (Eu > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            eR[yu++ + Ru] = Eu >> 8, eR[yu + Ru] = 255 & Eu
+                for (let tk = 0; tk < Rk; tk++) vk(Bk = Fk[tk]), vk(kk[Bk])
+          } : kk => {
+            EF[MF++] = 222;
+            let Bk = MF - Fk;
+            MF += 2;
+            let Rk = 0;
+            for (let Fk in kk)("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(Fk)) && (vk(Fk), vk(kk[Fk]), Rk++);
+            if (Rk > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            EF[Bk++ + Fk] = Rk >> 8, EF[Bk + Fk] = 255 & Rk
           },
-          bu = !1 === this.useRecords ? du : uu.progressiveRecords && !ru ? uu => {
-            let yu, Ku, Qu = Eu.transitions || (Eu.transitions = Object.create(null)),
-              mu = GR++ - Ru;
-            for (let Ju in uu)
-              if ("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(Ju)) {
-                if (yu = Qu[Ju], yu) Qu = yu;
+          Yk = !1 === this.useRecords ? ik : kk.progressiveRecords && !Vk ? kk => {
+            let Bk, tk, ak = Rk.transitions || (Rk.transitions = Object.create(null)),
+              Xk = MF++ - Fk;
+            for (let bk in kk)
+              if ("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(bk)) {
+                if (Bk = ak[bk], Bk) ak = Bk;
                 else {
-                  let Nu = Object.keys(uu),
-                    Xu = Qu;
-                  Qu = Eu.transitions;
-                  let Vu = 0;
-                  for (let uu = 0, Ru = Nu.length; uu < Ru; uu++) {
-                    let Ru = Nu[uu];
-                    yu = Qu[Ru], yu || (yu = Qu[Ru] = Object.create(null), Vu++), Qu = yu
+                  let wk = Object.keys(kk),
+                    dk = ak;
+                  ak = Rk.transitions;
+                  let sk = 0;
+                  for (let kk = 0, Fk = wk.length; kk < Fk; kk++) {
+                    let Fk = wk[kk];
+                    Bk = ak[Fk], Bk || (Bk = ak[Fk] = Object.create(null), sk++), ak = Bk
                   }
-                  mu + Ru + 1 == GR ? (GR--, Au(Qu, Nu, Vu)) : Du(Qu, Nu, mu, Vu), Ku = !0, Qu = Xu[Ju]
+                  Xk + Fk + 1 == MF ? (MF--, Sk(ak, wk, sk)) : Nk(ak, wk, Xk, sk), tk = !0, ak = dk[bk]
                 }
-                Hu(uu[Ju])
-              } if (!Ku) {
-              let yu = Qu[sR];
-              yu ? eR[mu + Ru] = yu : Du(Qu, Object.keys(uu), mu, 0)
+                vk(kk[bk])
+              } if (!tk) {
+              let Bk = ak[cF];
+              Bk ? EF[Xk + Fk] = Bk : Nk(ak, Object.keys(kk), Xk, 0)
             }
-          } : uu => {
-            let Ru, yu = Eu.transitions || (Eu.transitions = Object.create(null)),
-              Ku = 0;
-            for (let Eu in uu)("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(Eu)) && (Ru = yu[Eu], Ru || (Ru = yu[Eu] = Object.create(null), Ku++), yu = Ru);
-            let Qu = yu[sR];
-            Qu ? Qu >= 96 && ru ? (eR[GR++] = 96 + (31 & (Qu -= 96)), eR[GR++] = Qu >> 5) : eR[GR++] = Qu : Au(yu, yu.__keys__ || Object.keys(uu), Ku);
-            for (let Eu in uu)("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(Eu)) && Hu(uu[Eu])
+          } : kk => {
+            let Fk, Bk = Rk.transitions || (Rk.transitions = Object.create(null)),
+              tk = 0;
+            for (let Rk in kk)("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(Rk)) && (Fk = Bk[Rk], Fk || (Fk = Bk[Rk] = Object.create(null), tk++), Bk = Fk);
+            let ak = Bk[cF];
+            ak ? ak >= 96 && Vk ? (EF[MF++] = 96 + (31 & (ak -= 96)), EF[MF++] = ak >> 5) : EF[MF++] = ak : Sk(Bk, Bk.__keys__ || Object.keys(kk), tk);
+            for (let Rk in kk)("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(Rk)) && vk(kk[Rk])
           },
-          Cu = "function" == typeof this.useRecords && this.useRecords,
-          ku = Cu ? uu => {
-            Cu(uu) ? bu(uu) : du(uu)
-          } : bu,
-          eu = uu => {
-            let yu;
-            if (uu > 16777216) {
-              if (uu - Ru > kR) throw new Error("Packed buffer would be larger than maximum buffer size");
-              yu = Math.min(kR, 4096 * Math.round(Math.max((uu - Ru) * (uu > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else yu = 1 + (Math.max(uu - Ru << 2, eR.length - 1) >> 12) << 12;
-            let Eu = new bR(yu);
-            return DR = Eu.dataView || (Eu.dataView = new DataView(Eu.buffer, 0, yu)), uu = Math.min(uu, eR.length), eR.copy ? eR.copy(Eu, 0, Ru, uu) : Eu.set(eR.slice(Ru, uu)), GR -= Ru, Ru = 0, MR = Eu.length - 10, eR = Eu
+          Lk = "function" == typeof this.useRecords && this.useRecords,
+          Ok = Lk ? kk => {
+            Lk(kk) ? Yk(kk) : ik(kk)
+          } : Yk,
+          Ek = kk => {
+            let Bk;
+            if (kk > 16777216) {
+              if (kk - Fk > OF) throw new Error("Packed buffer would be larger than maximum buffer size");
+              Bk = Math.min(OF, 4096 * Math.round(Math.max((kk - Fk) * (kk > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else Bk = 1 + (Math.max(kk - Fk << 2, EF.length - 1) >> 12) << 12;
+            let Rk = new oF(Bk);
+            return NF = Rk.dataView || (Rk.dataView = new DataView(Rk.buffer, 0, Bk)), kk = Math.min(kk, EF.length), EF.copy ? EF.copy(Rk, 0, Fk, kk) : Rk.set(EF.slice(Fk, kk)), MF -= Fk, Fk = 0, HF = Rk.length - 10, EF = Rk
           },
-          Au = (uu, Ru, Ku) => {
-            let Qu = Eu.nextId;
-            Qu || (Qu = 64), Qu < Bu && this.shouldShareStructure && !this.shouldShareStructure(Ru) ? (Qu = Eu.nextOwnId, Qu < xu || (Qu = Bu), Eu.nextOwnId = Qu + 1) : (Qu >= xu && (Qu = Bu), Eu.nextId = Qu + 1);
-            let mu = Ru.highByte = Qu >= 96 && ru ? Qu - 96 >> 5 : -1;
-            uu[sR] = Qu, uu.__keys__ = Ru, Eu[Qu - 64] = Ru, Qu < Bu ? (Ru.isShared = !0, Eu.sharedLength = Qu - 63, yu = !0, mu >= 0 ? (eR[GR++] = 96 + (31 & Qu), eR[GR++] = mu) : eR[GR++] = Qu) : (mu >= 0 ? (eR[GR++] = 213, eR[GR++] = 114, eR[GR++] = 96 + (31 & Qu), eR[GR++] = mu) : (eR[GR++] = 212, eR[GR++] = 114, eR[GR++] = Qu), Ku && (pu += Tu * Ku), Su.length >= Vu && (Su.shift()[sR] = 0), Su.push(uu), Hu(Ru))
+          Sk = (kk, Fk, tk) => {
+            let ak = Rk.nextId;
+            ak || (ak = 64), ak < Jk && this.shouldShareStructure && !this.shouldShareStructure(Fk) ? (ak = Rk.nextOwnId, ak < Ak || (ak = Jk), Rk.nextOwnId = ak + 1) : (ak >= Ak && (ak = Jk), Rk.nextId = ak + 1);
+            let Xk = Fk.highByte = ak >= 96 && Vk ? ak - 96 >> 5 : -1;
+            kk[cF] = ak, kk.__keys__ = Fk, Rk[ak - 64] = Fk, ak < Jk ? (Fk.isShared = !0, Rk.sharedLength = ak - 63, Bk = !0, Xk >= 0 ? (EF[MF++] = 96 + (31 & ak), EF[MF++] = Xk) : EF[MF++] = ak) : (Xk >= 0 ? (EF[MF++] = 213, EF[MF++] = 114, EF[MF++] = 96 + (31 & ak), EF[MF++] = Xk) : (EF[MF++] = 212, EF[MF++] = 114, EF[MF++] = ak), tk && (yk += fk * tk), ek.length >= sk && (ek.shift()[cF] = 0), ek.push(kk), vk(Fk))
           },
-          Du = (uu, yu, Eu, Ku) => {
-            let Qu = eR,
-              mu = GR,
-              Ju = MR,
-              Nu = Ru;
-            eR = AR, GR = 0, Ru = 0, eR || (AR = eR = new bR(8192)), MR = eR.length - 10, Au(uu, yu, Ku), AR = eR;
-            let Xu = GR;
-            if (eR = Qu, GR = mu, MR = Ju, Ru = Nu, Xu > 1) {
-              let uu = GR + Xu - 1;
-              uu > MR && eu(uu);
-              let yu = Eu + Ru;
-              eR.copyWithin(yu + Xu, yu + 1, GR), eR.set(AR.slice(0, Xu), yu), GR = uu
-            } else eR[Eu + Ru] = AR[0]
+          Nk = (kk, Bk, Rk, tk) => {
+            let ak = EF,
+              Xk = MF,
+              bk = HF,
+              wk = Fk;
+            EF = SF, MF = 0, Fk = 0, EF || (SF = EF = new oF(8192)), HF = EF.length - 10, Sk(kk, Bk, tk), SF = EF;
+            let dk = MF;
+            if (EF = ak, MF = Xk, HF = bk, Fk = wk, dk > 1) {
+              let kk = MF + dk - 1;
+              kk > HF && Ek(kk);
+              let Bk = Rk + Fk;
+              EF.copyWithin(Bk + dk, Bk + 1, MF), EF.set(SF.slice(0, dk), Bk), MF = kk
+            } else EF[Rk + Fk] = SF[0]
           },
-          Mu = uu => {
-            let Ku = IR(uu, eR, Ru, GR, Eu, eu, ((uu, Ru, Eu) => {
-              if (Eu) return yu = !0;
-              GR = Ru;
-              let Ku = eR;
-              return Hu(uu), Wu(), Ku !== eR ? {
-                position: GR,
-                targetView: DR,
-                target: eR
-              } : GR
+          Hk = kk => {
+            let tk = uF(kk, EF, Fk, MF, Rk, Ek, ((kk, Fk, Rk) => {
+              if (Rk) return Bk = !0;
+              MF = Fk;
+              let tk = EF;
+              return vk(kk), mk(), tk !== EF ? {
+                position: MF,
+                targetView: NF,
+                target: EF
+              } : MF
             }), this);
-            if (0 === Ku) return ku(uu);
-            GR = Ku
+            if (0 === tk) return Ok(kk);
+            MF = tk
           }
       }
-      useBuffer(uu) {
-        eR = uu, DR = eR.dataView || (eR.dataView = new DataView(eR.buffer, eR.byteOffset, eR.byteLength)), GR = 0
+      useBuffer(kk) {
+        EF = kk, NF = EF.dataView || (EF.dataView = new DataView(EF.buffer, EF.byteOffset, EF.byteLength)), MF = 0
       }
-      set position(uu) {
-        GR = uu
+      set position(kk) {
+        MF = kk
       }
       get position() {
-        return GR
+        return MF
       }
-      set buffer(uu) {
-        eR = uu
+      set buffer(kk) {
+        EF = kk
       }
       get buffer() {
-        return eR
+        return EF
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function lR(uu, Ru, yu, Eu) {
-      let Ku = uu.byteLength;
-      if (Ku + 1 < 256) {
+    function TF(kk, Fk, Bk, Rk) {
+      let tk = kk.byteLength;
+      if (tk + 1 < 256) {
         var {
-          target: Qu,
-          position: mu
-        } = yu(4 + Ku);
-        Qu[mu++] = 199, Qu[mu++] = Ku + 1
-      } else if (Ku + 1 < 65536) {
+          target: ak,
+          position: Xk
+        } = Bk(4 + tk);
+        ak[Xk++] = 199, ak[Xk++] = tk + 1
+      } else if (tk + 1 < 65536) {
         var {
-          target: Qu,
-          position: mu
-        } = yu(5 + Ku);
-        Qu[mu++] = 200, Qu[mu++] = Ku + 1 >> 8, Qu[mu++] = Ku + 1 & 255
+          target: ak,
+          position: Xk
+        } = Bk(5 + tk);
+        ak[Xk++] = 200, ak[Xk++] = tk + 1 >> 8, ak[Xk++] = tk + 1 & 255
       } else {
         var {
-          target: Qu,
-          position: mu,
-          targetView: Ju
-        } = yu(7 + Ku);
-        Qu[mu++] = 201, Ju.setUint32(mu, Ku + 1), mu += 4
+          target: ak,
+          position: Xk,
+          targetView: bk
+        } = Bk(7 + tk);
+        ak[Xk++] = 201, bk.setUint32(Xk, tk + 1), Xk += 4
       }
-      Qu[mu++] = 116, Qu[mu++] = Ru, uu.buffer || (uu = new Uint8Array(uu)), Qu.set(new Uint8Array(uu.buffer, uu.byteOffset, uu.byteLength), mu)
+      ak[Xk++] = 116, ak[Xk++] = Fk, kk.buffer || (kk = new Uint8Array(kk)), ak.set(new Uint8Array(kk.buffer, kk.byteOffset, kk.byteLength), Xk)
     }
 
-    function gR(uu, Ru) {
-      let yu = uu.byteLength;
-      var Eu, Ku;
-      if (yu < 256) {
+    function rF(kk, Fk) {
+      let Bk = kk.byteLength;
+      var Rk, tk;
+      if (Bk < 256) {
         var {
-          target: Eu,
-          position: Ku
-        } = Ru(yu + 2);
-        Eu[Ku++] = 196, Eu[Ku++] = yu
-      } else if (yu < 65536) {
+          target: Rk,
+          position: tk
+        } = Fk(Bk + 2);
+        Rk[tk++] = 196, Rk[tk++] = Bk
+      } else if (Bk < 65536) {
         var {
-          target: Eu,
-          position: Ku
-        } = Ru(yu + 3);
-        Eu[Ku++] = 197, Eu[Ku++] = yu >> 8, Eu[Ku++] = 255 & yu
+          target: Rk,
+          position: tk
+        } = Fk(Bk + 3);
+        Rk[tk++] = 197, Rk[tk++] = Bk >> 8, Rk[tk++] = 255 & Bk
       } else {
         var {
-          target: Eu,
-          position: Ku,
-          targetView: Qu
-        } = Ru(yu + 5);
-        Eu[Ku++] = 198, Qu.setUint32(Ku, yu), Ku += 4
+          target: Rk,
+          position: tk,
+          targetView: ak
+        } = Fk(Bk + 5);
+        Rk[tk++] = 198, ak.setUint32(tk, Bk), tk += 4
       }
-      Eu.set(uu, Ku)
+      Rk.set(kk, tk)
     }
 
-    function cR(uu, Ru, yu, Eu) {
-      let Ku = uu.length;
-      switch (Ku) {
+    function DF(kk, Fk, Bk, Rk) {
+      let tk = kk.length;
+      switch (tk) {
         case 1:
-          Ru[yu++] = 212;
+          Fk[Bk++] = 212;
           break;
         case 2:
-          Ru[yu++] = 213;
+          Fk[Bk++] = 213;
           break;
         case 4:
-          Ru[yu++] = 214;
+          Fk[Bk++] = 214;
           break;
         case 8:
-          Ru[yu++] = 215;
+          Fk[Bk++] = 215;
           break;
         case 16:
-          Ru[yu++] = 216;
+          Fk[Bk++] = 216;
           break;
         default:
-          Ku < 256 ? (Ru[yu++] = 199, Ru[yu++] = Ku) : Ku < 65536 ? (Ru[yu++] = 200, Ru[yu++] = Ku >> 8, Ru[yu++] = 255 & Ku) : (Ru[yu++] = 201, Ru[yu++] = Ku >> 24, Ru[yu++] = Ku >> 16 & 255, Ru[yu++] = Ku >> 8 & 255, Ru[yu++] = 255 & Ku)
+          tk < 256 ? (Fk[Bk++] = 199, Fk[Bk++] = tk) : tk < 65536 ? (Fk[Bk++] = 200, Fk[Bk++] = tk >> 8, Fk[Bk++] = 255 & tk) : (Fk[Bk++] = 201, Fk[Bk++] = tk >> 24, Fk[Bk++] = tk >> 16 & 255, Fk[Bk++] = tk >> 8 & 255, Fk[Bk++] = 255 & tk)
       }
-      return Ru[yu++] = Eu, Ru.set(uu, yu), yu += Ku
+      return Fk[Bk++] = Rk, Fk.set(kk, Bk), Bk += tk
     }
 
-    function LR(uu, Ru, yu) {
-      if (UR.length > 0) {
-        DR.setUint32(UR.position + uu, GR + yu - UR.position - uu), UR.stringsPosition = GR - uu;
-        let Eu = UR;
-        UR = null, Ru(Eu[0]), Ru(Eu[1])
+    function zF(kk, Fk, Bk) {
+      if (gF.length > 0) {
+        NF.setUint32(gF.position + kk, MF + Bk - gF.position - kk), gF.stringsPosition = MF - kk;
+        let Rk = gF;
+        gF = null, Fk(Rk[0]), Fk(Rk[1])
       }
     }
 
-    function zR(uu) {
-      if (uu.Class) {
-        if (!uu.pack && !uu.write) throw new Error("Extension has no pack or write function");
-        if (uu.pack && !uu.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        TR.unshift(uu.Class), pR.unshift(uu)
-      }! function(uu) {
-        uu.unpack ? ju[uu.type] = uu.unpack : ju[uu.type] = uu
-      }(uu)
+    function PF(kk) {
+      if (kk.Class) {
+        if (!kk.pack && !kk.write) throw new Error("Extension has no pack or write function");
+        if (kk.pack && !kk.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        mF.unshift(kk.Class), fF.unshift(kk)
+      }! function(kk) {
+        kk.unpack ? Wk[kk.type] = kk.unpack : Wk[kk.type] = kk
+      }(kk)
     }
 
-    function FR(uu, Ru) {
-      return uu.isCompatible = uu => {
-        let yu = !uu || (Ru.lastNamedStructuresLength || 0) === uu.length;
-        return yu || Ru._mergeStructures(uu), yu
-      }, uu
+    function hF(kk, Fk) {
+      return kk.isCompatible = kk => {
+        let Bk = !kk || (Fk.lastNamedStructuresLength || 0) === kk.length;
+        return Bk || Fk._mergeStructures(kk), Bk
+      }, kk
     }
-    TR = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, du], pR = [{
-      pack(uu, Ru, yu) {
-        let Eu = uu.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === uu.getMilliseconds()) && Eu >= 0 && Eu < 4294967296) {
+    mF = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, ik], fF = [{
+      pack(kk, Fk, Bk) {
+        let Rk = kk.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === kk.getMilliseconds()) && Rk >= 0 && Rk < 4294967296) {
           let {
-            target: uu,
-            targetView: yu,
-            position: Ku
-          } = Ru(6);
-          uu[Ku++] = 214, uu[Ku++] = 255, yu.setUint32(Ku, Eu)
-        } else if (Eu > 0 && Eu < 4294967296) {
+            target: kk,
+            targetView: Bk,
+            position: tk
+          } = Fk(6);
+          kk[tk++] = 214, kk[tk++] = 255, Bk.setUint32(tk, Rk)
+        } else if (Rk > 0 && Rk < 4294967296) {
           let {
-            target: yu,
-            targetView: Ku,
-            position: Qu
-          } = Ru(10);
-          yu[Qu++] = 215, yu[Qu++] = 255, Ku.setUint32(Qu, 4e6 * uu.getMilliseconds() + (Eu / 1e3 / 4294967296 | 0)), Ku.setUint32(Qu + 4, Eu)
-        } else if (isNaN(Eu)) {
-          if (this.onInvalidDate) return Ru(0), yu(this.onInvalidDate());
+            target: Bk,
+            targetView: tk,
+            position: ak
+          } = Fk(10);
+          Bk[ak++] = 215, Bk[ak++] = 255, tk.setUint32(ak, 4e6 * kk.getMilliseconds() + (Rk / 1e3 / 4294967296 | 0)), tk.setUint32(ak + 4, Rk)
+        } else if (isNaN(Rk)) {
+          if (this.onInvalidDate) return Fk(0), Bk(this.onInvalidDate());
           let {
-            target: uu,
-            targetView: Eu,
-            position: Ku
-          } = Ru(3);
-          uu[Ku++] = 212, uu[Ku++] = 255, uu[Ku++] = 255
+            target: kk,
+            targetView: Rk,
+            position: tk
+          } = Fk(3);
+          kk[tk++] = 212, kk[tk++] = 255, kk[tk++] = 255
         } else {
           let {
-            target: yu,
-            targetView: Ku,
-            position: Qu
-          } = Ru(15);
-          yu[Qu++] = 199, yu[Qu++] = 12, yu[Qu++] = 255, Ku.setUint32(Qu, 1e6 * uu.getMilliseconds()), Ku.setBigInt64(Qu + 4, BigInt(Math.floor(Eu)))
+            target: Bk,
+            targetView: tk,
+            position: ak
+          } = Fk(15);
+          Bk[ak++] = 199, Bk[ak++] = 12, Bk[ak++] = 255, tk.setUint32(ak, 1e6 * kk.getMilliseconds()), tk.setBigInt64(ak + 4, BigInt(Math.floor(Rk)))
         }
       }
     }, {
-      pack(uu, Ru, yu) {
-        if (this.setAsEmptyObject) return Ru(0), yu({});
-        let Eu = Array.from(uu),
+      pack(kk, Fk, Bk) {
+        if (this.setAsEmptyObject) return Fk(0), Bk({});
+        let Rk = Array.from(kk),
           {
-            target: Ku,
-            position: Qu
-          } = Ru(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Ku[Qu++] = 212, Ku[Qu++] = 115, Ku[Qu++] = 0), yu(Eu)
+            target: tk,
+            position: ak
+          } = Fk(this.moreTypes ? 3 : 0);
+        this.moreTypes && (tk[ak++] = 212, tk[ak++] = 115, tk[ak++] = 0), Bk(Rk)
       }
     }, {
-      pack(uu, Ru, yu) {
+      pack(kk, Fk, Bk) {
         let {
-          target: Eu,
-          position: Ku
-        } = Ru(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Eu[Ku++] = 212, Eu[Ku++] = 101, Eu[Ku++] = 0), yu([uu.name, uu.message, uu.cause])
+          target: Rk,
+          position: tk
+        } = Fk(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Rk[tk++] = 212, Rk[tk++] = 101, Rk[tk++] = 0), Bk([kk.name, kk.message, kk.cause])
       }
     }, {
-      pack(uu, Ru, yu) {
+      pack(kk, Fk, Bk) {
         let {
-          target: Eu,
-          position: Ku
-        } = Ru(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Eu[Ku++] = 212, Eu[Ku++] = 120, Eu[Ku++] = 0), yu([uu.source, uu.flags])
+          target: Rk,
+          position: tk
+        } = Fk(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Rk[tk++] = 212, Rk[tk++] = 120, Rk[tk++] = 0), Bk([kk.source, kk.flags])
       }
     }, {
-      pack(uu, Ru) {
-        this.moreTypes ? lR(uu, 16, Ru) : gR(dR ? Buffer.from(uu) : new Uint8Array(uu), Ru)
+      pack(kk, Fk) {
+        this.moreTypes ? TF(kk, 16, Fk) : rF(YF ? Buffer.from(kk) : new Uint8Array(kk), Fk)
       }
     }, {
-      pack(uu, Ru) {
-        let yu = uu.constructor;
-        yu !== CR && this.moreTypes ? lR(uu, yR.indexOf(yu.name), Ru) : gR(uu, Ru)
+      pack(kk, Fk) {
+        let Bk = kk.constructor;
+        Bk !== LF && this.moreTypes ? TF(kk, RF.indexOf(Bk.name), Fk) : rF(kk, Fk)
       }
     }, {
-      pack(uu, Ru) {
+      pack(kk, Fk) {
         let {
-          target: yu,
-          position: Eu
-        } = Ru(1);
-        yu[Eu] = 193
+          target: Bk,
+          position: Rk
+        } = Fk(1);
+        Bk[Rk] = 193
       }
     }];
-    let wR = new tR({
+    let qF = new GF({
       useRecords: !1
     });
-    const ZR = wR.pack,
-      hR = wR.pack,
-      PR = tR,
+    const CF = qF.pack,
+      ZF = qF.pack,
+      pF = GF,
       {
-        NEVER: iR,
-        ALWAYS: YR,
-        DECIMAL_ROUND: oR,
-        DECIMAL_FIT: qR
-      } = xR,
-      OR = 512,
-      vR = 1024,
-      aR = 2048;
-    const fR = function(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!uu || "object" !== typeof uu) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const yu = new Mu(Ru);
-        let Eu;
-        const Ku = uu => {
-          let Ru;
-          Eu && (uu = Buffer.concat([Eu, uu]), Eu = void 0);
+        NEVER: KF,
+        ALWAYS: xF,
+        DECIMAL_ROUND: jF,
+        DECIMAL_FIT: lF
+      } = eF,
+      nF = 512,
+      IF = 1024,
+      QF = 2048;
+    const kB = function(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!kk || "object" !== typeof kk) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const Bk = new Hk(Fk);
+        let Rk;
+        const tk = kk => {
+          let Fk;
+          Rk && (kk = Buffer.concat([Rk, kk]), Rk = void 0);
           try {
-            Ru = yu.unpackMultiple(uu)
-          } catch (Ku) {
-            if (!Ku.incomplete) throw Ku;
-            Eu = uu.slice(Ku.lastPosition), Ru = Ku.values
+            Fk = Bk.unpackMultiple(kk)
+          } catch (tk) {
+            if (!tk.incomplete) throw tk;
+            Rk = kk.slice(tk.lastPosition), Fk = tk.values
           }
-          return Ru
+          return Fk
         };
-        return "function" === typeof uu[Symbol.iterator] ? function*() {
-          for (const Ru of uu) yield* Ku(Ru)
-        }() : "function" === typeof uu[Symbol.asyncIterator] ? async function*() {
-          for await (const Ru of uu) yield* Ku(Ru)
+        return "function" === typeof kk[Symbol.iterator] ? function*() {
+          for (const Fk of kk) yield* tk(Fk)
+        }() : "function" === typeof kk[Symbol.asyncIterator] ? async function*() {
+          for await (const Fk of kk) yield* tk(Fk)
         }(): void 0
       },
-      uy = function(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (uu && "object" === typeof uu) {
-          if ("function" === typeof uu[Symbol.iterator]) return function*(uu, Ru) {
-            const yu = new tR(Ru);
-            for (const Eu of uu) yield yu.pack(Eu)
-          }(uu, Ru);
-          if ("function" === typeof uu.then || "function" === typeof uu[Symbol.asyncIterator]) return async function*(uu, Ru) {
-            const yu = new tR(Ru);
-            for await (const Eu of uu) yield yu.pack(Eu)
-          }(uu, Ru);
+      FB = function(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (kk && "object" === typeof kk) {
+          if ("function" === typeof kk[Symbol.iterator]) return function*(kk, Fk) {
+            const Bk = new GF(Fk);
+            for (const Rk of kk) yield Bk.pack(Rk)
+          }(kk, Fk);
+          if ("function" === typeof kk.then || "function" === typeof kk[Symbol.asyncIterator]) return async function*(kk, Fk) {
+            const Bk = new GF(Fk);
+            for await (const Rk of kk) yield Bk.pack(Rk)
+          }(kk, Fk);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      Ry = !1,
-      yy = !0
+      BB = !1,
+      RB = !0
   },
-  8851: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      $changes: () => pu,
-      $childType: () => Tu,
-      $decoder: () => Vu,
-      $deleteByIndex: () => xu,
-      $encoder: () => Xu,
-      $filter: () => ru,
-      $getByIndex: () => Bu,
-      $numFields: () => Du,
-      $refId: () => Ju,
-      $track: () => Nu,
-      $values: () => bu,
-      ArraySchema: () => yE,
-      Callbacks: () => yK,
-      ChangeTree: () => Gy,
-      CollectionSchema: () => QE,
-      Decoder: () => oE,
-      Encoder: () => hE,
-      FieldBuilder: () => NE,
-      MapSchema: () => KE,
-      Metadata: () => oR,
-      OPERATION: () => Ku,
-      Reflection: () => aE,
-      ReflectionField: () => OE,
-      ReflectionType: () => vE,
-      Root: () => UE,
-      Schema: () => IE,
-      SetSchema: () => mE,
-      StateCallbackStrategy: () => RK,
-      StateView: () => gE,
-      StreamSchema: () => JE,
-      TypeContext: () => FR,
-      createPool: () => KK,
-      decode: () => HR,
-      decodeKeyValueOperation: () => Oy,
-      decodeSchemaOperation: () => qy,
-      defineCustomTypes: () => kR,
-      defineTypes: () => AE,
-      deprecated: () => kE,
-      dumpChanges: () => ME,
-      encode: () => RR,
-      encodeArray: () => Ly,
-      encodeIndexedEntry: () => gy,
-      encodeKeyValueOperation: () => cy,
-      encodeMapEntry: () => ly,
-      encodeSchemaOperation: () => ty,
-      yS: () => pE,
-      fullStateOnly: () => HE,
-      getDecoderStateCallbacks: () => fE,
-      getEncodeDescriptor: () => uy,
-      getRawChangesCallback: () => uK,
-      isBuilder: () => XE,
-      patchOnly: () => jE,
-      registerType: () => CR,
-      schema: () => DE,
-      t: () => xE,
-      type: () => dE,
-      unreliable: () => WE,
-      view: () => TE
+  8783: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      $changes: () => yk,
+      $childType: () => fk,
+      $decoder: () => sk,
+      $deleteByIndex: () => Ak,
+      $encoder: () => dk,
+      $filter: () => Vk,
+      $getByIndex: () => Jk,
+      $numFields: () => Nk,
+      $refId: () => bk,
+      $track: () => wk,
+      $values: () => Yk,
+      ArraySchema: () => RR,
+      Callbacks: () => Rt,
+      ChangeTree: () => MB,
+      CollectionSchema: () => XR,
+      Decoder: () => jR,
+      Encoder: () => ZR,
+      FieldBuilder: () => dR,
+      MapSchema: () => aR,
+      Metadata: () => jF,
+      OPERATION: () => tk,
+      Reflection: () => QR,
+      ReflectionField: () => nR,
+      ReflectionType: () => IR,
+      Root: () => gR,
+      Schema: () => uR,
+      SetSchema: () => bR,
+      StateCallbackStrategy: () => Bt,
+      StateView: () => rR,
+      StreamSchema: () => wR,
+      TypeContext: () => hF,
+      createPool: () => Xt,
+      decode: () => iF,
+      decodeKeyValueOperation: () => nB,
+      decodeSchemaOperation: () => lB,
+      defineCustomTypes: () => OF,
+      defineTypes: () => SR,
+      deprecated: () => OR,
+      dumpChanges: () => HR,
+      encode: () => BF,
+      encodeArray: () => zB,
+      encodeIndexedEntry: () => rB,
+      encodeKeyValueOperation: () => DB,
+      encodeMapEntry: () => TB,
+      encodeSchemaOperation: () => GB,
+      Ne: () => fR,
+      fullStateOnly: () => iR,
+      getDecoderStateCallbacks: () => kt,
+      getEncodeDescriptor: () => FB,
+      getRawChangesCallback: () => Ft,
+      isBuilder: () => sR,
+      patchOnly: () => vR,
+      registerType: () => LF,
+      schema: () => NR,
+      t: () => eR,
+      type: () => YR,
+      unreliable: () => WR,
+      view: () => mR
     });
-    const Eu = 255;
-    var Ku;
+    const Rk = 255;
+    var tk;
 
-    function Qu(uu) {
-      Object.defineProperty(uu, Symbol.metadata, {
+    function ak(kk) {
+      Object.defineProperty(kk, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(uu) {
-      uu[uu.ADD = 128] = "ADD", uu[uu.REPLACE = 0] = "REPLACE", uu[uu.DELETE = 64] = "DELETE", uu[uu.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", uu[uu.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", uu[uu.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", uu[uu.CLEAR = 10] = "CLEAR", uu[uu.REVERSE = 15] = "REVERSE", uu[uu.MOVE = 32] = "MOVE", uu[uu.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", uu[uu.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(Ku || (Ku = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const mu = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(kk) {
+      kk[kk.ADD = 128] = "ADD", kk[kk.REPLACE = 0] = "REPLACE", kk[kk.DELETE = 64] = "DELETE", kk[kk.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", kk[kk.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", kk[kk.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", kk[kk.CLEAR = 10] = "CLEAR", kk[kk.REVERSE = 15] = "REVERSE", kk[kk.MOVE = 32] = "MOVE", kk[kk.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", kk[kk.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(tk || (tk = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const Xk = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const uu = "colyseus.symbolRegistry",
-        Ru = mu[uu] || (mu[uu] = Object.create(null));
-      Symbol.for = function(uu) {
-        return Ru[uu] || (Ru[uu] = Symbol(uu))
-      }, Symbol.keyFor = function(uu) {
-        for (const yu in Ru)
-          if (Ru[yu] === uu) return yu
+      const kk = "colyseus.symbolRegistry",
+        Fk = Xk[kk] || (Xk[kk] = Object.create(null));
+      Symbol.for = function(kk) {
+        return Fk[kk] || (Fk[kk] = Symbol(kk))
+      }, Symbol.keyFor = function(kk) {
+        for (const Bk in Fk)
+          if (Fk[Bk] === kk) return Bk
       }
     }
-    const Ju = Symbol.for("$refId"),
-      Nu = "~track",
-      Xu = "~encoder",
-      Vu = "~decoder",
-      ru = "~filter",
-      Bu = "~getByIndex",
-      xu = "~deleteByIndex",
-      Su = "~resyncPrune",
-      pu = Symbol.for("$changes"),
-      Tu = Symbol.for("$childType"),
-      Wu = Symbol.for("$proxyTarget"),
-      ju = "~onEncodeEnd",
-      Hu = "~reset",
-      du = "~onDecodeEnd",
-      bu = Symbol.for("$values"),
-      Cu = "~builder",
-      ku = "~descriptors",
-      eu = "~__encodeDescriptor",
-      Au = "~encoders",
-      Du = "~__numFields",
-      Mu = "~__refTypeFieldIndexes",
-      Iu = "~__viewFieldIndexes",
-      Gu = "$__fieldIndexesByViewTag",
-      Uu = "~__unreliableFieldIndexes",
-      nu = "~__patchOnlyFieldIndexes",
-      su = "~__fullSyncSkipIndexes",
-      tu = "~__fullStateOnlyFieldIndexes",
-      lu = "~__streamFieldIndexes",
-      gu = "~__streamPriorities";
-    let cu;
+    const bk = Symbol.for("$refId"),
+      wk = "~track",
+      dk = "~encoder",
+      sk = "~decoder",
+      Vk = "~filter",
+      Jk = "~getByIndex",
+      Ak = "~deleteByIndex",
+      ek = "~resyncPrune",
+      yk = Symbol.for("$changes"),
+      fk = Symbol.for("$childType"),
+      mk = Symbol.for("$proxyTarget"),
+      Wk = "~onEncodeEnd",
+      vk = "~reset",
+      ik = "~onDecodeEnd",
+      Yk = Symbol.for("$values"),
+      Lk = "~builder",
+      Ok = "~descriptors",
+      Ek = "~__encodeDescriptor",
+      Sk = "~encoders",
+      Nk = "~__numFields",
+      Hk = "~__refTypeFieldIndexes",
+      uk = "~__viewFieldIndexes",
+      Mk = "$__fieldIndexesByViewTag",
+      gk = "~__unreliableFieldIndexes",
+      Uk = "~__patchOnlyFieldIndexes",
+      ck = "~__fullSyncSkipIndexes",
+      Gk = "~__fullStateOnlyFieldIndexes",
+      Tk = "~__streamFieldIndexes",
+      rk = "~__streamPriorities";
+    let Dk;
     try {
-      cu = new TextEncoder
-    } catch (QK) {}
-    const Lu = new ArrayBuffer(8),
-      zu = new Int32Array(Lu),
-      Fu = new Float32Array(Lu),
-      wu = new Float64Array(Lu),
-      Zu = new BigInt64Array(Lu),
-      hu = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(uu, Ru) {
-        for (var yu = 0, Eu = 0, Ku = 0, Qu = uu.length; Ku < Qu; Ku++)(yu = uu.charCodeAt(Ku)) < 128 ? Eu += 1 : yu < 2048 ? Eu += 2 : yu < 55296 || yu >= 57344 ? Eu += 3 : (Ku++, Eu += 4);
-        return Eu
+      Dk = new TextEncoder
+    } catch (bt) {}
+    const zk = new ArrayBuffer(8),
+      Pk = new Int32Array(zk),
+      hk = new Float32Array(zk),
+      qk = new Float64Array(zk),
+      Ck = new BigInt64Array(zk),
+      Zk = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(kk, Fk) {
+        for (var Bk = 0, Rk = 0, tk = 0, ak = kk.length; tk < ak; tk++)(Bk = kk.charCodeAt(tk)) < 128 ? Rk += 1 : Bk < 2048 ? Rk += 2 : Bk < 55296 || Bk >= 57344 ? Rk += 3 : (tk++, Rk += 4);
+        return Rk
       };
 
-    function Pu(uu, Ru, yu) {
-      for (var Eu = 0, Ku = 0, Qu = Ru.length; Ku < Qu; Ku++)(Eu = Ru.charCodeAt(Ku)) < 128 ? uu[yu.offset++] = Eu : Eu < 2048 ? (uu[yu.offset] = 192 | Eu >> 6, uu[yu.offset + 1] = 128 | 63 & Eu, yu.offset += 2) : Eu < 55296 || Eu >= 57344 ? (uu[yu.offset] = 224 | Eu >> 12, uu[yu.offset + 1] = 128 | Eu >> 6 & 63, uu[yu.offset + 2] = 128 | 63 & Eu, yu.offset += 3) : (Ku++, Eu = 65536 + ((1023 & Eu) << 10 | 1023 & Ru.charCodeAt(Ku)), uu[yu.offset] = 240 | Eu >> 18, uu[yu.offset + 1] = 128 | Eu >> 12 & 63, uu[yu.offset + 2] = 128 | Eu >> 6 & 63, uu[yu.offset + 3] = 128 | 63 & Eu, yu.offset += 4)
+    function pk(kk, Fk, Bk) {
+      for (var Rk = 0, tk = 0, ak = Fk.length; tk < ak; tk++)(Rk = Fk.charCodeAt(tk)) < 128 ? kk[Bk.offset++] = Rk : Rk < 2048 ? (kk[Bk.offset] = 192 | Rk >> 6, kk[Bk.offset + 1] = 128 | 63 & Rk, Bk.offset += 2) : Rk < 55296 || Rk >= 57344 ? (kk[Bk.offset] = 224 | Rk >> 12, kk[Bk.offset + 1] = 128 | Rk >> 6 & 63, kk[Bk.offset + 2] = 128 | 63 & Rk, Bk.offset += 3) : (tk++, Rk = 65536 + ((1023 & Rk) << 10 | 1023 & Fk.charCodeAt(tk)), kk[Bk.offset] = 240 | Rk >> 18, kk[Bk.offset + 1] = 128 | Rk >> 12 & 63, kk[Bk.offset + 2] = 128 | Rk >> 6 & 63, kk[Bk.offset + 3] = 128 | 63 & Rk, Bk.offset += 4)
     }
 
-    function iu(uu, Ru, yu) {
-      uu[yu.offset++] = 255 & Ru
+    function Kk(kk, Fk, Bk) {
+      kk[Bk.offset++] = 255 & Fk
     }
 
-    function Yu(uu, Ru, yu) {
-      uu[yu.offset++] = 255 & Ru, uu[yu.offset++] = Ru >> 8 & 255
+    function xk(kk, Fk, Bk) {
+      kk[Bk.offset++] = 255 & Fk, kk[Bk.offset++] = Fk >> 8 & 255
     }
 
-    function ou(uu, Ru, yu) {
-      uu[yu.offset++] = 255 & Ru, uu[yu.offset++] = Ru >> 8 & 255
+    function jk(kk, Fk, Bk) {
+      kk[Bk.offset++] = 255 & Fk, kk[Bk.offset++] = Fk >> 8 & 255
     }
 
-    function qu(uu, Ru, yu) {
-      uu[yu.offset++] = 255 & Ru, uu[yu.offset++] = Ru >> 8 & 255, uu[yu.offset++] = Ru >> 16 & 255, uu[yu.offset++] = Ru >> 24 & 255
+    function lk(kk, Fk, Bk) {
+      kk[Bk.offset++] = 255 & Fk, kk[Bk.offset++] = Fk >> 8 & 255, kk[Bk.offset++] = Fk >> 16 & 255, kk[Bk.offset++] = Fk >> 24 & 255
     }
 
-    function Ou(uu, Ru, yu) {
-      const Eu = Ru >> 24,
-        Ku = Ru >> 16,
-        Qu = Ru >> 8,
-        mu = Ru;
-      uu[yu.offset++] = 255 & mu, uu[yu.offset++] = 255 & Qu, uu[yu.offset++] = 255 & Ku, uu[yu.offset++] = 255 & Eu
+    function nk(kk, Fk, Bk) {
+      const Rk = Fk >> 24,
+        tk = Fk >> 16,
+        ak = Fk >> 8,
+        Xk = Fk;
+      kk[Bk.offset++] = 255 & Xk, kk[Bk.offset++] = 255 & ak, kk[Bk.offset++] = 255 & tk, kk[Bk.offset++] = 255 & Rk
     }
 
-    function vu(uu, Ru, yu) {
-      const Eu = Math.floor(Ru / Math.pow(2, 32));
-      Ou(uu, Ru >>> 0, yu), Ou(uu, Eu, yu)
+    function Ik(kk, Fk, Bk) {
+      const Rk = Math.floor(Fk / Math.pow(2, 32));
+      nk(kk, Fk >>> 0, Bk), nk(kk, Rk, Bk)
     }
 
-    function au(uu, Ru, yu) {
-      const Eu = Ru / Math.pow(2, 32) | 0;
-      Ou(uu, Ru >>> 0, yu), Ou(uu, Eu, yu)
+    function Qk(kk, Fk, Bk) {
+      const Rk = Fk / Math.pow(2, 32) | 0;
+      nk(kk, Fk >>> 0, Bk), nk(kk, Rk, Bk)
     }
 
-    function fu(uu, Ru, yu) {
-      Fu[0] = Ru, qu(uu, zu[0], yu)
+    function kF(kk, Fk, Bk) {
+      hk[0] = Fk, lk(kk, Pk[0], Bk)
     }
 
-    function uR(uu, Ru, yu) {
-      wu[0] = Ru, qu(uu, zu[0], yu), qu(uu, zu[1], yu)
+    function FF(kk, Fk, Bk) {
+      qk[0] = Fk, lk(kk, Pk[0], Bk), lk(kk, Pk[1], Bk)
     }
-    const RR = {
-        int8: iu,
-        uint8: function(uu, Ru, yu) {
-          uu[yu.offset++] = 255 & Ru
+    const BF = {
+        int8: Kk,
+        uint8: function(kk, Fk, Bk) {
+          kk[Bk.offset++] = 255 & Fk
         },
-        int16: Yu,
-        uint16: ou,
-        int32: qu,
-        uint32: Ou,
-        int64: vu,
-        uint64: au,
-        bigint64: function(uu, Ru, yu) {
-          Zu[0] = BigInt.asIntN(64, Ru), qu(uu, zu[0], yu), qu(uu, zu[1], yu)
+        int16: xk,
+        uint16: jk,
+        int32: lk,
+        uint32: nk,
+        int64: Ik,
+        uint64: Qk,
+        bigint64: function(kk, Fk, Bk) {
+          Ck[0] = BigInt.asIntN(64, Fk), lk(kk, Pk[0], Bk), lk(kk, Pk[1], Bk)
         },
-        biguint64: function(uu, Ru, yu) {
-          Zu[0] = BigInt.asIntN(64, Ru), qu(uu, zu[0], yu), qu(uu, zu[1], yu)
+        biguint64: function(kk, Fk, Bk) {
+          Ck[0] = BigInt.asIntN(64, Fk), lk(kk, Pk[0], Bk), lk(kk, Pk[1], Bk)
         },
-        float32: fu,
-        float64: uR,
-        boolean: function(uu, Ru, yu) {
-          uu[yu.offset++] = Ru ? 1 : 0
+        float32: kF,
+        float64: FF,
+        boolean: function(kk, Fk, Bk) {
+          kk[Bk.offset++] = Fk ? 1 : 0
         },
-        string: function(uu, Ru, yu) {
-          Ru || (Ru = "");
-          let Eu = hu(Ru, "utf8"),
-            Ku = 0;
-          if (Eu < 32) uu[yu.offset++] = 160 | Eu, Ku = 1;
-          else if (Eu < 256) uu[yu.offset++] = 217, uu[yu.offset++] = Eu, Ku = 2;
-          else if (Eu < 65536) uu[yu.offset++] = 218, ou(uu, Eu, yu), Ku = 3;
+        string: function(kk, Fk, Bk) {
+          Fk || (Fk = "");
+          let Rk = Zk(Fk, "utf8"),
+            tk = 0;
+          if (Rk < 32) kk[Bk.offset++] = 160 | Rk, tk = 1;
+          else if (Rk < 256) kk[Bk.offset++] = 217, kk[Bk.offset++] = Rk, tk = 2;
+          else if (Rk < 65536) kk[Bk.offset++] = 218, jk(kk, Rk, Bk), tk = 3;
           else {
-            if (!(Eu < 4294967296)) throw new Error("String too long");
-            uu[yu.offset++] = 219, Ou(uu, Eu, yu), Ku = 5
+            if (!(Rk < 4294967296)) throw new Error("String too long");
+            kk[Bk.offset++] = 219, nk(kk, Rk, Bk), tk = 5
           }
-          return Pu(uu, Ru, yu), Ku + Eu
+          return pk(kk, Fk, Bk), tk + Rk
         },
-        number: function uu(Ru, yu, Eu) {
-          return isNaN(yu) ? uu(Ru, 0, Eu) : isFinite(yu) ? yu !== (0 | yu) ? Math.abs(yu) <= 34028235e31 && (Fu[0] = yu, Math.abs(Math.abs(Fu[0]) - Math.abs(yu)) < 1e-4) ? (Ru[Eu.offset++] = 202, fu(Ru, yu, Eu), 5) : (Ru[Eu.offset++] = 203, uR(Ru, yu, Eu), 9) : yu >= 0 ? yu < 128 ? (Ru[Eu.offset++] = 255 & yu, 1) : yu < 256 ? (Ru[Eu.offset++] = 204, Ru[Eu.offset++] = 255 & yu, 2) : yu < 65536 ? (Ru[Eu.offset++] = 205, ou(Ru, yu, Eu), 3) : yu < 4294967296 ? (Ru[Eu.offset++] = 206, Ou(Ru, yu, Eu), 5) : (Ru[Eu.offset++] = 207, au(Ru, yu, Eu), 9) : yu >= -32 ? (Ru[Eu.offset++] = 224 | yu + 32, 1) : yu >= -128 ? (Ru[Eu.offset++] = 208, iu(Ru, yu, Eu), 2) : yu >= -32768 ? (Ru[Eu.offset++] = 209, Yu(Ru, yu, Eu), 3) : yu >= -2147483648 ? (Ru[Eu.offset++] = 210, qu(Ru, yu, Eu), 5) : (Ru[Eu.offset++] = 211, vu(Ru, yu, Eu), 9) : uu(Ru, yu > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Eu)
+        number: function kk(Fk, Bk, Rk) {
+          return isNaN(Bk) ? kk(Fk, 0, Rk) : isFinite(Bk) ? Bk !== (0 | Bk) ? Math.abs(Bk) <= 34028235e31 && (hk[0] = Bk, Math.abs(Math.abs(hk[0]) - Math.abs(Bk)) < 1e-4) ? (Fk[Rk.offset++] = 202, kF(Fk, Bk, Rk), 5) : (Fk[Rk.offset++] = 203, FF(Fk, Bk, Rk), 9) : Bk >= 0 ? Bk < 128 ? (Fk[Rk.offset++] = 255 & Bk, 1) : Bk < 256 ? (Fk[Rk.offset++] = 204, Fk[Rk.offset++] = 255 & Bk, 2) : Bk < 65536 ? (Fk[Rk.offset++] = 205, jk(Fk, Bk, Rk), 3) : Bk < 4294967296 ? (Fk[Rk.offset++] = 206, nk(Fk, Bk, Rk), 5) : (Fk[Rk.offset++] = 207, Qk(Fk, Bk, Rk), 9) : Bk >= -32 ? (Fk[Rk.offset++] = 224 | Bk + 32, 1) : Bk >= -128 ? (Fk[Rk.offset++] = 208, Kk(Fk, Bk, Rk), 2) : Bk >= -32768 ? (Fk[Rk.offset++] = 209, xk(Fk, Bk, Rk), 3) : Bk >= -2147483648 ? (Fk[Rk.offset++] = 210, lk(Fk, Bk, Rk), 5) : (Fk[Rk.offset++] = 211, Ik(Fk, Bk, Rk), 9) : kk(Fk, Bk > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Rk)
         },
-        utf8Write: Pu,
-        utf8Length: hu
+        utf8Write: pk,
+        utf8Length: Zk
       },
-      yR = new ArrayBuffer(8),
-      ER = new Int32Array(yR),
-      KR = new Float32Array(yR),
-      QR = new Float64Array(yR),
-      mR = new BigUint64Array(yR),
-      JR = new BigInt64Array(yR);
+      RF = new ArrayBuffer(8),
+      tF = new Int32Array(RF),
+      aF = new Float32Array(RF),
+      XF = new Float64Array(RF),
+      bF = new BigUint64Array(RF),
+      wF = new BigInt64Array(RF);
 
-    function NR(uu, Ru, yu) {
-      yu > uu.length - Ru.offset && (yu = uu.length - Ru.offset);
-      for (var Eu = "", Ku = 0, Qu = Ru.offset, mu = Ru.offset + yu; Qu < mu; Qu++) {
-        var Ju = uu[Qu];
-        if (0 !== (128 & Ju))
-          if (192 !== (224 & Ju))
-            if (224 !== (240 & Ju)) {
-              if (240 !== (248 & Ju)) {
-                console.error("decode.utf8Read(): Invalid byte " + Ju + " at offset " + Qu + ". Skip to end of string: " + (Ru.offset + yu));
+    function dF(kk, Fk, Bk) {
+      Bk > kk.length - Fk.offset && (Bk = kk.length - Fk.offset);
+      for (var Rk = "", tk = 0, ak = Fk.offset, Xk = Fk.offset + Bk; ak < Xk; ak++) {
+        var bk = kk[ak];
+        if (0 !== (128 & bk))
+          if (192 !== (224 & bk))
+            if (224 !== (240 & bk)) {
+              if (240 !== (248 & bk)) {
+                console.error("decode.utf8Read(): Invalid byte " + bk + " at offset " + ak + ". Skip to end of string: " + (Fk.offset + Bk));
                 break
-              }(Ku = (7 & Ju) << 18 | (63 & uu[++Qu]) << 12 | (63 & uu[++Qu]) << 6 | 63 & uu[++Qu]) >= 65536 ? (Ku -= 65536, Eu += String.fromCharCode(55296 + (Ku >>> 10), 56320 + (1023 & Ku))) : Eu += String.fromCharCode(Ku)
-            } else Eu += String.fromCharCode((15 & Ju) << 12 | (63 & uu[++Qu]) << 6 | 63 & uu[++Qu]);
-        else Eu += String.fromCharCode((31 & Ju) << 6 | 63 & uu[++Qu]);
-        else Eu += String.fromCharCode(Ju)
+              }(tk = (7 & bk) << 18 | (63 & kk[++ak]) << 12 | (63 & kk[++ak]) << 6 | 63 & kk[++ak]) >= 65536 ? (tk -= 65536, Rk += String.fromCharCode(55296 + (tk >>> 10), 56320 + (1023 & tk))) : Rk += String.fromCharCode(tk)
+            } else Rk += String.fromCharCode((15 & bk) << 12 | (63 & kk[++ak]) << 6 | 63 & kk[++ak]);
+        else Rk += String.fromCharCode((31 & bk) << 6 | 63 & kk[++ak]);
+        else Rk += String.fromCharCode(bk)
       }
-      return Ru.offset += yu, Eu
+      return Fk.offset += Bk, Rk
     }
 
-    function XR(uu, Ru) {
-      return VR(uu, Ru) << 24 >> 24
+    function sF(kk, Fk) {
+      return VF(kk, Fk) << 24 >> 24
     }
 
-    function VR(uu, Ru) {
-      return uu[Ru.offset++]
+    function VF(kk, Fk) {
+      return kk[Fk.offset++]
     }
 
-    function rR(uu, Ru) {
-      return BR(uu, Ru) << 16 >> 16
+    function JF(kk, Fk) {
+      return AF(kk, Fk) << 16 >> 16
     }
 
-    function BR(uu, Ru) {
-      return uu[Ru.offset++] | uu[Ru.offset++] << 8
+    function AF(kk, Fk) {
+      return kk[Fk.offset++] | kk[Fk.offset++] << 8
     }
 
-    function xR(uu, Ru) {
-      return uu[Ru.offset++] | uu[Ru.offset++] << 8 | uu[Ru.offset++] << 16 | uu[Ru.offset++] << 24
+    function eF(kk, Fk) {
+      return kk[Fk.offset++] | kk[Fk.offset++] << 8 | kk[Fk.offset++] << 16 | kk[Fk.offset++] << 24
     }
 
-    function SR(uu, Ru) {
-      return xR(uu, Ru) >>> 0
+    function yF(kk, Fk) {
+      return eF(kk, Fk) >>> 0
     }
 
-    function pR(uu, Ru) {
-      return ER[0] = xR(uu, Ru), KR[0]
+    function fF(kk, Fk) {
+      return tF[0] = eF(kk, Fk), aF[0]
     }
 
-    function TR(uu, Ru) {
-      return ER[0] = xR(uu, Ru), ER[1] = xR(uu, Ru), QR[0]
+    function mF(kk, Fk) {
+      return tF[0] = eF(kk, Fk), tF[1] = eF(kk, Fk), XF[0]
     }
 
-    function WR(uu, Ru) {
-      const yu = SR(uu, Ru);
-      return xR(uu, Ru) * Math.pow(2, 32) + yu
+    function WF(kk, Fk) {
+      const Bk = yF(kk, Fk);
+      return eF(kk, Fk) * Math.pow(2, 32) + Bk
     }
 
-    function jR(uu, Ru) {
-      const yu = SR(uu, Ru);
-      return SR(uu, Ru) * Math.pow(2, 32) + yu
+    function vF(kk, Fk) {
+      const Bk = yF(kk, Fk);
+      return yF(kk, Fk) * Math.pow(2, 32) + Bk
     }
-    const HR = {
-        utf8Read: NR,
-        int8: XR,
-        uint8: VR,
-        int16: rR,
-        uint16: BR,
-        int32: xR,
-        uint32: SR,
-        float32: pR,
-        float64: TR,
-        int64: WR,
-        uint64: jR,
-        bigint64: function(uu, Ru) {
-          return ER[0] = xR(uu, Ru), ER[1] = xR(uu, Ru), JR[0]
+    const iF = {
+        utf8Read: dF,
+        int8: sF,
+        uint8: VF,
+        int16: JF,
+        uint16: AF,
+        int32: eF,
+        uint32: yF,
+        float32: fF,
+        float64: mF,
+        int64: WF,
+        uint64: vF,
+        bigint64: function(kk, Fk) {
+          return tF[0] = eF(kk, Fk), tF[1] = eF(kk, Fk), wF[0]
         },
-        biguint64: function(uu, Ru) {
-          return ER[0] = xR(uu, Ru), ER[1] = xR(uu, Ru), mR[0]
+        biguint64: function(kk, Fk) {
+          return tF[0] = eF(kk, Fk), tF[1] = eF(kk, Fk), bF[0]
         },
-        boolean: function(uu, Ru) {
-          return VR(uu, Ru) > 0
+        boolean: function(kk, Fk) {
+          return VF(kk, Fk) > 0
         },
-        string: function(uu, Ru) {
-          const yu = uu[Ru.offset++];
-          let Eu;
-          return yu < 192 ? Eu = 31 & yu : 217 === yu ? Eu = VR(uu, Ru) : 218 === yu ? Eu = BR(uu, Ru) : 219 === yu && (Eu = SR(uu, Ru)), NR(uu, Ru, Eu)
+        string: function(kk, Fk) {
+          const Bk = kk[Fk.offset++];
+          let Rk;
+          return Bk < 192 ? Rk = 31 & Bk : 217 === Bk ? Rk = VF(kk, Fk) : 218 === Bk ? Rk = AF(kk, Fk) : 219 === Bk && (Rk = yF(kk, Fk)), dF(kk, Fk, Rk)
         },
-        number: function(uu, Ru) {
-          const yu = uu[Ru.offset++];
-          return yu < 128 ? yu : 202 === yu ? pR(uu, Ru) : 203 === yu ? TR(uu, Ru) : 204 === yu ? VR(uu, Ru) : 205 === yu ? BR(uu, Ru) : 206 === yu ? SR(uu, Ru) : 207 === yu ? jR(uu, Ru) : 208 === yu ? XR(uu, Ru) : 209 === yu ? rR(uu, Ru) : 210 === yu ? xR(uu, Ru) : 211 === yu ? WR(uu, Ru) : yu > 223 ? -1 * (255 - yu + 1) : void 0
+        number: function(kk, Fk) {
+          const Bk = kk[Fk.offset++];
+          return Bk < 128 ? Bk : 202 === Bk ? fF(kk, Fk) : 203 === Bk ? mF(kk, Fk) : 204 === Bk ? VF(kk, Fk) : 205 === Bk ? AF(kk, Fk) : 206 === Bk ? yF(kk, Fk) : 207 === Bk ? vF(kk, Fk) : 208 === Bk ? sF(kk, Fk) : 209 === Bk ? JF(kk, Fk) : 210 === Bk ? eF(kk, Fk) : 211 === Bk ? WF(kk, Fk) : Bk > 223 ? -1 * (255 - Bk + 1) : void 0
         },
-        stringCheck: function(uu, Ru) {
-          const yu = uu[Ru.offset];
-          return yu < 192 && yu > 160 || 217 === yu || 218 === yu || 219 === yu
+        stringCheck: function(kk, Fk) {
+          const Bk = kk[Fk.offset];
+          return Bk < 192 && Bk > 160 || 217 === Bk || 218 === Bk || 219 === Bk
         }
       },
-      dR = {},
-      bR = new Map;
+      YF = {},
+      oF = new Map;
 
-    function CR(uu, Ru) {
-      Ru.constructor && (Object.prototype.hasOwnProperty.call(Ru, "constructor") && null == Ru.constructor[Symbol.metadata] && Qu(Ru.constructor), bR.set(Ru.constructor, uu), dR[uu] = Ru), Ru.encode && (RR[uu] = Ru.encode), Ru.decode && (HR[uu] = Ru.decode)
+    function LF(kk, Fk) {
+      Fk.constructor && (Object.prototype.hasOwnProperty.call(Fk, "constructor") && null == Fk.constructor[Symbol.metadata] && ak(Fk.constructor), oF.set(Fk.constructor, kk), YF[kk] = Fk), Fk.encode && (BF[kk] = Fk.encode), Fk.decode && (iF[kk] = Fk.decode)
     }
 
-    function kR(uu) {
-      for (const Ru in uu) CR(Ru, uu[Ru]);
-      return uu => dE(uu)
+    function OF(kk) {
+      for (const Fk in kk) LF(Fk, kk[Fk]);
+      return kk => YR(kk)
     }
-    const eR = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const EF = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function AR() {
+    function SF() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function DR(uu) {
-      return uu._stream ??= AR()
+    function NF(kk) {
+      return kk._stream ??= SF()
     }
 
-    function MR(uu, Ru, yu) {
-      0 === Ru.activeViews.size && DR(uu).broadcastPending.add(yu)
+    function HF(kk, Fk, Bk) {
+      0 === Fk.activeViews.size && NF(kk).broadcastPending.add(Bk)
     }
 
-    function IR(uu, Ru, yu, Eu) {
-      const Qu = uu._stream;
-      if (void 0 === Qu) return !0;
-      let mu = !1;
-      return Qu.broadcastPending.delete(Eu) ? mu = !0 : Qu.sentBroadcast.delete(Eu) && Qu.broadcastDeletes.add(Eu), Ru.forEachActiveView((uu => {
-        const Ru = Qu.pendingByView.get(uu.id);
-        if (Ru?.has(Eu)) return Ru.delete(Eu), void(mu = !0);
-        const Ju = Qu.sentByView.get(uu.id);
-        if (Ju?.has(Eu)) {
-          Ju.delete(Eu);
-          let Ru = uu.changes.get(yu);
-          void 0 === Ru && (Ru = new Map, uu.changes.set(yu, Ru)), Ru.set(Eu, Ku.DELETE)
+    function uF(kk, Fk, Bk, Rk) {
+      const ak = kk._stream;
+      if (void 0 === ak) return !0;
+      let Xk = !1;
+      return ak.broadcastPending.delete(Rk) ? Xk = !0 : ak.sentBroadcast.delete(Rk) && ak.broadcastDeletes.add(Rk), Fk.forEachActiveView((kk => {
+        const Fk = ak.pendingByView.get(kk.id);
+        if (Fk?.has(Rk)) return Fk.delete(Rk), void(Xk = !0);
+        const bk = ak.sentByView.get(kk.id);
+        if (bk?.has(Rk)) {
+          bk.delete(Rk);
+          let Fk = kk.changes.get(Bk);
+          void 0 === Fk && (Fk = new Map, kk.changes.set(Bk, Fk)), Fk.set(Rk, tk.DELETE)
         }
-      })), mu
+      })), Xk
     }
 
-    function GR(uu, Ru) {
-      const yu = uu._stream?.pendingByView;
-      if (void 0 === yu) return !1;
-      for (const [Eu, Ku] of yu)
-        if (Ku.size > 0 && void 0 !== Ru.activeViews.get(Eu)?.deref()) return !0;
+    function MF(kk, Fk) {
+      const Bk = kk._stream?.pendingByView;
+      if (void 0 === Bk) return !1;
+      for (const [Rk, tk] of Bk)
+        if (tk.size > 0 && void 0 !== Fk.activeViews.get(Rk)?.deref()) return !0;
       return !1
     }
 
-    function UR(uu) {
-      const Ru = uu._stream;
-      return void 0 !== Ru && (Ru.broadcastPending.size > 0 || Ru.broadcastDeletes.size > 0)
+    function gF(kk) {
+      const Fk = kk._stream;
+      return void 0 !== Fk && (Fk.broadcastPending.size > 0 || Fk.broadcastDeletes.size > 0)
     }
 
-    function nR(uu, Ru, yu) {
-      const Eu = DR(uu);
-      let Ku = Eu.pendingByView.get(Ru);
-      void 0 === Ku && (Ku = new Set, Eu.pendingByView.set(Ru, Ku)), Ku.add(yu)
+    function UF(kk, Fk, Bk) {
+      const Rk = NF(kk);
+      let tk = Rk.pendingByView.get(Fk);
+      void 0 === tk && (tk = new Set, Rk.pendingByView.set(Fk, tk)), tk.add(Bk)
     }
 
-    function sR(uu, Ru) {
-      const yu = uu._stream;
-      void 0 !== yu && (yu.pendingByView.delete(Ru), yu.sentByView.delete(Ru), yu.priorityByView?.delete(Ru))
+    function cF(kk, Fk) {
+      const Bk = kk._stream;
+      void 0 !== Bk && (Bk.pendingByView.delete(Fk), Bk.sentByView.delete(Fk), Bk.priorityByView?.delete(Fk))
     }
-    const tR = {
+    const GF = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function lR(uu) {
-      if (null == uu || "object" !== typeof uu) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function TF(kk) {
+      if (null == kk || "object" !== typeof kk) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: Ru,
-        max: yu
-      } = uu;
-      if ("number" !== typeof Ru || "number" !== typeof yu || !(yu > Ru) || !Number.isFinite(Ru) || !Number.isFinite(yu)) throw new Error(`t.quantized(): require finite min < max (got min=${Ru}, max=${yu}).`);
-      const Eu = uu.bits ?? 16;
-      if (8 !== Eu && 16 !== Eu && 32 !== Eu) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Eu}).`);
-      const Ku = uu.mode ?? "clamp";
-      if ("clamp" !== Ku && "wrap" !== Ku) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Ku)}).`);
-      const Qu = "wrap" === Ku,
-        mu = Math.pow(2, Eu);
+        min: Fk,
+        max: Bk
+      } = kk;
+      if ("number" !== typeof Fk || "number" !== typeof Bk || !(Bk > Fk) || !Number.isFinite(Fk) || !Number.isFinite(Bk)) throw new Error(`t.quantized(): require finite min < max (got min=${Fk}, max=${Bk}).`);
+      const Rk = kk.bits ?? 16;
+      if (8 !== Rk && 16 !== Rk && 32 !== Rk) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Rk}).`);
+      const tk = kk.mode ?? "clamp";
+      if ("clamp" !== tk && "wrap" !== tk) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(tk)}).`);
+      const ak = "wrap" === tk,
+        Xk = Math.pow(2, Rk);
       return {
-        min: Ru,
-        max: yu,
-        bits: Eu,
-        wrap: Qu,
-        wire: tR[Eu],
-        range: yu - Ru,
-        span: Qu ? mu : Ru === -yu ? mu - 2 : mu - 1
+        min: Fk,
+        max: Bk,
+        bits: Rk,
+        wrap: ak,
+        wire: GF[Rk],
+        range: Bk - Fk,
+        span: ak ? Xk : Fk === -Bk ? Xk - 2 : Xk - 1
       }
     }
 
-    function gR(uu) {
-      return null !== uu && "object" === typeof uu && void 0 !== uu.quantized
+    function rF(kk) {
+      return null !== kk && "object" === typeof kk && void 0 !== kk.quantized
     }
 
-    function cR(uu, Ru) {
-      if (uu.wrap) {
-        if (!Number.isFinite(Ru)) return 0;
-        const yu = uu.range;
-        let Eu = (Ru - uu.min) % yu;
-        Eu < 0 && (Eu += yu);
-        const Ku = uu.span;
-        return Math.floor(Eu / yu * Ku + .5) % Ku
+    function DF(kk, Fk) {
+      if (kk.wrap) {
+        if (!Number.isFinite(Fk)) return 0;
+        const Bk = kk.range;
+        let Rk = (Fk - kk.min) % Bk;
+        Rk < 0 && (Rk += Bk);
+        const tk = kk.span;
+        return Math.floor(Rk / Bk * tk + .5) % tk
       }
-      if (Ru !== Ru) return 0;
-      const yu = Ru < uu.min ? uu.min : Ru > uu.max ? uu.max : Ru;
-      return Math.floor((yu - uu.min) / uu.range * uu.span + .5)
+      if (Fk !== Fk) return 0;
+      const Bk = Fk < kk.min ? kk.min : Fk > kk.max ? kk.max : Fk;
+      return Math.floor((Bk - kk.min) / kk.range * kk.span + .5)
     }
 
-    function LR(uu, Ru) {
-      return uu.min + Ru / uu.span * uu.range
+    function zF(kk, Fk) {
+      return kk.min + Fk / kk.span * kk.range
     }
 
-    function zR(uu) {
-      const Ru = RR[uu.wire];
-      return (yu, Eu, Ku) => Ru(yu, cR(uu, Eu), Ku)
+    function PF(kk) {
+      const Fk = BF[kk.wire];
+      return (Bk, Rk, tk) => Fk(Bk, DF(kk, Rk), tk)
     }
-    class FR {
+    class hF {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(uu) {
-        const Ru = Object.getPrototypeOf(uu);
-        if (Ru !== IE) {
-          let yu = FR.inheritedTypes.get(Ru);
-          yu || (yu = new Set, FR.inheritedTypes.set(Ru, yu)), yu.add(uu)
+      static register(kk) {
+        const Fk = Object.getPrototypeOf(kk);
+        if (Fk !== uR) {
+          let Bk = hF.inheritedTypes.get(Fk);
+          Bk || (Bk = new Set, hF.inheritedTypes.set(Fk, Bk)), Bk.add(kk)
         }
       }
-      static cache(uu) {
-        let Ru = FR.cachedContexts.get(uu);
-        return Ru || (Ru = new FR(uu), FR.cachedContexts.set(uu, Ru)), Ru
+      static cache(kk) {
+        let Fk = hF.cachedContexts.get(kk);
+        return Fk || (Fk = new hF(kk), hF.cachedContexts.set(kk, Fk)), Fk
       }
-      constructor(uu) {
-        uu && this.discoverTypes(uu)
+      constructor(kk) {
+        kk && this.discoverTypes(kk)
       }
-      has(uu) {
-        return this.schemas.has(uu)
+      has(kk) {
+        return this.schemas.has(kk)
       }
-      get(uu) {
-        return this.types[uu]
+      get(kk) {
+        return this.types[kk]
       }
-      add(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(uu) && (this.types[Ru] = uu, null == uu[Symbol.metadata] && oR.initialize(uu), this.schemas.set(uu, Ru), !0)
+      add(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(kk) && (this.types[Fk] = kk, null == kk[Symbol.metadata] && jF.initialize(kk), this.schemas.set(kk, Fk), !0)
       }
-      getTypeId(uu) {
-        return this.schemas.get(uu)
+      getTypeId(kk) {
+        return this.schemas.get(kk)
       }
-      discoverTypes(uu) {
-        if (!this.add(uu)) return;
-        FR.inheritedTypes.get(uu)?.forEach((uu => {
-          this.discoverTypes(uu)
+      discoverTypes(kk) {
+        if (!this.add(kk)) return;
+        hF.inheritedTypes.get(kk)?.forEach((kk => {
+          this.discoverTypes(kk)
         }));
-        let Ru = uu;
+        let Fk = kk;
         for (;
-          (Ru = Object.getPrototypeOf(Ru)) && Ru !== IE && Ru !== Function.prototype;) this.discoverTypes(Ru);
-        const yu = uu[Symbol.metadata];
-        (yu[Iu] || yu[lu]) && (this.hasFilters = !0);
-        for (const Eu in yu) {
-          const uu = yu[Eu].type;
-          if ("string" !== typeof uu && !gR(uu))
-            if ("function" === typeof uu) this.discoverTypes(uu);
+          (Fk = Object.getPrototypeOf(Fk)) && Fk !== uR && Fk !== Function.prototype;) this.discoverTypes(Fk);
+        const Bk = kk[Symbol.metadata];
+        (Bk[uk] || Bk[Tk]) && (this.hasFilters = !0);
+        for (const Rk in Bk) {
+          const kk = Bk[Rk].type;
+          if ("string" !== typeof kk && !rF(kk))
+            if ("function" === typeof kk) this.discoverTypes(kk);
             else {
-              const Ru = Object.values(uu)[0];
-              if ("string" === typeof Ru) continue;
-              this.discoverTypes(Ru)
+              const Fk = Object.values(kk)[0];
+              if ("string" === typeof Fk) continue;
+              this.discoverTypes(Fk)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function wR(uu) {
-      const Ru = hR(uu);
-      return Ru ? {
-        complexTypeKlass: dR[Ru],
-        childType: uu[Ru]
+    function qF(kk) {
+      const Fk = ZF(kk);
+      return Fk ? {
+        complexTypeKlass: YF[Fk],
+        childType: kk[Fk]
       } : {
         complexTypeKlass: !1,
-        childType: uu
+        childType: kk
       }
     }
 
-    function ZR(uu, Ru) {
-      const yu = PR(uu),
-        Eu = hR(yu),
-        Ku = Eu && hR(yu[Eu]);
-      if (Ku) throw new Error(`${Ru?`${Ru}: `:""}@colyseus/schema: nested collections are not supported ("${Eu}" of "${Ku}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Ku} in a Schema class.`);
-      return yu
+    function CF(kk, Fk) {
+      const Bk = pF(kk),
+        Rk = ZF(Bk),
+        tk = Rk && ZF(Bk[Rk]);
+      if (tk) throw new Error(`${Fk?`${Fk}: `:""}@colyseus/schema: nested collections are not supported ("${Rk}" of "${tk}"). Collections can only hold primitive types or Schema classes, wrap the inner ${tk} in a Schema class.`);
+      return Bk
     }
 
-    function hR(uu) {
-      return "object" === typeof uu && null !== uu ? Object.keys(uu).find((uu => void 0 !== dR[uu])) : void 0
+    function ZF(kk) {
+      return "object" === typeof kk && null !== kk ? Object.keys(kk).find((kk => void 0 !== YF[kk])) : void 0
     }
 
-    function PR(uu) {
-      if ("object" !== typeof uu || null === uu) return uu;
-      if (Array.isArray(uu)) return {
-        array: PR(uu[0])
+    function pF(kk) {
+      if ("object" !== typeof kk || null === kk) return kk;
+      if (Array.isArray(kk)) return {
+        array: pF(kk[0])
       };
-      const Ru = function(uu) {
-        const Ru = Object.keys(uu),
-          yu = Ru.filter((uu => /\d+/.test(uu)));
-        if (yu.length > 0 && yu.length === Ru.length / 2 && uu[uu[yu[0]]] == yu[0]) return "number";
-        if (Ru.length > 0 && Ru.every((Ru => uu[Ru] === Ru))) return "string"
-      }(uu);
-      if (Ru) return Ru;
-      if (gR(uu)) return "string" === typeof uu.quantized.wire ? uu : {
-        quantized: lR(uu.quantized)
+      const Fk = function(kk) {
+        const Fk = Object.keys(kk),
+          Bk = Fk.filter((kk => /\d+/.test(kk)));
+        if (Bk.length > 0 && Bk.length === Fk.length / 2 && kk[kk[Bk[0]]] == Bk[0]) return "number";
+        if (Fk.length > 0 && Fk.every((Fk => kk[Fk] === Fk))) return "string"
+      }(kk);
+      if (Fk) return Fk;
+      if (rF(kk)) return "string" === typeof kk.quantized.wire ? kk : {
+        quantized: TF(kk.quantized)
       };
-      if (void 0 !== uu.type) return PR(uu.type);
-      const yu = hR(uu);
-      return yu && (uu[yu] = PR(uu[yu])), uu
+      if (void 0 !== kk.type) return pF(kk.type);
+      const Bk = ZF(kk);
+      return Bk && (kk[Bk] = pF(kk[Bk])), kk
     }
-    const iR = [Mu, Uu, nu, su, tu, lu, Au];
+    const KF = [Hk, gk, Uk, ck, Gk, Tk, Sk];
 
-    function YR(uu, Ru, yu) {
-      uu[Ru] || Object.defineProperty(uu, Ru, {
+    function xF(kk, Fk, Bk) {
+      kk[Fk] || Object.defineProperty(kk, Fk, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), uu[Ru].push(yu)
+      }), kk[Fk].push(Bk)
     }
-    const oR = {
-        addField(uu, Ru, yu, Eu, Ku) {
-          if (Ru >= 63) throw new Error(`Can't define field '${yu}'.\nSchema instances may only have up to 63 fields.`);
-          uu[Ru] = Object.assign(uu[Ru] || {}, {
-            type: Eu,
-            index: Ru,
-            name: yu
-          }), Object.defineProperty(uu, ku, {
-            value: uu[ku] || {},
+    const jF = {
+        addField(kk, Fk, Bk, Rk, tk) {
+          if (Fk >= 63) throw new Error(`Can't define field '${Bk}'.\nSchema instances may only have up to 63 fields.`);
+          kk[Fk] = Object.assign(kk[Fk] || {}, {
+            type: Rk,
+            index: Fk,
+            name: Bk
+          }), Object.defineProperty(kk, Ok, {
+            value: kk[Ok] || {},
             enumerable: !1,
             configurable: !0
-          }), uu[ku][yu] = Ku || {
+          }), kk[Ok][Bk] = tk || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(uu, Du, {
-            value: Ru,
+          }, Object.defineProperty(kk, Nk, {
+            value: Fk,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(uu, yu, {
-            value: Ru,
+          }), Object.defineProperty(kk, Bk, {
+            value: Fk,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof uu[Ru].type || gR(uu[Ru].type) || (void 0 === uu[Mu] && Object.defineProperty(uu, Mu, {
+          }), "string" === typeof kk[Fk].type || rF(kk[Fk].type) || (void 0 === kk[Hk] && Object.defineProperty(kk, Hk, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), uu[Mu].push(Ru));
-          const Qu = uu[Ru].type;
-          if (Qu && "object" === typeof Qu && void 0 !== Qu.stream) {
-            if (void 0 !== Qu.array) throw new Error(eR);
-            uu[Ru].stream = !0, uu[lu] || Object.defineProperty(uu, lu, {
+          }), kk[Hk].push(Fk));
+          const ak = kk[Fk].type;
+          if (ak && "object" === typeof ak && void 0 !== ak.stream) {
+            if (void 0 !== ak.array) throw new Error(EF);
+            kk[Fk].stream = !0, kk[Tk] || Object.defineProperty(kk, Tk, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), uu[lu].includes(Ru) || uu[lu].push(Ru);
-            const Ku = Eu?.priority;
-            "function" === typeof Ku && oR.setStreamPriority(uu, yu, Ku)
+            }), kk[Tk].includes(Fk) || kk[Tk].push(Fk);
+            const tk = Rk?.priority;
+            "function" === typeof tk && jF.setStreamPriority(kk, Bk, tk)
           }
         },
-        setTag(uu, Ru, yu) {
-          const Eu = uu[Ru];
-          if (uu[Eu].tag = yu, uu[Iu] || (Object.defineProperty(uu, Iu, {
+        setTag(kk, Fk, Bk) {
+          const Rk = kk[Fk];
+          if (kk[Rk].tag = Bk, kk[uk] || (Object.defineProperty(kk, uk, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(uu, Gu, {
+            }), Object.defineProperty(kk, Mk, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), uu[Iu].push(Eu), yu < 0) uu[Gu][yu] || (uu[Gu][yu] = []), uu[Gu][yu].push(Eu);
+            })), kk[uk].push(Rk), Bk < 0) kk[Mk][Bk] || (kk[Mk][Bk] = []), kk[Mk][Bk].push(Rk);
           else
-            for (let Ku = yu; Ku > 0; Ku &= Ku - 1) {
-              const Ru = Ku & -Ku;
-              uu[Gu][Ru] || (uu[Gu][Ru] = []), uu[Gu][Ru].push(Eu)
+            for (let tk = Bk; tk > 0; tk &= tk - 1) {
+              const Fk = tk & -tk;
+              kk[Mk][Fk] || (kk[Mk][Fk] = []), kk[Mk][Fk].push(Rk)
             }
         },
-        setUnreliable(uu, Ru) {
-          const yu = uu[Ru];
-          if ("string" !== typeof uu[yu].type) throw new Error(`@unreliable cannot be applied to ref-type field "${Ru}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          uu[yu].unreliable = !0, uu[Uu] || Object.defineProperty(uu, Uu, {
+        setUnreliable(kk, Fk) {
+          const Bk = kk[Fk];
+          if ("string" !== typeof kk[Bk].type) throw new Error(`@unreliable cannot be applied to ref-type field "${Fk}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          kk[Bk].unreliable = !0, kk[gk] || Object.defineProperty(kk, gk, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), uu[Uu].push(yu)
+          }), kk[gk].push(Bk)
         },
-        setPatchOnly(uu, Ru) {
-          const yu = uu[Ru];
-          if (uu[yu].fullStateOnly) throw new Error(`field "${Ru}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          uu[yu].patchOnly = !0, YR(uu, nu, yu), YR(uu, su, yu)
+        setPatchOnly(kk, Fk) {
+          const Bk = kk[Fk];
+          if (kk[Bk].fullStateOnly) throw new Error(`field "${Fk}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          kk[Bk].patchOnly = !0, xF(kk, Uk, Bk), xF(kk, ck, Bk)
         },
-        setDeprecated(uu, Ru) {
-          const yu = uu[Ru];
-          uu[yu].deprecated = !0, YR(uu, su, yu), Object.defineProperty(uu, yu, {
-            value: uu[yu],
+        setDeprecated(kk, Fk) {
+          const Bk = kk[Fk];
+          kk[Bk].deprecated = !0, xF(kk, ck, Bk), Object.defineProperty(kk, Bk, {
+            value: kk[Bk],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(uu, Ru) {
-          const yu = uu[Ru];
-          if (uu[yu].patchOnly) throw new Error(`field "${Ru}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          uu[yu].fullStateOnly = !0, YR(uu, tu, yu)
+        setFullStateOnly(kk, Fk) {
+          const Bk = kk[Fk];
+          if (kk[Bk].patchOnly) throw new Error(`field "${Fk}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          kk[Bk].fullStateOnly = !0, xF(kk, Gk, Bk)
         },
-        setStream(uu, Ru) {
-          const yu = uu[Ru];
-          uu[yu].stream = !0, uu[lu] || Object.defineProperty(uu, lu, {
+        setStream(kk, Fk) {
+          const Bk = kk[Fk];
+          kk[Bk].stream = !0, kk[Tk] || Object.defineProperty(kk, Tk, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), uu[lu].push(yu)
+          }), kk[Tk].push(Bk)
         },
-        setStreamPriority(uu, Ru, yu) {
-          const Eu = uu[Ru];
-          uu[gu] || Object.defineProperty(uu, gu, {
+        setStreamPriority(kk, Fk, Bk) {
+          const Rk = kk[Fk];
+          kk[rk] || Object.defineProperty(kk, rk, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), uu[gu][Eu] = yu
+          }), kk[rk][Rk] = Bk
         },
-        getStreamPriority: (uu, Ru) => uu?.[gu]?.[Ru],
-        defineField(uu, Ru, yu, Eu, Ku) {
-          const Qu = ZR(Ku, `${uu.name}.${Eu}`),
+        getStreamPriority: (kk, Fk) => kk?.[rk]?.[Fk],
+        defineField(kk, Fk, Bk, Rk, tk) {
+          const ak = CF(tk, `${kk.name}.${Rk}`),
             {
-              complexTypeKlass: mu,
-              childType: Ju
-            } = wR(Qu);
-          oR.addField(Ru, yu, Eu, Qu, CE(Eu, yu, Ju, mu)), Ru[ku][Eu] && Object.defineProperty(uu.prototype, Eu, Ru[ku][Eu]), ("string" === typeof Qu || gR(Qu)) && (Ru[Au] || Object.defineProperty(Ru, Au, {
+              complexTypeKlass: Xk,
+              childType: bk
+            } = qF(ak);
+          jF.addField(Fk, Bk, Rk, ak, LR(Rk, Bk, bk, Xk)), Fk[Ok][Rk] && Object.defineProperty(kk.prototype, Rk, Fk[Ok][Rk]), ("string" === typeof ak || rF(ak)) && (Fk[Sk] || Object.defineProperty(Fk, Sk, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), Ru[Au][yu] = "string" === typeof Qu ? RR[Qu] : zR(Qu.quantized))
+          }), Fk[Sk][Bk] = "string" === typeof ak ? BF[ak] : PF(ak.quantized))
         },
-        setFields(uu, Ru) {
-          const yu = uu.prototype.constructor;
-          FR.register(yu);
-          const Eu = Object.getPrototypeOf(yu),
-            Ku = Eu && Eu[Symbol.metadata],
-            Qu = oR.initialize(yu);
-          yu[Nu] || (yu[Nu] = IE[Nu]), yu[Xu] || (yu[Xu] = IE[Xu]), yu[Vu] || (yu[Vu] = IE[Vu]), yu.prototype.toJSON || (yu.prototype.toJSON = IE.prototype.toJSON);
-          let mu = Qu[Du] ?? (Ku && Ku[Du]) ?? -1;
-          mu++, Qu[Au] || Object.defineProperty(Qu, Au, {
-            value: Ku?.[Au] ? [...Ku[Au]] : [],
+        setFields(kk, Fk) {
+          const Bk = kk.prototype.constructor;
+          hF.register(Bk);
+          const Rk = Object.getPrototypeOf(Bk),
+            tk = Rk && Rk[Symbol.metadata],
+            ak = jF.initialize(Bk);
+          Bk[wk] || (Bk[wk] = uR[wk]), Bk[dk] || (Bk[dk] = uR[dk]), Bk[sk] || (Bk[sk] = uR[sk]), Bk.prototype.toJSON || (Bk.prototype.toJSON = uR.prototype.toJSON);
+          let Xk = ak[Nk] ?? (tk && tk[Nk]) ?? -1;
+          Xk++, ak[Sk] || Object.defineProperty(ak, Sk, {
+            value: tk?.[Sk] ? [...tk[Sk]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const Ju in Ru) {
-            if (void 0 !== Qu[Ju]) throw new Error(`@colyseus/schema: Duplicate '${Ju}' definition on '${yu.name||"(anonymous)"}'.`);
-            oR.defineField(yu, Qu, mu, Ju, Ru[Ju]), mu++
+          for (const bk in Fk) {
+            if (void 0 !== ak[bk]) throw new Error(`@colyseus/schema: Duplicate '${bk}' definition on '${Bk.name||"(anonymous)"}'.`);
+            jF.defineField(Bk, ak, Xk, bk, Fk[bk]), Xk++
           }
-          return uu
+          return kk
         },
-        isDeprecated: (uu, Ru) => !0 === uu[Ru].deprecated,
-        initialize(uu) {
-          const Ru = Object.getPrototypeOf(uu),
-            yu = Ru[Symbol.metadata];
-          let Eu = uu[Symbol.metadata] ?? Object.create(null);
-          if (Ru !== IE && Eu === yu && (Eu = Object.create(null), yu)) {
-            Object.setPrototypeOf(Eu, yu), Object.defineProperty(Eu, Du, {
-              value: yu[Du],
+        isDeprecated: (kk, Fk) => !0 === kk[Fk].deprecated,
+        initialize(kk) {
+          const Fk = Object.getPrototypeOf(kk),
+            Bk = Fk[Symbol.metadata];
+          let Rk = kk[Symbol.metadata] ?? Object.create(null);
+          if (Fk !== uR && Rk === Bk && (Rk = Object.create(null), Bk)) {
+            Object.setPrototypeOf(Rk, Bk), Object.defineProperty(Rk, Nk, {
+              value: Bk[Nk],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== yu[Iu] && (Object.defineProperty(Eu, Iu, {
-              value: [...yu[Iu]],
+            }), void 0 !== Bk[uk] && (Object.defineProperty(Rk, uk, {
+              value: [...Bk[uk]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(Eu, Gu, {
+            }), Object.defineProperty(Rk, Mk, {
               value: {
-                ...yu[Gu]
+                ...Bk[Mk]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const uu of iR) {
-              const Ru = yu[uu];
-              void 0 !== Ru && Object.defineProperty(Eu, uu, {
-                value: [...Ru],
+            for (const kk of KF) {
+              const Fk = Bk[kk];
+              void 0 !== Fk && Object.defineProperty(Rk, kk, {
+                value: [...Fk],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(Eu, ku, {
+            Object.defineProperty(Rk, Ok, {
               value: {
-                ...yu[ku]
+                ...Bk[Ok]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(uu, Symbol.metadata, {
-            value: Eu,
+          return Object.defineProperty(kk, Symbol.metadata, {
+            value: Rk,
             writable: !1,
             configurable: !0
-          }), Eu
+          }), Rk
         },
-        isValidInstance: uu => uu.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(uu.constructor[Symbol.metadata], Du),
-        getFields(uu) {
-          const Ru = uu[Symbol.metadata],
-            yu = {};
-          for (let Eu = 0; Eu <= Ru[Du]; Eu++) yu[Ru[Eu].name] = Ru[Eu].type;
-          return yu
+        isValidInstance: kk => kk.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(kk.constructor[Symbol.metadata], Nk),
+        getFields(kk) {
+          const Fk = kk[Symbol.metadata],
+            Bk = {};
+          for (let Rk = 0; Rk <= Fk[Nk]; Rk++) Bk[Fk[Rk].name] = Fk[Rk].type;
+          return Bk
         },
-        hasViewTagAtIndex: (uu, Ru) => uu?.[Iu]?.includes(Ru),
-        hasUnreliableAtIndex: (uu, Ru) => uu?.[Uu]?.includes(Ru),
-        hasPatchOnlyAtIndex: (uu, Ru) => uu?.[nu]?.includes(Ru),
-        hasFullStateOnlyAtIndex: (uu, Ru) => uu?.[tu]?.includes(Ru),
-        hasStreamAtIndex: (uu, Ru) => uu?.[lu]?.includes(Ru)
+        hasViewTagAtIndex: (kk, Fk) => kk?.[uk]?.includes(Fk),
+        hasUnreliableAtIndex: (kk, Fk) => kk?.[gk]?.includes(Fk),
+        hasPatchOnlyAtIndex: (kk, Fk) => kk?.[Uk]?.includes(Fk),
+        hasFullStateOnlyAtIndex: (kk, Fk) => kk?.[Gk]?.includes(Fk),
+        hasStreamAtIndex: (kk, Fk) => kk?.[Tk]?.includes(Fk)
       },
-      qR = (uu, Ru, yu) => uu(Ru, yu);
-    class OR {
+      lF = (kk, Fk, Bk) => kk(Fk, Bk);
+    class nF {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(uu) {
-        this.ops = new Uint8Array(Math.max(uu + 1, 1))
+      constructor(kk) {
+        this.ops = new Uint8Array(Math.max(kk + 1, 1))
       }
-      record(uu, Ru) {
-        const yu = this.ops[uu];
-        0 === yu ? this.ops[uu] = Ru : (yu === Ku.DELETE || yu === Ku.ADD && Ru === Ku.DELETE_AND_ADD) && (this.ops[uu] = Ku.DELETE_AND_ADD), uu < 32 ? this.dirtyLow |= 1 << uu : this.dirtyHigh |= 1 << uu - 32
+      record(kk, Fk) {
+        const Bk = this.ops[kk];
+        0 === Bk ? this.ops[kk] = Fk : (Bk === tk.DELETE || Bk === tk.ADD && Fk === tk.DELETE_AND_ADD) && (this.ops[kk] = tk.DELETE_AND_ADD), kk < 32 ? this.dirtyLow |= 1 << kk : this.dirtyHigh |= 1 << kk - 32
       }
-      recordDelete(uu, Ru) {
-        this.ops[uu] = Ru, uu < 32 ? this.dirtyLow |= 1 << uu : this.dirtyHigh |= 1 << uu - 32
+      recordDelete(kk, Fk) {
+        this.ops[kk] = Fk, kk < 32 ? this.dirtyLow |= 1 << kk : this.dirtyHigh |= 1 << kk - 32
       }
-      recordRaw(uu, Ru) {
-        this.record(uu, Ru)
+      recordRaw(kk, Fk) {
+        this.record(kk, Fk)
       }
-      operationAt(uu) {
-        const Ru = this.ops[uu];
-        return 0 === Ru ? void 0 : Ru
+      operationAt(kk) {
+        const Fk = this.ops[kk];
+        return 0 === Fk ? void 0 : Fk
       }
-      setOperationAt(uu, Ru) {
-        this.ops[uu] = Ru
+      setOperationAt(kk, Fk) {
+        this.ops[kk] = Fk
       }
-      forEach(uu) {
-        this.forEachWithCtx(uu, qR)
+      forEach(kk) {
+        this.forEachWithCtx(kk, lF)
       }
-      forEachWithCtx(uu, Ru) {
-        let yu = this.dirtyLow,
-          Eu = this.dirtyHigh;
-        const Ku = this.ops;
-        for (; 0 !== yu;) {
-          const Eu = yu & -yu,
-            Qu = 31 - Math.clz32(Eu);
-          yu ^= Eu, Ru(uu, Qu, Ku[Qu])
+      forEachWithCtx(kk, Fk) {
+        let Bk = this.dirtyLow,
+          Rk = this.dirtyHigh;
+        const tk = this.ops;
+        for (; 0 !== Bk;) {
+          const Rk = Bk & -Bk,
+            ak = 31 - Math.clz32(Rk);
+          Bk ^= Rk, Fk(kk, ak, tk[ak])
         }
-        for (; 0 !== Eu;) {
-          const yu = Eu & -Eu,
-            Qu = 31 - Math.clz32(yu) + 32;
-          Eu ^= yu, Ru(uu, Qu, Ku[Qu])
+        for (; 0 !== Rk;) {
+          const Bk = Rk & -Rk,
+            ak = 31 - Math.clz32(Bk) + 32;
+          Rk ^= Bk, Fk(kk, ak, tk[ak])
         }
       }
       size() {
-        return aR(this.dirtyLow) + aR(this.dirtyHigh)
+        return QF(this.dirtyLow) + QF(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class vR {
-      tS = new Map;
+    class IF {
+      Xy = new Map;
       pureOps = [];
-      record(uu, Ru) {
-        const yu = this.tS.get(uu);
-        void 0 === yu ? this.tS.set(uu, Ru) : (yu === Ku.DELETE || yu === Ku.ADD && Ru === Ku.DELETE_AND_ADD) && this.tS.set(uu, Ku.DELETE_AND_ADD)
+      record(kk, Fk) {
+        const Bk = this.Xy.get(kk);
+        void 0 === Bk ? this.Xy.set(kk, Fk) : (Bk === tk.DELETE || Bk === tk.ADD && Fk === tk.DELETE_AND_ADD) && this.Xy.set(kk, tk.DELETE_AND_ADD)
       }
-      recordDelete(uu, Ru) {
-        this.tS.set(uu, Ru)
+      recordDelete(kk, Fk) {
+        this.Xy.set(kk, Fk)
       }
-      recordRaw(uu, Ru) {
-        this.tS.set(uu, Ru)
+      recordRaw(kk, Fk) {
+        this.Xy.set(kk, Fk)
       }
-      recordPure(uu) {
-        this.pureOps.push([this.tS.size, uu])
+      recordPure(kk) {
+        this.pureOps.push([this.Xy.size, kk])
       }
-      operationAt(uu) {
-        return this.tS.get(uu)
+      operationAt(kk) {
+        return this.Xy.get(kk)
       }
-      setOperationAt(uu, Ru) {
-        this.tS.has(uu) && this.tS.set(uu, Ru)
+      setOperationAt(kk, Fk) {
+        this.Xy.has(kk) && this.Xy.set(kk, Fk)
       }
-      forEach(uu) {
-        this.forEachWithCtx(uu, qR)
+      forEach(kk) {
+        this.forEachWithCtx(kk, lF)
       }
-      forEachWithCtx(uu, Ru) {
-        const yu = this.pureOps;
-        if (yu.length > 0) {
-          let Eu = 0,
-            Ku = 0;
-          for (const [Qu, mu] of this.tS) {
-            for (; Eu < yu.length && yu[Eu][0] <= Ku;) {
-              const Ku = yu[Eu++][1];
-              Ru(uu, -Ku, Ku)
+      forEachWithCtx(kk, Fk) {
+        const Bk = this.pureOps;
+        if (Bk.length > 0) {
+          let Rk = 0,
+            tk = 0;
+          for (const [ak, Xk] of this.Xy) {
+            for (; Rk < Bk.length && Bk[Rk][0] <= tk;) {
+              const tk = Bk[Rk++][1];
+              Fk(kk, -tk, tk)
             }
-            Ru(uu, Qu, mu), Ku++
+            Fk(kk, ak, Xk), tk++
           }
-          for (; Eu < yu.length;) {
-            const Ku = yu[Eu++][1];
-            Ru(uu, -Ku, Ku)
+          for (; Rk < Bk.length;) {
+            const tk = Bk[Rk++][1];
+            Fk(kk, -tk, tk)
           }
         } else
-          for (const [Eu, Ku] of this.tS) Ru(uu, Eu, Ku)
+          for (const [Rk, tk] of this.Xy) Fk(kk, Rk, tk)
       }
       size() {
-        return this.tS.size + this.pureOps.length
+        return this.Xy.size + this.pureOps.length
       }
       has() {
-        return this.tS.size > 0 || this.pureOps.length > 0
+        return this.Xy.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.tS.clear(), this.pureOps.length = 0
+        this.Xy.clear(), this.pureOps.length = 0
       }
-      shift(uu) {
-        const Ru = new Map;
-        for (const [yu, Eu] of this.tS) Ru.set(yu + uu, Eu);
-        this.tS = Ru
+      shift(kk) {
+        const Fk = new Map;
+        for (const [Bk, Rk] of this.Xy) Fk.set(Bk + kk, Rk);
+        this.Xy = Fk
       }
     }
 
-    function aR(uu) {
-      return 16843009 * ((uu = (858993459 & (uu -= uu >>> 1 & 1431655765)) + (uu >>> 2 & 858993459)) + (uu >>> 4) & 252645135) >>> 24
+    function QF(kk) {
+      return 16843009 * ((kk = (858993459 & (kk -= kk >>> 1 & 1431655765)) + (kk >>> 2 & 858993459)) + (kk >>> 4) & 252645135) >>> 24
     }
 
-    function fR(uu) {
-      if (void 0 === uu) return 0;
-      let Ru = 0;
-      for (let yu = 0, Eu = uu.length; yu < Eu; yu++) {
-        const Eu = uu[yu];
-        Eu < 32 && (Ru |= 1 << Eu)
+    function kB(kk) {
+      if (void 0 === kk) return 0;
+      let Fk = 0;
+      for (let Bk = 0, Rk = kk.length; Bk < Rk; Bk++) {
+        const Rk = kk[Bk];
+        Rk < 32 && (Fk |= 1 << Rk)
       }
-      return Ru
+      return Fk
     }
 
-    function uy(uu) {
-      const Ru = uu.constructor;
-      if (Object.prototype.hasOwnProperty.call(Ru, eu)) return Ru[eu];
-      const yu = Ru[Symbol.metadata],
-        Eu = oR.isValidInstance(uu),
-        Ku = (yu?.[Iu]?.length ?? 0) > 0,
-        Qu = function(uu) {
-          const Ru = [],
-            yu = [],
-            Eu = [],
-            Ku = [],
-            Qu = uu?.[Du];
-          if (void 0 === Qu) return {
-            names: Ru,
-            types: yu,
-            tags: Eu,
-            encoders: Ku
+    function FB(kk) {
+      const Fk = kk.constructor;
+      if (Object.prototype.hasOwnProperty.call(Fk, Ek)) return Fk[Ek];
+      const Bk = Fk[Symbol.metadata],
+        Rk = jF.isValidInstance(kk),
+        tk = (Bk?.[uk]?.length ?? 0) > 0,
+        ak = function(kk) {
+          const Fk = [],
+            Bk = [],
+            Rk = [],
+            tk = [],
+            ak = kk?.[Nk];
+          if (void 0 === ak) return {
+            names: Fk,
+            types: Bk,
+            tags: Rk,
+            encoders: tk
           };
-          const mu = uu[Au];
-          for (let Ju = 0; Ju <= Qu; Ju++) {
-            const Qu = uu[Ju];
-            void 0 !== Qu ? (Ru[Ju] = Qu.name, yu[Ju] = Qu.type, Eu[Ju] = Qu.tag, Ku[Ju] = mu?.[Ju]) : (Ru[Ju] = void 0, yu[Ju] = void 0, Eu[Ju] = void 0, Ku[Ju] = void 0)
+          const Xk = kk[Sk];
+          for (let bk = 0; bk <= ak; bk++) {
+            const ak = kk[bk];
+            void 0 !== ak ? (Fk[bk] = ak.name, Bk[bk] = ak.type, Rk[bk] = ak.tag, tk[bk] = Xk?.[bk]) : (Fk[bk] = void 0, Bk[bk] = void 0, Rk[bk] = void 0, tk[bk] = void 0)
           }
           return {
-            names: Ru,
-            types: yu,
-            tags: Eu,
-            encoders: Ku
+            names: Fk,
+            types: Bk,
+            tags: Rk,
+            encoders: tk
           }
-        }(yu),
-        mu = Eu && !Ku ? void 0 : Ru[ru],
-        Ju = {
-          encoder: Ru[Xu],
-          filter: mu,
-          metadata: yu,
-          isSchema: Eu,
-          filterBitmask: Eu ? fR(yu?.[Iu]) : 0,
-          hasAnyFullStateOnly: (yu?.[tu]?.length ?? 0) > 0,
-          hasAnyUnreliable: (yu?.[Uu]?.length ?? 0) > 0,
-          hasAnyStream: (yu?.[lu]?.length ?? 0) > 0,
-          hasAnyView: Ku,
-          fullStateOnlyBitmask: fR(yu?.[tu]),
-          unreliableBitmask: fR(yu?.[Uu]),
-          streamBitmask: fR(yu?.[lu]),
-          names: Qu.names,
-          types: Qu.types,
-          tags: Qu.tags,
-          encoders: Qu.encoders
+        }(Bk),
+        Xk = Rk && !tk ? void 0 : Fk[Vk],
+        bk = {
+          encoder: Fk[dk],
+          filter: Xk,
+          metadata: Bk,
+          isSchema: Rk,
+          filterBitmask: Rk ? kB(Bk?.[uk]) : 0,
+          hasAnyFullStateOnly: (Bk?.[Gk]?.length ?? 0) > 0,
+          hasAnyUnreliable: (Bk?.[gk]?.length ?? 0) > 0,
+          hasAnyStream: (Bk?.[Tk]?.length ?? 0) > 0,
+          hasAnyView: tk,
+          fullStateOnlyBitmask: kB(Bk?.[Gk]),
+          unreliableBitmask: kB(Bk?.[gk]),
+          streamBitmask: kB(Bk?.[Tk]),
+          names: ak.names,
+          types: ak.types,
+          tags: ak.tags,
+          encoders: ak.encoders
         };
-      return Object.defineProperty(Ru, eu, {
-        value: Ju,
+      return Object.defineProperty(Fk, Ek, {
+        value: bk,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), Ju
+      }), bk
     }
 
-    function Ry(uu, Ru) {
-      if (void 0 !== uu.parentRef && Ru(uu.parentRef, uu._parentIndex)) return !0;
-      for (let yu = uu.extraParents; void 0 !== yu; yu = yu.next)
-        if (Ru(yu.ref, yu.index)) return !0;
+    function BB(kk, Fk) {
+      if (void 0 !== kk.parentRef && Fk(kk.parentRef, kk._parentIndex)) return !0;
+      for (let Bk = kk.extraParents; void 0 !== Bk; Bk = Bk.next)
+        if (Fk(Bk.ref, Bk.index)) return !0;
       return !1
     }
-    const yy = (uu, Ru) => {
-        uu.isFieldUnreliable(Ru) ? uu.ensureUnreliableRecorder().record(Ru, Ku.ADD) : uu.record(Ru, Ku.ADD)
+    const RB = (kk, Fk) => {
+        kk.isFieldUnreliable(Fk) ? kk.ensureUnreliableRecorder().record(Fk, tk.ADD) : kk.record(Fk, tk.ADD)
       },
-      Ey = (uu, Ru) => uu(Ru);
+      tB = (kk, Fk) => kk(Fk);
 
-    function Ky(uu, Ru, yu) {
-      const Eu = uu.refTarget;
-      if (void 0 !== Eu[Tu]) {
-        if (uu.isPatchOnly) return;
-        if (Array.isArray(Eu.items)) {
-          const uu = Eu.items;
-          for (let Eu = 0, Ku = uu.length; Eu < Ku; Eu++) void 0 !== uu[Eu] && yu(Ru, Eu)
-        } else if (void 0 !== Eu.journal)
-          for (const [uu, Ku] of Eu.journal.keyByIndex) Eu.$items.has(Ku) && yu(Ru, uu);
-        else if (void 0 !== Eu.$items)
-          for (const uu of Eu.$items.keys()) yu(Ru, uu)
+    function aB(kk, Fk, Bk) {
+      const Rk = kk.refTarget;
+      if (void 0 !== Rk[fk]) {
+        if (kk.isPatchOnly) return;
+        if (Array.isArray(Rk.items)) {
+          const kk = Rk.items;
+          for (let Rk = 0, tk = kk.length; Rk < tk; Rk++) void 0 !== kk[Rk] && Bk(Fk, Rk)
+        } else if (void 0 !== Rk.journal)
+          for (const [kk, tk] of Rk.journal.keyByIndex) Rk.$items.has(tk) && Bk(Fk, kk);
+        else if (void 0 !== Rk.$items)
+          for (const kk of Rk.$items.keys()) Bk(Fk, kk)
       } else {
-        const Ku = uu.metadata;
-        if (!Ku) return;
-        const Qu = Ku[Du] ?? -1,
-          mu = Ku[su],
-          Ju = uu.encDescriptor.names;
-        for (let uu = 0; uu <= Qu; uu++) {
-          const Ku = Ju[uu];
-          if (void 0 === Ku) continue;
-          if (mu && mu.includes(uu)) continue;
-          const Qu = Eu[Ku];
-          void 0 !== Qu && null !== Qu && yu(Ru, uu)
+        const tk = kk.metadata;
+        if (!tk) return;
+        const ak = tk[Nk] ?? -1,
+          Xk = tk[ck],
+          bk = kk.encDescriptor.names;
+        for (let kk = 0; kk <= ak; kk++) {
+          const tk = bk[kk];
+          if (void 0 === tk) continue;
+          if (Xk && Xk.includes(kk)) continue;
+          const ak = Rk[tk];
+          void 0 !== ak && null !== ak && Bk(Fk, kk)
         }
       }
     }
 
-    function Qy(uu, Ru, yu, Eu) {
-      ! function(uu, Ru, yu) {
-        if (!Ru) return;
-        const Eu = Ru[pu],
-          Ku = !Eu._isSchema;
-        let Qu;
-        Ku ? (Ru = Eu.parent, yu = Eu.parentIndex, Qu = Ru?.[pu].metadata) : Qu = Eu.metadata;
-        const mu = (Qu?.[nu]?.includes(yu) ? ey : 0) | (Qu?.[tu]?.includes(yu) ? Ay : 0),
-          Ju = Eu.flags & Iy | mu,
-          Nu = uu.flags;
-        uu.flags = Nu | Ju;
-        Ju & ~Nu & Ay && (uu.reset(), uu.unreliableRecorder?.reset());
-        const Xu = uu.root?.types;
-        if (!Xu?.hasFilters) return;
-        const Vu = Qu?.[Iu]?.includes(yu) ?? !1,
-          ru = Qu?.[lu]?.includes(yu) ?? !1,
-          Bu = Eu.isFiltered || Vu || ru;
-        if (uu.isFiltered = Bu, ru && !Ku) {
-          uu.isStreamCollection = !0;
-          const Ru = DR(uu.ref);
-          if (void 0 === Ru.priority) {
-            const uu = oR.getStreamPriority(Qu, yu);
-            void 0 !== uu && (Ru.priority = uu)
+    function XB(kk, Fk, Bk, Rk) {
+      ! function(kk, Fk, Bk) {
+        if (!Fk) return;
+        const Rk = Fk[yk],
+          tk = !Rk._isSchema;
+        let ak;
+        tk ? (Fk = Rk.parent, Bk = Rk.parentIndex, ak = Fk?.[yk].metadata) : ak = Rk.metadata;
+        const Xk = (ak?.[Uk]?.includes(Bk) ? EB : 0) | (ak?.[Gk]?.includes(Bk) ? SB : 0),
+          bk = Rk.flags & uB | Xk,
+          wk = kk.flags;
+        kk.flags = wk | bk;
+        bk & ~wk & SB && (kk.reset(), kk.unreliableRecorder?.reset());
+        const dk = kk.root?.types;
+        if (!dk?.hasFilters) return;
+        const sk = ak?.[uk]?.includes(Bk) ?? !1,
+          Vk = ak?.[Tk]?.includes(Bk) ?? !1,
+          Jk = Rk.isFiltered || sk || Vk;
+        if (kk.isFiltered = Jk, Vk && !tk) {
+          kk.isStreamCollection = !0;
+          const Fk = NF(kk.ref);
+          if (void 0 === Fk.priority) {
+            const kk = jF.getStreamPriority(ak, Bk);
+            void 0 !== kk && (Fk.priority = kk)
           }
-          uu.root?.registerStream(uu.ref)
+          kk.root?.registerStream(kk.ref)
         }
-        if (Bu) {
-          const Ru = Jy(uu);
-          uu.isVisibilitySharedWithParent = Eu.isFiltered && Ru && !ru && (!Vu || Ku && Qu[yu].tag !== SE)
+        if (Jk) {
+          const Fk = wB(kk);
+          kk.isVisibilitySharedWithParent = Rk.isFiltered && Fk && !Vk && (!sk || tk && ak[Bk].tag !== yR)
         }
-      }(uu, Ru, yu), uu.isFullStateOnly || (uu.has() && uu.root?.enqueueChangeTree(uu), uu.unreliableRecorder?.has() && uu.root?.enqueueUnreliable(uu), uu.has() || uu.unreliableRecorder?.has() || uu.root?.enqueueChangeTree(uu))
+      }(kk, Fk, Bk), kk.isFullStateOnly || (kk.has() && kk.root?.enqueueChangeTree(kk), kk.unreliableRecorder?.has() && kk.root?.enqueueUnreliable(kk), kk.has() || kk.unreliableRecorder?.has() || kk.root?.enqueueChangeTree(kk))
     }
 
-    function my(uu) {
-      const Ru = uu.pendingFilterRefresh;
-      for (let yu = 0; yu < Ru.length; yu++) {
-        const uu = Ru[yu];
-        0 !== (uu.flags & My) && Ny(uu)
+    function bB(kk) {
+      const Fk = kk.pendingFilterRefresh;
+      for (let Bk = 0; Bk < Fk.length; Bk++) {
+        const kk = Fk[Bk];
+        0 !== (kk.flags & HB) && dB(kk)
       }
-      Ru.length = 0
+      Fk.length = 0
     }
 
-    function Jy(uu) {
-      return uu._isSchema || "string" !== typeof uu.refTarget[Tu]
+    function wB(kk) {
+      return kk._isSchema || "string" !== typeof kk.refTarget[fk]
     }
 
-    function Ny(uu) {
-      uu.flags &= ~My;
-      const Ru = uu.root;
-      if (void 0 === Ru || void 0 === uu.parentRef) return;
-      const yu = Jy(uu);
-      let Eu = xy(uu, uu.parentRef, uu._parentIndex, yu);
-      for (let Qu = uu.extraParents; void 0 !== Qu && Eu !== By; Qu = Qu.next) Eu |= xy(uu, Qu.ref, Qu.index, yu);
-      if (0 === Eu) return;
-      uu.isVisibilitySharedWithParent = 0 !== (Eu & ry);
-      const Ku = 0 === (Eu & Vy);
-      Ku !== uu.isFiltered && (uu.isFiltered = Ku, Ku || uu.isFullStateOnly || (uu.forEachLiveWithCtx(uu, yy), uu.has() && Ru.enqueueChangeTree(uu), uu.unreliableRecorder?.has() && Ru.enqueueUnreliable(uu)), uu.forEachChildWithCtx(uu, Sy))
+    function dB(kk) {
+      kk.flags &= ~HB;
+      const Fk = kk.root;
+      if (void 0 === Fk || void 0 === kk.parentRef) return;
+      const Bk = wB(kk);
+      let Rk = eB(kk, kk.parentRef, kk._parentIndex, Bk);
+      for (let ak = kk.extraParents; void 0 !== ak && Rk !== AB; ak = ak.next) Rk |= eB(kk, ak.ref, ak.index, Bk);
+      if (0 === Rk) return;
+      kk.isVisibilitySharedWithParent = 0 !== (Rk & JB);
+      const tk = 0 === (Rk & VB);
+      tk !== kk.isFiltered && (kk.isFiltered = tk, tk || kk.isFullStateOnly || (kk.forEachLiveWithCtx(kk, RB), kk.has() && Fk.enqueueChangeTree(kk), kk.unreliableRecorder?.has() && Fk.enqueueUnreliable(kk)), kk.forEachChildWithCtx(kk, yB))
     }
-    const Xy = 1,
-      Vy = 2,
-      ry = 4,
-      By = Xy | Vy | ry;
+    const sB = 1,
+      VB = 2,
+      JB = 4,
+      AB = sB | VB | JB;
 
-    function xy(uu, Ru, yu, Eu) {
-      const Ku = Ru[pu];
-      if (Ku.root !== uu.root || ! function(uu, Ru, yu) {
-          const Eu = Ru.refTarget;
-          if (Ru.isArray) {
-            const Ru = Eu.items,
-              Ku = Ru[yu];
-            if (void 0 !== Ku && Ku[pu] === uu) return !0;
-            for (let yu = 0, Eu = Ru.length; yu < Eu; yu++) {
-              const Eu = Ru[yu];
-              if (void 0 !== Eu && Eu[pu] === uu) return !0
+    function eB(kk, Fk, Bk, Rk) {
+      const tk = Fk[yk];
+      if (tk.root !== kk.root || ! function(kk, Fk, Bk) {
+          const Rk = Fk.refTarget;
+          if (Fk.isArray) {
+            const Fk = Rk.items,
+              tk = Fk[Bk];
+            if (void 0 !== tk && tk[yk] === kk) return !0;
+            for (let Bk = 0, Rk = Fk.length; Bk < Rk; Bk++) {
+              const Rk = Fk[Bk];
+              if (void 0 !== Rk && Rk[yk] === kk) return !0
             }
             return !1
           }
-          const Ku = Ru.getValue(yu);
-          return void 0 !== Ku && Ku[pu] === uu
-        }(uu, Ku, yu)) return 0;
-      Ku.flags & My && Ny(Ku);
-      let Qu = Xy;
-      if (Ku._isSchema) {
-        void 0 !== Ku.encDescriptor.tags[yu] || Ku.isFieldStream(yu) || (Ku.isFiltered ? Eu && (Qu |= ry) : Qu |= Vy)
-      } else if (Ku.isFiltered) {
-        if (Eu && !Ku.isStreamCollection) {
-          const uu = Ku.parent?.[pu];
-          (uu?._isSchema ? uu.encDescriptor.tags[Ku.parentIndex] : void 0) !== SE && (Qu |= ry)
+          const tk = Fk.getValue(Bk);
+          return void 0 !== tk && tk[yk] === kk
+        }(kk, tk, Bk)) return 0;
+      tk.flags & HB && dB(tk);
+      let ak = sB;
+      if (tk._isSchema) {
+        void 0 !== tk.encDescriptor.tags[Bk] || tk.isFieldStream(Bk) || (tk.isFiltered ? Rk && (ak |= JB) : ak |= VB)
+      } else if (tk.isFiltered) {
+        if (Rk && !tk.isStreamCollection) {
+          const kk = tk.parent?.[yk];
+          (kk?._isSchema ? kk.encDescriptor.tags[tk.parentIndex] : void 0) !== yR && (ak |= JB)
         }
-      } else Qu |= Vy;
-      return Qu
+      } else ak |= VB;
+      return ak
     }
-    const Sy = (uu, Ru, yu) => {
-      Ny(Ru)
+    const yB = (kk, Fk, Bk) => {
+      dB(Fk)
     };
 
-    function py(uu, Ru, yu, Eu) {
-      if (uu.addParent(Ru, Eu), !yu) return;
-      const Ku = yu.add(uu);
-      yu !== uu.root && (uu.root = yu, Qy(uu, Ru, Eu));
-      const Qu = Ru?.[pu];
-      if (void 0 !== Qu && void 0 !== Qu.subscribedViews && void 0 !== Ru[Tu] && function(uu, Ru, yu, Eu) {
-          const Ku = uu.subscribedViews;
-          if (void 0 === Ku) return;
-          const Qu = uu.isStreamCollection,
-            mu = Qu ? uu.ref : void 0,
-            Ju = Qu ? void 0 : yu[pu];
-          for (let Nu = 0, Xu = Ku.length; Nu < Xu; Nu++) {
-            let uu = Ku[Nu];
-            for (; 0 !== uu;) {
-              const yu = uu & -uu;
-              uu ^= yu;
-              const Xu = 32 * Nu + (31 - Math.clz32(yu)),
-                Vu = Eu.activeViews.get(Xu),
-                ru = Vu?.deref();
-              void 0 !== ru ? Qu ? nR(mu, Xu, Ru) : void 0 !== Ju && ru.markVisible(Ju) : Ku[Nu] &= ~yu
+    function fB(kk, Fk, Bk, Rk) {
+      if (kk.addParent(Fk, Rk), !Bk) return;
+      const tk = Bk.add(kk);
+      Bk !== kk.root && (kk.root = Bk, XB(kk, Fk, Rk));
+      const ak = Fk?.[yk];
+      if (void 0 !== ak && void 0 !== ak.subscribedViews && void 0 !== Fk[fk] && function(kk, Fk, Bk, Rk) {
+          const tk = kk.subscribedViews;
+          if (void 0 === tk) return;
+          const ak = kk.isStreamCollection,
+            Xk = ak ? kk.ref : void 0,
+            bk = ak ? void 0 : Bk[yk];
+          for (let wk = 0, dk = tk.length; wk < dk; wk++) {
+            let kk = tk[wk];
+            for (; 0 !== kk;) {
+              const Bk = kk & -kk;
+              kk ^= Bk;
+              const dk = 32 * wk + (31 - Math.clz32(Bk)),
+                sk = Rk.activeViews.get(dk),
+                Vk = sk?.deref();
+              void 0 !== Vk ? ak ? UF(Xk, dk, Fk) : void 0 !== bk && Vk.markVisible(bk) : tk[wk] &= ~Bk
             }
           }
-        }(Qu, Eu, uu.ref, yu), Ku) {
-        let Ru = Hy[dy];
-        void 0 === Ru && (Ru = {
+        }(ak, Rk, kk.ref, Bk), tk) {
+        let Fk = iB[YB];
+        void 0 === Fk && (Fk = {
           parentRef: void 0,
           root: void 0
-        }, Hy[dy] = Ru), Ru.parentRef = uu.ref, Ru.root = yu, dy++, Wy(uu, Ru, by), dy--
+        }, iB[YB] = Fk), Fk.parentRef = kk.ref, Fk.root = Bk, YB++, WB(kk, Fk, oB), YB--
       }
     }
 
-    function Ty(uu, Ru, yu) {
-      uu(Ru, yu)
+    function mB(kk, Fk, Bk) {
+      kk(Fk, Bk)
     }
 
-    function Wy(uu, Ru, yu) {
-      const Eu = uu.refTarget;
-      if (Eu[Tu]) {
-        if ("string" !== typeof Eu[Tu]) {
-          const uu = Eu.items;
-          if (void 0 !== uu)
-            for (let Eu = 0, Ku = uu.length; Eu < Ku; Eu++) {
-              const Ku = uu[Eu];
-              Ku && yu(Ru, Ku[pu], Eu)
+    function WB(kk, Fk, Bk) {
+      const Rk = kk.refTarget;
+      if (Rk[fk]) {
+        if ("string" !== typeof Rk[fk]) {
+          const kk = Rk.items;
+          if (void 0 !== kk)
+            for (let Rk = 0, tk = kk.length; Rk < tk; Rk++) {
+              const tk = kk[Rk];
+              tk && Bk(Fk, tk[yk], Rk)
             } else {
-              const uu = Eu.$items,
-                Ku = Eu._collectionIndexes;
-              for (const Eu of uu.keys()) {
-                const Qu = uu.get(Eu);
-                Qu && yu(Ru, Qu[pu], Ku?.[Eu] ?? Eu)
+              const kk = Rk.$items,
+                tk = Rk._collectionIndexes;
+              for (const Rk of kk.keys()) {
+                const ak = kk.get(Rk);
+                ak && Bk(Fk, ak[yk], tk?.[Rk] ?? Rk)
               }
             }
         }
       } else {
-        const Ku = uu.metadata,
-          Qu = Ku?.[Mu];
-        if (!Qu) return;
-        const mu = uu.encDescriptor.names;
-        for (let uu = 0, Ju = Qu.length; uu < Ju; uu++) {
-          const Ku = Qu[uu],
-            Ju = Eu[mu[Ku]];
-          Ju && yu(Ru, Ju[pu], Ku)
+        const tk = kk.metadata,
+          ak = tk?.[Hk];
+        if (!ak) return;
+        const Xk = kk.encDescriptor.names;
+        for (let kk = 0, bk = ak.length; kk < bk; kk++) {
+          const tk = ak[kk],
+            bk = Rk[Xk[tk]];
+          bk && Bk(Fk, bk[yk], tk)
         }
       }
     }
 
-    function jy(uu, Ru, yu) {
-      Ru.root !== uu ? Ru.setRoot(uu) : uu.add(Ru)
+    function vB(kk, Fk, Bk) {
+      Fk.root !== kk ? Fk.setRoot(kk) : kk.add(Fk)
     }
-    const Hy = [];
-    let dy = 0;
+    const iB = [];
+    let YB = 0;
 
-    function by(uu, Ru, yu) {
-      if (Ru.root === uu.root) return uu.root.add(Ru), void uu.root.moveNextToParent(Ru);
-      Ru.setParent(uu.parentRef, uu.root, yu)
+    function oB(kk, Fk, Bk) {
+      if (Fk.root === kk.root) return kk.root.add(Fk), void kk.root.moveNextToParent(Fk);
+      Fk.setParent(kk.parentRef, kk.root, Bk)
     }
 
-    function Cy(uu, Ru, yu) {
-      const Eu = (3 & yu) << 3;
-      return yu < 4 ? uu >>> Eu & 255 : Ru >>> Eu & 255
+    function LB(kk, Fk, Bk) {
+      const Rk = (3 & Bk) << 3;
+      return Bk < 4 ? kk >>> Rk & 255 : Fk >>> Rk & 255
     }
-    const ky = (uu, Ru, yu) => uu(Ru, yu);
-    const ey = 16,
-      Ay = 32,
-      Dy = 128,
-      My = 256,
-      Iy = ey | Ay;
-    class Gy {
+    const OB = (kk, Fk, Bk) => kk(Fk, Bk);
+    const EB = 16,
+      SB = 32,
+      NB = 128,
+      HB = 256,
+      uB = EB | SB;
+    class MB {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(uu) {
-        this.flags = uu ? 1 | this.flags : -2 & this.flags
+      set isFiltered(kk) {
+        this.flags = kk ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(uu) {
-        this.flags = uu ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(kk) {
+        this.flags = kk ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(uu) {
-        this.flags = uu ? 4 | this.flags : -5 & this.flags
+      set isNew(kk) {
+        this.flags = kk ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(uu) {
-        this.flags = uu ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(kk) {
+        this.flags = kk ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & ey)
+        return 0 !== (this.flags & EB)
       }
-      set isPatchOnly(uu) {
-        this.flags = uu ? this.flags | ey : this.flags & ~ey
+      set isPatchOnly(kk) {
+        this.flags = kk ? this.flags | EB : this.flags & ~EB
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & Ay)
+        return 0 !== (this.flags & SB)
       }
-      set isFullStateOnly(uu) {
-        this.flags = uu ? this.flags | Ay : this.flags & ~Ay
+      set isFullStateOnly(kk) {
+        this.flags = kk ? this.flags | SB : this.flags & ~SB
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(uu) {
-        this.flags = uu ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(kk) {
+        this.flags = kk ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & Dy)
+        return 0 !== (this.flags & NB)
       }
-      set needsRestage(uu) {
-        this.flags = uu ? this.flags | Dy : -129 & this.flags
+      set needsRestage(kk) {
+        this.flags = kk ? this.flags | NB : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new OR(this.metadata?.[Du] ?? 0) : new vR), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new nF(this.metadata?.[Nk] ?? 0) : new IF), this.unreliableRecorder
       }
-      isFieldUnreliable(uu) {
-        const Ru = this.encDescriptor;
-        return !!Ru.hasAnyUnreliable && (uu < 32 ? 0 !== (Ru.unreliableBitmask & 1 << uu) : oR.hasUnreliableAtIndex(this.metadata, uu))
+      isFieldUnreliable(kk) {
+        const Fk = this.encDescriptor;
+        return !!Fk.hasAnyUnreliable && (kk < 32 ? 0 !== (Fk.unreliableBitmask & 1 << kk) : jF.hasUnreliableAtIndex(this.metadata, kk))
       }
-      isFieldFullStateOnly(uu) {
+      isFieldFullStateOnly(kk) {
         if (this.isFullStateOnly) return !0;
-        const Ru = this.encDescriptor;
-        return !!Ru.hasAnyFullStateOnly && (uu < 32 ? 0 !== (Ru.fullStateOnlyBitmask & 1 << uu) : oR.hasFullStateOnlyAtIndex(this.metadata, uu))
+        const Fk = this.encDescriptor;
+        return !!Fk.hasAnyFullStateOnly && (kk < 32 ? 0 !== (Fk.fullStateOnlyBitmask & 1 << kk) : jF.hasFullStateOnlyAtIndex(this.metadata, kk))
       }
-      isFieldStream(uu) {
-        const Ru = this.encDescriptor;
-        return !!Ru.hasAnyStream && (uu < 32 ? 0 !== (Ru.streamBitmask & 1 << uu) : oR.hasStreamAtIndex(this.metadata, uu))
+      isFieldStream(kk) {
+        const Fk = this.encDescriptor;
+        return !!Fk.hasAnyStream && (kk < 32 ? 0 !== (Fk.streamBitmask & 1 << kk) : jF.hasStreamAtIndex(this.metadata, kk))
       }
-      constructor(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
-        this.ref = uu, this.refTarget = Ru;
-        const yu = uy(uu);
-        this.encDescriptor = yu, this.metadata = yu.metadata;
-        const Eu = yu.isSchema;
-        if (this._isSchema = Eu, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Eu) {
-          const uu = this.metadata?.[Du] ?? 0;
-          uu > 7 && (this.ops = new Uint8Array(uu + 1))
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk;
+        this.ref = kk, this.refTarget = Fk;
+        const Bk = FB(kk);
+        this.encDescriptor = Bk, this.metadata = Bk.metadata;
+        const Rk = Bk.isSchema;
+        if (this._isSchema = Rk, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Rk) {
+          const kk = this.metadata?.[Nk] ?? 0;
+          kk > 7 && (this.ops = new Uint8Array(kk + 1))
         } else this.collDirty = new Map
       }
-      _opAt(uu) {
-        const Ru = this.ops;
-        if (void 0 !== Ru) return Ru[uu];
-        const yu = (3 & uu) << 3;
-        return uu < 4 ? this.opsLow >>> yu & 255 : this.opsHigh >>> yu & 255
+      _opAt(kk) {
+        const Fk = this.ops;
+        if (void 0 !== Fk) return Fk[kk];
+        const Bk = (3 & kk) << 3;
+        return kk < 4 ? this.opsLow >>> Bk & 255 : this.opsHigh >>> Bk & 255
       }
-      _opPut(uu, Ru) {
-        const yu = this.ops;
-        if (void 0 !== yu) return void(yu[uu] = Ru);
-        const Eu = (3 & uu) << 3,
-          Ku = ~(255 << Eu);
-        uu < 4 ? this.opsLow = this.opsLow & Ku | Ru << Eu : this.opsHigh = this.opsHigh & Ku | Ru << Eu
+      _opPut(kk, Fk) {
+        const Bk = this.ops;
+        if (void 0 !== Bk) return void(Bk[kk] = Fk);
+        const Rk = (3 & kk) << 3,
+          tk = ~(255 << Rk);
+        kk < 4 ? this.opsLow = this.opsLow & tk | Fk << Rk : this.opsHigh = this.opsHigh & tk | Fk << Rk
       }
-      _markDirty(uu) {
-        uu < 32 ? this.dirtyLow |= 1 << uu : this.dirtyHigh |= 1 << uu - 32
+      _markDirty(kk) {
+        kk < 32 ? this.dirtyLow |= 1 << kk : this.dirtyHigh |= 1 << kk - 32
       }
-      record(uu, Ru) {
+      record(kk, Fk) {
         if (this._isSchema) {
-          const yu = this._opAt(uu);
-          0 === yu ? this._opPut(uu, Ru) : (yu === Ku.DELETE || yu === Ku.ADD && Ru === Ku.DELETE_AND_ADD) && this._opPut(uu, Ku.DELETE_AND_ADD), this._markDirty(uu)
+          const Bk = this._opAt(kk);
+          0 === Bk ? this._opPut(kk, Fk) : (Bk === tk.DELETE || Bk === tk.ADD && Fk === tk.DELETE_AND_ADD) && this._opPut(kk, tk.DELETE_AND_ADD), this._markDirty(kk)
         } else {
-          const yu = this.collDirty,
-            Eu = yu.get(uu);
-          let Qu;
-          Qu = void 0 === Eu ? Ru : Eu === Ku.DELETE || Eu === Ku.ADD && Ru === Ku.DELETE_AND_ADD ? Ku.DELETE_AND_ADD : Eu, yu.set(uu, Qu)
+          const Bk = this.collDirty,
+            Rk = Bk.get(kk);
+          let ak;
+          ak = void 0 === Rk ? Fk : Rk === tk.DELETE || Rk === tk.ADD && Fk === tk.DELETE_AND_ADD ? tk.DELETE_AND_ADD : Rk, Bk.set(kk, ak)
         }
       }
-      recordDelete(uu, Ru) {
-        this._isSchema ? (this._opPut(uu, Ru), this._markDirty(uu)) : this.collDirty.set(uu, Ru)
+      recordDelete(kk, Fk) {
+        this._isSchema ? (this._opPut(kk, Fk), this._markDirty(kk)) : this.collDirty.set(kk, Fk)
       }
-      recordRaw(uu, Ru) {
-        this._isSchema ? (this._opPut(uu, Ru), this._markDirty(uu)) : this.collDirty.set(uu, Ru)
+      recordRaw(kk, Fk) {
+        this._isSchema ? (this._opPut(kk, Fk), this._markDirty(kk)) : this.collDirty.set(kk, Fk)
       }
-      recordPure(uu) {
+      recordPure(kk) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, uu])
+        (this.collPureOps ??= []).push([this.collDirty.size, kk])
       }
-      operationAt(uu) {
+      operationAt(kk) {
         if (this._isSchema) {
-          const Ru = this._opAt(uu);
-          return 0 === Ru ? void 0 : Ru
+          const Fk = this._opAt(kk);
+          return 0 === Fk ? void 0 : Fk
         }
-        return this.collDirty.get(uu)
+        return this.collDirty.get(kk)
       }
-      setOperationAt(uu, Ru) {
-        if (this._isSchema) this._opPut(uu, Ru);
+      setOperationAt(kk, Fk) {
+        if (this._isSchema) this._opPut(kk, Fk);
         else {
-          const yu = this.collDirty;
-          yu.has(uu) && yu.set(uu, Ru)
+          const Bk = this.collDirty;
+          Bk.has(kk) && Bk.set(kk, Fk)
         }
       }
-      forEach(uu) {
-        this.forEachWithCtx(uu, ky)
+      forEach(kk) {
+        this.forEachWithCtx(kk, OB)
       }
-      forEachWithCtx(uu, Ru) {
+      forEachWithCtx(kk, Fk) {
         if (this._isSchema) {
-          let yu = this.dirtyLow,
-            Eu = this.dirtyHigh;
-          const Ku = this.ops;
-          if (void 0 !== Ku) {
-            for (; 0 !== yu;) {
-              const Eu = yu & -yu,
-                Qu = 31 - Math.clz32(Eu);
-              yu ^= Eu, Ru(uu, Qu, Ku[Qu])
+          let Bk = this.dirtyLow,
+            Rk = this.dirtyHigh;
+          const tk = this.ops;
+          if (void 0 !== tk) {
+            for (; 0 !== Bk;) {
+              const Rk = Bk & -Bk,
+                ak = 31 - Math.clz32(Rk);
+              Bk ^= Rk, Fk(kk, ak, tk[ak])
             }
-            for (; 0 !== Eu;) {
-              const yu = Eu & -Eu,
-                Qu = 31 - Math.clz32(yu) + 32;
-              Eu ^= yu, Ru(uu, Qu, Ku[Qu])
+            for (; 0 !== Rk;) {
+              const Bk = Rk & -Rk,
+                ak = 31 - Math.clz32(Bk) + 32;
+              Rk ^= Bk, Fk(kk, ak, tk[ak])
             }
           } else {
-            const Eu = this.opsLow,
-              Ku = this.opsHigh;
-            for (; 0 !== yu;) {
-              const Qu = yu & -yu,
-                mu = 31 - Math.clz32(Qu);
-              yu ^= Qu, Ru(uu, mu, Cy(Eu, Ku, mu))
+            const Rk = this.opsLow,
+              tk = this.opsHigh;
+            for (; 0 !== Bk;) {
+              const ak = Bk & -Bk,
+                Xk = 31 - Math.clz32(ak);
+              Bk ^= ak, Fk(kk, Xk, LB(Rk, tk, Xk))
             }
           }
           return
         }
-        const yu = this.collDirty,
-          Eu = this.collPureOps;
-        if (void 0 !== Eu && Eu.length > 0) {
-          let Ku = 0,
-            Qu = 0;
-          for (const [mu, Ju] of yu) {
-            for (; Ku < Eu.length && Eu[Ku][0] <= Qu;) {
-              const yu = Eu[Ku++][1];
-              Ru(uu, -yu, yu)
+        const Bk = this.collDirty,
+          Rk = this.collPureOps;
+        if (void 0 !== Rk && Rk.length > 0) {
+          let tk = 0,
+            ak = 0;
+          for (const [Xk, bk] of Bk) {
+            for (; tk < Rk.length && Rk[tk][0] <= ak;) {
+              const Bk = Rk[tk++][1];
+              Fk(kk, -Bk, Bk)
             }
-            Ru(uu, mu, Ju), Qu++
+            Fk(kk, Xk, bk), ak++
           }
-          for (; Ku < Eu.length;) {
-            const yu = Eu[Ku++][1];
-            Ru(uu, -yu, yu)
+          for (; tk < Rk.length;) {
+            const Bk = Rk[tk++][1];
+            Fk(kk, -Bk, Bk)
           }
         } else
-          for (const [Ku, Qu] of yu) Ru(uu, Ku, Qu)
+          for (const [tk, ak] of Bk) Fk(kk, tk, ak)
       }
       size() {
-        return this._isSchema ? aR(this.dirtyLow) + aR(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? QF(this.dirtyLow) + QF(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(uu, Ru) {
+      insertAt(kk, Fk) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const yu = this.collDirty,
-          Eu = new Map,
-          Qu = !this.paused && !this.isFullStateOnly;
-        if (uu > 0)
-          for (const [Ku, mu] of yu) Ku < uu && Eu.set(Ku, mu);
-        if (Qu)
-          for (let mu = 0; mu < Ru; mu++) Eu.set(uu + mu, Ku.ADD);
-        for (const [Ku, mu] of yu) Ku >= uu && Eu.set(Ku + Ru, mu);
-        this.collDirty = Eu, Qu && this.root?.enqueueChangeTree(this)
+        const Bk = this.collDirty,
+          Rk = new Map,
+          ak = !this.paused && !this.isFullStateOnly;
+        if (kk > 0)
+          for (const [tk, Xk] of Bk) tk < kk && Rk.set(tk, Xk);
+        if (ak)
+          for (let Xk = 0; Xk < Fk; Xk++) Rk.set(kk + Xk, tk.ADD);
+        for (const [tk, Xk] of Bk) tk >= kk && Rk.set(tk + Fk, Xk);
+        this.collDirty = Rk, ak && this.root?.enqueueChangeTree(this)
       }
-      removeAt(uu, Ru) {
+      removeAt(kk, Fk) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const yu = this.collDirty,
-          Eu = uu + Ru;
-        let Ku = !1;
-        for (const mu of yu.keys())
-          if (mu >= Eu) {
-            Ku = !0;
+        const Bk = this.collDirty,
+          Rk = kk + Fk;
+        let tk = !1;
+        for (const Xk of Bk.keys())
+          if (Xk >= Rk) {
+            tk = !0;
             break
-          } if (!Ku) {
-          for (let Ru = uu; Ru < Eu; Ru++) yu.delete(Ru);
+          } if (!tk) {
+          for (let Fk = kk; Fk < Rk; Fk++) Bk.delete(Fk);
           return
         }
-        const Qu = new Map;
-        for (const [mu, Ju] of yu) mu < uu ? Qu.set(mu, Ju) : mu >= Eu && Qu.set(mu - Ru, Ju);
-        this.collDirty = Qu
+        const ak = new Map;
+        for (const [Xk, bk] of Bk) Xk < kk ? ak.set(Xk, bk) : Xk >= Rk && ak.set(Xk - Fk, bk);
+        this.collDirty = ak
       }
-      unshift(uu) {
-        this.insertAt(0, uu)
+      unshift(kk) {
+        this.insertAt(0, kk)
       }
-      setRoot(uu) {
-        ! function(uu, Ru) {
-          uu.root = Ru;
-          const yu = Ru.add(uu);
-          Qy(uu, uu.parent, uu.parentIndex), yu && Wy(uu, Ru, jy)
-        }(this, uu)
+      setRoot(kk) {
+        ! function(kk, Fk) {
+          kk.root = Fk;
+          const Bk = Fk.add(kk);
+          XB(kk, kk.parent, kk.parentIndex), Bk && WB(kk, Fk, vB)
+        }(this, kk)
       }
-      setParent(uu, Ru, yu) {
-        py(this, uu, Ru, yu)
+      setParent(kk, Fk, Bk) {
+        fB(this, kk, Fk, Bk)
       }
-      forEachChild(uu) {
-        Wy(this, uu, Ty)
+      forEachChild(kk) {
+        WB(this, kk, mB)
       }
-      forEachChildWithCtx(uu, Ru) {
-        Wy(this, uu, Ru)
+      forEachChildWithCtx(kk, Fk) {
+        WB(this, kk, Fk)
       }
-      forEachLive(uu) {
-        Ky(this, uu, Ey)
+      forEachLive(kk) {
+        aB(this, kk, tB)
       }
-      forEachLiveWithCtx(uu, Ru) {
-        Ky(this, uu, Ru)
+      forEachLiveWithCtx(kk, Fk) {
+        aB(this, kk, Fk)
       }
-      operation(uu) {
-        this.paused || this.isFullStateOnly || (this.recordPure(uu), this.root?.enqueueChangeTree(this))
+      operation(kk) {
+        this.paused || this.isFullStateOnly || (this.recordPure(kk), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(uu, Ru, yu) {
-        if (!this.paused && !this.isFieldFullStateOnly(uu)) {
-          if (this.isFieldUnreliable(uu) && !this.isNew) {
-            const Eu = this.ensureUnreliableRecorder();
-            return yu ? Eu.recordRaw(uu, Ru) : Eu.record(uu, Ru), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(kk, Fk, Bk) {
+        if (!this.paused && !this.isFieldFullStateOnly(kk)) {
+          if (this.isFieldUnreliable(kk) && !this.isNew) {
+            const Rk = this.ensureUnreliableRecorder();
+            return Bk ? Rk.recordRaw(kk, Fk) : Rk.record(kk, Fk), void this.root?.enqueueUnreliable(this)
           }
-          yu ? this.recordRaw(uu, Ru) : this.record(uu, Ru), this.root?.enqueueChangeTree(this)
+          Bk ? this.recordRaw(kk, Fk) : this.record(kk, Fk), this.root?.enqueueChangeTree(this)
         }
       }
-      change(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ku.ADD;
-        this._routeAndRecord(uu, Ru, !1)
+      change(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tk.ADD;
+        this._routeAndRecord(kk, Fk, !1)
       }
-      indexedOperation(uu, Ru) {
-        this._routeAndRecord(uu, Ru, !0)
+      indexedOperation(kk, Fk) {
+        this._routeAndRecord(kk, Fk, !0)
       }
-      getChange(uu) {
-        return this.operationAt(uu)
+      getChange(kk) {
+        return this.operationAt(kk)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(uu) {
-        const Ru = this.paused;
+      untracked(kk) {
+        const Fk = this.paused;
         this.paused = !0;
         try {
-          return uu()
+          return kk()
         } finally {
-          this.paused = Ru
+          this.paused = Fk
         }
       }
-      markDirty(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ku.ADD;
-        const yu = this.paused;
+      markDirty(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tk.ADD;
+        const Bk = this.paused;
         this.paused = !1;
         try {
-          this.change(uu, Ru)
+          this.change(kk, Fk)
         } finally {
-          this.paused = yu
+          this.paused = Bk
         }
       }
-      getValue(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[Bu](uu, Ru)
+      getValue(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[Jk](kk, Fk)
       }
-      delete(uu, Ru) {
-        if (void 0 === uu) {
+      delete(kk, Fk) {
+        if (void 0 === kk) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${uu}'`)
-          } catch (QK) {
-            console.warn(QK)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${kk}'`)
+          } catch (bt) {
+            console.warn(bt)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(uu)) return this.getValue(uu);
-        const yu = this.isFieldUnreliable(uu) && !this.isNew;
-        yu ? this.ensureUnreliableRecorder().recordDelete(uu, Ru ?? Ku.DELETE) : this.recordDelete(uu, Ru ?? Ku.DELETE);
-        const Eu = this.getValue(uu);
-        return Eu && Eu[pu] && this.root?.remove(Eu[pu]), yu ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Eu
+        if (this.paused || this.isFieldFullStateOnly(kk)) return this.getValue(kk);
+        const Bk = this.isFieldUnreliable(kk) && !this.isNew;
+        Bk ? this.ensureUnreliableRecorder().recordDelete(kk, Fk ?? tk.DELETE) : this.recordDelete(kk, Fk ?? tk.DELETE);
+        const Rk = this.getValue(kk);
+        return Rk && Rk[yk] && this.root?.remove(Rk[yk]), Bk ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Rk
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[ju]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[Wk]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[ju]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[Wk]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[ju]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[Wk]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const uu = uu => {
-          if (uu < 0) return;
-          const Ru = this.getValue(uu);
-          Ru && Ru[pu] && Ru[pu].discardAll()
+        const kk = kk => {
+          if (kk < 0) return;
+          const Fk = this.getValue(kk);
+          Fk && Fk[yk] && Fk[yk].discardAll()
         };
-        this.forEach(uu), this.unreliableRecorder?.forEach(uu), this.discard()
+        this.forEach(kk), this.unreliableRecorder?.forEach(kk), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(uu, Ru) {
-        ! function(uu, Ru, yu) {
-          if (uu.parentRef) {
-            if (uu.parentRef[pu] === Ru[pu]) return void(uu._parentIndex = yu);
-            if (Ry(uu, ((uu, yu) => uu[pu] === Ru[pu]))) return void(uu._parentIndex = yu)
+      addParent(kk, Fk) {
+        ! function(kk, Fk, Bk) {
+          if (kk.parentRef) {
+            if (kk.parentRef[yk] === Fk[yk]) return void(kk._parentIndex = Bk);
+            if (BB(kk, ((kk, Bk) => kk[yk] === Fk[yk]))) return void(kk._parentIndex = Bk)
           }
-          void 0 === uu.parentRef ? (uu.parentRef = Ru, uu._parentIndex = yu) : (uu.extraParents = {
-            ref: uu.parentRef,
-            index: uu._parentIndex,
-            next: uu.extraParents
-          }, uu.parentRef = Ru, uu._parentIndex = yu)
-        }(this, uu, Ru)
+          void 0 === kk.parentRef ? (kk.parentRef = Fk, kk._parentIndex = Bk) : (kk.extraParents = {
+            ref: kk.parentRef,
+            index: kk._parentIndex,
+            next: kk.extraParents
+          }, kk.parentRef = Fk, kk._parentIndex = Bk)
+        }(this, kk, Fk)
       }
-      setParentIndex(uu, Ru) {
-        ! function(uu, Ru, yu) {
-          if (void 0 !== uu.extraParents)
-            if (uu.parentRef[pu] !== Ru[pu]) {
-              for (let Eu = uu.extraParents; void 0 !== Eu; Eu = Eu.next)
-                if (Eu.ref[pu] === Ru[pu]) return void(Eu.index = yu)
-            } else uu._parentIndex = yu;
-          else uu._parentIndex = yu
-        }(this, uu, Ru)
+      setParentIndex(kk, Fk) {
+        ! function(kk, Fk, Bk) {
+          if (void 0 !== kk.extraParents)
+            if (kk.parentRef[yk] !== Fk[yk]) {
+              for (let Rk = kk.extraParents; void 0 !== Rk; Rk = Rk.next)
+                if (Rk.ref[yk] === Fk[yk]) return void(Rk.index = Bk)
+            } else kk._parentIndex = Bk;
+          else kk._parentIndex = Bk
+        }(this, kk, Fk)
       }
       removeParent() {
-        return function(uu, Ru) {
-          if (uu.parentRef && uu.parentRef[pu] === Ru[pu]) return uu.extraParents ? (uu.parentRef = uu.extraParents.ref, uu._parentIndex = uu.extraParents.index, uu.extraParents = uu.extraParents.next) : (uu.parentRef = void 0, uu._parentIndex = void 0), !0;
-          let yu = uu.extraParents,
-            Eu = null;
-          for (; yu;) {
-            if (yu.ref[pu] === Ru[pu]) return Eu ? Eu.next = yu.next : uu.extraParents = yu.next, !0;
-            Eu = yu, yu = yu.next
+        return function(kk, Fk) {
+          if (kk.parentRef && kk.parentRef[yk] === Fk[yk]) return kk.extraParents ? (kk.parentRef = kk.extraParents.ref, kk._parentIndex = kk.extraParents.index, kk.extraParents = kk.extraParents.next) : (kk.parentRef = void 0, kk._parentIndex = void 0), !0;
+          let Bk = kk.extraParents,
+            Rk = null;
+          for (; Bk;) {
+            if (Bk.ref[yk] === Fk[yk]) return Rk ? Rk.next = Bk.next : kk.extraParents = Bk.next, !0;
+            Rk = Bk, Bk = Bk.next
           }
-          return void 0 === uu.parentRef
+          return void 0 === kk.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(uu) {
-        return function(uu, Ru) {
-          if (void 0 !== uu.parentRef && Ru(uu.parentRef, uu._parentIndex)) return {
-            ref: uu.parentRef,
-            index: uu._parentIndex
+      findParent(kk) {
+        return function(kk, Fk) {
+          if (void 0 !== kk.parentRef && Fk(kk.parentRef, kk._parentIndex)) return {
+            ref: kk.parentRef,
+            index: kk._parentIndex
           };
-          for (let yu = uu.extraParents; void 0 !== yu; yu = yu.next)
-            if (Ru(yu.ref, yu.index)) return {
-              ref: yu.ref,
-              index: yu.index
+          for (let Bk = kk.extraParents; void 0 !== Bk; Bk = Bk.next)
+            if (Fk(Bk.ref, Bk.index)) return {
+              ref: Bk.ref,
+              index: Bk.index
             }
-        }(this, uu)
+        }(this, kk)
       }
-      hasParent(uu) {
-        return Ry(this, uu)
+      hasParent(kk) {
+        return BB(this, kk)
       }
-      indexInParent(uu) {
-        return function(uu, Ru) {
-          if (uu.parentRef && uu.parentRef[pu] === Ru[pu]) return uu._parentIndex;
-          for (let yu = uu.extraParents; void 0 !== yu; yu = yu.next)
-            if (yu.ref[pu] === Ru[pu]) return yu.index
-        }(this, uu)
+      indexInParent(kk) {
+        return function(kk, Fk) {
+          if (kk.parentRef && kk.parentRef[yk] === Fk[yk]) return kk._parentIndex;
+          for (let Bk = kk.extraParents; void 0 !== Bk; Bk = Bk.next)
+            if (Bk.ref[yk] === Fk[yk]) return Bk.index
+        }(this, kk)
       }
       getAllParents() {
-        return function(uu) {
-          const Ru = [];
-          uu.parentRef && Ru.push({
-            ref: uu.parentRef,
-            index: uu._parentIndex
+        return function(kk) {
+          const Fk = [];
+          kk.parentRef && Fk.push({
+            ref: kk.parentRef,
+            index: kk._parentIndex
           });
-          let yu = uu.extraParents;
-          for (; yu;) Ru.push({
-            ref: yu.ref,
-            index: yu.index
-          }), yu = yu.next;
-          return Ru
+          let Bk = kk.extraParents;
+          for (; Bk;) Fk.push({
+            ref: Bk.ref,
+            index: Bk.index
+          }), Bk = Bk.next;
+          return Fk
         }(this)
       }
     }
-    class Uy {
+    class gB {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(uu) {
-        this.ref = uu
+      constructor(kk) {
+        this.ref = kk
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(uu) {
-        return uu()
+      untracked(kk) {
+        return kk()
       }
       markDirty() {}
-      forEachChild(uu) {
-        const Ru = this.ref;
-        if (Ru[Tu]) {
-          if ("string" !== typeof Ru[Tu])
-            for (const [yu, Eu] of Ru.entries()) Eu && uu(Eu[pu], Ru._collectionIndexes?.[yu] ?? yu);
+      forEachChild(kk) {
+        const Fk = this.ref;
+        if (Fk[fk]) {
+          if ("string" !== typeof Fk[fk])
+            for (const [Bk, Rk] of Fk.entries()) Rk && kk(Rk[yk], Fk._collectionIndexes?.[Bk] ?? Bk);
           return
         }
-        const yu = Ru.constructor,
-          Eu = yu?.[Symbol.metadata];
-        if (!Eu) return;
-        const Ku = Eu[Mu] ?? [];
-        for (let Qu = 0; Qu < Ku.length; Qu++) {
-          const yu = Ku[Qu],
-            mu = Ru[Eu[yu].name];
-          mu && uu(mu[pu], yu)
+        const Bk = Fk.constructor,
+          Rk = Bk?.[Symbol.metadata];
+        if (!Rk) return;
+        const tk = Rk[Hk] ?? [];
+        for (let ak = 0; ak < tk.length; ak++) {
+          const Bk = tk[ak],
+            Xk = Fk[Rk[Bk].name];
+          Xk && kk(Xk[yk], Bk)
         }
       }
-      forEachChildWithCtx(uu, Ru) {
-        this.forEachChild(((yu, Eu) => Ru(uu, yu, Eu)))
+      forEachChildWithCtx(kk, Fk) {
+        this.forEachChild(((Bk, Rk) => Fk(kk, Bk, Rk)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function ny(uu) {
-      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
-      var yu;
-      Object.defineProperty(uu, pu, {
-        value: (yu = Ru, new Uy(yu)),
+    function UB(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk;
+      var Bk;
+      Object.defineProperty(kk, yk, {
+        value: (Bk = Fk, new gB(Bk)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function sy(uu, Ru, yu, Eu, Qu, mu, Nu) {
-      void 0 !== Nu ? Nu(Ru, Eu, mu) : "string" === typeof yu ? RR[yu]?.(Ru, Eu, mu) : null != yu[Symbol.metadata] ? (RR.number(Ru, Eu[Ju], mu), (Qu & Ku.ADD) === Ku.ADD && uu.tryEncodeTypeId(Ru, yu, Eu.constructor, mu)) : RR.number(Ru, Eu[Ju], mu)
+    function cB(kk, Fk, Bk, Rk, ak, Xk, wk) {
+      void 0 !== wk ? wk(Fk, Rk, Xk) : "string" === typeof Bk ? BF[Bk]?.(Fk, Rk, Xk) : null != Bk[Symbol.metadata] ? (BF.number(Fk, Rk[bk], Xk), (ak & tk.ADD) === tk.ADD && kk.tryEncodeTypeId(Fk, Bk, Rk.constructor, Xk)) : BF.number(Fk, Rk[bk], Xk)
     }
-    const ty = function(uu, Ru, yu, Eu, Qu, mu, Ju, Nu) {
-        if (Ru[mu.offset++] = 255 & (Eu | Qu), Qu === Ku.DELETE) return;
-        const Xu = yu.encDescriptor,
-          Vu = yu.ref,
-          ru = Vu[bu][Eu] ?? Vu[Xu.names[Eu]];
-        sy(uu, Ru, Xu.types[Eu], ru, Qu, mu, Xu.encoders[Eu])
+    const GB = function(kk, Fk, Bk, Rk, ak, Xk, bk, wk) {
+        if (Fk[Xk.offset++] = 255 & (Rk | ak), ak === tk.DELETE) return;
+        const dk = Bk.encDescriptor,
+          sk = Bk.ref,
+          Vk = sk[Yk][Rk] ?? sk[dk.names[Rk]];
+        cB(kk, Fk, dk.types[Rk], Vk, ak, Xk, dk.encoders[Rk])
       },
-      ly = function(uu, Ru, yu, Eu, Qu, mu) {
-        if (Ru[mu.offset++] = 255 & Qu, RR.number(Ru, Eu, mu), Qu === Ku.DELETE) return;
-        const Ju = yu.ref;
-        if ((Qu & Ku.ADD) === Ku.ADD) {
-          const uu = Ju.$indexes.get(Eu);
-          RR.string(Ru, uu, mu)
+      TB = function(kk, Fk, Bk, Rk, ak, Xk) {
+        if (Fk[Xk.offset++] = 255 & ak, BF.number(Fk, Rk, Xk), ak === tk.DELETE) return;
+        const bk = Bk.ref;
+        if ((ak & tk.ADD) === tk.ADD) {
+          const kk = bk.$indexes.get(Rk);
+          BF.string(Fk, kk, Xk)
         }
-        sy(uu, Ru, Ju[Tu], Ju[Bu](Eu), Qu, mu)
+        cB(kk, Fk, bk[fk], bk[Jk](Rk), ak, Xk)
       },
-      gy = function(uu, Ru, yu, Eu, Qu, mu) {
-        if (Ru[mu.offset++] = 255 & Qu, RR.number(Ru, Eu, mu), Qu === Ku.DELETE) return;
-        const Ju = yu.ref;
-        sy(uu, Ru, Ju[Tu], Ju[Bu](Eu), Qu, mu)
+      rB = function(kk, Fk, Bk, Rk, ak, Xk) {
+        if (Fk[Xk.offset++] = 255 & ak, BF.number(Fk, Rk, Xk), ak === tk.DELETE) return;
+        const bk = Bk.ref;
+        cB(kk, Fk, bk[fk], bk[Jk](Rk), ak, Xk)
       },
-      cy = function(uu, Ru, yu, Eu, Qu, mu) {
-        const Ju = yu.ref;
-        (Qu & Ku.ADD) === Ku.ADD && "function" === typeof Ju.set ? ly(uu, Ru, yu, Eu, Qu, mu) : gy(uu, Ru, yu, Eu, Qu, mu)
+      DB = function(kk, Fk, Bk, Rk, ak, Xk) {
+        const bk = Bk.ref;
+        (ak & tk.ADD) === tk.ADD && "function" === typeof bk.set ? TB(kk, Fk, Bk, Rk, ak, Xk) : rB(kk, Fk, Bk, Rk, ak, Xk)
       },
-      Ly = function(uu, Ru, yu, Eu, Qu, mu, Nu, Xu) {
-        const Vu = yu.refTarget,
-          ru = Vu[Tu],
-          xu = "string" !== typeof ru;
-        let Su;
-        if (Xu && yu.isFiltered && xu) {
-          const uu = Vu.tmpItems[Eu];
-          if (!uu) return;
-          if (Su = uu[Ju], Qu === Ku.DELETE) Qu = Ku.DELETE_BY_REFID;
-          else if ((Qu & Ku.ADD) === Ku.ADD) Qu = Ku.ADD_BY_REFID;
-          else if ((Qu & Ku.MOVE) === Ku.MOVE) return
-        } else if (Qu === Ku.DELETE && xu) {
-          const uu = Vu.tmpItems[Eu];
-          if (!uu) return;
-          Su = uu[Ju], Qu = Ku.DELETE_BY_REFID
-        } else Su = Eu;
-        if (Ru[mu.offset++] = 255 & Qu, RR.number(Ru, Su, mu), Qu === Ku.DELETE || Qu === Ku.DELETE_BY_REFID) return;
-        sy(uu, Ru, ru, Vu[Bu](Eu, Nu), Qu, mu)
+      zB = function(kk, Fk, Bk, Rk, ak, Xk, wk, dk) {
+        const sk = Bk.refTarget,
+          Vk = sk[fk],
+          Ak = "string" !== typeof Vk;
+        let ek;
+        if (dk && Bk.isFiltered && Ak) {
+          const kk = sk.tmpItems[Rk];
+          if (!kk) return;
+          if (ek = kk[bk], ak === tk.DELETE) ak = tk.DELETE_BY_REFID;
+          else if ((ak & tk.ADD) === tk.ADD) ak = tk.ADD_BY_REFID;
+          else if ((ak & tk.MOVE) === tk.MOVE) return
+        } else if (ak === tk.DELETE && Ak) {
+          const kk = sk.tmpItems[Rk];
+          if (!kk) return;
+          ek = kk[bk], ak = tk.DELETE_BY_REFID
+        } else ek = Rk;
+        if (Fk[Xk.offset++] = 255 & ak, BF.number(Fk, ek, Xk), ak === tk.DELETE || ak === tk.DELETE_BY_REFID) return;
+        cB(kk, Fk, Vk, sk[Jk](Rk, wk), ak, Xk)
       };
 
-    function zy(uu, Ru, yu, Eu, Qu, mu, Nu) {
-      const Xu = uu.resyncVisited;
-      let Vu = Xu.get(uu.currentRefId);
-      if (void 0 === Vu && Xu.set(uu.currentRefId, Vu = new Set), Vu.add(Eu), void 0 !== Qu && yu === Ku.ADD && Qu !== mu) {
-        const yu = Qu[Ju];
-        void 0 !== yu && (uu.root.removeRef(yu), Nu?.push({
-          ref: Ru,
-          refId: uu.currentRefId,
-          op: Ku.DELETE,
-          dynamicIndex: Eu,
+    function PB(kk, Fk, Bk, Rk, ak, Xk, wk) {
+      const dk = kk.resyncVisited;
+      let sk = dk.get(kk.currentRefId);
+      if (void 0 === sk && dk.set(kk.currentRefId, sk = new Set), sk.add(Rk), void 0 !== ak && Bk === tk.ADD && ak !== Xk) {
+        const Bk = ak[bk];
+        void 0 !== Bk && (kk.root.removeRef(Bk), wk?.push({
+          ref: Fk,
+          refId: kk.currentRefId,
+          op: tk.DELETE,
+          dynamicIndex: Rk,
           value: void 0,
-          previousValue: Qu
+          previousValue: ak
         }))
       }
     }
 
-    function Fy(uu, Ru, yu, Eu) {
-      const Ku = Ru[Ju];
-      if (void 0 === Ku || yu.has(Ku)) return;
-      yu.add(Ku);
-      const Qu = Ru.constructor[Symbol.metadata],
-        mu = Qu?.[Mu];
-      if (void 0 === mu) return;
-      const Nu = Qu[nu];
-      for (let Ju = 0; Ju < mu.length; Ju++) {
-        const Ku = mu[Ju];
-        if (void 0 !== Nu && Nu.includes(Ku)) continue;
-        const Xu = Qu[Ku],
-          Vu = Ru[Xu.name];
-        Vu && (IE.is(Xu.type) ? Fy(uu, Vu, yu, Eu) : wy(uu, Vu, yu, Eu))
+    function hB(kk, Fk, Bk, Rk) {
+      const tk = Fk[bk];
+      if (void 0 === tk || Bk.has(tk)) return;
+      Bk.add(tk);
+      const ak = Fk.constructor[Symbol.metadata],
+        Xk = ak?.[Hk];
+      if (void 0 === Xk) return;
+      const wk = ak[Uk];
+      for (let bk = 0; bk < Xk.length; bk++) {
+        const tk = Xk[bk];
+        if (void 0 !== wk && wk.includes(tk)) continue;
+        const dk = ak[tk],
+          sk = Fk[dk.name];
+        sk && (uR.is(dk.type) ? hB(kk, sk, Bk, Rk) : qB(kk, sk, Bk, Rk))
       }
     }
 
-    function wy(uu, Ru, yu, Eu) {
-      const Qu = Ru[Wu] ?? Ru,
-        mu = Qu[Ju];
-      if (void 0 === mu || yu.has(mu)) return;
-      yu.add(mu);
-      const Nu = uu.resyncVisited.get(mu);
-      if (void 0 === Nu) return;
-      const Xu = uu.root;
-      Qu[Su](Nu, ((uu, yu) => {
-        Eu?.push({
-          ref: Ru,
-          refId: mu,
-          op: Ku.DELETE,
-          dynamicIndex: yu,
+    function qB(kk, Fk, Bk, Rk) {
+      const ak = Fk[mk] ?? Fk,
+        Xk = ak[bk];
+      if (void 0 === Xk || Bk.has(Xk)) return;
+      Bk.add(Xk);
+      const wk = kk.resyncVisited.get(Xk);
+      if (void 0 === wk) return;
+      const dk = kk.root;
+      ak[ek](wk, ((kk, Bk) => {
+        Rk?.push({
+          ref: Fk,
+          refId: Xk,
+          op: tk.DELETE,
+          dynamicIndex: Bk,
           value: void 0,
-          previousValue: uu
+          previousValue: kk
         });
-        const Qu = uu?.[Ju];
-        void 0 !== Qu && Xu.removeRef(Qu)
-      }), (Ru => {
-        IE.isSchema(Ru) && Fy(uu, Ru, yu, Eu)
+        const ak = kk?.[bk];
+        void 0 !== ak && dk.removeRef(ak)
+      }), (Fk => {
+        uR.isSchema(Fk) && hB(kk, Fk, Bk, Rk)
       }))
     }
-    const Zy = 1,
-      hy = 2,
-      Py = 3,
-      iy = 4,
-      Yy = 5;
+    const CB = 1,
+      ZB = 2,
+      pB = 3,
+      KB = 4,
+      xB = 5;
 
-    function oy(uu, Ru, yu, Eu, Qu, mu, Nu, Xu, Vu) {
-      const ru = uu.root;
-      let Bu;
-      if ((Ru & Ku.DELETE) === Ku.DELETE) {
-        const uu = Qu?.[Ju];
-        void 0 !== uu && ru.removeRef(uu), Ru !== Ku.DELETE_AND_ADD && yu[xu](Eu), Bu = void 0
+    function jB(kk, Fk, Bk, Rk, ak, Xk, wk, dk, sk) {
+      const Vk = kk.root;
+      let Jk;
+      if ((Fk & tk.DELETE) === tk.DELETE) {
+        const kk = ak?.[bk];
+        void 0 !== kk && Vk.removeRef(kk), Fk !== tk.DELETE_AND_ADD && Bk[Ak](Rk), Jk = void 0
       }
-      if (Ru === Ku.DELETE);
-      else if ("string" === typeof mu) Bu = HR[mu](Nu, Xu);
-      else if (gR(mu)) Bu = function(uu, Ru, yu) {
-        return LR(uu, (0, HR[uu.wire])(Ru, yu))
-      }(mu.quantized, Nu, Xu);
-      else if (IE.is(mu)) {
-        const yu = HR.number(Nu, Xu);
-        if (Bu = ru.refs.get(yu), (Ru & Ku.ADD) === Ku.ADD) {
-          const Eu = uu.getInstanceType(Nu, Xu, mu);
-          Bu || (Bu = uu.createInstanceOfType(Eu)), ru.addRef(yu, Bu, Bu !== Qu || Ru === Ku.DELETE_AND_ADD && Bu === Qu)
+      if (Fk === tk.DELETE);
+      else if ("string" === typeof Xk) Jk = iF[Xk](wk, dk);
+      else if (rF(Xk)) Jk = function(kk, Fk, Bk) {
+        return zF(kk, (0, iF[kk.wire])(Fk, Bk))
+      }(Xk.quantized, wk, dk);
+      else if (uR.is(Xk)) {
+        const Bk = iF.number(wk, dk);
+        if (Jk = Vk.refs.get(Bk), (Fk & tk.ADD) === tk.ADD) {
+          const Rk = kk.getInstanceType(wk, dk, Xk);
+          Jk || (Jk = kk.createInstanceOfType(Rk)), Vk.addRef(Bk, Jk, Jk !== ak || Fk === tk.DELETE_AND_ADD && Jk === ak)
         }
       } else {
-        const yu = (Su = Object.keys(mu)[0], dR[Su]),
-          Eu = HR.number(Nu, Xu);
-        null !== uu.resyncVisited && function(uu, Ru) {
-          const yu = uu.resyncVisited;
-          yu.has(Ru) || yu.set(Ru, new Set)
-        }(uu, Eu);
-        const xu = ru.refs.has(Eu) ? Qu || ru.refs.get(Eu) : yu.constructor.initializeForDecoder();
-        if (Bu = xu.clone(!0), Bu[Tu] = Object.values(mu)[0], Qu) {
-          let uu = Qu[Ju];
-          if (void 0 !== uu && Eu !== uu) {
-            (Ru & Ku.DELETE) !== Ku.DELETE && ru.removeRef(uu);
-            const yu = Qu.entries();
-            let Eu;
+        const Bk = (ek = Object.keys(Xk)[0], YF[ek]),
+          Rk = iF.number(wk, dk);
+        null !== kk.resyncVisited && function(kk, Fk) {
+          const Bk = kk.resyncVisited;
+          Bk.has(Fk) || Bk.set(Fk, new Set)
+        }(kk, Rk);
+        const Ak = Vk.refs.has(Rk) ? ak || Vk.refs.get(Rk) : Bk.constructor.initializeForDecoder();
+        if (Jk = Ak.clone(!0), Jk[fk] = Object.values(Xk)[0], ak) {
+          let kk = ak[bk];
+          if (void 0 !== kk && Rk !== kk) {
+            (Fk & tk.DELETE) !== tk.DELETE && Vk.removeRef(kk);
+            const Bk = ak.entries();
+            let Rk;
             for (;
-              (Eu = yu.next()) && !Eu.done;) {
-              const [Ru, yu] = Eu.value;
-              "object" === typeof yu && (uu = yu[Ju]), Vu?.push({
-                ref: Qu,
-                refId: uu,
-                op: Ku.DELETE,
-                field: Ru,
+              (Rk = Bk.next()) && !Rk.done;) {
+              const [Fk, Bk] = Rk.value;
+              "object" === typeof Bk && (kk = Bk[bk]), sk?.push({
+                ref: ak,
+                refId: kk,
+                op: tk.DELETE,
+                field: Fk,
                 value: void 0,
-                previousValue: yu
+                previousValue: Bk
               })
             }
           }
         }
-        ru.addRef(Eu, Bu, xu !== Qu || Ru === Ku.DELETE_AND_ADD && xu === Qu)
+        Vk.addRef(Rk, Jk, Ak !== ak || Fk === tk.DELETE_AND_ADD && Ak === ak)
       }
-      var Su;
-      return Bu
+      var ek;
+      return Jk
     }
-    const qy = function(uu, Ru, yu, Eu, Ku) {
-        const Qu = Ru[yu.offset++],
-          mu = Eu.constructor[Symbol.metadata],
-          Ju = Qu >> 6 << 6,
-          Nu = Qu % (Ju || 255),
-          Xu = mu[Nu];
-        if (void 0 === Xu) return console.warn("@colyseus/schema: field not defined at", {
-          index: Nu,
-          ref: Eu.constructor.name,
-          metadata: mu
+    const lB = function(kk, Fk, Bk, Rk, tk) {
+        const ak = Fk[Bk.offset++],
+          Xk = Rk.constructor[Symbol.metadata],
+          bk = ak >> 6 << 6,
+          wk = ak % (bk || 255),
+          dk = Xk[wk];
+        if (void 0 === dk) return console.warn("@colyseus/schema: field not defined at", {
+          index: wk,
+          ref: Rk.constructor.name,
+          metadata: Xk
         }), -1;
-        const Vu = !0 === Xu.deprecated,
-          ru = Vu ? void 0 : Eu[Bu](Nu),
-          xu = oy(uu, Ju, Eu, Nu, ru, Xu.type, Ru, yu, Ku);
-        Vu || (null !== xu && void 0 !== xu && (Eu[Xu.name] = xu), ru !== xu && Ku?.push({
-          ref: Eu,
-          refId: uu.currentRefId,
-          op: Ju,
-          field: Xu.name,
-          value: xu,
-          previousValue: ru
+        const sk = !0 === dk.deprecated,
+          Vk = sk ? void 0 : Rk[Jk](wk),
+          Ak = jB(kk, bk, Rk, wk, Vk, dk.type, Fk, Bk, tk);
+        sk || (null !== Ak && void 0 !== Ak && (Rk[dk.name] = Ak), Vk !== Ak && tk?.push({
+          ref: Rk,
+          refId: kk.currentRefId,
+          op: bk,
+          field: dk.name,
+          value: Ak,
+          previousValue: Vk
         }))
       },
-      Oy = function(uu, Ru, yu, Eu, Qu) {
-        const mu = Eu[Wu] ?? Eu,
-          Ju = Ru[yu.offset++];
-        if (Ju === Ku.CLEAR) return uu.removeChildRefs(mu, Qu), void mu.clear();
-        const Nu = HR.number(Ru, yu),
-          Xu = mu[Tu],
-          Vu = mu.constructor.COLLECTION_KIND;
-        let ru;
-        (Ju & Ku.ADD) === Ku.ADD ? Vu === Zy ? (ru = HR.string(Ru, yu), mu.setIndex(Nu, ru)) : ru = Nu : ru = mu.getIndex(Nu);
-        const xu = mu[Bu](Nu),
-          Su = oy(uu, Ju, Eu, Nu, xu, Xu, Ru, yu, Qu);
-        if (null !== uu.resyncVisited && zy(uu, Eu, Ju, ru, xu, Su, Qu), null !== Su && void 0 !== Su) switch (Vu) {
-          case Zy:
-            mu.$items.set(ru, Su);
+      nB = function(kk, Fk, Bk, Rk, ak) {
+        const Xk = Rk[mk] ?? Rk,
+          bk = Fk[Bk.offset++];
+        if (bk === tk.CLEAR) return kk.removeChildRefs(Xk, ak), void Xk.clear();
+        const wk = iF.number(Fk, Bk),
+          dk = Xk[fk],
+          sk = Xk.constructor.COLLECTION_KIND;
+        let Vk;
+        (bk & tk.ADD) === tk.ADD ? sk === CB ? (Vk = iF.string(Fk, Bk), Xk.setIndex(wk, Vk)) : Vk = wk : Vk = Xk.getIndex(wk);
+        const Ak = Xk[Jk](wk),
+          ek = jB(kk, bk, Rk, wk, Ak, dk, Fk, Bk, ak);
+        if (null !== kk.resyncVisited && PB(kk, Rk, bk, Vk, Ak, ek, ak), null !== ek && void 0 !== ek) switch (sk) {
+          case CB:
+            Xk.$items.set(Vk, ek);
             break;
-          case hy:
-            mu.$setAt(Nu, Su, null !== uu.resyncVisited && Ju === Ku.ADD ? Ku.REPLACE : Ju);
+          case ZB:
+            Xk.$setAt(wk, ek, null !== kk.resyncVisited && bk === tk.ADD ? tk.REPLACE : bk);
             break;
-          case Py:
-          case iy:
-          case Yy:
-            mu.$items.has(Nu) || (mu.$items.set(Nu, Su), "number" === typeof mu.$refId && Nu >= mu.$refId && (mu.$refId = Nu + 1));
+          case pB:
+          case KB:
+          case xB:
+            Xk.$items.has(wk) || (Xk.$items.set(wk, ek), "number" === typeof Xk.$refId && wk >= Xk.$refId && (Xk.$refId = wk + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${mu.constructor?.name} \u2014 item at index ${Nu} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${Xk.constructor?.name} \u2014 item at index ${wk} was not stored.`)
         }
-        xu !== Su && Qu?.push({
-          ref: Eu,
-          refId: uu.currentRefId,
-          op: Ju,
-          dynamicIndex: ru,
-          value: Su,
-          previousValue: xu
+        Ak !== ek && ak?.push({
+          ref: Rk,
+          refId: kk.currentRefId,
+          op: bk,
+          dynamicIndex: Vk,
+          value: ek,
+          previousValue: Ak
         })
       },
-      vy = function(uu, Ru, yu, Eu, Qu) {
-        const mu = Eu[Wu] ?? Eu;
-        let Ju, Nu = Ru[yu.offset++];
-        if (Nu === Ku.CLEAR) return uu.removeChildRefs(mu, Qu), void mu.clear();
-        if (Nu === Ku.REVERSE) return void mu.items.reverse();
-        if (Nu === Ku.DELETE_BY_REFID) {
-          const Nu = HR.number(Ru, yu),
-            Xu = uu.root.refs.get(Nu);
-          if (void 0 === Xu) return;
-          if (uu.root.removeRef(Nu), Ju = mu.findIndex((uu => uu === Xu)), -1 === Ju) return;
-          return mu[xu](Ju), void Qu?.push({
-            ref: Eu,
-            refId: uu.currentRefId,
-            op: Ku.DELETE,
-            dynamicIndex: Ju,
+      IB = function(kk, Fk, Bk, Rk, ak) {
+        const Xk = Rk[mk] ?? Rk;
+        let bk, wk = Fk[Bk.offset++];
+        if (wk === tk.CLEAR) return kk.removeChildRefs(Xk, ak), void Xk.clear();
+        if (wk === tk.REVERSE) return void Xk.items.reverse();
+        if (wk === tk.DELETE_BY_REFID) {
+          const wk = iF.number(Fk, Bk),
+            dk = kk.root.refs.get(wk);
+          if (void 0 === dk) return;
+          if (kk.root.removeRef(wk), bk = Xk.findIndex((kk => kk === dk)), -1 === bk) return;
+          return Xk[Ak](bk), void ak?.push({
+            ref: Rk,
+            refId: kk.currentRefId,
+            op: tk.DELETE,
+            dynamicIndex: bk,
             value: void 0,
-            previousValue: Xu
+            previousValue: dk
           })
         }
-        if (Nu === Ku.ADD_BY_REFID) {
-          const Eu = HR.number(Ru, yu),
-            Ku = uu.root.refs.get(Eu);
-          Ku && (Ju = mu.findIndex((uu => uu === Ku))), -1 !== Ju && void 0 !== Ju || (Ju = mu.length)
-        } else Ju = HR.number(Ru, yu);
-        const Xu = mu[Tu];
-        let Vu = Ju;
-        const ru = mu.items[Ju],
-          Bu = oy(uu, Nu, Eu, Ju, ru, Xu, Ru, yu, Qu);
-        null !== uu.resyncVisited && zy(uu, Eu, Nu, Ju, ru, Bu, Qu), null !== Bu && void 0 !== Bu && Bu !== ru && mu.$setAt(Ju, Bu, null !== uu.resyncVisited && Nu === Ku.ADD ? Ku.REPLACE : Nu), ru !== Bu && Qu?.push({
-          ref: Eu,
-          refId: uu.currentRefId,
-          op: Nu,
-          dynamicIndex: Vu,
-          value: Bu,
-          previousValue: ru
+        if (wk === tk.ADD_BY_REFID) {
+          const Rk = iF.number(Fk, Bk),
+            tk = kk.root.refs.get(Rk);
+          tk && (bk = Xk.findIndex((kk => kk === tk))), -1 !== bk && void 0 !== bk || (bk = Xk.length)
+        } else bk = iF.number(Fk, Bk);
+        const dk = Xk[fk];
+        let sk = bk;
+        const Vk = Xk.items[bk],
+          Jk = jB(kk, wk, Rk, bk, Vk, dk, Fk, Bk, ak);
+        null !== kk.resyncVisited && PB(kk, Rk, wk, bk, Vk, Jk, ak), null !== Jk && void 0 !== Jk && Jk !== Vk && Xk.$setAt(bk, Jk, null !== kk.resyncVisited && wk === tk.ADD ? tk.REPLACE : wk), Vk !== Jk && ak?.push({
+          ref: Rk,
+          refId: kk.currentRefId,
+          op: wk,
+          dynamicIndex: sk,
+          value: Jk,
+          previousValue: Vk
         })
       };
-    class ay extends Error {}
+    class QB extends Error {}
 
-    function fy(uu, Ru, yu, Eu) {
-      if (!(uu instanceof Ru)) throw new ay(`a '${Ru.name}' was expected, but '${uu&&uu.constructor.name}' was provided in ${yu.constructor.name}#${Eu}`)
+    function kR(kk, Fk, Bk, Rk) {
+      if (!(kk instanceof Fk)) throw new QB(`a '${Fk.name}' was expected, but '${kk&&kk.constructor.name}' was provided in ${Bk.constructor.name}#${Rk}`)
     }
-    const uE = (uu, Ru) => {
-        const yu = uu.toString(),
-          Eu = Ru.toString();
-        return yu < Eu ? -1 : yu > Eu ? 1 : 0
+    const FR = (kk, Fk) => {
+        const Bk = kk.toString(),
+          Rk = Fk.toString();
+        return Bk < Rk ? -1 : Bk > Rk ? 1 : 0
       },
-      RE = {
-        get: (uu, Ru) => "symbol" === typeof Ru || isNaN(Ru) ? Reflect.get(uu, Ru) : uu.items[Ru],
-        set: (uu, Ru, yu) => {
-          if ("symbol" !== typeof Ru && !isNaN(Ru)) {
-            if (void 0 === yu || null === yu) uu.$deleteAt(Ru);
+      BR = {
+        get: (kk, Fk) => "symbol" === typeof Fk || isNaN(Fk) ? Reflect.get(kk, Fk) : kk.items[Fk],
+        set: (kk, Fk, Bk) => {
+          if ("symbol" !== typeof Fk && !isNaN(Fk)) {
+            if (void 0 === Bk || null === Bk) kk.$deleteAt(Fk);
             else {
-              let Eu;
-              if (yu[pu]) {
-                fy(yu, uu[Tu], uu, Ru);
-                const Qu = uu.items[Ru];
-                uu.isMovingItems ? (Eu = uu.$wireIndex(Number(Ru)), void 0 !== Qu ? yu[pu].isNew ? uu[pu].indexedOperation(Eu, Ku.MOVE_AND_ADD) : (uu[pu].getChange(Eu) & Ku.DELETE) === Ku.DELETE ? uu[pu].indexedOperation(Eu, Ku.DELETE_AND_MOVE) : uu[pu].indexedOperation(Eu, Ku.MOVE) : yu[pu].isNew && uu[pu].indexedOperation(Eu, Ku.ADD), yu[pu].setParent(uu, uu[pu].root, Eu)) : Eu = uu.$changeAt(Number(Ru), yu), void 0 !== Qu && Qu[pu].root?.remove(Qu[pu])
-              } else Eu = uu.$changeAt(Number(Ru), yu);
-              uu.items[Ru] = yu, void 0 !== Eu && (uu.tmpItems[Eu] = yu)
+              let Rk;
+              if (Bk[yk]) {
+                kR(Bk, kk[fk], kk, Fk);
+                const ak = kk.items[Fk];
+                kk.isMovingItems ? (Rk = kk.$wireIndex(Number(Fk)), void 0 !== ak ? Bk[yk].isNew ? kk[yk].indexedOperation(Rk, tk.MOVE_AND_ADD) : (kk[yk].getChange(Rk) & tk.DELETE) === tk.DELETE ? kk[yk].indexedOperation(Rk, tk.DELETE_AND_MOVE) : kk[yk].indexedOperation(Rk, tk.MOVE) : Bk[yk].isNew && kk[yk].indexedOperation(Rk, tk.ADD), Bk[yk].setParent(kk, kk[yk].root, Rk)) : Rk = kk.$changeAt(Number(Fk), Bk), void 0 !== ak && ak[yk].root?.remove(ak[yk])
+              } else Rk = kk.$changeAt(Number(Fk), Bk);
+              kk.items[Fk] = Bk, void 0 !== Rk && (kk.tmpItems[Rk] = Bk)
             }
             return !0
           }
-          return Reflect.set(uu, Ru, yu)
+          return Reflect.set(kk, Fk, Bk)
         },
-        deleteProperty: (uu, Ru) => ("number" === typeof Ru ? uu.$deleteAt(Ru) : delete uu[Ru], !0),
-        has: (uu, Ru) => "symbol" === typeof Ru || isNaN(Number(Ru)) ? Reflect.has(uu, Ru) : Reflect.has(uu.items, Ru)
+        deleteProperty: (kk, Fk) => ("number" === typeof Fk ? kk.$deleteAt(Fk) : delete kk[Fk], !0),
+        has: (kk, Fk) => "symbol" === typeof Fk || isNaN(Number(Fk)) ? Reflect.has(kk, Fk) : Reflect.has(kk.items, Fk)
       };
-    class yE {
-      [pu];
-      [Ju];
-      [Wu];
-      [Tu];
+    class RR {
+      [yk];
+      [bk];
+      [mk];
+      [fk];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[Xu] = Ly;
-      static[Vu] = vy;
-      static COLLECTION_KIND = hy;
-      static[ru](uu, Ru, yu) {
-        if (!yu) return !0;
-        const Eu = uu[Wu] ?? uu;
-        return "string" === typeof Eu[Tu] || yu.isChangeTreeVisible(Eu.tmpItems[Ru]?.[pu])
+      static[dk] = zB;
+      static[sk] = IB;
+      static COLLECTION_KIND = ZB;
+      static[Vk](kk, Fk, Bk) {
+        if (!Bk) return !0;
+        const Rk = kk[mk] ?? kk;
+        return "string" === typeof Rk[fk] || Bk.isChangeTreeVisible(Rk.tmpItems[Fk]?.[yk])
       }
-      static is(uu) {
-        return Array.isArray(uu) || void 0 !== uu.array
+      static is(kk) {
+        return Array.isArray(kk) || void 0 !== kk.array
       }
-      static from(uu) {
-        return new yE(...Array.from(uu))
+      static from(kk) {
+        return new RR(...Array.from(kk))
       }
       constructor() {
-        this[Tu] = void 0, this[Wu] = this;
-        const uu = new Proxy(this, RE);
-        return Object.defineProperty(this, pu, {
-          value: new Gy(uu, this),
+        this[fk] = void 0, this[mk] = this;
+        const kk = new Proxy(this, BR);
+        return Object.defineProperty(this, yk, {
+          value: new MB(kk, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), uu
+        }), arguments.length > 0 && this.push(...arguments), kk
       }
       static initializeForDecoder() {
-        const uu = Object.create(yE.prototype);
-        uu.items = [], uu.isMovingItems = !1, uu._needsCompaction = !1, uu[Tu] = void 0, uu[Wu] = uu;
-        const Ru = new Proxy(uu, RE);
-        return ny(uu, Ru), Ru
+        const kk = Object.create(RR.prototype);
+        kk.items = [], kk.isMovingItems = !1, kk._needsCompaction = !1, kk[fk] = void 0, kk[mk] = kk;
+        const Fk = new Proxy(kk, BR);
+        return UB(kk, Fk), Fk
       }
-      set length(uu) {
-        0 === uu ? this.clear() : uu < this.items.length ? this.splice(uu, this.length - uu) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(kk) {
+        0 === kk ? this.clear() : kk < this.items.length ? this.splice(kk, this.length - kk) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[pu].pause()
+        this[yk].pause()
       }
       resumeTracking() {
-        this[pu].resume()
+        this[yk].resume()
       }
-      untracked(uu) {
-        return this[pu].untracked(uu)
+      untracked(kk) {
+        return this[yk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[pu].paused
+        return this[yk].paused
       }
       push() {
-        const uu = this[Wu],
-          Ru = uu.items,
-          yu = uu.tmpItems,
-          Eu = uu[pu],
-          Qu = uu[Tu];
-        let mu = yu.length;
-        for (let Ju = 0, Nu = arguments.length; Ju < Nu; Ju++, mu++) {
-          const Nu = Ju < 0 || arguments.length <= Ju ? void 0 : arguments[Ju];
-          if (void 0 === Nu || null === Nu) return;
-          "object" === typeof Nu && Qu && fy(Nu, Qu, uu, Ju), Eu.indexedOperation(mu, Ku.ADD), Ru.push(Nu), yu.push(Nu), Nu[pu]?.setParent(this, Eu.root, mu)
+        const kk = this[mk],
+          Fk = kk.items,
+          Bk = kk.tmpItems,
+          Rk = kk[yk],
+          ak = kk[fk];
+        let Xk = Bk.length;
+        for (let bk = 0, wk = arguments.length; bk < wk; bk++, Xk++) {
+          const wk = bk < 0 || arguments.length <= bk ? void 0 : arguments[bk];
+          if (void 0 === wk || null === wk) return;
+          "object" === typeof wk && ak && kR(wk, ak, kk, bk), Rk.indexedOperation(Xk, tk.ADD), Fk.push(wk), Bk.push(wk), wk[yk]?.setParent(this, Rk.root, Xk)
         }
-        return mu
+        return Xk
       }
       pop() {
-        const uu = this[Wu],
-          Ru = uu.tmpItems,
-          yu = uu.deletedIndexes;
-        let Eu = -1;
-        for (let Qu = Ru.length - 1; Qu >= 0; Qu--)
-          if (!0 !== yu[Qu]) {
-            Eu = Qu;
+        const kk = this[mk],
+          Fk = kk.tmpItems,
+          Bk = kk.deletedIndexes;
+        let Rk = -1;
+        for (let ak = Fk.length - 1; ak >= 0; ak--)
+          if (!0 !== Bk[ak]) {
+            Rk = ak;
             break
-          } if (Eu < 0) return;
-        const Ku = uu.$isUnsentAdd(Eu);
-        return uu[pu].delete(Eu), Ku ? uu.$cancelAdd(Eu) : yu[Eu] = !0, uu.items.pop()
+          } if (Rk < 0) return;
+        const tk = kk.$isUnsentAdd(Rk);
+        return kk[yk].delete(Rk), tk ? kk.$cancelAdd(Rk) : Bk[Rk] = !0, kk.items.pop()
       }
-      at(uu) {
-        return uu < 0 && (uu += this.length), this.items[uu]
+      at(kk) {
+        return kk < 0 && (kk += this.length), this.items[kk]
       }
-      $wireIndex(uu) {
-        const Ru = this.deletedIndexes;
-        if (0 === Ru.length) return uu;
-        const yu = this.tmpItems;
-        let Eu = 0;
-        for (let Ku = 0; Ku < yu.length; Ku++)
-          if (!0 !== Ru[Ku]) {
-            if (Eu === uu) return Ku;
-            Eu++
-          } return yu.length + (uu - Eu)
+      $wireIndex(kk) {
+        const Fk = this.deletedIndexes;
+        if (0 === Fk.length) return kk;
+        const Bk = this.tmpItems;
+        let Rk = 0;
+        for (let tk = 0; tk < Bk.length; tk++)
+          if (!0 !== Fk[tk]) {
+            if (Rk === kk) return tk;
+            Rk++
+          } return Bk.length + (kk - Rk)
       }
-      $isUnsentAdd(uu) {
-        const Ru = this[pu];
-        return 0 === (576 & Ru.flags) && !Ru.paused && "string" !== typeof this[Tu] && Ru.operationAt(uu) === Ku.ADD
+      $isUnsentAdd(kk) {
+        const Fk = this[yk];
+        return 0 === (576 & Fk.flags) && !Fk.paused && "string" !== typeof this[fk] && Fk.operationAt(kk) === tk.ADD
       }
-      $cancelAdd(uu) {
-        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const yu = this[pu],
-          Eu = this.tmpItems[uu];
-        this.tmpItems.splice(uu, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(uu, 1), yu.removeAt(uu, 1);
-        const Ku = Eu?.[pu];
-        void 0 !== Ku && void 0 === Ku.root && Ku.removeParent(this), Ru && this.$reindexChildren(uu)
+      $cancelAdd(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const Bk = this[yk],
+          Rk = this.tmpItems[kk];
+        this.tmpItems.splice(kk, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(kk, 1), Bk.removeAt(kk, 1);
+        const tk = Rk?.[yk];
+        void 0 !== tk && void 0 === tk.root && tk.removeParent(this), Fk && this.$reindexChildren(kk)
       }
-      $reindexChildren(uu, Ru) {
-        if (!this[pu].hasFilteredFields) return;
-        if ("string" === typeof this[Tu]) return;
-        const yu = this.tmpItems,
-          Eu = yu.length;
-        if (void 0 !== Ru)
-          for (; uu < Eu && yu[uu] === Ru[uu];) uu++;
-        for (let Ku = uu; Ku < Eu; Ku++) yu[Ku]?.[pu]?.setParentIndex(this, Ku)
+      $reindexChildren(kk, Fk) {
+        if (!this[yk].hasFilteredFields) return;
+        if ("string" === typeof this[fk]) return;
+        const Bk = this.tmpItems,
+          Rk = Bk.length;
+        if (void 0 !== Fk)
+          for (; kk < Rk && Bk[kk] === Fk[kk];) kk++;
+        for (let tk = kk; tk < Rk; tk++) Bk[tk]?.[yk]?.setParentIndex(this, tk)
       }
-      $changeAt(uu, Ru) {
-        if (void 0 === Ru || null === Ru) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[uu] === Ru) return;
-        const yu = void 0 !== this.items[uu] ? "object" === typeof Ru ? Ku.DELETE_AND_ADD : Ku.REPLACE : Ku.ADD,
-          Eu = this.$wireIndex(uu),
-          Qu = this[pu];
-        return Qu.change(Eu, yu), Ru[pu]?.setParent(this, Qu.root, Eu), Eu
+      $changeAt(kk, Fk) {
+        if (void 0 === Fk || null === Fk) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[kk] === Fk) return;
+        const Bk = void 0 !== this.items[kk] ? "object" === typeof Fk ? tk.DELETE_AND_ADD : tk.REPLACE : tk.ADD,
+          Rk = this.$wireIndex(kk),
+          ak = this[yk];
+        return ak.change(Rk, Bk), Fk[yk]?.setParent(this, ak.root, Rk), Rk
       }
-      $deleteAt(uu, Ru) {
-        this[pu].delete(this.$wireIndex(uu), Ru)
+      $deleteAt(kk, Fk) {
+        this[yk].delete(this.$wireIndex(kk), Fk)
       }
-      $setAt(uu, Ru, yu) {
-        yu === Ku.ADD && void 0 !== this.items[uu] ? this.items.splice(uu, 0, Ru) : yu === Ku.DELETE_AND_MOVE ? (this.items.splice(uu, 1), this.items[uu] = Ru) : (uu > this.items.length && (this._needsCompaction = !0), this.items[uu] = Ru)
+      $setAt(kk, Fk, Bk) {
+        Bk === tk.ADD && void 0 !== this.items[kk] ? this.items.splice(kk, 0, Fk) : Bk === tk.DELETE_AND_MOVE ? (this.items.splice(kk, 1), this.items[kk] = Fk) : (kk > this.items.length && (this._needsCompaction = !0), this.items[kk] = Fk)
       }
       clear() {
-        const uu = this[Wu];
-        if (0 === uu.items.length) return;
-        const Ru = uu[pu];
-        Ru.forEachChild(((uu, yu) => {
-          Ru.root?.remove(uu)
-        })), Ru.discard(), Ru.operation(Ku.CLEAR), uu.items.length = 0, uu.tmpItems.length = 0
-      } [Hu]() {
-        const uu = this[Wu] ?? this,
-          Ru = uu[pu];
-        if (Ru.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const yu = uu.items;
-        for (let Eu = 0; Eu < yu.length; Eu++) yu[Eu]?.[Hu]?.();
-        uu.items.length = 0, uu.tmpItems.length = 0, uu.deletedIndexes.length = 0, Ru.recycle(), uu[Ju] = void 0
+        const kk = this[mk];
+        if (0 === kk.items.length) return;
+        const Fk = kk[yk];
+        Fk.forEachChild(((kk, Bk) => {
+          Fk.root?.remove(kk)
+        })), Fk.discard(), Fk.operation(tk.CLEAR), kk.items.length = 0, kk.tmpItems.length = 0
+      } [vk]() {
+        const kk = this[mk] ?? this,
+          Fk = kk[yk];
+        if (Fk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const Bk = kk.items;
+        for (let Rk = 0; Rk < Bk.length; Rk++) Bk[Rk]?.[vk]?.();
+        kk.items.length = 0, kk.tmpItems.length = 0, kk.deletedIndexes.length = 0, Fk.recycle(), kk[bk] = void 0
       }
       concat() {
-        return new yE(...this.items.concat(...arguments))
+        return new RR(...this.items.concat(...arguments))
       }
-      join(uu) {
-        return this.items.join(uu)
+      join(kk) {
+        return this.items.join(kk)
       }
       reverse() {
-        const uu = this[Wu],
-          Ru = uu[pu];
-        if (Ru.has() || uu.deletedIndexes.length > 0) {
-          const Ru = uu.items.slice().reverse();
-          return this.clear(), this.push(...Ru), this
+        const kk = this[mk],
+          Fk = kk[yk];
+        if (Fk.has() || kk.deletedIndexes.length > 0) {
+          const Fk = kk.items.slice().reverse();
+          return this.clear(), this.push(...Fk), this
         }
-        return Ru.operation(Ku.REVERSE), uu.items.reverse(), uu.tmpItems.reverse(), uu.$reindexChildren(0), this
+        return Fk.operation(tk.REVERSE), kk.items.reverse(), kk.tmpItems.reverse(), kk.$reindexChildren(0), this
       }
       shift() {
-        const uu = this[Wu],
-          Ru = uu.items;
-        if (0 === Ru.length) return;
-        const yu = uu[pu],
-          Eu = uu.deletedIndexes;
-        let Qu = 0;
-        for (; !0 === Eu[Qu];) Qu++;
-        const mu = uu.$isUnsentAdd(Qu);
-        return yu.delete(Qu, Ku.DELETE), mu ? uu.$cancelAdd(Qu) : Eu[Qu] = !0, Ru.shift()
+        const kk = this[mk],
+          Fk = kk.items;
+        if (0 === Fk.length) return;
+        const Bk = kk[yk],
+          Rk = kk.deletedIndexes;
+        let ak = 0;
+        for (; !0 === Rk[ak];) ak++;
+        const Xk = kk.$isUnsentAdd(ak);
+        return Bk.delete(ak, tk.DELETE), Xk ? kk.$cancelAdd(ak) : Rk[ak] = !0, Fk.shift()
       }
-      slice(uu, Ru) {
-        const yu = new yE;
-        return yu.push(...this.items.slice(uu, Ru)), yu
+      slice(kk, Fk) {
+        const Bk = new RR;
+        return Bk.push(...this.items.slice(kk, Fk)), Bk
       }
       sort() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : uE;
-        const Ru = this[Wu];
-        Ru.isMovingItems = !0;
-        const yu = Ru[pu];
-        return Ru.items.sort(uu).forEach(((uu, Ru) => yu.change(Ru, Ku.REPLACE))), Ru.tmpItems.sort(uu), Ru.$reindexChildren(0), Ru.isMovingItems = !1, this
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : FR;
+        const Fk = this[mk];
+        Fk.isMovingItems = !0;
+        const Bk = Fk[yk];
+        return Fk.items.sort(kk).forEach(((kk, Fk) => Bk.change(Fk, tk.REPLACE))), Fk.tmpItems.sort(kk), Fk.$reindexChildren(0), Fk.isMovingItems = !1, this
       }
-      splice(uu, Ru) {
-        const yu = this[Wu],
-          Eu = yu[pu],
-          Qu = yu.items,
-          mu = yu.tmpItems,
-          Ju = yu.deletedIndexes,
-          Nu = Qu.length,
-          Xu = mu.length;
-        for (var Vu = arguments.length, ru = new Array(Vu > 2 ? Vu - 2 : 0), Bu = 2; Bu < Vu; Bu++) ru[Bu - 2] = arguments[Bu];
-        const xu = ru.length,
-          Su = [];
-        for (let Ku = 0; Ku < Xu; Ku++) !0 !== Ju[Ku] && Su.push(Ku);
-        let Tu;
-        if (Nu > uu) {
-          void 0 === Ru && (Ru = Nu - uu);
-          for (let Qu = uu; Qu < uu + Ru; Qu++) {
-            const uu = Su[Qu],
-              Ru = yu.$isUnsentAdd(uu);
-            Eu.delete(uu, Ku.DELETE), Ru ? (Tu ??= []).push(uu) : Ju[uu] = !0
+      splice(kk, Fk) {
+        const Bk = this[mk],
+          Rk = Bk[yk],
+          ak = Bk.items,
+          Xk = Bk.tmpItems,
+          bk = Bk.deletedIndexes,
+          wk = ak.length,
+          dk = Xk.length;
+        for (var sk = arguments.length, Vk = new Array(sk > 2 ? sk - 2 : 0), Jk = 2; Jk < sk; Jk++) Vk[Jk - 2] = arguments[Jk];
+        const Ak = Vk.length,
+          ek = [];
+        for (let tk = 0; tk < dk; tk++) !0 !== bk[tk] && ek.push(tk);
+        let fk;
+        if (wk > kk) {
+          void 0 === Fk && (Fk = wk - kk);
+          for (let ak = kk; ak < kk + Fk; ak++) {
+            const kk = ek[ak],
+              Fk = Bk.$isUnsentAdd(kk);
+            Rk.delete(kk, tk.DELETE), Fk ? (fk ??= []).push(kk) : bk[kk] = !0
           }
-        } else Ru = 0;
-        if (xu > 0) {
-          const Qu = Su[uu] ?? Nu,
-            Xu = Math.min(xu, Ru);
-          for (let uu = 0; uu < Xu; uu++) {
-            const Ru = Qu + uu;
-            let yu;
-            const Nu = void 0 !== Tu ? Tu.indexOf(Ru) : -1; - 1 !== Nu ? (Tu.splice(Nu, 1), yu = Ku.ADD) : yu = Ju[Ru] ? Ku.DELETE_AND_ADD : Ku.ADD, Eu.indexedOperation(Ru, yu), mu[Ru] = ru[uu], Ju[Ru] = !1, ru[uu][pu]?.setParent(this, Eu.root, Ru)
+        } else Fk = 0;
+        if (Ak > 0) {
+          const ak = ek[kk] ?? wk,
+            dk = Math.min(Ak, Fk);
+          for (let kk = 0; kk < dk; kk++) {
+            const Fk = ak + kk;
+            let Bk;
+            const wk = void 0 !== fk ? fk.indexOf(Fk) : -1; - 1 !== wk ? (fk.splice(wk, 1), Bk = tk.ADD) : Bk = bk[Fk] ? tk.DELETE_AND_ADD : tk.ADD, Rk.indexedOperation(Fk, Bk), Xk[Fk] = Vk[kk], bk[Fk] = !1, Vk[kk][yk]?.setParent(this, Rk.root, Fk)
           }
-          const Vu = xu - Xu;
-          if (Vu > 0) {
-            const uu = Qu + Xu;
-            Eu.insertAt(uu, Vu);
-            for (let Ru = 0; Ru < Vu; Ru++) ru[Xu + Ru][pu]?.setParent(this, Eu.root, uu + Ru);
-            Ju.length > 0 && Ju.splice(uu, 0, ...new Array(Vu).fill(!1)), mu.splice(uu, 0, ...ru.slice(Xu)), yu.$reindexChildren(uu + Vu)
+          const sk = Ak - dk;
+          if (sk > 0) {
+            const kk = ak + dk;
+            Rk.insertAt(kk, sk);
+            for (let Fk = 0; Fk < sk; Fk++) Vk[dk + Fk][yk]?.setParent(this, Rk.root, kk + Fk);
+            bk.length > 0 && bk.splice(kk, 0, ...new Array(sk).fill(!1)), Xk.splice(kk, 0, ...Vk.slice(dk)), Bk.$reindexChildren(kk + sk)
           }
         }
-        if (void 0 !== Tu && Tu.length > 0) {
-          for (let uu = Tu.length - 1; uu >= 0; uu--) yu.$cancelAdd(Tu[uu], !1);
-          yu.$reindexChildren(Tu[0])
+        if (void 0 !== fk && fk.length > 0) {
+          for (let kk = fk.length - 1; kk >= 0; kk--) Bk.$cancelAdd(fk[kk], !1);
+          Bk.$reindexChildren(fk[0])
         }
-        return Eu.root?.enqueueChangeTree(Eu), Qu.splice(uu, Ru, ...ru)
+        return Rk.root?.enqueueChangeTree(Rk), ak.splice(kk, Fk, ...Vk)
       }
       unshift() {
-        const uu = this[Wu],
-          Ru = uu[pu];
-        Ru.unshift(arguments.length);
-        for (let Eu = 0; Eu < arguments.length; Eu++)(Eu < 0 || arguments.length <= Eu ? void 0 : arguments[Eu])?.[pu]?.setParent(this, Ru.root, Eu);
-        const yu = uu.deletedIndexes;
-        return yu.length > 0 && yu.unshift(...new Array(arguments.length).fill(!1)), uu.tmpItems.unshift(...arguments), uu.$reindexChildren(arguments.length), uu.items.unshift(...arguments)
+        const kk = this[mk],
+          Fk = kk[yk];
+        Fk.unshift(arguments.length);
+        for (let Rk = 0; Rk < arguments.length; Rk++)(Rk < 0 || arguments.length <= Rk ? void 0 : arguments[Rk])?.[yk]?.setParent(this, Fk.root, Rk);
+        const Bk = kk.deletedIndexes;
+        return Bk.length > 0 && Bk.unshift(...new Array(arguments.length).fill(!1)), kk.tmpItems.unshift(...arguments), kk.$reindexChildren(arguments.length), kk.items.unshift(...arguments)
       }
-      indexOf(uu, Ru) {
-        return this.items.indexOf(uu, Ru)
+      indexOf(kk, Fk) {
+        return this.items.indexOf(kk, Fk)
       }
-      lastIndexOf(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(uu, Ru)
+      lastIndexOf(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(kk, Fk)
       }
-      every(uu, Ru) {
-        return this.items.every(uu, Ru)
+      every(kk, Fk) {
+        return this.items.every(kk, Fk)
       }
-      some(uu, Ru) {
-        return this.items.some(uu, Ru)
+      some(kk, Fk) {
+        return this.items.some(kk, Fk)
       }
-      forEach(uu, Ru) {
-        return this.items.forEach(uu, Ru)
+      forEach(kk, Fk) {
+        return this.items.forEach(kk, Fk)
       }
-      map(uu, Ru) {
-        return this.items.map(uu, Ru)
+      map(kk, Fk) {
+        return this.items.map(kk, Fk)
       }
-      filter(uu, Ru) {
-        return this.items.filter(uu, Ru)
+      filter(kk, Fk) {
+        return this.items.filter(kk, Fk)
       }
-      reduce(uu, Ru) {
+      reduce(kk, Fk) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(uu, Ru) {
+      reduceRight(kk, Fk) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(uu, Ru) {
-        return this.items.find(uu, Ru)
+      find(kk, Fk) {
+        return this.items.find(kk, Fk)
       }
-      findIndex(uu, Ru) {
-        return this.items.findIndex(uu, Ru)
+      findIndex(kk, Fk) {
+        return this.items.findIndex(kk, Fk)
       }
-      fill(uu, Ru, yu) {
+      fill(kk, Fk, Bk) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(uu, Ru, yu) {
+      copyWithin(kk, Fk, Bk) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return yE
+        return RR
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(uu, Ru) {
-        return this.items.includes(uu, Ru)
+      includes(kk, Fk) {
+        return this.items.includes(kk, Fk)
       }
-      flatMap(uu, Ru) {
+      flatMap(kk, Fk) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(uu) {
+      flat(kk) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
+        for (var kk = arguments.length, Fk = new Array(kk), Bk = 0; Bk < kk; Bk++) Fk[Bk] = arguments[Bk];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(uu, Ru) {
-        const yu = this.items.slice();
-        return uu < 0 && (uu += this.length), yu[uu] = Ru, new yE(...yu)
+      with(kk, Fk) {
+        const Bk = this.items.slice();
+        return kk < 0 && (kk += this.length), Bk[kk] = Fk, new RR(...Bk)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(uu) {
-        return this.items.slice().sort(uu)
+      toSorted(kk) {
+        return this.items.slice().sort(kk)
       }
-      toSpliced(uu, Ru) {
-        for (var yu = arguments.length, Eu = new Array(yu > 2 ? yu - 2 : 0), Ku = 2; Ku < yu; Ku++) Eu[Ku - 2] = arguments[Ku];
-        const Qu = this.items.slice();
-        return Qu.splice.apply(Qu, arguments), Qu
+      toSpliced(kk, Fk) {
+        for (var Bk = arguments.length, Rk = new Array(Bk > 2 ? Bk - 2 : 0), tk = 2; tk < Bk; tk++) Rk[tk - 2] = arguments[tk];
+        const ak = this.items.slice();
+        return ak.splice.apply(ak, arguments), ak
       }
       shuffle() {
-        return this.move((uu => {
-          let Ru = this.items.length;
-          for (; 0 != Ru;) {
-            let uu = Math.floor(Math.random() * Ru);
-            Ru--, [this[Ru], this[uu]] = [this[uu], this[Ru]]
+        return this.move((kk => {
+          let Fk = this.items.length;
+          for (; 0 != Fk;) {
+            let kk = Math.floor(Math.random() * Fk);
+            Fk--, [this[Fk], this[kk]] = [this[kk], this[Fk]]
           }
         }))
       }
-      move(uu) {
-        return this.isMovingItems = !0, uu(this), this.isMovingItems = !1, this
-      } [Bu](uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const yu = this[Wu] ?? this;
-        return Ru || yu.deletedIndexes[uu] ? yu.items[uu] : yu.tmpItems[uu] || yu.items[uu]
-      } [xu](uu) {
-        const Ru = this[Wu] ?? this;
-        Ru.items[uu] = void 0, Ru._needsCompaction = !0
-      } [ju]() {
-        const uu = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, uu), this.deletedIndexes.length = 0)
-      } [du]() {
-        const uu = this[Wu] ?? this;
-        uu._needsCompaction && (uu._needsCompaction = !1, uu.items = uu.items.filter((uu => void 0 !== uu)))
-      } [Su](uu, Ru, yu) {
-        const Eu = this[Wu] ?? this,
-          Ku = Eu.items;
-        let Qu = !1;
-        for (let mu = 0; mu < Ku.length; mu++) {
-          const Ju = Ku[mu];
-          uu.has(mu) ? yu(Ju) : (Qu = !0, Ru(Ju, mu), Eu[xu](mu))
+      move(kk) {
+        return this.isMovingItems = !0, kk(this), this.isMovingItems = !1, this
+      } [Jk](kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Bk = this[mk] ?? this;
+        return Fk || Bk.deletedIndexes[kk] ? Bk.items[kk] : Bk.tmpItems[kk] || Bk.items[kk]
+      } [Ak](kk) {
+        const Fk = this[mk] ?? this;
+        Fk.items[kk] = void 0, Fk._needsCompaction = !0
+      } [Wk]() {
+        const kk = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, kk), this.deletedIndexes.length = 0)
+      } [ik]() {
+        const kk = this[mk] ?? this;
+        kk._needsCompaction && (kk._needsCompaction = !1, kk.items = kk.items.filter((kk => void 0 !== kk)))
+      } [ek](kk, Fk, Bk) {
+        const Rk = this[mk] ?? this,
+          tk = Rk.items;
+        let ak = !1;
+        for (let Xk = 0; Xk < tk.length; Xk++) {
+          const bk = tk[Xk];
+          kk.has(Xk) ? Bk(bk) : (ak = !0, Fk(bk, Xk), Rk[Ak](Xk))
         }
-        Qu && Eu[du]()
+        ak && Rk[ik]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((uu => "function" === typeof uu.toJSON ? uu.toJSON() : uu))
+        return this.toArray().map((kk => "function" === typeof kk.toJSON ? kk.toJSON() : kk))
       }
-      clone(uu) {
-        let Ru;
-        return uu ? (Ru = new yE, Ru.push(...this.items)) : Ru = new yE(...this.map((uu => uu[pu] ? uu.clone() : uu))), Ru
+      clone(kk) {
+        let Fk;
+        return kk ? (Fk = new RR, Fk.push(...this.items)) : Fk = new RR(...this.map((kk => kk[yk] ? kk.clone() : kk))), Fk
       }
     }
-    CR("array", {
-      constructor: yE
+    LF("array", {
+      constructor: RR
     });
-    class EE {
+    class tR {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(uu) {
-        const Ru = this.indexByKey[uu];
-        return void 0 === Ru ? void 0 : Ru
+      indexOf(kk) {
+        const Fk = this.indexByKey[kk];
+        return void 0 === Fk ? void 0 : Fk
       }
-      assign(uu) {
-        const Ru = this.nextIndex++;
-        return this.indexByKey[uu] = Ru, this.keyByIndex.set(Ru, uu), Ru
+      assign(kk) {
+        const Fk = this.nextIndex++;
+        return this.indexByKey[kk] = Fk, this.keyByIndex.set(Fk, kk), Fk
       }
-      snapshot(uu, Ru) {
-        (this.snapshots ??= new Map).set(uu, Ru)
+      snapshot(kk, Fk) {
+        (this.snapshots ??= new Map).set(kk, Fk)
       }
-      forgetSnapshot(uu) {
-        this.snapshots?.delete(uu)
+      forgetSnapshot(kk) {
+        this.snapshots?.delete(kk)
       }
-      snapshotAt(uu) {
-        return this.snapshots?.get(uu)
+      snapshotAt(kk) {
+        return this.snapshots?.get(kk)
       }
-      setIndex(uu, Ru) {
-        this.keyByIndex.set(uu, Ru), this.indexByKey[Ru] = uu
+      setIndex(kk, Fk) {
+        this.keyByIndex.set(kk, Fk), this.indexByKey[Fk] = kk
       }
-      keyOf(uu) {
-        return this.keyByIndex.get(uu)
+      keyOf(kk) {
+        return this.keyByIndex.get(kk)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [uu] of this.snapshots) {
-            const Ru = this.keyByIndex.get(uu);
-            void 0 !== Ru && (delete this.indexByKey[Ru], this.keyByIndex.delete(uu))
+          for (const [kk] of this.snapshots) {
+            const Fk = this.keyByIndex.get(kk);
+            void 0 !== Fk && (delete this.indexByKey[Fk], this.keyByIndex.delete(kk))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class KE {
-      [pu];
-      [Ju];
+    class aR {
+      [yk];
+      [bk];
       childType;
-      [Tu];
+      [fk];
       $items = new Map;
-      journal = new EE;
+      journal = new tR;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(uu) {
-        (this._stream ??= AR()).maxPerTick = uu
+      set maxPerTick(kk) {
+        (this._stream ??= SF()).maxPerTick = kk
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(uu) {
-        (this._stream ??= AR()).priority = uu
+      set priority(kk) {
+        (this._stream ??= SF()).priority = kk
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[Xu] = ly;
-      static[Vu] = Oy;
-      static COLLECTION_KIND = Zy;
-      static[ru](uu, Ru, yu) {
-        if (!yu || "string" === typeof uu[Tu]) return !0;
-        const Eu = uu[Bu](Ru) ?? uu.journal.snapshotAt(Ru);
-        return yu.isChangeTreeVisible(Eu[pu])
+      static[dk] = TB;
+      static[sk] = nB;
+      static COLLECTION_KIND = CB;
+      static[Vk](kk, Fk, Bk) {
+        if (!Bk || "string" === typeof kk[fk]) return !0;
+        const Rk = kk[Jk](Fk) ?? kk.journal.snapshotAt(Fk);
+        return Bk.isChangeTreeVisible(Rk[yk])
       }
-      static is(uu) {
-        return void 0 !== uu.map
+      static is(kk) {
+        return void 0 !== kk.map
       }
-      constructor(uu) {
-        if (Object.defineProperty(this, pu, {
-            value: new Gy(this),
+      constructor(kk) {
+        if (Object.defineProperty(this, yk, {
+            value: new MB(this),
             enumerable: !1,
             writable: !0
-          }), this[Tu] = void 0, uu)
-          if (uu instanceof Map || uu instanceof KE) uu.forEach(((uu, Ru) => this.set(Ru, uu)));
+          }), this[fk] = void 0, kk)
+          if (kk instanceof Map || kk instanceof aR) kk.forEach(((kk, Fk) => this.set(Fk, kk)));
           else
-            for (const Ru in uu) this.set(Ru, uu[Ru])
+            for (const Fk in kk) this.set(Fk, kk[Fk])
       }
       static initializeForDecoder() {
-        const uu = Object.create(KE.prototype);
-        return uu.$items = new Map, uu.journal = new EE, uu[Tu] = void 0, ny(uu), uu
+        const kk = Object.create(aR.prototype);
+        return kk.$items = new Map, kk.journal = new tR, kk[fk] = void 0, UB(kk), kk
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return KE
+        return aR
       }
-      set(uu, Ru) {
-        if (void 0 === Ru || null === Ru) throw new Error(`MapSchema#set('${uu}', ${Ru}): trying to set ${Ru} value on '${uu}'.`);
-        "object" === typeof Ru && this[Tu] && fy(Ru, this[Tu], this, uu), uu = uu.toString();
-        const yu = this[pu],
-          Eu = void 0 !== Ru[pu],
-          Qu = this.journal;
-        let mu, Ju = Qu.indexOf(uu);
-        if (void 0 !== Ju) {
-          mu = Ku.REPLACE;
-          const yu = this.$items.get(uu);
-          if (yu === Ru) return;
-          Eu && (mu = Ku.DELETE_AND_ADD, void 0 !== yu && yu[pu].root?.remove(yu[pu])), void 0 !== Qu.snapshotAt(Ju) && Qu.forgetSnapshot(Ju)
-        } else Ju = Qu.assign(uu), mu = Ku.ADD;
-        return this.$items.set(uu, Ru), mu === Ku.ADD && yu.isStreamCollection ? void 0 !== yu.root && MR(this, yu.root, Ju) : yu.change(Ju, mu), Eu && Ru[pu].setParent(this, yu.root, Ju), this
+      set(kk, Fk) {
+        if (void 0 === Fk || null === Fk) throw new Error(`MapSchema#set('${kk}', ${Fk}): trying to set ${Fk} value on '${kk}'.`);
+        "object" === typeof Fk && this[fk] && kR(Fk, this[fk], this, kk), kk = kk.toString();
+        const Bk = this[yk],
+          Rk = void 0 !== Fk[yk],
+          ak = this.journal;
+        let Xk, bk = ak.indexOf(kk);
+        if (void 0 !== bk) {
+          Xk = tk.REPLACE;
+          const Bk = this.$items.get(kk);
+          if (Bk === Fk) return;
+          Rk && (Xk = tk.DELETE_AND_ADD, void 0 !== Bk && Bk[yk].root?.remove(Bk[yk])), void 0 !== ak.snapshotAt(bk) && ak.forgetSnapshot(bk)
+        } else bk = ak.assign(kk), Xk = tk.ADD;
+        return this.$items.set(kk, Fk), Xk === tk.ADD && Bk.isStreamCollection ? void 0 !== Bk.root && HF(this, Bk.root, bk) : Bk.change(bk, Xk), Rk && Fk[yk].setParent(this, Bk.root, bk), this
       }
-      get(uu) {
-        return this.$items.get(uu)
+      get(kk) {
+        return this.$items.get(kk)
       }
-      getOrInsert(uu, Ru) {
-        return this.$items.has(uu) ? this.$items.get(uu) : (this.set(uu, Ru), Ru)
+      getOrInsert(kk, Fk) {
+        return this.$items.has(kk) ? this.$items.get(kk) : (this.set(kk, Fk), Fk)
       }
-      getOrInsertComputed(uu, Ru) {
-        if (this.$items.has(uu)) return this.$items.get(uu);
-        const yu = Ru(uu);
-        return this.set(uu, yu), yu
+      getOrInsertComputed(kk, Fk) {
+        if (this.$items.has(kk)) return this.$items.get(kk);
+        const Bk = Fk(kk);
+        return this.set(kk, Bk), Bk
       }
-      delete(uu) {
-        if (!this.$items.has(uu)) return !1;
-        const Ru = this.journal.indexOf(uu),
-          yu = this.$items.get(uu),
-          Eu = this[pu];
-        if (Eu.isStreamCollection) {
-          const Ku = Eu.root;
-          let Qu = !1;
-          return void 0 !== Ku && (Qu = IR(this, Ku, this[Ju], Ru)), void 0 !== yu?.[pu] && Ku?.remove(yu[pu]), this.$items.delete(uu), Qu || this.journal.snapshot(Ru, yu), !0
+      delete(kk) {
+        if (!this.$items.has(kk)) return !1;
+        const Fk = this.journal.indexOf(kk),
+          Bk = this.$items.get(kk),
+          Rk = this[yk];
+        if (Rk.isStreamCollection) {
+          const tk = Rk.root;
+          let ak = !1;
+          return void 0 !== tk && (ak = uF(this, tk, this[bk], Fk)), void 0 !== Bk?.[yk] && tk?.remove(Bk[yk]), this.$items.delete(kk), ak || this.journal.snapshot(Fk, Bk), !0
         }
-        return this.journal.snapshot(Ru, yu), Eu.delete(Ru), this.$items.delete(uu)
+        return this.journal.snapshot(Fk, Bk), Rk.delete(Fk), this.$items.delete(kk)
       }
       clear() {
-        const uu = this[pu];
-        uu.discard(), uu.forEachChild(((Ru, yu) => {
-          uu.root?.remove(Ru)
-        })), this.journal.reset(), this.$items.clear(), uu.operation(Ku.CLEAR)
-      } [Hu]() {
-        const uu = this[pu];
-        if (uu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((uu => uu?.[Hu]?.())), this.$items.clear(), this.journal.reset(), uu.recycle(), this[Ju] = void 0
+        const kk = this[yk];
+        kk.discard(), kk.forEachChild(((Fk, Bk) => {
+          kk.root?.remove(Fk)
+        })), this.journal.reset(), this.$items.clear(), kk.operation(tk.CLEAR)
+      } [vk]() {
+        const kk = this[yk];
+        if (kk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((kk => kk?.[vk]?.())), this.$items.clear(), this.journal.reset(), kk.recycle(), this[bk] = void 0
       }
-      has(uu) {
-        return this.$items.has(uu)
+      has(kk) {
+        return this.$items.has(kk)
       }
-      forEach(uu) {
-        this.$items.forEach(uu)
+      forEach(kk) {
+        this.$items.forEach(kk)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[pu].pause()
+        this[yk].pause()
       }
       resumeTracking() {
-        this[pu].resume()
+        this[yk].resume()
       }
-      untracked(uu) {
-        return this[pu].untracked(uu)
+      untracked(kk) {
+        return this[yk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[pu].paused
+        return this[yk].paused
       }
-      setIndex(uu, Ru) {
-        this.journal.setIndex(uu, Ru)
+      setIndex(kk, Fk) {
+        this.journal.setIndex(kk, Fk)
       }
-      getIndex(uu) {
-        return this.journal.keyOf(uu)
-      } [Bu](uu) {
-        const Ru = this.journal.keyOf(uu);
-        return void 0 !== Ru ? this.$items.get(Ru) : void 0
-      } [xu](uu) {
-        const Ru = this.journal.keyOf(uu);
-        void 0 !== Ru && (this.$items.delete(Ru), this.journal.keyByIndex.delete(uu))
-      } [Su](uu, Ru, yu) {
-        let Eu = null;
-        if (this.$items.forEach(((Ku, Qu) => {
-            uu.has(Qu) ? yu(Ku) : ((Eu ??= new Set).add(Qu), Ru(Ku, Qu))
-          })), null !== Eu) {
-          Eu.forEach((uu => {
-            this.$items.delete(uu), delete this.journal.indexByKey[uu]
+      getIndex(kk) {
+        return this.journal.keyOf(kk)
+      } [Jk](kk) {
+        const Fk = this.journal.keyOf(kk);
+        return void 0 !== Fk ? this.$items.get(Fk) : void 0
+      } [Ak](kk) {
+        const Fk = this.journal.keyOf(kk);
+        void 0 !== Fk && (this.$items.delete(Fk), this.journal.keyByIndex.delete(kk))
+      } [ek](kk, Fk, Bk) {
+        let Rk = null;
+        if (this.$items.forEach(((tk, ak) => {
+            kk.has(ak) ? Bk(tk) : ((Rk ??= new Set).add(ak), Fk(tk, ak))
+          })), null !== Rk) {
+          Rk.forEach((kk => {
+            this.$items.delete(kk), delete this.journal.indexByKey[kk]
           }));
-          const uu = [];
-          this.journal.keyByIndex.forEach(((Ru, yu) => {
-            Eu.has(Ru) && uu.push(yu)
+          const kk = [];
+          this.journal.keyByIndex.forEach(((Fk, Bk) => {
+            Rk.has(Fk) && kk.push(Bk)
           }));
-          for (let Ru = 0; Ru < uu.length; Ru++) this.journal.keyByIndex.delete(uu[Ru])
+          for (let Fk = 0; Fk < kk.length; Fk++) this.journal.keyByIndex.delete(kk[Fk])
         }
-      } [ju]() {
+      } [Wk]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(uu) {
-        sR(this, uu)
+      _dropView(kk) {
+        cF(this, kk)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (uu => {
-          let [Ru, yu] = uu;
-          return [Ru, "function" === typeof yu.toJSON ? yu.toJSON() : yu]
+        return Object.fromEntries(Array.from(this, (kk => {
+          let [Fk, Bk] = kk;
+          return [Fk, "function" === typeof Bk.toJSON ? Bk.toJSON() : Bk]
         })))
       }
-      clone(uu) {
-        let Ru;
-        return uu ? Ru = Object.assign(new KE, this) : (Ru = new KE, this.forEach(((uu, yu) => {
-          uu[pu] ? Ru.set(yu, uu.clone()) : Ru.set(yu, uu)
-        }))), Ru
+      clone(kk) {
+        let Fk;
+        return kk ? Fk = Object.assign(new aR, this) : (Fk = new aR, this.forEach(((kk, Bk) => {
+          kk[yk] ? Fk.set(Bk, kk.clone()) : Fk.set(Bk, kk)
+        }))), Fk
       }
     }
-    CR("map", {
-      constructor: KE
+    LF("map", {
+      constructor: aR
     });
-    class QE {
-      [pu];
-      [Ju];
-      [Tu];
+    class XR {
+      [yk];
+      [bk];
+      [fk];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(uu) {
-        (this._stream ??= AR()).maxPerTick = uu
+      set maxPerTick(kk) {
+        (this._stream ??= SF()).maxPerTick = kk
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(uu) {
-        (this._stream ??= AR()).priority = uu
+      set priority(kk) {
+        (this._stream ??= SF()).priority = kk
       }
-      static[Xu] = gy;
-      static[Vu] = Oy;
-      static COLLECTION_KIND = iy;
-      static[ru](uu, Ru, yu) {
-        return !yu || "string" === typeof uu[Tu] || yu.isChangeTreeVisible((uu[Bu](Ru) ?? uu.deletedItems[Ru])[pu])
+      static[dk] = rB;
+      static[sk] = nB;
+      static COLLECTION_KIND = KB;
+      static[Vk](kk, Fk, Bk) {
+        return !Bk || "string" === typeof kk[fk] || Bk.isChangeTreeVisible((kk[Jk](Fk) ?? kk.deletedItems[Fk])[yk])
       }
-      static is(uu) {
-        return void 0 !== uu.collection
+      static is(kk) {
+        return void 0 !== kk.collection
       }
-      constructor(uu) {
-        Object.defineProperty(this, pu, {
-          value: new Gy(this),
+      constructor(kk) {
+        Object.defineProperty(this, yk, {
+          value: new MB(this),
           enumerable: !1,
           writable: !0
-        }), this[Tu] = void 0, uu && uu.forEach((uu => this.add(uu)))
+        }), this[fk] = void 0, kk && kk.forEach((kk => this.add(kk)))
       }
       static initializeForDecoder() {
-        const uu = Object.create(QE.prototype);
-        return uu.$items = new Map, uu.deletedItems = {}, uu.$refId = 0, uu[Tu] = void 0, ny(uu), uu
+        const kk = Object.create(XR.prototype);
+        return kk.$items = new Map, kk.deletedItems = {}, kk.$refId = 0, kk[fk] = void 0, UB(kk), kk
       }
-      add(uu) {
-        const Ru = this.$refId++,
-          yu = this[pu];
-        return this.$items.set(Ru, uu), yu.isStreamCollection ? void 0 !== yu.root && MR(this, yu.root, Ru) : yu.change(Ru), void 0 !== uu[pu] && uu[pu].setParent(this, yu.root, Ru), Ru
+      add(kk) {
+        const Fk = this.$refId++,
+          Bk = this[yk];
+        return this.$items.set(Fk, kk), Bk.isStreamCollection ? void 0 !== Bk.root && HF(this, Bk.root, Fk) : Bk.change(Fk), void 0 !== kk[yk] && kk[yk].setParent(this, Bk.root, Fk), Fk
       }
-      at(uu) {
-        const Ru = Array.from(this.$items.keys())[uu];
-        return this.$items.get(Ru)
+      at(kk) {
+        const Fk = Array.from(this.$items.keys())[kk];
+        return this.$items.get(Fk)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(uu) {
-        const Ru = this.$items.entries();
-        let yu, Eu;
+      delete(kk) {
+        const Fk = this.$items.entries();
+        let Bk, Rk;
         for (;
-          (Eu = Ru.next()) && !Eu.done;)
-          if (uu === Eu.value[1]) {
-            yu = Eu.value[0];
+          (Rk = Fk.next()) && !Rk.done;)
+          if (kk === Rk.value[1]) {
+            Bk = Rk.value[0];
             break
-          } if (void 0 === yu) return !1;
-        const Ku = this[pu];
-        if (Ku.isStreamCollection) {
-          const uu = Ku.root,
-            Ru = this.$items.get(yu);
-          return void 0 !== uu && IR(this, uu, this[Ju], yu), void 0 !== Ru?.[pu] && uu?.remove(Ru[pu]), this.deletedItems[yu] = Ru, this.$items.delete(yu)
+          } if (void 0 === Bk) return !1;
+        const tk = this[yk];
+        if (tk.isStreamCollection) {
+          const kk = tk.root,
+            Fk = this.$items.get(Bk);
+          return void 0 !== kk && uF(this, kk, this[bk], Bk), void 0 !== Fk?.[yk] && kk?.remove(Fk[yk]), this.deletedItems[Bk] = Fk, this.$items.delete(Bk)
         }
-        return this.deletedItems[yu] = Ku.delete(yu), this.$items.delete(yu)
+        return this.deletedItems[Bk] = tk.delete(Bk), this.$items.delete(Bk)
       }
       clear() {
-        const uu = this[pu];
-        uu.discard(), uu.forEachChild(((Ru, yu) => {
-          uu.root?.remove(Ru)
-        })), this.$items.clear(), uu.operation(Ku.CLEAR)
-      } [Hu]() {
-        const uu = this[pu];
-        if (uu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((uu => uu?.[Hu]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, uu.recycle(), this[Ju] = void 0
+        const kk = this[yk];
+        kk.discard(), kk.forEachChild(((Fk, Bk) => {
+          kk.root?.remove(Fk)
+        })), this.$items.clear(), kk.operation(tk.CLEAR)
+      } [vk]() {
+        const kk = this[yk];
+        if (kk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((kk => kk?.[vk]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, kk.recycle(), this[bk] = void 0
       }
-      has(uu) {
-        return Array.from(this.$items.values()).some((Ru => Ru === uu))
+      has(kk) {
+        return Array.from(this.$items.values()).some((Fk => Fk === kk))
       }
-      forEach(uu) {
-        this.$items.forEach(((Ru, yu, Eu) => uu(Ru, yu, this)))
+      forEach(kk) {
+        this.$items.forEach(((Fk, Bk, Rk) => kk(Fk, Bk, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[pu].pause()
+        this[yk].pause()
       }
       resumeTracking() {
-        this[pu].resume()
+        this[yk].resume()
       }
-      untracked(uu) {
-        return this[pu].untracked(uu)
+      untracked(kk) {
+        return this[yk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[pu].paused
+        return this[yk].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(uu, Ru) {}
-      getIndex(uu) {
-        return uu
-      } [Bu](uu) {
-        return this.$items.get(uu)
-      } [xu](uu) {
-        this.$items.delete(uu)
-      } [Su](uu, Ru, yu) {
-        let Eu = null;
-        if (this.$items.forEach(((Ku, Qu) => {
-            uu.has(Qu) ? yu(Ku) : ((Eu ??= []).push(Qu), Ru(Ku, Qu))
-          })), null !== Eu)
-          for (let Ku = 0; Ku < Eu.length; Ku++) this[xu](Eu[Ku])
-      } [ju]() {
-        for (const uu in this.deletedItems) delete this.deletedItems[uu]
+      setIndex(kk, Fk) {}
+      getIndex(kk) {
+        return kk
+      } [Jk](kk) {
+        return this.$items.get(kk)
+      } [Ak](kk) {
+        this.$items.delete(kk)
+      } [ek](kk, Fk, Bk) {
+        let Rk = null;
+        if (this.$items.forEach(((tk, ak) => {
+            kk.has(ak) ? Bk(tk) : ((Rk ??= []).push(ak), Fk(tk, ak))
+          })), null !== Rk)
+          for (let tk = 0; tk < Rk.length; tk++) this[Ak](Rk[tk])
+      } [Wk]() {
+        for (const kk in this.deletedItems) delete this.deletedItems[kk]
       }
-      _dropView(uu) {
-        sR(this, uu)
+      _dropView(kk) {
+        cF(this, kk)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const uu = [];
-        return this.forEach(((Ru, yu) => {
-          uu.push("function" === typeof Ru.toJSON ? Ru.toJSON() : Ru)
-        })), uu
+        const kk = [];
+        return this.forEach(((Fk, Bk) => {
+          kk.push("function" === typeof Fk.toJSON ? Fk.toJSON() : Fk)
+        })), kk
       }
-      clone(uu) {
-        let Ru;
-        return uu ? Ru = Object.assign(new QE, this) : (Ru = new QE, this.forEach((uu => {
-          uu[pu] ? Ru.add(uu.clone()) : Ru.add(uu)
-        }))), Ru
+      clone(kk) {
+        let Fk;
+        return kk ? Fk = Object.assign(new XR, this) : (Fk = new XR, this.forEach((kk => {
+          kk[yk] ? Fk.add(kk.clone()) : Fk.add(kk)
+        }))), Fk
       }
     }
-    CR("collection", {
-      constructor: QE
+    LF("collection", {
+      constructor: XR
     });
-    class mE {
-      [pu];
-      [Ju];
-      [Tu];
+    class bR {
+      [yk];
+      [bk];
+      [fk];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(uu) {
-        (this._stream ??= AR()).maxPerTick = uu
+      set maxPerTick(kk) {
+        (this._stream ??= SF()).maxPerTick = kk
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(uu) {
-        (this._stream ??= AR()).priority = uu
+      set priority(kk) {
+        (this._stream ??= SF()).priority = kk
       }
-      static[Xu] = gy;
-      static[Vu] = Oy;
-      static COLLECTION_KIND = Py;
-      static[ru](uu, Ru, yu) {
-        return !yu || "string" === typeof uu[Tu] || yu.isVisible((uu[Bu](Ru) ?? uu.deletedItems[Ru])[pu])
+      static[dk] = rB;
+      static[sk] = nB;
+      static COLLECTION_KIND = pB;
+      static[Vk](kk, Fk, Bk) {
+        return !Bk || "string" === typeof kk[fk] || Bk.isVisible((kk[Jk](Fk) ?? kk.deletedItems[Fk])[yk])
       }
-      static is(uu) {
-        return void 0 !== uu.set
+      static is(kk) {
+        return void 0 !== kk.set
       }
-      constructor(uu) {
-        Object.defineProperty(this, pu, {
-          value: new Gy(this),
+      constructor(kk) {
+        Object.defineProperty(this, yk, {
+          value: new MB(this),
           enumerable: !1,
           writable: !0
-        }), this[Tu] = void 0, uu && uu.forEach((uu => this.add(uu)))
+        }), this[fk] = void 0, kk && kk.forEach((kk => this.add(kk)))
       }
       static initializeForDecoder() {
-        const uu = Object.create(mE.prototype);
-        return uu.$items = new Map, uu.deletedItems = {}, uu.$refId = 0, uu[Tu] = void 0, ny(uu), uu
+        const kk = Object.create(bR.prototype);
+        return kk.$items = new Map, kk.deletedItems = {}, kk.$refId = 0, kk[fk] = void 0, UB(kk), kk
       }
-      add(uu) {
-        if (this.has(uu)) return !1;
-        const Ru = this.$refId++,
-          yu = this[pu];
-        return this.$items.set(Ru, uu), yu.isStreamCollection ? void 0 !== yu.root && MR(this, yu.root, Ru) : yu.change(Ru, Ku.ADD), void 0 !== uu[pu] && uu[pu].setParent(this, yu.root, Ru), Ru
+      add(kk) {
+        if (this.has(kk)) return !1;
+        const Fk = this.$refId++,
+          Bk = this[yk];
+        return this.$items.set(Fk, kk), Bk.isStreamCollection ? void 0 !== Bk.root && HF(this, Bk.root, Fk) : Bk.change(Fk, tk.ADD), void 0 !== kk[yk] && kk[yk].setParent(this, Bk.root, Fk), Fk
       }
       entries() {
         return this.$items.entries()
       }
-      delete(uu) {
-        const Ru = this.$items.entries();
-        let yu, Eu;
+      delete(kk) {
+        const Fk = this.$items.entries();
+        let Bk, Rk;
         for (;
-          (Eu = Ru.next()) && !Eu.done;)
-          if (uu === Eu.value[1]) {
-            yu = Eu.value[0];
+          (Rk = Fk.next()) && !Rk.done;)
+          if (kk === Rk.value[1]) {
+            Bk = Rk.value[0];
             break
-          } if (void 0 === yu) return !1;
-        const Ku = this[pu];
-        if (Ku.isStreamCollection) {
-          const uu = Ku.root,
-            Ru = this.$items.get(yu);
-          return void 0 !== uu && IR(this, uu, this[Ju], yu), void 0 !== Ru?.[pu] && uu?.remove(Ru[pu]), this.deletedItems[yu] = Ru, this.$items.delete(yu)
+          } if (void 0 === Bk) return !1;
+        const tk = this[yk];
+        if (tk.isStreamCollection) {
+          const kk = tk.root,
+            Fk = this.$items.get(Bk);
+          return void 0 !== kk && uF(this, kk, this[bk], Bk), void 0 !== Fk?.[yk] && kk?.remove(Fk[yk]), this.deletedItems[Bk] = Fk, this.$items.delete(Bk)
         }
-        return this.deletedItems[yu] = Ku.delete(yu), this.$items.delete(yu)
+        return this.deletedItems[Bk] = tk.delete(Bk), this.$items.delete(Bk)
       }
       clear() {
-        const uu = this[pu];
-        uu.discard(), this.$items.clear(), uu.operation(Ku.CLEAR)
-      } [Hu]() {
-        const uu = this[pu];
-        if (uu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((uu => uu?.[Hu]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, uu.recycle(), this[Ju] = void 0
+        const kk = this[yk];
+        kk.discard(), this.$items.clear(), kk.operation(tk.CLEAR)
+      } [vk]() {
+        const kk = this[yk];
+        if (kk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((kk => kk?.[vk]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, kk.recycle(), this[bk] = void 0
       }
-      has(uu) {
-        const Ru = this.$items.values();
-        let yu, Eu = !1;
+      has(kk) {
+        const Fk = this.$items.values();
+        let Bk, Rk = !1;
         for (;
-          (yu = Ru.next()) && !yu.done;)
-          if (uu === yu.value) {
-            Eu = !0;
+          (Bk = Fk.next()) && !Bk.done;)
+          if (kk === Bk.value) {
+            Rk = !0;
             break
-          } return Eu
+          } return Rk
       }
-      forEach(uu) {
-        this.$items.forEach(((Ru, yu, Eu) => uu(Ru, yu, this)))
+      forEach(kk) {
+        this.$items.forEach(((Fk, Bk, Rk) => kk(Fk, Bk, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[pu].pause()
+        this[yk].pause()
       }
       resumeTracking() {
-        this[pu].resume()
+        this[yk].resume()
       }
-      untracked(uu) {
-        return this[pu].untracked(uu)
+      untracked(kk) {
+        return this[yk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[pu].paused
+        return this[yk].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(uu, Ru) {}
-      getIndex(uu) {
-        return uu
-      } [Bu](uu) {
-        return this.$items.get(uu)
-      } [xu](uu) {
-        this.$items.delete(uu)
-      } [Su](uu, Ru, yu) {
-        let Eu = null;
-        if (this.$items.forEach(((Ku, Qu) => {
-            uu.has(Qu) ? yu(Ku) : ((Eu ??= []).push(Qu), Ru(Ku, Qu))
-          })), null !== Eu)
-          for (let Ku = 0; Ku < Eu.length; Ku++) this[xu](Eu[Ku])
-      } [ju]() {
-        for (const uu in this.deletedItems) delete this.deletedItems[uu]
+      setIndex(kk, Fk) {}
+      getIndex(kk) {
+        return kk
+      } [Jk](kk) {
+        return this.$items.get(kk)
+      } [Ak](kk) {
+        this.$items.delete(kk)
+      } [ek](kk, Fk, Bk) {
+        let Rk = null;
+        if (this.$items.forEach(((tk, ak) => {
+            kk.has(ak) ? Bk(tk) : ((Rk ??= []).push(ak), Fk(tk, ak))
+          })), null !== Rk)
+          for (let tk = 0; tk < Rk.length; tk++) this[Ak](Rk[tk])
+      } [Wk]() {
+        for (const kk in this.deletedItems) delete this.deletedItems[kk]
       }
-      _dropView(uu) {
-        sR(this, uu)
+      _dropView(kk) {
+        cF(this, kk)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const uu = [];
-        return this.forEach(((Ru, yu) => {
-          uu.push("function" === typeof Ru.toJSON ? Ru.toJSON() : Ru)
-        })), uu
+        const kk = [];
+        return this.forEach(((Fk, Bk) => {
+          kk.push("function" === typeof Fk.toJSON ? Fk.toJSON() : Fk)
+        })), kk
       }
-      clone(uu) {
-        let Ru;
-        return uu ? Ru = Object.assign(new mE, this) : (Ru = new mE, this.forEach((uu => {
-          uu[pu] ? Ru.add(uu.clone()) : Ru.add(uu)
-        }))), Ru
+      clone(kk) {
+        let Fk;
+        return kk ? Fk = Object.assign(new bR, this) : (Fk = new bR, this.forEach((kk => {
+          kk[yk] ? Fk.add(kk.clone()) : Fk.add(kk)
+        }))), Fk
       }
     }
-    CR("set", {
-      constructor: mE
+    LF("set", {
+      constructor: bR
     });
-    class JE {
-      [pu];
-      [Ju];
-      [Tu];
+    class wR {
+      [yk];
+      [bk];
+      [fk];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(uu) {
-        (this._stream ??= AR()).maxPerTick = uu
+      set maxPerTick(kk) {
+        (this._stream ??= SF()).maxPerTick = kk
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(uu) {
-        (this._stream ??= AR()).priority = uu
+      set priority(kk) {
+        (this._stream ??= SF()).priority = kk
       }
       static $isStream = !0;
-      static[Xu] = gy;
-      static[Vu] = Oy;
-      static COLLECTION_KIND = Yy;
-      static[ru](uu, Ru, yu) {
-        if (!yu) return !0;
-        const Eu = uu[Bu](Ru);
-        return void 0 !== Eu && yu.isVisible(Eu[pu])
+      static[dk] = rB;
+      static[sk] = nB;
+      static COLLECTION_KIND = xB;
+      static[Vk](kk, Fk, Bk) {
+        if (!Bk) return !0;
+        const Rk = kk[Jk](Fk);
+        return void 0 !== Rk && Bk.isVisible(Rk[yk])
       }
-      static is(uu) {
-        return uu && void 0 !== uu.stream
+      static is(kk) {
+        return kk && void 0 !== kk.stream
       }
       constructor() {
-        Object.defineProperty(this, pu, {
-          value: new Gy(this),
+        Object.defineProperty(this, yk, {
+          value: new MB(this),
           enumerable: !1,
           writable: !0
-        }), this[Tu] = void 0
+        }), this[fk] = void 0
       }
       static initializeForDecoder() {
-        const uu = Object.create(JE.prototype);
-        return uu.$items = new Map, uu.$nextPosition = 0, uu._itemIndex = new Map, uu[Tu] = void 0, ny(uu), uu
+        const kk = Object.create(wR.prototype);
+        return kk.$items = new Map, kk.$nextPosition = 0, kk._itemIndex = new Map, kk[fk] = void 0, UB(kk), kk
       }
-      add(uu) {
-        if (this._itemIndex.has(uu)) return -1;
-        const Ru = this.$nextPosition++;
-        this.$items.set(Ru, uu), this._itemIndex.set(uu, Ru);
-        const yu = this[pu].root;
-        return void 0 !== uu[pu] && uu[pu].setParent(this, yu, Ru), void 0 !== yu && MR(this, yu, Ru), Ru
+      add(kk) {
+        if (this._itemIndex.has(kk)) return -1;
+        const Fk = this.$nextPosition++;
+        this.$items.set(Fk, kk), this._itemIndex.set(kk, Fk);
+        const Bk = this[yk].root;
+        return void 0 !== kk[yk] && kk[yk].setParent(this, Bk, Fk), void 0 !== Bk && HF(this, Bk, Fk), Fk
       }
-      remove(uu) {
-        const Ru = this._itemIndex.get(uu);
-        if (void 0 === Ru) return !1;
-        this._itemIndex.delete(uu), this.$items.delete(Ru);
-        const yu = this[pu].root;
-        return void 0 !== yu && (IR(this, yu, this[Ju], Ru), void 0 !== uu[pu] && yu.remove(uu[pu])), !0
+      remove(kk) {
+        const Fk = this._itemIndex.get(kk);
+        if (void 0 === Fk) return !1;
+        this._itemIndex.delete(kk), this.$items.delete(Fk);
+        const Bk = this[yk].root;
+        return void 0 !== Bk && (uF(this, Bk, this[bk], Fk), void 0 !== kk[yk] && Bk.remove(kk[yk])), !0
       }
-      has(uu) {
-        return this._itemIndex.has(uu)
+      has(kk) {
+        return this._itemIndex.has(kk)
       }
       clear() {
-        const uu = this[pu].root;
-        if (void 0 !== uu) {
-          ! function(uu, Ru, yu) {
-            const Eu = uu._stream;
-            if (void 0 !== Eu) {
-              Eu.broadcastPending.clear();
-              for (const uu of Eu.sentBroadcast) Eu.broadcastDeletes.add(uu);
-              Eu.sentBroadcast.clear(), Ru.forEachActiveView((uu => {
-                Eu.pendingByView.get(uu.id)?.clear();
-                const Ru = Eu.sentByView.get(uu.id);
-                if (void 0 !== Ru && Ru.size > 0) {
-                  let Eu = uu.changes.get(yu);
-                  void 0 === Eu && (Eu = new Map, uu.changes.set(yu, Eu));
-                  for (const uu of Ru) Eu.set(uu, Ku.DELETE);
-                  Ru.clear()
+        const kk = this[yk].root;
+        if (void 0 !== kk) {
+          ! function(kk, Fk, Bk) {
+            const Rk = kk._stream;
+            if (void 0 !== Rk) {
+              Rk.broadcastPending.clear();
+              for (const kk of Rk.sentBroadcast) Rk.broadcastDeletes.add(kk);
+              Rk.sentBroadcast.clear(), Fk.forEachActiveView((kk => {
+                Rk.pendingByView.get(kk.id)?.clear();
+                const Fk = Rk.sentByView.get(kk.id);
+                if (void 0 !== Fk && Fk.size > 0) {
+                  let Rk = kk.changes.get(Bk);
+                  void 0 === Rk && (Rk = new Map, kk.changes.set(Bk, Rk));
+                  for (const kk of Fk) Rk.set(kk, tk.DELETE);
+                  Fk.clear()
                 }
               }))
             }
-          }(this, uu, this[Ju]);
-          for (const Ru of this.$items.values()) void 0 !== Ru[pu] && uu.remove(Ru[pu])
+          }(this, kk, this[bk]);
+          for (const Fk of this.$items.values()) void 0 !== Fk[yk] && kk.remove(Fk[yk])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(uu) {
-        for (const [Ru, yu] of this.$items) uu(yu, Ru, this)
+      forEach(kk) {
+        for (const [Fk, Bk] of this.$items) kk(Bk, Fk, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(uu, Ru) {}
-      getIndex(uu) {
-        return uu
-      } [Bu](uu) {
-        return this.$items.get(uu)
-      } [xu](uu) {
-        const Ru = this.$items.get(uu);
-        void 0 !== Ru && (this._itemIndex.delete(Ru), this.$items.delete(uu))
-      } [Su]() {} [ju]() {}
+      setIndex(kk, Fk) {}
+      getIndex(kk) {
+        return kk
+      } [Jk](kk) {
+        return this.$items.get(kk)
+      } [Ak](kk) {
+        const Fk = this.$items.get(kk);
+        void 0 !== Fk && (this._itemIndex.delete(Fk), this.$items.delete(kk))
+      } [ek]() {} [Wk]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const uu = [];
-        return this.forEach((Ru => {
-          uu.push("function" === typeof Ru?.toJSON ? Ru.toJSON() : Ru)
-        })), uu
+        const kk = [];
+        return this.forEach((Fk => {
+          kk.push("function" === typeof Fk?.toJSON ? Fk.toJSON() : Fk)
+        })), kk
       }
-      clone(uu) {
-        if (uu) {
-          return Object.assign(new JE, this)
+      clone(kk) {
+        if (kk) {
+          return Object.assign(new wR, this)
         }
-        const Ru = new JE;
-        return Ru.maxPerTick = this.maxPerTick, this.forEach((uu => {
-          Ru.add("function" === typeof uu?.clone ? uu.clone() : uu)
-        })), Ru
+        const Fk = new wR;
+        return Fk.maxPerTick = this.maxPerTick, this.forEach((kk => {
+          Fk.add("function" === typeof kk?.clone ? kk.clone() : kk)
+        })), Fk
       }
-      _dropView(uu) {
-        sR(this, uu)
+      _dropView(kk) {
+        cF(this, kk)
       }
       _unregister() {}
     }
-    CR("stream", {
-      constructor: JE
+    LF("stream", {
+      constructor: wR
     });
-    class NE {
-      [Cu] = !0;
+    class dR {
+      [Lk] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(uu) {
-        this._type = uu
+      constructor(kk) {
+        this._type = kk
       }
-      default (uu) {
-        return this._default = uu, this._hasDefault = !0, this
+      default (kk) {
+        return this._default = kk, this._hasDefault = !0, this
       }
-      view(uu) {
-        return this._view = uu ?? -1, this
+      view(kk) {
+        return this._view = kk ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const uu = this._type;
-        if (uu && "object" === typeof uu && void 0 !== uu.array) throw new Error(eR);
+        const kk = this._type;
+        if (kk && "object" === typeof kk && void 0 !== kk.array) throw new Error(EF);
         return this._stream = !0, this
       }
-      priority(uu) {
-        return this._streamPriority = uu, this
+      priority(kk) {
+        return this._streamPriority = kk, this
       }
       deprecated() {
-        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = uu, this
+        let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = kk, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function XE(uu) {
-      return null != uu && !0 === uu[Cu]
+    function sR(kk) {
+      return null != kk && !0 === kk[Lk]
     }
 
-    function VE(uu) {
-      return () => new NE(uu)
+    function VR(kk) {
+      return () => new dR(kk)
     }
 
-    function rE(uu) {
-      if (XE(uu)) {
-        const Ru = uu._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof Ru?`use the type name instead: t.array("${Ru}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function JR(kk) {
+      if (sR(kk)) {
+        const Fk = kk._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof Fk?`use the type name instead: t.array("${Fk}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return uu
+      return kk
     }
 
-    function BE(uu) {
-      return new NE({
-        quantized: lR(uu)
+    function AR(kk) {
+      return new dR({
+        quantized: TF(kk)
       })
     }
-    const xE = Object.freeze({
-        string: VE("string"),
-        number: VE("number"),
-        boolean: VE("boolean"),
-        int8: VE("int8"),
-        uint8: VE("uint8"),
-        int16: VE("int16"),
-        uint16: VE("uint16"),
-        int32: VE("int32"),
-        uint32: VE("uint32"),
-        int64: VE("int64"),
-        uint64: VE("uint64"),
-        float32: VE("float32"),
-        float64: VE("float64"),
-        bigint64: VE("bigint64"),
-        biguint64: VE("biguint64"),
-        ref: uu => new NE(uu),
-        array: uu => new NE({
-          array: rE(uu)
+    const eR = Object.freeze({
+        string: VR("string"),
+        number: VR("number"),
+        boolean: VR("boolean"),
+        int8: VR("int8"),
+        uint8: VR("uint8"),
+        int16: VR("int16"),
+        uint16: VR("uint16"),
+        int32: VR("int32"),
+        uint32: VR("uint32"),
+        int64: VR("int64"),
+        uint64: VR("uint64"),
+        float32: VR("float32"),
+        float64: VR("float64"),
+        bigint64: VR("bigint64"),
+        biguint64: VR("biguint64"),
+        ref: kk => new dR(kk),
+        array: kk => new dR({
+          array: JR(kk)
         }),
-        map: uu => new NE({
-          map: rE(uu)
+        map: kk => new dR({
+          map: JR(kk)
         }),
-        set: uu => new NE({
-          set: rE(uu)
+        set: kk => new dR({
+          set: JR(kk)
         }),
-        collection: uu => new NE({
-          collection: rE(uu)
+        collection: kk => new dR({
+          collection: JR(kk)
         }),
-        stream: uu => {
-          const Ru = new NE({
-            stream: rE(uu)
+        stream: kk => {
+          const Fk = new dR({
+            stream: JR(kk)
           });
-          return Ru._stream = !0, Ru
+          return Fk._stream = !0, Fk
         },
-        quantized: BE,
-        angle: uu => BE({
+        quantized: AR,
+        angle: kk => AR({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: uu?.bits ?? 16
+          bits: kk?.bits ?? 16
         })
       }),
-      SE = -1;
+      yR = -1;
 
-    function pE(uu) {
-      return FR.register(uu), uu
+    function fR(kk) {
+      return hF.register(kk), kk
     }
 
-    function TE() {
-      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : SE;
-      return function(Ru, yu) {
-        const Eu = oR.initialize(Ru.constructor);
-        oR.setTag(Eu, yu, uu)
+    function mR() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yR;
+      return function(Fk, Bk) {
+        const Rk = jF.initialize(Fk.constructor);
+        jF.setTag(Rk, Bk, kk)
       }
     }
 
-    function WE(uu, Ru) {
-      const yu = oR.initialize(uu.constructor);
-      oR.setUnreliable(yu, Ru)
+    function WR(kk, Fk) {
+      const Bk = jF.initialize(kk.constructor);
+      jF.setUnreliable(Bk, Fk)
     }
 
-    function jE(uu, Ru) {
-      const yu = oR.initialize(uu.constructor);
-      oR.setPatchOnly(yu, Ru)
+    function vR(kk, Fk) {
+      const Bk = jF.initialize(kk.constructor);
+      jF.setPatchOnly(Bk, Fk)
     }
 
-    function HE(uu, Ru) {
-      const yu = oR.initialize(uu.constructor);
-      oR.setFullStateOnly(yu, Ru)
+    function iR(kk, Fk) {
+      const Bk = jF.initialize(kk.constructor);
+      jF.setFullStateOnly(Bk, Fk)
     }
 
-    function dE(uu, Ru) {
-      return function(yu, Eu) {
-        const Ku = yu.constructor;
-        if (!uu) throw new Error(`${Ku.name}: @type() reference provided for "${Eu}" is undefined. Make sure you don't have any circular dependencies.`);
-        uu = ZR(uu, `${Ku.name}.${Eu}`), FR.register(Ku);
-        const Qu = Object.getPrototypeOf(Ku)[Symbol.metadata],
-          mu = oR.initialize(Ku);
-        let Ju = mu[Eu];
-        if (void 0 !== mu[Ju]) {
-          if (mu[Ju].deprecated) return;
-          if (void 0 !== mu[Ju].type) {
-            const uu = new Error(`@colyseus/schema: Duplicate '${Eu}' definition on '${Ku.name}'.\nCheck @type() annotation`);
-            throw new Error(`${uu.message} ${uu.stack.split("\n")[4].trim()}`)
+    function YR(kk, Fk) {
+      return function(Bk, Rk) {
+        const tk = Bk.constructor;
+        if (!kk) throw new Error(`${tk.name}: @type() reference provided for "${Rk}" is undefined. Make sure you don't have any circular dependencies.`);
+        kk = CF(kk, `${tk.name}.${Rk}`), hF.register(tk);
+        const ak = Object.getPrototypeOf(tk)[Symbol.metadata],
+          Xk = jF.initialize(tk);
+        let bk = Xk[Rk];
+        if (void 0 !== Xk[bk]) {
+          if (Xk[bk].deprecated) return;
+          if (void 0 !== Xk[bk].type) {
+            const kk = new Error(`@colyseus/schema: Duplicate '${Rk}' definition on '${tk.name}'.\nCheck @type() annotation`);
+            throw new Error(`${kk.message} ${kk.stack.split("\n")[4].trim()}`)
           }
-        } else Ju = mu[Du] ?? (Qu && Qu[Du]) ?? -1, Ju++;
-        if (Ru && Ru.manual) oR.addField(mu, Ju, Eu, uu, {
+        } else bk = Xk[Nk] ?? (ak && ak[Nk]) ?? -1, bk++;
+        if (Fk && Fk.manual) jF.addField(Xk, bk, Rk, kk, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: Ru,
-            childType: yu
-          } = wR(uu);
-          oR.addField(mu, Ju, Eu, uu, CE(Eu, Ju, yu, Ru))
+            complexTypeKlass: Fk,
+            childType: Bk
+          } = qF(kk);
+          jF.addField(Xk, bk, Rk, kk, LR(Rk, bk, Bk, Fk))
         }
-        mu[ku][Eu] && Object.defineProperty(yu, Eu, mu[ku][Eu]), ("string" === typeof uu || gR(uu)) && (mu[Au] || Object.defineProperty(mu, Au, {
+        Xk[Ok][Rk] && Object.defineProperty(Bk, Rk, Xk[Ok][Rk]), ("string" === typeof kk || rF(kk)) && (Xk[Sk] || Object.defineProperty(Xk, Sk, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), mu[Au][Ju] = "string" === typeof uu ? RR[uu] : zR(uu.quantized))
+        }), Xk[Sk][bk] = "string" === typeof kk ? BF[kk] : PF(kk.quantized))
       }
     }
-    const bE = {
+    const oR = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function CE(uu, Ru, yu, Eu) {
-      let Qu;
-      return Qu = Eu ? function(uu, Ru, yu, Eu) {
-        const Qu = Eu.constructor === yE,
-          mu = Eu.constructor === KE;
-        return function(uu) {
-          const Eu = this[bu],
-            Ju = Eu[Ru];
-          if (uu !== Ju) {
-            if (void 0 !== uu && null !== uu) {
-              if (!Qu || uu instanceof yE)
-                if (!mu || uu instanceof KE) uu[Tu] = yu;
+    function LR(kk, Fk, Bk, Rk) {
+      let ak;
+      return ak = Rk ? function(kk, Fk, Bk, Rk) {
+        const ak = Rk.constructor === RR,
+          Xk = Rk.constructor === aR;
+        return function(kk) {
+          const Rk = this[Yk],
+            bk = Rk[Fk];
+          if (kk !== bk) {
+            if (void 0 !== kk && null !== kk) {
+              if (!ak || kk instanceof RR)
+                if (!Xk || kk instanceof aR) kk[fk] = Bk;
                 else {
-                  const Ru = new KE;
-                  if (Ru[Tu] = yu, uu instanceof Map) uu.forEach(((uu, yu) => Ru.set(yu, uu)));
+                  const Fk = new aR;
+                  if (Fk[fk] = Bk, kk instanceof Map) kk.forEach(((kk, Bk) => Fk.set(Bk, kk)));
                   else
-                    for (const yu in uu) Ru.set(yu, uu[yu]);
-                  uu = Ru
+                    for (const Bk in kk) Fk.set(Bk, kk[Bk]);
+                  kk = Fk
                 }
               else {
-                const Ru = new yE;
-                Ru[Tu] = yu, Ru.push(...uu), uu = Ru
+                const Fk = new RR;
+                Fk[fk] = Bk, Fk.push(...kk), kk = Fk
               }
-              const Eu = this[pu],
-                Xu = this.constructor;
-              void 0 !== Ju && null !== Ju && Ju[pu] ? (Eu.root?.remove(Ju[pu]), Xu[Nu](Eu, Ru, Ku.DELETE_AND_ADD)) : Xu[Nu](Eu, Ru, Ku.ADD), uu[pu]?.setParent(this, Eu.root, Ru)
-            } else void 0 !== Ju && null !== Ju && this[pu].delete(Ru);
-            Eu[Ru] = uu
+              const Rk = this[yk],
+                dk = this.constructor;
+              void 0 !== bk && null !== bk && bk[yk] ? (Rk.root?.remove(bk[yk]), dk[wk](Rk, Fk, tk.DELETE_AND_ADD)) : dk[wk](Rk, Fk, tk.ADD), kk[yk]?.setParent(this, Rk.root, Fk)
+            } else void 0 !== bk && null !== bk && this[yk].delete(Fk);
+            Rk[Fk] = kk
           }
         }
-      }(0, Ru, yu, Eu) : "string" === typeof yu ? function(uu, Ru, yu) {
-        const Eu = bE[yu],
-          Qu = "string" === yu,
-          mu = "boolean" === yu;
-        return function(yu) {
-          const Ju = this[bu],
-            Xu = Ju[Ru];
-          if (yu !== Xu) {
-            if (void 0 !== yu && null !== yu) {
-              if (!mu && void 0 !== Eu && typeof yu !== Eu && (!Qu || null !== yu)) {
-                const Ru = yu && yu.constructor ? ` (${yu.constructor.name})` : "";
-                throw new ay(`a '${Eu}' was expected, but '${JSON.stringify(yu)}'${Ru} was provided in ${this.constructor.name}#${uu}`)
+      }(0, Fk, Bk, Rk) : "string" === typeof Bk ? function(kk, Fk, Bk) {
+        const Rk = oR[Bk],
+          ak = "string" === Bk,
+          Xk = "boolean" === Bk;
+        return function(Bk) {
+          const bk = this[Yk],
+            dk = bk[Fk];
+          if (Bk !== dk) {
+            if (void 0 !== Bk && null !== Bk) {
+              if (!Xk && void 0 !== Rk && typeof Bk !== Rk && (!ak || null !== Bk)) {
+                const Fk = Bk && Bk.constructor ? ` (${Bk.constructor.name})` : "";
+                throw new QB(`a '${Rk}' was expected, but '${JSON.stringify(Bk)}'${Fk} was provided in ${this.constructor.name}#${kk}`)
               }
-              this.constructor[Nu](this[pu], Ru, Ku.ADD)
-            } else void 0 !== Xu && null !== Xu && this[pu].delete(Ru);
-            Ju[Ru] = yu
+              this.constructor[wk](this[yk], Fk, tk.ADD)
+            } else void 0 !== dk && null !== dk && this[yk].delete(Fk);
+            bk[Fk] = Bk
           }
         }
-      }(uu, Ru, yu) : gR(yu) ? function(uu, Ru, yu) {
-        return function(Eu) {
-          const Qu = this[bu],
-            mu = Qu[Ru];
-          if (void 0 !== Eu && null !== Eu) {
-            if ("number" !== typeof Eu) throw new ay(`a 'number' was expected, but '${JSON.stringify(Eu)}' was provided in ${this.constructor.name}#${uu}`);
-            if ((Eu = LR(yu, cR(yu, Eu))) === mu) return;
-            this.constructor[Nu](this[pu], Ru, Ku.ADD)
+      }(kk, Fk, Bk) : rF(Bk) ? function(kk, Fk, Bk) {
+        return function(Rk) {
+          const ak = this[Yk],
+            Xk = ak[Fk];
+          if (void 0 !== Rk && null !== Rk) {
+            if ("number" !== typeof Rk) throw new QB(`a 'number' was expected, but '${JSON.stringify(Rk)}' was provided in ${this.constructor.name}#${kk}`);
+            if ((Rk = zF(Bk, DF(Bk, Rk))) === Xk) return;
+            this.constructor[wk](this[yk], Fk, tk.ADD)
           } else {
-            if (Eu === mu) return;
-            void 0 !== mu && null !== mu && this[pu].delete(Ru)
+            if (Rk === Xk) return;
+            void 0 !== Xk && null !== Xk && this[yk].delete(Fk)
           }
-          Qu[Ru] = Eu
+          ak[Fk] = Rk
         }
-      }(uu, Ru, yu.quantized) : function(uu, Ru, yu) {
-        return function(Eu) {
-          const Qu = this[bu],
-            mu = Qu[Ru];
-          if (Eu !== mu) {
-            if (void 0 !== Eu && null !== Eu) {
-              fy(Eu, yu, this, uu);
-              const Qu = this[pu],
-                Ju = this.constructor;
-              void 0 !== mu && null !== mu && mu[pu] ? (Qu.root?.remove(mu[pu]), Ju[Nu](Qu, Ru, Ku.DELETE_AND_ADD)) : Ju[Nu](Qu, Ru, Ku.ADD), Eu[pu]?.setParent(this, Qu.root, Ru)
-            } else void 0 !== mu && null !== mu && this[pu].delete(Ru);
-            Qu[Ru] = Eu
+      }(kk, Fk, Bk.quantized) : function(kk, Fk, Bk) {
+        return function(Rk) {
+          const ak = this[Yk],
+            Xk = ak[Fk];
+          if (Rk !== Xk) {
+            if (void 0 !== Rk && null !== Rk) {
+              kR(Rk, Bk, this, kk);
+              const ak = this[yk],
+                bk = this.constructor;
+              void 0 !== Xk && null !== Xk && Xk[yk] ? (ak.root?.remove(Xk[yk]), bk[wk](ak, Fk, tk.DELETE_AND_ADD)) : bk[wk](ak, Fk, tk.ADD), Rk[yk]?.setParent(this, ak.root, Fk)
+            } else void 0 !== Xk && null !== Xk && this[yk].delete(Fk);
+            ak[Fk] = Rk
           }
         }
-      }(uu, Ru, yu), {
+      }(kk, Fk, Bk), {
         get: function() {
-          return this[bu][Ru]
+          return this[Yk][Fk]
         },
-        set: Qu,
+        set: ak,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function kE() {
-      let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(Ru, yu) {
-        const Eu = oR.initialize(Ru.constructor);
-        oR.setDeprecated(Eu, yu), uu && (Eu[ku] ??= {}, Eu[ku][yu] = {
+    function OR() {
+      let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(Fk, Bk) {
+        const Rk = jF.initialize(Fk.constructor);
+        jF.setDeprecated(Rk, Bk), kk && (Rk[Ok] ??= {}, Rk[Ok][Bk] = {
           get: function() {
-            throw new Error(`${yu} is deprecated.`)
+            throw new Error(`${Bk} is deprecated.`)
           },
-          set: function(uu) {},
+          set: function(kk) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(Ru, yu, Eu[ku][yu]))
+        }, Object.defineProperty(Fk, Bk, Rk[Ok][Bk]))
       }
     }
-    let eE = !1;
+    let ER = !1;
 
-    function AE(uu, Ru, yu) {
-      eE || (eE = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let Eu in Ru) dE(Ru[Eu], yu)(uu.prototype, Eu);
-      return uu
+    function SR(kk, Fk, Bk) {
+      ER || (ER = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let Rk in Fk) YR(Fk[Rk], Bk)(kk.prototype, Rk);
+      return kk
     }
 
-    function DE(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : IE;
-      if (null == uu || "object" !== typeof uu) throw new Error(`schema(): first argument must be a fields object (got ${typeof uu}).`);
-      const Eu = {},
-        Ku = {},
-        Qu = {},
-        mu = {},
-        Ju = (uu, Ru) => {
-          if (Ru.hasDefault)((uu, Ru) => {
-            "function" === typeof Ru ? mu[uu] = Ru : Ru && "function" === typeof Ru.clone ? mu[uu] = () => Ru.clone() : Qu[uu] = Ru
-          })(uu, Ru.default);
-          else if (!Ru.optional) {
-            const yu = function(uu) {
-              if (uu && "object" === typeof uu) {
-                if (void 0 !== uu.array) return () => new yE;
-                if (void 0 !== uu.map) return () => new KE;
-                if (void 0 !== uu.set) return () => new mE;
-                if (void 0 !== uu.collection) return () => new QE;
-                if (void 0 !== uu.stream) return () => new JE
-              } else if ("function" === typeof uu && IE.is(uu) && (!uu.prototype.initialize || 0 === uu.prototype.initialize.length)) return () => new uu
-            }(Ru.type);
-            yu && (mu[uu] = yu)
+    function NR(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uR;
+      if (null == kk || "object" !== typeof kk) throw new Error(`schema(): first argument must be a fields object (got ${typeof kk}).`);
+      const Rk = {},
+        tk = {},
+        ak = {},
+        Xk = {},
+        bk = (kk, Fk) => {
+          if (Fk.hasDefault)((kk, Fk) => {
+            "function" === typeof Fk ? Xk[kk] = Fk : Fk && "function" === typeof Fk.clone ? Xk[kk] = () => Fk.clone() : ak[kk] = Fk
+          })(kk, Fk.default);
+          else if (!Fk.optional) {
+            const Bk = function(kk) {
+              if (kk && "object" === typeof kk) {
+                if (void 0 !== kk.array) return () => new RR;
+                if (void 0 !== kk.map) return () => new aR;
+                if (void 0 !== kk.set) return () => new bR;
+                if (void 0 !== kk.collection) return () => new XR;
+                if (void 0 !== kk.stream) return () => new wR
+              } else if ("function" === typeof kk && uR.is(kk) && (!kk.prototype.initialize || 0 === kk.prototype.initialize.length)) return () => new kk
+            }(Fk.type);
+            Bk && (Xk[kk] = Bk)
           }
         },
-        Nu = {},
-        Xu = [],
-        Vu = [],
-        ru = {},
-        Bu = [],
-        xu = [],
-        Su = {},
-        pu = [];
-      for (const bu in uu) {
-        const yu = uu[bu],
-          Qu = `schema(${Ru?`'${Ru}'`:""}): field '${bu}'`;
-        if (XE(yu)) {
-          const uu = yu.toDefinition();
-          if (uu.noSync) {
-            if (void 0 !== uu.view || uu.unreliable || uu.patchOnly || uu.fullStateOnly || uu.stream) throw new Error(`${Qu} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            Ju(bu, uu);
+        wk = {},
+        dk = [],
+        sk = [],
+        Vk = {},
+        Jk = [],
+        Ak = [],
+        ek = {},
+        yk = [];
+      for (const Yk in kk) {
+        const Bk = kk[Yk],
+          ak = `schema(${Fk?`'${Fk}'`:""}): field '${Yk}'`;
+        if (sR(Bk)) {
+          const kk = Bk.toDefinition();
+          if (kk.noSync) {
+            if (void 0 !== kk.view || kk.unreliable || kk.patchOnly || kk.fullStateOnly || kk.stream) throw new Error(`${ak} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            bk(Yk, kk);
             continue
           }
-          if (uu.patchOnly && uu.fullStateOnly) throw new Error(`${Qu} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const Ru = ZR(uu.type, Qu);
-          if ("function" === typeof Ru && !IE.is(Ru)) throw new Error(`${Qu} is a synced ref to non-Schema class '${Ru.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          Eu[bu] = Ru, void 0 !== uu.view && (Nu[bu] = uu.view), uu.unreliable && Xu.push(bu), uu.patchOnly && Vu.push(bu), uu.deprecated && (ru[bu] = uu.deprecatedThrows), uu.fullStateOnly && Bu.push(bu), uu.stream && xu.push(bu), void 0 !== uu.streamPriority && (Su[bu] = uu.streamPriority), uu.optional && pu.push(bu), Ju(bu, uu)
+          if (kk.patchOnly && kk.fullStateOnly) throw new Error(`${ak} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const Fk = CF(kk.type, ak);
+          if ("function" === typeof Fk && !uR.is(Fk)) throw new Error(`${ak} is a synced ref to non-Schema class '${Fk.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          Rk[Yk] = Fk, void 0 !== kk.view && (wk[Yk] = kk.view), kk.unreliable && dk.push(Yk), kk.patchOnly && sk.push(Yk), kk.deprecated && (Vk[Yk] = kk.deprecatedThrows), kk.fullStateOnly && Jk.push(Yk), kk.stream && Ak.push(Yk), void 0 !== kk.streamPriority && (ek[Yk] = kk.streamPriority), kk.optional && yk.push(Yk), bk(Yk, kk)
         } else {
-          if ("function" !== typeof yu) throw new Error(`${Qu} must be a t.* builder, Schema subclass, or method (got ${typeof yu}).`);
-          IE.is(yu) ? (Eu[bu] = yu, yu.prototype.initialize && 0 !== yu.prototype.initialize.length || (mu[bu] = () => new yu)) : Ku[bu] = yu
+          if ("function" !== typeof Bk) throw new Error(`${ak} must be a t.* builder, Schema subclass, or method (got ${typeof Bk}).`);
+          uR.is(Bk) ? (Rk[Yk] = Bk, Bk.prototype.initialize && 0 !== Bk.prototype.initialize.length || (Xk[Yk] = () => new Bk)) : tk[Yk] = Bk
         }
       }
-      const Tu = uu => {
-          for (const Ru in Qu) uu[Ru] = Qu[Ru];
-          for (const Ru in mu) uu[Ru] = mu[Ru]()
+      const fk = kk => {
+          for (const Fk in ak) kk[Fk] = ak[Fk];
+          for (const Fk in Xk) kk[Fk] = Xk[Fk]()
         },
-        Wu = () => {
-          const uu = {};
-          return Tu(uu), uu
+        mk = () => {
+          const kk = {};
+          return fk(kk), kk
         },
-        ju = "function" === typeof Ku.initialize,
-        Hu = Ku.initialize ?? yu._initialize,
-        du = class extends yu {
+        Wk = "function" === typeof tk.initialize,
+        vk = tk.initialize ?? Bk._initialize,
+        ik = class extends Bk {
           constructor() {
-            for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
-            const Ku = Ru[0];
-            void 0 === Ku ? (super(), Tu(this)) : super(Object.assign(Wu(), ju ? (uu => {
-              const Ru = Object.keys(Eu),
-                yu = {};
-              for (const Eu in uu) Ru.includes(Eu) || (yu[Eu] = uu[Eu]);
-              return yu
-            })(Ku) : Ku)), Hu && new.target === du && Hu.apply(this, Ru)
+            for (var kk = arguments.length, Fk = new Array(kk), Bk = 0; Bk < kk; Bk++) Fk[Bk] = arguments[Bk];
+            const tk = Fk[0];
+            void 0 === tk ? (super(), fk(this)) : super(Object.assign(mk(), Wk ? (kk => {
+              const Fk = Object.keys(Rk),
+                Bk = {};
+              for (const Rk in kk) Fk.includes(Rk) || (Bk[Rk] = kk[Rk]);
+              return Bk
+            })(tk) : tk)), vk && new.target === ik && vk.apply(this, Fk)
           }
         };
-      Ru && Object.defineProperty(du, "name", {
-        value: Ru
-      }), oR.setFields(du, Eu), du._getDefaultValues = Wu, du._initialize = Hu, Object.assign(du.prototype, Ku);
-      for (const bu in Nu) TE(Nu[bu])(du.prototype, bu);
-      for (const bu of Xu) WE(du.prototype, bu);
-      for (const bu of Vu) jE(du.prototype, bu);
-      for (const bu in ru) kE(ru[bu])(du.prototype, bu);
-      if (Bu.length > 0 || xu.length > 0) {
-        const uu = du[Symbol.metadata];
-        for (const Ru of Bu) oR.setFullStateOnly(uu, Ru);
-        for (const Ru of xu) oR.setStream(uu, Ru);
-        for (const Ru in Su) oR.setStreamPriority(uu, Ru, Su[Ru])
+      Fk && Object.defineProperty(ik, "name", {
+        value: Fk
+      }), jF.setFields(ik, Rk), ik._getDefaultValues = mk, ik._initialize = vk, Object.assign(ik.prototype, tk);
+      for (const Yk in wk) mR(wk[Yk])(ik.prototype, Yk);
+      for (const Yk of dk) WR(ik.prototype, Yk);
+      for (const Yk of sk) vR(ik.prototype, Yk);
+      for (const Yk in Vk) OR(Vk[Yk])(ik.prototype, Yk);
+      if (Jk.length > 0 || Ak.length > 0) {
+        const kk = ik[Symbol.metadata];
+        for (const Fk of Jk) jF.setFullStateOnly(kk, Fk);
+        for (const Fk of Ak) jF.setStream(kk, Fk);
+        for (const Fk in ek) jF.setStreamPriority(kk, Fk, ek[Fk])
       }
-      if (pu.length > 0) {
-        const uu = du[Symbol.metadata];
-        for (const Ru of pu) uu[uu[Ru]].optional = !0
+      if (yk.length > 0) {
+        const kk = ik[Symbol.metadata];
+        for (const Fk of yk) kk[kk[Fk]].optional = !0
       }
-      return du.extend = (uu, Ru) => DE(uu, Ru, du), du
+      return ik.extend = (kk, Fk) => NR(kk, Fk, ik), ik
     }
 
-    function ME(uu) {
-      const Ru = uu[pu].root,
-        yu = {
+    function HR(kk) {
+      const Fk = kk[yk].root,
+        Bk = {
           ops: {},
           refs: []
         };
-      let Eu = Ru.changes.next;
-      for (; Eu;) {
-        const uu = Eu.changeTree;
-        void 0 !== uu ? (yu.refs.push(`refId#${uu.ref[Ju]}`), uu.forEach(((uu, Ru) => {
-          if (uu < 0 || !Ru) return;
-          const Eu = Ku[Ru];
-          yu.ops[Eu] || (yu.ops[Eu] = 0), yu.ops[Eu]++
-        })), Eu = Eu.next) : Eu = Eu.next
+      let Rk = Fk.changes.next;
+      for (; Rk;) {
+        const kk = Rk.changeTree;
+        void 0 !== kk ? (Bk.refs.push(`refId#${kk.ref[bk]}`), kk.forEach(((kk, Fk) => {
+          if (kk < 0 || !Fk) return;
+          const Rk = tk[Fk];
+          Bk.ops[Rk] || (Bk.ops[Rk] = 0), Bk.ops[Rk]++
+        })), Rk = Rk.next) : Rk = Rk.next
       }
-      return yu
+      return Bk
     }
-    class IE {
-      static[Xu] = ty;
-      static[Vu] = qy;
-      [Ju];
-      [bu];
-      static initialize(uu) {
-        Object.defineProperty(uu, pu, {
-          value: new Gy(uu),
+    class uR {
+      static[dk] = GB;
+      static[sk] = lB;
+      [bk];
+      [Yk];
+      static initialize(kk) {
+        Object.defineProperty(kk, yk, {
+          value: new MB(kk),
           enumerable: !1,
           writable: !0
-        }), uu[bu] = []
+        }), kk[Yk] = []
       }
       static initializeForDecoder() {
-        const uu = Object.create(this.prototype);
-        return ny(uu), uu[bu] = [], uu
+        const kk = Object.create(this.prototype);
+        return UB(kk), kk[Yk] = [], kk
       }
-      static reset(uu) {
-        const Ru = uu?.[pu];
-        if (void 0 === Ru || "function" !== typeof Ru.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== Ru.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${uu.constructor.name}) with multiple parents.`);
-        uu[Hu]()
-      } [Hu]() {
-        const uu = this.constructor[Symbol.metadata],
-          Ru = uu?.[Mu] ?? [],
-          yu = this[bu];
-        for (let Eu = 0; Eu < Ru.length; Eu++) {
-          const uu = yu[Ru[Eu]];
-          uu?.[Hu]?.()
+      static reset(kk) {
+        const Fk = kk?.[yk];
+        if (void 0 === Fk || "function" !== typeof Fk.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== Fk.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${kk.constructor.name}) with multiple parents.`);
+        kk[vk]()
+      } [vk]() {
+        const kk = this.constructor[Symbol.metadata],
+          Fk = kk?.[Hk] ?? [],
+          Bk = this[Yk];
+        for (let Rk = 0; Rk < Fk.length; Rk++) {
+          const kk = Bk[Fk[Rk]];
+          kk?.[vk]?.()
         }
-        this[pu].recycle(), this[Ju] = void 0
+        this[yk].recycle(), this[bk] = void 0
       }
-      static is(uu) {
-        const Ru = uu[Symbol.metadata];
-        return "object" === typeof Ru && null !== Ru
+      static is(kk) {
+        const Fk = kk[Symbol.metadata];
+        return "object" === typeof Fk && null !== Fk
       }
-      static isSchema(uu) {
-        return "function" === typeof uu?.assign
+      static isSchema(kk) {
+        return "function" === typeof kk?.assign
       }
-      static[Nu](uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ku.ADD;
-        uu.change(Ru, yu)
+      static[wk](kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tk.ADD;
+        kk.change(Fk, Bk)
       }
-      static[ru](uu, Ru, yu) {
-        const Eu = uu.constructor[Symbol.metadata],
-          Ku = Eu[Ru]?.tag;
-        return void 0 === yu ? void 0 === Ku : void 0 === Ku || (Ku === SE ? yu.isChangeTreeVisible(uu[pu]) : yu.hasTagOnTree(uu[pu], Ku))
+      static[Vk](kk, Fk, Bk) {
+        const Rk = kk.constructor[Symbol.metadata],
+          tk = Rk[Fk]?.tag;
+        return void 0 === Bk ? void 0 === tk : void 0 === tk || (tk === yR ? Bk.isChangeTreeVisible(kk[yk]) : Bk.hasTagOnTree(kk[yk], tk))
       }
-      constructor(uu) {
-        IE.initialize(this), uu && IE.assignProps(this, uu)
+      constructor(kk) {
+        uR.initialize(this), kk && uR.assignProps(this, kk)
       }
-      assign(uu) {
-        return IE.assignProps(this, uu), this
+      assign(kk) {
+        return uR.assignProps(this, kk), this
       }
-      static assignProps(uu, Ru) {
-        const yu = uu.constructor[Symbol.metadata];
-        if (yu && void 0 !== yu[Du])
-          for (let Ku = 0; Ku <= yu[Du]; Ku++) {
-            const Eu = yu[Ku];
-            if (!Eu) continue;
-            const Qu = Ru[Eu.name];
-            void 0 !== Qu && (uu[Eu.name] = Qu)
+      static assignProps(kk, Fk) {
+        const Bk = kk.constructor[Symbol.metadata];
+        if (Bk && void 0 !== Bk[Nk])
+          for (let tk = 0; tk <= Bk[Nk]; tk++) {
+            const Rk = Bk[tk];
+            if (!Rk) continue;
+            const ak = Fk[Rk.name];
+            void 0 !== ak && (kk[Rk.name] = ak)
           }
-        const Eu = Object.keys(Ru);
-        for (let Ku = 0; Ku < Eu.length; Ku++) {
-          const Qu = Eu[Ku];
-          yu && void 0 !== yu[Qu] || (uu[Qu] = Ru[Qu])
+        const Rk = Object.keys(Fk);
+        for (let tk = 0; tk < Rk.length; tk++) {
+          const ak = Rk[tk];
+          Bk && void 0 !== Bk[ak] || (kk[ak] = Fk[ak])
         }
       }
-      restore(uu) {
-        const Ru = this.constructor[Symbol.metadata];
-        for (const yu in Ru) {
-          const Eu = Ru[yu],
-            Ku = Eu.name,
-            Qu = Eu.type,
-            mu = uu[Ku];
-          if (void 0 !== mu && null !== mu)
-            if ("string" === typeof Qu) this[Ku] = mu;
-            else if (IE.is(Qu)) {
-            const uu = new Qu;
-            uu.restore(mu), this[Ku] = uu
-          } else if ("object" === typeof Qu) {
-            const uu = Object.keys(Qu)[0],
-              Ru = Qu[uu];
-            if ("map" === uu) {
-              const uu = this[Ku];
-              for (const yu in mu)
-                if (IE.is(Ru)) {
-                  const Eu = new Ru;
-                  Eu.restore(mu[yu]), uu.set(yu, Eu)
-                } else uu.set(yu, mu[yu])
-            } else if ("array" === uu) {
-              const uu = this[Ku];
-              for (let yu = 0; yu < mu.length; yu++)
-                if (IE.is(Ru)) {
-                  const Eu = new Ru;
-                  Eu.restore(mu[yu]), uu.push(Eu)
-                } else uu.push(mu[yu])
+      restore(kk) {
+        const Fk = this.constructor[Symbol.metadata];
+        for (const Bk in Fk) {
+          const Rk = Fk[Bk],
+            tk = Rk.name,
+            ak = Rk.type,
+            Xk = kk[tk];
+          if (void 0 !== Xk && null !== Xk)
+            if ("string" === typeof ak) this[tk] = Xk;
+            else if (uR.is(ak)) {
+            const kk = new ak;
+            kk.restore(Xk), this[tk] = kk
+          } else if ("object" === typeof ak) {
+            const kk = Object.keys(ak)[0],
+              Fk = ak[kk];
+            if ("map" === kk) {
+              const kk = this[tk];
+              for (const Bk in Xk)
+                if (uR.is(Fk)) {
+                  const Rk = new Fk;
+                  Rk.restore(Xk[Bk]), kk.set(Bk, Rk)
+                } else kk.set(Bk, Xk[Bk])
+            } else if ("array" === kk) {
+              const kk = this[tk];
+              for (let Bk = 0; Bk < Xk.length; Bk++)
+                if (uR.is(Fk)) {
+                  const Rk = new Fk;
+                  Rk.restore(Xk[Bk]), kk.push(Rk)
+                } else kk.push(Xk[Bk])
             }
           }
         }
         return this
       }
-      setDirty(uu, Ru) {
-        const yu = this.constructor[Symbol.metadata];
-        this[pu].change(yu[yu[uu]].index, Ru)
+      setDirty(kk, Fk) {
+        const Bk = this.constructor[Symbol.metadata];
+        this[yk].change(Bk[Bk[kk]].index, Fk)
       }
       pauseTracking() {
-        this[pu].pause()
+        this[yk].pause()
       }
       resumeTracking() {
-        this[pu].resume()
+        this[yk].resume()
       }
-      untracked(uu) {
-        return this[pu].untracked(uu)
+      untracked(kk) {
+        return this[yk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[pu].paused
+        return this[yk].paused
       }
       clone() {
-        const uu = Object.create(this.constructor.prototype);
-        IE.initialize(uu);
-        const Ru = this.constructor[Symbol.metadata];
-        for (const yu in Ru) {
-          const Eu = Ru[yu].name;
-          "object" === typeof this[Eu] && "function" === typeof this[Eu]?.clone ? uu[Eu] = this[Eu].clone() : uu[Eu] = this[Eu]
+        const kk = Object.create(this.constructor.prototype);
+        uR.initialize(kk);
+        const Fk = this.constructor[Symbol.metadata];
+        for (const Bk in Fk) {
+          const Rk = Fk[Bk].name;
+          "object" === typeof this[Rk] && "function" === typeof this[Rk]?.clone ? kk[Rk] = this[Rk].clone() : kk[Rk] = this[Rk]
         }
-        return uu
+        return kk
       }
       toJSON() {
-        const uu = {},
-          Ru = this.constructor[Symbol.metadata];
-        for (const yu in Ru) {
-          const Eu = Ru[yu],
-            Ku = Eu.name;
-          Eu.deprecated || null === this[Ku] || "undefined" === typeof this[Ku] || (uu[Ku] = "function" === typeof this[Ku].toJSON ? this[Ku].toJSON() : this[Ku])
+        const kk = {},
+          Fk = this.constructor[Symbol.metadata];
+        for (const Bk in Fk) {
+          const Rk = Fk[Bk],
+            tk = Rk.name;
+          Rk.deprecated || null === this[tk] || "undefined" === typeof this[tk] || (kk[tk] = "function" === typeof this[tk].toJSON ? this[tk].toJSON() : this[tk])
         }
-        return uu
+        return kk
       }
       discardAllChanges() {
-        this[pu].discardAll()
-      } [Bu](uu) {
-        return this[this.constructor[Symbol.metadata][uu].name]
-      } [xu](uu) {
-        this[this.constructor[Symbol.metadata][uu].name] = void 0
+        this[yk].discardAll()
+      } [Jk](kk) {
+        return this[this.constructor[Symbol.metadata][kk].name]
+      } [Ak](kk) {
+        this[this.constructor[Symbol.metadata][kk].name] = void 0
       }
-      static debugRefIds(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Eu = arguments.length > 3 ? arguments[3] : void 0,
-          Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const Qu = Ru ? ` - ${JSON.stringify(uu.toJSON())}` : "",
-          mu = uu[pu],
-          Nu = uu[Ju],
-          Xu = Eu ? Eu.root.refCount[Nu] : mu.refCount,
-          Vu = Xu > 1 ? ` [\xd7${Xu}]` : "";
-        let ru = `${function(uu){return new Array(uu).fill(0).map(((Ru,yu)=>yu===uu-1?"\u2514\u2500 ":"   ")).join("")}(yu)}${Ku}${uu.constructor.name} (refId: ${Nu})${Vu}${Qu}\n`;
-        return mu.forEachChild(((Ku, Qu) => {
-          let mu = Qu;
-          "number" === typeof Qu && uu.$indexes && (mu = uu.$indexes.get(Qu) ?? Qu);
-          const Ju = void 0 !== uu.forEach && void 0 !== mu ? `["${mu}"]: ` : "";
-          ru += this.debugRefIds(Ku.ref, Ru, yu + 1, Eu, Ju)
-        })), ru
+      static debugRefIds(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Rk = arguments.length > 3 ? arguments[3] : void 0,
+          tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const ak = Fk ? ` - ${JSON.stringify(kk.toJSON())}` : "",
+          Xk = kk[yk],
+          wk = kk[bk],
+          dk = Rk ? Rk.root.refCount[wk] : Xk.refCount,
+          sk = dk > 1 ? ` [\xd7${dk}]` : "";
+        let Vk = `${function(kk){return new Array(kk).fill(0).map(((Fk,Bk)=>Bk===kk-1?"\u2514\u2500 ":"   ")).join("")}(Bk)}${tk}${kk.constructor.name} (refId: ${wk})${sk}${ak}\n`;
+        return Xk.forEachChild(((tk, ak) => {
+          let Xk = ak;
+          "number" === typeof ak && kk.$indexes && (Xk = kk.$indexes.get(ak) ?? ak);
+          const bk = void 0 !== kk.forEach && void 0 !== Xk ? `["${Xk}"]: ` : "";
+          Vk += this.debugRefIds(tk.ref, Fk, Bk + 1, Rk, bk)
+        })), Vk
       }
-      static debugRefIdEncodingOrder(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const yu = [],
-          Eu = uu[pu];
-        if ("changes" === Ru) {
-          let uu = Eu.root.changes?.next;
-          for (; uu;) uu.changeTree && yu.push(uu.changeTree.ref[Ju]), uu = uu.next;
-          return yu
+      static debugRefIdEncodingOrder(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const Bk = [],
+          Rk = kk[yk];
+        if ("changes" === Fk) {
+          let kk = Rk.root.changes?.next;
+          for (; kk;) kk.changeTree && Bk.push(kk.changeTree.ref[bk]), kk = kk.next;
+          return Bk
         }
-        const Ku = "allFilteredChanges" === Ru,
-          Qu = new Set,
-          mu = uu => {
-            Qu.has(uu) || (Qu.add(uu), uu.isFiltered === Ku && yu.push(uu.ref[Ju]), uu.forEachChild(((uu, Ru) => mu(uu))))
+        const tk = "allFilteredChanges" === Fk,
+          ak = new Set,
+          Xk = kk => {
+            ak.has(kk) || (ak.add(kk), kk.isFiltered === tk && Bk.push(kk.ref[bk]), kk.forEachChild(((kk, Fk) => Xk(kk))))
           };
-        return mu(Eu), yu
+        return Xk(Rk), Bk
       }
-      static debugRefIdsFromDecoder(uu) {
-        return this.debugRefIds(uu.state, !1, 0, uu)
+      static debugRefIdsFromDecoder(kk) {
+        return this.debugRefIds(kk.state, !1, 0, kk)
       }
-      static debugChanges(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const yu = uu[pu],
-          Eu = Ru ? "allChanges" : "changes";
-        let Qu = `${uu.constructor.name} (${uu[Ju]}) -> .${Eu}:\n`;
-        return Ru ? yu.forEachLive((uu => {
-          Qu += `- [${uu}]: ADD (${JSON.stringify(yu.getValue(Number(uu),!0))})\n`
-        })) : yu.forEach(((uu, Ru) => {
-          uu < 0 || !Ru || (Qu += `- [${uu}]: ${Ku[Ru]} (${JSON.stringify(yu.getValue(Number(uu),!1))})\n`)
-        })), Qu
+      static debugChanges(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Bk = kk[yk],
+          Rk = Fk ? "allChanges" : "changes";
+        let ak = `${kk.constructor.name} (${kk[bk]}) -> .${Rk}:\n`;
+        return Fk ? Bk.forEachLive((kk => {
+          ak += `- [${kk}]: ADD (${JSON.stringify(Bk.getValue(Number(kk),!0))})\n`
+        })) : Bk.forEach(((kk, Fk) => {
+          kk < 0 || !Fk || (ak += `- [${kk}]: ${tk[Fk]} (${JSON.stringify(Bk.getValue(Number(kk),!1))})\n`)
+        })), ak
       }
     }
-    Qu(IE);
-    const GE = {
+    ak(uR);
+    const MR = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class UE {
+    class gR {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const uu = {};
-        for (const Ru in this.changeTrees) uu[Ru] = this.changeTrees[Ru].refCount;
-        return uu
+        const kk = {};
+        for (const Fk in this.changeTrees) kk[Fk] = this.changeTrees[Fk].refCount;
+        return kk
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(uu) {
-        this.types.hasFilters && (uu.flags & My || (uu.flags |= My, this.pendingFilterRefresh.push(uu)))
+      enqueueFilterRefresh(kk) {
+        this.types.hasFilters && (kk.flags & HB || (kk.flags |= HB, this.pendingFilterRefresh.push(kk)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(uu) {
-        this._freeViewIds.push(uu)
+      releaseViewId(kk) {
+        this._freeViewIds.push(kk)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(uu) {
-        this.activeViews.set(uu.id, new WeakRef(uu))
+      registerView(kk) {
+        this.activeViews.set(kk.id, new WeakRef(kk))
       }
-      unregisterView(uu) {
-        this.activeViews.delete(uu.id);
-        const Ru = uu.id;
-        for (const yu of this.streamTrees) yu._dropView(Ru)
+      unregisterView(kk) {
+        this.activeViews.delete(kk.id);
+        const Fk = kk.id;
+        for (const Bk of this.streamTrees) Bk._dropView(Fk)
       }
-      forEachActiveView(uu) {
-        for (const [Ru, yu] of this.activeViews) {
-          const Eu = yu.deref();
-          if (void 0 !== Eu) uu(Eu);
+      forEachActiveView(kk) {
+        for (const [Fk, Bk] of this.activeViews) {
+          const Rk = Bk.deref();
+          if (void 0 !== Rk) kk(Rk);
           else {
-            this.activeViews.delete(Ru);
-            for (const uu of this.streamTrees) uu._dropView(Ru)
+            this.activeViews.delete(Fk);
+            for (const kk of this.streamTrees) kk._dropView(Fk)
           }
         }
       }
-      registerStream(uu) {
-        this.streamTrees.add(uu)
+      registerStream(kk) {
+        this.streamTrees.add(kk)
       }
-      unregisterStream(uu) {
-        this.streamTrees.delete(uu)
+      unregisterStream(kk) {
+        this.streamTrees.delete(kk)
       }
-      constructor(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = uu, this.nextUniqueId = Ru
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = kk, this.nextUniqueId = Fk
       }
-      add(uu) {
-        const Ru = uu.ref;
-        void 0 === Ru[Ju] && (GE.value = this.nextUniqueId++, Object.defineProperty(Ru, Ju, GE));
-        const yu = Ru[Ju],
-          Eu = void 0 === this.changeTrees[yu];
-        Eu && (this.changeTrees[yu] = uu), uu.needsRestage && (uu.needsRestage = !1, uu.forEachLiveWithCtx(uu, yy));
-        const Ku = Eu ? 0 : uu.refCount;
-        return uu.refCount = Ku + 1, Ku > 0 && this.enqueueFilterRefresh(uu), Eu
+      add(kk) {
+        const Fk = kk.ref;
+        void 0 === Fk[bk] && (MR.value = this.nextUniqueId++, Object.defineProperty(Fk, bk, MR));
+        const Bk = Fk[bk],
+          Rk = void 0 === this.changeTrees[Bk];
+        Rk && (this.changeTrees[Bk] = kk), kk.needsRestage && (kk.needsRestage = !1, kk.forEachLiveWithCtx(kk, RB));
+        const tk = Rk ? 0 : kk.refCount;
+        return kk.refCount = tk + 1, tk > 0 && this.enqueueFilterRefresh(kk), Rk
       }
-      remove(uu) {
-        const Ru = uu.refCount - 1;
-        if (Ru <= 0) {
-          if (uu.root = void 0, delete this.changeTrees[uu.ref[Ju]], uu.isStreamCollection) {
-            const Ru = uu.ref;
-            Ru._unregister?.(), this.unregisterStream(Ru)
+      remove(kk) {
+        const Fk = kk.refCount - 1;
+        if (Fk <= 0) {
+          if (kk.root = void 0, delete this.changeTrees[kk.ref[bk]], kk.isStreamCollection) {
+            const Fk = kk.ref;
+            Fk._unregister?.(), this.unregisterStream(Fk)
           }
-          this.removeFromQueue(uu), this.removeFromUnreliableQueue(uu), uu.refCount = 0, uu.needsRestage = !0, uu.forEachChild(((Ru, yu) => {
-            Ru.removeParent(uu.ref) && (void 0 === Ru.parentRef || Ru.refCount > 0 ? this.remove(Ru) : this.moveNextToParent(Ru))
+          this.removeFromQueue(kk), this.removeFromUnreliableQueue(kk), kk.refCount = 0, kk.needsRestage = !0, kk.forEachChild(((Fk, Bk) => {
+            Fk.removeParent(kk.ref) && (void 0 === Fk.parentRef || Fk.refCount > 0 ? this.remove(Fk) : this.moveNextToParent(Fk))
           }))
-        } else uu.refCount = Ru, this.enqueueFilterRefresh(uu), this.recursivelyMoveNextToParent(uu);
-        return Ru
+        } else kk.refCount = Fk, this.enqueueFilterRefresh(kk), this.recursivelyMoveNextToParent(kk);
+        return Fk
       }
-      recursivelyMoveNextToParent(uu) {
-        this.moveNextToParent(uu), uu.forEachChild(((uu, Ru) => this.recursivelyMoveNextToParent(uu)))
+      recursivelyMoveNextToParent(kk) {
+        this.moveNextToParent(kk), kk.forEachChild(((kk, Fk) => this.recursivelyMoveNextToParent(kk)))
       }
-      moveNextToParent(uu) {
-        uu.changesNode && this._moveNextToParentInList(this.changes, uu, uu.changesNode, "changesNode"), uu.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, uu, uu.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(kk) {
+        kk.changesNode && this._moveNextToParentInList(this.changes, kk, kk.changesNode, "changesNode"), kk.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, kk, kk.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(uu, Ru, yu, Eu) {
-        const Ku = Ru.parent;
-        if (!Ku || !Ku[pu]) return;
-        const Qu = Ku[pu][Eu];
-        Qu && Qu !== yu && (yu.position > Qu.position || (yu.prev ? yu.prev.next = yu.next : uu.next = yu.next, yu.next ? yu.next.prev = yu.prev : uu.tail = yu.prev, yu.prev = uu.tail, yu.next = void 0, uu.tail.next = yu, uu.tail = yu, yu.position = uu.nextPosition++))
+      _moveNextToParentInList(kk, Fk, Bk, Rk) {
+        const tk = Fk.parent;
+        if (!tk || !tk[yk]) return;
+        const ak = tk[yk][Rk];
+        ak && ak !== Bk && (Bk.position > ak.position || (Bk.prev ? Bk.prev.next = Bk.next : kk.next = Bk.next, Bk.next ? Bk.next.prev = Bk.prev : kk.tail = Bk.prev, Bk.prev = kk.tail, Bk.next = void 0, kk.tail.next = Bk, kk.tail = Bk, Bk.position = kk.nextPosition++))
       }
-      enqueueChangeTree(uu) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu.changesNode) || (uu.changesNode = this._appendToList(this.changes, uu))
+      enqueueChangeTree(kk) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk.changesNode) || (kk.changesNode = this._appendToList(this.changes, kk))
       }
-      enqueueUnreliable(uu) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu.unreliableChangesNode) || (uu.unreliableChangesNode = this._appendToList(this.unreliableChanges, uu))
+      enqueueUnreliable(kk) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk.unreliableChangesNode) || (kk.unreliableChangesNode = this._appendToList(this.unreliableChanges, kk))
       }
-      _appendToList(uu, Ru) {
-        const yu = this._nodePool;
-        let Eu;
-        return yu.length > 0 ? (Eu = yu.pop(), Eu.changeTree = Ru, Eu.next = void 0, Eu.prev = void 0) : Eu = {
-          changeTree: Ru,
+      _appendToList(kk, Fk) {
+        const Bk = this._nodePool;
+        let Rk;
+        return Bk.length > 0 ? (Rk = Bk.pop(), Rk.changeTree = Fk, Rk.next = void 0, Rk.prev = void 0) : Rk = {
+          changeTree: Fk,
           next: void 0,
           prev: void 0,
           position: 0
-        }, uu.next ? (Eu.prev = uu.tail, uu.tail.next = Eu, uu.tail = Eu) : (uu.nextPosition = 0, uu.next = Eu, uu.tail = Eu), Eu.position = uu.nextPosition++, Eu
+        }, kk.next ? (Rk.prev = kk.tail, kk.tail.next = Rk, kk.tail = Rk) : (kk.nextPosition = 0, kk.next = Rk, kk.tail = Rk), Rk.position = kk.nextPosition++, Rk
       }
-      releaseNode(uu) {
-        uu.changeTree = void 0, uu.prev = void 0, uu.next = void 0, this._nodePool.push(uu)
+      releaseNode(kk) {
+        kk.changeTree = void 0, kk.prev = void 0, kk.next = void 0, this._nodePool.push(kk)
       }
-      removeFromQueue(uu) {
-        return this._removeNode(this.changes, uu, uu.changesNode, "changesNode")
+      removeFromQueue(kk) {
+        return this._removeNode(this.changes, kk, kk.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(uu) {
-        return this._removeNode(this.unreliableChanges, uu, uu.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(kk) {
+        return this._removeNode(this.unreliableChanges, kk, kk.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(uu, Ru, yu, Eu) {
-        return !(!yu || yu.changeTree !== Ru) && (yu.prev ? yu.prev.next = yu.next : uu.next = yu.next, yu.next ? yu.next.prev = yu.prev : uu.tail = yu.prev, Ru[Eu] = void 0, this.releaseNode(yu), !0)
+      _removeNode(kk, Fk, Bk, Rk) {
+        return !(!Bk || Bk.changeTree !== Fk) && (Bk.prev ? Bk.prev.next = Bk.next : kk.next = Bk.next, Bk.next ? Bk.next.prev = Bk.prev : kk.tail = Bk.prev, Fk[Rk] = void 0, this.releaseNode(Bk), !0)
       }
     }
 
-    function nE(uu, Ru) {
-      if (-1 === Ru || Ru >= uu.length) return !1;
-      const yu = uu.length - 1;
-      for (let Eu = Ru; Eu < yu; Eu++) uu[Eu] = uu[Eu + 1];
-      return uu.length = yu, !0
+    function UR(kk, Fk) {
+      if (-1 === Fk || Fk >= kk.length) return !1;
+      const Bk = kk.length - 1;
+      for (let Rk = Fk; Rk < Bk; Rk++) kk[Rk] = kk[Rk + 1];
+      return kk.length = Bk, !0
     }
 
-    function sE(uu, Ru, yu) {
-      const Eu = ~yu,
-        Ku = uu.changeTrees;
-      for (const Qu in Ku) {
-        const uu = Ku[Qu],
-          yu = uu.visibleViews;
-        void 0 !== yu && Ru < yu.length && (yu[Ru] &= Eu);
-        const mu = uu.subscribedViews;
-        void 0 !== mu && Ru < mu.length && (mu[Ru] &= Eu);
-        const Ju = uu.tagViews;
-        void 0 !== Ju && Ju.forEach((uu => {
-          Ru < uu.length && (uu[Ru] &= Eu)
+    function cR(kk, Fk, Bk) {
+      const Rk = ~Bk,
+        tk = kk.changeTrees;
+      for (const ak in tk) {
+        const kk = tk[ak],
+          Bk = kk.visibleViews;
+        void 0 !== Bk && Fk < Bk.length && (Bk[Fk] &= Rk);
+        const Xk = kk.subscribedViews;
+        void 0 !== Xk && Fk < Xk.length && (Xk[Fk] &= Rk);
+        const bk = kk.tagViews;
+        void 0 !== bk && bk.forEach((kk => {
+          Fk < kk.length && (kk[Fk] &= Rk)
         }))
       }
     }
-    const tE = new FinalizationRegistry((uu => {
+    const GR = new FinalizationRegistry((kk => {
       let {
-        root: Ru,
-        id: yu,
-        slot: Eu,
-        bit: Ku
-      } = uu;
-      sE(Ru, Eu, Ku), Ru.activeViews.delete(yu);
-      for (const Qu of Ru.streamTrees) Qu._dropView(yu);
-      Ru.releaseViewId(yu)
+        root: Fk,
+        id: Bk,
+        slot: Rk,
+        bit: tk
+      } = kk;
+      cR(Fk, Rk, tk), Fk.activeViews.delete(Bk);
+      for (const ak of Fk.streamTrees) ak._dropView(Bk);
+      Fk.releaseViewId(Bk)
     }));
 
-    function lE(uu) {
-      if (void 0 === uu) return "undefined";
-      if (null === uu) return "null";
-      const Ru = typeof uu;
-      return "string" === Ru ? JSON.stringify(uu.length > 30 ? `${uu.slice(0,30)}\u2026` : uu) : "object" !== Ru && "function" !== Ru ? `${Ru} ${String(uu)}` : Array.isArray(uu) ? `Array(${uu.length})` : uu.constructor?.name ?? "Object"
+    function TR(kk) {
+      if (void 0 === kk) return "undefined";
+      if (null === kk) return "null";
+      const Fk = typeof kk;
+      return "string" === Fk ? JSON.stringify(kk.length > 30 ? `${kk.slice(0,30)}\u2026` : kk) : "object" !== Fk && "function" !== Fk ? `${Fk} ${String(kk)}` : Array.isArray(kk) ? `Array(${kk.length})` : kk.constructor?.name ?? "Object"
     }
-    class gE {
+    class rR {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = uu, uu && (this.items = [])
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = kk, kk && (this.items = [])
       }
-      _bindRoot(uu) {
-        void 0 === this._root && (this._root = uu, this.id = uu.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), uu.registerView(this), tE.register(this, {
-          root: uu,
+      _bindRoot(kk) {
+        void 0 === this._root && (this._root = kk, this.id = kk.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), kk.registerView(this), GR.register(this, {
+          root: kk,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), sE(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), tE.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), cR(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), GR.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(uu) {
-        const Ru = uu.visibleViews,
-          yu = this._slot;
-        return void 0 !== Ru && yu < Ru.length && 0 !== (Ru[yu] & this._bit)
+      isVisible(kk) {
+        const Fk = kk.visibleViews,
+          Bk = this._slot;
+        return void 0 !== Fk && Bk < Fk.length && 0 !== (Fk[Bk] & this._bit)
       }
-      markVisible(uu) {
-        const Ru = this._slot;
-        let yu = uu.visibleViews;
-        for (void 0 === yu && (yu = uu.visibleViews = []); yu.length <= Ru;) yu.push(0);
-        yu[Ru] |= this._bit
+      markVisible(kk) {
+        const Fk = this._slot;
+        let Bk = kk.visibleViews;
+        for (void 0 === Bk && (Bk = kk.visibleViews = []); Bk.length <= Fk;) Bk.push(0);
+        Bk[Fk] |= this._bit
       }
-      unmarkVisible(uu) {
-        const Ru = uu.visibleViews;
-        if (void 0 === Ru) return;
-        const yu = this._slot;
-        yu < Ru.length && (Ru[yu] &= ~this._bit)
+      unmarkVisible(kk) {
+        const Fk = kk.visibleViews;
+        if (void 0 === Fk) return;
+        const Bk = this._slot;
+        Bk < Fk.length && (Fk[Bk] &= ~this._bit)
       }
-      isSubscribed(uu) {
-        const Ru = uu.subscribedViews,
-          yu = this._slot;
-        return void 0 !== Ru && yu < Ru.length && 0 !== (Ru[yu] & this._bit)
+      isSubscribed(kk) {
+        const Fk = kk.subscribedViews,
+          Bk = this._slot;
+        return void 0 !== Fk && Bk < Fk.length && 0 !== (Fk[Bk] & this._bit)
       }
-      _setSubscribed(uu) {
-        const Ru = this._slot;
-        let yu = uu.subscribedViews;
-        for (void 0 === yu && (yu = uu.subscribedViews = []); yu.length <= Ru;) yu.push(0);
-        yu[Ru] |= this._bit
+      _setSubscribed(kk) {
+        const Fk = this._slot;
+        let Bk = kk.subscribedViews;
+        for (void 0 === Bk && (Bk = kk.subscribedViews = []); Bk.length <= Fk;) Bk.push(0);
+        Bk[Fk] |= this._bit
       }
-      _clearSubscribed(uu) {
-        const Ru = uu.subscribedViews;
-        if (void 0 === Ru) return;
-        const yu = this._slot;
-        yu < Ru.length && (Ru[yu] &= ~this._bit)
+      _clearSubscribed(kk) {
+        const Fk = kk.subscribedViews;
+        if (void 0 === Fk) return;
+        const Bk = this._slot;
+        Bk < Fk.length && (Fk[Bk] &= ~this._bit)
       }
-      hasTagOnTree(uu, Ru) {
-        const yu = uu.tagViews;
-        if (void 0 === yu) return !1;
-        const Eu = this._slot,
-          Ku = this._bit;
-        for (let Qu = Ru; 0 !== Qu; Qu &= Qu - 1) {
-          const uu = yu.get(Qu & -Qu);
-          if (void 0 !== uu && Eu < uu.length && 0 !== (uu[Eu] & Ku)) return !0
+      hasTagOnTree(kk, Fk) {
+        const Bk = kk.tagViews;
+        if (void 0 === Bk) return !1;
+        const Rk = this._slot,
+          tk = this._bit;
+        for (let ak = Fk; 0 !== ak; ak &= ak - 1) {
+          const kk = Bk.get(ak & -ak);
+          if (void 0 !== kk && Rk < kk.length && 0 !== (kk[Rk] & tk)) return !0
         }
         return !1
       }
-      addTag(uu, Ru) {
-        if (Ru === SE) return;
-        let yu = uu.tagViews;
-        void 0 === yu && (yu = uu.tagViews = new Map);
-        const Eu = this._slot,
-          Ku = this._bit;
-        for (let Qu = Ru; Qu > 0; Qu &= Qu - 1) {
-          const uu = Qu & -Qu;
-          let Ru = yu.get(uu);
-          for (void 0 === Ru && (Ru = [], yu.set(uu, Ru)); Ru.length <= Eu;) Ru.push(0);
-          Ru[Eu] |= Ku
+      addTag(kk, Fk) {
+        if (Fk === yR) return;
+        let Bk = kk.tagViews;
+        void 0 === Bk && (Bk = kk.tagViews = new Map);
+        const Rk = this._slot,
+          tk = this._bit;
+        for (let ak = Fk; ak > 0; ak &= ak - 1) {
+          const kk = ak & -ak;
+          let Fk = Bk.get(kk);
+          for (void 0 === Fk && (Fk = [], Bk.set(kk, Fk)); Fk.length <= Rk;) Fk.push(0);
+          Fk[Rk] |= tk
         }
       }
-      removeTag(uu, Ru) {
-        if (Ru === SE) return;
-        const yu = uu.tagViews;
-        if (void 0 === yu) return;
-        const Eu = this._slot,
-          Ku = ~this._bit;
-        for (let Qu = Ru; Qu > 0; Qu &= Qu - 1) {
-          const uu = yu.get(Qu & -Qu);
-          void 0 !== uu && Eu < uu.length && (uu[Eu] &= Ku)
+      removeTag(kk, Fk) {
+        if (Fk === yR) return;
+        const Bk = kk.tagViews;
+        if (void 0 === Bk) return;
+        const Rk = this._slot,
+          tk = ~this._bit;
+        for (let ak = Fk; ak > 0; ak &= ak - 1) {
+          const kk = Bk.get(ak & -ak);
+          void 0 !== kk && Rk < kk.length && (kk[Rk] &= tk)
         }
       }
-      removeAllTagsOnTree(uu) {
-        const Ru = uu.tagViews;
-        if (void 0 === Ru) return;
-        const yu = this._slot,
-          Eu = ~this._bit;
-        Ru.forEach((uu => {
-          yu < uu.length && (uu[yu] &= Eu)
+      removeAllTagsOnTree(kk) {
+        const Fk = kk.tagViews;
+        if (void 0 === Fk) return;
+        const Bk = this._slot,
+          Rk = ~this._bit;
+        Fk.forEach((kk => {
+          Bk < kk.length && (kk[Bk] &= Rk)
         }))
       }
-      add(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SE,
-          yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(uu, Ru, yu, !1)
+      add(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yR,
+          Bk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(kk, Fk, Bk, !1)
       }
-      _addImmediate(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SE;
-        this._add(uu, Ru, !0, !0)
+      _addImmediate(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yR;
+        this._add(kk, Fk, !0, !0)
       }
-      _add(uu, Ru, yu, Eu) {
-        const Qu = uu?.[pu];
-        if (!Qu) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${lE(uu)}`), !1;
-        const mu = Qu.parent;
-        if (!mu && 0 !== uu[Ju]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${Qu.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== Qu.root && this._bindRoot(Qu.root);
-        const Nu = mu?.[pu];
-        if (!Eu && Nu?.isStreamCollection) return nR(mu, this.id, Qu.parentIndex), !0;
-        const Xu = uu.constructor[Symbol.metadata],
-          Vu = this.isVisible(Qu);
-        if (!this.iterable || !yu || Vu && -1 !== this.items.indexOf(uu) || this.items.push(uu), this.markVisible(Qu), yu && mu && this.addParentOf(Qu, Ru), !Eu && Qu.isStreamCollection) return !0;
-        if (Ru === SE && Qu.isNew) return this._markSubtreeVisible(Qu, Ru), !1;
-        let ru = this.changes.get(uu[Ju]);
-        void 0 === ru && (ru = new Map, this.changes.set(uu[Ju], ru));
-        let Bu = !1;
-        const xu = Qu.encDescriptor.tags;
-        if (Qu.forEachChild(((uu, yu) => {
-            const Eu = xu[yu];
-            if (void 0 !== Eu) {
-              if (!(Eu === SE || Ru !== SE && 0 !== (Eu & Ru))) return
+      _add(kk, Fk, Bk, Rk) {
+        const ak = kk?.[yk];
+        if (!ak) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${TR(kk)}`), !1;
+        const Xk = ak.parent;
+        if (!Xk && 0 !== kk[bk]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${ak.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== ak.root && this._bindRoot(ak.root);
+        const wk = Xk?.[yk];
+        if (!Rk && wk?.isStreamCollection) return UF(Xk, this.id, ak.parentIndex), !0;
+        const dk = kk.constructor[Symbol.metadata],
+          sk = this.isVisible(ak);
+        if (!this.iterable || !Bk || sk && -1 !== this.items.indexOf(kk) || this.items.push(kk), this.markVisible(ak), Bk && Xk && this.addParentOf(ak, Fk), !Rk && ak.isStreamCollection) return !0;
+        if (Fk === yR && ak.isNew) return this._markSubtreeVisible(ak, Fk), !1;
+        let Vk = this.changes.get(kk[bk]);
+        void 0 === Vk && (Vk = new Map, this.changes.set(kk[bk], Vk));
+        let Jk = !1;
+        const Ak = ak.encDescriptor.tags;
+        if (ak.forEachChild(((kk, Bk) => {
+            const Rk = Ak[Bk];
+            if (void 0 !== Rk) {
+              if (!(Rk === yR || Fk !== yR && 0 !== (Rk & Fk))) return
             }
-            this.add(uu.ref, Ru, !1) && (Bu = !0)
-          })), Ru !== SE) {
-          this.addTag(Qu, Ru);
-          const uu = Xu?.[Gu];
-          if (void 0 !== uu)
-            for (let yu = Ru; yu > 0; yu &= yu - 1) uu[yu & -yu]?.forEach((uu => {
-              Qu.getChange(uu) !== Ku.DELETE && ru.set(uu, Ku.ADD)
+            this.add(kk.ref, Fk, !1) && (Jk = !0)
+          })), Fk !== yR) {
+          this.addTag(ak, Fk);
+          const kk = dk?.[Mk];
+          if (void 0 !== kk)
+            for (let Bk = Fk; Bk > 0; Bk &= Bk - 1) kk[Bk & -Bk]?.forEach((kk => {
+              ak.getChange(kk) !== tk.DELETE && Vk.set(kk, tk.ADD)
             }))
         }
-        if ((Ru === SE || !Vu) && (!Qu.isNew || Bu))
-          if (Qu.isArray && "string" !== typeof Qu.refTarget[Tu]) Qu.refTarget.items.length > 0 && (ru.set(-1, Ku.ADD), Bu = !0);
+        if ((Fk === yR || !sk) && (!ak.isNew || Jk))
+          if (ak.isArray && "string" !== typeof ak.refTarget[fk]) ak.refTarget.items.length > 0 && (Vk.set(-1, tk.ADD), Jk = !0);
           else {
-            const uu = Qu.encDescriptor.tags;
-            Qu.forEachLive((yu => {
-              const Eu = uu[yu];
-              (void 0 === Eu || Eu === SE || Ru !== SE && 0 !== (Eu & Ru)) && (ru.set(yu, Ku.ADD), Bu = !0)
+            const kk = ak.encDescriptor.tags;
+            ak.forEachLive((Bk => {
+              const Rk = kk[Bk];
+              (void 0 === Rk || Rk === yR || Fk !== yR && 0 !== (Rk & Fk)) && (Vk.set(Bk, tk.ADD), Jk = !0)
             }))
-          } return Bu
+          } return Jk
       }
-      _markSubtreeVisible(uu, Ru) {
-        const yu = uu.encDescriptor.tags;
-        uu.forEachChild(((uu, Eu) => {
-          const Ku = yu[Eu];
-          if (void 0 !== Ku) {
-            if (!(Ku === SE || Ru !== SE && 0 !== (Ku & Ru))) return
+      _markSubtreeVisible(kk, Fk) {
+        const Bk = kk.encDescriptor.tags;
+        kk.forEachChild(((kk, Rk) => {
+          const tk = Bk[Rk];
+          if (void 0 !== tk) {
+            if (!(tk === yR || Fk !== yR && 0 !== (tk & Fk))) return
           }
-          uu.isNew ? (this.markVisible(uu), this._markSubtreeVisible(uu, Ru)) : this._add(uu.ref, Ru, !1, !1)
+          kk.isNew ? (this.markVisible(kk), this._markSubtreeVisible(kk, Fk)) : this._add(kk.ref, Fk, !1, !1)
         }))
       }
-      addParentOf(uu, Ru) {
-        const yu = uu.parent[pu],
-          Eu = uu.parentIndex;
-        this.isVisible(yu) || this.markVisible(yu);
-        const Qu = yu.parent?.[pu];
-        if (Qu && this.addParentOf(yu, Ru), yu.hasFilteredFields && yu.getChange(Eu) !== Ku.DELETE) {
-          let Qu = this.changes.get(yu.ref[Ju]);
-          void 0 === Qu && (Qu = new Map, this.changes.set(yu.ref[Ju], Qu));
-          const mu = yu.encDescriptor.tags[Eu];
-          void 0 !== mu && mu !== SE && 0 !== (mu & Ru) && this.addTag(yu, Ru), Qu.set(yu.isArray ? uu : Eu, Ku.ADD)
+      addParentOf(kk, Fk) {
+        const Bk = kk.parent[yk],
+          Rk = kk.parentIndex;
+        this.isVisible(Bk) || this.markVisible(Bk);
+        const ak = Bk.parent?.[yk];
+        if (ak && this.addParentOf(Bk, Fk), Bk.hasFilteredFields && Bk.getChange(Rk) !== tk.DELETE) {
+          let ak = this.changes.get(Bk.ref[bk]);
+          void 0 === ak && (ak = new Map, this.changes.set(Bk.ref[bk], ak));
+          const Xk = Bk.encDescriptor.tags[Rk];
+          void 0 !== Xk && Xk !== yR && 0 !== (Xk & Fk) && this.addTag(Bk, Fk), ak.set(Bk.isArray ? kk : Rk, tk.ADD)
         }
       }
-      _touchAncestorsOf(uu) {
-        let Ru = uu.parent?.[pu];
-        if (void 0 === Ru) return;
-        const yu = [];
-        for (; void 0 !== Ru;) {
-          if (Ru.hasFilteredFields) {
-            const uu = Ru.ref[Ju];
-            if (this.changes.has(uu)) break;
-            yu.push(Ru)
+      _touchAncestorsOf(kk) {
+        let Fk = kk.parent?.[yk];
+        if (void 0 === Fk) return;
+        const Bk = [];
+        for (; void 0 !== Fk;) {
+          if (Fk.hasFilteredFields) {
+            const kk = Fk.ref[bk];
+            if (this.changes.has(kk)) break;
+            Bk.push(Fk)
           }
-          Ru = Ru.parent?.[pu]
+          Fk = Fk.parent?.[yk]
         }
-        for (let Eu = yu.length - 1; Eu >= 0; Eu--) this.changes.set(yu[Eu].ref[Ju], new Map)
+        for (let Rk = Bk.length - 1; Rk >= 0; Rk--) this.changes.set(Bk[Rk].ref[bk], new Map)
       }
-      remove(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SE,
-          yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Eu = uu?.[pu];
-        if (!Eu) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${lE(uu)}`), this;
-        const Qu = Eu.parent?.[pu];
-        if (Qu?.isStreamCollection) return this.unmarkVisible(Eu), this.iterable && !yu && nE(this.items, this.items.indexOf(uu)),
-          function(uu, Ru, yu, Eu, Qu) {
-            const mu = uu._stream;
-            if (void 0 === mu) return !1;
-            const Ju = mu.pendingByView.get(Ru);
-            if (Ju?.has(Eu)) return Ju.delete(Eu), !1;
-            const Nu = mu.sentByView.get(Ru);
-            if (Nu?.has(Eu)) {
-              Nu.delete(Eu);
-              let uu = Qu.get(yu);
-              return void 0 === uu && (uu = new Map, Qu.set(yu, uu)), uu.set(Eu, Ku.DELETE), !0
+      remove(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yR,
+          Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Rk = kk?.[yk];
+        if (!Rk) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${TR(kk)}`), this;
+        const ak = Rk.parent?.[yk];
+        if (ak?.isStreamCollection) return this.unmarkVisible(Rk), this.iterable && !Bk && UR(this.items, this.items.indexOf(kk)),
+          function(kk, Fk, Bk, Rk, ak) {
+            const Xk = kk._stream;
+            if (void 0 === Xk) return !1;
+            const bk = Xk.pendingByView.get(Fk);
+            if (bk?.has(Rk)) return bk.delete(Rk), !1;
+            const wk = Xk.sentByView.get(Fk);
+            if (wk?.has(Rk)) {
+              wk.delete(Rk);
+              let kk = ak.get(Bk);
+              return void 0 === kk && (kk = new Map, ak.set(Bk, kk)), kk.set(Rk, tk.DELETE), !0
             }
-          }(Eu.parent, this.id, Eu.parent[Ju], Eu.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Eu), this;
-        if (Eu.isStreamCollection) {
-          this.unmarkVisible(Eu), this.iterable && !yu && nE(this.items, this.items.indexOf(uu));
-          const Ru = Eu.ref,
-            Qu = Ru._stream;
-          if (void 0 !== Qu) {
-            Qu.pendingByView.get(this.id)?.clear();
-            const uu = Qu.sentByView.get(this.id);
-            if (void 0 !== uu && uu.size > 0) {
-              const yu = Ru[Ju];
-              let Eu = this.changes.get(yu);
-              void 0 === Eu && (Eu = new Map, this.changes.set(yu, Eu));
-              for (const Ru of uu) Eu.set(Ru, Ku.DELETE);
-              uu.clear()
+          }(Rk.parent, this.id, Rk.parent[bk], Rk.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Rk), this;
+        if (Rk.isStreamCollection) {
+          this.unmarkVisible(Rk), this.iterable && !Bk && UR(this.items, this.items.indexOf(kk));
+          const Fk = Rk.ref,
+            ak = Fk._stream;
+          if (void 0 !== ak) {
+            ak.pendingByView.get(this.id)?.clear();
+            const kk = ak.sentByView.get(this.id);
+            if (void 0 !== kk && kk.size > 0) {
+              const Bk = Fk[bk];
+              let Rk = this.changes.get(Bk);
+              void 0 === Rk && (Rk = new Map, this.changes.set(Bk, Rk));
+              for (const Fk of kk) Rk.set(Fk, tk.DELETE);
+              kk.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(Eu), this.iterable && !yu && nE(this.items, this.items.indexOf(uu));
-        const mu = Eu.ref,
-          Nu = mu.constructor[Symbol.metadata],
-          Xu = mu[Ju];
-        this._touchAncestorsOf(Eu);
-        let Vu = this.changes.get(Xu);
-        if (void 0 === Vu && (Vu = new Map, this.changes.set(Xu, Vu)), Ru === SE) {
-          const uu = Eu.parent;
-          if (uu && !oR.isValidInstance(uu) && Eu.isFiltered) {
-            const Ru = Qu.isArray ? Eu : Eu.parentIndex,
-              yu = uu[Ju];
-            let mu = this.changes.get(yu);
-            void 0 === mu ? (mu = new Map, this.changes.set(yu, mu)) : mu.get(Ru) === Ku.ADD && this._dropPendingEntries(Eu), mu.set(Ru, Ku.DELETE), this._recursiveDeleteVisibleChangeTree(Eu)
-          } else Nu?.[Iu]?.forEach((uu => this._removeViewField(Eu, Vu, uu)))
+        this.unmarkVisible(Rk), this.iterable && !Bk && UR(this.items, this.items.indexOf(kk));
+        const Xk = Rk.ref,
+          wk = Xk.constructor[Symbol.metadata],
+          dk = Xk[bk];
+        this._touchAncestorsOf(Rk);
+        let sk = this.changes.get(dk);
+        if (void 0 === sk && (sk = new Map, this.changes.set(dk, sk)), Fk === yR) {
+          const kk = Rk.parent;
+          if (kk && !jF.isValidInstance(kk) && Rk.isFiltered) {
+            const Fk = ak.isArray ? Rk : Rk.parentIndex,
+              Bk = kk[bk];
+            let Xk = this.changes.get(Bk);
+            void 0 === Xk ? (Xk = new Map, this.changes.set(Bk, Xk)) : Xk.get(Fk) === tk.ADD && this._dropPendingEntries(Rk), Xk.set(Fk, tk.DELETE), this._recursiveDeleteVisibleChangeTree(Rk)
+          } else wk?.[uk]?.forEach((kk => this._removeViewField(Rk, sk, kk)))
         } else {
-          const uu = Nu?.[Gu];
-          if (void 0 !== uu)
-            for (let yu = Ru; yu > 0; yu &= yu - 1) uu[yu & -yu]?.forEach((uu => this._removeViewField(Eu, Vu, uu)))
+          const kk = wk?.[Mk];
+          if (void 0 !== kk)
+            for (let Bk = Fk; Bk > 0; Bk &= Bk - 1) kk[Bk & -Bk]?.forEach((kk => this._removeViewField(Rk, sk, kk)))
         }
-        return void 0 === Ru ? this.removeAllTagsOnTree(Eu) : this.removeTag(Eu, Ru), this
+        return void 0 === Fk ? this.removeAllTagsOnTree(Rk) : this.removeTag(Rk, Fk), this
       }
-      has(uu) {
-        return this.isVisible(uu[pu])
+      has(kk) {
+        return this.isVisible(kk[yk])
       }
-      hasTag(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SE;
-        return this.hasTagOnTree(uu[pu], Ru)
+      hasTag(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yR;
+        return this.hasTagOnTree(kk[yk], Fk)
       }
-      subscribe(uu, Ru) {
-        const yu = uu?.[pu];
-        if (!yu) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${lE(uu)}`), this;
-        if (void 0 === this._root && void 0 !== yu.root && this._bindRoot(yu.root), void 0 !== Ru)
-          if (yu.isStreamCollection) {
-            const yu = DR(uu);
-            null === Ru ? yu.priorityByView?.delete(this.id) : (yu.priorityByView ??= new Map).set(this.id, Ru)
+      subscribe(kk, Fk) {
+        const Bk = kk?.[yk];
+        if (!Bk) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${TR(kk)}`), this;
+        if (void 0 === this._root && void 0 !== Bk.root && this._bindRoot(Bk.root), void 0 !== Fk)
+          if (Bk.isStreamCollection) {
+            const Bk = NF(kk);
+            null === Fk ? Bk.priorityByView?.delete(this.id) : (Bk.priorityByView ??= new Map).set(this.id, Fk)
           } else {
-            const Ru = uu?.constructor?.name ?? "collection",
-              Eu = yu.parent;
-            if (void 0 === Eu) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${Ru} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const Fk = kk?.constructor?.name ?? "collection",
+              Rk = Bk.parent;
+            if (void 0 === Rk) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${Fk} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const uu = Eu?.constructor?.[Symbol.metadata]?.[yu.parentIndex]?.name,
-                Ku = uu ? `${Eu.constructor.name}#${uu}` : Ru;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Ku} is a ${Ru}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const kk = Rk?.constructor?.[Symbol.metadata]?.[Bk.parentIndex]?.name,
+                tk = kk ? `${Rk.constructor.name}#${kk}` : Fk;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${tk} is a ${Fk}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(yu)) return this;
-        const Eu = void 0 !== yu.parent && !this.isVisible(yu);
-        if (Eu ? (this.addParentOf(yu, SE), this._add(uu, SE, !1, !1)) : this.markVisible(yu), this._setSubscribed(yu), yu.isStreamCollection) {
-          const Ru = uu;
-          yu.forEachChild(((uu, yu) => {
-            nR(Ru, this.id, yu)
+          } if (this.isSubscribed(Bk)) return this;
+        const Rk = void 0 !== Bk.parent && !this.isVisible(Bk);
+        if (Rk ? (this.addParentOf(Bk, yR), this._add(kk, yR, !1, !1)) : this.markVisible(Bk), this._setSubscribed(Bk), Bk.isStreamCollection) {
+          const Fk = kk;
+          Bk.forEachChild(((kk, Bk) => {
+            UF(Fk, this.id, Bk)
           }))
-        } else Eu || yu.forEachChild((uu => {
-          this.markVisible(uu)
+        } else Rk || Bk.forEachChild((kk => {
+          this.markVisible(kk)
         }));
         return this
       }
-      unsubscribe(uu) {
-        const Ru = uu?.[pu];
-        if (!Ru) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${lE(uu)}`), this;
-        if (!this.isSubscribed(Ru)) return this;
-        this._clearSubscribed(Ru);
-        const yu = Ru.ref[Ju];
-        if (Ru.isStreamCollection) {
-          const Ru = uu._stream;
-          if (void 0 !== Ru) {
-            Ru.pendingByView.get(this.id)?.clear();
-            const uu = Ru.sentByView.get(this.id);
-            if (void 0 !== uu && uu.size > 0) {
-              let Ru = this.changes.get(yu);
-              void 0 === Ru && (Ru = new Map, this.changes.set(yu, Ru));
-              for (const yu of uu) Ru.set(yu, Ku.DELETE);
-              uu.clear()
+      unsubscribe(kk) {
+        const Fk = kk?.[yk];
+        if (!Fk) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${TR(kk)}`), this;
+        if (!this.isSubscribed(Fk)) return this;
+        this._clearSubscribed(Fk);
+        const Bk = Fk.ref[bk];
+        if (Fk.isStreamCollection) {
+          const Fk = kk._stream;
+          if (void 0 !== Fk) {
+            Fk.pendingByView.get(this.id)?.clear();
+            const kk = Fk.sentByView.get(this.id);
+            if (void 0 !== kk && kk.size > 0) {
+              let Fk = this.changes.get(Bk);
+              void 0 === Fk && (Fk = new Map, this.changes.set(Bk, Fk));
+              for (const Bk of kk) Fk.set(Bk, tk.DELETE);
+              kk.clear()
             }
           }
         } else {
-          const uu = Ru.isArray;
-          let Eu = this.changes.get(yu);
-          Ru.forEachChild(((Ru, Qu) => {
-            void 0 === Eu && (Eu = new Map, this.changes.set(yu, Eu)), Eu.set(uu ? Ru : Qu, Ku.DELETE), this.unmarkVisible(Ru)
+          const kk = Fk.isArray;
+          let Rk = this.changes.get(Bk);
+          Fk.forEachChild(((Fk, ak) => {
+            void 0 === Rk && (Rk = new Map, this.changes.set(Bk, Rk)), Rk.set(kk ? Fk : ak, tk.DELETE), this.unmarkVisible(Fk)
           }))
         }
-        return this.unmarkVisible(Ru), this
+        return this.unmarkVisible(Fk), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let uu = 0, Ru = this.items.length; uu < Ru; uu++) this.remove(this.items[uu], SE, !0);
+        for (let kk = 0, Fk = this.items.length; kk < Fk; kk++) this.remove(this.items[kk], yR, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(uu) {
-        let Ru = this.isVisible(uu);
-        if (!Ru && uu.isVisibilitySharedWithParent)
-          if (this.isVisible(uu.parent[pu])) this.markVisible(uu), Ru = !0;
+      isChangeTreeVisible(kk) {
+        let Fk = this.isVisible(kk);
+        if (!Fk && kk.isVisibilitySharedWithParent)
+          if (this.isVisible(kk.parent[yk])) this.markVisible(kk), Fk = !0;
           else
-            for (let yu = uu.extraParents; void 0 !== yu; yu = yu.next) {
-              const Eu = yu.ref[pu];
-              if (Eu.isFiltered && this.isVisible(Eu)) {
-                this.markVisible(uu), Ru = !0;
+            for (let Bk = kk.extraParents; void 0 !== Bk; Bk = Bk.next) {
+              const Rk = Bk.ref[yk];
+              if (Rk.isFiltered && this.isVisible(Rk)) {
+                this.markVisible(kk), Fk = !0;
                 break
               }
             }
-        return Ru
+        return Fk
       }
-      _recursiveDeleteVisibleChangeTree(uu) {
-        uu.forEachChild((uu => {
-          this.unmarkVisible(uu), this._recursiveDeleteVisibleChangeTree(uu)
+      _recursiveDeleteVisibleChangeTree(kk) {
+        kk.forEachChild((kk => {
+          this.unmarkVisible(kk), this._recursiveDeleteVisibleChangeTree(kk)
         }))
       }
-      _dropPendingEntries(uu) {
-        this.changes.delete(uu.ref[Ju]), uu.forEachChild((uu => this._dropPendingEntries(uu)))
+      _dropPendingEntries(kk) {
+        this.changes.delete(kk.ref[bk]), kk.forEachChild((kk => this._dropPendingEntries(kk)))
       }
-      _removeViewField(uu, Ru, yu) {
-        const Eu = Ru.get(yu) === Ku.ADD;
-        Ru.set(yu, Ku.DELETE);
-        const Qu = uu.ref[uu.encDescriptor.names[yu]],
-          mu = Qu?.[pu];
-        mu && (this.unmarkVisible(mu), this._recursiveDeleteVisibleChangeTree(mu), Eu && this._dropPendingEntries(mu))
+      _removeViewField(kk, Fk, Bk) {
+        const Rk = Fk.get(Bk) === tk.ADD;
+        Fk.set(Bk, tk.DELETE);
+        const ak = kk.ref[kk.encDescriptor.names[Bk]],
+          Xk = ak?.[yk];
+        Xk && (this.unmarkVisible(Xk), this._recursiveDeleteVisibleChangeTree(Xk), Rk && this._dropPendingEntries(Xk))
       }
     }
 
-    function cE(uu) {
-      uu.structSwitchEmitted || (uu.shouldEmitSwitch && (uu.buffer[uu.it.offset++] = 255, RR.number(uu.buffer, uu.ref[Ju], uu.it)), uu.structSwitchEmitted = !0)
+    function DR(kk) {
+      kk.structSwitchEmitted || (kk.shouldEmitSwitch && (kk.buffer[kk.it.offset++] = 255, BF.number(kk.buffer, kk.ref[bk], kk.it)), kk.structSwitchEmitted = !0)
     }
 
-    function LE(uu, Ru) {
-      wE(uu, Ru, Ku.ADD)
+    function zR(kk, Fk) {
+      qR(kk, Fk, tk.ADD)
     }
 
-    function zE(uu, Ru) {
-      if (Ru._fullSyncGen === uu.gen) return;
-      Ru._fullSyncGen = uu.gen;
-      if (!uu.hasView || uu.view.isChangeTreeVisible(Ru)) {
-        const yu = Ru.encDescriptor;
-        uu.changeTree = Ru, uu.ref = Ru.ref, uu.encoder = yu.encoder, uu.filter = yu.filter, uu.metadata = yu.metadata, uu.treeIsFiltered = Ru.isFiltered, uu.isSchema = yu.isSchema, uu.filterBitmask = yu.filterBitmask, uu.tags = yu.tags, uu.structSwitchEmitted = !1, uu.shouldEmitSwitch = uu.hasView || uu.it.offset > uu.initialOffset || Ru !== uu.rootChangeTree, Ru.isArray && Ru.collDirty.size > 0 && (Ru.flags |= 512), Ky(Ru, uu, LE)
+    function PR(kk, Fk) {
+      if (Fk._fullSyncGen === kk.gen) return;
+      Fk._fullSyncGen = kk.gen;
+      if (!kk.hasView || kk.view.isChangeTreeVisible(Fk)) {
+        const Bk = Fk.encDescriptor;
+        kk.changeTree = Fk, kk.ref = Fk.ref, kk.encoder = Bk.encoder, kk.filter = Bk.filter, kk.metadata = Bk.metadata, kk.treeIsFiltered = Fk.isFiltered, kk.isSchema = Bk.isSchema, kk.filterBitmask = Bk.filterBitmask, kk.tags = Bk.tags, kk.structSwitchEmitted = !1, kk.shouldEmitSwitch = kk.hasView || kk.it.offset > kk.initialOffset || Fk !== kk.rootChangeTree, Fk.isArray && Fk.collDirty.size > 0 && (Fk.flags |= 512), aB(Fk, kk, zR)
       }
-      Wy(Ru, uu, FE)
+      WB(Fk, kk, hR)
     }
 
-    function FE(uu, Ru, yu) {
-      zE(uu, Ru)
+    function hR(kk, Fk, Bk) {
+      PR(kk, Fk)
     }
 
-    function wE(uu, Ru, yu) {
-      if (Ru < 0) {
-        if (uu.treeIsFiltered !== uu.emitFiltered) return;
-        return cE(uu), void(uu.buffer[uu.it.offset++] = 255 & Math.abs(Ru))
+    function qR(kk, Fk, Bk) {
+      if (Fk < 0) {
+        if (kk.treeIsFiltered !== kk.emitFiltered) return;
+        return DR(kk), void(kk.buffer[kk.it.offset++] = 255 & Math.abs(Fk))
       }
-      if ((uu.isSchema ? uu.treeIsFiltered || (Ru < 32 ? 0 !== (uu.filterBitmask & 1 << Ru) : void 0 !== uu.tags[Ru]) : uu.treeIsFiltered) !== uu.emitFiltered) return;
-      const Eu = uu.isEncodeAll ? Ku.ADD : yu;
-      void 0 !== Eu && (void 0 === uu.filter || uu.filter(uu.ref, Ru, uu.view)) && (cE(uu), uu.encoder(uu.self, uu.buffer, uu.changeTree, Ru, Eu, uu.it, uu.isEncodeAll, uu.hasView, uu.metadata))
+      if ((kk.isSchema ? kk.treeIsFiltered || (Fk < 32 ? 0 !== (kk.filterBitmask & 1 << Fk) : void 0 !== kk.tags[Fk]) : kk.treeIsFiltered) !== kk.emitFiltered) return;
+      const Rk = kk.isEncodeAll ? tk.ADD : Bk;
+      void 0 !== Rk && (void 0 === kk.filter || kk.filter(kk.ref, Fk, kk.view)) && (DR(kk), kk.encoder(kk.self, kk.buffer, kk.changeTree, Fk, Rk, kk.it, kk.isEncodeAll, kk.hasView, kk.metadata))
     }
 
-    function ZE(uu, Ru) {
-      const yu = new Uint8Array(uu.length + Ru.length);
-      return yu.set(uu, 0), yu.set(Ru, uu.length), yu
+    function CR(kk, Fk) {
+      const Bk = new Uint8Array(kk.length + Fk.length);
+      return Bk.set(kk, 0), Bk.set(Fk, kk.length), Bk
     }
-    class hE {
+    class ZR {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(hE.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(ZR.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(uu, Ru) {
-        this.context = FR.cache(uu.constructor), this.root = Ru ?? new UE(this.context), this.setState(uu)
+      constructor(kk, Fk) {
+        this.context = hF.cache(kk.constructor), this.root = Fk ?? new gR(this.context), this.setState(kk)
       }
-      setState(uu) {
-        this.state = uu, this.state[pu].setRoot(this.root)
+      setState(kk) {
+        this.state = kk, this.state[yk].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          Ru = arguments.length > 1 ? arguments[1] : void 0,
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu.offset;
-        return this._encodeChannel(uu, Ru, yu, Eu, !1)
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kk.offset;
+        return this._encodeChannel(kk, Fk, Bk, Rk, !1)
       }
       encodeUnreliable() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          Ru = arguments.length > 1 ? arguments[1] : void 0,
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu.offset;
-        return this._encodeChannel(uu, Ru, yu, Eu, !0)
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kk.offset;
+        return this._encodeChannel(kk, Fk, Bk, Rk, !0)
       }
-      _encodeChannel(uu, Ru, yu, Eu, Ku) {
-        this.root.pendingFilterRefresh.length > 0 && my(this.root);
-        const Qu = void 0 !== Ru,
-          mu = this.state[pu],
-          Ju = this._encodeCtx;
-        Ju.self = this, Ju.buffer = yu, Ju.it = uu, Ju.view = Ru, Ju.isEncodeAll = !1, Ju.hasView = Qu, Ju.emitFiltered = Qu;
-        let Nu = Ku ? this.root.unreliableChanges : this.root.changes;
-        for (; Nu = Nu.next;) {
-          const yu = Nu.changeTree;
-          if (Qu && !Ru.isChangeTreeVisible(yu)) continue;
-          const Xu = Ku ? yu.unreliableRecorder : yu;
-          if (!Xu || !Xu.has()) continue;
-          const Vu = yu.encDescriptor;
-          Ju.changeTree = yu, Ju.ref = yu.ref, Ju.encoder = Vu.encoder, Ju.filter = Vu.filter, Ju.metadata = Vu.metadata, Ju.treeIsFiltered = yu.isFiltered, Ju.isSchema = Vu.isSchema, Ju.filterBitmask = Vu.filterBitmask, Ju.tags = Vu.tags, Ju.structSwitchEmitted = !1, Ju.isRootTree = yu === mu, Ju.shouldEmitSwitch = Qu || uu.offset > Eu || !Ju.isRootTree, Xu.forEachWithCtx(Ju, wE)
+      _encodeChannel(kk, Fk, Bk, Rk, tk) {
+        this.root.pendingFilterRefresh.length > 0 && bB(this.root);
+        const ak = void 0 !== Fk,
+          Xk = this.state[yk],
+          bk = this._encodeCtx;
+        bk.self = this, bk.buffer = Bk, bk.it = kk, bk.view = Fk, bk.isEncodeAll = !1, bk.hasView = ak, bk.emitFiltered = ak;
+        let wk = tk ? this.root.unreliableChanges : this.root.changes;
+        for (; wk = wk.next;) {
+          const Bk = wk.changeTree;
+          if (ak && !Fk.isChangeTreeVisible(Bk)) continue;
+          const dk = tk ? Bk.unreliableRecorder : Bk;
+          if (!dk || !dk.has()) continue;
+          const sk = Bk.encDescriptor;
+          bk.changeTree = Bk, bk.ref = Bk.ref, bk.encoder = sk.encoder, bk.filter = sk.filter, bk.metadata = sk.metadata, bk.treeIsFiltered = Bk.isFiltered, bk.isSchema = sk.isSchema, bk.filterBitmask = sk.filterBitmask, bk.tags = sk.tags, bk.structSwitchEmitted = !1, bk.isRootTree = Bk === Xk, bk.shouldEmitSwitch = ak || kk.offset > Rk || !bk.isRootTree, dk.forEachWithCtx(bk, qR)
         }
-        return Ku || Qu || !this._isStreamBroadcastMode || this._emitStreamBroadcast(yu, uu), uu.offset > yu.byteLength ? (yu = this._resizeBuffer(yu, uu.offset), uu.offset = Eu, this._encodeChannel(uu, Ru, yu, Eu, Ku)) : yu.subarray(0, uu.offset)
+        return tk || ak || !this._isStreamBroadcastMode || this._emitStreamBroadcast(Bk, kk), kk.offset > Bk.byteLength ? (Bk = this._resizeBuffer(Bk, kk.offset), kk.offset = Rk, this._encodeChannel(kk, Fk, Bk, Rk, tk)) : Bk.subarray(0, kk.offset)
       }
-      encodeFullSync(uu, Ru, yu, Eu) {
-        let Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : uu.offset;
-        this.root.pendingFilterRefresh.length > 0 && my(this.root);
-        const Qu = void 0 !== Eu,
-          mu = this.state[pu],
-          Ju = this._encodeCtx;
-        return Ju.self = this, Ju.buffer = Ru, Ju.it = uu, Ju.view = Eu, Ju.isEncodeAll = !0, Ju.hasView = Qu, Ju.emitFiltered = yu, Ju.gen = ++this._fullSyncGen, Ju.initialOffset = Ku, Ju.rootChangeTree = mu, zE(Ju, mu), uu.offset > Ru.byteLength ? (Ru = this._resizeBuffer(Ru, uu.offset), uu.offset = Ku, this.encodeFullSync(uu, Ru, yu, Eu, Ku)) : Ru.subarray(0, uu.offset)
+      encodeFullSync(kk, Fk, Bk, Rk) {
+        let tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : kk.offset;
+        this.root.pendingFilterRefresh.length > 0 && bB(this.root);
+        const ak = void 0 !== Rk,
+          Xk = this.state[yk],
+          bk = this._encodeCtx;
+        return bk.self = this, bk.buffer = Fk, bk.it = kk, bk.view = Rk, bk.isEncodeAll = !0, bk.hasView = ak, bk.emitFiltered = Bk, bk.gen = ++this._fullSyncGen, bk.initialOffset = tk, bk.rootChangeTree = Xk, PR(bk, Xk), kk.offset > Fk.byteLength ? (Fk = this._resizeBuffer(Fk, kk.offset), kk.offset = tk, this.encodeFullSync(kk, Fk, Bk, Rk, tk)) : Fk.subarray(0, kk.offset)
       }
-      _resizeBuffer(uu, Ru) {
-        const yu = Math.ceil(Ru / hE.BUFFER_SIZE) * hE.BUFFER_SIZE,
-          Eu = new Uint8Array(yu);
-        return Eu.set(uu), uu === this.sharedBuffer && (this.sharedBuffer = Eu), Eu
+      _resizeBuffer(kk, Fk) {
+        const Bk = Math.ceil(Fk / ZR.BUFFER_SIZE) * ZR.BUFFER_SIZE,
+          Rk = new Uint8Array(Bk);
+        return Rk.set(kk), kk === this.sharedBuffer && (this.sharedBuffer = Rk), Rk
       }
       encodeAll() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(uu, Ru, !1)
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(kk, Fk, !1)
       }
-      encodeAllView(uu, Ru, yu) {
-        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Ku = yu.offset;
-        return Eu = this.encodeFullSync(yu, Eu, !0, uu, Ku), ZE(Eu.subarray(0, Ru), Eu.subarray(Ku, yu.offset))
+      encodeAllView(kk, Fk, Bk) {
+        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const tk = Bk.offset;
+        return Rk = this.encodeFullSync(Bk, Rk, !0, kk, tk), CR(Rk.subarray(0, Fk), Rk.subarray(tk, Bk.offset))
       }
-      ensureCapacity(uu, Ru) {
-        if (Ru + hE.BUFFER_SIZE <= uu.byteLength) return uu;
-        const yu = Math.ceil((Ru + hE.BUFFER_SIZE) / hE.BUFFER_SIZE) * hE.BUFFER_SIZE,
-          Eu = new Uint8Array(yu);
-        return Eu.set(uu.subarray(0, Ru)), uu === this.sharedBuffer && (this.sharedBuffer = Eu), Eu
+      ensureCapacity(kk, Fk) {
+        if (Fk + ZR.BUFFER_SIZE <= kk.byteLength) return kk;
+        const Bk = Math.ceil((Fk + ZR.BUFFER_SIZE) / ZR.BUFFER_SIZE) * ZR.BUFFER_SIZE,
+          Rk = new Uint8Array(Bk);
+        return Rk.set(kk.subarray(0, Fk)), kk === this.sharedBuffer && (this.sharedBuffer = Rk), Rk
       }
-      encodeView(uu, Ru, yu) {
-        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          Qu = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const mu = yu.offset;
-        this._emitStreamPriority(uu);
-        for (const Nu of uu.changes.keys()) {
-          const Ru = uu.changes.get(Nu),
-            Qu = this.root.changeTrees[Nu];
-          if (void 0 === Qu) {
-            uu.changes.delete(Nu);
+      encodeView(kk, Fk, Bk) {
+        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          ak = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const Xk = Bk.offset;
+        this._emitStreamPriority(kk);
+        for (const wk of kk.changes.keys()) {
+          const Fk = kk.changes.get(wk),
+            ak = this.root.changeTrees[wk];
+          if (void 0 === ak) {
+            kk.changes.delete(wk);
             continue
           }
-          if (0 === Ru.size) continue;
-          const mu = Qu.encDescriptor,
-            Xu = mu.encoder,
-            Vu = mu.metadata,
-            ru = Qu.ref,
-            xu = Qu.refTarget;
-          Eu = this.ensureCapacity(Eu, yu.offset), Eu[yu.offset++] = 255, RR.number(Eu, ru[Ju], yu);
-          for (const [Nu, Su] of Ru) {
-            let Ru;
-            if (-1 === Nu) {
-              const uu = xu.tmpItems,
-                Ru = xu.deletedIndexes;
-              for (let mu = 0; mu < uu.length; mu++) void 0 !== uu[mu] && !0 !== Ru[mu] && Xu(this, Eu, Qu, mu, Ku.ADD, yu, !1, !0, Vu);
+          if (0 === Fk.size) continue;
+          const Xk = ak.encDescriptor,
+            dk = Xk.encoder,
+            sk = Xk.metadata,
+            Vk = ak.ref,
+            Ak = ak.refTarget;
+          Rk = this.ensureCapacity(Rk, Bk.offset), Rk[Bk.offset++] = 255, BF.number(Rk, Vk[bk], Bk);
+          for (const [wk, ek] of Fk) {
+            let Fk;
+            if (-1 === wk) {
+              const kk = Ak.tmpItems,
+                Fk = Ak.deletedIndexes;
+              for (let Xk = 0; Xk < kk.length; Xk++) void 0 !== kk[Xk] && !0 !== Fk[Xk] && dk(this, Rk, ak, Xk, tk.ADD, Bk, !1, !0, sk);
               continue
             }
-            if ("number" === typeof Nu) Ru = Nu;
+            if ("number" === typeof wk) Fk = wk;
             else {
-              const yu = Nu.indexInParent(ru);
-              if (void 0 === yu) continue;
-              if (Ru = yu, Su === Ku.ADD && Qu.getChange(Ru) === Ku.DELETE) {
-                uu.changes.delete(Nu.ref[Ju]);
+              const Bk = wk.indexInParent(Vk);
+              if (void 0 === Bk) continue;
+              if (Fk = Bk, ek === tk.ADD && ak.getChange(Fk) === tk.DELETE) {
+                kk.changes.delete(wk.ref[bk]);
                 continue
               }
             }
-            Xu(this, Eu, Qu, Ru, void 0 !== xu[Bu](Ru) && Su || Ku.DELETE, yu, !1, !0, Vu)
+            dk(this, Rk, ak, Fk, void 0 !== Ak[Jk](Fk) && ek || tk.DELETE, Bk, !1, !0, sk)
           }
         }
-        return uu.changes.clear(), Eu = this.encode(yu, uu, Eu), Qu ? ZE(Eu.subarray(0, Ru), Eu.subarray(mu, yu.offset)) : Eu.subarray(mu, yu.offset)
+        return kk.changes.clear(), Rk = this.encode(Bk, kk, Rk), ak ? CR(Rk.subarray(0, Fk), Rk.subarray(Xk, Bk.offset)) : Rk.subarray(Xk, Bk.offset)
       }
-      encodeUnreliableView(uu, Ru, yu) {
-        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Ku = yu.offset;
-        return Eu = this.encodeUnreliable(yu, uu, Eu, Ku), ZE(Eu.subarray(0, Ru), Eu.subarray(Ku, yu.offset))
+      encodeUnreliableView(kk, Fk, Bk) {
+        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const tk = Bk.offset;
+        return Rk = this.encodeUnreliable(Bk, kk, Rk, tk), CR(Rk.subarray(0, Fk), Rk.subarray(tk, Bk.offset))
       }
-      _emitStreamBroadcast(uu, Ru) {
-        const yu = this.root.streamTrees;
-        for (const Eu of yu) {
-          const yu = Eu,
-            Qu = yu[pu],
-            mu = yu[Ju];
-          if (void 0 === mu) continue;
-          const Nu = yu._stream,
-            Xu = Nu.broadcastDeletes,
-            Vu = Nu.broadcastPending,
-            ru = Nu.sentBroadcast,
-            xu = Xu.size > 0,
-            Su = Vu.size > 0,
-            Tu = Qu.encDescriptor,
-            Wu = Tu.encoder,
-            ju = Tu.metadata;
-          if (xu || Su) {
-            if (uu[Ru.offset++] = 255, RR.number(uu, mu, Ru), xu) {
-              for (const yu of Xu) Wu(this, uu, Qu, yu, Ku.DELETE, Ru, !1, !1, ju);
-              Xu.clear()
+      _emitStreamBroadcast(kk, Fk) {
+        const Bk = this.root.streamTrees;
+        for (const Rk of Bk) {
+          const Bk = Rk,
+            ak = Bk[yk],
+            Xk = Bk[bk];
+          if (void 0 === Xk) continue;
+          const wk = Bk._stream,
+            dk = wk.broadcastDeletes,
+            sk = wk.broadcastPending,
+            Vk = wk.sentBroadcast,
+            Ak = dk.size > 0,
+            ek = sk.size > 0,
+            fk = ak.encDescriptor,
+            mk = fk.encoder,
+            Wk = fk.metadata;
+          if (Ak || ek) {
+            if (kk[Fk.offset++] = 255, BF.number(kk, Xk, Fk), Ak) {
+              for (const Bk of dk) mk(this, kk, ak, Bk, tk.DELETE, Fk, !1, !1, Wk);
+              dk.clear()
             }
-            const Eu = Nu.maxPerTick,
-              Su = [];
-            let Tu = 0;
-            const Hu = [];
-            for (const mu of Vu) {
-              if (Tu >= Eu) break;
-              const Ju = yu[Bu](mu);
-              void 0 !== Ju ? (Wu(this, uu, Qu, mu, Ku.ADD, Ru, !1, !1, ju), ru.add(mu), Su.push(Ju), Hu.push(mu), Tu++) : Hu.push(mu)
+            const Rk = wk.maxPerTick,
+              ek = [];
+            let fk = 0;
+            const vk = [];
+            for (const Xk of sk) {
+              if (fk >= Rk) break;
+              const bk = Bk[Jk](Xk);
+              void 0 !== bk ? (mk(this, kk, ak, Xk, tk.ADD, Fk, !1, !1, Wk), Vk.add(Xk), ek.push(bk), vk.push(Xk), fk++) : vk.push(Xk)
             }
-            for (const uu of Hu) Vu.delete(uu);
-            for (const yu of Su) {
-              const Eu = yu[pu];
-              if (void 0 === Eu) continue;
-              const Qu = yu[Ju];
-              if (void 0 === Qu) continue;
-              uu[Ru.offset++] = 255, RR.number(uu, Qu, Ru);
-              const mu = Eu.encDescriptor,
-                Nu = mu.encoder,
-                Xu = mu.metadata;
-              Eu.forEachLive((yu => {
-                oR.hasUnreliableAtIndex(Xu, yu) || Nu(this, uu, Eu, yu, Ku.ADD, Ru, !1, !1, Xu)
+            for (const kk of vk) sk.delete(kk);
+            for (const Bk of ek) {
+              const Rk = Bk[yk];
+              if (void 0 === Rk) continue;
+              const ak = Bk[bk];
+              if (void 0 === ak) continue;
+              kk[Fk.offset++] = 255, BF.number(kk, ak, Fk);
+              const Xk = Rk.encDescriptor,
+                wk = Xk.encoder,
+                dk = Xk.metadata;
+              Rk.forEachLive((Bk => {
+                jF.hasUnreliableAtIndex(dk, Bk) || wk(this, kk, Rk, Bk, tk.ADD, Fk, !1, !1, dk)
               }))
             }
           }
-          for (const Eu of ru) {
-            const Ku = yu[Bu](Eu);
-            if (void 0 === Ku) continue;
-            const Qu = Ku[pu];
-            if (void 0 === Qu || !Qu.has()) continue;
-            const mu = Ku[Ju];
-            if (void 0 === mu) continue;
-            uu[Ru.offset++] = 255, RR.number(uu, mu, Ru);
-            const Nu = Qu.encDescriptor,
-              Xu = Nu.encoder,
-              Vu = Nu.metadata;
-            Qu.forEach(((yu, Eu) => {
-              yu < 0 || oR.hasUnreliableAtIndex(Vu, yu) || Xu(this, uu, Qu, yu, Eu, Ru, !1, !1, Vu)
+          for (const Rk of Vk) {
+            const tk = Bk[Jk](Rk);
+            if (void 0 === tk) continue;
+            const ak = tk[yk];
+            if (void 0 === ak || !ak.has()) continue;
+            const Xk = tk[bk];
+            if (void 0 === Xk) continue;
+            kk[Fk.offset++] = 255, BF.number(kk, Xk, Fk);
+            const wk = ak.encDescriptor,
+              dk = wk.encoder,
+              sk = wk.metadata;
+            ak.forEach(((Bk, Rk) => {
+              Bk < 0 || jF.hasUnreliableAtIndex(sk, Bk) || dk(this, kk, ak, Bk, Rk, Fk, !1, !1, sk)
             }))
           }
         }
       }
-      _emitStreamPriority(uu) {
-        const Ru = this.root.streamTrees;
-        if (0 === Ru.size) return;
-        const yu = uu.id;
-        for (const Eu of Ru) {
-          const Ru = Eu,
-            Qu = Ru._stream,
-            mu = Qu.pendingByView.get(yu);
-          if (void 0 === mu || 0 === mu.size) continue;
-          const Nu = Qu.priorityByView?.get(yu),
-            Xu = void 0 !== Nu,
-            Vu = Qu.priority,
-            ru = Qu.maxPerTick,
-            xu = [],
-            Su = [];
-          if (Xu || void 0 !== Vu) {
-            const yu = [],
-              Eu = [];
-            let Ku = 0;
-            for (const Qu of mu) {
-              const mu = Ru[Bu](Qu);
-              if (void 0 === mu) {
-                Su.push(Qu);
+      _emitStreamPriority(kk) {
+        const Fk = this.root.streamTrees;
+        if (0 === Fk.size) return;
+        const Bk = kk.id;
+        for (const Rk of Fk) {
+          const Fk = Rk,
+            ak = Fk._stream,
+            Xk = ak.pendingByView.get(Bk);
+          if (void 0 === Xk || 0 === Xk.size) continue;
+          const wk = ak.priorityByView?.get(Bk),
+            dk = void 0 !== wk,
+            sk = ak.priority,
+            Vk = ak.maxPerTick,
+            Ak = [],
+            ek = [];
+          if (dk || void 0 !== sk) {
+            const Bk = [],
+              Rk = [];
+            let tk = 0;
+            for (const ak of Xk) {
+              const Xk = Fk[Jk](ak);
+              if (void 0 === Xk) {
+                ek.push(ak);
                 continue
               }
-              const Ju = Xu ? Nu(mu) : Vu(uu, mu);
-              if (Ku < ru) {
-                let uu = Ku++;
-                for (; uu > 0 && Eu[uu - 1] < Ju;) Eu[uu] = Eu[uu - 1], yu[uu] = yu[uu - 1], uu--;
-                Eu[uu] = Ju, yu[uu] = Qu
-              } else if (Ju > Eu[ru - 1]) {
-                let uu = ru - 1;
-                for (; uu > 0 && Eu[uu - 1] < Ju;) Eu[uu] = Eu[uu - 1], yu[uu] = yu[uu - 1], uu--;
-                Eu[uu] = Ju, yu[uu] = Qu
+              const bk = dk ? wk(Xk) : sk(kk, Xk);
+              if (tk < Vk) {
+                let kk = tk++;
+                for (; kk > 0 && Rk[kk - 1] < bk;) Rk[kk] = Rk[kk - 1], Bk[kk] = Bk[kk - 1], kk--;
+                Rk[kk] = bk, Bk[kk] = ak
+              } else if (bk > Rk[Vk - 1]) {
+                let kk = Vk - 1;
+                for (; kk > 0 && Rk[kk - 1] < bk;) Rk[kk] = Rk[kk - 1], Bk[kk] = Bk[kk - 1], kk--;
+                Rk[kk] = bk, Bk[kk] = ak
               }
             }
-            for (let uu = 0; uu < Ku; uu++) xu.push(yu[uu])
+            for (let kk = 0; kk < tk; kk++) Ak.push(Bk[kk])
           } else
-            for (const uu of mu) {
-              if (xu.length >= ru) break;
-              xu.push(uu)
+            for (const kk of Xk) {
+              if (Ak.length >= Vk) break;
+              Ak.push(kk)
             }
-          for (const uu of Su) mu.delete(uu);
-          const Tu = xu.length;
-          let Wu = Qu.sentByView.get(yu);
-          void 0 === Wu && (Wu = new Set, Qu.sentByView.set(yu, Wu));
-          for (let yu = 0; yu < Tu; yu++) {
-            const Eu = xu[yu],
-              Qu = Ru[Bu](Eu);
-            if (void 0 === Qu) {
-              mu.delete(Eu);
+          for (const kk of ek) Xk.delete(kk);
+          const fk = Ak.length;
+          let mk = ak.sentByView.get(Bk);
+          void 0 === mk && (mk = new Set, ak.sentByView.set(Bk, mk));
+          for (let Bk = 0; Bk < fk; Bk++) {
+            const Rk = Ak[Bk],
+              ak = Fk[Jk](Rk);
+            if (void 0 === ak) {
+              Xk.delete(Rk);
               continue
             }
-            uu._addImmediate(Qu);
-            const Nu = Qu[pu];
-            if (void 0 !== Nu) {
-              const Ru = Qu[Ju];
-              let yu = uu.changes.get(Ru);
-              void 0 === yu && (yu = new Map, uu.changes.set(Ru, yu));
-              const Eu = Nu.metadata;
-              Nu.forEachLive((uu => {
-                oR.hasUnreliableAtIndex(Eu, uu) || yu.set(uu, Ku.ADD)
+            kk._addImmediate(ak);
+            const wk = ak[yk];
+            if (void 0 !== wk) {
+              const Fk = ak[bk];
+              let Bk = kk.changes.get(Fk);
+              void 0 === Bk && (Bk = new Map, kk.changes.set(Fk, Bk));
+              const Rk = wk.metadata;
+              wk.forEachLive((kk => {
+                jF.hasUnreliableAtIndex(Rk, kk) || Bk.set(kk, tk.ADD)
               }))
             }
-            mu.delete(Eu), Wu.add(Eu)
+            Xk.delete(Rk), mk.add(Rk)
           }
         }
       }
       discardChanges() {
-        const uu = this.root.changes;
-        let Ru = uu.next;
-        const yu = this.root;
-        for (; Ru;) {
-          const uu = Ru.next;
-          Ru.changeTree.endEncode(), yu.releaseNode(Ru), Ru = uu
+        const kk = this.root.changes;
+        let Fk = kk.next;
+        const Bk = this.root;
+        for (; Fk;) {
+          const kk = Fk.next;
+          Fk.changeTree.endEncode(), Bk.releaseNode(Fk), Fk = kk
         }
-        uu.next = void 0, uu.tail = void 0
+        kk.next = void 0, kk.tail = void 0
       }
       discardUnreliableChanges() {
-        const uu = this.root.unreliableChanges;
-        let Ru = uu.next;
-        const yu = this.root;
-        for (; Ru;) {
-          const uu = Ru.next;
-          Ru.changeTree.endEncodeUnreliable(), yu.releaseNode(Ru), Ru = uu
+        const kk = this.root.unreliableChanges;
+        let Fk = kk.next;
+        const Bk = this.root;
+        for (; Fk;) {
+          const kk = Fk.next;
+          Fk.changeTree.endEncodeUnreliable(), Bk.releaseNode(Fk), Fk = kk
         }
-        uu.next = void 0, uu.tail = void 0
+        kk.next = void 0, kk.tail = void 0
       }
-      tryEncodeTypeId(uu, Ru, yu, Eu) {
-        const Ku = this.context.getTypeId(Ru),
-          Qu = this.context.getTypeId(yu);
-        void 0 !== Qu ? Ku !== Qu && (uu[Eu.offset++] = 213, RR.number(uu, Qu, Eu)) : console.warn(`@colyseus/schema WARNING: Class "${yu.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(kk, Fk, Bk, Rk) {
+        const tk = this.context.getTypeId(Fk),
+          ak = this.context.getTypeId(Bk);
+        void 0 !== ak ? tk !== ak && (kk[Rk.offset++] = 213, BF.number(kk, ak, Rk)) : console.warn(`@colyseus/schema WARNING: Class "${Bk.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const uu = this.root;
-        if (0 === uu.streamTrees.size) return !1;
-        const Ru = 0 === uu.activeViews.size;
-        for (const yu of uu.streamTrees)
-          if (Ru ? UR(yu) : GR(yu, uu)) return !0;
+        const kk = this.root;
+        if (0 === kk.streamTrees.size) return !1;
+        const Fk = 0 === kk.activeViews.size;
+        for (const Bk of kk.streamTrees)
+          if (Fk ? gF(Bk) : MF(Bk, kk)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class PE extends Error {
-      constructor(uu) {
-        super(uu), this.name = "DecodingWarning"
+    class pR extends Error {
+      constructor(kk) {
+        super(kk), this.name = "DecodingWarning"
       }
     }
-    const iE = {
+    const KR = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class YE {
+    class xR {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(uu, Ru) {
-        let yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(uu, Ru), void 0 === Ru[Ju] ? (iE.value = uu, Object.defineProperty(Ru, Ju, iE)) : Ru[Ju] !== uu && (Ru[Ju] = uu), yu && (this.refCount[uu] = (this.refCount[uu] || 0) + 1), this.deletedRefs.has(uu) && this.deletedRefs.delete(uu)
+      addRef(kk, Fk) {
+        let Bk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(kk, Fk), void 0 === Fk[bk] ? (KR.value = kk, Object.defineProperty(Fk, bk, KR)) : Fk[bk] !== kk && (Fk[bk] = kk), Bk && (this.refCount[kk] = (this.refCount[kk] || 0) + 1), this.deletedRefs.has(kk) && this.deletedRefs.delete(kk)
       }
-      removeRef(uu) {
-        const Ru = this.refCount[uu];
-        if (void 0 !== Ru)
-          if (0 !== Ru)(this.refCount[uu] = Ru - 1) <= 0 && this.deletedRefs.add(uu);
+      removeRef(kk) {
+        const Fk = this.refCount[kk];
+        if (void 0 !== Fk)
+          if (0 !== Fk)(this.refCount[kk] = Fk - 1) <= 0 && this.deletedRefs.add(kk);
           else try {
-            const Ru = this.refs.get(uu);
-            throw new PE(`trying to remove refId '${uu}' with 0 refCount (${Ru.constructor.name}: ${JSON.stringify(Ru)})`)
-          } catch (QK) {
-            console.warn(QK)
+            const Fk = this.refs.get(kk);
+            throw new pR(`trying to remove refId '${kk}' with 0 refCount (${Fk.constructor.name}: ${JSON.stringify(Fk)})`)
+          } catch (bt) {
+            console.warn(bt)
           } else try {
-            throw new PE("trying to remove refId that doesn't exist: " + uu)
-          } catch (QK) {
-            console.warn(QK)
+            throw new pR("trying to remove refId that doesn't exist: " + kk)
+          } catch (bt) {
+            console.warn(bt)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((uu => {
-          if (this.refCount[uu] > 0) return;
-          const Ru = this.refs.get(uu),
-            yu = Ru.constructor[Symbol.metadata];
-          if (null != yu)
-            for (const Eu in yu) {
-              const uu = Ru[yu[Eu].name];
-              if ("object" === typeof uu && uu) {
-                const Ru = uu[Ju];
-                void 0 === Ru || this.deletedRefs.has(Ru) || this.removeRef(Ru)
+        this.deletedRefs.forEach((kk => {
+          if (this.refCount[kk] > 0) return;
+          const Fk = this.refs.get(kk),
+            Bk = Fk.constructor[Symbol.metadata];
+          if (null != Bk)
+            for (const Rk in Bk) {
+              const kk = Fk[Bk[Rk].name];
+              if ("object" === typeof kk && kk) {
+                const Fk = kk[bk];
+                void 0 === Fk || this.deletedRefs.has(Fk) || this.removeRef(Fk)
               }
-            } else "function" === typeof Ru[Tu] && Array.from(Ru.values()).forEach((uu => {
-              const Ru = uu[Ju];
-              void 0 === Ru || this.deletedRefs.has(Ru) || this.removeRef(Ru)
+            } else "function" === typeof Fk[fk] && Array.from(Fk.values()).forEach((kk => {
+              const Fk = kk[bk];
+              void 0 === Fk || this.deletedRefs.has(Fk) || this.removeRef(Fk)
             }));
-          this.refs.delete(uu), delete this.refCount[uu], delete this.callbacks[uu]
+          this.refs.delete(kk), delete this.refCount[kk], delete this.callbacks[kk]
         })), this.deletedRefs.clear()
       }
-      addCallback(uu, Ru, yu) {
-        if (void 0 === uu) {
-          const uu = "number" === typeof Ru ? Ku[Ru] : Ru;
-          throw new Error(`Can't addCallback on '${uu}' (refId is undefined)`)
+      addCallback(kk, Fk, Bk) {
+        if (void 0 === kk) {
+          const kk = "number" === typeof Fk ? tk[Fk] : Fk;
+          throw new Error(`Can't addCallback on '${kk}' (refId is undefined)`)
         }
-        return this.callbacks[uu] || (this.callbacks[uu] = {}), this.callbacks[uu][Ru] || (this.callbacks[uu][Ru] = []), this.callbacks[uu][Ru].push(yu), () => this.removeCallback(uu, Ru, yu)
+        return this.callbacks[kk] || (this.callbacks[kk] = {}), this.callbacks[kk][Fk] || (this.callbacks[kk][Fk] = []), this.callbacks[kk][Fk].push(Bk), () => this.removeCallback(kk, Fk, Bk)
       }
-      removeCallback(uu, Ru, yu) {
-        const Eu = this.callbacks?.[uu]?.[Ru]?.indexOf(yu);
-        void 0 !== Eu && -1 !== Eu && nE(this.callbacks[uu][Ru], Eu)
+      removeCallback(kk, Fk, Bk) {
+        const Rk = this.callbacks?.[kk]?.[Fk]?.indexOf(Bk);
+        void 0 !== Rk && -1 !== Rk && UR(this.callbacks[kk][Fk], Rk)
       }
     }
-    class oE {
+    class jR {
       context;
       state;
       root;
       currentRefId = 0;
-      pD;
+      kS;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(uu, Ru) {
-        this.setState(uu), this.context = Ru || new FR(uu.constructor)
+      constructor(kk, Fk) {
+        this.setState(kk), this.context = Fk || new hF(kk.constructor)
       }
-      setState(uu) {
-        this.state = uu, this.root = new YE, this.root.addRef(0, uu)
+      setState(kk) {
+        this.state = kk, this.root = new xR, this.root.addRef(0, kk)
       }
-      decode(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const Ku = void 0 !== this.pD ? [] : null,
-          Qu = this.root,
-          mu = uu.byteLength;
-        let Ju = yu.constructor[Vu];
-        for (this.currentRefId = 0; Ru.offset < mu;) {
-          if (uu[Ru.offset] == Eu) {
-            Ru.offset++, yu[du]?.();
-            const Eu = HR.number(uu, Ru),
-              Ku = Qu.refs.get(Eu);
-            Ku ? (yu = Ku, Ju = yu.constructor[Vu], this.currentRefId = Eu) : (console.error(`"refId" not found: ${Eu}`, {
-              previousRef: yu,
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const tk = void 0 !== this.kS ? [] : null,
+          ak = this.root,
+          Xk = kk.byteLength;
+        let bk = Bk.constructor[sk];
+        for (this.currentRefId = 0; Fk.offset < Xk;) {
+          if (kk[Fk.offset] == Rk) {
+            Fk.offset++, Bk[ik]?.();
+            const Rk = iF.number(kk, Fk),
+              tk = ak.refs.get(Rk);
+            tk ? (Bk = tk, bk = Bk.constructor[sk], this.currentRefId = Rk) : (console.error(`"refId" not found: ${Rk}`, {
+              previousRef: Bk,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(uu, Ru, mu));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(kk, Fk, Xk));
             continue
-          } - 1 !== Ju(this, uu, Ru, yu, Ku) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(uu, Ru, mu))
+          } - 1 !== bk(this, kk, Fk, Bk, tk) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(kk, Fk, Xk))
         }
-        return yu[du]?.(), null !== this.resyncVisited && function(uu, Ru) {
-          uu.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : Fy(uu, uu.state, new Set, Ru)
-        }(this, Ku), null !== Ku && this.pD?.(Ku), Qu.garbageCollectDeletedRefs(), Ku
+        return Bk[ik]?.(), null !== this.resyncVisited && function(kk, Fk) {
+          kk.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : hB(kk, kk.state, new Set, Fk)
+        }(this, tk), null !== tk && this.kS?.(tk), ak.garbageCollectDeletedRefs(), tk
       }
-      decodeResync(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(uu, Ru)
+          return this.decode(kk, Fk)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(uu, Ru, yu) {
+      skipCurrentStructure(kk, Fk, Bk) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const Ku = {
-          offset: Ru.offset
+        const tk = {
+          offset: Fk.offset
         };
-        for (; Ru.offset < yu && (uu[Ru.offset] !== Eu || (Ku.offset = Ru.offset + 1, !this.root.refs.has(HR.number(uu, Ku))));) Ru.offset++
+        for (; Fk.offset < Bk && (kk[Fk.offset] !== Rk || (tk.offset = Fk.offset + 1, !this.root.refs.has(iF.number(kk, tk))));) Fk.offset++
       }
-      getInstanceType(uu, Ru, yu) {
-        let Eu;
-        if (213 === uu[Ru.offset]) {
-          Ru.offset++;
-          const yu = HR.number(uu, Ru);
-          Eu = this.context.get(yu)
+      getInstanceType(kk, Fk, Bk) {
+        let Rk;
+        if (213 === kk[Fk.offset]) {
+          Fk.offset++;
+          const Bk = iF.number(kk, Fk);
+          Rk = this.context.get(Bk)
         }
-        return Eu || yu
+        return Rk || Bk
       }
-      createInstanceOfType(uu) {
-        return uu.initializeForDecoder()
+      createInstanceOfType(kk) {
+        return kk.initializeForDecoder()
       }
-      removeChildRefs(uu, Ru) {
-        const yu = "string" !== typeof uu[Tu],
-          Eu = uu[Ju];
-        uu.forEach(((Qu, mu) => {
-          Ru?.push({
-            ref: uu,
-            refId: Eu,
-            op: Ku.DELETE,
-            field: mu,
+      removeChildRefs(kk, Fk) {
+        const Bk = "string" !== typeof kk[fk],
+          Rk = kk[bk];
+        kk.forEach(((ak, Xk) => {
+          Fk?.push({
+            ref: kk,
+            refId: Rk,
+            op: tk.DELETE,
+            field: Xk,
             value: void 0,
-            previousValue: Qu
-          }), yu && this.root.removeRef(Qu[Ju])
+            previousValue: ak
+          }), Bk && this.root.removeRef(ak[bk])
         }))
       }
     }
-    const qE = DE({
-        min: xE.float64(),
-        max: xE.float64(),
-        bits: xE.uint8(),
-        mode: xE.uint8()
+    const lR = NR({
+        min: eR.float64(),
+        max: eR.float64(),
+        bits: eR.uint8(),
+        mode: eR.uint8()
       }, "QuantizedDescriptor"),
-      OE = DE({
-        name: xE.string(),
-        type: xE.string(),
-        referencedType: xE.number(),
-        childPrimitive: xE.string(),
-        quantized: xE.ref(qE).optional()
+      nR = NR({
+        name: eR.string(),
+        type: eR.string(),
+        referencedType: eR.number(),
+        childPrimitive: eR.string(),
+        quantized: eR.ref(lR).optional()
       }, "ReflectionField"),
-      vE = DE({
-        id: xE.number(),
-        extendsId: xE.number(),
-        fields: xE.array(OE)
+      IR = NR({
+        id: eR.number(),
+        extendsId: eR.number(),
+        fields: eR.array(nR)
       }, "ReflectionType"),
-      aE = DE({
-        types: xE.array(vE),
-        rootType: xE.number()
+      QR = NR({
+        types: eR.array(IR),
+        rootType: eR.number()
       }, "Reflection");
 
-    function fE(uu) {
-      const Ru = uu.root,
-        yu = Ru.callbacks,
-        Eu = new WeakMap;
-      let Qu;
+    function kt(kk) {
+      const Fk = kk.root,
+        Bk = Fk.callbacks,
+        Rk = new WeakMap;
+      let ak;
 
-      function mu(uu, yu) {
-        let Xu = yu.instance?.constructor[Symbol.metadata] || uu,
-          Vu = yu.instance && "function" === typeof yu.instance.forEach || uu && !IE.is(uu);
-        if (Xu && !Vu) {
-          const uu = function(uu, Ku, mu, Nu) {
-            return Nu && void 0 !== yu.instance[Ku] && !Eu.has(Qu) && mu(yu.instance[Ku], void 0), Ru.addCallback(uu[Ju], Ku, mu)
+      function Xk(kk, Bk) {
+        let dk = Bk.instance?.constructor[Symbol.metadata] || kk,
+          sk = Bk.instance && "function" === typeof Bk.instance.forEach || kk && !uR.is(kk);
+        if (dk && !sk) {
+          const kk = function(kk, tk, Xk, wk) {
+            return wk && void 0 !== Bk.instance[tk] && !Rk.has(ak) && Xk(Bk.instance[tk], void 0), Fk.addCallback(kk[bk], tk, Xk)
           };
           return new Proxy({
-            listen: function(Ru, Ku) {
-              let mu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (yu.instance) return uu(yu.instance, Ru, Ku, mu);
+            listen: function(Fk, tk) {
+              let Xk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (Bk.instance) return kk(Bk.instance, Fk, tk, Xk);
               {
-                let Ju = () => {};
-                return yu.onInstanceAvailable(((yu, Nu) => {
-                  Ju = uu(yu, Ru, Ku, mu && Nu && !Eu.has(Qu))
-                })), () => Ju()
+                let bk = () => {};
+                return Bk.onInstanceAvailable(((Bk, wk) => {
+                  bk = kk(Bk, Fk, tk, Xk && wk && !Rk.has(ak))
+                })), () => bk()
               }
             },
-            onChange: function(uu) {
-              return Ru.addCallback(yu.instance[Ju], Ku.REPLACE, uu)
+            onChange: function(kk) {
+              return Fk.addCallback(Bk.instance[bk], tk.REPLACE, kk)
             },
-            bindTo: function(uu, Eu) {
-              return Eu || (Eu = Object.keys(Xu).map((uu => Xu[uu].name))), Ru.addCallback(yu.instance[Ju], Ku.REPLACE, (() => {
-                Eu.forEach((Ru => uu[Ru] = yu.instance[Ru]))
+            bindTo: function(kk, Rk) {
+              return Rk || (Rk = Object.keys(dk).map((kk => dk[kk].name))), Fk.addCallback(Bk.instance[bk], tk.REPLACE, (() => {
+                Rk.forEach((Fk => kk[Fk] = Bk.instance[Fk]))
               }))
             }
           }, {
-            get(uu, Ru) {
-              const Eu = Xu[Xu[Ru]];
-              if (Eu) {
-                const uu = yu.instance?.[Ru],
-                  Ku = Eu => {
-                    const Ku = Nu(yu.instance).listen(Ru, ((uu, Ru) => {
-                      Eu(uu, !1), Ku?.()
+            get(kk, Fk) {
+              const Rk = dk[dk[Fk]];
+              if (Rk) {
+                const kk = Bk.instance?.[Fk],
+                  tk = Rk => {
+                    const tk = wk(Bk.instance).listen(Fk, ((kk, Fk) => {
+                      Rk(kk, !1), tk?.()
                     }), !1);
-                    void 0 !== uu?.[Ju] && Eu(uu, !0)
+                    void 0 !== kk?.[bk] && Rk(kk, !0)
                   };
-                return mu(Eu.type, {
-                  instance: void 0 !== uu?.[Ju] && uu,
-                  parentInstance: yu.instance,
-                  onInstanceAvailable: Ku
+                return Xk(Rk.type, {
+                  instance: void 0 !== kk?.[bk] && kk,
+                  parentInstance: Bk.instance,
+                  onInstanceAvailable: tk
                 })
               }
-              return uu[Ru]
+              return kk[Fk]
             },
-            has: (uu, Ru) => void 0 !== Xu[Ru],
-            set(uu, Ru, yu) {
+            has: (kk, Fk) => void 0 !== dk[Fk],
+            set(kk, Fk, Bk) {
               throw new Error("not allowed")
             },
-            deleteProperty(uu, Ru) {
+            deleteProperty(kk, Fk) {
               throw new Error("not allowed")
             }
           })
         } {
-          const uu = function(uu, yu, mu) {
-              return mu && uu.forEach(((uu, Ru) => yu(uu, Ru))), Ru.addCallback(uu[Ju], Ku.ADD, ((uu, Ru) => {
-                Eu.set(yu, !0), Qu = yu, yu(uu, Ru), Eu.delete(yu), Qu = void 0
+          const kk = function(kk, Bk, Xk) {
+              return Xk && kk.forEach(((kk, Fk) => Bk(kk, Fk))), Fk.addCallback(kk[bk], tk.ADD, ((kk, Fk) => {
+                Rk.set(Bk, !0), ak = Bk, Bk(kk, Fk), Rk.delete(Bk), ak = void 0
               }))
             },
-            mu = function(uu, yu) {
-              return Ru.addCallback(uu[Ju], Ku.DELETE, yu)
+            Xk = function(kk, Bk) {
+              return Fk.addCallback(kk[bk], tk.DELETE, Bk)
             },
-            Nu = function(uu, yu) {
-              return Ru.addCallback(uu[Ju], Ku.REPLACE, yu)
+            wk = function(kk, Bk) {
+              return Fk.addCallback(kk[bk], tk.REPLACE, Bk)
             };
           return new Proxy({
-            UH: function(Ru) {
-              let Ku = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (yu.instance) return uu(yu.instance, Ru, Ku && !Eu.has(Qu));
-              if (yu.onInstanceAvailable) {
-                let mu = () => {};
-                return yu.onInstanceAvailable(((yu, Ju) => {
-                  mu = uu(yu, Ru, Ku && Ju && !Eu.has(Qu))
-                })), () => mu()
+            Av: function(Fk) {
+              let tk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (Bk.instance) return kk(Bk.instance, Fk, tk && !Rk.has(ak));
+              if (Bk.onInstanceAvailable) {
+                let Xk = () => {};
+                return Bk.onInstanceAvailable(((Bk, bk) => {
+                  Xk = kk(Bk, Fk, tk && bk && !Rk.has(ak))
+                })), () => Xk()
               }
             },
-            JA: function(uu) {
-              if (yu.instance) return mu(yu.instance, uu);
-              if (yu.onInstanceAvailable) {
-                let Ru = () => {};
-                return yu.onInstanceAvailable((yu => {
-                  Ru = mu(yu, uu)
-                })), () => Ru()
+            yE: function(kk) {
+              if (Bk.instance) return Xk(Bk.instance, kk);
+              if (Bk.onInstanceAvailable) {
+                let Fk = () => {};
+                return Bk.onInstanceAvailable((Bk => {
+                  Fk = Xk(Bk, kk)
+                })), () => Fk()
               }
             },
-            onChange: function(uu) {
-              if (yu.instance) return Nu(yu.instance, uu);
-              if (yu.onInstanceAvailable) {
-                let Ru = () => {};
-                return yu.onInstanceAvailable((yu => {
-                  Ru = Nu(yu, uu)
-                })), () => Ru()
+            onChange: function(kk) {
+              if (Bk.instance) return wk(Bk.instance, kk);
+              if (Bk.onInstanceAvailable) {
+                let Fk = () => {};
+                return Bk.onInstanceAvailable((Bk => {
+                  Fk = wk(Bk, kk)
+                })), () => Fk()
               }
             }
           }, {
-            get(uu, Ru) {
-              if (!uu[Ru]) throw new Error(`Can't access '${Ru}' through callback proxy. access the instance directly.`);
-              return uu[Ru]
+            get(kk, Fk) {
+              if (!kk[Fk]) throw new Error(`Can't access '${Fk}' through callback proxy. access the instance directly.`);
+              return kk[Fk]
             },
-            has: (uu, Ru) => void 0 !== uu[Ru],
-            set(uu, Ru, yu) {
+            has: (kk, Fk) => void 0 !== kk[Fk],
+            set(kk, Fk, Bk) {
               throw new Error("not allowed")
             },
-            deleteProperty(uu, Ru) {
+            deleteProperty(kk, Fk) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function Nu(uu) {
-        return mu(void 0, {
-          instance: uu
+      function wk(kk) {
+        return Xk(void 0, {
+          instance: kk
         })
       }
-      return uu.pD = function(uu) {
-        const Ru = new Set;
-        for (let Eu = 0, Qu = uu.length; Eu < Qu; Eu++) {
-          const Qu = uu[Eu],
-            mu = Qu.refId,
-            Nu = Qu.ref,
-            Xu = yu[mu];
-          if (Xu) {
-            if ((Qu.op & Ku.DELETE) === Ku.DELETE && IE.isSchema(Qu.previousValue)) {
-              const uu = yu[Qu.previousValue[Ju]]?.[Ku.DELETE];
-              for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru]()
+      return kk.kS = function(kk) {
+        const Fk = new Set;
+        for (let Rk = 0, ak = kk.length; Rk < ak; Rk++) {
+          const ak = kk[Rk],
+            Xk = ak.refId,
+            wk = ak.ref,
+            dk = Bk[Xk];
+          if (dk) {
+            if ((ak.op & tk.DELETE) === tk.DELETE && uR.isSchema(ak.previousValue)) {
+              const kk = Bk[ak.previousValue[bk]]?.[tk.DELETE];
+              for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk]()
             }
-            if (IE.isSchema(Nu)) {
-              if (!Ru.has(mu)) {
-                const uu = Xu?.[Ku.REPLACE];
-                for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru]()
+            if (uR.isSchema(wk)) {
+              if (!Fk.has(Xk)) {
+                const kk = dk?.[tk.REPLACE];
+                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk]()
               }
-              if (Xu.hasOwnProperty(Qu.field)) {
-                const uu = Xu[Qu.field];
-                for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru](Qu.value, Qu.previousValue)
+              if (dk.hasOwnProperty(ak.field)) {
+                const kk = dk[ak.field];
+                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ak.value, ak.previousValue)
               }
             } else {
-              if ((Qu.op & Ku.DELETE) === Ku.DELETE) {
-                if (void 0 !== Qu.previousValue) {
-                  const uu = Xu[Ku.DELETE];
-                  for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru](Qu.previousValue, Qu.dynamicIndex ?? Qu.field)
+              if ((ak.op & tk.DELETE) === tk.DELETE) {
+                if (void 0 !== ak.previousValue) {
+                  const kk = dk[tk.DELETE];
+                  for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ak.previousValue, ak.dynamicIndex ?? ak.field)
                 }
-                if ((Qu.op & Ku.ADD) === Ku.ADD) {
-                  const uu = Xu[Ku.ADD];
-                  for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru](Qu.value, Qu.dynamicIndex ?? Qu.field)
+                if ((ak.op & tk.ADD) === tk.ADD) {
+                  const kk = dk[tk.ADD];
+                  for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ak.value, ak.dynamicIndex ?? ak.field)
                 }
-              } else if ((Qu.op & Ku.ADD) === Ku.ADD && Qu.previousValue !== Qu.value) {
-                const uu = Xu[Ku.ADD];
-                for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru](Qu.value, Qu.dynamicIndex ?? Qu.field)
+              } else if ((ak.op & tk.ADD) === tk.ADD && ak.previousValue !== ak.value) {
+                const kk = dk[tk.ADD];
+                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ak.value, ak.dynamicIndex ?? ak.field)
               }
-              if (Qu.value !== Qu.previousValue && (void 0 !== Qu.value || void 0 !== Qu.previousValue)) {
-                const uu = Xu[Ku.REPLACE];
-                for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru](Qu.value, Qu.dynamicIndex ?? Qu.field)
+              if (ak.value !== ak.previousValue && (void 0 !== ak.value || void 0 !== ak.previousValue)) {
+                const kk = dk[tk.REPLACE];
+                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ak.value, ak.dynamicIndex ?? ak.field)
               }
             }
-            Ru.add(mu)
+            Fk.add(Xk)
           }
         }
-      }, Nu
+      }, wk
     }
 
-    function uK(uu, Ru) {
-      uu.pD = Ru
+    function Ft(kk, Fk) {
+      kk.kS = Fk
     }
-    aE.encode = function(uu) {
-      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    QR.encode = function(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const yu = uu.context,
-        Eu = new aE,
-        Ku = new hE(Eu),
-        Qu = yu.schemas.get(uu.state.constructor);
-      Qu > 0 && (Eu.rootType = Qu);
-      const mu = new Set,
-        Ju = {},
-        Nu = uu => {
-          if (void 0 === uu.extendsId || mu.has(uu.extendsId)) {
-            mu.add(uu.id), Eu.types.push(uu);
-            const Ru = Ju[uu.id];
-            void 0 !== Ru && (delete Ju[uu.id], Ru.forEach((uu => Nu(uu))))
-          } else void 0 === Ju[uu.extendsId] && (Ju[uu.extendsId] = []), Ju[uu.extendsId].push(uu)
+      const Bk = kk.context,
+        Rk = new QR,
+        tk = new ZR(Rk),
+        ak = Bk.schemas.get(kk.state.constructor);
+      ak > 0 && (Rk.rootType = ak);
+      const Xk = new Set,
+        bk = {},
+        wk = kk => {
+          if (void 0 === kk.extendsId || Xk.has(kk.extendsId)) {
+            Xk.add(kk.id), Rk.types.push(kk);
+            const Fk = bk[kk.id];
+            void 0 !== Fk && (delete bk[kk.id], Fk.forEach((kk => wk(kk))))
+          } else void 0 === bk[kk.extendsId] && (bk[kk.extendsId] = []), bk[kk.extendsId].push(kk)
         };
-      yu.schemas.forEach(((uu, Ru) => {
-        const Eu = new vE;
-        Eu.id = Number(uu);
-        const Ku = Object.getPrototypeOf(Ru);
-        Ku !== IE && (Eu.extendsId = yu.schemas.get(Ku));
-        const Qu = Ru[Symbol.metadata];
-        if (Qu !== Ku[Symbol.metadata]) {
-          const uu = Qu[Du] ?? -1;
-          for (let Ru = 0; Ru <= uu; Ru++) {
-            const uu = Qu[Ru];
-            if (void 0 === uu) continue;
-            const Ku = uu.name;
-            if (!Object.prototype.hasOwnProperty.call(Qu, Ku)) continue;
-            const mu = new OE;
-            let Ju;
-            if (mu.name = Ku, "string" === typeof uu.type) Ju = uu.type;
-            else if (gR(uu.type)) {
-              const Ru = uu.type.quantized;
-              Ju = "quantized";
-              const yu = new qE;
-              yu.min = Ru.min, yu.max = Ru.max, yu.bits = Ru.bits, yu.mode = Ru.wrap ? 1 : 0, mu.quantized = yu
+      Bk.schemas.forEach(((kk, Fk) => {
+        const Rk = new IR;
+        Rk.id = Number(kk);
+        const tk = Object.getPrototypeOf(Fk);
+        tk !== uR && (Rk.extendsId = Bk.schemas.get(tk));
+        const ak = Fk[Symbol.metadata];
+        if (ak !== tk[Symbol.metadata]) {
+          const kk = ak[Nk] ?? -1;
+          for (let Fk = 0; Fk <= kk; Fk++) {
+            const kk = ak[Fk];
+            if (void 0 === kk) continue;
+            const tk = kk.name;
+            if (!Object.prototype.hasOwnProperty.call(ak, tk)) continue;
+            const Xk = new nR;
+            let bk;
+            if (Xk.name = tk, "string" === typeof kk.type) bk = kk.type;
+            else if (rF(kk.type)) {
+              const Fk = kk.type.quantized;
+              bk = "quantized";
+              const Bk = new lR;
+              Bk.min = Fk.min, Bk.max = Fk.max, Bk.bits = Fk.bits, Bk.mode = Fk.wrap ? 1 : 0, Xk.quantized = Bk
             } else {
-              let Ru;
-              IE.is(uu.type) ? (Ju = "ref", Ru = uu.type) : (Ju = Object.keys(uu.type)[0], "string" === typeof uu.type[Ju] ? mu.childPrimitive = uu.type[Ju] : Ru = uu.type[Ju]), mu.referencedType = Ru ? yu.getTypeId(Ru) : -1
+              let Fk;
+              uR.is(kk.type) ? (bk = "ref", Fk = kk.type) : (bk = Object.keys(kk.type)[0], "string" === typeof kk.type[bk] ? Xk.childPrimitive = kk.type[bk] : Fk = kk.type[bk]), Xk.referencedType = Fk ? Bk.getTypeId(Fk) : -1
             }
-            mu.type = Ju, Eu.fields.push(mu)
+            Xk.type = bk, Rk.fields.push(Xk)
           }
         }
-        Nu(Eu)
+        wk(Rk)
       }));
-      for (const Xu in Ju) Ju[Xu].forEach((uu => Eu.types.push(uu)));
-      return Ku.encodeAll(Ru).slice(0, Ru.offset)
-    }, aE.decode = function(uu, Ru) {
-      const yu = new aE;
-      new oE(yu).decode(uu, Ru);
-      const Eu = new FR;
-      yu.types.forEach((uu => {
-        const Ru = Eu.get(uu.extendsId) ?? IE,
-          yu = class extends Ru {};
-        FR.register(yu), Eu.add(yu, uu.id)
+      for (const dk in bk) bk[dk].forEach((kk => Rk.types.push(kk)));
+      return tk.encodeAll(Fk).slice(0, Fk.offset)
+    }, QR.decode = function(kk, Fk) {
+      const Bk = new QR;
+      new jR(Bk).decode(kk, Fk);
+      const Rk = new hF;
+      Bk.types.forEach((kk => {
+        const Fk = Rk.get(kk.extendsId) ?? uR,
+          Bk = class extends Fk {};
+        hF.register(Bk), Rk.add(Bk, kk.id)
       }), {});
-      yu.types.forEach((uu => {
-        const Ru = Eu.get(uu.id),
-          Ku = oR.initialize(Ru),
-          Qu = [];
-        let mu = uu;
+      Bk.types.forEach((kk => {
+        const Fk = Rk.get(kk.id),
+          tk = jF.initialize(Fk),
+          ak = [];
+        let Xk = kk;
         do {
-          Qu.push(mu), mu = yu.types.find((uu => uu.id === mu.extendsId))
-        } while (mu);
-        let Ju = 0;
-        Qu.reverse().forEach((uu => {
-          ((uu, Ru, yu) => {
-            Ru.fields.forEach(((Ru, Ku) => {
-              const Qu = yu + Ku;
-              if (void 0 !== Ru.quantized) {
-                const yu = Ru.quantized;
-                oR.addField(uu, Qu, Ru.name, {
-                  quantized: lR({
-                    min: yu.min,
-                    max: yu.max,
-                    bits: yu.bits,
-                    mode: 1 === yu.mode ? "wrap" : "clamp"
+          ak.push(Xk), Xk = Bk.types.find((kk => kk.id === Xk.extendsId))
+        } while (Xk);
+        let bk = 0;
+        ak.reverse().forEach((kk => {
+          ((kk, Fk, Bk) => {
+            Fk.fields.forEach(((Fk, tk) => {
+              const ak = Bk + tk;
+              if (void 0 !== Fk.quantized) {
+                const Bk = Fk.quantized;
+                jF.addField(kk, ak, Fk.name, {
+                  quantized: TF({
+                    min: Bk.min,
+                    max: Bk.max,
+                    bits: Bk.bits,
+                    mode: 1 === Bk.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== Ru.referencedType) {
-                const yu = Ru.type,
-                  Ku = Eu.get(Ru.referencedType) ?? Ru.childPrimitive;
-                "ref" === yu ? oR.addField(uu, Qu, Ru.name, Ku) : oR.addField(uu, Qu, Ru.name, {
-                  [yu]: Ku
+              } else if (void 0 !== Fk.referencedType) {
+                const Bk = Fk.type,
+                  tk = Rk.get(Fk.referencedType) ?? Fk.childPrimitive;
+                "ref" === Bk ? jF.addField(kk, ak, Fk.name, tk) : jF.addField(kk, ak, Fk.name, {
+                  [Bk]: tk
                 })
-              } else oR.addField(uu, Qu, Ru.name, Ru.type)
+              } else jF.addField(kk, ak, Fk.name, Fk.type)
             }))
-          })(Ku, uu, Ju), Ju += uu.fields.length
+          })(tk, kk, bk), bk += kk.fields.length
         }))
       }));
-      const Ku = new(Eu.get(yu.rootType || 0));
-      return new oE(Ku, Eu)
-    }, aE.makeEncodable = function(uu) {
-      const Ru = uu[Symbol.metadata];
-      if (!Ru) return uu;
-      const yu = Ru[Du];
-      if (void 0 === yu) return uu;
-      for (let Eu = 0; Eu <= yu; Eu++) {
-        const yu = Ru[Eu];
-        yu && oR.defineField(uu, Ru, Eu, yu.name, yu.type)
+      const tk = new(Rk.get(Bk.rootType || 0));
+      return new jR(tk, Rk)
+    }, QR.makeEncodable = function(kk) {
+      const Fk = kk[Symbol.metadata];
+      if (!Fk) return kk;
+      const Bk = Fk[Nk];
+      if (void 0 === Bk) return kk;
+      for (let Rk = 0; Rk <= Bk; Rk++) {
+        const Bk = Fk[Rk];
+        Bk && jF.defineField(kk, Fk, Rk, Bk.name, Bk.type)
       }
-      return Object.prototype.hasOwnProperty.call(uu, eu) && delete uu[eu], uu
+      return Object.prototype.hasOwnProperty.call(kk, Ek) && delete kk[Ek], kk
     };
-    class RK {
-      Ox;
+    class Bt {
+      Le;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(uu) {
-        this.Ox = uu, this.Ox.pD = this.pD.bind(this)
+      constructor(kk) {
+        this.Le = kk, this.Le.kS = this.kS.bind(this)
       }
       get callbacks() {
-        return this.Ox.root.callbacks
+        return this.Le.root.callbacks
       }
       get state() {
-        return this.Ox.state
+        return this.Le.state
       }
-      addCallback(uu, Ru, yu) {
-        return this.Ox.root.addCallback(uu, Ru, yu)
+      addCallback(kk, Fk, Bk) {
+        return this.Le.root.addCallback(kk, Fk, Bk)
       }
-      addCallbackOrWaitCollectionAvailable(uu, Ru, yu, Eu) {
-        let Qu = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          mu = () => {};
-        const Nu = () => mu(),
-          Xu = uu[Ru];
-        if (Xu && void 0 !== Xu[Ju]) return Qu = Qu && !1 === this.isTriggering, yu === Ku.ADD && Qu && Xu.forEach(((uu, Ru) => {
-          Eu(uu, Ru)
-        })), this.addCallback(Xu[Ju], yu, Eu);
+      addCallbackOrWaitCollectionAvailable(kk, Fk, Bk, Rk) {
+        let ak = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          Xk = () => {};
+        const wk = () => Xk(),
+          dk = kk[Fk];
+        if (dk && void 0 !== dk[bk]) return ak = ak && !1 === this.isTriggering, Bk === tk.ADD && ak && dk.forEach(((kk, Fk) => {
+          Rk(kk, Fk)
+        })), this.addCallback(dk[bk], Bk, Rk);
         {
-          let Ku;
-          return Ku = this.addCallback(uu[Ju], Ru, ((uu, Ru) => {
-            null !== uu && void 0 !== uu && (Ku(), mu = this.addCallback(uu[Ju], yu, Eu))
-          })), mu = Ku, Nu
+          let tk;
+          return tk = this.addCallback(kk[bk], Fk, ((kk, Fk) => {
+            null !== kk && void 0 !== kk && (tk(), Xk = this.addCallback(kk[bk], Bk, Rk))
+          })), Xk = tk, wk
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(uu, Ru, yu) {
-        let Eu = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        Eu = Eu && !1 === this.isTriggering;
-        const Ku = uu[Ru];
-        return Eu && null !== Ku && void 0 !== Ku && yu(Ku, void 0), this.addCallback(uu[Ju], Ru, yu)
+      listenInstance(kk, Fk, Bk) {
+        let Rk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        Rk = Rk && !1 === this.isTriggering;
+        const tk = kk[Fk];
+        return Rk && null !== tk && void 0 !== tk && Bk(tk, void 0), this.addCallback(kk[bk], Fk, Bk)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const uu = arguments.length <= 0 ? void 0 : arguments[0],
-            Ru = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(uu[Ju], Ku.REPLACE, Ru)
+          const kk = arguments.length <= 0 ? void 0 : arguments[0],
+            Fk = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(kk[bk], tk.REPLACE, Fk)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Ku.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Ku.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], tk.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], tk.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      UH() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Ku.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Ku.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      Av() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], tk.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], tk.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      JA() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Ku.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Ku.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      yE() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], tk.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], tk.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(uu, Ru, yu) {
-        let Eu = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const Qu = uu.constructor[Symbol.metadata];
-        yu || (yu = Object.keys(Qu).filter((uu => !isNaN(Number(uu)))).map((uu => Qu[uu].name)));
-        const mu = () => {
-          for (const Eu of yu) {
-            const yu = uu[Eu];
-            void 0 !== yu && (Ru[Eu] = yu)
+      bindTo(kk, Fk, Bk) {
+        let Rk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const ak = kk.constructor[Symbol.metadata];
+        Bk || (Bk = Object.keys(ak).filter((kk => !isNaN(Number(kk)))).map((kk => ak[kk].name)));
+        const Xk = () => {
+          for (const Rk of Bk) {
+            const Bk = kk[Rk];
+            void 0 !== Bk && (Fk[Rk] = Bk)
           }
         };
-        return Eu && mu(), this.addCallback(uu[Ju], Ku.REPLACE, mu)
+        return Rk && Xk(), this.addCallback(kk[bk], tk.REPLACE, Xk)
       }
-      pD(uu) {
+      kS(kk) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let Ru = 0, yu = uu.length; Ru < yu; Ru++) {
-          const yu = uu[Ru],
-            Eu = yu.refId,
-            Qu = yu.ref,
-            mu = this.callbacks[Eu];
-          if (mu) {
-            if ((yu.op & Ku.DELETE) === Ku.DELETE && IE.isSchema(yu.previousValue)) {
-              const uu = yu.previousValue[Ju],
-                Ru = this.callbacks[uu]?.[Ku.DELETE];
-              if (Ru)
-                for (let yu = Ru.length - 1; yu >= 0; yu--) try {
-                  Ru[yu]()
-                } catch (QK) {
-                  console.error(QK)
+        for (let Fk = 0, Bk = kk.length; Fk < Bk; Fk++) {
+          const Bk = kk[Fk],
+            Rk = Bk.refId,
+            ak = Bk.ref,
+            Xk = this.callbacks[Rk];
+          if (Xk) {
+            if ((Bk.op & tk.DELETE) === tk.DELETE && uR.isSchema(Bk.previousValue)) {
+              const kk = Bk.previousValue[bk],
+                Fk = this.callbacks[kk]?.[tk.DELETE];
+              if (Fk)
+                for (let Bk = Fk.length - 1; Bk >= 0; Bk--) try {
+                  Fk[Bk]()
+                } catch (bt) {
+                  console.error(bt)
                 }
             }
-            if (IE.isSchema(Qu)) {
-              if (!this.uniqueRefIds.has(Eu)) {
-                const uu = mu[Ku.REPLACE];
-                if (uu)
-                  for (let Ru = uu.length - 1; Ru >= 0; Ru--) try {
-                    uu[Ru]()
-                  } catch (QK) {
-                    console.error(QK)
+            if (uR.isSchema(ak)) {
+              if (!this.uniqueRefIds.has(Rk)) {
+                const kk = Xk[tk.REPLACE];
+                if (kk)
+                  for (let Fk = kk.length - 1; Fk >= 0; Fk--) try {
+                    kk[Fk]()
+                  } catch (bt) {
+                    console.error(bt)
                   }
               }
-              const uu = mu[yu.field];
-              if (uu)
-                for (let Ru = uu.length - 1; Ru >= 0; Ru--) try {
-                  uu[Ru](yu.value, yu.previousValue)
-                } catch (QK) {
-                  console.error(QK)
+              const kk = Xk[Bk.field];
+              if (kk)
+                for (let Fk = kk.length - 1; Fk >= 0; Fk--) try {
+                  kk[Fk](Bk.value, Bk.previousValue)
+                } catch (bt) {
+                  console.error(bt)
                 }
             } else {
-              const uu = yu.dynamicIndex ?? yu.field;
-              if ((yu.op & Ku.DELETE) === Ku.DELETE) {
-                if (void 0 !== yu.previousValue) {
-                  const Ru = mu[Ku.DELETE];
-                  if (Ru)
-                    for (let Eu = Ru.length - 1; Eu >= 0; Eu--) try {
-                      Ru[Eu](yu.previousValue, uu)
-                    } catch (QK) {
-                      console.error(QK)
+              const kk = Bk.dynamicIndex ?? Bk.field;
+              if ((Bk.op & tk.DELETE) === tk.DELETE) {
+                if (void 0 !== Bk.previousValue) {
+                  const Fk = Xk[tk.DELETE];
+                  if (Fk)
+                    for (let Rk = Fk.length - 1; Rk >= 0; Rk--) try {
+                      Fk[Rk](Bk.previousValue, kk)
+                    } catch (bt) {
+                      console.error(bt)
                     }
                 }
-                if ((yu.op & Ku.ADD) === Ku.ADD) {
-                  const Ru = mu[Ku.ADD];
-                  if (Ru)
-                    for (let Eu = Ru.length - 1; Eu >= 0; Eu--) try {
-                      Ru[Eu](yu.value, uu)
-                    } catch (QK) {
-                      console.error(QK)
+                if ((Bk.op & tk.ADD) === tk.ADD) {
+                  const Fk = Xk[tk.ADD];
+                  if (Fk)
+                    for (let Rk = Fk.length - 1; Rk >= 0; Rk--) try {
+                      Fk[Rk](Bk.value, kk)
+                    } catch (bt) {
+                      console.error(bt)
                     }
                 }
-              } else if ((yu.op & Ku.ADD) === Ku.ADD && yu.previousValue !== yu.value) {
-                const Ru = mu[Ku.ADD];
-                if (Ru)
-                  for (let Eu = Ru.length - 1; Eu >= 0; Eu--) try {
-                    Ru[Eu](yu.value, uu)
-                  } catch (QK) {
-                    console.error(QK)
+              } else if ((Bk.op & tk.ADD) === tk.ADD && Bk.previousValue !== Bk.value) {
+                const Fk = Xk[tk.ADD];
+                if (Fk)
+                  for (let Rk = Fk.length - 1; Rk >= 0; Rk--) try {
+                    Fk[Rk](Bk.value, kk)
+                  } catch (bt) {
+                    console.error(bt)
                   }
               }
-              if (yu.value !== yu.previousValue) {
-                const Ru = mu[Ku.REPLACE];
-                if (Ru)
-                  for (let Eu = Ru.length - 1; Eu >= 0; Eu--) try {
-                    Ru[Eu](uu, yu.value)
-                  } catch (QK) {
-                    console.error(QK)
+              if (Bk.value !== Bk.previousValue) {
+                const Fk = Xk[tk.REPLACE];
+                if (Fk)
+                  for (let Rk = Fk.length - 1; Rk >= 0; Rk--) try {
+                    Fk[Rk](kk, Bk.value)
+                  } catch (bt) {
+                    console.error(bt)
                   }
               }
             }
-            this.uniqueRefIds.add(Eu)
+            this.uniqueRefIds.add(Rk)
           }
         }
         this.isTriggering = !1
       }
     }
-    const yK = {
-      get(uu) {
-        if (uu instanceof oE) return new RK(uu);
-        if ("Ox" in uu.pW) return new RK(uu.pW.Ox);
+    const Rt = {
+      get(kk) {
+        if (kk instanceof jR) return new Bt(kk);
+        if ("Le" in kk.Zm) return new Bt(kk.Zm.Le);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(uu) {
-        if (uu instanceof oE) return fE(uu);
-        if ("Ox" in uu.pW) return fE(uu.pW.Ox);
+      getLegacy(kk) {
+        if (kk instanceof jR) return kt(kk);
+        if ("Le" in kk.Zm) return kt(kk.Zm.Le);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (uu, Ru) => uK(uu, Ru)
+      getRawChanges: (kk, Fk) => Ft(kk, Fk)
     };
-    class EK {
+    class tt {
       _free = [];
       _factory;
       _maxSize;
-      constructor(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = uu, this._maxSize = Ru.maxSize ?? 1 / 0;
-        const yu = Ru.preallocate ?? 0;
-        for (let Eu = 0; Eu < yu; Eu++) this._free.push(uu())
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = kk, this._maxSize = Fk.maxSize ?? 1 / 0;
+        const Bk = Fk.preallocate ?? 0;
+        for (let Rk = 0; Rk < Bk; Rk++) this._free.push(kk())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(uu) {
-        IE.reset(uu), this._free.length < this._maxSize && this._free.push(uu)
+      release(kk) {
+        uR.reset(kk), this._free.length < this._maxSize && this._free.push(kk)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function KK(uu) {
-      return new EK((() => new uu), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function Xt(kk) {
+      return new tt((() => new kk), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    CR("map", {
-      constructor: KE
-    }), CR("array", {
-      constructor: yE
-    }), CR("set", {
-      constructor: mE
-    }), CR("collection", {
-      constructor: QE
+    LF("map", {
+      constructor: aR
+    }), LF("array", {
+      constructor: RR
+    }), LF("set", {
+      constructor: bR
+    }), LF("collection", {
+      constructor: XR
     })
   },
-  8832: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      __addDisposableResource: () => gu,
-      __assign: () => Qu,
-      __asyncDelegator: () => Au,
-      __asyncGenerator: () => eu,
-      __asyncValues: () => Du,
-      __await: () => ku,
-      __awaiter: () => Su,
-      __classPrivateFieldGet: () => su,
-      __classPrivateFieldIn: () => lu,
-      __classPrivateFieldSet: () => tu,
-      __createBinding: () => Tu,
-      __decorate: () => Ju,
-      __disposeResources: () => Lu,
-      __esDecorate: () => Xu,
-      __exportStar: () => Wu,
-      __extends: () => Ku,
-      __generator: () => pu,
-      __importDefault: () => nu,
-      __importStar: () => Uu,
-      __makeTemplateObject: () => Mu,
-      __metadata: () => xu,
-      __param: () => Nu,
-      __propKey: () => ru,
-      __read: () => Hu,
-      __rest: () => mu,
-      __rewriteRelativeImportExtension: () => zu,
-      __runInitializers: () => Vu,
-      __setFunctionName: () => Bu,
-      __spread: () => du,
-      __spreadArray: () => Cu,
-      __spreadArrays: () => bu,
-      __values: () => ju,
-      default: () => Fu
+  8758: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      __addDisposableResource: () => rk,
+      __assign: () => ak,
+      __asyncDelegator: () => Sk,
+      __asyncGenerator: () => Ek,
+      __asyncValues: () => Nk,
+      __await: () => Ok,
+      __awaiter: () => ek,
+      __classPrivateFieldGet: () => ck,
+      __classPrivateFieldIn: () => Tk,
+      __classPrivateFieldSet: () => Gk,
+      __createBinding: () => fk,
+      __decorate: () => bk,
+      __disposeResources: () => zk,
+      __esDecorate: () => dk,
+      __exportStar: () => mk,
+      __extends: () => tk,
+      __generator: () => yk,
+      __importDefault: () => Uk,
+      __importStar: () => gk,
+      __makeTemplateObject: () => Hk,
+      __metadata: () => Ak,
+      __param: () => wk,
+      __propKey: () => Vk,
+      __read: () => vk,
+      __rest: () => Xk,
+      __rewriteRelativeImportExtension: () => Pk,
+      __runInitializers: () => sk,
+      __setFunctionName: () => Jk,
+      __spread: () => ik,
+      __spreadArray: () => Lk,
+      __spreadArrays: () => Yk,
+      __values: () => Wk,
+      default: () => hk
     });
-    var Eu = function(uu, Ru) {
-      return Eu = Object.setPrototypeOf || {
+    var Rk = function(kk, Fk) {
+      return Rk = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(uu, Ru) {
-        uu.__proto__ = Ru
-      } || function(uu, Ru) {
-        for (var yu in Ru) Object.prototype.hasOwnProperty.call(Ru, yu) && (uu[yu] = Ru[yu])
-      }, Eu(uu, Ru)
+      instanceof Array && function(kk, Fk) {
+        kk.__proto__ = Fk
+      } || function(kk, Fk) {
+        for (var Bk in Fk) Object.prototype.hasOwnProperty.call(Fk, Bk) && (kk[Bk] = Fk[Bk])
+      }, Rk(kk, Fk)
     };
 
-    function Ku(uu, Ru) {
-      if ("function" !== typeof Ru && null !== Ru) throw new TypeError("Class extends value " + String(Ru) + " is not a constructor or null");
+    function tk(kk, Fk) {
+      if ("function" !== typeof Fk && null !== Fk) throw new TypeError("Class extends value " + String(Fk) + " is not a constructor or null");
 
-      function yu() {
-        this.constructor = uu
+      function Bk() {
+        this.constructor = kk
       }
-      Eu(uu, Ru), uu.prototype = null === Ru ? Object.create(Ru) : (yu.prototype = Ru.prototype, new yu)
+      Rk(kk, Fk), kk.prototype = null === Fk ? Object.create(Fk) : (Bk.prototype = Fk.prototype, new Bk)
     }
-    var Qu = function() {
-      return Qu = Object.assign || function(uu) {
-        for (var Ru, yu = 1, Eu = arguments.length; yu < Eu; yu++)
-          for (var Ku in Ru = arguments[yu]) Object.prototype.hasOwnProperty.call(Ru, Ku) && (uu[Ku] = Ru[Ku]);
-        return uu
-      }, Qu.apply(this, arguments)
+    var ak = function() {
+      return ak = Object.assign || function(kk) {
+        for (var Fk, Bk = 1, Rk = arguments.length; Bk < Rk; Bk++)
+          for (var tk in Fk = arguments[Bk]) Object.prototype.hasOwnProperty.call(Fk, tk) && (kk[tk] = Fk[tk]);
+        return kk
+      }, ak.apply(this, arguments)
     };
 
-    function mu(uu, Ru) {
-      var yu = {};
-      for (var Eu in uu) Object.prototype.hasOwnProperty.call(uu, Eu) && Ru.indexOf(Eu) < 0 && (yu[Eu] = uu[Eu]);
-      if (null != uu && "function" === typeof Object.getOwnPropertySymbols) {
-        var Ku = 0;
-        for (Eu = Object.getOwnPropertySymbols(uu); Ku < Eu.length; Ku++) Ru.indexOf(Eu[Ku]) < 0 && Object.prototype.propertyIsEnumerable.call(uu, Eu[Ku]) && (yu[Eu[Ku]] = uu[Eu[Ku]])
+    function Xk(kk, Fk) {
+      var Bk = {};
+      for (var Rk in kk) Object.prototype.hasOwnProperty.call(kk, Rk) && Fk.indexOf(Rk) < 0 && (Bk[Rk] = kk[Rk]);
+      if (null != kk && "function" === typeof Object.getOwnPropertySymbols) {
+        var tk = 0;
+        for (Rk = Object.getOwnPropertySymbols(kk); tk < Rk.length; tk++) Fk.indexOf(Rk[tk]) < 0 && Object.prototype.propertyIsEnumerable.call(kk, Rk[tk]) && (Bk[Rk[tk]] = kk[Rk[tk]])
       }
-      return yu
+      return Bk
     }
 
-    function Ju(uu, Ru, yu, Eu) {
-      var Ku, Qu = arguments.length,
-        mu = Qu < 3 ? Ru : null === Eu ? Eu = Object.getOwnPropertyDescriptor(Ru, yu) : Eu;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) mu = Reflect.decorate(uu, Ru, yu, Eu);
+    function bk(kk, Fk, Bk, Rk) {
+      var tk, ak = arguments.length,
+        Xk = ak < 3 ? Fk : null === Rk ? Rk = Object.getOwnPropertyDescriptor(Fk, Bk) : Rk;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) Xk = Reflect.decorate(kk, Fk, Bk, Rk);
       else
-        for (var Ju = uu.length - 1; Ju >= 0; Ju--)(Ku = uu[Ju]) && (mu = (Qu < 3 ? Ku(mu) : Qu > 3 ? Ku(Ru, yu, mu) : Ku(Ru, yu)) || mu);
-      return Qu > 3 && mu && Object.defineProperty(Ru, yu, mu), mu
+        for (var bk = kk.length - 1; bk >= 0; bk--)(tk = kk[bk]) && (Xk = (ak < 3 ? tk(Xk) : ak > 3 ? tk(Fk, Bk, Xk) : tk(Fk, Bk)) || Xk);
+      return ak > 3 && Xk && Object.defineProperty(Fk, Bk, Xk), Xk
     }
 
-    function Nu(uu, Ru) {
-      return function(yu, Eu) {
-        Ru(yu, Eu, uu)
+    function wk(kk, Fk) {
+      return function(Bk, Rk) {
+        Fk(Bk, Rk, kk)
       }
     }
 
-    function Xu(uu, Ru, yu, Eu, Ku, Qu) {
-      function mu(uu) {
-        if (void 0 !== uu && "function" !== typeof uu) throw new TypeError("Function expected");
-        return uu
+    function dk(kk, Fk, Bk, Rk, tk, ak) {
+      function Xk(kk) {
+        if (void 0 !== kk && "function" !== typeof kk) throw new TypeError("Function expected");
+        return kk
       }
-      for (var Ju, Nu = Eu.kind, Xu = "getter" === Nu ? "get" : "setter" === Nu ? "set" : "value", Vu = !Ru && uu ? Eu.static ? uu : uu.prototype : null, ru = Ru || (Vu ? Object.getOwnPropertyDescriptor(Vu, Eu.name) : {}), Bu = !1, xu = yu.length - 1; xu >= 0; xu--) {
-        var Su = {};
-        for (var pu in Eu) Su[pu] = "access" === pu ? {} : Eu[pu];
-        for (var pu in Eu.access) Su.access[pu] = Eu.access[pu];
-        Su.addInitializer = function(uu) {
-          if (Bu) throw new TypeError("Cannot add initializers after decoration has completed");
-          Qu.push(mu(uu || null))
+      for (var bk, wk = Rk.kind, dk = "getter" === wk ? "get" : "setter" === wk ? "set" : "value", sk = !Fk && kk ? Rk.static ? kk : kk.prototype : null, Vk = Fk || (sk ? Object.getOwnPropertyDescriptor(sk, Rk.name) : {}), Jk = !1, Ak = Bk.length - 1; Ak >= 0; Ak--) {
+        var ek = {};
+        for (var yk in Rk) ek[yk] = "access" === yk ? {} : Rk[yk];
+        for (var yk in Rk.access) ek.access[yk] = Rk.access[yk];
+        ek.addInitializer = function(kk) {
+          if (Jk) throw new TypeError("Cannot add initializers after decoration has completed");
+          ak.push(Xk(kk || null))
         };
-        var Tu = (0, yu[xu])("accessor" === Nu ? {
-          get: ru.get,
-          set: ru.set
-        } : ru[Xu], Su);
-        if ("accessor" === Nu) {
-          if (void 0 === Tu) continue;
-          if (null === Tu || "object" !== typeof Tu) throw new TypeError("Object expected");
-          (Ju = mu(Tu.get)) && (ru.get = Ju), (Ju = mu(Tu.set)) && (ru.set = Ju), (Ju = mu(Tu.init)) && Ku.unshift(Ju)
-        } else(Ju = mu(Tu)) && ("field" === Nu ? Ku.unshift(Ju) : ru[Xu] = Ju)
+        var fk = (0, Bk[Ak])("accessor" === wk ? {
+          get: Vk.get,
+          set: Vk.set
+        } : Vk[dk], ek);
+        if ("accessor" === wk) {
+          if (void 0 === fk) continue;
+          if (null === fk || "object" !== typeof fk) throw new TypeError("Object expected");
+          (bk = Xk(fk.get)) && (Vk.get = bk), (bk = Xk(fk.set)) && (Vk.set = bk), (bk = Xk(fk.init)) && tk.unshift(bk)
+        } else(bk = Xk(fk)) && ("field" === wk ? tk.unshift(bk) : Vk[dk] = bk)
       }
-      Vu && Object.defineProperty(Vu, Eu.name, ru), Bu = !0
+      sk && Object.defineProperty(sk, Rk.name, Vk), Jk = !0
     }
 
-    function Vu(uu, Ru, yu) {
-      for (var Eu = arguments.length > 2, Ku = 0; Ku < Ru.length; Ku++) yu = Eu ? Ru[Ku].call(uu, yu) : Ru[Ku].call(uu);
-      return Eu ? yu : void 0
+    function sk(kk, Fk, Bk) {
+      for (var Rk = arguments.length > 2, tk = 0; tk < Fk.length; tk++) Bk = Rk ? Fk[tk].call(kk, Bk) : Fk[tk].call(kk);
+      return Rk ? Bk : void 0
     }
 
-    function ru(uu) {
-      return "symbol" === typeof uu ? uu : "".concat(uu)
+    function Vk(kk) {
+      return "symbol" === typeof kk ? kk : "".concat(kk)
     }
 
-    function Bu(uu, Ru, yu) {
-      return "symbol" === typeof Ru && (Ru = Ru.description ? "[".concat(Ru.description, "]") : ""), Object.defineProperty(uu, "name", {
+    function Jk(kk, Fk, Bk) {
+      return "symbol" === typeof Fk && (Fk = Fk.description ? "[".concat(Fk.description, "]") : ""), Object.defineProperty(kk, "name", {
         configurable: !0,
-        value: yu ? "".concat(yu, " ", Ru) : Ru
+        value: Bk ? "".concat(Bk, " ", Fk) : Fk
       })
     }
 
-    function xu(uu, Ru) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(uu, Ru)
+    function Ak(kk, Fk) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(kk, Fk)
     }
 
-    function Su(uu, Ru, yu, Eu) {
-      return new(yu || (yu = Promise))((function(Ku, Qu) {
-        function mu(uu) {
+    function ek(kk, Fk, Bk, Rk) {
+      return new(Bk || (Bk = Promise))((function(tk, ak) {
+        function Xk(kk) {
           try {
-            Nu(Eu.next(uu))
-          } catch (Ru) {
-            Qu(Ru)
+            wk(Rk.next(kk))
+          } catch (Fk) {
+            ak(Fk)
           }
         }
 
-        function Ju(uu) {
+        function bk(kk) {
           try {
-            Nu(Eu.throw(uu))
-          } catch (Ru) {
-            Qu(Ru)
+            wk(Rk.throw(kk))
+          } catch (Fk) {
+            ak(Fk)
           }
         }
 
-        function Nu(uu) {
-          var Ru;
-          uu.done ? Ku(uu.value) : (Ru = uu.value, Ru instanceof yu ? Ru : new yu((function(uu) {
-            uu(Ru)
-          }))).then(mu, Ju)
+        function wk(kk) {
+          var Fk;
+          kk.done ? tk(kk.value) : (Fk = kk.value, Fk instanceof Bk ? Fk : new Bk((function(kk) {
+            kk(Fk)
+          }))).then(Xk, bk)
         }
-        Nu((Eu = Eu.apply(uu, Ru || [])).next())
+        wk((Rk = Rk.apply(kk, Fk || [])).next())
       }))
     }
 
-    function pu(uu, Ru) {
-      var yu, Eu, Ku, Qu = {
+    function yk(kk, Fk) {
+      var Bk, Rk, tk, ak = {
           label: 0,
           sent: function() {
-            if (1 & Ku[0]) throw Ku[1];
-            return Ku[1]
+            if (1 & tk[0]) throw tk[1];
+            return tk[1]
           },
           trys: [],
           ops: []
         },
-        mu = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return mu.next = Ju(0), mu.throw = Ju(1), mu.return = Ju(2), "function" === typeof Symbol && (mu[Symbol.iterator] = function() {
+        Xk = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return Xk.next = bk(0), Xk.throw = bk(1), Xk.return = bk(2), "function" === typeof Symbol && (Xk[Symbol.iterator] = function() {
         return this
-      }), mu;
+      }), Xk;
 
-      function Ju(Ju) {
-        return function(Nu) {
-          return function(Ju) {
-            if (yu) throw new TypeError("Generator is already executing.");
-            for (; mu && (mu = 0, Ju[0] && (Qu = 0)), Qu;) try {
-              if (yu = 1, Eu && (Ku = 2 & Ju[0] ? Eu.return : Ju[0] ? Eu.throw || ((Ku = Eu.return) && Ku.call(Eu), 0) : Eu.next) && !(Ku = Ku.call(Eu, Ju[1])).done) return Ku;
-              switch (Eu = 0, Ku && (Ju = [2 & Ju[0], Ku.value]), Ju[0]) {
+      function bk(bk) {
+        return function(wk) {
+          return function(bk) {
+            if (Bk) throw new TypeError("Generator is already executing.");
+            for (; Xk && (Xk = 0, bk[0] && (ak = 0)), ak;) try {
+              if (Bk = 1, Rk && (tk = 2 & bk[0] ? Rk.return : bk[0] ? Rk.throw || ((tk = Rk.return) && tk.call(Rk), 0) : Rk.next) && !(tk = tk.call(Rk, bk[1])).done) return tk;
+              switch (Rk = 0, tk && (bk = [2 & bk[0], tk.value]), bk[0]) {
                 case 0:
                 case 1:
-                  Ku = Ju;
+                  tk = bk;
                   break;
                 case 4:
-                  return Qu.label++, {
-                    value: Ju[1],
+                  return ak.label++, {
+                    value: bk[1],
                     done: !1
                   };
                 case 5:
-                  Qu.label++, Eu = Ju[1], Ju = [0];
+                  ak.label++, Rk = bk[1], bk = [0];
                   continue;
                 case 7:
-                  Ju = Qu.ops.pop(), Qu.trys.pop();
+                  bk = ak.ops.pop(), ak.trys.pop();
                   continue;
                 default:
-                  if (!(Ku = (Ku = Qu.trys).length > 0 && Ku[Ku.length - 1]) && (6 === Ju[0] || 2 === Ju[0])) {
-                    Qu = 0;
+                  if (!(tk = (tk = ak.trys).length > 0 && tk[tk.length - 1]) && (6 === bk[0] || 2 === bk[0])) {
+                    ak = 0;
                     continue
                   }
-                  if (3 === Ju[0] && (!Ku || Ju[1] > Ku[0] && Ju[1] < Ku[3])) {
-                    Qu.label = Ju[1];
+                  if (3 === bk[0] && (!tk || bk[1] > tk[0] && bk[1] < tk[3])) {
+                    ak.label = bk[1];
                     break
                   }
-                  if (6 === Ju[0] && Qu.label < Ku[1]) {
-                    Qu.label = Ku[1], Ku = Ju;
+                  if (6 === bk[0] && ak.label < tk[1]) {
+                    ak.label = tk[1], tk = bk;
                     break
                   }
-                  if (Ku && Qu.label < Ku[2]) {
-                    Qu.label = Ku[2], Qu.ops.push(Ju);
+                  if (tk && ak.label < tk[2]) {
+                    ak.label = tk[2], ak.ops.push(bk);
                     break
                   }
-                  Ku[2] && Qu.ops.pop(), Qu.trys.pop();
+                  tk[2] && ak.ops.pop(), ak.trys.pop();
                   continue
               }
-              Ju = Ru.call(uu, Qu)
-            } catch (Nu) {
-              Ju = [6, Nu], Eu = 0
+              bk = Fk.call(kk, ak)
+            } catch (wk) {
+              bk = [6, wk], Rk = 0
             } finally {
-              yu = Ku = 0
+              Bk = tk = 0
             }
-            if (5 & Ju[0]) throw Ju[1];
+            if (5 & bk[0]) throw bk[1];
             return {
-              value: Ju[0] ? Ju[1] : void 0,
+              value: bk[0] ? bk[1] : void 0,
               done: !0
             }
-          }([Ju, Nu])
+          }([bk, wk])
         }
       }
     }
-    var Tu = Object.create ? function(uu, Ru, yu, Eu) {
-      void 0 === Eu && (Eu = yu);
-      var Ku = Object.getOwnPropertyDescriptor(Ru, yu);
-      Ku && !("get" in Ku ? !Ru.__esModule : Ku.writable || Ku.configurable) || (Ku = {
+    var fk = Object.create ? function(kk, Fk, Bk, Rk) {
+      void 0 === Rk && (Rk = Bk);
+      var tk = Object.getOwnPropertyDescriptor(Fk, Bk);
+      tk && !("get" in tk ? !Fk.__esModule : tk.writable || tk.configurable) || (tk = {
         enumerable: !0,
         get: function() {
-          return Ru[yu]
+          return Fk[Bk]
         }
-      }), Object.defineProperty(uu, Eu, Ku)
-    } : function(uu, Ru, yu, Eu) {
-      void 0 === Eu && (Eu = yu), uu[Eu] = Ru[yu]
+      }), Object.defineProperty(kk, Rk, tk)
+    } : function(kk, Fk, Bk, Rk) {
+      void 0 === Rk && (Rk = Bk), kk[Rk] = Fk[Bk]
     };
 
-    function Wu(uu, Ru) {
-      for (var yu in uu) "default" === yu || Object.prototype.hasOwnProperty.call(Ru, yu) || Tu(Ru, uu, yu)
+    function mk(kk, Fk) {
+      for (var Bk in kk) "default" === Bk || Object.prototype.hasOwnProperty.call(Fk, Bk) || fk(Fk, kk, Bk)
     }
 
-    function ju(uu) {
-      var Ru = "function" === typeof Symbol && Symbol.iterator,
-        yu = Ru && uu[Ru],
-        Eu = 0;
-      if (yu) return yu.call(uu);
-      if (uu && "number" === typeof uu.length) return {
+    function Wk(kk) {
+      var Fk = "function" === typeof Symbol && Symbol.iterator,
+        Bk = Fk && kk[Fk],
+        Rk = 0;
+      if (Bk) return Bk.call(kk);
+      if (kk && "number" === typeof kk.length) return {
         next: function() {
-          return uu && Eu >= uu.length && (uu = void 0), {
-            value: uu && uu[Eu++],
-            done: !uu
+          return kk && Rk >= kk.length && (kk = void 0), {
+            value: kk && kk[Rk++],
+            done: !kk
           }
         }
       };
-      throw new TypeError(Ru ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(Fk ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function Hu(uu, Ru) {
-      var yu = "function" === typeof Symbol && uu[Symbol.iterator];
-      if (!yu) return uu;
-      var Eu, Ku, Qu = yu.call(uu),
-        mu = [];
+    function vk(kk, Fk) {
+      var Bk = "function" === typeof Symbol && kk[Symbol.iterator];
+      if (!Bk) return kk;
+      var Rk, tk, ak = Bk.call(kk),
+        Xk = [];
       try {
         for (;
-          (void 0 === Ru || Ru-- > 0) && !(Eu = Qu.next()).done;) mu.push(Eu.value)
-      } catch (Ju) {
-        Ku = {
-          error: Ju
+          (void 0 === Fk || Fk-- > 0) && !(Rk = ak.next()).done;) Xk.push(Rk.value)
+      } catch (bk) {
+        tk = {
+          error: bk
         }
       } finally {
         try {
-          Eu && !Eu.done && (yu = Qu.return) && yu.call(Qu)
+          Rk && !Rk.done && (Bk = ak.return) && Bk.call(ak)
         } finally {
-          if (Ku) throw Ku.error
+          if (tk) throw tk.error
         }
       }
-      return mu
+      return Xk
     }
 
-    function du() {
-      for (var uu = [], Ru = 0; Ru < arguments.length; Ru++) uu = uu.concat(Hu(arguments[Ru]));
-      return uu
+    function ik() {
+      for (var kk = [], Fk = 0; Fk < arguments.length; Fk++) kk = kk.concat(vk(arguments[Fk]));
+      return kk
     }
 
-    function bu() {
-      for (var uu = 0, Ru = 0, yu = arguments.length; Ru < yu; Ru++) uu += arguments[Ru].length;
-      var Eu = Array(uu),
-        Ku = 0;
-      for (Ru = 0; Ru < yu; Ru++)
-        for (var Qu = arguments[Ru], mu = 0, Ju = Qu.length; mu < Ju; mu++, Ku++) Eu[Ku] = Qu[mu];
-      return Eu
+    function Yk() {
+      for (var kk = 0, Fk = 0, Bk = arguments.length; Fk < Bk; Fk++) kk += arguments[Fk].length;
+      var Rk = Array(kk),
+        tk = 0;
+      for (Fk = 0; Fk < Bk; Fk++)
+        for (var ak = arguments[Fk], Xk = 0, bk = ak.length; Xk < bk; Xk++, tk++) Rk[tk] = ak[Xk];
+      return Rk
     }
 
-    function Cu(uu, Ru, yu) {
-      if (yu || 2 === arguments.length)
-        for (var Eu, Ku = 0, Qu = Ru.length; Ku < Qu; Ku++) !Eu && Ku in Ru || (Eu || (Eu = Array.prototype.slice.call(Ru, 0, Ku)), Eu[Ku] = Ru[Ku]);
-      return uu.concat(Eu || Array.prototype.slice.call(Ru))
+    function Lk(kk, Fk, Bk) {
+      if (Bk || 2 === arguments.length)
+        for (var Rk, tk = 0, ak = Fk.length; tk < ak; tk++) !Rk && tk in Fk || (Rk || (Rk = Array.prototype.slice.call(Fk, 0, tk)), Rk[tk] = Fk[tk]);
+      return kk.concat(Rk || Array.prototype.slice.call(Fk))
     }
 
-    function ku(uu) {
-      return this instanceof ku ? (this.v = uu, this) : new ku(uu)
+    function Ok(kk) {
+      return this instanceof Ok ? (this.v = kk, this) : new Ok(kk)
     }
 
-    function eu(uu, Ru, yu) {
+    function Ek(kk, Fk, Bk) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var Eu, Ku = yu.apply(uu, Ru || []),
-        Qu = [];
-      return Eu = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), mu("next"), mu("throw"), mu("return", (function(uu) {
-        return function(Ru) {
-          return Promise.resolve(Ru).then(uu, Xu)
+      var Rk, tk = Bk.apply(kk, Fk || []),
+        ak = [];
+      return Rk = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), Xk("next"), Xk("throw"), Xk("return", (function(kk) {
+        return function(Fk) {
+          return Promise.resolve(Fk).then(kk, dk)
         }
-      })), Eu[Symbol.asyncIterator] = function() {
+      })), Rk[Symbol.asyncIterator] = function() {
         return this
-      }, Eu;
+      }, Rk;
 
-      function mu(uu, Ru) {
-        Ku[uu] && (Eu[uu] = function(Ru) {
-          return new Promise((function(yu, Eu) {
-            Qu.push([uu, Ru, yu, Eu]) > 1 || Ju(uu, Ru)
+      function Xk(kk, Fk) {
+        tk[kk] && (Rk[kk] = function(Fk) {
+          return new Promise((function(Bk, Rk) {
+            ak.push([kk, Fk, Bk, Rk]) > 1 || bk(kk, Fk)
           }))
-        }, Ru && (Eu[uu] = Ru(Eu[uu])))
+        }, Fk && (Rk[kk] = Fk(Rk[kk])))
       }
 
-      function Ju(uu, Ru) {
+      function bk(kk, Fk) {
         try {
-          (yu = Ku[uu](Ru)).value instanceof ku ? Promise.resolve(yu.value.v).then(Nu, Xu) : Vu(Qu[0][2], yu)
-        } catch (Eu) {
-          Vu(Qu[0][3], Eu)
+          (Bk = tk[kk](Fk)).value instanceof Ok ? Promise.resolve(Bk.value.v).then(wk, dk) : sk(ak[0][2], Bk)
+        } catch (Rk) {
+          sk(ak[0][3], Rk)
         }
-        var yu
+        var Bk
       }
 
-      function Nu(uu) {
-        Ju("next", uu)
+      function wk(kk) {
+        bk("next", kk)
       }
 
-      function Xu(uu) {
-        Ju("throw", uu)
+      function dk(kk) {
+        bk("throw", kk)
       }
 
-      function Vu(uu, Ru) {
-        uu(Ru), Qu.shift(), Qu.length && Ju(Qu[0][0], Qu[0][1])
+      function sk(kk, Fk) {
+        kk(Fk), ak.shift(), ak.length && bk(ak[0][0], ak[0][1])
       }
     }
 
-    function Au(uu) {
-      var Ru, yu;
-      return Ru = {}, Eu("next"), Eu("throw", (function(uu) {
-        throw uu
-      })), Eu("return"), Ru[Symbol.iterator] = function() {
+    function Sk(kk) {
+      var Fk, Bk;
+      return Fk = {}, Rk("next"), Rk("throw", (function(kk) {
+        throw kk
+      })), Rk("return"), Fk[Symbol.iterator] = function() {
         return this
-      }, Ru;
+      }, Fk;
 
-      function Eu(Eu, Ku) {
-        Ru[Eu] = uu[Eu] ? function(Ru) {
-          return (yu = !yu) ? {
-            value: ku(uu[Eu](Ru)),
+      function Rk(Rk, tk) {
+        Fk[Rk] = kk[Rk] ? function(Fk) {
+          return (Bk = !Bk) ? {
+            value: Ok(kk[Rk](Fk)),
             done: !1
-          } : Ku ? Ku(Ru) : Ru
-        } : Ku
+          } : tk ? tk(Fk) : Fk
+        } : tk
       }
     }
 
-    function Du(uu) {
+    function Nk(kk) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var Ru, yu = uu[Symbol.asyncIterator];
-      return yu ? yu.call(uu) : (uu = ju(uu), Ru = {}, Eu("next"), Eu("throw"), Eu("return"), Ru[Symbol.asyncIterator] = function() {
+      var Fk, Bk = kk[Symbol.asyncIterator];
+      return Bk ? Bk.call(kk) : (kk = Wk(kk), Fk = {}, Rk("next"), Rk("throw"), Rk("return"), Fk[Symbol.asyncIterator] = function() {
         return this
-      }, Ru);
+      }, Fk);
 
-      function Eu(yu) {
-        Ru[yu] = uu[yu] && function(Ru) {
-          return new Promise((function(Eu, Ku) {
-            (function(uu, Ru, yu, Eu) {
-              Promise.resolve(Eu).then((function(Ru) {
-                uu({
-                  value: Ru,
-                  done: yu
+      function Rk(Bk) {
+        Fk[Bk] = kk[Bk] && function(Fk) {
+          return new Promise((function(Rk, tk) {
+            (function(kk, Fk, Bk, Rk) {
+              Promise.resolve(Rk).then((function(Fk) {
+                kk({
+                  value: Fk,
+                  done: Bk
                 })
-              }), Ru)
-            })(Eu, Ku, (Ru = uu[yu](Ru)).done, Ru.value)
+              }), Fk)
+            })(Rk, tk, (Fk = kk[Bk](Fk)).done, Fk.value)
           }))
         }
       }
     }
 
-    function Mu(uu, Ru) {
-      return Object.defineProperty ? Object.defineProperty(uu, "raw", {
-        value: Ru
-      }) : uu.raw = Ru, uu
+    function Hk(kk, Fk) {
+      return Object.defineProperty ? Object.defineProperty(kk, "raw", {
+        value: Fk
+      }) : kk.raw = Fk, kk
     }
-    var Iu = Object.create ? function(uu, Ru) {
-        Object.defineProperty(uu, "default", {
+    var uk = Object.create ? function(kk, Fk) {
+        Object.defineProperty(kk, "default", {
           enumerable: !0,
-          value: Ru
+          value: Fk
         })
-      } : function(uu, Ru) {
-        uu.default = Ru
+      } : function(kk, Fk) {
+        kk.default = Fk
       },
-      Gu = function(uu) {
-        return Gu = Object.getOwnPropertyNames || function(uu) {
-          var Ru = [];
-          for (var yu in uu) Object.prototype.hasOwnProperty.call(uu, yu) && (Ru[Ru.length] = yu);
-          return Ru
-        }, Gu(uu)
+      Mk = function(kk) {
+        return Mk = Object.getOwnPropertyNames || function(kk) {
+          var Fk = [];
+          for (var Bk in kk) Object.prototype.hasOwnProperty.call(kk, Bk) && (Fk[Fk.length] = Bk);
+          return Fk
+        }, Mk(kk)
       };
 
-    function Uu(uu) {
-      if (uu && uu.__esModule) return uu;
-      var Ru = {};
-      if (null != uu)
-        for (var yu = Gu(uu), Eu = 0; Eu < yu.length; Eu++) "default" !== yu[Eu] && Tu(Ru, uu, yu[Eu]);
-      return Iu(Ru, uu), Ru
+    function gk(kk) {
+      if (kk && kk.__esModule) return kk;
+      var Fk = {};
+      if (null != kk)
+        for (var Bk = Mk(kk), Rk = 0; Rk < Bk.length; Rk++) "default" !== Bk[Rk] && fk(Fk, kk, Bk[Rk]);
+      return uk(Fk, kk), Fk
     }
 
-    function nu(uu) {
-      return uu && uu.__esModule ? uu : {
-        default: uu
+    function Uk(kk) {
+      return kk && kk.__esModule ? kk : {
+        default: kk
       }
     }
 
-    function su(uu, Ru, yu, Eu) {
-      if ("a" === yu && !Eu) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof Ru ? uu !== Ru || !Eu : !Ru.has(uu)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === yu ? Eu : "a" === yu ? Eu.call(uu) : Eu ? Eu.value : Ru.get(uu)
+    function ck(kk, Fk, Bk, Rk) {
+      if ("a" === Bk && !Rk) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof Fk ? kk !== Fk || !Rk : !Fk.has(kk)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === Bk ? Rk : "a" === Bk ? Rk.call(kk) : Rk ? Rk.value : Fk.get(kk)
     }
 
-    function tu(uu, Ru, yu, Eu, Ku) {
-      if ("m" === Eu) throw new TypeError("Private method is not writable");
-      if ("a" === Eu && !Ku) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof Ru ? uu !== Ru || !Ku : !Ru.has(uu)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === Eu ? Ku.call(uu, yu) : Ku ? Ku.value = yu : Ru.set(uu, yu), yu
+    function Gk(kk, Fk, Bk, Rk, tk) {
+      if ("m" === Rk) throw new TypeError("Private method is not writable");
+      if ("a" === Rk && !tk) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof Fk ? kk !== Fk || !tk : !Fk.has(kk)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === Rk ? tk.call(kk, Bk) : tk ? tk.value = Bk : Fk.set(kk, Bk), Bk
     }
 
-    function lu(uu, Ru) {
-      if (null === Ru || "object" !== typeof Ru && "function" !== typeof Ru) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof uu ? Ru === uu : uu.has(Ru)
+    function Tk(kk, Fk) {
+      if (null === Fk || "object" !== typeof Fk && "function" !== typeof Fk) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof kk ? Fk === kk : kk.has(Fk)
     }
 
-    function gu(uu, Ru, yu) {
-      if (null !== Ru && void 0 !== Ru) {
-        if ("object" !== typeof Ru && "function" !== typeof Ru) throw new TypeError("Object expected.");
-        var Eu, Ku;
-        if (yu) {
+    function rk(kk, Fk, Bk) {
+      if (null !== Fk && void 0 !== Fk) {
+        if ("object" !== typeof Fk && "function" !== typeof Fk) throw new TypeError("Object expected.");
+        var Rk, tk;
+        if (Bk) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          Eu = Ru[Symbol.asyncDispose]
+          Rk = Fk[Symbol.asyncDispose]
         }
-        if (void 0 === Eu) {
+        if (void 0 === Rk) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          Eu = Ru[Symbol.dispose], yu && (Ku = Eu)
+          Rk = Fk[Symbol.dispose], Bk && (tk = Rk)
         }
-        if ("function" !== typeof Eu) throw new TypeError("Object not disposable.");
-        Ku && (Eu = function() {
+        if ("function" !== typeof Rk) throw new TypeError("Object not disposable.");
+        tk && (Rk = function() {
           try {
-            Ku.call(this)
-          } catch (uu) {
-            return Promise.reject(uu)
+            tk.call(this)
+          } catch (kk) {
+            return Promise.reject(kk)
           }
-        }), uu.stack.push({
-          value: Ru,
-          dispose: Eu,
-          async: yu
+        }), kk.stack.push({
+          value: Fk,
+          dispose: Rk,
+          async: Bk
         })
-      } else yu && uu.stack.push({
+      } else Bk && kk.stack.push({
         async: !0
       });
-      return Ru
+      return Fk
     }
-    var cu = "function" === typeof SuppressedError ? SuppressedError : function(uu, Ru, yu) {
-      var Eu = new Error(yu);
-      return Eu.name = "SuppressedError", Eu.error = uu, Eu.suppressed = Ru, Eu
+    var Dk = "function" === typeof SuppressedError ? SuppressedError : function(kk, Fk, Bk) {
+      var Rk = new Error(Bk);
+      return Rk.name = "SuppressedError", Rk.error = kk, Rk.suppressed = Fk, Rk
     };
 
-    function Lu(uu) {
-      function Ru(Ru) {
-        uu.error = uu.hasError ? new cu(Ru, uu.error, "An error was suppressed during disposal.") : Ru, uu.hasError = !0
+    function zk(kk) {
+      function Fk(Fk) {
+        kk.error = kk.hasError ? new Dk(Fk, kk.error, "An error was suppressed during disposal.") : Fk, kk.hasError = !0
       }
-      var yu, Eu = 0;
-      return function Ku() {
-        for (; yu = uu.stack.pop();) try {
-          if (!yu.async && 1 === Eu) return Eu = 0, uu.stack.push(yu), Promise.resolve().then(Ku);
-          if (yu.dispose) {
-            var Qu = yu.dispose.call(yu.value);
-            if (yu.async) return Eu |= 2, Promise.resolve(Qu).then(Ku, (function(uu) {
-              return Ru(uu), Ku()
+      var Bk, Rk = 0;
+      return function tk() {
+        for (; Bk = kk.stack.pop();) try {
+          if (!Bk.async && 1 === Rk) return Rk = 0, kk.stack.push(Bk), Promise.resolve().then(tk);
+          if (Bk.dispose) {
+            var ak = Bk.dispose.call(Bk.value);
+            if (Bk.async) return Rk |= 2, Promise.resolve(ak).then(tk, (function(kk) {
+              return Fk(kk), tk()
             }))
-          } else Eu |= 1
-        } catch (mu) {
-          Ru(mu)
+          } else Rk |= 1
+        } catch (Xk) {
+          Fk(Xk)
         }
-        if (1 === Eu) return uu.hasError ? Promise.reject(uu.error) : Promise.resolve();
-        if (uu.hasError) throw uu.error
+        if (1 === Rk) return kk.hasError ? Promise.reject(kk.error) : Promise.resolve();
+        if (kk.hasError) throw kk.error
       }()
     }
 
-    function zu(uu, Ru) {
-      return "string" === typeof uu && /^\.\.?\//.test(uu) ? uu.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(uu, yu, Eu, Ku, Qu) {
-        return yu ? Ru ? ".jsx" : ".js" : !Eu || Ku && Qu ? Eu + Ku + "." + Qu.toLowerCase() + "js" : uu
-      })) : uu
+    function Pk(kk, Fk) {
+      return "string" === typeof kk && /^\.\.?\//.test(kk) ? kk.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(kk, Bk, Rk, tk, ak) {
+        return Bk ? Fk ? ".jsx" : ".js" : !Rk || tk && ak ? Rk + tk + "." + ak.toLowerCase() + "js" : kk
+      })) : kk
     }
-    const Fu = {
-      __extends: Ku,
-      __assign: Qu,
-      __rest: mu,
-      __decorate: Ju,
-      __param: Nu,
-      __esDecorate: Xu,
-      __runInitializers: Vu,
-      __propKey: ru,
-      __setFunctionName: Bu,
-      __metadata: xu,
-      __awaiter: Su,
-      __generator: pu,
-      __createBinding: Tu,
-      __exportStar: Wu,
-      __values: ju,
-      __read: Hu,
-      __spread: du,
-      __spreadArrays: bu,
-      __spreadArray: Cu,
-      __await: ku,
-      __asyncGenerator: eu,
-      __asyncDelegator: Au,
-      __asyncValues: Du,
-      __makeTemplateObject: Mu,
-      __importStar: Uu,
-      __importDefault: nu,
-      __classPrivateFieldGet: su,
-      __classPrivateFieldSet: tu,
-      __classPrivateFieldIn: lu,
-      __addDisposableResource: gu,
-      __disposeResources: Lu,
-      __rewriteRelativeImportExtension: zu
+    const hk = {
+      __extends: tk,
+      __assign: ak,
+      __rest: Xk,
+      __decorate: bk,
+      __param: wk,
+      __esDecorate: dk,
+      __runInitializers: sk,
+      __propKey: Vk,
+      __setFunctionName: Jk,
+      __metadata: Ak,
+      __awaiter: ek,
+      __generator: yk,
+      __createBinding: fk,
+      __exportStar: mk,
+      __values: Wk,
+      __read: vk,
+      __spread: ik,
+      __spreadArrays: Yk,
+      __spreadArray: Lk,
+      __await: Ok,
+      __asyncGenerator: Ek,
+      __asyncDelegator: Sk,
+      __asyncValues: Nk,
+      __makeTemplateObject: Hk,
+      __importStar: gk,
+      __importDefault: Uk,
+      __classPrivateFieldGet: ck,
+      __classPrivateFieldSet: Gk,
+      __classPrivateFieldIn: Tk,
+      __addDisposableResource: rk,
+      __disposeResources: zk,
+      __rewriteRelativeImportExtension: Pk
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

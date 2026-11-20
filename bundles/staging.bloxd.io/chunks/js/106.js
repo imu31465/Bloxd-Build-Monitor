@@ -1,173 +1,173 @@
 export const id = 106;
 export const ids = [106];
 export const modules = {
-  4793: (uu, Ru, yu) => {
-    function Eu(uu) {
-      return Eu = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(uu) {
-        return typeof uu
-      } : function(uu) {
-        return uu && "function" == typeof Symbol && uu.constructor === Symbol && uu !== Symbol.prototype ? "symbol" : typeof uu
-      }, Eu(uu)
+  4699: (kk, Fk, Bk) => {
+    function Rk(kk) {
+      return Rk = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(kk) {
+        return typeof kk
+      } : function(kk) {
+        return kk && "function" == typeof Symbol && kk.constructor === Symbol && kk !== Symbol.prototype ? "symbol" : typeof kk
+      }, Rk(kk)
     }
-    Object.defineProperty(Ru, "__esModule", {
+    Object.defineProperty(Fk, "__esModule", {
       value: !0
-    }), Ru.default = void 0;
-    var Ku = ru(yu(1035)),
-      Qu = function(uu, Ru) {
-        if (!Ru && uu && uu.__esModule) return uu;
-        if (null === uu || "object" !== Eu(uu) && "function" !== typeof uu) return {
-          default: uu
+    }), Fk.default = void 0;
+    var tk = Vk(Bk(1020)),
+      ak = function(kk, Fk) {
+        if (!Fk && kk && kk.__esModule) return kk;
+        if (null === kk || "object" !== Rk(kk) && "function" !== typeof kk) return {
+          default: kk
         };
-        var yu = Vu(Ru);
-        if (yu && yu.has(uu)) return yu.get(uu);
-        var Ku = {},
-          Qu = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var mu in uu)
-          if ("default" !== mu && Object.prototype.hasOwnProperty.call(uu, mu)) {
-            var Ju = Qu ? Object.getOwnPropertyDescriptor(uu, mu) : null;
-            Ju && (Ju.get || Ju.set) ? Object.defineProperty(Ku, mu, Ju) : Ku[mu] = uu[mu]
-          } Ku.default = uu, yu && yu.set(uu, Ku);
-        return Ku
-      }(yu(64)),
-      mu = ru(yu(4745)),
-      Ju = ru(yu(4801)),
-      Nu = yu(4804),
-      Xu = yu(1079);
+        var Bk = sk(Fk);
+        if (Bk && Bk.has(kk)) return Bk.get(kk);
+        var tk = {},
+          ak = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var Xk in kk)
+          if ("default" !== Xk && Object.prototype.hasOwnProperty.call(kk, Xk)) {
+            var bk = ak ? Object.getOwnPropertyDescriptor(kk, Xk) : null;
+            bk && (bk.get || bk.set) ? Object.defineProperty(tk, Xk, bk) : tk[Xk] = kk[Xk]
+          } tk.default = kk, Bk && Bk.set(kk, tk);
+        return tk
+      }(Bk(61)),
+      Xk = Vk(Bk(4667)),
+      bk = Vk(Bk(4701)),
+      wk = Bk(4707),
+      dk = Bk(1069);
 
-    function Vu(uu) {
+    function sk(kk) {
       if ("function" !== typeof WeakMap) return null;
-      var Ru = new WeakMap,
-        yu = new WeakMap;
-      return (Vu = function(uu) {
-        return uu ? yu : Ru
-      })(uu)
+      var Fk = new WeakMap,
+        Bk = new WeakMap;
+      return (sk = function(kk) {
+        return kk ? Bk : Fk
+      })(kk)
     }
 
-    function ru(uu) {
-      return uu && uu.__esModule ? uu : {
-        default: uu
+    function Vk(kk) {
+      return kk && kk.__esModule ? kk : {
+        default: kk
       }
     }
 
-    function Bu(uu, Ru) {
-      var yu = "undefined" !== typeof Symbol && uu[Symbol.iterator] || uu["@@iterator"];
-      if (!yu) {
-        if (Array.isArray(uu) || (yu = function(uu, Ru) {
-            if (!uu) return;
-            if ("string" === typeof uu) return xu(uu, Ru);
-            var yu = Object.prototype.toString.call(uu).slice(8, -1);
-            "Object" === yu && uu.constructor && (yu = uu.constructor.name);
-            if ("Map" === yu || "Set" === yu) return Array.from(uu);
-            if ("Arguments" === yu || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(yu)) return xu(uu, Ru)
-          }(uu)) || Ru && uu && "number" === typeof uu.length) {
-          yu && (uu = yu);
-          var Eu = 0,
-            Ku = function() {};
+    function Jk(kk, Fk) {
+      var Bk = "undefined" !== typeof Symbol && kk[Symbol.iterator] || kk["@@iterator"];
+      if (!Bk) {
+        if (Array.isArray(kk) || (Bk = function(kk, Fk) {
+            if (!kk) return;
+            if ("string" === typeof kk) return Ak(kk, Fk);
+            var Bk = Object.prototype.toString.call(kk).slice(8, -1);
+            "Object" === Bk && kk.constructor && (Bk = kk.constructor.name);
+            if ("Map" === Bk || "Set" === Bk) return Array.from(kk);
+            if ("Arguments" === Bk || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(Bk)) return Ak(kk, Fk)
+          }(kk)) || Fk && kk && "number" === typeof kk.length) {
+          Bk && (kk = Bk);
+          var Rk = 0,
+            tk = function() {};
           return {
-            s: Ku,
+            s: tk,
             n: function() {
-              return Eu >= uu.length ? {
+              return Rk >= kk.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: uu[Eu++]
+                value: kk[Rk++]
               }
             },
-            e: function(uu) {
-              throw uu
+            e: function(kk) {
+              throw kk
             },
-            f: Ku
+            f: tk
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var Qu, mu = !0,
-        Ju = !1;
+      var ak, Xk = !0,
+        bk = !1;
       return {
         s: function() {
-          yu = yu.call(uu)
+          Bk = Bk.call(kk)
         },
         n: function() {
-          var uu = yu.next();
-          return mu = uu.done, uu
+          var kk = Bk.next();
+          return Xk = kk.done, kk
         },
-        e: function(uu) {
-          Ju = !0, Qu = uu
+        e: function(kk) {
+          bk = !0, ak = kk
         },
         f: function() {
           try {
-            mu || null == yu.return || yu.return()
+            Xk || null == Bk.return || Bk.return()
           } finally {
-            if (Ju) throw Qu
+            if (bk) throw ak
           }
         }
       }
     }
 
-    function xu(uu, Ru) {
-      (null == Ru || Ru > uu.length) && (Ru = uu.length);
-      for (var yu = 0, Eu = new Array(Ru); yu < Ru; yu++) Eu[yu] = uu[yu];
-      return Eu
+    function Ak(kk, Fk) {
+      (null == Fk || Fk > kk.length) && (Fk = kk.length);
+      for (var Bk = 0, Rk = new Array(Fk); Bk < Fk; Bk++) Rk[Bk] = kk[Bk];
+      return Rk
     }
 
-    function Su(uu, Ru) {
-      for (var yu = 0; yu < Ru.length; yu++) {
-        var Eu = Ru[yu];
-        Eu.enumerable = Eu.enumerable || !1, Eu.configurable = !0, "value" in Eu && (Eu.writable = !0), Object.defineProperty(uu, Eu.key, Eu)
+    function ek(kk, Fk) {
+      for (var Bk = 0; Bk < Fk.length; Bk++) {
+        var Rk = Fk[Bk];
+        Rk.enumerable = Rk.enumerable || !1, Rk.configurable = !0, "value" in Rk && (Rk.writable = !0), Object.defineProperty(kk, Rk.key, Rk)
       }
     }
 
-    function pu(uu, Ru) {
-      return pu = Object.setPrototypeOf || function(uu, Ru) {
-        return uu.__proto__ = Ru, uu
-      }, pu(uu, Ru)
+    function yk(kk, Fk) {
+      return yk = Object.setPrototypeOf || function(kk, Fk) {
+        return kk.__proto__ = Fk, kk
+      }, yk(kk, Fk)
     }
 
-    function Tu(uu) {
-      var Ru = function() {
+    function fk(kk) {
+      var Fk = function() {
         if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
         if (Reflect.construct.sham) return !1;
         if ("function" === typeof Proxy) return !0;
         try {
           return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
-        } catch (uu) {
+        } catch (kk) {
           return !1
         }
       }();
       return function() {
-        var yu, Ku = ju(uu);
-        if (Ru) {
-          var Qu = ju(this).constructor;
-          yu = Reflect.construct(Ku, arguments, Qu)
-        } else yu = Ku.apply(this, arguments);
-        return function(uu, Ru) {
-          if (Ru && ("object" === Eu(Ru) || "function" === typeof Ru)) return Ru;
-          if (void 0 !== Ru) throw new TypeError("Derived constructors may only return object or undefined");
-          return Wu(uu)
-        }(this, yu)
+        var Bk, tk = Wk(kk);
+        if (Fk) {
+          var ak = Wk(this).constructor;
+          Bk = Reflect.construct(tk, arguments, ak)
+        } else Bk = tk.apply(this, arguments);
+        return function(kk, Fk) {
+          if (Fk && ("object" === Rk(Fk) || "function" === typeof Fk)) return Fk;
+          if (void 0 !== Fk) throw new TypeError("Derived constructors may only return object or undefined");
+          return mk(kk)
+        }(this, Bk)
       }
     }
 
-    function Wu(uu) {
-      if (void 0 === uu) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      return uu
+    function mk(kk) {
+      if (void 0 === kk) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return kk
     }
 
-    function ju(uu) {
-      return ju = Object.setPrototypeOf ? Object.getPrototypeOf : function(uu) {
-        return uu.__proto__ || Object.getPrototypeOf(uu)
-      }, ju(uu)
+    function Wk(kk) {
+      return Wk = Object.setPrototypeOf ? Object.getPrototypeOf : function(kk) {
+        return kk.__proto__ || Object.getPrototypeOf(kk)
+      }, Wk(kk)
     }
 
-    function Hu(uu, Ru, yu) {
-      return Ru in uu ? Object.defineProperty(uu, Ru, {
-        value: yu,
+    function vk(kk, Fk, Bk) {
+      return Fk in kk ? Object.defineProperty(kk, Fk, {
+        value: Bk,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : uu[Ru] = yu, uu
+      }) : kk[Fk] = Bk, kk
     }
-    var du = {
+    var ik = {
         orientation: {
           horizontal: {
             dimension: "width",
@@ -183,258 +183,258 @@ export const modules = {
           }
         }
       },
-      bu = function(uu) {
-        ! function(uu, Ru) {
-          if ("function" !== typeof Ru && null !== Ru) throw new TypeError("Super expression must either be null or a function");
-          Object.defineProperty(uu, "prototype", {
-            value: Object.create(Ru && Ru.prototype, {
+      Yk = function(kk) {
+        ! function(kk, Fk) {
+          if ("function" !== typeof Fk && null !== Fk) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(kk, "prototype", {
+            value: Object.create(Fk && Fk.prototype, {
               constructor: {
-                value: uu,
+                value: kk,
                 writable: !0,
                 configurable: !0
               }
             }),
             writable: !1
-          }), Ru && pu(uu, Ru)
-        }(mu, uu);
-        var Ru, yu, Eu, Qu = Tu(mu);
+          }), Fk && yk(kk, Fk)
+        }(Xk, kk);
+        var Fk, Bk, Rk, ak = fk(Xk);
 
-        function mu(uu, Ru) {
-          var yu;
-          return function(uu, Ru) {
-            if (!(uu instanceof Ru)) throw new TypeError("Cannot call a class as a function")
-          }(this, mu), Hu(Wu(yu = Qu.call(this, uu, Ru)), "handleFormat", (function(uu) {
-            var Ru = yu.props.format;
-            return Ru ? Ru(uu) : uu
-          })), Hu(Wu(yu), "handleUpdate", (function() {
-            if (yu.slider) {
-              var uu = yu.props.orientation,
-                Ru = (0, Nu.capitalize)(du.orientation[uu].dimension),
-                Eu = yu.slider["offset".concat(Ru)],
-                Ku = yu.handle["offset".concat(Ru)];
-              yu.setState({
-                limit: Eu - Ku,
-                grab: Ku / 2
+        function Xk(kk, Fk) {
+          var Bk;
+          return function(kk, Fk) {
+            if (!(kk instanceof Fk)) throw new TypeError("Cannot call a class as a function")
+          }(this, Xk), vk(mk(Bk = ak.call(this, kk, Fk)), "handleFormat", (function(kk) {
+            var Fk = Bk.props.format;
+            return Fk ? Fk(kk) : kk
+          })), vk(mk(Bk), "handleUpdate", (function() {
+            if (Bk.slider) {
+              var kk = Bk.props.orientation,
+                Fk = (0, wk.capitalize)(ik.orientation[kk].dimension),
+                Rk = Bk.slider["offset".concat(Fk)],
+                tk = Bk.handle["offset".concat(Fk)];
+              Bk.setState({
+                limit: Rk - tk,
+                grab: tk / 2
               })
             }
-          })), Hu(Wu(yu), "handleStart", (function(uu) {
-            var Ru = yu.props.onChangeStart;
-            document.addEventListener("mousemove", yu.handleDrag), document.addEventListener("mouseup", yu.handleEnd), yu.setState({
+          })), vk(mk(Bk), "handleStart", (function(kk) {
+            var Fk = Bk.props.onChangeStart;
+            document.addEventListener("mousemove", Bk.handleDrag), document.addEventListener("mouseup", Bk.handleEnd), Bk.setState({
               active: !0
             }, (function() {
-              Ru && Ru(uu)
+              Fk && Fk(kk)
             }))
-          })), Hu(Wu(yu), "handleDrag", (function(uu) {
-            uu.stopPropagation();
-            var Ru = yu.props.onChange,
-              Eu = uu.target,
-              Ku = Eu.className,
-              Qu = Eu.classList,
-              mu = Eu.dataset;
-            if (Ru && "rangeslider__labels" !== Ku) {
-              var Ju = yu.position(uu);
-              Qu && Qu.contains("rangeslider__label-item") && mu.value && (Ju = parseFloat(mu.value)), Ru && Ru(Ju, uu)
+          })), vk(mk(Bk), "handleDrag", (function(kk) {
+            kk.stopPropagation();
+            var Fk = Bk.props.onChange,
+              Rk = kk.target,
+              tk = Rk.className,
+              ak = Rk.classList,
+              Xk = Rk.dataset;
+            if (Fk && "rangeslider__labels" !== tk) {
+              var bk = Bk.position(kk);
+              ak && ak.contains("rangeslider__label-item") && Xk.value && (bk = parseFloat(Xk.value)), Fk && Fk(bk, kk)
             }
-          })), Hu(Wu(yu), "handleEnd", (function(uu) {
-            var Ru = yu.props.onChangeComplete;
-            yu.setState({
+          })), vk(mk(Bk), "handleEnd", (function(kk) {
+            var Fk = Bk.props.onChangeComplete;
+            Bk.setState({
               active: !1
             }, (function() {
-              Ru && Ru(uu)
-            })), document.removeEventListener("mousemove", yu.handleDrag), document.removeEventListener("mouseup", yu.handleEnd)
-          })), Hu(Wu(yu), "handleKeyDown", (function(uu) {
-            uu.preventDefault();
-            var Ru, Eu = uu.keyCode,
-              Ku = yu.props,
-              Qu = Ku.value,
-              mu = Ku.min,
-              Ju = Ku.max,
-              Nu = Ku.step,
-              Xu = Ku.onChange;
-            switch (Eu) {
+              Fk && Fk(kk)
+            })), document.removeEventListener("mousemove", Bk.handleDrag), document.removeEventListener("mouseup", Bk.handleEnd)
+          })), vk(mk(Bk), "handleKeyDown", (function(kk) {
+            kk.preventDefault();
+            var Fk, Rk = kk.keyCode,
+              tk = Bk.props,
+              ak = tk.value,
+              Xk = tk.min,
+              bk = tk.max,
+              wk = tk.step,
+              dk = tk.onChange;
+            switch (Rk) {
               case 38:
               case 39:
-                Ru = Qu + Nu > Ju ? Ju : Qu + Nu, Xu && Xu(Ru, uu);
+                Fk = ak + wk > bk ? bk : ak + wk, dk && dk(Fk, kk);
                 break;
               case 37:
               case 40:
-                Ru = Qu - Nu < mu ? mu : Qu - Nu, Xu && Xu(Ru, uu)
+                Fk = ak - wk < Xk ? Xk : ak - wk, dk && dk(Fk, kk)
             }
-          })), Hu(Wu(yu), "getPositionFromValue", (function(uu) {
-            var Ru = yu.state.limit,
-              Eu = yu.props,
-              Ku = Eu.min,
-              Qu = (uu - Ku) / (Eu.max - Ku);
-            return Math.round(Qu * Ru)
-          })), Hu(Wu(yu), "getValueFromPosition", (function(uu) {
-            var Ru = yu.state.limit,
-              Eu = yu.props,
-              Ku = Eu.orientation,
-              Qu = Eu.min,
-              mu = Eu.max,
-              Ju = Eu.step,
-              Xu = (0, Nu.clamp)(uu, 0, Ru) / (Ru || 1),
-              Vu = Ju * Math.round(Xu * (mu - Qu) / Ju),
-              ru = "horizontal" === Ku ? Vu + Qu : mu - Vu;
-            return (0, Nu.clamp)(ru, Qu, mu)
-          })), Hu(Wu(yu), "position", (function(uu) {
-            var Ru = yu.state.grab,
-              Eu = yu.props,
-              Ku = Eu.orientation,
-              Qu = Eu.reverse,
-              mu = yu.slider,
-              Ju = du.orientation[Ku].coordinate,
-              Xu = Qu ? du.orientation[Ku].reverseDirection : du.orientation[Ku].direction,
-              Vu = "client".concat((0, Nu.capitalize)(Ju)),
-              ru = uu.touches ? uu.touches[0][Vu] : uu[Vu],
-              Bu = mu.getBoundingClientRect()[Xu],
-              xu = Qu ? Bu - ru - Ru : ru - Bu - Ru;
-            return yu.getValueFromPosition(xu)
-          })), Hu(Wu(yu), "coordinates", (function(uu) {
-            var Ru = yu.state,
-              Eu = Ru.limit,
-              Ku = Ru.grab,
-              Qu = yu.props.orientation,
-              mu = yu.getValueFromPosition(uu),
-              Ju = yu.getPositionFromValue(mu),
-              Nu = "horizontal" === Qu ? Ju + Ku : Ju;
+          })), vk(mk(Bk), "getPositionFromValue", (function(kk) {
+            var Fk = Bk.state.limit,
+              Rk = Bk.props,
+              tk = Rk.min,
+              ak = (kk - tk) / (Rk.max - tk);
+            return Math.round(ak * Fk)
+          })), vk(mk(Bk), "getValueFromPosition", (function(kk) {
+            var Fk = Bk.state.limit,
+              Rk = Bk.props,
+              tk = Rk.orientation,
+              ak = Rk.min,
+              Xk = Rk.max,
+              bk = Rk.step,
+              dk = (0, wk.clamp)(kk, 0, Fk) / (Fk || 1),
+              sk = bk * Math.round(dk * (Xk - ak) / bk),
+              Vk = "horizontal" === tk ? sk + ak : Xk - sk;
+            return (0, wk.clamp)(Vk, ak, Xk)
+          })), vk(mk(Bk), "position", (function(kk) {
+            var Fk = Bk.state.grab,
+              Rk = Bk.props,
+              tk = Rk.orientation,
+              ak = Rk.reverse,
+              Xk = Bk.slider,
+              bk = ik.orientation[tk].coordinate,
+              dk = ak ? ik.orientation[tk].reverseDirection : ik.orientation[tk].direction,
+              sk = "client".concat((0, wk.capitalize)(bk)),
+              Vk = kk.touches ? kk.touches[0][sk] : kk[sk],
+              Jk = Xk.getBoundingClientRect()[dk],
+              Ak = ak ? Jk - Vk - Fk : Vk - Jk - Fk;
+            return Bk.getValueFromPosition(Ak)
+          })), vk(mk(Bk), "coordinates", (function(kk) {
+            var Fk = Bk.state,
+              Rk = Fk.limit,
+              tk = Fk.grab,
+              ak = Bk.props.orientation,
+              Xk = Bk.getValueFromPosition(kk),
+              bk = Bk.getPositionFromValue(Xk),
+              wk = "horizontal" === ak ? bk + tk : bk;
             return {
-              fill: "horizontal" === Qu ? Nu : Eu - Nu,
-              handle: Nu,
-              label: Nu
+              fill: "horizontal" === ak ? wk : Rk - wk,
+              handle: wk,
+              label: wk
             }
-          })), Hu(Wu(yu), "renderLabels", (function(uu) {
-            return (0, Xu.jsx)("ul", {
-              ref: function(uu) {
-                yu.labels = uu
+          })), vk(mk(Bk), "renderLabels", (function(kk) {
+            return (0, dk.jsx)("ul", {
+              ref: function(kk) {
+                Bk.labels = kk
               },
-              className: (0, Ku.default)("rangeslider__labels"),
-              children: uu
+              className: (0, tk.default)("rangeslider__labels"),
+              children: kk
             })
-          })), yu.state = {
+          })), Bk.state = {
             active: !1,
             limit: 0,
             grab: 0
-          }, yu
+          }, Bk
         }
-        return Ru = mu, (yu = [{
+        return Fk = Xk, (Bk = [{
           key: "componentDidMount",
           value: function() {
-            this.handleUpdate(), new Ju.default(this.handleUpdate).observe(this.slider)
+            this.handleUpdate(), new bk.default(this.handleUpdate).observe(this.slider)
           }
         }, {
           key: "render",
           value: function() {
-            var uu = this,
-              Ru = this.props,
-              yu = Ru.value,
-              Eu = Ru.orientation,
-              Qu = Ru.className,
-              mu = Ru.tooltip,
-              Ju = Ru.reverse,
-              Nu = Ru.labels,
-              Vu = Ru.min,
-              ru = Ru.max,
-              xu = Ru.handleLabel,
-              Su = this.state.active,
-              pu = du.orientation[Eu].dimension,
-              Tu = Ju ? du.orientation[Eu].reverseDirection : du.orientation[Eu].direction,
-              Wu = this.getPositionFromValue(yu),
-              ju = this.coordinates(Wu),
-              bu = Hu({}, pu, "".concat(ju.fill, "px")),
-              Cu = Hu({}, Tu, "".concat(ju.handle, "px")),
-              ku = mu && Su,
-              eu = [],
-              Au = Object.keys(Nu);
-            if (Au.length > 0) {
-              var Du, Mu = Bu(Au = Au.sort((function(uu, Ru) {
-                return Ju ? uu - Ru : Ru - uu
+            var kk = this,
+              Fk = this.props,
+              Bk = Fk.value,
+              Rk = Fk.orientation,
+              ak = Fk.className,
+              Xk = Fk.tooltip,
+              bk = Fk.reverse,
+              wk = Fk.labels,
+              sk = Fk.min,
+              Vk = Fk.max,
+              Ak = Fk.handleLabel,
+              ek = this.state.active,
+              yk = ik.orientation[Rk].dimension,
+              fk = bk ? ik.orientation[Rk].reverseDirection : ik.orientation[Rk].direction,
+              mk = this.getPositionFromValue(Bk),
+              Wk = this.coordinates(mk),
+              Yk = vk({}, yk, "".concat(Wk.fill, "px")),
+              Lk = vk({}, fk, "".concat(Wk.handle, "px")),
+              Ok = Xk && ek,
+              Ek = [],
+              Sk = Object.keys(wk);
+            if (Sk.length > 0) {
+              var Nk, Hk = Jk(Sk = Sk.sort((function(kk, Fk) {
+                return bk ? kk - Fk : Fk - kk
               })));
               try {
-                for (Mu.s(); !(Du = Mu.n()).done;) {
-                  var Iu = Du.value,
-                    Gu = this.getPositionFromValue(Iu),
-                    Uu = this.coordinates(Gu),
-                    nu = Hu({}, Tu, "".concat(Uu.label, "px"));
-                  eu.push((0, Xu.jsx)("li", {
-                    className: (0, Ku.default)("rangeslider__label-item"),
-                    "data-value": Iu,
+                for (Hk.s(); !(Nk = Hk.n()).done;) {
+                  var uk = Nk.value,
+                    Mk = this.getPositionFromValue(uk),
+                    gk = this.coordinates(Mk),
+                    Uk = vk({}, fk, "".concat(gk.label, "px"));
+                  Ek.push((0, dk.jsx)("li", {
+                    className: (0, tk.default)("rangeslider__label-item"),
+                    "data-value": uk,
                     onMouseDown: this.handleDrag,
                     onTouchStart: this.handleStart,
                     onTouchEnd: this.handleEnd,
-                    style: nu,
-                    children: this.props.labels[Iu]
-                  }, Iu))
+                    style: Uk,
+                    children: this.props.labels[uk]
+                  }, uk))
                 }
-              } catch (su) {
-                Mu.e(su)
+              } catch (ck) {
+                Hk.e(ck)
               } finally {
-                Mu.f()
+                Hk.f()
               }
             }
-            return (0, Xu.jsxs)("div", {
-              ref: function(Ru) {
-                uu.slider = Ru
+            return (0, dk.jsxs)("div", {
+              ref: function(Fk) {
+                kk.slider = Fk
               },
-              className: (0, Ku.default)("rangeslider", "rangeslider-".concat(Eu), {
-                "rangeslider-reverse": Ju
-              }, Qu),
+              className: (0, tk.default)("rangeslider", "rangeslider-".concat(Rk), {
+                "rangeslider-reverse": bk
+              }, ak),
               onMouseDown: this.handleDrag,
               onMouseUp: this.handleEnd,
               onTouchStart: this.handleStart,
               onTouchEnd: this.handleEnd,
-              "aria-valuemin": Vu,
-              "aria-valuemax": ru,
-              "aria-valuenow": yu,
-              "aria-orientation": Eu,
-              children: [(0, Xu.jsx)("div", {
+              "aria-valuemin": sk,
+              "aria-valuemax": Vk,
+              "aria-valuenow": Bk,
+              "aria-orientation": Rk,
+              children: [(0, dk.jsx)("div", {
                 className: "rangeslider__fill",
-                style: bu
-              }), (0, Xu.jsxs)("div", {
-                ref: function(Ru) {
-                  uu.handle = Ru
+                style: Yk
+              }), (0, dk.jsxs)("div", {
+                ref: function(Fk) {
+                  kk.handle = Fk
                 },
                 className: "rangeslider__handle",
                 onMouseDown: this.handleStart,
                 onTouchMove: this.handleDrag,
                 onTouchEnd: this.handleEnd,
                 onKeyDown: this.handleKeyDown,
-                style: Cu,
+                style: Lk,
                 tabIndex: 0,
-                children: [ku && (0, Xu.jsx)("div", {
-                  ref: function(Ru) {
-                    uu.tooltip = Ru
+                children: [Ok && (0, dk.jsx)("div", {
+                  ref: function(Fk) {
+                    kk.tooltip = Fk
                   },
                   className: "rangeslider__handle-tooltip",
-                  children: (0, Xu.jsx)("span", {
-                    children: this.handleFormat(yu)
+                  children: (0, dk.jsx)("span", {
+                    children: this.handleFormat(Bk)
                   })
-                }), (0, Xu.jsx)("div", {
+                }), (0, dk.jsx)("div", {
                   className: "rangeslider__handle-label",
-                  children: xu
+                  children: Ak
                 })]
-              }), Nu && this.renderLabels(eu)]
+              }), wk && this.renderLabels(Ek)]
             })
           }
-        }]) && Su(Ru.prototype, yu), Eu && Su(Ru, Eu), Object.defineProperty(Ru, "prototype", {
+        }]) && ek(Fk.prototype, Bk), Rk && ek(Fk, Rk), Object.defineProperty(Fk, "prototype", {
           writable: !1
-        }), mu
-      }(Qu.Component);
-    Hu(bu, "propTypes", {
-      min: mu.default.number,
-      max: mu.default.number,
-      step: mu.default.number,
-      value: mu.default.number,
-      orientation: mu.default.string,
-      tooltip: mu.default.bool,
-      reverse: mu.default.bool,
-      labels: mu.default.object,
-      handleLabel: mu.default.string,
-      format: mu.default.func,
-      onChangeStart: mu.default.func,
-      onChange: mu.default.func,
-      onChangeComplete: mu.default.func
-    }), Hu(bu, "defaultProps", {
+        }), Xk
+      }(ak.Component);
+    vk(Yk, "propTypes", {
+      min: Xk.default.number,
+      max: Xk.default.number,
+      step: Xk.default.number,
+      value: Xk.default.number,
+      orientation: Xk.default.string,
+      tooltip: Xk.default.bool,
+      reverse: Xk.default.bool,
+      labels: Xk.default.object,
+      handleLabel: Xk.default.string,
+      format: Xk.default.func,
+      onChangeStart: Xk.default.func,
+      onChange: Xk.default.func,
+      onChangeComplete: Xk.default.func
+    }), vk(Yk, "defaultProps", {
       min: 0,
       max: 100,
       step: 1,
@@ -445,359 +445,359 @@ export const modules = {
       labels: {},
       handleLabel: ""
     });
-    var Cu = bu;
-    Ru.default = Cu
+    var Lk = Yk;
+    Fk.default = Lk
   },
-  4785: (uu, Ru, yu) => {
-    var Eu;
-    Ru.d = void 0;
-    var Ku = ((Eu = yu(4793)) && Eu.__esModule ? Eu : {
-      default: Eu
+  4696: (kk, Fk, Bk) => {
+    var Rk;
+    Fk.d = void 0;
+    var tk = ((Rk = Bk(4699)) && Rk.__esModule ? Rk : {
+      default: Rk
     }).default;
-    Ru.d = Ku
+    Fk.d = tk
   },
-  4804: (uu, Ru) => {
-    Object.defineProperty(Ru, "__esModule", {
+  4707: (kk, Fk) => {
+    Object.defineProperty(Fk, "__esModule", {
       value: !0
-    }), Ru.capitalize = function(uu) {
-      return uu.charAt(0).toUpperCase() + uu.substr(1)
-    }, Ru.clamp = function(uu, Ru, yu) {
-      return Math.min(Math.max(uu, Ru), yu)
+    }), Fk.capitalize = function(kk) {
+      return kk.charAt(0).toUpperCase() + kk.substr(1)
+    }, Fk.clamp = function(kk, Fk, Bk) {
+      return Math.min(Math.max(kk, Fk), Bk)
     }
   },
-  4753: (uu, Ru, yu) => {
-    var Eu = yu(4758);
+  4669: (kk, Fk, Bk) => {
+    var Rk = Bk(4671);
 
-    function Ku() {}
+    function tk() {}
 
-    function Qu() {}
-    Qu.resetWarningCache = Ku, uu.exports = function() {
-      function uu(uu, Ru, yu, Ku, Qu, mu) {
-        if (mu !== Eu) {
-          var Ju = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw Ju.name = "Invariant Violation", Ju
+    function ak() {}
+    ak.resetWarningCache = tk, kk.exports = function() {
+      function kk(kk, Fk, Bk, tk, ak, Xk) {
+        if (Xk !== Rk) {
+          var bk = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw bk.name = "Invariant Violation", bk
         }
       }
 
-      function Ru() {
-        return uu
+      function Fk() {
+        return kk
       }
-      uu.isRequired = uu;
-      var yu = {
-        array: uu,
-        bigint: uu,
-        bool: uu,
-        func: uu,
-        number: uu,
-        object: uu,
-        string: uu,
-        symbol: uu,
-        any: uu,
-        arrayOf: Ru,
-        element: uu,
-        elementType: uu,
-        instanceOf: Ru,
-        node: uu,
-        objectOf: Ru,
-        oneOf: Ru,
-        oneOfType: Ru,
-        shape: Ru,
-        exact: Ru,
-        checkPropTypes: Qu,
-        resetWarningCache: Ku
+      kk.isRequired = kk;
+      var Bk = {
+        array: kk,
+        bigint: kk,
+        bool: kk,
+        func: kk,
+        number: kk,
+        object: kk,
+        string: kk,
+        symbol: kk,
+        any: kk,
+        arrayOf: Fk,
+        element: kk,
+        elementType: kk,
+        instanceOf: Fk,
+        node: kk,
+        objectOf: Fk,
+        oneOf: Fk,
+        oneOfType: Fk,
+        shape: Fk,
+        exact: Fk,
+        checkPropTypes: ak,
+        resetWarningCache: tk
       };
-      return yu.PropTypes = yu, yu
+      return Bk.PropTypes = Bk, Bk
     }
   },
-  4745: (uu, Ru, yu) => {
-    uu.exports = yu(4753)()
+  4667: (kk, Fk, Bk) => {
+    kk.exports = Bk(4669)()
   },
-  4758: uu => {
-    uu.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  4671: kk => {
+    kk.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  4801: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      default: () => eu
+  4701: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      default: () => Ek
     });
-    var Eu = function() {
+    var Rk = function() {
         if ("undefined" !== typeof Map) return Map;
 
-        function uu(uu, Ru) {
-          var yu = -1;
-          return uu.some((function(uu, Eu) {
-            return uu[0] === Ru && (yu = Eu, !0)
-          })), yu
+        function kk(kk, Fk) {
+          var Bk = -1;
+          return kk.some((function(kk, Rk) {
+            return kk[0] === Fk && (Bk = Rk, !0)
+          })), Bk
         }
         return function() {
-          function Ru() {
+          function Fk() {
             this.__entries__ = []
           }
-          return Object.defineProperty(Ru.prototype, "size", {
+          return Object.defineProperty(Fk.prototype, "size", {
             get: function() {
               return this.__entries__.length
             },
             enumerable: !0,
             configurable: !0
-          }), Ru.prototype.get = function(Ru) {
-            var yu = uu(this.__entries__, Ru),
-              Eu = this.__entries__[yu];
-            return Eu && Eu[1]
-          }, Ru.prototype.set = function(Ru, yu) {
-            var Eu = uu(this.__entries__, Ru);
-            ~Eu ? this.__entries__[Eu][1] = yu : this.__entries__.push([Ru, yu])
-          }, Ru.prototype.delete = function(Ru) {
-            var yu = this.__entries__,
-              Eu = uu(yu, Ru);
-            ~Eu && yu.splice(Eu, 1)
-          }, Ru.prototype.has = function(Ru) {
-            return !!~uu(this.__entries__, Ru)
-          }, Ru.prototype.clear = function() {
+          }), Fk.prototype.get = function(Fk) {
+            var Bk = kk(this.__entries__, Fk),
+              Rk = this.__entries__[Bk];
+            return Rk && Rk[1]
+          }, Fk.prototype.set = function(Fk, Bk) {
+            var Rk = kk(this.__entries__, Fk);
+            ~Rk ? this.__entries__[Rk][1] = Bk : this.__entries__.push([Fk, Bk])
+          }, Fk.prototype.delete = function(Fk) {
+            var Bk = this.__entries__,
+              Rk = kk(Bk, Fk);
+            ~Rk && Bk.splice(Rk, 1)
+          }, Fk.prototype.has = function(Fk) {
+            return !!~kk(this.__entries__, Fk)
+          }, Fk.prototype.clear = function() {
             this.__entries__.splice(0)
-          }, Ru.prototype.forEach = function(uu, Ru) {
-            void 0 === Ru && (Ru = null);
-            for (var yu = 0, Eu = this.__entries__; yu < Eu.length; yu++) {
-              var Ku = Eu[yu];
-              uu.call(Ru, Ku[1], Ku[0])
+          }, Fk.prototype.forEach = function(kk, Fk) {
+            void 0 === Fk && (Fk = null);
+            for (var Bk = 0, Rk = this.__entries__; Bk < Rk.length; Bk++) {
+              var tk = Rk[Bk];
+              kk.call(Fk, tk[1], tk[0])
             }
-          }, Ru
+          }, Fk
         }()
       }(),
-      Ku = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
-      Qu = "undefined" !== typeof yu.g && yu.g.Math === Math ? yu.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
-      mu = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(Qu) : function(uu) {
+      tk = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      ak = "undefined" !== typeof Bk.g && Bk.g.Math === Math ? Bk.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      Xk = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(ak) : function(kk) {
         return setTimeout((function() {
-          return uu(Date.now())
+          return kk(Date.now())
         }), 1e3 / 60)
       };
-    var Ju = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
-      Nu = "undefined" !== typeof MutationObserver,
-      Xu = function() {
-        function uu() {
-          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(uu, Ru) {
-            var yu = !1,
-              Eu = !1,
-              Ku = 0;
+    var bk = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      wk = "undefined" !== typeof MutationObserver,
+      dk = function() {
+        function kk() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(kk, Fk) {
+            var Bk = !1,
+              Rk = !1,
+              tk = 0;
 
-            function Qu() {
-              yu && (yu = !1, uu()), Eu && Nu()
+            function ak() {
+              Bk && (Bk = !1, kk()), Rk && wk()
             }
 
-            function Ju() {
-              mu(Qu)
+            function bk() {
+              Xk(ak)
             }
 
-            function Nu() {
-              var uu = Date.now();
-              if (yu) {
-                if (uu - Ku < 2) return;
-                Eu = !0
-              } else yu = !0, Eu = !1, setTimeout(Ju, Ru);
-              Ku = uu
+            function wk() {
+              var kk = Date.now();
+              if (Bk) {
+                if (kk - tk < 2) return;
+                Rk = !0
+              } else Bk = !0, Rk = !1, setTimeout(bk, Fk);
+              tk = kk
             }
-            return Nu
+            return wk
           }(this.refresh.bind(this), 20)
         }
-        return uu.prototype.addObserver = function(uu) {
-          ~this.observers_.indexOf(uu) || this.observers_.push(uu), this.connected_ || this.connect_()
-        }, uu.prototype.removeObserver = function(uu) {
-          var Ru = this.observers_,
-            yu = Ru.indexOf(uu);
-          ~yu && Ru.splice(yu, 1), !Ru.length && this.connected_ && this.disconnect_()
-        }, uu.prototype.refresh = function() {
+        return kk.prototype.addObserver = function(kk) {
+          ~this.observers_.indexOf(kk) || this.observers_.push(kk), this.connected_ || this.connect_()
+        }, kk.prototype.removeObserver = function(kk) {
+          var Fk = this.observers_,
+            Bk = Fk.indexOf(kk);
+          ~Bk && Fk.splice(Bk, 1), !Fk.length && this.connected_ && this.disconnect_()
+        }, kk.prototype.refresh = function() {
           this.updateObservers_() && this.refresh()
-        }, uu.prototype.updateObservers_ = function() {
-          var uu = this.observers_.filter((function(uu) {
-            return uu.gatherActive(), uu.hasActive()
+        }, kk.prototype.updateObservers_ = function() {
+          var kk = this.observers_.filter((function(kk) {
+            return kk.gatherActive(), kk.hasActive()
           }));
-          return uu.forEach((function(uu) {
-            return uu.broadcastActive()
-          })), uu.length > 0
-        }, uu.prototype.connect_ = function() {
-          Ku && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), Nu ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+          return kk.forEach((function(kk) {
+            return kk.broadcastActive()
+          })), kk.length > 0
+        }, kk.prototype.connect_ = function() {
+          tk && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), wk ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
             attributes: !0,
             childList: !0,
             characterData: !0,
             subtree: !0
           })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
-        }, uu.prototype.disconnect_ = function() {
-          Ku && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
-        }, uu.prototype.onTransitionEnd_ = function(uu) {
-          var Ru = uu.propertyName,
-            yu = void 0 === Ru ? "" : Ru;
-          Ju.some((function(uu) {
-            return !!~yu.indexOf(uu)
+        }, kk.prototype.disconnect_ = function() {
+          tk && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, kk.prototype.onTransitionEnd_ = function(kk) {
+          var Fk = kk.propertyName,
+            Bk = void 0 === Fk ? "" : Fk;
+          bk.some((function(kk) {
+            return !!~Bk.indexOf(kk)
           })) && this.refresh()
-        }, uu.getInstance = function() {
-          return this.instance_ || (this.instance_ = new uu), this.instance_
-        }, uu.instance_ = null, uu
+        }, kk.getInstance = function() {
+          return this.instance_ || (this.instance_ = new kk), this.instance_
+        }, kk.instance_ = null, kk
       }(),
-      Vu = function(uu, Ru) {
-        for (var yu = 0, Eu = Object.keys(Ru); yu < Eu.length; yu++) {
-          var Ku = Eu[yu];
-          Object.defineProperty(uu, Ku, {
-            value: Ru[Ku],
+      sk = function(kk, Fk) {
+        for (var Bk = 0, Rk = Object.keys(Fk); Bk < Rk.length; Bk++) {
+          var tk = Rk[Bk];
+          Object.defineProperty(kk, tk, {
+            value: Fk[tk],
             enumerable: !1,
             writable: !1,
             configurable: !0
           })
         }
-        return uu
+        return kk
       },
-      ru = function(uu) {
-        return uu && uu.ownerDocument && uu.ownerDocument.defaultView || Qu
+      Vk = function(kk) {
+        return kk && kk.ownerDocument && kk.ownerDocument.defaultView || ak
       },
-      Bu = ju(0, 0, 0, 0);
+      Jk = Wk(0, 0, 0, 0);
 
-    function xu(uu) {
-      return parseFloat(uu) || 0
+    function Ak(kk) {
+      return parseFloat(kk) || 0
     }
 
-    function Su(uu) {
-      for (var Ru = [], yu = 1; yu < arguments.length; yu++) Ru[yu - 1] = arguments[yu];
-      return Ru.reduce((function(Ru, yu) {
-        return Ru + xu(uu["border-" + yu + "-width"])
+    function ek(kk) {
+      for (var Fk = [], Bk = 1; Bk < arguments.length; Bk++) Fk[Bk - 1] = arguments[Bk];
+      return Fk.reduce((function(Fk, Bk) {
+        return Fk + Ak(kk["border-" + Bk + "-width"])
       }), 0)
     }
 
-    function pu(uu) {
-      var Ru = uu.clientWidth,
-        yu = uu.clientHeight;
-      if (!Ru && !yu) return Bu;
-      var Eu = ru(uu).getComputedStyle(uu),
-        Ku = function(uu) {
-          for (var Ru = {}, yu = 0, Eu = ["top", "right", "bottom", "left"]; yu < Eu.length; yu++) {
-            var Ku = Eu[yu],
-              Qu = uu["padding-" + Ku];
-            Ru[Ku] = xu(Qu)
+    function yk(kk) {
+      var Fk = kk.clientWidth,
+        Bk = kk.clientHeight;
+      if (!Fk && !Bk) return Jk;
+      var Rk = Vk(kk).getComputedStyle(kk),
+        tk = function(kk) {
+          for (var Fk = {}, Bk = 0, Rk = ["top", "right", "bottom", "left"]; Bk < Rk.length; Bk++) {
+            var tk = Rk[Bk],
+              ak = kk["padding-" + tk];
+            Fk[tk] = Ak(ak)
           }
-          return Ru
-        }(Eu),
-        Qu = Ku.left + Ku.right,
-        mu = Ku.top + Ku.bottom,
-        Ju = xu(Eu.width),
-        Nu = xu(Eu.height);
-      if ("border-box" === Eu.boxSizing && (Math.round(Ju + Qu) !== Ru && (Ju -= Su(Eu, "left", "right") + Qu), Math.round(Nu + mu) !== yu && (Nu -= Su(Eu, "top", "bottom") + mu)), ! function(uu) {
-          return uu === ru(uu).document.documentElement
-        }(uu)) {
-        var Xu = Math.round(Ju + Qu) - Ru,
-          Vu = Math.round(Nu + mu) - yu;
-        1 !== Math.abs(Xu) && (Ju -= Xu), 1 !== Math.abs(Vu) && (Nu -= Vu)
+          return Fk
+        }(Rk),
+        ak = tk.left + tk.right,
+        Xk = tk.top + tk.bottom,
+        bk = Ak(Rk.width),
+        wk = Ak(Rk.height);
+      if ("border-box" === Rk.boxSizing && (Math.round(bk + ak) !== Fk && (bk -= ek(Rk, "left", "right") + ak), Math.round(wk + Xk) !== Bk && (wk -= ek(Rk, "top", "bottom") + Xk)), ! function(kk) {
+          return kk === Vk(kk).document.documentElement
+        }(kk)) {
+        var dk = Math.round(bk + ak) - Fk,
+          sk = Math.round(wk + Xk) - Bk;
+        1 !== Math.abs(dk) && (bk -= dk), 1 !== Math.abs(sk) && (wk -= sk)
       }
-      return ju(Ku.left, Ku.top, Ju, Nu)
+      return Wk(tk.left, tk.top, bk, wk)
     }
-    var Tu = "undefined" !== typeof SVGGraphicsElement ? function(uu) {
-      return uu instanceof ru(uu).SVGGraphicsElement
-    } : function(uu) {
-      return uu instanceof ru(uu).SVGElement && "function" === typeof uu.getBBox
+    var fk = "undefined" !== typeof SVGGraphicsElement ? function(kk) {
+      return kk instanceof Vk(kk).SVGGraphicsElement
+    } : function(kk) {
+      return kk instanceof Vk(kk).SVGElement && "function" === typeof kk.getBBox
     };
 
-    function Wu(uu) {
-      return Ku ? Tu(uu) ? function(uu) {
-        var Ru = uu.getBBox();
-        return ju(0, 0, Ru.width, Ru.height)
-      }(uu) : pu(uu) : Bu
+    function mk(kk) {
+      return tk ? fk(kk) ? function(kk) {
+        var Fk = kk.getBBox();
+        return Wk(0, 0, Fk.width, Fk.height)
+      }(kk) : yk(kk) : Jk
     }
 
-    function ju(uu, Ru, yu, Eu) {
+    function Wk(kk, Fk, Bk, Rk) {
       return {
-        x: uu,
-        y: Ru,
-        width: yu,
-        height: Eu
+        x: kk,
+        y: Fk,
+        width: Bk,
+        height: Rk
       }
     }
-    var Hu = function() {
-        function uu(uu) {
-          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = ju(0, 0, 0, 0), this.target = uu
+    var vk = function() {
+        function kk(kk) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = Wk(0, 0, 0, 0), this.target = kk
         }
-        return uu.prototype.isActive = function() {
-          var uu = Wu(this.target);
-          return this.contentRect_ = uu, uu.width !== this.broadcastWidth || uu.height !== this.broadcastHeight
-        }, uu.prototype.broadcastRect = function() {
-          var uu = this.contentRect_;
-          return this.broadcastWidth = uu.width, this.broadcastHeight = uu.height, uu
-        }, uu
+        return kk.prototype.isActive = function() {
+          var kk = mk(this.target);
+          return this.contentRect_ = kk, kk.width !== this.broadcastWidth || kk.height !== this.broadcastHeight
+        }, kk.prototype.broadcastRect = function() {
+          var kk = this.contentRect_;
+          return this.broadcastWidth = kk.width, this.broadcastHeight = kk.height, kk
+        }, kk
       }(),
-      du = function(uu, Ru) {
-        var yu = function(uu) {
-          var Ru = uu.x,
-            yu = uu.y,
-            Eu = uu.width,
-            Ku = uu.height,
-            Qu = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
-            mu = Object.create(Qu.prototype);
-          return Vu(mu, {
-            x: Ru,
-            y: yu,
-            width: Eu,
-            height: Ku,
-            top: yu,
-            right: Ru + Eu,
-            bottom: Ku + yu,
-            left: Ru
-          }), mu
-        }(Ru);
-        Vu(this, {
-          target: uu,
-          contentRect: yu
+      ik = function(kk, Fk) {
+        var Bk = function(kk) {
+          var Fk = kk.x,
+            Bk = kk.y,
+            Rk = kk.width,
+            tk = kk.height,
+            ak = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            Xk = Object.create(ak.prototype);
+          return sk(Xk, {
+            x: Fk,
+            y: Bk,
+            width: Rk,
+            height: tk,
+            top: Bk,
+            right: Fk + Rk,
+            bottom: tk + Bk,
+            left: Fk
+          }), Xk
+        }(Fk);
+        sk(this, {
+          target: kk,
+          contentRect: Bk
         })
       },
-      bu = function() {
-        function uu(uu, Ru, yu) {
-          if (this.activeObservations_ = [], this.observations_ = new Eu, "function" !== typeof uu) throw new TypeError("The callback provided as parameter 1 is not a function.");
-          this.callback_ = uu, this.controller_ = Ru, this.callbackCtx_ = yu
+      Yk = function() {
+        function kk(kk, Fk, Bk) {
+          if (this.activeObservations_ = [], this.observations_ = new Rk, "function" !== typeof kk) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = kk, this.controller_ = Fk, this.callbackCtx_ = Bk
         }
-        return uu.prototype.observe = function(uu) {
+        return kk.prototype.observe = function(kk) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(uu instanceof ru(uu).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var Ru = this.observations_;
-            Ru.has(uu) || (Ru.set(uu, new Hu(uu)), this.controller_.addObserver(this), this.controller_.refresh())
+            if (!(kk instanceof Vk(kk).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var Fk = this.observations_;
+            Fk.has(kk) || (Fk.set(kk, new vk(kk)), this.controller_.addObserver(this), this.controller_.refresh())
           }
-        }, uu.prototype.unobserve = function(uu) {
+        }, kk.prototype.unobserve = function(kk) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(uu instanceof ru(uu).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var Ru = this.observations_;
-            Ru.has(uu) && (Ru.delete(uu), Ru.size || this.controller_.removeObserver(this))
+            if (!(kk instanceof Vk(kk).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var Fk = this.observations_;
+            Fk.has(kk) && (Fk.delete(kk), Fk.size || this.controller_.removeObserver(this))
           }
-        }, uu.prototype.disconnect = function() {
+        }, kk.prototype.disconnect = function() {
           this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
-        }, uu.prototype.gatherActive = function() {
-          var uu = this;
-          this.clearActive(), this.observations_.forEach((function(Ru) {
-            Ru.isActive() && uu.activeObservations_.push(Ru)
+        }, kk.prototype.gatherActive = function() {
+          var kk = this;
+          this.clearActive(), this.observations_.forEach((function(Fk) {
+            Fk.isActive() && kk.activeObservations_.push(Fk)
           }))
-        }, uu.prototype.broadcastActive = function() {
+        }, kk.prototype.broadcastActive = function() {
           if (this.hasActive()) {
-            var uu = this.callbackCtx_,
-              Ru = this.activeObservations_.map((function(uu) {
-                return new du(uu.target, uu.broadcastRect())
+            var kk = this.callbackCtx_,
+              Fk = this.activeObservations_.map((function(kk) {
+                return new ik(kk.target, kk.broadcastRect())
               }));
-            this.callback_.call(uu, Ru, uu), this.clearActive()
+            this.callback_.call(kk, Fk, kk), this.clearActive()
           }
-        }, uu.prototype.clearActive = function() {
+        }, kk.prototype.clearActive = function() {
           this.activeObservations_.splice(0)
-        }, uu.prototype.hasActive = function() {
+        }, kk.prototype.hasActive = function() {
           return this.activeObservations_.length > 0
-        }, uu
+        }, kk
       }(),
-      Cu = "undefined" !== typeof WeakMap ? new WeakMap : new Eu,
-      ku = function uu(Ru) {
-        if (!(this instanceof uu)) throw new TypeError("Cannot call a class as a function.");
+      Lk = "undefined" !== typeof WeakMap ? new WeakMap : new Rk,
+      Ok = function kk(Fk) {
+        if (!(this instanceof kk)) throw new TypeError("Cannot call a class as a function.");
         if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-        var yu = Xu.getInstance(),
-          Eu = new bu(Ru, yu, this);
-        Cu.set(this, Eu)
+        var Bk = dk.getInstance(),
+          Rk = new Yk(Fk, Bk, this);
+        Lk.set(this, Rk)
       };
-    ["observe", "unobserve", "disconnect"].forEach((function(uu) {
-      ku.prototype[uu] = function() {
-        var Ru;
-        return (Ru = Cu.get(this))[uu].apply(Ru, arguments)
+    ["observe", "unobserve", "disconnect"].forEach((function(kk) {
+      Ok.prototype[kk] = function() {
+        var Fk;
+        return (Fk = Lk.get(this))[kk].apply(Fk, arguments)
       }
     }));
-    const eu = "undefined" !== typeof Qu.ResizeObserver ? Qu.ResizeObserver : ku
+    const Ek = "undefined" !== typeof ak.ResizeObserver ? ak.ResizeObserver : Ok
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

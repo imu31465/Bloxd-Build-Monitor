@@ -1,184 +1,184 @@
 export const id = 103;
 export const ids = [103];
 export const modules = {
-  4718: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => ru,
-      c: () => Vu,
-      d: () => Bu
+  4643: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Vk,
+      f: () => sk,
+      h: () => Jk
     });
-    yu(4725);
-    var Eu = yu(1170),
-      Ku = yu(1035),
-      Qu = yu.n(Ku),
-      mu = yu(1325),
-      Ju = (yu(64), yu(4139)),
-      Nu = yu(1043),
-      Xu = yu(1079);
+    Bk(4645);
+    var Rk = Bk(1149),
+      tk = Bk(1020),
+      ak = Bk.n(tk),
+      Xk = Bk(1312),
+      bk = (Bk(61), Bk(4121)),
+      wk = Bk(1028),
+      dk = Bk(1069);
 
-    function Vu(uu) {
+    function sk(kk) {
       let {
-        children: Ru,
-        label: yu,
-        className: Ku,
-        circleInfoText: Ju,
-        disabled: Vu,
-        onLabelClick: ru
-      } = uu;
+        children: Fk,
+        label: Bk,
+        className: tk,
+        circleInfoText: bk,
+        disabled: sk,
+        onLabelClick: Vk
+      } = kk;
       const {
-        t: Bu
-      } = (0, Eu.E)(), xu = (0, Xu.jsxs)("div", {
-        className: Qu()("Label", {
-          ClickableLabel: void 0 !== ru
+        t: Jk
+      } = (0, Rk.x)(), Ak = (0, dk.jsxs)("div", {
+        className: ak()("Label", {
+          ClickableLabel: void 0 !== Vk
         }),
-        onClick: ru,
-        children: [Bu(yu), Ju && (0, Xu.jsx)(Nu.c, {
+        onClick: Vk,
+        children: [Jk(Bk), bk && (0, dk.jsx)(wk.d, {
           name: "circle-info"
         })]
       });
-      return (0, Xu.jsxs)("div", {
-        className: Qu()("LabeledInput", {
-          [Ku]: Ku,
-          DisabledLabelInput: Vu
+      return (0, dk.jsxs)("div", {
+        className: ak()("LabeledInput", {
+          [tk]: tk,
+          DisabledLabelInput: sk
         }),
-        children: [Ju && (0, Xu.jsx)(mu.i, {
-          tooltipInner: (0, Xu.jsx)("div", {
+        children: [bk && (0, dk.jsx)(Xk.d, {
+          tooltipInner: (0, dk.jsx)("div", {
             className: "LabeledInputTooltip",
-            children: Bu(Ju)
+            children: Jk(bk)
           }),
-          children: xu
-        }), !Ju && xu, Ru]
+          children: Ak
+        }), !bk && Ak, Fk]
       })
     }
 
-    function ru(uu) {
+    function Vk(kk) {
       let {
-        checked: Ru,
-        setChecked: yu
-      } = uu;
-      return (0, Xu.jsx)("div", {
+        checked: Fk,
+        setChecked: Bk
+      } = kk;
+      return (0, dk.jsx)("div", {
         className: "OtherInput ClickableOtherInput",
         "data-pad-focusable": !0,
-        onClick: uu => {
-          yu(!Ru)
+        onClick: kk => {
+          Bk(!Fk)
         },
-        children: (0, Xu.jsx)(Ju.b, {
-          checked: Ru,
-          onChange: uu => {
-            yu(uu.target.checked)
+        children: (0, dk.jsx)(bk.c, {
+          checked: Fk,
+          onChange: kk => {
+            Bk(kk.target.checked)
           },
           disabled: !1
         })
       })
     }
 
-    function Bu(uu) {
+    function Jk(kk) {
       let {
-        checked: Ru,
-        setChecked: yu,
-        disabled: Eu
-      } = uu;
-      return (0, Xu.jsx)("div", {
-        className: Qu()("SwitchContainer", {
-          SwitchContainerDisabled: Eu
+        checked: Fk,
+        setChecked: Bk,
+        disabled: Rk
+      } = kk;
+      return (0, dk.jsx)("div", {
+        className: ak()("SwitchContainer", {
+          SwitchContainerDisabled: Rk
         }),
         onClick: () => {
-          Eu || yu(!Ru)
+          Rk || Bk(!Fk)
         },
-        children: (0, Xu.jsx)(Ju.b, {
+        children: (0, dk.jsx)(bk.c, {
           className: "SwitchCheckbox",
-          checked: Ru,
-          onChange: uu => {
-            yu(uu.target.checked)
+          checked: Fk,
+          onChange: kk => {
+            Bk(kk.target.checked)
           },
-          disabled: !!Eu
+          disabled: !!Rk
         })
       })
     }
   },
-  4728: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Xu
+  4650: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => dk
     });
-    var Eu = yu(1035),
-      Ku = yu.n(Eu),
-      Qu = yu(4409),
-      mu = yu(1170),
-      Ju = yu(1079);
-    const Nu = [...Qu.n, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var Rk = Bk(1020),
+      tk = Bk.n(Rk),
+      ak = Bk(4366),
+      Xk = Bk(1149),
+      bk = Bk(1069);
+    const wk = [...ak.j, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function Xu(uu) {
+    function dk(kk) {
       const {
-        disabled: Ru,
-        hideWrapper: yu
-      } = uu, {
-        t: Eu
-      } = (0, mu.E)(), Xu = uu.advancedMode ? Nu.map((Ru => [Ru, uu.callbacks[Ru]])) : Qu.n.map((Ru => [Ru, uu.callbacks[Ru]])), ru = (0, Ju.jsx)("div", {
-        className: Ku()("PluginsGrid", {
-          SectionBody: !yu
+        disabled: Fk,
+        hideWrapper: Bk
+      } = kk, {
+        t: Rk
+      } = (0, Xk.x)(), dk = kk.advancedMode ? wk.map((Fk => [Fk, kk.callbacks[Fk]])) : ak.j.map((Fk => [Fk, kk.callbacks[Fk]])), Vk = (0, bk.jsx)("div", {
+        className: tk()("PluginsGrid", {
+          SectionBody: !Bk
         }),
-        children: Xu.map((uu => {
-          let [yu, Eu] = uu;
-          return (0, Ju.jsx)(Vu, {
-            plugin: yu,
-            callbacks: Eu,
-            disabled: Ru
-          }, yu)
+        children: dk.map((kk => {
+          let [Bk, Rk] = kk;
+          return (0, bk.jsx)(sk, {
+            plugin: Bk,
+            callbacks: Rk,
+            disabled: Fk
+          }, Bk)
         }))
       });
-      return yu ? ru : (0, Ju.jsxs)("div", {
+      return Bk ? Vk : (0, bk.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, Ju.jsx)("div", {
+        children: [(0, bk.jsx)("div", {
           className: "SectionTitle",
-          children: Eu("worldBuilder:pluginsSection")
-        }), ru]
+          children: Rk("worldBuilder:pluginsSection")
+        }), Vk]
       })
     }
 
-    function Vu(uu) {
+    function sk(kk) {
       let {
-        plugin: Ru,
+        plugin: Fk,
         callbacks: {
-          isEnabled: yu,
-          tC: Eu
+          isEnabled: Bk,
+          lY: Rk
         },
-        disabled: Qu
-      } = uu;
+        disabled: ak
+      } = kk;
       const {
-        t: Nu
-      } = (0, mu.E)(), Xu = yu();
-      return (0, Ju.jsxs)("div", {
-        className: Ku()("PluginCard", {
-          PluginCardEnabled: Xu,
-          PluginCardDisabledForm: Qu
+        t: wk
+      } = (0, Xk.x)(), dk = Bk();
+      return (0, bk.jsxs)("div", {
+        className: tk()("PluginCard", {
+          PluginCardEnabled: dk,
+          PluginCardDisabledForm: ak
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": Qu || void 0,
+        "aria-disabled": ak || void 0,
         onClick: () => {
-          Qu || Eu(!Xu)
+          ak || Rk(!dk)
         },
-        children: [(0, Ju.jsx)("div", {
+        children: [(0, bk.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, Ju.jsx)("img", {
-            src: `/textures/games/classic/customGames/${Ru}.png`,
-            alt: Ru
+          children: (0, bk.jsx)("img", {
+            src: `/textures/games/classic/customGames/${Fk}.png`,
+            alt: Fk
           })
-        }), (0, Ju.jsxs)("div", {
+        }), (0, bk.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, Ju.jsx)("div", {
+          children: [(0, bk.jsx)("div", {
             className: "PluginCardTitle",
-            children: Nu(ru[Ru])
-          }), (0, Ju.jsx)("div", {
+            children: wk(Vk[Fk])
+          }), (0, bk.jsx)("div", {
             className: "PluginCardDescription",
-            children: Nu(Bu[Ru])
+            children: wk(Jk[Fk])
           })]
-        }), (0, Ju.jsx)("span", {
+        }), (0, bk.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: Nu(Xu ? "general:on" : "general:off")
+          children: wk(dk ? "general:on" : "general:off")
         })]
       })
     }
-    const ru = {
+    const Vk = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -187,7 +187,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      Bu = {
+      Jk = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -197,656 +197,656 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  4709: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      g: () => KR,
-      c: () => ER,
-      e: () => yR,
-      h: () => QR
+  4635: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      h: () => aF,
+      d: () => tF,
+      e: () => RF,
+      i: () => XF
     });
-    var Eu = yu(64),
-      Ku = yu(1311),
-      Qu = yu(1408),
-      mu = yu(1617),
-      Ju = yu(1170),
-      Nu = yu(1300),
-      Xu = yu(1325),
-      Vu = yu(1043),
-      ru = yu(1199),
-      Bu = yu(1035),
-      xu = yu.n(Bu),
-      Su = yu(330),
-      pu = yu(4409),
-      Tu = yu(1215),
-      Wu = yu(4718),
-      ju = yu(2916),
-      Hu = yu(4728),
-      du = yu(1079);
+    var Rk = Bk(61),
+      tk = Bk(1300),
+      ak = Bk(1389),
+      Xk = Bk(1620),
+      bk = Bk(1149),
+      wk = Bk(1288),
+      dk = Bk(1312),
+      sk = Bk(1028),
+      Vk = Bk(1173),
+      Jk = Bk(1020),
+      Ak = Bk.n(Jk),
+      ek = Bk(279),
+      yk = Bk(4366),
+      fk = Bk(1192),
+      mk = Bk(4643),
+      Wk = Bk(2926),
+      vk = Bk(4650),
+      ik = Bk(1069);
 
-    function bu(uu) {
+    function Yk(kk) {
       let {
-        icon: Ru,
-        title: yu,
-        disabled: Eu,
-        children: Ku
-      } = uu;
-      return (0, du.jsxs)("div", {
-        className: xu()("ManageCard", {
-          ManageCardDisabled: Eu
+        icon: Fk,
+        title: Bk,
+        disabled: Rk,
+        children: tk
+      } = kk;
+      return (0, ik.jsxs)("div", {
+        className: Ak()("ManageCard", {
+          ManageCardDisabled: Rk
         }),
-        children: [(0, du.jsxs)("div", {
+        children: [(0, ik.jsxs)("div", {
           className: "ManageCardHead",
-          children: [(0, du.jsx)("div", {
+          children: [(0, ik.jsx)("div", {
             className: "ManageCardIcon",
-            children: (0, du.jsx)(Vu.c, {
-              name: Ru
+            children: (0, ik.jsx)(sk.d, {
+              name: Fk
             })
-          }), (0, du.jsx)("div", {
-            children: (0, du.jsx)("h2", {
+          }), (0, ik.jsx)("div", {
+            children: (0, ik.jsx)("h2", {
               className: "ManageCardTitle",
-              children: yu
+              children: Bk
             })
           })]
-        }), (0, du.jsxs)("div", {
+        }), (0, ik.jsxs)("div", {
           className: "ManageCardBody",
-          children: [Ku, Eu && (0, du.jsx)("div", {
+          children: [tk, Rk && (0, ik.jsx)("div", {
             className: "ManageCardDisabledOverlay"
           })]
         })]
       })
     }
 
-    function Cu(uu) {
+    function Lk(kk) {
       let {
-        label: Ru,
-        caption: yu,
-        children: Eu
-      } = uu;
-      return (0, du.jsxs)("div", {
+        label: Fk,
+        caption: Bk,
+        children: Rk
+      } = kk;
+      return (0, ik.jsxs)("div", {
         className: "ManageStackedField",
-        children: [(0, du.jsx)("div", {
+        children: [(0, ik.jsx)("div", {
           className: "ManageStackedFieldLabel",
-          children: Ru
-        }), Eu, yu && (0, du.jsx)("div", {
+          children: Fk
+        }), Rk, Bk && (0, ik.jsx)("div", {
           className: "ManageStackedFieldCaption",
-          children: yu
+          children: Bk
         })]
       })
     }
 
-    function ku(uu) {
+    function Ok(kk) {
       let {
-        label: Ru,
-        caption: yu,
-        disabled: Eu,
-        children: Ku
-      } = uu;
-      return (0, du.jsxs)("div", {
-        className: xu()("ManageField", {
-          ManageFieldDisabled: Eu
+        label: Fk,
+        caption: Bk,
+        disabled: Rk,
+        children: tk
+      } = kk;
+      return (0, ik.jsxs)("div", {
+        className: Ak()("ManageField", {
+          ManageFieldDisabled: Rk
         }),
-        children: [(0, du.jsxs)("div", {
+        children: [(0, ik.jsxs)("div", {
           className: "ManageFieldText",
-          children: [(0, du.jsx)("div", {
+          children: [(0, ik.jsx)("div", {
             className: "ManageFieldLabel",
-            children: Ru
-          }), (0, du.jsx)("div", {
+            children: Fk
+          }), (0, ik.jsx)("div", {
             className: "ManageFieldCaption",
-            children: yu
+            children: Bk
           })]
-        }), (0, du.jsx)("div", {
+        }), (0, ik.jsx)("div", {
           className: "ManageFieldControl",
-          children: Ku
+          children: tk
         })]
       })
     }
 
-    function eu(uu) {
-      var Ru, yu;
+    function Ek(kk) {
+      var Fk, Bk;
       let {
-        schematicData: Eu,
-        updateSchematicData: Ku,
-        publishFormEnabled: Qu,
-        formEnabled: mu
-      } = uu;
+        schematicData: Rk,
+        updateSchematicData: tk,
+        publishFormEnabled: ak,
+        formEnabled: Xk
+      } = kk;
       const {
-        t: Nu
-      } = (0, Ju.E)(), Xu = !Qu, Vu = {
+        t: wk
+      } = (0, bk.x)(), dk = !ak, sk = {
         tpRequests: {
-          isEnabled: () => !Eu.disableTpRequests,
-          tC: uu => Ku("disableTpRequests", !uu)
+          isEnabled: () => !Rk.disableTpRequests,
+          lY: kk => tk("disableTpRequests", !kk)
         },
         spawnProtection: {
-          isEnabled: () => !Eu.disableSpawnProtection,
-          tC: uu => Ku("disableSpawnProtection", !uu)
+          isEnabled: () => !Rk.disableSpawnProtection,
+          lY: kk => tk("disableSpawnProtection", !kk)
         },
         spawnReset: {
-          isEnabled: () => !!Eu.enableSpawnReset,
-          tC: uu => Ku("enableSpawnReset", uu)
+          isEnabled: () => !!Rk.enableSpawnReset,
+          lY: kk => tk("enableSpawnReset", kk)
         },
         smpMarketplace: {
-          isEnabled: () => !!Eu.enableSmpMarketplace,
-          tC: uu => Ku("enableSmpMarketplace", uu)
+          isEnabled: () => !!Rk.enableSmpMarketplace,
+          lY: kk => tk("enableSmpMarketplace", kk)
         },
         survivalGuns: {
-          isEnabled: () => !!Eu.enableSurvivalGuns,
-          tC: uu => Ku("enableSurvivalGuns", uu)
+          isEnabled: () => !!Rk.enableSurvivalGuns,
+          lY: kk => tk("enableSurvivalGuns", kk)
         },
         fallDamage: {
-          isEnabled: () => !Eu.disableFallDamage,
-          tC: uu => Ku("disableFallDamage", !uu)
+          isEnabled: () => !Rk.disableFallDamage,
+          lY: kk => tk("disableFallDamage", !kk)
         },
         dayNight: {
-          isEnabled: () => !!Eu.enableDayNight,
-          tC: uu => Ku("enableDayNight", uu)
+          isEnabled: () => !!Rk.enableDayNight,
+          lY: kk => tk("enableDayNight", kk)
         }
       };
-      return (0, du.jsxs)(du.Fragment, {
-        children: [!1 === Eu.schematicContainsSpawnBlock && (0, du.jsx)("div", {
+      return (0, ik.jsxs)(ik.Fragment, {
+        children: [!1 === Rk.schematicContainsSpawnBlock && (0, ik.jsx)("div", {
           className: "ManageWarningBanner",
-          children: Nu("worldBuilder:mustContainSpawnBlock")
-        }), (0, du.jsxs)("div", {
+          children: wk("worldBuilder:mustContainSpawnBlock")
+        }), (0, ik.jsxs)("div", {
           className: "ManageSettingsGrid",
-          children: [(0, du.jsxs)(bu, {
+          children: [(0, ik.jsxs)(Yk, {
             icon: "globe",
-            title: Nu("worldBuilder:worldRulesSection"),
-            disabled: !mu,
-            children: [(0, du.jsx)(ku, {
-              label: Nu("classic:defaultGamemode"),
-              caption: Nu("classic:defaultGamemodeDescription"),
-              disabled: Xu,
-              children: (0, du.jsx)(ju.d, {
+            title: wk("worldBuilder:worldRulesSection"),
+            disabled: !Xk,
+            children: [(0, ik.jsx)(Ok, {
+              label: wk("classic:defaultGamemode"),
+              caption: wk("classic:defaultGamemodeDescription"),
+              disabled: dk,
+              children: (0, ik.jsx)(Wk.c, {
                 controlClassName: "ManageDropdown",
-                options: pu.E.map((uu => ({
-                  value: uu,
-                  label: Su.v[uu]
+                options: yk.C.map((kk => ({
+                  value: kk,
+                  label: ek.r[kk]
                 }))),
-                value: Eu.defaultGamemode,
-                onChange: uu => Ku("defaultGamemode", uu.value)
+                value: Rk.defaultGamemode,
+                onChange: kk => tk("defaultGamemode", kk.value)
               })
-            }), (0, du.jsx)(ku, {
-              label: Nu("classic:voidDeathHeight"),
-              caption: Nu("classic:voidDeathHeightDescription"),
-              disabled: Xu,
-              children: (0, du.jsxs)("div", {
+            }), (0, ik.jsx)(Ok, {
+              label: wk("classic:voidDeathHeight"),
+              caption: wk("classic:voidDeathHeightDescription"),
+              disabled: dk,
+              children: (0, ik.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, du.jsx)("input", {
+                children: [(0, ik.jsx)("input", {
                   type: "number",
-                  max: Tu.G,
-                  value: null !== (Ru = Eu.voidDeathHeight) && void 0 !== Ru ? Ru : "",
-                  onChange: uu => {
-                    const Ru = parseInt(uu.target.value);
-                    Ku("voidDeathHeight", Ru)
+                  max: fk.z,
+                  value: null !== (Fk = Rk.voidDeathHeight) && void 0 !== Fk ? Fk : "",
+                  onChange: kk => {
+                    const Fk = parseInt(kk.target.value);
+                    tk("voidDeathHeight", Fk)
                   }
-                }), (0, du.jsx)("span", {
+                }), (0, ik.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: Nu("worldBuilder:blocksUnit")
+                  children: wk("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, du.jsx)(ku, {
-              label: Nu("classic:worldBorder"),
-              caption: Nu("classic:worldBorderDescription"),
-              disabled: Xu,
-              children: (0, du.jsxs)("div", {
+            }), (0, ik.jsx)(Ok, {
+              label: wk("classic:worldBorder"),
+              caption: wk("classic:worldBorderDescription"),
+              disabled: dk,
+              children: (0, ik.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, du.jsx)("input", {
+                children: [(0, ik.jsx)("input", {
                   type: "number",
-                  min: Tu.L,
-                  max: Tu.H,
-                  placeholder: Nu("worldBuilder:noWorldBorderLimit"),
-                  value: null !== (yu = Eu.worldBorder) && void 0 !== yu ? yu : "",
-                  onChange: uu => {
-                    const Ru = parseInt(uu.target.value);
-                    Ku("worldBorder", isNaN(Ru) ? null : Ru)
+                  min: fk.J,
+                  max: fk.C,
+                  placeholder: wk("worldBuilder:noWorldBorderLimit"),
+                  value: null !== (Bk = Rk.worldBorder) && void 0 !== Bk ? Bk : "",
+                  onChange: kk => {
+                    const Fk = parseInt(kk.target.value);
+                    tk("worldBorder", isNaN(Fk) ? null : Fk)
                   }
-                }), (0, du.jsx)("span", {
+                }), (0, ik.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: Nu("worldBuilder:blocksUnit")
+                  children: wk("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, du.jsx)(ku, {
-              label: Nu("classic:disableMobs"),
-              caption: Nu("classic:disableMobsDescription"),
-              disabled: Xu,
-              children: (0, du.jsx)(Wu.d, {
-                checked: Eu.disableMobs,
-                setChecked: uu => Ku("disableMobs", uu),
-                disabled: Xu
+            }), (0, ik.jsx)(Ok, {
+              label: wk("classic:disableMobs"),
+              caption: wk("classic:disableMobsDescription"),
+              disabled: dk,
+              children: (0, ik.jsx)(mk.h, {
+                checked: Rk.disableMobs,
+                setChecked: kk => tk("disableMobs", kk),
+                disabled: dk
               })
             })]
-          }), (0, du.jsxs)(bu, {
+          }), (0, ik.jsxs)(Yk, {
             icon: "user-group",
-            title: Nu("worldBuilder:playerAndLobbySection"),
-            disabled: !mu,
-            children: [(0, du.jsx)(ku, {
-              label: Nu("classic:disableKeepInventory"),
-              caption: Nu("classic:disableKeepInventoryDescription"),
-              disabled: Xu,
-              children: (0, du.jsx)(Wu.d, {
-                checked: Eu.disableKeepInventory,
-                setChecked: uu => Ku("disableKeepInventory", uu),
-                disabled: Xu
+            title: wk("worldBuilder:playerAndLobbySection"),
+            disabled: !Xk,
+            children: [(0, ik.jsx)(Ok, {
+              label: wk("classic:disableKeepInventory"),
+              caption: wk("classic:disableKeepInventoryDescription"),
+              disabled: dk,
+              children: (0, ik.jsx)(mk.h, {
+                checked: Rk.disableKeepInventory,
+                setChecked: kk => tk("disableKeepInventory", kk),
+                disabled: dk
               })
-            }), (0, du.jsx)(ku, {
-              label: Nu("classic:persistInventory"),
-              caption: Nu("classic:persistInventoryDescription"),
-              disabled: Xu,
-              children: (0, du.jsx)(ju.d, {
+            }), (0, ik.jsx)(Ok, {
+              label: wk("classic:persistInventory"),
+              caption: wk("classic:persistInventoryDescription"),
+              disabled: dk,
+              children: (0, ik.jsx)(Wk.c, {
                 controlClassName: "ManageDropdown",
-                options: pu.q.map((uu => ({
-                  value: uu,
-                  label: Su.k[uu]
+                options: yk.m.map((kk => ({
+                  value: kk,
+                  label: ek.g[kk]
                 }))),
-                value: Eu.persistInventory,
-                onChange: uu => Ku("persistInventory", uu.value)
+                value: Rk.persistInventory,
+                onChange: kk => tk("persistInventory", kk.value)
               })
-            }), (0, du.jsx)(ku, {
-              label: Nu("classic:persistWorld"),
-              caption: Nu("classic:persistWorldDescription"),
-              disabled: Xu,
-              children: (0, du.jsx)(Wu.d, {
-                checked: Eu.persistWorld,
-                setChecked: uu => Ku("persistWorld", uu),
-                disabled: Xu
+            }), (0, ik.jsx)(Ok, {
+              label: wk("classic:persistWorld"),
+              caption: wk("classic:persistWorldDescription"),
+              disabled: dk,
+              children: (0, ik.jsx)(mk.h, {
+                checked: Rk.persistWorld,
+                setChecked: kk => tk("persistWorld", kk),
+                disabled: dk
               })
-            }), (0, du.jsx)(ku, {
-              label: Nu("classic:disableLobbySpawn"),
-              caption: Nu("classic:disableLobbySpawnDescription"),
-              disabled: Xu,
-              children: (0, du.jsx)(Wu.d, {
-                checked: Eu.disableLobbySpawn,
-                setChecked: uu => Ku("disableLobbySpawn", uu),
-                disabled: Xu
+            }), (0, ik.jsx)(Ok, {
+              label: wk("classic:disableLobbySpawn"),
+              caption: wk("classic:disableLobbySpawnDescription"),
+              disabled: dk,
+              children: (0, ik.jsx)(mk.h, {
+                checked: Rk.disableLobbySpawn,
+                setChecked: kk => tk("disableLobbySpawn", kk),
+                disabled: dk
               })
-            }), (0, du.jsx)(ku, {
-              label: Nu("classic:hideLobbyCode"),
-              caption: Nu("classic:hideLobbyCodeDescription"),
-              disabled: Xu,
-              children: (0, du.jsx)(Wu.d, {
-                checked: Eu.hideLobbyCode,
-                setChecked: uu => Ku("hideLobbyCode", uu),
-                disabled: Xu
+            }), (0, ik.jsx)(Ok, {
+              label: wk("classic:hideLobbyCode"),
+              caption: wk("classic:hideLobbyCodeDescription"),
+              disabled: dk,
+              children: (0, ik.jsx)(mk.h, {
+                checked: Rk.hideLobbyCode,
+                setChecked: kk => tk("hideLobbyCode", kk),
+                disabled: dk
               })
             })]
           })]
-        }), (0, du.jsx)(bu, {
+        }), (0, ik.jsx)(Yk, {
           icon: "layer-group",
-          title: Nu("worldBuilder:pluginsSection"),
-          disabled: !mu,
-          children: (0, du.jsx)(Hu.e, {
-            callbacks: Vu,
-            disabled: Xu,
+          title: wk("worldBuilder:pluginsSection"),
+          disabled: !Xk,
+          children: (0, ik.jsx)(vk.b, {
+            callbacks: sk,
+            disabled: dk,
             advancedMode: !0,
             hideWrapper: !0
           })
         })]
       })
     }
-    var Au = yu(4737),
-      Du = yu(4139),
-      Mu = yu(1447),
-      Iu = yu(3307),
-      Gu = yu(1107),
-      Uu = yu(4686),
-      nu = yu(4740),
-      su = yu(1410);
-    const tu = 50,
-      lu = .3;
-    async function gu(uu) {
-      const Ru = await
-      function(uu) {
-        return new Promise(((Ru, yu) => {
-          const Eu = new FileReader;
-          Eu.onload = () => Ru(Eu.result), Eu.onerror = yu, Eu.readAsDataURL(uu)
+    var Sk = Bk(4655),
+      Nk = Bk(4121),
+      Hk = Bk(1441),
+      uk = Bk(3294),
+      Mk = Bk(1096),
+      gk = Bk(4612),
+      Uk = Bk(4664),
+      ck = Bk(1396);
+    const Gk = 50,
+      Tk = .3;
+    async function rk(kk) {
+      const Fk = await
+      function(kk) {
+        return new Promise(((Fk, Bk) => {
+          const Rk = new FileReader;
+          Rk.onload = () => Fk(Rk.result), Rk.onerror = Bk, Rk.readAsDataURL(kk)
         }))
-      }(uu), yu = await
-      function(uu) {
-        return new Promise(((Ru, yu) => {
-          const Eu = new Image;
-          Eu.onload = () => Ru(Eu), Eu.onerror = () => yu(new Error("Failed to load image")), Eu.src = uu
+      }(kk), Bk = await
+      function(kk) {
+        return new Promise(((Fk, Bk) => {
+          const Rk = new Image;
+          Rk.onload = () => Fk(Rk), Rk.onerror = () => Bk(new Error("Failed to load image")), Rk.src = kk
         }))
-      }(Ru);
-      if (yu.naturalHeight > yu.naturalWidth) throw new cu;
-      const Eu = 1024 * tu,
+      }(Fk);
+      if (Bk.naturalHeight > Bk.naturalWidth) throw new Dk;
+      const Rk = 1024 * Gk,
         {
-          dataUrl: Ku,
-          finalQuality: Qu
-        } = function(uu, Ru) {
-          const yu = document.createElement("canvas");
-          yu.width = uu.naturalWidth, yu.height = uu.naturalHeight, yu.getContext("2d").drawImage(uu, 0, 0);
-          let Eu = .92,
-            Ku = yu.toDataURL("image/jpeg", Eu);
-          for (; .75 * Ku.length > Ru && Eu > .05;) Eu -= .05, Ku = yu.toDataURL("image/jpeg", Eu);
+          dataUrl: tk,
+          finalQuality: ak
+        } = function(kk, Fk) {
+          const Bk = document.createElement("canvas");
+          Bk.width = kk.naturalWidth, Bk.height = kk.naturalHeight, Bk.getContext("2d").drawImage(kk, 0, 0);
+          let Rk = .92,
+            tk = Bk.toDataURL("image/jpeg", Rk);
+          for (; .75 * tk.length > Fk && Rk > .05;) Rk -= .05, tk = Bk.toDataURL("image/jpeg", Rk);
           return {
-            dataUrl: Ku,
-            finalQuality: Eu
+            dataUrl: tk,
+            finalQuality: Rk
           }
-        }(yu, Eu);
-      if (Math.ceil(.75 * Ku.length) > Eu) throw new Lu;
+        }(Bk, Rk);
+      if (Math.ceil(.75 * tk.length) > Rk) throw new zk;
       return {
-        base64Jpg: Ku,
-        heavilyCompressed: Qu < lu
+        base64Jpg: tk,
+        heavilyCompressed: ak < Tk
       }
     }
-    class cu extends Error {}
-    class Lu extends Error {}
-    var zu = function(uu) {
-      return uu[uu.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", uu[uu.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", uu
-    }(zu || {});
+    class Dk extends Error {}
+    class zk extends Error {}
+    var Pk = function(kk) {
+      return kk[kk.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", kk[kk.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", kk
+    }(Pk || {});
 
-    function Fu(uu) {
-      var Ru;
+    function hk(kk) {
+      var Fk;
       let {
-        schematicId: yu,
-        hasReadUploadPolicy: Ku,
-        onPolicyValidationError: Nu,
-        onThumbnailReady: Xu
-      } = uu;
+        schematicId: Bk,
+        hasReadUploadPolicy: tk,
+        onPolicyValidationError: wk,
+        onThumbnailReady: dk
+      } = kk;
       const {
-        t: Bu
-      } = (0, Ju.E)(), [Su, pu] = (0, Eu.useState)(null), [Tu, Wu] = (0, Eu.useState)(""), [ju, Hu] = (0, Eu.useState)(""), [bu, Cu] = (0, Eu.useState)(!0), [ku, eu] = (0, Eu.useState)(!1), Au = (0, Eu.useRef)(!1), [Du, Mu] = (0, Eu.useState)(null), [Iu, Gu] = (0, Eu.useState)(!1), [Uu, su] = (0, Eu.useState)(!1), tu = (0, Eu.useRef)(0), {
-        getRootProps: lu,
-        getInputProps: zu,
-        isDragActive: Fu
-      } = (0, nu.d)({
+        t: Jk
+      } = (0, bk.x)(), [ek, yk] = (0, Rk.useState)(null), [fk, mk] = (0, Rk.useState)(""), [Wk, vk] = (0, Rk.useState)(""), [Yk, Lk] = (0, Rk.useState)(!0), [Ok, Ek] = (0, Rk.useState)(!1), Sk = (0, Rk.useRef)(!1), [Nk, Hk] = (0, Rk.useState)(null), [uk, Mk] = (0, Rk.useState)(!1), [gk, ck] = (0, Rk.useState)(!1), Gk = (0, Rk.useRef)(0), {
+        getRootProps: Tk,
+        getInputProps: Pk,
+        isDragActive: hk
+      } = (0, Uk.d)({
         accept: {
           "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"]
         },
         multiple: !1,
-        onDrop: async uu => {
-          if (0 === uu.length) return;
-          const Ru = uu[0],
-            yu = ++tu.current;
-          Mu(null), Gu(!1), pu(null), Wu(Ru.name);
+        onDrop: async kk => {
+          if (0 === kk.length) return;
+          const Fk = kk[0],
+            Bk = ++Gk.current;
+          Hk(null), Mk(!1), yk(null), mk(Fk.name);
           try {
-            const uu = await gu(Ru);
-            if (yu !== tu.current) return;
-            pu(uu), Gu(uu.heavilyCompressed)
-          } catch (Eu) {
-            if (yu !== tu.current) return;
-            Mu(Bu(Eu instanceof cu ? "thumbnail:portraitImagesNotAllowed" : Eu instanceof Lu ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
+            const kk = await rk(Fk);
+            if (Bk !== Gk.current) return;
+            yk(kk), Mk(kk.heavilyCompressed)
+          } catch (Rk) {
+            if (Bk !== Gk.current) return;
+            Hk(Jk(Rk instanceof Dk ? "thumbnail:portraitImagesNotAllowed" : Rk instanceof zk ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
           }
         },
         useFsAccessApi: !1
-      }), wu = Tu.length <= 30 ? Tu : `${Tu.slice(0,27)}...`, Zu = null !== (Ru = null === Su || void 0 === Su ? void 0 : Su.base64Jpg) && void 0 !== Ru ? Ru : null, hu = ju.trim(), Pu = hu.length >= ru.k && hu.length <= ru.j, iu = Uu && !Su && !Du, Yu = Uu && !Pu;
-      return (0, du.jsxs)("div", {
+      }), qk = fk.length <= 30 ? fk : `${fk.slice(0,27)}...`, Ck = null !== (Fk = null === ek || void 0 === ek ? void 0 : ek.base64Jpg) && void 0 !== Fk ? Fk : null, Zk = Wk.trim(), pk = Zk.length >= Vk.o && Zk.length <= Vk.m, Kk = gk && !ek && !Nk, xk = gk && !pk;
+      return (0, ik.jsxs)("div", {
         className: "ThumbnailUploadContainer",
-        children: [(0, du.jsxs)("div", {
-          ...lu({
-            className: xu()("ThumbnailUploadDropzone", {
-              ActiveDrag: Fu,
-              ValidationError: iu
+        children: [(0, ik.jsxs)("div", {
+          ...Tk({
+            className: Ak()("ThumbnailUploadDropzone", {
+              ActiveDrag: hk,
+              ValidationError: Kk
             })
           }),
-          children: [(0, du.jsx)("input", {
-            ...zu()
-          }), !Fu && Zu ? (0, du.jsxs)(du.Fragment, {
-            children: [(0, du.jsxs)("div", {
+          children: [(0, ik.jsx)("input", {
+            ...Pk()
+          }), !hk && Ck ? (0, ik.jsxs)(ik.Fragment, {
+            children: [(0, ik.jsxs)("div", {
               className: "ThumbnailAspectPreviews",
-              children: [(0, du.jsxs)("div", {
+              children: [(0, ik.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, du.jsx)("div", {
+                children: [(0, ik.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "1:1"
-                }), (0, du.jsx)("div", {
+                }), (0, ik.jsx)("div", {
                   className: "ThumbnailAspectFrame Square",
-                  children: (0, du.jsx)("img", {
-                    src: Zu,
+                  children: (0, ik.jsx)("img", {
+                    src: Ck,
                     alt: "1:1 preview"
                   })
                 })]
-              }), (0, du.jsxs)("div", {
+              }), (0, ik.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, du.jsx)("div", {
+                children: [(0, ik.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "16:9"
-                }), (0, du.jsx)("div", {
+                }), (0, ik.jsx)("div", {
                   className: "ThumbnailAspectFrame Wide",
-                  children: (0, du.jsx)("img", {
-                    src: Zu,
+                  children: (0, ik.jsx)("img", {
+                    src: Ck,
                     alt: "16:9 preview"
                   })
                 })]
               })]
-            }), (0, du.jsxs)("div", {
-              children: [(0, du.jsx)("div", {
+            }), (0, ik.jsxs)("div", {
+              children: [(0, ik.jsx)("div", {
                 className: "ThumbnailUploadInstructions Active",
-                children: wu
-              }), (0, du.jsx)("div", {
+                children: qk
+              }), (0, ik.jsx)("div", {
                 className: "ThumbnailUploadInstructions Preview",
-                children: Bu("thumbnail:preview")
+                children: Jk("thumbnail:preview")
               })]
             })]
-          }) : (0, du.jsxs)(du.Fragment, {
-            children: [(0, du.jsx)("div", {
+          }) : (0, ik.jsxs)(ik.Fragment, {
+            children: [(0, ik.jsx)("div", {
               className: "ThumbnailUploadIcon",
-              children: (0, du.jsx)(Vu.c, {
+              children: (0, ik.jsx)(sk.d, {
                 name: "image"
               })
-            }), (0, du.jsx)("div", {
+            }), (0, ik.jsx)("div", {
               className: "ThumbnailUploadInstructions",
-              children: Bu("thumbnail:dragImageHere")
+              children: Jk("thumbnail:dragImageHere")
             })]
           })]
-        }), iu && (0, du.jsx)("div", {
+        }), Kk && (0, ik.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: Bu("thumbnail:imageRequired")
-        }), (0, du.jsx)(mu.b, {
-          className: xu()("ThumbnailUploadNameInput", {
-            ValidationError: Yu
+          children: Jk("thumbnail:imageRequired")
+        }), (0, ik.jsx)(Xk.e, {
+          className: Ak()("ThumbnailUploadNameInput", {
+            ValidationError: xk
           }),
-          placeholderText: Bu("thumbnail:thumbnailName"),
-          defaultValue: ju,
-          onValueChange: uu => {
-            Hu(uu)
+          placeholderText: Jk("thumbnail:thumbnailName"),
+          defaultValue: Wk,
+          onValueChange: kk => {
+            vk(kk)
           },
-          maxLength: ru.j
-        }), Yu && (0, du.jsx)("div", {
+          maxLength: Vk.m
+        }), xk && (0, ik.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: Bu("thumbnail:nameRequired", {
-            min: ru.k,
-            max: ru.j
+          children: Jk("thumbnail:nameRequired", {
+            min: Vk.o,
+            max: Vk.m
           })
-        }), (0, du.jsxs)("label", {
+        }), (0, ik.jsxs)("label", {
           className: "ThumbnailUploadCheckbox",
-          children: [(0, du.jsx)("input", {
+          children: [(0, ik.jsx)("input", {
             type: "checkbox",
-            checked: bu,
-            onChange: uu => {
-              Cu(uu.target.checked)
+            checked: Yk,
+            onChange: kk => {
+              Lk(kk.target.checked)
             }
-          }), Bu("thumbnail:setAsThumbnailOnceApproved")]
-        }), Iu && (0, du.jsx)("div", {
+          }), Jk("thumbnail:setAsThumbnailOnceApproved")]
+        }), uk && (0, ik.jsx)("div", {
           className: "ThumbnailUploadWarning",
-          children: Bu("thumbnail:heavyCompressionWarning")
-        }), Du && (0, du.jsx)("div", {
+          children: Jk("thumbnail:heavyCompressionWarning")
+        }), Nk && (0, ik.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: Du
-        }), (0, du.jsx)(Qu.l, {
-          disabled: ku,
+          children: Nk
+        }), (0, ik.jsx)(ak.o, {
+          disabled: Ok,
           className: "ThumbnailUploadButton",
           onClick: async () => {
-            if (su(!0), !Au.current && Su && Pu && Ku) {
-              Au.current = !0, eu(!0), Mu(null);
+            if (ck(!0), !Sk.current && ek && pk && tk) {
+              Sk.current = !0, Ek(!0), Hk(null);
               try {
-                await Xu(Su.base64Jpg, hu, bu ? yu : null)
-              } catch (uu) {
-                Mu(uu.errorMessageForUser ? Bu(uu.errorMessageForUser, uu.errorMessageTranslationParams) : Bu("thumbnail:failedToUploadImage"))
+                await dk(ek.base64Jpg, Zk, Yk ? Bk : null)
+              } catch (kk) {
+                Hk(kk.errorMessageForUser ? Jk(kk.errorMessageForUser, kk.errorMessageTranslationParams) : Jk("thumbnail:failedToUploadImage"))
               } finally {
-                Au.current = !1, eu(!1)
+                Sk.current = !1, Ek(!1)
               }
-            } else Ku || Nu()
+            } else tk || wk()
           },
-          children: Bu(ku ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
+          children: Jk(Ok ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
         })]
       })
     }
-    const wu = 2e3;
+    const qk = 2e3;
 
-    function Zu(uu) {
+    function Ck(kk) {
       let {
-        schematicId: Ru,
-        ownedThumbnailCount: yu,
-        onClose: Ku,
-        onThumbnailReady: Qu
-      } = uu;
+        schematicId: Fk,
+        ownedThumbnailCount: Bk,
+        onClose: tk,
+        onThumbnailReady: ak
+      } = kk;
       const {
-        t: mu
-      } = (0, Ju.E)(), {
-        userContext: Nu
-      } = (0, Gu.d)(), [Xu, Bu] = (0, Eu.useState)(!1), [Su, pu] = (0, Eu.useState)(!1), [Tu, Wu] = (0, Eu.useState)(!1), ju = (0, Eu.useRef)();
-      (0, Eu.useEffect)((() => () => {
-        clearTimeout(ju.current)
+        t: Xk
+      } = (0, bk.x)(), {
+        userContext: wk
+      } = (0, Mk.e)(), [dk, Jk] = (0, Rk.useState)(!1), [ek, yk] = (0, Rk.useState)(!1), [fk, mk] = (0, Rk.useState)(!1), Wk = (0, Rk.useRef)();
+      (0, Rk.useEffect)((() => () => {
+        clearTimeout(Wk.current)
       }), []);
-      const Hu = function(uu, Ru) {
-        const yu = [];
-        return uu.isLoggedIn() || yu.push(zu.NOT_LOGGED_IN), Ru >= ru.T && yu.push(zu.THUMBNAIL_LIMIT_REACHED), yu
-      }(Nu, yu);
-      if (Hu.length > 0) {
-        const uu = {
-          [zu.NOT_LOGGED_IN]: {
+      const vk = function(kk, Fk) {
+        const Bk = [];
+        return kk.isLoggedIn() || Bk.push(Pk.NOT_LOGGED_IN), Fk >= Vk.W && Bk.push(Pk.THUMBNAIL_LIMIT_REACHED), Bk
+      }(wk, Bk);
+      if (vk.length > 0) {
+        const kk = {
+          [Pk.NOT_LOGGED_IN]: {
             key: "thumbnail:mustBeLoggedInToUpload"
           },
-          [zu.THUMBNAIL_LIMIT_REACHED]: {
+          [Pk.THUMBNAIL_LIMIT_REACHED]: {
             key: "thumbnail:thumbnailLimitReachedPleaseDelete",
             params: {
-              max: ru.T
+              max: Vk.W
             }
           }
         };
-        return (0, du.jsxs)("div", {
+        return (0, ik.jsxs)("div", {
           className: "ThumbnailUploaderInner",
-          children: [(0, du.jsx)("h1", {
+          children: [(0, ik.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: mu("thumbnail:cannotUploadThumbnail")
-          }), Hu.map(((Ru, yu) => {
-            const Eu = uu[Ru];
-            return (0, du.jsxs)("div", {
+            children: Xk("thumbnail:cannotUploadThumbnail")
+          }), vk.map(((Fk, Bk) => {
+            const Rk = kk[Fk];
+            return (0, ik.jsxs)("div", {
               className: "CannotUploadThumbnailItem",
-              children: [(0, du.jsx)(Vu.c, {
+              children: [(0, ik.jsx)(sk.d, {
                 name: "triangle-exclamation"
-              }), (0, du.jsx)("span", {
-                children: mu(Eu.key, Eu.params)
+              }), (0, ik.jsx)("span", {
+                children: Xk(Rk.key, Rk.params)
               })]
-            }, yu)
+            }, Bk)
           }))]
         })
       }
-      return (0, du.jsxs)("div", {
-        className: xu()("ThumbnailUploaderInner", {
-          ThumbnailUploaderSuccess: Xu
+      return (0, ik.jsxs)("div", {
+        className: Ak()("ThumbnailUploaderInner", {
+          ThumbnailUploaderSuccess: dk
         }),
-        children: [Xu && (0, du.jsxs)("div", {
+        children: [dk && (0, ik.jsxs)("div", {
           className: "ThumbnailUploadSuccessOverlay",
-          children: [(0, du.jsxs)("div", {
+          children: [(0, ik.jsxs)("div", {
             className: "ThumbnailUploadSuccessIcon FullyFancyText AnimFadeInScaleUp",
-            children: [(0, du.jsx)(Vu.c, {
+            children: [(0, ik.jsx)(sk.d, {
               name: "check"
-            }), (0, du.jsx)(su.e, {})]
-          }), (0, du.jsx)("div", {
+            }), (0, ik.jsx)(ck.d, {})]
+          }), (0, ik.jsx)("div", {
             className: "ThumbnailUploadSuccessText AnimFadeInScaleUp",
-            children: mu("thumbnail:thumbnailUploaded")
+            children: Xk("thumbnail:thumbnailUploaded")
           })]
-        }), (0, du.jsx)("h1", {
+        }), (0, ik.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: mu("thumbnail:uploadThumbnail")
-        }), (0, du.jsxs)("div", {
+          children: Xk("thumbnail:uploadThumbnail")
+        }), (0, ik.jsxs)("div", {
           className: "ThumbnailUploaderBody",
-          children: [(0, du.jsxs)("div", {
+          children: [(0, ik.jsxs)("div", {
             className: "ThumbnailUploaderLeft",
-            children: [(0, du.jsx)("h3", {
+            children: [(0, ik.jsx)("h3", {
               className: "SchematicPopupSubtitle",
-              children: mu("thumbnail:chooseImage", {
-                maxSizeKb: tu
+              children: Xk("thumbnail:chooseImage", {
+                maxSizeKb: Gk
               })
-            }), (0, du.jsx)(Fu, {
-              schematicId: Ru,
-              hasReadUploadPolicy: Su,
+            }), (0, ik.jsx)(hk, {
+              schematicId: Fk,
+              hasReadUploadPolicy: ek,
               onPolicyValidationError: () => {
-                Wu(!0)
+                mk(!0)
               },
-              onThumbnailReady: async (uu, Ru, yu) => {
-                await Qu(uu, Ru, yu), Bu(!0), ju.current = setTimeout(Ku, wu)
+              onThumbnailReady: async (kk, Fk, Bk) => {
+                await ak(kk, Fk, Bk), Jk(!0), Wk.current = setTimeout(tk, qk)
               }
             })]
-          }), (0, du.jsxs)("div", {
+          }), (0, ik.jsxs)("div", {
             className: "ThumbnailUploadPolicy",
-            children: [(0, du.jsx)("h3", {
+            children: [(0, ik.jsx)("h3", {
               className: "ThumbnailUploadPolicyTitle",
-              children: mu("thumbnail:uploadPolicy")
-            }), (0, du.jsxs)("ul", {
+              children: Xk("thumbnail:uploadPolicy")
+            }), (0, ik.jsxs)("ul", {
               className: "ThumbnailUploadPolicyList",
-              children: [(0, du.jsxs)("li", {
+              children: [(0, ik.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, du.jsx)(Vu.c, {
+                children: [(0, ik.jsx)(sk.d, {
                   name: "check"
-                }), (0, du.jsx)("span", {
-                  children: mu("thumbnail:policyFollowGuidelines")
+                }), (0, ik.jsx)("span", {
+                  children: Xk("thumbnail:policyFollowGuidelines")
                 })]
-              }), (0, du.jsxs)("li", {
+              }), (0, ik.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, du.jsx)(Vu.c, {
+                children: [(0, ik.jsx)(sk.d, {
                   name: "check"
-                }), (0, du.jsx)("span", {
-                  children: mu("thumbnail:policyInGameAssets")
+                }), (0, ik.jsx)("span", {
+                  children: Xk("thumbnail:policyInGameAssets")
                 })]
-              }), (0, du.jsxs)("li", {
+              }), (0, ik.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, du.jsx)(Vu.c, {
+                children: [(0, ik.jsx)(sk.d, {
                   name: "check"
-                }), (0, du.jsx)("span", {
-                  children: mu("thumbnail:policyLimitText")
+                }), (0, ik.jsx)("span", {
+                  children: Xk("thumbnail:policyLimitText")
                 })]
-              }), (0, du.jsxs)("li", {
+              }), (0, ik.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, du.jsx)(Vu.c, {
+                children: [(0, ik.jsx)(sk.d, {
                   name: "x"
-                }), (0, du.jsx)("span", {
-                  children: mu("thumbnail:policyCopyrightContent")
+                }), (0, ik.jsx)("span", {
+                  children: Xk("thumbnail:policyCopyrightContent")
                 })]
-              }), (0, du.jsxs)("li", {
+              }), (0, ik.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, du.jsx)(Vu.c, {
+                children: [(0, ik.jsx)(sk.d, {
                   name: "x"
-                }), (0, du.jsx)("span", {
-                  children: mu("thumbnail:policyOutOfGameAssets")
+                }), (0, ik.jsx)("span", {
+                  children: Xk("thumbnail:policyOutOfGameAssets")
                 })]
-              }), (0, du.jsxs)("li", {
+              }), (0, ik.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, du.jsx)(Vu.c, {
+                children: [(0, ik.jsx)(sk.d, {
                   name: "x"
-                }), (0, du.jsx)("span", {
-                  children: mu("thumbnail:policyBloxdTags")
+                }), (0, ik.jsx)("span", {
+                  children: Xk("thumbnail:policyBloxdTags")
                 })]
-              }), (0, du.jsxs)("li", {
+              }), (0, ik.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, du.jsx)(Vu.c, {
+                children: [(0, ik.jsx)(sk.d, {
                   name: "x"
-                }), (0, du.jsx)("span", {
-                  children: mu("thumbnail:policyMustReflectGame")
+                }), (0, ik.jsx)("span", {
+                  children: Xk("thumbnail:policyMustReflectGame")
                 })]
               })]
-            }), (0, du.jsxs)("label", {
-              className: xu()("ThumbnailUploadCheckbox Policy", {
-                ValidationError: Tu && !Su
+            }), (0, ik.jsxs)("label", {
+              className: Ak()("ThumbnailUploadCheckbox Policy", {
+                ValidationError: fk && !ek
               }),
-              children: [(0, du.jsx)("input", {
+              children: [(0, ik.jsx)("input", {
                 type: "checkbox",
-                checked: Su,
-                onChange: uu => {
-                  pu(uu.target.checked)
+                checked: ek,
+                onChange: kk => {
+                  yk(kk.target.checked)
                 }
-              }), mu("thumbnail:agreeToUploadPolicy")]
-            }), Tu && !Su && (0, du.jsx)("div", {
+              }), Xk("thumbnail:agreeToUploadPolicy")]
+            }), fk && !ek && (0, ik.jsx)("div", {
               className: "ThumbnailPolicyError",
-              children: mu("thumbnail:policyRequired")
+              children: Xk("thumbnail:policyRequired")
             })]
           })]
         })]
       })
     }
-    var hu = yu(1176);
-    const Pu = {
+    var Zk = Bk(1154);
+    const pk = {
       "custom-game-bad-thumbnail": {
         reason: "thumbnail:rejectionInappropriate",
         tips: ["thumbnail:rejectionInappropriateTip1", "thumbnail:rejectionInappropriateTip2", "thumbnail:rejectionInappropriateTip3"]
@@ -877,207 +877,207 @@ export const modules = {
       }
     };
 
-    function iu(uu) {
-      var Ru, yu;
+    function Kk(kk) {
+      var Fk, Bk;
       let {
-        schematicData: mu,
-        updateSchematicData: Xu,
-        publishFormEnabled: ru,
-        onClose: Bu
-      } = uu;
+        schematicData: Xk,
+        updateSchematicData: dk,
+        publishFormEnabled: Vk,
+        onClose: Jk
+      } = kk;
       const {
-        t: Su
-      } = (0, Ju.E)(), {
-        userContext: pu,
-        isUserContextUpdating: Tu
-      } = (0, Gu.d)(), Wu = (0, Iu.b)(), [ju, Hu] = (0, Eu.useState)([]), [bu, Cu] = (0, Eu.useState)([]), [ku, eu] = (0, Eu.useState)(!0), [Au, Du] = (0, Eu.useState)(null !== (Ru = mu.customThumbnailId) && void 0 !== Ru ? Ru : null), [nu, su] = (0, Eu.useState)(null), tu = (0, Eu.useRef)(null !== (yu = mu.customThumbnailId) && void 0 !== yu ? yu : null), lu = (0, Eu.useRef)(0), gu = (0, Eu.useRef)(null), cu = (0, Eu.useRef)(null), Lu = (0, Eu.useRef)(null), zu = (0, Eu.useRef)(!1);
+        t: ek
+      } = (0, bk.x)(), {
+        userContext: yk,
+        isUserContextUpdating: fk
+      } = (0, Mk.e)(), mk = (0, uk.d)(), [Wk, vk] = (0, Rk.useState)([]), [Yk, Lk] = (0, Rk.useState)([]), [Ok, Ek] = (0, Rk.useState)(!0), [Sk, Nk] = (0, Rk.useState)(null !== (Fk = Xk.customThumbnailId) && void 0 !== Fk ? Fk : null), [Uk, ck] = (0, Rk.useState)(null), Gk = (0, Rk.useRef)(null !== (Bk = Xk.customThumbnailId) && void 0 !== Bk ? Bk : null), Tk = (0, Rk.useRef)(0), rk = (0, Rk.useRef)(null), Dk = (0, Rk.useRef)(null), zk = (0, Rk.useRef)(null), Pk = (0, Rk.useRef)(!1);
 
-      function Fu(uu, Ru) {
-        Lu.current && (clearTimeout(Lu.current), Lu.current = null), su(uu), null !== uu && Ru && (Lu.current = setTimeout((() => {
-          su(null), Lu.current = null
+      function hk(kk, Fk) {
+        zk.current && (clearTimeout(zk.current), zk.current = null), ck(kk), null !== kk && Fk && (zk.current = setTimeout((() => {
+          ck(null), zk.current = null
         }), 5e3))
-      }(0, Eu.useEffect)((() => () => {
-        clearTimeout(cu.current), clearTimeout(Lu.current)
+      }(0, Rk.useEffect)((() => () => {
+        clearTimeout(Dk.current), clearTimeout(zk.current)
       }), []);
-      const wu = (0, Eu.useCallback)((() => {
-        eu(!0), Mu.e.getOwnedThumbnails(pu).then((uu => {
-          const Ru = [],
-            yu = [];
-          for (const Eu of uu.thumbnails) Eu.rejectionPolicyId ? Ru.push(Eu) : yu.push(Eu);
-          Ru.sort(((uu, Ru) => uu.lastUpdatedAt - Ru.lastUpdatedAt)), yu.sort(((uu, Ru) => {
-            const yu = uu.approved ? 1 : 0,
-              Eu = (Ru.approved ? 1 : 0) - yu;
-            return 0 !== Eu ? Eu : Ru.lastUpdatedAt - uu.lastUpdatedAt
-          })), Cu(Ru), Hu(yu)
-        })).catch((uu => {
-          console.error("Failed to fetch thumbnails:", uu)
+      const qk = (0, Rk.useCallback)((() => {
+        Ek(!0), Hk.b.getOwnedThumbnails(yk).then((kk => {
+          const Fk = [],
+            Bk = [];
+          for (const Rk of kk.thumbnails) Rk.rejectionPolicyId ? Fk.push(Rk) : Bk.push(Rk);
+          Fk.sort(((kk, Fk) => kk.lastUpdatedAt - Fk.lastUpdatedAt)), Bk.sort(((kk, Fk) => {
+            const Bk = kk.approved ? 1 : 0,
+              Rk = (Fk.approved ? 1 : 0) - Bk;
+            return 0 !== Rk ? Rk : Fk.lastUpdatedAt - kk.lastUpdatedAt
+          })), Lk(Fk), vk(Bk)
+        })).catch((kk => {
+          console.error("Failed to fetch thumbnails:", kk)
         })).finally((() => {
-          eu(!1)
+          Ek(!1)
         }))
-      }), [pu]);
-      async function Pu(uu, Ru, yu) {
-        return Mu.e.uploadSchematicThumbnail(pu, uu, Ru, yu).then((() => {
-          Fu({
-            text: Su("thumbnail:uploadedAwaitingModeration"),
+      }), [yk]);
+      async function pk(kk, Fk, Bk) {
+        return Hk.b.uploadSchematicThumbnail(yk, kk, Fk, Bk).then((() => {
+          hk({
+            text: ek("thumbnail:uploadedAwaitingModeration"),
             type: "success"
-          }, !0), wu()
+          }, !0), qk()
         }))
       }
 
-      function iu() {
-        lu.current = Date.now(), cu.current = null;
-        const uu = gu.current;
-        gu.current = null, Fu({
-          text: Su("thumbnail:settingThumbnail"),
+      function Kk() {
+        Tk.current = Date.now(), Dk.current = null;
+        const kk = rk.current;
+        rk.current = null, hk({
+          text: ek("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), Mu.e.setSchematicThumbnail(pu, mu.schematicId, uu).then((() => {
-          Wu.current && (Fu({
-            text: Su("thumbnail:thumbnailUpdated"),
+        }, !1), Hk.b.setSchematicThumbnail(yk, Xk.schematicId, kk).then((() => {
+          mk.current && (hk({
+            text: ek("thumbnail:thumbnailUpdated"),
             type: "success"
-          }, !0), tu.current = uu, Xu("customThumbnailId", uu), Xu("customThumbnailBlurhash", void 0), Xu("customThumbnailVariants", void 0))
-        })).catch((uu => {
-          Wu.current && (Fu({
-            text: uu.errorMessageForUser ? Su(uu.errorMessageForUser, uu.errorMessageTranslationParams) : Su("thumbnail:failedToSetThumbnail"),
+          }, !0), Gk.current = kk, dk("customThumbnailId", kk), dk("customThumbnailBlurhash", void 0), dk("customThumbnailVariants", void 0))
+        })).catch((kk => {
+          mk.current && (hk({
+            text: kk.errorMessageForUser ? ek(kk.errorMessageForUser, kk.errorMessageTranslationParams) : ek("thumbnail:failedToSetThumbnail"),
             type: "error"
-          }, !0), Du(tu.current))
+          }, !0), Nk(Gk.current))
         }))
       }
 
-      function qu(uu) {
-        Du(uu), gu.current = uu;
-        const Ru = Date.now() - lu.current;
-        Ru >= 1e3 ? iu() : (Fu({
-          text: Su("thumbnail:settingThumbnail"),
+      function lk(kk) {
+        Nk(kk), rk.current = kk;
+        const Fk = Date.now() - Tk.current;
+        Fk >= 1e3 ? Kk() : (hk({
+          text: ek("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), cu.current || (cu.current = setTimeout((() => {
-          iu()
-        }), 1e3 - Ru)))
+        }, !1), Dk.current || (Dk.current = setTimeout((() => {
+          Kk()
+        }), 1e3 - Fk)))
       }
-      return (0, Eu.useEffect)((() => {
-        !1 === Tu && wu()
-      }), [Tu, wu]), bu.length > 0 ? (0, du.jsx)(Yu, {
-        rejectedThumbnails: bu,
-        userContext: pu,
-        isMountedRef: Wu,
-        onAcknowledged: wu
-      }) : (0, du.jsxs)("div", {
+      return (0, Rk.useEffect)((() => {
+        !1 === fk && qk()
+      }), [fk, qk]), Yk.length > 0 ? (0, ik.jsx)(xk, {
+        rejectedThumbnails: Yk,
+        userContext: yk,
+        isMountedRef: mk,
+        onAcknowledged: qk
+      }) : (0, ik.jsxs)("div", {
         className: "BloxdForm ThumbnailSection",
-        children: [(0, du.jsxs)("div", {
+        children: [(0, ik.jsxs)("div", {
           className: "SectionTitle",
-          children: [Su("thumbnail:gameThumbnail"), nu && (0, du.jsx)("span", {
-            className: xu()("ThumbnailActionMsg", `ThumbnailActionMsg--${nu.type}`),
-            children: nu.text
+          children: [ek("thumbnail:gameThumbnail"), Uk && (0, ik.jsx)("span", {
+            className: Ak()("ThumbnailActionMsg", `ThumbnailActionMsg--${Uk.type}`),
+            children: Uk.text
           })]
-        }), (0, du.jsx)("div", {
+        }), (0, ik.jsx)("div", {
           className: "SectionBody",
-          children: (0, du.jsxs)("div", {
+          children: (0, ik.jsxs)("div", {
             className: "ThumbnailGrid",
-            children: [(0, du.jsxs)("div", {
-              className: xu()("ThumbnailGridItem ThumbnailGridItemDefault", {
-                ThumbnailGridItemSelected: null === Au
+            children: [(0, ik.jsxs)("div", {
+              className: Ak()("ThumbnailGridItem ThumbnailGridItemDefault", {
+                ThumbnailGridItemSelected: null === Sk
               }),
-              onClick: () => qu(null),
-              children: [(0, du.jsx)(Uu.e, {
+              onClick: () => lk(null),
+              children: [(0, ik.jsx)(gk.c, {
                 game: {
-                  schematicId: mu.schematicId,
-                  imageBlurhash: mu.imageBlurhash
+                  schematicId: Xk.schematicId,
+                  imageBlurhash: Xk.imageBlurhash
                 }
-              }), (0, du.jsx)("div", {
+              }), (0, ik.jsx)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailDefaultLabel",
-                children: Su("general:default")
+                children: ek("general:default")
               })]
-            }), ku && (0, du.jsx)(Nu.b, {}), ju.map(((uu, Ru) => (0, du.jsxs)("div", {
-              className: xu()("ThumbnailGridItem", {
-                ThumbnailGridItemSelected: Au === uu.id,
-                ThumbnailGridItemPending: !uu.approved
+            }), Ok && (0, ik.jsx)(wk.b, {}), Wk.map(((kk, Fk) => (0, ik.jsxs)("div", {
+              className: Ak()("ThumbnailGridItem", {
+                ThumbnailGridItemSelected: Sk === kk.id,
+                ThumbnailGridItemPending: !kk.approved
               }),
               onClick: () => {
-                uu.approved && qu(uu.id)
+                kk.approved && lk(kk.id)
               },
-              children: [uu.approved && (0, du.jsx)("img", {
-                src: `${hu.clientSideServerUrls.s3Url}/customThumbnails/${uu.id}.jpg`,
+              children: [kk.approved && (0, ik.jsx)("img", {
+                src: `${Zk.clientSideServerUrls.s3Url}/customThumbnails/${kk.id}.jpg`,
                 alt: "Thumbnail"
-              }), uu.approved && (0, du.jsx)("div", {
+              }), kk.approved && (0, ik.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: uu.name
-              }), uu.id && (0, du.jsx)(Qu.F, {
+                children: kk.name
+              }), kk.id && (0, ik.jsx)(ak.J, {
                 className: "ThumbnailDeleteButton",
-                onClick: Ru => async function(uu, Ru, yu) {
-                  uu.stopPropagation();
-                  const Eu = await Ku.NotificationProvider.showCustomPopup({
-                      body: uu => (0, du.jsx)(ou, {
-                        thumbnailId: Ru,
-                        thumbnailName: yu,
-                        onClose: Ru => {
-                          Ru && (zu.current = !0), uu()
+                onClick: Fk => async function(kk, Fk, Bk) {
+                  kk.stopPropagation();
+                  const Rk = await tk.NotificationProvider.showCustomPopup({
+                      body: kk => (0, ik.jsx)(jk, {
+                        thumbnailId: Fk,
+                        thumbnailName: Bk,
+                        onClose: Fk => {
+                          Fk && (Pk.current = !0), kk()
                         }
                       }),
                       middleScreenPopupClassName: "ThumbnailDeleteConfirmPopup",
-                      onClose: Bu
+                      onClose: Jk
                     }).getResult(),
-                    Qu = zu.current;
-                  zu.current = !1, Qu && !0 === Eu && (Wu.current && Fu({
-                    text: Su("thumbnail:deletingThumbnail"),
+                    ak = Pk.current;
+                  Pk.current = !1, ak && !0 === Rk && (mk.current && hk({
+                    text: ek("thumbnail:deletingThumbnail"),
                     type: "info"
-                  }, !1), Mu.e.deleteSchematicThumbnail(pu, Ru).then((() => {
-                    Wu.current && (Fu({
-                      text: Su("thumbnail:thumbnailDeleted"),
+                  }, !1), Hk.b.deleteSchematicThumbnail(yk, Fk).then((() => {
+                    mk.current && (hk({
+                      text: ek("thumbnail:thumbnailDeleted"),
                       type: "success"
-                    }, !0), tu.current === Ru && qu(null), wu())
-                  })).catch((uu => {
-                    Wu.current && Fu({
-                      text: uu.errorMessageForUser ? Su(uu.errorMessageForUser, uu.errorMessageTranslationParams) : Su("thumbnail:failedToDeleteThumbnail"),
+                    }, !0), Gk.current === Fk && lk(null), qk())
+                  })).catch((kk => {
+                    mk.current && hk({
+                      text: kk.errorMessageForUser ? ek(kk.errorMessageForUser, kk.errorMessageTranslationParams) : ek("thumbnail:failedToDeleteThumbnail"),
                       type: "error"
                     }, !0)
                   })))
-                }(Ru, uu.id, uu.name),
-                children: (0, du.jsx)(Vu.c, {
+                }(Fk, kk.id, kk.name),
+                children: (0, ik.jsx)(sk.d, {
                   name: "trash-can"
                 })
-              }), !uu.approved && (0, du.jsx)("div", {
+              }), !kk.approved && (0, ik.jsx)("div", {
                 className: "ThumbnailUnapprovedIcon",
-                children: (0, du.jsx)(Vu.c, {
+                children: (0, ik.jsx)(sk.d, {
                   name: "hourglass-clock"
                 })
-              }), !uu.approved && (0, du.jsxs)("div", {
+              }), !kk.approved && (0, ik.jsxs)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailPendingLabel",
-                children: [uu.name, (0, du.jsx)("br", {}), Su("thumbnail:pendingApproval")]
+                children: [kk.name, (0, ik.jsx)("br", {}), ek("thumbnail:pendingApproval")]
               })]
-            }, Ru))), (0, du.jsxs)("div", {
-              className: xu()("ThumbnailGridItem ThumbnailUploadTile", {
-                ThumbnailUploadTileDisabled: !ru
+            }, Fk))), (0, ik.jsxs)("div", {
+              className: Ak()("ThumbnailGridItem ThumbnailUploadTile", {
+                ThumbnailUploadTileDisabled: !Vk
               }),
               onClick: () => {
-                ru && function(uu) {
+                Vk && function(kk) {
                   let {
-                    schematicId: Ru,
-                    ownedThumbnailCount: yu,
-                    onThumbnailReady: Eu,
-                    onClose: Qu
-                  } = uu;
-                  Ku.NotificationProvider.showCustomPopup({
-                    body: uu => (0, du.jsx)(Zu, {
-                      schematicId: Ru,
-                      ownedThumbnailCount: yu,
-                      onClose: uu,
-                      onThumbnailReady: Eu
+                    schematicId: Fk,
+                    ownedThumbnailCount: Bk,
+                    onThumbnailReady: Rk,
+                    onClose: ak
+                  } = kk;
+                  tk.NotificationProvider.showCustomPopup({
+                    body: kk => (0, ik.jsx)(Ck, {
+                      schematicId: Fk,
+                      ownedThumbnailCount: Bk,
+                      onClose: kk,
+                      onThumbnailReady: Rk
                     }),
                     middleScreenPopupClassName: "SchematicThumbnailPopup",
-                    onClose: Qu,
+                    onClose: ak,
                     unlockPointerKey: "schematicThumbnailUploaderPopup"
                   })
                 }({
-                  schematicId: mu.schematicId,
-                  ownedThumbnailCount: ju.length,
-                  onThumbnailReady: Pu,
-                  onClose: Bu
+                  schematicId: Xk.schematicId,
+                  ownedThumbnailCount: Wk.length,
+                  onThumbnailReady: pk,
+                  onClose: Jk
                 })
               },
-              children: [(0, du.jsx)(Vu.c, {
+              children: [(0, ik.jsx)(sk.d, {
                 name: "plus"
-              }), (0, du.jsx)("div", {
+              }), (0, ik.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: Su("thumbnail:uploadThumbnail")
+                children: ek("thumbnail:uploadThumbnail")
               })]
             })]
           })
@@ -1085,640 +1085,640 @@ export const modules = {
       })
     }
 
-    function Yu(uu) {
+    function xk(kk) {
       let {
-        rejectedThumbnails: Ru,
-        userContext: yu,
-        isMountedRef: Ku,
-        onAcknowledged: mu
-      } = uu;
+        rejectedThumbnails: Fk,
+        userContext: Bk,
+        isMountedRef: tk,
+        onAcknowledged: Xk
+      } = kk;
       const {
-        t: Xu
-      } = (0, Ju.E)(), [ru, Bu] = (0, Eu.useState)(!1), [xu, Su] = (0, Eu.useState)(!1), pu = function(uu) {
-        const Ru = new Map;
-        for (const yu of uu) {
-          const uu = yu.rejectionPolicyId,
-            Eu = Ru.get(uu);
-          Eu ? Eu.push(yu) : Ru.set(uu, [yu])
+        t: dk
+      } = (0, bk.x)(), [Vk, Jk] = (0, Rk.useState)(!1), [Ak, ek] = (0, Rk.useState)(!1), yk = function(kk) {
+        const Fk = new Map;
+        for (const Bk of kk) {
+          const kk = Bk.rejectionPolicyId,
+            Rk = Fk.get(kk);
+          Rk ? Rk.push(Bk) : Fk.set(kk, [Bk])
         }
-        return Ru
-      }(Ru);
-      return (0, du.jsxs)("div", {
+        return Fk
+      }(Fk);
+      return (0, ik.jsxs)("div", {
         className: "ThumbnailRejectionNotice",
-        children: [(0, du.jsxs)("div", {
+        children: [(0, ik.jsxs)("div", {
           className: "ThumbnailRejectionNoticeTitle",
-          children: [(0, du.jsx)(Vu.c, {
+          children: [(0, ik.jsx)(sk.d, {
             name: "triangle-exclamation"
-          }), " ", Xu("thumbnail:thumbnailsRejected"), " ", (0, du.jsx)(Vu.c, {
+          }), " ", dk("thumbnail:thumbnailsRejected"), " ", (0, ik.jsx)(sk.d, {
             name: "triangle-exclamation"
           })]
-        }), (0, du.jsx)("div", {
+        }), (0, ik.jsx)("div", {
           className: "ThumbnailRejectionNoticeSubtitle",
-          children: Xu("thumbnail:thumbnailsRejectedDescription")
-        }), (0, du.jsx)("div", {
+          children: dk("thumbnail:thumbnailsRejectedDescription")
+        }), (0, ik.jsx)("div", {
           className: "ThumbnailRejectionNoticeList",
-          children: [...pu.entries()].map((uu => {
-            let [Ru, yu] = uu;
-            const Eu = Pu[Ru];
-            return (0, du.jsxs)("div", {
+          children: [...yk.entries()].map((kk => {
+            let [Fk, Bk] = kk;
+            const Rk = pk[Fk];
+            return (0, ik.jsxs)("div", {
               className: "ThumbnailRejectionNoticeGroup",
-              children: [(0, du.jsx)("div", {
+              children: [(0, ik.jsx)("div", {
                 className: "ThumbnailRejectionNoticeItems",
-                children: yu.map((uu => (0, du.jsxs)("div", {
+                children: Bk.map((kk => (0, ik.jsxs)("div", {
                   className: "ThumbnailRejectionNoticeItem",
-                  children: [(0, du.jsx)("div", {
+                  children: [(0, ik.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemIcon",
-                    children: (0, du.jsx)(Vu.c, {
+                    children: (0, ik.jsx)(sk.d, {
                       name: "image-slash"
                     })
-                  }), (0, du.jsx)("div", {
+                  }), (0, ik.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemDetails",
-                    children: (0, du.jsx)("div", {
+                    children: (0, ik.jsx)("div", {
                       className: "ThumbnailRejectionNoticeItemName",
-                      children: uu.name
+                      children: kk.name
                     })
                   })]
-                }, uu.id)))
-              }), (0, du.jsxs)("div", {
+                }, kk.id)))
+              }), (0, ik.jsxs)("div", {
                 className: "ThumbnailRejectionNoticeGroupReason",
-                children: [Xu("thumbnail:rejectionReason"), " ", Eu ? Xu(Eu.reason) : Ru]
-              }), Eu && (0, du.jsx)("ul", {
+                children: [dk("thumbnail:rejectionReason"), " ", Rk ? dk(Rk.reason) : Fk]
+              }), Rk && (0, ik.jsx)("ul", {
                 className: "ThumbnailRejectionNoticeGroupTips",
-                children: Eu.tips.map((uu => (0, du.jsx)("li", {
-                  children: Xu(uu)
-                }, uu)))
+                children: Rk.tips.map((kk => (0, ik.jsx)("li", {
+                  children: dk(kk)
+                }, kk)))
               })]
-            }, Ru)
+            }, Fk)
           }))
-        }), (0, du.jsxs)("label", {
+        }), (0, ik.jsxs)("label", {
           className: "ThumbnailRejectionNoticeCheckbox",
-          children: [(0, du.jsx)(Du.b, {
-            checked: ru,
-            onChange: uu => Bu(uu.target.checked),
-            disabled: xu
-          }), (0, du.jsx)("span", {
-            children: Xu("thumbnail:haveReadRejectionReasons")
+          children: [(0, ik.jsx)(Nk.c, {
+            checked: Vk,
+            onChange: kk => Jk(kk.target.checked),
+            disabled: Ak
+          }), (0, ik.jsx)("span", {
+            children: dk("thumbnail:haveReadRejectionReasons")
           })]
-        }), (0, du.jsx)(Qu.l, {
+        }), (0, ik.jsx)(ak.o, {
           onClick: async function() {
-            Su(!0);
-            const uu = await Promise.allSettled(Ru.map((uu => Mu.e.deleteSchematicThumbnail(yu, uu.id))));
-            if (!Ku.current) return;
-            const Eu = uu.filter((uu => "rejected" === uu.status));
-            Eu.length > 0 && console.error("Some rejected thumbnails failed to delete:", Eu), mu()
+            ek(!0);
+            const kk = await Promise.allSettled(Fk.map((kk => Hk.b.deleteSchematicThumbnail(Bk, kk.id))));
+            if (!tk.current) return;
+            const Rk = kk.filter((kk => "rejected" === kk.status));
+            Rk.length > 0 && console.error("Some rejected thumbnails failed to delete:", Rk), Xk()
           },
-          disabled: !ru || xu,
+          disabled: !Vk || Ak,
           className: "ThumbnailRejectionNoticeAcceptButton",
-          children: xu ? (0, du.jsx)(Nu.b, {}) : Xu("general:accept")
+          children: Ak ? (0, ik.jsx)(wk.b, {}) : dk("general:accept")
         })]
       })
     }
 
-    function ou(uu) {
+    function jk(kk) {
       let {
-        thumbnailId: Ru,
-        thumbnailName: yu,
-        onClose: Eu
-      } = uu;
+        thumbnailId: Fk,
+        thumbnailName: Bk,
+        onClose: Rk
+      } = kk;
       const {
-        t: Ku
-      } = (0, Ju.E)();
-      return (0, du.jsxs)("div", {
+        t: tk
+      } = (0, bk.x)();
+      return (0, ik.jsxs)("div", {
         className: "ThumbnailDeleteConfirm",
-        children: [(0, du.jsx)("div", {
+        children: [(0, ik.jsx)("div", {
           className: "ThumbnailDeleteConfirmTitle",
-          children: Ku("thumbnail:deleteThumbnail")
-        }), (0, du.jsxs)("div", {
+          children: tk("thumbnail:deleteThumbnail")
+        }), (0, ik.jsxs)("div", {
           className: "ThumbnailDeleteConfirmImageContainer",
-          children: [(0, du.jsx)("img", {
+          children: [(0, ik.jsx)("img", {
             className: "ThumbnailDeleteConfirmImage",
-            src: `${hu.clientSideServerUrls.s3Url}/customThumbnails/${Ru}.jpg`,
+            src: `${Zk.clientSideServerUrls.s3Url}/customThumbnails/${Fk}.jpg`,
             alt: "Thumbnail to delete"
-          }), (0, du.jsx)("div", {
+          }), (0, ik.jsx)("div", {
             className: "ThumbnailGridItemLabel",
-            children: yu
+            children: Bk
           })]
-        }), (0, du.jsx)("div", {
+        }), (0, ik.jsx)("div", {
           className: "ThumbnailDeleteConfirmSubtitle",
-          children: Ku("thumbnail:deleteThumbnailConfirmation")
-        }), (0, du.jsxs)("div", {
+          children: tk("thumbnail:deleteThumbnailConfirmation")
+        }), (0, ik.jsxs)("div", {
           className: "ThumbnailDeleteConfirmButtons",
-          children: [(0, du.jsxs)(Qu.F, {
+          children: [(0, ik.jsxs)(ak.J, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => Eu(!0),
-            children: [(0, du.jsx)(Vu.c, {
+            onClick: () => Rk(!0),
+            children: [(0, ik.jsx)(sk.d, {
               name: "trash-can"
-            }), " ", Ku("general:delete")]
-          }), (0, du.jsx)(Qu.f, {
+            }), " ", tk("general:delete")]
+          }), (0, ik.jsx)(ak.j, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => Eu(!1),
-            children: Ku("general:cancel")
+            onClick: () => Rk(!1),
+            children: tk("general:cancel")
           })]
         })]
       })
     }
-    var qu = yu(2950),
-      Ou = yu(4771),
-      vu = yu(4780),
-      au = yu(4823);
+    var lk = Bk(2954),
+      nk = Bk(4681),
+      Ik = Bk(4686),
+      Qk = Bk(4724);
 
-    function fu(uu) {
+    function kF(kk) {
       let {
-        schematicData: Ru,
-        setTexturePack: yu,
-        initializeTexturePack: Ku,
-        publishFormEnabled: Qu
-      } = uu;
+        schematicData: Fk,
+        setTexturePack: Bk,
+        initializeTexturePack: tk,
+        publishFormEnabled: ak
+      } = kk;
       const {
-        t: mu
-      } = (0, Ju.E)(), [Nu, Xu] = (0, Eu.useState)(null), [Vu, ru] = (0, Eu.useState)(null), [Bu, Su] = (0, Eu.useState)(!1), pu = (0, Iu.b)(), Tu = Qu && !Bu, Wu = Ru.customTexturePackKey;
+        t: Xk
+      } = (0, bk.x)(), [wk, dk] = (0, Rk.useState)(null), [sk, Vk] = (0, Rk.useState)(null), [Jk, ek] = (0, Rk.useState)(!1), yk = (0, uk.d)(), fk = ak && !Jk, mk = Fk.customTexturePackKey;
 
-      function ju(uu) {
-        var Ru;
-        Xu(uu.metaData.id), ru(null !== (Ru = uu.metaData.fromFolderName) && void 0 !== Ru ? Ru : null), (uu.metaData.id !== qu.r.CUSTOM || uu.metaData.fromFolderName) && yu(uu)
+      function Wk(kk) {
+        var Fk;
+        dk(kk.metaData.id), Vk(null !== (Fk = kk.metaData.fromFolderName) && void 0 !== Fk ? Fk : null), (kk.metaData.id !== lk.p.CUSTOM || kk.metaData.fromFolderName) && Bk(kk)
       }
-      return (0, Eu.useEffect)((() => {
-        Wu && (Su(!0), (0, Ou.d)(Wu).then((uu => {
-          var Ru;
-          pu.current && (uu ? (Xu(uu.metaData.id), ru(null !== (Ru = uu.metaData.fromFolderName) && void 0 !== Ru ? Ru : null), Ku(uu)) : console.error(`No texture pack at ${Wu}`))
-        })).catch((uu => {
-          console.error("Error fetching texture pack: ", uu)
+      return (0, Rk.useEffect)((() => {
+        mk && (ek(!0), (0, nk.d)(mk).then((kk => {
+          var Fk;
+          yk.current && (kk ? (dk(kk.metaData.id), Vk(null !== (Fk = kk.metaData.fromFolderName) && void 0 !== Fk ? Fk : null), tk(kk)) : console.error(`No texture pack at ${mk}`))
+        })).catch((kk => {
+          console.error("Error fetching texture pack: ", kk)
         })).finally((() => {
-          Su(!1)
+          ek(!1)
         })))
-      }), [Wu, Ku, pu]), (0, du.jsxs)("div", {
+      }), [mk, tk, yk]), (0, ik.jsxs)("div", {
         className: "BloxdForm TexturePackSection",
-        children: [(0, du.jsx)("div", {
+        children: [(0, ik.jsx)("div", {
           className: "SectionTitle",
-          children: mu("customTexturePack:customTexturePack")
-        }), (0, du.jsxs)("div", {
+          children: Xk("customTexturePack:customTexturePack")
+        }), (0, ik.jsxs)("div", {
           className: "TexturePackList",
-          children: [(0, du.jsx)("div", {
-            className: xu()("TexturePack", {
-              Selected: null === Nu && !Bu,
-              Disabled: !Tu
+          children: [(0, ik.jsx)("div", {
+            className: Ak()("TexturePack", {
+              Selected: null === wk && !Jk,
+              Disabled: !fk
             }),
             onClick: () => {
-              Tu && (Xu(null), yu(null), ru(null))
+              fk && (dk(null), Bk(null), Vk(null))
             },
-            children: (0, du.jsx)("div", {
+            children: (0, ik.jsx)("div", {
               className: "TexturePackName",
               children: "No Override"
             })
-          }), Object.values(qu.r).map((uu => (0, du.jsx)(vu.e, {
-            id: uu,
-            isSelected: uu === Nu,
-            setSelected: ju,
-            disabled: !Tu
-          }, uu)))]
-        }), Nu === qu.r.CUSTOM && (0, du.jsx)(au.d, {
-          folderName: Vu,
-          onTexturePackUpdated: ju,
-          disabled: !Tu,
+          }), Object.values(lk.p).map((kk => (0, ik.jsx)(Ik.f, {
+            id: kk,
+            isSelected: kk === wk,
+            setSelected: Wk,
+            disabled: !fk
+          }, kk)))]
+        }), wk === lk.p.CUSTOM && (0, ik.jsx)(Qk.d, {
+          folderName: sk,
+          onTexturePackUpdated: Wk,
+          disabled: !fk,
           maxFileSizeMb: 25,
           packOwner: "customGame"
         })]
       })
     }
-    var uR = yu(4841);
+    var FF = Bk(4735);
 
-    function RR(uu) {
-      var Ru;
+    function BF(kk) {
+      var Fk;
       let {
-        gameCategory: yu,
-        setGameCategory: Eu,
-        disabled: Ku
-      } = uu;
-      const mu = null !== (Ru = (0, Su.ib)(yu)) && void 0 !== Ru ? Ru : "other";
-      return (0, du.jsxs)("div", {
+        gameCategory: Bk,
+        setGameCategory: Rk,
+        disabled: tk
+      } = kk;
+      const Xk = null !== (Fk = (0, ek.db)(Bk)) && void 0 !== Fk ? Fk : "other";
+      return (0, ik.jsxs)("div", {
         className: "GameCategoryPicker",
-        children: [(0, du.jsx)(Wu.c, {
+        children: [(0, ik.jsx)(mk.f, {
           label: "worldBuilder:gameCategoryGroup",
           className: "GameCategoryGroup",
-          disabled: Ku,
-          children: (0, du.jsx)(ju.d, {
-            options: Su._.map((uu => ({
-              value: uu,
-              label: Su.Y[uu]
+          disabled: tk,
+          children: (0, ik.jsx)(Wk.c, {
+            options: ek.V.map((kk => ({
+              value: kk,
+              label: ek.R[kk]
             }))),
-            value: mu,
-            onChange: uu => {
-              uu.value !== mu && Eu(Su.R[uu.value][0])
+            value: Xk,
+            onChange: kk => {
+              kk.value !== Xk && Rk(ek.M[kk.value][0])
             }
           })
-        }), (0, du.jsx)(Wu.c, {
+        }), (0, ik.jsx)(mk.f, {
           label: "worldBuilder:gameCategory",
           className: "GameCategory",
-          disabled: Ku,
-          children: (0, du.jsx)("div", {
+          disabled: tk,
+          children: (0, ik.jsx)("div", {
             className: "GameCategoryOptions",
-            children: Su.R[mu].map((uu => (0, du.jsx)(Qu.P, {
-              active: uu === yu,
+            children: ek.M[Xk].map((kk => (0, ik.jsx)(ak.O, {
+              active: kk === Bk,
               onClick: () => {
-                Eu(uu)
+                Rk(kk)
               },
-              children: (0, Su.hb)(uu)
-            }, uu)))
+              children: (0, ek.cb)(kk)
+            }, kk)))
           })
         })]
       })
     }
 
-    function yR(uu) {
+    function RF(kk) {
       let {
-        editor: Ru,
-        onClose: yu
-      } = uu;
+        editor: Fk,
+        onClose: Bk
+      } = kk;
       const {
-        t: Eu
-      } = (0, Ju.E)(), {
-        schematicData: Ku,
-        updateSchematicData: Qu,
-        publishFormEnabled: Nu,
-        formEnabled: Xu
-      } = Ru;
-      return (0, du.jsxs)(du.Fragment, {
-        children: [(0, du.jsxs)(bu, {
+        t: Rk
+      } = (0, bk.x)(), {
+        schematicData: tk,
+        updateSchematicData: ak,
+        publishFormEnabled: wk,
+        formEnabled: dk
+      } = Fk;
+      return (0, ik.jsxs)(ik.Fragment, {
+        children: [(0, ik.jsxs)(Yk, {
           icon: "pen-to-square",
-          title: Eu("worldBuilder:basicsSection"),
-          disabled: !Xu,
-          children: [(0, du.jsx)(Cu, {
-            label: Eu("general:name"),
-            caption: Eu("worldBuilder:schematicNameTagsHint"),
-            children: (0, du.jsx)(mu.b, {
+          title: Rk("worldBuilder:basicsSection"),
+          disabled: !dk,
+          children: [(0, ik.jsx)(Lk, {
+            label: Rk("general:name"),
+            caption: Rk("worldBuilder:schematicNameTagsHint"),
+            children: (0, ik.jsx)(Xk.e, {
               className: "SchematicPageName",
-              defaultValue: Ku.name,
-              onValueChange: uu => Qu("name", uu),
-              placeholderText: Eu("worldBuilder:schematicNamePlaceholder"),
-              maxLength: ru.pb
+              defaultValue: tk.name,
+              onValueChange: kk => ak("name", kk),
+              placeholderText: Rk("worldBuilder:schematicNamePlaceholder"),
+              maxLength: Vk.rb
             })
-          }), (0, du.jsx)(Cu, {
-            label: Eu("general:description"),
-            children: (0, du.jsx)(mu.b, {
+          }), (0, ik.jsx)(Lk, {
+            label: Rk("general:description"),
+            children: (0, ik.jsx)(Xk.e, {
               className: "SchematicPageDescription",
               useTextarea: !0,
-              defaultValue: Ku.description,
-              onValueChange: uu => Qu("description", uu),
-              placeholderText: Eu("worldBuilder:schematicDescriptionPlaceholder"),
-              maxLength: ru.nb
+              defaultValue: tk.description,
+              onValueChange: kk => ak("description", kk),
+              placeholderText: Rk("worldBuilder:schematicDescriptionPlaceholder"),
+              maxLength: Vk.nb
             })
-          }), (0, du.jsx)(RR, {
-            gameCategory: Ku.gameCategory,
-            setGameCategory: uu => Qu("gameCategory", uu),
-            disabled: !Nu
-          }), !0 === Ku.gamePublished && (0, du.jsx)(iu, {
-            schematicData: Ku,
-            updateSchematicData: Qu,
-            publishFormEnabled: Nu,
+          }), (0, ik.jsx)(BF, {
+            gameCategory: tk.gameCategory,
+            setGameCategory: kk => ak("gameCategory", kk),
+            disabled: !wk
+          }), !0 === tk.gamePublished && (0, ik.jsx)(Kk, {
+            schematicData: tk,
+            updateSchematicData: ak,
+            publishFormEnabled: wk,
             onClose: function() {
-              null === yu || void 0 === yu || yu()
+              null === Bk || void 0 === Bk || Bk()
             }
           })]
-        }), (0, du.jsx)(eu, {
-          schematicData: Ku,
-          updateSchematicData: Qu,
-          publishFormEnabled: Nu,
-          formEnabled: Xu
-        }), !0 === Ku.gamePublished && (0, du.jsx)(bu, {
+        }), (0, ik.jsx)(Ek, {
+          schematicData: tk,
+          updateSchematicData: ak,
+          publishFormEnabled: wk,
+          formEnabled: dk
+        }), !0 === tk.gamePublished && (0, ik.jsx)(Yk, {
           icon: "palette",
-          title: Eu("worldBuilder:texturePackSection"),
-          disabled: !Xu,
-          children: (0, du.jsx)(fu, {
-            schematicData: Ku,
-            setTexturePack: Ru.setTexturePack,
-            initializeTexturePack: Ru.initializeTexturePack,
-            publishFormEnabled: Nu
+          title: Rk("worldBuilder:texturePackSection"),
+          disabled: !dk,
+          children: (0, ik.jsx)(kF, {
+            schematicData: tk,
+            setTexturePack: Fk.setTexturePack,
+            initializeTexturePack: Fk.initializeTexturePack,
+            publishFormEnabled: wk
           })
         })]
       })
     }
 
-    function ER(uu) {
+    function tF(kk) {
       let {
-        editor: Ru
-      } = uu;
+        editor: Fk
+      } = kk;
       const {
-        t: yu
-      } = (0, Ju.E)(), {
-        schematicData: Eu,
-        formEnabled: Ku,
-        hasUnsavedChanges: mu
-      } = Ru, ru = Ku && mu;
-      return (0, du.jsxs)("footer", {
+        t: Bk
+      } = (0, bk.x)(), {
+        schematicData: Rk,
+        formEnabled: tk,
+        hasUnsavedChanges: Xk
+      } = Fk, Vk = tk && Xk;
+      return (0, ik.jsxs)("footer", {
         className: "SchematicPageFooter",
-        children: [Ku && mu && (0, du.jsxs)("div", {
+        children: [tk && Xk && (0, ik.jsxs)("div", {
           className: "SchematicPageFooterStatus",
-          children: [(0, du.jsx)("span", {
+          children: [(0, ik.jsx)("span", {
             className: "SchematicPageFooterStatusDot"
-          }), yu("worldBuilder:unsavedChanges")]
-        }), (0, du.jsx)(Xu.i, {
-          tooltipInner: (0, du.jsx)("div", {
+          }), Bk("worldBuilder:unsavedChanges")]
+        }), (0, ik.jsx)(dk.d, {
+          tooltipInner: (0, ik.jsx)("div", {
             className: "SaveButtonTooltip",
-            children: yu(Ku && !mu ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
+            children: Bk(tk && !Xk ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
           }),
-          children: (0, du.jsxs)(Qu.e, {
+          children: (0, ik.jsxs)(ak.g, {
             className: "SaveChangesButton",
-            onClick: () => Ru.saveSchematic(Eu.gamePublished),
-            disabled: !ru,
-            children: [(0, du.jsxs)("span", {
-              className: Ku ? "" : "SaveChangesButtonBodyHidden",
-              children: [(0, du.jsx)(Vu.c, {
+            onClick: () => Fk.saveSchematic(Rk.gamePublished),
+            disabled: !Vk,
+            children: [(0, ik.jsxs)("span", {
+              className: tk ? "" : "SaveChangesButtonBodyHidden",
+              children: [(0, ik.jsx)(sk.d, {
                 name: "wrench"
-              }), " ", yu("worldBuilder:saveChanges")]
-            }), !Ku && (0, du.jsx)(Nu.b, {})]
+              }), " ", Bk("worldBuilder:saveChanges")]
+            }), !tk && (0, ik.jsx)(wk.b, {})]
           })
         })]
       })
     }
 
-    function KR(uu) {
+    function aF(kk) {
       let {
-        schematic: Ru,
-        onSchematicUpdate: yu,
-        onClose: Ku,
-        inSourceWorld: mu
-      } = uu;
+        schematic: Fk,
+        onSchematicUpdate: Bk,
+        onClose: tk,
+        inSourceWorld: Xk
+      } = kk;
       const {
-        t: Nu
-      } = (0, Ju.E)();
+        t: wk
+      } = (0, bk.x)();
 
-      function Xu() {
-        null === Ku || void 0 === Ku || Ku()
+      function dk() {
+        null === tk || void 0 === tk || tk()
       }
-      const Vu = (0, uR.b)(Ru, {
-        onNavigateAway: Xu,
-        inSourceWorld: mu
+      const sk = (0, FF.c)(Fk, {
+        onNavigateAway: dk,
+        inSourceWorld: Xk
       });
-      return (0, Eu.useEffect)((() => {
-        null === yu || void 0 === yu || yu(Vu.schematicData)
-      }), [Vu.schematicData, yu]), (0, du.jsxs)("div", {
+      return (0, Rk.useEffect)((() => {
+        null === Bk || void 0 === Bk || Bk(sk.schematicData)
+      }), [sk.schematicData, Bk]), (0, ik.jsxs)("div", {
         className: "SchematicPage SchematicPagePopupVariant",
-        children: [(0, du.jsxs)("div", {
+        children: [(0, ik.jsxs)("div", {
           className: "SchematicPageBody",
-          children: [(0, du.jsx)(Qu.b, {
-            onClick: Xu,
-            children: Nu("worldBuilder:back")
-          }), (0, du.jsx)(bu, {
+          children: [(0, ik.jsx)(ak.c, {
+            onClick: dk,
+            children: wk("worldBuilder:back")
+          }), (0, ik.jsx)(Yk, {
             icon: "rocket-launch",
-            title: Nu("worldBuilder:actionsSection"),
-            disabled: !Vu.formEnabled,
-            children: (0, du.jsx)(Au.e, {
-              editor: Vu
+            title: wk("worldBuilder:actionsSection"),
+            disabled: !sk.formEnabled,
+            children: (0, ik.jsx)(Sk.e, {
+              editor: sk
             })
-          }), (0, du.jsx)(yR, {
-            editor: Vu,
-            onClose: Xu
+          }), (0, ik.jsx)(RF, {
+            editor: sk,
+            onClose: dk
           })]
-        }), (0, du.jsx)(ER, {
-          editor: Vu
+        }), (0, ik.jsx)(tF, {
+          editor: sk
         })]
       })
     }
 
-    function QR(uu) {
+    function XF(kk) {
       let {
-        schematic: Ru,
-        onSchematicUpdate: yu,
-        onClose: Eu,
-        inSourceWorld: Qu
-      } = uu;
-      Ku.NotificationProvider.showCustomPopup({
-        body: uu => (0, du.jsx)(KR, {
-          schematic: Ru,
-          onSchematicUpdate: yu,
-          onClose: uu,
-          inSourceWorld: Qu
+        schematic: Fk,
+        onSchematicUpdate: Bk,
+        onClose: Rk,
+        inSourceWorld: ak
+      } = kk;
+      tk.NotificationProvider.showCustomPopup({
+        body: kk => (0, ik.jsx)(aF, {
+          schematic: Fk,
+          onSchematicUpdate: Bk,
+          onClose: kk,
+          inSourceWorld: ak
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: Eu,
+        onClose: Rk,
         unlockPointerKey: "schematicPagePopup"
       })
     }
   },
-  4737: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => ru
+  4655: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Vk
     });
-    var Eu = yu(1035),
-      Ku = yu.n(Eu),
-      Qu = yu(1170),
-      mu = yu(1043),
-      Ju = yu(1408),
-      Nu = yu(1325),
-      Xu = yu(1300),
-      Vu = yu(1079);
+    var Rk = Bk(1020),
+      tk = Bk.n(Rk),
+      ak = Bk(1149),
+      Xk = Bk(1028),
+      bk = Bk(1389),
+      wk = Bk(1312),
+      dk = Bk(1288),
+      sk = Bk(1069);
 
-    function ru(uu) {
+    function Vk(kk) {
       let {
-        editor: Ru,
-        className: yu
-      } = uu;
+        editor: Fk,
+        className: Bk
+      } = kk;
       const {
-        t: Eu
-      } = (0, Qu.E)(), {
-        schematicData: ru,
-        formEnabled: Bu,
-        publishFormEnabled: xu
-      } = Ru, Su = !Bu || !xu;
-      return (0, Vu.jsxs)("div", {
-        className: Ku()("PublishButtonContainer", yu),
-        children: [Ru.canEditSourceWorld && (0, Vu.jsxs)(Ju.e, {
-          onClick: Ru.editSourceWorld,
-          disabled: Su,
-          children: [(0, Vu.jsx)(mu.c, {
+        t: Rk
+      } = (0, ak.x)(), {
+        schematicData: Vk,
+        formEnabled: Jk,
+        publishFormEnabled: Ak
+      } = Fk, ek = !Jk || !Ak;
+      return (0, sk.jsxs)("div", {
+        className: tk()("PublishButtonContainer", Bk),
+        children: [Fk.canEditSourceWorld && (0, sk.jsxs)(bk.g, {
+          onClick: Fk.editSourceWorld,
+          disabled: ek,
+          children: [(0, sk.jsx)(Xk.d, {
             name: "edit"
-          }), " ", Eu("worldBuilder:editSourceWorld")]
-        }), !ru.gamePublished && (0, Vu.jsx)(Nu.i, {
-          tooltipInner: (0, Vu.jsx)("div", {
+          }), " ", Rk("worldBuilder:editSourceWorld")]
+        }), !Vk.gamePublished && (0, sk.jsx)(wk.d, {
+          tooltipInner: (0, sk.jsx)("div", {
             className: "PublishButtonTooltip",
-            children: Eu("worldBuilder:publishAsGameDescription")
+            children: Rk("worldBuilder:publishAsGameDescription")
           }),
-          children: (0, Vu.jsxs)(Ju.l, {
-            onClick: () => Ru.saveSchematic(!0),
-            disabled: Su,
-            children: [(0, Vu.jsx)(mu.c, {
+          children: (0, sk.jsxs)(bk.o, {
+            onClick: () => Fk.saveSchematic(!0),
+            disabled: ek,
+            children: [(0, sk.jsx)(Xk.d, {
               name: "rocket-launch"
-            }), " ", Eu("worldBuilder:publishAsGame"), " ", (0, Vu.jsx)(mu.c, {
+            }), " ", Rk("worldBuilder:publishAsGame"), " ", (0, sk.jsx)(Xk.d, {
               name: "info-circle"
             })]
           })
-        }), !0 === ru.gamePublished && (0, Vu.jsxs)(Vu.Fragment, {
-          children: [(0, Vu.jsx)(Nu.i, {
-            tooltipInner: (0, Vu.jsx)("div", {
+        }), !0 === Vk.gamePublished && (0, sk.jsxs)(sk.Fragment, {
+          children: [(0, sk.jsx)(wk.d, {
+            tooltipInner: (0, sk.jsx)("div", {
               className: "PublishButtonTooltip",
-              children: Eu("worldBuilder:unpublishAsGameDescription")
+              children: Rk("worldBuilder:unpublishAsGameDescription")
             }),
-            children: (0, Vu.jsxs)(Ju.F, {
-              onClick: Ru.unpublishSchematic,
-              disabled: Su,
-              children: [(0, Vu.jsx)(mu.c, {
+            children: (0, sk.jsxs)(bk.J, {
+              onClick: Fk.unpublishSchematic,
+              disabled: ek,
+              children: [(0, sk.jsx)(Xk.d, {
                 name: "rocket-launch"
-              }), " ", Eu("worldBuilder:unpublishAsGame"), " ", (0, Vu.jsx)(mu.c, {
+              }), " ", Rk("worldBuilder:unpublishAsGame"), " ", (0, sk.jsx)(Xk.d, {
                 name: "info-circle"
               })]
             })
-          }), (0, Vu.jsxs)(Ju.e, {
-            onClick: Ru.playGame,
-            disabled: Su,
-            children: [(0, Vu.jsx)(mu.c, {
+          }), (0, sk.jsxs)(bk.g, {
+            onClick: Fk.playGame,
+            disabled: ek,
+            children: [(0, sk.jsx)(Xk.d, {
               name: "joystick"
-            }), " ", Eu("general:playGame")]
+            }), " ", Rk("general:playGame")]
           })]
-        }), !Bu && (0, Vu.jsx)(Xu.b, {
+        }), !Jk && (0, sk.jsx)(dk.b, {
           loaderType: "Secondary"
         })]
       })
     }
   },
-  4771: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ku
+  4681: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => tk
     });
-    var Eu = yu(1176);
-    async function Ku(uu) {
-      const Ru = await fetch(`${Eu.clientSideServerUrls.s3Url}/${uu}`, {
+    var Rk = Bk(1154);
+    async function tk(kk) {
+      const Fk = await fetch(`${Rk.clientSideServerUrls.s3Url}/${kk}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === Ru.status || 403 === Ru.status) return null;
-      if (!Ru.ok) throw new Error(`Failed to download the texture pack (${Ru.status})`);
-      return await Ru.json()
+      if (404 === Fk.status || 403 === Fk.status) return null;
+      if (!Fk.ok) throw new Error(`Failed to download the texture pack (${Fk.status})`);
+      return await Fk.json()
     }
   },
-  4841: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Tu
+  4735: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => fk
     });
-    var Eu = yu(64),
-      Ku = yu(1289),
-      Qu = yu(1001),
-      mu = yu(174),
-      Ju = yu(1499),
-      Nu = yu(27),
-      Xu = yu(1855),
-      Vu = yu(1447),
-      ru = yu(4362),
-      Bu = yu(1311),
-      xu = yu(1107),
-      Su = yu(1467);
+    var Rk = Bk(61),
+      tk = Bk(1273),
+      ak = Bk(994),
+      Xk = Bk(152),
+      bk = Bk(1490),
+      wk = Bk(22),
+      dk = Bk(1847),
+      sk = Bk(1441),
+      Vk = Bk(4324),
+      Jk = Bk(1300),
+      Ak = Bk(1096),
+      ek = Bk(1459);
 
-    function pu(uu, Ru) {
+    function yk(kk, Fk) {
       return {
-        schematicId: uu.schematicId,
-        name: uu.name,
-        description: uu.description,
-        gamePublished: Ru,
-        gameCategory: uu.gameCategory,
-        defaultGamemode: uu.defaultGamemode,
-        voidDeathHeight: uu.voidDeathHeight,
-        disableKeepInventory: uu.disableKeepInventory,
-        disableTpRequests: uu.disableTpRequests,
-        disableLobbySpawn: uu.disableLobbySpawn,
-        disableMobs: uu.disableMobs,
-        disableSpawnProtection: uu.disableSpawnProtection,
-        disableFallDamage: uu.disableFallDamage,
-        worldBorder: uu.worldBorder,
-        hideLobbyCode: uu.hideLobbyCode,
-        enableSmpMarketplace: uu.enableSmpMarketplace,
-        enableSurvivalGuns: uu.enableSurvivalGuns,
-        enableSpawnReset: uu.enableSpawnReset,
-        enableDayNight: uu.enableDayNight,
-        persistWorld: uu.persistWorld,
-        persistInventory: uu.persistInventory
+        schematicId: kk.schematicId,
+        name: kk.name,
+        description: kk.description,
+        gamePublished: Fk,
+        gameCategory: kk.gameCategory,
+        defaultGamemode: kk.defaultGamemode,
+        voidDeathHeight: kk.voidDeathHeight,
+        disableKeepInventory: kk.disableKeepInventory,
+        disableTpRequests: kk.disableTpRequests,
+        disableLobbySpawn: kk.disableLobbySpawn,
+        disableMobs: kk.disableMobs,
+        disableSpawnProtection: kk.disableSpawnProtection,
+        disableFallDamage: kk.disableFallDamage,
+        worldBorder: kk.worldBorder,
+        hideLobbyCode: kk.hideLobbyCode,
+        enableSmpMarketplace: kk.enableSmpMarketplace,
+        enableSurvivalGuns: kk.enableSurvivalGuns,
+        enableSpawnReset: kk.enableSpawnReset,
+        enableDayNight: kk.enableDayNight,
+        persistWorld: kk.persistWorld,
+        persistInventory: kk.persistInventory
       }
     }
 
-    function Tu(uu) {
+    function fk(kk) {
       let {
-        onNavigateAway: Ru,
-        inSourceWorld: yu = !1
+        onNavigateAway: Fk,
+        inSourceWorld: Bk = !1
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
       const {
-        userContext: Tu
-      } = (0, xu.d)(), Wu = (0, Su.useNavigatePreserveSearch)(), [ju, Hu] = (0, Eu.useState)({
-        ...uu
-      }), [du, bu] = (0, Eu.useState)("Enter"), [Cu, ku] = (0, Eu.useState)(void 0), eu = (0, Eu.useRef)(pu(uu, uu.gamePublished)), Au = (0, Eu.useRef)(void 0), Du = "Enter" === du, Mu = Tu.playerHasRank("developer") || Tu.playerHasRank("admin") || "Enter" === du && !1 !== ju.schematicContainsSpawnBlock, Iu = void 0 !== Cu && Cu !== Au.current || JSON.stringify(pu(ju, ju.gamePublished)) !== JSON.stringify(eu.current);
+        userContext: fk
+      } = (0, Ak.e)(), mk = (0, ek.useNavigatePreserveSearch)(), [Wk, vk] = (0, Rk.useState)({
+        ...kk
+      }), [ik, Yk] = (0, Rk.useState)("Enter"), [Lk, Ok] = (0, Rk.useState)(void 0), Ek = (0, Rk.useRef)(yk(kk, kk.gamePublished)), Sk = (0, Rk.useRef)(void 0), Nk = "Enter" === ik, Hk = fk.playerHasRank("developer") || fk.playerHasRank("admin") || "Enter" === ik && !1 !== Wk.schematicContainsSpawnBlock, uk = void 0 !== Lk && Lk !== Sk.current || JSON.stringify(yk(Wk, Wk.gamePublished)) !== JSON.stringify(Ek.current);
 
-      function Gu(uu, Ru) {
-        Hu((yu => ({
-          ...yu,
-          [uu]: Ru
+      function Mk(kk, Fk) {
+        vk((Bk => ({
+          ...Bk,
+          [kk]: Fk
         })))
       }
-      const Uu = (0, Eu.useCallback)((uu => {
-        Au.current = uu, ku(uu)
+      const gk = (0, Rk.useCallback)((kk => {
+        Sk.current = kk, Ok(kk)
       }), []);
 
-      function nu(uu) {
-        bu("Loading");
-        const Ru = pu(ju, uu),
-          yu = Cu !== Au.current ? Cu : void 0;
-        Vu.e.updateSchematic(Tu, Ru, yu).then((yu => {
+      function Uk(kk) {
+        Yk("Loading");
+        const Fk = yk(Wk, kk),
+          Bk = Lk !== Sk.current ? Lk : void 0;
+        sk.b.updateSchematic(fk, Fk, Bk).then((Bk => {
           let {
-            customTexturePackKey: Eu
-          } = yu;
-          bu("Success"), Gu("customTexturePackKey", Eu), eu.current = Ru, Au.current = void 0, ku(void 0), setTimeout((() => {
-            Gu("gamePublished", uu), bu("Enter")
+            customTexturePackKey: Rk
+          } = Bk;
+          Yk("Success"), Mk("customTexturePackKey", Rk), Ek.current = Fk, Sk.current = void 0, Ok(void 0), setTimeout((() => {
+            Mk("gamePublished", kk), Yk("Enter")
           }), 1e3)
-        })).catch((uu => {
-          var Ru;
-          (console.error("Failed to save schematic:", uu), bu("Error"), uu instanceof mu.e && uu.errorMessageForUser) && Bu.NotificationProvider.showAlertPopup({
+        })).catch((kk => {
+          var Fk;
+          (console.error("Failed to save schematic:", kk), Yk("Error"), kk instanceof Xk.c && kk.errorMessageForUser) && Jk.NotificationProvider.showAlertPopup({
             title: "worldBuilder:changesNotSaved",
-            subtitle: uu.errorMessageForUser,
+            subtitle: kk.errorMessageForUser,
             textOpts: {
-              subtitle: null !== (Ru = uu.errorMessageTranslationParams) && void 0 !== Ru ? Ru : void 0
+              subtitle: null !== (Fk = kk.errorMessageTranslationParams) && void 0 !== Fk ? Fk : void 0
             },
             confirmText: "general:ok"
           });
           setTimeout((() => {
-            bu("Enter")
+            Yk("Enter")
           }), 1e3)
         }))
       }
       return {
-        schematicData: ju,
-        updateSchematicData: Gu,
-        setTexturePack: ku,
-        initializeTexturePack: Uu,
-        updateState: du,
-        formEnabled: Du,
-        publishFormEnabled: Mu,
-        hasUnsavedChanges: Iu,
-        canEditSourceWorld: !yu,
-        saveSchematic: nu,
+        schematicData: Wk,
+        updateSchematicData: Mk,
+        setTexturePack: Ok,
+        initializeTexturePack: gk,
+        updateState: ik,
+        formEnabled: Nk,
+        publishFormEnabled: Hk,
+        hasUnsavedChanges: uk,
+        canEditSourceWorld: !Bk,
+        saveSchematic: Uk,
         unpublishSchematic: function() {
-          Bu.NotificationProvider.showPromptPopup({
+          Jk.NotificationProvider.showPromptPopup({
             icon: "rocket-launch",
             title: "worldBuilder:unpublishAsGameConfirmTitle",
             subtitle: "worldBuilder:unpublishAsGameConfirmSubtitle",
             confirmText: "worldBuilder:unpublishAsGame",
             cancelText: "general:cancel",
             unlockPointerKey: "unpublishGamePrompt"
-          }).getResult().then((uu => {
-            !0 === uu && nu(!1)
+          }).getResult().then((kk => {
+            !0 === kk && Uk(!1)
           }))
         },
         editSourceWorld: function() {
-          bu("Loading"), ru.e.getSourceWorld(ju.schematicId).then((uu => {
-            Xu.gameBridge.send("leaveGame", {
+          Yk("Loading"), Vk.c.getSourceWorld(Wk.schematicId).then((kk => {
+            dk.gameBridge.send("leaveGame", {
               reloadPath: "/"
-            }), (0, Nu.i)("other"), Wu((0, Ku.b)("classic", uu)), null === Ru || void 0 === Ru || Ru()
-          })).catch((uu => {
-            console.error("Failed to get source world:", uu), bu("Error"), setTimeout((() => {
-              bu("Enter")
+            }), (0, wk.f)("other"), mk((0, tk.b)("classic", kk)), null === Fk || void 0 === Fk || Fk()
+          })).catch((kk => {
+            console.error("Failed to get source world:", kk), Yk("Error"), setTimeout((() => {
+              Yk("Enter")
             }), 1e3)
           }))
         },
         playGame: function() {
-          Xu.gameBridge.send("leaveGame", {
+          dk.gameBridge.send("leaveGame", {
             reloadPath: "/"
-          }), Wu((0, Ju.y)((0, Qu.t)(ju.schematicId), ju)), null === Ru || void 0 === Ru || Ru()
+          }), mk((0, bk.y)((0, ak.C)(Wk.schematicId), Wk)), null === Fk || void 0 === Fk || Fk()
         }
       }
     }
   },
-  4725: () => {}
+  4645: () => {}
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

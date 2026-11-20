@@ -1,272 +1,272 @@
 export const id = 75;
 export const ids = [75, 91];
 export const modules = {
-    4598: (uu, Ru, yu) => {
-      yu.d(Ru, {
-        b: () => Tu,
-        e: () => Wu
+    4559: (kk, Fk, Bk) => {
+      Bk.d(Fk, {
+        d: () => fk,
+        f: () => mk
       });
-      var Eu = yu(1035),
-        Ku = yu.n(Eu),
-        Qu = yu(64),
-        mu = yu(1170),
-        Ju = yu(4604),
-        Nu = yu(1825),
-        Xu = yu(2335),
-        Vu = yu(4611),
-        ru = yu(1079);
-      const Bu = new WeakMap;
-      let xu = 0;
+      var Rk = Bk(1020),
+        tk = Bk.n(Rk),
+        ak = Bk(61),
+        Xk = Bk(1149),
+        bk = Bk(4566),
+        wk = Bk(1812),
+        dk = Bk(2320),
+        sk = Bk(4568),
+        Vk = Bk(1069);
+      const Jk = new WeakMap;
+      let Ak = 0;
 
-      function Su(uu) {
-        let Ru = Bu.get(uu);
-        return void 0 === Ru && (Ru = xu++, Bu.set(uu, Ru)), Ru
+      function ek(kk) {
+        let Fk = Jk.get(kk);
+        return void 0 === Fk && (Fk = Ak++, Jk.set(kk, Fk)), Fk
       }
 
-      function pu(uu) {
+      function yk(kk) {
         let {
-          piece: Ru
-        } = uu;
-        return "space" === Ru.kind ? (0, ru.jsx)(ru.Fragment, {
-          children: Ru.text
-        }) : (0, ru.jsx)("span", {
+          piece: Fk
+        } = kk;
+        return "space" === Fk.kind ? (0, Vk.jsx)(Vk.Fragment, {
+          children: Fk.text
+        }) : (0, Vk.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${Ru.delayMs}ms`
+            "--word-delay": `${Fk.delayMs}ms`
           },
-          children: (0, ru.jsx)(Ju.c, {
-            text: "icon" === Ru.kind ? `[[${Ru.icon}]]` : Ru.text
+          children: (0, Vk.jsx)(bk.c, {
+            text: "icon" === Fk.kind ? `[[${Fk.icon}]]` : Fk.text
           })
         })
       }
 
-      function Tu(uu) {
+      function fk(kk) {
         let {
-          display: Ru
-        } = uu;
+          display: Fk
+        } = kk;
         const {
-          selectedLanguage: yu
-        } = (0, mu.E)(), Eu = (0, Qu.useMemo)((() => (0, Vu.d)((0, Vu.g)(Ru).plan.pieces)), [Ru, yu.code]);
-        return (0, ru.jsxs)("div", {
-          className: Ku()("Dialogue", {
-            DialogueAnimateIn: !1 !== Ru.animateIn
+          selectedLanguage: Bk
+        } = (0, Xk.x)(), Rk = (0, ak.useMemo)((() => (0, sk.e)((0, sk.h)(Fk).plan.pieces)), [Fk, Bk.code]);
+        return (0, Vk.jsxs)("div", {
+          className: tk()("Dialogue", {
+            DialogueAnimateIn: !1 !== Fk.animateIn
           }),
-          children: [Ru.speakerName && (0, ru.jsx)(Nu.d, {
-            text: Ru.speakerName,
+          children: [Fk.speakerName && (0, Vk.jsx)(wk.d, {
+            text: Fk.speakerName,
             className: "DialogueSpeaker"
-          }), (0, ru.jsx)("p", {
+          }), (0, Vk.jsx)("p", {
             className: "DialogueLine",
-            children: Eu.map(((uu, Ru) => 1 === uu.length && "space" === uu[0].kind ? uu[0].text : (0, ru.jsx)("span", {
+            children: Rk.map(((kk, Fk) => 1 === kk.length && "space" === kk[0].kind ? kk[0].text : (0, Vk.jsx)("span", {
               className: "DialogueGlue",
-              children: uu.map(((uu, Ru) => (0, ru.jsx)(pu, {
-                piece: uu
-              }, Ru)))
-            }, Ru)))
+              children: kk.map(((kk, Fk) => (0, Vk.jsx)(yk, {
+                piece: kk
+              }, Fk)))
+            }, Fk)))
           })]
         })
       }
-      const Wu = (0, Qu.memo)((function() {
-        const uu = (0, Xu.g)("dialogue");
-        return (0, ru.jsx)("div", {
+      const mk = (0, ak.memo)((function() {
+        const kk = (0, dk.j)("dialogue");
+        return (0, Vk.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: uu && (0, ru.jsx)(Tu, {
-            display: uu
-          }, Su(uu))
+          children: kk && (0, Vk.jsx)(fk, {
+            display: kk
+          }, ek(kk))
         })
       }))
     },
-    4475: (uu, Ru, yu) => {
-        yu.r(Ru), yu.d(Ru, {
-          default: () => aQ
+    4433: (kk, Fk, Bk) => {
+        Bk.r(Fk), Bk.d(Fk, {
+          default: () => kX
         });
-        var Eu = yu(64),
-          Ku = yu(1035),
-          Qu = yu.n(Ku),
-          mu = yu(1476),
-          Ju = yu(1483),
-          Nu = yu(27),
-          Xu = yu(80),
-          Vu = yu(4484),
-          ru = yu(4499),
-          Bu = yu(4507),
-          xu = yu(4134),
-          Su = yu(1079);
-        const pu = "/textures/docs/icons";
+        var Rk = Bk(61),
+          tk = Bk(1020),
+          ak = Bk.n(tk),
+          Xk = Bk(1467),
+          bk = Bk(1473),
+          wk = Bk(22),
+          dk = Bk(67),
+          sk = Bk(4437),
+          Vk = Bk(4445),
+          Jk = Bk(4452),
+          Ak = Bk(4115),
+          ek = Bk(1069);
+        const yk = "/textures/docs/icons";
 
-        function Tu(uu) {
+        function fk(kk) {
           let {
-            name: Ru,
-            isTinted: yu,
-            className: Eu,
-            style: Ku
-          } = uu;
-          const mu = `${pu}/${Ru}.png`;
-          return yu ? (0, Su.jsxs)("span", {
-            className: Qu()("DocsPixelIcon", "Tinted", Eu),
+            name: Fk,
+            isTinted: Bk,
+            className: Rk,
+            style: tk
+          } = kk;
+          const Xk = `${yk}/${Fk}.png`;
+          return Bk ? (0, ek.jsxs)("span", {
+            className: ak()("DocsPixelIcon", "Tinted", Rk),
             "aria-hidden": "true",
-            style: Ku,
-            children: [(0, Su.jsx)("span", {
+            style: tk,
+            children: [(0, ek.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${mu}")`,
-                WebkitMaskImage: `url("${mu}")`
+                maskImage: `url("${Xk}")`,
+                WebkitMaskImage: `url("${Xk}")`
               }
-            }), (0, Su.jsx)("img", {
-              src: mu,
+            }), (0, ek.jsx)("img", {
+              src: Xk,
               alt: ""
             })]
-          }) : (0, Su.jsx)("img", {
-            className: Qu()("DocsPixelIcon", Eu),
-            src: mu,
+          }) : (0, ek.jsx)("img", {
+            className: ak()("DocsPixelIcon", Rk),
+            src: Xk,
             alt: "",
             "aria-hidden": "true",
-            style: Ku
+            style: tk
           })
         }
-        const Wu = 1500;
+        const mk = 1500;
 
-        function ju() {
-          const [uu, Ru] = (0, Eu.useState)(null);
-          (0, Eu.useEffect)((() => {
-            if (null === uu) return;
-            const yu = setTimeout((() => {
-              Ru(null)
-            }), Wu);
+        function Wk() {
+          const [kk, Fk] = (0, Rk.useState)(null);
+          (0, Rk.useEffect)((() => {
+            if (null === kk) return;
+            const Bk = setTimeout((() => {
+              Fk(null)
+            }), mk);
             return () => {
-              clearTimeout(yu)
+              clearTimeout(Bk)
             }
-          }), [uu]);
-          return [uu, uu => {
-            (0, xu.c)(uu).then((() => {
-              Ru({
-                text: uu,
+          }), [kk]);
+          return [kk, kk => {
+            (0, Ak.c)(kk).then((() => {
+              Fk({
+                text: kk,
                 failed: !1
               })
-            }), (yu => {
-              console.error("Could not copy to the clipboard", yu), Ru({
-                text: uu,
+            }), (Bk => {
+              console.error("Could not copy to the clipboard", Bk), Fk({
+                text: kk,
                 failed: !0
               })
             }))
           }]
         }
 
-        function Hu(uu) {
+        function vk(kk) {
           let {
-            text: Ru,
-            label: yu,
-            className: Eu
-          } = uu;
-          const [Ku, mu] = ju(), Ju = !1 === (null === Ku || void 0 === Ku ? void 0 : Ku.failed);
-          return (0, Su.jsxs)("button", {
+            text: Fk,
+            label: Bk,
+            className: Rk
+          } = kk;
+          const [tk, Xk] = Wk(), bk = !1 === (null === tk || void 0 === tk ? void 0 : tk.failed);
+          return (0, ek.jsxs)("button", {
             type: "button",
-            className: Qu()("DocsCopyButton", Eu, {
-              Copied: Ju
+            className: ak()("DocsCopyButton", Rk, {
+              Copied: bk
             }),
-            title: `Copy ${Ru.length>40?"to clipboard":Ru}`,
-            "aria-label": yu ? void 0 : `Copy ${Ru}`,
-            onClick: uu => {
-              uu.stopPropagation(), mu(Ru)
+            title: `Copy ${Fk.length>40?"to clipboard":Fk}`,
+            "aria-label": Bk ? void 0 : `Copy ${Fk}`,
+            onClick: kk => {
+              kk.stopPropagation(), Xk(Fk)
             },
-            children: [(0, Su.jsx)(Tu, {
-              name: Ju ? "check" : "copy"
-            }), yu && (0, Su.jsx)("span", {
-              children: Ju ? "Copied" : null !== Ku && void 0 !== Ku && Ku.failed ? "Copy failed" : yu
+            children: [(0, ek.jsx)(fk, {
+              name: bk ? "check" : "copy"
+            }), Bk && (0, ek.jsx)("span", {
+              children: bk ? "Copied" : null !== tk && void 0 !== tk && tk.failed ? "Copy failed" : Bk
             })]
           })
         }
-        Vu.c.registerLanguage("javascript", ru.b), Vu.c.registerLanguage("typescript", Bu.c);
-        const du = {
+        sk.c.registerLanguage("javascript", Vk.b), sk.c.registerLanguage("typescript", Jk.c);
+        const ik = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          bu = {
+          Yk = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          Cu = 24;
+          Lk = 24;
 
-        function ku(uu) {
+        function Ok(kk) {
           let {
-            code: Ru,
-            lang: yu,
-            compact: Ku = !1
-          } = uu;
-          const mu = (0, Eu.useMemo)((() => function(uu, Ru) {
-              const yu = du[Ru];
-              return yu ? Vu.c.highlight(uu, {
-                language: yu
-              }).value : uu.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(Ru, yu)), [Ru, yu]),
-            Ju = Ru.split("\n").length,
-            Nu = !Ku && Ju > Cu + 6,
-            [Xu, ru] = (0, Eu.useState)(!1),
-            Bu = du[yu];
-          return (0, Su.jsxs)("div", {
-            className: Qu()("DocsCodeBlock", {
-              Compact: Ku,
-              Collapsed: Nu && !Xu
+            code: Fk,
+            lang: Bk,
+            compact: tk = !1
+          } = kk;
+          const Xk = (0, Rk.useMemo)((() => function(kk, Fk) {
+              const Bk = ik[Fk];
+              return Bk ? sk.c.highlight(kk, {
+                language: Bk
+              }).value : kk.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(Fk, Bk)), [Fk, Bk]),
+            bk = Fk.split("\n").length,
+            wk = !tk && bk > Lk + 6,
+            [dk, Vk] = (0, Rk.useState)(!1),
+            Jk = ik[Bk];
+          return (0, ek.jsxs)("div", {
+            className: ak()("DocsCodeBlock", {
+              Compact: tk,
+              Collapsed: wk && !dk
             }),
-            children: [!Ku && (0, Su.jsxs)("div", {
+            children: [!tk && (0, ek.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, Su.jsx)("span", {
+              children: [(0, ek.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: Bu ? bu[Bu] : "Text"
-              }), (0, Su.jsx)(Hu, {
-                text: Ru,
+                children: Jk ? Yk[Jk] : "Text"
+              }), (0, ek.jsx)(vk, {
+                text: Fk,
                 label: "Copy"
               })]
-            }), (0, Su.jsx)("pre", {
-              children: (0, Su.jsx)("code", {
+            }), (0, ek.jsx)("pre", {
+              children: (0, ek.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: mu
+                  __html: Xk
                 }
               })
-            }), Nu && (0, Su.jsxs)("button", {
+            }), wk && (0, ek.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": Xu,
+              "aria-expanded": dk,
               onClick: () => {
-                ru(!Xu)
+                Vk(!dk)
               },
-              children: [(0, Su.jsx)(Tu, {
-                name: Xu ? "chevron-up" : "chevron-down"
-              }), Xu ? "Show less" : `Show all ${Ju} lines`]
+              children: [(0, ek.jsx)(fk, {
+                name: dk ? "chevron-up" : "chevron-down"
+              }), dk ? "Show less" : `Show all ${bk} lines`]
             })]
           })
         }
-        var eu = yu(4511);
-        var Au = yu(4513);
-        const Du = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var Ek = Bk(4460);
+        var Sk = Bk(4467);
+        const Nk = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function Mu(uu) {
-          const Ru = new Map;
-          let yu, Eu = [],
-            Ku = !1;
-          const Qu = () => {
-            yu && Ru.set(yu.name, yu.lines.join("\n").trimEnd())
+        function Hk(kk) {
+          const Fk = new Map;
+          let Bk, Rk = [],
+            tk = !1;
+          const ak = () => {
+            Bk && Fk.set(Bk.name, Bk.lines.join("\n").trimEnd())
           };
-          for (const mu of uu.split("\n")) {
-            const uu = mu.match(Du);
-            Ku || mu.startsWith("/*") ? (Ku || (Qu(), yu = void 0), Eu.push(mu), Ku = !mu.includes("*/")) : uu ? (Qu(), yu = {
-              name: uu[1],
-              lines: [...Eu, mu]
-            }, Eu = []) : yu && (mu.startsWith(" ") || mu.startsWith("\t") || /^[}\])|]/.test(mu)) ? yu.lines.push(mu) : yu && "" !== mu.trim() && (Qu(), yu = void 0)
+          for (const Xk of kk.split("\n")) {
+            const kk = Xk.match(Nk);
+            tk || Xk.startsWith("/*") ? (tk || (ak(), Bk = void 0), Rk.push(Xk), tk = !Xk.includes("*/")) : kk ? (ak(), Bk = {
+              name: kk[1],
+              lines: [...Rk, Xk]
+            }, Rk = []) : Bk && (Xk.startsWith(" ") || Xk.startsWith("\t") || /^[}\])|]/.test(Xk)) ? Bk.lines.push(Xk) : Bk && "" !== Xk.trim() && (ak(), Bk = void 0)
           }
-          return Qu(), Ru
+          return ak(), Fk
         }
 
-        function Iu(uu) {
-          return "methods" === uu || "callbacks" === uu || "settings" === uu
+        function uk(kk) {
+          return "methods" === kk || "callbacks" === kk || "settings" === kk
         }
-        const Gu = {
+        const Mk = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (uu, Ru) => `api.setClientOption(playerId, "${uu}", ${Ru})`
+              setterSnippet: (kk, Fk) => `api.setClientOption(playerId, "${kk}", ${Fk})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (uu, Ru) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${uu}", ${Ru})`
+              setterSnippet: (kk, Fk) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${kk}", ${Fk})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (uu, Ru) => `api.setMobSetting(mobId, "${uu}", ${Ru})`
+              setterSnippet: (kk, Fk) => `api.setMobSetting(mobId, "${kk}", ${Fk})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (uu, Ru) => `api.setVehicleSetting(vehicleId, "${uu}", ${Ru})`
+              setterSnippet: (kk, Fk) => `api.setVehicleSetting(vehicleId, "${kk}", ${Fk})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          Uu = {
+          gk = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function nu(uu) {
-          return uu.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function Uk(kk) {
+          return kk.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function su(uu) {
-          let Ru = !1;
-          return uu.split("\n").map((uu => (uu.startsWith("```") && (Ru = !Ru), !Ru && /^#{3,} /.test(uu) ? uu.slice(1) : uu))).join("\n")
+        function ck(kk) {
+          let Fk = !1;
+          return kk.split("\n").map((kk => (kk.startsWith("```") && (Fk = !Fk), !Fk && /^#{3,} /.test(kk) ? kk.slice(1) : kk))).join("\n")
         }
 
-        function tu(uu) {
-          return "readme" === uu ? "getting-started" : nu(uu)
+        function Gk(kk) {
+          return "readme" === kk ? "getting-started" : Uk(kk)
         }
-        const lu = "## Glossary of Referenced Types";
-        const gu = [{
+        const Tk = "## Glossary of Referenced Types";
+        const rk = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...Au.c.flatMap((uu => {
-            const Ru = {
-              id: uu.id,
-              slug: tu(uu.id),
-              title: uu.title,
-              markdown: uu.content,
-              ...Gu[uu.id]
+          }, ...Sk.e.flatMap((kk => {
+            const Fk = {
+              id: kk.id,
+              slug: Gk(kk.id),
+              title: kk.title,
+              markdown: kk.content,
+              ...Mk[kk.id]
             };
-            if ("readme" === uu.id) return function(uu) {
-              const Ru = uu.markdown.indexOf(lu),
-                yu = uu.markdown.indexOf("\n```", Ru),
-                Eu = uu.markdown.indexOf("\n```", yu + 1);
-              if (-1 === Ru || -1 === yu || -1 === Eu) throw new Error(`Getting started has no "${lu}" section with a code block`);
-              const Ku = uu.markdown.slice(Ru + 31, yu).trim(),
-                Qu = [...Mu(uu.markdown.slice(uu.markdown.indexOf("\n", yu + 1) + 1, Eu))].map((uu => {
-                  let [Ru, yu] = uu;
-                  return `## ${Ru}\n\n\`\`\`ts\n${yu}\n\`\`\`\n`
+            if ("readme" === kk.id) return function(kk) {
+              const Fk = kk.markdown.indexOf(Tk),
+                Bk = kk.markdown.indexOf("\n```", Fk),
+                Rk = kk.markdown.indexOf("\n```", Bk + 1);
+              if (-1 === Fk || -1 === Bk || -1 === Rk) throw new Error(`Getting started has no "${Tk}" section with a code block`);
+              const tk = kk.markdown.slice(Fk + 31, Bk).trim(),
+                ak = [...Hk(kk.markdown.slice(kk.markdown.indexOf("\n", Bk + 1) + 1, Rk))].map((kk => {
+                  let [Fk, Bk] = kk;
+                  return `## ${Fk}\n\n\`\`\`ts\n${Bk}\n\`\`\`\n`
                 })),
-                mu = uu.markdown.slice(uu.markdown.indexOf("\n", Eu + 1) + 1);
+                Xk = kk.markdown.slice(kk.markdown.indexOf("\n", Rk + 1) + 1);
               return [{
-                ...uu,
-                markdown: `${uu.markdown.slice(0,Ru)}${mu}`
+                ...kk,
+                markdown: `${kk.markdown.slice(0,Fk)}${Xk}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${Ku}\n\n${Qu.join("\n")}`
+                markdown: `# Types\n\n${tk}\n\n${ak.join("\n")}`
               }]
-            }(Ru);
-            if ("howTo" === uu.id) {
+            }(Fk);
+            if ("howTo" === kk.id) {
               const {
-                parent: uu,
-                guides: yu
-              } = function(uu) {
-                const [Ru, ...yu] = uu.markdown.split(/^(?=## )/m), Eu = [Ru], Ku = [];
-                for (const mu of yu) {
-                  var Qu;
-                  const Ru = mu.indexOf("\n"),
-                    yu = mu.slice(3, Ru).trim(),
-                    Ju = mu.slice(Ru + 1);
-                  if (!Ju.includes("```")) {
-                    Eu.push(mu);
+                parent: kk,
+                guides: Bk
+              } = function(kk) {
+                const [Fk, ...Bk] = kk.markdown.split(/^(?=## )/m), Rk = [Fk], tk = [];
+                for (const Xk of Bk) {
+                  var ak;
+                  const Fk = Xk.indexOf("\n"),
+                    Bk = Xk.slice(3, Fk).trim(),
+                    bk = Xk.slice(Fk + 1);
+                  if (!bk.includes("```")) {
+                    Rk.push(Xk);
                     continue
                   }
-                  const Nu = null !== (Qu = Uu[yu]) && void 0 !== Qu ? Qu : {
+                  const wk = null !== (ak = gk[Bk]) && void 0 !== ak ? ak : {
                     icon: "lightbulb",
-                    summary: `How to use ${yu.toLowerCase()} in World Code.`
+                    summary: `How to use ${Bk.toLowerCase()} in World Code.`
                   };
-                  Ku.push({
-                    id: `${uu.id}${yu.split(/[^A-Za-z0-9]+/).map((uu=>uu.charAt(0).toUpperCase()+uu.slice(1))).join("")}`,
-                    slug: `${uu.slug}-${nu(yu)}`,
-                    title: yu,
+                  tk.push({
+                    id: `${kk.id}${Bk.split(/[^A-Za-z0-9]+/).map((kk=>kk.charAt(0).toUpperCase()+kk.slice(1))).join("")}`,
+                    slug: `${kk.slug}-${Uk(Bk)}`,
+                    title: Bk,
                     layout: "article",
-                    sourceAnchor: (0, eu.l)(yu),
-                    markdown: `# ${yu}\n\n${su(Ju)}`,
-                    ...Nu
+                    sourceAnchor: (0, Ek.m)(Bk),
+                    markdown: `# ${Bk}\n\n${ck(bk)}`,
+                    ...wk
                   })
                 }
                 return {
                   parent: {
-                    ...uu,
-                    markdown: Eu.join(""),
-                    childPageIds: Ku.map((uu => uu.id))
+                    ...kk,
+                    markdown: Rk.join(""),
+                    childPageIds: tk.map((kk => kk.id))
                   },
-                  guides: Ku
+                  guides: tk
                 }
-              }(Ru);
-              return [uu, ...yu]
+              }(Fk);
+              return [kk, ...Bk]
             }
-            return [Ru]
+            return [Fk]
           }))],
-          cu = [{
+          Dk = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...gu.filter((uu => void 0 !== uu.sourceAnchor)).map((uu => uu.id))]
+            pageIds: ["howTo", ...rk.filter((kk => void 0 !== kk.sourceAnchor)).map((kk => kk.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function Lu(uu) {
-          return gu.find((Ru => Ru.id === uu))
+        function zk(kk) {
+          return rk.find((Fk => Fk.id === kk))
         }
-        const zu = new Map;
+        const Pk = new Map;
 
-        function Fu(uu) {
-          let Ru = zu.get(uu.id);
-          return Ru || (Ru = (0, eu.s)(uu.markdown, "changelog" === uu.layout ? 3 : 2), zu.set(uu.id, Ru)), Ru
-        }
-
-        function wu(uu, Ru) {
-          return Fu(uu).sections.some((uu => uu.heading.anchor === Ru || uu.blocks.some((uu => "heading" === uu.kind && uu.anchor === Ru))))
+        function hk(kk) {
+          let Fk = Pk.get(kk.id);
+          return Fk || (Fk = (0, Ek.r)(kk.markdown, "changelog" === kk.layout ? 3 : 2), Pk.set(kk.id, Fk)), Fk
         }
 
-        function Zu(uu) {
-          const [Ru, ...yu] = uu.replace(/^#/, "").split("-"), Eu = gu.find((uu => uu.id === Ru));
-          if (!Eu) return null;
-          const Ku = yu.length > 0 ? (0, eu.l)(yu.join("-")) : "";
-          for (const mu of null !== (Qu = Eu.childPageIds) && void 0 !== Qu ? Qu : []) {
-            var Qu;
-            const uu = Lu(mu);
-            if (uu.sourceAnchor === Ku) return {
-              page: uu,
+        function qk(kk, Fk) {
+          return hk(kk).sections.some((kk => kk.heading.anchor === Fk || kk.blocks.some((kk => "heading" === kk.kind && kk.anchor === Fk))))
+        }
+
+        function Ck(kk) {
+          const [Fk, ...Bk] = kk.replace(/^#/, "").split("-"), Rk = rk.find((kk => kk.id === Fk));
+          if (!Rk) return null;
+          const tk = Bk.length > 0 ? (0, Ek.m)(Bk.join("-")) : "";
+          for (const Xk of null !== (ak = Rk.childPageIds) && void 0 !== ak ? ak : []) {
+            var ak;
+            const kk = zk(Xk);
+            if (kk.sourceAnchor === tk) return {
+              page: kk,
               anchor: ""
             };
-            if (wu(uu, Ku)) return {
-              page: uu,
-              anchor: Ku
+            if (qk(kk, tk)) return {
+              page: kk,
+              anchor: tk
             }
           }
           return {
-            page: Eu,
-            anchor: Ku
+            page: Rk,
+            anchor: tk
           }
         }
-        const hu = {
+        const Zk = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function Pu(uu, Ru) {
-          let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const Eu = Ru.slug ? `${uu}/${Ru.slug}` : uu;
-          return yu ? `${Eu}#${yu}` : Eu
+        function pk(kk, Fk) {
+          let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const Rk = Fk.slug ? `${kk}/${Fk.slug}` : kk;
+          return Bk ? `${Rk}#${Bk}` : Rk
         }
-        var iu = yu(4532);
-        const Yu = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          ou = new Set(["GameApi", "Console", "_TypeOf"]),
-          qu = 4;
+        var Kk = Bk(4487);
+        const xk = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          jk = new Set(["GameApi", "Console", "_TypeOf"]),
+          lk = 4;
 
-        function Ou(uu) {
-          let Ru = uu.length;
-          for (; Ru > 0 && "" === uu[Ru - 1].trim();) Ru--;
-          return uu.slice(0, Ru)
+        function nk(kk) {
+          let Fk = kk.length;
+          for (; Fk > 0 && "" === kk[Fk - 1].trim();) Fk--;
+          return kk.slice(0, Fk)
         }
 
-        function vu(uu) {
-          var Ru;
-          const yu = Ou(uu);
-          if (null === (Ru = yu.at(-1)) || void 0 === Ru || !Ru.trimEnd().endsWith("*/")) return {
-            lines: yu,
+        function Ik(kk) {
+          var Fk;
+          const Bk = nk(kk);
+          if (null === (Fk = Bk.at(-1)) || void 0 === Fk || !Fk.trimEnd().endsWith("*/")) return {
+            lines: Bk,
             doc: ""
           };
-          const Eu = yu.findLastIndex((uu => uu.startsWith("/**")));
-          return -1 === Eu ? {
-            lines: yu,
+          const Rk = Bk.findLastIndex((kk => kk.startsWith("/**")));
+          return -1 === Rk ? {
+            lines: Bk,
             doc: ""
           } : {
-            lines: Ou(yu.slice(0, Eu)),
-            doc: yu.slice(Eu).join("\n")
+            lines: nk(Bk.slice(0, Rk)),
+            doc: Bk.slice(Rk).join("\n")
           }
         }
 
-        function au(uu) {
-          var Ru;
-          const yu = uu.split("\n"),
-            Eu = yu.flatMap(((uu, Ru) => Yu.test(uu) ? [Ru] : []));
-          let Ku = vu(yu.slice(0, null !== (Ru = Eu[0]) && void 0 !== Ru ? Ru : yu.length)).doc;
-          return Eu.map(((uu, Ru) => {
-            var Qu;
-            const mu = vu(yu.slice(uu, null !== (Qu = Eu[Ru + 1]) && void 0 !== Qu ? Qu : yu.length)),
-              Ju = {
-                name: yu[uu].match(Yu)[1],
-                doc: Ku,
-                lines: mu.lines
+        function Qk(kk) {
+          var Fk;
+          const Bk = kk.split("\n"),
+            Rk = Bk.flatMap(((kk, Fk) => xk.test(kk) ? [Fk] : []));
+          let tk = Ik(Bk.slice(0, null !== (Fk = Rk[0]) && void 0 !== Fk ? Fk : Bk.length)).doc;
+          return Rk.map(((kk, Fk) => {
+            var ak;
+            const Xk = Ik(Bk.slice(kk, null !== (ak = Rk[Fk + 1]) && void 0 !== ak ? ak : Bk.length)),
+              bk = {
+                name: Bk[kk].match(xk)[1],
+                doc: tk,
+                lines: Xk.lines
               };
-            return Ku = mu.doc, Ju
+            return tk = Xk.doc, bk
           }))
         }
 
-        function fu(uu) {
-          var Ru;
-          const yu = uu.match(/^readonly \[([\s\S]*)\]$/);
-          return yu ? null !== (Ru = yu[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Ru ? Ru : [] : null
+        function kF(kk) {
+          var Fk;
+          const Bk = kk.match(/^readonly \[([\s\S]*)\]$/);
+          return Bk ? null !== (Fk = Bk[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Fk ? Fk : [] : null
         }
 
-        function uR(uu) {
-          if (!uu.startsWith("{") || !uu.endsWith("}")) return null;
-          const Ru = {
+        function FF(kk) {
+          if (!kk.startsWith("{") || !kk.endsWith("}")) return null;
+          const Fk = {
               keys: [],
               values: []
             },
-            yu = uu => {
-              const yu = uu.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              yu && (Ru.keys.push(yu[1].startsWith('"') ? yu[1] : `"${yu[1]}"`), Ru.values.push(yu[2].trim()))
+            Bk = kk => {
+              const Bk = kk.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              Bk && (Fk.keys.push(Bk[1].startsWith('"') ? Bk[1] : `"${Bk[1]}"`), Fk.values.push(Bk[2].trim()))
             };
-          let Eu = 0,
-            Ku = "";
-          for (const Qu of uu.slice(1, -1)) "{[(".includes(Qu) ? Eu++ : "}])".includes(Qu) && Eu--, ";" === Qu && 0 === Eu ? (yu(Ku), Ku = "") : Ku += Qu;
-          return yu(Ku), Ru
+          let Rk = 0,
+            tk = "";
+          for (const ak of kk.slice(1, -1)) "{[(".includes(ak) ? Rk++ : "}])".includes(ak) && Rk--, ";" === ak && 0 === Rk ? (Bk(tk), tk = "") : tk += ak;
+          return Bk(tk), Fk
         }
 
-        function RR(uu) {
-          return uu.length > qu ? `\n\t| ${uu.join("\n\t| ")}` : uu.join(" | ")
+        function BF(kk) {
+          return kk.length > lk ? `\n\t| ${kk.join("\n\t| ")}` : kk.join(" | ")
         }
 
-        function yR(uu, Ru) {
-          const yu = function(uu, Ru) {
-            return uu.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((uu, yu) => {
-              var Eu;
-              const Ku = null === (Eu = Ru.get(yu)) || void 0 === Eu ? void 0 : Eu.object;
-              return Ku ? RR(Ku.values) : uu
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((uu, yu) => {
-              var Eu, Ku;
-              const Qu = null === (Eu = Ru.get(yu)) || void 0 === Eu || null === (Ku = Eu.object) || void 0 === Ku ? void 0 : Ku.values.map(fu);
-              return null !== Qu && void 0 !== Qu && Qu.every((uu => null !== uu)) ? RR([...new Set(Qu.flat())]) : uu
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((uu, yu) => {
-              var Eu;
-              const Ku = null === (Eu = Ru.get(yu)) || void 0 === Eu ? void 0 : Eu.members;
-              return Ku ? RR(Ku) : uu
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((uu, yu) => {
-              var Eu;
-              const Ku = null === (Eu = Ru.get(yu)) || void 0 === Eu ? void 0 : Eu.object;
-              return Ku ? RR(Ku.keys) : uu
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((uu, yu) => {
-              var Eu, Ku;
-              return null !== (Eu = null === (Ku = Ru.get(yu)) || void 0 === Ku ? void 0 : Ku.text) && void 0 !== Eu ? Eu : uu
+        function RF(kk, Fk) {
+          const Bk = function(kk, Fk) {
+            return kk.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((kk, Bk) => {
+              var Rk;
+              const tk = null === (Rk = Fk.get(Bk)) || void 0 === Rk ? void 0 : Rk.object;
+              return tk ? BF(tk.values) : kk
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((kk, Bk) => {
+              var Rk, tk;
+              const ak = null === (Rk = Fk.get(Bk)) || void 0 === Rk || null === (tk = Rk.object) || void 0 === tk ? void 0 : tk.values.map(kF);
+              return null !== ak && void 0 !== ak && ak.every((kk => null !== kk)) ? BF([...new Set(ak.flat())]) : kk
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((kk, Bk) => {
+              var Rk;
+              const tk = null === (Rk = Fk.get(Bk)) || void 0 === Rk ? void 0 : Rk.members;
+              return tk ? BF(tk) : kk
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((kk, Bk) => {
+              var Rk;
+              const tk = null === (Rk = Fk.get(Bk)) || void 0 === Rk ? void 0 : Rk.object;
+              return tk ? BF(tk.keys) : kk
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((kk, Bk) => {
+              var Rk, tk;
+              return null !== (Rk = null === (tk = Fk.get(Bk)) || void 0 === tk ? void 0 : tk.text) && void 0 !== Rk ? Rk : kk
             }))
-          }(uu.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Ru);
-          return [uu.doc, yu].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(kk.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Fk);
+          return [kk.doc, Bk].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function ER(uu) {
-          const Ru = au(uu),
-            yu = function(uu) {
-              const Ru = new Map,
-                yu = uu.find((uu => "_TypeOf" === uu.name));
-              let Eu = null;
-              const Ku = () => {
-                if (Eu) {
-                  const uu = Eu.lines.join("\n");
-                  Ru.set(Eu.name, {
-                    text: uu,
-                    members: fu(uu),
-                    object: uR(uu)
+        function tF(kk) {
+          const Fk = Qk(kk),
+            Bk = function(kk) {
+              const Fk = new Map,
+                Bk = kk.find((kk => "_TypeOf" === kk.name));
+              let Rk = null;
+              const tk = () => {
+                if (Rk) {
+                  const kk = Rk.lines.join("\n");
+                  Fk.set(Rk.name, {
+                    text: kk,
+                    members: kF(kk),
+                    object: FF(kk)
                   })
                 }
               };
-              for (const Qu of yu.lines.slice(1, -1)) {
-                const uu = Qu.match(/^\t([\w$]+): (.+)$/);
-                uu ? (Ku(), Eu = {
-                  name: uu[1],
-                  lines: [uu[2]]
-                }) : Eu && Eu.lines.push(Qu.replace(/^\t/, ""))
+              for (const ak of Bk.lines.slice(1, -1)) {
+                const kk = ak.match(/^\t([\w$]+): (.+)$/);
+                kk ? (tk(), Rk = {
+                  name: kk[1],
+                  lines: [kk[2]]
+                }) : Rk && Rk.lines.push(ak.replace(/^\t/, ""))
               }
-              return Ku(), Ru
-            }(Ru),
-            Eu = new Map;
-          for (const Ku of Ru) ou.has(Ku.name) || Eu.has(Ku.name) || Eu.set(Ku.name, yR(Ku, yu));
-          return Eu
+              return tk(), Fk
+            }(Fk),
+            Rk = new Map;
+          for (const tk of Fk) jk.has(tk.name) || Rk.has(tk.name) || Rk.set(tk.name, RF(tk, Bk));
+          return Rk
         }
-        let KR, QR, mR;
+        let aF, XF, bF;
 
-        function JR() {
-          return QR ??= function(uu) {
-            const Ru = au(uu).find((uu => "GameApi" === uu.name)),
-              yu = new Map,
-              Eu = Ru.lines;
-            for (let Qu = 0; Qu < Eu.length; Qu++) {
-              var Ku;
-              if (!Eu[Qu].trimStart().startsWith("/**")) continue;
-              const uu = Qu;
-              for (; Qu < Eu.length && !Eu[Qu].includes("*/");) Qu++;
-              const Ru = null === (Ku = Eu[Qu + 1]) || void 0 === Ku ? void 0 : Ku.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!Ru) continue;
-              let mu = null;
-              const Ju = [];
-              let Nu = "description",
-                Xu = !1;
-              for (const yu of Eu.slice(uu, Qu + 1).join("\n").split("\n").map((uu => uu.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const uu = yu.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                uu ? (mu = uu[1].trim(), Nu = "deprecation") : yu.startsWith("@") ? (Nu = "otherTag", Xu = !0) : "" === yu.trim() ? Xu || (Nu = "description", Ju.push(yu)) : "deprecation" !== Nu || /^[A-Z]/.test(yu.trim()) ? "otherTag" !== Nu && (Nu = "description", Ju.push(yu)) : mu = `${mu} ${yu.trim()}`.trim()
+        function wF() {
+          return XF ??= function(kk) {
+            const Fk = Qk(kk).find((kk => "GameApi" === kk.name)),
+              Bk = new Map,
+              Rk = Fk.lines;
+            for (let ak = 0; ak < Rk.length; ak++) {
+              var tk;
+              if (!Rk[ak].trimStart().startsWith("/**")) continue;
+              const kk = ak;
+              for (; ak < Rk.length && !Rk[ak].includes("*/");) ak++;
+              const Fk = null === (tk = Rk[ak + 1]) || void 0 === tk ? void 0 : tk.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!Fk) continue;
+              let Xk = null;
+              const bk = [];
+              let wk = "description",
+                dk = !1;
+              for (const Bk of Rk.slice(kk, ak + 1).join("\n").split("\n").map((kk => kk.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const kk = Bk.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                kk ? (Xk = kk[1].trim(), wk = "deprecation") : Bk.startsWith("@") ? (wk = "otherTag", dk = !0) : "" === Bk.trim() ? dk || (wk = "description", bk.push(Bk)) : "deprecation" !== wk || /^[A-Z]/.test(Bk.trim()) ? "otherTag" !== wk && (wk = "description", bk.push(Bk)) : Xk = `${Xk} ${Bk.trim()}`.trim()
               }
-              yu.set(Ru[1], {
-                deprecation: mu,
-                description: Ju.join("\n").trim()
+              Bk.set(Fk[1], {
+                deprecation: Xk,
+                description: bk.join("\n").trim()
               })
             }
-            return yu
-          }(iu.default), QR
+            return Bk
+          }(Kk.default), XF
         }
 
-        function NR() {
-          if (!mR) {
-            mR = new Map;
-            for (const uu of gu) {
-              const Ru = (0, eu.p)(Fu(uu)).flatMap((uu => uu.blocks));
-              for (const uu of (0, eu.e)(Ru))
-                if ("ts" === uu.lang || "typescript" === uu.lang)
-                  for (const [Ru, yu] of Mu(uu.code)) mR.set(Ru, yu)
+        function dF() {
+          if (!bF) {
+            bF = new Map;
+            for (const kk of rk) {
+              const Fk = (0, Ek.q)(hk(kk)).flatMap((kk => kk.blocks));
+              for (const kk of (0, Ek.g)(Fk))
+                if ("ts" === kk.lang || "typescript" === kk.lang)
+                  for (const [Fk, Bk] of Hk(kk.code)) bF.set(Fk, Bk)
             }
-            for (const [uu, Ru] of(KR ??= ER(iu.default), KR)) mR.has(uu) || mR.set(uu, Ru)
+            for (const [kk, Fk] of(aF ??= tF(Kk.default), aF)) bF.has(kk) || bF.set(kk, Fk)
           }
-          return mR
+          return bF
         }
-        const XR = {
+        const sF = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let VR;
+        let VF;
 
-        function rR() {
-          if (!VR) {
-            VR = new Map;
-            for (const uu of gu)
-              if (Iu(uu.layout))
-                for (const Ru of Fu(uu).sections) VR.has(Ru.heading.text) || VR.set(Ru.heading.text, {
-                  pageId: uu.id,
-                  anchor: Ru.heading.anchor
+        function JF() {
+          if (!VF) {
+            VF = new Map;
+            for (const kk of rk)
+              if (uk(kk.layout))
+                for (const Fk of hk(kk).sections) VF.has(Fk.heading.text) || VF.set(Fk.heading.text, {
+                  pageId: kk.id,
+                  anchor: Fk.heading.anchor
                 })
           }
-          return VR
+          return VF
         }
 
-        function BR(uu) {
-          const Ru = uu.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return Ru ? rR().get(Ru[1]) : void 0
+        function AF(kk) {
+          const Fk = kk.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return Fk ? JF().get(Fk[1]) : void 0
         }
-        const xR = (0, Eu.createContext)("/docs"),
-          SR = (0, Eu.createContext)(null),
-          pR = (0, Eu.createContext)(!1),
-          TR = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const eF = (0, Rk.createContext)("/docs"),
+          yF = (0, Rk.createContext)(null),
+          fF = (0, Rk.createContext)(!1),
+          mF = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function WR(uu) {
-          const Ru = uu.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return Ru ? Ru[1] : null
+        function WF(kk) {
+          const Fk = kk.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return Fk ? Fk[1] : null
         }
 
-        function jR(uu) {
+        function vF(kk) {
           let {
-            colour: Ru
-          } = uu;
-          return (0, Su.jsx)("span", {
+            colour: Fk
+          } = kk;
+          return (0, ek.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: Ru
+              background: Fk
             },
             "aria-hidden": "true"
           })
         }
 
-        function HR(uu) {
-          const Ru = [];
-          let yu = 0;
-          for (const Eu of uu.matchAll(TR)) Ru.push(uu.slice(yu, Eu.index), (0, Su.jsx)(jR, {
-            colour: Eu[0]
-          }), Eu[0]), yu = Eu.index + Eu[0].length;
-          return Ru.push(uu.slice(yu)), Ru
+        function iF(kk) {
+          const Fk = [];
+          let Bk = 0;
+          for (const Rk of kk.matchAll(mF)) Fk.push(kk.slice(Bk, Rk.index), (0, ek.jsx)(vF, {
+            colour: Rk[0]
+          }), Rk[0]), Bk = Rk.index + Rk[0].length;
+          return Fk.push(kk.slice(Bk)), Fk
         }
 
-        function dR(uu) {
+        function YF(kk) {
           let {
-            href: Ru,
-            children: yu
-          } = uu;
-          const Ku = (0, Eu.useContext)(xR);
-          if (Ru.startsWith("#")) {
-            const uu = Zu(Ru);
-            if (uu) return (0, Su.jsx)(mu.c, {
-              to: Pu(Ku, uu.page, uu.anchor),
-              children: (0, Su.jsx)(pR.Provider, {
+            href: Fk,
+            children: Bk
+          } = kk;
+          const tk = (0, Rk.useContext)(eF);
+          if (Fk.startsWith("#")) {
+            const kk = Ck(Fk);
+            if (kk) return (0, ek.jsx)(Xk.b, {
+              to: pk(tk, kk.page, kk.anchor),
+              children: (0, ek.jsx)(fF.Provider, {
                 value: !0,
-                children: yu
+                children: Bk
               })
             })
           }
-          return (0, Su.jsx)("a", {
-            href: Ru,
+          return (0, ek.jsx)("a", {
+            href: Fk,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, Su.jsx)(pR.Provider, {
+            children: (0, ek.jsx)(fF.Provider, {
               value: !0,
-              children: yu
+              children: Bk
             })
           })
         }
 
-        function bR(uu) {
+        function oF(kk) {
           let {
-            code: Ru
-          } = uu;
-          const yu = (0, Eu.useContext)(xR);
-          if ((0, Eu.useContext)(pR)) return (0, Su.jsx)("code", {
+            code: Fk
+          } = kk;
+          const Bk = (0, Rk.useContext)(eF);
+          if ((0, Rk.useContext)(fF)) return (0, ek.jsx)("code", {
             className: "DocsInlineCode",
-            children: Ru
+            children: Fk
           });
-          if (NR().has(Ru)) return (0, Su.jsx)(AR, {
-            type: Ru
+          if (dF().has(Fk)) return (0, ek.jsx)(SF, {
+            type: Fk
           });
-          const Ku = BR(Ru);
-          if (Ku) return (0, Su.jsx)(mu.c, {
+          const tk = AF(Fk);
+          if (tk) return (0, ek.jsx)(Xk.b, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: Pu(yu, Lu(Ku.pageId), Ku.anchor),
-            children: Ru
+            to: pk(Bk, zk(tk.pageId), tk.anchor),
+            children: Fk
           });
-          const Qu = WR(Ru);
-          return (0, Su.jsxs)("code", {
+          const ak = WF(Fk);
+          return (0, ek.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [Qu && (0, Su.jsx)(jR, {
-              colour: Qu
-            }), Ru]
+            children: [ak && (0, ek.jsx)(vF, {
+              colour: ak
+            }), Fk]
           })
         }
 
-        function CR(uu) {
+        function LF(kk) {
           let {
-            text: Ru
-          } = uu;
-          const yu = [];
-          let Ku = 0;
-          for (const Eu of Ru.matchAll(eu.c)) {
-            Eu.index > Ku && yu.push(...HR(Ru.slice(Ku, Eu.index)));
-            const [, uu, Qu, mu, Ju, Nu] = Eu;
-            uu ? yu.push((0, Su.jsx)(bR, {
-              code: (0, eu.h)(uu, Qu)
-            })) : mu ? yu.push((0, Su.jsx)("strong", {
-              children: (0, Su.jsx)(CR, {
-                text: mu
+            text: Fk
+          } = kk;
+          const Bk = [];
+          let tk = 0;
+          for (const Rk of Fk.matchAll(Ek.d)) {
+            Rk.index > tk && Bk.push(...iF(Fk.slice(tk, Rk.index)));
+            const [, kk, ak, Xk, bk, wk] = Rk;
+            kk ? Bk.push((0, ek.jsx)(oF, {
+              code: (0, Ek.h)(kk, ak)
+            })) : Xk ? Bk.push((0, ek.jsx)("strong", {
+              children: (0, ek.jsx)(LF, {
+                text: Xk
               })
-            })) : yu.push((0, Su.jsx)(dR, {
-              href: Nu,
-              children: (0, Su.jsx)(CR, {
-                text: Ju
+            })) : Bk.push((0, ek.jsx)(YF, {
+              href: wk,
+              children: (0, ek.jsx)(LF, {
+                text: bk
               })
-            })), Ku = Eu.index + Eu[0].length
+            })), tk = Rk.index + Rk[0].length
           }
-          return Ku < Ru.length && yu.push(...HR(Ru.slice(Ku))), (0, Su.jsx)(Su.Fragment, {
-            children: yu.map(((uu, Ru) => (0, Su.jsx)(Eu.Fragment, {
-              children: uu
-            }, Ru)))
+          return tk < Fk.length && Bk.push(...iF(Fk.slice(tk))), (0, ek.jsx)(ek.Fragment, {
+            children: Bk.map(((kk, Fk) => (0, ek.jsx)(Rk.Fragment, {
+              children: kk
+            }, Fk)))
           })
         }
-        const kR = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          eR = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const OF = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          EF = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function AR(uu) {
+        function SF(kk) {
           let {
-            type: Ru
-          } = uu;
-          const yu = NR(),
-            Ku = [];
-          for (const Eu of Ru.trim().matchAll(kR)) {
-            const [uu, Ru, Qu, mu, Ju] = Eu;
-            Ru ? Ku.push((0, Su.jsx)("span", {
+            type: Fk
+          } = kk;
+          const Bk = dF(),
+            tk = [];
+          for (const Rk of Fk.trim().matchAll(OF)) {
+            const [kk, Fk, ak, Xk, bk] = Rk;
+            Fk ? tk.push((0, ek.jsx)("span", {
               className: "DocsTypeString",
-              children: uu
-            })) : Qu && yu.has(Qu) ? Ku.push((0, Su.jsx)(UR, {
-              name: Qu,
-              definition: yu.get(Qu)
-            })) : Qu ? Ku.push((0, Su.jsx)("span", {
-              className: eR.has(Qu) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: uu
-            })) : mu ? Ku.push((0, Su.jsx)("span", {
+              children: kk
+            })) : ak && Bk.has(ak) ? tk.push((0, ek.jsx)(gF, {
+              name: ak,
+              definition: Bk.get(ak)
+            })) : ak ? tk.push((0, ek.jsx)("span", {
+              className: EF.has(ak) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: kk
+            })) : Xk ? tk.push((0, ek.jsx)("span", {
               className: "DocsTypeNumber",
-              children: uu
-            })) : Ju ? Ku.push(" ") : Ku.push((0, Su.jsx)("span", {
+              children: kk
+            })) : bk ? tk.push(" ") : tk.push((0, ek.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: uu
+              children: kk
             }))
           }
-          return (0, Su.jsx)("code", {
+          return (0, ek.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: Ku.map(((uu, Ru) => (0, Su.jsx)(Eu.Fragment, {
-              children: uu
-            }, Ru)))
+            children: tk.map(((kk, Fk) => (0, ek.jsx)(Rk.Fragment, {
+              children: kk
+            }, Fk)))
           })
         }
-        const DR = 480,
-          MR = 6,
-          IR = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let GR = 0;
+        const NF = 480,
+          HF = 6,
+          uF = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let MF = 0;
 
-        function UR(uu) {
+        function gF(kk) {
           let {
-            name: Ru,
-            definition: yu
-          } = uu;
-          const Ku = (0, Eu.useContext)(xR),
-            Qu = XR[Ru],
-            Ju = (0, Eu.useRef)(null),
-            Nu = (0, Eu.useRef)(null),
-            Vu = (0, Eu.useRef)(null),
-            [ru, Bu] = (0, Eu.useState)(!1),
-            [xu, pu] = (0, Eu.useState)(null),
-            Wu = (0, Eu.useRef)(),
-            ju = (0, Eu.useContext)(SR),
-            [Hu] = (0, Eu.useState)((() => "DocsTypePopover-" + GR++)),
-            du = () => {
-              clearTimeout(Wu.current), Bu(!0)
+            name: Fk,
+            definition: Bk
+          } = kk;
+          const tk = (0, Rk.useContext)(eF),
+            ak = sF[Fk],
+            bk = (0, Rk.useRef)(null),
+            wk = (0, Rk.useRef)(null),
+            sk = (0, Rk.useRef)(null),
+            [Vk, Jk] = (0, Rk.useState)(!1),
+            [Ak, yk] = (0, Rk.useState)(null),
+            mk = (0, Rk.useRef)(),
+            Wk = (0, Rk.useContext)(yF),
+            [vk] = (0, Rk.useState)((() => "DocsTypePopover-" + MF++)),
+            ik = () => {
+              clearTimeout(mk.current), Jk(!0)
             },
-            bu = () => {
-              clearTimeout(Wu.current), Wu.current = setTimeout((() => {
-                Bu(!1)
+            Yk = () => {
+              clearTimeout(mk.current), mk.current = setTimeout((() => {
+                Jk(!1)
               }), 120)
             };
-          return (0, Eu.useEffect)((() => {
-            if (!ru) return;
-            const uu = uu => {
-              if ("Escape" === uu.key) {
-                var Ru, yu;
-                if (null !== (Ru = Nu.current) && void 0 !== Ru && Ru.contains(document.activeElement)) null === (yu = Ju.current) || void 0 === yu || yu.focus();
-                Bu(!1)
+          return (0, Rk.useEffect)((() => {
+            if (!Vk) return;
+            const kk = kk => {
+              if ("Escape" === kk.key) {
+                var Fk, Bk;
+                if (null !== (Fk = wk.current) && void 0 !== Fk && Fk.contains(document.activeElement)) null === (Bk = bk.current) || void 0 === Bk || Bk.focus();
+                Jk(!1)
               }
             };
-            return document.addEventListener("keydown", uu), () => {
-              document.removeEventListener("keydown", uu)
+            return document.addEventListener("keydown", kk), () => {
+              document.removeEventListener("keydown", kk)
             }
-          }), [ru]), (0, Eu.useEffect)((() => () => {
-            clearTimeout(Wu.current)
-          }), []), (0, Eu.useLayoutEffect)((() => {
-            if (!ru || !Ju.current || !Nu.current) return void pu(null);
-            const uu = Ju.current.getBoundingClientRect(),
-              Ru = Nu.current.offsetHeight,
-              yu = Math.min(DR, window.innerWidth - 32),
-              Eu = Math.min(Math.max(16, uu.left), window.innerWidth - yu - 16),
-              Ku = uu.bottom + MR + Ru < window.innerHeight;
-            pu({
-              left: Eu,
-              top: Ku ? uu.bottom + MR : Math.max(16, uu.top - MR - Ru)
+          }), [Vk]), (0, Rk.useEffect)((() => () => {
+            clearTimeout(mk.current)
+          }), []), (0, Rk.useLayoutEffect)((() => {
+            if (!Vk || !bk.current || !wk.current) return void yk(null);
+            const kk = bk.current.getBoundingClientRect(),
+              Fk = wk.current.offsetHeight,
+              Bk = Math.min(NF, window.innerWidth - 32),
+              Rk = Math.min(Math.max(16, kk.left), window.innerWidth - Bk - 16),
+              tk = kk.bottom + HF + Fk < window.innerHeight;
+            yk({
+              left: Rk,
+              top: tk ? kk.bottom + HF : Math.max(16, kk.top - HF - Fk)
             })
-          }), [ru]), (0, Su.jsxs)(Su.Fragment, {
-            children: [(0, Su.jsx)("button", {
+          }), [Vk]), (0, ek.jsxs)(ek.Fragment, {
+            children: [(0, ek.jsx)("button", {
               type: "button",
-              ref: Ju,
+              ref: bk,
               className: "DocsTypeLink",
-              "aria-expanded": ru,
-              "aria-describedby": ru ? Hu : void 0,
-              onMouseEnter: du,
-              onMouseLeave: bu,
-              onFocus: du,
-              onBlur: bu,
-              onKeyDown: uu => {
-                "Tab" === uu.key && !uu.shiftKey && Vu.current && (uu.preventDefault(), Vu.current.focus())
+              "aria-expanded": Vk,
+              "aria-describedby": Vk ? vk : void 0,
+              onMouseEnter: ik,
+              onMouseLeave: Yk,
+              onFocus: ik,
+              onBlur: Yk,
+              onKeyDown: kk => {
+                "Tab" === kk.key && !kk.shiftKey && sk.current && (kk.preventDefault(), sk.current.focus())
               },
-              onClick: du,
-              children: Ru
-            }), ru && (0, Xu.createPortal)((0, Su.jsxs)("span", {
-              ref: Nu,
-              id: Hu,
+              onClick: ik,
+              children: Fk
+            }), Vk && (0, dk.createPortal)((0, ek.jsxs)("span", {
+              ref: wk,
+              id: vk,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: xu ? {
-                left: xu.left,
-                top: xu.top,
-                maxWidth: DR
+              style: Ak ? {
+                left: Ak.left,
+                top: Ak.top,
+                maxWidth: NF
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: du,
-              onMouseLeave: bu,
-              onFocus: du,
-              onBlur: bu,
-              children: [(0, Su.jsxs)("span", {
+              onMouseEnter: ik,
+              onMouseLeave: Yk,
+              onFocus: ik,
+              onBlur: Yk,
+              children: [(0, ek.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, Su.jsx)("span", {
+                children: [(0, ek.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: Ru
-                }), Qu && (0, Su.jsxs)(mu.c, {
-                  ref: Vu,
+                  children: Fk
+                }), ak && (0, ek.jsxs)(Xk.b, {
+                  ref: sk,
                   className: "DocsTypePopoverLink",
-                  to: Pu(Ku, Lu(Qu)),
+                  to: pk(tk, zk(ak)),
                   onClick: () => {
-                    Bu(!1)
+                    Jk(!1)
                   },
-                  onKeyDown: uu => {
-                    if ("Tab" === uu.key) {
-                      var Ru;
-                      if (uu.preventDefault(), uu.shiftKey || !Ju.current || ! function(uu, Ru) {
-                          const yu = [...document.querySelectorAll(IR)],
-                            Eu = yu.slice(yu.indexOf(uu) + 1).find((uu => uu.getClientRects().length > 0 && !(null !== Ru && void 0 !== Ru && Ru.contains(uu))));
-                          return null === Eu || void 0 === Eu || Eu.focus(), void 0 !== Eu
-                        }(Ju.current, Nu.current)) null === (Ru = Ju.current) || void 0 === Ru || Ru.focus();
-                      uu.shiftKey || Bu(!1)
+                  onKeyDown: kk => {
+                    if ("Tab" === kk.key) {
+                      var Fk;
+                      if (kk.preventDefault(), kk.shiftKey || !bk.current || ! function(kk, Fk) {
+                          const Bk = [...document.querySelectorAll(uF)],
+                            Rk = Bk.slice(Bk.indexOf(kk) + 1).find((kk => kk.getClientRects().length > 0 && !(null !== Fk && void 0 !== Fk && Fk.contains(kk))));
+                          return null === Rk || void 0 === Rk || Rk.focus(), void 0 !== Rk
+                        }(bk.current, wk.current)) null === (Fk = bk.current) || void 0 === Fk || Fk.focus();
+                      kk.shiftKey || Jk(!1)
                     }
                   },
-                  children: [Lu(Qu).title, (0, Su.jsx)(Tu, {
+                  children: [zk(ak).title, (0, ek.jsx)(fk, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, Su.jsx)(ku, {
+              }), (0, ek.jsx)(Ok, {
                 lang: "ts",
-                code: yu,
+                code: Bk,
                 compact: !0
               })]
-            }), null !== ju && void 0 !== ju ? ju : document.body)]
+            }), null !== Wk && void 0 !== Wk ? Wk : document.body)]
           })
         }
-        var nR = yu(212),
-          sR = yu(4540),
-          tR = yu(4544),
-          lR = yu(4546);
-        const gR = {
+        var UF = Bk(182),
+          cF = Bk(4496),
+          GF = Bk(4503),
+          TF = Bk(4507);
+        const rF = {
           progressBar: {
-            nu: 30,
-            tu: .075,
-            lu: 5,
-            gu: !1,
+            Uk: 30,
+            Gk: .075,
+            Tk: 5,
+            rk: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            zu: "fa-solid fa-computer-mouse",
+            Pk: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            wu: 3e3,
+            qk: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            Zu: !0,
+            Ck: !0,
             scale: 3,
             rotation: 15,
-            Pu: !1
+            Zk: !1
           },
           gravityBar: {
-            nu: 30,
-            Yu: .25,
-            ou: 3,
-            qu: .8,
+            Uk: 30,
+            xk: .25,
+            jk: 3,
+            lk: .8,
             gravity: 1,
-            Ou: 1.5,
-            vu: 8,
-            au: 4,
-            gu: !1,
+            nk: 1.5,
+            Ik: 8,
+            Qk: 4,
+            rk: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            uR: .15,
+            FF: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            yR: 5,
-            ER: 1200,
-            KR: .15,
-            QR: 3,
+            RF: 5,
+            tF: 1200,
+            aF: .15,
+            XF: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var cR = yu(330),
-          LR = yu(1923);
+        var DF = Bk(279),
+          zF = Bk(1892);
 
-        function zR(uu) {
-          return uu.startsWith("fa-")
+        function PF(kk) {
+          return kk.startsWith("fa-")
         }
-        const FR = {
+        const hF = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          wR = {
+          qF = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function ZR(uu) {
-          return "string" === typeof uu ? "text" : "entityName" in uu || "translationKey" in uu ? "other" : (0, cR.wb)(uu) ? "progressBar" : (0, cR.tb)(uu) ? "keyBinding" : "icon" in uu ? "icon" : "str" in uu && "string" === typeof uu.str ? "text" : "other"
+        function CF(kk) {
+          return "string" === typeof kk ? "text" : "entityName" in kk || "translationKey" in kk ? "other" : (0, DF.xb)(kk) ? "progressBar" : (0, DF.tb)(kk) ? "keyBinding" : "icon" in kk ? "icon" : "str" in kk && "string" === typeof kk.str ? "text" : "other"
         }
-        const hR = [{
+        const ZF = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          PR = {
+          pF = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...hR],
+            }, ...ZF],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: LR.h
+                options: zF.e
               },
               isRequired: !0
-            }, ...hR],
+            }, ...ZF],
             other: []
           };
 
-        function iR(uu) {
-          return "string" === typeof uu ? {
-            str: uu
-          } : uu
+        function KF(kk) {
+          return "string" === typeof kk ? {
+            str: kk
+          } : kk
         }
 
-        function YR(uu, Ru) {
-          let yu = iR(uu);
-          for (const Eu of Ru) yu = yu && "object" === typeof yu ? yu[Eu] : void 0;
-          return yu
+        function xF(kk, Fk) {
+          let Bk = KF(kk);
+          for (const Rk of Fk) Bk = Bk && "object" === typeof Bk ? Bk[Rk] : void 0;
+          return Bk
         }
 
-        function oR(uu, Ru, yu) {
-          const Eu = (uu, Ku) => {
-            var Qu;
-            const mu = Ru[Ku],
-              Ju = {
-                ...uu
+        function jF(kk, Fk, Bk) {
+          const Rk = (kk, tk) => {
+            var ak;
+            const Xk = Fk[tk],
+              bk = {
+                ...kk
               };
-            if (Ku === Ru.length - 1) return void 0 === yu ? delete Ju[mu] : Ju[mu] = yu, Ju;
-            const Nu = Eu(null !== (Qu = uu[mu]) && void 0 !== Qu ? Qu : {}, Ku + 1);
-            return 0 === Object.keys(Nu).length ? delete Ju[mu] : Ju[mu] = Nu, Ju
+            if (tk === Fk.length - 1) return void 0 === Bk ? delete bk[Xk] : bk[Xk] = Bk, bk;
+            const wk = Rk(null !== (ak = kk[Xk]) && void 0 !== ak ? ak : {}, tk + 1);
+            return 0 === Object.keys(wk).length ? delete bk[Xk] : bk[Xk] = wk, bk
           };
-          return function(uu) {
-            const Ru = Object.keys(uu);
-            return "string" === typeof uu.str && 1 === Ru.length ? uu.str : uu
-          }(Eu(iR(uu), 0))
+          return function(kk) {
+            const Fk = Object.keys(kk);
+            return "string" === typeof kk.str && 1 === Fk.length ? kk.str : kk
+          }(Rk(KF(kk), 0))
         }
 
-        function qR(uu, Ru) {
-          const yu = ZR(uu),
-            Eu = PR[yu].find((uu => uu.path.join(".") === Ru.join("."))),
-            Ku = null !== Eu && void 0 !== Eu && Eu.isRequired && "other" !== yu ? YR(wR[yu], Ru) : void 0;
-          return oR(uu, Ru, Ku)
+        function lF(kk, Fk) {
+          const Bk = CF(kk),
+            Rk = pF[Bk].find((kk => kk.path.join(".") === Fk.join("."))),
+            tk = null !== Rk && void 0 !== Rk && Rk.isRequired && "other" !== Bk ? xF(qF[Bk], Fk) : void 0;
+          return jF(kk, Fk, tk)
         }
 
-        function OR(uu) {
-          switch (ZR(uu)) {
+        function nF(kk) {
+          switch (CF(kk)) {
             case "text":
-              return String(YR(uu, ["str"]));
+              return String(xF(kk, ["str"]));
             case "icon":
-              return String(YR(uu, ["icon"]));
+              return String(xF(kk, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(YR(uu,["progress"])))}%`;
+              return `${Math.round(100*Number(xF(kk,["progress"])))}%`;
             case "keyBinding":
-              return String(YR(uu, ["action"]));
+              return String(xF(kk, ["action"]));
             case "other":
-              return JSON.stringify(uu)
+              return JSON.stringify(kk)
           }
         }
-        const vR = /^[A-Za-z_$][\w$]*$/;
+        const IF = /^[A-Za-z_$][\w$]*$/;
 
-        function aR(uu) {
-          if (Array.isArray(uu)) return `[${uu.map(aR).join(", ")}]`;
-          if (uu && "object" === typeof uu) {
-            const Ru = Object.entries(uu).map((uu => {
-              let [Ru, yu] = uu;
-              return `${vR.test(Ru)?Ru:JSON.stringify(Ru)}: ${aR(yu)}`
+        function QF(kk) {
+          if (Array.isArray(kk)) return `[${kk.map(QF).join(", ")}]`;
+          if (kk && "object" === typeof kk) {
+            const Fk = Object.entries(kk).map((kk => {
+              let [Fk, Bk] = kk;
+              return `${IF.test(Fk)?Fk:JSON.stringify(Fk)}: ${QF(Bk)}`
             }));
-            return 0 === Ru.length ? "{}" : `{ ${Ru.join(", ")} }`
+            return 0 === Fk.length ? "{}" : `{ ${Fk.join(", ")} }`
           }
-          return JSON.stringify(uu)
+          return JSON.stringify(kk)
         }
 
-        function fR(uu) {
-          const Ru = uu.map(aR),
-            yu = `[${Ru.join(", ")}]`;
-          return yu.length <= 60 ? yu : `[\n${Ru.map((uu=>`    ${uu},`)).join("\n")}\n]`
+        function kB(kk) {
+          const Fk = kk.map(QF),
+            Bk = `[${Fk.join(", ")}]`;
+          return Bk.length <= 60 ? Bk : `[\n${Fk.map((kk=>`    ${kk},`)).join("\n")}\n]`
         }
-        const uy = {
+        const FB = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function Ry(uu) {
-          let Ru = "";
-          for (let Ku = 0; Ku < uu.length; Ku++) {
-            const Qu = uu[Ku];
-            if ("\\" === Qu) {
-              var yu;
-              const Eu = null !== (yu = uu[Ku + 1]) && void 0 !== yu ? yu : "";
-              Ru += "'" === Eu ? "'" : Qu + Eu, Ku++
-            } else if ('"' === Qu) Ru += '\\"';
+        function BB(kk) {
+          let Fk = "";
+          for (let tk = 0; tk < kk.length; tk++) {
+            const ak = kk[tk];
+            if ("\\" === ak) {
+              var Bk;
+              const Rk = null !== (Bk = kk[tk + 1]) && void 0 !== Bk ? Bk : "";
+              Fk += "'" === Rk ? "'" : ak + Rk, tk++
+            } else if ('"' === ak) Fk += '\\"';
             else {
-              var Eu;
-              Ru += null !== (Eu = uy[Qu]) && void 0 !== Eu ? Eu : Qu
+              var Rk;
+              Fk += null !== (Rk = FB[ak]) && void 0 !== Rk ? Rk : ak
             }
           }
-          return `"${Ru}"`
+          return `"${Fk}"`
         }
 
-        function yy(uu) {
-          if ("string" === typeof uu) return !0;
-          if (!uu || "object" !== typeof uu || Array.isArray(uu)) return !1;
-          const Ru = uu;
-          return "ProgressBar" === Ru.type ? "number" === typeof Ru.progress : "StyledKeyBinding" === Ru.type ? LR.h.includes(Ru.action) : "string" === typeof Ru.icon || "string" === typeof Ru.str || "string" === typeof Ru.entityName || "string" === typeof Ru.translationKey
+        function RB(kk) {
+          if ("string" === typeof kk) return !0;
+          if (!kk || "object" !== typeof kk || Array.isArray(kk)) return !1;
+          const Fk = kk;
+          return "ProgressBar" === Fk.type ? "number" === typeof Fk.progress : "StyledKeyBinding" === Fk.type ? zF.e.includes(Fk.action) : "string" === typeof Fk.icon || "string" === typeof Fk.str || "string" === typeof Fk.entityName || "string" === typeof Fk.translationKey
         }
 
-        function Ey(uu) {
-          let Ru;
+        function tB(kk) {
+          let Fk;
           try {
-            Ru = function(uu) {
-              let Ru = "",
-                yu = "",
-                Eu = 0;
-              const Ku = () => {
-                Ru += yu.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), yu = ""
+            Fk = function(kk) {
+              let Fk = "",
+                Bk = "",
+                Rk = 0;
+              const tk = () => {
+                Fk += Bk.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), Bk = ""
               };
-              for (; Eu < uu.length;) {
-                const Qu = uu.slice(Eu).search(/["'`]|\/\//);
-                if (-1 === Qu) {
-                  yu += uu.slice(Eu);
+              for (; Rk < kk.length;) {
+                const ak = kk.slice(Rk).search(/["'`]|\/\//);
+                if (-1 === ak) {
+                  Bk += kk.slice(Rk);
                   break
                 }
-                yu += uu.slice(Eu, Eu + Qu);
-                const mu = Eu + Qu,
-                  Ju = uu[mu];
-                if ("/" === Ju) {
-                  const Ru = uu.indexOf("\n", mu);
-                  Eu = -1 === Ru ? uu.length : Ru;
+                Bk += kk.slice(Rk, Rk + ak);
+                const Xk = Rk + ak,
+                  bk = kk[Xk];
+                if ("/" === bk) {
+                  const Fk = kk.indexOf("\n", Xk);
+                  Rk = -1 === Fk ? kk.length : Fk;
                   continue
                 }
-                if (Ku(), "`" === Ju) throw new Error("Use quotes rather than template strings.");
-                let Nu = mu + 1;
-                for (; Nu < uu.length && uu[Nu] !== Ju;) Nu += "\\" === uu[Nu] ? 2 : 1;
-                if (Nu >= uu.length) throw new Error("A string is missing its closing quote.");
-                const Xu = uu.slice(mu + 1, Nu);
-                Ru += Ry(Xu), Eu = Nu + 1
+                if (tk(), "`" === bk) throw new Error("Use quotes rather than template strings.");
+                let wk = Xk + 1;
+                for (; wk < kk.length && kk[wk] !== bk;) wk += "\\" === kk[wk] ? 2 : 1;
+                if (wk >= kk.length) throw new Error("A string is missing its closing quote.");
+                const dk = kk.slice(Xk + 1, wk);
+                Fk += BB(dk), Rk = wk + 1
               }
-              return Ku(), JSON.parse(Ru)
-            }(uu.trim())
-          } catch (Eu) {
+              return tk(), JSON.parse(Fk)
+            }(kk.trim())
+          } catch (Rk) {
             return {
               parts: null,
-              error: Eu instanceof SyntaxError ? "This isn't a valid array yet." : Eu.message
+              error: Rk instanceof SyntaxError ? "This isn't a valid array yet." : Rk.message
             }
           }
-          if (!Array.isArray(Ru)) return {
+          if (!Array.isArray(Fk)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const yu = Ru.findIndex((uu => !yy(uu)));
-          return -1 !== yu ? {
+          const Bk = Fk.findIndex((kk => !RB(kk)));
+          return -1 !== Bk ? {
             parts: null,
-            error: `Part ${yu+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${Bk+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: Ru,
+            parts: Fk,
             error: null
           }
         }
-        const Ky = 1 / nR.f.clientTicksPerSecond,
-          Qy = 700,
-          my = {
+        const aB = 1 / UF.h.clientTicksPerSecond,
+          XB = 700,
+          bB = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          Jy = {
-            progressBar: gR.progressBar.zu,
-            timedClick: gR.timedClick.icon,
-            gravityBar: gR.gravityBar.icon,
-            precisionBar: gR.precisionBar.icon,
-            rhythmClick: gR.rhythmClick.icon
+          wB = {
+            progressBar: rF.progressBar.Pk,
+            timedClick: rF.timedClick.icon,
+            gravityBar: rF.gravityBar.icon,
+            precisionBar: rF.precisionBar.icon,
+            rhythmClick: rF.rhythmClick.icon
           };
 
-        function Ny(uu) {
+        function dB(kk) {
           let {
-            type: Ru
-          } = uu;
-          const [yu, Ku] = (0, Eu.useState)("ready"), [mu, Ju] = (0, Eu.useState)(1), [Nu, Xu] = (0, Eu.useState)(!0), Vu = (0, Eu.useRef)(null), ru = (0, Eu.useRef)(null), Bu = (0, Eu.useRef)(null), xu = (0, Eu.useRef)(new Set), pu = (0, Eu.useRef)(!1), Wu = Jy[Ru], ju = (0, Eu.useMemo)((() => ({
+            type: Fk
+          } = kk;
+          const [Bk, tk] = (0, Rk.useState)("ready"), [Xk, bk] = (0, Rk.useState)(1), [wk, dk] = (0, Rk.useState)(!0), sk = (0, Rk.useRef)(null), Vk = (0, Rk.useRef)(null), Jk = (0, Rk.useRef)(null), Ak = (0, Rk.useRef)(new Set), yk = (0, Rk.useRef)(!1), mk = wB[Fk], Wk = (0, Rk.useMemo)((() => ({
             getState: () => {
-              var uu, Ru;
-              return null !== (uu = null === (Ru = Bu.current) || void 0 === Ru ? void 0 : Ru.getState()) && void 0 !== uu ? uu : my
+              var kk, Fk;
+              return null !== (kk = null === (Fk = Jk.current) || void 0 === Fk ? void 0 : Fk.getState()) && void 0 !== kk ? kk : bB
             },
-            onFrame: uu => (xu.current.add(uu), () => {
-              xu.current.delete(uu)
+            onFrame: kk => (Ak.current.add(kk), () => {
+              Ak.current.delete(kk)
             })
           })), []);
-          (0, Eu.useEffect)((() => {
-            const uu = Vu.current,
-              Ru = ru.current;
-            if (!uu || !Ru) return;
-            const yu = new ResizeObserver((() => {
-              Ju(uu.clientWidth / Math.max(1, Ru.offsetWidth))
+          (0, Rk.useEffect)((() => {
+            const kk = sk.current,
+              Fk = Vk.current;
+            if (!kk || !Fk) return;
+            const Bk = new ResizeObserver((() => {
+              bk(kk.clientWidth / Math.max(1, Fk.offsetWidth))
             }));
-            return yu.observe(uu), () => {
-              yu.disconnect()
+            return Bk.observe(kk), () => {
+              Bk.disconnect()
             }
-          }), []), (0, Eu.useEffect)((() => {
-            var uu;
-            if ("playing" !== yu) return;
-            let Eu = !1;
-            const Qu = new lR.h[Ru](gR[Ru], (uu => {
-              Eu = !0, Xu(!1), Ku(uu ? "succeeded" : "failed")
+          }), []), (0, Rk.useEffect)((() => {
+            var kk;
+            if ("playing" !== Bk) return;
+            let Rk = !1;
+            const ak = new TF.d[Fk](rF[Fk], (kk => {
+              Rk = !0, dk(!1), tk(kk ? "succeeded" : "failed")
             }), (() => {}));
-            Bu.current = Qu;
-            let mu = 0,
-              Ju = performance.now(),
-              Nu = requestAnimationFrame((function uu(Ru) {
-                for (mu += Math.min(.25, (Ru - Ju) / 1e3), Ju = Ru; mu >= Ky && !Eu;) mu -= Ky, Qu.handleTick(Ky);
-                for (const yu of xu.current) yu();
-                Eu || (Nu = requestAnimationFrame(uu))
+            Jk.current = ak;
+            let Xk = 0,
+              bk = performance.now(),
+              wk = requestAnimationFrame((function kk(Fk) {
+                for (Xk += Math.min(.25, (Fk - bk) / 1e3), bk = Fk; Xk >= aB && !Rk;) Xk -= aB, ak.handleTick(aB);
+                for (const Bk of Ak.current) Bk();
+                Rk || (wk = requestAnimationFrame(kk))
               }));
-            return null === (uu = Vu.current) || void 0 === uu || uu.focus({
+            return null === (kk = sk.current) || void 0 === kk || kk.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(Nu), Qu.tearDown(), Bu.current = null, pu.current = !1
+              cancelAnimationFrame(wk), ak.tearDown(), Jk.current = null, yk.current = !1
             }
-          }), [yu, Ru]), (0, Eu.useEffect)((() => {
-            if (Nu) return;
-            const uu = setTimeout((() => {
-              Xu(!0)
-            }), Qy);
+          }), [Bk, Fk]), (0, Rk.useEffect)((() => {
+            if (wk) return;
+            const kk = setTimeout((() => {
+              dk(!0)
+            }), XB);
             return () => {
-              clearTimeout(uu)
+              clearTimeout(kk)
             }
-          }), [Nu]);
-          const Hu = uu => {
-            var Ru;
-            "playing" === yu && pu.current !== uu && (pu.current = uu, null === (Ru = Bu.current) || void 0 === Ru || Ru.handleMouseInput(uu))
+          }), [wk]);
+          const vk = kk => {
+            var Fk;
+            "playing" === Bk && yk.current !== kk && (yk.current = kk, null === (Fk = Jk.current) || void 0 === Fk || Fk.handleMouseInput(kk))
           };
-          return (0, Su.jsxs)("div", {
+          return (0, ek.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, Su.jsxs)("div", {
-              ref: Vu,
-              className: Qu()("DocsQteStage", {
-                Playing: "playing" === yu
+            children: [(0, ek.jsxs)("div", {
+              ref: sk,
+              className: ak()("DocsQteStage", {
+                Playing: "playing" === Bk
               }),
-              tabIndex: "playing" === yu ? 0 : -1,
-              role: "playing" === yu ? "button" : void 0,
-              "aria-label": "playing" === yu ? `${Ru} quick time event: click or press Space` : void 0,
-              onPointerDown: uu => {
-                0 === uu.button && Hu(!0)
+              tabIndex: "playing" === Bk ? 0 : -1,
+              role: "playing" === Bk ? "button" : void 0,
+              "aria-label": "playing" === Bk ? `${Fk} quick time event: click or press Space` : void 0,
+              onPointerDown: kk => {
+                0 === kk.button && vk(!0)
               },
               onPointerUp: () => {
-                Hu(!1)
+                vk(!1)
               },
               onPointerLeave: () => {
-                Hu(!1)
+                vk(!1)
               },
               onPointerCancel: () => {
-                Hu(!1)
+                vk(!1)
               },
-              onKeyDown: uu => {
-                "playing" !== yu || " " !== uu.key && "Enter" !== uu.key || (uu.preventDefault(), Hu(!0))
+              onKeyDown: kk => {
+                "playing" !== Bk || " " !== kk.key && "Enter" !== kk.key || (kk.preventDefault(), vk(!0))
               },
-              onKeyUp: uu => {
-                "playing" !== yu || " " !== uu.key && "Enter" !== uu.key || Hu(!1)
+              onKeyUp: kk => {
+                "playing" !== Bk || " " !== kk.key && "Enter" !== kk.key || vk(!1)
               },
-              children: [(0, Su.jsx)("div", {
-                ref: ru,
+              children: [(0, ek.jsx)("div", {
+                ref: Vk,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${mu})`
+                  transform: `scale(${Xk})`
                 },
-                children: "playing" === yu && (0, Su.jsx)(tR.b.Provider, {
-                  value: ju,
-                  children: (0, Su.jsx)(sR.b, {
+                children: "playing" === Bk && (0, ek.jsx)(GF.b.Provider, {
+                  value: Wk,
+                  children: (0, ek.jsx)(cF.d, {
                     qte: {
-                      type: Ru,
-                      parameters: gR[Ru]
+                      type: Fk,
+                      parameters: rF[Fk]
                     }
                   })
                 })
-              }), "playing" !== yu && (0, Su.jsxs)("div", {
+              }), "playing" !== Bk && (0, ek.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== yu && (0, Su.jsxs)("div", {
-                  className: Qu()("DocsQteResult", "succeeded" === yu ? "Succeeded" : "Failed"),
-                  children: [(0, Su.jsx)(Tu, {
-                    name: "succeeded" === yu ? "check" : "cross",
+                children: ["ready" !== Bk && (0, ek.jsxs)("div", {
+                  className: ak()("DocsQteResult", "succeeded" === Bk ? "Succeeded" : "Failed"),
+                  children: [(0, ek.jsx)(fk, {
+                    name: "succeeded" === Bk ? "check" : "cross",
                     isTinted: !0
-                  }), (0, Su.jsx)("span", {
-                    children: "succeeded" === yu ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, ek.jsx)("span", {
+                    children: "succeeded" === Bk ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, Su.jsxs)("button", {
+                }), (0, ek.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !Nu,
+                  disabled: !wk,
                   onClick: () => {
-                    Ku("playing")
+                    tk("playing")
                   },
-                  children: [(0, Su.jsx)(Tu, {
-                    name: "ready" === yu ? "play" : "replay"
-                  }), (0, Su.jsx)("span", {
-                    children: "ready" === yu ? `Try ${Ru}` : "Play again"
+                  children: [(0, ek.jsx)(fk, {
+                    name: "ready" === Bk ? "play" : "replay"
+                  }), (0, ek.jsx)("span", {
+                    children: "ready" === Bk ? `Try ${Fk}` : "Play again"
                   })]
                 })]
               })]
-            }), Wu && !zR(Wu) && (0, Su.jsxs)("p", {
+            }), mk && !PF(mk) && (0, ek.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, Su.jsx)("code", {
-                children: Wu
+              children: ["The ", (0, ek.jsx)("code", {
+                children: mk
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function Xy(uu) {
+        function sB(kk) {
           let {
-            level: Ru,
-            text: yu,
-            anchor: Eu,
-            className: Ku
-          } = uu;
-          const mu = `h${Math.min(Ru,6)}`;
-          return (0, Su.jsxs)(mu, {
-                id: Eu,
-                className: Qu()("DocsHeading", Ku),
-                children: [(0, Su.jsx)(CR, {
-                      text: yu
-                    }), (0, Su.jsx)("a", {
+            level: Fk,
+            text: Bk,
+            anchor: Rk,
+            className: tk
+          } = kk;
+          const Xk = `h${Math.min(Fk,6)}`;
+          return (0, ek.jsxs)(Xk, {
+                id: Rk,
+                className: ak()("DocsHeading", tk),
+                children: [(0, ek.jsx)(LF, {
+                      text: Bk
+                    }), (0, ek.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${Eu}`,
-                        "aria-label": `Link to ${yu.replace(/`/g,"")}`,children:"#"})]})}function Vy(uu){let{items:Ru,ordered:yu}=uu;const Eu=yu?"ol":"ul";return(0,Su.jsx)(Eu,{className:"DocsList",children:Ru.map(((uu,Ru)=>(0,Su.jsxs)("li",{children:[(0,Su.jsx)(CR,{text:uu.text}),uu.children.length>0&&(0,Su.jsx)(Vy,{items:uu.children,ordered:yu})]},Ru)))})}function ry(uu){const Ru=uu[0],yu="paragraph"===(null===Ru||void 0===Ru?void 0:Ru.kind)?Ru.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(yu)?"warning":/^\*\*(tip|prefer)/.test(yu)?"tip":"note"}function By(uu){let{block:Ru}=uu;switch(Ru.kind){case"heading":return(0,Su.jsx)(Xy,{level:Ru.level,text:Ru.text,anchor:Ru.anchor});case"paragraph":return(0,Su.jsx)("p",{children:(0,Su.jsx)(CR,{text:Ru.text})});case"code":{const uu="ts"===Ru.lang?function(uu){const Ru=uu.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Ru&&Object.hasOwn(gR,Ru[1])?Ru[1]:null}(Ru.code):null;return(0,Su.jsxs)(Su.Fragment,{children:[(0,Su.jsx)(ku,{code:Ru.code,lang:Ru.lang}),uu&&(0,Su.jsx)(Ny,{type:uu})]})}case"table":return(0,Su.jsx)("div",{className:"DocsTableScroll",children:(0,Su.jsxs)("table",{className:"DocsTable",children:[(0,Su.jsx)("thead",{children:(0,Su.jsx)("tr",{children:Ru.header.map(((uu,Ru)=>(0,Su.jsx)("th",{children:(0,Su.jsx)(CR,{text:uu})},Ru)))})}),(0,Su.jsx)("tbody",{children:Ru.rows.map(((uu,Ru)=>(0,Su.jsx)("tr",{children:uu.map(((uu,Ru)=>(0,Su.jsx)("td",{children:(0,Su.jsx)(CR,{text:uu})},Ru)))},Ru)))})]})});case"list":return(0,Su.jsx)(Vy,{items:Ru.items,ordered:Ru.ordered});case"quote":return(0,Su.jsx)("aside",{className:Qu()("DocsCallout",ry(Ru.blocks)),children:(0,Su.jsx)(xy,{blocks:Ru.blocks})});case"rule":return(0,Su.jsx)("hr",{className:"DocsRule"})}}function xy(uu){let{blocks:Ru}=uu;return(0,Su.jsx)(Su.Fragment,{children:Ru.map(((uu,Ru)=>(0,Su.jsx)(By,{block:uu},Ru)))})}var Sy=yu(4518),py=yu(4523);function Ty(uu){return"blocks"===uu||"items"===uu}const Wy=new Map;function jy(uu){let Ru=Wy.get(uu);return Ru||(Ru=function(uu){const Ru={entries:[],legend:[],notes:[],examples:[]};let yu=!1;for(const Qu of uu.split(/\r?\n/).slice(1)){if(Qu.startsWith("#")){const uu=Qu.replace(/^# ?/,""),Eu=uu.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Eu?Ru.legend.push({code:Eu[1],meaning:Eu[2],usage:Eu[3].trim()}):/^Examples:/.test(uu.trim())?yu=!0:yu&&uu.trim()?Ru.examples.push(uu.trim()):uu.trim()&&!/^\s/.test(uu)&&Ru.notes.push(uu.trim());continue}const uu=Qu.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Eu,Ku;uu&&Ru.entries.push({name:uu[1],variants:null!==(Eu=null===(Ku=uu[2])||void 0===Ku?void 0:Ku.split(","))&&void 0!==Eu?Eu:[]})}return Ru}("blocks"===uu?Sy:py),Wy.set(uu,Ru)),Ru}function Hy(uu){let{className:Ru,value:yu,placeholder:Eu,label:Ku,onChange:Qu,count:mu,children:Ju}=uu;return(0,Su.jsxs)("div",{className:Ru,children:[(0,Su.jsx)(Tu,{name:"magnifying-glass"}),(0,Su.jsx)("input",{type:"search",value:yu,placeholder:Eu,"aria-label":Ku,onChange:uu=>{Qu(uu.target.value)}}),Ju,mu&&(0,Su.jsxs)("span",{className:"DocsFilterCount",children:[mu.visible," of ",mu.total]})]})}var dy=yu(1043);function by(uu){const Ru=uu.trim().match(/^(` {
+                        href: `#${Rk}`,
+                        "aria-label": `Link to ${Bk.replace(/`/g,"")}`,children:"#"})]})}function VB(kk){let{items:Fk,ordered:Bk}=kk;const Rk=Bk?"ol":"ul";return(0,ek.jsx)(Rk,{className:"DocsList",children:Fk.map(((kk,Fk)=>(0,ek.jsxs)("li",{children:[(0,ek.jsx)(LF,{text:kk.text}),kk.children.length>0&&(0,ek.jsx)(VB,{items:kk.children,ordered:Bk})]},Fk)))})}function JB(kk){const Fk=kk[0],Bk="paragraph"===(null===Fk||void 0===Fk?void 0:Fk.kind)?Fk.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(Bk)?"warning":/^\*\*(tip|prefer)/.test(Bk)?"tip":"note"}function AB(kk){let{block:Fk}=kk;switch(Fk.kind){case"heading":return(0,ek.jsx)(sB,{level:Fk.level,text:Fk.text,anchor:Fk.anchor});case"paragraph":return(0,ek.jsx)("p",{children:(0,ek.jsx)(LF,{text:Fk.text})});case"code":{const kk="ts"===Fk.lang?function(kk){const Fk=kk.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Fk&&Object.hasOwn(rF,Fk[1])?Fk[1]:null}(Fk.code):null;return(0,ek.jsxs)(ek.Fragment,{children:[(0,ek.jsx)(Ok,{code:Fk.code,lang:Fk.lang}),kk&&(0,ek.jsx)(dB,{type:kk})]})}case"table":return(0,ek.jsx)("div",{className:"DocsTableScroll",children:(0,ek.jsxs)("table",{className:"DocsTable",children:[(0,ek.jsx)("thead",{children:(0,ek.jsx)("tr",{children:Fk.header.map(((kk,Fk)=>(0,ek.jsx)("th",{children:(0,ek.jsx)(LF,{text:kk})},Fk)))})}),(0,ek.jsx)("tbody",{children:Fk.rows.map(((kk,Fk)=>(0,ek.jsx)("tr",{children:kk.map(((kk,Fk)=>(0,ek.jsx)("td",{children:(0,ek.jsx)(LF,{text:kk})},Fk)))},Fk)))})]})});case"list":return(0,ek.jsx)(VB,{items:Fk.items,ordered:Fk.ordered});case"quote":return(0,ek.jsx)("aside",{className:ak()("DocsCallout",JB(Fk.blocks)),children:(0,ek.jsx)(eB,{blocks:Fk.blocks})});case"rule":return(0,ek.jsx)("hr",{className:"DocsRule"})}}function eB(kk){let{blocks:Fk}=kk;return(0,ek.jsx)(ek.Fragment,{children:Fk.map(((kk,Fk)=>(0,ek.jsx)(AB,{block:kk},Fk)))})}var yB=Bk(4476),fB=Bk(4480);function mB(kk){return"blocks"===kk||"items"===kk}const WB=new Map;function vB(kk){let Fk=WB.get(kk);return Fk||(Fk=function(kk){const Fk={entries:[],legend:[],notes:[],examples:[]};let Bk=!1;for(const ak of kk.split(/\r?\n/).slice(1)){if(ak.startsWith("#")){const kk=ak.replace(/^# ?/,""),Rk=kk.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Rk?Fk.legend.push({code:Rk[1],meaning:Rk[2],usage:Rk[3].trim()}):/^Examples:/.test(kk.trim())?Bk=!0:Bk&&kk.trim()?Fk.examples.push(kk.trim()):kk.trim()&&!/^\s/.test(kk)&&Fk.notes.push(kk.trim());continue}const kk=ak.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Rk,tk;kk&&Fk.entries.push({name:kk[1],variants:null!==(Rk=null===(tk=kk[2])||void 0===tk?void 0:tk.split(","))&&void 0!==Rk?Rk:[]})}return Fk}("blocks"===kk?yB:fB),WB.set(kk,Fk)),Fk}function iB(kk){let{className:Fk,value:Bk,placeholder:Rk,label:tk,onChange:ak,count:Xk,children:bk}=kk;return(0,ek.jsxs)("div",{className:Fk,children:[(0,ek.jsx)(fk,{name:"magnifying-glass"}),(0,ek.jsx)("input",{type:"search",value:Bk,placeholder:Rk,"aria-label":tk,onChange:kk=>{ak(kk.target.value)}}),bk,Xk&&(0,ek.jsxs)("span",{className:"DocsFilterCount",children:[Xk.visible," of ",Xk.total]})]})}var YB=Bk(1028);function oB(kk){const Fk=kk.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return Ru?Ru[2]:null}function Cy(uu){return"paragraph"===uu.kind&&""===uu.text.trim()}function ky(uu){const Ru={name:uu.heading.text,description:[],params:[],returns:null};let yu="description";for(const Ku of uu.blocks)if(!Cy(Ku))if("heading"===Ku.kind&&/^Parameters:?$/.test(Ku.text))yu="params";else if("heading"===Ku.kind&&/^Returns:?$/.test(Ku.text))yu="returns",Ru.returns={type:"",description:[]};else if("params"!==yu||"table"!==Ku.kind){if("returns"===yu&&"paragraph"===Ku.kind&&""===Ru.returns.type){const uu=by(Ku.text);if(null!==uu){Ru.returns.type=uu.replaceAll("\\|","|");continue}}"returns"===yu?Ru.returns.description.push(Ku):Ru.description.push(Ku)}else for(const[uu,yu,Qu]of Ku.rows){var Eu;Ru.params.push({name:uu,type:null!==(Eu=by(yu))&&void 0!==Eu?Eu:yu,description:null!==Qu&&void 0!==Qu?Qu:""})}return Ru}const ey=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function Ay(uu){return uu.filter((uu=>!Cy(uu)))}const Dy=/^[\w][\w .'&!:()-]*$/,My=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Iy(uu){var Ru;if("code"===uu.kind&&"text"===uu.lang){const Ru=uu.code.split("\n").map((uu=>uu.trim())).filter(Boolean);return Ru.length>0&&Ru.every((uu=>Dy.test(uu)))?Ru.map((uu=>({name:uu}))):null}return"paragraph"===uu.kind&&My.test(uu.text.trim())?[...uu.text.matchAll(/`([ ^ `]+)` / g)].flatMap((uu => uu[1].split(/,\s*/).map((uu => ({
-                              name: uu.trim()
-                            }))))): "table" === uu.kind && null !== (Ru = uu.header[0]) && void 0 !== Ru && Ru.startsWith("Song") ? uu.rows.map((uu => {
-                              let [Ru, yu] = uu;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return Fk?Fk[2]:null}function LB(kk){return"paragraph"===kk.kind&&""===kk.text.trim()}function OB(kk){const Fk={name:kk.heading.text,description:[],params:[],returns:null};let Bk="description";for(const tk of kk.blocks)if(!LB(tk))if("heading"===tk.kind&&/^Parameters:?$/.test(tk.text))Bk="params";else if("heading"===tk.kind&&/^Returns:?$/.test(tk.text))Bk="returns",Fk.returns={type:"",description:[]};else if("params"!==Bk||"table"!==tk.kind){if("returns"===Bk&&"paragraph"===tk.kind&&""===Fk.returns.type){const kk=oB(tk.text);if(null!==kk){Fk.returns.type=kk.replaceAll("\\|","|");continue}}"returns"===Bk?Fk.returns.description.push(tk):Fk.description.push(tk)}else for(const[kk,Bk,ak]of tk.rows){var Rk;Fk.params.push({name:kk,type:null!==(Rk=oB(Bk))&&void 0!==Rk?Rk:Bk,description:null!==ak&&void 0!==ak?ak:""})}return Fk}const EB=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function SB(kk){return kk.filter((kk=>!LB(kk)))}const NB=/^[\w][\w .'&!:()-]*$/,HB=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function uB(kk){var Fk;if("code"===kk.kind&&"text"===kk.lang){const Fk=kk.code.split("\n").map((kk=>kk.trim())).filter(Boolean);return Fk.length>0&&Fk.every((kk=>NB.test(kk)))?Fk.map((kk=>({name:kk}))):null}return"paragraph"===kk.kind&&HB.test(kk.text.trim())?[...kk.text.matchAll(/`([ ^ `]+)` / g)].flatMap((kk => kk[1].split(/,\s*/).map((kk => ({
+                              name: kk.trim()
+                            }))))): "table" === kk.kind && null !== (Fk = kk.header[0]) && void 0 !== Fk && Fk.startsWith("Song") ? kk.rows.map((kk => {
+                              let [Fk, Bk] = kk;
                               return {
-                                name: Ru.replace(/`/g, ""),
-                                caption: yu
+                                name: Fk.replace(/`/g, ""),
+                                caption: Bk
                               }
                             })) : null
                           }
 
-                          function Gy(uu) {
-                            const Ru = [];
-                            for (const yu of uu) {
-                              const uu = Iy(yu),
-                                Eu = Ru.at(-1),
-                                Ku = "table" === yu.kind;
-                              uu ? "names" === (null === Eu || void 0 === Eu ? void 0 : Eu.kind) && Eu.isSongs === Ku ? Eu.names.push(...uu) : Ru.push({
+                          function MB(kk) {
+                            const Fk = [];
+                            for (const Bk of kk) {
+                              const kk = uB(Bk),
+                                Rk = Fk.at(-1),
+                                tk = "table" === Bk.kind;
+                              kk ? "names" === (null === Rk || void 0 === Rk ? void 0 : Rk.kind) && Rk.isSongs === tk ? Rk.names.push(...kk) : Fk.push({
                                 kind: "names",
-                                names: uu,
-                                isSongs: Ku
-                              }) : Ru.push({
+                                names: kk,
+                                isSongs: tk
+                              }) : Fk.push({
                                 kind: "block",
-                                block: yu
+                                block: Bk
                               })
                             }
-                            return Ru
+                            return Fk
                           }
-                          const Uy = {
+                          const gB = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function ny(uu, Ru) {
-                            return `${Uy[uu]}-${(0,eu.l)(Ru)}`
+                          function UB(kk, Fk) {
+                            return `${gB[kk]}-${(0,Ek.m)(Fk)}`
                           }
-                          const sy = new WeakMap;
+                          const cB = new WeakMap;
 
-                          function ty(uu, Ru, yu) {
-                            let Eu = sy.get(Ru);
-                            if (!Eu) {
-                              Eu = new Map;
-                              const yu = new Set;
-                              for (const Ku of (0, eu.p)(Ru)) {
-                                const Ru = Gy(Ay(Ku.blocks)).map((Ru => {
-                                  if ("block" === Ru.kind) return Ru;
+                          function GB(kk, Fk, Bk) {
+                            let Rk = cB.get(Fk);
+                            if (!Rk) {
+                              Rk = new Map;
+                              const Bk = new Set;
+                              for (const tk of (0, Ek.q)(Fk)) {
+                                const Fk = MB(SB(tk.blocks)).map((Fk => {
+                                  if ("block" === Fk.kind) return Fk;
                                   return {
                                     kind: "names",
-                                    names: Ru.names.map((Ru => {
-                                      var Eu, Qu;
-                                      const mu = ny(uu, Ru.name);
-                                      let Ju = mu;
-                                      for (let uu = 2; yu.has(Ju); uu++) Ju = `${mu}-${uu}`;
-                                      return yu.add(Ju), {
-                                        ...Ru,
-                                        anchor: Ju,
-                                        heading: null !== (Eu = null === (Qu = Ku.heading) || void 0 === Qu ? void 0 : Qu.text) && void 0 !== Eu ? Eu : ""
+                                    names: Fk.names.map((Fk => {
+                                      var Rk, ak;
+                                      const Xk = UB(kk, Fk.name);
+                                      let bk = Xk;
+                                      for (let kk = 2; Bk.has(bk); kk++) bk = `${Xk}-${kk}`;
+                                      return Bk.add(bk), {
+                                        ...Fk,
+                                        anchor: bk,
+                                        heading: null !== (Rk = null === (ak = tk.heading) || void 0 === ak ? void 0 : ak.text) && void 0 !== Rk ? Rk : ""
                                       }
                                     })),
-                                    isSongs: Ru.isSongs
+                                    isSongs: Fk.isSongs
                                   }
                                 }));
-                                Eu.set(Ku.blocks, Ru)
+                                Rk.set(tk.blocks, Fk)
                               }
-                              sy.set(Ru, Eu)
+                              cB.set(Fk, Rk)
                             }
-                            const Ku = Eu.get(yu);
-                            if (!Ku) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return Ku
+                            const tk = Rk.get(Bk);
+                            if (!tk) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return tk
                           }
-                          const ly = "/textures/docs/skinPreviews",
-                            gy = [{
+                          const TB = "/textures/docs/skinPreviews",
+                            rB = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var cy = yu(4037),
-                            Ly = yu(4053);
+                          var DB = Bk(3980),
+                            zB = Bk(4002);
 
-                          function zy(uu) {
-                            return Object.hasOwn(cy.d, uu) ? cy.d[uu] : null
+                          function PB(kk) {
+                            return Object.hasOwn(DB.f, kk) ? DB.f[kk] : null
                           }
-                          const Fy = {
+                          const hB = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: Ly.g.Standard
+                            blendMode: zB.d.Standard
                           };
 
-                          function wy(uu, Ru, yu) {
-                            return Ru + (yu - Ru) * uu()
+                          function qB(kk, Fk, Bk) {
+                            return Fk + (Bk - Fk) * kk()
                           }
 
-                          function Zy(uu, Ru, yu) {
-                            return uu + (Ru - uu) * yu
+                          function CB(kk, Fk, Bk) {
+                            return kk + (Fk - kk) * Bk
                           }
 
-                          function hy(uu) {
-                            return uu.length > 0 && "timeFraction" in uu[0]
+                          function ZB(kk) {
+                            return kk.length > 0 && "timeFraction" in kk[0]
                           }
 
-                          function Py(uu, Ru) {
-                            if (0 === uu.colorGradients.length) return [{
+                          function pB(kk, Fk) {
+                            if (0 === kk.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!hy(uu.colorGradients)) {
-                              const yu = uu.colorGradients,
+                            if (!ZB(kk.colorGradients)) {
+                              const Bk = kk.colorGradients,
                                 {
-                                  color: Eu
-                                } = yu[Math.floor(Ru() * yu.length) % yu.length];
+                                  color: Rk
+                                } = Bk[Math.floor(Fk() * Bk.length) % Bk.length];
                               return [{
                                 at: 0,
-                                colour: [Eu[0] / 255, Eu[1] / 255, Eu[2] / 255, 1]
+                                colour: [Rk[0] / 255, Rk[1] / 255, Rk[2] / 255, 1]
                               }]
                             }
-                            return [...uu.colorGradients].sort(((uu, Ru) => uu.timeFraction - Ru.timeFraction)).map((uu => {
-                              var yu, Eu, Ku;
-                              const Qu = uu.minColor,
-                                mu = null !== (yu = uu.maxColor) && void 0 !== yu ? yu : Qu,
-                                Ju = Ru(),
-                                Nu = [Zy(Qu[0], mu[0], Ju) / 255, Zy(Qu[1], mu[1], Ju) / 255, Zy(Qu[2], mu[2], Ju) / 255, Zy(null !== (Eu = Qu[3]) && void 0 !== Eu ? Eu : 1, null !== (Ku = mu[3]) && void 0 !== Ku ? Ku : 1, Ju)];
+                            return [...kk.colorGradients].sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)).map((kk => {
+                              var Bk, Rk, tk;
+                              const ak = kk.minColor,
+                                Xk = null !== (Bk = kk.maxColor) && void 0 !== Bk ? Bk : ak,
+                                bk = Fk(),
+                                wk = [CB(ak[0], Xk[0], bk) / 255, CB(ak[1], Xk[1], bk) / 255, CB(ak[2], Xk[2], bk) / 255, CB(null !== (Rk = ak[3]) && void 0 !== Rk ? Rk : 1, null !== (tk = Xk[3]) && void 0 !== tk ? tk : 1, bk)];
                               return {
-                                at: uu.timeFraction,
-                                colour: Nu
+                                at: kk.timeFraction,
+                                colour: wk
                               }
                             }))
                           }
 
-                          function iy(uu, Ru, yu, Eu) {
-                            const Ku = wy(Eu, uu.minEmitPower, uu.maxEmitPower),
-                              Qu = Ru => wy(Eu, Math.min(uu.dir1[Ru], uu.dir2[Ru]), Math.max(uu.dir1[Ru], uu.dir2[Ru])) * Ku,
-                              mu = [...uu.velocityGradients].sort(((uu, Ru) => uu.timeFraction - Ru.timeFraction)).map((uu => ({
-                                at: uu.timeFraction,
-                                factor: wy(Eu, uu.factor, uu.factor2)
+                          function KB(kk, Fk, Bk, Rk) {
+                            const tk = qB(Rk, kk.minEmitPower, kk.maxEmitPower),
+                              ak = Fk => qB(Rk, Math.min(kk.dir1[Fk], kk.dir2[Fk]), Math.max(kk.dir1[Fk], kk.dir2[Fk])) * tk,
+                              Xk = [...kk.velocityGradients].sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)).map((kk => ({
+                                at: kk.timeFraction,
+                                factor: qB(Rk, kk.factor, kk.factor2)
                               })));
                             return {
-                              pos: [wy(Eu, Ru[0], yu[0]), wy(Eu, Ru[1], yu[1]), wy(Eu, Ru[2], yu[2])],
-                              dir: [Qu(0), Qu(1), Qu(2)],
+                              pos: [qB(Rk, Fk[0], Bk[0]), qB(Rk, Fk[1], Bk[1]), qB(Rk, Fk[2], Bk[2])],
+                              dir: [ak(0), ak(1), ak(2)],
                               age: 0,
-                              life: wy(Eu, uu.minLifeTime, uu.maxLifeTime),
-                              size: wy(Eu, uu.minSize, uu.maxSize),
-                              colours: Py(uu, Eu),
-                              velocityFactors: mu
+                              life: qB(Rk, kk.minLifeTime, kk.maxLifeTime),
+                              size: qB(Rk, kk.minSize, kk.maxSize),
+                              colours: pB(kk, Rk),
+                              velocityFactors: Xk
                             }
                           }
 
-                          function Yy(uu, Ru, yu, Eu) {
-                            if (Ru < uu[0].at) return yu(Math.min(1, uu.length - 1));
-                            for (let Ku = 0; Ku < uu.length - 1; Ku++)
-                              if (Ru <= uu[Ku + 1].at) {
-                                const Qu = uu[Ku + 1].at - uu[Ku].at;
-                                return Eu(yu(Ku), yu(Ku + 1), Qu > 0 ? (Ru - uu[Ku].at) / Qu : 1)
-                              } return yu(uu.length - 1)
+                          function xB(kk, Fk, Bk, Rk) {
+                            if (Fk < kk[0].at) return Bk(Math.min(1, kk.length - 1));
+                            for (let tk = 0; tk < kk.length - 1; tk++)
+                              if (Fk <= kk[tk + 1].at) {
+                                const ak = kk[tk + 1].at - kk[tk].at;
+                                return Rk(Bk(tk), Bk(tk + 1), ak > 0 ? (Fk - kk[tk].at) / ak : 1)
+                              } return Bk(kk.length - 1)
                           }
 
-                          function oy(uu) {
-                            return Yy(uu.colours, uu.age / uu.life, (Ru => uu.colours[Ru].colour), ((uu, Ru, yu) => [Zy(uu[0], Ru[0], yu), Zy(uu[1], Ru[1], yu), Zy(uu[2], Ru[2], yu), Zy(uu[3], Ru[3], yu)]))
+                          function jB(kk) {
+                            return xB(kk.colours, kk.age / kk.life, (Fk => kk.colours[Fk].colour), ((kk, Fk, Bk) => [CB(kk[0], Fk[0], Bk), CB(kk[1], Fk[1], Bk), CB(kk[2], Fk[2], Bk), CB(kk[3], Fk[3], Bk)]))
                           }
 
-                          function qy(uu, Ru, yu) {
-                            if (uu.age += yu, uu.age >= uu.life) return !1;
-                            const Eu = function(uu) {
-                              return 0 === uu.velocityFactors.length ? 1 : Yy(uu.velocityFactors, uu.age / uu.life, (Ru => uu.velocityFactors[Ru].factor), Zy)
-                            }(uu) * yu;
-                            for (let Qu = 0; Qu < 3; Qu++) {
-                              var Ku;
-                              uu.pos[Qu] += uu.dir[Qu] * Eu, uu.dir[Qu] += (null !== (Ku = Ru[Qu]) && void 0 !== Ku ? Ku : 0) * yu
+                          function lB(kk, Fk, Bk) {
+                            if (kk.age += Bk, kk.age >= kk.life) return !1;
+                            const Rk = function(kk) {
+                              return 0 === kk.velocityFactors.length ? 1 : xB(kk.velocityFactors, kk.age / kk.life, (Fk => kk.velocityFactors[Fk].factor), CB)
+                            }(kk) * Bk;
+                            for (let ak = 0; ak < 3; ak++) {
+                              var tk;
+                              kk.pos[ak] += kk.dir[ak] * Rk, kk.dir[ak] += (null !== (tk = Fk[ak]) && void 0 !== tk ? tk : 0) * Bk
                             }
                             return !0
                           }
 
-                          function Oy(uu) {
-                            return String(Math.round(1e6 * uu) / 1e6)
+                          function nB(kk) {
+                            return String(Math.round(1e6 * kk) / 1e6)
                           }
 
-                          function vy(uu) {
-                            return `[${uu.map(Oy).join(", ")}]`
+                          function IB(kk) {
+                            return `[${kk.map(nB).join(", ")}]`
                           }
 
-                          function ay(uu, Ru) {
-                            const yu = `${Ru}    `;
-                            return `[\n${(hy(uu)?uu.map((uu=>{const Ru=[`${yu}    timeFraction: ${Oy(uu.timeFraction)},`,`${yu}    minColor: ${vy(uu.minColor)},`];return uu.maxColor&&Ru.push(`${yu}    maxColor: ${vy(uu.maxColor)},`),`${yu}{\n${Ru.join("\n")}\n${yu}},`})):uu.map((uu=>`
+                          function QB(kk, Fk) {
+                            const Bk = `${Fk}    `;
+                            return `[\n${(ZB(kk)?kk.map((kk=>{const Fk=[`${Bk}    timeFraction: ${nB(kk.timeFraction)},`,`${Bk}    minColor: ${IB(kk.minColor)},`];return kk.maxColor&&Fk.push(`${Bk}    maxColor: ${IB(kk.maxColor)},`),`${Bk}{\n${Fk.join("\n")}\n${Bk}},`})):kk.map((kk=>`
                             $ {
-                              yu
+                              Bk
                             } {
                               color: $ {
-                                vy(uu.color)
+                                IB(kk.color)
                               }
-                            }, `))).join("\n")}\n${Ru}]`
+                            }, `))).join("\n")}\n${Fk}]`
                           }
-                          const fy = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            uE = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const RE = .6;
+                          const kR = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            FR = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const BR = .6;
 
-                          function yE(uu, Ru) {
-                            return `${Ru?"song":"sound"}:${uu}`
+                          function RR(kk, Fk) {
+                            return `${Fk?"song":"sound"}:${kk}`
                           }
-                          let EE = {
+                          let tR = {
                               track: null,
-                              volume: RE
+                              volume: BR
                             },
-                            KE = null,
-                            QE = 0,
-                            mE = 0;
-                          const JE = new Set;
+                            aR = null,
+                            XR = 0,
+                            bR = 0;
+                          const wR = new Set;
 
-                          function NE(uu) {
-                            EE = {
-                              ...EE,
-                              ...uu
-                            }, JE.forEach((uu => {
-                              uu()
+                          function dR(kk) {
+                            tR = {
+                              ...tR,
+                              ...kk
+                            }, wR.forEach((kk => {
+                              kk()
                             }))
                           }
 
-                          function XE(uu) {
-                            EE.track && NE({
+                          function sR(kk) {
+                            tR.track && dR({
                               track: {
-                                ...EE.track,
-                                ...uu
+                                ...tR.track,
+                                ...kk
                               }
                             })
                           }
 
-                          function VE(uu) {
-                            const [Ru, yu] = (0, Eu.useState)((() => uu(EE))), Ku = (0, Eu.useRef)(uu);
-                            return Ku.current = uu, (0, Eu.useEffect)((() => {
-                              const uu = () => {
-                                yu((() => Ku.current(EE)))
+                          function VR(kk) {
+                            const [Fk, Bk] = (0, Rk.useState)((() => kk(tR))), tk = (0, Rk.useRef)(kk);
+                            return tk.current = kk, (0, Rk.useEffect)((() => {
+                              const kk = () => {
+                                Bk((() => tk.current(tR)))
                               };
-                              return JE.add(uu), uu(), () => {
-                                JE.delete(uu)
+                              return wR.add(kk), kk(), () => {
+                                wR.delete(kk)
                               }
-                            }), []), Ru
+                            }), []), Fk
                           }
 
-                          function rE() {
-                            QE++;
-                            const uu = KE;
-                            KE = null, null === uu || void 0 === uu || uu.stop()
+                          function JR() {
+                            XR++;
+                            const kk = aR;
+                            aR = null, null === kk || void 0 === kk || kk.stop()
                           }
 
-                          function BE(uu, Ru) {
-                            let Eu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            rE();
-                            const Ku = QE,
+                          function AR(kk, Fk) {
+                            let Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            JR();
+                            const tk = XR,
                               {
-                                track: Qu
-                              } = EE,
-                              mu = Qu && Qu.name === uu && Qu.isSong === Ru ? Qu.duration : 0;
-                            mE = Eu, NE({
+                                track: ak
+                              } = tR,
+                              Xk = ak && ak.name === kk && ak.isSong === Fk ? ak.duration : 0;
+                            bR = Rk, dR({
                               track: {
-                                name: uu,
-                                isSong: Ru,
+                                name: kk,
+                                isSong: Fk,
                                 status: "loading",
-                                duration: mu
+                                duration: Xk
                               }
-                            }), Promise.all([yu.e(215), yu.e(239)]).then((() => yu(39361))).then((yu => {
+                            }), Promise.all([Bk.e(215), Bk.e(239)]).then((() => Bk(39218))).then((Bk => {
                               let {
-                                playDocsSound: Qu
-                              } = yu;
-                              Ku === QE && (KE = Qu(uu, Ru, EE.volume, Eu, {
-                                onPlay: uu => {
-                                  Ku === QE && XE({
+                                playDocsSound: ak
+                              } = Bk;
+                              tk === XR && (aR = ak(kk, Fk, tR.volume, Rk, {
+                                onPlay: kk => {
+                                  tk === XR && sR({
                                     status: "playing",
-                                    duration: uu
+                                    duration: kk
                                   })
                                 },
-                                onEnd: uu => {
-                                  var Ru, yu;
-                                  Ku === QE && (KE = null, uu ? NE({
+                                onEnd: kk => {
+                                  var Fk, Bk;
+                                  tk === XR && (aR = null, kk ? dR({
                                     track: null
-                                  }) : (mE = null !== (Ru = null === (yu = EE.track) || void 0 === yu ? void 0 : yu.duration) && void 0 !== Ru ? Ru : 0, XE({
+                                  }) : (bR = null !== (Fk = null === (Bk = tR.track) || void 0 === Bk ? void 0 : Bk.duration) && void 0 !== Fk ? Fk : 0, sR({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((Ru => {
-                              console.error(`Could not play docs sound ${uu}`, Ru), Ku === QE && NE({
+                            })).catch((Fk => {
+                              console.error(`Could not play docs sound ${kk}`, Fk), tk === XR && dR({
                                 track: null
                               })
                             }))
                           }
 
-                          function xE() {
+                          function eR() {
                             const {
-                              track: uu
-                            } = EE;
-                            if (!uu) return;
-                            if ("playing" === uu.status && KE) return mE = KE.mH(), KE.pause(), void XE({
+                              track: kk
+                            } = tR;
+                            if (!kk) return;
+                            if ("playing" === kk.status && aR) return bR = aR.rW(), aR.pause(), void sR({
                               status: "paused"
                             });
-                            if ("loading" === uu.status) return rE(), void XE({
+                            if ("loading" === kk.status) return JR(), void sR({
                               status: "paused"
                             });
-                            if (KE) return void KE.resume();
-                            const Ru = uu.duration > 0 && mE >= uu.duration - .05;
-                            BE(uu.name, uu.isSong, Ru ? 0 : mE)
+                            if (aR) return void aR.resume();
+                            const Fk = kk.duration > 0 && bR >= kk.duration - .05;
+                            AR(kk.name, kk.isSong, Fk ? 0 : bR)
                           }
 
-                          function SE() {
-                            var uu;
-                            return KE && "playing" === (null === (uu = EE.track) || void 0 === uu ? void 0 : uu.status) ? KE.mH() : mE
+                          function yR() {
+                            var kk;
+                            return aR && "playing" === (null === (kk = tR.track) || void 0 === kk ? void 0 : kk.status) ? aR.rW() : bR
                           }
 
-                          function pE(uu) {
-                            var Ru;
-                            null === (Ru = KE) || void 0 === Ru || Ru.setVolume(uu), NE({
-                              volume: uu
+                          function fR(kk) {
+                            var Fk;
+                            null === (Fk = aR) || void 0 === Fk || Fk.setVolume(kk), dR({
+                              volume: kk
                             })
                           }
 
-                          function TE() {
-                            rE(), mE = 0, NE({
+                          function mR() {
+                            JR(), bR = 0, dR({
                               track: null
                             })
                           }
-                          const WE = (0, Eu.createContext)(null);
-                          let jE = null;
+                          const WR = (0, Rk.createContext)(null);
+                          let vR = null;
 
-                          function HE() {
-                            const [uu, Ru] = (0, Eu.useState)(null);
-                            return (0, Eu.useEffect)((() => {
-                              let uu = !1;
-                              return jE ??= Promise.all([yu.e(69), yu.e(72), yu.e(71), yu.e(70), yu.e(196), yu.e(96), yu.e(220)]).then((() => yu(39357))), jE.then((yu => {
-                                uu || Ru(yu)
-                              }), (uu => {
-                                console.error("Could not load the docs gallery's textures", uu), jE = null
+                          function iR() {
+                            const [kk, Fk] = (0, Rk.useState)(null);
+                            return (0, Rk.useEffect)((() => {
+                              let kk = !1;
+                              return vR ??= Promise.all([Bk.e(69), Bk.e(72), Bk.e(71), Bk.e(70), Bk.e(196), Bk.e(96), Bk.e(220)]).then((() => Bk(39212))), vR.then((Bk => {
+                                kk || Fk(Bk)
+                              }), (kk => {
+                                console.error("Could not load the docs gallery's textures", kk), vR = null
                               })), () => {
-                                uu = !0
+                                kk = !0
                               }
-                            }), []), uu
+                            }), []), kk
                           }
-                          const dE = 24,
-                            bE = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const YR = 24,
+                            oR = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function CE(uu, Ru) {
-                            const yu = "skins" === uu ? function(uu, Ru) {
-                              const yu = gy.find((Ru => uu.startsWith(Ru.heading)));
-                              return yu ? function(uu, Ru) {
-                                return `${uu}-${Ru}`
-                              }(yu.prefix, Ru) : null
-                            }(Ru.heading, Ru.name) : null;
-                            return null === yu ? null : `${ly}/${yu}.webp`
+                          function LR(kk, Fk) {
+                            const Bk = "skins" === kk ? function(kk, Fk) {
+                              const Bk = rB.find((Fk => kk.startsWith(Fk.heading)));
+                              return Bk ? function(kk, Fk) {
+                                return `${kk}-${Fk}`
+                              }(Bk.prefix, Fk) : null
+                            }(Fk.heading, Fk.name) : null;
+                            return null === Bk ? null : `${TB}/${Bk}.webp`
                           }
 
-                          function kE(uu) {
+                          function OR(kk) {
                             let {
-                              kind: Ru,
-                              entry: yu,
-                              assets: Ku,
-                              renderedUrl: mu
-                            } = uu;
+                              kind: Fk,
+                              entry: Bk,
+                              assets: tk,
+                              renderedUrl: Xk
+                            } = kk;
                             const {
-                              name: Ju
-                            } = yu, [Nu, Xu] = (0, Eu.useState)(!1);
-                            if ("icons" === Ru && zR(Ju)) return (0, Su.jsx)(dy.c, {
+                              name: bk
+                            } = Bk, [wk, dk] = (0, Rk.useState)(!1);
+                            if ("icons" === Fk && PF(bk)) return (0, ek.jsx)(YB.d, {
                               className: "DocsTileIcon",
-                              name: Ju
+                              name: bk
                             });
-                            let Vu = null;
-                            var ru;
-                            if ("icons" === Ru) Vu = null !== (ru = null === Ku || void 0 === Ku ? void 0 : Ku.getIngameIconUrl(Ju)) && void 0 !== ru ? ru : null;
-                            else if ("particles" === Ru) {
-                              var Bu, xu, pu;
-                              Vu = null !== (Bu = null === Ku || void 0 === Ku ? void 0 : Ku.getParticleTextureUrl(null !== (xu = null === (pu = zy(Ju)) || void 0 === pu ? void 0 : pu.texture) && void 0 !== xu ? xu : Ju)) && void 0 !== Bu ? Bu : null
-                            } else "skins" === Ru && (Vu = null !== mu && void 0 !== mu ? mu : bE.test(Ju) ? `/textures/charSkins/previews/${Ju}_preview.png` : null);
-                            return !Vu || Nu ? (0, Su.jsx)(Tu, {
+                            let sk = null;
+                            var Vk;
+                            if ("icons" === Fk) sk = null !== (Vk = null === tk || void 0 === tk ? void 0 : tk.getIngameIconUrl(bk)) && void 0 !== Vk ? Vk : null;
+                            else if ("particles" === Fk) {
+                              var Jk, Ak, yk;
+                              sk = null !== (Jk = null === tk || void 0 === tk ? void 0 : tk.getParticleTextureUrl(null !== (Ak = null === (yk = PB(bk)) || void 0 === yk ? void 0 : yk.texture) && void 0 !== Ak ? Ak : bk)) && void 0 !== Jk ? Jk : null
+                            } else "skins" === Fk && (sk = null !== Xk && void 0 !== Xk ? Xk : oR.test(bk) ? `/textures/charSkins/previews/${bk}_preview.png` : null);
+                            return !sk || wk ? (0, ek.jsx)(fk, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === Ru ? "person" : "image"
-                            }) : (0, Su.jsx)("img", {
-                              className: Qu()("DocsTileImage", {
-                                Pixelated: "skins" !== Ru
+                              name: "skins" === Fk ? "person" : "image"
+                            }) : (0, ek.jsx)("img", {
+                              className: ak()("DocsTileImage", {
+                                Pixelated: "skins" !== Fk
                               }),
-                              src: Vu,
-                              srcSet: Vu === mu ? `${Vu} 2x` : void 0,
+                              src: sk,
+                              srcSet: sk === Xk ? `${sk} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${Vu}`), Xu(!0)
+                                console.warn(`Docs gallery: could not load ${sk}`), dk(!0)
                               }
                             })
                           }
 
-                          function eE(uu) {
+                          function ER(kk) {
                             let {
-                              entry: Ru,
-                              isSong: yu
-                            } = uu;
-                            const Eu = VE((uu => {
+                              entry: Fk,
+                              isSong: Bk
+                            } = kk;
+                            const Rk = VR((kk => {
                                 let {
-                                  track: Eu
-                                } = uu;
-                                return (null === Eu || void 0 === Eu ? void 0 : Eu.name) === Ru.name && Eu.isSong === yu ? Eu.status : null
+                                  track: Rk
+                                } = kk;
+                                return (null === Rk || void 0 === Rk ? void 0 : Rk.name) === Fk.name && Rk.isSong === Bk ? Rk.status : null
                               })),
-                              Ku = null !== Eu && "paused" !== Eu;
-                            return (0, Su.jsxs)("button", {
+                              tk = null !== Rk && "paused" !== Rk;
+                            return (0, ek.jsxs)("button", {
                               type: "button",
-                              id: Ru.anchor,
-                              className: Qu()("DocsSoundTile", {
-                                Playing: Ku
+                              id: Fk.anchor,
+                              className: ak()("DocsSoundTile", {
+                                Playing: tk
                               }),
-                              "data-docs-track": yE(Ru.name, yu),
-                              "aria-label": Ku ? `Pause ${Ru.name}` : `Play ${Ru.name}`,
+                              "data-docs-track": RR(Fk.name, Bk),
+                              "aria-label": tk ? `Pause ${Fk.name}` : `Play ${Fk.name}`,
                               onClick: () => {
-                                null !== Eu ? xE() : BE(Ru.name, yu)
+                                null !== Rk ? eR() : AR(Fk.name, Bk)
                               },
-                              children: [(0, Su.jsx)("span", {
+                              children: [(0, ek.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, Su.jsx)(Tu, {
-                                  name: Ku ? "pause" : "play"
+                                children: (0, ek.jsx)(fk, {
+                                  name: tk ? "pause" : "play"
                                 })
-                              }), (0, Su.jsx)("code", {
+                              }), (0, ek.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: Ru.name
-                              }), Ru.caption && (0, Su.jsx)("span", {
+                                children: Fk.name
+                              }), Fk.caption && (0, ek.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: Ru.caption
+                                children: Fk.caption
                               })]
                             })
                           }
 
-                          function AE(uu) {
+                          function SR(kk) {
                             let {
-                              kind: Ru,
-                              names: yu,
-                              isSongs: Ku
-                            } = uu;
-                            const mu = HE(),
-                              [Ju, Nu] = ju(),
-                              Xu = !1 === (null === Ju || void 0 === Ju ? void 0 : Ju.failed) ? Ju.text : null,
-                              Vu = (0, Eu.useContext)(WE),
-                              [ru, Bu] = (0, Eu.useState)(""),
-                              xu = ru.trim().toLowerCase(),
-                              pu = xu ? yu.filter((uu => uu.name.toLowerCase().includes(xu))) : yu;
-                            return (0, Su.jsxs)("div", {
+                              kind: Fk,
+                              names: Bk,
+                              isSongs: tk
+                            } = kk;
+                            const Xk = iR(),
+                              [bk, wk] = Wk(),
+                              dk = !1 === (null === bk || void 0 === bk ? void 0 : bk.failed) ? bk.text : null,
+                              sk = (0, Rk.useContext)(WR),
+                              [Vk, Jk] = (0, Rk.useState)(""),
+                              Ak = Vk.trim().toLowerCase(),
+                              yk = Ak ? Bk.filter((kk => kk.name.toLowerCase().includes(Ak))) : Bk;
+                            return (0, ek.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [yu.length > dE && (0, Su.jsx)(Hy, {
+                              children: [Bk.length > YR && (0, ek.jsx)(iB, {
                                 className: "DocsGalleryFilter",
-                                value: ru,
-                                placeholder: `Filter ${yu.length} names\u2026`,
+                                value: Vk,
+                                placeholder: `Filter ${Bk.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: Bu,
-                                count: xu ? {
-                                  visible: pu.length,
-                                  total: yu.length
+                                onChange: Jk,
+                                count: Ak ? {
+                                  visible: yk.length,
+                                  total: Bk.length
                                 } : null
-                              }), (0, Su.jsx)("div", {
-                                className: Qu()("DocsGalleryGrid", `Kind-${Ru}`, {
-                                  Songs: Ku
+                              }), (0, ek.jsx)("div", {
+                                className: ak()("DocsGalleryGrid", `Kind-${Fk}`, {
+                                  Songs: tk
                                 }),
-                                children: pu.map((uu => {
-                                  if ("sounds" === Ru) return (0, Su.jsx)(eE, {
-                                    entry: uu,
-                                    isSong: Ku
-                                  }, uu.anchor);
-                                  if (Vu && "particles" === Ru && zy(uu.name)) return (0, Su.jsxs)("button", {
+                                children: yk.map((kk => {
+                                  if ("sounds" === Fk) return (0, ek.jsx)(ER, {
+                                    entry: kk,
+                                    isSong: tk
+                                  }, kk.anchor);
+                                  if (sk && "particles" === Fk && PB(kk.name)) return (0, ek.jsxs)("button", {
                                     type: "button",
-                                    id: uu.anchor,
-                                    className: Qu()("DocsTile Previewable", {
-                                      Copied: Xu === uu.name
+                                    id: kk.anchor,
+                                    className: ak()("DocsTile Previewable", {
+                                      Copied: dk === kk.name
                                     }),
-                                    title: `Play "${uu.name}" in the playground and copy its name`,
+                                    title: `Play "${kk.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      Vu(uu.name), Nu(uu.name)
+                                      sk(kk.name), wk(kk.name)
                                     },
-                                    children: [(0, Su.jsxs)("span", {
+                                    children: [(0, ek.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, Su.jsx)(kE, {
-                                        kind: Ru,
-                                        entry: uu,
-                                        assets: mu,
+                                      children: [(0, ek.jsx)(OR, {
+                                        kind: Fk,
+                                        entry: kk,
+                                        assets: Xk,
                                         renderedUrl: null
-                                      }), (0, Su.jsx)("span", {
+                                      }), (0, ek.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, Su.jsx)(Tu, {
+                                        children: (0, ek.jsx)(fk, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, Su.jsx)("span", {
+                                    }), (0, ek.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Xu === uu.name ? "Copied!" : uu.name
+                                      children: dk === kk.name ? "Copied!" : kk.name
                                     })]
-                                  }, uu.anchor);
-                                  const yu = CE(Ru, uu);
-                                  return (0, Su.jsxs)("button", {
+                                  }, kk.anchor);
+                                  const Bk = LR(Fk, kk);
+                                  return (0, ek.jsxs)("button", {
                                     type: "button",
-                                    id: uu.anchor,
-                                    className: Qu()("DocsTile", {
-                                      Copied: Xu === uu.name
+                                    id: kk.anchor,
+                                    className: ak()("DocsTile", {
+                                      Copied: dk === kk.name
                                     }),
-                                    title: `Copy "${uu.name}"`,
+                                    title: `Copy "${kk.name}"`,
                                     onClick: () => {
-                                      Nu(uu.name)
+                                      wk(kk.name)
                                     },
-                                    children: [(0, Su.jsx)("span", {
-                                      className: Qu()("DocsTilePreview", {
-                                        Rendered: null !== yu
+                                    children: [(0, ek.jsx)("span", {
+                                      className: ak()("DocsTilePreview", {
+                                        Rendered: null !== Bk
                                       }),
-                                      children: (0, Su.jsx)(kE, {
-                                        kind: Ru,
-                                        entry: uu,
-                                        assets: mu,
-                                        renderedUrl: yu
+                                      children: (0, ek.jsx)(OR, {
+                                        kind: Fk,
+                                        entry: kk,
+                                        assets: Xk,
+                                        renderedUrl: Bk
                                       })
-                                    }), (0, Su.jsx)("span", {
+                                    }), (0, ek.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Xu === uu.name ? "Copied!" : uu.name
+                                      children: dk === kk.name ? "Copied!" : kk.name
                                     })]
-                                  }, uu.anchor)
+                                  }, kk.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function DE(uu) {
+                          function NR(kk) {
                             let {
-                              kind: Ru,
-                              content: yu,
-                              blocks: Eu
-                            } = uu;
-                            return (0, Su.jsx)(Su.Fragment, {
-                              children: ty(Ru, yu, Eu).map(((uu, yu) => "block" === uu.kind ? (0, Su.jsx)(By, {
-                                block: uu.block
-                              }, yu) : (0, Su.jsx)(AE, {
-                                kind: Ru,
-                                names: uu.names,
-                                isSongs: uu.isSongs
-                              }, yu)))
+                              kind: Fk,
+                              content: Bk,
+                              blocks: Rk
+                            } = kk;
+                            return (0, ek.jsx)(ek.Fragment, {
+                              children: GB(Fk, Bk, Rk).map(((kk, Bk) => "block" === kk.kind ? (0, ek.jsx)(AB, {
+                                block: kk.block
+                              }, Bk) : (0, ek.jsx)(SR, {
+                                kind: Fk,
+                                names: kk.names,
+                                isSongs: kk.isSongs
+                              }, Bk)))
                             })
                           }
-                          const ME = [{
+                          const HR = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,420 +2161,420 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function IE(uu) {
+                          function uR(kk) {
                             let {
-                              cards: Ru = ME,
-                              label: yu = "Start here"
-                            } = uu;
-                            const Ku = (0, Eu.useContext)(xR);
-                            return (0, Su.jsx)("nav", {
+                              cards: Fk = HR,
+                              label: Bk = "Start here"
+                            } = kk;
+                            const tk = (0, Rk.useContext)(eF);
+                            return (0, ek.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": yu,
-                              children: Ru.map((uu => {
+                              "aria-label": Bk,
+                              children: Fk.map((kk => {
                                 let {
-                                  pageId: Ru,
-                                  countNoun: yu
-                                } = uu;
-                                const Eu = Lu(Ru);
-                                return (0, Su.jsxs)(mu.c, {
-                                  to: Pu(Ku, Eu),
+                                  pageId: Fk,
+                                  countNoun: Bk
+                                } = kk;
+                                const Rk = zk(Fk);
+                                return (0, ek.jsxs)(Xk.b, {
+                                  to: pk(tk, Rk),
                                   className: "DocsLandingCard",
-                                  children: [(0, Su.jsx)("span", {
+                                  children: [(0, ek.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, Su.jsx)(Tu, {
-                                      name: Eu.icon
+                                    children: (0, ek.jsx)(fk, {
+                                      name: Rk.icon
                                     })
-                                  }), (0, Su.jsx)("span", {
+                                  }), (0, ek.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: Eu.title
-                                  }), (0, Su.jsx)("span", {
+                                    children: Rk.title
+                                  }), (0, ek.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: Eu.summary
-                                  }), yu && (0, Su.jsxs)("span", {
+                                    children: Rk.summary
+                                  }), Bk && (0, ek.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [Fu(Eu).sections.length, " ", yu]
+                                    children: [hk(Rk).sections.length, " ", Bk]
                                   })]
-                                }, Ru)
+                                }, Fk)
                               }))
                             })
                           }
-                          const GE = 240;
+                          const MR = 240;
 
-                          function UE(uu) {
+                          function gR(kk) {
                             let {
-                              faces: Ru
-                            } = uu;
-                            return (0, Su.jsxs)("span", {
+                              faces: Fk
+                            } = kk;
+                            return (0, ek.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, Su.jsx)("span", {
+                              children: [(0, ek.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${Ru.top}")`
+                                  backgroundImage: `url("${Fk.top}")`
                                 }
-                              }), (0, Su.jsx)("span", {
+                              }), (0, ek.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${Ru.left}")`
+                                  backgroundImage: `url("${Fk.left}")`
                                 }
-                              }), (0, Su.jsx)("span", {
+                              }), (0, ek.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${Ru.right}")`
+                                  backgroundImage: `url("${Fk.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function nE(uu) {
+                          function UR(kk) {
                             let {
-                              src: Ru
-                            } = uu;
-                            const [yu, Ku] = (0, Eu.useState)(!1);
-                            return yu ? null : (0, Su.jsx)("img", {
-                              src: Ru,
+                              src: Fk
+                            } = kk;
+                            const [Bk, tk] = (0, Rk.useState)(!1);
+                            return Bk ? null : (0, ek.jsx)("img", {
+                              src: Fk,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${Ru}`), Ku(!0)
+                                console.warn(`Docs catalogue: could not load ${Fk}`), tk(!0)
                               }
                             })
                           }
 
-                          function sE(uu) {
+                          function cR(kk) {
                             let {
-                              kind: Ru
-                            } = uu;
-                            const yu = jy(Ru),
-                              Ku = HE(),
-                              mu = (0, Ju.s)(),
-                              [Nu, Xu] = (0, Eu.useState)(""),
-                              [Vu, ru] = (0, Eu.useState)(null),
-                              [Bu, xu] = (0, Eu.useState)(GE),
-                              [pu, Wu] = (0, Eu.useState)(null),
-                              ju = (0, Eu.useRef)(null),
-                              du = Nu.trim().toLowerCase();
-                            (0, Eu.useEffect)((() => {
-                              const uu = (0, eu.i)(mu.hash),
-                                Eu = yu.entries.find((yu => ny(Ru, yu.name) === uu));
-                              if (Eu) ju.current = Eu.name, Xu(Eu.name), ru(null), Wu(Eu.name);
-                              else if (null !== ju.current) {
-                                const uu = ju.current;
-                                ju.current = null, Xu((Ru => Ru === uu ? "" : Ru)), Wu(null)
+                              kind: Fk
+                            } = kk;
+                            const Bk = vB(Fk),
+                              tk = iR(),
+                              Xk = (0, bk.s)(),
+                              [wk, dk] = (0, Rk.useState)(""),
+                              [sk, Vk] = (0, Rk.useState)(null),
+                              [Jk, Ak] = (0, Rk.useState)(MR),
+                              [yk, mk] = (0, Rk.useState)(null),
+                              Wk = (0, Rk.useRef)(null),
+                              ik = wk.trim().toLowerCase();
+                            (0, Rk.useEffect)((() => {
+                              const kk = (0, Ek.k)(Xk.hash),
+                                Rk = Bk.entries.find((Bk => UB(Fk, Bk.name) === kk));
+                              if (Rk) Wk.current = Rk.name, dk(Rk.name), Vk(null), mk(Rk.name);
+                              else if (null !== Wk.current) {
+                                const kk = Wk.current;
+                                Wk.current = null, dk((Fk => Fk === kk ? "" : Fk)), mk(null)
                               }
-                            }), [yu, Ru, mu.hash, mu.key]), (0, Eu.useEffect)((() => {
-                              var uu;
-                              null !== pu && (null === (uu = document.getElementById(ny(Ru, pu))) || void 0 === uu || uu.scrollIntoView({
+                            }), [Bk, Fk, Xk.hash, Xk.key]), (0, Rk.useEffect)((() => {
+                              var kk;
+                              null !== yk && (null === (kk = document.getElementById(UB(Fk, yk))) || void 0 === kk || kk.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [Ru, pu]);
-                            const bu = yu.entries.filter((uu => (!du || uu.name.toLowerCase().includes(du)) && (!Vu || uu.variants.includes(Vu))));
-                            return (0, Su.jsxs)("div", {
+                            }), [Fk, yk]);
+                            const Yk = Bk.entries.filter((kk => (!ik || kk.name.toLowerCase().includes(ik)) && (!sk || kk.variants.includes(sk))));
+                            return (0, ek.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [yu.notes.length > 0 && (0, Su.jsx)("div", {
+                              children: [Bk.notes.length > 0 && (0, ek.jsx)("div", {
                                 className: "DocsProse",
-                                children: yu.notes.map((uu => (0, Su.jsx)("p", {
-                                  children: uu
-                                }, uu)))
-                              }), yu.legend.length > 0 && (0, Su.jsx)("div", {
+                                children: Bk.notes.map((kk => (0, ek.jsx)("p", {
+                                  children: kk
+                                }, kk)))
+                              }), Bk.legend.length > 0 && (0, ek.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, Su.jsxs)("table", {
+                                children: (0, ek.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, Su.jsx)("thead", {
-                                    children: (0, Su.jsxs)("tr", {
-                                      children: [(0, Su.jsx)("th", {
+                                  children: [(0, ek.jsx)("thead", {
+                                    children: (0, ek.jsxs)("tr", {
+                                      children: [(0, ek.jsx)("th", {
                                         children: "Code"
-                                      }), (0, Su.jsx)("th", {
+                                      }), (0, ek.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, Su.jsx)("th", {
+                                      }), (0, ek.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, Su.jsx)("tbody", {
-                                    children: yu.legend.map((uu => (0, Su.jsxs)("tr", {
-                                      children: [(0, Su.jsx)("td", {
-                                        children: (0, Su.jsx)("button", {
+                                  }), (0, ek.jsx)("tbody", {
+                                    children: Bk.legend.map((kk => (0, ek.jsxs)("tr", {
+                                      children: [(0, ek.jsx)("td", {
+                                        children: (0, ek.jsx)("button", {
                                           type: "button",
-                                          className: Qu()("DocsVariantChip", {
-                                            Active: Vu === uu.code
+                                          className: ak()("DocsVariantChip", {
+                                            Active: sk === kk.code
                                           }),
-                                          "aria-pressed": Vu === uu.code,
-                                          title: `Show only ${Ru} with ${uu.meaning} variants`,
+                                          "aria-pressed": sk === kk.code,
+                                          title: `Show only ${Fk} with ${kk.meaning} variants`,
                                           onClick: () => {
-                                            ru(Vu === uu.code ? null : uu.code)
+                                            Vk(sk === kk.code ? null : kk.code)
                                           },
-                                          children: uu.code
+                                          children: kk.code
                                         })
-                                      }), (0, Su.jsx)("td", {
-                                        children: uu.meaning
-                                      }), (0, Su.jsx)("td", {
-                                        children: (0, Su.jsx)("code", {
+                                      }), (0, ek.jsx)("td", {
+                                        children: kk.meaning
+                                      }), (0, ek.jsx)("td", {
+                                        children: (0, ek.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: uu.usage
+                                          children: kk.usage
                                         })
                                       })]
-                                    }, uu.code)))
+                                    }, kk.code)))
                                   })]
                                 })
-                              }), yu.examples.length > 0 && (0, Su.jsx)(ku, {
+                              }), Bk.examples.length > 0 && (0, ek.jsx)(Ok, {
                                 lang: "text",
-                                code: yu.examples.join("\n")
-                              }), (0, Su.jsx)(Hy, {
+                                code: Bk.examples.join("\n")
+                              }), (0, ek.jsx)(iB, {
                                 className: "DocsFilterBar",
-                                value: Nu,
-                                placeholder: `Search ${yu.entries.length} ${Ru}\u2026`,
-                                label: `Search ${Ru}`,
-                                onChange: uu => {
-                                  Xu(uu), xu(GE)
+                                value: wk,
+                                placeholder: `Search ${Bk.entries.length} ${Fk}\u2026`,
+                                label: `Search ${Fk}`,
+                                onChange: kk => {
+                                  dk(kk), Ak(MR)
                                 },
-                                count: du || Vu ? {
-                                  visible: bu.length,
-                                  total: yu.entries.length
+                                count: ik || sk ? {
+                                  visible: Yk.length,
+                                  total: Bk.entries.length
                                 } : null,
-                                children: Vu && (0, Su.jsxs)("button", {
+                                children: sk && (0, ek.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    ru(null)
+                                    Vk(null)
                                   },
-                                  children: [Vu, " ", (0, Su.jsx)(Tu, {
+                                  children: [sk, " ", (0, ek.jsx)(fk, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, Su.jsx)("div", {
+                              }), (0, ek.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: bu.slice(0, Bu).map((uu => {
-                                  const yu = "blocks" === Ru ? null === Ku || void 0 === Ku ? void 0 : Ku.getBlockFaces(uu.name) : null,
-                                    Eu = Ku && !yu ? Ku.getItemTextureUrl(uu.name) : null;
-                                  return (0, Su.jsxs)("div", {
-                                    id: ny(Ru, uu.name),
-                                    className: Qu()("DocsCatalogueTile", {
-                                      Linked: uu.name === pu
+                                children: Yk.slice(0, Jk).map((kk => {
+                                  const Bk = "blocks" === Fk ? null === tk || void 0 === tk ? void 0 : tk.getBlockFaces(kk.name) : null,
+                                    Rk = tk && !Bk ? tk.getItemTextureUrl(kk.name) : null;
+                                  return (0, ek.jsxs)("div", {
+                                    id: UB(Fk, kk.name),
+                                    className: ak()("DocsCatalogueTile", {
+                                      Linked: kk.name === yk
                                     }),
-                                    children: [(0, Su.jsxs)("span", {
+                                    children: [(0, ek.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [yu && (0, Su.jsx)(UE, {
-                                        faces: yu
-                                      }), Eu && (0, Su.jsx)(nE, {
-                                        src: Eu
+                                      children: [Bk && (0, ek.jsx)(gR, {
+                                        faces: Bk
+                                      }), Rk && (0, ek.jsx)(UR, {
+                                        src: Rk
                                       })]
-                                    }), (0, Su.jsx)("span", {
+                                    }), (0, ek.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: uu.name
-                                    }), uu.variants.length > 0 && (0, Su.jsx)("span", {
+                                      children: kk.name
+                                    }), kk.variants.length > 0 && (0, ek.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: uu.variants.map((uu => (0, Su.jsx)("span", {
-                                        children: uu
-                                      }, uu)))
-                                    }), (0, Su.jsx)(Hu, {
-                                      text: uu.name,
+                                      children: kk.variants.map((kk => (0, ek.jsx)("span", {
+                                        children: kk
+                                      }, kk)))
+                                    }), (0, ek.jsx)(vk, {
+                                      text: kk.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, uu.name)
+                                  }, kk.name)
                                 }))
-                              }), bu.length > Bu && (0, Su.jsxs)("button", {
+                              }), Yk.length > Jk && (0, ek.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  xu(bu.length)
+                                  Ak(Yk.length)
                                 },
-                                children: ["Show all ", bu.length]
-                              }), 0 === bu.length && (0, Su.jsxs)("p", {
+                                children: ["Show all ", Yk.length]
+                              }), 0 === Yk.length && (0, ek.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", Ru, " match."]
+                                children: ["No ", Fk, " match."]
                               })]
                             })
                           }
-                          var tE = yu(4593),
-                            lE = yu(1542);
-                          const gE = .95 * tE.b;
+                          var GR = Bk(4553),
+                            TR = Bk(1535);
+                          const rR = .95 * GR.c;
 
-                          function cE(uu) {
-                            return /^\s*```/.test(uu)
+                          function DR(kk) {
+                            return /^\s*```/.test(kk)
                           }
 
-                          function LE(uu, Ru) {
-                            const yu = [
+                          function zR(kk, Fk) {
+                            const Bk = [
                               []
                             ];
-                            let Eu = !1;
-                            for (const Ku of uu.split("\n")) !Eu && Ru(Ku) && yu.at(-1).length > 0 && yu.push([]), cE(Ku) && (Eu = !Eu), yu.at(-1).push(Ku);
-                            return yu.map((uu => uu.join("\n").trim())).filter(Boolean)
+                            let Rk = !1;
+                            for (const tk of kk.split("\n")) !Rk && Fk(tk) && Bk.at(-1).length > 0 && Bk.push([]), DR(tk) && (Rk = !Rk), Bk.at(-1).push(tk);
+                            return Bk.map((kk => kk.join("\n").trim())).filter(Boolean)
                           }
 
-                          function zE(uu, Ru) {
-                            const yu = `${"#".repeat(Ru)} `,
-                              Eu = [];
-                            let Ku = !1;
-                            for (const Qu of uu.split("\n")) cE(Qu) ? Ku = !Ku : !Ku && Qu.startsWith(yu) && Eu.push(Qu.slice(yu.length).trim());
-                            return Eu
+                          function PR(kk, Fk) {
+                            const Bk = `${"#".repeat(Fk)} `,
+                              Rk = [];
+                            let tk = !1;
+                            for (const ak of kk.split("\n")) DR(ak) ? tk = !tk : !tk && ak.startsWith(Bk) && Rk.push(ak.slice(Bk.length).trim());
+                            return Rk
                           }
 
-                          function FE(uu) {
-                            return uu.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function hR(kk) {
+                            return kk.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class wE {
-                            constructor(uu, Ru) {
-                              this.origin = Ru, this.pages = void 0, this.partPaths = new Map;
-                              const yu = uu.map((uu => {
-                                const Ru = Ru => this.resolveLinks(uu, Ru).length,
-                                  yu = function(uu, Ru) {
-                                    const yu = uu.map((uu => Ru(uu.markdown) + 2)),
-                                      Eu = yu.reduce(((uu, Ru) => uu + Ru), 0),
-                                      Ku = Eu / Math.ceil(Eu / gE),
-                                      Qu = [];
-                                    let mu = 0;
-                                    return uu.forEach(((uu, Ru) => {
-                                      const Eu = yu[Ru];
-                                      (0 === Qu.length || mu + Eu > gE || mu + Eu / 2 > Ku) && (Qu.push([]), mu = 0), Qu.at(-1).push(uu), mu += Eu
-                                    })), Qu
-                                  }(function(uu, Ru) {
-                                    return LE(uu, (uu => uu.startsWith("## "))).flatMap((uu => {
-                                      var yu;
-                                      const Eu = null !== (yu = zE(uu, 2)[0]) && void 0 !== yu ? yu : "";
-                                      if (Ru(uu) <= gE) return [{
-                                        markdown: uu,
-                                        section: Eu
+                          class qR {
+                            constructor(kk, Fk) {
+                              this.origin = Fk, this.pages = void 0, this.partPaths = new Map;
+                              const Bk = kk.map((kk => {
+                                const Fk = Fk => this.resolveLinks(kk, Fk).length,
+                                  Bk = function(kk, Fk) {
+                                    const Bk = kk.map((kk => Fk(kk.markdown) + 2)),
+                                      Rk = Bk.reduce(((kk, Fk) => kk + Fk), 0),
+                                      tk = Rk / Math.ceil(Rk / rR),
+                                      ak = [];
+                                    let Xk = 0;
+                                    return kk.forEach(((kk, Fk) => {
+                                      const Rk = Bk[Fk];
+                                      (0 === ak.length || Xk + Rk > rR || Xk + Rk / 2 > tk) && (ak.push([]), Xk = 0), ak.at(-1).push(kk), Xk += Rk
+                                    })), ak
+                                  }(function(kk, Fk) {
+                                    return zR(kk, (kk => kk.startsWith("## "))).flatMap((kk => {
+                                      var Bk;
+                                      const Rk = null !== (Bk = PR(kk, 2)[0]) && void 0 !== Bk ? Bk : "";
+                                      if (Fk(kk) <= rR) return [{
+                                        markdown: kk,
+                                        section: Rk
                                       }];
-                                      let Ku = !1,
-                                        Qu = "";
-                                      return LE(uu, (uu => {
-                                        const Ru = Ku && "" !== uu.trim();
-                                        return Ku = "" === uu.trim(), Ru
-                                      })).map((uu => {
-                                        var Ru;
-                                        const yu = zE(uu, 3),
-                                          Ku = uu.startsWith("### ") ? yu[0] : Qu;
-                                        return Qu = null !== (Ru = yu.at(-1)) && void 0 !== Ru ? Ru : Qu, {
-                                          markdown: uu,
-                                          section: Eu || Ku
+                                      let tk = !1,
+                                        ak = "";
+                                      return zR(kk, (kk => {
+                                        const Fk = tk && "" !== kk.trim();
+                                        return tk = "" === kk.trim(), Fk
+                                      })).map((kk => {
+                                        var Fk;
+                                        const Bk = PR(kk, 3),
+                                          tk = kk.startsWith("### ") ? Bk[0] : ak;
+                                        return ak = null !== (Fk = Bk.at(-1)) && void 0 !== Fk ? Fk : ak, {
+                                          markdown: kk,
+                                          section: Rk || tk
                                         }
                                       }))
                                     }))
-                                  }(FE(uu), Ru), Ru);
+                                  }(hR(kk), Fk), Fk);
                                 return {
-                                  page: uu,
-                                  groups: yu.length > 1 ? yu : []
+                                  page: kk,
+                                  groups: Bk.length > 1 ? Bk : []
                                 }
                               }));
                               for (const {
-                                  page: Eu,
-                                  groups: Ku
+                                  page: Rk,
+                                  groups: tk
                                 }
-                                of yu) Ku.forEach(((uu, Ru) => {
-                                const yu = (0, tE.w)(Eu.slug, Ru);
-                                for (const Ku of uu.flatMap((uu => [...zE(uu.markdown, 2), ...zE(uu.markdown, 3)]))) {
-                                  const uu = `${Eu.id}#${(0,eu.l)(Ku)}`;
-                                  this.partPaths.has(uu) || this.partPaths.set(uu, yu)
+                                of Bk) tk.forEach(((kk, Fk) => {
+                                const Bk = (0, GR.t)(Rk.slug, Fk);
+                                for (const tk of kk.flatMap((kk => [...PR(kk.markdown, 2), ...PR(kk.markdown, 3)]))) {
+                                  const kk = `${Rk.id}#${(0,Ek.m)(tk)}`;
+                                  this.partPaths.has(kk) || this.partPaths.set(kk, Bk)
                                 }
                               }));
-                              this.pages = yu.map((uu => {
+                              this.pages = Bk.map((kk => {
                                 let {
-                                  page: Ru,
-                                  groups: yu
-                                } = uu;
+                                  page: Fk,
+                                  groups: Bk
+                                } = kk;
                                 return {
-                                  page: Ru,
-                                  path: (0, tE.u)(Ru.slug),
-                                  markdown: `# ${Ru.title}\n\n${this.resolveLinks(Ru,FE(Ru))}\n`,
-                                  parts: yu.map(((uu, Eu) => this.renderPart(Ru, uu, Eu, yu.length)))
+                                  page: Fk,
+                                  path: (0, GR.p)(Fk.slug),
+                                  markdown: `# ${Fk.title}\n\n${this.resolveLinks(Fk,hR(Fk))}\n`,
+                                  parts: Bk.map(((kk, Rk) => this.renderPart(Fk, kk, Rk, Bk.length)))
                                 }
                               }))
                             }
-                            url(uu) {
-                              return `${this.origin}${uu}`
+                            url(kk) {
+                              return `${this.origin}${kk}`
                             }
-                            getPage(uu) {
-                              return this.pages.find((Ru => Ru.page.id === uu))
+                            getPage(kk) {
+                              return this.pages.find((Fk => Fk.page.id === kk))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((uu => (uu.parts.length > 0 ? uu.parts : [{
-                                path: uu.path,
+                              return this.pages.flatMap((kk => (kk.parts.length > 0 ? kk.parts : [{
+                                path: kk.path,
                                 label: "",
-                                markdown: uu.markdown
-                              }]).filter((uu => uu.markdown.length > tE.b))))
+                                markdown: kk.markdown
+                              }]).filter((kk => kk.markdown.length > GR.c))))
                             }
-                            markdownUrl(uu, Ru) {
-                              const yu = Ru && this.partPaths.get(`${uu.id}#${Ru}`) || (0, tE.u)(uu.slug);
-                              return this.url(Ru ? `${yu}#${Ru}` : yu)
+                            markdownUrl(kk, Fk) {
+                              const Bk = Fk && this.partPaths.get(`${kk.id}#${Fk}`) || (0, GR.p)(kk.slug);
+                              return this.url(Fk ? `${Bk}#${Fk}` : Bk)
                             }
-                            resolveLinks(uu, Ru) {
-                              return Ru.replace(/\]\((#[^)]+)\)/g, ((Ru, yu) => {
-                                var Eu;
-                                const Ku = null !== (Eu = Zu(yu)) && void 0 !== Eu ? Eu : this.samePageTarget(uu, yu);
-                                return Ku ? `](${this.markdownUrl(Ku.page,Ku.anchor)})` : Ru
+                            resolveLinks(kk, Fk) {
+                              return Fk.replace(/\]\((#[^)]+)\)/g, ((Fk, Bk) => {
+                                var Rk;
+                                const tk = null !== (Rk = Ck(Bk)) && void 0 !== Rk ? Rk : this.samePageTarget(kk, Bk);
+                                return tk ? `](${this.markdownUrl(tk.page,tk.anchor)})` : Fk
                               }))
                             }
-                            samePageTarget(uu, Ru) {
-                              const yu = (0, eu.l)(Ru.slice(1));
-                              return wu(uu, yu) ? {
-                                page: uu,
-                                anchor: yu
+                            samePageTarget(kk, Fk) {
+                              const Bk = (0, Ek.m)(Fk.slice(1));
+                              return qk(kk, Bk) ? {
+                                page: kk,
+                                anchor: Bk
                               } : null
                             }
-                            renderPart(uu, Ru, yu, Eu) {
-                              const Ku = function(uu) {
-                                  const Ru = uu.map((uu => uu.section)).filter(Boolean);
-                                  if (0 === Ru.length) return "";
-                                  const yu = Ru[0],
-                                    Eu = Ru.at(-1);
-                                  return yu === Eu ? yu : `${yu} to ${Eu}`
-                                }(Ru),
-                                Qu = Ru.map((uu => uu.markdown)).join("\n\n"),
-                                mu = Ku ? `It covers ${Ku}. ` : "",
-                                Ju = `Part ${yu+1} of ${Eu} of [${uu.title}](${this.url((0,tE.u)(uu.slug))}). ${mu}[llms.txt](${this.url(tE.h)}) lists every part.`;
+                            renderPart(kk, Fk, Bk, Rk) {
+                              const tk = function(kk) {
+                                  const Fk = kk.map((kk => kk.section)).filter(Boolean);
+                                  if (0 === Fk.length) return "";
+                                  const Bk = Fk[0],
+                                    Rk = Fk.at(-1);
+                                  return Bk === Rk ? Bk : `${Bk} to ${Rk}`
+                                }(Fk),
+                                ak = Fk.map((kk => kk.markdown)).join("\n\n"),
+                                Xk = tk ? `It covers ${tk}. ` : "",
+                                bk = `Part ${Bk+1} of ${Rk} of [${kk.title}](${this.url((0,GR.p)(kk.slug))}). ${Xk}[llms.txt](${this.url(GR.i)}) lists every part.`;
                               return {
-                                path: (0, tE.w)(uu.slug, yu),
-                                label: Ku,
-                                markdown: `# ${uu.title}, part ${yu+1} of ${Eu}\n\n${Ju}\n\n${this.resolveLinks(uu,Qu)}\n`
+                                path: (0, GR.t)(kk.slug, Bk),
+                                label: tk,
+                                markdown: `# ${kk.title}, part ${Bk+1} of ${Rk}\n\n${bk}\n\n${this.resolveLinks(kk,ak)}\n`
                               }
                             }
-                            llmsTxt(uu) {
-                              const Ru = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${ZE(tE.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const yu of cu) {
-                                Ru.push("", `## ${yu.title}`, "");
-                                for (const uu of yu.pageIds) {
-                                  const yu = this.getPage(uu),
+                            llmsTxt(kk) {
+                              const Fk = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${CR(GR.c)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const Bk of Dk) {
+                                Fk.push("", `## ${Bk.title}`, "");
+                                for (const kk of Bk.pageIds) {
+                                  const Bk = this.getPage(kk),
                                     {
-                                      page: Eu,
-                                      parts: Ku
-                                    } = yu,
-                                    Qu = `About ${ZE(yu.markdown.length)} tokens${Ku.length>0?`, in ${Ku.length} parts:`:"."}`;
-                                  Ru.push(`- [${Eu.title}](${this.url(yu.path)}): ${Eu.summary} ${Qu}`), Ku.forEach(((uu, yu) => {
-                                    Ru.push(`  - [Part ${yu+1}${uu.label?`: ${uu.label}`:""}](${this.url(uu.path)})`)
+                                      page: Rk,
+                                      parts: tk
+                                    } = Bk,
+                                    ak = `About ${CR(Bk.markdown.length)} tokens${tk.length>0?`, in ${tk.length} parts:`:"."}`;
+                                  Fk.push(`- [${Rk.title}](${this.url(Bk.path)}): ${Rk.summary} ${ak}`), tk.forEach(((kk, Bk) => {
+                                    Fk.push(`  - [Part ${Bk+1}${kk.label?`: ${kk.label}`:""}](${this.url(kk.path)})`)
                                   }))
                                 }
                               }
-                              return Ru.push("", "## Optional", "", `- [Every page in one file](${this.url(tE.e)}): About ${ZE(uu.length)} tokens, for a model with a large context window.`, ""), Ru.join("\n")
+                              return Fk.push("", "## Optional", "", `- [Every page in one file](${this.url(GR.f)}): About ${CR(kk.length)} tokens, for a model with a large context window.`, ""), Fk.join("\n")
                             }
                             llmsFullTxt() {
-                              return cu.flatMap((uu => uu.pageIds.map((uu => this.getPage(uu).markdown)))).join("\n---\n\n")
+                              return Dk.flatMap((kk => kk.pageIds.map((kk => this.getPage(kk).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const uu = this.llmsFullTxt(),
-                                Ru = this.llmsTxt(uu),
-                                yu = new Map([
-                                  [tE.m, Ru],
-                                  [tE.h, Ru],
-                                  [tE.e, uu]
+                              const kk = this.llmsFullTxt(),
+                                Fk = this.llmsTxt(kk),
+                                Bk = new Map([
+                                  [GR.k, Fk],
+                                  [GR.i, Fk],
+                                  [GR.f, kk]
                                 ]);
-                              for (const Eu of this.pages) {
-                                yu.set(Eu.path, Eu.markdown);
-                                for (const uu of Eu.parts) yu.set(uu.path, uu.markdown)
+                              for (const Rk of this.pages) {
+                                Bk.set(Rk.path, Rk.markdown);
+                                for (const kk of Rk.parts) Bk.set(kk.path, kk.markdown)
                               }
-                              return yu
+                              return Bk
                             }
                           }
 
-                          function ZE(uu) {
-                            return `${Math.max(1,Math.round(uu/4e3))}K`
+                          function CR(kk) {
+                            return `${Math.max(1,Math.round(kk/4e3))}K`
                           }
-                          let hE = null;
+                          let ZR = null;
 
-                          function PE() {
-                            return hE ??= new wE(gu, lE.c), hE
+                          function pR() {
+                            return ZR ??= new qR(rk, TR.b), ZR
                           }
-                          const iE = [{
+                          const KR = [{
                             name: "ChatGPT",
                             url: "https://chatgpt.com/?hints=search&q="
                           }, {
@@ -2582,373 +2582,373 @@ export const modules = {
                             url: "https://claude.ai/new?q="
                           }];
 
-                          function YE(uu) {
-                            return PE().getPage(uu.id).parts.length > 0 ? `Read ${tE.j}, then the parts of the Bloxd Code API's ${uu.title} page it lists, so I can ask questions about it.` : `Read ${lE.c}${(0,tE.u)(uu.slug)} so I can ask questions about it. ${tE.j} lists every page of the Bloxd Code API docs.`
+                          function xR(kk) {
+                            return pR().getPage(kk.id).parts.length > 0 ? `Read ${GR.j}, then the parts of the Bloxd Code API's ${kk.title} page it lists, so I can ask questions about it.` : `Read ${TR.b}${(0,GR.p)(kk.slug)} so I can ask questions about it. ${GR.j} lists every page of the Bloxd Code API docs.`
                           }
 
-                          function oE(uu) {
+                          function jR(kk) {
                             let {
-                              page: Ru
-                            } = uu;
-                            const [yu, Eu] = ju();
-                            return (0, Su.jsxs)("div", {
+                              page: Fk
+                            } = kk;
+                            const [Bk, Rk] = Wk();
+                            return (0, ek.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, Su.jsxs)("button", {
+                              children: [(0, ek.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  Eu(PE().getPage(Ru.id).markdown)
+                                  Rk(pR().getPage(Fk.id).markdown)
                                 },
-                                children: [(0, Su.jsx)(Tu, {
-                                  name: !1 === (null === yu || void 0 === yu ? void 0 : yu.failed) ? "check" : "copy"
-                                }), (0, Su.jsx)("span", {
-                                  children: yu ? yu.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, ek.jsx)(fk, {
+                                  name: !1 === (null === Bk || void 0 === Bk ? void 0 : Bk.failed) ? "check" : "copy"
+                                }), (0, ek.jsx)("span", {
+                                  children: Bk ? Bk.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), iE.map((uu => (0, Su.jsxs)("a", {
+                              }), KR.map((kk => (0, ek.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: `${uu.url}${encodeURIComponent(YE(Ru))}`,
+                                href: `${kk.url}${encodeURIComponent(xR(Fk))}`,
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, Su.jsx)(Tu, {
+                                children: [(0, ek.jsx)(fk, {
                                   name: "external-link"
-                                }), (0, Su.jsxs)("span", {
-                                  children: ["Open in ", uu.name]
+                                }), (0, ek.jsxs)("span", {
+                                  children: ["Open in ", kk.name]
                                 })]
-                              }, uu.name)))]
+                              }, kk.name)))]
                             })
                           }
 
-                          function qE(uu) {
-                            return `#${[0,1,2].map((Ru=>Math.round(Math.min(255,Math.max(0,uu[Ru]))).toString(16).padStart(2,"0"))).join("")}`
+                          function lR(kk) {
+                            return `#${[0,1,2].map((Fk=>Math.round(Math.min(255,Math.max(0,kk[Fk]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function OE(uu) {
-                            return [parseInt(uu.slice(1, 3), 16), parseInt(uu.slice(3, 5), 16), parseInt(uu.slice(5, 7), 16)]
+                          function nR(kk) {
+                            return [parseInt(kk.slice(1, 3), 16), parseInt(kk.slice(3, 5), 16), parseInt(kk.slice(5, 7), 16)]
                           }
 
-                          function vE(uu) {
+                          function IR(kk) {
                             let {
-                              label: Ru,
-                              min: yu,
-                              max: Eu,
-                              step: Ku,
-                              low: Qu,
-                              high: mu,
-                              onChange: Ju
-                            } = uu;
-                            return (0, Su.jsxs)("div", {
+                              label: Fk,
+                              min: Bk,
+                              max: Rk,
+                              step: tk,
+                              low: ak,
+                              high: Xk,
+                              onChange: bk
+                            } = kk;
+                            return (0, ek.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Su.jsxs)("div", {
+                              children: [(0, ek.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Su.jsx)("span", {
-                                  children: Ru
-                                }), (0, Su.jsx)("span", {
+                                children: [(0, ek.jsx)("span", {
+                                  children: Fk
+                                }), (0, ek.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: Qu === mu ? Qu : `${Qu}\u2013${mu}`
+                                  children: ak === Xk ? ak : `${ak}\u2013${Xk}`
                                 })]
-                              }), (0, Su.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, Su.jsx)("input", {
+                                children: [(0, ek.jsx)("input", {
                                   type: "range",
-                                  min: yu,
-                                  max: Eu,
-                                  step: Ku,
-                                  value: Math.min(Eu, Qu),
-                                  "aria-label": `Minimum ${Ru.toLowerCase()}`,
-                                  onChange: uu => {
-                                    const Ru = Number(uu.target.value);
-                                    Ju(Ru, Math.max(Ru, mu))
+                                  min: Bk,
+                                  max: Rk,
+                                  step: tk,
+                                  value: Math.min(Rk, ak),
+                                  "aria-label": `Minimum ${Fk.toLowerCase()}`,
+                                  onChange: kk => {
+                                    const Fk = Number(kk.target.value);
+                                    bk(Fk, Math.max(Fk, Xk))
                                   }
-                                }), (0, Su.jsx)("input", {
+                                }), (0, ek.jsx)("input", {
                                   type: "range",
-                                  min: yu,
-                                  max: Eu,
-                                  step: Ku,
-                                  value: Math.min(Eu, mu),
-                                  "aria-label": `Maximum ${Ru.toLowerCase()}`,
-                                  onChange: uu => {
-                                    const Ru = Number(uu.target.value);
-                                    Ju(Math.min(Ru, Qu), Ru)
+                                  min: Bk,
+                                  max: Rk,
+                                  step: tk,
+                                  value: Math.min(Rk, Xk),
+                                  "aria-label": `Maximum ${Fk.toLowerCase()}`,
+                                  onChange: kk => {
+                                    const Fk = Number(kk.target.value);
+                                    bk(Math.min(Fk, ak), Fk)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function aE(uu) {
+                          function QR(kk) {
                             let {
-                              label: Ru,
-                              min: yu,
-                              max: Eu,
-                              step: Ku,
-                              value: Qu,
-                              onChange: mu,
-                              format: Ju = String
-                            } = uu;
-                            return (0, Su.jsxs)("div", {
+                              label: Fk,
+                              min: Bk,
+                              max: Rk,
+                              step: tk,
+                              value: ak,
+                              onChange: Xk,
+                              format: bk = String
+                            } = kk;
+                            return (0, ek.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Su.jsxs)("div", {
+                              children: [(0, ek.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Su.jsx)("span", {
-                                  children: Ru
-                                }), (0, Su.jsx)("span", {
+                                children: [(0, ek.jsx)("span", {
+                                  children: Fk
+                                }), (0, ek.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: Ju(Qu)
+                                  children: bk(ak)
                                 })]
-                              }), (0, Su.jsx)("input", {
+                              }), (0, ek.jsx)("input", {
                                 type: "range",
-                                min: yu,
-                                max: Eu,
-                                step: Ku,
-                                value: Math.min(Eu, Math.max(yu, Qu)),
-                                "aria-label": Ru,
-                                onChange: uu => {
-                                  mu(Number(uu.target.value))
+                                min: Bk,
+                                max: Rk,
+                                step: tk,
+                                value: Math.min(Rk, Math.max(Bk, ak)),
+                                "aria-label": Fk,
+                                onChange: kk => {
+                                  Xk(Number(kk.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function fE(uu) {
+                          function kt(kk) {
                             let {
-                              opts: Ru,
-                              onChange: yu
-                            } = uu;
-                            const Eu = Ru.colorGradients;
-                            if (!hy(Eu)) return (0, Su.jsxs)("div", {
+                              opts: Fk,
+                              onChange: Bk
+                            } = kk;
+                            const Rk = Fk.colorGradients;
+                            if (!ZB(Rk)) return (0, ek.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Su.jsx)("div", {
+                              children: [(0, ek.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, Su.jsx)("span", {
+                                children: (0, ek.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, Su.jsx)("div", {
+                              }), (0, ek.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: Eu.map(((uu, Ru) => (0, Su.jsx)("input", {
+                                children: Rk.map(((kk, Fk) => (0, ek.jsx)("input", {
                                   type: "color",
-                                  value: qE(uu.color),
-                                  "aria-label": `Colour ${Ru+1}`,
-                                  onChange: uu => {
-                                    const Ku = [...Eu];
-                                    Ku[Ru] = {
-                                      color: OE(uu.target.value)
-                                    }, yu(Ku)
+                                  value: lR(kk.color),
+                                  "aria-label": `Colour ${Fk+1}`,
+                                  onChange: kk => {
+                                    const tk = [...Rk];
+                                    tk[Fk] = {
+                                      color: nR(kk.target.value)
+                                    }, Bk(tk)
                                   }
-                                }, Ru)))
+                                }, Fk)))
                               })]
                             });
-                            const Ku = (uu, Ru) => {
-                              const Ku = [...Eu];
-                              Ku[uu] = Ru, yu(Ku)
+                            const tk = (kk, Fk) => {
+                              const tk = [...Rk];
+                              tk[kk] = Fk, Bk(tk)
                             };
-                            return (0, Su.jsxs)("div", {
+                            return (0, ek.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Su.jsxs)("div", {
+                              children: [(0, ek.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Su.jsx)("span", {
+                                children: [(0, ek.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, Su.jsx)("span", {
+                                }), (0, ek.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), Eu.map(((uu, Ru) => {
-                                var yu;
-                                const Eu = null !== (yu = uu.maxColor) && void 0 !== yu ? yu : uu.minColor;
-                                return (0, Su.jsxs)("div", {
+                              }), Rk.map(((kk, Fk) => {
+                                var Bk;
+                                const Rk = null !== (Bk = kk.maxColor) && void 0 !== Bk ? Bk : kk.minColor;
+                                return (0, ek.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, Su.jsxs)("span", {
+                                  children: [(0, ek.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * uu.timeFraction), "%"]
-                                  }), (0, Su.jsx)("span", {
+                                    children: [Math.round(100 * kk.timeFraction), "%"]
+                                  }), (0, ek.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${qE(uu.minColor)}, ${qE(Eu)})`
+                                      background: `linear-gradient(90deg, ${lR(kk.minColor)}, ${lR(Rk)})`
                                     }
-                                  }), (0, Su.jsx)("input", {
+                                  }), (0, ek.jsx)("input", {
                                     type: "color",
-                                    value: qE(uu.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*uu.timeFraction)}%`,
-                                    onChange: yu => {
-                                      Ku(Ru, {
-                                        ...uu,
-                                        minColor: [...OE(yu.target.value), uu.minColor[3]]
+                                    value: lR(kk.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*kk.timeFraction)}%`,
+                                    onChange: Bk => {
+                                      tk(Fk, {
+                                        ...kk,
+                                        minColor: [...nR(Bk.target.value), kk.minColor[3]]
                                       })
                                     }
-                                  }), (0, Su.jsx)("input", {
+                                  }), (0, ek.jsx)("input", {
                                     type: "color",
-                                    value: qE(Eu),
-                                    "aria-label": `Maximum colour at ${Math.round(100*uu.timeFraction)}%`,
-                                    onChange: yu => {
-                                      Ku(Ru, {
-                                        ...uu,
-                                        maxColor: [...OE(yu.target.value), Eu[3]]
+                                    value: lR(Rk),
+                                    "aria-label": `Maximum colour at ${Math.round(100*kk.timeFraction)}%`,
+                                    onChange: Bk => {
+                                      tk(Fk, {
+                                        ...kk,
+                                        maxColor: [...nR(Bk.target.value), Rk[3]]
                                       })
                                     }
                                   })]
-                                }, Ru)
+                                }, Fk)
                               }))]
                             })
                           }
-                          const uK = [-.5, -.5, -.5],
-                            RK = [.5, .5, .5],
-                            yK = [0, 1, 2, 3, 4, 5, 6, 7].map((uu => [1 & uu ? RK[0] : uK[0], 2 & uu ? RK[1] : uK[1], 4 & uu ? RK[2] : uK[2]]));class EK {
+                          const Ft = [-.5, -.5, -.5],
+                            Bt = [.5, .5, .5],
+                            Rt = [0, 1, 2, 3, 4, 5, 6, 7].map((kk => [1 & kk ? Bt[0] : Ft[0], 2 & kk ? Bt[1] : Ft[1], 4 & kk ? Bt[2] : Ft[2]]));class tt {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(uu, Ru, yu, Eu) {
-                              const Ku = Math.round(31 * Ru),
-                                Qu = Math.round(31 * yu),
-                                mu = Math.round(31 * Eu),
-                                Ju = `${Ku}|${Qu}|${mu}`;
-                              let Nu = this.tints.get(uu);
-                              (!Nu || Nu.size > 2e3) && (Nu = new Map, this.tints.set(uu, Nu));
-                              let Xu = Nu.get(Ju);
-                              if (Xu) return Xu;
-                              Xu = document.createElement("canvas"), Xu.width = uu.naturalWidth || 16, Xu.height = uu.naturalHeight || 16;
-                              const Vu = Xu.getContext("2d");
-                              return Vu ? (Vu.imageSmoothingEnabled = !1, Vu.drawImage(uu, 0, 0, Xu.width, Xu.height), Vu.globalCompositeOperation = "multiply", Vu.fillStyle = `rgb(${Ku/31*255}, ${Qu/31*255}, ${mu/31*255})`, Vu.fillRect(0, 0, Xu.width, Xu.height), Vu.globalCompositeOperation = "destination-in", Vu.drawImage(uu, 0, 0, Xu.width, Xu.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), Nu.set(Ju, Xu), Xu
+                            get(kk, Fk, Bk, Rk) {
+                              const tk = Math.round(31 * Fk),
+                                ak = Math.round(31 * Bk),
+                                Xk = Math.round(31 * Rk),
+                                bk = `${tk}|${ak}|${Xk}`;
+                              let wk = this.tints.get(kk);
+                              (!wk || wk.size > 2e3) && (wk = new Map, this.tints.set(kk, wk));
+                              let dk = wk.get(bk);
+                              if (dk) return dk;
+                              dk = document.createElement("canvas"), dk.width = kk.naturalWidth || 16, dk.height = kk.naturalHeight || 16;
+                              const sk = dk.getContext("2d");
+                              return sk ? (sk.imageSmoothingEnabled = !1, sk.drawImage(kk, 0, 0, dk.width, dk.height), sk.globalCompositeOperation = "multiply", sk.fillStyle = `rgb(${tk/31*255}, ${ak/31*255}, ${Xk/31*255})`, sk.fillRect(0, 0, dk.width, dk.height), sk.globalCompositeOperation = "destination-in", sk.drawImage(kk, 0, 0, dk.width, dk.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), wk.set(bk, dk), dk
                             }
                           }
 
-                          function KK(uu) {
+                          function Xt(kk) {
                             let {
-                              opts: Ru,
-                              textureUrl: yu,
-                              burst: Ku,
-                              paused: Qu
-                            } = uu;
-                            const mu = (0, Eu.useRef)(null),
-                              Ju = (0, Eu.useRef)(Ru);
-                            Ju.current = Ru;
-                            const Nu = (0, Eu.useRef)(Qu);
-                            Nu.current = Qu;
-                            const Xu = (0, Eu.useRef)(null),
-                              Vu = (0, Eu.useRef)(null),
-                              ru = (0, Eu.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(uu) {
-                                let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const yu = [-.5, -.5, -.5],
-                                  Eu = [.5, .5, .5];
-                                let Ku = .5;
-                                for (let Qu = 0; Qu < 40; Qu++) {
-                                  const Qu = iy(uu, yu, Eu, Ru),
-                                    mu = Math.max(Qu.life / 30, .001);
-                                  for (; qy(Qu, uu.gravity, mu);) Ku = Math.max(Ku, Math.hypot(Qu.pos[0], Qu.pos[1], Qu.pos[2]) + Qu.size / 2)
+                              opts: Fk,
+                              textureUrl: Bk,
+                              burst: tk,
+                              paused: ak
+                            } = kk;
+                            const Xk = (0, Rk.useRef)(null),
+                              bk = (0, Rk.useRef)(Fk);
+                            bk.current = Fk;
+                            const wk = (0, Rk.useRef)(ak);
+                            wk.current = ak;
+                            const dk = (0, Rk.useRef)(null),
+                              sk = (0, Rk.useRef)(null),
+                              Vk = (0, Rk.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(kk) {
+                                let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const Bk = [-.5, -.5, -.5],
+                                  Rk = [.5, .5, .5];
+                                let tk = .5;
+                                for (let ak = 0; ak < 40; ak++) {
+                                  const ak = KB(kk, Bk, Rk, Fk),
+                                    Xk = Math.max(ak.life / 30, .001);
+                                  for (; lB(ak, kk.gravity, Xk);) tk = Math.max(tk, Math.hypot(ak.pos[0], ak.pos[1], ak.pos[2]) + ak.size / 2)
                                 }
-                                return Ku
-                              }(Ru)))), [Ru]),
-                              Bu = (0, Eu.useRef)(ru);
-                            return Bu.current = ru, (0, Eu.useEffect)((() => {
-                              if (Xu.current = null, !yu) return;
-                              const uu = new Image;
-                              let Ru = !1;
-                              return uu.onload = () => {
-                                Ru || (Xu.current = uu)
-                              }, uu.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${yu}`)
-                              }, uu.src = yu, () => {
-                                Ru = !0
+                                return tk
+                              }(Fk)))), [Fk]),
+                              Jk = (0, Rk.useRef)(Vk);
+                            return Jk.current = Vk, (0, Rk.useEffect)((() => {
+                              if (dk.current = null, !Bk) return;
+                              const kk = new Image;
+                              let Fk = !1;
+                              return kk.onload = () => {
+                                Fk || (dk.current = kk)
+                              }, kk.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${Bk}`)
+                              }, kk.src = Bk, () => {
+                                Fk = !0
                               }
-                            }), [yu]), (0, Eu.useEffect)((() => {
-                              var uu;
-                              null === (uu = Vu.current) || void 0 === uu || uu.call(Vu)
-                            }), [Ru, Ku]), (0, Eu.useEffect)((() => {
-                              const uu = mu.current,
-                                Ru = null === uu || void 0 === uu ? void 0 : uu.getContext("2d");
-                              if (!uu || !Ru) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const yu = new EK;
-                              let Eu = [],
-                                Ku = 0,
-                                Qu = -.7,
-                                ru = Bu.current,
-                                xu = performance.now(),
-                                Su = 0,
-                                pu = !0,
-                                Tu = null;
-                              const Wu = () => {
-                                const uu = Ju.current,
-                                  Ru = Math.min(400, Math.max(0, Math.ceil(uu.manualEmitCount)));
-                                Eu = [];
-                                for (let yu = 0; yu < Ru; yu++) Eu.push(iy(uu, uK, RK, Math.random));
-                                Ku = 0
+                            }), [Bk]), (0, Rk.useEffect)((() => {
+                              var kk;
+                              null === (kk = sk.current) || void 0 === kk || kk.call(sk)
+                            }), [Fk, tk]), (0, Rk.useEffect)((() => {
+                              const kk = Xk.current,
+                                Fk = null === kk || void 0 === kk ? void 0 : kk.getContext("2d");
+                              if (!kk || !Fk) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const Bk = new tt;
+                              let Rk = [],
+                                tk = 0,
+                                ak = -.7,
+                                Vk = Jk.current,
+                                Ak = performance.now(),
+                                ek = 0,
+                                yk = !0,
+                                fk = null;
+                              const mk = () => {
+                                const kk = bk.current,
+                                  Fk = Math.min(400, Math.max(0, Math.ceil(kk.manualEmitCount)));
+                                Rk = [];
+                                for (let Bk = 0; Bk < Fk; Bk++) Rk.push(KB(kk, Ft, Bt, Math.random));
+                                tk = 0
                               };
-                              Vu.current = Wu, Wu();
-                              const ju = mu => {
-                                Su = requestAnimationFrame(ju);
-                                const Vu = Math.min(.05, (mu - xu) / 1e3);
-                                if (xu = mu, !pu) return;
-                                const Hu = window.devicePixelRatio || 1,
-                                  du = Math.round(uu.clientWidth * Hu),
-                                  bu = Math.round(uu.clientHeight * Hu);
-                                if (0 === du || 0 === bu) return;
-                                uu.width === du && uu.height === bu || (uu.width = du, uu.height = bu);
-                                const Cu = Ju.current;
-                                null === Tu && (Qu += .18 * Vu), ru += (Bu.current - ru) * Math.min(1, 4 * Vu);
-                                const ku = .6 * Vu;
-                                Eu = Eu.filter((uu => qy(uu, Cu.gravity, ku))), 0 !== Eu.length || Nu.current || (Ku += Vu, Ku > .6 && Wu());
-                                const eu = function(uu, Ru, yu, Eu) {
-                                  const Ku = 3.2 * Eu,
-                                    Qu = .44 * Math.min(uu, Ru) * Ku / Eu,
-                                    mu = Math.cos(yu),
-                                    Ju = Math.sin(yu),
-                                    Nu = Math.cos(.42),
-                                    Xu = Math.sin(.42);
-                                  return (yu, Eu, Vu) => {
-                                    const ru = yu * Ju + Vu * mu,
-                                      Bu = Ku - (Eu * Xu + ru * Nu);
-                                    if (Bu < .05) return null;
-                                    const xu = Qu / Bu;
+                              sk.current = mk, mk();
+                              const Wk = Xk => {
+                                ek = requestAnimationFrame(Wk);
+                                const sk = Math.min(.05, (Xk - Ak) / 1e3);
+                                if (Ak = Xk, !yk) return;
+                                const vk = window.devicePixelRatio || 1,
+                                  ik = Math.round(kk.clientWidth * vk),
+                                  Yk = Math.round(kk.clientHeight * vk);
+                                if (0 === ik || 0 === Yk) return;
+                                kk.width === ik && kk.height === Yk || (kk.width = ik, kk.height = Yk);
+                                const Lk = bk.current;
+                                null === fk && (ak += .18 * sk), Vk += (Jk.current - Vk) * Math.min(1, 4 * sk);
+                                const Ok = .6 * sk;
+                                Rk = Rk.filter((kk => lB(kk, Lk.gravity, Ok))), 0 !== Rk.length || wk.current || (tk += sk, tk > .6 && mk());
+                                const Ek = function(kk, Fk, Bk, Rk) {
+                                  const tk = 3.2 * Rk,
+                                    ak = .44 * Math.min(kk, Fk) * tk / Rk,
+                                    Xk = Math.cos(Bk),
+                                    bk = Math.sin(Bk),
+                                    wk = Math.cos(.42),
+                                    dk = Math.sin(.42);
+                                  return (Bk, Rk, sk) => {
+                                    const Vk = Bk * bk + sk * Xk,
+                                      Jk = tk - (Rk * dk + Vk * wk);
+                                    if (Jk < .05) return null;
+                                    const Ak = ak / Jk;
                                     return {
-                                      x: uu / 2 + (yu * mu - Vu * Ju) * xu,
-                                      y: Ru / 2 - (Eu * Nu - ru * Xu) * xu,
-                                      scale: xu,
-                                      depth: Bu
+                                      x: kk / 2 + (Bk * Xk - sk * bk) * Ak,
+                                      y: Fk / 2 - (Rk * wk - Vk * dk) * Ak,
+                                      scale: Ak,
+                                      depth: Jk
                                     }
                                   }
-                                }(du, bu, Qu, ru);
-                                ! function(uu, Ru, yu, Eu, Ku) {
-                                  const Qu = uu.createLinearGradient(0, 0, 0, yu);
-                                  Qu.addColorStop(0, "#23262d"), Qu.addColorStop(1, "#16181c"), uu.globalCompositeOperation = "source-over", uu.globalAlpha = 1, uu.fillStyle = Qu, uu.fillRect(0, 0, Ru, yu);
-                                  const mu = (Ru, yu) => {
-                                      const Ku = Eu(Ru[0], Ru[1], Ru[2]),
-                                        Qu = Eu(yu[0], yu[1], yu[2]);
-                                      Ku && Qu && (uu.beginPath(), uu.moveTo(Ku.x, Ku.y), uu.lineTo(Qu.x, Qu.y), uu.stroke())
+                                }(ik, Yk, ak, Vk);
+                                ! function(kk, Fk, Bk, Rk, tk) {
+                                  const ak = kk.createLinearGradient(0, 0, 0, Bk);
+                                  ak.addColorStop(0, "#23262d"), ak.addColorStop(1, "#16181c"), kk.globalCompositeOperation = "source-over", kk.globalAlpha = 1, kk.fillStyle = ak, kk.fillRect(0, 0, Fk, Bk);
+                                  const Xk = (Fk, Bk) => {
+                                      const tk = Rk(Fk[0], Fk[1], Fk[2]),
+                                        ak = Rk(Bk[0], Bk[1], Bk[2]);
+                                      tk && ak && (kk.beginPath(), kk.moveTo(tk.x, tk.y), kk.lineTo(ak.x, ak.y), kk.stroke())
                                     },
-                                    Ju = Math.ceil(Ku) + 1,
-                                    Nu = uK[1];
-                                  uu.lineWidth = 1, uu.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let Xu = -Ju; Xu <= Ju; Xu++) mu([Xu + .5, Nu, .5 - Ju], [Xu + .5, Nu, Ju + .5]), mu([.5 - Ju, Nu, Xu + .5], [Ju + .5, Nu, Xu + .5]);
-                                  uu.strokeStyle = "rgba(255, 255, 255, 0.28)", uu.setLineDash([4, 4]);
-                                  for (const Xu of yK)
-                                    for (const uu of yK) {
-                                      const Ru = [0, 1, 2].filter((Ru => Xu[Ru] !== uu[Ru]));
-                                      1 === Ru.length && Xu[Ru[0]] < uu[Ru[0]] && mu(Xu, uu)
+                                    bk = Math.ceil(tk) + 1,
+                                    wk = Ft[1];
+                                  kk.lineWidth = 1, kk.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let dk = -bk; dk <= bk; dk++) Xk([dk + .5, wk, .5 - bk], [dk + .5, wk, bk + .5]), Xk([.5 - bk, wk, dk + .5], [bk + .5, wk, dk + .5]);
+                                  kk.strokeStyle = "rgba(255, 255, 255, 0.28)", kk.setLineDash([4, 4]);
+                                  for (const dk of Rt)
+                                    for (const kk of Rt) {
+                                      const Fk = [0, 1, 2].filter((Fk => dk[Fk] !== kk[Fk]));
+                                      1 === Fk.length && dk[Fk[0]] < kk[Fk[0]] && Xk(dk, kk)
                                     }
-                                  uu.setLineDash([])
-                                }(Ru, du, bu, eu, ru);
-                                const Au = Xu.current,
-                                  Du = Eu.map((uu => ({
-                                    particle: uu,
-                                    at: eu(uu.pos[0], uu.pos[1], uu.pos[2])
-                                  }))).filter((uu => null !== uu.at)).sort(((uu, Ru) => Ru.at.depth - uu.at.depth));
-                                Ru.imageSmoothingEnabled = !1;
-                                for (const uu of function(uu) {
-                                    switch (uu) {
-                                      case Ly.g.OneOne:
+                                  kk.setLineDash([])
+                                }(Fk, ik, Yk, Ek, Vk);
+                                const Sk = dk.current,
+                                  Nk = Rk.map((kk => ({
+                                    particle: kk,
+                                    at: Ek(kk.pos[0], kk.pos[1], kk.pos[2])
+                                  }))).filter((kk => null !== kk.at)).sort(((kk, Fk) => Fk.at.depth - kk.at.depth));
+                                Fk.imageSmoothingEnabled = !1;
+                                for (const kk of function(kk) {
+                                    switch (kk) {
+                                      case zB.d.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case Ly.g.Add:
+                                      case zB.d.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case Ly.g.Multiply:
+                                      case zB.d.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case Ly.g.MultiplyAdd:
+                                      case zB.d.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2962,665 +2962,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(Cu.blendMode)) {
-                                  Ru.globalCompositeOperation = uu.operation;
+                                  }(Lk.blendMode)) {
+                                  Fk.globalCompositeOperation = kk.operation;
                                   for (const {
-                                      particle: Eu,
-                                      at: Ku
+                                      particle: Rk,
+                                      at: tk
                                     }
-                                    of Du) {
-                                    const [Qu, mu, Ju, Nu] = oy(Eu), Xu = Math.max(1, Eu.size * Ku.scale);
-                                    Ru.globalAlpha = uu.usesAlpha ? Math.min(1, Math.max(0, Nu)) : 1, Au ? Ru.drawImage(yu.get(Au, Qu, mu, Ju), Ku.x - Xu / 2, Ku.y - Xu / 2, Xu, Xu) : (Ru.fillStyle = `rgb(${255*Qu}, ${255*mu}, ${255*Ju})`, Ru.fillRect(Ku.x - Xu / 2, Ku.y - Xu / 2, Xu, Xu))
+                                    of Nk) {
+                                    const [ak, Xk, bk, wk] = jB(Rk), dk = Math.max(1, Rk.size * tk.scale);
+                                    Fk.globalAlpha = kk.usesAlpha ? Math.min(1, Math.max(0, wk)) : 1, Sk ? Fk.drawImage(Bk.get(Sk, ak, Xk, bk), tk.x - dk / 2, tk.y - dk / 2, dk, dk) : (Fk.fillStyle = `rgb(${255*ak}, ${255*Xk}, ${255*bk})`, Fk.fillRect(tk.x - dk / 2, tk.y - dk / 2, dk, dk))
                                   }
                                 }
-                                Ru.globalCompositeOperation = "source-over", Ru.globalAlpha = 1
+                                Fk.globalCompositeOperation = "source-over", Fk.globalAlpha = 1
                               };
-                              Su = requestAnimationFrame(ju);
-                              const Hu = new IntersectionObserver((uu => {
-                                let [Ru] = uu;
-                                pu = Ru.isIntersecting
+                              ek = requestAnimationFrame(Wk);
+                              const vk = new IntersectionObserver((kk => {
+                                let [Fk] = kk;
+                                yk = Fk.isIntersecting
                               }));
-                              Hu.observe(uu);
-                              const du = Ru => {
-                                  Tu = Ru.clientX, uu.setPointerCapture(Ru.pointerId)
+                              vk.observe(kk);
+                              const ik = Fk => {
+                                  fk = Fk.clientX, kk.setPointerCapture(Fk.pointerId)
                                 },
-                                bu = uu => {
-                                  null !== Tu && (Qu += .01 * (uu.clientX - Tu), Tu = uu.clientX)
+                                Yk = kk => {
+                                  null !== fk && (ak += .01 * (kk.clientX - fk), fk = kk.clientX)
                                 },
-                                Cu = () => {
-                                  Tu = null
+                                Lk = () => {
+                                  fk = null
                                 };
-                              return uu.addEventListener("pointerdown", du), uu.addEventListener("pointermove", bu), uu.addEventListener("pointerup", Cu), uu.addEventListener("pointercancel", Cu), () => {
-                                cancelAnimationFrame(Su), Hu.disconnect(), Vu.current = null, uu.removeEventListener("pointerdown", du), uu.removeEventListener("pointermove", bu), uu.removeEventListener("pointerup", Cu), uu.removeEventListener("pointercancel", Cu)
+                              return kk.addEventListener("pointerdown", ik), kk.addEventListener("pointermove", Yk), kk.addEventListener("pointerup", Lk), kk.addEventListener("pointercancel", Lk), () => {
+                                cancelAnimationFrame(ek), vk.disconnect(), sk.current = null, kk.removeEventListener("pointerdown", ik), kk.removeEventListener("pointermove", Yk), kk.removeEventListener("pointerup", Lk), kk.removeEventListener("pointercancel", Lk)
                               }
-                            }), []), (0, Su.jsx)("canvas", {
-                              ref: mu,
+                            }), []), (0, ek.jsx)("canvas", {
+                              ref: Xk,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${Ru.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${Fk.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const QK = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            mK = [{
-                              mode: Ly.g.OneOne,
+                          const bt = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            wt = [{
+                              mode: zB.d.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: Ly.g.Standard,
+                              mode: zB.d.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: Ly.g.Add,
+                              mode: zB.d.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: Ly.g.Multiply,
+                              mode: zB.d.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: Ly.g.MultiplyAdd,
+                              mode: zB.d.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            JK = (0, Eu.forwardRef)((function(uu, Ru) {
-                              var yu, Ku;
+                            dt = (0, Rk.forwardRef)((function(kk, Fk) {
+                              var Bk, tk;
                               let {
-                                textures: mu
-                              } = uu;
-                              const Ju = HE(),
-                                Nu = (0, Eu.useRef)(null),
-                                [Xu, Vu] = (0, Eu.useState)(Fy),
-                                [ru, Bu] = (0, Eu.useState)("example"),
-                                [xu, pu] = (0, Eu.useState)(0),
-                                [Wu, ju] = (0, Eu.useState)(!1),
-                                du = uu => {
-                                  const Ru = "example" === uu ? Fy : zy(uu);
-                                  Ru && (Vu(Ru), Bu(uu))
+                                textures: Xk
+                              } = kk;
+                              const bk = iR(),
+                                wk = (0, Rk.useRef)(null),
+                                [dk, sk] = (0, Rk.useState)(hB),
+                                [Vk, Jk] = (0, Rk.useState)("example"),
+                                [Ak, yk] = (0, Rk.useState)(0),
+                                [mk, Wk] = (0, Rk.useState)(!1),
+                                ik = kk => {
+                                  const Fk = "example" === kk ? hB : PB(kk);
+                                  Fk && (sk(Fk), Jk(kk))
                                 };
-                              (0, Eu.useImperativeHandle)(Ru, (() => ({
-                                preview: uu => {
-                                  var Ru;
-                                  du(uu), null === (Ru = Nu.current) || void 0 === Ru || Ru.scrollIntoView({
+                              (0, Rk.useImperativeHandle)(Fk, (() => ({
+                                preview: kk => {
+                                  var Fk;
+                                  ik(kk), null === (Fk = wk.current) || void 0 === Fk || Fk.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const bu = uu => {
-                                  Vu({
-                                    ...Xu,
-                                    ...uu
-                                  }), Bu(null)
+                              const Yk = kk => {
+                                  sk({
+                                    ...dk,
+                                    ...kk
+                                  }), Jk(null)
                                 },
-                                Cu = function(uu, Ru) {
-                                  if (null !== Ru) return `${fy}    presetId: "${Ru}",\n${uE}\n})`;
-                                  const yu = uu.velocityGradients.map((uu => `        {\n            timeFraction: ${Oy(uu.timeFraction)},\n            factor: ${Oy(uu.factor)},\n            factor2: ${Oy(uu.factor2)},\n        },`)),
-                                    Eu = [`    dir1: ${vy(uu.dir1)},`, `    dir2: ${vy(uu.dir2)},`, uE, `    texture: "${uu.texture}",`, `    minLifeTime: ${Oy(uu.minLifeTime)},`, `    maxLifeTime: ${Oy(uu.maxLifeTime)},`, `    minEmitPower: ${Oy(uu.minEmitPower)},`, `    maxEmitPower: ${Oy(uu.maxEmitPower)},`, `    minSize: ${Oy(uu.minSize)},`, `    maxSize: ${Oy(uu.maxSize)},`, `    manualEmitCount: ${Oy(uu.manualEmitCount)},`, `    gravity: ${vy(uu.gravity)},`, `    colorGradients: ${ay(uu.colorGradients,"    ")},`, `    velocityGradients: ${yu.length>0?`[\n${yu.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Oy(uu.blendMode)},`];
-                                  return void 0 !== uu.hideDist && Eu.push(`    hideDist: ${Oy(uu.hideDist)},`), `${fy}${Eu.join("\n")}\n})`
-                                }(Xu, null === ru || "example" === ru ? null : ru),
-                                eu = mu.includes(Xu.texture) ? mu : [...mu, Xu.texture];
-                              return (0, Su.jsxs)("section", {
-                                ref: Nu,
+                                Lk = function(kk, Fk) {
+                                  if (null !== Fk) return `${kR}    presetId: "${Fk}",\n${FR}\n})`;
+                                  const Bk = kk.velocityGradients.map((kk => `        {\n            timeFraction: ${nB(kk.timeFraction)},\n            factor: ${nB(kk.factor)},\n            factor2: ${nB(kk.factor2)},\n        },`)),
+                                    Rk = [`    dir1: ${IB(kk.dir1)},`, `    dir2: ${IB(kk.dir2)},`, FR, `    texture: "${kk.texture}",`, `    minLifeTime: ${nB(kk.minLifeTime)},`, `    maxLifeTime: ${nB(kk.maxLifeTime)},`, `    minEmitPower: ${nB(kk.minEmitPower)},`, `    maxEmitPower: ${nB(kk.maxEmitPower)},`, `    minSize: ${nB(kk.minSize)},`, `    maxSize: ${nB(kk.maxSize)},`, `    manualEmitCount: ${nB(kk.manualEmitCount)},`, `    gravity: ${IB(kk.gravity)},`, `    colorGradients: ${QB(kk.colorGradients,"    ")},`, `    velocityGradients: ${Bk.length>0?`[\n${Bk.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${nB(kk.blendMode)},`];
+                                  return void 0 !== kk.hideDist && Rk.push(`    hideDist: ${nB(kk.hideDist)},`), `${kR}${Rk.join("\n")}\n})`
+                                }(dk, null === Vk || "example" === Vk ? null : Vk),
+                                Ek = Xk.includes(dk.texture) ? Xk : [...Xk, dk.texture];
+                              return (0, ek.jsxs)("section", {
+                                ref: wk,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, Su.jsxs)("header", {
+                                children: [(0, ek.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, Su.jsxs)("div", {
-                                    children: [(0, Su.jsx)("div", {
+                                  children: [(0, ek.jsxs)("div", {
+                                    children: [(0, ek.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, Su.jsx)("div", {
+                                    }), (0, ek.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, Su.jsx)(Hu, {
-                                    text: Cu,
+                                  }), (0, ek.jsx)(vk, {
+                                    text: Lk,
                                     label: "Copy code"
                                   })]
-                                }), (0, Su.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, Su.jsx)("button", {
+                                  children: [(0, ek.jsx)("button", {
                                     type: "button",
-                                    className: Qu()("DocsVariantChip", {
-                                      Active: "example" === ru
+                                    className: ak()("DocsVariantChip", {
+                                      Active: "example" === Vk
                                     }),
                                     onClick: () => {
-                                      du("example")
+                                      ik("example")
                                     },
                                     children: "Example"
-                                  }), QK.filter((uu => null !== zy(uu))).map((uu => (0, Su.jsx)("button", {
+                                  }), bt.filter((kk => null !== PB(kk))).map((kk => (0, ek.jsx)("button", {
                                     type: "button",
-                                    className: Qu()("DocsVariantChip", {
-                                      Active: ru === uu
+                                    className: ak()("DocsVariantChip", {
+                                      Active: Vk === kk
                                     }),
                                     onClick: () => {
-                                      du(uu)
+                                      ik(kk)
                                     },
-                                    children: uu
-                                  }, uu))), (0, Su.jsxs)("select", {
+                                    children: kk
+                                  }, kk))), (0, ek.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== ru && void 0 !== ru ? ru : "custom",
+                                    value: null !== Vk && void 0 !== Vk ? Vk : "custom",
                                     "aria-label": "Preset",
-                                    onChange: uu => {
-                                      du(uu.target.value)
+                                    onChange: kk => {
+                                      ik(kk.target.value)
                                     },
-                                    children: [(0, Su.jsx)("option", {
+                                    children: [(0, ek.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === ru && (0, Su.jsx)("option", {
+                                    }), null === Vk && (0, ek.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), cy.c.map((uu => (0, Su.jsx)("option", {
-                                      value: uu,
-                                      children: uu
-                                    }, uu)))]
+                                    }), DB.d.map((kk => (0, ek.jsx)("option", {
+                                      value: kk,
+                                      children: kk
+                                    }, kk)))]
                                   })]
-                                }), (0, Su.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, Su.jsxs)("div", {
+                                  children: [(0, ek.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, Su.jsx)(KK, {
-                                      opts: Xu,
-                                      textureUrl: null !== (yu = null === Ju || void 0 === Ju ? void 0 : Ju.getParticleTextureUrl(Xu.texture)) && void 0 !== yu ? yu : null,
-                                      burst: xu,
-                                      paused: Wu
-                                    }), (0, Su.jsxs)("div", {
+                                    children: [(0, ek.jsx)(Xt, {
+                                      opts: dk,
+                                      textureUrl: null !== (Bk = null === bk || void 0 === bk ? void 0 : bk.getParticleTextureUrl(dk.texture)) && void 0 !== Bk ? Bk : null,
+                                      burst: Ak,
+                                      paused: mk
+                                    }), (0, ek.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, Su.jsxs)("button", {
+                                      children: [(0, ek.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          pu(xu + 1)
+                                          yk(Ak + 1)
                                         },
-                                        children: [(0, Su.jsx)(Tu, {
+                                        children: [(0, ek.jsx)(fk, {
                                           name: "replay"
-                                        }), (0, Su.jsx)("span", {
+                                        }), (0, ek.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, Su.jsxs)("button", {
+                                      }), (0, ek.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": Wu,
+                                        "aria-pressed": mk,
                                         onClick: () => {
-                                          ju(!Wu)
+                                          Wk(!mk)
                                         },
-                                        children: [(0, Su.jsx)(Tu, {
-                                          name: Wu ? "play" : "pause"
-                                        }), (0, Su.jsx)("span", {
-                                          children: Wu ? "Loop" : "Stop looping"
+                                        children: [(0, ek.jsx)(fk, {
+                                          name: mk ? "play" : "pause"
+                                        }), (0, ek.jsx)("span", {
+                                          children: mk ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, Su.jsxs)("div", {
+                                  }), (0, ek.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, Su.jsxs)("div", {
+                                    children: [(0, ek.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, Su.jsxs)("div", {
+                                      children: [(0, ek.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, Su.jsx)("span", {
+                                        children: [(0, ek.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, Su.jsx)("code", {
+                                        }), (0, ek.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: Xu.texture
+                                          children: dk.texture
                                         })]
-                                      }), (0, Su.jsx)("div", {
+                                      }), (0, ek.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: eu.map((uu => {
-                                          var Ru;
-                                          const yu = null !== (Ru = null === Ju || void 0 === Ju ? void 0 : Ju.getParticleTextureUrl(uu)) && void 0 !== Ru ? Ru : null;
-                                          return (0, Su.jsx)("button", {
+                                        children: Ek.map((kk => {
+                                          var Fk;
+                                          const Bk = null !== (Fk = null === bk || void 0 === bk ? void 0 : bk.getParticleTextureUrl(kk)) && void 0 !== Fk ? Fk : null;
+                                          return (0, ek.jsx)("button", {
                                             type: "button",
-                                            className: Qu()("DocsParticleTexture", {
-                                              Active: Xu.texture === uu
+                                            className: ak()("DocsParticleTexture", {
+                                              Active: dk.texture === kk
                                             }),
-                                            title: uu,
-                                            "aria-label": uu,
-                                            "aria-pressed": Xu.texture === uu,
+                                            title: kk,
+                                            "aria-label": kk,
+                                            "aria-pressed": dk.texture === kk,
                                             onClick: () => {
-                                              bu({
-                                                texture: uu
+                                              Yk({
+                                                texture: kk
                                               })
                                             },
-                                            children: yu ? (0, Su.jsx)("img", {
-                                              src: yu,
+                                            children: Bk ? (0, ek.jsx)("img", {
+                                              src: Bk,
                                               alt: ""
-                                            }) : (0, Su.jsx)(Tu, {
+                                            }) : (0, ek.jsx)(fk, {
                                               name: "image"
                                             })
-                                          }, uu)
+                                          }, kk)
                                         }))
                                       })]
-                                    }), (0, Su.jsx)(aE, {
+                                    }), (0, ek.jsx)(QR, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: Xu.manualEmitCount,
-                                      onChange: uu => {
-                                        bu({
-                                          manualEmitCount: uu
+                                      value: dk.manualEmitCount,
+                                      onChange: kk => {
+                                        Yk({
+                                          manualEmitCount: kk
                                         })
                                       }
-                                    }), (0, Su.jsx)(vE, {
+                                    }), (0, ek.jsx)(IR, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: Xu.minLifeTime,
-                                      high: Xu.maxLifeTime,
-                                      onChange: (uu, Ru) => {
-                                        bu({
-                                          minLifeTime: uu,
-                                          maxLifeTime: Ru
+                                      low: dk.minLifeTime,
+                                      high: dk.maxLifeTime,
+                                      onChange: (kk, Fk) => {
+                                        Yk({
+                                          minLifeTime: kk,
+                                          maxLifeTime: Fk
                                         })
                                       }
-                                    }), (0, Su.jsx)(vE, {
+                                    }), (0, ek.jsx)(IR, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: Xu.minEmitPower,
-                                      high: Xu.maxEmitPower,
-                                      onChange: (uu, Ru) => {
-                                        bu({
-                                          minEmitPower: uu,
-                                          maxEmitPower: Ru
+                                      low: dk.minEmitPower,
+                                      high: dk.maxEmitPower,
+                                      onChange: (kk, Fk) => {
+                                        Yk({
+                                          minEmitPower: kk,
+                                          maxEmitPower: Fk
                                         })
                                       }
-                                    }), (0, Su.jsx)(vE, {
+                                    }), (0, ek.jsx)(IR, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: Xu.minSize,
-                                      high: Xu.maxSize,
-                                      onChange: (uu, Ru) => {
-                                        bu({
-                                          minSize: uu,
-                                          maxSize: Ru
+                                      low: dk.minSize,
+                                      high: dk.maxSize,
+                                      onChange: (kk, Fk) => {
+                                        Yk({
+                                          minSize: kk,
+                                          maxSize: Fk
                                         })
                                       }
-                                    }), (0, Su.jsx)(aE, {
+                                    }), (0, ek.jsx)(QR, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (Ku = Xu.gravity[1]) && void 0 !== Ku ? Ku : 0,
-                                      onChange: uu => {
-                                        var Ru, yu;
-                                        bu({
-                                          gravity: [null !== (Ru = Xu.gravity[0]) && void 0 !== Ru ? Ru : 0, uu, null !== (yu = Xu.gravity[2]) && void 0 !== yu ? yu : 0]
+                                      value: null !== (tk = dk.gravity[1]) && void 0 !== tk ? tk : 0,
+                                      onChange: kk => {
+                                        var Fk, Bk;
+                                        Yk({
+                                          gravity: [null !== (Fk = dk.gravity[0]) && void 0 !== Fk ? Fk : 0, kk, null !== (Bk = dk.gravity[2]) && void 0 !== Bk ? Bk : 0]
                                         })
                                       }
-                                    }), (0, Su.jsxs)("div", {
+                                    }), (0, ek.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, Su.jsx)("div", {
+                                      children: [(0, ek.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, Su.jsx)("span", {
+                                        children: (0, ek.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, Su.jsx)("select", {
+                                      }), (0, ek.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: Xu.blendMode,
+                                        value: dk.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: uu => {
-                                          bu({
-                                            blendMode: Number(uu.target.value)
+                                        onChange: kk => {
+                                          Yk({
+                                            blendMode: Number(kk.target.value)
                                           })
                                         },
-                                        children: mK.map((uu => {
+                                        children: wt.map((kk => {
                                           let {
-                                            mode: Ru,
-                                            label: yu
-                                          } = uu;
-                                          return (0, Su.jsx)("option", {
-                                            value: Ru,
-                                            children: yu
-                                          }, Ru)
+                                            mode: Fk,
+                                            label: Bk
+                                          } = kk;
+                                          return (0, ek.jsx)("option", {
+                                            value: Fk,
+                                            children: Bk
+                                          }, Fk)
                                         }))
                                       })]
-                                    }), (0, Su.jsx)(fE, {
-                                      opts: Xu,
-                                      onChange: uu => {
-                                        bu({
-                                          colorGradients: uu
+                                    }), (0, ek.jsx)(kt, {
+                                      opts: dk,
+                                      onChange: kk => {
+                                        Yk({
+                                          colorGradients: kk
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, Su.jsx)(ku, {
-                                  code: Cu,
+                                }), (0, ek.jsx)(Ok, {
+                                  code: Lk,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var NK = yu(4237),
-                            XK = yu(1825);
+                          var st = Bk(4210),
+                            Vt = Bk(1812);
 
-                          function VK(uu, Ru) {
-                            return uu ? NK.c.includes(Ru) ? uu.getIngameIconUrl(Ru) : uu.getItemIconUrl(Ru) : null
+                          function Jt(kk, Fk) {
+                            return kk ? st.d.includes(Fk) ? kk.getIngameIconUrl(Fk) : kk.getItemIconUrl(Fk) : null
                           }
 
-                          function rK(uu) {
-                            var Ru, yu, Eu;
+                          function At(kk) {
+                            var Fk, Bk, Rk;
                             let {
-                              part: Ku,
-                              assets: mu
-                            } = uu;
-                            const Ju = VK(mu, Ku.icon),
-                              Nu = null !== (Ru = null === (yu = Ku.style) || void 0 === yu ? void 0 : yu.fontSize) && void 0 !== Ru ? Ru : "1.8em",
-                              Xu = (0, cR.$b)(Ku.style);
-                            return (0, Su.jsxs)("span", {
-                              className: Qu()("DocsBloxdTextIcon", {
-                                Missing: !Ju
+                              part: tk,
+                              assets: Xk
+                            } = kk;
+                            const bk = Jt(Xk, tk.icon),
+                              wk = null !== (Fk = null === (Bk = tk.style) || void 0 === Bk ? void 0 : Bk.fontSize) && void 0 !== Fk ? Fk : "1.8em",
+                              dk = (0, DF.Xb)(tk.style);
+                            return (0, ek.jsxs)("span", {
+                              className: ak()("DocsBloxdTextIcon", {
+                                Missing: !bk
                               }),
                               style: {
-                                width: Nu,
-                                height: Nu,
-                                opacity: null === (Eu = Ku.style) || void 0 === Eu ? void 0 : Eu.opacity
+                                width: wk,
+                                height: wk,
+                                opacity: null === (Rk = tk.style) || void 0 === Rk ? void 0 : Rk.opacity
                               },
-                              title: Ju ? void 0 : `No Bloxd icon, item or block is called "${Ku.icon}"`,
-                              children: [Ju && Xu && (0, Su.jsx)("span", {
+                              title: bk ? void 0 : `No Bloxd icon, item or block is called "${tk.icon}"`,
+                              children: [bk && dk && (0, ek.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: Xu,
-                                  maskImage: `url("${Ju}")`,
-                                  WebkitMaskImage: `url("${Ju}")`
+                                  background: dk,
+                                  maskImage: `url("${bk}")`,
+                                  WebkitMaskImage: `url("${bk}")`
                                 }
-                              }), Ju ? (0, Su.jsx)("img", {
-                                src: Ju,
+                              }), bk ? (0, ek.jsx)("img", {
+                                src: bk,
                                 alt: "",
-                                className: Qu()({
-                                  Tinted: Xu
+                                className: ak()({
+                                  Tinted: dk
                                 })
-                              }) : (0, Su.jsx)(Tu, {
+                              }) : (0, ek.jsx)(fk, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function BK(uu) {
+                          function et(kk) {
                             let {
-                              parts: Ru,
-                              className: yu
-                            } = uu;
-                            const Eu = HE(),
-                              Ku = [];
-                            let mu = [];
-                            const Ju = uu => {
-                              mu.length > 0 && (Ku.push((0, Su.jsx)(XK.d, {
-                                text: mu
-                              }, `run-${uu}`)), mu = [])
+                              parts: Fk,
+                              className: Bk
+                            } = kk;
+                            const Rk = iR(),
+                              tk = [];
+                            let Xk = [];
+                            const bk = kk => {
+                              Xk.length > 0 && (tk.push((0, ek.jsx)(Vt.d, {
+                                text: Xk
+                              }, `run-${kk}`)), Xk = [])
                             };
-                            return Ru.forEach(((uu, Ru) => {
-                              "icon" !== ZR(uu) || zR(uu.icon) ? mu.push(uu) : (Ju(Ru), Ku.push((0, Su.jsx)(rK, {
-                                part: uu,
-                                assets: Eu
-                              }, `icon-${Ru}`)))
-                            })), Ju(Ru.length), (0, Su.jsx)("div", {
-                              className: Qu()("DocsStyledTextPreview", yu),
-                              children: Ku
+                            return Fk.forEach(((kk, Fk) => {
+                              "icon" !== CF(kk) || PF(kk.icon) ? Xk.push(kk) : (bk(Fk), tk.push((0, ek.jsx)(At, {
+                                part: kk,
+                                assets: Rk
+                              }, `icon-${Fk}`)))
+                            })), bk(Fk.length), (0, ek.jsx)("div", {
+                              className: ak()("DocsStyledTextPreview", Bk),
+                              children: tk
                             })
                           }
-                          const xK = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let SK = null;
+                          const yt = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let ft = null;
 
-                          function pK(uu) {
-                            if (SK ??= document.createElement("canvas").getContext("2d"), !SK) return "#000000";
-                            SK.fillStyle = "#000000", SK.fillStyle = uu;
-                            const Ru = SK.fillStyle;
-                            return Ru.startsWith("#") ? Ru : "#000000"
+                          function mt(kk) {
+                            if (ft ??= document.createElement("canvas").getContext("2d"), !ft) return "#000000";
+                            ft.fillStyle = "#000000", ft.fillStyle = kk;
+                            const Fk = ft.fillStyle;
+                            return Fk.startsWith("#") ? Fk : "#000000"
                           }
 
-                          function TK(uu) {
+                          function Wt(kk) {
                             let {
-                              value: Ru,
-                              label: yu,
-                              onChange: Eu
-                            } = uu;
-                            return (0, Su.jsxs)("span", {
+                              value: Fk,
+                              label: Bk,
+                              onChange: Rk
+                            } = kk;
+                            return (0, ek.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, Su.jsx)("input", {
+                              children: [(0, ek.jsx)("input", {
                                 type: "color",
-                                value: pK(Ru),
-                                "aria-label": `${yu} picker`,
-                                onChange: uu => {
-                                  Eu(uu.target.value)
+                                value: mt(Fk),
+                                "aria-label": `${Bk} picker`,
+                                onChange: kk => {
+                                  Rk(kk.target.value)
                                 }
-                              }), (0, Su.jsx)("input", {
+                              }), (0, ek.jsx)("input", {
                                 type: "text",
-                                value: Ru,
+                                value: Fk,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": yu,
+                                "aria-label": Bk,
                                 spellCheck: !1,
-                                onChange: uu => {
-                                  Eu(uu.target.value)
+                                onChange: kk => {
+                                  Rk(kk.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function WK(uu) {
+                          function vt(kk) {
                             let {
-                              value: Ru,
-                              fontAwesomeIcons: yu,
-                              onChange: Ku
-                            } = uu;
-                            const mu = HE(),
-                              [Ju, Nu] = (0, Eu.useState)(zR(Ru) ? "fontAwesome" : "bloxd"),
-                              [Xu, Vu] = (0, Eu.useState)(""),
-                              ru = Xu.trim().toLowerCase(),
-                              Bu = "bloxd" === Ju ? NK.c : yu,
-                              xu = ru ? Bu.filter((uu => uu.toLowerCase().includes(ru))) : Bu;
-                            return (0, Su.jsxs)("div", {
+                              value: Fk,
+                              fontAwesomeIcons: Bk,
+                              onChange: tk
+                            } = kk;
+                            const Xk = iR(),
+                              [bk, wk] = (0, Rk.useState)(PF(Fk) ? "fontAwesome" : "bloxd"),
+                              [dk, sk] = (0, Rk.useState)(""),
+                              Vk = dk.trim().toLowerCase(),
+                              Jk = "bloxd" === bk ? st.d : Bk,
+                              Ak = Vk ? Jk.filter((kk => kk.toLowerCase().includes(Vk))) : Jk;
+                            return (0, ek.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, Su.jsx)("input", {
+                              children: [(0, ek.jsx)("input", {
                                 type: "text",
-                                value: Ru,
+                                value: Fk,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: uu => {
-                                  Ku(uu.target.value)
+                                onChange: kk => {
+                                  tk(kk.target.value)
                                 }
-                              }), (0, Su.jsx)("p", {
+                              }), (0, ek.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, Su.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((uu => (0, Su.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((kk => (0, ek.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": Ju === uu,
-                                    className: Qu()("DocsVariantChip", {
-                                      Active: Ju === uu
+                                    "aria-selected": bk === kk,
+                                    className: ak()("DocsVariantChip", {
+                                      Active: bk === kk
                                     }),
                                     onClick: () => {
-                                      Nu(uu)
+                                      wk(kk)
                                     },
-                                    children: "bloxd" === uu ? `Bloxd icons (${NK.c.length})` : `Font Awesome (${yu.length})`
-                                  }, uu))), (0, Su.jsx)("input", {
+                                    children: "bloxd" === kk ? `Bloxd icons (${st.d.length})` : `Font Awesome (${Bk.length})`
+                                  }, kk))), (0, ek.jsx)("input", {
                                     type: "search",
-                                    value: Xu,
+                                    value: dk,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: uu => {
-                                      Vu(uu.target.value)
+                                    onChange: kk => {
+                                      sk(kk.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, Su.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [xu.map((uu => {
-                                  const yu = "bloxd" === Ju ? VK(mu, uu) : null;
-                                  return (0, Su.jsx)("button", {
+                                children: [Ak.map((kk => {
+                                  const Bk = "bloxd" === bk ? Jt(Xk, kk) : null;
+                                  return (0, ek.jsx)("button", {
                                     type: "button",
-                                    title: uu,
-                                    "aria-label": uu,
-                                    "aria-pressed": uu === Ru,
-                                    className: Qu()("DocsIconPickerOption", {
-                                      Active: uu === Ru
+                                    title: kk,
+                                    "aria-label": kk,
+                                    "aria-pressed": kk === Fk,
+                                    className: ak()("DocsIconPickerOption", {
+                                      Active: kk === Fk
                                     }),
                                     onClick: () => {
-                                      Ku(uu)
+                                      tk(kk)
                                     },
-                                    children: "fontAwesome" === Ju ? (0, Su.jsx)(dy.c, {
-                                      name: uu
-                                    }) : yu ? (0, Su.jsx)("img", {
-                                      src: yu,
+                                    children: "fontAwesome" === bk ? (0, ek.jsx)(YB.d, {
+                                      name: kk
+                                    }) : Bk ? (0, ek.jsx)("img", {
+                                      src: Bk,
                                       alt: ""
-                                    }) : (0, Su.jsx)(Tu, {
+                                    }) : (0, ek.jsx)(fk, {
                                       name: "image"
                                     })
-                                  }, uu)
-                                })), 0 === xu.length && (0, Su.jsxs)("p", {
+                                  }, kk)
+                                })), 0 === Ak.length && (0, ek.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", Xu, "\u201d."]
+                                  children: ["No icons match \u201c", dk, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function jK(uu) {
+                          function it(kk) {
                             let {
-                              property: Ru,
-                              value: yu,
-                              fontAwesomeIcons: Eu,
-                              onChange: Ku
-                            } = uu;
+                              property: Fk,
+                              value: Bk,
+                              fontAwesomeIcons: Rk,
+                              onChange: tk
+                            } = kk;
                             const {
-                              field: Qu,
-                              label: mu
-                            } = Ru, Ju = uu => "" !== uu || Ru.isRequired ? uu : void 0;
-                            switch (Qu.kind) {
+                              field: ak,
+                              label: Xk
+                            } = Fk, bk = kk => "" !== kk || Fk.isRequired ? kk : void 0;
+                            switch (ak.kind) {
                               case "text":
-                                return Qu.multiline ? (0, Su.jsx)("textarea", {
-                                  value: String(null !== yu && void 0 !== yu ? yu : ""),
+                                return ak.multiline ? (0, ek.jsx)("textarea", {
+                                  value: String(null !== Bk && void 0 !== Bk ? Bk : ""),
                                   rows: 2,
-                                  "aria-label": mu,
-                                  onChange: uu => {
-                                    Ku(uu.target.value)
+                                  "aria-label": Xk,
+                                  onChange: kk => {
+                                    tk(kk.target.value)
                                   }
-                                }) : (0, Su.jsx)("input", {
+                                }) : (0, ek.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== yu && void 0 !== yu ? yu : ""),
-                                  "aria-label": mu,
-                                  onChange: uu => {
-                                    Ku(Ju(uu.target.value))
+                                  value: String(null !== Bk && void 0 !== Bk ? Bk : ""),
+                                  "aria-label": Xk,
+                                  onChange: kk => {
+                                    tk(bk(kk.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, Su.jsx)("input", {
+                                return (0, ek.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== yu && void 0 !== yu ? yu : ""),
-                                  placeholder: Ru.defaultText,
+                                  value: String(null !== Bk && void 0 !== Bk ? Bk : ""),
+                                  placeholder: Fk.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": mu,
+                                  "aria-label": Xk,
                                   spellCheck: !1,
-                                  onChange: uu => {
-                                    Ku(Ju(uu.target.value.trim()))
+                                  onChange: kk => {
+                                    tk(bk(kk.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, Su.jsx)(TK, {
-                                  value: String(null !== yu && void 0 !== yu ? yu : ""),
-                                  label: mu,
-                                  onChange: uu => {
-                                    Ku(Ju(uu))
+                                return (0, ek.jsx)(Wt, {
+                                  value: String(null !== Bk && void 0 !== Bk ? Bk : ""),
+                                  label: Xk,
+                                  onChange: kk => {
+                                    tk(bk(kk))
                                   }
                                 });
                               case "colours": {
-                                const uu = Array.isArray(yu) ? yu : [],
-                                  Ru = uu => {
-                                    Ku(uu.length > 0 ? uu : void 0)
+                                const kk = Array.isArray(Bk) ? Bk : [],
+                                  Fk = kk => {
+                                    tk(kk.length > 0 ? kk : void 0)
                                   };
-                                return (0, Su.jsxs)("div", {
+                                return (0, ek.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [uu.map(((yu, Eu) => (0, Su.jsxs)("span", {
+                                  children: [kk.map(((Bk, Rk) => (0, ek.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, Su.jsx)(TK, {
-                                      value: yu,
-                                      label: `${mu} ${Eu+1}`,
-                                      onChange: yu => {
-                                        Ru(uu.map(((uu, Ru) => Ru === Eu ? yu : uu)))
+                                    children: [(0, ek.jsx)(Wt, {
+                                      value: Bk,
+                                      label: `${Xk} ${Rk+1}`,
+                                      onChange: Bk => {
+                                        Fk(kk.map(((kk, Fk) => Fk === Rk ? Bk : kk)))
                                       }
-                                    }), (0, Su.jsx)("button", {
+                                    }), (0, ek.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${Eu+1}`,
+                                      "aria-label": `Remove colour ${Rk+1}`,
                                       onClick: () => {
-                                        Ru(uu.filter(((uu, Ru) => Ru !== Eu)))
+                                        Fk(kk.filter(((kk, Fk) => Fk !== Rk)))
                                       },
-                                      children: (0, Su.jsx)(Tu, {
+                                      children: (0, ek.jsx)(fk, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, Eu))), (0, Su.jsxs)("button", {
+                                  }, Rk))), (0, ek.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var yu;
-                                      Ru([...uu, null !== (yu = uu.at(-1)) && void 0 !== yu ? yu : "#ffffff"])
+                                      var Bk;
+                                      Fk([...kk, null !== (Bk = kk.at(-1)) && void 0 !== Bk ? Bk : "#ffffff"])
                                     },
-                                    children: [(0, Su.jsx)(Tu, {
+                                    children: [(0, ek.jsx)(fk, {
                                       name: "plus"
-                                    }), 0 === uu.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === kk.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var Nu;
-                                const uu = "number" === typeof yu ? yu : Number(null !== (Nu = Ru.defaultText) && void 0 !== Nu ? Nu : 0);
-                                return (0, Su.jsxs)("span", {
+                                var wk;
+                                const kk = "number" === typeof Bk ? Bk : Number(null !== (wk = Fk.defaultText) && void 0 !== wk ? wk : 0);
+                                return (0, ek.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, Su.jsx)("input", {
+                                  children: [(0, ek.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: uu,
-                                    "aria-label": mu,
-                                    onChange: uu => {
-                                      Ku(Number(uu.target.value))
+                                    value: kk,
+                                    "aria-label": Xk,
+                                    onChange: kk => {
+                                      tk(Number(kk.target.value))
                                     }
-                                  }), (0, Su.jsx)("output", {
-                                    children: uu.toFixed(2)
+                                  }), (0, ek.jsx)("output", {
+                                    children: kk.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, Su.jsxs)("select", {
-                                  value: String(null !== yu && void 0 !== yu ? yu : ""),
-                                  "aria-label": mu,
-                                  onChange: uu => {
-                                    Ku(Ju(uu.target.value))
+                                return (0, ek.jsxs)("select", {
+                                  value: String(null !== Bk && void 0 !== Bk ? Bk : ""),
+                                  "aria-label": Xk,
+                                  onChange: kk => {
+                                    tk(bk(kk.target.value))
                                   },
-                                  children: [!Ru.isRequired && (0, Su.jsxs)("option", {
+                                  children: [!Fk.isRequired && (0, ek.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", Ru.defaultText, ")"]
-                                  }), Qu.options.map((uu => (0, Su.jsx)("option", {
-                                    value: uu,
-                                    children: uu
-                                  }, uu)))]
+                                    children: ["Default (", Fk.defaultText, ")"]
+                                  }), ak.options.map((kk => (0, ek.jsx)("option", {
+                                    value: kk,
+                                    children: kk
+                                  }, kk)))]
                                 });
                               case "icon":
-                                return (0, Su.jsx)(WK, {
-                                  value: String(null !== yu && void 0 !== yu ? yu : ""),
-                                  fontAwesomeIcons: Eu,
-                                  onChange: Ku
+                                return (0, ek.jsx)(vt, {
+                                  value: String(null !== Bk && void 0 !== Bk ? Bk : ""),
+                                  fontAwesomeIcons: Rk,
+                                  onChange: tk
                                 })
                             }
                           }
 
-                          function HK(uu) {
-                            let Ru;
+                          function Yt(kk) {
+                            let Fk;
                             try {
-                              Ru = JSON.parse(uu)
-                            } catch (yu) {
+                              Fk = JSON.parse(kk)
+                            } catch (Bk) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${yu.message}`
+                                error: `Not valid JSON yet: ${Bk.message}`
                               }
                             }
-                            return yy(Ru) ? {
-                              part: Ru,
+                            return RB(Fk) ? {
+                              part: Fk,
                               error: null
                             } : {
                               part: null,
@@ -3628,150 +3628,150 @@ export const modules = {
                             }
                           }
 
-                          function dK(uu) {
+                          function ot(kk) {
                             let {
-                              parts: Ru,
-                              index: yu,
-                              fontAwesomeIcons: Ku,
-                              onChange: Qu,
-                              JA: mu,
-                              onClose: Ju
-                            } = uu;
-                            const Nu = (0, Eu.useContext)(SR),
-                              Vu = (0, Eu.useRef)(null),
-                              ru = Ru[yu],
-                              Bu = ZR(ru),
-                              [xu, pu] = (0, Eu.useState)((() => JSON.stringify(ru, null, 2))),
-                              Wu = (0, Eu.useMemo)((() => "other" === Bu ? HK(xu).error : null), [Bu, xu]);
-                            (0, Eu.useEffect)((() => {
-                              var uu;
-                              null === (uu = Vu.current) || void 0 === uu || uu.focus()
+                              parts: Fk,
+                              index: Bk,
+                              fontAwesomeIcons: tk,
+                              onChange: ak,
+                              yE: Xk,
+                              onClose: bk
+                            } = kk;
+                            const wk = (0, Rk.useContext)(yF),
+                              sk = (0, Rk.useRef)(null),
+                              Vk = Fk[Bk],
+                              Jk = CF(Vk),
+                              [Ak, yk] = (0, Rk.useState)((() => JSON.stringify(Vk, null, 2))),
+                              mk = (0, Rk.useMemo)((() => "other" === Jk ? Yt(Ak).error : null), [Jk, Ak]);
+                            (0, Rk.useEffect)((() => {
+                              var kk;
+                              null === (kk = sk.current) || void 0 === kk || kk.focus()
                             }), []);
-                            const ju = (0, Su.jsx)("div", {
+                            const Wk = (0, ek.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: uu => {
-                                uu.target === uu.currentTarget && Ju()
+                              onMouseDown: kk => {
+                                kk.target === kk.currentTarget && bk()
                               },
-                              children: (0, Su.jsxs)("div", {
-                                ref: Vu,
+                              children: (0, ek.jsxs)("div", {
+                                ref: sk,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${yu+1}: ${FR[Bu]}`,
+                                "aria-label": `Edit part ${Bk+1}: ${hF[Jk]}`,
                                 tabIndex: -1,
-                                onKeyDown: uu => {
-                                  "Escape" === uu.key ? (uu.stopPropagation(), Ju()) : "Tab" === uu.key && Vu.current && function(uu, Ru) {
-                                    const yu = Array.from(uu.querySelectorAll(IR)),
-                                      Eu = yu[0],
-                                      Ku = yu.at(-1);
-                                    if (!Eu || !Ku) return;
-                                    const Qu = document.activeElement;
-                                    !Ru.shiftKey || Qu !== Eu && Qu !== uu ? Ru.shiftKey || Qu !== Ku || (Ru.preventDefault(), Eu.focus()) : (Ru.preventDefault(), Ku.focus())
-                                  }(Vu.current, uu)
+                                onKeyDown: kk => {
+                                  "Escape" === kk.key ? (kk.stopPropagation(), bk()) : "Tab" === kk.key && sk.current && function(kk, Fk) {
+                                    const Bk = Array.from(kk.querySelectorAll(uF)),
+                                      Rk = Bk[0],
+                                      tk = Bk.at(-1);
+                                    if (!Rk || !tk) return;
+                                    const ak = document.activeElement;
+                                    !Fk.shiftKey || ak !== Rk && ak !== kk ? Fk.shiftKey || ak !== tk || (Fk.preventDefault(), Rk.focus()) : (Fk.preventDefault(), tk.focus())
+                                  }(sk.current, kk)
                                 },
-                                children: [(0, Su.jsxs)("header", {
+                                children: [(0, ek.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, Su.jsxs)("div", {
-                                    children: [(0, Su.jsxs)("div", {
+                                  children: [(0, ek.jsxs)("div", {
+                                    children: [(0, ek.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", yu + 1]
-                                    }), (0, Su.jsx)("div", {
+                                      children: ["Part ", Bk + 1]
+                                    }), (0, ek.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: FR[Bu]
+                                      children: hF[Jk]
                                     })]
-                                  }), (0, Su.jsx)("button", {
+                                  }), (0, ek.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: Ju,
-                                    children: (0, Su.jsx)(Tu, {
+                                    onClick: bk,
+                                    children: (0, ek.jsx)(fk, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, Su.jsx)(BK, {
-                                  parts: Ru,
+                                }), (0, ek.jsx)(et, {
+                                  parts: Fk,
                                   className: "DocsTextDialogPreview"
-                                }), (0, Su.jsx)("div", {
+                                }), (0, ek.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === Bu ? (0, Su.jsxs)("label", {
+                                  children: "other" === Jk ? (0, ek.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, Su.jsx)("span", {
+                                    children: [(0, ek.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, Su.jsx)("textarea", {
+                                    }), (0, ek.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: xu,
+                                      value: Ak,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: uu => {
-                                        pu(uu.target.value);
-                                        const Ru = HK(uu.target.value);
-                                        null !== Ru.part && Qu(Ru.part)
+                                      onChange: kk => {
+                                        yk(kk.target.value);
+                                        const Fk = Yt(kk.target.value);
+                                        null !== Fk.part && ak(Fk.part)
                                       }
-                                    }), Wu && (0, Su.jsx)("span", {
+                                    }), mk && (0, ek.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: Wu
+                                      children: mk
                                     })]
-                                  }) : PR[Bu].map((uu => {
-                                    const Ru = YR(ru, uu.path),
-                                      yu = uu.isRequired ? JSON.stringify(qR(ru, uu.path)) === JSON.stringify(ru) : void 0 === Ru;
-                                    return (0, Su.jsxs)("div", {
+                                  }) : pF[Jk].map((kk => {
+                                    const Fk = xF(Vk, kk.path),
+                                      Bk = kk.isRequired ? JSON.stringify(lF(Vk, kk.path)) === JSON.stringify(Vk) : void 0 === Fk;
+                                    return (0, ek.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, Su.jsxs)("div", {
+                                      children: [(0, ek.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, Su.jsx)("span", {
-                                          children: uu.label
-                                        }), (0, Su.jsxs)("button", {
+                                        children: [(0, ek.jsx)("span", {
+                                          children: kk.label
+                                        }), (0, ek.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: yu,
-                                          "aria-label": `Reset ${uu.label.toLowerCase()} to default`,
+                                          disabled: Bk,
+                                          "aria-label": `Reset ${kk.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            Qu(qR(ru, uu.path))
+                                            ak(lF(Vk, kk.path))
                                           },
-                                          children: [(0, Su.jsx)(Tu, {
+                                          children: [(0, ek.jsx)(fk, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, Su.jsx)(jK, {
-                                        property: uu,
-                                        value: Ru,
-                                        fontAwesomeIcons: Ku,
-                                        onChange: Ru => {
-                                          Qu(oR(ru, uu.path, Ru))
+                                      }), (0, ek.jsx)(it, {
+                                        property: kk,
+                                        value: Fk,
+                                        fontAwesomeIcons: tk,
+                                        onChange: Fk => {
+                                          ak(jF(Vk, kk.path, Fk))
                                         }
-                                      }), !uu.isRequired && (0, Su.jsxs)("span", {
+                                      }), !kk.isRequired && (0, ek.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", uu.defaultText]
+                                        children: ["Default: ", kk.defaultText]
                                       })]
-                                    }, uu.path.join("."))
+                                    }, kk.path.join("."))
                                   }))
-                                }), (0, Su.jsxs)("footer", {
+                                }), (0, ek.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, Su.jsxs)("button", {
+                                  children: [(0, ek.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: mu,
-                                    children: [(0, Su.jsx)(Tu, {
+                                    onClick: Xk,
+                                    children: [(0, ek.jsx)(fk, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, Su.jsx)("button", {
+                                  }), (0, ek.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: Ju,
+                                    onClick: bk,
                                     children: "Done"
                                   })]
-                                }), (0, Su.jsx)("datalist", {
+                                }), (0, ek.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: xK.map((uu => (0, Su.jsx)("option", {
-                                    value: uu
-                                  }, uu)))
+                                  children: yt.map((kk => (0, ek.jsx)("option", {
+                                    value: kk
+                                  }, kk)))
                                 })]
                               })
                             });
-                            return Nu ? (0, Xu.createPortal)(ju, Nu) : ju
+                            return wk ? (0, dk.createPortal)(Wk, wk) : Wk
                           }
-                          const bK = [{
+                          const Lt = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3815,265 +3815,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            CK = Object.keys(wR);
+                            Ot = Object.keys(qF);
 
-                          function kK(uu) {
+                          function Et(kk) {
                             let {
-                              fontAwesomeIcons: Ru
-                            } = uu;
-                            const [yu, Ku] = (0, Eu.useState)(bK[0].parts), [mu, Ju] = (0, Eu.useState)((() => fR(bK[0].parts))), [Nu, Xu] = (0, Eu.useState)(null), [Vu, ru] = (0, Eu.useState)(!1), [Bu, xu] = (0, Eu.useState)(null), [pu, Wu] = (0, Eu.useState)(!1), [ju, Hu] = (0, Eu.useState)(null), du = (0, Eu.useRef)(null), bu = fR(yu);
-                            (0, Eu.useLayoutEffect)((() => {
-                              var uu;
-                              if (!ju) return;
-                              const Ru = uu => {
-                                  var Ru;
-                                  return null === (Ru = du.current) || void 0 === Ru ? void 0 : Ru.querySelector(`[data-focus-key="${uu}"]`)
+                              fontAwesomeIcons: Fk
+                            } = kk;
+                            const [Bk, tk] = (0, Rk.useState)(Lt[0].parts), [Xk, bk] = (0, Rk.useState)((() => kB(Lt[0].parts))), [wk, dk] = (0, Rk.useState)(null), [sk, Vk] = (0, Rk.useState)(!1), [Jk, Ak] = (0, Rk.useState)(null), [yk, mk] = (0, Rk.useState)(!1), [Wk, vk] = (0, Rk.useState)(null), ik = (0, Rk.useRef)(null), Yk = kB(Bk);
+                            (0, Rk.useLayoutEffect)((() => {
+                              var kk;
+                              if (!Wk) return;
+                              const Fk = kk => {
+                                  var Fk;
+                                  return null === (Fk = ik.current) || void 0 === Fk ? void 0 : Fk.querySelector(`[data-focus-key="${kk}"]`)
                                 },
-                                yu = Ru(ju.key);
-                              null === (uu = yu && !yu.disabled ? yu : Ru(ju.fallback)) || void 0 === uu || uu.focus(), Hu(null)
-                            }), [ju]);
-                            const Cu = uu => {
-                                Ku(uu), Ju(fR(uu)), Xu(null)
+                                Bk = Fk(Wk.key);
+                              null === (kk = Bk && !Bk.disabled ? Bk : Fk(Wk.fallback)) || void 0 === kk || kk.focus(), vk(null)
+                            }), [Wk]);
+                            const Lk = kk => {
+                                tk(kk), bk(kB(kk)), dk(null)
                               },
-                              eu = uu => {
-                                Cu(yu.filter(((Ru, yu) => yu !== uu))), Hu({
-                                  key: `edit-${Math.min(uu,yu.length-2)}`,
+                              Ek = kk => {
+                                Lk(Bk.filter(((Fk, Bk) => Bk !== kk))), vk({
+                                  key: `edit-${Math.min(kk,Bk.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              Au = (uu, Ru) => {
-                                const Eu = [...yu],
-                                  [Ku] = Eu.splice(uu, 1);
-                                Eu.splice(uu + Ru, 0, Ku), Cu(Eu);
-                                Hu({
-                                  key: `${Ru<0?"up":"down"}-${uu+Ru}`,
-                                  fallback: `edit-${uu+Ru}`
+                              Sk = (kk, Fk) => {
+                                const Rk = [...Bk],
+                                  [tk] = Rk.splice(kk, 1);
+                                Rk.splice(kk + Fk, 0, tk), Lk(Rk);
+                                vk({
+                                  key: `${Fk<0?"up":"down"}-${kk+Fk}`,
+                                  fallback: `edit-${kk+Fk}`
                                 })
                               };
-                            return (0, Su.jsxs)("section", {
-                              ref: du,
+                            return (0, ek.jsxs)("section", {
+                              ref: ik,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, Su.jsx)("header", {
+                              children: [(0, ek.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, Su.jsxs)("div", {
-                                  children: [(0, Su.jsx)("div", {
+                                children: (0, ek.jsxs)("div", {
+                                  children: [(0, ek.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, Su.jsx)("div", {
+                                  }), (0, ek.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, Su.jsx)("div", {
+                              }), (0, ek.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: bK.map((uu => (0, Su.jsx)("button", {
+                                children: Lt.map((kk => (0, ek.jsx)("button", {
                                   type: "button",
-                                  className: Qu()("DocsVariantChip", {
-                                    Active: bu === fR(uu.parts)
+                                  className: ak()("DocsVariantChip", {
+                                    Active: Yk === kB(kk.parts)
                                   }),
                                   onClick: () => {
-                                    Cu(uu.parts)
+                                    Lk(kk.parts)
                                   },
-                                  children: uu.label
-                                }, uu.label)))
-                              }), (0, Su.jsx)(BK, {
-                                parts: yu,
+                                  children: kk.label
+                                }, kk.label)))
+                              }), (0, ek.jsx)(et, {
+                                parts: Bk,
                                 className: "DocsTextEditorPreview"
-                              }), (0, Su.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, Su.jsxs)("div", {
+                                children: [(0, ek.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, Su.jsx)("div", {
+                                  children: [(0, ek.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, Su.jsxs)("ol", {
+                                  }), (0, ek.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [yu.map(((uu, Ru) => {
-                                      const Eu = ZR(uu);
-                                      return (0, Su.jsxs)("li", {
+                                    children: [Bk.map(((kk, Fk) => {
+                                      const Rk = CF(kk);
+                                      return (0, ek.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, Su.jsxs)("button", {
+                                        children: [(0, ek.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${Ru}`,
-                                          "aria-label": `Edit part ${Ru+1}, ${FR[Eu]}`,
+                                          "data-focus-key": `edit-${Fk}`,
+                                          "aria-label": `Edit part ${Fk+1}, ${hF[Rk]}`,
                                           onClick: () => {
-                                            xu(Ru)
+                                            Ak(Fk)
                                           },
-                                          children: [(0, Su.jsx)("span", {
+                                          children: [(0, ek.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: FR[Eu]
-                                          }), (0, Su.jsx)(BK, {
-                                            parts: [uu],
+                                            children: hF[Rk]
+                                          }), (0, ek.jsx)(et, {
+                                            parts: [kk],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== Eu && (0, Su.jsx)("code", {
+                                          }), "text" !== Rk && (0, ek.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: OR(uu)
+                                            children: nF(kk)
                                           })]
-                                        }), (0, Su.jsxs)("span", {
+                                        }), (0, ek.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, Su.jsx)("button", {
+                                          children: [(0, ek.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${Ru+1} up`,
-                                            "data-focus-key": `up-${Ru}`,
-                                            disabled: 0 === Ru,
+                                            "aria-label": `Move part ${Fk+1} up`,
+                                            "data-focus-key": `up-${Fk}`,
+                                            disabled: 0 === Fk,
                                             onClick: () => {
-                                              Au(Ru, -1)
+                                              Sk(Fk, -1)
                                             },
-                                            children: (0, Su.jsx)(Tu, {
+                                            children: (0, ek.jsx)(fk, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, Su.jsx)("button", {
+                                          }), (0, ek.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${Ru+1} down`,
-                                            "data-focus-key": `down-${Ru}`,
-                                            disabled: Ru === yu.length - 1,
+                                            "aria-label": `Move part ${Fk+1} down`,
+                                            "data-focus-key": `down-${Fk}`,
+                                            disabled: Fk === Bk.length - 1,
                                             onClick: () => {
-                                              Au(Ru, 1)
+                                              Sk(Fk, 1)
                                             },
-                                            children: (0, Su.jsx)(Tu, {
+                                            children: (0, ek.jsx)(fk, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, Su.jsx)("button", {
+                                          }), (0, ek.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${Ru+1}`,
+                                            "aria-label": `Remove part ${Fk+1}`,
                                             onClick: () => {
-                                              eu(Ru)
+                                              Ek(Fk)
                                             },
-                                            children: (0, Su.jsx)(Tu, {
+                                            children: (0, ek.jsx)(fk, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, Ru)
-                                    })), 0 === yu.length && (0, Su.jsx)("li", {
+                                      }, Fk)
+                                    })), 0 === Bk.length && (0, ek.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, Su.jsxs)("div", {
+                                  }), (0, ek.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: uu => {
-                                      "Escape" === uu.key && pu && (uu.stopPropagation(), Wu(!1), Hu({
+                                    onKeyDown: kk => {
+                                      "Escape" === kk.key && yk && (kk.stopPropagation(), mk(!1), vk({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, Su.jsxs)("button", {
+                                    children: [(0, ek.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": pu,
+                                      "aria-expanded": yk,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        Wu(!pu)
+                                        mk(!yk)
                                       },
-                                      children: [(0, Su.jsx)(Tu, {
+                                      children: [(0, ek.jsx)(fk, {
                                         name: "plus"
-                                      }), "Add a part", (0, Su.jsx)(Tu, {
-                                        name: pu ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, ek.jsx)(fk, {
+                                        name: yk ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), pu && (0, Su.jsx)("ul", {
+                                    }), yk && (0, ek.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: CK.map((uu => (0, Su.jsx)("li", {
-                                        children: (0, Su.jsx)("button", {
+                                      children: Ot.map((kk => (0, ek.jsx)("li", {
+                                        children: (0, ek.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (uu => {
-                                              Cu([...yu, wR[uu]]), Wu(!1), xu(yu.length)
-                                            })(uu)
+                                            (kk => {
+                                              Lk([...Bk, qF[kk]]), mk(!1), Ak(Bk.length)
+                                            })(kk)
                                           },
-                                          children: FR[uu]
+                                          children: hF[kk]
                                         })
-                                      }, uu)))
+                                      }, kk)))
                                     })]
                                   })]
-                                }), (0, Su.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, Su.jsxs)("div", {
+                                  children: [(0, ek.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, Su.jsxs)("button", {
+                                    children: ["Code", (0, ek.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": Vu,
+                                      "aria-pressed": sk,
                                       onClick: () => {
-                                        ru(!Vu)
+                                        Vk(!sk)
                                       },
-                                      children: [(0, Su.jsx)(Tu, {
-                                        name: Vu ? "check" : "pencil"
-                                      }), Vu ? "Done" : "Edit"]
+                                      children: [(0, ek.jsx)(fk, {
+                                        name: sk ? "check" : "pencil"
+                                      }), sk ? "Done" : "Edit"]
                                     })]
-                                  }), Vu ? (0, Su.jsxs)(Su.Fragment, {
-                                    children: [(0, Su.jsx)("textarea", {
+                                  }), sk ? (0, ek.jsxs)(ek.Fragment, {
+                                    children: [(0, ek.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: mu,
+                                      value: Xk,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: uu => {
-                                        Ju(uu.target.value);
-                                        const Ru = Ey(uu.target.value);
-                                        Xu(Ru.error), Ru.parts && Ku(Ru.parts)
+                                      onChange: kk => {
+                                        bk(kk.target.value);
+                                        const Fk = tB(kk.target.value);
+                                        dk(Fk.error), Fk.parts && tk(Fk.parts)
                                       }
-                                    }), Nu && (0, Su.jsx)("p", {
+                                    }), wk && (0, ek.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: Nu
+                                      children: wk
                                     })]
-                                  }) : (0, Su.jsx)(ku, {
+                                  }) : (0, ek.jsx)(Ok, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${bu})`
+                                    code: `api.sendMessage(playerId, ${Yk})`
                                   })]
                                 })]
-                              }), null !== Bu && Bu < yu.length && (0, Su.jsx)(dK, {
-                                parts: yu,
-                                index: Bu,
-                                fontAwesomeIcons: Ru,
-                                onChange: uu => {
-                                  ((uu, Ru) => {
-                                    Cu(yu.map(((yu, Eu) => Eu === uu ? Ru : yu)))
-                                  })(Bu, uu)
+                              }), null !== Jk && Jk < Bk.length && (0, ek.jsx)(ot, {
+                                parts: Bk,
+                                index: Jk,
+                                fontAwesomeIcons: Fk,
+                                onChange: kk => {
+                                  ((kk, Fk) => {
+                                    Lk(Bk.map(((Bk, Rk) => Rk === kk ? Fk : Bk)))
+                                  })(Jk, kk)
                                 },
-                                JA: () => {
-                                  eu(Bu), xu(null)
+                                yE: () => {
+                                  Ek(Jk), Ak(null)
                                 },
                                 onClose: () => {
-                                  xu(null), Hu({
-                                    key: `edit-${Bu}`,
+                                  Ak(null), vk({
+                                    key: `edit-${Jk}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var eK = yu(4617),
-                            AK = yu(4598),
-                            DK = yu(4611),
-                            MK = yu(4626);
-                          const IK = 40,
-                            GK = 800,
-                            UK = 150,
-                            nK = 8e3,
-                            sK = 2e3;
+                          var St = Bk(4570),
+                            Nt = Bk(4559),
+                            Ht = Bk(4568),
+                            ut = Bk(4573);
+                          const Mt = 40,
+                            gt = 800,
+                            Ut = 150,
+                            ct = 8e3,
+                            Gt = 2e3;
 
-                          function tK(uu, Ru) {
-                            return 12 * Math.log2(Ru / uu)
+                          function Tt(kk, Fk) {
+                            return 12 * Math.log2(Fk / kk)
                           }
 
-                          function lK(uu, Ru) {
-                            return Math.round(uu * 2 ** (Ru / 12) * 10) / 10
+                          function rt(kk, Fk) {
+                            return Math.round(kk * 2 ** (Fk / 12) * 10) / 10
                           }
 
-                          function gK(uu) {
-                            return `${uu} ms`
+                          function Dt(kk) {
+                            return `${kk} ms`
                           }
 
-                          function cK(uu) {
-                            return `${uu} st`
+                          function zt(kk) {
+                            return `${kk} st`
                           }
-                          const LK = [{
+                          const Pt = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4091,769 +4091,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function zK(uu) {
+                          function ht(kk) {
                             let {
-                              synth: Ru,
-                              onChange: yu
-                            } = uu;
-                            const Eu = (0, eK.k)(Ru);
-                            return (0, Su.jsxs)("div", {
+                              synth: Fk,
+                              onChange: Bk
+                            } = kk;
+                            const Rk = (0, St.l)(Fk);
+                            return (0, ek.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, Su.jsxs)("div", {
+                              children: [(0, ek.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Su.jsx)("div", {
+                                children: [(0, ek.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, Su.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, Su.jsx)("div", {
+                                  children: [(0, ek.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, Su.jsx)("span", {
+                                    children: (0, ek.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, Su.jsx)("div", {
+                                  }), (0, ek.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: eK.d.map((uu => (0, Su.jsx)("button", {
+                                    children: St.i.map((kk => (0, ek.jsx)("button", {
                                       type: "button",
-                                      className: Qu()("DocsVariantChip", {
-                                        Active: Ru.waveform === uu
+                                      className: ak()("DocsVariantChip", {
+                                        Active: Fk.waveform === kk
                                       }),
-                                      "aria-pressed": Ru.waveform === uu,
+                                      "aria-pressed": Fk.waveform === kk,
                                       onClick: () => {
-                                        yu({
-                                          waveform: uu
+                                        Bk({
+                                          waveform: kk
                                         })
                                       },
-                                      children: uu
-                                    }, uu)))
+                                      children: kk
+                                    }, kk)))
                                   })]
-                                }), (0, Su.jsx)(aE, {
+                                }), (0, ek.jsx)(QR, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: tK(IK, GK),
+                                  max: Tt(Mt, gt),
                                   step: .1,
-                                  value: tK(IK, Ru.pitchHz),
-                                  format: () => `${Ru.pitchHz} Hz`,
-                                  onChange: uu => {
-                                    yu({
-                                      pitchHz: lK(IK, uu)
+                                  value: Tt(Mt, Fk.pitchHz),
+                                  format: () => `${Fk.pitchHz} Hz`,
+                                  onChange: kk => {
+                                    Bk({
+                                      pitchHz: rt(Mt, kk)
                                     })
                                   }
-                                }), (0, Su.jsx)(aE, {
+                                }), (0, ek.jsx)(QR, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: Ru.syllableMs,
-                                  format: gK,
-                                  onChange: uu => {
-                                    yu({
-                                      syllableMs: uu
+                                  value: Fk.syllableMs,
+                                  format: Dt,
+                                  onChange: kk => {
+                                    Bk({
+                                      syllableMs: kk
                                     })
                                   }
-                                }), (0, Su.jsx)(aE, {
+                                }), (0, ek.jsx)(QR, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: Ru.volume,
-                                  onChange: uu => {
-                                    yu({
-                                      volume: uu
+                                  value: Fk.volume,
+                                  onChange: kk => {
+                                    Bk({
+                                      volume: kk
                                     })
                                   }
                                 })]
-                              }), (0, Su.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Su.jsx)("div", {
+                                children: [(0, ek.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, Su.jsx)(aE, {
+                                }), (0, ek.jsx)(QR, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: Ru.durationMs,
-                                  format: gK,
-                                  onChange: uu => {
-                                    yu({
-                                      durationMs: uu
+                                  value: Fk.durationMs,
+                                  format: Dt,
+                                  onChange: kk => {
+                                    Bk({
+                                      durationMs: kk
                                     })
                                   }
-                                }), (0, Su.jsx)(aE, {
+                                }), (0, ek.jsx)(QR, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: Eu.durationMs,
+                                  max: Rk.durationMs,
                                   step: 1,
-                                  value: Eu.attackMs,
-                                  format: gK,
-                                  onChange: uu => {
-                                    yu({
-                                      attackMs: uu
+                                  value: Rk.attackMs,
+                                  format: Dt,
+                                  onChange: kk => {
+                                    Bk({
+                                      attackMs: kk
                                     })
                                   }
-                                }), (0, Su.jsx)(aE, {
+                                }), (0, ek.jsx)(QR, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: Eu.durationMs - Eu.attackMs,
+                                  max: Rk.durationMs - Rk.attackMs,
                                   step: 1,
-                                  value: Eu.releaseMs,
-                                  format: gK,
-                                  onChange: uu => {
-                                    yu({
-                                      releaseMs: uu
+                                  value: Rk.releaseMs,
+                                  format: Dt,
+                                  onChange: kk => {
+                                    Bk({
+                                      releaseMs: kk
                                     })
                                   }
-                                }), (0, Su.jsx)(aE, {
+                                }), (0, ek.jsx)(QR, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: Ru.glideSemitones,
-                                  format: cK,
-                                  onChange: uu => {
-                                    yu({
-                                      glideSemitones: uu
+                                  value: Fk.glideSemitones,
+                                  format: zt,
+                                  onChange: kk => {
+                                    Bk({
+                                      glideSemitones: kk
                                     })
                                   }
-                                }), (0, Su.jsxs)("label", {
+                                }), (0, ek.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, Su.jsx)("input", {
+                                  children: [(0, ek.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== Ru.lowpassHz,
-                                    onChange: uu => {
-                                      yu({
-                                        lowpassHz: uu.target.checked ? sK : null
+                                    checked: null !== Fk.lowpassHz,
+                                    onChange: kk => {
+                                      Bk({
+                                        lowpassHz: kk.target.checked ? Gt : null
                                       })
                                     }
-                                  }), (0, Su.jsx)("span", {
+                                  }), (0, ek.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== Ru.lowpassHz && (0, Su.jsx)(aE, {
+                                }), null !== Fk.lowpassHz && (0, ek.jsx)(QR, {
                                   label: "Filter",
                                   min: 0,
-                                  max: tK(UK, nK),
+                                  max: Tt(Ut, ct),
                                   step: .1,
-                                  value: tK(UK, Ru.lowpassHz),
-                                  format: () => `${Ru.lowpassHz} Hz`,
-                                  onChange: uu => {
-                                    yu({
-                                      lowpassHz: lK(UK, uu)
+                                  value: Tt(Ut, Fk.lowpassHz),
+                                  format: () => `${Fk.lowpassHz} Hz`,
+                                  onChange: kk => {
+                                    Bk({
+                                      lowpassHz: rt(Ut, kk)
                                     })
                                   }
                                 })]
-                              }), (0, Su.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Su.jsx)("div", {
+                                children: [(0, ek.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), LK.map((uu => {
+                                }), Pt.map((kk => {
                                   let {
-                                    key: Eu,
-                                    label: Ku,
-                                    max: Qu
-                                  } = uu;
-                                  return (0, Su.jsx)(aE, {
-                                    label: Ku,
+                                    key: Rk,
+                                    label: tk,
+                                    max: ak
+                                  } = kk;
+                                  return (0, ek.jsx)(QR, {
+                                    label: tk,
                                     min: 0,
-                                    max: Qu,
+                                    max: ak,
                                     step: .1,
-                                    value: Ru.intonation[Eu],
-                                    format: cK,
-                                    onChange: uu => {
-                                      yu({
+                                    value: Fk.intonation[Rk],
+                                    format: zt,
+                                    onChange: kk => {
+                                      Bk({
                                         intonation: {
-                                          ...Ru.intonation,
-                                          [Eu]: uu
+                                          ...Fk.intonation,
+                                          [Rk]: kk
                                         }
                                       })
                                     }
-                                  }, Eu)
+                                  }, Rk)
                                 }))]
                               })]
                             })
                           }
-                          const FK = Object.keys(eK.g),
-                            wK = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const qt = Object.keys(St.j),
+                            Ct = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function ZK(uu) {
-                            var Ru;
-                            const yu = JSON.stringify((0, eK.k)(uu));
-                            return null !== (Ru = FK.find((uu => JSON.stringify((0, eK.k)(eK.g[uu])) === yu))) && void 0 !== Ru ? Ru : null
+                          function Zt(kk) {
+                            var Fk;
+                            const Bk = JSON.stringify((0, St.l)(kk));
+                            return null !== (Fk = qt.find((kk => JSON.stringify((0, St.l)(St.j[kk])) === Bk))) && void 0 !== Fk ? Fk : null
                           }
 
-                          function hK(uu) {
-                            let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof uu || null === uu) return JSON.stringify(uu);
-                            return `{\n${Object.entries(uu).map((uu=>{let[yu,Eu]=uu;return`${Ru}    ${yu}: ${hK(Eu,`${Ru}    `)},`})).join("\n")}\n${Ru}}`
+                          function pt(kk) {
+                            let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof kk || null === kk) return JSON.stringify(kk);
+                            return `{\n${Object.entries(kk).map((kk=>{let[Bk,Rk]=kk;return`${Fk}    ${Bk}: ${pt(Rk,`${Fk}    `)},`})).join("\n")}\n${Fk}}`
                           }
 
-                          function PK(uu, Ru, yu) {
-                            const Eu = ZK(uu),
-                              Ku = [`    line: ${JSON.stringify(Ru)},`];
-                            return yu && Ku.push(`    speakerName: ${JSON.stringify(yu)},`), Ku.push("    voice,"), `const voice = ${Eu?JSON.stringify(Eu):hK((0,eK.k)(uu))}\n\napi.setClientOption(playerId, "dialogue", {\n${Ku.join("\n")}\n})`
+                          function Kt(kk, Fk, Bk) {
+                            const Rk = Zt(kk),
+                              tk = [`    line: ${JSON.stringify(Fk)},`];
+                            return Bk && tk.push(`    speakerName: ${JSON.stringify(Bk)},`), tk.push("    voice,"), `const voice = ${Rk?JSON.stringify(Rk):pt((0,St.l)(kk))}\n\napi.setClientOption(playerId, "dialogue", {\n${tk.join("\n")}\n})`
                           }
-                          const iK = 400,
-                            YK = 90;
-                          let oK = null;
+                          const xt = 400,
+                            jt = 90;
+                          let lt = null;
 
-                          function qK(uu, Ru, yu) {
-                            return oK ??= new AudioContext, oK.resume(), (0, MK.e)(oK, oK.destination, uu, Ru, yu, (() => {}))
+                          function nt(kk, Fk, Bk) {
+                            return lt ??= new AudioContext, lt.resume(), (0, ut.e)(lt, lt.destination, kk, Fk, Bk, (() => {}))
                           }
 
-                          function OK() {
-                            const [uu, Ru] = (0, Eu.useState)(eK.g.regular), [yu, Ku] = (0, Eu.useState)(wK[0]), [mu, Ju] = (0, Eu.useState)("Innkeeper"), [Nu, Xu] = (0, Eu.useState)(0), Vu = VE((uu => uu.volume)), ru = (0, Eu.useRef)(null), Bu = (0, Eu.useRef)(0), xu = (0, Eu.useRef)(0), pu = () => {
-                              var uu;
-                              null === (uu = ru.current) || void 0 === uu || uu.call(ru), ru.current = null
+                          function It() {
+                            const [kk, Fk] = (0, Rk.useState)(St.j.regular), [Bk, tk] = (0, Rk.useState)(Ct[0]), [Xk, bk] = (0, Rk.useState)("Innkeeper"), [wk, dk] = (0, Rk.useState)(0), sk = VR((kk => kk.volume)), Vk = (0, Rk.useRef)(null), Jk = (0, Rk.useRef)(0), Ak = (0, Rk.useRef)(0), yk = () => {
+                              var kk;
+                              null === (kk = Vk.current) || void 0 === kk || kk.call(Vk), Vk.current = null
                             };
-                            (0, Eu.useEffect)((() => () => {
-                              var uu;
-                              null === (uu = ru.current) || void 0 === uu || uu.call(ru), window.clearTimeout(Bu.current)
+                            (0, Rk.useEffect)((() => () => {
+                              var kk;
+                              null === (kk = Vk.current) || void 0 === kk || kk.call(Vk), window.clearTimeout(Jk.current)
                             }), []);
-                            const Wu = (0, Eu.useMemo)((() => ({
-                                line: yu,
-                                speakerName: mu || void 0,
-                                voice: uu
-                              })), [yu, mu, uu]),
-                              ju = (0, Eu.useRef)(Wu);
-                            ju.current = Wu;
-                            const du = ZK(uu),
-                              bu = uu => {
-                                window.clearTimeout(Bu.current), pu();
+                            const mk = (0, Rk.useMemo)((() => ({
+                                line: Bk,
+                                speakerName: Xk || void 0,
+                                voice: kk
+                              })), [Bk, Xk, kk]),
+                              Wk = (0, Rk.useRef)(mk);
+                            Wk.current = mk;
+                            const ik = Zt(kk),
+                              Yk = kk => {
+                                window.clearTimeout(Jk.current), yk();
                                 const {
-                                  plan: Ru,
-                                  synth: yu
-                                } = (0, DK.g)(uu);
-                                yu && (ru.current = qK(yu, Ru.blips, Vu)), Xu((uu => uu + 1))
+                                  plan: Fk,
+                                  synth: Bk
+                                } = (0, Ht.h)(kk);
+                                Bk && (Vk.current = nt(Bk, Fk.blips, sk)), dk((kk => kk + 1))
                               },
-                              Cu = PK(uu, yu, mu);
-                            return (0, Su.jsxs)("section", {
+                              Lk = Kt(kk, Bk, Xk);
+                            return (0, ek.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, Su.jsxs)("header", {
+                              children: [(0, ek.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, Su.jsxs)("div", {
-                                  children: [(0, Su.jsx)("div", {
+                                children: [(0, ek.jsxs)("div", {
+                                  children: [(0, ek.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, Su.jsx)("div", {
+                                  }), (0, ek.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, Su.jsx)(Hu, {
-                                  text: Cu,
+                                }), (0, ek.jsx)(vk, {
+                                  text: Lk,
                                   label: "Copy code"
                                 })]
-                              }), (0, Su.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [FK.map((uu => (0, Su.jsx)("button", {
+                                children: [qt.map((kk => (0, ek.jsx)("button", {
                                   type: "button",
-                                  className: Qu()("DocsVariantChip", {
-                                    Active: du === uu
+                                  className: ak()("DocsVariantChip", {
+                                    Active: ik === kk
                                   }),
-                                  "aria-pressed": du === uu,
+                                  "aria-pressed": ik === kk,
                                   onClick: () => {
-                                    (uu => {
-                                      const yu = eK.g[uu];
-                                      Ru(yu), bu({
-                                        ...Wu,
-                                        voice: yu
+                                    (kk => {
+                                      const Bk = St.j[kk];
+                                      Fk(Bk), Yk({
+                                        ...mk,
+                                        voice: Bk
                                       })
-                                    })(uu)
+                                    })(kk)
                                   },
-                                  children: uu
-                                }, uu))), !du && (0, Su.jsx)("span", {
+                                  children: kk
+                                }, kk))), !ik && (0, ek.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, Su.jsxs)("div", {
+                              }), (0, ek.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, Su.jsxs)("div", {
+                                children: [(0, ek.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, Su.jsx)("div", {
+                                  children: [(0, ek.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, Su.jsx)(AK.b, {
-                                      display: Wu
-                                    }, Nu)
-                                  }), (0, Su.jsxs)("form", {
+                                    children: (0, ek.jsx)(Nt.d, {
+                                      display: mk
+                                    }, wk)
+                                  }), (0, ek.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: uu => {
-                                      uu.preventDefault(), bu(Wu)
+                                    onSubmit: kk => {
+                                      kk.preventDefault(), Yk(mk)
                                     },
-                                    children: [(0, Su.jsx)("input", {
-                                      value: yu,
+                                    children: [(0, ek.jsx)("input", {
+                                      value: Bk,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: uu => {
-                                        Ku(uu.target.value)
+                                      onChange: kk => {
+                                        tk(kk.target.value)
                                       }
-                                    }), (0, Su.jsxs)("button", {
+                                    }), (0, ek.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, Su.jsx)(Tu, {
+                                      children: [(0, ek.jsx)(fk, {
                                         name: "play"
-                                      }), (0, Su.jsx)("span", {
+                                      }), (0, ek.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, Su.jsx)("div", {
+                                  }), (0, ek.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: wK.map((uu => (0, Su.jsx)("button", {
+                                    children: Ct.map((kk => (0, ek.jsx)("button", {
                                       type: "button",
-                                      className: Qu()("DocsVariantChip", {
-                                        Active: yu === uu
+                                      className: ak()("DocsVariantChip", {
+                                        Active: Bk === kk
                                       }),
                                       onClick: () => {
-                                        var Ru;
-                                        Ku(Ru = uu), bu({
-                                          ...Wu,
-                                          line: Ru
+                                        var Fk;
+                                        tk(Fk = kk), Yk({
+                                          ...mk,
+                                          line: Fk
                                         })
                                       },
-                                      children: uu
-                                    }, uu)))
-                                  }), (0, Su.jsxs)("label", {
+                                      children: kk
+                                    }, kk)))
+                                  }), (0, ek.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, Su.jsx)("span", {
+                                    children: [(0, ek.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, Su.jsx)("input", {
-                                      value: mu,
+                                    }), (0, ek.jsx)("input", {
+                                      value: Xk,
                                       placeholder: "No name",
-                                      onChange: uu => {
-                                        Ju(uu.target.value)
+                                      onChange: kk => {
+                                        bk(kk.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, Su.jsx)(zK, {
-                                  synth: uu,
-                                  onChange: yu => {
-                                    const Eu = {
-                                      ...uu,
-                                      ...yu
+                                }), (0, ek.jsx)(ht, {
+                                  synth: kk,
+                                  onChange: Bk => {
+                                    const Rk = {
+                                      ...kk,
+                                      ...Bk
                                     };
-                                    Ru(Eu);
-                                    const Ku = {
-                                        ...Wu,
-                                        voice: Eu
+                                    Fk(Rk);
+                                    const tk = {
+                                        ...mk,
+                                        voice: Rk
                                       },
-                                      Qu = performance.now();
-                                    if (Qu - xu.current >= YK) {
-                                      xu.current = Qu, pu();
-                                      const uu = (0, DK.g)(Ku).plan.blips[0];
-                                      uu && (ru.current = qK((0, eK.k)(Eu), [{
-                                        ...uu,
+                                      ak = performance.now();
+                                    if (ak - Ak.current >= jt) {
+                                      Ak.current = ak, yk();
+                                      const kk = (0, Ht.h)(tk).plan.blips[0];
+                                      kk && (Vk.current = nt((0, St.l)(Rk), [{
+                                        ...kk,
                                         atMs: 0
-                                      }], Vu))
+                                      }], sk))
                                     }
-                                    window.clearTimeout(Bu.current), Bu.current = window.setTimeout((() => {
-                                      bu(ju.current)
-                                    }), iK)
+                                    window.clearTimeout(Jk.current), Jk.current = window.setTimeout((() => {
+                                      Yk(Wk.current)
+                                    }), xt)
                                   }
                                 })]
-                              }), (0, Su.jsx)(ku, {
-                                code: Cu,
+                              }), (0, ek.jsx)(Ok, {
+                                code: Lk,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var vK = yu(4640);
-                          const aK = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            fK = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            uQ = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${fK}`, "g"), vK.o],
+                          var Qt = Bk(4583);
+                          const ka = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            Fa = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            Ba = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${Fa}`, "g"), Qt.r],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, vK.o]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, Qt.r]
                             ];
 
-                          function RQ(uu) {
-                            return `${uu.pageId}#${uu.anchor}`
+                          function Ra(kk) {
+                            return `${kk.pageId}#${kk.anchor}`
                           }
-                          let yQ, EQ, KQ;
+                          let ta, aa, Xa;
 
-                          function QQ(uu) {
-                            const Ru = (0, eu.d)(uu),
-                              yu = new Set;
-                            for (const [, , Eu] of Ru.matchAll(eu.b)) {
-                              const uu = Eu.startsWith("#") ? Zu(Eu) : null,
-                                Ru = uu ? RQ({
-                                  pageId: uu.page.id,
-                                  anchor: uu.anchor
+                          function ba(kk) {
+                            const Fk = (0, Ek.e)(kk),
+                              Bk = new Set;
+                            for (const [, , Rk] of Fk.matchAll(Ek.b)) {
+                              const kk = Rk.startsWith("#") ? Ck(Rk) : null,
+                                Fk = kk ? Ra({
+                                  pageId: kk.page.id,
+                                  anchor: kk.anchor
                                 }) : null;
-                              null !== Ru && (yQ || (yQ = new Set(gu.flatMap((uu => Iu(uu.layout) ? Fu(uu).sections.map((Ru => RQ({
-                                pageId: uu.id,
-                                anchor: Ru.heading.anchor
-                              }))) : [])))), yQ).has(Ru) && yu.add(Ru)
+                              null !== Fk && (ta || (ta = new Set(rk.flatMap((kk => uk(kk.layout) ? hk(kk).sections.map((Fk => Ra({
+                                pageId: kk.id,
+                                anchor: Fk.heading.anchor
+                              }))) : [])))), ta).has(Fk) && Bk.add(Fk)
                             }
-                            for (const [, , Eu] of Ru.matchAll(aK)) {
-                              const uu = BR(Eu);
-                              uu && yu.add(RQ(uu))
+                            for (const [, , Rk] of Fk.matchAll(ka)) {
+                              const kk = AF(Rk);
+                              kk && Bk.add(Ra(kk))
                             }
-                            return yu
+                            return Bk
                           }
 
-                          function mQ(uu, Ru) {
-                            const yu = new Set,
-                              Eu = function(uu) {
-                                return uu.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(uu);
-                            for (const [, Ku] of Eu.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) yu.add(Ku);
-                            for (const [Ku, Qu] of uQ)
-                              for (const [, uu] of(0, vK.i)(Eu, Ku, Qu)) Ru.has(uu) && yu.add(uu);
-                            return yu
+                          function wa(kk, Fk) {
+                            const Bk = new Set,
+                              Rk = function(kk) {
+                                return kk.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(kk);
+                            for (const [, tk] of Rk.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) Bk.add(tk);
+                            for (const [tk, ak] of Ba)
+                              for (const [, kk] of(0, Qt.i)(Rk, tk, ak)) Fk.has(kk) && Bk.add(kk);
+                            return Bk
                           }
 
-                          function JQ(uu, Ru, yu, Eu) {
-                            const Ku = uu.get(Ru);
-                            Ku ? !Eu && Ku.some((uu => uu.pageId === yu.pageId)) || Ku.push(yu) : uu.set(Ru, [yu])
+                          function da(kk, Fk, Bk, Rk) {
+                            const tk = kk.get(Fk);
+                            tk ? !Rk && tk.some((kk => kk.pageId === Bk.pageId)) || tk.push(Bk) : kk.set(Fk, [Bk])
                           }
-                          const NQ = /^[A-Za-z_$][\w$]*$/;
+                          const sa = /^[A-Za-z_$][\w$]*$/;
 
-                          function XQ(uu) {
-                            return NQ.test(uu.name) ? uu.name : "options"
-                          }
-
-                          function VQ(uu, Ru) {
-                            const yu = uu.params.map(XQ).join(", ");
-                            return Ru ? `${uu.name} = (${yu}) => {\n\t\n}` : `api.${uu.name}(${yu})`
+                          function Va(kk) {
+                            return sa.test(kk.name) ? kk.name : "options"
                           }
 
-                          function rQ(uu) {
+                          function Ja(kk, Fk) {
+                            const Bk = kk.params.map(Va).join(", ");
+                            return Fk ? `${kk.name} = (${Bk}) => {\n\t\n}` : `api.${kk.name}(${Bk})`
+                          }
+
+                          function Aa(kk) {
                             let {
-                              method: Ru,
-                              isCallback: yu
-                            } = uu;
-                            return (0, Su.jsxs)("div", {
+                              method: Fk,
+                              isCallback: Bk
+                            } = kk;
+                            return (0, ek.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, Su.jsxs)("span", {
+                              children: [(0, ek.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [yu ? (0, Su.jsxs)(Su.Fragment, {
-                                  children: [(0, Su.jsx)("span", {
+                                children: [Bk ? (0, ek.jsxs)(ek.Fragment, {
+                                  children: [(0, ek.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: Ru.name
-                                  }), (0, Su.jsx)("span", {
+                                    children: Fk.name
+                                  }), (0, ek.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, Su.jsxs)(Su.Fragment, {
-                                  children: [(0, Su.jsx)("span", {
+                                }) : (0, ek.jsxs)(ek.Fragment, {
+                                  children: [(0, ek.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, Su.jsx)("span", {
+                                  }), (0, ek.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: Ru.name
-                                  }), (0, Su.jsx)("span", {
+                                    children: Fk.name
+                                  }), (0, ek.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), Ru.params.map(((uu, yu) => (0, Su.jsxs)(Eu.Fragment, {
-                                  children: [yu > 0 && (0, Su.jsx)("span", {
+                                }), Fk.params.map(((kk, Bk) => (0, ek.jsxs)(Rk.Fragment, {
+                                  children: [Bk > 0 && (0, ek.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, Su.jsx)("a", {
+                                  }), (0, ek.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${Ru.name}-${XQ(uu)}`,
-                                    children: uu.name
+                                    href: `#${Fk.name}-${Va(kk)}`,
+                                    children: kk.name
                                   })]
-                                }, uu.name))), (0, Su.jsx)("span", {
+                                }, kk.name))), (0, ek.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: yu ? ") => " : ")"
-                                }), yu && !Ru.returns && (0, Su.jsx)("span", {
+                                  children: Bk ? ") => " : ")"
+                                }), Bk && !Fk.returns && (0, ek.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), Ru.returns && Ru.returns.type && (0, Su.jsxs)("span", {
+                              }), Fk.returns && Fk.returns.type && (0, ek.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!yu && (0, Su.jsx)("span", {
+                                children: [!Bk && (0, ek.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, Su.jsx)(AR, {
-                                  type: Ru.returns.type
+                                }), (0, ek.jsx)(SF, {
+                                  type: Fk.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function BQ(uu) {
+                          function ea(kk) {
                             let {
-                              title: Ru,
-                              references: yu
-                            } = uu;
-                            const Ku = (0, Eu.useContext)(xR);
-                            return (0, Su.jsxs)("div", {
+                              title: Fk,
+                              references: Bk
+                            } = kk;
+                            const tk = (0, Rk.useContext)(eF);
+                            return (0, ek.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, Su.jsx)("span", {
+                              children: [(0, ek.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: Ru
-                              }), yu.map((uu => (0, Su.jsx)(mu.c, {
-                                to: Pu(Ku, Lu(uu.pageId), uu.anchor),
-                                children: uu.label
-                              }, `${uu.pageId}#${uu.anchor}`)))]
+                                children: Fk
+                              }), Bk.map((kk => (0, ek.jsx)(Xk.b, {
+                                to: pk(tk, zk(kk.pageId), kk.anchor),
+                                children: kk.label
+                              }, `${kk.pageId}#${kk.anchor}`)))]
                             })
                           }
 
-                          function xQ(uu) {
-                            var Ru, yu;
+                          function ya(kk) {
+                            var Fk, Bk;
                             let {
-                              pageId: Eu,
-                              anchor: Ku
-                            } = uu;
-                            const Qu = RQ({
-                                pageId: Eu,
-                                anchor: Ku
+                              pageId: Rk,
+                              anchor: tk
+                            } = kk;
+                            const ak = Ra({
+                                pageId: Rk,
+                                anchor: tk
                               }),
-                              mu = null !== (Ru = function() {
-                                if (!KQ) {
-                                  KQ = new Map;
-                                  const Eu = new Set(gu.filter((uu => "callbacks" === uu.layout)).flatMap((uu => Fu(uu).sections.map((uu => uu.heading.text)))));
-                                  for (const Ku of gu)
-                                    if ("article" === Ku.layout || "snippets" === Ku.layout)
-                                      for (const Qu of (0, eu.p)(Fu(Ku)))
+                              Xk = null !== (Fk = function() {
+                                if (!Xa) {
+                                  Xa = new Map;
+                                  const Rk = new Set(rk.filter((kk => "callbacks" === kk.layout)).flatMap((kk => hk(kk).sections.map((kk => kk.heading.text)))));
+                                  for (const tk of rk)
+                                    if ("article" === tk.layout || "snippets" === tk.layout)
+                                      for (const ak of (0, Ek.q)(hk(tk)))
                                         for (const {
-                                            code: mu
+                                            code: Xk
                                           }
-                                          of(0, eu.e)(Qu.blocks))
-                                          for (const Ju of mQ(mu, Eu)) {
-                                            const Eu = rR().get(Ju);
-                                            if (Eu) {
-                                              var uu, Ru, yu;
-                                              const mu = {
-                                                pageId: Ku.id,
-                                                anchor: null !== (uu = null === (Ru = Qu.heading) || void 0 === Ru ? void 0 : Ru.anchor) && void 0 !== uu ? uu : "",
-                                                label: null !== (yu = Ku.navTitle) && void 0 !== yu ? yu : Ku.title
+                                          of(0, Ek.g)(ak.blocks))
+                                          for (const bk of wa(Xk, Rk)) {
+                                            const Rk = JF().get(bk);
+                                            if (Rk) {
+                                              var kk, Fk, Bk;
+                                              const Xk = {
+                                                pageId: tk.id,
+                                                anchor: null !== (kk = null === (Fk = ak.heading) || void 0 === Fk ? void 0 : Fk.anchor) && void 0 !== kk ? kk : "",
+                                                label: null !== (Bk = tk.navTitle) && void 0 !== Bk ? Bk : tk.title
                                               };
-                                              JQ(KQ, RQ(Eu), mu, !1)
+                                              da(Xa, Ra(Rk), Xk, !1)
                                             }
                                           }
                                 }
-                                return KQ
-                              }().get(Qu)) && void 0 !== Ru ? Ru : [],
-                              Ju = null !== (yu = function() {
-                                if (!EQ) {
-                                  EQ = new Map;
-                                  const uu = Lu("changelog");
-                                  for (const Ru of Fu(uu).sections) {
-                                    const yu = new Set(Ru.blocks.flatMap((uu => [...QQ(uu)])));
-                                    for (const Eu of yu) {
-                                      const yu = {
-                                        pageId: uu.id,
-                                        anchor: Ru.heading.anchor,
-                                        label: Ru.heading.text
+                                return Xa
+                              }().get(ak)) && void 0 !== Fk ? Fk : [],
+                              bk = null !== (Bk = function() {
+                                if (!aa) {
+                                  aa = new Map;
+                                  const kk = zk("changelog");
+                                  for (const Fk of hk(kk).sections) {
+                                    const Bk = new Set(Fk.blocks.flatMap((kk => [...ba(kk)])));
+                                    for (const Rk of Bk) {
+                                      const Bk = {
+                                        pageId: kk.id,
+                                        anchor: Fk.heading.anchor,
+                                        label: Fk.heading.text
                                       };
-                                      JQ(EQ, Eu, yu, !0)
+                                      da(aa, Rk, Bk, !0)
                                     }
                                   }
                                 }
-                                return EQ
-                              }().get(Qu)) && void 0 !== yu ? yu : [];
-                            return 0 === mu.length && 0 === Ju.length ? null : (0, Su.jsxs)("footer", {
+                                return aa
+                              }().get(ak)) && void 0 !== Bk ? Bk : [];
+                            return 0 === Xk.length && 0 === bk.length ? null : (0, ek.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [mu.length > 0 && (0, Su.jsx)(BQ, {
+                              children: [Xk.length > 0 && (0, ek.jsx)(ea, {
                                 title: "Used in",
-                                references: mu
-                              }), Ju.length > 0 && (0, Su.jsx)(BQ, {
+                                references: Xk
+                              }), bk.length > 0 && (0, ek.jsx)(ea, {
                                 title: "Changelog",
-                                references: Ju
+                                references: bk
                               })]
                             })
                           }
 
-                          function SQ(uu) {
+                          function fa(kk) {
                             let {
-                              method: Ru,
-                              pageId: yu,
-                              anchor: Eu,
-                              isCallback: Ku
-                            } = uu;
-                            const Qu = Ku ? void 0 : JR().get(Ru.name),
-                              mu = Ru.description.length > 0 || null === Qu || void 0 === Qu || !Qu.description ? Ru.description : (0, eu.v)(Qu.description);
-                            return (0, Su.jsxs)("article", {
+                              method: Fk,
+                              pageId: Bk,
+                              anchor: Rk,
+                              isCallback: tk
+                            } = kk;
+                            const ak = tk ? void 0 : wF().get(Fk.name),
+                              Xk = Fk.description.length > 0 || null === ak || void 0 === ak || !ak.description ? Fk.description : (0, Ek.s)(ak.description);
+                            return (0, ek.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, Su.jsxs)("header", {
+                              children: [(0, ek.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, Su.jsx)(Xy, {
+                                children: [(0, ek.jsx)(sB, {
                                   level: 2,
-                                  text: Ru.name,
-                                  anchor: Eu,
+                                  text: Fk.name,
+                                  anchor: Rk,
                                   className: "DocsCardTitle"
-                                }), (0, Su.jsx)(Hu, {
-                                  text: VQ(Ru, Ku),
-                                  label: Ku ? "Copy handler" : "Copy call",
+                                }), (0, ek.jsx)(vk, {
+                                  text: Ja(Fk, tk),
+                                  label: tk ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, Su.jsx)(rQ, {
-                                method: Ru,
-                                isCallback: Ku
-                              }), Qu && null !== Qu.deprecation && (0, Su.jsxs)("aside", {
+                              }), (0, ek.jsx)(Aa, {
+                                method: Fk,
+                                isCallback: tk
+                              }), ak && null !== ak.deprecation && (0, ek.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, Su.jsx)("strong", {
+                                children: [(0, ek.jsx)("strong", {
                                   children: "Deprecated"
-                                }), Qu.deprecation && (0, Su.jsxs)(Su.Fragment, {
-                                  children: [": ", (0, Su.jsx)(CR, {
-                                    text: (Ju = Qu.deprecation, (0, vK.u)(Ju, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, vK.l)("`\\w"), (uu => {
-                                      let [Ru] = uu;
-                                      return rR().has(Ru) ? `\`${Ru}\`` : Ru
+                                }), ak.deprecation && (0, ek.jsxs)(ek.Fragment, {
+                                  children: [": ", (0, ek.jsx)(LF, {
+                                    text: (bk = ak.deprecation, (0, Qt.y)(bk, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, Qt.n)("`\\w"), (kk => {
+                                      let [Fk] = kk;
+                                      return JF().has(Fk) ? `\`${Fk}\`` : Fk
                                     })))
                                   })]
                                 })]
-                              }), mu.length > 0 && (0, Su.jsx)("div", {
+                              }), Xk.length > 0 && (0, ek.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, Su.jsx)(xy, {
-                                  blocks: mu
+                                children: (0, ek.jsx)(eB, {
+                                  blocks: Xk
                                 })
-                              }), Ru.params.length > 0 && (0, Su.jsxs)("section", {
+                              }), Fk.params.length > 0 && (0, ek.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, Su.jsx)("h3", {
+                                children: [(0, ek.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, Su.jsx)("dl", {
+                                }), (0, ek.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: Ru.params.map((uu => (0, Su.jsxs)("div", {
-                                    id: `${Ru.name}-${XQ(uu)}`,
+                                  children: Fk.params.map((kk => (0, ek.jsxs)("div", {
+                                    id: `${Fk.name}-${Va(kk)}`,
                                     className: "DocsParam",
-                                    children: [(0, Su.jsxs)("dt", {
-                                      children: [(0, Su.jsx)("code", {
+                                    children: [(0, ek.jsxs)("dt", {
+                                      children: [(0, ek.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: uu.name
-                                      }), (0, Su.jsx)(AR, {
-                                        type: uu.type
+                                        children: kk.name
+                                      }), (0, ek.jsx)(SF, {
+                                        type: kk.type
                                       })]
-                                    }), uu.description && (0, Su.jsx)("dd", {
-                                      children: (0, Su.jsx)(CR, {
-                                        text: uu.description
+                                    }), kk.description && (0, ek.jsx)("dd", {
+                                      children: (0, ek.jsx)(LF, {
+                                        text: kk.description
                                       })
                                     })]
-                                  }, uu.name)))
+                                  }, kk.name)))
                                 })]
-                              }), Ru.returns && (Ru.returns.type || Ru.returns.description.length > 0) && (0, Su.jsxs)("section", {
+                              }), Fk.returns && (Fk.returns.type || Fk.returns.description.length > 0) && (0, ek.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, Su.jsx)("h3", {
+                                children: [(0, ek.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, Su.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [Ru.returns.type && (0, Su.jsx)(AR, {
-                                    type: Ru.returns.type
-                                  }), Ru.returns.description.length > 0 && (0, Su.jsx)("div", {
+                                  children: [Fk.returns.type && (0, ek.jsx)(SF, {
+                                    type: Fk.returns.type
+                                  }), Fk.returns.description.length > 0 && (0, ek.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, Su.jsx)(xy, {
-                                      blocks: Ru.returns.description
+                                    children: (0, ek.jsx)(eB, {
+                                      blocks: Fk.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, Su.jsx)(xQ, {
-                                pageId: yu,
-                                anchor: Eu
+                              }), (0, ek.jsx)(ya, {
+                                pageId: Bk,
+                                anchor: Rk
                               })]
                             });
-                            var Ju
+                            var bk
                           }
 
-                          function pQ(uu) {
-                            var Ru;
-                            return null !== uu.defaultValue && "undefined" !== uu.defaultValue ? uu.defaultValue : null !== (Ru = uu.example) && void 0 !== Ru ? Ru : "value"
+                          function ma(kk) {
+                            var Fk;
+                            return null !== kk.defaultValue && "undefined" !== kk.defaultValue ? kk.defaultValue : null !== (Fk = kk.example) && void 0 !== Fk ? Fk : "value"
                           }
 
-                          function TQ(uu) {
+                          function Wa(kk) {
                             let {
-                              setting: Ru,
-                              pageId: yu,
-                              anchor: Eu,
-                              setterSnippet: Ku
-                            } = uu;
-                            const Qu = null === Ru.defaultValue ? null : WR(Ru.defaultValue);
-                            return (0, Su.jsxs)("article", {
+                              setting: Fk,
+                              pageId: Bk,
+                              anchor: Rk,
+                              setterSnippet: tk
+                            } = kk;
+                            const ak = null === Fk.defaultValue ? null : WF(Fk.defaultValue);
+                            return (0, ek.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, Su.jsxs)("header", {
+                              children: [(0, ek.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, Su.jsx)(Xy, {
+                                children: [(0, ek.jsx)(sB, {
                                   level: 2,
-                                  text: Ru.name,
-                                  anchor: Eu,
+                                  text: Fk.name,
+                                  anchor: Rk,
                                   className: "DocsCardTitle"
-                                }), (0, Su.jsx)(Hu, {
-                                  text: Ku(Ru.name, pQ(Ru)),
+                                }), (0, ek.jsx)(vk, {
+                                  text: tk(Fk.name, ma(Fk)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, Su.jsxs)("dl", {
+                              }), (0, ek.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, Su.jsxs)("div", {
-                                  children: [(0, Su.jsx)("dt", {
+                                children: [(0, ek.jsxs)("div", {
+                                  children: [(0, ek.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, Su.jsx)("dd", {
-                                    children: (0, Su.jsx)(AR, {
-                                      type: Ru.type
+                                  }), (0, ek.jsx)("dd", {
+                                    children: (0, ek.jsx)(SF, {
+                                      type: Fk.type
                                     })
                                   })]
-                                }), null !== Ru.defaultValue && (0, Su.jsxs)("div", {
-                                  children: [(0, Su.jsx)("dt", {
+                                }), null !== Fk.defaultValue && (0, ek.jsxs)("div", {
+                                  children: [(0, ek.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, Su.jsx)("dd", {
-                                    children: (0, Su.jsxs)("code", {
+                                  }), (0, ek.jsx)("dd", {
+                                    children: (0, ek.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [Qu && (0, Su.jsx)(jR, {
-                                        colour: Qu
-                                      }), Ru.defaultValue]
+                                      children: [ak && (0, ek.jsx)(vF, {
+                                        colour: ak
+                                      }), Fk.defaultValue]
                                     })
                                   })]
-                                }), null !== Ru.example && (0, Su.jsxs)("div", {
-                                  children: [(0, Su.jsx)("dt", {
+                                }), null !== Fk.example && (0, ek.jsxs)("div", {
+                                  children: [(0, ek.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, Su.jsx)("dd", {
-                                    children: (0, Su.jsx)("code", {
+                                  }), (0, ek.jsx)("dd", {
+                                    children: (0, ek.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: Ru.example
+                                      children: Fk.example
                                     })
                                   })]
                                 })]
-                              }), Ru.description.length > 0 && (0, Su.jsx)("div", {
+                              }), Fk.description.length > 0 && (0, ek.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, Su.jsx)(xy, {
-                                  blocks: Ru.description
+                                children: (0, ek.jsx)(eB, {
+                                  blocks: Fk.description
                                 })
-                              }), (0, Su.jsx)(xQ, {
-                                pageId: yu,
-                                anchor: Eu
+                              }), (0, ek.jsx)(ya, {
+                                pageId: Bk,
+                                anchor: Rk
                               })]
                             })
                           }
 
-                          function WQ(uu) {
+                          function va(kk) {
                             let {
-                              section: Ru
-                            } = uu;
-                            return (0, Su.jsxs)("article", {
+                              section: Fk
+                            } = kk;
+                            return (0, ek.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, Su.jsx)(Xy, {
+                              children: [(0, ek.jsx)(sB, {
                                 level: 2,
-                                text: Ru.heading.text,
-                                anchor: Ru.heading.anchor,
+                                text: Fk.heading.text,
+                                anchor: Fk.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, Su.jsx)("div", {
+                              }), (0, ek.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, Su.jsx)(xy, {
-                                  blocks: Ru.blocks
+                                children: (0, ek.jsx)(eB, {
+                                  blocks: Fk.blocks
                                 })
                               })]
                             })
                           }
 
-                          function jQ(uu) {
+                          function ia(kk) {
                             let {
-                              section: Ru
-                            } = uu;
-                            return (0, Su.jsxs)("section", {
+                              section: Fk
+                            } = kk;
+                            return (0, ek.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, Su.jsx)(Xy, {
-                                level: Ru.heading.level,
-                                text: Ru.heading.text,
-                                anchor: Ru.heading.anchor
-                              }), (0, Su.jsx)(xy, {
-                                blocks: Ru.blocks
+                              children: [(0, ek.jsx)(sB, {
+                                level: Fk.heading.level,
+                                text: Fk.heading.text,
+                                anchor: Fk.heading.anchor
+                              }), (0, ek.jsx)(eB, {
+                                blocks: Fk.blocks
                               })]
                             })
                           }
-                          const HQ = {
+                          const Ya = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4862,337 +4862,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function dQ(uu) {
+                          function oa(kk) {
                             let {
-                              page: Ru,
-                              section: yu
-                            } = uu;
-                            if ("methods" === Ru.layout || "callbacks" === Ru.layout) return (0, Su.jsx)(SQ, {
-                              method: ky(yu),
-                              pageId: Ru.id,
-                              anchor: yu.heading.anchor,
-                              isCallback: "callbacks" === Ru.layout
+                              page: Fk,
+                              section: Bk
+                            } = kk;
+                            if ("methods" === Fk.layout || "callbacks" === Fk.layout) return (0, ek.jsx)(fa, {
+                              method: OB(Bk),
+                              pageId: Fk.id,
+                              anchor: Bk.heading.anchor,
+                              isCallback: "callbacks" === Fk.layout
                             });
-                            if ("settings" === Ru.layout) {
-                              const uu = function(uu) {
-                                const Ru = {
-                                  name: uu.heading.text,
+                            if ("settings" === Fk.layout) {
+                              const kk = function(kk) {
+                                const Fk = {
+                                  name: kk.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const Eu of uu.blocks) {
-                                  var yu;
-                                  if (Cy(Eu)) continue;
-                                  const uu = "paragraph" === Eu.kind ? Eu.text.match(ey) : null;
-                                  if (!uu) {
-                                    Ru.description.push(Eu);
+                                for (const Rk of kk.blocks) {
+                                  var Bk;
+                                  if (LB(Rk)) continue;
+                                  const kk = "paragraph" === Rk.kind ? Rk.text.match(EB) : null;
+                                  if (!kk) {
+                                    Fk.description.push(Rk);
                                     continue
                                   }
-                                  const Ku = null !== (yu = by(uu[2])) && void 0 !== yu ? yu : uu[2];
-                                  "Type" === uu[1] ? Ru.type = Ku : "Default" === uu[1] ? Ru.defaultValue = Ku : "" !== Ku && (Ru.example = Ku)
+                                  const tk = null !== (Bk = oB(kk[2])) && void 0 !== Bk ? Bk : kk[2];
+                                  "Type" === kk[1] ? Fk.type = tk : "Default" === kk[1] ? Fk.defaultValue = tk : "" !== tk && (Fk.example = tk)
                                 }
-                                return Ru.type ? Ru : null
-                              }(yu);
-                              if (uu) return (0, Su.jsx)(TQ, {
-                                setting: uu,
-                                pageId: Ru.id,
-                                anchor: yu.heading.anchor,
-                                setterSnippet: Ru.setterSnippet
+                                return Fk.type ? Fk : null
+                              }(Bk);
+                              if (kk) return (0, ek.jsx)(Wa, {
+                                setting: kk,
+                                pageId: Fk.id,
+                                anchor: Bk.heading.anchor,
+                                setterSnippet: Fk.setterSnippet
                               })
                             }
-                            return "snippets" === Ru.layout ? (0, Su.jsx)(WQ, {
-                              section: yu
-                            }) : "changelog" === Ru.layout ? (0, Su.jsxs)("section", {
+                            return "snippets" === Fk.layout ? (0, ek.jsx)(va, {
+                              section: Bk
+                            }) : "changelog" === Fk.layout ? (0, ek.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, Su.jsx)("div", {
+                              children: [(0, ek.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, Su.jsx)(Xy, {
+                                children: (0, ek.jsx)(sB, {
                                   level: 2,
-                                  text: yu.heading.text,
-                                  anchor: yu.heading.anchor
+                                  text: Bk.heading.text,
+                                  anchor: Bk.heading.anchor
                                 })
-                              }), (0, Su.jsx)("div", {
+                              }), (0, ek.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, Su.jsx)(xy, {
-                                  blocks: Ay(yu.blocks)
+                                children: (0, ek.jsx)(eB, {
+                                  blocks: SB(Bk.blocks)
                                 })
                               })]
-                            }) : Ru.gallery ? (0, Su.jsxs)("section", {
+                            }) : Fk.gallery ? (0, ek.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, Su.jsx)(Xy, {
-                                level: yu.heading.level,
-                                text: yu.heading.text,
-                                anchor: yu.heading.anchor
-                              }), (0, Su.jsx)(DE, {
-                                kind: Ru.gallery,
-                                content: Fu(Ru),
-                                blocks: yu.blocks
+                              children: [(0, ek.jsx)(sB, {
+                                level: Bk.heading.level,
+                                text: Bk.heading.text,
+                                anchor: Bk.heading.anchor
+                              }), (0, ek.jsx)(NR, {
+                                kind: Fk.gallery,
+                                content: hk(Fk),
+                                blocks: Bk.blocks
                               })]
-                            }) : (0, Su.jsx)(jQ, {
-                              section: yu
+                            }) : (0, ek.jsx)(ia, {
+                              section: Bk
                             })
                           }
 
-                          function bQ(uu) {
+                          function La(kk) {
                             let {
-                              page: Ru,
-                              onTocChange: yu
-                            } = uu;
-                            const Ku = Fu(Ru),
-                              [Qu, mu] = (0, Eu.useState)(""),
-                              Ju = "article" !== Ru.layout,
-                              Nu = Ty(Ru.gallery) ? Ru.gallery : null,
-                              Xu = null !== Nu,
-                              Vu = Qu.trim().toLowerCase(),
-                              ru = (0, Eu.useRef)(null),
-                              Bu = (0, Eu.useCallback)((uu => {
-                                var Ru;
-                                null === (Ru = ru.current) || void 0 === Ru || Ru.preview(uu)
+                              page: Fk,
+                              onTocChange: Bk
+                            } = kk;
+                            const tk = hk(Fk),
+                              [ak, Xk] = (0, Rk.useState)(""),
+                              bk = "article" !== Fk.layout,
+                              wk = mB(Fk.gallery) ? Fk.gallery : null,
+                              dk = null !== wk,
+                              sk = ak.trim().toLowerCase(),
+                              Vk = (0, Rk.useRef)(null),
+                              Jk = (0, Rk.useCallback)((kk => {
+                                var Fk;
+                                null === (Fk = Vk.current) || void 0 === Fk || Fk.preview(kk)
                               }), []),
-                              xu = (0, Eu.useMemo)((() => {
-                                if (!Ru.hasParticlePlayground) return [];
-                                const uu = Gy(Ku.intro).find((uu => "names" === uu.kind && !uu.names.some((uu => null !== zy(uu.name)))));
-                                return "names" === (null === uu || void 0 === uu ? void 0 : uu.kind) ? uu.names.map((uu => uu.name)) : []
-                              }), [Ru, Ku]),
-                              pu = (0, Eu.useMemo)((() => {
-                                if (!Ru.hasTextPlayground) return [];
-                                const uu = Ku.sections.flatMap((uu => uu.blocks.flatMap((uu => {
-                                  var Ru;
-                                  return (null !== (Ru = Iy(uu)) && void 0 !== Ru ? Ru : []).flatMap((uu => zR(uu.name) ? [uu.name] : []))
+                              Ak = (0, Rk.useMemo)((() => {
+                                if (!Fk.hasParticlePlayground) return [];
+                                const kk = MB(tk.intro).find((kk => "names" === kk.kind && !kk.names.some((kk => null !== PB(kk.name)))));
+                                return "names" === (null === kk || void 0 === kk ? void 0 : kk.kind) ? kk.names.map((kk => kk.name)) : []
+                              }), [Fk, tk]),
+                              yk = (0, Rk.useMemo)((() => {
+                                if (!Fk.hasTextPlayground) return [];
+                                const kk = tk.sections.flatMap((kk => kk.blocks.flatMap((kk => {
+                                  var Fk;
+                                  return (null !== (Fk = uB(kk)) && void 0 !== Fk ? Fk : []).flatMap((kk => PF(kk.name) ? [kk.name] : []))
                                 }))));
-                                return [...new Set(uu)]
-                              }), [Ru, Ku]),
-                              Tu = (0, Eu.useMemo)((() => Vu ? Ku.sections.filter((uu => function(uu, Ru) {
-                                return !!uu.heading.text.toLowerCase().includes(Ru) || uu.blocks.some((uu => (0, eu.d)(uu).toLowerCase().includes(Ru)))
-                              }(uu, Vu))) : Ku.sections), [Ku, Vu]),
-                              Wu = (0, Eu.useMemo)((() => function(uu, Ru) {
-                                return "article" !== uu.layout ? Ru.map((uu => ({
-                                  anchor: uu.heading.anchor,
-                                  text: uu.heading.text,
+                                return [...new Set(kk)]
+                              }), [Fk, tk]),
+                              fk = (0, Rk.useMemo)((() => sk ? tk.sections.filter((kk => function(kk, Fk) {
+                                return !!kk.heading.text.toLowerCase().includes(Fk) || kk.blocks.some((kk => (0, Ek.e)(kk).toLowerCase().includes(Fk)))
+                              }(kk, sk))) : tk.sections), [tk, sk]),
+                              mk = (0, Rk.useMemo)((() => function(kk, Fk) {
+                                return "article" !== kk.layout ? Fk.map((kk => ({
+                                  anchor: kk.heading.anchor,
+                                  text: kk.heading.text,
                                   level: 2
-                                }))) : Ru.flatMap((uu => {
-                                  const Ru = uu.blocks.flatMap((uu => "heading" === uu.kind && 3 === uu.level ? [{
-                                    anchor: uu.anchor,
-                                    text: uu.text,
+                                }))) : Fk.flatMap((kk => {
+                                  const Fk = kk.blocks.flatMap((kk => "heading" === kk.kind && 3 === kk.level ? [{
+                                    anchor: kk.anchor,
+                                    text: kk.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: uu.heading.anchor,
-                                    text: uu.heading.text,
+                                    anchor: kk.heading.anchor,
+                                    text: kk.heading.text,
                                     level: 2
-                                  }, ...Ru]
+                                  }, ...Fk]
                                 }))
-                              }(Ru, Tu)), [Ru, Tu]);
-                            return (0, Eu.useEffect)((() => {
-                              yu(Wu)
-                            }), [Wu, yu]), (0, Su.jsxs)("article", {
+                              }(Fk, fk)), [Fk, fk]);
+                            return (0, Rk.useEffect)((() => {
+                              Bk(mk)
+                            }), [mk, Bk]), (0, ek.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, Su.jsxs)("header", {
+                              children: [(0, ek.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, Su.jsx)("h1", {
+                                children: [(0, ek.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: Ku.title || Ru.title
-                                }), (0, Su.jsx)("p", {
+                                  children: tk.title || Fk.title
+                                }), (0, ek.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: Ru.summary
-                                }), (0, Su.jsx)(oE, {
-                                  page: Ru
-                                }), Ju && (0, Su.jsx)("div", {
+                                  children: Fk.summary
+                                }), (0, ek.jsx)(jR, {
+                                  page: Fk
+                                }), bk && (0, ek.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, Su.jsxs)("span", {
-                                    children: [(0, Su.jsx)("strong", {
-                                      children: Ku.sections.length
-                                    }), " ", HQ[Ru.layout]]
+                                  children: (0, ek.jsxs)("span", {
+                                    children: [(0, ek.jsx)("strong", {
+                                      children: tk.sections.length
+                                    }), " ", Ya[Fk.layout]]
                                   })
                                 })]
-                              }), "" === Ru.slug && (0, Su.jsx)(IE, {}), Nu && (0, Su.jsx)(sE, {
-                                kind: Nu
-                              }, Nu), Ru.hasParticlePlayground && (0, Su.jsx)(JK, {
-                                ref: ru,
-                                textures: xu
-                              }), !Xu && Ku.intro.length > 0 && (0, Su.jsx)("div", {
+                              }), "" === Fk.slug && (0, ek.jsx)(uR, {}), wk && (0, ek.jsx)(cR, {
+                                kind: wk
+                              }, wk), Fk.hasParticlePlayground && (0, ek.jsx)(dt, {
+                                ref: Vk,
+                                textures: Ak
+                              }), !dk && tk.intro.length > 0 && (0, ek.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: Ru.gallery ? (0, Su.jsx)(WE.Provider, {
-                                  value: Ru.hasParticlePlayground ? Bu : null,
-                                  children: (0, Su.jsx)(DE, {
-                                    kind: Ru.gallery,
-                                    content: Ku,
-                                    blocks: Ku.intro
+                                children: Fk.gallery ? (0, ek.jsx)(WR.Provider, {
+                                  value: Fk.hasParticlePlayground ? Jk : null,
+                                  children: (0, ek.jsx)(NR, {
+                                    kind: Fk.gallery,
+                                    content: tk,
+                                    blocks: tk.intro
                                   })
-                                }) : (0, Su.jsx)(xy, {
-                                  blocks: Ay(Ku.intro)
+                                }) : (0, ek.jsx)(eB, {
+                                  blocks: SB(tk.intro)
                                 })
-                              }), Ru.hasTextPlayground && (0, Su.jsx)(kK, {
-                                fontAwesomeIcons: pu
-                              }), Ru.hasVoicePlayground && (0, Su.jsx)(OK, {}), Ru.childPageIds && (0, Su.jsx)(IE, {
-                                cards: Ru.childPageIds.map((uu => ({
-                                  pageId: uu
+                              }), Fk.hasTextPlayground && (0, ek.jsx)(Et, {
+                                fontAwesomeIcons: yk
+                              }), Fk.hasVoicePlayground && (0, ek.jsx)(It, {}), Fk.childPageIds && (0, ek.jsx)(uR, {
+                                cards: Fk.childPageIds.map((kk => ({
+                                  pageId: kk
                                 }))),
-                                label: Ru.title
-                              }), Ju && (0, Su.jsx)(Hy, {
+                                label: Fk.title
+                              }), bk && (0, ek.jsx)(iB, {
                                 className: "DocsFilterBar",
-                                value: Qu,
-                                placeholder: `Filter ${Ku.sections.length} ${HQ[Ru.layout]}\u2026`,
-                                label: `Filter ${HQ[Ru.layout]}`,
-                                onChange: mu,
-                                count: Vu ? {
-                                  visible: Tu.length,
-                                  total: Ku.sections.length
+                                value: ak,
+                                placeholder: `Filter ${tk.sections.length} ${Ya[Fk.layout]}\u2026`,
+                                label: `Filter ${Ya[Fk.layout]}`,
+                                onChange: Xk,
+                                count: sk ? {
+                                  visible: fk.length,
+                                  total: tk.sections.length
                                 } : null
-                              }), !Xu && (0, Su.jsxs)("div", {
-                                className: `DocsSections Layout-${Ru.layout}`,
-                                children: [Tu.map((uu => (0, Su.jsx)(dQ, {
-                                  page: Ru,
-                                  section: uu
-                                }, uu.heading.anchor))), 0 === Tu.length && (0, Su.jsxs)("p", {
+                              }), !dk && (0, ek.jsxs)("div", {
+                                className: `DocsSections Layout-${Fk.layout}`,
+                                children: [fk.map((kk => (0, ek.jsx)(oa, {
+                                  page: Fk,
+                                  section: kk
+                                }, kk.heading.anchor))), 0 === fk.length && (0, ek.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", HQ[Ru.layout], " match \u201c", Qu, "\u201d."]
+                                  children: ["No ", Ya[Fk.layout], " match \u201c", ak, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const CQ = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const Oa = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function kQ(uu) {
+                          function Ea(kk) {
                             let {
-                              entry: Ru,
-                              isActive: yu,
-                              onNavigate: Eu,
-                              label: Ku,
-                              children: mu
-                            } = uu;
-                            return (0, Su.jsx)("a", {
-                              href: `#${Ru.anchor}`,
-                              "aria-label": Ku,
-                              className: Qu()(`Level${Ru.level}`, {
-                                Active: yu
+                              entry: Fk,
+                              isActive: Bk,
+                              onNavigate: Rk,
+                              label: tk,
+                              children: Xk
+                            } = kk;
+                            return (0, ek.jsx)("a", {
+                              href: `#${Fk.anchor}`,
+                              "aria-label": tk,
+                              className: ak()(`Level${Fk.level}`, {
+                                Active: Bk
                               }),
-                              "aria-current": yu ? "location" : void 0,
-                              onClick: uu => {
-                                uu.preventDefault(), Eu(Ru.anchor)
+                              "aria-current": Bk ? "location" : void 0,
+                              onClick: kk => {
+                                kk.preventDefault(), Rk(Fk.anchor)
                               },
-                              children: mu
+                              children: Xk
                             })
                           }
 
-                          function eQ(uu) {
+                          function Sa(kk) {
                             let {
-                              toc: Ru,
-                              activeAnchor: yu,
-                              onNavigate: Ku
-                            } = uu;
-                            const mu = Math.max(0, Ru.findIndex((uu => uu.anchor === yu))),
-                              Ju = (0, Eu.useRef)(null),
-                              Nu = (0, Eu.useRef)(!1);
-                            (0, Eu.useEffect)((() => {
-                              var uu, yu;
-                              const Eu = null === (uu = Ju.current) || void 0 === uu ? void 0 : uu.closest(".DocsToc"),
-                                Ku = null === (yu = Ju.current) || void 0 === yu ? void 0 : yu.querySelector(".DocsTimelineNotch.Active");
-                              if (!Eu || !Ku) return;
-                              let Qu = 0;
-                              if (mu === Ru.length - 1) Qu = Eu.scrollHeight;
-                              else if (mu > 0) {
-                                const uu = Eu.getBoundingClientRect(),
-                                  Ru = Ku.getBoundingClientRect();
-                                Qu = Eu.scrollTop + Ru.top + Ru.height / 2 - (uu.top + Eu.clientHeight / 2)
+                              toc: Fk,
+                              activeAnchor: Bk,
+                              onNavigate: tk
+                            } = kk;
+                            const Xk = Math.max(0, Fk.findIndex((kk => kk.anchor === Bk))),
+                              bk = (0, Rk.useRef)(null),
+                              wk = (0, Rk.useRef)(!1);
+                            (0, Rk.useEffect)((() => {
+                              var kk, Bk;
+                              const Rk = null === (kk = bk.current) || void 0 === kk ? void 0 : kk.closest(".DocsToc"),
+                                tk = null === (Bk = bk.current) || void 0 === Bk ? void 0 : Bk.querySelector(".DocsTimelineNotch.Active");
+                              if (!Rk || !tk) return;
+                              let ak = 0;
+                              if (Xk === Fk.length - 1) ak = Rk.scrollHeight;
+                              else if (Xk > 0) {
+                                const kk = Rk.getBoundingClientRect(),
+                                  Fk = tk.getBoundingClientRect();
+                                ak = Rk.scrollTop + Fk.top + Fk.height / 2 - (kk.top + Rk.clientHeight / 2)
                               }
-                              Eu.scrollTo({
-                                top: Qu,
-                                behavior: Nu.current ? "smooth" : "auto"
-                              }), Nu.current = !0
-                            }), [mu, Ru.length]);
-                            const Xu = [];
-                            return Ru.forEach(((uu, Ru) => {
-                              var yu, Eu, Ku;
-                              const Qu = function(uu) {
-                                  const Ru = uu.trim().match(CQ);
-                                  return Ru ? {
-                                    day: Ru[1],
-                                    month: `${Ru[2]} ${Ru[3]}`
+                              Rk.scrollTo({
+                                top: ak,
+                                behavior: wk.current ? "smooth" : "auto"
+                              }), wk.current = !0
+                            }), [Xk, Fk.length]);
+                            const dk = [];
+                            return Fk.forEach(((kk, Fk) => {
+                              var Bk, Rk, tk;
+                              const ak = function(kk) {
+                                  const Fk = kk.trim().match(Oa);
+                                  return Fk ? {
+                                    day: Fk[1],
+                                    month: `${Fk[2]} ${Fk[3]}`
                                   } : null
-                                }(uu.text),
-                                mu = null !== (yu = null === Qu || void 0 === Qu ? void 0 : Qu.month) && void 0 !== yu ? yu : null;
-                              null !== mu && (null === (Eu = Xu.at(-1)) || void 0 === Eu ? void 0 : Eu.month) === mu || Xu.push({
-                                month: mu,
+                                }(kk.text),
+                                Xk = null !== (Bk = null === ak || void 0 === ak ? void 0 : ak.month) && void 0 !== Bk ? Bk : null;
+                              null !== Xk && (null === (Rk = dk.at(-1)) || void 0 === Rk ? void 0 : Rk.month) === Xk || dk.push({
+                                month: Xk,
                                 entries: []
-                              }), Xu.at(-1).entries.push({
-                                entry: uu,
-                                day: null !== (Ku = null === Qu || void 0 === Qu ? void 0 : Qu.day) && void 0 !== Ku ? Ku : null,
-                                index: Ru
+                              }), dk.at(-1).entries.push({
+                                entry: kk,
+                                day: null !== (tk = null === ak || void 0 === ak ? void 0 : ak.day) && void 0 !== tk ? tk : null,
+                                index: Fk
                               })
-                            })), (0, Su.jsx)("ol", {
-                              ref: Ju,
+                            })), (0, ek.jsx)("ol", {
+                              ref: bk,
                               className: "DocsTimeline",
-                              children: Xu.map((uu => {
+                              children: dk.map((kk => {
                                 let {
-                                  month: Ru,
-                                  entries: yu
-                                } = uu;
-                                return (0, Su.jsxs)("li", {
+                                  month: Fk,
+                                  entries: Bk
+                                } = kk;
+                                return (0, ek.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [Ru && (0, Su.jsx)("span", {
+                                  children: [Fk && (0, ek.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: Ru
-                                  }), (0, Su.jsx)("ol", {
-                                    children: yu.map((uu => {
+                                    children: Fk
+                                  }), (0, ek.jsx)("ol", {
+                                    children: Bk.map((kk => {
                                       let {
-                                        entry: Ru,
-                                        day: yu,
-                                        index: Eu
-                                      } = uu;
-                                      return (0, Su.jsx)("li", {
-                                        className: Qu()("DocsTimelineNotch", {
-                                          Passed: Eu < mu,
-                                          Active: Eu === mu
+                                        entry: Fk,
+                                        day: Bk,
+                                        index: Rk
+                                      } = kk;
+                                      return (0, ek.jsx)("li", {
+                                        className: ak()("DocsTimelineNotch", {
+                                          Passed: Rk < Xk,
+                                          Active: Rk === Xk
                                         }),
-                                        children: (0, Su.jsx)(kQ, {
-                                          entry: Ru,
-                                          isActive: Eu === mu,
-                                          onNavigate: Ku,
-                                          label: Ru.text,
-                                          children: (0, Su.jsx)("span", {
+                                        children: (0, ek.jsx)(Ea, {
+                                          entry: Fk,
+                                          isActive: Rk === Xk,
+                                          onNavigate: tk,
+                                          label: Fk.text,
+                                          children: (0, ek.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== yu && void 0 !== yu ? yu : Ru.text
+                                            children: null !== Bk && void 0 !== Bk ? Bk : Fk.text
                                           })
                                         })
-                                      }, Ru.anchor)
+                                      }, Fk.anchor)
                                     }))
                                   })]
-                                }, yu[0].entry.anchor)
+                                }, Bk[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function AQ(uu) {
+                          function Na(kk) {
                             let {
-                              isChangelog: Ru,
-                              toc: yu,
-                              activeAnchor: Eu,
-                              onNavigate: Ku
-                            } = uu;
-                            return 0 === yu.length ? null : (0, Su.jsxs)(Su.Fragment, {
-                              children: [(0, Su.jsx)("div", {
+                              isChangelog: Fk,
+                              toc: Bk,
+                              activeAnchor: Rk,
+                              onNavigate: tk
+                            } = kk;
+                            return 0 === Bk.length ? null : (0, ek.jsxs)(ek.Fragment, {
+                              children: [(0, ek.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: Ru ? "Updates" : "On this page"
-                              }), Ru ? (0, Su.jsx)(eQ, {
-                                toc: yu,
-                                activeAnchor: Eu,
-                                onNavigate: Ku
-                              }) : (0, Su.jsx)("ul", {
-                                children: yu.map((uu => (0, Su.jsx)("li", {
-                                  children: (0, Su.jsx)(kQ, {
-                                    entry: uu,
-                                    isActive: uu.anchor === Eu,
-                                    onNavigate: Ku,
-                                    children: uu.text.replace(/`/g, "")
+                                children: Fk ? "Updates" : "On this page"
+                              }), Fk ? (0, ek.jsx)(Sa, {
+                                toc: Bk,
+                                activeAnchor: Rk,
+                                onNavigate: tk
+                              }) : (0, ek.jsx)("ul", {
+                                children: Bk.map((kk => (0, ek.jsx)("li", {
+                                  children: (0, ek.jsx)(Ea, {
+                                    entry: kk,
+                                    isActive: kk.anchor === Rk,
+                                    onNavigate: tk,
+                                    children: kk.text.replace(/`/g, "")
                                   })
-                                }, uu.anchor)))
+                                }, kk.anchor)))
                               })]
                             })
                           }
-                          const DQ = {
+                          const Ha = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5200,7 +5200,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            MQ = {
+                            ua = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5208,1086 +5208,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            IQ = 20,
-                            GQ = 10,
-                            UQ = 40,
-                            nQ = 120;
-                          let sQ;
+                            Ma = 20,
+                            ga = 10,
+                            Ua = 40,
+                            ca = 120;
+                          let Ga;
 
-                          function tQ(uu) {
-                            const Ru = uu.gallery;
-                            if (!Ru) return [];
-                            if (Ty(Ru)) return function(uu) {
-                              return jy(uu).entries.map((uu => uu.name))
-                            }(Ru).map((yu => ({
-                              page: uu,
-                              anchor: ny(Ru, yu),
-                              title: yu,
-                              kind: MQ[Ru],
+                          function Ta(kk) {
+                            const Fk = kk.gallery;
+                            if (!Fk) return [];
+                            if (mB(Fk)) return function(kk) {
+                              return vB(kk).entries.map((kk => kk.name))
+                            }(Fk).map((Bk => ({
+                              page: kk,
+                              anchor: UB(Fk, Bk),
+                              title: Bk,
+                              kind: ua[Fk],
                               text: "",
-                              listedUnder: uu.title
+                              listedUnder: kk.title
                             })));
-                            const yu = Fu(uu);
-                            return (0, eu.p)(yu).flatMap((Eu => {
-                              const Ku = Eu.heading ? `${uu.title} \u203a ${Eu.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : uu.title;
-                              return ty(Ru, yu, Eu.blocks).flatMap((yu => "names" !== yu.kind ? [] : yu.names.map((Eu => {
-                                const Qu = yu.isSongs ? "Song" : MQ[Ru];
+                            const Bk = hk(kk);
+                            return (0, Ek.q)(Bk).flatMap((Rk => {
+                              const tk = Rk.heading ? `${kk.title} \u203a ${Rk.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : kk.title;
+                              return GB(Fk, Bk, Rk.blocks).flatMap((Bk => "names" !== Bk.kind ? [] : Bk.names.map((Rk => {
+                                const ak = Bk.isSongs ? "Song" : ua[Fk];
                                 return {
-                                  page: uu,
-                                  anchor: Eu.anchor,
-                                  title: Eu.name,
-                                  kind: Qu,
+                                  page: kk,
+                                  anchor: Rk.anchor,
+                                  title: Rk.name,
+                                  kind: ak,
                                   text: "",
-                                  listedUnder: Ku
+                                  listedUnder: tk
                                 }
                               }))))
                             }))
                           }
 
-                          function lQ(uu, Ru, yu) {
-                            const Eu = uu.title.toLowerCase();
-                            let Ku = 0;
-                            if (Eu === Ru) Ku = 100;
-                            else if (Eu.startsWith(Ru)) Ku = 80;
-                            else if (Eu.includes(Ru)) Ku = 60;
-                            else if (yu.every((uu => Eu.includes(uu)))) Ku = 45;
+                          function ra(kk, Fk, Bk) {
+                            const Rk = kk.title.toLowerCase();
+                            let tk = 0;
+                            if (Rk === Fk) tk = 100;
+                            else if (Rk.startsWith(Fk)) tk = 80;
+                            else if (Rk.includes(Fk)) tk = 60;
+                            else if (Bk.every((kk => Rk.includes(kk)))) tk = 45;
                             else {
-                              if (!uu.text.toLowerCase().includes(Ru)) return 0;
-                              Ku = 20
+                              if (!kk.text.toLowerCase().includes(Fk)) return 0;
+                              tk = 20
                             }
-                            return Ku - Math.min(Eu.length / 10, 9) + ("Page" === uu.kind ? 8 : "Method" === uu.kind ? 3 : 0) - (uu.listedUnder ? IQ : 0)
+                            return tk - Math.min(Rk.length / 10, 9) + ("Page" === kk.kind ? 8 : "Method" === kk.kind ? 3 : 0) - (kk.listedUnder ? Ma : 0)
                           }
 
-                          function gQ(uu, Ru) {
-                            const yu = uu.toLowerCase().indexOf(Ru),
-                              Eu = Math.max(0, yu - nQ / 3);
-                            return `${Eu>0?"\u2026":""}${uu.slice(Eu,Eu+nQ)}${Eu+nQ<uu.length?"\u2026":""}`
+                          function Da(kk, Fk) {
+                            const Bk = kk.toLowerCase().indexOf(Fk),
+                              Rk = Math.max(0, Bk - ca / 3);
+                            return `${Rk>0?"\u2026":""}${kk.slice(Rk,Rk+ca)}${Rk+ca<kk.length?"\u2026":""}`
                           }
 
-                          function cQ(uu) {
+                          function za(kk) {
                             let {
-                              text: Ru,
-                              query: yu
-                            } = uu;
-                            const Eu = yu ? Ru.toLowerCase().indexOf(yu) : -1;
-                            return -1 === Eu ? (0, Su.jsx)(Su.Fragment, {
-                              children: Ru
-                            }) : (0, Su.jsxs)(Su.Fragment, {
-                              children: [Ru.slice(0, Eu), (0, Su.jsx)("mark", {
-                                children: Ru.slice(Eu, Eu + yu.length)
-                              }), Ru.slice(Eu + yu.length)]
+                              text: Fk,
+                              query: Bk
+                            } = kk;
+                            const Rk = Bk ? Fk.toLowerCase().indexOf(Bk) : -1;
+                            return -1 === Rk ? (0, ek.jsx)(ek.Fragment, {
+                              children: Fk
+                            }) : (0, ek.jsxs)(ek.Fragment, {
+                              children: [Fk.slice(0, Rk), (0, ek.jsx)("mark", {
+                                children: Fk.slice(Rk, Rk + Bk.length)
+                              }), Fk.slice(Rk + Bk.length)]
                             })
                           }
 
-                          function LQ(uu) {
+                          function Pa(kk) {
                             let {
-                              basePath: Ru,
-                              onClose: yu
-                            } = uu;
-                            const Ku = (0, Ju.t)(),
-                              [mu, Nu] = (0, Eu.useState)(""),
-                              [Xu, Vu] = (0, Eu.useState)(0),
-                              ru = (0, Eu.useRef)(null),
-                              Bu = (0, Eu.useRef)(null),
-                              xu = mu.trim().toLowerCase(),
-                              pu = (0, Eu.useMemo)((() => {
-                                const uu = (sQ || (sQ = gu.flatMap((uu => {
-                                  const Ru = Fu(uu);
+                              basePath: Fk,
+                              onClose: Bk
+                            } = kk;
+                            const tk = (0, bk.u)(),
+                              [Xk, wk] = (0, Rk.useState)(""),
+                              [dk, sk] = (0, Rk.useState)(0),
+                              Vk = (0, Rk.useRef)(null),
+                              Jk = (0, Rk.useRef)(null),
+                              Ak = Xk.trim().toLowerCase(),
+                              yk = (0, Rk.useMemo)((() => {
+                                const kk = (Ga || (Ga = rk.flatMap((kk => {
+                                  const Fk = hk(kk);
                                   return [{
-                                    page: uu,
+                                    page: kk,
                                     anchor: "",
-                                    title: uu.title,
+                                    title: kk.title,
                                     kind: "Page",
-                                    text: uu.summary
-                                  }, ...Ru.sections.flatMap((Ru => {
-                                    const yu = Ru.blocks.filter((uu => "paragraph" === uu.kind)).map(eu.d).join(" ").replace(/[`*]/g, ""),
-                                      Eu = {
-                                        page: uu,
-                                        anchor: Ru.heading.anchor,
-                                        title: Ru.heading.text.replace(/`/g, ""),
-                                        kind: DQ[uu.layout],
-                                        text: yu
+                                    text: kk.summary
+                                  }, ...Fk.sections.flatMap((Fk => {
+                                    const Bk = Fk.blocks.filter((kk => "paragraph" === kk.kind)).map(Ek.e).join(" ").replace(/[`*]/g, ""),
+                                      Rk = {
+                                        page: kk,
+                                        anchor: Fk.heading.anchor,
+                                        title: Fk.heading.text.replace(/`/g, ""),
+                                        kind: Ha[kk.layout],
+                                        text: Bk
                                       },
-                                      Ku = Ru.blocks.flatMap((Ru => "article" === uu.layout && "heading" === Ru.kind && 3 === Ru.level ? [{
-                                        page: uu,
-                                        anchor: Ru.anchor,
-                                        title: Ru.text.replace(/`/g, ""),
+                                      tk = Fk.blocks.flatMap((Fk => "article" === kk.layout && "heading" === Fk.kind && 3 === Fk.level ? [{
+                                        page: kk,
+                                        anchor: Fk.anchor,
+                                        title: Fk.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: Eu.title
+                                        text: Rk.title
                                       }] : []));
-                                    return [Eu, ...Ku]
-                                  })), ...tQ(uu)]
-                                }))), sQ);
-                                if (!xu) return uu.filter((uu => "Page" === uu.kind));
-                                const Ru = xu.split(/\s+/);
-                                let yu = 0;
-                                return uu.map((uu => ({
-                                  entry: uu,
-                                  score: lQ(uu, xu, Ru)
-                                }))).filter((uu => uu.score > 0)).sort(((uu, Ru) => Ru.score - uu.score)).filter((uu => !uu.entry.listedUnder || (yu++, yu <= GQ))).slice(0, UQ).map((uu => uu.entry))
-                              }), [xu]);
-                            (0, Eu.useEffect)((() => {
-                              Vu(0)
-                            }), [xu]), (0, Eu.useEffect)((() => {
-                              const uu = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [Rk, ...tk]
+                                  })), ...Ta(kk)]
+                                }))), Ga);
+                                if (!Ak) return kk.filter((kk => "Page" === kk.kind));
+                                const Fk = Ak.split(/\s+/);
+                                let Bk = 0;
+                                return kk.map((kk => ({
+                                  entry: kk,
+                                  score: ra(kk, Ak, Fk)
+                                }))).filter((kk => kk.score > 0)).sort(((kk, Fk) => Fk.score - kk.score)).filter((kk => !kk.entry.listedUnder || (Bk++, Bk <= ga))).slice(0, Ua).map((kk => kk.entry))
+                              }), [Ak]);
+                            (0, Rk.useEffect)((() => {
+                              sk(0)
+                            }), [Ak]), (0, Rk.useEffect)((() => {
+                              const kk = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === uu || void 0 === uu || uu.focus()
+                                null === kk || void 0 === kk || kk.focus()
                               }
-                            }), []), (0, Eu.useEffect)((() => {
-                              var uu, Ru;
-                              null === (uu = ru.current) || void 0 === uu || null === (Ru = uu.querySelector(".Active")) || void 0 === Ru || Ru.scrollIntoView({
+                            }), []), (0, Rk.useEffect)((() => {
+                              var kk, Fk;
+                              null === (kk = Vk.current) || void 0 === kk || null === (Fk = kk.querySelector(".Active")) || void 0 === Fk || Fk.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [Xu]);
-                            const Wu = uu => {
-                              Ku(Pu(Ru, uu.page, uu.anchor)), yu()
+                            }), [dk]);
+                            const mk = kk => {
+                              tk(pk(Fk, kk.page, kk.anchor)), Bk()
                             };
-                            return (0, Su.jsx)("div", {
+                            return (0, ek.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: uu => {
-                                uu.target === uu.currentTarget && yu()
+                              onMouseDown: kk => {
+                                kk.target === kk.currentTarget && Bk()
                               },
-                              children: (0, Su.jsxs)("div", {
+                              children: (0, ek.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: uu => {
-                                  uu.target !== Bu.current && uu.preventDefault()
+                                onMouseDown: kk => {
+                                  kk.target !== Jk.current && kk.preventDefault()
                                 },
-                                onKeyDown: uu => {
-                                  if ("Escape" === uu.key) yu();
-                                  else if ("Tab" === uu.key) {
-                                    var Ru;
-                                    uu.preventDefault(), null === (Ru = Bu.current) || void 0 === Ru || Ru.focus()
+                                onKeyDown: kk => {
+                                  if ("Escape" === kk.key) Bk();
+                                  else if ("Tab" === kk.key) {
+                                    var Fk;
+                                    kk.preventDefault(), null === (Fk = Jk.current) || void 0 === Fk || Fk.focus()
                                   }
                                 },
-                                children: [(0, Su.jsxs)("div", {
+                                children: [(0, ek.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, Su.jsx)(Tu, {
+                                  children: [(0, ek.jsx)(fk, {
                                     name: "magnifying-glass"
-                                  }), (0, Su.jsx)("input", {
-                                    ref: Bu,
+                                  }), (0, ek.jsx)("input", {
+                                    ref: Jk,
                                     autoFocus: !0,
-                                    value: mu,
+                                    value: Xk,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": pu.length > 0 ? `DocsSearchResult-${Xu}` : void 0,
-                                    onChange: uu => {
-                                      Nu(uu.target.value)
+                                    "aria-activedescendant": yk.length > 0 ? `DocsSearchResult-${dk}` : void 0,
+                                    onChange: kk => {
+                                      wk(kk.target.value)
                                     },
-                                    onKeyDown: uu => {
-                                      if ("ArrowDown" === uu.key || "ArrowUp" === uu.key) {
-                                        uu.preventDefault();
-                                        const Ru = "ArrowDown" === uu.key ? 1 : -1;
-                                        Vu((Xu + Ru + pu.length) % Math.max(pu.length, 1))
-                                      } else "Enter" === uu.key && pu[Xu] && Wu(pu[Xu])
+                                    onKeyDown: kk => {
+                                      if ("ArrowDown" === kk.key || "ArrowUp" === kk.key) {
+                                        kk.preventDefault();
+                                        const Fk = "ArrowDown" === kk.key ? 1 : -1;
+                                        sk((dk + Fk + yk.length) % Math.max(yk.length, 1))
+                                      } else "Enter" === kk.key && yk[dk] && mk(yk[dk])
                                     }
-                                  }), (0, Su.jsx)("kbd", {
+                                  }), (0, ek.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, Su.jsxs)("ul", {
+                                }), (0, ek.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: ru,
+                                  ref: Vk,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!xu && (0, Su.jsx)("li", {
+                                  children: [!Ak && (0, ek.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), pu.map(((uu, Ru) => {
-                                    var yu;
-                                    return (0, Su.jsxs)("li", {
-                                      id: `DocsSearchResult-${Ru}`,
+                                  }), yk.map(((kk, Fk) => {
+                                    var Bk;
+                                    return (0, ek.jsxs)("li", {
+                                      id: `DocsSearchResult-${Fk}`,
                                       role: "option",
-                                      "aria-selected": Ru === Xu,
-                                      className: Qu()("DocsSearchResult", {
-                                        Active: Ru === Xu
+                                      "aria-selected": Fk === dk,
+                                      className: ak()("DocsSearchResult", {
+                                        Active: Fk === dk
                                       }),
                                       onMouseMove: () => {
-                                        Vu(Ru)
+                                        sk(Fk)
                                       },
                                       onClick: () => {
-                                        Wu(uu)
+                                        mk(kk)
                                       },
-                                      children: [(0, Su.jsx)(Tu, {
-                                        name: uu.page.icon
-                                      }), (0, Su.jsxs)("div", {
+                                      children: [(0, ek.jsx)(fk, {
+                                        name: kk.page.icon
+                                      }), (0, ek.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, Su.jsx)("div", {
+                                        children: [(0, ek.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, Su.jsx)(cQ, {
-                                            text: uu.title,
-                                            query: xu
+                                          children: (0, ek.jsx)(za, {
+                                            text: kk.title,
+                                            query: Ak
                                           })
-                                        }), uu.text && (0, Su.jsx)("div", {
+                                        }), kk.text && (0, ek.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, Su.jsx)(cQ, {
-                                            text: gQ(uu.text, xu),
-                                            query: xu
+                                          children: (0, ek.jsx)(za, {
+                                            text: Da(kk.text, Ak),
+                                            query: Ak
                                           })
                                         })]
-                                      }), (0, Su.jsx)("span", {
+                                      }), (0, ek.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === uu.kind ? "Page" : null !== (yu = uu.listedUnder) && void 0 !== yu ? yu : `${uu.kind} \xb7 ${uu.page.title}`
+                                        children: "Page" === kk.kind ? "Page" : null !== (Bk = kk.listedUnder) && void 0 !== Bk ? Bk : `${kk.kind} \xb7 ${kk.page.title}`
                                       })]
-                                    }, `${uu.page.id}#${uu.anchor}`)
-                                  })), xu && 0 === pu.length && (0, Su.jsxs)("li", {
+                                    }, `${kk.page.id}#${kk.anchor}`)
+                                  })), Ak && 0 === yk.length && (0, ek.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", mu, "\u201d."]
+                                    children: ["Nothing matches \u201c", Xk, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function zQ(uu, Ru) {
-                            if (Ru < 10) return `${uu.toFixed(1)}s`;
-                            const yu = Math.floor(uu);
-                            return `${Math.floor(yu/60)}:${String(yu%60).padStart(2,"0")}`
+                          function ha(kk, Fk) {
+                            if (Fk < 10) return `${kk.toFixed(1)}s`;
+                            const Bk = Math.floor(kk);
+                            return `${Math.floor(Bk/60)}:${String(Bk%60).padStart(2,"0")}`
                           }
 
-                          function FQ() {
-                            const uu = VE((uu => uu.track)),
-                              Ru = VE((uu => uu.volume)),
-                              [yu, Ku] = (0, Eu.useState)(0),
-                              mu = (0, Eu.useRef)(RE);
-                            if ((0, Eu.useEffect)((() => {
-                                if (!uu) return;
-                                if (Ku(SE()), "playing" !== uu.status) return;
-                                let Ru = 0;
-                                const yu = () => {
-                                  Ku(SE()), Ru = requestAnimationFrame(yu)
+                          function qa() {
+                            const kk = VR((kk => kk.track)),
+                              Fk = VR((kk => kk.volume)),
+                              [Bk, tk] = (0, Rk.useState)(0),
+                              Xk = (0, Rk.useRef)(BR);
+                            if ((0, Rk.useEffect)((() => {
+                                if (!kk) return;
+                                if (tk(yR()), "playing" !== kk.status) return;
+                                let Fk = 0;
+                                const Bk = () => {
+                                  tk(yR()), Fk = requestAnimationFrame(Bk)
                                 };
-                                return Ru = requestAnimationFrame(yu), () => {
-                                  cancelAnimationFrame(Ru)
+                                return Fk = requestAnimationFrame(Bk), () => {
+                                  cancelAnimationFrame(Fk)
                                 }
-                              }), [uu]), !uu) return null;
-                            const Ju = "paused" !== uu.status,
-                              Nu = Math.min(yu, uu.duration);
-                            return (0, Su.jsx)("div", {
+                              }), [kk]), !kk) return null;
+                            const bk = "paused" !== kk.status,
+                              wk = Math.min(Bk, kk.duration);
+                            return (0, ek.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, Su.jsxs)("section", {
+                              children: (0, ek.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, Su.jsx)("button", {
+                                children: [(0, ek.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": Ju ? `Pause ${uu.name}` : `Play ${uu.name}`,
-                                  onClick: xE,
-                                  children: (0, Su.jsx)(Tu, {
-                                    name: Ju ? "pause" : "play"
+                                  "aria-label": bk ? `Pause ${kk.name}` : `Play ${kk.name}`,
+                                  onClick: eR,
+                                  children: (0, ek.jsx)(fk, {
+                                    name: bk ? "pause" : "play"
                                   })
-                                }), (0, Su.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, Su.jsxs)("div", {
+                                  children: [(0, ek.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, Su.jsx)("code", {
-                                      children: uu.name
-                                    }), (0, Su.jsx)("span", {
-                                      children: uu.isSong ? "Song" : "Sound"
+                                    children: [(0, ek.jsx)("code", {
+                                      children: kk.name
+                                    }), (0, ek.jsx)("span", {
+                                      children: kk.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, Su.jsxs)("div", {
+                                  }), (0, ek.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, Su.jsx)("span", {
-                                      children: zQ(Nu, uu.duration)
-                                    }), (0, Su.jsx)("input", {
+                                    children: [(0, ek.jsx)("span", {
+                                      children: ha(wk, kk.duration)
+                                    }), (0, ek.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: uu.duration || 1,
+                                      max: kk.duration || 1,
                                       step: .01,
-                                      value: Nu,
-                                      disabled: 0 === uu.duration,
+                                      value: wk,
+                                      disabled: 0 === kk.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${zQ(Nu,uu.duration)} of ${zQ(uu.duration,uu.duration)}`,
-                                      onChange: uu => {
-                                        const Ru = Number(uu.target.value);
-                                        ! function(uu) {
-                                          var Ru;
-                                          mE = uu, null === (Ru = KE) || void 0 === Ru || Ru.seek(uu)
-                                        }(Ru), Ku(Ru)
+                                      "aria-valuetext": `${ha(wk,kk.duration)} of ${ha(kk.duration,kk.duration)}`,
+                                      onChange: kk => {
+                                        const Fk = Number(kk.target.value);
+                                        ! function(kk) {
+                                          var Fk;
+                                          bR = kk, null === (Fk = aR) || void 0 === Fk || Fk.seek(kk)
+                                        }(Fk), tk(Fk)
                                       }
-                                    }), (0, Su.jsx)("span", {
-                                      children: uu.duration > 0 ? zQ(uu.duration, uu.duration) : "\u2013"
+                                    }), (0, ek.jsx)("span", {
+                                      children: kk.duration > 0 ? ha(kk.duration, kk.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, Su.jsxs)("div", {
+                                }), (0, ek.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, Su.jsx)("button", {
+                                  children: [(0, ek.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === Ru ? "Unmute" : "Mute",
+                                    "aria-label": 0 === Fk ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === Ru ? pE(mu.current) : (mu.current = Ru, pE(0))
+                                      0 === Fk ? fR(Xk.current) : (Xk.current = Fk, fR(0))
                                     },
-                                    children: (0, Su.jsx)(Tu, {
+                                    children: (0, ek.jsx)(fk, {
                                       name: "volume",
-                                      className: Qu()({
-                                        Muted: 0 === Ru
+                                      className: ak()({
+                                        Muted: 0 === Fk
                                       })
                                     })
-                                  }), (0, Su.jsx)("input", {
+                                  }), (0, ek.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: Ru,
+                                    value: Fk,
                                     "aria-label": "Volume",
-                                    onChange: uu => {
-                                      pE(Number(uu.target.value))
+                                    onChange: kk => {
+                                      fR(Number(kk.target.value))
                                     }
                                   })]
-                                }), (0, Su.jsx)("button", {
+                                }), (0, ek.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var Ru;
-                                    null === (Ru = document.querySelector(`[data-docs-track="${CSS.escape(yE(uu.name,uu.isSong))}"]`)) || void 0 === Ru || Ru.focus(), TE()
+                                    var Fk;
+                                    null === (Fk = document.querySelector(`[data-docs-track="${CSS.escape(RR(kk.name,kk.isSong))}"]`)) || void 0 === Fk || Fk.focus(), mR()
                                   },
-                                  children: (0, Su.jsx)(Tu, {
+                                  children: (0, ek.jsx)(fk, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var wQ = yu(47);
-                          const ZQ = "docsTheme",
-                            hQ = window.matchMedia("(prefers-color-scheme: light)");
+                          var Ca = Bk(42);
+                          const Za = "docsTheme",
+                            pa = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function PQ(uu) {
+                          function Ka(kk) {
                             let {
-                              theme: Ru,
-                              onChange: yu
-                            } = uu;
-                            const Eu = "dark" === Ru ? "light" : "dark";
-                            return (0, Su.jsx)("button", {
+                              theme: Fk,
+                              onChange: Bk
+                            } = kk;
+                            const Rk = "dark" === Fk ? "light" : "dark";
+                            return (0, ek.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${Eu} theme`,
-                              title: `Switch to ${Eu} theme`,
+                              "aria-label": `Switch to ${Rk} theme`,
+                              title: `Switch to ${Rk} theme`,
                               onClick: () => {
-                                yu(Eu)
+                                Bk(Rk)
                               },
-                              children: (0, Su.jsx)(Tu, {
-                                name: "dark" === Ru ? "moon" : "sun"
+                              children: (0, ek.jsx)(fk, {
+                                name: "dark" === Fk ? "moon" : "sun"
                               })
                             })
                           }
-                          const iQ = "https://github.com/Bloxdy/code-api",
-                            YQ = "https://discord.gg/playbloxd",
-                            oQ = 180,
-                            qQ = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const xa = "https://github.com/Bloxdy/code-api",
+                            ja = "https://discord.gg/playbloxd",
+                            la = 180,
+                            na = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function OQ(uu) {
+                          function Ia(kk) {
                             let {
-                              basePath: Ru,
-                              activePageId: yu,
-                              onNavigate: Eu
-                            } = uu;
-                            return (0, Su.jsx)("nav", {
+                              basePath: Fk,
+                              activePageId: Bk,
+                              onNavigate: Rk
+                            } = kk;
+                            return (0, ek.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: cu.map((uu => (0, Su.jsxs)("div", {
+                              children: Dk.map((kk => (0, ek.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, Su.jsx)("div", {
+                                children: [(0, ek.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: uu.title
-                                }), uu.pageIds.map((uu => {
-                                  var Ku;
-                                  const Ju = Lu(uu);
-                                  return (0, Su.jsxs)(mu.c, {
-                                    to: Pu(Ru, Ju),
-                                    className: Qu()("DocsNavLink", {
-                                      Active: Ju.id === yu
+                                  children: kk.title
+                                }), kk.pageIds.map((kk => {
+                                  var tk;
+                                  const bk = zk(kk);
+                                  return (0, ek.jsxs)(Xk.b, {
+                                    to: pk(Fk, bk),
+                                    className: ak()("DocsNavLink", {
+                                      Active: bk.id === Bk
                                     }),
-                                    "aria-current": Ju.id === yu ? "page" : void 0,
-                                    onClick: Eu,
-                                    children: [(0, Su.jsx)(Tu, {
-                                      name: Ju.icon
-                                    }), (0, Su.jsx)("span", {
-                                      children: null !== (Ku = Ju.navTitle) && void 0 !== Ku ? Ku : Ju.title
+                                    "aria-current": bk.id === Bk ? "page" : void 0,
+                                    onClick: Rk,
+                                    children: [(0, ek.jsx)(fk, {
+                                      name: bk.icon
+                                    }), (0, ek.jsx)("span", {
+                                      children: null !== (tk = bk.navTitle) && void 0 !== tk ? tk : bk.title
                                     })]
-                                  }, Ju.id)
+                                  }, bk.id)
                                 }))]
-                              }, uu.title)))
+                              }, kk.title)))
                             })
                           }
 
-                          function vQ(uu) {
+                          function Qa(kk) {
                             let {
-                              basePath: Ru,
-                              pageId: yu
-                            } = uu;
-                            const Eu = cu.flatMap((uu => uu.pageIds)),
-                              Ku = Eu.indexOf(yu),
-                              Qu = Ku > 0 ? Lu(Eu[Ku - 1]) : null,
-                              Ju = Ku < Eu.length - 1 ? Lu(Eu[Ku + 1]) : null;
-                            return (0, Su.jsxs)("nav", {
+                              basePath: Fk,
+                              pageId: Bk
+                            } = kk;
+                            const Rk = Dk.flatMap((kk => kk.pageIds)),
+                              tk = Rk.indexOf(Bk),
+                              ak = tk > 0 ? zk(Rk[tk - 1]) : null,
+                              bk = tk < Rk.length - 1 ? zk(Rk[tk + 1]) : null;
+                            return (0, ek.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [Qu ? (0, Su.jsxs)(mu.c, {
+                              children: [ak ? (0, ek.jsxs)(Xk.b, {
                                 className: "DocsPagerLink Previous",
-                                to: Pu(Ru, Qu),
-                                children: [(0, Su.jsx)("span", {
+                                to: pk(Fk, ak),
+                                children: [(0, ek.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, Su.jsx)("span", {
+                                }), (0, ek.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: Qu.title
+                                  children: ak.title
                                 })]
-                              }) : (0, Su.jsx)("span", {}), Ju && (0, Su.jsxs)(mu.c, {
+                              }) : (0, ek.jsx)("span", {}), bk && (0, ek.jsxs)(Xk.b, {
                                 className: "DocsPagerLink Next",
-                                to: Pu(Ru, Ju),
-                                children: [(0, Su.jsx)("span", {
+                                to: pk(Fk, bk),
+                                children: [(0, ek.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, Su.jsx)("span", {
+                                }), (0, ek.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: Ju.title
+                                  children: bk.title
                                 })]
                               })]
                             })
                           }
 
-                          function aQ(uu) {
+                          function kX(kk) {
                             let {
-                              basePath: Ru,
-                              embedded: yu = !1
-                            } = uu;
+                              basePath: Fk,
+                              embedded: Bk = !1
+                            } = kk;
                             const {
-                              pageSlug: Ku = ""
-                            } = (0, Ju.A)(), Xu = (0, Ju.s)(), Vu = (0, Ju.t)(), ru = (Bu = Ku, gu.find((uu => uu.slug === Bu)));
-                            var Bu;
-                            const [xu, pu] = function() {
-                              const [uu, Ru] = (0, Eu.useState)((() => {
-                                const uu = wQ.i.getItem(ZQ);
-                                return "dark" === uu || "light" === uu ? uu : null
-                              })), [yu, Ku] = (0, Eu.useState)(hQ.matches ? "light" : "dark");
-                              return (0, Eu.useEffect)((() => {
-                                const uu = () => {
-                                  Ku(hQ.matches ? "light" : "dark")
+                              pageSlug: tk = ""
+                            } = (0, bk.x)(), dk = (0, bk.s)(), sk = (0, bk.u)(), Vk = (Jk = tk, rk.find((kk => kk.slug === Jk)));
+                            var Jk;
+                            const [Ak, yk] = function() {
+                              const [kk, Fk] = (0, Rk.useState)((() => {
+                                const kk = Ca.i.getItem(Za);
+                                return "dark" === kk || "light" === kk ? kk : null
+                              })), [Bk, tk] = (0, Rk.useState)(pa.matches ? "light" : "dark");
+                              return (0, Rk.useEffect)((() => {
+                                const kk = () => {
+                                  tk(pa.matches ? "light" : "dark")
                                 };
-                                return hQ.addEventListener("change", uu), () => {
-                                  hQ.removeEventListener("change", uu)
+                                return pa.addEventListener("change", kk), () => {
+                                  pa.removeEventListener("change", kk)
                                 }
-                              }), []), [null !== uu && void 0 !== uu ? uu : yu, uu => {
-                                wQ.i.setItem(ZQ, uu), Ru(uu)
+                              }), []), [null !== kk && void 0 !== kk ? kk : Bk, kk => {
+                                Ca.i.setItem(Za, kk), Fk(kk)
                               }]
-                            }(), [Wu, ju] = (0, Eu.useState)(null), [Hu, du] = (0, Eu.useState)(!1), [bu, Cu] = (0, Eu.useState)(!1), [ku, Au] = (0, Eu.useState)([]), Du = function(uu, Ru) {
-                              const [yu, Ku] = (0, Eu.useState)("");
-                              return (0, Eu.useEffect)((() => {
-                                if (!Ru) return;
-                                let yu = 0;
-                                const Eu = () => {
-                                    var Eu, Qu;
-                                    yu = 0;
-                                    const mu = Ru.getBoundingClientRect().top + oQ;
-                                    let Ju = null !== (Eu = null === (Qu = uu[0]) || void 0 === Qu ? void 0 : Qu.anchor) && void 0 !== Eu ? Eu : "";
-                                    for (const Ru of uu) {
-                                      const uu = document.getElementById(Ru.anchor);
-                                      uu && uu.getBoundingClientRect().top <= mu && (Ju = Ru.anchor)
+                            }(), [mk, Wk] = (0, Rk.useState)(null), [vk, ik] = (0, Rk.useState)(!1), [Yk, Lk] = (0, Rk.useState)(!1), [Ok, Sk] = (0, Rk.useState)([]), Nk = function(kk, Fk) {
+                              const [Bk, tk] = (0, Rk.useState)("");
+                              return (0, Rk.useEffect)((() => {
+                                if (!Fk) return;
+                                let Bk = 0;
+                                const Rk = () => {
+                                    var Rk, ak;
+                                    Bk = 0;
+                                    const Xk = Fk.getBoundingClientRect().top + la;
+                                    let bk = null !== (Rk = null === (ak = kk[0]) || void 0 === ak ? void 0 : ak.anchor) && void 0 !== Rk ? Rk : "";
+                                    for (const Fk of kk) {
+                                      const kk = document.getElementById(Fk.anchor);
+                                      kk && kk.getBoundingClientRect().top <= Xk && (bk = Fk.anchor)
                                     }
-                                    Ru.scrollTop + Ru.clientHeight >= Ru.scrollHeight - 2 && Ru.scrollTop > 0 && uu.length > 0 && (Ju = uu[uu.length - 1].anchor), Ku(Ju)
+                                    Fk.scrollTop + Fk.clientHeight >= Fk.scrollHeight - 2 && Fk.scrollTop > 0 && kk.length > 0 && (bk = kk[kk.length - 1].anchor), tk(bk)
                                   },
-                                  Qu = () => {
-                                    yu || (yu = requestAnimationFrame(Eu))
+                                  ak = () => {
+                                    Bk || (Bk = requestAnimationFrame(Rk))
                                   };
-                                return Eu(), Ru.addEventListener("scroll", Qu, {
+                                return Rk(), Fk.addEventListener("scroll", ak, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(yu), Ru.removeEventListener("scroll", Qu)
+                                  cancelAnimationFrame(Bk), Fk.removeEventListener("scroll", ak)
                                 }
-                              }), [uu, Ru]), yu
-                            }(ku, Wu), Mu = "" === Ku && Xu.hash ? function(uu) {
-                              const Ru = (0, eu.i)(uu);
-                              if (wu(Lu("welcome"), Ru)) return null;
-                              const yu = Object.hasOwn(hu, Ru) ? hu[Ru] : null;
-                              if (yu) return {
-                                page: Lu(yu.pageId),
-                                anchor: yu.anchor
+                              }), [kk, Fk]), Bk
+                            }(Ok, mk), Hk = "" === tk && dk.hash ? function(kk) {
+                              const Fk = (0, Ek.k)(kk);
+                              if (qk(zk("welcome"), Fk)) return null;
+                              const Bk = Object.hasOwn(Zk, Fk) ? Zk[Fk] : null;
+                              if (Bk) return {
+                                page: zk(Bk.pageId),
+                                anchor: Bk.anchor
                               };
-                              const Eu = Lu("readme");
-                              return wu(Eu, Ru) ? {
-                                page: Eu,
-                                anchor: Ru
-                              } : Zu(`#${Ru}`)
-                            }(Xu.hash) : null;
-                            (0, Eu.useEffect)((() => (Nu.d.set({
+                              const Rk = zk("readme");
+                              return qk(Rk, Fk) ? {
+                                page: Rk,
+                                anchor: Fk
+                              } : Ck(`#${Fk}`)
+                            }(dk.hash) : null;
+                            (0, Rk.useEffect)((() => (wk.c.set({
                               musicOnFromPage: !1
                             }), () => {
-                              Nu.d.set({
+                              wk.c.set({
                                 musicOnFromPage: !0
-                              }), TE()
-                            })), []), (0, Eu.useEffect)((() => {
-                              const uu = uu => {
-                                const Ru = uu.target;
-                                if (Ru.closest(".DocsTextDialog")) return;
-                                const yu = Ru.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Ru.tagName);
-                                "k" === uu.key && (uu.metaKey || uu.ctrlKey) || "/" === uu.key && !yu ? (uu.preventDefault(), Cu(!0)) : "Escape" === uu.key && du(!1)
+                              }), mR()
+                            })), []), (0, Rk.useEffect)((() => {
+                              const kk = kk => {
+                                const Fk = kk.target;
+                                if (Fk.closest(".DocsTextDialog")) return;
+                                const Bk = Fk.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Fk.tagName);
+                                "k" === kk.key && (kk.metaKey || kk.ctrlKey) || "/" === kk.key && !Bk ? (kk.preventDefault(), Lk(!0)) : "Escape" === kk.key && ik(!1)
                               };
-                              return window.addEventListener("keydown", uu), () => {
-                                window.removeEventListener("keydown", uu)
+                              return window.addEventListener("keydown", kk), () => {
+                                window.removeEventListener("keydown", kk)
                               }
                             }), []);
-                            const Iu = (0, Eu.useRef)(null);
-                            (0, Eu.useLayoutEffect)((() => {
-                              var uu, Ru;
-                              if (!Wu) return;
-                              const yu = Iu.current === Xu.pathname;
-                              Iu.current = Xu.pathname;
-                              const Eu = (0, eu.i)(Xu.hash),
-                                Ku = Eu ? document.getElementById(Eu) : null;
-                              if (null === (uu = Wu.querySelector(".DocsTargeted")) || void 0 === uu || uu.classList.remove("DocsTargeted"), null === Ku || void 0 === Ku || null === (Ru = Ku.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Ru || Ru.classList.add("DocsTargeted"), Ku) {
-                                var Qu;
-                                const uu = Ku.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (Qu = Ku.closest(".DocsChangelogEntry")) && void 0 !== Qu ? Qu : Ku).scrollIntoView({
-                                  block: uu ? "center" : "start",
-                                  behavior: yu ? "smooth" : "auto"
+                            const uk = (0, Rk.useRef)(null);
+                            (0, Rk.useLayoutEffect)((() => {
+                              var kk, Fk;
+                              if (!mk) return;
+                              const Bk = uk.current === dk.pathname;
+                              uk.current = dk.pathname;
+                              const Rk = (0, Ek.k)(dk.hash),
+                                tk = Rk ? document.getElementById(Rk) : null;
+                              if (null === (kk = mk.querySelector(".DocsTargeted")) || void 0 === kk || kk.classList.remove("DocsTargeted"), null === tk || void 0 === tk || null === (Fk = tk.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Fk || Fk.classList.add("DocsTargeted"), tk) {
+                                var ak;
+                                const kk = tk.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (ak = tk.closest(".DocsChangelogEntry")) && void 0 !== ak ? ak : tk).scrollIntoView({
+                                  block: kk ? "center" : "start",
+                                  behavior: Bk ? "smooth" : "auto"
                                 })
-                              } else yu || Wu.scrollTo({
+                              } else Bk || mk.scrollTo({
                                 top: 0
                               })
-                            }), [Wu, Xu.pathname, Xu.hash, Xu.key]);
-                            const Gu = (0, Eu.useCallback)((() => {
-                                du(!1)
+                            }), [mk, dk.pathname, dk.hash, dk.key]);
+                            const Mk = (0, Rk.useCallback)((() => {
+                                ik(!1)
                               }), []),
-                              Uu = (0, Eu.useCallback)((uu => {
-                                Vu({
-                                  hash: uu
+                              gk = (0, Rk.useCallback)((kk => {
+                                sk({
+                                  hash: kk
                                 })
-                              }), [Vu]);
-                            if (Mu) return (0, Su.jsx)(Ju.d, {
+                              }), [sk]);
+                            if (Hk) return (0, ek.jsx)(bk.d, {
                               replace: !0,
-                              to: Pu(Ru, Mu.page, Mu.anchor)
+                              to: pk(Fk, Hk.page, Hk.anchor)
                             });
-                            if (!ru) return (0, Su.jsx)(Ju.d, {
+                            if (!Vk) return (0, ek.jsx)(bk.d, {
                               replace: !0,
-                              to: Ru
+                              to: Fk
                             });
-                            const nu = yu ? "div" : "main";
-                            return (0, Su.jsx)(xR.Provider, {
-                              value: Ru,
-                              children: (0, Su.jsx)(SR.Provider, {
-                                value: Wu,
-                                children: (0, Su.jsxs)("div", {
-                                  ref: ju,
-                                  className: Qu()("DocsSite", {
-                                    Embedded: yu,
-                                    NavOpen: Hu
+                            const Uk = Bk ? "div" : "main";
+                            return (0, ek.jsx)(eF.Provider, {
+                              value: Fk,
+                              children: (0, ek.jsx)(yF.Provider, {
+                                value: mk,
+                                children: (0, ek.jsxs)("div", {
+                                  ref: Wk,
+                                  className: ak()("DocsSite", {
+                                    Embedded: Bk,
+                                    NavOpen: vk
                                   }),
-                                  "data-theme": xu,
-                                  children: [(0, Su.jsxs)("header", {
+                                  "data-theme": Ak,
+                                  children: [(0, ek.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, Su.jsx)("button", {
+                                    children: [(0, ek.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": Hu ? "Close menu" : "Open menu",
-                                      "aria-expanded": Hu,
+                                      "aria-label": vk ? "Close menu" : "Open menu",
+                                      "aria-expanded": vk,
                                       onClick: () => {
-                                        du(!Hu)
+                                        ik(!vk)
                                       },
-                                      children: (0, Su.jsx)(Tu, {
-                                        name: Hu ? "cross" : "menu"
+                                      children: (0, ek.jsx)(fk, {
+                                        name: vk ? "cross" : "menu"
                                       })
-                                    }), (0, Su.jsxs)(mu.c, {
-                                      to: Ru,
+                                    }), (0, ek.jsxs)(Xk.b, {
+                                      to: Fk,
                                       className: "DocsBrand",
-                                      children: [(0, Su.jsx)("img", {
+                                      children: [(0, ek.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, Su.jsx)("span", {
+                                      }), (0, ek.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, Su.jsx)("span", {
+                                      }), (0, ek.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, Su.jsxs)("button", {
+                                    }), (0, ek.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        Cu(!0)
+                                        Lk(!0)
                                       },
-                                      children: [(0, Su.jsx)(Tu, {
+                                      children: [(0, ek.jsx)(fk, {
                                         name: "magnifying-glass"
-                                      }), (0, Su.jsx)("span", {
+                                      }), (0, ek.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, Su.jsxs)("kbd", {
-                                        children: [qQ ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, ek.jsxs)("kbd", {
+                                        children: [na ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, Su.jsxs)("div", {
+                                    }), (0, ek.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, Su.jsxs)("a", {
-                                        href: YQ,
+                                      children: [(0, ek.jsxs)("a", {
+                                        href: ja,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, Su.jsx)(Tu, {
+                                        children: [(0, ek.jsx)(fk, {
                                           name: "discord"
-                                        }), (0, Su.jsx)("span", {
+                                        }), (0, ek.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, Su.jsxs)("a", {
-                                        href: iQ,
+                                      }), (0, ek.jsxs)("a", {
+                                        href: xa,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, Su.jsx)(Tu, {
+                                        children: [(0, ek.jsx)(fk, {
                                           name: "external-link"
-                                        }), (0, Su.jsx)("span", {
+                                        }), (0, ek.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !yu && (0, Su.jsxs)(mu.c, {
+                                      }), !Bk && (0, ek.jsxs)(Xk.b, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, Su.jsx)(Tu, {
+                                        children: [(0, ek.jsx)(fk, {
                                           name: "play"
-                                        }), (0, Su.jsx)("span", {
+                                        }), (0, ek.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, Su.jsx)(PQ, {
-                                        theme: xu,
-                                        onChange: pu
+                                      }), (0, ek.jsx)(Ka, {
+                                        theme: Ak,
+                                        onChange: yk
                                       })]
                                     })]
-                                  }), (0, Su.jsxs)("div", {
+                                  }), (0, ek.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, Su.jsx)("aside", {
+                                    children: [(0, ek.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, Su.jsx)(OQ, {
-                                        basePath: Ru,
-                                        activePageId: ru.id,
-                                        onNavigate: Gu
+                                      children: (0, ek.jsx)(Ia, {
+                                        basePath: Fk,
+                                        activePageId: Vk.id,
+                                        onNavigate: Mk
                                       })
-                                    }), (0, Su.jsx)("div", {
+                                    }), (0, ek.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: Gu
-                                    }), (0, Su.jsxs)(nu, {
+                                      onClick: Mk
+                                    }), (0, ek.jsxs)(Uk, {
                                       className: "DocsMain",
-                                      children: [(0, Su.jsx)(bQ, {
-                                        page: ru,
-                                        onTocChange: Au
-                                      }, ru.id), (0, Su.jsx)(vQ, {
-                                        basePath: Ru,
-                                        pageId: ru.id
+                                      children: [(0, ek.jsx)(La, {
+                                        page: Vk,
+                                        onTocChange: Sk
+                                      }, Vk.id), (0, ek.jsx)(Qa, {
+                                        basePath: Fk,
+                                        pageId: Vk.id
                                       })]
-                                    }), (0, Su.jsx)("aside", {
-                                      className: Qu()("DocsToc", {
-                                        Timeline: "changelog" === ru.layout
+                                    }), (0, ek.jsx)("aside", {
+                                      className: ak()("DocsToc", {
+                                        Timeline: "changelog" === Vk.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, Su.jsx)(AQ, {
-                                        isChangelog: "changelog" === ru.layout,
-                                        toc: ku,
-                                        activeAnchor: Du,
-                                        onNavigate: Uu
+                                      children: (0, ek.jsx)(Na, {
+                                        isChangelog: "changelog" === Vk.layout,
+                                        toc: Ok,
+                                        activeAnchor: Nk,
+                                        onNavigate: gk
                                       })
                                     })]
-                                  }), (0, Su.jsx)(FQ, {}), bu && (0, Su.jsx)(LQ, {
-                                    basePath: Ru,
+                                  }), (0, ek.jsx)(qa, {}), Yk && (0, ek.jsx)(Pa, {
+                                    basePath: Fk,
                                     onClose: () => {
-                                      Cu(!1)
+                                      Lk(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4511: (uu, Ru, yu) => {
-                          yu.d(Ru, {
-                            b: () => Eu,
-                            c: () => mu,
-                            d: () => Tu,
-                            e: () => pu,
-                            h: () => Ju,
-                            i: () => Ku,
-                            l: () => Qu,
-                            p: () => Su,
-                            s: () => xu,
-                            v: () => Bu
+                        }, 4460: (kk, Fk, Bk) => {
+                          Bk.d(Fk, {
+                            b: () => Rk,
+                            d: () => Xk,
+                            e: () => fk,
+                            g: () => yk,
+                            h: () => bk,
+                            k: () => tk,
+                            m: () => ak,
+                            q: () => ek,
+                            r: () => Ak,
+                            s: () => Jk
                           });
-                          const Eu = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const Rk = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function Ku(uu) {
+                          function tk(kk) {
                             try {
-                              return decodeURIComponent(uu.slice(1))
+                              return decodeURIComponent(kk.slice(1))
                             } catch {
-                              return uu.slice(1)
+                              return kk.slice(1)
                             }
                           }
 
-                          function Qu(uu) {
-                            return uu.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function ak(kk) {
+                            return kk.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const mu = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Eu.source}`, "g");
+                          const Xk = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Rk.source}`, "g");
 
-                          function Ju(uu, Ru) {
-                            return 2 === uu.length ? Ru.replace(/^ (.*) $/, "$1") : Ru
-                          }
-
-                          function Nu(uu) {
-                            return "" === uu.trim()
+                          function bk(kk, Fk) {
+                            return 2 === kk.length ? Fk.replace(/^ (.*) $/, "$1") : Fk
                           }
 
-                          function Xu(uu) {
-                            const Ru = [];
-                            for (const yu of uu.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Ru.length > 0 && Ru[Ru.length - 1].endsWith("\\") ? Ru[Ru.length - 1] += `|${yu}` : Ru.push(yu);
-                            return Ru.map((uu => uu.trim().replaceAll("\\|", "|")))
+                          function wk(kk) {
+                            return "" === kk.trim()
                           }
-                          const Vu = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function ru(uu) {
-                            const Ru = [],
-                              yu = [{
+                          function dk(kk) {
+                            const Fk = [];
+                            for (const Bk of kk.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Fk.length > 0 && Fk[Fk.length - 1].endsWith("\\") ? Fk[Fk.length - 1] += `|${Bk}` : Fk.push(Bk);
+                            return Fk.map((kk => kk.trim().replaceAll("\\|", "|")))
+                          }
+                          const sk = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function Vk(kk) {
+                            const Fk = [],
+                              Bk = [{
                                 indent: -1,
-                                items: Ru
+                                items: Fk
                               }];
-                            let Eu = null;
-                            for (const Ku of uu) {
-                              const uu = Ku.match(Vu);
-                              if (!uu) {
-                                Eu && (Eu.text += ` ${Ku.trim()}`);
+                            let Rk = null;
+                            for (const tk of kk) {
+                              const kk = tk.match(sk);
+                              if (!kk) {
+                                Rk && (Rk.text += ` ${tk.trim()}`);
                                 continue
                               }
-                              const Ru = uu[1].replace(/\t/g, "  ").length;
-                              for (; Ru <= yu[yu.length - 1].indent;) yu.pop();
-                              Eu = {
-                                text: uu[3].trim(),
+                              const Fk = kk[1].replace(/\t/g, "  ").length;
+                              for (; Fk <= Bk[Bk.length - 1].indent;) Bk.pop();
+                              Rk = {
+                                text: kk[3].trim(),
                                 children: []
-                              }, yu[yu.length - 1].items.push(Eu), yu.push({
-                                indent: Ru,
-                                items: Eu.children
+                              }, Bk[Bk.length - 1].items.push(Rk), Bk.push({
+                                indent: Fk,
+                                items: Rk.children
                               })
                             }
-                            return Ru
+                            return Fk
                           }
 
-                          function Bu(uu) {
-                            const Ru = uu.replace(/\r\n/g, "\n").split("\n"),
-                              yu = [];
-                            let Eu = 0;
-                            for (; Eu < Ru.length;) {
-                              const uu = Ru[Eu];
-                              if (Nu(uu)) {
-                                Eu++;
+                          function Jk(kk) {
+                            const Fk = kk.replace(/\r\n/g, "\n").split("\n"),
+                              Bk = [];
+                            let Rk = 0;
+                            for (; Rk < Fk.length;) {
+                              const kk = Fk[Rk];
+                              if (wk(kk)) {
+                                Rk++;
                                 continue
                               }
-                              const Ku = uu.match(/^\s*```\s*(\w*)\s*$/);
-                              if (Ku) {
-                                const uu = [];
-                                for (Eu++; Eu < Ru.length && !/^\s*```\s*$/.test(Ru[Eu]);) uu.push(Ru[Eu]), Eu++;
-                                Eu++, yu.push({
+                              const tk = kk.match(/^\s*```\s*(\w*)\s*$/);
+                              if (tk) {
+                                const kk = [];
+                                for (Rk++; Rk < Fk.length && !/^\s*```\s*$/.test(Fk[Rk]);) kk.push(Fk[Rk]), Rk++;
+                                Rk++, Bk.push({
                                   kind: "code",
-                                  lang: Ku[1] || "text",
-                                  code: uu.join("\n").replace(/\s+$/, "")
+                                  lang: tk[1] || "text",
+                                  code: kk.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const mu = uu.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (mu) {
-                                const uu = mu[2].trim();
-                                yu.push({
+                              const Xk = kk.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (Xk) {
+                                const kk = Xk[2].trim();
+                                Bk.push({
                                   kind: "heading",
-                                  level: mu[1].length,
-                                  text: uu,
-                                  anchor: Qu(uu)
-                                }), Eu++;
+                                  level: Xk[1].length,
+                                  text: kk,
+                                  anchor: ak(kk)
+                                }), Rk++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(uu)) {
-                                yu.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(kk)) {
+                                Bk.push({
                                   kind: "rule"
-                                }), Eu++;
+                                }), Rk++;
                                 continue
                               }
-                              if (uu.trim().startsWith("|") && Eu + 1 < Ru.length && /^\s*\|[\s:|-]+\|\s*$/.test(Ru[Eu + 1])) {
-                                const Ku = Xu(uu),
-                                  Qu = [];
-                                for (Eu += 2; Eu < Ru.length && Ru[Eu].trim().startsWith("|");) Qu.push(Xu(Ru[Eu])), Eu++;
-                                yu.push({
+                              if (kk.trim().startsWith("|") && Rk + 1 < Fk.length && /^\s*\|[\s:|-]+\|\s*$/.test(Fk[Rk + 1])) {
+                                const tk = dk(kk),
+                                  ak = [];
+                                for (Rk += 2; Rk < Fk.length && Fk[Rk].trim().startsWith("|");) ak.push(dk(Fk[Rk])), Rk++;
+                                Bk.push({
                                   kind: "table",
-                                  header: Ku,
-                                  rows: Qu
+                                  header: tk,
+                                  rows: ak
                                 });
                                 continue
                               }
-                              if (uu.startsWith(">")) {
-                                const uu = [];
-                                for (; Eu < Ru.length && Ru[Eu].startsWith(">");) uu.push(Ru[Eu].replace(/^>\s?/, "")), Eu++;
-                                yu.push({
+                              if (kk.startsWith(">")) {
+                                const kk = [];
+                                for (; Rk < Fk.length && Fk[Rk].startsWith(">");) kk.push(Fk[Rk].replace(/^>\s?/, "")), Rk++;
+                                Bk.push({
                                   kind: "quote",
-                                  blocks: Bu(uu.join("\n"))
+                                  blocks: Jk(kk.join("\n"))
                                 });
                                 continue
                               }
-                              if (Vu.test(uu)) {
-                                const Ku = [],
-                                  Qu = /^\s*\d+\./.test(uu);
-                                for (; Eu < Ru.length && !Nu(Ru[Eu]) && (Vu.test(Ru[Eu]) || /^\s+\S/.test(Ru[Eu]));) Ku.push(Ru[Eu]), Eu++;
-                                yu.push({
+                              if (sk.test(kk)) {
+                                const tk = [],
+                                  ak = /^\s*\d+\./.test(kk);
+                                for (; Rk < Fk.length && !wk(Fk[Rk]) && (sk.test(Fk[Rk]) || /^\s+\S/.test(Fk[Rk]));) tk.push(Fk[Rk]), Rk++;
+                                Bk.push({
                                   kind: "list",
-                                  ordered: Qu,
-                                  items: ru(Ku)
+                                  ordered: ak,
+                                  items: Vk(tk)
                                 });
                                 continue
                               }
-                              const Ju = [];
-                              for (; Eu < Ru.length && !Nu(Ru[Eu]) && !/^\s*```/.test(Ru[Eu]) && !/^#{1,6}\s/.test(Ru[Eu]) && !Ru[Eu].startsWith(">") && !Vu.test(Ru[Eu]) && (!Ru[Eu].trim().startsWith("|") || 0 !== Ju.length);) Ju.push(Ru[Eu].trim()), Eu++;
-                              0 === Ju.length && (Ju.push(Ru[Eu].trim()), Eu++), yu.push({
+                              const bk = [];
+                              for (; Rk < Fk.length && !wk(Fk[Rk]) && !/^\s*```/.test(Fk[Rk]) && !/^#{1,6}\s/.test(Fk[Rk]) && !Fk[Rk].startsWith(">") && !sk.test(Fk[Rk]) && (!Fk[Rk].trim().startsWith("|") || 0 !== bk.length);) bk.push(Fk[Rk].trim()), Rk++;
+                              0 === bk.length && (bk.push(Fk[Rk].trim()), Rk++), Bk.push({
                                 kind: "paragraph",
-                                text: Ju.join(" ")
+                                text: bk.join(" ")
                               })
                             }
-                            return yu
+                            return Bk
                           }
 
-                          function xu(uu) {
-                            let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const yu = Bu(uu);
-                            let Eu = "";
-                            const Ku = [],
-                              Qu = [],
-                              mu = new Map;
-                            for (const Xu of yu) {
-                              if ("heading" === Xu.kind) {
-                                var Ju;
-                                const uu = (null !== (Ju = mu.get(Xu.anchor)) && void 0 !== Ju ? Ju : 0) + 1;
-                                mu.set(Xu.anchor, uu), uu > 1 && (Xu.anchor = `${Xu.anchor}-${uu}`)
+                          function Ak(kk) {
+                            let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const Bk = Jk(kk);
+                            let Rk = "";
+                            const tk = [],
+                              ak = [],
+                              Xk = new Map;
+                            for (const dk of Bk) {
+                              if ("heading" === dk.kind) {
+                                var bk;
+                                const kk = (null !== (bk = Xk.get(dk.anchor)) && void 0 !== bk ? bk : 0) + 1;
+                                Xk.set(dk.anchor, kk), kk > 1 && (dk.anchor = `${dk.anchor}-${kk}`)
                               }
-                              if ("heading" === Xu.kind && 1 === Xu.level && !Eu) {
-                                Eu = Xu.text;
+                              if ("heading" === dk.kind && 1 === dk.level && !Rk) {
+                                Rk = dk.text;
                                 continue
                               }
-                              if ("heading" === Xu.kind && Xu.level <= Ru) {
-                                Qu.push({
-                                  heading: Xu,
+                              if ("heading" === dk.kind && dk.level <= Fk) {
+                                ak.push({
+                                  heading: dk,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const uu = Qu.at(-1);
-                              uu ? uu.blocks.push(Xu) : Ku.push(Xu)
+                              const kk = ak.at(-1);
+                              kk ? kk.blocks.push(dk) : tk.push(dk)
                             }
-                            const Nu = uu => {
+                            const wk = kk => {
                               for (;
-                                "rule" === (null === (Ru = uu.at(-1)) || void 0 === Ru ? void 0 : Ru.kind);) {
-                                var Ru;
-                                uu.pop()
+                                "rule" === (null === (Fk = kk.at(-1)) || void 0 === Fk ? void 0 : Fk.kind);) {
+                                var Fk;
+                                kk.pop()
                               }
                             };
-                            Nu(Ku);
-                            for (const Xu of Qu) Nu(Xu.blocks);
+                            wk(tk);
+                            for (const dk of ak) wk(dk.blocks);
                             return {
-                              title: Eu,
-                              intro: Ku,
-                              sections: Qu
+                              title: Rk,
+                              intro: tk,
+                              sections: ak
                             }
                           }
 
-                          function Su(uu) {
+                          function ek(kk) {
                             return [{
                               heading: null,
-                              blocks: uu.intro
-                            }, ...uu.sections.map((uu => ({
-                              heading: uu.heading,
-                              blocks: uu.blocks
+                              blocks: kk.intro
+                            }, ...kk.sections.map((kk => ({
+                              heading: kk.heading,
+                              blocks: kk.blocks
                             })))]
                           }
 
-                          function pu(uu) {
-                            return uu.flatMap((uu => "code" === uu.kind ? [uu] : "quote" === uu.kind ? pu(uu.blocks) : []))
+                          function yk(kk) {
+                            return kk.flatMap((kk => "code" === kk.kind ? [kk] : "quote" === kk.kind ? yk(kk.blocks) : []))
                           }
 
-                          function Tu(uu) {
-                            switch (uu.kind) {
+                          function fk(kk) {
+                            switch (kk.kind) {
                               case "heading":
                               case "paragraph":
-                                return uu.text;
+                                return kk.text;
                               case "code":
-                                return uu.code;
+                                return kk.code;
                               case "table":
-                                return [uu.header, ...uu.rows].map((uu => uu.join(" "))).join(" ");
+                                return [kk.header, ...kk.rows].map((kk => kk.join(" "))).join(" ");
                               case "list": {
-                                const Ru = uu => uu.map((uu => `${uu.text} ${Ru(uu.children)}`)).join(" ");
-                                return Ru(uu.items)
+                                const Fk = kk => kk.map((kk => `${kk.text} ${Fk(kk.children)}`)).join(" ");
+                                return Fk(kk.items)
                               }
                               case "quote":
-                                return uu.blocks.map(Tu).join(" ");
+                                return kk.blocks.map(fk).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4604: (uu, Ru, yu) => {
-                          yu.d(Ru, {
-                            c: () => Ju
+                        }, 4566: (kk, Fk, Bk) => {
+                          Bk.d(Fk, {
+                            c: () => bk
                           });
-                          var Eu = yu(64),
-                            Ku = yu(330),
-                            Qu = yu(1841),
-                            mu = yu(1079);
+                          var Rk = Bk(61),
+                            tk = Bk(279),
+                            ak = Bk(1835),
+                            Xk = Bk(1069);
 
-                          function Ju(uu) {
+                          function bk(kk) {
                             let {
-                              text: Ru
-                            } = uu;
-                            const yu = [];
-                            let Ju = "";
-                            return (0, Ku.ic)(Ru).forEach(((uu, Ru) => {
-                              if ("string" === typeof uu || !(0, Qu.d)(uu.icon)) return void(Ju += "string" === typeof uu ? uu : uu.icon);
-                              const Ku = Math.max(0, Ju.trimEnd().search(/\S{1,12}$/));
-                              yu.push((0, mu.jsxs)(Eu.Fragment, {
-                                children: [Ju.slice(0, Ku), (0, mu.jsxs)("span", {
+                              text: Fk
+                            } = kk;
+                            const Bk = [];
+                            let bk = "";
+                            return (0, tk.bc)(Fk).forEach(((kk, Fk) => {
+                              if ("string" === typeof kk || !(0, ak.f)(kk.icon)) return void(bk += "string" === typeof kk ? kk : kk.icon);
+                              const tk = Math.max(0, bk.trimEnd().search(/\S{1,12}$/));
+                              Bk.push((0, Xk.jsxs)(Rk.Fragment, {
+                                children: [bk.slice(0, tk), (0, Xk.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [Ju.slice(Ku), (0, mu.jsx)("span", {
+                                  children: [bk.slice(tk), (0, Xk.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": uu.icon,
-                                    children: (0, mu.jsx)(Qu.c, {
-                                      itemName: uu.icon,
+                                    "aria-label": kk.icon,
+                                    children: (0, Xk.jsx)(ak.e, {
+                                      itemName: kk.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, Ru)), Ju = ""
-                            })), yu.push(Ju), (0, mu.jsx)(mu.Fragment, {
-                              children: yu
+                              }, Fk)), bk = ""
+                            })), Bk.push(bk), (0, Xk.jsx)(Xk.Fragment, {
+                              children: Bk
                             })
                           }
-                        }, 4540: (uu, Ru, yu) => {
-                          yu.d(Ru, {
-                            c: () => ju,
-                            b: () => Wu
+                        }, 4496: (kk, Fk, Bk) => {
+                          Bk.d(Fk, {
+                            f: () => Wk,
+                            d: () => mk
                           });
-                          var Eu = yu(64),
-                            Ku = yu(1400),
-                            Qu = yu(1825),
-                            mu = yu(4544),
-                            Ju = yu(1079);
-                          const Nu = (0, Eu.memo)((function(uu) {
+                          var Rk = Bk(61),
+                            tk = Bk(1387),
+                            ak = Bk(1812),
+                            Xk = Bk(4503),
+                            bk = Bk(1069);
+                          const wk = (0, Rk.memo)((function(kk) {
                             let {
-                              initialParameters: Ru
-                            } = uu;
-                            const yu = (0, Eu.useRef)(null),
-                              Ku = (0, Eu.useRef)(null),
-                              Nu = (0, Eu.useRef)(0),
-                              Xu = (0, Eu.useRef)(null),
-                              Vu = Ru.description,
-                              ru = Ru.zu,
+                              initialParameters: Fk
+                            } = kk;
+                            const Bk = (0, Rk.useRef)(null),
+                              tk = (0, Rk.useRef)(null),
+                              wk = (0, Rk.useRef)(0),
+                              dk = (0, Rk.useRef)(null),
+                              sk = Fk.description,
+                              Vk = Fk.Pk,
                               {
-                                scale: Bu,
-                                rotation: xu
-                              } = null !== Ru && void 0 !== Ru ? Ru : {},
-                              Su = (0, mu.f)();
-                            return (0, Eu.useEffect)((() => {
-                              const uu = Su.onFrame((() => {
-                                const uu = Su.getState();
-                                if (!uu.isActive || !yu.current || !Ku.current) return;
-                                const Ru = uu.state;
-                                if (yu.current.value = Ru.progress, Ru.clickCount > Nu.current) {
-                                  Nu.current = Ru.clickCount;
-                                  const uu = Ku.current;
-                                  uu.classList.add("pulse"), Xu.current = setTimeout((() => {
-                                    uu.classList.remove("pulse")
+                                scale: Jk,
+                                rotation: Ak
+                              } = null !== Fk && void 0 !== Fk ? Fk : {},
+                              ek = (0, Xk.f)();
+                            return (0, Rk.useEffect)((() => {
+                              const kk = ek.onFrame((() => {
+                                const kk = ek.getState();
+                                if (!kk.isActive || !Bk.current || !tk.current) return;
+                                const Fk = kk.state;
+                                if (Bk.current.value = Fk.progress, Fk.clickCount > wk.current) {
+                                  wk.current = Fk.clickCount;
+                                  const kk = tk.current;
+                                  kk.classList.add("pulse"), dk.current = setTimeout((() => {
+                                    kk.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(Xu.current), uu()
+                                clearTimeout(dk.current), kk()
                               }
-                            }), [Su]), (0, Ju.jsx)(Ju.Fragment, {
-                              children: (0, Ju.jsxs)("div", {
+                            }), [ek]), (0, bk.jsx)(bk.Fragment, {
+                              children: (0, bk.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== Bu && {
-                                    "--scale": Bu
+                                  ...null !== Jk && {
+                                    "--scale": Jk
                                   },
-                                  ...null !== xu && {
-                                    "--rotation": `${xu}deg`
+                                  ...null !== Ak && {
+                                    "--rotation": `${Ak}deg`
                                   }
                                 },
-                                children: [(0, Ju.jsx)("progress", {
+                                children: [(0, bk.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: yu
-                                }), (0, Ju.jsx)("span", {
+                                  ref: Bk
+                                }), (0, bk.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: Ku,
-                                  children: (0, Ju.jsx)(Qu.d, {
+                                  ref: tk,
+                                  children: (0, bk.jsx)(ak.d, {
                                     text: [{
-                                      icon: ru
+                                      icon: Vk
                                     }]
                                   })
-                                }), (0, Ju.jsx)("div", {
+                                }), (0, bk.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, Ju.jsx)(Qu.d, {
-                                    text: Vu
+                                  children: (0, bk.jsx)(ak.d, {
+                                    text: sk
                                   })
                                 })]
                               })
                             })
                           }));
-                          var Xu = yu(1035),
-                            Vu = yu.n(Xu);
-                          const ru = 2 * Math.PI * 90,
-                            Bu = (0, Eu.memo)((function(uu) {
+                          var dk = Bk(1020),
+                            sk = Bk.n(dk);
+                          const Vk = 2 * Math.PI * 90,
+                            Jk = (0, Rk.memo)((function(kk) {
                               let {
-                                initialParameters: Ru
-                              } = uu;
-                              const yu = (0, Eu.useRef)(null),
-                                Ku = (0, Eu.useRef)(null),
-                                Nu = (0, Eu.useRef)(null),
-                                Xu = Ru.label,
-                                Bu = Ru.icon,
-                                xu = Ru.Zu,
+                                initialParameters: Fk
+                              } = kk;
+                              const Bk = (0, Rk.useRef)(null),
+                                tk = (0, Rk.useRef)(null),
+                                wk = (0, Rk.useRef)(null),
+                                dk = Fk.label,
+                                Jk = Fk.icon,
+                                Ak = Fk.Ck,
                                 {
-                                  scale: Su,
-                                  rotation: pu,
-                                  Pu: Tu
-                                } = null !== Ru && void 0 !== Ru ? Ru : {},
-                                Wu = (0, mu.f)();
-                              return (0, Eu.useEffect)((() => {
-                                const uu = Wu.onFrame((() => {
-                                  var uu, Ru;
-                                  const Eu = Wu.getState();
-                                  if (!Eu.isActive || !Ku.current) return;
-                                  const Qu = Eu.state,
-                                    mu = null !== (uu = Qu.timeRemaining) && void 0 !== uu ? uu : 0,
-                                    Ju = null !== (Ru = Qu.wu) && void 0 !== Ru ? Ru : 1,
-                                    Xu = ru * (1 - mu / Ju);
-                                  Ku.current.style.strokeDashoffset = `${Xu}`, yu.current && (yu.current.style.opacity = mu > 0 ? "1" : "0"), Nu.current && xu && (Nu.current.textContent = `${(mu/1e3).toFixed(1)}s`)
+                                  scale: ek,
+                                  rotation: yk,
+                                  Zk: fk
+                                } = null !== Fk && void 0 !== Fk ? Fk : {},
+                                mk = (0, Xk.f)();
+                              return (0, Rk.useEffect)((() => {
+                                const kk = mk.onFrame((() => {
+                                  var kk, Fk;
+                                  const Rk = mk.getState();
+                                  if (!Rk.isActive || !tk.current) return;
+                                  const ak = Rk.state,
+                                    Xk = null !== (kk = ak.timeRemaining) && void 0 !== kk ? kk : 0,
+                                    bk = null !== (Fk = ak.qk) && void 0 !== Fk ? Fk : 1,
+                                    dk = Vk * (1 - Xk / bk);
+                                  tk.current.style.strokeDashoffset = `${dk}`, Bk.current && (Bk.current.style.opacity = Xk > 0 ? "1" : "0"), wk.current && Ak && (wk.current.textContent = `${(Xk/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  uu()
+                                  kk()
                                 }
-                              }), [Wu, xu]), (0, Ju.jsxs)("div", {
+                              }), [mk, Ak]), (0, bk.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: yu,
+                                ref: Bk,
                                 style: {
-                                  ...null !== Su && {
-                                    "--scale": Su
+                                  ...null !== ek && {
+                                    "--scale": ek
                                   },
-                                  ...null !== pu && {
-                                    "--rotation": `${pu}deg`
+                                  ...null !== yk && {
+                                    "--rotation": `${yk}deg`
                                   }
                                 },
-                                children: [(0, Ju.jsxs)("div", {
+                                children: [(0, bk.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, Ju.jsxs)("svg", {
+                                  children: [(0, bk.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, Ju.jsx)("circle", {
+                                    children: [(0, bk.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, Ju.jsx)("circle", {
+                                    }), (0, bk.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6295,80 +6295,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: ru,
-                                      ref: Ku
+                                      strokeDasharray: Vk,
+                                      ref: tk
                                     })]
-                                  }), (0, Ju.jsx)("div", {
+                                  }), (0, bk.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, Ju.jsx)(Qu.d, {
+                                    children: (0, bk.jsx)(ak.d, {
                                       text: [{
-                                        icon: Bu
+                                        icon: Jk
                                       }],
-                                      className: Vu()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: Tu
+                                      className: sk()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: fk
                                       })
                                     })
                                   })]
-                                }), (0, Ju.jsxs)("div", {
+                                }), (0, bk.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, Ju.jsx)(Qu.d, {
-                                    text: Xu,
+                                  children: [(0, bk.jsx)(ak.d, {
+                                    text: dk,
                                     className: "QTETimedClickLabelText"
-                                  }), xu && (0, Ju.jsx)("span", {
+                                  }), Ak && (0, bk.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: Nu
+                                    ref: wk
                                   })]
                                 })]
                               })
                             })),
-                            xu = (0, Eu.memo)((function(uu) {
+                            Ak = (0, Rk.memo)((function(kk) {
                               let {
-                                initialParameters: Ru
-                              } = uu;
-                              const yu = (0, Eu.useRef)(null),
-                                Ku = (0, Eu.useRef)(null),
-                                Nu = (0, Eu.useRef)(null),
-                                Xu = (0, Eu.useRef)(!1),
-                                Vu = Ru.description,
-                                ru = null === Ru || void 0 === Ru ? void 0 : Ru.icon,
-                                Bu = (0, mu.f)();
-                              return (0, Eu.useEffect)((() => {
-                                const uu = Bu.onFrame((() => {
-                                  const uu = Bu.getState();
-                                  if (!uu.isActive) return;
-                                  const Ru = uu.state;
-                                  if (yu.current) {
-                                    const uu = 100 * (Ru.catchZonePosition - Ru.Yu / 2);
-                                    yu.current.style.left = `${uu}%`, yu.current.style.width = 100 * Ru.Yu + "%", Ru.isCatching !== Xu.current && (Xu.current = Ru.isCatching, Ru.isCatching ? yu.current.classList.add("catching") : yu.current.classList.remove("catching"))
+                                initialParameters: Fk
+                              } = kk;
+                              const Bk = (0, Rk.useRef)(null),
+                                tk = (0, Rk.useRef)(null),
+                                wk = (0, Rk.useRef)(null),
+                                dk = (0, Rk.useRef)(!1),
+                                sk = Fk.description,
+                                Vk = null === Fk || void 0 === Fk ? void 0 : Fk.icon,
+                                Jk = (0, Xk.f)();
+                              return (0, Rk.useEffect)((() => {
+                                const kk = Jk.onFrame((() => {
+                                  const kk = Jk.getState();
+                                  if (!kk.isActive) return;
+                                  const Fk = kk.state;
+                                  if (Bk.current) {
+                                    const kk = 100 * (Fk.catchZonePosition - Fk.xk / 2);
+                                    Bk.current.style.left = `${kk}%`, Bk.current.style.width = 100 * Fk.xk + "%", Fk.isCatching !== dk.current && (dk.current = Fk.isCatching, Fk.isCatching ? Bk.current.classList.add("catching") : Bk.current.classList.remove("catching"))
                                   }
-                                  Ku.current && (Ku.current.style.left = 100 * Ru.moverPosition + "%"), Nu.current && (Nu.current.value = Ru.progress)
+                                  tk.current && (tk.current.style.left = 100 * Fk.moverPosition + "%"), wk.current && (wk.current.value = Fk.progress)
                                 }));
                                 return () => {
-                                  uu()
+                                  kk()
                                 }
-                              }), [Bu]), (0, Ju.jsxs)("div", {
+                              }), [Jk]), (0, bk.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, Ju.jsx)("div", {
+                                children: [(0, bk.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, Ju.jsx)(Qu.d, {
-                                    text: Vu
+                                  children: (0, bk.jsx)(ak.d, {
+                                    text: sk
                                   })
-                                }), (0, Ju.jsx)("progress", {
+                                }), (0, bk.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: Nu
-                                }), (0, Ju.jsxs)("div", {
+                                  ref: wk
+                                }), (0, bk.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, Ju.jsx)("div", {
+                                  children: [(0, bk.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: yu
-                                  }), (0, Ju.jsx)("div", {
+                                    ref: Bk
+                                  }), (0, bk.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: Ku,
-                                    children: (0, Ju.jsx)("span", {
-                                      children: ru && (0, Ju.jsx)(Qu.d, {
+                                    ref: tk,
+                                    children: (0, bk.jsx)("span", {
+                                      children: Vk && (0, bk.jsx)(ak.d, {
                                         text: [{
-                                          icon: ru,
+                                          icon: Vk,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6379,703 +6379,703 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var Su = yu(610);
-                          const pu = (0, Eu.memo)((function(uu) {
+                          var ek = Bk(606);
+                          const yk = (0, Rk.memo)((function(kk) {
                               let {
-                                initialParameters: Ru
-                              } = uu;
-                              const yu = (0, Eu.useRef)(null),
-                                Ku = Ru.label,
-                                Nu = Ru.uR,
+                                initialParameters: Fk
+                              } = kk;
+                              const Bk = (0, Rk.useRef)(null),
+                                tk = Fk.label,
+                                wk = Fk.FF,
                                 {
-                                  icon: Xu,
-                                  scale: Vu,
-                                  rotation: ru
-                                } = null !== Ru && void 0 !== Ru ? Ru : {},
-                                Bu = 100 * (.5 - Nu / 2),
-                                xu = 100 * Nu,
-                                pu = (0, mu.f)();
-                              return (0, Eu.useEffect)((() => {
-                                const uu = pu.onFrame((() => {
-                                  const uu = pu.getState();
-                                  if (!uu.isActive || !yu.current) return;
-                                  const Ru = uu.state;
-                                  yu.current.style.left = 100 * Ru.markerPosition + "%"
+                                  icon: dk,
+                                  scale: sk,
+                                  rotation: Vk
+                                } = null !== Fk && void 0 !== Fk ? Fk : {},
+                                Jk = 100 * (.5 - wk / 2),
+                                Ak = 100 * wk,
+                                yk = (0, Xk.f)();
+                              return (0, Rk.useEffect)((() => {
+                                const kk = yk.onFrame((() => {
+                                  const kk = yk.getState();
+                                  if (!kk.isActive || !Bk.current) return;
+                                  const Fk = kk.state;
+                                  Bk.current.style.left = 100 * Fk.markerPosition + "%"
                                 }));
                                 return () => {
-                                  uu()
+                                  kk()
                                 }
-                              }), [pu]), (0, Ju.jsxs)("div", {
+                              }), [yk]), (0, bk.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, Su.E)(Vu) && {
-                                    "--scale": Vu
+                                  ...!(0, ek.F)(sk) && {
+                                    "--scale": sk
                                   },
-                                  ...!(0, Su.E)(ru) && {
-                                    "--rotation": `${ru}deg`
+                                  ...!(0, ek.F)(Vk) && {
+                                    "--rotation": `${Vk}deg`
                                   }
                                 },
-                                children: [Xu && (0, Ju.jsx)(Qu.d, {
+                                children: [dk && (0, bk.jsx)(ak.d, {
                                   text: [{
-                                    icon: Xu
+                                    icon: dk
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, Ju.jsxs)("div", {
+                                }), (0, bk.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, Ju.jsx)("div", {
+                                  children: [(0, bk.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${Bu}%`,
-                                      width: `${xu}%`
+                                      left: `${Jk}%`,
+                                      width: `${Ak}%`
                                     }
-                                  }), (0, Ju.jsx)("div", {
+                                  }), (0, bk.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: yu
+                                    ref: Bk
                                   })]
-                                }), (0, Ju.jsx)("div", {
+                                }), (0, bk.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, Ju.jsx)(Qu.d, {
-                                    text: Ku
+                                  children: (0, bk.jsx)(ak.d, {
+                                    text: tk
                                   })
                                 })]
                               })
                             })),
-                            Tu = (0, Eu.memo)((function(uu) {
+                            fk = (0, Rk.memo)((function(kk) {
                               let {
-                                initialParameters: Ru
-                              } = uu;
-                              const yu = (0, Eu.useRef)(null),
-                                [Ku, Nu] = (0, Eu.useState)((() => new Array(Ru.yR).fill("pending"))),
-                                [Xu, Vu] = (0, Eu.useState)((() => {
-                                  const uu = Ru.QR;
-                                  return (0, Su.E)(uu) || uu <= 0 ? [] : new Array(uu).fill("pending")
+                                initialParameters: Fk
+                              } = kk;
+                              const Bk = (0, Rk.useRef)(null),
+                                [tk, wk] = (0, Rk.useState)((() => new Array(Fk.RF).fill("pending"))),
+                                [dk, sk] = (0, Rk.useState)((() => {
+                                  const kk = Fk.XF;
+                                  return (0, ek.F)(kk) || kk <= 0 ? [] : new Array(kk).fill("pending")
                                 })),
-                                ru = Ru.label,
+                                Vk = Fk.label,
                                 {
-                                  icon: Bu
-                                } = Ru,
-                                xu = (0, Eu.useRef)(0),
-                                pu = (0, Eu.useRef)(0),
-                                Tu = (0, Eu.useRef)([]),
-                                Wu = (0, mu.f)();
-                              return (0, Eu.useEffect)((() => {
-                                const uu = Wu.onFrame((() => {
-                                  const uu = Wu.getState();
-                                  if (!uu.isActive || !yu.current) return;
-                                  const Ru = uu.state,
-                                    Eu = 30 + 60 * Ru.outerCircleProgress;
-                                  if (yu.current.setAttribute("r", String(Eu)), !0 === Ru.lastClickResult && Ru.successes > xu.current) {
-                                    yu.current.classList.remove("QTERhythmClickOuterCircle--miss"), yu.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const uu = setTimeout((() => {
-                                      var uu;
-                                      null === (uu = yu.current) || void 0 === uu || uu.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: Jk
+                                } = Fk,
+                                Ak = (0, Rk.useRef)(0),
+                                yk = (0, Rk.useRef)(0),
+                                fk = (0, Rk.useRef)([]),
+                                mk = (0, Xk.f)();
+                              return (0, Rk.useEffect)((() => {
+                                const kk = mk.onFrame((() => {
+                                  const kk = mk.getState();
+                                  if (!kk.isActive || !Bk.current) return;
+                                  const Fk = kk.state,
+                                    Rk = 30 + 60 * Fk.outerCircleProgress;
+                                  if (Bk.current.setAttribute("r", String(Rk)), !0 === Fk.lastClickResult && Fk.successes > Ak.current) {
+                                    Bk.current.classList.remove("QTERhythmClickOuterCircle--miss"), Bk.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const kk = setTimeout((() => {
+                                      var kk;
+                                      null === (kk = Bk.current) || void 0 === kk || kk.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    Tu.current.push(uu)
-                                  } else if (!1 === Ru.lastClickResult && Ru.misses > pu.current) {
-                                    yu.current.classList.remove("QTERhythmClickOuterCircle--hit"), yu.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const uu = setTimeout((() => {
-                                      var uu;
-                                      null === (uu = yu.current) || void 0 === uu || uu.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    fk.current.push(kk)
+                                  } else if (!1 === Fk.lastClickResult && Fk.misses > yk.current) {
+                                    Bk.current.classList.remove("QTERhythmClickOuterCircle--hit"), Bk.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const kk = setTimeout((() => {
+                                      var kk;
+                                      null === (kk = Bk.current) || void 0 === kk || kk.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    Tu.current.push(uu)
+                                    fk.current.push(kk)
                                   }
-                                  Ru.successes === xu.current && Ru.misses === pu.current || (xu.current = Ru.successes, pu.current = Ru.misses, Nu((uu => {
-                                    const yu = [...uu];
-                                    for (let Eu = 0; Eu < Ru.yR; Eu++) yu[Eu] = Eu < Ru.successes ? "success" : "pending";
-                                    return yu
-                                  })), Vu((uu => {
-                                    if (0 === uu.length) return uu;
-                                    const yu = [...uu];
-                                    for (let Eu = 0; Eu < yu.length; Eu++) yu[Eu] = Eu < Ru.misses ? "miss" : "pending";
-                                    return yu
+                                  Fk.successes === Ak.current && Fk.misses === yk.current || (Ak.current = Fk.successes, yk.current = Fk.misses, wk((kk => {
+                                    const Bk = [...kk];
+                                    for (let Rk = 0; Rk < Fk.RF; Rk++) Bk[Rk] = Rk < Fk.successes ? "success" : "pending";
+                                    return Bk
+                                  })), sk((kk => {
+                                    if (0 === kk.length) return kk;
+                                    const Bk = [...kk];
+                                    for (let Rk = 0; Rk < Bk.length; Rk++) Bk[Rk] = Rk < Fk.misses ? "miss" : "pending";
+                                    return Bk
                                   })))
                                 }));
                                 return () => {
-                                  uu();
-                                  for (const uu of Tu.current) clearTimeout(uu);
-                                  Tu.current = []
+                                  kk();
+                                  for (const kk of fk.current) clearTimeout(kk);
+                                  fk.current = []
                                 }
-                              }), [Wu]), (0, Ju.jsxs)("div", {
+                              }), [mk]), (0, bk.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, Ju.jsx)("div", {
+                                children: [(0, bk.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Ku.map(((uu, Ru) => (0, Ju.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === uu ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, Ru)))
-                                }), (0, Ju.jsxs)("div", {
+                                  children: tk.map(((kk, Fk) => (0, bk.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === kk ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, Fk)))
+                                }), (0, bk.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, Ju.jsxs)("svg", {
+                                  children: [(0, bk.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, Ju.jsx)("circle", {
+                                    children: [(0, bk.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, Ju.jsx)("circle", {
+                                    }), (0, bk.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: yu
+                                      ref: Bk
                                     })]
-                                  }), Bu && (0, Ju.jsx)("div", {
+                                  }), Jk && (0, bk.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, Ju.jsx)(Qu.d, {
+                                    children: (0, bk.jsx)(ak.d, {
                                       text: [{
-                                        icon: Bu
+                                        icon: Jk
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), Xu.length > 0 && (0, Ju.jsx)("div", {
+                                }), dk.length > 0 && (0, bk.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Xu.map(((uu, Ru) => (0, Ju.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === uu ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, Ru)))
-                                }), (0, Ju.jsx)("div", {
+                                  children: dk.map(((kk, Fk) => (0, bk.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === kk ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, Fk)))
+                                }), (0, bk.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, Ju.jsx)(Qu.d, {
-                                    text: ru
+                                  children: (0, bk.jsx)(ak.d, {
+                                    text: Vk
                                   })
                                 })]
                               })
                             }));
 
-                          function Wu(uu) {
+                          function mk(kk) {
                             let {
-                              qte: Ru
-                            } = uu;
-                            switch (Ru.type) {
+                              qte: Fk
+                            } = kk;
+                            switch (Fk.type) {
                               case "progressBar":
-                                return (0, Ju.jsx)(Nu, {
-                                  initialParameters: Ru.parameters
+                                return (0, bk.jsx)(wk, {
+                                  initialParameters: Fk.parameters
                                 });
                               case "timedClick":
-                                return (0, Ju.jsx)(Bu, {
-                                  initialParameters: Ru.parameters
+                                return (0, bk.jsx)(Jk, {
+                                  initialParameters: Fk.parameters
                                 });
                               case "gravityBar":
-                                return (0, Ju.jsx)(xu, {
-                                  initialParameters: Ru.parameters
+                                return (0, bk.jsx)(Ak, {
+                                  initialParameters: Fk.parameters
                                 });
                               case "precisionBar":
-                                return (0, Ju.jsx)(pu, {
-                                  initialParameters: Ru.parameters
+                                return (0, bk.jsx)(yk, {
+                                  initialParameters: Fk.parameters
                                 });
                               case "rhythmClick":
-                                return (0, Ju.jsx)(Tu, {
-                                  initialParameters: Ru.parameters
+                                return (0, bk.jsx)(fk, {
+                                  initialParameters: Fk.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const ju = (0, Eu.memo)((function() {
-                            const [uu, Ru] = (0, Eu.useState)({
+                          const Wk = (0, Rk.memo)((function() {
+                            const [kk, Fk] = (0, Rk.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, Ku.e)("qteStateUpdated", (uu => {
-                              Ru(uu)
-                            })), uu.isActive && uu.type ? (0, Ju.jsx)("div", {
+                            return (0, tk.f)("qteStateUpdated", (kk => {
+                              Fk(kk)
+                            })), kk.isActive && kk.type ? (0, bk.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, Ju.jsx)(Wu, {
-                                qte: uu
+                              children: (0, bk.jsx)(mk, {
+                                qte: kk
                               })
                             }) : null
                           }))
-                        }, 4544: (uu, Ru, yu) => {
-                          yu.d(Ru, {
-                            b: () => Ju,
-                            f: () => Nu
+                        }, 4503: (kk, Fk, Bk) => {
+                          Bk.d(Fk, {
+                            b: () => bk,
+                            f: () => wk
                           });
-                          var Eu = yu(64),
-                            Ku = yu(1257),
-                            Qu = yu(4546);
-                          const mu = {
-                              getState: () => Qu.d.getCurrentState(),
-                              onFrame: Ku.o
+                          var Rk = Bk(61),
+                            tk = Bk(1245),
+                            ak = Bk(4507);
+                          const Xk = {
+                              getState: () => ak.b.getCurrentState(),
+                              onFrame: tk.h
                             },
-                            Ju = (0, Eu.createContext)(mu);
+                            bk = (0, Rk.createContext)(Xk);
 
-                          function Nu() {
-                            return (0, Eu.useContext)(Ju)
+                          function wk() {
+                            return (0, Rk.useContext)(bk)
                           }
-                        }, 4611: (uu, Ru, yu) => {
-                          yu.d(Ru, {
-                            d: () => tu,
-                            g: () => su
+                        }, 4568: (kk, Fk, Bk) => {
+                          Bk.d(Fk, {
+                            e: () => Gk,
+                            h: () => ck
                           });
-                          var Eu = yu(4617),
-                            Ku = yu(330);
-                          const Qu = 120,
-                            mu = 260,
-                            Ju = 1.15,
-                            Nu = 1.2,
-                            Xu = 2,
-                            Vu = 1.08,
-                            ru = .8,
-                            Bu = .95,
-                            xu = 8,
-                            Su = "[\"')\\]\u300d\u300f\uff09]*",
-                            pu = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Su}$`),
-                            Tu = new RegExp(`[?\uff1f]${Su}$`),
-                            Wu = new RegExp(`[!\uff01]${Su}$`),
-                            ju = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            Hu = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            du = new RegExp(`[${Hu}]`),
-                            bu = new RegExp(`[${Hu}]|[^${Hu}]+`, "g"),
-                            Cu = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var Rk = Bk(4570),
+                            tk = Bk(279);
+                          const ak = 120,
+                            Xk = 260,
+                            bk = 1.15,
+                            wk = 1.2,
+                            dk = 2,
+                            sk = 1.08,
+                            Vk = .8,
+                            Jk = .95,
+                            Ak = 8,
+                            ek = "[\"')\\]\u300d\u300f\uff09]*",
+                            yk = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ek}$`),
+                            fk = new RegExp(`[?\uff1f]${ek}$`),
+                            mk = new RegExp(`[!\uff01]${ek}$`),
+                            Wk = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            vk = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            ik = new RegExp(`[${vk}]`),
+                            Yk = new RegExp(`[${vk}]|[^${vk}]+`, "g"),
+                            Lk = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function ku(uu) {
-                            let Ru = 2166136261;
-                            for (let yu = 0; yu < uu.length; yu++) Ru ^= uu.charCodeAt(yu), Ru = Math.imul(Ru, 16777619);
-                            return (Ru >>> 0) / 4294967295 * 2 - 1
+                          function Ok(kk) {
+                            let Fk = 2166136261;
+                            for (let Bk = 0; Bk < kk.length; Bk++) Fk ^= kk.charCodeAt(Bk), Fk = Math.imul(Fk, 16777619);
+                            return (Fk >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function eu(uu) {
-                            var Ru;
-                            if (du.test(uu)) return 1;
-                            const yu = uu.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              Eu = yu.replace(/[^0-9]/g, "");
-                            if (Eu.length > 0 && !/\p{L}/u.test(yu)) return Math.min(Eu.length, 4);
-                            const Ku = null !== (Ru = yu.match(Cu)) && void 0 !== Ru ? Ru : [];
-                            if (0 === Ku.length) {
-                              var Qu, mu;
-                              const uu = null !== (Qu = null === (mu = yu.match(/\p{L}/gu)) || void 0 === mu ? void 0 : mu.length) && void 0 !== Qu ? Qu : 0;
-                              return 0 === uu ? 0 : Math.min(Math.max(1, Math.round(uu / 2.5)), xu)
+                          function Ek(kk) {
+                            var Fk;
+                            if (ik.test(kk)) return 1;
+                            const Bk = kk.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              Rk = Bk.replace(/[^0-9]/g, "");
+                            if (Rk.length > 0 && !/\p{L}/u.test(Bk)) return Math.min(Rk.length, 4);
+                            const tk = null !== (Fk = Bk.match(Lk)) && void 0 !== Fk ? Fk : [];
+                            if (0 === tk.length) {
+                              var ak, Xk;
+                              const kk = null !== (ak = null === (Xk = Bk.match(/\p{L}/gu)) || void 0 === Xk ? void 0 : Xk.length) && void 0 !== ak ? ak : 0;
+                              return 0 === kk ? 0 : Math.min(Math.max(1, Math.round(kk / 2.5)), Ak)
                             }
-                            const Ju = yu.replace(/[^\p{L}]/gu, ""),
-                              Nu = Ku.length > 1 && "e" === Ku.at(-1) && Ju.endsWith("e") && !Ju.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(uu.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(Ku.length - (Nu ? 1 : 0), xu)
+                            const bk = Bk.replace(/[^\p{L}]/gu, ""),
+                              wk = tk.length > 1 && "e" === tk.at(-1) && bk.endsWith("e") && !bk.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(kk.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(tk.length - (wk ? 1 : 0), Ak)
                           }
 
-                          function Au(uu) {
-                            return uu.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function Sk(kk) {
+                            return kk.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function Du(uu) {
-                            const Ru = uu.replace(/[^\p{L}]/gu, "");
-                            return Ru.length >= 2 && Ru === Ru.toUpperCase() && Ru !== Ru.toLowerCase()
+                          function Nk(kk) {
+                            const Fk = kk.replace(/[^\p{L}]/gu, "");
+                            return Fk.length >= 2 && Fk === Fk.toUpperCase() && Fk !== Fk.toLowerCase()
                           }
 
-                          function Mu(uu, Ru) {
-                            var yu;
-                            const xu = Ru && (0, Eu.k)(Ru),
-                              Su = null !== (yu = null === xu || void 0 === xu ? void 0 : xu.syllableMs) && void 0 !== yu ? yu : Eu.c,
-                              Hu = function(uu) {
-                                const Ru = [];
-                                for (const Eu of (0, Ku.ic)(uu))
-                                  if ("string" === typeof Eu)
-                                    for (const uu of Eu.split(/(\s+)/)) {
-                                      if ("" === uu) continue;
-                                      if (/^\s+$/.test(uu)) {
-                                        Ru.push({
+                          function Hk(kk, Fk) {
+                            var Bk;
+                            const Ak = Fk && (0, Rk.l)(Fk),
+                              ek = null !== (Bk = null === Ak || void 0 === Ak ? void 0 : Ak.syllableMs) && void 0 !== Bk ? Bk : Rk.e,
+                              vk = function(kk) {
+                                const Fk = [];
+                                for (const Rk of (0, tk.bc)(kk))
+                                  if ("string" === typeof Rk)
+                                    for (const kk of Rk.split(/(\s+)/)) {
+                                      if ("" === kk) continue;
+                                      if (/^\s+$/.test(kk)) {
+                                        Fk.push({
                                           kind: "space",
-                                          text: uu
+                                          text: kk
                                         });
                                         continue
                                       }
-                                      if (!du.test(uu)) {
-                                        Ru.push({
+                                      if (!ik.test(kk)) {
+                                        Fk.push({
                                           kind: "word",
-                                          text: uu,
+                                          text: kk,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let Eu = !0;
-                                      for (const Ku of null !== (yu = uu.match(bu)) && void 0 !== yu ? yu : []) {
-                                        var yu;
-                                        const uu = Ru.at(-1);
-                                        Eu || "word" !== (null === uu || void 0 === uu ? void 0 : uu.kind) || du.test(Ku) || /[\p{L}\p{N}]/u.test(Ku) ? (Eu || Ru.push({
+                                      let Rk = !0;
+                                      for (const tk of null !== (Bk = kk.match(Yk)) && void 0 !== Bk ? Bk : []) {
+                                        var Bk;
+                                        const kk = Fk.at(-1);
+                                        Rk || "word" !== (null === kk || void 0 === kk ? void 0 : kk.kind) || ik.test(tk) || /[\p{L}\p{N}]/u.test(tk) ? (Rk || Fk.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), Ru.push({
+                                        }), Fk.push({
                                           kind: "word",
-                                          text: Ku,
+                                          text: tk,
                                           delayMs: 0
-                                        }), Eu = !1) : uu.text += Ku
+                                        }), Rk = !1) : kk.text += tk
                                       }
-                                    } else Ru.push({
+                                    } else Fk.push({
                                       kind: "icon",
-                                      text: Eu.icon,
+                                      text: Rk.icon,
                                       delayMs: 0
                                     });
-                                return Ru
-                              }(uu),
-                              Cu = [];
-                            let Mu = [];
-                            for (const Eu of Hu) "space" !== Eu.kind && (Mu.push(Eu), pu.test(Eu.text) && (Cu.push(Mu), Mu = []));
-                            Cu.push(Mu);
-                            const Iu = [];
-                            let Gu = 0;
-                            for (const Eu of Cu) {
-                              var Uu, nu;
-                              const uu = null !== (Uu = null === (nu = Eu.at(-1)) || void 0 === nu ? void 0 : nu.text) && void 0 !== Uu ? Uu : "",
-                                Ru = Tu.test(uu),
-                                yu = Wu.test(uu),
-                                Ku = Eu.map((uu => "word" === uu.kind ? eu(uu.text) : 1)),
-                                Hu = Ku.findLastIndex((uu => uu > 0));
-                              for (const [Tu, Wu] of Eu.entries()) {
-                                const uu = "word" === Wu.kind,
-                                  Eu = Ku[Tu];
-                                Wu.delayMs = Gu;
-                                for (let Ku = 0; xu && Ku < Eu; Ku++) {
+                                return Fk
+                              }(kk),
+                              Lk = [];
+                            let Hk = [];
+                            for (const Rk of vk) "space" !== Rk.kind && (Hk.push(Rk), yk.test(Rk.text) && (Lk.push(Hk), Hk = []));
+                            Lk.push(Hk);
+                            const uk = [];
+                            let Mk = 0;
+                            for (const Rk of Lk) {
+                              var gk, Uk;
+                              const kk = null !== (gk = null === (Uk = Rk.at(-1)) || void 0 === Uk ? void 0 : Uk.text) && void 0 !== gk ? gk : "",
+                                Fk = fk.test(kk),
+                                Bk = mk.test(kk),
+                                tk = Rk.map((kk => "word" === kk.kind ? Ek(kk.text) : 1)),
+                                vk = tk.findLastIndex((kk => kk > 0));
+                              for (const [fk, mk] of Rk.entries()) {
+                                const kk = "word" === mk.kind,
+                                  Rk = tk[fk];
+                                mk.delayMs = Mk;
+                                for (let tk = 0; Ak && tk < Rk; tk++) {
                                   const {
-                                    intonation: Qu
-                                  } = xu;
-                                  let mu = Hu > 0 ? -Qu.declineSemitones * (Tu / Hu) : 0;
-                                  mu += ku(`${Au(Wu.text)}|${Ku}`) * Qu.variationSemitones;
-                                  const pu = Math.min(1, Qu.variationSemitones);
-                                  let ju = xu.glideSemitones,
-                                    du = 1;
-                                  yu && (mu += Qu.exclaimLiftSemitones, du *= Ju), Ru && Tu === Hu && (mu += Qu.questionRiseSemitones * (Eu > 1 ? .5 + .5 * Ku / (Eu - 1) : 1), Ku === Eu - 1 && (ju = Math.abs(ju) + Qu.questionRiseSemitones / 2)), uu && Du(Wu.text) && (mu += Xu * pu, du *= Nu), Eu > 1 && 0 === Ku && (mu += ru * pu, du *= Vu), Iu.push({
-                                    atMs: Gu + Ku * Su,
-                                    semitones: mu,
-                                    glideSemitones: ju,
-                                    durationMs: Ku < Eu - 1 ? Math.min(xu.durationMs, Su * Bu) : xu.durationMs,
-                                    level: du
+                                    intonation: ak
+                                  } = Ak;
+                                  let Xk = vk > 0 ? -ak.declineSemitones * (fk / vk) : 0;
+                                  Xk += Ok(`${Sk(mk.text)}|${tk}`) * ak.variationSemitones;
+                                  const yk = Math.min(1, ak.variationSemitones);
+                                  let Wk = Ak.glideSemitones,
+                                    ik = 1;
+                                  Bk && (Xk += ak.exclaimLiftSemitones, ik *= bk), Fk && fk === vk && (Xk += ak.questionRiseSemitones * (Rk > 1 ? .5 + .5 * tk / (Rk - 1) : 1), tk === Rk - 1 && (Wk = Math.abs(Wk) + ak.questionRiseSemitones / 2)), kk && Nk(mk.text) && (Xk += dk * yk, ik *= wk), Rk > 1 && 0 === tk && (Xk += Vk * yk, ik *= sk), uk.push({
+                                    atMs: Mk + tk * ek,
+                                    semitones: Xk,
+                                    glideSemitones: Wk,
+                                    durationMs: tk < Rk - 1 ? Math.min(Ak.durationMs, ek * Jk) : Ak.durationMs,
+                                    level: ik
                                   })
                                 }
-                                Gu += Eu * Su + (pu.test(Wu.text) ? mu : ju.test(Wu.text) ? Qu : 0)
+                                Mk += Rk * ek + (yk.test(mk.text) ? Xk : Wk.test(mk.text) ? ak : 0)
                               }
                             }
                             return {
-                              pieces: Hu.map((uu => "space" === uu.kind ? uu : "icon" === uu.kind ? {
+                              pieces: vk.map((kk => "space" === kk.kind ? kk : "icon" === kk.kind ? {
                                 kind: "icon",
-                                icon: uu.text,
-                                delayMs: uu.delayMs
+                                icon: kk.text,
+                                delayMs: kk.delayMs
                               } : {
                                 kind: "word",
-                                text: uu.text,
-                                delayMs: uu.delayMs
+                                text: kk.text,
+                                delayMs: kk.delayMs
                               })),
-                              blips: Iu
+                              blips: uk
                             }
                           }
-                          var Iu = yu(1170),
-                            Gu = yu(1224),
-                            Uu = yu(1862);
+                          var uk = Bk(1149),
+                            Mk = Bk(1203),
+                            gk = Bk(1849);
 
-                          function nu(uu) {
-                            if ("string" === typeof uu) return uu;
-                            const Ru = Gu.f.get().getCurrentLanguageCode();
-                            return (0, Iu.q)(Ru, uu.translationKey, (0, Iu.o)(uu.params, Uu.d.shown))
+                          function Uk(kk) {
+                            if ("string" === typeof kk) return kk;
+                            const Fk = Mk.c.get().getCurrentLanguageCode();
+                            return (0, uk.m)(Fk, kk.translationKey, (0, uk.k)(kk.params, gk.b.shown))
                           }
 
-                          function su(uu) {
-                            const Ru = void 0 === uu.voice ? null : (0, Eu.m)(uu.voice),
-                              yu = Ru && (0, Eu.k)(Ru);
+                          function ck(kk) {
+                            const Fk = void 0 === kk.voice ? null : (0, Rk.m)(kk.voice),
+                              Bk = Fk && (0, Rk.l)(Fk);
                             return {
-                              plan: Mu(nu(uu.line), yu),
-                              synth: yu
+                              plan: Hk(Uk(kk.line), Bk),
+                              synth: Bk
                             }
                           }
 
-                          function tu(uu) {
-                            const Ru = [];
-                            let yu = [];
-                            for (const [Ku, Qu] of uu.entries()) {
-                              var Eu;
-                              "space" === Qu.kind && (" " !== Qu.text || "icon" !== (null === (Eu = uu[Ku + 1]) || void 0 === Eu ? void 0 : Eu.kind)) ? (yu.length > 0 && Ru.push(yu), Ru.push([Qu]), yu = []) : yu.push(Qu)
+                          function Gk(kk) {
+                            const Fk = [];
+                            let Bk = [];
+                            for (const [tk, ak] of kk.entries()) {
+                              var Rk;
+                              "space" === ak.kind && (" " !== ak.text || "icon" !== (null === (Rk = kk[tk + 1]) || void 0 === Rk ? void 0 : Rk.kind)) ? (Bk.length > 0 && Fk.push(Bk), Fk.push([ak]), Bk = []) : Bk.push(ak)
                             }
-                            return yu.length > 0 && Ru.push(yu), Ru
+                            return Bk.length > 0 && Fk.push(Bk), Fk
                           }
-                        }, 4626: (uu, Ru, yu) => {
-                          yu.d(Ru, {
-                            e: () => Vu,
-                            h: () => ru
+                        }, 4573: (kk, Fk, Bk) => {
+                          Bk.d(Fk, {
+                            e: () => sk,
+                            f: () => Vk
                           });
-                          var Eu = yu(4630),
-                            Ku = yu(27);
-                          const Qu = .25,
-                            mu = .85,
-                            Ju = .02,
-                            Nu = .01;
+                          var Rk = Bk(4575),
+                            tk = Bk(22);
+                          const ak = .25,
+                            Xk = .85,
+                            bk = .02,
+                            wk = .01;
 
-                          function Xu(uu, Ru, yu, Eu, Ku, Qu, Ju) {
+                          function dk(kk, Fk, Bk, Rk, tk, ak, bk) {
                             const {
-                              waveform: Nu,
-                              pitchHz: Xu,
-                              attackMs: Vu,
-                              releaseMs: ru,
-                              lowpassHz: Bu
-                            } = yu, xu = Ku + Eu.durationMs / 1e3, Su = Xu * 2 ** (Eu.semitones / 12), pu = uu.createOscillator();
-                            pu.type = Nu, pu.frequency.setValueAtTime(Su, Ku), pu.frequency.exponentialRampToValueAtTime(Su * 2 ** (Eu.glideSemitones / 12), xu);
-                            const Tu = Ku + Math.min(Vu, Eu.durationMs) / 1e3,
-                              Wu = uu.createGain();
-                            Wu.gain.setValueAtTime(0, Ku), Wu.gain.linearRampToValueAtTime(Qu, Tu), Wu.gain.linearRampToValueAtTime(Qu * mu, Math.max(Tu, xu - ru / 1e3)), Wu.gain.linearRampToValueAtTime(0, xu);
-                            const ju = [pu];
-                            if (null !== Bu) {
-                              const Ru = uu.createBiquadFilter();
-                              Ru.type = "lowpass", Ru.frequency.value = Bu, ju.push(Ru)
+                              waveform: wk,
+                              pitchHz: dk,
+                              attackMs: sk,
+                              releaseMs: Vk,
+                              lowpassHz: Jk
+                            } = Bk, Ak = tk + Rk.durationMs / 1e3, ek = dk * 2 ** (Rk.semitones / 12), yk = kk.createOscillator();
+                            yk.type = wk, yk.frequency.setValueAtTime(ek, tk), yk.frequency.exponentialRampToValueAtTime(ek * 2 ** (Rk.glideSemitones / 12), Ak);
+                            const fk = tk + Math.min(sk, Rk.durationMs) / 1e3,
+                              mk = kk.createGain();
+                            mk.gain.setValueAtTime(0, tk), mk.gain.linearRampToValueAtTime(ak, fk), mk.gain.linearRampToValueAtTime(ak * Xk, Math.max(fk, Ak - Vk / 1e3)), mk.gain.linearRampToValueAtTime(0, Ak);
+                            const Wk = [yk];
+                            if (null !== Jk) {
+                              const Fk = kk.createBiquadFilter();
+                              Fk.type = "lowpass", Fk.frequency.value = Jk, Wk.push(Fk)
                             }
-                            ju.push(Wu, Ru);
-                            for (let mu = 1; mu < ju.length; mu++) ju[mu - 1].connect(ju[mu]);
-                            return pu.onended = () => {
-                              for (const uu of ju.slice(0, -1)) uu.disconnect();
-                              Ju()
-                            }, pu.start(Ku), pu.stop(xu), pu
+                            Wk.push(mk, Fk);
+                            for (let Xk = 1; Xk < Wk.length; Xk++) Wk[Xk - 1].connect(Wk[Xk]);
+                            return yk.onended = () => {
+                              for (const kk of Wk.slice(0, -1)) kk.disconnect();
+                              bk()
+                            }, yk.start(tk), yk.stop(Ak), yk
                           }
 
-                          function Vu(uu, Ru, yu, Eu, Ku, mu) {
-                            if (0 === Eu.length) return mu(), () => {};
-                            const Vu = Qu * yu.volume * Ku,
-                              ru = uu.createGain();
-                            ru.connect(Ru);
-                            const Bu = uu.currentTime + Ju,
-                              xu = new Set;
-                            for (const Qu of Eu) {
-                              const Ru = Xu(uu, ru, yu, Qu, Bu + Qu.atMs / 1e3, Vu * Qu.level, (() => {
-                                xu.delete(Ru), 0 === xu.size && (ru.disconnect(), mu())
+                          function sk(kk, Fk, Bk, Rk, tk, Xk) {
+                            if (0 === Rk.length) return Xk(), () => {};
+                            const sk = ak * Bk.volume * tk,
+                              Vk = kk.createGain();
+                            Vk.connect(Fk);
+                            const Jk = kk.currentTime + bk,
+                              Ak = new Set;
+                            for (const ak of Rk) {
+                              const Fk = dk(kk, Vk, Bk, ak, Jk + ak.atMs / 1e3, sk * ak.level, (() => {
+                                Ak.delete(Fk), 0 === Ak.size && (Vk.disconnect(), Xk())
                               }));
-                              xu.add(Ru)
+                              Ak.add(Fk)
                             }
                             return () => {
-                              const Ru = uu.currentTime;
-                              ru.gain.setTargetAtTime(0, Ru, Nu);
-                              for (const uu of xu) try {
-                                uu.stop(Ru + 5 * Nu)
+                              const Fk = kk.currentTime;
+                              Vk.gain.setTargetAtTime(0, Fk, wk);
+                              for (const kk of Ak) try {
+                                kk.stop(Fk + 5 * wk)
                               } catch {}
                             }
                           }
 
-                          function ru(uu, Ru) {
-                            var yu;
-                            const Qu = Eu.Howler.ctx,
-                              mu = Eu.Howler.masterGain;
-                            if (!Qu || !mu || !Ku.d.get("soundOnFromAd")) return () => {};
-                            const Ju = Eu.Howler;
-                            return null === (yu = Ju._autoResume) || void 0 === yu || yu.call(Ju), Vu(Qu, mu, uu, Ru, Ku.d.get("soundVolume"), (() => {
-                              var uu;
-                              null === (uu = Ju._autoSuspend) || void 0 === uu || uu.call(Ju)
+                          function Vk(kk, Fk) {
+                            var Bk;
+                            const ak = Rk.Howler.ctx,
+                              Xk = Rk.Howler.masterGain;
+                            if (!ak || !Xk || !tk.c.get("soundOnFromAd")) return () => {};
+                            const bk = Rk.Howler;
+                            return null === (Bk = bk._autoResume) || void 0 === Bk || Bk.call(bk), sk(ak, Xk, kk, Fk, tk.c.get("soundVolume"), (() => {
+                              var kk;
+                              null === (kk = bk._autoSuspend) || void 0 === kk || kk.call(bk)
                             }))
                           }
-                        }, 4630: (uu, Ru, yu) => {
-                          yu.r(Ru), yu.d(Ru, {
-                            Howl: () => Ku.Howl,
-                            Howler: () => Ku.Howler,
-                            iosAudio: () => Nu,
-                            musicOutput: () => Tu,
-                            readyAudioContext: () => Wu
+                        }, 4575: (kk, Fk, Bk) => {
+                          Bk.r(Fk), Bk.d(Fk, {
+                            Howl: () => tk.Howl,
+                            Howler: () => tk.Howler,
+                            iosAudio: () => wk,
+                            musicOutput: () => fk,
+                            readyAudioContext: () => mk
                           });
-                          var Eu, Ku = yu(4638),
-                            Qu = yu(106);
-                          const mu = Ku.Howler;
-                          let Ju;
+                          var Rk, tk = Bk(4579),
+                            ak = Bk(98);
+                          const Xk = tk.Howler;
+                          let bk;
 
-                          function Nu() {
-                            return Ju ??= "ios" === (0, Qu.getOperatingSystem)(), Ju
+                          function wk() {
+                            return bk ??= "ios" === (0, ak.getOperatingSystem)(), bk
                           }
 
-                          function Xu() {
-                            var uu, Ru;
-                            if (mu.ctx || !mu.usingWebAudio || "undefined" === typeof AudioContext || !Nu()) return;
-                            const yu = navigator.audioSession;
-                            let Eu;
-                            "auto" === (null === yu || void 0 === yu ? void 0 : yu.type) && (yu.type = "ambient");
+                          function dk() {
+                            var kk, Fk;
+                            if (Xk.ctx || !Xk.usingWebAudio || "undefined" === typeof AudioContext || !wk()) return;
+                            const Bk = navigator.audioSession;
+                            let Rk;
+                            "auto" === (null === Bk || void 0 === Bk ? void 0 : Bk.type) && (Bk.type = "ambient");
                             try {
-                              Eu = new AudioContext({
+                              Rk = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const Ku = Eu.createGain();
-                            Ku.gain.setValueAtTime(mu._muted ? 0 : null !== (uu = mu._volume) && void 0 !== uu ? uu : 1, Eu.currentTime), Ku.connect(Eu.destination), mu.ctx = Eu, mu.masterGain = Ku, null === (Ru = mu._setup) || void 0 === Ru || Ru.call(mu)
+                            const tk = Rk.createGain();
+                            tk.gain.setValueAtTime(Xk._muted ? 0 : null !== (kk = Xk._volume) && void 0 !== kk ? kk : 1, Rk.currentTime), tk.connect(Rk.destination), Xk.ctx = Rk, Xk.masterGain = tk, null === (Fk = Xk._setup) || void 0 === Fk || Fk.call(Xk)
                           }
-                          mu._mobileUnloaded = !0;
-                          const Vu = mu.volume.bind(Ku.Howler);
-                          mu.volume = function() {
-                            return Xu(), Vu(...arguments)
+                          Xk._mobileUnloaded = !0;
+                          const sk = Xk.volume.bind(tk.Howler);
+                          Xk.volume = function() {
+                            return dk(), sk(...arguments)
                           };
-                          const ru = mu.mute.bind(Ku.Howler);
-                          mu.mute = uu => (Xu(), ru(uu));
-                          const Bu = Ku.Howl.prototype,
-                            xu = Bu.init;
-                          Bu.init = function(uu) {
-                            return Xu(), xu.call(this, uu)
+                          const Vk = Xk.mute.bind(tk.Howler);
+                          Xk.mute = kk => (dk(), Vk(kk));
+                          const Jk = tk.Howl.prototype,
+                            Ak = Jk.init;
+                          Jk.init = function(kk) {
+                            return dk(), Ak.call(this, kk)
                           };
-                          let Su = 0;
-                          const pu = null === (Eu = mu._autoSuspend) || void 0 === Eu ? void 0 : Eu.bind(Ku.Howler);
+                          let ek = 0;
+                          const yk = null === (Rk = Xk._autoSuspend) || void 0 === Rk ? void 0 : Rk.bind(tk.Howler);
 
-                          function Tu() {
-                            Wu();
+                          function fk() {
+                            mk();
                             const {
-                              ctx: uu,
-                              masterGain: Ru
-                            } = mu;
-                            return uu && Ru ? {
-                              ctx: uu,
-                              destination: Ru,
-                              holdAwake: uu => {
-                                var Ru, yu;
-                                (Su += uu ? 1 : -1, uu) ? null === (Ru = mu._autoResume) || void 0 === Ru || Ru.call(mu): null === (yu = mu._autoSuspend) || void 0 === yu || yu.call(mu)
+                              ctx: kk,
+                              masterGain: Fk
+                            } = Xk;
+                            return kk && Fk ? {
+                              ctx: kk,
+                              destination: Fk,
+                              holdAwake: kk => {
+                                var Fk, Bk;
+                                (ek += kk ? 1 : -1, kk) ? null === (Fk = Xk._autoResume) || void 0 === Fk || Fk.call(Xk): null === (Bk = Xk._autoSuspend) || void 0 === Bk || Bk.call(Xk)
                               },
                               wake: () => {
-                                var Ru;
-                                "running" !== uu.state && (null === (Ru = mu._autoResume) || void 0 === Ru || Ru.call(mu), uu.resume().catch((() => {})))
+                                var Fk;
+                                "running" !== kk.state && (null === (Fk = Xk._autoResume) || void 0 === Fk || Fk.call(Xk), kk.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function Wu() {
-                            var uu;
-                            (mu.volume(), mu.ctx && mu.autoUnlock) && (null === (uu = mu._unlockAudio) || void 0 === uu || uu.call(mu))
+                          function mk() {
+                            var kk;
+                            (Xk.volume(), Xk.ctx && Xk.autoUnlock) && (null === (kk = Xk._unlockAudio) || void 0 === kk || kk.call(Xk))
                           }
-                          pu && (mu._autoSuspend = () => Su > 0 ? Ku.Howler : pu())
-                        }, 4640: (uu, Ru, yu) => {
-                          function Eu(uu) {
+                          yk && (Xk._autoSuspend = () => ek > 0 ? tk.Howler : yk())
+                        }, 4583: (kk, Fk, Bk) => {
+                          function Rk(kk) {
                             return {
-                              notAfter: uu
+                              notAfter: kk
                             }
                           }
-                          yu.d(Ru, {
-                            e: () => Nu,
-                            i: () => Xu,
-                            j: () => Ju,
-                            l: () => Eu,
-                            o: () => Ku,
-                            p: () => Qu,
-                            r: () => mu,
-                            u: () => Vu,
-                            x: () => ru
+                          Bk.d(Fk, {
+                            B: () => Vk,
+                            e: () => wk,
+                            i: () => dk,
+                            l: () => bk,
+                            n: () => Rk,
+                            r: () => tk,
+                            s: () => ak,
+                            w: () => Xk,
+                            y: () => sk
                           });
-                          const Ku = Eu("\\w$."),
-                            Qu = Eu("\\w.,");
+                          const tk = Rk("\\w$."),
+                            ak = Rk("\\w.,");
 
-                          function mu(uu) {
-                            return Ru => Nu(Ru, uu)
+                          function Xk(kk) {
+                            return Fk => wk(Fk, kk)
                           }
 
-                          function Ju(uu) {
-                            return Ru => !uu.test(Ru.input.slice(0, Ru.index))
+                          function bk(kk) {
+                            return Fk => !kk.test(Fk.input.slice(0, Fk.index))
                           }
 
-                          function Nu(uu, Ru) {
-                            return uu.index > 0 && new RegExp(`[${Ru}]`).test(uu.input[uu.index - 1])
+                          function wk(kk, Fk) {
+                            return kk.index > 0 && new RegExp(`[${Fk}]`).test(kk.input[kk.index - 1])
                           }
 
-                          function Xu(uu, Ru, yu) {
-                            return function(uu) {
-                              return void 0 !== uu && "function" !== typeof uu
-                            }(yu) ? function(uu, Ru, yu) {
-                              const Eu = Ru.flags.replace(/[gy]/g, ""),
-                                Ku = new RegExp(`[^${yu}](?:${Ru.source})`, `${Eu}g`),
-                                Qu = [],
-                                mu = yu => {
-                                  const Eu = yu.index + yu[0].length;
-                                  return ("" === yu[0] ? Bu(uu, Ru, Eu) : Eu) - 1
+                          function dk(kk, Fk, Bk) {
+                            return function(kk) {
+                              return void 0 !== kk && "function" !== typeof kk
+                            }(Bk) ? function(kk, Fk, Bk) {
+                              const Rk = Fk.flags.replace(/[gy]/g, ""),
+                                tk = new RegExp(`[^${Bk}](?:${Fk.source})`, `${Rk}g`),
+                                ak = [],
+                                Xk = Bk => {
+                                  const Rk = Bk.index + Bk[0].length;
+                                  return ("" === Bk[0] ? Jk(kk, Fk, Rk) : Rk) - 1
                                 },
-                                Ju = new RegExp(`(?:${Ru.source})`, `${Eu}y`).exec(uu);
-                              if (Ju) {
-                                if (Qu.push(Ju), !Ru.global) return Qu;
-                                Ku.lastIndex = mu(Ju)
+                                bk = new RegExp(`(?:${Fk.source})`, `${Rk}y`).exec(kk);
+                              if (bk) {
+                                if (ak.push(bk), !Fk.global) return ak;
+                                tk.lastIndex = Xk(bk)
                               }
-                              for (let Nu = Ku.exec(uu); Nu; Nu = Ku.exec(uu)) {
-                                const yu = Bu(uu, Ru, Nu.index) - Nu.index;
-                                if (Nu[0] = Nu[0].slice(yu), Nu.index += yu, Qu.push(Nu), !Ru.global) break;
-                                Ku.lastIndex = mu(Nu)
+                              for (let wk = tk.exec(kk); wk; wk = tk.exec(kk)) {
+                                const Bk = Jk(kk, Fk, wk.index) - wk.index;
+                                if (wk[0] = wk[0].slice(Bk), wk.index += Bk, ak.push(wk), !Fk.global) break;
+                                tk.lastIndex = Xk(wk)
                               }
-                              return Qu
-                            }(uu, Ru, yu.notAfter) : function(uu, Ru, yu) {
-                              const Eu = new RegExp(Ru.source, `${Ru.flags.replace(/[gy]/g,"")}g`),
-                                Ku = [];
-                              for (let Qu = Eu.exec(uu); Qu; Qu = Eu.exec(uu))
-                                if (!yu || yu(Qu)) {
-                                  if (Ku.push(Qu), !Ru.global) break;
-                                  "" === Qu[0] && (Eu.lastIndex = Bu(uu, Ru, Eu.lastIndex))
-                                } else Eu.lastIndex = Bu(uu, Ru, Qu.index);
-                              return Ku
-                            }(uu, Ru, yu)
+                              return ak
+                            }(kk, Fk, Bk.notAfter) : function(kk, Fk, Bk) {
+                              const Rk = new RegExp(Fk.source, `${Fk.flags.replace(/[gy]/g,"")}g`),
+                                tk = [];
+                              for (let ak = Rk.exec(kk); ak; ak = Rk.exec(kk))
+                                if (!Bk || Bk(ak)) {
+                                  if (tk.push(ak), !Fk.global) break;
+                                  "" === ak[0] && (Rk.lastIndex = Jk(kk, Fk, Rk.lastIndex))
+                                } else Rk.lastIndex = Jk(kk, Fk, ak.index);
+                              return tk
+                            }(kk, Fk, Bk)
                           }
 
-                          function Vu(uu, Ru, yu, Eu) {
-                            let Ku = "",
-                              Qu = 0;
-                            for (const mu of Xu(uu, Ru, yu)) Ku += uu.slice(Qu, mu.index) + Eu(mu), Qu = mu.index + mu[0].length;
-                            return Ku + uu.slice(Qu)
+                          function sk(kk, Fk, Bk, Rk) {
+                            let tk = "",
+                              ak = 0;
+                            for (const Xk of dk(kk, Fk, Bk)) tk += kk.slice(ak, Xk.index) + Rk(Xk), ak = Xk.index + Xk[0].length;
+                            return tk + kk.slice(ak)
                           }
 
-                          function ru(uu, Ru, yu) {
-                            const Eu = [];
-                            let Ku = 0;
-                            for (const Qu of Xu(uu, Ru, yu)) Eu.push(uu.slice(Ku, Qu.index)), Ku = Qu.index + Qu[0].length;
-                            return [...Eu, uu.slice(Ku)]
+                          function Vk(kk, Fk, Bk) {
+                            const Rk = [];
+                            let tk = 0;
+                            for (const ak of dk(kk, Fk, Bk)) Rk.push(kk.slice(tk, ak.index)), tk = ak.index + ak[0].length;
+                            return [...Rk, kk.slice(tk)]
                           }
 
-                          function Bu(uu, Ru, yu) {
-                            var Eu;
-                            return yu + (Ru.unicode && (null !== (Eu = uu.codePointAt(yu)) && void 0 !== Eu ? Eu : 0) > 65535 ? 2 : 1)
+                          function Jk(kk, Fk, Bk) {
+                            var Rk;
+                            return Bk + (Fk.unicode && (null !== (Rk = kk.codePointAt(Bk)) && void 0 !== Rk ? Rk : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4593: (uu, Ru, yu) => {
-                          yu.d(Ru, {
-                            A: () => xu,
-                            b: () => Ku,
-                            e: () => Nu,
-                            h: () => Qu,
-                            j: () => mu,
-                            m: () => Ju,
-                            q: () => Tu,
-                            u: () => Vu,
-                            w: () => ru,
-                            y: () => pu
+                        }, 4553: (kk, Fk, Bk) => {
+                          Bk.d(Fk, {
+                            A: () => Ak,
+                            c: () => tk,
+                            f: () => wk,
+                            i: () => ak,
+                            j: () => Xk,
+                            k: () => bk,
+                            l: () => fk,
+                            p: () => sk,
+                            t: () => Vk,
+                            w: () => yk
                           });
-                          var Eu = yu(1542);
-                          const Ku = 24e3,
-                            Qu = "/docs/llms.txt",
-                            mu = `${Eu.c}${Qu}`,
-                            Ju = "/llms.txt",
-                            Nu = "/docs/llms-full.txt";
+                          var Rk = Bk(1535);
+                          const tk = 24e3,
+                            ak = "/docs/llms.txt",
+                            Xk = `${Rk.b}${ak}`,
+                            bk = "/llms.txt",
+                            wk = "/docs/llms-full.txt";
 
-                          function Xu(uu) {
-                            return uu || "index"
+                          function dk(kk) {
+                            return kk || "index"
                           }
 
-                          function Vu(uu) {
-                            return `/docs/${Xu(uu)}.md`
+                          function sk(kk) {
+                            return `/docs/${dk(kk)}.md`
                           }
 
-                          function ru(uu, Ru) {
-                            return `/docs/${Xu(uu)}/${Ru+1}.md`
+                          function Vk(kk, Fk) {
+                            return `/docs/${dk(kk)}/${Fk+1}.md`
                           }
-                          const Bu = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const Jk = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function xu(uu) {
-                            const Ru = Bu.exec(uu);
-                            return null === Ru ? null : {
-                              name: Ru[1],
-                              part: void 0 === Ru[2] ? null : Number(Ru[2])
+                          function Ak(kk) {
+                            const Fk = Jk.exec(kk);
+                            return null === Fk ? null : {
+                              name: Fk[1],
+                              part: void 0 === Fk[2] ? null : Number(Fk[2])
                             }
                           }
-                          const Su = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const ek = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function pu(uu) {
-                            const Ru = Su.exec(uu);
-                            if (null === Ru) return null;
-                            const [, yu = "", Eu] = Ru;
-                            return void 0 === Eu ? Vu(yu) : ru(yu, Number(Eu) - 1)
+                          function yk(kk) {
+                            const Fk = ek.exec(kk);
+                            if (null === Fk) return null;
+                            const [, Bk = "", Rk] = Fk;
+                            return void 0 === Rk ? sk(Bk) : Vk(Bk, Number(Rk) - 1)
                           }
 
-                          function Tu(uu) {
-                            return `/docsHtml/${Xu(uu)}.html`
+                          function fk(kk) {
+                            return `/docsHtml/${dk(kk)}.html`
                           }
-                        }, 4617: (uu, Ru, yu) => {
-                          yu.d(Ru, {
-                            c: () => Ku,
-                            d: () => Eu,
-                            g: () => Qu,
-                            k: () => Nu,
-                            m: () => mu
+                        }, 4570: (kk, Fk, Bk) => {
+                          Bk.d(Fk, {
+                            e: () => tk,
+                            i: () => Rk,
+                            j: () => ak,
+                            l: () => wk,
+                            m: () => Xk
                           });
-                          const Eu = ["sine", "triangle", "square", "sawtooth"],
-                            Ku = 55,
-                            Qu = {
+                          const Rk = ["sine", "triangle", "square", "sawtooth"],
+                            tk = 55,
+                            ak = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7214,38 +7214,38 @@ export const modules = {
                               }
                             };
 
-                          function mu(uu) {
-                            return "string" !== typeof uu ? uu : Object.hasOwn(Qu, uu) ? Qu[uu] : null
+                          function Xk(kk) {
+                            return "string" !== typeof kk ? kk : Object.hasOwn(ak, kk) ? ak[kk] : null
                           }
 
-                          function Ju(uu, Ru, yu) {
-                            return Math.min(yu, Math.max(Ru, uu))
+                          function bk(kk, Fk, Bk) {
+                            return Math.min(Bk, Math.max(Fk, kk))
                           }
 
-                          function Nu(uu) {
-                            const Ru = Ju(uu.durationMs, 10, 500),
-                              yu = Ju(uu.attackMs, 0, Ru),
+                          function wk(kk) {
+                            const Fk = bk(kk.durationMs, 10, 500),
+                              Bk = bk(kk.attackMs, 0, Fk),
                               {
-                                intonation: Ku
-                              } = uu;
+                                intonation: tk
+                              } = kk;
                             return {
-                              waveform: Eu.includes(uu.waveform) ? uu.waveform : "sine",
-                              pitchHz: Ju(uu.pitchHz, 20, 4e3),
-                              glideSemitones: Ju(uu.glideSemitones, -24, 24),
-                              durationMs: Ru,
-                              attackMs: yu,
-                              releaseMs: Ju(uu.releaseMs, 0, Ru - yu),
-                              lowpassHz: null === uu.lowpassHz ? null : Ju(uu.lowpassHz, 20, 2e4),
-                              volume: Ju(uu.volume, 0, 2),
+                              waveform: Rk.includes(kk.waveform) ? kk.waveform : "sine",
+                              pitchHz: bk(kk.pitchHz, 20, 4e3),
+                              glideSemitones: bk(kk.glideSemitones, -24, 24),
+                              durationMs: Fk,
+                              attackMs: Bk,
+                              releaseMs: bk(kk.releaseMs, 0, Fk - Bk),
+                              lowpassHz: null === kk.lowpassHz ? null : bk(kk.lowpassHz, 20, 2e4),
+                              volume: bk(kk.volume, 0, 2),
                               intonation: {
-                                variationSemitones: Ju(Ku.variationSemitones, 0, 6),
-                                declineSemitones: Ju(Ku.declineSemitones, 0, 12),
-                                questionRiseSemitones: Ju(Ku.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: Ju(Ku.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: bk(tk.variationSemitones, 0, 6),
+                                declineSemitones: bk(tk.declineSemitones, 0, 12),
+                                questionRiseSemitones: bk(tk.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: bk(tk.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: Ju(uu.syllableMs, 25, 200)
+                              syllableMs: bk(kk.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const uu in modules) Object.freeze(modules[uu]);
+                      for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  4611: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => tu,
-      g: () => su
+  4568: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Gk,
+      h: () => ck
     });
-    var Eu = yu(4617),
-      Ku = yu(330);
-    const Qu = 120,
-      mu = 260,
-      Ju = 1.15,
-      Nu = 1.2,
-      Xu = 2,
-      Vu = 1.08,
-      ru = .8,
-      Bu = .95,
-      xu = 8,
-      Su = "[\"')\\]\u300d\u300f\uff09]*",
-      pu = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Su}$`),
-      Tu = new RegExp(`[?\uff1f]${Su}$`),
-      Wu = new RegExp(`[!\uff01]${Su}$`),
-      ju = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Hu = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      du = new RegExp(`[${Hu}]`),
-      bu = new RegExp(`[${Hu}]|[^${Hu}]+`, "g"),
-      Cu = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Rk = Bk(4570),
+      tk = Bk(279);
+    const ak = 120,
+      Xk = 260,
+      bk = 1.15,
+      wk = 1.2,
+      dk = 2,
+      sk = 1.08,
+      Vk = .8,
+      Jk = .95,
+      Ak = 8,
+      ek = "[\"')\\]\u300d\u300f\uff09]*",
+      yk = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ek}$`),
+      fk = new RegExp(`[?\uff1f]${ek}$`),
+      mk = new RegExp(`[!\uff01]${ek}$`),
+      Wk = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      vk = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      ik = new RegExp(`[${vk}]`),
+      Yk = new RegExp(`[${vk}]|[^${vk}]+`, "g"),
+      Lk = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function ku(uu) {
-      let Ru = 2166136261;
-      for (let yu = 0; yu < uu.length; yu++) Ru ^= uu.charCodeAt(yu), Ru = Math.imul(Ru, 16777619);
-      return (Ru >>> 0) / 4294967295 * 2 - 1
+    function Ok(kk) {
+      let Fk = 2166136261;
+      for (let Bk = 0; Bk < kk.length; Bk++) Fk ^= kk.charCodeAt(Bk), Fk = Math.imul(Fk, 16777619);
+      return (Fk >>> 0) / 4294967295 * 2 - 1
     }
 
-    function eu(uu) {
-      var Ru;
-      if (du.test(uu)) return 1;
-      const yu = uu.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Eu = yu.replace(/[^0-9]/g, "");
-      if (Eu.length > 0 && !/\p{L}/u.test(yu)) return Math.min(Eu.length, 4);
-      const Ku = null !== (Ru = yu.match(Cu)) && void 0 !== Ru ? Ru : [];
-      if (0 === Ku.length) {
-        var Qu, mu;
-        const uu = null !== (Qu = null === (mu = yu.match(/\p{L}/gu)) || void 0 === mu ? void 0 : mu.length) && void 0 !== Qu ? Qu : 0;
-        return 0 === uu ? 0 : Math.min(Math.max(1, Math.round(uu / 2.5)), xu)
+    function Ek(kk) {
+      var Fk;
+      if (ik.test(kk)) return 1;
+      const Bk = kk.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Rk = Bk.replace(/[^0-9]/g, "");
+      if (Rk.length > 0 && !/\p{L}/u.test(Bk)) return Math.min(Rk.length, 4);
+      const tk = null !== (Fk = Bk.match(Lk)) && void 0 !== Fk ? Fk : [];
+      if (0 === tk.length) {
+        var ak, Xk;
+        const kk = null !== (ak = null === (Xk = Bk.match(/\p{L}/gu)) || void 0 === Xk ? void 0 : Xk.length) && void 0 !== ak ? ak : 0;
+        return 0 === kk ? 0 : Math.min(Math.max(1, Math.round(kk / 2.5)), Ak)
       }
-      const Ju = yu.replace(/[^\p{L}]/gu, ""),
-        Nu = Ku.length > 1 && "e" === Ku.at(-1) && Ju.endsWith("e") && !Ju.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(uu.replace(/[^\p{L}]/gu, ""));
-      return Math.min(Ku.length - (Nu ? 1 : 0), xu)
+      const bk = Bk.replace(/[^\p{L}]/gu, ""),
+        wk = tk.length > 1 && "e" === tk.at(-1) && bk.endsWith("e") && !bk.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(kk.replace(/[^\p{L}]/gu, ""));
+      return Math.min(tk.length - (wk ? 1 : 0), Ak)
     }
 
-    function Au(uu) {
-      return uu.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function Sk(kk) {
+      return kk.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Du(uu) {
-      const Ru = uu.replace(/[^\p{L}]/gu, "");
-      return Ru.length >= 2 && Ru === Ru.toUpperCase() && Ru !== Ru.toLowerCase()
+    function Nk(kk) {
+      const Fk = kk.replace(/[^\p{L}]/gu, "");
+      return Fk.length >= 2 && Fk === Fk.toUpperCase() && Fk !== Fk.toLowerCase()
     }
 
-    function Mu(uu, Ru) {
-      var yu;
-      const xu = Ru && (0, Eu.k)(Ru),
-        Su = null !== (yu = null === xu || void 0 === xu ? void 0 : xu.syllableMs) && void 0 !== yu ? yu : Eu.c,
-        Hu = function(uu) {
-          const Ru = [];
-          for (const Eu of (0, Ku.ic)(uu))
-            if ("string" === typeof Eu)
-              for (const uu of Eu.split(/(\s+)/)) {
-                if ("" === uu) continue;
-                if (/^\s+$/.test(uu)) {
-                  Ru.push({
+    function Hk(kk, Fk) {
+      var Bk;
+      const Ak = Fk && (0, Rk.l)(Fk),
+        ek = null !== (Bk = null === Ak || void 0 === Ak ? void 0 : Ak.syllableMs) && void 0 !== Bk ? Bk : Rk.e,
+        vk = function(kk) {
+          const Fk = [];
+          for (const Rk of (0, tk.bc)(kk))
+            if ("string" === typeof Rk)
+              for (const kk of Rk.split(/(\s+)/)) {
+                if ("" === kk) continue;
+                if (/^\s+$/.test(kk)) {
+                  Fk.push({
                     kind: "space",
-                    text: uu
+                    text: kk
                   });
                   continue
                 }
-                if (!du.test(uu)) {
-                  Ru.push({
+                if (!ik.test(kk)) {
+                  Fk.push({
                     kind: "word",
-                    text: uu,
+                    text: kk,
                     delayMs: 0
                   });
                   continue
                 }
-                let Eu = !0;
-                for (const Ku of null !== (yu = uu.match(bu)) && void 0 !== yu ? yu : []) {
-                  var yu;
-                  const uu = Ru.at(-1);
-                  Eu || "word" !== (null === uu || void 0 === uu ? void 0 : uu.kind) || du.test(Ku) || /[\p{L}\p{N}]/u.test(Ku) ? (Eu || Ru.push({
+                let Rk = !0;
+                for (const tk of null !== (Bk = kk.match(Yk)) && void 0 !== Bk ? Bk : []) {
+                  var Bk;
+                  const kk = Fk.at(-1);
+                  Rk || "word" !== (null === kk || void 0 === kk ? void 0 : kk.kind) || ik.test(tk) || /[\p{L}\p{N}]/u.test(tk) ? (Rk || Fk.push({
                     kind: "space",
                     text: "\u200b"
-                  }), Ru.push({
+                  }), Fk.push({
                     kind: "word",
-                    text: Ku,
+                    text: tk,
                     delayMs: 0
-                  }), Eu = !1) : uu.text += Ku
+                  }), Rk = !1) : kk.text += tk
                 }
-              } else Ru.push({
+              } else Fk.push({
                 kind: "icon",
-                text: Eu.icon,
+                text: Rk.icon,
                 delayMs: 0
               });
-          return Ru
-        }(uu),
-        Cu = [];
-      let Mu = [];
-      for (const Eu of Hu) "space" !== Eu.kind && (Mu.push(Eu), pu.test(Eu.text) && (Cu.push(Mu), Mu = []));
-      Cu.push(Mu);
-      const Iu = [];
-      let Gu = 0;
-      for (const Eu of Cu) {
-        var Uu, nu;
-        const uu = null !== (Uu = null === (nu = Eu.at(-1)) || void 0 === nu ? void 0 : nu.text) && void 0 !== Uu ? Uu : "",
-          Ru = Tu.test(uu),
-          yu = Wu.test(uu),
-          Ku = Eu.map((uu => "word" === uu.kind ? eu(uu.text) : 1)),
-          Hu = Ku.findLastIndex((uu => uu > 0));
-        for (const [Tu, Wu] of Eu.entries()) {
-          const uu = "word" === Wu.kind,
-            Eu = Ku[Tu];
-          Wu.delayMs = Gu;
-          for (let Ku = 0; xu && Ku < Eu; Ku++) {
+          return Fk
+        }(kk),
+        Lk = [];
+      let Hk = [];
+      for (const Rk of vk) "space" !== Rk.kind && (Hk.push(Rk), yk.test(Rk.text) && (Lk.push(Hk), Hk = []));
+      Lk.push(Hk);
+      const uk = [];
+      let Mk = 0;
+      for (const Rk of Lk) {
+        var gk, Uk;
+        const kk = null !== (gk = null === (Uk = Rk.at(-1)) || void 0 === Uk ? void 0 : Uk.text) && void 0 !== gk ? gk : "",
+          Fk = fk.test(kk),
+          Bk = mk.test(kk),
+          tk = Rk.map((kk => "word" === kk.kind ? Ek(kk.text) : 1)),
+          vk = tk.findLastIndex((kk => kk > 0));
+        for (const [fk, mk] of Rk.entries()) {
+          const kk = "word" === mk.kind,
+            Rk = tk[fk];
+          mk.delayMs = Mk;
+          for (let tk = 0; Ak && tk < Rk; tk++) {
             const {
-              intonation: Qu
-            } = xu;
-            let mu = Hu > 0 ? -Qu.declineSemitones * (Tu / Hu) : 0;
-            mu += ku(`${Au(Wu.text)}|${Ku}`) * Qu.variationSemitones;
-            const pu = Math.min(1, Qu.variationSemitones);
-            let ju = xu.glideSemitones,
-              du = 1;
-            yu && (mu += Qu.exclaimLiftSemitones, du *= Ju), Ru && Tu === Hu && (mu += Qu.questionRiseSemitones * (Eu > 1 ? .5 + .5 * Ku / (Eu - 1) : 1), Ku === Eu - 1 && (ju = Math.abs(ju) + Qu.questionRiseSemitones / 2)), uu && Du(Wu.text) && (mu += Xu * pu, du *= Nu), Eu > 1 && 0 === Ku && (mu += ru * pu, du *= Vu), Iu.push({
-              atMs: Gu + Ku * Su,
-              semitones: mu,
-              glideSemitones: ju,
-              durationMs: Ku < Eu - 1 ? Math.min(xu.durationMs, Su * Bu) : xu.durationMs,
-              level: du
+              intonation: ak
+            } = Ak;
+            let Xk = vk > 0 ? -ak.declineSemitones * (fk / vk) : 0;
+            Xk += Ok(`${Sk(mk.text)}|${tk}`) * ak.variationSemitones;
+            const yk = Math.min(1, ak.variationSemitones);
+            let Wk = Ak.glideSemitones,
+              ik = 1;
+            Bk && (Xk += ak.exclaimLiftSemitones, ik *= bk), Fk && fk === vk && (Xk += ak.questionRiseSemitones * (Rk > 1 ? .5 + .5 * tk / (Rk - 1) : 1), tk === Rk - 1 && (Wk = Math.abs(Wk) + ak.questionRiseSemitones / 2)), kk && Nk(mk.text) && (Xk += dk * yk, ik *= wk), Rk > 1 && 0 === tk && (Xk += Vk * yk, ik *= sk), uk.push({
+              atMs: Mk + tk * ek,
+              semitones: Xk,
+              glideSemitones: Wk,
+              durationMs: tk < Rk - 1 ? Math.min(Ak.durationMs, ek * Jk) : Ak.durationMs,
+              level: ik
             })
           }
-          Gu += Eu * Su + (pu.test(Wu.text) ? mu : ju.test(Wu.text) ? Qu : 0)
+          Mk += Rk * ek + (yk.test(mk.text) ? Xk : Wk.test(mk.text) ? ak : 0)
         }
       }
       return {
-        pieces: Hu.map((uu => "space" === uu.kind ? uu : "icon" === uu.kind ? {
+        pieces: vk.map((kk => "space" === kk.kind ? kk : "icon" === kk.kind ? {
           kind: "icon",
-          icon: uu.text,
-          delayMs: uu.delayMs
+          icon: kk.text,
+          delayMs: kk.delayMs
         } : {
           kind: "word",
-          text: uu.text,
-          delayMs: uu.delayMs
+          text: kk.text,
+          delayMs: kk.delayMs
         })),
-        blips: Iu
+        blips: uk
       }
     }
-    var Iu = yu(1170),
-      Gu = yu(1224),
-      Uu = yu(1862);
+    var uk = Bk(1149),
+      Mk = Bk(1203),
+      gk = Bk(1849);
 
-    function nu(uu) {
-      if ("string" === typeof uu) return uu;
-      const Ru = Gu.f.get().getCurrentLanguageCode();
-      return (0, Iu.q)(Ru, uu.translationKey, (0, Iu.o)(uu.params, Uu.d.shown))
+    function Uk(kk) {
+      if ("string" === typeof kk) return kk;
+      const Fk = Mk.c.get().getCurrentLanguageCode();
+      return (0, uk.m)(Fk, kk.translationKey, (0, uk.k)(kk.params, gk.b.shown))
     }
 
-    function su(uu) {
-      const Ru = void 0 === uu.voice ? null : (0, Eu.m)(uu.voice),
-        yu = Ru && (0, Eu.k)(Ru);
+    function ck(kk) {
+      const Fk = void 0 === kk.voice ? null : (0, Rk.m)(kk.voice),
+        Bk = Fk && (0, Rk.l)(Fk);
       return {
-        plan: Mu(nu(uu.line), yu),
-        synth: yu
+        plan: Hk(Uk(kk.line), Bk),
+        synth: Bk
       }
     }
 
-    function tu(uu) {
-      const Ru = [];
-      let yu = [];
-      for (const [Ku, Qu] of uu.entries()) {
-        var Eu;
-        "space" === Qu.kind && (" " !== Qu.text || "icon" !== (null === (Eu = uu[Ku + 1]) || void 0 === Eu ? void 0 : Eu.kind)) ? (yu.length > 0 && Ru.push(yu), Ru.push([Qu]), yu = []) : yu.push(Qu)
+    function Gk(kk) {
+      const Fk = [];
+      let Bk = [];
+      for (const [tk, ak] of kk.entries()) {
+        var Rk;
+        "space" === ak.kind && (" " !== ak.text || "icon" !== (null === (Rk = kk[tk + 1]) || void 0 === Rk ? void 0 : Rk.kind)) ? (Bk.length > 0 && Fk.push(Bk), Fk.push([ak]), Bk = []) : Bk.push(ak)
       }
-      return yu.length > 0 && Ru.push(yu), Ru
+      return Bk.length > 0 && Fk.push(Bk), Fk
     }
   },
-  4626: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Vu,
-      h: () => ru
+  4573: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => sk,
+      f: () => Vk
     });
-    var Eu = yu(4630),
-      Ku = yu(27);
-    const Qu = .25,
-      mu = .85,
-      Ju = .02,
-      Nu = .01;
+    var Rk = Bk(4575),
+      tk = Bk(22);
+    const ak = .25,
+      Xk = .85,
+      bk = .02,
+      wk = .01;
 
-    function Xu(uu, Ru, yu, Eu, Ku, Qu, Ju) {
+    function dk(kk, Fk, Bk, Rk, tk, ak, bk) {
       const {
-        waveform: Nu,
-        pitchHz: Xu,
-        attackMs: Vu,
-        releaseMs: ru,
-        lowpassHz: Bu
-      } = yu, xu = Ku + Eu.durationMs / 1e3, Su = Xu * 2 ** (Eu.semitones / 12), pu = uu.createOscillator();
-      pu.type = Nu, pu.frequency.setValueAtTime(Su, Ku), pu.frequency.exponentialRampToValueAtTime(Su * 2 ** (Eu.glideSemitones / 12), xu);
-      const Tu = Ku + Math.min(Vu, Eu.durationMs) / 1e3,
-        Wu = uu.createGain();
-      Wu.gain.setValueAtTime(0, Ku), Wu.gain.linearRampToValueAtTime(Qu, Tu), Wu.gain.linearRampToValueAtTime(Qu * mu, Math.max(Tu, xu - ru / 1e3)), Wu.gain.linearRampToValueAtTime(0, xu);
-      const ju = [pu];
-      if (null !== Bu) {
-        const Ru = uu.createBiquadFilter();
-        Ru.type = "lowpass", Ru.frequency.value = Bu, ju.push(Ru)
+        waveform: wk,
+        pitchHz: dk,
+        attackMs: sk,
+        releaseMs: Vk,
+        lowpassHz: Jk
+      } = Bk, Ak = tk + Rk.durationMs / 1e3, ek = dk * 2 ** (Rk.semitones / 12), yk = kk.createOscillator();
+      yk.type = wk, yk.frequency.setValueAtTime(ek, tk), yk.frequency.exponentialRampToValueAtTime(ek * 2 ** (Rk.glideSemitones / 12), Ak);
+      const fk = tk + Math.min(sk, Rk.durationMs) / 1e3,
+        mk = kk.createGain();
+      mk.gain.setValueAtTime(0, tk), mk.gain.linearRampToValueAtTime(ak, fk), mk.gain.linearRampToValueAtTime(ak * Xk, Math.max(fk, Ak - Vk / 1e3)), mk.gain.linearRampToValueAtTime(0, Ak);
+      const Wk = [yk];
+      if (null !== Jk) {
+        const Fk = kk.createBiquadFilter();
+        Fk.type = "lowpass", Fk.frequency.value = Jk, Wk.push(Fk)
       }
-      ju.push(Wu, Ru);
-      for (let mu = 1; mu < ju.length; mu++) ju[mu - 1].connect(ju[mu]);
-      return pu.onended = () => {
-        for (const uu of ju.slice(0, -1)) uu.disconnect();
-        Ju()
-      }, pu.start(Ku), pu.stop(xu), pu
+      Wk.push(mk, Fk);
+      for (let Xk = 1; Xk < Wk.length; Xk++) Wk[Xk - 1].connect(Wk[Xk]);
+      return yk.onended = () => {
+        for (const kk of Wk.slice(0, -1)) kk.disconnect();
+        bk()
+      }, yk.start(tk), yk.stop(Ak), yk
     }
 
-    function Vu(uu, Ru, yu, Eu, Ku, mu) {
-      if (0 === Eu.length) return mu(), () => {};
-      const Vu = Qu * yu.volume * Ku,
-        ru = uu.createGain();
-      ru.connect(Ru);
-      const Bu = uu.currentTime + Ju,
-        xu = new Set;
-      for (const Qu of Eu) {
-        const Ru = Xu(uu, ru, yu, Qu, Bu + Qu.atMs / 1e3, Vu * Qu.level, (() => {
-          xu.delete(Ru), 0 === xu.size && (ru.disconnect(), mu())
+    function sk(kk, Fk, Bk, Rk, tk, Xk) {
+      if (0 === Rk.length) return Xk(), () => {};
+      const sk = ak * Bk.volume * tk,
+        Vk = kk.createGain();
+      Vk.connect(Fk);
+      const Jk = kk.currentTime + bk,
+        Ak = new Set;
+      for (const ak of Rk) {
+        const Fk = dk(kk, Vk, Bk, ak, Jk + ak.atMs / 1e3, sk * ak.level, (() => {
+          Ak.delete(Fk), 0 === Ak.size && (Vk.disconnect(), Xk())
         }));
-        xu.add(Ru)
+        Ak.add(Fk)
       }
       return () => {
-        const Ru = uu.currentTime;
-        ru.gain.setTargetAtTime(0, Ru, Nu);
-        for (const uu of xu) try {
-          uu.stop(Ru + 5 * Nu)
+        const Fk = kk.currentTime;
+        Vk.gain.setTargetAtTime(0, Fk, wk);
+        for (const kk of Ak) try {
+          kk.stop(Fk + 5 * wk)
         } catch {}
       }
     }
 
-    function ru(uu, Ru) {
-      var yu;
-      const Qu = Eu.Howler.ctx,
-        mu = Eu.Howler.masterGain;
-      if (!Qu || !mu || !Ku.d.get("soundOnFromAd")) return () => {};
-      const Ju = Eu.Howler;
-      return null === (yu = Ju._autoResume) || void 0 === yu || yu.call(Ju), Vu(Qu, mu, uu, Ru, Ku.d.get("soundVolume"), (() => {
-        var uu;
-        null === (uu = Ju._autoSuspend) || void 0 === uu || uu.call(Ju)
+    function Vk(kk, Fk) {
+      var Bk;
+      const ak = Rk.Howler.ctx,
+        Xk = Rk.Howler.masterGain;
+      if (!ak || !Xk || !tk.c.get("soundOnFromAd")) return () => {};
+      const bk = Rk.Howler;
+      return null === (Bk = bk._autoResume) || void 0 === Bk || Bk.call(bk), sk(ak, Xk, kk, Fk, tk.c.get("soundVolume"), (() => {
+        var kk;
+        null === (kk = bk._autoSuspend) || void 0 === kk || kk.call(bk)
       }))
     }
   },
-  38884: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      closeClientGame: () => lu,
-      createDefaultClientPlugins: () => tu
+  38763: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      closeClientGame: () => Tk,
+      createDefaultClientPlugins: () => Gk
     });
-    var Eu = yu(343);
+    var Rk = Bk(291);
 
-    function Ku() {
-      let uu;
+    function tk() {
+      let kk;
       return {
-        onCreate(Ru) {
-          uu = Ru
+        onCreate(Fk) {
+          kk = Fk
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(Ru, yu, Ku, Qu, mu, Ju) {
-          var Nu, Xu;
-          if ("Iron Chest" !== uu.getMetaInfo(mu).rootName) return;
-          if (!uu.hasEffect(Ru, "Thief")) return;
-          const Vu = uu.getBlockData(yu, Ku, Qu);
-          return uu.getPlayerDbId(Ru) !== (null === Vu || void 0 === Vu || null === (Nu = Vu.persisted) || void 0 === Nu || null === (Xu = Nu.shared) || void 0 === Xu ? void 0 : Xu.ownerDbId) ? (uu.sendMessage(Ru, [{
+        onPlayerAttemptAltAction(Fk, Bk, tk, ak, Xk, bk) {
+          var wk, dk;
+          if ("Iron Chest" !== kk.getMetaInfo(Xk).rootName) return;
+          if (!kk.hasEffect(Fk, "Thief")) return;
+          const sk = kk.getBlockData(Bk, tk, ak);
+          return kk.getPlayerDbId(Fk) !== (null === sk || void 0 === sk || null === (wk = sk.persisted) || void 0 === wk || null === (dk = wk.shared) || void 0 === dk ? void 0 : dk.ownerDbId) ? (kk.sendMessage(Fk, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: Eu.L.redUiText
+              color: Rk.N.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var Qu = yu(4053),
-      mu = yu(1215);
-    const Ju = 8.4,
-      Nu = 1e-4,
-      Xu = .15,
-      Vu = .04,
-      ru = [.12, .04, .12],
-      Bu = 26,
-      xu = {
+    var ak = Bk(4002),
+      Xk = Bk(1192);
+    const bk = 8.4,
+      wk = 1e-4,
+      dk = .15,
+      sk = .04,
+      Vk = [.12, .04, .12],
+      Jk = 26,
+      Ak = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        Nr: 1,
-        minLifeTime: Nu,
-        maxLifeTime: Nu,
+        KV: 1,
+        minLifeTime: wk,
+        maxLifeTime: wk,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: Qu.g.Standard
+        blendMode: ak.d.Standard
       },
-      Su = {
+      ek = {
         texture: "bubble",
         mipmaps: !1,
-        Nr: 96,
+        KV: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: Bu,
+        emitRate: Jk,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: Qu.g.Standard
+        blendMode: ak.d.Standard
       },
-      pu = [0, 0, 0],
-      Tu = [0, 0, 0];
+      yk = [0, 0, 0],
+      fk = [0, 0, 0];
 
-    function Wu(uu) {
-      const Ru = new Map;
-      let yu = null;
+    function mk(kk) {
+      const Fk = new Map;
+      let Bk = null;
 
-      function Eu(uu) {
-        var Ru, yu;
-        null === (Ru = uu.bubbles) || void 0 === Ru || Ru.stop(), null === (yu = uu.fish) || void 0 === yu || yu.stop()
+      function Rk(kk) {
+        var Fk, Bk;
+        null === (Fk = kk.bubbles) || void 0 === Fk || Fk.stop(), null === (Bk = kk.fish) || void 0 === Bk || Bk.stop()
       }
 
-      function Ku(yu) {
-        if (!yu.readDrawnPosition(uu, Tu)) {
-          for (const uu of Ru.values()) {
-            var Eu;
-            null === (Eu = uu.bubbles) || void 0 === Eu || Eu.setEmitRate(0)
+      function tk(Bk) {
+        if (!Bk.readDrawnPosition(kk, fk)) {
+          for (const kk of Fk.values()) {
+            var Rk;
+            null === (Rk = kk.bubbles) || void 0 === Rk || Rk.setEmitRate(0)
           }
           return
         }
-        const Ku = performance.now();
-        for (const [uu, mu] of Ru) {
-          var Qu;
-          if (null === (Qu = mu.bubbles) || void 0 === Qu || Qu.setEmitRate(0), !yu.readDrawnPosition(uu, pu)) continue;
-          if (!((pu[0] - Tu[0]) ** 2 + (pu[1] - Tu[1]) ** 2 + (pu[2] - Tu[2]) ** 2 < 900)) continue;
-          const Ru = Math.max(0, mu.biteAt - Ku),
-            Eu = mu.approachDurationMs > 0 ? Math.min(1, 1 - Ru / mu.approachDurationMs) : 1,
-            Nu = (mu.approachDurationMs - Ru) / 1e3,
-            Wu = mu.phase + .25 * Math.sin(1.7 * Nu + mu.phase),
-            ju = Math.min(mu.approachDurationMs / 3e3 * 2.8, Ju) * (1 - Eu) * (1 + .15 * Math.sin(2.1 * Nu + mu.phase)),
-            Hu = Math.min(1, 4 * (1 - Eu)),
-            du = (.45 * Math.sin(4.1 * Nu + mu.phase) + .18 * Math.sin(9.7 * Nu + 2 * mu.phase)) * Hu,
-            bu = pu[0] + Math.cos(Wu) * ju - Math.sin(Wu) * du,
-            Cu = Math.ceil(mu.surfaceY),
-            ku = pu[2] + Math.sin(Wu) * ju + Math.cos(Wu) * du,
+        const tk = performance.now();
+        for (const [kk, Xk] of Fk) {
+          var ak;
+          if (null === (ak = Xk.bubbles) || void 0 === ak || ak.setEmitRate(0), !Bk.readDrawnPosition(kk, yk)) continue;
+          if (!((yk[0] - fk[0]) ** 2 + (yk[1] - fk[1]) ** 2 + (yk[2] - fk[2]) ** 2 < 900)) continue;
+          const Fk = Math.max(0, Xk.biteAt - tk),
+            Rk = Xk.approachDurationMs > 0 ? Math.min(1, 1 - Fk / Xk.approachDurationMs) : 1,
+            wk = (Xk.approachDurationMs - Fk) / 1e3,
+            mk = Xk.phase + .25 * Math.sin(1.7 * wk + Xk.phase),
+            Wk = Math.min(Xk.approachDurationMs / 3e3 * 2.8, bk) * (1 - Rk) * (1 + .15 * Math.sin(2.1 * wk + Xk.phase)),
+            vk = Math.min(1, 4 * (1 - Rk)),
+            ik = (.45 * Math.sin(4.1 * wk + Xk.phase) + .18 * Math.sin(9.7 * wk + 2 * Xk.phase)) * vk,
+            Yk = yk[0] + Math.cos(mk) * Wk - Math.sin(mk) * ik,
+            Lk = Math.ceil(Xk.surfaceY),
+            Ok = yk[2] + Math.sin(mk) * Wk + Math.cos(mk) * ik,
             {
-              fishAt: eu,
-              bubblesAt: Au
-            } = mu;
-          eu[0] = Au[0] = bu, eu[1] = Cu + Xu, Au[1] = Cu + Vu, eu[2] = Au[2] = ku, mu.fish ??= yu.createParticles(xu, {
-            pos: eu
-          }), mu.fish.moveTo(eu), mu.fish.emit(1), mu.bubbles ??= yu.createParticles(Su, {
-            pos: Au,
-            half: ru
-          }), mu.bubbles.moveTo(Au), mu.bubbles.setEmitRate(Bu + 32 * (.5 + .5 * Math.sin(9 * Nu + mu.phase)) ** 4 + 13 * Eu)
+              fishAt: Ek,
+              bubblesAt: Sk
+            } = Xk;
+          Ek[0] = Sk[0] = Yk, Ek[1] = Lk + dk, Sk[1] = Lk + sk, Ek[2] = Sk[2] = Ok, Xk.fish ??= Bk.createParticles(Ak, {
+            pos: Ek
+          }), Xk.fish.moveTo(Ek), Xk.fish.emit(1), Xk.bubbles ??= Bk.createParticles(ek, {
+            pos: Sk,
+            half: Vk
+          }), Xk.bubbles.moveTo(Sk), Xk.bubbles.setEmitRate(Jk + 32 * (.5 + .5 * Math.sin(9 * wk + Xk.phase)) ** 4 + 13 * Rk)
         }
       }
       return {
-        onCreate(uu) {
-          yu = uu
+        onCreate(kk) {
+          Bk = kk
         },
         onAfterRender() {
-          yu && Ku(yu)
+          Bk && tk(Bk)
         },
         onClose() {
-          for (const uu of Ru.values()) Eu(uu);
-          Ru.clear(), yu = null
+          for (const kk of Fk.values()) Rk(kk);
+          Fk.clear(), Bk = null
         },
-        onReceivedMessageFromServer(uu, yu) {
-          if (uu !== mu.D) return;
+        onReceivedMessageFromServer(kk, Bk) {
+          if (kk !== Xk.x) return;
           const {
-            hookId: Ku,
-            waiting: Qu
-          } = yu;
-          if (Qu) Ru.has(Ku) || Ru.set(Ku, {
+            hookId: tk,
+            waiting: ak
+          } = Bk;
+          if (ak) Fk.has(tk) || Fk.set(tk, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + Qu.remainingMs,
-            approachDurationMs: Qu.durationMs,
-            surfaceY: Qu.surfaceY,
+            biteAt: performance.now() + ak.remainingMs,
+            approachDurationMs: ak.durationMs,
+            surfaceY: ak.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const uu = Ru.get(Ku);
-            uu && Eu(uu), Ru.delete(Ku)
+            const kk = Fk.get(tk);
+            kk && Rk(kk), Fk.delete(tk)
           }
         }
       }
     }
-    var ju = yu(4626),
-      Hu = yu(4611);
+    var Wk = Bk(4573),
+      vk = Bk(4568);
 
-    function du(uu) {
-      let Ru, yu = null,
-        Eu = null;
-      const Ku = () => {
-        var uu;
-        null === (uu = Eu) || void 0 === uu || uu(), Eu = null
+    function ik(kk) {
+      let Fk, Bk = null,
+        Rk = null;
+      const tk = () => {
+        var kk;
+        null === (kk = Rk) || void 0 === kk || kk(), Rk = null
       };
       return {
-        onCreate(Eu) {
-          Ru = Eu, yu = Ru.getClientOption(uu, "dialogue")
+        onCreate(Rk) {
+          Fk = Rk, Bk = Fk.getClientOption(kk, "dialogue")
         },
         onAfterRender() {
-          if (!Ru) return;
-          const Qu = Ru.getClientOption(uu, "dialogue");
-          if (Qu === yu) return;
-          if (yu = Qu, Ku(), !Qu || !1 === Qu.animateIn) return;
+          if (!Fk) return;
+          const ak = Fk.getClientOption(kk, "dialogue");
+          if (ak === Bk) return;
+          if (Bk = ak, tk(), !ak || !1 === ak.animateIn) return;
           const {
-            plan: mu,
-            synth: Ju
-          } = (0, Hu.g)(Qu);
-          Ju && (Eu = (0, ju.h)(Ju, mu.blips))
+            plan: Xk,
+            synth: bk
+          } = (0, vk.h)(ak);
+          bk && (Rk = (0, Wk.f)(bk, Xk.blips))
         },
-        onClose: Ku
+        onClose: tk
       }
     }
-    var bu = yu(38891);
-    const Cu = [
+    var Yk = Bk(38766);
+    const Lk = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      ku = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      eu = [0, 1, 2, 0, 2, 3];
+      Ok = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      Ek = [0, 1, 2, 0, 2, 3];
 
-    function Au(uu, Ru, yu) {
-      var Eu;
-      let [Ku, Qu, mu] = Ru;
-      if (uu.hasPackModel("Furnace")) return null;
-      const Ju = ((null !== (Eu = uu.getMetaInfo(yu).rot) && void 0 !== Eu ? Eu : 1) - 1) * Math.PI / 2,
-        Nu = Math.PI + Ju,
-        Xu = Math.cos(Nu),
-        Vu = Math.sin(Nu),
-        ru = [];
-      for (const [Su, pu] of Cu) ru.push(Su * Xu, pu, -Su * Vu);
-      const Bu = {
-          positions: ru,
-          indices: eu,
-          uvs: ku
+    function Sk(kk, Fk, Bk) {
+      var Rk;
+      let [tk, ak, Xk] = Fk;
+      if (kk.hasPackModel("Furnace")) return null;
+      const bk = ((null !== (Rk = kk.getMetaInfo(Bk).rot) && void 0 !== Rk ? Rk : 1) - 1) * Math.PI / 2,
+        wk = Math.PI + bk,
+        dk = Math.cos(wk),
+        sk = Math.sin(wk),
+        Vk = [];
+      for (const [ek, yk] of Lk) Vk.push(ek * dk, yk, -ek * sk);
+      const Jk = {
+          positions: Vk,
+          indices: Ek,
+          uvs: Ok
         },
-        xu = [Ku + .5 + .51 * Math.sin(Ju), Qu + .375, mu + .5 + .51 * Math.cos(Ju)];
-      return uu.createGameMesh(Bu, {
+        Ak = [tk + .5 + .51 * Math.sin(bk), ak + .375, Xk + .5 + .51 * Math.cos(bk)];
+      return kk.createGameMesh(Jk, {
         kind: "furnaceFire"
-      }, xu)
+      }, Ak)
     }
 
-    function Du(uu) {
-      return Math.floor(uu / 200) % 3
+    function Nk(kk) {
+      return Math.floor(kk / 200) % 3
     }
 
-    function Mu(uu, Ru, yu) {
-      uu.setGameMesh(Ru, {
-        uvOffset: [0, yu / 3]
+    function Hk(kk, Fk, Bk) {
+      kk.setGameMesh(Fk, {
+        uvOffset: [0, Bk / 3]
       })
     }
-    const Iu = [.12, .025, .12],
-      Gu = [{
+    const uk = [.12, .025, .12],
+      Mk = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: Qu.g.Standard,
+          blendMode: ak.d.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: Qu.g.Add,
+          blendMode: ak.d.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class Uu {
+    class gk {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(uu, Ru) {
-        const yu = uu.getBlockId(Ru[0], Ru[1], Ru[2]);
-        if ("Furnace" !== uu.getMetaInfo(yu).rootName) return;
-        const Eu = performance.now();
-        let Ku = this.smokes.find((uu => uu.pos[0] === Ru[0] && uu.pos[1] === Ru[1] && uu.pos[2] === Ru[2] && uu.yV === yu));
-        if (Ku || (Ku = {
-            pos: [Ru[0], Ru[1], Ru[2]],
-            yV: yu,
-            endMs: Eu,
+      start(kk, Fk) {
+        const Bk = kk.getBlockId(Fk[0], Fk[1], Fk[2]);
+        if ("Furnace" !== kk.getMetaInfo(Bk).rootName) return;
+        const Rk = performance.now();
+        let tk = this.smokes.find((kk => kk.pos[0] === Fk[0] && kk.pos[1] === Fk[1] && kk.pos[2] === Fk[2] && kk.Ts === Bk));
+        if (tk || (tk = {
+            pos: [Fk[0], Fk[1], Fk[2]],
+            Ts: Bk,
+            endMs: Rk,
             lastBurstMs: -1 / 0,
-            pending: new Array(Gu.length).fill(0),
-            fire: Au(uu, Ru, yu)
-          }, this.smokes.push(Ku), null !== Ku.fire && (Mu(uu, Ku.fire, Du(Eu)), this.shownFireFrame = -1)), Ku.endMs = Eu + 6e3, this.smokes.length > 4) {
-          const Ru = this.smokes.reduce(((uu, Ru) => Ru.endMs < uu.endMs ? Ru : uu));
-          nu(uu, Ru), this.smokes.splice(this.smokes.indexOf(Ru), 1)
+            pending: new Array(Mk.length).fill(0),
+            fire: Sk(kk, Fk, Bk)
+          }, this.smokes.push(tk), null !== tk.fire && (Hk(kk, tk.fire, Nk(Rk)), this.shownFireFrame = -1)), tk.endMs = Rk + 6e3, this.smokes.length > 4) {
+          const Fk = this.smokes.reduce(((kk, Fk) => Fk.endMs < kk.endMs ? Fk : kk));
+          Uk(kk, Fk), this.smokes.splice(this.smokes.indexOf(Fk), 1)
         }
-        Eu - Ku.lastBurstMs >= 300 && (Ku.lastBurstMs = Eu, Gu.forEach(((uu, Ru) => {
-          Ku.pending[Ru] += uu.style.count
+        Rk - tk.lastBurstMs >= 300 && (tk.lastBurstMs = Rk, Mk.forEach(((kk, Fk) => {
+          tk.pending[Fk] += kk.style.count
         })))
       }
-      onAfterRender(uu, Ru) {
+      onAfterRender(kk, Fk) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const yu = performance.now();
-        this.smokes = this.smokes.filter((Ru => {
-          const [Eu, Ku, Qu] = Ru.pos, mu = yu < Ru.endMs && uu.getBlockId(Eu, Ku, Qu) === Ru.yV;
-          return mu || nu(uu, Ru), mu
+        const Bk = performance.now();
+        this.smokes = this.smokes.filter((Fk => {
+          const [Rk, tk, ak] = Fk.pos, Xk = Bk < Fk.endMs && kk.getBlockId(Rk, tk, ak) === Fk.Ts;
+          return Xk || Uk(kk, Fk), Xk
         }));
-        const Eu = Du(yu);
-        if (Eu !== this.shownFireFrame) {
-          this.shownFireFrame = Eu;
-          for (const Ru of this.smokes) null !== Ru.fire && Mu(uu, Ru.fire, Eu)
+        const Rk = Nk(Bk);
+        if (Rk !== this.shownFireFrame) {
+          this.shownFireFrame = Rk;
+          for (const Fk of this.smokes) null !== Fk.fire && Hk(kk, Fk.fire, Rk)
         }
-        if (!uu.particlesEnabled()) {
-          for (const uu of this.smokes) uu.pending.fill(0);
+        if (!kk.particlesEnabled()) {
+          for (const kk of this.smokes) kk.pending.fill(0);
           return
         }
-        const Ku = Math.min(Ru, 250) / 1e3;
-        for (const Qu of this.smokes) {
-          const [Ru, Eu, mu] = Qu.pos;
-          if (0 !== uu.getBlockId(Ru, Eu + 1, mu)) {
-            Qu.pending.fill(0);
+        const tk = Math.min(Fk, 250) / 1e3;
+        for (const ak of this.smokes) {
+          const [Fk, Rk, Xk] = ak.pos;
+          if (0 !== kk.getBlockId(Fk, Rk + 1, Xk)) {
+            ak.pending.fill(0);
             continue
           }
-          const Ju = (Qu.endMs - yu) / 6e3,
-            Nu = this.centre;
-          Nu[0] = Ru + .5, Nu[1] = Eu + 1.275, Nu[2] = mu + .5, Gu.forEach(((Ru, yu) => {
-            Qu.pending[yu] += Ru.perSecond * Ju * Ku;
-            const Eu = Math.floor(Qu.pending[yu]);
-            Eu > 0 && this.emit(uu, yu, Nu, Eu) && (Qu.pending[yu] -= Eu)
+          const bk = (ak.endMs - Bk) / 6e3,
+            wk = this.centre;
+          wk[0] = Fk + .5, wk[1] = Rk + 1.275, wk[2] = Xk + .5, Mk.forEach(((Fk, Bk) => {
+            ak.pending[Bk] += Fk.perSecond * bk * tk;
+            const Rk = Math.floor(ak.pending[Bk]);
+            Rk > 0 && this.emit(kk, Bk, wk, Rk) && (ak.pending[Bk] -= Rk)
           }))
         }
       }
-      dispose(uu) {
-        for (const yu of this.smokes) nu(uu, yu);
+      dispose(kk) {
+        for (const Bk of this.smokes) Uk(kk, Bk);
         this.smokes = [];
-        for (const yu of null !== (Ru = this.puffers) && void 0 !== Ru ? Ru : []) {
-          var Ru;
-          yu.dispose()
+        for (const Bk of null !== (Fk = this.puffers) && void 0 !== Fk ? Fk : []) {
+          var Fk;
+          Bk.dispose()
         }
         this.puffers = null
       }
-      emit(uu, Ru, yu, Eu) {
-        return this.puffers ??= Gu.map((uu => {
+      emit(kk, Fk, Bk, Rk) {
+        return this.puffers ??= Mk.map((kk => {
           let {
-            style: Ru,
-            perSecond: yu
-          } = uu;
-          const Eu = (Ru.count / .3 + yu) * Ru.life[1];
-          return new bu.h(Ru, Math.ceil(4 * Eu), Iu)
-        })), this.puffers[Ru].emit(uu, yu, this.renderFrame, Eu)
+            style: Fk,
+            perSecond: Bk
+          } = kk;
+          const Rk = (Fk.count / .3 + Bk) * Fk.life[1];
+          return new Yk.e(Fk, Math.ceil(4 * Rk), uk)
+        })), this.puffers[Fk].emit(kk, Bk, this.renderFrame, Rk)
       }
     }
 
-    function nu(uu, Ru) {
-      null !== Ru.fire && (uu.disposeGameMesh(Ru.fire), Ru.fire = null)
+    function Uk(kk, Fk) {
+      null !== Fk.fire && (kk.disposeGameMesh(Fk.fire), Fk.fire = null)
     }
 
-    function su() {
-      let uu;
-      const Ru = new Uu;
+    function ck() {
+      let kk;
+      const Fk = new gk;
       return {
-        onCreate(Ru) {
-          uu = Ru
+        onCreate(Fk) {
+          kk = Fk
         },
-        onReceivedMessageFromServer(yu, Eu) {
-          yu === mu.F && Ru.start(uu, Eu)
+        onReceivedMessageFromServer(Bk, Rk) {
+          Bk === Xk.y && Fk.start(kk, Rk)
         },
-        onAfterRender(yu) {
-          Ru.onAfterRender(uu, yu)
+        onAfterRender(Bk) {
+          Fk.onAfterRender(kk, Bk)
         },
         onClose() {
-          Ru.dispose(uu)
+          Fk.dispose(kk)
         }
       }
     }
 
-    function tu(uu, Ru, yu, Eu) {
+    function Gk(kk, Fk, Bk, Rk) {
       return {
-        dialogue: du(Eu.localPlayerId),
-        fishing: Wu(Eu.localPlayerId),
-        furnaceSmoke: su(),
-        ironChest: Ku()
+        dialogue: ik(Rk.localPlayerId),
+        fishing: mk(Rk.localPlayerId),
+        furnaceSmoke: ck(),
+        ironChest: tk()
       }
     }
 
-    function lu(uu, Ru) {
-      for (const Ku of [uu, ...null !== Ru && void 0 !== Ru ? Ru : []]) try {
-        var yu;
-        null === Ku || void 0 === Ku || null === (yu = Ku.onClose) || void 0 === yu || yu.call(Ku)
-      } catch (Eu) {
-        console.error("Error in client onClose callback", Eu)
+    function Tk(kk, Fk) {
+      for (const tk of [kk, ...null !== Fk && void 0 !== Fk ? Fk : []]) try {
+        var Bk;
+        null === tk || void 0 === tk || null === (Bk = tk.onClose) || void 0 === Bk || Bk.call(tk)
+      } catch (Rk) {
+        console.error("Error in client onClose callback", Rk)
       }
     }
   },
-  38891: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Eu,
-      h: () => Qu
+  38766: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Rk,
+      e: () => ak
     });
-    const Eu = 1 / .6,
-      Ku = {
+    const Rk = 1 / .6,
+      tk = {
         kind: "smokePuff"
       };
-    class Qu {
-      constructor(uu, Ru, yu) {
-        this.style = uu, this.Nr = Ru, this.half = yu, this.particles = null, this.lastFrame = -1
+    class ak {
+      constructor(kk, Fk, Bk) {
+        this.style = kk, this.KV = Fk, this.half = Bk, this.particles = null, this.lastFrame = -1
       }
-      emit(uu, Ru, yu) {
-        let Qu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return yu !== this.lastFrame && (this.lastFrame = yu, this.particles || (this.particles = uu.createParticles(function(uu, Ru) {
+      emit(kk, Fk, Bk) {
+        let ak = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return Bk !== this.lastFrame && (this.lastFrame = Bk, this.particles || (this.particles = kk.createParticles(function(kk, Fk) {
           const [
-            [yu, Qu, mu],
-            [Ju, Nu, Xu]
-          ] = uu.colours;
+            [Bk, ak, Xk],
+            [bk, wk, dk]
+          ] = kk.colours;
           return {
-            texture: uu.soft ? Ku : "square_particle",
-            Nr: Ru,
-            minLifeTime: uu.life[0] / Eu,
-            maxLifeTime: uu.life[1] / Eu,
-            minEmitPower: uu.power[0] * Eu,
-            maxEmitPower: uu.power[1] * Eu,
-            minSize: uu.size[0],
-            maxSize: uu.size[1],
+            texture: kk.soft ? tk : "square_particle",
+            KV: Fk,
+            minLifeTime: kk.life[0] / Rk,
+            maxLifeTime: kk.life[1] / Rk,
+            minEmitPower: kk.power[0] * Rk,
+            maxEmitPower: kk.power[1] * Rk,
+            minSize: kk.size[0],
+            maxSize: kk.size[1],
             emitRate: 0,
-            gravity: [0, uu.lift * Eu * Eu, 0],
-            dir1: [-uu.spread, 1, -uu.spread],
-            dir2: [uu.spread, 1, uu.spread],
+            gravity: [0, kk.lift * Rk * Rk, 0],
+            dir1: [-kk.spread, 1, -kk.spread],
+            dir2: [kk.spread, 1, kk.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [yu, Qu, mu, uu.alpha],
-              maxColor: [Ju, Nu, Xu, uu.alpha]
+              minColor: [Bk, ak, Xk, kk.alpha],
+              maxColor: [bk, wk, dk, kk.alpha]
             }, {
               timeFraction: 1,
-              minColor: [yu, Qu, mu, 0],
-              maxColor: [Ju, Nu, Xu, 0]
+              minColor: [Bk, ak, Xk, 0],
+              maxColor: [bk, wk, dk, 0]
             }],
-            blendMode: uu.blendMode
+            blendMode: kk.blendMode
           }
-        }(this.style, this.Nr), {
-          pos: Ru,
+        }(this.style, this.KV), {
+          pos: Fk,
           half: this.half
-        })), this.particles.moveTo(Ru, this.half), this.particles.emit(Qu), !0)
+        })), this.particles.moveTo(Fk, this.half), this.particles.emit(ak), !0)
       }
       dispose() {
-        var uu;
-        null === (uu = this.particles) || void 0 === uu || uu.stop(), this.particles = null
+        var kk;
+        null === (kk = this.particles) || void 0 === kk || kk.stop(), this.particles = null
       }
     }
   },
-  4617: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ku,
-      d: () => Eu,
-      g: () => Qu,
-      k: () => Nu,
-      m: () => mu
+  4570: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => tk,
+      i: () => Rk,
+      j: () => ak,
+      l: () => wk,
+      m: () => Xk
     });
-    const Eu = ["sine", "triangle", "square", "sawtooth"],
-      Ku = 55,
-      Qu = {
+    const Rk = ["sine", "triangle", "square", "sawtooth"],
+      tk = 55,
+      ak = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function mu(uu) {
-      return "string" !== typeof uu ? uu : Object.hasOwn(Qu, uu) ? Qu[uu] : null
+    function Xk(kk) {
+      return "string" !== typeof kk ? kk : Object.hasOwn(ak, kk) ? ak[kk] : null
     }
 
-    function Ju(uu, Ru, yu) {
-      return Math.min(yu, Math.max(Ru, uu))
+    function bk(kk, Fk, Bk) {
+      return Math.min(Bk, Math.max(Fk, kk))
     }
 
-    function Nu(uu) {
-      const Ru = Ju(uu.durationMs, 10, 500),
-        yu = Ju(uu.attackMs, 0, Ru),
+    function wk(kk) {
+      const Fk = bk(kk.durationMs, 10, 500),
+        Bk = bk(kk.attackMs, 0, Fk),
         {
-          intonation: Ku
-        } = uu;
+          intonation: tk
+        } = kk;
       return {
-        waveform: Eu.includes(uu.waveform) ? uu.waveform : "sine",
-        pitchHz: Ju(uu.pitchHz, 20, 4e3),
-        glideSemitones: Ju(uu.glideSemitones, -24, 24),
-        durationMs: Ru,
-        attackMs: yu,
-        releaseMs: Ju(uu.releaseMs, 0, Ru - yu),
-        lowpassHz: null === uu.lowpassHz ? null : Ju(uu.lowpassHz, 20, 2e4),
-        volume: Ju(uu.volume, 0, 2),
+        waveform: Rk.includes(kk.waveform) ? kk.waveform : "sine",
+        pitchHz: bk(kk.pitchHz, 20, 4e3),
+        glideSemitones: bk(kk.glideSemitones, -24, 24),
+        durationMs: Fk,
+        attackMs: Bk,
+        releaseMs: bk(kk.releaseMs, 0, Fk - Bk),
+        lowpassHz: null === kk.lowpassHz ? null : bk(kk.lowpassHz, 20, 2e4),
+        volume: bk(kk.volume, 0, 2),
         intonation: {
-          variationSemitones: Ju(Ku.variationSemitones, 0, 6),
-          declineSemitones: Ju(Ku.declineSemitones, 0, 12),
-          questionRiseSemitones: Ju(Ku.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: Ju(Ku.exclaimLiftSemitones, 0, 12)
+          variationSemitones: bk(tk.variationSemitones, 0, 6),
+          declineSemitones: bk(tk.declineSemitones, 0, 12),
+          questionRiseSemitones: bk(tk.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: bk(tk.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: Ju(uu.syllableMs, 25, 200)
+        syllableMs: bk(kk.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

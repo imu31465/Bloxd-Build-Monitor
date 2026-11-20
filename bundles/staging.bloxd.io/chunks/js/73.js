@@ -1,30 +1,30 @@
 export const id = 73;
 export const ids = [73];
 export const modules = {
-  4466: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Vu
+  4421: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => sk
     });
-    var Eu = yu(27),
-      Ku = yu(34),
-      Qu = yu(1250),
-      mu = yu(2707);
-    const Ju = 3e4,
-      Nu = 1e3;
+    var Rk = Bk(22),
+      tk = Bk(29),
+      ak = Bk(1239),
+      Xk = Bk(2711);
+    const bk = 3e4,
+      wk = 1e3;
 
-    function Xu() {
-      return "visible" === document.visibilityState && "inGame" === Eu.d.get("gameState") && (0, Qu.r)()
+    function dk() {
+      return "visible" === document.visibilityState && "inGame" === Rk.c.get("gameState") && (0, ak.o)()
     }
 
-    function Vu(uu, Ru) {
-      (0, mu.p)() || function(uu, Ru, yu) {
-        let Eu = 0;
-        const Ku = setInterval((() => {
-          Ru() && (Eu += Nu, Eu >= uu && (clearInterval(Ku), yu()))
-        }), Nu)
-      }(Ju, Xu, (() => {
-        Ru().then((() => {
-          uu(`saved for the player after ${Ju/1e3} s of play`), (0, mu.w)(), Ku.k.Op("chat", {
+    function sk(kk, Fk) {
+      (0, Xk.s)() || function(kk, Fk, Bk) {
+        let Rk = 0;
+        const tk = setInterval((() => {
+          Fk() && (Rk += wk, Rk >= kk && (clearInterval(tk), Bk()))
+        }), wk)
+      }(bk, dk, (() => {
+        Fk().then((() => {
+          kk(`saved for the player after ${bk/1e3} s of play`), (0, Xk.B)(), tk.o.Hf("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,319 +36,319 @@ export const modules = {
       }))
     }
   },
-  8924: (uu, Ru, yu) => {
-    function Eu(uu, Ru) {
-      return 0 === uu.length ? 0 : uu[Math.min(uu.length - 1, Math.floor(Ru * uu.length))]
+  8878: (kk, Fk, Bk) => {
+    function Rk(kk, Fk) {
+      return 0 === kk.length ? 0 : kk[Math.min(kk.length - 1, Math.floor(Fk * kk.length))]
     }
-    yu.d(Ru, {
-      c: () => Eu
+    Bk.d(Fk, {
+      c: () => Rk
     })
   },
-  37692: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Xu,
-      f: () => Vu,
-      i: () => du,
-      l: () => Hu,
-      m: () => ju
+  37625: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => dk,
+      f: () => sk,
+      h: () => ik,
+      l: () => vk,
+      m: () => Wk
     });
-    var Eu = yu(4466),
-      Ku = yu(8924),
-      Qu = yu(2707);
-    const mu = 20,
-      Ju = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "Nr", "jobMs"];
+    var Rk = Bk(4421),
+      tk = Bk(8878),
+      ak = Bk(2711);
+    const Xk = 20,
+      bk = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "KV", "jobMs"];
 
-    function Nu(uu) {
-      return [...uu].sort(((uu, Ru) => uu - Ru))
+    function wk(kk) {
+      return [...kk].sort(((kk, Fk) => kk - Fk))
     }
-    const Xu = [];
+    const dk = [];
 
-    function Vu(uu, Ru, yu) {
-      return `${uu},${Ru},${yu}`
+    function sk(kk, Fk, Bk) {
+      return `${kk},${Fk},${Bk}`
     }
-    class ru {
+    class Vk {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(uu, Ru) {
-        var yu;
-        const Eu = null !== (yu = this.pending.get(uu)) && void 0 !== yu ? yu : [];
-        Eu.push({
-          editAt: Ru,
+      edit(kk, Fk) {
+        var Bk;
+        const Rk = null !== (Bk = this.pending.get(kk)) && void 0 !== Bk ? Bk : [];
+        Rk.push({
+          editAt: Fk,
           meshJobId: 0
-        }), this.pending.set(uu, Eu)
+        }), this.pending.set(kk, Rk)
       }
-      frame(uu) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, uu - this.lastFrameAt)), this.lastFrameAt = uu, this.frames++, uu - this.windowStart >= 1e3 && this.summarise(uu)
+      frame(kk) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, kk - this.lastFrameAt)), this.lastFrameAt = kk, this.frames++, kk - this.windowStart >= 1e3 && this.summarise(kk)
       }
-      sent(uu, Ru, yu, Eu, Ku, Qu, mu) {
-        this.jobs.set(Ru, {
-          sentAt: mu,
+      sent(kk, Fk, Bk, Rk, tk, ak, Xk) {
+        this.jobs.set(Fk, {
+          sentAt: Xk,
           receivedAt: 0,
-          ahead: yu,
-          inFlight: Eu,
-          Nr: Ku,
+          ahead: Bk,
+          inFlight: Rk,
+          KV: tk,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, yu), this.maxCapacity = Math.max(this.maxCapacity, Ku);
-        for (const Nu of null !== (Ju = this.pending.get(uu)) && void 0 !== Ju ? Ju : []) {
-          var Ju;
-          Qu.includes(Nu.meshJobId) || (Nu.meshJobId = Ru)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, Bk), this.maxCapacity = Math.max(this.maxCapacity, tk);
+        for (const wk of null !== (bk = this.pending.get(kk)) && void 0 !== bk ? bk : []) {
+          var bk;
+          ak.includes(wk.meshJobId) || (wk.meshJobId = Fk)
         }
       }
-      received(uu, Ru, yu) {
-        const Eu = this.jobs.get(uu);
-        void 0 !== Eu && (this.roundTrips.push(yu - Eu.sentAt), Eu.receivedAt = yu, Eu.jobMs = Ru)
+      received(kk, Fk, Bk) {
+        const Rk = this.jobs.get(kk);
+        void 0 !== Rk && (this.roundTrips.push(Bk - Rk.sentAt), Rk.receivedAt = Bk, Rk.jobMs = Fk)
       }
-      failed(uu) {
-        this.jobs.delete(uu)
+      failed(kk) {
+        this.jobs.delete(kk)
       }
-      reassign(uu, Ru, yu) {
-        this.jobs.delete(Ru);
-        for (const Ku of null !== (Eu = this.pending.get(uu)) && void 0 !== Eu ? Eu : []) {
-          var Eu;
-          Ku.meshJobId === Ru && (Ku.meshJobId = yu)
+      reassign(kk, Fk, Bk) {
+        this.jobs.delete(Fk);
+        for (const tk of null !== (Rk = this.pending.get(kk)) && void 0 !== Rk ? Rk : []) {
+          var Rk;
+          tk.meshJobId === Fk && (tk.meshJobId = Bk)
         }
       }
-      applied(uu, Ru, yu) {
-        const Eu = this.jobs.get(Ru);
-        this.jobs.delete(Ru), void 0 !== Eu && this.show(uu, Eu, yu, (uu => uu.meshJobId === Ru))
+      applied(kk, Fk, Bk) {
+        const Rk = this.jobs.get(Fk);
+        this.jobs.delete(Fk), void 0 !== Rk && this.show(kk, Rk, Bk, (kk => kk.meshJobId === Fk))
       }
-      emptied(uu, Ru) {
-        const yu = {
-          sentAt: Ru,
-          receivedAt: Ru,
+      emptied(kk, Fk) {
+        const Bk = {
+          sentAt: Fk,
+          receivedAt: Fk,
           ahead: 0,
           inFlight: 0,
-          Nr: 0,
+          KV: 0,
           jobMs: 0
         };
-        this.show(uu, yu, Ru, (() => !0))
+        this.show(kk, Bk, Fk, (() => !0))
       }
-      show(uu, Ru, yu, Eu) {
-        const Ku = this.pending.get(uu);
-        if (!Ku) return;
-        const Qu = Ku.filter((Ku => !Eu(Ku) || (this.record(uu, Ku.editAt, Ru, yu), !1)));
-        Qu.length > 0 ? this.pending.set(uu, Qu) : this.pending.delete(uu)
+      show(kk, Fk, Bk, Rk) {
+        const tk = this.pending.get(kk);
+        if (!tk) return;
+        const ak = tk.filter((tk => !Rk(tk) || (this.record(kk, tk.editAt, Fk, Bk), !1)));
+        ak.length > 0 ? this.pending.set(kk, ak) : this.pending.delete(kk)
       }
-      Px(uu) {
-        this.reported += uu, this === xu && this.reported >= mu && null !== Su && (Su(), Su = null)
+      ve(kk) {
+        this.reported += kk, this === Ak && this.reported >= Xk && null !== ek && (ek(), ek = null)
       }
-      record(uu, Ru, yu, Eu) {
-        const Ku = {
-          totalMs: Eu - Ru,
-          slotMs: yu.sentAt - Ru,
-          workerMs: yu.receivedAt - yu.sentAt,
-          applyMs: Eu - yu.receivedAt,
-          ahead: yu.ahead,
-          inFlight: yu.inFlight,
-          Nr: yu.Nr,
-          jobMs: yu.jobMs
+      record(kk, Fk, Bk, Rk) {
+        const tk = {
+          totalMs: Rk - Fk,
+          slotMs: Bk.sentAt - Fk,
+          workerMs: Bk.receivedAt - Bk.sentAt,
+          applyMs: Rk - Bk.receivedAt,
+          ahead: Bk.ahead,
+          inFlight: Bk.inFlight,
+          KV: Bk.KV,
+          jobMs: Bk.jobMs
         };
-        if (this.edits[this.nextEdit] = Ku, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(Ku.totalMs), this.Px(1), Ku.totalMs < 100 || ++this.outliers > 5) return;
-        const mu = uu => Math.round(uu);
-        (0, Qu.i)("remesh", `slow edit (${uu}) shown in ${mu(Ku.totalMs)} ms: slot ${mu(Ku.slotMs)}, worker ${mu(Ku.workerMs)} (${Ku.ahead} ahead, ${Ku.inFlight}/${Ku.Nr} in flight; job ${mu(Ku.jobMs)}), apply ${mu(Ku.applyMs)}`)
+        if (this.edits[this.nextEdit] = tk, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(tk.totalMs), this.ve(1), tk.totalMs < 100 || ++this.outliers > 5) return;
+        const Xk = kk => Math.round(kk);
+        (0, ak.k)("remesh", `slow edit (${kk}) shown in ${Xk(tk.totalMs)} ms: slot ${Xk(tk.slotMs)}, worker ${Xk(tk.workerMs)} (${tk.ahead} ahead, ${tk.inFlight}/${tk.KV} in flight; job ${Xk(tk.jobMs)}), apply ${Xk(tk.applyMs)}`)
       }
-      summarise(uu) {
-        const Ru = (uu - this.windowStart) / 1e3;
-        for (const [yu, Eu] of this.pending) {
-          const Ru = Eu.filter((Ru => uu - Ru.editAt <= 1e4));
-          this.gaveUp += Eu.length - Ru.length, this.Px(Eu.length - Ru.length), Ru.length > 0 ? this.pending.set(yu, Ru) : this.pending.delete(yu)
+      summarise(kk) {
+        const Fk = (kk - this.windowStart) / 1e3;
+        for (const [Bk, Rk] of this.pending) {
+          const Fk = Rk.filter((Fk => kk - Fk.editAt <= 1e4));
+          this.gaveUp += Rk.length - Fk.length, this.ve(Rk.length - Fk.length), Fk.length > 0 ? this.pending.set(Bk, Fk) : this.pending.delete(Bk)
         }
-        for (const [yu, Eu] of this.jobs) uu - Eu.sentAt > (Eu.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(yu);
+        for (const [Bk, Rk] of this.jobs) kk - Rk.sentAt > (Rk.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(Bk);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const uu = Nu(this.roundTrips),
-            yu = Nu(this.windowEdits),
-            Eu = Math.max(0, this.outliers - 5);
-          (0, Qu.i)("remesh", `${Math.round(this.frames/Ru)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,Ku.c)(uu,.5))} max ${Math.round((0,Ku.c)(uu,1))} ms | ${yu.length} edits shown, p50 ${Math.round((0,Ku.c)(yu,.5))} max ${Math.round((0,Ku.c)(yu,1))} ms${Eu>0?`, ${Eu} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const kk = wk(this.roundTrips),
+            Bk = wk(this.windowEdits),
+            Rk = Math.max(0, this.outliers - 5);
+          (0, ak.k)("remesh", `${Math.round(this.frames/Fk)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,tk.c)(kk,.5))} max ${Math.round((0,tk.c)(kk,1))} ms | ${Bk.length} edits shown, p50 ${Math.round((0,tk.c)(Bk,.5))} max ${Math.round((0,tk.c)(Bk,1))} ms${Rk>0?`, ${Rk} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
-        this.windowStart = uu, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+        this.windowStart = kk, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const uu = Ju.map((uu => {
-          const Ru = Nu(this.edits.map((Ru => Ru[uu])));
-          return `${uu}: p50 ${Math.round((0,Ku.c)(Ru,.5))} p90 ${Math.round((0,Ku.c)(Ru,.9))} max ${Math.round((0,Ku.c)(Ru,1))}`
+        const kk = bk.map((kk => {
+          const Fk = wk(this.edits.map((Fk => Fk[kk])));
+          return `${kk}: p50 ${Math.round((0,tk.c)(Fk,.5))} p90 ${Math.round((0,tk.c)(Fk,.9))} max ${Math.round((0,tk.c)(Fk,1))}`
         }));
-        return [`${this.edits.length} edits`, ...uu].join("\n")
+        return [`${this.edits.length} edits`, ...kk].join("\n")
       }
       dump() {
-        const uu = this.edits.map((uu => Ju.map((Ru => Math.round(10 * uu[Ru]) / 10)).join(",")));
-        return [this.stats(), Ju.join(","), ...uu].join("\n")
+        const kk = this.edits.map((kk => bk.map((Fk => Math.round(10 * kk[Fk]) / 10)).join(",")));
+        return [this.stats(), bk.join(","), ...kk].join("\n")
       }
     }
-    class Bu {
-      constructor(uu, Ru) {
-        this.log = uu, this.Yr = Ru
+    class Jk {
+      constructor(kk, Fk) {
+        this.log = kk, this.SJ = Fk
       }
-      edit(uu, Ru, yu) {
-        const [Eu, Ku, Qu] = this.Yr.Fr.CKu(uu, Ru, yu), mu = this.Yr.Fr.Bp.xp(Eu, Ku, Qu);
-        mu && mu.Vp && this.log.edit(Vu(Eu, Ku, Qu), performance.now())
+      edit(kk, Fk, Bk) {
+        const [Rk, tk, ak] = this.SJ.iJ.zRk(kk, Fk, Bk), Xk = this.SJ.iJ.Zy.py(Rk, tk, ak);
+        Xk && Xk.qy && this.log.edit(sk(Rk, tk, ak), performance.now())
       }
-      sent(uu, Ru, yu, Eu, Ku) {
-        this.log.sent(Vu(uu.i, uu.j, uu.k), Ru, yu, Eu, Ku, Xu, performance.now())
+      sent(kk, Fk, Bk, Rk, tk) {
+        this.log.sent(sk(kk.i, kk.j, kk.k), Fk, Bk, Rk, tk, dk, performance.now())
       }
-      received(uu) {
-        this.log.received(uu.meshJobId, uu.jobMs, performance.now())
+      received(kk) {
+        this.log.received(kk.meshJobId, kk.jobMs, performance.now())
       }
-      failed(uu) {
-        this.log.failed(uu)
+      failed(kk) {
+        this.log.failed(kk)
       }
-      applied(uu, Ru) {
-        this.log.applied(Vu(uu.i, uu.j, uu.k), Ru, performance.now())
+      applied(kk, Fk) {
+        this.log.applied(sk(kk.i, kk.j, kk.k), Fk, performance.now())
       }
     }
-    let xu = null,
-      Su = null,
-      pu = !1,
-      Tu = null;
+    let Ak = null,
+      ek = null,
+      yk = !1,
+      fk = null;
 
-    function Wu() {
-      return new Promise((uu => {
-        null !== xu && xu.reported >= mu ? uu() : Su = uu
+    function mk() {
+      return new Promise((kk => {
+        null !== Ak && Ak.reported >= Xk ? kk() : ek = kk
       }))
     }
 
-    function ju() {
-      const uu = new ru;
-      return xu = uu, (0, Qu.g)("remesh", (() => uu.dump())), (0, Qu.c)("remeshStats", (() => {
-        console.log(uu.stats())
-      })), pu || (pu = !0, (0, Eu.d)((uu => {
-        (0, Qu.i)("remesh", uu)
-      }), Wu)), uu
+    function Wk() {
+      const kk = new Vk;
+      return Ak = kk, (0, ak.i)("remesh", (() => kk.dump())), (0, ak.d)("remeshStats", (() => {
+        console.log(kk.stats())
+      })), yk || (yk = !0, (0, Rk.b)((kk => {
+        (0, ak.k)("remesh", kk)
+      }), mk)), kk
     }
 
-    function Hu(uu) {
-      const Ru = ju();
-      Tu = new Bu(Ru, uu), uu.RC.meshProbe = Tu, uu.on("beforeRender", (() => {
-        Ru.frame(performance.now())
+    function vk(kk) {
+      const Fk = Wk();
+      fk = new Jk(Fk, kk), kk.VY.meshProbe = fk, kk.on("beforeRender", (() => {
+        Fk.frame(performance.now())
       }))
     }
 
-    function du(uu, Ru, yu) {
-      var Eu;
-      null === (Eu = Tu) || void 0 === Eu || Eu.edit(uu, Ru, yu)
+    function ik(kk, Fk, Bk) {
+      var Rk;
+      null === (Rk = fk) || void 0 === Rk || Rk.edit(kk, Fk, Bk)
     }
   },
-  37507: (uu, Ru, yu) => {
-    function Eu(uu) {
-      return "string" !== typeof uu || 2 !== uu.length && ":" !== uu[2] ? null : uu[0] + uu[1]
+  37428: (kk, Fk, Bk) => {
+    function Rk(kk) {
+      return "string" !== typeof kk || 2 !== kk.length && ":" !== kk[2] ? null : kk[0] + kk[1]
     }
-    yu.d(Ru, {
-      e: () => Tu,
-      h: () => Hu,
-      j: () => Ju,
-      k: () => mu,
-      n: () => Qu,
-      o: () => Nu,
-      p: () => Wu,
-      t: () => pu
+    Bk.d(Fk, {
+      d: () => fk,
+      h: () => vk,
+      j: () => bk,
+      n: () => Xk,
+      q: () => ak,
+      s: () => wk,
+      u: () => mk,
+      y: () => yk
     });
-    const Ku = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+    const tk = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
-    function Qu(uu) {
-      if (function(uu) {
-          for (let Ru = 0; Ru < Ku.length; Ru++)
-            if (uu === Ku[Ru]) return !0;
+    function ak(kk) {
+      if (function(kk) {
+          for (let Fk = 0; Fk < tk.length; Fk++)
+            if (kk === tk[Fk]) return !0;
           return !1
-        }(uu)) return !1;
-      const Ru = Eu(uu);
-      return "op" === Ru || "ep" === Ru || "wi" === Ru || "pp" === Ru || "fp:call" === uu || "fp:t" === uu
+        }(kk)) return !1;
+      const Fk = Rk(kk);
+      return "op" === Fk || "ep" === Fk || "wi" === Fk || "pp" === Fk || "fp:call" === kk || "fp:t" === kk
     }
 
-    function mu(uu) {
-      return "fp" === Eu(uu) && !Qu(uu)
+    function Xk(kk) {
+      return "fp" === Rk(kk) && !ak(kk)
     }
 
-    function Ju(uu) {
-      if ("string" !== typeof uu) return !1;
-      return "o" === uu[0] && "p" === uu[1] && (2 === uu.length || ":" === uu[2]) || "fp:call" === uu || "2" === uu || "t" === uu || "a" === uu
+    function bk(kk) {
+      if ("string" !== typeof kk) return !1;
+      return "o" === kk[0] && "p" === kk[1] && (2 === kk.length || ":" === kk[2]) || "fp:call" === kk || "2" === kk || "t" === kk || "a" === kk
     }
 
-    function Nu(uu, Ru) {
-      return `~${function(uu){return uu.length<2?uu:":"===uu[1]?uu[0]:uu[0]+uu[1]}(Ru)}~${uu}`
+    function wk(kk, Fk) {
+      return `~${function(kk){return kk.length<2?kk:":"===kk[1]?kk[0]:kk[0]+kk[1]}(Fk)}~${kk}`
     }
-    const Xu = 200;
+    const dk = 200;
 
-    function Vu(uu) {
-      let Ru = uu.length - 1;
-      for (let yu = 0; yu < 2; yu++) {
-        const yu = Ru;
-        for (; Ru >= 0 && uu[Ru] >= "0" && uu[Ru] <= "9";) Ru--;
-        if (Ru < 0 || Ru === yu || ":" !== uu[Ru]) return -1;
-        Ru--
+    function sk(kk) {
+      let Fk = kk.length - 1;
+      for (let Bk = 0; Bk < 2; Bk++) {
+        const Bk = Fk;
+        for (; Fk >= 0 && kk[Fk] >= "0" && kk[Fk] <= "9";) Fk--;
+        if (Fk < 0 || Fk === Bk || ":" !== kk[Fk]) return -1;
+        Fk--
       }
-      return Ru + 1
+      return Fk + 1
     }
 
-    function ru(uu) {
-      return "unknown" === uu || Vu(uu) >= 0
+    function Vk(kk) {
+      return "unknown" === kk || sk(kk) >= 0
     }
 
-    function Bu(uu, Ru) {
-      return uu[Ru] >= "\ud800" && uu[Ru] <= "\udbff" && Ru + 1 < uu.length && uu[Ru + 1] >= "\udc00" && uu[Ru + 1] <= "\udfff" ? 2 : 1
+    function Jk(kk, Fk) {
+      return kk[Fk] >= "\ud800" && kk[Fk] <= "\udbff" && Fk + 1 < kk.length && kk[Fk + 1] >= "\udc00" && kk[Fk + 1] <= "\udfff" ? 2 : 1
     }
 
-    function xu(uu, Ru, yu) {
-      return 2 === yu ? 4 : uu[Ru] <= "\x7f" ? 1 : uu[Ru] <= "\u07ff" ? 2 : 3
+    function Ak(kk, Fk, Bk) {
+      return 2 === Bk ? 4 : kk[Fk] <= "\x7f" ? 1 : kk[Fk] <= "\u07ff" ? 2 : 3
     }
 
-    function Su(uu, Ru, yu) {
-      let Eu = 0;
-      for (; Eu < Ru;) {
-        const Ru = Bu(uu, Eu),
-          Ku = xu(uu, Eu, Ru);
-        if (Ku > yu) break;
-        yu -= Ku, Eu += Ru
+    function ek(kk, Fk, Bk) {
+      let Rk = 0;
+      for (; Rk < Fk;) {
+        const Fk = Jk(kk, Rk),
+          tk = Ak(kk, Rk, Fk);
+        if (tk > Bk) break;
+        Bk -= tk, Rk += Fk
       }
-      return Eu
+      return Rk
     }
 
-    function pu(uu) {
-      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof uu || uu.length > Xu || !ru(uu)) return "t";
-      let yu = 2;
-      for (let Ju = 0; Ju < uu.length;) {
-        const Ru = Bu(uu, Ju);
-        yu += xu(uu, Ju, Ru), Ju += Ru
+    function yk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof kk || kk.length > dk || !Vk(kk)) return "t";
+      let Bk = 2;
+      for (let bk = 0; bk < kk.length;) {
+        const Fk = Jk(kk, bk);
+        Bk += Ak(kk, bk, Fk), bk += Fk
       }
-      if (yu <= Ru) return `t ${uu}`;
-      const Eu = Vu(uu),
-        Ku = Ru - 2 - (uu.length - Eu);
-      if (Ku < 0) return "t";
-      const Qu = Su(uu, Eu, Ku);
-      let mu = "t ";
-      for (let Ju = 0; Ju < Qu; Ju++) mu += uu[Ju];
-      for (let Ju = Eu; Ju < uu.length; Ju++) mu += uu[Ju];
-      return mu
+      if (Bk <= Fk) return `t ${kk}`;
+      const Rk = sk(kk),
+        tk = Fk - 2 - (kk.length - Rk);
+      if (tk < 0) return "t";
+      const ak = ek(kk, Rk, tk);
+      let Xk = "t ";
+      for (let bk = 0; bk < ak; bk++) Xk += kk[bk];
+      for (let bk = Rk; bk < kk.length; bk++) Xk += kk[bk];
+      return Xk
     }
-    const Tu = 62;
+    const fk = 62;
 
-    function Wu(uu) {
-      let Ru = "so:";
-      const yu = Su(uu, uu.length, Tu - Ru.length);
-      for (let Eu = 0; Eu < yu; Eu++) Ru += uu[Eu];
-      return Ru
+    function mk(kk) {
+      let Fk = "so:";
+      const Bk = ek(kk, kk.length, fk - Fk.length);
+      for (let Rk = 0; Rk < Bk; Rk++) Fk += kk[Rk];
+      return Fk
     }
-    const ju = "BABYLON ";
+    const Wk = "BABYLON ";
 
-    function Hu(uu) {
-      return Wu(ju + uu)
+    function vk(kk) {
+      return mk(Wk + kk)
     }
   },
-  37720: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
+  37657: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
   },
-  37705: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
+  37649: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
   },
-  37723: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  37659: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  37703: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
+  37647: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
   },
-  37714: uu => {
-    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  37651: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

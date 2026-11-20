@@ -1,17 +1,17 @@
 export const id = 139;
 export const ids = [139];
 export const modules = {
-  7841: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      BloxdFirebaseSdk: () => Vu
+  7739: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      BloxdFirebaseSdk: () => sk
     });
-    var Eu = yu(1758),
-      Ku = yu(2719),
-      Qu = yu(122),
-      mu = yu(106),
-      Ju = yu(1626),
-      Nu = yu(1968);
-    const Xu = {
+    var Rk = Bk(1751),
+      tk = Bk(2728),
+      ak = Bk(109),
+      Xk = Bk(98),
+      bk = Bk(1625),
+      wk = Bk(1948);
+    const dk = {
       apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
       authDomain: "bloxd-ee1aa.firebaseapp.com",
       projectId: "bloxd-ee1aa",
@@ -19,142 +19,142 @@ export const modules = {
       messagingSenderId: "758847442742",
       appId: "1:758847442742:web:7bb74eb261641e30f02d97"
     };
-    class Vu {
+    class sk {
       constructor() {}
       static async setup() {
         try {
-          return await Vu.setupInternal()
-        } catch (uu) {
-          return console.error("Failed to setup Firebase SDK:", uu), null
+          return await sk.setupInternal()
+        } catch (kk) {
+          return console.error("Failed to setup Firebase SDK:", kk), null
         }
       }
       static async setupInternal() {
-        const uu = await Promise.all([yu.e(256), yu.e(255)]).then((() => yu(40074))),
-          Ru = await Promise.all([yu.e(256), yu.e(257)]).then((() => yu(40103))),
-          ru = await Promise.all([yu.e(256), yu.e(258)]).then((() => yu(40111))),
-          Bu = uu.initializeApp({
-            ...Xu,
-            measurementId: Ku.d
+        const kk = await Promise.all([Bk.e(256), Bk.e(255)]).then((() => Bk(39916))),
+          Fk = await Promise.all([Bk.e(256), Bk.e(257)]).then((() => Bk(39936))),
+          Vk = await Promise.all([Bk.e(256), Bk.e(258)]).then((() => Bk(39943))),
+          Jk = kk.initializeApp({
+            ...dk,
+            measurementId: tk.e
           });
-        (0, Ku.F)(), window.gtag("config", Ku.d), (0, Ku.z)(), window.gtag("config", "AW-16469618203");
-        const xu = Ru.getAnalytics(Bu),
-          Su = {
-            portal: Qu.currentUrl.getSearchParam("portal") || "root",
+        (0, tk.E)(), window.gtag("config", tk.e), (0, tk.B)(), window.gtag("config", "AW-16469618203");
+        const Ak = Fk.getAnalytics(Jk),
+          ek = {
+            portal: ak.currentUrl.getSearchParam("portal") || "root",
             loggedIn: !1
           };
-        Ru.setUserProperties(xu, Su);
-        const pu = ru.getAuth();
-        ru.useDeviceLanguage(pu);
-        const Tu = new ru.GoogleAuthProvider;
-        Tu.setCustomParameters({
+        Fk.setUserProperties(Ak, ek);
+        const yk = Vk.getAuth();
+        Vk.useDeviceLanguage(yk);
+        const fk = new Vk.GoogleAuthProvider;
+        fk.setCustomParameters({
           prompt: "select_account"
         });
-        const Wu = new ru.OAuthProvider(Eu.g[Eu.b.APPLE]),
-          ju = new ru.OAuthProvider(Eu.g[Eu.b.MICROSOFT]);
-        ju.setCustomParameters({
+        const mk = new Vk.OAuthProvider(Rk.f[Rk.b.APPLE]),
+          Wk = new Vk.OAuthProvider(Rk.f[Rk.b.MICROSOFT]);
+        Wk.setCustomParameters({
           prompt: "select_account",
           tenant: "consumers"
         });
-        const Hu = {
-          [Eu.b.GOOGLE]: Tu,
-          [Eu.b.APPLE]: Wu,
-          [Eu.b.MICROSOFT]: ju
+        const vk = {
+          [Rk.b.GOOGLE]: fk,
+          [Rk.b.APPLE]: mk,
+          [Rk.b.MICROSOFT]: Wk
         };
         window.gtag("set", {
           cookie_flags: "SameSite=None;Secure"
-        }), await new Promise((uu => {
-          const Ru = ru.onIdTokenChanged(pu, (yu => {
-            Ru(), uu()
+        }), await new Promise((kk => {
+          const Fk = Vk.onIdTokenChanged(yk, (Bk => {
+            Fk(), kk()
           }))
         }));
-        class du extends Vu {
-          setUserProperties(uu) {
-            Ru.setUserProperties(xu, uu)
+        class ik extends sk {
+          setUserProperties(kk) {
+            Fk.setUserProperties(Ak, kk)
           }
-          onIdTokenChanged(uu) {
-            ru.onIdTokenChanged(pu, uu)
+          onIdTokenChanged(kk) {
+            Vk.onIdTokenChanged(yk, kk)
           }
           canSignIn() {
             return !0
           }
-          async signInWithPopup(uu) {
-            var Ru;
-            const yu = await ru.signInWithPopup(pu, Hu[uu]);
-            return null !== (Ru = null === yu || void 0 === yu ? void 0 : yu.user) && void 0 !== Ru ? Ru : null
+          async signInWithPopup(kk) {
+            var Fk;
+            const Bk = await Vk.signInWithPopup(yk, vk[kk]);
+            return null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.user) && void 0 !== Fk ? Fk : null
           }
-          async getCurrentUser(uu) {
-            const Ru = pu.currentUser;
-            if (!Ru) return null;
+          async getCurrentUser(kk) {
+            const Fk = yk.currentUser;
+            if (!Fk) return null;
             const {
-              signInProvider: yu
-            } = await Ru.getIdTokenResult(!1);
-            return yu === Eu.g[uu] ? Ru : null
+              signInProvider: Bk
+            } = await Fk.getIdTokenResult(!1);
+            return Bk === Rk.f[kk] ? Fk : null
           }
-          async signOut(uu) {
-            null !== await this.getCurrentUser(uu) && await ru.signOut(pu)
+          async signOut(kk) {
+            null !== await this.getCurrentUser(kk) && await Vk.signOut(yk)
           }
         }
-        async function bu(uu, Ru) {
-          const yu = await Ju.d.request(`${uu}.${Ru}`, {});
-          if (null === yu) return null;
-          const Eu = "google" === uu ? ru.GoogleAuthProvider.credential(yu.idToken) : Wu.credential({
-            idToken: yu.idToken
+        async function Yk(kk, Fk) {
+          const Bk = await bk.d.request(`${kk}.${Fk}`, {});
+          if (null === Bk) return null;
+          const Rk = "google" === kk ? Vk.GoogleAuthProvider.credential(Bk.idToken) : mk.credential({
+            idToken: Bk.idToken
           });
-          return (await ru.signInWithCredential(pu, Eu)).user
+          return (await Vk.signInWithCredential(yk, Rk)).user
         }
-        class Cu extends Vu {
-          setUserProperties(uu) {
-            Ru.setUserProperties(xu, uu)
+        class Lk extends sk {
+          setUserProperties(kk) {
+            Fk.setUserProperties(Ak, kk)
           }
-          onIdTokenChanged(uu) {
-            ru.onIdTokenChanged(pu, uu)
+          onIdTokenChanged(kk) {
+            Vk.onIdTokenChanged(yk, kk)
           }
-          canSignIn(uu) {
-            return null !== (0, Nu.e)(uu)
+          canSignIn(kk) {
+            return null !== (0, wk.d)(kk)
           }
-          async signInWithPopup(uu) {
-            const Ru = (0, Nu.e)(uu);
-            if (null === Ru) return console.warn(`The app can't sign in with ${uu}; check canSignIn first`), null;
+          async signInWithPopup(kk) {
+            const Fk = (0, wk.d)(kk);
+            if (null === Fk) return console.warn(`The app can't sign in with ${kk}; check canSignIn first`), null;
             try {
-              return await bu(Ru, "signIn")
-            } catch (yu) {
-              return console.error(`Failed to sign in with ${uu} in the app:`, yu), null
+              return await Yk(Fk, "signIn")
+            } catch (Bk) {
+              return console.error(`Failed to sign in with ${kk} in the app:`, Bk), null
             }
           }
-          async getCurrentUser(uu) {
-            const Ru = pu.currentUser;
-            if (Ru) {
+          async getCurrentUser(kk) {
+            const Fk = yk.currentUser;
+            if (Fk) {
               const {
-                signInProvider: yu
-              } = await Ru.getIdTokenResult(!1);
-              if (yu === Eu.g[uu]) return Ru
+                signInProvider: Bk
+              } = await Fk.getIdTokenResult(!1);
+              if (Bk === Rk.f[kk]) return Fk
             }
-            const yu = (0, Nu.e)(uu);
-            if (null === yu) return null;
+            const Bk = (0, wk.d)(kk);
+            if (null === Bk) return null;
             try {
-              return await bu(yu, "getCurrentUser")
-            } catch (Ku) {
-              return console.error(`Failed to get the current ${uu} user from the app:`, Ku), null
+              return await Yk(Bk, "getCurrentUser")
+            } catch (tk) {
+              return console.error(`Failed to get the current ${kk} user from the app:`, tk), null
             }
           }
-          async signOut(uu) {
-            const Ru = (0, Nu.e)(uu);
-            null !== Ru && Ju.d.request(`${Ru}.signOut`, {}).catch((Ru => {
-              console.error(`Failed to sign out of ${uu} in the app:`, Ru)
+          async signOut(kk) {
+            const Fk = (0, wk.d)(kk);
+            null !== Fk && bk.d.request(`${Fk}.signOut`, {}).catch((Fk => {
+              console.error(`Failed to sign out of ${kk} in the app:`, Fk)
             }));
-            const yu = pu.currentUser;
-            if (yu) {
+            const Bk = yk.currentUser;
+            if (Bk) {
               const {
-                signInProvider: Ru
-              } = await yu.getIdTokenResult(!1);
-              Ru === Eu.g[uu] && await ru.signOut(pu)
+                signInProvider: Fk
+              } = await Bk.getIdTokenResult(!1);
+              Fk === Rk.f[kk] && await Vk.signOut(yk)
             }
           }
         }
-        return (0, mu.isMobileApp)() ? (await Ju.d.ready, new Cu) : new du
+        return (0, Xk.isMobileApp)() ? (await bk.d.ready, new Lk) : new ik
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

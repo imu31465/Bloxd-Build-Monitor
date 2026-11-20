@@ -1,77 +1,77 @@
 export const id = 200;
 export const ids = [200];
 export const modules = {
-  38879: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Eu
+  38753: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Rk
     });
-    class Eu {
-      constructor(uu, Ru) {
-        this.read = uu, this.apply = Ru, this.release = null
+    class Rk {
+      constructor(kk, Fk) {
+        this.read = kk, this.apply = Fk, this.release = null
       }
-      turn(uu, Ru) {
-        const yu = null === this.release ? this.read() : this.release.transitionMs;
+      turn(kk, Fk) {
+        const Bk = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: Ru,
-          forcedCameraDirection: [uu[0], uu[1], uu[2]]
+          forcedCameraDirectionTransitionMs: Fk,
+          forcedCameraDirection: [kk[0], kk[1], kk[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), Ru + 100),
-          transitionMs: yu
+          }), Fk + 100),
+          transitionMs: Bk
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(uu) {
-        null !== this.release && (clearTimeout(this.release.timer), uu && this.apply({
+      stop(kk) {
+        null !== this.release && (clearTimeout(this.release.timer), kk && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  38414: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Qu,
-      c: () => Ku
+  38290: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => ak,
+      d: () => tk
     });
-    const Eu = new Map;
+    const Rk = new Map;
 
-    function Ku(uu, Ru) {
-      Eu.set(uu, Ru)
+    function tk(kk, Fk) {
+      Rk.set(kk, Fk)
     }
 
-    function Qu(uu) {
-      return uu ? Eu.get(uu) : void 0
+    function ak(kk) {
+      return kk ? Rk.get(kk) : void 0
     }
   },
-  39315: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ku
+  39177: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => tk
     });
-    var Eu = yu(37976);
+    var Rk = Bk(37865);
 
-    function Ku(uu, Ru, yu) {
-      var Ku, Qu, mu, Ju, Nu, Xu, Vu;
-      const ru = (0, Eu.b)(uu, Ru, yu[0], yu[1], yu[2]),
-        Bu = ru ? null !== (Ku = ru.textCell) && void 0 !== Ku ? Ku : ru.rect.anchor : yu,
-        xu = Ru(Bu[0], Bu[1], Bu[2]);
+    function tk(kk, Fk, Bk) {
+      var tk, ak, Xk, bk, wk, dk, sk;
+      const Vk = (0, Rk.b)(kk, Fk, Bk[0], Bk[1], Bk[2]),
+        Jk = Vk ? null !== (tk = Vk.textCell) && void 0 !== tk ? tk : Vk.rect.anchor : Bk,
+        Ak = Fk(Jk[0], Jk[1], Jk[2]);
       return {
-        pos: [yu[0], yu[1], yu[2]],
-        noticeboardSpan: ru && {
-          width: ru.rect.width,
-          height: ru.rect.height
+        pos: [Bk[0], Bk[1], Bk[2]],
+        noticeboardSpan: Vk && {
+          width: Vk.rect.width,
+          height: Vk.rect.height
         },
-        text: null !== (Qu = null === xu || void 0 === xu || null === (mu = xu.persisted) || void 0 === mu || null === (Ju = mu.shared) || void 0 === Ju ? void 0 : Ju.text) && void 0 !== Qu ? Qu : "",
-        textSize: null !== (Nu = null === xu || void 0 === xu || null === (Xu = xu.persisted) || void 0 === Xu || null === (Vu = Xu.shared) || void 0 === Vu ? void 0 : Vu.textSize) && void 0 !== Nu ? Nu : null
+        text: null !== (ak = null === Ak || void 0 === Ak || null === (Xk = Ak.persisted) || void 0 === Xk || null === (bk = Xk.shared) || void 0 === bk ? void 0 : bk.text) && void 0 !== ak ? ak : "",
+        textSize: null !== (wk = null === Ak || void 0 === Ak || null === (dk = Ak.persisted) || void 0 === dk || null === (sk = dk.shared) || void 0 === sk ? void 0 : sk.textSize) && void 0 !== wk ? wk : null
       }
     }
   },
-  38273: (uu, Ru, yu) => {
-    function Eu(uu) {
-      switch (uu.kind) {
+  38146: (kk, Fk, Bk) => {
+    function Rk(kk) {
+      switch (kk.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -80,452 +80,452 @@ export const modules = {
           return !0
       }
     }
-    yu.d(Ru, {
-      c: () => Ku,
-      f: () => Qu,
-      h: () => Eu
+    Bk.d(Fk, {
+      c: () => tk,
+      d: () => ak,
+      f: () => Rk
     });
-    const Ku = 4,
-      Qu = 3
+    const tk = 4,
+      ak = 3
   },
-  38899: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ku,
-      e: () => Qu
+  38768: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk,
+      d: () => ak
     });
-    var Eu = yu(343);
-    const Ku = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
-    class Qu {
-      constructor(uu) {
-        this.importGame = uu, this.loads = new Map, this.loaded = new Map
+    var Rk = Bk(291);
+    const tk = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
+    class ak {
+      constructor(kk) {
+        this.importGame = kk, this.loads = new Map, this.loaded = new Map
       }
-      load(uu) {
-        const Ru = (0, Eu.cc)(uu);
-        if (!Ku.has(Ru)) return Promise.resolve(void 0);
-        let yu = this.loads.get(Ru);
-        return yu || (yu = this.importGame(Ru).then((uu => {
-          const yu = uu.default;
-          if ("function" !== typeof yu) throw new Error(`${Ru}'s client code has no default-exported factory`);
-          return this.loaded.set(Ru, yu), yu
-        })).catch((uu => {
-          throw this.loads.delete(Ru), uu
-        })), this.loads.set(Ru, yu)), yu
+      load(kk) {
+        const Fk = (0, Rk.Vb)(kk);
+        if (!tk.has(Fk)) return Promise.resolve(void 0);
+        let Bk = this.loads.get(Fk);
+        return Bk || (Bk = this.importGame(Fk).then((kk => {
+          const Bk = kk.default;
+          if ("function" !== typeof Bk) throw new Error(`${Fk}'s client code has no default-exported factory`);
+          return this.loaded.set(Fk, Bk), Bk
+        })).catch((kk => {
+          throw this.loads.delete(Fk), kk
+        })), this.loads.set(Fk, Bk)), Bk
       }
-      loadedFactory(uu) {
-        const Ru = (0, Eu.cc)(uu);
-        if (!Ku.has(Ru)) return;
-        const yu = this.loaded.get(Ru);
-        if (!yu) throw new Error(`${Ru}'s client code started before it loaded`);
-        return yu
+      loadedFactory(kk) {
+        const Fk = (0, Rk.Vb)(kk);
+        if (!tk.has(Fk)) return;
+        const Bk = this.loaded.get(Fk);
+        if (!Bk) throw new Error(`${Fk}'s client code started before it loaded`);
+        return Bk
       }
     }
   },
-  39323: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => mu
+  39181: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Xk
     });
-    var Eu = yu(9247),
-      Ku = yu(9079),
-      Qu = yu(3093);
+    var Rk = Bk(9169),
+      tk = Bk(9022),
+      ak = Bk(3090);
 
-    function mu(uu) {
-      if (uu === Eu.e) return 0;
-      const Ru = (0, Qu.b)(uu);
-      if (void 0 !== Ru && Ru <= Ku.MAX_BLOCK_ID) return Ru;
-      const yu = (0, Qu.b)(uu.split("|")[0]);
-      if (void 0 !== yu && yu <= Ku.MAX_BLOCK_ID && (0, Ku.rootMetaDescOf)(yu) === uu) return yu;
-      throw new Error(`Invalid block name. You sent ${uu}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function Xk(kk) {
+      if (kk === Rk.c) return 0;
+      const Fk = (0, ak.c)(kk);
+      if (void 0 !== Fk && Fk <= tk.MAX_BLOCK_ID) return Fk;
+      const Bk = (0, ak.c)(kk.split("|")[0]);
+      if (void 0 !== Bk && Bk <= tk.MAX_BLOCK_ID && (0, tk.rootMetaDescOf)(Bk) === kk) return Bk;
+      throw new Error(`Invalid block name. You sent ${kk}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  38955: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ku
+  38812: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => tk
     });
-    var Eu = yu(27);
-    class Ku {
-      constructor(uu) {
-        this.screen = uu, this.hidesHud = !1
+    var Rk = Bk(22);
+    class tk {
+      constructor(kk) {
+        this.screen = kk, this.hidesHud = !1
       }
-      show(uu, Ru) {
-        this.screen.setFade(uu.colour, uu.alpha), this.screen.setLetterbox(!0 === Ru.letterbox, uu.alpha < 1), this.setHudHidden(!0 === Ru.hideHud)
+      show(kk, Fk) {
+        this.screen.setFade(kk.colour, kk.alpha), this.screen.setLetterbox(!0 === Fk.letterbox, kk.alpha < 1), this.setHudHidden(!0 === Fk.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(uu) {
-        this.hidesHud !== uu && (this.hidesHud = uu, Eu.d.set({
-          isUiHiddenByCamera: uu
+      setHudHidden(kk) {
+        this.hidesHud !== kk && (this.hidesHud = kk, Rk.c.set({
+          isUiHiddenByCamera: kk
         }))
       }
     }
   },
-  38918: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      A: () => Xu,
-      E: () => Ju,
-      G: () => Vu,
-      e: () => Eu,
-      h: () => Bu,
-      l: () => ru,
-      o: () => mu,
-      r: () => Su,
-      t: () => Nu,
-      x: () => pu
+  38781: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      B: () => bk,
+      F: () => sk,
+      c: () => Rk,
+      f: () => Jk,
+      h: () => Vk,
+      k: () => Xk,
+      o: () => ek,
+      p: () => wk,
+      t: () => yk,
+      x: () => dk
     });
-    const Eu = Math.PI / 2 - .001,
-      Ku = 2 * Math.PI,
-      Qu = 1e-9;
+    const Rk = Math.PI / 2 - .001,
+      tk = 2 * Math.PI,
+      ak = 1e-9;
 
-    function mu(uu, Ru) {
-      Ru.heading = uu.heading, Ru.pitch = uu.pitch
+    function Xk(kk, Fk) {
+      Fk.heading = kk.heading, Fk.pitch = kk.pitch
     }
 
-    function Ju(uu, Ru) {
-      const yu = Ru - uu;
-      return yu - Ku * Math.floor((yu + Math.PI) / Ku)
+    function bk(kk, Fk) {
+      const Bk = Fk - kk;
+      return Bk - tk * Math.floor((Bk + Math.PI) / tk)
     }
 
-    function Nu(uu, Ru, yu) {
-      return uu + Ju(uu, Ru) * yu
+    function wk(kk, Fk, Bk) {
+      return kk + bk(kk, Fk) * Bk
     }
 
-    function Xu(uu) {
-      if (!Number.isFinite(uu)) return uu;
-      const Ru = uu - Ku * Math.floor(uu / Ku);
-      return Ru < Ku ? Ru : 0
+    function dk(kk) {
+      if (!Number.isFinite(kk)) return kk;
+      const Fk = kk - tk * Math.floor(kk / tk);
+      return Fk < tk ? Fk : 0
     }
 
-    function Vu(uu, Ru) {
-      return uu + Ju(uu, Ru)
+    function sk(kk, Fk) {
+      return kk + bk(kk, Fk)
     }
 
-    function ru(uu) {
-      return Math.max(-Eu, Math.min(Eu, uu))
+    function Vk(kk) {
+      return Math.max(-Rk, Math.min(Rk, kk))
     }
 
-    function Bu(uu, Ru, yu) {
-      const Eu = Math.cos(Ru);
-      return yu[0] = Eu * Math.sin(uu), yu[1] = -Math.sin(Ru), yu[2] = Eu * Math.cos(uu), yu
+    function Jk(kk, Fk, Bk) {
+      const Rk = Math.cos(Fk);
+      return Bk[0] = Rk * Math.sin(kk), Bk[1] = -Math.sin(Fk), Bk[2] = Rk * Math.cos(kk), Bk
     }
 
-    function xu(uu, Ru, yu, Eu) {
-      const Ku = Math.sqrt(uu * uu + yu * yu);
-      return Ku < Qu && Math.abs(Ru) < Qu || (Ku >= Qu && (Eu.heading = Math.atan2(uu, yu)), Eu.pitch = ru(Math.atan2(-Ru, Ku) + 0)), Eu
+    function Ak(kk, Fk, Bk, Rk) {
+      const tk = Math.sqrt(kk * kk + Bk * Bk);
+      return tk < ak && Math.abs(Fk) < ak || (tk >= ak && (Rk.heading = Math.atan2(kk, Bk)), Rk.pitch = Vk(Math.atan2(-Fk, tk) + 0)), Rk
     }
 
-    function Su(uu, Ru) {
-      return xu(uu[0], uu[1], uu[2], Ru)
+    function ek(kk, Fk) {
+      return Ak(kk[0], kk[1], kk[2], Fk)
     }
 
-    function pu(uu, Ru, yu) {
-      return xu(Ru[0] - uu[0], Ru[1] - uu[1], Ru[2] - uu[2], yu)
+    function yk(kk, Fk, Bk) {
+      return Ak(Fk[0] - kk[0], Fk[1] - kk[1], Fk[2] - kk[2], Bk)
     }
   },
-  38949: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Qu,
-      e: () => Ku
+  38809: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => ak,
+      c: () => tk
     });
-    var Eu = yu(38918);
+    var Rk = Bk(38781);
 
-    function Ku(uu) {
-      var Ru;
-      const yu = "default" === uu.mode ? "movement" : null !== (Ru = uu.playerFacing) && void 0 !== Ru ? Ru : "movement";
-      return "cursor" === yu ? {
-        facing: yu,
+    function tk(kk) {
+      var Fk;
+      const Bk = "default" === kk.mode ? "movement" : null !== (Fk = kk.playerFacing) && void 0 !== Fk ? Fk : "movement";
+      return "cursor" === Bk ? {
+        facing: Bk,
         mouseTurns: null
       } : {
-        facing: yu,
-        mouseTurns: "default" !== uu.mode && void 0 !== uu.playerLook ? "look" : "view"
+        facing: Bk,
+        mouseTurns: "default" !== kk.mode && void 0 !== kk.playerLook ? "look" : "view"
       }
     }
 
-    function Qu(uu, Ru, yu, Ku, Qu, mu) {
-      return mu.RD = 0, mu.mD = 0, mu.pointedAt = void 0, void 0 !== Ku ? Qu ? (mu.pointedAt = Ku, uu) : (0, Eu.A)(Ku.heading) : Qu ? (mu.RD = Ru, mu.mD = yu, uu) : (0, Eu.A)(uu + Ru)
+    function ak(kk, Fk, Bk, tk, ak, Xk) {
+      return Xk.ZE = 0, Xk.pE = 0, Xk.pointedAt = void 0, void 0 !== tk ? ak ? (Xk.pointedAt = tk, kk) : (0, Rk.x)(tk.heading) : ak ? (Xk.ZE = Fk, Xk.pE = Bk, kk) : (0, Rk.x)(kk + Fk)
     }
   },
-  38930: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Zu
+  38790: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Ck
     });
-    var Eu = yu(38939),
-      Ku = yu(38918),
-      Qu = yu(36757);
+    var Rk = Bk(38799),
+      tk = Bk(38781),
+      ak = Bk(36667);
 
-    function mu(uu, Ru, yu, Eu) {
-      if (!(Eu > 0)) return Ru;
-      const Ku = Ru > uu ? Math.min(Ru, uu + yu / Eu) : Math.max(Ru, uu - yu / Eu);
-      return Math.abs(Ru - Ku) < 1e-9 ? Ru : Ku
+    function Xk(kk, Fk, Bk, Rk) {
+      if (!(Rk > 0)) return Fk;
+      const tk = Fk > kk ? Math.min(Fk, kk + Bk / Rk) : Math.max(Fk, kk - Bk / Rk);
+      return Math.abs(Fk - tk) < 1e-9 ? Fk : tk
     }
-    class Ju {
+    class bk {
       constructor() {
         this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.heldMs = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: Eu.g,
+          colour: Rk.e,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(uu) {
-        !this.isGoingOut() && this.sinceTurnMs < Eu.n.minFadeTurnMs ? this.waiting = {
+      fadeOut(kk) {
+        !this.isGoingOut() && this.sinceTurnMs < Rk.m.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: uu
-        } : (this.waiting = null, this.startOut(uu))
+          transition: kk
+        } : (this.waiting = null, this.startOut(kk))
       }
-      fadeIn(uu) {
-        this.isGoingOut() ? this.sinceTurnMs < Eu.n.minFadeTurnMs ? this.waiting = {
+      fadeIn(kk) {
+        this.isGoingOut() ? this.sinceTurnMs < Rk.m.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: uu
-        } : (this.waiting = null, this.startIn(uu)) : this.waiting = null
+          minMs: kk
+        } : (this.waiting = null, this.startIn(kk)) : this.waiting = null
       }
-      advance(uu) {
-        const Ru = this.waiting;
-        if (null === Ru) return this.step(uu);
-        const yu = Eu.n.minFadeTurnMs - this.sinceTurnMs;
-        if (yu > uu) return this.step(uu);
-        const Ku = this.step(yu);
-        return this.waiting = null, "out" === Ru.turn ? this.startOut(Ru.transition) : this.startIn(Ru.minMs), this.step(uu - yu) || Ku
+      advance(kk) {
+        const Fk = this.waiting;
+        if (null === Fk) return this.step(kk);
+        const Bk = Rk.m.minFadeTurnMs - this.sinceTurnMs;
+        if (Bk > kk) return this.step(kk);
+        const tk = this.step(Bk);
+        return this.waiting = null, "out" === Fk.turn ? this.startOut(Fk.transition) : this.startIn(Fk.minMs), this.step(kk - Bk) || tk
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(uu) {
-        ("in" === this.phase || null === this.phase && this.clearMs < Eu.n.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = uu.colour), this.outMs = uu.outMs, this.holdMs = uu.holdMs, this.inMs = uu.inMs
+      startOut(kk) {
+        ("in" === this.phase || null === this.phase && this.clearMs < Rk.m.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = kk.colour), this.outMs = kk.outMs, this.holdMs = kk.holdMs, this.inMs = kk.inMs
       }
-      startIn(uu) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(uu, this.inMs)
+      startIn(kk) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(kk, this.inMs)
       }
-      step(uu) {
-        const Ru = this.screen;
-        this.sinceTurnMs += uu, null === this.phase && (this.clearMs += uu);
-        let yu = !1,
-          Ku = uu;
+      step(kk) {
+        const Fk = this.screen;
+        this.sinceTurnMs += kk, null === this.phase && (this.clearMs += kk);
+        let Bk = !1,
+          tk = kk;
         if ("out" === this.phase) {
-          const Eu = (1 - Ru.alpha) * this.outMs;
-          if (Ru.alpha = mu(Ru.alpha, 1, uu, this.outMs), Ru.alpha < 1) return !1;
-          this.phase = "hold", this.heldMs = 0, Ku = Math.max(0, uu - Eu), yu = !0
+          const Rk = (1 - Fk.alpha) * this.outMs;
+          if (Fk.alpha = Xk(Fk.alpha, 1, kk, this.outMs), Fk.alpha < 1) return !1;
+          this.phase = "hold", this.heldMs = 0, tk = Math.max(0, kk - Rk), Bk = !0
         }
-        let Qu = uu;
+        let ak = kk;
         if ("hold" === this.phase) {
-          this.heldMs += Ku;
-          const uu = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - Eu.n.minFadeTurnMs);
-          if (uu < 0 || yu) return yu;
-          this.phase = "in", this.sinceTurnMs = uu, Qu = uu
+          this.heldMs += tk;
+          const kk = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - Rk.m.minFadeTurnMs);
+          if (kk < 0 || Bk) return Bk;
+          this.phase = "in", this.sinceTurnMs = kk, ak = kk
         }
-        return "in" === this.phase && (Ru.alpha = mu(Ru.alpha, 0, Qu, this.inMs), Ru.alpha <= 0 && (this.phase = null, this.clearMs = 0)), yu
+        return "in" === this.phase && (Fk.alpha = Xk(Fk.alpha, 0, ak, this.inMs), Fk.alpha <= 0 && (this.phase = null, this.clearMs = 0)), Bk
       }
     }
-    var Nu = yu(38915),
-      Xu = yu(38947),
-      Vu = yu(1823),
-      ru = yu(36407);
+    var wk = Bk(38777),
+      dk = Bk(38806),
+      sk = Bk(1808),
+      Vk = Bk(36304);
 
-    function Bu(uu, Ru) {
-      for (let yu = 0; yu < Ru.length; yu++) Ru[yu] = uu[yu]
+    function Jk(kk, Fk) {
+      for (let Bk = 0; Bk < Fk.length; Bk++) Fk[Bk] = kk[Bk]
     }
 
-    function xu(uu, Ru) {
-      var yu;
-      return null !== (yu = uu.fov) && void 0 !== yu ? yu : Ru.getDefaultFov()
+    function Ak(kk, Fk) {
+      var Bk;
+      return null !== (Bk = kk.fov) && void 0 !== Bk ? Bk : Fk.getDefaultFov()
     }
 
-    function Su(uu, Ru, yu, Eu, Ku) {
-      const Qu = 2 / Eu,
-        mu = Math.exp(-Qu * Ku);
-      for (let Ju = 0; Ju < uu.length; Ju++) {
-        const Eu = uu[Ju] - yu[Ju],
-          Nu = (Ru[Ju] + Qu * Eu) * Ku;
-        uu[Ju] = yu[Ju] + (Eu + Nu) * mu, Ru[Ju] = (Ru[Ju] - Qu * Nu) * mu
+    function ek(kk, Fk, Bk, Rk, tk) {
+      const ak = 2 / Rk,
+        Xk = Math.exp(-ak * tk);
+      for (let bk = 0; bk < kk.length; bk++) {
+        const Rk = kk[bk] - Bk[bk],
+          wk = (Fk[bk] + ak * Rk) * tk;
+        kk[bk] = Bk[bk] + (Rk + wk) * Xk, Fk[bk] = (Fk[bk] - ak * wk) * Xk
       }
     }
-    class pu {
-      constructor(uu, Ru, yu, Eu) {
-        var Qu, mu, Ju, Nu, Xu;
-        this.settings = uu, this.Fr = Ru, this.targets = yu, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.JT = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class yk {
+      constructor(kk, Fk, Bk, Rk) {
+        var ak, Xk, bk, wk, dk;
+        this.settings = kk, this.iJ = Fk, this.targets = Bk, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.bs = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, Ku.A)((0, Vu.i)(null !== (Qu = uu.viewHeading) && void 0 !== Qu ? Qu : 0)),
-          pitch: (0, Ku.l)((0, Vu.i)(null !== (mu = uu.viewElevation) && void 0 !== mu ? mu : 45))
-        }, this.closestDistance = null !== (Ju = uu.closestDistance) && void 0 !== Ju ? Ju : Math.min(6, null !== (Nu = uu.furthestDistance) && void 0 !== Nu ? Nu : 1 / 0), this.furthestDistance = null !== (Xu = uu.furthestDistance) && void 0 !== Xu ? Xu : Math.max(64, this.closestDistance);
-        const ru = (0, Ku.h)(this.base.heading, this.base.pitch, this.forward),
-          Bu = Eu.position,
-          xu = this.closestDistance;
-        this.goal = [Bu[0] + ru[0] * xu, Bu[1] + ru[1] * xu, Bu[2] + ru[2] * xu, xu, this.base.heading, this.base.pitch]
+          heading: (0, tk.x)((0, sk.k)(null !== (ak = kk.viewHeading) && void 0 !== ak ? ak : 0)),
+          pitch: (0, tk.h)((0, sk.k)(null !== (Xk = kk.viewElevation) && void 0 !== Xk ? Xk : 45))
+        }, this.closestDistance = null !== (bk = kk.closestDistance) && void 0 !== bk ? bk : Math.min(6, null !== (wk = kk.furthestDistance) && void 0 !== wk ? wk : 1 / 0), this.furthestDistance = null !== (dk = kk.furthestDistance) && void 0 !== dk ? dk : Math.max(64, this.closestDistance);
+        const Vk = (0, tk.f)(this.base.heading, this.base.pitch, this.forward),
+          Jk = Rk.position,
+          Ak = this.closestDistance;
+        this.goal = [Jk[0] + Vk[0] * Ak, Jk[1] + Vk[1] * Ak, Jk[2] + Vk[2] * Ak, Ak, this.base.heading, this.base.pitch]
       }
-      update(uu, Ru, yu) {
-        var Eu, Qu;
-        this.placeGoal(null !== (Eu = this.settings.fov) && void 0 !== Eu ? Eu : this.Fr.getBaseFov()), this.goal[4] = (0, Ku.G)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const mu = null !== (Qu = this.settings.smoothMs) && void 0 !== Qu ? Qu : 400;
-        !this.started || mu < 1 ? (Bu(this.goal, this.smoothed), this.JT.fill(0), this.started = !0) : Su(this.smoothed, this.JT, this.goal, mu, uu), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, Ku.l)(this.smoothed[5]), Ru.apply(this.angles, yu);
-        const Ju = (0, Ku.h)(yu.heading, yu.pitch, this.forward);
-        for (let Ku = 0; Ku < 3; Ku++) yu.position[Ku] = this.smoothed[Ku] - Ju[Ku] * this.smoothed[3];
-        yu.fov = xu(this.settings, this.Fr)
+      update(kk, Fk, Bk) {
+        var Rk, ak;
+        this.placeGoal(null !== (Rk = this.settings.fov) && void 0 !== Rk ? Rk : this.iJ.getBaseFov()), this.goal[4] = (0, tk.F)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const Xk = null !== (ak = this.settings.smoothMs) && void 0 !== ak ? ak : 400;
+        !this.started || Xk < 1 ? (Jk(this.goal, this.smoothed), this.bs.fill(0), this.started = !0) : ek(this.smoothed, this.bs, this.goal, Xk, kk), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, tk.h)(this.smoothed[5]), Fk.apply(this.angles, Bk);
+        const bk = (0, tk.f)(Bk.heading, Bk.pitch, this.forward);
+        for (let tk = 0; tk < 3; tk++) Bk.position[tk] = this.smoothed[tk] - bk[tk] * this.smoothed[3];
+        Bk.fov = Ak(this.settings, this.iJ)
       }
-      continueFrom(uu) {
-        uu instanceof pu && (Bu(uu.goal, this.goal), Bu(uu.smoothed, this.smoothed), Bu(uu.JT, this.JT), this.framedTargets = uu.framedTargets, this.started = uu.started)
+      continueFrom(kk) {
+        kk instanceof yk && (Jk(kk.goal, this.goal), Jk(kk.smoothed, this.smoothed), Jk(kk.bs, this.bs), this.framedTargets = kk.framedTargets, this.started = kk.started)
       }
       reset() {
-        this.JT.fill(0), this.started = !1
+        this.bs.fill(0), this.started = !1
       }
-      placeGoal(uu) {
-        var Ru;
-        let yu = 0;
-        for (const Vu of this.settings.targets) {
-          const uu = this.targets.currentAimPoint(Vu);
-          uu && (0, Nu.i)(uu, this.pointAt(yu++))
+      placeGoal(kk) {
+        var Fk;
+        let Bk = 0;
+        for (const sk of this.settings.targets) {
+          const kk = this.targets.currentAimPoint(sk);
+          kk && (0, wk.h)(kk, this.pointAt(Bk++))
         }
-        if (yu > 0) this.framedTargets = !0;
+        if (Bk > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const uu = this.targets.aimPoint(this.Fr.localPlayerId);
-          uu && (0, Nu.i)(uu, this.pointAt(yu++))
+          const kk = this.targets.aimPoint(this.iJ.localPlayerId);
+          kk && (0, wk.h)(kk, this.pointAt(Bk++))
         }
-        const Eu = this.goal;
-        if (0 === yu) return void(Eu[3] = this.withinDistances(Eu[3]));
-        for (let Nu = 0; Nu < 3; Nu++) {
-          let uu = 1 / 0,
-            Ru = -1 / 0;
-          for (let Eu = 0; Eu < yu; Eu++) uu = Math.min(uu, this.points[Eu][Nu]), Ru = Math.max(Ru, this.points[Eu][Nu]);
-          Eu[Nu] = (uu + Ru) / 2
+        const Rk = this.goal;
+        if (0 === Bk) return void(Rk[3] = this.withinDistances(Rk[3]));
+        for (let wk = 0; wk < 3; wk++) {
+          let kk = 1 / 0,
+            Fk = -1 / 0;
+          for (let Rk = 0; Rk < Bk; Rk++) kk = Math.min(kk, this.points[Rk][wk]), Fk = Math.max(Fk, this.points[Rk][wk]);
+          Rk[wk] = (kk + Fk) / 2
         }
-        let Ku = 0;
-        for (let Nu = 0; Nu < yu; Nu++) {
-          const uu = this.points[Nu];
-          Ku = Math.max(Ku, Math.hypot(uu[0] - Eu[0], uu[1] - Eu[1], uu[2] - Eu[2]))
+        let tk = 0;
+        for (let wk = 0; wk < Bk; wk++) {
+          const kk = this.points[wk];
+          tk = Math.max(tk, Math.hypot(kk[0] - Rk[0], kk[1] - Rk[1], kk[2] - Rk[2]))
         }
-        const Qu = Math.tan((0, Vu.i)(uu) / 2),
-          mu = Math.atan(Qu * (!0 === this.settings.letterbox ? ru.d : 1)),
-          Ju = Math.atan(Qu * this.Fr.getAspectRatio()),
-          Xu = (Ku + (null !== (Ru = this.settings.padding) && void 0 !== Ru ? Ru : 2)) / Math.sin(Math.min(mu, Ju));
-        Eu[3] = this.withinDistances(Xu)
+        const ak = Math.tan((0, sk.k)(kk) / 2),
+          Xk = Math.atan(ak * (!0 === this.settings.letterbox ? Vk.e : 1)),
+          bk = Math.atan(ak * this.iJ.getAspectRatio()),
+          dk = (tk + (null !== (Fk = this.settings.padding) && void 0 !== Fk ? Fk : 2)) / Math.sin(Math.min(Xk, bk));
+        Rk[3] = this.withinDistances(dk)
       }
-      withinDistances(uu) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, uu))
+      withinDistances(kk) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, kk))
       }
-      pointAt(uu) {
-        return uu === this.points.length && this.points.push([0, 0, 0]), this.points[uu]
+      pointAt(kk) {
+        return kk === this.points.length && this.points.push([0, 0, 0]), this.points[kk]
       }
     }
-    class Tu {
-      constructor(uu) {
-        this.limits = uu, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
+    class fk {
+      constructor(kk) {
+        this.limits = kk, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
       }
-      continueFrom(uu) {
-        this.limits && (this.yawOffset = uu.yawOffset, this.pitchOffset = uu.pitchOffset, this.idleMs = uu.idleMs)
+      continueFrom(kk) {
+        this.limits && (this.yawOffset = kk.yawOffset, this.pitchOffset = kk.pitchOffset, this.idleMs = kk.idleMs)
       }
-      update(uu, Ru) {
-        const yu = this.limits;
-        if (!yu) return;
-        const Eu = Number.isFinite(Ru.RD) ? Ru.RD : 0,
-          Ku = Number.isFinite(Ru.mD) ? Ru.mD : 0;
-        if (Ru.pointedAt) this.idleMs = 0, this.pointedAt = {
-          heading: Ru.pointedAt.heading,
-          pitch: Ru.pointedAt.pitch
+      update(kk, Fk) {
+        const Bk = this.limits;
+        if (!Bk) return;
+        const Rk = Number.isFinite(Fk.ZE) ? Fk.ZE : 0,
+          tk = Number.isFinite(Fk.pE) ? Fk.pE : 0;
+        if (Fk.pointedAt) this.idleMs = 0, this.pointedAt = {
+          heading: Fk.pointedAt.heading,
+          pitch: Fk.pointedAt.pitch
         };
-        else if (0 !== Eu || 0 !== Ku) this.idleMs = 0, this.yawOffset += Eu, this.pitchOffset += Ku;
+        else if (0 !== Rk || 0 !== tk) this.idleMs = 0, this.yawOffset += Rk, this.pitchOffset += tk;
         else {
-          const Ru = Math.max(0, this.idleMs + uu - 200) - Math.max(0, this.idleMs - 200);
-          if (this.idleMs += uu, void 0 !== yu.returnMs && Ru > 0) {
-            const uu = yu.returnMs > 0 ? Math.exp(-3 * Ru / yu.returnMs) : 0;
-            this.yawOffset *= uu, this.pitchOffset *= uu
+          const Fk = Math.max(0, this.idleMs + kk - 200) - Math.max(0, this.idleMs - 200);
+          if (this.idleMs += kk, void 0 !== Bk.returnMs && Fk > 0) {
+            const kk = Bk.returnMs > 0 ? Math.exp(-3 * Fk / Bk.returnMs) : 0;
+            this.yawOffset *= kk, this.pitchOffset *= kk
           }
         }
-        this.clampOffsets(yu)
+        this.clampOffsets(Bk)
       }
-      clampOffsets(uu) {
-        if (uu.maxYaw >= 180) this.yawOffset = (0, Ku.E)(0, this.yawOffset);
+      clampOffsets(kk) {
+        if (kk.maxYaw >= 180) this.yawOffset = (0, tk.B)(0, this.yawOffset);
         else {
-          const Ru = (0, Vu.i)(uu.maxYaw);
-          this.yawOffset = Math.max(-Ru, Math.min(Ru, this.yawOffset))
+          const Fk = (0, sk.k)(kk.maxYaw);
+          this.yawOffset = Math.max(-Fk, Math.min(Fk, this.yawOffset))
         }
-        const Ru = (0, Vu.i)(uu.maxPitch);
-        this.pitchOffset = Math.max(-Ru, Math.min(Ru, this.pitchOffset))
+        const Fk = (0, sk.k)(kk.maxPitch);
+        this.pitchOffset = Math.max(-Fk, Math.min(Fk, this.pitchOffset))
       }
-      apply(uu, Ru) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, Ku.E)(uu.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - uu.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const yu = (0, Ku.l)(uu.pitch + this.pitchOffset);
-        this.pitchOffset = yu - uu.pitch, Ru.heading = (0, Ku.A)(uu.heading + this.yawOffset), Ru.pitch = yu
+      apply(kk, Fk) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, tk.B)(kk.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - kk.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const Bk = (0, tk.h)(kk.pitch + this.pitchOffset);
+        this.pitchOffset = Bk - kk.pitch, Fk.heading = (0, tk.x)(kk.heading + this.yawOffset), Fk.pitch = Bk
       }
-      unapply(uu, Ru) {
-        Ru.heading = (0, Ku.A)(uu.heading - this.yawOffset), Ru.pitch = (0, Ku.l)(uu.pitch - this.pitchOffset)
+      unapply(kk, Fk) {
+        Fk.heading = (0, tk.x)(kk.heading - this.yawOffset), Fk.pitch = (0, tk.h)(kk.pitch - this.pitchOffset)
       }
     }
-    const Wu = 1e-6;
+    const mk = 1e-6;
 
-    function ju(uu) {
-      return Math.sqrt(uu[0] * uu[0] + uu[1] * uu[1] + uu[2] * uu[2])
+    function Wk(kk) {
+      return Math.sqrt(kk[0] * kk[0] + kk[1] * kk[1] + kk[2] * kk[2])
     }
 
-    function Hu(uu, Ru, yu, Eu, Ku) {
-      const Qu = Ku * Ku,
-        mu = Qu * Ku;
-      return (2 * mu - 3 * Qu + 1) * uu + (mu - 2 * Qu + Ku) * Ru + (-2 * mu + 3 * Qu) * yu + (mu - Qu) * Eu
+    function vk(kk, Fk, Bk, Rk, tk) {
+      const ak = tk * tk,
+        Xk = ak * tk;
+      return (2 * Xk - 3 * ak + 1) * kk + (Xk - 2 * ak + tk) * Fk + (-2 * Xk + 3 * ak) * Bk + (Xk - ak) * Rk
     }
 
-    function du(uu, Ru, yu, Eu, Ku) {
-      const Qu = Ku * Ku;
-      return (6 * Qu - 6 * Ku) * uu + (3 * Qu - 4 * Ku + 1) * Ru + (-6 * Qu + 6 * Ku) * yu + (3 * Qu - 2 * Ku) * Eu
+    function ik(kk, Fk, Bk, Rk, tk) {
+      const ak = tk * tk;
+      return (6 * ak - 6 * tk) * kk + (3 * ak - 4 * tk + 1) * Fk + (-6 * ak + 6 * tk) * Bk + (3 * ak - 2 * tk) * Rk
     }
 
-    function bu(uu, Ru) {
-      const yu = Ru[0] - uu[0],
-        Eu = Ru[1] - uu[1],
-        Ku = Ru[2] - uu[2];
-      return Math.sqrt(yu * yu + Eu * Eu + Ku * Ku)
+    function Yk(kk, Fk) {
+      const Bk = Fk[0] - kk[0],
+        Rk = Fk[1] - kk[1],
+        tk = Fk[2] - kk[2];
+      return Math.sqrt(Bk * Bk + Rk * Rk + tk * tk)
     }
 
-    function Cu(uu, Ru, yu, Eu, Ku, Qu) {
-      for (let mu = 0; mu < 3; mu++) Qu[mu] = Ku ? uu[mu] * Eu : yu[mu] - Ru[mu];
-      return Ku && function(uu, Ru) {
-        const yu = ju(uu);
-        if (yu > Ru) {
-          const Eu = Ru / yu;
-          uu[0] *= Eu, uu[1] *= Eu, uu[2] *= Eu
+    function Lk(kk, Fk, Bk, Rk, tk, ak) {
+      for (let Xk = 0; Xk < 3; Xk++) ak[Xk] = tk ? kk[Xk] * Rk : Bk[Xk] - Fk[Xk];
+      return tk && function(kk, Fk) {
+        const Bk = Wk(kk);
+        if (Bk > Fk) {
+          const Rk = Fk / Bk;
+          kk[0] *= Rk, kk[1] *= Rk, kk[2] *= Rk
         }
-      }(Qu, 3 * bu(Ru, yu)), Qu
+      }(ak, 3 * Yk(Fk, Bk)), ak
     }
 
-    function ku(uu, Ru, yu, Eu) {
-      for (let Ku = 0; Ku < 3; Ku++) Eu[Ku] = 6 * (Ru[Ku] - uu[Ku]) - 2 * yu[Ku];
-      if (ju(Eu) < Wu)
-        for (let Ku = 0; Ku < 3; Ku++) Eu[Ku] = Ru[Ku] - uu[Ku];
-      return Eu
+    function Ok(kk, Fk, Bk, Rk) {
+      for (let tk = 0; tk < 3; tk++) Rk[tk] = 6 * (Fk[tk] - kk[tk]) - 2 * Bk[tk];
+      if (Wk(Rk) < mk)
+        for (let tk = 0; tk < 3; tk++) Rk[tk] = Fk[tk] - kk[tk];
+      return Rk
     }
 
-    function eu(uu, Ru) {
-      return [2 * Ru[0] - uu[0], 2 * Ru[1] - uu[1], 2 * Ru[2] - uu[2]]
+    function Ek(kk, Fk) {
+      return [2 * Fk[0] - kk[0], 2 * Fk[1] - kk[1], 2 * Fk[2] - kk[2]]
     }
 
-    function Au(uu, Ru, yu, Eu, Ku, Qu, mu) {
-      if (!Qu && !mu) return 0;
-      const Ju = Qu ? uu : 2 * Ru - yu,
-        Nu = mu ? yu : 2 * Ru - uu,
-        Xu = Qu ? Eu : Ku,
-        Vu = mu ? Ku : Eu,
-        ru = (Ru - Ju) / Xu,
-        Bu = (Nu - Ru) / Vu;
-      if (ru * Bu <= 0) return 0;
-      const xu = (Nu - Ju) / (Xu + Vu),
-        Su = 3 * Math.min(Math.abs(ru), Math.abs(Bu));
-      return Math.max(-Su, Math.min(Su, xu))
+    function Sk(kk, Fk, Bk, Rk, tk, ak, Xk) {
+      if (!ak && !Xk) return 0;
+      const bk = ak ? kk : 2 * Fk - Bk,
+        wk = Xk ? Bk : 2 * Fk - kk,
+        dk = ak ? Rk : tk,
+        sk = Xk ? tk : Rk,
+        Vk = (Fk - bk) / dk,
+        Jk = (wk - Fk) / sk;
+      if (Vk * Jk <= 0) return 0;
+      const Ak = (wk - bk) / (dk + sk),
+        ek = 3 * Math.min(Math.abs(Vk), Math.abs(Jk));
+      return Math.max(-ek, Math.min(ek, Ak))
     }
 
-    function Du(uu, Ru, yu, Eu, Ku, Qu, mu) {
+    function Nk(kk, Fk, Bk, Rk, tk, ak, Xk) {
       const {
-        u: Ju,
-        segmentMs: Nu
-      } = uu;
-      if (!uu.curved) return yu + (Eu - yu) * Ju;
-      return Hu(yu, Au(Ru, yu, Eu, uu.beforeMs, Nu, Qu, !0) * Nu, Eu, Au(yu, Eu, Ku, Nu, uu.afterMs, !0, mu) * Nu, Ju)
+        u: bk,
+        segmentMs: wk
+      } = kk;
+      if (!kk.curved) return Bk + (Rk - Bk) * bk;
+      return vk(Bk, Sk(Fk, Bk, Rk, kk.beforeMs, wk, ak, !0) * wk, Rk, Sk(Bk, Rk, tk, wk, kk.afterMs, !0, Xk) * wk, bk)
     }
 
-    function Mu(uu) {
-      return Math.abs(uu.pitch) >= Ku.e
+    function Hk(kk) {
+      return Math.abs(kk.pitch) >= tk.c
     }
-    class Iu {
-      constructor(uu, Ru, yu, Eu, Ku) {
-        this.nodes = uu, this.prevNodes = yu, this.nextNodes = Eu, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class uk {
+      constructor(kk, Fk, Bk, Rk, tk) {
+        this.nodes = kk, this.prevNodes = Bk, this.nextNodes = Rk, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -540,84 +540,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = uu.map(((uu, yu) => this.nodeTangent(Ru, Ku, yu)))
+        }, this.tangents = kk.map(((kk, Bk) => this.nodeTangent(Fk, tk, Bk)))
       }
-      sample(uu, Ru, yu) {
+      sample(kk, Fk, Bk) {
         const {
-          index: Eu,
-          toIndex: Qu,
-          segmentMs: mu,
-          curved: Ju
-        } = uu, Nu = this.fromAngles, Xu = this.toAngles, Vu = this.nodeAngles(Eu, yu.position, Ru, Nu), ru = this.nodeAngles(Qu, yu.position, Ru, Xu);
-        if (mu > 0 && "aim" !== Vu && "aim" !== ru && this.liveTangent(uu, Nu)) return yu.heading = (0, Ku.A)(Nu.heading), void(yu.pitch = Nu.pitch);
-        if ("none" === Vu && "none" === ru) return;
-        !Ju && mu > 0 && ("tangent" === Vu && this.liveTangent(uu, Nu), "tangent" === ru && this.liveTangent(uu, Xu)), "none" === Vu ? (0, Ku.o)(Xu, Nu) : "none" === ru && (0, Ku.o)(Nu, Xu);
-        const Bu = Ju && uu.beforeIndex >= 0 && "none" !== this.nodeAngles(uu.beforeIndex, yu.position, Ru, this.beforeAngles),
-          xu = Ju && uu.afterIndex >= 0 && "none" !== this.nodeAngles(uu.afterIndex, yu.position, Ru, this.afterAngles),
-          Su = (0, Ku.G)(Nu.heading, Xu.heading),
-          pu = Du(uu, Bu ? (0, Ku.G)(Nu.heading, this.beforeAngles.heading) : 0, Nu.heading, Su, xu ? (0, Ku.G)(Su, this.afterAngles.heading) : 0, Bu, xu);
-        yu.heading = (0, Ku.A)(pu), yu.pitch = (0, Ku.l)(Du(uu, this.beforeAngles.pitch, Nu.pitch, Xu.pitch, this.afterAngles.pitch, Bu, xu))
+          index: Rk,
+          toIndex: ak,
+          segmentMs: Xk,
+          curved: bk
+        } = kk, wk = this.fromAngles, dk = this.toAngles, sk = this.nodeAngles(Rk, Bk.position, Fk, wk), Vk = this.nodeAngles(ak, Bk.position, Fk, dk);
+        if (Xk > 0 && "aim" !== sk && "aim" !== Vk && this.liveTangent(kk, wk)) return Bk.heading = (0, tk.x)(wk.heading), void(Bk.pitch = wk.pitch);
+        if ("none" === sk && "none" === Vk) return;
+        !bk && Xk > 0 && ("tangent" === sk && this.liveTangent(kk, wk), "tangent" === Vk && this.liveTangent(kk, dk)), "none" === sk ? (0, tk.k)(dk, wk) : "none" === Vk && (0, tk.k)(wk, dk);
+        const Jk = bk && kk.beforeIndex >= 0 && "none" !== this.nodeAngles(kk.beforeIndex, Bk.position, Fk, this.beforeAngles),
+          Ak = bk && kk.afterIndex >= 0 && "none" !== this.nodeAngles(kk.afterIndex, Bk.position, Fk, this.afterAngles),
+          ek = (0, tk.F)(wk.heading, dk.heading),
+          yk = Nk(kk, Jk ? (0, tk.F)(wk.heading, this.beforeAngles.heading) : 0, wk.heading, ek, Ak ? (0, tk.F)(ek, this.afterAngles.heading) : 0, Jk, Ak);
+        Bk.heading = (0, tk.x)(yk), Bk.pitch = (0, tk.h)(Nk(kk, this.beforeAngles.pitch, wk.pitch, dk.pitch, this.afterAngles.pitch, Jk, Ak))
       }
-      nodeAngles(uu, Ru, yu, Eu) {
-        const Ku = this.rawNodeAngles(uu, Ru, yu, Eu);
-        return "none" !== Ku && Mu(Eu) && !this.borrowHeading(this.prevNodes[uu], Ru, yu, Eu) && this.borrowHeading(this.nextNodes[uu], Ru, yu, Eu), Ku
+      nodeAngles(kk, Fk, Bk, Rk) {
+        const tk = this.rawNodeAngles(kk, Fk, Bk, Rk);
+        return "none" !== tk && Hk(Rk) && !this.borrowHeading(this.prevNodes[kk], Fk, Bk, Rk) && this.borrowHeading(this.nextNodes[kk], Fk, Bk, Rk), tk
       }
-      borrowHeading(uu, Ru, yu, Eu) {
-        const Ku = this.borrowedAngles;
-        return !(uu < 0 || "none" === this.rawNodeAngles(uu, Ru, yu, Ku) || Mu(Ku)) && (Eu.heading = Ku.heading, !0)
+      borrowHeading(kk, Fk, Bk, Rk) {
+        const tk = this.borrowedAngles;
+        return !(kk < 0 || "none" === this.rawNodeAngles(kk, Fk, Bk, tk) || Hk(tk)) && (Rk.heading = tk.heading, !0)
       }
-      rawNodeAngles(uu, Ru, yu, Eu) {
-        const Qu = this.nodes[uu].keyframe;
-        if (Qu.lookDirection) return (0, Ku.r)(Qu.lookDirection, Eu), "aim";
-        if (void 0 !== Qu.lookAt) {
-          const uu = yu(Qu.lookAt);
-          if (uu) return (0, Ku.x)(Ru, uu, Eu), "aim"
+      rawNodeAngles(kk, Fk, Bk, Rk) {
+        const ak = this.nodes[kk].keyframe;
+        if (ak.lookDirection) return (0, tk.o)(ak.lookDirection, Rk), "aim";
+        if (void 0 !== ak.lookAt) {
+          const kk = Bk(ak.lookAt);
+          if (kk) return (0, tk.t)(Fk, kk, Rk), "aim"
         }
-        const mu = this.tangents[uu];
-        return mu ? ((0, Ku.o)(mu, Eu), "tangent") : "none"
+        const Xk = this.tangents[kk];
+        return Xk ? ((0, tk.k)(Xk, Rk), "tangent") : "none"
       }
-      liveTangent(uu, Ru) {
-        const yu = this.nodes[uu.index].position,
-          Eu = this.nodes[uu.toIndex].position,
-          Qu = this.derivative;
-        for (let Ku = 0; Ku < 3; Ku++) Qu[Ku] = du(yu[Ku], uu.fromTangent[Ku], Eu[Ku], uu.toTangent[Ku], uu.u);
-        return ju(Qu) > 1e-9 ? ((0, Ku.r)(Qu, Ru), !0) : !(bu(yu, Eu) < Wu) && ((0, Ku.r)(ku(yu, Eu, uu.u < .5 ? uu.toTangent : uu.fromTangent, Qu), Ru), !0)
+      liveTangent(kk, Fk) {
+        const Bk = this.nodes[kk.index].position,
+          Rk = this.nodes[kk.toIndex].position,
+          ak = this.derivative;
+        for (let tk = 0; tk < 3; tk++) ak[tk] = ik(Bk[tk], kk.fromTangent[tk], Rk[tk], kk.toTangent[tk], kk.u);
+        return Wk(ak) > 1e-9 ? ((0, tk.o)(ak, Fk), !0) : !(Yk(Bk, Rk) < mk) && ((0, tk.o)(Ok(Bk, Rk, kk.u < .5 ? kk.toTangent : kk.fromTangent, ak), Fk), !0)
       }
-      nodeTangent(uu, Ru, yu) {
-        var Eu;
-        const Qu = uu[yu];
-        if (ju(Qu) > 1e-9) return (0, Ku.r)(Qu, {
+      nodeTangent(kk, Fk, Bk) {
+        var Rk;
+        const ak = kk[Bk];
+        if (Wk(ak) > 1e-9) return (0, tk.o)(ak, {
           heading: 0,
           pitch: 0
         });
-        const mu = null !== (Eu = this.restDirectionTo(yu, yu + 1, uu, Ru)) && void 0 !== Eu ? Eu : this.restDirectionTo(yu, yu - 1, uu, Ru);
-        return mu ? (0, Ku.r)(mu, {
+        const Xk = null !== (Rk = this.restDirectionTo(Bk, Bk + 1, kk, Fk)) && void 0 !== Rk ? Rk : this.restDirectionTo(Bk, Bk - 1, kk, Fk);
+        return Xk ? (0, tk.o)(Xk, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(uu, Ru, yu, Eu) {
-        const Ku = this.nodes[uu],
-          Qu = this.nodes[Ru];
-        if (!Qu || bu(Ku.position, Qu.position) < Wu) return null;
-        const [mu, Ju] = Ru > uu ? [Ku, Qu] : [Qu, Ku], Nu = Cu(yu[Ru], mu.position, Ju.position, Ju.timeMs - mu.timeMs, Eu, [0, 0, 0]);
-        return ku(mu.position, Ju.position, Nu, [0, 0, 0])
+      restDirectionTo(kk, Fk, Bk, Rk) {
+        const tk = this.nodes[kk],
+          ak = this.nodes[Fk];
+        if (!ak || Yk(tk.position, ak.position) < mk) return null;
+        const [Xk, bk] = Fk > kk ? [tk, ak] : [ak, tk], wk = Lk(Bk[Fk], Xk.position, bk.position, bk.timeMs - Xk.timeMs, Rk, [0, 0, 0]);
+        return Ok(Xk.position, bk.position, wk, [0, 0, 0])
       }
     }
 
-    function Gu(uu, Ru) {
-      const yu = uu.lookDirection || Ru.lookDirection ? function(uu, Ru) {
-        if (!uu || !Ru) return uu === Ru;
-        const yu = ju(uu),
-          Eu = ju(Ru);
-        return Math.hypot(uu[0] / yu - Ru[0] / Eu, uu[1] / yu - Ru[1] / Eu, uu[2] / yu - Ru[2] / Eu) < Wu
-      }(uu.lookDirection, Ru.lookDirection) : (Eu = uu.lookAt, Ku = Ru.lookAt, "object" !== typeof Eu || "object" !== typeof Ku ? Eu === Ku : bu(Eu, Ku) < Wu);
-      var Eu, Ku;
-      return bu(uu.position, Ru.position) < Wu && uu.fov === Ru.fov && yu
+    function Mk(kk, Fk) {
+      const Bk = kk.lookDirection || Fk.lookDirection ? function(kk, Fk) {
+        if (!kk || !Fk) return kk === Fk;
+        const Bk = Wk(kk),
+          Rk = Wk(Fk);
+        return Math.hypot(kk[0] / Bk - Fk[0] / Rk, kk[1] / Bk - Fk[1] / Rk, kk[2] / Bk - Fk[2] / Rk) < mk
+      }(kk.lookDirection, Fk.lookDirection) : (Rk = kk.lookAt, tk = Fk.lookAt, "object" !== typeof Rk || "object" !== typeof tk ? Rk === tk : Yk(Rk, tk) < mk);
+      var Rk, tk;
+      return Yk(kk.position, Fk.position) < mk && kk.fov === Fk.fov && Bk
     }
-    class Uu {
-      constructor(uu, Ru, yu) {
-        if (this.smooth = Ru, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class gk {
+      constructor(kk, Fk, Bk) {
+        if (this.smooth = Fk, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -629,306 +629,306 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === uu.length) throw new Error("A camera path needs at least one keyframe");
-        for (let Qu = 1; Qu < uu.length; Qu++)
-          if (!(uu[Qu].timeMs > uu[Qu - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = uu.map((uu => {
-          var Ru;
+          }, 0 === kk.length) throw new Error("A camera path needs at least one keyframe");
+        for (let ak = 1; ak < kk.length; ak++)
+          if (!(kk[ak].timeMs > kk[ak - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = kk.map((kk => {
+          var Fk;
           return {
-            timeMs: uu.timeMs,
-            position: [...uu.position],
-            keyframe: uu,
-            easing: (0, Qu.s)(null !== (Ru = uu.easing) && void 0 !== Ru ? Ru : "linear")
+            timeMs: kk.timeMs,
+            position: [...kk.position],
+            keyframe: kk,
+            easing: (0, ak.l)(null !== (Fk = kk.easing) && void 0 !== Fk ? Fk : "linear")
           }
         }));
-        const Eu = this.nodes[0],
-          Ku = this.nodes[this.nodes.length - 1],
-          mu = yu && this.nodes.length > 1;
-        mu && !Gu(Eu.keyframe, Ku.keyframe) && this.nodes.push({
-          ...Eu,
-          timeMs: Ku.timeMs + (Ku.timeMs - Eu.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = mu ? this.nodes[this.nodes.length - 1].timeMs - Eu.timeMs : 0, this.prevNodes = this.nodes.map(((uu, Ru) => this.neighbour(Ru, -1))), this.nextNodes = this.nodes.map(((uu, Ru) => this.neighbour(Ru, 1))), this.prevGaps = this.prevNodes.map(((uu, Ru) => uu >= 0 ? this.gapMs(Ru, -1) : 0)), this.nextGaps = this.nextNodes.map(((uu, Ru) => uu >= 0 ? this.gapMs(Ru, 1) : 0)), this.velocities = this.nodes.map(((uu, Ru) => {
-          const yu = this.prevNodes[Ru],
-            Eu = this.nextNodes[Ru];
-          return function(uu, Ru, yu, Eu, Ku, Qu) {
-            if (Qu[0] = 0, Qu[1] = 0, Qu[2] = 0, !uu && !yu) return Qu;
-            const mu = null !== uu && void 0 !== uu ? uu : eu(null !== yu && void 0 !== yu ? yu : Ru, Ru),
-              Ju = null !== yu && void 0 !== yu ? yu : eu(null !== uu && void 0 !== uu ? uu : Ru, Ru),
-              Nu = uu ? Eu : Ku,
-              Xu = yu ? Ku : Eu,
-              Vu = bu(mu, Ru),
-              ru = bu(Ru, Ju);
-            if (Vu < Wu || ru < Wu) return Qu;
-            const Bu = Math.sqrt(Vu),
-              xu = Math.sqrt(ru),
-              Su = (Bu + xu) / (Nu + Xu);
-            for (let pu = 0; pu < 3; pu++) {
-              const uu = (Ru[pu] - mu[pu]) / Bu - (Ju[pu] - mu[pu]) / (Bu + xu) + (Ju[pu] - Ru[pu]) / xu;
-              Qu[pu] = uu * Su
+        const Rk = this.nodes[0],
+          tk = this.nodes[this.nodes.length - 1],
+          Xk = Bk && this.nodes.length > 1;
+        Xk && !Mk(Rk.keyframe, tk.keyframe) && this.nodes.push({
+          ...Rk,
+          timeMs: tk.timeMs + (tk.timeMs - Rk.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = Xk ? this.nodes[this.nodes.length - 1].timeMs - Rk.timeMs : 0, this.prevNodes = this.nodes.map(((kk, Fk) => this.neighbour(Fk, -1))), this.nextNodes = this.nodes.map(((kk, Fk) => this.neighbour(Fk, 1))), this.prevGaps = this.prevNodes.map(((kk, Fk) => kk >= 0 ? this.gapMs(Fk, -1) : 0)), this.nextGaps = this.nextNodes.map(((kk, Fk) => kk >= 0 ? this.gapMs(Fk, 1) : 0)), this.velocities = this.nodes.map(((kk, Fk) => {
+          const Bk = this.prevNodes[Fk],
+            Rk = this.nextNodes[Fk];
+          return function(kk, Fk, Bk, Rk, tk, ak) {
+            if (ak[0] = 0, ak[1] = 0, ak[2] = 0, !kk && !Bk) return ak;
+            const Xk = null !== kk && void 0 !== kk ? kk : Ek(null !== Bk && void 0 !== Bk ? Bk : Fk, Fk),
+              bk = null !== Bk && void 0 !== Bk ? Bk : Ek(null !== kk && void 0 !== kk ? kk : Fk, Fk),
+              wk = kk ? Rk : tk,
+              dk = Bk ? tk : Rk,
+              sk = Yk(Xk, Fk),
+              Vk = Yk(Fk, bk);
+            if (sk < mk || Vk < mk) return ak;
+            const Jk = Math.sqrt(sk),
+              Ak = Math.sqrt(Vk),
+              ek = (Jk + Ak) / (wk + dk);
+            for (let yk = 0; yk < 3; yk++) {
+              const kk = (Fk[yk] - Xk[yk]) / Jk - (bk[yk] - Xk[yk]) / (Jk + Ak) + (bk[yk] - Fk[yk]) / Ak;
+              ak[yk] = kk * ek
             }
-            return Qu
-          }(yu >= 0 ? this.nodes[yu].position : null, uu.position, Eu >= 0 ? this.nodes[Eu].position : null, this.prevGaps[Ru], this.nextGaps[Ru], [0, 0, 0])
-        })), this.aim = new Iu(this.nodes, this.velocities, this.prevNodes, this.nextNodes, Ru)
+            return ak
+          }(Bk >= 0 ? this.nodes[Bk].position : null, kk.position, Rk >= 0 ? this.nodes[Rk].position : null, this.prevGaps[Fk], this.nextGaps[Fk], [0, 0, 0])
+        })), this.aim = new uk(this.nodes, this.velocities, this.prevNodes, this.nextNodes, Fk)
       }
-      sample(uu, Ru, yu, Eu) {
-        const Ku = this.findSegment(this.pathTime(uu));
-        this.samplePosition(Ku, Eu.position), this.aim.sample(Ku, Ru, Eu);
+      sample(kk, Fk, Bk, Rk) {
+        const tk = this.findSegment(this.pathTime(kk));
+        this.samplePosition(tk, Rk.position), this.aim.sample(tk, Fk, Rk);
         const {
-          beforeIndex: Qu,
-          afterIndex: mu
-        } = Ku;
-        Eu.fov = Du(Ku, Qu >= 0 ? this.fovAt(Qu, yu) : 0, this.fovAt(Ku.index, yu), this.fovAt(Ku.toIndex, yu), mu >= 0 ? this.fovAt(mu, yu) : 0, Qu >= 0, mu >= 0)
+          beforeIndex: ak,
+          afterIndex: Xk
+        } = tk;
+        Rk.fov = Nk(tk, ak >= 0 ? this.fovAt(ak, Bk) : 0, this.fovAt(tk.index, Bk), this.fovAt(tk.toIndex, Bk), Xk >= 0 ? this.fovAt(Xk, Bk) : 0, ak >= 0, Xk >= 0)
       }
-      pathTime(uu) {
-        const Ru = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || uu <= Ru) return uu;
-        const yu = uu - Ru;
-        return Ru + yu - this.loopMs * Math.floor(yu / this.loopMs)
+      pathTime(kk) {
+        const Fk = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || kk <= Fk) return kk;
+        const Bk = kk - Fk;
+        return Fk + Bk - this.loopMs * Math.floor(Bk / this.loopMs)
       }
-      findSegment(uu) {
-        const Ru = this.nodes,
-          yu = this.segment;
-        let Eu = yu.index;
-        for (uu < Ru[Eu].timeMs && (Eu = 0); Eu < Ru.length - 2 && Ru[Eu + 1].timeMs <= uu;) Eu++;
-        const Ku = Math.min(Eu + 1, Ru.length - 1),
-          mu = Ru[Ku].timeMs - Ru[Eu].timeMs;
-        return yu.index = Eu, yu.toIndex = Ku, yu.segmentMs = mu, yu.u = mu > 0 ? (0, Qu.q)((uu - Ru[Eu].timeMs) / mu, Ru[Eu].easing) : 1, yu.curved = this.smooth && mu > 0, yu.beforeIndex = this.prevNodes[Eu], yu.afterIndex = this.nextNodes[Ku], yu.beforeMs = this.prevGaps[Eu], yu.afterMs = this.nextGaps[Ku], yu
+      findSegment(kk) {
+        const Fk = this.nodes,
+          Bk = this.segment;
+        let Rk = Bk.index;
+        for (kk < Fk[Rk].timeMs && (Rk = 0); Rk < Fk.length - 2 && Fk[Rk + 1].timeMs <= kk;) Rk++;
+        const tk = Math.min(Rk + 1, Fk.length - 1),
+          Xk = Fk[tk].timeMs - Fk[Rk].timeMs;
+        return Bk.index = Rk, Bk.toIndex = tk, Bk.segmentMs = Xk, Bk.u = Xk > 0 ? (0, ak.k)((kk - Fk[Rk].timeMs) / Xk, Fk[Rk].easing) : 1, Bk.curved = this.smooth && Xk > 0, Bk.beforeIndex = this.prevNodes[Rk], Bk.afterIndex = this.nextNodes[tk], Bk.beforeMs = this.prevGaps[Rk], Bk.afterMs = this.nextGaps[tk], Bk
       }
-      samplePosition(uu, Ru) {
+      samplePosition(kk, Fk) {
         const {
-          fromTangent: yu,
-          toTangent: Eu,
-          curved: Ku
-        } = uu, Qu = this.nodes[uu.index].position, mu = this.nodes[uu.toIndex].position;
-        Cu(this.velocities[uu.index], Qu, mu, uu.segmentMs, Ku, yu), Cu(this.velocities[uu.toIndex], Qu, mu, uu.segmentMs, Ku, Eu);
-        const Ju = uu.u;
-        for (let Nu = 0; Nu < 3; Nu++) Ru[Nu] = Ku ? Hu(Qu[Nu], yu[Nu], mu[Nu], Eu[Nu], Ju) : Qu[Nu] + (mu[Nu] - Qu[Nu]) * Ju
+          fromTangent: Bk,
+          toTangent: Rk,
+          curved: tk
+        } = kk, ak = this.nodes[kk.index].position, Xk = this.nodes[kk.toIndex].position;
+        Lk(this.velocities[kk.index], ak, Xk, kk.segmentMs, tk, Bk), Lk(this.velocities[kk.toIndex], ak, Xk, kk.segmentMs, tk, Rk);
+        const bk = kk.u;
+        for (let wk = 0; wk < 3; wk++) Fk[wk] = tk ? vk(ak[wk], Bk[wk], Xk[wk], Rk[wk], bk) : ak[wk] + (Xk[wk] - ak[wk]) * bk
       }
-      fovAt(uu, Ru) {
-        var yu;
-        return null !== (yu = this.nodes[uu].keyframe.fov) && void 0 !== yu ? yu : Ru
+      fovAt(kk, Fk) {
+        var Bk;
+        return null !== (Bk = this.nodes[kk].keyframe.fov) && void 0 !== Bk ? Bk : Fk
       }
-      neighbour(uu, Ru) {
-        const yu = this.nodes.length - 1,
-          Eu = uu + Ru;
-        return Eu >= 0 && Eu <= yu ? Eu : this.loopMs <= 0 || yu < 2 ? -1 : Eu < 0 ? yu - 1 : 1
+      neighbour(kk, Fk) {
+        const Bk = this.nodes.length - 1,
+          Rk = kk + Fk;
+        return Rk >= 0 && Rk <= Bk ? Rk : this.loopMs <= 0 || Bk < 2 ? -1 : Rk < 0 ? Bk - 1 : 1
       }
-      gapMs(uu, Ru) {
-        const yu = this.nodes.length - 1;
-        if (1 === Ru) {
-          const Ru = uu === yu ? 0 : uu;
-          return this.nodes[Ru + 1].timeMs - this.nodes[Ru].timeMs
+      gapMs(kk, Fk) {
+        const Bk = this.nodes.length - 1;
+        if (1 === Fk) {
+          const Fk = kk === Bk ? 0 : kk;
+          return this.nodes[Fk + 1].timeMs - this.nodes[Fk].timeMs
         }
-        const Eu = 0 === uu ? yu : uu;
-        return this.nodes[Eu].timeMs - this.nodes[Eu - 1].timeMs
+        const Rk = 0 === kk ? Bk : kk;
+        return this.nodes[Rk].timeMs - this.nodes[Rk - 1].timeMs
       }
     }
-    class nu {
-      constructor(uu) {
-        this.Fr = uu, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = Ru => uu.getEntityPosition(Ru), this.readAimPoint = Ru => uu.getEntityAimPoint(Ru)
+    class Uk {
+      constructor(kk) {
+        this.iJ = kk, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = Fk => kk.getEntityPosition(Fk), this.readAimPoint = Fk => kk.getEntityAimPoint(Fk)
       }
-      aimPoint(uu) {
-        return "string" !== typeof uu ? (0, Nu.s)(uu, 3) ? uu : null : this.resolve(uu, this.readAimPoint, this.lastAimPoints)
+      aimPoint(kk) {
+        return "string" !== typeof kk ? (0, wk.r)(kk, 3) ? kk : null : this.resolve(kk, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(uu) {
-        const Ru = "string" === typeof uu ? this.Fr.getEntityAimPoint(uu) : uu;
-        return Ru && (0, Nu.s)(Ru, 3) ? Ru : null
+      currentAimPoint(kk) {
+        const Fk = "string" === typeof kk ? this.iJ.getEntityAimPoint(kk) : kk;
+        return Fk && (0, wk.r)(Fk, 3) ? Fk : null
       }
-      feetPosition(uu) {
-        return this.resolve(uu, this.readFeet, this.lastFeet)
+      feetPosition(kk) {
+        return this.resolve(kk, this.readFeet, this.lastFeet)
       }
-      heading(uu) {
-        const Ru = this.Fr.getEntityHeading(uu);
-        if (null !== Ru && Number.isFinite(Ru)) return this.lastHeadings.set(uu, Ru), Ru;
-        const yu = this.lastHeadings.get(uu);
-        return void 0 !== yu ? yu : uu === this.Fr.localPlayerId ? 0 : this.heading(this.Fr.localPlayerId)
+      heading(kk) {
+        const Fk = this.iJ.getEntityHeading(kk);
+        if (null !== Fk && Number.isFinite(Fk)) return this.lastHeadings.set(kk, Fk), Fk;
+        const Bk = this.lastHeadings.get(kk);
+        return void 0 !== Bk ? Bk : kk === this.iJ.localPlayerId ? 0 : this.heading(this.iJ.localPlayerId)
       }
-      resolve(uu, Ru, yu) {
-        const Eu = Ru(uu);
-        let Ku = yu.get(uu);
-        return Eu && (0, Nu.s)(Eu, 3) ? (Ku || (Ku = [0, 0, 0], yu.set(uu, Ku)), Ku[0] = Eu[0], Ku[1] = Eu[1], Ku[2] = Eu[2], Ku) : Ku || (uu === this.Fr.localPlayerId ? null : this.resolve(this.Fr.localPlayerId, Ru, yu))
+      resolve(kk, Fk, Bk) {
+        const Rk = Fk(kk);
+        let tk = Bk.get(kk);
+        return Rk && (0, wk.r)(Rk, 3) ? (tk || (tk = [0, 0, 0], Bk.set(kk, tk)), tk[0] = Rk[0], tk[1] = Rk[1], tk[2] = Rk[2], tk) : tk || (kk === this.iJ.localPlayerId ? null : this.resolve(this.iJ.localPlayerId, Fk, Bk))
       }
     }
 
-    function su(uu) {
+    function ck(kk) {
       return {
-        heading: uu.heading,
-        pitch: uu.pitch
+        heading: kk.heading,
+        pitch: kk.pitch
       }
     }
 
-    function tu(uu, Ru) {
-      Number.isFinite(uu.heading) && Number.isFinite(uu.pitch) || (0, Ku.o)(Ru, uu)
+    function Gk(kk, Fk) {
+      Number.isFinite(kk.heading) && Number.isFinite(kk.pitch) || (0, tk.k)(Fk, kk)
     }
 
-    function lu(uu, Ru, yu, Eu, Qu) {
-      if (Ru) return void(0, Ku.r)(Ru, Qu);
-      const mu = Eu.aimPoint(yu);
-      mu && (0, Ku.x)(uu, mu, Qu)
+    function Tk(kk, Fk, Bk, Rk, ak) {
+      if (Fk) return void(0, tk.o)(Fk, ak);
+      const Xk = Rk.aimPoint(Bk);
+      Xk && (0, tk.t)(kk, Xk, ak)
     }
-    class gu {
-      constructor(uu, Ru, yu, Eu) {
-        this.settings = uu, this.Fr = Ru, this.targets = yu, this.base = void 0, this.base = su(Eu)
+    class rk {
+      constructor(kk, Fk, Bk, Rk) {
+        this.settings = kk, this.iJ = Fk, this.targets = Bk, this.base = void 0, this.base = ck(Rk)
       }
-      update(uu, Ru, yu) {
-        var Eu;
-        const Ku = this.settings;
-        (0, Nu.i)(Ku.position, yu.position), lu(Ku.position, Ku.lookDirection, null !== (Eu = Ku.lookAt) && void 0 !== Eu ? Eu : this.Fr.localPlayerId, this.targets, this.base), Ru.apply(this.base, yu), yu.fov = xu(Ku, this.Fr)
+      update(kk, Fk, Bk) {
+        var Rk;
+        const tk = this.settings;
+        (0, wk.h)(tk.position, Bk.position), Tk(tk.position, tk.lookDirection, null !== (Rk = tk.lookAt) && void 0 !== Rk ? Rk : this.iJ.localPlayerId, this.targets, this.base), Fk.apply(this.base, Bk), Bk.fov = Ak(tk, this.iJ)
       }
-      continueFrom(uu) {
-        uu instanceof gu && (0, Ku.o)(uu.base, this.base)
+      continueFrom(kk) {
+        kk instanceof rk && (0, tk.k)(kk.base, this.base)
       }
-      reset(uu) {
-        tu(this.base, uu)
+      reset(kk) {
+        Gk(this.base, kk)
       }
     }
-    class cu {
-      constructor(uu, Ru, yu, Eu) {
-        this.settings = uu, this.Fr = Ru, this.targets = yu, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.JT = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = su(Eu), this.goal = [...Eu.position]
+    class Dk {
+      constructor(kk, Fk, Bk, Rk) {
+        this.settings = kk, this.iJ = Fk, this.targets = Bk, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.bs = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = ck(Rk), this.goal = [...Rk.position]
       }
-      update(uu, Ru, yu) {
-        var Eu, Ku, Qu;
-        const mu = this.settings,
-          Ju = null !== (Eu = mu.target) && void 0 !== Eu ? Eu : this.Fr.localPlayerId,
-          Xu = this.targets.feetPosition(Ju);
-        let Vu = !1;
-        Xu && (Vu = this.foundFeet && bu(this.lastFeet, Xu) > 32 + .1 * uu, (0, Nu.i)(Xu, this.lastFeet), this.foundFeet = !0, this.placeGoal(Xu, Ju));
-        const ru = null !== (Ku = mu.smoothMs) && void 0 !== Ku ? Ku : 0;
-        !this.started || ru < 1 || Vu ? ((0, Nu.i)(this.goal, this.smoothed), this.JT.fill(0), this.started = !0) : Su(this.smoothed, this.JT, this.goal, ru, uu), Vu && (this.distance = -1), (0, Nu.i)(this.smoothed, yu.position);
-        const Bu = !0 === mu.avoidTerrain ? this.pullIn(Ju, uu, yu) : 1;
-        let pu = this.goal;
-        if ("target" === mu.offsetSpace) pu = yu.position;
-        else if (Bu < 1) {
-          pu = this.aimOrigin;
-          for (let uu = 0; uu < 3; uu++) pu[uu] = yu.position[uu] + (this.goal[uu] - this.smoothed[uu]) * Bu
+      update(kk, Fk, Bk) {
+        var Rk, tk, ak;
+        const Xk = this.settings,
+          bk = null !== (Rk = Xk.target) && void 0 !== Rk ? Rk : this.iJ.localPlayerId,
+          dk = this.targets.feetPosition(bk);
+        let sk = !1;
+        dk && (sk = this.foundFeet && Yk(this.lastFeet, dk) > 32 + .1 * kk, (0, wk.h)(dk, this.lastFeet), this.foundFeet = !0, this.placeGoal(dk, bk));
+        const Vk = null !== (tk = Xk.smoothMs) && void 0 !== tk ? tk : 0;
+        !this.started || Vk < 1 || sk ? ((0, wk.h)(this.goal, this.smoothed), this.bs.fill(0), this.started = !0) : ek(this.smoothed, this.bs, this.goal, Vk, kk), sk && (this.distance = -1), (0, wk.h)(this.smoothed, Bk.position);
+        const Jk = !0 === Xk.avoidTerrain ? this.pullIn(bk, kk, Bk) : 1;
+        let yk = this.goal;
+        if ("target" === Xk.offsetSpace) yk = Bk.position;
+        else if (Jk < 1) {
+          yk = this.aimOrigin;
+          for (let kk = 0; kk < 3; kk++) yk[kk] = Bk.position[kk] + (this.goal[kk] - this.smoothed[kk]) * Jk
         }
-        lu(pu, mu.lookDirection, null !== (Qu = mu.lookAt) && void 0 !== Qu ? Qu : Ju, this.targets, this.base), Ru.apply(this.base, yu), yu.fov = xu(mu, this.Fr)
+        Tk(yk, Xk.lookDirection, null !== (ak = Xk.lookAt) && void 0 !== ak ? ak : bk, this.targets, this.base), Fk.apply(this.base, Bk), Bk.fov = Ak(Xk, this.iJ)
       }
-      continueFrom(uu) {
-        uu instanceof cu && (0, Eu.v)(uu.settings.target, this.settings.target) && ((0, Ku.o)(uu.base, this.base), (0, Nu.i)(uu.goal, this.goal), (0, Nu.i)(uu.lastFeet, this.lastFeet), this.foundFeet = uu.foundFeet, (0, Nu.i)(uu.smoothed, this.smoothed), (0, Nu.i)(uu.JT, this.JT), this.started = uu.started, !0 === uu.settings.avoidTerrain && (this.distance = uu.distance))
+      continueFrom(kk) {
+        kk instanceof Dk && (0, Rk.w)(kk.settings.target, this.settings.target) && ((0, tk.k)(kk.base, this.base), (0, wk.h)(kk.goal, this.goal), (0, wk.h)(kk.lastFeet, this.lastFeet), this.foundFeet = kk.foundFeet, (0, wk.h)(kk.smoothed, this.smoothed), (0, wk.h)(kk.bs, this.bs), this.started = kk.started, !0 === kk.settings.avoidTerrain && (this.distance = kk.distance))
       }
-      reset(uu) {
-        tu(this.base, uu), this.JT.fill(0), this.started = !1, this.distance = -1
+      reset(kk) {
+        Gk(this.base, kk), this.bs.fill(0), this.started = !1, this.distance = -1
       }
-      pullIn(uu, Ru, yu) {
-        const Eu = this.targets.aimPoint(uu);
-        if (!Eu) return 1;
-        const Ku = yu.position,
-          Qu = bu(Eu, Ku);
-        if (!(Qu > 0)) return 1;
-        const mu = this.toCamera;
-        for (let Nu = 0; Nu < 3; Nu++) mu[Nu] = (Ku[Nu] - Eu[Nu]) / Qu;
-        const Ju = function(uu, Ru, yu) {
-          return uu < 0 || Ru < uu ? Ru : Ru + (uu - Ru) * Math.exp(-yu / 150)
-        }(this.distance, function(uu, Ru, yu, Eu) {
-          const Ku = uu.raycastTerrain(Ru, yu, Eu);
-          return null !== Ku && Number.isFinite(Ku) ? Math.min(Eu, Math.max(0, Ku - .2)) : Eu
-        }(this.Fr, Eu, mu, Qu), Ru);
-        if (Qu - Ju < .001) return this.distance = -1, 1;
-        this.distance = Ju;
-        for (let Nu = 0; Nu < 3; Nu++) Ku[Nu] = Eu[Nu] + mu[Nu] * Ju;
-        return Ju / Qu
+      pullIn(kk, Fk, Bk) {
+        const Rk = this.targets.aimPoint(kk);
+        if (!Rk) return 1;
+        const tk = Bk.position,
+          ak = Yk(Rk, tk);
+        if (!(ak > 0)) return 1;
+        const Xk = this.toCamera;
+        for (let wk = 0; wk < 3; wk++) Xk[wk] = (tk[wk] - Rk[wk]) / ak;
+        const bk = function(kk, Fk, Bk) {
+          return kk < 0 || Fk < kk ? Fk : Fk + (kk - Fk) * Math.exp(-Bk / 150)
+        }(this.distance, function(kk, Fk, Bk, Rk) {
+          const tk = kk.raycastTerrain(Fk, Bk, Rk);
+          return null !== tk && Number.isFinite(tk) ? Math.min(Rk, Math.max(0, tk - .2)) : Rk
+        }(this.iJ, Rk, Xk, ak), Fk);
+        if (ak - bk < .001) return this.distance = -1, 1;
+        this.distance = bk;
+        for (let wk = 0; wk < 3; wk++) tk[wk] = Rk[wk] + Xk[wk] * bk;
+        return bk / ak
       }
-      placeGoal(uu, Ru) {
-        const yu = this.settings.offset;
-        let Eu = yu[0],
-          Ku = yu[2];
+      placeGoal(kk, Fk) {
+        const Bk = this.settings.offset;
+        let Rk = Bk[0],
+          tk = Bk[2];
         if ("target" === this.settings.offsetSpace) {
-          const uu = this.targets.heading(Ru),
-            Qu = Math.cos(uu),
-            mu = Math.sin(uu);
-          Eu = yu[0] * Qu + yu[2] * mu, Ku = -yu[0] * mu + yu[2] * Qu
+          const kk = this.targets.heading(Fk),
+            ak = Math.cos(kk),
+            Xk = Math.sin(kk);
+          Rk = Bk[0] * ak + Bk[2] * Xk, tk = -Bk[0] * Xk + Bk[2] * ak
         }
-        this.goal[0] = uu[0] + Eu, this.goal[1] = uu[1] + yu[1], this.goal[2] = uu[2] + Ku
+        this.goal[0] = kk[0] + Rk, this.goal[1] = kk[1] + Bk[1], this.goal[2] = kk[2] + tk
       }
     }
-    class Lu {
-      constructor(uu, Ru, yu, Eu) {
-        var Ku, Qu;
-        this.settings = uu, this.Fr = Ru, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = uu.keyframes.length > 0 ? new Uu(uu.keyframes, null === (Ku = uu.smooth) || void 0 === Ku || Ku, null !== (Qu = uu.loop) && void 0 !== Qu && Qu) : null, this.base = (0, Nu.e)(Eu, (0, Nu.l)()), this.resolveTarget = uu => yu.aimPoint(uu)
+    class zk {
+      constructor(kk, Fk, Bk, Rk) {
+        var tk, ak;
+        this.settings = kk, this.iJ = Fk, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = kk.keyframes.length > 0 ? new gk(kk.keyframes, null === (tk = kk.smooth) || void 0 === tk || tk, null !== (ak = kk.loop) && void 0 !== ak && ak) : null, this.base = (0, wk.g)(Rk, (0, wk.k)()), this.resolveTarget = kk => Bk.aimPoint(kk)
       }
-      update(uu, Ru, yu) {
-        this.elapsedMs += uu;
-        const Eu = xu(this.settings, this.Fr);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, Eu, this.base) : this.base.fov = Eu, (0, Nu.i)(this.base.position, yu.position), yu.fov = this.base.fov, Ru.apply(this.base, yu)
+      update(kk, Fk, Bk) {
+        this.elapsedMs += kk;
+        const Rk = Ak(this.settings, this.iJ);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, Rk, this.base) : this.base.fov = Rk, (0, wk.h)(this.base.position, Bk.position), Bk.fov = this.base.fov, Fk.apply(this.base, Bk)
       }
-      continueFrom(uu) {
-        uu instanceof Lu && (0, Eu.v)(uu.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = uu.elapsedMs, (0, Nu.e)(uu.base, this.base))
+      continueFrom(kk) {
+        kk instanceof zk && (0, Rk.w)(kk.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = kk.elapsedMs, (0, wk.g)(kk.base, this.base))
       }
-      reset(uu) {
-        tu(this.base, uu), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(kk) {
+        Gk(this.base, kk), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function zu(uu, Ru) {
-      return (0, Eu.w)(uu, Ru)
+    function Pk(kk, Fk) {
+      return (0, Rk.y)(kk, Fk)
     }
-    class Fu {
-      constructor(uu, Ru, yu) {
-        var Eu;
-        this.settings = uu, this.Fr = Ru, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const Ku = null !== yu && yu.settings.mode === uu.mode,
-          Qu = Ku ? yu.pose : Ru.getDefaultPose();
-        this.pose = (0, Nu.e)(Qu, (0, Nu.l)()), this.lastGoodPose = (0, Nu.e)(Ku ? yu.lastGoodPose : Qu, (0, Nu.l)()), this.look = new Tu(uu.playerLook), this.targets = null !== (Eu = null === yu || void 0 === yu ? void 0 : yu.targets) && void 0 !== Eu ? Eu : new nu(Ru);
-        const mu = (0, Nu.e)(Qu, (0, Nu.l)());
-        Ku && yu.look.unapply(mu, mu), this.mode = function(uu, Ru, yu, Eu) {
-          switch (uu.mode) {
+    class hk {
+      constructor(kk, Fk, Bk) {
+        var Rk;
+        this.settings = kk, this.iJ = Fk, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const tk = null !== Bk && Bk.settings.mode === kk.mode,
+          ak = tk ? Bk.pose : Fk.getDefaultPose();
+        this.pose = (0, wk.g)(ak, (0, wk.k)()), this.lastGoodPose = (0, wk.g)(tk ? Bk.lastGoodPose : ak, (0, wk.k)()), this.look = new fk(kk.playerLook), this.targets = null !== (Rk = null === Bk || void 0 === Bk ? void 0 : Bk.targets) && void 0 !== Rk ? Rk : new Uk(Fk);
+        const Xk = (0, wk.g)(ak, (0, wk.k)());
+        tk && Bk.look.unapply(Xk, Xk), this.mode = function(kk, Fk, Bk, Rk) {
+          switch (kk.mode) {
             case "fixed":
-              return new gu(uu, Ru, yu, Eu);
+              return new rk(kk, Fk, Bk, Rk);
             case "follow":
-              return new cu(uu, Ru, yu, Eu);
+              return new Dk(kk, Fk, Bk, Rk);
             case "path":
-              return new Lu(uu, Ru, yu, Eu);
+              return new zk(kk, Fk, Bk, Rk);
             case "frame":
-              return new pu(uu, Ru, yu, Eu)
+              return new yk(kk, Fk, Bk, Rk)
           }
-        }(uu, Ru, this.targets, mu), Ku && (this.look.continueFrom(yu.look), this.mode.continueFrom(yu.mode))
+        }(kk, Fk, this.targets, Xk), tk && (this.look.continueFrom(Bk.look), this.mode.continueFrom(Bk.mode))
       }
-      update(uu, Ru) {
-        return this.look.update(uu, Ru), this.mode.update(uu, this.look, this.pose), (0, Nu.p)(this.pose) ? (0, Nu.e)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, Nu.e)(this.lastGoodPose, this.pose), this.mode.reset((0, Nu.p)(this.lastGoodPose) ? this.lastGoodPose : this.Fr.getDefaultPose())), this.pose
+      update(kk, Fk) {
+        return this.look.update(kk, Fk), this.mode.update(kk, this.look, this.pose), (0, wk.o)(this.pose) ? (0, wk.g)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, wk.g)(this.lastGoodPose, this.pose), this.mode.reset((0, wk.o)(this.lastGoodPose) ? this.lastGoodPose : this.iJ.getDefaultPose())), this.pose
       }
     }
 
-    function wu(uu) {
-      return [0, 0, uu[2], uu[3]]
+    function qk(kk) {
+      return [0, 0, kk[2], kk[3]]
     }
-    class Zu {
-      constructor(uu) {
-        this.Fr = uu, this.settings = {
+    class Ck {
+      constructor(kk) {
+        this.iJ = kk, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new Ju, this.shot = null, this.blend = null, this.mixed = (0, Nu.l)(), this.output = (0, Nu.l)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new bk, this.shot = null, this.blend = null, this.mixed = (0, wk.k)(), this.output = (0, wk.k)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(uu) {
-        const Ru = (0, Xu.c)(uu);
-        if ((0, Eu.v)(Ru, this.pending ? this.pending.settings : this.settings)) return;
-        const yu = zu(this.settings, Ru);
-        if (void 0 !== Ru.transition && !yu) return this.pending = {
-          settings: Ru,
-          shot: "default" === Ru.mode ? null : new Fu(Ru, this.Fr, null)
-        }, void this.fade.fadeOut(Ru.transition);
-        const Ku = null !== this.pending;
-        this.pending = null, !Ku && yu || this.fade.fadeIn(Eu.n.minTransitionFadeMs), this.show(Ru, !1)
+      setSettings(kk) {
+        const Fk = (0, dk.e)(kk);
+        if ((0, Rk.w)(Fk, this.pending ? this.pending.settings : this.settings)) return;
+        const Bk = Pk(this.settings, Fk);
+        if (void 0 !== Fk.transition && !Bk) return this.pending = {
+          settings: Fk,
+          shot: "default" === Fk.mode ? null : new hk(Fk, this.iJ, null)
+        }, void this.fade.fadeOut(Fk.transition);
+        const tk = null !== this.pending;
+        this.pending = null, !tk && Bk || this.fade.fadeIn(Rk.m.minTransitionFadeMs), this.show(Fk, !1)
       }
-      show(uu, Ru) {
-        var yu, Ku;
-        if ((0, Eu.v)(uu, this.settings)) return;
-        const mu = !Ru && zu(this.settings, uu);
-        this.settings = uu;
-        const Ju = null !== this.blend && this.blend.elapsedMs > 0,
-          Xu = (0, Nu.e)(this.hasOutput ? this.output : this.Fr.getDefaultPose(), (0, Nu.l)());
-        if (this.shot = "default" === uu.mode ? null : new Fu(uu, this.Fr, Ru ? null : this.shot), mu) return;
-        const Vu = Ru || !this.shot && !this.hasOutput ? 0 : null !== (yu = uu.blendInMs) && void 0 !== yu ? yu : 0;
-        if (Vu <= 0) return void(this.blend = null);
-        const ru = (0, Qu.s)(null !== (Ku = uu.blendEasing) && void 0 !== Ku ? Ku : "easeInOut");
+      show(kk, Fk) {
+        var Bk, tk;
+        if ((0, Rk.w)(kk, this.settings)) return;
+        const Xk = !Fk && Pk(this.settings, kk);
+        this.settings = kk;
+        const bk = null !== this.blend && this.blend.elapsedMs > 0,
+          dk = (0, wk.g)(this.hasOutput ? this.output : this.iJ.getDefaultPose(), (0, wk.k)());
+        if (this.shot = "default" === kk.mode ? null : new hk(kk, this.iJ, Fk ? null : this.shot), Xk) return;
+        const sk = Fk || !this.shot && !this.hasOutput ? 0 : null !== (Bk = kk.blendInMs) && void 0 !== Bk ? Bk : 0;
+        if (sk <= 0) return void(this.blend = null);
+        const Vk = (0, ak.l)(null !== (tk = kk.blendEasing) && void 0 !== tk ? tk : "easeInOut");
         this.blend = {
-          from: Xu,
+          from: dk,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: Vu,
-          easing: Ju ? wu(ru) : ru
+          durationMs: sk,
+          easing: bk ? qk(Vk) : Vk
         }
       }
       getSettings() {
@@ -943,66 +943,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(uu, Ru) {
-        const yu = Number.isFinite(uu) && uu > 0 ? uu : 0;
-        if (this.fade.advance(yu) && null !== this.pending) {
+      update(kk, Fk) {
+        const Bk = Number.isFinite(kk) && kk > 0 ? kk : 0;
+        if (this.fade.advance(Bk) && null !== this.pending) {
           const {
-            settings: uu
+            settings: kk
           } = this.pending;
-          this.pending = null, this.show(uu, !0)
+          this.pending = null, this.show(kk, !0)
         }
         this.loadingPositions.length = 0;
-        const Eu = this.pending;
-        if (null !== Eu && void 0 !== Eu && Eu.shot) {
-          const uu = "path" === Eu.settings.mode ? 0 : yu;
-          this.noteLoadingPosition(Eu.shot.update(uu, Nu.c).position)
+        const Rk = this.pending;
+        if (null !== Rk && void 0 !== Rk && Rk.shot) {
+          const kk = "path" === Rk.settings.mode ? 0 : Bk;
+          this.noteLoadingPosition(Rk.shot.update(kk, wk.c).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const mu = this.shot ? this.shot.update(yu, Ru) : this.Fr.getDefaultPose();
-        this.shot && this.noteLoadingPosition(mu.position);
-        const Ju = this.blend;
-        if (!Ju) return this.writeOutput(mu);
-        Ju.elapsedMs += yu;
-        const Xu = Math.min(1, Ju.elapsedMs / Ju.durationMs);
-        if (Ju.headingDelta = Number.isFinite(Ju.headingDelta) ? (0, Ku.G)(Ju.headingDelta, mu.heading - Ju.from.heading) : (0, Ku.E)(Ju.from.heading, mu.heading), (0, Nu.v)(Ju.from, mu, Ju.headingDelta, (0, Qu.q)(Xu, Ju.easing), this.mixed), Xu >= 1) {
+        const Xk = this.shot ? this.shot.update(Bk, Fk) : this.iJ.getDefaultPose();
+        this.shot && this.noteLoadingPosition(Xk.position);
+        const bk = this.blend;
+        if (!bk) return this.writeOutput(Xk);
+        bk.elapsedMs += Bk;
+        const dk = Math.min(1, bk.elapsedMs / bk.durationMs);
+        if (bk.headingDelta = Number.isFinite(bk.headingDelta) ? (0, tk.F)(bk.headingDelta, Xk.heading - bk.from.heading) : (0, tk.B)(bk.from.heading, Xk.heading), (0, wk.u)(bk.from, Xk, bk.headingDelta, (0, ak.k)(dk, bk.easing), this.mixed), dk >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else Ju.fromScripted && this.noteLoadingPosition(Ju.from.position);
+        } else bk.fromScripted && this.noteLoadingPosition(bk.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(uu) {
-        if (uu.every(Number.isFinite)) {
-          const Ru = this.loadingPositions;
-          Ru.push((0, Nu.i)(uu, this.loadingSlots[Ru.length]))
+      noteLoadingPosition(kk) {
+        if (kk.every(Number.isFinite)) {
+          const Fk = this.loadingPositions;
+          Fk.push((0, wk.h)(kk, this.loadingSlots[Fk.length]))
         }
       }
-      writeOutput(uu) {
-        const Ru = this.output;
-        (0, Nu.p)(uu) ? (0, Nu.e)(uu, Ru) : this.hasOutput || (0, Nu.e)(this.Fr.getDefaultPose(), Ru), Ru.pitch = (0, Ku.l)(Ru.pitch);
-        const yu = this.Fr.getDefaultFov(),
-          Qu = Number.isFinite(yu) && yu > 0 && yu < 180,
-          mu = Qu ? Math.min(Eu.n.minFov, yu) : Eu.n.minFov,
-          Ju = Qu ? Math.max(Eu.n.maxFov, yu) : Eu.n.maxFov;
-        return Ru.fov = Number.isFinite(Ru.fov) ? Math.min(Ju, Math.max(mu, Ru.fov)) : Ju, this.hasOutput = !0, Ru
+      writeOutput(kk) {
+        const Fk = this.output;
+        (0, wk.o)(kk) ? (0, wk.g)(kk, Fk) : this.hasOutput || (0, wk.g)(this.iJ.getDefaultPose(), Fk), Fk.pitch = (0, tk.h)(Fk.pitch);
+        const Bk = this.iJ.getDefaultFov(),
+          ak = Number.isFinite(Bk) && Bk > 0 && Bk < 180,
+          Xk = ak ? Math.min(Rk.m.minFov, Bk) : Rk.m.minFov,
+          bk = ak ? Math.max(Rk.m.maxFov, Bk) : Rk.m.maxFov;
+        return Fk.fov = Number.isFinite(Fk.fov) ? Math.min(bk, Math.max(Xk, Fk.fov)) : bk, this.hasOutput = !0, Fk
       }
     }
   },
-  38915: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ku,
-      e: () => Ju,
-      i: () => mu,
-      l: () => Qu,
-      p: () => Xu,
-      s: () => Nu,
-      v: () => Vu
+  38777: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk,
+      g: () => bk,
+      h: () => Xk,
+      k: () => ak,
+      o: () => dk,
+      r: () => wk,
+      u: () => sk
     });
-    var Eu = yu(38918);
-    const Ku = {
-      RD: 0,
-      mD: 0
+    var Rk = Bk(38781);
+    const tk = {
+      ZE: 0,
+      pE: 0
     };
 
-    function Qu() {
+    function ak() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1011,196 +1011,196 @@ export const modules = {
       }
     }
 
-    function mu(uu, Ru) {
-      return Ru[0] = uu[0], Ru[1] = uu[1], Ru[2] = uu[2], Ru
+    function Xk(kk, Fk) {
+      return Fk[0] = kk[0], Fk[1] = kk[1], Fk[2] = kk[2], Fk
     }
 
-    function Ju(uu, Ru) {
-      return mu(uu.position, Ru.position), Ru.heading = uu.heading, Ru.pitch = uu.pitch, Ru.fov = uu.fov, Ru
+    function bk(kk, Fk) {
+      return Xk(kk.position, Fk.position), Fk.heading = kk.heading, Fk.pitch = kk.pitch, Fk.fov = kk.fov, Fk
     }
 
-    function Nu(uu, Ru) {
-      return Array.isArray(uu) && uu.length === Ru && uu.every(Number.isFinite)
+    function wk(kk, Fk) {
+      return Array.isArray(kk) && kk.length === Fk && kk.every(Number.isFinite)
     }
 
-    function Xu(uu) {
-      return Nu(uu.position, 3) && Number.isFinite(uu.heading) && Number.isFinite(uu.pitch) && Number.isFinite(uu.fov)
+    function dk(kk) {
+      return wk(kk.position, 3) && Number.isFinite(kk.heading) && Number.isFinite(kk.pitch) && Number.isFinite(kk.fov)
     }
 
-    function Vu(uu, Ru, yu, Ku, Qu) {
-      for (let Eu = 0; Eu < 3; Eu++) Qu.position[Eu] = uu.position[Eu] + (Ru.position[Eu] - uu.position[Eu]) * Ku;
-      return Qu.heading = (0, Eu.A)(uu.heading + yu * Ku), Qu.pitch = uu.pitch + (Ru.pitch - uu.pitch) * Ku, Qu.fov = uu.fov + (Ru.fov - uu.fov) * Ku, Qu
+    function sk(kk, Fk, Bk, tk, ak) {
+      for (let Rk = 0; Rk < 3; Rk++) ak.position[Rk] = kk.position[Rk] + (Fk.position[Rk] - kk.position[Rk]) * tk;
+      return ak.heading = (0, Rk.x)(kk.heading + Bk * tk), ak.pitch = kk.pitch + (Fk.pitch - kk.pitch) * tk, ak.fov = kk.fov + (Fk.fov - kk.fov) * tk, ak
     }
   },
-  38947: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => ku,
-      e: () => Bu
+  38806: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Ok,
+      g: () => Jk
     });
-    var Eu = yu(38939),
-      Ku = yu(38915);
-    const Qu = Eu.k,
-      mu = Eu.q;
+    var Rk = Bk(38799),
+      tk = Bk(38777);
+    const ak = Rk.i,
+      Xk = Rk.q;
 
-    function Ju(uu, Ru, yu, Eu) {
-      return Number.isFinite(uu) ? Math.min(yu, Math.max(Ru, uu)) : Eu
+    function bk(kk, Fk, Bk, Rk) {
+      return Number.isFinite(kk) ? Math.min(Bk, Math.max(Fk, kk)) : Rk
     }
 
-    function Nu(uu, Ru, yu) {
-      return void 0 !== uu && Number.isFinite(uu) ? Math.min(yu, Math.max(Ru, uu)) : void 0
+    function wk(kk, Fk, Bk) {
+      return void 0 !== kk && Number.isFinite(kk) ? Math.min(Bk, Math.max(Fk, kk)) : void 0
     }
 
-    function Xu(uu) {
-      const Ru = Eu.n.maxCoordinate;
-      return [Math.min(Ru, Math.max(-Ru, uu[0])), Math.min(Ru, Math.max(-Ru, uu[1])), Math.min(Ru, Math.max(-Ru, uu[2]))]
+    function dk(kk) {
+      const Fk = Rk.m.maxCoordinate;
+      return [Math.min(Fk, Math.max(-Fk, kk[0])), Math.min(Fk, Math.max(-Fk, kk[1])), Math.min(Fk, Math.max(-Fk, kk[2]))]
     }
 
-    function Vu(uu) {
-      return "string" === typeof uu ? uu : (0, Ku.s)(uu, 3) ? Xu(uu) : void 0
+    function sk(kk) {
+      return "string" === typeof kk ? kk : (0, tk.r)(kk, 3) ? dk(kk) : void 0
     }
-    const ru = new RegExp(Eu.s);
+    const Vk = new RegExp(Rk.u);
 
-    function Bu(uu) {
-      return "string" === typeof uu && ru.test(uu)
+    function Jk(kk) {
+      return "string" === typeof kk && Vk.test(kk)
     }
 
-    function xu(uu) {
-      const Ru = [];
-      if (!Array.isArray(uu)) return Ru;
-      for (const yu of uu.slice(0, Eu.n.maxFrameTargets)) {
-        const uu = Vu(yu);
-        void 0 === uu || "string" === typeof uu && !Bu(uu) || Ru.push(uu)
+    function Ak(kk) {
+      const Fk = [];
+      if (!Array.isArray(kk)) return Fk;
+      for (const Bk of kk.slice(0, Rk.m.maxFrameTargets)) {
+        const kk = sk(Bk);
+        void 0 === kk || "string" === typeof kk && !Jk(kk) || Fk.push(kk)
       }
-      return Ru
+      return Fk
     }
 
-    function Su(uu) {
-      if (!(0, Ku.s)(uu, 3)) return;
-      const Ru = Math.max(Math.abs(uu[0]), Math.abs(uu[1]), Math.abs(uu[2])),
-        yu = Math.hypot(uu[0] / Ru, uu[1] / Ru, uu[2] / Ru);
-      return 0 === Ru || Ru * yu < Eu.n.minDirectionLength ? void 0 : [uu[0] / Ru / yu, uu[1] / Ru / yu, uu[2] / Ru / yu]
+    function ek(kk) {
+      if (!(0, tk.r)(kk, 3)) return;
+      const Fk = Math.max(Math.abs(kk[0]), Math.abs(kk[1]), Math.abs(kk[2])),
+        Bk = Math.hypot(kk[0] / Fk, kk[1] / Fk, kk[2] / Fk);
+      return 0 === Fk || Fk * Bk < Rk.m.minDirectionLength ? void 0 : [kk[0] / Fk / Bk, kk[1] / Fk / Bk, kk[2] / Fk / Bk]
     }
 
-    function pu(uu) {
-      if (void 0 !== uu) return "string" === typeof uu ? Qu.includes(uu) ? uu : void 0 : (0, Ku.s)(uu, 4) ? [Ju(uu[0], 0, 1, 0), Ju(uu[1], Eu.n.minEasingY, Eu.n.maxEasingY, 0), Ju(uu[2], 0, 1, 1), Ju(uu[3], Eu.n.minEasingY, Eu.n.maxEasingY, 1)] : "linear"
+    function yk(kk) {
+      if (void 0 !== kk) return "string" === typeof kk ? ak.includes(kk) ? kk : void 0 : (0, tk.r)(kk, 4) ? [bk(kk[0], 0, 1, 0), bk(kk[1], Rk.m.minEasingY, Rk.m.maxEasingY, 0), bk(kk[2], 0, 1, 1), bk(kk[3], Rk.m.minEasingY, Rk.m.maxEasingY, 1)] : "linear"
     }
 
-    function Tu(uu) {
-      if (uu) return {
-        maxYaw: Ju(uu.maxYaw, 0, Eu.n.maxPlayerLook, 0),
-        maxPitch: Ju(uu.maxPitch, 0, Eu.n.maxPlayerLook, 0),
-        returnMs: Nu(uu.returnMs, 0, Eu.n.maxReturnMs)
+    function fk(kk) {
+      if (kk) return {
+        maxYaw: bk(kk.maxYaw, 0, Rk.m.maxPlayerLook, 0),
+        maxPitch: bk(kk.maxPitch, 0, Rk.m.maxPlayerLook, 0),
+        returnMs: wk(kk.returnMs, 0, Rk.m.maxReturnMs)
       }
     }
-    const Wu = new RegExp(Eu.d);
+    const mk = new RegExp(Rk.c);
 
-    function ju(uu) {
-      var Ru;
-      if ("object" !== typeof uu || null === uu) return;
-      const yu = Eu.n.maxTransitionMs,
-        Ku = Eu.n.minTransitionFadeMs;
+    function Wk(kk) {
+      var Fk;
+      if ("object" !== typeof kk || null === kk) return;
+      const Bk = Rk.m.maxTransitionMs,
+        tk = Rk.m.minTransitionFadeMs;
       return {
-        colour: "string" === typeof uu.colour && Wu.test(uu.colour) ? uu.colour : Eu.g,
-        outMs: Ju(uu.outMs, Ku, yu, Ku),
-        holdMs: Ju(null !== (Ru = uu.holdMs) && void 0 !== Ru ? Ru : 0, 0, yu, 0),
-        inMs: Ju(uu.inMs, Ku, yu, Ku)
+        colour: "string" === typeof kk.colour && mk.test(kk.colour) ? kk.colour : Rk.e,
+        outMs: bk(kk.outMs, tk, Bk, tk),
+        holdMs: bk(null !== (Fk = kk.holdMs) && void 0 !== Fk ? Fk : 0, 0, Bk, 0),
+        inMs: bk(kk.inMs, tk, Bk, tk)
       }
     }
 
-    function Hu(uu) {
-      return !0 === uu || void 0
+    function vk(kk) {
+      return !0 === kk || void 0
     }
 
-    function du(uu) {
-      if ("object" !== typeof uu || null === uu) return !1;
-      const Ru = uu.lookAt;
-      return Number.isFinite(uu.timeMs) && (0, Ku.s)(uu.position, 3) && (void 0 === Ru || "string" === typeof Ru || (0, Ku.s)(Ru, 3))
+    function ik(kk) {
+      if ("object" !== typeof kk || null === kk) return !1;
+      const Fk = kk.lookAt;
+      return Number.isFinite(kk.timeMs) && (0, tk.r)(kk.position, 3) && (void 0 === Fk || "string" === typeof Fk || (0, tk.r)(Fk, 3))
     }
 
-    function bu(uu) {
+    function Yk(kk) {
       return {
-        ...uu,
-        timeMs: Ju(uu.timeMs, 0, Eu.n.maxPathMs, 0),
-        position: Xu(uu.position),
-        lookAt: Vu(uu.lookAt),
-        lookDirection: Su(uu.lookDirection),
-        fov: Nu(uu.fov, Eu.n.minFov, Eu.n.maxFov),
-        easing: pu(uu.easing)
+        ...kk,
+        timeMs: bk(kk.timeMs, 0, Rk.m.maxPathMs, 0),
+        position: dk(kk.position),
+        lookAt: sk(kk.lookAt),
+        lookDirection: ek(kk.lookDirection),
+        fov: wk(kk.fov, Rk.m.minFov, Rk.m.maxFov),
+        easing: yk(kk.easing)
       }
     }
 
-    function Cu(uu) {
-      const Ru = [];
-      if (!Array.isArray(uu)) return Ru;
-      for (const yu of uu.slice(0, Eu.n.maxKeyframes)) {
-        if (!du(yu)) continue;
-        const uu = bu(yu);
-        (0 === Ru.length || uu.timeMs > Ru[Ru.length - 1].timeMs) && Ru.push(uu)
+    function Lk(kk) {
+      const Fk = [];
+      if (!Array.isArray(kk)) return Fk;
+      for (const Bk of kk.slice(0, Rk.m.maxKeyframes)) {
+        if (!ik(Bk)) continue;
+        const kk = Yk(Bk);
+        (0 === Fk.length || kk.timeMs > Fk[Fk.length - 1].timeMs) && Fk.push(kk)
       }
-      return Ru
+      return Fk
     }
 
-    function ku(uu) {
-      if ("object" !== typeof uu || null === uu) return {
+    function Ok(kk) {
+      if ("object" !== typeof kk || null === kk) return {
         mode: "default"
       };
-      const Ru = {
-          blendInMs: Nu(uu.blendInMs, 0, Eu.n.maxBlendInMs),
-          blendEasing: pu(uu.blendEasing),
-          transition: ju(uu.transition),
-          letterbox: Hu(uu.letterbox),
-          hideHud: Hu(uu.hideHud)
+      const Fk = {
+          blendInMs: wk(kk.blendInMs, 0, Rk.m.maxBlendInMs),
+          blendEasing: yk(kk.blendEasing),
+          transition: Wk(kk.transition),
+          letterbox: vk(kk.letterbox),
+          hideHud: vk(kk.hideHud)
         },
-        yu = {
+        Bk = {
           mode: "default",
-          ...Ru
+          ...Fk
         };
-      if ("default" === uu.mode || "fixed" === uu.mode && !(0, Ku.s)(uu.position, 3)) return yu;
-      const Qu = {
-        ...Ru,
-        fov: Nu(uu.fov, Eu.n.minFov, Eu.n.maxFov),
-        playerFacing: (ru = uu.playerFacing, mu.includes(ru) ? ru : void 0),
-        playerLook: Tu(uu.playerLook)
+      if ("default" === kk.mode || "fixed" === kk.mode && !(0, tk.r)(kk.position, 3)) return Bk;
+      const ak = {
+        ...Fk,
+        fov: wk(kk.fov, Rk.m.minFov, Rk.m.maxFov),
+        playerFacing: (Vk = kk.playerFacing, Xk.includes(Vk) ? Vk : void 0),
+        playerLook: fk(kk.playerLook)
       };
-      var ru, Bu;
-      switch (uu.mode) {
+      var Vk, Jk;
+      switch (kk.mode) {
         case "fixed":
           return {
-            ...uu, ...Qu, position: Xu(uu.position), lookAt: Vu(uu.lookAt), lookDirection: Su(uu.lookDirection)
+            ...kk, ...ak, position: dk(kk.position), lookAt: sk(kk.lookAt), lookDirection: ek(kk.lookDirection)
           };
         case "follow":
           return {
-            ...uu, ...Qu, target: "string" === typeof uu.target ? uu.target : void 0, lookAt: Vu(uu.lookAt), offset: (Bu = uu.offset, Array.isArray(Bu) ? [Ju(Bu[0], -Eu.n.maxOffset, Eu.n.maxOffset, 0), Ju(Bu[1], -Eu.n.maxOffset, Eu.n.maxOffset, 0), Ju(Bu[2], -Eu.n.maxOffset, Eu.n.maxOffset, 0)] : [0, 0, 0]), lookDirection: Su(uu.lookDirection), smoothMs: Nu(uu.smoothMs, 0, Eu.n.maxSmoothMs)
+            ...kk, ...ak, target: "string" === typeof kk.target ? kk.target : void 0, lookAt: sk(kk.lookAt), offset: (Jk = kk.offset, Array.isArray(Jk) ? [bk(Jk[0], -Rk.m.maxOffset, Rk.m.maxOffset, 0), bk(Jk[1], -Rk.m.maxOffset, Rk.m.maxOffset, 0), bk(Jk[2], -Rk.m.maxOffset, Rk.m.maxOffset, 0)] : [0, 0, 0]), lookDirection: ek(kk.lookDirection), smoothMs: wk(kk.smoothMs, 0, Rk.m.maxSmoothMs)
           };
         case "path":
           return {
-            ...uu, ...Qu, keyframes: Cu(uu.keyframes)
+            ...kk, ...ak, keyframes: Lk(kk.keyframes)
           };
         case "frame":
           return {
-            ...uu, ...Qu, targets: xu(uu.targets), viewHeading: Nu(uu.viewHeading, -Eu.n.maxFrameHeading, Eu.n.maxFrameHeading), viewElevation: Nu(uu.viewElevation, 0, Eu.n.maxFrameElevation), padding: Nu(uu.padding, 0, Eu.n.maxFrameDistance), closestDistance: Nu(uu.closestDistance, 0, Eu.n.maxFrameDistance), furthestDistance: Nu(uu.furthestDistance, 0, Eu.n.maxFrameDistance), smoothMs: Nu(uu.smoothMs, 0, Eu.n.maxSmoothMs)
+            ...kk, ...ak, targets: Ak(kk.targets), viewHeading: wk(kk.viewHeading, -Rk.m.maxFrameHeading, Rk.m.maxFrameHeading), viewElevation: wk(kk.viewElevation, 0, Rk.m.maxFrameElevation), padding: wk(kk.padding, 0, Rk.m.maxFrameDistance), closestDistance: wk(kk.closestDistance, 0, Rk.m.maxFrameDistance), furthestDistance: wk(kk.furthestDistance, 0, Rk.m.maxFrameDistance), smoothMs: wk(kk.smoothMs, 0, Rk.m.maxSmoothMs)
           };
         default:
-          return yu
+          return Bk
       }
     }
   },
-  38427: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ju
+  38303: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => bk
     });
-    var Eu = yu(1199);
+    var Rk = Bk(1173);
 
-    function Ku(uu) {
-      const Ru = /(\d*\.?\d+)px/.exec(uu);
-      return Ru ? Number(Ru[1]) : null
+    function tk(kk) {
+      const Fk = /(\d*\.?\d+)px/.exec(kk);
+      return Fk ? Number(Fk[1]) : null
     }
 
-    function Qu(uu) {
-      return uu.split(/[\s,]+/).pop()
+    function ak(kk) {
+      return kk.split(/[\s,]+/).pop()
     }
-    let mu = !1;
-    const Ju = {
+    let Xk = !1;
+    const bk = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -1211,360 +1211,360 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(uu, Ru, Eu, Ju, Nu, Xu) {
-        if (Nu <= 0 || Xu <= 0 || this.fontSize <= 0) return {
+      drawText: function(kk, Fk, Rk, bk, wk, dk) {
+        if (wk <= 0 || dk <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: Vu,
-          fontVariant: ru,
-          fontWeight: Bu,
-          fontSize: xu,
-          font: Su
-        } = this, pu = [Vu, ru, Bu, `${xu}px`, Su].filter(Boolean).join(" "), Tu = [
-          [Bu, `${xu}px`, Qu(Su)].filter(Boolean).join(" "), `${xu}px sans-serif`
-        ], Wu = uu.font, ju = function(uu, Ru, yu) {
-          for (const Eu of Ru) {
-            uu.font = Eu;
-            const Ru = Ku(uu.font),
-              mu = Qu(Eu);
-            if (null !== Ru && Math.abs(Ru - yu) <= .5 && uu.font.toLowerCase().includes(mu.toLowerCase())) return Eu
+          fontStyle: sk,
+          fontVariant: Vk,
+          fontWeight: Jk,
+          fontSize: Ak,
+          font: ek
+        } = this, yk = [sk, Vk, Jk, `${Ak}px`, ek].filter(Boolean).join(" "), fk = [
+          [Jk, `${Ak}px`, ak(ek)].filter(Boolean).join(" "), `${Ak}px sans-serif`
+        ], mk = kk.font, Wk = function(kk, Fk, Bk) {
+          for (const Rk of Fk) {
+            kk.font = Rk;
+            const Fk = tk(kk.font),
+              Xk = ak(Rk);
+            if (null !== Fk && Math.abs(Fk - Bk) <= .5 && kk.font.toLowerCase().includes(Xk.toLowerCase())) return Rk
           }
           return null
-        }(uu, [pu, ...Tu], xu);
-        ju !== pu && function(uu, Ru, Eu) {
-          mu || (mu = !0, Promise.resolve().then((() => yu(1056))).then((yu => {
+        }(kk, [yk, ...fk], Ak);
+        Wk !== yk && function(kk, Fk, Rk) {
+          Xk || (Xk = !0, Promise.resolve().then((() => Bk(1047))).then((Bk => {
             let {
-              jp: Ku
-            } = yu;
-            Ku(new Error("A canvas didn't take canvasTxt's font"), {
-              font: uu,
-              kx: Ru,
-              drawnWith: null !== Eu && void 0 !== Eu ? Eu : "the kept font, scaled"
+              ly: tk
+            } = Bk;
+            tk(new Error("A canvas didn't take canvasTxt's font"), {
+              font: kk,
+              lA: Fk,
+              drawnWith: null !== Rk && void 0 !== Rk ? Rk : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(pu, Wu, ju);
-        const Hu = Ku(uu.font);
-        if (null === ju && null !== Hu && Hu > 0) {
-          const yu = xu / Hu;
-          uu.save();
+        }(yk, mk, Wk);
+        const vk = tk(kk.font);
+        if (null === Wk && null !== vk && vk > 0) {
+          const Bk = Ak / vk;
+          kk.save();
           try {
-            return uu.scale(yu, yu), {
-              height: this.drawLines(uu, Ru, Eu / yu, Ju / yu, Nu / yu, Xu / yu, Hu).height * yu
+            return kk.scale(Bk, Bk), {
+              height: this.drawLines(kk, Fk, Rk / Bk, bk / Bk, wk / Bk, dk / Bk, vk).height * Bk
             }
           } finally {
-            uu.restore()
+            kk.restore()
           }
         }
-        return this.drawLines(uu, Ru, Eu, Ju, Nu, Xu, xu)
+        return this.drawLines(kk, Fk, Rk, bk, wk, dk, Ak)
       },
-      drawLines: function(uu, Ru, yu, Ku, Qu, mu, Ju) {
-        const Nu = yu + Qu,
-          Xu = Ku + mu;
-        let Vu, ru = Ku + mu / 2 + Ju / 2;
-        "right" === this.align ? (Vu = Nu, uu.textAlign = "right") : "left" === this.align ? (Vu = yu, uu.textAlign = "left") : (Vu = yu + Qu / 2, uu.textAlign = "center");
-        for (const Eu of Ru) {
-          uu.measureText(Eu).width >= Qu && (Ru = Ru.replace(Eu, ""))
+      drawLines: function(kk, Fk, Bk, tk, ak, Xk, bk) {
+        const wk = Bk + ak,
+          dk = tk + Xk;
+        let sk, Vk = tk + Xk / 2 + bk / 2;
+        "right" === this.align ? (sk = wk, kk.textAlign = "right") : "left" === this.align ? (sk = Bk, kk.textAlign = "left") : (sk = Bk + ak / 2, kk.textAlign = "center");
+        for (const Rk of Fk) {
+          kk.measureText(Rk).width >= ak && (Fk = Fk.replace(Rk, ""))
         }
-        Ru = (0, Eu.R)(Ru);
-        const Bu = [],
-          xu = Ru.split("\n"),
-          Su = this.justify ? uu.measureText("\u200a").width : 0;
-        xu.forEach((Ru => {
-          let yu = uu.measureText(Ru).width;
-          if (yu <= Qu) Bu.push(Ru);
+        Fk = (0, Rk.V)(Fk);
+        const Jk = [],
+          Ak = Fk.split("\n"),
+          ek = this.justify ? kk.measureText("\u200a").width : 0;
+        Ak.forEach((Fk => {
+          let Bk = kk.measureText(Fk).width;
+          if (Bk <= ak) Jk.push(Fk);
           else {
-            let Eu = Ru;
-            const Ku = Qu;
-            let mu, Ju, Nu;
-            for (yu = uu.measureText(Eu).width; yu > Ku;) {
-              for (mu = 0, Ju = 0, Nu = ""; Ju < Ku;) mu++, Nu = Eu.substr(0, mu), Ju = uu.measureText(Nu).width;
-              mu--, Nu = Nu.substr(0, mu);
-              const Ru = mu;
-              if (" " !== Eu.substr(mu, 1)) {
+            let Rk = Fk;
+            const tk = ak;
+            let Xk, bk, wk;
+            for (Bk = kk.measureText(Rk).width; Bk > tk;) {
+              for (Xk = 0, bk = 0, wk = ""; bk < tk;) Xk++, wk = Rk.substr(0, Xk), bk = kk.measureText(wk).width;
+              Xk--, wk = wk.substr(0, Xk);
+              const Fk = Xk;
+              if (" " !== Rk.substr(Xk, 1)) {
                 for (;
-                  " " !== Eu.substr(mu, 1) && 0 !== mu;) mu--;
-                0 === mu && (mu = Ru), Nu = Eu.substr(0, mu)
+                  " " !== Rk.substr(Xk, 1) && 0 !== Xk;) Xk--;
+                0 === Xk && (Xk = Fk), wk = Rk.substr(0, Xk)
               }
-              Nu = this.justify ? this.justifyLine(uu, Nu, Su, "\u200a", Qu) : Nu, Eu = Eu.substr(mu), yu = uu.measureText(Eu).width, Bu.push(Nu)
+              wk = this.justify ? this.justifyLine(kk, wk, ek, "\u200a", ak) : wk, Rk = Rk.substr(Xk), Bk = kk.measureText(Rk).width, Jk.push(wk)
             }
-            yu > 0 && Bu.push(Eu)
+            Bk > 0 && Jk.push(Rk)
           }
         }));
-        const pu = this.lineHeight ? this.lineHeight : this.getTextHeight(uu, Ru),
-          Tu = pu * (Bu.length - 1),
-          Wu = Tu / 2;
-        let ju = Ku;
-        "top" === this.vAlign ? ru = Ku + Ju : "bottom" === this.vAlign ? (ru = Xu - Tu, ju = Xu) : (ju = Ku + mu / 2, ru -= Wu), Bu.forEach((Ru => {
-          Ru = Ru.trim(), uu.fillText(Ru, Vu, ru), ru += pu
-        })), this.debug && (uu.lineWidth = 3, uu.strokeStyle = "#00909e", uu.strokeRect(yu, Ku, Qu, mu), uu.lineWidth = 2, uu.strokeStyle = "#f6d743", uu.beginPath(), uu.moveTo(Vu, Ku), uu.lineTo(Vu, Xu), uu.stroke(), uu.strokeStyle = "#ff6363", uu.beginPath(), uu.moveTo(yu, ju), uu.lineTo(Nu, ju), uu.stroke());
+        const yk = this.lineHeight ? this.lineHeight : this.getTextHeight(kk, Fk),
+          fk = yk * (Jk.length - 1),
+          mk = fk / 2;
+        let Wk = tk;
+        "top" === this.vAlign ? Vk = tk + bk : "bottom" === this.vAlign ? (Vk = dk - fk, Wk = dk) : (Wk = tk + Xk / 2, Vk -= mk), Jk.forEach((Fk => {
+          Fk = Fk.trim(), kk.fillText(Fk, sk, Vk), Vk += yk
+        })), this.debug && (kk.lineWidth = 3, kk.strokeStyle = "#00909e", kk.strokeRect(Bk, tk, ak, Xk), kk.lineWidth = 2, kk.strokeStyle = "#f6d743", kk.beginPath(), kk.moveTo(sk, tk), kk.lineTo(sk, dk), kk.stroke(), kk.strokeStyle = "#ff6363", kk.beginPath(), kk.moveTo(Bk, Wk), kk.lineTo(wk, Wk), kk.stroke());
         return {
-          height: Tu + pu
+          height: fk + yk
         }
       },
-      getTextHeight: function(uu, Ru) {
-        const yu = uu.textBaseline;
-        uu.textBaseline = "bottom";
+      getTextHeight: function(kk, Fk) {
+        const Bk = kk.textBaseline;
+        kk.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: Eu
-        } = uu.measureText(Ru);
-        return uu.textBaseline = yu, Eu
+          actualBoundingBoxAscent: Rk
+        } = kk.measureText(Fk);
+        return kk.textBaseline = Bk, Rk
       },
-      justifyLine: function(uu, Ru, yu, Eu, Ku) {
-        const Qu = Ru.trim(),
-          mu = uu.measureText(Qu).width,
-          Ju = Qu.split(/\s+/).length - 1,
-          Nu = Math.floor((Ku - mu) / yu);
-        if (Ju <= 0 || Nu <= 0) return Qu;
-        const Xu = Math.floor(Nu / Ju);
-        let Vu = Nu - Ju * Xu,
-          ru = [];
-        for (let Bu = 0; Bu < Xu; Bu++) ru.push(Eu);
-        ru = ru.join("");
-        return Qu.replace(/\s+/g, (uu => {
-          const Ru = Vu > 0 ? ru + Eu : ru;
-          return Vu--, uu + Ru
+      justifyLine: function(kk, Fk, Bk, Rk, tk) {
+        const ak = Fk.trim(),
+          Xk = kk.measureText(ak).width,
+          bk = ak.split(/\s+/).length - 1,
+          wk = Math.floor((tk - Xk) / Bk);
+        if (bk <= 0 || wk <= 0) return ak;
+        const dk = Math.floor(wk / bk);
+        let sk = wk - bk * dk,
+          Vk = [];
+        for (let Jk = 0; Jk < dk; Jk++) Vk.push(Rk);
+        Vk = Vk.join("");
+        return ak.replace(/\s+/g, (kk => {
+          const Fk = sk > 0 ? Vk + Rk : Vk;
+          return sk--, kk + Fk
         }))
       }
     }
   },
-  38871: (uu, Ru, yu) => {
-    function Eu(uu, Ru) {
-      return Ru.set(uu), Ru
+  38746: (kk, Fk, Bk) => {
+    function Rk(kk, Fk) {
+      return Fk.set(kk), Fk
     }
-    yu.d(Ru, {
-      b: () => Eu
+    Bk.d(Fk, {
+      e: () => Rk
     })
   },
-  38432: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => pu,
-      f: () => Su,
-      g: () => Bu,
-      h: () => Vu,
-      l: () => ru
+  38310: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => yk,
+      e: () => ek,
+      f: () => Jk,
+      g: () => sk,
+      j: () => Vk
     });
-    var Eu = yu(4053),
-      Ku = yu(343);
-    const Qu = 1024,
-      mu = 1536,
-      Ju = 2 * Eu.o + 1,
-      Nu = new Intl.NumberFormat("en", {
+    var Rk = Bk(4002),
+      tk = Bk(291);
+    const ak = 1024,
+      Xk = 1536,
+      bk = 2 * Rk.k + 1,
+      wk = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      Xu = 1.5;
+      dk = 1.5;
 
-    function Vu(uu, Ru, yu) {
-      if ("string" !== typeof uu) return Ru;
+    function sk(kk, Fk, Bk) {
+      if ("string" !== typeof kk) return Fk;
       try {
-        const yu = JSON.parse(uu);
-        return yu && "object" === typeof yu ? yu : Ru
-      } catch (Eu) {
-        return void 0 !== yu && console.error(`Couldn't parse ${yu}`, Eu), Ru
+        const Bk = JSON.parse(kk);
+        return Bk && "object" === typeof Bk ? Bk : Fk
+      } catch (Rk) {
+        return void 0 !== Bk && console.error(`Couldn't parse ${Bk}`, Rk), Fk
       }
     }
 
-    function ru(uu) {
-      return Vu(uu, null, "a leaderboard's rows")
+    function Vk(kk) {
+      return sk(kk, null, "a leaderboard's rows")
     }
 
-    function Bu(uu, Ru) {
-      var yu, Eu;
-      return null !== Ru && void 0 !== Ru ? Ru : {
-        status: null !== (yu = uu.status) && void 0 !== yu ? yu : "loading",
-        entries: null !== (Eu = uu.entries) && void 0 !== Eu ? Eu : []
+    function Jk(kk, Fk) {
+      var Bk, Rk;
+      return null !== Fk && void 0 !== Fk ? Fk : {
+        status: null !== (Bk = kk.status) && void 0 !== Bk ? Bk : "loading",
+        entries: null !== (Rk = kk.entries) && void 0 !== Rk ? Rk : []
       }
     }
 
-    function xu(uu, Ru) {
-      return "number" === typeof uu && Number.isFinite(uu) && uu > 0 ? uu : Ru
+    function Ak(kk, Fk) {
+      return "number" === typeof kk && Number.isFinite(kk) && kk > 0 ? kk : Fk
     }
 
-    function Su(uu, Ru) {
-      const yu = xu(uu.size, 1);
-      let Eu = xu(uu.width, xu(2.5 * yu, 2.5)),
-        Ku = xu(uu.height, xu(3.75 * yu, 3.75));
-      Number.isFinite(Qu * Ku / Eu) && Number.isFinite(mu * Eu / Ku) || (Eu = 2.5, Ku = 3.75);
-      const Ju = Ku / Eu,
-        Nu = Math.max(1, Math.min(Qu, Ru / Ju));
+    function ek(kk, Fk) {
+      const Bk = Ak(kk.size, 1);
+      let Rk = Ak(kk.width, Ak(2.5 * Bk, 2.5)),
+        tk = Ak(kk.height, Ak(3.75 * Bk, 3.75));
+      Number.isFinite(ak * tk / Rk) && Number.isFinite(Xk * Rk / tk) || (Rk = 2.5, tk = 3.75);
+      const bk = tk / Rk,
+        wk = Math.max(1, Math.min(ak, Fk / bk));
       return {
-        width: Eu,
-        height: Ku,
-        layoutWidth: Math.max(Qu, mu / Ju),
-        layoutHeight: Math.max(mu, Qu * Ju),
-        pixelWidth: Math.round(Nu),
-        pixelHeight: Math.round(Math.max(1, Math.min(Ru, Nu * Ju)))
+        width: Rk,
+        height: tk,
+        layoutWidth: Math.max(ak, Xk / bk),
+        layoutHeight: Math.max(Xk, ak * bk),
+        pixelWidth: Math.round(wk),
+        pixelHeight: Math.round(Math.max(1, Math.min(Fk, wk * bk)))
       }
     }
 
-    function pu(uu, Ru, yu, mu, Vu, ru) {
-      uu.setTransform(1, 0, 0, 1, 0, 0), uu.fillStyle = Ku.L.defaultNameTagBackground, uu.fillRect(0, 0, Ru, yu), uu.scale(Ru / mu.layoutWidth, yu / mu.layoutHeight), uu.translate((mu.layoutWidth - Qu) / 2, 0),
-        function(uu, Ru, yu, Qu) {
-          var mu, Vu, ru, Bu;
+    function yk(kk, Fk, Bk, Xk, sk, Vk) {
+      kk.setTransform(1, 0, 0, 1, 0, 0), kk.fillStyle = tk.N.defaultNameTagBackground, kk.fillRect(0, 0, Fk, Bk), kk.scale(Fk / Xk.layoutWidth, Bk / Xk.layoutHeight), kk.translate((Xk.layoutWidth - ak) / 2, 0),
+        function(kk, Fk, Bk, ak) {
+          var Xk, sk, Vk, Jk;
           const {
-            top: xu,
-            around: Su,
-            showPlayerText: pu,
-            localPlayerDbId: ju
-          } = yu, {
-            whiteUiText: Hu,
-            grayUiText: du,
-            yellowUiText: bu
-          } = Ku.L;
-          uu.textBaseline = "middle";
-          const Cu = function(Ru, yu, Eu, Ku, Qu, mu) {
-              let Ju = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              uu.font = `bold ${Ku}px 'Jetbrains Mono', monospace`, uu.fillStyle = Qu, uu.textAlign = Ju;
-              let Nu = Ru.replace(/[\r\n\t]/g, " ");
-              if (uu.measureText(Nu).width > mu) {
-                for (; Nu.length > 0 && uu.measureText(`${Nu}\u2026`).width > mu;) Nu = Nu.slice(0, -1);
-                Nu += "\u2026"
+            top: Ak,
+            around: ek,
+            showPlayerText: yk,
+            localPlayerDbId: Wk
+          } = Bk, {
+            whiteUiText: vk,
+            grayUiText: ik,
+            yellowUiText: Yk
+          } = tk.N;
+          kk.textBaseline = "middle";
+          const Lk = function(Fk, Bk, Rk, tk, ak, Xk) {
+              let bk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              kk.font = `bold ${tk}px 'Jetbrains Mono', monospace`, kk.fillStyle = ak, kk.textAlign = bk;
+              let wk = Fk.replace(/[\r\n\t]/g, " ");
+              if (kk.measureText(wk).width > Xk) {
+                for (; wk.length > 0 && kk.measureText(`${wk}\u2026`).width > Xk;) wk = wk.slice(0, -1);
+                wk += "\u2026"
               }
-              uu.fillText(Nu, yu, Eu)
+              kk.fillText(wk, Bk, Rk)
             },
-            ku = Ru => {
-              uu.fillStyle = Hu, uu.globalAlpha = .15, uu.fillRect(24, Ru, 976, 2), uu.globalAlpha = 1
+            Ok = Fk => {
+              kk.fillStyle = vk, kk.globalAlpha = .15, kk.fillRect(24, Fk, 976, 2), kk.globalAlpha = 1
             },
-            eu = null === ju ? null : (0, Ku.xc)(ju),
-            Au = uu => null !== eu && uu.playerHash === eu,
-            Du = Tu(xu.entries, Eu.s),
-            Mu = "ready" === xu.status && Du.length > 0,
-            Iu = null === Su ? [] : Tu(Su.entries, Ju),
-            Gu = Du.some(Au),
-            Uu = null === Su ? null : function(uu) {
-              const Ru = uu;
-              if (!Ru || !Number.isFinite(Ru.rank) || !Number.isFinite(Ru.tied) || !Number.isFinite(Ru.total)) return null;
-              return Ru
-            }(Su.standing),
-            nu = Iu.find(Au),
-            su = Du.find(Au),
-            tu = null === Uu || void 0 === nu ? null : {
-              value: nu.value,
-              rank: Uu.rank
+            Ek = null === Wk ? null : (0, tk.qc)(Wk),
+            Sk = kk => null !== Ek && kk.playerHash === Ek,
+            Nk = fk(Ak.entries, Rk.n),
+            Hk = "ready" === Ak.status && Nk.length > 0,
+            uk = null === ek ? [] : fk(ek.entries, bk),
+            Mk = Nk.some(Sk),
+            gk = null === ek ? null : function(kk) {
+              const Fk = kk;
+              if (!Fk || !Number.isFinite(Fk.rank) || !Number.isFinite(Fk.tied) || !Number.isFinite(Fk.total)) return null;
+              return Fk
+            }(ek.standing),
+            Uk = uk.find(Sk),
+            ck = Nk.find(Sk),
+            Gk = null === gk || void 0 === Uk ? null : {
+              value: Uk.value,
+              rank: gk.rank
             },
-            lu = Wu(Du, void 0 === su || su.value === (null === tu || void 0 === tu ? void 0 : tu.value) ? tu : null),
-            gu = Wu(Iu, tu),
-            cu = (uu, Ru) => {
-              const yu = uu.findIndex(Au);
-              return yu >= 0 ? Ru[yu] : null
+            Tk = mk(Nk, void 0 === ck || ck.value === (null === Gk || void 0 === Gk ? void 0 : Gk.value) ? Gk : null),
+            rk = mk(uk, Gk),
+            Dk = (kk, Fk) => {
+              const Bk = kk.findIndex(Sk);
+              return Bk >= 0 ? Fk[Bk] : null
             },
-            Lu = null !== (mu = null !== (Vu = null === Uu || void 0 === Uu ? void 0 : Uu.rank) && void 0 !== Vu ? Vu : cu(Iu, gu)) && void 0 !== mu ? mu : cu(Du, lu);
-          uu.font = "bold 34px 'Jetbrains Mono', monospace";
-          const zu = [...Mu ? lu : [], ...Gu ? [] : gu],
-            Fu = Math.min(280, Math.max(0, ...zu.map((Ru => uu.measureText(Nu.format(Ru)).width)))),
-            wu = Fu <= 80,
-            Zu = wu ? 80 : 32 + Fu,
-            hu = wu ? 148 : Zu + 28,
-            Pu = 660 - hu;
-          Cu(`TOP ${Eu.s}  /  ALL TIME`, 24, 52, 28, du, 976), Cu(pu ? String(null !== (ru = Ru.title) && void 0 !== ru ? ru : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Hu, 976), Cu("RANK", 32, 174, 28, du, hu - 40), Cu("PLAYER", hu, 174, 28, du, Pu), Cu(pu ? String(null !== (Bu = Ru.scoreLabel) && void 0 !== Bu ? Bu : "Score").slice(0, 24) : "Score", 992, 174, 28, du, 304, "right"), ku(202);
-          const iu = (Qu - 232) / (Eu.s + Xu + Ju),
-            Yu = 208 + Eu.s * iu,
-            ou = Yu + Xu * iu,
-            qu = (Ru, yu, Eu, Ku) => {
-              const Qu = Au(Ru);
-              uu.fillStyle = Qu ? bu : Hu, uu.globalAlpha = Qu ? .15 : Ku ? .035 : 0, uu.fillRect(24, Eu - iu / 2 + 1, 976, iu - 2), uu.globalAlpha = 1;
-              const mu = Qu ? bu : Hu;
-              Cu(Nu.format(yu), Zu, Eu, 34, mu, wu ? 80 : Fu, wu ? "center" : "right"), Cu(pu ? String(Ru.name).slice(0, 64) : "Player", hu, Eu, 34, mu, Pu);
-              const Ju = Nu.format(Ru.value);
-              Cu(uu.measureText(Ju).width > 304 ? Ru.value.toExponential(6) : Ju, 992, Eu, 34, mu, 304, "right")
+            zk = null !== (Xk = null !== (sk = null === gk || void 0 === gk ? void 0 : gk.rank) && void 0 !== sk ? sk : Dk(uk, rk)) && void 0 !== Xk ? Xk : Dk(Nk, Tk);
+          kk.font = "bold 34px 'Jetbrains Mono', monospace";
+          const Pk = [...Hk ? Tk : [], ...Mk ? [] : rk],
+            hk = Math.min(280, Math.max(0, ...Pk.map((Fk => kk.measureText(wk.format(Fk)).width)))),
+            qk = hk <= 80,
+            Ck = qk ? 80 : 32 + hk,
+            Zk = qk ? 148 : Ck + 28,
+            pk = 660 - Zk;
+          Lk(`TOP ${Rk.n}  /  ALL TIME`, 24, 52, 28, ik, 976), Lk(yk ? String(null !== (Vk = Fk.title) && void 0 !== Vk ? Vk : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, vk, 976), Lk("RANK", 32, 174, 28, ik, Zk - 40), Lk("PLAYER", Zk, 174, 28, ik, pk), Lk(yk ? String(null !== (Jk = Fk.scoreLabel) && void 0 !== Jk ? Jk : "Score").slice(0, 24) : "Score", 992, 174, 28, ik, 304, "right"), Ok(202);
+          const Kk = (ak - 232) / (Rk.n + dk + bk),
+            xk = 208 + Rk.n * Kk,
+            jk = xk + dk * Kk,
+            lk = (Fk, Bk, Rk, tk) => {
+              const ak = Sk(Fk);
+              kk.fillStyle = ak ? Yk : vk, kk.globalAlpha = ak ? .15 : tk ? .035 : 0, kk.fillRect(24, Rk - Kk / 2 + 1, 976, Kk - 2), kk.globalAlpha = 1;
+              const Xk = ak ? Yk : vk;
+              Lk(wk.format(Bk), Ck, Rk, 34, Xk, qk ? 80 : hk, qk ? "center" : "right"), Lk(yk ? String(Fk.name).slice(0, 64) : "Player", Zk, Rk, 34, Xk, pk);
+              const bk = wk.format(Fk.value);
+              Lk(kk.measureText(bk).width > 304 ? Fk.value.toExponential(6) : bk, 992, Rk, 34, Xk, 304, "right")
             };
-          if (Mu)
-            for (const [Eu, Ku] of Du.entries()) qu(Ku, lu[Eu], 208 + (Eu + .5) * iu, Eu % 2 === 0);
+          if (Hk)
+            for (const [Rk, tk] of Nk.entries()) lk(tk, Tk[Rk], 208 + (Rk + .5) * Kk, Rk % 2 === 0);
           else {
-            const uu = "error" === xu.status,
-              Ru = uu ? "Couldn't load leaderboard" : "ready" === xu.status ? "No scores yet" : "Loading leaderboard\u2026",
-              yu = uu ? "Trying again shortly" : "ready" === xu.status ? "Be the first on the board!" : "Fetching the top players",
-              Eu = (208 + Yu) / 2;
-            Cu(Ru, 512, Eu - 28, 40, uu ? Ku.L.redUiText : Hu, 960, "center"), Cu(yu, 512, Eu + 27, 30, du, 960, "center")
+            const kk = "error" === Ak.status,
+              Fk = kk ? "Couldn't load leaderboard" : "ready" === Ak.status ? "No scores yet" : "Loading leaderboard\u2026",
+              Bk = kk ? "Trying again shortly" : "ready" === Ak.status ? "Be the first on the board!" : "Fetching the top players",
+              Rk = (208 + xk) / 2;
+            Lk(Fk, 512, Rk - 28, 40, kk ? tk.N.redUiText : vk, 960, "center"), Lk(Bk, 512, Rk + 27, 30, ik, 960, "center")
           }
-          const Ou = Yu + Xu * iu / 2;
-          if (null === Lu) ku(Ou);
+          const nk = xk + dk * Kk / 2;
+          if (null === zk) Ok(nk);
           else {
-            const Ru = null === Uu ? 0 : Uu.tied - 1,
-              yu = `YOUR RANK #${Nu.format(Lu)}${null===Uu?"":` of ${Nu.format(Uu.total)}`}`;
-            uu.font = "bold 36px 'Jetbrains Mono', monospace";
-            const Eu = Math.max(20, Math.min(36, Math.floor(34560 / uu.measureText(yu).width)));
-            Cu(yu, 512, Ou - (Ru > 0 ? 15 : 0), Eu, bu, 960, "center"), Ru > 0 && Cu(`Tied with ${Nu.format(Ru)} other${1===Ru?"":"s"}`, 512, Ou + 24, 24, du, 960, "center")
+            const Fk = null === gk ? 0 : gk.tied - 1,
+              Bk = `YOUR RANK #${wk.format(zk)}${null===gk?"":` of ${wk.format(gk.total)}`}`;
+            kk.font = "bold 36px 'Jetbrains Mono', monospace";
+            const Rk = Math.max(20, Math.min(36, Math.floor(34560 / kk.measureText(Bk).width)));
+            Lk(Bk, 512, nk - (Fk > 0 ? 15 : 0), Rk, Yk, 960, "center"), Fk > 0 && Lk(`Tied with ${wk.format(Fk)} other${1===Fk?"":"s"}`, 512, nk + 24, 24, ik, 960, "center")
           }
-          if (null === Su) return;
-          const vu = ou + Ju * iu / 2;
-          if (Gu) Cu(`You're in the top ${Eu.s}!`, 512, vu, 40, bu, 960, "center");
-          else if (0 === Iu.length) Cu("You're not on this board yet", 512, vu, 34, du, 960, "center");
+          if (null === ek) return;
+          const Ik = jk + bk * Kk / 2;
+          if (Mk) Lk(`You're in the top ${Rk.n}!`, 512, Ik, 40, Yk, 960, "center");
+          else if (0 === uk.length) Lk("You're not on this board yet", 512, Ik, 34, ik, 960, "center");
           else
-            for (const [Eu, Ku] of Iu.entries()) qu(Ku, gu[Eu], ou + (Eu + .5) * iu, Eu % 2 === 0)
-        }(uu, Vu, ru, mu.layoutHeight)
+            for (const [Rk, tk] of uk.entries()) lk(tk, rk[Rk], jk + (Rk + .5) * Kk, Rk % 2 === 0)
+        }(kk, sk, Vk, Xk.layoutHeight)
     }
 
-    function Tu(uu, Ru) {
-      return Array.isArray(uu) ? uu.slice(0, Ru).filter((uu => uu && Number.isFinite(uu.rank) && Number.isFinite(uu.value))) : []
+    function fk(kk, Fk) {
+      return Array.isArray(kk) ? kk.slice(0, Fk).filter((kk => kk && Number.isFinite(kk.rank) && Number.isFinite(kk.value))) : []
     }
 
-    function Wu(uu, Ru) {
-      const yu = [];
-      let Eu = !1;
-      return uu.forEach(((Ku, Qu) => {
-        if (null !== Ru && Ku.value === Ru.value) return void yu.push(Ru.rank);
-        const mu = Qu > 0 && Ku.value === uu[Qu - 1].value;
-        mu || (Eu = 0 === Qu && 1 !== Ku.rank), yu.push(mu && !Eu ? yu[Qu - 1] : Ku.rank)
-      })), yu
+    function mk(kk, Fk) {
+      const Bk = [];
+      let Rk = !1;
+      return kk.forEach(((tk, ak) => {
+        if (null !== Fk && tk.value === Fk.value) return void Bk.push(Fk.rank);
+        const Xk = ak > 0 && tk.value === kk[ak - 1].value;
+        Xk || (Rk = 0 === ak && 1 !== tk.rank), Bk.push(Xk && !Rk ? Bk[ak - 1] : tk.rank)
+      })), Bk
     }
   },
-  38617: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ku,
-      h: () => Qu
+  38516: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk,
+      e: () => ak
     });
-    const Eu = 32;
+    const Rk = 32;
 
-    function Ku(uu) {
-      return Array.from(uu).length
+    function tk(kk) {
+      return Array.from(kk).length
     }
 
-    function Qu(uu) {
-      const Ru = [""];
-      let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        Ku = "";
-      const Qu = () => {
-        Ru.push(""), yu = 0, Ku = ""
+    function ak(kk) {
+      const Fk = [""];
+      let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        tk = "";
+      const ak = () => {
+        Fk.push(""), Bk = 0, tk = ""
       };
-      for (const mu of uu.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(mu)) Qu();
-        else if (/^\s+$/.test(mu)) Ku += mu;
-      else if (mu.length > 0) {
-        const uu = Array.from(mu);
-        yu > 0 && yu + Ku.length + uu.length > Eu && Qu(), Ru[Ru.length - 1] += Ku, yu += Ku.length, Ku = "";
-        for (const Ku of uu) yu >= Eu && Qu(), Ru[Ru.length - 1] += Ku, yu++
+      for (const Xk of kk.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(Xk)) ak();
+        else if (/^\s+$/.test(Xk)) tk += Xk;
+      else if (Xk.length > 0) {
+        const kk = Array.from(Xk);
+        Bk > 0 && Bk + tk.length + kk.length > Rk && ak(), Fk[Fk.length - 1] += tk, Bk += tk.length, tk = "";
+        for (const tk of kk) Bk >= Rk && ak(), Fk[Fk.length - 1] += tk, Bk++
       }
-      return Ru[Ru.length - 1] += Ku, Ru
+      return Fk[Fk.length - 1] += tk, Fk
     }
   },
-  38863: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => mu
+  38741: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Xk
     });
-    var Eu = yu(36466),
-      Ku = yu.n(Eu);
-    const Qu = [1, 1, 1];
+    var Rk = Bk(36366),
+      tk = Bk.n(Rk);
+    const ak = [1, 1, 1];
 
-    function mu(uu) {
-      if (!uu) return [...Qu];
+    function Xk(kk) {
+      if (!kk) return [...ak];
       try {
-        const [Ru, yu, Eu] = Ku()(uu).rgb().array();
-        return [Ru / 255, yu / 255, Eu / 255]
-      } catch (Ru) {
-        return console.warn(`Invalid groundArrowPath colour "${uu}":`, Ru), [...Qu]
+        const [Fk, Bk, Rk] = tk()(kk).rgb().array();
+        return [Fk / 255, Bk / 255, Rk / 255]
+      } catch (Fk) {
+        return console.warn(`Invalid groundArrowPath colour "${kk}":`, Fk), [...ak]
       }
     }
   },
-  34129: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Qu,
-      e: () => Ju,
-      g: () => mu,
-      k: () => Ku,
-      m: () => Eu
+  34016: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => ak,
+      g: () => bk,
+      h: () => Xk,
+      l: () => tk,
+      n: () => Rk
     });
-    const Eu = {
+    const Rk = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1651,41 +1651,41 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      Ku = "/textures/dayNight/sun.png",
-      Qu = "/textures/dayNight/moon.png",
-      mu = "/textures/dayNight/stars",
-      Ju = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      tk = "/textures/dayNight/sun.png",
+      ak = "/textures/dayNight/moon.png",
+      Xk = "/textures/dayNight/stars",
+      bk = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  38939: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Vu,
-      g: () => ru,
-      k: () => Eu,
-      n: () => Nu,
-      q: () => Ku,
-      s: () => Xu,
-      v: () => Ju,
-      w: () => mu
+  38799: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => sk,
+      e: () => Vk,
+      i: () => Rk,
+      m: () => wk,
+      q: () => tk,
+      u: () => dk,
+      w: () => bk,
+      y: () => Xk
     });
-    const Eu = ["linear", "easeIn", "easeOut", "easeInOut"],
-      Ku = ["movement", "camera", "cursor"],
-      Qu = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const Rk = ["linear", "easeIn", "easeOut", "easeInOut"],
+      tk = ["movement", "camera", "cursor"],
+      ak = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function mu(uu, Ru) {
-      return Ju(uu, Ru, Qu)
+    function Xk(kk, Fk) {
+      return bk(kk, Fk, ak)
     }
 
-    function Ju(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (uu === Ru || Number.isNaN(uu) && Number.isNaN(Ru)) return !0;
-      if ("object" !== typeof uu || "object" !== typeof Ru || null === uu || null === Ru || Array.isArray(uu) !== Array.isArray(Ru)) return !1;
-      const Eu = uu,
-        Ku = Ru;
-      for (const Qu of new Set([...Object.keys(Eu), ...Object.keys(Ku)]))
-        if (!yu.includes(Qu) && !Ju(Eu[Qu], Ku[Qu])) return !1;
+    function bk(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (kk === Fk || Number.isNaN(kk) && Number.isNaN(Fk)) return !0;
+      if ("object" !== typeof kk || "object" !== typeof Fk || null === kk || null === Fk || Array.isArray(kk) !== Array.isArray(Fk)) return !1;
+      const Rk = kk,
+        tk = Fk;
+      for (const ak of new Set([...Object.keys(Rk), ...Object.keys(tk)]))
+        if (!Bk.includes(ak) && !bk(Rk[ak], tk[ak])) return !1;
       return !0
     }
-    const Nu = {
+    const wk = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1707,10 +1707,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      Xu = "^-[1-9][0-9]*$",
-      Vu = "^#[0-9a-fA-F]{6}$",
-      ru = "#000000"
+      dk = "^-[1-9][0-9]*$",
+      sk = "^#[0-9a-fA-F]{6}$",
+      Vk = "#000000"
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,312 +1,312 @@
 export const id = 202;
 export const ids = [202];
 export const modules = {
-  36146: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      WasmTextureWorker: () => ju
+  35988: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      WasmTextureWorker: () => Wk
     });
-    var Eu = yu(599),
-      Ku = yu(2982),
-      Qu = yu(36152),
-      mu = yu.n(Qu);
+    var Rk = Bk(594),
+      tk = Bk(2984),
+      ak = Bk(35991),
+      Xk = Bk.n(ak);
 
-    function Ju() {
-      return mu()('(()=>{var uu={d:(Ru,yu)=>{for(var Eu in yu)uu.o(yu,Eu)&&!uu.o(Ru,Eu)&&Object.defineProperty(Ru,Eu,{enumerable:!0,get:yu[Eu]})},o:(uu,Ru)=>Object.prototype.hasOwnProperty.call(uu,Ru),r:uu=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(uu,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(uu,"__esModule",{value:!0})}},Ru={};uu.r(Ru),uu.d(Ru,{su:()=>yu,PV:()=>Eu,default:()=>Uu,initSync:()=>Gu,iV:()=>Ku});class yu{__destroy_into_raw(){const uu=this.__wbg_ptr;return this.__wbg_ptr=0,mu.unregister(this),uu}free(){const uu=this.__destroy_into_raw();Du.FvWT(uu,0)}OR(uu){const Ru=function(uu,Ru){const yu=Ru(1*uu.length,1)>>>0;return Su().set(uu,yu/1),Mu=uu.length,yu}(uu,Du.bkTa),yu=Mu;return Du.cQWD(this.__wbg_ptr,Ru,yu)>>>0}uy(){const uu=Du.PzBQ(this.__wbg_ptr);var Ru=Ju(uu[0],uu[1]).slice();return Du.gzS1(uu[0],4*uu[1],4),Ru}By(){let uu,Ru;try{const yu=Du.wyXh(this.__wbg_ptr);return uu=yu[0],Ru=yu[1],Vu(yu[0],yu[1])}finally{Du.gzS1(uu,Ru,1)}}oy(){return Du.HfCW(this.__wbg_ptr)>>>0}BE(){return Du.VqTd(this.__wbg_ptr)>>>0}AN(){let uu,Ru;try{const yu=Du.SvYG(this.__wbg_ptr);return uu=yu[0],Ru=yu[1],Vu(yu[0],yu[1])}finally{Du.gzS1(uu,Ru,1)}}IN(){const uu=Du.Dy1w(this.__wbg_ptr);var Ru=Ju(uu[0],uu[1]).slice();return Du.gzS1(uu[0],4*uu[1],4),Ru}cr(){const uu=Du.l8mE(this.__wbg_ptr);var Ru,yu,Eu=(Ru=uu[0],yu=uu[1],Ru>>>=0,Xu().subarray(Ru/8,Ru/8+yu)).slice();return Du.gzS1(uu[0],8*uu[1],8),Eu}KB(){return Du.vte6(this.__wbg_ptr)>>>0}ox(uu){const Ru=Du.EnJl(this.__wbg_ptr,uu);if(Ru[1])throw Hu(Ru[0])}TS(){Du.prKA(this.__wbg_ptr)}IS(){Du.QQ1i(this.__wbg_ptr)}xx(){const uu=Du.FliG(this.__wbg_ptr);if(uu[1])throw Hu(uu[0])}XT(){return Du.VdqF(this.__wbg_ptr)>>>0}AS(){const uu=Du.zvm7(this.__wbg_ptr);if(uu[1])throw Hu(uu[0])}VT(uu,Ru){const yu=Du.HdVp(this.__wbg_ptr,uu,Ru);if(yu[1])throw Hu(yu[0])}rT(uu){let Ru,yu;try{const Qu=Du.e1YC(this.__wbg_ptr,uu);var Eu=Qu[0],Ku=Qu[1];if(Qu[3])throw Eu=0,Ku=0,Hu(Qu[2]);return Ru=Eu,yu=Ku,Vu(Eu,Ku)}finally{Du.gzS1(Ru,yu,1)}}BT(uu){return Du.YsP1(this.__wbg_ptr,uu)>>>0}xT(uu){return Du.v8Vm(this.__wbg_ptr,uu)>>>0}MB(){const uu=Du.S392(this.__wbg_ptr);var Ru=Ju(uu[0],uu[1]).slice();return Du.gzS1(uu[0],4*uu[1],4),Ru}ST(){return 0!==Du.n47f(this.__wbg_ptr)}constructor(uu,Ru,yu,Eu,Ku,Qu){const Ju=ju(uu,Du.bkTa,Du.CCy7),Nu=Mu,Vu=Wu(Ru,Du.bkTa),ru=Mu,Bu=function(uu,Ru){const yu=Ru(8*uu.length,8)>>>0;return Xu().set(uu,yu/8),Mu=uu.length,yu}(yu,Du.bkTa),xu=Mu,Su=Wu(Eu,Du.bkTa),pu=Mu,Tu=Wu(Ku,Du.bkTa),du=Mu,bu=Du.kwXi(Ju,Nu,Vu,ru,Bu,xu,Su,pu,Tu,du,Qu);if(bu[2])throw Hu(bu[1]);return this.__wbg_ptr=bu[0],mu.register(this,this.__wbg_ptr,this),this}pT(){let uu,Ru;try{const yu=Du.NRSl(this.__wbg_ptr);return uu=yu[0],Ru=yu[1],Vu(yu[0],yu[1])}finally{Du.gzS1(uu,Ru,1)}}TT(uu,Ru){const yu=ju(uu,Du.bkTa,Du.CCy7),Eu=Mu,Ku=Wu(Ru,Du.bkTa),Qu=Mu,mu=Du.LWH0(this.__wbg_ptr,yu,Eu,Ku,Qu);if(mu[1])throw Hu(mu[0])}WT(){return Du.vsCu(this.__wbg_ptr)>>>0}jT(){return Du.GokY(this.__wbg_ptr)>>>0}op(){return Du.v5Il(this.__wbg_ptr)>>>0}ux(){return Du.LqpX(this.__wbg_ptr)>>>0}warnings(){let uu,Ru;try{const yu=Du.Qxtn(this.__wbg_ptr);return uu=yu[0],Ru=yu[1],Vu(yu[0],yu[1])}finally{Du.gzS1(uu,Ru,1)}}}function Eu(uu,Ru){const yu=ju(uu,Du.bkTa,Du.CCy7),Eu=Mu,Ku=Du.M8xi(yu,Eu,Ru);if(Ku[1])throw Hu(Ku[0])}function Ku(){Du.v1L6()}function Qu(){return{__proto__:null,NBi3:{__proto__:null,ChBd:function(uu,Ru){return function(uu){Tu===pu.length&&pu.push(pu.length+1);const Ru=Tu;return Tu=pu[Ru],pu[Ru]=uu,Ru}(Error(Vu(uu,Ru)))},TSLk:function(uu,Ru){throw new Error(Vu(uu,Ru))},IVov:function(uu,Ru){console.error(Vu(uu,Ru))}}}}Symbol.dispose&&(yu.prototype[Symbol.dispose]=yu.prototype.free);const mu="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((uu=>Du.FvWT(uu,1)));function Ju(uu,Ru){return uu>>>=0,Bu().subarray(uu/4,uu/4+Ru)}let Nu=null;function Xu(){return null!==Nu&&0!==Nu.byteLength||(Nu=new Float64Array(Du.memory.buffer)),Nu}function Vu(uu,Ru){return function(uu,Ru){Cu+=Ru,Cu>=bu&&(du=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),du.decode(),Cu=Ru);return du.decode(Su().subarray(uu,uu+Ru))}(uu>>>0,Ru)}let ru=null;function Bu(){return null!==ru&&0!==ru.byteLength||(ru=new Uint32Array(Du.memory.buffer)),ru}let xu=null;function Su(){return null!==xu&&0!==xu.byteLength||(xu=new Uint8Array(Du.memory.buffer)),xu}let pu=new Array(1024).fill(void 0);pu.push(void 0,null,!0,!1);let Tu=pu.length;function Wu(uu,Ru){const yu=Ru(4*uu.length,4)>>>0;return Bu().set(uu,yu/4),Mu=uu.length,yu}function ju(uu,Ru,yu){if(void 0===yu){const yu=ku.encode(uu),Eu=Ru(yu.length,1)>>>0;return Su().subarray(Eu,Eu+yu.length).set(yu),Mu=yu.length,Eu}let Eu=uu.length,Ku=Ru(Eu,1)>>>0;const Qu=Su();let mu=0;for(;mu<Eu;mu++){const Ru=uu.charCodeAt(mu);if(Ru>127)break;Qu[Ku+mu]=Ru}if(mu!==Eu){0!==mu&&(uu=uu.slice(mu)),Ku=yu(Ku,Eu,Eu=mu+3*uu.length,1)>>>0;const Ru=Su().subarray(Ku+mu,Ku+Eu);mu+=ku.encodeInto(uu,Ru).written,Ku=yu(Ku,Eu,mu,1)>>>0}return Mu=mu,Ku}function Hu(uu){const Ru=function(uu){return pu[uu]}(uu);return function(uu){uu<1028||(pu[uu]=Tu,Tu=uu)}(uu),Ru}let du=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});du.decode();const bu=2146435072;let Cu=0;const ku=new TextEncoder;"encodeInto"in ku||(ku.encodeInto=function(uu,Ru){const yu=ku.encode(uu);return Ru.set(yu),{read:uu.length,written:yu.length}});let eu,Au,Du,Mu=0;function Iu(uu,Ru){return Au=uu,Du=uu.exports,eu=Ru,Nu=null,ru=null,xu=null,Du.Xmon(),Du}function Gu(uu){if(void 0!==Du)return Du;void 0!==uu&&(Object.getPrototypeOf(uu)===Object.prototype?({module:uu}=uu):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const Ru=Qu();uu instanceof WebAssembly.Module||(uu=new WebAssembly.Module(uu));return Iu(new WebAssembly.Instance(uu,Ru),uu)}async function Uu(uu){if(void 0!==Du)return Du;void 0!==uu&&(Object.getPrototypeOf(uu)===Object.prototype?({module_or_path:uu}=uu):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const Ru=Qu();("string"===typeof uu||"function"===typeof Request&&uu instanceof Request||"function"===typeof URL&&uu instanceof URL)&&(uu=fetch(uu));const{instance:yu,module:Eu}=await async function(uu,Ru){if("function"===typeof Response&&uu instanceof Response){if(!uu.ok)throw new Error(`failed to fetch Wasm: ${uu.status} ${uu.statusText} fetching \'${uu.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(uu,Ru)}catch(yu){if(!function(uu){switch(uu){case"basic":case"cors":case"default":return!0}return!1}(uu.type)||"application/wasm"===uu.headers.get("Content-Type"))throw yu;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",yu)}const Eu=await uu.arrayBuffer();return await WebAssembly.instantiate(Eu,Ru)}{const yu=await WebAssembly.instantiate(uu,Ru);return yu instanceof WebAssembly.Instance?{instance:yu,module:uu}:yu}}(await uu,Ru);return Iu(yu,Eu)}let nu=null,su=null;function tu(uu){if(null!==su)throw su;if(null===nu)try{const{memory:yu}=Gu({module:uu});nu={wasm:Ru,memory:yu}}catch(yu){throw su=function(uu,Ru){return new Error(`${uu}: ${Ru instanceof Error?`${Ru.name}: ${Ru.message}`:String(Ru)}`,{cause:Ru})}("instantiate",yu),su}return nu}function lu(uu){return uu instanceof Error?uu.message:String(uu)}const gu=0,cu=1,Lu=2,zu=3,Fu=4;Error;function wu(uu){return`the texture module didn\'t load (${lu(uu)})`}function Zu(uu){return""===uu?[]:uu.split("\\0")}const hu=self;let Pu=null,iu=null,Yu=gu,ou=0;function qu(uu){const Ru=performance.now();var yu,Eu;(uu!==Yu||Ru-ou>=1e3)&&(Yu=uu,ou=Ru,hu.postMessage({type:"progress",stage:uu,wasmBytes:null!==(yu=null===(Eu=iu)||void 0===Eu?void 0:Eu.buffer.byteLength)&&void 0!==yu?yu:0}))}const{FileReaderSync:Ou}=self;function vu(uu){return(new Ou).readAsDataURL(new Blob([uu],{type:"image/png"}))}function au(uu,Ru){hu.postMessage({type:"sheet",sheet:uu,pixels:Ru},[Ru.buffer])}function fu(uu){let Ru;qu(cu);try{Ru=tu(uu.module)}catch(mu){return void hu.postMessage({type:"failed",reason:wu(mu),moduleLoad:!0})}iu=Ru.memory,qu(Lu);const{assets:yu,layerCap:Eu,warnings:Ku,generator:Qu}=function(uu,Ru,yu,Eu,Ku,Qu,mu){var Ju;const{wasm:Nu,memory:Xu}=uu,{strings:Vu,blocks:ru,numbers:Bu,index:xu,armour:Su}=Ru,pu=new Nu.su(Vu,ru,Bu,xu,Su,yu),Tu=Eu.sources.map((uu=>(null===Qu||void 0===Qu||Qu(Lu),pu.OR(uu)))),Wu=new Uint32Array(2*Eu.sourceOfName.length);for(const[Mu,Iu]of Eu.sourceOfName.entries())Wu[2*Mu]=Mu,Wu[2*Mu+1]=Tu[Iu];pu.TT(Eu.names,Wu),null===Qu||void 0===Qu||Qu(zu),pu.VT(Ku,null!==(Ju=null===mu||void 0===mu?void 0:mu.layers)&&void 0!==Ju?Ju:0),null===Qu||void 0===Qu||Qu(Fu);const ju={};for(const[Mu,Iu]of Zu(pu.pT()).entries())null===Qu||void 0===Qu||Qu(Fu),ju[Iu]=pu.rT(Mu);const Hu={},du=pu.uy(),bu=new Map;for(const[Mu,Iu]of Zu(pu.By()).entries()){const uu=du[Mu];bu.has(uu)||(null===Qu||void 0===Qu||Qu(Fu),bu.set(uu,pu.rT(uu))),Hu[Iu]=bu.get(uu)}pu.TS();const Cu=Array.from(pu.MB()),ku=[],eu=[],Au=(uu,Ru)=>new Uint8ClampedArray(Xu.buffer,uu,Ru).slice();if(mu){for(let uu=0;uu<Cu.length;uu++)null===Qu||void 0===Qu||Qu(Fu),pu.ox(uu),pu.xx(),ku.push(mu.dataUrl(new Uint8Array(Xu.buffer,pu.op(),pu.jT()))),mu.onSheet(uu,Au(pu.ux(),pu.WT()));pu.IS()}const Du=pu.XT();for(let Mu=Du;Mu<Du+pu.BE();Mu++)null===Qu||void 0===Qu||Qu(Fu),ku.push(pu.rT(Mu)),eu.push(Au(pu.xT(Mu),pu.BT(Mu)));return{assets:{rotatedBlockTextures:ju,animatedBlockTextures:Hu,blockAtlasArr:ku,blockAtlasPixels:eu,armourAtlas:pu.rT(pu.oy()),imagesPerAtlas:Cu,blockAtlasWidth:pu.KB()},layerCap:pu.ST()?Ku:0,warnings:pu.warnings(),generator:pu}}(Ru,uu.inputs,uu.isDefaultPack,{sources:uu.sources,names:uu.names,sourceOfName:uu.sourceOfName},uu.maxLayerWidth,qu,uu.sheetLayers>0?{layers:uu.sheetLayers,onSheet:au,dataUrl:vu}:void 0);Pu=Qu,hu.postMessage({type:"required",assets:yu,layerCap:Eu,warnings:Ku},yu.blockAtlasPixels.map((uu=>uu.buffer)))}self.onmessageerror=()=>{hu.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=uu=>{let{data:Ru}=uu;try{"required"===Ru.type?fu(Ru):function(){if(!Pu)throw new Error("No required assets to follow");const{colours:uu,warnings:Ru}=function(uu){return uu.AS(),{colours:{blocks:uu.AN(),counts:uu.IN(),values:uu.cr()},warnings:uu.warnings()}}(Pu);hu.postMessage({type:"optional",...uu,warnings:Ru},[uu.counts.buffer,uu.values.buffer])}()}catch(yu){const uu=lu(yu),Ru=yu instanceof WebAssembly.RuntimeError?`wasm trapped (${uu})`:uu;hu.postMessage({type:"failed",reason:Ru,stack:yu instanceof Error?yu.stack:void 0})}}})();', "Worker", void 0, yu.p + "generation.worker.0c16edd2.worker.js")
+    function bk() {
+      return Xk()('(()=>{var kk={d:(Fk,Bk)=>{for(var Rk in Bk)kk.o(Bk,Rk)&&!kk.o(Fk,Rk)&&Object.defineProperty(Fk,Rk,{enumerable:!0,get:Bk[Rk]})},o:(kk,Fk)=>Object.prototype.hasOwnProperty.call(kk,Fk),r:kk=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(kk,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(kk,"__esModule",{value:!0})}},Fk={};kk.r(Fk),kk.d(Fk,{dk:()=>Bk,HV:()=>Rk,default:()=>gk,initSync:()=>Mk,uV:()=>tk});class Bk{__destroy_into_raw(){const kk=this.__wbg_ptr;return this.__wbg_ptr=0,Xk.unregister(this),kk}free(){const kk=this.__destroy_into_raw();Nk.XS8A(kk,0)}OF(kk){const Fk=function(kk,Fk){const Bk=Fk(1*kk.length,1)>>>0;return ek().set(kk,Bk/1),Hk=kk.length,Bk}(kk,Nk.r6ni),Bk=Hk;return Nk.mvm4(this.__wbg_ptr,Fk,Bk)>>>0}xF(){const kk=Nk.UQaX(this.__wbg_ptr);var Fk=bk(kk[0],kk[1]).slice();return Nk.Uido(kk[0],4*kk[1],4),Fk}MB(){let kk,Fk;try{const Bk=Nk.fjFg(this.__wbg_ptr);return kk=Bk[0],Fk=Bk[1],sk(Bk[0],Bk[1])}finally{Nk.Uido(kk,Fk,1)}}KB(){return Nk.nlGq(this.__wbg_ptr)>>>0}OR(){return Nk.sLWh(this.__wbg_ptr)>>>0}st(){let kk,Fk;try{const Bk=Nk.MFAq(this.__wbg_ptr);return kk=Bk[0],Fk=Bk[1],sk(Bk[0],Bk[1])}finally{Nk.Uido(kk,Fk,1)}}At(){const kk=Nk.Afoo(this.__wbg_ptr);var Fk=bk(kk[0],kk[1]).slice();return Nk.Uido(kk[0],4*kk[1],4),Fk}It(){const kk=Nk.U8MD(this.__wbg_ptr);var Fk,Bk,Rk=(Fk=kk[0],Bk=kk[1],Fk>>>=0,dk().subarray(Fk/8,Fk/8+Bk)).slice();return Nk.Uido(kk[0],8*kk[1],8),Rk}mb(){return Nk.Hm7P(this.__wbg_ptr)>>>0}ks(kk){const Fk=Nk.JjKx(this.__wbg_ptr,kk);if(Fk[1])throw vk(Fk[0])}ss(){Nk.NQWn(this.__wbg_ptr)}vs(){Nk.GMDm(this.__wbg_ptr)}nd(){const kk=Nk.IN1Q(this.__wbg_ptr);if(kk[1])throw vk(kk[0])}cs(){return Nk.COtw(this.__wbg_ptr)>>>0}As(){const kk=Nk.kgcW(this.__wbg_ptr);if(kk[1])throw vk(kk[0])}ps(kk,Fk){const Bk=Nk.jXcS(this.__wbg_ptr,kk,Fk);if(Bk[1])throw vk(Bk[0])}ns(kk){let Fk,Bk;try{const ak=Nk.ea5C(this.__wbg_ptr,kk);var Rk=ak[0],tk=ak[1];if(ak[3])throw Rk=0,tk=0,vk(ak[2]);return Fk=Rk,Bk=tk,sk(Rk,tk)}finally{Nk.Uido(Fk,Bk,1)}}GA(kk){return Nk.buze(this.__wbg_ptr,kk)>>>0}Re(kk){return Nk.TndX(this.__wbg_ptr,kk)>>>0}ed(){const kk=Nk.WrRR(this.__wbg_ptr);var Fk=bk(kk[0],kk[1]).slice();return Nk.Uido(kk[0],4*kk[1],4),Fk}we(){return 0!==Nk.ACrF(this.__wbg_ptr)}constructor(kk,Fk,Bk,Rk,tk,ak){const bk=Wk(kk,Nk.r6ni,Nk.BCBA),wk=Hk,sk=mk(Fk,Nk.r6ni),Vk=Hk,Jk=function(kk,Fk){const Bk=Fk(8*kk.length,8)>>>0;return dk().set(kk,Bk/8),Hk=kk.length,Bk}(Bk,Nk.r6ni),Ak=Hk,ek=mk(Rk,Nk.r6ni),yk=Hk,fk=mk(tk,Nk.r6ni),ik=Hk,Yk=Nk.XuKq(bk,wk,sk,Vk,Jk,Ak,ek,yk,fk,ik,ak);if(Yk[2])throw vk(Yk[1]);return this.__wbg_ptr=Yk[0],Xk.register(this,this.__wbg_ptr,this),this}me(){let kk,Fk;try{const Bk=Nk.HZw7(this.__wbg_ptr);return kk=Bk[0],Fk=Bk[1],sk(Bk[0],Bk[1])}finally{Nk.Uido(kk,Fk,1)}}We(kk,Fk){const Bk=Wk(kk,Nk.r6ni,Nk.BCBA),Rk=Hk,tk=mk(Fk,Nk.r6ni),ak=Hk,Xk=Nk.h3Jz(this.__wbg_ptr,Bk,Rk,tk,ak);if(Xk[1])throw vk(Xk[0])}ge(){return Nk.bPw2(this.__wbg_ptr)>>>0}re(){return Nk.Lnpu(this.__wbg_ptr)>>>0}us(){return Nk.wh5U(this.__wbg_ptr)>>>0}md(){return Nk.VJs7(this.__wbg_ptr)>>>0}warnings(){let kk,Fk;try{const Bk=Nk.mANP(this.__wbg_ptr);return kk=Bk[0],Fk=Bk[1],sk(Bk[0],Bk[1])}finally{Nk.Uido(kk,Fk,1)}}}function Rk(kk,Fk){const Bk=Wk(kk,Nk.r6ni,Nk.BCBA),Rk=Hk,tk=Nk.G1jZ(Bk,Rk,Fk);if(tk[1])throw vk(tk[0])}function tk(){Nk.Jj3e()}function ak(){return{__proto__:null,KHWt:{__proto__:null,xYY6:function(kk,Fk){return function(kk){fk===yk.length&&yk.push(yk.length+1);const Fk=fk;return fk=yk[Fk],yk[Fk]=kk,Fk}(Error(sk(kk,Fk)))},CJKa:function(kk,Fk){throw new Error(sk(kk,Fk))},FPYm:function(kk,Fk){console.error(sk(kk,Fk))}}}}Symbol.dispose&&(Bk.prototype[Symbol.dispose]=Bk.prototype.free);const Xk="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((kk=>Nk.XS8A(kk,1)));function bk(kk,Fk){return kk>>>=0,Jk().subarray(kk/4,kk/4+Fk)}let wk=null;function dk(){return null!==wk&&0!==wk.byteLength||(wk=new Float64Array(Nk.memory.buffer)),wk}function sk(kk,Fk){return function(kk,Fk){Lk+=Fk,Lk>=Yk&&(ik=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),ik.decode(),Lk=Fk);return ik.decode(ek().subarray(kk,kk+Fk))}(kk>>>0,Fk)}let Vk=null;function Jk(){return null!==Vk&&0!==Vk.byteLength||(Vk=new Uint32Array(Nk.memory.buffer)),Vk}let Ak=null;function ek(){return null!==Ak&&0!==Ak.byteLength||(Ak=new Uint8Array(Nk.memory.buffer)),Ak}let yk=new Array(1024).fill(void 0);yk.push(void 0,null,!0,!1);let fk=yk.length;function mk(kk,Fk){const Bk=Fk(4*kk.length,4)>>>0;return Jk().set(kk,Bk/4),Hk=kk.length,Bk}function Wk(kk,Fk,Bk){if(void 0===Bk){const Bk=Ok.encode(kk),Rk=Fk(Bk.length,1)>>>0;return ek().subarray(Rk,Rk+Bk.length).set(Bk),Hk=Bk.length,Rk}let Rk=kk.length,tk=Fk(Rk,1)>>>0;const ak=ek();let Xk=0;for(;Xk<Rk;Xk++){const Fk=kk.charCodeAt(Xk);if(Fk>127)break;ak[tk+Xk]=Fk}if(Xk!==Rk){0!==Xk&&(kk=kk.slice(Xk)),tk=Bk(tk,Rk,Rk=Xk+3*kk.length,1)>>>0;const Fk=ek().subarray(tk+Xk,tk+Rk);Xk+=Ok.encodeInto(kk,Fk).written,tk=Bk(tk,Rk,Xk,1)>>>0}return Hk=Xk,tk}function vk(kk){const Fk=function(kk){return yk[kk]}(kk);return function(kk){kk<1028||(yk[kk]=fk,fk=kk)}(kk),Fk}let ik=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});ik.decode();const Yk=2146435072;let Lk=0;const Ok=new TextEncoder;"encodeInto"in Ok||(Ok.encodeInto=function(kk,Fk){const Bk=Ok.encode(kk);return Fk.set(Bk),{read:kk.length,written:Bk.length}});let Ek,Sk,Nk,Hk=0;function uk(kk,Fk){return Sk=kk,Nk=kk.exports,Ek=Fk,wk=null,Vk=null,Ak=null,Nk.PKSc(),Nk}function Mk(kk){if(void 0!==Nk)return Nk;void 0!==kk&&(Object.getPrototypeOf(kk)===Object.prototype?({module:kk}=kk):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const Fk=ak();kk instanceof WebAssembly.Module||(kk=new WebAssembly.Module(kk));return uk(new WebAssembly.Instance(kk,Fk),kk)}async function gk(kk){if(void 0!==Nk)return Nk;void 0!==kk&&(Object.getPrototypeOf(kk)===Object.prototype?({module_or_path:kk}=kk):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const Fk=ak();("string"===typeof kk||"function"===typeof Request&&kk instanceof Request||"function"===typeof URL&&kk instanceof URL)&&(kk=fetch(kk));const{instance:Bk,module:Rk}=await async function(kk,Fk){if("function"===typeof Response&&kk instanceof Response){if(!kk.ok)throw new Error(`failed to fetch Wasm: ${kk.status} ${kk.statusText} fetching \'${kk.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(kk,Fk)}catch(Bk){if(!function(kk){switch(kk){case"basic":case"cors":case"default":return!0}return!1}(kk.type)||"application/wasm"===kk.headers.get("Content-Type"))throw Bk;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",Bk)}const Rk=await kk.arrayBuffer();return await WebAssembly.instantiate(Rk,Fk)}{const Bk=await WebAssembly.instantiate(kk,Fk);return Bk instanceof WebAssembly.Instance?{instance:Bk,module:kk}:Bk}}(await kk,Fk);return uk(Bk,Rk)}let Uk=null,ck=null;function Gk(kk){if(null!==ck)throw ck;if(null===Uk)try{const{memory:Bk}=Mk({module:kk});Uk={wasm:Fk,memory:Bk}}catch(Bk){throw ck=function(kk,Fk){return new Error(`${kk}: ${Fk instanceof Error?`${Fk.name}: ${Fk.message}`:String(Fk)}`,{cause:Fk})}("instantiate",Bk),ck}return Uk}function Tk(kk){return kk instanceof Error?kk.message:String(kk)}const rk=0,Dk=1,zk=2,Pk=3,hk=4;Error;function qk(kk){return`the texture module didn\'t load (${Tk(kk)})`}function Ck(kk){return""===kk?[]:kk.split("\\0")}const Zk=self;let pk=null,Kk=null,xk=rk,jk=0;function lk(kk){const Fk=performance.now();var Bk,Rk;(kk!==xk||Fk-jk>=1e3)&&(xk=kk,jk=Fk,Zk.postMessage({type:"progress",stage:kk,wasmBytes:null!==(Bk=null===(Rk=Kk)||void 0===Rk?void 0:Rk.buffer.byteLength)&&void 0!==Bk?Bk:0}))}const{FileReaderSync:nk}=self;function Ik(kk){return(new nk).readAsDataURL(new Blob([kk],{type:"image/png"}))}function Qk(kk,Fk){Zk.postMessage({type:"sheet",sheet:kk,pixels:Fk},[Fk.buffer])}function kF(kk){let Fk;lk(Dk);try{Fk=Gk(kk.module)}catch(Xk){return void Zk.postMessage({type:"failed",reason:qk(Xk),moduleLoad:!0})}Kk=Fk.memory,lk(zk);const{assets:Bk,layerCap:Rk,warnings:tk,generator:ak}=function(kk,Fk,Bk,Rk,tk,ak,Xk){var bk;const{wasm:wk,memory:dk}=kk,{strings:sk,blocks:Vk,numbers:Jk,index:Ak,armour:ek}=Fk,yk=new wk.dk(sk,Vk,Jk,Ak,ek,Bk),fk=Rk.sources.map((kk=>(null===ak||void 0===ak||ak(zk),yk.OF(kk)))),mk=new Uint32Array(2*Rk.sourceOfName.length);for(const[Hk,uk]of Rk.sourceOfName.entries())mk[2*Hk]=Hk,mk[2*Hk+1]=fk[uk];yk.We(Rk.names,mk),null===ak||void 0===ak||ak(Pk),yk.ps(tk,null!==(bk=null===Xk||void 0===Xk?void 0:Xk.layers)&&void 0!==bk?bk:0),null===ak||void 0===ak||ak(hk);const Wk={};for(const[Hk,uk]of Ck(yk.me()).entries())null===ak||void 0===ak||ak(hk),Wk[uk]=yk.ns(Hk);const vk={},ik=yk.xF(),Yk=new Map;for(const[Hk,uk]of Ck(yk.MB()).entries()){const kk=ik[Hk];Yk.has(kk)||(null===ak||void 0===ak||ak(hk),Yk.set(kk,yk.ns(kk))),vk[uk]=Yk.get(kk)}yk.ss();const Lk=Array.from(yk.ed()),Ok=[],Ek=[],Sk=(kk,Fk)=>new Uint8ClampedArray(dk.buffer,kk,Fk).slice();if(Xk){for(let kk=0;kk<Lk.length;kk++)null===ak||void 0===ak||ak(hk),yk.ks(kk),yk.nd(),Ok.push(Xk.dataUrl(new Uint8Array(dk.buffer,yk.us(),yk.re()))),Xk.onSheet(kk,Sk(yk.md(),yk.ge()));yk.vs()}const Nk=yk.cs();for(let Hk=Nk;Hk<Nk+yk.OR();Hk++)null===ak||void 0===ak||ak(hk),Ok.push(yk.ns(Hk)),Ek.push(Sk(yk.Re(Hk),yk.GA(Hk)));return{assets:{rotatedBlockTextures:Wk,animatedBlockTextures:vk,blockAtlasArr:Ok,blockAtlasPixels:Ek,armourAtlas:yk.ns(yk.KB()),imagesPerAtlas:Lk,blockAtlasWidth:yk.mb()},layerCap:yk.we()?tk:0,warnings:yk.warnings(),generator:yk}}(Fk,kk.inputs,kk.isDefaultPack,{sources:kk.sources,names:kk.names,sourceOfName:kk.sourceOfName},kk.maxLayerWidth,lk,kk.sheetLayers>0?{layers:kk.sheetLayers,onSheet:Qk,dataUrl:Ik}:void 0);pk=ak,Zk.postMessage({type:"required",assets:Bk,layerCap:Rk,warnings:tk},Bk.blockAtlasPixels.map((kk=>kk.buffer)))}self.onmessageerror=()=>{Zk.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=kk=>{let{data:Fk}=kk;try{"required"===Fk.type?kF(Fk):function(){if(!pk)throw new Error("No required assets to follow");const{colours:kk,warnings:Fk}=function(kk){return kk.As(),{colours:{blocks:kk.st(),counts:kk.At(),values:kk.It()},warnings:kk.warnings()}}(pk);Zk.postMessage({type:"optional",...kk,warnings:Fk},[kk.counts.buffer,kk.values.buffer])}()}catch(Bk){const kk=Tk(Bk),Fk=Bk instanceof WebAssembly.RuntimeError?`wasm trapped (${kk})`:kk;Zk.postMessage({type:"failed",reason:Fk,stack:Bk instanceof Error?Bk.stack:void 0})}}})();', "Worker", void 0, Bk.p + "generation.worker.2b0455d5.worker.js")
     }
-    var Nu = yu(36155),
-      Xu = yu(3029),
-      Vu = yu(3062),
-      ru = yu(3053),
-      Bu = yu(3003);
+    var wk = Bk(35996),
+      dk = Bk(3029),
+      sk = Bk(3065),
+      Vk = Bk(3056),
+      Jk = Bk(2999);
 
-    function xu(uu) {
-      return "" === uu ? [] : uu.split("\0")
-    }
-
-    function Su(uu) {
-      if ("" !== uu)
-        for (const Ru of uu.split("\n")) console.error(Ru)
+    function Ak(kk) {
+      return "" === kk ? [] : kk.split("\0")
     }
 
-    function pu(uu, Ru) {
-      return async function(uu, Ru) {
-        const yu = Object.keys(uu),
-          Eu = [],
-          Ku = new Map,
-          Qu = new Uint32Array(yu.length);
-        for (const [mu, Ju] of yu.entries()) {
+    function ek(kk) {
+      if ("" !== kk)
+        for (const Fk of kk.split("\n")) console.error(Fk)
+    }
+
+    function yk(kk, Fk) {
+      return async function(kk, Fk) {
+        const Bk = Object.keys(kk),
+          Rk = [],
+          tk = new Map,
+          ak = new Uint32Array(Bk.length);
+        for (const [Xk, bk] of Bk.entries()) {
           const {
-            url: Ru
-          } = uu[Ju];
-          Ku.has(Ru) || (Ku.set(Ru, Eu.length), Eu.push(Ru)), Qu[mu] = Ku.get(Ru)
+            url: Fk
+          } = kk[bk];
+          tk.has(Fk) || (tk.set(Fk, Rk.length), Rk.push(Fk)), ak[Xk] = tk.get(Fk)
         }
         return {
-          sources: await Ru(Eu),
-          names: yu.join("\0"),
-          sourceOfName: Qu
+          sources: await Fk(Rk),
+          names: Bk.join("\0"),
+          sourceOfName: ak
         }
-      }(uu, (async uu => {
-        const yu = await async function(uu, Ru) {
-          const yu = new AbortController,
-            Eu = () => {
-              yu.abort()
+      }(kk, (async kk => {
+        const Bk = await async function(kk, Fk) {
+          const Bk = new AbortController,
+            Rk = () => {
+              Bk.abort()
             };
-          Ru.addEventListener("abort", Eu);
+          Fk.addEventListener("abort", Rk);
           try {
-            const Ru = await Promise.all(uu.map((async uu => {
+            const Fk = await Promise.all(kk.map((async kk => {
               try {
-                const Ru = await fetch(uu, {
-                  signal: yu.signal
+                const Fk = await fetch(kk, {
+                  signal: Bk.signal
                 });
-                if (!Ru.ok) throw new Error(`HTTP ${Ru.status}`);
-                return [uu, await Ru.blob()]
-              } catch (Ru) {
-                throw yu.abort(), new Vu.l(Vu.k.Fetch, `fetching ${uu} failed: ${(0,ru.c)(Ru)}`)
+                if (!Fk.ok) throw new Error(`HTTP ${Fk.status}`);
+                return [kk, await Fk.blob()]
+              } catch (Fk) {
+                throw Bk.abort(), new sk.o(sk.k.Fetch, `fetching ${kk} failed: ${(0,Vk.b)(Fk)}`)
               }
             })));
-            return new Map(Ru)
+            return new Map(Fk)
           } finally {
-            Ru.removeEventListener("abort", Eu)
+            Fk.removeEventListener("abort", Rk)
           }
-        }(uu.filter((uu => !uu.startsWith("data:"))), Ru);
-        return Promise.all(uu.map((uu => {
-          var Ru;
-          return (0, Bu.c)(null !== (Ru = yu.get(uu)) && void 0 !== Ru ? Ru : uu)
+        }(kk.filter((kk => !kk.startsWith("data:"))), Fk);
+        return Promise.all(kk.map((kk => {
+          var Fk;
+          return (0, Jk.e)(null !== (Fk = Bk.get(kk)) && void 0 !== Fk ? Fk : kk)
         })))
       }))
     }
 
-    function Tu(uu, Ru) {
-      let yu;
-      return uu instanceof Vu.l ? yu = uu : (yu = new Vu.l(Ru ? Vu.k.Optional : Vu.k.Error, (0, ru.c)(uu)), uu instanceof Error && (yu.stack = `${yu.name}: ${yu.message}\n${uu.stack}`)), yu.code !== Vu.k.Fetch && yu.code !== Vu.k.Error && (0, Xu.f)(yu.message), yu
+    function fk(kk, Fk) {
+      let Bk;
+      return kk instanceof sk.o ? Bk = kk : (Bk = new sk.o(Fk ? sk.k.Optional : sk.k.Error, (0, Vk.b)(kk)), kk instanceof Error && (Bk.stack = `${Bk.name}: ${Bk.message}\n${kk.stack}`)), Bk.code !== sk.k.Fetch && Bk.code !== sk.k.Error && (0, dk.h)(Bk.message), Bk
     }
 
-    function Wu(uu) {
-      return uu.message ? new Error(`the texture worker failed: ${uu.message}`) : new Vu.l(Vu.k.Load, "the texture worker failed to start")
+    function mk(kk) {
+      return kk.message ? new Error(`the texture worker failed: ${kk.message}`) : new sk.o(sk.k.Load, "the texture worker failed to start")
     }
-    class ju {
-      constructor(uu) {
-        this.worker = uu, this.failure = void 0, this.abandonStep = null, uu.addEventListener("error", (uu => {
-          uu.preventDefault(), this.failure ??= Wu(uu)
+    class Wk {
+      constructor(kk) {
+        this.worker = kk, this.failure = void 0, this.abandonStep = null, kk.addEventListener("error", (kk => {
+          kk.preventDefault(), this.failure ??= mk(kk)
         }))
       }
-      static async generateRequired(uu, Ru, yu, Qu) {
-        let mu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Vu.b,
-          Xu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const Bu = (0, Nu.n)();
-        if (null !== Bu) throw Tu(new Vu.l(Vu.k.Load, Bu), !1);
-        let xu;
-        const Wu = new AbortController;
+      static async generateRequired(kk, Fk, Bk, ak) {
+        let Xk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : sk.d,
+          dk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const Jk = (0, wk.l)();
+        if (null !== Jk) throw fk(new sk.o(sk.k.Load, Jk), !1);
+        let Ak;
+        const mk = new AbortController;
         try {
-          xu = new ju(function() {
+          Ak = new Wk(function() {
             try {
-              return new Ju
-            } catch (uu) {
-              throw new Vu.l(Vu.k.Load, `the texture worker failed to start: ${(0,ru.c)(uu)}`)
+              return new bk
+            } catch (kk) {
+              throw new sk.o(sk.k.Load, `the texture worker failed to start: ${(0,Vk.b)(kk)}`)
             }
           }());
-          const Bu = (0, Nu.b)().catch((uu => {
-              throw new Vu.l(Vu.k.Load, function(uu) {
-                return `the texture module didn't load (${(0,ru.c)(uu)})`
-              }(uu))
+          const Jk = (0, wk.b)().catch((kk => {
+              throw new sk.o(sk.k.Load, function(kk) {
+                return `the texture module didn't load (${(0,Vk.b)(kk)})`
+              }(kk))
             })),
-            Tu = (async () => {
-              const Qu = function(uu, Ru, yu) {
-                const Eu = [],
-                  Ku = new Map,
-                  Qu = uu => {
-                    let Ru = Ku.get(uu);
-                    return void 0 === Ru && (Ru = Eu.length, Eu.push(uu), Ku.set(uu, Ru)), Ru
+            fk = (async () => {
+              const ak = function(kk, Fk, Bk) {
+                const Rk = [],
+                  tk = new Map,
+                  ak = kk => {
+                    let Fk = tk.get(kk);
+                    return void 0 === Fk && (Fk = Rk.length, Rk.push(kk), tk.set(kk, Fk)), Fk
                   },
-                  mu = [],
-                  Ju = [],
-                  Nu = new Map,
-                  Xu = (uu, Ru) => {
-                    const yu = "object" === typeof uu && null !== uu && "animTextures" in uu ? uu.animTextures : void 0;
-                    if (!Array.isArray(yu) || !yu.every((uu => "string" === typeof uu))) throw new Error(`Block ${Ru} has textureInfo the encoding doesn't cover`);
-                    mu.push(yu.length, ...yu.map(Qu))
+                  Xk = [],
+                  bk = [],
+                  wk = new Map,
+                  dk = (kk, Fk) => {
+                    const Bk = "object" === typeof kk && null !== kk && "animTextures" in kk ? kk.animTextures : void 0;
+                    if (!Array.isArray(Bk) || !Bk.every((kk => "string" === typeof kk))) throw new Error(`Block ${Fk} has textureInfo the encoding doesn't cover`);
+                    Xk.push(Bk.length, ...Bk.map(ak))
                   };
-                let Vu = 0;
-                for (const xu in uu) {
-                  const Ru = uu[xu];
-                  mu.push(Qu(xu));
-                  const yu = (Ru.transTex ? 1 : 0) | (Ru.OB ? 2 : 0) | (Ru.particlesIgnoreBlack ? 4 : 0),
-                    Eu = "string" === typeof Ru.itemTexture ? Qu(Ru.itemTexture) : 4294967295,
-                    Ku = `${yu},${Eu}`,
-                    ru = Ru.textureInfo,
-                    Bu = Nu.get(ru);
-                  if ((null === Bu || void 0 === Bu ? void 0 : Bu.fields) !== Ku)
-                    if (Nu.set(ru, {
-                        entry: Vu++,
-                        fields: Ku
-                      }), mu.push(1, yu, Eu), "string" === typeof ru) mu.push(1, Qu(ru));
-                    else if (Array.isArray(ru)) {
-                    mu.push(3, ru.length);
-                    for (const uu of ru) "string" === typeof uu ? mu.push(0, Qu(uu)) : "number" === typeof uu ? (mu.push(2, Ju.length), Ju.push(uu)) : (mu.push(1), Xu(uu, xu))
-                  } else ru ? (mu.push(2), Xu(ru, xu)) : mu.push(0);
-                  else mu.push(0, Bu.entry), Vu++
+                let sk = 0;
+                for (const Ak in kk) {
+                  const Fk = kk[Ak];
+                  Xk.push(ak(Ak));
+                  const Bk = (Fk.transTex ? 1 : 0) | (Fk.EA ? 2 : 0) | (Fk.particlesIgnoreBlack ? 4 : 0),
+                    Rk = "string" === typeof Fk.itemTexture ? ak(Fk.itemTexture) : 4294967295,
+                    tk = `${Bk},${Rk}`,
+                    Vk = Fk.textureInfo,
+                    Jk = wk.get(Vk);
+                  if ((null === Jk || void 0 === Jk ? void 0 : Jk.fields) !== tk)
+                    if (wk.set(Vk, {
+                        entry: sk++,
+                        fields: tk
+                      }), Xk.push(1, Bk, Rk), "string" === typeof Vk) Xk.push(1, ak(Vk));
+                    else if (Array.isArray(Vk)) {
+                    Xk.push(3, Vk.length);
+                    for (const kk of Vk) "string" === typeof kk ? Xk.push(0, ak(kk)) : "number" === typeof kk ? (Xk.push(2, bk.length), bk.push(kk)) : (Xk.push(1), dk(kk, Ak))
+                  } else Vk ? (Xk.push(2), dk(Vk, Ak)) : Xk.push(0);
+                  else Xk.push(0, Jk.entry), sk++
                 }
-                const ru = [];
-                for (const xu in Ru) ru.push(Qu(xu), Ru[xu]);
-                const Bu = new Uint32Array(yu.map(Qu));
+                const Vk = [];
+                for (const Ak in Fk) Vk.push(ak(Ak), Fk[Ak]);
+                const Jk = new Uint32Array(Bk.map(ak));
                 return {
-                  strings: Eu.join("\0"),
-                  blocks: new Uint32Array(mu),
-                  numbers: new Float64Array(Ju),
-                  index: new Uint32Array(ru),
-                  armour: Bu
+                  strings: Rk.join("\0"),
+                  blocks: new Uint32Array(Xk),
+                  numbers: new Float64Array(bk),
+                  index: new Uint32Array(Vk),
+                  armour: Jk
                 }
-              }(uu, Ru, Eu.g.map(Ku.h));
+              }(kk, Fk, Rk.e.map(tk.h));
               return {
-                inputs: Qu,
-                sources: await pu(yu, Wu.signal)
+                inputs: ak,
+                sources: await yk(Bk, mk.signal)
               }
             })(),
-            [Hu, {
-              inputs: du,
-              sources: bu
-            }] = await Promise.all([Bu, Tu]),
-            Cu = [du.blocks.buffer, du.numbers.buffer, du.index.buffer, du.armour.buffer, bu.sourceOfName.buffer];
-          for (const uu of bu.sources) Cu.push(uu.buffer);
-          const ku = [],
+            [vk, {
+              inputs: ik,
+              sources: Yk
+            }] = await Promise.all([Jk, fk]),
+            Lk = [ik.blocks.buffer, ik.numbers.buffer, ik.index.buffer, ik.armour.buffer, Yk.sourceOfName.buffer];
+          for (const kk of Yk.sources) Lk.push(kk.buffer);
+          const Ok = [],
             {
-              assets: eu,
-              layerCap: Au,
-              warnings: Du
-            } = await xu.request({
+              assets: Ek,
+              layerCap: Sk,
+              warnings: Nk
+            } = await Ak.request({
               type: "required",
-              module: Hu,
-              inputs: du,
-              isDefaultPack: Qu,
-              maxLayerWidth: mu,
-              sheetLayers: Xu,
-              ...bu
-            }, Cu, ((uu, Ru) => {
-              ku[uu] = Ru
+              module: vk,
+              inputs: ik,
+              isDefaultPack: ak,
+              maxLayerWidth: Xk,
+              sheetLayers: dk,
+              ...Yk
+            }, Lk, ((kk, Fk) => {
+              Ok[kk] = Fk
             }));
-          return Xu > 0 && (eu.blockAtlasPixels = function(uu, Ru) {
-            const yu = [];
-            for (let Eu = 0; Eu < Ru; Eu++) {
-              const Ku = uu[Eu];
-              if (void 0 === Ku) throw new Error(`the texture worker's sheet ${Eu} of ${Ru} didn't arrive`);
-              yu.push(Ku)
+          return dk > 0 && (Ek.blockAtlasPixels = function(kk, Fk) {
+            const Bk = [];
+            for (let Rk = 0; Rk < Fk; Rk++) {
+              const tk = kk[Rk];
+              if (void 0 === tk) throw new Error(`the texture worker's sheet ${Rk} of ${Fk} didn't arrive`);
+              Bk.push(tk)
             }
-            return yu
-          }(ku, eu.imagesPerAtlas.length)), Su(Du), {
-            assets: eu,
-            layerCap: Au,
-            worker: xu
+            return Bk
+          }(Ok, Ek.imagesPerAtlas.length)), ek(Nk), {
+            assets: Ek,
+            layerCap: Sk,
+            worker: Ak
           }
-        } catch (du) {
-          var Hu;
-          throw Wu.abort(), null === (Hu = xu) || void 0 === Hu || Hu.terminate(), Tu(du, !1)
+        } catch (ik) {
+          var vk;
+          throw mk.abort(), null === (vk = Ak) || void 0 === vk || vk.terminate(), fk(ik, !1)
         }
       }
       async generateOptional() {
-        let uu;
+        let kk;
         try {
-          uu = await this.request({
+          kk = await this.request({
             type: "optional"
           }, [])
-        } catch (Ru) {
-          throw Tu(Ru, !0)
+        } catch (Fk) {
+          throw fk(Fk, !0)
         } finally {
           this.terminate()
         }
-        return Su(uu.warnings),
-          function(uu) {
+        return ek(kk.warnings),
+          function(kk) {
             let {
-              blocks: Ru,
-              counts: yu,
-              values: Eu
-            } = uu;
-            const Ku = {};
-            let Qu = 0;
-            for (const [mu, Ju] of xu(Ru).entries()) {
-              const uu = [];
-              for (let Ru = 0; Ru < yu[mu]; Ru++, Qu += 3) uu.push([Eu[Qu], Eu[Qu + 1], Eu[Qu + 2]]);
-              Ku[Ju] = uu
+              blocks: Fk,
+              counts: Bk,
+              values: Rk
+            } = kk;
+            const tk = {};
+            let ak = 0;
+            for (const [Xk, bk] of Ak(Fk).entries()) {
+              const kk = [];
+              for (let Fk = 0; Fk < Bk[Xk]; Fk++, ak += 3) kk.push([Rk[ak], Rk[ak + 1], Rk[ak + 2]]);
+              tk[bk] = kk
             }
-            return Ku
-          }(uu)
+            return tk
+          }(kk)
       }
       terminate() {
-        var uu;
-        this.worker.terminate(), null === (uu = this.abandonStep) || void 0 === uu || uu.call(this)
+        var kk;
+        this.worker.terminate(), null === (kk = this.abandonStep) || void 0 === kk || kk.call(this)
       }
-      request(uu, Ru, yu) {
-        return new Promise(((Eu, Ku) => {
-          if (void 0 !== this.failure) return void Ku(this.failure);
-          let Qu = Vu.n.None,
-            mu = 0,
-            Ju = null;
-          const Nu = () => {
-            var uu;
-            null === (uu = Ju) || void 0 === uu || uu.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
+      request(kk, Fk, Bk) {
+        return new Promise(((Rk, tk) => {
+          if (void 0 !== this.failure) return void tk(this.failure);
+          let ak = sk.r.None,
+            Xk = 0,
+            bk = null;
+          const wk = () => {
+            var kk;
+            null === (kk = bk) || void 0 === kk || kk.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
           };
           this.abandonStep = () => {
-            Nu(), Ku(new Error("the texture worker was terminated"))
-          }, this.worker.onmessage = Ru => {
+            wk(), tk(new Error("the texture worker was terminated"))
+          }, this.worker.onmessage = Fk => {
             let {
-              data: Xu
-            } = Ru;
-            var ru;
-            if ("progress" === Xu.type) return Qu = Xu.stage, mu = Xu.wasmBytes, void(null === (ru = Ju) || void 0 === ru || ru.restart(Qu === Vu.n.Generating ? Vu.e : Vu.i));
-            "sheet" === Xu.type && yu ? yu(Xu.sheet, Xu.pixels) : (Nu(), "failed" === Xu.type ? Ku(Xu.moduleLoad ? new Vu.l(Vu.k.Load, Xu.reason) : function(uu, Ru) {
+              data: dk
+            } = Fk;
+            var Vk;
+            if ("progress" === dk.type) return ak = dk.stage, Xk = dk.wasmBytes, void(null === (Vk = bk) || void 0 === Vk || Vk.restart(ak === sk.r.Generating ? sk.g : sk.i));
+            "sheet" === dk.type && Bk ? Bk(dk.sheet, dk.pixels) : (wk(), "failed" === dk.type ? tk(dk.moduleLoad ? new sk.o(sk.k.Load, dk.reason) : function(kk, Fk) {
               let {
-                reason: yu,
-                stack: Eu
-              } = uu;
-              const Ku = new Error(Hu(yu, Ru));
-              void 0 !== Eu && (Ku.stack = Eu);
-              return Ku
-            }(Xu, mu)) : Xu.type !== uu.type ? Ku(new Error(`the texture worker answered ${Xu.type} to ${uu.type}`)) : Eu(Xu))
-          }, this.worker.onerror = uu => {
-            Nu(), Ku(Wu(uu))
+                reason: Bk,
+                stack: Rk
+              } = kk;
+              const tk = new Error(vk(Bk, Fk));
+              void 0 !== Rk && (tk.stack = Rk);
+              return tk
+            }(dk, Xk)) : dk.type !== kk.type ? tk(new Error(`the texture worker answered ${dk.type} to ${kk.type}`)) : Rk(dk))
+          }, this.worker.onerror = kk => {
+            wk(), tk(mk(kk))
           }, this.worker.onmessageerror = () => {
-            Nu(), Ku(new Error("the texture worker's answer couldn't be read"))
+            wk(), tk(new Error("the texture worker's answer couldn't be read"))
           };
           try {
-            this.worker.postMessage(uu, Ru), Ju = (0, Vu.q)((() => {
-              Nu();
-              const Ru = new Vu.l("required" === uu.type ? `${Vu.k.Stalled}${Qu}` : Vu.k.Optional, Hu("the texture worker stopped responding", mu));
-              Ku(Ru)
+            this.worker.postMessage(kk, Fk), bk = (0, sk.v)((() => {
+              wk();
+              const Fk = new sk.o("required" === kk.type ? `${sk.k.Stalled}${ak}` : sk.k.Optional, vk("the texture worker stopped responding", Xk));
+              tk(Fk)
             }))
-          } catch (Xu) {
-            Nu(), Ku(Xu)
+          } catch (dk) {
+            wk(), tk(dk)
           }
         }))
       }
     }
 
-    function Hu(uu, Ru) {
-      return Ru > 0 ? `${uu}, its module's memory ${Math.round(Ru/2**20)} MiB` : uu
+    function vk(kk, Fk) {
+      return Fk > 0 ? `${kk}, its module's memory ${Math.round(Fk/2**20)} MiB` : kk
     }
   },
-  36152: uu => {
-    uu.exports = function(uu, Ru, yu, Eu) {
-      var Ku = self || window;
+  35991: kk => {
+    kk.exports = function(kk, Fk, Bk, Rk) {
+      var tk = self || window;
       try {
         try {
-          var Qu;
+          var ak;
           try {
-            Qu = new Ku.Blob([uu])
-          } catch (Xu) {
-            (Qu = new(Ku.BlobBuilder || Ku.WebKitBlobBuilder || Ku.MozBlobBuilder || Ku.MSBlobBuilder)).append(uu), Qu = Qu.getBlob()
+            ak = new tk.Blob([kk])
+          } catch (dk) {
+            (ak = new(tk.BlobBuilder || tk.WebKitBlobBuilder || tk.MozBlobBuilder || tk.MSBlobBuilder)).append(kk), ak = ak.getBlob()
           }
-          var mu = Ku.URL || Ku.webkitURL,
-            Ju = mu.createObjectURL(Qu),
-            Nu = new Ku[Ru](Ju, yu);
-          return mu.revokeObjectURL(Ju), Nu
-        } catch (Xu) {
-          return new Ku[Ru]("data:application/javascript,".concat(encodeURIComponent(uu)), yu)
+          var Xk = tk.URL || tk.webkitURL,
+            bk = Xk.createObjectURL(ak),
+            wk = new tk[Fk](bk, Bk);
+          return Xk.revokeObjectURL(bk), wk
+        } catch (dk) {
+          return new tk[Fk]("data:application/javascript,".concat(encodeURIComponent(kk)), Bk)
         }
-      } catch (Xu) {
-        if (!Eu) throw Error("Inline worker is not supported");
-        return new Ku[Ru](Eu, yu)
+      } catch (dk) {
+        if (!Rk) throw Error("Inline worker is not supported");
+        return new tk[Fk](Rk, Bk)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,387 +1,387 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  36436: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => xu,
-      d: () => Su,
-      g: () => Bu,
-      h: () => ru
+  36329: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Ak,
+      g: () => ek,
+      j: () => Jk,
+      n: () => Vk
     });
-    var Eu = yu(9048),
-      Ku = yu(36445),
-      Qu = yu(36449),
-      mu = yu(8447),
-      Ju = yu(1400),
-      Nu = yu(64),
-      Xu = yu(80),
-      Vu = yu(1079);
+    var Rk = Bk(9004),
+      tk = Bk(36332),
+      ak = Bk(36340),
+      Xk = Bk(8372),
+      bk = Bk(1387),
+      wk = Bk(61),
+      dk = Bk(67),
+      sk = Bk(1069);
 
-    function ru() {
-      var uu;
-      return (0, Ju.h)(Ku.c, (0, Ku.o)()), (0, Vu.jsx)(Vu.Fragment, {
-        children: null === (uu = (0, Ku.o)()) || void 0 === uu ? void 0 : uu.content
+    function Vk() {
+      var kk;
+      return (0, bk.g)(tk.c, (0, tk.o)()), (0, sk.jsx)(sk.Fragment, {
+        children: null === (kk = (0, tk.o)()) || void 0 === kk ? void 0 : kk.content
       })
     }
 
-    function Bu(uu) {
-      var Ru;
+    function Jk(kk) {
+      var Fk;
       let {
-        show: yu
-      } = uu;
-      (0, Ju.h)(Ku.c, (0, Ku.o)());
-      const Xu = null === (Ru = (0, Ku.o)()) || void 0 === Ru ? void 0 : Ru.menu;
-      return (0, Nu.useEffect)((() => {
-        var uu;
-        yu || (null === Xu || void 0 === Xu || null === (uu = Xu.onClose) || void 0 === uu || uu.call(Xu), (0, Qu.p)())
-      }), [yu, Xu]), (0, Nu.useEffect)((() => yu ? (0, mu.g)(Qu.v, Qu.d) : void 0), [yu]), (0, Vu.jsx)(Eu.c, {
-        showing: yu,
+        show: Bk
+      } = kk;
+      (0, bk.g)(tk.c, (0, tk.o)());
+      const dk = null === (Fk = (0, tk.o)()) || void 0 === Fk ? void 0 : Fk.menu;
+      return (0, wk.useEffect)((() => {
+        var kk;
+        Bk || (null === dk || void 0 === dk || null === (kk = dk.onClose) || void 0 === kk || kk.call(dk), (0, ak.u)())
+      }), [Bk, dk]), (0, wk.useEffect)((() => Bk ? (0, Xk.h)(ak.C, ak.h) : void 0), [Bk]), (0, sk.jsx)(Rk.d, {
+        showing: Bk,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Xu || void 0 === Xu ? void 0 : Xu.content
+        children: null === dk || void 0 === dk ? void 0 : dk.content
       })
     }
 
-    function xu(uu) {
+    function Ak(kk) {
       let {
-        placement: Ru = "bottom"
-      } = uu;
-      return (0, Vu.jsx)("div", {
-        id: `clientGameHud-${Ru}`,
+        placement: Fk = "bottom"
+      } = kk;
+      return (0, sk.jsx)("div", {
+        id: `clientGameHud-${Fk}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Su(uu) {
+    function ek(kk) {
       let {
-        children: Ru,
-        placement: yu = "bottom"
-      } = uu;
-      const [Eu, Ku] = (0, Nu.useState)(null);
-      return (0, Nu.useEffect)((() => {
-        Ku(document.getElementById(`clientGameHud-${yu}`))
-      }), [yu]), Eu ? (0, Xu.createPortal)(Ru, Eu) : null
+        children: Fk,
+        placement: Bk = "bottom"
+      } = kk;
+      const [Rk, tk] = (0, wk.useState)(null);
+      return (0, wk.useEffect)((() => {
+        tk(document.getElementById(`clientGameHud-${Bk}`))
+      }), [Bk]), Rk ? (0, dk.createPortal)(Fk, Rk) : null
     }
   },
-  9048: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu
+  9004: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => ak
     });
-    var Eu = yu(4307),
-      Ku = yu(4314);
+    var Rk = Bk(4277),
+      tk = Bk(4283);
 
-    function Qu(uu) {
+    function ak(kk) {
       let {
-        children: Ru,
-        showing: yu,
-        globallyUniqueKey: Qu,
-        alwaysMountChildren: mu = !1,
-        doGameplayStartStopOnShow: Ju = !0,
-        keepsMovement: Nu = !1
-      } = uu;
-      return (0, Ku.c)(!0, yu, Qu, Nu), (0, Eu.e)(Ju, yu), yu || mu ? Ru : null
+        children: Fk,
+        showing: Bk,
+        globallyUniqueKey: ak,
+        alwaysMountChildren: Xk = !1,
+        doGameplayStartStopOnShow: bk = !0,
+        keepsMovement: wk = !1
+      } = kk;
+      return (0, tk.d)(!0, Bk, ak, wk), (0, Rk.e)(bk, Bk), Bk || Xk ? Fk : null
     }
   },
-  36532: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Qu,
-      c: () => mu,
-      d: () => Ju,
-      g: () => Nu
+  36423: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => ak,
+      i: () => Xk,
+      m: () => bk,
+      q: () => wk
     });
-    var Eu = yu(64),
-      Ku = yu(1100);
-    const Qu = 8,
-      mu = "InGameHeaderContainer",
-      Ju = "TopRightElements";
+    var Rk = Bk(61),
+      tk = Bk(1090);
+    const ak = 8,
+      Xk = "InGameHeaderContainer",
+      bk = "TopRightElements";
 
-    function Nu(uu) {
-      const [Ru] = (0, Ku.d)(), [yu, Nu] = (0, Eu.useState)(!1);
-      return (0, Eu.useLayoutEffect)((() => {
-        if (!uu) return;
-        const Ru = document.querySelector(`.${mu}`),
-          yu = document.querySelector(`.${Ju}`),
-          Eu = () => {
-            const Eu = uu.getBoundingClientRect(),
-              Ku = Ru ? Ru.getBoundingClientRect().right : 0,
-              mu = yu ? yu.getBoundingClientRect().left : window.innerWidth,
-              Ju = Eu.left < Ku + Qu,
-              Xu = Eu.right > mu - Qu;
-            Nu(Ju || Xu)
+    function wk(kk) {
+      const [Fk] = (0, tk.c)(), [Bk, wk] = (0, Rk.useState)(!1);
+      return (0, Rk.useLayoutEffect)((() => {
+        if (!kk) return;
+        const Fk = document.querySelector(`.${Xk}`),
+          Bk = document.querySelector(`.${bk}`),
+          Rk = () => {
+            const Rk = kk.getBoundingClientRect(),
+              tk = Fk ? Fk.getBoundingClientRect().right : 0,
+              Xk = Bk ? Bk.getBoundingClientRect().left : window.innerWidth,
+              bk = Rk.left < tk + ak,
+              dk = Rk.right > Xk - ak;
+            wk(bk || dk)
           };
-        Eu();
-        const Ku = new ResizeObserver(Eu);
-        return Ku.observe(uu), Ru && Ku.observe(Ru), yu && Ku.observe(yu), () => {
-          Ku.disconnect()
+        Rk();
+        const tk = new ResizeObserver(Rk);
+        return tk.observe(kk), Fk && tk.observe(Fk), Bk && tk.observe(Bk), () => {
+          tk.disconnect()
         }
-      }), [uu, Ru]), yu
+      }), [kk, Fk]), Bk
     }
   },
-  8447: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu,
-      g: () => Ku
+  8372: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => ak,
+      h: () => tk
     });
-    let Eu = null;
-    const Ku = function(uu) {
-        const Ru = {
-          cycle: uu,
+    let Rk = null;
+    const tk = function(kk) {
+        const Fk = {
+          cycle: kk,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Eu = Ru, () => {
-          Eu === Ru && (Eu = null)
+        return Rk = Fk, () => {
+          Rk === Fk && (Rk = null)
         }
       },
-      Qu = () => {
-        var uu;
-        return null !== (uu = Eu) && void 0 !== uu && uu.canCycle() ? Eu.cycle : null
+      ak = () => {
+        var kk;
+        return null !== (kk = Rk) && void 0 !== kk && kk.canCycle() ? Rk.cycle : null
       }
   },
-  36449: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu,
-      d: () => pu,
-      h: () => Tu,
-      k: () => Ju,
-      o: () => Bu,
-      p: () => Wu,
-      q: () => ru,
-      u: () => Hu,
-      v: () => Su,
-      w: () => ju
+  36340: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      C: () => ek,
+      G: () => Wk,
+      d: () => ak,
+      h: () => yk,
+      l: () => fk,
+      p: () => bk,
+      s: () => Jk,
+      u: () => mk,
+      w: () => Vk,
+      z: () => vk
     });
-    var Eu = yu(27),
-      Ku = yu(34);
-    const Qu = "clientGameInventoryButtonsChanged",
-      mu = new Map;
+    var Rk = Bk(22),
+      tk = Bk(29);
+    const ak = "clientGameInventoryButtonsChanged",
+      Xk = new Map;
 
-    function Ju() {
-      return [...mu.values()].sort(((uu, Ru) => {
-        var yu, Eu;
-        return (null !== (yu = uu.order) && void 0 !== yu ? yu : 0) - (null !== (Eu = Ru.order) && void 0 !== Eu ? Eu : 0)
+    function bk() {
+      return [...Xk.values()].sort(((kk, Fk) => {
+        var Bk, Rk;
+        return (null !== (Bk = kk.order) && void 0 !== Bk ? Bk : 0) - (null !== (Rk = Fk.order) && void 0 !== Rk ? Rk : 0)
       }))
     }
-    let Nu = null;
+    let wk = null;
 
-    function Xu(uu) {
-      Nu = uu
+    function dk(kk) {
+      wk = kk
     }
-    let Vu = !1;
+    let sk = !1;
 
-    function ru(uu) {
-      Vu = !0;
+    function Vk(kk) {
+      sk = !0;
       try {
-        uu.onClick()
+        kk.onClick()
       } finally {
-        Vu = !1
+        sk = !1
       }
-      uu.panel && "clientGame" === Eu.d.get("openInGameMenuName") && Xu(uu.id)
+      kk.panel && "clientGame" === Rk.c.get("openInGameMenuName") && dk(kk.id)
     }
 
-    function Bu() {
-      return Vu
+    function Jk() {
+      return sk
     }
 
-    function xu() {
-      return Ju().filter((uu => uu.panel && !uu.disabled))
+    function Ak() {
+      return bk().filter((kk => kk.panel && !kk.disabled))
     }
 
-    function Su(uu) {
-      const Ru = xu(),
-        yu = Ru.findIndex((uu => uu.id === Nu));
-      return !(yu < 0 || Ru.length < 2) && (ru(Ru[(yu + uu + Ru.length) % Ru.length]), !0)
+    function ek(kk) {
+      const Fk = Ak(),
+        Bk = Fk.findIndex((kk => kk.id === wk));
+      return !(Bk < 0 || Fk.length < 2) && (Vk(Fk[(Bk + kk + Fk.length) % Fk.length]), !0)
     }
 
-    function pu() {
-      return null !== Nu && xu().length > 1
+    function yk() {
+      return null !== wk && Ak().length > 1
     }
 
-    function Tu() {
-      Xu(null)
+    function fk() {
+      dk(null)
     }
 
-    function Wu() {
-      "inventory" !== Eu.d.get("openInGameMenuName") && Xu(null)
+    function mk() {
+      "inventory" !== Rk.c.get("openInGameMenuName") && dk(null)
     }
 
-    function ju() {
-      const uu = Nu;
-      return Xu(null), uu
+    function Wk() {
+      const kk = wk;
+      return dk(null), kk
     }
 
-    function Hu(uu) {
-      return mu.set(uu.id, uu), Ku.k.Op(Qu, Ju(), !0), () => {
-        mu.get(uu.id) === uu && (mu.delete(uu.id), Ku.k.Op(Qu, Ju()))
+    function vk(kk) {
+      return Xk.set(kk.id, kk), tk.o.Hf(ak, bk(), !0), () => {
+        Xk.get(kk.id) === kk && (Xk.delete(kk.id), tk.o.Hf(ak, bk()))
       }
     }
   },
-  36445: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ju,
-      f: () => Tu,
-      i: () => Wu,
-      m: () => Bu,
-      o: () => Xu,
-      q: () => pu,
-      u: () => xu,
-      w: () => Vu
+  36332: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => bk,
+      f: () => fk,
+      i: () => mk,
+      l: () => Jk,
+      o: () => dk,
+      q: () => yk,
+      s: () => Ak,
+      w: () => sk
     });
-    var Eu = yu(27),
-      Ku = yu(34),
-      Qu = yu(1250),
-      mu = yu(36449);
-    const Ju = "clientGameUiChanged";
-    let Nu = null;
+    var Rk = Bk(22),
+      tk = Bk(29),
+      ak = Bk(1239),
+      Xk = Bk(36340);
+    const bk = "clientGameUiChanged";
+    let wk = null;
 
-    function Xu() {
-      return Nu
+    function dk() {
+      return wk
     }
 
-    function Vu(uu, Ru) {
-      const yu = {
-        content: uu,
-        menu: Ru
+    function sk(kk, Fk) {
+      const Bk = {
+        content: kk,
+        menu: Fk
       };
-      return Nu = yu, Ku.k.Op(Ju, Nu, !0), () => {
-        Nu === yu && (Nu = null, Su = !1, Tu(), Ku.k.Op(Ju, null))
+      return wk = Bk, tk.o.Hf(bk, wk, !0), () => {
+        wk === Bk && (wk = null, ek = !1, fk(), tk.o.Hf(bk, null))
       }
     }
-    let ru = null;
+    let Vk = null;
 
-    function Bu() {
-      return ru
+    function Jk() {
+      return Vk
     }
 
-    function xu(uu) {
-      return ru = uu, () => {
-        ru === uu && (ru = null)
+    function Ak(kk) {
+      return Vk = kk, () => {
+        Vk === kk && (Vk = null)
       }
     }
-    let Su = !1;
+    let ek = !1;
 
-    function pu() {
-      const uu = Eu.d.get("openInGameMenuName");
-      "clientGame" !== uu && (Su = "inventory" === uu), (0, mu.o)() || (0, mu.h)(), (0, Qu.o)(Qu.b), Eu.d.set({
+    function yk() {
+      const kk = Rk.c.get("openInGameMenuName");
+      "clientGame" !== kk && (ek = "inventory" === kk), (0, Xk.s)() || (0, Xk.l)(), (0, ak.m)(ak.e), Rk.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function Tu() {
-      ju(!1)
+    function fk() {
+      Wk(!1)
     }
 
-    function Wu() {
-      ju(Su)
+    function mk() {
+      Wk(ek)
     }
 
-    function ju(uu) {
-      "clientGame" === Eu.d.get("openInGameMenuName") && Eu.d.set({
-        openInGameMenuName: uu ? "inventory" : null
-      }), uu || (0, mu.h)(), Su = !1
+    function Wk(kk) {
+      "clientGame" === Rk.c.get("openInGameMenuName") && Rk.c.set({
+        openInGameMenuName: kk ? "inventory" : null
+      }), kk || (0, Xk.l)(), ek = !1
     }
   },
-  38281: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => mu,
-      i: () => Ju,
-      l: () => Nu
+  38157: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Xk,
+      g: () => bk,
+      k: () => wk
     });
-    const Eu = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      Ku = [0, 1, 2, 0, 2, 3],
-      Qu = [4, 5];
+    const Rk = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      tk = [0, 1, 2, 0, 2, 3],
+      ak = [4, 5];
 
-    function mu(uu, Ru, yu, Eu, Ku) {
-      for (let mu = 0; mu < 6; mu++) Qu.includes(mu) === Ku && Xu(uu, Ru, yu, Eu, mu)
+    function Xk(kk, Fk, Bk, Rk, tk) {
+      for (let Xk = 0; Xk < 6; Xk++) ak.includes(Xk) === tk && dk(kk, Fk, Bk, Rk, Xk)
     }
 
-    function Ju(uu, Ru, yu, Eu) {
-      for (let Ku = 0; Ku < 6; Ku++) Xu(uu, Ru, yu, Eu, Ku)
+    function bk(kk, Fk, Bk, Rk) {
+      for (let tk = 0; tk < 6; tk++) dk(kk, Fk, Bk, Rk, tk)
     }
 
-    function Nu(uu, Ru, yu, Qu, mu) {
-      for (let Ju = 0; Ju < 6; Ju++)
-        for (const Nu of [0, 1]) {
-          const [Xu, Vu, ru] = [Nu + 2, Nu + 1, (Nu + 3) % 4], Bu = uu.length / 3;
-          for (const [Ru, Ku] of [
-              [Nu, Vu],
-              [Xu, Vu],
-              [Xu, ru],
-              [Nu, ru]
+    function wk(kk, Fk, Bk, ak, Xk) {
+      for (let bk = 0; bk < 6; bk++)
+        for (const wk of [0, 1]) {
+          const [dk, sk, Vk] = [wk + 2, wk + 1, (wk + 3) % 4], Jk = kk.length / 3;
+          for (const [Fk, tk] of [
+              [wk, sk],
+              [dk, sk],
+              [dk, Vk],
+              [wk, Vk]
             ])
-            for (let Nu = 0; Nu < 3; Nu++) {
-              const Xu = Eu[3 * (4 * Ju + Ru) + Nu],
-                Vu = Eu[3 * (4 * Ju + Ku) + Nu];
-              uu.push((Xu + (Vu - Xu) * mu) * Qu / 2 + yu[Nu])
+            for (let wk = 0; wk < 3; wk++) {
+              const dk = Rk[3 * (4 * bk + Fk) + wk],
+                sk = Rk[3 * (4 * bk + tk) + wk];
+              kk.push((dk + (sk - dk) * Xk) * ak / 2 + Bk[wk])
             }
-          for (const uu of Ku) Ru.push(Bu + uu)
+          for (const kk of tk) Fk.push(Jk + kk)
         }
     }
 
-    function Xu(uu, Ru, yu, Qu, mu) {
-      let [Ju, Nu, Xu] = yu, [Vu, ru, Bu] = Qu;
-      const xu = uu.length / 3;
-      for (let Ku = 4 * mu; Ku < 4 * mu + 4; Ku++) uu.push(Eu[3 * Ku] * Vu / 2 + Ju, Eu[3 * Ku + 1] * ru / 2 + Nu, Eu[3 * Ku + 2] * Bu / 2 + Xu);
-      for (const Eu of Ku) Ru.push(xu + Eu)
+    function dk(kk, Fk, Bk, ak, Xk) {
+      let [bk, wk, dk] = Bk, [sk, Vk, Jk] = ak;
+      const Ak = kk.length / 3;
+      for (let tk = 4 * Xk; tk < 4 * Xk + 4; tk++) kk.push(Rk[3 * tk] * sk / 2 + bk, Rk[3 * tk + 1] * Vk / 2 + wk, Rk[3 * tk + 2] * Jk / 2 + dk);
+      for (const Rk of tk) Fk.push(Ak + Rk)
     }
   },
-  36670: (uu, Ru, yu) => {
-    function Eu(uu, Ru) {
-      return null === uu || null === Ru ? uu === Ru : uu[0] === Ru[0] && uu[1] === Ru[1] && uu[2] === Ru[2]
+  36568: (kk, Fk, Bk) => {
+    function Rk(kk, Fk) {
+      return null === kk || null === Fk ? kk === Fk : kk[0] === Fk[0] && kk[1] === Fk[1] && kk[2] === Fk[2]
     }
 
-    function Ku(uu) {
-      return [uu[0] + .5, uu[1] + .5, uu[2] + .5]
+    function tk(kk) {
+      return [kk[0] + .5, kk[1] + .5, kk[2] + .5]
     }
-    yu.d(Ru, {
-      b: () => Ku,
-      f: () => Eu
+    Bk.d(Fk, {
+      b: () => tk,
+      c: () => Rk
     })
   },
-  36707: (uu, Ru, yu) => {
-    function Eu(uu) {
-      return uu.includes("Leaf Bed")
+  36614: (kk, Fk, Bk) => {
+    function Rk(kk) {
+      return kk.includes("Leaf Bed")
     }
 
-    function Ku(uu) {
-      return / Bed(?: Head)?(?:\||$)/.test(uu) && !Eu(uu)
+    function tk(kk) {
+      return / Bed(?: Head)?(?:\||$)/.test(kk) && !Rk(kk)
     }
 
-    function Qu(uu) {
-      return uu.includes(" Strongbed")
+    function ak(kk) {
+      return kk.includes(" Strongbed")
     }
 
-    function mu(uu) {
-      return Eu(uu) || Ku(uu) || Qu(uu)
+    function Xk(kk) {
+      return Rk(kk) || tk(kk) || ak(kk)
     }
-    yu.d(Ru, {
-      b: () => mu,
-      d: () => Eu,
-      e: () => Qu,
-      f: () => Ku
+    Bk.d(Fk, {
+      b: () => Xk,
+      f: () => Rk,
+      i: () => ak,
+      l: () => tk
     })
   },
-  36702: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Xu
+  36605: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => dk
     });
-    var Eu = yu(36707),
-      Ku = yu(9158);
-    const Qu = [],
-      mu = [],
-      Ju = [],
-      Nu = [];
-    for (const Vu of Object.keys(Ku.q))(0, Eu.d)(Vu) ? Qu.push(Vu) : (0, Eu.f)(Vu) && mu.push(Vu), (0, Eu.e)(Vu) && Ju.push(Vu), (Vu.includes(" Bed Head") || Vu.includes(" Strongbed Head")) && Nu.push(Vu);
-    const Xu = {
-      leafBeds: Qu,
-      woolBeds: mu,
-      strongBeds: Ju,
-      beds: [...Qu, ...mu, ...Ju],
-      bedHeads: Nu,
+    var Rk = Bk(36614),
+      tk = Bk(9095);
+    const ak = [],
+      Xk = [],
+      bk = [],
+      wk = [];
+    for (const sk of Object.keys(tk.q))(0, Rk.f)(sk) ? ak.push(sk) : (0, Rk.l)(sk) && Xk.push(sk), (0, Rk.i)(sk) && bk.push(sk), (sk.includes(" Bed Head") || sk.includes(" Strongbed Head")) && wk.push(sk);
+    const dk = {
+      leafBeds: ak,
+      woolBeds: Xk,
+      strongBeds: bk,
+      beds: [...ak, ...Xk, ...bk],
+      bedHeads: wk,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

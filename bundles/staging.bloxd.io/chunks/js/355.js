@@ -1,76 +1,76 @@
 export const id = 355;
 export const ids = [355];
 export const modules = {
-  61123: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      A: () => Xu,
-      B: () => ru,
-      C: () => Vu,
-      X: () => Bu
+  61013: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      A: () => dk,
+      B: () => Vk,
+      C: () => sk,
+      X: () => Jk
     });
-    var Eu = yu(41315),
-      Ku = (uu, Ru) => uu.order - Ru.order;
+    var Rk = Bk(41145),
+      tk = (kk, Fk) => kk.order - Fk.order;
 
-    function Qu(uu, Ru, yu) {
-      uu.pendingDisposers.set(Ru, yu)
+    function ak(kk, Fk, Bk) {
+      kk.pendingDisposers.set(Fk, Bk)
     }
 
-    function mu(uu, Ru, yu) {
-      yu && uu.pendingDisposers.get(Ru) === yu && uu.pendingDisposers.delete(Ru)
+    function Xk(kk, Fk, Bk) {
+      Bk && kk.pendingDisposers.get(Fk) === Bk && kk.pendingDisposers.delete(Fk)
     }
-    var Ju = null,
-      Nu = null;
+    var bk = null,
+      wk = null;
 
-    function Xu(uu, Ru, yu, Eu) {
-      if (!Ru || yu.material !== Ru) return Eu ?? Promise.resolve();
-      const Ku = ru(uu, Ru._buildGroup, yu);
-      return Eu ? Promise.all([Eu, Ku]).then((() => {})) : Ku
+    function dk(kk, Fk, Bk, Rk) {
+      if (!Fk || Bk.material !== Fk) return Rk ?? Promise.resolve();
+      const tk = Vk(kk, Fk._buildGroup, Bk);
+      return Rk ? Promise.all([Rk, tk]).then((() => {})) : tk
     }
 
-    function Vu(uu, Ru, yu) {
-      let Eu = yu;
-      for (const Ku of Ru) {
-        const Ru = Array.isArray(Ku),
-          yu = Ru ? Ku[0] : Ku;
-        Eu = Xu(uu, Ru ? Ku[1] : yu.material, yu, Eu)
+    function sk(kk, Fk, Bk) {
+      let Rk = Bk;
+      for (const tk of Fk) {
+        const Fk = Array.isArray(tk),
+          Bk = Fk ? tk[0] : tk;
+        Rk = dk(kk, Fk ? tk[1] : Bk.material, Bk, Rk)
       }
-      return (Eu ?? Promise.resolve()).catch((Ru => {
-        uu._runtimeBuilds?._x(Ru)
+      return (Rk ?? Promise.resolve()).catch((Fk => {
+        kk._runtimeBuilds?._x(Fk)
       }))
     }
 
-    function ru(uu, Ru, Eu) {
-      if (uu._z || !uu.meshes.includes(Eu)) return uu._runtimeBuilds?.all().catch((() => {})) ?? Promise.resolve();
-      if (function(uu, Ru, yu) {
-          for (const [Ku, Qu] of uu._groups)
-            if (Ku !== Ru) {
-              const uu = Qu.indexOf(yu);
-              uu >= 0 && Qu.splice(uu, 1)
-            } let Eu = uu._groups.get(Ru);
-          Eu || (Eu = [], uu._groups.set(Ru, Eu));
-          Eu.includes(yu) || Eu.push(yu)
-        }(uu, Ru, Eu), "pbr" === Ru._materialFamily && (uu._built || uu._groups.get(Ru)?.r)) {
-        const Ru = uu._runtimeBuilds ?? xu(uu),
-          Eu = yu.e(385).then((() => yu(61752))).then((Ru => {
+    function Vk(kk, Fk, Rk) {
+      if (kk._z || !kk.meshes.includes(Rk)) return kk._runtimeBuilds?.all().catch((() => {})) ?? Promise.resolve();
+      if (function(kk, Fk, Bk) {
+          for (const [tk, ak] of kk._groups)
+            if (tk !== Fk) {
+              const kk = ak.indexOf(Bk);
+              kk >= 0 && ak.splice(kk, 1)
+            } let Rk = kk._groups.get(Fk);
+          Rk || (Rk = [], kk._groups.set(Fk, Rk));
+          Rk.includes(Bk) || Rk.push(Bk)
+        }(kk, Fk, Rk), "pbr" === Fk._materialFamily && (kk._built || kk._groups.get(Fk)?.r)) {
+        const Fk = kk._runtimeBuilds ?? Ak(kk),
+          Rk = Bk.e(385).then((() => Bk(61672))).then((Fk => {
             let {
-              rebuildScenePbrPipelines: yu
-            } = Ru;
-            return uu._z ? void 0 : yu(uu, !0)
-          })).catch((Ru => {
-            uu._runtimeBuilds?._x(Ru)
+              rebuildScenePbrPipelines: Bk
+            } = Fk;
+            return kk._z ? void 0 : Bk(kk, !0)
+          })).catch((Fk => {
+            kk._runtimeBuilds?._x(Fk)
           }));
-        return Ru.track(Eu)
+        return Fk.track(Rk)
       }
-      return (uu._runtimeBuilds ?? xu(uu)).queue(Ru, Eu).catch((() => {}))
+      return (kk._runtimeBuilds ?? Ak(kk)).queue(Fk, Rk).catch((() => {}))
     }
 
-    function Bu(uu, Ru, yu) {
-      return uu._z ? Promise.resolve(void 0) : (uu._runtimeBuilds ?? xu(uu)).exclusive(Ru, yu)
+    function Jk(kk, Fk, Bk) {
+      return kk._z ? Promise.resolve(void 0) : (kk._runtimeBuilds ?? Ak(kk)).exclusive(Fk, Bk)
     }
 
-    function xu(uu) {
-      const Ru = {
-          VS: !1,
+    function Ak(kk) {
+      const Fk = {
+          Te: !1,
           error: null,
           active: new Set,
           chains: new WeakMap,
@@ -80,214 +80,214 @@ export const modules = {
           pendingDisposers: new WeakMap,
           tail: null
         },
-        yu = uu,
-        Xu = {
-          queue: (yu, Vu) => {
-            const ru = (Ru.generations.get(Vu) ?? 0) + 1,
-              Bu = Vu.material;
-            Ru.generations.set(Vu, ru);
-            const xu = Ru.chains.get(Vu),
-              Su = [Ru.tail, Ju?.get(yu)].filter((uu => !!uu));
-            let pu = () => {};
-            const Hu = new Promise((uu => {
-              pu = uu
+        Bk = kk,
+        dk = {
+          queue: (Bk, sk) => {
+            const Vk = (Fk.generations.get(sk) ?? 0) + 1,
+              Jk = sk.material;
+            Fk.generations.set(sk, Vk);
+            const Ak = Fk.chains.get(sk),
+              ek = [Fk.tail, bk?.get(Bk)].filter((kk => !!kk));
+            let yk = () => {};
+            const vk = new Promise((kk => {
+              yk = kk
             }));
-            Ru.tail = Hu, (Ju ??= new WeakMap).set(yu, Hu);
-            const du = (xu ? xu.catch((() => {})) : Promise.resolve()).then((() => Promise.all(Su))).then((() => async function(uu, Ru, yu, Ju, Xu, Vu) {
-              if (!Tu(uu, Ru, yu, Ju, Xu, Vu)) return;
-              const ru = uu._meshDisposables.get(Ju);
-              ru && (uu._meshDisposables.delete(Ju), Qu(Ru, Ju, ru));
-              const Bu = yu._rebuildSingle,
-                xu = Nu?.get(yu)?.n_.get(uu) ?? uu._groups.get(yu)?.r,
-                Su = !!uu._groups.get(yu)?.r,
-                pu = uu._disposables.length,
-                Hu = uu,
-                du = Hu._pbrGeomContext;
-              let bu, Cu;
+            Fk.tail = vk, (bk ??= new WeakMap).set(Bk, vk);
+            const ik = (Ak ? Ak.catch((() => {})) : Promise.resolve()).then((() => Promise.all(ek))).then((() => async function(kk, Fk, Bk, bk, dk, sk) {
+              if (!fk(kk, Fk, Bk, bk, dk, sk)) return;
+              const Vk = kk._meshDisposables.get(bk);
+              Vk && (kk._meshDisposables.delete(bk), ak(Fk, bk, Vk));
+              const Jk = Bk._rebuildSingle,
+                Ak = wk?.get(Bk)?.f_.get(kk) ?? kk._groups.get(Bk)?.r,
+                ek = !!kk._groups.get(Bk)?.r,
+                yk = kk._disposables.length,
+                vk = kk,
+                ik = vk._pbrGeomContext;
+              let Yk, Lk;
               try {
-                Cu = await yu(uu, [Ju]), bu = Hu._pbrGeomContext
-              } catch (Au) {
-                if (Wu(uu, Ru, Ju, ru), ju(uu, Ru), !Tu(uu, Ru, yu, Ju, Xu, Vu)) return;
-                throw Au
+                Lk = await Bk(kk, [bk]), Yk = vk._pbrGeomContext
+              } catch (Sk) {
+                if (mk(kk, Fk, bk, Vk), Wk(kk, Fk), !fk(kk, Fk, Bk, bk, dk, sk)) return;
+                throw Sk
               } finally {
-                yu._rebuildSingle = Bu, "pbr" === yu._materialFamily && Su && (Hu._pbrGeomContext = du)
+                Bk._rebuildSingle = Jk, "pbr" === Bk._materialFamily && ek && (vk._pbrGeomContext = ik)
               }
-              if (!Tu(uu, Ru, yu, Ju, Xu, Vu)) return Wu(uu, Ru, Ju, ru), void ju(uu, Ru);
-              for (let Eu = uu._renderables.length - 1; Eu >= 0; Eu--) uu._renderables[Eu].mesh === Ju && uu._renderables.splice(Eu, 1);
-              if (ru) {
-                for (const Ru of ru) {
-                  const yu = uu._disposables.indexOf(Ru);
-                  yu >= 0 && uu._disposables.splice(yu, 1);
-                  const Eu = Ru.p;
-                  if (Eu) {
-                    Eu._disposed = !0;
-                    const uu = Eu._owner;
-                    if (uu) {
-                      const Ru = uu.indexOf(Eu);
-                      Ru >= 0 && uu.splice(Ru, 1), Eu._owner = void 0, 0 === uu.length && Eu._onOwnerEmpty?.()
-                    } else Eu._onOwnerEmpty?.();
-                    Eu._onOwnerEmpty && (Eu._onOwnerEmpty = void 0)
+              if (!fk(kk, Fk, Bk, bk, dk, sk)) return mk(kk, Fk, bk, Vk), void Wk(kk, Fk);
+              for (let Rk = kk._renderables.length - 1; Rk >= 0; Rk--) kk._renderables[Rk].mesh === bk && kk._renderables.splice(Rk, 1);
+              if (Vk) {
+                for (const Fk of Vk) {
+                  const Bk = kk._disposables.indexOf(Fk);
+                  Bk >= 0 && kk._disposables.splice(Bk, 1);
+                  const Rk = Fk.p;
+                  if (Rk) {
+                    Rk._disposed = !0;
+                    const kk = Rk._owner;
+                    if (kk) {
+                      const Fk = kk.indexOf(Rk);
+                      Fk >= 0 && kk.splice(Fk, 1), Rk._owner = void 0, 0 === kk.length && Rk._onOwnerEmpty?.()
+                    } else Rk._onOwnerEmpty?.();
+                    Rk._onOwnerEmpty && (Rk._onOwnerEmpty = void 0)
                   }
-                }(0, Eu.e)(uu.surface.engine, (() => {
-                  for (const uu of ru) uu()
+                }(0, Rk.e)(kk.surface.engine, (() => {
+                  for (const kk of Vk) kk()
                 }))
               }
-              mu(Ru, Ju, ru), uu._renderables.push(...Cu.renderables);
-              const ku = uu._groups.get(yu);
-              ku && (ku.o = [...(ku.o ?? []).filter((uu => uu.mesh !== Ju)), ...Cu.renderables]);
-              Cu.updater && uu._uniformUpdaters.push(Cu.updater);
-              Su && function(uu, Ru) {
-                const yu = new Set(uu._disposables.slice(0, Ru));
-                for (let Eu = uu._disposables.length - 1; Eu >= Ru; Eu--) yu.has(uu._disposables[Eu]) && uu._disposables.splice(Eu, 1)
-              }(uu, pu);
-              "pbr" === yu._materialFamily && Su && bu && (Hu._pbrMeshGeomContexts ??= new WeakMap).set(Ju, bu);
-              (function(uu, Ru, yu, Eu, Ku, Qu) {
-                let mu = Nu?.get(yu);
-                if (!mu) {
-                  const uu = new WeakMap,
-                    Ru = new WeakMap,
-                    Eu = (Eu, Ku, Qu, mu) => {
-                      const Ju = uu.get(Eu)?.get(Ku);
-                      if (Ju) return Ju(Eu, Ku, Qu, mu);
-                      const Nu = Ru.get(Eu) ?? Eu._groups.get(yu)?.r;
-                      if (Nu) return Nu(Eu, Ku, Qu, mu);
+              Xk(Fk, bk, Vk), kk._renderables.push(...Lk.renderables);
+              const Ok = kk._groups.get(Bk);
+              Ok && (Ok.o = [...(Ok.o ?? []).filter((kk => kk.mesh !== bk)), ...Lk.renderables]);
+              Lk.updater && kk._uniformUpdaters.push(Lk.updater);
+              ek && function(kk, Fk) {
+                const Bk = new Set(kk._disposables.slice(0, Fk));
+                for (let Rk = kk._disposables.length - 1; Rk >= Fk; Rk--) Bk.has(kk._disposables[Rk]) && kk._disposables.splice(Rk, 1)
+              }(kk, yk);
+              "pbr" === Bk._materialFamily && ek && Yk && (vk._pbrMeshGeomContexts ??= new WeakMap).set(bk, Yk);
+              (function(kk, Fk, Bk, Rk, tk, ak) {
+                let Xk = wk?.get(Bk);
+                if (!Xk) {
+                  const kk = new WeakMap,
+                    Fk = new WeakMap,
+                    Rk = (Rk, tk, ak, Xk) => {
+                      const bk = kk.get(Rk)?.get(tk);
+                      if (bk) return bk(Rk, tk, ak, Xk);
+                      const wk = Fk.get(Rk) ?? Rk._groups.get(Bk)?.r;
+                      if (wk) return wk(Rk, tk, ak, Xk);
                       throw new Error("Material group has not completed its initial build")
                     };
-                  mu = {
-                    n_: Ru,
-                    dispatch: Eu,
-                    scenes: uu
-                  }, (Nu ??= new WeakMap).set(yu, mu)
+                  Xk = {
+                    f_: Fk,
+                    dispatch: Rk,
+                    scenes: kk
+                  }, (wk ??= new WeakMap).set(Bk, Xk)
                 }
-                let Ju = mu.scenes.get(uu);
-                Ju || (Ju = new WeakMap, mu.scenes.set(uu, Ju));
-                Ju.set(Eu, Ku), mu.n_.has(uu) || mu.n_.set(uu, Qu ?? Ku);
-                const Xu = uu._groups.get(yu);
-                Xu && (Xu.r = mu.dispatch);
-                let Vu = Ru.installed.get(Eu);
-                Vu || (Vu = new Set, Ru.installed.set(Eu, Vu));
-                Vu.add(yu), Ru.installedMeshes.add(Eu)
-              })(uu, Ru, yu, Ju, Cu.rebuildSingle, Su ? xu : Cu.rebuildSingle), Ju.material._csmGen = (Ju.material._csmGen ?? 0) + 1;
-              const eu = uu._groups.get(yu);
-              eu && !Su && (eu.r = Cu.rebuildSingle);
-              uu._renderables.sort(Ku), uu._renderableVersion++, uu._materialEpoch++
-            }(uu, Ru, yu, Vu, Bu, ru))).catch((Eu => {
-              throw Tu(uu, Ru, yu, Vu, Bu, ru) && (Ru.error = Eu instanceof Error ? Eu : new Error("Runtime mesh build failed", {
-                cause: Eu
-              })), Eu
+                let bk = Xk.scenes.get(kk);
+                bk || (bk = new WeakMap, Xk.scenes.set(kk, bk));
+                bk.set(Rk, tk), Xk.f_.has(kk) || Xk.f_.set(kk, ak ?? tk);
+                const dk = kk._groups.get(Bk);
+                dk && (dk.r = Xk.dispatch);
+                let sk = Fk.installed.get(Rk);
+                sk || (sk = new Set, Fk.installed.set(Rk, sk));
+                sk.add(Bk), Fk.installedMeshes.add(Rk)
+              })(kk, Fk, Bk, bk, Lk.rebuildSingle, ek ? Ak : Lk.rebuildSingle), bk.material._csmGen = (bk.material._csmGen ?? 0) + 1;
+              const Ek = kk._groups.get(Bk);
+              Ek && !ek && (Ek.r = Lk.rebuildSingle);
+              kk._renderables.sort(tk), kk._renderableVersion++, kk._materialEpoch++
+            }(kk, Fk, Bk, sk, Jk, Vk))).catch((Rk => {
+              throw fk(kk, Fk, Bk, sk, Jk, Vk) && (Fk.error = Rk instanceof Error ? Rk : new Error("Runtime mesh build failed", {
+                cause: Rk
+              })), Rk
             })).finally((() => {
-              pu(), Ru.tail === Hu && (Ru.tail = null), Ju?.get(yu) === Hu && Ju.delete(yu)
+              yk(), Fk.tail === vk && (Fk.tail = null), bk?.get(Bk) === vk && bk.delete(Bk)
             })).finally((() => {
-              Ru.chains.get(Vu) === du && Ru.chains.delete(Vu)
+              Fk.chains.get(sk) === ik && Fk.chains.delete(sk)
             }));
-            return Ru.chains.set(Vu, du), Xu.track(du)
+            return Fk.chains.set(sk, ik), dk.track(ik)
           },
-          all: () => Promise.all(Ru.active).then((() => {})),
-          track: uu => {
-            const yu = uu.finally((() => Ru.active.delete(yu)));
-            return Ru.active.add(yu), Promise.all(Ru.active).then((() => {}))
+          all: () => Promise.all(Fk.active).then((() => {})),
+          track: kk => {
+            const Bk = kk.finally((() => Fk.active.delete(Bk)));
+            return Fk.active.add(Bk), Promise.all(Fk.active).then((() => {}))
           },
-          base: (Ru, yu) => {
-            const Eu = Nu?.get(Ru);
-            return Eu && Eu.n_.set(uu, yu), Eu?.dispatch ?? yu
+          base: (Fk, Bk) => {
+            const Rk = wk?.get(Fk);
+            return Rk && Rk.f_.set(kk, Bk), Rk?.dispatch ?? Bk
           },
           get w() {
-            return !!Ru.tail
+            return !!Fk.tail
           },
-          pendingDisposers: uu => Ru.pendingDisposers.get(uu),
-          holdPendingDisposers: (uu, yu) => Qu(Ru, uu, yu),
-          releasePendingDisposers: (uu, yu) => mu(Ru, uu, yu),
-          reset: Eu => {
-            pu(uu, Ru, Eu), yu._pbrMeshGeomContexts?.delete(Eu)
+          pendingDisposers: kk => Fk.pendingDisposers.get(kk),
+          holdPendingDisposers: (kk, Bk) => ak(Fk, kk, Bk),
+          releasePendingDisposers: (kk, Bk) => Xk(Fk, kk, Bk),
+          reset: Rk => {
+            yk(kk, Fk, Rk), Bk._pbrMeshGeomContexts?.delete(Rk)
           },
-          remove: Eu => {
-            Ru.generations.set(Eu, (Ru.generations.get(Eu) ?? 0) + 1), Ru.chains.delete(Eu), Su(uu, Ru, Eu), yu._pbrMeshGeomContexts?.delete(Eu)
+          remove: Rk => {
+            Fk.generations.set(Rk, (Fk.generations.get(Rk) ?? 0) + 1), Fk.chains.delete(Rk), ek(kk, Fk, Rk), Bk._pbrMeshGeomContexts?.delete(Rk)
           },
-          dropBase: Ru => {
-            const yu = Nu?.get(Ru);
-            yu && (yu.n_.delete(uu), yu.scenes.delete(uu))
+          dropBase: Fk => {
+            const Bk = wk?.get(Fk);
+            Bk && (Bk.f_.delete(kk), Bk.scenes.delete(kk))
           },
-          wait: async uu => {
-            const yu = new Set;
-            for (const Eu of uu) {
-              const uu = Ru.chains.get(Eu);
-              uu && yu.add(uu)
+          wait: async kk => {
+            const Bk = new Set;
+            for (const Rk of kk) {
+              const kk = Fk.chains.get(Rk);
+              kk && Bk.add(kk)
             }
-            await Promise.all(yu)
+            await Promise.all(Bk)
           },
           _e: function() {
-            let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-            if (Ru.error) {
-              const yu = Ru.error;
-              throw uu && (Ru.error = null), yu
+            let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+            if (Fk.error) {
+              const Bk = Fk.error;
+              throw kk && (Fk.error = null), Bk
             }
           },
-          _x: uu => {
-            Ru.error = uu instanceof Error ? uu : new Error("Runtime mesh build failed", {
-              cause: uu
+          _x: kk => {
+            Fk.error = kk instanceof Error ? kk : new Error("Runtime mesh build failed", {
+              cause: kk
             })
           },
-          _d: () => Ru.VS,
-          exclusive: (uu, yu) => {
-            const Eu = [];
-            Ru.tail && Eu.push(Ru.tail);
-            const Ku = Ju?.get(uu);
-            Ku && Eu.push(Ku);
-            const Qu = Promise.all(Eu).then(yu),
-              mu = Qu.then((() => {}), (() => {}));
-            return Ru.tail = mu, (Ju ??= new WeakMap).set(uu, mu), mu.then((() => {
-              Ru.tail === mu && (Ru.tail = null), Ju?.get(uu) === mu && Ju.delete(uu)
-            })), Qu
+          _d: () => Fk.Te,
+          exclusive: (kk, Bk) => {
+            const Rk = [];
+            Fk.tail && Rk.push(Fk.tail);
+            const tk = bk?.get(kk);
+            tk && Rk.push(tk);
+            const ak = Promise.all(Rk).then(Bk),
+              Xk = ak.then((() => {}), (() => {}));
+            return Fk.tail = Xk, (bk ??= new WeakMap).set(kk, Xk), Xk.then((() => {
+              Fk.tail === Xk && (Fk.tail = null), bk?.get(kk) === Xk && bk.delete(kk)
+            })), ak
           }
         };
-      return uu._runtimeBuilds = Xu, (uu._beforeRender ??= []).push((() => {
-        Xu._e()
-      })), uu._disposables.push((() => {
-        Ru.VS = !0, Ru.active.clear();
-        for (const yu of Ru.installedMeshes) pu(uu, Ru, yu);
-        for (const Ru of uu._groups.keys()) Nu?.get(Ru)?.n_.delete(uu);
-        uu._runtimeBuilds = void 0, yu._pbrMeshGeomContexts = void 0
-      })), Xu
+      return kk._runtimeBuilds = dk, (kk._beforeRender ??= []).push((() => {
+        dk._e()
+      })), kk._disposables.push((() => {
+        Fk.Te = !0, Fk.active.clear();
+        for (const Bk of Fk.installedMeshes) yk(kk, Fk, Bk);
+        for (const Fk of kk._groups.keys()) wk?.get(Fk)?.f_.delete(kk);
+        kk._runtimeBuilds = void 0, Bk._pbrMeshGeomContexts = void 0
+      })), dk
     }
 
-    function Su(uu, Ru, yu) {
-      const Eu = Ru.installed.get(yu);
-      if (Eu) {
-        for (const Ru of Eu) Nu?.get(Ru)?.scenes.get(uu)?.delete(yu);
-        Ru.installed.delete(yu), Ru.installedMeshes.delete(yu)
+    function ek(kk, Fk, Bk) {
+      const Rk = Fk.installed.get(Bk);
+      if (Rk) {
+        for (const Fk of Rk) wk?.get(Fk)?.scenes.get(kk)?.delete(Bk);
+        Fk.installed.delete(Bk), Fk.installedMeshes.delete(Bk)
       }
     }
 
-    function pu(uu, Ru, yu) {
-      Su(uu, Ru, yu)
+    function yk(kk, Fk, Bk) {
+      ek(kk, Fk, Bk)
     }
 
-    function Tu(uu, Ru, yu, Eu, Ku, Qu) {
-      return !Ru.VS && Ru.generations.get(Eu) === Qu && uu.meshes.includes(Eu) && Eu.material === Ku && Ku._buildGroup === yu
+    function fk(kk, Fk, Bk, Rk, tk, ak) {
+      return !Fk.Te && Fk.generations.get(Rk) === ak && kk.meshes.includes(Rk) && Rk.material === tk && tk._buildGroup === Bk
     }
 
-    function Wu(uu, Ru, yu, Ku) {
-      const Qu = uu._meshDisposables.get(yu);
-      if (Qu && Qu !== Ku) {
-        uu._meshDisposables.delete(yu);
-        for (const uu of Qu) uu()
+    function mk(kk, Fk, Bk, tk) {
+      const ak = kk._meshDisposables.get(Bk);
+      if (ak && ak !== tk) {
+        kk._meshDisposables.delete(Bk);
+        for (const kk of ak) kk()
       }
-      if (Ku)
-        if (uu.meshes.includes(yu)) uu._meshDisposables.set(yu, Ku);
-        else if (Ru.VS)
-        for (const Eu of Ku) Eu();
-      else(0, Eu.e)(uu.surface.engine, (() => {
-        for (const uu of Ku) uu()
+      if (tk)
+        if (kk.meshes.includes(Bk)) kk._meshDisposables.set(Bk, tk);
+        else if (Fk.Te)
+        for (const Rk of tk) Rk();
+      else(0, Rk.e)(kk.surface.engine, (() => {
+        for (const kk of tk) kk()
       }));
-      mu(Ru, yu, Ku)
+      Xk(Fk, Bk, tk)
     }
 
-    function ju(uu, Ru) {
-      if (!Ru.VS) return;
-      const yu = uu._disposables.splice(0);
-      for (const Eu of yu) Eu()
+    function Wk(kk, Fk) {
+      if (!Fk.Te) return;
+      const Bk = kk._disposables.splice(0);
+      for (const Rk of Bk) Rk()
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

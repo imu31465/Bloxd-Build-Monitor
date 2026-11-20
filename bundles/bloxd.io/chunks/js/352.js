@@ -1,28 +1,28 @@
 export const id = 352;
 export const ids = [352];
 export const modules = {
-  61100: (uu, Ru, yu) => {
-    function Eu(uu) {
-      return uu.features.has("timestamp-query")
+  61003: (kk, Fk, Bk) => {
+    function Rk(kk) {
+      return kk.features.has("timestamp-query")
     }
 
-    function Ku(uu) {
-      return Eu(uu) ? {
-        device: uu,
-        markerPipeline: uu.createComputePipeline({
+    function tk(kk) {
+      return Rk(kk) ? {
+        device: kk,
+        markerPipeline: kk.createComputePipeline({
           layout: "auto",
           compute: {
-            module: uu.createShaderModule({
+            module: kk.createShaderModule({
               code: "@compute @workgroup_size(1) fn main() {}"
             }),
             entryPoint: "main"
           }
         }),
-        querySet: uu.createQuerySet({
+        querySet: kk.createQuerySet({
           type: "timestamp",
           count: 2
         }),
-        resolveBuf: uu.createBuffer({
+        resolveBuf: kk.createBuffer({
           size: 16,
           usage: GPUBufferUsage.QUERY_RESOLVE | GPUBufferUsage.COPY_SRC
         }),
@@ -32,57 +32,57 @@ export const modules = {
       } : null
     }
 
-    function Qu(uu, Ru) {
-      const yu = Ru.beginComputePass({
+    function ak(kk, Fk) {
+      const Bk = Fk.beginComputePass({
         timestampWrites: {
-          querySet: uu.querySet,
+          querySet: kk.querySet,
           beginningOfPassWriteIndex: 0
         }
       });
-      yu.setPipeline(uu.markerPipeline), yu.dispatchWorkgroups(1), yu.end()
+      Bk.setPipeline(kk.markerPipeline), Bk.dispatchWorkgroups(1), Bk.end()
     }
 
-    function mu(uu, Ru) {
-      const yu = Ru.beginComputePass({
+    function Xk(kk, Fk) {
+      const Bk = Fk.beginComputePass({
         timestampWrites: {
-          querySet: uu.querySet,
+          querySet: kk.querySet,
           endOfPassWriteIndex: 1
         }
       });
-      yu.setPipeline(uu.markerPipeline), yu.dispatchWorkgroups(1), yu.end()
+      Bk.setPipeline(kk.markerPipeline), Bk.dispatchWorkgroups(1), Bk.end()
     }
 
-    function Ju(uu) {
-      if (uu.inFlight > 3) return;
-      const Ru = uu.device,
-        yu = uu.pool.pop() ?? Ru.createBuffer({
+    function bk(kk) {
+      if (kk.inFlight > 3) return;
+      const Fk = kk.device,
+        Bk = kk.pool.pop() ?? Fk.createBuffer({
           size: 16,
           usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ
         }),
-        Eu = Ru.createCommandEncoder();
-      Eu.resolveQuerySet(uu.querySet, 0, 2, uu.resolveBuf, 0), Eu.copyBufferToBuffer(uu.resolveBuf, 0, yu, 0, 16), Ru.queue.submit([Eu.finish()]), uu.inFlight++, yu.mapAsync(GPUMapMode.READ).then((() => {
-        const Ru = new BigInt64Array(yu.getMappedRange()),
-          Eu = Number(Ru[1] - Ru[0]) / 1e6;
-        Eu >= 0 && Eu < 5e3 && (uu.lastMs = uu.lastMs > 0 ? .8 * uu.lastMs + .2 * Eu : Eu), yu.unmap(), uu.pool.push(yu), uu.inFlight--
+        Rk = Fk.createCommandEncoder();
+      Rk.resolveQuerySet(kk.querySet, 0, 2, kk.resolveBuf, 0), Rk.copyBufferToBuffer(kk.resolveBuf, 0, Bk, 0, 16), Fk.queue.submit([Rk.finish()]), kk.inFlight++, Bk.mapAsync(GPUMapMode.READ).then((() => {
+        const Fk = new BigInt64Array(Bk.getMappedRange()),
+          Rk = Number(Fk[1] - Fk[0]) / 1e6;
+        Rk >= 0 && Rk < 5e3 && (kk.lastMs = kk.lastMs > 0 ? .8 * kk.lastMs + .2 * Rk : Rk), Bk.unmap(), kk.pool.push(Bk), kk.inFlight--
       }), (() => {
-        uu.inFlight--
+        kk.inFlight--
       }))
     }
 
-    function Nu(uu) {
-      uu.querySet.destroy(), uu.resolveBuf.destroy();
-      for (const Ru of uu.pool) Ru.destroy();
-      uu.pool.length = 0
+    function wk(kk) {
+      kk.querySet.destroy(), kk.resolveBuf.destroy();
+      for (const Fk of kk.pool) Fk.destroy();
+      kk.pool.length = 0
     }
-    yu.r(Ru), yu.d(Ru, {
-      createGpuFrameTimer: () => Ku,
-      destroyGpuFrameTimer: () => Nu,
-      gpuFrameTimerBegin: () => Qu,
-      gpuFrameTimerEnd: () => mu,
-      gpuFrameTimerResolve: () => Ju,
-      gpuTimingSupportedFor: () => Eu
+    Bk.r(Fk), Bk.d(Fk, {
+      createGpuFrameTimer: () => tk,
+      destroyGpuFrameTimer: () => wk,
+      gpuFrameTimerBegin: () => ak,
+      gpuFrameTimerEnd: () => Xk,
+      gpuFrameTimerResolve: () => bk,
+      gpuTimingSupportedFor: () => Rk
     })
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

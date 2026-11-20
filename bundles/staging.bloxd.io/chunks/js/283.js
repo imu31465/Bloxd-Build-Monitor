@@ -1,66 +1,66 @@
 export const id = 283;
 export const ids = [283];
 export const modules = {
-  40895: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      default: () => iR
+  40729: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      default: () => KF
     });
-    var Eu = yu(40904),
-      Ku = yu(40947),
-      Qu = yu(40949),
-      mu = yu(64),
-      Ju = yu(80),
-      Nu = yu(40970),
-      Xu = yu(40979),
-      Vu = yu(4532),
-      ru = yu(40982),
-      Bu = yu(1825),
-      xu = yu(40991),
-      Su = yu(41006),
-      pu = yu.n(Su),
-      Tu = yu(40953),
-      Wu = yu(40961),
-      ju = yu(1300),
-      Hu = yu(36619),
-      du = yu(1215),
-      bu = yu(36632),
-      Cu = yu(36541),
-      ku = yu(1400),
-      eu = yu(610),
-      Au = yu(1217),
-      Du = yu(41052),
-      Mu = yu(40909),
-      Iu = yu(40913),
-      Gu = yu(1855),
-      Uu = yu(3574),
-      nu = yu(34),
-      su = yu(1110);
-    const tu = 1e4,
-      lu = 250,
-      gu = 250;
-    var cu = yu(40930);
-    const Lu = 50,
-      zu = 100;
-    const Fu = 2e3,
-      wu = Mu.B.define(),
-      Zu = Mu.B.define(),
-      hu = Mu.B.define();
-    class Pu extends Iu.n {
-      constructor(uu, Ru, yu) {
-        super(), this.colour = uu, this.playerName = Ru, this.showName = yu
+    var Rk = Bk(40738),
+      tk = Bk(40774),
+      ak = Bk(40776),
+      Xk = Bk(61),
+      bk = Bk(67),
+      wk = Bk(40792),
+      dk = Bk(40799),
+      sk = Bk(4487),
+      Vk = Bk(40802),
+      Jk = Bk(1812),
+      Ak = Bk(40811),
+      ek = Bk(40827),
+      yk = Bk.n(ek),
+      fk = Bk(40782),
+      mk = Bk(40787),
+      Wk = Bk(1288),
+      vk = Bk(36524),
+      ik = Bk(1192),
+      Yk = Bk(36536),
+      Lk = Bk(36436),
+      Ok = Bk(1387),
+      Ek = Bk(606),
+      Sk = Bk(1195),
+      Nk = Bk(40880),
+      Hk = Bk(40741),
+      uk = Bk(40748),
+      Mk = Bk(1847),
+      gk = Bk(3546),
+      Uk = Bk(29),
+      ck = Bk(1101);
+    const Gk = 1e4,
+      Tk = 250,
+      rk = 250;
+    var Dk = Bk(40759);
+    const zk = 50,
+      Pk = 100;
+    const hk = 2e3,
+      qk = Hk.z.define(),
+      Ck = Hk.z.define(),
+      Zk = Hk.z.define();
+    class pk extends uk.u {
+      constructor(kk, Fk, Bk) {
+        super(), this.colour = kk, this.playerName = Fk, this.showName = Bk
       }
       toDOM() {
-        const uu = document.createElement("span");
-        uu.className = "cm-remote-cursor-wrapper", uu.style.borderLeftColor = this.colour;
-        const Ru = document.createElement("span");
-        if (Ru.className = "cm-remote-cursor", Ru.style.borderLeftColor = this.colour, uu.appendChild(Ru), this.showName) {
-          const Ru = document.createElement("span");
-          Ru.className = "cm-remote-cursor-name", Ru.style.backgroundColor = this.colour, Ru.textContent = this.playerName, uu.appendChild(Ru)
+        const kk = document.createElement("span");
+        kk.className = "cm-remote-cursor-wrapper", kk.style.borderLeftColor = this.colour;
+        const Fk = document.createElement("span");
+        if (Fk.className = "cm-remote-cursor", Fk.style.borderLeftColor = this.colour, kk.appendChild(Fk), this.showName) {
+          const Fk = document.createElement("span");
+          Fk.className = "cm-remote-cursor-name", Fk.style.backgroundColor = this.colour, Fk.textContent = this.playerName, kk.appendChild(Fk)
         }
-        return uu
+        return kk
       }
-      eq(uu) {
-        return this.colour === uu.colour && this.playerName === uu.playerName && this.showName === uu.showName
+      eq(kk) {
+        return this.colour === kk.colour && this.playerName === kk.playerName && this.showName === kk.showName
       }
       get estimatedHeight() {
         return -1
@@ -70,270 +70,270 @@ export const modules = {
       }
     }
 
-    function iu(uu, Ru) {
-      const yu = [],
-        Eu = [];
-      for (const [, mu] of uu) {
-        const uu = Ru - mu.lastMoved < Fu;
-        if (yu.push({
-            pos: mu.head,
-            decoration: Iu.c.widget({
-              widget: new Pu(mu.colour, mu.playerName, uu),
+    function Kk(kk, Fk) {
+      const Bk = [],
+        Rk = [];
+      for (const [, Xk] of kk) {
+        const kk = Fk - Xk.lastMoved < hk;
+        if (Bk.push({
+            pos: Xk.head,
+            decoration: uk.d.widget({
+              widget: new pk(Xk.colour, Xk.playerName, kk),
               side: 1
             })
-          }), mu.anchor !== mu.head) {
-          const uu = Math.min(mu.anchor, mu.head),
-            Ru = Math.max(mu.anchor, mu.head);
-          Eu.push({
-            from: uu,
-            to: Ru,
-            decoration: Iu.c.mark({
+          }), Xk.anchor !== Xk.head) {
+          const kk = Math.min(Xk.anchor, Xk.head),
+            Fk = Math.max(Xk.anchor, Xk.head);
+          Rk.push({
+            from: kk,
+            to: Fk,
+            decoration: uk.d.mark({
               class: "cm-remote-selection",
               attributes: {
-                style: `background-color: ${mu.colour}33`
+                style: `background-color: ${Xk.colour}33`
               }
             })
           })
         }
       }
-      const Ku = new Mu.w,
-        Qu = [];
-      for (const mu of yu) Qu.push({
+      const tk = new Hk.r,
+        ak = [];
+      for (const Xk of Bk) ak.push({
         bias: 1,
-        deco: mu.decoration,
-        from: mu.pos,
-        to: mu.pos
+        deco: Xk.decoration,
+        from: Xk.pos,
+        to: Xk.pos
       });
-      for (const mu of Eu) Qu.push({
+      for (const Xk of Rk) ak.push({
         bias: 0,
-        deco: mu.decoration,
-        from: mu.from,
-        to: mu.to
+        deco: Xk.decoration,
+        from: Xk.from,
+        to: Xk.to
       });
-      Qu.sort(((uu, Ru) => uu.from - Ru.from || uu.deco.startSide - Ru.deco.startSide || uu.bias - Ru.bias));
-      for (const mu of Qu) Ku.add(mu.from, mu.to, mu.deco);
-      return Ku.finish()
+      ak.sort(((kk, Fk) => kk.from - Fk.from || kk.deco.startSide - Fk.deco.startSide || kk.bias - Fk.bias));
+      for (const Xk of ak) tk.add(Xk.from, Xk.to, Xk.deco);
+      return tk.finish()
     }
-    const Yu = Mu.E.define({
+    const xk = Hk.A.define({
       create: () => ({
         cursors: new Map,
-        lE: Iu.c.none
+        uR: uk.d.none
       }),
-      update(uu, Ru) {
-        let yu = uu.cursors,
-          Eu = !1;
-        if (Ru.docChanged) {
-          const uu = new Map;
-          for (const [Eu, Ku] of yu) uu.set(Eu, {
-            ...Ku,
-            anchor: Ru.changes.mapPos(Ku.anchor, 1),
-            head: Ru.changes.mapPos(Ku.head, 1)
+      update(kk, Fk) {
+        let Bk = kk.cursors,
+          Rk = !1;
+        if (Fk.docChanged) {
+          const kk = new Map;
+          for (const [Rk, tk] of Bk) kk.set(Rk, {
+            ...tk,
+            anchor: Fk.changes.mapPos(tk.anchor, 1),
+            head: Fk.changes.mapPos(tk.head, 1)
           });
-          yu = uu, Eu = !0
+          Bk = kk, Rk = !0
         }
-        for (const Ku of Ru.effects)
-          if (Ku.is(wu)) {
-            if (!Number.isInteger(Ku.value.anchor) || !Number.isInteger(Ku.value.head)) {
-              console.warn(`Code Editor: ignored player ${Ku.value.playerId}'s cursor at ${Ku.value.anchor}-${Ku.value.head}`);
+        for (const tk of Fk.effects)
+          if (tk.is(qk)) {
+            if (!Number.isInteger(tk.value.anchor) || !Number.isInteger(tk.value.head)) {
+              console.warn(`Code Editor: ignored player ${tk.value.playerId}'s cursor at ${tk.value.anchor}-${tk.value.head}`);
               continue
             }
-            const Qu = Ru.state.doc.length,
-              mu = {
-                ...Ku.value,
-                anchor: Math.min(Ku.value.anchor, Qu),
-                head: Math.min(Ku.value.head, Qu)
+            const ak = Fk.state.doc.length,
+              Xk = {
+                ...tk.value,
+                anchor: Math.min(tk.value.anchor, ak),
+                head: Math.min(tk.value.head, ak)
               };
-            yu === uu.cursors && (yu = new Map(yu)), yu.set(mu.playerId, mu), Eu = !0
-          } else Ku.is(Zu) ? yu.has(Ku.value) && (yu === uu.cursors && (yu = new Map(yu)), yu.delete(Ku.value), Eu = !0) : Ku.is(hu) && (Eu = !0);
-        return Eu ? {
-          cursors: yu,
-          lE: iu(yu, Date.now())
-        } : uu
+            Bk === kk.cursors && (Bk = new Map(Bk)), Bk.set(Xk.playerId, Xk), Rk = !0
+          } else tk.is(Ck) ? Bk.has(tk.value) && (Bk === kk.cursors && (Bk = new Map(Bk)), Bk.delete(tk.value), Rk = !0) : tk.is(Zk) && (Rk = !0);
+        return Rk ? {
+          cursors: Bk,
+          uR: Kk(Bk, Date.now())
+        } : kk
       },
-      provide: uu => Iu.f.lE.from(uu, (uu => uu.lE))
+      provide: kk => uk.l.uR.from(kk, (kk => kk.uR))
     });
-    const ou = Mu.B.define(),
-      qu = Iu.c.mark({
+    const jk = Hk.z.define(),
+      lk = uk.d.mark({
         class: "CodeInsertFlash"
       }),
-      Ou = Mu.E.define({
-        create: () => Iu.c.none,
-        update(uu, Ru) {
-          let yu = uu.map(Ru.changes);
-          for (const Eu of Ru.effects) Eu.is(ou) && (yu = Eu.value ? Iu.c.set(qu.range(Eu.value.from, Eu.value.to)) : Iu.c.none);
-          return yu
+      nk = Hk.A.define({
+        create: () => uk.d.none,
+        update(kk, Fk) {
+          let Bk = kk.map(Fk.changes);
+          for (const Rk of Fk.effects) Rk.is(jk) && (Bk = Rk.value ? uk.d.set(lk.range(Rk.value.from, Rk.value.to)) : uk.d.none);
+          return Bk
         },
-        provide: uu => Iu.f.lE.from(uu)
+        provide: kk => uk.l.uR.from(kk)
       }),
-      vu = Mu.E.define({
+      Ik = Hk.A.define({
         create: () => !1,
-        update: (uu, Ru) => uu || void 0 !== Ru.annotation(Mu.J.userEvent) && !Ru.annotation(Mu.J.remote)
+        update: (kk, Fk) => kk || void 0 !== Fk.annotation(Hk.E.userEvent) && !Fk.annotation(Hk.E.remote)
       }),
-      au = [Ou, vu];
+      Qk = [nk, Ik];
 
-    function fu(uu) {
-      return uu.field(vu)
+    function kF(kk) {
+      return kk.field(Ik)
     }
-    const uR = 3e4;
+    const FF = 3e4;
 
-    function RR(uu, Ru) {
-      const yu = (0, mu.useRef)(null);
-      (0, mu.useEffect)((() => {
-        var uu;
-        (null === (uu = yu.current) || void 0 === uu ? void 0 : uu.path) !== Ru && (yu.current = null)
-      }), [Ru]);
-      const Eu = uu => {
-        var Eu;
-        const Ku = yu.current;
-        if (null === uu || void 0 === uu || !uu.dom.isConnected || !Ku || Ku.path !== Ru) return;
-        yu.current = null;
+    function BF(kk, Fk) {
+      const Bk = (0, Xk.useRef)(null);
+      (0, Xk.useEffect)((() => {
+        var kk;
+        (null === (kk = Bk.current) || void 0 === kk ? void 0 : kk.path) !== Fk && (Bk.current = null)
+      }), [Fk]);
+      const Rk = kk => {
+        var Rk;
+        const tk = Bk.current;
+        if (null === kk || void 0 === kk || !kk.dom.isConnected || !tk || tk.path !== Fk) return;
+        Bk.current = null;
         const {
-          kx: mu
-        } = Ku;
-        if (mu && null !== mu.text && performance.now() - mu.at < uR) {
-          const Ru = function(uu, Ru) {
-            if (uu === Ru) return null;
-            const yu = Math.min(uu.length, Ru.length);
-            let Eu = 0;
-            for (; Eu < yu && uu[Eu] === Ru[Eu];) Eu++;
-            let Ku = 0;
-            for (; Ku < yu - Eu && uu[uu.length - 1 - Ku] === Ru[Ru.length - 1 - Ku];) Ku++;
+          lA: Xk
+        } = tk;
+        if (Xk && null !== Xk.text && performance.now() - Xk.at < FF) {
+          const Fk = function(kk, Fk) {
+            if (kk === Fk) return null;
+            const Bk = Math.min(kk.length, Fk.length);
+            let Rk = 0;
+            for (; Rk < Bk && kk[Rk] === Fk[Rk];) Rk++;
+            let tk = 0;
+            for (; tk < Bk - Rk && kk[kk.length - 1 - tk] === Fk[Fk.length - 1 - tk];) tk++;
             return {
-              from: Eu,
-              to: uu.length - Ku,
-              insert: Ru.slice(Eu, Ru.length - Ku)
+              from: Rk,
+              to: kk.length - tk,
+              insert: Fk.slice(Rk, Fk.length - tk)
             }
-          }(uu.state.doc.toString(), mu.text);
-          null !== Ru && uu.dispatch({
-            changes: Ru,
-            userEvent: mu.placed ? "input" : void 0
+          }(kk.state.doc.toString(), Xk.text);
+          null !== Fk && kk.dispatch({
+            changes: Fk,
+            userEvent: Xk.placed ? "input" : void 0
           })
         }
         const {
-          doc: Ju
-        } = uu.state, Nu = Ju.line(Math.min(Math.max(Ku.line, 1), Ju.lines)), Xu = Nu.from + Math.min(null !== (Eu = Ku.column) && void 0 !== Eu ? Eu : 0, Nu.length);
-        uu.dispatch({
+          doc: bk
+        } = kk.state, wk = bk.line(Math.min(Math.max(tk.line, 1), bk.lines)), dk = wk.from + Math.min(null !== (Rk = tk.column) && void 0 !== Rk ? Rk : 0, wk.length);
+        kk.dispatch({
           selection: {
-            anchor: Xu
+            anchor: dk
           },
-          effects: Qu.e.scrollIntoView(Xu, {
+          effects: ak.b.scrollIntoView(dk, {
             y: "center"
           }),
-          userEvent: null !== mu && void 0 !== mu && mu.placed ? "select" : void 0
-        }), !1 !== (null === mu || void 0 === mu ? void 0 : mu.focused) && uu.focus()
+          userEvent: null !== Xk && void 0 !== Xk && Xk.placed ? "select" : void 0
+        }), !1 !== (null === Xk || void 0 === Xk ? void 0 : Xk.focused) && kk.focus()
       };
-      return (0, ku.e)("CodeEditorGoToLine", (Ru => {
-        yu.current = Ru, Eu(uu.current)
-      })), (0, ku.e)("CodeEditorKeepEdits", (() => {
-        const Eu = uu.current;
-        if (null === Eu || !Eu.dom.isConnected || null === Ru) return;
+      return (0, Ok.f)("CodeEditorGoToLine", (Fk => {
+        Bk.current = Fk, Rk(kk.current)
+      })), (0, Ok.f)("CodeEditorKeepEdits", (() => {
+        const Rk = kk.current;
+        if (null === Rk || !Rk.dom.isConnected || null === Fk) return;
         const {
-          doc: Ku,
-          selection: Qu
-        } = Eu.state, {
-          head: mu
-        } = Qu.main, Ju = Ku.lineAt(mu), Nu = {
-          text: (0, Du.n)(Eu.state).length > 0 ? Ku.toString() : null,
+          doc: tk,
+          selection: ak
+        } = Rk.state, {
+          head: Xk
+        } = ak.main, bk = tk.lineAt(Xk), wk = {
+          text: (0, Nk.n)(Rk.state).length > 0 ? tk.toString() : null,
           at: performance.now(),
-          focused: Eu.hasFocus,
-          placed: fu(Eu.state)
+          focused: Rk.hasFocus,
+          placed: kF(Rk.state)
         };
-        yu.current = {
-          path: Ru,
-          line: Ju.number,
-          column: mu - Ju.from,
-          kx: Nu
+        Bk.current = {
+          path: Fk,
+          line: bk.number,
+          column: Xk - bk.from,
+          lA: wk
         }
-      })), uu => {
-        var Ku;
-        const Qu = yu.current;
-        !1 === (null === Qu || void 0 === Qu || null === (Ku = Qu.kx) || void 0 === Ku ? void 0 : Ku.focused) && Qu.path === Ru || uu.focus(), Eu(uu)
+      })), kk => {
+        var tk;
+        const ak = Bk.current;
+        !1 === (null === ak || void 0 === ak || null === (tk = ak.lA) || void 0 === tk ? void 0 : tk.focused) && ak.path === Fk || kk.focus(), Rk(kk)
       }
     }
-    var yR = yu(4134),
-      ER = yu(1170);
+    var RF = Bk(4115),
+      tF = Bk(1149);
 
-    function KR(uu, Ru) {
+    function aF(kk, Fk) {
       const {
-        t: yu
-      } = (0, ER.E)();
-      (0, ku.e)("CodeEditorInsertText", (Eu => {
+        t: Bk
+      } = (0, tF.x)();
+      (0, Ok.f)("CodeEditorInsertText", (Rk => {
         let {
-          text: Ku,
-          focus: Qu
-        } = Eu;
-        const mu = uu.current,
-          Ju = null !== mu && void 0 !== mu && mu.dom.isConnected ? function(uu, Ru) {
-            if (!fu(uu)) return null;
+          text: tk,
+          focus: ak
+        } = Rk;
+        const Xk = kk.current,
+          bk = null !== Xk && void 0 !== Xk && Xk.dom.isConnected ? function(kk, Fk) {
+            if (!kF(kk)) return null;
             const {
-              from: yu,
-              to: Eu
-            } = uu.selection.main, Ku = yu + Ru.length;
+              from: Bk,
+              to: Rk
+            } = kk.selection.main, tk = Bk + Fk.length;
             return {
               changes: {
-                from: yu,
-                to: Eu,
-                insert: Ru
+                from: Bk,
+                to: Rk,
+                insert: Fk
               },
               selection: {
-                anchor: Ku
+                anchor: tk
               },
-              effects: [Iu.f.scrollIntoView(Ku, {
+              effects: [uk.l.scrollIntoView(tk, {
                 y: "center"
-              }), ou.of({
-                from: yu,
-                to: Ku
+              }), jk.of({
+                from: Bk,
+                to: tk
               })],
               userEvent: "input"
             }
-          }(mu.state, Ku) : null;
-        null !== mu && null !== Ju ? (mu.dispatch(Ju), Qu && mu.focus(), setTimeout((() => {
-          mu.dom.isConnected && mu.dispatch({
-            effects: ou.of(null)
+          }(Xk.state, tk) : null;
+        null !== Xk && null !== bk ? (Xk.dispatch(bk), ak && Xk.focus(), setTimeout((() => {
+          Xk.dom.isConnected && Xk.dispatch({
+            effects: jk.of(null)
           })
-        }), 1500)) : (0, yR.c)(Ku).then((() => {
-          Ru({
-            message: yu("codeEditorWorld:pickCopied", {
-              coords: Ku
+        }), 1500)) : (0, RF.c)(tk).then((() => {
+          Fk({
+            message: Bk("codeEditorWorld:pickCopied", {
+              coords: tk
             }),
             type: "success"
           })
-        }), (uu => {
-          console.error("Pick could not copy the coordinates", uu), Ru({
-            message: yu("codeEditorWorld:pickPlaceCursor", {
-              coords: Ku
+        }), (kk => {
+          console.error("Pick could not copy the coordinates", kk), Fk({
+            message: Bk("codeEditorWorld:pickPlaceCursor", {
+              coords: tk
             }),
             type: "warning"
           })
         }))
       }))
     }
-    var QR = yu(40940);
-    const mR = "#e45649",
-      JR = "#383a42",
-      NR = "#696c77",
-      XR = "#986801",
-      VR = "#e5e5e6",
-      rR = "#fafafa",
-      BR = "#eaeaeb",
-      xR = "#526fff",
-      SR = Iu.f.theme({
+    var XF = Bk(40765);
+    const bF = "#e45649",
+      wF = "#383a42",
+      dF = "#696c77",
+      sF = "#986801",
+      VF = "#e5e5e6",
+      JF = "#fafafa",
+      AF = "#eaeaeb",
+      eF = "#526fff",
+      yF = uk.l.theme({
         "&": {
-          color: JR,
-          backgroundColor: rR
+          color: wF,
+          backgroundColor: JF
         },
         ".cm-content": {
-          caretColor: xR
+          caretColor: eF
         },
         ".cm-cursor, .cm-dropCursor": {
-          borderLeftColor: xR
+          borderLeftColor: eF
         },
         "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection": {
           backgroundColor: "#d7d8de"
         },
         ".cm-panels": {
           backgroundColor: "#f0f0f1",
-          color: JR
+          color: wF
         },
         ".cm-panels.cm-panels-top": {
           borderBottom: "2px solid #d4d4d6"
@@ -358,12 +358,12 @@ export const modules = {
           backgroundColor: "#4078f233"
         },
         ".cm-gutters": {
-          backgroundColor: rR,
-          color: NR,
+          backgroundColor: JF,
+          color: dF,
           border: "none"
         },
         ".cm-activeLineGutter": {
-          backgroundColor: VR
+          backgroundColor: VF
         },
         ".cm-foldPlaceholder": {
           backgroundColor: "transparent",
@@ -372,88 +372,88 @@ export const modules = {
         },
         ".cm-tooltip": {
           border: "none",
-          backgroundColor: BR
+          backgroundColor: AF
         },
         ".cm-tooltip .cm-tooltip-arrow:before": {
           borderTopColor: "transparent",
           borderBottomColor: "transparent"
         },
         ".cm-tooltip .cm-tooltip-arrow:after": {
-          borderTopColor: BR,
-          borderBottomColor: BR
+          borderTopColor: AF,
+          borderBottomColor: AF
         },
         ".cm-tooltip-autocomplete": {
           "& > ul > li[aria-selected]": {
-            backgroundColor: VR,
-            color: JR
+            backgroundColor: VF,
+            color: wF
           }
         }
       }, {
         dark: !1
       }),
-      pR = cu.d.define([{
-        tag: QR.p.keyword,
+      fF = Dk.e.define([{
+        tag: XF.n.keyword,
         color: "#a626a4"
       }, {
-        tag: [QR.p.name, QR.p.deleted, QR.p.character, QR.p.propertyName, QR.p.macroName],
-        color: mR
+        tag: [XF.n.name, XF.n.deleted, XF.n.character, XF.n.propertyName, XF.n.macroName],
+        color: bF
       }, {
-        tag: [QR.p.function(QR.p.variableName), QR.p.labelName],
+        tag: [XF.n.function(XF.n.variableName), XF.n.labelName],
         color: "#4078f2"
       }, {
-        tag: [QR.p.color, QR.p.constant(QR.p.name), QR.p.standard(QR.p.name)],
-        color: XR
+        tag: [XF.n.color, XF.n.constant(XF.n.name), XF.n.standard(XF.n.name)],
+        color: sF
       }, {
-        tag: [QR.p.definition(QR.p.name), QR.p.separator],
-        color: JR
+        tag: [XF.n.definition(XF.n.name), XF.n.separator],
+        color: wF
       }, {
-        tag: [QR.p.typeName, QR.p.className, QR.p.number, QR.p.changed, QR.p.annotation, QR.p.modifier, QR.p.self, QR.p.namespace],
+        tag: [XF.n.typeName, XF.n.className, XF.n.number, XF.n.changed, XF.n.annotation, XF.n.modifier, XF.n.self, XF.n.namespace],
         color: "#c18401"
       }, {
-        tag: [QR.p.operator, QR.p.operatorKeyword, QR.p.url, QR.p.escape, QR.p.regexp, QR.p.link, QR.p.special(QR.p.string)],
+        tag: [XF.n.operator, XF.n.operatorKeyword, XF.n.url, XF.n.escape, XF.n.regexp, XF.n.link, XF.n.special(XF.n.string)],
         color: "#0184bc"
       }, {
-        tag: [QR.p.meta, QR.p.comment],
-        color: NR
+        tag: [XF.n.meta, XF.n.comment],
+        color: dF
       }, {
-        tag: QR.p.strong,
+        tag: XF.n.strong,
         fontWeight: "bold"
       }, {
-        tag: QR.p.emphasis,
+        tag: XF.n.emphasis,
         fontStyle: "italic"
       }, {
-        tag: QR.p.strikethrough,
+        tag: XF.n.strikethrough,
         textDecoration: "line-through"
       }, {
-        tag: QR.p.link,
-        color: NR,
+        tag: XF.n.link,
+        color: dF,
         textDecoration: "underline"
       }, {
-        tag: QR.p.heading,
+        tag: XF.n.heading,
         fontWeight: "bold",
-        color: mR
+        color: bF
       }, {
-        tag: [QR.p.atom, QR.p.bool, QR.p.special(QR.p.variableName)],
-        color: XR
+        tag: [XF.n.atom, XF.n.bool, XF.n.special(XF.n.variableName)],
+        color: sF
       }, {
-        tag: [QR.p.processingInstruction, QR.p.string, QR.p.inserted],
+        tag: [XF.n.processingInstruction, XF.n.string, XF.n.inserted],
         color: "#50a14f"
       }, {
-        tag: QR.p.invalid,
+        tag: XF.n.invalid,
         color: "#000000"
       }]),
-      TR = [SR, (0, cu.gb)(pR)];
-    var WR = yu(36681),
-      jR = yu(41060);
-    const HR = Qu.i.define(),
-      dR = Qu.j.define({
+      mF = [yF, (0, Dk.mb)(fF)];
+    var WF = Bk(36582),
+      vF = Bk(40886);
+    const iF = ak.f.define(),
+      YF = ak.j.define({
         create: () => !1,
-        update(uu, Ru) {
-          for (const yu of Ru.effects) yu.is(HR) && (uu = yu.value);
-          return uu
+        update(kk, Fk) {
+          for (const Bk of Fk.effects) Bk.is(iF) && (kk = Bk.value);
+          return kk
         }
       }),
-      bR = [{
+      oF = [{
         action: "explain",
         label: "Explain this"
       }, {
@@ -464,68 +464,68 @@ export const modules = {
         label: "Change this\u2026"
       }];
 
-    function CR(uu, Ru) {
-      return [dR, Qu.k.fromClass(class {
-        constructor(uu) {
-          this.view = uu, this.onDown = uu => {
-            const Ru = uu.target instanceof Element && null !== uu.target.closest(".cm-tooltip");
-            0 !== uu.button || Ru || this.view.state.field(dR) || this.view.dispatch({
-              effects: HR.of(!0)
+    function LF(kk, Fk) {
+      return [YF, ak.l.fromClass(class {
+        constructor(kk) {
+          this.view = kk, this.onDown = kk => {
+            const Fk = kk.target instanceof Element && null !== kk.target.closest(".cm-tooltip");
+            0 !== kk.button || Fk || this.view.state.field(YF) || this.view.dispatch({
+              effects: iF.of(!0)
             })
           }, this.onUp = () => {
-            this.view.state.field(dR) && this.view.dispatch({
-              effects: HR.of(!1)
+            this.view.state.field(YF) && this.view.dispatch({
+              effects: iF.of(!1)
             })
-          }, uu.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
+          }, kk.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
         }
         destroy() {
           this.view.dom.removeEventListener("mousedown", this.onDown), document.removeEventListener("mouseup", this.onUp), window.removeEventListener("blur", this.onUp)
         }
-      }), Qu.q.compute(["selection", dR], (yu => function(uu, Ru, yu) {
-        const Eu = uu.selection.main;
-        return Eu.empty || uu.field(dR) || uu.sliceDoc(Eu.from, Eu.to).trim().length < 2 ? null : {
-          pos: Eu.from,
+      }), ak.u.compute(["selection", YF], (Bk => function(kk, Fk, Bk) {
+        const Rk = kk.selection.main;
+        return Rk.empty || kk.field(YF) || kk.sliceDoc(Rk.from, Rk.to).trim().length < 2 ? null : {
+          pos: Rk.from,
           above: !0,
-          create: uu => {
-            const Eu = document.createElement("div");
-            Eu.className = "CodeSelectionActions", Eu.setAttribute("role", "toolbar"), Eu.setAttribute("aria-label", "AI Helper: picked code");
+          create: kk => {
+            const Rk = document.createElement("div");
+            Rk.className = "CodeSelectionActions", Rk.setAttribute("role", "toolbar"), Rk.setAttribute("aria-label", "AI Helper: picked code");
             for (const {
-                action: Ku,
-                label: Qu
+                action: tk,
+                label: ak
               }
-              of bR) {
-              if (!yu && "explain" !== Ku) continue;
-              const mu = document.createElement("button");
-              mu.type = "button", mu.textContent = Qu, "change" !== Ku && (mu.title = jR.c, mu.dataset.asksAi = "true"), mu.addEventListener("mousedown", (uu => {
-                uu.preventDefault()
-              })), mu.addEventListener("click", (() => {
-                const yu = uu.state.selection.main;
-                if (yu.empty) return;
-                const Eu = {
-                  action: Ku,
-                  path: Ru,
-                  fromLine: uu.state.doc.lineAt(yu.from).number,
-                  toLine: uu.state.doc.lineAt(yu.to > yu.from && uu.state.doc.lineAt(yu.to).from === yu.to ? yu.to - 1 : yu.to).number,
-                  text: uu.state.sliceDoc(yu.from, yu.to)
+              of oF) {
+              if (!Bk && "explain" !== tk) continue;
+              const Xk = document.createElement("button");
+              Xk.type = "button", Xk.textContent = ak, "change" !== tk && (Xk.title = vF.d, Xk.dataset.asksAi = "true"), Xk.addEventListener("mousedown", (kk => {
+                kk.preventDefault()
+              })), Xk.addEventListener("click", (() => {
+                const Bk = kk.state.selection.main;
+                if (Bk.empty) return;
+                const Rk = {
+                  action: tk,
+                  path: Fk,
+                  fromLine: kk.state.doc.lineAt(Bk.from).number,
+                  toLine: kk.state.doc.lineAt(Bk.to > Bk.from && kk.state.doc.lineAt(Bk.to).from === Bk.to ? Bk.to - 1 : Bk.to).number,
+                  text: kk.state.sliceDoc(Bk.from, Bk.to)
                 };
-                nu.k.Op("WorldCodeAiSelection", Eu), uu.dispatch({
+                Uk.o.Hf("WorldCodeAiSelection", Rk), kk.dispatch({
                   selection: {
-                    anchor: yu.to
+                    anchor: Bk.to
                   }
                 })
-              })), Eu.appendChild(mu)
+              })), Rk.appendChild(Xk)
             }
             return {
-              dom: Eu
+              dom: Rk
             }
           }
         }
-      }(yu, uu, Ru)))]
+      }(Bk, kk, Fk)))]
     }
-    var kR = yu(1079);
-    const eR = new Set(["(", "{", "[", "<"]),
-      AR = new Set([")", "}", "]", ">"]),
-      DR = {
+    var OF = Bk(1069);
+    const EF = new Set(["(", "{", "[", "<"]),
+      SF = new Set([")", "}", "]", ">"]),
+      NF = {
         text: "var(--codeTooltipText, white)",
         parameterName: "var(--codeTooltipParameterName, orange)",
         parameter: "var(--codeTooltipParameter, cyan)",
@@ -533,100 +533,100 @@ export const modules = {
         docs: "var(--codeTooltipDocs, gray)"
       };
 
-    function MR(uu) {
-      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    function HF(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
 
-      function yu(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Eu = [];
-        for (const Ku of uu) {
-          let uu;
-          uu = "punctuation" === Ku.kind ? DR.text : "parameterName" === Ku.kind ? DR.parameterName : Ru, Eu.push({
-            str: Ku.text,
+      function Bk(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Rk = [];
+        for (const tk of kk) {
+          let kk;
+          kk = "punctuation" === tk.kind ? NF.text : "parameterName" === tk.kind ? NF.parameterName : Fk, Rk.push({
+            str: tk.text,
             style: {
-              color: uu,
-              opacity: yu ? .5 : void 0
+              color: kk,
+              opacity: Bk ? .5 : void 0
             }
           })
         }
-        return Eu
+        return Rk
       }
-      const Eu = [];
-      if (Eu.push(...yu(uu.prefixDisplayParts, DR.text)), uu.parameters.length > 0) {
-        Eu.push("\n");
-        for (let Ku = 0; Ku < uu.parameters.length; Ku++) {
-          const Qu = uu.parameters[Ku];
-          Eu.push("\t"), Eu.push(...yu(Qu.displayParts, DR.parameter, null !== Ru && Ku !== Ru)), Eu.push("\n")
+      const Rk = [];
+      if (Rk.push(...Bk(kk.prefixDisplayParts, NF.text)), kk.parameters.length > 0) {
+        Rk.push("\n");
+        for (let tk = 0; tk < kk.parameters.length; tk++) {
+          const ak = kk.parameters[tk];
+          Rk.push("\t"), Rk.push(...Bk(ak.displayParts, NF.parameter, null !== Fk && tk !== Fk)), Rk.push("\n")
         }
       }
-      return Eu.push(...yu(uu.suffixDisplayParts, DR.suffix)), uu.documentation && (Eu.push("\n\n"), Eu.push(...yu(uu.documentation, DR.docs))), Eu
+      return Rk.push(...Bk(kk.suffixDisplayParts, NF.suffix)), kk.documentation && (Rk.push("\n\n"), Rk.push(...Bk(kk.documentation, NF.docs))), Rk
     }
-    var IR = function(uu) {
-      return uu[uu.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", uu[uu.DuplicateIdentifier = 2300] = "DuplicateIdentifier", uu
-    }(IR || {});
-    const GR = new Set([IR.DuplicateIdentifier]),
-      UR = new Set([IR.VariableDefinedElsewhere]),
-      nR = new Set([]),
-      sR = "/index.js";
+    var uF = function(kk) {
+      return kk[kk.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", kk[kk.DuplicateIdentifier = 2300] = "DuplicateIdentifier", kk
+    }(uF || {});
+    const MF = new Set([uF.DuplicateIdentifier]),
+      gF = new Set([uF.VariableDefinedElsewhere]),
+      UF = new Set([]),
+      cF = "/index.js";
 
-    function tR(uu) {
-      return "/" + uu
-    }
-
-    function lR(uu, Ru, yu) {
-      uu.getSourceFile(Ru) && uu.deleteFile(Ru), uu.createFile(Ru, yu)
+    function GF(kk) {
+      return "/" + kk
     }
 
-    function gR(uu) {
-      return !!uu && ((0, bu.s)(uu) || (0, bu.p)(uu))
+    function TF(kk, Fk, Bk) {
+      kk.getSourceFile(Fk) && kk.deleteFile(Fk), kk.createFile(Fk, Bk)
     }
 
-    function cR(uu, Ru, yu) {
+    function rF(kk) {
+      return !!kk && ((0, Yk.o)(kk) || (0, Yk.k)(kk))
+    }
+
+    function DF(kk, Fk, Bk) {
       return () => {
-        let Eu = [...Ru.languageService.getSemanticDiagnostics(yu), ...Ru.languageService.getSyntacticDiagnostics(yu)];
-        return Eu = Eu.filter((uu => !(0, eu.E)(uu.start) && !(0, eu.E)(uu.length) && !GR.has(uu.code))), uu || (Eu = Eu.filter((uu => !UR.has(uu.code)))), Eu.map((uu => ({
-          from: uu.start,
-          to: uu.start + uu.length,
-          message: "string" === typeof uu.messageText ? uu.messageText : uu.messageText.messageText,
-          severity: nR.has(uu.code) ? "warning" : "error"
+        let Rk = [...Fk.languageService.getSemanticDiagnostics(Bk), ...Fk.languageService.getSyntacticDiagnostics(Bk)];
+        return Rk = Rk.filter((kk => !(0, Ek.F)(kk.start) && !(0, Ek.F)(kk.length) && !MF.has(kk.code))), kk || (Rk = Rk.filter((kk => !gF.has(kk.code)))), Rk.map((kk => ({
+          from: kk.start,
+          to: kk.start + kk.length,
+          message: "string" === typeof kk.messageText ? kk.messageText : kk.messageText.messageText,
+          severity: UF.has(kk.code) ? "warning" : "error"
         })))
       }
     }
 
-    function LR(uu, Ru) {
-      return yu => {
-        var Eu, Ku;
-        const Qu = uu.languageService.getCompletionsAtPosition(Ru, yu.pos, {});
-        if (!Qu) return {
-          from: yu.pos,
+    function zF(kk, Fk) {
+      return Bk => {
+        var Rk, tk;
+        const ak = kk.languageService.getCompletionsAtPosition(Fk, Bk.pos, {});
+        if (!ak) return {
+          from: Bk.pos,
           options: []
         };
-        let mu = null !== (Eu = null === (Ku = Qu.optionalReplacementSpan) || void 0 === Ku ? void 0 : Ku.start) && void 0 !== Eu ? Eu : yu.pos;
-        if (!Qu.optionalReplacementSpan) {
-          const uu = yu.state.doc.sliceString(0, yu.pos);
-          for (; mu > 0 && /[\w$]/.test(uu[mu - 1]);) mu--
+        let Xk = null !== (Rk = null === (tk = ak.optionalReplacementSpan) || void 0 === tk ? void 0 : tk.start) && void 0 !== Rk ? Rk : Bk.pos;
+        if (!ak.optionalReplacementSpan) {
+          const kk = Bk.state.doc.sliceString(0, Bk.pos);
+          for (; Xk > 0 && /[\w$]/.test(kk[Xk - 1]);) Xk--
         }
-        return Qu.entries = Qu.entries.filter((uu => uu.kind !== pu().ScriptElementKind.warning)), {
-          from: mu,
-          options: Qu.entries.map((Eu => {
-            var Ku, Qu, Ju, Nu;
-            const Xu = uu.languageService.getCompletionEntryDetails(Ru, yu.pos, Eu.name, {}, Eu.source, {}, Eu.data),
-              Vu = null !== (Ku = null === (Qu = Eu.replacementSpan) || void 0 === Qu ? void 0 : Qu.start) && void 0 !== Ku ? Ku : mu,
-              ru = Eu.replacementSpan ? Eu.replacementSpan.start + Eu.replacementSpan.length : yu.pos,
-              Bu = null !== (Ju = Eu.insertText) && void 0 !== Ju ? Ju : Eu.name;
+        return ak.entries = ak.entries.filter((kk => kk.kind !== yk().ScriptElementKind.warning)), {
+          from: Xk,
+          options: ak.entries.map((Rk => {
+            var tk, ak, bk, wk;
+            const dk = kk.languageService.getCompletionEntryDetails(Fk, Bk.pos, Rk.name, {}, Rk.source, {}, Rk.data),
+              sk = null !== (tk = null === (ak = Rk.replacementSpan) || void 0 === ak ? void 0 : ak.start) && void 0 !== tk ? tk : Xk,
+              Vk = Rk.replacementSpan ? Rk.replacementSpan.start + Rk.replacementSpan.length : Bk.pos,
+              Jk = null !== (bk = Rk.insertText) && void 0 !== bk ? bk : Rk.name;
             return {
-              label: Eu.name,
-              detail: null === Xu || void 0 === Xu ? void 0 : Xu.displayParts.map((uu => uu.text)).join(""),
-              info: null === Xu || void 0 === Xu || null === (Nu = Xu.documentation) || void 0 === Nu ? void 0 : Nu.map((uu => uu.text)).join(""),
-              apply: uu => {
-                uu.dispatch({
+              label: Rk.name,
+              detail: null === dk || void 0 === dk ? void 0 : dk.displayParts.map((kk => kk.text)).join(""),
+              info: null === dk || void 0 === dk || null === (wk = dk.documentation) || void 0 === wk ? void 0 : wk.map((kk => kk.text)).join(""),
+              apply: kk => {
+                kk.dispatch({
                   changes: {
-                    from: Vu,
-                    to: ru,
-                    insert: Bu
+                    from: sk,
+                    to: Vk,
+                    insert: Jk
                   },
                   selection: {
-                    anchor: Vu + Bu.length
+                    anchor: sk + Jk.length
                   }
                 })
               }
@@ -636,114 +636,114 @@ export const modules = {
       }
     }
 
-    function zR(uu) {
-      return Ru => {
-        const yu = document.createElement("div");
-        yu.className = "CodeEditorTooltip";
-        let Eu = !1;
+    function PF(kk) {
+      return Fk => {
+        const Bk = document.createElement("div");
+        Bk.className = "CodeEditorTooltip";
+        let Rk = !1;
         return queueMicrotask((() => {
-          Eu || (Ju.render((0, kR.jsx)(Bu.d, {
-            text: uu
-          }), yu), Ru.requestMeasure())
+          Rk || (bk.render((0, OF.jsx)(Jk.d, {
+            text: kk
+          }), Bk), Fk.requestMeasure())
         })), {
-          dom: yu,
+          dom: Bk,
           destroy() {
-            Eu = !0, queueMicrotask((() => {
-              Ju.unmountComponentAtNode(yu)
+            Rk = !0, queueMicrotask((() => {
+              bk.unmountComponentAtNode(Bk)
             }))
           }
         }
       }
     }
 
-    function FR(uu, Ru, yu) {
-      return Eu => {
-        var Ku;
-        if (!Ru) return [];
-        const Qu = null === (Ku = Eu.selection.yT[0]) || void 0 === Ku ? void 0 : Ku.head;
-        if (void 0 === Qu) return [];
-        const mu = uu.languageService.getSignatureHelpItems(yu, Qu, {});
-        if (!mu || !mu.items.length) return [];
-        const Ju = mu.applicableSpan.start - mu.items[0].prefixDisplayParts.map((uu => uu.text)).join("").length,
-          Nu = mu.applicableSpan.start,
-          Xu = Eu.doc.lineAt(Qu),
-          Vu = Xu.from,
-          ru = Math.min(Xu.to, Qu);
-        let Bu, xu;
-        return Ju < Vu ? (Bu = Vu, xu = ru) : (Bu = Ju, xu = Nu), [{
-          pos: Bu,
-          end: xu,
+    function hF(kk, Fk, Bk) {
+      return Rk => {
+        var tk;
+        if (!Fk) return [];
+        const ak = null === (tk = Rk.selection.hb[0]) || void 0 === tk ? void 0 : tk.head;
+        if (void 0 === ak) return [];
+        const Xk = kk.languageService.getSignatureHelpItems(Bk, ak, {});
+        if (!Xk || !Xk.items.length) return [];
+        const bk = Xk.applicableSpan.start - Xk.items[0].prefixDisplayParts.map((kk => kk.text)).join("").length,
+          wk = Xk.applicableSpan.start,
+          dk = Rk.doc.lineAt(ak),
+          sk = dk.from,
+          Vk = Math.min(dk.to, ak);
+        let Jk, Ak;
+        return bk < sk ? (Jk = sk, Ak = Vk) : (Jk = bk, Ak = wk), [{
+          pos: Jk,
+          end: Ak,
           above: !1,
-          create: zR(MR(mu.items[0], mu.argumentIndex))
+          create: PF(HF(Xk.items[0], Xk.argumentIndex))
         }]
       }
     }
 
-    function wR(uu, Ru) {
-      return (yu, Eu, Ku) => {
-        const Qu = uu.languageService.getQuickInfoAtPosition(Ru, Eu);
-        if (!Qu) return [];
-        const mu = Qu.textSpan.start,
-          Ju = Qu.textSpan.start + Qu.textSpan.length;
-        if (Eu < mu || Eu >= Ju) return [];
-        if (Qu.kind === pu().ScriptElementKind.memberFunctionElement || Qu.kind === pu().ScriptElementKind.variableElement && "declare" === Qu.kindModifiers) {
-          const uu = Qu.displayParts.findIndex((uu => "space" === uu.kind)); - 1 !== uu && (Qu.displayParts = Qu.displayParts.slice(uu));
-          const Ru = {
+    function qF(kk, Fk) {
+      return (Bk, Rk, tk) => {
+        const ak = kk.languageService.getQuickInfoAtPosition(Fk, Rk);
+        if (!ak) return [];
+        const Xk = ak.textSpan.start,
+          bk = ak.textSpan.start + ak.textSpan.length;
+        if (Rk < Xk || Rk >= bk) return [];
+        if (ak.kind === yk().ScriptElementKind.memberFunctionElement || ak.kind === yk().ScriptElementKind.variableElement && "declare" === ak.kindModifiers) {
+          const kk = ak.displayParts.findIndex((kk => "space" === kk.kind)); - 1 !== kk && (ak.displayParts = ak.displayParts.slice(kk));
+          const Fk = {
               prefixDisplayParts: [],
               parameters: [],
               suffixDisplayParts: [],
               documentation: []
             },
-            yu = Qu.displayParts.findIndex((uu => "punctuation" === uu.kind && "(" === uu.text)); - 1 !== yu && (Ru.prefixDisplayParts = Qu.displayParts.slice(0, yu + 1), Qu.displayParts = Qu.displayParts.slice(yu + 1));
-          const Eu = Qu.displayParts.findLastIndex((uu => "punctuation" === uu.kind && ")" === uu.text)); - 1 !== Eu && (Ru.suffixDisplayParts = Qu.displayParts.slice(Eu), Qu.displayParts = Qu.displayParts.slice(0, Eu));
-          let Ku = 0,
-            Nu = [];
-          for (const mu of Qu.displayParts)
-            if (eR.has(mu.text) ? Ku++ : AR.has(mu.text) && Ku--, "lineBreak" !== mu.kind) {
-              if ("space" === mu.kind) {
-                if (0 === Nu.length) continue;
-                Nu.push({
+            Bk = ak.displayParts.findIndex((kk => "punctuation" === kk.kind && "(" === kk.text)); - 1 !== Bk && (Fk.prefixDisplayParts = ak.displayParts.slice(0, Bk + 1), ak.displayParts = ak.displayParts.slice(Bk + 1));
+          const Rk = ak.displayParts.findLastIndex((kk => "punctuation" === kk.kind && ")" === kk.text)); - 1 !== Rk && (Fk.suffixDisplayParts = ak.displayParts.slice(Rk), ak.displayParts = ak.displayParts.slice(0, Rk));
+          let tk = 0,
+            wk = [];
+          for (const Xk of ak.displayParts)
+            if (EF.has(Xk.text) ? tk++ : SF.has(Xk.text) && tk--, "lineBreak" !== Xk.kind) {
+              if ("space" === Xk.kind) {
+                if (0 === wk.length) continue;
+                wk.push({
                   kind: "space",
                   text: " "
                 })
-              } else Nu.push(mu);
-              0 === Ku && "," === mu.text && (Ru.parameters.push({
-                displayParts: Nu
-              }), Nu = [])
-            } return Nu.length > 0 && Ru.parameters.push({
-            displayParts: Nu
-          }), Ru.documentation = Qu.documentation, [{
-            pos: mu,
-            end: Ju,
+              } else wk.push(Xk);
+              0 === tk && "," === Xk.text && (Fk.parameters.push({
+                displayParts: wk
+              }), wk = [])
+            } return wk.length > 0 && Fk.parameters.push({
+            displayParts: wk
+          }), Fk.documentation = ak.documentation, [{
+            pos: Xk,
+            end: bk,
             above: !0,
-            create: zR(MR(Ru))
+            create: PF(HF(Fk))
           }]
         }
-        const Nu = [];
-        for (const uu of Qu.displayParts) Nu.push({
-          str: uu.text,
+        const wk = [];
+        for (const kk of ak.displayParts) wk.push({
+          str: kk.text,
           style: {
-            color: DR.text
+            color: NF.text
           }
         });
-        if (Qu.documentation) {
-          Nu.push("\n\n");
-          for (const uu of Qu.documentation) Nu.push({
-            str: uu.text,
+        if (ak.documentation) {
+          wk.push("\n\n");
+          for (const kk of ak.documentation) wk.push({
+            str: kk.text,
             style: {
-              color: DR.docs
+              color: NF.docs
             }
           })
         }
         return [{
-          pos: mu,
-          end: Ju,
+          pos: Xk,
+          end: bk,
           above: !0,
-          create: zR(Nu)
+          create: PF(wk)
         }]
       }
     }
-    const ZR = {
+    const CF = {
       indentSize: 4,
       tabSize: 4,
       newLineCharacter: "\n",
@@ -762,209 +762,209 @@ export const modules = {
       insertSpaceAfterTypeAssertion: !1,
       placeOpenBraceOnNewLineForFunctions: !1,
       placeOpenBraceOnNewLineForControlBlocks: !1,
-      semicolons: pu().SemicolonPreference.Insert
+      semicolons: yk().SemicolonPreference.Insert
     };
-    const hR = Qu.i.define(),
-      PR = {
+    const ZF = ak.f.define(),
+      pF = {
         lineNumbers: !0,
         tabSize: 4
       };
 
-    function iR(uu) {
+    function KF(kk) {
       let {
-        isLobbyCode: Ru,
-        code: yu,
-        onChange: Ju,
-        canEditCode: Bu,
-        setTemporaryMessage: Su,
-        close: eu,
-        showTooltips: Pu,
-        lightMode: iu,
-        collabState: ou,
-        onRemoteDocChange: qu,
-        files: Ou,
-        activePath: vu,
-        pluginName: fu,
-        pluginFile: uR,
-        pluginSource: yR,
-        setActiveDocReplacer: ER,
-        showAiHints: QR,
-        canAiChangeCode: mR = Bu
-      } = uu;
-      const [JR, NR] = (0, mu.useState)(null), XR = null === ou || void 0 === ou ? void 0 : ou.version, VR = null === ou || void 0 === ou ? void 0 : ou.clientID, rR = (0, mu.useRef)({
-        isLobbyCode: Ru,
-        files: Ou,
-        code: yu,
-        activePath: vu
-      }), BR = (0, mu.useRef)(qu);
-      BR.current = qu;
-      const xR = (0, mu.useRef)(null),
-        SR = (0, mu.useRef)(ou);
-      SR.current = ou;
-      const pR = (0, mu.useRef)(null),
-        jR = (0, mu.useRef)(null),
-        HR = (0, mu.useRef)(null),
-        dR = (0, mu.useRef)(eu);
-      dR.current = eu;
-      const bR = (0, mu.useRef)(yu);
-      bR.current = yu;
-      const eR = (0, mu.useRef)(yR);
-      eR.current = yR;
-      const AR = function(uu, Ru, yu, Eu) {
-        return yu ? `/plugin-preview/${yu}/${null!==Eu&&void 0!==Eu?Eu:"index.ts"}` : uu ? tR(null !== Ru && void 0 !== Ru ? Ru : du.k) : sR
-      }(Ru, vu, fu, uR);
-      (0, mu.useEffect)((() => {
+        isLobbyCode: Fk,
+        code: Bk,
+        onChange: bk,
+        canEditCode: Jk,
+        setTemporaryMessage: ek,
+        close: Ek,
+        showTooltips: pk,
+        lightMode: Kk,
+        collabState: jk,
+        onRemoteDocChange: lk,
+        files: nk,
+        activePath: Ik,
+        pluginName: kF,
+        pluginFile: FF,
+        pluginSource: RF,
+        setActiveDocReplacer: tF,
+        showAiHints: XF,
+        canAiChangeCode: bF = Jk
+      } = kk;
+      const [wF, dF] = (0, Xk.useState)(null), sF = null === jk || void 0 === jk ? void 0 : jk.version, VF = null === jk || void 0 === jk ? void 0 : jk.clientID, JF = (0, Xk.useRef)({
+        isLobbyCode: Fk,
+        files: nk,
+        code: Bk,
+        activePath: Ik
+      }), AF = (0, Xk.useRef)(lk);
+      AF.current = lk;
+      const eF = (0, Xk.useRef)(null),
+        yF = (0, Xk.useRef)(jk);
+      yF.current = jk;
+      const fF = (0, Xk.useRef)(null),
+        vF = (0, Xk.useRef)(null),
+        iF = (0, Xk.useRef)(null),
+        YF = (0, Xk.useRef)(Ek);
+      YF.current = Ek;
+      const oF = (0, Xk.useRef)(Bk);
+      oF.current = Bk;
+      const EF = (0, Xk.useRef)(RF);
+      EF.current = RF;
+      const SF = function(kk, Fk, Bk, Rk) {
+        return Bk ? `/plugin-preview/${Bk}/${null!==Rk&&void 0!==Rk?Rk:"index.ts"}` : kk ? GF(null !== Fk && void 0 !== Fk ? Fk : ik.h) : cF
+      }(Fk, Ik, kF, FF);
+      (0, Xk.useEffect)((() => {
         !async function() {
           const {
-            isLobbyCode: uu,
-            files: Ru,
-            code: yu,
-            activePath: Eu
-          } = rR.current, Ku = {
+            isLobbyCode: kk,
+            files: Fk,
+            code: Bk,
+            activePath: Rk
+          } = JF.current, tk = {
             allowJs: !0,
             checkJs: !1,
             noLib: !0,
             strict: !1,
-            module: pu().ModuleKind.ESNext,
-            moduleResolution: pu().ModuleResolutionKind.Bundler,
-            target: pu().ScriptTarget.ES2015,
+            module: yk().ModuleKind.ESNext,
+            moduleResolution: yk().ModuleResolutionKind.Bundler,
+            target: yk().ScriptTarget.ES2015,
             paths: {
               "@bloxd": ["/node_modules/@bloxd/index.d.ts"],
-              ...Object.fromEntries(Object.values(Hu.h).map((uu => [uu.specifier, [uu.typesVfsPath]])))
+              ...Object.fromEntries(Object.values(vk.h).map((kk => [kk.specifier, [kk.typesVfsPath]])))
             }
-          }, Qu = new Map, mu = [];
-          if (uu) {
-            const uu = null !== Ru && void 0 !== Ru ? Ru : {
-              [du.k]: yu || "\n"
+          }, ak = new Map, Xk = [];
+          if (kk) {
+            const kk = null !== Fk && void 0 !== Fk ? Fk : {
+              [ik.h]: Bk || "\n"
             };
-            for (const [Ru, yu] of Object.entries(uu)) {
-              const uu = tR(Ru);
-              Qu.set(uu, yu || "\n"), mu.push(uu)
+            for (const [Fk, Bk] of Object.entries(kk)) {
+              const kk = GF(Fk);
+              ak.set(kk, Bk || "\n"), Xk.push(kk)
             }
-            const Ku = tR(null !== Eu && void 0 !== Eu ? Eu : du.k);
-            Qu.has(Ku) ? Qu.set(Ku, yu || "\n") : (Qu.set(Ku, yu || "\n"), mu.push(Ku)), Qu.set("/node_modules/@bloxd/index.d.ts", Vu.default), mu.push("/node_modules/@bloxd/index.d.ts");
-            for (const Ru of Object.values(Hu.h)) {
-              Qu.set(Ru.typesVfsPath, Ru.types), mu.push(Ru.typesVfsPath);
-              for (const [uu, yu] of Object.entries(Ru.files)) {
-                const Eu = `/plugin-preview/${Ru.name}/${uu}`;
-                Qu.set(Eu, yu || "\n"), mu.push(Eu)
+            const tk = GF(null !== Rk && void 0 !== Rk ? Rk : ik.h);
+            ak.has(tk) ? ak.set(tk, Bk || "\n") : (ak.set(tk, Bk || "\n"), Xk.push(tk)), ak.set("/node_modules/@bloxd/index.d.ts", sk.default), Xk.push("/node_modules/@bloxd/index.d.ts");
+            for (const Fk of Object.values(vk.h)) {
+              ak.set(Fk.typesVfsPath, Fk.types), Xk.push(Fk.typesVfsPath);
+              for (const [kk, Bk] of Object.entries(Fk.files)) {
+                const Rk = `/plugin-preview/${Fk.name}/${kk}`;
+                ak.set(Rk, Bk || "\n"), Xk.push(Rk)
               }
             }
-          } else Qu.set(sR, yu || "\n"), mu.push(sR);
-          Qu.set("/globals.d.ts", uu ? Xu.d : Nu.d), Qu.set("/lib.d.ts", ru.c), mu.push("/globals.d.ts", "/lib.d.ts");
-          const Ju = xu.e(Qu),
-            Bu = xu.f(Ju, mu, pu(), Ku);
-          NR({
-            ET: Bu,
-            fsMap: Qu
+          } else ak.set(cF, Bk || "\n"), Xk.push(cF);
+          ak.set("/globals.d.ts", kk ? dk.b : wk.d), ak.set("/lib.d.ts", Vk.d), Xk.push("/globals.d.ts", "/lib.d.ts");
+          const bk = Ak.b(ak),
+            Jk = Ak.f(bk, Xk, yk(), tk);
+          dF({
+            lb: Jk,
+            fsMap: ak
           })
         }()
-      }), []), (0, mu.useEffect)((() => {
-        var uu, Eu;
-        if (!JR || !Ru) return;
+      }), []), (0, Xk.useEffect)((() => {
+        var kk, Rk;
+        if (!wF || !Fk) return;
         const {
-          ET: Ku,
-          fsMap: Qu
-        } = JR;
-        if (function(uu, Ru, yu) {
-            const Eu = new Set;
-            for (const [Ku, Qu] of Object.entries(yu)) {
-              const yu = tR(Ku);
-              Eu.add(yu);
-              const mu = Qu || "\n";
-              Ru.get(yu) !== mu && (Ru.set(yu, mu), lR(uu, yu, mu))
+          lb: tk,
+          fsMap: ak
+        } = wF;
+        if (function(kk, Fk, Bk) {
+            const Rk = new Set;
+            for (const [tk, ak] of Object.entries(Bk)) {
+              const Bk = GF(tk);
+              Rk.add(Bk);
+              const Xk = ak || "\n";
+              Fk.get(Bk) !== Xk && (Fk.set(Bk, Xk), TF(kk, Bk, Xk))
             }
-            for (const Ku of [...Ru.keys()]) "/globals.d.ts" === Ku || "/lib.d.ts" === Ku || Ku.startsWith("/node_modules/") || Ku.startsWith("/plugin-preview/") || Eu.has(Ku) || (Ru.delete(Ku), uu.getSourceFile(Ku) && uu.deleteFile(Ku))
-          }(Ku, Qu, null !== Ou && void 0 !== Ou ? Ou : {
-            [du.k]: yu || "\n"
-          }), fu) return void lR(Ku, AR, yR || "\n");
-        const mu = null !== (uu = null === (Eu = xR.current) || void 0 === Eu ? void 0 : Eu.state.doc.toString()) && void 0 !== uu ? uu : yu;
-        lR(Ku, AR, mu || "\n")
-      }), [Ou, vu, JR, fu, yR, AR, yu, Ru]), (0, mu.useEffect)((() => {
-        if (!JR) return;
+            for (const tk of [...Fk.keys()]) "/globals.d.ts" === tk || "/lib.d.ts" === tk || tk.startsWith("/node_modules/") || tk.startsWith("/plugin-preview/") || Rk.has(tk) || (Fk.delete(tk), kk.getSourceFile(tk) && kk.deleteFile(tk))
+          }(tk, ak, null !== nk && void 0 !== nk ? nk : {
+            [ik.h]: Bk || "\n"
+          }), kF) return void TF(tk, SF, RF || "\n");
+        const Xk = null !== (kk = null === (Rk = eF.current) || void 0 === Rk ? void 0 : Rk.state.doc.toString()) && void 0 !== kk ? kk : Bk;
+        TF(tk, SF, Xk || "\n")
+      }), [nk, Ik, wF, kF, RF, SF, Bk, Fk]), (0, Xk.useEffect)((() => {
+        if (!wF) return;
         const {
-          ET: uu
-        } = JR;
-        lR(uu, AR, (fu ? yR : yu) || "\n")
-      }), [yu, fu, yR, AR, JR]), (0, mu.useEffect)((() => () => {
-        jR.current && (jR.current(), jR.current = null)
-      }), []), (0, mu.useEffect)((() => (ER(((uu, Ru) => {
-        if (fu) return !1;
-        const yu = xR.current,
-          Eu = SR.current,
-          Ku = Eu ? (0, bu.B)(Eu.docKey) : null;
-        if (!yu || !Eu || pR.current !== Eu.clientID || uu !== Ku) return !1;
-        const Qu = yu.state.doc.toString();
-        return Qu !== Ru && yu.dispatch({
+          lb: kk
+        } = wF;
+        TF(kk, SF, (kF ? RF : Bk) || "\n")
+      }), [Bk, kF, RF, SF, wF]), (0, Xk.useEffect)((() => () => {
+        vF.current && (vF.current(), vF.current = null)
+      }), []), (0, Xk.useEffect)((() => (tF(((kk, Fk) => {
+        if (kF) return !1;
+        const Bk = eF.current,
+          Rk = yF.current,
+          tk = Rk ? (0, Yk.v)(Rk.docKey) : null;
+        if (!Bk || !Rk || fF.current !== Rk.clientID || kk !== tk) return !1;
+        const ak = Bk.state.doc.toString();
+        return ak !== Fk && Bk.dispatch({
           changes: {
             from: 0,
-            to: Qu.length,
-            insert: Ru
+            to: ak.length,
+            insert: Fk
           }
         }), !0
       })), () => {
-        xR.current = null, pR.current = null, ER(null)
-      })), [ER, fu]);
-      const DR = Ru ? fu ? null : null !== vu && void 0 !== vu ? vu : du.k : WR.d,
-        MR = RR(xR, DR);
-      KR(xR, Su), (0, ku.e)("FormatCode", (() => {
-        if (!JR || !xR.current || fu) return;
+        eF.current = null, fF.current = null, tF(null)
+      })), [tF, kF]);
+      const NF = Fk ? kF ? null : null !== Ik && void 0 !== Ik ? Ik : ik.h : WF.c,
+        HF = BF(eF, NF);
+      aF(eF, ek), (0, Ok.f)("FormatCode", (() => {
+        if (!wF || !eF.current || kF) return;
         const {
-          ET: uu,
-          fsMap: yu
-        } = JR, Eu = uu.getSourceFile(AR).getFullText();
-        let Ku = 0;
-        if (Ru && Ou)
-          for (const [Ru, Ju] of Object.entries(Ou)) Ru !== (null !== vu && void 0 !== vu ? vu : du.k) && (Ku += Ju.length);
-        const Qu = function(uu, Ru, yu, Eu, Ku) {
-          const Qu = uu.languageService.getFormattingEditsForDocument(Eu, ZR);
-          if (!Qu.length) return Au.c.error("Code is already formatted.");
-          Qu.sort(((uu, Ru) => Ru.span.start - uu.span.start));
-          let mu = uu.getSourceFile(Eu).getFullText();
-          for (const Ju of Qu) mu = mu.slice(0, Ju.span.start) + Ju.Xm + mu.slice(Ju.span.start + Ju.span.length);
-          return mu !== (yu ? (0, Cu.n)(mu, Ku) : (0, Cu.j)(mu)) ? Au.c.error("Formatting the code will go beyond the character limit.") : Au.c.value(mu)
-        }(uu, 0, Ru, AR, Ku);
-        if (Qu.isError()) return void Su({
-          message: Qu.asError().message,
+          lb: kk,
+          fsMap: Bk
+        } = wF, Rk = kk.getSourceFile(SF).getFullText();
+        let tk = 0;
+        if (Fk && nk)
+          for (const [Fk, bk] of Object.entries(nk)) Fk !== (null !== Ik && void 0 !== Ik ? Ik : ik.h) && (tk += bk.length);
+        const ak = function(kk, Fk, Bk, Rk, tk) {
+          const ak = kk.languageService.getFormattingEditsForDocument(Rk, CF);
+          if (!ak.length) return Sk.c.error("Code is already formatted.");
+          ak.sort(((kk, Fk) => Fk.span.start - kk.span.start));
+          let Xk = kk.getSourceFile(Rk).getFullText();
+          for (const bk of ak) Xk = Xk.slice(0, bk.span.start) + bk.fX + Xk.slice(bk.span.start + bk.span.length);
+          return Xk !== (Bk ? (0, Lk.g)(Xk, tk) : (0, Lk.f)(Xk)) ? Sk.c.error("Formatting the code will go beyond the character limit.") : Sk.c.value(Xk)
+        }(kk, 0, Fk, SF, tk);
+        if (ak.isError()) return void ek({
+          message: ak.asError().message,
           type: "warning"
         });
-        const mu = Qu.getValue();
-        mu && (xR.current.dispatch({
+        const Xk = ak.getValue();
+        Xk && (eF.current.dispatch({
           changes: {
             from: 0,
-            to: Eu.length,
-            insert: mu
+            to: Rk.length,
+            insert: Xk
           },
           selection: {
-            anchor: mu.length
+            anchor: Xk.length
           }
-        }), lR(uu, AR, mu), Ju(mu))
+        }), TF(kk, SF, Xk), bk(Xk))
       }));
-      const IR = (0, mu.useMemo)((() => {
-        if (!JR) return [];
+      const uF = (0, Xk.useMemo)((() => {
+        if (!wF) return [];
         const {
-          ET: uu,
-          fsMap: yu
-        } = JR;
-        ! function(uu, Ru, yu, Eu) {
-          if (uu.getSourceFile(yu)) return;
-          const Ku = Eu || "\n";
-          Ru.set(yu, Ku), uu.createFile(yu, Ku)
-        }(uu, yu, AR, (fu ? eR.current : bR.current) || "\n");
-        const mu = Ru && gR(fu ? null !== uR && void 0 !== uR ? uR : "index.ts" : vu),
-          Ju = [(0, Ku.e)({
+          lb: kk,
+          fsMap: Bk
+        } = wF;
+        ! function(kk, Fk, Bk, Rk) {
+          if (kk.getSourceFile(Bk)) return;
+          const tk = Rk || "\n";
+          Fk.set(Bk, tk), kk.createFile(Bk, tk)
+        }(kk, Bk, SF, (kF ? EF.current : oF.current) || "\n");
+        const Xk = Fk && rF(kF ? null !== FF && void 0 !== FF ? FF : "index.ts" : Ik),
+          bk = [(0, tk.c)({
             jsx: !1,
-            typescript: mu
-          }), Qu.f.highest(Qu.e.domEventHandlers({
-            keydown: uu => "Escape" === uu.key ? (dR.current(), uu.stopPropagation(), !0) : (uu.stopPropagation(), !1)
-          })), (0, Eu.c)({
-            override: [LR(uu, AR)]
-          }), Iu.k.fromClass(class {
-            constructor(uu) {
-              this.view = uu, this.timeout = null, this.scheduleParse()
+            typescript: Xk
+          }), ak.e.highest(ak.b.domEventHandlers({
+            keydown: kk => "Escape" === kk.key ? (YF.current(), kk.stopPropagation(), !0) : (kk.stopPropagation(), !1)
+          })), (0, Rk.d)({
+            override: [zF(kk, SF)]
+          }), uk.q.fromClass(class {
+            constructor(kk) {
+              this.view = kk, this.timeout = null, this.scheduleParse()
             }
-            update(uu) {
-              (uu.docChanged || uu.viewportChanged) && this.scheduleParse()
+            update(kk) {
+              (kk.docChanged || kk.viewportChanged) && this.scheduleParse()
             }
             destroy() {
               null !== this.timeout && (clearTimeout(this.timeout), this.timeout = null)
@@ -972,215 +972,215 @@ export const modules = {
             scheduleParse() {
               null === this.timeout && (this.timeout = setTimeout((() => {
                 this.timeout = null;
-                const uu = this.view.viewport.to;
-                (0, cu.kb)(this.view.state, uu) || (0, cu.K)(this.view, uu, Lu) || this.scheduleParse()
-              }), zu))
+                const kk = this.view.viewport.to;
+                (0, Dk.nb)(this.view.state, kk) || (0, Dk.V)(this.view, kk, zk) || this.scheduleParse()
+              }), Pk))
             }
-          }), ...au, Qu.e.lineWrapping, Qu.j.define({
-            create: FR(uu, Pu, AR),
-            update(Ru, yu) {
-              const Eu = yu.effects.some((uu => uu.is(hR)));
-              return yu.docChanged || yu.selection || Eu ? (lR(uu, AR, yu.state.doc.toString() || " "), FR(uu, Pu, AR)(yu.state)) : Ru
+          }), ...Qk, ak.b.lineWrapping, ak.j.define({
+            create: hF(kk, pk, SF),
+            update(Fk, Bk) {
+              const Rk = Bk.effects.some((kk => kk.is(ZF)));
+              return Bk.docChanged || Bk.selection || Rk ? (TF(kk, SF, Bk.state.doc.toString() || " "), hF(kk, pk, SF)(Bk.state)) : Fk
             },
-            provide: uu => Qu.q.computeN([uu], (Ru => Ru.field(uu)))
-          }), (0, Qu.p)(wR(uu, AR)), (0, Wu.e)(cR(Ru, uu, AR)), Qu.k.fromClass(class {
-            constructor(uu) {
-              this.view = uu, this.searchPanel = null
+            provide: kk => ak.u.computeN([kk], (Fk => Fk.field(kk)))
+          }), (0, ak.r)(qF(kk, SF)), (0, mk.g)(DF(Fk, kk, SF)), ak.l.fromClass(class {
+            constructor(kk) {
+              this.view = kk, this.searchPanel = null
             }
-            update(uu) {
-              const Ru = uu.view.dom.querySelector(".cm-search");
-              if (Ru !== this.searchPanel) {
-                if (this.searchPanel = Ru, !this.searchPanel) return;
-                this.searchPanel.addEventListener("keydown", (uu => {
-                  "Escape" === uu.key && (0, Tu.b)(this.view), uu.stopPropagation()
+            update(kk) {
+              const Fk = kk.view.dom.querySelector(".cm-search");
+              if (Fk !== this.searchPanel) {
+                if (this.searchPanel = Fk, !this.searchPanel) return;
+                this.searchPanel.addEventListener("keydown", (kk => {
+                  "Escape" === kk.key && (0, fk.d)(this.view), kk.stopPropagation()
                 }))
               }
             }
           })];
-        QR && !fu && Ju.push(CR(Ru ? null !== vu && void 0 !== vu ? vu : du.k : WR.d, mR));
-        const Nu = SR.current;
-        if (Nu && !fu) {
-          Ju.push(... function(uu, Ru, yu, Eu, Ku) {
-            let Qu = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-            const mu = (0, bu.B)(yu),
-              Ju = Iu.k.fromClass(class {
-                constructor(uu) {
-                  this.view = uu, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = nu.k.subscribe("codeCollab", (uu => {
-                    uu.docKey === mu && uu.type === bu.f.Updates && (uu.updates ? this.applyUpdates(uu.updates) : this.pull())
+        XF && !kF && bk.push(LF(Fk ? null !== Ik && void 0 !== Ik ? Ik : ik.h : WF.c, bF));
+        const wk = yF.current;
+        if (wk && !kF) {
+          bk.push(... function(kk, Fk, Bk, Rk, tk) {
+            let ak = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const Xk = (0, Yk.v)(Bk),
+              bk = uk.q.fromClass(class {
+                constructor(kk) {
+                  this.view = kk, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = Uk.o.subscribe("codeCollab", (kk => {
+                    kk.docKey === Xk && kk.type === Yk.f.Updates && (kk.updates ? this.applyUpdates(kk.updates) : this.pull())
                   })), this.pull()
                 }
-                applyUpdates(uu) {
-                  const Ru = JSON.parse(uu).map((uu => ({
-                    clientID: uu.clientID,
-                    changes: Mu.ChangeSet.fromJSON(uu.changes)
+                applyUpdates(kk) {
+                  const Fk = JSON.parse(kk).map((kk => ({
+                    clientID: kk.clientID,
+                    changes: Hk.ChangeSet.fromJSON(kk.changes)
                   })));
-                  Ru.length > 0 && (this.view.dispatch((0, Du.j)(this.view.state, Ru)), Ku && Ku(this.view.state.doc.toString())), this.clearPushState(), this.push()
+                  Fk.length > 0 && (this.view.dispatch((0, Nk.j)(this.view.state, Fk)), tk && tk(this.view.state.doc.toString())), this.clearPushState(), this.push()
                 }
                 clearPushState() {
                   this.pushing = !1, this.pushTimeout && (clearTimeout(this.pushTimeout), this.pushTimeout = null), this.pushDelayTimeout && (clearTimeout(this.pushDelayTimeout), this.pushDelayTimeout = null)
                 }
-                update(uu) {
-                  Qu && (uu.docChanged && this.push(), this.sendCursor())
+                update(kk) {
+                  ak && (kk.docChanged && this.push(), this.sendCursor())
                 }
                 push() {
-                  const uu = (0, Du.n)(this.view.state);
-                  if (this.pushing || !uu.length) return;
-                  const Ru = Date.now() - this.lastPushTime;
-                  if (Ru < gu) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
+                  const kk = (0, Nk.n)(this.view.state);
+                  if (this.pushing || !kk.length) return;
+                  const Fk = Date.now() - this.lastPushTime;
+                  if (Fk < rk) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
                     this.pushDelayTimeout = null, this.push()
-                  }), gu - Ru)));
+                  }), rk - Fk)));
                   this.pushing = !0, this.lastPushTime = Date.now(), this.pushTimeout = setTimeout((() => {
                     this.clearPushState(), this.push()
-                  }), tu);
-                  const yu = (0, Du.i)(this.view.state),
-                    Ku = uu.map((uu => ({
-                      clientID: uu.clientID,
-                      changes: uu.changes.toJSON()
+                  }), Gk);
+                  const Bk = (0, Nk.f)(this.view.state),
+                    tk = kk.map((kk => ({
+                      clientID: kk.clientID,
+                      changes: kk.changes.toJSON()
                     }))),
-                    Qu = JSON.stringify(Ku);
-                  Qu.length <= bu.j ? Gu.gameBridge.send("sendCodeCollab", {
-                    WR: bu.e.Push,
-                    jR: mu,
-                    HR: yu,
-                    CR: Qu
-                  }) : (0, su.postJsonWithMetricsCookiesAndJsonResponse)(`${Eu.gsUrl}/code/collab-push`, Uu.n["collab-push"].toBuffer({
-                    gameNameWithVariation: Eu.gameNameWithVariation,
-                    lobbyName: Eu.lobbyName,
-                    docKey: mu,
-                    version: yu,
-                    updates: Qu
+                    ak = JSON.stringify(tk);
+                  ak.length <= Yk.g ? Mk.gameBridge.send("sendCodeCollab", {
+                    WF: Yk.b.Push,
+                    vF: Xk,
+                    iF: Bk,
+                    LF: ak
+                  }) : (0, ck.postJsonWithMetricsCookiesAndJsonResponse)(`${Rk.gsUrl}/code/collab-push`, gk.s["collab-push"].toBuffer({
+                    gameNameWithVariation: Rk.gameNameWithVariation,
+                    lobbyName: Rk.lobbyName,
+                    docKey: Xk,
+                    version: Bk,
+                    updates: ak
                   }), {
                     retries: 0
-                  }).catch((uu => {
-                    console.error("[CodeCollab] HTTP push failed", uu)
+                  }).catch((kk => {
+                    console.error("[CodeCollab] HTTP push failed", kk)
                   }))
                 }
                 pull() {
                   if (this.destroyed) return;
                   if (this.pulling) return void(this.pullPending = !0);
                   this.pulling = !0, this.pullPending = !1;
-                  const uu = (0, Du.i)(this.view.state);
-                  (0, su.postJsonWithMetricsCookiesAndJsonResponse)(`${Eu.gsUrl}/code/collab-pull`, Uu.n["collab-pull"].toBuffer({
-                    gameNameWithVariation: Eu.gameNameWithVariation,
-                    lobbyName: Eu.lobbyName,
-                    docKey: mu,
-                    fromVersion: uu
+                  const kk = (0, Nk.f)(this.view.state);
+                  (0, ck.postJsonWithMetricsCookiesAndJsonResponse)(`${Rk.gsUrl}/code/collab-pull`, gk.s["collab-pull"].toBuffer({
+                    gameNameWithVariation: Rk.gameNameWithVariation,
+                    lobbyName: Rk.lobbyName,
+                    docKey: Xk,
+                    fromVersion: kk
                   }), {
                     retries: 1
-                  }).then((uu => {
-                    this.destroyed || (uu.fullDoc ? nu.k.Op("codeCollabRejoin", {
-                      docKey: mu,
-                      doc: uu.fullDoc,
-                      version: uu.version
-                    }) : this.applyUpdates(uu.updates))
-                  })).catch((uu => {
-                    console.error("[CodeCollab] Pull failed", uu)
+                  }).then((kk => {
+                    this.destroyed || (kk.fullDoc ? Uk.o.Hf("codeCollabRejoin", {
+                      docKey: Xk,
+                      doc: kk.fullDoc,
+                      version: kk.version
+                    }) : this.applyUpdates(kk.updates))
+                  })).catch((kk => {
+                    console.error("[CodeCollab] Pull failed", kk)
                   })).finally((() => {
                     this.pulling = !1, this.pullPending && this.pull()
                   }))
                 }
                 sendCursor() {
-                  const uu = Date.now();
-                  if (uu - this.lastCursorSent < lu) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
+                  const kk = Date.now();
+                  if (kk - this.lastCursorSent < Tk) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
                     this.cursorTimeout = null, this.sendCursor()
-                  }), lu)));
-                  this.lastCursorSent = uu;
-                  const Ru = this.view.state.selection.main;
-                  Gu.gameBridge.send("sendCodeCollab", {
-                    WR: bu.e.Cursor,
-                    jR: mu,
-                    DR: Ru.anchor,
-                    MR: Ru.head
+                  }), Tk)));
+                  this.lastCursorSent = kk;
+                  const Fk = this.view.state.selection.main;
+                  Mk.gameBridge.send("sendCodeCollab", {
+                    WF: Yk.b.Cursor,
+                    vF: Xk,
+                    HF: Fk.anchor,
+                    uF: Fk.head
                   })
                 }
                 destroy() {
-                  this.destroyed = !0, nu.k.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
+                  this.destroyed = !0, Uk.o.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
                 }
               });
-            return [(0, Du.e)({
-              startVersion: uu,
-              clientID: Ru
-            }), Ju]
-          }(XR, VR, Nu.docKey, Nu.httpConfig, (uu => {
-            var Ru;
-            null === (Ru = BR.current) || void 0 === Ru || Ru.call(BR, uu)
-          }), Bu));
-          const uu = function(uu, Ru) {
-            const yu = (0, bu.B)(uu);
+            return [(0, Nk.b)({
+              startVersion: kk,
+              clientID: Fk
+            }), bk]
+          }(sF, VF, wk.docKey, wk.httpConfig, (kk => {
+            var Fk;
+            null === (Fk = AF.current) || void 0 === Fk || Fk.call(AF, kk)
+          }), Jk));
+          const kk = function(kk, Fk) {
+            const Bk = (0, Yk.v)(kk);
             return {
-              extensions: [Yu],
-              connect(uu) {
-                if (Ru) {
-                  const yu = Ru.map((uu => wu.of({
-                    playerId: uu.playerId,
-                    playerName: uu.playerName,
-                    colour: uu.colour,
-                    anchor: uu.anchor,
-                    head: uu.head,
+              extensions: [xk],
+              connect(kk) {
+                if (Fk) {
+                  const Bk = Fk.map((kk => qk.of({
+                    playerId: kk.playerId,
+                    playerName: kk.playerName,
+                    colour: kk.colour,
+                    anchor: kk.anchor,
+                    head: kk.head,
                     lastMoved: Date.now()
                   })));
-                  yu.length > 0 && uu.dispatch({
-                    effects: yu
+                  Bk.length > 0 && kk.dispatch({
+                    effects: Bk
                   })
                 }
-                const Eu = nu.k.subscribe("codeCollab", (Ru => {
-                    if (Ru.docKey === yu)
-                      if (Ru.type === bu.f.RemoteCursor) uu.dispatch({
-                        effects: wu.of({
-                          playerId: Ru.playerId,
-                          playerName: Ru.playerName,
-                          colour: Ru.colour,
-                          anchor: Ru.anchor,
-                          head: Ru.head,
+                const Rk = Uk.o.subscribe("codeCollab", (Fk => {
+                    if (Fk.docKey === Bk)
+                      if (Fk.type === Yk.f.RemoteCursor) kk.dispatch({
+                        effects: qk.of({
+                          playerId: Fk.playerId,
+                          playerName: Fk.playerName,
+                          colour: Fk.colour,
+                          anchor: Fk.anchor,
+                          head: Fk.head,
                           lastMoved: Date.now()
                         })
                       });
-                      else if (Ru.type === bu.f.Presence) {
-                      const yu = JSON.parse(Ru.peers),
-                        Eu = new Set(yu.map((uu => uu.playerId))),
-                        Ku = uu.state.field(Yu),
-                        Qu = [];
-                      for (const [uu] of Ku.cursors) Eu.has(uu) || Qu.push(Zu.of(uu));
-                      Qu.length > 0 && uu.dispatch({
-                        effects: Qu
+                      else if (Fk.type === Yk.f.Presence) {
+                      const Bk = JSON.parse(Fk.peers),
+                        Rk = new Set(Bk.map((kk => kk.playerId))),
+                        tk = kk.state.field(xk),
+                        ak = [];
+                      for (const [kk] of tk.cursors) Rk.has(kk) || ak.push(Ck.of(kk));
+                      ak.length > 0 && kk.dispatch({
+                        effects: ak
                       })
                     }
                   })),
-                  Ku = setInterval((() => {
-                    uu.dom.isConnected ? uu.dispatch({
-                      effects: hu.of(Date.now())
-                    }) : clearInterval(Ku)
-                  }), Fu);
+                  tk = setInterval((() => {
+                    kk.dom.isConnected ? kk.dispatch({
+                      effects: Zk.of(Date.now())
+                    }) : clearInterval(tk)
+                  }), hk);
                 return () => {
-                  nu.k.unsubscribe(Eu), clearInterval(Ku)
+                  Uk.o.unsubscribe(Rk), clearInterval(tk)
                 }
               }
             }
-          }(Nu.docKey, Nu.existingCursors);
-          Ju.push(...uu.extensions), HR.current = uu.connect
-        } else HR.current = null;
-        return Ju
-      }), [Ru, JR, Pu, XR, VR, AR, vu, fu, uR, Bu, QR, mR]);
-      if (!JR || !ou && !fu) return (0, kR.jsx)("div", {
+          }(wk.docKey, wk.existingCursors);
+          bk.push(...kk.extensions), iF.current = kk.connect
+        } else iF.current = null;
+        return bk
+      }), [Fk, wF, pk, sF, VF, SF, Ik, kF, FF, Jk, XF, bF]);
+      if (!wF || !jk && !kF) return (0, OF.jsx)("div", {
         className: "CodeEditorContent",
-        children: (0, kR.jsx)(ju.b, {})
+        children: (0, OF.jsx)(Wk.b, {})
       });
-      const GR = fu ? `plugin-${fu}-${null!==uR&&void 0!==uR?uR:"index.ts"}` : ou ? `collab-${ou.clientID}` : `local-${Ru}`;
-      return (0, kR.jsx)(Qu.n, {
-        value: fu ? null !== yR && void 0 !== yR ? yR : "" : yu,
-        onChange: Ju,
-        extensions: IR,
+      const MF = kF ? `plugin-${kF}-${null!==FF&&void 0!==FF?FF:"index.ts"}` : jk ? `collab-${jk.clientID}` : `local-${Fk}`;
+      return (0, OF.jsx)(ak.p, {
+        value: kF ? null !== RF && void 0 !== RF ? RF : "" : Bk,
+        onChange: bk,
+        extensions: uF,
         className: "CodeEditorContent",
-        theme: iu ? TR : "dark",
-        editable: Bu && !fu,
-        basicSetup: PR,
-        onCreateEditor: uu => {
-          var Ru;
-          xR.current = uu, pR.current = null !== (Ru = null === ou || void 0 === ou ? void 0 : ou.clientID) && void 0 !== Ru ? Ru : null, MR(uu), jR.current && jR.current(), HR.current && (jR.current = HR.current(uu))
+        theme: Kk ? mF : "dark",
+        editable: Jk && !kF,
+        basicSetup: pF,
+        onCreateEditor: kk => {
+          var Fk;
+          eF.current = kk, fF.current = null !== (Fk = null === jk || void 0 === jk ? void 0 : jk.clientID) && void 0 !== Fk ? Fk : null, HF(kk), vF.current && vF.current(), iF.current && (vF.current = iF.current(kk))
         }
-      }, GR)
+      }, MF)
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

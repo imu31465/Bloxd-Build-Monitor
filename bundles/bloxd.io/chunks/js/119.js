@@ -1,40 +1,40 @@
 export const id = 119;
 export const ids = [119];
 export const modules = {
-  6306: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      default: () => Bu
+  6237: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      default: () => Jk
     });
-    var Eu = yu(1300),
-      Ku = yu(64),
-      Qu = yu(122),
-      mu = yu(1483),
-      Ju = yu(1207),
-      Nu = yu(330),
-      Xu = yu(624);
-    const Vu = new URL(Ju.k[Nu.e.PRODUCTION]).origin;
-    var ru = yu(1079);
+    var Rk = Bk(1288),
+      tk = Bk(61),
+      ak = Bk(109),
+      Xk = Bk(1473),
+      bk = Bk(1175),
+      wk = Bk(279),
+      dk = Bk(624);
+    const sk = new URL(bk.q[wk.d.PRODUCTION]).origin;
+    var Vk = Bk(1069);
 
-    function Bu() {
-      const uu = (0, mu.A)();
-      return (0, Ku.useEffect)((() => {
-        const Ru = Qu.currentUrl.getSearchParam("code");
-        Qu.currentUrl.removeSearchParam("code"), null === Ru && (console.error("No authorization code found in the URL"), window.close());
-        const yu = {
-          type: `oauth_authentication_${uu.providerName}`,
-          code: Ru
+    function Jk() {
+      const kk = (0, Xk.x)();
+      return (0, tk.useEffect)((() => {
+        const Fk = ak.currentUrl.getSearchParam("code");
+        ak.currentUrl.removeSearchParam("code"), null === Fk && (console.error("No authorization code found in the URL"), window.close());
+        const Bk = {
+          type: `oauth_authentication_${kk.providerName}`,
+          code: Fk
         };
-        for (const uu of (Ku = window.location.origin) === Vu ? [Ku, `https://${Xu.d}`] : [Ku]) {
-          var Eu;
-          null === (Eu = window.opener) || void 0 === Eu || Eu.postMessage(yu, uu)
+        for (const kk of (tk = window.location.origin) === sk ? [tk, `https://${dk.c}`] : [tk]) {
+          var Rk;
+          null === (Rk = window.opener) || void 0 === Rk || Rk.postMessage(Bk, kk)
         }
-        var Ku;
+        var tk;
         setTimeout((() => {
           window.close()
         }), 1e3)
-      })), (0, ru.jsx)("div", {
+      })), (0, Vk.jsx)("div", {
         className: "AuthCallback",
-        children: (0, ru.jsx)(Eu.b, {
+        children: (0, Vk.jsx)(Rk.b, {
           showFace: !0,
           loading: !0
         })
@@ -43,4 +43,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

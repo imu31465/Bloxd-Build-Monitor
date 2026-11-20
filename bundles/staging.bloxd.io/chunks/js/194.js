@@ -1,161 +1,161 @@
 export const id = 194;
 export const ids = [194];
 export const modules = {
-  9127: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      packDisplayName: () => Su,
-      packModelMessage: () => pu,
-      packModelSummary: () => Wu,
-      refusedPackModels: () => Tu
+  9072: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      packDisplayName: () => ek,
+      packModelMessage: () => yk,
+      packModelSummary: () => mk,
+      refusedPackModels: () => fk
     });
-    var Eu = yu(9135),
-      Ku = yu(9143);
-    const Qu = "DRACO",
-      mu = 0,
-      Ju = 1,
-      Nu = 0,
-      Xu = 1,
-      Vu = 32768;
+    var Rk = Bk(9077),
+      tk = Bk(9079);
+    const ak = "DRACO",
+      Xk = 0,
+      bk = 1,
+      wk = 0,
+      dk = 1,
+      sk = 32768;
 
-    function ru(uu) {
-      const Ru = new DataView(uu.buffer, uu.byteOffset, uu.byteLength);
-      let yu = 0;
-      const Eu = () => {
-          if (yu >= uu.byteLength) throw new RangeError("past the stream");
-          return uu[yu++]
+    function Vk(kk) {
+      const Fk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength);
+      let Bk = 0;
+      const Rk = () => {
+          if (Bk >= kk.byteLength) throw new RangeError("past the stream");
+          return kk[Bk++]
         },
-        Ku = () => {
-          if (yu + 4 > uu.byteLength) throw new RangeError("past the stream");
-          const Eu = Ru.getUint32(yu, !0);
-          return yu += 4, Eu
+        tk = () => {
+          if (Bk + 4 > kk.byteLength) throw new RangeError("past the stream");
+          const Rk = Fk.getUint32(Bk, !0);
+          return Bk += 4, Rk
         },
-        ru = () => {
-          let uu = 0;
-          for (let Ru = 0; Ru < 35; Ru += 7) {
-            const yu = Eu();
-            if (uu += (127 & yu) * 2 ** Ru, 0 === (128 & yu)) return uu
+        Vk = () => {
+          let kk = 0;
+          for (let Fk = 0; Fk < 35; Fk += 7) {
+            const Bk = Rk();
+            if (kk += (127 & Bk) * 2 ** Fk, 0 === (128 & Bk)) return kk
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let uu = 0; uu < Qu.length; uu++)
-          if (Eu() !== Qu.charCodeAt(uu)) return null;
-        const Ru = Eu(),
-          Bu = Eu(),
-          xu = Eu(),
-          Su = Eu(),
-          pu = Eu() | Eu() << 8;
-        if (2 !== Ru) return null;
-        0 !== (pu & Vu) && function(uu, Ru, yu) {
-          const Eu = () => {
-              Ru(yu())
+        for (let kk = 0; kk < ak.length; kk++)
+          if (Rk() !== ak.charCodeAt(kk)) return null;
+        const Fk = Rk(),
+          Jk = Rk(),
+          Ak = Rk(),
+          ek = Rk(),
+          yk = Rk() | Rk() << 8;
+        if (2 !== Fk) return null;
+        0 !== (yk & sk) && function(kk, Fk, Bk) {
+          const Rk = () => {
+              Fk(Bk())
             },
-            Ku = () => {
-              let yu = 1,
-                Ku = !0;
-              for (; yu > 0;) {
-                yu--, Ku || Eu(), Ku = !1;
-                const Qu = uu();
-                for (let yu = 0; yu < Qu; yu++) Eu(), Ru(uu());
-                yu += uu()
+            tk = () => {
+              let Bk = 1,
+                tk = !0;
+              for (; Bk > 0;) {
+                Bk--, tk || Rk(), tk = !1;
+                const ak = kk();
+                for (let Bk = 0; Bk < ak; Bk++) Rk(), Fk(kk());
+                Bk += kk()
               }
             },
-            Qu = uu();
-          for (let mu = 0; mu < Qu; mu++) uu(), Ku();
-          Ku()
-        }(ru, (Ru => {
-          if (yu + Ru > uu.byteLength) throw new RangeError("past the stream");
-          yu += Ru
-        }), Eu);
-        const Tu = Bu < 2 ? Ku : ru;
-        if (xu === mu) return {
+            ak = kk();
+          for (let Xk = 0; Xk < ak; Xk++) kk(), tk();
+          tk()
+        }(Vk, (Fk => {
+          if (Bk + Fk > kk.byteLength) throw new RangeError("past the stream");
+          Bk += Fk
+        }), Rk);
+        const fk = Jk < 2 ? tk : Vk;
+        if (Ak === Xk) return {
           faces: 0,
-          vertices: Ku()
+          vertices: tk()
         };
-        if (xu !== Ju) return null;
-        if (Su === Nu) {
+        if (Ak !== bk) return null;
+        if (ek === wk) {
           return {
-            faces: Tu(),
-            vertices: Tu()
+            faces: fk(),
+            vertices: fk()
           }
         }
-        if (Su !== Xu) return null;
-        Eu(), Bu < 2 && ru();
-        const Wu = ru();
+        if (ek !== dk) return null;
+        Rk(), Jk < 2 && Vk();
+        const mk = Vk();
         return {
-          faces: ru(),
-          vertices: Wu
+          faces: Vk(),
+          vertices: mk
         }
       } catch {
         return null
       }
     }
 
-    function Bu(uu, Ru, yu) {
-      var Eu, Ku;
-      if (null === (Eu = null === (Ku = uu.extensionsUsed) || void 0 === Ku ? void 0 : Ku.includes("KHR_draco_mesh_compression")) || void 0 === Eu || !Eu) return null;
-      for (const Su of null !== (Qu = uu.meshes) && void 0 !== Qu ? Qu : []) {
-        var Qu;
-        for (const Eu of Su.primitives) {
-          var mu, Ju, Nu, Xu, Vu, Bu;
-          const Ku = null === (mu = Eu.extensions) || void 0 === mu ? void 0 : mu.KHR_draco_mesh_compression;
-          if ("object" !== typeof Ku || null === Ku) continue;
-          const Qu = null === (Ju = uu.bufferViews) || void 0 === Ju ? void 0 : Ju[Ku.bufferView];
-          if (null === Ru || void 0 === Qu) return xu;
-          const Su = null !== (Nu = Qu.byteOffset) && void 0 !== Nu ? Nu : 0,
-            pu = ru(Ru.subarray(Su, Su + Qu.byteLength));
-          if (null === pu && !yu) continue;
-          const Tu = null !== (Xu = uu.accessors) && void 0 !== Xu ? Xu : [],
-            Wu = null === (Vu = Tu[Eu.attributes.POSITION]) || void 0 === Vu ? void 0 : Vu.count,
-            ju = void 0 === Eu.indices ? 0 : null === (Bu = Tu[Eu.indices]) || void 0 === Bu ? void 0 : Bu.count;
-          if (null === pu || void 0 === Wu || void 0 === ju || 3 * pu.faces !== ju || pu.vertices > Wu) return xu
+    function Jk(kk, Fk, Bk) {
+      var Rk, tk;
+      if (null === (Rk = null === (tk = kk.extensionsUsed) || void 0 === tk ? void 0 : tk.includes("KHR_draco_mesh_compression")) || void 0 === Rk || !Rk) return null;
+      for (const ek of null !== (ak = kk.meshes) && void 0 !== ak ? ak : []) {
+        var ak;
+        for (const Rk of ek.primitives) {
+          var Xk, bk, wk, dk, sk, Jk;
+          const tk = null === (Xk = Rk.extensions) || void 0 === Xk ? void 0 : Xk.KHR_draco_mesh_compression;
+          if ("object" !== typeof tk || null === tk) continue;
+          const ak = null === (bk = kk.bufferViews) || void 0 === bk ? void 0 : bk[tk.bufferView];
+          if (null === Fk || void 0 === ak) return Ak;
+          const ek = null !== (wk = ak.byteOffset) && void 0 !== wk ? wk : 0,
+            yk = Vk(Fk.subarray(ek, ek + ak.byteLength));
+          if (null === yk && !Bk) continue;
+          const fk = null !== (dk = kk.accessors) && void 0 !== dk ? dk : [],
+            mk = null === (sk = fk[Rk.attributes.POSITION]) || void 0 === sk ? void 0 : sk.count,
+            Wk = void 0 === Rk.indices ? 0 : null === (Jk = fk[Rk.indices]) || void 0 === Jk ? void 0 : Jk.count;
+          if (null === yk || void 0 === mk || void 0 === Wk || 3 * yk.faces !== Wk || yk.vertices > mk) return Ak
         }
       }
       return null
     }
-    const xu = "has a Draco stream whose counts don't match its accessors";
+    const Ak = "has a Draco stream whose counts don't match its accessors";
 
-    function Su(uu) {
-      var Ru;
-      return null !== (Ru = uu.name) && void 0 !== Ru ? Ru : uu.fromFolderName || uu.id
+    function ek(kk) {
+      var Fk;
+      return null !== (Fk = kk.name) && void 0 !== Fk ? Fk : kk.fromFolderName || kk.id
     }
 
-    function pu(uu, Ru, yu) {
-      return `Texture pack "${uu}": model "${Ru}" was not loaded because it ${yu}. The default model is used instead.`
+    function yk(kk, Fk, Bk) {
+      return `Texture pack "${kk}": model "${Fk}" was not loaded because it ${Bk}. The default model is used instead.`
     }
 
-    function Tu(uu, Ru, yu) {
+    function fk(kk, Fk, Bk) {
       let {
-        strictDraco: Qu = !1
+        strictDraco: ak = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const mu = {};
-      for (const [Ju, Nu] of Object.entries(Ru)) {
-        let Ru;
-        if (Nu.startsWith("data:")) try {
-          const uu = new Uint8Array((0, Ku.o)(Nu));
-          if (Ru = (0, Eu.d)(uu), null === Ru) {
+      const Xk = {};
+      for (const [bk, wk] of Object.entries(Fk)) {
+        let Fk;
+        if (wk.startsWith("data:")) try {
+          const kk = new Uint8Array((0, tk.m)(wk));
+          if (Fk = (0, Rk.b)(kk), null === Fk) {
             const {
-              json: yu,
-              bin: Eu
-            } = (0, Ku.y)(uu);
-            Ru = Bu(yu, Eu, Qu)
+              json: Bk,
+              bin: Rk
+            } = (0, tk.u)(kk);
+            Fk = Jk(Bk, Rk, ak)
           }
         } catch {
-          Ru = "is not a binary glTF 2.0 file"
-        } else Ru = "loads data from outside the file";
-        Ru && (mu[Ju] = Ru, yu && console.warn(pu(uu, Ju, Ru)))
+          Fk = "is not a binary glTF 2.0 file"
+        } else Fk = "loads data from outside the file";
+        Fk && (Xk[bk] = Fk, Bk && console.warn(yk(kk, bk, Fk)))
       }
-      return mu
+      return Xk
     }
 
-    function Wu(uu, Ru) {
-      const yu = Object.keys(Ru);
-      if (0 === yu.length) return null;
-      if (1 === yu.length) return pu(uu, yu[0], Ru[yu[0]]);
-      const Eu = yu.map((uu => `"${uu}" ${Ru[uu]}`)).join("; ");
-      return `Texture pack "${uu}": ${yu.length} models were not loaded (${Eu}). The default models are used instead.`
+    function mk(kk, Fk) {
+      const Bk = Object.keys(Fk);
+      if (0 === Bk.length) return null;
+      if (1 === Bk.length) return yk(kk, Bk[0], Fk[Bk[0]]);
+      const Rk = Bk.map((kk => `"${kk}" ${Fk[kk]}`)).join("; ");
+      return `Texture pack "${kk}": ${Bk.length} models were not loaded (${Rk}). The default models are used instead.`
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

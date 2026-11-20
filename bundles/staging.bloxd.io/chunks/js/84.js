@@ -1,257 +1,257 @@
 export const id = 84;
 export const ids = [84];
 export const modules = {
-  40117: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      startWasmPadGameplay: () => cu
+  39950: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      startWasmPadGameplay: () => Dk
     });
-    yu(40125);
-    var Eu = yu(40127),
-      Ku = yu(40145),
-      Qu = yu(1878),
-      mu = yu(40160),
-      Ju = yu(4564),
-      Nu = yu(4549),
-      Xu = yu(40166),
-      Vu = yu(40173),
-      ru = yu(4578),
-      Bu = yu(40243),
-      xu = yu(2312),
-      Su = yu(8594),
-      pu = yu(40132),
-      Tu = yu(8566);
-    const Wu = uu => {
-        const Ru = ru.b.indexOf(uu);
-        if (Ru < 0) throw new Error(`No core action "${uu}"`);
-        return Ru
+    Bk(39957);
+    var Rk = Bk(39962),
+      tk = Bk(39984),
+      ak = Bk(1863),
+      Xk = Bk(4e4),
+      bk = Bk(4531),
+      wk = Bk(4511),
+      dk = Bk(40007),
+      sk = Bk(40015),
+      Vk = Bk(4541),
+      Jk = Bk(40080),
+      Ak = Bk(2305),
+      ek = Bk(8529),
+      yk = Bk(39970),
+      fk = Bk(8509);
+    const mk = kk => {
+        const Fk = Vk.c.indexOf(kk);
+        if (Fk < 0) throw new Error(`No core action "${kk}"`);
+        return Fk
       },
-      ju = Wu("primary-fire"),
-      Hu = Wu("alt-fire"),
-      du = Wu("mid-fire"),
-      bu = Wu("jump"),
-      Cu = Wu("ReloadGun"),
-      ku = Wu("SwapCameraZoom"),
-      eu = Wu("TouchAction1"),
-      Au = {
-        SpecialAction1: Wu("SpecialAction1"),
-        SpecialAction2: Wu("SpecialAction2")
+      Wk = mk("primary-fire"),
+      vk = mk("alt-fire"),
+      ik = mk("mid-fire"),
+      Yk = mk("jump"),
+      Lk = mk("ReloadGun"),
+      Ok = mk("SwapCameraZoom"),
+      Ek = mk("TouchAction1"),
+      Sk = {
+        SpecialAction1: mk("SpecialAction1"),
+        SpecialAction2: mk("SpecialAction2")
       },
-      Du = (uu, Ru) => {
-        (0, xu.z)(Ju.G.PadAction, uu, 0, 0, (0, xu.v)(Ru, performance.now()))
+      Nk = (kk, Fk) => {
+        (0, Ak.q)(bk.A.PadAction, kk, 0, 0, (0, Ak.n)(Fk, performance.now()))
       },
-      Mu = uu => {
-        Du(uu, mu.Ad.Down)
+      Hk = kk => {
+        Nk(kk, Xk.qd.Down)
       },
-      Iu = uu => {
-        Du(uu, 0)
+      uk = kk => {
+        Nk(kk, 0)
       },
-      Gu = uu => {
-        Mu(uu), Iu(uu)
+      Mk = kk => {
+        Hk(kk), uk(kk)
       },
-      Uu = () => {
-        const uu = (0, Vu.i)();
-        return null !== uu && void 0 !== uu && uu.isCoreRunning ? uu : null
+      gk = () => {
+        const kk = (0, sk.g)();
+        return null !== kk && void 0 !== kk && kk.isCoreRunning ? kk : null
       },
-      nu = uu => mu.v.playerFlags(uu.api.apiView, 0),
-      su = uu => null !== uu && mu.v.targetBlockId(uu.api.apiView, 0) !== mu.ad,
-      tu = () => {
-        const uu = (0, Su.d)(),
-          Ru = new pu.e;
-        let yu = !1;
-        const Eu = (uu, Ru) => {
-            (0, xu.z)(Ju.G.PadLook, mu.Id.Rate, uu, Ru, 0)
+      Uk = kk => Xk.w.playerFlags(kk.api.apiView, 0),
+      ck = kk => null !== kk && Xk.w.targetBlockId(kk.api.apiView, 0) !== Xk._c,
+      Gk = () => {
+        const kk = (0, ek.e)(),
+          Fk = new yk.b;
+        let Bk = !1;
+        const Rk = (kk, Fk) => {
+            (0, Ak.q)(bk.A.PadLook, Xk.zd.Rate, kk, Fk, 0)
           },
-          Ku = () => {
-            yu = !1, Ru.reset(), Eu(0, 0)
+          tk = () => {
+            Bk = !1, Fk.reset(), Rk(0, 0)
           };
         return {
-          update: (Ku, Qu, Nu) => {
-            yu || (uu.discardPending(), yu = !0);
-            const Xu = (0, pu.p)(Ru, Ku, Qu, Nu, performance.now());
-            Eu(Xu.yawRadPerSec, Xu.pitchRadPerSec);
-            const Vu = uu.drainLookDelta();
-            0 === Vu.RD && 0 === Vu.mD || (0, xu.z)(Ju.G.PadLook, mu.Id.Gyro, Vu.RD, Vu.mD, 0)
+          update: (tk, ak, wk) => {
+            Bk || (kk.discardPending(), Bk = !0);
+            const dk = (0, yk.m)(Fk, tk, ak, wk, performance.now());
+            Rk(dk.yawRadPerSec, dk.pitchRadPerSec);
+            const sk = kk.drainLookDelta();
+            0 === sk.ZE && 0 === sk.pE || (0, Ak.q)(bk.A.PadLook, Xk.zd.Gyro, sk.ZE, sk.pE, 0)
           },
-          release: Ku,
-          uninstall: Ku
+          release: tk,
+          uninstall: tk
         }
       },
-      lu = () => {
-        const uu = Uu();
-        return null !== uu && 0 !== (nu(uu) & mu.Nd.PadSneakToggled)
+      Tk = () => {
+        const kk = gk();
+        return null !== kk && 0 !== (Uk(kk) & Xk.Ed.PadSneakToggled)
       },
-      gu = () => {
-        const uu = (uu => {
-          const Ru = uu => function() {
-            return (0, Bu.e)(), uu(...arguments)
+      rk = () => {
+        const kk = (kk => {
+          const Fk = kk => function() {
+            return (0, Jk.d)(), kk(...arguments)
           };
           return {
-            primaryFireDown: Ru((() => (Mu(ju), 0))),
-            primaryFireUp: Ru((() => {
-              Iu(ju)
+            primaryFireDown: Fk((() => (Hk(Wk), 0))),
+            primaryFireUp: Fk((() => {
+              uk(Wk)
             })),
-            altFireDown: Ru((() => (Mu(Hu), 0))),
-            altFireUp: Ru((() => {
-              Iu(Hu)
+            altFireDown: Fk((() => (Hk(vk), 0))),
+            altFireUp: Fk((() => {
+              uk(vk)
             })),
-            jumpDown: Ru((() => {
-              Gu(bu)
+            jumpDown: Fk((() => {
+              Mk(Yk)
             })),
-            specialActionDown: Ru((uu => {
-              Mu(Au[uu])
+            specialActionDown: Fk((kk => {
+              Hk(Sk[kk])
             })),
-            specialActionUp: Ru((uu => {
-              Iu(Au[uu])
+            specialActionUp: Fk((kk => {
+              uk(Sk[kk])
             })),
-            reloadGun: Ru((() => {
-              Gu(Cu)
+            reloadGun: Fk((() => {
+              Mk(Lk)
             })),
-            dropItem: Ru((uu => {
-              Du(mu.Cd.Drop, mu.Ad.Down | (uu ? mu.Ad.Stack : 0))
+            dropItem: Fk((kk => {
+              Nk(Xk.td.Drop, Xk.qd.Down | (kk ? Xk.qd.Stack : 0))
             })),
-            swapCameraZoom: Ru((() => {
-              Gu(ku)
+            swapCameraZoom: Fk((() => {
+              Mk(Ok)
             })),
-            pickBlock: Ru((() => (Gu(du), su(uu()))))
+            pickBlock: Fk((() => (Mk(ik), ck(kk()))))
           }
-        })(Uu);
-        let Ru = !1,
-          yu = null;
-        const Eu = () => {
-          var uu;
-          null === (uu = yu) || void 0 === uu || uu(), yu = null
+        })(gk);
+        let Fk = !1,
+          Bk = null;
+        const Rk = () => {
+          var kk;
+          null === (kk = Bk) || void 0 === kk || kk(), Bk = null
         };
         return {
-          bodies: () => uu,
-          look: tu(),
-          move: (uu, yu) => {
-            var Ku;
-            Eu();
+          bodies: () => kk,
+          look: Gk(),
+          move: (kk, Bk) => {
+            var tk;
+            Rk();
             const {
-              bits: Qu,
-              flips: Ju
-            } = (uu => {
-              if (null === uu) return {
-                bits: mu.Fd.Peek,
+              bits: ak,
+              flips: bk
+            } = (kk => {
+              if (null === kk) return {
+                bits: Xk.wd.Peek,
                 flips: 0
               };
-              const Ru = uu.sneakHeld ? mu.Fd.SneakHeld : 0;
-              return "hold" === uu.mode ? {
-                bits: Ru | mu.Fd.SneakHoldMode,
-                flips: uu.sneakTogglePressed ? 1 : 0
+              const Fk = kk.sneakHeld ? Xk.wd.SneakHeld : 0;
+              return "hold" === kk.mode ? {
+                bits: Fk | Xk.wd.SneakHoldMode,
+                flips: kk.sneakTogglePressed ? 1 : 0
               } : {
-                bits: Ru,
-                flips: uu.sneakPressed || uu.sneakTogglePressed ? 1 : 0
+                bits: Fk,
+                flips: kk.sneakPressed || kk.sneakTogglePressed ? 1 : 0
               }
-            })(yu);
-            null !== (Ku = Uu()) && void 0 !== Ku && Ku.padMove(uu.x, uu.y, uu.magnitude, uu.headingOffset, (uu => mu.Fd.Active | (uu.jumpHeld ? mu.Fd.JumpHeld : 0) | (uu.jumpPressed ? mu.Fd.JumpPressed : 0) | (uu.running ? mu.Fd.Running : 0) | (uu.sprintHeld ? mu.Fd.SprintHeld : 0))(uu) | Qu, Ju) && (Ru = !0), (0, Tu.c)(lu())
+            })(Bk);
+            null !== (tk = gk()) && void 0 !== tk && tk.padMove(kk.x, kk.y, kk.magnitude, kk.headingOffset, (kk => Xk.wd.Active | (kk.jumpHeld ? Xk.wd.JumpHeld : 0) | (kk.jumpPressed ? Xk.wd.JumpPressed : 0) | (kk.running ? Xk.wd.Running : 0) | (kk.sprintHeld ? Xk.wd.SprintHeld : 0))(kk) | ak, bk) && (Fk = !0), (0, fk.c)(Tk())
           },
           stopMoving: () => {
-            var uu;
-            Ru && (Ru = !(null !== (uu = Uu()) && void 0 !== uu && uu.padMove(0, 0, 0, 0, 0, 0)), Eu(), yu = (0, Nu.y)((() => {
-              Eu(), (0, Tu.c)(lu())
+            var kk;
+            Fk && (Fk = !(null !== (kk = gk()) && void 0 !== kk && kk.padMove(0, 0, 0, 0, 0, 0)), Rk(), Bk = (0, wk.x)((() => {
+              Rk(), (0, fk.c)(Tk())
             })))
           },
-          uninstall: Eu,
-          deviceChanged: uu => {
-            var yu;
-            "touch" === uu ? ((0, Tu.c)(!1), null !== (yu = Uu()) && void 0 !== yu && yu.padMove(0, 0, 0, 0, mu.Fd.EndToggle, 0) && (Ru = !1)) : "gamepad" === uu && (0, Tu.c)(lu())
+          uninstall: Rk,
+          deviceChanged: kk => {
+            var Bk;
+            "touch" === kk ? ((0, fk.c)(!1), null !== (Bk = gk()) && void 0 !== Bk && Bk.padMove(0, 0, 0, 0, Xk.wd.EndToggle, 0) && (Fk = !1)) : "gamepad" === kk && (0, fk.c)(Tk())
           },
-          hasPlayer: () => null !== Uu(),
+          hasPlayer: () => null !== gk(),
           isPlayerDead: () => {
-            var uu;
-            return !1 === (null === (uu = Uu()) || void 0 === uu ? void 0 : uu.localPlayerAlive())
+            var kk;
+            return !1 === (null === (kk = gk()) || void 0 === kk ? void 0 : kk.localPlayerAlive())
           },
           isReplayMode: () => {
-            const uu = Uu();
-            return null !== uu && 0 !== (nu(uu) & mu.Nd.Replay)
+            const kk = gk();
+            return null !== kk && 0 !== (Uk(kk) & Xk.Ed.Replay)
           },
           isFreeCameraOn: () => {
-            const uu = Uu();
-            return null !== uu && 0 !== (nu(uu) & mu.Nd.FreeCam)
+            const kk = gk();
+            return null !== kk && 0 !== (Uk(kk) & Xk.Ed.FreeCam)
           },
-          targetsBlock: () => su(Uu()),
+          targetsBlock: () => ck(gk()),
           selectedSlotEmpty: () => {
-            var uu;
-            return !(null !== (uu = Uu()) && void 0 !== uu && uu.items.jJ())
+            var kk;
+            return !(null !== (kk = gk()) && void 0 !== kk && kk.items.Hb())
           },
-          pickBlockAllowed: () => !!Qu.b.get("creative") && !!Qu.b.get("canPickBlocks"),
-          scrollHotbar: uu => {
-            Du(mu.Cd.Hotbar, mu.Ad.Down | (uu > 0 ? mu.Ad.Next : 0))
+          pickBlockAllowed: () => !!ak.b.get("creative") && !!ak.b.get("canPickBlocks"),
+          scrollHotbar: kk => {
+            Nk(Xk.td.Hotbar, Xk.qd.Down | (kk > 0 ? Xk.qd.Next : 0))
           },
-          hasFullInventory: Xu.k,
-          hasLobbyLeaderboard: () => !!Qu.b.get("lobbyLeaderboardInfo"),
+          hasFullInventory: dk.p,
+          hasLobbyLeaderboard: () => !!ak.b.get("lobbyLeaderboardInfo"),
           contextActionInputs: () => {
-            var uu, Ru, yu, Eu;
-            const Ku = Uu();
+            var kk, Fk, Bk, Rk;
+            const tk = gk();
             return {
-              holdingGun: !1 !== (null === Ku || void 0 === Ku ? void 0 : Ku.localPlayerAlive()) && "Gun" === (null === Ku || void 0 === Ku || null === (uu = Ku.items.jJ()) || void 0 === uu || null === (Ru = uu.typeObj) || void 0 === Ru ? void 0 : Ru.type),
-              customButtons: null !== (yu = Qu.b.get("customButtons")) && void 0 !== yu ? yu : null,
-              touchscreenActionButton: null !== (Eu = Qu.b.get("touchscreenActionButton")) && void 0 !== Eu ? Eu : null
+              holdingGun: !1 !== (null === tk || void 0 === tk ? void 0 : tk.localPlayerAlive()) && "Gun" === (null === tk || void 0 === tk || null === (kk = tk.items.Hb()) || void 0 === kk || null === (Fk = kk.typeObj) || void 0 === Fk ? void 0 : Fk.type),
+              customButtons: null !== (Bk = ak.b.get("customButtons")) && void 0 !== Bk ? Bk : null,
+              touchscreenActionButton: null !== (Rk = ak.b.get("touchscreenActionButton")) && void 0 !== Rk ? Rk : null
             }
           },
-          pressTouchButton: uu => {
-            uu ? Mu(eu) : Iu(eu)
+          pressTouchButton: kk => {
+            kk ? Hk(Ek) : uk(Ek)
           }
         }
       },
-      cu = () => {
-        const uu = (0, Ku.b)(gu()),
-          Ru = (0, Eu.b)(),
-          yu = null;
+      Dk = () => {
+        const kk = (0, tk.e)(rk()),
+          Fk = (0, Rk.d)(),
+          Bk = null;
         return () => {
-          uu(), Ru(), null === yu || void 0 === yu || yu()
+          kk(), Fk(), null === Bk || void 0 === Bk || Bk()
         }
       }
   },
-  4564: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      $: () => Du,
-      $b: () => Pu,
-      Ab: () => xu,
-      B: () => Eu,
-      Db: () => Cu,
-      E: () => Qu,
-      G: () => Su,
-      H: () => iu,
-      Hb: () => bu,
-      Ib: () => Uu,
-      L: () => Xu,
-      Lb: () => Lu,
-      N: () => pu,
-      Pb: () => su,
-      Q: () => Nu,
-      R: () => Bu,
-      Rb: () => lu,
-      S: () => ru,
-      Sb: () => gu,
-      Tb: () => Hu,
-      Vb: () => du,
-      W: () => ku,
-      X: () => Au,
-      Yb: () => Fu,
-      Zb: () => Ku,
-      c: () => hu,
-      db: () => eu,
-      g: () => Zu,
-      hb: () => Mu,
-      i: () => Vu,
-      j: () => ju,
-      lb: () => zu,
-      m: () => wu,
-      ob: () => cu,
-      p: () => Wu,
-      rb: () => tu,
-      s: () => Tu,
-      ub: () => Iu,
-      w: () => mu,
-      x: () => Ju,
-      xb: () => nu,
-      yb: () => Gu
+  4531: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      $: () => Hk,
+      A: () => ek,
+      Cb: () => zk,
+      D: () => Kk,
+      Db: () => ck,
+      F: () => dk,
+      Fb: () => Tk,
+      G: () => yk,
+      H: () => wk,
+      Jb: () => rk,
+      Kb: () => vk,
+      L: () => Jk,
+      Lb: () => ik,
+      N: () => Vk,
+      O: () => Ok,
+      Ob: () => hk,
+      R: () => Sk,
+      Rb: () => tk,
+      T: () => Nk,
+      Tb: () => pk,
+      X: () => Ek,
+      bb: () => Pk,
+      d: () => Zk,
+      fb: () => Dk,
+      g: () => Ck,
+      h: () => sk,
+      i: () => Wk,
+      j: () => qk,
+      jb: () => Gk,
+      kb: () => uk,
+      m: () => mk,
+      ob: () => Uk,
+      pb: () => Mk,
+      q: () => fk,
+      qb: () => Ak,
+      t: () => Xk,
+      tb: () => Lk,
+      u: () => bk,
+      vb: () => Yk,
+      y: () => Rk,
+      yb: () => gk,
+      z: () => ak
     });
-    const Eu = 32,
-      Ku = 33.333333333333336,
-      Qu = {
+    const Rk = 32,
+      tk = 33.333333333333336,
+      ak = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -285,18 +285,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      mu = {
+      Xk = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      Ju = {
+      bk = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      Nu = {
+      wk = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -304,20 +304,20 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      Xu = {
+      dk = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      Vu = {
+      sk = {
         Look: 0,
         Remesh: 1
       },
-      ru = 8,
-      Bu = 1,
-      xu = {
+      Vk = 8,
+      Jk = 1,
+      Ak = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -326,7 +326,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      Su = {
+      ek = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -354,12 +354,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      pu = {
+      yk = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      Tu = {
+      fk = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -411,7 +411,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      Wu = {
+      mk = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -421,10 +421,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      ju = 4,
-      Hu = 4,
-      du = 65535,
-      bu = {
+      Wk = 4,
+      vk = 4,
+      ik = 65535,
+      Yk = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -437,7 +437,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      Cu = {
+      Lk = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -445,12 +445,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      ku = 88,
-      eu = 0,
-      Au = 24,
-      Du = 48,
-      Mu = 80,
-      Iu = {
+      Ok = 88,
+      Ek = 0,
+      Sk = 24,
+      Nk = 48,
+      Hk = 80,
+      uk = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -461,18 +461,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      Gu = {
+      Mk = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      Uu = {
+      gk = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      nu = {
+      Uk = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -490,34 +490,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      su = {
+      ck = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      tu = 65535,
-      lu = {
+      Gk = 65535,
+      Tk = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      gu = {
+      rk = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      cu = 2,
-      Lu = {
+      Dk = 2,
+      zk = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      zu = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      Fu = {
+      Pk = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      hk = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -529,7 +529,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      wu = {
+      qk = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -556,7 +556,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      Zu = {
+      Ck = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -714,8 +714,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      hu = 8,
-      Pu = {
+      Zk = 8,
+      pk = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -740,289 +740,289 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      iu = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      Kk = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  4549: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      C: () => Mu,
-      D: () => Iu,
-      E: () => ju,
-      G: () => mu,
-      I: () => Ju,
-      J: () => Au,
-      e: () => eu,
-      g: () => du,
-      i: () => Uu,
-      m: () => Gu,
-      n: () => Wu,
-      o: () => Cu,
-      r: () => Hu,
-      v: () => bu,
-      y: () => Du
+  4511: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      A: () => Hk,
+      B: () => uk,
+      D: () => Wk,
+      G: () => Xk,
+      J: () => bk,
+      N: () => Sk,
+      b: () => Ek,
+      e: () => ik,
+      h: () => gk,
+      l: () => Mk,
+      m: () => mk,
+      p: () => Lk,
+      s: () => vk,
+      t: () => Yk,
+      x: () => Nk
     });
-    var Eu = yu(4558);
-    const Ku = {
+    var Rk = Bk(4517);
+    const tk = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let Qu = Ku;
+    let ak = tk;
 
-    function mu(uu) {
-      Qu = null !== uu && void 0 !== uu ? uu : Ku
+    function Xk(kk) {
+      ak = null !== kk && void 0 !== kk ? kk : tk
     }
 
-    function Ju() {
-      return Qu
+    function bk() {
+      return ak
     }
-    const Nu = new Set,
-      Xu = new Set;
-    let Vu = -1;
-    const ru = new Set,
-      Bu = new Set;
-    let xu = 0,
-      Su = 0;
-    const pu = new Set,
-      Tu = new Set;
+    const wk = new Set,
+      dk = new Set;
+    let sk = -1;
+    const Vk = new Set,
+      Jk = new Set;
+    let Ak = 0,
+      ek = 0;
+    const yk = new Set,
+      fk = new Set;
 
-    function Wu(uu) {
-      return Nu.add(uu), () => {
-        Nu.delete(uu)
+    function mk(kk) {
+      return wk.add(kk), () => {
+        wk.delete(kk)
       }
     }
 
-    function ju(uu, Ru) {
-      for (const Eu of Nu) try {
-        Eu(uu)
-      } catch (yu) {
-        Ru(yu)
+    function Wk(kk, Fk) {
+      for (const Rk of wk) try {
+        Rk(kk)
+      } catch (Bk) {
+        Fk(Bk)
       }
     }
 
-    function Hu(uu) {
-      return Xu.add(uu), () => {
-        Xu.delete(uu)
+    function vk(kk) {
+      return dk.add(kk), () => {
+        dk.delete(kk)
       }
     }
 
-    function du(uu, Ru) {
-      const yu = Vu < 0 ? 0 : uu - Vu;
-      Vu = uu;
-      for (const Ku of Xu) try {
-        Ku(yu)
-      } catch (Eu) {
-        Ru(Eu)
+    function ik(kk, Fk) {
+      const Bk = sk < 0 ? 0 : kk - sk;
+      sk = kk;
+      for (const tk of dk) try {
+        tk(Bk)
+      } catch (Rk) {
+        Fk(Rk)
       }
     }
 
-    function bu(uu) {
-      return ru.add(uu), () => {
-        ru.delete(uu)
+    function Yk(kk) {
+      return Vk.add(kk), () => {
+        Vk.delete(kk)
       }
     }
 
-    function Cu(uu) {
-      return Bu.add(uu), () => {
-        Bu.delete(uu)
+    function Lk(kk) {
+      return Jk.add(kk), () => {
+        Jk.delete(kk)
       }
     }
-    let ku = 0;
+    let Ok = 0;
 
-    function eu(uu) {
-      ku += uu
+    function Ek(kk) {
+      Ok += kk
     }
 
-    function Au() {
-      const uu = ku;
-      return ku = 0, uu
+    function Sk() {
+      const kk = Ok;
+      return Ok = 0, kk
     }
 
-    function Du(uu) {
-      return pu.add(uu), () => {
-        pu.delete(uu)
-      }
-    }
-
-    function Mu(uu) {
-      return Tu.add(uu), () => {
-        Tu.delete(uu)
+    function Nk(kk) {
+      return yk.add(kk), () => {
+        yk.delete(kk)
       }
     }
 
-    function Iu() {
-      xu = 0, Su = 0, Vu = -1
+    function Hk(kk) {
+      return fk.add(kk), () => {
+        fk.delete(kk)
+      }
     }
 
-    function Gu(uu, Ru) {
-      if ("paced" === uu) return Su += Ru, null;
-      if ("drawn" !== uu && "skipped" !== uu) return null;
-      const yu = Ru + Su;
-      return Su = 0, yu
+    function uk() {
+      Ak = 0, ek = 0, sk = -1
     }
 
-    function Uu(uu, Ru, yu, Ku) {
-      const Qu = (0, Eu.g)(Ru),
-        mu = uu > 0 ? performance.now() : 0;
-      for (let Eu = 0; Eu < uu; Eu++)
-        for (const uu of pu) try {
-          uu()
-        } catch (Ju) {
-          Ku(Ju)
+    function Mk(kk, Fk) {
+      if ("paced" === kk) return ek += Fk, null;
+      if ("drawn" !== kk && "skipped" !== kk) return null;
+      const Bk = Fk + ek;
+      return ek = 0, Bk
+    }
+
+    function gk(kk, Fk, Bk, tk) {
+      const ak = (0, Rk.i)(Fk),
+        Xk = kk > 0 ? performance.now() : 0;
+      for (let Rk = 0; Rk < kk; Rk++)
+        for (const kk of yk) try {
+          kk()
+        } catch (bk) {
+          tk(bk)
         }
-      if (uu > 0 && eu(performance.now() - mu), null !== yu) {
-        for (const uu of ru) try {
-          uu(yu)
-        } catch (Ju) {
-          Ku(Ju)
+      if (kk > 0 && Ek(performance.now() - Xk), null !== Bk) {
+        for (const kk of Vk) try {
+          kk(Bk)
+        } catch (bk) {
+          tk(bk)
         }
-        xu += yu
+        Ak += Bk
       }
-      if ("drawn" === Ru) {
-        const uu = xu;
-        xu = 0;
-        for (const Ru of Bu) try {
-          Ru(uu)
-        } catch (Ju) {
-          Ku(Ju)
+      if ("drawn" === Fk) {
+        const kk = Ak;
+        Ak = 0;
+        for (const Fk of Jk) try {
+          Fk(kk)
+        } catch (bk) {
+          tk(bk)
         }
       }
-      for (const Eu of Tu) try {
-        Eu(uu, Qu)
-      } catch (Ju) {
-        Ku(Ju)
+      for (const Rk of fk) try {
+        Rk(kk, ak)
+      } catch (bk) {
+        tk(bk)
       }
     }
   },
-  4562: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      B: () => Iu,
-      Bb: () => hu,
-      Cb: () => Ou,
-      Cc: () => Eu.rb,
-      Db: () => fu,
-      Dd: () => Pu,
-      E: () => mu,
-      F: () => nu,
-      Fb: () => RR,
-      Gc: () => xR,
-      Ib: () => Ku.d,
-      Ic: () => XR,
-      Id: () => Zu,
-      J: () => BR,
-      Jd: () => Yu,
-      K: () => vu,
-      Kb: () => eu,
-      Mb: () => cu,
-      Mc: () => ER,
-      Nc: () => Eu.ub,
-      Nd: () => iu,
-      O: () => Eu.g,
-      Pb: () => Gu,
-      Q: () => Xu,
-      Qc: () => Eu.xb,
-      R: () => Eu.i,
-      Rd: () => mR,
-      Sb: () => Mu,
-      Sc: () => Eu.yb,
-      Tb: () => Eu.N,
-      U: () => Eu.j,
-      Uc: () => au,
-      Ud: () => SR,
-      Vb: () => Uu,
-      Vd: () => du,
-      Wb: () => bu,
-      Wc: () => Eu.Db,
-      Wd: () => ou,
-      Xb: () => QR,
-      Xc: () => Eu.Hb,
-      Y: () => qu,
-      Yc: () => Eu.Ib,
-      Yd: () => lu,
-      Zc: () => Eu.Pb,
-      Zd: () => tu,
-      _b: () => Hu,
-      _c: () => Eu.Rb,
-      ab: () => Eu.s,
-      ac: () => VR,
-      bb: () => Eu.w,
-      bc: () => Ku.h,
-      bd: () => Eu.Sb,
-      be: () => su,
-      cc: () => Wu,
-      d: () => uR,
-      ee: () => Nu,
-      fb: () => Eu.x,
-      fc: () => yR,
-      fd: () => Du,
-      g: () => pu,
-      he: () => gu,
-      jb: () => ru,
-      jc: () => Eu.W,
-      jd: () => Eu.Tb,
-      k: () => Su,
-      ke: () => pR,
-      m: () => NR,
-      mb: () => ju,
-      md: () => Eu.Vb,
-      nb: () => Eu.B,
-      nc: () => Eu.X,
-      nd: () => Eu.Zb,
-      od: () => Qu,
-      oe: () => xu,
-      p: () => Au,
-      qb: () => Eu.E,
-      rc: () => Eu.$,
-      rd: () => Tu,
-      sb: () => Fu,
-      t: () => ku,
-      ub: () => KR,
-      uc: () => Eu.db,
-      ud: () => JR,
-      vb: () => Vu,
-      w: () => Eu.c,
-      xd: () => zu,
-      yb: () => Eu.G,
-      yc: () => Eu.hb,
-      yd: () => wu,
-      z: () => rR,
-      zd: () => Lu
+  4524: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      A: () => Ik,
+      Ab: () => Hk,
+      B: () => Rk.g,
+      Bc: () => Rk.Fb,
+      C: () => dk,
+      Cb: () => Rk.G,
+      Cc: () => Rk.Jb,
+      Eb: () => gk,
+      Ec: () => Nk,
+      G: () => Rk.h,
+      Gc: () => Rk.Kb,
+      Hb: () => Yk,
+      I: () => Rk.i,
+      Ib: () => XF,
+      Jb: () => vk,
+      K: () => lk,
+      Kc: () => Rk.Lb,
+      Lc: () => Rk.Rb,
+      M: () => Rk.q,
+      Nb: () => VF,
+      Ob: () => tk.n,
+      P: () => Rk.t,
+      Pb: () => mk,
+      Pc: () => ak,
+      Qc: () => fk,
+      Rb: () => RF,
+      S: () => Rk.u,
+      Sb: () => Rk.O,
+      Sc: () => wF,
+      T: () => Vk,
+      Tc: () => Pk,
+      Ub: () => Rk.R,
+      Uc: () => qk,
+      V: () => Wk,
+      Wc: () => zk,
+      Xc: () => pk,
+      Yb: () => Rk.T,
+      Z: () => Rk.y,
+      Zb: () => Rk.X,
+      _b: () => Rk.$,
+      ab: () => Rk.z,
+      bb: () => hk,
+      cc: () => Rk.jb,
+      db: () => aF,
+      dc: () => eF,
+      dd: () => Ck,
+      e: () => FF,
+      ec: () => sF,
+      ed: () => xk,
+      fd: () => Kk,
+      g: () => yk,
+      gb: () => sk,
+      gd: () => bF,
+      hb: () => Rk.A,
+      hc: () => tF,
+      hd: () => yF,
+      i: () => ek,
+      ib: () => Zk,
+      ic: () => Rk.kb,
+      jb: () => nk,
+      jc: () => Rk.ob,
+      jd: () => ik,
+      k: () => dF,
+      kd: () => jk,
+      l: () => Sk,
+      m: () => Ok,
+      mb: () => kF,
+      mc: () => Rk.pb,
+      md: () => Tk,
+      nc: () => Qk,
+      o: () => Rk.d,
+      ob: () => BF,
+      od: () => Gk,
+      p: () => JF,
+      q: () => uk,
+      qb: () => tk.g,
+      qd: () => ck,
+      rb: () => Ek,
+      rc: () => Rk.tb,
+      rd: () => wk,
+      s: () => Xk,
+      sc: () => Rk.vb,
+      td: () => rk,
+      u: () => Uk,
+      ub: () => Dk,
+      wb: () => Mk,
+      wc: () => Rk.yb,
+      wd: () => fF,
+      xc: () => Rk.Db,
+      xd: () => Ak,
+      y: () => AF
     });
-    var Eu = yu(4564),
-      Ku = yu(2306);
-    const Qu = Math.round(1e3 / Eu.Zb),
-      mu = 4,
-      Ju = 2;
+    var Rk = Bk(4531),
+      tk = Bk(2303);
+    const ak = Math.round(1e3 / Rk.Rb),
+      Xk = 4,
+      bk = 2;
 
-    function Nu() {
-      return crypto.getRandomValues(new Uint32Array(Ju))
+    function wk() {
+      return crypto.getRandomValues(new Uint32Array(bk))
     }
-    const Xu = {
+    const dk = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      Vu = 16,
-      ru = {
+      sk = 16,
+      Vk = {
         Draws: 1,
         NetAll: 2
       },
-      Bu = {
+      Jk = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function xu(uu) {
-      return (uu.nametagsHidden ? Cu.NametagsHidden : 0) | (uu.crouchToggle ? Cu.CrouchToggle : 0) | (uu.bhopDisabled ? Cu.BhopDisabled : 0) | (uu.disableBobbing ? Cu.DisableBobbing : 0) | (uu.ezTowering ? Cu.EzTowering : 0) | (uu.ezBridging ? Cu.EzBridging : 0) | (uu.showChunkBorders ? Cu.ShowChunkBorders : 0)
+    function Ak(kk) {
+      return (kk.nametagsHidden ? Lk.NametagsHidden : 0) | (kk.crouchToggle ? Lk.CrouchToggle : 0) | (kk.bhopDisabled ? Lk.BhopDisabled : 0) | (kk.disableBobbing ? Lk.DisableBobbing : 0) | (kk.ezTowering ? Lk.EzTowering : 0) | (kk.ezBridging ? Lk.EzBridging : 0) | (kk.showChunkBorders ? Lk.ShowChunkBorders : 0)
     }
-    const Su = {
+    const ek = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      pu = {
+      yk = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -1030,7 +1030,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      Tu = {
+      fk = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -1039,7 +1039,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      Wu = {
+      mk = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -1048,20 +1048,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      ju = 5,
-      Hu = 4294967295;
+      Wk = 5,
+      vk = 4294967295;
 
-    function du(uu) {
-      return (uu.showFog ? Bu.ShowFog : 0) | (uu.lighting ? Bu.Lighting : 0) | (uu.chunkFade ? Bu.ChunkFade : 0)
+    function ik(kk) {
+      return (kk.showFog ? Jk.ShowFog : 0) | (kk.lighting ? Jk.Lighting : 0) | (kk.chunkFade ? Jk.ChunkFade : 0)
     }
-    const bu = {
+    const Yk = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      Cu = {
+      Lk = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -1071,50 +1071,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      ku = {
+      Ok = {
         Release: 1,
         KeepTouches: 2
       },
-      eu = {
+      Ek = {
         Point: 1,
         Stamped: 2
       },
-      Au = {
+      Sk = {
         Add: 1,
         Clear: 2
       },
-      Du = 1,
-      Mu = 8,
-      Iu = 16777215,
-      Gu = 4,
-      Uu = {
+      Nk = 1,
+      Hk = 8,
+      uk = 16777215,
+      Mk = 4,
+      gk = {
         Resume: 1
       },
-      nu = {
+      Uk = {
         Held: 1
       };
 
-    function su(uu, Ru) {
-      return (uu | Ru << 8) >>> 0
+    function ck(kk, Fk) {
+      return (kk | Fk << 8) >>> 0
     }
 
-    function tu(uu) {
-      return 255 & uu
+    function Gk(kk) {
+      return 255 & kk
     }
 
-    function lu(uu) {
-      return uu >>> 8
+    function Tk(kk) {
+      return kk >>> 8
     }
 
-    function gu(uu) {
-      return uu + 3 & -4
+    function rk(kk) {
+      return kk + 3 & -4
     }
-    const cu = 16777216,
-      Lu = 20;
-    const zu = 8,
-      Fu = 8,
-      wu = 16777216,
-      Zu = {
+    const Dk = 16777216,
+      zk = 20;
+    const Pk = 8,
+      hk = 8,
+      qk = 16777216,
+      Ck = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -1122,19 +1122,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      hu = {
+      Zk = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      Pu = 16,
-      iu = {
+      pk = 16,
+      Kk = {
         Lost: 0,
         Gone: 1
       },
-      Yu = {
+      xk = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -1142,18 +1142,18 @@ export const modules = {
         Retire: 5
       };
 
-    function ou(uu) {
-      return uu === Yu.WorldgenSeed || uu === Yu.Generate
+    function jk(kk) {
+      return kk === xk.WorldgenSeed || kk === xk.Generate
     }
-    const qu = 4,
-      Ou = 99,
-      vu = {
+    const lk = 4,
+      nk = 99,
+      Ik = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      au = {
+      Qk = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -1161,40 +1161,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      fu = 12,
-      uR = 16,
-      RR = 4,
-      yR = 12,
-      ER = {
+      kF = 12,
+      FF = 16,
+      BF = 4,
+      RF = 12,
+      tF = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      KR = 4,
-      QR = 8,
-      mR = 8,
-      JR = {
+      aF = 4,
+      XF = 8,
+      bF = 8,
+      wF = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      NR = {
+      dF = {
         Crit: 1,
         HitSelf: 2
       },
-      XR = {
+      sF = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      VR = {
+      VF = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      rR = 12,
-      BR = {
+      JF = 12,
+      AF = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -1203,65 +1203,65 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      xR = 67108864;
+      eF = 67108864;
 
-    function SR(uu) {
-      for (const [Ru, yu] of Object.entries(Eu.g))
-        if (yu === uu) return Ru;
-      return `Unknown${uu}`
+    function yF(kk) {
+      for (const [Fk, Bk] of Object.entries(Rk.g))
+        if (Bk === kk) return Fk;
+      return `Unknown${kk}`
     }
 
-    function pR(uu) {
+    function fF(kk) {
       return {
-        status: uu[Eu.E.Status],
-        lastError: uu[Eu.E.LastError],
-        lastErrorDetail: uu[Eu.E.LastErrorDetail],
-        errorCount: uu[Eu.E.ErrorCount],
-        frameIndex: uu[Eu.E.FrameIndex],
-        tickIndex: uu[Eu.E.TickIndex],
-        renderPending: uu[Eu.E.RenderPending],
-        firstView: uu[Eu.E.FirstView],
-        chunksCancelled: uu[Eu.E.ChunksCancelled]
+        status: kk[Rk.z.Status],
+        lastError: kk[Rk.z.LastError],
+        lastErrorDetail: kk[Rk.z.LastErrorDetail],
+        errorCount: kk[Rk.z.ErrorCount],
+        frameIndex: kk[Rk.z.FrameIndex],
+        tickIndex: kk[Rk.z.TickIndex],
+        renderPending: kk[Rk.z.RenderPending],
+        firstView: kk[Rk.z.FirstView],
+        chunksCancelled: kk[Rk.z.ChunksCancelled]
       }
     }
   },
-  4558: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => mu,
-      d: () => Qu,
-      g: () => Ku
+  4517: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Xk,
+      g: () => ak,
+      i: () => tk
     });
-    var Eu = yu(4562);
+    var Rk = Bk(4524);
 
-    function Ku(uu) {
-      return "none" !== uu
+    function tk(kk) {
+      return "none" !== kk
     }
 
-    function Qu(uu, Ru) {
-      if (!uu) return "none";
-      switch (Ru) {
-        case Eu.fb.Drawn:
+    function ak(kk, Fk) {
+      if (!kk) return "none";
+      switch (Fk) {
+        case Rk.S.Drawn:
           return "drawn";
-        case Eu.fb.Paced:
+        case Rk.S.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function mu(uu) {
-      return "drawn" === uu
+    function Xk(kk) {
+      return "drawn" === kk
     }
   },
-  4578: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Ku,
-      e: () => Qu,
-      f: () => mu,
-      j: () => Eu,
-      k: () => Ju
+  4541: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk,
+      f: () => ak,
+      j: () => Xk,
+      m: () => Rk,
+      o: () => bk
     });
-    const Eu = {
+    const Rk = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -1458,8 +1458,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      Ku = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      Qu = {
+      tk = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      ak = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -1522,160 +1522,160 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      mu = {
+      Xk = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      Ju = [16]
+      bk = [16]
   },
-  40243: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => mu,
-      i: () => Qu,
-      k: () => Ku
+  40080: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Xk,
+      g: () => ak,
+      h: () => tk
     });
-    let Eu = null;
+    let Rk = null;
 
-    function Ku(uu) {
-      Eu = uu
+    function tk(kk) {
+      Rk = kk
     }
 
-    function Qu(uu) {
-      Eu === uu && (Eu = null)
+    function ak(kk) {
+      Rk === kk && (Rk = null)
     }
 
-    function mu() {
-      var uu;
-      null === (uu = Eu) || void 0 === uu || uu()
+    function Xk() {
+      var kk;
+      null === (kk = Rk) || void 0 === kk || kk()
     }
   },
-  4586: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ju,
-      f: () => mu,
-      h: () => Xu
+  4546: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => bk,
+      g: () => Xk,
+      i: () => dk
     });
-    var Eu = yu(2306),
-      Ku = yu(2312);
-    const Qu = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var Rk = Bk(2303),
+      tk = Bk(2305);
+    const ak = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function mu(uu) {
-      return uu instanceof HTMLElement && (!!(uu.isContentEditable || uu instanceof HTMLTextAreaElement || uu instanceof HTMLSelectElement) || uu instanceof HTMLInputElement && !Qu.has(uu.type))
+    function Xk(kk) {
+      return kk instanceof HTMLElement && (!!(kk.isContentEditable || kk instanceof HTMLTextAreaElement || kk instanceof HTMLSelectElement) || kk instanceof HTMLInputElement && !ak.has(kk.type))
     }
 
-    function Ju(uu) {
-      let Ru = null;
-      const yu = yu => {
-          const Ku = mu(yu);
-          Ku !== Ru && (Ru = Ku, uu(Eu.f.UiCapture, Eu.t.Keyboard, 0, 0, Ku ? Eu.t.Keyboard : 0))
+    function bk(kk) {
+      let Fk = null;
+      const Bk = Bk => {
+          const tk = Xk(Bk);
+          tk !== Fk && (Fk = tk, kk(Rk.j.UiCapture, Rk.A.Keyboard, 0, 0, tk ? Rk.A.Keyboard : 0))
         },
-        Ku = uu => {
-          yu(uu.target)
+        tk = kk => {
+          Bk(kk.target)
         },
-        Qu = uu => {
-          yu(uu.relatedTarget)
+        ak = kk => {
+          Bk(kk.relatedTarget)
         },
-        Ju = () => {
-          yu(document.activeElement)
+        bk = () => {
+          Bk(document.activeElement)
         },
-        Nu = {
+        wk = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", Ku, Nu), document.addEventListener("focusout", Qu, Nu), document.addEventListener("keydown", Ju, Nu), yu(document.activeElement), () => {
-        document.removeEventListener("focusin", Ku, Nu), document.removeEventListener("focusout", Qu, Nu), document.removeEventListener("keydown", Ju, Nu)
+      return document.addEventListener("focusin", tk, wk), document.addEventListener("focusout", ak, wk), document.addEventListener("keydown", bk, wk), Bk(document.activeElement), () => {
+        document.removeEventListener("focusin", tk, wk), document.removeEventListener("focusout", ak, wk), document.removeEventListener("keydown", bk, wk)
       }
     }
-    const Nu = new Map;
+    const wk = new Map;
 
-    function Xu(uu, Ru) {
-      var yu;
-      let Eu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      Nu.set(Eu, (null !== (yu = Nu.get(Eu)) && void 0 !== yu ? yu : 0) & ~uu | Ru & uu);
-      let Qu = 0;
-      for (const Ku of Nu.values()) Qu |= Ku;
-      return (0, Ku.J)(uu, Qu & uu)
+    function dk(kk, Fk) {
+      var Bk;
+      let Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      wk.set(Rk, (null !== (Bk = wk.get(Rk)) && void 0 !== Bk ? Bk : 0) & ~kk | Fk & kk);
+      let ak = 0;
+      for (const tk of wk.values()) ak |= tk;
+      return (0, tk.x)(kk, ak & kk)
     }
   },
-  36707: (uu, Ru, yu) => {
-    function Eu(uu) {
-      return uu.includes("Leaf Bed")
+  36614: (kk, Fk, Bk) => {
+    function Rk(kk) {
+      return kk.includes("Leaf Bed")
     }
 
-    function Ku(uu) {
-      return / Bed(?: Head)?(?:\||$)/.test(uu) && !Eu(uu)
+    function tk(kk) {
+      return / Bed(?: Head)?(?:\||$)/.test(kk) && !Rk(kk)
     }
 
-    function Qu(uu) {
-      return uu.includes(" Strongbed")
+    function ak(kk) {
+      return kk.includes(" Strongbed")
     }
 
-    function mu(uu) {
-      return Eu(uu) || Ku(uu) || Qu(uu)
+    function Xk(kk) {
+      return Rk(kk) || tk(kk) || ak(kk)
     }
-    yu.d(Ru, {
-      b: () => mu,
-      d: () => Eu,
-      e: () => Qu,
-      f: () => Ku
+    Bk.d(Fk, {
+      b: () => Xk,
+      f: () => Rk,
+      i: () => ak,
+      l: () => tk
     })
   },
-  36702: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Xu
+  36605: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => dk
     });
-    var Eu = yu(36707),
-      Ku = yu(9158);
-    const Qu = [],
-      mu = [],
-      Ju = [],
-      Nu = [];
-    for (const Vu of Object.keys(Ku.q))(0, Eu.d)(Vu) ? Qu.push(Vu) : (0, Eu.f)(Vu) && mu.push(Vu), (0, Eu.e)(Vu) && Ju.push(Vu), (Vu.includes(" Bed Head") || Vu.includes(" Strongbed Head")) && Nu.push(Vu);
-    const Xu = {
-      leafBeds: Qu,
-      woolBeds: mu,
-      strongBeds: Ju,
-      beds: [...Qu, ...mu, ...Ju],
-      bedHeads: Nu,
+    var Rk = Bk(36614),
+      tk = Bk(9095);
+    const ak = [],
+      Xk = [],
+      bk = [],
+      wk = [];
+    for (const sk of Object.keys(tk.q))(0, Rk.f)(sk) ? ak.push(sk) : (0, Rk.l)(sk) && Xk.push(sk), (0, Rk.i)(sk) && bk.push(sk), (sk.includes(" Bed Head") || sk.includes(" Strongbed Head")) && wk.push(sk);
+    const dk = {
+      leafBeds: ak,
+      woolBeds: Xk,
+      strongBeds: bk,
+      beds: [...ak, ...Xk, ...bk],
+      bedHeads: wk,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6268: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => mu,
-      e: () => Ku,
-      h: () => Nu,
-      i: () => Qu,
-      m: () => Xu,
-      n: () => Eu,
-      r: () => Ju
+  6167: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Xk,
+      c: () => tk,
+      f: () => wk,
+      h: () => ak,
+      j: () => dk,
+      l: () => Rk,
+      o: () => bk
     });
-    let Eu = function(uu) {
-        return uu[uu.DEFAULT = 0] = "DEFAULT", uu[uu.BOAT = 1] = "BOAT", uu[uu.GLIDER = 2] = "GLIDER", uu[uu.BALLOON = 3] = "BALLOON", uu[uu.SLEEPING = 4] = "SLEEPING", uu[uu.RIDING_MOB = 5] = "RIDING_MOB", uu[uu.CAR = 6] = "CAR", uu[uu.HOVERCRAFT = 7] = "HOVERCRAFT", uu
+    let Rk = function(kk) {
+        return kk[kk.DEFAULT = 0] = "DEFAULT", kk[kk.BOAT = 1] = "BOAT", kk[kk.GLIDER = 2] = "GLIDER", kk[kk.BALLOON = 3] = "BALLOON", kk[kk.SLEEPING = 4] = "SLEEPING", kk[kk.RIDING_MOB = 5] = "RIDING_MOB", kk[kk.CAR = 6] = "CAR", kk[kk.HOVERCRAFT = 7] = "HOVERCRAFT", kk
       }({}),
-      Ku = function(uu) {
-        return uu[uu.WOOD = 0] = "WOOD", uu[uu.OBSIDIAN = 1] = "OBSIDIAN", uu[uu.SPEED = 2] = "SPEED", uu
+      tk = function(kk) {
+        return kk[kk.WOOD = 0] = "WOOD", kk[kk.OBSIDIAN = 1] = "OBSIDIAN", kk[kk.SPEED = 2] = "SPEED", kk
       }({}),
-      Qu = function(uu) {
-        return uu[uu.WOOD = 0] = "WOOD", uu[uu.IRON = 1] = "IRON", uu[uu.GOLD = 2] = "GOLD", uu[uu.DIAMOND = 3] = "DIAMOND", uu
+      ak = function(kk) {
+        return kk[kk.WOOD = 0] = "WOOD", kk[kk.IRON = 1] = "IRON", kk[kk.GOLD = 2] = "GOLD", kk[kk.DIAMOND = 3] = "DIAMOND", kk
       }({}),
-      mu = function(uu) {
-        return uu[uu.YELLOW = 0] = "YELLOW", uu[uu.WHITE = 1] = "WHITE", uu[uu.RED = 2] = "RED", uu[uu.PURPLE = 3] = "PURPLE", uu[uu.PINK = 4] = "PINK", uu[uu.ORANGE = 5] = "ORANGE", uu[uu.MAGENTA = 6] = "MAGENTA", uu[uu.LIME = 7] = "LIME", uu[uu.LIGHT_GRAY = 8] = "LIGHT_GRAY", uu[uu.LIGHT_BLUE = 9] = "LIGHT_BLUE", uu[uu.GREEN = 10] = "GREEN", uu[uu.GRAY = 11] = "GRAY", uu[uu.CYAN = 12] = "CYAN", uu[uu.BROWN = 13] = "BROWN", uu[uu.BLUE = 14] = "BLUE", uu[uu.BLACK = 15] = "BLACK", uu
+      Xk = function(kk) {
+        return kk[kk.YELLOW = 0] = "YELLOW", kk[kk.WHITE = 1] = "WHITE", kk[kk.RED = 2] = "RED", kk[kk.PURPLE = 3] = "PURPLE", kk[kk.PINK = 4] = "PINK", kk[kk.ORANGE = 5] = "ORANGE", kk[kk.MAGENTA = 6] = "MAGENTA", kk[kk.LIME = 7] = "LIME", kk[kk.LIGHT_GRAY = 8] = "LIGHT_GRAY", kk[kk.LIGHT_BLUE = 9] = "LIGHT_BLUE", kk[kk.GREEN = 10] = "GREEN", kk[kk.GRAY = 11] = "GRAY", kk[kk.CYAN = 12] = "CYAN", kk[kk.BROWN = 13] = "BROWN", kk[kk.BLUE = 14] = "BLUE", kk[kk.BLACK = 15] = "BLACK", kk
       }({}),
-      Ju = function(uu) {
-        return uu[uu.ROTATION_1 = 0] = "ROTATION_1", uu[uu.ROTATION_2 = 1] = "ROTATION_2", uu[uu.ROTATION_3 = 2] = "ROTATION_3", uu[uu.ROTATION_4 = 3] = "ROTATION_4", uu
+      bk = function(kk) {
+        return kk[kk.ROTATION_1 = 0] = "ROTATION_1", kk[kk.ROTATION_2 = 1] = "ROTATION_2", kk[kk.ROTATION_3 = 2] = "ROTATION_3", kk[kk.ROTATION_4 = 3] = "ROTATION_4", kk
       }({}),
-      Nu = function(uu) {
-        return uu[uu.KART = 0] = "KART", uu[uu.OFF_ROADER = 1] = "OFF_ROADER", uu[uu.CAR = 2] = "CAR", uu[uu.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", uu[uu.ARMORED_CAR = 4] = "ARMORED_CAR", uu[uu.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", uu[uu.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", uu[uu.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", uu
+      wk = function(kk) {
+        return kk[kk.KART = 0] = "KART", kk[kk.OFF_ROADER = 1] = "OFF_ROADER", kk[kk.CAR = 2] = "CAR", kk[kk.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", kk[kk.ARMORED_CAR = 4] = "ARMORED_CAR", kk[kk.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", kk[kk.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", kk[kk.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", kk
       }({});
-    Eu.DEFAULT, Eu.BOAT, Ku.SPEED, Eu.GLIDER, Qu.DIAMOND, Eu.BALLOON, mu.BLACK, Eu.SLEEPING, Ju.ROTATION_4, Eu.RIDING_MOB, Eu.CAR, Nu.MOONSTONE_MINING_DRILL, Eu.HOVERCRAFT;
-    let Xu = function(uu) {
-      return uu[uu.NORMAL = 0] = "NORMAL", uu[uu.GLIDING = 1] = "GLIDING", uu[uu.FLOATING = 2] = "FLOATING", uu
+    Rk.DEFAULT, Rk.BOAT, tk.SPEED, Rk.GLIDER, ak.DIAMOND, Rk.BALLOON, Xk.BLACK, Rk.SLEEPING, bk.ROTATION_4, Rk.RIDING_MOB, Rk.CAR, wk.MOONSTONE_MINING_DRILL, Rk.HOVERCRAFT;
+    let dk = function(kk) {
+      return kk[kk.NORMAL = 0] = "NORMAL", kk[kk.GLIDING = 1] = "GLIDING", kk[kk.FLOATING = 2] = "FLOATING", kk
     }({})
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

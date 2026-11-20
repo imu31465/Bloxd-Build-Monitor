@@ -1,144 +1,144 @@
 export const id = 203;
 export const ids = [203];
 export const modules = {
-  41076: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      loadGlbAsset: () => HR,
-      loadGlbTree: () => jR
+  40922: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      loadGlbAsset: () => iF,
+      loadGlbTree: () => vF
     });
-    var Eu = yu(37665),
-      Ku = yu(41080),
-      Qu = yu(36152),
-      mu = yu.n(Qu);
+    var Rk = Bk(37578),
+      tk = Bk(40931),
+      ak = Bk(35991),
+      Xk = Bk.n(ak);
 
-    function Ju() {
-      return mu()('(()=>{class uu extends Error{}function Ru(Ru,yu){const Eu=Ru._malloc(yu);if(0===Eu)throw new uu(`Draco: the decoder\'s heap refused ${yu} bytes`);return Eu}function yu(uu){return{[uu.DT_FLOAT32]:[Float32Array,5126],[uu.DT_INT8]:[Int8Array,5120],[uu.DT_INT16]:[Int16Array,5122],[uu.DT_INT32]:[Int32Array,5124],[uu.DT_UINT8]:[Uint8Array,5121],[uu.DT_UINT16]:[Uint16Array,5123],[uu.DT_UINT32]:[Uint32Array,5125]}}function Eu(Ru,Eu,Ku,Qu,mu){let Ju=null,Nu=null,Xu=null;try{Ju=new Ru.Decoder,Nu=new Ru.DecoderBuffer,Nu.Init(Eu,Eu.byteLength);let Vu=0;const ru=Ju.GetEncodedGeometryType(Nu);if(ru===Ru.TRIANGULAR_MESH){const yu=new Ru.Mesh;Xu=yu;const Eu=Ju.DecodeBufferToMesh(Nu,yu);if(!Eu.ok()||0===yu.ptr)throw new uu(Eu.error_msg());Vu=3*yu.num_faces()}else{if(ru!==Ru.POINT_CLOUD)throw new uu(`Draco: Cannot decode invalid geometry type ${ru}`);{const yu=new Ru.PointCloud;Xu=yu;const Eu=Ju.DecodeBufferToPointCloud(Nu,yu);if(!Eu.ok()||!yu.ptr)throw new uu(Eu.error_msg())}}const Bu=Xu.num_points();if(Bu!==Qu.vertices||Vu!==Qu.indices)throw new uu(`Draco: decoded ${Bu} vertices and ${Vu} indices, the accessors declare ${Qu.vertices} and ${Qu.indices}`);const xu=yu(Ru),Su=[];for(const{kind:Ru,id:yu,components:Eu}of Ku){const Ku=Ju.GetAttributeByUniqueId(Xu,yu);if(!Ku||0===Ku.ptr)throw new uu(`Draco: no attribute with id ${yu} (${Ru})`);const Qu=Ku.data_type();if(!xu[Qu])throw new uu(`Draco: Cannot decode invalid data type ${Qu}`);if(Ku.num_components()!==Eu)throw new uu(`Draco: ${Ru} decodes to ${Ku.num_components()} components, its accessor declares ${Eu}`);Su.push([Ru,Ku,Qu])}return mu({dracoDecoder:Ju,geometry:Xu,triangles:ru===Ru.TRIANGULAR_MESH,numPoints:Bu,numIndices:Vu,attributes:Su})}finally{Xu&&Ru.destroy(Xu),Nu&&Ru.destroy(Nu),Ju&&Ru.destroy(Ju)}}const Ku=self;let Qu=null;self.onmessage=uu=>{let{data:mu}=uu;if("init"===mu.id){try{importScripts(mu.url),Qu=DracoDecoderModule({wasmBinary:mu.wasmBinary}),Ku.postMessage({id:"initDone"})}catch(ru){Ku.postMessage({id:"initError",message:ru instanceof Error?ru.message:String(ru)})}return}const{seq:Ju,data:Nu,attributeIds:Xu,expected:Vu}=mu;Qu?Qu.then((uu=>{try{const Qu=function(uu,Ku,Qu,mu){const Ju=Object.keys(Qu).map((uu=>({kind:uu,id:Qu[uu],components:mu.components[uu]})));return Eu(uu,Ku,Ju,mu,(Eu=>{let{dracoDecoder:Ku,geometry:Qu,triangles:mu,numPoints:Ju,numIndices:Nu,attributes:Xu}=Eu;const Vu=yu(uu);let ru=null;if(mu){const yu=4*Nu,Eu=Ru(uu,yu);try{Ku.GetTrianglesUInt32Array(Qu,yu,Eu),ru=new Uint32Array(Nu),ru.set(new Uint32Array(uu.HEAPF32.buffer,Eu,Nu))}finally{uu._free(Eu)}}const Bu=[];for(const[yu,xu,Su]of Xu){const[Eu]=Vu[Su],mu=xu.num_components(),Nu=Ju*mu,Xu=Nu*Eu.BYTES_PER_ELEMENT,ru=Ru(uu,Xu);try{Ku.GetAttributeDataArrayForAllPoints(Qu,xu,Su,Xu,ru),Bu.push({kind:yu,data:new Eu(uu.HEAPF32.buffer,ru,Nu).slice(),size:mu,byteOffset:xu.byte_offset(),byteStride:xu.byte_stride(),normalized:xu.normalized()})}finally{uu._free(ru)}}return{indices:ru,attributes:Bu,totalVertices:Ju}}))}(uu,Nu,Xu,Vu),mu=Qu.attributes.map((uu=>uu.data.buffer));Qu.indices&&mu.push(Qu.indices.buffer),Ku.postMessage({id:"decoded",seq:Ju,...Qu},mu)}catch(ru){Ku.postMessage({id:"decodeError",seq:Ju,message:ru instanceof Error?ru.message:String(ru)})}}),(uu=>{Ku.postMessage({id:"decodeError",seq:Ju,message:uu instanceof Error?uu.message:String(uu)})})):Ku.postMessage({id:"decodeError",seq:Ju,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, yu.p + "dracoDecode.worker.ce129f5e.worker.js")
+    function bk() {
+      return Xk()('(()=>{class kk extends Error{}function Fk(Fk,Bk){const Rk=Fk._malloc(Bk);if(0===Rk)throw new kk(`Draco: the decoder\'s heap refused ${Bk} bytes`);return Rk}function Bk(kk){return{[kk.DT_FLOAT32]:[Float32Array,5126],[kk.DT_INT8]:[Int8Array,5120],[kk.DT_INT16]:[Int16Array,5122],[kk.DT_INT32]:[Int32Array,5124],[kk.DT_UINT8]:[Uint8Array,5121],[kk.DT_UINT16]:[Uint16Array,5123],[kk.DT_UINT32]:[Uint32Array,5125]}}function Rk(Fk,Rk,tk,ak,Xk){let bk=null,wk=null,dk=null;try{bk=new Fk.Decoder,wk=new Fk.DecoderBuffer,wk.Init(Rk,Rk.byteLength);let sk=0;const Vk=bk.GetEncodedGeometryType(wk);if(Vk===Fk.TRIANGULAR_MESH){const Bk=new Fk.Mesh;dk=Bk;const Rk=bk.DecodeBufferToMesh(wk,Bk);if(!Rk.ok()||0===Bk.ptr)throw new kk(Rk.error_msg());sk=3*Bk.num_faces()}else{if(Vk!==Fk.POINT_CLOUD)throw new kk(`Draco: Cannot decode invalid geometry type ${Vk}`);{const Bk=new Fk.PointCloud;dk=Bk;const Rk=bk.DecodeBufferToPointCloud(wk,Bk);if(!Rk.ok()||!Bk.ptr)throw new kk(Rk.error_msg())}}const Jk=dk.num_points();if(Jk!==ak.vertices||sk!==ak.indices)throw new kk(`Draco: decoded ${Jk} vertices and ${sk} indices, the accessors declare ${ak.vertices} and ${ak.indices}`);const Ak=Bk(Fk),ek=[];for(const{kind:Fk,id:Bk,components:Rk}of tk){const tk=bk.GetAttributeByUniqueId(dk,Bk);if(!tk||0===tk.ptr)throw new kk(`Draco: no attribute with id ${Bk} (${Fk})`);const ak=tk.data_type();if(!Ak[ak])throw new kk(`Draco: Cannot decode invalid data type ${ak}`);if(tk.num_components()!==Rk)throw new kk(`Draco: ${Fk} decodes to ${tk.num_components()} components, its accessor declares ${Rk}`);ek.push([Fk,tk,ak])}return Xk({dracoDecoder:bk,geometry:dk,triangles:Vk===Fk.TRIANGULAR_MESH,numPoints:Jk,numIndices:sk,attributes:ek})}finally{dk&&Fk.destroy(dk),wk&&Fk.destroy(wk),bk&&Fk.destroy(bk)}}const tk=self;let ak=null;self.onmessage=kk=>{let{data:Xk}=kk;if("init"===Xk.id){try{importScripts(Xk.url),ak=DracoDecoderModule({wasmBinary:Xk.wasmBinary}),tk.postMessage({id:"initDone"})}catch(Vk){tk.postMessage({id:"initError",message:Vk instanceof Error?Vk.message:String(Vk)})}return}const{seq:bk,data:wk,attributeIds:dk,expected:sk}=Xk;ak?ak.then((kk=>{try{const ak=function(kk,tk,ak,Xk){const bk=Object.keys(ak).map((kk=>({kind:kk,id:ak[kk],components:Xk.components[kk]})));return Rk(kk,tk,bk,Xk,(Rk=>{let{dracoDecoder:tk,geometry:ak,triangles:Xk,numPoints:bk,numIndices:wk,attributes:dk}=Rk;const sk=Bk(kk);let Vk=null;if(Xk){const Bk=4*wk,Rk=Fk(kk,Bk);try{tk.GetTrianglesUInt32Array(ak,Bk,Rk),Vk=new Uint32Array(wk),Vk.set(new Uint32Array(kk.HEAPF32.buffer,Rk,wk))}finally{kk._free(Rk)}}const Jk=[];for(const[Bk,Ak,ek]of dk){const[Rk]=sk[ek],Xk=Ak.num_components(),wk=bk*Xk,dk=wk*Rk.BYTES_PER_ELEMENT,Vk=Fk(kk,dk);try{tk.GetAttributeDataArrayForAllPoints(ak,Ak,ek,dk,Vk),Jk.push({kind:Bk,data:new Rk(kk.HEAPF32.buffer,Vk,wk).slice(),size:Xk,byteOffset:Ak.byte_offset(),byteStride:Ak.byte_stride(),normalized:Ak.normalized()})}finally{kk._free(Vk)}}return{indices:Vk,attributes:Jk,totalVertices:bk}}))}(kk,wk,dk,sk),Xk=ak.attributes.map((kk=>kk.data.buffer));ak.indices&&Xk.push(ak.indices.buffer),tk.postMessage({id:"decoded",seq:bk,...ak},Xk)}catch(Vk){tk.postMessage({id:"decodeError",seq:bk,message:Vk instanceof Error?Vk.message:String(Vk)})}}),(kk=>{tk.postMessage({id:"decodeError",seq:bk,message:kk instanceof Error?kk.message:String(kk)})})):tk.postMessage({id:"decodeError",seq:bk,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, Bk.p + "dracoDecode.worker.63d5ab55.worker.js")
     }
-    var Nu = yu(106);
-    const Xu = 1e3;
-    let Vu = null,
-      ru = null;
-    const Bu = [],
-      xu = [];
-    let Su = 0;
-    const pu = {
+    var wk = Bk(98);
+    const dk = 1e3;
+    let sk = null,
+      Vk = null;
+    const Jk = [],
+      Ak = [];
+    let ek = 0;
+    const yk = {
         decodes: 0,
         workersStarted: 0,
         mostWorkers: 0
       },
-      Tu = function(uu, Ru) {
-        const yu = uu ? Math.max(1, Math.min(Math.floor(.5 * uu), 4)) : 1;
-        return Ru ? Math.min(yu, 2) : yu
-      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, Nu.isMobile)());
+      fk = function(kk, Fk) {
+        const Bk = kk ? Math.max(1, Math.min(Math.floor(.5 * kk), 4)) : 1;
+        return Fk ? Math.min(Bk, 2) : Bk
+      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, wk.isMobile)());
 
-    function Wu() {
-      if (!Vu) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
+    function mk() {
+      if (!sk) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
       const {
-        scriptUrl: uu,
-        wasmBinaryUrl: Ru
-      } = Vu;
-      return ru ??= fetch(Ru).then((uu => {
-        if (!uu.ok) throw new Error(`Draco: fetching ${Ru} failed: ${uu.status}`);
-        return uu.arrayBuffer()
-      })), ru.catch((() => {
-        ru = null
-      })), pu.workersStarted++, ru.then((Ru => new Promise(((yu, Eu) => {
-        const Ku = new Ju;
-        Ku.onerror = uu => {
-          Ku.onmessage = null, Ku.onerror = null, Ku.terminate(), Eu(new Error("Draco: the decode worker failed to start" + (uu.message ? `: ${uu.message}` : " (its script did not load)")))
-        }, Ku.onmessage = uu => {
+        scriptUrl: kk,
+        wasmBinaryUrl: Fk
+      } = sk;
+      return Vk ??= fetch(Fk).then((kk => {
+        if (!kk.ok) throw new Error(`Draco: fetching ${Fk} failed: ${kk.status}`);
+        return kk.arrayBuffer()
+      })), Vk.catch((() => {
+        Vk = null
+      })), yk.workersStarted++, Vk.then((Fk => new Promise(((Bk, Rk) => {
+        const tk = new bk;
+        tk.onerror = kk => {
+          tk.onmessage = null, tk.onerror = null, tk.terminate(), Rk(new Error("Draco: the decode worker failed to start" + (kk.message ? `: ${kk.message}` : " (its script did not load)")))
+        }, tk.onmessage = kk => {
           let {
-            data: Ru
-          } = uu;
-          Ku.onmessage = null, Ku.onerror = null, "initDone" === Ru.id ? yu(Ku) : (Ku.terminate(), Eu(new Error(`Draco: ${"initError"===Ru.id?Ru.message:"the worker did not start"}`)))
+            data: Fk
+          } = kk;
+          tk.onmessage = null, tk.onerror = null, "initDone" === Fk.id ? Bk(tk) : (tk.terminate(), Rk(new Error(`Draco: ${"initError"===Fk.id?Fk.message:"the worker did not start"}`)))
         };
-        const Qu = Ru.slice(0),
-          mu = {
+        const ak = Fk.slice(0),
+          Xk = {
             id: "init",
-            url: uu,
-            wasmBinary: Qu
+            url: kk,
+            wasmBinary: ak
           };
-        Ku.postMessage(mu, [Qu])
+        tk.postMessage(Xk, [ak])
       }))))
     }
 
-    function ju(uu) {
-      const Ru = Bu.indexOf(uu); - 1 !== Ru && Bu.splice(Ru, 1);
-      const yu = xu.shift();
-      yu && du(yu)
+    function Wk(kk) {
+      const Fk = Jk.indexOf(kk); - 1 !== Fk && Jk.splice(Fk, 1);
+      const Bk = Ak.shift();
+      Bk && ik(Bk)
     }
 
-    function Hu(uu, Ru) {
-      uu.busy = !0, uu.releaseTimer && (clearTimeout(uu.releaseTimer), uu.releaseTimer = null);
-      uu.worker.then((yu => {
-        const Eu = Su++;
-        yu.onmessage = Ku => {
+    function vk(kk, Fk) {
+      kk.busy = !0, kk.releaseTimer && (clearTimeout(kk.releaseTimer), kk.releaseTimer = null);
+      kk.worker.then((Bk => {
+        const Rk = ek++;
+        Bk.onmessage = tk => {
           let {
-            data: Qu
-          } = Ku;
-          if (("decoded" === Qu.id || "decodeError" === Qu.id) && Qu.seq === Eu) {
-            if (yu.onmessage = null, yu.onerror = null, "decoded" === Qu.id) return pu.decodes++, Ru.resolve({
-              indices: Qu.indices,
-              attributes: Qu.attributes,
-              totalVertices: Qu.totalVertices
+            data: ak
+          } = tk;
+          if (("decoded" === ak.id || "decodeError" === ak.id) && ak.seq === Rk) {
+            if (Bk.onmessage = null, Bk.onerror = null, "decoded" === ak.id) return yk.decodes++, Fk.resolve({
+              indices: ak.indices,
+              attributes: ak.attributes,
+              totalVertices: ak.totalVertices
             }), void(() => {
-              const Ru = xu.shift();
-              Ru ? Hu(uu, Ru) : (uu.busy = !1, uu.releaseTimer = setTimeout((() => {
-                const Ru = Bu.indexOf(uu); - 1 !== Ru && Bu.splice(Ru, 1), uu.worker.then((uu => {
-                  uu.terminate()
+              const Fk = Ak.shift();
+              Fk ? vk(kk, Fk) : (kk.busy = !1, kk.releaseTimer = setTimeout((() => {
+                const Fk = Jk.indexOf(kk); - 1 !== Fk && Jk.splice(Fk, 1), kk.worker.then((kk => {
+                  kk.terminate()
                 }))
-              }), Xu))
+              }), dk))
             })();
-            yu.terminate(), Ru.reject(new Error(Qu.message)), ju(uu)
+            Bk.terminate(), Fk.reject(new Error(ak.message)), Wk(kk)
           }
-        }, yu.onerror = Eu => {
-          yu.onmessage = null, yu.onerror = null, yu.terminate(), Ru.reject(new Error(`Draco: the decode worker failed: ${Eu.message}`)), ju(uu)
+        }, Bk.onerror = Rk => {
+          Bk.onmessage = null, Bk.onerror = null, Bk.terminate(), Fk.reject(new Error(`Draco: the decode worker failed: ${Rk.message}`)), Wk(kk)
         };
-        const Ku = {
+        const tk = {
           id: "decode",
-          seq: Eu,
-          data: Ru.data,
-          attributeIds: Ru.attributeIds,
-          expected: Ru.expected
+          seq: Rk,
+          data: Fk.data,
+          attributeIds: Fk.attributeIds,
+          expected: Fk.expected
         };
-        yu.postMessage(Ku, [Ru.data.buffer])
-      }), (yu => {
-        Ru.reject(yu instanceof Error ? yu : new Error(String(yu))), ju(uu)
+        Bk.postMessage(tk, [Fk.data.buffer])
+      }), (Bk => {
+        Fk.reject(Bk instanceof Error ? Bk : new Error(String(Bk))), Wk(kk)
       }))
     }
 
-    function du(uu) {
-      const Ru = Bu.find((uu => !uu.busy));
-      if (Ru) Hu(Ru, uu);
+    function ik(kk) {
+      const Fk = Jk.find((kk => !kk.busy));
+      if (Fk) vk(Fk, kk);
       else {
-        if (Bu.length < Tu) {
-          const Ru = {
-            worker: Wu(),
+        if (Jk.length < fk) {
+          const Fk = {
+            worker: mk(),
             busy: !0,
             releaseTimer: null
           };
-          return Bu.push(Ru), pu.mostWorkers = Math.max(pu.mostWorkers, Bu.length), void Hu(Ru, uu)
+          return Jk.push(Fk), yk.mostWorkers = Math.max(yk.mostWorkers, Jk.length), void vk(Fk, kk)
         }
-        xu.push(uu)
+        Ak.push(kk)
       }
     }
 
-    function bu(uu, Ru, yu) {
-      return new Promise(((Eu, Ku) => {
-        du({
-          data: new Int8Array(uu.buffer, uu.byteOffset, uu.byteLength).slice(),
-          attributeIds: Ru,
-          expected: yu,
-          resolve: Eu,
-          reject: Ku
+    function Yk(kk, Fk, Bk) {
+      return new Promise(((Rk, tk) => {
+        ik({
+          data: new Int8Array(kk.buffer, kk.byteOffset, kk.byteLength).slice(),
+          attributeIds: Fk,
+          expected: Bk,
+          resolve: Rk,
+          reject: tk
         })
       }))
     }
-    var Cu = yu(37190),
-      ku = yu(37203),
-      eu = yu(9143),
-      Au = yu(9135);
-    const Du = {
+    var Lk = Bk(37116),
+      Ok = Bk(37131),
+      Ek = Bk(9079),
+      Sk = Bk(9077);
+    const Nk = {
       index: -1,
       magFilter: void 0,
       minFilter: void 0,
@@ -146,323 +146,323 @@ export const modules = {
       wrapT: void 0
     };
 
-    function Mu(uu) {
-      const Ru = (0, Au.j)(uu.byteLength);
-      if (Ru) throw new eu.k(Ru);
+    function Hk(kk) {
+      const Fk = (0, Sk.h)(kk.byteLength);
+      if (Fk) throw new Ek.i(Fk);
       const {
-        json: yu,
-        bin: Eu
-      } = (0, eu.y)(uu), Ku = (0, Au.h)(yu, Eu);
-      if (Ku) throw new eu.k(Ku);
+        json: Bk,
+        bin: Rk
+      } = (0, Ek.u)(kk), tk = (0, Sk.f)(Bk, Rk);
+      if (tk) throw new Ek.i(tk);
       try {
-        return function(uu, Ru) {
-          var yu, Eu, Ku, Qu, mu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su, pu, Tu;
-          const Wu = new Map,
-            ju = yu => {
-              let Eu = Wu.get(yu);
-              if (!Eu) {
-                var Ku;
-                const Qu = uu.bufferViews[yu],
-                  mu = null !== (Ku = Qu.byteOffset) && void 0 !== Ku ? Ku : 0;
-                Eu = {
-                  index: yu,
-                  bytes: Ru.subarray(mu, mu + Qu.byteLength),
-                  byteStride: Qu.byteStride
-                }, Wu.set(yu, Eu)
+        return function(kk, Fk) {
+          var Bk, Rk, tk, ak, Xk, bk, wk, dk, sk, Vk, Jk, Ak, ek, yk, fk;
+          const mk = new Map,
+            Wk = Bk => {
+              let Rk = mk.get(Bk);
+              if (!Rk) {
+                var tk;
+                const ak = kk.bufferViews[Bk],
+                  Xk = null !== (tk = ak.byteOffset) && void 0 !== tk ? tk : 0;
+                Rk = {
+                  index: Bk,
+                  bytes: Fk.subarray(Xk, Xk + ak.byteLength),
+                  byteStride: ak.byteStride
+                }, mk.set(Bk, Rk)
               }
-              return Eu
+              return Rk
             },
-            Hu = new Map,
-            du = Ru => {
-              let yu = Hu.get(Ru);
-              if (!yu) {
-                var Eu;
-                const Ku = uu.accessors[Ru];
-                yu = {
-                  index: Ru,
-                  count: Ku.count,
-                  type: Ku.type,
-                  numComponents: eu.m[Ku.type],
-                  componentType: Ku.componentType,
-                  normalized: null !== (Eu = Ku.normalized) && void 0 !== Eu && Eu,
-                  byteOffset: Ku.byteOffset,
-                  bufferView: void 0 === Ku.bufferView ? null : ju(Ku.bufferView),
-                  min: Ku.min,
-                  max: Ku.max
-                }, Hu.set(Ru, yu)
+            vk = new Map,
+            ik = Fk => {
+              let Bk = vk.get(Fk);
+              if (!Bk) {
+                var Rk;
+                const tk = kk.accessors[Fk];
+                Bk = {
+                  index: Fk,
+                  count: tk.count,
+                  type: tk.type,
+                  numComponents: Ek.k[tk.type],
+                  componentType: tk.componentType,
+                  normalized: null !== (Rk = tk.normalized) && void 0 !== Rk && Rk,
+                  byteOffset: tk.byteOffset,
+                  bufferView: void 0 === tk.bufferView ? null : Wk(tk.bufferView),
+                  min: tk.min,
+                  max: tk.max
+                }, vk.set(Fk, Bk)
               }
-              return yu
+              return Bk
             },
-            bu = null !== (yu = null === (Eu = uu.extensionsUsed) || void 0 === Eu ? void 0 : Eu.includes("KHR_draco_mesh_compression")) && void 0 !== yu && yu,
-            Cu = (null !== (Ku = uu.meshes) && void 0 !== Ku ? Ku : []).map(((Ru, yu) => {
-              const Eu = Ru.primitives.map(((Ru, yu) => {
-                var Eu, Ku, Qu;
-                const mu = bu ? null === (Eu = Ru.extensions) || void 0 === Eu ? void 0 : Eu.KHR_draco_mesh_compression : void 0;
-                let Ju = null;
-                const Nu = [];
-                if (mu) {
-                  const yu = {
-                    vertices: uu.accessors[Ru.attributes.POSITION].count,
-                    indices: void 0 === Ru.indices ? 0 : uu.accessors[Ru.indices].count,
+            Yk = null !== (Bk = null === (Rk = kk.extensionsUsed) || void 0 === Rk ? void 0 : Rk.includes("KHR_draco_mesh_compression")) && void 0 !== Bk && Bk,
+            Lk = (null !== (tk = kk.meshes) && void 0 !== tk ? tk : []).map(((Fk, Bk) => {
+              const Rk = Fk.primitives.map(((Fk, Bk) => {
+                var Rk, tk, ak;
+                const Xk = Yk ? null === (Rk = Fk.extensions) || void 0 === Rk ? void 0 : Rk.KHR_draco_mesh_compression : void 0;
+                let bk = null;
+                const wk = [];
+                if (Xk) {
+                  const Bk = {
+                    vertices: kk.accessors[Fk.attributes.POSITION].count,
+                    indices: void 0 === Fk.indices ? 0 : kk.accessors[Fk.indices].count,
                     components: {}
                   };
-                  Ju = {
-                    bufferView: ju(mu.bufferView),
+                  bk = {
+                    bufferView: Wk(Xk.bufferView),
                     attributeIds: {},
                     normalized: {},
-                    expected: yu
+                    expected: Bk
                   };
-                  for (const [Eu, Ku] of eu.h) {
-                    const Qu = mu.attributes[Eu];
-                    if (void 0 === Qu) continue;
-                    Ju.attributeIds[Ku] = Qu;
-                    const Nu = Ru.attributes[Eu];
-                    var Xu;
-                    if (void 0 !== Nu) Ju.normalized[Ku] = null !== (Xu = uu.accessors[Nu].normalized) && void 0 !== Xu && Xu, yu.components[Ku] = eu.m[uu.accessors[Nu].type]
+                  for (const [Rk, tk] of Ek.g) {
+                    const ak = Xk.attributes[Rk];
+                    if (void 0 === ak) continue;
+                    bk.attributeIds[tk] = ak;
+                    const wk = Fk.attributes[Rk];
+                    var dk;
+                    if (void 0 !== wk) bk.normalized[tk] = null !== (dk = kk.accessors[wk].normalized) && void 0 !== dk && dk, Bk.components[tk] = Ek.k[kk.accessors[wk].type]
                   }
                 } else
-                  for (const [uu, Vu] of eu.h) {
-                    const yu = Ru.attributes[uu];
-                    void 0 !== yu && Nu.push({
-                      semantic: uu,
-                      kind: Vu,
-                      accessor: du(yu)
+                  for (const [kk, sk] of Ek.g) {
+                    const Bk = Fk.attributes[kk];
+                    void 0 !== Bk && wk.push({
+                      semantic: kk,
+                      kind: sk,
+                      accessor: ik(Bk)
                     })
                   }
                 return {
-                  index: yu,
-                  mode: null !== (Ku = Ru.mode) && void 0 !== Ku ? Ku : 4,
-                  attributes: Nu,
-                  indices: mu || void 0 === Ru.indices ? null : du(Ru.indices),
-                  position: void 0 === Ru.attributes.POSITION ? null : du(Ru.attributes.POSITION),
-                  material: null !== (Qu = Ru.material) && void 0 !== Qu ? Qu : null,
-                  draco: Ju
+                  index: Bk,
+                  mode: null !== (tk = Fk.mode) && void 0 !== tk ? tk : 4,
+                  attributes: wk,
+                  indices: Xk || void 0 === Fk.indices ? null : ik(Fk.indices),
+                  position: void 0 === Fk.attributes.POSITION ? null : ik(Fk.attributes.POSITION),
+                  material: null !== (ak = Fk.material) && void 0 !== ak ? ak : null,
+                  draco: bk
                 }
               }));
               return {
-                index: yu,
-                name: Ru.name,
-                primitives: Eu,
-                extras: Ru.extras
+                index: Bk,
+                name: Fk.name,
+                primitives: Rk,
+                extras: Fk.extras
               }
             })),
-            ku = (null !== (Qu = uu.nodes) && void 0 !== Qu ? Qu : []).map(((uu, Ru) => {
-              var yu, Eu;
+            Ok = (null !== (ak = kk.nodes) && void 0 !== ak ? ak : []).map(((kk, Fk) => {
+              var Bk, Rk;
               return {
-                index: Ru,
-                name: uu.name,
-                children: null !== (yu = uu.children) && void 0 !== yu ? yu : [],
-                mesh: null !== (Eu = uu.mesh) && void 0 !== Eu ? Eu : null,
-                translation: uu.translation,
-                rotation: uu.rotation,
-                scale: uu.scale,
-                hasCamera: void 0 !== uu.camera,
-                extras: uu.extras
+                index: Fk,
+                name: kk.name,
+                children: null !== (Bk = kk.children) && void 0 !== Bk ? Bk : [],
+                mesh: null !== (Rk = kk.mesh) && void 0 !== Rk ? Rk : null,
+                translation: kk.translation,
+                rotation: kk.rotation,
+                scale: kk.scale,
+                hasCamera: void 0 !== kk.camera,
+                extras: kk.extras
               }
             })),
-            Au = null !== (mu = null === (Ju = uu.extensionsUsed) || void 0 === Ju ? void 0 : Ju.includes("KHR_materials_unlit")) && void 0 !== mu && mu,
-            Mu = null !== (Nu = null === (Xu = uu.extensionsUsed) || void 0 === Xu ? void 0 : Xu.includes("KHR_texture_transform")) && void 0 !== Nu && Nu,
-            Iu = (null !== (Vu = uu.materials) && void 0 !== Vu ? Vu : []).map(((uu, Ru) => {
-              var yu, Eu, Ku, Qu;
-              const mu = uu.pbrMetallicRoughness,
-                Ju = null === mu || void 0 === mu ? void 0 : mu.baseColorTexture;
+            Sk = null !== (Xk = null === (bk = kk.extensionsUsed) || void 0 === bk ? void 0 : bk.includes("KHR_materials_unlit")) && void 0 !== Xk && Xk,
+            Hk = null !== (wk = null === (dk = kk.extensionsUsed) || void 0 === dk ? void 0 : dk.includes("KHR_texture_transform")) && void 0 !== wk && wk,
+            uk = (null !== (sk = kk.materials) && void 0 !== sk ? sk : []).map(((kk, Fk) => {
+              var Bk, Rk, tk, ak;
+              const Xk = kk.pbrMetallicRoughness,
+                bk = null === Xk || void 0 === Xk ? void 0 : Xk.baseColorTexture;
               return {
-                index: Ru,
-                name: uu.name,
-                extras: uu.extras,
-                unlit: Au && void 0 !== (null === (yu = uu.extensions) || void 0 === yu ? void 0 : yu.KHR_materials_unlit),
-                pbr: mu ? {
-                  baseColorFactor: mu.baseColorFactor,
-                  metallicFactor: mu.metallicFactor,
-                  roughnessFactor: mu.roughnessFactor
+                index: Fk,
+                name: kk.name,
+                extras: kk.extras,
+                unlit: Sk && void 0 !== (null === (Bk = kk.extensions) || void 0 === Bk ? void 0 : Bk.KHR_materials_unlit),
+                pbr: Xk ? {
+                  baseColorFactor: Xk.baseColorFactor,
+                  metallicFactor: Xk.metallicFactor,
+                  roughnessFactor: Xk.roughnessFactor
                 } : null,
-                baseColorTexture: Ju ? {
-                  texture: Ju.index,
-                  transform: Mu && (null === (Eu = Ju.extensions) || void 0 === Eu ? void 0 : Eu.KHR_texture_transform) || null
+                baseColorTexture: bk ? {
+                  texture: bk.index,
+                  transform: Hk && (null === (Rk = bk.extensions) || void 0 === Rk ? void 0 : Rk.KHR_texture_transform) || null
                 } : null,
-                emissiveFactor: uu.emissiveFactor,
-                alphaMode: null !== (Ku = uu.alphaMode) && void 0 !== Ku ? Ku : "OPAQUE",
-                alphaCutoff: uu.alphaCutoff,
-                doubleSided: null !== (Qu = uu.doubleSided) && void 0 !== Qu && Qu
+                emissiveFactor: kk.emissiveFactor,
+                alphaMode: null !== (tk = kk.alphaMode) && void 0 !== tk ? tk : "OPAQUE",
+                alphaCutoff: kk.alphaCutoff,
+                doubleSided: null !== (ak = kk.doubleSided) && void 0 !== ak && ak
               }
             })),
-            Gu = (null !== (ru = uu.textures) && void 0 !== ru ? ru : []).map(((Ru, yu) => {
-              var Eu, Ku;
-              const Qu = void 0 === Ru.sampler ? Du : {
-                index: Ru.sampler,
-                ...null === (Eu = uu.samplers) || void 0 === Eu ? void 0 : Eu[Ru.sampler]
+            Mk = (null !== (Vk = kk.textures) && void 0 !== Vk ? Vk : []).map(((Fk, Bk) => {
+              var Rk, tk;
+              const ak = void 0 === Fk.sampler ? Nk : {
+                index: Fk.sampler,
+                ...null === (Rk = kk.samplers) || void 0 === Rk ? void 0 : Rk[Fk.sampler]
               };
               return {
-                index: yu,
+                index: Bk,
                 sampler: {
-                  index: Qu.index,
-                  magFilter: Qu.magFilter,
-                  minFilter: Qu.minFilter,
-                  wrapS: Qu.wrapS,
-                  wrapT: Qu.wrapT
+                  index: ak.index,
+                  magFilter: ak.magFilter,
+                  minFilter: ak.minFilter,
+                  wrapS: ak.wrapS,
+                  wrapT: ak.wrapT
                 },
-                image: null !== (Ku = Ru.source) && void 0 !== Ku ? Ku : -1
+                image: null !== (tk = Fk.source) && void 0 !== tk ? tk : -1
               }
             })),
-            Uu = (null !== (Bu = uu.images) && void 0 !== Bu ? Bu : []).map(((uu, Ru) => ({
-              index: Ru,
-              name: uu.name,
-              mimeType: uu.mimeType,
-              bufferView: ju(uu.bufferView)
+            gk = (null !== (Jk = kk.images) && void 0 !== Jk ? Jk : []).map(((kk, Fk) => ({
+              index: Fk,
+              name: kk.name,
+              mimeType: kk.mimeType,
+              bufferView: Wk(kk.bufferView)
             }))),
-            nu = null !== (xu = (0, eu.v)(uu)) && void 0 !== xu ? xu : 0;
+            Uk = null !== (Ak = (0, Ek.t)(kk)) && void 0 !== Ak ? Ak : 0;
           return {
-            json: uu,
-            rootNodes: null !== (Su = null === (pu = uu.scenes) || void 0 === pu || null === (Tu = pu[nu]) || void 0 === Tu ? void 0 : Tu.nodes) && void 0 !== Su ? Su : [],
-            nodes: ku,
-            meshes: Cu,
-            materials: Iu,
-            textures: Gu,
-            images: Uu
+            json: kk,
+            rootNodes: null !== (ek = null === (yk = kk.scenes) || void 0 === yk || null === (fk = yk[Uk]) || void 0 === fk ? void 0 : fk.nodes) && void 0 !== ek ? ek : [],
+            nodes: Ok,
+            meshes: Lk,
+            materials: uk,
+            textures: Mk,
+            images: gk
           }
-        }(yu, Eu)
-      } catch (Qu) {
-        throw Qu instanceof eu.i ? Qu : new eu.i(`reading the GLB failed: ${Qu instanceof Error?Qu.message:String(Qu)}`)
+        }(Bk, Rk)
+      } catch (ak) {
+        throw ak instanceof Ek.h ? ak : new Ek.h(`reading the GLB failed: ${ak instanceof Error?ak.message:String(ak)}`)
       }
     }
-    async function Iu(uu, Ru) {
-      var yu, Eu;
-      const Ku = uu.draco;
-      if (!Ku) throw new eu.i("not a Draco primitive");
-      let Qu;
+    async function uk(kk, Fk) {
+      var Bk, Rk;
+      const tk = kk.draco;
+      if (!tk) throw new Ek.h("not a Draco primitive");
+      let ak;
       try {
-        Qu = await Ru(Ku.bufferView.bytes, Ku.attributeIds, Ku.expected)
-      } catch (Xu) {
-        throw new eu.i(`Draco decoding failed: ${Xu instanceof Error?Xu.message:String(Xu)}`)
+        ak = await Fk(tk.bufferView.bytes, tk.attributeIds, tk.expected)
+      } catch (dk) {
+        throw new Ek.h(`Draco decoding failed: ${dk instanceof Error?dk.message:String(dk)}`)
       }
       const {
-        vertices: mu,
-        indices: Ju,
-        components: Nu
-      } = Ku.expected;
-      if (Qu.totalVertices !== mu || (null !== (yu = null === (Eu = Qu.indices) || void 0 === Eu ? void 0 : Eu.length) && void 0 !== yu ? yu : 0) !== Ju || Qu.attributes.some((uu => uu.size !== Nu[uu.kind] || uu.data.length !== mu * uu.size))) throw new eu.i("Draco decoding gave other counts than the accessors declare");
-      for (const Vu of Qu.attributes) {
-        const uu = Ku.normalized[Vu.kind];
-        void 0 !== uu && (Vu.normalized = uu)
+        vertices: Xk,
+        indices: bk,
+        components: wk
+      } = tk.expected;
+      if (ak.totalVertices !== Xk || (null !== (Bk = null === (Rk = ak.indices) || void 0 === Rk ? void 0 : Rk.length) && void 0 !== Bk ? Bk : 0) !== bk || ak.attributes.some((kk => kk.size !== wk[kk.kind] || kk.data.length !== Xk * kk.size))) throw new Ek.h("Draco decoding gave other counts than the accessors declare");
+      for (const sk of ak.attributes) {
+        const kk = tk.normalized[sk.kind];
+        void 0 !== kk && (sk.normalized = kk)
       }
-      return Qu
+      return ak
     }
-    const Gu = new WeakMap;
+    const Mk = new WeakMap;
 
-    function Uu(uu, Ru) {
-      var yu;
-      const Eu = null !== (yu = Gu.get(uu)) && void 0 !== yu ? yu : Ru(uu);
-      return Gu.set(uu, Eu), Eu
-    }
-
-    function nu(uu) {
-      const Ru = uu.bufferView,
-        yu = 5125 === uu.componentType ? Uint32Array : Uint16Array,
-        Eu = Ru.bytes.buffer,
-        Ku = Ru.bytes.byteOffset + (uu.byteOffset || 0);
-      return Ku % yu.BYTES_PER_ELEMENT !== 0 ? new yu(Eu.slice(Ku, Ku + uu.count * yu.BYTES_PER_ELEMENT), 0) : new yu(Eu, Ku, uu.count)
+    function gk(kk, Fk) {
+      var Bk;
+      const Rk = null !== (Bk = Mk.get(kk)) && void 0 !== Bk ? Bk : Fk(kk);
+      return Mk.set(kk, Rk), Rk
     }
 
-    function su(uu, Ru) {
-      if (uu.min && uu.max) return [new Float64Array(uu.min), new Float64Array(uu.max)];
-      const yu = Ru.find((uu => {
+    function Uk(kk) {
+      const Fk = kk.bufferView,
+        Bk = 5125 === kk.componentType ? Uint32Array : Uint16Array,
+        Rk = Fk.bytes.buffer,
+        tk = Fk.bytes.byteOffset + (kk.byteOffset || 0);
+      return tk % Bk.BYTES_PER_ELEMENT !== 0 ? new Bk(Rk.slice(tk, tk + kk.count * Bk.BYTES_PER_ELEMENT), 0) : new Bk(Rk, tk, kk.count)
+    }
+
+    function ck(kk, Fk) {
+      if (kk.min && kk.max) return [new Float64Array(kk.min), new Float64Array(kk.max)];
+      const Bk = Fk.find((kk => {
           let {
-            kind: Ru
-          } = uu;
-          return "position" === Ru
+            kind: Fk
+          } = kk;
+          return "position" === Fk
         })),
-        Eu = yu ? (0, ku.l)(yu, uu.count) : new Float32Array(0);
-      return (0, ku.x)(Eu.length / 3, ((uu, Ru) => Eu[3 * uu + Ru]))
+        Rk = Bk ? (0, Ok.f)(Bk, kk.count) : new Float32Array(0);
+      return (0, Ok.q)(Rk.length / 3, ((kk, Fk) => Rk[3 * kk + Fk]))
     }
 
-    function tu(uu) {
-      const Ru = uu.attributes.map((uu => {
-          var Ru, yu;
+    function Gk(kk) {
+      const Fk = kk.attributes.map((kk => {
+          var Fk, Bk;
           let {
-            kind: Eu,
-            accessor: Ku
-          } = uu;
+            kind: Rk,
+            accessor: tk
+          } = kk;
           const {
-            bufferView: Qu,
-            numComponents: mu
-          } = Ku;
-          if (!Qu) {
+            bufferView: ak,
+            numComponents: Xk
+          } = tk;
+          if (!ak) {
             return {
-              kind: Eu,
-              data: Uu(Ku, (() => new Float32Array(mu * Ku.count))),
+              kind: Rk,
+              data: gk(tk, (() => new Float32Array(Xk * tk.count))),
               offset: 0,
-              stride: 4 * mu,
-              components: mu,
+              stride: 4 * Xk,
+              components: Xk,
               glType: 5126,
               isNormalized: !1
             }
           }
-          const Ju = null !== (Ru = Qu.byteStride) && void 0 !== Ru ? Ru : mu * eu.b[Ku.componentType];
+          const bk = null !== (Fk = ak.byteStride) && void 0 !== Fk ? Fk : Xk * Ek.c[tk.componentType];
           return {
-            kind: Eu,
-            data: Qu.bytes,
-            offset: null !== (yu = Ku.byteOffset) && void 0 !== yu ? yu : 0,
-            stride: Ju,
-            components: mu,
-            glType: Ku.componentType,
-            isNormalized: Ku.normalized
+            kind: Rk,
+            data: ak.bytes,
+            offset: null !== (Bk = tk.byteOffset) && void 0 !== Bk ? Bk : 0,
+            stride: bk,
+            components: Xk,
+            glType: tk.componentType,
+            isNormalized: tk.normalized
           }
         })),
-        yu = uu.indices,
-        Eu = yu && Uu(yu, nu),
-        Ku = uu.position;
-      return new ku.h(Ru, Eu, Ku.count, ...su(Ku, Ru))
+        Bk = kk.indices,
+        Rk = Bk && gk(Bk, Uk),
+        tk = kk.position;
+      return new Ok.d(Fk, Rk, tk.count, ...ck(tk, Fk))
     }
-    const lu = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
+    const Tk = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
 
-    function gu(uu, Ru) {
-      const yu = Ru.attributes.map((uu => {
+    function rk(kk, Fk) {
+      const Bk = Fk.attributes.map((kk => {
         let {
-          kind: Ru,
-          data: yu,
-          size: Eu,
-          byteOffset: Ku,
-          byteStride: Qu,
-          normalized: mu
-        } = uu;
+          kind: Fk,
+          data: Bk,
+          size: Rk,
+          byteOffset: tk,
+          byteStride: ak,
+          normalized: Xk
+        } = kk;
         return {
-          kind: Ru,
-          data: yu,
-          offset: Ku,
-          stride: Qu,
-          components: Eu,
-          glType: 5120 + lu.indexOf(yu.constructor),
-          isNormalized: mu
+          kind: Fk,
+          data: Bk,
+          offset: tk,
+          stride: ak,
+          components: Rk,
+          glType: 5120 + Tk.indexOf(Bk.constructor),
+          isNormalized: Xk
         }
       }));
-      return new ku.h(yu, Ru.indices, Ru.totalVertices, ...su(uu.position, yu))
+      return new Ok.d(Bk, Fk.indices, Fk.totalVertices, ...ck(kk.position, Bk))
     }
 
-    function cu(uu) {
-      const Ru = uu.lastIndexOf("/");
-      return Ru < 0 ? uu : uu.substring(Ru + 1)
+    function Dk(kk) {
+      const Fk = kk.lastIndexOf("/");
+      return Fk < 0 ? kk : kk.substring(Fk + 1)
     }
 
-    function Lu(uu) {
-      const Ru = uu.lastIndexOf("/");
-      return Ru < 0 ? "" : uu.substring(0, Ru + 1)
+    function zk(kk) {
+      const Fk = kk.lastIndexOf("/");
+      return Fk < 0 ? "" : kk.substring(0, Fk + 1)
     }
 
-    function zu(uu) {
-      return uu.name || `node${uu.index}`
+    function Pk(kk) {
+      return kk.name || `node${kk.index}`
     }
-    const Fu = {
+    const hk = {
         rotation: [0, 1, 0, 0],
         scale: [1, 1, -1]
       },
-      wu = {
+      qk = {
         9728: 12,
         9729: 2,
         9984: 9,
         9985: 11,
         9986: 10
       },
-      Zu = {
+      Ck = {
         9728: 1,
         9729: 7,
         9984: 4,
@@ -471,353 +471,353 @@ export const modules = {
         9987: 6
       };
 
-    function hu(uu) {
-      var Ru, yu, Eu, Ku;
-      const Qu = null !== (Ru = uu.minFilter) && void 0 !== Ru ? Ru : 9987;
-      return 9729 === (null !== (yu = uu.magFilter) && void 0 !== yu ? yu : 9729) ? null !== (Eu = wu[Qu]) && void 0 !== Eu ? Eu : 3 : null !== (Ku = Zu[Qu]) && void 0 !== Ku ? Ku : 4
+    function Zk(kk) {
+      var Fk, Bk, Rk, tk;
+      const ak = null !== (Fk = kk.minFilter) && void 0 !== Fk ? Fk : 9987;
+      return 9729 === (null !== (Bk = kk.magFilter) && void 0 !== Bk ? Bk : 9729) ? null !== (Rk = qk[ak]) && void 0 !== Rk ? Rk : 3 : null !== (tk = Ck[ak]) && void 0 !== tk ? tk : 4
     }
-    const Pu = {
+    const pk = {
       33071: 0,
       33648: 2
     };
 
-    function iu(uu) {
-      var Ru;
-      return null !== (Ru = Pu[null !== uu && void 0 !== uu ? uu : 10497]) && void 0 !== Ru ? Ru : 1
+    function Kk(kk) {
+      var Fk;
+      return null !== (Fk = pk[null !== kk && void 0 !== kk ? kk : 10497]) && void 0 !== Fk ? Fk : 1
     }
 
-    function Yu(uu) {
-      return 9728 === uu.minFilter || 9729 === uu.minFilter
+    function xk(kk) {
+      return 9728 === kk.minFilter || 9729 === kk.minFilter
     }
 
-    function ou(uu) {
-      var Ru, yu, Eu;
-      const Ku = Float64Array.from(null !== (Ru = uu.scale) && void 0 !== Ru ? Ru : [1, 1, 1]);
-      return uu.hasCamera && (Ku[0] = -1), {
-        translation: Float64Array.from(null !== (yu = uu.translation) && void 0 !== yu ? yu : [0, 0, 0]),
-        rotation: Float64Array.from(null !== (Eu = uu.rotation) && void 0 !== Eu ? Eu : [0, 0, 0, 1]),
-        scale: Ku
+    function jk(kk) {
+      var Fk, Bk, Rk;
+      const tk = Float64Array.from(null !== (Fk = kk.scale) && void 0 !== Fk ? Fk : [1, 1, 1]);
+      return kk.hasCamera && (tk[0] = -1), {
+        translation: Float64Array.from(null !== (Bk = kk.translation) && void 0 !== Bk ? Bk : [0, 0, 0]),
+        rotation: Float64Array.from(null !== (Rk = kk.rotation) && void 0 !== Rk ? Rk : [0, 0, 0, 1]),
+        scale: tk
       }
     }
 
-    function qu(uu, Ru) {
+    function lk(kk, Fk) {
       let {
-        translation: yu,
-        rotation: Eu,
-        scale: Ku
-      } = uu;
-      const Qu = new Float32Array(16);
-      return (0, Cu.e)(Ku, 0, Eu, 0, yu, 0, Qu), Ru && (0, Cu.r)(Qu, Ru, 0, Qu), Qu
+        translation: Bk,
+        rotation: Rk,
+        scale: tk
+      } = kk;
+      const ak = new Float32Array(16);
+      return (0, Lk.d)(tk, 0, Rk, 0, Bk, 0, ak), Fk && (0, Lk.n)(ak, Fk, 0, ak), ak
     }
-    class Ou {
-      constructor(uu, Ru, yu, Eu) {
-        this.model = uu, this.decode = Ru, this.fileInfo = yu, this.uniqueRootUrl = Eu, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
-        const Ku = new Set,
-          Qu = (Ru, yu) => {
-            const Eu = uu.nodes[Ru];
-            if (this.parents.has(Eu)) throw new eu.i(`/nodes/${Ru}: Invalid recursive node hierarchy`);
-            this.parents.set(Eu, yu);
-            const mu = null === Eu.mesh ? [] : uu.meshes[Eu.mesh].primitives,
-              Ju = mu.map((uu => {
-                const Ru = mu.length > 1;
+    class nk {
+      constructor(kk, Fk, Bk, Rk) {
+        this.model = kk, this.decode = Fk, this.fileInfo = Bk, this.uniqueRootUrl = Rk, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
+        const tk = new Set,
+          ak = (Fk, Bk) => {
+            const Rk = kk.nodes[Fk];
+            if (this.parents.has(Rk)) throw new Ek.h(`/nodes/${Fk}: Invalid recursive node hierarchy`);
+            this.parents.set(Rk, Bk);
+            const Xk = null === Rk.mesh ? [] : kk.meshes[Rk.mesh].primitives,
+              bk = Xk.map((kk => {
+                const Fk = Xk.length > 1;
                 return {
-                  name: Ru ? `${zu(Eu)}_primitive${uu.index}` : zu(Eu),
-                  node: Eu,
-                  primitive: uu,
-                  part: Ru,
+                  name: Fk ? `${Pk(Rk)}_primitive${kk.index}` : Pk(Rk),
+                  node: Rk,
+                  primitive: kk,
+                  part: Fk,
                   geometry: null
                 }
               }));
-            this.uses.set(Eu, Ju);
-            const Nu = null !== Eu.mesh && Ku.has(Eu.mesh);
-            Ku.add(Eu.mesh), this.own.set(Eu, Nu ? [] : Ju);
-            for (const uu of Eu.children) Qu(uu, Eu)
+            this.uses.set(Rk, bk);
+            const wk = null !== Rk.mesh && tk.has(Rk.mesh);
+            tk.add(Rk.mesh), this.own.set(Rk, wk ? [] : bk);
+            for (const kk of Rk.children) ak(kk, Rk)
           };
-        for (const mu of uu.rootNodes) Qu(mu, null);
-        this.primitives = uu.nodes.flatMap((uu => {
-          var Ru;
-          return null !== (Ru = this.own.get(uu)) && void 0 !== Ru ? Ru : []
+        for (const Xk of kk.rootNodes) ak(Xk, null);
+        this.primitives = kk.nodes.flatMap((kk => {
+          var Fk;
+          return null !== (Fk = this.own.get(kk)) && void 0 !== Fk ? Fk : []
         }))
       }
       decodeGeometries() {
-        const uu = new Map;
-        return Promise.all(this.primitives.map((async Ru => {
+        const kk = new Map;
+        return Promise.all(this.primitives.map((async Fk => {
           const {
-            primitive: yu
-          } = Ru, Eu = yu.draco;
-          let Ku = Eu ? uu.get(Eu.bufferView.index) : Promise.resolve(tu(yu));
-          Ku || (Ku = Iu(yu, this.decode).then((uu => gu(yu, uu))), uu.set(Eu.bufferView.index, Ku)), Ru.geometry = await Ku
+            primitive: Bk
+          } = Fk, Rk = Bk.draco;
+          let tk = Rk ? kk.get(Rk.bufferView.index) : Promise.resolve(Gk(Bk));
+          tk || (tk = uk(Bk, this.decode).then((kk => rk(Bk, kk))), kk.set(Rk.bufferView.index, tk)), Fk.geometry = await tk
         })))
       }
-      parentOf(uu) {
-        var Ru;
-        return null !== (Ru = this.parents.get(uu)) && void 0 !== Ru ? Ru : null
+      parentOf(kk) {
+        var Fk;
+        return null !== (Fk = this.parents.get(kk)) && void 0 !== Fk ? Fk : null
       }
-      meshesUnder(uu) {
-        const Ru = this.model.nodes.filter((uu => this.uses.has(uu)));
-        for (const Eu of Ru) {
-          const Ru = this.uses.get(Eu),
-            yu = Ru.find((Ru => Ru.name === uu));
-          if (yu) return 1 === Ru.length ? this.subtree(Eu) : this.own.get(Eu).includes(yu) ? [yu] : []
+      meshesUnder(kk) {
+        const Fk = this.model.nodes.filter((kk => this.uses.has(kk)));
+        for (const Rk of Fk) {
+          const Fk = this.uses.get(Rk),
+            Bk = Fk.find((Fk => Fk.name === kk));
+          if (Bk) return 1 === Fk.length ? this.subtree(Rk) : this.own.get(Rk).includes(Bk) ? [Bk] : []
         }
-        const yu = Ru.find((Ru => 1 !== this.uses.get(Ru).length && zu(Ru) === uu));
-        return yu ? this.subtree(yu) : null
+        const Bk = Fk.find((Fk => 1 !== this.uses.get(Fk).length && Pk(Fk) === kk));
+        return Bk ? this.subtree(Bk) : null
       }
-      subtree(uu) {
-        return [...this.own.get(uu), ...uu.children.flatMap((uu => this.subtree(this.model.nodes[uu])))]
+      subtree(kk) {
+        return [...this.own.get(kk), ...kk.children.flatMap((kk => this.subtree(this.model.nodes[kk])))]
       }
-      worldMatrix(uu, Ru, yu) {
-        let Eu = qu(ou(Ru ? Fu : {}), null);
-        const Ku = [];
-        for (let mu = uu.part ? uu.node : this.parentOf(uu.node); mu; mu = this.parentOf(mu)) Ku.unshift(mu);
-        for (const mu of Ku) Eu = qu(ou(mu), Eu);
-        const Qu = ou(uu.part ? {} : uu.node);
-        return void 0 !== yu && Qu.scale.fill(yu), qu(Qu, Eu)
+      worldMatrix(kk, Fk, Bk) {
+        let Rk = lk(jk(Fk ? hk : {}), null);
+        const tk = [];
+        for (let Xk = kk.part ? kk.node : this.parentOf(kk.node); Xk; Xk = this.parentOf(Xk)) tk.unshift(Xk);
+        for (const Xk of tk) Rk = lk(jk(Xk), Rk);
+        const ak = jk(kk.part ? {} : kk.node);
+        return void 0 !== Bk && ak.scale.fill(Bk), lk(ak, Rk)
       }
-      floats(uu) {
+      floats(kk) {
         const {
-          vertexAttributes: Ru,
-          vertexCount: yu
-        } = uu.geometry;
-        return new Map(Ru.map((uu => [uu.kind, (0, ku.l)(uu, yu)])))
+          vertexAttributes: Fk,
+          vertexCount: Bk
+        } = kk.geometry;
+        return new Map(Fk.map((kk => [kk.kind, (0, Ok.f)(kk, Bk)])))
       }
-      imageUrl(uu) {
-        return function(uu, Ru, yu) {
+      imageUrl(kk) {
+        return function(kk, Fk, Bk) {
           let {
-            name: Eu
-          } = Ru;
-          return `data:${uu}${Eu}#image${yu}`
-        }(this.uniqueRootUrl, this.fileInfo, uu)
+            name: Rk
+          } = Fk;
+          return `data:${kk}${Rk}#image${Bk}`
+        }(this.uniqueRootUrl, this.fileInfo, kk)
       }
-      textureDesc(uu, Ru) {
-        var yu;
+      textureDesc(kk, Fk) {
+        var Bk;
         let {
-          texture: Eu,
-          transform: Ku
-        } = uu;
+          texture: Rk,
+          transform: tk
+        } = kk;
         const {
-          sampler: Qu,
-          image: mu
-        } = this.model.textures[Eu], {
-          bufferView: Ju,
-          mimeType: Nu,
-          name: Xu
-        } = this.model.images[mu], Vu = Ku && {
-          ...Ku.offset ? {
-            uOffset: Ku.offset[0],
-            vOffset: Ku.offset[1]
+          sampler: ak,
+          image: Xk
+        } = this.model.textures[Rk], {
+          bufferView: bk,
+          mimeType: wk,
+          name: dk
+        } = this.model.images[Xk], sk = tk && {
+          ...tk.offset ? {
+            uOffset: tk.offset[0],
+            vOffset: tk.offset[1]
           } : {},
           uRotationCenter: 0,
           vRotationCenter: 0,
-          ...Ku.rotation ? {
-            wAng: -Ku.rotation
+          ...tk.rotation ? {
+            wAng: -tk.rotation
           } : {},
-          ...Ku.scale ? {
-            uScale: Ku.scale[0],
-            vScale: Ku.scale[1]
+          ...tk.scale ? {
+            uScale: tk.scale[0],
+            vScale: tk.scale[1]
           } : {}
         };
         return {
-          url: this.imageUrl(mu),
-          noMipmap: Yu(Qu),
+          url: this.imageUrl(Xk),
+          noMipmap: xk(ak),
           invertY: !1,
-          samplingMode: hu(Qu),
+          samplingMode: Zk(ak),
           data: {
-            bytes: Ju.bytes,
-            mimeType: Nu,
-            label: Xu,
-            context: `/textures/${Eu}`
+            bytes: bk.bytes,
+            mimeType: wk,
+            label: dk,
+            context: `/textures/${Rk}`
           },
           sets: {
-            wrapU: iu(Qu.wrapS),
-            wrapV: iu(Qu.wrapT),
-            ...Vu,
-            coordinatesIndex: null !== (yu = null === Ku || void 0 === Ku ? void 0 : Ku.texCoord) && void 0 !== yu ? yu : 0,
-            hasAlpha: Ru
+            wrapU: Kk(ak.wrapS),
+            wrapV: Kk(ak.wrapT),
+            ...sk,
+            coordinatesIndex: null !== (Bk = null === tk || void 0 === tk ? void 0 : tk.texCoord) && void 0 !== Bk ? Bk : 0,
+            hasAlpha: Fk
           }
         }
       }
     }
-    async function vu(uu, Ru, yu, Eu, Ku, Qu) {
-      let mu = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-      const Ju = function(uu, Ru, yu) {
-          return "string" !== typeof Ru ? {
+    async function Ik(kk, Fk, Bk, Rk, tk, ak) {
+      let Xk = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      const bk = function(kk, Fk, Bk) {
+          return "string" !== typeof Fk ? {
             url: "",
-            rootUrl: uu,
-            name: yu()
-          } : Ru ? Ru.startsWith("data:") ? {
-            url: Ru,
-            rootUrl: uu,
+            rootUrl: kk,
+            name: Bk()
+          } : Fk ? Fk.startsWith("data:") ? {
+            url: Fk,
+            rootUrl: kk,
             name: ""
-          } : uu ? {
-            url: uu + Ru,
-            rootUrl: uu,
-            name: Ru
+          } : kk ? {
+            url: kk + Fk,
+            rootUrl: kk,
+            name: Fk
           } : {
-            url: Ru,
-            rootUrl: Lu(Ru),
-            name: cu(Ru)
+            url: Fk,
+            rootUrl: zk(Fk),
+            name: Dk(Fk)
           } : {
-            url: uu,
-            rootUrl: Lu(uu),
-            name: cu(uu)
+            url: kk,
+            rootUrl: zk(kk),
+            name: Dk(kk)
           }
-        }(yu, uu, Ku),
-        Nu = {};
-      Ru.addPendingData(Nu);
+        }(Bk, kk, tk),
+        wk = {};
+      Fk.addPendingData(wk);
       try {
-        const yu = Mu(await async function(uu, Ru) {
-            return "string" !== typeof Ru ? Ru : uu.url.startsWith("data:") ? (0, eu.o)(uu.url) : await (0, eu.s)(uu.url)
-          }(Ju, uu)),
-          Nu = new Ou(yu, Eu, Ju, function(uu, Ru) {
+        const Bk = Hk(await async function(kk, Fk) {
+            return "string" !== typeof Fk ? Fk : kk.url.startsWith("data:") ? (0, Ek.m)(kk.url) : await (0, Ek.p)(kk.url)
+          }(bk, kk)),
+          wk = new nk(Bk, Rk, bk, function(kk, Fk) {
             let {
-              rootUrl: yu,
-              name: Eu
-            } = uu;
-            return !yu.startsWith("file:") && Eu ? yu : `${yu}${Ru()}/`
-          }(Ju, Ku));
-        return await Qu(Nu), Ru.importedMeshesFiles && (Ru.loadingPluginName = "jD", mu && Ru.importedMeshesFiles.push(Ju.url)), Nu
+              rootUrl: Bk,
+              name: Rk
+            } = kk;
+            return !Bk.startsWith("file:") && Rk ? Bk : `${Bk}${Fk()}/`
+          }(bk, tk));
+        return await ak(wk), Fk.importedMeshesFiles && (Fk.loadingPluginName = "bS", Xk && Fk.importedMeshesFiles.push(bk.url)), wk
       } finally {
-        Ru.removePendingData(Nu)
+        Fk.removePendingData(wk)
       }
     }
-    var au = yu(37306),
-      fu = yu(37170),
-      uR = yu(37659);
+    var Qk = Bk(37245),
+      kF = Bk(37085),
+      FF = Bk(37563);
 
-    function RR(uu) {
-      if (null === uu || void 0 === uu || !uu.min || !uu.max) return null;
-      const [Ru, yu, Eu] = uu.min, [Ku, Qu, mu] = uu.max, {
-        BoundingInfo: Ju,
-        MS: Nu
-      } = (0, au.c)();
-      return new Ju(new Nu(Ru, yu, Eu), new Nu(Ku, Qu, mu))
+    function BF(kk) {
+      if (null === kk || void 0 === kk || !kk.min || !kk.max) return null;
+      const [Fk, Bk, Rk] = kk.min, [tk, ak, Xk] = kk.max, {
+        BoundingInfo: bk,
+        Qe: wk
+      } = (0, Qk.e)();
+      return new bk(new wk(Fk, Bk, Rk), new wk(tk, ak, Xk))
     }
 
-    function yR(uu) {
-      (0, fu.i)(uu) || (uu.geometry && uu.geometry.useBoundingInfoFromGeometry ? uu._updateBoundingInfo() : uu.refreshBoundingInfo(!0, !0))
+    function RF(kk) {
+      (0, kF.c)(kk) || (kk.geometry && kk.geometry.useBoundingInfoFromGeometry ? kk._updateBoundingInfo() : kk.refreshBoundingInfo(!0, !0))
     }
-    class ER {
-      constructor(uu, Ru) {
-        this.cp = uu, this.decode = Ru, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
+    class tF {
+      constructor(kk, Fk) {
+        this.ef = kk, this.decode = Fk, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
       }
-      viewBytes(uu) {
-        let Ru = this.viewData.get(uu.index);
-        return Ru || (Ru = this.bufferData.then((() => uu.bytes)), this.viewData.set(uu.index, Ru)), Ru
+      viewBytes(kk) {
+        let Fk = this.viewData.get(kk.index);
+        return Fk || (Fk = this.bufferData.then((() => kk.bytes)), this.viewData.set(kk.index, Fk)), Fk
       }
-      viewBuffer(uu) {
-        let Ru = this.viewBuffers.get(uu.index);
-        return Ru || (Ru = this.viewBytes(uu).then((uu => new((0, au.c)().XS)(this.cp.eS(), uu, !1))), this.viewBuffers.set(uu.index, Ru)), Ru
+      viewBuffer(kk) {
+        let Fk = this.viewBuffers.get(kk.index);
+        return Fk || (Fk = this.viewBytes(kk).then((kk => new((0, Qk.e)().Ge)(this.ef.ne(), kk, !1))), this.viewBuffers.set(kk.index, Fk)), Fk
       }
-      vertexBuffer(uu, Ru) {
+      vertexBuffer(kk, Fk) {
         const {
-          kind: yu,
-          data: Eu
-        } = Ru, Ku = `${uu.index}:${yu}`;
-        let Qu = this.vertexBuffers.get(Ku);
-        if (!Qu) {
-          const mu = uu.bufferView;
-          Qu = mu ? this.viewBuffer(mu).then((uu => this.layoutVertexBuffer(uu, Ru))) : Promise.resolve(Eu).then((uu => new((0, au.c)().VertexBuffer)(this.cp.eS(), uu, yu, !1))), this.vertexBuffers.set(Ku, Qu)
+          kind: Bk,
+          data: Rk
+        } = Fk, tk = `${kk.index}:${Bk}`;
+        let ak = this.vertexBuffers.get(tk);
+        if (!ak) {
+          const Xk = kk.bufferView;
+          ak = Xk ? this.viewBuffer(Xk).then((kk => this.layoutVertexBuffer(kk, Fk))) : Promise.resolve(Rk).then((kk => new((0, Qk.e)().VertexBuffer)(this.ef.ne(), kk, Bk, !1))), this.vertexBuffers.set(tk, ak)
         }
-        return Qu
+        return ak
       }
-      layoutVertexBuffer(uu, Ru) {
+      layoutVertexBuffer(kk, Fk) {
         let {
-          kind: yu,
-          offset: Eu,
-          stride: Ku,
-          components: Qu,
-          glType: mu,
-          isNormalized: Ju
-        } = Ru;
-        const Nu = this.cp.eS();
-        return new((0, au.c)().VertexBuffer)(Nu, uu, yu, !1, void 0, Ku, void 0, Eu, Qu, mu, Ju, !0, void 0, !0)
+          kind: Bk,
+          offset: Rk,
+          stride: tk,
+          components: ak,
+          glType: Xk,
+          isNormalized: bk
+        } = Fk;
+        const wk = this.ef.ne();
+        return new((0, Qk.e)().VertexBuffer)(wk, kk, Bk, !1, void 0, tk, void 0, Rk, ak, Xk, bk, !0, void 0, !0)
       }
-      load(uu, Ru, yu) {
-        const Eu = (0, fu.i)(yu),
-          Ku = uu => {
-            Eu || (yu._delayInfo = yu._delayInfo || [], -1 === yu._delayInfo.indexOf(uu) && yu._delayInfo.push(uu))
+      load(kk, Fk, Bk) {
+        const Rk = (0, kF.c)(Bk),
+          tk = kk => {
+            Rk || (Bk._delayInfo = Bk._delayInfo || [], -1 === Bk._delayInfo.indexOf(kk) && Bk._delayInfo.push(kk))
           },
-          Qu = Ru.draco;
-        if (Qu) {
-          for (const uu in Qu.attributeIds) Ku(uu);
-          let mu = this.dracoGeometry.get(Qu.bufferView.index);
-          return mu || (mu = this.viewBytes(Qu.bufferView).then((async () => {
-            let Ku;
+          ak = Fk.draco;
+        if (ak) {
+          for (const kk in ak.attributeIds) tk(kk);
+          let Xk = this.dracoGeometry.get(ak.bufferView.index);
+          return Xk || (Xk = this.viewBytes(ak.bufferView).then((async () => {
+            let tk;
             try {
-              Ku = await Iu(Ru, this.decode)
-            } catch (Nu) {
-              throw new eu.i(`${uu}: ${Nu instanceof Error?Nu.message:String(Nu)}`)
+              tk = await uk(Fk, this.decode)
+            } catch (wk) {
+              throw new Ek.h(`${kk}: ${wk instanceof Error?wk.message:String(wk)}`)
             }
-            const Qu = gu(Ru, Ku);
-            if (Eu) return Qu;
-            const mu = RR(Ru.position),
-              Ju = new((0, au.c)().MirroredGeometry)(yu.name, this.cp);
-            mu && (Ju._boundingInfo = mu, Ju.useBoundingInfoFromGeometry = !0), Qu.indexData && Ju.setIndices(Qu.indexData);
-            for (const uu of Qu.vertexAttributes) Ju.setVerticesBuffer(this.layoutVertexBuffer(uu.data, uu), Qu.vertexCount);
-            return Ju.link(Qu), Ju
-          })), this.dracoGeometry.set(Qu.bufferView.index, mu)), mu
+            const ak = rk(Fk, tk);
+            if (Rk) return ak;
+            const Xk = BF(Fk.position),
+              bk = new((0, Qk.e)().MirroredGeometry)(Bk.name, this.ef);
+            Xk && (bk._boundingInfo = Xk, bk.useBoundingInfoFromGeometry = !0), ak.indexData && bk.setIndices(ak.indexData);
+            for (const kk of ak.vertexAttributes) bk.setVerticesBuffer(this.layoutVertexBuffer(kk.data, kk), ak.vertexCount);
+            return bk.link(ak), bk
+          })), this.dracoGeometry.set(ak.bufferView.index, Xk)), Xk
         }
-        const mu = [],
-          Ju = tu(Ru);
-        if (Eu) return yu.isUnIndexed = !Ju.indexData, yu.hasVertexAlpha = (0, uR.d)(Ru), Promise.resolve(Ju);
-        const Nu = new((0, au.c)().MirroredGeometry)(yu.name, this.cp),
+        const Xk = [],
+          bk = Gk(Fk);
+        if (Rk) return Bk.isUnIndexed = !bk.indexData, Bk.hasVertexAlpha = (0, FF.i)(Fk), Promise.resolve(bk);
+        const wk = new((0, Qk.e)().MirroredGeometry)(Bk.name, this.ef),
           {
-            indexData: Xu
-          } = Ju;
-        Xu ? mu.push(this.viewBytes(Ru.indices.bufferView).then((() => {
-          Nu.setIndices(Xu)
-        }))) : yu.isUnIndexed = !0;
-        for (const [Vu, {
-            kind: ru,
-            accessor: Bu
-          }] of Ru.attributes.entries()) Ku(ru), mu.push(this.vertexBuffer(Bu, Ju.vertexAttributes[Vu]).then((uu => {
-          if ("position" === uu.getKind()) {
-            const uu = RR(Bu);
-            uu && (Nu._boundingInfo = uu, Nu.useBoundingInfoFromGeometry = !0)
+            indexData: dk
+          } = bk;
+        dk ? Xk.push(this.viewBytes(Fk.indices.bufferView).then((() => {
+          wk.setIndices(dk)
+        }))) : Bk.isUnIndexed = !0;
+        for (const [sk, {
+            kind: Vk,
+            accessor: Jk
+          }] of Fk.attributes.entries()) tk(Vk), Xk.push(this.vertexBuffer(Jk, bk.vertexAttributes[sk]).then((kk => {
+          if ("position" === kk.getKind()) {
+            const kk = BF(Jk);
+            kk && (wk._boundingInfo = kk, wk.useBoundingInfoFromGeometry = !0)
           }
-          Nu.setVerticesBuffer(uu, Ju.vertexCount)
+          wk.setVerticesBuffer(kk, bk.vertexCount)
         })));
-        return (0, uR.d)(Ru) && (yu.hasVertexAlpha = !0), Promise.all(mu).then((() => (Nu.link(Ju), Nu)))
+        return (0, FF.i)(Fk) && (Bk.hasVertexAlpha = !0), Promise.all(Xk).then((() => (wk.link(bk), wk)))
       }
     }
-    var KR, QR = yu(37038),
-      mR = yu(36828),
-      JR = yu(37663),
-      NR = yu(36983),
-      XR = yu(37019),
-      VR = yu(2632),
-      rR = yu(37003);
+    var aF, XF = Bk(36950),
+      bF = Bk(36754),
+      wF = Bk(37570),
+      dF = Bk(36903),
+      sF = Bk(36939),
+      VF = Bk(2626),
+      JF = Bk(36930);
 
-    function BR(uu, Ru) {
-      uu.metadata = uu.metadata || {};
-      const yu = uu._internalMetadata = uu._internalMetadata || {},
-        Eu = yu.jD = yu.jD || {};
-      (Eu.pointers = Eu.pointers || []).push(Ru)
+    function AF(kk, Fk) {
+      kk.metadata = kk.metadata || {};
+      const Bk = kk._internalMetadata = kk._internalMetadata || {},
+        Rk = Bk.bS = Bk.bS || {};
+      (Rk.pointers = Rk.pointers || []).push(Fk)
     }
 
-    function xR(uu, Ru) {
-      if (Ru && Object.keys(Ru).length > 0) {
-        const yu = uu.metadata = uu.metadata || {};
-        (yu.jD = yu.jD || {}).extras = Ru
+    function eF(kk, Fk) {
+      if (Fk && Object.keys(Fk).length > 0) {
+        const Bk = kk.metadata = kk.metadata || {};
+        (Bk.bS = Bk.bS || {}).extras = Fk
       }
     }
 
-    function SR(uu, Ru) {
-      Ru.position = uu.translation ? mR.MS.FromArray(uu.translation) : mR.MS.Zero(), Ru.rotationQuaternion = uu.rotation ? mR.Quaternion.FromArray(uu.rotation) : mR.Quaternion.Identity(), Ru.pp = uu.scale ? mR.MS.FromArray(uu.scale) : mR.MS.One()
+    function yF(kk, Fk) {
+      Fk.position = kk.translation ? bF.Qe.FromArray(kk.translation) : bF.Qe.Zero(), Fk.rotationQuaternion = kk.rotation ? bF.Quaternion.FromArray(kk.rotation) : bF.Quaternion.Identity(), Fk.ta = kk.scale ? bF.Qe.FromArray(kk.scale) : bF.Qe.One()
     }
-    class pR {
-      constructor(uu, Ru) {
-        if (this.cp = uu, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, Ru) {
-          const Ru = uu.eS(),
-            yu = uu.zD.add((() => {
+    class fF {
+      constructor(kk, Fk) {
+        if (this.ef = kk, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, Fk) {
+          const Fk = kk.ne(),
+            Bk = kk.yN.add((() => {
               this.dispose()
             })),
-            Eu = Ru.onContextRestoredObservable.add((() => {
-              for (const uu of [...this.geometries, ...this.meshes, ...this.textures]) uu._rebuild()
+            Rk = Fk.onContextRestoredObservable.add((() => {
+              for (const kk of [...this.geometries, ...this.meshes, ...this.textures]) kk._rebuild()
             }));
           this.release = () => {
-            uu.zD.remove(yu), Ru.onContextRestoredObservable.remove(Eu)
+            kk.yN.remove(Bk), Fk.onContextRestoredObservable.remove(Rk)
           }
         }
       }
@@ -827,267 +827,267 @@ export const modules = {
       addAllToScene() {
         if (this.release) {
           this.release(), this.release = null;
-          for (const uu of this.meshes) this.cp.MEu(uu);
-          for (const uu of this.materials) this.cp.addMaterial(uu);
-          for (const uu of this.geometries) this.cp.addGeometry(uu);
-          for (const uu of this.transformNodes) this.cp.addTransformNode(uu);
-          for (const uu of this.textures) this.cp.addTexture(uu)
+          for (const kk of this.meshes) this.ef.qBk(kk);
+          for (const kk of this.materials) this.ef.addMaterial(kk);
+          for (const kk of this.geometries) this.ef.addGeometry(kk);
+          for (const kk of this.transformNodes) this.ef.addTransformNode(kk);
+          for (const kk of this.textures) this.ef.addTexture(kk)
         }
       }
       dispose() {
-        var uu;
-        for (const Ru of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
-          for (const uu of Ru.slice()) uu.dispose();
-          Ru.length = 0
+        var kk;
+        for (const Fk of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
+          for (const kk of Fk.slice()) kk.dispose();
+          Fk.length = 0
         }
-        null === (uu = this.release) || void 0 === uu || uu.call(this), this.release = null
+        null === (kk = this.release) || void 0 === kk || kk.call(this), this.release = null
       }
     }
-    class TR {
-      constructor(uu, Ru, yu, Eu, Ku, Qu, mu) {
-        this.asset = uu, this.cp = Ru, this.tree = yu, this.geometryData = Ku, this.materials = Qu, this.lite = mu, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = Eu ? yu : null
+    class mF {
+      constructor(kk, Fk, Bk, Rk, tk, ak, Xk) {
+        this.asset = kk, this.ef = Fk, this.tree = Bk, this.geometryData = tk, this.materials = ak, this.lite = Xk, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = Rk ? Bk : null
       }
-      create(uu) {
-        if (this.lite) return uu();
-        const Ru = this.cp;
-        Ru._blockEntityCollection = !!this.container;
+      create(kk) {
+        if (this.lite) return kk();
+        const Fk = this.ef;
+        Fk._blockEntityCollection = !!this.container;
         try {
-          const Ru = uu();
-          return this.container && (Ru._parentContainer = this.container), Ru
+          const Fk = kk();
+          return this.container && (Fk._parentContainer = this.container), Fk
         } finally {
-          Ru._blockEntityCollection = !1
+          Fk._blockEntityCollection = !1
         }
       }
-      node(uu, Ru) {
-        return this.create((() => this.lite ? Ru ? (0, JR.f)(this.lite, uu) : (0, JR.r)(this.lite, uu) : Ru ? new((0, au.c)().Mesh)(uu, this.cp) : new((0, au.c)().TransformNode)(uu, this.cp)))
+      node(kk, Fk) {
+        return this.create((() => this.lite ? Fk ? (0, wF.f)(this.lite, kk) : (0, wF.o)(this.lite, kk) : Fk ? new((0, Qk.e)().Mesh)(kk, this.ef) : new((0, Qk.e)().TransformNode)(kk, this.ef)))
       }
       async load() {
-        var uu;
+        var kk;
         this.asset.model.json.nodes && this.createRoot();
-        const Ru = this.lite ? null : this.cp,
-          yu = null !== (uu = null === Ru || void 0 === Ru ? void 0 : Ru.blockMaterialDirtyMechanism) && void 0 !== uu && uu;
-        let Eu;
-        Ru && (Ru.blockMaterialDirtyMechanism = !0);
+        const Fk = this.lite ? null : this.ef,
+          Bk = null !== (kk = null === Fk || void 0 === Fk ? void 0 : Fk.blockMaterialDirtyMechanism) && void 0 !== kk && kk;
+        let Rk;
+        Fk && (Fk.blockMaterialDirtyMechanism = !0);
         try {
-          Eu = this.loadScene()
+          Rk = this.loadScene()
         } finally {
-          null === Ru || void 0 === Ru || Ru._forceBlockMaterialDirtyMechanism(yu)
+          null === Fk || void 0 === Fk || Fk._forceBlockMaterialDirtyMechanism(Bk)
         }
-        await Eu;
+        await Rk;
         const {
-          root: Ku,
-          tree: Qu
+          root: tk,
+          tree: ak
         } = this;
-        Ku && (Ku.tC(!0), Qu.meshes.push(Ku), Qu.rootNodes.push(Ku));
-        for (const Ju of this.asset.model.nodes) {
-          const uu = this.nodeObjects.get(Ju.index);
-          uu && ["TransformNode", "LiteNode"].includes(uu.getClassName()) && Qu.transformNodes.push(uu);
-          for (const Ru of null !== (mu = this.nodePrimitives.get(Ju.index)) && void 0 !== mu ? mu : []) {
-            var mu;
-            Qu.meshes.push(Ru);
-            const uu = Ru.geometry;
-            uu && !Qu.geometries.includes(uu) && Qu.geometries.push(uu)
+        tk && (tk.lY(!0), ak.meshes.push(tk), ak.rootNodes.push(tk));
+        for (const bk of this.asset.model.nodes) {
+          const kk = this.nodeObjects.get(bk.index);
+          kk && ["TransformNode", "LiteNode"].includes(kk.getClassName()) && ak.transformNodes.push(kk);
+          for (const Fk of null !== (Xk = this.nodePrimitives.get(bk.index)) && void 0 !== Xk ? Xk : []) {
+            var Xk;
+            ak.meshes.push(Fk);
+            const kk = Fk.geometry;
+            kk && !ak.geometries.includes(kk) && ak.geometries.push(kk)
           }
         }
       }
       createRoot() {
-        const uu = this.node("__root__", !0);
-        this.root = uu, uu.tC(!1), this.cp.useRightHandedSystem || SR(Fu, uu)
+        const kk = this.node("__root__", !0);
+        this.root = kk, kk.lY(!1), this.ef.useRightHandedSystem || yF(hk, kk)
       }
       loadScene() {
-        const uu = [];
-        for (const Ru of this.asset.model.rootNodes) uu.push(this.loadNode(this.asset.model.nodes[Ru], (uu => {
-          uu.parent = this.root
+        const kk = [];
+        for (const Fk of this.asset.model.rootNodes) kk.push(this.loadNode(this.asset.model.nodes[Fk], (kk => {
+          kk.parent = this.root
         })));
-        return uu.push(Promise.resolve()), Promise.all(uu).then((() => {}))
+        return kk.push(Promise.resolve()), Promise.all(kk).then((() => {}))
       }
-      loadNode(uu, Ru) {
-        const yu = `/nodes/${uu.index}`,
-          Eu = [],
-          Ku = Ku => {
-            if (BR(Ku, yu), SR(uu, Ku), uu.hasCamera && !this.cp.useRightHandedSystem) {
+      loadNode(kk, Fk) {
+        const Bk = `/nodes/${kk.index}`,
+          Rk = [],
+          tk = tk => {
+            if (AF(tk, Bk), yF(kk, tk), kk.hasCamera && !this.ef.useRightHandedSystem) {
               const {
-                pp: uu
-              } = Ku;
-              uu.set(-1, uu.y, uu.z)
+                ta: kk
+              } = tk;
+              kk.set(-1, kk.y, kk.z)
             }
-            for (const Ru of uu.children) Eu.push(this.loadNode(this.asset.model.nodes[Ru], (uu => {
-              uu.parent = Ku
+            for (const Fk of kk.children) Rk.push(this.loadNode(this.asset.model.nodes[Fk], (kk => {
+              kk.parent = tk
             })));
-            (yu => {
-              xR(yu, uu.extras), Ru(yu)
-            })(Ku)
+            (Bk => {
+              eF(Bk, kk.extras), Fk(Bk)
+            })(tk)
           };
-        if (null === uu.mesh) {
-          const Ru = this.node(zu(uu), !1);
-          this.nodeObjects.set(uu.index, Ru), Ku(Ru)
+        if (null === kk.mesh) {
+          const Fk = this.node(Pk(kk), !1);
+          this.nodeObjects.set(kk.index, Fk), tk(Fk)
         } else {
-          const Ru = this.asset.model.meshes[uu.mesh];
-          Eu.push(this.loadMesh(`/meshes/${Ru.index}`, uu, Ru, Ku))
+          const Fk = this.asset.model.meshes[kk.mesh];
+          Rk.push(this.loadMesh(`/meshes/${Fk.index}`, kk, Fk, tk))
         }
-        return Promise.all(Eu).then((() => {
-          for (const yu of null !== (Ru = this.nodePrimitives.get(uu.index)) && void 0 !== Ru ? Ru : []) {
-            var Ru;
-            yR(yu)
+        return Promise.all(Rk).then((() => {
+          for (const Bk of null !== (Fk = this.nodePrimitives.get(kk.index)) && void 0 !== Fk ? Fk : []) {
+            var Fk;
+            RF(Bk)
           }
-          return this.nodeObjects.get(uu.index)
+          return this.nodeObjects.get(kk.index)
         }))
       }
-      loadMesh(uu, Ru, yu, Eu) {
-        const Ku = [],
-          Qu = zu(Ru);
-        if (1 === yu.primitives.length) {
-          const Eu = yu.primitives[0];
-          Ku.push(this.loadPrimitive(`${uu}/primitives/${Eu.index}`, Qu, Eu, (uu => {
-            this.nodeObjects.set(Ru.index, uu), this.nodePrimitives.set(Ru.index, [uu])
+      loadMesh(kk, Fk, Bk, Rk) {
+        const tk = [],
+          ak = Pk(Fk);
+        if (1 === Bk.primitives.length) {
+          const Rk = Bk.primitives[0];
+          tk.push(this.loadPrimitive(`${kk}/primitives/${Rk.index}`, ak, Rk, (kk => {
+            this.nodeObjects.set(Fk.index, kk), this.nodePrimitives.set(Fk.index, [kk])
           })))
         } else {
-          const Eu = this.node(Qu, !1);
-          this.nodeObjects.set(Ru.index, Eu);
-          const mu = [];
-          this.nodePrimitives.set(Ru.index, mu);
-          for (const Ru of yu.primitives) Ku.push(this.loadPrimitive(`${uu}/primitives/${Ru.index}`, `${Qu}_primitive${Ru.index}`, Ru, (uu => {
-            uu.parent = Eu, mu.push(uu)
+          const Rk = this.node(ak, !1);
+          this.nodeObjects.set(Fk.index, Rk);
+          const Xk = [];
+          this.nodePrimitives.set(Fk.index, Xk);
+          for (const Fk of Bk.primitives) tk.push(this.loadPrimitive(`${kk}/primitives/${Fk.index}`, `${ak}_primitive${Fk.index}`, Fk, (kk => {
+            kk.parent = Rk, Xk.push(kk)
           })))
         }
-        const mu = this.nodeObjects.get(Ru.index);
-        return Eu(mu), Promise.all(Ku).then((() => mu))
+        const Xk = this.nodeObjects.get(Fk.index);
+        return Rk(Xk), Promise.all(tk).then((() => Xk))
       }
-      loadPrimitive(uu, Ru, yu, Eu) {
-        const Ku = [],
-          Qu = this.node(Ru, !0);
-        if (Qu.sideOrientation = this.cp.useRightHandedSystem ? NR.e.CounterClockWiseSideOrientation : NR.e.ClockWiseSideOrientation, Ku.push(this.geometryData.load(uu, yu, Qu).then((uu => {
-            if ((0, fu.i)(Qu)) {
-              var Ru, yu;
-              const Eu = uu;
-              Qu.replaceModel(Eu, Int32Array.of(0, null !== (Ru = null === (yu = Eu.indexData) || void 0 === yu ? void 0 : yu.length) && void 0 !== Ru ? Ru : Eu.vertexCount, 0, Eu.vertexCount))
-            } else this.create((() => (uu.applyToMesh(Qu), uu)))
+      loadPrimitive(kk, Fk, Bk, Rk) {
+        const tk = [],
+          ak = this.node(Fk, !0);
+        if (ak.sideOrientation = this.ef.useRightHandedSystem ? dF.c.CounterClockWiseSideOrientation : dF.c.ClockWiseSideOrientation, tk.push(this.geometryData.load(kk, Bk, ak).then((kk => {
+            if ((0, kF.c)(ak)) {
+              var Fk, Bk;
+              const Rk = kk;
+              ak.replaceModel(Rk, Int32Array.of(0, null !== (Fk = null === (Bk = Rk.indexData) || void 0 === Bk ? void 0 : Bk.length) && void 0 !== Fk ? Fk : Rk.vertexCount, 0, Rk.vertexCount))
+            } else this.create((() => (kk.applyToMesh(ak), kk)))
           }))), this.materials) {
-          const uu = 0 === yu.mode ? NR.e.PointListDrawMode : NR.e.TriangleFillMode,
-            Ru = null === yu.material ? null : this.asset.model.materials[yu.material];
-          Ku.push(this.loadMaterial(Ru, uu, (uu => {
-            Qu.material = uu
+          const kk = 0 === Bk.mode ? dF.c.PointListDrawMode : dF.c.TriangleFillMode,
+            Fk = null === Bk.material ? null : this.asset.model.materials[Bk.material];
+          tk.push(this.loadMaterial(Fk, kk, (kk => {
+            ak.material = kk
           })))
         }
-        return BR(Qu, uu), Eu(Qu), Promise.all(Ku).then((() => Qu))
+        return AF(ak, kk), Rk(ak), Promise.all(tk).then((() => ak))
       }
-      loadMaterial(uu, Ru, yu) {
-        var Eu;
-        const Ku = `${null!==(Eu=null===uu||void 0===uu?void 0:uu.index)&&void 0!==Eu?Eu:"default"}:${Ru}`;
-        let Qu = this.materialData.get(Ku);
-        return Qu || (Qu = this.createMaterial(uu, Ru), this.materialData.set(Ku, Qu)), yu(Qu.material), Qu.promise
+      loadMaterial(kk, Fk, Bk) {
+        var Rk;
+        const tk = `${null!==(Rk=null===kk||void 0===kk?void 0:kk.index)&&void 0!==Rk?Rk:"default"}:${Fk}`;
+        let ak = this.materialData.get(tk);
+        return ak || (ak = this.createMaterial(kk, Fk), this.materialData.set(tk, ak)), Bk(ak.material), ak.promise
       }
-      createMaterial(uu, Ru) {
-        const yu = uu ? uu.name || `material${uu.index}` : "__GLTFLoader._default",
+      createMaterial(kk, Fk) {
+        const Bk = kk ? kk.name || `material${kk.index}` : "__GLTFLoader._default",
           {
-            style: Eu,
-            unlit: Ku
+            style: Rk,
+            unlit: tk
           } = this.materials;
-        let Qu;
-        const mu = this.create((() => {
-          const mu = (0, rR.c)({
-            name: yu,
-            cp: this.cp,
+        let ak;
+        const Xk = this.create((() => {
+          const Xk = (0, JF.d)({
+            name: Bk,
+            ef: this.ef,
             sets: {
-              ...(0, uR.c)(this.asset, uu, Eu, Ku),
-              fillMode: Ru
+              ...(0, FF.e)(this.asset, kk, Rk, tk),
+              fillMode: Fk
             },
             unrendered: !0
           });
-          return Qu = mu.model, mu.mirror
+          return ak = Xk.model, Xk.mirror
         }));
-        let Ju = Promise.resolve();
-        if (uu) {
-          const Ru = `/materials/${uu.index}`,
-            Eu = Qu.diffuseTexture;
-          if (Eu && !Eu.mirror) Ju = new Promise((uu => setTimeout(uu)));
-          else if (Eu) {
-            const Ku = Eu.mirror;
-            Ku._parentContainer = this.container, Ku.name = `${yu} (Base Color)`, BR(Ku, `${Ru}${uu.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(Ku), Ju = (0, XR.v)(Eu)
+        let bk = Promise.resolve();
+        if (kk) {
+          const Fk = `/materials/${kk.index}`,
+            Rk = ak.diffuseTexture;
+          if (Rk && !Rk.mirror) bk = new Promise((kk => setTimeout(kk)));
+          else if (Rk) {
+            const tk = Rk.mirror;
+            tk._parentContainer = this.container, tk.name = `${Bk} (Base Color)`, AF(tk, `${Fk}${kk.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(tk), bk = (0, sF.u)(Rk)
           }
-          xR(mu, uu.extras), BR(mu, Ru)
+          eF(Xk, kk.extras), AF(Xk, Fk)
         }
-        return this.tree.materials.push(mu), {
-          material: mu,
-          promise: Ju
+        return this.tree.materials.push(Xk), {
+          material: Xk,
+          promise: bk
         }
       }
     }
 
-    function WR() {
-      QR.g.dracoDecodes = pu.decodes, QR.g.dracoWorkersStarted = pu.workersStarted, QR.g.dracoMostWorkers = pu.mostWorkers
+    function WF() {
+      XF.e.dracoDecodes = yk.decodes, XF.e.dracoWorkersStarted = yk.workersStarted, XF.e.dracoMostWorkers = yk.mostWorkers
     }
-    async function jR(uu, Ru, yu, Ku, Qu) {
+    async function vF(kk, Fk, Bk, tk, ak) {
       try {
-        return await async function(uu, Ru, yu, Ku, Qu, mu) {
-          var Ju;
-          let Nu;
-          const Xu = null === (Ju = (0, VR.h)()) || void 0 === Ju ? void 0 : Ju.oS,
-            Vu = null !== Xu && void 0 !== Xu && Xu.qS && Ru === Xu.lD() ? Xu : null,
-            ru = Qu && !Vu;
-          return await vu(uu, Ru, yu, Ku, Eu.b, (uu => (Nu = new pR(Ru, ru), new TR(uu, Ru, Nu, ru, new ER(Ru, Ku), mu, Vu).load())), !Qu), Nu
-        }(uu, Ru, yu, bu, Ku, Qu)
+        return await async function(kk, Fk, Bk, tk, ak, Xk) {
+          var bk;
+          let wk;
+          const dk = null === (bk = (0, VF.d)()) || void 0 === bk ? void 0 : bk.Ly,
+            sk = null !== dk && void 0 !== dk && dk.Oy && Fk === dk.XN() ? dk : null,
+            Vk = ak && !sk;
+          return await Ik(kk, Fk, Bk, tk, Rk.e, (kk => (wk = new fF(Fk, Vk), new mF(kk, Fk, wk, Vk, new tF(Fk, tk), Xk, sk).load())), !ak), wk
+        }(kk, Fk, Bk, Yk, tk, ak)
       } finally {
-        WR()
+        WF()
       }
     }
-    async function HR(uu, Ru, yu, Ku) {
+    async function iF(kk, Fk, Bk, tk) {
       try {
-        return await vu(uu, Ru, yu, bu, Eu.b, (uu => Ku(uu, new ER(Ru, bu))))
+        return await Ik(kk, Fk, Bk, Yk, Rk.e, (kk => tk(kk, new tF(Fk, Yk))))
       } finally {
-        WR()
+        WF()
       }
     }
-    KR = Ku.c, Vu || (Vu = {
-      scriptUrl: new URL(KR.scriptUrl, location.href).href,
-      wasmBinaryUrl: new URL(KR.wasmBinaryUrl, location.href).href
+    aF = tk.e, sk || (sk = {
+      scriptUrl: new URL(aF.scriptUrl, location.href).href,
+      wasmBinaryUrl: new URL(aF.wasmBinaryUrl, location.href).href
     })
   },
-  41080: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => mu
+  40931: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Xk
     });
-    var Eu = yu(145),
-      Ku = yu(1183);
+    var Rk = Bk(132),
+      tk = Bk(1157);
 
-    function Qu(uu) {
-      return (0, Eu.c)() ? `https://${Ku.c.discordDomain}/${uu.href}` : uu.href
+    function ak(kk) {
+      return (0, Rk.c)() ? `https://${tk.b.discordDomain}/${kk.href}` : kk.href
     }
-    const mu = {
-      scriptUrl: Qu(new yu.U(yu(41085))),
-      wasmBinaryUrl: Qu(new yu.U(yu(41093)))
+    const Xk = {
+      scriptUrl: ak(new Bk.U(Bk(40936))),
+      wasmBinaryUrl: ak(new Bk.U(Bk(40939)))
     }
   },
-  36152: uu => {
-    uu.exports = function(uu, Ru, yu, Eu) {
-      var Ku = self || window;
+  35991: kk => {
+    kk.exports = function(kk, Fk, Bk, Rk) {
+      var tk = self || window;
       try {
         try {
-          var Qu;
+          var ak;
           try {
-            Qu = new Ku.Blob([uu])
-          } catch (Xu) {
-            (Qu = new(Ku.BlobBuilder || Ku.WebKitBlobBuilder || Ku.MozBlobBuilder || Ku.MSBlobBuilder)).append(uu), Qu = Qu.getBlob()
+            ak = new tk.Blob([kk])
+          } catch (dk) {
+            (ak = new(tk.BlobBuilder || tk.WebKitBlobBuilder || tk.MozBlobBuilder || tk.MSBlobBuilder)).append(kk), ak = ak.getBlob()
           }
-          var mu = Ku.URL || Ku.webkitURL,
-            Ju = mu.createObjectURL(Qu),
-            Nu = new Ku[Ru](Ju, yu);
-          return mu.revokeObjectURL(Ju), Nu
-        } catch (Xu) {
-          return new Ku[Ru]("data:application/javascript,".concat(encodeURIComponent(uu)), yu)
+          var Xk = tk.URL || tk.webkitURL,
+            bk = Xk.createObjectURL(ak),
+            wk = new tk[Fk](bk, Bk);
+          return Xk.revokeObjectURL(bk), wk
+        } catch (dk) {
+          return new tk[Fk]("data:application/javascript,".concat(encodeURIComponent(kk)), Bk)
         }
-      } catch (Xu) {
-        if (!Eu) throw Error("Inline worker is not supported");
-        return new Ku[Ru](Eu, yu)
+      } catch (dk) {
+        if (!Rk) throw Error("Inline worker is not supported");
+        return new tk[Fk](Rk, Bk)
       }
     }
   },
-  41085: (uu, Ru, yu) => {
-    uu.exports = yu.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  40936: (kk, Fk, Bk) => {
+    kk.exports = Bk.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   },
-  41093: (uu, Ru, yu) => {
-    uu.exports = yu.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  40939: (kk, Fk, Bk) => {
+    kk.exports = Bk.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

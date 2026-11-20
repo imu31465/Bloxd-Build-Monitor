@@ -1,76 +1,76 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  39010: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      default: () => Ku
+  38868: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      default: () => tk
     });
-    var Eu = yu(37784);
-    const Ku = function(uu, Ru, yu) {
-      let Ku;
+    var Rk = Bk(37712);
+    const tk = function(kk, Fk, Bk) {
+      let tk;
       return {
         plugins: {
-          placeAgainstBeds: (0, Eu.c)()
+          placeAgainstBeds: (0, Rk.b)()
         },
-        onCreate: uu => {
-          Ku = uu
+        onCreate: kk => {
+          tk = kk
         },
-        onPlayerAltAction: (uu, Ru, yu, Eu, Qu, mu) => {
-          ((uu, Ru) => {
-            if (!Ru || "Mesh" !== Ku.getEntityType(Ru)) return;
-            const yu = Ku.getEntityName(Ru);
-            "Upgrades" === yu ? Ku.openShop(uu, !1, "Upgrades") : "Items" === yu && Ku.openShop(uu, !1, "Recommended")
-          })(uu, mu)
+        onPlayerAltAction: (kk, Fk, Bk, Rk, ak, Xk) => {
+          ((kk, Fk) => {
+            if (!Fk || "Mesh" !== tk.getEntityType(Fk)) return;
+            const Bk = tk.getEntityName(Fk);
+            "Upgrades" === Bk ? tk.openShop(kk, !1, "Upgrades") : "Items" === Bk && tk.openShop(kk, !1, "Recommended")
+          })(kk, Xk)
         }
       }
     }
   },
-  37784: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ju
+  37712: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => bk
     });
-    var Eu = yu(343),
-      Ku = yu(36707),
-      Qu = yu(4239);
-    const mu = ["Leaf Bed", "_Leaf Bed Head", ...Eu.Tc.flatMap((uu => [`${uu} Bed`, `_${uu} Bed Head`, `${uu} Strongbed`, `_${uu} Strongbed Head`]))];
+    var Rk = Bk(291),
+      tk = Bk(36614),
+      ak = Bk(4215);
+    const Xk = ["Leaf Bed", "_Leaf Bed Head", ...Rk.Kc.flatMap((kk => [`${kk} Bed`, `_${kk} Bed Head`, `${kk} Strongbed`, `_${kk} Strongbed Head`]))];
 
-    function Ju() {
-      let uu;
+    function bk() {
+      let kk;
       return {
-        onCreate(Ru) {
-          uu = Ru
+        onCreate(Fk) {
+          kk = Fk
         },
-        altVetoBlocks: mu,
-        onPlayerAttemptAltAction(Ru, yu, Eu, mu, Ju, Nu) {
-          var Xu;
-          if ((0, Ku.b)(uu.getMetaInfo(Ju).rootName) && !uu.isEntityInteractable(Nu) && (0, Qu.e)(null === (Xu = uu.Xyu(Ru)) || void 0 === Xu ? void 0 : Xu.typeObj.type)) return "preventAction"
+        altVetoBlocks: Xk,
+        onPlayerAttemptAltAction(Fk, Bk, Rk, Xk, bk, wk) {
+          var dk;
+          if ((0, tk.b)(kk.getMetaInfo(bk).rootName) && !kk.isEntityInteractable(wk) && (0, ak.d)(null === (dk = kk.LFk(Fk)) || void 0 === dk ? void 0 : dk.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36707: (uu, Ru, yu) => {
-    function Eu(uu) {
-      return uu.includes("Leaf Bed")
+  36614: (kk, Fk, Bk) => {
+    function Rk(kk) {
+      return kk.includes("Leaf Bed")
     }
 
-    function Ku(uu) {
-      return / Bed(?: Head)?(?:\||$)/.test(uu) && !Eu(uu)
+    function tk(kk) {
+      return / Bed(?: Head)?(?:\||$)/.test(kk) && !Rk(kk)
     }
 
-    function Qu(uu) {
-      return uu.includes(" Strongbed")
+    function ak(kk) {
+      return kk.includes(" Strongbed")
     }
 
-    function mu(uu) {
-      return Eu(uu) || Ku(uu) || Qu(uu)
+    function Xk(kk) {
+      return Rk(kk) || tk(kk) || ak(kk)
     }
-    yu.d(Ru, {
-      b: () => mu,
-      d: () => Eu,
-      e: () => Qu,
-      f: () => Ku
+    Bk.d(Fk, {
+      b: () => Xk,
+      f: () => Rk,
+      i: () => ak,
+      l: () => tk
     })
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

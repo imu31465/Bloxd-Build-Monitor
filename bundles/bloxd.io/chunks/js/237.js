@@ -1,421 +1,421 @@
 export const id = 237;
 export const ids = [237];
 export const modules = {
-  40316: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Qu,
-      h: () => mu
+  40154: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => ak,
+      g: () => Xk
     });
-    var Eu = yu(1867);
-    let Ku = !1;
+    var Rk = Bk(1858);
+    let tk = !1;
 
-    function Qu() {
-      Ku = !0
+    function ak() {
+      tk = !0
     }
 
-    function mu() {
-      Ku && (Ku = !1, (0, Eu.d)())
+    function Xk() {
+      tk && (tk = !1, (0, Rk.b)())
     }
   },
-  40276: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Su,
-      f: () => Bu,
-      i: () => xu
+  40109: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => ek,
+      i: () => Jk,
+      j: () => Ak
     });
-    var Eu = yu(1871),
-      Ku = yu(1253),
-      Qu = yu(40173),
-      mu = yu(40197),
-      Ju = yu(40199),
-      Nu = yu(40217);
-    const Xu = new Ku.d;
-    let Vu = !1;
+    var Rk = Bk(1861),
+      tk = Bk(1241),
+      ak = Bk(40015),
+      Xk = Bk(40037),
+      bk = Bk(40043),
+      wk = Bk(40063);
+    const dk = new tk.c;
+    let sk = !1;
 
-    function ru(uu) {
-      const Ru = (0, Qu.i)();
-      return null !== Ru && +uu === Ru.api.localId
+    function Vk(kk) {
+      const Fk = (0, ak.g)();
+      return null !== Fk && +kk === Fk.api.localId
     }
 
-    function Bu() {
-      Vu || (Vu = !0, (0, Nu.m)(mu.o, (uu => {
-        var Ru, yu;
-        const Eu = (0, Ju.f)(mu.o, uu);
-        if (!(0, Ju.d)(Eu)) return;
-        const Ku = Eu;
-        ru(Ku.mR) && xu(Ku.JR, {
-          icon: Ku.XR,
-          level: Ku.rR,
-          displayName: null !== (Ru = Ku.NR) && void 0 !== Ru ? Ru : null,
-          durationMs: null !== (yu = Ku.VR) && void 0 !== yu ? yu : null
+    function Jk() {
+      sk || (sk = !0, (0, wk.k)(Xk.l, (kk => {
+        var Fk, Bk;
+        const Rk = (0, bk.f)(Xk.l, kk);
+        if (!(0, bk.e)(Rk)) return;
+        const tk = Rk;
+        Vk(tk.bF) && Ak(tk.wF, {
+          icon: tk.sF,
+          level: tk.JF,
+          displayName: null !== (Fk = tk.dF) && void 0 !== Fk ? Fk : null,
+          durationMs: null !== (Bk = tk.VF) && void 0 !== Bk ? Bk : null
         })
-      })), (0, Nu.m)(mu.T, (uu => {
-        const Ru = (0, Ju.f)(mu.T, uu);
-        if (!(0, Ju.d)(Ru)) return;
-        const yu = Ru;
-        ru(yu.mR) && Eu.b.remove(yu.JR)
-      })), (0, Nu.g)((() => {
-        Eu.b.clear()
+      })), (0, wk.k)(Xk.T, (kk => {
+        const Fk = (0, bk.f)(Xk.T, kk);
+        if (!(0, bk.e)(Fk)) return;
+        const Bk = Fk;
+        Vk(Bk.bF) && Rk.d.remove(Bk.wF)
+      })), (0, wk.d)((() => {
+        Rk.d.clear()
       })))
     }
 
-    function xu(uu, Ru) {
-      Eu.b.update(uu, Ru), Xu.forEach((Ru => {
-        Ru(uu)
+    function Ak(kk, Fk) {
+      Rk.d.update(kk, Fk), dk.forEach((Fk => {
+        Fk(kk)
       }))
     }
-    const Su = {
+    const ek = {
       localEffectUpdated: {
-        watch: uu => Xu.add(uu)
+        watch: kk => dk.add(kk)
       }
     }
   },
-  40280: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Vu
+  40114: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => sk
     });
-    var Eu = yu(4564),
-      Ku = yu(4562),
-      Qu = yu(40205),
-      mu = yu(40217);
-    const Ju = new Set(Eu.H),
-      Nu = Eu.H.map((uu => (new TextEncoder).encode(uu))),
-      Xu = new Map;
+    var Rk = Bk(4531),
+      tk = Bk(4524),
+      ak = Bk(40051),
+      Xk = Bk(40063);
+    const bk = new Set(Rk.D),
+      wk = Rk.D.map((kk => (new TextEncoder).encode(kk))),
+      dk = new Map;
 
-    function Vu(uu, Ru) {
-      var yu;
-      return null === (yu = Xu.get(uu)) || void 0 === yu ? void 0 : yu[Ru]
-    }(0, mu.m)(Eu.$b.NewOtherEntitySettings, (uu => {
-      uu.payloadKind === Ku.ac.Msgpack && Nu.some((Ru => function(uu, Ru) {
-        const yu = Ru[0];
-        for (let Eu = uu.indexOf(yu); - 1 !== Eu && Eu + Ru.length <= uu.length; Eu = uu.indexOf(yu, Eu + 1)) {
-          let yu = 1;
-          for (; yu < Ru.length && uu[Eu + yu] === Ru[yu];) yu++;
-          if (yu === Ru.length) return !0
+    function sk(kk, Fk) {
+      var Bk;
+      return null === (Bk = dk.get(kk)) || void 0 === Bk ? void 0 : Bk[Fk]
+    }(0, Xk.k)(Rk.Tb.NewOtherEntitySettings, (kk => {
+      kk.payloadKind === tk.Nb.Msgpack && wk.some((Fk => function(kk, Fk) {
+        const Bk = Fk[0];
+        for (let Rk = kk.indexOf(Bk); - 1 !== Rk && Rk + Fk.length <= kk.length; Rk = kk.indexOf(Bk, Rk + 1)) {
+          let Bk = 1;
+          for (; Bk < Fk.length && kk[Rk + Bk] === Fk[Bk];) Bk++;
+          if (Bk === Fk.length) return !0
         }
         return !1
-      }(uu.payload, Ru))) && function(uu) {
-        if (null === uu || "object" !== typeof uu || null === uu.settings || "object" !== typeof uu.settings) return;
-        const Ru = String(uu.eId),
-          yu = uu.settings;
-        let Eu = Xu.get(Ru);
-        for (const Ku in yu) {
-          if (!Ju.has(Ku)) continue;
-          const uu = yu[Ku];
-          null === uu || void 0 === uu ? Eu && delete Eu[Ku] : (Eu ??= {}, Eu[Ku] = uu)
+      }(kk.payload, Fk))) && function(kk) {
+        if (null === kk || "object" !== typeof kk || null === kk.settings || "object" !== typeof kk.settings) return;
+        const Fk = String(kk.eId),
+          Bk = kk.settings;
+        let Rk = dk.get(Fk);
+        for (const tk in Bk) {
+          if (!bk.has(tk)) continue;
+          const kk = Bk[tk];
+          null === kk || void 0 === kk ? Rk && delete Rk[tk] : (Rk ??= {}, Rk[tk] = kk)
         }
-        Eu && Xu.set(Ru, Eu)
-      }((0, Qu.e)(uu.payload))
-    })), (0, mu.g)((() => {
-      Xu.clear()
+        Rk && dk.set(Fk, Rk)
+      }((0, ak.e)(kk.payload))
+    })), (0, Xk.d)((() => {
+      dk.clear()
     }))
   },
-  40274: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => xu,
-      g: () => Xu,
-      i: () => ru
+  40107: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Ak,
+      g: () => dk,
+      i: () => Vk
     });
-    var Eu = yu(38760),
-      Ku = yu(1862),
-      Qu = yu(1253),
-      mu = yu(40197),
-      Ju = yu(40199),
-      Nu = yu(40217);
-    const Xu = new Eu.d;
-    let Vu = {};
+    var Rk = Bk(38668),
+      tk = Bk(1849),
+      ak = Bk(1241),
+      Xk = Bk(40037),
+      bk = Bk(40043),
+      wk = Bk(40063);
+    const dk = new Rk.e;
+    let sk = {};
 
-    function ru(uu) {
-      return Vu[uu]
+    function Vk(kk) {
+      return sk[kk]
     }
-    const Bu = new Qu.d;
+    const Jk = new ak.c;
 
-    function xu(uu) {
-      return Bu.add(uu)
+    function Ak(kk) {
+      return Jk.add(kk)
     }
 
-    function Su(uu) {
-      Bu.callEach(uu, "a roster listener")
-    }(0, Nu.m)(mu.cb, (uu => {
-      const Ru = (0, Ju.f)(mu.cb, uu);
-      if (void 0 === Ru) return;
-      const yu = Ru.SE.some((uu => {
+    function ek(kk) {
+      Jk.callEach(kk, "a roster listener")
+    }(0, wk.k)(Xk.eb, (kk => {
+      const Fk = (0, bk.f)(Xk.eb, kk);
+      if (void 0 === Fk) return;
+      const Bk = Fk.wR.some((kk => {
           let {
-            pE: Ru,
-            TE: yu
-          } = uu;
-          return null !== yu && Xu.has(Ru) && Xu.getName(Ru) !== yu
+            dR: Fk,
+            sR: Bk
+          } = kk;
+          return null !== Bk && dk.has(Fk) && dk.getName(Fk) !== Bk
         })),
         {
-          added: Eu,
-          removed: Qu,
-          settingChanges: Nu
-        } = Xu.apply(Ru),
-        Vu = new Set;
-      for (const Ku of Nu)
-        for (const uu in Ku.settings) Vu.add(uu);
-      const ru = yu || Eu.length > 0 || Qu.length > 0;
-      (ru || Vu.has("hideNameSeed")) && function() {
-        const uu = new Map;
-        for (const Ru of Xu.ids()) {
-          const yu = Xu.getName(Ru),
-            Eu = Xu.getSetting(Ru, "hideNameSeed");
-          void 0 !== yu && void 0 !== Eu && null !== Eu && uu.set(yu, Eu)
+          added: Rk,
+          removed: ak,
+          settingChanges: wk
+        } = dk.apply(Fk),
+        sk = new Set;
+      for (const tk of wk)
+        for (const kk in tk.settings) sk.add(kk);
+      const Vk = Bk || Rk.length > 0 || ak.length > 0;
+      (Vk || sk.has("hideNameSeed")) && function() {
+        const kk = new Map;
+        for (const Fk of dk.ids()) {
+          const Bk = dk.getName(Fk),
+            Rk = dk.getSetting(Fk, "hideNameSeed");
+          void 0 !== Bk && void 0 !== Rk && null !== Rk && kk.set(Bk, Rk)
         }
-        Ku.d.replaceAll(uu)
-      }(), Su({
+        tk.b.replaceAll(kk)
+      }(), ek({
         kind: "roster",
-        members: ru,
-        settings: Vu
+        members: Vk,
+        settings: sk
       })
-    })), (0, Nu.m)(mu.Q, (uu => {
-      const Ru = (0, Ju.f)(mu.Q, uu);
-      if (void 0 !== Ru) {
+    })), (0, wk.k)(Xk.P, (kk => {
+      const Fk = (0, bk.f)(Xk.P, kk);
+      if (void 0 !== Fk) {
         for (const {
-            hy: uu,
-            Py: yu,
-            iy: Eu
+            PB: kk,
+            hB: Bk,
+            qB: Rk
           }
-          of Ru) Vu[uu] = {
-          ...Vu[uu],
-          [yu]: Eu
+          of Fk) sk[kk] = {
+          ...sk[kk],
+          [Bk]: Rk
         };
-        Su({
+        ek({
           kind: "cosmetics",
-          updates: Ru
+          updates: Fk
         })
       }
-    })), (0, Nu.g)((() => {
-      Xu.clear(), Vu = {}, Ku.d.clear(), Su({
+    })), (0, wk.d)((() => {
+      dk.clear(), sk = {}, tk.b.clear(), ek({
         kind: "reset"
       })
-    })), (0, Nu.i)((() => {
-      Xu.clear(), Su({
+    })), (0, wk.g)((() => {
+      dk.clear(), ek({
         kind: "reset"
       })
     }))
   },
-  40298: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Mu,
-      i: () => Tu,
-      m: () => nu,
-      o: () => su
+  40137: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Hk,
+      i: () => fk,
+      j: () => Uk,
+      l: () => ck
     });
-    var Eu = yu(1240),
-      Ku = yu(599),
-      Qu = yu(106),
-      mu = yu(4564),
-      Ju = yu(40160),
-      Nu = yu(40191),
-      Xu = yu(40173),
-      Vu = yu(40280),
-      ru = yu(40274),
-      Bu = yu(40199),
-      xu = yu(40217);
+    var Rk = Bk(1219),
+      tk = Bk(594),
+      ak = Bk(98),
+      Xk = Bk(4531),
+      bk = Bk(4e4),
+      wk = Bk(40029),
+      dk = Bk(40015),
+      sk = Bk(40114),
+      Vk = Bk(40107),
+      Jk = Bk(40043),
+      Ak = Bk(40063);
 
-    function Su(uu) {
+    function ek(kk) {
       let {
-        deadEId: Ru,
-        killerEId: yu,
-        killerLifeformType: Eu,
-        withItem: Ku,
-        killstreak: Qu
-      } = uu;
+        deadEId: Fk,
+        killerEId: Bk,
+        killerLifeformType: Rk,
+        withItem: tk,
+        killstreak: ak
+      } = kk;
       return {
-        killer: du({
-          eId: yu,
-          lifeformType: Eu
+        killer: ik({
+          eId: Bk,
+          lifeformType: Rk
         }),
-        victim: du({
-          eId: Ru
+        victim: ik({
+          eId: Fk
         }),
-        withItem: Ku,
-        killstreak: Qu
+        withItem: tk,
+        killstreak: ak
       }
     }
 
-    function pu(uu) {
+    function yk(kk) {
       let {
-        killer: Ru,
-        victim: yu,
-        withItem: Eu
-      } = uu;
+        killer: Fk,
+        victim: Bk,
+        withItem: Rk
+      } = kk;
       return {
-        killer: du(Ru),
-        victim: du(yu),
-        withItem: Eu,
+        killer: ik(Fk),
+        victim: ik(Bk),
+        withItem: Rk,
         killstreak: 0
       }
     }
 
-    function Tu(uu) {
-      eu && Du((() => "killed" === uu.kind ? Su(uu.body) : pu(uu.body)))
+    function fk(kk) {
+      Ek && Nk((() => "killed" === kk.kind ? ek(kk.body) : yk(kk.body)))
     }
-    const Wu = "#2727f1",
-      ju = "#912c2c";
+    const mk = "#2727f1",
+      Wk = "#912c2c";
 
-    function Hu(uu, Ru) {
-      var yu;
-      return ru.g.has(uu) ? null === (yu = ru.g.getSettings(uu)) || void 0 === yu ? void 0 : yu[Ru] : (0, Vu.e)(uu, Ru)
+    function vk(kk, Fk) {
+      var Bk;
+      return Vk.g.has(kk) ? null === (Bk = Vk.g.getSettings(kk)) || void 0 === Bk ? void 0 : Bk[Fk] : (0, sk.c)(kk, Fk)
     }
 
-    function du(uu) {
-      var Ru, yu, mu, Ju, Vu;
+    function ik(kk) {
+      var Fk, Bk, Xk, bk, sk;
       let {
-        eId: Bu,
-        name: xu,
-        colour: Su,
-        lifeformType: pu
-      } = uu;
-      if (void 0 === Bu || null === Bu || "" === Bu) {
-        const uu = xu || null;
+        eId: Jk,
+        name: Ak,
+        colour: ek,
+        lifeformType: yk
+      } = kk;
+      if (void 0 === Jk || null === Jk || "" === Jk) {
+        const kk = Ak || null;
         return {
           id: null,
-          shownName: uu,
-          lifeformType: null === uu && null !== pu && void 0 !== pu ? pu : null,
-          colour: Su || null,
+          shownName: kk,
+          lifeformType: null === kk && null !== yk && void 0 !== yk ? yk : null,
+          colour: ek || null,
           local: !1,
           realName: null
         }
       }
-      const Tu = String(Bu),
-        du = null === (Ru = (0, Xu.i)()) || void 0 === Ru ? void 0 : Ru.api,
-        bu = void 0 !== du && String(du.localId) === Tu,
-        Cu = null !== (yu = ru.g.getName(Tu)) && void 0 !== yu ? yu : null,
-        ku = null !== (mu = Hu(Tu, "hideNameSeed")) && void 0 !== mu ? mu : null;
-      let eu = null === Cu ? null : (0, Eu.e)(Cu, !Qu.featureFlags.canSeeRealPlayerNames, ku) || null,
-        Au = null;
-      if (null === eu && void 0 !== du) {
-        const uu = du.getEntityType(Tu);
-        "Player" !== uu && (eu = (0, Nu.e)(du, +Tu) || null), Au = Ku.l.includes(uu) ? uu : null
+      const fk = String(Jk),
+        ik = null === (Fk = (0, dk.g)()) || void 0 === Fk ? void 0 : Fk.api,
+        Yk = void 0 !== ik && String(ik.localId) === fk,
+        Lk = null !== (Bk = Vk.g.getName(fk)) && void 0 !== Bk ? Bk : null,
+        Ok = null !== (Xk = vk(fk, "hideNameSeed")) && void 0 !== Xk ? Xk : null;
+      let Ek = null === Lk ? null : (0, Rk.d)(Lk, !ak.featureFlags.canSeeRealPlayerNames, Ok) || null,
+        Sk = null;
+      if (null === Ek && void 0 !== ik) {
+        const kk = ik.getEntityType(fk);
+        "Player" !== kk && (Ek = (0, wk.e)(ik, +fk) || null), Sk = tk.i.includes(kk) ? kk : null
       }
       return {
-        id: Tu,
-        shownName: eu,
-        lifeformType: null === eu && null !== (Ju = null !== (Vu = Au) && void 0 !== Vu ? Vu : pu) && void 0 !== Ju ? Ju : null,
-        colour: Su || Hu(Tu, "killfeedColour") || (bu ? Wu : ju),
-        local: bu,
-        realName: Cu
+        id: fk,
+        shownName: Ek,
+        lifeformType: null === Ek && null !== (bk = null !== (sk = Sk) && void 0 !== sk ? sk : yk) && void 0 !== bk ? bk : null,
+        colour: ek || vk(fk, "killfeedColour") || (Yk ? mk : Wk),
+        local: Yk,
+        realName: Lk
       }
     }
-    const bu = 32;
-    let Cu = [],
-      ku = null,
-      eu = !1,
-      Au = !1;
+    const Yk = 32;
+    let Lk = [],
+      Ok = null,
+      Ek = !1,
+      Sk = !1;
 
-    function Du(uu) {
-      null === ku ? (Cu.length === bu && Cu.shift(), Cu.push(uu)) : ku(uu())
+    function Nk(kk) {
+      null === Ok ? (Lk.length === Yk && Lk.shift(), Lk.push(kk)) : Ok(kk())
     }
 
-    function Mu() {
-      Au || (Au = !0, (0, xu.m)(mu.$b.PlayerKilled, (uu => {
-        const Ru = (0, Bu.g)(uu);
-        (0, Bu.d)(Ru) && Du((() => Su(Ru)))
-      })), (0, xu.m)(mu.$b.CustomKillfeed, (uu => {
-        const Ru = (0, Bu.g)(uu);
-        (0, Bu.d)(Ru) && (0, Bu.d)(Ru.killer) && (0, Bu.d)(Ru.victim) && Du((() => pu(Ru)))
-      })), (0, xu.g)((() => {
-        Cu = []
+    function Hk() {
+      Sk || (Sk = !0, (0, Ak.k)(Xk.Tb.PlayerKilled, (kk => {
+        const Fk = (0, Jk.j)(kk);
+        (0, Jk.e)(Fk) && Nk((() => ek(Fk)))
+      })), (0, Ak.k)(Xk.Tb.CustomKillfeed, (kk => {
+        const Fk = (0, Jk.j)(kk);
+        (0, Jk.e)(Fk) && (0, Jk.e)(Fk.killer) && (0, Jk.e)(Fk.victim) && Nk((() => yk(Fk)))
+      })), (0, Ak.d)((() => {
+        Lk = []
       })))
     }
-    const Iu = Object.freeze([0, 0, 0]),
-      Gu = [0, 0, 0],
-      Uu = [0, 0, 0],
-      nu = {
+    const uk = Object.freeze([0, 0, 0]),
+      Mk = [0, 0, 0],
+      gk = [0, 0, 0],
+      Uk = {
         kill: {
-          watch(uu) {
-            if (eu = !0, 0 === Cu.length) return ku = uu, () => {
-              eu = !1, ku = null
+          watch(kk) {
+            if (Ek = !0, 0 === Lk.length) return Ok = kk, () => {
+              Ek = !1, Ok = null
             };
-            const Ru = setTimeout((() => {
-              const Ru = Cu;
-              Cu = [], ku = uu;
-              for (const Eu of Ru) try {
-                uu(Eu())
-              } catch (yu) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", yu)
+            const Fk = setTimeout((() => {
+              const Fk = Lk;
+              Lk = [], Ok = kk;
+              for (const Rk of Fk) try {
+                kk(Rk())
+              } catch (Bk) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", Bk)
               }
             }), 0);
             return () => {
-              clearTimeout(Ru), eu = !1, ku = null
+              clearTimeout(Fk), Ek = !1, Ok = null
             }
           }
         }
       },
-      su = {
+      ck = {
         localPos() {
-          const uu = (0, Xu.i)();
-          if (null === uu) return Iu;
-          const Ru = uu.api.apiView;
-          for (let yu = 0; yu < 3; yu++) Gu[yu] = Ju.v.localPos(Ru, 0, yu);
-          return Gu
+          const kk = (0, dk.g)();
+          if (null === kk) return uk;
+          const Fk = kk.api.apiView;
+          for (let Bk = 0; Bk < 3; Bk++) Mk[Bk] = bk.w.localPos(Fk, 0, Bk);
+          return Mk
         },
         targetedBlockPos() {
-          const uu = (0, Xu.i)();
-          if (null === uu || Ju.v.targetBlockId(uu.api.apiView, 0) === Ju.ad) return null;
-          for (let Ru = 0; Ru < 3; Ru++) Uu[Ru] = Ju.v.targetBlock(uu.api.apiView, 0, Ru);
-          return Uu
+          const kk = (0, dk.g)();
+          if (null === kk || bk.w.targetBlockId(kk.api.apiView, 0) === bk._c) return null;
+          for (let Fk = 0; Fk < 3; Fk++) gk[Fk] = bk.w.targetBlock(kk.api.apiView, 0, Fk);
+          return gk
         }
       }
   },
-  38760: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Eu
+  38668: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Rk
     });
-    class Eu {
+    class Rk {
       constructor() {
         this.members = new Map
       }
-      apply(uu) {
-        const Ru = {
+      apply(kk) {
+        const Fk = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const Eu of uu.SE) {
-          let uu = this.members.get(Eu.pE);
-          if (uu || (uu = {
+        for (const Rk of kk.wR) {
+          let kk = this.members.get(Rk.dR);
+          if (kk || (kk = {
               name: null,
               settings: {}
-            }, this.members.set(Eu.pE, uu), Ru.added.push(Eu.pE)), null !== Eu.TE && (uu.name = Eu.TE), null !== Eu.WE || Eu.jE.length > 0) {
-            const yu = null === Eu.WE ? {} : JSON.parse(Eu.WE);
-            Object.assign(uu.settings, yu);
-            for (const Ru of Eu.jE) delete uu.settings[Ru], yu[Ru] = void 0;
-            Ru.settingChanges.push({
-              playerId: Eu.pE,
-              settings: yu
+            }, this.members.set(Rk.dR, kk), Fk.added.push(Rk.dR)), null !== Rk.sR && (kk.name = Rk.sR), null !== Rk.VR || Rk.JR.length > 0) {
+            const Bk = null === Rk.VR ? {} : JSON.parse(Rk.VR);
+            Object.assign(kk.settings, Bk);
+            for (const Fk of Rk.JR) delete kk.settings[Fk], Bk[Fk] = void 0;
+            Fk.settingChanges.push({
+              playerId: Rk.dR,
+              settings: Bk
             })
           }
         }
-        for (const Eu of uu.HE) {
-          const uu = this.members.get(Eu);
-          var yu;
-          if (uu) this.members.delete(Eu), Ru.removed.push({
-            playerId: Eu,
-            name: null !== (yu = uu.name) && void 0 !== yu ? yu : void 0
+        for (const Rk of kk.AR) {
+          const kk = this.members.get(Rk);
+          var Bk;
+          if (kk) this.members.delete(Rk), Fk.removed.push({
+            playerId: Rk,
+            name: null !== (Bk = kk.name) && void 0 !== Bk ? Bk : void 0
           })
         }
-        return Ru
+        return Fk
       }
-      has(uu) {
-        return this.members.has(uu)
+      has(kk) {
+        return this.members.has(kk)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(uu) {
-        var Ru, yu;
-        return null !== (Ru = null === (yu = this.members.get(uu)) || void 0 === yu ? void 0 : yu.name) && void 0 !== Ru ? Ru : void 0
+      getName(kk) {
+        var Fk, Bk;
+        return null !== (Fk = null === (Bk = this.members.get(kk)) || void 0 === Bk ? void 0 : Bk.name) && void 0 !== Fk ? Fk : void 0
       }
-      getSettings(uu) {
-        var Ru;
-        return null === (Ru = this.members.get(uu)) || void 0 === Ru ? void 0 : Ru.settings
+      getSettings(kk) {
+        var Fk;
+        return null === (Fk = this.members.get(kk)) || void 0 === Fk ? void 0 : Fk.settings
       }
-      getSetting(uu, Ru) {
-        var yu;
-        return null === (yu = this.members.get(uu)) || void 0 === yu ? void 0 : yu.settings[Ru]
+      getSetting(kk, Fk) {
+        var Bk;
+        return null === (Bk = this.members.get(kk)) || void 0 === Bk ? void 0 : Bk.settings[Fk]
       }
       clear() {
         this.members.clear()
@@ -424,4 +424,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

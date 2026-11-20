@@ -1,26 +1,26 @@
 export const id = 15;
 export const ids = [15];
 export const modules = {
-  39135: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      default: () => Ku
+  38995: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      default: () => tk
     });
-    const Eu = [
+    const Rk = [
         [25, 8, 56],
         [25, 8, 54]
       ],
-      Ku = function(uu, Ru, yu) {
-        let Ku;
+      tk = function(kk, Fk, Bk) {
+        let tk;
         return {
-          onCreate: uu => {
-            Ku = uu
+          onCreate: kk => {
+            tk = kk
           },
-          onPlayerAltAction: (uu, Ru, yu, Qu, mu, Ju) => {
-            Eu.some((uu => uu[0] === Ru && uu[2] === Qu)) && Ku.openShop(uu, !1)
+          onPlayerAltAction: (kk, Fk, Bk, ak, Xk, bk) => {
+            Rk.some((kk => kk[0] === Fk && kk[2] === ak)) && tk.openShop(kk, !1)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,194 +1,194 @@
 export const id = 33;
 export const ids = [33];
 export const modules = {
-  8924: (uu, Ru, yu) => {
-    function Eu(uu, Ru) {
-      return 0 === uu.length ? 0 : uu[Math.min(uu.length - 1, Math.floor(Ru * uu.length))]
+  8878: (kk, Fk, Bk) => {
+    function Rk(kk, Fk) {
+      return 0 === kk.length ? 0 : kk[Math.min(kk.length - 1, Math.floor(Fk * kk.length))]
     }
-    yu.d(Ru, {
-      c: () => Eu
+    Bk.d(Fk, {
+      c: () => Rk
     })
   },
-  8921: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      FrameDebugLog: () => ju,
-      OUTLIER_BURST: () => ru,
-      OUTLIER_MS: () => Vu,
-      OUTLIER_REFILL_MS: () => Bu,
-      SUMMARY_MS: () => Xu,
-      startFrameDebug: () => du
+  8876: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      FrameDebugLog: () => Wk,
+      OUTLIER_BURST: () => Vk,
+      OUTLIER_MS: () => sk,
+      OUTLIER_REFILL_MS: () => Jk,
+      SUMMARY_MS: () => dk,
+      startFrameDebug: () => ik
     });
-    var Eu = yu(4564),
-      Ku = yu(8924),
-      Qu = yu(2707),
-      mu = yu(1069),
-      Ju = yu(2758);
-    class Nu {
+    var Rk = Bk(4531),
+      tk = Bk(8878),
+      ak = Bk(2711),
+      Xk = Bk(1058),
+      bk = Bk(2766);
+    class wk {
       constructor() {
-        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = uu => {
-          const Ru = uu;
-          this.add(Ru.startTime, Ru.duration, Ru.blockingDuration, (0, mu.p)(Ru))
-        }, this.onLongTask = uu => {
-          this.add(uu.startTime, uu.duration, 0, 0)
-        }, null !== (0, Ju.d)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, Ju.d)("longtask", this.onLongTask) ? "longtask" : null
+        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = kk => {
+          const Fk = kk;
+          this.add(Fk.startTime, Fk.duration, Fk.blockingDuration, (0, Xk.j)(Fk))
+        }, this.onLongTask = kk => {
+          this.add(kk.startTime, kk.duration, 0, 0)
+        }, null !== (0, bk.c)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, bk.c)("longtask", this.onLongTask) ? "longtask" : null
       }
-      add(uu, Ru, yu, Eu) {
-        this.entries.set([uu, Ru, yu, Eu], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
+      add(kk, Fk, Bk, Rk) {
+        this.entries.set([kk, Fk, Bk, Rk], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
       }
-      describe(uu, Ru) {
+      describe(kk, Fk) {
         if (null === this.kind) return "long tasks n/a";
-        let yu = 0,
-          Eu = 0,
-          Ku = 0,
-          Qu = 0;
-        for (let Ju = 0; Ju < this.size; Ju++) {
-          const mu = 4 * Ju,
-            Nu = this.entries[mu] + this.entries[mu + 1];
-          Nu > uu && Nu <= Ru + 2 && (yu++, Eu += this.entries[mu + 1], Ku += this.entries[mu + 2], Qu += this.entries[mu + 3])
+        let Bk = 0,
+          Rk = 0,
+          tk = 0,
+          ak = 0;
+        for (let bk = 0; bk < this.size; bk++) {
+          const Xk = 4 * bk,
+            wk = this.entries[Xk] + this.entries[Xk + 1];
+          wk > kk && wk <= Fk + 2 && (Bk++, Rk += this.entries[Xk + 1], tk += this.entries[Xk + 2], ak += this.entries[Xk + 3])
         }
-        const mu = "loaf" === this.kind && yu > 0 ? ` (blocking ${Ku.toFixed(0)}, script ${Qu.toFixed(0)})` : "";
-        return `${yu} ${this.kind} ${Eu.toFixed(0)} ms${mu}`
+        const Xk = "loaf" === this.kind && Bk > 0 ? ` (blocking ${tk.toFixed(0)}, script ${ak.toFixed(0)})` : "";
+        return `${Bk} ${this.kind} ${Rk.toFixed(0)} ms${Xk}`
       }
     }
-    const Xu = 2e4,
-      Vu = 250,
-      ru = 10,
-      Bu = 6e4,
-      xu = 8192;
+    const dk = 2e4,
+      sk = 250,
+      Vk = 10,
+      Jk = 6e4,
+      Ak = 8192;
 
-    function Su(uu) {
-      return uu.toFixed(1)
+    function ek(kk) {
+      return kk.toFixed(1)
     }
 
-    function pu(uu) {
-      return uu.mainMs = 0, uu.renderMs = 0, uu.ticks = 0, uu.tickMs = 0, uu.rafs = 0, uu.pendingBefore = -1, uu.pendingMax = -1, uu.pendingAfter = -1, uu.meshes = -1, uu
+    function yk(kk) {
+      return kk.mainMs = 0, kk.renderMs = 0, kk.ticks = 0, kk.tickMs = 0, kk.rafs = 0, kk.pendingBefore = -1, kk.pendingMax = -1, kk.pendingAfter = -1, kk.meshes = -1, kk
     }
 
-    function Tu() {
-      return pu({})
+    function fk() {
+      return yk({})
     }
-    class Wu {
+    class mk {
       constructor() {
-        this.intervals = new Float64Array(xu), this.totals = Tu(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = 0, this.shown = 0, this.dropped = 0
+        this.intervals = new Float64Array(Ak), this.totals = fk(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = 0, this.shown = 0, this.dropped = 0
       }
       reset() {
-        pu(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = 0, this.shown = 0, this.dropped = 0
+        yk(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = 0, this.shown = 0, this.dropped = 0
       }
     }
-    class ju {
+    class Wk {
       constructor() {
-        this.longTasks = new Nu, this.summary = new Wu, this.current = Tu(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.lastMeshes = -1, this.ahead = -1, this.tokens = ru, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.restart = () => {
+        this.longTasks = new wk, this.summary = new mk, this.current = fk(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.lastMeshes = -1, this.ahead = -1, this.tokens = Vk, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.restart = () => {
           this.lastDrawnStartMs = -1
         }, this.animationFrame = () => {
           this.current.rafs++
-        }, this.wasmFrame = (uu, Ru, yu, Ku, Qu, mu, Ju) => {
-          this.ahead = uu.headerWord(Eu.E.Pacing) & Eu.Q.AheadMask, this.frame(Ru, yu, Ku, Qu, uu.headerWord(Eu.E.RenderUs) / 1e3, uu.headerWord(Eu.E.TicksRun), mu, uu.headerWord(Eu.E.RenderPending), Ju)
-        }, this.jsFrame = (uu, Ru, yu) => {
-          this.frame(uu, Ru, !0, yu, Ru - uu, 0, 0, -1, -1)
-        }, this.jsTick = uu => {
-          this.current.mainMs += uu, this.current.ticks++, this.current.tickMs += uu
+        }, this.wasmFrame = (kk, Fk, Bk, tk, ak, Xk, bk) => {
+          this.ahead = kk.headerWord(Rk.z.Pacing) & Rk.H.AheadMask, this.frame(Fk, Bk, tk, ak, kk.headerWord(Rk.z.RenderUs) / 1e3, kk.headerWord(Rk.z.TicksRun), Xk, kk.headerWord(Rk.z.RenderPending), bk)
+        }, this.jsFrame = (kk, Fk, Bk) => {
+          this.frame(kk, Fk, !0, Bk, Fk - kk, 0, 0, -1, -1)
+        }, this.jsTick = kk => {
+          this.current.mainMs += kk, this.current.ticks++, this.current.tickMs += kk
         }, this.logOutliers = () => {
           this.outlierTimer = null;
-          const uu = performance.now();
-          let Ru = 0;
-          for (const yu of this.waiting) {
-            if (yu.dueMs > uu) {
-              this.waiting[Ru++] = yu;
+          const kk = performance.now();
+          let Fk = 0;
+          for (const Bk of this.waiting) {
+            if (Bk.dueMs > kk) {
+              this.waiting[Fk++] = Bk;
               continue
             }
-            const Eu = [`long frame ${Su(yu.intervalMs)} ms ending at ${Su(yu.endMs)} ms: main ${Su(yu.mainMs)} (render ${Su(yu.renderMs)}, ${yu.ticks} ticks ${Su(yu.tickMs)}), outside ${Su(yu.intervalMs-yu.mainMs)}`, `${yu.rafs} rafs`];
-            yu.pendingBefore >= 0 && Eu.push(`pending ${yu.pendingBefore} -> ${yu.pendingAfter} (max ${yu.pendingMax})`), yu.meshes >= 0 && Eu.push(`${yu.meshes} meshes landed`), Eu.push(this.longTasks.describe(yu.endMs - yu.intervalMs, yu.endMs)), (0, Qu.i)("frame", Eu.join("; "))
+            const Rk = [`long frame ${ek(Bk.intervalMs)} ms ending at ${ek(Bk.endMs)} ms: main ${ek(Bk.mainMs)} (render ${ek(Bk.renderMs)}, ${Bk.ticks} ticks ${ek(Bk.tickMs)}), outside ${ek(Bk.intervalMs-Bk.mainMs)}`, `${Bk.rafs} rafs`];
+            Bk.pendingBefore >= 0 && Rk.push(`pending ${Bk.pendingBefore} -> ${Bk.pendingAfter} (max ${Bk.pendingMax})`), Bk.meshes >= 0 && Rk.push(`${Bk.meshes} meshes landed`), Rk.push(this.longTasks.describe(Bk.endMs - Bk.intervalMs, Bk.endMs)), (0, ak.k)("frame", Rk.join("; "))
           }
-          this.waiting.length = Ru, Ru > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - uu))
+          this.waiting.length = Fk, Fk > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - kk))
         }, this.flush = () => {
-          const uu = this.summary,
-            Ru = uu.totals;
-          if (0 === uu.frames) return uu.undrawn > 0 && (0, Qu.i)("frame", `${Xu/1e3}s: no frames drawn, ${uu.undrawn} undrawn, pending max ${Ru.pendingMax}`), void uu.reset();
-          const yu = uu.intervals.subarray(0, Math.min(uu.frames, xu)).sort(),
-            Eu = [`${uu.frames} frames, median ${Su((0,Ku.c)(yu,.5))} p95 ${Su((0,Ku.c)(yu,.95))} max ${Su(uu.maxMs)} ms, ${uu.slow} over 50, ${uu.shown+uu.dropped} over ${Vu}`, `${Ru.rafs} rafs, ${uu.undrawn} undrawn`, `main ${Su(Ru.mainMs)} ms (render ${Su(Ru.renderMs)}, ${Ru.ticks} ticks ${Su(Ru.tickMs)})`];
-          Ru.pendingMax >= 0 && Eu.push(`pending max ${Ru.pendingMax}`), Ru.meshes >= 0 && Eu.push(`${Ru.meshes} meshes landed`), this.ahead >= 0 && Eu.push(`${this.ahead} frames ahead`), Eu.push(`outliers ${uu.shown} logged, ${uu.dropped} dropped`), (0, Qu.i)("frame", `${Xu/1e3}s: ${Eu.join("; ")}`), uu.reset()
-        }, setInterval(this.flush, Xu), document.addEventListener("visibilitychange", this.restart)
+          const kk = this.summary,
+            Fk = kk.totals;
+          if (0 === kk.frames) return kk.undrawn > 0 && (0, ak.k)("frame", `${dk/1e3}s: no frames drawn, ${kk.undrawn} undrawn, pending max ${Fk.pendingMax}`), void kk.reset();
+          const Bk = kk.intervals.subarray(0, Math.min(kk.frames, Ak)).sort(),
+            Rk = [`${kk.frames} frames, median ${ek((0,tk.c)(Bk,.5))} p95 ${ek((0,tk.c)(Bk,.95))} max ${ek(kk.maxMs)} ms, ${kk.slow} over 50, ${kk.shown+kk.dropped} over ${sk}`, `${Fk.rafs} rafs, ${kk.undrawn} undrawn`, `main ${ek(Fk.mainMs)} ms (render ${ek(Fk.renderMs)}, ${Fk.ticks} ticks ${ek(Fk.tickMs)})`];
+          Fk.pendingMax >= 0 && Rk.push(`pending max ${Fk.pendingMax}`), Fk.meshes >= 0 && Rk.push(`${Fk.meshes} meshes landed`), this.ahead >= 0 && Rk.push(`${this.ahead} frames ahead`), Rk.push(`outliers ${kk.shown} logged, ${kk.dropped} dropped`), (0, ak.k)("frame", `${dk/1e3}s: ${Rk.join("; ")}`), kk.reset()
+        }, setInterval(this.flush, dk), document.addEventListener("visibilitychange", this.restart)
       }
-      start(uu, Ru) {
-        var yu;
-        this.restart(), (0, Qu.i)("frame", `start: ${uu} client, ${Ru}, dpr ${window.devicePixelRatio}, long tasks ${null!==(yu=this.longTasks.kind)&&void 0!==yu?yu:"n/a"}; a summary each ${Xu/1e3} s in game, outliers over ${Vu} ms`)
+      start(kk, Fk) {
+        var Bk;
+        this.restart(), (0, ak.k)("frame", `start: ${kk} client, ${Fk}, dpr ${window.devicePixelRatio}, long tasks ${null!==(Bk=this.longTasks.kind)&&void 0!==Bk?Bk:"n/a"}; a summary each ${dk/1e3} s in game, outliers over ${sk} ms`)
       }
-      frame(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu) {
-        if (!Eu) return this.restart(), void(this.lastPending = Ju);
-        const Xu = this.current;
-        yu ? (this.lastDrawnStartMs >= 0 && (Xu.pendingAfter = this.lastPending, Xu.meshes = Nu < 0 ? -1 : Nu - this.lastMeshes, this.closeInterval(uu - this.lastDrawnStartMs, uu)), this.lastDrawnStartMs = uu, pu(Xu).pendingBefore = this.lastPending, this.lastMeshes = Nu) : this.lastDrawnStartMs >= 0 && this.summary.undrawn++, Xu.mainMs += Ru - uu, Xu.renderMs += Ku, Xu.ticks += Qu, Xu.tickMs += mu, Xu.pendingMax = Math.max(Xu.pendingMax, Ju), this.lastPending = Ju, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, Ju)
+      frame(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk) {
+        if (!Rk) return this.restart(), void(this.lastPending = bk);
+        const dk = this.current;
+        Bk ? (this.lastDrawnStartMs >= 0 && (dk.pendingAfter = this.lastPending, dk.meshes = wk < 0 ? -1 : wk - this.lastMeshes, this.closeInterval(kk - this.lastDrawnStartMs, kk)), this.lastDrawnStartMs = kk, yk(dk).pendingBefore = this.lastPending, this.lastMeshes = wk) : this.lastDrawnStartMs >= 0 && this.summary.undrawn++, dk.mainMs += Fk - kk, dk.renderMs += tk, dk.ticks += ak, dk.tickMs += Xk, dk.pendingMax = Math.max(dk.pendingMax, bk), this.lastPending = bk, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, bk)
       }
-      closeInterval(uu, Ru) {
-        const yu = this.summary,
-          Eu = this.current;
-        yu.frames < xu && (yu.intervals[yu.frames] = uu), yu.frames++, yu.maxMs = Math.max(yu.maxMs, uu);
-        const Ku = yu.totals;
-        Ku.mainMs += Eu.mainMs, Ku.renderMs += Eu.renderMs, Ku.ticks += Eu.ticks, Ku.tickMs += Eu.tickMs, Ku.rafs += Eu.rafs, Ku.meshes = Eu.meshes < 0 ? -1 : Math.max(0, Ku.meshes) + Eu.meshes, uu > 50 && yu.slow++, uu > Vu && this.outlier(uu, Ru)
+      closeInterval(kk, Fk) {
+        const Bk = this.summary,
+          Rk = this.current;
+        Bk.frames < Ak && (Bk.intervals[Bk.frames] = kk), Bk.frames++, Bk.maxMs = Math.max(Bk.maxMs, kk);
+        const tk = Bk.totals;
+        tk.mainMs += Rk.mainMs, tk.renderMs += Rk.renderMs, tk.ticks += Rk.ticks, tk.tickMs += Rk.tickMs, tk.rafs += Rk.rafs, tk.meshes = Rk.meshes < 0 ? -1 : Math.max(0, tk.meshes) + Rk.meshes, kk > 50 && Bk.slow++, kk > sk && this.outlier(kk, Fk)
       }
-      outlier(uu, Ru) {
-        const yu = Math.floor((Ru - this.lastRefillMs) / Bu);
-        yu > 0 && (this.tokens = Math.min(ru, this.tokens + yu), this.lastRefillMs += yu * Bu), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
+      outlier(kk, Fk) {
+        const Bk = Math.floor((Fk - this.lastRefillMs) / Jk);
+        Bk > 0 && (this.tokens = Math.min(Vk, this.tokens + Bk), this.lastRefillMs += Bk * Jk), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
           ...this.current,
-          endMs: Ru,
-          intervalMs: uu,
+          endMs: Fk,
+          intervalMs: kk,
           dueMs: performance.now() + 1e3
         }), this.outlierTimer ??= setTimeout(this.logOutliers, 1e3)) : this.summary.dropped++
       }
     }
-    let Hu = null;
+    let vk = null;
 
-    function du(uu, Ru) {
-      return Hu ??= new ju, Hu.start(uu, Ru), Hu
+    function ik(kk, Fk) {
+      return vk ??= new Wk, vk.start(kk, Fk), vk
     }
   },
-  4564: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      $: () => Du,
-      $b: () => Pu,
-      Ab: () => xu,
-      B: () => Eu,
-      Db: () => Cu,
-      E: () => Qu,
-      G: () => Su,
-      H: () => iu,
-      Hb: () => bu,
-      Ib: () => Uu,
-      L: () => Xu,
-      Lb: () => Lu,
-      N: () => pu,
-      Pb: () => su,
-      Q: () => Nu,
-      R: () => Bu,
-      Rb: () => lu,
-      S: () => ru,
-      Sb: () => gu,
-      Tb: () => Hu,
-      Vb: () => du,
-      W: () => ku,
-      X: () => Au,
-      Yb: () => Fu,
-      Zb: () => Ku,
-      c: () => hu,
-      db: () => eu,
-      g: () => Zu,
-      hb: () => Mu,
-      i: () => Vu,
-      j: () => ju,
-      lb: () => zu,
-      m: () => wu,
-      ob: () => cu,
-      p: () => Wu,
-      rb: () => tu,
-      s: () => Tu,
-      ub: () => Iu,
-      w: () => mu,
-      x: () => Ju,
-      xb: () => nu,
-      yb: () => Gu
+  4531: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      $: () => Hk,
+      A: () => ek,
+      Cb: () => zk,
+      D: () => Kk,
+      Db: () => ck,
+      F: () => dk,
+      Fb: () => Tk,
+      G: () => yk,
+      H: () => wk,
+      Jb: () => rk,
+      Kb: () => vk,
+      L: () => Jk,
+      Lb: () => ik,
+      N: () => Vk,
+      O: () => Ok,
+      Ob: () => hk,
+      R: () => Sk,
+      Rb: () => tk,
+      T: () => Nk,
+      Tb: () => pk,
+      X: () => Ek,
+      bb: () => Pk,
+      d: () => Zk,
+      fb: () => Dk,
+      g: () => Ck,
+      h: () => sk,
+      i: () => Wk,
+      j: () => qk,
+      jb: () => Gk,
+      kb: () => uk,
+      m: () => mk,
+      ob: () => Uk,
+      pb: () => Mk,
+      q: () => fk,
+      qb: () => Ak,
+      t: () => Xk,
+      tb: () => Lk,
+      u: () => bk,
+      vb: () => Yk,
+      y: () => Rk,
+      yb: () => gk,
+      z: () => ak
     });
-    const Eu = 32,
-      Ku = 33.333333333333336,
-      Qu = {
+    const Rk = 32,
+      tk = 33.333333333333336,
+      ak = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -222,18 +222,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      mu = {
+      Xk = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      Ju = {
+      bk = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      Nu = {
+      wk = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -241,20 +241,20 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      Xu = {
+      dk = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      Vu = {
+      sk = {
         Look: 0,
         Remesh: 1
       },
-      ru = 8,
-      Bu = 1,
-      xu = {
+      Vk = 8,
+      Jk = 1,
+      Ak = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -263,7 +263,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      Su = {
+      ek = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -291,12 +291,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      pu = {
+      yk = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      Tu = {
+      fk = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -348,7 +348,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      Wu = {
+      mk = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -358,10 +358,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      ju = 4,
-      Hu = 4,
-      du = 65535,
-      bu = {
+      Wk = 4,
+      vk = 4,
+      ik = 65535,
+      Yk = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -374,7 +374,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      Cu = {
+      Lk = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -382,12 +382,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      ku = 88,
-      eu = 0,
-      Au = 24,
-      Du = 48,
-      Mu = 80,
-      Iu = {
+      Ok = 88,
+      Ek = 0,
+      Sk = 24,
+      Nk = 48,
+      Hk = 80,
+      uk = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -398,18 +398,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      Gu = {
+      Mk = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      Uu = {
+      gk = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      nu = {
+      Uk = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -427,34 +427,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      su = {
+      ck = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      tu = 65535,
-      lu = {
+      Gk = 65535,
+      Tk = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      gu = {
+      rk = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      cu = 2,
-      Lu = {
+      Dk = 2,
+      zk = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      zu = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      Fu = {
+      Pk = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      hk = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -466,7 +466,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      wu = {
+      qk = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -493,7 +493,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      Zu = {
+      Ck = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -651,8 +651,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      hu = 8,
-      Pu = {
+      Zk = 8,
+      pk = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -677,8 +677,8 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      iu = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      Kk = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

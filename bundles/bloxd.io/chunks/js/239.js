@@ -1,80 +1,80 @@
 export const id = 239;
 export const ids = [239];
 export const modules = {
-  39361: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      playDocsSound: () => Ju
+  39218: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      playDocsSound: () => bk
     });
-    var Eu = yu(4630),
-      Ku = yu(36549),
-      Qu = yu(1176);
-    const mu = new Map;
+    var Rk = Bk(4575),
+      tk = Bk(36445),
+      ak = Bk(1154);
+    const Xk = new Map;
 
-    function Ju(uu, Ru, yu, Ju, Nu) {
-      let Xu, Vu = null,
-        ru = 0,
-        Bu = 0;
-      if (Ru) Xu = new Eu.Howl({
-        src: [`${Qu.clientSideServerUrls.staticUrl}/sounds/music/${uu}.mp3`],
+    function bk(kk, Fk, Bk, bk, wk) {
+      let dk, sk = null,
+        Vk = 0,
+        Jk = 0;
+      if (Fk) dk = new Rk.Howl({
+        src: [`${ak.clientSideServerUrls.staticUrl}/sounds/music/${kk}.mp3`],
         html5: !0,
-        volume: yu
+        volume: Bk
       });
       else {
-        var xu;
-        Vu = (0, Ku.j)(uu);
-        const Ru = (0, Ku.h)(Vu),
-          yu = null !== (xu = Ru.sprite[uu]) && void 0 !== xu ? xu : null;
-        if (!yu) throw new Error(`Docs sound ${uu} is not in sprite sheet ${Vu}`);
-        ru = yu[0] / 1e3, Bu = yu[1] / 1e3, Xu = mu.get(Vu), Xu || (Xu = new Eu.Howl({
-          ...Ru,
+        var Ak;
+        sk = (0, tk.g)(kk);
+        const Fk = (0, tk.e)(sk),
+          Bk = null !== (Ak = Fk.sprite[kk]) && void 0 !== Ak ? Ak : null;
+        if (!Bk) throw new Error(`Docs sound ${kk} is not in sprite sheet ${sk}`);
+        Vk = Bk[0] / 1e3, Jk = Bk[1] / 1e3, dk = Xk.get(sk), dk || (dk = new Rk.Howl({
+          ...Fk,
           volume: 1
-        }), mu.set(Vu, Xu))
+        }), Xk.set(sk, dk))
       }
-      const Su = Ru ? Xu.play() : Xu.play(uu);
-      Xu.volume(yu, Su), Ju > 0 && Xu.seek(ru + Ju, Su);
-      const pu = () => Ru ? Xu.duration() : Bu;
-      let Tu = !1;
-      const Wu = uu => {
-          Tu || (Tu = !0, Xu.off("play", ju, Su), Xu.off("end", Hu, Su), Xu.off("loaderror", bu), Xu.off("playerror", du, Su), Ru && Xu.unload(), Nu.onEnd(uu))
+      const ek = Fk ? dk.play() : dk.play(kk);
+      dk.volume(Bk, ek), bk > 0 && dk.seek(Vk + bk, ek);
+      const yk = () => Fk ? dk.duration() : Jk;
+      let fk = !1;
+      const mk = kk => {
+          fk || (fk = !0, dk.off("play", Wk, ek), dk.off("end", vk, ek), dk.off("loaderror", Yk), dk.off("playerror", ik, ek), Fk && dk.unload(), wk.onEnd(kk))
         },
-        ju = () => {
-          Nu.onPlay(pu())
+        Wk = () => {
+          wk.onPlay(yk())
         },
-        Hu = () => {
-          Wu(!1)
+        vk = () => {
+          mk(!1)
         },
-        du = (Ru, yu) => {
-          console.error(`Could not play docs sound ${uu}`, yu), Wu(!0)
+        ik = (Fk, Bk) => {
+          console.error(`Could not play docs sound ${kk}`, Bk), mk(!0)
         },
-        bu = (uu, Ru) => {
-          null !== Vu && mu.get(Vu) === Xu && (mu.delete(Vu), Xu.unload()), du(uu, Ru)
+        Yk = (kk, Fk) => {
+          null !== sk && Xk.get(sk) === dk && (Xk.delete(sk), dk.unload()), ik(kk, Fk)
         };
-      return Xu.on("play", ju, Su), Xu.once("end", Hu, Su), Xu.once("loaderror", bu), Xu.once("playerror", du, Su), {
+      return dk.on("play", Wk, ek), dk.once("end", vk, ek), dk.once("loaderror", Yk), dk.once("playerror", ik, ek), {
         pause: () => {
-          Xu.pause(Su)
+          dk.pause(ek)
         },
         resume: () => {
-          Xu.play(Su)
+          dk.play(ek)
         },
-        seek: uu => {
-          const Ru = pu(),
-            yu = Math.max(uu, 0);
-          Xu.seek(ru + (Ru > 0 ? Math.min(yu, Ru) : yu), Su)
+        seek: kk => {
+          const Fk = yk(),
+            Bk = Math.max(kk, 0);
+          dk.seek(Vk + (Fk > 0 ? Math.min(Bk, Fk) : Bk), ek)
         },
-        mH: () => {
-          const uu = Xu.seek(Su);
-          return "number" === typeof uu ? Math.max(0, uu - ru) : 0
+        rW: () => {
+          const kk = dk.seek(ek);
+          return "number" === typeof kk ? Math.max(0, kk - Vk) : 0
         },
-        getDuration: pu,
-        setVolume: uu => {
-          Xu.volume(uu, Su)
+        getDuration: yk,
+        setVolume: kk => {
+          dk.volume(kk, ek)
         },
         stop: () => {
-          Tu || (Xu.stop(Su), Wu(!1))
+          fk || (dk.stop(ek), mk(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

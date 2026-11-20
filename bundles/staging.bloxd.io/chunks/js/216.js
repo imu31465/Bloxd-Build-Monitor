@@ -1,319 +1,319 @@
 export const id = 216;
 export const ids = [216];
 export const modules = {
-  39346: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Eu,
-      e: () => Ku
+  39203: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Rk,
+      e: () => tk
     });
-    const Eu = "The world isn't loaded, so no blocks can be seen.",
-      Ku = "The world isn't loaded, so nothing in it can be seen."
+    const Rk = "The world isn't loaded, so no blocks can be seen.",
+      tk = "The world isn't loaded, so nothing in it can be seen."
   },
-  36584: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Qu,
-      i: () => Ku
+  36480: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => ak,
+      g: () => tk
     });
-    let Eu = () => null;
+    let Rk = () => null;
 
-    function Ku(uu) {
-      Eu = uu
+    function tk(kk) {
+      Rk = kk
     }
 
-    function Qu(uu, Ru) {
-      return Eu(uu, Ru)
+    function ak(kk, Fk) {
+      return Rk(kk, Fk)
     }
   },
-  40185: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => pu,
-      h: () => Hu,
-      k: () => ju,
-      l: () => Tu
+  40023: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => yk,
+      f: () => vk,
+      g: () => Wk,
+      j: () => fk
     });
-    var Eu = yu(34),
-      Ku = yu(40191),
-      Qu = yu(40173),
-      mu = yu(40197),
-      Ju = yu(40177),
-      Nu = yu(40199),
-      Xu = yu(40217);
+    var Rk = Bk(29),
+      tk = Bk(40029),
+      ak = Bk(40015),
+      Xk = Bk(40037),
+      bk = Bk(40021),
+      wk = Bk(40043),
+      dk = Bk(40063);
 
-    function Vu(uu) {
-      var Ru, yu;
-      const Eu = (0, Qu.i)();
-      return Eu ? null === (Ru = (0, Ku.b)(Eu.api, uu[0], uu[1], uu[2])) || void 0 === Ru || null === (yu = Ru.persisted) || void 0 === yu ? void 0 : yu.shared : void 0
+    function sk(kk) {
+      var Fk, Bk;
+      const Rk = (0, ak.g)();
+      return Rk ? null === (Fk = (0, tk.c)(Rk.api, kk[0], kk[1], kk[2])) || void 0 === Fk || null === (Bk = Fk.persisted) || void 0 === Bk ? void 0 : Bk.shared : void 0
     }
 
-    function ru(uu) {
-      return `${uu[0]},${uu[1]},${uu[2]}`
+    function Vk(kk) {
+      return `${kk[0]},${kk[1]},${kk[2]}`
     }
-    const Bu = new Map;
-    let xu = null,
-      Su = 0;
+    const Jk = new Map;
+    let Ak = null,
+      ek = 0;
 
-    function pu() {
-      return Su
+    function yk() {
+      return ek
     }
 
-    function Tu(uu) {
-      const Ru = null !== xu && xu.key === ru(uu.pos) ? xu.type : null;
-      if (null === Ru) return uu;
-      let yu = null;
-      if ("Iron" === Ru) {
+    function fk(kk) {
+      const Fk = null !== Ak && Ak.key === Vk(kk.pos) ? Ak.type : null;
+      if (null === Fk) return kk;
+      let Bk = null;
+      if ("Iron" === Fk) {
         const {
-          cachedPasskey: Ru,
-          ...Eu
-        } = Wu(uu.pos);
-        yu = {
-          SX: null !== Ru && void 0 !== Ru ? Ru : [0, 0, 0, 0],
-          ...Eu
+          cachedPasskey: Fk,
+          ...Rk
+        } = mk(kk.pos);
+        Bk = {
+          Gd: null !== Fk && void 0 !== Fk ? Fk : [0, 0, 0, 0],
+          ...Rk
         }
       }
       return {
-        ...uu,
-        type: Ru,
-        ironChest: yu
+        ...kk,
+        type: Fk,
+        ironChest: Bk
       }
     }
 
-    function Wu(uu) {
-      const Ru = Vu(uu),
-        yu = null === Ru || void 0 === Ru ? void 0 : Ru.ownerDbId,
-        Eu = function(uu) {
-          var Ru;
-          let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Vu(uu);
-          const Eu = ru(uu),
-            Ku = Bu.get(Eu);
-          return Ku ? Ku.lastOpened < (null !== (Ru = null === yu || void 0 === yu ? void 0 : yu.passkeyLastUpdated) && void 0 !== Ru ? Ru : 0) ? (Bu.delete(Eu), null) : [...Ku.SX] : null
-        }(uu, Ru);
-      return void 0 === yu ? {
-        cachedPasskey: Eu
+    function mk(kk) {
+      const Fk = sk(kk),
+        Bk = null === Fk || void 0 === Fk ? void 0 : Fk.ownerDbId,
+        Rk = function(kk) {
+          var Fk;
+          let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : sk(kk);
+          const Rk = Vk(kk),
+            tk = Jk.get(Rk);
+          return tk ? tk.lastOpened < (null !== (Fk = null === Bk || void 0 === Bk ? void 0 : Bk.passkeyLastUpdated) && void 0 !== Fk ? Fk : 0) ? (Jk.delete(Rk), null) : [...tk.Gd] : null
+        }(kk, Fk);
+      return void 0 === Bk ? {
+        cachedPasskey: Rk
       } : {
-        ownerDbId: yu,
-        cachedPasskey: Eu
+        ownerDbId: Bk,
+        cachedPasskey: Rk
       }
-    }(0, Xu.m)(mu.d, (uu => {
-      const Ru = (0, Nu.f)(mu.d, uu);
-      if (!(0, Nu.d)(Ru) || Ru.wQ) return;
-      if (Su++, !Ru.gQ || null === Ru.zQ) return void(xu = null);
-      const yu = ru(Ru.zQ);
-      xu = {
-        key: yu,
-        type: Ru.LQ
-      }, null !== Ru.FQ && Bu.set(yu, {
-        SX: [...Ru.FQ],
+    }(0, dk.k)(Xk.b, (kk => {
+      const Fk = (0, wk.f)(Xk.b, kk);
+      if (!(0, wk.e)(Fk) || Fk.la) return;
+      if (ek++, !Fk.Ca || null === Fk.xa) return void(Ak = null);
+      const Bk = Vk(Fk.xa);
+      Ak = {
+        key: Bk,
+        type: Fk.Ka
+      }, null !== Fk.ja && Jk.set(Bk, {
+        Gd: [...Fk.ja],
         lastOpened: Date.now()
       })
-    })), (0, Xu.g)((() => {
-      Bu.clear(), xu = null, Su++
-    })), (0, Xu.i)((() => {
-      null !== xu && (xu = null, Su++, Eu.k.Op("chestToggleFromServer", !1, !0))
+    })), (0, dk.d)((() => {
+      Jk.clear(), Ak = null, ek++
+    })), (0, dk.g)((() => {
+      null !== Ak && (Ak = null, ek++, Rk.o.Hf("chestToggleFromServer", !1, !0))
     }));
-    const ju = {
+    const Wk = {
         boardEditRequested: {
-          watch: uu => (0, Eu.n)("EditBoard", (Ru => {
+          watch: kk => (0, Rk.p)("EditBoard", (Fk => {
             let {
-              pos: yu
-            } = Ru;
-            if (null === yu) return void uu(null);
-            const Eu = (0, Qu.i)(),
-              Ku = (0, Qu.v)();
-            Eu && Ku && uu(Ku.readBoardToEdit(Eu.api, Eu.chunks, yu))
+              pos: Bk
+            } = Fk;
+            if (null === Bk) return void kk(null);
+            const Rk = (0, ak.g)(),
+              tk = (0, ak.n)();
+            Rk && tk && kk(tk.readBoardToEdit(Rk.api, Rk.chunks, Bk))
           }))
         },
         ironChestOpenRequested: {
-          watch: uu => (0, Eu.n)("OpenIronChest", (Ru => {
+          watch: kk => (0, Rk.p)("OpenIronChest", (Fk => {
             let {
-              pos: yu
-            } = Ru;
-            uu(function(uu) {
+              pos: Bk
+            } = Fk;
+            kk(function(kk) {
               return {
-                pos: uu,
-                ...Wu(uu)
+                pos: kk,
+                ...mk(kk)
               }
-            }(yu))
+            }(Bk))
           }))
         }
       },
-      Hu = {
-        writeOnBoard(uu) {
-          var Ru;
+      vk = {
+        writeOnBoard(kk) {
+          var Fk;
           let {
-            pos: yu,
-            text: Eu,
-            textSize: Ku
-          } = uu;
-          null === (Ru = (0, Qu.i)()) || void 0 === Ru || Ru.send(Ju.d.UpdateBoard, (0, Ju.T)({
-            Nm: yu,
-            Xm: Eu,
-            Vm: Ku
+            pos: Bk,
+            text: Rk,
+            textSize: tk
+          } = kk;
+          null === (Fk = (0, ak.g)()) || void 0 === Fk || Fk.send(bk.b.UpdateBoard, (0, bk.S)({
+            yX: Bk,
+            fX: Rk,
+            mX: tk
           }))
         },
-        writeBook(uu) {
-          var Ru;
+        writeBook(kk) {
+          var Fk;
           let {
-            pages: yu,
-            title: Eu,
-            published: Ku
-          } = uu;
-          null === (Ru = (0, Qu.i)()) || void 0 === Ru || Ru.send(Ju.d.UpdateBook, (0, Ju.U)({
-            SJ: yu,
-            pJ: Eu,
-            TJ: Ku
+            pages: Bk,
+            title: Rk,
+            published: tk
+          } = kk;
+          null === (Fk = (0, ak.g)()) || void 0 === Fk || Fk.send(bk.b.UpdateBook, (0, bk.T)({
+            Ob: Bk,
+            Eb: Rk,
+            Sb: tk
           }))
         },
-        writeNameTag(uu) {
-          var Ru;
-          null === (Ru = (0, Qu.i)()) || void 0 === Ru || Ru.send(Ju.d.UpdateNameTag, uu)
+        writeNameTag(kk) {
+          var Fk;
+          null === (Fk = (0, ak.g)()) || void 0 === Fk || Fk.send(bk.b.UpdateNameTag, kk)
         },
-        setCustomLobbyBlock(uu) {
+        setCustomLobbyBlock(kk) {
           let {
-            pos: Ru,
-            blockName: yu
-          } = uu;
-          const Eu = (0, Qu.v)(),
-            Ku = (0, Qu.i)();
-          Eu && Ku && Ku.send(Ju.d.SetCustomLobbyBlock, (0, Ju.E)({
-            yV: Eu.blockIdOf(yu),
-            RV: Ru
+            pos: Fk,
+            blockName: Bk
+          } = kk;
+          const Rk = (0, ak.n)(),
+            tk = (0, ak.g)();
+          Rk && tk && tk.send(bk.b.SetCustomLobbyBlock, (0, bk.G)({
+            Ts: Rk.blockIdOf(Bk),
+            Gs: Fk
           }))
         }
       }
   },
-  40235: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Nu,
-      h: () => mu,
-      l: () => Ju
+  40073: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => wk,
+      e: () => Xk,
+      f: () => bk
     });
-    var Eu = yu(40160),
-      Ku = yu(4549),
-      Qu = yu(40173);
+    var Rk = Bk(4e4),
+      tk = Bk(4511),
+      ak = Bk(40015);
 
-    function mu() {
-      var uu;
-      const Ru = null === (uu = (0, Qu.i)()) || void 0 === uu ? void 0 : uu.api.localId;
-      return void 0 === Ru || Ru === Eu.Zc ? null : String(Ru)
+    function Xk() {
+      var kk;
+      const Fk = null === (kk = (0, ak.g)()) || void 0 === kk ? void 0 : kk.api.localId;
+      return void 0 === Fk || Fk === Rk.Yc ? null : String(Fk)
     }
 
-    function Ju(uu) {
-      const Ru = (0, Qu.i)();
-      if (null !== Ru) return uu(Ru);
-      let yu = null;
-      const Eu = (0, Ku.v)((() => {
-        const Ru = (0, Qu.i)();
-        null !== Ru && null === yu && (Eu(), yu = uu(Ru))
+    function bk(kk) {
+      const Fk = (0, ak.g)();
+      if (null !== Fk) return kk(Fk);
+      let Bk = null;
+      const Rk = (0, tk.t)((() => {
+        const Fk = (0, ak.g)();
+        null !== Fk && null === Bk && (Rk(), Bk = kk(Fk))
       }));
       return () => {
-        var uu;
-        Eu(), null === (uu = yu) || void 0 === uu || uu()
+        var kk;
+        Rk(), null === (kk = Bk) || void 0 === kk || kk()
       }
     }
 
-    function Nu(uu, Ru, yu) {
+    function wk(kk, Fk, Bk) {
       return {
         current: () => {
-          const yu = (0, Qu.i)();
-          return null === yu ? Ru : uu(yu)()
+          const Bk = (0, ak.g)();
+          return null === Bk ? Fk : kk(Bk)()
         },
-        watch: Ru => Ju((Eu => {
-          const Ku = uu(Eu);
-          let Qu = Ku();
-          return Ru(Qu), yu((() => {
-            const uu = Ku();
-            uu !== Qu && (Qu = uu, Ru(uu))
+        watch: Fk => bk((Rk => {
+          const tk = kk(Rk);
+          let ak = tk();
+          return Fk(ak), Bk((() => {
+            const kk = tk();
+            kk !== ak && (ak = kk, Fk(kk))
           }))
         }))
       }
     }
   },
-  40232: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Xu
+  40070: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => dk
     });
-    var Eu = yu(40173),
-      Ku = yu(40235),
-      Qu = yu(40241);
+    var Rk = Bk(40015),
+      tk = Bk(40073),
+      ak = Bk(40077);
 
-    function mu() {
-      var uu, Ru;
-      return null !== (uu = null === (Ru = (0, Eu.i)()) || void 0 === Ru ? void 0 : Ru.itemBridgeSources) && void 0 !== uu ? uu : Qu.b
+    function Xk() {
+      var kk, Fk;
+      return null !== (kk = null === (Fk = (0, Rk.g)()) || void 0 === Fk ? void 0 : Fk.itemBridgeSources) && void 0 !== kk ? kk : ak.d
     }
 
-    function Ju(uu) {
+    function bk(kk) {
       return {
-        current: () => mu().states[uu].current(),
-        watch: Ru => (0, Ku.l)((yu => {
-          const Eu = yu.itemBridgeSources.states[uu];
-          return Ru(Eu.current()), Eu.watch(Ru)
+        current: () => Xk().states[kk].current(),
+        watch: Fk => (0, tk.f)((Bk => {
+          const Rk = Bk.itemBridgeSources.states[kk];
+          return Fk(Rk.current()), Rk.watch(Fk)
         }))
       }
     }
 
-    function Nu(uu) {
+    function wk(kk) {
       return {
-        watch: Ru => (0, Ku.l)((yu => yu.itemBridgeSources.events[uu].watch(Ru)))
+        watch: Fk => (0, tk.f)((Bk => Bk.itemBridgeSources.events[kk].watch(Fk)))
       }
     }
-    const Xu = {
+    const dk = {
       states: {
-        inventory: Ju("inventory"),
-        hotbar: Ju("hotbar"),
-        crafting: Ju("crafting"),
-        heldItemAim: Ju("heldItemAim")
+        inventory: bk("inventory"),
+        hotbar: bk("hotbar"),
+        crafting: bk("crafting"),
+        heldItemAim: bk("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: Nu("hotbarSlotRequested"),
-        hotbarScrolled: Nu("hotbarScrolled"),
-        numberKeyPressed: Nu("numberKeyPressed"),
-        inventoryDropRequested: Nu("inventoryDropRequested"),
-        chestToggled: Nu("chestToggled"),
-        chestRefreshed: Nu("chestRefreshed"),
-        inventorySynced: Nu("inventorySynced"),
-        enchantingTableOpened: Nu("enchantingTableOpened")
+        hotbarSlotRequested: wk("hotbarSlotRequested"),
+        hotbarScrolled: wk("hotbarScrolled"),
+        numberKeyPressed: wk("numberKeyPressed"),
+        inventoryDropRequested: wk("inventoryDropRequested"),
+        chestToggled: wk("chestToggled"),
+        chestRefreshed: wk("chestRefreshed"),
+        inventorySynced: wk("inventorySynced"),
+        enchantingTableOpened: wk("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: uu => mu().commands.selectHotbarSlot(uu),
-        removeInventoryItem: uu => mu().commands.removeInventoryItem(uu),
-        swapInventorySlots: uu => mu().commands.swapInventorySlots(uu),
-        moveInventoryItem: uu => mu().commands.moveInventoryItem(uu),
-        quickMoveInventoryItem: uu => mu().commands.quickMoveInventoryItem(uu),
-        closeChest: uu => mu().commands.closeChest(uu),
-        focusCrafting: uu => mu().commands.focusCrafting(uu),
-        craftRecipe: uu => mu().commands.craftRecipe(uu),
-        salvageItem: uu => mu().commands.salvageItem(uu),
-        enchantItem: uu => mu().commands.enchantItem(uu)
+        selectHotbarSlot: kk => Xk().commands.selectHotbarSlot(kk),
+        removeInventoryItem: kk => Xk().commands.removeInventoryItem(kk),
+        swapInventorySlots: kk => Xk().commands.swapInventorySlots(kk),
+        moveInventoryItem: kk => Xk().commands.moveInventoryItem(kk),
+        quickMoveInventoryItem: kk => Xk().commands.quickMoveInventoryItem(kk),
+        closeChest: kk => Xk().commands.closeChest(kk),
+        focusCrafting: kk => Xk().commands.focusCrafting(kk),
+        craftRecipe: kk => Xk().commands.craftRecipe(kk),
+        salvageItem: kk => Xk().commands.salvageItem(kk),
+        enchantItem: kk => Xk().commands.enchantItem(kk)
       },
       queries: {
-        enchantingOffer: uu => mu().queries.enchantingOffer(uu)
+        enchantingOffer: kk => Xk().queries.enchantingOffer(kk)
       }
     }
   },
-  40241: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Ju
+  40077: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => bk
     });
-    var Eu = yu(39346);
+    var Rk = Bk(39203);
 
-    function Ku(uu) {
+    function tk(kk) {
       return {
-        current: () => uu,
+        current: () => kk,
         watch: () => () => {}
       }
     }
 
-    function Qu() {}
-    const mu = Object.freeze([0, 0, 0]),
-      Ju = {
+    function ak() {}
+    const Xk = Object.freeze([0, 0, 0]),
+      bk = {
         states: {
-          health: Ku({
+          health: tk({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: Ku({
+          inventory: tk({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -321,63 +321,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: Ku({
+          hotbar: tk({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: Ku({
+          stationItems: tk({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: Ku({}),
-          creativeVisibility: Ku({
+          itemInfo: tk({}),
+          creativeVisibility: tk({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: Ku(null),
-          heldItemAim: Ku({
+          aura: tk(null),
+          heldItemAim: tk({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: Ku(!1),
-          gliderBoostFuel: Ku(0),
-          flight: Ku({
+          crouching: tk(!1),
+          gliderBoostFuel: tk(0),
+          flight: tk({
             canFly: !1,
             flying: !1
           }),
-          crafting: Ku({
+          crafting: tk({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: Ku({
+          players: tk({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: Ku({}),
-          fullInventory: Ku(!1),
-          crosshairTarget: Ku({
+          lobbyLeaderboardRows: tk({}),
+          fullInventory: tk(!1),
+          crosshairTarget: tk({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: Ku(!0),
-          freeCamera: Ku({
+          localPlayerAlive: tk(!0),
+          freeCamera: tk({
             allowed: !1,
             movesFly: !1
           }),
-          replay: Ku(null),
-          replayEdits: Ku(null),
-          replayRecorder: Ku({
+          replay: tk(null),
+          replayEdits: tk(null),
+          replayRecorder: tk({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: Ku(!1)
+          replayVideoExporting: tk(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -439,86 +439,86 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: Qu,
+          selectHotbarSlot: ak,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: Qu,
-          setInventoryOpen: Qu,
-          changeIronChestPasskey: Qu,
-          dragReplayCamera: Qu,
-          applyTemporaryThirdPerson: Qu,
-          holdEmoteWheel: Qu,
-          recordFlyingMiddleText: Qu,
-          focusCrafting: Qu,
+          closeChest: ak,
+          setInventoryOpen: ak,
+          changeIronChestPasskey: ak,
+          dragReplayCamera: ak,
+          applyTemporaryThirdPerson: ak,
+          holdEmoteWheel: ak,
+          recordFlyingMiddleText: ak,
+          focusCrafting: ak,
           craftRecipe: () => ({
-            QV: 0,
-            nV: null,
+            Ps: 0,
+            fV: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: Qu,
-          setShopOpen: Qu,
-          buyShopItem: Qu,
-          sendChatMessage: Qu,
-          ignorePlayer: Qu,
-          reportPlayer: Qu,
-          reportWorldCodeChat: Qu,
-          requestDiscordReportKey: Qu,
-          reportLobbyOrGame: Qu,
-          playEmote: Qu,
-          updateMyCosmetic: Qu,
-          writeOnBoard: Qu,
-          writeBook: Qu,
-          writeNameTag: Qu,
-          setCustomLobbyBlock: Qu,
-          openIronChest: Qu,
-          sendCodeCollab: Qu,
-          clickCodeBlock: Qu,
-          bindCustomButtonKeys: Qu,
-          pressCustomButton: Qu,
-          moveReplayFreecam: Qu,
-          holdReplayFreecamVertical: Qu,
-          respawn: Qu,
-          wakeUp: Qu,
-          requestLeaderboard: Qu,
-          completeTask: Qu,
-          setServerCookie: Qu,
-          answerUiRequest: Qu,
-          chooseRewardedAd: Qu,
-          setCameraZoom: Qu,
-          setFreeCameraMovesFly: Qu,
-          setBlockHighlight: Qu,
-          setCrosshairInteractPrompt: Qu,
-          setLookSensitivity: Qu,
-          replayAction: Qu,
-          setReplayPlaying: Qu,
-          seekReplay: Qu,
-          setReplayCameraMode: Qu,
-          syncReplayCameraMode: Qu,
-          setReplayCameraKeyframe: Qu,
-          moveReplayCameraKeyframe: Qu,
-          deleteReplayCameraKeyframes: Qu,
-          setReplayPlaybackMark: Qu,
+          enchantItem: ak,
+          setShopOpen: ak,
+          buyShopItem: ak,
+          sendChatMessage: ak,
+          ignorePlayer: ak,
+          reportPlayer: ak,
+          reportWorldCodeChat: ak,
+          requestDiscordReportKey: ak,
+          reportLobbyOrGame: ak,
+          playEmote: ak,
+          updateMyCosmetic: ak,
+          writeOnBoard: ak,
+          writeBook: ak,
+          writeNameTag: ak,
+          setCustomLobbyBlock: ak,
+          openIronChest: ak,
+          sendCodeCollab: ak,
+          clickCodeBlock: ak,
+          bindCustomButtonKeys: ak,
+          pressCustomButton: ak,
+          moveReplayFreecam: ak,
+          holdReplayFreecamVertical: ak,
+          respawn: ak,
+          wakeUp: ak,
+          requestLeaderboard: ak,
+          completeTask: ak,
+          setServerCookie: ak,
+          answerUiRequest: ak,
+          chooseRewardedAd: ak,
+          setCameraZoom: ak,
+          setFreeCameraMovesFly: ak,
+          setBlockHighlight: ak,
+          setCrosshairInteractPrompt: ak,
+          setLookSensitivity: ak,
+          replayAction: ak,
+          setReplayPlaying: ak,
+          seekReplay: ak,
+          setReplayCameraMode: ak,
+          syncReplayCameraMode: ak,
+          setReplayCameraKeyframe: ak,
+          moveReplayCameraKeyframe: ak,
+          deleteReplayCameraKeyframes: ak,
+          setReplayPlaybackMark: ak,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: Qu,
-          exportReplayVideo: Qu,
-          toggleRecording: Qu,
-          saveClip: Qu,
-          setRecorderPrefs: Qu,
-          setReplayViewerOpen: Qu
+          holdReplayForShaderPackFailure: ak,
+          exportReplayVideo: ak,
+          toggleRecording: ak,
+          saveClip: ak,
+          setRecorderPrefs: ak,
+          setReplayViewerOpen: ak
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => Eu.d,
-          worldCodeAiGameState: () => Eu.e
+          worldCodeAiChunk: () => Rk.d,
+          worldCodeAiGameState: () => Rk.e
         },
         lookups: {
-          localPos: () => mu,
+          localPos: () => Xk,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -536,321 +536,321 @@ export const modules = {
         }
       }
   },
-  40166: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Au,
-      f: () => eu,
-      h: () => Du,
-      i: () => ku,
-      k: () => bu
+  40007: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Sk,
+      g: () => Ek,
+      k: () => Nk,
+      m: () => Ok,
+      p: () => Yk
     });
-    var Eu = yu(38978),
-      Ku = yu(1199),
-      Qu = yu(1878),
-      mu = yu(1895),
-      Ju = yu(3093),
-      Nu = yu(36584),
-      Xu = yu(1280),
-      Vu = yu(40173),
-      ru = yu(4586),
-      Bu = yu(2306),
-      xu = yu(40177),
-      Su = yu(40185),
-      pu = yu(40232);
-    let Tu = null;
+    var Rk = Bk(38841),
+      tk = Bk(1173),
+      ak = Bk(1863),
+      Xk = Bk(1873),
+      bk = Bk(3090),
+      wk = Bk(36480),
+      dk = Bk(1267),
+      sk = Bk(40015),
+      Vk = Bk(4546),
+      Jk = Bk(2303),
+      Ak = Bk(40021),
+      ek = Bk(40023),
+      yk = Bk(40070);
+    let fk = null;
 
-    function Wu(uu) {
-      const Ru = new Map,
-        yu = yu => {
-          if ("string" !== typeof yu) return;
-          let Eu = Ru.get(yu);
-          return void 0 === Eu && (Eu = uu(yu), void 0 !== Eu && Ru.set(yu, Eu)), Eu
+    function mk(kk) {
+      const Fk = new Map,
+        Bk = Bk => {
+          if ("string" !== typeof Bk) return;
+          let Rk = Fk.get(Bk);
+          return void 0 === Rk && (Rk = kk(Bk), void 0 !== Rk && Fk.set(Bk, Rk)), Rk
         };
       return new Proxy({}, {
-        get: (uu, Ru) => yu(Ru),
-        has: (uu, Ru) => void 0 !== yu(Ru)
+        get: (kk, Fk) => Bk(Fk),
+        has: (kk, Fk) => void 0 !== Bk(Fk)
       })
     }
 
-    function ju(uu) {
-      const Ru = (0, Ju.b)(uu);
-      return void 0 !== Ru && (0, Ju.f)(Ru) === uu
+    function Wk(kk) {
+      const Fk = (0, bk.c)(kk);
+      return void 0 !== Fk && (0, bk.f)(Fk) === kk
     }
 
-    function Hu(uu) {
-      var Ru;
-      const yu = null === (Ru = (0, Vu.i)()) || void 0 === Ru ? void 0 : Ru.tables;
-      if (void 0 === yu || !ju(uu)) return;
-      const Eu = {
-          displayName: yu.getDisplayName(uu)
+    function vk(kk) {
+      var Fk;
+      const Bk = null === (Fk = (0, sk.g)()) || void 0 === Fk ? void 0 : Fk.tables;
+      if (void 0 === Bk || !Wk(kk)) return;
+      const Rk = {
+          displayName: Bk.getDisplayName(kk)
         },
-        Ku = yu.getItemStat(uu, "description");
-      void 0 !== Ku && null !== Ku && (Eu.description = Ku);
+        tk = Bk.getItemStat(kk, "description");
+      void 0 !== tk && null !== tk && (Rk.description = tk);
       const {
-        rootName: Qu
-      } = yu.getMetaInfo(uu);
-      Qu !== uu && (Eu.rootName = Qu);
-      const mu = yu.getItemStat(uu, "armourReduction");
-      return void 0 !== mu && null !== mu && (Eu.armourReduction = mu), Eu
-    }(0, Vu.z)((uu => {
-      Tu = uu
+        rootName: ak
+      } = Bk.getMetaInfo(kk);
+      ak !== kk && (Rk.rootName = ak);
+      const Xk = Bk.getItemStat(kk, "armourReduction");
+      return void 0 !== Xk && null !== Xk && (Rk.armourReduction = Xk), Rk
+    }(0, sk.o)((kk => {
+      fk = kk
     }));
-    const du = (0, mu.h)("DisplayName", "Description");
+    const ik = (0, Xk.h)("DisplayName", "Description");
 
-    function bu() {
-      return Boolean(Qu.b.get("useInventory") && Qu.b.get("useFullInventory"))
+    function Yk() {
+      return Boolean(ak.b.get("useInventory") && ak.b.get("useFullInventory"))
     }
-    let Cu = null;
-    const ku = {
+    let Lk = null;
+    const Ok = {
         inventory: function() {
-          const uu = pu.e.states.inventory;
-          let Ru = null;
-          const yu = uu => {
-            var yu;
-            return null === uu.chest ? uu : ((null === (yu = Ru) || void 0 === yu ? void 0 : yu.from) === uu && Ru.chestVersion === (0, Su.e)() || (Ru = {
-              from: uu,
-              chestVersion: (0, Su.e)(),
+          const kk = yk.d.states.inventory;
+          let Fk = null;
+          const Bk = kk => {
+            var Bk;
+            return null === kk.chest ? kk : ((null === (Bk = Fk) || void 0 === Bk ? void 0 : Bk.from) === kk && Fk.chestVersion === (0, ek.d)() || (Fk = {
+              from: kk,
+              chestVersion: (0, ek.d)(),
               view: {
-                ...uu,
-                chest: (0, Su.l)(uu.chest)
+                ...kk,
+                chest: (0, ek.j)(kk.chest)
               }
-            }), Ru.view)
+            }), Fk.view)
           };
           return {
-            current: () => yu(uu.current()),
-            watch: Ru => uu.watch((uu => {
-              Ru(yu(uu))
+            current: () => Bk(kk.current()),
+            watch: Fk => kk.watch((kk => {
+              Fk(Bk(kk))
             }))
           }
         }(),
-        crafting: pu.e.states.crafting,
+        crafting: yk.d.states.crafting,
         stationItems: {
           current() {
-            var uu;
-            return (null === (uu = Cu) || void 0 === uu ? void 0 : uu.namesVersion) !== (0, Ju.g)() && (Cu = {
-              namesVersion: (0, Ju.g)(),
+            var kk;
+            return (null === (kk = Lk) || void 0 === kk ? void 0 : kk.namesVersion) !== (0, bk.h)() && (Lk = {
+              namesVersion: (0, bk.h)(),
               items: {
-                enchantable: Wu((uu => {
-                  const Ru = (0, Ju.b)(uu);
-                  return void 0 !== Ru && null !== Tu && Tu.enchantmentPerksOf(Ru).length > 0 || void 0
+                enchantable: mk((kk => {
+                  const Fk = (0, bk.c)(kk);
+                  return void 0 !== Fk && null !== fk && fk.enchantmentPerksOf(Fk).length > 0 || void 0
                 })),
-                salvageable: Wu((uu => !(!ju(uu) || null === (0, Nu.e)(uu)) || void 0))
+                salvageable: mk((kk => !(!Wk(kk) || null === (0, wk.c)(kk)) || void 0))
               }
-            }), Cu.items
+            }), Lk.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let uu = null;
-          const Ru = () => {
-            var Ru;
-            return (null === (Ru = uu) || void 0 === Ru ? void 0 : Ru.namesVersion) !== (0, Ju.g)() && (uu = {
-              namesVersion: (0, Ju.g)(),
-              infos: Wu(Hu)
-            }), uu.infos
+          let kk = null;
+          const Fk = () => {
+            var Fk;
+            return (null === (Fk = kk) || void 0 === Fk ? void 0 : Fk.namesVersion) !== (0, bk.h)() && (kk = {
+              namesVersion: (0, bk.h)(),
+              infos: mk(vk)
+            }), kk.infos
           };
           return {
-            current: Ru,
-            watch: yu => (0, mu.s)((Eu => {
-              Eu.some(du) && (uu = null, yu(Ru()))
+            current: Fk,
+            watch: Bk => (0, Xk.r)((Rk => {
+              Rk.some(ik) && (kk = null, Bk(Fk()))
             }))
           }
         }(),
-        creativeVisibility: (0, mu.l)((function() {
-          const uu = {};
-          for (const Ku of null !== (Ru = null === (yu = Tu) || void 0 === yu ? void 0 : yu.creativeItemIds()) && void 0 !== Ru ? Ru : []) {
-            var Ru, yu, mu, Nu;
-            const Xu = (0, Ju.f)(Ku);
-            if (void 0 === Xu) continue;
-            const Vu = null !== (mu = Qu.b.get((0, Eu.f)(Xu, "showInCreativeInven"))) && void 0 !== mu ? mu : null === (Nu = Tu) || void 0 === Nu ? void 0 : Nu.showInCreativeInvenOf(Ku);
-            "boolean" === typeof Vu && (uu[Xu] = Vu)
+        creativeVisibility: (0, Xk.n)((function() {
+          const kk = {};
+          for (const tk of null !== (Fk = null === (Bk = fk) || void 0 === Bk ? void 0 : Bk.creativeItemIds()) && void 0 !== Fk ? Fk : []) {
+            var Fk, Bk, Xk, wk;
+            const dk = (0, bk.f)(tk);
+            if (void 0 === dk) continue;
+            const sk = null !== (Xk = ak.b.get((0, Rk.h)(dk, "showInCreativeInven"))) && void 0 !== Xk ? Xk : null === (wk = fk) || void 0 === wk ? void 0 : wk.showInCreativeInvenOf(tk);
+            "boolean" === typeof sk && (kk[dk] = sk)
           }
           return {
-            publicLobby: (0, Ku.N)((0, Xu.c)().lobbyName),
-            shownInGame: uu
+            publicLobby: (0, tk.N)((0, dk.e)().lobbyName),
+            shownInGame: kk
           }
-        }), ["connectedGameChanged"], (0, mu.h)("ShowInCreativeInven")),
-        fullInventory: (0, mu.l)(bu, [], (0, mu.i)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, Xk.h)("ShowInCreativeInven")),
+        fullInventory: (0, Xk.n)(Yk, [], (0, Xk.k)("useInventory", "useFullInventory"))
       },
-      eu = {
-        inventoryDropRequested: pu.e.events.inventoryDropRequested,
-        chestToggled: pu.e.events.chestToggled,
-        chestRefreshed: pu.e.events.chestRefreshed,
-        inventorySynced: pu.e.events.inventorySynced,
-        enchantingTableOpened: pu.e.events.enchantingTableOpened
+      Ek = {
+        inventoryDropRequested: yk.d.events.inventoryDropRequested,
+        chestToggled: yk.d.events.chestToggled,
+        chestRefreshed: yk.d.events.chestRefreshed,
+        inventorySynced: yk.d.events.inventorySynced,
+        enchantingTableOpened: yk.d.events.enchantingTableOpened
       },
-      Au = {
-        removeInventoryItem: pu.e.commands.removeInventoryItem,
-        swapInventorySlots: pu.e.commands.swapInventorySlots,
-        moveInventoryItem: pu.e.commands.moveInventoryItem,
-        quickMoveInventoryItem: pu.e.commands.quickMoveInventoryItem,
-        closeChest: pu.e.commands.closeChest,
-        setInventoryOpen(uu) {
-          (0, ru.h)(Bu.t.InventoryOpen, uu ? Bu.t.InventoryOpen : 0)
+      Sk = {
+        removeInventoryItem: yk.d.commands.removeInventoryItem,
+        swapInventorySlots: yk.d.commands.swapInventorySlots,
+        moveInventoryItem: yk.d.commands.moveInventoryItem,
+        quickMoveInventoryItem: yk.d.commands.quickMoveInventoryItem,
+        closeChest: yk.d.commands.closeChest,
+        setInventoryOpen(kk) {
+          (0, Vk.i)(Jk.A.InventoryOpen, kk ? Jk.A.InventoryOpen : 0)
         },
-        focusCrafting: pu.e.commands.focusCrafting,
-        craftRecipe: pu.e.commands.craftRecipe,
-        salvageItem: pu.e.commands.salvageItem,
-        enchantItem: pu.e.commands.enchantItem,
-        changeIronChestPasskey(uu) {
-          var Ru;
+        focusCrafting: yk.d.commands.focusCrafting,
+        craftRecipe: yk.d.commands.craftRecipe,
+        salvageItem: yk.d.commands.salvageItem,
+        enchantItem: yk.d.commands.enchantItem,
+        changeIronChestPasskey(kk) {
+          var Fk;
           let {
-            pos: yu,
-            SX: Eu
-          } = uu;
-          null === (Ru = (0, Vu.i)()) || void 0 === Ru || Ru.send(xu.d.ChangeIronChestPasskey, (0, xu.g)({
-            zQ: yu,
-            SX: Eu
+            pos: Bk,
+            Gd: Rk
+          } = kk;
+          null === (Fk = (0, sk.g)()) || void 0 === Fk || Fk.send(Ak.b.ChangeIronChestPasskey, (0, Ak.g)({
+            xa: Bk,
+            Gd: Rk
           }))
         },
-        openIronChest(uu) {
-          var Ru;
+        openIronChest(kk) {
+          var Fk;
           let {
-            pos: yu,
-            SX: Eu
-          } = uu;
-          null === (Ru = (0, Vu.i)()) || void 0 === Ru || Ru.send(xu.d.OpenIronChest, (0, xu.x)({
-            zQ: yu,
-            SX: Eu
+            pos: Bk,
+            Gd: Rk
+          } = kk;
+          null === (Fk = (0, sk.g)()) || void 0 === Fk || Fk.send(Ak.b.OpenIronChest, (0, Ak.A)({
+            xa: Bk,
+            Gd: Rk
           }))
         }
       },
-      Du = {
-        enchantingOffer: pu.e.queries.enchantingOffer
+      Nk = {
+        enchantingOffer: yk.d.queries.enchantingOffer
       }
   },
-  40223: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Eu,
-      f: () => ru,
-      g: () => Ju,
-      j: () => Qu,
-      k: () => Ku,
-      m: () => Nu,
-      p: () => Vu
+  40065: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Rk,
+      f: () => Vk,
+      h: () => bk,
+      k: () => ak,
+      n: () => tk,
+      r: () => wk,
+      t: () => sk
     });
-    class Eu extends Error {
+    class Rk extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function Ku(uu) {
-      return uu instanceof RangeError && /call stack/i.test(uu.message) || uu instanceof Error && "InternalError" === uu.name && /recursion/i.test(uu.message)
+    function tk(kk) {
+      return kk instanceof RangeError && /call stack/i.test(kk.message) || kk instanceof Error && "InternalError" === kk.name && /recursion/i.test(kk.message)
     }
 
-    function Qu(uu) {
-      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(uu))
+    function ak(kk) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(kk))
     }
-    const mu = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const Xk = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function Ju(uu) {
-      var Ru;
-      return uu instanceof WebAssembly.RuntimeError || uu instanceof Eu || Ku(uu) && mu.test(null !== (Ru = uu.stack) && void 0 !== Ru ? Ru : "")
-    }
-
-    function Nu(uu, Ru) {
-      if (Ju(uu)) throw uu;
-      console.error(Ru, uu)
+    function bk(kk) {
+      var Fk;
+      return kk instanceof WebAssembly.RuntimeError || kk instanceof Rk || tk(kk) && Xk.test(null !== (Fk = kk.stack) && void 0 !== Fk ? Fk : "")
     }
 
-    function Xu(uu, Ru, yu, Ku, Qu) {
-      if (Ru % Ku !== 0 || Ru + yu > uu.byteLength) throw new Eu(`${Qu}: ${yu} bytes at ${Ru}, ${Ku}-aligned, outside ${uu.byteLength} bytes of memory`)
+    function wk(kk, Fk) {
+      if (bk(kk)) throw kk;
+      console.error(Fk, kk)
     }
 
-    function Vu(uu, Ru, yu, Eu, Ku) {
-      return 0 === yu ? null : (Xu(Ru, yu, Eu * uu.BYTES_PER_ELEMENT, uu.BYTES_PER_ELEMENT, Ku), new uu(Ru, yu, Eu))
+    function dk(kk, Fk, Bk, tk, ak) {
+      if (Fk % tk !== 0 || Fk + Bk > kk.byteLength) throw new Rk(`${ak}: ${Bk} bytes at ${Fk}, ${tk}-aligned, outside ${kk.byteLength} bytes of memory`)
     }
 
-    function ru(uu, Ru, yu, Eu, Ku) {
-      return 0 === Ru ? null : (Xu(uu, Ru, yu, Eu, Ku), new DataView(uu, Ru, yu))
+    function sk(kk, Fk, Bk, Rk, tk) {
+      return 0 === Bk ? null : (dk(Fk, Bk, Rk * kk.BYTES_PER_ELEMENT, kk.BYTES_PER_ELEMENT, tk), new kk(Fk, Bk, Rk))
+    }
+
+    function Vk(kk, Fk, Bk, Rk, tk) {
+      return 0 === Fk ? null : (dk(kk, Fk, Bk, Rk, tk), new DataView(kk, Fk, Bk))
     }
   },
-  40173: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      B: () => Su,
-      e: () => Eu,
-      g: () => Wu,
-      i: () => pu,
-      m: () => Tu,
-      p: () => Bu,
-      t: () => xu,
-      v: () => Vu,
-      z: () => ru
+  40015: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Rk,
+      d: () => mk,
+      g: () => yk,
+      h: () => fk,
+      k: () => Jk,
+      l: () => Ak,
+      n: () => sk,
+      o: () => Vk,
+      r: () => ek
     });
-    class Eu extends Error {
-      constructor(uu) {
-        super(`the join's code did not load: ${uu instanceof Error?uu.message:String(uu)}`, {
-          cause: uu
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === uu || void 0 === uu ? void 0 : uu.request
+    class Rk extends Error {
+      constructor(kk) {
+        super(`the join's code did not load: ${kk instanceof Error?kk.message:String(kk)}`, {
+          cause: kk
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === kk || void 0 === kk ? void 0 : kk.request
       }
     }
-    let Ku = null,
-      Qu = null,
-      mu = null;
-    const Ju = [];
-    let Nu = null;
+    let tk = null,
+      ak = null,
+      Xk = null;
+    const bk = [];
+    let wk = null;
 
-    function Xu(uu, Ru) {
+    function dk(kk, Fk) {
       try {
-        uu(Ru)
-      } catch (yu) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", yu)
+        kk(Fk)
+      } catch (Bk) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", Bk)
       }
     }
 
-    function Vu() {
-      return Nu
+    function sk() {
+      return wk
     }
 
-    function ru(uu) {
-      Ju.push(uu), null !== Nu && Xu(uu, Nu)
+    function Vk(kk) {
+      bk.push(kk), null !== wk && dk(kk, wk)
     }
 
-    function Bu(uu) {
-      return Ku ??= Promise.all([yu.e(69), yu.e(94), yu.e(214), yu.e(74), yu.e(215), yu.e(189), yu.e(93), yu.e(259), yu.e(187), yu.e(262), yu.e(199), yu.e(186), yu.e(200), yu.e(136), yu.e(85), yu.e(114), yu.e(237), yu.e(53)]).then((() => yu(42130))).then((Ru => {
-        Ru.loadAudio(uu), Nu = Ru;
-        for (const uu of Ju) Xu(uu, Ru);
-        return Ru
-      })).catch((uu => {
-        throw Ku = null, uu
-      })), Ku
+    function Jk(kk) {
+      return tk ??= Promise.all([Bk.e(69), Bk.e(94), Bk.e(214), Bk.e(74), Bk.e(215), Bk.e(189), Bk.e(93), Bk.e(259), Bk.e(187), Bk.e(262), Bk.e(199), Bk.e(186), Bk.e(200), Bk.e(136), Bk.e(85), Bk.e(114), Bk.e(237), Bk.e(53)]).then((() => Bk(41991))).then((Fk => {
+        Fk.loadAudio(kk), wk = Fk;
+        for (const kk of bk) dk(kk, Fk);
+        return Fk
+      })).catch((kk => {
+        throw tk = null, kk
+      })), tk
     }
-    async function xu(uu, Ru) {
+    async function Ak(kk, Fk) {
       try {
-        const yu = await Bu(uu);
-        await yu.loadClientGame(Ru)
-      } catch (yu) {
-        throw new Eu(yu)
+        const Bk = await Jk(kk);
+        await Bk.loadClientGame(Fk)
+      } catch (Bk) {
+        throw new Rk(Bk)
       }
     }
 
-    function Su(uu, Ru) {
-      Qu = {
-        running: uu,
-        shell: Ru
+    function ek(kk, Fk) {
+      ak = {
+        running: kk,
+        shell: Fk
       }
     }
 
-    function pu() {
-      return mu
+    function yk() {
+      return Xk
     }
-    async function Tu(uu) {
-      const Ru = Qu;
-      if ((null === Ru || void 0 === Ru ? void 0 : Ru.running) !== uu) throw new Error("the core's session has ended");
-      const yu = await Bu(Ru.shell.audio).catch((uu => {
-        throw new Eu(uu)
+    async function fk(kk) {
+      const Fk = ak;
+      if ((null === Fk || void 0 === Fk ? void 0 : Fk.running) !== kk) throw new Error("the core's session has ended");
+      const Bk = await Jk(Fk.shell.audio).catch((kk => {
+        throw new Rk(kk)
       }));
-      if (null !== mu) return mu;
-      if (Qu !== Ru || uu.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (mu = yu.startGameHost(uu, Ru.shell), null === mu) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return mu
+      if (null !== Xk) return Xk;
+      if (ak !== Fk || kk.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (Xk = Bk.startGameHost(kk, Fk.shell), null === Xk) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return Xk
     }
 
-    function Wu() {
-      null !== mu && (null !== Nu ? Nu.endGameHost(mu) : mu.closeGame()), mu = null, Qu = null
+    function mk() {
+      null !== Xk && (null !== wk ? wk.endGameHost(Xk) : Xk.closeGame()), Xk = null, ak = null
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

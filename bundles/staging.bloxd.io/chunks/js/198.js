@@ -1,36 +1,36 @@
 export const id = 198;
 export const ids = [198];
 export const modules = {
-  40062: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      FORMER_BLOCK_IMAGE_NAMES: () => Eu.e,
-      textureAnimationData: () => Ku.x,
-      textureNameToIndex: () => Ku.A
+  39906: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      FORMER_BLOCK_IMAGE_NAMES: () => Rk.c,
+      textureAnimationData: () => tk.x,
+      textureNameToIndex: () => tk.A
     });
-    var Eu = yu(38488),
-      Ku = yu(9158)
+    var Rk = Bk(38362),
+      tk = Bk(9095)
   },
-  9247: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ku,
-      h: () => Qu
+  9169: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk,
+      d: () => ak
     });
-    var Eu = yu(9205);
-    const Ku = "Air",
-      Qu = Object.freeze(new Eu.e(Ku, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var Rk = Bk(9127);
+    const tk = "Air",
+      ak = Object.freeze(new Rk.g(tk, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  38488: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Eu,
-      g: () => Ku
+  38362: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Rk,
+      d: () => tk
     });
-    const Eu = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((uu => [uu, `${uu}_block`])));
+    const Rk = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((kk => [kk, `${kk}_block`])));
 
-    function Ku(uu) {
-      var Ru;
-      return null !== (Ru = Eu.get(uu)) && void 0 !== Ru ? Ru : uu
+    function tk(kk) {
+      var Fk;
+      return null !== (Fk = Rk.get(kk)) && void 0 !== Fk ? Fk : kk
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

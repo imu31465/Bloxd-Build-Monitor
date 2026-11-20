@@ -1,40 +1,40 @@
 export const id = 122;
 export const ids = [122];
 export const modules = {
-  40642: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      ShaderPackCategory: () => nu
+  40497: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      ShaderPackCategory: () => Uk
     });
-    var Eu = yu(64),
-      Ku = yu(1483),
-      Qu = yu(1408),
-      mu = yu(1467),
-      Ju = yu(1170),
-      Nu = yu(106),
-      Xu = yu(27),
-      Vu = yu(1583),
-      ru = yu(6395),
-      Bu = yu(305),
-      xu = yu(6430),
-      Su = yu(6424),
-      pu = yu(6436),
-      Tu = yu(6314),
-      Wu = yu(4782),
-      ju = yu(6379),
-      Hu = yu(6389),
-      du = yu(3262);
+    var Rk = Bk(61),
+      tk = Bk(1473),
+      ak = Bk(1389),
+      Xk = Bk(1459),
+      bk = Bk(1149),
+      wk = Bk(98),
+      dk = Bk(22),
+      sk = Bk(1585),
+      Vk = Bk(6316),
+      Jk = Bk(267),
+      Ak = Bk(6358),
+      ek = Bk(6356),
+      yk = Bk(6361),
+      fk = Bk(6245),
+      mk = Bk(4688),
+      Wk = Bk(6295),
+      vk = Bk(6307),
+      ik = Bk(3262);
 
-    function bu(uu, Ru) {
-      const yu = (0, xu.storedPackOutcome)(uu, Ru);
-      return "none" !== yu.kind || "noCompiler" === yu.reason
+    function Yk(kk, Fk) {
+      const Bk = (0, Ak.storedPackOutcome)(kk, Fk);
+      return "none" !== Bk.kind || "noCompiler" === Bk.reason
     }
-    var Cu = yu(1035),
-      ku = yu.n(Cu),
-      eu = yu(6381),
-      Au = yu(1043),
-      Du = yu(6370),
-      Mu = yu(1079);
-    const Iu = {
+    var Lk = Bk(1020),
+      Ok = Bk.n(Lk),
+      Ek = Bk(6299),
+      Sk = Bk(1028),
+      Nk = Bk(6293),
+      Hk = Bk(1069);
+    const uk = {
       ready: "shaderPack:statusReady",
       readyAfterReload: "shaderPack:statusReadyAfterReload",
       noWebGpu: "shaderPack:statusNoWebGpu",
@@ -47,249 +47,249 @@ export const modules = {
       noCompiler: "shaderPack:statusNoCompiler"
     };
 
-    function Gu(uu, Ru) {
-      return "failedRecheck" === uu && Ru.listing ? "shaderPack:statusFailedRecheckListed" : Iu[uu]
+    function Mk(kk, Fk) {
+      return "failedRecheck" === kk && Fk.listing ? "shaderPack:statusFailedRecheckListed" : uk[kk]
     }
 
-    function Uu(uu) {
+    function gk(kk) {
       let {
-        stored: Ru,
-        checking: yu,
-        webGpuUsable: Eu,
-        changePending: Ku,
-        compiler: Qu,
-        t: mu
-      } = uu;
-      const Ju = function(uu, Ru, yu, Eu, Ku) {
-          const Qu = (0, xu.storedPackOutcome)(uu, Ku);
-          return "none" === Qu.kind ? "noCompiler" === Qu.reason ? Ru ? "checking" : "noCompiler" : "otherApiVersion" === Qu.reason ? "wrongApiVersion" : "failed" : (0, du.f)() ? "harnessBuild" : "blocked" === Qu.kind ? (0, xu.shaderPackNeedsCheck)(uu, Ku) ? Ru ? "checking" : !1 === yu ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === yu ? "offNoWebGpu" : Eu ? "readyAfterReload" : "ready"
-        }(Ru, yu, Eu, Ku, Qu),
-        Nu = "failed" === Ju || "failedRecheck" === Ju,
-        Xu = Nu || "wrongApiVersion" === Ju || "noCompiler" === Ju,
-        Vu = "ready" === Ju || "readyAfterReload" === Ju ? Ru.validation.offInStrict : [];
-      return (0, Mu.jsxs)(Mu.Fragment, {
-        children: [(0, Mu.jsxs)("div", {
-          className: ku()("ShaderPackStatus", {
-            Ready: "ready" === Ju,
-            Failed: Xu
+        stored: Fk,
+        checking: Bk,
+        webGpuUsable: Rk,
+        changePending: tk,
+        compiler: ak,
+        t: Xk
+      } = kk;
+      const bk = function(kk, Fk, Bk, Rk, tk) {
+          const ak = (0, Ak.storedPackOutcome)(kk, tk);
+          return "none" === ak.kind ? "noCompiler" === ak.reason ? Fk ? "checking" : "noCompiler" : "otherApiVersion" === ak.reason ? "wrongApiVersion" : "failed" : (0, ik.e)() ? "harnessBuild" : "blocked" === ak.kind ? (0, Ak.shaderPackNeedsCheck)(kk, tk) ? Fk ? "checking" : !1 === Bk ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === Bk ? "offNoWebGpu" : Rk ? "readyAfterReload" : "ready"
+        }(Fk, Bk, Rk, tk, ak),
+        wk = "failed" === bk || "failedRecheck" === bk,
+        dk = wk || "wrongApiVersion" === bk || "noCompiler" === bk,
+        sk = "ready" === bk || "readyAfterReload" === bk ? Fk.validation.offInStrict : [];
+      return (0, Hk.jsxs)(Hk.Fragment, {
+        children: [(0, Hk.jsxs)("div", {
+          className: Ok()("ShaderPackStatus", {
+            Ready: "ready" === bk,
+            Failed: dk
           }),
-          children: ["ready" === Ju && (0, Mu.jsx)(Au.c, {
+          children: ["ready" === bk && (0, Hk.jsx)(Sk.d, {
             name: "circle-check"
-          }), Xu && (0, Mu.jsx)(Au.c, {
+          }), dk && (0, Hk.jsx)(Sk.d, {
             name: "triangle-exclamation"
-          }), "harnessBuild" === Ju ? (0, du.b)() : mu(Gu(Ju, Ru), {
-            packVersion: String(Ru.manifest.apiVersion),
-            version: String(eu.b)
+          }), "harnessBuild" === bk ? (0, ik.d)() : Xk(Mk(bk, Fk), {
+            packVersion: String(Fk.manifest.apiVersion),
+            version: String(Ek.b)
           })]
-        }), Nu && (0, Mu.jsx)(Du.d, {
-          diagnostics: Ru.validation.errors,
-          more: Ru.validation.moreErrors,
-          t: mu
-        }), Vu.length > 0 && (0, Mu.jsxs)(Mu.Fragment, {
-          children: [(0, Mu.jsxs)("div", {
+        }), wk && (0, Hk.jsx)(Nk.e, {
+          diagnostics: Fk.validation.errors,
+          more: Fk.validation.moreErrors,
+          t: Xk
+        }), sk.length > 0 && (0, Hk.jsxs)(Hk.Fragment, {
+          children: [(0, Hk.jsxs)("div", {
             className: "ShaderPackStatus OffInStrict",
-            children: [(0, Mu.jsx)(Au.c, {
+            children: [(0, Hk.jsx)(Sk.d, {
               name: "triangle-exclamation"
-            }), mu("shaderPack:offInStrict")]
-          }), (0, Mu.jsx)(Du.d, {
-            diagnostics: Vu,
-            t: mu
+            }), Xk("shaderPack:offInStrict")]
+          }), (0, Hk.jsx)(Nk.e, {
+            diagnostics: sk,
+            t: Xk
           })]
         })]
       })
     }
 
-    function nu(uu) {
+    function Uk(kk) {
       let {
-        setApplySettingsCallback: Ru
-      } = uu;
+        setApplySettingsCallback: Fk
+      } = kk;
       const {
-        t: yu
-      } = (0, Ju.E)(), [Ku, mu] = (0, Eu.useState)(null), [Xu, Vu] = (0, Eu.useState)(null), [du, Cu] = (0, Eu.useState)(null), [ku] = (0, Eu.useState)(Bu.f), [eu, Au] = (0, Eu.useState)(!0), [Du, Iu] = (0, Eu.useState)(!1), {
-        loading: Gu,
-        error: nu,
-        setError: tu,
-        onFiles: lu
-      } = (0, Hu.d)((async uu => {
-        const Ru = await (0, ru.loadPageShaderPackCompiler)();
-        if (!Ru) return void tu(yu("shaderPack:compilerUnavailable"));
-        Vu(Ru);
-        const Eu = (0, xu.toStoredShaderPack)(uu, await (0, Su.g)(Ru, uu.files));
-        await (0, xu.saveShaderPack)(Eu, Ru) ? (mu(Eu), gu(Ku, Eu, Ru)) : tu(yu("shaderPack:saveFailed"))
+        t: Bk
+      } = (0, bk.x)(), [tk, Xk] = (0, Rk.useState)(null), [dk, sk] = (0, Rk.useState)(null), [ik, Lk] = (0, Rk.useState)(null), [Ok] = (0, Rk.useState)(Jk.c), [Ek, Sk] = (0, Rk.useState)(!0), [Nk, uk] = (0, Rk.useState)(!1), {
+        loading: Mk,
+        error: Uk,
+        setError: Gk,
+        onFiles: Tk
+      } = (0, vk.i)((async kk => {
+        const Fk = await (0, Vk.loadPageShaderPackCompiler)();
+        if (!Fk) return void Gk(Bk("shaderPack:compilerUnavailable"));
+        sk(Fk);
+        const Rk = (0, Ak.toStoredShaderPack)(kk, await (0, ek.g)(Fk, kk.files));
+        await (0, Ak.saveShaderPack)(Rk, Fk) ? (Xk(Rk), rk(tk, Rk, Fk)) : Gk(Bk("shaderPack:saveFailed"))
       }));
 
-      function gu(uu, yu, Eu) {
-        (function(uu, Ru, yu, Eu) {
-          return yu || bu(uu, Eu) || bu(Ru, Eu)
-        })(uu, yu, (0, xu.isShaderPackChangePending)(), Eu) && ((0, xu.markShaderPackChangePending)(), Ru((() => Wu.i)))
+      function rk(kk, Bk, Rk) {
+        (function(kk, Fk, Bk, Rk) {
+          return Bk || Yk(kk, Rk) || Yk(Fk, Rk)
+        })(kk, Bk, (0, Ak.isShaderPackChangePending)(), Rk) && ((0, Ak.markShaderPackChangePending)(), Fk((() => mk.m)))
       }
-      return (0, Eu.useEffect)((() => {
-        let uu = !1;
+      return (0, Rk.useEffect)((() => {
+        let kk = !1;
         return async function() {
-          const Ru = (0, Nu.hasUsableWebGpuAdapter)(),
-            yu = await (0, pu.h)();
-          if (uu) return;
-          mu(yu), Iu(!0), Au(!1);
-          const Eu = null !== yu ? (0, ru.loadPageShaderPackCompiler)() : null,
-            Ku = await Ru;
-          if (uu) return;
-          Cu(Ku);
-          const Qu = await Eu;
-          if (!uu && (Vu(Qu), null !== yu && Ku && null !== Qu && (0, xu.shaderPackNeedsCheck)(yu, Qu))) {
-            const Ru = await (0, Su.c)(yu, Qu);
-            uu || mu((uu => uu === yu ? Ru : uu))
+          const Fk = (0, wk.hasUsableWebGpuAdapter)(),
+            Bk = await (0, yk.e)();
+          if (kk) return;
+          Xk(Bk), uk(!0), Sk(!1);
+          const Rk = null !== Bk ? (0, Vk.loadPageShaderPackCompiler)() : null,
+            tk = await Fk;
+          if (kk) return;
+          Lk(tk);
+          const ak = await Rk;
+          if (!kk && (sk(ak), null !== Bk && tk && null !== ak && (0, Ak.shaderPackNeedsCheck)(Bk, ak))) {
+            const Fk = await (0, ek.d)(Bk, ak);
+            kk || Xk((kk => kk === Bk ? Fk : kk))
           }
-        }().catch((Ru => {
-          console.error("Failed to load the stored shader pack", Ru), uu || tu(yu("shaderPack:unexpectedError"))
+        }().catch((Fk => {
+          console.error("Failed to load the stored shader pack", Fk), kk || Gk(Bk("shaderPack:unexpectedError"))
         })).finally((() => {
-          uu || (Au(!1), Iu(!1))
+          kk || (Sk(!1), uk(!1))
         })), () => {
-          uu = !0
+          kk = !0
         }
-      }), []), (0, Mu.jsxs)("div", {
+      }), []), (0, Hk.jsxs)("div", {
         className: "ShaderPackCategory SettingsMenuRightInner",
-        children: [(0, Mu.jsx)("div", {
+        children: [(0, Hk.jsx)("div", {
           className: "ShaderPackIntro",
-          children: yu("shaderPack:intro")
-        }), (0, Mu.jsx)(su, {
-          to: Tu.S,
+          children: Bk("shaderPack:intro")
+        }), (0, Hk.jsx)(ck, {
+          to: fk.S,
           className: "ShaderPackBrowseLink",
-          children: (0, Mu.jsx)(Qu.l, {
+          children: (0, Hk.jsx)(ak.o, {
             className: "ShaderPackBrowseButton",
-            children: yu("shaderPackListing:browse")
+            children: Bk("shaderPackListing:browse")
           })
-        }), !1 === du && (0, Mu.jsx)("div", {
+        }), !1 === ik && (0, Hk.jsx)("div", {
           className: "SettingsBoxWarning",
-          children: yu(ku ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), null !== nu && (0, Mu.jsxs)("div", {
+          children: Bk(Ok ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), null !== Uk && (0, Hk.jsxs)("div", {
           className: "ShaderPackCategoryError",
-          children: [yu("general:error"), ": ", nu]
-        }), Ku && (0, Mu.jsxs)("div", {
+          children: [Bk("general:error"), ": ", Uk]
+        }), tk && (0, Hk.jsxs)("div", {
           className: "SettingBox ShaderPackSummary",
-          children: [(0, Mu.jsxs)("div", {
+          children: [(0, Hk.jsxs)("div", {
             className: "ShaderPackSummaryHeader",
-            children: [(0, Mu.jsxs)("div", {
-              children: [(0, Mu.jsx)("div", {
+            children: [(0, Hk.jsxs)("div", {
+              children: [(0, Hk.jsx)("div", {
                 className: "ShaderPackName",
-                children: Ku.manifest.name
-              }), Ku.manifest.author && (0, Mu.jsx)("div", {
+                children: tk.manifest.name
+              }), tk.manifest.author && (0, Hk.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, ju.j)(yu, "shaderPack:byAuthor", {
-                  author: Ku.manifest.author
+                children: (0, Wk.e)(Bk, "shaderPack:byAuthor", {
+                  author: tk.manifest.author
                 })
-              }), Ku.manifest.description && (0, Mu.jsx)("div", {
+              }), tk.manifest.description && (0, Hk.jsx)("div", {
                 className: "ShaderPackDescription",
-                children: Ku.manifest.description
-              }), Ku.listing && (0, Mu.jsx)("div", {
+                children: tk.manifest.description
+              }), tk.listing && (0, Hk.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, Mu.jsx)(su, {
-                  to: (0, Tu.X)(Ku.listing.packId),
+                children: (0, Hk.jsx)(ck, {
+                  to: (0, fk.W)(tk.listing.packId),
                   className: "ShaderPackListingLink",
-                  children: yu("shaderPackListing:openPackPage")
+                  children: Bk("shaderPackListing:openPackPage")
                 })
               })]
-            }), (0, Mu.jsx)(Qu.H, {
-              disabled: eu || Gu,
+            }), (0, Hk.jsx)(ak.K, {
+              disabled: Ek || Mk,
               onClick: async function() {
-                Au(!0), tu(null), await (0, xu.removeShaderPack)(), mu(null), Au(!1), gu(Ku, null, Xu)
+                Sk(!0), Gk(null), await (0, Ak.removeShaderPack)(), Xk(null), Sk(!1), rk(tk, null, dk)
               },
-              children: yu("shaderPack:removePack")
+              children: Bk("shaderPack:removePack")
             })]
-          }), (0, Mu.jsx)(Uu, {
-            stored: Ku,
-            checking: Du,
-            webGpuUsable: du,
-            changePending: (0, xu.isShaderPackChangePending)(),
-            compiler: Xu,
-            t: yu
+          }), (0, Hk.jsx)(gk, {
+            stored: tk,
+            checking: Nk,
+            webGpuUsable: ik,
+            changePending: (0, Ak.isShaderPackChangePending)(),
+            compiler: dk,
+            t: Bk
           })]
-        }), (0, Mu.jsx)(Hu.b, {
-          busy: eu || Gu || Du,
-          disabled: eu || Gu || Du || !0 !== du,
-          onFiles: lu
+        }), (0, Hk.jsx)(vk.e, {
+          busy: Ek || Mk || Nk,
+          disabled: Ek || Mk || Nk || !0 !== ik,
+          onFiles: Tk
         })]
       })
     }
 
-    function su(uu) {
+    function ck(kk) {
       let {
-        to: Ru,
-        className: yu,
-        children: Eu
-      } = uu;
+        to: Fk,
+        className: Bk,
+        children: Rk
+      } = kk;
       const {
-        gameState: Qu
-      } = (0, Xu.j)(["gameState"]), {
-        pathname: Ju,
-        search: Nu
-      } = (0, Ku.s)(), ru = "landingPage" !== Qu && "studio" !== Qu;
-      return (0, Mu.jsx)(mu.LinkPreserveSearch, {
-        to: Ru,
-        className: yu,
-        target: ru ? "_blank" : void 0,
+        gameState: ak
+      } = (0, dk.h)(["gameState"]), {
+        pathname: bk,
+        search: wk
+      } = (0, tk.s)(), Vk = "landingPage" !== ak && "studio" !== ak;
+      return (0, Hk.jsx)(Xk.LinkPreserveSearch, {
+        to: Fk,
+        className: Bk,
+        target: Vk ? "_blank" : void 0,
         onClick: () => {
-          ru || ((0, Tu.D)(`${Ju}${Nu}`), (0, Vu.h)())
+          Vk || ((0, fk.G)(`${bk}${wk}`), (0, sk.f)())
         },
-        children: Eu
+        children: Rk
       })
     }
   },
-  6314: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      D: () => Vu,
-      E: () => Gu,
-      I: () => pu,
-      K: () => Lu,
-      O: () => gu,
-      S: () => mu,
-      W: () => cu,
-      X: () => Nu,
-      _: () => Ju,
-      cb: () => tu,
-      d: () => ju,
-      g: () => Au,
-      gb: () => lu,
-      h: () => Tu,
-      hb: () => Hu,
-      ib: () => Iu,
-      j: () => Bu,
-      k: () => ru,
-      m: () => Uu,
-      p: () => xu,
-      t: () => nu,
-      u: () => zu,
-      v: () => Su,
-      x: () => Wu,
-      z: () => Mu
+  6245: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      A: () => mk,
+      E: () => Hk,
+      G: () => sk,
+      K: () => Mk,
+      L: () => yk,
+      M: () => zk,
+      O: () => rk,
+      S: () => Xk,
+      U: () => Dk,
+      W: () => wk,
+      Y: () => bk,
+      Z: () => Gk,
+      ab: () => Tk,
+      b: () => Wk,
+      db: () => vk,
+      e: () => Sk,
+      eb: () => uk,
+      f: () => fk,
+      h: () => Jk,
+      j: () => Vk,
+      m: () => gk,
+      q: () => Ak,
+      r: () => Uk,
+      v: () => Pk,
+      z: () => ek
     });
-    var Eu = yu(6322),
-      Ku = yu(174),
-      Qu = yu(4331);
-    const mu = "/shader-packs",
-      Ju = `${mu}/publish`;
+    var Rk = Bk(6253),
+      tk = Bk(152),
+      ak = Bk(4299);
+    const Xk = "/shader-packs",
+      bk = `${Xk}/publish`;
 
-    function Nu(uu) {
-      return `${mu}/${encodeURIComponent(uu)}`
+    function wk(kk) {
+      return `${Xk}/${encodeURIComponent(kk)}`
     }
-    let Xu = null;
+    let dk = null;
 
-    function Vu(uu) {
-      Xu = uu
-    }
-
-    function ru() {
-      return Xu
+    function sk(kk) {
+      dk = kk
     }
 
-    function Bu() {
-      Xu = null
+    function Vk() {
+      return dk
     }
 
-    function xu(uu) {
-      return uu.playerHasRank("developer") || uu.playerHasRank("admin")
+    function Jk() {
+      dk = null
     }
-    const Su = ["terrain", "water", "models", "sunShadows", "strict"],
-      pu = {
+
+    function Ak(kk) {
+      return kk.playerHasRank("developer") || kk.playerHasRank("admin")
+    }
+    const ek = ["terrain", "water", "models", "sunShadows", "strict"],
+      yk = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -297,89 +297,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function Tu(uu, Ru) {
-      return uu.withFeatures.includes(Ru) ? "with" : uu.withoutFeatures.includes(Ru) ? "without" : null
+    function fk(kk, Fk) {
+      return kk.withFeatures.includes(Fk) ? "with" : kk.withoutFeatures.includes(Fk) ? "without" : null
     }
 
-    function Wu(uu) {
-      return null === uu ? "with" : "with" === uu ? "without" : null
+    function mk(kk) {
+      return null === kk ? "with" : "with" === kk ? "without" : null
     }
 
-    function ju(uu) {
-      return "with" === uu ? "only" : null === uu ? "include" : void 0
+    function Wk(kk) {
+      return "with" === kk ? "only" : null === kk ? "include" : void 0
     }
 
-    function Hu(uu, Ru) {
-      const yu = Tu(uu, Ru),
-        Eu = uu => uu.filter((uu => uu !== Ru));
+    function vk(kk, Fk) {
+      const Bk = fk(kk, Fk),
+        Rk = kk => kk.filter((kk => kk !== Fk));
       return {
-        withFeatures: null === yu ? [...uu.withFeatures, Ru] : Eu(uu.withFeatures),
-        withoutFeatures: "with" === yu ? [...uu.withoutFeatures, Ru] : Eu(uu.withoutFeatures)
+        withFeatures: null === Bk ? [...kk.withFeatures, Fk] : Rk(kk.withFeatures),
+        withoutFeatures: "with" === Bk ? [...kk.withoutFeatures, Fk] : Rk(kk.withoutFeatures)
       }
     }
-    const du = "section",
-      bu = "sort",
-      Cu = "filters",
-      ku = "q",
-      eu = "banned",
-      Au = "popular",
-      Du = "strict";
+    const ik = "section",
+      Yk = "sort",
+      Lk = "filters",
+      Ok = "q",
+      Ek = "banned",
+      Sk = "popular",
+      Nk = "strict";
 
-    function Mu(uu) {
-      var Ru, yu, Ku;
-      const mu = uu.get(du),
-        Ju = (null !== (Ru = uu.get(Cu)) && void 0 !== Ru ? Ru : Du).split(","),
-        Nu = uu.get(eu);
+    function Hk(kk) {
+      var Fk, Bk, tk;
+      const Xk = kk.get(ik),
+        bk = (null !== (Fk = kk.get(Lk)) && void 0 !== Fk ? Fk : Nk).split(","),
+        wk = kk.get(Ek);
       return {
-        section: "favourites" === mu || "mine" === mu ? mu : "explore",
-        sort: null !== (yu = Eu.u.find((Ru => Ru === uu.get(bu)))) && void 0 !== yu ? yu : Au,
-        withFeatures: Su.filter((uu => Ju.includes(uu) && !Ju.includes(`-${uu}`))),
-        withoutFeatures: Su.filter((uu => Ju.includes(`-${uu}`))),
-        searchQuery: (null === (Ku = uu.get(ku)) || void 0 === Ku ? void 0 : Ku.slice(0, Eu.H)) || null,
-        pageNumber: (0, Qu.d)(uu.get(Qu.c)),
-        banned: "only" === Nu ? "with" : "include" === Nu ? null : "without"
+        section: "favourites" === Xk || "mine" === Xk ? Xk : "explore",
+        sort: null !== (Bk = Rk.B.find((Fk => Fk === kk.get(Yk)))) && void 0 !== Bk ? Bk : Sk,
+        withFeatures: ek.filter((kk => bk.includes(kk) && !bk.includes(`-${kk}`))),
+        withoutFeatures: ek.filter((kk => bk.includes(`-${kk}`))),
+        searchQuery: (null === (tk = kk.get(Ok)) || void 0 === tk ? void 0 : tk.slice(0, Rk.M)) || null,
+        pageNumber: (0, ak.g)(kk.get(ak.d)),
+        banned: "only" === wk ? "with" : "include" === wk ? null : "without"
       }
     }
 
-    function Iu(uu, Ru) {
-      var yu;
-      const Eu = su(Ru);
-      (0, Qu.h)(uu, du, "explore" === Ru.section ? null : Ru.section), (0, Qu.h)(uu, bu, Ru.sort === Au ? null : Ru.sort), (0, Qu.h)(uu, Cu, Eu === Du ? null : Eu), (0, Qu.h)(uu, ku, Ru.searchQuery), (0, Qu.h)(uu, eu, null !== (yu = ju(Ru.banned)) && void 0 !== yu ? yu : null), (0, Qu.j)(uu, Ru.pageNumber)
+    function uk(kk, Fk) {
+      var Bk;
+      const Rk = ck(Fk);
+      (0, ak.k)(kk, ik, "explore" === Fk.section ? null : Fk.section), (0, ak.k)(kk, Yk, Fk.sort === Sk ? null : Fk.sort), (0, ak.k)(kk, Lk, Rk === Nk ? null : Rk), (0, ak.k)(kk, Ok, Fk.searchQuery), (0, ak.k)(kk, Ek, null !== (Bk = Wk(Fk.banned)) && void 0 !== Bk ? Bk : null), (0, ak.l)(kk, Fk.pageNumber)
     }
 
-    function Gu(uu) {
-      const Ru = new URLSearchParams;
-      return Iu(Ru, {
+    function Mk(kk) {
+      const Fk = new URLSearchParams;
+      return uk(Fk, {
         section: "explore",
-        sort: Au,
-        withFeatures: "strict" === uu ? [uu] : [uu, "strict"],
+        sort: Sk,
+        withFeatures: "strict" === kk ? [kk] : [kk, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${mu}?${Ru.toString()}`
+      }), `${Xk}?${Fk.toString()}`
     }
 
-    function Uu(uu) {
-      return su(uu) === Du
+    function gk(kk) {
+      return ck(kk) === Nk
     }
 
-    function nu(uu) {
-      return null !== uu.searchQuery || "with" === uu.banned || su(uu) !== Du
+    function Uk(kk) {
+      return null !== kk.searchQuery || "with" === kk.banned || ck(kk) !== Nk
     }
 
-    function su(uu) {
-      return Su.flatMap((Ru => {
-        const yu = Tu(uu, Ru);
-        return "with" === yu ? [Ru] : "without" === yu ? [`-${Ru}`] : []
+    function ck(kk) {
+      return ek.flatMap((Fk => {
+        const Bk = fk(kk, Fk);
+        return "with" === Bk ? [Fk] : "without" === Bk ? [`-${Fk}`] : []
       })).join(",")
     }
-    const tu = {
+    const Gk = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      lu = {
+      Tk = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -387,78 +387,78 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function gu(uu) {
-      return Math.round(100 * Math.max(0, 1 - 1 / uu))
+    function rk(kk) {
+      return Math.round(100 * Math.max(0, 1 - 1 / kk))
     }
 
-    function cu(uu, Ru, yu, Ku) {
-      const Qu = [];
-      uu.isBanned && Qu.push({
+    function Dk(kk, Fk, Bk, tk) {
+      const ak = [];
+      kk.isBanned && ak.push({
         tone: "warning",
-        text: Ku("shaderPackListing:ownerBanned"),
+        text: tk("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: mu
-      } = uu;
-      if (null === uu.brokenError || mu && !mu.error || Qu.push({
+        pending: Xk
+      } = kk;
+      if (null === kk.brokenError || Xk && !Xk.error || ak.push({
           tone: "warning",
-          text: Ku("shaderPackListing:ownerBroken"),
-          detail: uu.brokenError
-        }), null !== mu && void 0 !== mu && mu.error) Qu.push({
+          text: tk("shaderPackListing:ownerBroken"),
+          detail: kk.brokenError
+        }), null !== Xk && void 0 !== Xk && Xk.error) ak.push({
         tone: "warning",
-        text: Ku(Ru ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, Eu.g)(mu.error) ? null : mu.error
+        text: tk(Fk ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, Rk.k)(Xk.error) ? null : Xk.error
       });
-      else if (mu) {
-        const uu = null === mu.renderNotBefore ? 0 : mu.renderNotBefore - yu,
-          Eu = String(Math.ceil(uu / 6e4)),
-          Ju = Ku(Ru ? uu > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : uu > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: Eu
+      else if (Xk) {
+        const kk = null === Xk.renderNotBefore ? 0 : Xk.renderNotBefore - Bk,
+          Rk = String(Math.ceil(kk / 6e4)),
+          bk = tk(Fk ? kk > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : kk > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: Rk
           });
-        Qu.push({
+        ak.push({
           tone: "info",
-          text: Ju,
+          text: bk,
           detail: null
         })
       }
-      return uu.listed || Qu.push({
+      return kk.listed || ak.push({
         tone: "info",
-        text: Ku("shaderPackListing:ownerUnlisted"),
+        text: tk("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), Qu
+      }), ak
     }
 
-    function Lu(uu) {
-      return Math.max(1, Math.round(uu / 1024))
+    function zk(kk) {
+      return Math.max(1, Math.round(kk / 1024))
     }
 
-    function zu(uu, Ru, yu) {
-      return uu instanceof Ku.e && uu.errorMessageForUser ? uu.errorMessageForUser : Ru(yu)
+    function Pk(kk, Fk, Bk) {
+      return kk instanceof tk.c && kk.errorMessageForUser ? kk.errorMessageForUser : Fk(Bk)
     }
   },
-  6322: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      A: () => Eu,
-      D: () => Bu,
-      H: () => Vu,
-      K: () => Hu,
-      N: () => ru,
-      R: () => Xu,
-      c: () => xu,
-      e: () => pu,
-      f: () => Su,
-      g: () => ju,
-      h: () => bu,
-      l: () => Nu,
-      o: () => Ku,
-      q: () => du,
-      u: () => Qu,
-      w: () => Ju,
-      x: () => mu
+  6253: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      B: () => ak,
+      D: () => bk,
+      G: () => Xk,
+      I: () => Rk,
+      J: () => Jk,
+      M: () => sk,
+      Q: () => vk,
+      R: () => Vk,
+      T: () => dk,
+      e: () => Ak,
+      h: () => yk,
+      i: () => ek,
+      k: () => Wk,
+      n: () => Yk,
+      p: () => wk,
+      t: () => tk,
+      x: () => ik
     });
-    const Eu = ["forest", "desert", "water", "night", "cave"];
-    const Ku = {
+    const Rk = ["forest", "desert", "water", "night", "cave"];
+    const tk = {
         full: {
           width: 3840,
           height: 2160
@@ -472,43 +472,43 @@ export const modules = {
           height: 360
         }
       },
-      Qu = ["popular", "updated", "newest"],
-      mu = 3,
-      Ju = 32,
-      Nu = 300;
+      ak = ["popular", "updated", "newest"],
+      Xk = 3,
+      bk = 32,
+      wk = 300;
 
-    function Xu(uu, Ru) {
-      return uu.slice(0, Ru).replace(/[\uD800-\uDBFF]$/, "")
+    function dk(kk, Fk) {
+      return kk.slice(0, Fk).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const Vu = 64,
-      ru = 512,
-      Bu = 18e5;
-    const xu = "Bloxdhub",
-      Su = "https://bloxdhub.com/shaders";
+    const sk = 64,
+      Vk = 512,
+      Jk = 18e5;
+    const Ak = "Bloxdhub",
+      ek = "https://bloxdhub.com/shaders";
 
-    function pu(uu) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(uu)}`
+    function yk(kk) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(kk)}`
     }
-    const Tu = "Screenshot generation failed.",
-      Wu = "Its screenshots couldn't be generated:";
+    const fk = "Screenshot generation failed.",
+      mk = "Its screenshots couldn't be generated:";
 
-    function ju(uu) {
-      var Ru;
-      return uu === Tu || null !== (Ru = null === uu || void 0 === uu ? void 0 : uu.startsWith(Wu)) && void 0 !== Ru && Ru
-    }
-
-    function Hu(uu, Ru) {
-      return `shaderPacks/${uu}/${Ru}.json`
+    function Wk(kk) {
+      var Fk;
+      return kk === fk || null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.startsWith(mk)) && void 0 !== Fk && Fk
     }
 
-    function du(uu, Ru, yu, Eu) {
-      return null === Ru.renderId ? bu(uu, Ru.baselineVersion, yu, Eu) : `${uu}/${function(uu,Ru,yu,Eu){return`shaderPacks/${uu}/${Ru}/${yu}-${Eu}.webp`}(Ru.packId,Ru.renderId,yu,Eu)}`
+    function vk(kk, Fk) {
+      return `shaderPacks/${kk}/${Fk}.json`
     }
 
-    function bu(uu, Ru, yu, Eu) {
-      return `${uu}/${function(uu,Ru,yu){return`shaderPacks/baseline/${uu}/${Ru}-${yu}.webp`}(Ru,yu,Eu)}`
+    function ik(kk, Fk, Bk, Rk) {
+      return null === Fk.renderId ? Yk(kk, Fk.baselineVersion, Bk, Rk) : `${kk}/${function(kk,Fk,Bk,Rk){return`shaderPacks/${kk}/${Fk}/${Bk}-${Rk}.webp`}(Fk.packId,Fk.renderId,Bk,Rk)}`
+    }
+
+    function Yk(kk, Fk, Bk, Rk) {
+      return `${kk}/${function(kk,Fk,Bk){return`shaderPacks/baseline/${kk}/${Fk}-${Bk}.webp`}(Fk,Bk,Rk)}`
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

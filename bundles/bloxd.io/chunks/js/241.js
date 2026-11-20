@@ -1,116 +1,116 @@
 export const id = 241;
 export const ids = [241];
 export const modules = {
-  39774: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Tu,
-      g: () => Hu
+  39623: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => fk,
+      d: () => vk
     });
-    var Eu = yu(39560),
-      Ku = yu(39566),
-      Qu = yu(39667),
-      mu = yu(36858),
-      Ju = yu(36830),
-      Nu = yu(39780),
-      Xu = yu(38448),
-      Vu = yu(36871),
-      ru = yu(39430),
-      Bu = yu(37842),
-      xu = yu(37525),
-      Su = yu(39520),
-      pu = yu(39582);
-    let Tu = (() => {
-      var uu;
-      let Ru, yu, Vu, Tu, Wu, ju, Hu, du, bu, Cu, ku, eu, Au, Du, Mu, Iu, Gu, Uu, nu = Nu.e,
-        su = [],
-        tu = [],
-        lu = [],
-        gu = [],
-        cu = [],
-        Lu = [],
-        zu = [],
-        Fu = [],
-        wu = [],
-        Zu = [],
-        hu = [],
-        Pu = [],
-        iu = [],
-        Yu = [],
-        ou = [],
-        qu = [],
-        Ou = [],
-        vu = [],
-        au = [],
-        fu = [],
-        uR = [],
-        RR = [],
-        yR = [],
-        ER = [],
-        KR = [];
-      return uu = class extends nu {
+    var Rk = Bk(39397),
+      tk = Bk(39404),
+      ak = Bk(39506),
+      Xk = Bk(36781),
+      bk = Bk(36758),
+      wk = Bk(39628),
+      dk = Bk(38320),
+      sk = Bk(36798),
+      Vk = Bk(39296),
+      Jk = Bk(37759),
+      Ak = Bk(37459),
+      ek = Bk(39360),
+      yk = Bk(39414);
+    let fk = (() => {
+      var kk;
+      let Fk, Bk, sk, fk, mk, Wk, vk, ik, Yk, Lk, Ok, Ek, Sk, Nk, Hk, uk, Mk, gk, Uk = wk.b,
+        ck = [],
+        Gk = [],
+        Tk = [],
+        rk = [],
+        Dk = [],
+        zk = [],
+        Pk = [],
+        hk = [],
+        qk = [],
+        Ck = [],
+        Zk = [],
+        pk = [],
+        Kk = [],
+        xk = [],
+        jk = [],
+        lk = [],
+        nk = [],
+        Ik = [],
+        Qk = [],
+        kF = [],
+        FF = [],
+        BF = [],
+        RF = [],
+        tF = [],
+        aF = [];
+      return kk = class extends Uk {
         get position() {
           return this._position
         }
-        set position(uu) {
-          this._position = uu
+        set position(kk) {
+          this._position = kk
         }
-        set upVector(uu) {
-          this._upVector = uu
+        set upVector(kk) {
+          this._upVector = kk
         }
         get upVector() {
           return this._upVector
         }
         get screenArea() {
-          let Ru, yu;
-          if (this.mode === uu.PERSPECTIVE_CAMERA) this.fovMode === uu.FOVMODE_VERTICAL_FIXED ? (yu = 2 * this.minZ * Math.tan(this.fov / 2), Ru = this.eS().getAspectRatio(this) * yu) : (Ru = 2 * this.minZ * Math.tan(this.fov / 2), yu = Ru / this.eS().getAspectRatio(this));
+          let Fk, Bk;
+          if (this.mode === kk.PERSPECTIVE_CAMERA) this.fovMode === kk.FOVMODE_VERTICAL_FIXED ? (Bk = 2 * this.minZ * Math.tan(this.fov / 2), Fk = this.ne().getAspectRatio(this) * Bk) : (Fk = 2 * this.minZ * Math.tan(this.fov / 2), Bk = Fk / this.ne().getAspectRatio(this));
           else {
-            const uu = this.eS().getRenderWidth() / 2,
-              Eu = this.eS().getRenderHeight() / 2;
-            Ru = (this.orthoRight ?? uu) - (this.orthoLeft ?? -uu), yu = (this.orthoTop ?? Eu) - (this.orthoBottom ?? -Eu)
+            const kk = this.ne().getRenderWidth() / 2,
+              Rk = this.ne().getRenderHeight() / 2;
+            Fk = (this.orthoRight ?? kk) - (this.orthoLeft ?? -kk), Bk = (this.orthoTop ?? Rk) - (this.orthoBottom ?? -Rk)
           }
-          return Ru * yu
+          return Fk * Bk
         }
-        set orthoLeft(uu) {
-          this._orthoLeft = uu;
-          for (const Ru of this._rigCameras) Ru.orthoLeft = uu
+        set orthoLeft(kk) {
+          this._orthoLeft = kk;
+          for (const Fk of this._rigCameras) Fk.orthoLeft = kk
         }
         get orthoLeft() {
           return this._orthoLeft
         }
-        set orthoRight(uu) {
-          this._orthoRight = uu;
-          for (const Ru of this._rigCameras) Ru.orthoRight = uu
+        set orthoRight(kk) {
+          this._orthoRight = kk;
+          for (const Fk of this._rigCameras) Fk.orthoRight = kk
         }
         get orthoRight() {
           return this._orthoRight
         }
-        set orthoBottom(uu) {
-          this._orthoBottom = uu;
-          for (const Ru of this._rigCameras) Ru.orthoBottom = uu
+        set orthoBottom(kk) {
+          this._orthoBottom = kk;
+          for (const Fk of this._rigCameras) Fk.orthoBottom = kk
         }
         get orthoBottom() {
           return this._orthoBottom
         }
-        set orthoTop(uu) {
-          this._orthoTop = uu;
-          for (const Ru of this._rigCameras) Ru.orthoTop = uu
+        set orthoTop(kk) {
+          this._orthoTop = kk;
+          for (const Fk of this._rigCameras) Fk.orthoTop = kk
         }
         get orthoTop() {
           return this._orthoTop
         }
-        setFocalLength(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 36;
-          this.fov = 2 * Math.atan(Ru / (2 * uu))
+        setFocalLength(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 36;
+          this.fov = 2 * Math.atan(Fk / (2 * kk))
         }
         get inertia() {
           return this._baseInertia
         }
-        set inertia(uu) {
-          this._baseInertia = uu
+        set inertia(kk) {
+          this._baseInertia = kk
         }
-        set mode(uu) {
-          this._mode = uu;
-          for (const Ru of this._rigCameras) Ru.mode = uu
+        set mode(kk) {
+          this._mode = kk;
+          for (const Fk of this._rigCameras) Fk.mode = kk
         }
         get mode() {
           return this._mode
@@ -118,9 +118,9 @@ export const modules = {
         get hasMoved() {
           return this._hasMoved
         }
-        constructor(Ru, yu, Ku) {
-          let Nu = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-          (0, Su.d)(), super(Ru, Ku, !1), this.inputs = (0, Eu.l)(this, su), this._position = (0, Eu.l)(this, tu, Ju.p.Zero()), this._upVector = ((0, Eu.l)(this, lu), (0, Eu.l)(this, gu, Ju.p.Up())), this.oblique = ((0, Eu.l)(this, cu), null), this._orthoLeft = null, this._orthoRight = null, this._orthoBottom = null, this._orthoTop = null, this.fov = (0, Eu.l)(this, Lu, .8), this.projectionPlaneTilt = ((0, Eu.l)(this, zu), (0, Eu.l)(this, Fu, 0)), this.minZ = ((0, Eu.l)(this, wu), (0, Eu.l)(this, Zu, 1)), this.maxZ = ((0, Eu.l)(this, hu), (0, Eu.l)(this, Pu, 1e4)), this._baseInertia = ((0, Eu.l)(this, iu), .9), this._mode = uu.PERSPECTIVE_CAMERA, this.isIntermediate = !1, this.viewport = new Bu.c(0, 0, 1, 1), this.layerMask = (0, Eu.l)(this, Yu, 268435455), this.fovMode = ((0, Eu.l)(this, ou), (0, Eu.l)(this, qu, uu.FOVMODE_VERTICAL_FIXED)), this.cameraRigMode = ((0, Eu.l)(this, Ou), (0, Eu.l)(this, vu, uu.RIG_MODE_NONE)), this.interaxialDistance = ((0, Eu.l)(this, au), (0, Eu.l)(this, fu, void 0)), this.isStereoscopicSideBySide = ((0, Eu.l)(this, uR), (0, Eu.l)(this, RR, void 0)), this.ignoreCameraMaxZ = ((0, Eu.l)(this, yR), (0, Eu.l)(this, ER, !1)), this.customRenderTargets = ((0, Eu.l)(this, KR), []), this.outputRenderTarget = null, this.onViewMatrixChangedObservable = new mu.b, this.onProjectionMatrixChangedObservable = new mu.b, this.onAfterCheckInputsObservable = new mu.b, this.onRestoreStateObservable = new mu.b, this.isRigCamera = !1, this._hasMoved = !1, this._rigCameras = new Array, this._skipRendering = !1, this._projectionMatrix = new Ju.d, this._postProcesses = new Array, this._activeMeshes = new Qu.i(256), this._globalPosition = Ju.p.Zero(), this._computedViewMatrix = Ju.d.Identity(), this._doNotComputeProjectionMatrix = !1, this._transformMatrix = Ju.d.Zero(), this._refreshFrustumPlanes = !0, this._absoluteRotation = Ju.f.Identity(), this._isCamera = !0, this._isLeftCamera = !1, this._isRightCamera = !1, this.layerMask = this.lD().defaultCameraLayerMask, this.lD().addCamera(this), Nu && !this.lD().activeCamera && (this.lD().activeCamera = this), this.position = yu, this.renderPassId = this.lD().eS().createRenderPassId(`Camera ${Ru}`)
+        constructor(Fk, Bk, tk) {
+          let wk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+          (0, ek.d)(), super(Fk, tk, !1), this.inputs = (0, Rk.l)(this, ck), this._position = (0, Rk.l)(this, Gk, bk.s.Zero()), this._upVector = ((0, Rk.l)(this, Tk), (0, Rk.l)(this, rk, bk.s.Up())), this.oblique = ((0, Rk.l)(this, Dk), null), this._orthoLeft = null, this._orthoRight = null, this._orthoBottom = null, this._orthoTop = null, this.fov = (0, Rk.l)(this, zk, .8), this.projectionPlaneTilt = ((0, Rk.l)(this, Pk), (0, Rk.l)(this, hk, 0)), this.minZ = ((0, Rk.l)(this, qk), (0, Rk.l)(this, Ck, 1)), this.maxZ = ((0, Rk.l)(this, Zk), (0, Rk.l)(this, pk, 1e4)), this._baseInertia = ((0, Rk.l)(this, Kk), .9), this._mode = kk.PERSPECTIVE_CAMERA, this.isIntermediate = !1, this.viewport = new Jk.d(0, 0, 1, 1), this.layerMask = (0, Rk.l)(this, xk, 268435455), this.fovMode = ((0, Rk.l)(this, jk), (0, Rk.l)(this, lk, kk.FOVMODE_VERTICAL_FIXED)), this.cameraRigMode = ((0, Rk.l)(this, nk), (0, Rk.l)(this, Ik, kk.RIG_MODE_NONE)), this.interaxialDistance = ((0, Rk.l)(this, Qk), (0, Rk.l)(this, kF, void 0)), this.isStereoscopicSideBySide = ((0, Rk.l)(this, FF), (0, Rk.l)(this, BF, void 0)), this.ignoreCameraMaxZ = ((0, Rk.l)(this, RF), (0, Rk.l)(this, tF, !1)), this.customRenderTargets = ((0, Rk.l)(this, aF), []), this.outputRenderTarget = null, this.onViewMatrixChangedObservable = new Xk.e, this.onProjectionMatrixChangedObservable = new Xk.e, this.onAfterCheckInputsObservable = new Xk.e, this.onRestoreStateObservable = new Xk.e, this.isRigCamera = !1, this._hasMoved = !1, this._rigCameras = new Array, this._skipRendering = !1, this._projectionMatrix = new bk.c, this._postProcesses = new Array, this._activeMeshes = new ak.c(256), this._globalPosition = bk.s.Zero(), this._computedViewMatrix = bk.c.Identity(), this._doNotComputeProjectionMatrix = !1, this._transformMatrix = bk.c.Zero(), this._refreshFrustumPlanes = !0, this._absoluteRotation = bk.e.Identity(), this._isCamera = !0, this._isLeftCamera = !1, this._isRightCamera = !1, this.layerMask = this.XN().defaultCameraLayerMask, this.XN().addCamera(this), wk && !this.XN().activeCamera && (this.XN().activeCamera = this), this.position = Bk, this.renderPassId = this.XN().ne().createRenderPassId(`Camera ${Fk}`)
         }
         storeState() {
           return this._stateStored = !0, this._storedFov = this.fov, this
@@ -135,17 +135,17 @@ export const modules = {
           return !!this._restoreStateValues() && (this.onRestoreStateObservable.notifyObservers(this), !0)
         }
         getClassName() {
-          return "GT"
+          return "rf"
         }
-        toString(uu) {
-          let Ru = "Name: " + this.name;
-          if (Ru += ", type: " + this.getClassName(), this.animations)
-            for (let yu = 0; yu < this.animations.length; yu++) Ru += ", animation[0]: " + this.animations[yu].toString(uu);
-          return Ru
+        toString(kk) {
+          let Fk = "Name: " + this.name;
+          if (Fk += ", type: " + this.getClassName(), this.animations)
+            for (let Bk = 0; Bk < this.animations.length; Bk++) Fk += ", animation[0]: " + this.animations[Bk].toString(kk);
+          return Fk
         }
         applyVerticalCorrection() {
-          const uu = this.absoluteRotation.toEulerAngles();
-          this.projectionPlaneTilt = this._scene.useRightHandedSystem ? -uu.x : uu.x
+          const kk = this.absoluteRotation.toEulerAngles();
+          this.projectionPlaneTilt = this._scene.useRightHandedSystem ? -kk.x : kk.x
         }
         get globalPosition() {
           return this._globalPosition
@@ -153,21 +153,21 @@ export const modules = {
         getActiveMeshes() {
           return this._activeMeshes
         }
-        isActiveMesh(uu) {
-          return -1 !== this._activeMeshes.indexOf(uu)
+        isActiveMesh(kk) {
+          return -1 !== this._activeMeshes.indexOf(kk)
         }
         isReady() {
-          let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          if (uu)
-            for (const Ru of this._postProcesses)
-              if (Ru && !Ru.isReady()) return !1;
-          return super.isReady(uu)
+          let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (kk)
+            for (const Fk of this._postProcesses)
+              if (Fk && !Fk.isReady()) return !1;
+          return super.isReady(kk)
         }
         _initCache() {
-          super._initCache(), this._cache.position = new Ju.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.upVector = new Ju.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.mode = void 0, this._cache.minZ = void 0, this._cache.maxZ = void 0, this._cache.fov = void 0, this._cache.fovMode = void 0, this._cache.aspectRatio = void 0, this._cache.orthoLeft = void 0, this._cache.orthoRight = void 0, this._cache.orthoBottom = void 0, this._cache.orthoTop = void 0, this._cache.obliqueAngle = void 0, this._cache.obliqueLength = void 0, this._cache.obliqueOffset = void 0, this._cache.renderWidth = void 0, this._cache.renderHeight = void 0
+          super._initCache(), this._cache.position = new bk.s(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.upVector = new bk.s(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.mode = void 0, this._cache.minZ = void 0, this._cache.maxZ = void 0, this._cache.fov = void 0, this._cache.fovMode = void 0, this._cache.aspectRatio = void 0, this._cache.orthoLeft = void 0, this._cache.orthoRight = void 0, this._cache.orthoBottom = void 0, this._cache.orthoTop = void 0, this._cache.obliqueAngle = void 0, this._cache.obliqueLength = void 0, this._cache.obliqueOffset = void 0, this._cache.renderWidth = void 0, this._cache.renderHeight = void 0
         }
-        _updateCache(uu) {
-          uu || super._updateCache(), this._cache.position.Oyu(this.position), this._cache.upVector.Oyu(this.upVector)
+        _updateCache(kk) {
+          kk || super._updateCache(), this._cache.position.sBk(this.position), this._cache.upVector.sBk(this.upVector)
         }
         _isSynchronized() {
           return this._isSynchronizedViewMatrix() && this._isSynchronizedProjectionMatrix()
@@ -176,16 +176,16 @@ export const modules = {
           return !!super._isSynchronized() && (this._cache.position.equals(this.position) && this._cache.upVector.equals(this.upVector) && this.isSynchronizedWithParent())
         }
         _isSynchronizedProjectionMatrix() {
-          const Ru = this.ignoreCameraMaxZ ? 0 : this.maxZ;
-          let yu = this._cache.mode === this.mode && this._cache.minZ === this.minZ && this._cache.maxZ === Ru;
-          if (!yu) return !1;
-          const Eu = this.eS();
-          return this.mode === uu.PERSPECTIVE_CAMERA ? yu = this._cache.fov === this.fov && this._cache.fovMode === this.fovMode && this._cache.aspectRatio === Eu.getAspectRatio(this) && this._cache.projectionPlaneTilt === this.projectionPlaneTilt : (yu = this._cache.orthoLeft === this.orthoLeft && this._cache.orthoRight === this.orthoRight && this._cache.orthoBottom === this.orthoBottom && this._cache.orthoTop === this.orthoTop && this._cache.renderWidth === Eu.getRenderWidth() && this._cache.renderHeight === Eu.getRenderHeight(), this.oblique && (yu = yu && this._cache.obliqueAngle === this.oblique.angle && this._cache.obliqueLength === this.oblique.length && this._cache.obliqueOffset === this.oblique.offset)), yu
+          const Fk = this.ignoreCameraMaxZ ? 0 : this.maxZ;
+          let Bk = this._cache.mode === this.mode && this._cache.minZ === this.minZ && this._cache.maxZ === Fk;
+          if (!Bk) return !1;
+          const Rk = this.ne();
+          return this.mode === kk.PERSPECTIVE_CAMERA ? Bk = this._cache.fov === this.fov && this._cache.fovMode === this.fovMode && this._cache.aspectRatio === Rk.getAspectRatio(this) && this._cache.projectionPlaneTilt === this.projectionPlaneTilt : (Bk = this._cache.orthoLeft === this.orthoLeft && this._cache.orthoRight === this.orthoRight && this._cache.orthoBottom === this.orthoBottom && this._cache.orthoTop === this.orthoTop && this._cache.renderWidth === Rk.getRenderWidth() && this._cache.renderHeight === Rk.getRenderHeight(), this.oblique && (Bk = Bk && this._cache.obliqueAngle === this.oblique.angle && this._cache.obliqueLength === this.oblique.length && this._cache.obliqueOffset === this.oblique.offset)), Bk
         }
-        attachControl(uu, Ru) {}
-        detachControl(uu) {}
+        attachControl(kk, Fk) {}
+        detachControl(kk) {}
         update() {
-          this._hasMoved = !1, this._checkInputs(), this.cameraRigMode !== uu.RIG_MODE_NONE && this._updateRigCameras(), this.getViewMatrix(), this.getProjectionMatrix()
+          this._hasMoved = !1, this._checkInputs(), this.cameraRigMode !== kk.RIG_MODE_NONE && this._updateRigCameras(), this.getViewMatrix(), this.getProjectionMatrix()
         }
         _checkInputs() {
           this.onAfterCheckInputsObservable.notifyObservers(this)
@@ -197,109 +197,109 @@ export const modules = {
           return this._rigPostProcess
         }
         _getFirstPostProcess() {
-          for (let uu = 0; uu < this._postProcesses.length; uu++)
-            if (null !== this._postProcesses[uu]) return this._postProcesses[uu];
+          for (let kk = 0; kk < this._postProcesses.length; kk++)
+            if (null !== this._postProcesses[kk]) return this._postProcesses[kk];
           return null
         }
         _cascadePostProcessesToRigCams() {
-          const uu = this._getFirstPostProcess();
-          uu && uu.markTextureDirty();
-          for (let Ru = 0, yu = this._rigCameras.length; Ru < yu; Ru++) {
-            const uu = this._rigCameras[Ru],
-              yu = uu._rigPostProcess;
-            if (yu) {
-              "pass" === yu.getEffectName() && (uu.isIntermediate = 0 === this._postProcesses.length), uu._postProcesses = this._postProcesses.slice(0).concat(yu), yu.markTextureDirty()
-            } else uu._postProcesses = this._postProcesses.slice(0)
+          const kk = this._getFirstPostProcess();
+          kk && kk.markTextureDirty();
+          for (let Fk = 0, Bk = this._rigCameras.length; Fk < Bk; Fk++) {
+            const kk = this._rigCameras[Fk],
+              Bk = kk._rigPostProcess;
+            if (Bk) {
+              "pass" === Bk.getEffectName() && (kk.isIntermediate = 0 === this._postProcesses.length), kk._postProcesses = this._postProcesses.slice(0).concat(Bk), Bk.markTextureDirty()
+            } else kk._postProcesses = this._postProcesses.slice(0)
           }
         }
-        attachPostProcess(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          return !uu.isReusable() && this._postProcesses.indexOf(uu) > -1 ? (Xu.e.Error("You're trying to reuse a post process not defined as reusable."), 0) : (null == Ru || Ru < 0 ? this._postProcesses.push(uu) : null === this._postProcesses[Ru] ? this._postProcesses[Ru] = uu : this._postProcesses.splice(Ru, 0, uu), this._cascadePostProcessesToRigCams(), this._scene.prePassRenderer && this._scene.prePassRenderer.Eyu(), this._postProcesses.indexOf(uu))
+        attachPostProcess(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          return !kk.isReusable() && this._postProcesses.indexOf(kk) > -1 ? (dk.b.Error("You're trying to reuse a post process not defined as reusable."), 0) : (null == Fk || Fk < 0 ? this._postProcesses.push(kk) : null === this._postProcesses[Fk] ? this._postProcesses[Fk] = kk : this._postProcesses.splice(Fk, 0, kk), this._cascadePostProcessesToRigCams(), this._scene.prePassRenderer && this._scene.prePassRenderer.mFk(), this._postProcesses.indexOf(kk))
         }
-        detachPostProcess(uu) {
-          const Ru = this._postProcesses.indexOf(uu); - 1 !== Ru && (this._postProcesses[Ru] = null), this._scene.prePassRenderer && this._scene.prePassRenderer.Eyu(), this._cascadePostProcessesToRigCams()
+        detachPostProcess(kk) {
+          const Fk = this._postProcesses.indexOf(kk); - 1 !== Fk && (this._postProcesses[Fk] = null), this._scene.prePassRenderer && this._scene.prePassRenderer.mFk(), this._cascadePostProcessesToRigCams()
         }
         getWorldMatrix() {
           return this._isSynchronizedViewMatrix() || this.getViewMatrix(), this._worldMatrix
         }
         _getViewMatrix() {
-          return Ju.d.Identity()
+          return bk.c.Identity()
         }
-        getViewMatrix(uu) {
-          return !uu && this._isSynchronizedViewMatrix() || (this._hasMoved = !0, this.updateCache(), this._computedViewMatrix = this._getViewMatrix(), this._currentRenderId = this.lD().getRenderId(), this._childUpdateId++, this._refreshFrustumPlanes = !0, this._cameraRigParams && this._cameraRigParams.vrPreViewMatrix && this._computedViewMatrix.multiplyToRef(this._cameraRigParams.vrPreViewMatrix, this._computedViewMatrix), this.parent && this.parent.onViewMatrixChangedObservable && this.parent.onViewMatrixChangedObservable.notifyObservers(this.parent), this.onViewMatrixChangedObservable.notifyObservers(this), this._computedViewMatrix.invertToRef(this._worldMatrix), this._worldMatrix.getTranslationToRef(this._globalPosition)), this._computedViewMatrix
+        getViewMatrix(kk) {
+          return !kk && this._isSynchronizedViewMatrix() || (this._hasMoved = !0, this.updateCache(), this._computedViewMatrix = this._getViewMatrix(), this._currentRenderId = this.XN().getRenderId(), this._childUpdateId++, this._refreshFrustumPlanes = !0, this._cameraRigParams && this._cameraRigParams.vrPreViewMatrix && this._computedViewMatrix.multiplyToRef(this._cameraRigParams.vrPreViewMatrix, this._computedViewMatrix), this.parent && this.parent.onViewMatrixChangedObservable && this.parent.onViewMatrixChangedObservable.notifyObservers(this.parent), this.onViewMatrixChangedObservable.notifyObservers(this), this._computedViewMatrix.invertToRef(this._worldMatrix), this._worldMatrix.getTranslationToRef(this._globalPosition)), this._computedViewMatrix
         }
-        freezeProjectionMatrix(uu) {
-          this._doNotComputeProjectionMatrix = !0, void 0 !== uu && (this._projectionMatrix = uu)
+        freezeProjectionMatrix(kk) {
+          this._doNotComputeProjectionMatrix = !0, void 0 !== kk && (this._projectionMatrix = kk)
         }
         unfreezeProjectionMatrix() {
           this._doNotComputeProjectionMatrix = !1
         }
-        getProjectionMatrix(Ru) {
-          if (this._doNotComputeProjectionMatrix || !Ru && this._isSynchronizedProjectionMatrix()) return this._projectionMatrix;
-          const yu = this.ignoreCameraMaxZ ? 0 : this.maxZ;
-          this._cache.mode = this.mode, this._cache.minZ = this.minZ, this._cache.maxZ = yu, this._refreshFrustumPlanes = !0;
-          const Eu = this.eS(),
-            Ku = this.lD(),
-            Qu = Eu.CEu;
-          if (this.mode === uu.PERSPECTIVE_CAMERA) {
-            let Ru;
-            this._cache.fov = this.fov, this._cache.fovMode = this.fovMode, this._cache.aspectRatio = Eu.getAspectRatio(this), this._cache.projectionPlaneTilt = this.projectionPlaneTilt, this.minZ <= 0 && (this.minZ = .1), Ru = Ku.useRightHandedSystem ? Ju.d.PerspectiveFovRHToRef : Ju.d.PerspectiveFovLHToRef, Ru(this.fov, Eu.getAspectRatio(this), Qu ? yu : this.minZ, Qu ? this.minZ : yu, this._projectionMatrix, this.fovMode === uu.FOVMODE_VERTICAL_FIXED, Eu.isNDCHalfZRange, this.projectionPlaneTilt, Qu)
+        getProjectionMatrix(Fk) {
+          if (this._doNotComputeProjectionMatrix || !Fk && this._isSynchronizedProjectionMatrix()) return this._projectionMatrix;
+          const Bk = this.ignoreCameraMaxZ ? 0 : this.maxZ;
+          this._cache.mode = this.mode, this._cache.minZ = this.minZ, this._cache.maxZ = Bk, this._refreshFrustumPlanes = !0;
+          const Rk = this.ne(),
+            tk = this.XN(),
+            ak = Rk.rBk;
+          if (this.mode === kk.PERSPECTIVE_CAMERA) {
+            let Fk;
+            this._cache.fov = this.fov, this._cache.fovMode = this.fovMode, this._cache.aspectRatio = Rk.getAspectRatio(this), this._cache.projectionPlaneTilt = this.projectionPlaneTilt, this.minZ <= 0 && (this.minZ = .1), Fk = tk.useRightHandedSystem ? bk.c.PerspectiveFovRHToRef : bk.c.PerspectiveFovLHToRef, Fk(this.fov, Rk.getAspectRatio(this), ak ? Bk : this.minZ, ak ? this.minZ : Bk, this._projectionMatrix, this.fovMode === kk.FOVMODE_VERTICAL_FIXED, Rk.isNDCHalfZRange, this.projectionPlaneTilt, ak)
           } else {
-            const uu = Eu.getRenderWidth() / 2,
-              Ru = Eu.getRenderHeight() / 2;
-            Ku.useRightHandedSystem ? this.oblique ? Ju.d.ObliqueOffCenterRHToRef(this.orthoLeft ?? -uu, this.orthoRight ?? uu, this.orthoBottom ?? -Ru, this.orthoTop ?? Ru, Qu ? yu : this.minZ, Qu ? this.minZ : yu, this.oblique.length, this.oblique.angle, this._computeObliqueDistance(this.oblique.offset), this._projectionMatrix, Eu.isNDCHalfZRange) : Ju.d.OrthoOffCenterRHToRef(this.orthoLeft ?? -uu, this.orthoRight ?? uu, this.orthoBottom ?? -Ru, this.orthoTop ?? Ru, Qu ? yu : this.minZ, Qu ? this.minZ : yu, this._projectionMatrix, Eu.isNDCHalfZRange) : this.oblique ? Ju.d.ObliqueOffCenterLHToRef(this.orthoLeft ?? -uu, this.orthoRight ?? uu, this.orthoBottom ?? -Ru, this.orthoTop ?? Ru, Qu ? yu : this.minZ, Qu ? this.minZ : yu, this.oblique.length, this.oblique.angle, this._computeObliqueDistance(this.oblique.offset), this._projectionMatrix, Eu.isNDCHalfZRange) : Ju.d.OrthoOffCenterLHToRef(this.orthoLeft ?? -uu, this.orthoRight ?? uu, this.orthoBottom ?? -Ru, this.orthoTop ?? Ru, Qu ? yu : this.minZ, Qu ? this.minZ : yu, this._projectionMatrix, Eu.isNDCHalfZRange), this._cache.orthoLeft = this.orthoLeft, this._cache.orthoRight = this.orthoRight, this._cache.orthoBottom = this.orthoBottom, this._cache.orthoTop = this.orthoTop, this._cache.obliqueAngle = this.oblique?.angle, this._cache.obliqueLength = this.oblique?.length, this._cache.obliqueOffset = this.oblique?.offset, this._cache.renderWidth = Eu.getRenderWidth(), this._cache.renderHeight = Eu.getRenderHeight()
+            const kk = Rk.getRenderWidth() / 2,
+              Fk = Rk.getRenderHeight() / 2;
+            tk.useRightHandedSystem ? this.oblique ? bk.c.ObliqueOffCenterRHToRef(this.orthoLeft ?? -kk, this.orthoRight ?? kk, this.orthoBottom ?? -Fk, this.orthoTop ?? Fk, ak ? Bk : this.minZ, ak ? this.minZ : Bk, this.oblique.length, this.oblique.angle, this._computeObliqueDistance(this.oblique.offset), this._projectionMatrix, Rk.isNDCHalfZRange) : bk.c.OrthoOffCenterRHToRef(this.orthoLeft ?? -kk, this.orthoRight ?? kk, this.orthoBottom ?? -Fk, this.orthoTop ?? Fk, ak ? Bk : this.minZ, ak ? this.minZ : Bk, this._projectionMatrix, Rk.isNDCHalfZRange) : this.oblique ? bk.c.ObliqueOffCenterLHToRef(this.orthoLeft ?? -kk, this.orthoRight ?? kk, this.orthoBottom ?? -Fk, this.orthoTop ?? Fk, ak ? Bk : this.minZ, ak ? this.minZ : Bk, this.oblique.length, this.oblique.angle, this._computeObliqueDistance(this.oblique.offset), this._projectionMatrix, Rk.isNDCHalfZRange) : bk.c.OrthoOffCenterLHToRef(this.orthoLeft ?? -kk, this.orthoRight ?? kk, this.orthoBottom ?? -Fk, this.orthoTop ?? Fk, ak ? Bk : this.minZ, ak ? this.minZ : Bk, this._projectionMatrix, Rk.isNDCHalfZRange), this._cache.orthoLeft = this.orthoLeft, this._cache.orthoRight = this.orthoRight, this._cache.orthoBottom = this.orthoBottom, this._cache.orthoTop = this.orthoTop, this._cache.obliqueAngle = this.oblique?.angle, this._cache.obliqueLength = this.oblique?.length, this._cache.obliqueOffset = this.oblique?.offset, this._cache.renderWidth = Rk.getRenderWidth(), this._cache.renderHeight = Rk.getRenderHeight()
           }
           return this.onProjectionMatrixChangedObservable.notifyObservers(this), this._projectionMatrix
         }
         getTransformationMatrix() {
           return this._computedViewMatrix.multiplyToRef(this._projectionMatrix, this._transformMatrix), this._transformMatrix
         }
-        _computeObliqueDistance(uu) {
-          return (this.radius || (this.target ? Ju.p.Distance(this.position, this.target) : this.position.length())) + uu
+        _computeObliqueDistance(kk) {
+          return (this.radius || (this.target ? bk.s.Distance(this.position, this.target) : this.position.length())) + kk
         }
         _updateFrustumPlanes() {
-          this._refreshFrustumPlanes && (this.getTransformationMatrix(), this._frustumPlanes ? xu.d.GetPlanesToRef(this._transformMatrix, this._frustumPlanes) : this._frustumPlanes = xu.d.GetPlanes(this._transformMatrix), this._refreshFrustumPlanes = !1)
+          this._refreshFrustumPlanes && (this.getTransformationMatrix(), this._frustumPlanes ? Ak.c.GetPlanesToRef(this._transformMatrix, this._frustumPlanes) : this._frustumPlanes = Ak.c.GetPlanes(this._transformMatrix), this._refreshFrustumPlanes = !1)
         }
-        isInFrustum(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._updateFrustumPlanes(), Ru && this.rigCameras.length > 0) {
-            let Ru = !1;
-            for (const yu of this.rigCameras) yu._updateFrustumPlanes(), Ru = Ru || uu.isInFrustum(yu._frustumPlanes);
-            return Ru
+        isInFrustum(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._updateFrustumPlanes(), Fk && this.rigCameras.length > 0) {
+            let Fk = !1;
+            for (const Bk of this.rigCameras) Bk._updateFrustumPlanes(), Fk = Fk || kk.isInFrustum(Bk._frustumPlanes);
+            return Fk
           }
-          return uu.isInFrustum(this._frustumPlanes)
+          return kk.isInFrustum(this._frustumPlanes)
         }
-        isCompletelyInFrustum(uu) {
-          return this._updateFrustumPlanes(), uu.isCompletelyInFrustum(this._frustumPlanes)
+        isCompletelyInFrustum(kk) {
+          return this._updateFrustumPlanes(), kk.isCompletelyInFrustum(this._frustumPlanes)
         }
         getForwardRay() {
-          throw (0, ru.k)("Ray")
+          throw (0, Vk.i)("Ray")
         }
-        getForwardRayToRef(uu) {
-          throw (0, ru.k)("Ray")
+        getForwardRayToRef(kk) {
+          throw (0, Vk.i)("Ray")
         }
-        dispose(Ru) {
-          let yu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          for (this.onViewMatrixChangedObservable.clear(), this.onProjectionMatrixChangedObservable.clear(), this.onAfterCheckInputsObservable.clear(), this.onRestoreStateObservable.clear(), this.inputs && this.inputs.clear(), this.lD().stopAnimation(this), this.lD().removeCamera(this); this._rigCameras.length > 0;) {
-            const uu = this._rigCameras.pop();
-            uu && uu.dispose()
+        dispose(Fk) {
+          let Bk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          for (this.onViewMatrixChangedObservable.clear(), this.onProjectionMatrixChangedObservable.clear(), this.onAfterCheckInputsObservable.clear(), this.onRestoreStateObservable.clear(), this.inputs && this.inputs.clear(), this.XN().stopAnimation(this), this.XN().removeCamera(this); this._rigCameras.length > 0;) {
+            const kk = this._rigCameras.pop();
+            kk && kk.dispose()
           }
           if (this._parentContainer) {
-            const uu = this._parentContainer.cameras.indexOf(this);
-            uu > -1 && this._parentContainer.cameras.splice(uu, 1), this._parentContainer = null
+            const kk = this._parentContainer.cameras.indexOf(this);
+            kk > -1 && this._parentContainer.cameras.splice(kk, 1), this._parentContainer = null
           }
           if (this._rigPostProcess) this._rigPostProcess.dispose(this), this._rigPostProcess = null, this._postProcesses.length = 0;
-          else if (this.cameraRigMode !== uu.RIG_MODE_NONE) this._rigPostProcess = null, this._postProcesses.length = 0;
+          else if (this.cameraRigMode !== kk.RIG_MODE_NONE) this._rigPostProcess = null, this._postProcesses.length = 0;
           else {
-            let uu = this._postProcesses.length;
-            for (; --uu >= 0;) {
-              const Ru = this._postProcesses[uu];
-              Ru && Ru.dispose(this)
+            let kk = this._postProcesses.length;
+            for (; --kk >= 0;) {
+              const Fk = this._postProcesses[kk];
+              Fk && Fk.dispose(this)
             }
           }
-          let Eu = this.customRenderTargets.length;
-          for (; --Eu >= 0;) this.customRenderTargets[Eu].dispose();
-          this.customRenderTargets.length = 0, this._activeMeshes.dispose(), this.lD().eS().releaseRenderPassId(this.renderPassId), super.dispose(Ru, yu)
+          let Rk = this.customRenderTargets.length;
+          for (; --Rk >= 0;) this.customRenderTargets[Rk].dispose();
+          this.customRenderTargets.length = 0, this._activeMeshes.dispose(), this.XN().ne().releaseRenderPassId(this.renderPassId), super.dispose(Fk, Bk)
         }
         get isLeftCamera() {
           return this._isLeftCamera
@@ -319,347 +319,347 @@ export const modules = {
         getRightTarget() {
           return this._rigCameras.length < 2 ? null : this._rigCameras[1].getTarget()
         }
-        setCameraRigMode(Ru, yu) {
-          if (this.cameraRigMode !== Ru) {
+        setCameraRigMode(Fk, Bk) {
+          if (this.cameraRigMode !== Fk) {
             for (; this._rigCameras.length > 0;) {
-              const uu = this._rigCameras.pop();
-              uu && uu.dispose()
+              const kk = this._rigCameras.pop();
+              kk && kk.dispose()
             }
-            if (this.cameraRigMode = Ru, this._cameraRigParams = {}, this._cameraRigParams.interaxialDistance = yu.interaxialDistance || .0637, this._cameraRigParams.stereoHalfAngle = this._cameraRigParams.interaxialDistance / .0637 * (Math.PI / 180), this.cameraRigMode !== uu.RIG_MODE_NONE) {
-              const uu = this.createRigCamera(this.name + "_L", 0);
-              uu && (uu._isLeftCamera = !0);
-              const Ru = this.createRigCamera(this.name + "_R", 1);
-              Ru && (Ru._isRightCamera = !0), uu && Ru && (this._rigCameras.push(uu), this._rigCameras.push(Ru))
+            if (this.cameraRigMode = Fk, this._cameraRigParams = {}, this._cameraRigParams.interaxialDistance = Bk.interaxialDistance || .0637, this._cameraRigParams.stereoHalfAngle = this._cameraRigParams.interaxialDistance / .0637 * (Math.PI / 180), this.cameraRigMode !== kk.RIG_MODE_NONE) {
+              const kk = this.createRigCamera(this.name + "_L", 0);
+              kk && (kk._isLeftCamera = !0);
+              const Fk = this.createRigCamera(this.name + "_R", 1);
+              Fk && (Fk._isRightCamera = !0), kk && Fk && (this._rigCameras.push(kk), this._rigCameras.push(Fk))
             }
-            this._setRigMode(yu), this._cascadePostProcessesToRigCams(), this.update()
+            this._setRigMode(Bk), this._cascadePostProcessesToRigCams(), this.update()
           }
         }
-        _setRigMode(uu) {}
+        _setRigMode(kk) {}
         _getVRProjectionMatrix() {
-          return Ju.d.PerspectiveFovLHToRef(this._cameraRigParams.vrMetrics.aspectRatioFov, this._cameraRigParams.vrMetrics.aspectRatio, this.minZ, this.ignoreCameraMaxZ ? 0 : this.maxZ, this._cameraRigParams.vrWorkMatrix, !0, this.eS().isNDCHalfZRange), this._cameraRigParams.vrWorkMatrix.multiplyToRef(this._cameraRigParams.vrHMatrix, this._projectionMatrix), this._projectionMatrix
+          return bk.c.PerspectiveFovLHToRef(this._cameraRigParams.vrMetrics.aspectRatioFov, this._cameraRigParams.vrMetrics.aspectRatio, this.minZ, this.ignoreCameraMaxZ ? 0 : this.maxZ, this._cameraRigParams.vrWorkMatrix, !0, this.ne().isNDCHalfZRange), this._cameraRigParams.vrWorkMatrix.multiplyToRef(this._cameraRigParams.vrHMatrix, this._projectionMatrix), this._projectionMatrix
         }
-        setCameraRigParameter(uu, Ru) {
-          this._cameraRigParams || (this._cameraRigParams = {}), this._cameraRigParams[uu] = Ru, "interaxialDistance" === uu && (this._cameraRigParams.stereoHalfAngle = Ru / .0637 * (Math.PI / 180))
+        setCameraRigParameter(kk, Fk) {
+          this._cameraRigParams || (this._cameraRigParams = {}), this._cameraRigParams[kk] = Fk, "interaxialDistance" === kk && (this._cameraRigParams.stereoHalfAngle = Fk / .0637 * (Math.PI / 180))
         }
-        createRigCamera(uu, Ru) {
+        createRigCamera(kk, Fk) {
           return null
         }
         _updateRigCameras() {
-          for (let uu = 0; uu < this._rigCameras.length; uu++) this._rigCameras[uu].minZ = this.minZ, this._rigCameras[uu].maxZ = this.ignoreCameraMaxZ ? 0 : this.maxZ, this._rigCameras[uu].fov = this.fov, this._rigCameras[uu].upVector.Oyu(this.upVector);
-          this.cameraRigMode === uu.RIG_MODE_STEREOSCOPIC_ANAGLYPH && (this._rigCameras[0].viewport = this._rigCameras[1].viewport = this.viewport)
+          for (let kk = 0; kk < this._rigCameras.length; kk++) this._rigCameras[kk].minZ = this.minZ, this._rigCameras[kk].maxZ = this.ignoreCameraMaxZ ? 0 : this.maxZ, this._rigCameras[kk].fov = this.fov, this._rigCameras[kk].upVector.sBk(this.upVector);
+          this.cameraRigMode === kk.RIG_MODE_STEREOSCOPIC_ANAGLYPH && (this._rigCameras[0].viewport = this._rigCameras[1].viewport = this.viewport)
         }
         _setupInputs() {}
         serialize() {
-          const uu = pu.c.Serialize(this);
-          return uu.uniqueId = this.uniqueId, uu.type = this.getClassName(), this.parent && this.parent._serializeAsParent(uu), this.inputs && this.inputs.serialize(uu), pu.c.AppendSerializedAnimations(this, uu), uu.yT = this.serializeAnimationRanges(), uu.isEnabled = this.isEnabled(), uu
+          const kk = yk.c.Serialize(this);
+          return kk.uniqueId = this.uniqueId, kk.type = this.getClassName(), this.parent && this.parent._serializeAsParent(kk), this.inputs && this.inputs.serialize(kk), yk.c.AppendSerializedAnimations(this, kk), kk.hb = this.serializeAnimationRanges(), kk.isEnabled = this.isEnabled(), kk
         }
-        clone(Ru) {
-          let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          const Eu = pu.c.Clone(uu.GetConstructorFromName(this.getClassName(), Ru, this.lD(), this.interaxialDistance, this.isStereoscopicSideBySide), this);
-          return Eu.name = Ru, Eu.parent = yu, this.onClonedObservable.notifyObservers(Eu), Eu
+        clone(Fk) {
+          let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const Rk = yk.c.Clone(kk.GetConstructorFromName(this.getClassName(), Fk, this.XN(), this.interaxialDistance, this.isStereoscopicSideBySide), this);
+          return Rk.name = Fk, Rk.parent = Bk, this.onClonedObservable.notifyObservers(Rk), Rk
         }
-        Mq(uu) {
-          const Ru = Ju.p.Zero();
-          return this.getDirectionToRef(uu, Ru), Ru
+        eZ(kk) {
+          const Fk = bk.s.Zero();
+          return this.getDirectionToRef(kk, Fk), Fk
         }
         get absoluteRotation() {
           return this.getWorldMatrix().decompose(void 0, this._absoluteRotation), this._absoluteRotation
         }
-        getDirectionToRef(uu, Ru) {
-          Ju.p.TransformNormalToRef(uu, this.getWorldMatrix(), Ru)
+        getDirectionToRef(kk, Fk) {
+          bk.s.TransformNormalToRef(kk, this.getWorldMatrix(), Fk)
         }
-        static GetConstructorFromName(Ru, yu, Eu) {
-          let Ku = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-            Qu = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-          const mu = Nu.e.Construct(Ru, yu, Eu, {
-            interaxial_distance: Ku,
-            isStereoscopicSideBySide: Qu
+        static GetConstructorFromName(Fk, Bk, Rk) {
+          let tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+            ak = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+          const Xk = wk.b.Construct(Fk, Bk, Rk, {
+            interaxial_distance: tk,
+            isStereoscopicSideBySide: ak
           });
-          return mu || (() => uu._CreateDefaultParsedCamera(yu, Eu))
+          return Xk || (() => kk._CreateDefaultParsedCamera(Bk, Rk))
         }
         computeWorldMatrix() {
           return this.getWorldMatrix()
         }
         _calculateHandednessMultiplier() {
-          let uu = this.lD().useRightHandedSystem ? -1 : 1;
-          return this.parent && this.parent._getWorldMatrixDeterminant() < 0 && (uu *= -1), uu
+          let kk = this.XN().useRightHandedSystem ? -1 : 1;
+          return this.parent && this.parent._getWorldMatrixDeterminant() < 0 && (kk *= -1), kk
         }
       }, (() => {
-        const Qu = "function" === typeof Symbol && Symbol.metadata ? Object.create(nu[Symbol.metadata] ?? null) : void 0;
-        Ru = [(0, Ku.G)("position")], yu = [(0, Ku.G)("upVector")], Vu = [(0, Ku.K)()], Tu = [(0, Ku.K)()], Wu = [(0, Ku.K)()], ju = [(0, Ku.K)()], Hu = [(0, Ku.K)()], du = [(0, Ku.K)()], bu = [(0, Ku.K)()], Cu = [(0, Ku.K)()], ku = [(0, Ku.K)()], eu = [(0, Ku.K)()], Au = [(0, Ku.K)()], Du = [(0, Ku.K)()], Mu = [(0, Ku.K)()], Iu = [(0, Ku.K)()], Gu = [(0, Ku.K)()], Uu = [(0, Ku.K)()], (0, Eu.h)(uu, null, Vu, {
+        const ak = "function" === typeof Symbol && Symbol.metadata ? Object.create(Uk[Symbol.metadata] ?? null) : void 0;
+        Fk = [(0, tk.K)("position")], Bk = [(0, tk.K)("upVector")], sk = [(0, tk.M)()], fk = [(0, tk.M)()], mk = [(0, tk.M)()], Wk = [(0, tk.M)()], vk = [(0, tk.M)()], ik = [(0, tk.M)()], Yk = [(0, tk.M)()], Lk = [(0, tk.M)()], Ok = [(0, tk.M)()], Ek = [(0, tk.M)()], Sk = [(0, tk.M)()], Nk = [(0, tk.M)()], Hk = [(0, tk.M)()], uk = [(0, tk.M)()], Mk = [(0, tk.M)()], gk = [(0, tk.M)()], (0, Rk.j)(kk, null, sk, {
           kind: "getter",
           name: "orthoLeft",
           static: !1,
           private: !1,
           access: {
-            has: uu => "orthoLeft" in uu,
-            get: uu => uu.orthoLeft
+            has: kk => "orthoLeft" in kk,
+            get: kk => kk.orthoLeft
           },
-          metadata: Qu
-        }, null, su), (0, Eu.h)(uu, null, Tu, {
+          metadata: ak
+        }, null, ck), (0, Rk.j)(kk, null, fk, {
           kind: "getter",
           name: "orthoRight",
           static: !1,
           private: !1,
           access: {
-            has: uu => "orthoRight" in uu,
-            get: uu => uu.orthoRight
+            has: kk => "orthoRight" in kk,
+            get: kk => kk.orthoRight
           },
-          metadata: Qu
-        }, null, su), (0, Eu.h)(uu, null, Wu, {
+          metadata: ak
+        }, null, ck), (0, Rk.j)(kk, null, mk, {
           kind: "getter",
           name: "orthoBottom",
           static: !1,
           private: !1,
           access: {
-            has: uu => "orthoBottom" in uu,
-            get: uu => uu.orthoBottom
+            has: kk => "orthoBottom" in kk,
+            get: kk => kk.orthoBottom
           },
-          metadata: Qu
-        }, null, su), (0, Eu.h)(uu, null, ju, {
+          metadata: ak
+        }, null, ck), (0, Rk.j)(kk, null, Wk, {
           kind: "getter",
           name: "orthoTop",
           static: !1,
           private: !1,
           access: {
-            has: uu => "orthoTop" in uu,
-            get: uu => uu.orthoTop
+            has: kk => "orthoTop" in kk,
+            get: kk => kk.orthoTop
           },
-          metadata: Qu
-        }, null, su), (0, Eu.h)(uu, null, ku, {
+          metadata: ak
+        }, null, ck), (0, Rk.j)(kk, null, Ok, {
           kind: "getter",
           name: "inertia",
           static: !1,
           private: !1,
           access: {
-            has: uu => "inertia" in uu,
-            get: uu => uu.inertia
+            has: kk => "inertia" in kk,
+            get: kk => kk.inertia
           },
-          metadata: Qu
-        }, null, su), (0, Eu.h)(uu, null, eu, {
+          metadata: ak
+        }, null, ck), (0, Rk.j)(kk, null, Ek, {
           kind: "getter",
           name: "mode",
           static: !1,
           private: !1,
           access: {
-            has: uu => "mode" in uu,
-            get: uu => uu.mode
+            has: kk => "mode" in kk,
+            get: kk => kk.mode
           },
-          metadata: Qu
-        }, null, su), (0, Eu.h)(null, null, Ru, {
+          metadata: ak
+        }, null, ck), (0, Rk.j)(null, null, Fk, {
           kind: "field",
           name: "_position",
           static: !1,
           private: !1,
           access: {
-            has: uu => "_position" in uu,
-            get: uu => uu._position,
-            set: (uu, Ru) => {
-              uu._position = Ru
+            has: kk => "_position" in kk,
+            get: kk => kk._position,
+            set: (kk, Fk) => {
+              kk._position = Fk
             }
           },
-          metadata: Qu
-        }, tu, lu), (0, Eu.h)(null, null, yu, {
+          metadata: ak
+        }, Gk, Tk), (0, Rk.j)(null, null, Bk, {
           kind: "field",
           name: "_upVector",
           static: !1,
           private: !1,
           access: {
-            has: uu => "_upVector" in uu,
-            get: uu => uu._upVector,
-            set: (uu, Ru) => {
-              uu._upVector = Ru
+            has: kk => "_upVector" in kk,
+            get: kk => kk._upVector,
+            set: (kk, Fk) => {
+              kk._upVector = Fk
             }
           },
-          metadata: Qu
-        }, gu, cu), (0, Eu.h)(null, null, Hu, {
+          metadata: ak
+        }, rk, Dk), (0, Rk.j)(null, null, vk, {
           kind: "field",
           name: "fov",
           static: !1,
           private: !1,
           access: {
-            has: uu => "fov" in uu,
-            get: uu => uu.fov,
-            set: (uu, Ru) => {
-              uu.fov = Ru
+            has: kk => "fov" in kk,
+            get: kk => kk.fov,
+            set: (kk, Fk) => {
+              kk.fov = Fk
             }
           },
-          metadata: Qu
-        }, Lu, zu), (0, Eu.h)(null, null, du, {
+          metadata: ak
+        }, zk, Pk), (0, Rk.j)(null, null, ik, {
           kind: "field",
           name: "projectionPlaneTilt",
           static: !1,
           private: !1,
           access: {
-            has: uu => "projectionPlaneTilt" in uu,
-            get: uu => uu.projectionPlaneTilt,
-            set: (uu, Ru) => {
-              uu.projectionPlaneTilt = Ru
+            has: kk => "projectionPlaneTilt" in kk,
+            get: kk => kk.projectionPlaneTilt,
+            set: (kk, Fk) => {
+              kk.projectionPlaneTilt = Fk
             }
           },
-          metadata: Qu
-        }, Fu, wu), (0, Eu.h)(null, null, bu, {
+          metadata: ak
+        }, hk, qk), (0, Rk.j)(null, null, Yk, {
           kind: "field",
           name: "minZ",
           static: !1,
           private: !1,
           access: {
-            has: uu => "minZ" in uu,
-            get: uu => uu.minZ,
-            set: (uu, Ru) => {
-              uu.minZ = Ru
+            has: kk => "minZ" in kk,
+            get: kk => kk.minZ,
+            set: (kk, Fk) => {
+              kk.minZ = Fk
             }
           },
-          metadata: Qu
-        }, Zu, hu), (0, Eu.h)(null, null, Cu, {
+          metadata: ak
+        }, Ck, Zk), (0, Rk.j)(null, null, Lk, {
           kind: "field",
           name: "maxZ",
           static: !1,
           private: !1,
           access: {
-            has: uu => "maxZ" in uu,
-            get: uu => uu.maxZ,
-            set: (uu, Ru) => {
-              uu.maxZ = Ru
+            has: kk => "maxZ" in kk,
+            get: kk => kk.maxZ,
+            set: (kk, Fk) => {
+              kk.maxZ = Fk
             }
           },
-          metadata: Qu
-        }, Pu, iu), (0, Eu.h)(null, null, Au, {
+          metadata: ak
+        }, pk, Kk), (0, Rk.j)(null, null, Sk, {
           kind: "field",
           name: "layerMask",
           static: !1,
           private: !1,
           access: {
-            has: uu => "layerMask" in uu,
-            get: uu => uu.layerMask,
-            set: (uu, Ru) => {
-              uu.layerMask = Ru
+            has: kk => "layerMask" in kk,
+            get: kk => kk.layerMask,
+            set: (kk, Fk) => {
+              kk.layerMask = Fk
             }
           },
-          metadata: Qu
-        }, Yu, ou), (0, Eu.h)(null, null, Du, {
+          metadata: ak
+        }, xk, jk), (0, Rk.j)(null, null, Nk, {
           kind: "field",
           name: "fovMode",
           static: !1,
           private: !1,
           access: {
-            has: uu => "fovMode" in uu,
-            get: uu => uu.fovMode,
-            set: (uu, Ru) => {
-              uu.fovMode = Ru
+            has: kk => "fovMode" in kk,
+            get: kk => kk.fovMode,
+            set: (kk, Fk) => {
+              kk.fovMode = Fk
             }
           },
-          metadata: Qu
-        }, qu, Ou), (0, Eu.h)(null, null, Mu, {
+          metadata: ak
+        }, lk, nk), (0, Rk.j)(null, null, Hk, {
           kind: "field",
           name: "cameraRigMode",
           static: !1,
           private: !1,
           access: {
-            has: uu => "cameraRigMode" in uu,
-            get: uu => uu.cameraRigMode,
-            set: (uu, Ru) => {
-              uu.cameraRigMode = Ru
+            has: kk => "cameraRigMode" in kk,
+            get: kk => kk.cameraRigMode,
+            set: (kk, Fk) => {
+              kk.cameraRigMode = Fk
             }
           },
-          metadata: Qu
-        }, vu, au), (0, Eu.h)(null, null, Iu, {
+          metadata: ak
+        }, Ik, Qk), (0, Rk.j)(null, null, uk, {
           kind: "field",
           name: "interaxialDistance",
           static: !1,
           private: !1,
           access: {
-            has: uu => "interaxialDistance" in uu,
-            get: uu => uu.interaxialDistance,
-            set: (uu, Ru) => {
-              uu.interaxialDistance = Ru
+            has: kk => "interaxialDistance" in kk,
+            get: kk => kk.interaxialDistance,
+            set: (kk, Fk) => {
+              kk.interaxialDistance = Fk
             }
           },
-          metadata: Qu
-        }, fu, uR), (0, Eu.h)(null, null, Gu, {
+          metadata: ak
+        }, kF, FF), (0, Rk.j)(null, null, Mk, {
           kind: "field",
           name: "isStereoscopicSideBySide",
           static: !1,
           private: !1,
           access: {
-            has: uu => "isStereoscopicSideBySide" in uu,
-            get: uu => uu.isStereoscopicSideBySide,
-            set: (uu, Ru) => {
-              uu.isStereoscopicSideBySide = Ru
+            has: kk => "isStereoscopicSideBySide" in kk,
+            get: kk => kk.isStereoscopicSideBySide,
+            set: (kk, Fk) => {
+              kk.isStereoscopicSideBySide = Fk
             }
           },
-          metadata: Qu
-        }, RR, yR), (0, Eu.h)(null, null, Uu, {
+          metadata: ak
+        }, BF, RF), (0, Rk.j)(null, null, gk, {
           kind: "field",
           name: "ignoreCameraMaxZ",
           static: !1,
           private: !1,
           access: {
-            has: uu => "ignoreCameraMaxZ" in uu,
-            get: uu => uu.ignoreCameraMaxZ,
-            set: (uu, Ru) => {
-              uu.ignoreCameraMaxZ = Ru
+            has: kk => "ignoreCameraMaxZ" in kk,
+            get: kk => kk.ignoreCameraMaxZ,
+            set: (kk, Fk) => {
+              kk.ignoreCameraMaxZ = Fk
             }
           },
-          metadata: Qu
-        }, ER, KR), Qu && Object.defineProperty(uu, Symbol.metadata, {
+          metadata: ak
+        }, tF, aF), ak && Object.defineProperty(kk, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Qu
+          value: ak
         })
-      })(), uu._CreateDefaultParsedCamera = (uu, Ru) => {
-        throw (0, ru.k)("UniversalCamera")
-      }, uu.PERSPECTIVE_CAMERA = 0, uu.ORTHOGRAPHIC_CAMERA = 1, uu.FOVMODE_VERTICAL_FIXED = 0, uu.FOVMODE_HORIZONTAL_FIXED = 1, uu.RIG_MODE_NONE = 0, uu.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, uu.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, uu.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, uu.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, uu.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, uu.RIG_MODE_VR = 20, uu.RIG_MODE_CUSTOM = 22, uu.ForceAttachControlToAlwaysPreventDefault = !1, uu
+      })(), kk._CreateDefaultParsedCamera = (kk, Fk) => {
+        throw (0, Vk.i)("UniversalCamera")
+      }, kk.PERSPECTIVE_CAMERA = 0, kk.ORTHOGRAPHIC_CAMERA = 1, kk.FOVMODE_VERTICAL_FIXED = 0, kk.FOVMODE_HORIZONTAL_FIXED = 1, kk.RIG_MODE_NONE = 0, kk.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, kk.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, kk.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, kk.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, kk.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, kk.RIG_MODE_VR = 20, kk.RIG_MODE_CUSTOM = 22, kk.ForceAttachControlToAlwaysPreventDefault = !1, kk
     })();
 
-    function Wu(uu, Ru) {
-      const yu = uu.type,
-        Eu = Tu.GetConstructorFromName(yu, uu.name, Ru, uu.interaxial_distance, uu.isStereoscopicSideBySide),
-        Ku = pu.c.Parse(Eu, uu, Ru);
-      if (void 0 !== uu.parentId && (Ku._waitingParentId = uu.parentId), void 0 !== uu.parentInstanceIndex && (Ku._waitingParentInstanceIndex = uu.parentInstanceIndex), Ku.inputs && (Ku.inputs.parse(uu), Ku._setupInputs()), uu.upVector && (Ku.upVector = Ju.p.FromArray(uu.upVector)), Ku.setPosition && (Ku.position.muu(0, 0, 0), Ku.setPosition(Ju.p.FromArray(uu.position))), uu.target && Ku.setTarget && Ku.setTarget(Ju.p.FromArray(uu.target)), uu.cameraRigMode) {
-        const Ru = uu.interaxial_distance ? {
-          interaxialDistance: uu.interaxial_distance
+    function mk(kk, Fk) {
+      const Bk = kk.type,
+        Rk = fk.GetConstructorFromName(Bk, kk.name, Fk, kk.interaxial_distance, kk.isStereoscopicSideBySide),
+        tk = yk.c.Parse(Rk, kk, Fk);
+      if (void 0 !== kk.parentId && (tk._waitingParentId = kk.parentId), void 0 !== kk.parentInstanceIndex && (tk._waitingParentInstanceIndex = kk.parentInstanceIndex), tk.inputs && (tk.inputs.parse(kk), tk._setupInputs()), kk.upVector && (tk.upVector = bk.s.FromArray(kk.upVector)), tk.setPosition && (tk.position.E1(0, 0, 0), tk.setPosition(bk.s.FromArray(kk.position))), kk.target && tk.setTarget && tk.setTarget(bk.s.FromArray(kk.target)), kk.cameraRigMode) {
+        const Fk = kk.interaxial_distance ? {
+          interaxialDistance: kk.interaxial_distance
         } : {};
-        Ku.setCameraRigMode(uu.cameraRigMode, Ru)
+        tk.setCameraRigMode(kk.cameraRigMode, Fk)
       }
-      if (uu.animations) {
-        for (let Ru = 0; Ru < uu.animations.length; Ru++) {
-          const yu = uu.animations[Ru],
-            Eu = (0, Vu.b)("BABYLON.Animation");
-          Eu && Ku.animations.push(Eu.Parse(yu))
+      if (kk.animations) {
+        for (let Fk = 0; Fk < kk.animations.length; Fk++) {
+          const Bk = kk.animations[Fk],
+            Rk = (0, sk.c)("BABYLON.Animation");
+          Rk && tk.animations.push(Rk.Parse(Bk))
         }
-        Nu.e.ParseAnimationRanges(Ku, uu, Ru)
+        wk.b.ParseAnimationRanges(tk, kk, Fk)
       }
-      return uu.autoAnimate && Ru.beginAnimation(Ku, uu.autoAnimateFrom, uu.autoAnimateTo, uu.autoAnimateLoop, uu.autoAnimateSpeed || 1), void 0 !== uu.isEnabled && Ku.tC(uu.isEnabled), Ku
+      return kk.autoAnimate && Fk.beginAnimation(tk, kk.autoAnimateFrom, kk.autoAnimateTo, kk.autoAnimateLoop, kk.autoAnimateSpeed || 1), void 0 !== kk.isEnabled && tk.lY(kk.isEnabled), tk
     }
-    let ju = !1;
+    let Wk = !1;
 
-    function Hu() {
-      ju || (ju = !0, Tu.Parse = Wu)
+    function vk() {
+      Wk || (Wk = !0, fk.Parse = mk)
     }
   },
-  39787: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Ku
+  39641: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => tk
     });
-    var Eu = yu(36830);
-    class Ku {
-      constructor(uu, Ru, yu) {
-        this._cameraPosition = Ru, this._behavior = yu, this.activeInput = !1, this.speed = 1, this.wZ = 1, this.panSpeed = 1, this.rotationXSpeed = 1, this.rotationYSpeed = 1, this._zoomSpeedMultiplier = 1, this._panSpeedMultiplier = 1, this.zoomInertia = .9, this.panInertia = .9, this.rotationInertia = .9, this.zoomAccumulatedPixels = 0, this.panAccumulatedPixels = new Eu.p, this.rotationAccumulatedPixels = new Eu.p, this.zoomDeltaCurrentFrame = 0, this.panDeltaCurrentFrame = Eu.p.Zero(), this.rotationDeltaCurrentFrame = Eu.p.Zero(), this._zoomVelocity = 0, this._panVelocity = new Eu.p, this.referenceFrameRate = 60, this._rotationVelocity = new Eu.p, this._prevFrameTimeMs = 0, this._scene = uu
+    var Rk = Bk(36758);
+    class tk {
+      constructor(kk, Fk, Bk) {
+        this._cameraPosition = Fk, this._behavior = Bk, this.activeInput = !1, this.speed = 1, this.hq = 1, this.panSpeed = 1, this.rotationXSpeed = 1, this.rotationYSpeed = 1, this._zoomSpeedMultiplier = 1, this._panSpeedMultiplier = 1, this.zoomInertia = .9, this.panInertia = .9, this.rotationInertia = .9, this.zoomAccumulatedPixels = 0, this.panAccumulatedPixels = new Rk.s, this.rotationAccumulatedPixels = new Rk.s, this.zoomDeltaCurrentFrame = 0, this.panDeltaCurrentFrame = Rk.s.Zero(), this.rotationDeltaCurrentFrame = Rk.s.Zero(), this._zoomVelocity = 0, this._panVelocity = new Rk.s, this.referenceFrameRate = 60, this._rotationVelocity = new Rk.s, this._prevFrameTimeMs = 0, this._scene = kk
       }
       computeCurrentFrameDeltas() {
-        const uu = this._scene.eS().getDeltaTime(),
-          Ru = this._getEffectiveDeltaMs(uu);
-        if (0 === this._zoomVelocity && 0 === this.zoomAccumulatedPixels && 0 === this._panVelocity.x && 0 === this._panVelocity.y && 0 === this._panVelocity.z && 0 === this.panAccumulatedPixels.x && 0 === this.panAccumulatedPixels.y && 0 === this.panAccumulatedPixels.z && 0 === this._rotationVelocity.x && 0 === this._rotationVelocity.y && 0 === this._rotationVelocity.z && 0 === this.rotationAccumulatedPixels.x && 0 === this.rotationAccumulatedPixels.y && 0 === this.rotationAccumulatedPixels.z && !this.activeInput) return this.panDeltaCurrentFrame.e_(0), this.rotationDeltaCurrentFrame.e_(0), this.zoomDeltaCurrentFrame = 0, void(uu > 0 && (this._prevFrameTimeMs = uu));
-        this.panDeltaCurrentFrame.e_(0), this.rotationDeltaCurrentFrame.e_(0), this.zoomDeltaCurrentFrame = 0;
-        (this.panAccumulatedPixels.lengthSquared() > 0 || this.rotationAccumulatedPixels.lengthSquared() > 0 || 0 !== this.zoomAccumulatedPixels) && this._behavior?.isInterpolating && this._behavior.stopAllAnimations(), this._panVelocity.muu(this._calculateCurrentVelocity(this._panVelocity.x, this.panAccumulatedPixels.x, this.panInertia), this._calculateCurrentVelocity(this._panVelocity.y, this.panAccumulatedPixels.y, this.panInertia), this._calculateCurrentVelocity(this._panVelocity.z, this.panAccumulatedPixels.z, this.panInertia)), this._panVelocity.scaleToRef(this.speed * this.panSpeed * this._panSpeedMultiplier * Ru, this.panDeltaCurrentFrame), this._rotationVelocity.muu(this._calculateCurrentVelocity(this._rotationVelocity.x, this.rotationAccumulatedPixels.x, this.rotationInertia), this._calculateCurrentVelocity(this._rotationVelocity.y, this.rotationAccumulatedPixels.y, this.rotationInertia), this._calculateCurrentVelocity(this._rotationVelocity.z, this.rotationAccumulatedPixels.z, this.rotationInertia)), this.rotationDeltaCurrentFrame.muu(this._rotationVelocity.x * this.speed * this.rotationXSpeed * Ru, this._rotationVelocity.y * this.speed * this.rotationYSpeed * Ru, 0), this._zoomVelocity = this._calculateCurrentVelocity(this._zoomVelocity, this.zoomAccumulatedPixels, this.zoomInertia), this.zoomDeltaCurrentFrame = this._zoomVelocity * (this.speed * this.wZ * this._zoomSpeedMultiplier) * Ru, uu > 0 && (this._prevFrameTimeMs = uu), this.zoomAccumulatedPixels = 0, this.panAccumulatedPixels.e_(0), this.rotationAccumulatedPixels.e_(0), this.activeInput = !1
+        const kk = this._scene.ne().getDeltaTime(),
+          Fk = this._getEffectiveDeltaMs(kk);
+        if (0 === this._zoomVelocity && 0 === this.zoomAccumulatedPixels && 0 === this._panVelocity.x && 0 === this._panVelocity.y && 0 === this._panVelocity.z && 0 === this.panAccumulatedPixels.x && 0 === this.panAccumulatedPixels.y && 0 === this.panAccumulatedPixels.z && 0 === this._rotationVelocity.x && 0 === this._rotationVelocity.y && 0 === this._rotationVelocity.z && 0 === this.rotationAccumulatedPixels.x && 0 === this.rotationAccumulatedPixels.y && 0 === this.rotationAccumulatedPixels.z && !this.activeInput) return this.panDeltaCurrentFrame.J_(0), this.rotationDeltaCurrentFrame.J_(0), this.zoomDeltaCurrentFrame = 0, void(kk > 0 && (this._prevFrameTimeMs = kk));
+        this.panDeltaCurrentFrame.J_(0), this.rotationDeltaCurrentFrame.J_(0), this.zoomDeltaCurrentFrame = 0;
+        (this.panAccumulatedPixels.lengthSquared() > 0 || this.rotationAccumulatedPixels.lengthSquared() > 0 || 0 !== this.zoomAccumulatedPixels) && this._behavior?.isInterpolating && this._behavior.stopAllAnimations(), this._panVelocity.E1(this._calculateCurrentVelocity(this._panVelocity.x, this.panAccumulatedPixels.x, this.panInertia), this._calculateCurrentVelocity(this._panVelocity.y, this.panAccumulatedPixels.y, this.panInertia), this._calculateCurrentVelocity(this._panVelocity.z, this.panAccumulatedPixels.z, this.panInertia)), this._panVelocity.scaleToRef(this.speed * this.panSpeed * this._panSpeedMultiplier * Fk, this.panDeltaCurrentFrame), this._rotationVelocity.E1(this._calculateCurrentVelocity(this._rotationVelocity.x, this.rotationAccumulatedPixels.x, this.rotationInertia), this._calculateCurrentVelocity(this._rotationVelocity.y, this.rotationAccumulatedPixels.y, this.rotationInertia), this._calculateCurrentVelocity(this._rotationVelocity.z, this.rotationAccumulatedPixels.z, this.rotationInertia)), this.rotationDeltaCurrentFrame.E1(this._rotationVelocity.x * this.speed * this.rotationXSpeed * Fk, this._rotationVelocity.y * this.speed * this.rotationYSpeed * Fk, 0), this._zoomVelocity = this._calculateCurrentVelocity(this._zoomVelocity, this.zoomAccumulatedPixels, this.zoomInertia), this.zoomDeltaCurrentFrame = this._zoomVelocity * (this.speed * this.hq * this._zoomSpeedMultiplier) * Fk, kk > 0 && (this._prevFrameTimeMs = kk), this.zoomAccumulatedPixels = 0, this.panAccumulatedPixels.J_(0), this.rotationAccumulatedPixels.J_(0), this.activeInput = !1
       }
       resetRotationVelocity() {
-        this._rotationVelocity.e_(0), this.rotationAccumulatedPixels.e_(0)
+        this._rotationVelocity.J_(0), this.rotationAccumulatedPixels.J_(0)
       }
       resetPanVelocity() {
-        this._panVelocity.e_(0), this.panAccumulatedPixels.e_(0)
+        this._panVelocity.J_(0), this.panAccumulatedPixels.J_(0)
       }
       resetZoomVelocity() {
         this._zoomVelocity = 0, this.zoomAccumulatedPixels = 0
@@ -667,170 +667,170 @@ export const modules = {
       get isInterpolating() {
         return !!this._behavior?.isInterpolating
       }
-      getFrameIndependentDecay(uu) {
-        const Ru = this._scene.eS().getDeltaTime(),
-          yu = this._getEffectiveDeltaMs(Ru),
-          Eu = 1e3 / this.referenceFrameRate;
-        return Math.pow(uu, yu / Eu)
+      getFrameIndependentDecay(kk) {
+        const Fk = this._scene.ne().getDeltaTime(),
+          Bk = this._getEffectiveDeltaMs(Fk),
+          Rk = 1e3 / this.referenceFrameRate;
+        return Math.pow(kk, Bk / Rk)
       }
-      getFrameIndependentInputScale(uu) {
-        const Ru = 1 - uu;
-        if (Ru <= 0) return 1;
-        return (1 - this.getFrameIndependentDecay(uu)) / Ru
+      getFrameIndependentInputScale(kk) {
+        const Fk = 1 - kk;
+        if (Fk <= 0) return 1;
+        return (1 - this.getFrameIndependentDecay(kk)) / Fk
       }
-      _getEffectiveDeltaMs(uu) {
-        return uu > 0 ? uu : this._prevFrameTimeMs > 0 ? this._prevFrameTimeMs : 1e3 / this.referenceFrameRate
+      _getEffectiveDeltaMs(kk) {
+        return kk > 0 ? kk : this._prevFrameTimeMs > 0 ? this._prevFrameTimeMs : 1e3 / this.referenceFrameRate
       }
-      _calculateCurrentVelocity(uu, Ru, yu) {
-        let Eu = uu;
-        const Ku = this._scene.eS().getDeltaTime(),
-          Qu = this._getEffectiveDeltaMs(Ku);
-        if (0 === Qu) return Eu;
-        const mu = this.getFrameIndependentDecay(yu);
-        if (Eu *= mu, 0 !== Ru || this.activeInput) {
-          const uu = 1 - yu;
-          Eu += Ru / Qu * (uu > 0 ? (1 - mu) / uu : 1)
-        } else Math.abs(Eu) < 1e-6 && (Eu = 0);
-        return Eu
+      _calculateCurrentVelocity(kk, Fk, Bk) {
+        let Rk = kk;
+        const tk = this._scene.ne().getDeltaTime(),
+          ak = this._getEffectiveDeltaMs(tk);
+        if (0 === ak) return Rk;
+        const Xk = this.getFrameIndependentDecay(Bk);
+        if (Rk *= Xk, 0 !== Fk || this.activeInput) {
+          const kk = 1 - Bk;
+          Rk += Fk / ak * (kk > 0 ? (1 - Xk) / kk : 1)
+        } else Math.abs(Rk) < 1e-6 && (Rk = 0);
+        return Rk
       }
     }
   },
-  39796: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Eu
+  39647: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Rk
     });
-    class Eu {
-      constructor(uu, Ru) {
-        this.inputMap = [], this.handlers = uu, this._createDefaultEntries = Ru, this.resetInputMap()
+    class Rk {
+      constructor(kk, Fk) {
+        this.inputMap = [], this.handlers = kk, this._createDefaultEntries = Fk, this.resetInputMap()
       }
-      resolveInteraction(uu, Ru) {
-        for (const yu of this.inputMap)
-          if (yu.source === uu && this._entryMatches(yu, Ru)) return yu;
+      resolveInteraction(kk, Fk) {
+        for (const Bk of this.inputMap)
+          if (Bk.source === kk && this._entryMatches(Bk, Fk)) return Bk;
         return null
       }
       resetInputMap() {
         this.inputMap = this._createDefaultEntries?.() ?? []
       }
-      getEntry(uu, Ru, yu) {
-        const Eu = this.inputMap;
-        for (let Ku = 0; Ku < Eu.length; Ku++) {
-          const Qu = Eu[Ku];
-          if (Qu.source === uu && Qu.interaction === Ru && this._entryConditionsMatch(Qu, yu)) return Qu
+      getEntry(kk, Fk, Bk) {
+        const Rk = this.inputMap;
+        for (let tk = 0; tk < Rk.length; tk++) {
+          const ak = Rk[tk];
+          if (ak.source === kk && ak.interaction === Fk && this._entryConditionsMatch(ak, Bk)) return ak
         }
       }
-      getEntries(uu, Ru, yu) {
-        const Eu = [],
-          Ku = this.inputMap;
-        for (let Qu = 0; Qu < Ku.length; Qu++) {
-          const mu = Ku[Qu];
-          mu.source === uu && mu.interaction === Ru && this._entryConditionsMatch(mu, yu) && Eu.push(mu)
+      getEntries(kk, Fk, Bk) {
+        const Rk = [],
+          tk = this.inputMap;
+        for (let ak = 0; ak < tk.length; ak++) {
+          const Xk = tk[ak];
+          Xk.source === kk && Xk.interaction === Fk && this._entryConditionsMatch(Xk, Bk) && Rk.push(Xk)
         }
-        return Eu
+        return Rk
       }
-      addEntry(uu) {
-        const Ru = this._entrySpecificity(uu);
-        let yu = this.inputMap.length;
-        for (let Eu = 0; Eu < this.inputMap.length; Eu++)
-          if (this._entrySpecificity(this.inputMap[Eu]) < Ru) {
-            yu = Eu;
+      addEntry(kk) {
+        const Fk = this._entrySpecificity(kk);
+        let Bk = this.inputMap.length;
+        for (let Rk = 0; Rk < this.inputMap.length; Rk++)
+          if (this._entrySpecificity(this.inputMap[Rk]) < Fk) {
+            Bk = Rk;
             break
-          } this.inputMap.splice(yu, 0, uu)
+          } this.inputMap.splice(Bk, 0, kk)
       }
-      setInteraction(uu, Ru, yu) {
-        const Eu = this.resolveInteraction(uu, Ru);
-        return Eu && this._entryCoversAllConditionsOf(Eu, Ru) ? (Eu.interaction = yu, !0) : (this.addEntry({
-          source: uu,
-          ...Ru ?? {},
-          interaction: yu
+      setInteraction(kk, Fk, Bk) {
+        const Rk = this.resolveInteraction(kk, Fk);
+        return Rk && this._entryCoversAllConditionsOf(Rk, Fk) ? (Rk.interaction = Bk, !0) : (this.addEntry({
+          source: kk,
+          ...Fk ?? {},
+          interaction: Bk
         }), !0)
       }
-      _entryCoversAllConditionsOf(uu, Ru) {
-        if (!Ru) return !0;
-        const yu = uu;
-        for (const Eu of Object.keys(Ru)) {
-          const uu = Ru[Eu];
-          if (void 0 !== uu)
-            if ("modifiers" === Eu) {
-              const Ru = yu.modifiers ?? {};
-              for (const yu of Object.keys(uu))
-                if (void 0 !== uu[yu] && void 0 === Ru[yu]) return !1
-            } else if (void 0 === yu[Eu]) return !1
+      _entryCoversAllConditionsOf(kk, Fk) {
+        if (!Fk) return !0;
+        const Bk = kk;
+        for (const Rk of Object.keys(Fk)) {
+          const kk = Fk[Rk];
+          if (void 0 !== kk)
+            if ("modifiers" === Rk) {
+              const Fk = Bk.modifiers ?? {};
+              for (const Bk of Object.keys(kk))
+                if (void 0 !== kk[Bk] && void 0 === Fk[Bk]) return !1
+            } else if (void 0 === Bk[Rk]) return !1
         }
         return !0
       }
-      setInteractions(uu, Ru, yu) {
-        let Eu = 0;
-        const Ku = this.inputMap;
-        for (let Qu = 0; Qu < Ku.length; Qu++) {
-          const mu = Ku[Qu];
-          mu.source === uu && this._entryMatches(mu, Ru) && (mu.interaction = yu, Eu++)
+      setInteractions(kk, Fk, Bk) {
+        let Rk = 0;
+        const tk = this.inputMap;
+        for (let ak = 0; ak < tk.length; ak++) {
+          const Xk = tk[ak];
+          Xk.source === kk && this._entryMatches(Xk, Fk) && (Xk.interaction = Bk, Rk++)
         }
-        return Eu
+        return Rk
       }
-      _entryMatches(uu, Ru) {
-        switch (uu.source) {
+      _entryMatches(kk, Fk) {
+        switch (kk.source) {
           case "pointer":
-            return (void 0 === uu.button || uu.button === Ru?.button) && this._matchModifiers(uu.modifiers, Ru?.modifiers);
+            return (void 0 === kk.button || kk.button === Fk?.button) && this._matchModifiers(kk.modifiers, Fk?.modifiers);
           case "wheel":
-            return this._matchModifiers(uu.modifiers, Ru?.modifiers);
+            return this._matchModifiers(kk.modifiers, Fk?.modifiers);
           case "touch":
-            return void 0 === uu.touchCount || uu.touchCount === Ru?.touchCount;
+            return void 0 === kk.touchCount || kk.touchCount === Fk?.touchCount;
           case "keyboard":
-            return (void 0 === uu.key || (Array.isArray(uu.key) ? -1 !== uu.key.indexOf(Ru?.key ?? -1) : uu.key === Ru?.key)) && this._matchModifiers(uu.modifiers, Ru?.modifiers)
+            return (void 0 === kk.key || (Array.isArray(kk.key) ? -1 !== kk.key.indexOf(Fk?.key ?? -1) : kk.key === Fk?.key)) && this._matchModifiers(kk.modifiers, Fk?.modifiers)
         }
       }
-      _entryConditionsMatch(uu, Ru) {
-        if (!Ru) return !0;
-        switch (uu.source) {
+      _entryConditionsMatch(kk, Fk) {
+        if (!Fk) return !0;
+        switch (kk.source) {
           case "pointer":
-            return (!("button" in Ru) || uu.button === Ru.button) && (!("modifiers" in Ru) || this._entryModifiersMatch(uu.modifiers, Ru.modifiers));
+            return (!("button" in Fk) || kk.button === Fk.button) && (!("modifiers" in Fk) || this._entryModifiersMatch(kk.modifiers, Fk.modifiers));
           case "wheel":
-            return !("modifiers" in Ru) || this._entryModifiersMatch(uu.modifiers, Ru.modifiers);
+            return !("modifiers" in Fk) || this._entryModifiersMatch(kk.modifiers, Fk.modifiers);
           case "touch":
-            return !("touchCount" in Ru) || uu.touchCount === Ru.touchCount;
+            return !("touchCount" in Fk) || kk.touchCount === Fk.touchCount;
           case "keyboard":
-            if ("key" in Ru) {
-              if (void 0 === uu.key) return void 0 === Ru.key;
-              if (void 0 === Ru.key || (Array.isArray(uu.key) ? -1 === uu.key.indexOf(Ru.key) : uu.key !== Ru.key)) return !1
+            if ("key" in Fk) {
+              if (void 0 === kk.key) return void 0 === Fk.key;
+              if (void 0 === Fk.key || (Array.isArray(kk.key) ? -1 === kk.key.indexOf(Fk.key) : kk.key !== Fk.key)) return !1
             }
-            return !("modifiers" in Ru) || this._entryModifiersMatch(uu.modifiers, Ru.modifiers)
+            return !("modifiers" in Fk) || this._entryModifiersMatch(kk.modifiers, Fk.modifiers)
         }
       }
-      _entrySpecificity(uu) {
-        let Ru = 0;
-        return "button" in uu && void 0 !== uu.button && Ru++, "key" in uu && void 0 !== uu.key && Ru++, "touchCount" in uu && void 0 !== uu.touchCount && Ru++, "modifiers" in uu && uu.modifiers && Ru++, Ru
+      _entrySpecificity(kk) {
+        let Fk = 0;
+        return "button" in kk && void 0 !== kk.button && Fk++, "key" in kk && void 0 !== kk.key && Fk++, "touchCount" in kk && void 0 !== kk.touchCount && Fk++, "modifiers" in kk && kk.modifiers && Fk++, Fk
       }
-      _matchModifiers(uu, Ru) {
-        return !uu || (void 0 === uu.ctrl || uu.ctrl === (Ru?.ctrl ?? !1)) && ((void 0 === uu.shift || uu.shift === (Ru?.shift ?? !1)) && (void 0 === uu.alt || uu.alt === (Ru?.alt ?? !1)))
+      _matchModifiers(kk, Fk) {
+        return !kk || (void 0 === kk.ctrl || kk.ctrl === (Fk?.ctrl ?? !1)) && ((void 0 === kk.shift || kk.shift === (Fk?.shift ?? !1)) && (void 0 === kk.alt || kk.alt === (Fk?.alt ?? !1)))
       }
-      _entryModifiersMatch(uu, Ru) {
-        if (!Ru) return !uu;
-        return void 0 !== Ru.ctrl || void 0 !== Ru.shift || void 0 !== Ru.alt ? (void 0 === Ru.ctrl || uu?.ctrl === Ru.ctrl) && ((void 0 === Ru.shift || uu?.shift === Ru.shift) && (void 0 === Ru.alt || uu?.alt === Ru.alt)) : !uu || void 0 === uu.ctrl && void 0 === uu.shift && void 0 === uu.alt
+      _entryModifiersMatch(kk, Fk) {
+        if (!Fk) return !kk;
+        return void 0 !== Fk.ctrl || void 0 !== Fk.shift || void 0 !== Fk.alt ? (void 0 === Fk.ctrl || kk?.ctrl === Fk.ctrl) && ((void 0 === Fk.shift || kk?.shift === Fk.shift) && (void 0 === Fk.alt || kk?.alt === Fk.alt)) : !kk || void 0 === kk.ctrl && void 0 === kk.shift && void 0 === kk.alt
       }
     }
   },
-  39770: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Wu,
-      f: () => pu
+  39621: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => mk,
+      d: () => yk
     });
-    var Eu = yu(39560),
-      Ku = yu(39566),
-      Qu = yu(39774),
-      mu = yu(36830),
-      Ju = yu(36833),
-      Nu = yu(39784),
-      Xu = yu(39780),
-      Vu = yu(39787),
-      ru = yu(39796);
-    class Bu extends Vu.d {
-      constructor(uu, Ru, yu) {
-        super(uu, Ru, yu), this.input = new ru.d({
-          translate: (uu, Ru, yu) => {
-            this.panAccumulatedPixels.x += uu, this.panAccumulatedPixels.y += Ru, this.panAccumulatedPixels.z += yu
+    var Rk = Bk(39397),
+      tk = Bk(39404),
+      ak = Bk(39623),
+      Xk = Bk(36758),
+      bk = Bk(36764),
+      wk = Bk(39637),
+      dk = Bk(39628),
+      sk = Bk(39641),
+      Vk = Bk(39647);
+    class Jk extends sk.b {
+      constructor(kk, Fk, Bk) {
+        super(kk, Fk, Bk), this.input = new Vk.e({
+          translate: (kk, Fk, Bk) => {
+            this.panAccumulatedPixels.x += kk, this.panAccumulatedPixels.y += Fk, this.panAccumulatedPixels.z += Bk
           },
-          rotate: (uu, Ru) => {
-            this.rotationAccumulatedPixels.x += uu, this.rotationAccumulatedPixels.y += Ru
+          rotate: (kk, Fk) => {
+            this.rotationAccumulatedPixels.x += kk, this.rotationAccumulatedPixels.y += Fk
           }
         }, (() => this._createDefaultInputMap()))
       }
@@ -853,40 +853,40 @@ export const modules = {
         }]
       }
     }
-    const xu = mu.d.Zero(),
-      Su = mu.f.Identity();
-    let pu = (() => {
-        var uu;
-        let Ru, yu, Xu, Vu, ru = Qu.c,
-          pu = [],
-          Tu = [],
-          Wu = [],
-          ju = [],
-          Hu = [],
-          du = [],
-          bu = [],
-          Cu = [];
-        return uu = class extends ru {
+    const Ak = Xk.c.Zero(),
+      ek = Xk.e.Identity();
+    let yk = (() => {
+        var kk;
+        let Fk, Bk, dk, sk, Vk = ak.c,
+          yk = [],
+          fk = [],
+          mk = [],
+          Wk = [],
+          vk = [],
+          ik = [],
+          Yk = [],
+          Lk = [];
+        return kk = class extends Vk {
           get inertia() {
             return this._targetInertia
           }
-          set inertia(uu) {
-            this._targetInertia = uu, this.movement && (this.movement.panInertia = uu, this.movement.rotationInertia = uu)
+          set inertia(kk) {
+            this._targetInertia = kk, this.movement && (this.movement.panInertia = kk, this.movement.rotationInertia = kk)
           }
-          constructor(uu, Ru, yu) {
-            super(uu, Ru, yu, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), this.cameraDirection = new mu.p(0, 0, 0), this.cameraRotation = new mu.n(0, 0), this._targetInertia = .9, this.updateUpVectorFromRotation = (0, Eu.l)(this, pu, !1), this.rotation = ((0, Eu.l)(this, Tu), (0, Eu.l)(this, Wu, void 0)), this.rotationQuaternion = (0, Eu.l)(this, ju), this.speed = (0, Eu.l)(this, Hu, 2), this.noRotationConstraint = ((0, Eu.l)(this, du), !1), this.invertRotation = !1, this.inverseRotationSpeed = .2, this._panningEpsilon = Ju.d, this._rotationEpsilon = Ju.d, this.lockedTarget = (0, Eu.l)(this, bu, null), this._currentTarget = ((0, Eu.l)(this, Cu), mu.p.Zero()), this._initialFocalDistance = 1, this._viewMatrix = mu.d.Zero(), this._cameraTransformMatrix = mu.d.Zero(), this._cameraRotationMatrix = mu.d.Zero(), this._transformedReferencePoint = mu.p.Zero(), this._deferredPositionUpdate = new mu.p, this._deferredRotationQuaternionUpdate = new mu.f, this._deferredRotationUpdate = new mu.p, this._deferredUpdated = !1, this._deferOnly = !1, this._cachedRotationZ = 0, this._cachedQuaternionRotationZ = 0, this._referencePoint = mu.p.Forward(this.lD().useRightHandedSystem), this.rotation = new mu.p(0, this.lD().useRightHandedSystem ? Math.PI : 0, 0), this.movement = new Bu(this.lD(), this.position), this.movement.panInertia = this.inertia, this.movement.rotationInertia = this.inertia
+          constructor(kk, Fk, Bk) {
+            super(kk, Fk, Bk, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), this.cameraDirection = new Xk.s(0, 0, 0), this.cameraRotation = new Xk.p(0, 0), this._targetInertia = .9, this.updateUpVectorFromRotation = (0, Rk.l)(this, yk, !1), this.rotation = ((0, Rk.l)(this, fk), (0, Rk.l)(this, mk, void 0)), this.rotationQuaternion = (0, Rk.l)(this, Wk), this.speed = (0, Rk.l)(this, vk, 2), this.noRotationConstraint = ((0, Rk.l)(this, ik), !1), this.invertRotation = !1, this.inverseRotationSpeed = .2, this._panningEpsilon = bk.c, this._rotationEpsilon = bk.c, this.lockedTarget = (0, Rk.l)(this, Yk, null), this._currentTarget = ((0, Rk.l)(this, Lk), Xk.s.Zero()), this._initialFocalDistance = 1, this._viewMatrix = Xk.c.Zero(), this._cameraTransformMatrix = Xk.c.Zero(), this._cameraRotationMatrix = Xk.c.Zero(), this._transformedReferencePoint = Xk.s.Zero(), this._deferredPositionUpdate = new Xk.s, this._deferredRotationQuaternionUpdate = new Xk.e, this._deferredRotationUpdate = new Xk.s, this._deferredUpdated = !1, this._deferOnly = !1, this._cachedRotationZ = 0, this._cachedQuaternionRotationZ = 0, this._referencePoint = Xk.s.Forward(this.XN().useRightHandedSystem), this.rotation = new Xk.s(0, this.XN().useRightHandedSystem ? Math.PI : 0, 0), this.movement = new Jk(this.XN(), this.position), this.movement.panInertia = this.inertia, this.movement.rotationInertia = this.inertia
           }
-          getFrontPosition(uu) {
+          getFrontPosition(kk) {
             this.getWorldMatrix();
-            const Ru = mu.m.MS[0],
-              yu = mu.m.MS[1];
-            return yu.set(0, 0, this._scene.useRightHandedSystem ? -1 : 1), this.getDirectionToRef(yu, Ru), Ru.scaleInPlace(uu), this.globalPosition.add(Ru)
+            const Fk = Xk.l.Qe[0],
+              Bk = Xk.l.Qe[1];
+            return Bk.set(0, 0, this._scene.useRightHandedSystem ? -1 : 1), this.getDirectionToRef(Bk, Fk), Fk.scaleInPlace(kk), this.globalPosition.add(Fk)
           }
           _getLockedTargetPosition() {
             if (!this.lockedTarget) return null;
             if (this.lockedTarget.absolutePosition) {
-              const uu = this.lockedTarget;
-              uu.computeWorldMatrix().getTranslationToRef(uu.absolutePosition)
+              const kk = this.lockedTarget;
+              kk.computeWorldMatrix().getTranslationToRef(kk.absolutePosition)
             }
             return this.lockedTarget.absolutePosition || this.lockedTarget
           }
@@ -894,35 +894,35 @@ export const modules = {
             return this._storedPosition = this.position.clone(), this._storedRotation = this.rotation.clone(), this.rotationQuaternion && (this._storedRotationQuaternion = this.rotationQuaternion.clone()), super.storeState()
           }
           _restoreStateValues() {
-            return !!super._restoreStateValues() && (this.position = this._storedPosition.clone(), this.rotation = this._storedRotation.clone(), this.rotationQuaternion && this._storedRotationQuaternion && (this.rotationQuaternion = this._storedRotationQuaternion.clone()), this.cameraDirection.muu(0, 0, 0), this.cameraRotation.muu(0, 0), !0)
+            return !!super._restoreStateValues() && (this.position = this._storedPosition.clone(), this.rotation = this._storedRotation.clone(), this.rotationQuaternion && this._storedRotationQuaternion && (this.rotationQuaternion = this._storedRotationQuaternion.clone()), this.cameraDirection.E1(0, 0, 0), this.cameraRotation.E1(0, 0), !0)
           }
           _initCache() {
-            super._initCache(), this._cache.lockedTarget = new mu.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.rotation = new mu.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.rotationQuaternion = new mu.f(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE)
+            super._initCache(), this._cache.lockedTarget = new Xk.s(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.rotation = new Xk.s(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.rotationQuaternion = new Xk.e(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE)
           }
-          _updateCache(uu) {
-            uu || super._updateCache();
-            const Ru = this._getLockedTargetPosition();
-            Ru ? this._cache.lockedTarget ? this._cache.lockedTarget.Oyu(Ru) : this._cache.lockedTarget = Ru.clone() : this._cache.lockedTarget = null, this._cache.rotation.Oyu(this.rotation), this.rotationQuaternion && this._cache.rotationQuaternion.Oyu(this.rotationQuaternion)
+          _updateCache(kk) {
+            kk || super._updateCache();
+            const Fk = this._getLockedTargetPosition();
+            Fk ? this._cache.lockedTarget ? this._cache.lockedTarget.sBk(Fk) : this._cache.lockedTarget = Fk.clone() : this._cache.lockedTarget = null, this._cache.rotation.sBk(this.rotation), this.rotationQuaternion && this._cache.rotationQuaternion.sBk(this.rotationQuaternion)
           }
           _isSynchronizedViewMatrix() {
             if (!super._isSynchronizedViewMatrix()) return !1;
-            const uu = this._getLockedTargetPosition();
-            return (this._cache.lockedTarget ? this._cache.lockedTarget.equals(uu) : !uu) && (this.rotationQuaternion ? this.rotationQuaternion.equals(this._cache.rotationQuaternion) : this._cache.rotation.equals(this.rotation))
+            const kk = this._getLockedTargetPosition();
+            return (this._cache.lockedTarget ? this._cache.lockedTarget.equals(kk) : !kk) && (this.rotationQuaternion ? this.rotationQuaternion.equals(this._cache.rotationQuaternion) : this._cache.rotation.equals(this.rotation))
           }
           _computeLocalCameraSpeed() {
-            const uu = this.eS();
-            return this.speed * Math.sqrt(uu.getDeltaTime() / (100 * uu.getFps()))
+            const kk = this.ne();
+            return this.speed * Math.sqrt(kk.getDeltaTime() / (100 * kk.getFps()))
           }
-          setTarget(uu) {
-            this.upVector.normalize(), this._initialFocalDistance = uu.subtract(this.position).length(), this.position.z === uu.z && (this.position.z += Ju.d), this._referencePoint.normalize().scaleInPlace(this._initialFocalDistance), this.lD().useRightHandedSystem ? mu.d.LookAtRHToRef(this.position, uu, mu.p.UpReadOnly, xu) : mu.d.LookAtLHToRef(this.position, uu, mu.p.UpReadOnly, xu), xu.invert();
-            const Ru = this.rotationQuaternion || Su;
-            mu.f.FromRotationMatrixToRef(xu, Ru), Ru.toEulerAnglesToRef(this.rotation), this.rotation.z = 0
+          setTarget(kk) {
+            this.upVector.normalize(), this._initialFocalDistance = kk.subtract(this.position).length(), this.position.z === kk.z && (this.position.z += bk.c), this._referencePoint.normalize().scaleInPlace(this._initialFocalDistance), this.XN().useRightHandedSystem ? Xk.c.LookAtRHToRef(this.position, kk, Xk.s.UpReadOnly, Ak) : Xk.c.LookAtLHToRef(this.position, kk, Xk.s.UpReadOnly, Ak), Ak.invert();
+            const Fk = this.rotationQuaternion || ek;
+            Xk.e.FromRotationMatrixToRef(Ak, Fk), Fk.toEulerAnglesToRef(this.rotation), this.rotation.z = 0
           }
           get target() {
             return this.getTarget()
           }
-          set target(uu) {
-            this.setTarget(uu)
+          set target(kk) {
+            this.setTarget(kk)
           }
           getTarget() {
             return this._currentTarget
@@ -931,923 +931,923 @@ export const modules = {
             return Math.abs(this.cameraDirection.x) > 0 || Math.abs(this.cameraDirection.y) > 0 || Math.abs(this.cameraDirection.z) > 0
           }
           _updatePosition() {
-            if (this.parent) return this.parent.getWorldMatrix().invertToRef(mu.m.Matrix[0]), mu.p.TransformNormalToRef(this.cameraDirection, mu.m.Matrix[0], mu.m.MS[0]), this._deferredPositionUpdate.addInPlace(mu.m.MS[0]), void(this._deferOnly ? this._deferredUpdated = !0 : this.position.Oyu(this._deferredPositionUpdate));
-            this._deferredPositionUpdate.addInPlace(this.cameraDirection), this._deferOnly ? this._deferredUpdated = !0 : this.position.Oyu(this._deferredPositionUpdate)
+            if (this.parent) return this.parent.getWorldMatrix().invertToRef(Xk.l.Matrix[0]), Xk.s.TransformNormalToRef(this.cameraDirection, Xk.l.Matrix[0], Xk.l.Qe[0]), this._deferredPositionUpdate.addInPlace(Xk.l.Qe[0]), void(this._deferOnly ? this._deferredUpdated = !0 : this.position.sBk(this._deferredPositionUpdate));
+            this._deferredPositionUpdate.addInPlace(this.cameraDirection), this._deferOnly ? this._deferredUpdated = !0 : this.position.sBk(this._deferredPositionUpdate)
           }
           _checkInputs() {
-            const uu = this.movement,
-              Ru = 0 !== this.cameraDirection.x || 0 !== this.cameraDirection.y || 0 !== this.cameraDirection.z;
-            uu.panAccumulatedPixels.addInPlace(this.cameraDirection), uu.rotationAccumulatedPixels.x += this.cameraRotation.x, uu.rotationAccumulatedPixels.y += this.cameraRotation.y, uu.computeCurrentFrameDeltas(), this.cameraDirection.Oyu(uu.panDeltaCurrentFrame), this.cameraRotation.set(uu.rotationDeltaCurrentFrame.x, uu.rotationDeltaCurrentFrame.y);
-            const yu = this.speed * this._panningEpsilon;
-            !Ru && Math.abs(this.cameraDirection.x) < yu && Math.abs(this.cameraDirection.y) < yu && Math.abs(this.cameraDirection.z) < yu && (this.cameraDirection.e_(0), uu.resetPanVelocity());
-            const Eu = this.invertRotation ? -this.inverseRotationSpeed : 1,
-              Ku = this._decideIfNeedsToMove(),
-              Qu = !(!this.cameraRotation.x && !this.cameraRotation.y);
-            if (this._deferredUpdated = !1, this._deferredRotationUpdate.Oyu(this.rotation), this._deferredPositionUpdate.Oyu(this.position), this.rotationQuaternion && this._deferredRotationQuaternionUpdate.Oyu(this.rotationQuaternion), Ku && this._updatePosition(), Qu) {
-              if (this.rotationQuaternion && this.rotationQuaternion.toEulerAnglesToRef(this._deferredRotationUpdate), this._deferredRotationUpdate.x += this.cameraRotation.x * Eu, this._deferredRotationUpdate.y += this.cameraRotation.y * Eu, !this.noRotationConstraint) {
-                const uu = 1.570796;
-                this._deferredRotationUpdate.x > uu && (this._deferredRotationUpdate.x = uu), this._deferredRotationUpdate.x < -uu && (this._deferredRotationUpdate.x = -uu)
+            const kk = this.movement,
+              Fk = 0 !== this.cameraDirection.x || 0 !== this.cameraDirection.y || 0 !== this.cameraDirection.z;
+            kk.panAccumulatedPixels.addInPlace(this.cameraDirection), kk.rotationAccumulatedPixels.x += this.cameraRotation.x, kk.rotationAccumulatedPixels.y += this.cameraRotation.y, kk.computeCurrentFrameDeltas(), this.cameraDirection.sBk(kk.panDeltaCurrentFrame), this.cameraRotation.set(kk.rotationDeltaCurrentFrame.x, kk.rotationDeltaCurrentFrame.y);
+            const Bk = this.speed * this._panningEpsilon;
+            !Fk && Math.abs(this.cameraDirection.x) < Bk && Math.abs(this.cameraDirection.y) < Bk && Math.abs(this.cameraDirection.z) < Bk && (this.cameraDirection.J_(0), kk.resetPanVelocity());
+            const Rk = this.invertRotation ? -this.inverseRotationSpeed : 1,
+              tk = this._decideIfNeedsToMove(),
+              ak = !(!this.cameraRotation.x && !this.cameraRotation.y);
+            if (this._deferredUpdated = !1, this._deferredRotationUpdate.sBk(this.rotation), this._deferredPositionUpdate.sBk(this.position), this.rotationQuaternion && this._deferredRotationQuaternionUpdate.sBk(this.rotationQuaternion), tk && this._updatePosition(), ak) {
+              if (this.rotationQuaternion && this.rotationQuaternion.toEulerAnglesToRef(this._deferredRotationUpdate), this._deferredRotationUpdate.x += this.cameraRotation.x * Rk, this._deferredRotationUpdate.y += this.cameraRotation.y * Rk, !this.noRotationConstraint) {
+                const kk = 1.570796;
+                this._deferredRotationUpdate.x > kk && (this._deferredRotationUpdate.x = kk), this._deferredRotationUpdate.x < -kk && (this._deferredRotationUpdate.x = -kk)
               }
-              if (this._deferOnly ? this._deferredUpdated = !0 : this.rotation.Oyu(this._deferredRotationUpdate), this.rotationQuaternion) {
-                this._deferredRotationUpdate.lengthSquared() && (mu.f.RotationYawPitchRollToRef(this._deferredRotationUpdate.y, this._deferredRotationUpdate.x, this._deferredRotationUpdate.z, this._deferredRotationQuaternionUpdate), this._deferOnly ? this._deferredUpdated = !0 : this.rotationQuaternion.Oyu(this._deferredRotationQuaternionUpdate))
+              if (this._deferOnly ? this._deferredUpdated = !0 : this.rotation.sBk(this._deferredRotationUpdate), this.rotationQuaternion) {
+                this._deferredRotationUpdate.lengthSquared() && (Xk.e.RotationYawPitchRollToRef(this._deferredRotationUpdate.y, this._deferredRotationUpdate.x, this._deferredRotationUpdate.z, this._deferredRotationQuaternionUpdate), this._deferOnly ? this._deferredUpdated = !0 : this.rotationQuaternion.sBk(this._deferredRotationQuaternionUpdate))
               }
             }
-            this.cameraDirection.e_(0), this.cameraRotation.set(0, 0), super._checkInputs()
+            this.cameraDirection.J_(0), this.cameraRotation.set(0, 0), super._checkInputs()
           }
           _updateCameraRotationMatrix() {
-            this.rotationQuaternion ? this.rotationQuaternion.toRotationMatrix(this._cameraRotationMatrix) : mu.d.RotationYawPitchRollToRef(this.rotation.y, this.rotation.x, this.rotation.z, this._cameraRotationMatrix)
+            this.rotationQuaternion ? this.rotationQuaternion.toRotationMatrix(this._cameraRotationMatrix) : Xk.c.RotationYawPitchRollToRef(this.rotation.y, this.rotation.x, this.rotation.z, this._cameraRotationMatrix)
           }
           _rotateUpVectorWithCameraRotationMatrix() {
-            return mu.p.TransformNormalToRef(mu.p.UpReadOnly, this._cameraRotationMatrix, this.upVector), this
+            return Xk.s.TransformNormalToRef(Xk.s.UpReadOnly, this._cameraRotationMatrix, this.upVector), this
           }
           _getViewMatrix() {
-            return this.lockedTarget && this.setTarget(this._getLockedTargetPosition()), this._updateCameraRotationMatrix(), this.rotationQuaternion && this._cachedQuaternionRotationZ != this.rotationQuaternion.z ? (this._rotateUpVectorWithCameraRotationMatrix(), this._cachedQuaternionRotationZ = this.rotationQuaternion.z) : this._cachedRotationZ !== this.rotation.z && (this._rotateUpVectorWithCameraRotationMatrix(), this._cachedRotationZ = this.rotation.z), mu.p.TransformCoordinatesToRef(this._referencePoint, this._cameraRotationMatrix, this._transformedReferencePoint), this.position.addToRef(this._transformedReferencePoint, this._currentTarget), this.updateUpVectorFromRotation && (this.rotationQuaternion ? Nu.b.Y.rotateByQuaternionToRef(this.rotationQuaternion, this.upVector) : (mu.f.FromEulerVectorToRef(this.rotation, Su), Nu.b.Y.rotateByQuaternionToRef(Su, this.upVector))), this._computeViewMatrix(this.position, this._currentTarget, this.upVector), this._viewMatrix
+            return this.lockedTarget && this.setTarget(this._getLockedTargetPosition()), this._updateCameraRotationMatrix(), this.rotationQuaternion && this._cachedQuaternionRotationZ != this.rotationQuaternion.z ? (this._rotateUpVectorWithCameraRotationMatrix(), this._cachedQuaternionRotationZ = this.rotationQuaternion.z) : this._cachedRotationZ !== this.rotation.z && (this._rotateUpVectorWithCameraRotationMatrix(), this._cachedRotationZ = this.rotation.z), Xk.s.TransformCoordinatesToRef(this._referencePoint, this._cameraRotationMatrix, this._transformedReferencePoint), this.position.addToRef(this._transformedReferencePoint, this._currentTarget), this.updateUpVectorFromRotation && (this.rotationQuaternion ? wk.b.Y.rotateByQuaternionToRef(this.rotationQuaternion, this.upVector) : (Xk.e.FromEulerVectorToRef(this.rotation, ek), wk.b.Y.rotateByQuaternionToRef(ek, this.upVector))), this._computeViewMatrix(this.position, this._currentTarget, this.upVector), this._viewMatrix
           }
-          _computeViewMatrix(uu, Ru, yu) {
-            if (this.lD().useRightHandedSystem ? mu.d.LookAtRHToRef(uu, Ru, yu, this._viewMatrix) : mu.d.LookAtLHToRef(uu, Ru, yu, this._viewMatrix), this.parent) {
-              const uu = this.parent.getWorldMatrix();
-              this._viewMatrix.invert(), this._viewMatrix.multiplyToRef(uu, this._viewMatrix), this._viewMatrix.invert(), this._markSyncedWithParent()
+          _computeViewMatrix(kk, Fk, Bk) {
+            if (this.XN().useRightHandedSystem ? Xk.c.LookAtRHToRef(kk, Fk, Bk, this._viewMatrix) : Xk.c.LookAtLHToRef(kk, Fk, Bk, this._viewMatrix), this.parent) {
+              const kk = this.parent.getWorldMatrix();
+              this._viewMatrix.invert(), this._viewMatrix.multiplyToRef(kk, this._viewMatrix), this._viewMatrix.invert(), this._markSyncedWithParent()
             }
           }
-          createRigCamera(Ru, yu) {
-            if (this.cameraRigMode !== Qu.c.RIG_MODE_NONE) {
-              const yu = new uu(Ru, this.position.clone(), this.lD());
-              return yu.isRigCamera = !0, yu.rigParent = this, this.cameraRigMode === Qu.c.RIG_MODE_VR && (this.rotationQuaternion || (this.rotationQuaternion = new mu.f), yu._cameraRigParams = {}, yu.rotationQuaternion = new mu.f), yu.mode = this.mode, yu.orthoLeft = this.orthoLeft, yu.orthoRight = this.orthoRight, yu.orthoTop = this.orthoTop, yu.orthoBottom = this.orthoBottom, yu
+          createRigCamera(Fk, Bk) {
+            if (this.cameraRigMode !== ak.c.RIG_MODE_NONE) {
+              const Bk = new kk(Fk, this.position.clone(), this.XN());
+              return Bk.isRigCamera = !0, Bk.rigParent = this, this.cameraRigMode === ak.c.RIG_MODE_VR && (this.rotationQuaternion || (this.rotationQuaternion = new Xk.e), Bk._cameraRigParams = {}, Bk.rotationQuaternion = new Xk.e), Bk.mode = this.mode, Bk.orthoLeft = this.orthoLeft, Bk.orthoRight = this.orthoRight, Bk.orthoTop = this.orthoTop, Bk.orthoBottom = this.orthoBottom, Bk
             }
             return null
           }
           _updateRigCameras() {
-            const uu = this._rigCameras[0],
-              Ru = this._rigCameras[1];
+            const kk = this._rigCameras[0],
+              Fk = this._rigCameras[1];
             switch (this.computeWorldMatrix(), this.cameraRigMode) {
-              case Qu.c.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case Qu.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case Qu.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-              case Qu.c.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case Qu.c.RIG_MODE_STEREOSCOPIC_INTERLACED: {
-                const yu = this.cameraRigMode === Qu.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED ? 1 : -1,
-                  Eu = this.cameraRigMode === Qu.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED ? -1 : 1;
-                this._getRigCamPositionAndTarget(this._cameraRigParams.stereoHalfAngle * yu, uu), this._getRigCamPositionAndTarget(this._cameraRigParams.stereoHalfAngle * Eu, Ru);
+              case ak.c.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
+              case ak.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
+              case ak.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
+              case ak.c.RIG_MODE_STEREOSCOPIC_OVERUNDER:
+              case ak.c.RIG_MODE_STEREOSCOPIC_INTERLACED: {
+                const Bk = this.cameraRigMode === ak.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED ? 1 : -1,
+                  Rk = this.cameraRigMode === ak.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED ? -1 : 1;
+                this._getRigCamPositionAndTarget(this._cameraRigParams.stereoHalfAngle * Bk, kk), this._getRigCamPositionAndTarget(this._cameraRigParams.stereoHalfAngle * Rk, Fk);
                 break
               }
-              case Qu.c.RIG_MODE_VR:
-                uu.rotationQuaternion && Ru.rotationQuaternion && this.rotationQuaternion ? (uu.rotationQuaternion.Oyu(this.rotationQuaternion), Ru.rotationQuaternion.Oyu(this.rotationQuaternion)) : (uu.rotation.Oyu(this.rotation), Ru.rotation.Oyu(this.rotation)), uu.position.Oyu(this.position), Ru.position.Oyu(this.position)
+              case ak.c.RIG_MODE_VR:
+                kk.rotationQuaternion && Fk.rotationQuaternion && this.rotationQuaternion ? (kk.rotationQuaternion.sBk(this.rotationQuaternion), Fk.rotationQuaternion.sBk(this.rotationQuaternion)) : (kk.rotation.sBk(this.rotation), Fk.rotation.sBk(this.rotation)), kk.position.sBk(this.position), Fk.position.sBk(this.position)
             }
             super._updateRigCameras()
           }
-          _getRigCamPositionAndTarget(Ru, yu) {
-            this.getTarget().subtractToRef(this.position, uu._TargetFocalPoint), uu._TargetFocalPoint.normalize().scaleInPlace(this._initialFocalDistance);
-            const Eu = uu._TargetFocalPoint.addInPlace(this.position);
-            mu.d.TranslationToRef(-Eu.x, -Eu.y, -Eu.z, uu._TargetTransformMatrix), uu._TargetTransformMatrix.multiplyToRef(mu.d.RotationAxis(yu.upVector, Ru), uu._RigCamTransformMatrix), mu.d.TranslationToRef(Eu.x, Eu.y, Eu.z, uu._TargetTransformMatrix), uu._RigCamTransformMatrix.multiplyToRef(uu._TargetTransformMatrix, uu._RigCamTransformMatrix), mu.p.TransformCoordinatesToRef(this.position, uu._RigCamTransformMatrix, yu.position), yu.setTarget(Eu)
+          _getRigCamPositionAndTarget(Fk, Bk) {
+            this.getTarget().subtractToRef(this.position, kk._TargetFocalPoint), kk._TargetFocalPoint.normalize().scaleInPlace(this._initialFocalDistance);
+            const Rk = kk._TargetFocalPoint.addInPlace(this.position);
+            Xk.c.TranslationToRef(-Rk.x, -Rk.y, -Rk.z, kk._TargetTransformMatrix), kk._TargetTransformMatrix.multiplyToRef(Xk.c.RotationAxis(Bk.upVector, Fk), kk._RigCamTransformMatrix), Xk.c.TranslationToRef(Rk.x, Rk.y, Rk.z, kk._TargetTransformMatrix), kk._RigCamTransformMatrix.multiplyToRef(kk._TargetTransformMatrix, kk._RigCamTransformMatrix), Xk.s.TransformCoordinatesToRef(this.position, kk._RigCamTransformMatrix, Bk.position), Bk.setTarget(Rk)
           }
           getClassName() {
             return "TargetCamera"
           }
         }, (() => {
-          const Qu = "function" === typeof Symbol && Symbol.metadata ? Object.create(ru[Symbol.metadata] ?? null) : void 0;
-          Ru = [(0, Ku.K)()], yu = [(0, Ku.G)()], Xu = [(0, Ku.K)()], Vu = [(0, Ku.y)("lockedTargetId")], (0, Eu.h)(null, null, Ru, {
+          const ak = "function" === typeof Symbol && Symbol.metadata ? Object.create(Vk[Symbol.metadata] ?? null) : void 0;
+          Fk = [(0, tk.M)()], Bk = [(0, tk.K)()], dk = [(0, tk.M)()], sk = [(0, tk.w)("lockedTargetId")], (0, Rk.j)(null, null, Fk, {
             kind: "field",
             name: "updateUpVectorFromRotation",
             static: !1,
             private: !1,
             access: {
-              has: uu => "updateUpVectorFromRotation" in uu,
-              get: uu => uu.updateUpVectorFromRotation,
-              set: (uu, Ru) => {
-                uu.updateUpVectorFromRotation = Ru
+              has: kk => "updateUpVectorFromRotation" in kk,
+              get: kk => kk.updateUpVectorFromRotation,
+              set: (kk, Fk) => {
+                kk.updateUpVectorFromRotation = Fk
               }
             },
-            metadata: Qu
-          }, pu, Tu), (0, Eu.h)(null, null, yu, {
+            metadata: ak
+          }, yk, fk), (0, Rk.j)(null, null, Bk, {
             kind: "field",
             name: "rotation",
             static: !1,
             private: !1,
             access: {
-              has: uu => "rotation" in uu,
-              get: uu => uu.rotation,
-              set: (uu, Ru) => {
-                uu.rotation = Ru
+              has: kk => "rotation" in kk,
+              get: kk => kk.rotation,
+              set: (kk, Fk) => {
+                kk.rotation = Fk
               }
             },
-            metadata: Qu
-          }, Wu, ju), (0, Eu.h)(null, null, Xu, {
+            metadata: ak
+          }, mk, Wk), (0, Rk.j)(null, null, dk, {
             kind: "field",
             name: "speed",
             static: !1,
             private: !1,
             access: {
-              has: uu => "speed" in uu,
-              get: uu => uu.speed,
-              set: (uu, Ru) => {
-                uu.speed = Ru
+              has: kk => "speed" in kk,
+              get: kk => kk.speed,
+              set: (kk, Fk) => {
+                kk.speed = Fk
               }
             },
-            metadata: Qu
-          }, Hu, du), (0, Eu.h)(null, null, Vu, {
+            metadata: ak
+          }, vk, ik), (0, Rk.j)(null, null, sk, {
             kind: "field",
             name: "lockedTarget",
             static: !1,
             private: !1,
             access: {
-              has: uu => "lockedTarget" in uu,
-              get: uu => uu.lockedTarget,
-              set: (uu, Ru) => {
-                uu.lockedTarget = Ru
+              has: kk => "lockedTarget" in kk,
+              get: kk => kk.lockedTarget,
+              set: (kk, Fk) => {
+                kk.lockedTarget = Fk
               }
             },
-            metadata: Qu
-          }, bu, Cu), Qu && Object.defineProperty(uu, Symbol.metadata, {
+            metadata: ak
+          }, Yk, Lk), ak && Object.defineProperty(kk, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Qu
+            value: ak
           })
-        })(), uu._RigCamTransformMatrix = new mu.d, uu._TargetTransformMatrix = new mu.d, uu._TargetFocalPoint = new mu.p, uu
+        })(), kk._RigCamTransformMatrix = new Xk.c, kk._TargetTransformMatrix = new Xk.c, kk._TargetFocalPoint = new Xk.s, kk
       })(),
-      Tu = !1;
+      fk = !1;
 
-    function Wu() {
-      Tu || (Tu = !0, Xu.e.AddNodeConstructor("TargetCamera", ((uu, Ru) => () => new pu(uu, mu.p.Zero(), Ru))))
+    function mk() {
+      fk || (fk = !0, dk.b.AddNodeConstructor("TargetCamera", ((kk, Fk) => () => new yk(kk, Xk.s.Zero(), Fk))))
     }
   },
-  39516: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Qu
+  39354: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => ak
     });
-    var Eu = yu(39455);
-    let Ku = !1;
+    var Rk = Bk(39305);
+    let tk = !1;
 
-    function Qu() {
-      Ku || (Ku = !0, Eu.d.prototype.getInputElement = function() {
+    function ak() {
+      tk || (tk = !0, Rk.c.prototype.getInputElement = function() {
         return this._renderingCanvas
-      }, Eu.d.prototype.getRenderingCanvasClientRect = function() {
+      }, Rk.c.prototype.getRenderingCanvasClientRect = function() {
         return this._renderingCanvas ? this._renderingCanvas.getBoundingClientRect() : null
-      }, Eu.d.prototype.getInputElementClientRect = function() {
+      }, Rk.c.prototype.getInputElementClientRect = function() {
         return this._renderingCanvas ? this.getInputElement().getBoundingClientRect() : null
-      }, Eu.d.prototype.getAspectRatio = function(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const yu = uu.viewport;
-        return this.getRenderWidth(Ru) * yu.width / (this.getRenderHeight(Ru) * yu.height)
-      }, Eu.d.prototype.getScreenAspectRatio = function() {
+      }, Rk.c.prototype.getAspectRatio = function(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Bk = kk.viewport;
+        return this.getRenderWidth(Fk) * Bk.width / (this.getRenderHeight(Fk) * Bk.height)
+      }, Rk.c.prototype.getScreenAspectRatio = function() {
         return this.getRenderWidth(!0) / this.getRenderHeight(!0)
-      }, Eu.d.prototype._verifyPointerLock = function() {
+      }, Rk.c.prototype._verifyPointerLock = function() {
         this._onPointerLockChange?.()
       })
     }
   },
-  39599: (uu, Ru, yu) => {
-    var Eu = yu(39455),
-      Ku = yu(39606);
-    let Qu = !1;
-    Qu || (Qu = !0, (0, Ku.v)(), Eu.d.prototype._loadFileAsync = async function(uu, Ru, yu) {
-      return await new Promise(((Eu, Ku) => {
-        this._loadFile(uu, (uu => {
-          Eu(uu)
-        }), void 0, Ru, yu, ((uu, Ru) => {
-          Ku(Ru)
+  39432: (kk, Fk, Bk) => {
+    var Rk = Bk(39305),
+      tk = Bk(39436);
+    let ak = !1;
+    ak || (ak = !0, (0, tk.p)(), Rk.c.prototype._loadFileAsync = async function(kk, Fk, Bk) {
+      return await new Promise(((Rk, tk) => {
+        this._loadFile(kk, (kk => {
+          Rk(kk)
+        }), void 0, Fk, Bk, ((kk, Fk) => {
+          tk(Fk)
         }))
       }))
     })
   },
-  39591: (uu, Ru, yu) => {
-    (0, yu(39520).d)()
+  39424: (kk, Fk, Bk) => {
+    (0, Bk(39360).d)()
   },
-  39520: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Qu
+  39360: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => ak
     });
-    var Eu = yu(39455);
-    let Ku = !1;
+    var Rk = Bk(39305);
+    let tk = !1;
 
-    function Qu() {
-      Ku || (Ku = !0, Eu.d.prototype.getRenderPassNames = function() {
+    function ak() {
+      tk || (tk = !0, Rk.c.prototype.getRenderPassNames = function() {
         return this._renderPassNames
-      }, Eu.d.prototype.getCurrentRenderPassName = function() {
+      }, Rk.c.prototype.getCurrentRenderPassName = function() {
         return this._renderPassNames[this.currentRenderPassId]
-      }, Eu.d.prototype.createRenderPassId = function(uu) {
-        const Ru = ++Eu.d._RenderPassIdCounter;
-        return this._renderPassNames[Ru] = uu ?? "NONAME", Ru
-      }, Eu.d.prototype.releaseRenderPassId = function(uu) {
-        this._renderPassNames[uu] = void 0;
-        for (let Ru = 0; Ru < this.scenes.length; ++Ru) {
-          const yu = this.scenes[Ru];
-          for (let Ru = 0; Ru < yu.meshes.length; ++Ru) {
-            const Eu = yu.meshes[Ru];
-            if (Eu._releaseRenderPassId(uu), Eu.mC)
-              for (let Ru = 0; Ru < Eu.mC.length; ++Ru) {
-                Eu.mC[Ru]._removeDrawWrapper(uu)
+      }, Rk.c.prototype.createRenderPassId = function(kk) {
+        const Fk = ++Rk.c._RenderPassIdCounter;
+        return this._renderPassNames[Fk] = kk ?? "NONAME", Fk
+      }, Rk.c.prototype.releaseRenderPassId = function(kk) {
+        this._renderPassNames[kk] = void 0;
+        for (let Fk = 0; Fk < this.scenes.length; ++Fk) {
+          const Bk = this.scenes[Fk];
+          for (let Fk = 0; Fk < Bk.meshes.length; ++Fk) {
+            const Rk = Bk.meshes[Fk];
+            if (Rk._releaseRenderPassId(kk), Rk.AY)
+              for (let Fk = 0; Fk < Rk.AY.length; ++Fk) {
+                Rk.AY[Fk]._removeDrawWrapper(kk)
               }
           }
         }
-        this._onReleaseRenderPassObservable?.notifyObservers(uu)
+        this._onReleaseRenderPassObservable?.notifyObservers(kk)
       })
     }
   },
-  39637: (uu, Ru, yu) => {
-    var Eu = yu(39639),
-      Ku = yu(39455);
-    let Qu = !1;
-    Qu || (Qu = !0, Ku.d.GetCompatibleTextureLoader = Eu.e)
+  39472: (kk, Fk, Bk) => {
+    var Rk = Bk(39477),
+      tk = Bk(39305);
+    let ak = !1;
+    ak || (ak = !0, tk.c.GetCompatibleTextureLoader = Rk.d)
   },
-  39526: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Qu
+  39362: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => ak
     });
-    var Eu = yu(39396);
-    let Ku = !1;
+    var Rk = Bk(39258);
+    let tk = !1;
 
-    function Qu() {
-      Ku || (Ku = !0, Eu.ThinEngine.prototype.setAlphaMode = function(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (this._alphaMode[yu] === uu) {
-          if (!Ru) {
-            const Ru = 0 === uu;
-            this.depthCullingState.depthMask !== Ru && (this.depthCullingState.depthMask = Ru)
+    function ak() {
+      tk || (tk = !0, Rk.ThinEngine.prototype.setAlphaMode = function(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (this._alphaMode[Bk] === kk) {
+          if (!Fk) {
+            const Fk = 0 === kk;
+            this.depthCullingState.depthMask !== Fk && (this.depthCullingState.depthMask = Fk)
           }
           return
         }
-        const Eu = 0 === uu;
-        this._alphaState.setAlphaBlend(!Eu, yu), this._alphaState.setAlphaMode(uu, yu), Ru || (this.depthCullingState.depthMask = Eu), this._alphaMode[yu] = uu
+        const Rk = 0 === kk;
+        this._alphaState.setAlphaBlend(!Rk, Bk), this._alphaState.setAlphaMode(kk, Bk), Fk || (this.depthCullingState.depthMask = Rk), this._alphaMode[Bk] = kk
       })
     }
   },
-  39539: (uu, Ru, yu) => {
-    var Eu = yu(39385),
-      Ku = yu(38448),
-      Qu = yu(39396),
-      mu = yu(39541),
-      Ju = yu(39506);
-    class Nu extends mu.b {
-      setDepthStencilTexture(uu) {
-        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (super.setDepthStencilTexture(uu, Ru), !uu) return;
-        const yu = this._engine,
-          Eu = this._context,
-          Ku = uu._hardwareTexture;
-        if (Ku && uu._autoMSAAManagement && this._MSAAFramebuffer) {
-          const Ru = yu._currentFramebuffer;
-          yu._bindUnboundFramebuffer(this._MSAAFramebuffer), Eu.framebufferRenderbuffer(Eu.FRAMEBUFFER, (0, Ju.d)(uu.format) ? Eu.DEPTH_STENCIL_ATTACHMENT : Eu.DEPTH_ATTACHMENT, Eu.RENDERBUFFER, Ku.getMSAARenderBuffer()), yu._bindUnboundFramebuffer(Ru)
+  39368: (kk, Fk, Bk) => {
+    var Rk = Bk(39248),
+      tk = Bk(38320),
+      ak = Bk(39258),
+      Xk = Bk(39375),
+      bk = Bk(39342);
+    class wk extends Xk.d {
+      setDepthStencilTexture(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (super.setDepthStencilTexture(kk, Fk), !kk) return;
+        const Bk = this._engine,
+          Rk = this._context,
+          tk = kk._hardwareTexture;
+        if (tk && kk._autoMSAAManagement && this._MSAAFramebuffer) {
+          const Fk = Bk._currentFramebuffer;
+          Bk._bindUnboundFramebuffer(this._MSAAFramebuffer), Rk.framebufferRenderbuffer(Rk.FRAMEBUFFER, (0, bk.e)(kk.format) ? Rk.DEPTH_STENCIL_ATTACHMENT : Rk.DEPTH_ATTACHMENT, Rk.RENDERBUFFER, tk.getMSAARenderBuffer()), Bk._bindUnboundFramebuffer(Fk)
         }
       }
-      constructor(uu, Ru, yu, Eu, Ku) {
-        super(uu, Ru, yu, Eu), this._framebuffer = null, this._depthStencilBuffer = null, this._MSAAFramebuffer = null, this._colorTextureArray = null, this._depthStencilTextureArray = null, this._disposeOnlyFramebuffers = !1, this._currentLOD = 0, this._context = Ku
+      constructor(kk, Fk, Bk, Rk, tk) {
+        super(kk, Fk, Bk, Rk), this._framebuffer = null, this._depthStencilBuffer = null, this._MSAAFramebuffer = null, this._colorTextureArray = null, this._depthStencilTextureArray = null, this._disposeOnlyFramebuffers = !1, this._currentLOD = 0, this._context = tk
       }
       _cloneRenderTargetWrapper() {
-        let uu;
-        return this._colorTextureArray && this._depthStencilTextureArray ? (uu = this._engine.createMultiviewRenderTargetTexture(this.width, this.height), uu.texture.isReady = !0) : uu = super._cloneRenderTargetWrapper(), uu
+        let kk;
+        return this._colorTextureArray && this._depthStencilTextureArray ? (kk = this._engine.createMultiviewRenderTargetTexture(this.width, this.height), kk.texture.isReady = !0) : kk = super._cloneRenderTargetWrapper(), kk
       }
-      _swapRenderTargetWrapper(uu) {
-        super._swapRenderTargetWrapper(uu), uu._framebuffer = this._framebuffer, uu._depthStencilBuffer = this._depthStencilBuffer, uu._MSAAFramebuffer = this._MSAAFramebuffer, uu._colorTextureArray = this._colorTextureArray, uu._depthStencilTextureArray = this._depthStencilTextureArray, this._framebuffer = this._depthStencilBuffer = this._MSAAFramebuffer = this._colorTextureArray = this._depthStencilTextureArray = null
+      _swapRenderTargetWrapper(kk) {
+        super._swapRenderTargetWrapper(kk), kk._framebuffer = this._framebuffer, kk._depthStencilBuffer = this._depthStencilBuffer, kk._MSAAFramebuffer = this._MSAAFramebuffer, kk._colorTextureArray = this._colorTextureArray, kk._depthStencilTextureArray = this._depthStencilTextureArray, this._framebuffer = this._depthStencilBuffer = this._MSAAFramebuffer = this._colorTextureArray = this._depthStencilTextureArray = null
       }
       createDepthStencilTexture() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
-          Qu = arguments.length > 5 ? arguments[5] : void 0;
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
+          ak = arguments.length > 5 ? arguments[5] : void 0;
         if (this._depthStencilBuffer) {
-          const uu = this._engine,
-            Ru = uu._currentFramebuffer,
-            yu = this._context;
-          uu._bindUnboundFramebuffer(this._framebuffer), yu.framebufferRenderbuffer(yu.FRAMEBUFFER, yu.DEPTH_STENCIL_ATTACHMENT, yu.RENDERBUFFER, null), yu.framebufferRenderbuffer(yu.FRAMEBUFFER, yu.DEPTH_ATTACHMENT, yu.RENDERBUFFER, null), yu.framebufferRenderbuffer(yu.FRAMEBUFFER, yu.STENCIL_ATTACHMENT, yu.RENDERBUFFER, null), uu._bindUnboundFramebuffer(Ru), yu.deleteRenderbuffer(this._depthStencilBuffer), this._depthStencilBuffer = null
+          const kk = this._engine,
+            Fk = kk._currentFramebuffer,
+            Bk = this._context;
+          kk._bindUnboundFramebuffer(this._framebuffer), Bk.framebufferRenderbuffer(Bk.FRAMEBUFFER, Bk.DEPTH_STENCIL_ATTACHMENT, Bk.RENDERBUFFER, null), Bk.framebufferRenderbuffer(Bk.FRAMEBUFFER, Bk.DEPTH_ATTACHMENT, Bk.RENDERBUFFER, null), Bk.framebufferRenderbuffer(Bk.FRAMEBUFFER, Bk.STENCIL_ATTACHMENT, Bk.RENDERBUFFER, null), kk._bindUnboundFramebuffer(Fk), Bk.deleteRenderbuffer(this._depthStencilBuffer), this._depthStencilBuffer = null
         }
-        return super.createDepthStencilTexture(uu, Ru, yu, Eu, Ku, Qu)
+        return super.createDepthStencilTexture(kk, Fk, Bk, Rk, tk, ak)
       }
-      shareDepth(uu) {
-        super.shareDepth(uu);
-        const Ru = this._context,
-          yu = this._depthStencilBuffer,
-          Eu = uu._MSAAFramebuffer || uu._framebuffer,
-          Ku = this._engine;
-        uu._depthStencilBuffer && uu._depthStencilBuffer !== yu && Ru.deleteRenderbuffer(uu._depthStencilBuffer), uu._depthStencilBuffer = yu;
-        const Qu = uu._generateStencilBuffer ? Ru.DEPTH_STENCIL_ATTACHMENT : Ru.DEPTH_ATTACHMENT;
-        Ku._bindUnboundFramebuffer(Eu), Ru.framebufferRenderbuffer(Ru.FRAMEBUFFER, Qu, Ru.RENDERBUFFER, yu), Ku._bindUnboundFramebuffer(null)
+      shareDepth(kk) {
+        super.shareDepth(kk);
+        const Fk = this._context,
+          Bk = this._depthStencilBuffer,
+          Rk = kk._MSAAFramebuffer || kk._framebuffer,
+          tk = this._engine;
+        kk._depthStencilBuffer && kk._depthStencilBuffer !== Bk && Fk.deleteRenderbuffer(kk._depthStencilBuffer), kk._depthStencilBuffer = Bk;
+        const ak = kk._generateStencilBuffer ? Fk.DEPTH_STENCIL_ATTACHMENT : Fk.DEPTH_ATTACHMENT;
+        tk._bindUnboundFramebuffer(Rk), Fk.framebufferRenderbuffer(Fk.FRAMEBUFFER, ak, Fk.RENDERBUFFER, Bk), tk._bindUnboundFramebuffer(null)
       }
-      _bindTextureRenderTarget(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          yu = arguments.length > 2 ? arguments[2] : void 0,
-          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const Ku = uu._hardwareTexture;
-        if (!Ku) return;
-        const Qu = this._framebuffer,
-          mu = this._engine,
-          Ju = mu._currentFramebuffer;
-        let Nu;
-        if (mu._bindUnboundFramebuffer(Qu), mu.Ep > 1) {
-          const Qu = this._context;
-          Nu = Qu["COLOR_ATTACHMENT" + Ru], uu.is2DArray || uu.is3D ? (yu = yu ?? this.layerIndices?.[Ru] ?? 0, Qu.framebufferTextureLayer(Qu.FRAMEBUFFER, Nu, Ku.underlyingResource, Eu, yu)) : uu.isCube ? (yu = yu ?? this.faceIndices?.[Ru] ?? 0, Qu.framebufferTexture2D(Qu.FRAMEBUFFER, Nu, Qu.TEXTURE_CUBE_MAP_POSITIVE_X + yu, Ku.underlyingResource, Eu)) : Qu.framebufferTexture2D(Qu.FRAMEBUFFER, Nu, Qu.TEXTURE_2D, Ku.underlyingResource, Eu)
+      _bindTextureRenderTarget(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Bk = arguments.length > 2 ? arguments[2] : void 0,
+          Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const tk = kk._hardwareTexture;
+        if (!tk) return;
+        const ak = this._framebuffer,
+          Xk = this._engine,
+          bk = Xk._currentFramebuffer;
+        let wk;
+        if (Xk._bindUnboundFramebuffer(ak), Xk.Uy > 1) {
+          const ak = this._context;
+          wk = ak["COLOR_ATTACHMENT" + Fk], kk.is2DArray || kk.is3D ? (Bk = Bk ?? this.layerIndices?.[Fk] ?? 0, ak.framebufferTextureLayer(ak.FRAMEBUFFER, wk, tk.underlyingResource, Rk, Bk)) : kk.isCube ? (Bk = Bk ?? this.faceIndices?.[Fk] ?? 0, ak.framebufferTexture2D(ak.FRAMEBUFFER, wk, ak.TEXTURE_CUBE_MAP_POSITIVE_X + Bk, tk.underlyingResource, Rk)) : ak.framebufferTexture2D(ak.FRAMEBUFFER, wk, ak.TEXTURE_2D, tk.underlyingResource, Rk)
         } else {
-          const uu = this._context;
-          Nu = uu["COLOR_ATTACHMENT" + Ru + "_WEBGL"];
-          const Qu = void 0 !== yu ? uu.TEXTURE_CUBE_MAP_POSITIVE_X + yu : uu.TEXTURE_2D;
-          uu.framebufferTexture2D(uu.FRAMEBUFFER, Nu, Qu, Ku.underlyingResource, Eu)
+          const kk = this._context;
+          wk = kk["COLOR_ATTACHMENT" + Fk + "_WEBGL"];
+          const ak = void 0 !== Bk ? kk.TEXTURE_CUBE_MAP_POSITIVE_X + Bk : kk.TEXTURE_2D;
+          kk.framebufferTexture2D(kk.FRAMEBUFFER, wk, ak, tk.underlyingResource, Rk)
         }
-        if (uu._autoMSAAManagement && this._MSAAFramebuffer) {
-          const uu = this._context;
-          mu._bindUnboundFramebuffer(this._MSAAFramebuffer), uu.framebufferRenderbuffer(uu.FRAMEBUFFER, Nu, uu.RENDERBUFFER, Ku.getMSAARenderBuffer())
+        if (kk._autoMSAAManagement && this._MSAAFramebuffer) {
+          const kk = this._context;
+          Xk._bindUnboundFramebuffer(this._MSAAFramebuffer), kk.framebufferRenderbuffer(kk.FRAMEBUFFER, wk, kk.RENDERBUFFER, tk.getMSAARenderBuffer())
         }
-        mu._bindUnboundFramebuffer(Ju)
+        Xk._bindUnboundFramebuffer(bk)
       }
-      setTexture(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        super.setTexture(uu, Ru, yu), this._bindTextureRenderTarget(uu, Ru)
+      setTexture(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Bk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        super.setTexture(kk, Fk, Bk), this._bindTextureRenderTarget(kk, Fk)
       }
-      setLayerAndFaceIndices(uu, Ru) {
-        if (super.setLayerAndFaceIndices(uu, Ru), !this.textures || !this.layerIndices || !this.faceIndices) return;
-        const yu = this._attachments?.length ?? this.textures.length;
-        for (let Eu = 0; Eu < yu; Eu++) {
-          const uu = this.textures[Eu];
-          uu && (uu.is2DArray || uu.is3D ? this._bindTextureRenderTarget(uu, Eu, this.layerIndices[Eu]) : uu.isCube ? this._bindTextureRenderTarget(uu, Eu, this.faceIndices[Eu]) : this._bindTextureRenderTarget(uu, Eu))
+      setLayerAndFaceIndices(kk, Fk) {
+        if (super.setLayerAndFaceIndices(kk, Fk), !this.textures || !this.layerIndices || !this.faceIndices) return;
+        const Bk = this._attachments?.length ?? this.textures.length;
+        for (let Rk = 0; Rk < Bk; Rk++) {
+          const kk = this.textures[Rk];
+          kk && (kk.is2DArray || kk.is3D ? this._bindTextureRenderTarget(kk, Rk, this.layerIndices[Rk]) : kk.isCube ? this._bindTextureRenderTarget(kk, Rk, this.faceIndices[Rk]) : this._bindTextureRenderTarget(kk, Rk))
         }
       }
       setLayerAndFaceIndex() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Ru = arguments.length > 1 ? arguments[1] : void 0,
-          yu = arguments.length > 2 ? arguments[2] : void 0;
-        if (super.setLayerAndFaceIndex(uu, Ru, yu), !this.textures || !this.layerIndices || !this.faceIndices) return;
-        const Eu = this.textures[uu];
-        Eu.is2DArray || Eu.is3D ? this._bindTextureRenderTarget(this.textures[uu], uu, this.layerIndices[uu]) : Eu.isCube && this._bindTextureRenderTarget(this.textures[uu], uu, this.faceIndices[uu])
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Bk = arguments.length > 2 ? arguments[2] : void 0;
+        if (super.setLayerAndFaceIndex(kk, Fk, Bk), !this.textures || !this.layerIndices || !this.faceIndices) return;
+        const Rk = this.textures[kk];
+        Rk.is2DArray || Rk.is3D ? this._bindTextureRenderTarget(this.textures[kk], kk, this.layerIndices[kk]) : Rk.isCube && this._bindTextureRenderTarget(this.textures[kk], kk, this.faceIndices[kk])
       }
       resolveMSAATextures() {
-        const uu = this._engine,
-          Ru = uu._currentFramebuffer;
-        uu._bindUnboundFramebuffer(this._MSAAFramebuffer), super.resolveMSAATextures(), uu._bindUnboundFramebuffer(Ru)
+        const kk = this._engine,
+          Fk = kk._currentFramebuffer;
+        kk._bindUnboundFramebuffer(this._MSAAFramebuffer), super.resolveMSAATextures(), kk._bindUnboundFramebuffer(Fk)
       }
       dispose() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._disposeOnlyFramebuffers;
-        const Ru = this._context;
-        uu || (this._colorTextureArray && (this._context.deleteTexture(this._colorTextureArray), this._colorTextureArray = null), this._depthStencilTextureArray && (this._context.deleteTexture(this._depthStencilTextureArray), this._depthStencilTextureArray = null)), this._framebuffer && (Ru.deleteFramebuffer(this._framebuffer), this._framebuffer = null), this._depthStencilBuffer && (Ru.deleteRenderbuffer(this._depthStencilBuffer), this._depthStencilBuffer = null), this._MSAAFramebuffer && (Ru.deleteFramebuffer(this._MSAAFramebuffer), this._MSAAFramebuffer = null), super.dispose(uu)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._disposeOnlyFramebuffers;
+        const Fk = this._context;
+        kk || (this._colorTextureArray && (this._context.deleteTexture(this._colorTextureArray), this._colorTextureArray = null), this._depthStencilTextureArray && (this._context.deleteTexture(this._depthStencilTextureArray), this._depthStencilTextureArray = null)), this._framebuffer && (Fk.deleteFramebuffer(this._framebuffer), this._framebuffer = null), this._depthStencilBuffer && (Fk.deleteRenderbuffer(this._depthStencilBuffer), this._depthStencilBuffer = null), this._MSAAFramebuffer && (Fk.deleteFramebuffer(this._MSAAFramebuffer), this._MSAAFramebuffer = null), super.dispose(kk)
       }
     }
-    let Xu = !1;
-    Xu || (Xu = !0, Qu.ThinEngine.prototype._createHardwareRenderTargetWrapper = function(uu, Ru, yu) {
-      const Eu = new Nu(uu, Ru, yu, this, this._gl);
-      return this._renderTargetWrapperCache.push(Eu), Eu
-    }, Qu.ThinEngine.prototype.createRenderTargetTexture = function(uu, Ru) {
-      const yu = this._createHardwareRenderTargetWrapper(!1, !1, uu);
-      let Eu, Ku, Qu = !0,
-        mu = !1,
-        Ju = !1,
-        Nu = 1;
-      void 0 !== Ru && "object" === typeof Ru && (Qu = Ru.generateDepthBuffer ?? !0, mu = !!Ru.generateStencilBuffer, Ju = !!Ru.noColorAttachment, Eu = Ru.colorAttachment, Nu = Ru.samples ?? 1, Ku = Ru.label);
-      const Xu = Eu || (Ju ? null : this._createInternalTexture(uu, Ru, !0, 5)),
-        Vu = uu.width || uu,
-        ru = uu.height || uu,
-        Bu = this._currentFramebuffer,
-        xu = this._gl,
-        Su = xu.createFramebuffer();
-      if (this._bindUnboundFramebuffer(Su), yu._depthStencilBuffer = this._setupFramebufferDepthAttachments(mu, Qu, Vu, ru), !Xu || Xu.is2DArray || Xu.is3D || xu.framebufferTexture2D(xu.FRAMEBUFFER, xu.COLOR_ATTACHMENT0, xu.TEXTURE_2D, Xu._hardwareTexture.underlyingResource, 0), this._bindUnboundFramebuffer(Bu), yu.label = Ku ?? "RenderTargetWrapper", yu._framebuffer = Su, yu._generateDepthBuffer = Qu, yu._generateStencilBuffer = mu, yu.setTextures(Xu), Eu) {
-        if (yu._samples = Eu.samples, Eu.samples > 1) {
-          const uu = Eu._hardwareTexture.getMSAARenderBuffer(0);
-          yu._MSAAFramebuffer = xu.createFramebuffer(), this._bindUnboundFramebuffer(yu._MSAAFramebuffer), xu.framebufferRenderbuffer(xu.FRAMEBUFFER, xu.COLOR_ATTACHMENT0, xu.RENDERBUFFER, uu), this._bindUnboundFramebuffer(null)
+    let dk = !1;
+    dk || (dk = !0, ak.ThinEngine.prototype._createHardwareRenderTargetWrapper = function(kk, Fk, Bk) {
+      const Rk = new wk(kk, Fk, Bk, this, this._gl);
+      return this._renderTargetWrapperCache.push(Rk), Rk
+    }, ak.ThinEngine.prototype.createRenderTargetTexture = function(kk, Fk) {
+      const Bk = this._createHardwareRenderTargetWrapper(!1, !1, kk);
+      let Rk, tk, ak = !0,
+        Xk = !1,
+        bk = !1,
+        wk = 1;
+      void 0 !== Fk && "object" === typeof Fk && (ak = Fk.generateDepthBuffer ?? !0, Xk = !!Fk.generateStencilBuffer, bk = !!Fk.noColorAttachment, Rk = Fk.colorAttachment, wk = Fk.samples ?? 1, tk = Fk.label);
+      const dk = Rk || (bk ? null : this._createInternalTexture(kk, Fk, !0, 5)),
+        sk = kk.width || kk,
+        Vk = kk.height || kk,
+        Jk = this._currentFramebuffer,
+        Ak = this._gl,
+        ek = Ak.createFramebuffer();
+      if (this._bindUnboundFramebuffer(ek), Bk._depthStencilBuffer = this._setupFramebufferDepthAttachments(Xk, ak, sk, Vk), !dk || dk.is2DArray || dk.is3D || Ak.framebufferTexture2D(Ak.FRAMEBUFFER, Ak.COLOR_ATTACHMENT0, Ak.TEXTURE_2D, dk._hardwareTexture.underlyingResource, 0), this._bindUnboundFramebuffer(Jk), Bk.label = tk ?? "RenderTargetWrapper", Bk._framebuffer = ek, Bk._generateDepthBuffer = ak, Bk._generateStencilBuffer = Xk, Bk.setTextures(dk), Rk) {
+        if (Bk._samples = Rk.samples, Rk.samples > 1) {
+          const kk = Rk._hardwareTexture.getMSAARenderBuffer(0);
+          Bk._MSAAFramebuffer = Ak.createFramebuffer(), this._bindUnboundFramebuffer(Bk._MSAAFramebuffer), Ak.framebufferRenderbuffer(Ak.FRAMEBUFFER, Ak.COLOR_ATTACHMENT0, Ak.RENDERBUFFER, kk), this._bindUnboundFramebuffer(null)
         }
-      } else this.updateRenderTargetTextureSampleCount(yu, Nu);
-      return yu
-    }, Qu.ThinEngine.prototype._createDepthStencilTexture = function(uu, Ru, yu) {
-      const Qu = this._gl,
-        mu = uu.layers || 0,
-        Nu = uu.depth || 0;
-      let Xu = Qu.TEXTURE_2D;
-      0 !== mu ? Xu = Qu.TEXTURE_2D_ARRAY : 0 !== Nu && (Xu = Qu.TEXTURE_3D);
-      const Vu = new Eu.c(this, 12);
-      if (Vu.label = Ru.label, !this._caps.depthTextureExtension) return Ku.e.Error("Depth texture is not supported by your browser or hardware."), Vu;
-      const ru = {
+      } else this.updateRenderTargetTextureSampleCount(Bk, wk);
+      return Bk
+    }, ak.ThinEngine.prototype._createDepthStencilTexture = function(kk, Fk, Bk) {
+      const ak = this._gl,
+        Xk = kk.layers || 0,
+        wk = kk.depth || 0;
+      let dk = ak.TEXTURE_2D;
+      0 !== Xk ? dk = ak.TEXTURE_2D_ARRAY : 0 !== wk && (dk = ak.TEXTURE_3D);
+      const sk = new Rk.c(this, 12);
+      if (sk.label = Fk.label, !this._caps.depthTextureExtension) return tk.b.Error("Depth texture is not supported by your browser or hardware."), sk;
+      const Vk = {
         bilinearFiltering: !1,
         comparisonFunction: 0,
         generateStencil: !1,
-        ...Ru
+        ...Fk
       };
-      if (this._bindTextureDirectly(Xu, Vu, !0), this._setupDepthStencilTexture(Vu, uu, 0 !== ru.comparisonFunction && ru.bilinearFiltering, ru.comparisonFunction, ru.samples), void 0 !== ru.depthTextureFormat) {
-        if (15 !== ru.depthTextureFormat && 16 !== ru.depthTextureFormat && 17 !== ru.depthTextureFormat && 13 !== ru.depthTextureFormat && 14 !== ru.depthTextureFormat && 18 !== ru.depthTextureFormat) return Ku.e.Error(`Depth texture ${ru.depthTextureFormat} format is not supported.`), Vu;
-        Vu.format = ru.depthTextureFormat
-      } else Vu.format = ru.generateStencil ? 13 : 16;
-      const Bu = (0, Ju.d)(Vu.format),
-        xu = this._getWebGLTextureTypeFromDepthTextureFormat(Vu.format),
-        Su = Bu ? Qu.DEPTH_STENCIL : Qu.DEPTH_COMPONENT,
-        pu = this._getInternalFormatFromDepthTextureFormat(Vu.format, !0, Bu);
-      return Vu.is2DArray ? Qu.texImage3D(Xu, 0, pu, Vu.width, Vu.height, mu, 0, Su, xu, null) : Vu.is3D ? Qu.texImage3D(Xu, 0, pu, Vu.width, Vu.height, Nu, 0, Su, xu, null) : Qu.texImage2D(Xu, 0, pu, Vu.width, Vu.height, 0, Su, xu, null), this._bindTextureDirectly(Xu, null), this._internalTexturesCache.push(Vu), yu._depthStencilBuffer && (Qu.deleteRenderbuffer(yu._depthStencilBuffer), yu._depthStencilBuffer = null), this._bindUnboundFramebuffer(yu._MSAAFramebuffer ?? yu._framebuffer), yu._generateStencilBuffer = Bu, yu._depthStencilTextureWithStencil = Bu, yu._depthStencilBuffer = this._setupFramebufferDepthAttachments(yu._generateStencilBuffer, yu._generateDepthBuffer, yu.width, yu.height, yu.samples, Vu.format), this._bindUnboundFramebuffer(null), Vu
-    }, Qu.ThinEngine.prototype.updateRenderTargetTextureSampleCount = function(uu, Ru) {
-      if (this.Ep < 2 || !uu) return 1;
-      if (uu.samples === Ru) return Ru;
-      const yu = this._gl;
-      Ru = Math.min(Ru, this.getCaps().maxMSAASamples), uu._depthStencilBuffer && (yu.deleteRenderbuffer(uu._depthStencilBuffer), uu._depthStencilBuffer = null), uu._MSAAFramebuffer && (yu.deleteFramebuffer(uu._MSAAFramebuffer), uu._MSAAFramebuffer = null);
-      const Eu = uu.texture?._hardwareTexture;
-      if (Eu?.releaseMSAARenderBuffers(), uu.texture && Ru > 1 && "function" === typeof yu.renderbufferStorageMultisample) {
-        const Ku = yu.createFramebuffer();
-        if (!Ku) throw new Error("Unable to create multi sampled framebuffer");
-        uu._MSAAFramebuffer = Ku, this._bindUnboundFramebuffer(uu._MSAAFramebuffer);
-        const Qu = this._createRenderBuffer(uu.texture.width, uu.texture.height, Ru, -1, this._getRGBABufferInternalSizedFormat(uu.texture.type, uu.texture.format, uu.texture._useSRGBBuffer), yu.COLOR_ATTACHMENT0, !1);
-        if (!Qu) throw new Error("Unable to create multi sampled framebuffer");
-        Eu?.addMSAARenderBuffer(Qu)
+      if (this._bindTextureDirectly(dk, sk, !0), this._setupDepthStencilTexture(sk, kk, 0 !== Vk.comparisonFunction && Vk.bilinearFiltering, Vk.comparisonFunction, Vk.samples), void 0 !== Vk.depthTextureFormat) {
+        if (15 !== Vk.depthTextureFormat && 16 !== Vk.depthTextureFormat && 17 !== Vk.depthTextureFormat && 13 !== Vk.depthTextureFormat && 14 !== Vk.depthTextureFormat && 18 !== Vk.depthTextureFormat) return tk.b.Error(`Depth texture ${Vk.depthTextureFormat} format is not supported.`), sk;
+        sk.format = Vk.depthTextureFormat
+      } else sk.format = Vk.generateStencil ? 13 : 16;
+      const Jk = (0, bk.e)(sk.format),
+        Ak = this._getWebGLTextureTypeFromDepthTextureFormat(sk.format),
+        ek = Jk ? ak.DEPTH_STENCIL : ak.DEPTH_COMPONENT,
+        yk = this._getInternalFormatFromDepthTextureFormat(sk.format, !0, Jk);
+      return sk.is2DArray ? ak.texImage3D(dk, 0, yk, sk.width, sk.height, Xk, 0, ek, Ak, null) : sk.is3D ? ak.texImage3D(dk, 0, yk, sk.width, sk.height, wk, 0, ek, Ak, null) : ak.texImage2D(dk, 0, yk, sk.width, sk.height, 0, ek, Ak, null), this._bindTextureDirectly(dk, null), this._internalTexturesCache.push(sk), Bk._depthStencilBuffer && (ak.deleteRenderbuffer(Bk._depthStencilBuffer), Bk._depthStencilBuffer = null), this._bindUnboundFramebuffer(Bk._MSAAFramebuffer ?? Bk._framebuffer), Bk._generateStencilBuffer = Jk, Bk._depthStencilTextureWithStencil = Jk, Bk._depthStencilBuffer = this._setupFramebufferDepthAttachments(Bk._generateStencilBuffer, Bk._generateDepthBuffer, Bk.width, Bk.height, Bk.samples, sk.format), this._bindUnboundFramebuffer(null), sk
+    }, ak.ThinEngine.prototype.updateRenderTargetTextureSampleCount = function(kk, Fk) {
+      if (this.Uy < 2 || !kk) return 1;
+      if (kk.samples === Fk) return Fk;
+      const Bk = this._gl;
+      Fk = Math.min(Fk, this.getCaps().maxMSAASamples), kk._depthStencilBuffer && (Bk.deleteRenderbuffer(kk._depthStencilBuffer), kk._depthStencilBuffer = null), kk._MSAAFramebuffer && (Bk.deleteFramebuffer(kk._MSAAFramebuffer), kk._MSAAFramebuffer = null);
+      const Rk = kk.texture?._hardwareTexture;
+      if (Rk?.releaseMSAARenderBuffers(), kk.texture && Fk > 1 && "function" === typeof Bk.renderbufferStorageMultisample) {
+        const tk = Bk.createFramebuffer();
+        if (!tk) throw new Error("Unable to create multi sampled framebuffer");
+        kk._MSAAFramebuffer = tk, this._bindUnboundFramebuffer(kk._MSAAFramebuffer);
+        const ak = this._createRenderBuffer(kk.texture.width, kk.texture.height, Fk, -1, this._getRGBABufferInternalSizedFormat(kk.texture.type, kk.texture.format, kk.texture._useSRGBBuffer), Bk.COLOR_ATTACHMENT0, !1);
+        if (!ak) throw new Error("Unable to create multi sampled framebuffer");
+        Rk?.addMSAARenderBuffer(ak)
       }
-      this._bindUnboundFramebuffer(uu._MSAAFramebuffer ?? uu._framebuffer), uu.texture && (uu.texture.samples = Ru), uu._samples = Ru;
-      const Ku = uu._depthStencilTexture ? uu._depthStencilTexture.format : void 0;
-      return uu._depthStencilBuffer = this._setupFramebufferDepthAttachments(uu._generateStencilBuffer, uu._generateDepthBuffer, uu.width, uu.height, Ru, Ku), this._bindUnboundFramebuffer(null), Ru
-    }, Qu.ThinEngine.prototype._setupDepthStencilTexture = function(uu, Ru, yu, Eu) {
-      let Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
-      const Qu = Ru.width ?? Ru,
-        mu = Ru.height ?? Ru,
-        Ju = Ru.layers || 0,
-        Nu = Ru.depth || 0;
-      uu.baseWidth = Qu, uu.baseHeight = mu, uu.width = Qu, uu.height = mu, uu.is2DArray = Ju > 0, uu.depth = Ju || Nu, uu.isReady = !0, uu.samples = Ku, uu.generateMipMaps = !1, uu.samplingMode = yu ? 2 : 1, uu.type = 0, uu._comparisonFunction = Eu;
-      const Xu = this._gl,
-        Vu = this._getTextureTarget(uu),
-        ru = this._getSamplingParameters(uu.samplingMode, !1);
-      Xu.texParameteri(Vu, Xu.TEXTURE_MAG_FILTER, ru.mag), Xu.texParameteri(Vu, Xu.TEXTURE_MIN_FILTER, ru.min), Xu.texParameteri(Vu, Xu.TEXTURE_WRAP_S, Xu.CLAMP_TO_EDGE), Xu.texParameteri(Vu, Xu.TEXTURE_WRAP_T, Xu.CLAMP_TO_EDGE), this.Ep > 1 && (0 === Eu ? (Xu.texParameteri(Vu, Xu.TEXTURE_COMPARE_FUNC, 515), Xu.texParameteri(Vu, Xu.TEXTURE_COMPARE_MODE, Xu.NONE)) : (Xu.texParameteri(Vu, Xu.TEXTURE_COMPARE_FUNC, Eu), Xu.texParameteri(Vu, Xu.TEXTURE_COMPARE_MODE, Xu.COMPARE_REF_TO_TEXTURE)))
+      this._bindUnboundFramebuffer(kk._MSAAFramebuffer ?? kk._framebuffer), kk.texture && (kk.texture.samples = Fk), kk._samples = Fk;
+      const tk = kk._depthStencilTexture ? kk._depthStencilTexture.format : void 0;
+      return kk._depthStencilBuffer = this._setupFramebufferDepthAttachments(kk._generateStencilBuffer, kk._generateDepthBuffer, kk.width, kk.height, Fk, tk), this._bindUnboundFramebuffer(null), Fk
+    }, ak.ThinEngine.prototype._setupDepthStencilTexture = function(kk, Fk, Bk, Rk) {
+      let tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
+      const ak = Fk.width ?? Fk,
+        Xk = Fk.height ?? Fk,
+        bk = Fk.layers || 0,
+        wk = Fk.depth || 0;
+      kk.baseWidth = ak, kk.baseHeight = Xk, kk.width = ak, kk.height = Xk, kk.is2DArray = bk > 0, kk.depth = bk || wk, kk.isReady = !0, kk.samples = tk, kk.generateMipMaps = !1, kk.samplingMode = Bk ? 2 : 1, kk.type = 0, kk._comparisonFunction = Rk;
+      const dk = this._gl,
+        sk = this._getTextureTarget(kk),
+        Vk = this._getSamplingParameters(kk.samplingMode, !1);
+      dk.texParameteri(sk, dk.TEXTURE_MAG_FILTER, Vk.mag), dk.texParameteri(sk, dk.TEXTURE_MIN_FILTER, Vk.min), dk.texParameteri(sk, dk.TEXTURE_WRAP_S, dk.CLAMP_TO_EDGE), dk.texParameteri(sk, dk.TEXTURE_WRAP_T, dk.CLAMP_TO_EDGE), this.Uy > 1 && (0 === Rk ? (dk.texParameteri(sk, dk.TEXTURE_COMPARE_FUNC, 515), dk.texParameteri(sk, dk.TEXTURE_COMPARE_MODE, dk.NONE)) : (dk.texParameteri(sk, dk.TEXTURE_COMPARE_FUNC, Rk), dk.texParameteri(sk, dk.TEXTURE_COMPARE_MODE, dk.COMPARE_REF_TO_TEXTURE)))
     })
   },
-  39380: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Eu.b
+  39236: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Rk.d
     });
-    var Eu = yu(39383);
-    (0, yu(39526).d)();
-    var Ku = yu(39396);
-    let Qu = !1;
+    var Rk = Bk(39245);
+    (0, Bk(39362).d)();
+    var tk = Bk(39258);
+    let ak = !1;
     ! function() {
-      if (Qu) return;
-      Qu = !0;
-      const uu = new WeakMap,
-        Ru = new WeakMap,
-        yu = new WeakMap,
-        Eu = new WeakMap;
-      Ku.ThinEngine.prototype.getAlphaToCoverage = function() {
-        return uu.get(this) ?? !1
-      }, Ku.ThinEngine.prototype.setAlphaToCoverage = function(yu) {
-        (uu.get(this) !== yu || this._gl && Ru.get(this) !== this._gl) && (uu.set(this, yu), this._gl && (yu ? this._gl.enable(this._gl.SAMPLE_ALPHA_TO_COVERAGE) : this._gl.disable(this._gl.SAMPLE_ALPHA_TO_COVERAGE), Ru.set(this, this._gl)))
-      }, Object.defineProperty(Ku.ThinEngine.prototype, "currentSampleCount", {
+      if (ak) return;
+      ak = !0;
+      const kk = new WeakMap,
+        Fk = new WeakMap,
+        Bk = new WeakMap,
+        Rk = new WeakMap;
+      tk.ThinEngine.prototype.getAlphaToCoverage = function() {
+        return kk.get(this) ?? !1
+      }, tk.ThinEngine.prototype.setAlphaToCoverage = function(Bk) {
+        (kk.get(this) !== Bk || this._gl && Fk.get(this) !== this._gl) && (kk.set(this, Bk), this._gl && (Bk ? this._gl.enable(this._gl.SAMPLE_ALPHA_TO_COVERAGE) : this._gl.disable(this._gl.SAMPLE_ALPHA_TO_COVERAGE), Fk.set(this, this._gl)))
+      }, Object.defineProperty(tk.ThinEngine.prototype, "currentSampleCount", {
         get: function() {
-          return this._currentRenderTarget ? this._currentRenderTarget.samples : this._gl ? (Eu.get(this) !== this._gl && (yu.set(this, this._gl.getContextAttributes()?.antialias ? Math.max(1, this._gl.getParameter(this._gl.SAMPLES)) : 1), Eu.set(this, this._gl)), yu.get(this)) : 1
+          return this._currentRenderTarget ? this._currentRenderTarget.samples : this._gl ? (Rk.get(this) !== this._gl && (Bk.set(this, this._gl.getContextAttributes()?.antialias ? Math.max(1, this._gl.getParameter(this._gl.SAMPLES)) : 1), Rk.set(this, this._gl)), Bk.get(this)) : 1
         },
         enumerable: !1,
         configurable: !0
       })
     }();
-    var mu = yu(39385),
-      Ju = yu(38448),
-      Nu = yu(39496);
-    let Xu = !1;
+    var Xk = Bk(39248),
+      bk = Bk(38320),
+      wk = Bk(39329);
+    let dk = !1;
     ! function() {
-      function uu(uu, Ru, yu, Eu) {
-        let Ku, Qu = 1;
-        1 === Eu ? Ku = new Float32Array(Ru * yu * 4) : 2 === Eu ? (Ku = new Uint16Array(Ru * yu * 4), Qu = 15360) : Ku = 7 === Eu ? new Uint32Array(Ru * yu * 4) : new Uint8Array(Ru * yu * 4);
-        for (let mu = 0; mu < Ru; mu++)
-          for (let Eu = 0; Eu < yu; Eu++) {
-            const yu = 3 * (Eu * Ru + mu),
-              Ju = 4 * (Eu * Ru + mu);
-            Ku[Ju + 0] = uu[yu + 0], Ku[Ju + 1] = uu[yu + 1], Ku[Ju + 2] = uu[yu + 2], Ku[Ju + 3] = Qu
+      function kk(kk, Fk, Bk, Rk) {
+        let tk, ak = 1;
+        1 === Rk ? tk = new Float32Array(Fk * Bk * 4) : 2 === Rk ? (tk = new Uint16Array(Fk * Bk * 4), ak = 15360) : tk = 7 === Rk ? new Uint32Array(Fk * Bk * 4) : new Uint8Array(Fk * Bk * 4);
+        for (let Xk = 0; Xk < Fk; Xk++)
+          for (let Rk = 0; Rk < Bk; Rk++) {
+            const Bk = 3 * (Rk * Fk + Xk),
+              bk = 4 * (Rk * Fk + Xk);
+            tk[bk + 0] = kk[Bk + 0], tk[bk + 1] = kk[Bk + 1], tk[bk + 2] = kk[Bk + 2], tk[bk + 3] = ak
           }
-        return Ku
+        return tk
       }
 
-      function Ru(uu) {
-        return function(Ru, yu, Eu, Ku, Qu, Ju, Nu, Xu) {
-          let Vu = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
-            ru = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
-          const Bu = uu ? this._gl.TEXTURE_3D : this._gl.TEXTURE_2D_ARRAY,
-            xu = uu ? 10 : 11,
-            Su = new mu.c(this, xu);
-          Su.baseWidth = yu, Su.baseHeight = Eu, Su.baseDepth = Ku, Su.width = yu, Su.height = Eu, Su.depth = Ku, Su.format = Qu, Su.type = ru, Su.generateMipMaps = Ju, Su.samplingMode = Xu, uu ? Su.is3D = !0 : Su.is2DArray = !0, this._doNotHandleContextLost || (Su._bufferView = Ru), uu ? this.updateRawTexture3D(Su, Ru, Qu, Nu, Vu, ru) : this.updateRawTexture2DArray(Su, Ru, Qu, Nu, Vu, ru), this._bindTextureDirectly(Bu, Su, !0);
-          const pu = this._getSamplingParameters(Xu, Ju);
-          return this._gl.texParameteri(Bu, this._gl.TEXTURE_MAG_FILTER, pu.mag), this._gl.texParameteri(Bu, this._gl.TEXTURE_MIN_FILTER, pu.min), Ju && this._gl.generateMipmap(Bu), this._bindTextureDirectly(Bu, null), this._internalTexturesCache.push(Su), Su
+      function Fk(kk) {
+        return function(Fk, Bk, Rk, tk, ak, bk, wk, dk) {
+          let sk = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+            Vk = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
+          const Jk = kk ? this._gl.TEXTURE_3D : this._gl.TEXTURE_2D_ARRAY,
+            Ak = kk ? 10 : 11,
+            ek = new Xk.c(this, Ak);
+          ek.baseWidth = Bk, ek.baseHeight = Rk, ek.baseDepth = tk, ek.width = Bk, ek.height = Rk, ek.depth = tk, ek.format = ak, ek.type = Vk, ek.generateMipMaps = bk, ek.samplingMode = dk, kk ? ek.is3D = !0 : ek.is2DArray = !0, this._doNotHandleContextLost || (ek._bufferView = Fk), kk ? this.updateRawTexture3D(ek, Fk, ak, wk, sk, Vk) : this.updateRawTexture2DArray(ek, Fk, ak, wk, sk, Vk), this._bindTextureDirectly(Jk, ek, !0);
+          const yk = this._getSamplingParameters(dk, bk);
+          return this._gl.texParameteri(Jk, this._gl.TEXTURE_MAG_FILTER, yk.mag), this._gl.texParameteri(Jk, this._gl.TEXTURE_MIN_FILTER, yk.min), bk && this._gl.generateMipmap(Jk), this._bindTextureDirectly(Jk, null), this._internalTexturesCache.push(ek), ek
         }
       }
 
-      function yu(uu) {
-        return function(Ru, yu, Eu, Ku) {
-          let Qu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-            mu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-          const Ju = uu ? this._gl.TEXTURE_3D : this._gl.TEXTURE_2D_ARRAY,
-            Nu = this._getWebGLTextureType(mu),
-            Xu = this._getInternalFormat(Eu),
-            Vu = this._getRGBABufferInternalSizedFormat(mu, Eu);
-          this._bindTextureDirectly(Ju, Ru, !0), this._unpackFlipY(void 0 === Ku || !!Ku), this._doNotHandleContextLost || (Ru._bufferView = yu, Ru.format = Eu, Ru.invertY = Ku, Ru._compression = Qu), Ru.width % 4 !== 0 && this._gl.pixelStorei(this._gl.UNPACK_ALIGNMENT, 1), Qu && yu ? this._gl.compressedTexImage3D(Ju, 0, this.getCaps().s3tc[Qu], Ru.width, Ru.height, Ru.depth, 0, yu) : this._gl.texImage3D(Ju, 0, Vu, Ru.width, Ru.height, Ru.depth, 0, Xu, Nu, yu), Ru.generateMipMaps && this._gl.generateMipmap(Ju), this._bindTextureDirectly(Ju, null), Ru.isReady = !0
+      function Bk(kk) {
+        return function(Fk, Bk, Rk, tk) {
+          let ak = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+            Xk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+          const bk = kk ? this._gl.TEXTURE_3D : this._gl.TEXTURE_2D_ARRAY,
+            wk = this._getWebGLTextureType(Xk),
+            dk = this._getInternalFormat(Rk),
+            sk = this._getRGBABufferInternalSizedFormat(Xk, Rk);
+          this._bindTextureDirectly(bk, Fk, !0), this._unpackFlipY(void 0 === tk || !!tk), this._doNotHandleContextLost || (Fk._bufferView = Bk, Fk.format = Rk, Fk.invertY = tk, Fk._compression = ak), Fk.width % 4 !== 0 && this._gl.pixelStorei(this._gl.UNPACK_ALIGNMENT, 1), ak && Bk ? this._gl.compressedTexImage3D(bk, 0, this.getCaps().s3tc[ak], Fk.width, Fk.height, Fk.depth, 0, Bk) : this._gl.texImage3D(bk, 0, sk, Fk.width, Fk.height, Fk.depth, 0, dk, wk, Bk), Fk.generateMipMaps && this._gl.generateMipmap(bk), this._bindTextureDirectly(bk, null), Fk.isReady = !0
         }
       }
-      Xu || (Xu = !0, Ku.ThinEngine.prototype.updateRawTexture = function(uu, Ru, yu, Eu) {
-        let Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-          Qu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          mu = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        if (!uu) return;
-        const Ju = this._getRGBABufferInternalSizedFormat(Qu, yu, mu),
-          Nu = this._getInternalFormat(yu),
-          Xu = this._getWebGLTextureType(Qu);
-        this._bindTextureDirectly(this._gl.TEXTURE_2D, uu, !0), this._unpackFlipY(void 0 === Eu || !!Eu), this._doNotHandleContextLost || (uu._bufferView = Ru, uu.format = yu, uu.type = Qu, uu.invertY = Eu, uu._compression = Ku), uu.width % 4 !== 0 && this._gl.pixelStorei(this._gl.UNPACK_ALIGNMENT, 1), Ku && Ru ? this._gl.compressedTexImage2D(this._gl.TEXTURE_2D, 0, this.getCaps().s3tc[Ku], uu.width, uu.height, 0, Ru) : this._gl.texImage2D(this._gl.TEXTURE_2D, 0, Ju, uu.width, uu.height, 0, Nu, Xu, Ru), uu.generateMipMaps && this._gl.generateMipmap(this._gl.TEXTURE_2D), this._bindTextureDirectly(this._gl.TEXTURE_2D, null), uu.isReady = !0
-      }, Ku.ThinEngine.prototype.createRawTexture = function(uu, Ru, yu, Eu, Ku, Qu, Ju) {
-        let Nu = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-          Xu = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
-          Vu = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
-        const ru = new mu.c(this, 3);
-        ru.baseWidth = Ru, ru.baseHeight = yu, ru.width = Ru, ru.height = yu, ru.format = Eu, ru.generateMipMaps = Ku, ru.samplingMode = Ju, ru.invertY = Qu, ru._compression = Nu, ru.type = Xu, ru._useSRGBBuffer = this._getUseSRGBBuffer(Vu, !Ku), this._doNotHandleContextLost || (ru._bufferView = uu), this.updateRawTexture(ru, uu, Eu, Qu, Nu, Xu, ru._useSRGBBuffer), this._bindTextureDirectly(this._gl.TEXTURE_2D, ru, !0);
-        const Bu = this._getSamplingParameters(Ju, Ku);
-        return this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MAG_FILTER, Bu.mag), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MIN_FILTER, Bu.min), Ku && this._gl.generateMipmap(this._gl.TEXTURE_2D), this._bindTextureDirectly(this._gl.TEXTURE_2D, null), this._internalTexturesCache.push(ru), ru
-      }, Ku.ThinEngine.prototype.createRawCubeTexture = function(uu, Ru, yu, Eu, Ku, Qu, Xu) {
-        let Vu = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null;
-        const ru = this._gl,
-          Bu = new mu.c(this, 8);
-        Bu.isCube = !0, Bu.format = yu, Bu.type = Eu, this._doNotHandleContextLost || (Bu._bufferViewArray = uu);
-        const xu = this._getWebGLTextureType(Eu);
-        let Su = this._getInternalFormat(yu);
-        Su === ru.RGB && (Su = ru.RGBA), xu !== ru.FLOAT || this._caps.textureFloatLinearFiltering ? xu !== this._gl.HALF_FLOAT_OES || this._caps.textureHalfFloatLinearFiltering ? xu !== ru.FLOAT || this._caps.textureFloatRender ? xu !== ru.HALF_FLOAT || this._caps.colorBufferFloat || (Ku = !1, Ju.e.Warn("Render to half float textures is not supported. Mipmap generation forced to false.")) : (Ku = !1, Ju.e.Warn("Render to float textures is not supported. Mipmap generation forced to false.")) : (Ku = !1, Xu = 1, Ju.e.Warn("Half float texture filtering is not supported. Mipmap generation and sampling mode are forced to false and TEXTURE_NEAREST_SAMPLINGMODE, respectively.")) : (Ku = !1, Xu = 1, Ju.e.Warn("Float texture filtering is not supported. Mipmap generation and sampling mode are forced to false and TEXTURE_NEAREST_SAMPLINGMODE, respectively."));
-        const pu = Ru,
-          Tu = pu;
-        Bu.width = pu, Bu.height = Tu, Bu.invertY = Qu, Bu._compression = Vu;
-        if (!this.needPOTTextures || (0, Nu.h)(Bu.width) && (0, Nu.h)(Bu.height) || (Ku = !1), uu) this.updateRawCubeTexture(Bu, uu, yu, Eu, Qu, Vu);
+      dk || (dk = !0, tk.ThinEngine.prototype.updateRawTexture = function(kk, Fk, Bk, Rk) {
+        let tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+          ak = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          Xk = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        if (!kk) return;
+        const bk = this._getRGBABufferInternalSizedFormat(ak, Bk, Xk),
+          wk = this._getInternalFormat(Bk),
+          dk = this._getWebGLTextureType(ak);
+        this._bindTextureDirectly(this._gl.TEXTURE_2D, kk, !0), this._unpackFlipY(void 0 === Rk || !!Rk), this._doNotHandleContextLost || (kk._bufferView = Fk, kk.format = Bk, kk.type = ak, kk.invertY = Rk, kk._compression = tk), kk.width % 4 !== 0 && this._gl.pixelStorei(this._gl.UNPACK_ALIGNMENT, 1), tk && Fk ? this._gl.compressedTexImage2D(this._gl.TEXTURE_2D, 0, this.getCaps().s3tc[tk], kk.width, kk.height, 0, Fk) : this._gl.texImage2D(this._gl.TEXTURE_2D, 0, bk, kk.width, kk.height, 0, wk, dk, Fk), kk.generateMipMaps && this._gl.generateMipmap(this._gl.TEXTURE_2D), this._bindTextureDirectly(this._gl.TEXTURE_2D, null), kk.isReady = !0
+      }, tk.ThinEngine.prototype.createRawTexture = function(kk, Fk, Bk, Rk, tk, ak, bk) {
+        let wk = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+          dk = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+          sk = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
+        const Vk = new Xk.c(this, 3);
+        Vk.baseWidth = Fk, Vk.baseHeight = Bk, Vk.width = Fk, Vk.height = Bk, Vk.format = Rk, Vk.generateMipMaps = tk, Vk.samplingMode = bk, Vk.invertY = ak, Vk._compression = wk, Vk.type = dk, Vk._useSRGBBuffer = this._getUseSRGBBuffer(sk, !tk), this._doNotHandleContextLost || (Vk._bufferView = kk), this.updateRawTexture(Vk, kk, Rk, ak, wk, dk, Vk._useSRGBBuffer), this._bindTextureDirectly(this._gl.TEXTURE_2D, Vk, !0);
+        const Jk = this._getSamplingParameters(bk, tk);
+        return this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MAG_FILTER, Jk.mag), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MIN_FILTER, Jk.min), tk && this._gl.generateMipmap(this._gl.TEXTURE_2D), this._bindTextureDirectly(this._gl.TEXTURE_2D, null), this._internalTexturesCache.push(Vk), Vk
+      }, tk.ThinEngine.prototype.createRawCubeTexture = function(kk, Fk, Bk, Rk, tk, ak, dk) {
+        let sk = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null;
+        const Vk = this._gl,
+          Jk = new Xk.c(this, 8);
+        Jk.isCube = !0, Jk.format = Bk, Jk.type = Rk, this._doNotHandleContextLost || (Jk._bufferViewArray = kk);
+        const Ak = this._getWebGLTextureType(Rk);
+        let ek = this._getInternalFormat(Bk);
+        ek === Vk.RGB && (ek = Vk.RGBA), Ak !== Vk.FLOAT || this._caps.textureFloatLinearFiltering ? Ak !== this._gl.HALF_FLOAT_OES || this._caps.textureHalfFloatLinearFiltering ? Ak !== Vk.FLOAT || this._caps.textureFloatRender ? Ak !== Vk.HALF_FLOAT || this._caps.colorBufferFloat || (tk = !1, bk.b.Warn("Render to half float textures is not supported. Mipmap generation forced to false.")) : (tk = !1, bk.b.Warn("Render to float textures is not supported. Mipmap generation forced to false.")) : (tk = !1, dk = 1, bk.b.Warn("Half float texture filtering is not supported. Mipmap generation and sampling mode are forced to false and TEXTURE_NEAREST_SAMPLINGMODE, respectively.")) : (tk = !1, dk = 1, bk.b.Warn("Float texture filtering is not supported. Mipmap generation and sampling mode are forced to false and TEXTURE_NEAREST_SAMPLINGMODE, respectively."));
+        const yk = Fk,
+          fk = yk;
+        Jk.width = yk, Jk.height = fk, Jk.invertY = ak, Jk._compression = sk;
+        if (!this.needPOTTextures || (0, wk.h)(Jk.width) && (0, wk.h)(Jk.height) || (tk = !1), kk) this.updateRawCubeTexture(Jk, kk, Bk, Rk, ak, sk);
         else {
-          const uu = this._getRGBABufferInternalSizedFormat(Eu),
-            Ru = 0;
-          this._bindTextureDirectly(ru.TEXTURE_CUBE_MAP, Bu, !0);
-          for (let yu = 0; yu < 6; yu++) Vu ? ru.compressedTexImage2D(ru.TEXTURE_CUBE_MAP_POSITIVE_X + yu, Ru, this.getCaps().s3tc[Vu], Bu.width, Bu.height, 0, void 0) : ru.texImage2D(ru.TEXTURE_CUBE_MAP_POSITIVE_X + yu, Ru, uu, Bu.width, Bu.height, 0, Su, xu, null);
+          const kk = this._getRGBABufferInternalSizedFormat(Rk),
+            Fk = 0;
+          this._bindTextureDirectly(Vk.TEXTURE_CUBE_MAP, Jk, !0);
+          for (let Bk = 0; Bk < 6; Bk++) sk ? Vk.compressedTexImage2D(Vk.TEXTURE_CUBE_MAP_POSITIVE_X + Bk, Fk, this.getCaps().s3tc[sk], Jk.width, Jk.height, 0, void 0) : Vk.texImage2D(Vk.TEXTURE_CUBE_MAP_POSITIVE_X + Bk, Fk, kk, Jk.width, Jk.height, 0, ek, Ak, null);
           this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null)
         }
-        this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, Bu, !0), uu && Ku && this._gl.generateMipmap(this._gl.TEXTURE_CUBE_MAP);
-        const Wu = this._getSamplingParameters(Xu, Ku);
-        return ru.texParameteri(ru.TEXTURE_CUBE_MAP, ru.TEXTURE_MAG_FILTER, Wu.mag), ru.texParameteri(ru.TEXTURE_CUBE_MAP, ru.TEXTURE_MIN_FILTER, Wu.min), ru.texParameteri(ru.TEXTURE_CUBE_MAP, ru.TEXTURE_WRAP_S, ru.CLAMP_TO_EDGE), ru.texParameteri(ru.TEXTURE_CUBE_MAP, ru.TEXTURE_WRAP_T, ru.CLAMP_TO_EDGE), this._bindTextureDirectly(ru.TEXTURE_CUBE_MAP, null), Bu.generateMipMaps = Ku, Bu.samplingMode = Xu, Bu.isReady = !0, Bu
-      }, Ku.ThinEngine.prototype.updateRawCubeTexture = function(Ru, yu, Eu, Ku, Qu) {
-        let mu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-          Ju = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-        Ru._bufferViewArray = yu, Ru.format = Eu, Ru.type = Ku, Ru.invertY = Qu, Ru._compression = mu;
-        const Xu = this._gl,
-          Vu = this._getWebGLTextureType(Ku);
-        let ru = this._getInternalFormat(Eu);
-        const Bu = this._getRGBABufferInternalSizedFormat(Ku);
-        let xu = !1;
-        ru === Xu.RGB && (ru = Xu.RGBA, xu = !0), this._bindTextureDirectly(Xu.TEXTURE_CUBE_MAP, Ru, !0), this._unpackFlipY(void 0 === Qu || !!Qu), Ru.width % 4 !== 0 && Xu.pixelStorei(Xu.UNPACK_ALIGNMENT, 1);
-        for (let Nu = 0; Nu < 6; Nu++) {
-          let Eu = yu[Nu];
-          mu ? Xu.compressedTexImage2D(Xu.TEXTURE_CUBE_MAP_POSITIVE_X + Nu, Ju, this.getCaps().s3tc[mu], Ru.width, Ru.height, 0, Eu) : (xu && (Eu = uu(Eu, Ru.width, Ru.height, Ku)), Xu.texImage2D(Xu.TEXTURE_CUBE_MAP_POSITIVE_X + Nu, Ju, Bu, Ru.width, Ru.height, 0, ru, Vu, Eu))
-        }(!this.needPOTTextures || (0, Nu.h)(Ru.width) && (0, Nu.h)(Ru.height)) && Ru.generateMipMaps && 0 === Ju && this._gl.generateMipmap(this._gl.TEXTURE_CUBE_MAP), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null), Ru.isReady = !0
-      }, Ku.ThinEngine.prototype.createRawCubeTextureFromUrl = function(Ru, yu, Eu, Ku, Qu, mu, Ju, Nu) {
-        let Xu = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
-          Vu = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-          ru = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 3,
-          Bu = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
-        const xu = this._gl,
-          Su = this.createRawCubeTexture(null, Eu, Ku, Qu, !mu, Bu, ru, null);
-        yu?.addPendingData(Su), Su.url = Ru, Su.isReady = !1, this._internalTexturesCache.push(Su);
-        const pu = (uu, Ru) => {
-            yu?.removePendingData(Su), Vu && Vu(uu ? uu.status + " " + uu.statusText : "Failed to parse texture data", Ru)
+        this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, Jk, !0), kk && tk && this._gl.generateMipmap(this._gl.TEXTURE_CUBE_MAP);
+        const mk = this._getSamplingParameters(dk, tk);
+        return Vk.texParameteri(Vk.TEXTURE_CUBE_MAP, Vk.TEXTURE_MAG_FILTER, mk.mag), Vk.texParameteri(Vk.TEXTURE_CUBE_MAP, Vk.TEXTURE_MIN_FILTER, mk.min), Vk.texParameteri(Vk.TEXTURE_CUBE_MAP, Vk.TEXTURE_WRAP_S, Vk.CLAMP_TO_EDGE), Vk.texParameteri(Vk.TEXTURE_CUBE_MAP, Vk.TEXTURE_WRAP_T, Vk.CLAMP_TO_EDGE), this._bindTextureDirectly(Vk.TEXTURE_CUBE_MAP, null), Jk.generateMipMaps = tk, Jk.samplingMode = dk, Jk.isReady = !0, Jk
+      }, tk.ThinEngine.prototype.updateRawCubeTexture = function(Fk, Bk, Rk, tk, ak) {
+        let Xk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+          bk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+        Fk._bufferViewArray = Bk, Fk.format = Rk, Fk.type = tk, Fk.invertY = ak, Fk._compression = Xk;
+        const dk = this._gl,
+          sk = this._getWebGLTextureType(tk);
+        let Vk = this._getInternalFormat(Rk);
+        const Jk = this._getRGBABufferInternalSizedFormat(tk);
+        let Ak = !1;
+        Vk === dk.RGB && (Vk = dk.RGBA, Ak = !0), this._bindTextureDirectly(dk.TEXTURE_CUBE_MAP, Fk, !0), this._unpackFlipY(void 0 === ak || !!ak), Fk.width % 4 !== 0 && dk.pixelStorei(dk.UNPACK_ALIGNMENT, 1);
+        for (let wk = 0; wk < 6; wk++) {
+          let Rk = Bk[wk];
+          Xk ? dk.compressedTexImage2D(dk.TEXTURE_CUBE_MAP_POSITIVE_X + wk, bk, this.getCaps().s3tc[Xk], Fk.width, Fk.height, 0, Rk) : (Ak && (Rk = kk(Rk, Fk.width, Fk.height, tk)), dk.texImage2D(dk.TEXTURE_CUBE_MAP_POSITIVE_X + wk, bk, Jk, Fk.width, Fk.height, 0, Vk, sk, Rk))
+        }(!this.needPOTTextures || (0, wk.h)(Fk.width) && (0, wk.h)(Fk.height)) && Fk.generateMipMaps && 0 === bk && this._gl.generateMipmap(this._gl.TEXTURE_CUBE_MAP), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null), Fk.isReady = !0
+      }, tk.ThinEngine.prototype.createRawCubeTextureFromUrl = function(Fk, Bk, Rk, tk, ak, Xk, bk, wk) {
+        let dk = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+          sk = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+          Vk = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 3,
+          Jk = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
+        const Ak = this._gl,
+          ek = this.createRawCubeTexture(null, Rk, tk, ak, !Xk, Jk, Vk, null);
+        Bk?.addPendingData(ek), ek.url = Fk, ek.isReady = !1, this._internalTexturesCache.push(ek);
+        const yk = (kk, Fk) => {
+            Bk?.removePendingData(ek), sk && sk(kk ? kk.status + " " + kk.statusText : "Failed to parse texture data", Fk)
           },
-          Tu = async Ru => {
-            if (!Su._hardwareTexture) return;
-            const Eu = Ju(Ru);
-            if (!Eu) return;
-            const mu = Eu instanceof Promise ? await Eu : Eu,
-              Vu = Su.width;
-            if (Nu) {
-              const Ru = this._getWebGLTextureType(Qu);
-              let yu = this._getInternalFormat(Ku);
-              const Eu = this._getRGBABufferInternalSizedFormat(Qu);
-              let Ju = !1;
-              yu === xu.RGB && (yu = xu.RGBA, Ju = !0), this._bindTextureDirectly(xu.TEXTURE_CUBE_MAP, Su, !0), this._unpackFlipY(!1);
-              const Xu = Nu(mu);
-              for (let Ku = 0; Ku < Xu.length; Ku++) {
-                const mu = Vu >> Ku;
-                for (let Nu = 0; Nu < 6; Nu++) {
-                  let Vu = Xu[Ku][Nu];
-                  Ju && (Vu = uu(Vu, mu, mu, Qu)), xu.texImage2D(Nu, Ku, Eu, mu, mu, 0, yu, Ru, Vu)
+          fk = async Fk => {
+            if (!ek._hardwareTexture) return;
+            const Rk = bk(Fk);
+            if (!Rk) return;
+            const Xk = Rk instanceof Promise ? await Rk : Rk,
+              sk = ek.width;
+            if (wk) {
+              const Fk = this._getWebGLTextureType(ak);
+              let Bk = this._getInternalFormat(tk);
+              const Rk = this._getRGBABufferInternalSizedFormat(ak);
+              let bk = !1;
+              Bk === Ak.RGB && (Bk = Ak.RGBA, bk = !0), this._bindTextureDirectly(Ak.TEXTURE_CUBE_MAP, ek, !0), this._unpackFlipY(!1);
+              const dk = wk(Xk);
+              for (let tk = 0; tk < dk.length; tk++) {
+                const Xk = sk >> tk;
+                for (let wk = 0; wk < 6; wk++) {
+                  let sk = dk[tk][wk];
+                  bk && (sk = kk(sk, Xk, Xk, ak)), Ak.texImage2D(wk, tk, Rk, Xk, Xk, 0, Bk, Fk, sk)
                 }
               }
-              this._bindTextureDirectly(xu.TEXTURE_CUBE_MAP, null)
-            } else this.updateRawCubeTexture(Su, mu, Ku, Qu, Bu);
-            Su.isReady = !0, yu?.removePendingData(Su), Su.onLoadedObservable.notifyObservers(Su), Su.onLoadedObservable.clear(), Xu && Xu()
+              this._bindTextureDirectly(Ak.TEXTURE_CUBE_MAP, null)
+            } else this.updateRawCubeTexture(ek, Xk, tk, ak, Jk);
+            ek.isReady = !0, Bk?.removePendingData(ek), ek.onLoadedObservable.notifyObservers(ek), ek.onLoadedObservable.clear(), dk && dk()
           };
-        return this._loadFile(Ru, (uu => {
-          Tu(uu).catch((uu => {
-            pu(void 0, uu)
+        return this._loadFile(Fk, (kk => {
+          fk(kk).catch((kk => {
+            yk(void 0, kk)
           }))
-        }), void 0, yu?.offlineProvider, !0, pu), Su
-      }, Ku.ThinEngine.prototype.createRawTexture2DArray = Ru(!1), Ku.ThinEngine.prototype.createRawTexture3D = Ru(!0), Ku.ThinEngine.prototype.updateRawTexture2DArray = yu(!1), Ku.ThinEngine.prototype.updateRawTexture3D = yu(!0))
+        }), void 0, Bk?.offlineProvider, !0, yk), ek
+      }, tk.ThinEngine.prototype.createRawTexture2DArray = Fk(!1), tk.ThinEngine.prototype.createRawTexture3D = Fk(!0), tk.ThinEngine.prototype.updateRawTexture2DArray = Bk(!1), tk.ThinEngine.prototype.updateRawTexture3D = Bk(!0))
     }();
-    var Vu = yu(39425);
-    let ru = !1;
-    ru || (ru = !0, Ku.ThinEngine.prototype._readTexturePixelsSync = function(uu, Ru, yu) {
-      let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1,
-        Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-        Qu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-        mu = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-        Ju = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        Nu = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
-        Xu = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
-      const ru = this._gl;
-      if (!ru) throw new Error("Engine does not have gl rendering context.");
+    var sk = Bk(39293);
+    let Vk = !1;
+    Vk || (Vk = !0, tk.ThinEngine.prototype._readTexturePixelsSync = function(kk, Fk, Bk) {
+      let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1,
+        tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+        ak = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        Xk = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+        bk = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        wk = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+        dk = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
+      const Vk = this._gl;
+      if (!Vk) throw new Error("Engine does not have gl rendering context.");
       if (!this._dummyFramebuffer) {
-        const uu = ru.createFramebuffer();
-        if (!uu) throw new Error("Unable to create dummy framebuffer");
-        this._dummyFramebuffer = uu
+        const kk = Vk.createFramebuffer();
+        if (!kk) throw new Error("Unable to create dummy framebuffer");
+        this._dummyFramebuffer = kk
       }
-      ru.bindFramebuffer(ru.FRAMEBUFFER, this._dummyFramebuffer), Eu > -1 && (uu.is2DArray || uu.is3D) ? ru.framebufferTextureLayer(ru.FRAMEBUFFER, ru.COLOR_ATTACHMENT0, uu._hardwareTexture?.underlyingResource, Ku, Eu) : Eu > -1 ? ru.framebufferTexture2D(ru.FRAMEBUFFER, ru.COLOR_ATTACHMENT0, ru.TEXTURE_CUBE_MAP_POSITIVE_X + Eu, uu._hardwareTexture?.underlyingResource, Ku) : ru.framebufferTexture2D(ru.FRAMEBUFFER, ru.COLOR_ATTACHMENT0, ru.TEXTURE_2D, uu._hardwareTexture?.underlyingResource, Ku);
-      let Bu = void 0 !== uu.type ? this._getWebGLTextureType(uu.type) : ru.UNSIGNED_BYTE;
-      return Ju ? Qu || (Qu = (0, Vu.j)(uu.type, 4 * Ru * yu)) : Bu === ru.UNSIGNED_BYTE ? (Qu || (Qu = new Uint8Array(4 * Ru * yu)), Bu = ru.UNSIGNED_BYTE) : (Qu || (Qu = new Float32Array(4 * Ru * yu)), Bu = ru.FLOAT), mu && this.flushFramebuffer(), ru.readPixels(Nu, Xu, Ru, yu, ru.RGBA, Bu, Qu), ru.bindFramebuffer(ru.FRAMEBUFFER, this._currentFramebuffer), Qu
-    }, Ku.ThinEngine.prototype._readTexturePixels = function(uu, Ru, yu) {
-      let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1,
-        Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-        Qu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-        mu = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-        Ju = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-        Nu = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
-        Xu = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
-      return Promise.resolve(this._readTexturePixelsSync(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu))
-    }), (0, yu(39531).d)();
-    let Bu = !1;
-    Bu || (Bu = !0, Ku.ThinEngine.prototype._createDepthStencilCubeTexture = function(uu, Ru) {
-      const yu = new mu.c(this, 12);
-      if (yu.isCube = !0, 1 === this.Ep) return Ju.e.Error("Depth cube texture is not supported by WebGL 1."), yu;
-      const Eu = {
+      Vk.bindFramebuffer(Vk.FRAMEBUFFER, this._dummyFramebuffer), Rk > -1 && (kk.is2DArray || kk.is3D) ? Vk.framebufferTextureLayer(Vk.FRAMEBUFFER, Vk.COLOR_ATTACHMENT0, kk._hardwareTexture?.underlyingResource, tk, Rk) : Rk > -1 ? Vk.framebufferTexture2D(Vk.FRAMEBUFFER, Vk.COLOR_ATTACHMENT0, Vk.TEXTURE_CUBE_MAP_POSITIVE_X + Rk, kk._hardwareTexture?.underlyingResource, tk) : Vk.framebufferTexture2D(Vk.FRAMEBUFFER, Vk.COLOR_ATTACHMENT0, Vk.TEXTURE_2D, kk._hardwareTexture?.underlyingResource, tk);
+      let Jk = void 0 !== kk.type ? this._getWebGLTextureType(kk.type) : Vk.UNSIGNED_BYTE;
+      return bk ? ak || (ak = (0, sk.o)(kk.type, 4 * Fk * Bk)) : Jk === Vk.UNSIGNED_BYTE ? (ak || (ak = new Uint8Array(4 * Fk * Bk)), Jk = Vk.UNSIGNED_BYTE) : (ak || (ak = new Float32Array(4 * Fk * Bk)), Jk = Vk.FLOAT), Xk && this.flushFramebuffer(), Vk.readPixels(wk, dk, Fk, Bk, Vk.RGBA, Jk, ak), Vk.bindFramebuffer(Vk.FRAMEBUFFER, this._currentFramebuffer), ak
+    }, tk.ThinEngine.prototype._readTexturePixels = function(kk, Fk, Bk) {
+      let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1,
+        tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+        ak = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        Xk = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+        bk = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        wk = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+        dk = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0;
+      return Promise.resolve(this._readTexturePixelsSync(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk))
+    }), (0, Bk(39365).c)();
+    let Jk = !1;
+    Jk || (Jk = !0, tk.ThinEngine.prototype._createDepthStencilCubeTexture = function(kk, Fk) {
+      const Bk = new Xk.c(this, 12);
+      if (Bk.isCube = !0, 1 === this.Uy) return bk.b.Error("Depth cube texture is not supported by WebGL 1."), Bk;
+      const Rk = {
           bilinearFiltering: !1,
           comparisonFunction: 0,
           generateStencil: !1,
-          ...Ru
+          ...Fk
         },
-        Ku = this._gl;
-      this._bindTextureDirectly(Ku.TEXTURE_CUBE_MAP, yu, !0), this._setupDepthStencilTexture(yu, uu, Eu.bilinearFiltering, Eu.comparisonFunction);
-      for (let Qu = 0; Qu < 6; Qu++) Eu.generateStencil ? Ku.texImage2D(Ku.TEXTURE_CUBE_MAP_POSITIVE_X + Qu, 0, Ku.DEPTH24_STENCIL8, uu, uu, 0, Ku.DEPTH_STENCIL, Ku.UNSIGNED_INT_24_8, null) : Ku.texImage2D(Ku.TEXTURE_CUBE_MAP_POSITIVE_X + Qu, 0, Ku.DEPTH_COMPONENT24, uu, uu, 0, Ku.DEPTH_COMPONENT, Ku.UNSIGNED_INT, null);
-      return this._bindTextureDirectly(Ku.TEXTURE_CUBE_MAP, null), this._internalTexturesCache.push(yu), yu
-    }, Ku.ThinEngine.prototype._setCubeMapTextureParams = function(uu, Ru, yu) {
-      const Eu = this._gl;
-      Eu.texParameteri(Eu.TEXTURE_CUBE_MAP, Eu.TEXTURE_MAG_FILTER, Eu.LINEAR), Eu.texParameteri(Eu.TEXTURE_CUBE_MAP, Eu.TEXTURE_MIN_FILTER, Ru ? Eu.LINEAR_MIPMAP_LINEAR : Eu.LINEAR), Eu.texParameteri(Eu.TEXTURE_CUBE_MAP, Eu.TEXTURE_WRAP_S, Eu.CLAMP_TO_EDGE), Eu.texParameteri(Eu.TEXTURE_CUBE_MAP, Eu.TEXTURE_WRAP_T, Eu.CLAMP_TO_EDGE), uu.samplingMode = Ru ? 3 : 2, Ru && this.getCaps().textureMaxLevel && void 0 !== yu && yu > 0 && (Eu.texParameteri(Eu.TEXTURE_CUBE_MAP, Eu.TEXTURE_MAX_LEVEL, yu), uu._maxLodLevel = yu), this._bindTextureDirectly(Eu.TEXTURE_CUBE_MAP, null)
-    }, Ku.ThinEngine.prototype.createCubeTexture = function(uu, Ru, yu, Eu) {
-      let Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-        Qu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-        mu = arguments.length > 6 ? arguments[6] : void 0,
-        Xu = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-        Vu = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-        ru = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-        Bu = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
-        xu = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
-        Su = arguments.length > 13 && void 0 !== arguments[13] && arguments[13],
-        pu = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : null;
-      const Tu = this._gl;
-      return this.createCubeTextureBase(uu, Ru, yu, !!Eu, Ku, Qu, mu, Xu, Vu, ru, Bu, xu, (uu => this._bindTextureDirectly(Tu.TEXTURE_CUBE_MAP, uu, !0)), ((uu, Ru) => {
-        const yu = this.needPOTTextures ? (0, Nu.e)(Ru[0].width, this._caps.maxCubemapTextureSize) : Ru[0].width,
-          Qu = yu,
-          Xu = [Tu.TEXTURE_CUBE_MAP_POSITIVE_X, Tu.TEXTURE_CUBE_MAP_POSITIVE_Y, Tu.TEXTURE_CUBE_MAP_POSITIVE_Z, Tu.TEXTURE_CUBE_MAP_NEGATIVE_X, Tu.TEXTURE_CUBE_MAP_NEGATIVE_Y, Tu.TEXTURE_CUBE_MAP_NEGATIVE_Z];
-        this._bindTextureDirectly(Tu.TEXTURE_CUBE_MAP, uu, !0), this._unpackFlipY(!1);
-        const Vu = mu ? this._getInternalFormat(mu, uu._useSRGBBuffer) : uu._useSRGBBuffer ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : Tu.RGBA;
-        let ru = mu ? this._getInternalFormat(mu) : Tu.RGBA;
-        uu._useSRGBBuffer && 1 === this.Ep && (ru = Vu);
-        for (let Eu = 0; Eu < Xu.length; Eu++)
-          if (Ru[Eu].width !== yu || Ru[Eu].height !== Qu) {
-            if (this._prepareWorkingCanvas(), !this._workingCanvas || !this._workingContext) return void Ju.e.Warn("Cannot create canvas to resize texture.");
-            this._workingCanvas.width = yu, this._workingCanvas.height = Qu, this._workingContext.drawImage(Ru[Eu], 0, 0, Ru[Eu].width, Ru[Eu].height, 0, 0, yu, Qu), Tu.texImage2D(Xu[Eu], 0, Vu, ru, Tu.UNSIGNED_BYTE, this._workingCanvas)
-          } else Tu.texImage2D(Xu[Eu], 0, Vu, ru, Tu.UNSIGNED_BYTE, Ru[Eu]);
-        Eu || Tu.generateMipmap(Tu.TEXTURE_CUBE_MAP), this._setCubeMapTextureParams(uu, !Eu), uu.width = yu, uu.height = Qu, uu.isReady = !0, mu && (uu.format = mu), uu.onLoadedObservable.notifyObservers(uu), uu.onLoadedObservable.clear(), Ku && Ku()
-      }), !!Su, pu)
-    }, Ku.ThinEngine.prototype.generateMipMapsForCubemap = function(uu) {
-      let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (uu.generateMipMaps) {
-        const yu = this._gl;
-        this._bindTextureDirectly(yu.TEXTURE_CUBE_MAP, uu, !0), yu.generateMipmap(yu.TEXTURE_CUBE_MAP), Ru && this._bindTextureDirectly(yu.TEXTURE_CUBE_MAP, null)
+        tk = this._gl;
+      this._bindTextureDirectly(tk.TEXTURE_CUBE_MAP, Bk, !0), this._setupDepthStencilTexture(Bk, kk, Rk.bilinearFiltering, Rk.comparisonFunction);
+      for (let ak = 0; ak < 6; ak++) Rk.generateStencil ? tk.texImage2D(tk.TEXTURE_CUBE_MAP_POSITIVE_X + ak, 0, tk.DEPTH24_STENCIL8, kk, kk, 0, tk.DEPTH_STENCIL, tk.UNSIGNED_INT_24_8, null) : tk.texImage2D(tk.TEXTURE_CUBE_MAP_POSITIVE_X + ak, 0, tk.DEPTH_COMPONENT24, kk, kk, 0, tk.DEPTH_COMPONENT, tk.UNSIGNED_INT, null);
+      return this._bindTextureDirectly(tk.TEXTURE_CUBE_MAP, null), this._internalTexturesCache.push(Bk), Bk
+    }, tk.ThinEngine.prototype._setCubeMapTextureParams = function(kk, Fk, Bk) {
+      const Rk = this._gl;
+      Rk.texParameteri(Rk.TEXTURE_CUBE_MAP, Rk.TEXTURE_MAG_FILTER, Rk.LINEAR), Rk.texParameteri(Rk.TEXTURE_CUBE_MAP, Rk.TEXTURE_MIN_FILTER, Fk ? Rk.LINEAR_MIPMAP_LINEAR : Rk.LINEAR), Rk.texParameteri(Rk.TEXTURE_CUBE_MAP, Rk.TEXTURE_WRAP_S, Rk.CLAMP_TO_EDGE), Rk.texParameteri(Rk.TEXTURE_CUBE_MAP, Rk.TEXTURE_WRAP_T, Rk.CLAMP_TO_EDGE), kk.samplingMode = Fk ? 3 : 2, Fk && this.getCaps().textureMaxLevel && void 0 !== Bk && Bk > 0 && (Rk.texParameteri(Rk.TEXTURE_CUBE_MAP, Rk.TEXTURE_MAX_LEVEL, Bk), kk._maxLodLevel = Bk), this._bindTextureDirectly(Rk.TEXTURE_CUBE_MAP, null)
+    }, tk.ThinEngine.prototype.createCubeTexture = function(kk, Fk, Bk, Rk) {
+      let tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+        ak = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        Xk = arguments.length > 6 ? arguments[6] : void 0,
+        dk = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        sk = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        Vk = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+        Jk = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
+        Ak = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
+        ek = arguments.length > 13 && void 0 !== arguments[13] && arguments[13],
+        yk = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : null;
+      const fk = this._gl;
+      return this.createCubeTextureBase(kk, Fk, Bk, !!Rk, tk, ak, Xk, dk, sk, Vk, Jk, Ak, (kk => this._bindTextureDirectly(fk.TEXTURE_CUBE_MAP, kk, !0)), ((kk, Fk) => {
+        const Bk = this.needPOTTextures ? (0, wk.g)(Fk[0].width, this._caps.maxCubemapTextureSize) : Fk[0].width,
+          ak = Bk,
+          dk = [fk.TEXTURE_CUBE_MAP_POSITIVE_X, fk.TEXTURE_CUBE_MAP_POSITIVE_Y, fk.TEXTURE_CUBE_MAP_POSITIVE_Z, fk.TEXTURE_CUBE_MAP_NEGATIVE_X, fk.TEXTURE_CUBE_MAP_NEGATIVE_Y, fk.TEXTURE_CUBE_MAP_NEGATIVE_Z];
+        this._bindTextureDirectly(fk.TEXTURE_CUBE_MAP, kk, !0), this._unpackFlipY(!1);
+        const sk = Xk ? this._getInternalFormat(Xk, kk._useSRGBBuffer) : kk._useSRGBBuffer ? this._glSRGBExtensionValues.SRGB8_ALPHA8 : fk.RGBA;
+        let Vk = Xk ? this._getInternalFormat(Xk) : fk.RGBA;
+        kk._useSRGBBuffer && 1 === this.Uy && (Vk = sk);
+        for (let Rk = 0; Rk < dk.length; Rk++)
+          if (Fk[Rk].width !== Bk || Fk[Rk].height !== ak) {
+            if (this._prepareWorkingCanvas(), !this._workingCanvas || !this._workingContext) return void bk.b.Warn("Cannot create canvas to resize texture.");
+            this._workingCanvas.width = Bk, this._workingCanvas.height = ak, this._workingContext.drawImage(Fk[Rk], 0, 0, Fk[Rk].width, Fk[Rk].height, 0, 0, Bk, ak), fk.texImage2D(dk[Rk], 0, sk, Vk, fk.UNSIGNED_BYTE, this._workingCanvas)
+          } else fk.texImage2D(dk[Rk], 0, sk, Vk, fk.UNSIGNED_BYTE, Fk[Rk]);
+        Rk || fk.generateMipmap(fk.TEXTURE_CUBE_MAP), this._setCubeMapTextureParams(kk, !Rk), kk.width = Bk, kk.height = ak, kk.isReady = !0, Xk && (kk.format = Xk), kk.onLoadedObservable.notifyObservers(kk), kk.onLoadedObservable.clear(), tk && tk()
+      }), !!ek, yk)
+    }, tk.ThinEngine.prototype.generateMipMapsForCubemap = function(kk) {
+      let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (kk.generateMipMaps) {
+        const Bk = this._gl;
+        this._bindTextureDirectly(Bk.TEXTURE_CUBE_MAP, kk, !0), Bk.generateMipmap(Bk.TEXTURE_CUBE_MAP), Fk && this._bindTextureDirectly(Bk.TEXTURE_CUBE_MAP, null)
       }
     });
-    yu(39539);
-    let xu = !1;
-    xu || (xu = !0, Ku.ThinEngine.prototype.setDepthStencilTexture = function(uu, Ru, yu, Eu) {
-      void 0 !== uu && (Ru && (this._boundUniforms[uu] = Ru), yu && yu.depthStencilTexture ? this._setTexture(uu, yu, !1, !0, Eu) : this._setTexture(uu, null, void 0, void 0, Eu))
+    Bk(39368);
+    let Ak = !1;
+    Ak || (Ak = !0, tk.ThinEngine.prototype.setDepthStencilTexture = function(kk, Fk, Bk, Rk) {
+      void 0 !== kk && (Fk && (this._boundUniforms[kk] = Fk), Bk && Bk.depthStencilTexture ? this._setTexture(kk, Bk, !1, !0, Rk) : this._setTexture(kk, null, void 0, void 0, Rk))
     });
-    let Su = !1;
-    Su || (Su = !0, Ku.ThinEngine.prototype.createRenderTargetCubeTexture = function(uu, Ru) {
-      const yu = this._createHardwareRenderTargetWrapper(!1, !0, uu),
-        Eu = {
+    let ek = !1;
+    ek || (ek = !0, tk.ThinEngine.prototype.createRenderTargetCubeTexture = function(kk, Fk) {
+      const Bk = this._createHardwareRenderTargetWrapper(!1, !0, kk),
+        Rk = {
           generateMipMaps: !0,
           generateDepthBuffer: !0,
           generateStencilBuffer: !1,
           type: 0,
           samplingMode: 3,
           format: 5,
-          ...Ru
+          ...Fk
         };
-      Eu.generateStencilBuffer = Eu.generateDepthBuffer && Eu.generateStencilBuffer, (1 !== Eu.type || this._caps.textureFloatLinearFiltering) && (2 !== Eu.type || this._caps.textureHalfFloatLinearFiltering) || (Eu.samplingMode = 1);
-      const Ku = this._gl,
-        Qu = new mu.c(this, 5);
-      this._bindTextureDirectly(Ku.TEXTURE_CUBE_MAP, Qu, !0);
-      const Nu = this._getSamplingParameters(Eu.samplingMode, Eu.generateMipMaps);
-      1 !== Eu.type || this._caps.textureFloat || (Eu.type = 0, Ju.e.Warn("Float textures are not supported. Cube render target forced to TEXTURETYPE_UNESIGNED_BYTE type")), Ku.texParameteri(Ku.TEXTURE_CUBE_MAP, Ku.TEXTURE_MAG_FILTER, Nu.mag), Ku.texParameteri(Ku.TEXTURE_CUBE_MAP, Ku.TEXTURE_MIN_FILTER, Nu.min), Ku.texParameteri(Ku.TEXTURE_CUBE_MAP, Ku.TEXTURE_WRAP_S, Ku.CLAMP_TO_EDGE), Ku.texParameteri(Ku.TEXTURE_CUBE_MAP, Ku.TEXTURE_WRAP_T, Ku.CLAMP_TO_EDGE);
-      for (let mu = 0; mu < 6; mu++) Ku.texImage2D(Ku.TEXTURE_CUBE_MAP_POSITIVE_X + mu, 0, this._getRGBABufferInternalSizedFormat(Eu.type, Eu.format), uu, uu, 0, this._getInternalFormat(Eu.format), this._getWebGLTextureType(Eu.type), null);
-      const Xu = Ku.createFramebuffer();
-      return this._bindUnboundFramebuffer(Xu), yu._depthStencilBuffer = this._setupFramebufferDepthAttachments(Eu.generateStencilBuffer, Eu.generateDepthBuffer, uu, uu), Eu.generateMipMaps && Ku.generateMipmap(Ku.TEXTURE_CUBE_MAP), this._bindTextureDirectly(Ku.TEXTURE_CUBE_MAP, null), this._bindUnboundFramebuffer(null), yu._framebuffer = Xu, yu._generateDepthBuffer = Eu.generateDepthBuffer, yu._generateStencilBuffer = Eu.generateStencilBuffer, Qu.width = uu, Qu.height = uu, Qu.isReady = !0, Qu.isCube = !0, Qu.samples = 1, Qu.generateMipMaps = Eu.generateMipMaps, Qu.samplingMode = Eu.samplingMode, Qu.type = Eu.type, Qu.format = Eu.format, this._internalTexturesCache.push(Qu), yu.setTextures(Qu), yu
+      Rk.generateStencilBuffer = Rk.generateDepthBuffer && Rk.generateStencilBuffer, (1 !== Rk.type || this._caps.textureFloatLinearFiltering) && (2 !== Rk.type || this._caps.textureHalfFloatLinearFiltering) || (Rk.samplingMode = 1);
+      const tk = this._gl,
+        ak = new Xk.c(this, 5);
+      this._bindTextureDirectly(tk.TEXTURE_CUBE_MAP, ak, !0);
+      const wk = this._getSamplingParameters(Rk.samplingMode, Rk.generateMipMaps);
+      1 !== Rk.type || this._caps.textureFloat || (Rk.type = 0, bk.b.Warn("Float textures are not supported. Cube render target forced to TEXTURETYPE_UNESIGNED_BYTE type")), tk.texParameteri(tk.TEXTURE_CUBE_MAP, tk.TEXTURE_MAG_FILTER, wk.mag), tk.texParameteri(tk.TEXTURE_CUBE_MAP, tk.TEXTURE_MIN_FILTER, wk.min), tk.texParameteri(tk.TEXTURE_CUBE_MAP, tk.TEXTURE_WRAP_S, tk.CLAMP_TO_EDGE), tk.texParameteri(tk.TEXTURE_CUBE_MAP, tk.TEXTURE_WRAP_T, tk.CLAMP_TO_EDGE);
+      for (let Xk = 0; Xk < 6; Xk++) tk.texImage2D(tk.TEXTURE_CUBE_MAP_POSITIVE_X + Xk, 0, this._getRGBABufferInternalSizedFormat(Rk.type, Rk.format), kk, kk, 0, this._getInternalFormat(Rk.format), this._getWebGLTextureType(Rk.type), null);
+      const dk = tk.createFramebuffer();
+      return this._bindUnboundFramebuffer(dk), Bk._depthStencilBuffer = this._setupFramebufferDepthAttachments(Rk.generateStencilBuffer, Rk.generateDepthBuffer, kk, kk), Rk.generateMipMaps && tk.generateMipmap(tk.TEXTURE_CUBE_MAP), this._bindTextureDirectly(tk.TEXTURE_CUBE_MAP, null), this._bindUnboundFramebuffer(null), Bk._framebuffer = dk, Bk._generateDepthBuffer = Rk.generateDepthBuffer, Bk._generateStencilBuffer = Rk.generateStencilBuffer, ak.width = kk, ak.height = kk, ak.isReady = !0, ak.isCube = !0, ak.samples = 1, ak.generateMipMaps = Rk.generateMipMaps, ak.samplingMode = Rk.samplingMode, ak.type = Rk.type, ak.format = Rk.format, this._internalTexturesCache.push(ak), Bk.setTextures(ak), Bk
     });
-    var pu = yu(39547),
-      Tu = yu(39555);
-    let Wu = !1;
-    Wu || (Wu = !0, Ku.ThinEngine.prototype.createPrefilteredCubeTexture = function(uu, Ru, Eu, Ku) {
-      let Qu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-        Nu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-        Xu = arguments.length > 6 ? arguments[6] : void 0,
-        Vu = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-        ru = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-        Bu = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null;
-      return this.createCubeTexture(uu, Ru, null, !1, (async uu => {
-        if (!uu) return void(Qu && Qu(null));
-        const Nu = uu.texture;
-        if (ru ? uu.info.sphericalPolynomial && (Nu._sphericalPolynomial = uu.info.sphericalPolynomial) : Nu._sphericalPolynomial = Nu._sphericalPolynomial ?? new pu.e, Nu._source = 9, this.getCaps().textureLOD) return void(Qu && Qu(Nu));
-        const Xu = this._gl,
-          Vu = uu.width;
-        if (!Vu) return;
+    var yk = Bk(39384),
+      fk = Bk(39392);
+    let mk = !1;
+    mk || (mk = !0, tk.ThinEngine.prototype.createPrefilteredCubeTexture = function(kk, Fk, Rk, tk) {
+      let ak = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+        wk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        dk = arguments.length > 6 ? arguments[6] : void 0,
+        sk = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        Vk = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+        Jk = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null;
+      return this.createCubeTexture(kk, Fk, null, !1, (async kk => {
+        if (!kk) return void(ak && ak(null));
+        const wk = kk.texture;
+        if (Vk ? kk.info.sphericalPolynomial && (wk._sphericalPolynomial = kk.info.sphericalPolynomial) : wk._sphericalPolynomial = wk._sphericalPolynomial ?? new yk.f, wk._source = 9, this.getCaps().textureLOD) return void(ak && ak(wk));
+        const dk = this._gl,
+          sk = kk.width;
+        if (!sk) return;
         const {
-          DDSTools: Bu
-        } = await yu.e(296).then((() => yu(41343))), xu = [];
-        for (let yu = 0; yu < 3; yu++) {
-          const Qu = 1 - yu / 2,
-            ru = Ku,
-            Su = Math.log2(Vu) * Eu + Ku,
-            pu = ru + (Su - ru) * Qu,
-            Wu = Math.round(Math.min(Math.max(pu, 0), Su)),
-            ju = new mu.c(this, 2);
-          if (ju.type = Nu.type, ju.format = Nu.format, ju.width = Math.pow(2, Math.max(Math.log2(Vu) - Wu, 0)), ju.height = ju.width, ju.isCube = !0, ju._cachedWrapU = 0, ju._cachedWrapV = 0, this._bindTextureDirectly(Xu.TEXTURE_CUBE_MAP, ju, !0), ju.samplingMode = 2, Xu.texParameteri(Xu.TEXTURE_CUBE_MAP, Xu.TEXTURE_MAG_FILTER, Xu.LINEAR), Xu.texParameteri(Xu.TEXTURE_CUBE_MAP, Xu.TEXTURE_MIN_FILTER, Xu.LINEAR), Xu.texParameteri(Xu.TEXTURE_CUBE_MAP, Xu.TEXTURE_WRAP_S, Xu.CLAMP_TO_EDGE), Xu.texParameteri(Xu.TEXTURE_CUBE_MAP, Xu.TEXTURE_WRAP_T, Xu.CLAMP_TO_EDGE), uu.isDDS) {
-            const Ru = uu.info,
-              yu = uu.data;
-            this._unpackFlipY(Ru.isCompressed), Bu.UploadDDSLevels(this, ju, yu, Ru, !0, 6, Wu)
-          } else Ju.e.Warn("DDS is the only prefiltered cube map supported so far.");
-          this._bindTextureDirectly(Xu.TEXTURE_CUBE_MAP, null);
-          const Hu = new Tu.e(Ru);
-          Hu._isCube = !0, Hu._texture = ju, ju.isReady = !0, xu.push(Hu)
+          DDSTools: Jk
+        } = await Bk.e(296).then((() => Bk(41174))), Ak = [];
+        for (let Bk = 0; Bk < 3; Bk++) {
+          const ak = 1 - Bk / 2,
+            Vk = tk,
+            ek = Math.log2(sk) * Rk + tk,
+            yk = Vk + (ek - Vk) * ak,
+            mk = Math.round(Math.min(Math.max(yk, 0), ek)),
+            Wk = new Xk.c(this, 2);
+          if (Wk.type = wk.type, Wk.format = wk.format, Wk.width = Math.pow(2, Math.max(Math.log2(sk) - mk, 0)), Wk.height = Wk.width, Wk.isCube = !0, Wk._cachedWrapU = 0, Wk._cachedWrapV = 0, this._bindTextureDirectly(dk.TEXTURE_CUBE_MAP, Wk, !0), Wk.samplingMode = 2, dk.texParameteri(dk.TEXTURE_CUBE_MAP, dk.TEXTURE_MAG_FILTER, dk.LINEAR), dk.texParameteri(dk.TEXTURE_CUBE_MAP, dk.TEXTURE_MIN_FILTER, dk.LINEAR), dk.texParameteri(dk.TEXTURE_CUBE_MAP, dk.TEXTURE_WRAP_S, dk.CLAMP_TO_EDGE), dk.texParameteri(dk.TEXTURE_CUBE_MAP, dk.TEXTURE_WRAP_T, dk.CLAMP_TO_EDGE), kk.isDDS) {
+            const Fk = kk.info,
+              Bk = kk.data;
+            this._unpackFlipY(Fk.isCompressed), Jk.UploadDDSLevels(this, Wk, Bk, Fk, !0, 6, mk)
+          } else bk.b.Warn("DDS is the only prefiltered cube map supported so far.");
+          this._bindTextureDirectly(dk.TEXTURE_CUBE_MAP, null);
+          const vk = new fk.e(Fk);
+          vk._isCube = !0, vk._texture = Wk, Wk.isReady = !0, Ak.push(vk)
         }
-        Nu._lodTextureHigh = xu[2], Nu._lodTextureMid = xu[1], Nu._lodTextureLow = xu[0], Qu && Qu(Nu)
-      }), Nu, Xu, Vu, ru, Eu, Ku, null, void 0, !1, Bu)
+        wk._lodTextureHigh = Ak[2], wk._lodTextureMid = Ak[1], wk._lodTextureLow = Ak[0], ak && ak(wk)
+      }), wk, dk, sk, Vk, Rk, tk, null, void 0, !1, Jk)
     });
-    var ju = yu(39480);
-    let Hu = !1;
-    Hu || (Hu = !0, Ku.ThinEngine.prototype.createUniformBuffer = function(uu, Ru) {
-      const yu = this._gl.createBuffer();
-      if (!yu) throw new Error("Unable to create uniform buffer");
-      const Eu = new ju.d(yu);
-      return this.bindUniformBuffer(Eu), uu instanceof Float32Array ? this._gl.bufferData(this._gl.UNIFORM_BUFFER, uu, this._gl.STATIC_DRAW) : this._gl.bufferData(this._gl.UNIFORM_BUFFER, new Float32Array(uu), this._gl.STATIC_DRAW), this.bindUniformBuffer(null), Eu.references = 1, Eu
-    }, Ku.ThinEngine.prototype.createDynamicUniformBuffer = function(uu, Ru) {
-      const yu = this._gl.createBuffer();
-      if (!yu) throw new Error("Unable to create dynamic uniform buffer");
-      const Eu = new ju.d(yu);
-      return this.bindUniformBuffer(Eu), uu instanceof Float32Array ? this._gl.bufferData(this._gl.UNIFORM_BUFFER, uu, this._gl.DYNAMIC_DRAW) : this._gl.bufferData(this._gl.UNIFORM_BUFFER, new Float32Array(uu), this._gl.DYNAMIC_DRAW), this.bindUniformBuffer(null), Eu.references = 1, Eu
-    }, Ku.ThinEngine.prototype.updateUniformBuffer = function(uu, Ru, yu, Eu) {
-      this.bindUniformBuffer(uu), void 0 === yu && (yu = 0), void 0 === Eu ? Ru instanceof Float32Array ? this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, yu, Ru) : this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, yu, new Float32Array(Ru)) : Ru instanceof Float32Array ? this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, 0, Ru.subarray(yu, yu + Eu)) : this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, 0, new Float32Array(Ru).subarray(yu, yu + Eu)), this.bindUniformBuffer(null)
-    }, Ku.ThinEngine.prototype.bindUniformBuffer = function(uu) {
-      this._gl.bindBuffer(this._gl.UNIFORM_BUFFER, uu ? uu.underlyingResource : null)
-    }, Ku.ThinEngine.prototype.bindUniformBufferBase = function(uu, Ru, yu) {
-      this._gl.bindBufferBase(this._gl.UNIFORM_BUFFER, Ru, uu ? uu.underlyingResource : null)
-    }, Ku.ThinEngine.prototype.bindUniformBlock = function(uu, Ru, yu) {
-      const Eu = uu.program,
-        Ku = this._gl.getUniformBlockIndex(Eu, Ru);
-      4294967295 !== Ku && this._gl.uniformBlockBinding(Eu, Ku, yu)
+    var Wk = Bk(39317);
+    let vk = !1;
+    vk || (vk = !0, tk.ThinEngine.prototype.createUniformBuffer = function(kk, Fk) {
+      const Bk = this._gl.createBuffer();
+      if (!Bk) throw new Error("Unable to create uniform buffer");
+      const Rk = new Wk.c(Bk);
+      return this.bindUniformBuffer(Rk), kk instanceof Float32Array ? this._gl.bufferData(this._gl.UNIFORM_BUFFER, kk, this._gl.STATIC_DRAW) : this._gl.bufferData(this._gl.UNIFORM_BUFFER, new Float32Array(kk), this._gl.STATIC_DRAW), this.bindUniformBuffer(null), Rk.references = 1, Rk
+    }, tk.ThinEngine.prototype.createDynamicUniformBuffer = function(kk, Fk) {
+      const Bk = this._gl.createBuffer();
+      if (!Bk) throw new Error("Unable to create dynamic uniform buffer");
+      const Rk = new Wk.c(Bk);
+      return this.bindUniformBuffer(Rk), kk instanceof Float32Array ? this._gl.bufferData(this._gl.UNIFORM_BUFFER, kk, this._gl.DYNAMIC_DRAW) : this._gl.bufferData(this._gl.UNIFORM_BUFFER, new Float32Array(kk), this._gl.DYNAMIC_DRAW), this.bindUniformBuffer(null), Rk.references = 1, Rk
+    }, tk.ThinEngine.prototype.updateUniformBuffer = function(kk, Fk, Bk, Rk) {
+      this.bindUniformBuffer(kk), void 0 === Bk && (Bk = 0), void 0 === Rk ? Fk instanceof Float32Array ? this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, Bk, Fk) : this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, Bk, new Float32Array(Fk)) : Fk instanceof Float32Array ? this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, 0, Fk.subarray(Bk, Bk + Rk)) : this._gl.bufferSubData(this._gl.UNIFORM_BUFFER, 0, new Float32Array(Fk).subarray(Bk, Bk + Rk)), this.bindUniformBuffer(null)
+    }, tk.ThinEngine.prototype.bindUniformBuffer = function(kk) {
+      this._gl.bindBuffer(this._gl.UNIFORM_BUFFER, kk ? kk.underlyingResource : null)
+    }, tk.ThinEngine.prototype.bindUniformBufferBase = function(kk, Fk, Bk) {
+      this._gl.bindBufferBase(this._gl.UNIFORM_BUFFER, Fk, kk ? kk.underlyingResource : null)
+    }, tk.ThinEngine.prototype.bindUniformBlock = function(kk, Fk, Bk) {
+      const Rk = kk.program,
+        tk = this._gl.getUniformBlockIndex(Rk, Fk);
+      4294967295 !== tk && this._gl.uniformBlockBinding(Rk, tk, Bk)
     });
-    var du = yu(39411),
-      bu = yu(39455);
-    let Cu = !1;
-    Cu || (Cu = !0, bu.d.prototype.displayLoadingUI = function() {
-      if (!(0, du.f)()) return;
-      const uu = this.loadingScreen;
-      uu && uu.displayLoadingUI()
-    }, bu.d.prototype.hideLoadingUI = function() {
-      if (!(0, du.f)()) return;
-      const uu = this._loadingScreen;
-      uu && uu.hideLoadingUI()
-    }, Object.defineProperty(bu.d.prototype, "loadingScreen", {
+    var ik = Bk(39281),
+      Yk = Bk(39305);
+    let Lk = !1;
+    Lk || (Lk = !0, Yk.c.prototype.displayLoadingUI = function() {
+      if (!(0, ik.j)()) return;
+      const kk = this.loadingScreen;
+      kk && kk.displayLoadingUI()
+    }, Yk.c.prototype.hideLoadingUI = function() {
+      if (!(0, ik.j)()) return;
+      const kk = this._loadingScreen;
+      kk && kk.hideLoadingUI()
+    }, Object.defineProperty(Yk.c.prototype, "loadingScreen", {
       get: function() {
-        return !this._loadingScreen && this._renderingCanvas && (this._loadingScreen = bu.d.DefaultLoadingScreenFactory(this._renderingCanvas)), this._loadingScreen
+        return !this._loadingScreen && this._renderingCanvas && (this._loadingScreen = Yk.c.DefaultLoadingScreenFactory(this._renderingCanvas)), this._loadingScreen
       },
-      set: function(uu) {
-        this._loadingScreen = uu
-      },
-      enumerable: !0,
-      configurable: !0
-    }), Object.defineProperty(bu.d.prototype, "loadingUIText", {
-      set: function(uu) {
-        this.loadingScreen.loadingUIText = uu
+      set: function(kk) {
+        this._loadingScreen = kk
       },
       enumerable: !0,
       configurable: !0
-    }), Object.defineProperty(bu.d.prototype, "loadingUIBackgroundColor", {
-      set: function(uu) {
-        this.loadingScreen.loadingUIBackgroundColor = uu
+    }), Object.defineProperty(Yk.c.prototype, "loadingUIText", {
+      set: function(kk) {
+        this.loadingScreen.loadingUIText = kk
       },
       enumerable: !0,
       configurable: !0
-    })), (0, yu(39516).d)();
-    let ku = !1;
-    ku || (ku = !0, bu.d.prototype.getInputElement = function() {
+    }), Object.defineProperty(Yk.c.prototype, "loadingUIBackgroundColor", {
+      set: function(kk) {
+        this.loadingScreen.loadingUIBackgroundColor = kk
+      },
+      enumerable: !0,
+      configurable: !0
+    })), (0, Bk(39354).b)();
+    let Ok = !1;
+    Ok || (Ok = !0, Yk.c.prototype.getInputElement = function() {
       return this._renderingCanvas
-    }, bu.d.prototype.getDepthFunction = function() {
+    }, Yk.c.prototype.getDepthFunction = function() {
       return this._depthCullingState.depthFunc
-    }, bu.d.prototype.setDepthFunction = function(uu) {
-      this._depthCullingState.depthFunc = uu
-    }, bu.d.prototype.setDepthFunctionToGreater = function() {
+    }, Yk.c.prototype.setDepthFunction = function(kk) {
+      this._depthCullingState.depthFunc = kk
+    }, Yk.c.prototype.setDepthFunctionToGreater = function() {
       this.setDepthFunction(516)
-    }, bu.d.prototype.setDepthFunctionToGreaterOrEqual = function() {
+    }, Yk.c.prototype.setDepthFunctionToGreaterOrEqual = function() {
       this.setDepthFunction(518)
-    }, bu.d.prototype.setDepthFunctionToLess = function() {
+    }, Yk.c.prototype.setDepthFunctionToLess = function() {
       this.setDepthFunction(513)
-    }, bu.d.prototype.setDepthFunctionToLessOrEqual = function() {
+    }, Yk.c.prototype.setDepthFunctionToLessOrEqual = function() {
       this.setDepthFunction(515)
-    }, bu.d.prototype.getDepthWrite = function() {
+    }, Yk.c.prototype.getDepthWrite = function() {
       return this._depthCullingState.depthMask
-    }, bu.d.prototype.setDepthWrite = function(uu) {
-      this._depthCullingState.depthMask = uu
-    }, bu.d.prototype.setAlphaConstants = function(uu, Ru, yu, Eu) {
-      this._alphaState.setAlphaBlendConstants(uu, Ru, yu, Eu)
-    }, bu.d.prototype.getAlphaMode = function() {
-      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-      return this._alphaMode[uu]
-    }, bu.d.prototype.getAlphaEquation = function() {
-      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-      return this._alphaEquation[uu]
+    }, Yk.c.prototype.setDepthWrite = function(kk) {
+      this._depthCullingState.depthMask = kk
+    }, Yk.c.prototype.setAlphaConstants = function(kk, Fk, Bk, Rk) {
+      this._alphaState.setAlphaBlendConstants(kk, Fk, Bk, Rk)
+    }, Yk.c.prototype.getAlphaMode = function() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+      return this._alphaMode[kk]
+    }, Yk.c.prototype.getAlphaEquation = function() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+      return this._alphaEquation[kk]
     });
-    let eu = !1;
-    eu || (eu = !0, bu.d.prototype.getStencilBuffer = function() {
+    let Ek = !1;
+    Ek || (Ek = !0, Yk.c.prototype.getStencilBuffer = function() {
       return this._stencilState.stencilTest
-    }, bu.d.prototype.setStencilBuffer = function(uu) {
-      this._stencilState.stencilTest = uu
-    }, bu.d.prototype.getStencilMask = function() {
+    }, Yk.c.prototype.setStencilBuffer = function(kk) {
+      this._stencilState.stencilTest = kk
+    }, Yk.c.prototype.getStencilMask = function() {
       return this._stencilState.stencilMask
-    }, bu.d.prototype.setStencilMask = function(uu) {
-      this._stencilState.stencilMask = uu
-    }, bu.d.prototype.getStencilFunction = function() {
+    }, Yk.c.prototype.setStencilMask = function(kk) {
+      this._stencilState.stencilMask = kk
+    }, Yk.c.prototype.getStencilFunction = function() {
       return this._stencilState.stencilFunc
-    }, bu.d.prototype.getStencilBackFunction = function() {
+    }, Yk.c.prototype.getStencilBackFunction = function() {
       return this._stencilState.stencilBackFunc
-    }, bu.d.prototype.getStencilFunctionReference = function() {
+    }, Yk.c.prototype.getStencilFunctionReference = function() {
       return this._stencilState.stencilFuncRef
-    }, bu.d.prototype.getStencilFunctionMask = function() {
+    }, Yk.c.prototype.getStencilFunctionMask = function() {
       return this._stencilState.stencilFuncMask
-    }, bu.d.prototype.setStencilFunction = function(uu) {
-      this._stencilState.stencilFunc = uu
-    }, bu.d.prototype.setStencilBackFunction = function(uu) {
-      this._stencilState.stencilBackFunc = uu
-    }, bu.d.prototype.setStencilFunctionReference = function(uu) {
-      this._stencilState.stencilFuncRef = uu
-    }, bu.d.prototype.setStencilFunctionMask = function(uu) {
-      this._stencilState.stencilFuncMask = uu
-    }, bu.d.prototype.getStencilOperationFail = function() {
+    }, Yk.c.prototype.setStencilFunction = function(kk) {
+      this._stencilState.stencilFunc = kk
+    }, Yk.c.prototype.setStencilBackFunction = function(kk) {
+      this._stencilState.stencilBackFunc = kk
+    }, Yk.c.prototype.setStencilFunctionReference = function(kk) {
+      this._stencilState.stencilFuncRef = kk
+    }, Yk.c.prototype.setStencilFunctionMask = function(kk) {
+      this._stencilState.stencilFuncMask = kk
+    }, Yk.c.prototype.getStencilOperationFail = function() {
       return this._stencilState.stencilOpStencilFail
-    }, bu.d.prototype.getStencilBackOperationFail = function() {
+    }, Yk.c.prototype.getStencilBackOperationFail = function() {
       return this._stencilState.stencilBackOpStencilFail
-    }, bu.d.prototype.getStencilOperationDepthFail = function() {
+    }, Yk.c.prototype.getStencilOperationDepthFail = function() {
       return this._stencilState.stencilOpDepthFail
-    }, bu.d.prototype.getStencilBackOperationDepthFail = function() {
+    }, Yk.c.prototype.getStencilBackOperationDepthFail = function() {
       return this._stencilState.stencilBackOpDepthFail
-    }, bu.d.prototype.getStencilOperationPass = function() {
+    }, Yk.c.prototype.getStencilOperationPass = function() {
       return this._stencilState.stencilOpStencilDepthPass
-    }, bu.d.prototype.getStencilBackOperationPass = function() {
+    }, Yk.c.prototype.getStencilBackOperationPass = function() {
       return this._stencilState.stencilBackOpStencilDepthPass
-    }, bu.d.prototype.setStencilOperationFail = function(uu) {
-      this._stencilState.stencilOpStencilFail = uu
-    }, bu.d.prototype.setStencilBackOperationFail = function(uu) {
-      this._stencilState.stencilBackOpStencilFail = uu
-    }, bu.d.prototype.setStencilOperationDepthFail = function(uu) {
-      this._stencilState.stencilOpDepthFail = uu
-    }, bu.d.prototype.setStencilBackOperationDepthFail = function(uu) {
-      this._stencilState.stencilBackOpDepthFail = uu
-    }, bu.d.prototype.setStencilOperationPass = function(uu) {
-      this._stencilState.stencilOpStencilDepthPass = uu
-    }, bu.d.prototype.setStencilBackOperationPass = function(uu) {
-      this._stencilState.stencilBackOpStencilDepthPass = uu
-    }, bu.d.prototype.cacheStencilState = function() {
+    }, Yk.c.prototype.setStencilOperationFail = function(kk) {
+      this._stencilState.stencilOpStencilFail = kk
+    }, Yk.c.prototype.setStencilBackOperationFail = function(kk) {
+      this._stencilState.stencilBackOpStencilFail = kk
+    }, Yk.c.prototype.setStencilOperationDepthFail = function(kk) {
+      this._stencilState.stencilOpDepthFail = kk
+    }, Yk.c.prototype.setStencilBackOperationDepthFail = function(kk) {
+      this._stencilState.stencilBackOpDepthFail = kk
+    }, Yk.c.prototype.setStencilOperationPass = function(kk) {
+      this._stencilState.stencilOpStencilDepthPass = kk
+    }, Yk.c.prototype.setStencilBackOperationPass = function(kk) {
+      this._stencilState.stencilBackOpStencilDepthPass = kk
+    }, Yk.c.prototype.cacheStencilState = function() {
       this._cachedStencilBuffer = this.getStencilBuffer(), this._cachedStencilFunction = this.getStencilFunction(), this._cachedStencilMask = this.getStencilMask(), this._cachedStencilOperationPass = this.getStencilOperationPass(), this._cachedStencilOperationFail = this.getStencilOperationFail(), this._cachedStencilOperationDepthFail = this.getStencilOperationDepthFail(), this._cachedStencilReference = this.getStencilFunctionReference()
-    }, bu.d.prototype.restoreStencilState = function() {
+    }, Yk.c.prototype.restoreStencilState = function() {
       this.setStencilFunction(this._cachedStencilFunction), this.setStencilMask(this._cachedStencilMask), this.setStencilBuffer(this._cachedStencilBuffer), this.setStencilOperationPass(this._cachedStencilOperationPass), this.setStencilOperationFail(this._cachedStencilOperationFail), this.setStencilOperationDepthFail(this._cachedStencilOperationDepthFail), this.setStencilFunctionReference(this._cachedStencilReference)
     });
-    yu(39591);
-    let Au = !1;
-    Au || (Au = !0, bu.d.prototype.createDepthStencilTexture = function(uu, Ru, yu) {
-      if (Ru.isCube) {
-        const yu = uu.width || uu;
-        return this._createDepthStencilCubeTexture(yu, Ru)
+    Bk(39424);
+    let Sk = !1;
+    Sk || (Sk = !0, Yk.c.prototype.createDepthStencilTexture = function(kk, Fk, Bk) {
+      if (Fk.isCube) {
+        const Bk = kk.width || kk;
+        return this._createDepthStencilCubeTexture(Bk, Fk)
       }
-      return this._createDepthStencilTexture(uu, Ru, yu)
+      return this._createDepthStencilTexture(kk, Fk, Bk)
     });
-    yu(39599), yu(39637);
-    let Du = !1;
-    Du || (Du = !0, Ku.ThinEngine.prototype.enableScissor = function(uu, Ru, yu, Eu) {
-      const Ku = this._gl;
-      Ku.enable(Ku.SCISSOR_TEST), Ku.scissor(uu, Ru, yu, Eu)
-    }, Ku.ThinEngine.prototype.disableScissor = function() {
-      const uu = this._gl;
-      uu.disable(uu.SCISSOR_TEST)
+    Bk(39432), Bk(39472);
+    let Nk = !1;
+    Nk || (Nk = !0, tk.ThinEngine.prototype.enableScissor = function(kk, Fk, Bk, Rk) {
+      const tk = this._gl;
+      tk.enable(tk.SCISSOR_TEST), tk.scissor(kk, Fk, Bk, Rk)
+    }, tk.ThinEngine.prototype.disableScissor = function() {
+      const kk = this._gl;
+      kk.disable(kk.SCISSOR_TEST)
     })
   },
-  39383: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => bu
+  39245: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Yk
     });
-    var Eu = yu(39385),
-      Ku = yu(36851),
-      Qu = yu(39396),
-      mu = yu(39458);
-    class Ju {
+    var Rk = Bk(39248),
+      tk = Bk(36772),
+      ak = Bk(39258),
+      Xk = Bk(39307);
+    class bk {
       constructor() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
-        this._enabled = !0, this._rollingFrameTime = new Nu(uu)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
+        this._enabled = !0, this._rollingFrameTime = new wk(kk)
       }
       sampleFrame() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mu.b.Now;
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xk.e.Now;
         if (this._enabled) {
           if (null != this._lastFrameTimeMs) {
-            const Ru = uu - this._lastFrameTimeMs;
-            this._rollingFrameTime.add(Ru)
+            const Fk = kk - this._lastFrameTimeMs;
+            this._rollingFrameTime.add(Fk)
           }
-          this._lastFrameTimeMs = uu
+          this._lastFrameTimeMs = kk
         }
       }
       get averageFrameTime() {
@@ -1863,8 +1863,8 @@ export const modules = {
         return 1e3 / this._rollingFrameTime.average
       }
       get instantaneousFPS() {
-        const uu = this._rollingFrameTime.history(0);
-        return 0 === uu ? 0 : 1e3 / uu
+        const kk = this._rollingFrameTime.history(0);
+        return 0 === kk ? 0 : 1e3 / kk
       }
       get isSaturated() {
         return this._rollingFrameTime.isSaturated()
@@ -1882,22 +1882,22 @@ export const modules = {
         this._lastFrameTimeMs = null, this._rollingFrameTime.reset()
       }
     }
-    class Nu {
-      constructor(uu) {
-        this._samples = new Array(uu), this.reset()
+    class wk {
+      constructor(kk) {
+        this._samples = new Array(kk), this.reset()
       }
-      add(uu) {
-        let Ru;
+      add(kk) {
+        let Fk;
         if (this.isSaturated()) {
-          const uu = this._samples[this._pos];
-          Ru = uu - this.average, this.average -= Ru / (this._sampleCount - 1), this._m2 -= Ru * (uu - this.average)
+          const kk = this._samples[this._pos];
+          Fk = kk - this.average, this.average -= Fk / (this._sampleCount - 1), this._m2 -= Fk * (kk - this.average)
         } else this._sampleCount++;
-        Ru = uu - this.average, this.average += Ru / this._sampleCount, this._m2 += Ru * (uu - this.average), this.variance = this._m2 / (this._sampleCount - 1), this._samples[this._pos] = uu, this._pos++, this._pos %= this._samples.length
+        Fk = kk - this.average, this.average += Fk / this._sampleCount, this._m2 += Fk * (kk - this.average), this.variance = this._m2 / (this._sampleCount - 1), this._samples[this._pos] = kk, this._pos++, this._pos %= this._samples.length
       }
-      history(uu) {
-        if (uu >= this._sampleCount || uu >= this._samples.length) return 0;
-        const Ru = this._wrapPosition(this._pos - 1);
-        return this._samples[this._wrapPosition(Ru - uu)]
+      history(kk) {
+        if (kk >= this._sampleCount || kk >= this._samples.length) return 0;
+        const Fk = this._wrapPosition(this._pos - 1);
+        return this._samples[this._wrapPosition(Fk - kk)]
       }
       isSaturated() {
         return this._sampleCount >= this._samples.length
@@ -1905,115 +1905,115 @@ export const modules = {
       reset() {
         this.average = 0, this.variance = 0, this._sampleCount = 0, this._pos = 0, this._m2 = 0
       }
-      _wrapPosition(uu) {
-        const Ru = this._samples.length;
-        return (uu % Ru + Ru) % Ru
+      _wrapPosition(kk) {
+        const Fk = this._samples.length;
+        return (kk % Fk + Fk) % Fk
       }
     }
-    var Xu = yu(39480),
-      Vu = yu(38448),
-      ru = yu(39501),
-      Bu = yu(39455),
-      xu = yu(39411);
+    var dk = Bk(39317),
+      sk = Bk(38320),
+      Vk = Bk(39334),
+      Jk = Bk(39305),
+      Ak = Bk(39281);
 
-    function Su(uu) {
-      const Ru = function(uu) {
-        if (!(0, xu.d)() || !document.body) return null;
-        const Ru = document.createElement("span");
-        Ru.textContent = "Hg", Ru.style.font = uu;
-        const yu = document.createElement("div");
-        yu.style.display = "inline-block", yu.style.width = "1px", yu.style.height = "0px", yu.style.verticalAlign = "bottom";
-        const Eu = document.createElement("div");
-        let Ku, Qu;
-        Eu.style.whiteSpace = "nowrap", Eu.appendChild(Ru), Eu.appendChild(yu), document.body.appendChild(Eu);
+    function ek(kk) {
+      const Fk = function(kk) {
+        if (!(0, Ak.e)() || !document.body) return null;
+        const Fk = document.createElement("span");
+        Fk.textContent = "Hg", Fk.style.font = kk;
+        const Bk = document.createElement("div");
+        Bk.style.display = "inline-block", Bk.style.width = "1px", Bk.style.height = "0px", Bk.style.verticalAlign = "bottom";
+        const Rk = document.createElement("div");
+        let tk, ak;
+        Rk.style.whiteSpace = "nowrap", Rk.appendChild(Fk), Rk.appendChild(Bk), document.body.appendChild(Rk);
         try {
-          Qu = yu.getBoundingClientRect().top - Ru.getBoundingClientRect().top, yu.style.verticalAlign = "baseline", Ku = yu.getBoundingClientRect().top - Ru.getBoundingClientRect().top
+          ak = Bk.getBoundingClientRect().top - Fk.getBoundingClientRect().top, Bk.style.verticalAlign = "baseline", tk = Bk.getBoundingClientRect().top - Fk.getBoundingClientRect().top
         } finally {
-          document.body.removeChild(Eu)
+          document.body.removeChild(Rk)
         }
-        const mu = {
-          ascent: Ku,
-          height: Qu,
-          descent: Qu - Ku
+        const Xk = {
+          ascent: tk,
+          height: ak,
+          descent: ak - tk
         };
-        return pu(mu) ? mu : null
-      }(uu);
-      if (Ru) return Ru;
-      const yu = function(uu) {
-        let Ru = null;
+        return yk(Xk) ? Xk : null
+      }(kk);
+      if (Fk) return Fk;
+      const Bk = function(kk) {
+        let Fk = null;
         try {
-          "undefined" !== typeof OffscreenCanvas ? Ru = new OffscreenCanvas(64, 64) : (0, xu.d)() && "function" === typeof document.createElement && (Ru = document.createElement("canvas"), Ru.width = 64, Ru.height = 64);
-          const yu = Ru?.getContext("2d");
-          if (!yu) return null;
-          yu.font = uu;
-          const Eu = yu.measureText("Hg"),
-            Ku = Number(Eu.actualBoundingBoxAscent ?? Eu.fontBoundingBoxAscent),
-            Qu = Number(Eu.actualBoundingBoxDescent ?? Eu.fontBoundingBoxDescent),
-            mu = {
-              ascent: Ku,
-              height: Ku + Qu,
-              descent: Qu
+          "undefined" !== typeof OffscreenCanvas ? Fk = new OffscreenCanvas(64, 64) : (0, Ak.e)() && "function" === typeof document.createElement && (Fk = document.createElement("canvas"), Fk.width = 64, Fk.height = 64);
+          const Bk = Fk?.getContext("2d");
+          if (!Bk) return null;
+          Bk.font = kk;
+          const Rk = Bk.measureText("Hg"),
+            tk = Number(Rk.actualBoundingBoxAscent ?? Rk.fontBoundingBoxAscent),
+            ak = Number(Rk.actualBoundingBoxDescent ?? Rk.fontBoundingBoxDescent),
+            Xk = {
+              ascent: tk,
+              height: tk + ak,
+              descent: ak
             };
-          return pu(mu) ? mu : null
+          return yk(Xk) ? Xk : null
         } catch {
           return null
         } finally {
-          const uu = Ru;
-          "function" === typeof uu?.dispose && uu.dispose()
+          const kk = Fk;
+          "function" === typeof kk?.dispose && kk.dispose()
         }
-      }(uu);
-      return yu || function(uu) {
-        const Ru = Math.max(1, function(uu) {
-            const Ru = /(?:^|\s)([0-9]+(?:\.[0-9]+)?)px(?:\/|\s|$)/.exec(String(uu || ""));
-            return Ru ? Number(Ru[1]) : 16
-          }(uu)),
-          yu = .8 * Ru,
-          Eu = .2 * Ru;
+      }(kk);
+      return Bk || function(kk) {
+        const Fk = Math.max(1, function(kk) {
+            const Fk = /(?:^|\s)([0-9]+(?:\.[0-9]+)?)px(?:\/|\s|$)/.exec(String(kk || ""));
+            return Fk ? Number(Fk[1]) : 16
+          }(kk)),
+          Bk = .8 * Fk,
+          Rk = .2 * Fk;
         return {
-          ascent: yu,
-          height: yu + Eu,
-          descent: Eu
+          ascent: Bk,
+          height: Bk + Rk,
+          descent: Rk
         }
-      }(uu)
+      }(kk)
     }
 
-    function pu(uu) {
-      return Number.isFinite(uu.ascent) && Number.isFinite(uu.height) && Number.isFinite(uu.descent) && uu.height > 0
+    function yk(kk) {
+      return Number.isFinite(kk.ascent) && Number.isFinite(kk.height) && Number.isFinite(kk.descent) && kk.height > 0
     }
 
-    function Tu(uu) {
-      if (uu.requestPointerLock) {
-        const Ru = uu.requestPointerLock();
-        Ru instanceof Promise ? Ru.then((() => {
-          uu.focus()
-        })).catch((() => {})) : uu.focus()
+    function fk(kk) {
+      if (kk.requestPointerLock) {
+        const Fk = kk.requestPointerLock();
+        Fk instanceof Promise ? Fk.then((() => {
+          kk.focus()
+        })).catch((() => {})) : kk.focus()
       }
     }
-    var Wu = yu(39514),
-      ju = yu(39447),
-      Hu = yu(39516),
-      du = yu(39520);
-    class bu extends Qu.ThinEngine {
+    var mk = Bk(39347),
+      Wk = Bk(39302),
+      vk = Bk(39354),
+      ik = Bk(39360);
+    class Yk extends ak.ThinEngine {
       static get NpmPackage() {
-        return Bu.d.NpmPackage
+        return Jk.c.NpmPackage
       }
       static get Version() {
-        return Bu.d.Version
+        return Jk.c.Version
       }
       static get Instances() {
-        return Ku.b.Instances
+        return tk.c.Instances
       }
       static get LastCreatedEngine() {
-        return Ku.b.LastCreatedEngine
+        return tk.c.LastCreatedEngine
       }
       static get LastCreatedScene() {
-        return Ku.b.LastCreatedScene
+        return tk.c.LastCreatedScene
       }
-      static DefaultLoadingScreenFactory(uu) {
-        return Bu.d.DefaultLoadingScreenFactory(uu)
+      static DefaultLoadingScreenFactory(kk) {
+        return Jk.c.DefaultLoadingScreenFactory(kk)
       }
       get _supportsHardwareTextureRescaling() {
-        return !!bu._RescalePostProcessFactory
+        return !!Yk._RescalePostProcessFactory
       }
       _measureFps() {
         this._performanceMonitor.sampleFrame(), this._fps = this._performanceMonitor.averageFPS, this._deltaTime = this._performanceMonitor.instantaneousFrameTime || 0
@@ -2021,154 +2021,154 @@ export const modules = {
       get performanceMonitor() {
         return this._performanceMonitor
       }
-      constructor(uu, Ru, yu) {
-        let Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        (0, Hu.d)(), (0, du.d)(), super(uu, Ru, yu, Eu), this._performanceMonitor = new Ju, this._drawCalls = new Wu.b, uu && (this._features.supportRenderPasses = !0)
+      constructor(kk, Fk, Bk) {
+        let Rk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        (0, vk.b)(), (0, ik.d)(), super(kk, Fk, Bk, Rk), this._performanceMonitor = new bk, this._drawCalls = new mk.b, kk && (this._features.supportRenderPasses = !0)
       }
       _initGLContext() {
         super._initGLContext(), this._rescalePostProcess = null
       }
-      _sharedInit(uu) {
-        super._sharedInit(uu),
-          function(uu, Ru, yu) {
-            uu._onCanvasFocus = () => {
-              uu.onCanvasFocusObservable.notifyObservers(uu)
-            }, uu._onCanvasBlur = () => {
-              uu.onCanvasBlurObservable.notifyObservers(uu)
-            }, uu._onCanvasContextMenu = Ru => {
-              uu.disableContextMenu && Ru.preventDefault()
-            }, Ru.addEventListener("focus", uu._onCanvasFocus), Ru.addEventListener("blur", uu._onCanvasBlur), Ru.addEventListener("contextmenu", uu._onCanvasContextMenu), uu._onBlur = () => {
-              uu.disablePerformanceMonitorInBackground && uu.performanceMonitor.disable(), uu._windowIsBackground = !0
-            }, uu._onFocus = () => {
-              uu.disablePerformanceMonitorInBackground && uu.performanceMonitor.enable(), uu._windowIsBackground = !1
-            }, uu._onCanvasPointerOut = yu => {
-              document.elementFromPoint(yu.clientX, yu.clientY) !== Ru && uu.onCanvasPointerOutObservable.notifyObservers(yu)
+      _sharedInit(kk) {
+        super._sharedInit(kk),
+          function(kk, Fk, Bk) {
+            kk._onCanvasFocus = () => {
+              kk.onCanvasFocusObservable.notifyObservers(kk)
+            }, kk._onCanvasBlur = () => {
+              kk.onCanvasBlurObservable.notifyObservers(kk)
+            }, kk._onCanvasContextMenu = Fk => {
+              kk.disableContextMenu && Fk.preventDefault()
+            }, Fk.addEventListener("focus", kk._onCanvasFocus), Fk.addEventListener("blur", kk._onCanvasBlur), Fk.addEventListener("contextmenu", kk._onCanvasContextMenu), kk._onBlur = () => {
+              kk.disablePerformanceMonitorInBackground && kk.performanceMonitor.disable(), kk._windowIsBackground = !0
+            }, kk._onFocus = () => {
+              kk.disablePerformanceMonitorInBackground && kk.performanceMonitor.enable(), kk._windowIsBackground = !1
+            }, kk._onCanvasPointerOut = Bk => {
+              document.elementFromPoint(Bk.clientX, Bk.clientY) !== Fk && kk.onCanvasPointerOutObservable.notifyObservers(Bk)
             };
-            const Eu = uu.getHostWindow();
-            Eu && "function" === typeof Eu.addEventListener && (Eu.addEventListener("blur", uu._onBlur), Eu.addEventListener("focus", uu._onFocus)), Ru.addEventListener("pointerout", uu._onCanvasPointerOut), yu.doNotHandleTouchAction || function(uu) {
-              uu && uu.setAttribute && (uu.setAttribute("touch-action", "none"), uu.style.touchAction = "none", uu.style.webkitTapHighlightColor = "transparent")
-            }(Ru), !Bu.d.audioEngine && yu.audioEngine && Bu.d.AudioEngineFactory && (Bu.d.audioEngine = Bu.d.AudioEngineFactory(uu.getRenderingCanvas(), uu.getAudioContext(), uu.getAudioDestination())), (0, xu.d)() && (uu._onFullscreenChange = () => {
-              uu.isFullscreen = !!document.fullscreenElement, uu.isFullscreen && uu._pointerLockRequested && Ru && Tu(Ru)
-            }, document.addEventListener("fullscreenchange", uu._onFullscreenChange, !1), document.addEventListener("webkitfullscreenchange", uu._onFullscreenChange, !1), uu._onPointerLockChange = () => {
-              uu.isPointerLock = document.pointerLockElement === Ru
-            }, document.addEventListener("pointerlockchange", uu._onPointerLockChange, !1), document.addEventListener("webkitpointerlockchange", uu._onPointerLockChange, !1)), uu.enableOfflineSupport = void 0 !== Bu.d.OfflineProviderFactory, uu._deterministicLockstep = !!yu.deterministicLockstep, uu._lockstepMaxSteps = yu.lockstepMaxSteps || 0, uu._timeStep = yu.timeStep || 1 / 60
-          }(this, uu, this._creationOptions)
+            const Rk = kk.getHostWindow();
+            Rk && "function" === typeof Rk.addEventListener && (Rk.addEventListener("blur", kk._onBlur), Rk.addEventListener("focus", kk._onFocus)), Fk.addEventListener("pointerout", kk._onCanvasPointerOut), Bk.doNotHandleTouchAction || function(kk) {
+              kk && kk.setAttribute && (kk.setAttribute("touch-action", "none"), kk.style.touchAction = "none", kk.style.webkitTapHighlightColor = "transparent")
+            }(Fk), !Jk.c.audioEngine && Bk.audioEngine && Jk.c.AudioEngineFactory && (Jk.c.audioEngine = Jk.c.AudioEngineFactory(kk.getRenderingCanvas(), kk.getAudioContext(), kk.getAudioDestination())), (0, Ak.e)() && (kk._onFullscreenChange = () => {
+              kk.isFullscreen = !!document.fullscreenElement, kk.isFullscreen && kk._pointerLockRequested && Fk && fk(Fk)
+            }, document.addEventListener("fullscreenchange", kk._onFullscreenChange, !1), document.addEventListener("webkitfullscreenchange", kk._onFullscreenChange, !1), kk._onPointerLockChange = () => {
+              kk.isPointerLock = document.pointerLockElement === Fk
+            }, document.addEventListener("pointerlockchange", kk._onPointerLockChange, !1), document.addEventListener("webkitpointerlockchange", kk._onPointerLockChange, !1)), kk.enableOfflineSupport = void 0 !== Jk.c.OfflineProviderFactory, kk._deterministicLockstep = !!Bk.deterministicLockstep, kk._lockstepMaxSteps = Bk.lockstepMaxSteps || 0, kk._timeStep = Bk.timeStep || 1 / 60
+          }(this, kk, this._creationOptions)
       }
-      resizeImageBitmap(uu, Ru, yu) {
-        return function(uu, Ru, yu, Eu) {
-          const Ku = uu.createCanvas(yu, Eu).getContext("2d");
-          if (!Ku) throw new Error("Unable to get 2d context for resizeImageBitmap");
-          return Ku.drawImage(Ru, 0, 0), Ku.getImageData(0, 0, yu, Eu).data
-        }(this, uu, Ru, yu)
+      resizeImageBitmap(kk, Fk, Bk) {
+        return function(kk, Fk, Bk, Rk) {
+          const tk = kk.createCanvas(Bk, Rk).getContext("2d");
+          if (!tk) throw new Error("Unable to get 2d context for resizeImageBitmap");
+          return tk.drawImage(Fk, 0, 0), tk.getImageData(0, 0, Bk, Rk).data
+        }(this, kk, Fk, Bk)
       }
-      async _createImageBitmapFromSource(uu, Ru) {
-        return await async function(uu, Ru, yu) {
-          return await new Promise(((Eu, Ku) => {
-            const Qu = new Image;
-            Qu.onload = () => {
-              Qu.decode().then((() => {
-                uu.createImageBitmap(Qu, yu).then((uu => {
-                  Eu(uu)
+      async _createImageBitmapFromSource(kk, Fk) {
+        return await async function(kk, Fk, Bk) {
+          return await new Promise(((Rk, tk) => {
+            const ak = new Image;
+            ak.onload = () => {
+              ak.decode().then((() => {
+                kk.createImageBitmap(ak, Bk).then((kk => {
+                  Rk(kk)
                 }))
               }))
-            }, Qu.onerror = () => {
-              Ku(`Error loading image ${Qu.src}`)
-            }, Qu.src = Ru
+            }, ak.onerror = () => {
+              tk(`Error loading image ${ak.src}`)
+            }, ak.src = Fk
           }))
-        }(this, uu, Ru)
+        }(this, kk, Fk)
       }
-      switchFullscreen(uu) {
-        this.isFullscreen ? this.exitFullscreen() : this.enterFullscreen(uu)
+      switchFullscreen(kk) {
+        this.isFullscreen ? this.exitFullscreen() : this.enterFullscreen(kk)
       }
-      enterFullscreen(uu) {
-        this.isFullscreen || (this._pointerLockRequested = uu, this._renderingCanvas && function(uu) {
-          const Ru = uu.requestFullscreen || uu.webkitRequestFullscreen;
-          Ru && Ru.call(uu)
+      enterFullscreen(kk) {
+        this.isFullscreen || (this._pointerLockRequested = kk, this._renderingCanvas && function(kk) {
+          const Fk = kk.requestFullscreen || kk.webkitRequestFullscreen;
+          Fk && Fk.call(kk)
         }(this._renderingCanvas))
       }
       exitFullscreen() {
         this.isFullscreen && function() {
-          const uu = document;
-          document.exitFullscreen ? document.exitFullscreen() : uu.webkitCancelFullScreen && uu.webkitCancelFullScreen()
+          const kk = document;
+          document.exitFullscreen ? document.exitFullscreen() : kk.webkitCancelFullScreen && kk.webkitCancelFullScreen()
         }()
       }
-      setDitheringState(uu) {
-        uu ? this._gl.enable(this._gl.DITHER) : this._gl.disable(this._gl.DITHER)
+      setDitheringState(kk) {
+        kk ? this._gl.enable(this._gl.DITHER) : this._gl.disable(this._gl.DITHER)
       }
-      setRasterizerState(uu) {
-        uu ? this._gl.disable(this._gl.RASTERIZER_DISCARD) : this._gl.enable(this._gl.RASTERIZER_DISCARD)
+      setRasterizerState(kk) {
+        kk ? this._gl.disable(this._gl.RASTERIZER_DISCARD) : this._gl.enable(this._gl.RASTERIZER_DISCARD)
       }
-      setDirectViewport(uu, Ru, yu, Eu) {
-        const Ku = this._cachedViewport;
-        return this._cachedViewport = null, this._viewport(uu, Ru, yu, Eu), Ku
+      setDirectViewport(kk, Fk, Bk, Rk) {
+        const tk = this._cachedViewport;
+        return this._cachedViewport = null, this._viewport(kk, Fk, Bk, Rk), tk
       }
-      scissorClear(uu, Ru, yu, Eu, Ku) {
-        this.enableScissor(uu, Ru, yu, Eu), this.clear(Ku, !0, !0, !0), this.disableScissor()
+      scissorClear(kk, Fk, Bk, Rk, tk) {
+        this.enableScissor(kk, Fk, Bk, Rk), this.clear(tk, !0, !0, !0), this.disableScissor()
       }
-      getVertexShaderSource(uu) {
-        const Ru = this._gl.getAttachedShaders(uu);
-        return Ru ? this._gl.getShaderSource(Ru[0]) : null
+      getVertexShaderSource(kk) {
+        const Fk = this._gl.getAttachedShaders(kk);
+        return Fk ? this._gl.getShaderSource(Fk[0]) : null
       }
-      getFragmentShaderSource(uu) {
-        const Ru = this._gl.getAttachedShaders(uu);
-        return Ru ? this._gl.getShaderSource(Ru[1]) : null
+      getFragmentShaderSource(kk) {
+        const Fk = this._gl.getAttachedShaders(kk);
+        return Fk ? this._gl.getShaderSource(Fk[1]) : null
       }
-      set framebufferDimensionsObject(uu) {
-        this._framebufferDimensionsObject = uu, this._framebufferDimensionsObject && this.onResizeObservable.notifyObservers(this)
+      set framebufferDimensionsObject(kk) {
+        this._framebufferDimensionsObject = kk, this._framebufferDimensionsObject && this.onResizeObservable.notifyObservers(this)
       }
       _rebuildBuffers() {
-        for (const uu of this.scenes) uu.resetCachedMaterial(), uu._rebuildGeometries();
-        for (const uu of this._virtualScenes) uu.resetCachedMaterial(), uu._rebuildGeometries();
+        for (const kk of this.scenes) kk.resetCachedMaterial(), kk._rebuildGeometries();
+        for (const kk of this._virtualScenes) kk.resetCachedMaterial(), kk._rebuildGeometries();
         super._rebuildBuffers()
       }
-      getFontOffset(uu) {
-        return Su(uu)
+      getFontOffset(kk) {
+        return ek(kk)
       }
       enterPointerlock() {
-        this._renderingCanvas && Tu(this._renderingCanvas)
+        this._renderingCanvas && fk(this._renderingCanvas)
       }
       exitPointerlock() {
         document.exitPointerLock && document.exitPointerLock()
       }
-      gH() {
-        this._measureFps(), super.gH()
+      kY() {
+        this._measureFps(), super.kY()
       }
-      _deletePipelineContext(uu) {
-        const Ru = uu;
-        Ru && Ru.program && Ru.transformFeedback && (this.deleteTransformFeedback(Ru.transformFeedback), Ru.transformFeedback = null), super._deletePipelineContext(uu)
+      _deletePipelineContext(kk) {
+        const Fk = kk;
+        Fk && Fk.program && Fk.transformFeedback && (this.deleteTransformFeedback(Fk.transformFeedback), Fk.transformFeedback = null), super._deletePipelineContext(kk)
       }
-      createShaderProgram(uu, Ru, yu, Eu, Ku) {
-        let Qu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
-        Ku = Ku || this._gl, this.onBeforeShaderCompilationObservable.notifyObservers(this);
-        const mu = super.createShaderProgram(uu, Ru, yu, Eu, Ku, Qu);
-        return this.onAfterShaderCompilationObservable.notifyObservers(this), mu
+      createShaderProgram(kk, Fk, Bk, Rk, tk) {
+        let ak = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
+        tk = tk || this._gl, this.onBeforeShaderCompilationObservable.notifyObservers(this);
+        const Xk = super.createShaderProgram(kk, Fk, Bk, Rk, tk, ak);
+        return this.onAfterShaderCompilationObservable.notifyObservers(this), Xk
       }
-      _createShaderProgram(uu, Ru, yu, Eu) {
-        let Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-        const Qu = Eu.createProgram();
-        if (uu.program = Qu, !Qu) throw new Error("Unable to create program");
-        if (Eu.attachShader(Qu, Ru), Eu.attachShader(Qu, yu), this.Ep > 1 && Ku) {
-          const Ru = this.createTransformFeedback();
-          this.bindTransformFeedback(Ru), this.setTranformFeedbackVaryings(Qu, Ku), uu.transformFeedback = Ru
+      _createShaderProgram(kk, Fk, Bk, Rk) {
+        let tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+        const ak = Rk.createProgram();
+        if (kk.program = ak, !ak) throw new Error("Unable to create program");
+        if (Rk.attachShader(ak, Fk), Rk.attachShader(ak, Bk), this.Uy > 1 && tk) {
+          const Fk = this.createTransformFeedback();
+          this.bindTransformFeedback(Fk), this.setTranformFeedbackVaryings(ak, tk), kk.transformFeedback = Fk
         }
-        return Eu.linkProgram(Qu), this.Ep > 1 && Ku && this.bindTransformFeedback(null), uu.context = Eu, uu.vertexShader = Ru, uu.fragmentShader = yu, uu.isParallelCompiled || this._finalizePipelineContext(uu), Qu
+        return Rk.linkProgram(ak), this.Uy > 1 && tk && this.bindTransformFeedback(null), kk.context = Rk, kk.vertexShader = Fk, kk.fragmentShader = Bk, kk.isParallelCompiled || this._finalizePipelineContext(kk), ak
       }
-      _releaseTexture(uu) {
-        super._releaseTexture(uu)
+      _releaseTexture(kk) {
+        super._releaseTexture(kk)
       }
-      _releaseRenderTargetWrapper(uu) {
-        super._releaseRenderTargetWrapper(uu);
-        for (const Ru of this.scenes) {
-          for (const yu of Ru.postProcesses) yu._outputTexture === uu && (yu._outputTexture = null);
-          for (const yu of Ru.cameras)
-            for (const Ru of yu._postProcesses) Ru && Ru._outputTexture === uu && (Ru._outputTexture = null)
+      _releaseRenderTargetWrapper(kk) {
+        super._releaseRenderTargetWrapper(kk);
+        for (const Fk of this.scenes) {
+          for (const Bk of Fk.postProcesses) Bk._outputTexture === kk && (Bk._outputTexture = null);
+          for (const Bk of Fk.cameras)
+            for (const Fk of Bk._postProcesses) Fk && Fk._outputTexture === kk && (Fk._outputTexture = null)
         }
       }
-      _rescaleTexture(uu, Ru, yu, Eu, Ku) {
+      _rescaleTexture(kk, Fk, Bk, Rk, tk) {
         this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MAG_FILTER, this._gl.LINEAR), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_MIN_FILTER, this._gl.LINEAR), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_WRAP_S, this._gl.CLAMP_TO_EDGE), this._gl.texParameteri(this._gl.TEXTURE_2D, this._gl.TEXTURE_WRAP_T, this._gl.CLAMP_TO_EDGE);
-        const Qu = this.createRenderTargetTexture({
-          width: Ru.width,
-          height: Ru.height
+        const ak = this.createRenderTargetTexture({
+          width: Fk.width,
+          height: Fk.height
         }, {
           generateMipMaps: !1,
           type: 0,
@@ -2176,119 +2176,119 @@ export const modules = {
           generateDepthBuffer: !1,
           generateStencilBuffer: !1
         });
-        if (!this._rescalePostProcess && bu._RescalePostProcessFactory && (this._rescalePostProcess = bu._RescalePostProcessFactory(this)), this._rescalePostProcess) {
+        if (!this._rescalePostProcess && Yk._RescalePostProcessFactory && (this._rescalePostProcess = Yk._RescalePostProcessFactory(this)), this._rescalePostProcess) {
           this._rescalePostProcess.externalTextureSamplerBinding = !0;
-          const mu = () => {
-              this._rescalePostProcess.onApply = function(Ru) {
-                Ru._bindTexture("textureSampler", uu)
+          const Xk = () => {
+              this._rescalePostProcess.onApply = function(Fk) {
+                Fk._bindTexture("textureSampler", kk)
               };
-              let mu = yu;
-              mu || (mu = this.scenes[this.scenes.length - 1]), mu.postProcessManager.directRender([this._rescalePostProcess], Qu, !0), this._bindTextureDirectly(this._gl.TEXTURE_2D, Ru, !0), this._gl.copyTexImage2D(this._gl.TEXTURE_2D, 0, Eu, 0, 0, Ru.width, Ru.height, 0), this.unBindFramebuffer(Qu), Qu.dispose(), Ku && Ku()
+              let Xk = Bk;
+              Xk || (Xk = this.scenes[this.scenes.length - 1]), Xk.postProcessManager.directRender([this._rescalePostProcess], ak, !0), this._bindTextureDirectly(this._gl.TEXTURE_2D, Fk, !0), this._gl.copyTexImage2D(this._gl.TEXTURE_2D, 0, Rk, 0, 0, Fk.width, Fk.height, 0), this.unBindFramebuffer(ak), ak.dispose(), tk && tk()
             },
-            Ju = this._rescalePostProcess.getEffect();
-          Ju ? Ju.executeWhenCompiled(mu) : this._rescalePostProcess.onEffectCreatedObservable.addOnce((uu => {
-            uu.executeWhenCompiled(mu)
+            bk = this._rescalePostProcess.getEffect();
+          bk ? bk.executeWhenCompiled(Xk) : this._rescalePostProcess.onEffectCreatedObservable.addOnce((kk => {
+            kk.executeWhenCompiled(Xk)
           }))
         }
       }
-      wrapWebGLTexture(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 3,
-          Ku = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          Qu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-        const mu = new ru.e(uu, this._gl),
-          Ju = new Eu.c(this, 15, !0);
-        return Ju._hardwareTexture = mu, Ju.baseWidth = Ku, Ju.baseHeight = Qu, Ju.width = Ku, Ju.height = Qu, Ju.isReady = !0, Ju.useMipMaps = Ru, this.updateTextureSamplingMode(yu, Ju), Ju
+      wrapWebGLTexture(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 3,
+          tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          ak = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+        const Xk = new Vk.c(kk, this._gl),
+          bk = new Rk.c(this, 15, !0);
+        return bk._hardwareTexture = Xk, bk.baseWidth = tk, bk.baseHeight = ak, bk.width = tk, bk.height = ak, bk.isReady = !0, bk.useMipMaps = Fk, this.updateTextureSamplingMode(Bk, bk), bk
       }
-      updateWrappedWebGLTexture(uu, Ru) {
-        if (15 !== uu.source) throw new Error("updateWrappedWebGLTexture: target InternalTexture was not produced by wrapWebGLTexture.");
-        for (const Eu of this._renderTargetWrapperCache)
-          if (Eu.textures?.includes(uu)) {
-            if (Eu.isMulti) throw new Error("updateWrappedWebGLTexture: wrapped texture is part of a multi render-target; not supported. Dispose and re-wrap.");
-            if (Eu._depthStencilTexture) throw new Error("updateWrappedWebGLTexture: wrapped texture's render-target wrapper has a depth/stencil texture; not supported. Dispose and re-wrap.")
-          } uu._hardwareTexture = new ru.e(Ru, this._gl), uu.isReady = !0, uu._cachedCoordinatesMode = null, uu._cachedWrapU = null, uu._cachedWrapV = null, uu._cachedWrapR = null, uu._cachedAnisotropicFilteringLevel = null;
-        for (const Eu in this._boundTexturesCache) this._boundTexturesCache[Eu] === uu && (this._boundTexturesCache[Eu] = null);
-        this.updateTextureSamplingMode(uu.samplingMode, uu);
-        const yu = this._gl;
-        for (const Eu of this._renderTargetWrapperCache) {
-          if (Eu.texture !== uu) continue;
-          const Ku = Eu,
-            Qu = Eu.samples,
-            mu = Qu > 1;
-          Ku._framebuffer && yu.deleteFramebuffer(Ku._framebuffer), !mu && Ku._depthStencilBuffer && (yu.deleteRenderbuffer(Ku._depthStencilBuffer), Ku._depthStencilBuffer = null);
-          const Ju = this._currentFramebuffer,
-            Nu = yu.createFramebuffer();
-          this._bindUnboundFramebuffer(Nu), yu.framebufferTexture2D(yu.FRAMEBUFFER, yu.COLOR_ATTACHMENT0, yu.TEXTURE_2D, Ru, 0), mu || (Ku._depthStencilBuffer = this._setupFramebufferDepthAttachments(Eu._generateStencilBuffer, Eu._generateDepthBuffer, Eu.width, Eu.height)), this._bindUnboundFramebuffer(Ju), Ku._framebuffer = Nu, mu && (Eu._samples = 1, this.updateRenderTargetTextureSampleCount(Ku, Qu))
+      updateWrappedWebGLTexture(kk, Fk) {
+        if (15 !== kk.source) throw new Error("updateWrappedWebGLTexture: target InternalTexture was not produced by wrapWebGLTexture.");
+        for (const Rk of this._renderTargetWrapperCache)
+          if (Rk.textures?.includes(kk)) {
+            if (Rk.isMulti) throw new Error("updateWrappedWebGLTexture: wrapped texture is part of a multi render-target; not supported. Dispose and re-wrap.");
+            if (Rk._depthStencilTexture) throw new Error("updateWrappedWebGLTexture: wrapped texture's render-target wrapper has a depth/stencil texture; not supported. Dispose and re-wrap.")
+          } kk._hardwareTexture = new Vk.c(Fk, this._gl), kk.isReady = !0, kk._cachedCoordinatesMode = null, kk._cachedWrapU = null, kk._cachedWrapV = null, kk._cachedWrapR = null, kk._cachedAnisotropicFilteringLevel = null;
+        for (const Rk in this._boundTexturesCache) this._boundTexturesCache[Rk] === kk && (this._boundTexturesCache[Rk] = null);
+        this.updateTextureSamplingMode(kk.samplingMode, kk);
+        const Bk = this._gl;
+        for (const Rk of this._renderTargetWrapperCache) {
+          if (Rk.texture !== kk) continue;
+          const tk = Rk,
+            ak = Rk.samples,
+            Xk = ak > 1;
+          tk._framebuffer && Bk.deleteFramebuffer(tk._framebuffer), !Xk && tk._depthStencilBuffer && (Bk.deleteRenderbuffer(tk._depthStencilBuffer), tk._depthStencilBuffer = null);
+          const bk = this._currentFramebuffer,
+            wk = Bk.createFramebuffer();
+          this._bindUnboundFramebuffer(wk), Bk.framebufferTexture2D(Bk.FRAMEBUFFER, Bk.COLOR_ATTACHMENT0, Bk.TEXTURE_2D, Fk, 0), Xk || (tk._depthStencilBuffer = this._setupFramebufferDepthAttachments(Rk._generateStencilBuffer, Rk._generateDepthBuffer, Rk.width, Rk.height)), this._bindUnboundFramebuffer(bk), tk._framebuffer = wk, Xk && (Rk._samples = 1, this.updateRenderTargetTextureSampleCount(tk, ak))
         }
       }
-      _uploadImageToTexture(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const Ku = this._gl,
-          Qu = this._getWebGLTextureType(uu.type),
-          mu = this._getInternalFormat(uu.format),
-          Ju = this._getRGBABufferInternalSizedFormat(uu.type, mu),
-          Nu = uu.isCube ? Ku.TEXTURE_CUBE_MAP : Ku.TEXTURE_2D;
-        this._bindTextureDirectly(Nu, uu, !0), this._unpackFlipY(uu.invertY);
-        let Xu = Ku.TEXTURE_2D;
-        uu.isCube && (Xu = Ku.TEXTURE_CUBE_MAP_POSITIVE_X + yu), Ku.texImage2D(Xu, Eu, Ju, mu, Qu, Ru), this._bindTextureDirectly(Nu, null, !0)
+      _uploadImageToTexture(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const tk = this._gl,
+          ak = this._getWebGLTextureType(kk.type),
+          Xk = this._getInternalFormat(kk.format),
+          bk = this._getRGBABufferInternalSizedFormat(kk.type, Xk),
+          wk = kk.isCube ? tk.TEXTURE_CUBE_MAP : tk.TEXTURE_2D;
+        this._bindTextureDirectly(wk, kk, !0), this._unpackFlipY(kk.invertY);
+        let dk = tk.TEXTURE_2D;
+        kk.isCube && (dk = tk.TEXTURE_CUBE_MAP_POSITIVE_X + Bk), tk.texImage2D(dk, Rk, bk, Xk, ak, Fk), this._bindTextureDirectly(wk, null, !0)
       }
-      updateTextureComparisonFunction(uu, Ru) {
-        if (1 === this.Ep) return void Vu.e.Error("WebGL 1 does not support texture comparison.");
-        const yu = this._gl;
-        uu.isCube ? (this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, uu, !0), 0 === Ru ? (yu.texParameteri(yu.TEXTURE_CUBE_MAP, yu.TEXTURE_COMPARE_FUNC, 515), yu.texParameteri(yu.TEXTURE_CUBE_MAP, yu.TEXTURE_COMPARE_MODE, yu.NONE)) : (yu.texParameteri(yu.TEXTURE_CUBE_MAP, yu.TEXTURE_COMPARE_FUNC, Ru), yu.texParameteri(yu.TEXTURE_CUBE_MAP, yu.TEXTURE_COMPARE_MODE, yu.COMPARE_REF_TO_TEXTURE)), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null)) : (this._bindTextureDirectly(this._gl.TEXTURE_2D, uu, !0), 0 === Ru ? (yu.texParameteri(yu.TEXTURE_2D, yu.TEXTURE_COMPARE_FUNC, 515), yu.texParameteri(yu.TEXTURE_2D, yu.TEXTURE_COMPARE_MODE, yu.NONE)) : (yu.texParameteri(yu.TEXTURE_2D, yu.TEXTURE_COMPARE_FUNC, Ru), yu.texParameteri(yu.TEXTURE_2D, yu.TEXTURE_COMPARE_MODE, yu.COMPARE_REF_TO_TEXTURE)), this._bindTextureDirectly(this._gl.TEXTURE_2D, null)), uu._comparisonFunction = Ru
+      updateTextureComparisonFunction(kk, Fk) {
+        if (1 === this.Uy) return void sk.b.Error("WebGL 1 does not support texture comparison.");
+        const Bk = this._gl;
+        kk.isCube ? (this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, kk, !0), 0 === Fk ? (Bk.texParameteri(Bk.TEXTURE_CUBE_MAP, Bk.TEXTURE_COMPARE_FUNC, 515), Bk.texParameteri(Bk.TEXTURE_CUBE_MAP, Bk.TEXTURE_COMPARE_MODE, Bk.NONE)) : (Bk.texParameteri(Bk.TEXTURE_CUBE_MAP, Bk.TEXTURE_COMPARE_FUNC, Fk), Bk.texParameteri(Bk.TEXTURE_CUBE_MAP, Bk.TEXTURE_COMPARE_MODE, Bk.COMPARE_REF_TO_TEXTURE)), this._bindTextureDirectly(this._gl.TEXTURE_CUBE_MAP, null)) : (this._bindTextureDirectly(this._gl.TEXTURE_2D, kk, !0), 0 === Fk ? (Bk.texParameteri(Bk.TEXTURE_2D, Bk.TEXTURE_COMPARE_FUNC, 515), Bk.texParameteri(Bk.TEXTURE_2D, Bk.TEXTURE_COMPARE_MODE, Bk.NONE)) : (Bk.texParameteri(Bk.TEXTURE_2D, Bk.TEXTURE_COMPARE_FUNC, Fk), Bk.texParameteri(Bk.TEXTURE_2D, Bk.TEXTURE_COMPARE_MODE, Bk.COMPARE_REF_TO_TEXTURE)), this._bindTextureDirectly(this._gl.TEXTURE_2D, null)), kk._comparisonFunction = Fk
       }
-      createInstancesBuffer(uu) {
-        const Ru = this._gl.createBuffer();
-        if (!Ru) throw new Error("Unable to create instance buffer");
-        const yu = new Xu.d(Ru);
-        return yu.Nr = uu, this.bindArrayBuffer(yu), this._gl.bufferData(this._gl.ARRAY_BUFFER, uu, this._gl.DYNAMIC_DRAW), yu.references = 1, yu
+      createInstancesBuffer(kk) {
+        const Fk = this._gl.createBuffer();
+        if (!Fk) throw new Error("Unable to create instance buffer");
+        const Bk = new dk.c(Fk);
+        return Bk.KV = kk, this.bindArrayBuffer(Bk), this._gl.bufferData(this._gl.ARRAY_BUFFER, kk, this._gl.DYNAMIC_DRAW), Bk.references = 1, Bk
       }
-      deleteInstancesBuffer(uu) {
-        this._gl.deleteBuffer(uu)
+      deleteInstancesBuffer(kk) {
+        this._gl.deleteBuffer(kk)
       }
-      async _clientWaitAsync(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10;
-        const Eu = this._gl;
-        return await new Promise(((Ku, Qu) => {
-          (0, ju.f)((() => {
-            const yu = Eu.clientWaitSync(uu, Ru, 0);
-            if (yu == Eu.WAIT_FAILED) throw new Error("clientWaitSync failed");
-            return yu != Eu.TIMEOUT_EXPIRED
-          }), Ku, Qu, yu)
+      async _clientWaitAsync(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10;
+        const Rk = this._gl;
+        return await new Promise(((tk, ak) => {
+          (0, Wk.g)((() => {
+            const Bk = Rk.clientWaitSync(kk, Fk, 0);
+            if (Bk == Rk.WAIT_FAILED) throw new Error("clientWaitSync failed");
+            return Bk != Rk.TIMEOUT_EXPIRED
+          }), tk, ak, Bk)
         }))
       }
-      _readPixelsAsync(uu, Ru, yu, Eu, Ku, Qu, mu) {
+      _readPixelsAsync(kk, Fk, Bk, Rk, tk, ak, Xk) {
         if (this._webGLVersion < 2) throw new Error("_readPixelsAsync only work on WebGL2+");
-        const Ju = this._gl,
-          Nu = Ju.createBuffer();
-        Ju.bindBuffer(Ju.PIXEL_PACK_BUFFER, Nu), Ju.bufferData(Ju.PIXEL_PACK_BUFFER, mu.byteLength, Ju.STREAM_READ), Ju.readPixels(uu, Ru, yu, Eu, Ku, Qu, 0), Ju.bindBuffer(Ju.PIXEL_PACK_BUFFER, null);
-        const Xu = Ju.fenceSync(Ju.SYNC_GPU_COMMANDS_COMPLETE, 0);
-        return Xu ? (Ju.flush(), this._clientWaitAsync(Xu, 0, 10).then((() => (Ju.deleteSync(Xu), Ju.bindBuffer(Ju.PIXEL_PACK_BUFFER, Nu), Ju.getBufferSubData(Ju.PIXEL_PACK_BUFFER, 0, mu), Ju.bindBuffer(Ju.PIXEL_PACK_BUFFER, null), Ju.deleteBuffer(Nu), mu)))) : null
+        const bk = this._gl,
+          wk = bk.createBuffer();
+        bk.bindBuffer(bk.PIXEL_PACK_BUFFER, wk), bk.bufferData(bk.PIXEL_PACK_BUFFER, Xk.byteLength, bk.STREAM_READ), bk.readPixels(kk, Fk, Bk, Rk, tk, ak, 0), bk.bindBuffer(bk.PIXEL_PACK_BUFFER, null);
+        const dk = bk.fenceSync(bk.SYNC_GPU_COMMANDS_COMPLETE, 0);
+        return dk ? (bk.flush(), this._clientWaitAsync(dk, 0, 10).then((() => (bk.deleteSync(dk), bk.bindBuffer(bk.PIXEL_PACK_BUFFER, wk), bk.getBufferSubData(bk.PIXEL_PACK_BUFFER, 0, Xk), bk.bindBuffer(bk.PIXEL_PACK_BUFFER, null), bk.deleteBuffer(wk), Xk)))) : null
       }
       dispose() {
         this.hideLoadingUI?.(), this._rescalePostProcess && this._rescalePostProcess.dispose(),
-          function(uu, Ru) {
-            1 === Ku.b.Instances.length && Bu.d.audioEngine && (Bu.d.audioEngine.dispose(), Bu.d.audioEngine = null);
-            const yu = uu.getHostWindow();
-            yu && "function" === typeof yu.removeEventListener && (yu.removeEventListener("blur", uu._onBlur), yu.removeEventListener("focus", uu._onFocus)), Ru && (Ru.removeEventListener("focus", uu._onCanvasFocus), Ru.removeEventListener("blur", uu._onCanvasBlur), Ru.removeEventListener("pointerout", uu._onCanvasPointerOut), Ru.removeEventListener("contextmenu", uu._onCanvasContextMenu)), (0, xu.d)() && (document.removeEventListener("fullscreenchange", uu._onFullscreenChange), document.removeEventListener("mozfullscreenchange", uu._onFullscreenChange), document.removeEventListener("webkitfullscreenchange", uu._onFullscreenChange), document.removeEventListener("msfullscreenchange", uu._onFullscreenChange), document.removeEventListener("pointerlockchange", uu._onPointerLockChange), document.removeEventListener("mspointerlockchange", uu._onPointerLockChange), document.removeEventListener("mozpointerlockchange", uu._onPointerLockChange), document.removeEventListener("webkitpointerlockchange", uu._onPointerLockChange))
+          function(kk, Fk) {
+            1 === tk.c.Instances.length && Jk.c.audioEngine && (Jk.c.audioEngine.dispose(), Jk.c.audioEngine = null);
+            const Bk = kk.getHostWindow();
+            Bk && "function" === typeof Bk.removeEventListener && (Bk.removeEventListener("blur", kk._onBlur), Bk.removeEventListener("focus", kk._onFocus)), Fk && (Fk.removeEventListener("focus", kk._onCanvasFocus), Fk.removeEventListener("blur", kk._onCanvasBlur), Fk.removeEventListener("pointerout", kk._onCanvasPointerOut), Fk.removeEventListener("contextmenu", kk._onCanvasContextMenu)), (0, Ak.e)() && (document.removeEventListener("fullscreenchange", kk._onFullscreenChange), document.removeEventListener("mozfullscreenchange", kk._onFullscreenChange), document.removeEventListener("webkitfullscreenchange", kk._onFullscreenChange), document.removeEventListener("msfullscreenchange", kk._onFullscreenChange), document.removeEventListener("pointerlockchange", kk._onPointerLockChange), document.removeEventListener("mspointerlockchange", kk._onPointerLockChange), document.removeEventListener("mozpointerlockchange", kk._onPointerLockChange), document.removeEventListener("webkitpointerlockchange", kk._onPointerLockChange))
           }(this, this._renderingCanvas), super.dispose()
       }
     }
-    bu.ALPHA_DISABLE = 0, bu.ALPHA_ADD = 1, bu.ALPHA_COMBINE = 2, bu.ALPHA_SUBTRACT = 3, bu.ALPHA_MULTIPLY = 4, bu.ALPHA_MAXIMIZED = 5, bu.ALPHA_ONEONE = 6, bu.ALPHA_PREMULTIPLIED = 7, bu.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, bu.ALPHA_INTERPOLATE = 9, bu.ALPHA_SCREENMODE = 10, bu.DELAYLOADSTATE_NONE = 0, bu.DELAYLOADSTATE_LOADED = 1, bu.DELAYLOADSTATE_LOADING = 2, bu.DELAYLOADSTATE_NOTLOADED = 4, bu.NEVER = 512, bu.ALWAYS = 519, bu.LESS = 513, bu.EQUAL = 514, bu.LEQUAL = 515, bu.GREATER = 516, bu.GEQUAL = 518, bu.NOTEQUAL = 517, bu.KEEP = 7680, bu.REPLACE = 7681, bu.INCR = 7682, bu.DECR = 7683, bu.INVERT = 5386, bu.INCR_WRAP = 34055, bu.DECR_WRAP = 34056, bu.TEXTURE_CLAMP_ADDRESSMODE = 0, bu.TEXTURE_WRAP_ADDRESSMODE = 1, bu.TEXTURE_MIRROR_ADDRESSMODE = 2, bu.TEXTUREFORMAT_ALPHA = 0, bu.TEXTUREFORMAT_LUMINANCE = 1, bu.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, bu.TEXTUREFORMAT_RGB = 4, bu.TEXTUREFORMAT_RGBA = 5, bu.TEXTUREFORMAT_RED = 6, bu.TEXTUREFORMAT_R = 6, bu.TEXTUREFORMAT_R16_UNORM = 33322, bu.TEXTUREFORMAT_RG16_UNORM = 33324, bu.TEXTUREFORMAT_RGB16_UNORM = 32852, bu.TEXTUREFORMAT_RGBA16_UNORM = 32859, bu.TEXTUREFORMAT_R16_SNORM = 36760, bu.TEXTUREFORMAT_RG16_SNORM = 36761, bu.TEXTUREFORMAT_RGB16_SNORM = 36762, bu.TEXTUREFORMAT_RGBA16_SNORM = 36763, bu.TEXTUREFORMAT_RG = 7, bu.TEXTUREFORMAT_RED_INTEGER = 8, bu.TEXTUREFORMAT_R_INTEGER = 8, bu.TEXTUREFORMAT_RG_INTEGER = 9, bu.TEXTUREFORMAT_RGB_INTEGER = 10, bu.TEXTUREFORMAT_RGBA_INTEGER = 11, bu.TEXTURETYPE_UNSIGNED_BYTE = 0, bu.TEXTURETYPE_UNSIGNED_INT = 0, bu.TEXTURETYPE_FLOAT = 1, bu.TEXTURETYPE_HALF_FLOAT = 2, bu.TEXTURETYPE_BYTE = 3, bu.TEXTURETYPE_SHORT = 4, bu.TEXTURETYPE_UNSIGNED_SHORT = 5, bu.TEXTURETYPE_INT = 6, bu.TEXTURETYPE_UNSIGNED_INTEGER = 7, bu.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, bu.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, bu.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, bu.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, bu.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, bu.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, bu.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, bu.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, bu.TEXTURE_NEAREST_SAMPLINGMODE = 1, bu.TEXTURE_BILINEAR_SAMPLINGMODE = 2, bu.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, bu.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, bu.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, bu.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, bu.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, bu.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, bu.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, bu.TEXTURE_NEAREST_LINEAR = 7, bu.TEXTURE_NEAREST_NEAREST = 1, bu.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, bu.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, bu.TEXTURE_LINEAR_LINEAR = 2, bu.TEXTURE_LINEAR_NEAREST = 12, bu.TEXTURE_EXPLICIT_MODE = 0, bu.TEXTURE_SPHERICAL_MODE = 1, bu.TEXTURE_PLANAR_MODE = 2, bu.TEXTURE_CUBIC_MODE = 3, bu.TEXTURE_PROJECTION_MODE = 4, bu.TEXTURE_SKYBOX_MODE = 5, bu.TEXTURE_INVCUBIC_MODE = 6, bu.TEXTURE_EQUIRECTANGULAR_MODE = 7, bu.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, bu.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, bu.SCALEMODE_FLOOR = 1, bu.SCALEMODE_NEAREST = 2, bu.SCALEMODE_CEILING = 3
+    Yk.ALPHA_DISABLE = 0, Yk.ALPHA_ADD = 1, Yk.ALPHA_COMBINE = 2, Yk.ALPHA_SUBTRACT = 3, Yk.ALPHA_MULTIPLY = 4, Yk.ALPHA_MAXIMIZED = 5, Yk.ALPHA_ONEONE = 6, Yk.ALPHA_PREMULTIPLIED = 7, Yk.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, Yk.ALPHA_INTERPOLATE = 9, Yk.ALPHA_SCREENMODE = 10, Yk.DELAYLOADSTATE_NONE = 0, Yk.DELAYLOADSTATE_LOADED = 1, Yk.DELAYLOADSTATE_LOADING = 2, Yk.DELAYLOADSTATE_NOTLOADED = 4, Yk.NEVER = 512, Yk.ALWAYS = 519, Yk.LESS = 513, Yk.EQUAL = 514, Yk.LEQUAL = 515, Yk.GREATER = 516, Yk.GEQUAL = 518, Yk.NOTEQUAL = 517, Yk.KEEP = 7680, Yk.REPLACE = 7681, Yk.INCR = 7682, Yk.DECR = 7683, Yk.INVERT = 5386, Yk.INCR_WRAP = 34055, Yk.DECR_WRAP = 34056, Yk.TEXTURE_CLAMP_ADDRESSMODE = 0, Yk.TEXTURE_WRAP_ADDRESSMODE = 1, Yk.TEXTURE_MIRROR_ADDRESSMODE = 2, Yk.TEXTUREFORMAT_ALPHA = 0, Yk.TEXTUREFORMAT_LUMINANCE = 1, Yk.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, Yk.TEXTUREFORMAT_RGB = 4, Yk.TEXTUREFORMAT_RGBA = 5, Yk.TEXTUREFORMAT_RED = 6, Yk.TEXTUREFORMAT_R = 6, Yk.TEXTUREFORMAT_R16_UNORM = 33322, Yk.TEXTUREFORMAT_RG16_UNORM = 33324, Yk.TEXTUREFORMAT_RGB16_UNORM = 32852, Yk.TEXTUREFORMAT_RGBA16_UNORM = 32859, Yk.TEXTUREFORMAT_R16_SNORM = 36760, Yk.TEXTUREFORMAT_RG16_SNORM = 36761, Yk.TEXTUREFORMAT_RGB16_SNORM = 36762, Yk.TEXTUREFORMAT_RGBA16_SNORM = 36763, Yk.TEXTUREFORMAT_RG = 7, Yk.TEXTUREFORMAT_RED_INTEGER = 8, Yk.TEXTUREFORMAT_R_INTEGER = 8, Yk.TEXTUREFORMAT_RG_INTEGER = 9, Yk.TEXTUREFORMAT_RGB_INTEGER = 10, Yk.TEXTUREFORMAT_RGBA_INTEGER = 11, Yk.TEXTURETYPE_UNSIGNED_BYTE = 0, Yk.TEXTURETYPE_UNSIGNED_INT = 0, Yk.TEXTURETYPE_FLOAT = 1, Yk.TEXTURETYPE_HALF_FLOAT = 2, Yk.TEXTURETYPE_BYTE = 3, Yk.TEXTURETYPE_SHORT = 4, Yk.TEXTURETYPE_UNSIGNED_SHORT = 5, Yk.TEXTURETYPE_INT = 6, Yk.TEXTURETYPE_UNSIGNED_INTEGER = 7, Yk.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, Yk.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, Yk.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, Yk.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, Yk.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, Yk.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, Yk.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, Yk.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, Yk.TEXTURE_NEAREST_SAMPLINGMODE = 1, Yk.TEXTURE_BILINEAR_SAMPLINGMODE = 2, Yk.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, Yk.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, Yk.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, Yk.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, Yk.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, Yk.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, Yk.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, Yk.TEXTURE_NEAREST_LINEAR = 7, Yk.TEXTURE_NEAREST_NEAREST = 1, Yk.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, Yk.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, Yk.TEXTURE_LINEAR_LINEAR = 2, Yk.TEXTURE_LINEAR_NEAREST = 12, Yk.TEXTURE_EXPLICIT_MODE = 0, Yk.TEXTURE_SPHERICAL_MODE = 1, Yk.TEXTURE_PLANAR_MODE = 2, Yk.TEXTURE_CUBIC_MODE = 3, Yk.TEXTURE_PROJECTION_MODE = 4, Yk.TEXTURE_SKYBOX_MODE = 5, Yk.TEXTURE_INVCUBIC_MODE = 6, Yk.TEXTURE_EQUIRECTANGULAR_MODE = 7, Yk.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, Yk.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, Yk.SCALEMODE_FLOOR = 1, Yk.SCALEMODE_NEAREST = 2, Yk.SCALEMODE_CEILING = 3
   },
-  39541: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Ku
+  39375: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => tk
     });
-    var Eu = yu(39506);
-    class Ku {
+    var Rk = Bk(39342);
+    class tk {
       get depthStencilTexture() {
         return this._depthStencilTexture
       }
-      setDepthStencilTexture(uu) {
-        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && this._depthStencilTexture && this._depthStencilTexture.dispose(), this._depthStencilTexture = uu, this._generateDepthBuffer = this._generateStencilBuffer = this._depthStencilTextureWithStencil = !1, uu && (this._generateDepthBuffer = !0, this._generateStencilBuffer = this._depthStencilTextureWithStencil = (0, Eu.d)(uu.format))
+      setDepthStencilTexture(kk) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && this._depthStencilTexture && this._depthStencilTexture.dispose(), this._depthStencilTexture = kk, this._generateDepthBuffer = this._generateStencilBuffer = this._depthStencilTextureWithStencil = !1, kk && (this._generateDepthBuffer = !0, this._generateStencilBuffer = this._depthStencilTextureWithStencil = (0, Rk.e)(kk.format))
       }
       get depthStencilTextureWithStencil() {
         return this._depthStencilTextureWithStencil
@@ -2332,22 +2332,22 @@ export const modules = {
       get layerIndices() {
         return this._layerIndices
       }
-      getBaseArrayLayer(uu) {
+      getBaseArrayLayer(kk) {
         if (!this._textures) return -1;
-        const Ru = this._textures[uu],
-          yu = this._layerIndices?.[uu] ?? 0,
-          Eu = this._faceIndices?.[uu] ?? 0;
-        return Ru.isCube ? 6 * yu + Eu : Ru.is3D ? 0 : yu
+        const Fk = this._textures[kk],
+          Bk = this._layerIndices?.[kk] ?? 0,
+          Rk = this._faceIndices?.[kk] ?? 0;
+        return Fk.isCube ? 6 * Bk + Rk : Fk.is3D ? 0 : Bk
       }
       get samples() {
         return this._samples
       }
-      setSamples(uu) {
-        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (this.samples === uu && !yu) return uu;
-        const Eu = this._isMulti ? this._engine.updateMultipleRenderTargetTextureSampleCount(this, uu, Ru) : this._engine.updateRenderTargetTextureSampleCount(this, uu);
-        return this._samples = uu, Eu
+      setSamples(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (this.samples === kk && !Bk) return kk;
+        const Rk = this._isMulti ? this._engine.updateMultipleRenderTargetTextureSampleCount(this, kk, Fk) : this._engine.updateRenderTargetTextureSampleCount(this, kk);
+        return this._samples = kk, Rk
       }
       resolveMSAATextures() {
         this.isMulti ? this._engine.resolveMultiFramebuffer(this) : this._engine.resolveFramebuffer(this)
@@ -2355,138 +2355,138 @@ export const modules = {
       generateMipMaps() {
         this._engine._currentRenderTarget === this && (this.isMulti ? this._engine.unBindMultiColorAttachmentFramebuffer(this, !0) : this._engine.unBindFramebuffer(this, !0)), this.isMulti ? this._engine.generateMipMapsMultiFramebuffer(this) : this._engine.generateMipMapsFramebuffer(this)
       }
-      constructor(uu, Ru, yu, Eu, Ku) {
-        this._textures = null, this._faceIndices = null, this._layerIndices = null, this._samples = 1, this._attachments = null, this._generateStencilBuffer = !1, this._generateDepthBuffer = !1, this._depthStencilTextureWithStencil = !1, this.disableAutomaticMSAAResolve = !1, this.resolveMSAAColors = !0, this.resolveMSAADepth = !1, this.resolveMSAAStencil = !1, this.depthReadOnly = !1, this.stencilReadOnly = !1, this._isMulti = uu, this._isCube = Ru, this._size = yu, this._engine = Eu, this._depthStencilTexture = null, this.label = Ku
+      constructor(kk, Fk, Bk, Rk, tk) {
+        this._textures = null, this._faceIndices = null, this._layerIndices = null, this._samples = 1, this._attachments = null, this._generateStencilBuffer = !1, this._generateDepthBuffer = !1, this._depthStencilTextureWithStencil = !1, this.disableAutomaticMSAAResolve = !1, this.resolveMSAAColors = !0, this.resolveMSAADepth = !1, this.resolveMSAAStencil = !1, this.depthReadOnly = !1, this.stencilReadOnly = !1, this._isMulti = kk, this._isCube = Fk, this._size = Bk, this._engine = Rk, this._depthStencilTexture = null, this.label = tk
       }
-      setTextures(uu) {
-        Array.isArray(uu) ? this._textures = uu : this._textures = uu ? [uu] : null
+      setTextures(kk) {
+        Array.isArray(kk) ? this._textures = kk : this._textures = kk ? [kk] : null
       }
-      setTexture(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this._textures || (this._textures = []), this._textures[Ru] !== uu && (this._textures[Ru] && yu && this._textures[Ru].dispose(), this._textures[Ru] = uu)
+      setTexture(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Bk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this._textures || (this._textures = []), this._textures[Fk] !== kk && (this._textures[Fk] && Bk && this._textures[Fk].dispose(), this._textures[Fk] = kk)
       }
-      setLayerAndFaceIndices(uu, Ru) {
-        this._layerIndices = uu, this._faceIndices = Ru
+      setLayerAndFaceIndices(kk, Fk) {
+        this._layerIndices = kk, this._faceIndices = Fk
       }
       setLayerAndFaceIndex() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Ru = arguments.length > 1 ? arguments[1] : void 0,
-          yu = arguments.length > 2 ? arguments[2] : void 0;
-        this._layerIndices || (this._layerIndices = []), this._faceIndices || (this._faceIndices = []), void 0 !== Ru && Ru >= 0 && (this._layerIndices[uu] = Ru), void 0 !== yu && yu >= 0 && (this._faceIndices[uu] = yu)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Bk = arguments.length > 2 ? arguments[2] : void 0;
+        this._layerIndices || (this._layerIndices = []), this._faceIndices || (this._faceIndices = []), void 0 !== Fk && Fk >= 0 && (this._layerIndices[kk] = Fk), void 0 !== Bk && Bk >= 0 && (this._faceIndices[kk] = Bk)
       }
       createDepthStencilTexture() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
-          Qu = arguments.length > 5 ? arguments[5] : void 0;
-        return this._depthStencilTexture?.dispose(), this._depthStencilTextureWithStencil = yu, this._depthStencilTextureLabel = Qu, this._depthStencilTexture = this._engine.createDepthStencilTexture(this._size, {
-          bilinearFiltering: Ru,
-          comparisonFunction: uu,
-          generateStencil: yu,
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
+          ak = arguments.length > 5 ? arguments[5] : void 0;
+        return this._depthStencilTexture?.dispose(), this._depthStencilTextureWithStencil = Bk, this._depthStencilTextureLabel = ak, this._depthStencilTexture = this._engine.createDepthStencilTexture(this._size, {
+          bilinearFiltering: Fk,
+          comparisonFunction: kk,
+          generateStencil: Bk,
           isCube: this._isCube,
-          samples: Eu,
-          depthTextureFormat: Ku,
-          label: Qu
+          samples: Rk,
+          depthTextureFormat: tk,
+          label: ak
         }, this), this._depthStencilTexture
       }
-      _shareDepth(uu) {
-        this.shareDepth(uu)
+      _shareDepth(kk) {
+        this.shareDepth(kk)
       }
-      shareDepth(uu) {
-        this._depthStencilTexture && (uu._depthStencilTexture && uu._depthStencilTexture.dispose(), uu._depthStencilTexture = this._depthStencilTexture, uu._depthStencilTextureWithStencil = this._depthStencilTextureWithStencil, this._depthStencilTexture.incrementReferences())
+      shareDepth(kk) {
+        this._depthStencilTexture && (kk._depthStencilTexture && kk._depthStencilTexture.dispose(), kk._depthStencilTexture = this._depthStencilTexture, kk._depthStencilTextureWithStencil = this._depthStencilTextureWithStencil, this._depthStencilTexture.incrementReferences())
       }
-      _swapAndDie(uu) {
-        this.texture && this.texture._swapAndDie(uu), this._textures = null, this.dispose(!0)
+      _swapAndDie(kk) {
+        this.texture && this.texture._swapAndDie(kk), this._textures = null, this.dispose(!0)
       }
       _cloneRenderTargetWrapper() {
-        let uu = null;
+        let kk = null;
         if (this._isMulti) {
-          const Ru = this.textures;
-          if (Ru && Ru.length > 0) {
-            let yu = !1,
-              Eu = Ru.length,
-              Ku = -1;
-            const Qu = Ru[Ru.length - 1]._source;
-            14 !== Qu && 12 !== Qu || (yu = !0, Ku = Ru[Ru.length - 1].format, Eu--);
-            const mu = [],
-              Ju = [],
-              Nu = [],
-              Xu = [],
-              Vu = [],
-              ru = [],
-              Bu = [],
-              xu = {};
-            for (let uu = 0; uu < Eu; ++uu) {
-              const yu = Ru[uu];
-              mu.push(yu.samplingMode), Ju.push(yu.type), Nu.push(yu.format);
-              void 0 !== xu[yu.uniqueId] ? (Xu.push(-1), Bu.push(0)) : (xu[yu.uniqueId] = uu, yu.is2DArray ? (Xu.push(35866), Bu.push(yu.depth)) : yu.isCube ? (Xu.push(34067), Bu.push(0)) : yu.is3D ? (Xu.push(32879), Bu.push(yu.depth)) : (Xu.push(3553), Bu.push(0))), this._faceIndices && Vu.push(this._faceIndices[uu] ?? 0), this._layerIndices && ru.push(this._layerIndices[uu] ?? 0)
+          const Fk = this.textures;
+          if (Fk && Fk.length > 0) {
+            let Bk = !1,
+              Rk = Fk.length,
+              tk = -1;
+            const ak = Fk[Fk.length - 1]._source;
+            14 !== ak && 12 !== ak || (Bk = !0, tk = Fk[Fk.length - 1].format, Rk--);
+            const Xk = [],
+              bk = [],
+              wk = [],
+              dk = [],
+              sk = [],
+              Vk = [],
+              Jk = [],
+              Ak = {};
+            for (let kk = 0; kk < Rk; ++kk) {
+              const Bk = Fk[kk];
+              Xk.push(Bk.samplingMode), bk.push(Bk.type), wk.push(Bk.format);
+              void 0 !== Ak[Bk.uniqueId] ? (dk.push(-1), Jk.push(0)) : (Ak[Bk.uniqueId] = kk, Bk.is2DArray ? (dk.push(35866), Jk.push(Bk.depth)) : Bk.isCube ? (dk.push(34067), Jk.push(0)) : Bk.is3D ? (dk.push(32879), Jk.push(Bk.depth)) : (dk.push(3553), Jk.push(0))), this._faceIndices && sk.push(this._faceIndices[kk] ?? 0), this._layerIndices && Vk.push(this._layerIndices[kk] ?? 0)
             }
-            const Su = {
-                samplingModes: mu,
-                generateMipMaps: Ru[0].generateMipMaps,
+            const ek = {
+                samplingModes: Xk,
+                generateMipMaps: Fk[0].generateMipMaps,
                 generateDepthBuffer: this._generateDepthBuffer,
                 generateStencilBuffer: this._generateStencilBuffer,
-                generateDepthTexture: yu,
-                depthTextureFormat: Ku,
-                types: Ju,
-                formats: Nu,
-                Omu: Eu,
-                targetTypes: Xu,
-                faceIndex: Vu,
-                layerIndex: ru,
-                layerCounts: Bu,
+                generateDepthTexture: Bk,
+                depthTextureFormat: tk,
+                types: bk,
+                formats: wk,
+                YXk: Rk,
+                targetTypes: dk,
+                faceIndex: sk,
+                layerIndex: Vk,
+                layerCounts: Jk,
                 label: this.label
               },
-              pu = {
+              yk = {
                 width: this.width,
                 height: this.height,
                 depth: this.depth
               };
-            uu = this._engine.createMultipleRenderTarget(pu, Su);
-            for (let Tu = 0; Tu < Eu; ++Tu) {
-              if (-1 !== Xu[Tu]) continue;
-              const yu = xu[Ru[Tu].uniqueId];
-              uu.setTexture(uu.textures[yu], Tu)
+            kk = this._engine.createMultipleRenderTarget(yk, ek);
+            for (let fk = 0; fk < Rk; ++fk) {
+              if (-1 !== dk[fk]) continue;
+              const Bk = Ak[Fk[fk].uniqueId];
+              kk.setTexture(kk.textures[Bk], fk)
             }
           }
         } else {
-          const Ru = {};
-          if (Ru.generateDepthBuffer = this._generateDepthBuffer, Ru.generateMipMaps = this.texture?.generateMipMaps ?? !1, Ru.generateStencilBuffer = this._generateStencilBuffer, Ru.samplingMode = this.texture?.samplingMode, Ru.type = this.texture?.type, Ru.format = this.texture?.format, Ru.noColorAttachment = !this._textures, Ru.label = this.label, this.isCube) uu = this._engine.createRenderTargetCubeTexture(this.width, Ru);
+          const Fk = {};
+          if (Fk.generateDepthBuffer = this._generateDepthBuffer, Fk.generateMipMaps = this.texture?.generateMipMaps ?? !1, Fk.generateStencilBuffer = this._generateStencilBuffer, Fk.samplingMode = this.texture?.samplingMode, Fk.type = this.texture?.type, Fk.format = this.texture?.format, Fk.noColorAttachment = !this._textures, Fk.label = this.label, this.isCube) kk = this._engine.createRenderTargetCubeTexture(this.width, Fk);
           else {
-            const yu = {
+            const Bk = {
               width: this.width,
               height: this.height,
               layers: this.is2DArray || this.is3D ? this.texture?.depth : void 0
             };
-            uu = this._engine.createRenderTargetTexture(yu, Ru)
+            kk = this._engine.createRenderTargetTexture(Bk, Fk)
           }
-          uu.texture && (uu.texture.isReady = !0)
+          kk.texture && (kk.texture.isReady = !0)
         }
-        return uu
+        return kk
       }
-      _swapRenderTargetWrapper(uu) {
-        if (this._textures && uu._textures)
-          for (let Ru = 0; Ru < this._textures.length; ++Ru) this._textures[Ru]._swapAndDie(uu._textures[Ru], !1), uu._textures[Ru].isReady = !0;
-        this._depthStencilTexture && uu._depthStencilTexture && (this._depthStencilTexture._swapAndDie(uu._depthStencilTexture), uu._depthStencilTexture.isReady = !0), this._textures = null, this._depthStencilTexture = null
+      _swapRenderTargetWrapper(kk) {
+        if (this._textures && kk._textures)
+          for (let Fk = 0; Fk < this._textures.length; ++Fk) this._textures[Fk]._swapAndDie(kk._textures[Fk], !1), kk._textures[Fk].isReady = !0;
+        this._depthStencilTexture && kk._depthStencilTexture && (this._depthStencilTexture._swapAndDie(kk._depthStencilTexture), kk._depthStencilTexture.isReady = !0), this._textures = null, this._depthStencilTexture = null
       }
       _rebuild() {
-        const uu = this._cloneRenderTargetWrapper();
-        if (uu) {
+        const kk = this._cloneRenderTargetWrapper();
+        if (kk) {
           if (this._depthStencilTexture) {
-            const Ru = this._depthStencilTexture.samplingMode,
-              yu = this._depthStencilTexture.format,
-              Eu = 2 === Ru || 3 === Ru || 11 === Ru;
-            uu.createDepthStencilTexture(this._depthStencilTexture._comparisonFunction, Eu, this._depthStencilTextureWithStencil, this._depthStencilTexture.samples, yu, this._depthStencilTextureLabel)
+            const Fk = this._depthStencilTexture.samplingMode,
+              Bk = this._depthStencilTexture.format,
+              Rk = 2 === Fk || 3 === Fk || 11 === Fk;
+            kk.createDepthStencilTexture(this._depthStencilTexture._comparisonFunction, Rk, this._depthStencilTextureWithStencil, this._depthStencilTexture.samples, Bk, this._depthStencilTextureLabel)
           }
-          this.samples > 1 && uu.setSamples(this.samples), uu._swapRenderTargetWrapper(this), uu.dispose()
+          this.samples > 1 && kk.setSamples(this.samples), kk._swapRenderTargetWrapper(this), kk.dispose()
         }
       }
       releaseTextures() {
         if (this._textures)
-          for (let uu = 0; uu < this._textures.length; ++uu) this._textures[uu].dispose();
+          for (let kk = 0; kk < this._textures.length; ++kk) this._textures[kk].dispose();
         this._textures = null
       }
       dispose() {
@@ -2494,321 +2494,321 @@ export const modules = {
       }
     }
   },
-  39998: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Eu
+  39844: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Rk
     });
-    class Eu {
+    class Rk {
       static get ForceFullSceneLoadingForIncremental() {
-        return Eu._ForceFullSceneLoadingForIncremental
+        return Rk._ForceFullSceneLoadingForIncremental
       }
-      static set ForceFullSceneLoadingForIncremental(uu) {
-        Eu._ForceFullSceneLoadingForIncremental = uu
+      static set ForceFullSceneLoadingForIncremental(kk) {
+        Rk._ForceFullSceneLoadingForIncremental = kk
       }
       static get ShowLoadingScreen() {
-        return Eu._ShowLoadingScreen
+        return Rk._ShowLoadingScreen
       }
-      static set ShowLoadingScreen(uu) {
-        Eu._ShowLoadingScreen = uu
+      static set ShowLoadingScreen(kk) {
+        Rk._ShowLoadingScreen = kk
       }
       static get loggingLevel() {
-        return Eu._LoggingLevel
+        return Rk._LoggingLevel
       }
-      static set loggingLevel(uu) {
-        Eu._LoggingLevel = uu
+      static set loggingLevel(kk) {
+        Rk._LoggingLevel = kk
       }
       static get CleanBoneMatrixWeights() {
-        return Eu._CleanBoneMatrixWeights
+        return Rk._CleanBoneMatrixWeights
       }
-      static set CleanBoneMatrixWeights(uu) {
-        Eu._CleanBoneMatrixWeights = uu
+      static set CleanBoneMatrixWeights(kk) {
+        Rk._CleanBoneMatrixWeights = kk
       }
     }
-    Eu._ForceFullSceneLoadingForIncremental = !1, Eu._ShowLoadingScreen = !0, Eu._CleanBoneMatrixWeights = !1, Eu._LoggingLevel = 0
+    Rk._ForceFullSceneLoadingForIncremental = !1, Rk._ShowLoadingScreen = !0, Rk._CleanBoneMatrixWeights = !1, Rk._LoggingLevel = 0
   },
-  39639: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => mu
+  39477: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Xk
     });
-    var Eu = yu(38448);
-    const Ku = new Map;
+    var Rk = Bk(38320);
+    const tk = new Map;
 
-    function Qu(uu, Ru) {
-      (function(uu) {
-        return Ku.delete(uu)
-      })(uu) && Eu.e.Warn(`Extension with the name '${uu}' already exists`), Ku.set(uu, Ru)
+    function ak(kk, Fk) {
+      (function(kk) {
+        return tk.delete(kk)
+      })(kk) && Rk.b.Warn(`Extension with the name '${kk}' already exists`), tk.set(kk, Fk)
     }
 
-    function mu(uu, Ru) {
-      "image/ktx" !== Ru && "image/ktx2" !== Ru || (uu = ".ktx"), Ku.has(uu) || (uu.endsWith(".ies") && Qu(".ies", (async () => await yu.e(299).then((() => yu(41352))).then((uu => new uu._IESTextureLoader)))), uu.endsWith(".dds") && Qu(".dds", (async () => await yu.e(297).then((() => yu(41356))).then((uu => new uu._DDSTextureLoader)))), uu.endsWith(".basis") && Qu(".basis", (async () => await yu.e(300).then((() => yu(41360))).then((uu => new uu._BasisTextureLoader)))), uu.endsWith(".env") && Qu(".env", (async () => await Promise.all([yu.e(301), yu.e(298)]).then((() => yu(41366))).then((uu => new uu._ENVTextureLoader)))), uu.endsWith(".hdr") && Qu(".hdr", (async () => await yu.e(302).then((() => yu(41416))).then((uu => new uu._HDRTextureLoader)))), (uu.endsWith(".ktx") || uu.endsWith(".ktx2")) && (Qu(".ktx", (async () => await yu.e(303).then((() => yu(41423))).then((uu => new uu._KTXTextureLoader)))), Qu(".ktx2", (async () => await yu.e(303).then((() => yu(41423))).then((uu => new uu._KTXTextureLoader))))), uu.endsWith(".tga") && Qu(".tga", (async () => await yu.e(304).then((() => yu(41438))).then((uu => new uu._TGATextureLoader)))), uu.endsWith(".exr") && Qu(".exr", (async () => await yu.e(305).then((() => yu(41446))).then((uu => new uu._ExrTextureLoader)))));
-      const Eu = Ku.get(uu);
-      return Eu ? Promise.resolve(Eu(Ru)) : null
+    function Xk(kk, Fk) {
+      "image/ktx" !== Fk && "image/ktx2" !== Fk || (kk = ".ktx"), tk.has(kk) || (kk.endsWith(".ies") && ak(".ies", (async () => await Bk.e(299).then((() => Bk(41191))).then((kk => new kk._IESTextureLoader)))), kk.endsWith(".dds") && ak(".dds", (async () => await Bk.e(297).then((() => Bk(41196))).then((kk => new kk._DDSTextureLoader)))), kk.endsWith(".basis") && ak(".basis", (async () => await Bk.e(300).then((() => Bk(41202))).then((kk => new kk._BasisTextureLoader)))), kk.endsWith(".env") && ak(".env", (async () => await Promise.all([Bk.e(301), Bk.e(298)]).then((() => Bk(41207))).then((kk => new kk._ENVTextureLoader)))), kk.endsWith(".hdr") && ak(".hdr", (async () => await Bk.e(302).then((() => Bk(41254))).then((kk => new kk._HDRTextureLoader)))), (kk.endsWith(".ktx") || kk.endsWith(".ktx2")) && (ak(".ktx", (async () => await Bk.e(303).then((() => Bk(41259))).then((kk => new kk._KTXTextureLoader)))), ak(".ktx2", (async () => await Bk.e(303).then((() => Bk(41259))).then((kk => new kk._KTXTextureLoader))))), kk.endsWith(".tga") && ak(".tga", (async () => await Bk.e(304).then((() => Bk(41274))).then((kk => new kk._TGATextureLoader)))), kk.endsWith(".exr") && ak(".exr", (async () => await Bk.e(305).then((() => Bk(41277))).then((kk => new kk._ExrTextureLoader)))));
+      const Rk = tk.get(kk);
+      return Rk ? Promise.resolve(Rk(Fk)) : null
     }
   },
-  40026: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => mu,
-      f: () => Xu
+  39861: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Xk,
+      f: () => dk
     });
-    var Eu = yu(39863),
-      Ku = yu(39584),
-      Qu = yu(36871);
-    class mu extends Eu.d {
-      get yuu() {
+    var Rk = Bk(39695),
+      tk = Bk(39420),
+      ak = Bk(36798);
+    class Xk extends Rk.c {
+      get l_() {
         return this._subMaterials
       }
-      set yuu(uu) {
-        this._subMaterials = uu, this._hookArray(uu)
+      set l_(kk) {
+        this._subMaterials = kk, this._hookArray(kk)
       }
       getChildren() {
-        return this.yuu
+        return this.l_
       }
-      constructor(uu, Ru) {
-        super(uu, Ru, !0), this._waitingSubMaterialsUniqueIds = [], this.lD().addMultiMaterial(this), this.yuu = [], this._storeEffectOnSubMeshes = !0
+      constructor(kk, Fk) {
+        super(kk, Fk, !0), this._waitingSubMaterialsUniqueIds = [], this.XN().addMultiMaterial(this), this.l_ = [], this._storeEffectOnSubMeshes = !0
       }
-      _hookArray(uu) {
-        var Ru = this;
-        const yu = uu.push;
-        uu.push = function() {
-          for (var Eu = arguments.length, Ku = new Array(Eu), Qu = 0; Qu < Eu; Qu++) Ku[Qu] = arguments[Qu];
-          const mu = yu.apply(uu, Ku);
-          return Ru._markAllSubMeshesAsTexturesDirty(), mu
+      _hookArray(kk) {
+        var Fk = this;
+        const Bk = kk.push;
+        kk.push = function() {
+          for (var Rk = arguments.length, tk = new Array(Rk), ak = 0; ak < Rk; ak++) tk[ak] = arguments[ak];
+          const Xk = Bk.apply(kk, tk);
+          return Fk._markAllSubMeshesAsTexturesDirty(), Xk
         };
-        const Eu = uu.splice;
-        uu.splice = (Ru, yu) => {
-          const Ku = Eu.call(uu, Ru, yu ?? uu.length);
-          return this._markAllSubMeshesAsTexturesDirty(), Ku
+        const Rk = kk.splice;
+        kk.splice = (Fk, Bk) => {
+          const tk = Rk.call(kk, Fk, Bk ?? kk.length);
+          return this._markAllSubMeshesAsTexturesDirty(), tk
         }
       }
-      getSubMaterial(uu) {
-        return uu < 0 || uu >= this.yuu.length ? this.lD().defaultMaterial : this.yuu[uu]
+      getSubMaterial(kk) {
+        return kk < 0 || kk >= this.l_.length ? this.XN().defaultMaterial : this.l_[kk]
       }
       getActiveTextures() {
-        return super.getActiveTextures().concat(...this.yuu.map((uu => uu ? uu.getActiveTextures() : [])))
+        return super.getActiveTextures().concat(...this.l_.map((kk => kk ? kk.getActiveTextures() : [])))
       }
-      hasTexture(uu) {
-        if (super.hasTexture(uu)) return !0;
-        for (let Ru = 0; Ru < this.yuu.length; Ru++)
-          if (this.yuu[Ru]?.hasTexture(uu)) return !0;
+      hasTexture(kk) {
+        if (super.hasTexture(kk)) return !0;
+        for (let Fk = 0; Fk < this.l_.length; Fk++)
+          if (this.l_[Fk]?.hasTexture(kk)) return !0;
         return !1
       }
       getClassName() {
         return "MultiMaterial"
       }
-      isReadyForSubMesh(uu, Ru, yu) {
-        for (let Eu = 0; Eu < this.yuu.length; Eu++) {
-          const Ku = this.yuu[Eu];
-          if (Ku) {
-            if (Ku._storeEffectOnSubMeshes) {
-              if (!Ku.isReadyForSubMesh(uu, Ru, yu)) return !1;
+      isReadyForSubMesh(kk, Fk, Bk) {
+        for (let Rk = 0; Rk < this.l_.length; Rk++) {
+          const tk = this.l_[Rk];
+          if (tk) {
+            if (tk._storeEffectOnSubMeshes) {
+              if (!tk.isReadyForSubMesh(kk, Fk, Bk)) return !1;
               continue
             }
-            if (!Ku.isReady(uu)) return !1
+            if (!tk.isReady(kk)) return !1
           }
         }
         return !0
       }
-      clone(uu, Ru) {
-        const yu = new mu(uu, this.lD());
-        for (let Eu = 0; Eu < this.yuu.length; Eu++) {
-          let Ku;
-          const Qu = this.yuu[Eu];
-          Ku = Ru && Qu ? Qu.clone(uu + "-" + Qu.name) : this.yuu[Eu], yu.yuu.push(Ku)
+      clone(kk, Fk) {
+        const Bk = new Xk(kk, this.XN());
+        for (let Rk = 0; Rk < this.l_.length; Rk++) {
+          let tk;
+          const ak = this.l_[Rk];
+          tk = Fk && ak ? ak.clone(kk + "-" + ak.name) : this.l_[Rk], Bk.l_.push(tk)
         }
-        return yu
+        return Bk
       }
       serialize() {
-        const uu = {};
-        uu.name = this.name, uu.id = this.id, uu.uniqueId = this.uniqueId, Ku.e && (uu.tags = Ku.e.GetTags(this)), uu.materialsUniqueIds = [], uu.materials = [];
-        for (let Ru = 0; Ru < this.yuu.length; Ru++) {
-          const yu = this.yuu[Ru];
-          yu ? (uu.materialsUniqueIds.push(yu.uniqueId), uu.materials.push(yu.id)) : (uu.materialsUniqueIds.push(null), uu.materials.push(null))
+        const kk = {};
+        kk.name = this.name, kk.id = this.id, kk.uniqueId = this.uniqueId, tk.b && (kk.tags = tk.b.GetTags(this)), kk.materialsUniqueIds = [], kk.materials = [];
+        for (let Fk = 0; Fk < this.l_.length; Fk++) {
+          const Bk = this.l_[Fk];
+          Bk ? (kk.materialsUniqueIds.push(Bk.uniqueId), kk.materials.push(Bk.id)) : (kk.materialsUniqueIds.push(null), kk.materials.push(null))
         }
-        return uu
+        return kk
       }
-      dispose(uu, Ru, yu) {
-        const Eu = this.lD();
-        if (!Eu) return;
-        if (yu)
-          for (let Qu = 0; Qu < this.yuu.length; Qu++) {
-            const yu = this.yuu[Qu];
-            yu && yu.dispose(uu, Ru)
+      dispose(kk, Fk, Bk) {
+        const Rk = this.XN();
+        if (!Rk) return;
+        if (Bk)
+          for (let ak = 0; ak < this.l_.length; ak++) {
+            const Bk = this.l_[ak];
+            Bk && Bk.dispose(kk, Fk)
           }
-        const Ku = Eu.multiMaterials.indexOf(this);
-        Ku >= 0 && Eu.multiMaterials.splice(Ku, 1), super.dispose(uu, Ru)
+        const tk = Rk.multiMaterials.indexOf(this);
+        tk >= 0 && Rk.multiMaterials.splice(tk, 1), super.dispose(kk, Fk)
       }
     }
-    let Ju = !1;
+    let bk = !1;
 
-    function Nu(uu, Ru) {
-      const yu = new mu(uu.name, Ru);
-      if (yu.id = uu.id, yu._loadedUniqueId = uu.uniqueId, Ku.e && Ku.e.AddTagsTo(yu, uu.tags), uu.materialsUniqueIds) yu._waitingSubMaterialsUniqueIds = uu.materialsUniqueIds;
+    function wk(kk, Fk) {
+      const Bk = new Xk(kk.name, Fk);
+      if (Bk.id = kk.id, Bk._loadedUniqueId = kk.uniqueId, tk.b && tk.b.AddTagsTo(Bk, kk.tags), kk.materialsUniqueIds) Bk._waitingSubMaterialsUniqueIds = kk.materialsUniqueIds;
       else
-        for (const Eu of uu.materials) yu.yuu.push(Ru.getLastMaterialById(Eu));
-      return yu
+        for (const Rk of kk.materials) Bk.l_.push(Fk.getLastMaterialById(Rk));
+      return Bk
     }
 
-    function Xu() {
-      Ju || (Ju = !0, mu.ParseMultiMaterial = Nu, (0, Qu.c)("BABYLON.MultiMaterial", mu))
+    function dk() {
+      bk || (bk = !0, Xk.ParseMultiMaterial = wk, (0, ak.d)("BABYLON.MultiMaterial", Xk))
     }
   },
-  39784: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => mu
+  39637: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Xk
     });
-    var Eu, Ku, Qu = yu(36830);
-    ! function(uu) {
-      uu[uu.LOCAL = 0] = "LOCAL", uu[uu.WORLD = 1] = "WORLD", uu[uu.BONE = 2] = "BONE"
-    }(Eu || (Eu = {}));
-    class mu {}
-    mu.X = new Qu.p(1, 0, 0), mu.Y = new Qu.p(0, 1, 0), mu.Z = new Qu.p(0, 0, 1),
-      function(uu) {
-        uu[uu.X = 0] = "X", uu[uu.Y = 1] = "Y", uu[uu.Z = 2] = "Z"
-      }(Ku || (Ku = {}))
+    var Rk, tk, ak = Bk(36758);
+    ! function(kk) {
+      kk[kk.LOCAL = 0] = "LOCAL", kk[kk.WORLD = 1] = "WORLD", kk[kk.BONE = 2] = "BONE"
+    }(Rk || (Rk = {}));
+    class Xk {}
+    Xk.X = new ak.s(1, 0, 0), Xk.Y = new ak.s(0, 1, 0), Xk.Z = new ak.s(0, 0, 1),
+      function(kk) {
+        kk[kk.X = 0] = "X", kk[kk.Y = 1] = "Y", kk[kk.Z = 2] = "Z"
+      }(tk || (tk = {}))
   },
-  39547: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Nu,
-      e: () => Xu
+  39384: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => wk,
+      f: () => dk
     });
-    var Eu = yu(36830);
-    const Ku = [Math.sqrt(1 / (4 * Math.PI)), -Math.sqrt(3 / (4 * Math.PI)), Math.sqrt(3 / (4 * Math.PI)), -Math.sqrt(3 / (4 * Math.PI)), Math.sqrt(15 / (4 * Math.PI)), -Math.sqrt(15 / (4 * Math.PI)), Math.sqrt(5 / (16 * Math.PI)), -Math.sqrt(15 / (4 * Math.PI)), Math.sqrt(15 / (16 * Math.PI))],
-      Qu = [() => 1, uu => uu.y, uu => uu.z, uu => uu.x, uu => uu.x * uu.y, uu => uu.y * uu.z, uu => 3 * uu.z * uu.z - 1, uu => uu.x * uu.z, uu => uu.x * uu.x - uu.y * uu.y],
-      mu = (uu, Ru) => Ku[uu] * Qu[uu](Ru),
-      Ju = [Math.PI, 2 * Math.PI / 3, 2 * Math.PI / 3, 2 * Math.PI / 3, Math.PI / 4, Math.PI / 4, Math.PI / 4, Math.PI / 4, Math.PI / 4];
-    class Nu {
+    var Rk = Bk(36758);
+    const tk = [Math.sqrt(1 / (4 * Math.PI)), -Math.sqrt(3 / (4 * Math.PI)), Math.sqrt(3 / (4 * Math.PI)), -Math.sqrt(3 / (4 * Math.PI)), Math.sqrt(15 / (4 * Math.PI)), -Math.sqrt(15 / (4 * Math.PI)), Math.sqrt(5 / (16 * Math.PI)), -Math.sqrt(15 / (4 * Math.PI)), Math.sqrt(15 / (16 * Math.PI))],
+      ak = [() => 1, kk => kk.y, kk => kk.z, kk => kk.x, kk => kk.x * kk.y, kk => kk.y * kk.z, kk => 3 * kk.z * kk.z - 1, kk => kk.x * kk.z, kk => kk.x * kk.x - kk.y * kk.y],
+      Xk = (kk, Fk) => tk[kk] * ak[kk](Fk),
+      bk = [Math.PI, 2 * Math.PI / 3, 2 * Math.PI / 3, 2 * Math.PI / 3, Math.PI / 4, Math.PI / 4, Math.PI / 4, Math.PI / 4, Math.PI / 4];
+    class wk {
       constructor() {
-        this.preScaled = !1, this.l00 = Eu.p.Zero(), this.l1_1 = Eu.p.Zero(), this.l10 = Eu.p.Zero(), this.l11 = Eu.p.Zero(), this.l2_2 = Eu.p.Zero(), this.l2_1 = Eu.p.Zero(), this.l20 = Eu.p.Zero(), this.l21 = Eu.p.Zero(), this.l22 = Eu.p.Zero()
+        this.preScaled = !1, this.l00 = Rk.s.Zero(), this.l1_1 = Rk.s.Zero(), this.l10 = Rk.s.Zero(), this.l11 = Rk.s.Zero(), this.l2_2 = Rk.s.Zero(), this.l2_1 = Rk.s.Zero(), this.l20 = Rk.s.Zero(), this.l21 = Rk.s.Zero(), this.l22 = Rk.s.Zero()
       }
-      addLight(uu, Ru, yu) {
-        Eu.m.MS[0].set(Ru.r, Ru.g, Ru.b);
-        const Ku = Eu.m.MS[0],
-          Qu = Eu.m.MS[1];
-        Ku.scaleToRef(yu, Qu), Qu.scaleToRef(mu(0, uu), Eu.m.MS[2]), this.l00.addInPlace(Eu.m.MS[2]), Qu.scaleToRef(mu(1, uu), Eu.m.MS[2]), this.l1_1.addInPlace(Eu.m.MS[2]), Qu.scaleToRef(mu(2, uu), Eu.m.MS[2]), this.l10.addInPlace(Eu.m.MS[2]), Qu.scaleToRef(mu(3, uu), Eu.m.MS[2]), this.l11.addInPlace(Eu.m.MS[2]), Qu.scaleToRef(mu(4, uu), Eu.m.MS[2]), this.l2_2.addInPlace(Eu.m.MS[2]), Qu.scaleToRef(mu(5, uu), Eu.m.MS[2]), this.l2_1.addInPlace(Eu.m.MS[2]), Qu.scaleToRef(mu(6, uu), Eu.m.MS[2]), this.l20.addInPlace(Eu.m.MS[2]), Qu.scaleToRef(mu(7, uu), Eu.m.MS[2]), this.l21.addInPlace(Eu.m.MS[2]), Qu.scaleToRef(mu(8, uu), Eu.m.MS[2]), this.l22.addInPlace(Eu.m.MS[2])
+      addLight(kk, Fk, Bk) {
+        Rk.l.Qe[0].set(Fk.r, Fk.g, Fk.b);
+        const tk = Rk.l.Qe[0],
+          ak = Rk.l.Qe[1];
+        tk.scaleToRef(Bk, ak), ak.scaleToRef(Xk(0, kk), Rk.l.Qe[2]), this.l00.addInPlace(Rk.l.Qe[2]), ak.scaleToRef(Xk(1, kk), Rk.l.Qe[2]), this.l1_1.addInPlace(Rk.l.Qe[2]), ak.scaleToRef(Xk(2, kk), Rk.l.Qe[2]), this.l10.addInPlace(Rk.l.Qe[2]), ak.scaleToRef(Xk(3, kk), Rk.l.Qe[2]), this.l11.addInPlace(Rk.l.Qe[2]), ak.scaleToRef(Xk(4, kk), Rk.l.Qe[2]), this.l2_2.addInPlace(Rk.l.Qe[2]), ak.scaleToRef(Xk(5, kk), Rk.l.Qe[2]), this.l2_1.addInPlace(Rk.l.Qe[2]), ak.scaleToRef(Xk(6, kk), Rk.l.Qe[2]), this.l20.addInPlace(Rk.l.Qe[2]), ak.scaleToRef(Xk(7, kk), Rk.l.Qe[2]), this.l21.addInPlace(Rk.l.Qe[2]), ak.scaleToRef(Xk(8, kk), Rk.l.Qe[2]), this.l22.addInPlace(Rk.l.Qe[2])
       }
-      scaleInPlace(uu) {
-        this.l00.scaleInPlace(uu), this.l1_1.scaleInPlace(uu), this.l10.scaleInPlace(uu), this.l11.scaleInPlace(uu), this.l2_2.scaleInPlace(uu), this.l2_1.scaleInPlace(uu), this.l20.scaleInPlace(uu), this.l21.scaleInPlace(uu), this.l22.scaleInPlace(uu)
+      scaleInPlace(kk) {
+        this.l00.scaleInPlace(kk), this.l1_1.scaleInPlace(kk), this.l10.scaleInPlace(kk), this.l11.scaleInPlace(kk), this.l2_2.scaleInPlace(kk), this.l2_1.scaleInPlace(kk), this.l20.scaleInPlace(kk), this.l21.scaleInPlace(kk), this.l22.scaleInPlace(kk)
       }
       convertIncidentRadianceToIrradiance() {
-        this.l00.scaleInPlace(Ju[0]), this.l1_1.scaleInPlace(Ju[1]), this.l10.scaleInPlace(Ju[2]), this.l11.scaleInPlace(Ju[3]), this.l2_2.scaleInPlace(Ju[4]), this.l2_1.scaleInPlace(Ju[5]), this.l20.scaleInPlace(Ju[6]), this.l21.scaleInPlace(Ju[7]), this.l22.scaleInPlace(Ju[8])
+        this.l00.scaleInPlace(bk[0]), this.l1_1.scaleInPlace(bk[1]), this.l10.scaleInPlace(bk[2]), this.l11.scaleInPlace(bk[3]), this.l2_2.scaleInPlace(bk[4]), this.l2_1.scaleInPlace(bk[5]), this.l20.scaleInPlace(bk[6]), this.l21.scaleInPlace(bk[7]), this.l22.scaleInPlace(bk[8])
       }
       convertIrradianceToLambertianRadiance() {
         this.scaleInPlace(1 / Math.PI)
       }
       preScaleForRendering() {
-        this.preScaled = !0, this.l00.scaleInPlace(Ku[0]), this.l1_1.scaleInPlace(Ku[1]), this.l10.scaleInPlace(Ku[2]), this.l11.scaleInPlace(Ku[3]), this.l2_2.scaleInPlace(Ku[4]), this.l2_1.scaleInPlace(Ku[5]), this.l20.scaleInPlace(Ku[6]), this.l21.scaleInPlace(Ku[7]), this.l22.scaleInPlace(Ku[8])
+        this.preScaled = !0, this.l00.scaleInPlace(tk[0]), this.l1_1.scaleInPlace(tk[1]), this.l10.scaleInPlace(tk[2]), this.l11.scaleInPlace(tk[3]), this.l2_2.scaleInPlace(tk[4]), this.l2_1.scaleInPlace(tk[5]), this.l20.scaleInPlace(tk[6]), this.l21.scaleInPlace(tk[7]), this.l22.scaleInPlace(tk[8])
       }
-      updateFromArray(uu) {
-        return Eu.p.FromArrayToRef(uu[0], 0, this.l00), Eu.p.FromArrayToRef(uu[1], 0, this.l1_1), Eu.p.FromArrayToRef(uu[2], 0, this.l10), Eu.p.FromArrayToRef(uu[3], 0, this.l11), Eu.p.FromArrayToRef(uu[4], 0, this.l2_2), Eu.p.FromArrayToRef(uu[5], 0, this.l2_1), Eu.p.FromArrayToRef(uu[6], 0, this.l20), Eu.p.FromArrayToRef(uu[7], 0, this.l21), Eu.p.FromArrayToRef(uu[8], 0, this.l22), this
+      updateFromArray(kk) {
+        return Rk.s.FromArrayToRef(kk[0], 0, this.l00), Rk.s.FromArrayToRef(kk[1], 0, this.l1_1), Rk.s.FromArrayToRef(kk[2], 0, this.l10), Rk.s.FromArrayToRef(kk[3], 0, this.l11), Rk.s.FromArrayToRef(kk[4], 0, this.l2_2), Rk.s.FromArrayToRef(kk[5], 0, this.l2_1), Rk.s.FromArrayToRef(kk[6], 0, this.l20), Rk.s.FromArrayToRef(kk[7], 0, this.l21), Rk.s.FromArrayToRef(kk[8], 0, this.l22), this
       }
-      updateFromFloatsArray(uu) {
-        return Eu.p.FromFloatsToRef(uu[0], uu[1], uu[2], this.l00), Eu.p.FromFloatsToRef(uu[3], uu[4], uu[5], this.l1_1), Eu.p.FromFloatsToRef(uu[6], uu[7], uu[8], this.l10), Eu.p.FromFloatsToRef(uu[9], uu[10], uu[11], this.l11), Eu.p.FromFloatsToRef(uu[12], uu[13], uu[14], this.l2_2), Eu.p.FromFloatsToRef(uu[15], uu[16], uu[17], this.l2_1), Eu.p.FromFloatsToRef(uu[18], uu[19], uu[20], this.l20), Eu.p.FromFloatsToRef(uu[21], uu[22], uu[23], this.l21), Eu.p.FromFloatsToRef(uu[24], uu[25], uu[26], this.l22), this
+      updateFromFloatsArray(kk) {
+        return Rk.s.FromFloatsToRef(kk[0], kk[1], kk[2], this.l00), Rk.s.FromFloatsToRef(kk[3], kk[4], kk[5], this.l1_1), Rk.s.FromFloatsToRef(kk[6], kk[7], kk[8], this.l10), Rk.s.FromFloatsToRef(kk[9], kk[10], kk[11], this.l11), Rk.s.FromFloatsToRef(kk[12], kk[13], kk[14], this.l2_2), Rk.s.FromFloatsToRef(kk[15], kk[16], kk[17], this.l2_1), Rk.s.FromFloatsToRef(kk[18], kk[19], kk[20], this.l20), Rk.s.FromFloatsToRef(kk[21], kk[22], kk[23], this.l21), Rk.s.FromFloatsToRef(kk[24], kk[25], kk[26], this.l22), this
       }
-      static FromArray(uu) {
-        return (new Nu).updateFromArray(uu)
+      static FromArray(kk) {
+        return (new wk).updateFromArray(kk)
       }
-      static FromPolynomial(uu) {
-        const Ru = new Nu;
-        return Ru.l00 = uu.xx.scale(.376127).add(uu.yy.scale(.376127)).add(uu.zz.scale(.376126)), Ru.l1_1 = uu.y.scale(.977204), Ru.l10 = uu.z.scale(.977204), Ru.l11 = uu.x.scale(.977204), Ru.l2_2 = uu.xy.scale(1.16538), Ru.l2_1 = uu.yz.scale(1.16538), Ru.l20 = uu.zz.scale(1.34567).subtract(uu.xx.scale(.672834)).subtract(uu.yy.scale(.672834)), Ru.l21 = uu.zx.scale(1.16538), Ru.l22 = uu.xx.scale(1.16538).subtract(uu.yy.scale(1.16538)), Ru.l1_1.scaleInPlace(-1), Ru.l11.scaleInPlace(-1), Ru.l2_1.scaleInPlace(-1), Ru.l21.scaleInPlace(-1), Ru.scaleInPlace(Math.PI), Ru
+      static FromPolynomial(kk) {
+        const Fk = new wk;
+        return Fk.l00 = kk.xx.scale(.376127).add(kk.yy.scale(.376127)).add(kk.zz.scale(.376126)), Fk.l1_1 = kk.y.scale(.977204), Fk.l10 = kk.z.scale(.977204), Fk.l11 = kk.x.scale(.977204), Fk.l2_2 = kk.xy.scale(1.16538), Fk.l2_1 = kk.yz.scale(1.16538), Fk.l20 = kk.zz.scale(1.34567).subtract(kk.xx.scale(.672834)).subtract(kk.yy.scale(.672834)), Fk.l21 = kk.zx.scale(1.16538), Fk.l22 = kk.xx.scale(1.16538).subtract(kk.yy.scale(1.16538)), Fk.l1_1.scaleInPlace(-1), Fk.l11.scaleInPlace(-1), Fk.l2_1.scaleInPlace(-1), Fk.l21.scaleInPlace(-1), Fk.scaleInPlace(Math.PI), Fk
       }
     }
-    class Xu {
+    class dk {
       constructor() {
-        this.x = Eu.p.Zero(), this.y = Eu.p.Zero(), this.z = Eu.p.Zero(), this.xx = Eu.p.Zero(), this.yy = Eu.p.Zero(), this.zz = Eu.p.Zero(), this.xy = Eu.p.Zero(), this.yz = Eu.p.Zero(), this.zx = Eu.p.Zero()
+        this.x = Rk.s.Zero(), this.y = Rk.s.Zero(), this.z = Rk.s.Zero(), this.xx = Rk.s.Zero(), this.yy = Rk.s.Zero(), this.zz = Rk.s.Zero(), this.xy = Rk.s.Zero(), this.yz = Rk.s.Zero(), this.zx = Rk.s.Zero()
       }
       get preScaledHarmonics() {
-        return this._harmonics || (this._harmonics = Nu.FromPolynomial(this)), this._harmonics.preScaled || this._harmonics.preScaleForRendering(), this._harmonics
+        return this._harmonics || (this._harmonics = wk.FromPolynomial(this)), this._harmonics.preScaled || this._harmonics.preScaleForRendering(), this._harmonics
       }
-      addAmbient(uu) {
-        Eu.m.MS[0].muu(uu.r, uu.g, uu.b);
-        const Ru = Eu.m.MS[0];
-        this.xx.addInPlace(Ru), this.yy.addInPlace(Ru), this.zz.addInPlace(Ru)
+      addAmbient(kk) {
+        Rk.l.Qe[0].E1(kk.r, kk.g, kk.b);
+        const Fk = Rk.l.Qe[0];
+        this.xx.addInPlace(Fk), this.yy.addInPlace(Fk), this.zz.addInPlace(Fk)
       }
-      scaleInPlace(uu) {
-        this.x.scaleInPlace(uu), this.y.scaleInPlace(uu), this.z.scaleInPlace(uu), this.xx.scaleInPlace(uu), this.yy.scaleInPlace(uu), this.zz.scaleInPlace(uu), this.yz.scaleInPlace(uu), this.zx.scaleInPlace(uu), this.xy.scaleInPlace(uu)
+      scaleInPlace(kk) {
+        this.x.scaleInPlace(kk), this.y.scaleInPlace(kk), this.z.scaleInPlace(kk), this.xx.scaleInPlace(kk), this.yy.scaleInPlace(kk), this.zz.scaleInPlace(kk), this.yz.scaleInPlace(kk), this.zx.scaleInPlace(kk), this.xy.scaleInPlace(kk)
       }
-      updateFromHarmonics(uu) {
-        return this._harmonics = uu, this.x.Oyu(uu.l11), this.x.scaleInPlace(1.02333).scaleInPlace(-1), this.y.Oyu(uu.l1_1), this.y.scaleInPlace(1.02333).scaleInPlace(-1), this.z.Oyu(uu.l10), this.z.scaleInPlace(1.02333), this.xx.Oyu(uu.l00), Eu.m.MS[0].Oyu(uu.l20).scaleInPlace(.247708), Eu.m.MS[1].Oyu(uu.l22).scaleInPlace(.429043), this.xx.scaleInPlace(.886277).oEu(Eu.m.MS[0]).addInPlace(Eu.m.MS[1]), this.yy.Oyu(uu.l00), this.yy.scaleInPlace(.886277).oEu(Eu.m.MS[0]).oEu(Eu.m.MS[1]), this.zz.Oyu(uu.l00), Eu.m.MS[0].Oyu(uu.l20).scaleInPlace(.495417), this.zz.scaleInPlace(.886277).addInPlace(Eu.m.MS[0]), this.yz.Oyu(uu.l2_1), this.yz.scaleInPlace(.858086).scaleInPlace(-1), this.zx.Oyu(uu.l21), this.zx.scaleInPlace(.858086).scaleInPlace(-1), this.xy.Oyu(uu.l2_2), this.xy.scaleInPlace(.858086), this.scaleInPlace(1 / Math.PI), this
+      updateFromHarmonics(kk) {
+        return this._harmonics = kk, this.x.sBk(kk.l11), this.x.scaleInPlace(1.02333).scaleInPlace(-1), this.y.sBk(kk.l1_1), this.y.scaleInPlace(1.02333).scaleInPlace(-1), this.z.sBk(kk.l10), this.z.scaleInPlace(1.02333), this.xx.sBk(kk.l00), Rk.l.Qe[0].sBk(kk.l20).scaleInPlace(.247708), Rk.l.Qe[1].sBk(kk.l22).scaleInPlace(.429043), this.xx.scaleInPlace(.886277).wRk(Rk.l.Qe[0]).addInPlace(Rk.l.Qe[1]), this.yy.sBk(kk.l00), this.yy.scaleInPlace(.886277).wRk(Rk.l.Qe[0]).wRk(Rk.l.Qe[1]), this.zz.sBk(kk.l00), Rk.l.Qe[0].sBk(kk.l20).scaleInPlace(.495417), this.zz.scaleInPlace(.886277).addInPlace(Rk.l.Qe[0]), this.yz.sBk(kk.l2_1), this.yz.scaleInPlace(.858086).scaleInPlace(-1), this.zx.sBk(kk.l21), this.zx.scaleInPlace(.858086).scaleInPlace(-1), this.xy.sBk(kk.l2_2), this.xy.scaleInPlace(.858086), this.scaleInPlace(1 / Math.PI), this
       }
-      static FromHarmonics(uu) {
-        return (new Xu).updateFromHarmonics(uu)
+      static FromHarmonics(kk) {
+        return (new dk).updateFromHarmonics(kk)
       }
-      static FromArray(uu) {
-        const Ru = new Xu;
-        return Eu.p.FromArrayToRef(uu[0], 0, Ru.x), Eu.p.FromArrayToRef(uu[1], 0, Ru.y), Eu.p.FromArrayToRef(uu[2], 0, Ru.z), Eu.p.FromArrayToRef(uu[3], 0, Ru.xx), Eu.p.FromArrayToRef(uu[4], 0, Ru.yy), Eu.p.FromArrayToRef(uu[5], 0, Ru.zz), Eu.p.FromArrayToRef(uu[6], 0, Ru.yz), Eu.p.FromArrayToRef(uu[7], 0, Ru.zx), Eu.p.FromArrayToRef(uu[8], 0, Ru.xy), Ru
+      static FromArray(kk) {
+        const Fk = new dk;
+        return Rk.s.FromArrayToRef(kk[0], 0, Fk.x), Rk.s.FromArrayToRef(kk[1], 0, Fk.y), Rk.s.FromArrayToRef(kk[2], 0, Fk.z), Rk.s.FromArrayToRef(kk[3], 0, Fk.xx), Rk.s.FromArrayToRef(kk[4], 0, Fk.yy), Rk.s.FromArrayToRef(kk[5], 0, Fk.zz), Rk.s.FromArrayToRef(kk[6], 0, Fk.yz), Rk.s.FromArrayToRef(kk[7], 0, Fk.zx), Rk.s.FromArrayToRef(kk[8], 0, Fk.xy), Fk
       }
     }
   },
-  40008: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => nu,
-      i: () => tu
+  39853: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Uk,
+      d: () => Gk
     });
-    var Eu = yu(39560),
-      Ku = yu(36858),
-      Qu = yu(36830),
-      mu = yu(39706),
-      Ju = yu(39990),
-      Nu = yu(40017),
-      Xu = yu(39698),
-      Vu = yu(39877),
-      ru = yu(39693);
-    class Bu {
+    var Rk = Bk(39397),
+      tk = Bk(36781),
+      ak = Bk(36758),
+      Xk = Bk(39541),
+      bk = Bk(39829),
+      wk = Bk(39857),
+      dk = Bk(39537),
+      sk = Bk(39716),
+      Vk = Bk(39530);
+    class Jk {
       constructor() {
-        this._checkCollisions = !1, this._collisionMask = -1, this._collisionGroup = -1, this._surroundingMeshes = null, this._collider = null, this._oldPositionForCollisions = new Qu.p(0, 0, 0), this._diffPositionForCollisions = new Qu.p(0, 0, 0), this._collisionResponse = !0
+        this._checkCollisions = !1, this._collisionMask = -1, this._collisionGroup = -1, this._surroundingMeshes = null, this._collider = null, this._oldPositionForCollisions = new ak.s(0, 0, 0), this._diffPositionForCollisions = new ak.s(0, 0, 0), this._collisionResponse = !0
       }
     }
-    var xu, Su, pu, Tu = yu(39430),
-      Wu = yu(39633),
-      ju = yu(39893),
-      Hu = yu(36991),
-      du = yu(36833),
-      bu = yu(39784),
-      Cu = yu(38448),
-      ku = yu(39566),
-      eu = yu(39455),
-      Au = yu(36871);
+    var Ak, ek, yk, fk = Bk(39296),
+      mk = Bk(39465),
+      Wk = Bk(39729),
+      vk = Bk(36917),
+      ik = Bk(36764),
+      Yk = Bk(39637),
+      Lk = Bk(38320),
+      Ok = Bk(39404),
+      Ek = Bk(39305),
+      Sk = Bk(36798);
 
-    function Du(uu, Ru) {
-      return uu - Math.floor(uu / Ru) * Ru
+    function Nk(kk, Fk) {
+      return kk - Math.floor(kk / Fk) * Fk
     }
 
-    function Mu(uu, Ru, yu) {
-      uu instanceof Float32Array ? Qu.d.FromArrayToRef(uu, Ru, yu) : yu.muu((0, Wu.c)(uu[Ru]), (0, Wu.c)(uu[Ru + 1]), (0, Wu.c)(uu[Ru + 2]), (0, Wu.c)(uu[Ru + 3]), (0, Wu.c)(uu[Ru + 4]), (0, Wu.c)(uu[Ru + 5]), (0, Wu.c)(uu[Ru + 6]), (0, Wu.c)(uu[Ru + 7]), (0, Wu.c)(uu[Ru + 8]), (0, Wu.c)(uu[Ru + 9]), (0, Wu.c)(uu[Ru + 10]), (0, Wu.c)(uu[Ru + 11]), (0, Wu.c)(uu[Ru + 12]), (0, Wu.c)(uu[Ru + 13]), (0, Wu.c)(uu[Ru + 14]), (0, Wu.c)(uu[Ru + 15]))
+    function Hk(kk, Fk, Bk) {
+      kk instanceof Float32Array ? ak.c.FromArrayToRef(kk, Fk, Bk) : Bk.E1((0, mk.d)(kk[Fk]), (0, mk.d)(kk[Fk + 1]), (0, mk.d)(kk[Fk + 2]), (0, mk.d)(kk[Fk + 3]), (0, mk.d)(kk[Fk + 4]), (0, mk.d)(kk[Fk + 5]), (0, mk.d)(kk[Fk + 6]), (0, mk.d)(kk[Fk + 7]), (0, mk.d)(kk[Fk + 8]), (0, mk.d)(kk[Fk + 9]), (0, mk.d)(kk[Fk + 10]), (0, mk.d)(kk[Fk + 11]), (0, mk.d)(kk[Fk + 12]), (0, mk.d)(kk[Fk + 13]), (0, mk.d)(kk[Fk + 14]), (0, mk.d)(kk[Fk + 15]))
     }
 
-    function Iu(uu, Ru, yu, Eu, Ku, Ju, Nu, Xu, Vu) {
-      const ru = yu.texture,
-        Bu = ru?.getInternalTexture(),
-        xu = Bu?._bufferView;
-      if (!(xu instanceof Float32Array) && !(xu instanceof Uint16Array)) return Cu.e.Warn("Baked vertex animation bounding info requires CPU-readable Float32Array or Uint16Array texture data.", 1), !1;
-      const Su = ru.getSize(),
-        pu = function(uu, Ru) {
-          const yu = uu.y - uu.x + 1,
-            Eu = Ru * uu.w / yu,
-            Ku = Eu < 1 ? 0 : 1,
-            Qu = yu - Ku;
-          let mu = Du(Eu - Math.floor(Eu), 1) * Qu;
-          return mu = Du(mu + uu.z, Qu), Math.floor(mu) + uu.x + Ku
-        }(Eu, yu.time);
-      if (!isFinite(pu) || pu < 0 || pu >= Su.height) return Cu.e.Warn("Baked vertex animation bounding info could not be refreshed because the computed frame is outside the texture.", 1), !1;
-      const Tu = Qu.m.MS[0],
-        Wu = Qu.m.Matrix[0],
-        ju = Qu.m.Matrix[1],
-        Hu = pu * Su.width * 4,
-        du = Ru === mu.h.NormalKind ? Qu.p.TransformNormalFromFloatsToRef : Qu.p.TransformCoordinatesFromFloatsToRef;
-      for (let Qu = 0, mu = 0; Qu < uu.length; Qu += 3, mu += 4) {
-        let Ru, yu;
-        for (Wu.reset(), Ru = 0; Ru < 4 && Ru < Vu; Ru++) yu = Ju[mu + Ru], yu > 0 && (Mu(xu, Hu + 16 * Math.floor(Ku[mu + Ru]), ju), ju.scaleAndAddToRef(yu, Wu));
-        if (Nu && Xu)
-          for (Ru = 0; Ru < 4 && Ru + 4 < Vu; Ru++) yu = Xu[mu + Ru], yu > 0 && (Mu(xu, Hu + 16 * Math.floor(Nu[mu + Ru]), ju), ju.scaleAndAddToRef(yu, Wu));
-        du(uu[Qu], uu[Qu + 1], uu[Qu + 2], Wu, Tu), Tu.toArray(uu, Qu)
+    function uk(kk, Fk, Bk, Rk, tk, bk, wk, dk, sk) {
+      const Vk = Bk.texture,
+        Jk = Vk?.getInternalTexture(),
+        Ak = Jk?._bufferView;
+      if (!(Ak instanceof Float32Array) && !(Ak instanceof Uint16Array)) return Lk.b.Warn("Baked vertex animation bounding info requires CPU-readable Float32Array or Uint16Array texture data.", 1), !1;
+      const ek = Vk.getSize(),
+        yk = function(kk, Fk) {
+          const Bk = kk.y - kk.x + 1,
+            Rk = Fk * kk.w / Bk,
+            tk = Rk < 1 ? 0 : 1,
+            ak = Bk - tk;
+          let Xk = Nk(Rk - Math.floor(Rk), 1) * ak;
+          return Xk = Nk(Xk + kk.z, ak), Math.floor(Xk) + kk.x + tk
+        }(Rk, Bk.time);
+      if (!isFinite(yk) || yk < 0 || yk >= ek.height) return Lk.b.Warn("Baked vertex animation bounding info could not be refreshed because the computed frame is outside the texture.", 1), !1;
+      const fk = ak.l.Qe[0],
+        mk = ak.l.Matrix[0],
+        Wk = ak.l.Matrix[1],
+        vk = yk * ek.width * 4,
+        ik = Fk === Xk.n.NormalKind ? ak.s.TransformNormalFromFloatsToRef : ak.s.TransformCoordinatesFromFloatsToRef;
+      for (let ak = 0, Xk = 0; ak < kk.length; ak += 3, Xk += 4) {
+        let Fk, Bk;
+        for (mk.reset(), Fk = 0; Fk < 4 && Fk < sk; Fk++) Bk = bk[Xk + Fk], Bk > 0 && (Hk(Ak, vk + 16 * Math.floor(tk[Xk + Fk]), Wk), Wk.scaleAndAddToRef(Bk, mk));
+        if (wk && dk)
+          for (Fk = 0; Fk < 4 && Fk + 4 < sk; Fk++) Bk = dk[Xk + Fk], Bk > 0 && (Hk(Ak, vk + 16 * Math.floor(wk[Xk + Fk]), Wk), Wk.scaleAndAddToRef(Bk, mk));
+        ik(kk[ak], kk[ak + 1], kk[ak + 2], mk, fk), fk.toArray(kk, ak)
       }
       return !0
     }
-    class Gu {
+    class Mk {
       constructor() {
-        this.facetNb = 0, this.partitioningSubdivisions = 10, this.partitioningBBoxRatio = 1.01, this.facetDataEnabled = !1, this.facetParameters = {}, this.bbSize = Qu.p.Zero(), this.subDiv = {
+        this.facetNb = 0, this.partitioningSubdivisions = 10, this.partitioningBBoxRatio = 1.01, this.facetDataEnabled = !1, this.facetParameters = {}, this.bbSize = ak.s.Zero(), this.subDiv = {
           max: 1,
           X: 1,
           Y: 1,
@@ -2816,33 +2816,33 @@ export const modules = {
         }, this.facetDepthSort = !1, this.facetDepthSortEnabled = !1
       }
     }
-    class Uu {
+    class gk {
       constructor() {
-        this._hasVertexAlpha = !1, this._useVertexColors = !0, this._numBoneInfluencers = 4, this._applyFog = !0, this._receiveShadows = !1, this._facetData = new Gu, this._visibility = 1, this._skeleton = null, this._layerMask = 268435455, this._computeBonesUsingShaders = !0, this._isActive = !1, this._onlyForInstances = !1, this._isActiveIntermediate = !1, this._onlyForInstancesIntermediate = !1, this._actAsRegularMesh = !1, this._currentLOD = new Map, this._collisionRetryCount = 3, this._morphTargetManager = null, this._renderingGroupId = 0, this._meshBlendingTag = 0, this._bakedVertexAnimationManager = null, this._material = null, this._positions = null, this._pointerOverDisableMeshTesting = !1, this._meshCollisionData = new Bu, this._enableDistantPicking = !1, this._rawBoundingInfo = null, this._sideOrientationHint = !1, this._wasActiveLastFrame = !1
+        this._hasVertexAlpha = !1, this._useVertexColors = !0, this._numBoneInfluencers = 4, this._applyFog = !0, this._receiveShadows = !1, this._facetData = new Mk, this._visibility = 1, this._skeleton = null, this._layerMask = 268435455, this._computeBonesUsingShaders = !0, this._isActive = !1, this._onlyForInstances = !1, this._isActiveIntermediate = !1, this._onlyForInstancesIntermediate = !1, this._actAsRegularMesh = !1, this._currentLOD = new Map, this._collisionRetryCount = 3, this._morphTargetManager = null, this._renderingGroupId = 0, this._meshBlendingTag = 0, this._bakedVertexAnimationManager = null, this._material = null, this._positions = null, this._pointerOverDisableMeshTesting = !1, this._meshCollisionData = new Jk, this._enableDistantPicking = !1, this._rawBoundingInfo = null, this._sideOrientationHint = !1, this._wasActiveLastFrame = !1
       }
     }
-    let nu = (() => {
-        var uu;
-        let Ru, Bu = Nu.d,
-          xu = [];
-        return uu = class extends Bu {
+    let Uk = (() => {
+        var kk;
+        let Fk, Jk = wk.e,
+          Ak = [];
+        return kk = class extends Jk {
           static get BILLBOARDMODE_NONE() {
-            return Nu.d.BILLBOARDMODE_NONE
+            return wk.e.BILLBOARDMODE_NONE
           }
           static get BILLBOARDMODE_X() {
-            return Nu.d.BILLBOARDMODE_X
+            return wk.e.BILLBOARDMODE_X
           }
           static get BILLBOARDMODE_Y() {
-            return Nu.d.BILLBOARDMODE_Y
+            return wk.e.BILLBOARDMODE_Y
           }
           static get BILLBOARDMODE_Z() {
-            return Nu.d.BILLBOARDMODE_Z
+            return wk.e.BILLBOARDMODE_Z
           }
           static get BILLBOARDMODE_ALL() {
-            return Nu.d.BILLBOARDMODE_ALL
+            return wk.e.BILLBOARDMODE_ALL
           }
           static get BILLBOARDMODE_USE_POSITION() {
-            return Nu.d.BILLBOARDMODE_USE_POSITION
+            return wk.e.BILLBOARDMODE_USE_POSITION
           }
           get facetNb() {
             return this._internalAbstractMeshDataInfo._facetData.facetNb
@@ -2850,32 +2850,32 @@ export const modules = {
           get partitioningSubdivisions() {
             return this._internalAbstractMeshDataInfo._facetData.partitioningSubdivisions
           }
-          set partitioningSubdivisions(uu) {
-            this._internalAbstractMeshDataInfo._facetData.partitioningSubdivisions = uu
+          set partitioningSubdivisions(kk) {
+            this._internalAbstractMeshDataInfo._facetData.partitioningSubdivisions = kk
           }
           get partitioningBBoxRatio() {
             return this._internalAbstractMeshDataInfo._facetData.partitioningBBoxRatio
           }
-          set partitioningBBoxRatio(uu) {
-            this._internalAbstractMeshDataInfo._facetData.partitioningBBoxRatio = uu
+          set partitioningBBoxRatio(kk) {
+            this._internalAbstractMeshDataInfo._facetData.partitioningBBoxRatio = kk
           }
           get mustDepthSortFacets() {
             return this._internalAbstractMeshDataInfo._facetData.facetDepthSort
           }
-          set mustDepthSortFacets(uu) {
-            this._internalAbstractMeshDataInfo._facetData.facetDepthSort = uu
+          set mustDepthSortFacets(kk) {
+            this._internalAbstractMeshDataInfo._facetData.facetDepthSort = kk
           }
           get facetDepthSortFrom() {
             return this._internalAbstractMeshDataInfo._facetData.facetDepthSortFrom
           }
-          set facetDepthSortFrom(uu) {
-            this._internalAbstractMeshDataInfo._facetData.facetDepthSortFrom = uu
+          set facetDepthSortFrom(kk) {
+            this._internalAbstractMeshDataInfo._facetData.facetDepthSortFrom = kk
           }
           get collisionRetryCount() {
             return this._internalAbstractMeshDataInfo._collisionRetryCount
           }
-          set collisionRetryCount(uu) {
-            this._internalAbstractMeshDataInfo._collisionRetryCount = uu
+          set collisionRetryCount(kk) {
+            this._internalAbstractMeshDataInfo._collisionRetryCount = kk
           }
           get isFacetDataEnabled() {
             return this._internalAbstractMeshDataInfo._facetData.facetDataEnabled
@@ -2883,182 +2883,182 @@ export const modules = {
           get morphTargetManager() {
             return this._internalAbstractMeshDataInfo._morphTargetManager
           }
-          set morphTargetManager(uu) {
-            this._internalAbstractMeshDataInfo._morphTargetManager !== uu && (this._internalAbstractMeshDataInfo._morphTargetManager = uu, this._syncGeometryWithMorphTargetManager())
+          set morphTargetManager(kk) {
+            this._internalAbstractMeshDataInfo._morphTargetManager !== kk && (this._internalAbstractMeshDataInfo._morphTargetManager = kk, this._syncGeometryWithMorphTargetManager())
           }
           get bakedVertexAnimationManager() {
             return this._internalAbstractMeshDataInfo._bakedVertexAnimationManager
           }
-          set bakedVertexAnimationManager(uu) {
-            this._internalAbstractMeshDataInfo._bakedVertexAnimationManager !== uu && (this._internalAbstractMeshDataInfo._bakedVertexAnimationManager = uu, this._markSubMeshesAsAttributesDirty())
+          set bakedVertexAnimationManager(kk) {
+            this._internalAbstractMeshDataInfo._bakedVertexAnimationManager !== kk && (this._internalAbstractMeshDataInfo._bakedVertexAnimationManager = kk, this._markSubMeshesAsAttributesDirty())
           }
           _syncGeometryWithMorphTargetManager() {}
-          _updateNonUniformScalingState(uu) {
-            return !!super._updateNonUniformScalingState(uu) && (this._markSubMeshesAsMiscDirty(), !0)
+          _updateNonUniformScalingState(kk) {
+            return !!super._updateNonUniformScalingState(kk) && (this._markSubMeshesAsMiscDirty(), !0)
           }
           get rawBoundingInfo() {
             return this._internalAbstractMeshDataInfo._rawBoundingInfo
           }
-          set rawBoundingInfo(uu) {
-            this._internalAbstractMeshDataInfo._rawBoundingInfo = uu
+          set rawBoundingInfo(kk) {
+            this._internalAbstractMeshDataInfo._rawBoundingInfo = kk
           }
-          set uB(uu) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver && this.onCollideObservable.remove(this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver), this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver = this.onCollideObservable.add(uu)
+          set gJ(kk) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver && this.onCollideObservable.remove(this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver), this._internalAbstractMeshDataInfo._meshCollisionData._onCollideObserver = this.onCollideObservable.add(kk)
           }
-          set onCollisionPositionChange(uu) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver && this.onCollisionPositionChangeObservable.remove(this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver), this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver = this.onCollisionPositionChangeObservable.add(uu)
+          set onCollisionPositionChange(kk) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver && this.onCollisionPositionChangeObservable.remove(this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver), this._internalAbstractMeshDataInfo._meshCollisionData._onCollisionPositionChangeObserver = this.onCollisionPositionChangeObservable.add(kk)
           }
           get visibility() {
             return this._internalAbstractMeshDataInfo._visibility
           }
-          set visibility(uu) {
-            if (this._internalAbstractMeshDataInfo._visibility === uu) return;
-            const Ru = this._internalAbstractMeshDataInfo._visibility;
-            this._internalAbstractMeshDataInfo._visibility = uu, (1 === Ru && 1 !== uu || 1 !== Ru && 1 === uu) && this._markSubMeshesAsDirty((uu => {
-              uu.markAsMiscDirty(), uu.markAsPrePassDirty()
+          set visibility(kk) {
+            if (this._internalAbstractMeshDataInfo._visibility === kk) return;
+            const Fk = this._internalAbstractMeshDataInfo._visibility;
+            this._internalAbstractMeshDataInfo._visibility = kk, (1 === Fk && 1 !== kk || 1 !== Fk && 1 === kk) && this._markSubMeshesAsDirty((kk => {
+              kk.markAsMiscDirty(), kk.markAsPrePassDirty()
             }))
           }
           get pointerOverDisableMeshTesting() {
             return this._internalAbstractMeshDataInfo._pointerOverDisableMeshTesting
           }
-          set pointerOverDisableMeshTesting(uu) {
-            this._internalAbstractMeshDataInfo._pointerOverDisableMeshTesting = uu
+          set pointerOverDisableMeshTesting(kk) {
+            this._internalAbstractMeshDataInfo._pointerOverDisableMeshTesting = kk
           }
           get renderingGroupId() {
             return this._internalAbstractMeshDataInfo._renderingGroupId
           }
-          set renderingGroupId(uu) {
-            this._internalAbstractMeshDataInfo._renderingGroupId = uu
+          set renderingGroupId(kk) {
+            this._internalAbstractMeshDataInfo._renderingGroupId = kk
           }
           get meshBlendingTag() {
             return this._internalAbstractMeshDataInfo._meshBlendingTag
           }
-          set meshBlendingTag(uu) {
-            if (!Number.isInteger(uu) || uu < 0 || uu > 255 || 0 !== uu && 0 === (63 & uu)) throw new RangeError("Mesh-blending tag must be 0 or contain a group ID between 1 and 63.");
-            this._internalAbstractMeshDataInfo._meshBlendingTag = uu
+          set meshBlendingTag(kk) {
+            if (!Number.isInteger(kk) || kk < 0 || kk > 255 || 0 !== kk && 0 === (63 & kk)) throw new RangeError("Mesh-blending tag must be 0 or contain a group ID between 1 and 63.");
+            this._internalAbstractMeshDataInfo._meshBlendingTag = kk
           }
           get material() {
             return this._internalAbstractMeshDataInfo._material
           }
-          set material(uu) {
-            this._setMaterial(uu)
+          set material(kk) {
+            this._setMaterial(kk)
           }
-          _setMaterial(uu) {
-            this._internalAbstractMeshDataInfo._material !== uu && (this._internalAbstractMeshDataInfo._material && this._internalAbstractMeshDataInfo._material.meshMap && (this._internalAbstractMeshDataInfo._material.meshMap[this.uniqueId] = void 0), this._internalAbstractMeshDataInfo._material = uu, uu && uu.meshMap && (uu.meshMap[this.uniqueId] = this), this.onMaterialChangedObservable.hasObservers() && this.onMaterialChangedObservable.notifyObservers(this), this.mC && (this.resetDrawCache(void 0, null == uu), this._unBindEffect()))
+          _setMaterial(kk) {
+            this._internalAbstractMeshDataInfo._material !== kk && (this._internalAbstractMeshDataInfo._material && this._internalAbstractMeshDataInfo._material.meshMap && (this._internalAbstractMeshDataInfo._material.meshMap[this.uniqueId] = void 0), this._internalAbstractMeshDataInfo._material = kk, kk && kk.meshMap && (kk.meshMap[this.uniqueId] = this), this.onMaterialChangedObservable.hasObservers() && this.onMaterialChangedObservable.notifyObservers(this), this.AY && (this.resetDrawCache(void 0, null == kk), this._unBindEffect()))
           }
-          getMaterialForRenderPass(uu) {
-            return this._internalAbstractMeshDataInfo._materialForRenderPass?.[uu]
+          getMaterialForRenderPass(kk) {
+            return this._internalAbstractMeshDataInfo._materialForRenderPass?.[kk]
           }
-          setMaterialForRenderPass(uu, Ru) {
-            this.resetDrawCache(uu), this._internalAbstractMeshDataInfo._materialForRenderPass || (this._internalAbstractMeshDataInfo._materialForRenderPass = []);
-            const yu = this._internalAbstractMeshDataInfo._materialForRenderPass[uu];
-            yu?.meshMap?.[this.uniqueId] && (yu.meshMap[this.uniqueId] = void 0), this._internalAbstractMeshDataInfo._materialForRenderPass[uu] = Ru, Ru && Ru.meshMap && (Ru.meshMap[this.uniqueId] = this)
+          setMaterialForRenderPass(kk, Fk) {
+            this.resetDrawCache(kk), this._internalAbstractMeshDataInfo._materialForRenderPass || (this._internalAbstractMeshDataInfo._materialForRenderPass = []);
+            const Bk = this._internalAbstractMeshDataInfo._materialForRenderPass[kk];
+            Bk?.meshMap?.[this.uniqueId] && (Bk.meshMap[this.uniqueId] = void 0), this._internalAbstractMeshDataInfo._materialForRenderPass[kk] = Fk, Fk && Fk.meshMap && (Fk.meshMap[this.uniqueId] = this)
           }
           get receiveShadows() {
             return this._internalAbstractMeshDataInfo._receiveShadows
           }
-          set receiveShadows(uu) {
-            this._internalAbstractMeshDataInfo._receiveShadows !== uu && (this._internalAbstractMeshDataInfo._receiveShadows = uu, this._markSubMeshesAsLightDirty())
+          set receiveShadows(kk) {
+            this._internalAbstractMeshDataInfo._receiveShadows !== kk && (this._internalAbstractMeshDataInfo._receiveShadows = kk, this._markSubMeshesAsLightDirty())
           }
           get hasVertexAlpha() {
             return this._internalAbstractMeshDataInfo._hasVertexAlpha
           }
-          set hasVertexAlpha(uu) {
-            this._internalAbstractMeshDataInfo._hasVertexAlpha !== uu && (this._internalAbstractMeshDataInfo._hasVertexAlpha = uu, this._markSubMeshesAsAttributesDirty(), this._markSubMeshesAsMiscDirty())
+          set hasVertexAlpha(kk) {
+            this._internalAbstractMeshDataInfo._hasVertexAlpha !== kk && (this._internalAbstractMeshDataInfo._hasVertexAlpha = kk, this._markSubMeshesAsAttributesDirty(), this._markSubMeshesAsMiscDirty())
           }
           get useVertexColors() {
             return this._internalAbstractMeshDataInfo._useVertexColors
           }
-          set useVertexColors(uu) {
-            this._internalAbstractMeshDataInfo._useVertexColors !== uu && (this._internalAbstractMeshDataInfo._useVertexColors = uu, this._markSubMeshesAsAttributesDirty())
+          set useVertexColors(kk) {
+            this._internalAbstractMeshDataInfo._useVertexColors !== kk && (this._internalAbstractMeshDataInfo._useVertexColors = kk, this._markSubMeshesAsAttributesDirty())
           }
           get computeBonesUsingShaders() {
             return this._internalAbstractMeshDataInfo._computeBonesUsingShaders
           }
-          set computeBonesUsingShaders(uu) {
-            this._internalAbstractMeshDataInfo._computeBonesUsingShaders !== uu && (this._internalAbstractMeshDataInfo._computeBonesUsingShaders = uu, this._markSubMeshesAsAttributesDirty())
+          set computeBonesUsingShaders(kk) {
+            this._internalAbstractMeshDataInfo._computeBonesUsingShaders !== kk && (this._internalAbstractMeshDataInfo._computeBonesUsingShaders = kk, this._markSubMeshesAsAttributesDirty())
           }
           get numBoneInfluencers() {
             return this._internalAbstractMeshDataInfo._numBoneInfluencers
           }
-          set numBoneInfluencers(uu) {
-            this._internalAbstractMeshDataInfo._numBoneInfluencers !== uu && (this._internalAbstractMeshDataInfo._numBoneInfluencers = uu, this._markSubMeshesAsAttributesDirty())
+          set numBoneInfluencers(kk) {
+            this._internalAbstractMeshDataInfo._numBoneInfluencers !== kk && (this._internalAbstractMeshDataInfo._numBoneInfluencers = kk, this._markSubMeshesAsAttributesDirty())
           }
           get applyFog() {
             return this._internalAbstractMeshDataInfo._applyFog
           }
-          set applyFog(uu) {
-            this._internalAbstractMeshDataInfo._applyFog !== uu && (this._internalAbstractMeshDataInfo._applyFog = uu, this._markSubMeshesAsMiscDirty())
+          set applyFog(kk) {
+            this._internalAbstractMeshDataInfo._applyFog !== kk && (this._internalAbstractMeshDataInfo._applyFog = kk, this._markSubMeshesAsMiscDirty())
           }
           get enableDistantPicking() {
             return this._internalAbstractMeshDataInfo._enableDistantPicking
           }
-          set enableDistantPicking(uu) {
-            this._internalAbstractMeshDataInfo._enableDistantPicking = uu
+          set enableDistantPicking(kk) {
+            this._internalAbstractMeshDataInfo._enableDistantPicking = kk
           }
           get layerMask() {
             return this._internalAbstractMeshDataInfo._layerMask
           }
-          set layerMask(uu) {
-            uu !== this._internalAbstractMeshDataInfo._layerMask && (this._internalAbstractMeshDataInfo._layerMask = uu, this._resyncLightSources())
+          set layerMask(kk) {
+            kk !== this._internalAbstractMeshDataInfo._layerMask && (this._internalAbstractMeshDataInfo._layerMask = kk, this._resyncLightSources())
           }
           get collisionMask() {
             return this._internalAbstractMeshDataInfo._meshCollisionData._collisionMask
           }
-          set collisionMask(uu) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._collisionMask = isNaN(uu) ? -1 : uu
+          set collisionMask(kk) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._collisionMask = isNaN(kk) ? -1 : kk
           }
           get collisionResponse() {
             return this._internalAbstractMeshDataInfo._meshCollisionData._collisionResponse
           }
-          set collisionResponse(uu) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._collisionResponse = uu
+          set collisionResponse(kk) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._collisionResponse = kk
           }
           get collisionGroup() {
             return this._internalAbstractMeshDataInfo._meshCollisionData._collisionGroup
           }
-          set collisionGroup(uu) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._collisionGroup = isNaN(uu) ? -1 : uu
+          set collisionGroup(kk) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._collisionGroup = isNaN(kk) ? -1 : kk
           }
           get surroundingMeshes() {
             return this._internalAbstractMeshDataInfo._meshCollisionData._surroundingMeshes
           }
-          set surroundingMeshes(uu) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._surroundingMeshes = uu
+          set surroundingMeshes(kk) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._surroundingMeshes = kk
           }
           get lightSources() {
             return this._lightSources
           }
-          set skeleton(uu) {
-            const Ru = this._internalAbstractMeshDataInfo._skeleton;
-            Ru && Ru.needInitialSkinMatrix && Ru._unregisterMeshWithPoseMatrix(this), uu && uu.needInitialSkinMatrix && uu._registerMeshWithPoseMatrix(this), this._internalAbstractMeshDataInfo._skeleton = uu, this._internalAbstractMeshDataInfo._skeleton || (this._bonesTransformMatrices = null), this._markSubMeshesAsAttributesDirty()
+          set skeleton(kk) {
+            const Fk = this._internalAbstractMeshDataInfo._skeleton;
+            Fk && Fk.needInitialSkinMatrix && Fk._unregisterMeshWithPoseMatrix(this), kk && kk.needInitialSkinMatrix && kk._registerMeshWithPoseMatrix(this), this._internalAbstractMeshDataInfo._skeleton = kk, this._internalAbstractMeshDataInfo._skeleton || (this._bonesTransformMatrices = null), this._markSubMeshesAsAttributesDirty()
           }
           get skeleton() {
             return this._internalAbstractMeshDataInfo._skeleton
           }
-          constructor(Ru) {
-            var yu;
-            let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            switch (super(Ru, Eu, !1), yu = this, this._internalAbstractMeshDataInfo = new Uu, this._waitingMaterialId = null, this._waitingMorphTargetManagerId = null, this._waitingSkeletonId = null, this._waitingSkeletonUniqueId = null, this.cullingStrategy = uu.CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY, this.onCollideObservable = new Ku.b, this.onCollisionPositionChangeObservable = new Ku.b, this.onMaterialChangedObservable = new Ku.b, this.definedFacingForward = !0, this._occlusionQuery = null, this._renderingGroup = null, this.alphaIndex = Number.MAX_VALUE, this.zp = uu.DefaultIsPickable, this.isNearPickable = !1, this.isNearGrabbable = !1, this.showSubMeshesBoundingBox = !1, this.isBlocker = !1, this.enablePointerMoveEvents = !1, this.outlineColor = Hu.d.Red(), this.outlineWidth = .02, this.overlayColor = Hu.d.Red(), this.overlayAlpha = .5, this.useOctreeForRenderingSelection = !0, this.useOctreeForPicking = !0, this.useOctreeForCollisions = !0, this.DS = !1, this.US = !1, this.actionManager = null, this.ellipsoid = new Qu.p(.5, 1, .5), this.ellipsoidOffset = new Qu.p(0, 0, 0), this.edgesWidth = 1, this.edgesColor = new Hu.h(1, 0, 0, 1), this._edgesRenderer = null, this._masterMesh = null, this._boundingInfo = null, this._boundingInfoIsDirty = !0, this._renderId = 0, this._intersectionsInProgress = new Array, this._unIndexed = !1, this._lightSources = new Array, this._waitingData = {
+          constructor(Fk) {
+            var Bk;
+            let Rk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            switch (super(Fk, Rk, !1), Bk = this, this._internalAbstractMeshDataInfo = new gk, this._waitingMaterialId = null, this._waitingMorphTargetManagerId = null, this._waitingSkeletonId = null, this._waitingSkeletonUniqueId = null, this.cullingStrategy = kk.CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY, this.onCollideObservable = new tk.e, this.onCollisionPositionChangeObservable = new tk.e, this.onMaterialChangedObservable = new tk.e, this.definedFacingForward = !0, this._occlusionQuery = null, this._renderingGroup = null, this.alphaIndex = Number.MAX_VALUE, this.ff = kk.DefaultIsPickable, this.isNearPickable = !1, this.isNearGrabbable = !1, this.showSubMeshesBoundingBox = !1, this.isBlocker = !1, this.enablePointerMoveEvents = !1, this.outlineColor = vk.e.Red(), this.outlineWidth = .02, this.overlayColor = vk.e.Red(), this.overlayAlpha = .5, this.useOctreeForRenderingSelection = !0, this.useOctreeForPicking = !0, this.useOctreeForCollisions = !0, this.Ie = !1, this.Fy = !1, this.actionManager = null, this.ellipsoid = new ak.s(.5, 1, .5), this.ellipsoidOffset = new ak.s(0, 0, 0), this.edgesWidth = 1, this.edgesColor = new vk.i(1, 0, 0, 1), this._edgesRenderer = null, this._masterMesh = null, this._boundingInfo = null, this._boundingInfoIsDirty = !0, this._renderId = 0, this._intersectionsInProgress = new Array, this._unIndexed = !1, this._lightSources = new Array, this._waitingData = {
                 lods: null,
                 actions: null,
-                fD: null
-              }, this._bonesTransformMatrices = null, this._transformMatrixTexture = null, this.onRebuildObservable = new Ku.b, this._onCollisionPositionChange = function(uu, Ru) {
-                let Eu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-                Ru.subtractToRef(yu._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions, yu._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions), yu._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions.length() > eu.d.CollisionsEpsilon && yu.position.addInPlace(yu._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions), Eu && yu.onCollideObservable.notifyObservers(Eu), yu.onCollisionPositionChangeObservable.notifyObservers(yu.position)
-              }, Eu = this.lD(), this.layerMask = Eu.defaultRenderableLayerMask, Eu.MEu(this), this._resyncLightSources(), this._uniformBuffer = new ru.c(this.lD().eS(), void 0, void 0, Ru, !this.lD().eS().isWebGPU), this._buildUniformLayout(), Eu.performancePriority) {
+                oN: null
+              }, this._bonesTransformMatrices = null, this._transformMatrixTexture = null, this.onRebuildObservable = new tk.e, this._onCollisionPositionChange = function(kk, Fk) {
+                let Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+                Fk.subtractToRef(Bk._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions, Bk._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions), Bk._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions.length() > Ek.c.CollisionsEpsilon && Bk.position.addInPlace(Bk._internalAbstractMeshDataInfo._meshCollisionData._diffPositionForCollisions), Rk && Bk.onCollideObservable.notifyObservers(Rk), Bk.onCollisionPositionChangeObservable.notifyObservers(Bk.position)
+              }, Rk = this.XN(), this.layerMask = Rk.defaultRenderableLayerMask, Rk.qBk(this), this._resyncLightSources(), this._uniformBuffer = new Vk.e(this.XN().ne(), void 0, void 0, Fk, !this.XN().ne().isWebGPU), this._buildUniformLayout(), Rk.performancePriority) {
               case 2:
-                this.US = !0;
+                this.Fy = !0;
               case 1:
-                this.DS = !0, this.zp = !1
+                this.Ie = !0, this.ff = !1
             }
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("world", 16), this._uniformBuffer.addUniform("visibility", 1), this._uniformBuffer.create()
           }
-          transferToEffect(uu) {
-            const Ru = this._uniformBuffer;
-            Ru.v_("world", uu), Ru.updateFloat("visibility", this._internalAbstractMeshDataInfo._visibility), Ru.update()
+          transferToEffect(kk) {
+            const Fk = this._uniformBuffer;
+            Fk.M_("world", kk), Fk.updateFloat("visibility", this._internalAbstractMeshDataInfo._visibility), Fk.update()
           }
           getMeshUniformBuffer() {
             return this._uniformBuffer
@@ -3069,84 +3069,84 @@ export const modules = {
           getClassName() {
             return "AbstractMesh"
           }
-          toString(uu) {
-            let Ru = "Name: " + this.name + ", isInstance: " + ("InstancedMesh" === this.getClassName() ? "YES" : "NO");
-            Ru += ", # of submeshes: " + (this.mC ? this.mC.length : 0);
-            const yu = this._internalAbstractMeshDataInfo._skeleton;
-            return yu && (Ru += ", skeleton: " + yu.name), uu && (Ru += ", billboard mode: " + ["NONE", "X", "Y", null, "Z", null, null, "ALL"][this.billboardMode], Ru += ", freeze wrld mat: " + (this._isWorldMatrixFrozen || this._waitingData.fD ? "YES" : "NO")), Ru
+          toString(kk) {
+            let Fk = "Name: " + this.name + ", isInstance: " + ("InstancedMesh" === this.getClassName() ? "YES" : "NO");
+            Fk += ", # of submeshes: " + (this.AY ? this.AY.length : 0);
+            const Bk = this._internalAbstractMeshDataInfo._skeleton;
+            return Bk && (Fk += ", skeleton: " + Bk.name), kk && (Fk += ", billboard mode: " + ["NONE", "X", "Y", null, "Z", null, null, "ALL"][this.billboardMode], Fk += ", freeze wrld mat: " + (this._isWorldMatrixFrozen || this._waitingData.oN ? "YES" : "NO")), Fk
           }
           _getEffectiveParent() {
-            return this._masterMesh && this.billboardMode !== Nu.d.BILLBOARDMODE_NONE ? this._masterMesh : super._getEffectiveParent()
+            return this._masterMesh && this.billboardMode !== wk.e.BILLBOARDMODE_NONE ? this._masterMesh : super._getEffectiveParent()
           }
-          _getActionManagerForTrigger(uu) {
-            let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-            if (this.actionManager && (Ru || this.actionManager.isRecursive)) {
-              if (!uu) return this.actionManager;
-              if (this.actionManager.hasSpecificTrigger(uu)) return this.actionManager
+          _getActionManagerForTrigger(kk) {
+            let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+            if (this.actionManager && (Fk || this.actionManager.isRecursive)) {
+              if (!kk) return this.actionManager;
+              if (this.actionManager.hasSpecificTrigger(kk)) return this.actionManager
             }
-            return this.parent ? this.parent._getActionManagerForTrigger(uu, !1) : null
+            return this.parent ? this.parent._getActionManagerForTrigger(kk, !1) : null
           }
-          _releaseRenderPassId(uu) {}
+          _releaseRenderPassId(kk) {}
           _rebuild() {
-            if (this.onRebuildObservable.notifyObservers(this), null !== this._occlusionQuery && (this._occlusionQuery = null), this.mC) {
-              for (const uu of this.mC) uu._rebuild();
+            if (this.onRebuildObservable.notifyObservers(this), null !== this._occlusionQuery && (this._occlusionQuery = null), this.AY) {
+              for (const kk of this.AY) kk._rebuild();
               this.resetDrawCache()
             }
           }
           _resyncLightSources() {
             this._lightSources.length = 0;
-            for (const uu of this.lD().lights) uu.isEnabled() && uu.canAffectMesh(this) && this._lightSources.push(uu);
+            for (const kk of this.XN().lights) kk.isEnabled() && kk.canAffectMesh(this) && this._lightSources.push(kk);
             this._markSubMeshesAsLightDirty()
           }
-          _resyncLightSource(uu) {
-            const Ru = uu.isEnabled() && uu.canAffectMesh(this),
-              yu = this._lightSources.indexOf(uu);
-            let Eu = !1;
-            if (-1 === yu) {
-              if (!Ru) return;
-              this._lightSources.push(uu)
+          _resyncLightSource(kk) {
+            const Fk = kk.isEnabled() && kk.canAffectMesh(this),
+              Bk = this._lightSources.indexOf(kk);
+            let Rk = !1;
+            if (-1 === Bk) {
+              if (!Fk) return;
+              this._lightSources.push(kk)
             } else {
-              if (Ru) return;
-              Eu = !0, this._lightSources.splice(yu, 1)
+              if (Fk) return;
+              Rk = !0, this._lightSources.splice(Bk, 1)
             }
-            this._markSubMeshesAsLightDirty(Eu)
+            this._markSubMeshesAsLightDirty(Rk)
           }
           _unBindEffect() {
-            for (const uu of this.mC) uu.setEffect(null)
+            for (const kk of this.AY) kk.setEffect(null)
           }
-          _removeLightSource(uu, Ru) {
-            const yu = this._lightSources.indexOf(uu); - 1 !== yu && (this._lightSources.splice(yu, 1), this._markSubMeshesAsLightDirty(Ru))
+          _removeLightSource(kk, Fk) {
+            const Bk = this._lightSources.indexOf(kk); - 1 !== Bk && (this._lightSources.splice(Bk, 1), this._markSubMeshesAsLightDirty(Fk))
           }
-          _markSubMeshesAsDirty(uu) {
-            if (this.mC)
-              for (const Ru of this.mC)
-                for (let yu = 0; yu < Ru._drawWrappers.length; ++yu) {
-                  const Eu = Ru._drawWrappers[yu];
-                  Eu && Eu.defines && Eu.defines.markAllAsDirty && uu(Eu.defines)
+          _markSubMeshesAsDirty(kk) {
+            if (this.AY)
+              for (const Fk of this.AY)
+                for (let Bk = 0; Bk < Fk._drawWrappers.length; ++Bk) {
+                  const Rk = Fk._drawWrappers[Bk];
+                  Rk && Rk.defines && Rk.defines.markAllAsDirty && kk(Rk.defines)
                 }
           }
           _markSubMeshesAsLightDirty() {
-            let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            this._markSubMeshesAsDirty((Ru => Ru.markAsLightDirty(uu)))
+            let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            this._markSubMeshesAsDirty((Fk => Fk.markAsLightDirty(kk)))
           }
           _markSubMeshesAsAttributesDirty() {
-            this._markSubMeshesAsDirty((uu => uu.markAsAttributesDirty()))
+            this._markSubMeshesAsDirty((kk => kk.markAsAttributesDirty()))
           }
           _markSubMeshesAsMiscDirty() {
-            this._markSubMeshesAsDirty((uu => uu.markAsMiscDirty()))
+            this._markSubMeshesAsDirty((kk => kk.markAsMiscDirty()))
           }
-          Eyu(uu) {
-            return this._currentRenderId = Number.MAX_VALUE, super.Eyu(uu), this._isDirty = !0, this
+          mFk(kk) {
+            return this._currentRenderId = Number.MAX_VALUE, super.mFk(kk), this._isDirty = !0, this
           }
-          resetDrawCache(uu) {
-            let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (this.mC)
-              for (const yu of this.mC) yu.resetDrawCache(uu, Ru)
+          resetDrawCache(kk) {
+            let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (this.AY)
+              for (const Bk of this.AY) Bk.resetDrawCache(kk, Fk)
           }
           get isBlocked() {
             return !1
           }
-          getLOD(uu) {
+          getLOD(kk) {
             return this
           }
           getTotalVertices() {
@@ -3155,838 +3155,838 @@ export const modules = {
           getTotalIndices() {
             return 0
           }
-          DEu() {
+          hBk() {
             return null
           }
-          getVerticesData(uu) {
+          getVerticesData(kk) {
             return null
           }
-          setVerticesData(uu, Ru, yu, Eu) {
+          setVerticesData(kk, Fk, Bk, Rk) {
             return this
           }
-          updateVerticesData(uu, Ru, yu, Eu) {
+          updateVerticesData(kk, Fk, Bk, Rk) {
             return this
           }
-          setIndices(uu, Ru) {
+          setIndices(kk, Fk) {
             return this
           }
-          isVerticesDataPresent(uu) {
+          isVerticesDataPresent(kk) {
             return !1
           }
-          vI() {
-            return this._masterMesh ? this._masterMesh.vI() : (this._boundingInfoIsDirty && (this._boundingInfoIsDirty = !1, this._updateBoundingInfo()), this._boundingInfo)
+          ZH() {
+            return this._masterMesh ? this._masterMesh.ZH() : (this._boundingInfoIsDirty && (this._boundingInfoIsDirty = !1, this._updateBoundingInfo()), this._boundingInfo)
           }
           getRawBoundingInfo() {
-            return this.rawBoundingInfo ?? this.vI()
+            return this.rawBoundingInfo ?? this.ZH()
           }
-          setBoundingInfo(uu) {
-            return this._boundingInfo = uu, this
+          setBoundingInfo(kk) {
+            return this._boundingInfo = kk, this
           }
           get hasBoundingInfo() {
             return null !== this._boundingInfo
           }
-          buildBoundingInfo(uu, Ru, yu) {
-            return this._boundingInfo = new Vu.c(uu, Ru, yu), this._boundingInfo
+          buildBoundingInfo(kk, Fk, Bk) {
+            return this._boundingInfo = new sk.b(kk, Fk, Bk), this._boundingInfo
           }
           normalizeToUnitCube() {
-            let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-              Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              yu = arguments.length > 2 ? arguments[2] : void 0;
-            return super.normalizeToUnitCube(uu, Ru, yu)
+            let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+              Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              Bk = arguments.length > 2 ? arguments[2] : void 0;
+            return super.normalizeToUnitCube(kk, Fk, Bk)
           }
           get useBones() {
-            return this.skeleton && this.lD().skeletonsEnabled && this.isVerticesDataPresent(mu.h.MatricesIndicesKind) && this.isVerticesDataPresent(mu.h.MatricesWeightsKind)
+            return this.skeleton && this.XN().skeletonsEnabled && this.isVerticesDataPresent(Xk.n.MatricesIndicesKind) && this.isVerticesDataPresent(Xk.n.MatricesWeightsKind)
           }
           _preActivate() {}
-          _preActivateForIntermediateRendering(uu) {}
-          _activate(uu, Ru) {
-            return this._renderId = uu, !0
+          _preActivateForIntermediateRendering(kk) {}
+          _activate(kk, Fk) {
+            return this._renderId = kk, !0
           }
           _postActivate() {}
           _freeze() {}
           _unFreeze() {}
           getWorldMatrix() {
-            return this._masterMesh && this.billboardMode === Nu.d.BILLBOARDMODE_NONE ? this._masterMesh.getWorldMatrix() : super.getWorldMatrix()
+            return this._masterMesh && this.billboardMode === wk.e.BILLBOARDMODE_NONE ? this._masterMesh.getWorldMatrix() : super.getWorldMatrix()
           }
           _getWorldMatrixDeterminant() {
             return this._masterMesh ? this._masterMesh._getWorldMatrixDeterminant() : super._getWorldMatrixDeterminant()
           }
-          get ZD() {
+          get mN() {
             return !1
           }
-          get HKu() {
+          get GRk() {
             return !1
           }
           get hasThinInstances() {
             return !1
           }
-          movePOV(uu, Ru, yu) {
-            return this.position.addInPlace(this.calcMovePOV(uu, Ru, yu)), this
+          movePOV(kk, Fk, Bk) {
+            return this.position.addInPlace(this.calcMovePOV(kk, Fk, Bk)), this
           }
-          calcMovePOV(uu, Ru, yu) {
-            const Eu = new Qu.d;
-            (this.rotationQuaternion ? this.rotationQuaternion : Qu.f.RotationYawPitchRoll(this.rotation.y, this.rotation.x, this.rotation.z)).toRotationMatrix(Eu);
-            const Ku = Qu.p.Zero(),
-              mu = this.definedFacingForward ? -1 : 1;
-            return Qu.p.TransformCoordinatesFromFloatsToRef(uu * mu, Ru, yu * mu, Eu, Ku), Ku
+          calcMovePOV(kk, Fk, Bk) {
+            const Rk = new ak.c;
+            (this.rotationQuaternion ? this.rotationQuaternion : ak.e.RotationYawPitchRoll(this.rotation.y, this.rotation.x, this.rotation.z)).toRotationMatrix(Rk);
+            const tk = ak.s.Zero(),
+              Xk = this.definedFacingForward ? -1 : 1;
+            return ak.s.TransformCoordinatesFromFloatsToRef(kk * Xk, Fk, Bk * Xk, Rk, tk), tk
           }
-          rotatePOV(uu, Ru, yu) {
-            return this.rotation.addInPlace(this.calcRotatePOV(uu, Ru, yu)), this
+          rotatePOV(kk, Fk, Bk) {
+            return this.rotation.addInPlace(this.calcRotatePOV(kk, Fk, Bk)), this
           }
-          calcRotatePOV(uu, Ru, yu) {
-            const Eu = this.definedFacingForward ? 1 : -1;
-            return new Qu.p(uu * Eu, Ru, yu * Eu)
+          calcRotatePOV(kk, Fk, Bk) {
+            const Rk = this.definedFacingForward ? 1 : -1;
+            return new ak.s(kk * Rk, Fk, Bk * Rk)
           }
-          _refreshBoundingInfo(uu, Ru) {
-            if (uu) {
-              const yu = (0, ju.d)(uu, 0, this.getTotalVertices(), Ru);
-              this._boundingInfo ? this._boundingInfo.reConstruct(yu.minimum, yu.maximum) : this._boundingInfo = new Vu.c(yu.minimum, yu.maximum)
+          _refreshBoundingInfo(kk, Fk) {
+            if (kk) {
+              const Bk = (0, Wk.e)(kk, 0, this.getTotalVertices(), Fk);
+              this._boundingInfo ? this._boundingInfo.reConstruct(Bk.minimum, Bk.maximum) : this._boundingInfo = new sk.b(Bk.minimum, Bk.maximum)
             }
-            if (this.mC)
-              for (let yu = 0; yu < this.mC.length; yu++) this.mC[yu].refreshBoundingInfo(uu);
+            if (this.AY)
+              for (let Bk = 0; Bk < this.AY.length; Bk++) this.AY[Bk].refreshBoundingInfo(kk);
             this._updateBoundingInfo()
           }
-          _refreshBoundingInfoDirect(uu) {
-            if (this._boundingInfo ? this._boundingInfo.reConstruct(uu.minimum, uu.maximum) : this._boundingInfo = new Vu.c(uu.minimum, uu.maximum), this.mC)
-              for (let Ru = 0; Ru < this.mC.length; Ru++) this.mC[Ru].refreshBoundingInfo(null);
+          _refreshBoundingInfoDirect(kk) {
+            if (this._boundingInfo ? this._boundingInfo.reConstruct(kk.minimum, kk.maximum) : this._boundingInfo = new sk.b(kk.minimum, kk.maximum), this.AY)
+              for (let Fk = 0; Fk < this.AY.length; Fk++) this.AY[Fk].refreshBoundingInfo(null);
             this._updateBoundingInfo()
           }
-          static _ApplySkeleton(uu, Ru, yu, Eu, Ku, Ju, Nu) {
-            ! function(uu, Ru, yu, Eu, Ku, Ju, Nu) {
-              const Xu = Qu.m.MS[0],
-                Vu = Qu.m.Matrix[0],
-                ru = Qu.m.Matrix[1],
-                Bu = Ru === mu.h.NormalKind ? Qu.p.TransformNormalFromFloatsToRef : Qu.p.TransformCoordinatesFromFloatsToRef;
-              for (let mu = 0, xu = 0; mu < uu.length; mu += 3, xu += 4) {
-                let Ru, Su;
-                for (Vu.reset(), Ru = 0; Ru < 4; Ru++) Su = Ku[xu + Ru], Su > 0 && (Qu.d.FromFloat32ArrayToRefScaled(yu, Math.floor(16 * Eu[xu + Ru]), Su, ru), Vu.addToSelf(ru));
-                if (Ju && Nu)
-                  for (Ru = 0; Ru < 4; Ru++) Su = Nu[xu + Ru], Su > 0 && (Qu.d.FromFloat32ArrayToRefScaled(yu, Math.floor(16 * Ju[xu + Ru]), Su, ru), Vu.addToSelf(ru));
-                Bu(uu[mu], uu[mu + 1], uu[mu + 2], Vu, Xu), Xu.toArray(uu, mu)
+          static _ApplySkeleton(kk, Fk, Bk, Rk, tk, bk, wk) {
+            ! function(kk, Fk, Bk, Rk, tk, bk, wk) {
+              const dk = ak.l.Qe[0],
+                sk = ak.l.Matrix[0],
+                Vk = ak.l.Matrix[1],
+                Jk = Fk === Xk.n.NormalKind ? ak.s.TransformNormalFromFloatsToRef : ak.s.TransformCoordinatesFromFloatsToRef;
+              for (let Xk = 0, Ak = 0; Xk < kk.length; Xk += 3, Ak += 4) {
+                let Fk, ek;
+                for (sk.reset(), Fk = 0; Fk < 4; Fk++) ek = tk[Ak + Fk], ek > 0 && (ak.c.FromFloat32ArrayToRefScaled(Bk, Math.floor(16 * Rk[Ak + Fk]), ek, Vk), sk.addToSelf(Vk));
+                if (bk && wk)
+                  for (Fk = 0; Fk < 4; Fk++) ek = wk[Ak + Fk], ek > 0 && (ak.c.FromFloat32ArrayToRefScaled(Bk, Math.floor(16 * bk[Ak + Fk]), ek, Vk), sk.addToSelf(Vk));
+                Jk(kk[Xk], kk[Xk + 1], kk[Xk + 2], sk, dk), dk.toArray(kk, Xk)
               }
-            }(uu, Ru, yu, Eu, Ku, Ju, Nu)
+            }(kk, Fk, Bk, Rk, tk, bk, wk)
           }
-          _getData(Ru, yu) {
-            let Eu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mu.h.PositionKind;
-            const Ku = Ru.cache,
-              Ju = uu => {
-                if (Ku) {
-                  const Ru = Ku._vertexData || (Ku._vertexData = {});
-                  return Ru[uu] || this.copyVerticesData(uu, Ru), Ru[uu]
+          _getData(Fk, Bk) {
+            let Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Xk.n.PositionKind;
+            const tk = Fk.cache,
+              bk = kk => {
+                if (tk) {
+                  const Fk = tk._vertexData || (tk._vertexData = {});
+                  return Fk[kk] || this.copyVerticesData(kk, Fk), Fk[kk]
                 }
-                return this.getVerticesData(uu)
+                return this.getVerticesData(kk)
               };
-            if (yu || (yu = Ju(Eu)), !yu) return null;
-            Ku ? (Ku._outputData ? Ku._outputData.set(yu) : Ku._outputData = new Float32Array(yu), yu = Ku._outputData) : (Ru.applyMorph && this.morphTargetManager || Ru.applySkeleton && this.skeleton || Ru.applyBakedVertexAnimation && this.bakedVertexAnimationManager?.isEnabled) && (yu = yu.slice()), Ru.applyMorph && this.morphTargetManager && function(uu, Ru, yu) {
-              let Eu;
-              switch (Ru) {
-                case mu.h.PositionKind:
-                  Eu = uu => uu.getPositions();
+            if (Bk || (Bk = bk(Rk)), !Bk) return null;
+            tk ? (tk._outputData ? tk._outputData.set(Bk) : tk._outputData = new Float32Array(Bk), Bk = tk._outputData) : (Fk.applyMorph && this.morphTargetManager || Fk.applySkeleton && this.skeleton || Fk.applyBakedVertexAnimation && this.bakedVertexAnimationManager?.isEnabled) && (Bk = Bk.slice()), Fk.applyMorph && this.morphTargetManager && function(kk, Fk, Bk) {
+              let Rk;
+              switch (Fk) {
+                case Xk.n.PositionKind:
+                  Rk = kk => kk.getPositions();
                   break;
-                case mu.h.NormalKind:
-                  Eu = uu => uu.getNormals();
+                case Xk.n.NormalKind:
+                  Rk = kk => kk.getNormals();
                   break;
-                case mu.h.TangentKind:
-                  Eu = uu => uu.getTangents();
+                case Xk.n.TangentKind:
+                  Rk = kk => kk.getTangents();
                   break;
-                case mu.h.UVKind:
-                  Eu = uu => uu.getUVs();
+                case Xk.n.UVKind:
+                  Rk = kk => kk.getUVs();
                   break;
-                case mu.h.UV2Kind:
-                  Eu = uu => uu.getUV2s();
+                case Xk.n.UV2Kind:
+                  Rk = kk => kk.getUV2s();
                   break;
-                case mu.h.ColorKind:
-                  Eu = uu => uu.getColors();
+                case Xk.n.ColorKind:
+                  Rk = kk => kk.getColors();
                   break;
                 default:
                   return
               }
-              for (let Ku = 0; Ku < uu.length; Ku++) {
-                let Ru = uu[Ku];
-                for (let Qu = 0; Qu < yu.numTargets; Qu++) {
-                  const mu = yu.getTarget(Qu),
-                    Ju = mu.influence;
-                  if (0 !== Ju) {
-                    const yu = Eu(mu);
-                    yu && (Ru += (yu[Ku] - uu[Ku]) * Ju)
+              for (let tk = 0; tk < kk.length; tk++) {
+                let Fk = kk[tk];
+                for (let ak = 0; ak < Bk.numTargets; ak++) {
+                  const Xk = Bk.getTarget(ak),
+                    bk = Xk.influence;
+                  if (0 !== bk) {
+                    const Bk = Rk(Xk);
+                    Bk && (Fk += (Bk[tk] - kk[tk]) * bk)
                   }
                 }
-                uu[Ku] = Ru
+                kk[tk] = Fk
               }
-            }(yu, Eu, this.morphTargetManager);
-            const Nu = this.bakedVertexAnimationManager;
-            let Xu = !1;
-            if (Ru.applyBakedVertexAnimation && Nu?.isEnabled) {
-              const uu = Ju(mu.h.MatricesIndicesKind),
-                Ku = Ju(mu.h.MatricesWeightsKind);
-              if (Ku && uu) {
-                const Qu = this.numBoneInfluencers > 4,
-                  Vu = Qu ? Ju(mu.h.MatricesIndicesExtraKind) : null,
-                  ru = Qu ? Ju(mu.h.MatricesWeightsExtraKind) : null;
-                Xu = Iu(yu, Eu, Nu, Ru.bakedVertexAnimationSettings ?? Nu.animationParameters, uu, Ku, Vu, ru, this.numBoneInfluencers)
-              }
-            }
-            if (!Xu && Ru.applySkeleton && this.skeleton) {
-              const Ru = Ju(mu.h.MatricesIndicesKind),
-                Ku = Ju(mu.h.MatricesWeightsKind);
-              if (Ku && Ru) {
-                const Qu = this.numBoneInfluencers > 4,
-                  Nu = Qu ? Ju(mu.h.MatricesIndicesExtraKind) : null,
-                  Xu = Qu ? Ju(mu.h.MatricesWeightsExtraKind) : null,
-                  Vu = this.skeleton.getTransformMatrices(this);
-                uu._ApplySkeleton(yu, Eu, Vu, Ru, Ku, Nu, Xu)
+            }(Bk, Rk, this.morphTargetManager);
+            const wk = this.bakedVertexAnimationManager;
+            let dk = !1;
+            if (Fk.applyBakedVertexAnimation && wk?.isEnabled) {
+              const kk = bk(Xk.n.MatricesIndicesKind),
+                tk = bk(Xk.n.MatricesWeightsKind);
+              if (tk && kk) {
+                const ak = this.numBoneInfluencers > 4,
+                  sk = ak ? bk(Xk.n.MatricesIndicesExtraKind) : null,
+                  Vk = ak ? bk(Xk.n.MatricesWeightsExtraKind) : null;
+                dk = uk(Bk, Rk, wk, Fk.bakedVertexAnimationSettings ?? wk.animationParameters, kk, tk, sk, Vk, this.numBoneInfluencers)
               }
             }
-            if (!1 !== Ru.updatePositionsArray && Eu === mu.h.PositionKind) {
-              const uu = this._internalAbstractMeshDataInfo._positions || [],
-                Ru = uu.length;
-              if (uu.length = yu.length / 3, Ru < uu.length)
-                for (let yu = Ru; yu < uu.length; yu++) uu[yu] = new Qu.p;
-              for (let Eu = 0, Ku = 0; Eu < uu.length; Eu++, Ku += 3) uu[Eu].muu(yu[Ku], yu[Ku + 1], yu[Ku + 2]);
-              this._internalAbstractMeshDataInfo._positions = uu
+            if (!dk && Fk.applySkeleton && this.skeleton) {
+              const Fk = bk(Xk.n.MatricesIndicesKind),
+                tk = bk(Xk.n.MatricesWeightsKind);
+              if (tk && Fk) {
+                const ak = this.numBoneInfluencers > 4,
+                  wk = ak ? bk(Xk.n.MatricesIndicesExtraKind) : null,
+                  dk = ak ? bk(Xk.n.MatricesWeightsExtraKind) : null,
+                  sk = this.skeleton.getTransformMatrices(this);
+                kk._ApplySkeleton(Bk, Rk, sk, Fk, tk, wk, dk)
+              }
             }
-            return yu
+            if (!1 !== Fk.updatePositionsArray && Rk === Xk.n.PositionKind) {
+              const kk = this._internalAbstractMeshDataInfo._positions || [],
+                Fk = kk.length;
+              if (kk.length = Bk.length / 3, Fk < kk.length)
+                for (let Bk = Fk; Bk < kk.length; Bk++) kk[Bk] = new ak.s;
+              for (let Rk = 0, tk = 0; Rk < kk.length; Rk++, tk += 3) kk[Rk].E1(Bk[tk], Bk[tk + 1], Bk[tk + 2]);
+              this._internalAbstractMeshDataInfo._positions = kk
+            }
+            return Bk
           }
           getNormalsData() {
-            let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-              Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+              Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             return this._getData({
-              applySkeleton: uu,
-              applyMorph: Ru,
+              applySkeleton: kk,
+              applyMorph: Fk,
               updatePositionsArray: !1
-            }, null, mu.h.NormalKind)
+            }, null, Xk.n.NormalKind)
           }
-          aZ() {
-            let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-              Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+          Qq() {
+            let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+              Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
             return this._getData({
-              applySkeleton: uu,
-              applyMorph: Ru,
+              applySkeleton: kk,
+              applyMorph: Fk,
               updatePositionsArray: !1
-            }, yu, mu.h.PositionKind)
+            }, Bk, Xk.n.PositionKind)
           }
           _updateBoundingInfo() {
-            return this._boundingInfo ? this._boundingInfo.update(this.worldMatrixFromCache) : this._boundingInfo = new Vu.c(Qu.p.Zero(), Qu.p.Zero(), this.worldMatrixFromCache), this._updateSubMeshesBoundingInfo(this.worldMatrixFromCache), this
+            return this._boundingInfo ? this._boundingInfo.update(this.worldMatrixFromCache) : this._boundingInfo = new sk.b(ak.s.Zero(), ak.s.Zero(), this.worldMatrixFromCache), this._updateSubMeshesBoundingInfo(this.worldMatrixFromCache), this
           }
-          _updateSubMeshesBoundingInfo(uu) {
-            if (!this.mC) return this;
-            const Ru = this.mC.length;
-            for (let yu = 0; yu < Ru; yu++) {
-              const Eu = this.mC[yu];
-              (Ru > 1 || !Eu.IsGlobal) && Eu.updateBoundingInfo(uu)
+          _updateSubMeshesBoundingInfo(kk) {
+            if (!this.AY) return this;
+            const Fk = this.AY.length;
+            for (let Bk = 0; Bk < Fk; Bk++) {
+              const Rk = this.AY[Bk];
+              (Fk > 1 || !Rk.IsGlobal) && Rk.updateBoundingInfo(kk)
             }
             return this
           }
           _afterComputeWorldMatrix() {
-            this.US || (this._boundingInfoIsDirty = !0)
+            this.Fy || (this._boundingInfoIsDirty = !0)
           }
-          isInFrustum(uu) {
-            return this.vI().isInFrustum(uu, this.cullingStrategy)
+          isInFrustum(kk) {
+            return this.ZH().isInFrustum(kk, this.cullingStrategy)
           }
-          isCompletelyInFrustum(uu) {
-            return this.vI().isCompletelyInFrustum(uu)
+          isCompletelyInFrustum(kk) {
+            return this.ZH().isCompletelyInFrustum(kk)
           }
-          xKu(uu) {
-            let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              yu = arguments.length > 2 ? arguments[2] : void 0;
-            const Eu = this.vI(),
-              Ku = uu.vI();
-            if (Eu.intersects(Ku, Ru)) return !0;
-            if (yu)
-              for (const Qu of this.getChildMeshes())
-                if (Qu.xKu(uu, Ru, !0)) return !0;
+          NRk(kk) {
+            let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              Bk = arguments.length > 2 ? arguments[2] : void 0;
+            const Rk = this.ZH(),
+              tk = kk.ZH();
+            if (Rk.intersects(tk, Fk)) return !0;
+            if (Bk)
+              for (const ak of this.getChildMeshes())
+                if (ak.NRk(kk, Fk, !0)) return !0;
             return !1
           }
-          intersectsPoint(uu) {
-            return this.vI().intersectsPoint(uu)
+          intersectsPoint(kk) {
+            return this.ZH().intersectsPoint(kk)
           }
           get checkCollisions() {
             return this._internalAbstractMeshDataInfo._meshCollisionData._checkCollisions
           }
-          set checkCollisions(uu) {
-            this._internalAbstractMeshDataInfo._meshCollisionData._checkCollisions = uu
+          set checkCollisions(kk) {
+            this._internalAbstractMeshDataInfo._meshCollisionData._checkCollisions = kk
           }
           get collider() {
             return this._internalAbstractMeshDataInfo._meshCollisionData._collider
           }
-          moveWithCollisions(uu) {
-            let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          moveWithCollisions(kk) {
+            let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
             this.getAbsolutePosition().addToRef(this.ellipsoidOffset, this._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions);
-            const yu = this.lD().collisionCoordinator;
-            return this._internalAbstractMeshDataInfo._meshCollisionData._collider || (this._internalAbstractMeshDataInfo._meshCollisionData._collider = yu.createCollider()), this._internalAbstractMeshDataInfo._meshCollisionData._collider._radius = this.ellipsoid, yu.getNewPosition(this._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions, uu, this._internalAbstractMeshDataInfo._meshCollisionData._collider, this.collisionRetryCount, this, this._onCollisionPositionChange, this.uniqueId, Ru), this
+            const Bk = this.XN().collisionCoordinator;
+            return this._internalAbstractMeshDataInfo._meshCollisionData._collider || (this._internalAbstractMeshDataInfo._meshCollisionData._collider = Bk.createCollider()), this._internalAbstractMeshDataInfo._meshCollisionData._collider._radius = this.ellipsoid, Bk.getNewPosition(this._internalAbstractMeshDataInfo._meshCollisionData._oldPositionForCollisions, kk, this._internalAbstractMeshDataInfo._meshCollisionData._collider, this.collisionRetryCount, this, this._onCollisionPositionChange, this.uniqueId, Fk), this
           }
-          _collideForSubMesh(uu, Ru, yu) {
+          _collideForSubMesh(kk, Fk, Bk) {
             if (this._generatePointsArray(), !this._positions) return this;
-            if (!uu._lastColliderWorldVertices || !uu._lastColliderTransformMatrix.equals(Ru)) {
-              uu._lastColliderTransformMatrix = Ru.clone(), uu._lastColliderWorldVertices = [], uu._trianglePlanes = [];
-              const yu = uu.verticesStart,
-                Eu = uu.verticesStart + uu.verticesCount;
-              for (let Ku = yu; Ku < Eu; Ku++) uu._lastColliderWorldVertices.push(Qu.p.TransformCoordinates(this._positions[Ku], Ru))
+            if (!kk._lastColliderWorldVertices || !kk._lastColliderTransformMatrix.equals(Fk)) {
+              kk._lastColliderTransformMatrix = Fk.clone(), kk._lastColliderWorldVertices = [], kk._trianglePlanes = [];
+              const Bk = kk.verticesStart,
+                Rk = kk.verticesStart + kk.verticesCount;
+              for (let tk = Bk; tk < Rk; tk++) kk._lastColliderWorldVertices.push(ak.s.TransformCoordinates(this._positions[tk], Fk))
             }
-            return yu._collide(uu._trianglePlanes, uu._lastColliderWorldVertices, this.DEu(), uu.indexStart, uu.indexStart + uu.indexCount, uu.verticesStart, !!uu.nS(), this, this._shouldConvertRHS(), 7 === uu.nS()?.fillMode), this
+            return Bk._collide(kk._trianglePlanes, kk._lastColliderWorldVertices, this.hBk(), kk.indexStart, kk.indexStart + kk.indexCount, kk.verticesStart, !!kk.Ry(), this, this._shouldConvertRHS(), 7 === kk.Ry()?.fillMode), this
           }
-          _processCollisionsForSubMeshes(uu, Ru) {
-            const yu = this._scene.getCollidingSubMeshCandidates(this, uu),
-              Eu = yu.length;
-            for (let Ku = 0; Ku < Eu; Ku++) {
-              const Qu = yu.data[Ku];
-              Eu > 1 && !Qu._checkCollision(uu) || this._collideForSubMesh(Qu, Ru, uu)
+          _processCollisionsForSubMeshes(kk, Fk) {
+            const Bk = this._scene.getCollidingSubMeshCandidates(this, kk),
+              Rk = Bk.length;
+            for (let tk = 0; tk < Rk; tk++) {
+              const ak = Bk.data[tk];
+              Rk > 1 && !ak._checkCollision(kk) || this._collideForSubMesh(ak, Fk, kk)
             }
             return this
           }
           _shouldConvertRHS() {
             return !1
           }
-          _checkCollision(uu) {
-            if (!this.vI()._checkCollision(uu)) return this;
-            const Ru = Qu.m.Matrix[0],
-              yu = Qu.m.Matrix[1];
-            return Qu.d.ScalingToRef(1 / uu._radius.x, 1 / uu._radius.y, 1 / uu._radius.z, Ru), this.worldMatrixFromCache.multiplyToRef(Ru, yu), this._processCollisionsForSubMeshes(uu, yu), this
+          _checkCollision(kk) {
+            if (!this.ZH()._checkCollision(kk)) return this;
+            const Fk = ak.l.Matrix[0],
+              Bk = ak.l.Matrix[1];
+            return ak.c.ScalingToRef(1 / kk._radius.x, 1 / kk._radius.y, 1 / kk._radius.z, Fk), this.worldMatrixFromCache.multiplyToRef(Fk, Bk), this._processCollisionsForSubMeshes(kk, Bk), this
           }
           _generatePointsArray() {
             return !1
           }
-          intersects(uu, Ru, yu) {
-            let Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              Ku = arguments.length > 4 ? arguments[4] : void 0,
-              mu = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-            const Ju = new Xu.c,
-              Nu = this.getClassName(),
-              Vu = "InstancedLinesMesh" === Nu || "LinesMesh" === Nu || "GreasedLineMesh" === Nu ? this.intersectionThreshold : 0,
-              ru = this.vI();
-            if (!this.mC) return Ju;
-            if (!mu && (!uu.intersectsSphere(ru.aEu, Vu) || !uu.intersectsBox(ru.boundingBox, Vu))) return Ju;
-            if (Eu) return Ju.hit = !mu, Ju.pickedMesh = mu ? null : this, Ju.distance = mu ? 0 : Qu.p.Distance(uu.origin, ru.aEu.center), Ju.subMeshId = 0, Ju;
-            if (!this._generatePointsArray()) return Ju;
-            let Bu = null;
-            const xu = this._scene.getIntersectingSubMeshCandidates(this, uu),
-              Su = xu.length;
-            let pu = !1;
-            for (let Qu = 0; Qu < Su; Qu++) {
-              const uu = xu.data[Qu].nS();
-              if (uu && (7 == uu.fillMode || 0 == uu.fillMode || 1 == uu.fillMode || 2 == uu.fillMode || 4 == uu.fillMode)) {
-                pu = !0;
+          intersects(kk, Fk, Bk) {
+            let Rk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              tk = arguments.length > 4 ? arguments[4] : void 0,
+              Xk = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+            const bk = new dk.c,
+              wk = this.getClassName(),
+              sk = "InstancedLinesMesh" === wk || "LinesMesh" === wk || "GreasedLineMesh" === wk ? this.intersectionThreshold : 0,
+              Vk = this.ZH();
+            if (!this.AY) return bk;
+            if (!Xk && (!kk.intersectsSphere(Vk.JRk, sk) || !kk.intersectsBox(Vk.boundingBox, sk))) return bk;
+            if (Rk) return bk.hit = !Xk, bk.pickedMesh = Xk ? null : this, bk.distance = Xk ? 0 : ak.s.Distance(kk.origin, Vk.JRk.center), bk.subMeshId = 0, bk;
+            if (!this._generatePointsArray()) return bk;
+            let Jk = null;
+            const Ak = this._scene.getIntersectingSubMeshCandidates(this, kk),
+              ek = Ak.length;
+            let yk = !1;
+            for (let ak = 0; ak < ek; ak++) {
+              const kk = Ak.data[ak].Ry();
+              if (kk && (7 == kk.fillMode || 0 == kk.fillMode || 1 == kk.fillMode || 2 == kk.fillMode || 4 == kk.fillMode)) {
+                yk = !0;
                 break
               }
             }
-            if (!pu) return Ju.hit = !0, Ju.pickedMesh = this, Ju.distance = Qu.p.Distance(uu.origin, ru.aEu.center), Ju.subMeshId = -1, Ju;
-            for (let Qu = 0; Qu < Su; Qu++) {
-              const Eu = xu.data[Qu];
-              if (Su > 1 && !mu && !Eu.canIntersects(uu)) continue;
-              const Ku = Eu.intersects(uu, this._positions, this.DEu(), Ru, yu);
-              if (Ku && (Ru || !Bu || Ku.distance < Bu.distance) && (Bu = Ku, Bu.subMeshId = Eu._id, Bu._internalSubMeshId = Qu, Ru)) break
+            if (!yk) return bk.hit = !0, bk.pickedMesh = this, bk.distance = ak.s.Distance(kk.origin, Vk.JRk.center), bk.subMeshId = -1, bk;
+            for (let ak = 0; ak < ek; ak++) {
+              const Rk = Ak.data[ak];
+              if (ek > 1 && !Xk && !Rk.canIntersects(kk)) continue;
+              const tk = Rk.intersects(kk, this._positions, this.hBk(), Fk, Bk);
+              if (tk && (Fk || !Jk || tk.distance < Jk.distance) && (Jk = tk, Jk.subMeshId = Rk._id, Jk._internalSubMeshId = ak, Fk)) break
             }
-            if (Bu) {
-              const Ru = Ku ?? this.getWorldMatrix(),
-                yu = Qu.m.MS[0],
-                Eu = Qu.m.MS[1];
-              Qu.p.TransformCoordinatesToRef(uu.origin, Ru, yu), uu.direction.scaleToRef(Bu.distance, Eu);
-              const mu = Qu.p.TransformNormal(Eu, Ru).addInPlace(yu);
-              return Ju.hit = !0, Ju.distance = Qu.p.Distance(yu, mu), Ju.pickedPoint = mu, Ju.pickedMesh = this, Ju.bu = Bu.bu || 0, Ju.bv = Bu.bv || 0, Ju.subMeshFaceId = Bu.faceId, Ju.faceId = Bu.faceId + xu.data[Bu._internalSubMeshId].indexStart / (-1 !== this.getClassName().indexOf("LinesMesh") ? 2 : 3), Ju.subMeshId = Bu.subMeshId, Ju
+            if (Jk) {
+              const Fk = tk ?? this.getWorldMatrix(),
+                Bk = ak.l.Qe[0],
+                Rk = ak.l.Qe[1];
+              ak.s.TransformCoordinatesToRef(kk.origin, Fk, Bk), kk.direction.scaleToRef(Jk.distance, Rk);
+              const Xk = ak.s.TransformNormal(Rk, Fk).addInPlace(Bk);
+              return bk.hit = !0, bk.distance = ak.s.Distance(Bk, Xk), bk.pickedPoint = Xk, bk.pickedMesh = this, bk.bu = Jk.bu || 0, bk.bv = Jk.bv || 0, bk.subMeshFaceId = Jk.faceId, bk.faceId = Jk.faceId + Ak.data[Jk._internalSubMeshId].indexStart / (-1 !== this.getClassName().indexOf("LinesMesh") ? 2 : 3), bk.subMeshId = Jk.subMeshId, bk
             }
-            return Ju
+            return bk
           }
-          clone(uu, Ru, yu) {
+          clone(kk, Fk, Bk) {
             return null
           }
           releaseSubMeshes() {
-            let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            if (this.mC)
-              for (; this.mC.length;) this.mC[0].dispose(uu);
-            else this.mC = [];
+            let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            if (this.AY)
+              for (; this.AY.length;) this.AY[0].dispose(kk);
+            else this.AY = [];
             return this
           }
-          dispose(uu) {
-            let Ru, yu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            const Eu = this.lD();
-            for (this._scene.useMaterialMeshMap && this._internalAbstractMeshDataInfo._material && this._internalAbstractMeshDataInfo._material.meshMap && (this._internalAbstractMeshDataInfo._material.meshMap[this.uniqueId] = void 0), Eu.freeActiveMeshes(), Eu.freeRenderingGroups(), Eu.renderingManager.maintainStateBetweenFrames && Eu.renderingManager.restoreDispachedFlags(), void 0 !== this.actionManager && null !== this.actionManager && (this.actionManager.disposeWhenUnowned && !this._scene.meshes.some((uu => uu !== this && uu.actionManager === this.actionManager)) && this.actionManager.dispose(), this.actionManager = null), this._internalAbstractMeshDataInfo._skeleton = null, this._transformMatrixTexture && (this._transformMatrixTexture.dispose(), this._transformMatrixTexture = null), Ru = 0; Ru < this._intersectionsInProgress.length; Ru++) {
-              const uu = this._intersectionsInProgress[Ru],
-                yu = uu._intersectionsInProgress.indexOf(this);
-              uu._intersectionsInProgress.splice(yu, 1)
+          dispose(kk) {
+            let Fk, Bk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            const Rk = this.XN();
+            for (this._scene.useMaterialMeshMap && this._internalAbstractMeshDataInfo._material && this._internalAbstractMeshDataInfo._material.meshMap && (this._internalAbstractMeshDataInfo._material.meshMap[this.uniqueId] = void 0), Rk.freeActiveMeshes(), Rk.freeRenderingGroups(), Rk.renderingManager.maintainStateBetweenFrames && Rk.renderingManager.restoreDispachedFlags(), void 0 !== this.actionManager && null !== this.actionManager && (this.actionManager.disposeWhenUnowned && !this._scene.meshes.some((kk => kk !== this && kk.actionManager === this.actionManager)) && this.actionManager.dispose(), this.actionManager = null), this._internalAbstractMeshDataInfo._skeleton = null, this._transformMatrixTexture && (this._transformMatrixTexture.dispose(), this._transformMatrixTexture = null), Fk = 0; Fk < this._intersectionsInProgress.length; Fk++) {
+              const kk = this._intersectionsInProgress[Fk],
+                Bk = kk._intersectionsInProgress.indexOf(this);
+              kk._intersectionsInProgress.splice(Bk, 1)
             }
             this._intersectionsInProgress.length = 0;
-            const Ku = Eu.lights;
-            for (const mu of Ku) {
-              let uu = mu.includedOnlyMeshes.indexOf(this); - 1 !== uu && mu.includedOnlyMeshes.splice(uu, 1), uu = mu.excludedMeshes.indexOf(this), -1 !== uu && mu.excludedMeshes.splice(uu, 1);
-              const Ru = mu.getShadowGenerators();
-              if (Ru) {
-                const yu = Ru.values();
-                for (let Ru = yu.next(); !0 !== Ru.done; Ru = yu.next()) {
-                  const yu = Ru.value.getShadowMap();
-                  yu && yu.renderList && (uu = yu.renderList.indexOf(this), -1 !== uu && yu.renderList.splice(uu, 1))
+            const tk = Rk.lights;
+            for (const Xk of tk) {
+              let kk = Xk.includedOnlyMeshes.indexOf(this); - 1 !== kk && Xk.includedOnlyMeshes.splice(kk, 1), kk = Xk.excludedMeshes.indexOf(this), -1 !== kk && Xk.excludedMeshes.splice(kk, 1);
+              const Fk = Xk.getShadowGenerators();
+              if (Fk) {
+                const Bk = Fk.values();
+                for (let Fk = Bk.next(); !0 !== Fk.done; Fk = Bk.next()) {
+                  const Bk = Fk.value.getShadowMap();
+                  Bk && Bk.renderList && (kk = Bk.renderList.indexOf(this), -1 !== kk && Bk.renderList.splice(kk, 1))
                 }
               }
             }
-            this.releaseSubMeshes(Eu._isDisposing);
-            const Qu = Eu.eS();
-            if (null !== this._occlusionQuery && (this.isOcclusionQueryInProgress = !1, Qu.deleteQuery(this._occlusionQuery), this._occlusionQuery = null), Qu.wipeCaches(), Eu.rM(this), this._parentContainer) {
-              const uu = this._parentContainer.meshes.indexOf(this);
-              uu > -1 && this._parentContainer.meshes.splice(uu, 1), this._parentContainer = null
+            this.releaseSubMeshes(Rk._isDisposing);
+            const ak = Rk.ne();
+            if (null !== this._occlusionQuery && (this.isOcclusionQueryInProgress = !1, ak.deleteQuery(this._occlusionQuery), this._occlusionQuery = null), ak.wipeCaches(), Rk.hN(this), this._parentContainer) {
+              const kk = this._parentContainer.meshes.indexOf(this);
+              kk > -1 && this._parentContainer.meshes.splice(kk, 1), this._parentContainer = null
             }
-            if (yu && this.material && ("MultiMaterial" === this.material.getClassName() ? this.material.dispose(!1, !0, !0) : this.material.dispose(!1, !0)), !uu)
-              for (Ru = 0; Ru < Eu.JC.length; Ru++) Eu.JC[Ru].emitter === this && (Eu.JC[Ru].dispose(), Ru--);
-            this._internalAbstractMeshDataInfo._facetData.facetDataEnabled && this.disableFacetData(), this._uniformBuffer.dispose(), this.onAfterWorldMatrixUpdateObservable.clear(), this.onCollideObservable.clear(), this.onCollisionPositionChangeObservable.clear(), this.onRebuildObservable.clear(), super.dispose(uu, yu)
+            if (Bk && this.material && ("MultiMaterial" === this.material.getClassName() ? this.material.dispose(!1, !0, !0) : this.material.dispose(!1, !0)), !kk)
+              for (Fk = 0; Fk < Rk.fY.length; Fk++) Rk.fY[Fk].emitter === this && (Rk.fY[Fk].dispose(), Fk--);
+            this._internalAbstractMeshDataInfo._facetData.facetDataEnabled && this.disableFacetData(), this._uniformBuffer.dispose(), this.onAfterWorldMatrixUpdateObservable.clear(), this.onCollideObservable.clear(), this.onCollisionPositionChangeObservable.clear(), this.onRebuildObservable.clear(), super.dispose(kk, Bk)
           }
           _initFacetData() {
-            const uu = this._internalAbstractMeshDataInfo._facetData;
-            uu.facetNormals || (uu.facetNormals = []), uu.facetPositions || (uu.facetPositions = []), uu.facetPartitioning || (uu.facetPartitioning = new Array), uu.facetNb = this.DEu().length / 3 | 0, uu.partitioningSubdivisions = uu.partitioningSubdivisions ? uu.partitioningSubdivisions : 10, uu.partitioningBBoxRatio = uu.partitioningBBoxRatio ? uu.partitioningBBoxRatio : 1.01;
-            for (let Ru = 0; Ru < uu.facetNb; Ru++) uu.facetNormals[Ru] = Qu.p.Zero(), uu.facetPositions[Ru] = Qu.p.Zero();
-            return uu.facetDataEnabled = !0, this
+            const kk = this._internalAbstractMeshDataInfo._facetData;
+            kk.facetNormals || (kk.facetNormals = []), kk.facetPositions || (kk.facetPositions = []), kk.facetPartitioning || (kk.facetPartitioning = new Array), kk.facetNb = this.hBk().length / 3 | 0, kk.partitioningSubdivisions = kk.partitioningSubdivisions ? kk.partitioningSubdivisions : 10, kk.partitioningBBoxRatio = kk.partitioningBBoxRatio ? kk.partitioningBBoxRatio : 1.01;
+            for (let Fk = 0; Fk < kk.facetNb; Fk++) kk.facetNormals[Fk] = ak.s.Zero(), kk.facetPositions[Fk] = ak.s.Zero();
+            return kk.facetDataEnabled = !0, this
           }
           updateFacetData() {
-            const uu = this._internalAbstractMeshDataInfo._facetData;
-            uu.facetDataEnabled || this._initFacetData();
-            const Ru = this.getVerticesData(mu.h.PositionKind),
-              yu = this.DEu(),
-              Eu = this.getVerticesData(mu.h.NormalKind)?.slice(),
-              Ku = this.vI();
-            if (uu.facetDepthSort && !uu.facetDepthSortEnabled) {
-              if (uu.facetDepthSortEnabled = !0, yu instanceof Uint16Array) uu.depthSortedIndices = new Uint16Array(yu);
-              else if (yu instanceof Uint32Array) uu.depthSortedIndices = new Uint32Array(yu);
+            const kk = this._internalAbstractMeshDataInfo._facetData;
+            kk.facetDataEnabled || this._initFacetData();
+            const Fk = this.getVerticesData(Xk.n.PositionKind),
+              Bk = this.hBk(),
+              Rk = this.getVerticesData(Xk.n.NormalKind)?.slice(),
+              tk = this.ZH();
+            if (kk.facetDepthSort && !kk.facetDepthSortEnabled) {
+              if (kk.facetDepthSortEnabled = !0, Bk instanceof Uint16Array) kk.depthSortedIndices = new Uint16Array(Bk);
+              else if (Bk instanceof Uint32Array) kk.depthSortedIndices = new Uint32Array(Bk);
               else {
-                let Ru = !1;
-                for (let uu = 0; uu < yu.length; uu++)
-                  if (yu[uu] > 65535) {
-                    Ru = !0;
+                let Fk = !1;
+                for (let kk = 0; kk < Bk.length; kk++)
+                  if (Bk[kk] > 65535) {
+                    Fk = !0;
                     break
-                  } uu.depthSortedIndices = Ru ? new Uint32Array(yu) : new Uint16Array(yu)
+                  } kk.depthSortedIndices = Fk ? new Uint32Array(Bk) : new Uint16Array(Bk)
               }
-              if (uu.facetDepthSortFunction = function(uu, Ru) {
-                  return Ru.sqDistance - uu.sqDistance
-                }, !uu.facetDepthSortFrom) {
-                const Ru = this.lD().activeCamera;
-                uu.facetDepthSortFrom = Ru ? Ru.position : Qu.p.Zero()
+              if (kk.facetDepthSortFunction = function(kk, Fk) {
+                  return Fk.sqDistance - kk.sqDistance
+                }, !kk.facetDepthSortFrom) {
+                const Fk = this.XN().activeCamera;
+                kk.facetDepthSortFrom = Fk ? Fk.position : ak.s.Zero()
               }
-              uu.depthSortedFacets = [];
-              for (let Ru = 0; Ru < uu.facetNb; Ru++) {
-                const yu = {
-                  ind: 3 * Ru,
+              kk.depthSortedFacets = [];
+              for (let Fk = 0; Fk < kk.facetNb; Fk++) {
+                const Bk = {
+                  ind: 3 * Fk,
                   sqDistance: 0
                 };
-                uu.depthSortedFacets.push(yu)
+                kk.depthSortedFacets.push(Bk)
               }
-              uu.invertedMatrix = Qu.d.Identity(), uu.facetDepthSortOrigin = Qu.p.Zero()
+              kk.invertedMatrix = ak.c.Identity(), kk.facetDepthSortOrigin = ak.s.Zero()
             }
-            uu.bbSize.x = Ku.maximum.x - Ku.minimum.x > du.d ? Ku.maximum.x - Ku.minimum.x : du.d, uu.bbSize.y = Ku.maximum.y - Ku.minimum.y > du.d ? Ku.maximum.y - Ku.minimum.y : du.d, uu.bbSize.z = Ku.maximum.z - Ku.minimum.z > du.d ? Ku.maximum.z - Ku.minimum.z : du.d;
-            let Nu = uu.bbSize.x > uu.bbSize.y ? uu.bbSize.x : uu.bbSize.y;
-            if (Nu = Nu > uu.bbSize.z ? Nu : uu.bbSize.z, uu.subDiv.max = uu.partitioningSubdivisions, uu.subDiv.X = Math.floor(uu.subDiv.max * uu.bbSize.x / Nu), uu.subDiv.Y = Math.floor(uu.subDiv.max * uu.bbSize.y / Nu), uu.subDiv.Z = Math.floor(uu.subDiv.max * uu.bbSize.z / Nu), uu.subDiv.X = uu.subDiv.X < 1 ? 1 : uu.subDiv.X, uu.subDiv.Y = uu.subDiv.Y < 1 ? 1 : uu.subDiv.Y, uu.subDiv.Z = uu.subDiv.Z < 1 ? 1 : uu.subDiv.Z, uu.facetParameters.facetNormals = this.getFacetLocalNormals(), uu.facetParameters.facetPositions = this.getFacetLocalPositions(), uu.facetParameters.facetPartitioning = this.getFacetLocalPartitioning(), uu.facetParameters.bInfo = Ku, uu.facetParameters.bbSize = uu.bbSize, uu.facetParameters.subDiv = uu.subDiv, uu.facetParameters.ratio = this.partitioningBBoxRatio, uu.facetParameters.depthSort = uu.facetDepthSort, uu.facetDepthSort && uu.facetDepthSortEnabled && (this.computeWorldMatrix(!0), this._worldMatrix.invertToRef(uu.invertedMatrix), Qu.p.TransformCoordinatesToRef(uu.facetDepthSortFrom, uu.invertedMatrix, uu.facetDepthSortOrigin), uu.facetParameters.distanceTo = uu.facetDepthSortOrigin), uu.facetParameters.depthSortedFacets = uu.depthSortedFacets, Eu && Ju.e.ComputeNormals(Ru, yu, Eu, uu.facetParameters), uu.facetDepthSort && uu.facetDepthSortEnabled) {
-              uu.depthSortedFacets.sort(uu.facetDepthSortFunction);
-              const Ru = uu.depthSortedIndices.length / 3 | 0;
-              for (let Eu = 0; Eu < Ru; Eu++) {
-                const Ru = uu.depthSortedFacets[Eu].ind;
-                uu.depthSortedIndices[3 * Eu] = yu[Ru], uu.depthSortedIndices[3 * Eu + 1] = yu[Ru + 1], uu.depthSortedIndices[3 * Eu + 2] = yu[Ru + 2]
+            kk.bbSize.x = tk.maximum.x - tk.minimum.x > ik.c ? tk.maximum.x - tk.minimum.x : ik.c, kk.bbSize.y = tk.maximum.y - tk.minimum.y > ik.c ? tk.maximum.y - tk.minimum.y : ik.c, kk.bbSize.z = tk.maximum.z - tk.minimum.z > ik.c ? tk.maximum.z - tk.minimum.z : ik.c;
+            let wk = kk.bbSize.x > kk.bbSize.y ? kk.bbSize.x : kk.bbSize.y;
+            if (wk = wk > kk.bbSize.z ? wk : kk.bbSize.z, kk.subDiv.max = kk.partitioningSubdivisions, kk.subDiv.X = Math.floor(kk.subDiv.max * kk.bbSize.x / wk), kk.subDiv.Y = Math.floor(kk.subDiv.max * kk.bbSize.y / wk), kk.subDiv.Z = Math.floor(kk.subDiv.max * kk.bbSize.z / wk), kk.subDiv.X = kk.subDiv.X < 1 ? 1 : kk.subDiv.X, kk.subDiv.Y = kk.subDiv.Y < 1 ? 1 : kk.subDiv.Y, kk.subDiv.Z = kk.subDiv.Z < 1 ? 1 : kk.subDiv.Z, kk.facetParameters.facetNormals = this.getFacetLocalNormals(), kk.facetParameters.facetPositions = this.getFacetLocalPositions(), kk.facetParameters.facetPartitioning = this.getFacetLocalPartitioning(), kk.facetParameters.bInfo = tk, kk.facetParameters.bbSize = kk.bbSize, kk.facetParameters.subDiv = kk.subDiv, kk.facetParameters.ratio = this.partitioningBBoxRatio, kk.facetParameters.depthSort = kk.facetDepthSort, kk.facetDepthSort && kk.facetDepthSortEnabled && (this.computeWorldMatrix(!0), this._worldMatrix.invertToRef(kk.invertedMatrix), ak.s.TransformCoordinatesToRef(kk.facetDepthSortFrom, kk.invertedMatrix, kk.facetDepthSortOrigin), kk.facetParameters.distanceTo = kk.facetDepthSortOrigin), kk.facetParameters.depthSortedFacets = kk.depthSortedFacets, Rk && bk.e.ComputeNormals(Fk, Bk, Rk, kk.facetParameters), kk.facetDepthSort && kk.facetDepthSortEnabled) {
+              kk.depthSortedFacets.sort(kk.facetDepthSortFunction);
+              const Fk = kk.depthSortedIndices.length / 3 | 0;
+              for (let Rk = 0; Rk < Fk; Rk++) {
+                const Fk = kk.depthSortedFacets[Rk].ind;
+                kk.depthSortedIndices[3 * Rk] = Bk[Fk], kk.depthSortedIndices[3 * Rk + 1] = Bk[Fk + 1], kk.depthSortedIndices[3 * Rk + 2] = Bk[Fk + 2]
               }
-              this.updateIndices(uu.depthSortedIndices, void 0, !0)
+              this.updateIndices(kk.depthSortedIndices, void 0, !0)
             }
             return this
           }
           getFacetLocalNormals() {
-            const uu = this._internalAbstractMeshDataInfo._facetData;
-            return uu.facetNormals || this.updateFacetData(), uu.facetNormals
+            const kk = this._internalAbstractMeshDataInfo._facetData;
+            return kk.facetNormals || this.updateFacetData(), kk.facetNormals
           }
           getFacetLocalPositions() {
-            const uu = this._internalAbstractMeshDataInfo._facetData;
-            return uu.facetPositions || this.updateFacetData(), uu.facetPositions
+            const kk = this._internalAbstractMeshDataInfo._facetData;
+            return kk.facetPositions || this.updateFacetData(), kk.facetPositions
           }
           getFacetLocalPartitioning() {
-            const uu = this._internalAbstractMeshDataInfo._facetData;
-            return uu.facetPartitioning || this.updateFacetData(), uu.facetPartitioning
+            const kk = this._internalAbstractMeshDataInfo._facetData;
+            return kk.facetPartitioning || this.updateFacetData(), kk.facetPartitioning
           }
-          getFacetPosition(uu) {
-            const Ru = Qu.p.Zero();
-            return this.getFacetPositionToRef(uu, Ru), Ru
+          getFacetPosition(kk) {
+            const Fk = ak.s.Zero();
+            return this.getFacetPositionToRef(kk, Fk), Fk
           }
-          getFacetPositionToRef(uu, Ru) {
-            const yu = this.getFacetLocalPositions()[uu],
-              Eu = this.getWorldMatrix();
-            return Qu.p.TransformCoordinatesToRef(yu, Eu, Ru), this
+          getFacetPositionToRef(kk, Fk) {
+            const Bk = this.getFacetLocalPositions()[kk],
+              Rk = this.getWorldMatrix();
+            return ak.s.TransformCoordinatesToRef(Bk, Rk, Fk), this
           }
-          getFacetNormal(uu) {
-            const Ru = Qu.p.Zero();
-            return this.getFacetNormalToRef(uu, Ru), Ru
+          getFacetNormal(kk) {
+            const Fk = ak.s.Zero();
+            return this.getFacetNormalToRef(kk, Fk), Fk
           }
-          getFacetNormalToRef(uu, Ru) {
-            const yu = this.getFacetLocalNormals()[uu];
-            return Qu.p.TransformNormalToRef(yu, this.getWorldMatrix(), Ru), this
+          getFacetNormalToRef(kk, Fk) {
+            const Bk = this.getFacetLocalNormals()[kk];
+            return ak.s.TransformNormalToRef(Bk, this.getWorldMatrix(), Fk), this
           }
-          getFacetsAtLocalCoordinates(uu, Ru, yu) {
-            const Eu = this.vI(),
-              Ku = this._internalAbstractMeshDataInfo._facetData,
-              Qu = Math.floor((uu - Eu.minimum.x * Ku.partitioningBBoxRatio) * Ku.subDiv.X * Ku.partitioningBBoxRatio / Ku.bbSize.x),
-              mu = Math.floor((Ru - Eu.minimum.y * Ku.partitioningBBoxRatio) * Ku.subDiv.Y * Ku.partitioningBBoxRatio / Ku.bbSize.y),
-              Ju = Math.floor((yu - Eu.minimum.z * Ku.partitioningBBoxRatio) * Ku.subDiv.Z * Ku.partitioningBBoxRatio / Ku.bbSize.z);
-            return Qu < 0 || Qu > Ku.subDiv.max || mu < 0 || mu > Ku.subDiv.max || Ju < 0 || Ju > Ku.subDiv.max ? null : Ku.facetPartitioning[Qu + Ku.subDiv.max * mu + Ku.subDiv.max * Ku.subDiv.max * Ju]
+          getFacetsAtLocalCoordinates(kk, Fk, Bk) {
+            const Rk = this.ZH(),
+              tk = this._internalAbstractMeshDataInfo._facetData,
+              ak = Math.floor((kk - Rk.minimum.x * tk.partitioningBBoxRatio) * tk.subDiv.X * tk.partitioningBBoxRatio / tk.bbSize.x),
+              Xk = Math.floor((Fk - Rk.minimum.y * tk.partitioningBBoxRatio) * tk.subDiv.Y * tk.partitioningBBoxRatio / tk.bbSize.y),
+              bk = Math.floor((Bk - Rk.minimum.z * tk.partitioningBBoxRatio) * tk.subDiv.Z * tk.partitioningBBoxRatio / tk.bbSize.z);
+            return ak < 0 || ak > tk.subDiv.max || Xk < 0 || Xk > tk.subDiv.max || bk < 0 || bk > tk.subDiv.max ? null : tk.facetPartitioning[ak + tk.subDiv.max * Xk + tk.subDiv.max * tk.subDiv.max * bk]
           }
-          getClosestFacetAtCoordinates(uu, Ru, yu, Eu) {
-            let Ku = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-              mu = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-            const Ju = this.getWorldMatrix(),
-              Nu = Qu.m.Matrix[5];
-            Ju.invertToRef(Nu);
-            const Xu = Qu.m.MS[8];
-            Qu.p.TransformCoordinatesFromFloatsToRef(uu, Ru, yu, Nu, Xu);
-            const Vu = this.getClosestFacetAtLocalCoordinates(Xu.x, Xu.y, Xu.z, Eu, Ku, mu);
-            return Eu && Qu.p.TransformCoordinatesFromFloatsToRef(Eu.x, Eu.y, Eu.z, Ju, Eu), Vu
+          getClosestFacetAtCoordinates(kk, Fk, Bk, Rk) {
+            let tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+              Xk = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const bk = this.getWorldMatrix(),
+              wk = ak.l.Matrix[5];
+            bk.invertToRef(wk);
+            const dk = ak.l.Qe[8];
+            ak.s.TransformCoordinatesFromFloatsToRef(kk, Fk, Bk, wk, dk);
+            const sk = this.getClosestFacetAtLocalCoordinates(dk.x, dk.y, dk.z, Rk, tk, Xk);
+            return Rk && ak.s.TransformCoordinatesFromFloatsToRef(Rk.x, Rk.y, Rk.z, bk, Rk), sk
           }
-          getClosestFacetAtLocalCoordinates(uu, Ru, yu, Eu) {
-            let Ku, Qu, mu, Ju, Nu, Xu, Vu, ru, Bu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-              xu = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-              Su = null;
-            const pu = this.getFacetLocalPositions(),
-              Tu = this.getFacetLocalNormals(),
-              Wu = this.getFacetsAtLocalCoordinates(uu, Ru, yu);
-            if (!Wu) return null;
-            let ju, Hu, du, bu, Cu = Number.MAX_VALUE;
-            for (let ku = 0; ku < Wu.length; ku++) Hu = Wu[ku], du = Tu[Hu], bu = pu[Hu], Ju = (uu - bu.x) * du.x + (Ru - bu.y) * du.y + (yu - bu.z) * du.z, (!Bu || Bu && xu && Ju >= 0 || Bu && !xu && Ju <= 0) && (Ju = du.x * bu.x + du.y * bu.y + du.z * bu.z, Nu = -(du.x * uu + du.y * Ru + du.z * yu - Ju) / (du.x * du.x + du.y * du.y + du.z * du.z), Xu = uu + du.x * Nu, Vu = Ru + du.y * Nu, ru = yu + du.z * Nu, Ku = Xu - uu, Qu = Vu - Ru, mu = ru - yu, ju = Ku * Ku + Qu * Qu + mu * mu, ju < Cu && (Cu = ju, Su = Hu, Eu && (Eu.x = Xu, Eu.y = Vu, Eu.z = ru)));
-            return Su
+          getClosestFacetAtLocalCoordinates(kk, Fk, Bk, Rk) {
+            let tk, ak, Xk, bk, wk, dk, sk, Vk, Jk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+              Ak = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+              ek = null;
+            const yk = this.getFacetLocalPositions(),
+              fk = this.getFacetLocalNormals(),
+              mk = this.getFacetsAtLocalCoordinates(kk, Fk, Bk);
+            if (!mk) return null;
+            let Wk, vk, ik, Yk, Lk = Number.MAX_VALUE;
+            for (let Ok = 0; Ok < mk.length; Ok++) vk = mk[Ok], ik = fk[vk], Yk = yk[vk], bk = (kk - Yk.x) * ik.x + (Fk - Yk.y) * ik.y + (Bk - Yk.z) * ik.z, (!Jk || Jk && Ak && bk >= 0 || Jk && !Ak && bk <= 0) && (bk = ik.x * Yk.x + ik.y * Yk.y + ik.z * Yk.z, wk = -(ik.x * kk + ik.y * Fk + ik.z * Bk - bk) / (ik.x * ik.x + ik.y * ik.y + ik.z * ik.z), dk = kk + ik.x * wk, sk = Fk + ik.y * wk, Vk = Bk + ik.z * wk, tk = dk - kk, ak = sk - Fk, Xk = Vk - Bk, Wk = tk * tk + ak * ak + Xk * Xk, Wk < Lk && (Lk = Wk, ek = vk, Rk && (Rk.x = dk, Rk.y = sk, Rk.z = Vk)));
+            return ek
           }
           getFacetDataParameters() {
             return this._internalAbstractMeshDataInfo._facetData.facetParameters
           }
           disableFacetData() {
-            const uu = this._internalAbstractMeshDataInfo._facetData;
-            return uu.facetDataEnabled && (uu.facetDataEnabled = !1, uu.facetPositions = [], uu.facetNormals = [], uu.facetPartitioning = new Array, uu.facetParameters = {}, uu.depthSortedIndices = new Uint32Array(0)), this
+            const kk = this._internalAbstractMeshDataInfo._facetData;
+            return kk.facetDataEnabled && (kk.facetDataEnabled = !1, kk.facetPositions = [], kk.facetNormals = [], kk.facetPartitioning = new Array, kk.facetParameters = {}, kk.depthSortedIndices = new Uint32Array(0)), this
           }
-          updateIndices(uu, Ru) {
+          updateIndices(kk, Fk) {
             return this
           }
-          createNormals(uu) {
-            const Ru = this.getVerticesData(mu.h.PositionKind),
-              yu = this.DEu();
-            let Eu;
-            return Eu = this.isVerticesDataPresent(mu.h.NormalKind) ? this.getVerticesData(mu.h.NormalKind) : [], Ju.e.ComputeNormals(Ru, yu, Eu, {
-              useRightHandedSystem: this.lD().useRightHandedSystem
-            }), this.setVerticesData(mu.h.NormalKind, Eu, uu), this
+          createNormals(kk) {
+            const Fk = this.getVerticesData(Xk.n.PositionKind),
+              Bk = this.hBk();
+            let Rk;
+            return Rk = this.isVerticesDataPresent(Xk.n.NormalKind) ? this.getVerticesData(Xk.n.NormalKind) : [], bk.e.ComputeNormals(Fk, Bk, Rk, {
+              useRightHandedSystem: this.XN().useRightHandedSystem
+            }), this.setVerticesData(Xk.n.NormalKind, Rk, kk), this
           }
           async optimizeIndicesAsync() {
-            const uu = this.DEu();
-            if (!uu) return this;
+            const kk = this.hBk();
+            if (!kk) return this;
             const {
-              OptimizeIndices: Ru
-            } = await yu.e(341).then((() => yu(42109)));
-            return Ru(uu), this.setIndices(uu, this.getTotalVertices()), this
+              OptimizeIndices: Fk
+            } = await Bk.e(341).then((() => Bk(41970)));
+            return Fk(kk), this.setIndices(kk, this.getTotalVertices()), this
           }
-          alignWithNormal(uu, Ru) {
-            Ru || (Ru = bu.b.Y);
-            const yu = Qu.m.MS[0],
-              Eu = Qu.m.MS[1];
-            return Qu.p.CrossToRef(Ru, uu, Eu), Qu.p.CrossToRef(uu, Eu, yu), this.rotationQuaternion ? Qu.f.RotationQuaternionFromAxisToRef(yu, uu, Eu, this.rotationQuaternion) : Qu.p.RotationFromAxisToRef(yu, uu, Eu, this.rotation), this
+          alignWithNormal(kk, Fk) {
+            Fk || (Fk = Yk.b.Y);
+            const Bk = ak.l.Qe[0],
+              Rk = ak.l.Qe[1];
+            return ak.s.CrossToRef(Fk, kk, Rk), ak.s.CrossToRef(kk, Rk, Bk), this.rotationQuaternion ? ak.e.RotationQuaternionFromAxisToRef(Bk, kk, Rk, this.rotationQuaternion) : ak.s.RotationFromAxisToRef(Bk, kk, Rk, this.rotation), this
           }
           _checkOcclusionQuery() {
             return !1
           }
           disableEdgesRendering() {
-            throw (0, Tu.k)("EdgesRenderer")
+            throw (0, fk.i)("EdgesRenderer")
           }
-          enableEdgesRendering(uu, Ru, yu) {
-            throw (0, Tu.k)("EdgesRenderer")
+          enableEdgesRendering(kk, Fk, Bk) {
+            throw (0, fk.i)("EdgesRenderer")
           }
           getConnectedParticleSystems() {
-            return this._scene.JC.filter((uu => uu.emitter === this))
+            return this._scene.fY.filter((kk => kk.emitter === this))
           }
         }, (() => {
-          const yu = "function" === typeof Symbol && Symbol.metadata ? Object.create(Bu[Symbol.metadata] ?? null) : void 0;
-          Ru = [ku.g.filter((function() {
+          const Bk = "function" === typeof Symbol && Symbol.metadata ? Object.create(Jk[Symbol.metadata] ?? null) : void 0;
+          Fk = [Ok.g.filter((function() {
             return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0]) && !Array.isArray(arguments.length <= 3 ? void 0 : arguments[3]) && !Array.isArray(arguments.length <= 4 ? void 0 : arguments[4]) && !Array.isArray(arguments.length <= 5 ? void 0 : arguments[5]) && !Array.isArray(arguments.length <= 6 ? void 0 : arguments[6])
-          }))], (0, Eu.h)(uu, null, Ru, {
+          }))], (0, Rk.j)(kk, null, Fk, {
             kind: "method",
             name: "_ApplySkeleton",
             static: !0,
             private: !1,
             access: {
-              has: uu => "_ApplySkeleton" in uu,
-              get: uu => uu._ApplySkeleton
+              has: kk => "_ApplySkeleton" in kk,
+              get: kk => kk._ApplySkeleton
             },
-            metadata: yu
-          }, null, xu), yu && Object.defineProperty(uu, Symbol.metadata, {
+            metadata: Bk
+          }, null, Ak), Bk && Object.defineProperty(kk, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: yu
+            value: Bk
           })
-        })(), uu.OCCLUSION_TYPE_NONE = ((0, Eu.l)(uu, xu), 0), uu.OCCLUSION_TYPE_OPTIMISTIC = 1, uu.OCCLUSION_TYPE_STRICT = 2, uu.OCCLUSION_ALGORITHM_TYPE_ACCURATE = 0, uu.OCCLUSION_ALGORITHM_TYPE_CONSERVATIVE = 1, uu.CULLINGSTRATEGY_STANDARD = 0, uu.CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, uu.CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, uu.CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, uu.DefaultIsPickable = !0, uu
+        })(), kk.OCCLUSION_TYPE_NONE = ((0, Rk.l)(kk, Ak), 0), kk.OCCLUSION_TYPE_OPTIMISTIC = 1, kk.OCCLUSION_TYPE_STRICT = 2, kk.OCCLUSION_ALGORITHM_TYPE_ACCURATE = 0, kk.OCCLUSION_ALGORITHM_TYPE_CONSERVATIVE = 1, kk.CULLINGSTRATEGY_STANDARD = 0, kk.CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, kk.CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, kk.CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, kk.DefaultIsPickable = !0, kk
       })(),
-      su = !1;
+      ck = !1;
 
-    function tu() {
-      su || (su = !0, (0, Au.c)("BABYLON.AbstractMesh", nu))
-    }(xu = nu.prototype).createOrUpdateSubmeshesOctree ?? (xu.createOrUpdateSubmeshesOctree = (0, Tu.i)("AbstractMesh", "createOrUpdateSubmeshesOctree")), (Su = nu.prototype).getPhysicsImpostor ?? (Su.getPhysicsImpostor = (0, Tu.i)("AbstractMesh", "getPhysicsImpostor")), (pu = nu.prototype).setPhysicsLinkWith ?? (pu.setPhysicsLinkWith = (0, Tu.i)("AbstractMesh", "setPhysicsLinkWith")), Object.getOwnPropertyDescriptor(nu.prototype, "occlusionRetryCount") || Object.defineProperty(nu.prototype, "occlusionRetryCount", (0, Tu.e)("AbstractMesh", "occlusionRetryCount")), Object.getOwnPropertyDescriptor(nu.prototype, "occlusionType") || Object.defineProperty(nu.prototype, "occlusionType", (0, Tu.e)("AbstractMesh", "occlusionType")), Object.getOwnPropertyDescriptor(nu.prototype, "occlusionQueryAlgorithmType") || Object.defineProperty(nu.prototype, "occlusionQueryAlgorithmType", (0, Tu.e)("AbstractMesh", "occlusionQueryAlgorithmType")), Object.getOwnPropertyDescriptor(nu.prototype, "isOccluded") || Object.defineProperty(nu.prototype, "isOccluded", (0, Tu.e)("AbstractMesh", "isOccluded")), Object.getOwnPropertyDescriptor(nu.prototype, "isOcclusionQueryInProgress") || Object.defineProperty(nu.prototype, "isOcclusionQueryInProgress", (0, Tu.e)("AbstractMesh", "isOcclusionQueryInProgress")), Object.getOwnPropertyDescriptor(nu.prototype, "forceRenderingWhenOccluded") || Object.defineProperty(nu.prototype, "forceRenderingWhenOccluded", (0, Tu.e)("AbstractMesh", "forceRenderingWhenOccluded")), Object.getOwnPropertyDescriptor(nu.prototype, "occlusionForRenderPassId") || Object.defineProperty(nu.prototype, "occlusionForRenderPassId", (0, Tu.e)("AbstractMesh", "occlusionForRenderPassId")), Object.getOwnPropertyDescriptor(nu.prototype, "decalMap") || Object.defineProperty(nu.prototype, "decalMap", (0, Tu.e)("AbstractMesh", "decalMap")), Object.getOwnPropertyDescriptor(nu.prototype, "bI") || Object.defineProperty(nu.prototype, "bI", (0, Tu.e)("AbstractMesh", "bI")), Object.getOwnPropertyDescriptor(nu.prototype, "physicsImpostor") || Object.defineProperty(nu.prototype, "physicsImpostor", (0, Tu.e)("AbstractMesh", "physicsImpostor")), Object.getOwnPropertyDescriptor(nu.prototype, "showBoundingBox") || Object.defineProperty(nu.prototype, "showBoundingBox", (0, Tu.e)("AbstractMesh", "showBoundingBox")), Object.getOwnPropertyDescriptor(nu.prototype, "edgesRenderer") || Object.defineProperty(nu.prototype, "edgesRenderer", (0, Tu.e)("AbstractMesh", "edgesRenderer")), Object.getOwnPropertyDescriptor(nu.prototype, "renderOutline") || Object.defineProperty(nu.prototype, "renderOutline", (0, Tu.e)("AbstractMesh", "renderOutline")), Object.getOwnPropertyDescriptor(nu.prototype, "renderOverlay") || Object.defineProperty(nu.prototype, "renderOverlay", (0, Tu.e)("AbstractMesh", "renderOverlay"))
+    function Gk() {
+      ck || (ck = !0, (0, Sk.d)("BABYLON.AbstractMesh", Uk))
+    }(Ak = Uk.prototype).createOrUpdateSubmeshesOctree ?? (Ak.createOrUpdateSubmeshesOctree = (0, fk.g)("AbstractMesh", "createOrUpdateSubmeshesOctree")), (ek = Uk.prototype).getPhysicsImpostor ?? (ek.getPhysicsImpostor = (0, fk.g)("AbstractMesh", "getPhysicsImpostor")), (yk = Uk.prototype).setPhysicsLinkWith ?? (yk.setPhysicsLinkWith = (0, fk.g)("AbstractMesh", "setPhysicsLinkWith")), Object.getOwnPropertyDescriptor(Uk.prototype, "occlusionRetryCount") || Object.defineProperty(Uk.prototype, "occlusionRetryCount", (0, fk.f)("AbstractMesh", "occlusionRetryCount")), Object.getOwnPropertyDescriptor(Uk.prototype, "occlusionType") || Object.defineProperty(Uk.prototype, "occlusionType", (0, fk.f)("AbstractMesh", "occlusionType")), Object.getOwnPropertyDescriptor(Uk.prototype, "occlusionQueryAlgorithmType") || Object.defineProperty(Uk.prototype, "occlusionQueryAlgorithmType", (0, fk.f)("AbstractMesh", "occlusionQueryAlgorithmType")), Object.getOwnPropertyDescriptor(Uk.prototype, "isOccluded") || Object.defineProperty(Uk.prototype, "isOccluded", (0, fk.f)("AbstractMesh", "isOccluded")), Object.getOwnPropertyDescriptor(Uk.prototype, "isOcclusionQueryInProgress") || Object.defineProperty(Uk.prototype, "isOcclusionQueryInProgress", (0, fk.f)("AbstractMesh", "isOcclusionQueryInProgress")), Object.getOwnPropertyDescriptor(Uk.prototype, "forceRenderingWhenOccluded") || Object.defineProperty(Uk.prototype, "forceRenderingWhenOccluded", (0, fk.f)("AbstractMesh", "forceRenderingWhenOccluded")), Object.getOwnPropertyDescriptor(Uk.prototype, "occlusionForRenderPassId") || Object.defineProperty(Uk.prototype, "occlusionForRenderPassId", (0, fk.f)("AbstractMesh", "occlusionForRenderPassId")), Object.getOwnPropertyDescriptor(Uk.prototype, "decalMap") || Object.defineProperty(Uk.prototype, "decalMap", (0, fk.f)("AbstractMesh", "decalMap")), Object.getOwnPropertyDescriptor(Uk.prototype, "gH") || Object.defineProperty(Uk.prototype, "gH", (0, fk.f)("AbstractMesh", "gH")), Object.getOwnPropertyDescriptor(Uk.prototype, "physicsImpostor") || Object.defineProperty(Uk.prototype, "physicsImpostor", (0, fk.f)("AbstractMesh", "physicsImpostor")), Object.getOwnPropertyDescriptor(Uk.prototype, "showBoundingBox") || Object.defineProperty(Uk.prototype, "showBoundingBox", (0, fk.f)("AbstractMesh", "showBoundingBox")), Object.getOwnPropertyDescriptor(Uk.prototype, "edgesRenderer") || Object.defineProperty(Uk.prototype, "edgesRenderer", (0, fk.f)("AbstractMesh", "edgesRenderer")), Object.getOwnPropertyDescriptor(Uk.prototype, "renderOutline") || Object.defineProperty(Uk.prototype, "renderOutline", (0, fk.f)("AbstractMesh", "renderOutline")), Object.getOwnPropertyDescriptor(Uk.prototype, "renderOverlay") || Object.defineProperty(Uk.prototype, "renderOverlay", (0, fk.f)("AbstractMesh", "renderOverlay"))
   },
-  39994: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Wu
+  39836: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => mk
     });
-    var Eu = yu(36830),
-      Ku = yu(36991),
-      Qu = yu(39990),
-      mu = yu(39706),
-      Ju = yu(39866),
-      Nu = yu(39998),
-      Xu = yu(39877),
-      Vu = yu(39655),
-      ru = yu(38448),
-      Bu = yu(39584),
-      xu = yu(39893),
-      Su = yu(36851),
-      pu = yu(40003),
-      Tu = yu(39625);
-    class Wu {
+    var Rk = Bk(36758),
+      tk = Bk(36917),
+      ak = Bk(39829),
+      Xk = Bk(39541),
+      bk = Bk(39703),
+      wk = Bk(39844),
+      dk = Bk(39716),
+      sk = Bk(39492),
+      Vk = Bk(38320),
+      Jk = Bk(39420),
+      Ak = Bk(39729),
+      ek = Bk(36772),
+      yk = Bk(39847),
+      fk = Bk(39463);
+    class mk {
       get boundingBias() {
         return this._boundingBias
       }
-      set boundingBias(uu) {
-        this._boundingBias ? this._boundingBias.Oyu(uu) : this._boundingBias = uu.clone(), this._updateBoundingInfo(!0, null)
+      set boundingBias(kk) {
+        this._boundingBias ? this._boundingBias.sBk(kk) : this._boundingBias = kk.clone(), this._updateBoundingInfo(!0, null)
       }
-      static CreateGeometryForMesh(uu) {
-        const Ru = new Wu(Wu.RandomId(), uu.lD());
-        return Ru.applyToMesh(uu), Ru
+      static CreateGeometryForMesh(kk) {
+        const Fk = new mk(mk.RandomId(), kk.XN());
+        return Fk.applyToMesh(kk), Fk
       }
       get meshes() {
         return this._meshes
       }
-      constructor(uu, Ru, yu) {
-        let Ku = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          Qu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-          mu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
+      constructor(kk, Fk, Bk) {
+        let tk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          ak = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+          Xk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null;
         this.delayLoadState = 0, this._totalVertices = 0, this._isDisposed = !1, this._extend = {
-          minimum: new Eu.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE),
-          maximum: new Eu.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE)
-        }, this._indexBufferIsUpdatable = !1, this._positionsCache = [], this._parentContainer = null, this.useBoundingInfoFromGeometry = !1, this._scene = Ru || Su.b.LastCreatedScene, this._scene && (this.id = uu, this.uniqueId = this._scene.getUniqueId(), this._engine = this._scene.eS(), this._meshes = [], this._vertexBuffers = {}, this._indices = [], this._updatable = Ku, null !== mu && (this._totalVertices = mu), yu ? this.setAllVerticesData(yu, Ku) : null === mu && (this._totalVertices = 0), this._engine.getCaps().vertexArrayObject && (this._vertexArrayObjects = {}), Qu && (this.applyToMesh(Qu), Qu.computeWorldMatrix(!0)))
+          minimum: new Rk.s(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE),
+          maximum: new Rk.s(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE)
+        }, this._indexBufferIsUpdatable = !1, this._positionsCache = [], this._parentContainer = null, this.useBoundingInfoFromGeometry = !1, this._scene = Fk || ek.c.LastCreatedScene, this._scene && (this.id = kk, this.uniqueId = this._scene.getUniqueId(), this._engine = this._scene.ne(), this._meshes = [], this._vertexBuffers = {}, this._indices = [], this._updatable = tk, null !== Xk && (this._totalVertices = Xk), Bk ? this.setAllVerticesData(Bk, tk) : null === Xk && (this._totalVertices = 0), this._engine.getCaps().vertexArrayObject && (this._vertexArrayObjects = {}), ak && (this.applyToMesh(ak), ak.computeWorldMatrix(!0)))
       }
       get extend() {
         return this._extend
       }
-      lD() {
+      XN() {
         return this._scene
       }
-      eS() {
+      ne() {
         return this._engine
       }
       isReady() {
         return 1 === this.delayLoadState || 0 === this.delayLoadState
       }
       get doNotSerialize() {
-        for (let uu = 0; uu < this._meshes.length; uu++)
-          if (!this._meshes[uu].doNotSerialize) return !1;
+        for (let kk = 0; kk < this._meshes.length; kk++)
+          if (!this._meshes[kk].doNotSerialize) return !1;
         return !0
       }
       _rebuild() {
         this._vertexArrayObjects && (this._vertexArrayObjects = {}), 0 !== this._meshes.length && this._indices && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, this._updatable, "Geometry_" + this.id + "_IndexBuffer"));
-        const uu = new Set;
-        for (const Ru in this._vertexBuffers) uu.add(this._vertexBuffers[Ru].getWrapperBuffer());
-        uu.forEach((uu => {
-          uu._rebuild()
+        const kk = new Set;
+        for (const Fk in this._vertexBuffers) kk.add(this._vertexBuffers[Fk].getWrapperBuffer());
+        kk.forEach((kk => {
+          kk._rebuild()
         }))
       }
-      setAllVerticesData(uu, Ru) {
-        uu.applyToGeometry(this, Ru), this._notifyUpdate()
+      setAllVerticesData(kk, Fk) {
+        kk.applyToGeometry(this, Fk), this._notifyUpdate()
       }
-      setVerticesData(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Eu = arguments.length > 3 ? arguments[3] : void 0;
-        yu && Array.isArray(Ru) && (Ru = new Float32Array(Ru));
-        const Ku = new mu.h(this._engine, Ru, uu, {
-          updatable: yu,
+      setVerticesData(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Rk = arguments.length > 3 ? arguments[3] : void 0;
+        Bk && Array.isArray(Fk) && (Fk = new Float32Array(Fk));
+        const tk = new Xk.n(this._engine, Fk, kk, {
+          updatable: Bk,
           postponeInternalCreation: 0 === this._meshes.length,
-          stride: Eu,
-          label: "Geometry_" + this.id + "_" + uu
+          stride: Rk,
+          label: "Geometry_" + this.id + "_" + kk
         });
-        this.setVerticesBuffer(Ku)
+        this.setVerticesBuffer(tk)
       }
-      removeVerticesData(uu) {
-        this._vertexBuffers[uu] && (this._vertexBuffers[uu].dispose(), delete this._vertexBuffers[uu]), this._vertexArrayObjects && this._disposeVertexArrayObjects()
+      removeVerticesData(kk) {
+        this._vertexBuffers[kk] && (this._vertexBuffers[kk].dispose(), delete this._vertexBuffers[kk]), this._vertexArrayObjects && this._disposeVertexArrayObjects()
       }
-      setVerticesBuffer(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        const Ku = uu.getKind();
-        this._vertexBuffers[Ku] && yu && this._vertexBuffers[Ku].dispose(), uu._buffer && uu._ownsBuffer && uu._buffer._increaseReferences(), this._vertexBuffers[Ku] = uu;
-        const Qu = this._meshes,
-          Ju = Qu.length;
-        if (Ku === mu.h.PositionKind) {
-          this._totalVertices = Ru ?? uu._maxVerticesCount, this._updateExtend(this.useBoundingInfoFromGeometry && this._boundingInfo ? null : uu.getFloatData(this._totalVertices)), this._resetPointsArrayCache();
-          const yu = this._extend && this._extend.minimum || new Eu.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE),
-            Ku = this._extend && this._extend.maximum || new Eu.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE);
-          for (let uu = 0; uu < Ju; uu++) {
-            const Ru = Qu[uu];
-            Ru.buildBoundingInfo(yu, Ku), Ru._createGlobalSubMesh(Ru.isUnIndexed), Ru.computeWorldMatrix(!0), Ru.synchronizeInstances()
+      setVerticesBuffer(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Bk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        const tk = kk.getKind();
+        this._vertexBuffers[tk] && Bk && this._vertexBuffers[tk].dispose(), kk._buffer && kk._ownsBuffer && kk._buffer._increaseReferences(), this._vertexBuffers[tk] = kk;
+        const ak = this._meshes,
+          bk = ak.length;
+        if (tk === Xk.n.PositionKind) {
+          this._totalVertices = Fk ?? kk._maxVerticesCount, this._updateExtend(this.useBoundingInfoFromGeometry && this._boundingInfo ? null : kk.getFloatData(this._totalVertices)), this._resetPointsArrayCache();
+          const Bk = this._extend && this._extend.minimum || new Rk.s(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE),
+            tk = this._extend && this._extend.maximum || new Rk.s(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE);
+          for (let kk = 0; kk < bk; kk++) {
+            const Fk = ak[kk];
+            Fk.buildBoundingInfo(Bk, tk), Fk._createGlobalSubMesh(Fk.isUnIndexed), Fk.computeWorldMatrix(!0), Fk.synchronizeInstances()
           }
         }
-        this._notifyUpdate(Ku)
+        this._notifyUpdate(tk)
       }
-      updateVerticesDataDirectly(uu, Ru, yu) {
-        let Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const Ku = this.getVertexBuffer(uu);
-        Ku && (Ku.updateDirectly(Ru, yu, Eu), this._notifyUpdate(uu))
+      updateVerticesDataDirectly(kk, Fk, Bk) {
+        let Rk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const tk = this.getVertexBuffer(kk);
+        tk && (tk.updateDirectly(Fk, Bk, Rk), this._notifyUpdate(kk))
       }
-      updateVerticesData(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Eu = this.getVertexBuffer(uu);
-        Eu && (Eu.update(Ru), uu === mu.h.PositionKind && this._updateBoundingInfo(yu, Ru), this._notifyUpdate(uu))
+      updateVerticesData(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Rk = this.getVertexBuffer(kk);
+        Rk && (Rk.update(Fk), kk === Xk.n.PositionKind && this._updateBoundingInfo(Bk, Fk), this._notifyUpdate(kk))
       }
-      _updateBoundingInfo(uu, Ru) {
-        if (uu && this._updateExtend(Ru), this._resetPointsArrayCache(), uu) {
-          const uu = this._meshes;
-          for (const Ru of uu) {
-            Ru.hasBoundingInfo ? Ru.vI().reConstruct(this._extend.minimum, this._extend.maximum) : Ru.buildBoundingInfo(this._extend.minimum, this._extend.maximum);
-            const uu = Ru.mC;
-            for (const Ru of uu) Ru.refreshBoundingInfo()
+      _updateBoundingInfo(kk, Fk) {
+        if (kk && this._updateExtend(Fk), this._resetPointsArrayCache(), kk) {
+          const kk = this._meshes;
+          for (const Fk of kk) {
+            Fk.hasBoundingInfo ? Fk.ZH().reConstruct(this._extend.minimum, this._extend.maximum) : Fk.buildBoundingInfo(this._extend.minimum, this._extend.maximum);
+            const kk = Fk.AY;
+            for (const Fk of kk) Fk.refreshBoundingInfo()
           }
         }
       }
-      _bind(uu, Ru, yu, Eu) {
-        if (!uu) return;
-        void 0 === Ru && (Ru = this._indexBuffer);
-        const Ku = this.getVertexBuffers();
-        if (!Ku) return;
-        if (Ru != this._indexBuffer || !this._vertexArrayObjects && !Eu) return void this._engine.bindBuffers(Ku, Ru, uu, yu);
-        const Qu = Eu || this._vertexArrayObjects,
-          mu = this._engine;
-        Qu[uu.key] || (Qu[uu.key] = mu.recordVertexArrayObject(Ku, Ru, uu, yu)), mu.bindVertexArrayObject(Qu[uu.key], Ru)
+      _bind(kk, Fk, Bk, Rk) {
+        if (!kk) return;
+        void 0 === Fk && (Fk = this._indexBuffer);
+        const tk = this.getVertexBuffers();
+        if (!tk) return;
+        if (Fk != this._indexBuffer || !this._vertexArrayObjects && !Rk) return void this._engine.bindBuffers(tk, Fk, kk, Bk);
+        const ak = Rk || this._vertexArrayObjects,
+          Xk = this._engine;
+        ak[kk.key] || (ak[kk.key] = Xk.recordVertexArrayObject(tk, Fk, kk, Bk)), Xk.bindVertexArrayObject(ak[kk.key], Fk)
       }
       getTotalVertices() {
         return this.isReady() ? this._totalVertices : 0
       }
-      getVerticesData(uu, Ru, yu) {
-        const Eu = this.getVertexBuffer(uu);
-        return Eu ? Eu.getFloatData(this._totalVertices, yu || Ru && 1 !== this._meshes.length) : null
+      getVerticesData(kk, Fk, Bk) {
+        const Rk = this.getVertexBuffer(kk);
+        return Rk ? Rk.getFloatData(this._totalVertices, Bk || Fk && 1 !== this._meshes.length) : null
       }
-      copyVerticesData(uu, Ru) {
-        const yu = this.getVertexBuffer(uu);
-        if (!yu) return;
-        Ru[uu] || (Ru[uu] = new Float32Array(this._totalVertices * yu.getSize()));
-        const Eu = yu.getData();
-        Eu && (0, Tu.e)(Eu, yu.getSize(), yu.type, yu.byteOffset, yu.byteStride, yu.normalized, this._totalVertices, Ru[uu])
+      copyVerticesData(kk, Fk) {
+        const Bk = this.getVertexBuffer(kk);
+        if (!Bk) return;
+        Fk[kk] || (Fk[kk] = new Float32Array(this._totalVertices * Bk.getSize()));
+        const Rk = Bk.getData();
+        Rk && (0, fk.e)(Rk, Bk.getSize(), Bk.type, Bk.byteOffset, Bk.byteStride, Bk.normalized, this._totalVertices, Fk[kk])
       }
-      isVertexBufferUpdatable(uu) {
-        const Ru = this._vertexBuffers[uu];
-        return !!Ru && Ru.isUpdatable()
+      isVertexBufferUpdatable(kk) {
+        const Fk = this._vertexBuffers[kk];
+        return !!Fk && Fk.isUpdatable()
       }
-      getVertexBuffer(uu) {
-        return this.isReady() ? this._vertexBuffers[uu] : null
+      getVertexBuffer(kk) {
+        return this.isReady() ? this._vertexBuffers[kk] : null
       }
       getVertexBuffers() {
         return this.isReady() ? this._vertexBuffers : null
       }
-      isVerticesDataPresent(uu) {
-        return this._vertexBuffers ? void 0 !== this._vertexBuffers[uu] : !!this._delayInfo && -1 !== this._delayInfo.indexOf(uu)
+      isVerticesDataPresent(kk) {
+        return this._vertexBuffers ? void 0 !== this._vertexBuffers[kk] : !!this._delayInfo && -1 !== this._delayInfo.indexOf(kk)
       }
       getVerticesDataKinds() {
-        const uu = [];
-        let Ru;
+        const kk = [];
+        let Fk;
         if (!this._vertexBuffers && this._delayInfo)
-          for (Ru in this._delayInfo) uu.push(Ru);
+          for (Fk in this._delayInfo) kk.push(Fk);
         else
-          for (Ru in this._vertexBuffers) uu.push(Ru);
-        return uu
+          for (Fk in this._vertexBuffers) kk.push(Fk);
+        return kk
       }
-      updateIndices(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      updateIndices(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (this._indexBuffer)
           if (this._indexBufferIsUpdatable) {
-            const Eu = uu.length !== this._indices.length;
-            if (yu || (this._indices = uu.slice()), this._engine.updateDynamicIndexBuffer(this._indexBuffer, uu, Ru), Eu)
-              for (const uu of this._meshes) uu._createGlobalSubMesh(!0)
-          } else this.setIndices(uu, null, !0)
+            const Rk = kk.length !== this._indices.length;
+            if (Bk || (this._indices = kk.slice()), this._engine.updateDynamicIndexBuffer(this._indexBuffer, kk, Fk), Rk)
+              for (const kk of this._meshes) kk._createGlobalSubMesh(!0)
+          } else this.setIndices(kk, null, !0)
       }
-      setIndexBuffer(uu, Ru, yu) {
-        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this._indices = [], this._indexBufferIsUpdatable = !1, this._indexBuffer = uu, this._totalVertices = Ru, this._totalIndices = yu, uu.is32Bits = null === Eu ? Ru > 65535 : Eu;
-        for (const Ku of this._meshes) Ku._createGlobalSubMesh(!0), Ku.synchronizeInstances();
+      setIndexBuffer(kk, Fk, Bk) {
+        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this._indices = [], this._indexBufferIsUpdatable = !1, this._indexBuffer = kk, this._totalVertices = Fk, this._totalIndices = Bk, kk.is32Bits = null === Rk ? Fk > 65535 : Rk;
+        for (const tk of this._meshes) tk._createGlobalSubMesh(!0), tk.synchronizeInstances();
         this._notifyUpdate()
       }
-      setIndices(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        this._indexBuffer && this._engine._releaseBuffer(this._indexBuffer), this._indices = uu, this._indexBufferIsUpdatable = yu, 0 !== this._meshes.length && this._indices && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, yu, "Geometry_" + this.id + "_IndexBuffer")), void 0 != Ru && (this._totalVertices = Ru);
-        for (const Ku of this._meshes) Ku._createGlobalSubMesh(!Eu), Ku.synchronizeInstances();
+      setIndices(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Rk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        this._indexBuffer && this._engine._releaseBuffer(this._indexBuffer), this._indices = kk, this._indexBufferIsUpdatable = Bk, 0 !== this._meshes.length && this._indices && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, Bk, "Geometry_" + this.id + "_IndexBuffer")), void 0 != Fk && (this._totalVertices = Fk);
+        for (const tk of this._meshes) tk._createGlobalSubMesh(!Rk), tk.synchronizeInstances();
         this._notifyUpdate()
       }
       getTotalIndices() {
         return this.isReady() ? void 0 !== this._totalIndices ? this._totalIndices : this._indices.length : 0
       }
-      DEu(uu, Ru) {
+      hBk(kk, Fk) {
         if (!this.isReady()) return null;
-        const yu = this._indices;
-        return Ru || uu && 1 !== this._meshes.length ? yu.slice() : yu
+        const Bk = this._indices;
+        return Fk || kk && 1 !== this._meshes.length ? Bk.slice() : Bk
       }
       getIndexBuffer() {
         return this.isReady() ? this._indexBuffer : null
       }
       _releaseVertexArrayObject() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        uu && this._vertexArrayObjects && this._vertexArrayObjects[uu.key] && (this._engine.releaseVertexArrayObject(this._vertexArrayObjects[uu.key]), delete this._vertexArrayObjects[uu.key])
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        kk && this._vertexArrayObjects && this._vertexArrayObjects[kk.key] && (this._engine.releaseVertexArrayObject(this._vertexArrayObjects[kk.key]), delete this._vertexArrayObjects[kk.key])
       }
-      releaseForMesh(uu, Ru) {
-        const yu = this._meshes,
-          Eu = yu.indexOf(uu); - 1 !== Eu && (yu.splice(Eu, 1), this._vertexArrayObjects && uu._invalidateInstanceVertexArrayObject(), uu._geometry = null, 0 === yu.length && Ru && this.dispose())
+      releaseForMesh(kk, Fk) {
+        const Bk = this._meshes,
+          Rk = Bk.indexOf(kk); - 1 !== Rk && (Bk.splice(Rk, 1), this._vertexArrayObjects && kk._invalidateInstanceVertexArrayObject(), kk._geometry = null, 0 === Bk.length && Fk && this.dispose())
       }
-      applyToMesh(uu) {
-        if (uu._geometry === this) return;
-        const Ru = uu._geometry;
-        Ru && Ru.releaseForMesh(uu), this._vertexArrayObjects && uu._invalidateInstanceVertexArrayObject();
-        const yu = this._meshes;
-        uu._geometry = this, uu._internalAbstractMeshDataInfo._positions = null, this._scene.pushGeometry(this), yu.push(uu), this.isReady() ? this._applyToMesh(uu) : this._boundingInfo && uu.setBoundingInfo(this._boundingInfo)
+      applyToMesh(kk) {
+        if (kk._geometry === this) return;
+        const Fk = kk._geometry;
+        Fk && Fk.releaseForMesh(kk), this._vertexArrayObjects && kk._invalidateInstanceVertexArrayObject();
+        const Bk = this._meshes;
+        kk._geometry = this, kk._internalAbstractMeshDataInfo._positions = null, this._scene.pushGeometry(this), Bk.push(kk), this.isReady() ? this._applyToMesh(kk) : this._boundingInfo && kk.setBoundingInfo(this._boundingInfo)
       }
       _updateExtend() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         if (this.useBoundingInfoFromGeometry && this._boundingInfo) this._extend = {
           minimum: this._boundingInfo.minimum.clone(),
           maximum: this._boundingInfo.maximum.clone()
         };
         else {
-          if (!uu && (uu = this.getVerticesData(mu.h.PositionKind), !uu)) return;
-          this._extend = (0, xu.d)(uu, 0, this._totalVertices, this.boundingBias, 3)
+          if (!kk && (kk = this.getVerticesData(Xk.n.PositionKind), !kk)) return;
+          this._extend = (0, Ak.e)(kk, 0, this._totalVertices, this.boundingBias, 3)
         }
       }
-      _applyToMesh(uu) {
-        for (const Ru in this._vertexBuffers) {
-          const yu = this._vertexBuffers[Ru];
-          yu._buffer.getBuffer() || yu.create(), Ru === mu.h.PositionKind && (this._extend || this._updateExtend(), uu.buildBoundingInfo(this._extend.minimum, this._extend.maximum), uu._createGlobalSubMesh(uu.isUnIndexed), uu._updateBoundingInfo())
-        }!this._indexBuffer && this._indices && this._indices.length > 0 && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, this._updatable, "Geometry_" + this.id + "_IndexBuffer")), uu._syncGeometryWithMorphTargetManager(), uu.synchronizeInstances()
+      _applyToMesh(kk) {
+        for (const Fk in this._vertexBuffers) {
+          const Bk = this._vertexBuffers[Fk];
+          Bk._buffer.getBuffer() || Bk.create(), Fk === Xk.n.PositionKind && (this._extend || this._updateExtend(), kk.buildBoundingInfo(this._extend.minimum, this._extend.maximum), kk._createGlobalSubMesh(kk.isUnIndexed), kk._updateBoundingInfo())
+        }!this._indexBuffer && this._indices && this._indices.length > 0 && (this._indexBuffer = this._engine.createIndexBuffer(this._indices, this._updatable, "Geometry_" + this.id + "_IndexBuffer")), kk._syncGeometryWithMorphTargetManager(), kk.synchronizeInstances()
       }
-      _notifyUpdate(uu) {
-        this.onGeometryUpdated && this.onGeometryUpdated(this, uu), this._vertexArrayObjects && this._disposeVertexArrayObjects();
-        for (const Ru of this._meshes) Ru._markSubMeshesAsAttributesDirty()
+      _notifyUpdate(kk) {
+        this.onGeometryUpdated && this.onGeometryUpdated(this, kk), this._vertexArrayObjects && this._disposeVertexArrayObjects();
+        for (const Fk of this._meshes) Fk._markSubMeshesAsAttributesDirty()
       }
-      load(uu, Ru) {
-        2 !== this.delayLoadState && (this.isReady() ? Ru && Ru() : (this.delayLoadState = 2, this._queueLoad(uu, Ru)))
+      load(kk, Fk) {
+        2 !== this.delayLoadState && (this.isReady() ? Fk && Fk() : (this.delayLoadState = 2, this._queueLoad(kk, Fk)))
       }
-      _queueLoad(uu, Ru) {
-        this.delayLoadingFile && (uu.addPendingData(this), (async () => {
+      _queueLoad(kk, Fk) {
+        this.delayLoadingFile && (kk.addPendingData(this), (async () => {
           try {
-            const yu = await uu._loadDelayedFileAsync(this.delayLoadingFile, !1, !0);
-            if (!this._delayLoadingFunction) return void uu.removePendingData(this);
-            this._delayLoadingFunction(JSON.parse(yu), this), this.delayLoadState = 1, this._delayInfo = [], uu.removePendingData(this);
-            const Eu = this._meshes,
-              Ku = Eu.length;
-            for (let uu = 0; uu < Ku; uu++) this._applyToMesh(Eu[uu]);
-            Ru && Ru()
-          } catch (yu) {
-            uu.removePendingData(this), uu.wyu || ru.e.Error(`Unable to delay load geometry "${this.id}" from "${this.delayLoadingFile}": ${yu}`)
+            const Bk = await kk._loadDelayedFileAsync(this.delayLoadingFile, !1, !0);
+            if (!this._delayLoadingFunction) return void kk.removePendingData(this);
+            this._delayLoadingFunction(JSON.parse(Bk), this), this.delayLoadState = 1, this._delayInfo = [], kk.removePendingData(this);
+            const Rk = this._meshes,
+              tk = Rk.length;
+            for (let kk = 0; kk < tk; kk++) this._applyToMesh(Rk[kk]);
+            Fk && Fk()
+          } catch (Bk) {
+            kk.removePendingData(this), kk.BBk || Vk.b.Error(`Unable to delay load geometry "${this.id}" from "${this.delayLoadingFile}": ${Bk}`)
           }
         })())
       }
       toLeftHanded() {
-        const uu = this.DEu(!1);
-        if (null != uu && uu.length > 0) {
-          for (let Ru = 0; Ru < uu.length; Ru += 3) {
-            const yu = uu[Ru + 0];
-            uu[Ru + 0] = uu[Ru + 2], uu[Ru + 2] = yu
+        const kk = this.hBk(!1);
+        if (null != kk && kk.length > 0) {
+          for (let Fk = 0; Fk < kk.length; Fk += 3) {
+            const Bk = kk[Fk + 0];
+            kk[Fk + 0] = kk[Fk + 2], kk[Fk + 2] = Bk
           }
-          this.setIndices(uu)
+          this.setIndices(kk)
         }
-        const Ru = this.getVerticesData(mu.h.PositionKind, !1);
-        if (null != Ru && Ru.length > 0) {
-          for (let uu = 0; uu < Ru.length; uu += 3) Ru[uu + 2] = -Ru[uu + 2];
-          this.setVerticesData(mu.h.PositionKind, Ru, !1)
+        const Fk = this.getVerticesData(Xk.n.PositionKind, !1);
+        if (null != Fk && Fk.length > 0) {
+          for (let kk = 0; kk < Fk.length; kk += 3) Fk[kk + 2] = -Fk[kk + 2];
+          this.setVerticesData(Xk.n.PositionKind, Fk, !1)
         }
-        const yu = this.getVerticesData(mu.h.NormalKind, !1);
-        if (null != yu && yu.length > 0) {
-          for (let uu = 0; uu < yu.length; uu += 3) yu[uu + 2] = -yu[uu + 2];
-          this.setVerticesData(mu.h.NormalKind, yu, !1)
+        const Bk = this.getVerticesData(Xk.n.NormalKind, !1);
+        if (null != Bk && Bk.length > 0) {
+          for (let kk = 0; kk < Bk.length; kk += 3) Bk[kk + 2] = -Bk[kk + 2];
+          this.setVerticesData(Xk.n.NormalKind, Bk, !1)
         }
       }
       _resetPointsArrayCache() {
@@ -3994,297 +3994,297 @@ export const modules = {
       }
       _generatePointsArray() {
         if (this._positions) return !0;
-        const uu = this.getVerticesData(mu.h.PositionKind);
-        if (!uu || 0 === uu.length) return !1;
-        for (let Ru = 3 * this._positionsCache.length, yu = this._positionsCache.length; Ru < uu.length; Ru += 3, ++yu) this._positionsCache[yu] = Eu.p.FromArray(uu, Ru);
-        for (let Ru = 0, yu = 0; Ru < uu.length; Ru += 3, ++yu) this._positionsCache[yu].set(uu[0 + Ru], uu[1 + Ru], uu[2 + Ru]);
-        return this._positionsCache.length = uu.length / 3, this._positions = this._positionsCache, !0
+        const kk = this.getVerticesData(Xk.n.PositionKind);
+        if (!kk || 0 === kk.length) return !1;
+        for (let Fk = 3 * this._positionsCache.length, Bk = this._positionsCache.length; Fk < kk.length; Fk += 3, ++Bk) this._positionsCache[Bk] = Rk.s.FromArray(kk, Fk);
+        for (let Fk = 0, Bk = 0; Fk < kk.length; Fk += 3, ++Bk) this._positionsCache[Bk].set(kk[0 + Fk], kk[1 + Fk], kk[2 + Fk]);
+        return this._positionsCache.length = kk.length / 3, this._positions = this._positionsCache, !0
       }
-      wyu() {
+      BBk() {
         return this._isDisposed
       }
       _disposeVertexArrayObjects() {
         if (this._vertexArrayObjects) {
-          for (const yu in this._vertexArrayObjects) this._engine.releaseVertexArrayObject(this._vertexArrayObjects[yu]);
+          for (const Bk in this._vertexArrayObjects) this._engine.releaseVertexArrayObject(this._vertexArrayObjects[Bk]);
           this._vertexArrayObjects = {};
-          const uu = this._meshes,
-            Ru = uu.length;
-          for (let yu = 0; yu < Ru; yu++) uu[yu]._invalidateInstanceVertexArrayObject()
+          const kk = this._meshes,
+            Fk = kk.length;
+          for (let Bk = 0; Bk < Fk; Bk++) kk[Bk]._invalidateInstanceVertexArrayObject()
         }
       }
       dispose() {
-        const uu = this._meshes,
-          Ru = uu.length;
-        let yu;
-        for (yu = 0; yu < Ru; yu++) this.releaseForMesh(uu[yu]);
+        const kk = this._meshes,
+          Fk = kk.length;
+        let Bk;
+        for (Bk = 0; Bk < Fk; Bk++) this.releaseForMesh(kk[Bk]);
         this._meshes.length = 0, this._disposeVertexArrayObjects();
-        for (const Eu in this._vertexBuffers) this._vertexBuffers[Eu].dispose();
+        for (const Rk in this._vertexBuffers) this._vertexBuffers[Rk].dispose();
         if (this._vertexBuffers = {}, this._totalVertices = 0, this._indexBuffer && this._engine._releaseBuffer(this._indexBuffer), this._indexBuffer = null, this._indices = [], this.delayLoadState = 0, this.delayLoadingFile = null, this._delayLoadingFunction = null, this._delayInfo = [], this._boundingInfo = null, this._scene.removeGeometry(this), this._parentContainer) {
-          const uu = this._parentContainer.geometries.indexOf(this);
-          uu > -1 && this._parentContainer.geometries.splice(uu, 1), this._parentContainer = null
+          const kk = this._parentContainer.geometries.indexOf(this);
+          kk > -1 && this._parentContainer.geometries.splice(kk, 1), this._parentContainer = null
         }
         this._isDisposed = !0
       }
-      copy(uu) {
-        const Ru = new Wu(uu, this._scene),
-          yu = this.DEu(void 0, !0);
-        yu && Ru.setIndices(yu);
-        let Eu, Ku = !1;
-        for (Eu in this._vertexBuffers) {
-          const uu = this.getVertexBuffer(Eu),
-            yu = uu.getData();
-          if (!yu) continue;
-          const Qu = uu.isUpdatable(),
-            Ju = uu.getSize(),
+      copy(kk) {
+        const Fk = new mk(kk, this._scene),
+          Bk = this.hBk(void 0, !0);
+        Bk && Fk.setIndices(Bk);
+        let Rk, tk = !1;
+        for (Rk in this._vertexBuffers) {
+          const kk = this.getVertexBuffer(Rk),
+            Bk = kk.getData();
+          if (!Bk) continue;
+          const ak = kk.isUpdatable(),
+            bk = kk.getSize(),
             {
-              type: Nu,
-              byteOffset: Xu,
-              byteStride: Vu,
-              normalized: ru
-            } = uu;
-          Ku = Ku || Qu;
-          let Bu = this._totalVertices;
-          if (uu.getIsInstanced()) {
-            let uu;
-            uu = yu instanceof Array ? 4 * yu.length : yu.byteLength, Bu = uu / Vu
+              type: wk,
+              byteOffset: dk,
+              byteStride: sk,
+              normalized: Vk
+            } = kk;
+          tk = tk || ak;
+          let Jk = this._totalVertices;
+          if (kk.getIsInstanced()) {
+            let kk;
+            kk = Bk instanceof Array ? 4 * Bk.length : Bk.byteLength, Jk = kk / sk
           }
-          const xu = (0, Tu.u)(yu, Ju, Nu, Xu, Vu, Bu, !0),
-            Su = new mu.h(this._engine, xu, Eu, {
-              updatable: Qu,
+          const Ak = (0, fk.p)(Bk, bk, wk, dk, sk, Jk, !0),
+            ek = new Xk.n(this._engine, Ak, Rk, {
+              updatable: ak,
               useBytes: !1,
-              stride: Ju,
-              size: Ju,
+              stride: bk,
+              size: bk,
               offset: 0,
-              type: Nu,
-              normalized: ru,
+              type: wk,
+              normalized: Vk,
               takeBufferOwnership: !0,
-              instanced: uu.getIsInstanced()
+              instanced: kk.getIsInstanced()
             });
-          Ru.setVerticesBuffer(Su, Bu)
+          Fk.setVerticesBuffer(ek, Jk)
         }
-        for (Eu in Ru._updatable = Ku, Ru.delayLoadState = this.delayLoadState, Ru.delayLoadingFile = this.delayLoadingFile, Ru._delayLoadingFunction = this._delayLoadingFunction, this._delayInfo) Ru._delayInfo = Ru._delayInfo || [], Ru._delayInfo.push(Eu);
-        return Ru._boundingInfo = new Xu.c(this._extend.minimum, this._extend.maximum), Ru
+        for (Rk in Fk._updatable = tk, Fk.delayLoadState = this.delayLoadState, Fk.delayLoadingFile = this.delayLoadingFile, Fk._delayLoadingFunction = this._delayLoadingFunction, this._delayInfo) Fk._delayInfo = Fk._delayInfo || [], Fk._delayInfo.push(Rk);
+        return Fk._boundingInfo = new dk.b(this._extend.minimum, this._extend.maximum), Fk
       }
       serialize() {
-        const uu = {};
-        return uu.id = this.id, uu.uniqueId = this.uniqueId, uu.updatable = this._updatable, Bu.e && Bu.e.HasTags(this) && (uu.tags = Bu.e.GetTags(this)), uu
+        const kk = {};
+        return kk.id = this.id, kk.uniqueId = this.uniqueId, kk.updatable = this._updatable, Jk.b && Jk.b.HasTags(this) && (kk.tags = Jk.b.GetTags(this)), kk
       }
-      _toNumberArray(uu) {
-        return Array.isArray(uu) ? uu : Array.prototype.slice.call(uu)
+      _toNumberArray(kk) {
+        return Array.isArray(kk) ? kk : Array.prototype.slice.call(kk)
       }
       clearCachedData() {
         this._totalIndices = this._indices.length, this._indices = [], this._resetPointsArrayCache();
-        for (const uu in this._vertexBuffers) Object.prototype.hasOwnProperty.call(this._vertexBuffers, uu) && (this._vertexBuffers[uu]._buffer._data = null)
+        for (const kk in this._vertexBuffers) Object.prototype.hasOwnProperty.call(this._vertexBuffers, kk) && (this._vertexBuffers[kk]._buffer._data = null)
       }
       serializeVerticeData() {
-        const uu = this.serialize();
-        return this.isVerticesDataPresent(mu.h.PositionKind) && (uu.positions = this._toNumberArray(this.getVerticesData(mu.h.PositionKind)), this.isVertexBufferUpdatable(mu.h.PositionKind) && (uu.positionsUpdatable = !0)), this.isVerticesDataPresent(mu.h.NormalKind) && (uu.normals = this._toNumberArray(this.getVerticesData(mu.h.NormalKind)), this.isVertexBufferUpdatable(mu.h.NormalKind) && (uu.normalsUpdatable = !0)), this.isVerticesDataPresent(mu.h.TangentKind) && (uu.tangents = this._toNumberArray(this.getVerticesData(mu.h.TangentKind)), this.isVertexBufferUpdatable(mu.h.TangentKind) && (uu.tangentsUpdatable = !0)), this.isVerticesDataPresent(mu.h.UVKind) && (uu.uvs = this._toNumberArray(this.getVerticesData(mu.h.UVKind)), this.isVertexBufferUpdatable(mu.h.UVKind) && (uu.uvsUpdatable = !0)), this.isVerticesDataPresent(mu.h.UV2Kind) && (uu.uvs2 = this._toNumberArray(this.getVerticesData(mu.h.UV2Kind)), this.isVertexBufferUpdatable(mu.h.UV2Kind) && (uu.uvs2Updatable = !0)), this.isVerticesDataPresent(mu.h.UV3Kind) && (uu.uvs3 = this._toNumberArray(this.getVerticesData(mu.h.UV3Kind)), this.isVertexBufferUpdatable(mu.h.UV3Kind) && (uu.uvs3Updatable = !0)), this.isVerticesDataPresent(mu.h.UV4Kind) && (uu.uvs4 = this._toNumberArray(this.getVerticesData(mu.h.UV4Kind)), this.isVertexBufferUpdatable(mu.h.UV4Kind) && (uu.uvs4Updatable = !0)), this.isVerticesDataPresent(mu.h.UV5Kind) && (uu.uvs5 = this._toNumberArray(this.getVerticesData(mu.h.UV5Kind)), this.isVertexBufferUpdatable(mu.h.UV5Kind) && (uu.uvs5Updatable = !0)), this.isVerticesDataPresent(mu.h.UV6Kind) && (uu.uvs6 = this._toNumberArray(this.getVerticesData(mu.h.UV6Kind)), this.isVertexBufferUpdatable(mu.h.UV6Kind) && (uu.uvs6Updatable = !0)), this.isVerticesDataPresent(mu.h.ColorKind) && (uu.colors = this._toNumberArray(this.getVerticesData(mu.h.ColorKind)), this.isVertexBufferUpdatable(mu.h.ColorKind) && (uu.colorsUpdatable = !0)), this.isVerticesDataPresent(mu.h.MatricesIndicesKind) && (uu.matricesIndices = this._toNumberArray(this.getVerticesData(mu.h.MatricesIndicesKind)), uu.matricesIndicesExpanded = !0, this.isVertexBufferUpdatable(mu.h.MatricesIndicesKind) && (uu.matricesIndicesUpdatable = !0)), this.isVerticesDataPresent(mu.h.MatricesWeightsKind) && (uu.matricesWeights = this._toNumberArray(this.getVerticesData(mu.h.MatricesWeightsKind)), this.isVertexBufferUpdatable(mu.h.MatricesWeightsKind) && (uu.matricesWeightsUpdatable = !0)), uu.indices = this._toNumberArray(this.DEu()), uu
+        const kk = this.serialize();
+        return this.isVerticesDataPresent(Xk.n.PositionKind) && (kk.positions = this._toNumberArray(this.getVerticesData(Xk.n.PositionKind)), this.isVertexBufferUpdatable(Xk.n.PositionKind) && (kk.positionsUpdatable = !0)), this.isVerticesDataPresent(Xk.n.NormalKind) && (kk.normals = this._toNumberArray(this.getVerticesData(Xk.n.NormalKind)), this.isVertexBufferUpdatable(Xk.n.NormalKind) && (kk.normalsUpdatable = !0)), this.isVerticesDataPresent(Xk.n.TangentKind) && (kk.tangents = this._toNumberArray(this.getVerticesData(Xk.n.TangentKind)), this.isVertexBufferUpdatable(Xk.n.TangentKind) && (kk.tangentsUpdatable = !0)), this.isVerticesDataPresent(Xk.n.UVKind) && (kk.uvs = this._toNumberArray(this.getVerticesData(Xk.n.UVKind)), this.isVertexBufferUpdatable(Xk.n.UVKind) && (kk.uvsUpdatable = !0)), this.isVerticesDataPresent(Xk.n.UV2Kind) && (kk.uvs2 = this._toNumberArray(this.getVerticesData(Xk.n.UV2Kind)), this.isVertexBufferUpdatable(Xk.n.UV2Kind) && (kk.uvs2Updatable = !0)), this.isVerticesDataPresent(Xk.n.UV3Kind) && (kk.uvs3 = this._toNumberArray(this.getVerticesData(Xk.n.UV3Kind)), this.isVertexBufferUpdatable(Xk.n.UV3Kind) && (kk.uvs3Updatable = !0)), this.isVerticesDataPresent(Xk.n.UV4Kind) && (kk.uvs4 = this._toNumberArray(this.getVerticesData(Xk.n.UV4Kind)), this.isVertexBufferUpdatable(Xk.n.UV4Kind) && (kk.uvs4Updatable = !0)), this.isVerticesDataPresent(Xk.n.UV5Kind) && (kk.uvs5 = this._toNumberArray(this.getVerticesData(Xk.n.UV5Kind)), this.isVertexBufferUpdatable(Xk.n.UV5Kind) && (kk.uvs5Updatable = !0)), this.isVerticesDataPresent(Xk.n.UV6Kind) && (kk.uvs6 = this._toNumberArray(this.getVerticesData(Xk.n.UV6Kind)), this.isVertexBufferUpdatable(Xk.n.UV6Kind) && (kk.uvs6Updatable = !0)), this.isVerticesDataPresent(Xk.n.ColorKind) && (kk.colors = this._toNumberArray(this.getVerticesData(Xk.n.ColorKind)), this.isVertexBufferUpdatable(Xk.n.ColorKind) && (kk.colorsUpdatable = !0)), this.isVerticesDataPresent(Xk.n.MatricesIndicesKind) && (kk.matricesIndices = this._toNumberArray(this.getVerticesData(Xk.n.MatricesIndicesKind)), kk.matricesIndicesExpanded = !0, this.isVertexBufferUpdatable(Xk.n.MatricesIndicesKind) && (kk.matricesIndicesUpdatable = !0)), this.isVerticesDataPresent(Xk.n.MatricesWeightsKind) && (kk.matricesWeights = this._toNumberArray(this.getVerticesData(Xk.n.MatricesWeightsKind)), this.isVertexBufferUpdatable(Xk.n.MatricesWeightsKind) && (kk.matricesWeightsUpdatable = !0)), kk.indices = this._toNumberArray(this.hBk()), kk
       }
-      static ExtractFromMesh(uu, Ru) {
-        const yu = uu._geometry;
-        return yu ? yu.copy(Ru) : null
+      static ExtractFromMesh(kk, Fk) {
+        const Bk = kk._geometry;
+        return Bk ? Bk.copy(Fk) : null
       }
       static RandomId() {
-        return Vu.i.RandomId()
+        return sk.h.RandomId()
       }
-      static _GetGeometryByLoadedUniqueId(uu, Ru) {
-        for (let yu = 0; yu < Ru.geometries.length; yu++)
-          if (Ru.geometries[yu]._loadedUniqueId === uu) return Ru.geometries[yu];
+      static _GetGeometryByLoadedUniqueId(kk, Fk) {
+        for (let Bk = 0; Bk < Fk.geometries.length; Bk++)
+          if (Fk.geometries[Bk]._loadedUniqueId === kk) return Fk.geometries[Bk];
         return null
       }
-      static _ImportGeometry(uu, Ru) {
-        const yu = Ru.lD(),
-          Eu = uu.geometryUniqueId,
-          Qu = uu.geometryId;
-        if (Eu || Qu) {
-          const uu = Eu ? this._GetGeometryByLoadedUniqueId(Eu, yu) : yu.getGeometryById(Qu);
-          uu && uu.applyToMesh(Ru)
-        } else if (uu instanceof ArrayBuffer) {
-          const yu = Ru._binaryInfo;
-          if (yu.positionsAttrDesc && yu.positionsAttrDesc.count > 0) {
-            const Eu = new Float32Array(uu, yu.positionsAttrDesc.offset, yu.positionsAttrDesc.count);
-            Ru.setVerticesData(mu.h.PositionKind, Eu, !1)
+      static _ImportGeometry(kk, Fk) {
+        const Bk = Fk.XN(),
+          Rk = kk.geometryUniqueId,
+          ak = kk.geometryId;
+        if (Rk || ak) {
+          const kk = Rk ? this._GetGeometryByLoadedUniqueId(Rk, Bk) : Bk.getGeometryById(ak);
+          kk && kk.applyToMesh(Fk)
+        } else if (kk instanceof ArrayBuffer) {
+          const Bk = Fk._binaryInfo;
+          if (Bk.positionsAttrDesc && Bk.positionsAttrDesc.count > 0) {
+            const Rk = new Float32Array(kk, Bk.positionsAttrDesc.offset, Bk.positionsAttrDesc.count);
+            Fk.setVerticesData(Xk.n.PositionKind, Rk, !1)
           }
-          if (yu.normalsAttrDesc && yu.normalsAttrDesc.count > 0) {
-            const Eu = new Float32Array(uu, yu.normalsAttrDesc.offset, yu.normalsAttrDesc.count);
-            Ru.setVerticesData(mu.h.NormalKind, Eu, !1)
+          if (Bk.normalsAttrDesc && Bk.normalsAttrDesc.count > 0) {
+            const Rk = new Float32Array(kk, Bk.normalsAttrDesc.offset, Bk.normalsAttrDesc.count);
+            Fk.setVerticesData(Xk.n.NormalKind, Rk, !1)
           }
-          if (yu.tangetsAttrDesc && yu.tangetsAttrDesc.count > 0) {
-            const Eu = new Float32Array(uu, yu.tangetsAttrDesc.offset, yu.tangetsAttrDesc.count);
-            Ru.setVerticesData(mu.h.TangentKind, Eu, !1)
+          if (Bk.tangetsAttrDesc && Bk.tangetsAttrDesc.count > 0) {
+            const Rk = new Float32Array(kk, Bk.tangetsAttrDesc.offset, Bk.tangetsAttrDesc.count);
+            Fk.setVerticesData(Xk.n.TangentKind, Rk, !1)
           }
-          if (yu.uvsAttrDesc && yu.uvsAttrDesc.count > 0) {
-            const Eu = new Float32Array(uu, yu.uvsAttrDesc.offset, yu.uvsAttrDesc.count);
-            if (pu.e)
-              for (let uu = 1; uu < Eu.length; uu += 2) Eu[uu] = 1 - Eu[uu];
-            Ru.setVerticesData(mu.h.UVKind, Eu, !1)
+          if (Bk.uvsAttrDesc && Bk.uvsAttrDesc.count > 0) {
+            const Rk = new Float32Array(kk, Bk.uvsAttrDesc.offset, Bk.uvsAttrDesc.count);
+            if (yk.c)
+              for (let kk = 1; kk < Rk.length; kk += 2) Rk[kk] = 1 - Rk[kk];
+            Fk.setVerticesData(Xk.n.UVKind, Rk, !1)
           }
-          if (yu.uvs2AttrDesc && yu.uvs2AttrDesc.count > 0) {
-            const Eu = new Float32Array(uu, yu.uvs2AttrDesc.offset, yu.uvs2AttrDesc.count);
-            if (pu.e)
-              for (let uu = 1; uu < Eu.length; uu += 2) Eu[uu] = 1 - Eu[uu];
-            Ru.setVerticesData(mu.h.UV2Kind, Eu, !1)
+          if (Bk.uvs2AttrDesc && Bk.uvs2AttrDesc.count > 0) {
+            const Rk = new Float32Array(kk, Bk.uvs2AttrDesc.offset, Bk.uvs2AttrDesc.count);
+            if (yk.c)
+              for (let kk = 1; kk < Rk.length; kk += 2) Rk[kk] = 1 - Rk[kk];
+            Fk.setVerticesData(Xk.n.UV2Kind, Rk, !1)
           }
-          if (yu.uvs3AttrDesc && yu.uvs3AttrDesc.count > 0) {
-            const Eu = new Float32Array(uu, yu.uvs3AttrDesc.offset, yu.uvs3AttrDesc.count);
-            if (pu.e)
-              for (let uu = 1; uu < Eu.length; uu += 2) Eu[uu] = 1 - Eu[uu];
-            Ru.setVerticesData(mu.h.UV3Kind, Eu, !1)
+          if (Bk.uvs3AttrDesc && Bk.uvs3AttrDesc.count > 0) {
+            const Rk = new Float32Array(kk, Bk.uvs3AttrDesc.offset, Bk.uvs3AttrDesc.count);
+            if (yk.c)
+              for (let kk = 1; kk < Rk.length; kk += 2) Rk[kk] = 1 - Rk[kk];
+            Fk.setVerticesData(Xk.n.UV3Kind, Rk, !1)
           }
-          if (yu.uvs4AttrDesc && yu.uvs4AttrDesc.count > 0) {
-            const Eu = new Float32Array(uu, yu.uvs4AttrDesc.offset, yu.uvs4AttrDesc.count);
-            if (pu.e)
-              for (let uu = 1; uu < Eu.length; uu += 2) Eu[uu] = 1 - Eu[uu];
-            Ru.setVerticesData(mu.h.UV4Kind, Eu, !1)
+          if (Bk.uvs4AttrDesc && Bk.uvs4AttrDesc.count > 0) {
+            const Rk = new Float32Array(kk, Bk.uvs4AttrDesc.offset, Bk.uvs4AttrDesc.count);
+            if (yk.c)
+              for (let kk = 1; kk < Rk.length; kk += 2) Rk[kk] = 1 - Rk[kk];
+            Fk.setVerticesData(Xk.n.UV4Kind, Rk, !1)
           }
-          if (yu.uvs5AttrDesc && yu.uvs5AttrDesc.count > 0) {
-            const Eu = new Float32Array(uu, yu.uvs5AttrDesc.offset, yu.uvs5AttrDesc.count);
-            if (pu.e)
-              for (let uu = 1; uu < Eu.length; uu += 2) Eu[uu] = 1 - Eu[uu];
-            Ru.setVerticesData(mu.h.UV5Kind, Eu, !1)
+          if (Bk.uvs5AttrDesc && Bk.uvs5AttrDesc.count > 0) {
+            const Rk = new Float32Array(kk, Bk.uvs5AttrDesc.offset, Bk.uvs5AttrDesc.count);
+            if (yk.c)
+              for (let kk = 1; kk < Rk.length; kk += 2) Rk[kk] = 1 - Rk[kk];
+            Fk.setVerticesData(Xk.n.UV5Kind, Rk, !1)
           }
-          if (yu.uvs6AttrDesc && yu.uvs6AttrDesc.count > 0) {
-            const Eu = new Float32Array(uu, yu.uvs6AttrDesc.offset, yu.uvs6AttrDesc.count);
-            if (pu.e)
-              for (let uu = 1; uu < Eu.length; uu += 2) Eu[uu] = 1 - Eu[uu];
-            Ru.setVerticesData(mu.h.UV6Kind, Eu, !1)
+          if (Bk.uvs6AttrDesc && Bk.uvs6AttrDesc.count > 0) {
+            const Rk = new Float32Array(kk, Bk.uvs6AttrDesc.offset, Bk.uvs6AttrDesc.count);
+            if (yk.c)
+              for (let kk = 1; kk < Rk.length; kk += 2) Rk[kk] = 1 - Rk[kk];
+            Fk.setVerticesData(Xk.n.UV6Kind, Rk, !1)
           }
-          if (yu.colorsAttrDesc && yu.colorsAttrDesc.count > 0) {
-            const Eu = new Float32Array(uu, yu.colorsAttrDesc.offset, yu.colorsAttrDesc.count);
-            Ru.setVerticesData(mu.h.ColorKind, Eu, !1, yu.colorsAttrDesc.stride)
+          if (Bk.colorsAttrDesc && Bk.colorsAttrDesc.count > 0) {
+            const Rk = new Float32Array(kk, Bk.colorsAttrDesc.offset, Bk.colorsAttrDesc.count);
+            Fk.setVerticesData(Xk.n.ColorKind, Rk, !1, Bk.colorsAttrDesc.stride)
           }
-          if (yu.matricesIndicesAttrDesc && yu.matricesIndicesAttrDesc.count > 0) {
-            const Eu = new Int32Array(uu, yu.matricesIndicesAttrDesc.offset, yu.matricesIndicesAttrDesc.count),
-              Ku = [];
-            for (let uu = 0; uu < Eu.length; uu++) {
-              const Ru = Eu[uu];
-              Ku.push(255 & Ru), Ku.push((65280 & Ru) >> 8), Ku.push((16711680 & Ru) >> 16), Ku.push(Ru >> 24 & 255)
+          if (Bk.matricesIndicesAttrDesc && Bk.matricesIndicesAttrDesc.count > 0) {
+            const Rk = new Int32Array(kk, Bk.matricesIndicesAttrDesc.offset, Bk.matricesIndicesAttrDesc.count),
+              tk = [];
+            for (let kk = 0; kk < Rk.length; kk++) {
+              const Fk = Rk[kk];
+              tk.push(255 & Fk), tk.push((65280 & Fk) >> 8), tk.push((16711680 & Fk) >> 16), tk.push(Fk >> 24 & 255)
             }
-            Ru.setVerticesData(mu.h.MatricesIndicesKind, Ku, !1)
+            Fk.setVerticesData(Xk.n.MatricesIndicesKind, tk, !1)
           }
-          if (yu.matricesIndicesExtraAttrDesc && yu.matricesIndicesExtraAttrDesc.count > 0) {
-            const Eu = new Int32Array(uu, yu.matricesIndicesExtraAttrDesc.offset, yu.matricesIndicesExtraAttrDesc.count),
-              Ku = [];
-            for (let uu = 0; uu < Eu.length; uu++) {
-              const Ru = Eu[uu];
-              Ku.push(255 & Ru), Ku.push((65280 & Ru) >> 8), Ku.push((16711680 & Ru) >> 16), Ku.push(Ru >> 24 & 255)
+          if (Bk.matricesIndicesExtraAttrDesc && Bk.matricesIndicesExtraAttrDesc.count > 0) {
+            const Rk = new Int32Array(kk, Bk.matricesIndicesExtraAttrDesc.offset, Bk.matricesIndicesExtraAttrDesc.count),
+              tk = [];
+            for (let kk = 0; kk < Rk.length; kk++) {
+              const Fk = Rk[kk];
+              tk.push(255 & Fk), tk.push((65280 & Fk) >> 8), tk.push((16711680 & Fk) >> 16), tk.push(Fk >> 24 & 255)
             }
-            Ru.setVerticesData(mu.h.MatricesIndicesExtraKind, Ku, !1)
+            Fk.setVerticesData(Xk.n.MatricesIndicesExtraKind, tk, !1)
           }
-          if (yu.matricesWeightsAttrDesc && yu.matricesWeightsAttrDesc.count > 0) {
-            const Eu = new Float32Array(uu, yu.matricesWeightsAttrDesc.offset, yu.matricesWeightsAttrDesc.count);
-            Ru.setVerticesData(mu.h.MatricesWeightsKind, Eu, !1)
+          if (Bk.matricesWeightsAttrDesc && Bk.matricesWeightsAttrDesc.count > 0) {
+            const Rk = new Float32Array(kk, Bk.matricesWeightsAttrDesc.offset, Bk.matricesWeightsAttrDesc.count);
+            Fk.setVerticesData(Xk.n.MatricesWeightsKind, Rk, !1)
           }
-          if (yu.indicesAttrDesc && yu.indicesAttrDesc.count > 0) {
-            const Eu = new Int32Array(uu, yu.indicesAttrDesc.offset, yu.indicesAttrDesc.count);
-            Ru.setIndices(Eu, null)
+          if (Bk.indicesAttrDesc && Bk.indicesAttrDesc.count > 0) {
+            const Rk = new Int32Array(kk, Bk.indicesAttrDesc.offset, Bk.indicesAttrDesc.count);
+            Fk.setIndices(Rk, null)
           }
-          if (yu.subMeshesAttrDesc && yu.subMeshesAttrDesc.count > 0) {
-            const Eu = new Int32Array(uu, yu.subMeshesAttrDesc.offset, 5 * yu.subMeshesAttrDesc.count);
-            Ru.mC = [];
-            for (let uu = 0; uu < yu.subMeshesAttrDesc.count; uu++) {
-              const yu = Eu[5 * uu + 0],
-                Ku = Eu[5 * uu + 1],
-                Qu = Eu[5 * uu + 2],
-                mu = Eu[5 * uu + 3],
-                Nu = Eu[5 * uu + 4];
-              Ju.c.AddToMesh(yu, Ku, Qu, mu, Nu, Ru)
+          if (Bk.subMeshesAttrDesc && Bk.subMeshesAttrDesc.count > 0) {
+            const Rk = new Int32Array(kk, Bk.subMeshesAttrDesc.offset, 5 * Bk.subMeshesAttrDesc.count);
+            Fk.AY = [];
+            for (let kk = 0; kk < Bk.subMeshesAttrDesc.count; kk++) {
+              const Bk = Rk[5 * kk + 0],
+                tk = Rk[5 * kk + 1],
+                ak = Rk[5 * kk + 2],
+                Xk = Rk[5 * kk + 3],
+                wk = Rk[5 * kk + 4];
+              bk.d.AddToMesh(Bk, tk, ak, Xk, wk, Fk)
             }
           }
-        } else if (uu.positions && uu.normals && uu.indices) {
-          if (Ru.setVerticesData(mu.h.PositionKind, uu.positions, uu.positions._updatable || uu.positionsUpdatable), Ru.setVerticesData(mu.h.NormalKind, uu.normals, uu.normals._updatable || uu.normalsUpdatable), uu.tangents && Ru.setVerticesData(mu.h.TangentKind, uu.tangents, uu.tangents._updatable || uu.tangentsUpdatable), uu.uvs && Ru.setVerticesData(mu.h.UVKind, uu.uvs, uu.uvs._updatable || uu.uvsUpdatable), uu.uvs2 && Ru.setVerticesData(mu.h.UV2Kind, uu.uvs2, uu.uvs2._updatable || uu.uvs2Updatable), uu.uvs3 && Ru.setVerticesData(mu.h.UV3Kind, uu.uvs3, uu.uvs3._updatable || uu.uvs3Updatable), uu.uvs4 && Ru.setVerticesData(mu.h.UV4Kind, uu.uvs4, uu.uvs4._updatable || uu.uvs4Updatable), uu.uvs5 && Ru.setVerticesData(mu.h.UV5Kind, uu.uvs5, uu.uvs5._updatable || uu.uvs5Updatable), uu.uvs6 && Ru.setVerticesData(mu.h.UV6Kind, uu.uvs6, uu.uvs6._updatable || uu.uvs6Updatable), uu.colors && Ru.setVerticesData(mu.h.ColorKind, Ku.h.CheckColors4(uu.colors, uu.positions.length / 3), uu.colors._updatable), uu.matricesIndices)
-            if (uu.matricesIndices._isExpanded || uu.matricesIndicesExpanded) delete uu.matricesIndices._isExpanded, delete uu.matricesIndicesExpanded, Ru.setVerticesData(mu.h.MatricesIndicesKind, uu.matricesIndices, uu.matricesIndices._updatable || uu.matricesIndicesUpdatable);
+        } else if (kk.positions && kk.normals && kk.indices) {
+          if (Fk.setVerticesData(Xk.n.PositionKind, kk.positions, kk.positions._updatable || kk.positionsUpdatable), Fk.setVerticesData(Xk.n.NormalKind, kk.normals, kk.normals._updatable || kk.normalsUpdatable), kk.tangents && Fk.setVerticesData(Xk.n.TangentKind, kk.tangents, kk.tangents._updatable || kk.tangentsUpdatable), kk.uvs && Fk.setVerticesData(Xk.n.UVKind, kk.uvs, kk.uvs._updatable || kk.uvsUpdatable), kk.uvs2 && Fk.setVerticesData(Xk.n.UV2Kind, kk.uvs2, kk.uvs2._updatable || kk.uvs2Updatable), kk.uvs3 && Fk.setVerticesData(Xk.n.UV3Kind, kk.uvs3, kk.uvs3._updatable || kk.uvs3Updatable), kk.uvs4 && Fk.setVerticesData(Xk.n.UV4Kind, kk.uvs4, kk.uvs4._updatable || kk.uvs4Updatable), kk.uvs5 && Fk.setVerticesData(Xk.n.UV5Kind, kk.uvs5, kk.uvs5._updatable || kk.uvs5Updatable), kk.uvs6 && Fk.setVerticesData(Xk.n.UV6Kind, kk.uvs6, kk.uvs6._updatable || kk.uvs6Updatable), kk.colors && Fk.setVerticesData(Xk.n.ColorKind, tk.i.CheckColors4(kk.colors, kk.positions.length / 3), kk.colors._updatable), kk.matricesIndices)
+            if (kk.matricesIndices._isExpanded || kk.matricesIndicesExpanded) delete kk.matricesIndices._isExpanded, delete kk.matricesIndicesExpanded, Fk.setVerticesData(Xk.n.MatricesIndicesKind, kk.matricesIndices, kk.matricesIndices._updatable || kk.matricesIndicesUpdatable);
             else {
-              const yu = [];
-              for (let Ru = 0; Ru < uu.matricesIndices.length; Ru++) {
-                const Eu = uu.matricesIndices[Ru];
-                yu.push(255 & Eu), yu.push((65280 & Eu) >> 8), yu.push((16711680 & Eu) >> 16), yu.push(Eu >> 24 & 255)
+              const Bk = [];
+              for (let Fk = 0; Fk < kk.matricesIndices.length; Fk++) {
+                const Rk = kk.matricesIndices[Fk];
+                Bk.push(255 & Rk), Bk.push((65280 & Rk) >> 8), Bk.push((16711680 & Rk) >> 16), Bk.push(Rk >> 24 & 255)
               }
-              Ru.setVerticesData(mu.h.MatricesIndicesKind, yu, uu.matricesIndices._updatable || uu.matricesIndicesUpdatable)
-            } if (uu.matricesIndicesExtra)
-            if (uu.matricesIndicesExtraExpanded || uu.matricesIndicesExtra._isExpanded) delete uu.matricesIndices._isExpanded, delete uu.matricesIndicesExtraExpanded, Ru.setVerticesData(mu.h.MatricesIndicesExtraKind, uu.matricesIndicesExtra, uu.matricesIndicesExtra._updatable || uu.matricesIndicesExtraUpdatable);
+              Fk.setVerticesData(Xk.n.MatricesIndicesKind, Bk, kk.matricesIndices._updatable || kk.matricesIndicesUpdatable)
+            } if (kk.matricesIndicesExtra)
+            if (kk.matricesIndicesExtraExpanded || kk.matricesIndicesExtra._isExpanded) delete kk.matricesIndices._isExpanded, delete kk.matricesIndicesExtraExpanded, Fk.setVerticesData(Xk.n.MatricesIndicesExtraKind, kk.matricesIndicesExtra, kk.matricesIndicesExtra._updatable || kk.matricesIndicesExtraUpdatable);
             else {
-              const yu = [];
-              for (let Ru = 0; Ru < uu.matricesIndicesExtra.length; Ru++) {
-                const Eu = uu.matricesIndicesExtra[Ru];
-                yu.push(255 & Eu), yu.push((65280 & Eu) >> 8), yu.push((16711680 & Eu) >> 16), yu.push(Eu >> 24 & 255)
+              const Bk = [];
+              for (let Fk = 0; Fk < kk.matricesIndicesExtra.length; Fk++) {
+                const Rk = kk.matricesIndicesExtra[Fk];
+                Bk.push(255 & Rk), Bk.push((65280 & Rk) >> 8), Bk.push((16711680 & Rk) >> 16), Bk.push(Rk >> 24 & 255)
               }
-              Ru.setVerticesData(mu.h.MatricesIndicesExtraKind, yu, uu.matricesIndicesExtra._updatable || uu.matricesIndicesExtraUpdatable)
-            } uu.matricesWeights && (Wu._CleanMatricesWeights(uu, Ru), Ru.setVerticesData(mu.h.MatricesWeightsKind, uu.matricesWeights, uu.matricesWeights._updatable)), uu.matricesWeightsExtra && Ru.setVerticesData(mu.h.MatricesWeightsExtraKind, uu.matricesWeightsExtra, uu.matricesWeights._updatable), Ru.setIndices(uu.indices, null)
+              Fk.setVerticesData(Xk.n.MatricesIndicesExtraKind, Bk, kk.matricesIndicesExtra._updatable || kk.matricesIndicesExtraUpdatable)
+            } kk.matricesWeights && (mk._CleanMatricesWeights(kk, Fk), Fk.setVerticesData(Xk.n.MatricesWeightsKind, kk.matricesWeights, kk.matricesWeights._updatable)), kk.matricesWeightsExtra && Fk.setVerticesData(Xk.n.MatricesWeightsExtraKind, kk.matricesWeightsExtra, kk.matricesWeights._updatable), Fk.setIndices(kk.indices, null)
         }
-        if (uu.mC) {
-          Ru.mC = [];
-          for (let yu = 0; yu < uu.mC.length; yu++) {
-            const Eu = uu.mC[yu];
-            Ju.c.AddToMesh(Eu.materialIndex, Eu.verticesStart, Eu.verticesCount, Eu.indexStart, Eu.indexCount, Ru)
+        if (kk.AY) {
+          Fk.AY = [];
+          for (let Bk = 0; Bk < kk.AY.length; Bk++) {
+            const Rk = kk.AY[Bk];
+            bk.d.AddToMesh(Rk.materialIndex, Rk.verticesStart, Rk.verticesCount, Rk.indexStart, Rk.indexCount, Fk)
           }
         }
-        Ru._shouldGenerateFlatShading && (Ru.convertToFlatShadedMesh(), Ru._shouldGenerateFlatShading = !1), Ru.computeWorldMatrix(!0), yu.onMeshImportedObservable.notifyObservers(Ru)
+        Fk._shouldGenerateFlatShading && (Fk.convertToFlatShadedMesh(), Fk._shouldGenerateFlatShading = !1), Fk.computeWorldMatrix(!0), Bk.onMeshImportedObservable.notifyObservers(Fk)
       }
-      static _CleanMatricesWeights(uu, Ru) {
-        const yu = .001;
-        if (!Nu.b.CleanBoneMatrixWeights) return;
-        let Eu;
-        if (!(uu.skeletonId > -1)) return;
+      static _CleanMatricesWeights(kk, Fk) {
+        const Bk = .001;
+        if (!wk.e.CleanBoneMatrixWeights) return;
+        let Rk;
+        if (!(kk.skeletonId > -1)) return;
         {
-          const yu = Ru.lD().getLastSkeletonById(uu.skeletonId);
-          if (!yu) return;
-          Eu = yu.bones.length
+          const Bk = Fk.XN().getLastSkeletonById(kk.skeletonId);
+          if (!Bk) return;
+          Rk = Bk.bones.length
         }
-        const Ku = Ru.getVerticesData(mu.h.MatricesIndicesKind),
-          Qu = Ru.getVerticesData(mu.h.MatricesIndicesExtraKind),
-          Ju = uu.matricesWeights,
-          Xu = uu.matricesWeightsExtra,
-          Vu = uu.numBoneInfluencer,
-          ru = Ju.length;
-        for (let mu = 0; mu < ru; mu += 4) {
-          let uu = 0,
-            Ru = -1;
-          for (let Eu = 0; Eu < 4; Eu++) {
-            const Ku = Ju[mu + Eu];
-            uu += Ku, Ku < yu && Ru < 0 && (Ru = Eu)
+        const tk = Fk.getVerticesData(Xk.n.MatricesIndicesKind),
+          ak = Fk.getVerticesData(Xk.n.MatricesIndicesExtraKind),
+          bk = kk.matricesWeights,
+          dk = kk.matricesWeightsExtra,
+          sk = kk.numBoneInfluencer,
+          Vk = bk.length;
+        for (let Xk = 0; Xk < Vk; Xk += 4) {
+          let kk = 0,
+            Fk = -1;
+          for (let Rk = 0; Rk < 4; Rk++) {
+            const tk = bk[Xk + Rk];
+            kk += tk, tk < Bk && Fk < 0 && (Fk = Rk)
           }
-          if (Xu)
-            for (let Eu = 0; Eu < 4; Eu++) {
-              const Ku = Xu[mu + Eu];
-              uu += Ku, Ku < yu && Ru < 0 && (Ru = Eu + 4)
+          if (dk)
+            for (let Rk = 0; Rk < 4; Rk++) {
+              const tk = dk[Xk + Rk];
+              kk += tk, tk < Bk && Fk < 0 && (Fk = Rk + 4)
             }
-          if ((Ru < 0 || Ru > Vu - 1) && (Ru = Vu - 1), uu > yu) {
-            const Ru = 1 / uu;
-            for (let uu = 0; uu < 4; uu++) Ju[mu + uu] *= Ru;
-            if (Xu)
-              for (let uu = 0; uu < 4; uu++) Xu[mu + uu] *= Ru
-          } else Ru >= 4 ? (Xu[mu + Ru - 4] = 1 - uu, Qu[mu + Ru - 4] = Eu) : (Ju[mu + Ru] = 1 - uu, Ku[mu + Ru] = Eu)
+          if ((Fk < 0 || Fk > sk - 1) && (Fk = sk - 1), kk > Bk) {
+            const Fk = 1 / kk;
+            for (let kk = 0; kk < 4; kk++) bk[Xk + kk] *= Fk;
+            if (dk)
+              for (let kk = 0; kk < 4; kk++) dk[Xk + kk] *= Fk
+          } else Fk >= 4 ? (dk[Xk + Fk - 4] = 1 - kk, ak[Xk + Fk - 4] = Rk) : (bk[Xk + Fk] = 1 - kk, tk[Xk + Fk] = Rk)
         }
-        Ru.setVerticesData(mu.h.MatricesIndicesKind, Ku), uu.matricesWeightsExtra && Ru.setVerticesData(mu.h.MatricesIndicesExtraKind, Qu)
+        Fk.setVerticesData(Xk.n.MatricesIndicesKind, tk), kk.matricesWeightsExtra && Fk.setVerticesData(Xk.n.MatricesIndicesExtraKind, ak)
       }
-      static Parse(uu, Ru, yu) {
-        const Ku = new Wu(uu.id, Ru, void 0, uu.updatable);
-        return Ku._loadedUniqueId = uu.uniqueId, Bu.e && Bu.e.AddTagsTo(Ku, uu.tags), uu.delayLoadingFile ? (Ku.delayLoadState = 4, Ku.delayLoadingFile = yu + uu.delayLoadingFile, Ku._boundingInfo = new Xu.c(Eu.p.FromArray(uu.boundingBoxMinimum), Eu.p.FromArray(uu.boundingBoxMaximum)), Ku._delayInfo = [], uu.hasUVs && Ku._delayInfo.push(mu.h.UVKind), uu.hasUVs2 && Ku._delayInfo.push(mu.h.UV2Kind), uu.hasUVs3 && Ku._delayInfo.push(mu.h.UV3Kind), uu.hasUVs4 && Ku._delayInfo.push(mu.h.UV4Kind), uu.hasUVs5 && Ku._delayInfo.push(mu.h.UV5Kind), uu.hasUVs6 && Ku._delayInfo.push(mu.h.UV6Kind), uu.hasColors && Ku._delayInfo.push(mu.h.ColorKind), uu.hasMatricesIndices && Ku._delayInfo.push(mu.h.MatricesIndicesKind), uu.hasMatricesWeights && Ku._delayInfo.push(mu.h.MatricesWeightsKind), Ku._delayLoadingFunction = Qu.e.ImportVertexData) : Qu.e.ImportVertexData(uu, Ku), Ru.pushGeometry(Ku, !0), Ku
+      static Parse(kk, Fk, Bk) {
+        const tk = new mk(kk.id, Fk, void 0, kk.updatable);
+        return tk._loadedUniqueId = kk.uniqueId, Jk.b && Jk.b.AddTagsTo(tk, kk.tags), kk.delayLoadingFile ? (tk.delayLoadState = 4, tk.delayLoadingFile = Bk + kk.delayLoadingFile, tk._boundingInfo = new dk.b(Rk.s.FromArray(kk.boundingBoxMinimum), Rk.s.FromArray(kk.boundingBoxMaximum)), tk._delayInfo = [], kk.hasUVs && tk._delayInfo.push(Xk.n.UVKind), kk.hasUVs2 && tk._delayInfo.push(Xk.n.UV2Kind), kk.hasUVs3 && tk._delayInfo.push(Xk.n.UV3Kind), kk.hasUVs4 && tk._delayInfo.push(Xk.n.UV4Kind), kk.hasUVs5 && tk._delayInfo.push(Xk.n.UV5Kind), kk.hasUVs6 && tk._delayInfo.push(Xk.n.UV6Kind), kk.hasColors && tk._delayInfo.push(Xk.n.ColorKind), kk.hasMatricesIndices && tk._delayInfo.push(Xk.n.MatricesIndicesKind), kk.hasMatricesWeights && tk._delayInfo.push(Xk.n.MatricesWeightsKind), tk._delayLoadingFunction = ak.e.ImportVertexData) : ak.e.ImportVertexData(kk, tk), Fk.pushGeometry(tk, !0), tk
       }
     }
   },
-  40038: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => ru,
-      e: () => Su
+  39879: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Vk,
+      d: () => ek
     });
-    var Eu = yu(36830),
-      Ku = yu(38448),
-      Qu = yu(40008),
-      mu = yu(39984),
-      Ju = yu(38444),
-      Nu = yu(40017),
-      Xu = yu(39706),
-      Vu = yu(36871);
-    class ru extends Qu.e {
-      constructor(uu, Ru) {
-        super(uu, Ru.lD()), this._indexInSourceMeshInstanceArray = -1, this._distanceToCamera = 0, Ru.Y_(this), this._sourceMesh = Ru, this._unIndexed = Ru._unIndexed, this.position.Oyu(Ru.position), this.rotation.Oyu(Ru.rotation), this.pp.Oyu(Ru.pp), Ru.rotationQuaternion && (this.rotationQuaternion = Ru.rotationQuaternion.clone()), this.animations = Ru.animations.slice();
-        for (const yu of Ru.getAnimationRanges()) null != yu && this.createAnimationRange(yu.name, yu.from, yu.to);
-        if (this.infiniteDistance = Ru.infiniteDistance, this.setPivotMatrix(Ru.getPivotMatrix()), Ru.skeleton || Ru.morphTargetManager || !Ru.hasBoundingInfo) this.refreshBoundingInfo(!0, !0);
+    var Rk = Bk(36758),
+      tk = Bk(38320),
+      ak = Bk(39853),
+      Xk = Bk(39817),
+      bk = Bk(38318),
+      wk = Bk(39857),
+      dk = Bk(39541),
+      sk = Bk(36798);
+    class Vk extends ak.b {
+      constructor(kk, Fk) {
+        super(kk, Fk.XN()), this._indexInSourceMeshInstanceArray = -1, this._distanceToCamera = 0, Fk.E_(this), this._sourceMesh = Fk, this._unIndexed = Fk._unIndexed, this.position.sBk(Fk.position), this.rotation.sBk(Fk.rotation), this.ta.sBk(Fk.ta), Fk.rotationQuaternion && (this.rotationQuaternion = Fk.rotationQuaternion.clone()), this.animations = Fk.animations.slice();
+        for (const Bk of Fk.getAnimationRanges()) null != Bk && this.createAnimationRange(Bk.name, Bk.from, Bk.to);
+        if (this.infiniteDistance = Fk.infiniteDistance, this.setPivotMatrix(Fk.getPivotMatrix()), Fk.skeleton || Fk.morphTargetManager || !Fk.hasBoundingInfo) this.refreshBoundingInfo(!0, !0);
         else {
-          const uu = Ru.vI();
-          this.buildBoundingInfo(uu.minimum, uu.maximum)
+          const kk = Fk.ZH();
+          this.buildBoundingInfo(kk.minimum, kk.maximum)
         }
         this._syncSubMeshes()
       }
@@ -4300,38 +4300,38 @@ export const modules = {
       get receiveShadows() {
         return this._sourceMesh.receiveShadows
       }
-      set receiveShadows(uu) {
-        this._sourceMesh?.receiveShadows !== uu && Ku.e.Warn("Setting receiveShadows on an instanced mesh has no effect")
+      set receiveShadows(kk) {
+        this._sourceMesh?.receiveShadows !== kk && tk.b.Warn("Setting receiveShadows on an instanced mesh has no effect")
       }
       get material() {
         return this._sourceMesh.material
       }
-      set material(uu) {
-        this._sourceMesh?.material !== uu && Ku.e.Warn("Setting material on an instanced mesh has no effect")
+      set material(kk) {
+        this._sourceMesh?.material !== kk && tk.b.Warn("Setting material on an instanced mesh has no effect")
       }
       get visibility() {
         return this._sourceMesh.visibility
       }
-      set visibility(uu) {
-        this._sourceMesh?.visibility !== uu && Ku.e.Warn("Setting visibility on an instanced mesh has no effect")
+      set visibility(kk) {
+        this._sourceMesh?.visibility !== kk && tk.b.Warn("Setting visibility on an instanced mesh has no effect")
       }
       get skeleton() {
         return this._sourceMesh.skeleton
       }
-      set skeleton(uu) {
-        this._sourceMesh?.skeleton !== uu && Ku.e.Warn("Setting skeleton on an instanced mesh has no effect")
+      set skeleton(kk) {
+        this._sourceMesh?.skeleton !== kk && tk.b.Warn("Setting skeleton on an instanced mesh has no effect")
       }
       get renderingGroupId() {
         return this._sourceMesh.renderingGroupId
       }
-      set renderingGroupId(uu) {
-        this._sourceMesh && uu !== this._sourceMesh.renderingGroupId && Ku.e.Warn("Note - setting renderingGroupId of an instanced mesh has no effect on the scene")
+      set renderingGroupId(kk) {
+        this._sourceMesh && kk !== this._sourceMesh.renderingGroupId && tk.b.Warn("Note - setting renderingGroupId of an instanced mesh has no effect on the scene")
       }
       get meshBlendingTag() {
         return this._sourceMesh.meshBlendingTag
       }
-      set meshBlendingTag(uu) {
-        this._sourceMesh && uu !== this._sourceMesh.meshBlendingTag && Ku.e.Warn("Setting meshBlendingTag on an instanced mesh has no effect")
+      set meshBlendingTag(kk) {
+        this._sourceMesh && kk !== this._sourceMesh.meshBlendingTag && tk.b.Warn("Setting meshBlendingTag on an instanced mesh has no effect")
       }
       getTotalVertices() {
         return this._sourceMesh ? this._sourceMesh.getTotalVertices() : 0
@@ -4339,65 +4339,65 @@ export const modules = {
       getTotalIndices() {
         return this._sourceMesh.getTotalIndices()
       }
-      get dKu() {
+      get rRk() {
         return this._sourceMesh
       }
       get geometry() {
         return this._sourceMesh._geometry
       }
-      createInstance(uu) {
-        return this._sourceMesh.createInstance(uu)
+      createInstance(kk) {
+        return this._sourceMesh.createInstance(kk)
       }
       isReady() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return this._sourceMesh.isReady(uu, !0)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        return this._sourceMesh.isReady(kk, !0)
       }
-      getVerticesData(uu, Ru, yu) {
-        return this._sourceMesh.getVerticesData(uu, Ru, yu)
+      getVerticesData(kk, Fk, Bk) {
+        return this._sourceMesh.getVerticesData(kk, Fk, Bk)
       }
-      copyVerticesData(uu, Ru) {
-        this._sourceMesh.copyVerticesData(uu, Ru)
+      copyVerticesData(kk, Fk) {
+        this._sourceMesh.copyVerticesData(kk, Fk)
       }
-      getVertexBuffer(uu, Ru) {
-        return this._sourceMesh.getVertexBuffer(uu, Ru)
+      getVertexBuffer(kk, Fk) {
+        return this._sourceMesh.getVertexBuffer(kk, Fk)
       }
-      setVerticesData(uu, Ru, yu, Eu) {
-        return this.dKu && this.dKu.setVerticesData(uu, Ru, yu, Eu), this.dKu
+      setVerticesData(kk, Fk, Bk, Rk) {
+        return this.rRk && this.rRk.setVerticesData(kk, Fk, Bk, Rk), this.rRk
       }
-      updateVerticesData(uu, Ru, yu, Eu) {
-        return this.dKu && this.dKu.updateVerticesData(uu, Ru, yu, Eu), this.dKu
+      updateVerticesData(kk, Fk, Bk, Rk) {
+        return this.rRk && this.rRk.updateVerticesData(kk, Fk, Bk, Rk), this.rRk
       }
-      setIndices(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        return this.dKu && this.dKu.setIndices(uu, Ru), this.dKu
+      setIndices(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        return this.rRk && this.rRk.setIndices(kk, Fk), this.rRk
       }
-      isVerticesDataPresent(uu) {
-        return this._sourceMesh.isVerticesDataPresent(uu)
+      isVerticesDataPresent(kk) {
+        return this._sourceMesh.isVerticesDataPresent(kk)
       }
-      DEu() {
-        return this._sourceMesh.DEu()
+      hBk() {
+        return this._sourceMesh.hBk()
       }
       get _positions() {
         return this._sourceMesh._positions
       }
       refreshBoundingInfo() {
-        let uu, Ru = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          yu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.hasBoundingInfo && this.vI().isLocked) return this;
-        uu = "object" === typeof Ru ? Ru : {
-          applySkeleton: Ru,
-          applyMorph: yu
+        let kk, Fk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          Bk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.hasBoundingInfo && this.ZH().isLocked) return this;
+        kk = "object" === typeof Fk ? Fk : {
+          applySkeleton: Fk,
+          applyMorph: Bk
         };
-        const Eu = this._sourceMesh.geometry ? this._sourceMesh.geometry.boundingBias : null;
-        return this._refreshBoundingInfo(this._sourceMesh._getData(uu, null, Xu.h.PositionKind), Eu), this
+        const Rk = this._sourceMesh.geometry ? this._sourceMesh.geometry.boundingBias : null;
+        return this._refreshBoundingInfo(this._sourceMesh._getData(kk, null, dk.n.PositionKind), Rk), this
       }
       _preActivate() {
         return this._currentLOD && this._currentLOD._preActivate(), this
       }
-      _activate(uu, Ru) {
-        if (super._activate(uu, Ru), this._sourceMesh.mC || Ku.e.Warn("Instances should only be created for meshes with geometry."), this._currentLOD) {
+      _activate(kk, Fk) {
+        if (super._activate(kk, Fk), this._sourceMesh.AY || tk.b.Warn("Instances should only be created for meshes with geometry."), this._currentLOD) {
           if (this._currentLOD._getWorldMatrixDeterminant() >= 0 !== this._getWorldMatrixDeterminant() >= 0) return this._internalAbstractMeshDataInfo._actAsRegularMesh = !0, !0;
-          if (this._internalAbstractMeshDataInfo._actAsRegularMesh = !1, this._currentLOD._registerInstanceForRenderId(this, uu), Ru) {
+          if (this._internalAbstractMeshDataInfo._actAsRegularMesh = !1, this._currentLOD._registerInstanceForRenderId(this, kk), Fk) {
             if (!this._currentLOD._internalAbstractMeshDataInfo._isActiveIntermediate) return this._currentLOD._internalAbstractMeshDataInfo._onlyForInstancesIntermediate = !0, !0
           } else if (!this._currentLOD._internalAbstractMeshDataInfo._isActive) return this._currentLOD._internalAbstractMeshDataInfo._onlyForInstances = !0, !0
         }
@@ -4407,261 +4407,261 @@ export const modules = {
         this._sourceMesh.edgesShareWithInstances && this._sourceMesh._edgesRenderer && this._sourceMesh._edgesRenderer.isEnabled && this._sourceMesh._renderingGroup ? (this._sourceMesh._renderingGroup._edgesRenderers.pushNoDuplicate(this._sourceMesh._edgesRenderer), this._sourceMesh._edgesRenderer.customInstances.push(this.getWorldMatrix())) : this._edgesRenderer && this._edgesRenderer.isEnabled && this._sourceMesh._renderingGroup && this._sourceMesh._renderingGroup._edgesRenderers.push(this._edgesRenderer)
       }
       getWorldMatrix() {
-        if (this._currentLOD && this._currentLOD !== this._sourceMesh && this._currentLOD.billboardMode !== Nu.d.BILLBOARDMODE_NONE && this._currentLOD._masterMesh !== this) {
-          this._billboardWorldMatrix || (this._billboardWorldMatrix = new Eu.d);
-          const uu = this._currentLOD._masterMesh;
-          return this._currentLOD._masterMesh = this, Eu.m.MS[7].Oyu(this._currentLOD.position), this._currentLOD.position.set(0, 0, 0), this._billboardWorldMatrix.Oyu(this._currentLOD.computeWorldMatrix(!0)), this._currentLOD.position.Oyu(Eu.m.MS[7]), this._currentLOD._masterMesh = uu, this._billboardWorldMatrix
+        if (this._currentLOD && this._currentLOD !== this._sourceMesh && this._currentLOD.billboardMode !== wk.e.BILLBOARDMODE_NONE && this._currentLOD._masterMesh !== this) {
+          this._billboardWorldMatrix || (this._billboardWorldMatrix = new Rk.c);
+          const kk = this._currentLOD._masterMesh;
+          return this._currentLOD._masterMesh = this, Rk.l.Qe[7].sBk(this._currentLOD.position), this._currentLOD.position.set(0, 0, 0), this._billboardWorldMatrix.sBk(this._currentLOD.computeWorldMatrix(!0)), this._currentLOD.position.sBk(Rk.l.Qe[7]), this._currentLOD._masterMesh = kk, this._billboardWorldMatrix
         }
         return super.getWorldMatrix()
       }
-      get ZD() {
+      get mN() {
         return !0
       }
-      getLOD(uu) {
-        if (!uu) return this;
-        const Ru = this.dKu.getLODLevels();
-        if (Ru && 0 !== Ru.length) {
-          const Ru = this.vI();
-          this._currentLOD = this.dKu.getLOD(uu, Ru.aEu)
-        } else this._currentLOD = this.dKu;
+      getLOD(kk) {
+        if (!kk) return this;
+        const Fk = this.rRk.getLODLevels();
+        if (Fk && 0 !== Fk.length) {
+          const Fk = this.ZH();
+          this._currentLOD = this.rRk.getLOD(kk, Fk.JRk)
+        } else this._currentLOD = this.rRk;
         return this._currentLOD
       }
-      _preActivateForIntermediateRendering(uu) {
-        return this.dKu._preActivateForIntermediateRendering(uu)
+      _preActivateForIntermediateRendering(kk) {
+        return this.rRk._preActivateForIntermediateRendering(kk)
       }
       _syncSubMeshes() {
-        if (this.releaseSubMeshes(), this._sourceMesh.mC)
-          for (let uu = 0; uu < this._sourceMesh.mC.length; uu++) this._sourceMesh.mC[uu].clone(this, this._sourceMesh);
+        if (this.releaseSubMeshes(), this._sourceMesh.AY)
+          for (let kk = 0; kk < this._sourceMesh.AY.length; kk++) this._sourceMesh.AY[kk].clone(this, this._sourceMesh);
         return this
       }
       _generatePointsArray() {
         return this._sourceMesh._generatePointsArray()
       }
       _updateBoundingInfo() {
-        return this.hasBoundingInfo ? this.vI().update(this.worldMatrixFromCache) : this.buildBoundingInfo(this.absolutePosition, this.absolutePosition, this.worldMatrixFromCache), this._updateSubMeshesBoundingInfo(this.worldMatrixFromCache), this
+        return this.hasBoundingInfo ? this.ZH().update(this.worldMatrixFromCache) : this.buildBoundingInfo(this.absolutePosition, this.absolutePosition, this.worldMatrixFromCache), this._updateSubMeshesBoundingInfo(this.worldMatrixFromCache), this
       }
-      clone(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          yu = arguments.length > 2 ? arguments[2] : void 0;
-        const Eu = ((arguments.length > 3 ? arguments[3] : void 0) || this._sourceMesh).createInstance(uu);
-        if (Ju.e.DeepCopy(this, Eu, ["name", "mC", "uniqueId", "parent", "lightSources", "receiveShadows", "material", "visibility", "skeleton", "dKu", "ZD", "facetNb", "isFacetDataEnabled", "isBlocked", "useBones", "HKu", "collider", "edgesRenderer", "forward", "up", "right", "absolutePosition", "absoluteScaling", "absoluteRotationQuaternion", "RJu", "nonUniformScaling", "behaviors", "worldMatrixFromCache", "hasThinInstances", "hasBoundingInfo", "geometry"], []), Ru && (Eu.parent = Ru), !yu)
-          for (let Ku = 0; Ku < this.lD().meshes.length; Ku++) {
-            const uu = this.lD().meshes[Ku];
-            uu.parent === this && uu.clone(uu.name, Eu)
+      clone(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Bk = arguments.length > 2 ? arguments[2] : void 0;
+        const Rk = ((arguments.length > 3 ? arguments[3] : void 0) || this._sourceMesh).createInstance(kk);
+        if (bk.e.DeepCopy(this, Rk, ["name", "AY", "uniqueId", "parent", "lightSources", "receiveShadows", "material", "visibility", "skeleton", "rRk", "mN", "facetNb", "isFacetDataEnabled", "isBlocked", "useBones", "GRk", "collider", "edgesRenderer", "forward", "up", "right", "absolutePosition", "absoluteScaling", "absoluteRotationQuaternion", "SXk", "nonUniformScaling", "behaviors", "worldMatrixFromCache", "hasThinInstances", "hasBoundingInfo", "geometry"], []), Fk && (Rk.parent = Fk), !Bk)
+          for (let tk = 0; tk < this.XN().meshes.length; tk++) {
+            const kk = this.XN().meshes[tk];
+            kk.parent === this && kk.clone(kk.name, Rk)
           }
-        return Eu.computeWorldMatrix(!0), this.onClonedObservable.notifyObservers(Eu), Eu
+        return Rk.computeWorldMatrix(!0), this.onClonedObservable.notifyObservers(Rk), Rk
       }
-      dispose(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this._sourceMesh.q_(this), super.dispose(uu, Ru)
+      dispose(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._sourceMesh.N_(this), super.dispose(kk, Fk)
       }
-      _serializeAsParent(uu) {
-        super._serializeAsParent(uu), uu.parentId = this._sourceMesh.uniqueId, uu.parentInstanceIndex = this._indexInSourceMeshInstanceArray
+      _serializeAsParent(kk) {
+        super._serializeAsParent(kk), kk.parentId = this._sourceMesh.uniqueId, kk.parentInstanceIndex = this._indexInSourceMeshInstanceArray
       }
       instantiateHierarchy() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          Ru = arguments.length > 1 ? arguments[1] : void 0,
-          yu = arguments.length > 2 ? arguments[2] : void 0;
-        const Eu = this.clone("Clone of " + (this.name || this.id), uu || this.parent, !0, Ru && Ru.newSourcedMesh);
-        Eu && yu && yu(this, Eu);
-        for (const Ku of this.getChildTransformNodes(!0)) Ku.instantiateHierarchy(Eu, Ru, yu);
-        return Eu
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Bk = arguments.length > 2 ? arguments[2] : void 0;
+        const Rk = this.clone("Clone of " + (this.name || this.id), kk || this.parent, !0, Fk && Fk.newSourcedMesh);
+        Rk && Bk && Bk(this, Rk);
+        for (const tk of this.getChildTransformNodes(!0)) tk.instantiateHierarchy(Rk, Fk, Bk);
+        return Rk
       }
     }
-    let Bu = !1;
+    let Jk = !1;
 
-    function xu(uu, Ru, yu, Eu, Ku) {
-      for (let Qu = 0; Qu < Ru.length; Qu++) {
-        const mu = uu[Ru[Qu]] ?? 0,
-          Ju = Ku + yu[Qu];
-        mu.toArray ? mu.toArray(Eu, Ju) : mu.copyToArray ? mu.copyToArray(Eu, Ju) : Eu[Ju] = mu
+    function Ak(kk, Fk, Bk, Rk, tk) {
+      for (let ak = 0; ak < Fk.length; ak++) {
+        const Xk = kk[Fk[ak]] ?? 0,
+          bk = tk + Bk[ak];
+        Xk.toArray ? Xk.toArray(Rk, bk) : Xk.copyToArray ? Xk.copyToArray(Rk, bk) : Rk[bk] = Xk
       }
     }
 
-    function Su() {
-      Bu || (Bu = !0, mu.e._instancedMeshFactory = (uu, Ru) => {
-        const yu = new ru(uu, Ru);
-        if (Ru.bI) {
-          yu.bI = {};
-          for (const uu in Ru.bI) yu.bI[uu] = Ru.bI[uu]
+    function ek() {
+      Jk || (Jk = !0, Xk.b._instancedMeshFactory = (kk, Fk) => {
+        const Bk = new Vk(kk, Fk);
+        if (Fk.gH) {
+          Bk.gH = {};
+          for (const kk in Fk.gH) Bk.gH[kk] = Fk.gH[kk]
         }
-        return yu
-      }, mu.e.prototype.HI = function(uu, Ru) {
-        if (!this.bI) {
-          this.bI = {};
-          for (const uu of this.instances) uu.bI = {}
+        return Bk
+      }, Xk.b.prototype.uH = function(kk, Fk) {
+        if (!this.gH) {
+          this.gH = {};
+          for (const kk of this.instances) kk.gH = {}
         }
         this._userInstancedBuffersStorage || (this._userInstancedBuffersStorage = {
           data: {},
           vertexBuffers: {},
           strides: {},
           sizes: {},
-          vertexArrayObjects: this.eS().getCaps().vertexArrayObject ? {} : void 0
-        }), this.bI[uu] = null, this._userInstancedBuffersStorage.strides[uu] = Ru;
-        const yu = this._userInstancedBuffersStorage;
-        yu.interleavedKinds = [], yu.interleavedOffsets = [], yu.interleavedRowStride = 0;
-        for (const Eu in yu.strides) yu.interleavedKinds.push(Eu), yu.interleavedOffsets.push(yu.interleavedRowStride), yu.interleavedRowStride += yu.strides[Eu];
-        yu.interleavedData = new Float32Array(32 * yu.interleavedRowStride);
-        for (const Eu in yu.interleavedBuffers) yu.interleavedBuffers[Eu].buffer.dispose();
-        yu.interleavedBuffers = {}, yu.vertexBuffers[uu] = null;
-        for (const Eu of this.instances) Eu.bI[uu] = null;
+          vertexArrayObjects: this.ne().getCaps().vertexArrayObject ? {} : void 0
+        }), this.gH[kk] = null, this._userInstancedBuffersStorage.strides[kk] = Fk;
+        const Bk = this._userInstancedBuffersStorage;
+        Bk.interleavedKinds = [], Bk.interleavedOffsets = [], Bk.interleavedRowStride = 0;
+        for (const Rk in Bk.strides) Bk.interleavedKinds.push(Rk), Bk.interleavedOffsets.push(Bk.interleavedRowStride), Bk.interleavedRowStride += Bk.strides[Rk];
+        Bk.interleavedData = new Float32Array(32 * Bk.interleavedRowStride);
+        for (const Rk in Bk.interleavedBuffers) Bk.interleavedBuffers[Rk].buffer.dispose();
+        Bk.interleavedBuffers = {}, Bk.vertexBuffers[kk] = null;
+        for (const Rk of this.instances) Rk.gH[kk] = null;
         this._invalidateInstanceVertexArrayObject(), this._markSubMeshesAsAttributesDirty()
-      }, mu.e.prototype._processInstancedBuffers = function(uu, Ru) {
-        const yu = this._userInstancedBuffersStorage,
-          Eu = yu.interleavedRowStride;
-        if (!Eu) return;
-        const Ku = uu ? uu.length : 0,
-          Qu = (Ku + 1) * Eu;
-        let mu = yu.interleavedData;
-        if (mu.length < Qu) {
-          let uu = mu.length;
-          for (; uu < Qu;) uu *= 2;
-          mu = yu.interleavedData = new Float32Array(uu)
+      }, Xk.b.prototype._processInstancedBuffers = function(kk, Fk) {
+        const Bk = this._userInstancedBuffersStorage,
+          Rk = Bk.interleavedRowStride;
+        if (!Rk) return;
+        const tk = kk ? kk.length : 0,
+          ak = (tk + 1) * Rk;
+        let Xk = Bk.interleavedData;
+        if (Xk.length < ak) {
+          let kk = Xk.length;
+          for (; kk < ak;) kk *= 2;
+          Xk = Bk.interleavedData = new Float32Array(kk)
         }
-        const Ju = yu.interleavedKinds,
-          Nu = yu.interleavedOffsets;
-        let Vu = 0;
-        Ru && (xu(this.bI, Ju, Nu, mu, Vu), Vu += Eu);
-        for (let Xu = 0; Xu < Ku; Xu++) xu(uu[Xu].bI, Ju, Nu, mu, Vu), Vu += Eu;
-        let ru = "shared",
-          Bu = yu.vertexBuffers;
-        this._instanceDataStorage.useMonoDataStorageRenderPass || (ru = this._instanceDataStorage.engine.currentRenderPassId, yu.renderPasses || (yu.renderPasses = {}), yu.renderPasses[ru] || (yu.renderPasses[ru] = {}), Bu = yu.renderPasses[ru]);
-        const Su = yu.interleavedBuffers[ru];
-        let pu = !Su || Su.data !== mu;
-        for (let Xu = 0; !pu && Xu < Ju.length; Xu++) pu = !Bu[Ju[Xu]];
-        if (!pu) return void Su.buffer.updateDirectly(mu, 0);
-        Su?.buffer.dispose();
-        const Tu = new Xu.c(this.eS(), mu, !0, Eu, !1, !0);
-        for (let Xu = 0; Xu < Ju.length; Xu++) {
-          const uu = Ju[Xu],
-            Ru = Tu.createVertexBuffer(uu, Nu[Xu], yu.strides[uu]);
-          Ru.hashCode += Ru.byteOffset * 2 ** 24, Bu[uu] = Ru
+        const bk = Bk.interleavedKinds,
+          wk = Bk.interleavedOffsets;
+        let sk = 0;
+        Fk && (Ak(this.gH, bk, wk, Xk, sk), sk += Rk);
+        for (let dk = 0; dk < tk; dk++) Ak(kk[dk].gH, bk, wk, Xk, sk), sk += Rk;
+        let Vk = "shared",
+          Jk = Bk.vertexBuffers;
+        this._instanceDataStorage.useMonoDataStorageRenderPass || (Vk = this._instanceDataStorage.engine.currentRenderPassId, Bk.renderPasses || (Bk.renderPasses = {}), Bk.renderPasses[Vk] || (Bk.renderPasses[Vk] = {}), Jk = Bk.renderPasses[Vk]);
+        const ek = Bk.interleavedBuffers[Vk];
+        let yk = !ek || ek.data !== Xk;
+        for (let dk = 0; !yk && dk < bk.length; dk++) yk = !Jk[bk[dk]];
+        if (!yk) return void ek.buffer.updateDirectly(Xk, 0);
+        ek?.buffer.dispose();
+        const fk = new dk.d(this.ne(), Xk, !0, Rk, !1, !0);
+        for (let dk = 0; dk < bk.length; dk++) {
+          const kk = bk[dk],
+            Fk = fk.createVertexBuffer(kk, wk[dk], Bk.strides[kk]);
+          Fk.hashCode += Fk.byteOffset * 2 ** 24, Jk[kk] = Fk
         }
-        yu.interleavedBuffers[ru] = {
-          buffer: Tu,
-          data: mu
+        Bk.interleavedBuffers[Vk] = {
+          buffer: fk,
+          data: Xk
         }, this._invalidateInstanceVertexArrayObject()
-      }, mu.e.prototype._invalidateInstanceVertexArrayObject = function() {
+      }, Xk.b.prototype._invalidateInstanceVertexArrayObject = function() {
         if (this._userInstancedBuffersStorage && void 0 !== this._userInstancedBuffersStorage.vertexArrayObjects) {
-          for (const uu in this._userInstancedBuffersStorage.vertexArrayObjects) this.eS().releaseVertexArrayObject(this._userInstancedBuffersStorage.vertexArrayObjects[uu]);
+          for (const kk in this._userInstancedBuffersStorage.vertexArrayObjects) this.ne().releaseVertexArrayObject(this._userInstancedBuffersStorage.vertexArrayObjects[kk]);
           this._userInstancedBuffersStorage.vertexArrayObjects = {}
         }
-      }, mu.e.prototype._disposeInstanceSpecificData = function() {
-        for (const Ru in this._instanceDataStorage.renderPasses) this._instanceDataStorage.renderPasses[Ru].instancesBuffer?.dispose();
+      }, Xk.b.prototype._disposeInstanceSpecificData = function() {
+        for (const Fk in this._instanceDataStorage.renderPasses) this._instanceDataStorage.renderPasses[Fk].instancesBuffer?.dispose();
         for (this._instanceDataStorage.renderPasses = {}, this._instanceDataStorage.dataStorageRenderPass?.instancesBuffer?.dispose(); this.instances.length;) this.instances[0].dispose();
-        for (const Ru in this.bI) this._userInstancedBuffersStorage.vertexBuffers[Ru] && this._userInstancedBuffersStorage.vertexBuffers[Ru].dispose();
-        const uu = this._userInstancedBuffersStorage?.interleavedBuffers;
-        if (uu) {
-          for (const Ru in uu) uu[Ru].buffer.dispose();
+        for (const Fk in this.gH) this._userInstancedBuffersStorage.vertexBuffers[Fk] && this._userInstancedBuffersStorage.vertexBuffers[Fk].dispose();
+        const kk = this._userInstancedBuffersStorage?.interleavedBuffers;
+        if (kk) {
+          for (const Fk in kk) kk[Fk].buffer.dispose();
           this._userInstancedBuffersStorage.interleavedBuffers = {}
         }
-        this._invalidateInstanceVertexArrayObject(), this.bI = {}
-      }, (0, Vu.c)("BABYLON.InstancedMesh", ru))
+        this._invalidateInstanceVertexArrayObject(), this.gH = {}
+      }, (0, sk.d)("BABYLON.InstancedMesh", Vk))
     }
   },
-  39984: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => vu,
-      f: () => fu,
-      h: () => hu
+  39817: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Ik,
+      d: () => kF,
+      e: () => Zk
     });
-    var Eu, Ku, Qu, mu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su, pu, Tu, Wu = yu(36858),
-      ju = yu(39655),
-      Hu = yu(39606),
-      du = yu(38444),
-      bu = yu(39584),
-      Cu = yu(39987),
-      ku = yu(39774),
-      eu = yu(36830),
-      Au = yu(36991),
-      Du = yu(39780),
-      Mu = yu(39706),
-      Iu = yu(39990),
-      Gu = yu(39994),
-      Uu = yu(40008),
-      nu = yu(39866),
-      su = yu(39863),
-      tu = yu(39951),
-      lu = yu(40026),
-      gu = yu(39998),
-      cu = yu(39582),
-      Lu = yu(38448),
-      zu = yu(36871),
-      Fu = yu(39430),
-      wu = yu(39736);
-    class Zu {
-      constructor(uu, Ru) {
-        this.distanceOrScreenCoverage = uu, this.mesh = Ru
+    var Rk, tk, ak, Xk, bk, wk, dk, sk, Vk, Jk, Ak, ek, yk, fk, mk = Bk(36781),
+      Wk = Bk(39492),
+      vk = Bk(39436),
+      ik = Bk(38318),
+      Yk = Bk(39420),
+      Lk = Bk(39823),
+      Ok = Bk(39623),
+      Ek = Bk(36758),
+      Sk = Bk(36917),
+      Nk = Bk(39628),
+      Hk = Bk(39541),
+      uk = Bk(39829),
+      Mk = Bk(39836),
+      gk = Bk(39853),
+      Uk = Bk(39703),
+      ck = Bk(39695),
+      Gk = Bk(39785),
+      Tk = Bk(39861),
+      rk = Bk(39844),
+      Dk = Bk(39414),
+      zk = Bk(38320),
+      Pk = Bk(36798),
+      hk = Bk(39296),
+      qk = Bk(39575);
+    class Ck {
+      constructor(kk, Fk) {
+        this.distanceOrScreenCoverage = kk, this.mesh = Fk
       }
     }
-    class hu {}
-    class Pu {
+    class Zk {}
+    class pk {
       constructor() {
-        this.batchCache = new Yu(this), this.batchCacheReplacementModeInFrozenMode = new Yu(this), this.instancesBufferSize = 2048
+        this.batchCache = new xk(this), this.batchCacheReplacementModeInFrozenMode = new xk(this), this.instancesBufferSize = 2048
       }
     }
-    class iu {
+    class Kk {
       constructor() {
         this.renderPasses = {}
       }
     }
-    class Yu {
-      constructor(uu) {
-        this.parent = uu, this.mustReturn = !1, this.visibleInstances = new Array, this.renderSelf = [], this.hardwareInstancedRendering = []
+    class xk {
+      constructor(kk) {
+        this.parent = kk, this.mustReturn = !1, this.visibleInstances = new Array, this.renderSelf = [], this.hardwareInstancedRendering = []
       }
     }
-    class ou {
+    class jk {
       constructor() {
         this.instancesCount = 0, this.matrixBuffer = null, this.previousMatrixBuffer = null, this.matrixBufferSize = 512, this.matrixData = null, this.boundingVectors = [], this.worldMatrices = null
       }
     }
-    class qu {
+    class lk {
       constructor() {
         this._areNormalsFrozen = !1, this._source = null, this.meshMap = null, this._preActivateId = -1, this._LODLevels = new Array, this._useLODScreenCoverage = !1, this._effectiveMaterial = null, this._forcedInstanceCount = 0, this._overrideRenderingFillMode = null
       }
     }
-    const Ou = {
+    const nk = {
       source: null,
       parent: null,
       doNotCloneChildren: !1,
       clonePhysicsImpostor: !0,
       cloneThinInstances: !1
     };
-    class vu extends Uu.e {
-      static _GetDefaultSideOrientation(uu) {
-        return uu || vu.FRONTSIDE
+    class Ik extends gk.b {
+      static _GetDefaultSideOrientation(kk) {
+        return kk || Ik.FRONTSIDE
       }
       get useLODScreenCoverage() {
         return this._internalMeshDataInfo._useLODScreenCoverage
       }
-      set useLODScreenCoverage(uu) {
-        this._internalMeshDataInfo._useLODScreenCoverage = uu, this._sortLODLevels()
+      set useLODScreenCoverage(kk) {
+        this._internalMeshDataInfo._useLODScreenCoverage = kk, this._sortLODLevels()
       }
       get computeBonesUsingShaders() {
         return this._internalAbstractMeshDataInfo._computeBonesUsingShaders
       }
-      set computeBonesUsingShaders(uu) {
-        this._internalAbstractMeshDataInfo._computeBonesUsingShaders !== uu && (uu && this._internalMeshDataInfo._sourcePositions && (this.setVerticesData(Mu.h.PositionKind, this._internalMeshDataInfo._sourcePositions, !0), this._internalMeshDataInfo._sourceNormals && this.setVerticesData(Mu.h.NormalKind, this._internalMeshDataInfo._sourceNormals, !0), this._internalMeshDataInfo._sourcePositions = null, this._internalMeshDataInfo._sourceNormals = null), this._internalAbstractMeshDataInfo._computeBonesUsingShaders = uu, this._markSubMeshesAsAttributesDirty())
+      set computeBonesUsingShaders(kk) {
+        this._internalAbstractMeshDataInfo._computeBonesUsingShaders !== kk && (kk && this._internalMeshDataInfo._sourcePositions && (this.setVerticesData(Hk.n.PositionKind, this._internalMeshDataInfo._sourcePositions, !0), this._internalMeshDataInfo._sourceNormals && this.setVerticesData(Hk.n.NormalKind, this._internalMeshDataInfo._sourceNormals, !0), this._internalMeshDataInfo._sourcePositions = null, this._internalMeshDataInfo._sourceNormals = null), this._internalAbstractMeshDataInfo._computeBonesUsingShaders = kk, this._markSubMeshesAsAttributesDirty())
       }
       get onBeforeRenderObservable() {
-        return this._internalMeshDataInfo._onBeforeRenderObservable || (this._internalMeshDataInfo._onBeforeRenderObservable = new Wu.b), this._internalMeshDataInfo._onBeforeRenderObservable
+        return this._internalMeshDataInfo._onBeforeRenderObservable || (this._internalMeshDataInfo._onBeforeRenderObservable = new mk.e), this._internalMeshDataInfo._onBeforeRenderObservable
       }
       get onBeforeBindObservable() {
-        return this._internalMeshDataInfo._onBeforeBindObservable || (this._internalMeshDataInfo._onBeforeBindObservable = new Wu.b), this._internalMeshDataInfo._onBeforeBindObservable
+        return this._internalMeshDataInfo._onBeforeBindObservable || (this._internalMeshDataInfo._onBeforeBindObservable = new mk.e), this._internalMeshDataInfo._onBeforeBindObservable
       }
       get onAfterRenderObservable() {
-        return this._internalMeshDataInfo._onAfterRenderObservable || (this._internalMeshDataInfo._onAfterRenderObservable = new Wu.b), this._internalMeshDataInfo._onAfterRenderObservable
+        return this._internalMeshDataInfo._onAfterRenderObservable || (this._internalMeshDataInfo._onAfterRenderObservable = new mk.e), this._internalMeshDataInfo._onAfterRenderObservable
       }
       get onBetweenPassObservable() {
-        return this._internalMeshDataInfo._onBetweenPassObservable || (this._internalMeshDataInfo._onBetweenPassObservable = new Wu.b), this._internalMeshDataInfo._onBetweenPassObservable
+        return this._internalMeshDataInfo._onBetweenPassObservable || (this._internalMeshDataInfo._onBetweenPassObservable = new mk.e), this._internalMeshDataInfo._onBetweenPassObservable
       }
       get onBeforeDrawObservable() {
-        return this._internalMeshDataInfo._onBeforeDrawObservable || (this._internalMeshDataInfo._onBeforeDrawObservable = new Wu.b), this._internalMeshDataInfo._onBeforeDrawObservable
+        return this._internalMeshDataInfo._onBeforeDrawObservable || (this._internalMeshDataInfo._onBeforeDrawObservable = new mk.e), this._internalMeshDataInfo._onBeforeDrawObservable
       }
-      set onBeforeDraw(uu) {
-        this._onBeforeDrawObserver && this.onBeforeDrawObservable.remove(this._onBeforeDrawObserver), this._onBeforeDrawObserver = this.onBeforeDrawObservable.add(uu)
+      set onBeforeDraw(kk) {
+        this._onBeforeDrawObserver && this.onBeforeDrawObservable.remove(this._onBeforeDrawObserver), this._onBeforeDrawObserver = this.onBeforeDrawObservable.add(kk)
       }
-      get HKu() {
+      get GRk() {
         return this.instances.length > 0
       }
       get hasThinInstances() {
@@ -4670,14 +4670,14 @@ export const modules = {
       get forcedInstanceCount() {
         return this._internalMeshDataInfo._forcedInstanceCount
       }
-      set forcedInstanceCount(uu) {
-        this._internalMeshDataInfo._forcedInstanceCount = uu
+      set forcedInstanceCount(kk) {
+        this._internalMeshDataInfo._forcedInstanceCount = kk
       }
       get sideOrientation() {
         return this._internalMeshDataInfo._sideOrientation
       }
-      set sideOrientation(uu) {
-        this._internalMeshDataInfo._sideOrientation = uu, this._internalAbstractMeshDataInfo._sideOrientationHint = this._scene.useRightHandedSystem && 1 === uu || !this._scene.useRightHandedSystem && 0 === uu
+      set sideOrientation(kk) {
+        this._internalMeshDataInfo._sideOrientation = kk, this._internalAbstractMeshDataInfo._sideOrientationHint = this._scene.useRightHandedSystem && 1 === kk || !this._scene.useRightHandedSystem && 0 === kk
       }
       get _effectiveSideOrientation() {
         return this._internalMeshDataInfo._effectiveSideOrientation
@@ -4685,20 +4685,20 @@ export const modules = {
       get overrideMaterialSideOrientation() {
         return this.sideOrientation
       }
-      set overrideMaterialSideOrientation(uu) {
-        this.sideOrientation = uu, this.material && (this.material.sideOrientation = null)
+      set overrideMaterialSideOrientation(kk) {
+        this.sideOrientation = kk, this.material && (this.material.sideOrientation = null)
       }
       get overrideRenderingFillMode() {
         return this._internalMeshDataInfo._overrideRenderingFillMode
       }
-      set overrideRenderingFillMode(uu) {
-        this._internalMeshDataInfo._overrideRenderingFillMode = uu
+      set overrideRenderingFillMode(kk) {
+        this._internalMeshDataInfo._overrideRenderingFillMode = kk
       }
       get material() {
         return this._internalAbstractMeshDataInfo._material
       }
-      set material(uu) {
-        uu && (this.material && null === this.material.sideOrientation || this._internalAbstractMeshDataInfo._sideOrientationHint) && (uu.sideOrientation = null), this._setMaterial(uu)
+      set material(kk) {
+        kk && (this.material && null === this.material.sideOrientation || this._internalAbstractMeshDataInfo._sideOrientationHint) && (kk.sideOrientation = null), this._setMaterial(kk)
       }
       get source() {
         return this._internalMeshDataInfo._source
@@ -4709,99 +4709,99 @@ export const modules = {
       get isUnIndexed() {
         return this._unIndexed
       }
-      set isUnIndexed(uu) {
-        this._unIndexed !== uu && (this._unIndexed = uu, this._markSubMeshesAsAttributesDirty())
+      set isUnIndexed(kk) {
+        this._unIndexed !== kk && (this._unIndexed = kk, this._markSubMeshesAsAttributesDirty())
       }
       get worldMatrixInstancedBuffer() {
-        const uu = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._instanceDataStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
-        return uu ? uu.instancesData : void 0
+        const kk = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._instanceDataStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
+        return kk ? kk.instancesData : void 0
       }
       get previousWorldMatrixInstancedBuffer() {
-        const uu = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._instanceDataStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
-        return uu ? uu.instancesPreviousData : void 0
+        const kk = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._instanceDataStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
+        return kk ? kk.instancesPreviousData : void 0
       }
       get manualUpdateOfWorldMatrixInstancedBuffer() {
         return this._instanceDataStorage.manualUpdate
       }
-      set manualUpdateOfWorldMatrixInstancedBuffer(uu) {
-        this._instanceDataStorage.manualUpdate = uu
+      set manualUpdateOfWorldMatrixInstancedBuffer(kk) {
+        this._instanceDataStorage.manualUpdate = kk
       }
       get manualUpdateOfPreviousWorldMatrixInstancedBuffer() {
         return this._instanceDataStorage.previousManualUpdate
       }
-      set manualUpdateOfPreviousWorldMatrixInstancedBuffer(uu) {
-        this._instanceDataStorage.previousManualUpdate = uu
+      set manualUpdateOfPreviousWorldMatrixInstancedBuffer(kk) {
+        this._instanceDataStorage.previousManualUpdate = kk
       }
       get forceWorldMatrixInstancedBufferUpdate() {
         return this._instanceDataStorage.forceMatrixUpdates
       }
-      set forceWorldMatrixInstancedBufferUpdate(uu) {
-        this._instanceDataStorage.forceMatrixUpdates = uu
+      set forceWorldMatrixInstancedBufferUpdate(kk) {
+        this._instanceDataStorage.forceMatrixUpdates = kk
       }
-      _copySource(uu, Ru) {
-        let yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-          Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const Ku = this.lD();
-        if (uu._geometry && uu._geometry.applyToMesh(this), du.e.DeepCopy(uu, this, ["name", "material", "skeleton", "instances", "parent", "uniqueId", "source", "metadata", "morphTargetManager", "HKu", "worldMatrixInstancedBuffer", "previousWorldMatrixInstancedBuffer", "hasLODLevels", "geometry", "isBlocked", "areNormalsFrozen", "facetNb", "isFacetDataEnabled", "lightSources", "useBones", "ZD", "collider", "edgesRenderer", "forward", "up", "right", "absolutePosition", "absoluteScaling", "absoluteRotationQuaternion", "RJu", "nonUniformScaling", "behaviors", "worldMatrixFromCache", "hasThinInstances", "cloneMeshMap", "hasBoundingInfo", "physicsBody", "physicsImpostor"], ["_poseMatrix"]), this._internalMeshDataInfo._source = uu, Ku.useClonedMeshMap && (uu._internalMeshDataInfo.meshMap || (uu._internalMeshDataInfo.meshMap = {}), uu._internalMeshDataInfo.meshMap[this.uniqueId] = this), this._originalBuilderSideOrientation = uu._originalBuilderSideOrientation, this._creationDataStorage = uu._creationDataStorage, uu._ranges) {
-          const Ru = uu._ranges;
-          for (const uu in Ru) Object.prototype.hasOwnProperty.call(Ru, uu) && Ru[uu] && this.createAnimationRange(uu, Ru[uu].from, Ru[uu].to)
+      _copySource(kk, Fk) {
+        let Bk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+          Rk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const tk = this.XN();
+        if (kk._geometry && kk._geometry.applyToMesh(this), ik.e.DeepCopy(kk, this, ["name", "material", "skeleton", "instances", "parent", "uniqueId", "source", "metadata", "morphTargetManager", "GRk", "worldMatrixInstancedBuffer", "previousWorldMatrixInstancedBuffer", "hasLODLevels", "geometry", "isBlocked", "areNormalsFrozen", "facetNb", "isFacetDataEnabled", "lightSources", "useBones", "mN", "collider", "edgesRenderer", "forward", "up", "right", "absolutePosition", "absoluteScaling", "absoluteRotationQuaternion", "SXk", "nonUniformScaling", "behaviors", "worldMatrixFromCache", "hasThinInstances", "cloneMeshMap", "hasBoundingInfo", "physicsBody", "physicsImpostor"], ["_poseMatrix"]), this._internalMeshDataInfo._source = kk, tk.useClonedMeshMap && (kk._internalMeshDataInfo.meshMap || (kk._internalMeshDataInfo.meshMap = {}), kk._internalMeshDataInfo.meshMap[this.uniqueId] = this), this._originalBuilderSideOrientation = kk._originalBuilderSideOrientation, this._creationDataStorage = kk._creationDataStorage, kk._ranges) {
+          const Fk = kk._ranges;
+          for (const kk in Fk) Object.prototype.hasOwnProperty.call(Fk, kk) && Fk[kk] && this.createAnimationRange(kk, Fk[kk].from, Fk[kk].to)
         }
-        if (uu.metadata && uu.metadata.clone ? this.metadata = uu.metadata.clone() : this.metadata = uu.metadata, this._internalMetadata = uu._internalMetadata, this.meshBlendingTag = uu.meshBlendingTag, bu.e && bu.e.HasTags(uu) && bu.e.AddTagsTo(this, bu.e.GetTags(uu, !0)), this.tC(uu.isEnabled(!1)), this.parent = uu.parent, this.setPivotMatrix(uu.getPivotMatrix(), this._postMultiplyPivotMatrix), this.id = this.name + "." + uu.id, this.material = uu.material, !Ru) {
-          const Ku = uu.getDescendants(!0);
-          for (let uu = 0; uu < Ku.length; uu++) {
-            const Qu = Ku[uu];
-            Qu._isMesh ? (Ou.parent = this, Ou.doNotCloneChildren = Ru, Ou.clonePhysicsImpostor = yu, Ou.cloneThinInstances = Eu, Qu.clone(this.name + "." + Qu.name, Ou)) : Qu.clone && Qu.clone(this.name + "." + Qu.name, this)
+        if (kk.metadata && kk.metadata.clone ? this.metadata = kk.metadata.clone() : this.metadata = kk.metadata, this._internalMetadata = kk._internalMetadata, this.meshBlendingTag = kk.meshBlendingTag, Yk.b && Yk.b.HasTags(kk) && Yk.b.AddTagsTo(this, Yk.b.GetTags(kk, !0)), this.lY(kk.isEnabled(!1)), this.parent = kk.parent, this.setPivotMatrix(kk.getPivotMatrix(), this._postMultiplyPivotMatrix), this.id = this.name + "." + kk.id, this.material = kk.material, !Fk) {
+          const tk = kk.getDescendants(!0);
+          for (let kk = 0; kk < tk.length; kk++) {
+            const ak = tk[kk];
+            ak._isMesh ? (nk.parent = this, nk.doNotCloneChildren = Fk, nk.clonePhysicsImpostor = Bk, nk.cloneThinInstances = Rk, ak.clone(this.name + "." + ak.name, nk)) : ak.clone && ak.clone(this.name + "." + ak.name, this)
           }
         }
-        if (uu.morphTargetManager && (this.morphTargetManager = uu.morphTargetManager), (0, Fu.c)(Ku.getPhysicsEngine)) {
-          const Ru = Ku.getPhysicsEngine();
-          if (yu && Ru)
-            if (1 === Ru.getPluginVersion()) {
-              const yu = Ru.getImpostorForPhysicsObject(uu);
-              yu && (this.physicsImpostor = yu.clone(this))
-            } else 2 === Ru.getPluginVersion() && uu.physicsBody && uu.physicsBody.clone(this)
+        if (kk.morphTargetManager && (this.morphTargetManager = kk.morphTargetManager), (0, hk.c)(tk.getPhysicsEngine)) {
+          const Fk = tk.getPhysicsEngine();
+          if (Bk && Fk)
+            if (1 === Fk.getPluginVersion()) {
+              const Bk = Fk.getImpostorForPhysicsObject(kk);
+              Bk && (this.physicsImpostor = Bk.clone(this))
+            } else 2 === Fk.getPluginVersion() && kk.physicsBody && kk.physicsBody.clone(this)
         }
-        for (let Qu = 0; Qu < Ku.JC.length; Qu++) {
-          const Ru = Ku.JC[Qu];
-          Ru.emitter === uu && Ru.clone(Ru.name, this)
+        for (let ak = 0; ak < tk.fY.length; ak++) {
+          const Fk = tk.fY[ak];
+          Fk.emitter === kk && Fk.clone(Fk.name, this)
         }
-        if (this.skeleton = uu.skeleton, Eu && (uu._thinInstanceDataStorage.matrixData ? (this.uuu("matrix", new Float32Array(uu._thinInstanceDataStorage.matrixData), 16, !uu._thinInstanceDataStorage.matrixBuffer.isUpdatable()), this._thinInstanceDataStorage.matrixBufferSize = uu._thinInstanceDataStorage.matrixBufferSize, this._thinInstanceDataStorage.instancesCount = uu._thinInstanceDataStorage.instancesCount) : this._thinInstanceDataStorage.matrixBufferSize = uu._thinInstanceDataStorage.matrixBufferSize, uu._userThinInstanceBuffersStorage)) {
-          const Ru = uu._userThinInstanceBuffersStorage;
-          for (const uu in Ru.data) this.uuu(uu, new Float32Array(Ru.data[uu]), Ru.strides[uu], !Ru.vertexBuffers?.[uu]?.isUpdatable()), this._userThinInstanceBuffersStorage.sizes[uu] = Ru.sizes[uu]
+        if (this.skeleton = kk.skeleton, Rk && (kk._thinInstanceDataStorage.matrixData ? (this.x_("matrix", new Float32Array(kk._thinInstanceDataStorage.matrixData), 16, !kk._thinInstanceDataStorage.matrixBuffer.isUpdatable()), this._thinInstanceDataStorage.matrixBufferSize = kk._thinInstanceDataStorage.matrixBufferSize, this._thinInstanceDataStorage.instancesCount = kk._thinInstanceDataStorage.instancesCount) : this._thinInstanceDataStorage.matrixBufferSize = kk._thinInstanceDataStorage.matrixBufferSize, kk._userThinInstanceBuffersStorage)) {
+          const Fk = kk._userThinInstanceBuffersStorage;
+          for (const kk in Fk.data) this.x_(kk, new Float32Array(Fk.data[kk]), Fk.strides[kk], !Fk.vertexBuffers?.[kk]?.isUpdatable()), this._userThinInstanceBuffersStorage.sizes[kk] = Fk.sizes[kk]
         }
         this.refreshBoundingInfo(!0, !0), this.computeWorldMatrix(!0)
       }
-      constructor(uu) {
-        let Ru, yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          Eu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          Ku = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          Qu = arguments.length > 4 ? arguments[4] : void 0,
-          mu = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-        super(uu, yu), this._internalMeshDataInfo = new qu, this.delayLoadState = 0, this.instances = [], this._creationDataStorage = null, this._geometry = null, this._thinInstanceDataStorage = new ou, this._shouldGenerateFlatShading = !1, this._originalBuilderSideOrientation = vu.DEFAULTSIDE, this.ignoreCameraMaxZ = !1, yu = this.lD(), this._instanceDataStorage = new iu, this._instanceDataStorage.engine = yu.eS(), this._instanceDataStorage.useMonoDataStorageRenderPass = !this._instanceDataStorage.engine.isWebGPU, this._instanceDataStorage.useMonoDataStorageRenderPass && (this._instanceDataStorage.dataStorageRenderPass = new Pu), this._scene.useRightHandedSystem ? this.sideOrientation = 0 : this.sideOrientation = 1, this._onBeforeDraw = (uu, Ru, yu) => {
-          uu && yu && (this._uniformBuffer ? this.transferToEffect(Ru) : yu.bindOnlyWorldMatrix(Ru))
+      constructor(kk) {
+        let Fk, Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          ak = arguments.length > 4 ? arguments[4] : void 0,
+          Xk = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+        super(kk, Bk), this._internalMeshDataInfo = new lk, this.delayLoadState = 0, this.instances = [], this._creationDataStorage = null, this._geometry = null, this._thinInstanceDataStorage = new jk, this._shouldGenerateFlatShading = !1, this._originalBuilderSideOrientation = Ik.DEFAULTSIDE, this.ignoreCameraMaxZ = !1, Bk = this.XN(), this._instanceDataStorage = new Kk, this._instanceDataStorage.engine = Bk.ne(), this._instanceDataStorage.useMonoDataStorageRenderPass = !this._instanceDataStorage.engine.isWebGPU, this._instanceDataStorage.useMonoDataStorageRenderPass && (this._instanceDataStorage.dataStorageRenderPass = new pk), this._scene.useRightHandedSystem ? this.sideOrientation = 0 : this.sideOrientation = 1, this._onBeforeDraw = (kk, Fk, Bk) => {
+          kk && Bk && (this._uniformBuffer ? this.transferToEffect(Fk) : Bk.bindOnlyWorldMatrix(Fk))
         };
-        let Ju = !1;
-        if (Eu && void 0 === Eu._addToSceneRootNodes) {
-          const uu = Eu;
-          Ru = uu.parent ?? null, Ku = uu.source ?? null, Qu = uu.doNotCloneChildren ?? !1, mu = uu.clonePhysicsImpostor ?? !0, Ju = uu.cloneThinInstances ?? !1
-        } else Ru = Eu;
-        Ku && this._copySource(Ku, Qu, mu, Ju), null !== Ru && (this.parent = Ru), this._instanceDataStorage.hardwareInstancedRendering = this.eS().getCaps().instancedArrays, this._internalMeshDataInfo._onMeshReadyObserverAdded = uu => {
-          uu.unregisterOnNextCall = !0, this.isReady(!0) ? this.onMeshReadyObservable.notifyObservers(this) : this._internalMeshDataInfo._checkReadinessObserver || (this._internalMeshDataInfo._checkReadinessObserver = this._scene.onBeforeRenderObservable.add((() => {
+        let bk = !1;
+        if (Rk && void 0 === Rk._addToSceneRootNodes) {
+          const kk = Rk;
+          Fk = kk.parent ?? null, tk = kk.source ?? null, ak = kk.doNotCloneChildren ?? !1, Xk = kk.clonePhysicsImpostor ?? !0, bk = kk.cloneThinInstances ?? !1
+        } else Fk = Rk;
+        tk && this._copySource(tk, ak, Xk, bk), null !== Fk && (this.parent = Fk), this._instanceDataStorage.hardwareInstancedRendering = this.ne().getCaps().instancedArrays, this._internalMeshDataInfo._onMeshReadyObserverAdded = kk => {
+          kk.unregisterOnNextCall = !0, this.isReady(!0) ? this.onMeshReadyObservable.notifyObservers(this) : this._internalMeshDataInfo._checkReadinessObserver || (this._internalMeshDataInfo._checkReadinessObserver = this._scene.onBeforeRenderObservable.add((() => {
             this.isReady(!0) && (this._scene.onBeforeRenderObservable.remove(this._internalMeshDataInfo._checkReadinessObserver), this._internalMeshDataInfo._checkReadinessObserver = null, this.onMeshReadyObservable.notifyObservers(this))
           })))
-        }, this.onMeshReadyObservable = new Wu.b(this._internalMeshDataInfo._onMeshReadyObserverAdded), Ku && Ku.onClonedObservable.notifyObservers(this)
+        }, this.onMeshReadyObservable = new mk.e(this._internalMeshDataInfo._onMeshReadyObserverAdded), tk && tk.onClonedObservable.notifyObservers(this)
       }
       instantiateHierarchy() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          Ru = arguments.length > 1 ? arguments[1] : void 0,
-          yu = arguments.length > 2 ? arguments[2] : void 0;
-        const Eu = 0 === this.getTotalVertices() || Ru && Ru.doNotInstantiate && (!0 === Ru.doNotInstantiate || Ru.doNotInstantiate(this)) ? this.clone("Clone of " + (this.name || this.id), uu || this.parent, !0) : this.createInstance("instance of " + (this.name || this.id));
-        Eu.parent = uu || this.parent, Eu.position = this.position.clone(), Eu.pp = this.pp.clone(), this.rotationQuaternion ? Eu.rotationQuaternion = this.rotationQuaternion.clone() : Eu.rotation = this.rotation.clone(), yu && yu(this, Eu);
-        for (const Ku of this.getChildTransformNodes(!0)) "InstancedMesh" === Ku.getClassName() && "Mesh" === Eu.getClassName() && Ku.dKu === this ? Ku.instantiateHierarchy(Eu, {
-          doNotInstantiate: Ru && Ru.doNotInstantiate || !1,
-          newSourcedMesh: Eu
-        }, yu) : Ku.instantiateHierarchy(Eu, Ru, yu);
-        return Eu
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Bk = arguments.length > 2 ? arguments[2] : void 0;
+        const Rk = 0 === this.getTotalVertices() || Fk && Fk.doNotInstantiate && (!0 === Fk.doNotInstantiate || Fk.doNotInstantiate(this)) ? this.clone("Clone of " + (this.name || this.id), kk || this.parent, !0) : this.createInstance("instance of " + (this.name || this.id));
+        Rk.parent = kk || this.parent, Rk.position = this.position.clone(), Rk.ta = this.ta.clone(), this.rotationQuaternion ? Rk.rotationQuaternion = this.rotationQuaternion.clone() : Rk.rotation = this.rotation.clone(), Bk && Bk(this, Rk);
+        for (const tk of this.getChildTransformNodes(!0)) "InstancedMesh" === tk.getClassName() && "Mesh" === Rk.getClassName() && tk.rRk === this ? tk.instantiateHierarchy(Rk, {
+          doNotInstantiate: Fk && Fk.doNotInstantiate || !1,
+          newSourcedMesh: Rk
+        }, Bk) : tk.instantiateHierarchy(Rk, Fk, Bk);
+        return Rk
       }
       getClassName() {
         return "Mesh"
@@ -4809,21 +4809,21 @@ export const modules = {
       get _isMesh() {
         return !0
       }
-      toString(uu) {
-        let Ru = super.toString(uu);
-        if (Ru += ", n vertices: " + this.getTotalVertices(), Ru += ", parent: " + (this._waitingParentId ? this._waitingParentId : this.parent ? this.parent.name : "NONE"), this.animations)
-          for (let yu = 0; yu < this.animations.length; yu++) Ru += ", animation[0]: " + this.animations[yu].toString(uu);
-        if (uu)
+      toString(kk) {
+        let Fk = super.toString(kk);
+        if (Fk += ", n vertices: " + this.getTotalVertices(), Fk += ", parent: " + (this._waitingParentId ? this._waitingParentId : this.parent ? this.parent.name : "NONE"), this.animations)
+          for (let Bk = 0; Bk < this.animations.length; Bk++) Fk += ", animation[0]: " + this.animations[Bk].toString(kk);
+        if (kk)
           if (this._geometry) {
-            const uu = this.DEu(),
-              yu = this.getVerticesData(Mu.h.PositionKind);
-            yu && uu && (Ru += ", flat shading: " + (yu.length / 3 === uu.length ? "YES" : "NO"))
-          } else Ru += ", flat shading: UNKNOWN";
-        return Ru
+            const kk = this.hBk(),
+              Bk = this.getVerticesData(Hk.n.PositionKind);
+            Bk && kk && (Fk += ", flat shading: " + (Bk.length / 3 === kk.length ? "YES" : "NO"))
+          } else Fk += ", flat shading: UNKNOWN";
+        return Fk
       }
       _unBindEffect() {
         super._unBindEffect();
-        for (const uu of this.instances) uu._unBindEffect()
+        for (const kk of this.instances) kk._unBindEffect()
       }
       get hasLODLevels() {
         return this._internalMeshDataInfo._LODLevels.length > 0
@@ -4832,52 +4832,52 @@ export const modules = {
         return this._internalMeshDataInfo._LODLevels
       }
       _sortLODLevels() {
-        const uu = this._internalMeshDataInfo._useLODScreenCoverage ? -1 : 1;
-        this._internalMeshDataInfo._LODLevels.sort(((Ru, yu) => Ru.distanceOrScreenCoverage < yu.distanceOrScreenCoverage ? uu : Ru.distanceOrScreenCoverage > yu.distanceOrScreenCoverage ? -uu : 0))
+        const kk = this._internalMeshDataInfo._useLODScreenCoverage ? -1 : 1;
+        this._internalMeshDataInfo._LODLevels.sort(((Fk, Bk) => Fk.distanceOrScreenCoverage < Bk.distanceOrScreenCoverage ? kk : Fk.distanceOrScreenCoverage > Bk.distanceOrScreenCoverage ? -kk : 0))
       }
-      addLODLevel(uu, Ru) {
-        if (Ru && Ru._masterMesh) return Lu.e.Warn("You cannot use a mesh as LOD level twice"), this;
-        const yu = new Zu(uu, Ru);
-        return this._internalMeshDataInfo._LODLevels.push(yu), Ru && (Ru._masterMesh = this), this._sortLODLevels(), this
+      addLODLevel(kk, Fk) {
+        if (Fk && Fk._masterMesh) return zk.b.Warn("You cannot use a mesh as LOD level twice"), this;
+        const Bk = new Ck(kk, Fk);
+        return this._internalMeshDataInfo._LODLevels.push(Bk), Fk && (Fk._masterMesh = this), this._sortLODLevels(), this
       }
-      getLODLevelAtDistance(uu) {
-        const Ru = this._internalMeshDataInfo;
-        for (let yu = 0; yu < Ru._LODLevels.length; yu++) {
-          const Eu = Ru._LODLevels[yu];
-          if (Eu.distanceOrScreenCoverage === uu) return Eu.mesh
+      getLODLevelAtDistance(kk) {
+        const Fk = this._internalMeshDataInfo;
+        for (let Bk = 0; Bk < Fk._LODLevels.length; Bk++) {
+          const Rk = Fk._LODLevels[Bk];
+          if (Rk.distanceOrScreenCoverage === kk) return Rk.mesh
         }
         return null
       }
-      removeLODLevel(uu) {
-        const Ru = this._internalMeshDataInfo;
-        for (let yu = 0; yu < Ru._LODLevels.length; yu++) Ru._LODLevels[yu].mesh === uu && (Ru._LODLevels.splice(yu, 1), uu && (uu._masterMesh = null));
+      removeLODLevel(kk) {
+        const Fk = this._internalMeshDataInfo;
+        for (let Bk = 0; Bk < Fk._LODLevels.length; Bk++) Fk._LODLevels[Bk].mesh === kk && (Fk._LODLevels.splice(Bk, 1), kk && (kk._masterMesh = null));
         return this._sortLODLevels(), this
       }
-      getLOD(uu, Ru) {
-        const yu = this._internalMeshDataInfo;
-        if (!yu._LODLevels || 0 === yu._LODLevels.length) return this;
-        const Eu = Ru || this.vI().aEu,
-          Ku = uu.mode === ku.c.ORTHOGRAPHIC_CAMERA ? uu.minZ : Eu.centerWorld.subtract(uu.globalPosition).length();
-        let Qu = Ku,
-          mu = 1;
-        if (yu._useLODScreenCoverage) {
-          const Ru = uu.screenArea;
-          let yu = Eu.radiusWorld * uu.minZ / Ku;
-          yu = yu * yu * Math.PI, Qu = yu / Ru, mu = -1
+      getLOD(kk, Fk) {
+        const Bk = this._internalMeshDataInfo;
+        if (!Bk._LODLevels || 0 === Bk._LODLevels.length) return this;
+        const Rk = Fk || this.ZH().JRk,
+          tk = kk.mode === Ok.c.ORTHOGRAPHIC_CAMERA ? kk.minZ : Rk.centerWorld.subtract(kk.globalPosition).length();
+        let ak = tk,
+          Xk = 1;
+        if (Bk._useLODScreenCoverage) {
+          const Fk = kk.screenArea;
+          let Bk = Rk.radiusWorld * kk.minZ / tk;
+          Bk = Bk * Bk * Math.PI, ak = Bk / Fk, Xk = -1
         }
-        if (mu * yu._LODLevels[yu._LODLevels.length - 1].distanceOrScreenCoverage > mu * Qu) return this.onLODLevelSelection && this.onLODLevelSelection(Qu, this, this), this;
-        for (let Ju = 0; Ju < yu._LODLevels.length; Ju++) {
-          const uu = yu._LODLevels[Ju];
-          if (mu * uu.distanceOrScreenCoverage < mu * Qu) {
-            if (uu.mesh) {
-              if (4 === uu.mesh.delayLoadState) return uu.mesh._checkDelayState(), this;
-              if (2 === uu.mesh.delayLoadState) return this;
-              uu.mesh._preActivate(), uu.mesh._updateSubMeshesBoundingInfo(this.worldMatrixFromCache)
+        if (Xk * Bk._LODLevels[Bk._LODLevels.length - 1].distanceOrScreenCoverage > Xk * ak) return this.onLODLevelSelection && this.onLODLevelSelection(ak, this, this), this;
+        for (let bk = 0; bk < Bk._LODLevels.length; bk++) {
+          const kk = Bk._LODLevels[bk];
+          if (Xk * kk.distanceOrScreenCoverage < Xk * ak) {
+            if (kk.mesh) {
+              if (4 === kk.mesh.delayLoadState) return kk.mesh._checkDelayState(), this;
+              if (2 === kk.mesh.delayLoadState) return this;
+              kk.mesh._preActivate(), kk.mesh._updateSubMeshesBoundingInfo(this.worldMatrixFromCache)
             }
-            return this.onLODLevelSelection && this.onLODLevelSelection(Qu, this, uu.mesh), uu.mesh
+            return this.onLODLevelSelection && this.onLODLevelSelection(ak, this, kk.mesh), kk.mesh
           }
         }
-        return this.onLODLevelSelection && this.onLODLevelSelection(Qu, this, this), this
+        return this.onLODLevelSelection && this.onLODLevelSelection(ak, this, this), this
       }
       get geometry() {
         return this._geometry
@@ -4885,715 +4885,715 @@ export const modules = {
       getTotalVertices() {
         return null === this._geometry || void 0 === this._geometry ? 0 : this._geometry.getTotalVertices()
       }
-      getVerticesData(uu, Ru, yu, Eu) {
+      getVerticesData(kk, Fk, Bk, Rk) {
         if (!this._geometry) return null;
-        let Ku = Eu ? void 0 : this._userInstancedBuffersStorage?.vertexBuffers[uu]?.getFloatData(this.instances.length + 1, yu || Ru && 1 !== this._geometry.meshes.length);
-        return Ku || (Ku = this._geometry.getVerticesData(uu, Ru, yu)), Ku
+        let tk = Rk ? void 0 : this._userInstancedBuffersStorage?.vertexBuffers[kk]?.getFloatData(this.instances.length + 1, Bk || Fk && 1 !== this._geometry.meshes.length);
+        return tk || (tk = this._geometry.getVerticesData(kk, Fk, Bk)), tk
       }
-      copyVerticesData(uu, Ru) {
-        this._geometry && this._geometry.copyVerticesData(uu, Ru)
+      copyVerticesData(kk, Fk) {
+        this._geometry && this._geometry.copyVerticesData(kk, Fk)
       }
-      getVertexBuffer(uu, Ru) {
-        return this._geometry ? (Ru ? void 0 : this._userInstancedBuffersStorage?.vertexBuffers[uu]) ?? this._geometry.getVertexBuffer(uu) : null
+      getVertexBuffer(kk, Fk) {
+        return this._geometry ? (Fk ? void 0 : this._userInstancedBuffersStorage?.vertexBuffers[kk]) ?? this._geometry.getVertexBuffer(kk) : null
       }
-      isVerticesDataPresent(uu, Ru) {
-        return this._geometry ? !Ru && void 0 !== this._userInstancedBuffersStorage?.vertexBuffers[uu] || this._geometry.isVerticesDataPresent(uu) : !!this._delayInfo && -1 !== this._delayInfo.indexOf(uu)
+      isVerticesDataPresent(kk, Fk) {
+        return this._geometry ? !Fk && void 0 !== this._userInstancedBuffersStorage?.vertexBuffers[kk] || this._geometry.isVerticesDataPresent(kk) : !!this._delayInfo && -1 !== this._delayInfo.indexOf(kk)
       }
-      isVertexBufferUpdatable(uu, Ru) {
-        if (!this._geometry) return !!this._delayInfo && -1 !== this._delayInfo.indexOf(uu);
-        if (!Ru) {
-          const Ru = this._userInstancedBuffersStorage?.vertexBuffers[uu];
-          if (Ru) return Ru.isUpdatable()
+      isVertexBufferUpdatable(kk, Fk) {
+        if (!this._geometry) return !!this._delayInfo && -1 !== this._delayInfo.indexOf(kk);
+        if (!Fk) {
+          const Fk = this._userInstancedBuffersStorage?.vertexBuffers[kk];
+          if (Fk) return Fk.isUpdatable()
         }
-        return this._geometry.isVertexBufferUpdatable(uu)
+        return this._geometry.isVertexBufferUpdatable(kk)
       }
-      getVerticesDataKinds(uu) {
+      getVerticesDataKinds(kk) {
         if (!this._geometry) {
-          const uu = [];
+          const kk = [];
           if (this._delayInfo)
-            for (const Ru of this._delayInfo) uu.push(Ru);
-          return uu
+            for (const Fk of this._delayInfo) kk.push(Fk);
+          return kk
         }
-        const Ru = this._geometry.getVerticesDataKinds();
-        if (!uu && this._userInstancedBuffersStorage)
-          for (const yu in this._userInstancedBuffersStorage.vertexBuffers) - 1 === Ru.indexOf(yu) && Ru.push(yu);
-        return Ru
+        const Fk = this._geometry.getVerticesDataKinds();
+        if (!kk && this._userInstancedBuffersStorage)
+          for (const Bk in this._userInstancedBuffersStorage.vertexBuffers) - 1 === Fk.indexOf(Bk) && Fk.push(Bk);
+        return Fk
       }
       getTotalIndices() {
         return this._geometry ? this._geometry.getTotalIndices() : 0
       }
-      DEu(uu, Ru) {
-        return this._geometry ? this._geometry.DEu(uu, Ru) : []
+      hBk(kk, Fk) {
+        return this._geometry ? this._geometry.hBk(kk, Fk) : []
       }
       get isBlocked() {
         return null !== this._masterMesh && void 0 !== this._masterMesh
       }
       isReady() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (2 === this.delayLoadState) return !1;
-        if (!super.isReady(uu)) return !1;
-        if (!this.mC || 0 === this.mC.length) return !0;
-        if (!uu) return !0;
-        const yu = this.eS(),
-          Eu = this.lD(),
-          Ku = Ru || yu.getCaps().instancedArrays && (this.instances.length > 0 || this.hasThinInstances);
+        if (!super.isReady(kk)) return !1;
+        if (!this.AY || 0 === this.AY.length) return !0;
+        if (!kk) return !0;
+        const Bk = this.ne(),
+          Rk = this.XN(),
+          tk = Fk || Bk.getCaps().instancedArrays && (this.instances.length > 0 || this.hasThinInstances);
         this.computeWorldMatrix();
-        const Qu = this.material || Eu.defaultMaterial;
-        if (Qu)
-          if (Qu._storeEffectOnSubMeshes)
-            for (const Ju of this.mC) {
-              const uu = Ju.nS();
-              if (uu)
-                if (uu._storeEffectOnSubMeshes) {
-                  if (!uu.isReadyForSubMesh(this, Ju, Ku)) return !1
-                } else if (!uu.isReady(this, Ku)) return !1
-            } else if (!Qu.isReady(this, Ku)) return !1;
-        const mu = yu.currentRenderPassId;
-        for (const Ju of this.lightSources) {
-          const uu = Ju.getShadowGenerators();
-          if (!uu) continue;
-          const Ru = uu.values();
-          for (let Eu = Ru.next(); !0 !== Eu.done; Eu = Ru.next()) {
-            const uu = Eu.value;
-            if (uu && (!uu.getShadowMap()?.renderList || uu.getShadowMap()?.renderList && -1 !== uu.getShadowMap()?.renderList?.indexOf(this))) {
-              const Ru = uu.getShadowMap().renderPassIds ?? [yu.currentRenderPassId];
-              for (let Eu = 0; Eu < Ru.length; ++Eu) {
-                yu.currentRenderPassId = Ru[Eu];
-                for (const Ru of this.mC)
-                  if (!uu.isReady(Ru, Ku, Ru.nS()?.needAlphaBlendingForMesh(this) ?? !1)) return yu.currentRenderPassId = mu, !1
+        const ak = this.material || Rk.defaultMaterial;
+        if (ak)
+          if (ak._storeEffectOnSubMeshes)
+            for (const bk of this.AY) {
+              const kk = bk.Ry();
+              if (kk)
+                if (kk._storeEffectOnSubMeshes) {
+                  if (!kk.isReadyForSubMesh(this, bk, tk)) return !1
+                } else if (!kk.isReady(this, tk)) return !1
+            } else if (!ak.isReady(this, tk)) return !1;
+        const Xk = Bk.currentRenderPassId;
+        for (const bk of this.lightSources) {
+          const kk = bk.getShadowGenerators();
+          if (!kk) continue;
+          const Fk = kk.values();
+          for (let Rk = Fk.next(); !0 !== Rk.done; Rk = Fk.next()) {
+            const kk = Rk.value;
+            if (kk && (!kk.getShadowMap()?.renderList || kk.getShadowMap()?.renderList && -1 !== kk.getShadowMap()?.renderList?.indexOf(this))) {
+              const Fk = kk.getShadowMap().renderPassIds ?? [Bk.currentRenderPassId];
+              for (let Rk = 0; Rk < Fk.length; ++Rk) {
+                Bk.currentRenderPassId = Fk[Rk];
+                for (const Fk of this.AY)
+                  if (!kk.isReady(Fk, tk, Fk.Ry()?.needAlphaBlendingForMesh(this) ?? !1)) return Bk.currentRenderPassId = Xk, !1
               }
-              yu.currentRenderPassId = mu
+              Bk.currentRenderPassId = Xk
             }
           }
         }
-        for (const Ju of this._internalMeshDataInfo._LODLevels)
-          if (Ju.mesh && !Ju.mesh.isReady(Ku)) return !1;
+        for (const bk of this._internalMeshDataInfo._LODLevels)
+          if (bk.mesh && !bk.mesh.isReady(tk)) return !1;
         return !0
       }
       get areNormalsFrozen() {
         return this._internalMeshDataInfo._areNormalsFrozen
       }
-      sS() {
+      ty() {
         return this._internalMeshDataInfo._areNormalsFrozen = !0, this
       }
       unfreezeNormals() {
         return this._internalMeshDataInfo._areNormalsFrozen = !1, this
       }
-      set overridenInstanceCount(uu) {
-        this._instanceDataStorage.overridenInstanceCount = uu
+      set overridenInstanceCount(kk) {
+        this._instanceDataStorage.overridenInstanceCount = kk
       }
       _getInstanceDataStorage() {
         if (this._instanceDataStorage.useMonoDataStorageRenderPass) return this._instanceDataStorage.dataStorageRenderPass;
-        const uu = this._instanceDataStorage.engine.currentRenderPassId;
-        let Ru = this._instanceDataStorage.renderPasses[uu];
-        return Ru || (Ru = new Pu, this._instanceDataStorage.renderPasses[uu] = Ru), Ru
+        const kk = this._instanceDataStorage.engine.currentRenderPassId;
+        let Fk = this._instanceDataStorage.renderPasses[kk];
+        return Fk || (Fk = new pk, this._instanceDataStorage.renderPasses[kk] = Fk), Fk
       }
       _preActivate() {
-        const uu = this._internalMeshDataInfo,
-          Ru = this.lD().getRenderId();
-        return uu._preActivateId === Ru || (uu._preActivateId = Ru, this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass.visibleInstances = null : this._getInstanceDataStorage().visibleInstances = null), this
+        const kk = this._internalMeshDataInfo,
+          Fk = this.XN().getRenderId();
+        return kk._preActivateId === Fk || (kk._preActivateId = Fk, this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass.visibleInstances = null : this._getInstanceDataStorage().visibleInstances = null), this
       }
-      _preActivateForIntermediateRendering(uu) {
-        const Ru = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
-        return Ru.visibleInstances && (Ru.visibleInstances.intermediateDefaultRenderId = uu), this
+      _preActivateForIntermediateRendering(kk) {
+        const Fk = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
+        return Fk.visibleInstances && (Fk.visibleInstances.intermediateDefaultRenderId = kk), this
       }
-      _registerInstanceForRenderId(uu, Ru) {
-        const yu = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
-        return yu.visibleInstances || (yu.visibleInstances = {
-          defaultRenderId: Ru,
+      _registerInstanceForRenderId(kk, Fk) {
+        const Bk = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
+        return Bk.visibleInstances || (Bk.visibleInstances = {
+          defaultRenderId: Fk,
           selfDefaultRenderId: this._renderId,
           intermediateDefaultRenderId: -1
-        }), yu.visibleInstances[Ru] || (void 0 === yu.previousRenderId || this._instanceDataStorage.useMonoDataStorageRenderPass && !this._instanceDataStorage.isFrozen || delete yu.visibleInstances[yu.previousRenderId], yu.previousRenderId = Ru, yu.visibleInstances[Ru] = new Array), yu.visibleInstances[Ru].push(uu), this
+        }), Bk.visibleInstances[Fk] || (void 0 === Bk.previousRenderId || this._instanceDataStorage.useMonoDataStorageRenderPass && !this._instanceDataStorage.isFrozen || delete Bk.visibleInstances[Bk.previousRenderId], Bk.previousRenderId = Fk, Bk.visibleInstances[Fk] = new Array), Bk.visibleInstances[Fk].push(kk), this
       }
       _afterComputeWorldMatrix() {
-        super._afterComputeWorldMatrix(), this.hasThinInstances && (this.US || this.thinInstanceRefreshBoundingInfo(!1))
+        super._afterComputeWorldMatrix(), this.hasThinInstances && (this.Fy || this.thinInstanceRefreshBoundingInfo(!1))
       }
       _postActivate() {
         this.edgesShareWithInstances && this.edgesRenderer && this.edgesRenderer.isEnabled && this._renderingGroup && (this._renderingGroup._edgesRenderers.pushNoDuplicate(this.edgesRenderer), this.edgesRenderer.customInstances.push(this.getWorldMatrix()))
       }
       refreshBoundingInfo() {
-        let uu, Ru = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          yu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.hasBoundingInfo && this.vI().isLocked) return this;
-        uu = "object" === typeof Ru ? Ru : {
-          applySkeleton: Ru,
-          applyMorph: yu
+        let kk, Fk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          Bk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.hasBoundingInfo && this.ZH().isLocked) return this;
+        kk = "object" === typeof Fk ? Fk : {
+          applySkeleton: Fk,
+          applyMorph: Bk
         };
-        const Eu = this.geometry ? this.geometry.boundingBias : null;
-        return this._refreshBoundingInfo(this._getData(uu, null, Mu.h.PositionKind), Eu), this
+        const Rk = this.geometry ? this.geometry.boundingBias : null;
+        return this._refreshBoundingInfo(this._getData(kk, null, Hk.n.PositionKind), Rk), this
       }
-      _createGlobalSubMesh(uu) {
-        const Ru = this.getTotalVertices();
-        if (!Ru || !this.DEu()) return null;
-        if (this.mC && this.mC.length > 0) {
-          const yu = this.DEu();
-          if (!yu) return null;
-          const Eu = yu.length;
-          let Ku = !1;
-          if (uu) Ku = !0;
+      _createGlobalSubMesh(kk) {
+        const Fk = this.getTotalVertices();
+        if (!Fk || !this.hBk()) return null;
+        if (this.AY && this.AY.length > 0) {
+          const Bk = this.hBk();
+          if (!Bk) return null;
+          const Rk = Bk.length;
+          let tk = !1;
+          if (kk) tk = !0;
           else
-            for (const uu of this.mC) {
-              if (uu.indexStart + uu.indexCount > Eu) {
-                Ku = !0;
+            for (const kk of this.AY) {
+              if (kk.indexStart + kk.indexCount > Rk) {
+                tk = !0;
                 break
               }
-              if (uu.verticesStart + uu.verticesCount > Ru) {
-                Ku = !0;
+              if (kk.verticesStart + kk.verticesCount > Fk) {
+                tk = !0;
                 break
               }
             }
-          if (!Ku) return this.mC[0]
+          if (!tk) return this.AY[0]
         }
-        return this.releaseSubMeshes(), new nu.c(0, 0, Ru, 0, this.getTotalIndices() || (this.isUnIndexed ? Ru : 0), this)
+        return this.releaseSubMeshes(), new Uk.d(0, 0, Fk, 0, this.getTotalIndices() || (this.isUnIndexed ? Fk : 0), this)
       }
-      subdivide(uu) {
-        if (uu < 1) return;
-        const Ru = this.getTotalIndices();
-        let yu = Ru / uu | 0,
-          Eu = 0;
-        for (; yu % 3 !== 0;) yu++;
+      subdivide(kk) {
+        if (kk < 1) return;
+        const Fk = this.getTotalIndices();
+        let Bk = Fk / kk | 0,
+          Rk = 0;
+        for (; Bk % 3 !== 0;) Bk++;
         this.releaseSubMeshes();
-        for (let Ku = 0; Ku < uu && !(Eu >= Ru); Ku++) nu.c.CreateFromIndices(0, Eu, Eu + yu >= Ru ? Ru - Eu : yu, this, void 0, !1), Eu += yu;
+        for (let tk = 0; tk < kk && !(Rk >= Fk); tk++) Uk.d.CreateFromIndices(0, Rk, Rk + Bk >= Fk ? Fk - Rk : Bk, this, void 0, !1), Rk += Bk;
         this.refreshBoundingInfo(), this.synchronizeInstances()
       }
-      setVerticesData(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Eu = arguments.length > 3 ? arguments[3] : void 0;
-        if (this._geometry) this._geometry.setVerticesData(uu, Ru, yu, Eu);
+      setVerticesData(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Rk = arguments.length > 3 ? arguments[3] : void 0;
+        if (this._geometry) this._geometry.setVerticesData(kk, Fk, Bk, Rk);
         else {
-          const Eu = new Iu.e;
-          Eu.set(Ru, uu);
-          const Ku = this.lD();
-          new Gu.b(Gu.b.RandomId(), Ku, Eu, yu, this)
+          const Rk = new uk.e;
+          Rk.set(Fk, kk);
+          const tk = this.XN();
+          new Mk.e(Mk.e.RandomId(), tk, Rk, Bk, this)
         }
         return this
       }
-      removeVerticesData(uu) {
-        this._geometry && this._geometry.removeVerticesData(uu)
+      removeVerticesData(kk) {
+        this._geometry && this._geometry.removeVerticesData(kk)
       }
-      markVerticesDataAsUpdatable(uu) {
-        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const yu = this.getVertexBuffer(uu);
-        yu && yu.isUpdatable() !== Ru && this.setVerticesData(uu, this.getVerticesData(uu), Ru)
+      markVerticesDataAsUpdatable(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const Bk = this.getVertexBuffer(kk);
+        Bk && Bk.isUpdatable() !== Fk && this.setVerticesData(kk, this.getVerticesData(kk), Fk)
       }
-      setVerticesBuffer(uu) {
-        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        return this._geometry || (this._geometry = Gu.b.CreateGeometryForMesh(this)), this._geometry.setVerticesBuffer(uu, yu, Ru), this
+      setVerticesBuffer(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        return this._geometry || (this._geometry = Mk.e.CreateGeometryForMesh(this)), this._geometry.setVerticesBuffer(kk, Bk, Fk), this
       }
-      updateVerticesData(uu, Ru, yu, Eu) {
-        return this._geometry ? (Eu ? (this.makeGeometryUnique(), this.updateVerticesData(uu, Ru, yu, !1)) : this._geometry.updateVerticesData(uu, Ru, yu), this) : this
+      updateVerticesData(kk, Fk, Bk, Rk) {
+        return this._geometry ? (Rk ? (this.makeGeometryUnique(), this.updateVerticesData(kk, Fk, Bk, !1)) : this._geometry.updateVerticesData(kk, Fk, Bk), this) : this
       }
-      updateMeshPositions(uu) {
-        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const yu = this.getVerticesData(Mu.h.PositionKind);
-        if (!yu) return this;
-        if (uu(yu), this.updateVerticesData(Mu.h.PositionKind, yu, !1, !1), Ru) {
-          const uu = this.DEu(),
-            Ru = this.getVerticesData(Mu.h.NormalKind);
-          if (!Ru) return this;
-          Iu.e.ComputeNormals(yu, uu, Ru), this.updateVerticesData(Mu.h.NormalKind, Ru, !1, !1)
+      updateMeshPositions(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const Bk = this.getVerticesData(Hk.n.PositionKind);
+        if (!Bk) return this;
+        if (kk(Bk), this.updateVerticesData(Hk.n.PositionKind, Bk, !1, !1), Fk) {
+          const kk = this.hBk(),
+            Fk = this.getVerticesData(Hk.n.NormalKind);
+          if (!Fk) return this;
+          uk.e.ComputeNormals(Bk, kk, Fk), this.updateVerticesData(Hk.n.NormalKind, Fk, !1, !1)
         }
         return this
       }
       makeGeometryUnique() {
         if (!this._geometry) return this;
         if (1 === this._geometry.meshes.length) return this;
-        const uu = this._geometry,
-          Ru = this._geometry.copy(Gu.b.RandomId());
-        return uu.releaseForMesh(this, !0), Ru.applyToMesh(this), this
+        const kk = this._geometry,
+          Fk = this._geometry.copy(Mk.e.RandomId());
+        return kk.releaseForMesh(this, !0), Fk.applyToMesh(this), this
       }
-      setIndexBuffer(uu, Ru, yu) {
-        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          Ku = this._geometry;
-        Ku || (Ku = new Gu.b(Gu.b.RandomId(), this.lD(), void 0, void 0, this)), Ku.setIndexBuffer(uu, Ru, yu, Eu)
+      setIndexBuffer(kk, Fk, Bk) {
+        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          tk = this._geometry;
+        tk || (tk = new Mk.e(Mk.e.RandomId(), this.XN(), void 0, void 0, this)), tk.setIndexBuffer(kk, Fk, Bk, Rk)
       }
-      setIndices(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (this._geometry) this._geometry.setIndices(uu, Ru, yu, Eu);
+      setIndices(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Rk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (this._geometry) this._geometry.setIndices(kk, Fk, Bk, Rk);
         else {
-          const Eu = new Iu.e;
-          Eu.indices = uu;
-          const Ku = this.lD();
-          new Gu.b(Gu.b.RandomId(), Ku, Eu, yu, this, Ru)
+          const Rk = new uk.e;
+          Rk.indices = kk;
+          const tk = this.XN();
+          new Mk.e(Mk.e.RandomId(), tk, Rk, Bk, this, Fk)
         }
         return this
       }
-      updateIndices(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        return this._geometry ? (this._geometry.updateIndices(uu, Ru, yu), this) : this
+      updateIndices(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        return this._geometry ? (this._geometry.updateIndices(kk, Fk, Bk), this) : this
       }
       toLeftHanded() {
         return this._geometry ? (this._geometry.toLeftHanded(), this) : this
       }
-      _bind(uu, Ru, yu) {
-        let Eu = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      _bind(kk, Fk, Bk) {
+        let Rk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
         if (!this._geometry) return this;
-        const Ku = this.lD().eS();
-        let Qu;
+        const tk = this.XN().ne();
+        let ak;
         if (this._unIndexed)
-          if (this._getRenderingFillMode(yu) === su.d.WireFrameFillMode) Qu = uu._getLinesIndexBuffer(this.DEu(), Ku);
-          else Qu = null;
-        else switch (this._getRenderingFillMode(yu)) {
-          case su.d.PointFillMode:
-            Qu = null;
+          if (this._getRenderingFillMode(Bk) === ck.c.WireFrameFillMode) ak = kk._getLinesIndexBuffer(this.hBk(), tk);
+          else ak = null;
+        else switch (this._getRenderingFillMode(Bk)) {
+          case ck.c.PointFillMode:
+            ak = null;
             break;
-          case su.d.WireFrameFillMode:
-            Qu = uu._getLinesIndexBuffer(this.DEu(), Ku);
+          case ck.c.WireFrameFillMode:
+            ak = kk._getLinesIndexBuffer(this.hBk(), tk);
             break;
           default:
-          case su.d.TriangleFillMode:
-            Qu = this._geometry.getIndexBuffer()
+          case ck.c.TriangleFillMode:
+            ak = this._geometry.getIndexBuffer()
         }
-        return this._bindDirect(Ru, Qu, Eu)
+        return this._bindDirect(Fk, ak, Rk)
       }
-      _bindDirect(uu, Ru) {
-        let yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      _bindDirect(kk, Fk) {
+        let Bk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
         if (!this._geometry) return this;
-        if (this.morphTargetManager && this.morphTargetManager.isUsingTextureForTargets && this.morphTargetManager._bind(uu), yu && this._userInstancedBuffersStorage && !this.hasThinInstances) {
+        if (this.morphTargetManager && this.morphTargetManager.isUsingTextureForTargets && this.morphTargetManager._bind(kk), Bk && this._userInstancedBuffersStorage && !this.hasThinInstances) {
           if (!this._instanceDataStorage.useMonoDataStorageRenderPass && this._userInstancedBuffersStorage.renderPasses && this._userInstancedBuffersStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId]) {
-            const uu = this._userInstancedBuffersStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
-            for (const Ru in uu) this._userInstancedBuffersStorage.vertexBuffers[Ru] = uu[Ru]
+            const kk = this._userInstancedBuffersStorage.renderPasses[this._instanceDataStorage.engine.currentRenderPassId];
+            for (const Fk in kk) this._userInstancedBuffersStorage.vertexBuffers[Fk] = kk[Fk]
           }
-          this._geometry._bind(uu, Ru, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects)
-        } else this._geometry._bind(uu, Ru);
+          this._geometry._bind(kk, Fk, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects)
+        } else this._geometry._bind(kk, Fk);
         return this
       }
-      _draw(uu, Ru, yu) {
+      _draw(kk, Fk, Bk) {
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
         this._internalMeshDataInfo._onBeforeDrawObservable && this._internalMeshDataInfo._onBeforeDrawObservable.notifyObservers(this);
-        const Eu = this.lD().eS(),
-          Ku = Eu._currentMaterialContext,
-          Qu = Ku && Ku.useVertexPulling;
-        return this._unIndexed && Ru !== su.d.WireFrameFillMode || Ru == su.d.PointFillMode ? Eu.drawArraysType(Ru, uu.verticesStart, uu.verticesCount, this.forcedInstanceCount || yu) : Ru == su.d.WireFrameFillMode ? Eu.drawElementsType(Ru, 0, uu._linesIndexCount, this.forcedInstanceCount || yu) : Qu ? Eu.drawArraysType(Ru, uu.indexStart, uu.indexCount, this.forcedInstanceCount || yu) : Eu.drawElementsType(Ru, uu.indexStart, uu.indexCount, this.forcedInstanceCount || yu), this
+        const Rk = this.XN().ne(),
+          tk = Rk._currentMaterialContext,
+          ak = tk && tk.useVertexPulling;
+        return this._unIndexed && Fk !== ck.c.WireFrameFillMode || Fk == ck.c.PointFillMode ? Rk.drawArraysType(Fk, kk.verticesStart, kk.verticesCount, this.forcedInstanceCount || Bk) : Fk == ck.c.WireFrameFillMode ? Rk.drawElementsType(Fk, 0, kk._linesIndexCount, this.forcedInstanceCount || Bk) : ak ? Rk.drawArraysType(Fk, kk.indexStart, kk.indexCount, this.forcedInstanceCount || Bk) : Rk.drawElementsType(Fk, kk.indexStart, kk.indexCount, this.forcedInstanceCount || Bk), this
       }
-      registerBeforeRender(uu) {
-        return this.onBeforeRenderObservable.add(uu), this
+      registerBeforeRender(kk) {
+        return this.onBeforeRenderObservable.add(kk), this
       }
-      unregisterBeforeRender(uu) {
-        return this.onBeforeRenderObservable.removeCallback(uu), this
+      unregisterBeforeRender(kk) {
+        return this.onBeforeRenderObservable.removeCallback(kk), this
       }
-      registerAfterRender(uu) {
-        return this.onAfterRenderObservable.add(uu), this
+      registerAfterRender(kk) {
+        return this.onAfterRenderObservable.add(kk), this
       }
-      unregisterAfterRender(uu) {
-        return this.onAfterRenderObservable.removeCallback(uu), this
+      unregisterAfterRender(kk) {
+        return this.onAfterRenderObservable.removeCallback(kk), this
       }
-      _getInstancesRenderList(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const yu = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
+      _getInstancesRenderList(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Bk = this._instanceDataStorage.useMonoDataStorageRenderPass ? this._instanceDataStorage.dataStorageRenderPass : this._getInstanceDataStorage();
         if (this._instanceDataStorage.isFrozen) {
-          if (Ru) return yu.batchCacheReplacementModeInFrozenMode.hardwareInstancedRendering[uu] = !1, yu.batchCacheReplacementModeInFrozenMode.renderSelf[uu] = !0, yu.batchCacheReplacementModeInFrozenMode;
-          if (yu.previousBatch) return yu.previousBatch
+          if (Fk) return Bk.batchCacheReplacementModeInFrozenMode.hardwareInstancedRendering[kk] = !1, Bk.batchCacheReplacementModeInFrozenMode.renderSelf[kk] = !0, Bk.batchCacheReplacementModeInFrozenMode;
+          if (Bk.previousBatch) return Bk.previousBatch
         }
-        const Eu = this.lD(),
-          Ku = Eu._isInIntermediateRendering(),
-          Qu = Ku ? this._internalAbstractMeshDataInfo._onlyForInstancesIntermediate : this._internalAbstractMeshDataInfo._onlyForInstances,
-          mu = yu.batchCache;
-        if (mu.mustReturn = !1, mu.renderSelf[uu] = Ru || !Qu && this.isEnabled() && this.isVisible, mu.visibleInstances[uu] = null, yu.visibleInstances && !Ru) {
-          const Ru = yu.visibleInstances,
-            Qu = Eu.getRenderId(),
-            Ju = Ku ? Ru.intermediateDefaultRenderId : Ru.defaultRenderId;
-          mu.visibleInstances[uu] = Ru[Qu], !mu.visibleInstances[uu] && Ju && (mu.visibleInstances[uu] = Ru[Ju])
+        const Rk = this.XN(),
+          tk = Rk._isInIntermediateRendering(),
+          ak = tk ? this._internalAbstractMeshDataInfo._onlyForInstancesIntermediate : this._internalAbstractMeshDataInfo._onlyForInstances,
+          Xk = Bk.batchCache;
+        if (Xk.mustReturn = !1, Xk.renderSelf[kk] = Fk || !ak && this.isEnabled() && this.isVisible, Xk.visibleInstances[kk] = null, Bk.visibleInstances && !Fk) {
+          const Fk = Bk.visibleInstances,
+            ak = Rk.getRenderId(),
+            bk = tk ? Fk.intermediateDefaultRenderId : Fk.defaultRenderId;
+          Xk.visibleInstances[kk] = Fk[ak], !Xk.visibleInstances[kk] && bk && (Xk.visibleInstances[kk] = Fk[bk])
         }
-        return mu.hardwareInstancedRendering[uu] = !Ru && this._instanceDataStorage.hardwareInstancedRendering && null !== mu.visibleInstances[uu] && void 0 !== mu.visibleInstances[uu], yu.previousBatch = mu, mu
+        return Xk.hardwareInstancedRendering[kk] = !Fk && this._instanceDataStorage.hardwareInstancedRendering && null !== Xk.visibleInstances[kk] && void 0 !== Xk.visibleInstances[kk], Bk.previousBatch = Xk, Xk
       }
-      _updateInstancedBuffers(uu, Ru, yu, Eu, Ku, Qu) {
-        const mu = Ru.visibleInstances[uu._id],
-          Ju = mu ? mu.length : 0,
-          Nu = Ru.parent,
-          Xu = this._instanceDataStorage;
-        let Vu = Nu.instancesBuffer,
-          ru = Nu.instancesPreviousBuffer,
-          Bu = 0,
-          xu = 0;
-        const Su = Ru.renderSelf[uu._id],
-          pu = this._scene.floatingOriginOffset,
-          Tu = !Vu || yu !== Nu.instancesBufferSize || this._scene.needsPreviousWorldMatrices && !Nu.instancesPreviousBuffer;
-        if (this._instanceDataStorage.manualUpdate || Xu.isFrozen && !Tu) xu = (Su ? 1 : 0) + Ju;
+      _updateInstancedBuffers(kk, Fk, Bk, Rk, tk, ak) {
+        const Xk = Fk.visibleInstances[kk._id],
+          bk = Xk ? Xk.length : 0,
+          wk = Fk.parent,
+          dk = this._instanceDataStorage;
+        let sk = wk.instancesBuffer,
+          Vk = wk.instancesPreviousBuffer,
+          Jk = 0,
+          Ak = 0;
+        const ek = Fk.renderSelf[kk._id],
+          yk = this._scene.floatingOriginOffset,
+          fk = !sk || Bk !== wk.instancesBufferSize || this._scene.needsPreviousWorldMatrices && !wk.instancesPreviousBuffer;
+        if (this._instanceDataStorage.manualUpdate || dk.isFrozen && !fk) Ak = (ek ? 1 : 0) + bk;
         else {
-          const Ru = this.getWorldMatrix();
-          if (Su) {
-            this._scene.needsPreviousWorldMatrices && (Xu.masterMeshPreviousWorldMatrix ? (Xu.masterMeshPreviousWorldMatrix.copyToArray(Nu.instancesPreviousData, Bu), Xu.masterMeshPreviousWorldMatrix.Oyu(Ru)) : (Xu.masterMeshPreviousWorldMatrix = Ru.clone(), Xu.masterMeshPreviousWorldMatrix.copyToArray(Nu.instancesPreviousData, Bu))), Ru.copyToArray(Nu.instancesData, Bu);
-            const uu = Ru.AEu();
-            Nu.instancesData[Bu + 12] = uu[12] - pu.x, Nu.instancesData[Bu + 13] = uu[13] - pu.y, Nu.instancesData[Bu + 14] = uu[14] - pu.z, Bu += 16, xu++
+          const Fk = this.getWorldMatrix();
+          if (ek) {
+            this._scene.needsPreviousWorldMatrices && (dk.masterMeshPreviousWorldMatrix ? (dk.masterMeshPreviousWorldMatrix.copyToArray(wk.instancesPreviousData, Jk), dk.masterMeshPreviousWorldMatrix.sBk(Fk)) : (dk.masterMeshPreviousWorldMatrix = Fk.clone(), dk.masterMeshPreviousWorldMatrix.copyToArray(wk.instancesPreviousData, Jk))), Fk.copyToArray(wk.instancesData, Jk);
+            const kk = Fk.PBk();
+            wk.instancesData[Jk + 12] = kk[12] - yk.x, wk.instancesData[Jk + 13] = kk[13] - yk.y, wk.instancesData[Jk + 14] = kk[14] - yk.z, Jk += 16, Ak++
           }
-          if (mu) {
-            if (vu.INSTANCEDMESH_SORT_TRANSPARENT && this._scene.activeCamera && uu.nS()?.needAlphaBlendingForMesh(uu.getRenderingMesh())) {
-              const uu = this._scene.activeCamera.globalPosition;
-              for (let Ru = 0; Ru < mu.length; Ru++) {
-                const yu = mu[Ru];
-                yu._distanceToCamera = eu.p.Distance(yu.vI().aEu.centerWorld, uu)
+          if (Xk) {
+            if (Ik.INSTANCEDMESH_SORT_TRANSPARENT && this._scene.activeCamera && kk.Ry()?.needAlphaBlendingForMesh(kk.getRenderingMesh())) {
+              const kk = this._scene.activeCamera.globalPosition;
+              for (let Fk = 0; Fk < Xk.length; Fk++) {
+                const Bk = Xk[Fk];
+                Bk._distanceToCamera = Ek.s.Distance(Bk.ZH().JRk.centerWorld, kk)
               }
-              mu.sort(((uu, Ru) => uu._distanceToCamera > Ru._distanceToCamera ? -1 : uu._distanceToCamera < Ru._distanceToCamera ? 1 : 0))
+              Xk.sort(((kk, Fk) => kk._distanceToCamera > Fk._distanceToCamera ? -1 : kk._distanceToCamera < Fk._distanceToCamera ? 1 : 0))
             }
-            for (let uu = 0; uu < mu.length; uu++) {
-              const Ru = mu[uu],
-                yu = Ru.getWorldMatrix();
-              yu.copyToArray(Nu.instancesData, Bu), this._scene.needsPreviousWorldMatrices && (Ru._previousWorldMatrix ? (Ru._previousWorldMatrix.copyToArray(Nu.instancesPreviousData, Bu), Ru._previousWorldMatrix.Oyu(yu)) : (Ru._previousWorldMatrix = yu.clone(), Ru._previousWorldMatrix.copyToArray(Nu.instancesPreviousData, Bu)));
-              const Eu = yu.AEu();
-              Nu.instancesData[Bu + 12] = Eu[12] - pu.x, Nu.instancesData[Bu + 13] = Eu[13] - pu.y, Nu.instancesData[Bu + 14] = Eu[14] - pu.z, Bu += 16, xu++
+            for (let kk = 0; kk < Xk.length; kk++) {
+              const Fk = Xk[kk],
+                Bk = Fk.getWorldMatrix();
+              Bk.copyToArray(wk.instancesData, Jk), this._scene.needsPreviousWorldMatrices && (Fk._previousWorldMatrix ? (Fk._previousWorldMatrix.copyToArray(wk.instancesPreviousData, Jk), Fk._previousWorldMatrix.sBk(Bk)) : (Fk._previousWorldMatrix = Bk.clone(), Fk._previousWorldMatrix.copyToArray(wk.instancesPreviousData, Jk)));
+              const Rk = Bk.PBk();
+              wk.instancesData[Jk + 12] = Rk[12] - yk.x, wk.instancesData[Jk + 13] = Rk[13] - yk.y, wk.instancesData[Jk + 14] = Rk[14] - yk.z, Jk += 16, Ak++
             }
           }
         }
-        if (Tu) {
-          let uu;
-          if (Vu && Vu.dispose(), ru && ru.dispose(), Vu = new Mu.c(Eu, Nu.instancesData, !0, 16, !1, !0), Nu.instancesBuffer = Vu, this._userInstancedBuffersStorage || (this._userInstancedBuffersStorage = {
+        if (fk) {
+          let kk;
+          if (sk && sk.dispose(), Vk && Vk.dispose(), sk = new Hk.d(Rk, wk.instancesData, !0, 16, !1, !0), wk.instancesBuffer = sk, this._userInstancedBuffersStorage || (this._userInstancedBuffersStorage = {
               data: {},
               vertexBuffers: {},
               strides: {},
               sizes: {},
-              vertexArrayObjects: this.eS().getCaps().vertexArrayObject ? {} : void 0
-            }), this._instanceDataStorage.useMonoDataStorageRenderPass) uu = this._userInstancedBuffersStorage.vertexBuffers;
+              vertexArrayObjects: this.ne().getCaps().vertexArrayObject ? {} : void 0
+            }), this._instanceDataStorage.useMonoDataStorageRenderPass) kk = this._userInstancedBuffersStorage.vertexBuffers;
           else {
             this._userInstancedBuffersStorage.renderPasses || (this._userInstancedBuffersStorage.renderPasses = {});
-            const Ru = this._instanceDataStorage.engine.currentRenderPassId;
-            uu = this._userInstancedBuffersStorage.renderPasses[Ru], uu || (this._userInstancedBuffersStorage.renderPasses[Ru] = uu = {})
+            const Fk = this._instanceDataStorage.engine.currentRenderPassId;
+            kk = this._userInstancedBuffersStorage.renderPasses[Fk], kk || (this._userInstancedBuffersStorage.renderPasses[Fk] = kk = {})
           }
-          uu.world0 = Vu.createVertexBuffer("world0", 0, 4), uu.world1 = Vu.createVertexBuffer("world1", 4, 4), uu.world2 = Vu.createVertexBuffer("world2", 8, 4), uu.world3 = Vu.createVertexBuffer("world3", 12, 4), this._scene.needsPreviousWorldMatrices && (ru = new Mu.c(Eu, Nu.instancesPreviousData, !0, 16, !1, !0), Nu.instancesPreviousBuffer = ru, uu.previousWorld0 = ru.createVertexBuffer("previousWorld0", 0, 4), uu.previousWorld1 = ru.createVertexBuffer("previousWorld1", 4, 4), uu.previousWorld2 = ru.createVertexBuffer("previousWorld2", 8, 4), uu.previousWorld3 = ru.createVertexBuffer("previousWorld3", 12, 4)), this._invalidateInstanceVertexArrayObject()
-        } else this._instanceDataStorage.isFrozen && !this._instanceDataStorage.forceMatrixUpdates || (Vu.updateDirectly(Nu.instancesData, 0, xu), !this._scene.needsPreviousWorldMatrices || this._instanceDataStorage.manualUpdate && !this._instanceDataStorage.previousManualUpdate || ru.updateDirectly(Nu.instancesPreviousData, 0, xu));
-        this._processInstancedBuffers(mu, Su), Qu && void 0 !== Ku && (this.lD()._activeIndices.addCount(uu.indexCount * xu, !1), Eu._currentDrawContext && (Eu._currentDrawContext.useInstancing = !0), this._bind(uu, Qu, Ku), this._draw(uu, Ku, xu)), !this._scene.needsPreviousWorldMatrices || Tu || !this._instanceDataStorage.manualUpdate || this._instanceDataStorage.isFrozen && !this._instanceDataStorage.forceMatrixUpdates || this._instanceDataStorage.previousManualUpdate || ru.updateDirectly(Nu.instancesData, 0, xu)
+          kk.world0 = sk.createVertexBuffer("world0", 0, 4), kk.world1 = sk.createVertexBuffer("world1", 4, 4), kk.world2 = sk.createVertexBuffer("world2", 8, 4), kk.world3 = sk.createVertexBuffer("world3", 12, 4), this._scene.needsPreviousWorldMatrices && (Vk = new Hk.d(Rk, wk.instancesPreviousData, !0, 16, !1, !0), wk.instancesPreviousBuffer = Vk, kk.previousWorld0 = Vk.createVertexBuffer("previousWorld0", 0, 4), kk.previousWorld1 = Vk.createVertexBuffer("previousWorld1", 4, 4), kk.previousWorld2 = Vk.createVertexBuffer("previousWorld2", 8, 4), kk.previousWorld3 = Vk.createVertexBuffer("previousWorld3", 12, 4)), this._invalidateInstanceVertexArrayObject()
+        } else this._instanceDataStorage.isFrozen && !this._instanceDataStorage.forceMatrixUpdates || (sk.updateDirectly(wk.instancesData, 0, Ak), !this._scene.needsPreviousWorldMatrices || this._instanceDataStorage.manualUpdate && !this._instanceDataStorage.previousManualUpdate || Vk.updateDirectly(wk.instancesPreviousData, 0, Ak));
+        this._processInstancedBuffers(Xk, ek), ak && void 0 !== tk && (this.XN()._activeIndices.addCount(kk.indexCount * Ak, !1), Rk._currentDrawContext && (Rk._currentDrawContext.useInstancing = !0), this._bind(kk, ak, tk), this._draw(kk, tk, Ak)), !this._scene.needsPreviousWorldMatrices || fk || !this._instanceDataStorage.manualUpdate || this._instanceDataStorage.isFrozen && !this._instanceDataStorage.forceMatrixUpdates || this._instanceDataStorage.previousManualUpdate || Vk.updateDirectly(wk.instancesData, 0, Ak)
       }
-      _renderWithInstances(uu, Ru, yu, Eu, Ku) {
-        const Qu = yu.visibleInstances[uu._id],
-          mu = Qu ? Qu.length : 0,
-          Ju = yu.parent,
-          Nu = Ju.instancesBufferSize,
-          Xu = 16 * (mu + 1) * 4;
-        for (; Ju.instancesBufferSize < Xu;) Ju.instancesBufferSize *= 2;
-        return Ju.instancesData && Nu == Ju.instancesBufferSize || (Ju.instancesData = new Float32Array(Ju.instancesBufferSize / 4)), (this._scene.needsPreviousWorldMatrices && !Ju.instancesPreviousData || Nu != Ju.instancesBufferSize) && (Ju.instancesPreviousData = new Float32Array(Ju.instancesBufferSize / 4)), this._updateInstancedBuffers(uu, yu, Nu, Ku, Ru, Eu), Ku.unbindInstanceAttributes(), this
+      _renderWithInstances(kk, Fk, Bk, Rk, tk) {
+        const ak = Bk.visibleInstances[kk._id],
+          Xk = ak ? ak.length : 0,
+          bk = Bk.parent,
+          wk = bk.instancesBufferSize,
+          dk = 16 * (Xk + 1) * 4;
+        for (; bk.instancesBufferSize < dk;) bk.instancesBufferSize *= 2;
+        return bk.instancesData && wk == bk.instancesBufferSize || (bk.instancesData = new Float32Array(bk.instancesBufferSize / 4)), (this._scene.needsPreviousWorldMatrices && !bk.instancesPreviousData || wk != bk.instancesBufferSize) && (bk.instancesPreviousData = new Float32Array(bk.instancesBufferSize / 4)), this._updateInstancedBuffers(kk, Bk, wk, tk, Fk, Rk), tk.unbindInstanceAttributes(), this
       }
-      _renderWithThinInstances(uu, Ru, yu, Eu) {
-        const Ku = this._thinInstanceDataStorage?.instancesCount ?? 0;
-        this.lD()._activeIndices.addCount(uu.indexCount * Ku, !1), Eu._currentDrawContext && (Eu._currentDrawContext.useInstancing = !0), this._bind(uu, yu, Ru), this._draw(uu, Ru, Ku), this._scene.needsPreviousWorldMatrices && !this._thinInstanceDataStorage.previousMatrixData && this._thinInstanceDataStorage.matrixData && (this._thinInstanceDataStorage.previousMatrixBuffer ? this._thinInstanceDataStorage.previousMatrixBuffer.updateDirectly(this._thinInstanceDataStorage.matrixData, 0, Ku) : this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", this._thinInstanceDataStorage.matrixData, !1)), Eu.unbindInstanceAttributes()
+      _renderWithThinInstances(kk, Fk, Bk, Rk) {
+        const tk = this._thinInstanceDataStorage?.instancesCount ?? 0;
+        this.XN()._activeIndices.addCount(kk.indexCount * tk, !1), Rk._currentDrawContext && (Rk._currentDrawContext.useInstancing = !0), this._bind(kk, Bk, Fk), this._draw(kk, Fk, tk), this._scene.needsPreviousWorldMatrices && !this._thinInstanceDataStorage.previousMatrixData && this._thinInstanceDataStorage.matrixData && (this._thinInstanceDataStorage.previousMatrixBuffer ? this._thinInstanceDataStorage.previousMatrixBuffer.updateDirectly(this._thinInstanceDataStorage.matrixData, 0, tk) : this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", this._thinInstanceDataStorage.matrixData, !1)), Rk.unbindInstanceAttributes()
       }
-      _processInstancedBuffers(uu, Ru) {}
-      _processRendering(uu, Ru, yu, Eu, Ku, Qu, mu, Ju) {
-        const Nu = this.lD(),
-          Xu = Nu.eS();
-        if (Eu = this._getRenderingFillMode(Eu), Qu && Ru.getRenderingMesh().hasThinInstances) return this._renderWithThinInstances(Ru, Eu, yu, Xu), this;
-        if (Qu) this._renderWithInstances(Ru, Eu, Ku, yu, Xu);
+      _processInstancedBuffers(kk, Fk) {}
+      _processRendering(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
+        const wk = this.XN(),
+          dk = wk.ne();
+        if (Rk = this._getRenderingFillMode(Rk), ak && Fk.getRenderingMesh().hasThinInstances) return this._renderWithThinInstances(Fk, Rk, Bk, dk), this;
+        if (ak) this._renderWithInstances(Fk, Rk, tk, Bk, dk);
         else {
-          Xu._currentDrawContext && (Xu._currentDrawContext.useInstancing = !1);
-          let yu = 0;
-          Ku.renderSelf[Ru._id] && (mu && mu(!1, uu.getWorldMatrix(), Ju), yu++, this._draw(Ru, Eu, this._instanceDataStorage.overridenInstanceCount));
-          const Qu = Ku.visibleInstances[Ru._id];
-          if (Qu) {
-            const uu = Qu.length;
-            yu += uu;
-            for (let yu = 0; yu < uu; yu++) {
-              const uu = Qu[yu].getWorldMatrix();
-              mu && mu(!0, uu, Ju), this._draw(Ru, Eu)
+          dk._currentDrawContext && (dk._currentDrawContext.useInstancing = !1);
+          let Bk = 0;
+          tk.renderSelf[Fk._id] && (Xk && Xk(!1, kk.getWorldMatrix(), bk), Bk++, this._draw(Fk, Rk, this._instanceDataStorage.overridenInstanceCount));
+          const ak = tk.visibleInstances[Fk._id];
+          if (ak) {
+            const kk = ak.length;
+            Bk += kk;
+            for (let Bk = 0; Bk < kk; Bk++) {
+              const kk = ak[Bk].getWorldMatrix();
+              Xk && Xk(!0, kk, bk), this._draw(Fk, Rk)
             }
           }
-          Nu._activeIndices.addCount(Ru.indexCount * yu, !1)
+          wk._activeIndices.addCount(Fk.indexCount * Bk, !1)
         }
         return this
       }
-      _disposeInstanceDataStorageRenderPass(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        uu?.instancesBuffer && (Ru && uu.instancesBuffer.dispose(), uu.instancesBuffer = null), uu?.instancesPreviousBuffer && (Ru && uu.instancesPreviousBuffer.dispose(), uu.instancesPreviousBuffer = null)
+      _disposeInstanceDataStorageRenderPass(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        kk?.instancesBuffer && (Fk && kk.instancesBuffer.dispose(), kk.instancesBuffer = null), kk?.instancesPreviousBuffer && (Fk && kk.instancesPreviousBuffer.dispose(), kk.instancesPreviousBuffer = null)
       }
       _rebuild() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const Ru in this._instanceDataStorage.renderPasses) {
-          const yu = this._instanceDataStorage.renderPasses[Ru];
-          this._disposeInstanceDataStorageRenderPass(yu, uu)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const Fk in this._instanceDataStorage.renderPasses) {
+          const Bk = this._instanceDataStorage.renderPasses[Fk];
+          this._disposeInstanceDataStorageRenderPass(Bk, kk)
         }
-        if (this._disposeInstanceDataStorageRenderPass(this._instanceDataStorage.dataStorageRenderPass, uu), this._userInstancedBuffersStorage) {
-          for (const Ru in this._userInstancedBuffersStorage.vertexBuffers) {
-            const yu = this._userInstancedBuffersStorage.vertexBuffers[Ru];
-            yu && (uu && yu.dispose(), this._userInstancedBuffersStorage.vertexBuffers[Ru] = null)
+        if (this._disposeInstanceDataStorageRenderPass(this._instanceDataStorage.dataStorageRenderPass, kk), this._userInstancedBuffersStorage) {
+          for (const Fk in this._userInstancedBuffersStorage.vertexBuffers) {
+            const Bk = this._userInstancedBuffersStorage.vertexBuffers[Fk];
+            Bk && (kk && Bk.dispose(), this._userInstancedBuffersStorage.vertexBuffers[Fk] = null)
           }
           this._userInstancedBuffersStorage.vertexArrayObjects && (this._userInstancedBuffersStorage.vertexArrayObjects = {})
         }
-        this._internalMeshDataInfo._effectiveMaterial = null, super._rebuild(uu)
+        this._internalMeshDataInfo._effectiveMaterial = null, super._rebuild(kk)
       }
-      _releaseRenderPassId(uu) {
-        const Ru = this._instanceDataStorage.renderPasses[uu];
-        if (Ru && (this._disposeInstanceDataStorageRenderPass(Ru, !0), delete this._instanceDataStorage.renderPasses[uu]), this._userInstancedBuffersStorage?.renderPasses) {
-          const Ru = this._userInstancedBuffersStorage.renderPasses[uu];
-          if (Ru)
-            for (const uu in Ru) Ru[uu]?.dispose();
-          delete this._userInstancedBuffersStorage.renderPasses[uu]
+      _releaseRenderPassId(kk) {
+        const Fk = this._instanceDataStorage.renderPasses[kk];
+        if (Fk && (this._disposeInstanceDataStorageRenderPass(Fk, !0), delete this._instanceDataStorage.renderPasses[kk]), this._userInstancedBuffersStorage?.renderPasses) {
+          const Fk = this._userInstancedBuffersStorage.renderPasses[kk];
+          if (Fk)
+            for (const kk in Fk) Fk[kk]?.dispose();
+          delete this._userInstancedBuffersStorage.renderPasses[kk]
         }
-        const yu = this._userInstancedBuffersStorage?.interleavedBuffers;
-        yu?.[uu] && (yu[uu].buffer.dispose(), delete yu[uu])
+        const Bk = this._userInstancedBuffersStorage?.interleavedBuffers;
+        Bk?.[kk] && (Bk[kk].buffer.dispose(), delete Bk[kk])
       }
       _freeze() {
-        if (this.mC) {
-          for (let uu = 0; uu < this.mC.length; uu++) this._getInstancesRenderList(uu);
+        if (this.AY) {
+          for (let kk = 0; kk < this.AY.length; kk++) this._getInstancesRenderList(kk);
           this._internalMeshDataInfo._effectiveMaterial = null, this._instanceDataStorage.isFrozen = !0
         }
       }
       _unFreeze() {
         this._instanceDataStorage.isFrozen = !1;
-        for (const uu in this._instanceDataStorage.renderPasses) {
-          this._instanceDataStorage.renderPasses[uu].previousBatch = null
+        for (const kk in this._instanceDataStorage.renderPasses) {
+          this._instanceDataStorage.renderPasses[kk].previousBatch = null
         }
         this._instanceDataStorage.dataStorageRenderPass && (this._instanceDataStorage.dataStorageRenderPass.previousBatch = null)
       }
-      renderWithRenderPassId(uu, Ru, yu, Eu) {
-        let Ku = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const Qu = this._scene.eS(),
-          mu = Qu.currentRenderPassId;
-        if (void 0 !== uu && (Qu.currentRenderPassId = uu), Eu)(!Ku || Ku && Eu.isInFrustum(this._scene._frustumPlanes)) && this.render(Eu, !!Ru, yu);
+      renderWithRenderPassId(kk, Fk, Bk, Rk) {
+        let tk = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const ak = this._scene.ne(),
+          Xk = ak.currentRenderPassId;
+        if (void 0 !== kk && (ak.currentRenderPassId = kk), Rk)(!tk || tk && Rk.isInFrustum(this._scene._frustumPlanes)) && this.render(Rk, !!Fk, Bk);
         else
-          for (let Ju = 0; Ju < this.mC.length; Ju++) {
-            const uu = this.mC[Ju];
-            (!Ku || Ku && uu.isInFrustum(this._scene._frustumPlanes)) && this.render(uu, !!Ru, yu)
+          for (let bk = 0; bk < this.AY.length; bk++) {
+            const kk = this.AY[bk];
+            (!tk || tk && kk.isInFrustum(this._scene._frustumPlanes)) && this.render(kk, !!Fk, Bk)
           }
-        return void 0 !== uu && (Qu.currentRenderPassId = mu), this
+        return void 0 !== kk && (ak.currentRenderPassId = Xk), this
       }
       directRender() {
-        if (!this.mC) return this;
-        for (const uu of this.mC) this.render(uu, !1);
+        if (!this.AY) return this;
+        for (const kk of this.AY) this.render(kk, !1);
         return this
       }
-      render(uu, Ru, yu) {
-        const Eu = this.lD(),
-          Ku = Eu.eS();
+      render(kk, Fk, Bk) {
+        const Rk = this.XN(),
+          tk = Rk.ne();
         this._internalAbstractMeshDataInfo._isActiveIntermediate ? this._internalAbstractMeshDataInfo._isActiveIntermediate = !1 : this._internalAbstractMeshDataInfo._isActive = !1;
-        const Qu = Eu.activeCameras?.length ?? 0,
-          mu = Qu > 1 && Eu.activeCamera === Eu.activeCameras[0] || Qu <= 1,
-          Ju = this._occlusionDataStorage && -1 !== this._occlusionDataStorage.occlusionForRenderPassId && this._occlusionDataStorage.occlusionForRenderPassId !== Ku.currentRenderPassId;
-        if (mu && this._checkOcclusionQuery(Ju) && !this._occlusionDataStorage.forceRenderingWhenOccluded) return this;
-        const Nu = this._getInstancesRenderList(uu._id, !!yu);
-        if (Nu.mustReturn) return this;
+        const ak = Rk.activeCameras?.length ?? 0,
+          Xk = ak > 1 && Rk.activeCamera === Rk.activeCameras[0] || ak <= 1,
+          bk = this._occlusionDataStorage && -1 !== this._occlusionDataStorage.occlusionForRenderPassId && this._occlusionDataStorage.occlusionForRenderPassId !== tk.currentRenderPassId;
+        if (Xk && this._checkOcclusionQuery(bk) && !this._occlusionDataStorage.forceRenderingWhenOccluded) return this;
+        const wk = this._getInstancesRenderList(kk._id, !!Bk);
+        if (wk.mustReturn) return this;
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        let Xu = 0,
-          Vu = null;
-        this.ignoreCameraMaxZ && Eu.activeCamera && !Eu._isInIntermediateRendering() && (Xu = Eu.activeCamera.maxZ, Vu = Eu.activeCamera, Eu.activeCamera.maxZ = 0, Eu.updateTransformMatrix(!0)), this._internalMeshDataInfo._onBeforeRenderObservable && this._internalMeshDataInfo._onBeforeRenderObservable.notifyObservers(this);
-        const ru = uu.getRenderingMesh(),
-          Bu = Nu.hardwareInstancedRendering[uu._id] || ru.hasThinInstances || !!this._userInstancedBuffersStorage && !uu.getMesh()._internalAbstractMeshDataInfo._actAsRegularMesh,
-          xu = this._instanceDataStorage,
-          Su = uu.nS();
-        if (!Su) return Vu && (Vu.maxZ = Xu, Eu.updateTransformMatrix(!0)), this;
-        if (xu.isFrozen && this._internalMeshDataInfo._effectiveMaterial && this._internalMeshDataInfo._effectiveMaterial === Su) {
-          if (Su._storeEffectOnSubMeshes && !uu._drawWrapper?._wasPreviouslyReady || !Su._storeEffectOnSubMeshes && !Su._getDrawWrapper()._wasPreviouslyReady) return Vu && (Vu.maxZ = Xu, Eu.updateTransformMatrix(!0)), this
+        let dk = 0,
+          sk = null;
+        this.ignoreCameraMaxZ && Rk.activeCamera && !Rk._isInIntermediateRendering() && (dk = Rk.activeCamera.maxZ, sk = Rk.activeCamera, Rk.activeCamera.maxZ = 0, Rk.updateTransformMatrix(!0)), this._internalMeshDataInfo._onBeforeRenderObservable && this._internalMeshDataInfo._onBeforeRenderObservable.notifyObservers(this);
+        const Vk = kk.getRenderingMesh(),
+          Jk = wk.hardwareInstancedRendering[kk._id] || Vk.hasThinInstances || !!this._userInstancedBuffersStorage && !kk.getMesh()._internalAbstractMeshDataInfo._actAsRegularMesh,
+          Ak = this._instanceDataStorage,
+          ek = kk.Ry();
+        if (!ek) return sk && (sk.maxZ = dk, Rk.updateTransformMatrix(!0)), this;
+        if (Ak.isFrozen && this._internalMeshDataInfo._effectiveMaterial && this._internalMeshDataInfo._effectiveMaterial === ek) {
+          if (ek._storeEffectOnSubMeshes && !kk._drawWrapper?._wasPreviouslyReady || !ek._storeEffectOnSubMeshes && !ek._getDrawWrapper()._wasPreviouslyReady) return sk && (sk.maxZ = dk, Rk.updateTransformMatrix(!0)), this
         } else {
-          if (Su._storeEffectOnSubMeshes) {
-            if (!Su.isReadyForSubMesh(this, uu, Bu)) return Vu && (Vu.maxZ = Xu, Eu.updateTransformMatrix(!0)), this
-          } else if (!Su.isReady(this, Bu)) return Vu && (Vu.maxZ = Xu, Eu.updateTransformMatrix(!0)), this;
-          this._internalMeshDataInfo._effectiveMaterial = Su
+          if (ek._storeEffectOnSubMeshes) {
+            if (!ek.isReadyForSubMesh(this, kk, Jk)) return sk && (sk.maxZ = dk, Rk.updateTransformMatrix(!0)), this
+          } else if (!ek.isReady(this, Jk)) return sk && (sk.maxZ = dk, Rk.updateTransformMatrix(!0)), this;
+          this._internalMeshDataInfo._effectiveMaterial = ek
         }
-        if (Ru) {
-          const uu = this._internalMeshDataInfo._effectiveMaterial;
-          if (1 === uu.alphaModes.length) Ku.setAlphaMode(uu.alphaMode);
+        if (Fk) {
+          const kk = this._internalMeshDataInfo._effectiveMaterial;
+          if (1 === kk.alphaModes.length) tk.setAlphaMode(kk.alphaMode);
           else
-            for (let Ru = 0; Ru < uu.alphaModes.length; Ru++) {
-              const yu = uu.alphaModes[Ru];
-              Ku.setAlphaMode(void 0 !== yu ? yu : 2, !1, Ru)
+            for (let Fk = 0; Fk < kk.alphaModes.length; Fk++) {
+              const Bk = kk.alphaModes[Fk];
+              tk.setAlphaMode(void 0 !== Bk ? Bk : 2, !1, Fk)
             }
         }
-        let pu;
-        pu = this._internalMeshDataInfo._effectiveMaterial._storeEffectOnSubMeshes ? uu._drawWrapper : this._internalMeshDataInfo._effectiveMaterial._getDrawWrapper();
-        const Tu = pu?.effect ?? null;
-        for (let ku = 0, eu = Eu._beforeRenderingMeshStage; ku < eu.length; ku++) {
-          eu[ku].action(this, uu, Nu, Tu)
+        let yk;
+        yk = this._internalMeshDataInfo._effectiveMaterial._storeEffectOnSubMeshes ? kk._drawWrapper : this._internalMeshDataInfo._effectiveMaterial._getDrawWrapper();
+        const fk = yk?.effect ?? null;
+        for (let Ok = 0, Ek = Rk._beforeRenderingMeshStage; Ok < Ek.length; Ok++) {
+          Ek[Ok].action(this, kk, wk, fk)
         }
-        if (!pu || !Tu) return Vu && (Vu.maxZ = Xu, Eu.updateTransformMatrix(!0)), this;
-        const Wu = yu || this;
-        let ju;
-        if (!xu.isFrozen && (this._internalMeshDataInfo._effectiveMaterial.backFaceCulling || null !== this._internalMeshDataInfo._effectiveMaterial.sideOrientation || this._internalMeshDataInfo._effectiveMaterial._twoSidedLighting)) {
-          const uu = Wu._getWorldMatrixDeterminant();
-          ju = this._internalMeshDataInfo._effectiveMaterial._getEffectiveOrientation(this), uu < 0 && (ju = ju === su.d.ClockWiseSideOrientation ? su.d.CounterClockWiseSideOrientation : su.d.ClockWiseSideOrientation), this._internalMeshDataInfo._effectiveSideOrientation = ju
+        if (!yk || !fk) return sk && (sk.maxZ = dk, Rk.updateTransformMatrix(!0)), this;
+        const mk = Bk || this;
+        let Wk;
+        if (!Ak.isFrozen && (this._internalMeshDataInfo._effectiveMaterial.backFaceCulling || null !== this._internalMeshDataInfo._effectiveMaterial.sideOrientation || this._internalMeshDataInfo._effectiveMaterial._twoSidedLighting)) {
+          const kk = mk._getWorldMatrixDeterminant();
+          Wk = this._internalMeshDataInfo._effectiveMaterial._getEffectiveOrientation(this), kk < 0 && (Wk = Wk === ck.c.ClockWiseSideOrientation ? ck.c.CounterClockWiseSideOrientation : ck.c.ClockWiseSideOrientation), this._internalMeshDataInfo._effectiveSideOrientation = Wk
         }
-        const Hu = this._internalMeshDataInfo._effectiveMaterial._preBind(pu, this._internalMeshDataInfo._effectiveSideOrientation);
-        this._internalMeshDataInfo._effectiveMaterial.forceDepthWrite && Ku.setDepthWrite(!0);
-        const du = this._internalMeshDataInfo._effectiveMaterial,
-          bu = du.fillMode;
-        this._internalMeshDataInfo._onBeforeBindObservable && this._internalMeshDataInfo._onBeforeBindObservable.notifyObservers(this), Bu || this._bind(uu, Tu, bu, !1);
-        const Cu = Wu.getWorldMatrix();
-        du._storeEffectOnSubMeshes ? du.bindForSubMesh(Cu, this, uu) : du.bind(Cu, this);
+        const vk = this._internalMeshDataInfo._effectiveMaterial._preBind(yk, this._internalMeshDataInfo._effectiveSideOrientation);
+        this._internalMeshDataInfo._effectiveMaterial.forceDepthWrite && tk.setDepthWrite(!0);
+        const ik = this._internalMeshDataInfo._effectiveMaterial,
+          Yk = ik.fillMode;
+        this._internalMeshDataInfo._onBeforeBindObservable && this._internalMeshDataInfo._onBeforeBindObservable.notifyObservers(this), Jk || this._bind(kk, fk, Yk, !1);
+        const Lk = mk.getWorldMatrix();
+        ik._storeEffectOnSubMeshes ? ik.bindForSubMesh(Lk, this, kk) : ik.bind(Lk, this);
         try {
-          tu.b._BindAttachmentsForEffect(Ku, Tu) && (!du.backFaceCulling && du.separateCullingPass && (Ku.setState(!0, du.zOffset, !1, !Hu, du.cullBackFaces, du.stencil, du.zOffsetUnits), this._processRendering(this, uu, Tu, bu, Nu, Bu, this._onBeforeDraw, this._internalMeshDataInfo._effectiveMaterial), Ku.setState(!0, du.zOffset, !1, Hu, du.cullBackFaces, du.stencil, du.zOffsetUnits), this._internalMeshDataInfo._onBetweenPassObservable && this._internalMeshDataInfo._onBetweenPassObservable.notifyObservers(uu)), this._processRendering(this, uu, Tu, bu, Nu, Bu, this._onBeforeDraw, this._internalMeshDataInfo._effectiveMaterial))
+          Gk.c._BindAttachmentsForEffect(tk, fk) && (!ik.backFaceCulling && ik.separateCullingPass && (tk.setState(!0, ik.zOffset, !1, !vk, ik.cullBackFaces, ik.stencil, ik.zOffsetUnits), this._processRendering(this, kk, fk, Yk, wk, Jk, this._onBeforeDraw, this._internalMeshDataInfo._effectiveMaterial), tk.setState(!0, ik.zOffset, !1, vk, ik.cullBackFaces, ik.stencil, ik.zOffsetUnits), this._internalMeshDataInfo._onBetweenPassObservable && this._internalMeshDataInfo._onBetweenPassObservable.notifyObservers(kk)), this._processRendering(this, kk, fk, Yk, wk, Jk, this._onBeforeDraw, this._internalMeshDataInfo._effectiveMaterial))
         } finally {
-          tu.b._RestoreAttachments(Ku)
+          Gk.c._RestoreAttachments(tk)
         }
         this._internalMeshDataInfo._effectiveMaterial.unbind();
-        for (let ku = 0, eu = Eu._afterRenderingMeshStage; ku < eu.length; ku++) {
-          eu[ku].action(this, uu, Nu, Tu)
+        for (let Ok = 0, Ek = Rk._afterRenderingMeshStage; Ok < Ek.length; Ok++) {
+          Ek[Ok].action(this, kk, wk, fk)
         }
-        return this._internalMeshDataInfo._onAfterRenderObservable && this._internalMeshDataInfo._onAfterRenderObservable.notifyObservers(this), Vu && (Vu.maxZ = Xu, Eu.updateTransformMatrix(!0)), 2 !== Eu.performancePriority || xu.isFrozen || this._freeze(), this
+        return this._internalMeshDataInfo._onAfterRenderObservable && this._internalMeshDataInfo._onAfterRenderObservable.notifyObservers(this), sk && (sk.maxZ = dk, Rk.updateTransformMatrix(!0)), 2 !== Rk.performancePriority || Ak.isFrozen || this._freeze(), this
       }
-      _renderRunFollower(uu, Ru) {
-        const yu = this._scene,
-          Eu = yu._engine;
-        if (Eu.isWebGPU || uu._mesh !== this || 0 !== this.instances.length || this.render !== vu.prototype.render) return !1;
-        const Ku = uu.nS();
-        if (!Ku || Ku !== yu._cachedMaterial || void 0 === Ku._canBindRunFollower) return !1;
-        const Qu = uu._drawWrapper,
-          mu = Qu?.effect;
-        if (!mu || mu !== yu._cachedEffect || this.visibility !== yu._cachedVisibility || Qu._forceRebindOnNextCall) return !1;
-        const Ju = this.hasThinInstances;
-        if (!Ju && this._userInstancedBuffersStorage) return !1;
-        if (!Qu._wasPreviouslyReady || Qu._wasPreviouslyUsingInstances !== Ju) return !1;
-        const Nu = this._internalMeshDataInfo;
-        if (this.ignoreCameraMaxZ || this.morphTargetManager || this._instanceDataStorage.isFrozen || yu._isInIntermediateRendering() || 0 !== yu._beforeRenderingMeshStage.length || 0 !== yu._afterRenderingMeshStage.length || Nu._onBeforeRenderObservable?.hasObservers() || Nu._onBeforeBindObservable?.hasObservers() || Nu._onAfterRenderObservable?.hasObservers()) return !1;
-        const Xu = this.occlusionType;
-        if (void 0 !== Xu && Xu !== Uu.e.OCCLUSION_TYPE_NONE || !Ku._canBindRunFollower(yu, Eu, this, uu, mu)) return !1;
-        const Vu = this._internalAbstractMeshDataInfo,
-          ru = Vu._isActiveIntermediate;
-        ru ? Vu._isActiveIntermediate = !1 : Vu._isActive = !1;
-        const Bu = yu.activeCameras?.length ?? 0;
-        (Bu > 1 && yu.activeCamera === yu.activeCameras[0] || Bu <= 1) && this._checkOcclusionQuery(!1);
-        const xu = this._getInstancesRenderList(uu._id);
-        if (xu.mustReturn) return !0;
-        if (!Ju && !xu.renderSelf[uu._id]) return ru ? Vu._isActiveIntermediate = !0 : Vu._isActive = !0, !1;
+      _renderRunFollower(kk, Fk) {
+        const Bk = this._scene,
+          Rk = Bk._engine;
+        if (Rk.isWebGPU || kk._mesh !== this || 0 !== this.instances.length || this.render !== Ik.prototype.render) return !1;
+        const tk = kk.Ry();
+        if (!tk || tk !== Bk._cachedMaterial || void 0 === tk._canBindRunFollower) return !1;
+        const ak = kk._drawWrapper,
+          Xk = ak?.effect;
+        if (!Xk || Xk !== Bk._cachedEffect || this.visibility !== Bk._cachedVisibility || ak._forceRebindOnNextCall) return !1;
+        const bk = this.hasThinInstances;
+        if (!bk && this._userInstancedBuffersStorage) return !1;
+        if (!ak._wasPreviouslyReady || ak._wasPreviouslyUsingInstances !== bk) return !1;
+        const wk = this._internalMeshDataInfo;
+        if (this.ignoreCameraMaxZ || this.morphTargetManager || this._instanceDataStorage.isFrozen || Bk._isInIntermediateRendering() || 0 !== Bk._beforeRenderingMeshStage.length || 0 !== Bk._afterRenderingMeshStage.length || wk._onBeforeRenderObservable?.hasObservers() || wk._onBeforeBindObservable?.hasObservers() || wk._onAfterRenderObservable?.hasObservers()) return !1;
+        const dk = this.occlusionType;
+        if (void 0 !== dk && dk !== gk.b.OCCLUSION_TYPE_NONE || !tk._canBindRunFollower(Bk, Rk, this, kk, Xk)) return !1;
+        const sk = this._internalAbstractMeshDataInfo,
+          Vk = sk._isActiveIntermediate;
+        Vk ? sk._isActiveIntermediate = !1 : sk._isActive = !1;
+        const Jk = Bk.activeCameras?.length ?? 0;
+        (Jk > 1 && Bk.activeCamera === Bk.activeCameras[0] || Jk <= 1) && this._checkOcclusionQuery(!1);
+        const Ak = this._getInstancesRenderList(kk._id);
+        if (Ak.mustReturn) return !0;
+        if (!bk && !Ak.renderSelf[kk._id]) return Vk ? sk._isActiveIntermediate = !0 : sk._isActive = !0, !1;
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return !0;
-        if (Nu._effectiveMaterial = Ku, Ru)
-          if (1 === Ku.alphaModes.length) Eu.setAlphaMode(Ku.alphaMode);
+        if (wk._effectiveMaterial = tk, Fk)
+          if (1 === tk.alphaModes.length) Rk.setAlphaMode(tk.alphaMode);
           else
-            for (let pu = 0; pu < Ku.alphaModes.length; pu++) {
-              const uu = Ku.alphaModes[pu];
-              Eu.setAlphaMode(void 0 !== uu ? uu : 2, !1, pu)
+            for (let yk = 0; yk < tk.alphaModes.length; yk++) {
+              const kk = tk.alphaModes[yk];
+              Rk.setAlphaMode(void 0 !== kk ? kk : 2, !1, yk)
             }
-        if (Ku.backFaceCulling || null !== Ku.sideOrientation || Ku._twoSidedLighting) {
-          const uu = this._getWorldMatrixDeterminant();
-          let Ru = Ku._getEffectiveOrientation(this);
-          uu < 0 && (Ru = Ru === su.d.ClockWiseSideOrientation ? su.d.CounterClockWiseSideOrientation : su.d.ClockWiseSideOrientation), Nu._effectiveSideOrientation = Ru
+        if (tk.backFaceCulling || null !== tk.sideOrientation || tk._twoSidedLighting) {
+          const kk = this._getWorldMatrixDeterminant();
+          let Fk = tk._getEffectiveOrientation(this);
+          kk < 0 && (Fk = Fk === ck.c.ClockWiseSideOrientation ? ck.c.CounterClockWiseSideOrientation : ck.c.ClockWiseSideOrientation), wk._effectiveSideOrientation = Fk
         }
-        Ku._preBind(Qu, Nu._effectiveSideOrientation), Ku.forceDepthWrite && Eu.setDepthWrite(!0);
-        const Su = Ku.fillMode;
-        return Ju || this._bind(uu, mu, Su, !1), Ku._bindRunFollower(this.getWorldMatrix(), this, uu, mu), this._processRendering(this, uu, mu, Su, xu, Ju, this._onBeforeDraw, Ku), Ku.unbind(), 2 === yu.performancePriority && this._freeze(), !0
+        tk._preBind(ak, wk._effectiveSideOrientation), tk.forceDepthWrite && Rk.setDepthWrite(!0);
+        const ek = tk.fillMode;
+        return bk || this._bind(kk, Xk, ek, !1), tk._bindRunFollower(this.getWorldMatrix(), this, kk, Xk), this._processRendering(this, kk, Xk, ek, Ak, bk, this._onBeforeDraw, tk), tk.unbind(), 2 === Bk.performancePriority && this._freeze(), !0
       }
       cleanMatrixWeights() {
-        this.isVerticesDataPresent(Mu.h.MatricesWeightsKind) && (this.isVerticesDataPresent(Mu.h.MatricesWeightsExtraKind) ? this._normalizeSkinWeightsAndExtra() : this._normalizeSkinFourWeights())
+        this.isVerticesDataPresent(Hk.n.MatricesWeightsKind) && (this.isVerticesDataPresent(Hk.n.MatricesWeightsExtraKind) ? this._normalizeSkinWeightsAndExtra() : this._normalizeSkinFourWeights())
       }
       _normalizeSkinFourWeights() {
-        const uu = this.getVerticesData(Mu.h.MatricesWeightsKind),
-          Ru = uu.length;
-        for (let yu = 0; yu < Ru; yu += 4) {
-          const Ru = uu[yu] + uu[yu + 1] + uu[yu + 2] + uu[yu + 3];
-          if (0 === Ru) uu[yu] = 1;
+        const kk = this.getVerticesData(Hk.n.MatricesWeightsKind),
+          Fk = kk.length;
+        for (let Bk = 0; Bk < Fk; Bk += 4) {
+          const Fk = kk[Bk] + kk[Bk + 1] + kk[Bk + 2] + kk[Bk + 3];
+          if (0 === Fk) kk[Bk] = 1;
           else {
-            const Eu = 1 / Ru;
-            uu[yu] *= Eu, uu[yu + 1] *= Eu, uu[yu + 2] *= Eu, uu[yu + 3] *= Eu
+            const Rk = 1 / Fk;
+            kk[Bk] *= Rk, kk[Bk + 1] *= Rk, kk[Bk + 2] *= Rk, kk[Bk + 3] *= Rk
           }
         }
-        this.setVerticesData(Mu.h.MatricesWeightsKind, uu)
+        this.setVerticesData(Hk.n.MatricesWeightsKind, kk)
       }
       _normalizeSkinWeightsAndExtra() {
-        const uu = this.getVerticesData(Mu.h.MatricesWeightsExtraKind),
-          Ru = this.getVerticesData(Mu.h.MatricesWeightsKind),
-          yu = Ru.length;
-        for (let Eu = 0; Eu < yu; Eu += 4) {
-          let yu = Ru[Eu] + Ru[Eu + 1] + Ru[Eu + 2] + Ru[Eu + 3];
-          if (yu += uu[Eu] + uu[Eu + 1] + uu[Eu + 2] + uu[Eu + 3], 0 === yu) Ru[Eu] = 1;
+        const kk = this.getVerticesData(Hk.n.MatricesWeightsExtraKind),
+          Fk = this.getVerticesData(Hk.n.MatricesWeightsKind),
+          Bk = Fk.length;
+        for (let Rk = 0; Rk < Bk; Rk += 4) {
+          let Bk = Fk[Rk] + Fk[Rk + 1] + Fk[Rk + 2] + Fk[Rk + 3];
+          if (Bk += kk[Rk] + kk[Rk + 1] + kk[Rk + 2] + kk[Rk + 3], 0 === Bk) Fk[Rk] = 1;
           else {
-            const Ku = 1 / yu;
-            Ru[Eu] *= Ku, Ru[Eu + 1] *= Ku, Ru[Eu + 2] *= Ku, Ru[Eu + 3] *= Ku, uu[Eu] *= Ku, uu[Eu + 1] *= Ku, uu[Eu + 2] *= Ku, uu[Eu + 3] *= Ku
+            const tk = 1 / Bk;
+            Fk[Rk] *= tk, Fk[Rk + 1] *= tk, Fk[Rk + 2] *= tk, Fk[Rk + 3] *= tk, kk[Rk] *= tk, kk[Rk + 1] *= tk, kk[Rk + 2] *= tk, kk[Rk + 3] *= tk
           }
         }
-        this.setVerticesData(Mu.h.MatricesWeightsKind, Ru), this.setVerticesData(Mu.h.MatricesWeightsKind, uu)
+        this.setVerticesData(Hk.n.MatricesWeightsKind, Fk), this.setVerticesData(Hk.n.MatricesWeightsKind, kk)
       }
       validateSkinning() {
-        const uu = this.getVerticesData(Mu.h.MatricesWeightsExtraKind),
-          Ru = this.getVerticesData(Mu.h.MatricesWeightsKind);
-        if (null === Ru || null == this.skeleton) return {
+        const kk = this.getVerticesData(Hk.n.MatricesWeightsExtraKind),
+          Fk = this.getVerticesData(Hk.n.MatricesWeightsKind);
+        if (null === Fk || null == this.skeleton) return {
           skinned: !1,
           valid: !0,
-          Px: "not skinned"
+          ve: "not skinned"
         };
-        const yu = Ru.length;
-        let Eu = 0,
-          Ku = 0,
-          Qu = 0,
-          mu = 0;
-        const Ju = null === uu ? 4 : 8,
-          Nu = [];
-        for (let xu = 0; xu <= Ju; xu++) Nu[xu] = 0;
-        for (let xu = 0; xu < yu; xu += 4) {
-          let yu = Ru[xu],
-            Xu = yu,
-            Vu = 0 === Xu ? 0 : 1;
-          for (let Ku = 1; Ku < Ju; Ku++) {
-            const Qu = Ku < 4 ? Ru[xu + Ku] : uu[xu + Ku - 4];
-            Qu > yu && Eu++, 0 !== Qu && Vu++, Xu += Qu, yu = Qu
+        const Bk = Fk.length;
+        let Rk = 0,
+          tk = 0,
+          ak = 0,
+          Xk = 0;
+        const bk = null === kk ? 4 : 8,
+          wk = [];
+        for (let Ak = 0; Ak <= bk; Ak++) wk[Ak] = 0;
+        for (let Ak = 0; Ak < Bk; Ak += 4) {
+          let Bk = Fk[Ak],
+            dk = Bk,
+            sk = 0 === dk ? 0 : 1;
+          for (let tk = 1; tk < bk; tk++) {
+            const ak = tk < 4 ? Fk[Ak + tk] : kk[Ak + tk - 4];
+            ak > Bk && Rk++, 0 !== ak && sk++, dk += ak, Bk = ak
           }
-          if (Nu[Vu]++, Vu > Qu && (Qu = Vu), 0 === Xu) Ku++;
+          if (wk[sk]++, sk > ak && (ak = sk), 0 === dk) tk++;
           else {
-            const yu = 1 / Xu;
-            let Eu = 0;
-            for (let Ku = 0; Ku < Ju; Ku++) Eu += Ku < 4 ? Math.abs(Ru[xu + Ku] - Ru[xu + Ku] * yu) : Math.abs(uu[xu + Ku - 4] - uu[xu + Ku - 4] * yu);
-            Eu > .001 && mu++
+            const Bk = 1 / dk;
+            let Rk = 0;
+            for (let tk = 0; tk < bk; tk++) Rk += tk < 4 ? Math.abs(Fk[Ak + tk] - Fk[Ak + tk] * Bk) : Math.abs(kk[Ak + tk - 4] - kk[Ak + tk - 4] * Bk);
+            Rk > .001 && Xk++
           }
         }
-        const Xu = this.skeleton.bones.length,
-          Vu = this.getVerticesData(Mu.h.MatricesIndicesKind),
-          ru = this.getVerticesData(Mu.h.MatricesIndicesExtraKind);
-        let Bu = 0;
-        for (let xu = 0; xu < yu; xu += 4)
-          for (let uu = 0; uu < Ju; uu++) {
-            const Ru = uu < 4 ? Vu[xu + uu] : ru[xu + uu - 4];
-            (Ru >= Xu || Ru < 0) && Bu++
+        const dk = this.skeleton.bones.length,
+          sk = this.getVerticesData(Hk.n.MatricesIndicesKind),
+          Vk = this.getVerticesData(Hk.n.MatricesIndicesExtraKind);
+        let Jk = 0;
+        for (let Ak = 0; Ak < Bk; Ak += 4)
+          for (let kk = 0; kk < bk; kk++) {
+            const Fk = kk < 4 ? sk[Ak + kk] : Vk[Ak + kk - 4];
+            (Fk >= dk || Fk < 0) && Jk++
           }
         return {
           skinned: !0,
-          valid: 0 === Ku && 0 === mu && 0 === Bu,
-          Px: "Number of Weights = " + yu / 4 + "\nMaximum influences = " + Qu + "\nMissing Weights = " + Ku + "\nNot Sorted = " + Eu + "\nNot Normalized = " + mu + "\nWeightCounts = [" + Nu + "]\nNumber of bones = " + Xu + "\nBad Bone Indices = " + Bu
+          valid: 0 === tk && 0 === Xk && 0 === Jk,
+          ve: "Number of Weights = " + Bk / 4 + "\nMaximum influences = " + ak + "\nMissing Weights = " + tk + "\nNot Sorted = " + Rk + "\nNot Normalized = " + Xk + "\nWeightCounts = [" + wk + "]\nNumber of bones = " + dk + "\nBad Bone Indices = " + Jk
         }
       }
       _checkDelayState() {
-        const uu = this.lD();
-        return this._geometry ? this._geometry.load(uu) : 4 === this.delayLoadState && (this.delayLoadState = 2, this._queueLoad(uu)), this
+        const kk = this.XN();
+        return this._geometry ? this._geometry.load(kk) : 4 === this.delayLoadState && (this.delayLoadState = 2, this._queueLoad(kk)), this
       }
-      _queueLoad(uu) {
-        uu.addPendingData(this);
-        const Ru = -1 !== this.delayLoadingFile.indexOf(".babylonbinarymeshdata");
+      _queueLoad(kk) {
+        kk.addPendingData(this);
+        const Fk = -1 !== this.delayLoadingFile.indexOf(".babylonbinarymeshdata");
         return (async () => {
           try {
-            const yu = await uu._loadDelayedFileAsync(this.delayLoadingFile, Ru, !0);
-            yu instanceof ArrayBuffer ? this._delayLoadingFunction(yu, this) : this._delayLoadingFunction(JSON.parse(yu), this);
-            for (const uu of this.instances) uu.refreshBoundingInfo(), uu._syncSubMeshes();
-            this.delayLoadState = 1, uu.removePendingData(this)
-          } catch (yu) {
-            uu.removePendingData(this), uu.wyu || Lu.e.Error(`Unable to delay load geometry data for mesh "${this.name}" from "${this.delayLoadingFile}": ${yu}`)
+            const Bk = await kk._loadDelayedFileAsync(this.delayLoadingFile, Fk, !0);
+            Bk instanceof ArrayBuffer ? this._delayLoadingFunction(Bk, this) : this._delayLoadingFunction(JSON.parse(Bk), this);
+            for (const kk of this.instances) kk.refreshBoundingInfo(), kk._syncSubMeshes();
+            this.delayLoadState = 1, kk.removePendingData(this)
+          } catch (Bk) {
+            kk.removePendingData(this), kk.BBk || zk.b.Error(`Unable to delay load geometry data for mesh "${this.name}" from "${this.delayLoadingFile}": ${Bk}`)
           }
         })(), this
       }
-      isInFrustum(uu) {
-        return 2 !== this.delayLoadState && (!!super.isInFrustum(uu) && (this._checkDelayState(), !0))
+      isInFrustum(kk) {
+        return 2 !== this.delayLoadState && (!!super.isInFrustum(kk) && (this._checkDelayState(), !0))
       }
-      setMaterialById(uu) {
-        const Ru = this.lD().materials;
-        let yu;
-        for (yu = Ru.length - 1; yu > -1; yu--)
-          if (Ru[yu].id === uu) return this.material = Ru[yu], this;
-        const Eu = this.lD().multiMaterials;
-        for (yu = Eu.length - 1; yu > -1; yu--)
-          if (Eu[yu].id === uu) return this.material = Eu[yu], this;
+      setMaterialById(kk) {
+        const Fk = this.XN().materials;
+        let Bk;
+        for (Bk = Fk.length - 1; Bk > -1; Bk--)
+          if (Fk[Bk].id === kk) return this.material = Fk[Bk], this;
+        const Rk = this.XN().multiMaterials;
+        for (Bk = Rk.length - 1; Bk > -1; Bk--)
+          if (Rk[Bk].id === kk) return this.material = Rk[Bk], this;
         return this
       }
       getAnimatables() {
-        const uu = [];
-        return this.material && uu.push(this.material), this.skeleton && uu.push(this.skeleton), uu
+        const kk = [];
+        return this.material && kk.push(this.material), this.skeleton && kk.push(this.skeleton), kk
       }
-      bakeTransformIntoVertices(uu) {
-        if (!this.isVerticesDataPresent(Mu.h.PositionKind)) return this;
-        const Ru = this.mC.splice(0);
+      bakeTransformIntoVertices(kk) {
+        if (!this.isVerticesDataPresent(Hk.n.PositionKind)) return this;
+        const Fk = this.AY.splice(0);
         this._resetPointsArrayCache();
-        let yu = this.getVerticesData(Mu.h.PositionKind);
-        const Eu = eu.p.Zero();
-        let Ku;
-        for (Ku = 0; Ku < yu.length; Ku += 3) eu.p.TransformCoordinatesFromFloatsToRef(yu[Ku], yu[Ku + 1], yu[Ku + 2], uu, Eu).toArray(yu, Ku);
-        if (this.setVerticesData(Mu.h.PositionKind, yu, this.getVertexBuffer(Mu.h.PositionKind).isUpdatable()), this.isVerticesDataPresent(Mu.h.NormalKind)) {
-          for (yu = this.getVerticesData(Mu.h.NormalKind), Ku = 0; Ku < yu.length; Ku += 3) eu.p.TransformNormalFromFloatsToRef(yu[Ku], yu[Ku + 1], yu[Ku + 2], uu, Eu).normalize().toArray(yu, Ku);
-          this.setVerticesData(Mu.h.NormalKind, yu, this.getVertexBuffer(Mu.h.NormalKind).isUpdatable())
+        let Bk = this.getVerticesData(Hk.n.PositionKind);
+        const Rk = Ek.s.Zero();
+        let tk;
+        for (tk = 0; tk < Bk.length; tk += 3) Ek.s.TransformCoordinatesFromFloatsToRef(Bk[tk], Bk[tk + 1], Bk[tk + 2], kk, Rk).toArray(Bk, tk);
+        if (this.setVerticesData(Hk.n.PositionKind, Bk, this.getVertexBuffer(Hk.n.PositionKind).isUpdatable()), this.isVerticesDataPresent(Hk.n.NormalKind)) {
+          for (Bk = this.getVerticesData(Hk.n.NormalKind), tk = 0; tk < Bk.length; tk += 3) Ek.s.TransformNormalFromFloatsToRef(Bk[tk], Bk[tk + 1], Bk[tk + 2], kk, Rk).normalize().toArray(Bk, tk);
+          this.setVerticesData(Hk.n.NormalKind, Bk, this.getVertexBuffer(Hk.n.NormalKind).isUpdatable())
         }
-        if (this.isVerticesDataPresent(Mu.h.TangentKind)) {
-          for (yu = this.getVerticesData(Mu.h.TangentKind), Ku = 0; Ku < yu.length; Ku += 4) eu.p.TransformNormalFromFloatsToRef(yu[Ku], yu[Ku + 1], yu[Ku + 2], uu, Eu).normalize().toArray(yu, Ku);
-          this.setVerticesData(Mu.h.TangentKind, yu, this.getVertexBuffer(Mu.h.TangentKind).isUpdatable())
+        if (this.isVerticesDataPresent(Hk.n.TangentKind)) {
+          for (Bk = this.getVerticesData(Hk.n.TangentKind), tk = 0; tk < Bk.length; tk += 4) Ek.s.TransformNormalFromFloatsToRef(Bk[tk], Bk[tk + 1], Bk[tk + 2], kk, Rk).normalize().toArray(Bk, tk);
+          this.setVerticesData(Hk.n.TangentKind, Bk, this.getVertexBuffer(Hk.n.TangentKind).isUpdatable())
         }
-        return uu.determinant() < 0 && this.flipFaces(), this.releaseSubMeshes(), this.mC = Ru, this
+        return kk.determinant() < 0 && this.flipFaces(), this.releaseSubMeshes(), this.AY = Fk, this
       }
       bakeCurrentTransformIntoVertices() {
-        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] && this.makeGeometryUnique(), this.bakeTransformIntoVertices(this.computeWorldMatrix(!0)), this.resetLocalMatrix(uu), this
+        let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] && this.makeGeometryUnique(), this.bakeTransformIntoVertices(this.computeWorldMatrix(!0)), this.resetLocalMatrix(kk), this
       }
       get _positions() {
         return this._internalAbstractMeshDataInfo._positions || this._geometry && this._geometry._positions || null
@@ -5605,132 +5605,132 @@ export const modules = {
         return !!this._geometry && this._geometry._generatePointsArray()
       }
       clone() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          yu = arguments.length > 2 ? arguments[2] : void 0,
-          Eu = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        if (Ru && void 0 === Ru._addToSceneRootNodes) {
-          const yu = Ru;
-          return Ou.source = this, Ou.doNotCloneChildren = yu.doNotCloneChildren, Ou.clonePhysicsImpostor = yu.clonePhysicsImpostor, Ou.cloneThinInstances = yu.cloneThinInstances, new vu(uu, this.lD(), Ou)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Bk = arguments.length > 2 ? arguments[2] : void 0,
+          Rk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        if (Fk && void 0 === Fk._addToSceneRootNodes) {
+          const Bk = Fk;
+          return nk.source = this, nk.doNotCloneChildren = Bk.doNotCloneChildren, nk.clonePhysicsImpostor = Bk.clonePhysicsImpostor, nk.cloneThinInstances = Bk.cloneThinInstances, new Ik(kk, this.XN(), nk)
         }
-        return new vu(uu, this.lD(), Ru, this, yu, Eu)
+        return new Ik(kk, this.XN(), Fk, this, Bk, Rk)
       }
-      dispose(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      dispose(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         this.morphTargetManager = null, this._geometry && this._geometry.releaseForMesh(this, !0);
-        const yu = this._internalMeshDataInfo;
-        if (yu._onBeforeDrawObservable && yu._onBeforeDrawObservable.clear(), yu._onBeforeBindObservable && yu._onBeforeBindObservable.clear(), yu._onBeforeRenderObservable && yu._onBeforeRenderObservable.clear(), yu._onAfterRenderObservable && yu._onAfterRenderObservable.clear(), yu._onBetweenPassObservable && yu._onBetweenPassObservable.clear(), this._scene.useClonedMeshMap) {
-          if (yu.meshMap)
-            for (const uu in yu.meshMap) {
-              const Ru = yu.meshMap[uu];
-              Ru && (Ru._internalMeshDataInfo._source = null, yu.meshMap[uu] = void 0)
+        const Bk = this._internalMeshDataInfo;
+        if (Bk._onBeforeDrawObservable && Bk._onBeforeDrawObservable.clear(), Bk._onBeforeBindObservable && Bk._onBeforeBindObservable.clear(), Bk._onBeforeRenderObservable && Bk._onBeforeRenderObservable.clear(), Bk._onAfterRenderObservable && Bk._onAfterRenderObservable.clear(), Bk._onBetweenPassObservable && Bk._onBetweenPassObservable.clear(), this._scene.useClonedMeshMap) {
+          if (Bk.meshMap)
+            for (const kk in Bk.meshMap) {
+              const Fk = Bk.meshMap[kk];
+              Fk && (Fk._internalMeshDataInfo._source = null, Bk.meshMap[kk] = void 0)
             }
-          yu._source && yu._source._internalMeshDataInfo.meshMap && (yu._source._internalMeshDataInfo.meshMap[this.uniqueId] = void 0)
+          Bk._source && Bk._source._internalMeshDataInfo.meshMap && (Bk._source._internalMeshDataInfo.meshMap[this.uniqueId] = void 0)
         } else {
-          const uu = this.lD().meshes;
-          for (const Ru of uu) {
-            const uu = Ru;
-            uu._internalMeshDataInfo && uu._internalMeshDataInfo._source && uu._internalMeshDataInfo._source === this && (uu._internalMeshDataInfo._source = null)
+          const kk = this.XN().meshes;
+          for (const Fk of kk) {
+            const kk = Fk;
+            kk._internalMeshDataInfo && kk._internalMeshDataInfo._source && kk._internalMeshDataInfo._source === this && (kk._internalMeshDataInfo._source = null)
           }
         }
-        yu._source = null, this._disposeInstanceSpecificData(), this._disposeThinInstanceSpecificData(), this._internalMeshDataInfo._checkReadinessObserver && this._scene.onBeforeRenderObservable.remove(this._internalMeshDataInfo._checkReadinessObserver), super.dispose(uu, Ru)
+        Bk._source = null, this._disposeInstanceSpecificData(), this._disposeThinInstanceSpecificData(), this._internalMeshDataInfo._checkReadinessObserver && this._scene.onBeforeRenderObservable.remove(this._internalMeshDataInfo._checkReadinessObserver), super.dispose(kk, Fk)
       }
       _disposeInstanceSpecificData() {}
       _disposeThinInstanceSpecificData() {}
       _invalidateInstanceVertexArrayObject() {}
-      applyDisplacementMap(uu, Ru, yu, Eu, Ku, Qu) {
-        let mu = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-          Ju = arguments.length > 7 ? arguments[7] : void 0;
-        const Nu = this.lD();
-        return (0, Hu.r)(uu, (uu => {
-          const Ju = uu.width,
-            Nu = uu.height,
-            Xu = this.eS().createCanvas(Ju, Nu).getContext("2d");
-          Xu.drawImage(uu, 0, 0);
-          const Vu = Xu.getImageData(0, 0, Ju, Nu).data;
-          this.applyDisplacementMapFromBuffer(Vu, Ju, Nu, Ru, yu, Ku, Qu, mu), Eu && Eu(this)
-        }), Ju || (() => {}), Nu.offlineProvider), this
+      applyDisplacementMap(kk, Fk, Bk, Rk, tk, ak) {
+        let Xk = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          bk = arguments.length > 7 ? arguments[7] : void 0;
+        const wk = this.XN();
+        return (0, vk.j)(kk, (kk => {
+          const bk = kk.width,
+            wk = kk.height,
+            dk = this.ne().createCanvas(bk, wk).getContext("2d");
+          dk.drawImage(kk, 0, 0);
+          const sk = dk.getImageData(0, 0, bk, wk).data;
+          this.applyDisplacementMapFromBuffer(sk, bk, wk, Fk, Bk, tk, ak, Xk), Rk && Rk(this)
+        }), bk || (() => {}), wk.offlineProvider), this
       }
-      applyDisplacementMapFromBuffer(uu, Ru, yu, Eu, Ku, Qu, mu) {
-        let Ju = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
-        if (!this.isVerticesDataPresent(Mu.h.PositionKind) || !this.isVerticesDataPresent(Mu.h.NormalKind) || !this.isVerticesDataPresent(Mu.h.UVKind)) return Lu.e.Warn("Cannot call applyDisplacementMap: Given mesh is not complete. Position, Normal or UV are missing"), this;
-        const Nu = this.getVerticesData(Mu.h.PositionKind, !0, !0),
-          Xu = this.getVerticesData(Mu.h.NormalKind),
-          Vu = this.getVerticesData(Mu.h.UVKind);
-        let ru = eu.p.Zero();
-        const Bu = eu.p.Zero(),
-          xu = eu.n.Zero();
-        Qu = Qu || eu.n.Zero(), mu = mu || new eu.n(1, 1);
-        for (let Su = 0; Su < Nu.length; Su += 3) {
-          eu.p.FromArrayToRef(Nu, Su, ru), eu.p.FromArrayToRef(Xu, Su, Bu), eu.n.FromArrayToRef(Vu, Su / 3 * 2, xu);
-          const Ju = 4 * ((Math.abs(xu.x * mu.x + Qu.x % 1) * (Ru - 1) % Ru | 0) + (Math.abs(xu.y * mu.y + Qu.y % 1) * (yu - 1) % yu | 0) * Ru),
-            pu = .3 * (uu[Ju] / 255) + .59 * (uu[Ju + 1] / 255) + .11 * (uu[Ju + 2] / 255);
-          Bu.normalize(), Bu.scaleInPlace(Eu + (Ku - Eu) * pu), ru = ru.add(Bu), ru.toArray(Nu, Su)
+      applyDisplacementMapFromBuffer(kk, Fk, Bk, Rk, tk, ak, Xk) {
+        let bk = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+        if (!this.isVerticesDataPresent(Hk.n.PositionKind) || !this.isVerticesDataPresent(Hk.n.NormalKind) || !this.isVerticesDataPresent(Hk.n.UVKind)) return zk.b.Warn("Cannot call applyDisplacementMap: Given mesh is not complete. Position, Normal or UV are missing"), this;
+        const wk = this.getVerticesData(Hk.n.PositionKind, !0, !0),
+          dk = this.getVerticesData(Hk.n.NormalKind),
+          sk = this.getVerticesData(Hk.n.UVKind);
+        let Vk = Ek.s.Zero();
+        const Jk = Ek.s.Zero(),
+          Ak = Ek.p.Zero();
+        ak = ak || Ek.p.Zero(), Xk = Xk || new Ek.p(1, 1);
+        for (let ek = 0; ek < wk.length; ek += 3) {
+          Ek.s.FromArrayToRef(wk, ek, Vk), Ek.s.FromArrayToRef(dk, ek, Jk), Ek.p.FromArrayToRef(sk, ek / 3 * 2, Ak);
+          const bk = 4 * ((Math.abs(Ak.x * Xk.x + ak.x % 1) * (Fk - 1) % Fk | 0) + (Math.abs(Ak.y * Xk.y + ak.y % 1) * (Bk - 1) % Bk | 0) * Fk),
+            yk = .3 * (kk[bk] / 255) + .59 * (kk[bk + 1] / 255) + .11 * (kk[bk + 2] / 255);
+          Jk.normalize(), Jk.scaleInPlace(Rk + (tk - Rk) * yk), Vk = Vk.add(Jk), Vk.toArray(wk, ek)
         }
-        return Iu.e.ComputeNormals(Nu, this.DEu(), Xu), Ju ? (this.setVerticesData(Mu.h.PositionKind, Nu), this.setVerticesData(Mu.h.NormalKind, Xu), this.setVerticesData(Mu.h.UVKind, Vu)) : (this.updateVerticesData(Mu.h.PositionKind, Nu), this.updateVerticesData(Mu.h.NormalKind, Xu)), this
+        return uk.e.ComputeNormals(wk, this.hBk(), dk), bk ? (this.setVerticesData(Hk.n.PositionKind, wk), this.setVerticesData(Hk.n.NormalKind, dk), this.setVerticesData(Hk.n.UVKind, sk)) : (this.updateVerticesData(Hk.n.PositionKind, wk), this.updateVerticesData(Hk.n.NormalKind, dk)), this
       }
-      _getFlattenedNormals(uu, Ru) {
-        const yu = new Float32Array(3 * uu.length);
-        let Eu = 0;
-        const Ku = this.sideOrientation === (this._scene.useRightHandedSystem ? 1 : 0);
-        for (let Qu = 0; Qu < uu.length; Qu += 3) {
-          const mu = eu.p.FromArray(Ru, 3 * uu[Qu]),
-            Ju = eu.p.FromArray(Ru, 3 * uu[Qu + 1]),
-            Nu = eu.p.FromArray(Ru, 3 * uu[Qu + 2]),
-            Xu = mu.subtract(Ju),
-            Vu = Nu.subtract(Ju),
-            ru = eu.p.Normalize(eu.p.Cross(Xu, Vu));
-          Ku && ru.scaleInPlace(-1);
-          for (let uu = 0; uu < 3; uu++) yu[Eu++] = ru.x, yu[Eu++] = ru.y, yu[Eu++] = ru.z
+      _getFlattenedNormals(kk, Fk) {
+        const Bk = new Float32Array(3 * kk.length);
+        let Rk = 0;
+        const tk = this.sideOrientation === (this._scene.useRightHandedSystem ? 1 : 0);
+        for (let ak = 0; ak < kk.length; ak += 3) {
+          const Xk = Ek.s.FromArray(Fk, 3 * kk[ak]),
+            bk = Ek.s.FromArray(Fk, 3 * kk[ak + 1]),
+            wk = Ek.s.FromArray(Fk, 3 * kk[ak + 2]),
+            dk = Xk.subtract(bk),
+            sk = wk.subtract(bk),
+            Vk = Ek.s.Normalize(Ek.s.Cross(dk, sk));
+          tk && Vk.scaleInPlace(-1);
+          for (let kk = 0; kk < 3; kk++) Bk[Rk++] = Vk.x, Bk[Rk++] = Vk.y, Bk[Rk++] = Vk.z
         }
-        return yu
+        return Bk
       }
       _convertToUnIndexedMesh() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Ru = this.getVerticesDataKinds().filter((uu => !this.getVertexBuffer(uu)?.getIsInstanced())),
-          yu = this.DEu(!1, !0),
-          Eu = {},
-          Ku = (uu, Ru) => {
-            const Eu = new Float32Array(yu.length * Ru);
-            let Ku = 0;
-            for (let Qu = 0; Qu < yu.length; Qu++)
-              for (let mu = 0; mu < Ru; mu++) Eu[Ku++] = uu[yu[Qu] * Ru + mu];
-            return Eu
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Fk = this.getVerticesDataKinds().filter((kk => !this.getVertexBuffer(kk)?.getIsInstanced())),
+          Bk = this.hBk(!1, !0),
+          Rk = {},
+          tk = (kk, Fk) => {
+            const Rk = new Float32Array(Bk.length * Fk);
+            let tk = 0;
+            for (let ak = 0; ak < Bk.length; ak++)
+              for (let Xk = 0; Xk < Fk; Xk++) Rk[tk++] = kk[Bk[ak] * Fk + Xk];
+            return Rk
           },
-          Qu = this.vI(),
-          mu = this.geometry ? this.mC.slice(0) : [];
-        for (const Ju of Ru) Eu[Ju] = this.getVerticesData(Ju);
-        for (const Ju of Ru) {
-          const Ru = this.getVertexBuffer(Ju),
-            Qu = Ru.getSize();
-          if (uu && Ju === Mu.h.NormalKind) {
-            const uu = this._getFlattenedNormals(yu, Eu[Mu.h.PositionKind]);
-            this.setVerticesData(Mu.h.NormalKind, uu, Ru.isUpdatable(), Qu)
-          } else this.setVerticesData(Ju, Ku(Eu[Ju], Qu), Ru.isUpdatable(), Qu)
+          ak = this.ZH(),
+          Xk = this.geometry ? this.AY.slice(0) : [];
+        for (const bk of Fk) Rk[bk] = this.getVerticesData(bk);
+        for (const bk of Fk) {
+          const Fk = this.getVertexBuffer(bk),
+            ak = Fk.getSize();
+          if (kk && bk === Hk.n.NormalKind) {
+            const kk = this._getFlattenedNormals(Bk, Rk[Hk.n.PositionKind]);
+            this.setVerticesData(Hk.n.NormalKind, kk, Fk.isUpdatable(), ak)
+          } else this.setVerticesData(bk, tk(Rk[bk], ak), Fk.isUpdatable(), ak)
         }
         if (this.morphTargetManager) {
-          for (let Ru = 0; Ru < this.morphTargetManager.numTargets; Ru++) {
-            const Eu = this.morphTargetManager.getTarget(Ru),
-              Qu = Eu.getPositions();
-            Eu.vmu(Ku(Qu, 3));
-            const mu = Eu.getNormals();
-            mu && Eu.setNormals(uu ? this._getFlattenedNormals(yu, Qu) : Ku(mu, 3));
-            const Ju = Eu.getTangents();
-            Ju && Eu.setTangents(Ku(Ju, 3));
-            const Nu = Eu.getUVs();
-            Nu && Eu.setUVs(Ku(Nu, 2));
-            const Xu = Eu.getColors();
-            Xu && Eu.setColors(Ku(Xu, 4))
+          for (let Fk = 0; Fk < this.morphTargetManager.numTargets; Fk++) {
+            const Rk = this.morphTargetManager.getTarget(Fk),
+              ak = Rk.getPositions();
+            Rk.oXk(tk(ak, 3));
+            const Xk = Rk.getNormals();
+            Xk && Rk.setNormals(kk ? this._getFlattenedNormals(Bk, ak) : tk(Xk, 3));
+            const bk = Rk.getTangents();
+            bk && Rk.setTangents(tk(bk, 3));
+            const wk = Rk.getUVs();
+            wk && Rk.setUVs(tk(wk, 2));
+            const dk = Rk.getColors();
+            dk && Rk.setColors(tk(dk, 4))
           }
           this.morphTargetManager.synchronize()
         }
-        for (let Ju = 0; Ju < yu.length; Ju++) yu[Ju] = Ju;
-        this.setIndices(yu), this._unIndexed = !0, this.releaseSubMeshes();
-        for (const Ju of mu) {
-          const uu = Ju.vI();
-          nu.c.AddToMesh(Ju.materialIndex, Ju.indexStart, Ju.indexCount, Ju.indexStart, Ju.indexCount, this).setBoundingInfo(uu)
+        for (let bk = 0; bk < Bk.length; bk++) Bk[bk] = bk;
+        this.setIndices(Bk), this._unIndexed = !0, this.releaseSubMeshes();
+        for (const bk of Xk) {
+          const kk = bk.ZH();
+          Uk.d.AddToMesh(bk.materialIndex, bk.indexStart, bk.indexCount, bk.indexStart, bk.indexCount, this).setBoundingInfo(kk)
         }
-        return this.setBoundingInfo(Qu), this.synchronizeInstances(), this
+        return this.setBoundingInfo(ak), this.synchronizeInstances(), this
       }
       convertToFlatShadedMesh() {
         return this._convertToUnIndexedMesh(!0)
@@ -5739,1385 +5739,1385 @@ export const modules = {
         return this._convertToUnIndexedMesh()
       }
       flipFaces() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Ru = Iu.e.ExtractFromMesh(this);
-        let yu;
-        if (uu && this.isVerticesDataPresent(Mu.h.NormalKind) && Ru.normals) {
-          for (yu = 0; yu < Ru.normals.length; yu++) Ru.normals[yu] *= -1;
-          this.setVerticesData(Mu.h.NormalKind, Ru.normals, this.isVertexBufferUpdatable(Mu.h.NormalKind))
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Fk = uk.e.ExtractFromMesh(this);
+        let Bk;
+        if (kk && this.isVerticesDataPresent(Hk.n.NormalKind) && Fk.normals) {
+          for (Bk = 0; Bk < Fk.normals.length; Bk++) Fk.normals[Bk] *= -1;
+          this.setVerticesData(Hk.n.NormalKind, Fk.normals, this.isVertexBufferUpdatable(Hk.n.NormalKind))
         }
-        if (Ru.indices) {
-          let uu;
-          for (yu = 0; yu < Ru.indices.length; yu += 3) uu = Ru.indices[yu + 1], Ru.indices[yu + 1] = Ru.indices[yu + 2], Ru.indices[yu + 2] = uu;
-          this.setIndices(Ru.indices, null, this.isVertexBufferUpdatable(Mu.h.PositionKind), !0)
+        if (Fk.indices) {
+          let kk;
+          for (Bk = 0; Bk < Fk.indices.length; Bk += 3) kk = Fk.indices[Bk + 1], Fk.indices[Bk + 1] = Fk.indices[Bk + 2], Fk.indices[Bk + 2] = kk;
+          this.setIndices(Fk.indices, null, this.isVertexBufferUpdatable(Hk.n.PositionKind), !0)
         }
         return this
       }
       increaseVertices() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        const Ru = Iu.e.ExtractFromMesh(this),
-          yu = Ru.indices && !Array.isArray(Ru.indices) && Array.from ? Array.from(Ru.indices) : Ru.indices,
-          Eu = Ru.positions && !Array.isArray(Ru.positions) && Array.from ? Array.from(Ru.positions) : Ru.positions,
-          Ku = Ru.uvs && !Array.isArray(Ru.uvs) && Array.from ? Array.from(Ru.uvs) : Ru.uvs,
-          Qu = Ru.normals && !Array.isArray(Ru.normals) && Array.from ? Array.from(Ru.normals) : Ru.normals;
-        if (yu && Eu) {
-          Ru.indices = yu, Ru.positions = Eu, Ku && (Ru.uvs = Ku), Qu && (Ru.normals = Qu);
-          const mu = uu + 1,
-            Ju = [];
-          for (let uu = 0; uu < mu + 1; uu++) Ju[uu] = [];
-          let Nu, Xu;
-          const Vu = new eu.p(0, 0, 0),
-            ru = new eu.p(0, 0, 0),
-            Bu = new eu.n(0, 0),
-            xu = [],
-            Su = [],
-            pu = [];
-          let Tu, Wu, ju, Hu = Eu.length;
-          Ku && (Wu = Ku.length), Qu && (ju = Qu.length);
-          for (let uu = 0; uu < yu.length; uu += 3) {
-            Su[0] = yu[uu], Su[1] = yu[uu + 1], Su[2] = yu[uu + 2];
-            for (let uu = 0; uu < 3; uu++)
-              if (Nu = Su[uu], Xu = Su[(uu + 1) % 3], void 0 === pu[Nu] && void 0 === pu[Xu] ? (pu[Nu] = [], pu[Xu] = []) : (void 0 === pu[Nu] && (pu[Nu] = []), void 0 === pu[Xu] && (pu[Xu] = [])), void 0 === pu[Nu][Xu] && void 0 === pu[Xu][Nu]) {
-                pu[Nu][Xu] = [], Vu.x = (Eu[3 * Xu] - Eu[3 * Nu]) / mu, Vu.y = (Eu[3 * Xu + 1] - Eu[3 * Nu + 1]) / mu, Vu.z = (Eu[3 * Xu + 2] - Eu[3 * Nu + 2]) / mu, Qu && (ru.x = (Qu[3 * Xu] - Qu[3 * Nu]) / mu, ru.y = (Qu[3 * Xu + 1] - Qu[3 * Nu + 1]) / mu, ru.z = (Qu[3 * Xu + 2] - Qu[3 * Nu + 2]) / mu), Ku && (Bu.x = (Ku[2 * Xu] - Ku[2 * Nu]) / mu, Bu.y = (Ku[2 * Xu + 1] - Ku[2 * Nu + 1]) / mu), pu[Nu][Xu].push(Nu);
-                for (let uu = 1; uu < mu; uu++) pu[Nu][Xu].push(Eu.length / 3), Eu[Hu++] = Eu[3 * Nu] + uu * Vu.x, Eu[Hu++] = Eu[3 * Nu + 1] + uu * Vu.y, Eu[Hu++] = Eu[3 * Nu + 2] + uu * Vu.z, Qu && (Qu[ju++] = Qu[3 * Nu] + uu * ru.x, Qu[ju++] = Qu[3 * Nu + 1] + uu * ru.y, Qu[ju++] = Qu[3 * Nu + 2] + uu * ru.z), Ku && (Ku[Wu++] = Ku[2 * Nu] + uu * Bu.x, Ku[Wu++] = Ku[2 * Nu + 1] + uu * Bu.y);
-                pu[Nu][Xu].push(Xu), pu[Xu][Nu] = [], Tu = pu[Nu][Xu].length;
-                for (let uu = 0; uu < Tu; uu++) pu[Xu][Nu][uu] = pu[Nu][Xu][Tu - 1 - uu]
-              } Ju[0][0] = yu[uu], Ju[1][0] = pu[yu[uu]][yu[uu + 1]][1], Ju[1][1] = pu[yu[uu]][yu[uu + 2]][1];
-            for (let Ru = 2; Ru < mu; Ru++) {
-              Ju[Ru][0] = pu[yu[uu]][yu[uu + 1]][Ru], Ju[Ru][Ru] = pu[yu[uu]][yu[uu + 2]][Ru], Vu.x = (Eu[3 * Ju[Ru][Ru]] - Eu[3 * Ju[Ru][0]]) / Ru, Vu.y = (Eu[3 * Ju[Ru][Ru] + 1] - Eu[3 * Ju[Ru][0] + 1]) / Ru, Vu.z = (Eu[3 * Ju[Ru][Ru] + 2] - Eu[3 * Ju[Ru][0] + 2]) / Ru, Qu && (ru.x = (Qu[3 * Ju[Ru][Ru]] - Qu[3 * Ju[Ru][0]]) / Ru, ru.y = (Qu[3 * Ju[Ru][Ru] + 1] - Qu[3 * Ju[Ru][0] + 1]) / Ru, ru.z = (Qu[3 * Ju[Ru][Ru] + 2] - Qu[3 * Ju[Ru][0] + 2]) / Ru), Ku && (Bu.x = (Ku[2 * Ju[Ru][Ru]] - Ku[2 * Ju[Ru][0]]) / Ru, Bu.y = (Ku[2 * Ju[Ru][Ru] + 1] - Ku[2 * Ju[Ru][0] + 1]) / Ru);
-              for (let uu = 1; uu < Ru; uu++) Ju[Ru][uu] = Eu.length / 3, Eu[Hu++] = Eu[3 * Ju[Ru][0]] + uu * Vu.x, Eu[Hu++] = Eu[3 * Ju[Ru][0] + 1] + uu * Vu.y, Eu[Hu++] = Eu[3 * Ju[Ru][0] + 2] + uu * Vu.z, Qu && (Qu[ju++] = Qu[3 * Ju[Ru][0]] + uu * ru.x, Qu[ju++] = Qu[3 * Ju[Ru][0] + 1] + uu * ru.y, Qu[ju++] = Qu[3 * Ju[Ru][0] + 2] + uu * ru.z), Ku && (Ku[Wu++] = Ku[2 * Ju[Ru][0]] + uu * Bu.x, Ku[Wu++] = Ku[2 * Ju[Ru][0] + 1] + uu * Bu.y)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        const Fk = uk.e.ExtractFromMesh(this),
+          Bk = Fk.indices && !Array.isArray(Fk.indices) && Array.from ? Array.from(Fk.indices) : Fk.indices,
+          Rk = Fk.positions && !Array.isArray(Fk.positions) && Array.from ? Array.from(Fk.positions) : Fk.positions,
+          tk = Fk.uvs && !Array.isArray(Fk.uvs) && Array.from ? Array.from(Fk.uvs) : Fk.uvs,
+          ak = Fk.normals && !Array.isArray(Fk.normals) && Array.from ? Array.from(Fk.normals) : Fk.normals;
+        if (Bk && Rk) {
+          Fk.indices = Bk, Fk.positions = Rk, tk && (Fk.uvs = tk), ak && (Fk.normals = ak);
+          const Xk = kk + 1,
+            bk = [];
+          for (let kk = 0; kk < Xk + 1; kk++) bk[kk] = [];
+          let wk, dk;
+          const sk = new Ek.s(0, 0, 0),
+            Vk = new Ek.s(0, 0, 0),
+            Jk = new Ek.p(0, 0),
+            Ak = [],
+            ek = [],
+            yk = [];
+          let fk, mk, Wk, vk = Rk.length;
+          tk && (mk = tk.length), ak && (Wk = ak.length);
+          for (let kk = 0; kk < Bk.length; kk += 3) {
+            ek[0] = Bk[kk], ek[1] = Bk[kk + 1], ek[2] = Bk[kk + 2];
+            for (let kk = 0; kk < 3; kk++)
+              if (wk = ek[kk], dk = ek[(kk + 1) % 3], void 0 === yk[wk] && void 0 === yk[dk] ? (yk[wk] = [], yk[dk] = []) : (void 0 === yk[wk] && (yk[wk] = []), void 0 === yk[dk] && (yk[dk] = [])), void 0 === yk[wk][dk] && void 0 === yk[dk][wk]) {
+                yk[wk][dk] = [], sk.x = (Rk[3 * dk] - Rk[3 * wk]) / Xk, sk.y = (Rk[3 * dk + 1] - Rk[3 * wk + 1]) / Xk, sk.z = (Rk[3 * dk + 2] - Rk[3 * wk + 2]) / Xk, ak && (Vk.x = (ak[3 * dk] - ak[3 * wk]) / Xk, Vk.y = (ak[3 * dk + 1] - ak[3 * wk + 1]) / Xk, Vk.z = (ak[3 * dk + 2] - ak[3 * wk + 2]) / Xk), tk && (Jk.x = (tk[2 * dk] - tk[2 * wk]) / Xk, Jk.y = (tk[2 * dk + 1] - tk[2 * wk + 1]) / Xk), yk[wk][dk].push(wk);
+                for (let kk = 1; kk < Xk; kk++) yk[wk][dk].push(Rk.length / 3), Rk[vk++] = Rk[3 * wk] + kk * sk.x, Rk[vk++] = Rk[3 * wk + 1] + kk * sk.y, Rk[vk++] = Rk[3 * wk + 2] + kk * sk.z, ak && (ak[Wk++] = ak[3 * wk] + kk * Vk.x, ak[Wk++] = ak[3 * wk + 1] + kk * Vk.y, ak[Wk++] = ak[3 * wk + 2] + kk * Vk.z), tk && (tk[mk++] = tk[2 * wk] + kk * Jk.x, tk[mk++] = tk[2 * wk + 1] + kk * Jk.y);
+                yk[wk][dk].push(dk), yk[dk][wk] = [], fk = yk[wk][dk].length;
+                for (let kk = 0; kk < fk; kk++) yk[dk][wk][kk] = yk[wk][dk][fk - 1 - kk]
+              } bk[0][0] = Bk[kk], bk[1][0] = yk[Bk[kk]][Bk[kk + 1]][1], bk[1][1] = yk[Bk[kk]][Bk[kk + 2]][1];
+            for (let Fk = 2; Fk < Xk; Fk++) {
+              bk[Fk][0] = yk[Bk[kk]][Bk[kk + 1]][Fk], bk[Fk][Fk] = yk[Bk[kk]][Bk[kk + 2]][Fk], sk.x = (Rk[3 * bk[Fk][Fk]] - Rk[3 * bk[Fk][0]]) / Fk, sk.y = (Rk[3 * bk[Fk][Fk] + 1] - Rk[3 * bk[Fk][0] + 1]) / Fk, sk.z = (Rk[3 * bk[Fk][Fk] + 2] - Rk[3 * bk[Fk][0] + 2]) / Fk, ak && (Vk.x = (ak[3 * bk[Fk][Fk]] - ak[3 * bk[Fk][0]]) / Fk, Vk.y = (ak[3 * bk[Fk][Fk] + 1] - ak[3 * bk[Fk][0] + 1]) / Fk, Vk.z = (ak[3 * bk[Fk][Fk] + 2] - ak[3 * bk[Fk][0] + 2]) / Fk), tk && (Jk.x = (tk[2 * bk[Fk][Fk]] - tk[2 * bk[Fk][0]]) / Fk, Jk.y = (tk[2 * bk[Fk][Fk] + 1] - tk[2 * bk[Fk][0] + 1]) / Fk);
+              for (let kk = 1; kk < Fk; kk++) bk[Fk][kk] = Rk.length / 3, Rk[vk++] = Rk[3 * bk[Fk][0]] + kk * sk.x, Rk[vk++] = Rk[3 * bk[Fk][0] + 1] + kk * sk.y, Rk[vk++] = Rk[3 * bk[Fk][0] + 2] + kk * sk.z, ak && (ak[Wk++] = ak[3 * bk[Fk][0]] + kk * Vk.x, ak[Wk++] = ak[3 * bk[Fk][0] + 1] + kk * Vk.y, ak[Wk++] = ak[3 * bk[Fk][0] + 2] + kk * Vk.z), tk && (tk[mk++] = tk[2 * bk[Fk][0]] + kk * Jk.x, tk[mk++] = tk[2 * bk[Fk][0] + 1] + kk * Jk.y)
             }
-            Ju[mu] = pu[yu[uu + 1]][yu[uu + 2]], xu.push(Ju[0][0], Ju[1][0], Ju[1][1]);
-            for (let uu = 1; uu < mu; uu++) {
-              let Ru;
-              for (Ru = 0; Ru < uu; Ru++) xu.push(Ju[uu][Ru], Ju[uu + 1][Ru], Ju[uu + 1][Ru + 1]), xu.push(Ju[uu][Ru], Ju[uu + 1][Ru + 1], Ju[uu][Ru + 1]);
-              xu.push(Ju[uu][Ru], Ju[uu + 1][Ru], Ju[uu + 1][Ru + 1])
+            bk[Xk] = yk[Bk[kk + 1]][Bk[kk + 2]], Ak.push(bk[0][0], bk[1][0], bk[1][1]);
+            for (let kk = 1; kk < Xk; kk++) {
+              let Fk;
+              for (Fk = 0; Fk < kk; Fk++) Ak.push(bk[kk][Fk], bk[kk + 1][Fk], bk[kk + 1][Fk + 1]), Ak.push(bk[kk][Fk], bk[kk + 1][Fk + 1], bk[kk][Fk + 1]);
+              Ak.push(bk[kk][Fk], bk[kk + 1][Fk], bk[kk + 1][Fk + 1])
             }
           }
-          Ru.indices = xu, Ru.applyToMesh(this, this.isVertexBufferUpdatable(Mu.h.PositionKind))
-        } else Lu.e.Warn("Couldn't increase number of vertices : VertexData must contain at least indices and positions")
+          Fk.indices = Ak, Fk.applyToMesh(this, this.isVertexBufferUpdatable(Hk.n.PositionKind))
+        } else zk.b.Warn("Couldn't increase number of vertices : VertexData must contain at least indices and positions")
       }
       forceSharedVertices() {
-        const uu = Iu.e.ExtractFromMesh(this),
-          Ru = uu.uvs,
-          yu = uu.indices,
-          Eu = uu.positions,
-          Ku = uu.colors,
-          Qu = uu.matricesIndices,
-          mu = uu.matricesWeights,
-          Ju = uu.matricesIndicesExtra,
-          Nu = uu.matricesWeightsExtra;
-        if (void 0 === yu || void 0 === Eu || null === yu || null === Eu) Lu.e.Warn("VertexData contains empty entries");
+        const kk = uk.e.ExtractFromMesh(this),
+          Fk = kk.uvs,
+          Bk = kk.indices,
+          Rk = kk.positions,
+          tk = kk.colors,
+          ak = kk.matricesIndices,
+          Xk = kk.matricesWeights,
+          bk = kk.matricesIndicesExtra,
+          wk = kk.matricesWeightsExtra;
+        if (void 0 === Bk || void 0 === Rk || null === Bk || null === Rk) zk.b.Warn("VertexData contains empty entries");
         else {
-          const Xu = [],
-            Vu = [],
-            ru = [],
-            Bu = [],
-            xu = [],
-            Su = [],
-            pu = [],
-            Tu = [];
-          let Wu, ju = 0;
-          const Hu = {};
-          let du, bu;
-          for (let uu = 0; uu < yu.length; uu += 3) {
-            bu = [yu[uu], yu[uu + 1], yu[uu + 2]], Wu = [];
-            for (let uu = 0; uu < 3; uu++) {
-              Wu[uu] = "";
-              for (let Ru = 0; Ru < 3; Ru++) Math.abs(Eu[3 * bu[uu] + Ru]) < 1e-8 && (Eu[3 * bu[uu] + Ru] = 0), Wu[uu] += Eu[3 * bu[uu] + Ru] + "|"
+          const dk = [],
+            sk = [],
+            Vk = [],
+            Jk = [],
+            Ak = [],
+            ek = [],
+            yk = [],
+            fk = [];
+          let mk, Wk = 0;
+          const vk = {};
+          let ik, Yk;
+          for (let kk = 0; kk < Bk.length; kk += 3) {
+            Yk = [Bk[kk], Bk[kk + 1], Bk[kk + 2]], mk = [];
+            for (let kk = 0; kk < 3; kk++) {
+              mk[kk] = "";
+              for (let Fk = 0; Fk < 3; Fk++) Math.abs(Rk[3 * Yk[kk] + Fk]) < 1e-8 && (Rk[3 * Yk[kk] + Fk] = 0), mk[kk] += Rk[3 * Yk[kk] + Fk] + "|"
             }
-            if (Wu[0] != Wu[1] && Wu[0] != Wu[2] && Wu[1] != Wu[2])
-              for (let uu = 0; uu < 3; uu++) {
-                if (du = Hu[Wu[uu]], void 0 === du) {
-                  Hu[Wu[uu]] = ju, du = ju++;
-                  for (let Ru = 0; Ru < 3; Ru++) Xu.push(Eu[3 * bu[uu] + Ru]);
-                  if (null !== Ku && void 0 !== Ku)
-                    for (let Ru = 0; Ru < 4; Ru++) Bu.push(Ku[4 * bu[uu] + Ru]);
-                  if (null !== Ru && void 0 !== Ru)
-                    for (let yu = 0; yu < 2; yu++) ru.push(Ru[2 * bu[uu] + yu]);
-                  if (null !== Qu && void 0 !== Qu)
-                    for (let Ru = 0; Ru < 4; Ru++) xu.push(Qu[4 * bu[uu] + Ru]);
-                  if (null !== mu && void 0 !== mu)
-                    for (let Ru = 0; Ru < 4; Ru++) Su.push(mu[4 * bu[uu] + Ru]);
-                  if (null !== Ju && void 0 !== Ju)
-                    for (let Ru = 0; Ru < 4; Ru++) pu.push(Ju[4 * bu[uu] + Ru]);
-                  if (null !== Nu && void 0 !== Nu)
-                    for (let Ru = 0; Ru < 4; Ru++) Tu.push(Nu[4 * bu[uu] + Ru])
+            if (mk[0] != mk[1] && mk[0] != mk[2] && mk[1] != mk[2])
+              for (let kk = 0; kk < 3; kk++) {
+                if (ik = vk[mk[kk]], void 0 === ik) {
+                  vk[mk[kk]] = Wk, ik = Wk++;
+                  for (let Fk = 0; Fk < 3; Fk++) dk.push(Rk[3 * Yk[kk] + Fk]);
+                  if (null !== tk && void 0 !== tk)
+                    for (let Fk = 0; Fk < 4; Fk++) Jk.push(tk[4 * Yk[kk] + Fk]);
+                  if (null !== Fk && void 0 !== Fk)
+                    for (let Bk = 0; Bk < 2; Bk++) Vk.push(Fk[2 * Yk[kk] + Bk]);
+                  if (null !== ak && void 0 !== ak)
+                    for (let Fk = 0; Fk < 4; Fk++) Ak.push(ak[4 * Yk[kk] + Fk]);
+                  if (null !== Xk && void 0 !== Xk)
+                    for (let Fk = 0; Fk < 4; Fk++) ek.push(Xk[4 * Yk[kk] + Fk]);
+                  if (null !== bk && void 0 !== bk)
+                    for (let Fk = 0; Fk < 4; Fk++) yk.push(bk[4 * Yk[kk] + Fk]);
+                  if (null !== wk && void 0 !== wk)
+                    for (let Fk = 0; Fk < 4; Fk++) fk.push(wk[4 * Yk[kk] + Fk])
                 }
-                Vu.push(du)
+                sk.push(ik)
               }
           }
-          const Cu = [];
-          Iu.e.ComputeNormals(Xu, Vu, Cu), uu.positions = Xu, uu.indices = Vu, uu.normals = Cu, null !== Ru && void 0 !== Ru && (uu.uvs = ru), null !== Ku && void 0 !== Ku && (uu.colors = Bu), null !== Qu && void 0 !== Qu && (uu.matricesIndices = xu), null !== mu && void 0 !== mu && (uu.matricesWeights = Su), null !== Ju && void 0 !== Ju && (uu.matricesIndicesExtra = pu), null !== mu && void 0 !== mu && (uu.matricesWeightsExtra = Tu), uu.applyToMesh(this, this.isVertexBufferUpdatable(Mu.h.PositionKind))
+          const Lk = [];
+          uk.e.ComputeNormals(dk, sk, Lk), kk.positions = dk, kk.indices = sk, kk.normals = Lk, null !== Fk && void 0 !== Fk && (kk.uvs = Vk), null !== tk && void 0 !== tk && (kk.colors = Jk), null !== ak && void 0 !== ak && (kk.matricesIndices = Ak), null !== Xk && void 0 !== Xk && (kk.matricesWeights = ek), null !== bk && void 0 !== bk && (kk.matricesIndicesExtra = yk), null !== Xk && void 0 !== Xk && (kk.matricesWeightsExtra = fk), kk.applyToMesh(this, this.isVertexBufferUpdatable(Hk.n.PositionKind))
         }
       }
-      static _instancedMeshFactory(uu, Ru) {
-        throw (0, Fu.k)("InstancedMesh")
+      static _instancedMeshFactory(kk, Fk) {
+        throw (0, hk.i)("InstancedMesh")
       }
-      static _PhysicsImpostorParser(uu, Ru, yu) {
-        throw (0, Fu.k)("PhysicsImpostor")
+      static _PhysicsImpostorParser(kk, Fk, Bk) {
+        throw (0, hk.i)("PhysicsImpostor")
       }
-      createInstance(uu) {
-        const Ru = vu._instancedMeshFactory(uu, this);
-        return Ru.parent = this.parent, Ru
+      createInstance(kk) {
+        const Fk = Ik._instancedMeshFactory(kk, this);
+        return Fk.parent = this.parent, Fk
       }
       synchronizeInstances() {
-        for (let uu = 0; uu < this.instances.length; uu++) {
-          this.instances[uu]._syncSubMeshes()
+        for (let kk = 0; kk < this.instances.length; kk++) {
+          this.instances[kk]._syncSubMeshes()
         }
         return this
       }
-      optimizeIndices(uu) {
-        const Ru = this.DEu(),
-          yu = this.getVerticesData(Mu.h.PositionKind);
-        if (!yu || !Ru) return this;
-        const Eu = [];
-        for (let Qu = 0; Qu < yu.length; Qu += 3) Eu.push(eu.p.FromArray(yu, Qu));
-        const Ku = [];
-        return ju.d.SyncAsyncForLoop(Eu.length, 40, (uu => {
-          const Ru = Eu.length - 1 - uu,
-            yu = Eu[Ru];
-          for (let Qu = 0; Qu < Ru; ++Qu) {
-            const uu = Eu[Qu];
-            if (yu.equals(uu)) {
-              Ku[Ru] = Qu;
+      optimizeIndices(kk) {
+        const Fk = this.hBk(),
+          Bk = this.getVerticesData(Hk.n.PositionKind);
+        if (!Bk || !Fk) return this;
+        const Rk = [];
+        for (let ak = 0; ak < Bk.length; ak += 3) Rk.push(Ek.s.FromArray(Bk, ak));
+        const tk = [];
+        return Wk.d.SyncAsyncForLoop(Rk.length, 40, (kk => {
+          const Fk = Rk.length - 1 - kk,
+            Bk = Rk[Fk];
+          for (let ak = 0; ak < Fk; ++ak) {
+            const kk = Rk[ak];
+            if (Bk.equals(kk)) {
+              tk[Fk] = ak;
               break
             }
           }
         }), (() => {
-          for (let uu = 0; uu < Ru.length; ++uu) Ru[uu] = Ku[Ru[uu]] || Ru[uu];
-          const yu = this.mC.slice(0);
-          this.setIndices(Ru), this.mC = yu, uu && uu(this)
+          for (let kk = 0; kk < Fk.length; ++kk) Fk[kk] = tk[Fk[kk]] || Fk[kk];
+          const Bk = this.AY.slice(0);
+          this.setIndices(Fk), this.AY = Bk, kk && kk(this)
         })), this
       }
       serialize() {
-        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        uu.name = this.name, uu.id = this.id, uu.uniqueId = this.uniqueId, uu.type = this.getClassName(), bu.e && bu.e.HasTags(this) && (uu.tags = bu.e.GetTags(this)), uu.position = this.position.AEu(), this.rotationQuaternion ? uu.rotationQuaternion = this.rotationQuaternion.AEu() : this.rotation && (uu.rotation = this.rotation.AEu()), uu.pp = this.pp.AEu(), this._postMultiplyPivotMatrix ? uu.pivotMatrix = this.getPivotMatrix().AEu() : uu.localMatrix = this.getPivotMatrix().AEu(), uu.isEnabled = this.isEnabled(!1), uu.isVisible = this.isVisible, uu.infiniteDistance = this.infiniteDistance, uu.pickable = this.zp, uu.receiveShadows = this.receiveShadows, uu.billboardMode = this.billboardMode, uu.visibility = this.visibility, uu.DS = this.DS, uu.checkCollisions = this.checkCollisions, uu.ellipsoid = this.ellipsoid.AEu(), uu.ellipsoidOffset = this.ellipsoidOffset.AEu(), uu.US = this.US, uu.isBlocker = this.isBlocker, uu.sideOrientation = this.sideOrientation, this._isWorldMatrixFrozen && (uu.fD = !0), this.parent && this.parent._serializeAsParent(uu), uu.isUnIndexed = this.isUnIndexed;
-        const Ru = this._geometry;
-        if (Ru && this.mC) {
-          uu.geometryUniqueId = Ru.uniqueId, uu.geometryId = Ru.id, uu.mC = [];
-          for (let Ru = 0; Ru < this.mC.length; Ru++) {
-            const yu = this.mC[Ru];
-            uu.mC.push({
-              materialIndex: yu.materialIndex,
-              verticesStart: yu.verticesStart,
-              verticesCount: yu.verticesCount,
-              indexStart: yu.indexStart,
-              indexCount: yu.indexCount
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        kk.name = this.name, kk.id = this.id, kk.uniqueId = this.uniqueId, kk.type = this.getClassName(), Yk.b && Yk.b.HasTags(this) && (kk.tags = Yk.b.GetTags(this)), kk.position = this.position.PBk(), this.rotationQuaternion ? kk.rotationQuaternion = this.rotationQuaternion.PBk() : this.rotation && (kk.rotation = this.rotation.PBk()), kk.ta = this.ta.PBk(), this._postMultiplyPivotMatrix ? kk.pivotMatrix = this.getPivotMatrix().PBk() : kk.localMatrix = this.getPivotMatrix().PBk(), kk.isEnabled = this.isEnabled(!1), kk.isVisible = this.isVisible, kk.infiniteDistance = this.infiniteDistance, kk.pickable = this.ff, kk.receiveShadows = this.receiveShadows, kk.billboardMode = this.billboardMode, kk.visibility = this.visibility, kk.Ie = this.Ie, kk.checkCollisions = this.checkCollisions, kk.ellipsoid = this.ellipsoid.PBk(), kk.ellipsoidOffset = this.ellipsoidOffset.PBk(), kk.Fy = this.Fy, kk.isBlocker = this.isBlocker, kk.sideOrientation = this.sideOrientation, this._isWorldMatrixFrozen && (kk.oN = !0), this.parent && this.parent._serializeAsParent(kk), kk.isUnIndexed = this.isUnIndexed;
+        const Fk = this._geometry;
+        if (Fk && this.AY) {
+          kk.geometryUniqueId = Fk.uniqueId, kk.geometryId = Fk.id, kk.AY = [];
+          for (let Fk = 0; Fk < this.AY.length; Fk++) {
+            const Bk = this.AY[Fk];
+            kk.AY.push({
+              materialIndex: Bk.materialIndex,
+              verticesStart: Bk.verticesStart,
+              verticesCount: Bk.verticesCount,
+              indexStart: Bk.indexStart,
+              indexCount: Bk.indexCount
             })
           }
         }
-        if (this.material ? this.material.doNotSerialize || (uu.materialUniqueId = this.material.uniqueId, uu.materialId = this.material.id) : (this.material = null, uu.materialUniqueId = this._scene.defaultMaterial.uniqueId, uu.materialId = this._scene.defaultMaterial.id), this.morphTargetManager && (uu.morphTargetManagerId = this.morphTargetManager.uniqueId), this.skeleton && (uu.skeletonId = this.skeleton.id, uu.skeletonUniqueId = this.skeleton.uniqueId, uu.numBoneInfluencers = this.numBoneInfluencers), this.lD()._getComponent(wu.c.NAME_PHYSICSENGINE)) {
-          const Ru = this.getPhysicsImpostor?.();
-          Ru && (uu.physicsMass = Ru.getParam("Pm"), uu.physicsFriction = Ru.getParam("friction"), uu.physicsRestitution = Ru.getParam("Pm"), uu.physicsImpostor = Ru.type)
+        if (this.material ? this.material.doNotSerialize || (kk.materialUniqueId = this.material.uniqueId, kk.materialId = this.material.id) : (this.material = null, kk.materialUniqueId = this._scene.defaultMaterial.uniqueId, kk.materialId = this._scene.defaultMaterial.id), this.morphTargetManager && (kk.morphTargetManagerId = this.morphTargetManager.uniqueId), this.skeleton && (kk.skeletonId = this.skeleton.id, kk.skeletonUniqueId = this.skeleton.uniqueId, kk.numBoneInfluencers = this.numBoneInfluencers), this.XN()._getComponent(qk.b.NAME_PHYSICSENGINE)) {
+          const Fk = this.getPhysicsImpostor?.();
+          Fk && (kk.physicsMass = Fk.getParam("jX"), kk.physicsFriction = Fk.getParam("friction"), kk.physicsRestitution = Fk.getParam("jX"), kk.physicsImpostor = Fk.type)
         }
-        this.metadata && (uu.metadata = this.metadata), 0 !== this.meshBlendingTag && (uu.meshBlendingTag = this.meshBlendingTag), uu.instances = [];
-        for (let yu = 0; yu < this.instances.length; yu++) {
-          const Ru = this.instances[yu];
-          if (Ru.doNotSerialize) continue;
-          const Eu = {
-            name: Ru.name,
-            id: Ru.id,
-            isEnabled: Ru.isEnabled(!1),
-            isVisible: Ru.isVisible,
-            zp: Ru.zp,
-            checkCollisions: Ru.checkCollisions,
-            position: Ru.position.AEu(),
-            pp: Ru.pp.AEu()
+        this.metadata && (kk.metadata = this.metadata), 0 !== this.meshBlendingTag && (kk.meshBlendingTag = this.meshBlendingTag), kk.instances = [];
+        for (let Bk = 0; Bk < this.instances.length; Bk++) {
+          const Fk = this.instances[Bk];
+          if (Fk.doNotSerialize) continue;
+          const Rk = {
+            name: Fk.name,
+            id: Fk.id,
+            isEnabled: Fk.isEnabled(!1),
+            isVisible: Fk.isVisible,
+            ff: Fk.ff,
+            checkCollisions: Fk.checkCollisions,
+            position: Fk.position.PBk(),
+            ta: Fk.ta.PBk()
           };
-          if (Ru.parent && Ru.parent._serializeAsParent(Eu), Ru.rotationQuaternion ? Eu.rotationQuaternion = Ru.rotationQuaternion.AEu() : Ru.rotation && (Eu.rotation = Ru.rotation.AEu()), this.lD()._getComponent(wu.c.NAME_PHYSICSENGINE)) {
-            const uu = Ru.getPhysicsImpostor?.();
-            uu && (Eu.physicsMass = uu.getParam("Pm"), Eu.physicsFriction = uu.getParam("friction"), Eu.physicsRestitution = uu.getParam("Pm"), Eu.physicsImpostor = uu.type)
+          if (Fk.parent && Fk.parent._serializeAsParent(Rk), Fk.rotationQuaternion ? Rk.rotationQuaternion = Fk.rotationQuaternion.PBk() : Fk.rotation && (Rk.rotation = Fk.rotation.PBk()), this.XN()._getComponent(qk.b.NAME_PHYSICSENGINE)) {
+            const kk = Fk.getPhysicsImpostor?.();
+            kk && (Rk.physicsMass = kk.getParam("jX"), Rk.physicsFriction = kk.getParam("friction"), Rk.physicsRestitution = kk.getParam("jX"), Rk.physicsImpostor = kk.type)
           }
-          Ru.metadata && (Eu.metadata = Ru.metadata), Ru.actionManager && (Eu.actions = Ru.actionManager.serialize(Ru.name)), uu.instances.push(Eu), cu.c.AppendSerializedAnimations(Ru, Eu), Eu.yT = Ru.serializeAnimationRanges()
+          Fk.metadata && (Rk.metadata = Fk.metadata), Fk.actionManager && (Rk.actions = Fk.actionManager.serialize(Fk.name)), kk.instances.push(Rk), Dk.c.AppendSerializedAnimations(Fk, Rk), Rk.hb = Fk.serializeAnimationRanges()
         }
-        if (this._thinInstanceDataStorage.instancesCount && this._thinInstanceDataStorage.matrixData && (uu.thinInstances = {
+        if (this._thinInstanceDataStorage.instancesCount && this._thinInstanceDataStorage.matrixData && (kk.thinInstances = {
             instancesCount: this._thinInstanceDataStorage.instancesCount,
             matrixData: Array.from(this._thinInstanceDataStorage.matrixData),
             matrixBufferSize: this._thinInstanceDataStorage.matrixBufferSize,
-            enablePicking: this.YRu
+            enablePicking: this.wFk
           }, this._userThinInstanceBuffersStorage)) {
-          const Ru = {
+          const Fk = {
             data: {},
             sizes: {},
             strides: {}
           };
-          for (const uu in this._userThinInstanceBuffersStorage.data) Ru.data[uu] = Array.from(this._userThinInstanceBuffersStorage.data[uu]), Ru.sizes[uu] = this._userThinInstanceBuffersStorage.sizes[uu], Ru.strides[uu] = this._userThinInstanceBuffersStorage.strides[uu];
-          uu.thinInstances.userThinInstance = Ru
+          for (const kk in this._userThinInstanceBuffersStorage.data) Fk.data[kk] = Array.from(this._userThinInstanceBuffersStorage.data[kk]), Fk.sizes[kk] = this._userThinInstanceBuffersStorage.sizes[kk], Fk.strides[kk] = this._userThinInstanceBuffersStorage.strides[kk];
+          kk.thinInstances.userThinInstance = Fk
         }
-        return cu.c.AppendSerializedAnimations(this, uu), uu.yT = this.serializeAnimationRanges(), uu.layerMask = this.layerMask, uu.alphaIndex = this.alphaIndex, uu.hasVertexAlpha = this.hasVertexAlpha, uu.overlayAlpha = this.overlayAlpha, uu.overlayColor = this.overlayColor.AEu(), uu.renderOverlay = this.renderOverlay, uu.applyFog = this.applyFog, this.actionManager && (uu.actions = this.actionManager.serialize(this.name)), uu
+        return Dk.c.AppendSerializedAnimations(this, kk), kk.hb = this.serializeAnimationRanges(), kk.layerMask = this.layerMask, kk.alphaIndex = this.alphaIndex, kk.hasVertexAlpha = this.hasVertexAlpha, kk.overlayAlpha = this.overlayAlpha, kk.overlayColor = this.overlayColor.PBk(), kk.renderOverlay = this.renderOverlay, kk.applyFog = this.applyFog, this.actionManager && (kk.actions = this.actionManager.serialize(this.name)), kk
       }
       _syncGeometryWithMorphTargetManager() {
         if (!this.geometry) return;
         this._markSubMeshesAsAttributesDirty();
-        const uu = this._internalAbstractMeshDataInfo._morphTargetManager;
-        if (uu && uu.vertexCount) {
-          if (uu.vertexCount !== this.getTotalVertices()) return Lu.e.Error("Mesh is incompatible with morph targets. Targets and mesh must all have the same vertices count."), void(this.morphTargetManager = null);
-          if (uu.isUsingTextureForTargets) return;
-          for (let Ru = 0; Ru < uu.numInfluencers; Ru++) {
-            const yu = uu.getActiveTarget(Ru),
-              Eu = yu.getPositions();
-            if (!Eu) return void Lu.e.Error("Invalid morph target. Target must have positions.");
-            this.geometry.setVerticesData(Mu.h.PositionKind + Ru, Eu, !1, 3);
-            const Ku = yu.getNormals();
-            Ku && this.geometry.setVerticesData(Mu.h.NormalKind + Ru, Ku, !1, 3);
-            const Qu = yu.getTangents();
-            Qu && this.geometry.setVerticesData(Mu.h.TangentKind + Ru, Qu, !1, 3);
-            const mu = yu.getUVs();
-            mu && this.geometry.setVerticesData(Mu.h.UVKind + "_" + Ru, mu, !1, 2);
-            const Ju = yu.getUV2s();
-            Ju && this.geometry.setVerticesData(Mu.h.UV2Kind + "_" + Ru, Ju, !1, 2);
-            const Nu = yu.getColors();
-            Nu && this.geometry.setVerticesData(Mu.h.ColorKind + Ru, Nu, !1, 4)
+        const kk = this._internalAbstractMeshDataInfo._morphTargetManager;
+        if (kk && kk.vertexCount) {
+          if (kk.vertexCount !== this.getTotalVertices()) return zk.b.Error("Mesh is incompatible with morph targets. Targets and mesh must all have the same vertices count."), void(this.morphTargetManager = null);
+          if (kk.isUsingTextureForTargets) return;
+          for (let Fk = 0; Fk < kk.numInfluencers; Fk++) {
+            const Bk = kk.getActiveTarget(Fk),
+              Rk = Bk.getPositions();
+            if (!Rk) return void zk.b.Error("Invalid morph target. Target must have positions.");
+            this.geometry.setVerticesData(Hk.n.PositionKind + Fk, Rk, !1, 3);
+            const tk = Bk.getNormals();
+            tk && this.geometry.setVerticesData(Hk.n.NormalKind + Fk, tk, !1, 3);
+            const ak = Bk.getTangents();
+            ak && this.geometry.setVerticesData(Hk.n.TangentKind + Fk, ak, !1, 3);
+            const Xk = Bk.getUVs();
+            Xk && this.geometry.setVerticesData(Hk.n.UVKind + "_" + Fk, Xk, !1, 2);
+            const bk = Bk.getUV2s();
+            bk && this.geometry.setVerticesData(Hk.n.UV2Kind + "_" + Fk, bk, !1, 2);
+            const wk = Bk.getColors();
+            wk && this.geometry.setVerticesData(Hk.n.ColorKind + Fk, wk, !1, 4)
           }
         } else {
-          let uu = 0;
-          for (; this.geometry.isVerticesDataPresent(Mu.h.PositionKind + uu);) this.geometry.removeVerticesData(Mu.h.PositionKind + uu), this.geometry.isVerticesDataPresent(Mu.h.NormalKind + uu) && this.geometry.removeVerticesData(Mu.h.NormalKind + uu), this.geometry.isVerticesDataPresent(Mu.h.TangentKind + uu) && this.geometry.removeVerticesData(Mu.h.TangentKind + uu), this.geometry.isVerticesDataPresent(Mu.h.UVKind + "_" + uu) && this.geometry.removeVerticesData(Mu.h.UVKind + "_" + uu), this.geometry.isVerticesDataPresent(Mu.h.UV2Kind + "_" + uu) && this.geometry.removeVerticesData(Mu.h.UV2Kind + "_" + uu), this.geometry.isVerticesDataPresent(Mu.h.ColorKind + uu) && this.geometry.removeVerticesData(Mu.h.ColorKind + uu), uu++
+          let kk = 0;
+          for (; this.geometry.isVerticesDataPresent(Hk.n.PositionKind + kk);) this.geometry.removeVerticesData(Hk.n.PositionKind + kk), this.geometry.isVerticesDataPresent(Hk.n.NormalKind + kk) && this.geometry.removeVerticesData(Hk.n.NormalKind + kk), this.geometry.isVerticesDataPresent(Hk.n.TangentKind + kk) && this.geometry.removeVerticesData(Hk.n.TangentKind + kk), this.geometry.isVerticesDataPresent(Hk.n.UVKind + "_" + kk) && this.geometry.removeVerticesData(Hk.n.UVKind + "_" + kk), this.geometry.isVerticesDataPresent(Hk.n.UV2Kind + "_" + kk) && this.geometry.removeVerticesData(Hk.n.UV2Kind + "_" + kk), this.geometry.isVerticesDataPresent(Hk.n.ColorKind + kk) && this.geometry.removeVerticesData(Hk.n.ColorKind + kk), kk++
         }
       }
-      static Parse(uu, Ru, yu) {
-        let Eu, Ku = !1;
-        if (uu.type && "LinesMesh" === uu.type ? Eu = vu._LinesMeshParser(uu, Ru) : uu.type && "GroundMesh" === uu.type ? Eu = vu._GroundMeshParser(uu, Ru) : uu.type && "GoldbergMesh" === uu.type ? Eu = vu._GoldbergMeshParser(uu, Ru) : uu.type && "GreasedLineMesh" === uu.type ? Eu = vu._GreasedLineMeshParser(uu, Ru) : uu.type && "TrailMesh" === uu.type ? Eu = vu._TrailMeshParser(uu, Ru) : uu.type && "GaussianSplattingMesh" === uu.type ? (Eu = uu._isCompound ? vu._GaussianSplattingCompoundMeshParser(uu, Ru) : vu._GaussianSplattingMeshParser(uu, Ru), Ku = !0) : uu.type && "GaussianSplattingPartProxyMesh" === uu.type ? (Eu = vu._GaussianSplattingPartProxyMeshParser(uu, Ru), Ku = !0) : Eu = new vu(uu.name, Ru), Eu.id = uu.id, Eu._waitingParsedUniqueId = uu.uniqueId, bu.e && bu.e.AddTagsTo(Eu, uu.tags), Eu.position = eu.p.FromArray(uu.position), void 0 !== uu.metadata && (Eu.metadata = uu.metadata), void 0 !== uu.meshBlendingTag && (Eu.meshBlendingTag = uu.meshBlendingTag), uu.rotationQuaternion ? Eu.rotationQuaternion = eu.f.FromArray(uu.rotationQuaternion) : uu.rotation && (Eu.rotation = eu.p.FromArray(uu.rotation)), Eu.pp = eu.p.FromArray(uu.pp), uu.localMatrix ? Eu.setPreTransformMatrix(eu.d.FromArray(uu.localMatrix)) : uu.pivotMatrix && Eu.setPivotMatrix(eu.d.FromArray(uu.pivotMatrix)), Eu.tC(uu.isEnabled), Eu.isVisible = uu.isVisible, Eu.infiniteDistance = uu.infiniteDistance, Eu.DS = !!uu.DS, Eu.showBoundingBox = uu.showBoundingBox, Eu.showSubMeshesBoundingBox = uu.showSubMeshesBoundingBox, void 0 !== uu.applyFog && (Eu.applyFog = uu.applyFog), void 0 !== uu.pickable && (Eu.zp = uu.pickable), void 0 !== uu.alphaIndex && (Eu.alphaIndex = uu.alphaIndex), Eu.receiveShadows = uu.receiveShadows, void 0 !== uu.billboardMode && (Eu.billboardMode = uu.billboardMode), void 0 !== uu.visibility && (Eu.visibility = uu.visibility), Eu.checkCollisions = uu.checkCollisions, Eu.US = !!uu.US, uu.ellipsoid && (Eu.ellipsoid = eu.p.FromArray(uu.ellipsoid)), uu.ellipsoidOffset && (Eu.ellipsoidOffset = eu.p.FromArray(uu.ellipsoidOffset)), null != uu.overrideMaterialSideOrientation && (Eu.sideOrientation = uu.overrideMaterialSideOrientation), void 0 !== uu.sideOrientation && (Eu.sideOrientation = uu.sideOrientation), void 0 !== uu.isBlocker && (Eu.isBlocker = uu.isBlocker), Eu._shouldGenerateFlatShading = uu.useFlatShading, uu.fD && (Eu._waitingData.fD = uu.fD), void 0 !== uu.parentId && (Eu._waitingParentId = uu.parentId), void 0 !== uu.parentInstanceIndex && (Eu._waitingParentInstanceIndex = uu.parentInstanceIndex), void 0 !== uu.actions && (Eu._waitingData.actions = uu.actions), void 0 !== uu.overlayAlpha && (Eu.overlayAlpha = uu.overlayAlpha), void 0 !== uu.overlayColor && (Eu.overlayColor = Au.d.FromArray(uu.overlayColor)), void 0 !== uu.renderOverlay && (Eu.renderOverlay = uu.renderOverlay), Eu.isUnIndexed = !!uu.isUnIndexed, Eu.hasVertexAlpha = uu.hasVertexAlpha, uu.delayLoadingFile ? (Eu.delayLoadState = 4, Eu.delayLoadingFile = yu + uu.delayLoadingFile, Eu.buildBoundingInfo(eu.p.FromArray(uu.boundingBoxMinimum), eu.p.FromArray(uu.boundingBoxMaximum)), uu._binaryInfo && (Eu._binaryInfo = uu._binaryInfo), Eu._delayInfo = [], uu.hasUVs && Eu._delayInfo.push(Mu.h.UVKind), uu.hasUVs2 && Eu._delayInfo.push(Mu.h.UV2Kind), uu.hasUVs3 && Eu._delayInfo.push(Mu.h.UV3Kind), uu.hasUVs4 && Eu._delayInfo.push(Mu.h.UV4Kind), uu.hasUVs5 && Eu._delayInfo.push(Mu.h.UV5Kind), uu.hasUVs6 && Eu._delayInfo.push(Mu.h.UV6Kind), uu.hasColors && Eu._delayInfo.push(Mu.h.ColorKind), uu.hasMatricesIndices && Eu._delayInfo.push(Mu.h.MatricesIndicesKind), uu.hasMatricesWeights && Eu._delayInfo.push(Mu.h.MatricesWeightsKind), Eu._delayLoadingFunction = Gu.b._ImportGeometry, gu.b.ForceFullSceneLoadingForIncremental && Eu._checkDelayState()) : Ku || Gu.b._ImportGeometry(uu, Eu), uu.materialUniqueId ? Eu._waitingMaterialId = uu.materialUniqueId : uu.materialId && (Eu._waitingMaterialId = uu.materialId), uu.morphTargetManagerId > -1 && (Eu._waitingMorphTargetManagerId = uu.morphTargetManagerId), void 0 !== uu.skeletonId && null !== uu.skeletonId && (Eu.skeleton = Ru.getLastSkeletonById(uu.skeletonId), Eu._waitingSkeletonId = uu.skeletonId, uu.numBoneInfluencers && (Eu.numBoneInfluencers = uu.numBoneInfluencers)), void 0 !== uu.skeletonUniqueId && null !== uu.skeletonUniqueId && (Eu._waitingSkeletonUniqueId = uu.skeletonUniqueId), uu.animations) {
-          for (let Ru = 0; Ru < uu.animations.length; Ru++) {
-            const yu = uu.animations[Ru],
-              Ku = (0, zu.b)("BABYLON.Animation");
-            Ku && Eu.animations.push(Ku.Parse(yu))
+      static Parse(kk, Fk, Bk) {
+        let Rk, tk = !1;
+        if (kk.type && "LinesMesh" === kk.type ? Rk = Ik._LinesMeshParser(kk, Fk) : kk.type && "GroundMesh" === kk.type ? Rk = Ik._GroundMeshParser(kk, Fk) : kk.type && "GoldbergMesh" === kk.type ? Rk = Ik._GoldbergMeshParser(kk, Fk) : kk.type && "GreasedLineMesh" === kk.type ? Rk = Ik._GreasedLineMeshParser(kk, Fk) : kk.type && "TrailMesh" === kk.type ? Rk = Ik._TrailMeshParser(kk, Fk) : kk.type && "GaussianSplattingMesh" === kk.type ? (Rk = kk._isCompound ? Ik._GaussianSplattingCompoundMeshParser(kk, Fk) : Ik._GaussianSplattingMeshParser(kk, Fk), tk = !0) : kk.type && "GaussianSplattingPartProxyMesh" === kk.type ? (Rk = Ik._GaussianSplattingPartProxyMeshParser(kk, Fk), tk = !0) : Rk = new Ik(kk.name, Fk), Rk.id = kk.id, Rk._waitingParsedUniqueId = kk.uniqueId, Yk.b && Yk.b.AddTagsTo(Rk, kk.tags), Rk.position = Ek.s.FromArray(kk.position), void 0 !== kk.metadata && (Rk.metadata = kk.metadata), void 0 !== kk.meshBlendingTag && (Rk.meshBlendingTag = kk.meshBlendingTag), kk.rotationQuaternion ? Rk.rotationQuaternion = Ek.e.FromArray(kk.rotationQuaternion) : kk.rotation && (Rk.rotation = Ek.s.FromArray(kk.rotation)), Rk.ta = Ek.s.FromArray(kk.ta), kk.localMatrix ? Rk.setPreTransformMatrix(Ek.c.FromArray(kk.localMatrix)) : kk.pivotMatrix && Rk.setPivotMatrix(Ek.c.FromArray(kk.pivotMatrix)), Rk.lY(kk.isEnabled), Rk.isVisible = kk.isVisible, Rk.infiniteDistance = kk.infiniteDistance, Rk.Ie = !!kk.Ie, Rk.showBoundingBox = kk.showBoundingBox, Rk.showSubMeshesBoundingBox = kk.showSubMeshesBoundingBox, void 0 !== kk.applyFog && (Rk.applyFog = kk.applyFog), void 0 !== kk.pickable && (Rk.ff = kk.pickable), void 0 !== kk.alphaIndex && (Rk.alphaIndex = kk.alphaIndex), Rk.receiveShadows = kk.receiveShadows, void 0 !== kk.billboardMode && (Rk.billboardMode = kk.billboardMode), void 0 !== kk.visibility && (Rk.visibility = kk.visibility), Rk.checkCollisions = kk.checkCollisions, Rk.Fy = !!kk.Fy, kk.ellipsoid && (Rk.ellipsoid = Ek.s.FromArray(kk.ellipsoid)), kk.ellipsoidOffset && (Rk.ellipsoidOffset = Ek.s.FromArray(kk.ellipsoidOffset)), null != kk.overrideMaterialSideOrientation && (Rk.sideOrientation = kk.overrideMaterialSideOrientation), void 0 !== kk.sideOrientation && (Rk.sideOrientation = kk.sideOrientation), void 0 !== kk.isBlocker && (Rk.isBlocker = kk.isBlocker), Rk._shouldGenerateFlatShading = kk.useFlatShading, kk.oN && (Rk._waitingData.oN = kk.oN), void 0 !== kk.parentId && (Rk._waitingParentId = kk.parentId), void 0 !== kk.parentInstanceIndex && (Rk._waitingParentInstanceIndex = kk.parentInstanceIndex), void 0 !== kk.actions && (Rk._waitingData.actions = kk.actions), void 0 !== kk.overlayAlpha && (Rk.overlayAlpha = kk.overlayAlpha), void 0 !== kk.overlayColor && (Rk.overlayColor = Sk.e.FromArray(kk.overlayColor)), void 0 !== kk.renderOverlay && (Rk.renderOverlay = kk.renderOverlay), Rk.isUnIndexed = !!kk.isUnIndexed, Rk.hasVertexAlpha = kk.hasVertexAlpha, kk.delayLoadingFile ? (Rk.delayLoadState = 4, Rk.delayLoadingFile = Bk + kk.delayLoadingFile, Rk.buildBoundingInfo(Ek.s.FromArray(kk.boundingBoxMinimum), Ek.s.FromArray(kk.boundingBoxMaximum)), kk._binaryInfo && (Rk._binaryInfo = kk._binaryInfo), Rk._delayInfo = [], kk.hasUVs && Rk._delayInfo.push(Hk.n.UVKind), kk.hasUVs2 && Rk._delayInfo.push(Hk.n.UV2Kind), kk.hasUVs3 && Rk._delayInfo.push(Hk.n.UV3Kind), kk.hasUVs4 && Rk._delayInfo.push(Hk.n.UV4Kind), kk.hasUVs5 && Rk._delayInfo.push(Hk.n.UV5Kind), kk.hasUVs6 && Rk._delayInfo.push(Hk.n.UV6Kind), kk.hasColors && Rk._delayInfo.push(Hk.n.ColorKind), kk.hasMatricesIndices && Rk._delayInfo.push(Hk.n.MatricesIndicesKind), kk.hasMatricesWeights && Rk._delayInfo.push(Hk.n.MatricesWeightsKind), Rk._delayLoadingFunction = Mk.e._ImportGeometry, rk.e.ForceFullSceneLoadingForIncremental && Rk._checkDelayState()) : tk || Mk.e._ImportGeometry(kk, Rk), kk.materialUniqueId ? Rk._waitingMaterialId = kk.materialUniqueId : kk.materialId && (Rk._waitingMaterialId = kk.materialId), kk.morphTargetManagerId > -1 && (Rk._waitingMorphTargetManagerId = kk.morphTargetManagerId), void 0 !== kk.skeletonId && null !== kk.skeletonId && (Rk.skeleton = Fk.getLastSkeletonById(kk.skeletonId), Rk._waitingSkeletonId = kk.skeletonId, kk.numBoneInfluencers && (Rk.numBoneInfluencers = kk.numBoneInfluencers)), void 0 !== kk.skeletonUniqueId && null !== kk.skeletonUniqueId && (Rk._waitingSkeletonUniqueId = kk.skeletonUniqueId), kk.animations) {
+          for (let Fk = 0; Fk < kk.animations.length; Fk++) {
+            const Bk = kk.animations[Fk],
+              tk = (0, Pk.c)("BABYLON.Animation");
+            tk && Rk.animations.push(tk.Parse(Bk))
           }
-          Du.e.ParseAnimationRanges(Eu, uu, Ru)
+          Nk.b.ParseAnimationRanges(Rk, kk, Fk)
         }
-        if (uu.autoAnimate && Ru.beginAnimation(Eu, uu.autoAnimateFrom, uu.autoAnimateTo, uu.autoAnimateLoop, uu.autoAnimateSpeed || 1), uu.layerMask && !isNaN(uu.layerMask) ? Eu.layerMask = Math.abs(parseInt(uu.layerMask)) : Eu.layerMask = 268435455, uu.physicsImpostor && (Eu.physicsImpostor = vu._PhysicsImpostorParser(Ru, Eu, uu)), uu.lodMeshIds && (Eu._waitingData.lods = {
-            ids: uu.lodMeshIds,
-            distances: uu.lodDistances ? uu.lodDistances : null,
-            coverages: uu.lodCoverages ? uu.lodCoverages : null
-          }), uu.instances)
-          for (let Qu = 0; Qu < uu.instances.length; Qu++) {
-            const yu = uu.instances[Qu],
-              Ku = Eu.createInstance(yu.name);
-            if (yu.id && (Ku.id = yu.id), bu.e && (yu.tags ? bu.e.AddTagsTo(Ku, yu.tags) : bu.e.AddTagsTo(Ku, uu.tags)), Ku.position = eu.p.FromArray(yu.position), void 0 !== yu.metadata && (Ku.metadata = yu.metadata), void 0 !== yu.parentId && (Ku._waitingParentId = yu.parentId), void 0 !== yu.parentInstanceIndex && (Ku._waitingParentInstanceIndex = yu.parentInstanceIndex), void 0 !== yu.isEnabled && null !== yu.isEnabled && Ku.tC(yu.isEnabled), void 0 !== yu.isVisible && null !== yu.isVisible && (Ku.isVisible = yu.isVisible), void 0 !== yu.zp && null !== yu.zp && (Ku.zp = yu.zp), yu.rotationQuaternion ? Ku.rotationQuaternion = eu.f.FromArray(yu.rotationQuaternion) : yu.rotation && (Ku.rotation = eu.p.FromArray(yu.rotation)), Ku.pp = eu.p.FromArray(yu.pp), void 0 != yu.checkCollisions && null != yu.checkCollisions && (Ku.checkCollisions = yu.checkCollisions), void 0 != yu.pickable && null != yu.pickable && (Ku.zp = yu.pickable), void 0 != yu.showBoundingBox && null != yu.showBoundingBox && (Ku.showBoundingBox = yu.showBoundingBox), void 0 != yu.showSubMeshesBoundingBox && null != yu.showSubMeshesBoundingBox && (Ku.showSubMeshesBoundingBox = yu.showSubMeshesBoundingBox), void 0 != yu.alphaIndex && null != yu.showSubMeshesBoundingBox && (Ku.alphaIndex = yu.alphaIndex), yu.physicsImpostor && (Ku.physicsImpostor = vu._PhysicsImpostorParser(Ru, Ku, yu)), void 0 !== yu.actions && (Ku._waitingData.actions = yu.actions), yu.animations) {
-              for (let uu = 0; uu < yu.animations.length; uu++) {
-                const Ru = yu.animations[uu],
-                  Eu = (0, zu.b)("BABYLON.Animation");
-                Eu && Ku.animations.push(Eu.Parse(Ru))
+        if (kk.autoAnimate && Fk.beginAnimation(Rk, kk.autoAnimateFrom, kk.autoAnimateTo, kk.autoAnimateLoop, kk.autoAnimateSpeed || 1), kk.layerMask && !isNaN(kk.layerMask) ? Rk.layerMask = Math.abs(parseInt(kk.layerMask)) : Rk.layerMask = 268435455, kk.physicsImpostor && (Rk.physicsImpostor = Ik._PhysicsImpostorParser(Fk, Rk, kk)), kk.lodMeshIds && (Rk._waitingData.lods = {
+            ids: kk.lodMeshIds,
+            distances: kk.lodDistances ? kk.lodDistances : null,
+            coverages: kk.lodCoverages ? kk.lodCoverages : null
+          }), kk.instances)
+          for (let ak = 0; ak < kk.instances.length; ak++) {
+            const Bk = kk.instances[ak],
+              tk = Rk.createInstance(Bk.name);
+            if (Bk.id && (tk.id = Bk.id), Yk.b && (Bk.tags ? Yk.b.AddTagsTo(tk, Bk.tags) : Yk.b.AddTagsTo(tk, kk.tags)), tk.position = Ek.s.FromArray(Bk.position), void 0 !== Bk.metadata && (tk.metadata = Bk.metadata), void 0 !== Bk.parentId && (tk._waitingParentId = Bk.parentId), void 0 !== Bk.parentInstanceIndex && (tk._waitingParentInstanceIndex = Bk.parentInstanceIndex), void 0 !== Bk.isEnabled && null !== Bk.isEnabled && tk.lY(Bk.isEnabled), void 0 !== Bk.isVisible && null !== Bk.isVisible && (tk.isVisible = Bk.isVisible), void 0 !== Bk.ff && null !== Bk.ff && (tk.ff = Bk.ff), Bk.rotationQuaternion ? tk.rotationQuaternion = Ek.e.FromArray(Bk.rotationQuaternion) : Bk.rotation && (tk.rotation = Ek.s.FromArray(Bk.rotation)), tk.ta = Ek.s.FromArray(Bk.ta), void 0 != Bk.checkCollisions && null != Bk.checkCollisions && (tk.checkCollisions = Bk.checkCollisions), void 0 != Bk.pickable && null != Bk.pickable && (tk.ff = Bk.pickable), void 0 != Bk.showBoundingBox && null != Bk.showBoundingBox && (tk.showBoundingBox = Bk.showBoundingBox), void 0 != Bk.showSubMeshesBoundingBox && null != Bk.showSubMeshesBoundingBox && (tk.showSubMeshesBoundingBox = Bk.showSubMeshesBoundingBox), void 0 != Bk.alphaIndex && null != Bk.showSubMeshesBoundingBox && (tk.alphaIndex = Bk.alphaIndex), Bk.physicsImpostor && (tk.physicsImpostor = Ik._PhysicsImpostorParser(Fk, tk, Bk)), void 0 !== Bk.actions && (tk._waitingData.actions = Bk.actions), Bk.animations) {
+              for (let kk = 0; kk < Bk.animations.length; kk++) {
+                const Fk = Bk.animations[kk],
+                  Rk = (0, Pk.c)("BABYLON.Animation");
+                Rk && tk.animations.push(Rk.Parse(Fk))
               }
-              Du.e.ParseAnimationRanges(Ku, yu, Ru), yu.autoAnimate && Ru.beginAnimation(Ku, yu.autoAnimateFrom, yu.autoAnimateTo, yu.autoAnimateLoop, yu.autoAnimateSpeed || 1)
+              Nk.b.ParseAnimationRanges(tk, Bk, Fk), Bk.autoAnimate && Fk.beginAnimation(tk, Bk.autoAnimateFrom, Bk.autoAnimateTo, Bk.autoAnimateLoop, Bk.autoAnimateSpeed || 1)
             }
           }
-        if (uu.thinInstances) {
-          const Ru = uu.thinInstances;
-          if (Eu.YRu = !!Ru.enablePicking, Ru.matrixData ? (Eu.uuu("matrix", new Float32Array(Ru.matrixData), 16, !1), Eu._thinInstanceDataStorage.matrixBufferSize = Ru.matrixBufferSize, Eu._thinInstanceDataStorage.instancesCount = Ru.instancesCount) : Eu._thinInstanceDataStorage.matrixBufferSize = Ru.matrixBufferSize, uu.thinInstances.userThinInstance) {
-            const Ru = uu.thinInstances.userThinInstance;
-            for (const uu in Ru.data) Eu.uuu(uu, new Float32Array(Ru.data[uu]), Ru.strides[uu], !1), Eu._userThinInstanceBuffersStorage.sizes[uu] = Ru.sizes[uu]
+        if (kk.thinInstances) {
+          const Fk = kk.thinInstances;
+          if (Rk.wFk = !!Fk.enablePicking, Fk.matrixData ? (Rk.x_("matrix", new Float32Array(Fk.matrixData), 16, !1), Rk._thinInstanceDataStorage.matrixBufferSize = Fk.matrixBufferSize, Rk._thinInstanceDataStorage.instancesCount = Fk.instancesCount) : Rk._thinInstanceDataStorage.matrixBufferSize = Fk.matrixBufferSize, kk.thinInstances.userThinInstance) {
+            const Fk = kk.thinInstances.userThinInstance;
+            for (const kk in Fk.data) Rk.x_(kk, new Float32Array(Fk.data[kk]), Fk.strides[kk], !1), Rk._userThinInstanceBuffersStorage.sizes[kk] = Fk.sizes[kk]
           }
         }
-        return Eu
+        return Rk
       }
       setPositionsForCPUSkinning() {
-        const uu = this._internalMeshDataInfo;
-        if (!uu._sourcePositions) {
-          const Ru = this.getVerticesData(Mu.h.PositionKind);
-          if (!Ru) return uu._sourcePositions;
-          uu._sourcePositions = new Float32Array(Ru), this.isVertexBufferUpdatable(Mu.h.PositionKind) || this.setVerticesData(Mu.h.PositionKind, Ru, !0)
+        const kk = this._internalMeshDataInfo;
+        if (!kk._sourcePositions) {
+          const Fk = this.getVerticesData(Hk.n.PositionKind);
+          if (!Fk) return kk._sourcePositions;
+          kk._sourcePositions = new Float32Array(Fk), this.isVertexBufferUpdatable(Hk.n.PositionKind) || this.setVerticesData(Hk.n.PositionKind, Fk, !0)
         }
-        return uu._sourcePositions
+        return kk._sourcePositions
       }
       setNormalsForCPUSkinning() {
-        const uu = this._internalMeshDataInfo;
-        if (!uu._sourceNormals) {
-          const Ru = this.getVerticesData(Mu.h.NormalKind);
-          if (!Ru) return uu._sourceNormals;
-          uu._sourceNormals = new Float32Array(Ru), this.isVertexBufferUpdatable(Mu.h.NormalKind) || this.setVerticesData(Mu.h.NormalKind, Ru, !0)
+        const kk = this._internalMeshDataInfo;
+        if (!kk._sourceNormals) {
+          const Fk = this.getVerticesData(Hk.n.NormalKind);
+          if (!Fk) return kk._sourceNormals;
+          kk._sourceNormals = new Float32Array(Fk), this.isVertexBufferUpdatable(Hk.n.NormalKind) || this.setVerticesData(Hk.n.NormalKind, Fk, !0)
         }
-        return uu._sourceNormals
+        return kk._sourceNormals
       }
-      applySkeleton(uu) {
+      applySkeleton(kk) {
         if (!this.geometry) return this;
-        if (this.geometry._softwareSkinningFrameId == this.lD().getFrameId()) return this;
-        if (this.geometry._softwareSkinningFrameId = this.lD().getFrameId(), !this.isVerticesDataPresent(Mu.h.PositionKind)) return this;
-        if (!this.isVerticesDataPresent(Mu.h.MatricesIndicesKind)) return this;
-        if (!this.isVerticesDataPresent(Mu.h.MatricesWeightsKind)) return this;
-        const Ru = this.isVerticesDataPresent(Mu.h.NormalKind),
-          yu = this._internalMeshDataInfo;
-        if (!yu._sourcePositions) {
-          const uu = this.mC.slice();
-          this.setPositionsForCPUSkinning(), this.mC = uu
+        if (this.geometry._softwareSkinningFrameId == this.XN().getFrameId()) return this;
+        if (this.geometry._softwareSkinningFrameId = this.XN().getFrameId(), !this.isVerticesDataPresent(Hk.n.PositionKind)) return this;
+        if (!this.isVerticesDataPresent(Hk.n.MatricesIndicesKind)) return this;
+        if (!this.isVerticesDataPresent(Hk.n.MatricesWeightsKind)) return this;
+        const Fk = this.isVerticesDataPresent(Hk.n.NormalKind),
+          Bk = this._internalMeshDataInfo;
+        if (!Bk._sourcePositions) {
+          const kk = this.AY.slice();
+          this.setPositionsForCPUSkinning(), this.AY = kk
         }
-        Ru && !yu._sourceNormals && this.setNormalsForCPUSkinning();
-        let Eu = this.getVerticesData(Mu.h.PositionKind);
-        if (!Eu) return this;
-        Eu instanceof Float32Array || (Eu = new Float32Array(Eu));
-        let Ku = this.getVerticesData(Mu.h.NormalKind);
-        if (Ru) {
-          if (!Ku) return this;
-          Ku instanceof Float32Array || (Ku = new Float32Array(Ku))
+        Fk && !Bk._sourceNormals && this.setNormalsForCPUSkinning();
+        let Rk = this.getVerticesData(Hk.n.PositionKind);
+        if (!Rk) return this;
+        Rk instanceof Float32Array || (Rk = new Float32Array(Rk));
+        let tk = this.getVerticesData(Hk.n.NormalKind);
+        if (Fk) {
+          if (!tk) return this;
+          tk instanceof Float32Array || (tk = new Float32Array(tk))
         }
-        const Qu = this.getVerticesData(Mu.h.MatricesIndicesKind),
-          mu = this.getVerticesData(Mu.h.MatricesWeightsKind);
-        if (!mu || !Qu) return this;
-        const Ju = this.numBoneInfluencers > 4,
-          Nu = Ju ? this.getVerticesData(Mu.h.MatricesIndicesExtraKind) : null,
-          Xu = Ju ? this.getVerticesData(Mu.h.MatricesWeightsExtraKind) : null,
-          Vu = uu.getTransformMatrices(this),
-          ru = eu.p.Zero(),
-          Bu = new eu.d,
-          xu = new eu.d;
-        let Su, pu = 0;
-        for (let Tu = 0; Tu < Eu.length; Tu += 3, pu += 4) {
-          let uu;
-          for (Su = 0; Su < 4; Su++) uu = mu[pu + Su], uu > 0 && (eu.d.FromFloat32ArrayToRefScaled(Vu, Math.floor(16 * Qu[pu + Su]), uu, xu), Bu.addToSelf(xu));
-          if (Ju)
-            for (Su = 0; Su < 4; Su++) uu = Xu[pu + Su], uu > 0 && (eu.d.FromFloat32ArrayToRefScaled(Vu, Math.floor(16 * Nu[pu + Su]), uu, xu), Bu.addToSelf(xu));
-          eu.p.TransformCoordinatesFromFloatsToRef(yu._sourcePositions[Tu], yu._sourcePositions[Tu + 1], yu._sourcePositions[Tu + 2], Bu, ru), ru.toArray(Eu, Tu), Ru && (eu.p.TransformNormalFromFloatsToRef(yu._sourceNormals[Tu], yu._sourceNormals[Tu + 1], yu._sourceNormals[Tu + 2], Bu, ru), ru.toArray(Ku, Tu)), Bu.reset()
+        const ak = this.getVerticesData(Hk.n.MatricesIndicesKind),
+          Xk = this.getVerticesData(Hk.n.MatricesWeightsKind);
+        if (!Xk || !ak) return this;
+        const bk = this.numBoneInfluencers > 4,
+          wk = bk ? this.getVerticesData(Hk.n.MatricesIndicesExtraKind) : null,
+          dk = bk ? this.getVerticesData(Hk.n.MatricesWeightsExtraKind) : null,
+          sk = kk.getTransformMatrices(this),
+          Vk = Ek.s.Zero(),
+          Jk = new Ek.c,
+          Ak = new Ek.c;
+        let ek, yk = 0;
+        for (let fk = 0; fk < Rk.length; fk += 3, yk += 4) {
+          let kk;
+          for (ek = 0; ek < 4; ek++) kk = Xk[yk + ek], kk > 0 && (Ek.c.FromFloat32ArrayToRefScaled(sk, Math.floor(16 * ak[yk + ek]), kk, Ak), Jk.addToSelf(Ak));
+          if (bk)
+            for (ek = 0; ek < 4; ek++) kk = dk[yk + ek], kk > 0 && (Ek.c.FromFloat32ArrayToRefScaled(sk, Math.floor(16 * wk[yk + ek]), kk, Ak), Jk.addToSelf(Ak));
+          Ek.s.TransformCoordinatesFromFloatsToRef(Bk._sourcePositions[fk], Bk._sourcePositions[fk + 1], Bk._sourcePositions[fk + 2], Jk, Vk), Vk.toArray(Rk, fk), Fk && (Ek.s.TransformNormalFromFloatsToRef(Bk._sourceNormals[fk], Bk._sourceNormals[fk + 1], Bk._sourceNormals[fk + 2], Jk, Vk), Vk.toArray(tk, fk)), Jk.reset()
         }
-        return this.updateVerticesData(Mu.h.PositionKind, Eu), Ru && this.updateVerticesData(Mu.h.NormalKind, Ku), this
+        return this.updateVerticesData(Hk.n.PositionKind, Rk), Fk && this.updateVerticesData(Hk.n.NormalKind, tk), this
       }
-      static MinMax(uu) {
-        let Ru = null,
-          yu = null;
-        for (const Eu of uu) {
-          const uu = Eu.vI().boundingBox;
-          Ru && yu ? (Ru.minimizeInPlace(uu.minimumWorld), yu.maximizeInPlace(uu.maximumWorld)) : (Ru = uu.minimumWorld.clone(), yu = uu.maximumWorld.clone())
+      static MinMax(kk) {
+        let Fk = null,
+          Bk = null;
+        for (const Rk of kk) {
+          const kk = Rk.ZH().boundingBox;
+          Fk && Bk ? (Fk.minimizeInPlace(kk.minimumWorld), Bk.maximizeInPlace(kk.maximumWorld)) : (Fk = kk.minimumWorld.clone(), Bk = kk.maximumWorld.clone())
         }
-        return Ru && yu ? {
-          min: Ru,
-          max: yu
+        return Fk && Bk ? {
+          min: Fk,
+          max: Bk
         } : {
-          min: eu.p.Zero(),
-          max: eu.p.Zero()
+          min: Ek.s.Zero(),
+          max: Ek.s.Zero()
         }
       }
-      static Center(uu) {
-        const Ru = uu instanceof Array ? vu.MinMax(uu) : uu;
-        return eu.p.Center(Ru.min, Ru.max)
+      static Center(kk) {
+        const Fk = kk instanceof Array ? Ik.MinMax(kk) : kk;
+        return Ek.s.Center(Fk.min, Fk.max)
       }
-      static MergeMeshes(uu) {
-        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          yu = arguments.length > 2 ? arguments[2] : void 0,
-          Eu = arguments.length > 3 ? arguments[3] : void 0,
-          Ku = arguments.length > 4 ? arguments[4] : void 0,
-          Qu = arguments.length > 5 ? arguments[5] : void 0;
-        return (0, Cu.k)(vu._MergeMeshesCoroutine(uu, Ru, yu, Eu, Ku, Qu, !1))
+      static MergeMeshes(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          Bk = arguments.length > 2 ? arguments[2] : void 0,
+          Rk = arguments.length > 3 ? arguments[3] : void 0,
+          tk = arguments.length > 4 ? arguments[4] : void 0,
+          ak = arguments.length > 5 ? arguments[5] : void 0;
+        return (0, Lk.j)(Ik._MergeMeshesCoroutine(kk, Fk, Bk, Rk, tk, ak, !1))
       }
-      static async MergeMeshesAsync(uu) {
-        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          yu = arguments.length > 2 ? arguments[2] : void 0,
-          Eu = arguments.length > 3 ? arguments[3] : void 0,
-          Ku = arguments.length > 4 ? arguments[4] : void 0,
-          Qu = arguments.length > 5 ? arguments[5] : void 0;
-        return await (0, Cu.g)(vu._MergeMeshesCoroutine(uu, Ru, yu, Eu, Ku, Qu, !0), (0, Cu.b)())
+      static async MergeMeshesAsync(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          Bk = arguments.length > 2 ? arguments[2] : void 0,
+          Rk = arguments.length > 3 ? arguments[3] : void 0,
+          tk = arguments.length > 4 ? arguments[4] : void 0,
+          ak = arguments.length > 5 ? arguments[5] : void 0;
+        return await (0, Lk.h)(Ik._MergeMeshesCoroutine(kk, Fk, Bk, Rk, tk, ak, !0), (0, Lk.b)())
       }
-      static * _MergeMeshesCoroutine(uu) {
-        let Ru, yu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          Eu = arguments.length > 2 ? arguments[2] : void 0,
-          Ku = arguments.length > 3 ? arguments[3] : void 0,
-          Qu = arguments.length > 4 ? arguments[4] : void 0,
-          mu = arguments.length > 5 ? arguments[5] : void 0,
-          Ju = arguments.length > 6 ? arguments[6] : void 0;
-        if (0 === (uu = uu.filter(Boolean)).length) return null;
-        if (!Eu) {
-          let yu = 0;
-          for (Ru = 0; Ru < uu.length; Ru++)
-            if (yu += uu[Ru].getTotalVertices(), yu >= 65536) return Lu.e.Warn("Cannot merge meshes because resulting mesh will have more than 65536 vertices. Please use allow32BitsIndices = true to use 32 bits indices"), null
+      static * _MergeMeshesCoroutine(kk) {
+        let Fk, Bk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          Rk = arguments.length > 2 ? arguments[2] : void 0,
+          tk = arguments.length > 3 ? arguments[3] : void 0,
+          ak = arguments.length > 4 ? arguments[4] : void 0,
+          Xk = arguments.length > 5 ? arguments[5] : void 0,
+          bk = arguments.length > 6 ? arguments[6] : void 0;
+        if (0 === (kk = kk.filter(Boolean)).length) return null;
+        if (!Rk) {
+          let Bk = 0;
+          for (Fk = 0; Fk < kk.length; Fk++)
+            if (Bk += kk[Fk].getTotalVertices(), Bk >= 65536) return zk.b.Warn("Cannot merge meshes because resulting mesh will have more than 65536 vertices. Please use allow32BitsIndices = true to use 32 bits indices"), null
         }
-        const Nu = uu[0];
-        mu && (Qu = !1, uu.sort(((uu, Ru) => (uu.material?.uniqueId ?? -1) - (Ru.material?.uniqueId ?? -1))));
-        const Xu = new Array,
-          Vu = new Array,
-          ru = new Array,
-          Bu = uu[0].sideOrientation;
-        for (Ru = 0; Ru < uu.length; Ru++) {
-          const yu = uu[Ru];
-          if (yu.ZD) return Lu.e.Warn("Cannot merge instance meshes."), null;
-          if (Bu !== yu.sideOrientation) return Lu.e.Warn("Cannot merge meshes with different sideOrientation values."), null;
-          if (Qu || mu) {
-            const uu = ru.reduce(((uu, Ru) => Math.max(uu, Ru.start + Ru.count)), 0);
-            if (mu)
-              if (yu.material) {
-                const Ru = yu.material;
-                if (Ru instanceof lu.c) {
-                  for (let uu = 0; uu < Ru.yuu.length; uu++) Xu.indexOf(Ru.yuu[uu]) < 0 && Xu.push(Ru.yuu[uu]);
-                  for (let Eu = 0; Eu < yu.mC.length; Eu++) Vu.push(Xu.indexOf(Ru.yuu[yu.mC[Eu].materialIndex])), ru.push({
-                    start: uu + yu.mC[Eu].indexStart,
-                    count: yu.mC[Eu].indexCount
+        const wk = kk[0];
+        Xk && (ak = !1, kk.sort(((kk, Fk) => (kk.material?.uniqueId ?? -1) - (Fk.material?.uniqueId ?? -1))));
+        const dk = new Array,
+          sk = new Array,
+          Vk = new Array,
+          Jk = kk[0].sideOrientation;
+        for (Fk = 0; Fk < kk.length; Fk++) {
+          const Bk = kk[Fk];
+          if (Bk.mN) return zk.b.Warn("Cannot merge instance meshes."), null;
+          if (Jk !== Bk.sideOrientation) return zk.b.Warn("Cannot merge meshes with different sideOrientation values."), null;
+          if (ak || Xk) {
+            const kk = Vk.reduce(((kk, Fk) => Math.max(kk, Fk.start + Fk.count)), 0);
+            if (Xk)
+              if (Bk.material) {
+                const Fk = Bk.material;
+                if (Fk instanceof Tk.e) {
+                  for (let kk = 0; kk < Fk.l_.length; kk++) dk.indexOf(Fk.l_[kk]) < 0 && dk.push(Fk.l_[kk]);
+                  for (let Rk = 0; Rk < Bk.AY.length; Rk++) sk.push(dk.indexOf(Fk.l_[Bk.AY[Rk].materialIndex])), Vk.push({
+                    start: kk + Bk.AY[Rk].indexStart,
+                    count: Bk.AY[Rk].indexCount
                   })
                 } else {
-                  Xu.indexOf(Ru) < 0 && Xu.push(Ru);
-                  for (let Eu = 0; Eu < yu.mC.length; Eu++) Vu.push(Xu.indexOf(Ru)), ru.push({
-                    start: uu + yu.mC[Eu].indexStart,
-                    count: yu.mC[Eu].indexCount
+                  dk.indexOf(Fk) < 0 && dk.push(Fk);
+                  for (let Rk = 0; Rk < Bk.AY.length; Rk++) sk.push(dk.indexOf(Fk)), Vk.push({
+                    start: kk + Bk.AY[Rk].indexStart,
+                    count: Bk.AY[Rk].indexCount
                   })
                 }
               } else
-                for (let Ru = 0; Ru < yu.mC.length; Ru++) Vu.push(0), ru.push({
-                  start: uu + yu.mC[Ru].indexStart,
-                  count: yu.mC[Ru].indexCount
+                for (let Fk = 0; Fk < Bk.AY.length; Fk++) sk.push(0), Vk.push({
+                  start: kk + Bk.AY[Fk].indexStart,
+                  count: Bk.AY[Fk].indexCount
                 });
-            else ru.push({
-              start: uu,
-              count: yu.getTotalIndices()
+            else Vk.push({
+              start: kk,
+              count: Bk.getTotalIndices()
             })
           }
         }
-        if (mu && ru.length > 1) {
-          let uu = 0;
-          for (let Ru = 1; Ru < ru.length; Ru++) {
-            const yu = ru[uu],
-              Eu = ru[Ru];
-            Vu[Ru] === Vu[uu] && yu.start + yu.count === Eu.start ? yu.count += Eu.count : (uu++, ru[uu] = Eu, Vu[uu] = Vu[Ru])
+        if (Xk && Vk.length > 1) {
+          let kk = 0;
+          for (let Fk = 1; Fk < Vk.length; Fk++) {
+            const Bk = Vk[kk],
+              Rk = Vk[Fk];
+            sk[Fk] === sk[kk] && Bk.start + Bk.count === Rk.start ? Bk.count += Rk.count : (kk++, Vk[kk] = Rk, sk[kk] = sk[Fk])
           }
-          ru.length = uu + 1, Vu.length = uu + 1
+          Vk.length = kk + 1, sk.length = kk + 1
         }
-        const xu = uu => {
-            const Ru = uu.computeWorldMatrix(!0);
+        const Ak = kk => {
+            const Fk = kk.computeWorldMatrix(!0);
             return {
-              vertexData: Iu.e.ExtractFromMesh(uu, !1, !1),
-              transform: Ru
+              vertexData: uk.e.ExtractFromMesh(kk, !1, !1),
+              transform: Fk
             }
           },
           {
-            vertexData: Su,
-            transform: pu
-          } = xu(uu[0]);
-        Ju && (yield);
-        const Tu = new Array(uu.length - 1);
-        for (let Cu = 1; Cu < uu.length; Cu++) Tu[Cu - 1] = xu(uu[Cu]), Ju && (yield);
-        const Wu = Su._mergeCoroutine(pu, Tu, Eu, Ju, !yu);
-        let ju = Wu.next();
-        for (; !ju.done;) Ju && (yield), ju = Wu.next();
-        const Hu = ju.value;
-        Ku || (Ku = new vu(Nu.name + "_merged", Nu.lD()));
-        const du = Hu._applyToCoroutine(Ku, void 0, Ju);
-        let bu = du.next();
-        for (; !bu.done;) Ju && (yield), bu = du.next();
-        if (Ku.checkCollisions = Nu.checkCollisions, Ku.sideOrientation = Nu.sideOrientation, yu)
-          for (Ru = 0; Ru < uu.length; Ru++) uu[Ru].dispose();
-        if (Qu || mu) {
-          for (Ku.releaseSubMeshes(), Ru = 0; Ru < ru.length;) nu.c.CreateFromIndices(0, ru[Ru].start, ru[Ru].count, Ku, void 0, !1), Ru++;
-          for (const uu of Ku.mC) uu.refreshBoundingInfo();
-          Ku.computeWorldMatrix(!0)
+            vertexData: ek,
+            transform: yk
+          } = Ak(kk[0]);
+        bk && (yield);
+        const fk = new Array(kk.length - 1);
+        for (let Lk = 1; Lk < kk.length; Lk++) fk[Lk - 1] = Ak(kk[Lk]), bk && (yield);
+        const mk = ek._mergeCoroutine(yk, fk, Rk, bk, !Bk);
+        let Wk = mk.next();
+        for (; !Wk.done;) bk && (yield), Wk = mk.next();
+        const vk = Wk.value;
+        tk || (tk = new Ik(wk.name + "_merged", wk.XN()));
+        const ik = vk._applyToCoroutine(tk, void 0, bk);
+        let Yk = ik.next();
+        for (; !Yk.done;) bk && (yield), Yk = ik.next();
+        if (tk.checkCollisions = wk.checkCollisions, tk.sideOrientation = wk.sideOrientation, Bk)
+          for (Fk = 0; Fk < kk.length; Fk++) kk[Fk].dispose();
+        if (ak || Xk) {
+          for (tk.releaseSubMeshes(), Fk = 0; Fk < Vk.length;) Uk.d.CreateFromIndices(0, Vk[Fk].start, Vk[Fk].count, tk, void 0, !1), Fk++;
+          for (const kk of tk.AY) kk.refreshBoundingInfo();
+          tk.computeWorldMatrix(!0)
         }
-        if (mu) {
-          const uu = new lu.c(Nu.name + "_merged", Nu.lD());
-          uu.yuu = Xu;
-          for (let Ru = 0; Ru < Ku.mC.length; Ru++) Ku.mC[Ru].materialIndex = Vu[Ru];
-          Ku.material = uu
-        } else Ku.material = Nu.material;
-        return Ku
+        if (Xk) {
+          const kk = new Tk.e(wk.name + "_merged", wk.XN());
+          kk.l_ = dk;
+          for (let Fk = 0; Fk < tk.AY.length; Fk++) tk.AY[Fk].materialIndex = sk[Fk];
+          tk.material = kk
+        } else tk.material = wk.material;
+        return tk
       }
-      Y_(uu) {
-        uu._indexInSourceMeshInstanceArray = this.instances.length, this.instances.push(uu)
+      E_(kk) {
+        kk._indexInSourceMeshInstanceArray = this.instances.length, this.instances.push(kk)
       }
-      q_(uu) {
-        const Ru = uu._indexInSourceMeshInstanceArray;
-        if (-1 != Ru) {
-          if (Ru !== this.instances.length - 1) {
-            const uu = this.instances[this.instances.length - 1];
-            this.instances[Ru] = uu, uu._indexInSourceMeshInstanceArray = Ru
+      N_(kk) {
+        const Fk = kk._indexInSourceMeshInstanceArray;
+        if (-1 != Fk) {
+          if (Fk !== this.instances.length - 1) {
+            const kk = this.instances[this.instances.length - 1];
+            this.instances[Fk] = kk, kk._indexInSourceMeshInstanceArray = Fk
           }
-          uu._indexInSourceMeshInstanceArray = -1, this.instances.pop()
+          kk._indexInSourceMeshInstanceArray = -1, this.instances.pop()
         }
       }
       _shouldConvertRHS() {
-        return this._scene.useRightHandedSystem && this.sideOrientation === su.d.CounterClockWiseSideOrientation
+        return this._scene.useRightHandedSystem && this.sideOrientation === ck.c.CounterClockWiseSideOrientation
       }
-      _getRenderingFillMode(uu) {
-        const Ru = this.lD();
-        return Ru.forcePointsCloud ? su.d.PointFillMode : Ru.forceWireframe ? su.d.WireFrameFillMode : this.overrideRenderingFillMode ?? uu
+      _getRenderingFillMode(kk) {
+        const Fk = this.XN();
+        return Fk.forcePointsCloud ? ck.c.PointFillMode : Fk.forceWireframe ? ck.c.WireFrameFillMode : this.overrideRenderingFillMode ?? kk
       }
-      setMaterialByID(uu) {
-        return this.setMaterialById(uu)
+      setMaterialByID(kk) {
+        return this.setMaterialById(kk)
       }
-      static CreateRibbon(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu) {
+      static CreateRibbon(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateDisc(uu, Ru, yu, Eu, Ku, Qu) {
+      static CreateDisc(kk, Fk, Bk, Rk, tk, ak) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateBox(uu, Ru, yu, Eu, Ku) {
+      static CreateBox(kk, Fk, Bk, Rk, tk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateSphere(uu, Ru, yu, Eu, Ku, Qu) {
+      static CreateSphere(kk, Fk, Bk, Rk, tk, ak) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateHemisphere(uu, Ru, yu, Eu) {
+      static CreateHemisphere(kk, Fk, Bk, Rk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateCylinder(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu) {
+      static CreateCylinder(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateTorus(uu, Ru, yu, Eu, Ku, Qu, mu) {
+      static CreateTorus(kk, Fk, Bk, Rk, tk, ak, Xk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateTorusKnot(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu) {
+      static CreateTorusKnot(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateLines(uu, Ru, yu, Eu, Ku) {
+      static CreateLines(kk, Fk, Bk, Rk, tk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateDashedLines(uu, Ru, yu, Eu, Ku, Qu, mu, Ju) {
+      static CreateDashedLines(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreatePolygon(uu, Ru, yu, Eu, Ku, Qu, mu) {
+      static CreatePolygon(kk, Fk, Bk, Rk, tk, ak, Xk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static ExtrudePolygon(uu, Ru, yu, Eu, Ku, Qu, mu, Ju) {
+      static ExtrudePolygon(kk, Fk, Bk, Rk, tk, ak, Xk, bk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static ExtrudeShape(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu) {
+      static ExtrudeShape(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static ExtrudeShapeCustom(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu, Vu, ru) {
+      static ExtrudeShapeCustom(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk, sk, Vk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateLathe(uu, Ru, yu, Eu, Ku, Qu, mu) {
+      static CreateLathe(kk, Fk, Bk, Rk, tk, ak, Xk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreatePlane(uu, Ru, yu, Eu, Ku) {
+      static CreatePlane(kk, Fk, Bk, Rk, tk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateGround(uu, Ru, yu, Eu, Ku, Qu) {
+      static CreateGround(kk, Fk, Bk, Rk, tk, ak) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateTiledGround(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu) {
+      static CreateTiledGround(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateGroundFromHeightMap(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu, Vu) {
+      static CreateGroundFromHeightMap(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk, sk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateTube(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu) {
+      static CreateTube(kk, Fk, Bk, Rk, tk, ak, Xk, bk, wk, dk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreatePolyhedron(uu, Ru, yu) {
+      static CreatePolyhedron(kk, Fk, Bk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateIcoSphere(uu, Ru, yu) {
+      static CreateIcoSphere(kk, Fk, Bk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateDecal(uu, Ru, yu, Eu, Ku, Qu) {
+      static CreateDecal(kk, Fk, Bk, Rk, tk, ak) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static CreateCapsule(uu, Ru, yu) {
+      static CreateCapsule(kk, Fk, Bk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
-      static ExtendToGoldberg(uu) {
+      static ExtendToGoldberg(kk) {
         throw new Error("Import MeshBuilder to populate this function")
       }
     }
-    vu.FRONTSIDE = Iu.e.FRONTSIDE, vu.BACKSIDE = Iu.e.BACKSIDE, vu.DOUBLESIDE = Iu.e.DOUBLESIDE, vu.DEFAULTSIDE = Iu.e.DEFAULTSIDE, vu.NO_CAP = 0, vu.CAP_START = 1, vu.CAP_END = 2, vu.CAP_ALL = 3, vu.NO_FLIP = 0, vu.FLIP_TILE = 1, vu.ROTATE_TILE = 2, vu.FLIP_ROW = 3, vu.ROTATE_ROW = 4, vu.FLIP_N_ROTATE_TILE = 5, vu.FLIP_N_ROTATE_ROW = 6, vu.CENTER = 0, vu.LEFT = 1, vu.RIGHT = 2, vu.TOP = 3, vu.BOTTOM = 4, vu.INSTANCEDMESH_SORT_TRANSPARENT = !1, vu._GroundMeshParser = (uu, Ru) => {
-      throw (0, Fu.k)("GroundMesh")
-    }, vu._GoldbergMeshParser = (uu, Ru) => {
-      throw (0, Fu.k)("GoldbergMesh")
-    }, vu._LinesMeshParser = (uu, Ru) => {
-      throw (0, Fu.k)("LinesMesh")
-    }, vu._GreasedLineMeshParser = (uu, Ru) => {
-      throw (0, Fu.k)("GreasedLineMesh")
-    }, vu._GreasedLineRibbonMeshParser = (uu, Ru) => {
-      throw (0, Fu.k)("GreasedLineRibbonMesh")
-    }, vu._TrailMeshParser = (uu, Ru) => {
-      throw (0, Fu.k)("TrailMesh")
-    }, vu._GaussianSplattingMeshParser = (uu, Ru) => {
-      throw (0, Fu.k)("GaussianSplattingMesh")
-    }, vu._GaussianSplattingPartProxyMeshParser = (uu, Ru) => {
-      throw (0, Fu.k)("GaussianSplattingPartProxyMesh")
-    }, vu._GaussianSplattingCompoundMeshParser = (uu, Ru) => {
-      throw (0, Fu.k)("GaussianSplattingCompoundMesh")
+    Ik.FRONTSIDE = uk.e.FRONTSIDE, Ik.BACKSIDE = uk.e.BACKSIDE, Ik.DOUBLESIDE = uk.e.DOUBLESIDE, Ik.DEFAULTSIDE = uk.e.DEFAULTSIDE, Ik.NO_CAP = 0, Ik.CAP_START = 1, Ik.CAP_END = 2, Ik.CAP_ALL = 3, Ik.NO_FLIP = 0, Ik.FLIP_TILE = 1, Ik.ROTATE_TILE = 2, Ik.FLIP_ROW = 3, Ik.ROTATE_ROW = 4, Ik.FLIP_N_ROTATE_TILE = 5, Ik.FLIP_N_ROTATE_ROW = 6, Ik.CENTER = 0, Ik.LEFT = 1, Ik.RIGHT = 2, Ik.TOP = 3, Ik.BOTTOM = 4, Ik.INSTANCEDMESH_SORT_TRANSPARENT = !1, Ik._GroundMeshParser = (kk, Fk) => {
+      throw (0, hk.i)("GroundMesh")
+    }, Ik._GoldbergMeshParser = (kk, Fk) => {
+      throw (0, hk.i)("GoldbergMesh")
+    }, Ik._LinesMeshParser = (kk, Fk) => {
+      throw (0, hk.i)("LinesMesh")
+    }, Ik._GreasedLineMeshParser = (kk, Fk) => {
+      throw (0, hk.i)("GreasedLineMesh")
+    }, Ik._GreasedLineRibbonMeshParser = (kk, Fk) => {
+      throw (0, hk.i)("GreasedLineRibbonMesh")
+    }, Ik._TrailMeshParser = (kk, Fk) => {
+      throw (0, hk.i)("TrailMesh")
+    }, Ik._GaussianSplattingMeshParser = (kk, Fk) => {
+      throw (0, hk.i)("GaussianSplattingMesh")
+    }, Ik._GaussianSplattingPartProxyMeshParser = (kk, Fk) => {
+      throw (0, hk.i)("GaussianSplattingPartProxyMesh")
+    }, Ik._GaussianSplattingCompoundMeshParser = (kk, Fk) => {
+      throw (0, hk.i)("GaussianSplattingCompoundMesh")
     };
-    let au = !1;
+    let Qk = !1;
 
-    function fu() {
-      au || (au = !0, (0, zu.c)("BABYLON.Mesh", vu))
-    }(Eu = vu.prototype).HI ?? (Eu.HI = (0, Fu.i)("Mesh", "HI")), (Ku = vu.prototype).simplify ?? (Ku.simplify = (0, Fu.i)("Mesh", "simplify")), (Qu = vu.prototype).thinInstanceAdd ?? (Qu.thinInstanceAdd = (0, Fu.i)("Mesh", "thinInstanceAdd")), (mu = vu.prototype).thinInstanceAddSelf ?? (mu.thinInstanceAddSelf = (0, Fu.i)("Mesh", "thinInstanceAddSelf")), (Ju = vu.prototype).thinInstanceRegisterAttribute ?? (Ju.thinInstanceRegisterAttribute = (0, Fu.i)("Mesh", "thinInstanceRegisterAttribute")), (Nu = vu.prototype).thinInstanceSetMatrixAt ?? (Nu.thinInstanceSetMatrixAt = (0, Fu.i)("Mesh", "thinInstanceSetMatrixAt")), (Xu = vu.prototype).thinInstanceSetAttributeAt ?? (Xu.thinInstanceSetAttributeAt = (0, Fu.i)("Mesh", "thinInstanceSetAttributeAt")), (Vu = vu.prototype).uuu ?? (Vu.uuu = (0, Fu.i)("Mesh", "uuu")), (ru = vu.prototype).thinInstanceGetWorldMatrices ?? (ru.thinInstanceGetWorldMatrices = (0, Fu.i)("Mesh", "thinInstanceGetWorldMatrices")), (Bu = vu.prototype).W4 ?? (Bu.W4 = (0, Fu.i)("Mesh", "W4")), (xu = vu.prototype).thinInstancePartialBufferUpdate ?? (xu.thinInstancePartialBufferUpdate = (0, Fu.i)("Mesh", "thinInstancePartialBufferUpdate")), (Su = vu.prototype).thinInstanceRefreshBoundingInfo ?? (Su.thinInstanceRefreshBoundingInfo = (0, Fu.i)("Mesh", "thinInstanceRefreshBoundingInfo")), (pu = vu.prototype).getEmittedParticleSystems ?? (pu.getEmittedParticleSystems = (0, Fu.i)("Mesh", "getEmittedParticleSystems")), (Tu = vu.prototype).getHierarchyEmittedParticleSystems ?? (Tu.getHierarchyEmittedParticleSystems = (0, Fu.i)("Mesh", "getHierarchyEmittedParticleSystems")), Object.getOwnPropertyDescriptor(vu.prototype, "edgesShareWithInstances") || Object.defineProperty(vu.prototype, "edgesShareWithInstances", (0, Fu.e)("Mesh", "edgesShareWithInstances")), Object.getOwnPropertyDescriptor(vu.prototype, "YRu") || Object.defineProperty(vu.prototype, "YRu", (0, Fu.e)("Mesh", "YRu")), Object.getOwnPropertyDescriptor(vu.prototype, "thinInstanceAllowAutomaticStaticBufferRecreation") || Object.defineProperty(vu.prototype, "thinInstanceAllowAutomaticStaticBufferRecreation", (0, Fu.e)("Mesh", "thinInstanceAllowAutomaticStaticBufferRecreation")), Object.getOwnPropertyDescriptor(vu.prototype, "F_") || Object.defineProperty(vu.prototype, "F_", (0, Fu.e)("Mesh", "F_"))
+    function kF() {
+      Qk || (Qk = !0, (0, Pk.d)("BABYLON.Mesh", Ik))
+    }(Rk = Ik.prototype).uH ?? (Rk.uH = (0, hk.g)("Mesh", "uH")), (tk = Ik.prototype).simplify ?? (tk.simplify = (0, hk.g)("Mesh", "simplify")), (ak = Ik.prototype).thinInstanceAdd ?? (ak.thinInstanceAdd = (0, hk.g)("Mesh", "thinInstanceAdd")), (Xk = Ik.prototype).thinInstanceAddSelf ?? (Xk.thinInstanceAddSelf = (0, hk.g)("Mesh", "thinInstanceAddSelf")), (bk = Ik.prototype).thinInstanceRegisterAttribute ?? (bk.thinInstanceRegisterAttribute = (0, hk.g)("Mesh", "thinInstanceRegisterAttribute")), (wk = Ik.prototype).thinInstanceSetMatrixAt ?? (wk.thinInstanceSetMatrixAt = (0, hk.g)("Mesh", "thinInstanceSetMatrixAt")), (dk = Ik.prototype).thinInstanceSetAttributeAt ?? (dk.thinInstanceSetAttributeAt = (0, hk.g)("Mesh", "thinInstanceSetAttributeAt")), (sk = Ik.prototype).x_ ?? (sk.x_ = (0, hk.g)("Mesh", "x_")), (Vk = Ik.prototype).thinInstanceGetWorldMatrices ?? (Vk.thinInstanceGetWorldMatrices = (0, hk.g)("Mesh", "thinInstanceGetWorldMatrices")), (Jk = Ik.prototype).r_ ?? (Jk.r_ = (0, hk.g)("Mesh", "r_")), (Ak = Ik.prototype).thinInstancePartialBufferUpdate ?? (Ak.thinInstancePartialBufferUpdate = (0, hk.g)("Mesh", "thinInstancePartialBufferUpdate")), (ek = Ik.prototype).thinInstanceRefreshBoundingInfo ?? (ek.thinInstanceRefreshBoundingInfo = (0, hk.g)("Mesh", "thinInstanceRefreshBoundingInfo")), (yk = Ik.prototype).getEmittedParticleSystems ?? (yk.getEmittedParticleSystems = (0, hk.g)("Mesh", "getEmittedParticleSystems")), (fk = Ik.prototype).getHierarchyEmittedParticleSystems ?? (fk.getHierarchyEmittedParticleSystems = (0, hk.g)("Mesh", "getHierarchyEmittedParticleSystems")), Object.getOwnPropertyDescriptor(Ik.prototype, "edgesShareWithInstances") || Object.defineProperty(Ik.prototype, "edgesShareWithInstances", (0, hk.f)("Mesh", "edgesShareWithInstances")), Object.getOwnPropertyDescriptor(Ik.prototype, "wFk") || Object.defineProperty(Ik.prototype, "wFk", (0, hk.f)("Mesh", "wFk")), Object.getOwnPropertyDescriptor(Ik.prototype, "thinInstanceAllowAutomaticStaticBufferRecreation") || Object.defineProperty(Ik.prototype, "thinInstanceAllowAutomaticStaticBufferRecreation", (0, hk.f)("Mesh", "thinInstanceAllowAutomaticStaticBufferRecreation")), Object.getOwnPropertyDescriptor(Ik.prototype, "i_") || Object.defineProperty(Ik.prototype, "i_", (0, hk.f)("Mesh", "i_"))
   },
-  39990: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Su
+  39829: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => ek
     });
-    var Eu = yu(39560),
-      Ku = yu(36830),
-      Qu = yu(39706),
-      mu = yu(39430),
-      Ju = yu(36991),
-      Nu = yu(38448),
-      Xu = yu(39566),
-      Vu = yu(39987),
-      ru = yu(39613),
-      Bu = yu(39866);
-    class xu {}
-    let Su = (() => {
-      var uu;
-      let Ru, yu, Su, pu, Tu = [];
-      return uu = class {
+    var Rk = Bk(39397),
+      tk = Bk(36758),
+      ak = Bk(39541),
+      Xk = Bk(39296),
+      bk = Bk(36917),
+      wk = Bk(38320),
+      dk = Bk(39404),
+      sk = Bk(39823),
+      Vk = Bk(39453),
+      Jk = Bk(39703);
+    class Ak {}
+    let ek = (() => {
+      var kk;
+      let Fk, Bk, ek, yk, fk = [];
+      return kk = class {
         constructor() {
-          this.uniqueId = 0, this.metadata = {}, this._applyTo = (0, Vu.f)(this._applyToCoroutine.bind(this)), this.uniqueId = uu._UniqueIdGenerator, uu._UniqueIdGenerator++
+          this.uniqueId = 0, this.metadata = {}, this._applyTo = (0, sk.e)(this._applyToCoroutine.bind(this)), this.uniqueId = kk._UniqueIdGenerator, kk._UniqueIdGenerator++
         }
-        set(uu, Ru) {
-          switch (uu.length || Nu.e.Warn(`Setting vertex data kind '${Ru}' with an empty array`), Ru) {
-            case Qu.h.PositionKind:
-              this.positions = uu;
+        set(kk, Fk) {
+          switch (kk.length || wk.b.Warn(`Setting vertex data kind '${Fk}' with an empty array`), Fk) {
+            case ak.n.PositionKind:
+              this.positions = kk;
               break;
-            case Qu.h.NormalKind:
-              this.normals = uu;
+            case ak.n.NormalKind:
+              this.normals = kk;
               break;
-            case Qu.h.TangentKind:
-              this.tangents = uu;
+            case ak.n.TangentKind:
+              this.tangents = kk;
               break;
-            case Qu.h.UVKind:
-              this.uvs = uu;
+            case ak.n.UVKind:
+              this.uvs = kk;
               break;
-            case Qu.h.UV2Kind:
-              this.uvs2 = uu;
+            case ak.n.UV2Kind:
+              this.uvs2 = kk;
               break;
-            case Qu.h.UV3Kind:
-              this.uvs3 = uu;
+            case ak.n.UV3Kind:
+              this.uvs3 = kk;
               break;
-            case Qu.h.UV4Kind:
-              this.uvs4 = uu;
+            case ak.n.UV4Kind:
+              this.uvs4 = kk;
               break;
-            case Qu.h.UV5Kind:
-              this.uvs5 = uu;
+            case ak.n.UV5Kind:
+              this.uvs5 = kk;
               break;
-            case Qu.h.UV6Kind:
-              this.uvs6 = uu;
+            case ak.n.UV6Kind:
+              this.uvs6 = kk;
               break;
-            case Qu.h.ColorKind:
-              this.colors = uu;
+            case ak.n.ColorKind:
+              this.colors = kk;
               break;
-            case Qu.h.MatricesIndicesKind:
-              this.matricesIndices = uu;
+            case ak.n.MatricesIndicesKind:
+              this.matricesIndices = kk;
               break;
-            case Qu.h.MatricesWeightsKind:
-              this.matricesWeights = uu;
+            case ak.n.MatricesWeightsKind:
+              this.matricesWeights = kk;
               break;
-            case Qu.h.MatricesIndicesExtraKind:
-              this.matricesIndicesExtra = uu;
+            case ak.n.MatricesIndicesExtraKind:
+              this.matricesIndicesExtra = kk;
               break;
-            case Qu.h.MatricesWeightsExtraKind:
-              this.matricesWeightsExtra = uu
+            case ak.n.MatricesWeightsExtraKind:
+              this.matricesWeightsExtra = kk
           }
         }
-        applyToMesh(uu, Ru) {
-          return this._applyTo(uu, Ru, !1), this
+        applyToMesh(kk, Fk) {
+          return this._applyTo(kk, Fk, !1), this
         }
-        applyToGeometry(uu, Ru) {
-          return this._applyTo(uu, Ru, !1), this
+        applyToGeometry(kk, Fk) {
+          return this._applyTo(kk, Fk, !1), this
         }
-        updateMesh(uu) {
-          return this._update(uu), this
+        updateMesh(kk) {
+          return this._update(kk), this
         }
-        updateGeometry(uu) {
-          return this._update(uu), this
-        }* _applyToCoroutine(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            yu = arguments.length > 2 ? arguments[2] : void 0;
-          if (this.positions && (uu.setVerticesData(Qu.h.PositionKind, this.positions, Ru), yu && (yield)), this.normals && (uu.setVerticesData(Qu.h.NormalKind, this.normals, Ru), yu && (yield)), this.tangents && (uu.setVerticesData(Qu.h.TangentKind, this.tangents, Ru), yu && (yield)), this.uvs && (uu.setVerticesData(Qu.h.UVKind, this.uvs, Ru), yu && (yield)), this.uvs2 && (uu.setVerticesData(Qu.h.UV2Kind, this.uvs2, Ru), yu && (yield)), this.uvs3 && (uu.setVerticesData(Qu.h.UV3Kind, this.uvs3, Ru), yu && (yield)), this.uvs4 && (uu.setVerticesData(Qu.h.UV4Kind, this.uvs4, Ru), yu && (yield)), this.uvs5 && (uu.setVerticesData(Qu.h.UV5Kind, this.uvs5, Ru), yu && (yield)), this.uvs6 && (uu.setVerticesData(Qu.h.UV6Kind, this.uvs6, Ru), yu && (yield)), this.colors) {
-            const Eu = this.positions && this.colors.length === this.positions.length ? 3 : 4;
-            uu.setVerticesData(Qu.h.ColorKind, this.colors, Ru, Eu), this.hasVertexAlpha && void 0 !== uu.hasVertexAlpha && (uu.hasVertexAlpha = !0), yu && (yield)
+        updateGeometry(kk) {
+          return this._update(kk), this
+        }* _applyToCoroutine(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            Bk = arguments.length > 2 ? arguments[2] : void 0;
+          if (this.positions && (kk.setVerticesData(ak.n.PositionKind, this.positions, Fk), Bk && (yield)), this.normals && (kk.setVerticesData(ak.n.NormalKind, this.normals, Fk), Bk && (yield)), this.tangents && (kk.setVerticesData(ak.n.TangentKind, this.tangents, Fk), Bk && (yield)), this.uvs && (kk.setVerticesData(ak.n.UVKind, this.uvs, Fk), Bk && (yield)), this.uvs2 && (kk.setVerticesData(ak.n.UV2Kind, this.uvs2, Fk), Bk && (yield)), this.uvs3 && (kk.setVerticesData(ak.n.UV3Kind, this.uvs3, Fk), Bk && (yield)), this.uvs4 && (kk.setVerticesData(ak.n.UV4Kind, this.uvs4, Fk), Bk && (yield)), this.uvs5 && (kk.setVerticesData(ak.n.UV5Kind, this.uvs5, Fk), Bk && (yield)), this.uvs6 && (kk.setVerticesData(ak.n.UV6Kind, this.uvs6, Fk), Bk && (yield)), this.colors) {
+            const Rk = this.positions && this.colors.length === this.positions.length ? 3 : 4;
+            kk.setVerticesData(ak.n.ColorKind, this.colors, Fk, Rk), this.hasVertexAlpha && void 0 !== kk.hasVertexAlpha && (kk.hasVertexAlpha = !0), Bk && (yield)
           }
-          if (this.matricesIndices && (uu.setVerticesData(Qu.h.MatricesIndicesKind, this.matricesIndices, Ru), yu && (yield)), this.matricesWeights && (uu.setVerticesData(Qu.h.MatricesWeightsKind, this.matricesWeights, Ru), yu && (yield)), this.matricesIndicesExtra && (uu.setVerticesData(Qu.h.MatricesIndicesExtraKind, this.matricesIndicesExtra, Ru), yu && (yield)), this.matricesWeightsExtra && (uu.setVerticesData(Qu.h.MatricesWeightsExtraKind, this.matricesWeightsExtra, Ru), yu && (yield)), this.indices ? (uu.setIndices(this.indices, null, Ru), yu && (yield)) : uu.setIndices([], null), uu.mC && this.materialInfos && this.materialInfos.length > 1) {
-            const Ru = uu;
-            Ru.mC = [];
-            for (const uu of this.materialInfos) new Bu.c(uu.materialIndex, uu.verticesStart, uu.verticesCount, uu.indexStart, uu.indexCount, Ru)
+          if (this.matricesIndices && (kk.setVerticesData(ak.n.MatricesIndicesKind, this.matricesIndices, Fk), Bk && (yield)), this.matricesWeights && (kk.setVerticesData(ak.n.MatricesWeightsKind, this.matricesWeights, Fk), Bk && (yield)), this.matricesIndicesExtra && (kk.setVerticesData(ak.n.MatricesIndicesExtraKind, this.matricesIndicesExtra, Fk), Bk && (yield)), this.matricesWeightsExtra && (kk.setVerticesData(ak.n.MatricesWeightsExtraKind, this.matricesWeightsExtra, Fk), Bk && (yield)), this.indices ? (kk.setIndices(this.indices, null, Fk), Bk && (yield)) : kk.setIndices([], null), kk.AY && this.materialInfos && this.materialInfos.length > 1) {
+            const Fk = kk;
+            Fk.AY = [];
+            for (const kk of this.materialInfos) new Jk.d(kk.materialIndex, kk.verticesStart, kk.verticesCount, kk.indexStart, kk.indexCount, Fk)
           }
           return this
         }
-        _update(uu, Ru, yu) {
-          return this.positions && uu.updateVerticesData(Qu.h.PositionKind, this.positions, Ru, yu), this.normals && uu.updateVerticesData(Qu.h.NormalKind, this.normals, Ru, yu), this.tangents && uu.updateVerticesData(Qu.h.TangentKind, this.tangents, Ru, yu), this.uvs && uu.updateVerticesData(Qu.h.UVKind, this.uvs, Ru, yu), this.uvs2 && uu.updateVerticesData(Qu.h.UV2Kind, this.uvs2, Ru, yu), this.uvs3 && uu.updateVerticesData(Qu.h.UV3Kind, this.uvs3, Ru, yu), this.uvs4 && uu.updateVerticesData(Qu.h.UV4Kind, this.uvs4, Ru, yu), this.uvs5 && uu.updateVerticesData(Qu.h.UV5Kind, this.uvs5, Ru, yu), this.uvs6 && uu.updateVerticesData(Qu.h.UV6Kind, this.uvs6, Ru, yu), this.colors && uu.updateVerticesData(Qu.h.ColorKind, this.colors, Ru, yu), this.matricesIndices && uu.updateVerticesData(Qu.h.MatricesIndicesKind, this.matricesIndices, Ru, yu), this.matricesWeights && uu.updateVerticesData(Qu.h.MatricesWeightsKind, this.matricesWeights, Ru, yu), this.matricesIndicesExtra && uu.updateVerticesData(Qu.h.MatricesIndicesExtraKind, this.matricesIndicesExtra, Ru, yu), this.matricesWeightsExtra && uu.updateVerticesData(Qu.h.MatricesWeightsExtraKind, this.matricesWeightsExtra, Ru, yu), this.indices && uu.setIndices(this.indices, null), this
+        _update(kk, Fk, Bk) {
+          return this.positions && kk.updateVerticesData(ak.n.PositionKind, this.positions, Fk, Bk), this.normals && kk.updateVerticesData(ak.n.NormalKind, this.normals, Fk, Bk), this.tangents && kk.updateVerticesData(ak.n.TangentKind, this.tangents, Fk, Bk), this.uvs && kk.updateVerticesData(ak.n.UVKind, this.uvs, Fk, Bk), this.uvs2 && kk.updateVerticesData(ak.n.UV2Kind, this.uvs2, Fk, Bk), this.uvs3 && kk.updateVerticesData(ak.n.UV3Kind, this.uvs3, Fk, Bk), this.uvs4 && kk.updateVerticesData(ak.n.UV4Kind, this.uvs4, Fk, Bk), this.uvs5 && kk.updateVerticesData(ak.n.UV5Kind, this.uvs5, Fk, Bk), this.uvs6 && kk.updateVerticesData(ak.n.UV6Kind, this.uvs6, Fk, Bk), this.colors && kk.updateVerticesData(ak.n.ColorKind, this.colors, Fk, Bk), this.matricesIndices && kk.updateVerticesData(ak.n.MatricesIndicesKind, this.matricesIndices, Fk, Bk), this.matricesWeights && kk.updateVerticesData(ak.n.MatricesWeightsKind, this.matricesWeights, Fk, Bk), this.matricesIndicesExtra && kk.updateVerticesData(ak.n.MatricesIndicesExtraKind, this.matricesIndicesExtra, Fk, Bk), this.matricesWeightsExtra && kk.updateVerticesData(ak.n.MatricesWeightsExtraKind, this.matricesWeightsExtra, Fk, Bk), this.indices && kk.setIndices(this.indices, null), this
         }
-        static _TransformVector3Coordinates(uu, Ru) {
-          let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu.length;
-          const Qu = Ku.m.MS[0],
-            mu = Ku.m.MS[1];
-          for (let Ju = yu; Ju < yu + Eu; Ju += 3) Ku.p.FromArrayToRef(uu, Ju, Qu), Ku.p.TransformCoordinatesToRef(Qu, Ru, mu), uu[Ju] = mu.x, uu[Ju + 1] = mu.y, uu[Ju + 2] = mu.z
+        static _TransformVector3Coordinates(kk, Fk) {
+          let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kk.length;
+          const ak = tk.l.Qe[0],
+            Xk = tk.l.Qe[1];
+          for (let bk = Bk; bk < Bk + Rk; bk += 3) tk.s.FromArrayToRef(kk, bk, ak), tk.s.TransformCoordinatesToRef(ak, Fk, Xk), kk[bk] = Xk.x, kk[bk + 1] = Xk.y, kk[bk + 2] = Xk.z
         }
-        static _TransformVector3Normals(uu, Ru) {
-          let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu.length;
-          const Qu = Ku.m.MS[0],
-            mu = Ku.m.MS[1];
-          for (let Ju = yu; Ju < yu + Eu; Ju += 3) Ku.p.FromArrayToRef(uu, Ju, Qu), Ku.p.TransformNormalToRef(Qu, Ru, mu), uu[Ju] = mu.x, uu[Ju + 1] = mu.y, uu[Ju + 2] = mu.z
+        static _TransformVector3Normals(kk, Fk) {
+          let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kk.length;
+          const ak = tk.l.Qe[0],
+            Xk = tk.l.Qe[1];
+          for (let bk = Bk; bk < Bk + Rk; bk += 3) tk.s.FromArrayToRef(kk, bk, ak), tk.s.TransformNormalToRef(ak, Fk, Xk), kk[bk] = Xk.x, kk[bk + 1] = Xk.y, kk[bk + 2] = Xk.z
         }
-        static _TransformVector4Normals(uu, Ru) {
-          let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu.length;
-          const Qu = Ku.m.Vector4[0],
-            mu = Ku.m.Vector4[1];
-          for (let Ju = yu; Ju < yu + Eu; Ju += 4) Ku.r.FromArrayToRef(uu, Ju, Qu), Ku.r.TransformNormalToRef(Qu, Ru, mu), uu[Ju] = mu.x, uu[Ju + 1] = mu.y, uu[Ju + 2] = mu.z, uu[Ju + 3] = mu.w
+        static _TransformVector4Normals(kk, Fk) {
+          let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kk.length;
+          const ak = tk.l.Vector4[0],
+            Xk = tk.l.Vector4[1];
+          for (let bk = Bk; bk < Bk + Rk; bk += 4) tk.v.FromArrayToRef(kk, bk, ak), tk.v.TransformNormalToRef(ak, Fk, Xk), kk[bk] = Xk.x, kk[bk + 1] = Xk.y, kk[bk + 2] = Xk.z, kk[bk + 3] = Xk.w
         }
-        static _FlipFaces(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uu.length;
-          for (let Eu = Ru; Eu < Ru + yu; Eu += 3) {
-            const Ru = uu[Eu + 1];
-            uu[Eu + 1] = uu[Eu + 2], uu[Eu + 2] = Ru
+        static _FlipFaces(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : kk.length;
+          for (let Rk = Fk; Rk < Fk + Bk; Rk += 3) {
+            const Fk = kk[Rk + 1];
+            kk[Rk + 1] = kk[Rk + 2], kk[Rk + 2] = Fk
           }
         }
-        transform(Ru) {
-          const yu = Ru.determinant() < 0;
-          return this.positions && uu._TransformVector3Coordinates(this.positions, Ru), this.normals && uu._TransformVector3Normals(this.normals, Ru), this.tangents && uu._TransformVector4Normals(this.tangents, Ru), yu && this.indices && uu._FlipFaces(this.indices), this
+        transform(Fk) {
+          const Bk = Fk.determinant() < 0;
+          return this.positions && kk._TransformVector3Coordinates(this.positions, Fk), this.normals && kk._TransformVector3Normals(this.normals, Fk), this.tangents && kk._TransformVector4Normals(this.tangents, Fk), Bk && this.indices && kk._FlipFaces(this.indices), this
         }
         splitBasedOnMaterialID() {
           if (!this.materialInfos || this.materialInfos.length < 2) return [this];
-          const Ru = [];
-          for (const yu of this.materialInfos) {
-            const Eu = new uu;
-            if (this.positions && (Eu.positions = this.positions.slice(3 * yu.verticesStart, 3 * (yu.verticesCount + yu.verticesStart))), this.normals && (Eu.normals = this.normals.slice(3 * yu.verticesStart, 3 * (yu.verticesCount + yu.verticesStart))), this.tangents && (Eu.tangents = this.tangents.slice(4 * yu.verticesStart, 4 * (yu.verticesCount + yu.verticesStart))), this.colors && (Eu.colors = this.colors.slice(4 * yu.verticesStart, 4 * (yu.verticesCount + yu.verticesStart))), this.uvs && (Eu.uvs = this.uvs.slice(2 * yu.verticesStart, 2 * (yu.verticesCount + yu.verticesStart))), this.uvs2 && (Eu.uvs2 = this.uvs2.slice(2 * yu.verticesStart, 2 * (yu.verticesCount + yu.verticesStart))), this.uvs3 && (Eu.uvs3 = this.uvs3.slice(2 * yu.verticesStart, 2 * (yu.verticesCount + yu.verticesStart))), this.uvs4 && (Eu.uvs4 = this.uvs4.slice(2 * yu.verticesStart, 2 * (yu.verticesCount + yu.verticesStart))), this.uvs5 && (Eu.uvs5 = this.uvs5.slice(2 * yu.verticesStart, 2 * (yu.verticesCount + yu.verticesStart))), this.uvs6 && (Eu.uvs6 = this.uvs6.slice(2 * yu.verticesStart, 2 * (yu.verticesCount + yu.verticesStart))), this.matricesIndices && (Eu.matricesIndices = this.matricesIndices.slice(4 * yu.verticesStart, 4 * (yu.verticesCount + yu.verticesStart))), this.matricesIndicesExtra && (Eu.matricesIndicesExtra = this.matricesIndicesExtra.slice(4 * yu.verticesStart, 4 * (yu.verticesCount + yu.verticesStart))), this.matricesWeights && (Eu.matricesWeights = this.matricesWeights.slice(4 * yu.verticesStart, 4 * (yu.verticesCount + yu.verticesStart))), this.matricesWeightsExtra && (Eu.matricesWeightsExtra = this.matricesWeightsExtra.slice(4 * yu.verticesStart, 4 * (yu.verticesCount + yu.verticesStart))), this.indices) {
-              Eu.indices = [];
-              for (let uu = yu.indexStart; uu < yu.indexStart + yu.indexCount; uu++) Eu.indices.push(this.indices[uu] - yu.verticesStart)
+          const Fk = [];
+          for (const Bk of this.materialInfos) {
+            const Rk = new kk;
+            if (this.positions && (Rk.positions = this.positions.slice(3 * Bk.verticesStart, 3 * (Bk.verticesCount + Bk.verticesStart))), this.normals && (Rk.normals = this.normals.slice(3 * Bk.verticesStart, 3 * (Bk.verticesCount + Bk.verticesStart))), this.tangents && (Rk.tangents = this.tangents.slice(4 * Bk.verticesStart, 4 * (Bk.verticesCount + Bk.verticesStart))), this.colors && (Rk.colors = this.colors.slice(4 * Bk.verticesStart, 4 * (Bk.verticesCount + Bk.verticesStart))), this.uvs && (Rk.uvs = this.uvs.slice(2 * Bk.verticesStart, 2 * (Bk.verticesCount + Bk.verticesStart))), this.uvs2 && (Rk.uvs2 = this.uvs2.slice(2 * Bk.verticesStart, 2 * (Bk.verticesCount + Bk.verticesStart))), this.uvs3 && (Rk.uvs3 = this.uvs3.slice(2 * Bk.verticesStart, 2 * (Bk.verticesCount + Bk.verticesStart))), this.uvs4 && (Rk.uvs4 = this.uvs4.slice(2 * Bk.verticesStart, 2 * (Bk.verticesCount + Bk.verticesStart))), this.uvs5 && (Rk.uvs5 = this.uvs5.slice(2 * Bk.verticesStart, 2 * (Bk.verticesCount + Bk.verticesStart))), this.uvs6 && (Rk.uvs6 = this.uvs6.slice(2 * Bk.verticesStart, 2 * (Bk.verticesCount + Bk.verticesStart))), this.matricesIndices && (Rk.matricesIndices = this.matricesIndices.slice(4 * Bk.verticesStart, 4 * (Bk.verticesCount + Bk.verticesStart))), this.matricesIndicesExtra && (Rk.matricesIndicesExtra = this.matricesIndicesExtra.slice(4 * Bk.verticesStart, 4 * (Bk.verticesCount + Bk.verticesStart))), this.matricesWeights && (Rk.matricesWeights = this.matricesWeights.slice(4 * Bk.verticesStart, 4 * (Bk.verticesCount + Bk.verticesStart))), this.matricesWeightsExtra && (Rk.matricesWeightsExtra = this.matricesWeightsExtra.slice(4 * Bk.verticesStart, 4 * (Bk.verticesCount + Bk.verticesStart))), this.indices) {
+              Rk.indices = [];
+              for (let kk = Bk.indexStart; kk < Bk.indexStart + Bk.indexCount; kk++) Rk.indices.push(this.indices[kk] - Bk.verticesStart)
             }
-            const Ku = new xu;
-            Ku.indexStart = 0, Ku.indexCount = Eu.indices ? Eu.indices.length : 0, Ku.materialIndex = yu.materialIndex, Ku.verticesStart = 0, Ku.verticesCount = (Eu.positions ? Eu.positions.length : 0) / 3, Eu.materialInfos = [Ku], Ru.push(Eu)
+            const tk = new Ak;
+            tk.indexStart = 0, tk.indexCount = Rk.indices ? Rk.indices.length : 0, tk.materialIndex = Bk.materialIndex, tk.verticesStart = 0, tk.verticesCount = (Rk.positions ? Rk.positions.length : 0) / 3, Rk.materialInfos = [tk], Fk.push(Rk)
           }
-          return Ru
+          return Fk
         }
-        merge(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            Ku = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-          const Qu = Array.isArray(uu) ? uu.map((uu => ({
-            vertexData: uu
+        merge(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            Rk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+          const ak = Array.isArray(kk) ? kk.map((kk => ({
+            vertexData: kk
           }))) : [{
-            vertexData: uu
+            vertexData: kk
           }];
-          return (0, Vu.k)(this._mergeCoroutine(void 0, Qu, Ru, !1, yu, Eu, Ku))
-        }* _mergeCoroutine(Ru, yu) {
-          let Eu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            Ku = arguments.length > 3 ? arguments[3] : void 0,
-            mu = arguments.length > 4 ? arguments[4] : void 0,
-            Ju = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-            Nu = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+          return (0, sk.j)(this._mergeCoroutine(void 0, ak, Fk, !1, Bk, Rk, tk))
+        }* _mergeCoroutine(Fk, Bk) {
+          let Rk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            tk = arguments.length > 3 ? arguments[3] : void 0,
+            Xk = arguments.length > 4 ? arguments[4] : void 0,
+            bk = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+            wk = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
           this._validate();
-          let Xu = yu.map((uu => uu.vertexData)),
-            Vu = this;
-          if (Nu)
-            for (const uu of Xu) uu && (uu._validate(), !this.normals && uu.normals && (this.normals = new Float32Array(this.positions.length)), !this.tangents && uu.tangents && (this.tangents = new Float32Array(this.positions.length / 3 * 4)), !this.uvs && uu.uvs && (this.uvs = new Float32Array(this.positions.length / 3 * 2)), !this.uvs2 && uu.uvs2 && (this.uvs2 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs3 && uu.uvs3 && (this.uvs3 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs4 && uu.uvs4 && (this.uvs4 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs5 && uu.uvs5 && (this.uvs5 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs6 && uu.uvs6 && (this.uvs6 = new Float32Array(this.positions.length / 3 * 2)), !this.colors && uu.colors && (this.colors = new Float32Array(this.positions.length / 3 * 4), this.colors.fill(1)), !this.matricesIndices && uu.matricesIndices && (this.matricesIndices = new Float32Array(this.positions.length / 3 * 4)), !this.matricesWeights && uu.matricesWeights && (this.matricesWeights = new Float32Array(this.positions.length / 3 * 4)), !this.matricesIndicesExtra && uu.matricesIndicesExtra && (this.matricesIndicesExtra = new Float32Array(this.positions.length / 3 * 4)), !this.matricesWeightsExtra && uu.matricesWeightsExtra && (this.matricesWeightsExtra = new Float32Array(this.positions.length / 3 * 4)));
-          for (const uu of Xu)
-            if (uu)
-              if (Nu) this.normals && !uu.normals && (uu.normals = new Float32Array(uu.positions.length)), this.tangents && !uu.tangents && (uu.tangents = new Float32Array(uu.positions.length / 3 * 4)), this.uvs && !uu.uvs && (uu.uvs = new Float32Array(uu.positions.length / 3 * 2)), this.uvs2 && !uu.uvs2 && (uu.uvs2 = new Float32Array(uu.positions.length / 3 * 2)), this.uvs3 && !uu.uvs3 && (uu.uvs3 = new Float32Array(uu.positions.length / 3 * 2)), this.uvs4 && !uu.uvs4 && (uu.uvs4 = new Float32Array(uu.positions.length / 3 * 2)), this.uvs5 && !uu.uvs5 && (uu.uvs5 = new Float32Array(uu.positions.length / 3 * 2)), this.uvs6 && !uu.uvs6 && (uu.uvs6 = new Float32Array(uu.positions.length / 3 * 2)), this.colors && !uu.colors && (uu.colors = new Float32Array(uu.positions.length / 3 * 4), uu.colors.fill(1)), this.matricesIndices && !uu.matricesIndices && (uu.matricesIndices = new Float32Array(uu.positions.length / 3 * 4)), this.matricesWeights && !uu.matricesWeights && (uu.matricesWeights = new Float32Array(uu.positions.length / 3 * 4)), this.matricesIndicesExtra && !uu.matricesIndicesExtra && (uu.matricesIndicesExtra = new Float32Array(uu.positions.length / 3 * 4)), this.matricesWeightsExtra && !uu.matricesWeightsExtra && (uu.matricesWeightsExtra = new Float32Array(uu.positions.length / 3 * 4));
-              else if (uu._validate(), !this.normals !== !uu.normals || !this.tangents !== !uu.tangents || !this.uvs !== !uu.uvs || !this.uvs2 !== !uu.uvs2 || !this.uvs3 !== !uu.uvs3 || !this.uvs4 !== !uu.uvs4 || !this.uvs5 !== !uu.uvs5 || !this.uvs6 !== !uu.uvs6 || !this.colors !== !uu.colors || !this.matricesIndices !== !uu.matricesIndices || !this.matricesWeights !== !uu.matricesWeights || !this.matricesIndicesExtra !== !uu.matricesIndicesExtra || !this.matricesWeightsExtra !== !uu.matricesWeightsExtra) throw new Error("Cannot merge vertex data that do not have the same set of attributes");
-          if (Ju) {
-            let uu, Eu = 0,
-              Ku = 0;
-            const Qu = [];
-            let mu = null;
-            const Ju = [];
-            for (const yu of this.splitBasedOnMaterialID()) Ju.push({
-              vertexData: yu,
-              transform: Ru
+          let dk = Bk.map((kk => kk.vertexData)),
+            sk = this;
+          if (wk)
+            for (const kk of dk) kk && (kk._validate(), !this.normals && kk.normals && (this.normals = new Float32Array(this.positions.length)), !this.tangents && kk.tangents && (this.tangents = new Float32Array(this.positions.length / 3 * 4)), !this.uvs && kk.uvs && (this.uvs = new Float32Array(this.positions.length / 3 * 2)), !this.uvs2 && kk.uvs2 && (this.uvs2 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs3 && kk.uvs3 && (this.uvs3 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs4 && kk.uvs4 && (this.uvs4 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs5 && kk.uvs5 && (this.uvs5 = new Float32Array(this.positions.length / 3 * 2)), !this.uvs6 && kk.uvs6 && (this.uvs6 = new Float32Array(this.positions.length / 3 * 2)), !this.colors && kk.colors && (this.colors = new Float32Array(this.positions.length / 3 * 4), this.colors.fill(1)), !this.matricesIndices && kk.matricesIndices && (this.matricesIndices = new Float32Array(this.positions.length / 3 * 4)), !this.matricesWeights && kk.matricesWeights && (this.matricesWeights = new Float32Array(this.positions.length / 3 * 4)), !this.matricesIndicesExtra && kk.matricesIndicesExtra && (this.matricesIndicesExtra = new Float32Array(this.positions.length / 3 * 4)), !this.matricesWeightsExtra && kk.matricesWeightsExtra && (this.matricesWeightsExtra = new Float32Array(this.positions.length / 3 * 4)));
+          for (const kk of dk)
+            if (kk)
+              if (wk) this.normals && !kk.normals && (kk.normals = new Float32Array(kk.positions.length)), this.tangents && !kk.tangents && (kk.tangents = new Float32Array(kk.positions.length / 3 * 4)), this.uvs && !kk.uvs && (kk.uvs = new Float32Array(kk.positions.length / 3 * 2)), this.uvs2 && !kk.uvs2 && (kk.uvs2 = new Float32Array(kk.positions.length / 3 * 2)), this.uvs3 && !kk.uvs3 && (kk.uvs3 = new Float32Array(kk.positions.length / 3 * 2)), this.uvs4 && !kk.uvs4 && (kk.uvs4 = new Float32Array(kk.positions.length / 3 * 2)), this.uvs5 && !kk.uvs5 && (kk.uvs5 = new Float32Array(kk.positions.length / 3 * 2)), this.uvs6 && !kk.uvs6 && (kk.uvs6 = new Float32Array(kk.positions.length / 3 * 2)), this.colors && !kk.colors && (kk.colors = new Float32Array(kk.positions.length / 3 * 4), kk.colors.fill(1)), this.matricesIndices && !kk.matricesIndices && (kk.matricesIndices = new Float32Array(kk.positions.length / 3 * 4)), this.matricesWeights && !kk.matricesWeights && (kk.matricesWeights = new Float32Array(kk.positions.length / 3 * 4)), this.matricesIndicesExtra && !kk.matricesIndicesExtra && (kk.matricesIndicesExtra = new Float32Array(kk.positions.length / 3 * 4)), this.matricesWeightsExtra && !kk.matricesWeightsExtra && (kk.matricesWeightsExtra = new Float32Array(kk.positions.length / 3 * 4));
+              else if (kk._validate(), !this.normals !== !kk.normals || !this.tangents !== !kk.tangents || !this.uvs !== !kk.uvs || !this.uvs2 !== !kk.uvs2 || !this.uvs3 !== !kk.uvs3 || !this.uvs4 !== !kk.uvs4 || !this.uvs5 !== !kk.uvs5 || !this.uvs6 !== !kk.uvs6 || !this.colors !== !kk.colors || !this.matricesIndices !== !kk.matricesIndices || !this.matricesWeights !== !kk.matricesWeights || !this.matricesIndicesExtra !== !kk.matricesIndicesExtra || !this.matricesWeightsExtra !== !kk.matricesWeightsExtra) throw new Error("Cannot merge vertex data that do not have the same set of attributes");
+          if (bk) {
+            let kk, Rk = 0,
+              tk = 0;
+            const ak = [];
+            let Xk = null;
+            const bk = [];
+            for (const Bk of this.splitBasedOnMaterialID()) bk.push({
+              vertexData: Bk,
+              transform: Fk
             });
-            for (const Ru of yu)
-              if (Ru.vertexData)
-                for (const uu of Ru.vertexData.splitBasedOnMaterialID()) Ju.push({
-                  vertexData: uu,
-                  transform: Ru.transform
+            for (const Fk of Bk)
+              if (Fk.vertexData)
+                for (const kk of Fk.vertexData.splitBasedOnMaterialID()) bk.push({
+                  vertexData: kk,
+                  transform: Fk.transform
                 });
-            Ju.sort(((uu, Ru) => {
-              const yu = uu.vertexData.materialInfos ? uu.vertexData.materialInfos[0].materialIndex : 0,
-                Eu = Ru.vertexData.materialInfos ? Ru.vertexData.materialInfos[0].materialIndex : 0;
-              return yu > Eu ? 1 : yu === Eu ? 0 : -1
+            bk.sort(((kk, Fk) => {
+              const Bk = kk.vertexData.materialInfos ? kk.vertexData.materialInfos[0].materialIndex : 0,
+                Rk = Fk.vertexData.materialInfos ? Fk.vertexData.materialInfos[0].materialIndex : 0;
+              return Bk > Rk ? 1 : Bk === Rk ? 0 : -1
             }));
-            for (const Ru of Ju) {
-              const yu = Ru.vertexData;
-              if (uu = yu.materialInfos ? yu.materialInfos[0].materialIndex : 0, mu && mu.materialIndex === uu) mu.indexCount += yu.indices.length, mu.verticesCount += yu.positions.length / 3;
+            for (const Fk of bk) {
+              const Bk = Fk.vertexData;
+              if (kk = Bk.materialInfos ? Bk.materialInfos[0].materialIndex : 0, Xk && Xk.materialIndex === kk) Xk.indexCount += Bk.indices.length, Xk.verticesCount += Bk.positions.length / 3;
               else {
-                const Ru = new xu;
-                Ru.materialIndex = uu, Ru.indexStart = Eu, Ru.indexCount = yu.indices.length, Ru.verticesStart = Ku, Ru.verticesCount = yu.positions.length / 3, Qu.push(Ru), mu = Ru
+                const Fk = new Ak;
+                Fk.materialIndex = kk, Fk.indexStart = Rk, Fk.indexCount = Bk.indices.length, Fk.verticesStart = tk, Fk.verticesCount = Bk.positions.length / 3, ak.push(Fk), Xk = Fk
               }
-              Eu += yu.indices.length, Ku += yu.positions.length / 3
+              Rk += Bk.indices.length, tk += Bk.positions.length / 3
             }
-            const Nu = Ju.splice(0, 1)[0];
-            Vu = Nu.vertexData, Ru = Nu.transform, Xu = Ju.map((uu => uu.vertexData)), yu = Ju, this.materialInfos = Qu
+            const wk = bk.splice(0, 1)[0];
+            sk = wk.vertexData, Fk = wk.transform, dk = bk.map((kk => kk.vertexData)), Bk = bk, this.materialInfos = ak
           }
-          const ru = Xu.reduce(((uu, Ru) => uu + (Ru.indices?.length ?? 0)), Vu.indices?.length ?? 0);
-          let Bu = mu || Xu.some((uu => uu.indices === Vu.indices)) ? Vu.indices?.slice() : Vu.indices;
-          if (ru > 0) {
-            let Qu = Bu?.length ?? 0;
-            if (Bu || (Bu = new Array(ru)), Bu.length !== ru) {
-              if (Array.isArray(Bu)) Bu.length = ru;
+          const Vk = dk.reduce(((kk, Fk) => kk + (Fk.indices?.length ?? 0)), sk.indices?.length ?? 0);
+          let Jk = Xk || dk.some((kk => kk.indices === sk.indices)) ? sk.indices?.slice() : sk.indices;
+          if (Vk > 0) {
+            let ak = Jk?.length ?? 0;
+            if (Jk || (Jk = new Array(Vk)), Jk.length !== Vk) {
+              if (Array.isArray(Jk)) Jk.length = Vk;
               else {
-                const uu = Eu || Bu instanceof Uint32Array ? new Uint32Array(ru) : new Uint16Array(ru);
-                uu.set(Bu), Bu = uu
+                const kk = Rk || Jk instanceof Uint32Array ? new Uint32Array(Vk) : new Uint16Array(Vk);
+                kk.set(Jk), Jk = kk
               }
-              Ru && Ru.determinant() < 0 && uu._FlipFaces(Bu, 0, Qu)
+              Fk && Fk.determinant() < 0 && kk._FlipFaces(Jk, 0, ak)
             }
-            let mu = Vu.positions ? Vu.positions.length / 3 : 0;
+            let Xk = sk.positions ? sk.positions.length / 3 : 0;
             for (const {
-                vertexData: Ru,
-                transform: Eu
+                vertexData: Fk,
+                transform: Rk
               }
-              of yu)
-              if (Ru.indices) {
-                for (let uu = 0; uu < Ru.indices.length; uu++) Bu[Qu + uu] = Ru.indices[uu] + mu;
-                Eu && Eu.determinant() < 0 && uu._FlipFaces(Bu, Qu, Ru.indices.length), mu += Ru.positions.length / 3, Qu += Ru.indices.length, Ku && (yield)
+              of Bk)
+              if (Fk.indices) {
+                for (let kk = 0; kk < Fk.indices.length; kk++) Jk[ak + kk] = Fk.indices[kk] + Xk;
+                Rk && Rk.determinant() < 0 && kk._FlipFaces(Jk, ak, Fk.indices.length), Xk += Fk.positions.length / 3, ak += Fk.indices.length, tk && (yield)
               }
           }
-          return this.indices = Bu, this.positions = uu._MergeElement(Qu.h.PositionKind, Vu.positions, Ru, yu.map((uu => [uu.vertexData.positions, uu.transform]))), Ku && (yield), Vu.normals && (this.normals = uu._MergeElement(Qu.h.NormalKind, Vu.normals, Ru, yu.map((uu => [uu.vertexData.normals, uu.transform]))), Ku && (yield)), Vu.tangents && (this.tangents = uu._MergeElement(Qu.h.TangentKind, Vu.tangents, Ru, yu.map((uu => [uu.vertexData.tangents, uu.transform]))), Ku && (yield)), Vu.uvs && (this.uvs = uu._MergeElement(Qu.h.UVKind, Vu.uvs, Ru, yu.map((uu => [uu.vertexData.uvs, uu.transform]))), Ku && (yield)), Vu.uvs2 && (this.uvs2 = uu._MergeElement(Qu.h.UV2Kind, Vu.uvs2, Ru, yu.map((uu => [uu.vertexData.uvs2, uu.transform]))), Ku && (yield)), Vu.uvs3 && (this.uvs3 = uu._MergeElement(Qu.h.UV3Kind, Vu.uvs3, Ru, yu.map((uu => [uu.vertexData.uvs3, uu.transform]))), Ku && (yield)), Vu.uvs4 && (this.uvs4 = uu._MergeElement(Qu.h.UV4Kind, Vu.uvs4, Ru, yu.map((uu => [uu.vertexData.uvs4, uu.transform]))), Ku && (yield)), Vu.uvs5 && (this.uvs5 = uu._MergeElement(Qu.h.UV5Kind, Vu.uvs5, Ru, yu.map((uu => [uu.vertexData.uvs5, uu.transform]))), Ku && (yield)), Vu.uvs6 && (this.uvs6 = uu._MergeElement(Qu.h.UV6Kind, Vu.uvs6, Ru, yu.map((uu => [uu.vertexData.uvs6, uu.transform]))), Ku && (yield)), Vu.colors && (this.colors = uu._MergeElement(Qu.h.ColorKind, Vu.colors, Ru, yu.map((uu => [uu.vertexData.colors, uu.transform]))), (void 0 !== Vu.hasVertexAlpha || yu.some((uu => void 0 !== uu.vertexData.hasVertexAlpha))) && (this.hasVertexAlpha = Vu.hasVertexAlpha || yu.some((uu => uu.vertexData.hasVertexAlpha))), Ku && (yield)), Vu.matricesIndices && (this.matricesIndices = uu._MergeElement(Qu.h.MatricesIndicesKind, Vu.matricesIndices, Ru, yu.map((uu => [uu.vertexData.matricesIndices, uu.transform]))), Ku && (yield)), Vu.matricesWeights && (this.matricesWeights = uu._MergeElement(Qu.h.MatricesWeightsKind, Vu.matricesWeights, Ru, yu.map((uu => [uu.vertexData.matricesWeights, uu.transform]))), Ku && (yield)), Vu.matricesIndicesExtra && (this.matricesIndicesExtra = uu._MergeElement(Qu.h.MatricesIndicesExtraKind, Vu.matricesIndicesExtra, Ru, yu.map((uu => [uu.vertexData.matricesIndicesExtra, uu.transform]))), Ku && (yield)), Vu.matricesWeightsExtra && (this.matricesWeightsExtra = uu._MergeElement(Qu.h.MatricesWeightsExtraKind, Vu.matricesWeightsExtra, Ru, yu.map((uu => [uu.vertexData.matricesWeightsExtra, uu.transform])))), this
+          return this.indices = Jk, this.positions = kk._MergeElement(ak.n.PositionKind, sk.positions, Fk, Bk.map((kk => [kk.vertexData.positions, kk.transform]))), tk && (yield), sk.normals && (this.normals = kk._MergeElement(ak.n.NormalKind, sk.normals, Fk, Bk.map((kk => [kk.vertexData.normals, kk.transform]))), tk && (yield)), sk.tangents && (this.tangents = kk._MergeElement(ak.n.TangentKind, sk.tangents, Fk, Bk.map((kk => [kk.vertexData.tangents, kk.transform]))), tk && (yield)), sk.uvs && (this.uvs = kk._MergeElement(ak.n.UVKind, sk.uvs, Fk, Bk.map((kk => [kk.vertexData.uvs, kk.transform]))), tk && (yield)), sk.uvs2 && (this.uvs2 = kk._MergeElement(ak.n.UV2Kind, sk.uvs2, Fk, Bk.map((kk => [kk.vertexData.uvs2, kk.transform]))), tk && (yield)), sk.uvs3 && (this.uvs3 = kk._MergeElement(ak.n.UV3Kind, sk.uvs3, Fk, Bk.map((kk => [kk.vertexData.uvs3, kk.transform]))), tk && (yield)), sk.uvs4 && (this.uvs4 = kk._MergeElement(ak.n.UV4Kind, sk.uvs4, Fk, Bk.map((kk => [kk.vertexData.uvs4, kk.transform]))), tk && (yield)), sk.uvs5 && (this.uvs5 = kk._MergeElement(ak.n.UV5Kind, sk.uvs5, Fk, Bk.map((kk => [kk.vertexData.uvs5, kk.transform]))), tk && (yield)), sk.uvs6 && (this.uvs6 = kk._MergeElement(ak.n.UV6Kind, sk.uvs6, Fk, Bk.map((kk => [kk.vertexData.uvs6, kk.transform]))), tk && (yield)), sk.colors && (this.colors = kk._MergeElement(ak.n.ColorKind, sk.colors, Fk, Bk.map((kk => [kk.vertexData.colors, kk.transform]))), (void 0 !== sk.hasVertexAlpha || Bk.some((kk => void 0 !== kk.vertexData.hasVertexAlpha))) && (this.hasVertexAlpha = sk.hasVertexAlpha || Bk.some((kk => kk.vertexData.hasVertexAlpha))), tk && (yield)), sk.matricesIndices && (this.matricesIndices = kk._MergeElement(ak.n.MatricesIndicesKind, sk.matricesIndices, Fk, Bk.map((kk => [kk.vertexData.matricesIndices, kk.transform]))), tk && (yield)), sk.matricesWeights && (this.matricesWeights = kk._MergeElement(ak.n.MatricesWeightsKind, sk.matricesWeights, Fk, Bk.map((kk => [kk.vertexData.matricesWeights, kk.transform]))), tk && (yield)), sk.matricesIndicesExtra && (this.matricesIndicesExtra = kk._MergeElement(ak.n.MatricesIndicesExtraKind, sk.matricesIndicesExtra, Fk, Bk.map((kk => [kk.vertexData.matricesIndicesExtra, kk.transform]))), tk && (yield)), sk.matricesWeightsExtra && (this.matricesWeightsExtra = kk._MergeElement(ak.n.MatricesWeightsExtraKind, sk.matricesWeightsExtra, Fk, Bk.map((kk => [kk.vertexData.matricesWeightsExtra, kk.transform])))), this
         }
-        static _MergeElement(Ru, yu, Eu, Ku) {
-          const mu = Ku.filter((uu => null !== uu[0] && void 0 !== uu[0]));
-          if (!yu && 0 == mu.length) return yu;
-          if (!yu) return this._MergeElement(Ru, mu[0][0], mu[0][1], mu.slice(1));
-          const Ju = mu.reduce(((uu, Ru) => uu + Ru[0].length), yu.length),
-            Nu = Ru === Qu.h.PositionKind ? uu._TransformVector3Coordinates : Ru === Qu.h.NormalKind ? uu._TransformVector3Normals : Ru === Qu.h.TangentKind ? uu._TransformVector4Normals : () => {};
-          if (yu instanceof Float32Array) {
-            const uu = new Float32Array(Ju);
-            uu.set(yu), Eu && Nu(uu, Eu, 0, yu.length);
-            let Ru = yu.length;
-            for (const [yu, Eu] of mu) uu.set(yu, Ru), Eu && Nu(uu, Eu, Ru, yu.length), Ru += yu.length;
-            return uu
+        static _MergeElement(Fk, Bk, Rk, tk) {
+          const Xk = tk.filter((kk => null !== kk[0] && void 0 !== kk[0]));
+          if (!Bk && 0 == Xk.length) return Bk;
+          if (!Bk) return this._MergeElement(Fk, Xk[0][0], Xk[0][1], Xk.slice(1));
+          const bk = Xk.reduce(((kk, Fk) => kk + Fk[0].length), Bk.length),
+            wk = Fk === ak.n.PositionKind ? kk._TransformVector3Coordinates : Fk === ak.n.NormalKind ? kk._TransformVector3Normals : Fk === ak.n.TangentKind ? kk._TransformVector4Normals : () => {};
+          if (Bk instanceof Float32Array) {
+            const kk = new Float32Array(bk);
+            kk.set(Bk), Rk && wk(kk, Rk, 0, Bk.length);
+            let Fk = Bk.length;
+            for (const [Bk, Rk] of Xk) kk.set(Bk, Fk), Rk && wk(kk, Rk, Fk, Bk.length), Fk += Bk.length;
+            return kk
           } {
-            const uu = new Array(Ju);
-            for (let Eu = 0; Eu < yu.length; Eu++) uu[Eu] = yu[Eu];
-            Eu && Nu(uu, Eu, 0, yu.length);
-            let Ru = yu.length;
-            for (const [yu, Eu] of mu) {
-              for (let Eu = 0; Eu < yu.length; Eu++) uu[Ru + Eu] = yu[Eu];
-              Eu && Nu(uu, Eu, Ru, yu.length), Ru += yu.length
+            const kk = new Array(bk);
+            for (let Rk = 0; Rk < Bk.length; Rk++) kk[Rk] = Bk[Rk];
+            Rk && wk(kk, Rk, 0, Bk.length);
+            let Fk = Bk.length;
+            for (const [Bk, Rk] of Xk) {
+              for (let Rk = 0; Rk < Bk.length; Rk++) kk[Fk + Rk] = Bk[Rk];
+              Rk && wk(kk, Rk, Fk, Bk.length), Fk += Bk.length
             }
-            return uu
+            return kk
           }
         }
         _validate() {
-          if (!this.positions) throw new ru.f("Positions are required", ru.e.MeshInvalidPositionsError);
-          const uu = (uu, Ru) => {
-              const yu = (0, Qu.g)(uu);
-              if (Ru.length % yu !== 0) throw new Error("The " + uu + "s array count must be a multiple of " + yu);
-              return Ru.length / yu
+          if (!this.positions) throw new Vk.j("Positions are required", Vk.g.MeshInvalidPositionsError);
+          const kk = (kk, Fk) => {
+              const Bk = (0, ak.k)(kk);
+              if (Fk.length % Bk !== 0) throw new Error("The " + kk + "s array count must be a multiple of " + Bk);
+              return Fk.length / Bk
             },
-            Ru = uu(Qu.h.PositionKind, this.positions),
-            yu = (yu, Eu) => {
-              const Ku = uu(yu, Eu);
-              if (Ku !== Ru) throw new Error("The " + yu + "s element count (" + Ku + ") does not match the positions count (" + Ru + ")")
+            Fk = kk(ak.n.PositionKind, this.positions),
+            Bk = (Bk, Rk) => {
+              const tk = kk(Bk, Rk);
+              if (tk !== Fk) throw new Error("The " + Bk + "s element count (" + tk + ") does not match the positions count (" + Fk + ")")
             };
-          this.normals && yu(Qu.h.NormalKind, this.normals), this.tangents && yu(Qu.h.TangentKind, this.tangents), this.uvs && yu(Qu.h.UVKind, this.uvs), this.uvs2 && yu(Qu.h.UV2Kind, this.uvs2), this.uvs3 && yu(Qu.h.UV3Kind, this.uvs3), this.uvs4 && yu(Qu.h.UV4Kind, this.uvs4), this.uvs5 && yu(Qu.h.UV5Kind, this.uvs5), this.uvs6 && yu(Qu.h.UV6Kind, this.uvs6), this.colors && yu(Qu.h.ColorKind, this.colors), this.matricesIndices && yu(Qu.h.MatricesIndicesKind, this.matricesIndices), this.matricesWeights && yu(Qu.h.MatricesWeightsKind, this.matricesWeights), this.matricesIndicesExtra && yu(Qu.h.MatricesIndicesExtraKind, this.matricesIndicesExtra), this.matricesWeightsExtra && yu(Qu.h.MatricesWeightsExtraKind, this.matricesWeightsExtra)
+          this.normals && Bk(ak.n.NormalKind, this.normals), this.tangents && Bk(ak.n.TangentKind, this.tangents), this.uvs && Bk(ak.n.UVKind, this.uvs), this.uvs2 && Bk(ak.n.UV2Kind, this.uvs2), this.uvs3 && Bk(ak.n.UV3Kind, this.uvs3), this.uvs4 && Bk(ak.n.UV4Kind, this.uvs4), this.uvs5 && Bk(ak.n.UV5Kind, this.uvs5), this.uvs6 && Bk(ak.n.UV6Kind, this.uvs6), this.colors && Bk(ak.n.ColorKind, this.colors), this.matricesIndices && Bk(ak.n.MatricesIndicesKind, this.matricesIndices), this.matricesWeights && Bk(ak.n.MatricesWeightsKind, this.matricesWeights), this.matricesIndicesExtra && Bk(ak.n.MatricesIndicesExtraKind, this.matricesIndicesExtra), this.matricesWeightsExtra && Bk(ak.n.MatricesWeightsExtraKind, this.matricesWeightsExtra)
         }
         clone() {
-          const Ru = this.serialize();
-          return uu.Parse(Ru)
+          const Fk = this.serialize();
+          return kk.Parse(Fk)
         }
         serialize() {
-          const uu = {};
-          if (this.positions && (uu.positions = Array.from(this.positions)), this.normals && (uu.normals = Array.from(this.normals)), this.tangents && (uu.tangents = Array.from(this.tangents)), this.uvs && (uu.uvs = Array.from(this.uvs)), this.uvs2 && (uu.uvs2 = Array.from(this.uvs2)), this.uvs3 && (uu.uvs3 = Array.from(this.uvs3)), this.uvs4 && (uu.uvs4 = Array.from(this.uvs4)), this.uvs5 && (uu.uvs5 = Array.from(this.uvs5)), this.uvs6 && (uu.uvs6 = Array.from(this.uvs6)), this.colors && (uu.colors = Array.from(this.colors), uu.hasVertexAlpha = this.hasVertexAlpha), this.matricesIndices && (uu.matricesIndices = Array.from(this.matricesIndices), uu.matricesIndicesExpanded = !0), this.matricesWeights && (uu.matricesWeights = Array.from(this.matricesWeights)), this.matricesIndicesExtra && (uu.matricesIndicesExtra = Array.from(this.matricesIndicesExtra), uu.matricesIndicesExtraExpanded = !0), this.matricesWeightsExtra && (uu.matricesWeightsExtra = Array.from(this.matricesWeightsExtra)), uu.indices = this.indices ? Array.from(this.indices) : [], this.materialInfos) {
-            uu.materialInfos = [];
-            for (const Ru of this.materialInfos) {
-              const yu = {
-                indexStart: Ru.indexStart,
-                indexCount: Ru.indexCount,
-                materialIndex: Ru.materialIndex,
-                verticesStart: Ru.verticesStart,
-                verticesCount: Ru.verticesCount
+          const kk = {};
+          if (this.positions && (kk.positions = Array.from(this.positions)), this.normals && (kk.normals = Array.from(this.normals)), this.tangents && (kk.tangents = Array.from(this.tangents)), this.uvs && (kk.uvs = Array.from(this.uvs)), this.uvs2 && (kk.uvs2 = Array.from(this.uvs2)), this.uvs3 && (kk.uvs3 = Array.from(this.uvs3)), this.uvs4 && (kk.uvs4 = Array.from(this.uvs4)), this.uvs5 && (kk.uvs5 = Array.from(this.uvs5)), this.uvs6 && (kk.uvs6 = Array.from(this.uvs6)), this.colors && (kk.colors = Array.from(this.colors), kk.hasVertexAlpha = this.hasVertexAlpha), this.matricesIndices && (kk.matricesIndices = Array.from(this.matricesIndices), kk.matricesIndicesExpanded = !0), this.matricesWeights && (kk.matricesWeights = Array.from(this.matricesWeights)), this.matricesIndicesExtra && (kk.matricesIndicesExtra = Array.from(this.matricesIndicesExtra), kk.matricesIndicesExtraExpanded = !0), this.matricesWeightsExtra && (kk.matricesWeightsExtra = Array.from(this.matricesWeightsExtra)), kk.indices = this.indices ? Array.from(this.indices) : [], this.materialInfos) {
+            kk.materialInfos = [];
+            for (const Fk of this.materialInfos) {
+              const Bk = {
+                indexStart: Fk.indexStart,
+                indexCount: Fk.indexCount,
+                materialIndex: Fk.materialIndex,
+                verticesStart: Fk.verticesStart,
+                verticesCount: Fk.verticesCount
               };
-              uu.materialInfos.push(yu)
+              kk.materialInfos.push(Bk)
             }
           }
-          return uu
+          return kk
         }
-        static ExtractFromMesh(Ru, yu, Eu) {
-          return uu._ExtractFrom(Ru, yu, Eu)
+        static ExtractFromMesh(Fk, Bk, Rk) {
+          return kk._ExtractFrom(Fk, Bk, Rk)
         }
-        static ExtractFromGeometry(Ru, yu, Eu) {
-          return uu._ExtractFrom(Ru, yu, Eu)
+        static ExtractFromGeometry(Fk, Bk, Rk) {
+          return kk._ExtractFrom(Fk, Bk, Rk)
         }
-        static _ExtractFrom(Ru, yu, Eu) {
-          const Ku = new uu;
-          if (Ru.isVerticesDataPresent(Qu.h.PositionKind) && (Ku.positions = Ru.getVerticesData(Qu.h.PositionKind, yu, Eu)), Ru.isVerticesDataPresent(Qu.h.NormalKind) && (Ku.normals = Ru.getVerticesData(Qu.h.NormalKind, yu, Eu)), Ru.isVerticesDataPresent(Qu.h.TangentKind) && (Ku.tangents = Ru.getVerticesData(Qu.h.TangentKind, yu, Eu)), Ru.isVerticesDataPresent(Qu.h.UVKind) && (Ku.uvs = Ru.getVerticesData(Qu.h.UVKind, yu, Eu)), Ru.isVerticesDataPresent(Qu.h.UV2Kind) && (Ku.uvs2 = Ru.getVerticesData(Qu.h.UV2Kind, yu, Eu)), Ru.isVerticesDataPresent(Qu.h.UV3Kind) && (Ku.uvs3 = Ru.getVerticesData(Qu.h.UV3Kind, yu, Eu)), Ru.isVerticesDataPresent(Qu.h.UV4Kind) && (Ku.uvs4 = Ru.getVerticesData(Qu.h.UV4Kind, yu, Eu)), Ru.isVerticesDataPresent(Qu.h.UV5Kind) && (Ku.uvs5 = Ru.getVerticesData(Qu.h.UV5Kind, yu, Eu)), Ru.isVerticesDataPresent(Qu.h.UV6Kind) && (Ku.uvs6 = Ru.getVerticesData(Qu.h.UV6Kind, yu, Eu)), Ru.isVerticesDataPresent(Qu.h.ColorKind)) {
-            const uu = Ru.geometry || Ru,
-              mu = uu.getVertexBuffer(Qu.h.ColorKind),
-              Ju = uu.getVerticesData(Qu.h.ColorKind, yu, Eu);
-            if (3 === mu.getSize()) {
-              const uu = new Float32Array(4 * Ju.length / 3);
-              for (let Ru = 0, yu = 0; Ru < Ju.length; Ru += 3, yu += 4) uu[yu] = Ju[Ru], uu[yu + 1] = Ju[Ru + 1], uu[yu + 2] = Ju[Ru + 2], uu[yu + 3] = 1;
-              Ku.colors = uu
+        static _ExtractFrom(Fk, Bk, Rk) {
+          const tk = new kk;
+          if (Fk.isVerticesDataPresent(ak.n.PositionKind) && (tk.positions = Fk.getVerticesData(ak.n.PositionKind, Bk, Rk)), Fk.isVerticesDataPresent(ak.n.NormalKind) && (tk.normals = Fk.getVerticesData(ak.n.NormalKind, Bk, Rk)), Fk.isVerticesDataPresent(ak.n.TangentKind) && (tk.tangents = Fk.getVerticesData(ak.n.TangentKind, Bk, Rk)), Fk.isVerticesDataPresent(ak.n.UVKind) && (tk.uvs = Fk.getVerticesData(ak.n.UVKind, Bk, Rk)), Fk.isVerticesDataPresent(ak.n.UV2Kind) && (tk.uvs2 = Fk.getVerticesData(ak.n.UV2Kind, Bk, Rk)), Fk.isVerticesDataPresent(ak.n.UV3Kind) && (tk.uvs3 = Fk.getVerticesData(ak.n.UV3Kind, Bk, Rk)), Fk.isVerticesDataPresent(ak.n.UV4Kind) && (tk.uvs4 = Fk.getVerticesData(ak.n.UV4Kind, Bk, Rk)), Fk.isVerticesDataPresent(ak.n.UV5Kind) && (tk.uvs5 = Fk.getVerticesData(ak.n.UV5Kind, Bk, Rk)), Fk.isVerticesDataPresent(ak.n.UV6Kind) && (tk.uvs6 = Fk.getVerticesData(ak.n.UV6Kind, Bk, Rk)), Fk.isVerticesDataPresent(ak.n.ColorKind)) {
+            const kk = Fk.geometry || Fk,
+              Xk = kk.getVertexBuffer(ak.n.ColorKind),
+              bk = kk.getVerticesData(ak.n.ColorKind, Bk, Rk);
+            if (3 === Xk.getSize()) {
+              const kk = new Float32Array(4 * bk.length / 3);
+              for (let Fk = 0, Bk = 0; Fk < bk.length; Fk += 3, Bk += 4) kk[Bk] = bk[Fk], kk[Bk + 1] = bk[Fk + 1], kk[Bk + 2] = bk[Fk + 2], kk[Bk + 3] = 1;
+              tk.colors = kk
             } else {
-              if (4 !== mu.getSize()) throw new Error(`Unexpected number of color components: ${mu.getSize()}`);
-              Ku.colors = Ju
+              if (4 !== Xk.getSize()) throw new Error(`Unexpected number of color components: ${Xk.getSize()}`);
+              tk.colors = bk
             }
           }
-          return Ru.isVerticesDataPresent(Qu.h.MatricesIndicesKind) && (Ku.matricesIndices = Ru.getVerticesData(Qu.h.MatricesIndicesKind, yu, Eu)), Ru.isVerticesDataPresent(Qu.h.MatricesWeightsKind) && (Ku.matricesWeights = Ru.getVerticesData(Qu.h.MatricesWeightsKind, yu, Eu)), Ru.isVerticesDataPresent(Qu.h.MatricesIndicesExtraKind) && (Ku.matricesIndicesExtra = Ru.getVerticesData(Qu.h.MatricesIndicesExtraKind, yu, Eu)), Ru.isVerticesDataPresent(Qu.h.MatricesWeightsExtraKind) && (Ku.matricesWeightsExtra = Ru.getVerticesData(Qu.h.MatricesWeightsExtraKind, yu, Eu)), Ku.indices = Ru.DEu(yu, Eu), Ku
+          return Fk.isVerticesDataPresent(ak.n.MatricesIndicesKind) && (tk.matricesIndices = Fk.getVerticesData(ak.n.MatricesIndicesKind, Bk, Rk)), Fk.isVerticesDataPresent(ak.n.MatricesWeightsKind) && (tk.matricesWeights = Fk.getVerticesData(ak.n.MatricesWeightsKind, Bk, Rk)), Fk.isVerticesDataPresent(ak.n.MatricesIndicesExtraKind) && (tk.matricesIndicesExtra = Fk.getVerticesData(ak.n.MatricesIndicesExtraKind, Bk, Rk)), Fk.isVerticesDataPresent(ak.n.MatricesWeightsExtraKind) && (tk.matricesWeightsExtra = Fk.getVerticesData(ak.n.MatricesWeightsExtraKind, Bk, Rk)), tk.indices = Fk.hBk(Bk, Rk), tk
         }
-        static CreateRibbon(uu) {
-          throw (0, mu.k)("ribbonBuilder")
+        static CreateRibbon(kk) {
+          throw (0, Xk.i)("ribbonBuilder")
         }
-        static CreateBox(uu) {
-          throw (0, mu.k)("boxBuilder")
+        static CreateBox(kk) {
+          throw (0, Xk.i)("boxBuilder")
         }
-        static CreateTiledBox(uu) {
-          throw (0, mu.k)("tiledBoxBuilder")
+        static CreateTiledBox(kk) {
+          throw (0, Xk.i)("tiledBoxBuilder")
         }
-        static CreateTiledPlane(uu) {
-          throw (0, mu.k)("tiledPlaneBuilder")
+        static CreateTiledPlane(kk) {
+          throw (0, Xk.i)("tiledPlaneBuilder")
         }
-        static CreateSphere(uu) {
-          throw (0, mu.k)("sphereBuilder")
+        static CreateSphere(kk) {
+          throw (0, Xk.i)("sphereBuilder")
         }
-        static CreateCylinder(uu) {
-          throw (0, mu.k)("cylinderBuilder")
+        static CreateCylinder(kk) {
+          throw (0, Xk.i)("cylinderBuilder")
         }
-        static CreateTorus(uu) {
-          throw (0, mu.k)("torusBuilder")
+        static CreateTorus(kk) {
+          throw (0, Xk.i)("torusBuilder")
         }
-        static CreateLineSystem(uu) {
-          throw (0, mu.k)("linesBuilder")
+        static CreateLineSystem(kk) {
+          throw (0, Xk.i)("linesBuilder")
         }
-        static CreateDashedLines(uu) {
-          throw (0, mu.k)("linesBuilder")
+        static CreateDashedLines(kk) {
+          throw (0, Xk.i)("linesBuilder")
         }
-        static CreateGround(uu) {
-          throw (0, mu.k)("groundBuilder")
+        static CreateGround(kk) {
+          throw (0, Xk.i)("groundBuilder")
         }
-        static CreateTiledGround(uu) {
-          throw (0, mu.k)("groundBuilder")
+        static CreateTiledGround(kk) {
+          throw (0, Xk.i)("groundBuilder")
         }
-        static CreateGroundFromHeightMap(uu) {
-          throw (0, mu.k)("groundBuilder")
+        static CreateGroundFromHeightMap(kk) {
+          throw (0, Xk.i)("groundBuilder")
         }
-        static CreatePlane(uu) {
-          throw (0, mu.k)("planeBuilder")
+        static CreatePlane(kk) {
+          throw (0, Xk.i)("planeBuilder")
         }
-        static CreateDisc(uu) {
-          throw (0, mu.k)("discBuilder")
+        static CreateDisc(kk) {
+          throw (0, Xk.i)("discBuilder")
         }
-        static CreatePolygon(uu, Ru, yu, Eu, Ku, Qu, Ju) {
-          throw (0, mu.k)("polygonBuilder")
+        static CreatePolygon(kk, Fk, Bk, Rk, tk, ak, bk) {
+          throw (0, Xk.i)("polygonBuilder")
         }
-        static CreateIcoSphere(uu) {
-          throw (0, mu.k)("icoSphereBuilder")
+        static CreateIcoSphere(kk) {
+          throw (0, Xk.i)("icoSphereBuilder")
         }
-        static CreatePolyhedron(uu) {
-          throw (0, mu.k)("polyhedronBuilder")
+        static CreatePolyhedron(kk) {
+          throw (0, Xk.i)("polyhedronBuilder")
         }
         static CreateCapsule() {
-          arguments.length > 0 && void 0 !== arguments[0] || Ku.p.Up();
-          throw (0, mu.k)("capsuleBuilder")
+          arguments.length > 0 && void 0 !== arguments[0] || tk.s.Up();
+          throw (0, Xk.i)("capsuleBuilder")
         }
-        static CreateTorusKnot(uu) {
-          throw (0, mu.k)("torusKnotBuilder")
+        static CreateTorusKnot(kk) {
+          throw (0, Xk.i)("torusKnotBuilder")
         }
-        static ComputeNormals(uu, Ru, yu, Eu) {
-          let Qu, mu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su, pu, Tu, Wu, ju, Hu, du, bu, Cu, ku, eu, Au = !1,
-            Du = !1,
-            Mu = !1,
-            Iu = !1,
-            Gu = 1,
-            Uu = 0,
-            nu = null;
-          Eu && (Au = !!Eu.facetNormals, Du = !!Eu.facetPositions, Mu = !!Eu.facetPartitioning, Gu = !0 === Eu.useRightHandedSystem ? -1 : 1, Uu = Eu.ratio || 0, Iu = !!Eu.depthSort, nu = Eu.distanceTo, Iu && void 0 === nu && (nu = Ku.p.Zero()));
-          let su = 0,
-            tu = 0,
-            lu = 0,
-            gu = 0;
-          for (Mu && Eu && Eu.bbSize && (su = Eu.subDiv.X * Uu / Eu.bbSize.x, tu = Eu.subDiv.Y * Uu / Eu.bbSize.y, lu = Eu.subDiv.Z * Uu / Eu.bbSize.z, gu = Eu.subDiv.max * Eu.subDiv.max, Eu.facetPartitioning.length = 0), Qu = 0; Qu < uu.length; Qu++) yu[Qu] = 0;
-          const cu = Ru.length / 3 | 0;
-          for (Qu = 0; Qu < cu; Qu++) {
-            if (Tu = 3 * Ru[3 * Qu], Wu = Tu + 1, ju = Tu + 2, Hu = 3 * Ru[3 * Qu + 1], du = Hu + 1, bu = Hu + 2, Cu = 3 * Ru[3 * Qu + 2], ku = Cu + 1, eu = Cu + 2, mu = uu[Tu] - uu[Hu], Ju = uu[Wu] - uu[du], Nu = uu[ju] - uu[bu], Xu = uu[Cu] - uu[Hu], Vu = uu[ku] - uu[du], ru = uu[eu] - uu[bu], Bu = Gu * (Ju * ru - Nu * Vu), xu = Gu * (Nu * Xu - mu * ru), Su = Gu * (mu * Vu - Ju * Xu), pu = Math.sqrt(Bu * Bu + xu * xu + Su * Su), pu = 0 === pu ? 1 : pu, Bu /= pu, xu /= pu, Su /= pu, Au && Eu && (Eu.facetNormals[Qu].x = Bu, Eu.facetNormals[Qu].y = xu, Eu.facetNormals[Qu].z = Su), Du && Eu && (Eu.facetPositions[Qu].x = (uu[Tu] + uu[Hu] + uu[Cu]) / 3, Eu.facetPositions[Qu].y = (uu[Wu] + uu[du] + uu[ku]) / 3, Eu.facetPositions[Qu].z = (uu[ju] + uu[bu] + uu[eu]) / 3), Mu && Eu) {
-              const Ru = Math.floor((Eu.facetPositions[Qu].x - Eu.bInfo.minimum.x * Uu) * su),
-                yu = Math.floor((Eu.facetPositions[Qu].y - Eu.bInfo.minimum.y * Uu) * tu),
-                Ku = Math.floor((Eu.facetPositions[Qu].z - Eu.bInfo.minimum.z * Uu) * lu),
-                mu = Math.floor((uu[Tu] - Eu.bInfo.minimum.x * Uu) * su),
-                Ju = Math.floor((uu[Wu] - Eu.bInfo.minimum.y * Uu) * tu),
-                Nu = Math.floor((uu[ju] - Eu.bInfo.minimum.z * Uu) * lu),
-                Xu = Math.floor((uu[Hu] - Eu.bInfo.minimum.x * Uu) * su),
-                Vu = Math.floor((uu[du] - Eu.bInfo.minimum.y * Uu) * tu),
-                ru = Math.floor((uu[bu] - Eu.bInfo.minimum.z * Uu) * lu),
-                Bu = Math.floor((uu[Cu] - Eu.bInfo.minimum.x * Uu) * su),
-                xu = Math.floor((uu[ku] - Eu.bInfo.minimum.y * Uu) * tu),
-                Su = Math.floor((uu[eu] - Eu.bInfo.minimum.z * Uu) * lu),
-                pu = mu + Eu.subDiv.max * Ju + gu * Nu,
-                Au = Xu + Eu.subDiv.max * Vu + gu * ru,
-                Du = Bu + Eu.subDiv.max * xu + gu * Su,
-                Mu = Ru + Eu.subDiv.max * yu + gu * Ku;
-              Eu.facetPartitioning[Mu] = Eu.facetPartitioning[Mu] ? Eu.facetPartitioning[Mu] : [], Eu.facetPartitioning[pu] = Eu.facetPartitioning[pu] ? Eu.facetPartitioning[pu] : [], Eu.facetPartitioning[Au] = Eu.facetPartitioning[Au] ? Eu.facetPartitioning[Au] : [], Eu.facetPartitioning[Du] = Eu.facetPartitioning[Du] ? Eu.facetPartitioning[Du] : [], Eu.facetPartitioning[pu].push(Qu), Au != pu && Eu.facetPartitioning[Au].push(Qu), Du != Au && Du != pu && Eu.facetPartitioning[Du].push(Qu), Mu != pu && Mu != Au && Mu != Du && Eu.facetPartitioning[Mu].push(Qu)
+        static ComputeNormals(kk, Fk, Bk, Rk) {
+          let ak, Xk, bk, wk, dk, sk, Vk, Jk, Ak, ek, yk, fk, mk, Wk, vk, ik, Yk, Lk, Ok, Ek, Sk = !1,
+            Nk = !1,
+            Hk = !1,
+            uk = !1,
+            Mk = 1,
+            gk = 0,
+            Uk = null;
+          Rk && (Sk = !!Rk.facetNormals, Nk = !!Rk.facetPositions, Hk = !!Rk.facetPartitioning, Mk = !0 === Rk.useRightHandedSystem ? -1 : 1, gk = Rk.ratio || 0, uk = !!Rk.depthSort, Uk = Rk.distanceTo, uk && void 0 === Uk && (Uk = tk.s.Zero()));
+          let ck = 0,
+            Gk = 0,
+            Tk = 0,
+            rk = 0;
+          for (Hk && Rk && Rk.bbSize && (ck = Rk.subDiv.X * gk / Rk.bbSize.x, Gk = Rk.subDiv.Y * gk / Rk.bbSize.y, Tk = Rk.subDiv.Z * gk / Rk.bbSize.z, rk = Rk.subDiv.max * Rk.subDiv.max, Rk.facetPartitioning.length = 0), ak = 0; ak < kk.length; ak++) Bk[ak] = 0;
+          const Dk = Fk.length / 3 | 0;
+          for (ak = 0; ak < Dk; ak++) {
+            if (fk = 3 * Fk[3 * ak], mk = fk + 1, Wk = fk + 2, vk = 3 * Fk[3 * ak + 1], ik = vk + 1, Yk = vk + 2, Lk = 3 * Fk[3 * ak + 2], Ok = Lk + 1, Ek = Lk + 2, Xk = kk[fk] - kk[vk], bk = kk[mk] - kk[ik], wk = kk[Wk] - kk[Yk], dk = kk[Lk] - kk[vk], sk = kk[Ok] - kk[ik], Vk = kk[Ek] - kk[Yk], Jk = Mk * (bk * Vk - wk * sk), Ak = Mk * (wk * dk - Xk * Vk), ek = Mk * (Xk * sk - bk * dk), yk = Math.sqrt(Jk * Jk + Ak * Ak + ek * ek), yk = 0 === yk ? 1 : yk, Jk /= yk, Ak /= yk, ek /= yk, Sk && Rk && (Rk.facetNormals[ak].x = Jk, Rk.facetNormals[ak].y = Ak, Rk.facetNormals[ak].z = ek), Nk && Rk && (Rk.facetPositions[ak].x = (kk[fk] + kk[vk] + kk[Lk]) / 3, Rk.facetPositions[ak].y = (kk[mk] + kk[ik] + kk[Ok]) / 3, Rk.facetPositions[ak].z = (kk[Wk] + kk[Yk] + kk[Ek]) / 3), Hk && Rk) {
+              const Fk = Math.floor((Rk.facetPositions[ak].x - Rk.bInfo.minimum.x * gk) * ck),
+                Bk = Math.floor((Rk.facetPositions[ak].y - Rk.bInfo.minimum.y * gk) * Gk),
+                tk = Math.floor((Rk.facetPositions[ak].z - Rk.bInfo.minimum.z * gk) * Tk),
+                Xk = Math.floor((kk[fk] - Rk.bInfo.minimum.x * gk) * ck),
+                bk = Math.floor((kk[mk] - Rk.bInfo.minimum.y * gk) * Gk),
+                wk = Math.floor((kk[Wk] - Rk.bInfo.minimum.z * gk) * Tk),
+                dk = Math.floor((kk[vk] - Rk.bInfo.minimum.x * gk) * ck),
+                sk = Math.floor((kk[ik] - Rk.bInfo.minimum.y * gk) * Gk),
+                Vk = Math.floor((kk[Yk] - Rk.bInfo.minimum.z * gk) * Tk),
+                Jk = Math.floor((kk[Lk] - Rk.bInfo.minimum.x * gk) * ck),
+                Ak = Math.floor((kk[Ok] - Rk.bInfo.minimum.y * gk) * Gk),
+                ek = Math.floor((kk[Ek] - Rk.bInfo.minimum.z * gk) * Tk),
+                yk = Xk + Rk.subDiv.max * bk + rk * wk,
+                Sk = dk + Rk.subDiv.max * sk + rk * Vk,
+                Nk = Jk + Rk.subDiv.max * Ak + rk * ek,
+                Hk = Fk + Rk.subDiv.max * Bk + rk * tk;
+              Rk.facetPartitioning[Hk] = Rk.facetPartitioning[Hk] ? Rk.facetPartitioning[Hk] : [], Rk.facetPartitioning[yk] = Rk.facetPartitioning[yk] ? Rk.facetPartitioning[yk] : [], Rk.facetPartitioning[Sk] = Rk.facetPartitioning[Sk] ? Rk.facetPartitioning[Sk] : [], Rk.facetPartitioning[Nk] = Rk.facetPartitioning[Nk] ? Rk.facetPartitioning[Nk] : [], Rk.facetPartitioning[yk].push(ak), Sk != yk && Rk.facetPartitioning[Sk].push(ak), Nk != Sk && Nk != yk && Rk.facetPartitioning[Nk].push(ak), Hk != yk && Hk != Sk && Hk != Nk && Rk.facetPartitioning[Hk].push(ak)
             }
-            if (Iu && Eu && Eu.facetPositions) {
-              const uu = Eu.depthSortedFacets[Qu];
-              uu.ind = 3 * Qu, uu.sqDistance = Ku.p.DistanceSquared(Eu.facetPositions[Qu], nu)
+            if (uk && Rk && Rk.facetPositions) {
+              const kk = Rk.depthSortedFacets[ak];
+              kk.ind = 3 * ak, kk.sqDistance = tk.s.DistanceSquared(Rk.facetPositions[ak], Uk)
             }
-            yu[Tu] += Bu, yu[Wu] += xu, yu[ju] += Su, yu[Hu] += Bu, yu[du] += xu, yu[bu] += Su, yu[Cu] += Bu, yu[ku] += xu, yu[eu] += Su
+            Bk[fk] += Jk, Bk[mk] += Ak, Bk[Wk] += ek, Bk[vk] += Jk, Bk[ik] += Ak, Bk[Yk] += ek, Bk[Lk] += Jk, Bk[Ok] += Ak, Bk[Ek] += ek
           }
-          for (Qu = 0; Qu < yu.length / 3; Qu++) Bu = yu[3 * Qu], xu = yu[3 * Qu + 1], Su = yu[3 * Qu + 2], pu = Math.sqrt(Bu * Bu + xu * xu + Su * Su), pu = 0 === pu ? 1 : pu, Bu /= pu, xu /= pu, Su /= pu, yu[3 * Qu] = Bu, yu[3 * Qu + 1] = xu, yu[3 * Qu + 2] = Su
+          for (ak = 0; ak < Bk.length / 3; ak++) Jk = Bk[3 * ak], Ak = Bk[3 * ak + 1], ek = Bk[3 * ak + 2], yk = Math.sqrt(Jk * Jk + Ak * Ak + ek * ek), yk = 0 === yk ? 1 : yk, Jk /= yk, Ak /= yk, ek /= yk, Bk[3 * ak] = Jk, Bk[3 * ak + 1] = Ak, Bk[3 * ak + 2] = ek
         }
-        static _ComputeSides(Ru, yu, Eu, Qu, mu, Ju, Nu) {
-          const Xu = Eu.length,
-            Vu = Qu.length;
-          let ru, Bu;
-          switch (Ru = Ru || uu.DEFAULTSIDE) {
-            case uu.FRONTSIDE:
+        static _ComputeSides(Fk, Bk, Rk, ak, Xk, bk, wk) {
+          const dk = Rk.length,
+            sk = ak.length;
+          let Vk, Jk;
+          switch (Fk = Fk || kk.DEFAULTSIDE) {
+            case kk.FRONTSIDE:
               break;
-            case uu.BACKSIDE:
-              for (ru = 0; ru < Xu; ru += 3) {
-                const uu = Eu[ru];
-                Eu[ru] = Eu[ru + 2], Eu[ru + 2] = uu
+            case kk.BACKSIDE:
+              for (Vk = 0; Vk < dk; Vk += 3) {
+                const kk = Rk[Vk];
+                Rk[Vk] = Rk[Vk + 2], Rk[Vk + 2] = kk
               }
-              for (Bu = 0; Bu < Vu; Bu++) Qu[Bu] = -Qu[Bu];
+              for (Jk = 0; Jk < sk; Jk++) ak[Jk] = -ak[Jk];
               break;
-            case uu.DOUBLESIDE: {
-              const uu = yu.length,
-                Ru = uu / 3;
-              for (let Eu = 0; Eu < uu; Eu++) yu[uu + Eu] = yu[Eu];
-              for (ru = 0; ru < Xu; ru += 3) Eu[ru + Xu] = Eu[ru + 2] + Ru, Eu[ru + 1 + Xu] = Eu[ru + 1] + Ru, Eu[ru + 2 + Xu] = Eu[ru] + Ru;
-              for (Bu = 0; Bu < Vu; Bu++) Qu[Vu + Bu] = -Qu[Bu];
-              const xu = mu.length;
-              let Su;
-              for (Su = 0; Su < xu; Su++) mu[Su + xu] = mu[Su];
-              for (Ju = Ju || new Ku.r(0, 0, 1, 1), Nu = Nu || new Ku.r(0, 0, 1, 1), Su = 0, ru = 0; ru < xu / 2; ru++) mu[Su] = Ju.x + (Ju.z - Ju.x) * mu[Su], mu[Su + 1] = Ju.y + (Ju.w - Ju.y) * mu[Su + 1], mu[Su + xu] = Nu.x + (Nu.z - Nu.x) * mu[Su + xu], mu[Su + xu + 1] = Nu.y + (Nu.w - Nu.y) * mu[Su + xu + 1], Su += 2;
+            case kk.DOUBLESIDE: {
+              const kk = Bk.length,
+                Fk = kk / 3;
+              for (let Rk = 0; Rk < kk; Rk++) Bk[kk + Rk] = Bk[Rk];
+              for (Vk = 0; Vk < dk; Vk += 3) Rk[Vk + dk] = Rk[Vk + 2] + Fk, Rk[Vk + 1 + dk] = Rk[Vk + 1] + Fk, Rk[Vk + 2 + dk] = Rk[Vk] + Fk;
+              for (Jk = 0; Jk < sk; Jk++) ak[sk + Jk] = -ak[Jk];
+              const Ak = Xk.length;
+              let ek;
+              for (ek = 0; ek < Ak; ek++) Xk[ek + Ak] = Xk[ek];
+              for (bk = bk || new tk.v(0, 0, 1, 1), wk = wk || new tk.v(0, 0, 1, 1), ek = 0, Vk = 0; Vk < Ak / 2; Vk++) Xk[ek] = bk.x + (bk.z - bk.x) * Xk[ek], Xk[ek + 1] = bk.y + (bk.w - bk.y) * Xk[ek + 1], Xk[ek + Ak] = wk.x + (wk.z - wk.x) * Xk[ek + Ak], Xk[ek + Ak + 1] = wk.y + (wk.w - wk.y) * Xk[ek + Ak + 1], ek += 2;
               break
             }
           }
         }
-        static Parse(Ru) {
-          const yu = new uu,
-            Eu = Ru.positions;
-          Eu && yu.set(Eu, Qu.h.PositionKind);
-          const Ku = Ru.normals;
-          Ku && yu.set(Ku, Qu.h.NormalKind);
-          const mu = Ru.tangents;
-          mu && yu.set(mu, Qu.h.TangentKind);
-          const Nu = Ru.uvs;
-          Nu && yu.set(Nu, Qu.h.UVKind);
-          const Xu = Ru.uvs2;
-          Xu && yu.set(Xu, Qu.h.UV2Kind);
-          const Vu = Ru.uvs3;
-          Vu && yu.set(Vu, Qu.h.UV3Kind);
-          const ru = Ru.uvs4;
-          ru && yu.set(ru, Qu.h.UV4Kind);
-          const Bu = Ru.uvs5;
-          Bu && yu.set(Bu, Qu.h.UV5Kind);
-          const Su = Ru.uvs6;
-          Su && yu.set(Su, Qu.h.UV6Kind);
-          const pu = Ru.colors;
-          pu && (yu.set(Ju.h.CheckColors4(pu, Eu.length / 3), Qu.h.ColorKind), void 0 !== Ru.hasVertexAlpha && (yu.hasVertexAlpha = Ru.hasVertexAlpha));
-          const Tu = Ru.matricesIndices;
-          Tu && yu.set(Tu, Qu.h.MatricesIndicesKind);
-          const Wu = Ru.matricesWeights;
-          Wu && yu.set(Wu, Qu.h.MatricesWeightsKind);
-          const ju = Ru.indices;
-          ju && (yu.indices = ju);
-          const Hu = Ru.materialInfos;
-          if (Hu) {
-            yu.materialInfos = [];
-            for (const uu of Hu) {
-              const Ru = new xu;
-              Ru.indexCount = uu.indexCount, Ru.indexStart = uu.indexStart, Ru.verticesCount = uu.verticesCount, Ru.verticesStart = uu.verticesStart, Ru.materialIndex = uu.materialIndex, yu.materialInfos.push(Ru)
+        static Parse(Fk) {
+          const Bk = new kk,
+            Rk = Fk.positions;
+          Rk && Bk.set(Rk, ak.n.PositionKind);
+          const tk = Fk.normals;
+          tk && Bk.set(tk, ak.n.NormalKind);
+          const Xk = Fk.tangents;
+          Xk && Bk.set(Xk, ak.n.TangentKind);
+          const wk = Fk.uvs;
+          wk && Bk.set(wk, ak.n.UVKind);
+          const dk = Fk.uvs2;
+          dk && Bk.set(dk, ak.n.UV2Kind);
+          const sk = Fk.uvs3;
+          sk && Bk.set(sk, ak.n.UV3Kind);
+          const Vk = Fk.uvs4;
+          Vk && Bk.set(Vk, ak.n.UV4Kind);
+          const Jk = Fk.uvs5;
+          Jk && Bk.set(Jk, ak.n.UV5Kind);
+          const ek = Fk.uvs6;
+          ek && Bk.set(ek, ak.n.UV6Kind);
+          const yk = Fk.colors;
+          yk && (Bk.set(bk.i.CheckColors4(yk, Rk.length / 3), ak.n.ColorKind), void 0 !== Fk.hasVertexAlpha && (Bk.hasVertexAlpha = Fk.hasVertexAlpha));
+          const fk = Fk.matricesIndices;
+          fk && Bk.set(fk, ak.n.MatricesIndicesKind);
+          const mk = Fk.matricesWeights;
+          mk && Bk.set(mk, ak.n.MatricesWeightsKind);
+          const Wk = Fk.indices;
+          Wk && (Bk.indices = Wk);
+          const vk = Fk.materialInfos;
+          if (vk) {
+            Bk.materialInfos = [];
+            for (const kk of vk) {
+              const Fk = new Ak;
+              Fk.indexCount = kk.indexCount, Fk.indexStart = kk.indexStart, Fk.verticesCount = kk.verticesCount, Fk.verticesStart = kk.verticesStart, Fk.materialIndex = kk.materialIndex, Bk.materialInfos.push(Fk)
             }
           }
-          return yu
+          return Bk
         }
-        static ImportVertexData(Ru, yu) {
-          const Eu = uu.Parse(Ru);
-          yu.setAllVerticesData(Eu, Ru.updatable)
+        static ImportVertexData(Fk, Bk) {
+          const Rk = kk.Parse(Fk);
+          Bk.setAllVerticesData(Rk, Fk.updatable)
         }
       }, (() => {
-        const Ku = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Ru = [Xu.g.filter((function() {
+        const tk = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        Fk = [dk.g.filter((function() {
           return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
-        }))], yu = [Xu.g.filter((function() {
+        }))], Bk = [dk.g.filter((function() {
           return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
-        }))], Su = [Xu.g.filter((function() {
+        }))], ek = [dk.g.filter((function() {
           return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
-        }))], pu = [Xu.g.filter((function() {
+        }))], yk = [dk.g.filter((function() {
           return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
-        }))], (0, Eu.h)(uu, null, Ru, {
+        }))], (0, Rk.j)(kk, null, Fk, {
           kind: "method",
           name: "_TransformVector3Coordinates",
           static: !0,
           private: !1,
           access: {
-            has: uu => "_TransformVector3Coordinates" in uu,
-            get: uu => uu._TransformVector3Coordinates
+            has: kk => "_TransformVector3Coordinates" in kk,
+            get: kk => kk._TransformVector3Coordinates
           },
-          metadata: Ku
-        }, null, Tu), (0, Eu.h)(uu, null, yu, {
+          metadata: tk
+        }, null, fk), (0, Rk.j)(kk, null, Bk, {
           kind: "method",
           name: "_TransformVector3Normals",
           static: !0,
           private: !1,
           access: {
-            has: uu => "_TransformVector3Normals" in uu,
-            get: uu => uu._TransformVector3Normals
+            has: kk => "_TransformVector3Normals" in kk,
+            get: kk => kk._TransformVector3Normals
           },
-          metadata: Ku
-        }, null, Tu), (0, Eu.h)(uu, null, Su, {
+          metadata: tk
+        }, null, fk), (0, Rk.j)(kk, null, ek, {
           kind: "method",
           name: "_TransformVector4Normals",
           static: !0,
           private: !1,
           access: {
-            has: uu => "_TransformVector4Normals" in uu,
-            get: uu => uu._TransformVector4Normals
+            has: kk => "_TransformVector4Normals" in kk,
+            get: kk => kk._TransformVector4Normals
           },
-          metadata: Ku
-        }, null, Tu), (0, Eu.h)(uu, null, pu, {
+          metadata: tk
+        }, null, fk), (0, Rk.j)(kk, null, yk, {
           kind: "method",
           name: "_FlipFaces",
           static: !0,
           private: !1,
           access: {
-            has: uu => "_FlipFaces" in uu,
-            get: uu => uu._FlipFaces
+            has: kk => "_FlipFaces" in kk,
+            get: kk => kk._FlipFaces
           },
-          metadata: Ku
-        }, null, Tu), Ku && Object.defineProperty(uu, Symbol.metadata, {
+          metadata: tk
+        }, null, fk), tk && Object.defineProperty(kk, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Ku
+          value: tk
         })
-      })(), uu.FRONTSIDE = ((0, Eu.l)(uu, Tu), 0), uu.BACKSIDE = 1, uu.DOUBLESIDE = 2, uu.DEFAULTSIDE = 0, uu._UniqueIdGenerator = 0, uu
+      })(), kk.FRONTSIDE = ((0, Rk.l)(kk, fk), 0), kk.BACKSIDE = 1, kk.DOUBLESIDE = 2, kk.DEFAULTSIDE = 0, kk._UniqueIdGenerator = 0, kk
     })()
   },
-  40057: (uu, Ru, yu) => {
-    var Eu = yu(36830),
-      Ku = yu(38448),
-      Qu = yu(39877),
-      mu = yu(39984),
-      Ju = yu(39706);
-    const Nu = "bakedVertexAnimationSettingsInstanced";
+  39897: (kk, Fk, Bk) => {
+    var Rk = Bk(36758),
+      tk = Bk(38320),
+      ak = Bk(39716),
+      Xk = Bk(39817),
+      bk = Bk(39541);
+    const wk = "bakedVertexAnimationSettingsInstanced";
 
-    function Xu(uu) {
-      const Ru = uu.bakedVertexAnimationManager?.texture?.getInternalTexture()?._bufferView;
-      return Ru instanceof Float32Array || Ru instanceof Uint16Array
+    function dk(kk) {
+      const Fk = kk.bakedVertexAnimationManager?.texture?.getInternalTexture()?._bufferView;
+      return Fk instanceof Float32Array || Fk instanceof Uint16Array
     }
 
-    function Vu(uu, Ru, yu, Eu) {
-      yu.e_(Number.POSITIVE_INFINITY), Eu.e_(Number.NEGATIVE_INFINITY);
-      for (let Ku = 0; Ku < 3 * Ru; Ku += 3) {
-        const Ru = uu[Ku],
-          Qu = uu[Ku + 1],
-          mu = uu[Ku + 2];
-        Ru < yu.x && (yu.x = Ru), Qu < yu.y && (yu.y = Qu), mu < yu.z && (yu.z = mu), Ru > Eu.x && (Eu.x = Ru), Qu > Eu.y && (Eu.y = Qu), mu > Eu.z && (Eu.z = mu)
+    function sk(kk, Fk, Bk, Rk) {
+      Bk.J_(Number.POSITIVE_INFINITY), Rk.J_(Number.NEGATIVE_INFINITY);
+      for (let tk = 0; tk < 3 * Fk; tk += 3) {
+        const Fk = kk[tk],
+          ak = kk[tk + 1],
+          Xk = kk[tk + 2];
+        Fk < Bk.x && (Bk.x = Fk), ak < Bk.y && (Bk.y = ak), Xk < Bk.z && (Bk.z = Xk), Fk > Rk.x && (Rk.x = Fk), ak > Rk.y && (Rk.y = ak), Xk > Rk.z && (Rk.z = Xk)
       }
     }
 
-    function ru(uu, Ru, yu) {
-      yu && (uu.x -= uu.x * yu.x + yu.y, uu.y -= uu.y * yu.x + yu.y, uu.z -= uu.z * yu.x + yu.y, Ru.x += Ru.x * yu.x + yu.y, Ru.y += Ru.y * yu.x + yu.y, Ru.z += Ru.z * yu.x + yu.y)
+    function Vk(kk, Fk, Bk) {
+      Bk && (kk.x -= kk.x * Bk.x + Bk.y, kk.y -= kk.y * Bk.x + Bk.y, kk.z -= kk.z * Bk.x + Bk.y, Fk.x += Fk.x * Bk.x + Bk.y, Fk.y += Fk.y * Bk.x + Bk.y, Fk.z += Fk.z * Bk.x + Bk.y)
     }
 
-    function Bu(uu, Ru, yu, Ku, Qu) {
-      const mu = Eu.m.MS[7],
-        Ju = Eu.m.MS[8];
-      for (let Nu = 0; Nu < 2; ++Nu)
-        for (let Xu = 0; Xu < 2; ++Xu)
-          for (let Vu = 0; Vu < 2; ++Vu) mu.set(Nu ? Ru.x : uu.x, Xu ? Ru.y : uu.y, Vu ? Ru.z : uu.z), Eu.p.TransformCoordinatesToRef(mu, yu, Ju), Ku.minimizeInPlace(Ju), Qu.maximizeInPlace(Ju)
+    function Jk(kk, Fk, Bk, tk, ak) {
+      const Xk = Rk.l.Qe[7],
+        bk = Rk.l.Qe[8];
+      for (let wk = 0; wk < 2; ++wk)
+        for (let dk = 0; dk < 2; ++dk)
+          for (let sk = 0; sk < 2; ++sk) Xk.set(wk ? Fk.x : kk.x, dk ? Fk.y : kk.y, sk ? Fk.z : kk.z), Rk.s.TransformCoordinatesToRef(Xk, Bk, bk), tk.minimizeInPlace(bk), ak.maximizeInPlace(bk)
     }
 
-    function xu(uu, Ru, yu, Ku, Qu) {
-      const mu = Eu.m.MS[7];
-      for (let Ju = 0; Ju < 3 * Ru; Ju += 3) Eu.p.TransformCoordinatesFromFloatsToRef(uu[Ju], uu[Ju + 1], uu[Ju + 2], yu, mu), Ku.minimizeInPlace(mu), Qu.maximizeInPlace(mu)
+    function Ak(kk, Fk, Bk, tk, ak) {
+      const Xk = Rk.l.Qe[7];
+      for (let bk = 0; bk < 3 * Fk; bk += 3) Rk.s.TransformCoordinatesFromFloatsToRef(kk[bk], kk[bk + 1], kk[bk + 2], Bk, Xk), tk.minimizeInPlace(Xk), ak.maximizeInPlace(Xk)
     }
-    let Su = !1;
-    Su || (Su = !0, mu.e.prototype.thinInstanceAdd = function(uu) {
-      let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (!this.lD().eS().getCaps().instancedArrays) return Ku.e.Error("Thin Instances are not supported on this device as Instanced Array extension not supported"), -1;
-      this._thinInstanceUpdateBufferSize("matrix", Array.isArray(uu) ? uu.length : 1);
-      const yu = this._thinInstanceDataStorage.instancesCount;
-      if (Array.isArray(uu))
-        for (let Eu = 0; Eu < uu.length; ++Eu) this.thinInstanceSetMatrixAt(this._thinInstanceDataStorage.instancesCount++, uu[Eu], Eu === uu.length - 1 && Ru);
-      else this.thinInstanceSetMatrixAt(this._thinInstanceDataStorage.instancesCount++, uu, Ru);
-      return yu
-    }, mu.e.prototype.thinInstanceAddSelf = function() {
-      let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return this.thinInstanceAdd(Eu.d.IdentityReadOnly, uu)
-    }, mu.e.prototype.thinInstanceRegisterAttribute = function(uu, Ru) {
-      uu === Ju.h.ColorKind && (uu = Ju.h.ColorInstanceKind), this.removeVerticesData(uu), this._thinInstanceInitializeUserStorage(), this._userThinInstanceBuffersStorage.strides[uu] = Ru, this._userThinInstanceBuffersStorage.sizes[uu] = Ru * Math.max(32, this._thinInstanceDataStorage.instancesCount), this._userThinInstanceBuffersStorage.data[uu] = new Float32Array(this._userThinInstanceBuffersStorage.sizes[uu]), this._userThinInstanceBuffersStorage.vertexBuffers[uu] = new Ju.h(this.eS(), this._userThinInstanceBuffersStorage.data[uu], uu, !0, !1, Ru, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[uu])
-    }, mu.e.prototype.thinInstanceSetMatrixAt = function(uu, Ru) {
-      let yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      if (!this._thinInstanceDataStorage.matrixData || uu >= this._thinInstanceDataStorage.instancesCount) return !1;
-      const Eu = this._thinInstanceDataStorage.matrixData;
-      return Ru.copyToArray(Eu, 16 * uu), this._thinInstanceDataStorage.worldMatrices && (this._thinInstanceDataStorage.worldMatrices[uu] = Ru), yu && (this.W4("matrix"), this.US || this.thinInstanceRefreshBoundingInfo(!1)), !0
-    }, mu.e.prototype.thinInstanceSetAttributeAt = function(uu, Ru, yu) {
-      let Eu = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      return uu === Ju.h.ColorKind && (uu = Ju.h.ColorInstanceKind), !(!this._userThinInstanceBuffersStorage || !this._userThinInstanceBuffersStorage.data[uu] || Ru >= this._thinInstanceDataStorage.instancesCount) && (this._thinInstanceUpdateBufferSize(uu, 0), this._userThinInstanceBuffersStorage.data[uu].set(yu, Ru * this._userThinInstanceBuffersStorage.strides[uu]), Eu && this.W4(uu), !0)
-    }, Object.defineProperty(mu.e.prototype, "F_", {
+    let ek = !1;
+    ek || (ek = !0, Xk.b.prototype.thinInstanceAdd = function(kk) {
+      let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (!this.XN().ne().getCaps().instancedArrays) return tk.b.Error("Thin Instances are not supported on this device as Instanced Array extension not supported"), -1;
+      this._thinInstanceUpdateBufferSize("matrix", Array.isArray(kk) ? kk.length : 1);
+      const Bk = this._thinInstanceDataStorage.instancesCount;
+      if (Array.isArray(kk))
+        for (let Rk = 0; Rk < kk.length; ++Rk) this.thinInstanceSetMatrixAt(this._thinInstanceDataStorage.instancesCount++, kk[Rk], Rk === kk.length - 1 && Fk);
+      else this.thinInstanceSetMatrixAt(this._thinInstanceDataStorage.instancesCount++, kk, Fk);
+      return Bk
+    }, Xk.b.prototype.thinInstanceAddSelf = function() {
+      let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return this.thinInstanceAdd(Rk.c.IdentityReadOnly, kk)
+    }, Xk.b.prototype.thinInstanceRegisterAttribute = function(kk, Fk) {
+      kk === bk.n.ColorKind && (kk = bk.n.ColorInstanceKind), this.removeVerticesData(kk), this._thinInstanceInitializeUserStorage(), this._userThinInstanceBuffersStorage.strides[kk] = Fk, this._userThinInstanceBuffersStorage.sizes[kk] = Fk * Math.max(32, this._thinInstanceDataStorage.instancesCount), this._userThinInstanceBuffersStorage.data[kk] = new Float32Array(this._userThinInstanceBuffersStorage.sizes[kk]), this._userThinInstanceBuffersStorage.vertexBuffers[kk] = new bk.n(this.ne(), this._userThinInstanceBuffersStorage.data[kk], kk, !0, !1, Fk, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[kk])
+    }, Xk.b.prototype.thinInstanceSetMatrixAt = function(kk, Fk) {
+      let Bk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      if (!this._thinInstanceDataStorage.matrixData || kk >= this._thinInstanceDataStorage.instancesCount) return !1;
+      const Rk = this._thinInstanceDataStorage.matrixData;
+      return Fk.copyToArray(Rk, 16 * kk), this._thinInstanceDataStorage.worldMatrices && (this._thinInstanceDataStorage.worldMatrices[kk] = Fk), Bk && (this.r_("matrix"), this.Fy || this.thinInstanceRefreshBoundingInfo(!1)), !0
+    }, Xk.b.prototype.thinInstanceSetAttributeAt = function(kk, Fk, Bk) {
+      let Rk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      return kk === bk.n.ColorKind && (kk = bk.n.ColorInstanceKind), !(!this._userThinInstanceBuffersStorage || !this._userThinInstanceBuffersStorage.data[kk] || Fk >= this._thinInstanceDataStorage.instancesCount) && (this._thinInstanceUpdateBufferSize(kk, 0), this._userThinInstanceBuffersStorage.data[kk].set(Bk, Fk * this._userThinInstanceBuffersStorage.strides[kk]), Rk && this.r_(kk), !0)
+    }, Object.defineProperty(Xk.b.prototype, "i_", {
       get: function() {
         return this._thinInstanceDataStorage.instancesCount
       },
-      set: function(uu) {
-        const Ru = this._thinInstanceDataStorage.matrixData ?? this.source?._thinInstanceDataStorage.matrixData;
-        uu <= (Ru ? Ru.length / 16 : 0) && (this._thinInstanceDataStorage.instancesCount = uu)
+      set: function(kk) {
+        const Fk = this._thinInstanceDataStorage.matrixData ?? this.source?._thinInstanceDataStorage.matrixData;
+        kk <= (Fk ? Fk.length / 16 : 0) && (this._thinInstanceDataStorage.instancesCount = kk)
       },
       enumerable: !0,
       configurable: !0
-    }), mu.e.prototype._thinInstanceCreateMatrixBuffer = function(uu, Ru) {
-      let yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      const Eu = new Ju.c(this.eS(), Ru, !yu, 16, !1, !0);
-      for (let Ku = 0; Ku < 4; Ku++) this.setVerticesBuffer(Eu.createVertexBuffer(uu + Ku, 4 * Ku, 4));
-      return Eu
-    }, mu.e.prototype.uuu = function(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Eu = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      if (yu = yu || 16, "matrix" === uu) this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = null, this._thinInstanceDataStorage.matrixBufferSize = Ru ? Ru.length : 32 * yu, this._thinInstanceDataStorage.matrixData = Ru, this._thinInstanceDataStorage.worldMatrices = null, null !== Ru ? (this._thinInstanceDataStorage.instancesCount = Ru.length / yu, this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", Ru, Eu), this.US || this.thinInstanceRefreshBoundingInfo(!1)) : (this._thinInstanceDataStorage.instancesCount = 0, this.US || this.refreshBoundingInfo());
-      else if ("previousMatrix" === uu) this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = null, this._thinInstanceDataStorage.previousMatrixData = Ru, null !== Ru && (this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", Ru, Eu));
-      else if ("splatIndex" === uu && Ru) {
-        this._thinInstanceInitializeUserStorage(), this._thinInstanceDataStorage.instancesCount = Ru.length / yu, this._userThinInstanceBuffersStorage.data[uu] = Ru, this._userThinInstanceBuffersStorage.strides[uu] = yu, this._userThinInstanceBuffersStorage.sizes[uu] = Ru.length;
-        const Eu = new Ju.c(this.eS(), Ru, !0, 16, !1, !0);
-        this._thinInstanceDataStorage.matrixBuffer = Eu;
-        for (let Ru = 0; Ru < 4; Ru++) this.setVerticesBuffer(Eu.createVertexBuffer(uu + Ru, 4 * Ru, 4))
-      } else uu === Ju.h.ColorKind && (uu = Ju.h.ColorInstanceKind), null === Ru ? this._userThinInstanceBuffersStorage?.data[uu] && (this.removeVerticesData(uu), delete this._userThinInstanceBuffersStorage.data[uu], delete this._userThinInstanceBuffersStorage.strides[uu], delete this._userThinInstanceBuffersStorage.sizes[uu], delete this._userThinInstanceBuffersStorage.vertexBuffers[uu]) : (this._thinInstanceInitializeUserStorage(), this._userThinInstanceBuffersStorage.data[uu] = Ru, this._userThinInstanceBuffersStorage.strides[uu] = yu, this._userThinInstanceBuffersStorage.sizes[uu] = Ru.length, this._userThinInstanceBuffersStorage.vertexBuffers[uu] = new Ju.h(this.eS(), Ru, uu, !Eu, !1, yu, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[uu]))
-    }, mu.e.prototype.W4 = function(uu) {
-      "matrix" === uu ? (this.thinInstanceAllowAutomaticStaticBufferRecreation && this._thinInstanceDataStorage.matrixBuffer && !this._thinInstanceDataStorage.matrixBuffer.isUpdatable() && this._thinInstanceRecreateBuffer(uu), this._thinInstanceDataStorage.matrixBuffer?.updateDirectly(this._thinInstanceDataStorage.matrixData, 0, this._thinInstanceDataStorage.instancesCount)) : "previousMatrix" === uu ? (this.thinInstanceAllowAutomaticStaticBufferRecreation && this._thinInstanceDataStorage.previousMatrixBuffer && !this._thinInstanceDataStorage.previousMatrixBuffer.isUpdatable() && this._thinInstanceRecreateBuffer(uu), this._thinInstanceDataStorage.previousMatrixBuffer?.updateDirectly(this._thinInstanceDataStorage.previousMatrixData, 0, this._thinInstanceDataStorage.instancesCount)) : "splatIndex" === uu ? this._thinInstanceDataStorage.matrixBuffer?.updateDirectly(this._userThinInstanceBuffersStorage.data[uu], 0, this._thinInstanceDataStorage.instancesCount) : (uu === Ju.h.ColorKind && (uu = Ju.h.ColorInstanceKind), this._userThinInstanceBuffersStorage?.vertexBuffers[uu] && (this.thinInstanceAllowAutomaticStaticBufferRecreation && !this._userThinInstanceBuffersStorage.vertexBuffers[uu].isUpdatable() && this._thinInstanceRecreateBuffer(uu), this._userThinInstanceBuffersStorage.vertexBuffers[uu].updateDirectly(this._userThinInstanceBuffersStorage.data[uu], 0)))
-    }, mu.e.prototype.thinInstancePartialBufferUpdate = function(uu, Ru, yu) {
-      if ("matrix" === uu) this._thinInstanceDataStorage.matrixBuffer && ("number" === typeof Ru ? this._thinInstanceDataStorage.matrixBuffer.updateDirectly(new Float32Array(this._thinInstanceDataStorage.matrixData.buffer, this._thinInstanceDataStorage.matrixData.byteOffset + 16 * yu * Float32Array.BYTES_PER_ELEMENT, 16 * Ru), 16 * yu) : this._thinInstanceDataStorage.matrixBuffer.updateDirectly(Ru, yu));
-      else if (uu === Ju.h.ColorKind && (uu = Ju.h.ColorInstanceKind), this._userThinInstanceBuffersStorage?.vertexBuffers[uu]) {
-        const Eu = this._userThinInstanceBuffersStorage.vertexBuffers[uu];
-        if ("number" === typeof Ru) {
-          const Eu = new Float32Array(this._userThinInstanceBuffersStorage.data[uu].buffer, this._userThinInstanceBuffersStorage.data[uu].byteOffset + yu * this._userThinInstanceBuffersStorage.strides[uu] * Float32Array.BYTES_PER_ELEMENT, Ru * this._userThinInstanceBuffersStorage.strides[uu]);
-          this._userThinInstanceBuffersStorage.vertexBuffers[uu].updateDirectly(Eu, yu * this._userThinInstanceBuffersStorage.strides[uu])
-        } else Eu.updateDirectly(Ru, yu)
+    }), Xk.b.prototype._thinInstanceCreateMatrixBuffer = function(kk, Fk) {
+      let Bk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      const Rk = new bk.d(this.ne(), Fk, !Bk, 16, !1, !0);
+      for (let tk = 0; tk < 4; tk++) this.setVerticesBuffer(Rk.createVertexBuffer(kk + tk, 4 * tk, 4));
+      return Rk
+    }, Xk.b.prototype.x_ = function(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Rk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      if (Bk = Bk || 16, "matrix" === kk) this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = null, this._thinInstanceDataStorage.matrixBufferSize = Fk ? Fk.length : 32 * Bk, this._thinInstanceDataStorage.matrixData = Fk, this._thinInstanceDataStorage.worldMatrices = null, null !== Fk ? (this._thinInstanceDataStorage.instancesCount = Fk.length / Bk, this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", Fk, Rk), this.Fy || this.thinInstanceRefreshBoundingInfo(!1)) : (this._thinInstanceDataStorage.instancesCount = 0, this.Fy || this.refreshBoundingInfo());
+      else if ("previousMatrix" === kk) this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = null, this._thinInstanceDataStorage.previousMatrixData = Fk, null !== Fk && (this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", Fk, Rk));
+      else if ("splatIndex" === kk && Fk) {
+        this._thinInstanceInitializeUserStorage(), this._thinInstanceDataStorage.instancesCount = Fk.length / Bk, this._userThinInstanceBuffersStorage.data[kk] = Fk, this._userThinInstanceBuffersStorage.strides[kk] = Bk, this._userThinInstanceBuffersStorage.sizes[kk] = Fk.length;
+        const Rk = new bk.d(this.ne(), Fk, !0, 16, !1, !0);
+        this._thinInstanceDataStorage.matrixBuffer = Rk;
+        for (let Fk = 0; Fk < 4; Fk++) this.setVerticesBuffer(Rk.createVertexBuffer(kk + Fk, 4 * Fk, 4))
+      } else kk === bk.n.ColorKind && (kk = bk.n.ColorInstanceKind), null === Fk ? this._userThinInstanceBuffersStorage?.data[kk] && (this.removeVerticesData(kk), delete this._userThinInstanceBuffersStorage.data[kk], delete this._userThinInstanceBuffersStorage.strides[kk], delete this._userThinInstanceBuffersStorage.sizes[kk], delete this._userThinInstanceBuffersStorage.vertexBuffers[kk]) : (this._thinInstanceInitializeUserStorage(), this._userThinInstanceBuffersStorage.data[kk] = Fk, this._userThinInstanceBuffersStorage.strides[kk] = Bk, this._userThinInstanceBuffersStorage.sizes[kk] = Fk.length, this._userThinInstanceBuffersStorage.vertexBuffers[kk] = new bk.n(this.ne(), Fk, kk, !Rk, !1, Bk, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[kk]))
+    }, Xk.b.prototype.r_ = function(kk) {
+      "matrix" === kk ? (this.thinInstanceAllowAutomaticStaticBufferRecreation && this._thinInstanceDataStorage.matrixBuffer && !this._thinInstanceDataStorage.matrixBuffer.isUpdatable() && this._thinInstanceRecreateBuffer(kk), this._thinInstanceDataStorage.matrixBuffer?.updateDirectly(this._thinInstanceDataStorage.matrixData, 0, this._thinInstanceDataStorage.instancesCount)) : "previousMatrix" === kk ? (this.thinInstanceAllowAutomaticStaticBufferRecreation && this._thinInstanceDataStorage.previousMatrixBuffer && !this._thinInstanceDataStorage.previousMatrixBuffer.isUpdatable() && this._thinInstanceRecreateBuffer(kk), this._thinInstanceDataStorage.previousMatrixBuffer?.updateDirectly(this._thinInstanceDataStorage.previousMatrixData, 0, this._thinInstanceDataStorage.instancesCount)) : "splatIndex" === kk ? this._thinInstanceDataStorage.matrixBuffer?.updateDirectly(this._userThinInstanceBuffersStorage.data[kk], 0, this._thinInstanceDataStorage.instancesCount) : (kk === bk.n.ColorKind && (kk = bk.n.ColorInstanceKind), this._userThinInstanceBuffersStorage?.vertexBuffers[kk] && (this.thinInstanceAllowAutomaticStaticBufferRecreation && !this._userThinInstanceBuffersStorage.vertexBuffers[kk].isUpdatable() && this._thinInstanceRecreateBuffer(kk), this._userThinInstanceBuffersStorage.vertexBuffers[kk].updateDirectly(this._userThinInstanceBuffersStorage.data[kk], 0)))
+    }, Xk.b.prototype.thinInstancePartialBufferUpdate = function(kk, Fk, Bk) {
+      if ("matrix" === kk) this._thinInstanceDataStorage.matrixBuffer && ("number" === typeof Fk ? this._thinInstanceDataStorage.matrixBuffer.updateDirectly(new Float32Array(this._thinInstanceDataStorage.matrixData.buffer, this._thinInstanceDataStorage.matrixData.byteOffset + 16 * Bk * Float32Array.BYTES_PER_ELEMENT, 16 * Fk), 16 * Bk) : this._thinInstanceDataStorage.matrixBuffer.updateDirectly(Fk, Bk));
+      else if (kk === bk.n.ColorKind && (kk = bk.n.ColorInstanceKind), this._userThinInstanceBuffersStorage?.vertexBuffers[kk]) {
+        const Rk = this._userThinInstanceBuffersStorage.vertexBuffers[kk];
+        if ("number" === typeof Fk) {
+          const Rk = new Float32Array(this._userThinInstanceBuffersStorage.data[kk].buffer, this._userThinInstanceBuffersStorage.data[kk].byteOffset + Bk * this._userThinInstanceBuffersStorage.strides[kk] * Float32Array.BYTES_PER_ELEMENT, Fk * this._userThinInstanceBuffersStorage.strides[kk]);
+          this._userThinInstanceBuffersStorage.vertexBuffers[kk].updateDirectly(Rk, Bk * this._userThinInstanceBuffersStorage.strides[kk])
+        } else Rk.updateDirectly(Fk, Bk)
       }
-    }, mu.e.prototype.thinInstanceGetWorldMatrices = function() {
+    }, Xk.b.prototype.thinInstanceGetWorldMatrices = function() {
       if (!this._thinInstanceDataStorage.matrixData || !this._thinInstanceDataStorage.matrixBuffer) return [];
-      const uu = this._thinInstanceDataStorage.matrixData;
+      const kk = this._thinInstanceDataStorage.matrixData;
       if (!this._thinInstanceDataStorage.worldMatrices) {
         this._thinInstanceDataStorage.worldMatrices = [];
-        for (let Ru = 0; Ru < this._thinInstanceDataStorage.instancesCount; ++Ru) this._thinInstanceDataStorage.worldMatrices[Ru] = Eu.d.FromArray(uu, 16 * Ru)
+        for (let Fk = 0; Fk < this._thinInstanceDataStorage.instancesCount; ++Fk) this._thinInstanceDataStorage.worldMatrices[Fk] = Rk.c.FromArray(kk, 16 * Fk)
       }
       return this._thinInstanceDataStorage.worldMatrices
-    }, mu.e.prototype.thinInstanceRefreshBoundingInfo = function() {
-      let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Ku = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    }, Xk.b.prototype.thinInstanceRefreshBoundingInfo = function() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        Bk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        tk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
       if (!this._thinInstanceDataStorage.matrixData || !this._thinInstanceDataStorage.matrixBuffer) return;
-      const mu = this._thinInstanceDataStorage.boundingVectors;
-      if (uu || !this.rawBoundingInfo) {
-        if (mu.length = 0, Ku && function(uu, Ru, yu) {
-            const Ku = uu._userThinInstanceBuffersStorage,
-              mu = Ku?.data[Nu],
-              Su = Ku?.strides[Nu];
-            if (!mu || !Su || Su < 4 || !Xu(uu)) return !1;
-            const pu = uu._thinInstanceDataStorage.matrixData;
-            if (!pu) return !1;
-            const Tu = {},
-              Wu = Eu.m.Vector4[0],
-              ju = Eu.m.MS[1],
-              Hu = Eu.m.MS[2],
-              du = Eu.m.MS[3],
-              bu = Eu.m.MS[4],
-              Cu = Eu.m.MS[5],
-              ku = Eu.m.MS[6],
-              eu = Eu.m.Matrix[2],
-              Au = uu.geometry ? uu.geometry.boundingBias : null,
-              Du = uu.getTotalVertices();
-            ju.e_(Number.POSITIVE_INFINITY), Hu.e_(Number.NEGATIVE_INFINITY), du.e_(Number.POSITIVE_INFINITY), bu.e_(Number.NEGATIVE_INFINITY);
-            for (let Qu = 0; Qu < uu._thinInstanceDataStorage.instancesCount; ++Qu) {
-              const Ru = Qu * Su;
-              Wu.set(mu[Ru], mu[Ru + 1], mu[Ru + 2], mu[Ru + 3]);
-              const Ku = uu._getData({
-                applyMorph: yu,
+      const Xk = this._thinInstanceDataStorage.boundingVectors;
+      if (kk || !this.rawBoundingInfo) {
+        if (Xk.length = 0, tk && function(kk, Fk, Bk) {
+            const tk = kk._userThinInstanceBuffersStorage,
+              Xk = tk?.data[wk],
+              ek = tk?.strides[wk];
+            if (!Xk || !ek || ek < 4 || !dk(kk)) return !1;
+            const yk = kk._thinInstanceDataStorage.matrixData;
+            if (!yk) return !1;
+            const fk = {},
+              mk = Rk.l.Vector4[0],
+              Wk = Rk.l.Qe[1],
+              vk = Rk.l.Qe[2],
+              ik = Rk.l.Qe[3],
+              Yk = Rk.l.Qe[4],
+              Lk = Rk.l.Qe[5],
+              Ok = Rk.l.Qe[6],
+              Ek = Rk.l.Matrix[2],
+              Sk = kk.geometry ? kk.geometry.boundingBias : null,
+              Nk = kk.getTotalVertices();
+            Wk.J_(Number.POSITIVE_INFINITY), vk.J_(Number.NEGATIVE_INFINITY), ik.J_(Number.POSITIVE_INFINITY), Yk.J_(Number.NEGATIVE_INFINITY);
+            for (let ak = 0; ak < kk._thinInstanceDataStorage.instancesCount; ++ak) {
+              const Fk = ak * ek;
+              mk.set(Xk[Fk], Xk[Fk + 1], Xk[Fk + 2], Xk[Fk + 3]);
+              const tk = kk._getData({
+                applyMorph: Bk,
                 applyBakedVertexAnimation: !0,
-                bakedVertexAnimationSettings: Wu,
+                bakedVertexAnimationSettings: mk,
                 updatePositionsArray: !1,
-                cache: Tu
-              }, null, Ju.h.PositionKind);
-              if (!Ku) return !1;
-              Vu(Ku, Du, Cu, ku), ru(Cu, ku, Au), ju.minimizeInPlace(Cu), Hu.maximizeInPlace(ku), Eu.d.FromArrayToRef(pu, 16 * Qu, eu), Au ? Bu(Cu, ku, eu, du, bu) : xu(Ku, Du, eu, du, bu)
+                cache: fk
+              }, null, bk.n.PositionKind);
+              if (!tk) return !1;
+              sk(tk, Nk, Lk, Ok), Vk(Lk, Ok, Sk), Wk.minimizeInPlace(Lk), vk.maximizeInPlace(Ok), Rk.c.FromArrayToRef(yk, 16 * ak, Ek), Sk ? Jk(Lk, Ok, Ek, ik, Yk) : Ak(tk, Nk, Ek, ik, Yk)
             }
-            return !(!isFinite(ju.x) || !isFinite(du.x)) && (uu.vI().reConstruct(du, bu), uu.rawBoundingInfo = new Qu.c(ju, Hu), function(uu, Ru) {
-              uu.length = 0;
-              for (let yu = 0; yu < Ru.boundingBox.vectors.length; ++yu) uu.push(Ru.boundingBox.vectors[yu].clone())
-            }(Ru, uu.rawBoundingInfo), uu._updateBoundingInfo(), !0)
-          }(this, mu, yu)) return;
-        Ku && this.bakedVertexAnimationManager?.isEnabled && Xu(this) ? this.refreshBoundingInfo({
-          applySkeleton: Ru,
-          applyMorph: yu,
+            return !(!isFinite(Wk.x) || !isFinite(ik.x)) && (kk.ZH().reConstruct(ik, Yk), kk.rawBoundingInfo = new ak.b(Wk, vk), function(kk, Fk) {
+              kk.length = 0;
+              for (let Bk = 0; Bk < Fk.boundingBox.vectors.length; ++Bk) kk.push(Fk.boundingBox.vectors[Bk].clone())
+            }(Fk, kk.rawBoundingInfo), kk._updateBoundingInfo(), !0)
+          }(this, Xk, Bk)) return;
+        tk && this.bakedVertexAnimationManager?.isEnabled && dk(this) ? this.refreshBoundingInfo({
+          applySkeleton: Fk,
+          applyMorph: Bk,
           applyBakedVertexAnimation: !0,
           updatePositionsArray: !1
-        }) : this.refreshBoundingInfo(Ru, yu);
-        const uu = this.vI();
-        this.rawBoundingInfo = new Qu.c(uu.minimum, uu.maximum)
+        }) : this.refreshBoundingInfo(Fk, Bk);
+        const kk = this.ZH();
+        this.rawBoundingInfo = new ak.b(kk.minimum, kk.maximum)
       }
-      const Su = this.vI(),
-        pu = this._thinInstanceDataStorage.matrixData;
-      if (0 === mu.length)
-        for (let Eu = 0; Eu < Su.boundingBox.vectors.length; ++Eu) mu.push(Su.boundingBox.vectors[Eu].clone());
-      Eu.m.MS[0].e_(Number.POSITIVE_INFINITY), Eu.m.MS[1].e_(Number.NEGATIVE_INFINITY);
-      for (let Qu = 0; Qu < this._thinInstanceDataStorage.instancesCount; ++Qu) {
-        Eu.d.FromArrayToRef(pu, 16 * Qu, Eu.m.Matrix[0]);
-        for (let uu = 0; uu < mu.length; ++uu) Eu.p.TransformCoordinatesToRef(mu[uu], Eu.m.Matrix[0], Eu.m.MS[2]), Eu.m.MS[0].minimizeInPlace(Eu.m.MS[2]), Eu.m.MS[1].maximizeInPlace(Eu.m.MS[2])
+      const ek = this.ZH(),
+        yk = this._thinInstanceDataStorage.matrixData;
+      if (0 === Xk.length)
+        for (let Rk = 0; Rk < ek.boundingBox.vectors.length; ++Rk) Xk.push(ek.boundingBox.vectors[Rk].clone());
+      Rk.l.Qe[0].J_(Number.POSITIVE_INFINITY), Rk.l.Qe[1].J_(Number.NEGATIVE_INFINITY);
+      for (let ak = 0; ak < this._thinInstanceDataStorage.instancesCount; ++ak) {
+        Rk.c.FromArrayToRef(yk, 16 * ak, Rk.l.Matrix[0]);
+        for (let kk = 0; kk < Xk.length; ++kk) Rk.s.TransformCoordinatesToRef(Xk[kk], Rk.l.Matrix[0], Rk.l.Qe[2]), Rk.l.Qe[0].minimizeInPlace(Rk.l.Qe[2]), Rk.l.Qe[1].maximizeInPlace(Rk.l.Qe[2])
       }
-      Su.reConstruct(Eu.m.MS[0], Eu.m.MS[1]), this._updateBoundingInfo()
-    }, mu.e.prototype._thinInstanceRecreateBuffer = function(uu) {
-      let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      "matrix" === uu ? (this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", this._thinInstanceDataStorage.matrixData, Ru)) : "previousMatrix" === uu ? this._scene.needsPreviousWorldMatrices && (this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", this._thinInstanceDataStorage.previousMatrixData ?? this._thinInstanceDataStorage.matrixData, Ru)) : (uu === Ju.h.ColorKind && (uu = Ju.h.ColorInstanceKind), this._userThinInstanceBuffersStorage.vertexBuffers[uu]?.dispose(), this._userThinInstanceBuffersStorage.vertexBuffers[uu] = new Ju.h(this.eS(), this._userThinInstanceBuffersStorage.data[uu], uu, !Ru, !1, this._userThinInstanceBuffersStorage.strides[uu], !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[uu]))
-    }, mu.e.prototype._thinInstanceUpdateBufferSize = function(uu) {
-      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      uu === Ju.h.ColorKind && (uu = Ju.h.ColorInstanceKind);
-      const yu = "matrix" === uu;
-      if (!yu && (!this._userThinInstanceBuffersStorage || !this._userThinInstanceBuffersStorage.strides[uu])) return;
-      const Eu = yu ? 16 : this._userThinInstanceBuffersStorage.strides[uu],
-        Ku = yu ? this._thinInstanceDataStorage.matrixBufferSize : this._userThinInstanceBuffersStorage.sizes[uu];
-      let Qu = yu ? this._thinInstanceDataStorage.matrixData : this._userThinInstanceBuffersStorage.data[uu];
-      const mu = (this._thinInstanceDataStorage.instancesCount + Ru) * Eu;
-      let Nu = Ku;
-      for (; Nu < mu;) Nu *= 2;
-      if (!Qu || Ku != Nu) {
-        if (Qu) {
-          const uu = new Float32Array(Nu);
-          uu.set(Qu, 0), Qu = uu
-        } else Qu = new Float32Array(Nu);
-        yu ? (this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", Qu, !1), this._thinInstanceDataStorage.matrixData = Qu, this._thinInstanceDataStorage.matrixBufferSize = Nu, this._scene.needsPreviousWorldMatrices && !this._thinInstanceDataStorage.previousMatrixData && (this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", Qu, !1))) : (this._userThinInstanceBuffersStorage.vertexBuffers[uu]?.dispose(), this._userThinInstanceBuffersStorage.data[uu] = Qu, this._userThinInstanceBuffersStorage.sizes[uu] = Nu, this._userThinInstanceBuffersStorage.vertexBuffers[uu] = new Ju.h(this.eS(), Qu, uu, !0, !1, Eu, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[uu]))
+      ek.reConstruct(Rk.l.Qe[0], Rk.l.Qe[1]), this._updateBoundingInfo()
+    }, Xk.b.prototype._thinInstanceRecreateBuffer = function(kk) {
+      let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      "matrix" === kk ? (this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", this._thinInstanceDataStorage.matrixData, Fk)) : "previousMatrix" === kk ? this._scene.needsPreviousWorldMatrices && (this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", this._thinInstanceDataStorage.previousMatrixData ?? this._thinInstanceDataStorage.matrixData, Fk)) : (kk === bk.n.ColorKind && (kk = bk.n.ColorInstanceKind), this._userThinInstanceBuffersStorage.vertexBuffers[kk]?.dispose(), this._userThinInstanceBuffersStorage.vertexBuffers[kk] = new bk.n(this.ne(), this._userThinInstanceBuffersStorage.data[kk], kk, !Fk, !1, this._userThinInstanceBuffersStorage.strides[kk], !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[kk]))
+    }, Xk.b.prototype._thinInstanceUpdateBufferSize = function(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      kk === bk.n.ColorKind && (kk = bk.n.ColorInstanceKind);
+      const Bk = "matrix" === kk;
+      if (!Bk && (!this._userThinInstanceBuffersStorage || !this._userThinInstanceBuffersStorage.strides[kk])) return;
+      const Rk = Bk ? 16 : this._userThinInstanceBuffersStorage.strides[kk],
+        tk = Bk ? this._thinInstanceDataStorage.matrixBufferSize : this._userThinInstanceBuffersStorage.sizes[kk];
+      let ak = Bk ? this._thinInstanceDataStorage.matrixData : this._userThinInstanceBuffersStorage.data[kk];
+      const Xk = (this._thinInstanceDataStorage.instancesCount + Fk) * Rk;
+      let wk = tk;
+      for (; wk < Xk;) wk *= 2;
+      if (!ak || tk != wk) {
+        if (ak) {
+          const kk = new Float32Array(wk);
+          kk.set(ak, 0), ak = kk
+        } else ak = new Float32Array(wk);
+        Bk ? (this._thinInstanceDataStorage.matrixBuffer?.dispose(), this._thinInstanceDataStorage.matrixBuffer = this._thinInstanceCreateMatrixBuffer("world", ak, !1), this._thinInstanceDataStorage.matrixData = ak, this._thinInstanceDataStorage.matrixBufferSize = wk, this._scene.needsPreviousWorldMatrices && !this._thinInstanceDataStorage.previousMatrixData && (this._thinInstanceDataStorage.previousMatrixBuffer?.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = this._thinInstanceCreateMatrixBuffer("previousWorld", ak, !1))) : (this._userThinInstanceBuffersStorage.vertexBuffers[kk]?.dispose(), this._userThinInstanceBuffersStorage.data[kk] = ak, this._userThinInstanceBuffersStorage.sizes[kk] = wk, this._userThinInstanceBuffersStorage.vertexBuffers[kk] = new bk.n(this.ne(), ak, kk, !0, !1, Rk, !0), this.setVerticesBuffer(this._userThinInstanceBuffersStorage.vertexBuffers[kk]))
       }
-    }, mu.e.prototype._thinInstanceInitializeUserStorage = function() {
+    }, Xk.b.prototype._thinInstanceInitializeUserStorage = function() {
       this._userThinInstanceBuffersStorage || (this._userThinInstanceBuffersStorage = {
         data: {},
         sizes: {},
         vertexBuffers: {},
         strides: {}
       })
-    }, mu.e.prototype._disposeThinInstanceSpecificData = function() {
+    }, Xk.b.prototype._disposeThinInstanceSpecificData = function() {
       this._thinInstanceDataStorage?.matrixBuffer && (this._thinInstanceDataStorage.matrixBuffer.dispose(), this._thinInstanceDataStorage.matrixBuffer = null), this._thinInstanceDataStorage?.previousMatrixBuffer && (this._thinInstanceDataStorage.previousMatrixBuffer.dispose(), this._thinInstanceDataStorage.previousMatrixBuffer = null)
     })
   },
-  40017: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => ju,
-      d: () => pu
+  39857: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Wk,
+      e: () => yk
     });
-    var Eu, Ku, Qu, mu, Ju = yu(39560),
-      Nu = yu(39566),
-      Xu = yu(39582),
-      Vu = yu(36858),
-      ru = yu(36830),
-      Bu = yu(39780),
-      xu = yu(36871),
-      Su = yu(39430);
-    let pu = (() => {
-      var uu;
-      let Ru, yu, Eu, Ku, Qu, mu, xu, Su, pu, Tu = Bu.e,
-        Wu = [],
-        ju = [],
-        Hu = [],
-        du = [],
-        bu = [],
-        Cu = [],
-        ku = [],
-        eu = [],
-        Au = [],
-        Du = [],
-        Mu = [],
-        Iu = [],
-        Gu = [],
-        Uu = [],
-        nu = [],
-        su = [],
-        tu = [],
-        lu = [];
-      return uu = class extends Tu {
+    var Rk, tk, ak, Xk, bk = Bk(39397),
+      wk = Bk(39404),
+      dk = Bk(39414),
+      sk = Bk(36781),
+      Vk = Bk(36758),
+      Jk = Bk(39628),
+      Ak = Bk(36798),
+      ek = Bk(39296);
+    let yk = (() => {
+      var kk;
+      let Fk, Bk, Rk, tk, ak, Xk, Ak, ek, yk, fk = Jk.b,
+        mk = [],
+        Wk = [],
+        vk = [],
+        ik = [],
+        Yk = [],
+        Lk = [],
+        Ok = [],
+        Ek = [],
+        Sk = [],
+        Nk = [],
+        Hk = [],
+        uk = [],
+        Mk = [],
+        gk = [],
+        Uk = [],
+        ck = [],
+        Gk = [],
+        Tk = [];
+      return kk = class extends fk {
         get billboardMode() {
           return this._billboardMode
         }
-        set billboardMode(Ru) {
-          this._billboardMode !== Ru && (this._billboardMode = Ru, this._cache.useBillboardPosition = 0 !== (this._billboardMode & uu.BILLBOARDMODE_USE_POSITION))
+        set billboardMode(Fk) {
+          this._billboardMode !== Fk && (this._billboardMode = Fk, this._cache.useBillboardPosition = 0 !== (this._billboardMode & kk.BILLBOARDMODE_USE_POSITION))
         }
         get infiniteDistance() {
           return this._infiniteDistance
         }
-        set infiniteDistance(uu) {
-          this._infiniteDistance !== uu && (this._infiniteDistance = uu)
+        set infiniteDistance(kk) {
+          this._infiniteDistance !== kk && (this._infiniteDistance = kk)
         }
-        constructor(Ru) {
-          let yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-          super(Ru, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, !1), this._forward = new ru.p(0, 0, 1), this._up = new ru.p(0, 1, 0), this._right = new ru.p(1, 0, 0), this._position = (0, Ju.l)(this, Wu, ru.p.Zero()), this._rotation = ((0, Ju.l)(this, ju), (0, Ju.l)(this, Hu, ru.p.Zero())), this._rotationQuaternion = ((0, Ju.l)(this, du), (0, Ju.l)(this, bu, null)), this._scaling = ((0, Ju.l)(this, Cu), (0, Ju.l)(this, ku, ru.p.One())), this._transformToBoneReferal = ((0, Ju.l)(this, eu), null), this._isAbsoluteSynced = !1, this._billboardMode = (0, Ju.l)(this, Au, uu.BILLBOARDMODE_NONE), this.scalingDeterminant = ((0, Ju.l)(this, Du), (0, Ju.l)(this, Mu, 1)), this._infiniteDistance = ((0, Ju.l)(this, Iu), (0, Ju.l)(this, Gu, !1)), this.ignoreNonUniformScaling = ((0, Ju.l)(this, Uu), (0, Ju.l)(this, nu, !1)), this.reIntegrateRotationIntoRotationQuaternion = ((0, Ju.l)(this, su), (0, Ju.l)(this, tu, !1)), this._poseMatrix = ((0, Ju.l)(this, lu), null), this._localMatrix = ru.d.Zero(), this._usePivotMatrix = !1, this._absolutePosition = ru.p.Zero(), this._absoluteScaling = ru.p.Zero(), this._absoluteRotationQuaternion = ru.f.Identity(), this._pivotMatrix = ru.d.Identity(), this._postMultiplyPivotMatrix = !1, this._isWorldMatrixFrozen = !1, this._indexInSceneTransformNodesArray = -1, this.onAfterWorldMatrixUpdateObservable = new Vu.b, this._nonUniformScaling = !1, yu && this.lD().addTransformNode(this)
+        constructor(Fk) {
+          let Bk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+          super(Fk, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, !1), this._forward = new Vk.s(0, 0, 1), this._up = new Vk.s(0, 1, 0), this._right = new Vk.s(1, 0, 0), this._position = (0, bk.l)(this, mk, Vk.s.Zero()), this._rotation = ((0, bk.l)(this, Wk), (0, bk.l)(this, vk, Vk.s.Zero())), this._rotationQuaternion = ((0, bk.l)(this, ik), (0, bk.l)(this, Yk, null)), this._scaling = ((0, bk.l)(this, Lk), (0, bk.l)(this, Ok, Vk.s.One())), this._transformToBoneReferal = ((0, bk.l)(this, Ek), null), this._isAbsoluteSynced = !1, this._billboardMode = (0, bk.l)(this, Sk, kk.BILLBOARDMODE_NONE), this.scalingDeterminant = ((0, bk.l)(this, Nk), (0, bk.l)(this, Hk, 1)), this._infiniteDistance = ((0, bk.l)(this, uk), (0, bk.l)(this, Mk, !1)), this.ignoreNonUniformScaling = ((0, bk.l)(this, gk), (0, bk.l)(this, Uk, !1)), this.reIntegrateRotationIntoRotationQuaternion = ((0, bk.l)(this, ck), (0, bk.l)(this, Gk, !1)), this._poseMatrix = ((0, bk.l)(this, Tk), null), this._localMatrix = Vk.c.Zero(), this._usePivotMatrix = !1, this._absolutePosition = Vk.s.Zero(), this._absoluteScaling = Vk.s.Zero(), this._absoluteRotationQuaternion = Vk.e.Identity(), this._pivotMatrix = Vk.c.Identity(), this._postMultiplyPivotMatrix = !1, this._isWorldMatrixFrozen = !1, this._indexInSceneTransformNodesArray = -1, this.onAfterWorldMatrixUpdateObservable = new sk.e, this._nonUniformScaling = !1, Bk && this.XN().addTransformNode(this)
         }
         getClassName() {
           return "TransformNode"
@@ -7125,8 +7125,8 @@ export const modules = {
         get position() {
           return this._position
         }
-        set position(uu) {
-          this._position = uu, this._markAsDirtyInternal()
+        set position(kk) {
+          this._position = kk, this._markAsDirtyInternal()
         }
         isUsingPivotMatrix() {
           return this._usePivotMatrix
@@ -7137,47 +7137,47 @@ export const modules = {
         get rotation() {
           return this._rotation
         }
-        set rotation(uu) {
-          this._rotation = uu, this._rotationQuaternion = null, this._markAsDirtyInternal()
+        set rotation(kk) {
+          this._rotation = kk, this._rotationQuaternion = null, this._markAsDirtyInternal()
         }
-        get pp() {
+        get ta() {
           return this._scaling
         }
-        set pp(uu) {
-          this._scaling = uu, this._markAsDirtyInternal()
+        set ta(kk) {
+          this._scaling = kk, this._markAsDirtyInternal()
         }
         get rotationQuaternion() {
           return this._rotationQuaternion
         }
-        set rotationQuaternion(uu) {
-          this._rotationQuaternion = uu, uu && this._rotation.e_(0), this._markAsDirtyInternal()
+        set rotationQuaternion(kk) {
+          this._rotationQuaternion = kk, kk && this._rotation.J_(0), this._markAsDirtyInternal()
         }
         _markAsDirtyInternal() {
           this._isDirty || (this._isDirty = !0, this.customMarkAsDirty && this.customMarkAsDirty())
         }
         get forward() {
-          return ru.p.TransformNormalFromFloatsToRef(0, 0, this.lD().useRightHandedSystem ? -1 : 1, this.getWorldMatrix(), this._forward), this._forward.normalize()
+          return Vk.s.TransformNormalFromFloatsToRef(0, 0, this.XN().useRightHandedSystem ? -1 : 1, this.getWorldMatrix(), this._forward), this._forward.normalize()
         }
         get up() {
-          return ru.p.TransformNormalFromFloatsToRef(0, 1, 0, this.getWorldMatrix(), this._up), this._up.normalize()
+          return Vk.s.TransformNormalFromFloatsToRef(0, 1, 0, this.getWorldMatrix(), this._up), this._up.normalize()
         }
         get right() {
-          return ru.p.TransformNormalFromFloatsToRef(this.lD().useRightHandedSystem ? -1 : 1, 0, 0, this.getWorldMatrix(), this._right), this._right.normalize()
+          return Vk.s.TransformNormalFromFloatsToRef(this.XN().useRightHandedSystem ? -1 : 1, 0, 0, this.getWorldMatrix(), this._right), this._right.normalize()
         }
-        updatePoseMatrix(uu) {
-          return this._poseMatrix ? (this._poseMatrix.Oyu(uu), this) : (this._poseMatrix = uu.clone(), this)
+        updatePoseMatrix(kk) {
+          return this._poseMatrix ? (this._poseMatrix.sBk(kk), this) : (this._poseMatrix = kk.clone(), this)
         }
         getPoseMatrix() {
-          return this._poseMatrix || (this._poseMatrix = ru.d.Identity()), this._poseMatrix
+          return this._poseMatrix || (this._poseMatrix = Vk.c.Identity()), this._poseMatrix
         }
         _isSynchronized() {
-          const Ru = this._cache;
-          return this._billboardMode === Ru.billboardMode && this._billboardMode === uu.BILLBOARDMODE_NONE && (!Ru.pivotMatrixUpdated && (!this._infiniteDistance && (!this._position._isDirty && (!this._scaling._isDirty && !(this._rotationQuaternion && this._rotationQuaternion._isDirty || this._rotation._isDirty)))))
+          const Fk = this._cache;
+          return this._billboardMode === Fk.billboardMode && this._billboardMode === kk.BILLBOARDMODE_NONE && (!Fk.pivotMatrixUpdated && (!this._infiniteDistance && (!this._position._isDirty && (!this._scaling._isDirty && !(this._rotationQuaternion && this._rotationQuaternion._isDirty || this._rotation._isDirty)))))
         }
         _initCache() {
           super._initCache();
-          const uu = this._cache;
-          uu.localMatrixUpdated = !1, uu.billboardMode = -1, uu.infiniteDistance = !1, uu.useBillboardPosition = !1
+          const kk = this._cache;
+          kk.localMatrixUpdated = !1, kk.billboardMode = -1, kk.infiniteDistance = !1, kk.useBillboardPosition = !1
         }
         get absolutePosition() {
           return this.getAbsolutePosition()
@@ -7188,566 +7188,566 @@ export const modules = {
         get absoluteRotationQuaternion() {
           return this._syncAbsoluteScalingAndRotation(), this._absoluteRotationQuaternion
         }
-        setPreTransformMatrix(uu) {
-          return this.setPivotMatrix(uu, !1)
+        setPreTransformMatrix(kk) {
+          return this.setPivotMatrix(kk, !1)
         }
-        setPivotMatrix(uu) {
-          let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          return this._pivotMatrix.Oyu(uu), this._usePivotMatrix = !this._pivotMatrix.isIdentity(), this._cache.pivotMatrixUpdated = !0, this._postMultiplyPivotMatrix = Ru, this._postMultiplyPivotMatrix && (this._pivotMatrixInverse ? this._pivotMatrix.invertToRef(this._pivotMatrixInverse) : this._pivotMatrixInverse = ru.d.Invert(this._pivotMatrix)), this
+        setPivotMatrix(kk) {
+          let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          return this._pivotMatrix.sBk(kk), this._usePivotMatrix = !this._pivotMatrix.isIdentity(), this._cache.pivotMatrixUpdated = !0, this._postMultiplyPivotMatrix = Fk, this._postMultiplyPivotMatrix && (this._pivotMatrixInverse ? this._pivotMatrix.invertToRef(this._pivotMatrixInverse) : this._pivotMatrixInverse = Vk.c.Invert(this._pivotMatrix)), this
         }
         getPivotMatrix() {
           return this._pivotMatrix
         }
         instantiateHierarchy() {
-          let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-            Ru = arguments.length > 1 ? arguments[1] : void 0,
-            yu = arguments.length > 2 ? arguments[2] : void 0;
-          const Eu = this.clone("Clone of " + (this.name || this.id), uu || this.parent, !0);
-          Eu && yu && yu(this, Eu);
-          for (const Ku of this.getChildTransformNodes(!0)) Ku.instantiateHierarchy(Eu, Ru, yu);
-          return Eu
+          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+            Fk = arguments.length > 1 ? arguments[1] : void 0,
+            Bk = arguments.length > 2 ? arguments[2] : void 0;
+          const Rk = this.clone("Clone of " + (this.name || this.id), kk || this.parent, !0);
+          Rk && Bk && Bk(this, Rk);
+          for (const tk of this.getChildTransformNodes(!0)) tk.instantiateHierarchy(Rk, Fk, Bk);
+          return Rk
         }
-        fD() {
-          let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return uu ? arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (this._rotation.e_(0), this._rotationQuaternion = this._rotationQuaternion || ru.f.Identity(), uu.decompose(this._scaling, this._rotationQuaternion, this._position), this.computeWorldMatrix(!0)) : (this._worldMatrix = uu, this._absolutePosition.muu(this._worldMatrix.m[12], this._worldMatrix.m[13], this._worldMatrix.m[14]), this._afterComputeWorldMatrix()) : (this._isWorldMatrixFrozen = !1, this.computeWorldMatrix(!0)), this._isDirty = !1, this._isWorldMatrixFrozen = !0, this
+        oN() {
+          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return kk ? arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (this._rotation.J_(0), this._rotationQuaternion = this._rotationQuaternion || Vk.e.Identity(), kk.decompose(this._scaling, this._rotationQuaternion, this._position), this.computeWorldMatrix(!0)) : (this._worldMatrix = kk, this._absolutePosition.E1(this._worldMatrix.m[12], this._worldMatrix.m[13], this._worldMatrix.m[14]), this._afterComputeWorldMatrix()) : (this._isWorldMatrixFrozen = !1, this.computeWorldMatrix(!0)), this._isDirty = !1, this._isWorldMatrixFrozen = !0, this
         }
         unfreezeWorldMatrix() {
           return this._isWorldMatrixFrozen = !1, this.computeWorldMatrix(!0), this
         }
-        get RJu() {
+        get SXk() {
           return this._isWorldMatrixFrozen
         }
         getAbsolutePosition() {
           return this.computeWorldMatrix(), this._absolutePosition
         }
-        setAbsolutePosition(uu) {
-          if (!uu) return this;
-          let Ru, yu, Eu;
-          if (void 0 === uu.x) {
+        setAbsolutePosition(kk) {
+          if (!kk) return this;
+          let Fk, Bk, Rk;
+          if (void 0 === kk.x) {
             if (arguments.length < 3) return this;
-            Ru = arguments[0], yu = arguments[1], Eu = arguments[2]
-          } else Ru = uu.x, yu = uu.y, Eu = uu.z;
+            Fk = arguments[0], Bk = arguments[1], Rk = arguments[2]
+          } else Fk = kk.x, Bk = kk.y, Rk = kk.z;
           if (this.parent) {
-            const uu = ru.m.Matrix[0];
-            this.parent.getWorldMatrix().invertToRef(uu), ru.p.TransformCoordinatesFromFloatsToRef(Ru, yu, Eu, uu, this.position)
-          } else this.position.x = Ru, this.position.y = yu, this.position.z = Eu;
-          return this._absolutePosition.Oyu(uu), this
+            const kk = Vk.l.Matrix[0];
+            this.parent.getWorldMatrix().invertToRef(kk), Vk.s.TransformCoordinatesFromFloatsToRef(Fk, Bk, Rk, kk, this.position)
+          } else this.position.x = Fk, this.position.y = Bk, this.position.z = Rk;
+          return this._absolutePosition.sBk(kk), this
         }
-        setPositionWithLocalVector(uu) {
-          return this.computeWorldMatrix(), this.position = ru.p.TransformNormal(uu, this._localMatrix), this
+        setPositionWithLocalVector(kk) {
+          return this.computeWorldMatrix(), this.position = Vk.s.TransformNormal(kk, this._localMatrix), this
         }
         getPositionExpressedInLocalSpace() {
           this.computeWorldMatrix();
-          const uu = ru.m.Matrix[0];
-          return this._localMatrix.invertToRef(uu), ru.p.TransformNormal(this.position, uu)
+          const kk = Vk.l.Matrix[0];
+          return this._localMatrix.invertToRef(kk), Vk.s.TransformNormal(this.position, kk)
         }
-        locallyTranslate(uu) {
-          return this.computeWorldMatrix(!0), this.position = ru.p.TransformCoordinates(uu, this._localMatrix), this
+        locallyTranslate(kk) {
+          return this.computeWorldMatrix(!0), this.position = Vk.s.TransformCoordinates(kk, this._localMatrix), this
         }
-        lookAt(Ru) {
-          let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            Eu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            Ku = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-            Qu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-          const mu = uu._LookAtVectorCache,
-            Ju = 0 === Qu ? this.position : this.getAbsolutePosition();
-          if (Ru.subtractToRef(Ju, mu), this.setDirection(mu, yu, Eu, Ku), 1 === Qu && this.parent)
+        lookAt(Fk) {
+          let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            Rk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+            ak = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+          const Xk = kk._LookAtVectorCache,
+            bk = 0 === ak ? this.position : this.getAbsolutePosition();
+          if (Fk.subtractToRef(bk, Xk), this.setDirection(Xk, Bk, Rk, tk), 1 === ak && this.parent)
             if (this.rotationQuaternion) {
-              const uu = ru.m.Matrix[0];
-              this.rotationQuaternion.toRotationMatrix(uu);
-              const Ru = ru.m.Matrix[1];
-              this.parent.getWorldMatrix().getRotationMatrixToRef(Ru), Ru.invert(), uu.multiplyToRef(Ru, uu), this.rotationQuaternion.fromRotationMatrix(uu)
+              const kk = Vk.l.Matrix[0];
+              this.rotationQuaternion.toRotationMatrix(kk);
+              const Fk = Vk.l.Matrix[1];
+              this.parent.getWorldMatrix().getRotationMatrixToRef(Fk), Fk.invert(), kk.multiplyToRef(Fk, kk), this.rotationQuaternion.fromRotationMatrix(kk)
             } else {
-              const uu = ru.m.Quaternion[0];
-              ru.f.FromEulerVectorToRef(this.rotation, uu);
-              const Ru = ru.m.Matrix[0];
-              uu.toRotationMatrix(Ru);
-              const yu = ru.m.Matrix[1];
-              this.parent.getWorldMatrix().getRotationMatrixToRef(yu), yu.invert(), Ru.multiplyToRef(yu, Ru), uu.fromRotationMatrix(Ru), uu.toEulerAnglesToRef(this.rotation)
+              const kk = Vk.l.Quaternion[0];
+              Vk.e.FromEulerVectorToRef(this.rotation, kk);
+              const Fk = Vk.l.Matrix[0];
+              kk.toRotationMatrix(Fk);
+              const Bk = Vk.l.Matrix[1];
+              this.parent.getWorldMatrix().getRotationMatrixToRef(Bk), Bk.invert(), Fk.multiplyToRef(Bk, Fk), kk.fromRotationMatrix(Fk), kk.toEulerAnglesToRef(this.rotation)
             } return this
         }
-        Mq(uu) {
-          const Ru = ru.p.Zero();
-          return this.getDirectionToRef(uu, Ru), Ru
+        eZ(kk) {
+          const Fk = Vk.s.Zero();
+          return this.getDirectionToRef(kk, Fk), Fk
         }
-        getDirectionToRef(uu, Ru) {
-          return ru.p.TransformNormalToRef(uu, this.getWorldMatrix(), Ru), this
+        getDirectionToRef(kk, Fk) {
+          return Vk.s.TransformNormalToRef(kk, this.getWorldMatrix(), Fk), this
         }
-        setDirection(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-          const Ku = -Math.atan2(uu.z, uu.x) + Math.PI / 2,
-            Qu = Math.sqrt(uu.x * uu.x + uu.z * uu.z),
-            mu = -Math.atan2(uu.y, Qu);
-          return this.rotationQuaternion ? ru.f.RotationYawPitchRollToRef(Ku + Ru, mu + yu, Eu, this.rotationQuaternion) : (this.rotation.x = mu + yu, this.rotation.y = Ku + Ru, this.rotation.z = Eu), this
+        setDirection(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+            Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+          const tk = -Math.atan2(kk.z, kk.x) + Math.PI / 2,
+            ak = Math.sqrt(kk.x * kk.x + kk.z * kk.z),
+            Xk = -Math.atan2(kk.y, ak);
+          return this.rotationQuaternion ? Vk.e.RotationYawPitchRollToRef(tk + Fk, Xk + Bk, Rk, this.rotationQuaternion) : (this.rotation.x = Xk + Bk, this.rotation.y = tk + Fk, this.rotation.z = Rk), this
         }
-        setPivotPoint(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          0 == this.lD().getRenderId() && this.computeWorldMatrix(!0);
-          const yu = this.getWorldMatrix();
-          if (1 == Ru) {
-            const Ru = ru.m.Matrix[0];
-            yu.invertToRef(Ru), uu = ru.p.TransformCoordinates(uu, Ru)
+        setPivotPoint(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          0 == this.XN().getRenderId() && this.computeWorldMatrix(!0);
+          const Bk = this.getWorldMatrix();
+          if (1 == Fk) {
+            const Fk = Vk.l.Matrix[0];
+            Bk.invertToRef(Fk), kk = Vk.s.TransformCoordinates(kk, Fk)
           }
-          return this.setPivotMatrix(ru.d.Translation(-uu.x, -uu.y, -uu.z), !0)
+          return this.setPivotMatrix(Vk.c.Translation(-kk.x, -kk.y, -kk.z), !0)
         }
         getPivotPoint() {
-          const uu = ru.p.Zero();
-          return this.getPivotPointToRef(uu), uu
+          const kk = Vk.s.Zero();
+          return this.getPivotPointToRef(kk), kk
         }
-        getPivotPointToRef(uu) {
-          return uu.x = -this._pivotMatrix.m[12], uu.y = -this._pivotMatrix.m[13], uu.z = -this._pivotMatrix.m[14], this
+        getPivotPointToRef(kk) {
+          return kk.x = -this._pivotMatrix.m[12], kk.y = -this._pivotMatrix.m[13], kk.z = -this._pivotMatrix.m[14], this
         }
         getAbsolutePivotPoint() {
-          const uu = ru.p.Zero();
-          return this.getAbsolutePivotPointToRef(uu), uu
+          const kk = Vk.s.Zero();
+          return this.getAbsolutePivotPointToRef(kk), kk
         }
-        getAbsolutePivotPointToRef(uu) {
-          return this.getPivotPointToRef(uu), ru.p.TransformCoordinatesToRef(uu, this.getWorldMatrix(), uu), this
+        getAbsolutePivotPointToRef(kk) {
+          return this.getPivotPointToRef(kk), Vk.s.TransformCoordinatesToRef(kk, this.getWorldMatrix(), kk), this
         }
-        Eyu(uu) {
+        mFk(kk) {
           if (this._isDirty) return this;
           if (this._children)
-            for (const Ru of this._children) Ru.Eyu(uu);
-          return super.Eyu(uu)
+            for (const Fk of this._children) Fk.mFk(kk);
+          return super.mFk(kk)
         }
-        setParent(Ru) {
-          let yu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            Eu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          if (!Ru && !this.parent) return this;
-          const Ku = ru.m.Quaternion[0],
-            Qu = ru.m.MS[0],
-            mu = ru.m.MS[1],
-            Ju = ru.m.Matrix[1];
-          ru.d.IdentityToRef(Ju);
-          const Nu = ru.m.Matrix[0];
+        setParent(Fk) {
+          let Bk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            Rk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          if (!Fk && !this.parent) return this;
+          const tk = Vk.l.Quaternion[0],
+            ak = Vk.l.Qe[0],
+            Xk = Vk.l.Qe[1],
+            bk = Vk.l.Matrix[1];
+          Vk.c.IdentityToRef(bk);
+          const wk = Vk.l.Matrix[0];
           this.computeWorldMatrix(!0);
-          let Xu = this.rotationQuaternion;
-          return Xu || (Xu = uu._TmpRotation, ru.f.RotationYawPitchRollToRef(this._rotation.y, this._rotation.x, this._rotation.z, Xu)), ru.d.ComposeToRef(this.pp, Xu, this.position, Nu), this.parent && Nu.multiplyToRef(this.parent.computeWorldMatrix(!0), Nu), Ru && (Ru.computeWorldMatrix(!0).invertToRef(Ju), Nu.multiplyToRef(Ju, Nu)), Nu.decompose(mu, Ku, Qu, yu ? this : void 0), this.rotationQuaternion ? this.rotationQuaternion.Oyu(Ku) : Ku.toEulerAnglesToRef(this.rotation), this.pp.Oyu(mu), this.position.Oyu(Qu), this.parent = Ru, Eu && this.setPivotMatrix(ru.d.Identity()), this
+          let dk = this.rotationQuaternion;
+          return dk || (dk = kk._TmpRotation, Vk.e.RotationYawPitchRollToRef(this._rotation.y, this._rotation.x, this._rotation.z, dk)), Vk.c.ComposeToRef(this.ta, dk, this.position, wk), this.parent && wk.multiplyToRef(this.parent.computeWorldMatrix(!0), wk), Fk && (Fk.computeWorldMatrix(!0).invertToRef(bk), wk.multiplyToRef(bk, wk)), wk.decompose(Xk, tk, ak, Bk ? this : void 0), this.rotationQuaternion ? this.rotationQuaternion.sBk(tk) : tk.toEulerAnglesToRef(this.rotation), this.ta.sBk(Xk), this.position.sBk(ak), this.parent = Fk, Rk && this.setPivotMatrix(Vk.c.Identity()), this
         }
-        addChild(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return uu.setParent(this, Ru), this
+        addChild(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return kk.setParent(this, Fk), this
         }
-        removeChild(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return uu.parent !== this || uu.setParent(null, Ru), this
+        removeChild(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return kk.parent !== this || kk.setParent(null, Fk), this
         }
         get nonUniformScaling() {
           return this._nonUniformScaling
         }
-        _updateNonUniformScalingState(uu) {
-          return this._nonUniformScaling !== uu && (this._nonUniformScaling = uu, !0)
+        _updateNonUniformScalingState(kk) {
+          return this._nonUniformScaling !== kk && (this._nonUniformScaling = kk, !0)
         }
-        attachToBone(uu, Ru) {
-          return this._currentParentWhenAttachingToBone = this.parent, this._transformToBoneReferal = Ru, this.parent = uu, uu.getSkeleton().prepare(!0), uu.getFinalMatrix().determinant() < 0 && (this.scalingDeterminant *= -1), this
+        attachToBone(kk, Fk) {
+          return this._currentParentWhenAttachingToBone = this.parent, this._transformToBoneReferal = Fk, this.parent = kk, kk.getSkeleton().prepare(!0), kk.getFinalMatrix().determinant() < 0 && (this.scalingDeterminant *= -1), this
         }
         detachFromBone() {
-          let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          return this.parent ? (this.parent.getWorldMatrix().determinant() < 0 && (this.scalingDeterminant *= -1), this._transformToBoneReferal = null, this.parent = uu ? this._currentParentWhenAttachingToBone : null, this) : (uu && (this.parent = this._currentParentWhenAttachingToBone), this)
+          let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          return this.parent ? (this.parent.getWorldMatrix().determinant() < 0 && (this.scalingDeterminant *= -1), this._transformToBoneReferal = null, this.parent = kk ? this._currentParentWhenAttachingToBone : null, this) : (kk && (this.parent = this._currentParentWhenAttachingToBone), this)
         }
-        rotate(Ru, yu, Eu) {
-          let Ku;
-          if (Ru.normalize(), this.rotationQuaternion || (this.rotationQuaternion = this.rotation.toQuaternion(), this.rotation.e_(0)), Eu && 0 !== Eu) {
+        rotate(Fk, Bk, Rk) {
+          let tk;
+          if (Fk.normalize(), this.rotationQuaternion || (this.rotationQuaternion = this.rotation.toQuaternion(), this.rotation.J_(0)), Rk && 0 !== Rk) {
             if (this.parent) {
-              const uu = this.parent.getWorldMatrix(),
-                Eu = ru.m.Matrix[0];
-              uu.invertToRef(Eu), Ru = ru.p.TransformNormal(Ru, Eu), uu.determinant() < 0 && (yu *= -1)
+              const kk = this.parent.getWorldMatrix(),
+                Rk = Vk.l.Matrix[0];
+              kk.invertToRef(Rk), Fk = Vk.s.TransformNormal(Fk, Rk), kk.determinant() < 0 && (Bk *= -1)
             }
-            Ku = ru.f.RotationAxisToRef(Ru, yu, uu._RotationAxisCache), Ku.multiplyToRef(this.rotationQuaternion, this.rotationQuaternion)
-          } else Ku = ru.f.RotationAxisToRef(Ru, yu, uu._RotationAxisCache), this.rotationQuaternion.multiplyToRef(Ku, this.rotationQuaternion);
+            tk = Vk.e.RotationAxisToRef(Fk, Bk, kk._RotationAxisCache), tk.multiplyToRef(this.rotationQuaternion, this.rotationQuaternion)
+          } else tk = Vk.e.RotationAxisToRef(Fk, Bk, kk._RotationAxisCache), this.rotationQuaternion.multiplyToRef(tk, this.rotationQuaternion);
           return this
         }
-        rotateAround(uu, Ru, yu) {
-          Ru.normalize(), this.rotationQuaternion || (this.rotationQuaternion = ru.f.RotationYawPitchRoll(this.rotation.y, this.rotation.x, this.rotation.z), this.rotation.e_(0));
-          const Eu = ru.m.MS[0],
-            Ku = ru.m.MS[1],
-            Qu = ru.m.MS[2],
-            mu = ru.m.Quaternion[0],
-            Ju = ru.m.Matrix[0],
-            Nu = ru.m.Matrix[1],
-            Xu = ru.m.Matrix[2],
-            Vu = ru.m.Matrix[3];
-          return uu.subtractToRef(this.position, Eu), ru.d.TranslationToRef(Eu.x, Eu.y, Eu.z, Ju), ru.d.TranslationToRef(-Eu.x, -Eu.y, -Eu.z, Nu), ru.d.RotationAxisToRef(Ru, yu, Xu), Nu.multiplyToRef(Xu, Vu), Vu.multiplyToRef(Ju, Vu), Vu.decompose(Ku, mu, Qu), this.position.addInPlace(Qu), mu.multiplyToRef(this.rotationQuaternion, this.rotationQuaternion), this
+        rotateAround(kk, Fk, Bk) {
+          Fk.normalize(), this.rotationQuaternion || (this.rotationQuaternion = Vk.e.RotationYawPitchRoll(this.rotation.y, this.rotation.x, this.rotation.z), this.rotation.J_(0));
+          const Rk = Vk.l.Qe[0],
+            tk = Vk.l.Qe[1],
+            ak = Vk.l.Qe[2],
+            Xk = Vk.l.Quaternion[0],
+            bk = Vk.l.Matrix[0],
+            wk = Vk.l.Matrix[1],
+            dk = Vk.l.Matrix[2],
+            sk = Vk.l.Matrix[3];
+          return kk.subtractToRef(this.position, Rk), Vk.c.TranslationToRef(Rk.x, Rk.y, Rk.z, bk), Vk.c.TranslationToRef(-Rk.x, -Rk.y, -Rk.z, wk), Vk.c.RotationAxisToRef(Fk, Bk, dk), wk.multiplyToRef(dk, sk), sk.multiplyToRef(bk, sk), sk.decompose(tk, Xk, ak), this.position.addInPlace(ak), Xk.multiplyToRef(this.rotationQuaternion, this.rotationQuaternion), this
         }
-        translate(uu, Ru, yu) {
-          const Eu = uu.scale(Ru);
-          if (yu && 0 !== yu) this.setAbsolutePosition(this.getAbsolutePosition().add(Eu));
+        translate(kk, Fk, Bk) {
+          const Rk = kk.scale(Fk);
+          if (Bk && 0 !== Bk) this.setAbsolutePosition(this.getAbsolutePosition().add(Rk));
           else {
-            const uu = this.getPositionExpressedInLocalSpace().add(Eu);
-            this.setPositionWithLocalVector(uu)
+            const kk = this.getPositionExpressedInLocalSpace().add(Rk);
+            this.setPositionWithLocalVector(kk)
           }
           return this
         }
-        addRotation(uu, Ru, yu) {
-          let Eu;
-          this.rotationQuaternion ? Eu = this.rotationQuaternion : (Eu = ru.m.Quaternion[1], ru.f.RotationYawPitchRollToRef(this.rotation.y, this.rotation.x, this.rotation.z, Eu));
-          const Ku = ru.m.Quaternion[0];
-          return ru.f.RotationYawPitchRollToRef(Ru, uu, yu, Ku), Eu.multiplyInPlace(Ku), this.rotationQuaternion || Eu.toEulerAnglesToRef(this.rotation), this
+        addRotation(kk, Fk, Bk) {
+          let Rk;
+          this.rotationQuaternion ? Rk = this.rotationQuaternion : (Rk = Vk.l.Quaternion[1], Vk.e.RotationYawPitchRollToRef(this.rotation.y, this.rotation.x, this.rotation.z, Rk));
+          const tk = Vk.l.Quaternion[0];
+          return Vk.e.RotationYawPitchRollToRef(Fk, kk, Bk, tk), Rk.multiplyInPlace(tk), this.rotationQuaternion || Rk.toEulerAnglesToRef(this.rotation), this
         }
         _getEffectiveParent() {
           return this.parent
         }
         isWorldMatrixCameraDependent() {
-          return this._infiniteDistance && !this.parent || this._billboardMode !== uu.BILLBOARDMODE_NONE
+          return this._infiniteDistance && !this.parent || this._billboardMode !== kk.BILLBOARDMODE_NONE
         }
         computeWorldMatrix() {
-          let Ru = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          let Fk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+            Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
           if (this._isWorldMatrixFrozen && !this._isDirty) return this._worldMatrix;
-          const Eu = this.lD().getRenderId();
-          if (!this._isDirty && !Ru && (this._currentRenderId === Eu || this.isSynchronized())) return this._currentRenderId = Eu, this._worldMatrix;
-          yu = yu || this.lD().activeCamera, this._updateCache();
-          const Ku = this._cache;
-          Ku.pivotMatrixUpdated = !1, Ku.billboardMode = this.billboardMode, Ku.infiniteDistance = this.infiniteDistance, Ku.parent = this._parentNode, this._currentRenderId = Eu, this._childUpdateId += 1, this._isDirty = !1, this._position._isDirty = !1, this._rotation._isDirty = !1, this._scaling._isDirty = !1;
-          const Qu = this._getEffectiveParent(),
-            mu = uu._TmpScaling;
-          let Ju, Nu = this._position;
-          if (this._infiniteDistance && !this.parent && yu) {
-            const Ru = yu.getWorldMatrix().m;
-            Nu = uu._TmpTranslation, Nu.muu(this._position.x + Ru[12], this._position.y + Ru[13], this._position.z + Ru[14])
+          const Rk = this.XN().getRenderId();
+          if (!this._isDirty && !Fk && (this._currentRenderId === Rk || this.isSynchronized())) return this._currentRenderId = Rk, this._worldMatrix;
+          Bk = Bk || this.XN().activeCamera, this._updateCache();
+          const tk = this._cache;
+          tk.pivotMatrixUpdated = !1, tk.billboardMode = this.billboardMode, tk.infiniteDistance = this.infiniteDistance, tk.parent = this._parentNode, this._currentRenderId = Rk, this._childUpdateId += 1, this._isDirty = !1, this._position._isDirty = !1, this._rotation._isDirty = !1, this._scaling._isDirty = !1;
+          const ak = this._getEffectiveParent(),
+            Xk = kk._TmpScaling;
+          let bk, wk = this._position;
+          if (this._infiniteDistance && !this.parent && Bk) {
+            const Fk = Bk.getWorldMatrix().m;
+            wk = kk._TmpTranslation, wk.E1(this._position.x + Fk[12], this._position.y + Fk[13], this._position.z + Fk[14])
           }
-          if (mu.muu(this._scaling.x * this.scalingDeterminant, this._scaling.y * this.scalingDeterminant, this._scaling.z * this.scalingDeterminant), this._rotationQuaternion) {
-            if (this._rotationQuaternion._isDirty = !1, Ju = this._rotationQuaternion, this.reIntegrateRotationIntoRotationQuaternion) {
-              this.rotation.lengthSquared() && (this._rotationQuaternion.multiplyInPlace(ru.f.RotationYawPitchRoll(this._rotation.y, this._rotation.x, this._rotation.z)), this._rotation.muu(0, 0, 0))
+          if (Xk.E1(this._scaling.x * this.scalingDeterminant, this._scaling.y * this.scalingDeterminant, this._scaling.z * this.scalingDeterminant), this._rotationQuaternion) {
+            if (this._rotationQuaternion._isDirty = !1, bk = this._rotationQuaternion, this.reIntegrateRotationIntoRotationQuaternion) {
+              this.rotation.lengthSquared() && (this._rotationQuaternion.multiplyInPlace(Vk.e.RotationYawPitchRoll(this._rotation.y, this._rotation.x, this._rotation.z)), this._rotation.E1(0, 0, 0))
             }
-          } else Ju = uu._TmpRotation, ru.f.RotationYawPitchRollToRef(this._rotation.y, this._rotation.x, this._rotation.z, Ju);
+          } else bk = kk._TmpRotation, Vk.e.RotationYawPitchRollToRef(this._rotation.y, this._rotation.x, this._rotation.z, bk);
           if (this._usePivotMatrix) {
-            const uu = ru.m.Matrix[1];
-            ru.d.ScalingToRef(mu.x, mu.y, mu.z, uu);
-            const Ru = ru.m.Matrix[0];
-            Ju.toRotationMatrix(Ru), this._pivotMatrix.multiplyToRef(uu, ru.m.Matrix[4]), ru.m.Matrix[4].multiplyToRef(Ru, this._localMatrix), this._postMultiplyPivotMatrix && this._localMatrix.multiplyToRef(this._pivotMatrixInverse, this._localMatrix), this._localMatrix.addTranslationFromFloats(Nu.x, Nu.y, Nu.z)
-          } else ru.d.ComposeToRef(mu, Ju, Nu, this._localMatrix);
-          if (Qu && Qu.getWorldMatrix) {
-            if (Ru && Qu.computeWorldMatrix(Ru), this.billboardMode) {
+            const kk = Vk.l.Matrix[1];
+            Vk.c.ScalingToRef(Xk.x, Xk.y, Xk.z, kk);
+            const Fk = Vk.l.Matrix[0];
+            bk.toRotationMatrix(Fk), this._pivotMatrix.multiplyToRef(kk, Vk.l.Matrix[4]), Vk.l.Matrix[4].multiplyToRef(Fk, this._localMatrix), this._postMultiplyPivotMatrix && this._localMatrix.multiplyToRef(this._pivotMatrixInverse, this._localMatrix), this._localMatrix.addTranslationFromFloats(wk.x, wk.y, wk.z)
+          } else Vk.c.ComposeToRef(Xk, bk, wk, this._localMatrix);
+          if (ak && ak.getWorldMatrix) {
+            if (Fk && ak.computeWorldMatrix(Fk), this.billboardMode) {
               if (this._transformToBoneReferal) {
-                const uu = this.parent;
-                uu.getSkeleton().prepare(), uu.getFinalMatrix().multiplyToRef(this._transformToBoneReferal.getWorldMatrix(), ru.m.Matrix[7])
-              } else ru.m.Matrix[7].Oyu(Qu.getWorldMatrix());
-              const Ru = ru.m.MS[5],
-                yu = ru.m.MS[6],
-                Eu = ru.m.Quaternion[0];
-              ru.m.Matrix[7].decompose(yu, Eu, Ru), ru.d.ScalingToRef(yu.x, yu.y, yu.z, ru.m.Matrix[7]), ru.m.Matrix[7].setTranslation(Ru), uu.BillboardUseParentOrientation && (this._position.applyRotationQuaternionToRef(Eu, Ru), this._localMatrix.setTranslation(Ru)), this._localMatrix.multiplyToRef(ru.m.Matrix[7], this._worldMatrix)
+                const kk = this.parent;
+                kk.getSkeleton().prepare(), kk.getFinalMatrix().multiplyToRef(this._transformToBoneReferal.getWorldMatrix(), Vk.l.Matrix[7])
+              } else Vk.l.Matrix[7].sBk(ak.getWorldMatrix());
+              const Fk = Vk.l.Qe[5],
+                Bk = Vk.l.Qe[6],
+                Rk = Vk.l.Quaternion[0];
+              Vk.l.Matrix[7].decompose(Bk, Rk, Fk), Vk.c.ScalingToRef(Bk.x, Bk.y, Bk.z, Vk.l.Matrix[7]), Vk.l.Matrix[7].setTranslation(Fk), kk.BillboardUseParentOrientation && (this._position.applyRotationQuaternionToRef(Rk, Fk), this._localMatrix.setTranslation(Fk)), this._localMatrix.multiplyToRef(Vk.l.Matrix[7], this._worldMatrix)
             } else if (this._transformToBoneReferal) {
-              const uu = this.parent;
-              uu.getSkeleton().prepare(), this._localMatrix.multiplyToRef(uu.getFinalMatrix(), ru.m.Matrix[6]), ru.m.Matrix[6].multiplyToRef(this._transformToBoneReferal.getWorldMatrix(), this._worldMatrix)
-            } else this._localMatrix.multiplyToRef(Qu.getWorldMatrix(), this._worldMatrix);
+              const kk = this.parent;
+              kk.getSkeleton().prepare(), this._localMatrix.multiplyToRef(kk.getFinalMatrix(), Vk.l.Matrix[6]), Vk.l.Matrix[6].multiplyToRef(this._transformToBoneReferal.getWorldMatrix(), this._worldMatrix)
+            } else this._localMatrix.multiplyToRef(ak.getWorldMatrix(), this._worldMatrix);
             this._markSyncedWithParent()
-          } else this._worldMatrix.Oyu(this._localMatrix);
-          if (yu && this.billboardMode)
-            if (Ku.useBillboardPosition) {
-              const Ru = ru.m.MS[0];
-              this._worldMatrix.getTranslationToRef(Ru);
-              const Eu = yu.globalPosition;
-              this._worldMatrix.invertToRef(ru.m.Matrix[1]);
-              const Ku = ru.m.MS[1];
-              ru.p.TransformCoordinatesToRef(Eu, ru.m.Matrix[1], Ku), Ku.normalize();
-              const Qu = -Math.atan2(Ku.z, Ku.x) + Math.PI / 2,
-                mu = Math.sqrt(Ku.x * Ku.x + Ku.z * Ku.z),
-                Ju = -Math.atan2(Ku.y, mu);
-              if (ru.f.RotationYawPitchRollToRef(Qu, Ju, 0, ru.m.Quaternion[0]), (this.billboardMode & uu.BILLBOARDMODE_ALL) !== uu.BILLBOARDMODE_ALL) {
-                const Ru = ru.m.MS[1];
-                ru.m.Quaternion[0].toEulerAnglesToRef(Ru), (this.billboardMode & uu.BILLBOARDMODE_X) !== uu.BILLBOARDMODE_X && (Ru.x = 0), (this.billboardMode & uu.BILLBOARDMODE_Y) !== uu.BILLBOARDMODE_Y && (Ru.y = 0), (this.billboardMode & uu.BILLBOARDMODE_Z) !== uu.BILLBOARDMODE_Z && (Ru.z = 0), ru.d.RotationYawPitchRollToRef(Ru.y, Ru.x, Ru.z, ru.m.Matrix[0])
-              } else ru.d.FromQuaternionToRef(ru.m.Quaternion[0], ru.m.Matrix[0]);
-              this._worldMatrix.setTranslationFromFloats(0, 0, 0), this._worldMatrix.multiplyToRef(ru.m.Matrix[0], this._worldMatrix), this._worldMatrix.setTranslation(ru.m.MS[0])
+          } else this._worldMatrix.sBk(this._localMatrix);
+          if (Bk && this.billboardMode)
+            if (tk.useBillboardPosition) {
+              const Fk = Vk.l.Qe[0];
+              this._worldMatrix.getTranslationToRef(Fk);
+              const Rk = Bk.globalPosition;
+              this._worldMatrix.invertToRef(Vk.l.Matrix[1]);
+              const tk = Vk.l.Qe[1];
+              Vk.s.TransformCoordinatesToRef(Rk, Vk.l.Matrix[1], tk), tk.normalize();
+              const ak = -Math.atan2(tk.z, tk.x) + Math.PI / 2,
+                Xk = Math.sqrt(tk.x * tk.x + tk.z * tk.z),
+                bk = -Math.atan2(tk.y, Xk);
+              if (Vk.e.RotationYawPitchRollToRef(ak, bk, 0, Vk.l.Quaternion[0]), (this.billboardMode & kk.BILLBOARDMODE_ALL) !== kk.BILLBOARDMODE_ALL) {
+                const Fk = Vk.l.Qe[1];
+                Vk.l.Quaternion[0].toEulerAnglesToRef(Fk), (this.billboardMode & kk.BILLBOARDMODE_X) !== kk.BILLBOARDMODE_X && (Fk.x = 0), (this.billboardMode & kk.BILLBOARDMODE_Y) !== kk.BILLBOARDMODE_Y && (Fk.y = 0), (this.billboardMode & kk.BILLBOARDMODE_Z) !== kk.BILLBOARDMODE_Z && (Fk.z = 0), Vk.c.RotationYawPitchRollToRef(Fk.y, Fk.x, Fk.z, Vk.l.Matrix[0])
+              } else Vk.c.FromQuaternionToRef(Vk.l.Quaternion[0], Vk.l.Matrix[0]);
+              this._worldMatrix.setTranslationFromFloats(0, 0, 0), this._worldMatrix.multiplyToRef(Vk.l.Matrix[0], this._worldMatrix), this._worldMatrix.setTranslation(Vk.l.Qe[0])
             } else {
-              const Ru = ru.m.MS[0];
-              this._worldMatrix.getTranslationToRef(Ru), ru.m.Matrix[1].Oyu(yu.getViewMatrix());
-              const Eu = this.lD().useRightHandedSystem;
-              if (Eu && ru.m.Matrix[1].multiplyToRef(uu._TmpRHRestore, ru.m.Matrix[1]), ru.m.Matrix[1].setTranslationFromFloats(0, 0, 0), ru.m.Matrix[1].invertToRef(ru.m.Matrix[0]), (this.billboardMode & uu.BILLBOARDMODE_ALL) !== uu.BILLBOARDMODE_ALL) {
-                ru.m.Matrix[0].decompose(void 0, ru.m.Quaternion[0], void 0);
-                const Ru = ru.m.MS[1];
-                ru.m.Quaternion[0].toEulerAnglesToRef(Ru), (this.billboardMode & uu.BILLBOARDMODE_X) !== uu.BILLBOARDMODE_X && (Ru.x = 0), (this.billboardMode & uu.BILLBOARDMODE_Y) !== uu.BILLBOARDMODE_Y && (Ru.y = 0), (this.billboardMode & uu.BILLBOARDMODE_Z) !== uu.BILLBOARDMODE_Z && (Ru.z = 0), Eu && (Ru.y += Math.PI), ru.d.RotationYawPitchRollToRef(Ru.y, Ru.x, Ru.z, ru.m.Matrix[0])
+              const Fk = Vk.l.Qe[0];
+              this._worldMatrix.getTranslationToRef(Fk), Vk.l.Matrix[1].sBk(Bk.getViewMatrix());
+              const Rk = this.XN().useRightHandedSystem;
+              if (Rk && Vk.l.Matrix[1].multiplyToRef(kk._TmpRHRestore, Vk.l.Matrix[1]), Vk.l.Matrix[1].setTranslationFromFloats(0, 0, 0), Vk.l.Matrix[1].invertToRef(Vk.l.Matrix[0]), (this.billboardMode & kk.BILLBOARDMODE_ALL) !== kk.BILLBOARDMODE_ALL) {
+                Vk.l.Matrix[0].decompose(void 0, Vk.l.Quaternion[0], void 0);
+                const Fk = Vk.l.Qe[1];
+                Vk.l.Quaternion[0].toEulerAnglesToRef(Fk), (this.billboardMode & kk.BILLBOARDMODE_X) !== kk.BILLBOARDMODE_X && (Fk.x = 0), (this.billboardMode & kk.BILLBOARDMODE_Y) !== kk.BILLBOARDMODE_Y && (Fk.y = 0), (this.billboardMode & kk.BILLBOARDMODE_Z) !== kk.BILLBOARDMODE_Z && (Fk.z = 0), Rk && (Fk.y += Math.PI), Vk.c.RotationYawPitchRollToRef(Fk.y, Fk.x, Fk.z, Vk.l.Matrix[0])
               }
-              this._worldMatrix.setTranslationFromFloats(0, 0, 0), this._worldMatrix.multiplyToRef(ru.m.Matrix[0], this._worldMatrix), this._worldMatrix.setTranslation(ru.m.MS[0])
-            } return this.ignoreNonUniformScaling ? this._updateNonUniformScalingState(!1) : this._scaling.isNonUniformWithinEpsilon(1e-6) ? this._updateNonUniformScalingState(!0) : Qu && Qu._nonUniformScaling ? this._updateNonUniformScalingState(Qu._nonUniformScaling) : this._updateNonUniformScalingState(!1), this._afterComputeWorldMatrix(), this._absolutePosition.muu(this._worldMatrix.m[12], this._worldMatrix.m[13], this._worldMatrix.m[14]), this._isAbsoluteSynced = !1, this.onAfterWorldMatrixUpdateObservable.notifyObservers(this), this._poseMatrix || (this._poseMatrix = ru.d.Invert(this._worldMatrix)), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix
+              this._worldMatrix.setTranslationFromFloats(0, 0, 0), this._worldMatrix.multiplyToRef(Vk.l.Matrix[0], this._worldMatrix), this._worldMatrix.setTranslation(Vk.l.Qe[0])
+            } return this.ignoreNonUniformScaling ? this._updateNonUniformScalingState(!1) : this._scaling.isNonUniformWithinEpsilon(1e-6) ? this._updateNonUniformScalingState(!0) : ak && ak._nonUniformScaling ? this._updateNonUniformScalingState(ak._nonUniformScaling) : this._updateNonUniformScalingState(!1), this._afterComputeWorldMatrix(), this._absolutePosition.E1(this._worldMatrix.m[12], this._worldMatrix.m[13], this._worldMatrix.m[14]), this._isAbsoluteSynced = !1, this.onAfterWorldMatrixUpdateObservable.notifyObservers(this), this._poseMatrix || (this._poseMatrix = Vk.c.Invert(this._worldMatrix)), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix
         }
         resetLocalMatrix() {
-          let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-          if (this.computeWorldMatrix(), uu) {
-            const uu = this.getChildren();
-            for (let Ru = 0; Ru < uu.length; ++Ru) {
-              const yu = uu[Ru];
-              if (yu) {
-                yu.computeWorldMatrix();
-                const uu = ru.m.Matrix[0];
-                yu._localMatrix.multiplyToRef(this._localMatrix, uu);
-                const Ru = ru.m.Quaternion[0];
-                uu.decompose(yu.pp, Ru, yu.position), yu.rotationQuaternion ? yu.rotationQuaternion.Oyu(Ru) : Ru.toEulerAnglesToRef(yu.rotation)
+          let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+          if (this.computeWorldMatrix(), kk) {
+            const kk = this.getChildren();
+            for (let Fk = 0; Fk < kk.length; ++Fk) {
+              const Bk = kk[Fk];
+              if (Bk) {
+                Bk.computeWorldMatrix();
+                const kk = Vk.l.Matrix[0];
+                Bk._localMatrix.multiplyToRef(this._localMatrix, kk);
+                const Fk = Vk.l.Quaternion[0];
+                kk.decompose(Bk.ta, Fk, Bk.position), Bk.rotationQuaternion ? Bk.rotationQuaternion.sBk(Fk) : Fk.toEulerAnglesToRef(Bk.rotation)
               }
             }
           }
-          this.pp.muu(1, 1, 1), this.position.muu(0, 0, 0), this.rotation.muu(0, 0, 0), this.rotationQuaternion && (this.rotationQuaternion = ru.f.Identity()), this._worldMatrix = ru.d.Identity()
+          this.ta.E1(1, 1, 1), this.position.E1(0, 0, 0), this.rotation.E1(0, 0, 0), this.rotationQuaternion && (this.rotationQuaternion = Vk.e.Identity()), this._worldMatrix = Vk.c.Identity()
         }
         _afterComputeWorldMatrix() {}
-        registerAfterWorldMatrixUpdate(uu) {
-          return this.onAfterWorldMatrixUpdateObservable.add(uu), this
+        registerAfterWorldMatrixUpdate(kk) {
+          return this.onAfterWorldMatrixUpdateObservable.add(kk), this
         }
-        unregisterAfterWorldMatrixUpdate(uu) {
-          return this.onAfterWorldMatrixUpdateObservable.removeCallback(uu), this
+        unregisterAfterWorldMatrixUpdate(kk) {
+          return this.onAfterWorldMatrixUpdateObservable.removeCallback(kk), this
         }
         getPositionInCameraSpace() {
-          let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return uu || (uu = this.lD().activeCamera), ru.p.TransformCoordinates(this.getAbsolutePosition(), uu.getViewMatrix())
+          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return kk || (kk = this.XN().activeCamera), Vk.s.TransformCoordinates(this.getAbsolutePosition(), kk.getViewMatrix())
         }
         getDistanceToCamera() {
-          let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return uu || (uu = this.lD().activeCamera), this.getAbsolutePosition().subtract(uu.globalPosition).length()
+          let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return kk || (kk = this.XN().activeCamera), this.getAbsolutePosition().subtract(kk.globalPosition).length()
         }
-        clone(Ru, yu, Eu) {
-          const Ku = Xu.c.Clone((() => new uu(Ru, this.lD())), this);
-          if (Ku.name = Ru, Ku.id = Ru, yu && (Ku.parent = yu), !Eu) {
-            const uu = this.getDescendants(!0);
-            for (let yu = 0; yu < uu.length; yu++) {
-              const Eu = uu[yu];
-              Eu.clone && Eu.clone(Ru + "." + Eu.name, Ku)
+        clone(Fk, Bk, Rk) {
+          const tk = dk.c.Clone((() => new kk(Fk, this.XN())), this);
+          if (tk.name = Fk, tk.id = Fk, Bk && (tk.parent = Bk), !Rk) {
+            const kk = this.getDescendants(!0);
+            for (let Bk = 0; Bk < kk.length; Bk++) {
+              const Rk = kk[Bk];
+              Rk.clone && Rk.clone(Fk + "." + Rk.name, tk)
             }
           }
-          return Ku
+          return tk
         }
-        serialize(uu) {
-          const Ru = Xu.c.Serialize(this, uu);
-          return Ru.type = this.getClassName(), Ru.uniqueId = this.uniqueId, this.parent && this.parent._serializeAsParent(Ru), Ru.localMatrix = this.getPivotMatrix().AEu(), Ru.isEnabled = this.isEnabled(), this._isWorldMatrixFrozen && (Ru.fD = !0), Xu.c.AppendSerializedAnimations(this, Ru), Ru.yT = this.serializeAnimationRanges(), Ru
+        serialize(kk) {
+          const Fk = dk.c.Serialize(this, kk);
+          return Fk.type = this.getClassName(), Fk.uniqueId = this.uniqueId, this.parent && this.parent._serializeAsParent(Fk), Fk.localMatrix = this.getPivotMatrix().PBk(), Fk.isEnabled = this.isEnabled(), this._isWorldMatrixFrozen && (Fk.oN = !0), dk.c.AppendSerializedAnimations(this, Fk), Fk.hb = this.serializeAnimationRanges(), Fk
         }
-        getChildTransformNodes(Ru, yu) {
-          const Eu = [];
-          return this._getDescendants(Eu, Ru, (Ru => (!yu || yu(Ru)) && Ru instanceof uu)), Eu
+        getChildTransformNodes(Fk, Bk) {
+          const Rk = [];
+          return this._getDescendants(Rk, Fk, (Fk => (!Bk || Bk(Fk)) && Fk instanceof kk)), Rk
         }
-        dispose(uu) {
-          let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this.lD().stopAnimation(this), this.lD().removeTransformNode(this), this._parentContainer) {
-            const uu = this._parentContainer.transformNodes.indexOf(this);
-            uu > -1 && this._parentContainer.transformNodes.splice(uu, 1), this._parentContainer = null
+        dispose(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this.XN().stopAnimation(this), this.XN().removeTransformNode(this), this._parentContainer) {
+            const kk = this._parentContainer.transformNodes.indexOf(this);
+            kk > -1 && this._parentContainer.transformNodes.splice(kk, 1), this._parentContainer = null
           }
-          if (this.onAfterWorldMatrixUpdateObservable.clear(), uu) {
-            const uu = this.getChildTransformNodes(!0);
-            for (const Ru of uu) Ru.parent = null, Ru.computeWorldMatrix(!0)
+          if (this.onAfterWorldMatrixUpdateObservable.clear(), kk) {
+            const kk = this.getChildTransformNodes(!0);
+            for (const Fk of kk) Fk.parent = null, Fk.computeWorldMatrix(!0)
           }
-          super.dispose(uu, Ru)
+          super.dispose(kk, Fk)
         }
         normalizeToUnitCube() {
-          let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-            Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            yu = arguments.length > 2 ? arguments[2] : void 0,
-            Eu = null,
-            Ku = null;
-          Ru && (this.rotationQuaternion ? (Ku = this.rotationQuaternion.clone(), this.rotationQuaternion.muu(0, 0, 0, 1)) : this.rotation && (Eu = this.rotation.clone(), this.rotation.muu(0, 0, 0)));
-          const Qu = this.getHierarchyBoundingVectors(uu, yu),
-            mu = Qu.max.subtract(Qu.min),
-            Ju = Math.max(mu.x, mu.y, mu.z);
-          if (0 === Ju) return this;
-          const Nu = 1 / Ju;
-          return this.pp.scaleInPlace(Nu), Ru && (this.rotationQuaternion && Ku ? this.rotationQuaternion.Oyu(Ku) : this.rotation && Eu && this.rotation.Oyu(Eu)), this
+          let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+            Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            Bk = arguments.length > 2 ? arguments[2] : void 0,
+            Rk = null,
+            tk = null;
+          Fk && (this.rotationQuaternion ? (tk = this.rotationQuaternion.clone(), this.rotationQuaternion.E1(0, 0, 0, 1)) : this.rotation && (Rk = this.rotation.clone(), this.rotation.E1(0, 0, 0)));
+          const ak = this.getHierarchyBoundingVectors(kk, Bk),
+            Xk = ak.max.subtract(ak.min),
+            bk = Math.max(Xk.x, Xk.y, Xk.z);
+          if (0 === bk) return this;
+          const wk = 1 / bk;
+          return this.ta.scaleInPlace(wk), Fk && (this.rotationQuaternion && tk ? this.rotationQuaternion.sBk(tk) : this.rotation && Rk && this.rotation.sBk(Rk)), this
         }
         _syncAbsoluteScalingAndRotation() {
           this._isAbsoluteSynced || (this._worldMatrix.decompose(this._absoluteScaling, this._absoluteRotationQuaternion), this._isAbsoluteSynced = !0)
         }
       }, (() => {
-        const Xu = "function" === typeof Symbol && Symbol.metadata ? Object.create(Tu[Symbol.metadata] ?? null) : void 0;
-        Ru = [(0, Nu.G)("position")], yu = [(0, Nu.G)("rotation")], Eu = [(0, Nu.z)("rotationQuaternion")], Ku = [(0, Nu.G)("pp")], Qu = [(0, Nu.K)("billboardMode")], mu = [(0, Nu.K)()], xu = [(0, Nu.K)("infiniteDistance")], Su = [(0, Nu.K)()], pu = [(0, Nu.K)()], (0, Ju.h)(null, null, Ru, {
+        const dk = "function" === typeof Symbol && Symbol.metadata ? Object.create(fk[Symbol.metadata] ?? null) : void 0;
+        Fk = [(0, wk.K)("position")], Bk = [(0, wk.K)("rotation")], Rk = [(0, wk.A)("rotationQuaternion")], tk = [(0, wk.K)("ta")], ak = [(0, wk.M)("billboardMode")], Xk = [(0, wk.M)()], Ak = [(0, wk.M)("infiniteDistance")], ek = [(0, wk.M)()], yk = [(0, wk.M)()], (0, bk.j)(null, null, Fk, {
           kind: "field",
           name: "_position",
           static: !1,
           private: !1,
           access: {
-            has: uu => "_position" in uu,
-            get: uu => uu._position,
-            set: (uu, Ru) => {
-              uu._position = Ru
+            has: kk => "_position" in kk,
+            get: kk => kk._position,
+            set: (kk, Fk) => {
+              kk._position = Fk
             }
           },
-          metadata: Xu
-        }, Wu, ju), (0, Ju.h)(null, null, yu, {
+          metadata: dk
+        }, mk, Wk), (0, bk.j)(null, null, Bk, {
           kind: "field",
           name: "_rotation",
           static: !1,
           private: !1,
           access: {
-            has: uu => "_rotation" in uu,
-            get: uu => uu._rotation,
-            set: (uu, Ru) => {
-              uu._rotation = Ru
+            has: kk => "_rotation" in kk,
+            get: kk => kk._rotation,
+            set: (kk, Fk) => {
+              kk._rotation = Fk
             }
           },
-          metadata: Xu
-        }, Hu, du), (0, Ju.h)(null, null, Eu, {
+          metadata: dk
+        }, vk, ik), (0, bk.j)(null, null, Rk, {
           kind: "field",
           name: "_rotationQuaternion",
           static: !1,
           private: !1,
           access: {
-            has: uu => "_rotationQuaternion" in uu,
-            get: uu => uu._rotationQuaternion,
-            set: (uu, Ru) => {
-              uu._rotationQuaternion = Ru
+            has: kk => "_rotationQuaternion" in kk,
+            get: kk => kk._rotationQuaternion,
+            set: (kk, Fk) => {
+              kk._rotationQuaternion = Fk
             }
           },
-          metadata: Xu
-        }, bu, Cu), (0, Ju.h)(null, null, Ku, {
+          metadata: dk
+        }, Yk, Lk), (0, bk.j)(null, null, tk, {
           kind: "field",
           name: "_scaling",
           static: !1,
           private: !1,
           access: {
-            has: uu => "_scaling" in uu,
-            get: uu => uu._scaling,
-            set: (uu, Ru) => {
-              uu._scaling = Ru
+            has: kk => "_scaling" in kk,
+            get: kk => kk._scaling,
+            set: (kk, Fk) => {
+              kk._scaling = Fk
             }
           },
-          metadata: Xu
-        }, ku, eu), (0, Ju.h)(null, null, Qu, {
+          metadata: dk
+        }, Ok, Ek), (0, bk.j)(null, null, ak, {
           kind: "field",
           name: "_billboardMode",
           static: !1,
           private: !1,
           access: {
-            has: uu => "_billboardMode" in uu,
-            get: uu => uu._billboardMode,
-            set: (uu, Ru) => {
-              uu._billboardMode = Ru
+            has: kk => "_billboardMode" in kk,
+            get: kk => kk._billboardMode,
+            set: (kk, Fk) => {
+              kk._billboardMode = Fk
             }
           },
-          metadata: Xu
-        }, Au, Du), (0, Ju.h)(null, null, mu, {
+          metadata: dk
+        }, Sk, Nk), (0, bk.j)(null, null, Xk, {
           kind: "field",
           name: "scalingDeterminant",
           static: !1,
           private: !1,
           access: {
-            has: uu => "scalingDeterminant" in uu,
-            get: uu => uu.scalingDeterminant,
-            set: (uu, Ru) => {
-              uu.scalingDeterminant = Ru
+            has: kk => "scalingDeterminant" in kk,
+            get: kk => kk.scalingDeterminant,
+            set: (kk, Fk) => {
+              kk.scalingDeterminant = Fk
             }
           },
-          metadata: Xu
-        }, Mu, Iu), (0, Ju.h)(null, null, xu, {
+          metadata: dk
+        }, Hk, uk), (0, bk.j)(null, null, Ak, {
           kind: "field",
           name: "_infiniteDistance",
           static: !1,
           private: !1,
           access: {
-            has: uu => "_infiniteDistance" in uu,
-            get: uu => uu._infiniteDistance,
-            set: (uu, Ru) => {
-              uu._infiniteDistance = Ru
+            has: kk => "_infiniteDistance" in kk,
+            get: kk => kk._infiniteDistance,
+            set: (kk, Fk) => {
+              kk._infiniteDistance = Fk
             }
           },
-          metadata: Xu
-        }, Gu, Uu), (0, Ju.h)(null, null, Su, {
+          metadata: dk
+        }, Mk, gk), (0, bk.j)(null, null, ek, {
           kind: "field",
           name: "ignoreNonUniformScaling",
           static: !1,
           private: !1,
           access: {
-            has: uu => "ignoreNonUniformScaling" in uu,
-            get: uu => uu.ignoreNonUniformScaling,
-            set: (uu, Ru) => {
-              uu.ignoreNonUniformScaling = Ru
+            has: kk => "ignoreNonUniformScaling" in kk,
+            get: kk => kk.ignoreNonUniformScaling,
+            set: (kk, Fk) => {
+              kk.ignoreNonUniformScaling = Fk
             }
           },
-          metadata: Xu
-        }, nu, su), (0, Ju.h)(null, null, pu, {
+          metadata: dk
+        }, Uk, ck), (0, bk.j)(null, null, yk, {
           kind: "field",
           name: "reIntegrateRotationIntoRotationQuaternion",
           static: !1,
           private: !1,
           access: {
-            has: uu => "reIntegrateRotationIntoRotationQuaternion" in uu,
-            get: uu => uu.reIntegrateRotationIntoRotationQuaternion,
-            set: (uu, Ru) => {
-              uu.reIntegrateRotationIntoRotationQuaternion = Ru
+            has: kk => "reIntegrateRotationIntoRotationQuaternion" in kk,
+            get: kk => kk.reIntegrateRotationIntoRotationQuaternion,
+            set: (kk, Fk) => {
+              kk.reIntegrateRotationIntoRotationQuaternion = Fk
             }
           },
-          metadata: Xu
-        }, tu, lu), Xu && Object.defineProperty(uu, Symbol.metadata, {
+          metadata: dk
+        }, Gk, Tk), dk && Object.defineProperty(kk, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Xu
+          value: dk
         })
-      })(), uu.BILLBOARDMODE_NONE = 0, uu.BILLBOARDMODE_X = 1, uu.BILLBOARDMODE_Y = 2, uu.BILLBOARDMODE_Z = 4, uu.BILLBOARDMODE_ALL = 7, uu.BILLBOARDMODE_USE_POSITION = 128, uu.BillboardUseParentOrientation = !1, uu._TmpRotation = ru.f.Zero(), uu._TmpScaling = ru.p.Zero(), uu._TmpTranslation = ru.p.Zero(), uu._TmpRHRestore = ru.d.Scaling(1, 1, -1), uu._LookAtVectorCache = new ru.p(0, 0, 0), uu._RotationAxisCache = new ru.f, uu
+      })(), kk.BILLBOARDMODE_NONE = 0, kk.BILLBOARDMODE_X = 1, kk.BILLBOARDMODE_Y = 2, kk.BILLBOARDMODE_Z = 4, kk.BILLBOARDMODE_ALL = 7, kk.BILLBOARDMODE_USE_POSITION = 128, kk.BillboardUseParentOrientation = !1, kk._TmpRotation = Vk.e.Zero(), kk._TmpScaling = Vk.s.Zero(), kk._TmpTranslation = Vk.s.Zero(), kk._TmpRHRestore = Vk.c.Scaling(1, 1, -1), kk._LookAtVectorCache = new Vk.s(0, 0, 0), kk._RotationAxisCache = new Vk.e, kk
     })();
 
-    function Tu(uu, Ru, yu) {
-      const Eu = Xu.c.Parse((() => new pu(uu.name, Ru)), uu, Ru, yu);
-      if (uu.localMatrix ? Eu.setPreTransformMatrix(ru.d.FromArray(uu.localMatrix)) : uu.pivotMatrix && Eu.setPivotMatrix(ru.d.FromArray(uu.pivotMatrix)), Eu.tC(uu.isEnabled), Eu._waitingParsedUniqueId = uu.uniqueId, void 0 !== uu.parentId && (Eu._waitingParentId = uu.parentId), void 0 !== uu.parentInstanceIndex && (Eu._waitingParentInstanceIndex = uu.parentInstanceIndex), uu.fD && (Eu._waitingFreezeWorldMatrix = uu.fD), uu.animations) {
-        for (let Ru = 0; Ru < uu.animations.length; Ru++) {
-          const yu = uu.animations[Ru],
-            Ku = (0, xu.b)("BABYLON.Animation");
-          Ku && Eu.animations.push(Ku.Parse(yu))
+    function fk(kk, Fk, Bk) {
+      const Rk = dk.c.Parse((() => new yk(kk.name, Fk)), kk, Fk, Bk);
+      if (kk.localMatrix ? Rk.setPreTransformMatrix(Vk.c.FromArray(kk.localMatrix)) : kk.pivotMatrix && Rk.setPivotMatrix(Vk.c.FromArray(kk.pivotMatrix)), Rk.lY(kk.isEnabled), Rk._waitingParsedUniqueId = kk.uniqueId, void 0 !== kk.parentId && (Rk._waitingParentId = kk.parentId), void 0 !== kk.parentInstanceIndex && (Rk._waitingParentInstanceIndex = kk.parentInstanceIndex), kk.oN && (Rk._waitingFreezeWorldMatrix = kk.oN), kk.animations) {
+        for (let Fk = 0; Fk < kk.animations.length; Fk++) {
+          const Bk = kk.animations[Fk],
+            tk = (0, Ak.c)("BABYLON.Animation");
+          tk && Rk.animations.push(tk.Parse(Bk))
         }
-        Bu.e.ParseAnimationRanges(Eu, uu, Ru)
+        Jk.b.ParseAnimationRanges(Rk, kk, Fk)
       }
-      return uu.autoAnimate && Ru.beginAnimation(Eu, uu.autoAnimateFrom, uu.autoAnimateTo, uu.autoAnimateLoop, uu.autoAnimateSpeed || 1), Eu
+      return kk.autoAnimate && Fk.beginAnimation(Rk, kk.autoAnimateFrom, kk.autoAnimateTo, kk.autoAnimateLoop, kk.autoAnimateSpeed || 1), Rk
     }
-    let Wu = !1;
+    let mk = !1;
 
-    function ju() {
-      Wu || (Wu = !0, pu.Parse = Tu)
-    }(Eu = pu.prototype).Al ?? (Eu.Al = (0, Su.i)("TransformNode", "Al")), (Ku = pu.prototype).applyImpulse ?? (Ku.applyImpulse = (0, Su.i)("TransformNode", "applyImpulse")), (Qu = pu.prototype).applyAngularImpulse ?? (Qu.applyAngularImpulse = (0, Su.i)("TransformNode", "applyAngularImpulse")), (mu = pu.prototype).applyTorque ?? (mu.applyTorque = (0, Su.i)("TransformNode", "applyTorque")), Object.getOwnPropertyDescriptor(pu.prototype, "physicsBody") || Object.defineProperty(pu.prototype, "physicsBody", (0, Su.e)("TransformNode", "physicsBody"))
+    function Wk() {
+      mk || (mk = !0, yk.Parse = fk)
+    }(Rk = yk.prototype).nG ?? (Rk.nG = (0, ek.g)("TransformNode", "nG")), (tk = yk.prototype).applyImpulse ?? (tk.applyImpulse = (0, ek.g)("TransformNode", "applyImpulse")), (ak = yk.prototype).applyAngularImpulse ?? (ak.applyAngularImpulse = (0, ek.g)("TransformNode", "applyAngularImpulse")), (Xk = yk.prototype).applyTorque ?? (Xk.applyTorque = (0, ek.g)("TransformNode", "applyTorque")), Object.getOwnPropertyDescriptor(yk.prototype, "physicsBody") || Object.defineProperty(yk.prototype, "physicsBody", (0, ek.f)("TransformNode", "physicsBody"))
   },
-  39987: (uu, Ru, yu) => {
-    function Eu(uu, Ru, yu) {
+  39823: (kk, Fk, Bk) => {
+    function Rk(kk, Fk, Bk) {
       try {
-        const Eu = uu.next();
-        Eu.done ? Ru(Eu) : Eu.value ? Eu.value.then((() => {
-          Eu.value = void 0, Ru(Eu)
-        }), yu) : Ru(Eu)
-      } catch (Eu) {
-        yu(Eu)
+        const Rk = kk.next();
+        Rk.done ? Fk(Rk) : Rk.value ? Rk.value.then((() => {
+          Rk.value = void 0, Fk(Rk)
+        }), Bk) : Fk(Rk)
+      } catch (Rk) {
+        Bk(Rk)
       }
     }
 
-    function Ku() {
-      let uu, Ru = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 25;
-      return (yu, Ku, Qu) => {
-        const mu = performance.now();
-        void 0 === uu || mu - uu > Ru ? (uu = mu, setTimeout((() => {
-          Eu(yu, Ku, Qu)
-        }), 0)) : Eu(yu, Ku, Qu)
+    function tk() {
+      let kk, Fk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 25;
+      return (Bk, tk, ak) => {
+        const Xk = performance.now();
+        void 0 === kk || Xk - kk > Fk ? (kk = Xk, setTimeout((() => {
+          Rk(Bk, tk, ak)
+        }), 0)) : Rk(Bk, tk, ak)
       }
     }
 
-    function Qu(uu, Ru, yu, Eu, Ku) {
-      const Qu = () => {
-        let mu;
-        const Ju = uu => {
-          uu.done ? yu(uu.value) : void 0 === mu ? mu = !0 : Qu()
+    function ak(kk, Fk, Bk, Rk, tk) {
+      const ak = () => {
+        let Xk;
+        const bk = kk => {
+          kk.done ? Bk(kk.value) : void 0 === Xk ? Xk = !0 : ak()
         };
         do {
-          mu = void 0, Ku && Ku.aborted ? Eu(new Error("Aborted")) : Ru(uu, Ju, Eu), void 0 === mu && (mu = !1)
-        } while (mu)
+          Xk = void 0, tk && tk.aborted ? Rk(new Error("Aborted")) : Fk(kk, bk, Rk), void 0 === Xk && (Xk = !1)
+        } while (Xk)
       };
-      Qu()
+      ak()
     }
 
-    function mu(uu, Ru) {
-      let yu;
-      return Qu(uu, Eu, (uu => yu = uu), (uu => {
-        throw uu
-      }), Ru), yu
+    function Xk(kk, Fk) {
+      let Bk;
+      return ak(kk, Rk, (kk => Bk = kk), (kk => {
+        throw kk
+      }), Fk), Bk
     }
-    async function Ju(uu, Ru, yu) {
-      return await new Promise(((Eu, Ku) => {
-        Qu(uu, Ru, Eu, Ku, yu)
+    async function bk(kk, Fk, Bk) {
+      return await new Promise(((Rk, tk) => {
+        ak(kk, Fk, Rk, tk, Bk)
       }))
     }
 
-    function Nu(uu, Ru) {
+    function wk(kk, Fk) {
       return function() {
-        return mu(uu(...arguments), Ru)
+        return Xk(kk(...arguments), Fk)
       }
     }
-    yu.d(Ru, {
-      b: () => Ku,
-      f: () => Nu,
-      g: () => Ju,
-      k: () => mu
+    Bk.d(Fk, {
+      b: () => tk,
+      e: () => wk,
+      h: () => bk,
+      j: () => Xk
     })
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

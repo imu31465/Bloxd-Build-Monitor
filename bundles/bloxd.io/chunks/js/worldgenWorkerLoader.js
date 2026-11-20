@@ -1,29 +1,29 @@
 export const id = 68;
 export const ids = [68];
 export const modules = {
-  36266: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ku
+  36132: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk
     });
-    const Eu = {
-      wait: function(uu) {
-        return new Promise((Ru => {
-          setTimeout(Ru, uu)
+    const Rk = {
+      wait: function(kk) {
+        return new Promise((Fk => {
+          setTimeout(Fk, kk)
         }))
       },
       stallMs: 2e4
     };
-    class Ku {
-      constructor(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Eu;
-        this.url = uu, this.options = Ru, this.timing = yu, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = uu
+    class tk {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Rk;
+        this.url = kk, this.options = Fk, this.timing = Bk, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = kk
       }
       ready() {
         if (null === this.fetched) {
-          const uu = new AbortController;
-          this.fetchAbort = uu, this.fetched = this.fetchWithRetries(uu.signal).finally((() => {
-            this.fetchAbort === uu && (this.fetchAbort = null)
+          const kk = new AbortController;
+          this.fetchAbort = kk, this.fetched = this.fetchWithRetries(kk.signal).finally((() => {
+            this.fetchAbort === kk && (this.fetchAbort = null)
           }))
         }
         return this.fetched
@@ -34,81 +34,81 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(uu) {
-        for (let Ru = 0;; Ru++) {
-          const yu = new URL(this.url);
-          if (Ru > 0 && yu.searchParams.set("cache-bust", `${Date.now()}-${Ru}`), await this.fetchWhole(yu, uu)) return void(this.scriptUrl = yu);
-          if (Ru >= 3 || uu.aborted) return;
-          if (await this.timing.wait(500 * 2 ** Ru), uu.aborted) return
+      async fetchWithRetries(kk) {
+        for (let Fk = 0;; Fk++) {
+          const Bk = new URL(this.url);
+          if (Fk > 0 && Bk.searchParams.set("cache-bust", `${Date.now()}-${Fk}`), await this.fetchWhole(Bk, kk)) return void(this.scriptUrl = Bk);
+          if (Fk >= 3 || kk.aborted) return;
+          if (await this.timing.wait(500 * 2 ** Fk), kk.aborted) return
         }
       }
-      async fetchWhole(uu, Ru) {
-        const yu = new AbortController;
-        let Eu;
-        const Ku = () => {
-            clearTimeout(Eu), Eu = setTimeout((() => {
-              yu.abort()
+      async fetchWhole(kk, Fk) {
+        const Bk = new AbortController;
+        let Rk;
+        const tk = () => {
+            clearTimeout(Rk), Rk = setTimeout((() => {
+              Bk.abort()
             }), this.timing.stallMs)
           },
-          Qu = () => {
-            yu.abort()
+          ak = () => {
+            Bk.abort()
           };
-        Ru.addEventListener("abort", Qu, {
+        Fk.addEventListener("abort", ak, {
           once: !0
-        }), Ku();
+        }), tk();
         try {
-          var mu;
-          const Ru = await fetch(uu, {
-            signal: yu.signal
+          var Xk;
+          const Fk = await fetch(kk, {
+            signal: Bk.signal
           });
-          if (!Ru.ok) return !1;
-          const Eu = null === (mu = Ru.body) || void 0 === mu ? void 0 : mu.getReader();
-          if (!Eu) return !1;
+          if (!Fk.ok) return !1;
+          const Rk = null === (Xk = Fk.body) || void 0 === Xk ? void 0 : Xk.getReader();
+          if (!Rk) return !1;
           for (;;) {
             const {
-              done: uu
-            } = await Eu.read();
-            if (uu) return !0;
-            Ku()
+              done: kk
+            } = await Rk.read();
+            if (kk) return !0;
+            tk()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(Eu), Ru.removeEventListener("abort", Qu)
+          clearTimeout(Rk), Fk.removeEventListener("abort", ak)
         }
       }
     }
   },
-  42923: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      createWorldgenWorker: () => Xu,
-      prefetchWorldgenWorker: () => Ju,
-      stopWorldgenWorkerPrefetch: () => Nu,
-      worldgenWorkerReady: () => mu
+  42804: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      createWorldgenWorker: () => dk,
+      prefetchWorldgenWorker: () => bk,
+      stopWorldgenWorkerPrefetch: () => wk,
+      worldgenWorkerReady: () => Xk
     });
-    const Eu = new(yu(36266).e)(new URL(yu.p + yu.u(67), yu.b), {
+    const Rk = new(Bk(36132).c)(new URL(Bk.p + Bk.u(67), Bk.b), {
       name: "worldgenWorker",
       type: "module"
     });
-    let Ku = !1,
-      Qu = !1;
+    let tk = !1,
+      ak = !1;
 
-    function mu() {
-      return Ku = !0, Eu.ready()
+    function Xk() {
+      return tk = !0, Rk.ready()
     }
 
-    function Ju() {
-      Eu.ready()
+    function bk() {
+      Rk.ready()
     }
 
-    function Nu() {
-      Ku || Qu || (Qu = !0, Eu.cancel())
+    function wk() {
+      tk || ak || (ak = !0, Rk.cancel())
     }
 
-    function Xu() {
-      return Eu.start()
+    function dk() {
+      return Rk.start()
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

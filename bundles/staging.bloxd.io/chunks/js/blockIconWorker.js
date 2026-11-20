@@ -1,285 +1,285 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var uu = __webpack_require__.u,
-        Ru = __webpack_require__.e,
-        yu = {},
-        Eu = {};
-      __webpack_require__.u = function(Ru) {
-        return uu(Ru) + (yu.hasOwnProperty(Ru) ? "?" + yu[Ru] : "")
-      }, __webpack_require__.e = function(Ku) {
-        return Ru(Ku).catch((function(Ru) {
-          var Qu = Eu.hasOwnProperty(Ku) ? Eu[Ku] : 4;
-          if (Qu < 1) {
-            var mu = uu(Ku);
-            throw Ru.message = "Loading chunk " + Ku + " failed after 4 retries.\n(" + mu + ")", Ru.request = mu, yu[Ku] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete Eu[Ku]
-            }), 0), Ru
+      var kk = __webpack_require__.u,
+        Fk = __webpack_require__.e,
+        Bk = {},
+        Rk = {};
+      __webpack_require__.u = function(Fk) {
+        return kk(Fk) + (Bk.hasOwnProperty(Fk) ? "?" + Bk[Fk] : "")
+      }, __webpack_require__.e = function(tk) {
+        return Fk(tk).catch((function(Fk) {
+          var ak = Rk.hasOwnProperty(tk) ? Rk[tk] : 4;
+          if (ak < 1) {
+            var Xk = kk(tk);
+            throw Fk.message = "Loading chunk " + tk + " failed after 4 retries.\n(" + Xk + ")", Fk.request = Xk, Bk[tk] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete Rk[tk]
+            }), 0), Fk
           }
-          return new Promise((function(uu) {
-            var Ru = 4 - Qu + 1;
+          return new Promise((function(kk) {
+            var Fk = 4 - ak + 1;
             setTimeout((function() {
-              var Ru = "cache-bust=" + Date.now();
-              yu[Ku] = Ru, Eu[Ku] = Qu - 1, uu(__webpack_require__.e(Ku))
-            }), function(uu) {
-              return 500 * Math.pow(2, uu)
-            }(Ru))
+              var Fk = "cache-bust=" + Date.now();
+              Bk[tk] = Fk, Rk[tk] = ak - 1, kk(__webpack_require__.e(tk))
+            }), function(kk) {
+              return 500 * Math.pow(2, kk)
+            }(Fk))
           }))
         }))
       }
     }
   })();
-  const uu = [15, 15, 15],
-    Ru = {
+  const kk = [15, 15, 15],
+    Fk = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function yu(Ru, yu, Eu) {
-    let Ku = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu => 0 !== Ru[4 * uu + 3];
-    const Qu = (uu, Ru) => uu < 0 || Ru < 0 || uu >= yu || Ru >= yu || !Ku(Ru * yu + uu),
-      mu = [];
-    for (let uu = 0; uu < yu; uu++)
-      for (let Ru = 0; Ru < yu; Ru++)
-        if (!Qu(Ru, uu)) uu: for (let Ku = -Eu; Ku <= Eu; Ku++) {
-          const Ju = Eu - Math.abs(Ku);
-          for (let Eu = -Ju; Eu <= Ju; Eu++)
-            if (Qu(Ru + Eu, uu + Ku)) {
-              mu.push(uu * yu + Ru);
-              break uu
+  function Bk(Fk, Bk, Rk) {
+    let tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kk => 0 !== Fk[4 * kk + 3];
+    const ak = (kk, Fk) => kk < 0 || Fk < 0 || kk >= Bk || Fk >= Bk || !tk(Fk * Bk + kk),
+      Xk = [];
+    for (let kk = 0; kk < Bk; kk++)
+      for (let Fk = 0; Fk < Bk; Fk++)
+        if (!ak(Fk, kk)) kk: for (let tk = -Rk; tk <= Rk; tk++) {
+          const bk = Rk - Math.abs(tk);
+          for (let Rk = -bk; Rk <= bk; Rk++)
+            if (ak(Fk + Rk, kk + tk)) {
+              Xk.push(kk * Bk + Fk);
+              break kk
             }
         }
-    for (const Ju of mu) Ru.set(uu, 4 * Ju), Ru[4 * Ju + 3] = 255
+    for (const bk of Xk) Fk.set(kk, 4 * bk), Fk[4 * bk + 3] = 255
   }
-  const Eu = Math.SQRT1_2,
-    Ku = Math.sqrt(3) / 2,
-    Qu = {
+  const Rk = Math.SQRT1_2,
+    tk = Math.sqrt(3) / 2,
+    ak = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    mu = {
+    Xk = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    Ju = {
+    bk = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const Nu = 1e-6;
+  const wk = 1e-6;
 
-  function Xu(uu, Ru, yu, Eu) {
+  function dk(kk, Fk, Bk, Rk) {
     let {
-      origin: Ku,
-      across: Qu,
-      down: mu,
-      texture: Ju,
-      rect: [Xu, Vu, ru, Bu],
-      shade: xu
-    } = Eu;
-    const Su = Qu.x * mu.y - Qu.y * mu.x;
-    if (Math.abs(Su) < 1e-9) return;
-    const pu = [Ku.x, Ku.x + Qu.x, Ku.x + mu.x, Ku.x + Qu.x + mu.x],
-      Tu = [Ku.y, Ku.y + Qu.y, Ku.y + mu.y, Ku.y + Qu.y + mu.y],
-      Wu = Math.max(0, Math.floor(Math.min(...pu))),
-      ju = Math.min(yu - 1, Math.ceil(Math.max(...pu))),
-      Hu = Math.max(0, Math.floor(Math.min(...Tu))),
-      du = Math.min(yu - 1, Math.ceil(Math.max(...Tu)));
-    for (let bu = Hu; bu <= du; bu++)
-      for (let Eu = Wu; Eu <= ju; Eu++) {
-        const pu = Eu + .5 - Ku.x,
-          Tu = bu + .5 - Ku.y,
-          Wu = (pu * mu.y - Tu * mu.x) / Su,
-          ju = (Qu.x * Tu - Qu.y * pu) / Su;
-        if (Wu < -Nu || Wu > 1 + Nu || ju < -Nu || ju > 1 + Nu) continue;
-        const Hu = bu * yu + Eu;
-        Ru[Hu] = 1;
-        const du = Xu + Math.min(Math.max(Wu, 0), 1) * (ru - Xu),
-          Cu = Vu + Math.min(Math.max(ju, 0), 1) * (Bu - Vu),
-          ku = Math.min(Ju.width - 1, Math.floor(du * Ju.width)),
-          eu = 4 * (Math.min(Ju.height - 1, Math.floor(Cu * Ju.height)) * Ju.width + ku),
-          Au = Ju.pixels[eu + 3] / 255;
-        if (0 === Au) continue;
-        const Du = 4 * Hu,
-          Mu = uu[Du + 3] / 255 * (1 - Au),
-          Iu = Au + Mu;
-        for (let Ru = 0; Ru < 3; Ru++) uu[Du + Ru] = (Ju.pixels[eu + Ru] * xu * Au + uu[Du + Ru] * Mu) / Iu;
-        uu[Du + 3] = 255 * Iu
+      origin: tk,
+      across: ak,
+      down: Xk,
+      texture: bk,
+      rect: [dk, sk, Vk, Jk],
+      shade: Ak
+    } = Rk;
+    const ek = ak.x * Xk.y - ak.y * Xk.x;
+    if (Math.abs(ek) < 1e-9) return;
+    const yk = [tk.x, tk.x + ak.x, tk.x + Xk.x, tk.x + ak.x + Xk.x],
+      fk = [tk.y, tk.y + ak.y, tk.y + Xk.y, tk.y + ak.y + Xk.y],
+      mk = Math.max(0, Math.floor(Math.min(...yk))),
+      Wk = Math.min(Bk - 1, Math.ceil(Math.max(...yk))),
+      vk = Math.max(0, Math.floor(Math.min(...fk))),
+      ik = Math.min(Bk - 1, Math.ceil(Math.max(...fk)));
+    for (let Yk = vk; Yk <= ik; Yk++)
+      for (let Rk = mk; Rk <= Wk; Rk++) {
+        const yk = Rk + .5 - tk.x,
+          fk = Yk + .5 - tk.y,
+          mk = (yk * Xk.y - fk * Xk.x) / ek,
+          Wk = (ak.x * fk - ak.y * yk) / ek;
+        if (mk < -wk || mk > 1 + wk || Wk < -wk || Wk > 1 + wk) continue;
+        const vk = Yk * Bk + Rk;
+        Fk[vk] = 1;
+        const ik = dk + Math.min(Math.max(mk, 0), 1) * (Vk - dk),
+          Lk = sk + Math.min(Math.max(Wk, 0), 1) * (Jk - sk),
+          Ok = Math.min(bk.width - 1, Math.floor(ik * bk.width)),
+          Ek = 4 * (Math.min(bk.height - 1, Math.floor(Lk * bk.height)) * bk.width + Ok),
+          Sk = bk.pixels[Ek + 3] / 255;
+        if (0 === Sk) continue;
+        const Nk = 4 * vk,
+          Hk = kk[Nk + 3] / 255 * (1 - Sk),
+          uk = Sk + Hk;
+        for (let Fk = 0; Fk < 3; Fk++) kk[Nk + Fk] = (bk.pixels[Ek + Fk] * Ak * Sk + kk[Nk + Fk] * Hk) / uk;
+        kk[Nk + 3] = 255 * uk
       }
   }
 
-  function Vu(uu, Ru, yu) {
-    const Eu = uu.get(Ru);
-    if (void 0 === Eu) throw new Error(`no ${yu} was sent for ${Ru.slice(0,100)}`);
-    return Eu
+  function sk(kk, Fk, Bk) {
+    const Rk = kk.get(Fk);
+    if (void 0 === Rk) throw new Error(`no ${Bk} was sent for ${Fk.slice(0,100)}`);
+    return Rk
   }
-  const ru = {
-      pixelsOf(uu) {
-        const Ru = new OffscreenCanvas(uu.width, uu.height),
-          yu = Ru.getContext("2d");
-        if (!yu) throw new Error("no 2D context");
-        return yu.drawImage(uu, 0, 0), uu.close(), {
-          width: Ru.width,
-          height: Ru.height,
-          pixels: yu.getImageData(0, 0, Ru.width, Ru.height).data
+  const Vk = {
+      pixelsOf(kk) {
+        const Fk = new OffscreenCanvas(kk.width, kk.height),
+          Bk = Fk.getContext("2d");
+        if (!Bk) throw new Error("no 2D context");
+        return Bk.drawImage(kk, 0, 0), kk.close(), {
+          width: Fk.width,
+          height: Fk.height,
+          pixels: Bk.getImageData(0, 0, Fk.width, Fk.height).data
         }
       },
-      async encode(uu, Ru) {
-        const yu = new OffscreenCanvas(Ru, Ru),
-          Eu = yu.getContext("2d");
-        if (!Eu) throw new Error("no 2D context");
-        Eu.putImageData(new ImageData(uu, Ru, Ru), 0, 0);
-        const Ku = await yu.convertToBlob();
-        return new Promise(((uu, Ru) => {
-          const yu = new FileReader;
-          yu.onload = () => {
-            uu(yu.result)
-          }, yu.onerror = () => {
-            var uu;
-            Ru(null !== (uu = yu.error) && void 0 !== uu ? uu : new Error("the icon did not encode"))
-          }, yu.readAsDataURL(Ku)
+      async encode(kk, Fk) {
+        const Bk = new OffscreenCanvas(Fk, Fk),
+          Rk = Bk.getContext("2d");
+        if (!Rk) throw new Error("no 2D context");
+        Rk.putImageData(new ImageData(kk, Fk, Fk), 0, 0);
+        const tk = await Bk.convertToBlob();
+        return new Promise(((kk, Fk) => {
+          const Bk = new FileReader;
+          Bk.onload = () => {
+            kk(Bk.result)
+          }, Bk.onerror = () => {
+            var kk;
+            Fk(null !== (kk = Bk.error) && void 0 !== kk ? kk : new Error("the icon did not encode"))
+          }, Bk.readAsDataURL(tk)
         }))
       }
     },
-    Bu = globalThis.WorkerGlobalScope;
-  void 0 !== Bu && globalThis instanceof Bu && function(uu, Nu) {
-    const ru = new Map,
-      Bu = new Map,
-      xu = (Ru, yu, Eu) => {
+    Jk = globalThis.WorkerGlobalScope;
+  void 0 !== Jk && globalThis instanceof Jk && function(kk, wk) {
+    const Vk = new Map,
+      Jk = new Map,
+      Ak = (Fk, Bk, Rk) => {
         (async () => {
           try {
-            uu.postMessage({
+            kk.postMessage({
               type: "drawn",
-              id: Ru,
-              url: await Nu.encode(Eu(), yu)
+              id: Fk,
+              url: await wk.encode(Rk(), Bk)
             })
-          } catch (Ku) {
-            uu.postMessage({
+          } catch (tk) {
+            kk.postMessage({
               type: "failed",
-              message: String(Ku)
+              message: String(tk)
             })
           }
         })()
       };
-    uu.onmessage = uu => {
+    kk.onmessage = kk => {
       let {
-        data: Su
-      } = uu;
-      if ("texture" === Su.type) ru.set(Su.url, Nu.pixelsOf(Su.bitmap));
-      else if ("model" === Su.type) Bu.set(Su.name, {
-        geometry: Su.geometry,
-        texture: Nu.pixelsOf(Su.bitmap)
+        data: ek
+      } = kk;
+      if ("texture" === ek.type) Vk.set(ek.url, wk.pixelsOf(ek.bitmap));
+      else if ("model" === ek.type) Jk.set(ek.name, {
+        geometry: ek.geometry,
+        texture: wk.pixelsOf(ek.bitmap)
       });
-      else if ("draw" === Su.type) {
+      else if ("draw" === ek.type) {
         const {
-          id: uu,
-          top: Nu,
-          left: Bu,
-          right: pu,
-          itemType: Tu,
-          size: Wu,
-          outlineWidth: ju
-        } = Su;
-        xu(uu, Wu, (() => function(uu, Qu, mu, Ju) {
-          const Nu = .6 * mu,
-            Vu = Nu * Eu,
-            ru = Nu * Eu * .5,
-            Bu = Nu * Ku,
-            xu = Math.max(...Qu.boxes.map((uu => uu[4]))),
-            Su = Vu / 2 + (mu - Vu) / 2,
-            pu = ru + (mu - ru - ru - xu * Bu) / 2,
-            Tu = (uu, Ru, yu) => ({
-              x: Su + (uu - yu) * Vu,
-              y: pu - ru + (uu + yu) * ru + (xu - Ru) * Bu
+          id: kk,
+          top: wk,
+          left: Jk,
+          right: yk,
+          itemType: fk,
+          size: mk,
+          outlineWidth: Wk
+        } = ek;
+        Ak(kk, mk, (() => function(kk, ak, Xk, bk) {
+          const wk = .6 * Xk,
+            sk = wk * Rk,
+            Vk = wk * Rk * .5,
+            Jk = wk * tk,
+            Ak = Math.max(...ak.boxes.map((kk => kk[4]))),
+            ek = sk / 2 + (Xk - sk) / 2,
+            yk = Vk + (Xk - Vk - Vk - Ak * Jk) / 2,
+            fk = (kk, Fk, Bk) => ({
+              x: ek + (kk - Bk) * sk,
+              y: yk - Vk + (kk + Bk) * Vk + (Ak - Fk) * Jk
             }),
-            Wu = (uu, Ru, yu, Eu, Ku, mu) => ({
-              origin: uu,
+            mk = (kk, Fk, Bk, Rk, tk, Xk) => ({
+              origin: kk,
               across: {
-                x: Ru.x - uu.x,
-                y: Ru.y - uu.y
+                x: Fk.x - kk.x,
+                y: Fk.y - kk.y
               },
               down: {
-                x: yu.x - uu.x,
-                y: yu.y - uu.y
+                x: Bk.x - kk.x,
+                y: Bk.y - kk.y
               },
-              texture: Eu,
-              rect: Qu.cropFaces ? Ku : [0, 0, 1, 1],
-              shade: mu
+              texture: Rk,
+              rect: ak.cropFaces ? tk : [0, 0, 1, 1],
+              shade: Xk
             }),
-            ju = new Uint8ClampedArray(mu * mu * 4),
-            Hu = new Uint8Array(mu * mu),
-            du = Ru;
-          for (const [Ru, yu, Eu, Ku, bu, Cu] of Qu.boxes) {
-            const Qu = Wu(Tu(Ku, bu, Cu), Tu(Ku, bu, Eu), Tu(Ku, yu, Cu), uu.right, [1 - Cu, 1 - bu, 1 - Eu, 1 - yu], du.right),
-              Ju = Wu(Tu(Ru, bu, Cu), Tu(Ku, bu, Cu), Tu(Ru, yu, Cu), uu.left, [Ru, 1 - bu, Ku, 1 - yu], du.left),
-              Nu = Wu(Tu(Ru, bu, Eu), Tu(Ku, bu, Eu), Tu(Ru, bu, Cu), uu.top, [Ru, Eu, Ku, Cu], du.top);
-            for (const uu of [Qu, Ju, Nu]) Xu(ju, Hu, mu, uu)
+            Wk = new Uint8ClampedArray(Xk * Xk * 4),
+            vk = new Uint8Array(Xk * Xk),
+            ik = Fk;
+          for (const [Fk, Bk, Rk, tk, Yk, Lk] of ak.boxes) {
+            const ak = mk(fk(tk, Yk, Lk), fk(tk, Yk, Rk), fk(tk, Bk, Lk), kk.right, [1 - Lk, 1 - Yk, 1 - Rk, 1 - Bk], ik.right),
+              bk = mk(fk(Fk, Yk, Lk), fk(tk, Yk, Lk), fk(Fk, Bk, Lk), kk.left, [Fk, 1 - Yk, tk, 1 - Bk], ik.left),
+              wk = mk(fk(Fk, Yk, Rk), fk(tk, Yk, Rk), fk(Fk, Yk, Lk), kk.top, [Fk, Rk, tk, Lk], ik.top);
+            for (const kk of [ak, bk, wk]) dk(Wk, vk, Xk, kk)
           }
-          return yu(ju, mu, Ju, (uu => 1 === Hu[uu])), ju
+          return Bk(Wk, Xk, bk, (kk => 1 === vk[kk])), Wk
         }({
-          top: Vu(ru, Nu, "texture"),
-          left: Vu(ru, Bu, "texture"),
-          right: Vu(ru, pu, "texture")
-        }, function(uu) {
-          return "SlabBlock" === uu ? mu : "StairsBlock" === uu ? Ju : Qu
-        }(Tu), Wu, ju)))
+          top: sk(Vk, wk, "texture"),
+          left: sk(Vk, Jk, "texture"),
+          right: sk(Vk, yk, "texture")
+        }, function(kk) {
+          return "SlabBlock" === kk ? Xk : "StairsBlock" === kk ? bk : ak
+        }(fk), mk, Wk)))
       } else {
         const {
-          id: uu,
-          name: Ru,
-          size: Eu,
-          outlineWidth: Ku
-        } = Su;
-        xu(uu, Eu, (() => {
+          id: kk,
+          name: Fk,
+          size: Rk,
+          outlineWidth: tk
+        } = ek;
+        Ak(kk, Rk, (() => {
           const {
-            geometry: uu,
-            texture: Qu
-          } = Vu(Bu, Ru, "model");
-          return function(uu, Ru, Eu, Ku) {
+            geometry: kk,
+            texture: ak
+          } = sk(Jk, Fk, "model");
+          return function(kk, Fk, Rk, tk) {
             const {
-              vertices: Qu,
-              uvs: mu,
-              indices: Ju,
-              shades: Nu
-            } = uu, Xu = .03125 * Eu, Vu = Eu - 2 * Xu, ru = new Float32Array(Qu.length);
-            for (let yu = 0; yu < Qu.length; yu += 3) ru[yu] = Xu + Qu[yu] * Vu, ru[yu + 1] = Xu + Qu[yu + 1] * Vu, ru[yu + 2] = Qu[yu + 2];
-            const Bu = new Float32Array(Eu * Eu).fill(-1 / 0),
-              xu = new Uint8ClampedArray(Eu * Eu * 4),
-              Su = 255 * uu.alphaCutoff;
-            for (let yu = 0; yu < Ju.length; yu += 3) {
-              const [uu, Ku, Qu] = [Ju[yu], Ju[yu + 1], Ju[yu + 2]], [Xu, Vu, pu] = [3 * uu, 3 * Ku, 3 * Qu], [Tu, Wu, ju, Hu, du, bu] = [ru[Xu], ru[Xu + 1], ru[Vu], ru[Vu + 1], ru[pu], ru[pu + 1]], Cu = (ju - Tu) * (bu - Wu) - (du - Tu) * (Hu - Wu);
-              if (Math.abs(Cu) < 1e-9) continue;
-              const ku = Nu[yu / 3],
-                [eu, Au, Du, Mu, Iu, Gu] = [mu[2 * uu], mu[2 * uu + 1], mu[2 * Ku], mu[2 * Ku + 1], mu[2 * Qu], mu[2 * Qu + 1]],
-                Uu = Math.max(0, Math.floor(Math.min(Tu, ju, du))),
-                nu = Math.min(Eu - 1, Math.ceil(Math.max(Tu, ju, du))),
-                su = Math.max(0, Math.floor(Math.min(Wu, Hu, bu))),
-                tu = Math.min(Eu - 1, Math.ceil(Math.max(Wu, Hu, bu)));
-              for (let yu = su; yu <= tu; yu++)
-                for (let uu = Uu; uu <= nu; uu++) {
-                  const [Ku, Qu] = [uu + .5, yu + .5], mu = ((Ku - Tu) * (bu - Wu) - (du - Tu) * (Qu - Wu)) / Cu, Ju = ((ju - Tu) * (Qu - Wu) - (Ku - Tu) * (Hu - Wu)) / Cu, Nu = 1 - mu - Ju;
-                  if (Nu < 0 || mu < 0 || Ju < 0) continue;
-                  const Uu = Nu * ru[Xu + 2] + mu * ru[Vu + 2] + Ju * ru[pu + 2],
-                    nu = yu * Eu + uu;
-                  if (Uu <= Bu[nu]) continue;
-                  const su = Math.max(0, Math.min(Ru.width - 1, Math.floor((Nu * eu + mu * Du + Ju * Iu) * Ru.width))),
-                    tu = 4 * (Math.max(0, Math.min(Ru.height - 1, Math.floor((Nu * Au + mu * Mu + Ju * Gu) * Ru.height))) * Ru.width + su);
-                  Ru.pixels[tu + 3] < Su || (Bu[nu] = Uu, xu[4 * nu] = Ru.pixels[tu] * ku, xu[4 * nu + 1] = Ru.pixels[tu + 1] * ku, xu[4 * nu + 2] = Ru.pixels[tu + 2] * ku, xu[4 * nu + 3] = 255)
+              vertices: ak,
+              uvs: Xk,
+              indices: bk,
+              shades: wk
+            } = kk, dk = .03125 * Rk, sk = Rk - 2 * dk, Vk = new Float32Array(ak.length);
+            for (let Bk = 0; Bk < ak.length; Bk += 3) Vk[Bk] = dk + ak[Bk] * sk, Vk[Bk + 1] = dk + ak[Bk + 1] * sk, Vk[Bk + 2] = ak[Bk + 2];
+            const Jk = new Float32Array(Rk * Rk).fill(-1 / 0),
+              Ak = new Uint8ClampedArray(Rk * Rk * 4),
+              ek = 255 * kk.alphaCutoff;
+            for (let Bk = 0; Bk < bk.length; Bk += 3) {
+              const [kk, tk, ak] = [bk[Bk], bk[Bk + 1], bk[Bk + 2]], [dk, sk, yk] = [3 * kk, 3 * tk, 3 * ak], [fk, mk, Wk, vk, ik, Yk] = [Vk[dk], Vk[dk + 1], Vk[sk], Vk[sk + 1], Vk[yk], Vk[yk + 1]], Lk = (Wk - fk) * (Yk - mk) - (ik - fk) * (vk - mk);
+              if (Math.abs(Lk) < 1e-9) continue;
+              const Ok = wk[Bk / 3],
+                [Ek, Sk, Nk, Hk, uk, Mk] = [Xk[2 * kk], Xk[2 * kk + 1], Xk[2 * tk], Xk[2 * tk + 1], Xk[2 * ak], Xk[2 * ak + 1]],
+                gk = Math.max(0, Math.floor(Math.min(fk, Wk, ik))),
+                Uk = Math.min(Rk - 1, Math.ceil(Math.max(fk, Wk, ik))),
+                ck = Math.max(0, Math.floor(Math.min(mk, vk, Yk))),
+                Gk = Math.min(Rk - 1, Math.ceil(Math.max(mk, vk, Yk)));
+              for (let Bk = ck; Bk <= Gk; Bk++)
+                for (let kk = gk; kk <= Uk; kk++) {
+                  const [tk, ak] = [kk + .5, Bk + .5], Xk = ((tk - fk) * (Yk - mk) - (ik - fk) * (ak - mk)) / Lk, bk = ((Wk - fk) * (ak - mk) - (tk - fk) * (vk - mk)) / Lk, wk = 1 - Xk - bk;
+                  if (wk < 0 || Xk < 0 || bk < 0) continue;
+                  const gk = wk * Vk[dk + 2] + Xk * Vk[sk + 2] + bk * Vk[yk + 2],
+                    Uk = Bk * Rk + kk;
+                  if (gk <= Jk[Uk]) continue;
+                  const ck = Math.max(0, Math.min(Fk.width - 1, Math.floor((wk * Ek + Xk * Nk + bk * uk) * Fk.width))),
+                    Gk = 4 * (Math.max(0, Math.min(Fk.height - 1, Math.floor((wk * Sk + Xk * Hk + bk * Mk) * Fk.height))) * Fk.width + ck);
+                  Fk.pixels[Gk + 3] < ek || (Jk[Uk] = gk, Ak[4 * Uk] = Fk.pixels[Gk] * Ok, Ak[4 * Uk + 1] = Fk.pixels[Gk + 1] * Ok, Ak[4 * Uk + 2] = Fk.pixels[Gk + 2] * Ok, Ak[4 * Uk + 3] = 255)
                 }
             }
-            return yu(xu, Eu, Ku), xu
-          }(uu, Qu, Eu, Ku)
+            return Bk(Ak, Rk, tk), Ak
+          }(kk, ak, Rk, tk)
         }))
       }
-    }, uu.postMessage({
+    }, kk.postMessage({
       type: "started"
     })
-  }(globalThis, ru)
+  }(globalThis, Vk)
 })();

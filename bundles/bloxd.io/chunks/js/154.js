@@ -1,73 +1,73 @@
 export const id = 154;
 export const ids = [154];
 export const modules = {
-  8623: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Ju
+  8556: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => bk
     });
-    var Eu = yu(27),
-      Ku = yu(1170),
-      Qu = yu(4782),
-      mu = yu(1079);
+    var Rk = Bk(22),
+      tk = Bk(1149),
+      ak = Bk(4688),
+      Xk = Bk(1069);
 
-    function Ju(uu) {
+    function bk(kk) {
       let {
-        note: Ru
-      } = uu;
+        note: Fk
+      } = kk;
       const {
-        t: yu
-      } = (0, Ku.E)(), {
-        clientEscMenuOptions: Ju
-      } = (0, Eu.j)(["clientEscMenuOptions"]);
-      return (0, mu.jsx)(Qu.c, {
-        label: yu("touchSettings:actionButtons"),
-        checked: Ju.touchActionButtons,
-        onClick: uu => {
-          Eu.d.setClientEscMenuOptions({
-            touchActionButtons: uu
+        t: Bk
+      } = (0, tk.x)(), {
+        clientEscMenuOptions: bk
+      } = (0, Rk.h)(["clientEscMenuOptions"]);
+      return (0, Xk.jsx)(ak.e, {
+        label: Bk("touchSettings:actionButtons"),
+        checked: bk.touchActionButtons,
+        onClick: kk => {
+          Rk.c.setClientEscMenuOptions({
+            touchActionButtons: kk
           })
         },
-        circleInfoText: yu("touchSettings:actionButtonsInfo"),
-        note: Ru
+        circleInfoText: Bk("touchSettings:actionButtonsInfo"),
+        note: Fk
       })
     }
   },
-  8611: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => ty,
-      f: () => sy
+  8540: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => GB,
+      e: () => cB
     });
-    var Eu = yu(1170),
-      Ku = yu(64),
-      Qu = yu(1915),
-      mu = yu(1923),
-      Ju = yu(1035),
-      Nu = yu.n(Ju),
-      Xu = yu(1408),
-      Vu = yu(27),
-      ru = yu(106),
-      Bu = yu(125),
-      xu = yu(4782),
-      Su = yu(2335),
-      pu = yu(312),
-      Tu = yu(1927),
-      Wu = yu(1935),
-      ju = yu(8615),
-      Hu = yu(8623),
-      du = yu(330),
-      bu = yu(1079);
-    const Cu = {
+    var Rk = Bk(1149),
+      tk = Bk(61),
+      ak = Bk(1881),
+      Xk = Bk(1892),
+      bk = Bk(1020),
+      wk = Bk.n(bk),
+      dk = Bk(1389),
+      sk = Bk(22),
+      Vk = Bk(98),
+      Jk = Bk(112),
+      Ak = Bk(4688),
+      ek = Bk(2320),
+      yk = Bk(271),
+      fk = Bk(1897),
+      mk = Bk(1903),
+      Wk = Bk(8548),
+      vk = Bk(8556),
+      ik = Bk(279),
+      Yk = Bk(1069);
+    const Lk = {
       floating: "settingsMenu:joystickFloating",
       fixed_shown: "settingsMenu:joystickFixed",
       fixed_hidden: "settingsMenu:joystickHidden"
     };
-    var ku = yu(8631);
-    var eu = yu(1422),
-      Au = yu(1311),
-      Du = yu(1043),
-      Mu = yu(1362),
-      Iu = yu(2347);
-    const Gu = {
+    var Ok = Bk(8565);
+    var Ek = Bk(1418),
+      Sk = Bk(1300),
+      Nk = Bk(1028),
+      Hk = Bk(1355),
+      uk = Bk(2340);
+    const Mk = {
         jump: "cluster",
         crouch: "cluster",
         attack: "cluster",
@@ -76,305 +76,305 @@ export const modules = {
         game: "cluster",
         arrows: "hotbar",
         inventory: "hotbar",
-        ...Object.fromEntries(Iu.C.map((uu => [uu, "menu"])))
+        ...Object.fromEntries(uk.D.map((kk => [kk, "menu"])))
       },
-      Uu = uu => Iu.y.filter((Ru => Gu[Ru] === uu)),
-      nu = new Set(Uu("cluster")),
-      su = ["cluster"],
-      tu = [...su, ...Iu.y.filter((uu => !su.includes(uu) && !Gu[uu]))],
-      lu = tu.flatMap((uu => [uu, ...Uu(uu)])).map((uu => ({
-        id: uu,
-        label: `hudLayout:${uu}`,
-        ...Iu.x[uu],
-        parent: Gu[uu]
+      gk = kk => uk.w.filter((Fk => Mk[Fk] === kk)),
+      Uk = new Set(gk("cluster")),
+      ck = ["cluster"],
+      Gk = [...ck, ...uk.w.filter((kk => !ck.includes(kk) && !Mk[kk]))],
+      Tk = Gk.flatMap((kk => [kk, ...gk(kk)])).map((kk => ({
+        id: kk,
+        label: `hudLayout:${kk}`,
+        ...uk.v[kk],
+        parent: Mk[kk]
       }))),
-      gu = Object.fromEntries(lu.map((uu => [uu.id, uu]))),
-      cu = "data-hud-el";
+      rk = Object.fromEntries(Tk.map((kk => [kk.id, kk]))),
+      Dk = "data-hud-el";
 
-    function Lu(uu, Ru, yu, Eu) {
-      const Ku = yu(function(uu, Ru) {
-          return "attack" !== uu || Ru ? gu[uu].label : "hudLayout:attackContext"
-        }(uu, Ru)),
-        Qu = Eu[uu];
-      return Qu ? yu("hudLayout:slotWithKey", {
-        slot: Ku,
-        key: Qu
-      }) : Ku
+    function zk(kk, Fk, Bk, Rk) {
+      const tk = Bk(function(kk, Fk) {
+          return "attack" !== kk || Fk ? rk[kk].label : "hudLayout:attackContext"
+        }(kk, Fk)),
+        ak = Rk[kk];
+      return ak ? Bk("hudLayout:slotWithKey", {
+        slot: tk,
+        key: ak
+      }) : tk
     }
 
-    function zu(uu, Ru, yu, Eu) {
-      return uu.map((uu => Lu(uu, Ru, yu, Eu))).join(", ")
+    function Pk(kk, Fk, Bk, Rk) {
+      return kk.map((kk => zk(kk, Fk, Bk, Rk))).join(", ")
     }
 
-    function Fu(uu) {
+    function hk(kk) {
       let {
-        className: Ru,
-        keepPlace: yu
-      } = uu;
-      return yu ? (0, bu.jsx)("div", {
-        className: Nu()(Ru, "Placeholder")
+        className: Fk,
+        keepPlace: Bk
+      } = kk;
+      return Bk ? (0, Yk.jsx)("div", {
+        className: wk()(Fk, "Placeholder")
       }) : null
     }
 
-    function wu(uu) {
+    function qk(kk) {
       let {
-        id: Ru,
-        elements: yu,
-        actionButtons: Ku,
-        keyNames: Qu,
-        className: mu,
-        keepPlace: Ju,
-        onHidden: Nu
-      } = uu;
+        id: Fk,
+        elements: Bk,
+        actionButtons: tk,
+        keyNames: ak,
+        className: Xk,
+        keepPlace: bk,
+        onHidden: wk
+      } = kk;
       const {
-        t: Vu
-      } = (0, Eu.E)();
-      if (!gu[Ru].hide) return (0, bu.jsx)(Fu, {
-        className: mu,
-        keepPlace: Ju
+        t: sk
+      } = (0, Rk.x)();
+      if (!rk[Fk].hide) return (0, Yk.jsx)(hk, {
+        className: Xk,
+        keepPlace: bk
       });
-      const ru = (0, Iu.t)(yu, Ru);
-      return (0, bu.jsx)(Xu.P, {
-        className: mu,
-        ariaLabel: Vu(ru ? "hudLayout:showElement" : "hudLayout:hideElement", {
-          name: Lu(Ru, Ku, Vu, Qu)
+      const Vk = (0, uk.r)(Bk, Fk);
+      return (0, Yk.jsx)(dk.O, {
+        className: Xk,
+        ariaLabel: sk(Vk ? "hudLayout:showElement" : "hudLayout:hideElement", {
+          name: zk(Fk, tk, sk, ak)
         }),
-        pressed: !ru,
+        pressed: !Vk,
         onClick: () => {
-          Nu(Ru, !ru)
+          wk(Fk, !Vk)
         },
-        children: (0, bu.jsx)(Du.c, {
-          name: ru ? "eye-slash" : "eye"
+        children: (0, Yk.jsx)(Nk.d, {
+          name: Vk ? "eye-slash" : "eye"
         })
       })
     }
 
-    function Zu(uu) {
-      var Ru;
+    function Ck(kk) {
+      var Fk;
       let {
-        id: yu,
-        elements: Ku,
-        actionButtons: Qu,
-        keyNames: mu,
-        className: Ju,
-        keepPlace: Nu,
-        onlyWhenMoved: Vu,
-        locked: ru,
-        onReset: Bu
-      } = uu;
+        id: Bk,
+        elements: tk,
+        actionButtons: ak,
+        keyNames: Xk,
+        className: bk,
+        keepPlace: wk,
+        onlyWhenMoved: sk,
+        locked: Vk,
+        onReset: Jk
+      } = kk;
       const {
-        t: xu
-      } = (0, Eu.E)(), Su = gu[yu], pu = (0, Iu.I)(null !== (Ru = Ku[yu]) && void 0 !== Ru ? Ru : Iu.p);
-      return !Su.move && !Su.scale || Vu && pu ? (0, bu.jsx)(Fu, {
-        className: Ju,
-        keepPlace: Nu
-      }) : (0, bu.jsx)(Xu.P, {
-        className: Ju,
-        disabled: pu || ru,
-        ariaLabel: xu("hudLayout:resetElement", {
-          name: Lu(yu, Qu, xu, mu)
+        t: Ak
+      } = (0, Rk.x)(), ek = rk[Bk], yk = (0, uk.H)(null !== (Fk = tk[Bk]) && void 0 !== Fk ? Fk : uk.n);
+      return !ek.move && !ek.scale || sk && yk ? (0, Yk.jsx)(hk, {
+        className: bk,
+        keepPlace: wk
+      }) : (0, Yk.jsx)(dk.O, {
+        className: bk,
+        disabled: yk || Vk,
+        ariaLabel: Ak("hudLayout:resetElement", {
+          name: zk(Bk, ak, Ak, Xk)
         }),
         analyticsClick: {
           id: "hud_layout.reset_element",
-          value: yu
+          value: Bk
         },
-        onClick: uu => {
-          Vu && Yu(uu.currentTarget), Bu(yu)
+        onClick: kk => {
+          sk && xk(kk.currentTarget), Jk(Bk)
         },
-        children: (0, bu.jsx)(Du.c, {
+        children: (0, Yk.jsx)(Nk.d, {
           name: "rotate-left"
         })
       })
     }
 
-    function hu(uu) {
+    function Zk(kk) {
       let {
-        id: Ru,
-        actionButtons: yu,
-        keyNames: Ku,
-        className: Qu,
-        keepPlace: mu,
-        locked: Ju,
-        lockable: Nu,
-        onLocked: Vu
-      } = uu;
+        id: Fk,
+        actionButtons: Bk,
+        keyNames: tk,
+        className: ak,
+        keepPlace: Xk,
+        locked: bk,
+        lockable: wk,
+        onLocked: sk
+      } = kk;
       const {
-        t: ru
-      } = (0, Eu.E)();
-      return Nu || Ju ? (0, bu.jsx)(Xu.P, {
-        className: Qu,
-        ariaLabel: ru(Ju ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
-          name: Lu(Ru, yu, ru, Ku)
+        t: Vk
+      } = (0, Rk.x)();
+      return wk || bk ? (0, Yk.jsx)(dk.O, {
+        className: ak,
+        ariaLabel: Vk(bk ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
+          name: zk(Fk, Bk, Vk, tk)
         }),
-        pressed: Ju,
-        active: Ju,
+        pressed: bk,
+        active: bk,
         analyticsClick: {
           id: "hud_layout.edit",
-          value: `${Ju?"unlock":"lock"}:${Ru}`
+          value: `${bk?"unlock":"lock"}:${Fk}`
         },
         onClick: () => {
-          Vu(Ru, !Ju)
+          sk(Fk, !bk)
         },
-        children: (0, bu.jsx)(Du.c, {
-          name: Ju ? "lock" : "lock-open"
+        children: (0, Yk.jsx)(Nk.d, {
+          name: bk ? "lock" : "lock-open"
         })
-      }) : (0, bu.jsx)(Fu, {
-        className: Qu,
-        keepPlace: mu
+      }) : (0, Yk.jsx)(hk, {
+        className: ak,
+        keepPlace: Xk
       })
     }
 
-    function Pu(uu) {
+    function pk(kk) {
       let {
-        className: Ru,
-        open: yu,
-        name: Ku,
-        onToggle: Qu
-      } = uu;
+        className: Fk,
+        open: Bk,
+        name: tk,
+        onToggle: ak
+      } = kk;
       const {
-        t: mu
-      } = (0, Eu.E)();
-      return (0, bu.jsx)(Xu.P, {
-        className: Ru,
-        ariaLabel: mu(yu ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
-          name: Ku
+        t: Xk
+      } = (0, Rk.x)();
+      return (0, Yk.jsx)(dk.O, {
+        className: Fk,
+        ariaLabel: Xk(Bk ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
+          name: tk
         }),
-        pressed: yu,
+        pressed: Bk,
         analyticsClick: {
           id: "hud_layout.children",
-          value: yu ? "close" : "open"
+          value: Bk ? "close" : "open"
         },
         onClick: () => {
-          Qu(!yu)
+          ak(!Bk)
         },
-        children: (0, bu.jsx)(Du.c, {
-          name: yu ? "angle-up" : "angle-down"
+        children: (0, Yk.jsx)(Nk.d, {
+          name: Bk ? "angle-up" : "angle-down"
         })
       })
     }
 
-    function iu(uu, Ru) {
-      var yu;
-      uu.contains(document.activeElement) && Ru.focus({
+    function Kk(kk, Fk) {
+      var Bk;
+      kk.contains(document.activeElement) && Fk.focus({
         preventScroll: !0
-      }), null === (yu = (0, Mu.f)()) || void 0 === yu || yu.handOverPadFocus(uu, Ru)
+      }), null === (Bk = (0, Hk.d)()) || void 0 === Bk || Bk.handOverPadFocus(kk, Fk)
     }
 
-    function Yu(uu) {
-      const Ru = uu.closest("[data-hud-row]"),
-        yu = null === Ru || void 0 === Ru ? void 0 : Ru.querySelector(".HudElementRowName");
-      return !(!Ru || !yu) && (iu(Ru, yu), !0)
+    function xk(kk) {
+      const Fk = kk.closest("[data-hud-row]"),
+        Bk = null === Fk || void 0 === Fk ? void 0 : Fk.querySelector(".HudElementRowName");
+      return !(!Fk || !Bk) && (Kk(Fk, Bk), !0)
     }
-    const ou = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
+    const jk = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
 
-    function qu(uu, Ru) {
-      return "joystick" === uu && !Ru
+    function lk(kk, Fk) {
+      return "joystick" === kk && !Fk
     }
 
-    function Ou() {
+    function nk() {
       const {
-        t: uu
-      } = (0, Eu.E)();
-      return (0, bu.jsx)(Xu.P, {
+        t: kk
+      } = (0, Rk.x)();
+      return (0, Yk.jsx)(dk.O, {
         className: "HudFixJoystickButton",
         analyticsClick: {
           id: "hud_layout.fix_joystick"
         },
-        onClick: uu => {
-          const Ru = uu.currentTarget;
-          if (!Yu(Ru)) {
-            const uu = function(uu) {
-              var Ru, yu;
-              const Eu = [uu.previousElementSibling, uu.nextElementSibling].find((uu => uu instanceof HTMLElement && uu.matches(ou)));
-              return null !== (Ru = null !== Eu && void 0 !== Eu ? Eu : null === (yu = uu.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === yu ? void 0 : yu.querySelector(`:is(${ou}):not(.HudFixJoystickButton)`)) && void 0 !== Ru ? Ru : null
-            }(Ru);
-            uu && iu(Ru, uu)
+        onClick: kk => {
+          const Fk = kk.currentTarget;
+          if (!xk(Fk)) {
+            const kk = function(kk) {
+              var Fk, Bk;
+              const Rk = [kk.previousElementSibling, kk.nextElementSibling].find((kk => kk instanceof HTMLElement && kk.matches(jk)));
+              return null !== (Fk = null !== Rk && void 0 !== Rk ? Rk : null === (Bk = kk.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === Bk ? void 0 : Bk.querySelector(`:is(${jk}):not(.HudFixJoystickButton)`)) && void 0 !== Fk ? Fk : null
+            }(Fk);
+            kk && Kk(Fk, kk)
           }
-          Vu.d.setClientEscMenuOptions({
+          sk.c.setClientEscMenuOptions({
             joystickMode: "fixed_shown"
           })
         },
-        children: uu("hudLayout:fixJoystick")
+        children: kk("hudLayout:fixJoystick")
       })
     }
-    var vu = yu(80),
-      au = yu(1247),
-      fu = yu(1100),
-      uR = yu(2615),
-      RR = yu(8637),
-      yR = yu(2352),
-      ER = yu(2368),
-      KR = yu(2936);
-    const QR = ["J", "C", "A", "P", "U", "X", "G"],
-      mR = Object.freeze({
+    var Ik = Bk(67),
+      Qk = Bk(1230),
+      kF = Bk(1090),
+      FF = Bk(2607),
+      BF = Bk(8567),
+      RF = Bk(2347),
+      tF = Bk(2359),
+      aF = Bk(2943);
+    const XF = ["J", "C", "A", "P", "U", "X", "G"],
+      bF = Object.freeze({
         faces: null,
         names: Object.freeze({}),
         shop: !0,
         bag: !0,
         items: null,
-        rowIcons: Iu.C
+        rowIcons: uk.D
       });
 
-    function JR(uu, Ru) {
-      uu.replaceChildren(...[...Ru.childNodes].map((uu => uu.cloneNode(!0))))
+    function wF(kk, Fk) {
+      kk.replaceChildren(...[...Fk.childNodes].map((kk => kk.cloneNode(!0))))
     }
-    const NR = uu => ({
-      [cu]: uu
+    const dF = kk => ({
+      [Dk]: kk
     });
 
-    function XR(uu) {
+    function sF(kk) {
       let {
-        id: Ru,
-        slot: yu,
-        icon: Eu,
-        label: Qu,
-        hidden: mu,
-        className: Ju,
-        face: Xu
-      } = uu;
-      const Vu = (0, Ku.useRef)(null);
-      return (0, Ku.useLayoutEffect)((() => {
-        Xu && Vu.current && JR(Vu.current, Xu)
-      }), [Xu]), (0, bu.jsxs)("div", {
-        className: Nu()("TouchKeyHit", `TouchSlot${yu}`, Ju, {
-          HudPreviewGhost: mu.has(Ru)
+        id: Fk,
+        slot: Bk,
+        icon: Rk,
+        label: ak,
+        hidden: Xk,
+        className: bk,
+        face: dk
+      } = kk;
+      const sk = (0, tk.useRef)(null);
+      return (0, tk.useLayoutEffect)((() => {
+        dk && sk.current && wF(sk.current, dk)
+      }), [dk]), (0, Yk.jsxs)("div", {
+        className: wk()("TouchKeyHit", `TouchSlot${Bk}`, bk, {
+          HudPreviewGhost: Xk.has(Fk)
         }),
-        ...NR(Ru),
-        children: [Xu && (0, bu.jsx)("div", {
-          ref: Vu,
-          className: Nu()("TouchKey", {
-            Labelled: Xu.classList.contains("Labelled")
+        ...dF(Fk),
+        children: [dk && (0, Yk.jsx)("div", {
+          ref: sk,
+          className: wk()("TouchKey", {
+            Labelled: dk.classList.contains("Labelled")
           })
-        }), !Xu && (0, bu.jsxs)("div", {
-          className: Nu()("TouchKey", {
-            Labelled: void 0 !== Qu
+        }), !dk && (0, Yk.jsxs)("div", {
+          className: wk()("TouchKey", {
+            Labelled: void 0 !== ak
           }),
-          children: [Eu && (0, bu.jsx)(Du.c, {
-            name: Eu
-          }), void 0 !== Qu && (0, bu.jsx)("span", {
+          children: [Rk && (0, Yk.jsx)(Nk.d, {
+            name: Rk
+          }), void 0 !== ak && (0, Yk.jsx)("span", {
             className: "TouchKeyLabel",
-            children: Qu
+            children: ak
           })]
         })]
       })
     }
 
-    function VR(uu) {
+    function VF(kk) {
       let {
-        item: Ru,
-        selected: yu
-      } = uu;
-      const Eu = (0, Ku.useRef)(null);
-      return (0, Ku.useLayoutEffect)((() => {
-        Eu.current && JR(Eu.current, Ru)
-      }), [Ru]), (0, bu.jsx)("div", {
-        ref: Eu,
-        className: Nu()("InvenItem", {
-          Selected: yu
+        item: Fk,
+        selected: Bk
+      } = kk;
+      const Rk = (0, tk.useRef)(null);
+      return (0, tk.useLayoutEffect)((() => {
+        Rk.current && wF(Rk.current, Fk)
+      }), [Fk]), (0, Yk.jsx)("div", {
+        ref: Rk,
+        className: wk()("InvenItem", {
+          Selected: Bk
         })
       })
     }
-    const rR = {
+    const JF = {
         emotes: "face-smile",
         perspective: "video",
         scoreboard: "list",
@@ -383,148 +383,148 @@ export const modules = {
         invite: "user-plus",
         settings: "gear"
       },
-      BR = uu => void 0 === uu ? {} : {
+      AF = kk => void 0 === kk ? {} : {
         style: {
-          "--parked": uu
+          "--parked": kk
         }
       };
 
-    function xR(uu) {
+    function eF(kk) {
       let {
-        id: Ru,
-        hidden: yu,
-        parked: Eu,
-        unslotted: Ku = !1
-      } = uu;
-      return (0, bu.jsx)("div", {
-        className: Nu()("TopRightIcon", ER.n[Ru], {
-          HudPreviewGhost: yu.has(Ru),
-          [yR.b]: void 0 !== Eu,
-          [yR.f]: Ku
+        id: Fk,
+        hidden: Bk,
+        parked: Rk,
+        unslotted: tk = !1
+      } = kk;
+      return (0, Yk.jsx)("div", {
+        className: wk()("TopRightIcon", tF.n[Fk], {
+          HudPreviewGhost: Bk.has(Fk),
+          [RF.b]: void 0 !== Rk,
+          [RF.d]: tk
         }),
-        ...BR(Eu),
-        children: (0, bu.jsx)("div", {
+        ...AF(Rk),
+        children: (0, Yk.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          ...NR(Ru),
-          children: (0, bu.jsx)("div", {
+          ...dF(Fk),
+          children: (0, Yk.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, bu.jsx)(Du.c, {
-              name: rR[Ru]
+            children: (0, Yk.jsx)(Nk.d, {
+              name: JF[Fk]
             })
           })
         })
       })
     }
 
-    function SR(uu) {
+    function yF(kk) {
       let {
-        portraitPhone: Ru,
-        icons: yu,
-        hidden: Eu,
-        moved: Ku,
-        trayState: Qu
-      } = uu;
-      const mu = Ru ? (0, yR.B)(yu) : [],
-        Ju = yu.filter((uu => "settings" === uu)),
-        Xu = yu.filter((uu => "settings" !== uu && !mu.includes(uu))).reverse(),
-        Vu = mu.length > 0 && "gone" === Qu,
-        ru = [...Ju, ...Vu ? ["tray"] : [], ...Xu].filter((uu => "tray" === uu || Eu.has(uu) && !Ku.has(uu))),
-        Bu = uu => {
-          const Ru = ru.indexOf(uu);
-          return Ru < 0 ? void 0 : Ru
+        portraitPhone: Fk,
+        icons: Bk,
+        hidden: Rk,
+        moved: tk,
+        trayState: ak
+      } = kk;
+      const Xk = Fk ? (0, RF.A)(Bk) : [],
+        bk = Bk.filter((kk => "settings" === kk)),
+        dk = Bk.filter((kk => "settings" !== kk && !Xk.includes(kk))).reverse(),
+        sk = Xk.length > 0 && "gone" === ak,
+        Vk = [...bk, ...sk ? ["tray"] : [], ...dk].filter((kk => "tray" === kk || Rk.has(kk) && !tk.has(kk))),
+        Jk = kk => {
+          const Fk = Vk.indexOf(kk);
+          return Fk < 0 ? void 0 : Fk
         },
-        xu = (uu, Ru) => (0, bu.jsx)(xR, {
-          id: uu,
-          hidden: Eu,
-          parked: Ru ? Bu(uu) : void 0,
-          unslotted: Ru && Eu.has(uu) && Ku.has(uu)
-        }, uu);
-      return (0, bu.jsxs)("div", {
-        className: Nu()("TopRightIcons TouchInGame", {
-          Column: Ru
+        Ak = (kk, Fk) => (0, Yk.jsx)(eF, {
+          id: kk,
+          hidden: Rk,
+          parked: Fk ? Jk(kk) : void 0,
+          unslotted: Fk && Rk.has(kk) && tk.has(kk)
+        }, kk);
+      return (0, Yk.jsxs)("div", {
+        className: wk()("TopRightIcons TouchInGame", {
+          Column: Fk
         }),
-        children: [Ju.map((uu => xu(uu, !0))), mu.length > 0 && (0, bu.jsxs)("div", {
-          className: Nu()("TopRightIcon TopRightTrayToggle Open", {
-            [yR.b]: Vu
+        children: [bk.map((kk => Ak(kk, !0))), Xk.length > 0 && (0, Yk.jsxs)("div", {
+          className: wk()("TopRightIcon TopRightTrayToggle Open", {
+            [RF.b]: sk
           }),
-          ...BR(Bu("tray")),
-          children: [(0, bu.jsx)("div", {
-            className: Nu()("UiItemIcon SmallTextBold", {
-              HudPreviewGhost: "filled" !== Qu
+          ...AF(Jk("tray")),
+          children: [(0, Yk.jsx)("div", {
+            className: wk()("UiItemIcon SmallTextBold", {
+              HudPreviewGhost: "filled" !== ak
             }),
-            children: (0, bu.jsx)("div", {
+            children: (0, Yk.jsx)("div", {
               className: "ScaleOnHover",
-              children: (0, bu.jsx)(Du.c, {
+              children: (0, Yk.jsx)(Nk.d, {
                 name: "ellipsis"
               })
             })
-          }), (0, bu.jsx)("div", {
+          }), (0, Yk.jsx)("div", {
             className: "TopRightTray",
-            children: mu.map((uu => xu(uu, !1)))
+            children: Xk.map((kk => Ak(kk, !1)))
           })]
-        }), Xu.map((uu => xu(uu, !0)))]
+        }), dk.map((kk => Ak(kk, !0)))]
       })
     }
 
-    function pR(uu) {
+    function fF(kk) {
       let {
-        next: Ru,
-        hidden: yu
-      } = uu;
-      return (0, bu.jsx)("div", {
-        className: Nu()("HotBarArrow", Ru ? "Next" : "Previous", {
-          HudPreviewGhost: yu
+        next: Fk,
+        hidden: Bk
+      } = kk;
+      return (0, Yk.jsx)("div", {
+        className: wk()("HotBarArrow", Fk ? "Next" : "Previous", {
+          HudPreviewGhost: Bk
         }),
-        ...NR("arrows"),
-        children: (0, bu.jsx)("div", {
+        ...dF("arrows"),
+        children: (0, Yk.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, bu.jsx)("div", {
+          children: (0, Yk.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, bu.jsx)(Du.c, {
-              name: Ru ? "caret-right" : "caret-left"
+            children: (0, Yk.jsx)(Nk.d, {
+              name: Fk ? "caret-right" : "caret-left"
             })
           })
         })
       })
     }
 
-    function TR() {
-      return (0, bu.jsx)("div", {
+    function mF() {
+      return (0, Yk.jsx)("div", {
         className: "SocialBarContainer",
-        children: (0, bu.jsx)("div", {
+        children: (0, Yk.jsx)("div", {
           className: "SocialBarOuter",
-          children: (0, bu.jsx)("div", {
+          children: (0, Yk.jsx)("div", {
             className: "SocialBar",
-            children: (0, bu.jsx)("div", {
+            children: (0, Yk.jsx)("div", {
               className: "CondensedSocialBarInner",
-              children: (0, bu.jsx)("div", {
+              children: (0, Yk.jsx)("div", {
                 className: "CondensedSectionsContainer",
-                children: (0, bu.jsxs)("div", {
+                children: (0, Yk.jsxs)("div", {
                   className: "CondensedSections",
-                  children: [(0, bu.jsxs)("div", {
+                  children: [(0, Yk.jsxs)("div", {
                     className: "CondensedSection CondensedSectionFriendRequests",
-                    children: [(0, bu.jsx)("div", {
+                    children: [(0, Yk.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, bu.jsx)("div", {
+                    }), (0, Yk.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, bu.jsx)(Du.c, {
+                      children: (0, Yk.jsx)(Nk.d, {
                         name: "user-clock"
                       })
                     })]
-                  }), (0, bu.jsx)("div", {
+                  }), (0, Yk.jsx)("div", {
                     className: "SocialBarDividerContainer",
-                    children: (0, bu.jsx)("div", {
+                    children: (0, Yk.jsx)("div", {
                       className: "SocialBarDivider"
                     })
-                  }), (0, bu.jsxs)("div", {
+                  }), (0, Yk.jsxs)("div", {
                     className: "CondensedSection CondensedSectionOnlineFriends",
-                    children: [(0, bu.jsx)("div", {
+                    children: [(0, Yk.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, bu.jsx)("div", {
+                    }), (0, Yk.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, bu.jsx)(Du.c, {
+                      children: (0, Yk.jsx)(Nk.d, {
                         name: "user"
                       })
                     })]
@@ -536,7 +536,7 @@ export const modules = {
         })
       })
     }
-    const WR = {
+    const WF = {
         J: "jump",
         C: "crouch",
         A: "attack",
@@ -545,12 +545,12 @@ export const modules = {
         X: "extra",
         G: "game"
       },
-      jR = {
+      vF = {
         J: "JumpKey",
         C: "CrouchKey"
       },
-      HR = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-      dR = {
+      iF = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      YF = {
         0: "swords",
         1: "hammer",
         2: "cube",
@@ -558,307 +558,307 @@ export const modules = {
         5: "cookie"
       };
 
-    function bR(uu) {
+    function oF(kk) {
       let {
-        presence: Ru,
-        portraitPhone: yu,
-        hidden: Ku,
-        actionButtons: Qu,
-        joystickFixed: mu,
-        keysAbove: Ju,
-        auraBar: Xu,
-        trayState: Vu,
-        moved: Bu
-      } = uu;
+        presence: Fk,
+        portraitPhone: Bk,
+        hidden: tk,
+        actionButtons: ak,
+        joystickFixed: Xk,
+        keysAbove: bk,
+        auraBar: dk,
+        trayState: sk,
+        moved: Jk
+      } = kk;
       const {
-        t: xu
-      } = (0, Eu.E)(), {
-        faces: Su,
-        items: pu
-      } = Ru, Tu = uu => ({
-        HudPreviewGhost: Ku.has(uu)
+        t: Ak
+      } = (0, Rk.x)(), {
+        faces: ek,
+        items: yk
+      } = Fk, fk = kk => ({
+        HudPreviewGhost: tk.has(kk)
       });
-      return (0, bu.jsxs)("div", {
+      return (0, Yk.jsxs)("div", {
         className: "InGameUi HudPreviewInGameUi",
-        children: [(0, bu.jsx)("div", {
+        children: [(0, Yk.jsx)("div", {
           className: "InGameHeaderContainer Touchscreen",
-          children: (0, bu.jsxs)("div", {
+          children: (0, Yk.jsxs)("div", {
             className: "InGameHeader",
-            children: [(0, bu.jsx)("div", {
+            children: [(0, Yk.jsx)("div", {
               className: "InGameHeaderLogo",
               children: "bloxd.io"
-            }), (0, bu.jsx)("div", {
+            }), (0, Yk.jsx)("div", {
               className: "InGameHeaderSpacer"
-            }), (0, bu.jsx)("div", {
+            }), (0, Yk.jsx)("div", {
               className: "InGameHeaderGameName",
-              children: xu("hudLayout:previewGameName")
+              children: Ak("hudLayout:previewGameName")
             })]
           })
-        }), (0, bu.jsx)("div", {
+        }), (0, Yk.jsx)("div", {
           className: "TopLeftElements",
-          children: (0, bu.jsx)("div", {
+          children: (0, Yk.jsx)("div", {
             className: "InGameHeaderAndChat",
-            children: (0, bu.jsxs)("div", {
+            children: (0, Yk.jsxs)("div", {
               className: "Chat",
-              children: [(0, bu.jsx)("div", {
+              children: [(0, Yk.jsx)("div", {
                 className: "ChatMessages HideScrollbar",
-                children: [xu("hudLayout:previewChatLine"), xu("hudLayout:previewChatJoined", {
+                children: [Ak("hudLayout:previewChatLine"), Ak("hudLayout:previewChatJoined", {
                   name: "Steve"
-                }), xu("hudLayout:previewChatJoined", {
+                }), Ak("hudLayout:previewChatJoined", {
                   name: "Alex"
-                })].map((uu => (0, bu.jsx)("div", {
+                })].map((kk => (0, Yk.jsx)("div", {
                   className: "MessageWrapper",
-                  children: (0, bu.jsx)("div", {
+                  children: (0, Yk.jsx)("div", {
                     className: "TextFromServer",
-                    children: (0, bu.jsx)("div", {
+                    children: (0, Yk.jsx)("div", {
                       className: "IndividualText",
-                      children: uu
+                      children: kk
                     })
                   })
-                }, uu)))
-              }), (0, bu.jsx)("button", {
+                }, kk)))
+              }), (0, Yk.jsx)("button", {
                 type: "button",
                 tabIndex: -1,
-                className: Nu()("ChatIconWrapper SmallTextLight", Tu("chat")),
-                ...NR("chat"),
-                children: (0, bu.jsx)(Du.c, {
+                className: wk()("ChatIconWrapper SmallTextLight", fk("chat")),
+                ...dF("chat"),
+                children: (0, Yk.jsx)(Nk.d, {
                   name: "comment-dots",
                   className: "ChatIcon"
                 })
               })]
             })
           })
-        }), (0, bu.jsx)("div", {
+        }), (0, Yk.jsx)("div", {
           className: "RightElements RightElementsTouchscreen",
-          children: (0, bu.jsxs)("div", {
+          children: (0, Yk.jsxs)("div", {
             className: "TopRightElements",
-            children: [(0, bu.jsx)("div", {
+            children: [(0, Yk.jsx)("div", {
               className: "TopRightElementsLeft",
-              children: (0, bu.jsx)("div", {
+              children: (0, Yk.jsx)("div", {
                 className: "TopRightIconsContainer",
-                ...NR("menu"),
-                children: (0, bu.jsx)(SR, {
-                  portraitPhone: yu,
-                  icons: Ru.rowIcons,
-                  hidden: Ku,
-                  trayState: Vu,
-                  moved: Bu
+                ...dF("menu"),
+                children: (0, Yk.jsx)(yF, {
+                  portraitPhone: Bk,
+                  icons: Fk.rowIcons,
+                  hidden: tk,
+                  trayState: sk,
+                  moved: Jk
                 })
               })
-            }), ru.featureFlags.useSocialFeatures && (0, bu.jsx)("div", {
+            }), Vk.featureFlags.useSocialFeatures && (0, Yk.jsx)("div", {
               className: "TopRightElementsRight",
-              children: (0, bu.jsx)(TR, {})
+              children: (0, Yk.jsx)(mF, {})
             })]
           })
-        }), (0, bu.jsx)("div", {
+        }), (0, Yk.jsx)("div", {
           className: "HudPreviewCrosshair"
-        }), (0, bu.jsx)("div", {
+        }), (0, Yk.jsx)("div", {
           className: "TouchInteractHit HudPreviewInteract",
-          children: (0, bu.jsxs)("div", {
+          children: (0, Yk.jsxs)("div", {
             className: "TouchInteractKey",
-            ...NR("interact"),
-            children: [(0, bu.jsx)("div", {
+            ...dF("interact"),
+            children: [(0, Yk.jsx)("div", {
               className: "TouchInteractIcon",
-              children: (0, bu.jsx)(Du.c, {
+              children: (0, Yk.jsx)(Nk.d, {
                 name: "hand-back-point-up"
               })
-            }), (0, bu.jsx)("div", {
-              children: xu("hudLayout:previewInteract")
+            }), (0, Yk.jsx)("div", {
+              children: Ak("hudLayout:previewInteract")
             })]
           })
-        }), (0, bu.jsx)("div", {
+        }), (0, Yk.jsx)("div", {
           className: "BottomCentre",
-          children: (0, bu.jsxs)("div", {
+          children: (0, Yk.jsxs)("div", {
             className: "BottomElements",
-            children: [(0, bu.jsx)("div", {
+            children: [(0, Yk.jsx)("div", {
               className: "BottomLeftElements Touch"
-            }), (0, bu.jsxs)("div", {
+            }), (0, Yk.jsxs)("div", {
               className: "BottomMiddleElements",
-              children: [(0, bu.jsx)("div", {
+              children: [(0, Yk.jsx)("div", {
                 className: "BottomScreenStatBarList",
-                ...NR("hotbar"),
-                children: (0, bu.jsx)("div", {
+                ...dF("hotbar"),
+                children: (0, Yk.jsx)("div", {
                   className: "BottomScreenStatBarWrapper",
-                  children: (0, bu.jsxs)("div", {
+                  children: (0, Yk.jsxs)("div", {
                     className: "BottomScreenStatBarBackground",
-                    children: [(0, bu.jsx)("div", {
+                    children: [(0, Yk.jsx)("div", {
                       className: "BottomScreenStatBar HealthBar",
                       style: {
                         transform: "scaleX(0.8)",
                         transformOrigin: "left center"
                       }
-                    }), (0, bu.jsxs)("div", {
+                    }), (0, Yk.jsxs)("div", {
                       className: "BottomScreenStatBarText SmallTextBold",
-                      children: [(0, bu.jsx)(Du.c, {
+                      children: [(0, Yk.jsx)(Nk.d, {
                         name: "heart"
                       }), " 80/100"]
                     })]
                   })
                 })
-              }), Xu && (0, bu.jsxs)("div", {
+              }), dk && (0, Yk.jsxs)("div", {
                 className: "AuraBarWrapper",
-                children: [(0, bu.jsxs)("div", {
+                children: [(0, Yk.jsxs)("div", {
                   className: "AuraBarLabel SmallTextBold",
-                  children: [(0, bu.jsx)("img", {
+                  children: [(0, Yk.jsx)("img", {
                     className: "AuraBarLabelImage",
-                    src: (0, KR.g)("glint"),
+                    src: (0, aF.i)("glint"),
                     alt: ""
-                  }), (0, bu.jsx)("div", {
+                  }), (0, Yk.jsx)("div", {
                     className: "AuraBarLabelText",
                     children: "0"
                   })]
-                }), (0, bu.jsx)("div", {
+                }), (0, Yk.jsx)("div", {
                   className: "AuraBar",
-                  children: (0, bu.jsx)("div", {
+                  children: (0, Yk.jsx)("div", {
                     className: "AuraBarBackground",
                     style: {
                       width: "40%"
                     }
                   })
                 })]
-              }), (0, bu.jsx)("div", {
+              }), (0, Yk.jsx)("div", {
                 className: "HotBarRow",
-                children: (0, bu.jsx)("div", {
-                  className: Nu()("HotBarContainer Touch", {
-                    KeysAbove: Ju
+                children: (0, Yk.jsx)("div", {
+                  className: wk()("HotBarContainer Touch", {
+                    KeysAbove: bk
                   }),
-                  children: (0, bu.jsxs)("div", {
+                  children: (0, Yk.jsxs)("div", {
                     className: "HotBar",
-                    ...NR("hotbar"),
-                    children: [(0, bu.jsxs)("div", {
-                      className: Nu()("TouchInventoryKeys", {
-                        NoAuraBar: !Xu
+                    ...dF("hotbar"),
+                    children: [(0, Yk.jsxs)("div", {
+                      className: wk()("TouchInventoryKeys", {
+                        NoAuraBar: !dk
                       }),
-                      children: [(0, bu.jsx)("div", {
-                        className: Nu()("TouchInventoryKey ShopKey", Tu("inventory"), {
-                          Hidden: !Ru.shop
+                      children: [(0, Yk.jsx)("div", {
+                        className: wk()("TouchInventoryKey ShopKey", fk("inventory"), {
+                          Hidden: !Fk.shop
                         }),
-                        ...NR("inventory"),
-                        children: (0, bu.jsx)("div", {
+                        ...dF("inventory"),
+                        children: (0, Yk.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, bu.jsx)("div", {
+                          children: (0, Yk.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, bu.jsx)(Du.c, {
+                            children: (0, Yk.jsx)(Nk.d, {
                               name: "cart-shopping"
                             })
                           })
                         })
-                      }), (0, bu.jsx)("div", {
-                        className: Nu()("TouchInventoryKey BagKey", Tu("inventory"), {
-                          Hidden: !Ru.bag
+                      }), (0, Yk.jsx)("div", {
+                        className: wk()("TouchInventoryKey BagKey", fk("inventory"), {
+                          Hidden: !Fk.bag
                         }),
-                        ...NR("inventory"),
-                        children: (0, bu.jsx)("div", {
+                        ...dF("inventory"),
+                        children: (0, Yk.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, bu.jsx)("div", {
+                          children: (0, Yk.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, bu.jsx)(Du.c, {
+                            children: (0, Yk.jsx)(Nk.d, {
                               name: "backpack"
                             })
                           })
                         })
                       })]
-                    }), (0, bu.jsx)(pR, {
+                    }), (0, Yk.jsx)(fF, {
                       next: !1,
-                      hidden: Ku.has("arrows")
-                    }), (0, bu.jsxs)("div", {
+                      hidden: tk.has("arrows")
+                    }), (0, Yk.jsxs)("div", {
                       className: "HotBarGameItemsContainer",
-                      children: [null !== pu && pu.map(((uu, Ru) => (0, bu.jsx)(VR, {
-                        item: uu,
-                        selected: uu.classList.contains("Selected")
-                      }, Ru))), null === pu && HR.map((uu => {
-                        const Ru = dR[uu];
-                        return (0, bu.jsx)("div", {
-                          className: Nu()("InvenItem", {
-                            Selected: 0 === uu
+                      children: [null !== yk && yk.map(((kk, Fk) => (0, Yk.jsx)(VF, {
+                        item: kk,
+                        selected: kk.classList.contains("Selected")
+                      }, Fk))), null === yk && iF.map((kk => {
+                        const Fk = YF[kk];
+                        return (0, Yk.jsx)("div", {
+                          className: wk()("InvenItem", {
+                            Selected: 0 === kk
                           }),
-                          children: Ru && (0, bu.jsx)("div", {
+                          children: Fk && (0, Yk.jsx)("div", {
                             className: "HudPreviewItem",
-                            children: (0, bu.jsx)(Du.c, {
-                              name: Ru
+                            children: (0, Yk.jsx)(Nk.d, {
+                              name: Fk
                             })
                           })
-                        }, uu)
+                        }, kk)
                       }))]
-                    }), (0, bu.jsx)(pR, {
+                    }), (0, Yk.jsx)(fF, {
                       next: !0,
-                      hidden: Ku.has("arrows")
+                      hidden: tk.has("arrows")
                     })]
                   })
                 })
               })]
-            }), (0, bu.jsx)("div", {
+            }), (0, Yk.jsx)("div", {
               className: "BottomRightElements",
-              children: (0, bu.jsxs)("div", {
+              children: (0, Yk.jsxs)("div", {
                 className: "TouchComponentsButtons",
-                children: [null !== Su && QR.map((uu => {
-                  const Ru = Su[uu];
-                  return Ru && (0, bu.jsx)(XR, {
-                    id: WR[uu],
-                    slot: uu,
-                    face: Ru,
-                    className: jR[uu],
-                    hidden: Ku
-                  }, uu)
-                })), null === Su && (0, bu.jsxs)(bu.Fragment, {
-                  children: [(0, bu.jsx)(XR, {
+                children: [null !== ek && XF.map((kk => {
+                  const Fk = ek[kk];
+                  return Fk && (0, Yk.jsx)(sF, {
+                    id: WF[kk],
+                    slot: kk,
+                    face: Fk,
+                    className: vF[kk],
+                    hidden: tk
+                  }, kk)
+                })), null === ek && (0, Yk.jsxs)(Yk.Fragment, {
+                  children: [(0, Yk.jsx)(sF, {
                     id: "jump",
                     slot: "J",
                     icon: "arrow-up-from-line",
                     className: "JumpKey",
-                    hidden: Ku
-                  }), (0, bu.jsx)(XR, {
+                    hidden: tk
+                  }), (0, Yk.jsx)(sF, {
                     id: "crouch",
                     slot: "C",
                     icon: "arrow-down-to-line",
                     className: "CrouchKey",
-                    hidden: Ku
-                  }), Qu && (0, bu.jsxs)(bu.Fragment, {
-                    children: [(0, bu.jsx)(XR, {
+                    hidden: tk
+                  }), ak && (0, Yk.jsxs)(Yk.Fragment, {
+                    children: [(0, Yk.jsx)(sF, {
                       id: "attack",
                       slot: "A",
                       icon: "swords",
-                      hidden: Ku
-                    }), (0, bu.jsx)(XR, {
+                      hidden: tk
+                    }), (0, Yk.jsx)(sF, {
                       id: "use",
                       slot: "U",
                       icon: "hand-back-point-up",
-                      hidden: Ku
+                      hidden: tk
                     })]
-                  }), !Qu && (0, bu.jsx)(XR, {
+                  }), !ak && (0, Yk.jsx)(sF, {
                     id: "attack",
                     slot: "P",
                     icon: "crosshairs",
-                    label: xu("touchKeys:scope"),
-                    hidden: Ku
-                  }), (0, bu.jsx)(XR, {
+                    label: Ak("touchKeys:scope"),
+                    hidden: tk
+                  }), (0, Yk.jsx)(sF, {
                     id: "extra",
                     slot: "X",
                     icon: "feather-pointed",
-                    label: xu("touchKeys:fly"),
-                    hidden: Ku
-                  }), (0, bu.jsx)(XR, {
+                    label: Ak("touchKeys:fly"),
+                    hidden: tk
+                  }), (0, Yk.jsx)(sF, {
                     id: "game",
                     slot: "G",
                     icon: "bolt",
-                    hidden: Ku
+                    hidden: tk
                   })]
                 })]
               })
             })]
           })
-        }), (0, bu.jsx)("div", {
+        }), (0, Yk.jsx)("div", {
           className: "TouchMovementWrapper",
-          children: (0, bu.jsx)("div", {
+          children: (0, Yk.jsx)("div", {
             className: "JoystickZone HudPreviewJoystickZone",
-            children: (0, bu.jsxs)("div", {
-              className: Nu()("Joystick Resting HudPreviewJoystick", {
-                Floating: !mu
+            children: (0, Yk.jsxs)("div", {
+              className: wk()("Joystick Resting HudPreviewJoystick", {
+                Floating: !Xk
               }),
-              ...NR("joystick"),
-              children: [(0, bu.jsx)("div", {
+              ...dF("joystick"),
+              children: [(0, Yk.jsx)("div", {
                 className: "JoystickBase"
-              }), (0, bu.jsx)("div", {
+              }), (0, Yk.jsx)("div", {
                 className: "JoystickKnob"
               })]
             })
@@ -867,1015 +867,1015 @@ export const modules = {
       })
     }
 
-    function CR() {
-      const [uu, Ru] = (0, Ku.useState)({}), yu = (0, Ku.useCallback)((uu => {
-        Ru((Ru => [...new Set([...Object.keys(Ru), ...Object.keys(uu)])].every((yu => Ru[yu] === uu[yu])) ? Ru : uu))
+    function LF() {
+      const [kk, Fk] = (0, tk.useState)({}), Bk = (0, tk.useCallback)((kk => {
+        Fk((Fk => [...new Set([...Object.keys(Fk), ...Object.keys(kk)])].every((Bk => Fk[Bk] === kk[Bk])) ? Fk : kk))
       }), []);
-      return [uu, yu]
+      return [kk, Bk]
     }
-    const kR = .05;
+    const OF = .05;
 
-    function eR(uu) {
-      var Ru;
+    function EF(kk) {
+      var Fk;
       let {
-        selected: yu,
-        layout: Ku,
-        actionButtons: Qu,
-        keyNames: mu,
-        overlaps: Ju,
-        scaleCaps: Vu,
-        joystickFixed: ru,
-        onScale: Bu,
-        onHidden: xu,
-        onReset: Su,
-        locked: pu,
-        lockable: Tu,
-        onLocked: Wu,
-        extra: ju
-      } = uu;
+        selected: Bk,
+        layout: tk,
+        actionButtons: ak,
+        keyNames: Xk,
+        overlaps: bk,
+        scaleCaps: sk,
+        joystickFixed: Vk,
+        onScale: Jk,
+        onHidden: Ak,
+        onReset: ek,
+        locked: yk,
+        lockable: fk,
+        onLocked: mk,
+        extra: Wk
+      } = kk;
       const {
-        t: Hu
-      } = (0, Eu.E)(), du = yu ? gu[yu] : null, Cu = null !== yu && pu.has(yu), ku = (yu && Ku.hudElements[yu] || Iu.p)[2], eu = null !== (Ru = yu && Vu[yu]) && void 0 !== Ru ? Ru : Iu.i, Au = uu => {
-        yu && Bu(yu, Math.min(eu, Math.round(100 * (ku + .1 * uu)) / 100))
+        t: vk
+      } = (0, Rk.x)(), ik = Bk ? rk[Bk] : null, Lk = null !== Bk && yk.has(Bk), Ok = (Bk && tk.hudElements[Bk] || uk.n)[2], Ek = null !== (Fk = Bk && sk[Bk]) && void 0 !== Fk ? Fk : uk.i, Sk = kk => {
+        Bk && Jk(Bk, Math.min(Ek, Math.round(100 * (Ok + .1 * kk)) / 100))
       };
-      return (0, bu.jsxs)(bu.Fragment, {
-        children: [(0, bu.jsxs)("div", {
-          className: Nu()("HudQuickName SmallTextBold", {
-            Overlap: Ju.length > 0
+      return (0, Yk.jsxs)(Yk.Fragment, {
+        children: [(0, Yk.jsxs)("div", {
+          className: wk()("HudQuickName SmallTextBold", {
+            Overlap: bk.length > 0
           }),
-          children: [Ju.length > 0 && (0, bu.jsx)(Du.c, {
+          children: [bk.length > 0 && (0, Yk.jsx)(Nk.d, {
             name: "triangle-exclamation"
-          }), du ? Lu(du.id, Qu, Hu, mu) : Hu("hudLayout:fullScreenHint"), Ju.length > 0 && (0, bu.jsx)("span", {
+          }), ik ? zk(ik.id, ak, vk, Xk) : vk("hudLayout:fullScreenHint"), bk.length > 0 && (0, Yk.jsx)("span", {
             className: "HudQuickOverlap",
-            children: Hu("hudLayout:overlapsShort", {
-              names: zu(Ju, Qu, Hu, mu)
+            children: vk("hudLayout:overlapsShort", {
+              names: Pk(bk, ak, vk, Xk)
             })
           })]
-        }), (null === du || void 0 === du ? void 0 : du.scale) && (0, bu.jsxs)("div", {
+        }), (null === ik || void 0 === ik ? void 0 : ik.scale) && (0, Yk.jsxs)("div", {
           className: "HudQuickSize",
-          children: [(0, bu.jsx)(Xu.P, {
-            disabled: Cu || ku <= Iu.l,
-            ariaLabel: Hu("hudLayout:smaller"),
+          children: [(0, Yk.jsx)(dk.O, {
+            disabled: Lk || Ok <= uk.j,
+            ariaLabel: vk("hudLayout:smaller"),
             onClick: () => {
-              Au(-1)
+              Sk(-1)
             },
-            children: (0, bu.jsx)(Du.c, {
+            children: (0, Yk.jsx)(Nk.d, {
               name: "minus"
             })
-          }), (0, bu.jsx)("span", {
+          }), (0, Yk.jsx)("span", {
             className: "HudQuickSizeValue",
-            children: `${Math.round(100*ku)}%`
-          }), (0, bu.jsx)(Xu.P, {
-            disabled: Cu || ku >= eu,
-            ariaLabel: Hu("hudLayout:larger"),
+            children: `${Math.round(100*Ok)}%`
+          }), (0, Yk.jsx)(dk.O, {
+            disabled: Lk || Ok >= Ek,
+            ariaLabel: vk("hudLayout:larger"),
             onClick: () => {
-              Au(1)
+              Sk(1)
             },
-            children: (0, bu.jsx)(Du.c, {
+            children: (0, Yk.jsx)(Nk.d, {
               name: "plus"
             })
           })]
-        }), (du || ju) && (0, bu.jsxs)("div", {
+        }), (ik || Wk) && (0, Yk.jsxs)("div", {
           className: "HudQuickActions",
-          children: [du && (0, bu.jsxs)(bu.Fragment, {
-            children: [(0, bu.jsx)(hu, {
-              id: du.id,
-              actionButtons: Qu,
-              keyNames: mu,
-              locked: Cu,
-              lockable: Tu(du.id),
-              onLocked: Wu
-            }), (0, bu.jsx)(wu, {
-              id: du.id,
-              elements: Ku.hudElements,
-              actionButtons: Qu,
-              keyNames: mu,
-              onHidden: xu
-            }), (0, bu.jsx)(Zu, {
-              id: du.id,
-              elements: Ku.hudElements,
-              actionButtons: Qu,
-              keyNames: mu,
-              locked: Cu,
-              onReset: Su
-            }), qu(du.id, ru) && (0, bu.jsx)(Ou, {})]
-          }), ju]
+          children: [ik && (0, Yk.jsxs)(Yk.Fragment, {
+            children: [(0, Yk.jsx)(Zk, {
+              id: ik.id,
+              actionButtons: ak,
+              keyNames: Xk,
+              locked: Lk,
+              lockable: fk(ik.id),
+              onLocked: mk
+            }), (0, Yk.jsx)(qk, {
+              id: ik.id,
+              elements: tk.hudElements,
+              actionButtons: ak,
+              keyNames: Xk,
+              onHidden: Ak
+            }), (0, Yk.jsx)(Ck, {
+              id: ik.id,
+              elements: tk.hudElements,
+              actionButtons: ak,
+              keyNames: Xk,
+              locked: Lk,
+              onReset: ek
+            }), lk(ik.id, Vk) && (0, Yk.jsx)(nk, {})]
+          }), Wk]
         })]
       })
     }
-    var AR = yu(1093),
-      DR = yu(4174);
-    const MR = "HudPreviewDoc",
-      IR = {
+    var SF = Bk(1083),
+      NF = Bk(4148);
+    const HF = "HudPreviewDoc",
+      uF = {
         hotbar: "TouchHotbar",
         keysAbove: "TouchHotbarKeysAbove",
         hasShop: "TouchHotbarHasShop",
         hasBag: "TouchHotbarHasBag"
       },
-      GR = new Set([MR, ...Object.values(IR)]),
-      UR = new Set(Iu.y.map(ER.A)),
-      nR = new Set(ER.g),
-      sR = 'style, link[rel="stylesheet"]';
+      MF = new Set([HF, ...Object.values(uF)]),
+      gF = new Set(uk.w.map(tF.H)),
+      UF = new Set(tF.h),
+      cF = 'style, link[rel="stylesheet"]';
 
-    function tR(uu, Ru, yu, Eu) {
-      const Ku = new Map,
-        Qu = new Set,
-        mu = new URL(uu.baseURI).origin,
-        Ju = Ru => {
-          var yu;
-          if ("LINK" !== Ru.nodeName) return !0;
-          const Eu = null === (yu = Ru.getAttribute("href")) || void 0 === yu ? void 0 : yu.trim();
-          if (!Eu) return !1;
+    function GF(kk, Fk, Bk, Rk) {
+      const tk = new Map,
+        ak = new Set,
+        Xk = new URL(kk.baseURI).origin,
+        bk = Fk => {
+          var Bk;
+          if ("LINK" !== Fk.nodeName) return !0;
+          const Rk = null === (Bk = Fk.getAttribute("href")) || void 0 === Bk ? void 0 : Bk.trim();
+          if (!Rk) return !1;
           try {
-            return new URL(Eu, uu.baseURI).origin === mu
+            return new URL(Rk, kk.baseURI).origin === Xk
           } catch {
             return !1
           }
         };
-      let Nu = null;
-      const Xu = () => {
-          Nu !== (0 === Qu.size) && (Nu = 0 === Qu.size, null === Eu || void 0 === Eu || Eu(Nu))
+      let wk = null;
+      const dk = () => {
+          wk !== (0 === ak.size) && (wk = 0 === ak.size, null === Rk || void 0 === Rk || Rk(wk))
         },
-        Vu = uu => {
-          const Ru = uu.cloneNode(!0);
-          if ("LINK" === Ru.tagName) {
-            Qu.add(Ru);
-            const uu = () => {
-              Qu.delete(Ru), Xu()
+        sk = kk => {
+          const Fk = kk.cloneNode(!0);
+          if ("LINK" === Fk.tagName) {
+            ak.add(Fk);
+            const kk = () => {
+              ak.delete(Fk), dk()
             };
-            Ru.addEventListener("load", uu), Ru.addEventListener("error", uu), yu && Ru.addEventListener("load", yu)
+            Fk.addEventListener("load", kk), Fk.addEventListener("error", kk), Bk && Fk.addEventListener("load", Bk)
           }
-          return Ru
+          return Fk
         },
-        ru = () => {
-          const Eu = function(uu) {
-              const Ru = [...uu.body.children].filter((uu => uu.matches(sR)));
-              return [...uu.head.querySelectorAll(sR), ...Ru]
-            }(uu).filter(Ju),
-            mu = new Set(Eu);
-          for (const [uu, Ru] of Ku) mu.has(uu) || (Ru.remove(), Ku.delete(uu), Qu.delete(Ru));
-          let Nu = null;
-          for (let uu = Eu.length - 1; uu >= 0; uu--) {
-            const Qu = Eu[uu];
-            let mu = Ku.get(Qu);
-            mu ? "STYLE" === Qu.tagName && mu.textContent !== Qu.textContent && (mu.textContent = Qu.textContent, null === yu || void 0 === yu || yu()) : (mu = Vu(Qu), Ku.set(Qu, mu), Ru.head.insertBefore(mu, Nu)), Nu = mu
+        Vk = () => {
+          const Rk = function(kk) {
+              const Fk = [...kk.body.children].filter((kk => kk.matches(cF)));
+              return [...kk.head.querySelectorAll(cF), ...Fk]
+            }(kk).filter(bk),
+            Xk = new Set(Rk);
+          for (const [kk, Fk] of tk) Xk.has(kk) || (Fk.remove(), tk.delete(kk), ak.delete(Fk));
+          let wk = null;
+          for (let kk = Rk.length - 1; kk >= 0; kk--) {
+            const ak = Rk[kk];
+            let Xk = tk.get(ak);
+            Xk ? "STYLE" === ak.tagName && Xk.textContent !== ak.textContent && (Xk.textContent = ak.textContent, null === Bk || void 0 === Bk || Bk()) : (Xk = sk(ak), tk.set(ak, Xk), Fk.head.insertBefore(Xk, wk)), wk = Xk
           }
-          Xu()
+          dk()
         };
-      ru();
-      const Bu = new MutationObserver(ru);
-      return Bu.observe(uu.head, {
+      Vk();
+      const Jk = new MutationObserver(Vk);
+      return Jk.observe(kk.head, {
         childList: !0,
         subtree: !0,
         characterData: !0
-      }), Bu.observe(uu.body, {
+      }), Jk.observe(kk.body, {
         childList: !0
       }), () => {
-        Bu.disconnect()
+        Jk.disconnect()
       }
     }
 
-    function lR(uu, Ru, yu) {
+    function TF(kk, Fk, Bk) {
       let {
-        keysAbove: Eu
-      } = yu;
-      const Ku = [...uu.documentElement.classList].filter((uu => !GR.has(uu) && !nR.has(uu))),
-        Qu = [...Ru.documentElement.classList].filter((uu => nR.has(uu))),
-        mu = [MR, IR.hotbar, IR.hasShop, IR.hasBag];
-      Eu && mu.push(IR.keysAbove), Ru.documentElement.className = [...Ku, ...mu, ...Qu].join(" ")
+        keysAbove: Rk
+      } = Bk;
+      const tk = [...kk.documentElement.classList].filter((kk => !MF.has(kk) && !UF.has(kk))),
+        ak = [...Fk.documentElement.classList].filter((kk => UF.has(kk))),
+        Xk = [HF, uF.hotbar, uF.hasShop, uF.hasBag];
+      Rk && Xk.push(uF.keysAbove), Fk.documentElement.className = [...tk, ...Xk, ...ak].join(" ")
     }
-    const gR = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
+    const rF = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
 
-    function cR(uu, Ru, yu, Eu, Ku) {
-      const Qu = (0, Iu.z)(yu, Eu, "joystick"),
-        mu = (0, ER.D)((0, ER.P)(yu, Eu, Ku), Eu),
-        Ju = mu.classes.filter((uu => !UR.has(uu))),
-        Nu = Ru.documentElement;
-      (0, ER.V)({
-        ...mu,
-        classes: Ju
+    function DF(kk, Fk, Bk, Rk, tk) {
+      const ak = (0, uk.z)(Bk, Rk, "joystick"),
+        Xk = (0, tF.I)((0, tF.W)(Bk, Rk, tk), Rk),
+        bk = Xk.classes.filter((kk => !gF.has(kk))),
+        wk = Fk.documentElement;
+      (0, tF._)({
+        ...Xk,
+        classes: bk
       }, {
-        vars: Nu,
-        safe: Nu,
-        classes: Nu
+        vars: wk,
+        safe: wk,
+        classes: wk
       });
-      const Xu = (0, ER.K)(yu.hudLayouts[Eu].hudSafe, window.innerWidth, window.innerHeight, LR(), (0, ER.R)(Ru));
-      Nu.style.setProperty("--preview-joystick-shift-left", `${Xu[3]}px`), Nu.style.setProperty("--preview-joystick-shift-bottom", `${Xu[2]}px`), Nu.style.setProperty("--preview-joystick-scale", String(Qu[2])), (0, DR.e)(Nu, Ru, yu, Eu);
-      for (const Vu of gR) Nu.style.setProperty(Vu, uu.documentElement.style.getPropertyValue(Vu) || "0px")
+      const dk = (0, tF.N)(Bk.hudLayouts[Rk].hudSafe, window.innerWidth, window.innerHeight, zF(), (0, tF.X)(Fk));
+      wk.style.setProperty("--preview-joystick-shift-left", `${dk[3]}px`), wk.style.setProperty("--preview-joystick-shift-bottom", `${dk[2]}px`), wk.style.setProperty("--preview-joystick-scale", String(ak[2])), (0, NF.d)(wk, Fk, Bk, Rk);
+      for (const sk of rF) wk.style.setProperty(sk, kk.documentElement.style.getPropertyValue(sk) || "0px")
     }
 
-    function LR() {
-      return (0, ER.M)(Vu.d.get("notchSize"), window.innerWidth, window.innerHeight)
+    function zF() {
+      return (0, tF.U)(sk.c.get("notchSize"), window.innerWidth, window.innerHeight)
     }
 
-    function zR(uu) {
-      return (0, ER.w)(LR(), (0, ER.R)(uu))
+    function PF(kk) {
+      return (0, tF.z)(zF(), (0, tF.X)(kk))
     }
 
-    function FR(uu, Ru, yu) {
-      const Eu = uu.documentElement.style,
-        Ku = (0, ER.L)(Ru),
-        Qu = Eu.getPropertyValue(Ku);
+    function hF(kk, Fk, Bk) {
+      const Rk = kk.documentElement.style,
+        tk = (0, tF.R)(Fk),
+        ak = Rk.getPropertyValue(tk);
       try {
-        return yu((uu => {
-          Eu.setProperty(Ku, String(uu))
+        return Bk((kk => {
+          Rk.setProperty(tk, String(kk))
         }))
       } finally {
-        "" === Qu ? Eu.removeProperty(Ku) : Eu.setProperty(Ku, Qu)
+        "" === ak ? Rk.removeProperty(tk) : Rk.setProperty(tk, ak)
       }
     }
 
-    function wR(uu, Ru) {
-      const [yu, Eu] = FR(uu, "hotbar", (Ru => {
-        const yu = yu => {
-          var Eu, Ku;
-          return Ru(yu), null !== (Eu = null === (Ku = uu.querySelector(".HotBarGameItemsContainer")) || void 0 === Ku ? void 0 : Ku.getBoundingClientRect().width) && void 0 !== Eu ? Eu : 0
+    function qF(kk, Fk) {
+      const [Bk, Rk] = hF(kk, "hotbar", (Fk => {
+        const Bk = Bk => {
+          var Rk, tk;
+          return Fk(Bk), null !== (Rk = null === (tk = kk.querySelector(".HotBarGameItemsContainer")) || void 0 === tk ? void 0 : tk.getBoundingClientRect().width) && void 0 !== Rk ? Rk : 0
         };
-        return [yu(1), yu(Iu.i)]
+        return [Bk(1), Bk(uk.i)]
       }));
-      return yu <= 0 ? Iu.i : Math.min(Iu.i, Math.max(1, Math.floor(Eu / yu / Ru + 1e-6) * Ru))
+      return Bk <= 0 ? uk.i : Math.min(uk.i, Math.max(1, Math.floor(Rk / Bk / Fk + 1e-6) * Fk))
     }
-    const ZR = 3,
-      hR = .5,
-      PR = uu => uu.right - uu.left;
-    const iR = (uu, Ru) => Math.abs((0, RR.b)(uu).x - (0, RR.b)(Ru).x) + Math.abs((0, RR.b)(uu).y - (0, RR.b)(Ru).y) + Math.abs(PR(uu) - PR(Ru));
+    const CF = 3,
+      ZF = .5,
+      pF = kk => kk.right - kk.left;
+    const KF = (kk, Fk) => Math.abs((0, BF.e)(kk).x - (0, BF.e)(Fk).x) + Math.abs((0, BF.e)(kk).y - (0, BF.e)(Fk).y) + Math.abs(pF(kk) - pF(Fk));
 
-    function YR(uu, Ru, yu, Eu, Ku) {
+    function xF(kk, Fk, Bk, Rk, tk) {
       let {
-        canKeep: Qu = () => !0,
-        passes: mu = ZR,
-        before: Ju,
-        keysAboveOf: Nu
+        canKeep: ak = () => !0,
+        passes: Xk = CF,
+        before: bk,
+        keysAboveOf: wk
       } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-      const Xu = void 0 !== Nu && Nu(uu) !== Nu(Ru),
-        Vu = Ru.hudLayouts[yu].hudLocked.filter((uu => Qu(uu) && !(Xu && "inventory" === uu))),
-        ru = new Set(Vu);
-      if (0 === ru.size) return Ru;
-      const Bu = [...nu].filter((Eu => !Vu.includes(Eu) && (0, Iu.z)(uu, yu, Eu).join() === (0, Iu.z)(Ru, yu, Eu).join())),
-        xu = uu => {
-          const Ru = (0, RR.F)(Bu.flatMap((Ru => uu[Ru] ? [uu[Ru]] : [])));
+      const dk = void 0 !== wk && wk(kk) !== wk(Fk),
+        sk = Fk.hudLayouts[Bk].hudLocked.filter((kk => ak(kk) && !(dk && "inventory" === kk))),
+        Vk = new Set(sk);
+      if (0 === Vk.size) return Fk;
+      const Jk = [...Uk].filter((Rk => !sk.includes(Rk) && (0, uk.z)(kk, Bk, Rk).join() === (0, uk.z)(Fk, Bk, Rk).join())),
+        Ak = kk => {
+          const Fk = (0, BF.E)(Jk.flatMap((Fk => kk[Fk] ? [kk[Fk]] : [])));
           return {
-            ...uu,
-            cluster: null !== Ru && void 0 !== Ru ? Ru : void 0
+            ...kk,
+            cluster: null !== Fk && void 0 !== Fk ? Fk : void 0
           }
         },
-        Su = uu => {
-          const Ru = Ku(uu);
-          return Ru && xu(Ru)
+        ek = kk => {
+          const Fk = tk(kk);
+          return Fk && Ak(Fk)
         },
-        pu = Ju ? xu(Ju) : Su(uu);
-      let Tu = pu && Su(Ru);
-      if (!pu || !Tu) return Ru;
-      let Wu = Ru;
-      for (let ju = 0; ju < mu && ru.size > 0; ju++) {
-        const uu = new Map;
-        for (const Ru of ru) {
-          const Ku = pu[Ru],
-            Qu = Tu[Ru],
-            mu = Ku && Qu ? oR(Ru, (0, Iu.z)(Wu, yu, Ru), Ku, Qu, Eu) : null;
-          mu ? uu.set(Ru, mu) : ru.delete(Ru)
+        yk = bk ? Ak(bk) : ek(kk);
+      let fk = yk && ek(Fk);
+      if (!yk || !fk) return Fk;
+      let mk = Fk;
+      for (let Wk = 0; Wk < Xk && Vk.size > 0; Wk++) {
+        const kk = new Map;
+        for (const Fk of Vk) {
+          const tk = yk[Fk],
+            ak = fk[Fk],
+            Xk = tk && ak ? jF(Fk, (0, uk.z)(mk, Bk, Fk), tk, ak, Rk) : null;
+          Xk ? kk.set(Fk, Xk) : Vk.delete(Fk)
         }
-        if (0 === uu.size) break;
-        let Ku = Wu;
-        for (const [Ru, Eu] of uu) Ku = (0, Iu.Y)(Ku, yu, Ru, Eu);
-        const Qu = Su(Ku);
-        if (!Qu) return Ru;
-        let mu = Wu;
-        for (const [Ru, Eu] of uu) {
-          const uu = Qu[Ru];
-          uu && iR(pu[Ru], uu) < iR(pu[Ru], Tu[Ru]) - hR ? mu = (0, Iu.Y)(mu, yu, Ru, Eu) : ru.delete(Ru)
+        if (0 === kk.size) break;
+        let tk = mk;
+        for (const [Fk, Rk] of kk) tk = (0, uk.ab)(tk, Bk, Fk, Rk);
+        const ak = ek(tk);
+        if (!ak) return Fk;
+        let Xk = mk;
+        for (const [Fk, Rk] of kk) {
+          const kk = ak[Fk];
+          kk && KF(yk[Fk], kk) < KF(yk[Fk], fk[Fk]) - ZF ? Xk = (0, uk.ab)(Xk, Bk, Fk, Rk) : Vk.delete(Fk)
         }
-        if (mu === Wu) break;
-        const Ju = [...uu.keys()].every((uu => ru.has(uu)));
-        if (Wu = mu, Tu = Ju ? Qu : Su(Wu), !Tu) return Ru
+        if (Xk === mk) break;
+        const bk = [...kk.keys()].every((kk => Vk.has(kk)));
+        if (mk = Xk, fk = bk ? ak : ek(mk), !fk) return Fk
       }
-      return Ku(Wu), Wu
+      return tk(mk), mk
     }
 
-    function oR(uu, Ru, yu, Eu, Ku) {
-      let [Qu, mu, Ju] = Ru;
-      const Nu = Iu.x[uu],
-        Xu = {};
-      Nu.scale && PR(Eu) > 0 && Math.abs(PR(yu) - PR(Eu)) > hR && (Xu.scale = Math.max(Iu.l, Math.min(Iu.i, Ju * PR(yu) / PR(Eu))));
-      const Vu = (0, RR.b)(yu).x - (0, RR.b)(Eu).x,
-        ru = (0, RR.b)(yu).y - (0, RR.b)(Eu).y;
-      return Nu.move && (Math.abs(Vu) > hR || Math.abs(ru) > hR) && (Xu.dx = Qu + Vu / Ku.width, Xu.dy = mu + ru / Ku.height), void 0 === Xu.scale && void 0 === Xu.dx ? null : Xu
+    function jF(kk, Fk, Bk, Rk, tk) {
+      let [ak, Xk, bk] = Fk;
+      const wk = uk.v[kk],
+        dk = {};
+      wk.scale && pF(Rk) > 0 && Math.abs(pF(Bk) - pF(Rk)) > ZF && (dk.scale = Math.max(uk.j, Math.min(uk.i, bk * pF(Bk) / pF(Rk))));
+      const sk = (0, BF.e)(Bk).x - (0, BF.e)(Rk).x,
+        Vk = (0, BF.e)(Bk).y - (0, BF.e)(Rk).y;
+      return wk.move && (Math.abs(sk) > ZF || Math.abs(Vk) > ZF) && (dk.dx = ak + sk / tk.width, dk.dy = Xk + Vk / tk.height), void 0 === dk.scale && void 0 === dk.dx ? null : dk
     }
-    let qR = 0;
+    let lF = 0;
 
-    function OR() {
-      return qR > 0
+    function nF() {
+      return lF > 0
     }
-    const vR = uu => 0 === uu.dx && 0 === uu.dy,
-      aR = .001,
-      fR = uu => Math.abs(uu.dx) >= 5e-4 || Math.abs(uu.dy) >= 5e-4 ? uu : {
-        dx: uu.dx,
-        dy: uu.dy < 0 ? -.001 : aR
+    const IF = kk => 0 === kk.dx && 0 === kk.dy,
+      QF = .001,
+      kB = kk => Math.abs(kk.dx) >= 5e-4 || Math.abs(kk.dy) >= 5e-4 ? kk : {
+        dx: kk.dx,
+        dy: kk.dy < 0 ? -.001 : QF
       };
 
-    function uy(uu) {
+    function FB(kk) {
       let {
-        preview: Ru,
-        stageRef: yu,
-        ringRef: Eu,
-        centreLineRef: Qu,
-        snapCentre: mu,
-        ready: Ju,
-        measure: Nu,
-        k: Xu,
-        viewport: Vu,
-        boxes: ru,
-        pieces: Bu,
-        selected: xu,
-        insets: Su,
-        layout: pu,
-        canMove: Tu,
-        onSelect: Wu,
-        onMove: ju
-      } = uu;
-      const Hu = (0, Ku.useRef)(null),
-        du = (0, Ku.useCallback)((() => null !== Hu.current), []),
-        bu = (uu, Ru) => {
-          if (!Ru) return null;
-          const yu = (0, RR.b)(uu.origin),
-            Eu = (0, RR.b)(Ru),
-            Ku = (uu.to.dx - uu.from.dx) * Vu.width,
-            Qu = (uu.to.dy - uu.from.dy) * Vu.height,
-            mu = Ru.right - Ru.left,
-            Ju = Ru.bottom - Ru.top;
+        preview: Fk,
+        stageRef: Bk,
+        ringRef: Rk,
+        centreLineRef: ak,
+        snapCentre: Xk,
+        ready: bk,
+        measure: wk,
+        k: dk,
+        viewport: sk,
+        boxes: Vk,
+        pieces: Jk,
+        selected: Ak,
+        insets: ek,
+        layout: yk,
+        canMove: fk,
+        onSelect: mk,
+        onMove: Wk
+      } = kk;
+      const vk = (0, tk.useRef)(null),
+        ik = (0, tk.useCallback)((() => null !== vk.current), []),
+        Yk = (kk, Fk) => {
+          if (!Fk) return null;
+          const Bk = (0, BF.e)(kk.origin),
+            Rk = (0, BF.e)(Fk),
+            tk = (kk.to.dx - kk.from.dx) * sk.width,
+            ak = (kk.to.dy - kk.from.dy) * sk.height,
+            Xk = Fk.right - Fk.left,
+            bk = Fk.bottom - Fk.top;
           return {
             skew: {
-              x: Eu.x - yu.x - Ku,
-              y: Eu.y - yu.y - Qu
+              x: Rk.x - Bk.x - tk,
+              y: Rk.y - Bk.y - ak
             },
             box: {
-              left: yu.x - mu / 2,
-              top: yu.y - Ju / 2,
-              right: yu.x + mu / 2,
-              bottom: yu.y + Ju / 2
+              left: Bk.x - Xk / 2,
+              top: Bk.y - bk / 2,
+              right: Bk.x + Xk / 2,
+              bottom: Bk.y + bk / 2
             }
           }
         },
-        Cu = (uu, yu) => {
-          var Ku;
-          const mu = Hu.current;
-          if (!mu || mu.pointerId !== uu.pointerId) return;
-          Hu.current = null, null === (Ku = Qu.current) || void 0 === Ku || Ku.classList.remove("Shown", "Snapped");
-          const Ju = Eu.current;
-          if (Ju && null !== mu.ringStyle && Ju.setAttribute("style", mu.ringStyle), yu && mu.moved) {
-            const uu = vR(mu.to) ? null : Nu(mu.id),
-              Ru = uu ? (0, RR.B)(uu, (0, RR.A)(Vu.width, Vu.height, Su)) : {
+        Lk = (kk, Bk) => {
+          var tk;
+          const Xk = vk.current;
+          if (!Xk || Xk.pointerId !== kk.pointerId) return;
+          vk.current = null, null === (tk = ak.current) || void 0 === tk || tk.classList.remove("Shown", "Snapped");
+          const bk = Rk.current;
+          if (bk && null !== Xk.ringStyle && bk.setAttribute("style", Xk.ringStyle), Bk && Xk.moved) {
+            const kk = IF(Xk.to) ? null : wk(Xk.id),
+              Fk = kk ? (0, BF.D)(kk, (0, BF.B)(sk.width, sk.height, ek)) : {
                 x: 0,
                 y: 0
               },
-              yu = {
-                dx: mu.to.dx + Ru.x / Vu.width,
-                dy: mu.to.dy + Ru.y / Vu.height
+              Bk = {
+                dx: Xk.to.dx + Fk.x / sk.width,
+                dy: Xk.to.dy + Fk.y / sk.height
               },
-              Eu = vR(mu.to) ? yu : fR(yu);
-            ju(mu.id, Eu.dx, Eu.dy)
-          } else Ru(mu.id, null), yu && mu.tapPick && Wu(mu.tapPick)
+              Rk = IF(Xk.to) ? Bk : kB(Bk);
+            Wk(Xk.id, Rk.dx, Rk.dy)
+          } else Fk(Xk.id, null), Bk && Xk.tapPick && mk(Xk.tapPick)
         };
       return {
-        busy: du,
+        busy: ik,
         handlers: {
-          onPointerDown: uu => {
-            var Ru;
-            if (!Ju || Hu.current || !uu.target.closest(".HudPreviewHandle")) return;
-            const Eu = yu.current.getBoundingClientRect(),
-              Ku = {
-                x: (uu.clientX - Eu.left) / Xu,
-                y: (uu.clientY - Eu.top) / Xu
+          onPointerDown: kk => {
+            var Fk;
+            if (!bk || vk.current || !kk.target.closest(".HudPreviewHandle")) return;
+            const Rk = Bk.current.getBoundingClientRect(),
+              tk = {
+                x: (kk.clientX - Rk.left) / dk,
+                y: (kk.clientY - Rk.top) / dk
               },
-              Qu = (0, RR.w)(Ku, Bu, 40 / Xu),
-              mu = "cluster" === xu && void 0 !== ru.cluster && null !== (0, RR.w)(Ku, [{
+              ak = (0, BF.v)(tk, Jk, 40 / dk),
+              Xk = "cluster" === Ak && void 0 !== Vk.cluster && null !== (0, BF.v)(tk, [{
                 id: "cluster",
-                box: ru.cluster
-              }], 40 / Xu),
-              Nu = "menu" === xu && void 0 !== ru.menu && (0, RR.e)(ru.menu, Ku) && ("menu" === Qu || null !== Qu && (0, yR.t)(Qu, pu.hudElements[Qu])),
-              Vu = mu ? "cluster" : Nu ? "menu" : null,
-              Su = null !== Vu,
-              ju = null !== Vu && void 0 !== Vu ? Vu : Qu;
-            if (!ju) return;
-            if (function(uu) {
-                qR++;
-                const Ru = yu => {
-                  yu.pointerId === uu && (qR = Math.max(0, qR - 1), window.removeEventListener("pointerup", Ru, !0), window.removeEventListener("pointercancel", Ru, !0))
+                box: Vk.cluster
+              }], 40 / dk),
+              wk = "menu" === Ak && void 0 !== Vk.menu && (0, BF.h)(Vk.menu, tk) && ("menu" === ak || null !== ak && (0, RF.r)(ak, yk.hudElements[ak])),
+              sk = Xk ? "cluster" : wk ? "menu" : null,
+              ek = null !== sk,
+              Wk = null !== sk && void 0 !== sk ? sk : ak;
+            if (!Wk) return;
+            if (function(kk) {
+                lF++;
+                const Fk = Bk => {
+                  Bk.pointerId === kk && (lF = Math.max(0, lF - 1), window.removeEventListener("pointerup", Fk, !0), window.removeEventListener("pointercancel", Fk, !0))
                 };
-                window.addEventListener("pointerup", Ru, !0), window.addEventListener("pointercancel", Ru, !0)
-              }(uu.pointerId), !Tu(ju)) return void Wu(Su && Qu ? Qu : ju);
-            Wu(ju);
-            const [du, bu] = null !== (Ru = pu.hudElements[ju]) && void 0 !== Ru ? Ru : [0, 0], Cu = {
-              dx: du,
-              dy: bu
-            }, ku = {
+                window.addEventListener("pointerup", Fk, !0), window.addEventListener("pointercancel", Fk, !0)
+              }(kk.pointerId), !fk(Wk)) return void mk(ek && ak ? ak : Wk);
+            mk(Wk);
+            const [ik, Yk] = null !== (Fk = yk.hudElements[Wk]) && void 0 !== Fk ? Fk : [0, 0], Lk = {
+              dx: ik,
+              dy: Yk
+            }, Ok = {
               skew: {
                 x: 0,
                 y: 0
               },
-              box: ru[ju]
+              box: Vk[Wk]
             };
-            Hu.current = {
-              id: ju,
-              pointerId: uu.pointerId,
-              startX: uu.clientX,
-              startY: uu.clientY,
-              origin: ru[ju],
-              from: Cu,
-              to: Cu,
+            vk.current = {
+              id: Wk,
+              pointerId: kk.pointerId,
+              startX: kk.clientX,
+              startY: kk.clientY,
+              origin: Vk[Wk],
+              from: Lk,
+              to: Lk,
               moved: !1,
-              home: vR(Cu) ? {
-                centre: (0, RR.b)(ru[ju]),
-                anchor: ku
+              home: IF(Lk) ? {
+                centre: (0, BF.e)(Vk[Wk]),
+                anchor: Ok
               } : null,
-              away: vR(Cu) ? null : ku,
-              anchor: ku,
+              away: IF(Lk) ? null : Ok,
+              anchor: Ok,
               ringStyle: null,
-              tapPick: Su ? Qu : null
-            }, uu.currentTarget.setPointerCapture(uu.pointerId)
+              tapPick: ek ? ak : null
+            }, kk.currentTarget.setPointerCapture(kk.pointerId)
           },
-          onPointerMove: uu => {
-            const yu = Hu.current;
-            if (!yu || yu.pointerId !== uu.pointerId) return;
-            const Ku = uu.clientX - yu.startX,
-              Ju = uu.clientY - yu.startY;
-            if (!yu.moved && Math.hypot(Ku, Ju) < 5) return;
-            const ru = !yu.moved;
-            var Bu, xu;
-            (yu.moved = !0, ru) && (yu.ringStyle = null !== (Bu = null === (xu = Eu.current) || void 0 === xu ? void 0 : xu.getAttribute("style")) && void 0 !== Bu ? Bu : null);
-            const pu = (0, RR.A)(Vu.width, Vu.height, Su);
-            if (!yu.home) {
-              var Tu;
-              yu.to = {
+          onPointerMove: kk => {
+            const Bk = vk.current;
+            if (!Bk || Bk.pointerId !== kk.pointerId) return;
+            const tk = kk.clientX - Bk.startX,
+              bk = kk.clientY - Bk.startY;
+            if (!Bk.moved && Math.hypot(tk, bk) < 5) return;
+            const Vk = !Bk.moved;
+            var Jk, Ak;
+            (Bk.moved = !0, Vk) && (Bk.ringStyle = null !== (Jk = null === (Ak = Rk.current) || void 0 === Ak ? void 0 : Ak.getAttribute("style")) && void 0 !== Jk ? Jk : null);
+            const yk = (0, BF.B)(sk.width, sk.height, ek);
+            if (!Bk.home) {
+              var fk;
+              Bk.to = {
                 dx: 0,
                 dy: 0
-              }, Ru(yu.id, yu.to);
-              const uu = Nu(yu.id),
-                Eu = null !== (Tu = bu(yu, uu)) && void 0 !== Tu ? Tu : {
+              }, Fk(Bk.id, Bk.to);
+              const kk = wk(Bk.id),
+                Rk = null !== (fk = Yk(Bk, kk)) && void 0 !== fk ? fk : {
                   skew: {
                     x: 0,
                     y: 0
                   },
-                  box: yu.origin
+                  box: Bk.origin
                 },
-                Ku = (0, RR.b)(yu.origin);
-              yu.home = {
-                centre: uu ? (0, RR.b)(uu) : {
-                  x: Ku.x - yu.from.dx * Vu.width,
-                  y: Ku.y - yu.from.dy * Vu.height
+                tk = (0, BF.e)(Bk.origin);
+              Bk.home = {
+                centre: kk ? (0, BF.e)(kk) : {
+                  x: tk.x - Bk.from.dx * sk.width,
+                  y: tk.y - Bk.from.dy * sk.height
                 },
-                anchor: Eu
+                anchor: Rk
               }
             }
-            const Wu = yu.home;
-            let ju = !1;
-            const du = uu => {
-                ju = !1;
-                let Eu = (0, RR.h)(uu.box, Ku / Xu, Ju / Xu, pu);
-                const Qu = Vu.width / 2;
-                if (mu && Math.abs((0, RR.b)(yu.origin).x + Eu.x - Qu) <= 8 / Xu) {
-                  const Ru = Qu - (0, RR.b)(yu.origin).x,
-                    Ku = (0, RR.h)(uu.box, Ru, Eu.y, pu);
-                  ju = Math.abs(Ku.x - Ru) < .01, ju && (Eu = Ku)
+            const mk = Bk.home;
+            let Wk = !1;
+            const ik = kk => {
+                Wk = !1;
+                let Rk = (0, BF.o)(kk.box, tk / dk, bk / dk, yk);
+                const ak = sk.width / 2;
+                if (Xk && Math.abs((0, BF.e)(Bk.origin).x + Rk.x - ak) <= 8 / dk) {
+                  const Fk = ak - (0, BF.e)(Bk.origin).x,
+                    tk = (0, BF.o)(kk.box, Fk, Rk.y, yk);
+                  Wk = Math.abs(tk.x - Fk) < .01, Wk && (Rk = tk)
                 }
-                const Nu = (0, RR.t)(yu.from, Eu.x - uu.skew.x, Eu.y - uu.skew.y, Vu.width, Vu.height);
-                yu.to = fR(Nu), yu.anchor = uu, Ru(yu.id, yu.to)
+                const wk = (0, BF.u)(Bk.from, Rk.x - kk.skew.x, Rk.y - kk.skew.y, sk.width, sk.height);
+                Bk.to = kB(wk), Bk.anchor = kk, Fk(Bk.id, Bk.to)
               },
-              Cu = (0, RR.h)(Wu.anchor.box, Ku / Xu, Ju / Xu, pu),
-              ku = Qu.current,
-              eu = (0, RR.b)(yu.origin),
-              Au = ((0, Iu.M)(yu.id) ? 20 : 6) / Xu;
-            if (Math.abs(eu.x + Cu.x - Wu.centre.x) <= Au && Math.abs(eu.y + Cu.y - Wu.centre.y) <= Au) yu.to = {
+              Lk = (0, BF.o)(mk.anchor.box, tk / dk, bk / dk, yk),
+              Ok = ak.current,
+              Ek = (0, BF.e)(Bk.origin),
+              Sk = ((0, uk.L)(Bk.id) ? 20 : 6) / dk;
+            if (Math.abs(Ek.x + Lk.x - mk.centre.x) <= Sk && Math.abs(Ek.y + Lk.y - mk.centre.y) <= Sk) Bk.to = {
               dx: 0,
               dy: 0
-            }, yu.anchor = Wu.anchor, ju = mu && Math.abs(Wu.centre.x - Vu.width / 2) < 1, Ru(yu.id, yu.to);
-            else if (yu.away) du(yu.away);
+            }, Bk.anchor = mk.anchor, Wk = Xk && Math.abs(mk.centre.x - sk.width / 2) < 1, Fk(Bk.id, Bk.to);
+            else if (Bk.away) ik(Bk.away);
             else {
-              var Du;
-              du(Wu.anchor), yu.away = null !== (Du = bu(yu, Nu(yu.id))) && void 0 !== Du ? Du : Wu.anchor, du(yu.away)
+              var Nk;
+              ik(mk.anchor), Bk.away = null !== (Nk = Yk(Bk, wk(Bk.id))) && void 0 !== Nk ? Nk : mk.anchor, ik(Bk.away)
             }
-            null === ku || void 0 === ku || ku.classList.add("Shown"), null === ku || void 0 === ku || ku.classList.toggle("Snapped", ju), (uu => {
-              const Ru = Eu.current;
-              if (Ru) {
+            null === Ok || void 0 === Ok || Ok.classList.add("Shown"), null === Ok || void 0 === Ok || Ok.classList.toggle("Snapped", Wk), (kk => {
+              const Fk = Rk.current;
+              if (Fk) {
                 const {
-                  skew: yu,
-                  box: Eu
-                } = uu.anchor;
-                Ru.style.left = Eu.left * Xu + "px", Ru.style.top = Eu.top * Xu + "px", Ru.style.width = (Eu.right - Eu.left) * Xu + "px", Ru.style.height = (Eu.bottom - Eu.top) * Xu + "px", Ru.style.translate = `${((uu.to.dx-uu.from.dx)*Vu.width+yu.x)*Xu}px ${((uu.to.dy-uu.from.dy)*Vu.height+yu.y)*Xu}px`
+                  skew: Bk,
+                  box: Rk
+                } = kk.anchor;
+                Fk.style.left = Rk.left * dk + "px", Fk.style.top = Rk.top * dk + "px", Fk.style.width = (Rk.right - Rk.left) * dk + "px", Fk.style.height = (Rk.bottom - Rk.top) * dk + "px", Fk.style.translate = `${((kk.to.dx-kk.from.dx)*sk.width+Bk.x)*dk}px ${((kk.to.dy-kk.from.dy)*sk.height+Bk.y)*dk}px`
               }
-            })(yu)
+            })(Bk)
           },
-          onPointerUp: uu => {
-            Cu(uu, !0)
+          onPointerUp: kk => {
+            Lk(kk, !0)
           },
-          onPointerCancel: uu => {
-            Cu(uu, !1)
+          onPointerCancel: kk => {
+            Lk(kk, !1)
           }
         }
       }
     }
 
-    function Ry(uu, Ru) {
-      return Object.keys(uu).filter((uu => uu !== Ru)).map((Ru => uu[Ru]))
+    function BB(kk, Fk) {
+      return Object.keys(kk).filter((kk => kk !== Fk)).map((Fk => kk[Fk]))
     }
 
-    function yy(uu) {
-      const Ru = [],
-        yu = Ru => (0, Iu.M)(Ru) && !uu.documentElement.classList.contains((0, ER.H)(Ru));
-      for (const mu of uu.querySelectorAll(`[${cu}]`)) {
-        const uu = yu(mu.getAttribute(cu)) ? mu.querySelector(".ScaleOnHover") : null,
-          Eu = (null !== uu && void 0 !== uu ? uu : mu).getBoundingClientRect();
-        (Eu.width > 0 || Eu.height > 0) && Ru.push({
-          id: mu.getAttribute(cu),
+    function RB(kk) {
+      const Fk = [],
+        Bk = Fk => (0, uk.L)(Fk) && !kk.documentElement.classList.contains((0, tF.K)(Fk));
+      for (const Xk of kk.querySelectorAll(`[${Dk}]`)) {
+        const kk = Bk(Xk.getAttribute(Dk)) ? Xk.querySelector(".ScaleOnHover") : null,
+          Rk = (null !== kk && void 0 !== kk ? kk : Xk).getBoundingClientRect();
+        (Rk.width > 0 || Rk.height > 0) && Fk.push({
+          id: Xk.getAttribute(Dk),
           box: {
-            left: Eu.left,
-            top: Eu.top,
-            right: Eu.right,
-            bottom: Eu.bottom
+            left: Rk.left,
+            top: Rk.top,
+            right: Rk.right,
+            bottom: Rk.bottom
           }
         })
       }
-      const Eu = uu => (0, RR.F)(Ru.filter((Ru => {
+      const Rk = kk => (0, BF.E)(Fk.filter((Fk => {
           let {
-            id: yu
-          } = Ru;
-          return uu(yu)
-        })).map((uu => {
+            id: Bk
+          } = Fk;
+          return kk(Bk)
+        })).map((kk => {
           let {
-            box: Ru
-          } = uu;
-          return Ru
+            box: Fk
+          } = kk;
+          return Fk
         }))),
-        Ku = {};
-      for (const mu of new Set(Ru.map((uu => uu.id)))) Ku[mu] = Eu((uu => uu === mu));
-      const Qu = Eu((uu => nu.has(uu)));
-      return Qu && (Ku.cluster = Qu), {
-        boxes: Ku,
-        pieces: Ru
+        tk = {};
+      for (const Xk of new Set(Fk.map((kk => kk.id)))) tk[Xk] = Rk((kk => kk === Xk));
+      const ak = Rk((kk => Uk.has(kk)));
+      return ak && (tk.cluster = ak), {
+        boxes: tk,
+        pieces: Fk
       }
     }
 
-    function Ey(uu, Ru, yu) {
-      const Eu = Ru.right - Ru.left,
-        Ku = Ru.bottom - Ru.top;
-      return FR(uu, "cluster", (Ru => {
-        const Qu = yu => {
-            Ru(yu);
-            const Eu = [...uu.querySelectorAll(`[${cu}]:not(.HudPreviewGhost)`)].filter((uu => nu.has(uu.getAttribute(cu)))).map((uu => {
-                const Ru = uu.getBoundingClientRect();
+    function tB(kk, Fk, Bk) {
+      const Rk = Fk.right - Fk.left,
+        tk = Fk.bottom - Fk.top;
+      return hF(kk, "cluster", (Fk => {
+        const ak = Bk => {
+            Fk(Bk);
+            const Rk = [...kk.querySelectorAll(`[${Dk}]:not(.HudPreviewGhost)`)].filter((kk => Uk.has(kk.getAttribute(Dk)))).map((kk => {
+                const Fk = kk.getBoundingClientRect();
                 return {
-                  left: Ru.left,
-                  top: Ru.top,
-                  right: Ru.right,
-                  bottom: Ru.bottom
+                  left: Fk.left,
+                  top: Fk.top,
+                  right: Fk.right,
+                  bottom: Fk.bottom
                 }
               })),
-              Ku = (0, RR.F)(Eu);
-            return Ku ? {
-              w: Ku.right - Ku.left,
-              h: Ku.bottom - Ku.top
+              tk = (0, BF.E)(Rk);
+            return tk ? {
+              w: tk.right - tk.left,
+              h: tk.bottom - tk.top
             } : null
           },
-          mu = uu => !uu || uu.w <= Eu && uu.h <= Ku,
-          Ju = Qu(1),
-          Nu = Qu(Iu.i);
-        if (!Ju || mu(Nu)) return Iu.i;
-        const Xu = (uu, Ru, yu) => Ru > uu ? 1 + (yu - uu) * (Iu.i - 1) / (Ru - uu) : Iu.i;
-        let Vu = Math.floor(Math.min(Iu.i, Xu(Ju.w, Nu.w, Eu), Xu(Ju.h, Nu.h, Ku)) / yu + 1e-6) * yu;
-        for (; Vu > 1 && !mu(Qu(Vu));) Vu = Math.round(100 * (Vu - yu)) / 100;
-        return Math.max(1, Vu)
+          Xk = kk => !kk || kk.w <= Rk && kk.h <= tk,
+          bk = ak(1),
+          wk = ak(uk.i);
+        if (!bk || Xk(wk)) return uk.i;
+        const dk = (kk, Fk, Bk) => Fk > kk ? 1 + (Bk - kk) * (uk.i - 1) / (Fk - kk) : uk.i;
+        let sk = Math.floor(Math.min(uk.i, dk(bk.w, wk.w, Rk), dk(bk.h, wk.h, tk)) / Bk + 1e-6) * Bk;
+        for (; sk > 1 && !Xk(ak(sk));) sk = Math.round(100 * (sk - Bk)) / 100;
+        return Math.max(1, sk)
       }))
     }
 
-    function Ky(uu) {
-      lR(document, uu, {
+    function aB(kk) {
+      TF(document, kk, {
         keysAbove: !1
       });
-      const Ru = parseFloat(getComputedStyle(uu.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
-        yu = Number.isFinite(Ru) && Ru < 0;
-      return lR(document, uu, {
-        keysAbove: yu
-      }), yu
+      const Fk = parseFloat(getComputedStyle(kk.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
+        Bk = Number.isFinite(Fk) && Fk < 0;
+      return TF(document, kk, {
+        keysAbove: Bk
+      }), Bk
     }
 
-    function Qy(uu, Ru) {
+    function XB(kk, Fk) {
       let {
-        layout: yu,
-        orientation: Eu,
-        viewport: Qu,
-        replicaKey: mu,
-        joystickFixed: Ju,
-        busy: Nu
-      } = Ru;
-      const [Xu, Vu] = (0, Ku.useState)(null), [ru, Bu] = (0, Ku.useState)({
+        layout: Bk,
+        orientation: Rk,
+        viewport: ak,
+        replicaKey: Xk,
+        joystickFixed: bk,
+        busy: wk
+      } = Fk;
+      const [dk, sk] = (0, tk.useState)(null), [Vk, Jk] = (0, tk.useState)({
         boxes: {},
         pieces: []
-      }), [xu, Su] = (0, Ku.useState)({
+      }), [Ak, ek] = (0, tk.useState)({
         top: 0,
         right: 0,
         bottom: 0,
         left: 0
-      }), [pu, Tu] = (0, Ku.useState)(!1), [Wu, ju] = (0, Ku.useState)(!1), [Hu, du] = (0, Ku.useState)(!1), bu = (0, Ku.useCallback)((uu => {
-        ju(uu), uu && du(!0)
-      }), []), Cu = yu.hudLayouts[Eu].hudSafe, ku = (0, Ku.useCallback)((() => {
-        var Ru;
-        const yu = null === (Ru = uu.current) || void 0 === Ru ? void 0 : Ru.contentDocument;
-        null !== yu && void 0 !== yu && yu.body && Vu(yu)
-      }), [uu]), eu = (0, Ku.useCallback)((() => {
-        Xu && ((0, yR.w)(Xu), Bu(yy(Xu)), Su(function(uu, Ru) {
-          const yu = zR(uu),
-            [Eu, Ku, Qu, mu] = Ru ? (0, ER.y)(Ru, window.innerWidth, window.innerHeight, yu) : yu;
+      }), [yk, fk] = (0, tk.useState)(!1), [mk, Wk] = (0, tk.useState)(!1), [vk, ik] = (0, tk.useState)(!1), Yk = (0, tk.useCallback)((kk => {
+        Wk(kk), kk && ik(!0)
+      }), []), Lk = Bk.hudLayouts[Rk].hudSafe, Ok = (0, tk.useCallback)((() => {
+        var Fk;
+        const Bk = null === (Fk = kk.current) || void 0 === Fk ? void 0 : Fk.contentDocument;
+        null !== Bk && void 0 !== Bk && Bk.body && sk(Bk)
+      }), [kk]), Ek = (0, tk.useCallback)((() => {
+        dk && ((0, RF.u)(dk), Jk(RB(dk)), ek(function(kk, Fk) {
+          const Bk = PF(kk),
+            [Rk, tk, ak, Xk] = Fk ? (0, tF.D)(Fk, window.innerWidth, window.innerHeight, Bk) : Bk;
           return {
-            top: Eu,
-            right: Ku,
-            bottom: Qu,
-            left: mu
+            top: Rk,
+            right: tk,
+            bottom: ak,
+            left: Xk
           }
-        }(Xu, Cu)))
-      }), [Xu, Cu]), Au = (0, Ku.useCallback)((() => {
-        Xu && Tu(Ky(Xu))
-      }), [Xu]), Du = (0, Ku.useRef)((() => {}));
-      return Du.current = () => {
-        Au(), Nu() || eu()
-      }, (0, Ku.useLayoutEffect)((() => {
-        if (Xu) return tR(document, Xu, (() => {
-          Du.current()
-        }), bu)
-      }), [Xu, bu]), (0, Ku.useLayoutEffect)(Au, [Au, Qu]), (0, Ku.useLayoutEffect)((() => {
-        Xu && (lR(document, Xu, {
-          keysAbove: pu
-        }), cR(document, Xu, yu, Eu, Ju), Au(), eu())
-      }), [Xu, yu, Eu, pu, mu, Ju, Qu, eu, Au]), (0, Ku.useEffect)((() => {
-        var uu;
-        if (!Xu) return;
-        const Ru = new ResizeObserver((() => {
-          Nu() || eu()
+        }(dk, Lk)))
+      }), [dk, Lk]), Sk = (0, tk.useCallback)((() => {
+        dk && fk(aB(dk))
+      }), [dk]), Nk = (0, tk.useRef)((() => {}));
+      return Nk.current = () => {
+        Sk(), wk() || Ek()
+      }, (0, tk.useLayoutEffect)((() => {
+        if (dk) return GF(document, dk, (() => {
+          Nk.current()
+        }), Yk)
+      }), [dk, Yk]), (0, tk.useLayoutEffect)(Sk, [Sk, ak]), (0, tk.useLayoutEffect)((() => {
+        dk && (TF(document, dk, {
+          keysAbove: yk
+        }), DF(document, dk, Bk, Rk, bk), Sk(), Ek())
+      }), [dk, Bk, Rk, yk, Xk, bk, ak, Ek, Sk]), (0, tk.useEffect)((() => {
+        var kk;
+        if (!dk) return;
+        const Fk = new ResizeObserver((() => {
+          wk() || Ek()
         }));
-        for (const yu of Xu.querySelectorAll(`[${cu}]`)) Ru.observe(yu);
-        return null === (uu = Xu.fonts) || void 0 === uu || uu.ready.then(eu), () => {
-          Ru.disconnect()
+        for (const Bk of dk.querySelectorAll(`[${Dk}]`)) Fk.observe(Bk);
+        return null === (kk = dk.fonts) || void 0 === kk || kk.ready.then(Ek), () => {
+          Fk.disconnect()
         }
-      }), [Xu, eu, Nu, mu]), {
-        doc: Xu,
-        onLoad: ku,
-        boxes: ru.boxes,
-        pieces: ru.pieces,
-        insets: xu,
-        keysAbove: pu,
-        ready: Wu,
-        settled: Hu
+      }), [dk, Ek, wk, Xk]), {
+        doc: dk,
+        onLoad: Ok,
+        boxes: Vk.boxes,
+        pieces: Vk.pieces,
+        insets: Ak,
+        keysAbove: yk,
+        ready: mk,
+        settled: vk
       }
     }
-    const my = [
+    const bB = [
         ["hotbar", "arrows"],
         ["hotbar", "inventory"]
       ],
-      Jy = (uu, Ru, yu) => {
-        const Eu = uu => (0, yR.t)(uu, yu.hudElements[uu]);
-        return "cluster" === uu && nu.has(Ru) || "cluster" === Ru && nu.has(uu) || "menu" === uu && Eu(Ru) || "menu" === Ru && Eu(uu) || my.some((Eu => {
-          let [Ku, Qu] = Eu;
-          const mu = yu.hudElements.hotbar,
-            Ju = "inventory" === Qu && yu.hudLocked.includes(Qu) && void 0 !== mu && !(0, Iu.I)(mu);
-          return (uu === Ku && Ru === Qu || uu === Qu && Ru === Ku) && !Ju
+      wB = (kk, Fk, Bk) => {
+        const Rk = kk => (0, RF.r)(kk, Bk.hudElements[kk]);
+        return "cluster" === kk && Uk.has(Fk) || "cluster" === Fk && Uk.has(kk) || "menu" === kk && Rk(Fk) || "menu" === Fk && Rk(kk) || bB.some((Rk => {
+          let [tk, ak] = Rk;
+          const Xk = Bk.hudElements.hotbar,
+            bk = "inventory" === ak && Bk.hudLocked.includes(ak) && void 0 !== Xk && !(0, uk.H)(Xk);
+          return (kk === tk && Fk === ak || kk === ak && Fk === tk) && !bk
         }))
       };
-    const Ny = ["Above", "Below", "Left", "Right"];
+    const dB = ["Above", "Below", "Left", "Right"];
 
-    function Xy(uu, Ru, yu, Eu, Ku) {
-      const Qu = yu[uu],
-        mu = (Qu.left + Qu.right) / 2,
-        Ju = (Qu.top + Qu.bottom) / 2,
-        Nu = (7.5 * Ru.length + 14) / Eu,
-        Xu = 18 / Eu,
-        Vu = {
+    function sB(kk, Fk, Bk, Rk, tk) {
+      const ak = Bk[kk],
+        Xk = (ak.left + ak.right) / 2,
+        bk = (ak.top + ak.bottom) / 2,
+        wk = (7.5 * Fk.length + 14) / Rk,
+        dk = 18 / Rk,
+        sk = {
           Above: {
-            left: mu - Nu / 2,
-            top: Qu.top - Xu,
-            right: mu + Nu / 2,
-            bottom: Qu.top
+            left: Xk - wk / 2,
+            top: ak.top - dk,
+            right: Xk + wk / 2,
+            bottom: ak.top
           },
           Below: {
-            left: mu - Nu / 2,
-            top: Qu.bottom,
-            right: mu + Nu / 2,
-            bottom: Qu.bottom + Xu
+            left: Xk - wk / 2,
+            top: ak.bottom,
+            right: Xk + wk / 2,
+            bottom: ak.bottom + dk
           },
           Left: {
-            left: Qu.left - Nu,
-            top: Ju - Xu / 2,
-            right: Qu.left,
-            bottom: Ju + Xu / 2
+            left: ak.left - wk,
+            top: bk - dk / 2,
+            right: ak.left,
+            bottom: bk + dk / 2
           },
           Right: {
-            left: Qu.right,
-            top: Ju - Xu / 2,
-            right: Qu.right + Nu,
-            bottom: Ju + Xu / 2
+            left: ak.right,
+            top: bk - dk / 2,
+            right: ak.right + wk,
+            bottom: bk + dk / 2
           }
         },
-        ru = Ry(yu, uu),
-        Bu = {
+        Vk = BB(Bk, kk),
+        Jk = {
           left: 0,
           top: 0,
-          right: Ku.width,
-          bottom: Ku.height
+          right: tk.width,
+          bottom: tk.height
         };
-      return Ny[(0, RR.p)(Ny.map((uu => Vu[uu])), ru, {
-        bounds: Bu
+      return dB[(0, BF.s)(dB.map((kk => sk[kk])), Vk, {
+        bounds: Jk
       })]
     }
 
-    function Vy() {
-      const [uu, Ru] = (0, fu.d)();
-      return (0, Ku.useMemo)((() => ({
-        width: uu,
-        height: Ru
-      })), [uu, Ru])
+    function VB() {
+      const [kk, Fk] = (0, kF.c)();
+      return (0, tk.useMemo)((() => ({
+        width: kk,
+        height: Fk
+      })), [kk, Fk])
     }
 
-    function ry(uu) {
-      var Ru;
+    function JB(kk) {
+      var Fk;
       const {
-        layout: yu,
-        orientation: Qu,
-        selected: mu,
-        onSelect: Ju,
-        onMove: Xu,
-        canMove: Vu,
-        actionButtons: ru,
-        joystickFixed: Bu,
-        presence: xu,
-        keyNames: pu,
-        maxHeight: Tu,
-        fill: Wu = !1,
-        apiRef: ju
-      } = uu, {
-        t: Hu
-      } = (0, Eu.E)(), du = Vy(), Cu = (null !== (Ru = (0, Su.g)("maxAuraLevel")) && void 0 !== Ru ? Ru : 0) > 0, ku = yu.hudLayouts[Qu], eu = (0, Ku.useRef)(null), Au = (0, Ku.useRef)(null), Mu = (0, Ku.useRef)(null), Gu = (0, Ku.useRef)(null), Uu = (0, Ku.useRef)(null), su = (0, Ku.useRef)(null), tu = (0, uR.d)(eu).width, lu = Wu ? 1 : tu > 0 ? (0, RR.z)(tu, du.width, du.height, Tu) : 0, gu = (0, Ku.useRef)((() => !1)), cu = (0, Ku.useCallback)((() => gu.current()), []), {
-        doc: zu,
-        onLoad: Fu,
-        boxes: wu,
-        pieces: Zu,
-        insets: hu,
-        keysAbove: Pu,
-        ready: iu,
-        settled: Yu
-      } = Qy(Mu, {
-        layout: yu,
-        orientation: Qu,
-        viewport: du,
-        replicaKey: `${ru}:${Bu}:${Cu}`,
-        joystickFixed: Bu,
-        busy: cu
-      }), ou = (0, Ku.useCallback)((uu => {
-        zu && cR(document, zu, uu, Qu, Bu)
-      }), [zu, Qu, Bu]), qu = (0, Ku.useCallback)((uu => zu && Yu ? (ou(uu), Ky(zu), function(uu) {
+        layout: Bk,
+        orientation: ak,
+        selected: Xk,
+        onSelect: bk,
+        onMove: dk,
+        canMove: sk,
+        actionButtons: Vk,
+        joystickFixed: Jk,
+        presence: Ak,
+        keyNames: yk,
+        maxHeight: fk,
+        fill: mk = !1,
+        apiRef: Wk
+      } = kk, {
+        t: vk
+      } = (0, Rk.x)(), ik = VB(), Lk = (null !== (Fk = (0, ek.j)("maxAuraLevel")) && void 0 !== Fk ? Fk : 0) > 0, Ok = Bk.hudLayouts[ak], Ek = (0, tk.useRef)(null), Sk = (0, tk.useRef)(null), Hk = (0, tk.useRef)(null), Mk = (0, tk.useRef)(null), gk = (0, tk.useRef)(null), ck = (0, tk.useRef)(null), Gk = (0, FF.e)(Ek).width, Tk = mk ? 1 : Gk > 0 ? (0, BF.x)(Gk, ik.width, ik.height, fk) : 0, rk = (0, tk.useRef)((() => !1)), Dk = (0, tk.useCallback)((() => rk.current()), []), {
+        doc: Pk,
+        onLoad: hk,
+        boxes: qk,
+        pieces: Ck,
+        insets: Zk,
+        keysAbove: pk,
+        ready: Kk,
+        settled: xk
+      } = XB(Hk, {
+        layout: Bk,
+        orientation: ak,
+        viewport: ik,
+        replicaKey: `${Vk}:${Jk}:${Lk}`,
+        joystickFixed: Jk,
+        busy: Dk
+      }), jk = (0, tk.useCallback)((kk => {
+        Pk && DF(document, Pk, kk, ak, Jk)
+      }), [Pk, ak, Jk]), lk = (0, tk.useCallback)((kk => Pk && xk ? (jk(kk), aB(Pk), function(kk) {
         let {
-          boxes: Ru,
-          pieces: yu
-        } = uu;
-        const Eu = yu.find((uu => "inventory" === uu.id));
-        if (!Eu || !Ru.inventory) return Ru;
-        const Ku = (0, RR.b)(Ru.inventory),
-          Qu = PR(Eu.box) / 2,
-          mu = (Eu.box.bottom - Eu.box.top) / 2;
+          boxes: Fk,
+          pieces: Bk
+        } = kk;
+        const Rk = Bk.find((kk => "inventory" === kk.id));
+        if (!Rk || !Fk.inventory) return Fk;
+        const tk = (0, BF.e)(Fk.inventory),
+          ak = pF(Rk.box) / 2,
+          Xk = (Rk.box.bottom - Rk.box.top) / 2;
         return {
-          ...Ru,
+          ...Fk,
           inventory: {
-            left: Ku.x - Qu,
-            top: Ku.y - mu,
-            right: Ku.x + Qu,
-            bottom: Ku.y + mu
+            left: tk.x - ak,
+            top: tk.y - Xk,
+            right: tk.x + ak,
+            bottom: tk.y + Xk
           }
         }
-      }(yy(zu))) : null), [zu, Yu, ou]), Ou = (0, Ku.useCallback)((uu => !!zu && (ou(uu), Ky(zu))), [zu, ou]), au = (0, Ku.useRef)(null), fu = (0, Ku.useRef)(null), KR = (0, Ku.useRef)(yu);
-      KR.current = yu;
-      const QR = (0, Ku.useCallback)((() => {
-        null !== au.current && (cancelAnimationFrame(au.current), au.current = null)
+      }(RB(Pk))) : null), [Pk, xk, jk]), nk = (0, tk.useCallback)((kk => !!Pk && (jk(kk), aB(Pk))), [Pk, jk]), Qk = (0, tk.useRef)(null), kF = (0, tk.useRef)(null), aF = (0, tk.useRef)(Bk);
+      aF.current = Bk;
+      const XF = (0, tk.useCallback)((() => {
+        null !== Qk.current && (cancelAnimationFrame(Qk.current), Qk.current = null)
       }), []);
-      (0, Ku.useEffect)((() => QR), [yu, QR]);
+      (0, tk.useEffect)((() => XF), [Bk, XF]);
       const {
-        lockable: mR
-      } = uu, JR = (0, Ku.useCallback)((uu => {
-        if (ou(uu), !Yu || 0 === yu.hudLayouts[Qu].hudLocked.length) return;
-        const Ru = yu;
-        QR(), au.current = requestAnimationFrame((() => {
-          var yu;
-          if (au.current = null, KR.current !== Ru) return;
-          const Eu = (null === (yu = fu.current) || void 0 === yu ? void 0 : yu.from) === Ru ? fu.current.boxes : qu(Ru);
-          Eu && (fu.current = {
-            from: Ru,
-            boxes: Eu
-          }), ou(Eu ? YR(Ru, uu, Qu, du, qu, {
-            canKeep: mR,
+        lockable: bF
+      } = kk, wF = (0, tk.useCallback)((kk => {
+        if (jk(kk), !xk || 0 === Bk.hudLayouts[ak].hudLocked.length) return;
+        const Fk = Bk;
+        XF(), Qk.current = requestAnimationFrame((() => {
+          var Bk;
+          if (Qk.current = null, aF.current !== Fk) return;
+          const Rk = (null === (Bk = kF.current) || void 0 === Bk ? void 0 : Bk.from) === Fk ? kF.current.boxes : lk(Fk);
+          Rk && (kF.current = {
+            from: Fk,
+            boxes: Rk
+          }), jk(Rk ? xF(Fk, kk, ak, ik, lk, {
+            canKeep: bF,
             passes: 1,
-            before: Eu,
-            keysAboveOf: Ou
-          }) : uu)
+            before: Rk,
+            keysAboveOf: nk
+          }) : kk)
         }))
-      }), [ou, Yu, yu, Qu, du, qu, Ou, mR, QR]), NR = uy({
-        preview: (uu, Ru) => {
-          Ru ? JR((0, Iu.Y)(yu, Qu, uu, Ru)) : (QR(), ou(yu))
+      }), [jk, xk, Bk, ak, ik, lk, nk, bF, XF]), dF = FB({
+        preview: (kk, Fk) => {
+          Fk ? wF((0, uk.ab)(Bk, ak, kk, Fk)) : (XF(), jk(Bk))
         },
-        stageRef: Au,
-        ringRef: Gu,
-        centreLineRef: Uu,
-        snapCentre: yu.hudSnapCentre,
-        ready: Yu,
-        measure: uu => {
-          var Ru;
-          return zu && iu && null !== (Ru = yy(zu).boxes[uu]) && void 0 !== Ru ? Ru : null
+        stageRef: Sk,
+        ringRef: Mk,
+        centreLineRef: gk,
+        snapCentre: Bk.hudSnapCentre,
+        ready: xk,
+        measure: kk => {
+          var Fk;
+          return Pk && Kk && null !== (Fk = RB(Pk).boxes[kk]) && void 0 !== Fk ? Fk : null
         },
-        k: lu,
-        viewport: du,
-        boxes: wu,
-        pieces: Zu,
-        selected: mu,
-        insets: hu,
-        layout: ku,
-        canMove: Vu,
-        onSelect: Ju,
-        onMove: (uu, Ru, yu) => {
-          QR(), Xu(uu, Ru, yu)
+        k: Tk,
+        viewport: ik,
+        boxes: qk,
+        pieces: Ck,
+        selected: Xk,
+        insets: Zk,
+        layout: Ok,
+        canMove: sk,
+        onSelect: bk,
+        onMove: (kk, Fk, Bk) => {
+          XF(), dk(kk, Fk, Bk)
         }
       });
-      (0, Ku.useLayoutEffect)((() => {
-        gu.current = NR.busy
-      }), [NR.busy]);
-      const XR = (0, Ku.useRef)([]),
-        VR = (0, Ku.useRef)(ku.hudElements);
-      (0, Ku.useEffect)((() => {
-        for (const Ku of Object.keys(ku.hudElements)) {
-          var uu, Ru, yu, Eu;
-          (null !== (uu = null === (Ru = ku.hudElements[Ku]) || void 0 === Ru ? void 0 : Ru[2]) && void 0 !== uu ? uu : 1) > (null !== (yu = null === (Eu = VR.current[Ku]) || void 0 === Eu ? void 0 : Eu[2]) && void 0 !== yu ? yu : 1) && Vu(Ku) && !(0, yR.t)(Ku, ku.hudElements[Ku]) && XR.current.push(Ku)
+      (0, tk.useLayoutEffect)((() => {
+        rk.current = dF.busy
+      }), [dF.busy]);
+      const sF = (0, tk.useRef)([]),
+        VF = (0, tk.useRef)(Ok.hudElements);
+      (0, tk.useEffect)((() => {
+        for (const tk of Object.keys(Ok.hudElements)) {
+          var kk, Fk, Bk, Rk;
+          (null !== (kk = null === (Fk = Ok.hudElements[tk]) || void 0 === Fk ? void 0 : Fk[2]) && void 0 !== kk ? kk : 1) > (null !== (Bk = null === (Rk = VF.current[tk]) || void 0 === Rk ? void 0 : Rk[2]) && void 0 !== Bk ? Bk : 1) && sk(tk) && !(0, RF.r)(tk, Ok.hudElements[tk]) && sF.current.push(tk)
         }
-        VR.current = ku.hudElements
-      }), [ku.hudElements, Vu]), (0, Ku.useEffect)((() => {
-        if (!iu) return;
-        const uu = XR.current.shift(),
-          Ru = uu && wu[uu];
-        if (!uu || !Ru || NR.busy()) return;
-        const yu = (0, RR.B)(Ru, (0, RR.A)(du.width, du.height, hu));
-        if (0 !== yu.x || 0 !== yu.y) {
-          var Eu;
-          const [Ru, Ku] = null !== (Eu = ku.hudElements[uu]) && void 0 !== Eu ? Eu : [0, 0];
-          Xu(uu, Ru + yu.x / du.width, Ku + yu.y / du.height)
+        VF.current = Ok.hudElements
+      }), [Ok.hudElements, sk]), (0, tk.useEffect)((() => {
+        if (!Kk) return;
+        const kk = sF.current.shift(),
+          Fk = kk && qk[kk];
+        if (!kk || !Fk || dF.busy()) return;
+        const Bk = (0, BF.D)(Fk, (0, BF.B)(ik.width, ik.height, Zk));
+        if (0 !== Bk.x || 0 !== Bk.y) {
+          var Rk;
+          const [Fk, tk] = null !== (Rk = Ok.hudElements[kk]) && void 0 !== Rk ? Rk : [0, 0];
+          dk(kk, Fk + Bk.x / ik.width, tk + Bk.y / ik.height)
         }
-      }), [wu, iu]), (0, Ku.useImperativeHandle)(ju, (() => ({
-        setScale: (uu, Ru) => {
-          JR((0, Iu.Y)(yu, Qu, uu, {
-            scale: Ru
+      }), [qk, Kk]), (0, tk.useImperativeHandle)(Wk, (() => ({
+        setScale: (kk, Fk) => {
+          wF((0, uk.ab)(Bk, ak, kk, {
+            scale: Fk
           }))
         },
-        setOpacity: uu => {
-          ou({
-            ...yu,
-            hudKeyOpacity: uu
+        setOpacity: kk => {
+          jk({
+            ...Bk,
+            hudKeyOpacity: kk
           })
         },
-        keepLocks: (uu, Ru) => (QR(), YR(uu, Ru, Qu, du, qu, {
-          canKeep: mR,
-          keysAboveOf: Ou
+        keepLocks: (kk, Fk) => (XF(), xF(kk, Fk, ak, ik, lk, {
+          canKeep: bF,
+          keysAboveOf: nk
         })),
-        setSafe: uu => {
-          JR((0, Iu.bb)(yu, Qu, uu)), su.current && (su.current.style.inset = (0, ER.y)(uu, du.width, du.height, zR(null !== zu && void 0 !== zu ? zu : document)).map((uu => uu * lu + "px")).join(" "))
+        setSafe: kk => {
+          wF((0, uk.db)(Bk, ak, kk)), ck.current && (ck.current.style.inset = (0, tF.D)(kk, ik.width, ik.height, PF(null !== Pk && void 0 !== Pk ? Pk : document)).map((kk => kk * Tk + "px")).join(" "))
         }
-      })), [ou, JR, qu, Ou, QR, mR, zu, yu, Qu, du, lu]);
-      const rR = new Set(Object.keys(ku.hudElements).filter((uu => (0, Iu.t)(ku.hudElements, uu)))),
-        BR = mu ? wu[mu] : void 0,
-        xR = mu ? Lu(mu, ru, Hu, pu) : "",
-        SR = (0, AR.d)(du.width, du.height),
-        pR = mu ? function(uu, Ru, yu, Eu) {
-          const Ku = uu => (0, Iu.t)(yu.hudElements, uu) || (0, yR.q)(uu, yu, Eu);
-          if (Ku(uu)) return [];
-          const Qu = Ru.filter((Ru => {
+      })), [jk, wF, lk, nk, XF, bF, Pk, Bk, ak, ik, Tk]);
+      const JF = new Set(Object.keys(Ok.hudElements).filter((kk => (0, uk.r)(Ok.hudElements, kk)))),
+        AF = Xk ? qk[Xk] : void 0,
+        eF = Xk ? zk(Xk, Vk, vk, yk) : "",
+        yF = (0, SF.g)(ik.width, ik.height),
+        fF = Xk ? function(kk, Fk, Bk, Rk) {
+          const tk = kk => (0, uk.r)(Bk.hudElements, kk) || (0, RF.q)(kk, Bk, Rk);
+          if (tk(kk)) return [];
+          const ak = Fk.filter((Fk => {
               let {
-                id: yu
-              } = Ru;
-              return "cluster" === uu ? nu.has(yu) : yu === uu
+                id: Bk
+              } = Fk;
+              return "cluster" === kk ? Uk.has(Bk) : Bk === kk
             })),
-            mu = new Set;
-          for (const Ju of Ru) Ju.id === uu || mu.has(Ju.id) || Jy(uu, Ju.id, yu) || Ku(Ju.id) || void 0 === yu.hudElements[uu] && void 0 === yu.hudElements[Ju.id] || Qu.some((uu => {
+            Xk = new Set;
+          for (const bk of Fk) bk.id === kk || Xk.has(bk.id) || wB(kk, bk.id, Bk) || tk(bk.id) || void 0 === Bk.hudElements[kk] && void 0 === Bk.hudElements[bk.id] || ak.some((kk => {
             let {
-              id: Ru,
-              box: yu
-            } = uu;
-            return Ru !== Ju.id && (0, RR.f)(yu, Ju.box, 2)
-          })) && mu.add(Ju.id);
-          return [...mu]
-        }(mu, Zu, ku, SR) : [],
-        TR = new Set((0, yR.o)(ku.hudElements)),
-        WR = (0, yR.D)(ku, (0, yR.B)(xu.rowIcons)).state,
-        jR = pR.join(),
-        HR = (0, Ku.useRef)(uu.onReady);
-      HR.current = uu.onReady, (0, Ku.useEffect)((() => {
-        var uu;
-        null === (uu = HR.current) || void 0 === uu || uu.call(HR, Yu)
-      }), [Yu]);
-      const dR = (0, Ku.useRef)(uu.onMeasured);
-      (0, Ku.useLayoutEffect)((() => {
-        dR.current = uu.onMeasured
-      })), (0, Ku.useEffect)((() => {
-        var uu;
-        const Ru = zu ? {
-          hotbar: wR(zu, kR),
-          cluster: Ey(zu, (0, RR.A)(du.width, du.height, hu), kR)
+              id: Fk,
+              box: Bk
+            } = kk;
+            return Fk !== bk.id && (0, BF.k)(Bk, bk.box, 2)
+          })) && Xk.add(bk.id);
+          return [...Xk]
+        }(Xk, Ck, Ok, yF) : [],
+        mF = new Set((0, RF.p)(Ok.hudElements)),
+        WF = (0, RF.E)(Ok, (0, RF.A)(Ak.rowIcons)).state,
+        vF = fF.join(),
+        iF = (0, tk.useRef)(kk.onReady);
+      iF.current = kk.onReady, (0, tk.useEffect)((() => {
+        var kk;
+        null === (kk = iF.current) || void 0 === kk || kk.call(iF, xk)
+      }), [xk]);
+      const YF = (0, tk.useRef)(kk.onMeasured);
+      (0, tk.useLayoutEffect)((() => {
+        YF.current = kk.onMeasured
+      })), (0, tk.useEffect)((() => {
+        var kk;
+        const Fk = Pk ? {
+          hotbar: qF(Pk, OF),
+          cluster: tB(Pk, (0, BF.B)(ik.width, ik.height, Zk), OF)
         } : {};
-        null === (uu = dR.current) || void 0 === uu || uu.call(dR, wu, jR ? jR.split(",") : [], Ru)
-      }), [wu, jR, zu, du, hu]);
-      const CR = uu => ({
-        left: uu.left * lu,
-        top: uu.top * lu,
-        width: (uu.right - uu.left) * lu,
-        height: (uu.bottom - uu.top) * lu
+        null === (kk = YF.current) || void 0 === kk || kk.call(YF, qk, vF ? vF.split(",") : [], Fk)
+      }), [qk, vF, Pk, ik, Zk]);
+      const LF = kk => ({
+        left: kk.left * Tk,
+        top: kk.top * Tk,
+        width: (kk.right - kk.left) * Tk,
+        height: (kk.bottom - kk.top) * Tk
       });
-      return (0, bu.jsx)("div", {
-        ref: eu,
-        className: Nu()("HudPreviewBox", {
-          Fill: Wu
+      return (0, Yk.jsx)("div", {
+        ref: Ek,
+        className: wk()("HudPreviewBox", {
+          Fill: mk
         }),
         style: {
-          height: du.height * lu
+          height: ik.height * Tk
         },
-        children: (0, bu.jsxs)("div", {
-          ref: Au,
+        children: (0, Yk.jsxs)("div", {
+          ref: Sk,
           className: "HudPreviewStage",
           style: {
-            width: du.width * lu,
-            height: du.height * lu
+            width: ik.width * Tk,
+            height: ik.height * Tk
           },
-          children: [(0, bu.jsx)("iframe", {
-            ref: Mu,
+          children: [(0, Yk.jsx)("iframe", {
+            ref: Hk,
             className: "HudPreviewFrame",
             srcDoc: "<!DOCTYPE html><html><head></head><body></body></html>",
-            onLoad: Fu,
-            title: Hu("hudLayout:preview"),
+            onLoad: hk,
+            title: vk("hudLayout:preview"),
             "aria-hidden": !0,
             tabIndex: -1,
             style: {
-              width: du.width,
-              height: du.height,
-              transform: `scale(${lu})`
+              width: ik.width,
+              height: ik.height,
+              transform: `scale(${Tk})`
             }
-          }), zu && (0, vu.createPortal)((0, bu.jsx)(bR, {
-            presence: xu,
-            portraitPhone: SR,
-            hidden: rR,
-            actionButtons: ru,
-            joystickFixed: Bu,
-            keysAbove: Pu,
-            auraBar: Cu,
-            trayState: WR,
-            moved: TR
-          }), zu.body), (0, bu.jsxs)("div", {
+          }), Pk && (0, Ik.createPortal)((0, Yk.jsx)(oF, {
+            presence: Ak,
+            portraitPhone: yF,
+            hidden: JF,
+            actionButtons: Vk,
+            joystickFixed: Jk,
+            keysAbove: pk,
+            auraBar: Lk,
+            trayState: WF,
+            moved: mF
+          }), Pk.body), (0, Yk.jsxs)("div", {
             className: "HudPreviewOverlay",
-            ...NR.handlers,
-            children: [(0, bu.jsx)("div", {
-              ref: su,
+            ...dF.handlers,
+            children: [(0, Yk.jsx)("div", {
+              ref: ck,
               className: "HudPreviewSafeZone",
               style: {
-                top: hu.top * lu,
-                right: hu.right * lu,
-                bottom: hu.bottom * lu,
-                left: hu.left * lu
+                top: Zk.top * Tk,
+                right: Zk.right * Tk,
+                bottom: Zk.bottom * Tk,
+                left: Zk.left * Tk
               }
-            }), Zu.map(((uu, Ru) => {
+            }), Ck.map(((kk, Fk) => {
               let {
-                id: yu,
-                box: Eu
-              } = uu;
-              return (0, bu.jsx)("div", {
+                id: Bk,
+                box: Rk
+              } = kk;
+              return (0, Yk.jsx)("div", {
                 className: "HudPreviewHandle",
-                style: CR((0, RR.l)(Eu, 40 / lu))
-              }, `${yu}:${Ru}`)
-            })), ku.hudLocked.map((uu => {
-              const Ru = wu[uu];
-              return Ru && (0, bu.jsx)("span", {
+                style: LF((0, BF.q)(Rk, 40 / Tk))
+              }, `${Bk}:${Fk}`)
+            })), Ok.hudLocked.map((kk => {
+              const Fk = qk[kk];
+              return Fk && (0, Yk.jsx)("span", {
                 className: "HudPreviewLockBadge",
                 style: {
-                  left: Ru.right * lu,
-                  top: Ru.top * lu
+                  left: Fk.right * Tk,
+                  top: Fk.top * Tk
                 },
-                children: (0, bu.jsx)(Du.c, {
+                children: (0, Yk.jsx)(Nk.d, {
                   name: "lock"
                 })
-              }, uu)
-            })), (0, bu.jsx)("div", {
-              ref: Uu,
+              }, kk)
+            })), (0, Yk.jsx)("div", {
+              ref: gk,
               className: "HudPreviewCentreLine",
               style: {
-                left: du.width / 2 * lu
+                left: ik.width / 2 * Tk
               }
-            }), mu && BR && (0, bu.jsx)("div", {
-              ref: Gu,
-              className: Nu()("HudPreviewRing", {
-                Fixed: !Vu(mu),
-                Overlap: pR.length > 0
+            }), Xk && AF && (0, Yk.jsx)("div", {
+              ref: Mk,
+              className: wk()("HudPreviewRing", {
+                Fixed: !sk(Xk),
+                Overlap: fF.length > 0
               }),
-              style: CR(BR),
-              children: (0, bu.jsx)("span", {
-                className: Nu()("HudPreviewRingLabel", Xy(mu, xR, wu, lu, du)),
-                children: xR
+              style: LF(AF),
+              children: (0, Yk.jsx)("span", {
+                className: wk()("HudPreviewRingLabel", sB(Xk, eF, qk, Tk, ik)),
+                children: eF
               })
             })]
           })]
@@ -1883,1187 +1883,1187 @@ export const modules = {
       })
     }
 
-    function By(uu, Ru) {
-      (0, Ku.useEffect)((() => {
-        var yu;
-        null === (yu = uu.current) || void 0 === yu || yu.toggleAttribute("inert", Ru)
-      }), [uu, Ru])
+    function AB(kk, Fk) {
+      (0, tk.useEffect)((() => {
+        var Bk;
+        null === (Bk = kk.current) || void 0 === Bk || Bk.toggleAttribute("inert", Fk)
+      }), [kk, Fk])
     }
-    const xy = "hudFullScreen";
+    const eB = "hudFullScreen";
 
-    function Sy(uu) {
+    function yB(kk) {
       let {
-        onScale: Ru,
-        onHidden: yu,
-        onReset: Qu,
-        locked: mu,
-        lockable: Ju,
-        onLocked: Nu,
-        onClose: Vu,
-        ...ru
-      } = uu;
+        onScale: Fk,
+        onHidden: Bk,
+        onReset: ak,
+        locked: Xk,
+        lockable: bk,
+        onLocked: wk,
+        onClose: sk,
+        ...Vk
+      } = kk;
       const {
-        t: Bu
-      } = (0, Eu.E)(), xu = (0, Ku.useRef)(null);
-      (0, au.t)("popup", xu, Vu),
-      function(uu) {
-        const Ru = (0, Ku.useRef)(uu);
-        Ru.current = uu, (0, Ku.useEffect)((() => {
+        t: Jk
+      } = (0, Rk.x)(), Ak = (0, tk.useRef)(null);
+      (0, Qk.s)("popup", Ak, sk),
+      function(kk) {
+        const Fk = (0, tk.useRef)(kk);
+        Fk.current = kk, (0, tk.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [xy]: !0
+            [eB]: !0
           }, "");
-          let uu = !1;
-          const yu = () => {
-            uu = !0, Ru.current()
+          let kk = !1;
+          const Bk = () => {
+            kk = !0, Fk.current()
           };
-          return window.addEventListener("popstate", yu), () => {
-            var Ru;
-            window.removeEventListener("popstate", yu), !uu && null !== (Ru = window.history.state) && void 0 !== Ru && Ru[xy] && window.history.back()
+          return window.addEventListener("popstate", Bk), () => {
+            var Fk;
+            window.removeEventListener("popstate", Bk), !kk && null !== (Fk = window.history.state) && void 0 !== Fk && Fk[eB] && window.history.back()
           }
         }), [])
-      }(Vu), (0, Ku.useEffect)((() => {
-        function uu(uu) {
-          "Escape" === uu.key && (uu.stopPropagation(), Vu())
+      }(sk), (0, tk.useEffect)((() => {
+        function kk(kk) {
+          "Escape" === kk.key && (kk.stopPropagation(), sk())
         }
-        return window.addEventListener("keydown", uu, !0), () => {
-          window.removeEventListener("keydown", uu, !0)
+        return window.addEventListener("keydown", kk, !0), () => {
+          window.removeEventListener("keydown", kk, !0)
         }
-      }), [Vu]);
+      }), [sk]);
       const {
-        selected: Su
-      } = ru, pu = (0, Ku.useRef)(null), Tu = (0, Ku.useRef)(null), [Wu, ju] = (0, Ku.useState)(!1);
-      By(Tu, !Wu);
-      const [Hu, du] = (0, Ku.useState)(null), [Cu, ku] = (0, Ku.useState)([]), [eu, Au] = CR(), Du = (0, Ku.useRef)(ru.selected);
-      Du.current = ru.selected;
-      const Mu = (0, Ku.useRef)({}),
-        Iu = (0, Ku.useCallback)((() => {
-          const uu = pu.current;
-          uu && du(function(uu, Ru, yu) {
-            var Eu;
+        selected: ek
+      } = Vk, yk = (0, tk.useRef)(null), fk = (0, tk.useRef)(null), [mk, Wk] = (0, tk.useState)(!1);
+      AB(fk, !mk);
+      const [vk, ik] = (0, tk.useState)(null), [Lk, Ok] = (0, tk.useState)([]), [Ek, Sk] = LF(), Nk = (0, tk.useRef)(Vk.selected);
+      Nk.current = Vk.selected;
+      const Hk = (0, tk.useRef)({}),
+        uk = (0, tk.useCallback)((() => {
+          const kk = yk.current;
+          kk && ik(function(kk, Fk, Bk) {
+            var Rk;
             const {
-              innerWidth: Ku,
-              innerHeight: Qu
-            } = window, mu = uu.offsetWidth, Ju = uu.offsetHeight, Nu = Math.max(LR()[0], 6), Xu = [];
-            for (const Bu of [Nu, .2 * Qu, .5 * Qu - Ju / 2, .33 * Qu])
-              for (const uu of [.5, .3, .7]) Xu.push({
-                left: Math.max(0, Math.min(Ku - mu - 6, Math.max(6, Ku * uu - mu / 2))),
-                top: Bu
+              innerWidth: tk,
+              innerHeight: ak
+            } = window, Xk = kk.offsetWidth, bk = kk.offsetHeight, wk = Math.max(zF()[0], 6), dk = [];
+            for (const Jk of [wk, .2 * ak, .5 * ak - bk / 2, .33 * ak])
+              for (const kk of [.5, .3, .7]) dk.push({
+                left: Math.max(0, Math.min(tk - Xk - 6, Math.max(6, tk * kk - Xk / 2))),
+                top: Jk
               });
-            const Vu = Xu.map((uu => ({
-                left: uu.left - 6,
-                top: uu.top - 6,
-                right: uu.left + mu + 6,
-                bottom: uu.top + Ju + 6
+            const sk = dk.map((kk => ({
+                left: kk.left - 6,
+                top: kk.top - 6,
+                right: kk.left + Xk + 6,
+                bottom: kk.top + bk + 6
               }))),
-              ru = Ry(Ru, yu);
-            return Xu[(0, RR.p)(Vu, ru, {
-              avoid: yu && null !== (Eu = Ru[yu]) && void 0 !== Eu ? Eu : null
+              Vk = BB(Fk, Bk);
+            return dk[(0, BF.s)(sk, Vk, {
+              avoid: Bk && null !== (Rk = Fk[Bk]) && void 0 !== Rk ? Rk : null
             })]
-          }(uu, Mu.current, Du.current))
+          }(kk, Hk.current, Nk.current))
         }), []),
-        Gu = (0, Ku.useCallback)(((uu, Ru, yu) => {
-          ku(Ru), Au(yu), Mu.current = uu, Iu()
-        }), [Iu, Au]);
-      return (0, Ku.useLayoutEffect)(Iu, [ru.selected, Iu]), (0, vu.createPortal)((0, bu.jsxs)("div", {
-        ref: xu,
+        Mk = (0, tk.useCallback)(((kk, Fk, Bk) => {
+          Ok(Fk), Sk(Bk), Hk.current = kk, uk()
+        }), [uk, Sk]);
+      return (0, tk.useLayoutEffect)(uk, [Vk.selected, uk]), (0, Ik.createPortal)((0, Yk.jsxs)("div", {
+        ref: Ak,
         className: "HudFullScreenEditor",
-        children: [(0, bu.jsx)(ry, {
-          ...ru,
+        children: [(0, Yk.jsx)(JB, {
+          ...Vk,
           maxHeight: window.innerHeight,
           fill: !0,
-          onMeasured: Gu,
-          onReady: ju,
-          lockable: Ju
-        }), (0, bu.jsxs)("div", {
-          ref: pu,
+          onMeasured: Mk,
+          onReady: Wk,
+          lockable: bk
+        }), (0, Yk.jsxs)("div", {
+          ref: yk,
           className: "HudFullScreenToolbar",
-          style: null === Hu ? void 0 : {
-            left: Hu.left,
-            top: Hu.top,
+          style: null === vk ? void 0 : {
+            left: vk.left,
+            top: vk.top,
             transform: "none"
           },
-          children: [(0, bu.jsx)("div", {
-            ref: Tu,
+          children: [(0, Yk.jsx)("div", {
+            ref: fk,
             className: "HudFullScreenControls",
-            children: (0, bu.jsx)(eR, {
-              selected: Su,
-              layout: ru.layout.hudLayouts[ru.orientation],
-              actionButtons: ru.actionButtons,
-              keyNames: ru.keyNames,
-              overlaps: Cu,
-              scaleCaps: eu,
-              onScale: Ru,
-              onHidden: yu,
-              onReset: Qu,
-              locked: mu,
-              lockable: Ju,
-              onLocked: Nu,
-              joystickFixed: ru.joystickFixed
+            children: (0, Yk.jsx)(EF, {
+              selected: ek,
+              layout: Vk.layout.hudLayouts[Vk.orientation],
+              actionButtons: Vk.actionButtons,
+              keyNames: Vk.keyNames,
+              overlaps: Lk,
+              scaleCaps: Ek,
+              onScale: Fk,
+              onHidden: Bk,
+              onReset: ak,
+              locked: Xk,
+              lockable: bk,
+              onLocked: wk,
+              joystickFixed: Vk.joystickFixed
             })
-          }), (0, bu.jsx)(Xu.e, {
+          }), (0, Yk.jsx)(dk.g, {
             className: "HudFullScreenDone",
-            onClick: Vu,
+            onClick: sk,
             padDefaultFocus: !0,
-            children: Bu("hudLayout:done")
+            children: Jk("hudLayout:done")
           })]
         })]
       }), document.body)
     }
-    const py = uu => `${Math.round(100*uu)}%`;
+    const fB = kk => `${Math.round(100*kk)}%`;
 
-    function Ty(uu) {
+    function mB(kk) {
       let {
-        info: Ru,
-        tuple: yu,
-        props: Ku
-      } = uu;
+        info: Fk,
+        tuple: Bk,
+        props: tk
+      } = kk;
       const {
-        t: Qu
-      } = (0, Eu.E)();
-      return (0, bu.jsx)(xu.g, {
-        name: Qu("hudLayout:size"),
-        min: Iu.l,
-        max: Iu.i,
-        step: kR,
-        initValue: yu[2],
-        disabled: Ku.locked.has(Ru.id),
-        selectableMax: Ku.scaleCaps[Ru.id],
-        cappedNote: Qu("hudLayout:sizeCapped"),
-        format: py,
-        onChange: uu => {
-          Ku.onScalePreview(Ru.id, uu)
+        t: ak
+      } = (0, Rk.x)();
+      return (0, Yk.jsx)(Ak.l, {
+        name: ak("hudLayout:size"),
+        min: uk.j,
+        max: uk.i,
+        step: OF,
+        initValue: Bk[2],
+        disabled: tk.locked.has(Fk.id),
+        selectableMax: tk.scaleCaps[Fk.id],
+        cappedNote: ak("hudLayout:sizeCapped"),
+        format: fB,
+        onChange: kk => {
+          tk.onScalePreview(Fk.id, kk)
         },
-        onChangeComplete: uu => {
-          Ku.onScale(Ru.id, uu)
+        onChangeComplete: kk => {
+          tk.onScale(Fk.id, kk)
         }
       })
     }
 
-    function Wy(uu) {
+    function WB(kk) {
       const {
-        t: Ru
-      } = (0, Eu.E)(), {
-        present: yu,
-        elements: Qu,
-        selected: mu,
-        onSelect: Ju,
-        onHidden: Xu,
-        onReset: Vu,
-        note: ru,
-        actionButtons: Bu,
-        keyNames: xu,
-        sizeBesidePreview: Su,
-        locked: pu,
-        lockable: Tu,
-        onLocked: Wu
-      } = uu, {
-        rowIconsOpen: ju,
-        onRowIconsOpen: Hu
-      } = uu, du = (0, Ku.useRef)(null), Cu = null !== mu && (ju || !(0, Iu.M)(mu));
-      return (0, Ku.useEffect)((() => {
-        var uu;
-        const Ru = mu ? null === (uu = du.current) || void 0 === uu ? void 0 : uu.querySelector(`[data-hud-row="${mu}"]`) : null;
-        if (!Ru) return;
-        const yu = Ru.closest(".SettingsMenuRight"),
-          Eu = performance.now();
-        let Ku = null;
-        const Qu = () => {
-            clearInterval(Nu), null === yu || void 0 === yu || yu.removeEventListener("scroll", Ju)
+        t: Fk
+      } = (0, Rk.x)(), {
+        present: Bk,
+        elements: ak,
+        selected: Xk,
+        onSelect: bk,
+        onHidden: dk,
+        onReset: sk,
+        note: Vk,
+        actionButtons: Jk,
+        keyNames: Ak,
+        sizeBesidePreview: ek,
+        locked: yk,
+        lockable: fk,
+        onLocked: mk
+      } = kk, {
+        rowIconsOpen: Wk,
+        onRowIconsOpen: vk
+      } = kk, ik = (0, tk.useRef)(null), Lk = null !== Xk && (Wk || !(0, uk.L)(Xk));
+      return (0, tk.useEffect)((() => {
+        var kk;
+        const Fk = Xk ? null === (kk = ik.current) || void 0 === kk ? void 0 : kk.querySelector(`[data-hud-row="${Xk}"]`) : null;
+        if (!Fk) return;
+        const Bk = Fk.closest(".SettingsMenuRight"),
+          Rk = performance.now();
+        let tk = null;
+        const ak = () => {
+            clearInterval(wk), null === Bk || void 0 === Bk || Bk.removeEventListener("scroll", bk)
           },
-          Ju = () => {
-            OR() || Qu()
+          bk = () => {
+            nF() || ak()
           },
-          Nu = setInterval((() => {
-            const uu = performance.now();
-            uu - Eu > 1500 ? Qu() : OR() ? Ku = null : null === Ku ? Ku = uu : uu - Ku >= 150 && (Qu(), function(uu) {
-              var Ru;
-              const yu = uu.closest(".SettingsMenuRight"),
-                Eu = null === (Ru = uu.closest(".HudLayoutSettings")) || void 0 === Ru ? void 0 : Ru.querySelector(".HudLayoutPreviewBox");
-              if (!yu || !Eu) return;
-              const Ku = Eu.getBoundingClientRect().bottom + 8,
-                Qu = yu.getBoundingClientRect().bottom - 8,
-                mu = uu.getBoundingClientRect();
-              mu.top < Ku ? yu.scrollBy({
-                top: mu.top - Ku,
+          wk = setInterval((() => {
+            const kk = performance.now();
+            kk - Rk > 1500 ? ak() : nF() ? tk = null : null === tk ? tk = kk : kk - tk >= 150 && (ak(), function(kk) {
+              var Fk;
+              const Bk = kk.closest(".SettingsMenuRight"),
+                Rk = null === (Fk = kk.closest(".HudLayoutSettings")) || void 0 === Fk ? void 0 : Fk.querySelector(".HudLayoutPreviewBox");
+              if (!Bk || !Rk) return;
+              const tk = Rk.getBoundingClientRect().bottom + 8,
+                ak = Bk.getBoundingClientRect().bottom - 8,
+                Xk = kk.getBoundingClientRect();
+              Xk.top < tk ? Bk.scrollBy({
+                top: Xk.top - tk,
                 behavior: "smooth"
-              }) : mu.bottom > Qu && yu.scrollBy({
-                top: Math.min(mu.bottom - Qu, mu.top - Ku),
+              }) : Xk.bottom > ak && Bk.scrollBy({
+                top: Math.min(Xk.bottom - ak, Xk.top - tk),
                 behavior: "smooth"
               })
-            }(Ru))
+            }(Fk))
           }), 50);
-        return null === yu || void 0 === yu || yu.addEventListener("scroll", Ju, {
+        return null === Bk || void 0 === Bk || Bk.addEventListener("scroll", bk, {
           passive: !0
-        }), Qu
-      }), [mu, Cu]), (0, bu.jsx)("div", {
-        ref: du,
+        }), ak
+      }), [Xk, Lk]), (0, Yk.jsx)("div", {
+        ref: ik,
         className: "SettingBoxGroup HudElementList",
-        children: lu.filter((uu => yu.has(uu.id) && (ju || !(0, Iu.M)(uu.id)))).map((yu => {
-          const Eu = ((uu, Ru) => {
-              var yu;
-              return null !== (yu = uu[Ru]) && void 0 !== yu ? yu : Iu.p
-            })(Qu, yu.id),
-            Ku = (0, Iu.t)(Qu, yu.id),
-            du = yu.id === mu,
-            Cu = yu.scale && !Su,
-            ku = ru(yu.id, du);
-          return (0, bu.jsxs)("div", {
-            "data-hud-row": yu.id,
-            className: Nu()("SettingBox HudElementRow", {
-              Open: du,
-              Hidden: Ku,
-              Child: void 0 !== yu.parent
+        children: Tk.filter((kk => Bk.has(kk.id) && (Wk || !(0, uk.L)(kk.id)))).map((Bk => {
+          const Rk = ((kk, Fk) => {
+              var Bk;
+              return null !== (Bk = kk[Fk]) && void 0 !== Bk ? Bk : uk.n
+            })(ak, Bk.id),
+            tk = (0, uk.r)(ak, Bk.id),
+            ik = Bk.id === Xk,
+            Lk = Bk.scale && !ek,
+            Ok = Vk(Bk.id, ik);
+          return (0, Yk.jsxs)("div", {
+            "data-hud-row": Bk.id,
+            className: wk()("SettingBox HudElementRow", {
+              Open: ik,
+              Hidden: tk,
+              Child: void 0 !== Bk.parent
             }),
-            children: [(0, bu.jsxs)("div", {
+            children: [(0, Yk.jsxs)("div", {
               className: "HudElementRowHead",
-              children: [(0, bu.jsxs)("button", {
+              children: [(0, Yk.jsxs)("button", {
                 type: "button",
                 className: "HudElementRowName",
-                "aria-expanded": Cu ? du : void 0,
+                "aria-expanded": Lk ? ik : void 0,
                 onClick: () => {
-                  Ju(yu.id)
+                  bk(Bk.id)
                 },
-                children: [Lu(yu.id, Bu, Ru, xu), yu.scale && 1 !== Eu[2] && !(du && Cu) && (0, bu.jsx)("span", {
+                children: [zk(Bk.id, Jk, Fk, Ak), Bk.scale && 1 !== Rk[2] && !(ik && Lk) && (0, Yk.jsx)("span", {
                   className: "HudElementRowSize",
-                  children: py(Eu[2])
-                }), Cu && (0, bu.jsx)("span", {
+                  children: fB(Rk[2])
+                }), Lk && (0, Yk.jsx)("span", {
                   className: "HudElementRowChevron",
                   children: "\u25be"
                 })]
-              }), (0, bu.jsx)(hu, {
+              }), (0, Yk.jsx)(Zk, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: yu.id,
-                actionButtons: Bu,
-                keyNames: xu,
-                locked: pu.has(yu.id),
-                lockable: Tu(yu.id),
-                onLocked: Wu
-              }), "menu" === yu.id && (0, bu.jsx)(Pu, {
+                id: Bk.id,
+                actionButtons: Jk,
+                keyNames: Ak,
+                locked: yk.has(Bk.id),
+                lockable: fk(Bk.id),
+                onLocked: mk
+              }), "menu" === Bk.id && (0, Yk.jsx)(pk, {
                 className: "HudElementRowIcon",
-                open: ju,
-                name: Lu(yu.id, Bu, Ru, xu),
-                onToggle: Hu
-              }), "menu" !== yu.id && (0, bu.jsx)(wu, {
+                open: Wk,
+                name: zk(Bk.id, Jk, Fk, Ak),
+                onToggle: vk
+              }), "menu" !== Bk.id && (0, Yk.jsx)(qk, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: yu.id,
-                elements: Qu,
-                actionButtons: Bu,
-                keyNames: xu,
-                onHidden: Xu
-              }), (0, bu.jsx)(Zu, {
+                id: Bk.id,
+                elements: ak,
+                actionButtons: Jk,
+                keyNames: Ak,
+                onHidden: dk
+              }), (0, Yk.jsx)(Ck, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
                 onlyWhenMoved: !0,
-                locked: pu.has(yu.id),
-                id: yu.id,
-                elements: Qu,
-                actionButtons: Bu,
-                keyNames: xu,
-                onReset: Vu
+                locked: yk.has(Bk.id),
+                id: Bk.id,
+                elements: ak,
+                actionButtons: Jk,
+                keyNames: Ak,
+                onReset: sk
               })]
-            }), du && Cu && (0, bu.jsx)(Ty, {
-              info: yu,
-              tuple: Eu,
-              props: uu
-            }), ku && (0, bu.jsx)("div", {
+            }), ik && Lk && (0, Yk.jsx)(mB, {
+              info: Bk,
+              tuple: Rk,
+              props: kk
+            }), Ok && (0, Yk.jsx)("div", {
               className: "HudElementNote",
-              children: ku
+              children: Ok
             })]
-          }, yu.id)
+          }, Bk.id)
         }))
       })
     }
 
-    function jy(uu) {
+    function vB(kk) {
       let {
-        preview: Ru,
-        quick: yu,
-        onFullScreen: Qu,
-        resting: mu,
-        onSidePanel: Ju
-      } = uu;
+        preview: Fk,
+        quick: Bk,
+        onFullScreen: ak,
+        resting: Xk,
+        onSidePanel: bk
+      } = kk;
       const {
-        t: Nu
-      } = (0, Eu.E)(), Vu = Vy(), ru = (0, Ku.useRef)(null), {
-        width: Bu
-      } = (0, uR.d)(ru), xu = Math.floor(Vu.width * Math.min(1, Ru.maxHeight / Vu.height)), Su = Bu - xu - 12, pu = Su >= 130, Tu = Bu > 0;
-      (0, Ku.useEffect)((() => {
-        Tu && Ju(pu)
-      }), [Tu, pu, Ju]);
-      const Wu = (0, RR.z)(pu ? xu : Bu, Vu.width, Vu.height, Ru.maxHeight),
-        ju = mu ? (0, bu.jsx)("div", {
+        t: wk
+      } = (0, Rk.x)(), sk = VB(), Vk = (0, tk.useRef)(null), {
+        width: Jk
+      } = (0, FF.e)(Vk), Ak = Math.floor(sk.width * Math.min(1, Fk.maxHeight / sk.height)), ek = Jk - Ak - 12, yk = ek >= 130, fk = Jk > 0;
+      (0, tk.useEffect)((() => {
+        fk && bk(yk)
+      }), [fk, yk, bk]);
+      const mk = (0, BF.x)(yk ? Ak : Jk, sk.width, sk.height, Fk.maxHeight),
+        Wk = Xk ? (0, Yk.jsx)("div", {
           className: "HudPreviewResting",
           style: {
-            height: Vu.height * Wu
+            height: sk.height * mk
           }
-        }) : (0, bu.jsx)(ry, {
-          ...Ru
+        }) : (0, Yk.jsx)(JB, {
+          ...Fk
         }),
-        Hu = uu => (0, bu.jsxs)(Xu.P, {
+        vk = kk => (0, Yk.jsxs)(dk.O, {
           className: "HudLayoutFullScreenButton",
-          ariaLabel: Nu("hudLayout:fullScreen"),
+          ariaLabel: wk("hudLayout:fullScreen"),
           analyticsClick: {
             id: "hud_layout.full_screen"
           },
-          onClick: Qu,
-          children: [(0, bu.jsx)(Du.c, {
+          onClick: ak,
+          children: [(0, Yk.jsx)(Nk.d, {
             name: "expand"
-          }), uu && (0, bu.jsx)("span", {
-            children: Nu("hudLayout:fullScreen")
+          }), kk && (0, Yk.jsx)("span", {
+            children: wk("hudLayout:fullScreen")
           })]
         });
-      return (0, bu.jsxs)("div", {
-        ref: ru,
+      return (0, Yk.jsxs)("div", {
+        ref: Vk,
         className: "SettingBox HudLayoutPreviewBox",
-        children: [Bu > 0 && pu && (0, bu.jsxs)("div", {
+        children: [Jk > 0 && yk && (0, Yk.jsxs)("div", {
           className: "HudLayoutPreviewRow",
-          children: [(0, bu.jsx)("div", {
+          children: [(0, Yk.jsx)("div", {
             style: {
-              width: xu
+              width: Ak
             },
-            children: ju
-          }), (0, bu.jsx)("div", {
+            children: Wk
+          }), (0, Yk.jsx)("div", {
             className: "HudLayoutSidePanel",
-            children: (0, bu.jsx)(eR, {
-              selected: Ru.selected,
-              ...yu,
-              joystickFixed: Ru.joystickFixed,
-              extra: Hu(!Ru.selected || Su >= 278)
+            children: (0, Yk.jsx)(EF, {
+              selected: Fk.selected,
+              ...Bk,
+              joystickFixed: Fk.joystickFixed,
+              extra: vk(!Fk.selected || ek >= 278)
             })
           })]
-        }), Bu > 0 && !pu && (0, bu.jsxs)(bu.Fragment, {
-          children: [ju, (0, bu.jsx)("div", {
+        }), Jk > 0 && !yk && (0, Yk.jsxs)(Yk.Fragment, {
+          children: [Wk, (0, Yk.jsx)("div", {
             className: "HudLayoutCornerButton",
-            children: Hu(!1)
+            children: vk(!1)
           })]
         })]
       })
     }
-    var Hy = yu(2360),
-      dy = yu(4169),
-      by = yu(2340);
-    const Cy = uu => {
-      const Ru = ER.r * ("sides" === uu ? window.innerWidth : window.innerHeight);
-      return Math.min(64, 2 * Math.floor(Ru / 2))
+    var iB = Bk(2352),
+      YB = Bk(4145),
+      oB = Bk(2334);
+    const LB = kk => {
+      const Fk = tF.r * ("sides" === kk ? window.innerWidth : window.innerHeight);
+      return Math.min(64, 2 * Math.floor(Fk / 2))
     };
 
-    function ky(uu, Ru, yu) {
-      const [Eu, Ku, Qu, mu] = uu;
-      return "sides" === Ru ? [Eu, yu, Qu, yu] : [yu, Ku, yu, mu]
+    function OB(kk, Fk, Bk) {
+      const [Rk, tk, ak, Xk] = kk;
+      return "sides" === Fk ? [Rk, Bk, ak, Bk] : [Bk, tk, Bk, Xk]
     }
-    const ey = [null, null, null, null],
-      Ay = uu => `${uu}px`;
+    const EB = [null, null, null, null],
+      SB = kk => `${kk}px`;
 
-    function Dy(uu) {
+    function NB(kk) {
       let {
-        safe: Ru,
-        onPreview: yu,
-        onCommit: Qu
-      } = uu;
+        safe: Fk,
+        onPreview: Bk,
+        onCommit: ak
+      } = kk;
       const {
-        t: mu
-      } = (0, Eu.E)(), Ju = (0, ER.y)(null !== Ru && void 0 !== Ru ? Ru : ey, window.innerWidth, window.innerHeight, zR(document).map(Math.round)), Nu = (0, Ku.useRef)(null !== Ru && void 0 !== Ru ? Ru : ey);
-      Nu.current = null !== Ru && void 0 !== Ru ? Ru : ey;
-      const Vu = uu => {
-        const Ru = Math.min(Cy(uu), "sides" === uu ? Math.max(Ju[1], Ju[3]) : Math.max(Ju[0], Ju[2]));
-        return (0, bu.jsx)(xu.g, {
-          name: mu("sides" === uu ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
+        t: Xk
+      } = (0, Rk.x)(), bk = (0, tF.D)(null !== Fk && void 0 !== Fk ? Fk : EB, window.innerWidth, window.innerHeight, PF(document).map(Math.round)), wk = (0, tk.useRef)(null !== Fk && void 0 !== Fk ? Fk : EB);
+      wk.current = null !== Fk && void 0 !== Fk ? Fk : EB;
+      const sk = kk => {
+        const Fk = Math.min(LB(kk), "sides" === kk ? Math.max(bk[1], bk[3]) : Math.max(bk[0], bk[2]));
+        return (0, Yk.jsx)(Ak.l, {
+          name: Xk("sides" === kk ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
           min: 0,
-          max: Cy(uu),
+          max: LB(kk),
           step: 2,
-          initValue: Ru,
-          format: Ay,
-          onChange: Ru => {
-            yu(ky(Nu.current, uu, Ru))
+          initValue: Fk,
+          format: SB,
+          onChange: Fk => {
+            Bk(OB(wk.current, kk, Fk))
           },
-          onChangeComplete: Eu => {
-            if (Eu === Ru) return void yu(Nu.current);
-            const Ku = ky(Nu.current, uu, Eu);
-            Nu.current = Ku, Qu(Ku), (0, eu.reportAnalyticsClick)({
+          onChangeComplete: Rk => {
+            if (Rk === Fk) return void Bk(wk.current);
+            const tk = OB(wk.current, kk, Rk);
+            wk.current = tk, ak(tk), (0, Ek.reportAnalyticsClick)({
               id: "hud_layout.safe_zone",
-              value: uu
+              value: kk
             })
           }
         })
       };
-      return (0, bu.jsxs)("div", {
+      return (0, Yk.jsxs)("div", {
         className: "SettingBoxGroup HudSafeZone",
-        children: [(0, bu.jsxs)("div", {
+        children: [(0, Yk.jsxs)("div", {
           className: "SettingBox HudSafeZoneHeader",
-          children: [(0, bu.jsx)("div", {
-            children: mu("hudLayout:safeZone")
-          }), (0, bu.jsx)(Xu.P, {
-            active: null === Ru,
-            pressed: null === Ru,
+          children: [(0, Yk.jsx)("div", {
+            children: Xk("hudLayout:safeZone")
+          }), (0, Yk.jsx)(dk.O, {
+            active: null === Fk,
+            pressed: null === Fk,
             onClick: () => {
-              Qu(null)
+              ak(null)
             },
-            children: mu("hudLayout:safeZoneAuto")
+            children: Xk("hudLayout:safeZoneAuto")
           })]
-        }), Vu("sides"), Vu("ends")]
+        }), sk("sides"), sk("ends")]
       })
     }
 
-    function My() {
+    function HB() {
       const {
-        t: uu
-      } = (0, Eu.E)(), Ru = (0, Iu.X)(), {
-        clientEscMenuOptions: yu
-      } = (0, Vu.j)(["clientEscMenuOptions"]), Qu = (0, Hy.e)(), mu = Ru.hudLayouts[Qu], [Ju, Nu] = (0, Ku.useState)(null), {
-        rowIconsOpen: ru,
-        onRowIconsOpen: Bu,
-        select: Su
-      } = function(uu, Ru) {
-        const [yu, Eu] = (0, Ku.useState)((() => Iu.C.some((Ru => void 0 !== uu.hudElements[Ru] || uu.hudLocked.includes(Ru))))), Qu = (0, Ku.useCallback)((uu => {
-          Ru(uu), (0, Iu.M)(uu) && Eu(!0)
-        }), [Ru]);
+        t: kk
+      } = (0, Rk.x)(), Fk = (0, uk.Z)(), {
+        clientEscMenuOptions: Bk
+      } = (0, sk.h)(["clientEscMenuOptions"]), ak = (0, iB.e)(), Xk = Fk.hudLayouts[ak], [bk, wk] = (0, tk.useState)(null), {
+        rowIconsOpen: Vk,
+        onRowIconsOpen: Jk,
+        select: ek
+      } = function(kk, Fk) {
+        const [Bk, Rk] = (0, tk.useState)((() => uk.D.some((Fk => void 0 !== kk.hudElements[Fk] || kk.hudLocked.includes(Fk))))), ak = (0, tk.useCallback)((kk => {
+          Fk(kk), (0, uk.L)(kk) && Rk(!0)
+        }), [Fk]);
         return {
-          rowIconsOpen: yu,
-          onRowIconsOpen: Eu,
-          select: Qu
+          rowIconsOpen: Bk,
+          onRowIconsOpen: Rk,
+          select: ak
         }
-      }(mu, Nu), [pu, Tu] = (0, Ku.useState)([]), [Wu, ju] = (0, Ku.useState)(null), [Hu, du] = CR(), Cu = (0, Ku.useCallback)(((uu, Ru, yu) => {
-        Tu(Ru), du(yu);
-        const Eu = Object.keys(uu);
-        ju((uu => (null === uu || void 0 === uu ? void 0 : uu.size) === Eu.length && Eu.every((Ru => uu.has(Ru))) ? uu : new Set(Eu)))
-      }), [du]), {
-        gameState: ku
-      } = (0, Vu.j)(["gameState"]), Du = (0, by.e)(), [Mu] = (0, Ku.useState)((() => "inGame" === ku ? function(uu, Ru) {
-        const yu = uu.querySelector(".InGameUi .TouchComponentsButtons");
-        if (!yu) return mR;
-        const Eu = {},
-          Ku = {};
-        for (const Xu of QR) {
-          const uu = yu.querySelector(`.TouchSlot${Xu} > .TouchKey`);
-          if (uu) {
-            var Qu, mu;
-            Eu[Xu] = uu.cloneNode(!0);
-            const Ru = (null !== (Qu = null === (mu = uu.querySelector(".TouchKeyLabel")) || void 0 === mu ? void 0 : mu.textContent) && void 0 !== Qu ? Qu : "").split(/\s+/).filter((uu => !/[\d\xd7]/.test(uu))).join(" ");
-            Ru && (Ku[Xu] = Ru)
+      }(Xk, wk), [yk, fk] = (0, tk.useState)([]), [mk, Wk] = (0, tk.useState)(null), [vk, ik] = LF(), Lk = (0, tk.useCallback)(((kk, Fk, Bk) => {
+        fk(Fk), ik(Bk);
+        const Rk = Object.keys(kk);
+        Wk((kk => (null === kk || void 0 === kk ? void 0 : kk.size) === Rk.length && Rk.every((Fk => kk.has(Fk))) ? kk : new Set(Rk)))
+      }), [ik]), {
+        gameState: Ok
+      } = (0, sk.h)(["gameState"]), Nk = (0, oB.g)(), [Hk] = (0, tk.useState)((() => "inGame" === Ok ? function(kk, Fk) {
+        const Bk = kk.querySelector(".InGameUi .TouchComponentsButtons");
+        if (!Bk) return bF;
+        const Rk = {},
+          tk = {};
+        for (const dk of XF) {
+          const kk = Bk.querySelector(`.TouchSlot${dk} > .TouchKey`);
+          if (kk) {
+            var ak, Xk;
+            Rk[dk] = kk.cloneNode(!0);
+            const Fk = (null !== (ak = null === (Xk = kk.querySelector(".TouchKeyLabel")) || void 0 === Xk ? void 0 : Xk.textContent) && void 0 !== ak ? ak : "").split(/\s+/).filter((kk => !/[\d\xd7]/.test(kk))).join(" ");
+            Fk && (tk[dk] = Fk)
           }
         }
-        const Ju = Ru => {
-            const yu = uu.querySelector(`.InGameUi ${Ru}`);
-            return null !== yu && !yu.classList.contains("Hidden")
+        const bk = Fk => {
+            const Bk = kk.querySelector(`.InGameUi ${Fk}`);
+            return null !== Bk && !Bk.classList.contains("Hidden")
           },
-          Nu = [...uu.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((uu => uu.cloneNode(!0)));
+          wk = [...kk.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((kk => kk.cloneNode(!0)));
         return {
-          faces: Object.keys(Eu).length > 0 ? Eu : null,
-          names: Ku,
-          shop: Ju(".TouchInventoryKey.ShopKey"),
-          bag: Ju(".TouchInventoryKey.BagKey"),
-          items: Nu.length > 0 ? Nu : null,
-          rowIcons: Ru
+          faces: Object.keys(Rk).length > 0 ? Rk : null,
+          names: tk,
+          shop: bk(".TouchInventoryKey.ShopKey"),
+          bag: bk(".TouchInventoryKey.BagKey"),
+          items: wk.length > 0 ? wk : null,
+          rowIcons: Fk
         }
-      }(document, Du) : mR)), Gu = (0, Ku.useRef)(null), Uu = (0, Ku.useRef)(null), nu = function(uu) {
-        const [Ru, yu] = (0, Ku.useState)((() => .4 * window.innerHeight));
-        return (0, Ku.useLayoutEffect)((() => {
-          var Ru;
-          const Eu = null === (Ru = uu.current) || void 0 === Ru ? void 0 : Ru.closest(".SettingsMenuRight");
-          if (!Eu) return;
-          const Ku = () => {
-            const uu = Eu.clientHeight < Iy ? .4 : .5;
-            yu(Math.max(80, Eu.clientHeight * uu - 24))
+      }(document, Nk) : bF)), Mk = (0, tk.useRef)(null), gk = (0, tk.useRef)(null), Uk = function(kk) {
+        const [Fk, Bk] = (0, tk.useState)((() => .4 * window.innerHeight));
+        return (0, tk.useLayoutEffect)((() => {
+          var Fk;
+          const Rk = null === (Fk = kk.current) || void 0 === Fk ? void 0 : Fk.closest(".SettingsMenuRight");
+          if (!Rk) return;
+          const tk = () => {
+            const kk = Rk.clientHeight < uB ? .4 : .5;
+            Bk(Math.max(80, Rk.clientHeight * kk - 24))
           };
-          Ku();
-          const Qu = new ResizeObserver(Ku);
-          return Qu.observe(Eu), () => {
-            Qu.disconnect()
+          tk();
+          const ak = new ResizeObserver(tk);
+          return ak.observe(Rk), () => {
+            ak.disconnect()
           }
-        }), [uu]), Ru
-      }(Uu), su = (0, dy.i)(yu.joystickMode), tu = yu.touchActionButtons, cu = (0, Ku.useMemo)((() => function(uu, Ru) {
-        const yu = {},
-          Eu = [
+        }), [kk]), Fk
+      }(gk), ck = (0, YB.t)(Bk.joystickMode), Gk = Bk.touchActionButtons, Dk = (0, tk.useMemo)((() => function(kk, Fk) {
+        const Bk = {},
+          Rk = [
             ["extra", "X"],
             ["game", "G"]
           ];
-        Ru || Eu.push(["attack", "P"]);
-        for (const [Ku, Qu] of Eu) {
-          const Ru = uu.names[Qu];
-          Ru && (yu[Ku] = Ru)
+        Fk || Rk.push(["attack", "P"]);
+        for (const [tk, ak] of Rk) {
+          const Fk = kk.names[ak];
+          Fk && (Bk[tk] = Fk)
         }
-        return yu
-      }(Mu, tu)), [Mu, tu]);
-      (0, Ku.useEffect)((() => {
-        (0, eu.reportAnalyticsClick)({
+        return Bk
+      }(Hk, Gk)), [Hk, Gk]);
+      (0, tk.useEffect)((() => {
+        (0, Ek.reportAnalyticsClick)({
           id: "hud_layout.open"
         })
       }), []);
-      const [Lu, Fu] = (0, Ku.useState)(!1), [wu, Zu] = (0, Ku.useState)(!1), hu = (0, Ku.useRef)(null);
-      By(hu, !wu);
-      const [Pu, iu] = (0, Ku.useState)(!1), Yu = (0, Ku.useCallback)((() => {
-        iu(!1)
-      }), []), ou = (0, Ku.useMemo)((() => new Set(mu.hudLocked)), [mu.hudLocked]), vu = uu => {
-        var Ru, yu;
-        const Eu = (0, Iu.s)(),
-          Ku = uu(Eu);
-        (0, Iu.T)(null !== (Ru = null === (yu = Gu.current) || void 0 === yu ? void 0 : yu.keepLocks(Eu, Ku)) && void 0 !== Ru ? Ru : Ku)
-      }, au = (uu, Ru) => {
-        vu((yu => (0, Iu.Y)(yu, Qu, uu, Ru)))
-      }, fu = (uu, Ru, yu) => {
-        au(uu, {
-          dx: Ru,
-          dy: yu
-        }), (0, eu.reportAnalyticsClick)({
+      const [zk, hk] = (0, tk.useState)(!1), [qk, Ck] = (0, tk.useState)(!1), Zk = (0, tk.useRef)(null);
+      AB(Zk, !qk);
+      const [pk, Kk] = (0, tk.useState)(!1), xk = (0, tk.useCallback)((() => {
+        Kk(!1)
+      }), []), jk = (0, tk.useMemo)((() => new Set(Xk.hudLocked)), [Xk.hudLocked]), Ik = kk => {
+        var Fk, Bk;
+        const Rk = (0, uk.q)(),
+          tk = kk(Rk);
+        (0, uk.S)(null !== (Fk = null === (Bk = Mk.current) || void 0 === Bk ? void 0 : Bk.keepLocks(Rk, tk)) && void 0 !== Fk ? Fk : tk)
+      }, Qk = (kk, Fk) => {
+        Ik((Bk => (0, uk.ab)(Bk, ak, kk, Fk)))
+      }, kF = (kk, Fk, Bk) => {
+        Qk(kk, {
+          dx: Fk,
+          dy: Bk
+        }), (0, Ek.reportAnalyticsClick)({
           id: "hud_layout.edit",
-          value: `move:${uu}`
+          value: `move:${kk}`
         })
-      }, uR = (uu, Ru) => {
-        vu((yu => (0, Iu.Z)(yu, Qu, uu, Ru)))
-      }, RR = uu => {
-        const Ru = gu[uu];
-        return (Ru.move || Ru.scale) && ("joystick" !== uu || su) && !(0, yR.t)(uu, mu.hudElements[uu])
-      }, ER = uu => gu[uu].move && ("joystick" !== uu || su) && !ou.has(uu), KR = new Set(lu.map((uu => uu.id)).filter((uu => {
-        const Ru = (0, Iu.M)(uu) && !Mu.rowIcons.includes(uu);
-        return null === Wu || Wu.has(uu) || (0, Iu.t)(mu.hudElements, uu) && !Ru
-      }))), JR = {
-        present: KR,
-        actionButtons: tu,
-        keyNames: cu,
-        scaleCaps: Hu,
-        sizeBesidePreview: Lu,
-        elements: mu.hudElements,
-        selected: Ju,
-        onSelect: Su,
-        rowIconsOpen: ru,
-        onRowIconsOpen: Bu,
-        onScalePreview: (uu, Ru) => {
-          var yu;
-          null === (yu = Gu.current) || void 0 === yu || yu.setScale(uu, Ru)
+      }, FF = (kk, Fk) => {
+        Ik((Bk => (0, uk.bb)(Bk, ak, kk, Fk)))
+      }, BF = kk => {
+        const Fk = rk[kk];
+        return (Fk.move || Fk.scale) && ("joystick" !== kk || ck) && !(0, RF.r)(kk, Xk.hudElements[kk])
+      }, tF = kk => rk[kk].move && ("joystick" !== kk || ck) && !jk.has(kk), aF = new Set(Tk.map((kk => kk.id)).filter((kk => {
+        const Fk = (0, uk.L)(kk) && !Hk.rowIcons.includes(kk);
+        return null === mk || mk.has(kk) || (0, uk.r)(Xk.hudElements, kk) && !Fk
+      }))), wF = {
+        present: aF,
+        actionButtons: Gk,
+        keyNames: Dk,
+        scaleCaps: vk,
+        sizeBesidePreview: zk,
+        elements: Xk.hudElements,
+        selected: bk,
+        onSelect: ek,
+        rowIconsOpen: Vk,
+        onRowIconsOpen: Jk,
+        onScalePreview: (kk, Fk) => {
+          var Bk;
+          null === (Bk = Mk.current) || void 0 === Bk || Bk.setScale(kk, Fk)
         },
-        onScale: (uu, Ru) => {
-          au(uu, {
-            scale: Ru
-          }), (0, eu.reportAnalyticsClick)({
+        onScale: (kk, Fk) => {
+          Qk(kk, {
+            scale: Fk
+          }), (0, Ek.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `size:${uu}`
+            value: `size:${kk}`
           })
         },
-        onHidden: (uu, Ru) => {
-          au(uu, {
-            hidden: Ru
-          }), (0, eu.reportAnalyticsClick)({
+        onHidden: (kk, Fk) => {
+          Qk(kk, {
+            hidden: Fk
+          }), (0, Ek.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `${Ru?"hide":"show"}:${uu}`
+            value: `${Fk?"hide":"show"}:${kk}`
           })
         },
-        onReset: uu => {
-          au(uu, Iu.e)
+        onReset: kk => {
+          Qk(kk, uk.c)
         },
-        locked: ou,
-        lockable: RR,
-        onLocked: uR,
-        note: (Ru, yu) => {
-          const Eu = yu && pu.length > 0 ? uu("hudLayout:overlapsNote", {
-            names: zu(pu, tu, uu, cu)
+        locked: jk,
+        lockable: BF,
+        onLocked: FF,
+        note: (Fk, Bk) => {
+          const Rk = Bk && yk.length > 0 ? kk("hudLayout:overlapsNote", {
+            names: Pk(yk, Gk, kk, Dk)
           }) : null;
-          return yu && qu(Ru, su) ? (0, bu.jsxs)(bu.Fragment, {
-            children: [Eu && (0, bu.jsx)("span", {
-              children: Eu
-            }), (0, bu.jsx)("span", {
-              children: uu("hudLayout:floatingJoystickNote")
-            }), !Lu && (0, bu.jsx)(Ou, {})]
-          }) : Eu || (yu && ou.has(Ru) ? uu("hudLayout:lockedNote") : yu && "cluster" === Ru ? uu("hudLayout:clusterNote") : yu && "menu" === Ru ? uu("hudLayout:menuNote") : yu && (0, yR.t)(Ru, mu.hudElements[Ru]) && ER(Ru) ? uu("hudLayout:rowIconNote") : yu && "arrows" === Ru ? uu("hudLayout:arrowsNote") : "inventory" === Ru && (0, Iu.t)(mu.hudElements, "inventory") ? uu("hudLayout:inventoryHiddenNote") : null)
+          return Bk && lk(Fk, ck) ? (0, Yk.jsxs)(Yk.Fragment, {
+            children: [Rk && (0, Yk.jsx)("span", {
+              children: Rk
+            }), (0, Yk.jsx)("span", {
+              children: kk("hudLayout:floatingJoystickNote")
+            }), !zk && (0, Yk.jsx)(nk, {})]
+          }) : Rk || (Bk && jk.has(Fk) ? kk("hudLayout:lockedNote") : Bk && "cluster" === Fk ? kk("hudLayout:clusterNote") : Bk && "menu" === Fk ? kk("hudLayout:menuNote") : Bk && (0, RF.r)(Fk, Xk.hudElements[Fk]) && tF(Fk) ? kk("hudLayout:rowIconNote") : Bk && "arrows" === Fk ? kk("hudLayout:arrowsNote") : "inventory" === Fk && (0, uk.r)(Xk.hudElements, "inventory") ? kk("hudLayout:inventoryHiddenNote") : null)
         }
       };
-      return (0, bu.jsxs)("div", {
-        ref: Uu,
+      return (0, Yk.jsxs)("div", {
+        ref: gk,
         className: "HudLayoutSettings",
-        children: [(0, bu.jsxs)("div", {
-          ref: hu,
+        children: [(0, Yk.jsxs)("div", {
+          ref: Zk,
           className: "HudLayoutBody",
-          children: [(0, bu.jsx)("div", {
+          children: [(0, Yk.jsx)("div", {
             className: "HudLayoutOrientation",
-            children: uu("landscape" === Qu ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
-          }), (0, bu.jsx)(jy, {
+            children: kk("landscape" === ak ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
+          }), (0, Yk.jsx)(vB, {
             preview: {
-              layout: Ru,
-              orientation: Qu,
-              selected: Ju,
-              onSelect: Su,
-              onMove: fu,
-              canMove: ER,
-              actionButtons: tu,
-              joystickFixed: su,
-              presence: Mu,
-              keyNames: cu,
-              maxHeight: nu,
-              apiRef: Gu,
-              onMeasured: Cu,
-              onReady: Zu,
-              lockable: RR
+              layout: Fk,
+              orientation: ak,
+              selected: bk,
+              onSelect: ek,
+              onMove: kF,
+              canMove: tF,
+              actionButtons: Gk,
+              joystickFixed: ck,
+              presence: Hk,
+              keyNames: Dk,
+              maxHeight: Uk,
+              apiRef: Mk,
+              onMeasured: Lk,
+              onReady: Ck,
+              lockable: BF
             },
             quick: {
-              layout: mu,
-              actionButtons: tu,
-              keyNames: cu,
-              scaleCaps: Hu,
-              overlaps: pu,
-              onScale: JR.onScale,
-              onHidden: JR.onHidden,
-              onReset: JR.onReset,
-              locked: ou,
-              lockable: RR,
-              onLocked: uR
+              layout: Xk,
+              actionButtons: Gk,
+              keyNames: Dk,
+              scaleCaps: vk,
+              overlaps: yk,
+              onScale: wF.onScale,
+              onHidden: wF.onHidden,
+              onReset: wF.onReset,
+              locked: jk,
+              lockable: BF,
+              onLocked: FF
             },
             onFullScreen: () => {
-              iu(!0)
+              Kk(!0)
             },
-            resting: Pu,
-            onSidePanel: Fu
-          }), Pu && (0, bu.jsx)(Sy, {
-            layout: Ru,
-            orientation: Qu,
-            selected: Ju,
-            onSelect: Su,
-            onMove: fu,
-            canMove: ER,
-            actionButtons: tu,
-            joystickFixed: su,
-            presence: Mu,
-            keyNames: cu,
-            onScale: JR.onScale,
-            onHidden: JR.onHidden,
-            onReset: JR.onReset,
-            locked: ou,
-            lockable: RR,
-            onLocked: uR,
-            apiRef: Gu,
-            onClose: Yu
-          }), (0, bu.jsx)(Dy, {
-            safe: mu.hudSafe,
-            onCommit: uu => {
-              vu((Ru => (0, Iu.bb)(Ru, Qu, uu)))
+            resting: pk,
+            onSidePanel: hk
+          }), pk && (0, Yk.jsx)(yB, {
+            layout: Fk,
+            orientation: ak,
+            selected: bk,
+            onSelect: ek,
+            onMove: kF,
+            canMove: tF,
+            actionButtons: Gk,
+            joystickFixed: ck,
+            presence: Hk,
+            keyNames: Dk,
+            onScale: wF.onScale,
+            onHidden: wF.onHidden,
+            onReset: wF.onReset,
+            locked: jk,
+            lockable: BF,
+            onLocked: FF,
+            apiRef: Mk,
+            onClose: xk
+          }), (0, Yk.jsx)(NB, {
+            safe: Xk.hudSafe,
+            onCommit: kk => {
+              Ik((Fk => (0, uk.db)(Fk, ak, kk)))
             },
-            onPreview: uu => {
-              var Ru;
-              null === (Ru = Gu.current) || void 0 === Ru || Ru.setSafe(uu)
+            onPreview: kk => {
+              var Fk;
+              null === (Fk = Mk.current) || void 0 === Fk || Fk.setSafe(kk)
             }
-          }), (0, bu.jsx)(xu.c, {
-            label: uu("hudLayout:snapCentre"),
-            checked: Ru.hudSnapCentre,
-            onClick: uu => {
-              (0, Iu.S)(uu)
+          }), (0, Yk.jsx)(Ak.e, {
+            label: kk("hudLayout:snapCentre"),
+            checked: Fk.hudSnapCentre,
+            onClick: kk => {
+              (0, uk.R)(kk)
             },
-            circleInfoText: uu("hudLayout:snapCentreInfo")
-          }), (0, bu.jsx)(Wy, {
-            ...JR
-          }), (0, bu.jsx)(xu.f, {
-            label: uu("hudLayout:shape"),
-            options: Iu.D.map((Ru => ({
-              value: Ru,
-              label: uu(`hudLayout:shape_${Ru}`)
+            circleInfoText: kk("hudLayout:snapCentreInfo")
+          }), (0, Yk.jsx)(WB, {
+            ...wF
+          }), (0, Yk.jsx)(Ak.i, {
+            label: kk("hudLayout:shape"),
+            options: uk.E.map((Fk => ({
+              value: Fk,
+              label: kk(`hudLayout:shape_${Fk}`)
             }))),
-            value: Ru.hudShape,
-            onChange: uu => {
-              vu((Ru => ({
-                ...Ru,
-                hudShape: uu
-              }))), (0, eu.reportAnalyticsClick)({
+            value: Fk.hudShape,
+            onChange: kk => {
+              Ik((Fk => ({
+                ...Fk,
+                hudShape: kk
+              }))), (0, Ek.reportAnalyticsClick)({
                 id: "hud_layout.shape",
-                value: uu
+                value: kk
               })
             }
-          }), (0, bu.jsx)(xu.g, {
-            name: uu("hudLayout:opacity"),
-            min: Iu.h,
+          }), (0, Yk.jsx)(Ak.l, {
+            name: kk("hudLayout:opacity"),
+            min: uk.f,
             max: 1,
             step: .05,
-            initValue: Ru.hudKeyOpacity,
-            format: uu => `${Math.round(100*uu)}%`,
-            circleInfoText: uu("hudLayout:opacityInfo"),
-            onChange: uu => {
-              var Ru;
-              null === (Ru = Gu.current) || void 0 === Ru || Ru.setOpacity(uu)
+            initValue: Fk.hudKeyOpacity,
+            format: kk => `${Math.round(100*kk)}%`,
+            circleInfoText: kk("hudLayout:opacityInfo"),
+            onChange: kk => {
+              var Fk;
+              null === (Fk = Mk.current) || void 0 === Fk || Fk.setOpacity(kk)
             },
-            onChangeComplete: uu => {
-              (0, Iu.P)(uu), (0, eu.reportAnalyticsClick)({
+            onChangeComplete: kk => {
+              (0, uk.N)(kk), (0, Ek.reportAnalyticsClick)({
                 id: "hud_layout.edit",
                 value: "opacity"
               })
             }
           })]
-        }), (0, bu.jsx)(Xu.F, {
+        }), (0, Yk.jsx)(dk.J, {
           className: "HudLayoutResetAll",
           analyticsClick: {
             id: "hud_layout.reset_all"
           },
           onClick: () => {
             !async function() {
-              const uu = Au.NotificationProvider.showPromptPopup({
+              const kk = Sk.NotificationProvider.showPromptPopup({
                 title: "hudLayout:resetAllTitle",
                 subtitle: "hudLayout:resetAllSubtitle",
                 confirmText: "hudLayout:resetAllConfirm",
                 cancelText: "general:cancel",
                 destructive: !0
               });
-              !0 === await uu.getResult() && (0, Iu.O)()
+              !0 === await kk.getResult() && (0, uk.M)()
             }()
           },
-          children: uu("hudLayout:resetAll")
+          children: kk("hudLayout:resetAll")
         })]
       })
     }
-    const Iy = 350;
-    const Gy = [function() {
+    const uB = 350;
+    const MB = [function() {
       const {
-        t: uu
-      } = (0, Eu.E)(), [Ru, yu] = (0, Ku.useState)(!1), Qu = (0, Ku.useRef)(null);
-      return (0, Ku.useEffect)((() => {
-        var uu;
-        Ru && (null === (uu = Qu.current) || void 0 === uu || uu.scrollIntoView({
+        t: kk
+      } = (0, Rk.x)(), [Fk, Bk] = (0, tk.useState)(!1), ak = (0, tk.useRef)(null);
+      return (0, tk.useEffect)((() => {
+        var kk;
+        Fk && (null === (kk = ak.current) || void 0 === kk || kk.scrollIntoView({
           block: "start",
           behavior: "smooth"
         }))
-      }), [Ru]), (0, bu.jsxs)("div", {
+      }), [Fk]), (0, Yk.jsxs)("div", {
         className: "HudLayoutSection",
-        children: [(0, bu.jsxs)("button", {
-          ref: Qu,
+        children: [(0, Yk.jsxs)("button", {
+          ref: ak,
           type: "button",
           className: "SettingBox SettingBoxFeatured HudLayoutEntry",
-          "aria-expanded": Ru,
+          "aria-expanded": Fk,
           onClick: () => {
-            yu(!Ru)
+            Bk(!Fk)
           },
-          children: [(0, bu.jsx)(Du.c, {
+          children: [(0, Yk.jsx)(Nk.d, {
             name: "arrows-up-down-left-right",
             className: "HudLayoutEntryIcon"
-          }), (0, bu.jsxs)("span", {
+          }), (0, Yk.jsxs)("span", {
             className: "HudLayoutEntryText",
-            children: [(0, bu.jsx)("span", {
+            children: [(0, Yk.jsx)("span", {
               className: "HudLayoutEntryTitle",
-              children: uu("hudLayout:title")
-            }), (0, bu.jsx)("span", {
+              children: kk("hudLayout:title")
+            }), (0, Yk.jsx)("span", {
               className: "HudLayoutEntrySub",
-              children: uu("hudLayout:entrySub")
+              children: kk("hudLayout:entrySub")
             })]
-          }), (0, bu.jsx)("span", {
+          }), (0, Yk.jsx)("span", {
             className: "HudLayoutEntryChevron",
             children: "\u25be"
           })]
-        }), Ru && (0, bu.jsx)(My, {})]
+        }), Fk && (0, Yk.jsx)(HB, {})]
       })
     }, function() {
       const {
-        t: uu
-      } = (0, Eu.E)(), {
-        joystickMode: Ru,
-        touchSpeedCurve: yu,
-        autorun: Ku,
-        jumpLock: Qu
-      } = (0, Vu.j)(["clientEscMenuOptions"]).clientEscMenuOptions;
-      return (0, bu.jsxs)(bu.Fragment, {
-        children: [(0, bu.jsx)(xu.f, {
-          label: uu("settingsMenu:joystick"),
-          options: du.Ab.map((Ru => ({
-            value: Ru,
-            label: uu(Cu[Ru])
+        t: kk
+      } = (0, Rk.x)(), {
+        joystickMode: Fk,
+        touchSpeedCurve: Bk,
+        autorun: tk,
+        jumpLock: ak
+      } = (0, sk.h)(["clientEscMenuOptions"]).clientEscMenuOptions;
+      return (0, Yk.jsxs)(Yk.Fragment, {
+        children: [(0, Yk.jsx)(Ak.i, {
+          label: kk("settingsMenu:joystick"),
+          options: ik.zb.map((Fk => ({
+            value: Fk,
+            label: kk(Lk[Fk])
           }))),
-          value: Ru,
-          onChange: uu => {
-            Vu.d.setClientEscMenuOptions({
-              joystickMode: uu
+          value: Fk,
+          onChange: kk => {
+            sk.c.setClientEscMenuOptions({
+              joystickMode: kk
             })
           },
-          circleInfoText: uu("settingsMenu:joystickInfo")
-        }), (0, bu.jsx)(xu.c, {
-          label: uu("settingsMenu:preciseWalking"),
-          checked: yu,
-          onClick: uu => {
-            Vu.d.setClientEscMenuOptions({
-              touchSpeedCurve: uu
+          circleInfoText: kk("settingsMenu:joystickInfo")
+        }), (0, Yk.jsx)(Ak.e, {
+          label: kk("settingsMenu:preciseWalking"),
+          checked: Bk,
+          onClick: kk => {
+            sk.c.setClientEscMenuOptions({
+              touchSpeedCurve: kk
             })
           },
-          circleInfoText: uu("settingsMenu:preciseWalkingInfo")
-        }), (0, bu.jsx)(xu.c, {
-          label: uu("settingsMenu:autoRun"),
-          checked: Ku,
-          onClick: uu => {
-            Vu.d.setClientEscMenuOptions({
-              autorun: uu
+          circleInfoText: kk("settingsMenu:preciseWalkingInfo")
+        }), (0, Yk.jsx)(Ak.e, {
+          label: kk("settingsMenu:autoRun"),
+          checked: tk,
+          onClick: kk => {
+            sk.c.setClientEscMenuOptions({
+              autorun: kk
             })
           },
-          circleInfoText: uu("settingsMenu:autoRunInfo")
-        }), (0, bu.jsx)(xu.c, {
-          label: uu("settingsMenu:jumpLock"),
-          checked: Qu,
-          onClick: uu => {
-            Vu.d.setClientEscMenuOptions({
-              jumpLock: uu
+          circleInfoText: kk("settingsMenu:autoRunInfo")
+        }), (0, Yk.jsx)(Ak.e, {
+          label: kk("settingsMenu:jumpLock"),
+          checked: ak,
+          onClick: kk => {
+            sk.c.setClientEscMenuOptions({
+              jumpLock: kk
             })
           },
-          circleInfoText: uu("settingsMenu:jumpLockInfo")
+          circleInfoText: kk("settingsMenu:jumpLockInfo")
         })]
       })
     }, function() {
-      return (0, bu.jsx)(Hu.b, {})
+      return (0, Yk.jsx)(vk.d, {})
     }, function() {
       const {
-        t: uu
-      } = (0, Eu.E)(), {
-        clientEscMenuOptions: Ru
-      } = (0, Vu.j)(["clientEscMenuOptions"]);
-      return (0, ku.c)() ? (0, bu.jsx)(xu.c, {
-        label: uu("settingsMenu:vibration"),
-        checked: Ru.vibration,
-        onClick: uu => {
-          Vu.d.setClientEscMenuOptions({
-            vibration: uu
+        t: kk
+      } = (0, Rk.x)(), {
+        clientEscMenuOptions: Fk
+      } = (0, sk.h)(["clientEscMenuOptions"]);
+      return (0, Ok.c)() ? (0, Yk.jsx)(Ak.e, {
+        label: kk("settingsMenu:vibration"),
+        checked: Fk.vibration,
+        onClick: kk => {
+          sk.c.setClientEscMenuOptions({
+            vibration: kk
           })
         },
-        circleInfoText: uu("settingsMenu:vibrationInfo")
+        circleInfoText: kk("settingsMenu:vibrationInfo")
       }) : null
     }];
 
-    function Uy() {
-      return (0, bu.jsx)(bu.Fragment, {
-        children: Gy.map(((uu, Ru) => (0, bu.jsx)(uu, {}, Ru)))
+    function gB() {
+      return (0, Yk.jsx)(Yk.Fragment, {
+        children: MB.map(((kk, Fk) => (0, Yk.jsx)(kk, {}, Fk)))
       })
     }
-    var ny = yu(4145);
+    var UB = Bk(4126);
 
-    function sy() {
+    function cB() {
       const {
-        t: uu
-      } = (0, Eu.E)(), {
-        isTouchScreen: Ru,
-        clientEscMenuOptions: yu,
-        gameState: mu
-      } = (0, Vu.j)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), Ju = (0, Su.g)("ezBridging"), Nu = (0, Su.g)("ezTowering"), Tu = "inGame" !== mu || !0 === Ju, Wu = (0, pu.f)() && ("inGame" !== mu || !0 === Nu), [, Hu] = (0, Ku.useReducer)((uu => uu + 1), 0), du = (0, ju.h)(), [Cu, ku] = (0, Ku.useState)(ny.e);
-      return (0, bu.jsxs)("div", {
+        t: kk
+      } = (0, Rk.x)(), {
+        isTouchScreen: Fk,
+        clientEscMenuOptions: Bk,
+        gameState: Xk
+      } = (0, sk.h)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), bk = (0, ek.j)("ezBridging"), wk = (0, ek.j)("ezTowering"), fk = "inGame" !== Xk || !0 === bk, mk = (0, yk.e)() && ("inGame" !== Xk || !0 === wk), [, vk] = (0, tk.useReducer)((kk => kk + 1), 0), ik = (0, Wk.g)(), [Lk, Ok] = (0, tk.useState)(UB.f);
+      return (0, Yk.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [du && (0, bu.jsxs)("div", {
+        children: [ik && (0, Yk.jsxs)("div", {
           className: "SettingBox SettingBoxWithButton",
-          children: [(0, bu.jsx)("div", {
-            children: uu("controller:settingsControlsNote")
-          }), (0, bu.jsx)(Xu.P, {
+          children: [(0, Yk.jsx)("div", {
+            children: kk("controller:settingsControlsNote")
+          }), (0, Yk.jsx)(dk.O, {
             onClick: () => {
-              Vu.d.set({
+              sk.c.set({
                 openSettingsCategory: "controller"
               })
             },
-            children: uu("controller:settingsOpenController")
+            children: kk("controller:settingsOpenController")
           })]
-        }), (0, ru.isTouchscreen)() && !(0, ru.isMobile)() ? (0, bu.jsx)(bu.Fragment, {
-          children: (0, bu.jsx)(xu.c, {
-            label: uu("settingsMenu:useTouchControls"),
-            checked: Cu,
-            onClick: uu => {
-              (0, ny.c)(uu), ku(uu)
+        }), (0, Vk.isTouchscreen)() && !(0, Vk.isMobile)() ? (0, Yk.jsx)(Yk.Fragment, {
+          children: (0, Yk.jsx)(Ak.e, {
+            label: kk("settingsMenu:useTouchControls"),
+            checked: Lk,
+            onClick: kk => {
+              (0, UB.d)(kk), Ok(kk)
             }
           })
-        }) : null, Ru && (0, bu.jsx)(Uy, {}), Tu && (0, bu.jsx)(xu.c, {
-          label: uu("settingsMenu:ezBridging"),
-          checked: yu.ezBridging,
-          onClick: uu => {
-            Vu.d.setClientEscMenuOptions({
-              ezBridging: uu
+        }) : null, Fk && (0, Yk.jsx)(gB, {}), fk && (0, Yk.jsx)(Ak.e, {
+          label: kk("settingsMenu:ezBridging"),
+          checked: Bk.ezBridging,
+          onClick: kk => {
+            sk.c.setClientEscMenuOptions({
+              ezBridging: kk
             })
           },
-          circleInfoText: uu("settingsMenu:ezBridgingInfo")
-        }), Wu && (0, bu.jsx)(xu.c, {
-          label: uu("settingsMenu:ezTowering"),
-          checked: yu.ezTowering,
-          onClick: uu => {
-            Vu.d.setClientEscMenuOptions({
-              ezTowering: uu
+          circleInfoText: kk("settingsMenu:ezBridgingInfo")
+        }), mk && (0, Yk.jsx)(Ak.e, {
+          label: kk("settingsMenu:ezTowering"),
+          checked: Bk.ezTowering,
+          onClick: kk => {
+            sk.c.setClientEscMenuOptions({
+              ezTowering: kk
             })
           },
-          circleInfoText: uu("settingsMenu:ezToweringInfo")
-        }), (0, bu.jsx)(xu.c, {
-          label: uu("settingsMenu:crouchToggle"),
-          checked: yu.crouchIsToggle,
-          onClick: uu => {
-            Vu.d.setClientEscMenuOptions({
-              crouchIsToggle: uu
+          circleInfoText: kk("settingsMenu:ezToweringInfo")
+        }), (0, Yk.jsx)(Ak.e, {
+          label: kk("settingsMenu:crouchToggle"),
+          checked: Bk.crouchIsToggle,
+          onClick: kk => {
+            sk.c.setClientEscMenuOptions({
+              crouchIsToggle: kk
             })
           },
-          circleInfoText: uu("settingsMenu:crouchToggleInfo")
-        }), (0, bu.jsx)(xu.c, {
-          label: uu("settingsMenu:hideUiToggle"),
-          checked: yu.hideUiIsToggle,
-          onClick: uu => {
-            Vu.d.setClientEscMenuOptions({
-              hideUiIsToggle: uu
+          circleInfoText: kk("settingsMenu:crouchToggleInfo")
+        }), (0, Yk.jsx)(Ak.e, {
+          label: kk("settingsMenu:hideUiToggle"),
+          checked: Bk.hideUiIsToggle,
+          onClick: kk => {
+            sk.c.setClientEscMenuOptions({
+              hideUiIsToggle: kk
             })
           },
-          circleInfoText: uu("settingsMenu:hideUiToggleInfo")
-        }), "mouseOnly" !== (0, Bu.c)() && (0, bu.jsx)(xu.g, {
-          name: uu("settingsMenu:touchscreenSensitivity"),
+          circleInfoText: kk("settingsMenu:hideUiToggleInfo")
+        }), "mouseOnly" !== (0, Jk.c)() && (0, Yk.jsx)(Ak.l, {
+          name: kk("settingsMenu:touchscreenSensitivity"),
           min: 1,
           max: 900,
           step: 1,
-          initValue: yu.touchscreenSensitivity,
-          onChange: uu => {
-            Vu.d.setClientEscMenuOptions({
-              touchscreenSensitivity: uu
+          initValue: Bk.touchscreenSensitivity,
+          onChange: kk => {
+            sk.c.setClientEscMenuOptions({
+              touchscreenSensitivity: kk
             })
           }
-        }), !(0, ru.isMobile)() && (0, bu.jsx)(xu.g, {
-          name: uu("settingsMenu:mouseSensitivity"),
+        }), !(0, Vk.isMobile)() && (0, Yk.jsx)(Ak.l, {
+          name: kk("settingsMenu:mouseSensitivity"),
           min: 1,
           max: 200,
           step: 1,
-          initValue: yu.mouseSensitivity,
-          onChange: uu => {
-            Vu.d.setClientEscMenuOptions({
-              mouseSensitivity: uu
+          initValue: Bk.mouseSensitivity,
+          onChange: kk => {
+            sk.c.setClientEscMenuOptions({
+              mouseSensitivity: kk
             })
           }
-        }), !(0, ru.isMobile)() && (0, bu.jsxs)("div", {
+        }), !(0, Vk.isMobile)() && (0, Yk.jsxs)("div", {
           className: "ControlsContainer",
-          children: [(0, bu.jsx)("div", {
+          children: [(0, Yk.jsx)("div", {
             className: "SliderText",
-            children: uu("settingsMenu:keyBindings")
-          }), Qu.g.map((Ru => (0, bu.jsx)(ty, {
-            title: uu(Ru.name.translationKey, Ru.name.params),
-            defaultOpen: Qu.i.has(Ru.id),
-            children: Ru.actions.map((uu => (0, bu.jsx)(ly, {
-              noaAction: uu,
-              forceUpdate: Hu,
-              clashesWith: Ru.clashesWith,
-              showPadGlyph: du
-            }, uu)))
-          }, Ru.name.translationKey))), (0, bu.jsx)(Xu.F, {
+            children: kk("settingsMenu:keyBindings")
+          }), ak.e.map((Fk => (0, Yk.jsx)(GB, {
+            title: kk(Fk.name.translationKey, Fk.name.params),
+            defaultOpen: ak.i.has(Fk.id),
+            children: Fk.actions.map((kk => (0, Yk.jsx)(TB, {
+              noaAction: kk,
+              forceUpdate: vk,
+              clashesWith: Fk.clashesWith,
+              showPadGlyph: ik
+            }, kk)))
+          }, Fk.name.translationKey))), (0, Yk.jsx)(dk.J, {
             className: "ResetBindingsButton",
             onClick: () => {
-              (0, Qu.D)(), Hu()
+              (0, ak.z)(), vk()
             },
-            children: uu("controls:resetBindings")
+            children: kk("controls:resetBindings")
           })]
         })]
       })
     }
 
-    function ty(uu) {
+    function GB(kk) {
       let {
-        title: Ru,
-        defaultOpen: yu,
-        children: Eu
-      } = uu;
-      const [Qu, mu] = (0, Ku.useState)(yu);
-      return (0, bu.jsxs)("div", {
-        className: Nu()("ControlsSection", {
-          Collapsed: !Qu
+        title: Fk,
+        defaultOpen: Bk,
+        children: Rk
+      } = kk;
+      const [ak, Xk] = (0, tk.useState)(Bk);
+      return (0, Yk.jsxs)("div", {
+        className: wk()("ControlsSection", {
+          Collapsed: !ak
         }),
-        children: [(0, bu.jsxs)("div", {
+        children: [(0, Yk.jsxs)("div", {
           className: "ControlsSectionHeader",
           "data-pad-focusable": !0,
           onClick: () => {
-            mu(!Qu)
+            Xk(!ak)
           },
-          children: [(0, bu.jsx)("div", {
+          children: [(0, Yk.jsx)("div", {
             className: "ControlsSectionTitle",
-            children: Ru
-          }), (0, bu.jsx)("div", {
+            children: Fk
+          }), (0, Yk.jsx)("div", {
             className: "ControlsSectionChevron",
             children: "\u25be"
           })]
-        }), Qu && (0, bu.jsx)("div", {
+        }), ak && (0, Yk.jsx)("div", {
           className: "ControlsSectionRows",
-          children: Eu
+          children: Rk
         })]
       })
     }
 
-    function ly(uu) {
+    function TB(kk) {
       let {
-        noaAction: Ru,
-        forceUpdate: yu,
-        clashesWith: Ju,
-        showPadGlyph: Vu
-      } = uu;
+        noaAction: Fk,
+        forceUpdate: Bk,
+        clashesWith: bk,
+        showPadGlyph: sk
+      } = kk;
       const {
-        t: ru
-      } = (0, Eu.E)(), Bu = (0, Wu.d)(Ru), [xu, Su] = (0, Ku.useState)(!1), [pu, ju] = (0, Ku.useState)("controls:clickToEnterNewBinding"), [Hu, du] = (0, Ku.useState)(null), [Cu, ku] = (0, Ku.useState)(null), eu = (0, Ku.useRef)(null);
-      (0, Ku.useEffect)((() => {
-        xu && eu.current && eu.current.focus()
-      }), [xu]);
-      const Au = Qu.x[Ru].filter((uu => mu.g[uu]));
-      let Du = null;
-      const Mu = [],
-        Iu = Ju.flatMap((uu => {
-          var Ru, yu;
-          return null !== (Ru = null === (yu = Qu.g.find((Ru => Ru.id === uu))) || void 0 === yu ? void 0 : yu.actions) && void 0 !== Ru ? Ru : []
+        t: Vk
+      } = (0, Rk.x)(), Jk = (0, mk.d)(Fk), [Ak, ek] = (0, tk.useState)(!1), [yk, Wk] = (0, tk.useState)("controls:clickToEnterNewBinding"), [vk, ik] = (0, tk.useState)(null), [Lk, Ok] = (0, tk.useState)(null), Ek = (0, tk.useRef)(null);
+      (0, tk.useEffect)((() => {
+        Ak && Ek.current && Ek.current.focus()
+      }), [Ak]);
+      const Sk = ak.s[Fk].filter((kk => Xk.d[kk]));
+      let Nk = null;
+      const Hk = [],
+        uk = bk.flatMap((kk => {
+          var Fk, Bk;
+          return null !== (Fk = null === (Bk = ak.e.find((Fk => Fk.id === kk))) || void 0 === Bk ? void 0 : Bk.actions) && void 0 !== Fk ? Fk : []
         }));
-      for (const Eu of Iu) {
-        if (Eu === Ru) continue;
-        const uu = Qu.x[Eu];
-        for (const Ru of uu) Au.includes(Ru) && Mu.push(ru(Qu.A[Eu].translationKey, Qu.A[Eu].params))
+      for (const Rk of uk) {
+        if (Rk === Fk) continue;
+        const kk = ak.s[Rk];
+        for (const Fk of kk) Sk.includes(Fk) && Hk.push(Vk(ak.t[Rk].translationKey, ak.t[Rk].params))
       }
-      Mu.length > 0 && (Du = ru("controls:sharedBindingsWarning") + " ", Du += Mu.join(", "));
-      const Gu = () => {
-          Su(!1), du(null), ju("controls:clickToEnterNewBinding"), ku(null)
+      Hk.length > 0 && (Nk = Vk("controls:sharedBindingsWarning") + " ", Nk += Hk.join(", "));
+      const Mk = () => {
+          ek(!1), ik(null), Wk("controls:clickToEnterNewBinding"), Ok(null)
         },
-        Uu = () => "BindingInput_" + Ru;
-      return (0, bu.jsxs)("div", {
-        className: Nu()("ControlRow", {
-          WarningBorder: null !== Du
+        gk = () => "BindingInput_" + Fk;
+      return (0, Yk.jsxs)("div", {
+        className: wk()("ControlRow", {
+          WarningBorder: null !== Nk
         }),
-        children: [(0, bu.jsxs)("div", {
+        children: [(0, Yk.jsxs)("div", {
           className: "ControlRowInner",
-          children: [(0, bu.jsxs)("div", {
+          children: [(0, Yk.jsxs)("div", {
             className: "ControlName",
-            children: [ru(Qu.A[Ru].translationKey, Qu.A[Ru].params), Vu && Bu && (0, bu.jsx)(Tu.b, {
-              glyph: Bu,
+            children: [Vk(ak.t[Fk].translationKey, ak.t[Fk].params), sk && Jk && (0, Yk.jsx)(fk.e, {
+              glyph: Jk,
               className: "ControlPadGlyph"
             })]
-          }), (0, bu.jsxs)("div", {
+          }), (0, Yk.jsxs)("div", {
             className: "ControlBindingsContainer",
-            children: [(0, bu.jsxs)("div", {
+            children: [(0, Yk.jsxs)("div", {
               className: "ControlBindingsList",
-              children: [Au.map((uu => (0, bu.jsxs)("div", {
+              children: [Sk.map((kk => (0, Yk.jsxs)("div", {
                 className: "ControlBinding",
-                children: [(0, bu.jsx)("div", {
-                  children: (0, Qu.o)(uu)
-                }), (0, bu.jsx)("div", {
+                children: [(0, Yk.jsx)("div", {
+                  children: (0, ak.n)(kk)
+                }), (0, Yk.jsx)("div", {
                   className: "ControlBindingRemoveIcon",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    const Eu = (0, Qu.B)(Ru, uu);
-                    Eu.isError() ? ku(Eu.asError().message) : ku(null), yu()
+                    const Rk = (0, ak.v)(Fk, kk);
+                    Rk.isError() ? Ok(Rk.asError().message) : Ok(null), Bk()
                   },
                   children: "\xd7"
                 })]
-              }, uu))), !xu && (0, bu.jsx)("div", {
+              }, kk))), !Ak && (0, Yk.jsx)("div", {
                 className: "ControlBinding ControlBindingAdd",
                 onClick: () => {
-                  Su(!0), ku(null)
+                  ek(!0), Ok(null)
                 },
-                children: (0, bu.jsx)("div", {
+                children: (0, Yk.jsx)("div", {
                   className: "ControlBindingAddIcon",
                   children: "+"
                 })
               })]
-            }), xu && (0, bu.jsxs)("div", {
+            }), Ak && (0, Yk.jsxs)("div", {
               className: "ControlBindingAddInput",
-              children: [(0, bu.jsxs)("div", {
+              children: [(0, Yk.jsxs)("div", {
                 className: "InputContainer",
-                children: [(0, bu.jsx)("div", {
+                children: [(0, Yk.jsx)("div", {
                   className: "InputOverlay",
-                  children: Hu ? (0, Qu.o)(Hu) : (0, bu.jsx)("div", {
+                  children: vk ? (0, ak.n)(vk) : (0, Yk.jsx)("div", {
                     className: "InputOverlayPlaceholder",
-                    children: ru(pu)
+                    children: Vk(yk)
                   })
-                }), (0, bu.jsx)("input", {
-                  ref: eu,
-                  id: Uu(),
+                }), (0, Yk.jsx)("input", {
+                  ref: Ek,
+                  id: gk(),
                   "data-pad-no-osk": !0,
                   defaultValue: "",
-                  onKeyDown: uu => {
-                    if ("Escape" === uu.code) return Gu(), uu.preventDefault(), void uu.stopPropagation();
-                    const Ru = uu.code;
-                    mu.c.includes(Ru) ? (ku(null), du(Ru)) : (ku("controls:keyIsReserved"), du(null)), uu.preventDefault(), uu.stopPropagation()
+                  onKeyDown: kk => {
+                    if ("Escape" === kk.code) return Mk(), kk.preventDefault(), void kk.stopPropagation();
+                    const Fk = kk.code;
+                    Xk.b.includes(Fk) ? (Ok(null), ik(Fk)) : (Ok("controls:keyIsReserved"), ik(null)), kk.preventDefault(), kk.stopPropagation()
                   },
-                  onMouseDown: uu => {
-                    const Ru = "Mouse" + (uu.button + 1);
-                    document.activeElement && document.activeElement.id === Uu() ? mu.c.includes(Ru) ? (ku(null), du(Ru)) : (ku("controls:keyIsReserved"), du(null)) : ju("controls:enterNewBinding"), uu.stopPropagation()
+                  onMouseDown: kk => {
+                    const Fk = "Mouse" + (kk.button + 1);
+                    document.activeElement && document.activeElement.id === gk() ? Xk.b.includes(Fk) ? (Ok(null), ik(Fk)) : (Ok("controls:keyIsReserved"), ik(null)) : Wk("controls:enterNewBinding"), kk.stopPropagation()
                   },
                   onBlur: () => {
-                    ju("controls:clickToEnterNewBinding")
+                    Wk("controls:clickToEnterNewBinding")
                   }
                 })]
-              }), (0, bu.jsx)(Xu.e, {
-                onPointerDown: uu => {
-                  uu.preventDefault()
+              }), (0, Yk.jsx)(dk.g, {
+                onPointerDown: kk => {
+                  kk.preventDefault()
                 },
                 onClick: () => {
-                  (0, Qu.e)(Ru, Hu), yu(), Gu()
+                  (0, ak.b)(Fk, vk), Bk(), Mk()
                 },
                 className: "ControlBindingAddButton",
-                disabled: null === Hu,
-                children: ru("general:add")
-              }), (0, bu.jsx)("div", {
+                disabled: null === vk,
+                children: Vk("general:add")
+              }), (0, Yk.jsx)("div", {
                 className: "ControlBindingAddCancel",
                 onClick: () => {
-                  Gu()
+                  Mk()
                 },
                 children: "\xd7"
               })]
-            }), Cu && (0, bu.jsx)("div", {
+            }), Lk && (0, Yk.jsx)("div", {
               className: "ControlBindingError",
-              children: ru(Cu)
+              children: Vk(Lk)
             })]
           })]
-        }), Du && (0, bu.jsx)("div", {
+        }), Nk && (0, Yk.jsx)("div", {
           className: "ControlRowWarning",
-          children: Du
+          children: Nk
         })]
       })
     }
   },
-  8582: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Ju
+  8519: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => bk
     });
-    var Eu = yu(27),
-      Ku = yu(3236),
-      Qu = yu(1311),
-      mu = yu(1354);
-    const Ju = async () => {
-      if ((0, mu.g)()) {
-        if (!0 !== await Qu.NotificationProvider.showPromptPopup({
+    var Rk = Bk(22),
+      tk = Bk(3239),
+      ak = Bk(1300),
+      Xk = Bk(1344);
+    const bk = async () => {
+      if ((0, Xk.h)()) {
+        if (!0 !== await ak.NotificationProvider.showPromptPopup({
             title: "controller:menusLeaveGameTitle",
             confirmText: "controller:menusLeaveGameLeave",
             cancelText: "controller:menusLeaveGameStay",
             destructive: !0
-          }).getResult() || "inGame" !== Eu.d.get("gameState")) return
-      }(0, Ku.d)()
+          }).getResult() || "inGame" !== Rk.c.get("gameState")) return
+      }(0, tk.c)()
     }
   },
-  8585: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Nu,
-      h: () => Qu,
-      l: () => mu,
-      p: () => Ku,
-      t: () => Ju
+  8521: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => wk,
+      d: () => ak,
+      f: () => Xk,
+      j: () => tk,
+      m: () => bk
     });
-    var Eu = yu(1887);
-    const Ku = "controllerPadShopOpen",
-      Qu = uu => Eu.h.includes(uu),
-      mu = uu => Object.values(uu).some((uu => !1 !== uu.canBuy && !uu.isRewardedAd)),
-      Ju = (uu, Ru, yu) => {
-        var Eu, Ku, mu, Ju;
-        const Nu = uu.filter((uu => !Qu(uu))),
-          Xu = null !== Ru && uu.includes(Ru) ? Ru : null;
-        return null !== Xu && !Qu(Xu) && yu(Xu) ? Xu : null !== (Eu = null !== (Ku = null !== (mu = null !== (Ju = Nu.find(yu)) && void 0 !== Ju ? Ju : Nu[0]) && void 0 !== mu ? mu : Xu) && void 0 !== Ku ? Ku : uu[0]) && void 0 !== Eu ? Eu : null
+    var Rk = Bk(1870);
+    const tk = "controllerPadShopOpen",
+      ak = kk => Rk.f.includes(kk),
+      Xk = kk => Object.values(kk).some((kk => !1 !== kk.canBuy && !kk.isRewardedAd)),
+      bk = (kk, Fk, Bk) => {
+        var Rk, tk, Xk, bk;
+        const wk = kk.filter((kk => !ak(kk))),
+          dk = null !== Fk && kk.includes(Fk) ? Fk : null;
+        return null !== dk && !ak(dk) && Bk(dk) ? dk : null !== (Rk = null !== (tk = null !== (Xk = null !== (bk = wk.find(Bk)) && void 0 !== bk ? bk : wk[0]) && void 0 !== Xk ? Xk : dk) && void 0 !== tk ? tk : kk[0]) && void 0 !== Rk ? Rk : null
       },
-      Nu = uu => uu.userInput || uu.isRewardedAd || "boolean" === typeof uu.isSelected ? null : JSON.stringify([uu.image, uu.cost, uu.currency, uu.amount, uu.customTitle, uu.buyButtonText, uu.description, uu.canBuy])
+      wk = kk => kk.userInput || kk.isRewardedAd || "boolean" === typeof kk.isSelected ? null : JSON.stringify([kk.image, kk.cost, kk.currency, kk.amount, kk.customTitle, kk.buyButtonText, kk.description, kk.canBuy])
   },
-  8615: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Xu,
-      h: () => Vu
+  8548: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => dk,
+      g: () => sk
     });
-    var Eu = yu(64),
-      Ku = yu(1400),
-      Qu = yu(1938),
-      mu = yu(1362),
-      Ju = yu(1386),
-      Nu = yu(1079);
-    const Xu = () => {
-        const uu = (0, mu.p)();
-        if ((0, Eu.useEffect)((() => {
-            (0, mu.i)()
-          }), []), !uu) return null;
+    var Rk = Bk(61),
+      tk = Bk(1387),
+      ak = Bk(1912),
+      Xk = Bk(1355),
+      bk = Bk(1376),
+      wk = Bk(1069);
+    const dk = () => {
+        const kk = (0, Xk.s)();
+        if ((0, Rk.useEffect)((() => {
+            (0, Xk.i)()
+          }), []), !kk) return null;
         const {
-          ControllerCategory: Ru
-        } = uu;
-        return (0, Nu.jsx)(Ju.b, {
-          children: (0, Nu.jsx)(Ru, {})
+          ControllerCategory: Fk
+        } = kk;
+        return (0, wk.jsx)(bk.e, {
+          children: (0, wk.jsx)(Fk, {})
         })
       },
-      Vu = () => {
-        var uu;
-        const Ru = (0, mu.p)(),
-          [, yu] = (0, Eu.useReducer)((uu => uu + 1), 0);
-        return (0, Ku.e)(Qu.e, yu), null !== (uu = null === Ru || void 0 === Ru ? void 0 : Ru.hasActivePad()) && void 0 !== uu && uu
+      sk = () => {
+        var kk;
+        const Fk = (0, Xk.s)(),
+          [, Bk] = (0, Rk.useReducer)((kk => kk + 1), 0);
+        return (0, tk.f)(ak.d, Bk), null !== (kk = null === Fk || void 0 === Fk ? void 0 : Fk.hasActivePad()) && void 0 !== kk && kk
       }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

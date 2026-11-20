@@ -1,132 +1,132 @@
 export const id = 133;
 export const ids = [133];
 export const modules = {
-  6412: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => du,
-      h: () => bu,
-      l: () => ju,
-      o: () => Wu
+  6343: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => ik,
+      e: () => Yk,
+      f: () => Wk,
+      g: () => mk
     });
-    var Eu = yu(6418);
-    const Ku = 6,
-      Qu = 3,
-      mu = 1,
-      Ju = 2,
-      Nu = 4,
-      Xu = 8,
-      Vu = 16,
-      ru = 32,
-      Bu = 64,
-      xu = 128,
-      Su = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var Rk = Bk(6349);
+    const tk = 6,
+      ak = 3,
+      Xk = 1,
+      bk = 2,
+      wk = 4,
+      dk = 8,
+      sk = 16,
+      Vk = 32,
+      Jk = 64,
+      Ak = 128,
+      ek = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function pu(uu) {
-      if (!uu) return 0;
-      const Ru = Su.indexOf(uu);
-      if (Ru <= 0) throw new Error(`"${uu}" is not a shader pack hook function`);
-      return Ru
+    function yk(kk) {
+      if (!kk) return 0;
+      const Fk = ek.indexOf(kk);
+      if (Fk <= 0) throw new Error(`"${kk}" is not a shader pack hook function`);
+      return Fk
     }
 
-    function Tu(uu) {
-      if (0 === uu) return null;
-      const Ru = Su[uu];
-      if (void 0 === Ru) throw new Error(`${uu} is not a shader pack hook function id`);
-      return Ru
+    function fk(kk) {
+      if (0 === kk) return null;
+      const Fk = ek[kk];
+      if (void 0 === Fk) throw new Error(`${kk} is not a shader pack hook function id`);
+      return Fk
     }
 
-    function Wu(uu) {
-      const Ru = Eu.c.length;
+    function mk(kk) {
+      const Fk = Rk.d.length;
       return {
-        strict: uu >= Ru,
-        program: Eu.c[uu % Ru]
+        strict: kk >= Fk,
+        program: Rk.d[kk % Fk]
       }
     }
 
-    function ju(uu) {
-      return Number(uu.strict) * Eu.c.length + Eu.c.indexOf(uu.program)
+    function Wk(kk) {
+      return Number(kk.strict) * Rk.d.length + Rk.d.indexOf(kk.program)
     }
 
-    function Hu(uu) {
-      return "" === uu ? [] : uu.split(" ")
+    function vk(kk) {
+      return "" === kk ? [] : kk.split(" ")
     }
 
-    function du(uu) {
-      const Ru = {
-        variantFlags: new Uint8Array(Ku),
-        hooks: new Uint8Array(Ku * Qu),
-        moduleCodes: Array(Ku).fill(""),
-        reads: Array(2 * Ku).fill("")
+    function ik(kk) {
+      const Fk = {
+        variantFlags: new Uint8Array(tk),
+        hooks: new Uint8Array(tk * ak),
+        moduleCodes: Array(tk).fill(""),
+        reads: Array(2 * tk).fill("")
       };
-      for (const yu of uu) {
-        const uu = ju(yu.key),
-          Eu = (uu, Ru) => null === yu.hooks.surface || yu.reads.fragment.includes(uu) ? 0 : Ru;
-        Ru.variantFlags[uu] = (yu.sceneDepth ? mu : 0) | (yu.movesVertices ? Ju : 0) | (yu.sunShadow ? Nu : 0) | (yu.airShadow ? Xu : 0) | (yu.discards ? Vu : 0) | Eu("localPosition", ru) | Eu("enchantSpeed", Bu) | Eu("enchantTier", xu), Ru.hooks[uu * Qu] = pu(yu.hooks.vertex), Ru.hooks[uu * Qu + 1] = pu(yu.hooks.surface), Ru.hooks[uu * Qu + 2] = pu(yu.hooks.light), Ru.moduleCodes[uu] = yu.moduleCode, Ru.reads[2 * uu] = yu.reads.vertex.join(" "), Ru.reads[2 * uu + 1] = yu.reads.fragment.join(" ")
+      for (const Bk of kk) {
+        const kk = Wk(Bk.key),
+          Rk = (kk, Fk) => null === Bk.hooks.surface || Bk.reads.fragment.includes(kk) ? 0 : Fk;
+        Fk.variantFlags[kk] = (Bk.sceneDepth ? Xk : 0) | (Bk.movesVertices ? bk : 0) | (Bk.sunShadow ? wk : 0) | (Bk.airShadow ? dk : 0) | (Bk.discards ? sk : 0) | Rk("localPosition", Vk) | Rk("enchantSpeed", Jk) | Rk("enchantTier", Ak), Fk.hooks[kk * ak] = yk(Bk.hooks.vertex), Fk.hooks[kk * ak + 1] = yk(Bk.hooks.surface), Fk.hooks[kk * ak + 2] = yk(Bk.hooks.light), Fk.moduleCodes[kk] = Bk.moduleCode, Fk.reads[2 * kk] = Bk.reads.vertex.join(" "), Fk.reads[2 * kk + 1] = Bk.reads.fragment.join(" ")
       }
-      return Ru
+      return Fk
     }
 
-    function bu(uu) {
+    function Yk(kk) {
       const {
-        hooks: Ru,
-        moduleCodes: yu,
-        reads: Eu
-      } = uu;
-      return Array.from(uu.variantFlags, ((uu, Ku) => {
-        const ru = Ku * Qu;
+        hooks: Fk,
+        moduleCodes: Bk,
+        reads: Rk
+      } = kk;
+      return Array.from(kk.variantFlags, ((kk, tk) => {
+        const Vk = tk * ak;
         return {
-          key: Wu(Ku),
+          key: mk(tk),
           hooks: {
-            vertex: Tu(Ru[ru]),
-            surface: Tu(Ru[ru + 1]),
-            light: Tu(Ru[ru + 2])
+            vertex: fk(Fk[Vk]),
+            surface: fk(Fk[Vk + 1]),
+            light: fk(Fk[Vk + 2])
           },
-          moduleCode: yu[Ku],
-          sceneDepth: 0 !== (uu & mu),
-          sunShadow: 0 !== (uu & Nu),
-          airShadow: 0 !== (uu & Xu),
-          movesVertices: 0 !== (uu & Ju),
-          discards: 0 !== (uu & Vu),
+          moduleCode: Bk[tk],
+          sceneDepth: 0 !== (kk & Xk),
+          sunShadow: 0 !== (kk & wk),
+          airShadow: 0 !== (kk & dk),
+          movesVertices: 0 !== (kk & bk),
+          discards: 0 !== (kk & sk),
           reads: {
-            vertex: Hu(Eu[2 * Ku]),
-            fragment: Hu(Eu[2 * Ku + 1])
+            vertex: vk(Rk[2 * tk]),
+            fragment: vk(Rk[2 * tk + 1])
           }
         }
       }))
     }
   },
-  40444: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      B: () => pu,
-      D: () => xu,
-      F: () => Su,
-      e: () => Ku,
-      g: () => Eu,
-      k: () => Bu,
-      m: () => Vu,
-      p: () => Tu,
-      s: () => Qu,
-      u: () => Ju,
-      w: () => Nu,
-      y: () => mu
+  40292: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      D: () => ek,
+      e: () => tk,
+      g: () => Rk,
+      h: () => Jk,
+      j: () => sk,
+      m: () => fk,
+      p: () => ak,
+      r: () => bk,
+      s: () => wk,
+      u: () => Xk,
+      v: () => yk,
+      z: () => Ak
     });
-    const Eu = 3,
-      Ku = 0,
-      Qu = 1,
-      mu = 2,
-      Ju = {
+    const Rk = 3,
+      tk = 0,
+      ak = 1,
+      Xk = 2,
+      bk = {
         uniform: 3,
-        WB: 4,
+        jJ: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      Nu = 10,
-      Xu = "BloxdPackInputs",
-      Vu = "bloxdPackInputs",
-      ru = [{
+      wk = 10,
+      dk = "BloxdPackInputs",
+      sk = "bloxdPackInputs",
+      Vk = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,99 +151,99 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      Bu = 80;
+      Jk = 80;
 
-    function xu() {
-      const uu = ru.map((uu => {
+    function Ak() {
+      const kk = Vk.map((kk => {
         let {
-          name: Ru,
-          type: yu
-        } = uu;
-        return `    ${Ru}: ${yu},\n`
+          name: Fk,
+          type: Bk
+        } = kk;
+        return `    ${Fk}: ${Bk},\n`
       })).join("");
-      return `struct ${Xu} {\n${uu}}\n@group(${Eu}) @binding(${Ku}) var<uniform> ${Vu}: ${Xu};\n`
+      return `struct ${dk} {\n${kk}}\n@group(${Rk}) @binding(${tk}) var<uniform> ${sk}: ${dk};\n`
     }
 
-    function Su(uu, Ru) {
-      const yu = new DataView(uu, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Bu),
-        [Eu, Ku, Qu, mu, Ju, Nu] = ru;
-      yu.setFloat32(Eu.offset, Ru.seconds, !0), yu.setUint32(Ku.offset, Ru.lit ? 1 : 0, !0);
-      for (let Xu = 0; Xu < 3; Xu++) yu.setInt32(Qu.offset + 4 * Xu, Ru.renderOffset[Xu], !0), yu.setFloat32(mu.offset + 4 * Xu, Ru.duu[Xu], !0), yu.setFloat32(Ju.offset + 4 * Xu, Ru.eyePosition[Xu], !0), yu.setFloat32(Nu.offset + 4 * Xu, Ru.shadowDirection[Xu], !0)
+    function ek(kk, Fk) {
+      const Bk = new DataView(kk, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Jk),
+        [Rk, tk, ak, Xk, bk, wk] = Vk;
+      Bk.setFloat32(Rk.offset, Fk.seconds, !0), Bk.setUint32(tk.offset, Fk.lit ? 1 : 0, !0);
+      for (let dk = 0; dk < 3; dk++) Bk.setInt32(ak.offset + 4 * dk, Fk.renderOffset[dk], !0), Bk.setFloat32(Xk.offset + 4 * dk, Fk.w6[dk], !0), Bk.setFloat32(bk.offset + 4 * dk, Fk.eyePosition[dk], !0), Bk.setFloat32(wk.offset + 4 * dk, Fk.shadowDirection[dk], !0)
     }
 
-    function pu(uu) {
-      const Ru = new Uint32Array(Math.max(1, uu.length));
-      return uu.forEach(((uu, yu) => {
+    function yk(kk) {
+      const Fk = new Uint32Array(Math.max(1, kk.length));
+      return kk.forEach(((kk, Bk) => {
         let {
-          id: Eu,
-          rotation: Ku
-        } = uu;
-        Ru[yu] = 65535 & Eu | (3 & Ku) << 16
-      })), Ru
+          id: Rk,
+          rotation: tk
+        } = kk;
+        Fk[Bk] = 65535 & Rk | (3 & tk) << 16
+      })), Fk
     }
-    const Tu = {
+    const fk = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6418: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Eu,
-      g: () => mu,
-      h: () => Ju,
-      i: () => Ku,
-      j: () => Qu
+  6349: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Rk,
+      g: () => Xk,
+      h: () => bk,
+      l: () => tk,
+      m: () => ak
     });
-    const Eu = ["terrain", "liquid", "model"];
+    const Rk = ["terrain", "liquid", "model"];
 
-    function Ku() {
-      const uu = [];
-      for (const Ru of [!1, !0])
-        for (const yu of Eu) uu.push({
-          strict: Ru,
-          program: yu
+    function tk() {
+      const kk = [];
+      for (const Fk of [!1, !0])
+        for (const Bk of Rk) kk.push({
+          strict: Fk,
+          program: Bk
         });
-      return uu
+      return kk
     }
 
-    function Qu(uu) {
-      return `${uu.strict?"strict":"allow"}.${uu.program}`
+    function ak(kk) {
+      return `${kk.strict?"strict":"allow"}.${kk.program}`
     }
 
-    function mu(uu) {
-      return !uu.hooks.vertex && !uu.hooks.surface && !uu.hooks.light
+    function Xk(kk) {
+      return !kk.hooks.vertex && !kk.hooks.surface && !kk.hooks.light
     }
 
-    function Ju(uu, Ru) {
-      return "off" !== Ru && (null === uu || uu.some((uu => uu.key.strict === ("strict" === Ru) && !mu(uu))))
+    function bk(kk, Fk) {
+      return "off" !== Fk && (null === kk || kk.some((kk => kk.key.strict === ("strict" === Fk) && !Xk(kk))))
     }
   },
-  40869: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      SHADER_PACK_INPUTS_BINDING: () => Qu.e,
-      SHADER_PACK_INPUTS_GROUP: () => Qu.g,
-      SHADER_PACK_INPUTS_SIZE: () => Qu.k,
-      SHADER_PACK_INPUTS_VAR: () => Qu.m,
-      SHADER_PACK_MODES: () => Qu.p,
-      SHADER_PACK_PROGRAMS: () => Eu.c,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => Qu.s,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => Qu.u,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => Qu.w,
-      SHADER_PACK_TEXTURES_BINDING: () => Qu.y,
-      encodeTextureLayers: () => Qu.B,
-      flattenVariants: () => Ku.d,
-      isVariantOff: () => Eu.g,
-      packRunsIn: () => Eu.h,
-      shaderPackInputsWgsl: () => Qu.D,
-      shaderPackVariantKeys: () => Eu.i,
-      variantKeyId: () => Eu.j,
-      writeShaderPackInputs: () => Qu.F
+  40714: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      SHADER_PACK_INPUTS_BINDING: () => ak.e,
+      SHADER_PACK_INPUTS_GROUP: () => ak.g,
+      SHADER_PACK_INPUTS_SIZE: () => ak.h,
+      SHADER_PACK_INPUTS_VAR: () => ak.j,
+      SHADER_PACK_MODES: () => ak.m,
+      SHADER_PACK_PROGRAMS: () => Rk.d,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => ak.p,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => ak.r,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => ak.s,
+      SHADER_PACK_TEXTURES_BINDING: () => ak.u,
+      encodeTextureLayers: () => ak.v,
+      flattenVariants: () => tk.b,
+      isVariantOff: () => Rk.g,
+      packRunsIn: () => Rk.h,
+      shaderPackInputsWgsl: () => ak.z,
+      shaderPackVariantKeys: () => Rk.l,
+      variantKeyId: () => Rk.m,
+      writeShaderPackInputs: () => ak.D
     });
-    var Eu = yu(6418),
-      Ku = yu(6412),
-      Qu = yu(40444)
+    var Rk = Bk(6349),
+      tk = Bk(6343),
+      ak = Bk(40292)
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

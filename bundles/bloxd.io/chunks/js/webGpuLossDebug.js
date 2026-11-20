@@ -1,72 +1,72 @@
 export const id = 65;
 export const ids = [65];
 export const modules = {
-  36279: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      noteJsEngine: () => Lu,
-      noteJsJoin: () => wu,
-      noteWasmJoin: () => Zu,
-      noteWasmPick: () => zu,
-      noteWebGpuLoss: () => hu,
-      startWebGpuLossDebug: () => cu
+  36157: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      noteJsEngine: () => zk,
+      noteJsJoin: () => qk,
+      noteWasmJoin: () => Ck,
+      noteWasmPick: () => Pk,
+      noteWebGpuLoss: () => Zk,
+      startWebGpuLossDebug: () => Dk
     });
-    var Eu = yu(330),
-      Ku = yu(27),
-      Qu = yu(2653),
-      mu = yu(3255),
-      Ju = yu(624),
-      Nu = yu(312),
-      Xu = yu(106),
-      Vu = yu(122),
-      ru = yu(2655),
-      Bu = yu(47),
-      xu = yu(129),
-      Su = yu(305),
-      pu = yu(2707),
-      Tu = yu(343),
-      Wu = yu(8965);
-    const ju = 40,
-      Hu = 160;
+    var Rk = Bk(279),
+      tk = Bk(22),
+      ak = Bk(2647),
+      Xk = Bk(3255),
+      bk = Bk(624),
+      wk = Bk(271),
+      dk = Bk(98),
+      sk = Bk(109),
+      Vk = Bk(2654),
+      Jk = Bk(42),
+      Ak = Bk(117),
+      ek = Bk(267),
+      yk = Bk(2711),
+      fk = Bk(291),
+      mk = Bk(8910);
+    const Wk = 40,
+      vk = 160;
 
-    function du(uu, Ru) {
-      return `"${(uu.length>Ru?`${uu.slice(0,Ru)}...`:uu).replace(/[^ -~]|["\\]/g,"?")}"`
+    function ik(kk, Fk) {
+      return `"${(kk.length>Fk?`${kk.slice(0,Fk)}...`:kk).replace(/[^ -~]|["\\]/g,"?")}"`
     }
 
-    function bu(uu) {
-      return uu ? "yes" : "no"
+    function Yk(kk) {
+      return kk ? "yes" : "no"
     }
 
-    function Cu(uu) {
-      var Ru;
-      const yu = uu.storedRenderer;
-      return [`loss holds ${bu(uu.lossHolds)}`, `stops packs ${bu(uu.lossStopsPack)}`, `any loss ${bu(uu.anyLoss)}`, `old intel ${bu(uu.oldIntelDriver)}`, `default off for packs ${bu(uu.defaultOffForPacks)}`, `default off reason ${null!==(Ru=uu.defaultOffReason)&&void 0!==Ru?Ru:"none"}`, `setting ${uu.setting?"on":"off"} (stored ${null===uu.settingStored?"unset":uu.settingStored?"on":"off"})`, `renderer url ${null===uu.urlRenderer?"none":du(uu.urlRenderer,12)}, stored ${null===yu||void 0===yu?"none":du(String(yu),12)}`, `hidden-loss arm ${uu.hiddenLossArm}`].join(", ")
+    function Lk(kk) {
+      var Fk;
+      const Bk = kk.storedRenderer;
+      return [`loss holds ${Yk(kk.lossHolds)}`, `stops packs ${Yk(kk.lossStopsPack)}`, `any loss ${Yk(kk.anyLoss)}`, `old intel ${Yk(kk.oldIntelDriver)}`, `default off for packs ${Yk(kk.defaultOffForPacks)}`, `default off reason ${null!==(Fk=kk.defaultOffReason)&&void 0!==Fk?Fk:"none"}`, `setting ${kk.setting?"on":"off"} (stored ${null===kk.settingStored?"unset":kk.settingStored?"on":"off"})`, `renderer url ${null===kk.urlRenderer?"none":ik(kk.urlRenderer,12)}, stored ${null===Bk||void 0===Bk?"none":ik(String(Bk),12)}`, `hidden-loss arm ${kk.hiddenLossArm}`].join(", ")
     }
 
-    function ku(uu) {
-      if (null === uu) return "no renderer settled";
+    function Ok(kk) {
+      if (null === kk) return "no renderer settled";
       const {
-        requested: Ru,
-        choice: yu,
-        source: Eu,
-        fallbackReason: Ku
-      } = uu;
-      return `renderer requested ${Ru}, runs ${yu}, from ${Eu}${null===Ku?"":`, fell back: ${du(Ku,80)}`}`
+        requested: Fk,
+        choice: Bk,
+        source: Rk,
+        fallbackReason: tk
+      } = kk;
+      return `renderer requested ${Fk}, runs ${Bk}, from ${Rk}${null===tk?"":`, fell back: ${ik(tk,80)}`}`
     }
 
-    function eu(uu, Ru) {
-      return uu ? `stopping packs: iOS, ${null!==Ru&&void 0!==Ru?Ru:1} losses in a row within a day` : "stopping packs"
+    function Ek(kk, Fk) {
+      return kk ? `stopping packs: iOS, ${null!==Fk&&void 0!==Fk?Fk:1} losses in a row within a day` : "stopping packs"
     }
 
-    function Au(uu) {
-      var Ru, yu, Eu;
-      return `pick (wasm): backend ${null!==(Ru=uu.backend)&&void 0!==Ru?Ru:"none"}, webgpu fallback ${null!==(yu=uu.reason)&&void 0!==yu?yu:"none"}, from ${null!==(Eu=uu.source)&&void 0!==Eu?Eu:"none"}, storage pull breaks ${bu(uu.storagePullBreaks)}; packs run ${bu("webgpu"===uu.backend&&!uu.storagePullBreaks)}, else ${uu.noWebGpu}`
+    function Sk(kk) {
+      var Fk, Bk, Rk;
+      return `pick (wasm): backend ${null!==(Fk=kk.backend)&&void 0!==Fk?Fk:"none"}, webgpu fallback ${null!==(Bk=kk.reason)&&void 0!==Bk?Bk:"none"}, from ${null!==(Rk=kk.source)&&void 0!==Rk?Rk:"none"}, storage pull breaks ${Yk(kk.storagePullBreaks)}; packs run ${Yk("webgpu"===kk.backend&&!kk.storagePullBreaks)}, else ${kk.noWebGpu}`
     }
 
-    function Du(uu, Ru, yu) {
-      return `pack ${null===uu?"(name not read)":du(uu,ju)} ${Ru}${null===yu?"":`, ${yu} variants`}`
+    function Nk(kk, Fk, Bk) {
+      return `pack ${null===kk?"(name not read)":ik(kk,Wk)} ${Fk}${null===Bk?"":`, ${Bk} variants`}`
     }
-    const Mu = "shaderPack:failedWebGpuOff",
-      Iu = new class {
+    const Hk = "shaderPack:failedWebGpuOff",
+      uk = new class {
         constructor() {
           this.joins = 0, this.losses = 0, this.noPackSaid = !1
         }
@@ -74,162 +74,162 @@ export const modules = {
           return this.joins++, this.joins <= 5 ? "detail" : this.joins <= 30 ? "outcome" : 31 === this.joins ? "cap" : "none"
         }
         noPack() {
-          const uu = !this.noPackSaid;
-          return this.noPackSaid = !0, uu
+          const kk = !this.noPackSaid;
+          return this.noPackSaid = !0, kk
         }
         loss() {
           return this.losses++, this.losses <= 10 ? "line" : 11 === this.losses ? "cap" : "none"
         }
       };
-    let Gu = null,
-      Uu = null,
-      nu = 0;
+    let Mk = null,
+      gk = null,
+      Uk = 0;
 
-    function su(uu) {
-      (0, pu.i)("webgpuloss", uu)
+    function ck(kk) {
+      (0, yk.k)("webgpuloss", kk)
     }
 
-    function tu() {
+    function Gk() {
       return {
-        lossHolds: (0, Su.t)(),
-        lossStopsPack: (0, Su.v)(),
-        anyLoss: (0, Su.f)(),
-        oldIntelDriver: !0 === Bu.i.getItem(xu.K),
-        defaultOffForPacks: Ku.d.isWebGpuDefaultOff(),
-        defaultOffReason: Ku.d.webGpuDefaultOffReason(),
-        settingStored: Bu.i.getItem(Eu.pc),
-        setting: Ku.d.get("clientEscMenuOptions").useWebGpu,
-        urlRenderer: Vu.currentUrl.getSearchParam(ru.b),
-        storedRenderer: Bu.i.getItem(ru.f),
-        hiddenLossArm: Nu.c.webgpu_hidden_loss_v1
+        lossHolds: (0, ek.m)(),
+        lossStopsPack: (0, ek.o)(),
+        anyLoss: (0, ek.c)(),
+        oldIntelDriver: !0 === Jk.i.getItem(Ak.K),
+        defaultOffForPacks: tk.c.isWebGpuDefaultOff(),
+        defaultOffReason: tk.c.webGpuDefaultOffReason(),
+        settingStored: Jk.i.getItem(Rk.dc),
+        setting: tk.c.get("clientEscMenuOptions").useWebGpu,
+        urlRenderer: sk.currentUrl.getSearchParam(Vk.d),
+        storedRenderer: Jk.i.getItem(Vk.h),
+        hiddenLossArm: wk.d.webgpu_hidden_loss_v1
       }
     }
 
-    function lu(uu) {
-      return function(uu, Ru, yu) {
-        if (null === uu || void 0 === uu) return "none";
-        if ("object" !== typeof uu) return `unreadable (${typeof uu})`;
-        const Eu = uu,
-          Ku = "number" === typeof Eu.at ? Eu.at : null;
-        return ["browser " + (Ru ? "this one" : "another"), null === Ku ? "no time" : `set ${((yu-Ku)/Tu.j).toFixed(1)} h ago`, `losses ${"number"===typeof Eu.losses?Eu.losses:"unset (1)"}${null!==Ku&&yu-Ku<Tu.g?", the last within a day":""}`, `hidden-only ${"number"===typeof Eu.hiddenLosses?Eu.hiddenLosses:"no"}`, `first page ${"hidden"===Eu.firstPage||"visible"===Eu.firstPage?Eu.firstPage:"unset (visible)"}`].join(", ")
-      }(uu, function(uu) {
+    function Tk(kk) {
+      return function(kk, Fk, Bk) {
+        if (null === kk || void 0 === kk) return "none";
+        if ("object" !== typeof kk) return `unreadable (${typeof kk})`;
+        const Rk = kk,
+          tk = "number" === typeof Rk.at ? Rk.at : null;
+        return ["browser " + (Fk ? "this one" : "another"), null === tk ? "no time" : `set ${((Bk-tk)/fk.j).toFixed(1)} h ago`, `losses ${"number"===typeof Rk.losses?Rk.losses:"unset (1)"}${null!==tk&&Bk-tk<fk.f?", the last within a day":""}`, `hidden-only ${"number"===typeof Rk.hiddenLosses?Rk.hiddenLosses:"no"}`, `first page ${"hidden"===Rk.firstPage||"visible"===Rk.firstPage?Rk.firstPage:"unset (visible)"}`].join(", ")
+      }(kk, function(kk) {
         try {
-          return "object" === typeof uu && null !== uu && uu.browser === (0, Su.b)()
+          return "object" === typeof kk && null !== kk && kk.browser === (0, ek.b)()
         } catch {
           return !1
         }
-      }(uu), Date.now())
+      }(kk), Date.now())
     }
 
-    function gu() {
-      const uu = (0, Su.m)().now;
-      return "number" === typeof(null === uu || void 0 === uu ? void 0 : uu.losses) ? uu.losses : null
+    function rk() {
+      const kk = (0, ek.f)().now;
+      return "number" === typeof(null === kk || void 0 === kk ? void 0 : kk.losses) ? kk.losses : null
     }
 
-    function cu() {
+    function Dk() {
       const {
-        atLoad: uu,
-        now: Ru,
-        unreported: yu
-      } = (0, Su.m)(), Eu = JSON.stringify(uu) === JSON.stringify(Ru) ? "kx" : `now ${lu(Ru)}`;
-      su(`load (${Ju.q?"wasm":"js"}, os ${(0,Xu.getOperatingSystem)()}): stored loss ${lu(uu)}; ${Eu}; unreported ${function(uu){if(null===uu||void 0===uu||"object"!==typeof uu)return"none";const{hidden:Ru,visible:yu}=uu;return`
+        atLoad: kk,
+        now: Fk,
+        unreported: Bk
+      } = (0, ek.f)(), Rk = JSON.stringify(kk) === JSON.stringify(Fk) ? "lA" : `now ${Tk(Fk)}`;
+      ck(`load (${bk.p?"wasm":"js"}, os ${(0,dk.getOperatingSystem)()}): stored loss ${Tk(kk)}; ${Rk}; unreported ${function(kk){if(null===kk||void 0===kk||"object"!==typeof kk)return"none";const{hidden:Fk,visible:Bk}=kk;return`
         hidden $ {
-          "number" === typeof Ru ? Ru : 0
+          "number" === typeof Fk ? Fk : 0
         }, visible $ {
-          "number" === typeof yu ? yu : 0
+          "number" === typeof Bk ? Bk : 0
         }
-        `}(yu)}; webgpu_loss_page ${Su.u}`), su(`load: ${Cu(tu())}; pack expected ${(0,mu.h)(Xu.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
+        `}(Bk)}; webgpu_loss_page ${ek.n}`), ck(`load: ${Lk(Gk())}; pack expected ${(0,Xk.c)(dk.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
     }
 
-    function Lu(uu) {
-      Gu = uu, su(function(uu, Ru, yu) {
-        const Eu = uu.setting ? "the setting is on" : (0, Wu.e)(uu.packActive, uu.defaultOffForPacks) ? "the pack forces it" : uu.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
-        return `engine (js): useWebGpu ${bu(uu.useWebGpu)} (${Eu}); ${ku(Ru)}; webgpu fallback ${null!==yu&&void 0!==yu?yu:"unset"}`
-      }(uu, (0, Qu.f)(), (0, Xu.getWebGpuFallbackReason)()))
+    function zk(kk) {
+      Mk = kk, ck(function(kk, Fk, Bk) {
+        const Rk = kk.setting ? "the setting is on" : (0, mk.d)(kk.packActive, kk.defaultOffForPacks) ? "the pack forces it" : kk.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
+        return `engine (js): useWebGpu ${Yk(kk.useWebGpu)} (${Rk}); ${Ok(Fk)}; webgpu fallback ${null!==Bk&&void 0!==Bk?Bk:"unset"}`
+      }(kk, (0, ak.k)(), (0, dk.getWebGpuFallbackReason)()))
     }
 
-    function zu(uu) {
-      Uu = uu, su(Au(uu))
+    function Pk(kk) {
+      gk = kk, ck(Sk(kk))
     }
-    async function Fu(uu, Ru, Eu, Ku) {
-      const Qu = ++nu,
-        mu = await async function(uu) {
-          var Ru, Eu;
+    async function hk(kk, Fk, Rk, tk) {
+      const ak = ++Uk,
+        Xk = await async function(kk) {
+          var Fk, Rk;
           const [{
-            shaderPackPage: Ku,
-            harnessShaderPackMode: Qu
+            shaderPackPage: tk,
+            harnessShaderPackMode: ak
           }, {
-            getShaderPackPolicy: mu
+            getShaderPackPolicy: Xk
           }, {
-            packRunsIn: Ju
-          }] = await Promise.all([yu.e(129).then((() => yu(38963))), yu.e(89).then((() => yu(40860))), yu.e(133).then((() => yu(40869)))]), Nu = await Ku.load();
-          if ("none" === Nu.status) return null;
-          const Xu = null !== (Ru = Qu()) && void 0 !== Ru ? Ru : mu(uu),
-            Vu = "active" === Nu.status ? Nu.pack.variants : Nu.variants,
-            ru = Ju(Vu, Xu);
+            packRunsIn: bk
+          }] = await Promise.all([Bk.e(129).then((() => Bk(38817))), Bk.e(89).then((() => Bk(40709))), Bk.e(133).then((() => Bk(40714)))]), wk = await tk.load();
+          if ("none" === wk.status) return null;
+          const dk = null !== (Fk = ak()) && void 0 !== Fk ? Fk : Xk(kk),
+            sk = "active" === wk.status ? wk.pack.variants : wk.variants,
+            Vk = bk(sk, dk);
           return {
-            text: `${"active"===Nu.status?Du(Nu.pack.name,"active",Vu.length):Du(null,`blocked (${Nu.messageKey})`,null!==(Eu=null===Vu||void 0===Vu?void 0:Vu.length)&&void 0!==Eu?Eu:null)}; game policy ${Xu}, runs in it ${ru?"yes":"no"}`,
-            runs: ru
+            text: `${"active"===wk.status?Nk(wk.pack.name,"active",sk.length):Nk(null,`blocked (${wk.messageKey})`,null!==(Rk=null===sk||void 0===sk?void 0:sk.length)&&void 0!==Rk?Rk:null)}; game policy ${dk}, runs in it ${Vk?"yes":"no"}`,
+            runs: Vk
           }
-        }(uu);
-      if (null === mu) return void(Iu.noPack() && su(`join ${Qu}: no shader pack on this page (further joins without one not logged)`));
-      const Ju = Iu.join();
-      if ("none" === Ju) return;
-      if ("cap" === Ju) return void su(`join ${Qu}: further joins not logged`);
-      const Nu = function(uu) {
-          switch (uu.status) {
+        }(kk);
+      if (null === Xk) return void(uk.noPack() && ck(`join ${ak}: no shader pack on this page (further joins without one not logged)`));
+      const bk = uk.join();
+      if ("none" === bk) return;
+      if ("cap" === bk) return void ck(`join ${ak}: further joins not logged`);
+      const wk = function(kk) {
+          switch (kk.status) {
             case "ok":
-              return void 0 === uu.couldntRun ? "joined" : `joined without the pack: ${uu.couldntRun}`;
-            case "Ty":
-              return "Ty";
+              return void 0 === kk.couldntRun ? "joined" : `joined without the pack: ${kk.couldntRun}`;
+            case "yB":
+              return "yB";
             case "failed":
-              return `failed: ${uu.messageKey}`
+              return `failed: ${kk.messageKey}`
           }
-        }(Ru),
-        Xu = ("ok" === Ru.status ? Ru.couldntRun : "failed" === Ru.status ? Ru.messageKey : void 0) === Mu ? `; cause: ${Ku()}` : "";
-      "outcome" !== Ju ? (su(`join ${Qu}: ${mu.text}`), mu.runs && (su(`join ${Qu}: needs WebGPU; ${Eu()}`), su(`join ${Qu}: ${Cu(tu())}`)), su(`join ${Qu}: ${Nu}${Xu}`)) : su(`join ${Qu}: ${Nu}${Xu}`)
+        }(Fk),
+        dk = ("ok" === Fk.status ? Fk.couldntRun : "failed" === Fk.status ? Fk.messageKey : void 0) === Hk ? `; cause: ${tk()}` : "";
+      "outcome" !== bk ? (ck(`join ${ak}: ${Xk.text}`), Xk.runs && (ck(`join ${ak}: needs WebGPU; ${Rk()}`), ck(`join ${ak}: ${Lk(Gk())}`)), ck(`join ${ak}: ${wk}${dk}`)) : ck(`join ${ak}: ${wk}${dk}`)
     }
 
-    function wu(uu, Ru, yu) {
-      var Eu;
-      const Ku = null !== (Eu = null === Ru || void 0 === Ru ? void 0 : Ru.isRunning()) && void 0 !== Eu && Eu;
-      return Fu(uu, yu, (() => `Lite runtime ${null===Ru?"no":"yes, running "+(Ku?"yes":"no")}; ${ku((0,Qu.f)())}`), (() => {
-        return uu = Gu, Ru = tu(), yu = "ios" === (0, Xu.getOperatingSystem)(), Eu = gu(), null === uu ? "engine choice not seen" : uu.packActive ? (0, Wu.e)(uu.packActive, uu.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : Ru.lossStopsPack ? `a loss ${eu(yu,Eu)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (Ru.lossStopsPack ? "" : " (one that doesn't stop packs)");
-        var uu, Ru, yu, Eu
+    function qk(kk, Fk, Bk) {
+      var Rk;
+      const tk = null !== (Rk = null === Fk || void 0 === Fk ? void 0 : Fk.isRunning()) && void 0 !== Rk && Rk;
+      return hk(kk, Bk, (() => `Lite runtime ${null===Fk?"no":"yes, running "+(tk?"yes":"no")}; ${Ok((0,ak.k)())}`), (() => {
+        return kk = Mk, Fk = Gk(), Bk = "ios" === (0, dk.getOperatingSystem)(), Rk = rk(), null === kk ? "engine choice not seen" : kk.packActive ? (0, mk.d)(kk.packActive, kk.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : Fk.lossStopsPack ? `a loss ${Ek(Bk,Rk)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (Fk.lossStopsPack ? "" : " (one that doesn't stop packs)");
+        var kk, Fk, Bk, Rk
       }))
     }
 
-    function Zu(uu, Ru, yu) {
-      return Fu(uu, null !== Ru ? {
+    function Ck(kk, Fk, Bk) {
+      return hk(kk, null !== Fk ? {
         status: "failed",
-        messageKey: Ru
+        messageKey: Fk
       } : {
         status: "ok",
-        couldntRun: null !== yu && void 0 !== yu ? yu : void 0
-      }, (() => null === Uu ? "pick not seen" : Au(Uu)), (() => function(uu, Ru, yu, Eu) {
-        var Ku, Qu, mu, Ju;
-        return null === uu ? "pick not seen" : "off_after_loss" === uu.reason ? `off after a loss, ${"pack"===uu.source?eu(yu,Eu):`from ${null!==(Ju=uu.source)&&void 0!==Ju?Ju:"none"}`}` : "not_requested" === uu.reason ? `not requested, from ${null!==(mu=uu.source)&&void 0!==mu?mu:"none"} (setting ${Ru.setting?"on":"off"})` : `${null!==(Ku=uu.reason)&&void 0!==Ku?Ku:"none"}, from ${null!==(Qu=uu.source)&&void 0!==Qu?Qu:"none"}`
-      }(Uu, tu(), "ios" === (0, Xu.getOperatingSystem)(), gu())))
+        couldntRun: null !== Bk && void 0 !== Bk ? Bk : void 0
+      }, (() => null === gk ? "pick not seen" : Sk(gk)), (() => function(kk, Fk, Bk, Rk) {
+        var tk, ak, Xk, bk;
+        return null === kk ? "pick not seen" : "off_after_loss" === kk.reason ? `off after a loss, ${"pack"===kk.source?Ek(Bk,Rk):`from ${null!==(bk=kk.source)&&void 0!==bk?bk:"none"}`}` : "not_requested" === kk.reason ? `not requested, from ${null!==(Xk=kk.source)&&void 0!==Xk?Xk:"none"} (setting ${Fk.setting?"on":"off"})` : `${null!==(tk=kk.reason)&&void 0!==tk?tk:"none"}, from ${null!==(ak=kk.source)&&void 0!==ak?ak:"none"}`
+      }(gk, Gk(), "ios" === (0, dk.getOperatingSystem)(), rk())))
     }
 
-    function hu(uu, Ru, yu) {
-      const Eu = Iu.loss();
-      if ("none" === Eu) return;
-      if ("cap" === Eu) return void su("further losses not logged");
-      const Ku = tu();
-      su(function(uu, Ru, yu, Eu) {
-        return `loss (${uu}): ${Ru}${null===yu?"":` ${du(yu,Hu)}`}; ${Eu}`
-      }(uu, Ru, yu, `stored ${lu((0,Su.m)().now)}; holds ${Ku.lossHolds?"yes":"no"}, stops packs ${Ku.lossStopsPack?"yes":"no"}`))
+    function Zk(kk, Fk, Bk) {
+      const Rk = uk.loss();
+      if ("none" === Rk) return;
+      if ("cap" === Rk) return void ck("further losses not logged");
+      const tk = Gk();
+      ck(function(kk, Fk, Bk, Rk) {
+        return `loss (${kk}): ${Fk}${null===Bk?"":` ${ik(Bk,vk)}`}; ${Rk}`
+      }(kk, Fk, Bk, `stored ${Tk((0,ek.f)().now)}; holds ${tk.lossHolds?"yes":"no"}, stops packs ${tk.lossStopsPack?"yes":"no"}`))
     }
   },
-  8965: (uu, Ru, yu) => {
-    function Eu(uu, Ru) {
-      return uu && !Ru
+  8910: (kk, Fk, Bk) => {
+    function Rk(kk, Fk) {
+      return kk && !Fk
     }
-    yu.d(Ru, {
-      e: () => Eu
+    Bk.d(Fk, {
+      d: () => Rk
     })
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

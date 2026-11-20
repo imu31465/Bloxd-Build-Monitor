@@ -1,308 +1,308 @@
 export const id = 86;
 export const ids = [86];
 export const modules = {
-  38524: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Qu,
-      d: () => Nu,
-      e: () => Xu,
-      f: () => Ju,
-      j: () => mu
+  38401: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => ak,
+      f: () => wk,
+      j: () => dk,
+      l: () => bk,
+      n: () => Xk
     });
-    const Eu = "A valid external Instance reference no longer exists.",
-      Ku = [
+    const Rk = "A valid external Instance reference no longer exists.",
+      tk = [
         [1e4, "<10s", "lt10s"],
         [6e4, "<1m", "lt1m"],
         [3e5, "<5m", "lt5m"],
         [18e5, "<30m", "lt30m"],
         [1 / 0, "30m+", "ge30m"]
       ];
-    const Qu = {
+    const ak = {
       WebGPU: "WebGPU device lost",
       WebGL2: "WebGL2 context lost"
     };
 
-    function mu(uu, Ru) {
-      return uu ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(uu) {
-        var Ru;
-        const yu = null !== (Ru = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(uu)) && void 0 !== Ru ? Ru : /failed with ([A-Z][A-Z0-9_]+)/.exec(uu);
-        return yu ? yu[1] : uu.includes(Eu) ? "gpu_process_lost" : "other"
-      }(Ru)
+    function Xk(kk, Fk) {
+      return kk ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(kk) {
+        var Fk;
+        const Bk = null !== (Fk = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(kk)) && void 0 !== Fk ? Fk : /failed with ([A-Z][A-Z0-9_]+)/.exec(kk);
+        return Bk ? Bk[1] : kk.includes(Rk) ? "gpu_process_lost" : "other"
+      }(Fk)
     }
 
-    function Ju(uu) {
-      return `${(null===uu||void 0===uu?void 0:uu.vendor)||"unknown vendor"} ${(null===uu||void 0===uu?void 0:uu.architecture)||"unknown architecture"}`
+    function bk(kk) {
+      return `${(null===kk||void 0===kk?void 0:kk.vendor)||"unknown vendor"} ${(null===kk||void 0===kk?void 0:kk.architecture)||"unknown architecture"}`
     }
 
-    function Nu(uu) {
-      return Vu(uu)[1]
+    function wk(kk) {
+      return sk(kk)[1]
     }
 
-    function Xu(uu) {
-      return Vu(uu)[2]
+    function dk(kk) {
+      return sk(kk)[2]
     }
 
-    function Vu(uu) {
-      var Ru;
-      return null !== (Ru = Ku.find((Ru => {
-        let [yu] = Ru;
-        return uu < yu
-      }))) && void 0 !== Ru ? Ru : Ku[Ku.length - 1]
+    function sk(kk) {
+      var Fk;
+      return null !== (Fk = tk.find((Fk => {
+        let [Bk] = Fk;
+        return kk < Bk
+      }))) && void 0 !== Fk ? Fk : tk[tk.length - 1]
     }
   },
-  38818: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Eu,
-      i: () => Ku
+  38708: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Rk,
+      e: () => tk
     });
-    const Eu = 45e3;
-    class Ku extends Error {
+    const Rk = 45e3;
+    class tk extends Error {
       constructor() {
         super("The game server didn't answer in time"), this.name = "SeatRequestTimedOut"
       }
     }
   },
-  36330: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Eu,
-      g: () => Ku,
-      h: () => Qu
+  36217: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Rk,
+      e: () => tk,
+      f: () => ak
     });
-    const Eu = 1024,
-      Ku = 1024 * Eu;
+    const Rk = 1024,
+      tk = 1024 * Rk;
 
-    function Qu(uu) {
-      return (uu / Ku).toFixed(1)
+    function ak(kk) {
+      return (kk / tk).toFixed(1)
     }
   },
-  36328: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Qu,
-      g: () => Ju,
-      i: () => mu,
-      j: () => Nu,
-      l: () => Xu
+  36209: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => ak,
+      e: () => bk,
+      f: () => Xk,
+      i: () => wk,
+      l: () => dk
     });
-    var Eu = yu(212);
-    const Ku = 32 * yu(36330).g,
-      Qu = 6144,
-      mu = 4608,
-      Ju = 512;
+    var Rk = Bk(182);
+    const tk = 32 * Bk(36217).e,
+      ak = 6144,
+      Xk = 4608,
+      bk = 512;
 
-    function Nu(uu) {
-      return Math.floor(Ku * uu / Qu)
+    function wk(kk) {
+      return Math.floor(tk * kk / ak)
     }
 
-    function Xu(uu) {
-      const Ru = uu - Math.floor(uu / 6);
-      let yu = Eu.f.maxChunkHorizAddDistance,
-        Ku = Eu.f.maxChunkVertAddDistance;
-      if (Vu(yu + 1, Ku + 1) <= Ru) return null;
-      for (; Vu(yu + 1, Ku + 1) > Ru && (yu > 0 || Ku > 0);) yu > Ku ? yu-- : Ku--;
+    function dk(kk) {
+      const Fk = kk - Math.floor(kk / 6);
+      let Bk = Rk.h.maxChunkHorizAddDistance,
+        tk = Rk.h.maxChunkVertAddDistance;
+      if (sk(Bk + 1, tk + 1) <= Fk) return null;
+      for (; sk(Bk + 1, tk + 1) > Fk && (Bk > 0 || tk > 0);) Bk > tk ? Bk-- : tk--;
       return {
-        horizontal: yu,
-        vertical: Ku
+        horizontal: Bk,
+        vertical: tk
       }
     }
 
-    function Vu(uu, Ru) {
-      const yu = Math.max(uu, Ru);
-      let Eu = 0;
-      for (let Ku = -yu; Ku <= yu; Ku++)
-        for (let Qu = -yu; Qu <= yu; Qu++)
-          for (let mu = -yu; mu <= yu; mu++) ru(uu, Ru, Ku, Qu, mu) && Eu++;
-      return Eu
+    function sk(kk, Fk) {
+      const Bk = Math.max(kk, Fk);
+      let Rk = 0;
+      for (let tk = -Bk; tk <= Bk; tk++)
+        for (let ak = -Bk; ak <= Bk; ak++)
+          for (let Xk = -Bk; Xk <= Bk; Xk++) Vk(kk, Fk, tk, ak, Xk) && Rk++;
+      return Rk
     }
 
-    function ru(uu, Ru, yu, Eu, Ku) {
-      const Qu = yu * yu + Ku * Ku;
-      return uu === Ru ? Qu + Eu * Eu <= uu * uu : uu > Ru ? Math.abs(Eu) <= Ru && Qu + Eu * Eu <= uu * uu : Qu <= uu * uu && Qu + Eu * Eu <= Ru * Ru
+    function Vk(kk, Fk, Bk, Rk, tk) {
+      const ak = Bk * Bk + tk * tk;
+      return kk === Fk ? ak + Rk * Rk <= kk * kk : kk > Fk ? Math.abs(Rk) <= Fk && ak + Rk * Rk <= kk * kk : ak <= kk * kk && ak + Rk * Rk <= Fk * Fk
     }
   },
-  40424: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ku,
-      i: () => Qu,
-      j: () => Ju,
-      m: () => Vu,
-      p: () => Nu,
-      r: () => mu
+  40280: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => tk,
+      e: () => ak,
+      f: () => bk,
+      g: () => sk,
+      j: () => wk,
+      l: () => Xk
     });
-    var Eu = yu(212);
-    const Ku = 3e3,
-      Qu = 15e3;
+    var Rk = Bk(182);
+    const tk = 3e3,
+      ak = 15e3;
 
-    function mu(uu) {
-      const Ru = uu.endsWith(Eu.j);
+    function Xk(kk) {
+      const Fk = kk.endsWith(Rk.p);
       return {
-        text: (Ru ? uu.slice(0, -Eu.j.length) : uu) || null,
-        dropsCache: Ru
+        text: (Fk ? kk.slice(0, -Rk.p.length) : kk) || null,
+        dropsCache: Fk
       }
     }
-    const Ju = "Either your internet isn't working or this is a bug.";
+    const bk = "Either your internet isn't working or this is a bug.";
 
-    function Nu(uu, Ru) {
-      const yu = Vu(uu);
-      return null !== yu.name && "" === Eu.c[yu.name].text && null !== Ru ? Ru : yu.reason
+    function wk(kk, Fk) {
+      const Bk = sk(kk);
+      return null !== Bk.name && "" === Rk.e[Bk.name].text && null !== Fk ? Fk : Bk.reason
     }
-    const Xu = "You were removed from the game.";
+    const dk = "You were removed from the game.";
 
-    function Vu(uu) {
-      var Ru;
-      let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const Ku = null !== (Ru = Object.keys(Eu.c).find((Ru => Eu.c[Ru].code === uu))) && void 0 !== Ru ? Ru : null;
-      if (null === Ku) return {
-        code: uu,
-        name: Ku,
-        reason: null !== yu && void 0 !== yu ? yu : `${Ju}\nCode: ${uu}`,
+    function sk(kk) {
+      var Fk;
+      let Bk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const tk = null !== (Fk = Object.keys(Rk.e).find((Fk => Rk.e[Fk].code === kk))) && void 0 !== Fk ? Fk : null;
+      if (null === tk) return {
+        code: kk,
+        name: tk,
+        reason: null !== Bk && void 0 !== Bk ? Bk : `${bk}\nCode: ${kk}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: Qu,
-        canReconnect: mu = !1
-      } = Eu.c[Ku], Nu = uu === Eu.c.outdatedVersion.code || uu === Eu.c.loadRecaptchaError.code;
+        text: ak,
+        canReconnect: Xk = !1
+      } = Rk.e[tk], wk = kk === Rk.e.outdatedVersion.code || kk === Rk.e.loadRecaptchaError.code;
       return {
-        code: uu,
-        name: Ku,
-        reason: "" !== Qu ? Qu : null !== yu && void 0 !== yu ? yu : uu === Eu.c.gameOrPluginKick.code ? Xu : `Code: ${uu}`,
-        canReconnect: mu,
-        automaticallyReconnect: uu === Eu.c.customGameUpdated.code || uu === Eu.c.duplicateLobbyNameError.code,
-        requiresRefresh: Nu
+        code: kk,
+        name: tk,
+        reason: "" !== ak ? ak : null !== Bk && void 0 !== Bk ? Bk : kk === Rk.e.gameOrPluginKick.code ? dk : `Code: ${kk}`,
+        canReconnect: Xk,
+        automaticallyReconnect: kk === Rk.e.customGameUpdated.code || kk === Rk.e.duplicateLobbyNameError.code,
+        requiresRefresh: wk
       }
     }
   },
-  4562: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      B: () => Iu,
-      Bb: () => hu,
-      Cb: () => Ou,
-      Cc: () => Eu.rb,
-      Db: () => fu,
-      Dd: () => Pu,
-      E: () => mu,
-      F: () => nu,
-      Fb: () => RR,
-      Gc: () => xR,
-      Ib: () => Ku.d,
-      Ic: () => XR,
-      Id: () => Zu,
-      J: () => BR,
-      Jd: () => Yu,
-      K: () => vu,
-      Kb: () => eu,
-      Mb: () => cu,
-      Mc: () => ER,
-      Nc: () => Eu.ub,
-      Nd: () => iu,
-      O: () => Eu.g,
-      Pb: () => Gu,
-      Q: () => Xu,
-      Qc: () => Eu.xb,
-      R: () => Eu.i,
-      Rd: () => mR,
-      Sb: () => Mu,
-      Sc: () => Eu.yb,
-      Tb: () => Eu.N,
-      U: () => Eu.j,
-      Uc: () => au,
-      Ud: () => SR,
-      Vb: () => Uu,
-      Vd: () => du,
-      Wb: () => bu,
-      Wc: () => Eu.Db,
-      Wd: () => ou,
-      Xb: () => QR,
-      Xc: () => Eu.Hb,
-      Y: () => qu,
-      Yc: () => Eu.Ib,
-      Yd: () => lu,
-      Zc: () => Eu.Pb,
-      Zd: () => tu,
-      _b: () => Hu,
-      _c: () => Eu.Rb,
-      ab: () => Eu.s,
-      ac: () => VR,
-      bb: () => Eu.w,
-      bc: () => Ku.h,
-      bd: () => Eu.Sb,
-      be: () => su,
-      cc: () => Wu,
-      d: () => uR,
-      ee: () => Nu,
-      fb: () => Eu.x,
-      fc: () => yR,
-      fd: () => Du,
-      g: () => pu,
-      he: () => gu,
-      jb: () => ru,
-      jc: () => Eu.W,
-      jd: () => Eu.Tb,
-      k: () => Su,
-      ke: () => pR,
-      m: () => NR,
-      mb: () => ju,
-      md: () => Eu.Vb,
-      nb: () => Eu.B,
-      nc: () => Eu.X,
-      nd: () => Eu.Zb,
-      od: () => Qu,
-      oe: () => xu,
-      p: () => Au,
-      qb: () => Eu.E,
-      rc: () => Eu.$,
-      rd: () => Tu,
-      sb: () => Fu,
-      t: () => ku,
-      ub: () => KR,
-      uc: () => Eu.db,
-      ud: () => JR,
-      vb: () => Vu,
-      w: () => Eu.c,
-      xd: () => zu,
-      yb: () => Eu.G,
-      yc: () => Eu.hb,
-      yd: () => wu,
-      z: () => rR,
-      zd: () => Lu
+  4524: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      A: () => Ik,
+      Ab: () => Hk,
+      B: () => Rk.g,
+      Bc: () => Rk.Fb,
+      C: () => dk,
+      Cb: () => Rk.G,
+      Cc: () => Rk.Jb,
+      Eb: () => gk,
+      Ec: () => Nk,
+      G: () => Rk.h,
+      Gc: () => Rk.Kb,
+      Hb: () => Yk,
+      I: () => Rk.i,
+      Ib: () => XF,
+      Jb: () => vk,
+      K: () => lk,
+      Kc: () => Rk.Lb,
+      Lc: () => Rk.Rb,
+      M: () => Rk.q,
+      Nb: () => VF,
+      Ob: () => tk.n,
+      P: () => Rk.t,
+      Pb: () => mk,
+      Pc: () => ak,
+      Qc: () => fk,
+      Rb: () => RF,
+      S: () => Rk.u,
+      Sb: () => Rk.O,
+      Sc: () => wF,
+      T: () => Vk,
+      Tc: () => Pk,
+      Ub: () => Rk.R,
+      Uc: () => qk,
+      V: () => Wk,
+      Wc: () => zk,
+      Xc: () => pk,
+      Yb: () => Rk.T,
+      Z: () => Rk.y,
+      Zb: () => Rk.X,
+      _b: () => Rk.$,
+      ab: () => Rk.z,
+      bb: () => hk,
+      cc: () => Rk.jb,
+      db: () => aF,
+      dc: () => eF,
+      dd: () => Ck,
+      e: () => FF,
+      ec: () => sF,
+      ed: () => xk,
+      fd: () => Kk,
+      g: () => yk,
+      gb: () => sk,
+      gd: () => bF,
+      hb: () => Rk.A,
+      hc: () => tF,
+      hd: () => yF,
+      i: () => ek,
+      ib: () => Zk,
+      ic: () => Rk.kb,
+      jb: () => nk,
+      jc: () => Rk.ob,
+      jd: () => ik,
+      k: () => dF,
+      kd: () => jk,
+      l: () => Sk,
+      m: () => Ok,
+      mb: () => kF,
+      mc: () => Rk.pb,
+      md: () => Tk,
+      nc: () => Qk,
+      o: () => Rk.d,
+      ob: () => BF,
+      od: () => Gk,
+      p: () => JF,
+      q: () => uk,
+      qb: () => tk.g,
+      qd: () => ck,
+      rb: () => Ek,
+      rc: () => Rk.tb,
+      rd: () => wk,
+      s: () => Xk,
+      sc: () => Rk.vb,
+      td: () => rk,
+      u: () => Uk,
+      ub: () => Dk,
+      wb: () => Mk,
+      wc: () => Rk.yb,
+      wd: () => fF,
+      xc: () => Rk.Db,
+      xd: () => Ak,
+      y: () => AF
     });
-    var Eu = yu(4564),
-      Ku = yu(2306);
-    const Qu = Math.round(1e3 / Eu.Zb),
-      mu = 4,
-      Ju = 2;
+    var Rk = Bk(4531),
+      tk = Bk(2303);
+    const ak = Math.round(1e3 / Rk.Rb),
+      Xk = 4,
+      bk = 2;
 
-    function Nu() {
-      return crypto.getRandomValues(new Uint32Array(Ju))
+    function wk() {
+      return crypto.getRandomValues(new Uint32Array(bk))
     }
-    const Xu = {
+    const dk = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      Vu = 16,
-      ru = {
+      sk = 16,
+      Vk = {
         Draws: 1,
         NetAll: 2
       },
-      Bu = {
+      Jk = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function xu(uu) {
-      return (uu.nametagsHidden ? Cu.NametagsHidden : 0) | (uu.crouchToggle ? Cu.CrouchToggle : 0) | (uu.bhopDisabled ? Cu.BhopDisabled : 0) | (uu.disableBobbing ? Cu.DisableBobbing : 0) | (uu.ezTowering ? Cu.EzTowering : 0) | (uu.ezBridging ? Cu.EzBridging : 0) | (uu.showChunkBorders ? Cu.ShowChunkBorders : 0)
+    function Ak(kk) {
+      return (kk.nametagsHidden ? Lk.NametagsHidden : 0) | (kk.crouchToggle ? Lk.CrouchToggle : 0) | (kk.bhopDisabled ? Lk.BhopDisabled : 0) | (kk.disableBobbing ? Lk.DisableBobbing : 0) | (kk.ezTowering ? Lk.EzTowering : 0) | (kk.ezBridging ? Lk.EzBridging : 0) | (kk.showChunkBorders ? Lk.ShowChunkBorders : 0)
     }
-    const Su = {
+    const ek = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      pu = {
+      yk = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -310,7 +310,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      Tu = {
+      fk = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -319,7 +319,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      Wu = {
+      mk = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -328,20 +328,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      ju = 5,
-      Hu = 4294967295;
+      Wk = 5,
+      vk = 4294967295;
 
-    function du(uu) {
-      return (uu.showFog ? Bu.ShowFog : 0) | (uu.lighting ? Bu.Lighting : 0) | (uu.chunkFade ? Bu.ChunkFade : 0)
+    function ik(kk) {
+      return (kk.showFog ? Jk.ShowFog : 0) | (kk.lighting ? Jk.Lighting : 0) | (kk.chunkFade ? Jk.ChunkFade : 0)
     }
-    const bu = {
+    const Yk = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      Cu = {
+      Lk = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -351,50 +351,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      ku = {
+      Ok = {
         Release: 1,
         KeepTouches: 2
       },
-      eu = {
+      Ek = {
         Point: 1,
         Stamped: 2
       },
-      Au = {
+      Sk = {
         Add: 1,
         Clear: 2
       },
-      Du = 1,
-      Mu = 8,
-      Iu = 16777215,
-      Gu = 4,
-      Uu = {
+      Nk = 1,
+      Hk = 8,
+      uk = 16777215,
+      Mk = 4,
+      gk = {
         Resume: 1
       },
-      nu = {
+      Uk = {
         Held: 1
       };
 
-    function su(uu, Ru) {
-      return (uu | Ru << 8) >>> 0
+    function ck(kk, Fk) {
+      return (kk | Fk << 8) >>> 0
     }
 
-    function tu(uu) {
-      return 255 & uu
+    function Gk(kk) {
+      return 255 & kk
     }
 
-    function lu(uu) {
-      return uu >>> 8
+    function Tk(kk) {
+      return kk >>> 8
     }
 
-    function gu(uu) {
-      return uu + 3 & -4
+    function rk(kk) {
+      return kk + 3 & -4
     }
-    const cu = 16777216,
-      Lu = 20;
-    const zu = 8,
-      Fu = 8,
-      wu = 16777216,
-      Zu = {
+    const Dk = 16777216,
+      zk = 20;
+    const Pk = 8,
+      hk = 8,
+      qk = 16777216,
+      Ck = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -402,19 +402,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      hu = {
+      Zk = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      Pu = 16,
-      iu = {
+      pk = 16,
+      Kk = {
         Lost: 0,
         Gone: 1
       },
-      Yu = {
+      xk = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -422,18 +422,18 @@ export const modules = {
         Retire: 5
       };
 
-    function ou(uu) {
-      return uu === Yu.WorldgenSeed || uu === Yu.Generate
+    function jk(kk) {
+      return kk === xk.WorldgenSeed || kk === xk.Generate
     }
-    const qu = 4,
-      Ou = 99,
-      vu = {
+    const lk = 4,
+      nk = 99,
+      Ik = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      au = {
+      Qk = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -441,40 +441,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      fu = 12,
-      uR = 16,
-      RR = 4,
-      yR = 12,
-      ER = {
+      kF = 12,
+      FF = 16,
+      BF = 4,
+      RF = 12,
+      tF = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      KR = 4,
-      QR = 8,
-      mR = 8,
-      JR = {
+      aF = 4,
+      XF = 8,
+      bF = 8,
+      wF = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      NR = {
+      dF = {
         Crit: 1,
         HitSelf: 2
       },
-      XR = {
+      sF = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      VR = {
+      VF = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      rR = 12,
-      BR = {
+      JF = 12,
+      AF = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -483,80 +483,80 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      xR = 67108864;
+      eF = 67108864;
 
-    function SR(uu) {
-      for (const [Ru, yu] of Object.entries(Eu.g))
-        if (yu === uu) return Ru;
-      return `Unknown${uu}`
+    function yF(kk) {
+      for (const [Fk, Bk] of Object.entries(Rk.g))
+        if (Bk === kk) return Fk;
+      return `Unknown${kk}`
     }
 
-    function pR(uu) {
+    function fF(kk) {
       return {
-        status: uu[Eu.E.Status],
-        lastError: uu[Eu.E.LastError],
-        lastErrorDetail: uu[Eu.E.LastErrorDetail],
-        errorCount: uu[Eu.E.ErrorCount],
-        frameIndex: uu[Eu.E.FrameIndex],
-        tickIndex: uu[Eu.E.TickIndex],
-        renderPending: uu[Eu.E.RenderPending],
-        firstView: uu[Eu.E.FirstView],
-        chunksCancelled: uu[Eu.E.ChunksCancelled]
+        status: kk[Rk.z.Status],
+        lastError: kk[Rk.z.LastError],
+        lastErrorDetail: kk[Rk.z.LastErrorDetail],
+        errorCount: kk[Rk.z.ErrorCount],
+        frameIndex: kk[Rk.z.FrameIndex],
+        tickIndex: kk[Rk.z.TickIndex],
+        renderPending: kk[Rk.z.RenderPending],
+        firstView: kk[Rk.z.FirstView],
+        chunksCancelled: kk[Rk.z.ChunksCancelled]
       }
     }
   },
-  40223: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Eu,
-      f: () => ru,
-      g: () => Ju,
-      j: () => Qu,
-      k: () => Ku,
-      m: () => Nu,
-      p: () => Vu
+  40065: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Rk,
+      f: () => Vk,
+      h: () => bk,
+      k: () => ak,
+      n: () => tk,
+      r: () => wk,
+      t: () => sk
     });
-    class Eu extends Error {
+    class Rk extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function Ku(uu) {
-      return uu instanceof RangeError && /call stack/i.test(uu.message) || uu instanceof Error && "InternalError" === uu.name && /recursion/i.test(uu.message)
+    function tk(kk) {
+      return kk instanceof RangeError && /call stack/i.test(kk.message) || kk instanceof Error && "InternalError" === kk.name && /recursion/i.test(kk.message)
     }
 
-    function Qu(uu) {
-      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(uu))
+    function ak(kk) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(kk))
     }
-    const mu = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const Xk = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function Ju(uu) {
-      var Ru;
-      return uu instanceof WebAssembly.RuntimeError || uu instanceof Eu || Ku(uu) && mu.test(null !== (Ru = uu.stack) && void 0 !== Ru ? Ru : "")
-    }
-
-    function Nu(uu, Ru) {
-      if (Ju(uu)) throw uu;
-      console.error(Ru, uu)
+    function bk(kk) {
+      var Fk;
+      return kk instanceof WebAssembly.RuntimeError || kk instanceof Rk || tk(kk) && Xk.test(null !== (Fk = kk.stack) && void 0 !== Fk ? Fk : "")
     }
 
-    function Xu(uu, Ru, yu, Ku, Qu) {
-      if (Ru % Ku !== 0 || Ru + yu > uu.byteLength) throw new Eu(`${Qu}: ${yu} bytes at ${Ru}, ${Ku}-aligned, outside ${uu.byteLength} bytes of memory`)
+    function wk(kk, Fk) {
+      if (bk(kk)) throw kk;
+      console.error(Fk, kk)
     }
 
-    function Vu(uu, Ru, yu, Eu, Ku) {
-      return 0 === yu ? null : (Xu(Ru, yu, Eu * uu.BYTES_PER_ELEMENT, uu.BYTES_PER_ELEMENT, Ku), new uu(Ru, yu, Eu))
+    function dk(kk, Fk, Bk, tk, ak) {
+      if (Fk % tk !== 0 || Fk + Bk > kk.byteLength) throw new Rk(`${ak}: ${Bk} bytes at ${Fk}, ${tk}-aligned, outside ${kk.byteLength} bytes of memory`)
     }
 
-    function ru(uu, Ru, yu, Eu, Ku) {
-      return 0 === Ru ? null : (Xu(uu, Ru, yu, Eu, Ku), new DataView(uu, Ru, yu))
+    function sk(kk, Fk, Bk, Rk, tk) {
+      return 0 === Bk ? null : (dk(Fk, Bk, Rk * kk.BYTES_PER_ELEMENT, kk.BYTES_PER_ELEMENT, tk), new kk(Fk, Bk, Rk))
+    }
+
+    function Vk(kk, Fk, Bk, Rk, tk) {
+      return 0 === Fk ? null : (dk(kk, Fk, Bk, Rk, tk), new DataView(kk, Fk, Bk))
     }
   },
-  40573: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Eu
+  40421: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => Rk
     });
-    const Eu = {
+    const Rk = {
       destroy_stage_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYlWP8//8/IwMewIRPknQFjIyM/wmaYGdn9w9FE7IjYSagiFHsCwCM7A/Ccc+NjAAAAABJRU5ErkJggg==",
       destroy_stage_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQklEQVQYlYWPMQ4AIAgDOeO7+v9XWScMOGinpjmgYJt4aKQB/ASqKtwASeuGZxrbAEhyRJxe1JJ1debtRIZt6PfmBqYNG36KBWHbAAAAAElFTkSuQmCC",
       destroy_stage_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARUlEQVQYlYWPwQnAMAwDdaVr2ftPVfWVIBJC9DI6LMvYRpIAjzn1rMaq9wQAbwnd/SWUJNkmb1eVkx07zPK5PaLTu37xA3+wH3UI6vmHAAAAAElFTkSuQmCC",
@@ -569,251 +569,251 @@ export const modules = {
       destroy_stage_9: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAUElEQVQYlW2OyQ3AMAgEhyhtQfF2X9m8IKvIvBDMHkgKSQGQmcJGUtBAZsr3hm6Aqnr4zUBOt4vfJh8gIuTPtdZFK1ztXUbtcXvvz/nU3F1eyBpW2eqlL9QAAAAASUVORK5CYII="
     }
   },
-  40520: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Su,
-      f: () => pu,
-      h: () => Bu,
-      i: () => ru
+  40362: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => ek,
+      e: () => yk,
+      g: () => Jk,
+      k: () => Vk
     });
-    const Eu = 2e3,
-      Ku = "unavailable";
-    let Qu = () => Promise.resolve().then((() => yu(3036))),
-      mu = null,
-      Ju = null,
-      Nu = Xu();
+    const Rk = 2e3,
+      tk = "unavailable";
+    let ak = () => Promise.resolve().then((() => Bk(3039))),
+      Xk = null,
+      bk = null,
+      wk = dk();
 
-    function Xu() {
-      let uu = () => {};
+    function dk() {
+      let kk = () => {};
       return {
-        promise: new Promise((Ru => {
-          uu = () => {
-            Ru(null)
+        promise: new Promise((Fk => {
+          kk = () => {
+            Fk(null)
           }
         })),
-        resolve: uu
+        resolve: kk
       }
     }
 
-    function Vu() {
-      if (null === mu) {
-        const uu = Qu();
-        mu = uu, uu.then((Ru => {
-          mu === uu && (Ju = Ru)
+    function sk() {
+      if (null === Xk) {
+        const kk = ak();
+        Xk = kk, kk.then((Fk => {
+          Xk === kk && (bk = Fk)
         }), (() => {
-          mu === uu && (mu = null)
+          Xk === kk && (Xk = null)
         }))
       }
-      return mu
+      return Xk
     }
 
-    function ru() {
-      Vu().catch((() => {}))
+    function Vk() {
+      sk().catch((() => {}))
     }
 
-    function Bu() {
-      Nu.resolve()
+    function Jk() {
+      wk.resolve()
     }
 
-    function xu(uu, Ru, yu, Eu) {
-      if (null === uu) return {
-        errorKind: Ru,
-        fingerprint: Ku,
-        dedupe: `${Ru}|${Eu}`
+    function Ak(kk, Fk, Bk, Rk) {
+      if (null === kk) return {
+        errorKind: Fk,
+        fingerprint: tk,
+        dedupe: `${Fk}|${Rk}`
       };
       const {
-        fingerprint: Qu
-      } = uu.clientErrorKey(Ru, yu, Eu);
+        fingerprint: ak
+      } = kk.clientErrorKey(Fk, Bk, Rk);
       return {
-        errorKind: Ru,
-        fingerprint: Qu,
-        dedupe: Qu
+        errorKind: Fk,
+        fingerprint: ak,
+        dedupe: ak
       }
     }
 
-    function Su(uu, Ru, yu, Eu) {
-      return null === Ju ? Eu ? (ru(), xu(null, uu, Ru, yu)) : null : xu(Ju, uu, Ru, yu)
+    function ek(kk, Fk, Bk, Rk) {
+      return null === bk ? Rk ? (Vk(), Ak(null, kk, Fk, Bk)) : null : Ak(bk, kk, Fk, Bk)
     }
-    async function pu(uu, Ru, yu) {
-      let Ku;
-      const Qu = new Promise((uu => {
-        Ku = setTimeout((() => {
-          uu(null)
-        }), Eu)
+    async function yk(kk, Fk, Bk) {
+      let tk;
+      const ak = new Promise((kk => {
+        tk = setTimeout((() => {
+          kk(null)
+        }), Rk)
       }));
       try {
-        return xu(await Promise.race([Vu(), Qu, Nu.promise]), uu, Ru, yu)
+        return Ak(await Promise.race([sk(), ak, wk.promise]), kk, Fk, Bk)
       } catch {
-        return xu(null, uu, Ru, yu)
+        return Ak(null, kk, Fk, Bk)
       } finally {
-        clearTimeout(Ku)
+        clearTimeout(tk)
       }
     }
   },
-  40513: (uu, Ru, yu) => {
-    yu.r(Ru), yu.d(Ru, {
-      BUILT_IN_ANIMATIONS_SITE: () => Pu,
-      CORE_ERRORS_SITE: () => tu,
-      EVENT_OVERFLOW_SITE: () => hu,
-      FIRST_VIEW_SITE: () => Yu,
-      JOIN_SITE: () => gu,
-      LEAVE_SITE: () => cu,
-      MODEL_FEED_SITE: () => Lu,
-      MODEL_POOL_SITE: () => zu,
-      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => qu,
-      NON_FATAL_REPORTS_PER_SESSION: () => VR,
-      PREVIEW_ANIMATIONS_SITE: () => Zu,
-      RENDER_RELOAD_SITE: () => wu,
-      TEXTURE_NAMES_SITE: () => Fu,
-      TEXTURE_PACK_FEED_SITE: () => iu,
-      TurnstilePageError: () => LR,
-      WASM_LOAD_SITE: () => lu,
-      crashError: () => pR,
-      crashReportsSettled: () => bR,
-      flushCrashReports: () => HR,
-      joinFailureCode: () => zR,
-      lokiTransport: () => au,
-      modelFailureCode: () => YR,
-      readTrap: () => eR,
-      renderLossDetail: () => ry,
-      renderReloadMessage: () => Xy,
-      reportCoreErrors: () => kR,
-      reportCountedLoadFallback: () => gR,
-      reportCrash: () => TR,
-      reportDataLoadFailure: () => Ty,
-      reportDisconnect: () => PR,
-      reportDracoDecoderFailure: () => vR,
-      reportEventOverflow: () => uy,
-      reportFirstViewNoTerrain: () => Qy,
-      reportGpuFallback: () => tR,
-      reportGpuWasmPopulation: () => lR,
-      reportLightFault: () => yy,
-      reportMemoryShed: () => Ky,
-      reportModelFailure: () => oR,
-      reportModelPoolFailure: () => qR,
-      reportModelsModuleRetry: () => OR,
-      reportPageJoinFailure: () => wR,
-      reportReconnectGaveUp: () => iR,
-      reportRenderReload: () => xy,
-      reportReplayFault: () => Jy,
-      reportStaleBuildReload: () => jy,
-      reportStoppedCore: () => IR,
-      reportTerrainTextureFailure: () => Sy,
-      reportTexturePackFeedLoadFailure: () => fR,
-      reportUnstreamedCoreLoad: () => cR,
-      reportUnsupportedFallback: () => nR,
-      reportUnusedSeat: () => hR,
-      reportWorkerLost: () => Ry,
-      reportWorkerStartTimeout: () => my,
-      reportWorldgenGaveUp: () => Ey,
-      reportWorldgenLoadFailure: () => aR,
-      resetCrashReports: () => CR,
-      setCrashBackend: () => QR,
-      setCrashScreen: () => ER,
-      setCrashTransport: () => RR,
-      showCrash: () => MR,
-      showJoinFailure: () => FR,
-      showUnsupported: () => UR
+  40355: (kk, Fk, Bk) => {
+    Bk.r(Fk), Bk.d(Fk, {
+      BUILT_IN_ANIMATIONS_SITE: () => pk,
+      CORE_ERRORS_SITE: () => Gk,
+      EVENT_OVERFLOW_SITE: () => Zk,
+      FIRST_VIEW_SITE: () => xk,
+      JOIN_SITE: () => rk,
+      LEAVE_SITE: () => Dk,
+      MODEL_FEED_SITE: () => zk,
+      MODEL_POOL_SITE: () => Pk,
+      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => lk,
+      NON_FATAL_REPORTS_PER_SESSION: () => VF,
+      PREVIEW_ANIMATIONS_SITE: () => Ck,
+      RENDER_RELOAD_SITE: () => qk,
+      TEXTURE_NAMES_SITE: () => hk,
+      TEXTURE_PACK_FEED_SITE: () => Kk,
+      TurnstilePageError: () => zF,
+      WASM_LOAD_SITE: () => Tk,
+      crashError: () => fF,
+      crashReportsSettled: () => oF,
+      flushCrashReports: () => iF,
+      joinFailureCode: () => PF,
+      lokiTransport: () => Qk,
+      modelFailureCode: () => xF,
+      readTrap: () => EF,
+      renderLossDetail: () => JB,
+      renderReloadMessage: () => sB,
+      reportCoreErrors: () => OF,
+      reportCountedLoadFallback: () => rF,
+      reportCrash: () => mF,
+      reportDataLoadFailure: () => mB,
+      reportDisconnect: () => pF,
+      reportDracoDecoderFailure: () => IF,
+      reportEventOverflow: () => FB,
+      reportFirstViewNoTerrain: () => XB,
+      reportGpuFallback: () => GF,
+      reportGpuWasmPopulation: () => TF,
+      reportLightFault: () => RB,
+      reportMemoryShed: () => aB,
+      reportModelFailure: () => jF,
+      reportModelPoolFailure: () => lF,
+      reportModelsModuleRetry: () => nF,
+      reportPageJoinFailure: () => qF,
+      reportReconnectGaveUp: () => KF,
+      reportRenderReload: () => eB,
+      reportReplayFault: () => wB,
+      reportStaleBuildReload: () => vB,
+      reportStoppedCore: () => uF,
+      reportTerrainTextureFailure: () => yB,
+      reportTexturePackFeedLoadFailure: () => kB,
+      reportUnstreamedCoreLoad: () => DF,
+      reportUnsupportedFallback: () => UF,
+      reportUnusedSeat: () => ZF,
+      reportWorkerLost: () => BB,
+      reportWorkerStartTimeout: () => bB,
+      reportWorldgenGaveUp: () => tB,
+      reportWorldgenLoadFailure: () => QF,
+      resetCrashReports: () => LF,
+      setCrashBackend: () => XF,
+      setCrashScreen: () => tF,
+      setCrashTransport: () => BF,
+      showCrash: () => HF,
+      showJoinFailure: () => hF,
+      showUnsupported: () => gF
     });
-    var Eu = yu(1056),
-      Ku = yu(293),
-      Qu = yu(3040),
-      mu = yu(40520),
-      Ju = yu(4562),
-      Nu = yu(40523),
-      Xu = yu(3273),
-      Vu = yu(38524),
-      ru = yu(145),
-      Bu = yu(680),
-      xu = yu(143),
-      Su = yu(3282),
-      pu = yu(38818),
-      Tu = yu(1699),
-      Wu = yu(40480),
-      ju = yu(40173),
-      Hu = yu(40433),
-      du = yu(40440),
-      bu = yu(40525),
-      Cu = yu(3510),
-      ku = yu(3514),
-      eu = yu(40528),
-      Au = yu(40553),
-      Du = yu(40559),
-      Mu = yu(36615),
-      Iu = yu(3044),
-      Gu = yu(36170),
-      Uu = yu(40371),
-      nu = yu(36176);
-    const su = "[bloxd-wasm-client]",
-      tu = "coreErrors",
-      lu = "wasmLoad",
-      gu = "join",
-      cu = "leave",
-      Lu = "modelFeed",
-      zu = "modelWorkerPool",
-      Fu = "textureNames",
-      wu = "renderReload",
-      Zu = "previewAnimations",
-      hu = "eventOverflow",
-      Pu = "builtInAnimations",
-      iu = "texturePackFeed",
-      Yu = "firstView",
-      ou = 300,
-      qu = 8;
-    let Ou = 0;
-    const vu = new Set,
-      au = (uu, Ru) => {
-        const yu = mR[uu.kind];
-        if (null === yu) return void fu(uu, Ru, KR, null);
-        const Eu = (0, mu.e)(yu, uu.message, uu.code, uu.fatal);
-        if (null !== Eu) return void fu(uu, Ru, KR, Eu);
-        const Ku = KR;
-        jR("Loki", (async () => {
-          fu(uu, Ru, Ku, await (0, mu.f)(yu, uu.message, uu.code))
+    var Rk = Bk(1047),
+      tk = Bk(252),
+      ak = Bk(3044),
+      Xk = Bk(40362),
+      bk = Bk(4524),
+      wk = Bk(40364),
+      dk = Bk(3272),
+      sk = Bk(38401),
+      Vk = Bk(132),
+      Jk = Bk(670),
+      Ak = Bk(130),
+      ek = Bk(3276),
+      yk = Bk(38708),
+      fk = Bk(1698),
+      mk = Bk(40330),
+      Wk = Bk(40015),
+      vk = Bk(40284),
+      ik = Bk(40288),
+      Yk = Bk(40370),
+      Lk = Bk(3502),
+      Ok = Bk(3506),
+      Ek = Bk(40379),
+      Sk = Bk(40401),
+      Nk = Bk(40407),
+      Hk = Bk(36522),
+      uk = Bk(3052),
+      Mk = Bk(36011),
+      gk = Bk(40200),
+      Uk = Bk(36019);
+    const ck = "[bloxd-wasm-client]",
+      Gk = "coreErrors",
+      Tk = "wasmLoad",
+      rk = "join",
+      Dk = "leave",
+      zk = "modelFeed",
+      Pk = "modelWorkerPool",
+      hk = "textureNames",
+      qk = "renderReload",
+      Ck = "previewAnimations",
+      Zk = "eventOverflow",
+      pk = "builtInAnimations",
+      Kk = "texturePackFeed",
+      xk = "firstView",
+      jk = 300,
+      lk = 8;
+    let nk = 0;
+    const Ik = new Set,
+      Qk = (kk, Fk) => {
+        const Bk = bF[kk.kind];
+        if (null === Bk) return void kF(kk, Fk, aF, null);
+        const Rk = (0, Xk.d)(Bk, kk.message, kk.code, kk.fatal);
+        if (null !== Rk) return void kF(kk, Fk, aF, Rk);
+        const tk = aF;
+        vF("Loki", (async () => {
+          kF(kk, Fk, tk, await (0, Xk.e)(Bk, kk.message, kk.code))
         }))
       };
 
-    function fu(uu, Ru, yu, Ku) {
+    function kF(kk, Fk, Bk, tk) {
       const {
-        kind: mu,
-        code: Ju,
-        site: Nu,
-        fatal: Xu,
-        details: Vu
-      } = uu;
-      if (!Xu)
-        if (null === Ku || (0, Qu.b)(Ku.errorKind) || vu.has(Ku.dedupe)) {
-          if (Ou >= qu) return;
-          Ou++
-        } else vu.add(Ku.dedupe);
-      const ru = {
-        ...Vu,
-        kind: mu,
-        code: Ju,
-        site: Nu,
-        fatal: String(Xu),
-        backend: yu
+        kind: Xk,
+        code: bk,
+        site: wk,
+        fatal: dk,
+        details: sk
+      } = kk;
+      if (!dk)
+        if (null === tk || (0, ak.b)(tk.errorKind) || Ik.has(tk.dedupe)) {
+          if (nk >= lk) return;
+          nk++
+        } else Ik.add(tk.dedupe);
+      const Vk = {
+        ...sk,
+        kind: Xk,
+        code: bk,
+        site: wk,
+        fatal: String(dk),
+        backend: Bk
       };
-      null !== Ku && (ru.errorKind = Ku.errorKind, ru.fingerprint = Ku.fingerprint), Ru instanceof Error && "string" === typeof Ru.stack && (ru.causeStack = Ru.stack.slice(0, 2e3)), (0, Eu.jp)(pR(uu, Ru), ru)
+      null !== tk && (Vk.errorKind = tk.errorKind, Vk.fingerprint = tk.fingerprint), Fk instanceof Error && "string" === typeof Fk.stack && (Vk.causeStack = Fk.stack.slice(0, 2e3)), (0, Rk.ly)(fF(kk, Fk), Vk)
     }
-    let uR = au;
+    let FF = Qk;
 
-    function RR(uu) {
-      const Ru = uR;
-      return uR = uu, Ru
+    function BF(kk) {
+      const Fk = FF;
+      return FF = kk, Fk
     }
-    let yR = () => {};
+    let RF = () => {};
 
-    function ER(uu) {
-      const Ru = yR;
-      return yR = uu, Ru
+    function tF(kk) {
+      const Fk = RF;
+      return RF = kk, Fk
     }
-    let KR = "unpicked";
+    let aF = "unpicked";
 
-    function QR(uu) {
-      KR = uu
+    function XF(kk) {
+      aF = kk
     }
-    const mR = {
+    const bF = {
         crash: "wasm_load",
         unsupported: "wasm_load",
         model: "wasm_load",
@@ -836,187 +836,187 @@ export const modules = {
         staleBuild: "wasm_load",
         disconnect: "disconnect"
       },
-      JR = {
+      wF = {
         coreError: "wasm_load",
         recovered: "wasm_load",
         unstreamedLoad: "wasm_load",
         noTerrain: "wasm_load",
         gpuFallback: "wasm_load"
       },
-      NR = new Set(["unstreamedLoad"]);
-    let XR = !1;
-    const VR = 20,
-      rR = new Map;
-    let BR = 0,
-      xR = 0;
-    const SR = new Set;
+      dF = new Set(["unstreamedLoad"]);
+    let sF = !1;
+    const VF = 20,
+      JF = new Map;
+    let AF = 0,
+      eF = 0;
+    const yF = new Set;
 
-    function pR(uu, Ru) {
-      const yu = Object.assign(new Error(`${uu.code}: ${uu.message}`), {
+    function fF(kk, Fk) {
+      const Bk = Object.assign(new Error(`${kk.code}: ${kk.message}`), {
         name: "WasmClientCrash",
-        cause: null !== Ru && void 0 !== Ru ? Ru : void 0
+        cause: null !== Fk && void 0 !== Fk ? Fk : void 0
       });
-      return Ru instanceof Error && Ru.stack && (yu.stack = Ru.stack), yu
+      return Fk instanceof Error && Fk.stack && (Bk.stack = Fk.stack), Bk
     }
 
-    function TR(uu) {
-      var Ru, Eu;
+    function mF(kk) {
+      var Fk, Rk;
       const {
-        kind: Ku,
-        code: Qu,
-        site: mu,
-        fatal: Ju,
-        message: Nu,
-        error: Xu
-      } = uu, Vu = !1 !== uu.toTransport && !NR.has(Ku), ru = !Ju && Vu, Bu = {
-        kind: Ku,
-        code: Qu,
-        site: mu,
-        fatal: Ju,
-        message: Nu,
-        details: null !== (Ru = uu.details) && void 0 !== Ru ? Ru : {}
-      }, xu = `${Qu}@${mu}${void 0===uu.instance?"":`#${uu.instance}`}${Ju?"!":""}`, Su = (null !== (Eu = rR.get(xu)) && void 0 !== Eu ? Eu : 0) + 1;
-      if (rR.set(xu, Su), Su > 1 ? 0 === (Su & Su - 1) && WR((() => {
-          console.warn(`${su} ${Qu} at ${mu} reported ${Su} times`)
-        })) : ru && BR >= VR ? WR((() => {
-          console.warn(`${su} ${Ku} ${Qu} at ${mu}: ${Nu} (not sent: the session's ${VR} went)`, Bu.details, null !== Xu && void 0 !== Xu ? Xu : "")
-        })) : (ru && BR++, function(uu, Ru, Eu) {
-          var Ku, Qu;
+        kind: tk,
+        code: ak,
+        site: Xk,
+        fatal: bk,
+        message: wk,
+        error: dk
+      } = kk, sk = !1 !== kk.toTransport && !dF.has(tk), Vk = !bk && sk, Jk = {
+        kind: tk,
+        code: ak,
+        site: Xk,
+        fatal: bk,
+        message: wk,
+        details: null !== (Fk = kk.details) && void 0 !== Fk ? Fk : {}
+      }, Ak = `${ak}@${Xk}${void 0===kk.instance?"":`#${kk.instance}`}${bk?"!":""}`, ek = (null !== (Rk = JF.get(Ak)) && void 0 !== Rk ? Rk : 0) + 1;
+      if (JF.set(Ak, ek), ek > 1 ? 0 === (ek & ek - 1) && WF((() => {
+          console.warn(`${ck} ${ak} at ${Xk} reported ${ek} times`)
+        })) : Vk && AF >= VF ? WF((() => {
+          console.warn(`${ck} ${tk} ${ak} at ${Xk}: ${wk} (not sent: the session's ${VF} went)`, Jk.details, null !== dk && void 0 !== dk ? dk : "")
+        })) : (Vk && AF++, function(kk, Fk, Rk) {
+          var tk, ak;
           const {
-            kind: mu,
-            code: Ju,
-            site: Nu,
-            fatal: Xu,
-            message: Vu,
-            details: ru
-          } = uu;
-          WR((() => {
-            (Xu ? console.error : console.warn)(`${su} ${mu} ${Ju} at ${Nu}: ${Vu}`, ru, null !== Ru && void 0 !== Ru ? Ru : "")
+            kind: Xk,
+            code: bk,
+            site: wk,
+            fatal: dk,
+            message: sk,
+            details: Vk
+          } = kk;
+          WF((() => {
+            (dk ? console.error : console.warn)(`${ck} ${Xk} ${bk} at ${wk}: ${sk}`, Vk, null !== Fk && void 0 !== Fk ? Fk : "")
           }));
-          const Bu = JR[mu],
-            xu = null !== (Ku = null !== (Qu = mR[mu]) && void 0 !== Qu ? Qu : Bu) && void 0 !== Ku ? Ku : null;
-          null !== xu && jR("counts", (async () => {
+          const Jk = wF[Xk],
+            Ak = null !== (tk = null !== (ak = bF[Xk]) && void 0 !== ak ? ak : Jk) && void 0 !== tk ? tk : null;
+          null !== Ak && vF("counts", (async () => {
             const {
-              peekVisitSessionId: uu
-            } = await Promise.resolve().then((() => yu(640)));
-            if (null !== uu()) {
+              peekVisitSessionId: kk
+            } = await Promise.resolve().then((() => Bk(633)));
+            if (null !== kk()) {
               const {
-                reportCappedWasmFailure: uu,
-                reportWasmFailure: Ru
-              } = await yu.e(207).then((() => yu(36163)));
-              (void 0 === Bu ? Ru : uu)(xu, Vu, Ju), XR = !0
+                reportCappedWasmFailure: kk,
+                reportWasmFailure: Fk
+              } = await Bk.e(207).then((() => Bk(36003)));
+              (void 0 === Jk ? Fk : kk)(Ak, sk, bk), sF = !0
             }
           }));
-          Eu && WR((() => {
-            uR(uu, Ru)
+          Rk && WF((() => {
+            FF(kk, Fk)
           }))
-        }(Bu, Xu, Vu)), Ju) {
-        var pu;
-        const Ru = null !== (pu = uu.screen) && void 0 !== pu ? pu : {
-          text: (0, Mu.g)(Bu, !0),
+        }(Jk, dk, sk)), bk) {
+        var yk;
+        const Fk = null !== (yk = kk.screen) && void 0 !== yk ? yk : {
+          text: (0, Hk.f)(Jk, !0),
           reload: !0
         };
-        WR((() => {
-          yR(Ru)
+        WF((() => {
+          RF(Fk)
         }))
       }
-      return Bu
+      return Jk
     }
 
-    function WR(uu) {
+    function WF(kk) {
       try {
-        uu()
-      } catch (Ru) {
+        kk()
+      } catch (Fk) {
         try {
-          console.warn(`${su} could not send a report`, Ru)
+          console.warn(`${ck} could not send a report`, Fk)
         } catch {}
       }
     }
 
-    function jR(uu, Ru) {
+    function vF(kk, Fk) {
       try {
-        const yu = Ru().catch((Ru => {
-          console.warn(`${su} could not send the report to ${uu}`, Ru)
+        const Bk = Fk().catch((Fk => {
+          console.warn(`${ck} could not send the report to ${kk}`, Fk)
         })).finally((() => {
-          SR.delete(yu)
+          yF.delete(Bk)
         }));
-        SR.add(yu)
-      } catch (yu) {
-        console.warn(`${su} could not send the report to ${uu}`, yu)
+        yF.add(Bk)
+      } catch (Bk) {
+        console.warn(`${ck} could not send the report to ${kk}`, Bk)
       }
     }
-    async function HR(uu) {
-      let Ru;
-      (0, mu.h)();
-      const yu = new Promise((yu => {
-        Ru = setTimeout(yu, uu)
+    async function iF(kk) {
+      let Fk;
+      (0, Xk.g)();
+      const Bk = new Promise((Bk => {
+        Fk = setTimeout(Bk, kk)
       }));
-      await Promise.race([dR(), yu]), clearTimeout(Ru)
+      await Promise.race([YF(), Bk]), clearTimeout(Fk)
     }
-    async function dR() {
-      if (await Promise.allSettled([...SR]), XR) try {
+    async function YF() {
+      if (await Promise.allSettled([...yF]), sF) try {
         const {
-          flushClientAnalyticsEvents: uu
-        } = await Promise.resolve().then((() => yu(1442)));
-        await uu()
-      } catch (uu) {
-        console.warn(`${su} could not send the counts`, uu)
+          flushClientAnalyticsEvents: kk
+        } = await Promise.resolve().then((() => Bk(1437)));
+        await kk()
+      } catch (kk) {
+        console.warn(`${ck} could not send the counts`, kk)
       }
     }
-    async function bR() {
-      for (; SR.size > 0;) await Promise.allSettled([...SR])
+    async function oF() {
+      for (; yF.size > 0;) await Promise.allSettled([...yF])
     }
 
-    function CR() {
-      rR.clear(), BR = 0, XR = !1, Ou = 0, vu.clear(), xR = 0, (0, Nu.o)()
+    function LF() {
+      JF.clear(), AF = 0, sF = !1, nk = 0, Ik.clear(), eF = 0, (0, wk.l)()
     }
 
-    function kR(uu, Ru, yu, Eu) {
-      xR += Ru;
+    function OF(kk, Fk, Bk, Rk) {
+      eF += Fk;
       for (const {
-          code: mu,
-          detail: Xu
+          code: Xk,
+          detail: dk
         }
-        of uu) {
-        var Ku, Qu;
-        const uu = (0, Ju.Ud)(mu),
-          Ru = (0, Nu.b)(mu, Xu),
-          Vu = null === Eu || void 0 === Eu ? void 0 : Eu(mu, Xu),
-          ru = void 0 !== (null === Ru || void 0 === Ru ? void 0 : Ru.gpuDetails),
-          Bu = ru ? null === (Ku = (0, xu.j)()) || void 0 === Ku ? void 0 : Ku.renderer : void 0,
-          Su = ru ? ` ${(0,Nu.f)()}` : "",
-          pu = Array.from([Bu && `gpu ${(0,Nu.q)(Bu)}`, Vu].filter(Boolean).join("; ")).slice(0, ou).join(""),
-          Tu = `core error ${uu}${null!==(Qu=null===Ru||void 0===Ru?void 0:Ru.words)&&void 0!==Qu?Qu:""}${Su}${pu?`: ${pu}`:""}`,
-          Wu = {
-            errorCode: String(mu),
-            detail: String(Xu),
-            droppedBefore: String(xR),
-            wasmBuild: yu.wasm,
-            clientVersion: yu.client,
-            ...null === Ru || void 0 === Ru ? void 0 : Ru.gpuDetails
+        of kk) {
+        var tk, ak;
+        const kk = (0, bk.hd)(Xk),
+          Fk = (0, wk.e)(Xk, dk),
+          sk = null === Rk || void 0 === Rk ? void 0 : Rk(Xk, dk),
+          Vk = void 0 !== (null === Fk || void 0 === Fk ? void 0 : Fk.gpuDetails),
+          Jk = Vk ? null === (tk = (0, Ak.o)()) || void 0 === tk ? void 0 : tk.renderer : void 0,
+          ek = Vk ? ` ${(0,wk.h)()}` : "",
+          yk = Array.from([Jk && `gpu ${(0,wk.m)(Jk)}`, sk].filter(Boolean).join("; ")).slice(0, jk).join(""),
+          fk = `core error ${kk}${null!==(ak=null===Fk||void 0===Fk?void 0:Fk.words)&&void 0!==ak?ak:""}${ek}${yk?`: ${yk}`:""}`,
+          mk = {
+            errorCode: String(Xk),
+            detail: String(dk),
+            droppedBefore: String(eF),
+            wasmBuild: Bk.wasm,
+            clientVersion: Bk.client,
+            ...null === Fk || void 0 === Fk ? void 0 : Fk.gpuDetails
           };
-        null !== Ru && (0, Nu.l)(Ru) ? WR((() => {
-          console.warn(`${su} coreError CORE-${uu}: ${Tu} (not sent: the session's render warnings of its kind went)`, Wu)
-        })) : TR({
-          kind: mu === Ju.O.JobsHeapGaveUp ? "meshHeap" : "coreError",
-          code: `CORE-${uu}`,
-          site: tu,
+        null !== Fk && (0, wk.k)(Fk) ? WF((() => {
+          console.warn(`${ck} coreError CORE-${kk}: ${fk} (not sent: the session's render warnings of its kind went)`, mk)
+        })) : mF({
+          kind: Xk === bk.B.JobsHeapGaveUp ? "meshHeap" : "coreError",
+          code: `CORE-${kk}`,
+          site: Gk,
           fatal: !1,
-          message: Tu,
-          details: Wu,
-          instance: null === Ru || void 0 === Ru ? void 0 : Ru.instance
+          message: fk,
+          details: mk,
+          instance: null === Fk || void 0 === Fk ? void 0 : Fk.instance
         })
       }
     }
 
-    function eR(uu) {
-      return (0, Gu.m)(uu instanceof Uu.b ? uu.trap : uu, Cu.y, Cu.bb)
+    function EF(kk) {
+      return (0, Mk.j)(kk instanceof gk.d ? kk.trap : kk, Lk.C, Lk.Z)
     }
-    const AR = "declined=js";
+    const SF = "declined=js";
 
-    function DR(uu) {
-      return uu ? {
-        labels: [AR],
+    function NF(kk) {
+      return kk ? {
+        labels: [SF],
         details: {
           declined: "js"
         }
@@ -1026,189 +1026,189 @@ export const modules = {
       }
     }
 
-    function MR(uu, Ru, yu) {
-      return GR(uu, Ru, yu, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
+    function HF(kk, Fk, Bk) {
+      return MF(kk, Fk, Bk, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
     }
 
-    function IR(uu, Ru, yu) {
-      return GR(uu, Ru, yu, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
+    function uF(kk, Fk, Bk) {
+      return MF(kk, Fk, Bk, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
     }
 
-    function GR(uu, Ru, yu, Eu, Ku) {
+    function MF(kk, Fk, Bk, Rk, tk) {
       let {
-        memoryDetails: Qu = {},
-        declined: mu = !1
-      } = Eu;
+        memoryDetails: ak = {},
+        declined: Xk = !1
+      } = Rk;
       const {
-        code: Ju,
-        details: Nu,
-        message: Xu
-      } = (0, Wu.B)(uu, Ru), Vu = [];
-      null !== yu && (Nu.trapKind = yu.kind, null !== yu.panic && (Nu.panic = (0, Gu.i)(yu.panic)), yu.refusedBytes > 0 && (Nu.refusedAllocation = String(yu.refusedBytes)), Vu.push((0, Gu.o)(yu.kind, yu.refusedBytes)));
-      const ru = DR(mu);
-      return TR({
+        code: bk,
+        details: wk,
+        message: dk
+      } = (0, mk.H)(kk, Fk), sk = [];
+      null !== Bk && (wk.trapKind = Bk.kind, null !== Bk.panic && (wk.panic = (0, Mk.g)(Bk.panic)), Bk.refusedBytes > 0 && (wk.refusedAllocation = String(Bk.refusedBytes)), sk.push((0, Mk.n)(Bk.kind, Bk.refusedBytes)));
+      const Vk = NF(Xk);
+      return mF({
         kind: "crash",
-        code: Ju,
-        site: uu.site,
-        fatal: Ku,
-        message: [...Vu, ...ru.labels, Xu].join("; "),
+        code: bk,
+        site: kk.site,
+        fatal: tk,
+        message: [...sk, ...Vk.labels, dk].join("; "),
         details: {
-          ...Nu,
-          ...ru.details,
-          ...Qu
+          ...wk,
+          ...Vk.details,
+          ...ak
         },
-        error: uu.error
+        error: kk.error
       })
     }
 
-    function UR(uu, Ru, yu) {
-      return TR({
+    function gF(kk, Fk, Bk) {
+      return mF({
         kind: "unsupported",
-        code: Ru,
-        site: lu,
+        code: Fk,
+        site: Tk,
         fatal: !0,
-        message: yu,
+        message: Bk,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: uu,
-          status: Ru
+          cause: kk,
+          status: Fk
         },
         screen: {
-          text: (0, Mu.r)(uu),
-          reload: "download" === uu
+          text: (0, Hk.s)(kk),
+          reload: "download" === kk
         }
       })
     }
 
-    function nR(uu, Ru, yu) {
-      return TR({
+    function UF(kk, Fk, Bk) {
+      return mF({
         kind: "unsupportedFallback",
-        code: "blockedAfterLoss" === Ru ? "blocked_after_loss" : "unsupported_js_fallback",
-        site: lu,
+        code: "blockedAfterLoss" === Fk ? "blocked_after_loss" : "unsupported_js_fallback",
+        site: Tk,
         fatal: !1,
-        message: yu,
+        message: Bk,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: uu,
+          cause: kk,
           status: "unsupported",
-          decline: Ru,
+          decline: Fk,
           fallback: "js"
         }
       })
     }
-    const sR = "misdrawn_gpu_js_fallback";
+    const cF = "misdrawn_gpu_js_fallback";
 
-    function tR(uu, Ru) {
-      return TR({
+    function GF(kk, Fk) {
+      return mF({
         kind: "gpuFallback",
-        code: sR,
-        site: lu,
+        code: cF,
+        site: Tk,
         fatal: !1,
-        message: `the renderer plays ${uu} on ${Ru} worse than the JS client`,
+        message: `the renderer plays ${kk} on ${Fk} worse than the JS client`,
         details: {
-          gpuFamily: uu,
-          backend: Ru,
+          gpuFamily: kk,
+          backend: Fk,
           fallback: "js"
         }
       })
     }
 
-    function lR(uu) {
-      jR("counts", (async () => {
-        await (0, Bu.d)(uu), XR = !0
+    function TF(kk) {
+      vF("counts", (async () => {
+        await (0, Jk.b)(kk), sF = !0
       }))
     }
 
-    function gR(uu, Ru, yu, Eu) {
-      const Ku = DR(Eu);
-      return TR({
+    function rF(kk, Fk, Bk, Rk) {
+      const tk = NF(Rk);
+      return mF({
         kind: "unsupported",
-        code: Ru,
-        site: lu,
+        code: Fk,
+        site: Tk,
         fatal: !1,
-        message: [...Ku.labels, yu].join("; "),
+        message: [...tk.labels, Bk].join("; "),
         details: {
-          cause: uu,
-          status: Ru,
+          cause: kk,
+          status: Fk,
           fallback: "js",
-          ...Ku.details
+          ...tk.details
         }
       })
     }
 
-    function cR() {
+    function DF() {
       const {
-        code: uu,
-        message: Ru
-      } = Iu.e;
-      return TR({
+        code: kk,
+        message: Fk
+      } = uk.b;
+      return mF({
         kind: "unstreamedLoad",
-        code: uu,
-        site: lu,
+        code: kk,
+        site: Tk,
         fatal: !1,
-        message: Ru
+        message: Fk
       })
     }
-    class LR extends Error {
+    class zF extends Error {
       constructor() {
         super("the shell's page can't run the Turnstile check: join from /play"), this.name = "TurnstilePageError"
       }
     }
 
-    function zR(uu) {
-      return uu instanceof Hu.l ? 0 === uu.code ? "JOIN-matchmake" : `JOIN-${uu.code}` : uu instanceof Hu.b ? 0 === uu.code ? `JOIN-${uu.stage}` : `JOIN-${uu.stage}-${uu.code}` : uu instanceof ju.e ? "JOIN-gameCode" : uu instanceof LR ? "JOIN-turnstilePage" : uu instanceof Hu.v ? "JOIN-trafficCheck" : uu instanceof pu.i ? "JOIN-timeout" : "JOIN-network"
+    function PF(kk) {
+      return kk instanceof vk.n ? 0 === kk.code ? "JOIN-matchmake" : `JOIN-${kk.code}` : kk instanceof vk.e ? 0 === kk.code ? `JOIN-${kk.stage}` : `JOIN-${kk.stage}-${kk.code}` : kk instanceof Wk.c ? "JOIN-gameCode" : kk instanceof zF ? "JOIN-turnstilePage" : kk instanceof vk.y ? "JOIN-trafficCheck" : kk instanceof yk.e ? "JOIN-timeout" : "JOIN-network"
     }
 
-    function FR(uu, Ru) {
-      const yu = (0, nu.k)(uu),
-        Eu = {
-          wasmBuild: Ru.wasm,
-          clientVersion: Ru.client
+    function hF(kk, Fk) {
+      const Bk = (0, Uk.j)(kk),
+        Rk = {
+          wasmBuild: Fk.wasm,
+          clientVersion: Fk.client
         },
-        Ku = uu instanceof LR ? {
-          text: (0, Mu.k)(),
+        tk = kk instanceof zF ? {
+          text: (0, Hk.l)(),
           reload: !1
         } : void 0,
-        Qu = (0, du.f)(uu),
-        mu = "expected" !== Qu;
-      return TR({
+        ak = (0, ik.h)(kk),
+        Xk = "expected" !== ak;
+      return mF({
         kind: "join",
-        code: zR(uu),
-        site: gu,
+        code: PF(kk),
+        site: rk,
         fatal: !0,
-        message: yu,
-        details: Eu,
-        error: uu,
-        screen: Ku,
-        toTransport: mu,
-        instance: Qu
+        message: Bk,
+        details: Rk,
+        error: kk,
+        screen: tk,
+        toTransport: Xk,
+        instance: ak
       })
     }
 
-    function wR(uu, Ru, yu) {
-      var Eu;
-      const Ku = (0, du.f)(uu),
-        Qu = {
-          cause: (uu instanceof Hu.b || uu instanceof Hu.l) && null !== (Eu = uu.serverText) && void 0 !== Eu ? Eu : "",
-          sinceJoinStart: (0, Su.d)(yu.sinceJoinStartMs),
-          game: yu.game,
-          ...(0, Su.k)(),
-          wasmBuild: Ru.wasm,
-          clientVersion: Ru.client
+    function qF(kk, Fk, Bk) {
+      var Rk;
+      const tk = (0, ik.h)(kk),
+        ak = {
+          cause: (kk instanceof vk.e || kk instanceof vk.n) && null !== (Rk = kk.serverText) && void 0 !== Rk ? Rk : "",
+          sinceJoinStart: (0, ek.d)(Bk.sinceJoinStartMs),
+          game: Bk.game,
+          ...(0, ek.l)(),
+          wasmBuild: Fk.wasm,
+          clientVersion: Fk.client
         };
-      return TR({
+      return mF({
         kind: "pageJoin",
-        code: zR(uu),
-        site: gu,
+        code: PF(kk),
+        site: rk,
         fatal: !1,
-        message: (0, nu.k)(uu),
-        details: Qu,
-        error: uu,
-        toTransport: "unrecognised" === Ku,
-        instance: Ku
+        message: (0, Uk.j)(kk),
+        details: ak,
+        error: kk,
+        toTransport: "unrecognised" === tk,
+        instance: tk
       })
     }
-    const ZR = {
+    const CF = {
       renewed: {
         code: "CORE-seatRenewed",
         message: "the early seat outlasted the room's hold, so the join reserved another"
@@ -1227,956 +1227,956 @@ export const modules = {
       }
     };
 
-    function hR(uu, Ru) {
+    function ZF(kk, Fk) {
       let {
-        unused: yu,
-        answered: Eu,
-        heldMs: Ku
-      } = uu;
+        unused: Bk,
+        answered: Rk,
+        heldMs: tk
+      } = kk;
       const {
-        code: Qu,
-        message: mu
-      } = ZR[yu], Ju = {
-        unused: yu,
-        answered: String(Eu),
-        heldMs: String(Ku),
-        wasmBuild: Ru.wasm,
-        clientVersion: Ru.client
+        code: ak,
+        message: Xk
+      } = CF[Bk], bk = {
+        unused: Bk,
+        answered: String(Rk),
+        heldMs: String(tk),
+        wasmBuild: Fk.wasm,
+        clientVersion: Fk.client
       };
-      return TR({
+      return mF({
         kind: "seat",
-        code: Qu,
-        site: gu,
+        code: ak,
+        site: rk,
         fatal: !1,
-        message: mu,
-        details: Ju
+        message: Xk,
+        details: bk
       })
     }
 
-    function PR(uu, Ru, yu) {
-      var Eu;
-      let Ku = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (Eu = uu.name) && void 0 !== Eu ? Eu : String(uu.code);
-      const Qu = {
-          closeCode: String(uu.code),
-          recognised: String(null !== uu.name),
-          closeReason: yu.closeReason,
-          sinceJoined: (0, Su.d)(yu.sinceJoinedMs),
-          game: yu.game,
-          ...(0, Su.k)(),
-          wasmBuild: Ru.wasm,
-          clientVersion: Ru.client
+    function pF(kk, Fk, Bk) {
+      var Rk;
+      let tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (Rk = kk.name) && void 0 !== Rk ? Rk : String(kk.code);
+      const ak = {
+          closeCode: String(kk.code),
+          recognised: String(null !== kk.name),
+          closeReason: Bk.closeReason,
+          sinceJoined: (0, ek.d)(Bk.sinceJoinedMs),
+          game: Bk.game,
+          ...(0, ek.l)(),
+          wasmBuild: Fk.wasm,
+          clientVersion: Fk.client
         },
-        mu = null === uu.name && !(0, Su.g)(uu.code);
-      return TR({
+        Xk = null === kk.name && !(0, ek.h)(kk.code);
+      return mF({
         kind: "disconnect",
-        code: Ku,
-        site: cu,
+        code: tk,
+        site: Dk,
         fatal: !1,
         message: "Left room",
-        details: Qu,
-        toTransport: mu
+        details: ak,
+        toTransport: Xk
       })
     }
 
-    function iR(uu, Ru) {
-      const yu = {
-        ...(0, Xu.m)(uu),
-        wasmBuild: Ru.wasm,
-        clientVersion: Ru.client
+    function KF(kk, Fk) {
+      const Bk = {
+        ...(0, dk.k)(kk),
+        wasmBuild: Fk.wasm,
+        clientVersion: Fk.client
       };
-      return TR({
+      return mF({
         kind: "disconnect",
-        code: `reconnect-${uu.reason}`,
-        site: gu,
+        code: `reconnect-${kk.reason}`,
+        site: rk,
         fatal: !1,
         message: "Reconnect failed",
-        details: yu
+        details: Bk
       })
     }
 
-    function YR(uu) {
-      return uu.error instanceof ku.e ? `MODEL-${uu.error.status}` : uu.error instanceof eu.j ? "MODEL-ring" : "MODEL-network"
+    function xF(kk) {
+      return kk.error instanceof Ok.g ? `MODEL-${kk.error.status}` : kk.error instanceof Ek.k ? "MODEL-ring" : "MODEL-network"
     }
 
-    function oR(uu, Ru) {
-      const yu = YR(uu),
-        Eu = `model file ${uu.file} ${uu.startup?"(startup) ":""}could not load`,
-        Ku = {
-          file: String(uu.file),
-          url: uu.url,
-          wasmBuild: Ru.wasm,
-          clientVersion: Ru.client
+    function jF(kk, Fk) {
+      const Bk = xF(kk),
+        Rk = `model file ${kk.file} ${kk.startup?"(startup) ":""}could not load`,
+        tk = {
+          file: String(kk.file),
+          url: kk.url,
+          wasmBuild: Fk.wasm,
+          clientVersion: Fk.client
         };
-      return TR({
-        kind: uu.startup ? "model" : "modelLate",
-        code: yu,
-        site: Lu,
-        fatal: uu.startup,
-        message: Eu,
-        details: Ku,
-        error: uu.error
+      return mF({
+        kind: kk.startup ? "model" : "modelLate",
+        code: Bk,
+        site: zk,
+        fatal: kk.startup,
+        message: Rk,
+        details: tk,
+        error: kk.error
       })
     }
 
-    function qR(uu, Ru) {
-      const yu = {
-        wasmBuild: Ru.wasm,
-        clientVersion: Ru.client
+    function lF(kk, Fk) {
+      const Bk = {
+        wasmBuild: Fk.wasm,
+        clientVersion: Fk.client
       };
-      return TR({
+      return mF({
         kind: "model",
         code: "CORE-modelWorkerPool",
-        site: zu,
+        site: Pk,
         fatal: !1,
         message: "the model workers could not start: no model can build",
-        details: yu,
-        error: uu
+        details: Bk,
+        error: kk
       })
     }
 
-    function OR(uu, Ru, yu) {
-      const Eu = {
-        delayMs: String(Ru),
-        wasmBuild: yu.wasm,
-        clientVersion: yu.client
+    function nF(kk, Fk, Bk) {
+      const Rk = {
+        delayMs: String(Fk),
+        wasmBuild: Bk.wasm,
+        clientVersion: Bk.client
       };
-      uu instanceof ku.e && (Eu.status = String(uu.status));
-      return TR({
+      kk instanceof Ok.g && (Rk.status = String(kk.status));
+      return mF({
         kind: "recovered",
         code: "CORE-modelsModuleRetry",
-        site: zu,
+        site: Pk,
         fatal: !1,
         message: "the models module didn't download: fetching it again",
-        details: Eu,
-        error: uu
+        details: Rk,
+        error: kk
       })
     }
 
-    function vR(uu, Ru) {
-      const yu = {
-        wasmBuild: Ru.wasm,
-        clientVersion: Ru.client
+    function IF(kk, Fk) {
+      const Bk = {
+        wasmBuild: Fk.wasm,
+        clientVersion: Fk.client
       };
-      return TR({
+      return mF({
         kind: "recovered",
         code: "CORE-dracoDecoder",
-        site: zu,
+        site: Pk,
         fatal: !1,
         message: "the Draco decoder did not load: the Draco files waiting on it failed",
-        details: yu,
-        error: uu
+        details: Bk,
+        error: kk
       })
     }
 
-    function aR(uu, Ru) {
-      const yu = {
-        wasmBuild: Ru.wasm,
-        clientVersion: Ru.client
+    function QF(kk, Fk) {
+      const Bk = {
+        wasmBuild: Fk.wasm,
+        clientVersion: Fk.client
       };
-      return TR({
+      return mF({
         kind: "worldgenLoad",
         code: "CORE-worldgenLoad",
-        site: Wu.x,
+        site: mk.C,
         fatal: !1,
         message: "world-gen worker code could not load",
-        details: yu,
-        error: uu
+        details: Bk,
+        error: kk
       })
     }
 
-    function fR(uu, Ru) {
-      const yu = {
-        wasmBuild: Ru.wasm,
-        clientVersion: Ru.client
+    function kB(kk, Fk) {
+      const Bk = {
+        wasmBuild: Fk.wasm,
+        clientVersion: Fk.client
       };
-      return TR({
+      return mF({
         kind: "texturePackLoad",
         code: "CORE-texturePackLoad",
-        site: iu,
+        site: Kk,
         fatal: !1,
         message: "texture pack feed code could not load",
-        details: yu,
-        error: uu
+        details: Bk,
+        error: kk
       })
     }
 
-    function uy(uu, Ru) {
+    function FB(kk, Fk) {
       const {
-        frames: yu,
-        acks: Eu,
-        mask: Ku,
-        outcome: Qu
-      } = uu, mu = {
-        frames: String(yu),
-        acks: String(Eu),
-        mask: String(Ku),
-        outcome: null !== Qu && void 0 !== Qu ? Qu : "resynced",
-        wasmBuild: Ru.wasm,
-        clientVersion: Ru.client
+        frames: Bk,
+        acks: Rk,
+        mask: tk,
+        outcome: ak
+      } = kk, Xk = {
+        frames: String(Bk),
+        acks: String(Rk),
+        mask: String(tk),
+        outcome: null !== ak && void 0 !== ak ? ak : "resynced",
+        wasmBuild: Fk.wasm,
+        clientVersion: Fk.client
       };
-      return TR({
+      return mF({
         kind: "recovered",
-        code: "rejoined" === Qu ? "CORE-eventOverflowRejoin" : "failed" === Qu ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
-        site: hu,
+        code: "rejoined" === ak ? "CORE-eventOverflowRejoin" : "failed" === ak ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
+        site: Zk,
         fatal: !1,
-        message: `the event buffer refused records in ${yu} frames`,
-        details: mu
+        message: `the event buffer refused records in ${Bk} frames`,
+        details: Xk
       })
     }
 
-    function Ry(uu, Ru, yu) {
-      return TR({
+    function BB(kk, Fk, Bk) {
+      return mF({
         kind: "recovered",
         code: "CORE-workerLost",
-        site: uu,
+        site: kk,
         fatal: !1,
-        message: `a ${uu} worker was lost`,
+        message: `a ${kk} worker was lost`,
         details: {
-          reason: Ru,
-          wasmBuild: yu.wasm,
-          clientVersion: yu.client
+          reason: Fk,
+          wasmBuild: Bk.wasm,
+          clientVersion: Bk.client
         }
       })
     }
 
-    function yy(uu, Ru, yu) {
-      const Eu = {
-        wasmBuild: yu.wasm,
-        clientVersion: yu.client
+    function RB(kk, Fk, Bk) {
+      const Rk = {
+        wasmBuild: Bk.wasm,
+        clientVersion: Bk.client
       };
-      return TR({
+      return mF({
         kind: "recovered",
-        code: uu,
-        site: Wu.l,
+        code: kk,
+        site: mk.m,
         fatal: !1,
-        message: Ru,
-        details: Eu
+        message: Fk,
+        details: Rk
       })
     }
 
-    function Ey(uu, Ru) {
-      const yu = {
-        lastReason: uu,
-        wasmBuild: Ru.wasm,
-        clientVersion: Ru.client
+    function tB(kk, Fk) {
+      const Bk = {
+        lastReason: kk,
+        wasmBuild: Fk.wasm,
+        clientVersion: Fk.client
       };
-      return TR({
+      return mF({
         kind: "recovered",
         code: "CORE-worldgenGaveUp",
-        site: Wu.x,
+        site: mk.C,
         fatal: !1,
         message: "no world-gen worker generated: chunks come whole",
-        details: yu
+        details: Bk
       })
     }
 
-    function Ky(uu, Ru, yu) {
-      return TR({
+    function aB(kk, Fk, Bk) {
+      return mF({
         kind: "recovered",
         code: "CORE-memoryShed",
-        site: Wu.j,
+        site: mk.k,
         fatal: !1,
-        message: (0, bu.j)(uu) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
+        message: (0, Yk.i)(kk) ? "wasm memory was refused: the session shed load" : "the tab's footprint reached its budget: the session shed load",
         details: {
-          cause: uu,
-          ...Ru,
-          wasmBuild: yu.wasm,
-          clientVersion: yu.client
+          cause: kk,
+          ...Fk,
+          wasmBuild: Bk.wasm,
+          clientVersion: Bk.client
         }
       })
     }
 
-    function Qy(uu, Ru) {
-      const yu = (0, Nu.j)(),
-        Eu = {
-          game: uu,
-          renderWarned: String(yu),
-          browser: (0, Nu.f)(),
-          wasmBuild: Ru.wasm,
-          clientVersion: Ru.client
+    function XB(kk, Fk) {
+      const Bk = (0, wk.j)(),
+        Rk = {
+          game: kk,
+          renderWarned: String(Bk),
+          browser: (0, wk.h)(),
+          wasmBuild: Fk.wasm,
+          clientVersion: Fk.client
         },
-        Ku = `first view drew no whole terrain in ${Au.i/1e3} s${yu?", render warned":""}`;
-      return TR({
+        tk = `first view drew no whole terrain in ${Sk.g/1e3} s${Bk?", render warned":""}`;
+      return mF({
         kind: "noTerrain",
         code: "CORE-firstViewNoTerrain",
-        site: Yu,
+        site: xk,
         fatal: !1,
-        message: Ku,
-        details: Eu
+        message: tk,
+        details: Rk
       })
     }
 
-    function my(uu, Ru, yu) {
-      return TR({
+    function bB(kk, Fk, Bk) {
+      return mF({
         kind: "recovered",
         code: "CORE-workerStartTimeout",
-        site: uu,
+        site: kk,
         fatal: !1,
-        message: `a ${uu} worker did not start`,
+        message: `a ${kk} worker did not start`,
         details: {
-          waitedMs: String(Math.round(Ru)),
-          wasmBuild: yu.wasm,
-          clientVersion: yu.client
+          waitedMs: String(Math.round(Fk)),
+          wasmBuild: Bk.wasm,
+          clientVersion: Bk.client
         }
       })
     }
 
-    function Jy(uu, Ru, yu) {
-      return TR({
+    function wB(kk, Fk, Bk) {
+      return mF({
         kind: "recovered",
         code: "CORE-replayFault",
-        site: uu,
+        site: kk,
         fatal: !1,
-        message: `the replay's ${uu} failed`,
+        message: `the replay's ${kk} failed`,
         details: {
-          wasmBuild: yu.wasm,
-          clientVersion: yu.client
+          wasmBuild: Bk.wasm,
+          clientVersion: Bk.client
         },
-        error: Ru
+        error: Fk
       })
     }
-    const Ny = {
+    const dB = {
       lost: "render device was lost",
       frames_refused: "render device refused a frame",
       start_failed: "renderer couldn't start",
       pipeline_failed: "renderer's pipeline failed"
     };
 
-    function Xy(uu, Ru, yu) {
-      const Eu = "lost" === Ru && void 0 !== yu ? ` (${yu})` : "";
-      return `the ${uu} ${Ny[Ru]}${Eu}`
+    function sB(kk, Fk, Bk) {
+      const Rk = "lost" === Fk && void 0 !== Bk ? ` (${Bk})` : "";
+      return `the ${kk} ${dB[Fk]}${Rk}`
     }
-    const Vy = {
+    const VB = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null
     };
 
-    function ry(uu, Ru, yu) {
-      let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now();
-      const Ku = null === yu.boundAtMs ? "unbound" : `up${(0,Vu.d)(Eu-yu.boundAtMs)}`,
-        Qu = null === yu.adapter ? "no adapter" : (0, Vu.f)(yu.adapter),
-        mu = `${(0,Tu.g)()?"hidden":"visible"} ${Ku} ${Qu}${!0===yu.indirectHangs?" ih":""}`;
-      if ("pipeline_failed" === uu) return `${uu} ${mu}`;
-      const Ju = null === Ru || void 0 === Ru ? void 0 : Ru.message;
-      return `${Ru instanceof Tu.d?"timeout":(0,Vu.j)("frames_refused"===uu,"string"===typeof Ju?Ju:"")} ${mu}`
+    function JB(kk, Fk, Bk) {
+      let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now();
+      const tk = null === Bk.boundAtMs ? "unbound" : `up${(0,sk.f)(Rk-Bk.boundAtMs)}`,
+        ak = null === Bk.adapter ? "no adapter" : (0, sk.l)(Bk.adapter),
+        Xk = `${(0,fk.j)()?"hidden":"visible"} ${tk} ${ak}${!0===Bk.indirectHangs?" ih":""}`;
+      if ("pipeline_failed" === kk) return `${kk} ${Xk}`;
+      const bk = null === Fk || void 0 === Fk ? void 0 : Fk.message;
+      return `${Fk instanceof fk.h?"timeout":(0,sk.n)("frames_refused"===kk,"string"===typeof bk?bk:"")} ${Xk}`
     }
-    const By = {
+    const AB = {
       samples: null,
       sunShadows: null,
       renderDistance: null
     };
 
-    function xy(uu, Ru, Eu) {
-      var Qu, mu, Ju, Xu, Bu;
+    function eB(kk, Fk, Rk) {
+      var ak, Xk, bk, dk, Jk;
       let {
-        cause: xu = "lost",
-        error: Su,
-        context: pu = Vy,
-        session: Tu = By
+        cause: Ak = "lost",
+        error: ek,
+        context: yk = VB,
+        session: fk = AB
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Wu = ry(xu, Su, pu),
-        ju = {
-          losses: String(Ru),
-          cause: xu,
-          detail: Wu,
-          vendor: null !== (Qu = null === (mu = pu.adapter) || void 0 === mu ? void 0 : mu.vendor) && void 0 !== Qu ? Qu : "",
-          architecture: null !== (Ju = null === (Xu = pu.adapter) || void 0 === Xu ? void 0 : Xu.architecture) && void 0 !== Ju ? Ju : "",
-          indirectHangs: String(pu.indirectHangs),
-          samples: String(Tu.samples),
-          sunShadows: String(Tu.sunShadows),
-          renderDistance: String(Tu.renderDistance),
-          gpuFamily: null !== (Bu = (0, Ku.c)()) && void 0 !== Bu ? Bu : "",
-          browser: (0, Nu.f)(),
-          siteUsed: ru.v,
-          wasmBuild: Eu.wasm,
-          clientVersion: Eu.client
+      const mk = JB(Ak, ek, yk),
+        Wk = {
+          losses: String(Fk),
+          cause: Ak,
+          detail: mk,
+          vendor: null !== (ak = null === (Xk = yk.adapter) || void 0 === Xk ? void 0 : Xk.vendor) && void 0 !== ak ? ak : "",
+          architecture: null !== (bk = null === (dk = yk.adapter) || void 0 === dk ? void 0 : dk.architecture) && void 0 !== bk ? bk : "",
+          indirectHangs: String(yk.indirectHangs),
+          samples: String(fk.samples),
+          sunShadows: String(fk.sunShadows),
+          renderDistance: String(fk.renderDistance),
+          gpuFamily: null !== (Jk = (0, tk.c)()) && void 0 !== Jk ? Jk : "",
+          browser: (0, wk.h)(),
+          siteUsed: Vk.q,
+          wasmBuild: Rk.wasm,
+          clientVersion: Rk.client
         },
-        Hu = Xy(uu, xu),
-        du = TR({
+        vk = sB(kk, Ak),
+        ik = mF({
           kind: "recovered",
           code: "CORE-renderLost",
-          site: wu,
+          site: qk,
           fatal: !1,
-          message: Hu,
-          details: ju,
-          error: Su
+          message: vk,
+          details: Wk,
+          error: ek
         });
-      return jR("ga", (async () => {
+      return vF("ga", (async () => {
         const {
-          logError: Ru
-        } = await Promise.resolve().then((() => yu(2719))), Eu = `${Vu.c["webgpu"===uu?"WebGPU":"WebGL2"]}\n Error: ${Wu}`;
-        Ru("warning", Eu), Ru("error", Eu)
-      })), du
+          logError: Fk
+        } = await Promise.resolve().then((() => Bk(2728))), Rk = `${sk.c["webgpu"===kk?"WebGPU":"WebGL2"]}\n Error: ${mk}`;
+        Fk("warning", Rk), Fk("error", Rk)
+      })), ik
     }
 
-    function Sy(uu, Ru) {
-      var yu, Eu;
-      const Ku = null === uu.name ? "TEXTURE-sources" : null === uu.url ? "TEXTURE-nourl" : uu.error instanceof Du.c ? `TEXTURE-${uu.error.status}` : "TEXTURE-network",
-        Qu = null === uu.name ? "terrain textures could not load" : `terrain texture ${uu.name} could not load`,
-        mu = {
-          texture: null !== (yu = uu.name) && void 0 !== yu ? yu : "",
-          url: null !== (Eu = uu.url) && void 0 !== Eu ? Eu : "",
-          wasmBuild: Ru.wasm,
-          clientVersion: Ru.client
+    function yB(kk, Fk) {
+      var Bk, Rk;
+      const tk = null === kk.name ? "TEXTURE-sources" : null === kk.url ? "TEXTURE-nourl" : kk.error instanceof Nk.d ? `TEXTURE-${kk.error.status}` : "TEXTURE-network",
+        ak = null === kk.name ? "terrain textures could not load" : `terrain texture ${kk.name} could not load`,
+        Xk = {
+          texture: null !== (Bk = kk.name) && void 0 !== Bk ? Bk : "",
+          url: null !== (Rk = kk.url) && void 0 !== Rk ? Rk : "",
+          wasmBuild: Fk.wasm,
+          clientVersion: Fk.client
         };
-      return TR({
+      return mF({
         kind: "terrainTexture",
-        code: Ku,
-        site: Wu.u,
+        code: tk,
+        site: mk.y,
         fatal: !1,
-        message: Qu,
-        details: mu,
-        error: uu.error
+        message: ak,
+        details: Xk,
+        error: kk.error
       })
     }
-    const py = {
+    const fB = {
       previewAnimations: {
-        site: Zu,
+        site: Ck,
         prefix: "ANIMS",
         name: "the previews' animations"
       },
       builtInAnimations: {
-        site: Pu,
+        site: pk,
         prefix: "BUILTIN",
         name: "the built-in animations"
       }
     };
 
-    function Ty(uu, Ru, yu, Eu) {
+    function mB(kk, Fk, Bk, Rk) {
       const {
-        site: Ku,
-        prefix: Qu,
-        name: mu
-      } = py[uu], {
-        stage: Ju,
-        error: Nu
-      } = yu;
-      return TR({
-        kind: uu,
-        code: "decode" === Ju ? null === Nu ? `${Qu}-decode` : `${Qu}-trap` : Nu instanceof ku.e ? `${Qu}-${Nu.status}` : `${Qu}-network`,
-        site: Ku,
+        site: tk,
+        prefix: ak,
+        name: Xk
+      } = fB[kk], {
+        stage: bk,
+        error: wk
+      } = Bk;
+      return mF({
+        kind: kk,
+        code: "decode" === bk ? null === wk ? `${ak}-decode` : `${ak}-trap` : wk instanceof Ok.g ? `${ak}-${wk.status}` : `${ak}-network`,
+        site: tk,
         fatal: !1,
-        message: "decode" === Ju ? `${mu} did not decode` : `${mu} could not load`,
+        message: "decode" === bk ? `${Xk} did not decode` : `${Xk} could not load`,
         details: {
-          url: Ru,
-          wasmBuild: Eu.wasm,
-          clientVersion: Eu.client
+          url: Fk,
+          wasmBuild: Rk.wasm,
+          clientVersion: Rk.client
         },
-        error: Nu
+        error: wk
       })
     }
-    const Wy = "staleBuild";
+    const WB = "staleBuild";
 
-    function jy(uu, Ru, yu) {
-      const Eu = {
-          failedSite: uu.site,
-          url: uu.url,
-          from: uu.from,
-          sameBuild: String(uu.from === Ru),
-          reloadMs: String(Math.max(0, Date.now() - uu.at)),
-          wasmBuild: yu.wasm,
-          clientVersion: yu.client
+    function vB(kk, Fk, Bk) {
+      const Rk = {
+          failedSite: kk.site,
+          url: kk.url,
+          from: kk.from,
+          sameBuild: String(kk.from === Fk),
+          reloadMs: String(Math.max(0, Date.now() - kk.at)),
+          wasmBuild: Bk.wasm,
+          clientVersion: Bk.client
         },
-        Ku = `reloaded into a newer build after ${uu.site} failed to load: ${uu.error}`;
-      return TR({
+        tk = `reloaded into a newer build after ${kk.site} failed to load: ${kk.error}`;
+      return mF({
         kind: "staleBuild",
         code: "CORE-staleBuild",
-        site: Wy,
+        site: WB,
         fatal: !1,
-        message: Ku,
-        details: Eu
+        message: tk,
+        details: Rk
       })
     }
   },
-  40553: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Ku,
-      i: () => Eu
+  40401: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => tk,
+      g: () => Rk
     });
-    const Eu = 3e4;
-    class Ku {
-      constructor(uu) {
-        this.Px = uu, this.waitedMs = 0, this.lastMs = null
+    const Rk = 3e4;
+    class tk {
+      constructor(kk) {
+        this.ve = kk, this.waitedMs = 0, this.lastMs = null
       }
-      frame(uu, Ru) {
-        if (Ru) return !0;
-        const yu = null === this.lastMs ? 0 : uu - this.lastMs;
-        return this.lastMs = uu, yu <= 900 && (this.waitedMs += yu), !(this.waitedMs < Eu) && (this.Px(), !0)
+      frame(kk, Fk) {
+        if (Fk) return !0;
+        const Bk = null === this.lastMs ? 0 : kk - this.lastMs;
+        return this.lastMs = kk, Bk <= 900 && (this.waitedMs += Bk), !(this.waitedMs < Rk) && (this.ve(), !0)
       }
     }
   },
-  4558: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => mu,
-      d: () => Qu,
-      g: () => Ku
+  4517: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Xk,
+      g: () => ak,
+      i: () => tk
     });
-    var Eu = yu(4562);
+    var Rk = Bk(4524);
 
-    function Ku(uu) {
-      return "none" !== uu
+    function tk(kk) {
+      return "none" !== kk
     }
 
-    function Qu(uu, Ru) {
-      if (!uu) return "none";
-      switch (Ru) {
-        case Eu.fb.Drawn:
+    function ak(kk, Fk) {
+      if (!kk) return "none";
+      switch (Fk) {
+        case Rk.S.Drawn:
           return "drawn";
-        case Eu.fb.Paced:
+        case Rk.S.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function mu(uu) {
-      return "drawn" === uu
+    function Xk(kk) {
+      return "drawn" === kk
     }
   },
-  40173: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      B: () => Su,
-      e: () => Eu,
-      g: () => Wu,
-      i: () => pu,
-      m: () => Tu,
-      p: () => Bu,
-      t: () => xu,
-      v: () => Vu,
-      z: () => ru
+  40015: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => Rk,
+      d: () => mk,
+      g: () => yk,
+      h: () => fk,
+      k: () => Jk,
+      l: () => Ak,
+      n: () => sk,
+      o: () => Vk,
+      r: () => ek
     });
-    class Eu extends Error {
-      constructor(uu) {
-        super(`the join's code did not load: ${uu instanceof Error?uu.message:String(uu)}`, {
-          cause: uu
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === uu || void 0 === uu ? void 0 : uu.request
+    class Rk extends Error {
+      constructor(kk) {
+        super(`the join's code did not load: ${kk instanceof Error?kk.message:String(kk)}`, {
+          cause: kk
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === kk || void 0 === kk ? void 0 : kk.request
       }
     }
-    let Ku = null,
-      Qu = null,
-      mu = null;
-    const Ju = [];
-    let Nu = null;
+    let tk = null,
+      ak = null,
+      Xk = null;
+    const bk = [];
+    let wk = null;
 
-    function Xu(uu, Ru) {
+    function dk(kk, Fk) {
       try {
-        uu(Ru)
-      } catch (yu) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", yu)
+        kk(Fk)
+      } catch (Bk) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", Bk)
       }
     }
 
-    function Vu() {
-      return Nu
+    function sk() {
+      return wk
     }
 
-    function ru(uu) {
-      Ju.push(uu), null !== Nu && Xu(uu, Nu)
+    function Vk(kk) {
+      bk.push(kk), null !== wk && dk(kk, wk)
     }
 
-    function Bu(uu) {
-      return Ku ??= Promise.all([yu.e(69), yu.e(94), yu.e(214), yu.e(74), yu.e(215), yu.e(189), yu.e(93), yu.e(259), yu.e(187), yu.e(262), yu.e(199), yu.e(186), yu.e(200), yu.e(136), yu.e(85), yu.e(114), yu.e(237), yu.e(53)]).then((() => yu(42130))).then((Ru => {
-        Ru.loadAudio(uu), Nu = Ru;
-        for (const uu of Ju) Xu(uu, Ru);
-        return Ru
-      })).catch((uu => {
-        throw Ku = null, uu
-      })), Ku
+    function Jk(kk) {
+      return tk ??= Promise.all([Bk.e(69), Bk.e(94), Bk.e(214), Bk.e(74), Bk.e(215), Bk.e(189), Bk.e(93), Bk.e(259), Bk.e(187), Bk.e(262), Bk.e(199), Bk.e(186), Bk.e(200), Bk.e(136), Bk.e(85), Bk.e(114), Bk.e(237), Bk.e(53)]).then((() => Bk(41991))).then((Fk => {
+        Fk.loadAudio(kk), wk = Fk;
+        for (const kk of bk) dk(kk, Fk);
+        return Fk
+      })).catch((kk => {
+        throw tk = null, kk
+      })), tk
     }
-    async function xu(uu, Ru) {
+    async function Ak(kk, Fk) {
       try {
-        const yu = await Bu(uu);
-        await yu.loadClientGame(Ru)
-      } catch (yu) {
-        throw new Eu(yu)
+        const Bk = await Jk(kk);
+        await Bk.loadClientGame(Fk)
+      } catch (Bk) {
+        throw new Rk(Bk)
       }
     }
 
-    function Su(uu, Ru) {
-      Qu = {
-        running: uu,
-        shell: Ru
+    function ek(kk, Fk) {
+      ak = {
+        running: kk,
+        shell: Fk
       }
     }
 
-    function pu() {
-      return mu
+    function yk() {
+      return Xk
     }
-    async function Tu(uu) {
-      const Ru = Qu;
-      if ((null === Ru || void 0 === Ru ? void 0 : Ru.running) !== uu) throw new Error("the core's session has ended");
-      const yu = await Bu(Ru.shell.audio).catch((uu => {
-        throw new Eu(uu)
+    async function fk(kk) {
+      const Fk = ak;
+      if ((null === Fk || void 0 === Fk ? void 0 : Fk.running) !== kk) throw new Error("the core's session has ended");
+      const Bk = await Jk(Fk.shell.audio).catch((kk => {
+        throw new Rk(kk)
       }));
-      if (null !== mu) return mu;
-      if (Qu !== Ru || uu.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (mu = yu.startGameHost(uu, Ru.shell), null === mu) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return mu
+      if (null !== Xk) return Xk;
+      if (ak !== Fk || kk.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (Xk = Bk.startGameHost(kk, Fk.shell), null === Xk) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return Xk
     }
 
-    function Wu() {
-      null !== mu && (null !== Nu ? Nu.endGameHost(mu) : mu.closeGame()), mu = null, Qu = null
+    function mk() {
+      null !== Xk && (null !== wk ? wk.endGameHost(Xk) : Xk.closeGame()), Xk = null, ak = null
     }
   },
-  40433: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Xu,
-      c: () => Qu,
-      e: () => mu,
-      h: () => Ku,
-      l: () => xu,
-      n: () => Vu,
-      o: () => Nu,
-      s: () => Bu,
-      v: () => ru,
-      w: () => Ju
+  40284: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => dk,
+      i: () => ak,
+      j: () => Xk,
+      k: () => tk,
+      n: () => Ak,
+      r: () => sk,
+      t: () => wk,
+      u: () => Jk,
+      y: () => Vk,
+      z: () => bk
     });
-    var Eu = yu(1707);
-    const Ku = new Uint8Array([12]),
-      Qu = 2e3,
-      mu = 257;
+    var Rk = Bk(1705);
+    const tk = new Uint8Array([12]),
+      ak = 2e3,
+      Xk = 257;
 
-    function Ju(uu) {
-      const Ru = new Uint8Array(4);
-      return new DataView(Ru.buffer).setUint32(0, uu, !0), Ru
+    function bk(kk) {
+      const Fk = new Uint8Array(4);
+      return new DataView(Fk.buffer).setUint32(0, kk, !0), Fk
     }
-    class Nu extends Error {
+    class wk extends Error {
       constructor() {
         super("the game was left while it reconnected"), this.name = "AbortError"
       }
     }
-    class Xu extends Error {
-      constructor(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        super(uu), this.stage = Ru, this.code = yu, this.serverText = Eu, this.name = "JoinError"
+    class dk extends Error {
+      constructor(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        super(kk), this.stage = Fk, this.code = Bk, this.serverText = Rk, this.name = "JoinError"
       }
     }
-    class Vu extends Error {
-      constructor(uu) {
-        super(uu), this.final = !0, this.name = "ResumeRefusedError"
+    class sk extends Error {
+      constructor(kk) {
+        super(kk), this.final = !0, this.name = "ResumeRefusedError"
       }
     }
-    class ru extends Error {
-      constructor(uu) {
-        super((0, Eu.e)(uu), {
-          cause: uu
+    class Vk extends Error {
+      constructor(kk) {
+        super((0, Rk.g)(kk), {
+          cause: kk
         }), this.name = "TrafficCheckError"
       }
     }
-    class Bu extends Error {
-      constructor(uu, Ru, yu) {
-        super(uu, {
-          cause: yu
-        }), this.networkLost = Ru, this.name = "SeatRequestError"
+    class Jk extends Error {
+      constructor(kk, Fk, Bk) {
+        super(kk, {
+          cause: Bk
+        }), this.networkLost = Fk, this.name = "SeatRequestError"
       }
     }
-    class xu extends Error {
-      constructor(uu, Ru) {
-        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(uu), this.code = Ru, this.serverText = yu, this.name = "MatchmakeError"
+    class Ak extends Error {
+      constructor(kk, Fk) {
+        let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(kk), this.code = Fk, this.serverText = Bk, this.name = "MatchmakeError"
       }
     }
   },
-  40440: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Bu,
-      f: () => ru
+  40288: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Jk,
+      h: () => Vk
     });
-    var Eu = yu(2481),
-      Ku = yu(3282),
-      Qu = yu(38818),
-      mu = yu(40424),
-      Ju = yu(40433),
-      Nu = yu(40442);
-    const Xu = "seat reservation expired.",
-      Vu = "early_leave";
+    var Rk = Bk(2466),
+      tk = Bk(3276),
+      ak = Bk(38708),
+      Xk = Bk(40280),
+      bk = Bk(40284),
+      wk = Bk(40290);
+    const dk = "seat reservation expired.",
+      sk = "early_leave";
 
-    function ru(uu) {
-      if (uu instanceof Qu.i) return "expected";
-      if (uu instanceof Ju.s) return uu.networkLost ? "expected" : "unrecognised";
-      if (uu instanceof Ju.b) {
-        if ("closed" === uu.stage && (0 === uu.code || (0, Ku.g)(uu.code))) return "expected";
-        if ("roomError" === uu.stage && (uu.serverText === Xu || uu.serverText === Vu)) return "expected"
+    function Vk(kk) {
+      if (kk instanceof ak.e) return "expected";
+      if (kk instanceof bk.u) return kk.networkLost ? "expected" : "unrecognised";
+      if (kk instanceof bk.e) {
+        if ("closed" === kk.stage && (0 === kk.code || (0, tk.h)(kk.code))) return "expected";
+        if ("roomError" === kk.stage && (kk.serverText === dk || kk.serverText === sk)) return "expected"
       }
-      return uu instanceof Ju.b || uu instanceof Ju.l ? null === (0, mu.m)(uu.code).name ? "unrecognised" : "known" : (0, Eu.f)(uu) ? "expected" : uu instanceof Ju.v || uu instanceof Nu.i ? "known" : "unrecognised"
+      return kk instanceof bk.e || kk instanceof bk.n ? null === (0, Xk.g)(kk.code).name ? "unrecognised" : "known" : (0, Rk.f)(kk) ? "expected" : kk instanceof bk.y || kk instanceof wk.e ? "known" : "unrecognised"
     }
 
-    function Bu(uu) {
-      return uu instanceof Qu.i ? "timedOut" : "expected" !== ru(uu) || (0, Eu.f)(uu) || uu instanceof Ju.b && 1001 === uu.code ? void 0 : "failed"
+    function Jk(kk) {
+      return kk instanceof ak.e ? "timedOut" : "expected" !== Vk(kk) || (0, Rk.f)(kk) || kk instanceof bk.e && 1001 === kk.code ? void 0 : "failed"
     }
   },
-  40525: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Au,
-      j: () => ru,
-      k: () => bu,
-      n: () => Wu,
-      o: () => ku
+  40370: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Sk,
+      i: () => Vk,
+      j: () => Yk,
+      l: () => mk,
+      p: () => Ok
     });
-    var Eu = yu(36330),
-      Ku = yu(36328);
-    const Qu = 64 * Eu.d,
-      mu = 40 * Eu.g,
-      Ju = 36 * Eu.g,
-      Nu = 20 * Eu.g,
-      Xu = 2 * Eu.g,
-      Vu = 5 * Eu.g;
+    var Rk = Bk(36217),
+      tk = Bk(36209);
+    const ak = 64 * Rk.c,
+      Xk = 40 * Rk.e,
+      bk = 36 * Rk.e,
+      wk = 20 * Rk.e,
+      dk = 2 * Rk.e,
+      sk = 5 * Rk.e;
 
-    function ru(uu) {
-      return "footprint" !== uu
+    function Vk(kk) {
+      return "footprint" !== kk
     }
-    const Bu = 2 * Eu.g,
-      xu = 4 * Eu.g,
-      Su = 35 * Eu.g + Bu + xu,
-      pu = 6.5 * Eu.g,
-      Tu = 132.5 * Eu.d;
+    const Jk = 2 * Rk.e,
+      Ak = 4 * Rk.e,
+      ek = 35 * Rk.e + Jk + Ak,
+      yk = 6.5 * Rk.e,
+      fk = 132.5 * Rk.c;
 
-    function Wu(uu) {
-      const Ru = pu + (0, Ku.j)(uu) + uu * Tu;
-      return Math.ceil((2 * Su + Ru) / Qu) * Qu
+    function mk(kk) {
+      const Fk = yk + (0, tk.i)(kk) + kk * fk;
+      return Math.ceil((2 * ek + Fk) / ak) * ak
     }
-    const ju = Wu(Ku.e),
-      Hu = (Eu.g, Eu.g, Eu.g, {
-        targetBytes: mu,
-        leastBytes: Nu
+    const Wk = mk(tk.b),
+      vk = (Rk.e, Rk.e, Rk.e, {
+        targetBytes: Xk,
+        leastBytes: wk
       }),
-      du = {
-        targetBytes: Ju,
-        leastBytes: Nu
+      ik = {
+        targetBytes: bk,
+        leastBytes: wk
       };
 
-    function bu(uu) {
-      return uu >= Ku.e ? Hu : du
+    function Yk(kk) {
+      return kk >= tk.b ? vk : ik
     }
-    const Cu = 2 * Qu;
+    const Lk = 2 * ak;
 
-    function ku(uu, Ru, yu) {
-      return uu + Ru + Cu > (null !== yu && void 0 !== yu ? yu : ju)
+    function Ok(kk, Fk, Bk) {
+      return kk + Fk + Lk > (null !== Bk && void 0 !== Bk ? Bk : Wk)
     }
-    const eu = {
+    const Ek = {
       now: () => performance.now(),
-      requestIdle: "function" === typeof requestIdleCallback ? uu => {
-        requestIdleCallback(uu)
+      requestIdle: "function" === typeof requestIdleCallback ? kk => {
+        requestIdleCallback(kk)
       } : null
     };
-    class Au {
-      constructor(uu, Ru, yu) {
-        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : eu;
-        this.memory = uu, this.readPeakStoredChunks = Ru, this.onError = yu, this.clock = Eu, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+    class Sk {
+      constructor(kk, Fk, Bk) {
+        let Rk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Ek;
+        this.memory = kk, this.readPeakStoredChunks = Fk, this.onError = Bk, this.clock = Rk, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
           reserves: 0,
           allocations: 0
         }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null
       }
-      setShed(uu, Ru, yu) {
+      setShed(kk, Fk, Bk) {
         this.shedding = {
-          shed: uu,
-          Px: Ru,
-          readDistanceInUse: yu
+          shed: kk,
+          ve: Fk,
+          readDistanceInUse: Bk
         }
       }
       shedDistanceInUse() {
         return this.distanceInUse
       }
-      setFootprint(uu) {
-        this.footprint = uu
+      setFootprint(kk) {
+        this.footprint = kk
       }
-      setCeiling(uu) {
-        this.ceilingBytes = uu, this.call((() => {
-          this.memory.setCeiling(uu)
+      setCeiling(kk) {
+        this.ceilingBytes = kk, this.call((() => {
+          this.memory.setCeiling(kk)
         }), void 0)
       }
-      ceilingMayRefuse(uu) {
-        return ku(this.memory.memoryBytes(), uu, this.ceilingBytes)
+      ceilingMayRefuse(kk) {
+        return Ok(this.memory.memoryBytes(), kk, this.ceilingBytes)
       }
-      reserveAtJoin(uu) {
+      reserveAtJoin(kk) {
         let {
-          targetBytes: Ru,
-          leastBytes: yu
-        } = uu;
-        const Eu = this.memory.memoryBytes(),
-          Ku = Eu + yu,
-          Qu = Math.max(Ru + (this.ballastOn() ? Vu : 0), Ku),
-          mu = this.call((() => this.memory.reserveUpFront(Qu) ? "target" : Qu > Ku && this.memory.reserveUpFront(Ku) ? "least" : "none"), "none");
+          targetBytes: Fk,
+          leastBytes: Bk
+        } = kk;
+        const Rk = this.memory.memoryBytes(),
+          tk = Rk + Bk,
+          ak = Math.max(Fk + (this.ballastOn() ? sk : 0), tk),
+          Xk = this.call((() => this.memory.reserveUpFront(ak) ? "target" : ak > tk && this.memory.reserveUpFront(tk) ? "least" : "none"), "none");
         if (this.stopped) return !1;
-        if ("target" !== mu) {
-          const uu = "least" === mu ? `took ${Ku} bytes instead` : "frames grow it in steps";
-          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${Qu} bytes was refused at ${Eu} bytes; ${uu}`)
+        if ("target" !== Xk) {
+          const kk = "least" === Xk ? `took ${tk} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${ak} bytes was refused at ${Rk} bytes; ${kk}`)
         }
-        return this.joinReserveTaken = mu, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== mu && this.shedFor("joinReserve"), "none" !== mu
+        return this.joinReserveTaken = Xk, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== Xk && this.shedFor("joinReserve"), "none" !== Xk
       }
       afterFrame() {
         if (this.stopped) return;
-        const uu = this.clock.now(),
-          Ru = null !== this.stepsHeldUntil && uu >= this.stepsHeldUntil;
-        if (Ru && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
-        if (null === this.stepsHeldUntil && uu >= this.ballastCheckAt && (this.takeBallast(uu), this.stopped)) return;
-        const yu = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
-          Eu = Ru && "now" === yu ? "none" : yu,
+        const kk = this.clock.now(),
+          Fk = null !== this.stepsHeldUntil && kk >= this.stepsHeldUntil;
+        if (Fk && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && kk >= this.ballastCheckAt && (this.takeBallast(kk), this.stopped)) return;
+        const Bk = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          Rk = Fk && "now" === Bk ? "none" : Bk,
           {
-            requestIdle: Ku
+            requestIdle: tk
           } = this.clock;
-        "now" === Eu || null !== this.pendingSince && uu - this.pendingSince >= 500 ? this.step() : "idle" === Eu && null === this.pendingSince && (null === Ku ? this.step() : (this.pendingSince = uu, Ku((() => {
+        "now" === Rk || null !== this.pendingSince && kk - this.pendingSince >= 500 ? this.step() : "idle" === Rk && null === this.pendingSince && (null === tk ? this.step() : (this.pendingSince = kk, tk((() => {
           null !== this.pendingSince && this.step()
-        })))), uu - this.statsAt >= 1e3 && (this.statsAt = uu, this.refreshStats(), this.checkFootprint())
+        })))), kk - this.statsAt >= 1e3 && (this.statsAt = kk, this.refreshStats(), this.checkFootprint())
       }
       refreshStats() {
         this.call((() => {
-          var uu, Ru;
-          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (Ru = this.shedding.readDistanceInUse()) && void 0 !== Ru ? Ru : this.distanceInUse);
-          null === (uu = this.footprint) || void 0 === uu || uu.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+          var kk, Fk;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (Fk = this.shedding.readDistanceInUse()) && void 0 !== Fk ? Fk : this.distanceInUse);
+          null === (kk = this.footprint) || void 0 === kk || kk.read(this.memory.memoryBytes() + this.workersMemoryBytes())
         }), void 0)
       }
       stop() {
         this.stopped = !0, this.pendingSince = null
       }
-      noteMeshWorker(uu, Ru) {
-        this.noteWorker(`Mesh${uu}`, Ru)
+      noteMeshWorker(kk, Fk) {
+        this.noteWorker(`Mesh${kk}`, Fk)
       }
-      meshWorkerGone(uu) {
-        this.workerGone(`Mesh${uu}`)
+      meshWorkerGone(kk) {
+        this.workerGone(`Mesh${kk}`)
       }
-      noteWorldgen(uu) {
-        this.noteWorker("Worldgen", uu)
+      noteWorldgen(kk) {
+        this.noteWorker("Worldgen", kk)
       }
       worldgenGone() {
         this.workerGone("Worldgen")
       }
-      noteWorker(uu, Ru) {
-        const yu = this.workers.get(uu);
-        null !== yu && void 0 !== yu && yu.gone && (this.replacedRefusals.reserves += yu.stats.reservesRefused, this.replacedRefusals.allocations += yu.stats.allocationsRefused), this.workers.set(uu, {
-          stats: Ru,
+      noteWorker(kk, Fk) {
+        const Bk = this.workers.get(kk);
+        null !== Bk && void 0 !== Bk && Bk.gone && (this.replacedRefusals.reserves += Bk.stats.reservesRefused, this.replacedRefusals.allocations += Bk.stats.allocationsRefused), this.workers.set(kk, {
+          stats: Fk,
           gone: !1
         })
       }
-      workerGone(uu) {
-        const Ru = this.workers.get(uu);
-        Ru && (Ru.gone = !0)
+      workerGone(kk) {
+        const Fk = this.workers.get(kk);
+        Fk && (Fk.gone = !0)
       }
       details() {
-        var uu, Ru;
-        const yu = {
-          wasmMemoryNow: `${(0,Eu.h)(this.memory.memoryBytes())} MiB`
+        var kk, Fk;
+        const Bk = {
+          wasmMemoryNow: `${(0,Rk.f)(this.memory.memoryBytes())} MiB`
         };
-        null !== this.joinReserveTaken && (yu.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (yu.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
-        const Ku = this.main;
-        if (Ku) {
-          yu.wasmMemoryMain = Du(Ku);
-          const uu = Math.max(0, Ku.peakLiveBytes - this.ballastPeakBytes),
-            Ru = 0 === this.peakStoredChunks ? "-" : (uu / this.peakStoredChunks / Eu.d).toFixed(1);
-          yu.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${Ru} KiB`
+        null !== this.joinReserveTaken && (Bk.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (Bk.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const tk = this.main;
+        if (tk) {
+          Bk.wasmMemoryMain = Nk(tk);
+          const kk = Math.max(0, tk.peakLiveBytes - this.ballastPeakBytes),
+            Fk = 0 === this.peakStoredChunks ? "-" : (kk / this.peakStoredChunks / Rk.c).toFixed(1);
+          Bk.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${Fk} KiB`
         }
-        for (const [Eu, {
-            stats: mu,
-            gone: Ju
-          }] of this.workers) yu[`wasmMemory${Eu}`] = Du(mu) + (Ju ? " (gone)" : "");
-        const Qu = null !== (uu = null === (Ru = this.footprint) || void 0 === Ru ? void 0 : Ru.describe()) && void 0 !== uu ? uu : null;
-        return null !== Qu && (yu.wasmMemoryFootprint = Qu), yu
+        for (const [Rk, {
+            stats: Xk,
+            gone: bk
+          }] of this.workers) Bk[`wasmMemory${Rk}`] = Nk(Xk) + (bk ? " (gone)" : "");
+        const ak = null !== (kk = null === (Fk = this.footprint) || void 0 === Fk ? void 0 : Fk.describe()) && void 0 !== kk ? kk : null;
+        return null !== ak && (Bk.wasmMemoryFootprint = ak), Bk
       }
       pageKillSnapshot() {
-        var uu, Ru, yu, Ku, Qu;
-        let mu = (null !== (uu = null === (Ru = this.main) || void 0 === Ru ? void 0 : Ru.reservesRefused) && void 0 !== uu ? uu : 0) + this.replacedRefusals.reserves,
-          Ju = (null !== (yu = null === (Ku = this.main) || void 0 === Ku ? void 0 : Ku.allocationsRefused) && void 0 !== yu ? yu : 0) + this.replacedRefusals.allocations;
+        var kk, Fk, Bk, tk, ak;
+        let Xk = (null !== (kk = null === (Fk = this.main) || void 0 === Fk ? void 0 : Fk.reservesRefused) && void 0 !== kk ? kk : 0) + this.replacedRefusals.reserves,
+          bk = (null !== (Bk = null === (tk = this.main) || void 0 === tk ? void 0 : tk.allocationsRefused) && void 0 !== Bk ? Bk : 0) + this.replacedRefusals.allocations;
         for (const {
-            stats: Eu
+            stats: Rk
           }
-          of this.workers.values()) mu += Eu.reservesRefused, Ju += Eu.allocationsRefused;
+          of this.workers.values()) Xk += Rk.reservesRefused, bk += Rk.allocationsRefused;
         return {
-          wasmMainMiB: Number((0, Eu.h)(this.memory.memoryBytes())),
-          wasmWorkersMiB: Number((0, Eu.h)(this.workersMemoryBytes())),
+          wasmMainMiB: Number((0, Rk.f)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, Rk.f)(this.workersMemoryBytes())),
           peakStoredChunks: this.peakStoredChunks,
-          refusedReserves: mu,
-          refusedAllocations: Ju,
+          refusedReserves: Xk,
+          refusedAllocations: bk,
           sheds: this.sheds,
-          ...null === (Qu = this.footprint) || void 0 === Qu ? void 0 : Qu.snapshot()
+          ...null === (ak = this.footprint) || void 0 === ak ? void 0 : ak.snapshot()
         }
       }
       workersMemoryBytes() {
-        let uu = 0;
+        let kk = 0;
         for (const {
-            stats: Ru,
-            gone: yu
+            stats: Fk,
+            gone: Bk
           }
-          of this.workers.values()) uu += yu ? 0 : Ru.memoryBytes;
-        return uu
+          of this.workers.values()) kk += Bk ? 0 : Fk.memoryBytes;
+        return kk
       }
       checkFootprint() {
         null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
       }
       step() {
-        this.pendingSince = null, this.call((() => this.memory.reserveAhead(Xu)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(dk)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
       }
       ballastOn() {
         return null !== this.shedding
       }
-      takeBallast(uu) {
+      takeBallast(kk) {
         if (!this.ballastOn() || null === this.joinReserveTaken) return;
-        this.ballastCheckAt = uu + 1e3;
-        const Ru = this.call((() => this.memory.takeBallast()), 0);
-        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, Ru)
+        this.ballastCheckAt = kk + 1e3;
+        const Fk = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, Fk)
       }
       takePressure() {
         return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
       }
-      stopSteps(uu) {
-        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${uu}: frames grow on demand from here`)
+      stopSteps(kk) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${kk}: frames grow on demand from here`)
       }
-      shedFor(uu) {
+      shedFor(kk) {
         const {
-          shedding: Ru
+          shedding: Fk
         } = this;
-        if (null === Ru) return;
+        if (null === Fk) return;
         this.pendingSince = null;
-        const yu = this.call((() => Ru.shed(uu)), null);
-        this.stopped || (null !== yu ? (this.sheds++, this.shedCap = yu, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), Ru.Px(uu, this.sheds, this.details())) : ru(uu) && this.stopSteps("nothing is left to shed"))
+        const Bk = this.call((() => Fk.shed(kk)), null);
+        this.stopped || (null !== Bk ? (this.sheds++, this.shedCap = Bk, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats(), Fk.ve(kk, this.sheds, this.details())) : Vk(kk) && this.stopSteps("nothing is left to shed"))
       }
-      call(uu, Ru) {
-        if (this.stopped) return Ru;
+      call(kk, Fk) {
+        if (this.stopped) return Fk;
         try {
-          return uu()
-        } catch (yu) {
-          return this.stop(), this.onError(yu), Ru
+          return kk()
+        } catch (Bk) {
+          return this.stop(), this.onError(Bk), Fk
         }
       }
     }
 
-    function Du(uu) {
-      const Ru = (uu, Ru) => `${uu}/${(0,Eu.h)(Ru)}`;
-      return `memory ${(0,Eu.h)(uu.memoryBytes)} live ${(0,Eu.h)(uu.liveBytes)} peak ${(0,Eu.h)(uu.peakLiveBytes)} unused ${(0,Eu.h)(uu.unusedBytes)} ceiling ${(0,Eu.h)(uu.ceilingBytes)} MiB; grows upFront ${Ru(uu.grows.upFront,uu.grownBytes.upFront)} ahead ${Ru(uu.grows.ahead,uu.grownBytes.ahead)} inFrame ${Ru(uu.grows.onDemandInFrame,uu.grownBytes.onDemandInFrame)} other ${Ru(uu.grows.onDemand,uu.grownBytes.onDemand)}; refused reserves ${uu.reservesRefused} allocations ${uu.allocationsRefused}`
+    function Nk(kk) {
+      const Fk = (kk, Fk) => `${kk}/${(0,Rk.f)(Fk)}`;
+      return `memory ${(0,Rk.f)(kk.memoryBytes)} live ${(0,Rk.f)(kk.liveBytes)} peak ${(0,Rk.f)(kk.peakLiveBytes)} unused ${(0,Rk.f)(kk.unusedBytes)} ceiling ${(0,Rk.f)(kk.ceilingBytes)} MiB; grows upFront ${Fk(kk.grows.upFront,kk.grownBytes.upFront)} ahead ${Fk(kk.grows.ahead,kk.grownBytes.ahead)} inFrame ${Fk(kk.grows.onDemandInFrame,kk.grownBytes.onDemandInFrame)} other ${Fk(kk.grows.onDemand,kk.grownBytes.onDemand)}; refused reserves ${kk.reservesRefused} allocations ${kk.allocationsRefused}`
     }
   },
-  40528: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => Nu,
-      e: () => Xu,
-      f: () => xu,
-      j: () => ru
+  40379: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => wk,
+      f: () => dk,
+      i: () => Ak,
+      k: () => Vk
     });
-    var Eu = yu(3514),
-      Ku = yu(4562),
-      Qu = yu(40535),
-      mu = yu(40544),
-      Ju = yu(36176);
-    const Nu = 395,
-      Xu = 2147483648,
-      Vu = new Uint8Array(0);
-    class ru extends Error {
+    var Rk = Bk(3506),
+      tk = Bk(4524),
+      ak = Bk(40387),
+      Xk = Bk(40393),
+      bk = Bk(36019);
+    const wk = 395,
+      dk = 2147483648,
+      sk = new Uint8Array(0);
+    class Vk extends Error {
       constructor() {
         super(...arguments), this.name = "ModelRingError"
       }
     }
-    class Bu extends Error {
+    class Jk extends Error {
       constructor() {
         super(...arguments), this.name = "ModelPackRefusedError"
       }
     }
-    class xu {
-      constructor(uu, Ru, yu) {
-        var Eu, Ku, mu, Ju;
-        let Nu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.files = uu, this.build = Ru, this.onFailure = yu, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.kx = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (Eu = Nu.fetchFile) && void 0 !== Eu ? Eu : uu => (0, Qu.i)(uu), this.onWritten = null !== (Ku = Nu.onWritten) && void 0 !== Ku ? Ku : null, this.onTaken = null !== (mu = Nu.onTaken) && void 0 !== mu ? mu : null, this.onPackFileFailed = null !== (Ju = Nu.onPackFileFailed) && void 0 !== Ju ? Ju : null, this.startupLeft = new Set(uu.startup);
-        for (const Qu of uu.startup) this.request(Qu)
+    class Ak {
+      constructor(kk, Fk, Bk) {
+        var Rk, tk, Xk, bk;
+        let wk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.files = kk, this.build = Fk, this.onFailure = Bk, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.lA = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (Rk = wk.fetchFile) && void 0 !== Rk ? Rk : kk => (0, ak.j)(kk), this.onWritten = null !== (tk = wk.onWritten) && void 0 !== tk ? tk : null, this.onTaken = null !== (Xk = wk.onTaken) && void 0 !== Xk ? Xk : null, this.onPackFileFailed = null !== (bk = wk.onPackFileFailed) && void 0 !== bk ? bk : null, this.startupLeft = new Set(kk.startup);
+        for (const ak of kk.startup) this.request(ak)
       }
       get startupDone() {
         return 0 === this.startupLeft.size
@@ -2196,361 +2196,361 @@ export const modules = {
       get keptBytes() {
         return this.keptTotal
       }
-      drawnUrl(uu) {
-        return this.drawn.get(uu)
+      drawnUrl(kk) {
+        return this.drawn.get(kk)
       }
-      request(uu) {
-        const Ru = this.pending.get(uu);
-        if (!0 === (null === Ru || void 0 === Ru ? void 0 : Ru.ask)) return;
-        const yu = this.Kx(uu, !0);
-        yu.recheck = void 0 !== Ru;
-        const Eu = this.drawn.get(uu);
-        if (void 0 !== Eu) return yu.jJ = !0, yu.recheck = !0, void this.fetch(uu, yu, Eu);
-        this.fetchWanted(uu, yu)
+      request(kk) {
+        const Fk = this.pending.get(kk);
+        if (!0 === (null === Fk || void 0 === Fk ? void 0 : Fk.ask)) return;
+        const Bk = this.UA(kk, !0);
+        Bk.recheck = void 0 !== Fk;
+        const Rk = this.drawn.get(kk);
+        if (void 0 !== Rk) return Bk.Hb = !0, Bk.recheck = !0, void this.fetch(kk, Bk, Rk);
+        this.fetchWanted(kk, Bk)
       }
       async refresh() {
-        const uu = ++this.refreshes,
-          Ru = new Set;
-        for (const mu of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
-          for (const uu of mu) 0 === (uu & Qu.g) && Ru.add(uu);
-        const yu = [...Ru];
-        let Eu;
+        const kk = ++this.refreshes,
+          Fk = new Set;
+        for (const Xk of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
+          for (const kk of Xk) 0 === (kk & ak.h) && Fk.add(kk);
+        const Bk = [...Fk];
+        let Rk;
         try {
-          Eu = await Promise.all(yu.map((uu => this.wanted(uu))))
+          Rk = await Promise.all(Bk.map((kk => this.wanted(kk))))
         } catch {
           return null
         }
-        if (uu !== this.refreshes) return null;
-        const Ku = {
+        if (kk !== this.refreshes) return null;
+        const tk = {
           resent: 0,
           refetched: 0,
-          delivered: yu.filter((uu => this.drawn.has(uu))).length
+          delivered: Bk.filter((kk => this.drawn.has(kk))).length
         };
-        return yu.forEach(((uu, Ru) => {
+        return Bk.forEach(((kk, Fk) => {
           const {
-            url: yu,
-            inPlaceOf: Qu
-          } = Eu[Ru], mu = this.pending.get(uu);
-          if (void 0 !== mu) {
-            if (mu.jJ || void 0 === mu.url) return void(mu.recheck = !0);
-            if (mu.url === yu) return;
-            Ku.refetched++;
-            const Ru = this.Kx(uu, mu.ask);
-            return Ru.recheck = mu.recheck, void this.fetch(uu, Ru, yu, Qu)
+            url: Bk,
+            inPlaceOf: ak
+          } = Rk[Fk], Xk = this.pending.get(kk);
+          if (void 0 !== Xk) {
+            if (Xk.Hb || void 0 === Xk.url) return void(Xk.recheck = !0);
+            if (Xk.url === Bk) return;
+            tk.refetched++;
+            const Fk = this.UA(kk, Xk.ask);
+            return Fk.recheck = Xk.recheck, void this.fetch(kk, Fk, Bk, ak)
           }
-          const Ju = this.written.get(uu);
-          void 0 === Ju ? this.drawn.get(uu) !== (null !== yu && void 0 !== yu ? yu : void 0) && (Ku.resent++, this.fetch(uu, this.Kx(uu, !1), yu, Qu)) : Ju.url !== (null !== yu && void 0 !== yu ? yu : "") && (Ju.attempt.recheck = !0)
-        })), Ku
+          const bk = this.written.get(kk);
+          void 0 === bk ? this.drawn.get(kk) !== (null !== Bk && void 0 !== Bk ? Bk : void 0) && (tk.resent++, this.fetch(kk, this.UA(kk, !1), Bk, ak)) : bk.url !== (null !== Bk && void 0 !== Bk ? Bk : "") && (bk.attempt.recheck = !0)
+        })), tk
       }
-      taken(uu, Ru) {
-        const yu = new Set,
-          Eu = new Set;
-        for (const Ku of Array.from(Ru)) 0 === (Ku & Xu) ? yu.add(Ku) : Eu.add((Ku & ~Xu) >>> 0);
-        for (const [Ku, Qu] of this.written) Qu.seq > uu || (this.written.delete(Ku), yu.has(Qu.seq) ? this.refusedFile(Ku, Qu) : this.takenFile(Ku, Qu, !Qu.empty && !Eu.has(Qu.seq)))
+      taken(kk, Fk) {
+        const Bk = new Set,
+          Rk = new Set;
+        for (const tk of Array.from(Fk)) 0 === (tk & dk) ? Bk.add(tk) : Rk.add((tk & ~dk) >>> 0);
+        for (const [tk, ak] of this.written) ak.seq > kk || (this.written.delete(tk), Bk.has(ak.seq) ? this.refusedFile(tk, ak) : this.takenFile(tk, ak, !ak.empty && !Rk.has(ak.seq)))
       }
-      takenFile(uu, Ru, yu) {
+      takenFile(kk, Fk, Bk) {
         const {
-          attempt: Eu
-        } = Ru;
-        if (yu) {
-          var Ku;
-          this.drawn.set(uu, Ru.url), this.undrawn.delete(uu), void 0 !== Eu.inPlaceOf ? this.refusedPack.set(uu, Eu.inPlaceOf) : Eu.jJ || this.refusedPack.delete(uu), null === (Ku = this.onTaken) || void 0 === Ku || Ku.call(this, uu, !0);
-          const yu = this.pending.get(uu);
-          if (!0 === (null === yu || void 0 === yu ? void 0 : yu.jJ) && yu.url !== Ru.url) {
-            const yu = this.Kx(uu, !0);
-            yu.jJ = !0, yu.recheck = !0, this.fetch(uu, yu, Ru.url)
+          attempt: Rk
+        } = Fk;
+        if (Bk) {
+          var tk;
+          this.drawn.set(kk, Fk.url), this.undrawn.delete(kk), void 0 !== Rk.inPlaceOf ? this.refusedPack.set(kk, Rk.inPlaceOf) : Rk.Hb || this.refusedPack.delete(kk), null === (tk = this.onTaken) || void 0 === tk || tk.call(this, kk, !0);
+          const Bk = this.pending.get(kk);
+          if (!0 === (null === Bk || void 0 === Bk ? void 0 : Bk.Hb) && Bk.url !== Fk.url) {
+            const Bk = this.UA(kk, !0);
+            Bk.Hb = !0, Bk.recheck = !0, this.fetch(kk, Bk, Fk.url)
           }
         } else {
-          var Qu;
-          this.drawn.has(uu) || this.undrawn.add(uu), null === (Qu = this.onTaken) || void 0 === Qu || Qu.call(this, uu, !1)
+          var ak;
+          this.drawn.has(kk) || this.undrawn.add(kk), null === (ak = this.onTaken) || void 0 === ak || ak.call(this, kk, !1)
         }
-        Eu.recheck && this.resendIfChanged(uu)
+        Rk.recheck && this.resendIfChanged(kk)
       }
-      refusedFile(uu, Ru) {
-        var yu, Eu;
-        if (null === (yu = this.onTaken) || void 0 === yu || yu.call(this, uu, !1), this.refusedPack.set(uu, Ru.url), this.pending.has(uu)) return void(null === (Eu = this.onPackFileFailed) || void 0 === Eu || Eu.call(this, uu, Su(Ru.url)));
-        const Ku = this.Kx(uu, Ru.attempt.ask);
-        Ku.recheck = Ru.attempt.recheck, this.afterRefusal(uu, Ku, Ru.url)
+      refusedFile(kk, Fk) {
+        var Bk, Rk;
+        if (null === (Bk = this.onTaken) || void 0 === Bk || Bk.call(this, kk, !1), this.refusedPack.set(kk, Fk.url), this.pending.has(kk)) return void(null === (Rk = this.onPackFileFailed) || void 0 === Rk || Rk.call(this, kk, ek(Fk.url)));
+        const tk = this.UA(kk, Fk.attempt.ask);
+        tk.recheck = Fk.attempt.recheck, this.afterRefusal(kk, tk, Fk.url)
       }
-      async afterRefusal(uu, Ru, yu) {
-        var Eu;
-        let Ku;
+      async afterRefusal(kk, Fk, Bk) {
+        var Rk;
+        let tk;
         try {
-          Ku = await this.wanted(uu)
-        } catch (Qu) {
-          return void(this.pending.get(uu) === Ru && this.giveUp(uu, Ru, yu, Qu))
+          tk = await this.wanted(kk)
+        } catch (ak) {
+          return void(this.pending.get(kk) === Fk && this.giveUp(kk, Fk, Bk, ak))
         }
-        this.pending.get(uu) === Ru && (Ku.inPlaceOf !== yu ? Ru.ask || (null !== (Eu = Ku.url) && void 0 !== Eu ? Eu : void 0) !== this.drawn.get(uu) ? this.fetch(uu, Ru, Ku.url, Ku.inPlaceOf) : this.pending.delete(uu) : this.fallBack(uu, Ru, yu, Su(yu)))
+        this.pending.get(kk) === Fk && (tk.inPlaceOf !== Bk ? Fk.ask || (null !== (Rk = tk.url) && void 0 !== Rk ? Rk : void 0) !== this.drawn.get(kk) ? this.fetch(kk, Fk, tk.url, tk.inPlaceOf) : this.pending.delete(kk) : this.fallBack(kk, Fk, Bk, ek(Bk)))
       }
-      Kx(uu, Ru) {
-        const yu = {
+      UA(kk, Fk) {
+        const Bk = {
           url: void 0,
-          ask: Ru,
-          jJ: !1,
+          ask: Fk,
+          Hb: !1,
           recheck: !1,
           inPlaceOf: void 0
         };
-        this.pending.set(uu, yu);
-        for (let Eu = this.ready.length - 1; Eu >= 0; Eu--) this.ready[Eu].file === uu && this.ready.splice(Eu, 1);
-        return yu
+        this.pending.set(kk, Bk);
+        for (let Rk = this.ready.length - 1; Rk >= 0; Rk--) this.ready[Rk].file === kk && this.ready.splice(Rk, 1);
+        return Bk
       }
-      async wanted(uu) {
-        const Ru = await this.files.url(uu);
-        return null !== Ru && this.refusedPack.get(uu) === Ru ? {
-          url: await this.files.shippedUrl(uu),
-          inPlaceOf: Ru
+      async wanted(kk) {
+        const Fk = await this.files.url(kk);
+        return null !== Fk && this.refusedPack.get(kk) === Fk ? {
+          url: await this.files.shippedUrl(kk),
+          inPlaceOf: Fk
         } : {
-          url: Ru,
+          url: Fk,
           inPlaceOf: void 0
         }
       }
-      fetchWanted(uu, Ru) {
-        const yu = this.files.url(uu);
-        yu instanceof Promise ? yu.then((yu => {
-          this.fetchFound(uu, Ru, yu)
-        }), (yu => {
-          this.pending.get(uu) === Ru && this.giveUp(uu, Ru, "", yu)
-        })) : this.fetchFound(uu, Ru, yu)
+      fetchWanted(kk, Fk) {
+        const Bk = this.files.url(kk);
+        Bk instanceof Promise ? Bk.then((Bk => {
+          this.fetchFound(kk, Fk, Bk)
+        }), (Bk => {
+          this.pending.get(kk) === Fk && this.giveUp(kk, Fk, "", Bk)
+        })) : this.fetchFound(kk, Fk, Bk)
       }
-      fetchFound(uu, Ru, yu) {
-        null !== yu && this.refusedPack.get(uu) === yu ? Promise.resolve(this.files.shippedUrl(uu)).then((Eu => {
-          this.fetch(uu, Ru, Eu, yu)
-        }), (Eu => {
-          this.pending.get(uu) === Ru && this.giveUp(uu, Ru, yu, Eu)
-        })) : this.fetch(uu, Ru, yu)
+      fetchFound(kk, Fk, Bk) {
+        null !== Bk && this.refusedPack.get(kk) === Bk ? Promise.resolve(this.files.shippedUrl(kk)).then((Rk => {
+          this.fetch(kk, Fk, Rk, Bk)
+        }), (Rk => {
+          this.pending.get(kk) === Fk && this.giveUp(kk, Fk, Bk, Rk)
+        })) : this.fetch(kk, Fk, Bk)
       }
-      fetch(uu, Ru, yu, Eu) {
-        this.pending.get(uu) === Ru && (Ru.url = yu, Ru.inPlaceOf = Eu, null !== yu ? this.load(uu, Ru, yu) : this.buildFile(uu, Ru, "", Vu))
+      fetch(kk, Fk, Bk, Rk) {
+        this.pending.get(kk) === Fk && (Fk.url = Bk, Fk.inPlaceOf = Rk, null !== Bk ? this.load(kk, Fk, Bk) : this.buildFile(kk, Fk, "", sk))
       }
-      load(uu, Ru, yu) {
-        const Eu = this.kx.get(uu);
-        (null === Eu || void 0 === Eu ? void 0 : Eu.url) !== yu ? this.fetchFile(yu).then((Eu => {
-          var Ku, Qu;
-          this.pending.get(uu) === Ru && (this.keptTotal += Eu.byteLength - (null !== (Ku = null === (Qu = this.kx.get(uu)) || void 0 === Qu ? void 0 : Qu.glb.byteLength) && void 0 !== Ku ? Ku : 0), this.kx.set(uu, {
-            url: yu,
-            glb: Eu
-          }), this.buildFile(uu, Ru, yu, Eu))
-        }), (Eu => {
-          this.pending.get(uu) === Ru && this.fallBack(uu, Ru, yu, Eu)
-        })) : this.buildFile(uu, Ru, yu, Eu.glb)
+      load(kk, Fk, Bk) {
+        const Rk = this.lA.get(kk);
+        (null === Rk || void 0 === Rk ? void 0 : Rk.url) !== Bk ? this.fetchFile(Bk).then((Rk => {
+          var tk, ak;
+          this.pending.get(kk) === Fk && (this.keptTotal += Rk.byteLength - (null !== (tk = null === (ak = this.lA.get(kk)) || void 0 === ak ? void 0 : ak.glb.byteLength) && void 0 !== tk ? tk : 0), this.lA.set(kk, {
+            url: Bk,
+            glb: Rk
+          }), this.buildFile(kk, Fk, Bk, Rk))
+        }), (Rk => {
+          this.pending.get(kk) === Fk && this.fallBack(kk, Fk, Bk, Rk)
+        })) : this.buildFile(kk, Fk, Bk, Rk.glb)
       }
-      buildFile(uu, Ru, yu, Eu) {
-        let Ku = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const mu = Eu.byteLength > 0 && (0, Qu.l)(yu) ? (uu | Qu.e) >>> 0 : uu;
-        this.queueRecord(uu, Ru, yu, Eu, this.build(mu, Eu), Ku)
+      buildFile(kk, Fk, Bk, Rk) {
+        let tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const Xk = Rk.byteLength > 0 && (0, ak.l)(Bk) ? (kk | ak.e) >>> 0 : kk;
+        this.queueRecord(kk, Fk, Bk, Rk, this.build(Xk, Rk), tk)
       }
-      queueRecord(uu, Ru, yu, Eu, Qu, Ju) {
-        Qu.then((Qu => {
-          if (this.pending.get(uu) !== Ru) return;
-          if (Ku.w + (0, Ku.he)(Qu.byteLength) > Ku.Gc) return void this.ringRefused(uu, Ru, yu, new ru(`${pu(yu)}'s record is ${Qu.byteLength-mu.b} bytes, past the cmd ring's ${Ku.Gc}`), Ju);
-          const Nu = {
-            file: uu,
-            url: yu,
-            payload: Qu,
-            glb: Eu,
-            attempt: Ru
+      queueRecord(kk, Fk, Bk, Rk, ak, bk) {
+        ak.then((ak => {
+          if (this.pending.get(kk) !== Fk) return;
+          if (tk.o + (0, tk.td)(ak.byteLength) > tk.dc) return void this.ringRefused(kk, Fk, Bk, new Vk(`${yk(Bk)}'s record is ${ak.byteLength-Xk.c} bytes, past the cmd ring's ${tk.dc}`), bk);
+          const wk = {
+            file: kk,
+            url: Bk,
+            payload: ak,
+            glb: Rk,
+            attempt: Fk
           };
-          Ju ? this.ready.unshift(Nu) : this.ready.push(Nu)
+          bk ? this.ready.unshift(wk) : this.ready.push(wk)
         }))
       }
-      async fallBack(uu, Ru, yu, Eu) {
-        var Ku;
-        let Qu = null,
-          mu = Eu;
+      async fallBack(kk, Fk, Bk, Rk) {
+        var tk;
+        let ak = null,
+          Xk = Rk;
         try {
-          Qu = await this.files.shippedUrl(uu)
-        } catch (Ju) {
-          mu = Ju
+          ak = await this.files.shippedUrl(kk)
+        } catch (bk) {
+          Xk = bk
         }
-        this.pending.get(uu) === Ru && (null !== Qu && Qu !== yu ? (null === (Ku = this.onPackFileFailed) || void 0 === Ku || Ku.call(this, uu, Eu), Ru.ask || this.drawn.get(uu) !== Qu ? (Ru.url = Qu, Ru.inPlaceOf = yu, this.load(uu, Ru, Qu)) : this.pending.delete(uu)) : this.giveUp(uu, Ru, yu, mu))
+        this.pending.get(kk) === Fk && (null !== ak && ak !== Bk ? (null === (tk = this.onPackFileFailed) || void 0 === tk || tk.call(this, kk, Rk), Fk.ask || this.drawn.get(kk) !== ak ? (Fk.url = ak, Fk.inPlaceOf = Bk, this.load(kk, Fk, ak)) : this.pending.delete(kk)) : this.giveUp(kk, Fk, Bk, Xk))
       }
-      ringRefused(uu, Ru, yu, Eu) {
-        let Ku = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        (0, Qu.l)(yu) ? this.fallBack(uu, Ru, yu, Eu): this.giveUp(uu, Ru, yu, Eu, Ku)
+      ringRefused(kk, Fk, Bk, Rk) {
+        let tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        (0, ak.l)(Bk) ? this.fallBack(kk, Fk, Bk, Rk): this.giveUp(kk, Fk, Bk, Rk, tk)
       }
-      giveUp(uu, Ru, yu, Ku) {
-        let Qu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      giveUp(kk, Fk, Bk, tk) {
+        let ak = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         this.onFailure({
-          file: uu,
-          url: pu(yu),
-          error: Ku,
-          startup: this.startupLeft.has(uu)
-        }), Ru.ask || !this.drawn.has(uu) ? (0, Eu.R)(Ku) ? this.queueRecord(uu, Ru, yu, Vu, Promise.resolve((0, mu.j)(uu, (0, Ju.k)(Ku))), Qu) : this.buildFile(uu, Ru, yu, Vu, Qu) : this.pending.delete(uu)
+          file: kk,
+          url: yk(Bk),
+          error: tk,
+          startup: this.startupLeft.has(kk)
+        }), Fk.ask || !this.drawn.has(kk) ? (0, Rk.U)(tk) ? this.queueRecord(kk, Fk, Bk, sk, Promise.resolve((0, Xk.m)(kk, (0, bk.j)(tk))), ak) : this.buildFile(kk, Fk, Bk, sk, ak) : this.pending.delete(kk)
       }
-      async resendIfChanged(uu) {
-        var Ru;
-        if (0 !== (uu & Qu.g)) return;
-        let yu;
+      async resendIfChanged(kk) {
+        var Fk;
+        if (0 !== (kk & ak.h)) return;
+        let Bk;
         try {
-          yu = await this.wanted(uu)
+          Bk = await this.wanted(kk)
         } catch {
           return
-        }(null !== (Ru = yu.url) && void 0 !== Ru ? Ru : void 0) === this.drawn.get(uu) || this.pending.has(uu) || this.written.has(uu) || this.fetch(uu, this.Kx(uu, !1), yu.url, yu.inPlaceOf)
+        }(null !== (Fk = Bk.url) && void 0 !== Fk ? Fk : void 0) === this.drawn.get(kk) || this.pending.has(kk) || this.written.has(kk) || this.fetch(kk, this.UA(kk, !1), Bk.url, Bk.inPlaceOf)
       }
-      drain(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null === uu) return;
-        let yu = 0,
-          Eu = 0;
-        for (; Eu < this.ready.length && yu < 262144;) {
-          const Ju = this.ready[Eu];
-          if (this.written.has(Ju.file)) {
-            Eu++;
+      drain(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null === kk) return;
+        let Bk = 0,
+          Rk = 0;
+        for (; Rk < this.ready.length && Bk < 262144;) {
+          const bk = this.ready[Rk];
+          if (this.written.has(bk.file)) {
+            Rk++;
             continue
           }
-          const Vu = this.nextSeq;
-          new DataView(Ju.payload.buffer, Ju.payload.byteOffset, Ju.payload.byteLength).setUint32(mu.d, Vu, !0);
-          const Bu = Ju.attempt.jJ && Ju.glb.byteLength > 0 && this.drawn.get(Ju.file) === Ju.url;
-          if (uu(Nu, Bu ? 1 : 0, Ju.payload)) {
-            if (this.nextSeq = Vu >= Xu - 1 ? 1 : Vu + 1, this.ready.splice(Eu, 1), yu += Ju.payload.byteLength, this.pending.delete(Ju.file), this.startupLeft.delete(Ju.file), this.written.set(Ju.file, {
-                seq: Vu,
-                url: Ju.url,
-                empty: 0 === Ju.glb.byteLength,
-                attempt: Ju.attempt
-              }), Ju.glb.byteLength > 0) try {
-              var Ku;
-              null === (Ku = this.onWritten) || void 0 === Ku || Ku.call(this, Ju.file, Ju.glb)
-            } catch (Qu) {
-              console.warn("ModelFeed: reading the file's images failed", Qu)
+          const sk = this.nextSeq;
+          new DataView(bk.payload.buffer, bk.payload.byteOffset, bk.payload.byteLength).setUint32(Xk.f, sk, !0);
+          const Jk = bk.attempt.Hb && bk.glb.byteLength > 0 && this.drawn.get(bk.file) === bk.url;
+          if (kk(wk, Jk ? 1 : 0, bk.payload)) {
+            if (this.nextSeq = sk >= dk - 1 ? 1 : sk + 1, this.ready.splice(Rk, 1), Bk += bk.payload.byteLength, this.pending.delete(bk.file), this.startupLeft.delete(bk.file), this.written.set(bk.file, {
+                seq: sk,
+                url: bk.url,
+                empty: 0 === bk.glb.byteLength,
+                attempt: bk.attempt
+              }), bk.glb.byteLength > 0) try {
+              var tk;
+              null === (tk = this.onWritten) || void 0 === tk || tk.call(this, bk.file, bk.glb)
+            } catch (ak) {
+              console.warn("ModelFeed: reading the file's images failed", ak)
             }
           } else {
-            if (null === Ru || 0 === Ju.glb.byteLength || Ru(Ju.payload.byteLength)) return;
-            this.ready.splice(Eu, 1);
-            const uu = new ru(`${pu(Ju.url)}'s record is ${Ju.payload.byteLength-mu.b} bytes, more than the cmd ring can grow to take`);
-            this.ringRefused(Ju.file, Ju.attempt, Ju.url, uu, !0)
+            if (null === Fk || 0 === bk.glb.byteLength || Fk(bk.payload.byteLength)) return;
+            this.ready.splice(Rk, 1);
+            const kk = new Vk(`${yk(bk.url)}'s record is ${bk.payload.byteLength-Xk.c} bytes, more than the cmd ring can grow to take`);
+            this.ringRefused(bk.file, bk.attempt, bk.url, kk, !0)
           }
         }
       }
     }
 
-    function Su(uu) {
-      return new Bu(`presentation refused ${pu(uu)}`)
+    function ek(kk) {
+      return new Jk(`presentation refused ${yk(kk)}`)
     }
 
-    function pu(uu) {
-      return uu.startsWith("data:") ? `${uu.slice(0,Math.min(Math.max(uu.indexOf(","),5),64))},...` : uu
+    function yk(kk) {
+      return kk.startsWith("data:") ? `${kk.slice(0,Math.min(Math.max(kk.indexOf(","),5),64))},...` : kk
     }
   },
-  40535: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => mu,
-      g: () => Qu,
-      i: () => Vu,
-      l: () => Ju,
-      p: () => Xu,
-      t: () => Nu
+  40387: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Xk,
+      h: () => ak,
+      j: () => sk,
+      l: () => bk,
+      o: () => dk,
+      r: () => wk
     });
-    var Eu = yu(3514),
-      Ku = yu(3005);
-    const Qu = 2147483648,
-      mu = 1073741824;
+    var Rk = Bk(3506),
+      tk = Bk(3007);
+    const ak = 2147483648,
+      Xk = 1073741824;
 
-    function Ju(uu) {
-      return uu.startsWith("data:")
+    function bk(kk) {
+      return kk.startsWith("data:")
     }
 
-    function Nu(uu) {
+    function wk(kk) {
       let {
-        onTableFailed: Ru,
-        packUrl: yu
+        onTableFailed: Fk,
+        packUrl: Bk
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const Eu = Xu();
-      Eu.catch((uu => {
-        null === Ru || void 0 === Ru || Ru(uu)
+      const Rk = dk();
+      Rk.catch((kk => {
+        null === Fk || void 0 === Fk || Fk(kk)
       }));
-      const Ku = async Ru => (await Eu).fileUrl((Ru & ~Qu) >>> 0, uu);
+      const tk = async Fk => (await Rk).fileUrl((Fk & ~ak) >>> 0, kk);
       return {
         startup: [],
-        url: async uu => {
-          if (yu && 0 === (uu & Qu)) {
-            const Ru = await Eu,
-              Ku = Ru.filePackName(uu),
-              Qu = null === Ku || "lifeform" === Ru.fileSource(uu) ? null : yu(Ku);
-            if (null !== Qu) return Qu
+        url: async kk => {
+          if (Bk && 0 === (kk & ak)) {
+            const Fk = await Rk,
+              tk = Fk.filePackName(kk),
+              ak = null === tk || "lifeform" === Fk.fileSource(kk) ? null : Bk(tk);
+            if (null !== ak) return ak
           }
-          return Ku(uu)
+          return tk(kk)
         },
-        shippedUrl: Ku
+        shippedUrl: tk
       }
     }
 
-    function Xu() {
-      return yu.e(41).then((() => yu(42944)))
+    function dk() {
+      return Bk.e(41).then((() => Bk(42829)))
     }
-    async function Vu(uu) {
-      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-      return uu.startsWith("data:") ? (0, Ku.d)(uu.slice(uu.indexOf(",") + 1), Ru) : (0, Eu.E)(uu, {
-        spare: Ru
+    async function sk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+      return kk.startsWith("data:") ? (0, tk.e)(kk.slice(kk.indexOf(",") + 1), Fk) : (0, Rk.N)(kk, {
+        spare: Fk
       })
     }
   },
-  40544: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => Xu,
-      d: () => Vu,
-      e: () => xu,
-      i: () => Tu,
-      j: () => Su,
-      k: () => Bu,
-      o: () => pu
+  40393: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      c: () => dk,
+      f: () => sk,
+      i: () => Ak,
+      k: () => fk,
+      m: () => ek,
+      o: () => Jk,
+      p: () => yk
     });
-    const Eu = 826427981,
-      Ku = 1,
-      Qu = 2,
-      mu = 44,
-      Ju = 46,
-      Nu = 58,
-      Xu = 8,
-      Vu = 4;
+    const Rk = 826427981,
+      tk = 1,
+      ak = 2,
+      Xk = 44,
+      bk = 46,
+      wk = 58,
+      dk = 8,
+      sk = 4;
 
-    function ru(uu, Ru, yu) {
-      const Ku = (new TextEncoder).encode(yu),
-        Qu = Xu + 4 * (Ru.length + 2),
-        mu = new Uint8Array(Qu + (Ku.byteLength + 3 & -4)),
-        Ju = new DataView(mu.buffer);
-      return Ju.setUint32(0, uu, !0), Ju.setUint32(Xu, Eu, !0), Ru.forEach(((uu, Ru) => {
-        Ju.setUint32(Xu + 4 * (Ru + 1), uu, !0)
-      })), Ju.setUint32(Qu - 4, Ku.byteLength, !0), mu.set(Ku, Qu), mu
+    function Vk(kk, Fk, Bk) {
+      const tk = (new TextEncoder).encode(Bk),
+        ak = dk + 4 * (Fk.length + 2),
+        Xk = new Uint8Array(ak + (tk.byteLength + 3 & -4)),
+        bk = new DataView(Xk.buffer);
+      return bk.setUint32(0, kk, !0), bk.setUint32(dk, Rk, !0), Fk.forEach(((kk, Fk) => {
+        bk.setUint32(dk + 4 * (Fk + 1), kk, !0)
+      })), bk.setUint32(ak - 4, tk.byteLength, !0), Xk.set(tk, ak), Xk
     }
 
-    function Bu(uu, Ru) {
-      return ru(uu, [Qu], Ru)
+    function Jk(kk, Fk) {
+      return Vk(kk, [ak], Fk)
     }
 
-    function xu(uu, Ru) {
-      return ru(uu, [Ku, Ju], Ru)
+    function Ak(kk, Fk) {
+      return Vk(kk, [tk, bk], Fk)
     }
 
-    function Su(uu, Ru) {
-      return ru(uu, [Ku, Nu], Ru)
+    function ek(kk, Fk) {
+      return Vk(kk, [tk, wk], Fk)
     }
 
-    function pu(uu, Ru) {
-      return ru(uu, [Ku, mu], Ru)
+    function yk(kk, Fk) {
+      return Vk(kk, [tk, Xk], Fk)
     }
 
-    function Tu(uu) {
-      const Ru = Xu;
-      if (uu.byteLength < Ru + 12) return !1;
-      const yu = new DataView(uu.buffer, uu.byteOffset, uu.byteLength);
-      return yu.getUint32(Ru, !0) === Eu && yu.getUint32(Ru + 4, !0) === Ku && yu.getUint32(Ru + 8, !0) === mu
+    function fk(kk) {
+      const Fk = dk;
+      if (kk.byteLength < Fk + 12) return !1;
+      const Bk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength);
+      return Bk.getUint32(Fk, !0) === Rk && Bk.getUint32(Fk + 4, !0) === tk && Bk.getUint32(Fk + 8, !0) === Xk
     }
   },
-  40523: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      b: () => ju,
-      f: () => Wu,
-      j: () => Cu,
-      l: () => bu,
-      o: () => ku,
-      q: () => pu
+  40364: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      e: () => Wk,
+      h: () => mk,
+      j: () => Lk,
+      k: () => Yk,
+      l: () => Ok,
+      m: () => yk
     });
-    var Eu = yu(4564),
-      Ku = yu(40405);
-    const Qu = 18,
-      mu = 19,
-      Ju = 20,
-      Nu = {
+    var Rk = Bk(4531),
+      tk = Bk(40252);
+    const ak = 18,
+      Xk = 19,
+      bk = 20,
+      wk = {
         1: "link",
         2: "draw",
         3: "draw base vertex",
@@ -2564,24 +2564,24 @@ export const modules = {
         13: "draw short constant",
         15: "draw no zero buffer",
         16: "draw feedback loop",
-        [Qu]: "retry linked",
-        [mu]: "fallback linked",
-        [Ju]: "fallback failed",
+        [ak]: "retry linked",
+        [Xk]: "fallback linked",
+        [bk]: "fallback failed",
         32: "compile validation",
         33: "compile internal",
         34: "compile timeout"
       };
 
-    function Xu(uu, Ru) {
-      return uu === Qu ? "program retry" : uu === mu || uu === Ju ? `program fallback ${Ru}` : "program"
+    function dk(kk, Fk) {
+      return kk === ak ? "program retry" : kk === Xk || kk === bk ? `program fallback ${Fk}` : "program"
     }
-    const Vu = {
+    const sk = {
         1: "renderer",
         2: "sky",
         3: "meshes",
         4: "terrain"
       },
-      ru = {
+      Vk = {
         0: "transform",
         1: "object",
         2: "instance batch",
@@ -2594,14 +2594,14 @@ export const modules = {
         10: "text plane",
         11: "object chunk"
       },
-      Bu = {
+      Jk = {
         1: "mesh undecodable",
         2: "part refused",
         3: "terrain ids full",
         4: "unknown terrain id",
         5: "buffer failed"
       },
-      xu = {
+      Ak = {
         1: "view waited drained",
         2: "view waited capped",
         3: "none after view",
@@ -2610,7 +2610,7 @@ export const modules = {
         6: "no wait parallel links",
         7: "view shown unheld"
       },
-      Su = {
+      ek = {
         1280: "invalid enum",
         1281: "invalid value",
         1282: "invalid operation",
@@ -2619,78 +2619,78 @@ export const modules = {
         37442: "context lost"
       };
 
-    function pu(uu) {
-      return String(uu).replace(/\d/g, (uu => String.fromCharCode(97 + Number(uu))))
+    function yk(kk) {
+      return String(kk).replace(/\d/g, (kk => String.fromCharCode(97 + Number(kk))))
     }
 
-    function Tu(uu, Ru) {
-      var yu;
-      return null !== (yu = uu[Ru]) && void 0 !== yu ? yu : pu(Ru)
+    function fk(kk, Fk) {
+      var Bk;
+      return null !== (Bk = kk[Fk]) && void 0 !== Bk ? Bk : yk(Fk)
     }
 
-    function Wu() {
-      return pu((0, Ku.d)())
+    function mk() {
+      return yk((0, tk.e)())
     }
 
-    function ju(uu, Ru) {
-      switch (uu) {
-        case Eu.g.RenderSceneRowNotDrawn:
+    function Wk(kk, Fk) {
+      switch (kk) {
+        case Rk.g.RenderSceneRowNotDrawn:
           return {
-            words: ` ${Tu(ru,Ru)}`, instance: String(Ru), group: String(uu)
+            words: ` ${fk(Vk,Fk)}`, instance: String(Fk), group: String(kk)
           };
-        case Eu.g.RenderChunkMeshNotDrawn: {
-          const yu = 0 === (128 & Ru) ? "" : " shortage",
-            Eu = Ru >>> 8;
+        case Rk.g.RenderChunkMeshNotDrawn: {
+          const Bk = 0 === (128 & Fk) ? "" : " shortage",
+            Rk = Fk >>> 8;
           return {
-            words: ` ${Tu(Bu,127&Ru)}${yu}${0===Eu?"":` kind ${pu(Eu)}`}`,
-            instance: String(Ru),
-            group: String(uu)
+            words: ` ${fk(Jk,127&Fk)}${Bk}${0===Rk?"":` kind ${yk(Rk)}`}`,
+            instance: String(Fk),
+            group: String(kk)
           }
         }
-        case Eu.g.RenderInternal: {
-          const yu = Tu(Vu, 255 & Ru),
-            Eu = Ru >>> 8 & 255;
-          if (0 === Eu) return {
-            words: ` ${yu}`,
-            instance: String(Ru),
-            group: String(uu)
+        case Rk.g.RenderInternal: {
+          const Bk = fk(sk, 255 & Fk),
+            Rk = Fk >>> 8 & 255;
+          if (0 === Rk) return {
+            words: ` ${Bk}`,
+            instance: String(Fk),
+            group: String(kk)
           };
-          const Ku = Tu(Nu, Eu),
-            Qu = Ru >>> 16;
+          const tk = fk(wk, Rk),
+            ak = Fk >>> 16;
           return {
-            words: ` ${yu} ${Ku} program ${pu(Qu)}`,
-            instance: `${yu} ${Ku}`,
-            group: Xu(Eu, yu),
+            words: ` ${Bk} ${tk} program ${yk(ak)}`,
+            instance: `${Bk} ${tk}`,
+            group: dk(Rk, Bk),
             gpuDetails: {
-              programFailure: Ku,
-              program: String(Qu)
+              programFailure: tk,
+              program: String(ak)
             }
           }
         }
-        case Eu.g.RenderSerialLinks: {
-          const yu = Tu(xu, Ru);
+        case Rk.g.RenderSerialLinks: {
+          const Bk = fk(Ak, Fk);
           return {
-            words: ` ${yu}`,
-            instance: String(Ru),
-            group: String(uu),
+            words: ` ${Bk}`,
+            instance: String(Fk),
+            group: String(kk),
             gpuDetails: {
-              serialLinks: yu
+              serialLinks: Bk
             }
           }
         }
-        case Eu.g.RenderGlErrorAfterRestore: {
-          const yu = Tu(Su, 65535 & Ru),
-            Eu = Ru >>> 16,
-            Ku = 65535 !== Eu;
+        case Rk.g.RenderGlErrorAfterRestore: {
+          const Bk = fk(ek, 65535 & Fk),
+            Rk = Fk >>> 16,
+            tk = 65535 !== Rk;
           return {
-            words: ` ${yu}${Ku?` program ${pu(Eu)}`:""}`,
-            instance: String(Ru),
-            group: String(uu),
-            gpuDetails: Ku ? {
-              glError: yu,
-              program: String(Eu)
+            words: ` ${Bk}${tk?` program ${yk(Rk)}`:""}`,
+            instance: String(Fk),
+            group: String(kk),
+            gpuDetails: tk ? {
+              glError: Bk,
+              program: String(Rk)
             } : {
-              glError: yu
+              glError: Bk
             }
           }
         }
@@ -2698,533 +2698,533 @@ export const modules = {
           return null
       }
     }
-    const Hu = 2,
-      du = new Map;
+    const vk = 2,
+      ik = new Map;
 
-    function bu(uu) {
+    function Yk(kk) {
       let {
-        group: Ru,
-        instance: yu
-      } = uu, Eu = du.get(Ru);
-      return void 0 === Eu && (Eu = [], du.set(Ru, Eu)), !Eu.includes(yu) && (Eu.length >= Hu || (Eu.push(yu), !1))
+        group: Fk,
+        instance: Bk
+      } = kk, Rk = ik.get(Fk);
+      return void 0 === Rk && (Rk = [], ik.set(Fk, Rk)), !Rk.includes(Bk) && (Rk.length >= vk || (Rk.push(Bk), !1))
     }
 
-    function Cu() {
-      return du.size > 0
+    function Lk() {
+      return ik.size > 0
     }
 
-    function ku() {
-      du.clear()
+    function Ok() {
+      ik.clear()
     }
   },
-  40442: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      e: () => Wu,
-      i: () => ju,
-      m: () => Tu,
-      n: () => Cu
+  40290: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => mk,
+      e: () => Wk,
+      g: () => fk,
+      h: () => Lk
     });
-    var Eu = yu(6418),
-      Ku = yu(34),
-      Qu = yu(4110),
-      mu = yu(4564),
-      Ju = yu(6412),
-      Nu = yu(40444);
+    var Rk = Bk(6349),
+      tk = Bk(29),
+      ak = Bk(4072),
+      Xk = Bk(4531),
+      bk = Bk(6343),
+      wk = Bk(40292);
 
-    function Xu(uu, Ru) {
-      const yu = (0, Ju.d)(Ru.variants);
-      return uu.setShaderPack(yu.variantFlags, yu.hooks, yu.moduleCodes, (0, Nu.B)(Ru.layers), Nu.p[Ru.vQ], Ru.keepCircleShadows)
+    function dk(kk, Fk) {
+      const Bk = (0, bk.b)(Fk.variants);
+      return kk.setShaderPack(Bk.variantFlags, Bk.hooks, Bk.moduleCodes, (0, wk.v)(Fk.layers), wk.m[Fk.aX], Fk.keepCircleShadows)
     }
-    const Vu = 0,
-      ru = 1,
-      Bu = 2,
-      xu = "shaderPack:failedToCompile",
-      Su = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
-      pu = new Set(["not_requested", "off_after_loss", "gpu_class_webgl"]);
+    const sk = 0,
+      Vk = 1,
+      Jk = 2,
+      Ak = "shaderPack:failedToCompile",
+      ek = new Set(["no_webgpu_api", "no_adapter", "software_adapter", "adapter_error", "start_no_adapter"]),
+      yk = new Set(["not_requested", "off_after_loss", "gpu_class_webgl"]);
 
-    function Tu(uu, Ru) {
-      var yu;
-      const Eu = null !== (yu = null === uu || void 0 === uu ? void 0 : uu.reason) && void 0 !== yu ? yu : "none";
-      return Su.has(Eu) ? {
-        messageKey: Ru ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
+    function fk(kk, Fk) {
+      var Bk;
+      const Rk = null !== (Bk = null === kk || void 0 === kk ? void 0 : kk.reason) && void 0 !== Bk ? Bk : "none";
+      return ek.has(Rk) ? {
+        messageKey: Fk ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
         noAdapter: !0
-      } : "not_requested" === Eu && "override" === (null === uu || void 0 === uu ? void 0 : uu.source) ? {
+      } : "not_requested" === Rk && "override" === (null === kk || void 0 === kk ? void 0 : kk.source) ? {
         messageKey: "shaderPack:failedRendererOverride",
         noAdapter: !1
       } : {
-        messageKey: pu.has(Eu) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
+        messageKey: yk.has(Rk) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
         noAdapter: !1
       }
     }
-    const Wu = {
+    const mk = {
       messageKey: "shaderPack:failedDeviceGraphics",
       noAdapter: !1
     };
-    class ju extends Error {
-      constructor(uu) {
-        super(`the shader pack can't run in this game: ${uu}`), this.messageKey = uu, this.name = "ShaderPackJoinError"
+    class Wk extends Error {
+      constructor(kk) {
+        super(`the shader pack can't run in this game: ${kk}`), this.messageKey = kk, this.name = "ShaderPackJoinError"
       }
     }
-    const Hu = "strict";
-    class du {
-      constructor(uu) {
-        this.deps = uu, this.pagePack = void 0, this.loaded = null, this.vQ = Hu, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = uu.load().catch((Ru => (uu.warn("the shader pack could not load: the game draws without it", Ru), {
+    const vk = "strict";
+    class ik {
+      constructor(kk) {
+        this.deps = kk, this.pagePack = void 0, this.loaded = null, this.aX = vk, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = kk.load().catch((Fk => (kk.warn("the shader pack could not load: the game draws without it", Fk), {
           status: "none"
-        }))).then((uu => (this.loaded = uu, "active" === uu.status && (this.handOverToPreviews(uu), null !== uu.harnessPolicy && (this.vQ = uu.harnessPolicy, this.handOver())), uu)))
+        }))).then((kk => (this.loaded = kk, "active" === kk.status && (this.handOverToPreviews(kk), null !== kk.harnessPolicy && (this.aX = kk.harnessPolicy, this.handOver())), kk)))
       }
-      async join(uu) {
+      async join(kk) {
         this.leave();
-        const Ru = this.game,
-          [yu, Ku] = await Promise.all([this.pagePack, this.policyOf(uu)]);
-        if (Ru !== this.game || "none" === yu.status) return null;
-        const Qu = "active" === yu.status ? yu.pack.variants : yu.variants,
-          mu = (0, Eu.h)(Qu, Ku);
-        if (mu && "active" === yu.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
-        if (mu) {
-          const uu = this.cantRun(yu, Ku);
-          if (null !== uu) return uu
-        } else if ("blocked" === yu.status || null === this.deps.core) return null;
-        return this.vQ = Ku, this.handOver(), mu && this.refused ? xu : (this.joined = !0, this.offInThisGame = !mu, null)
+        const Fk = this.game,
+          [Bk, tk] = await Promise.all([this.pagePack, this.policyOf(kk)]);
+        if (Fk !== this.game || "none" === Bk.status) return null;
+        const ak = "active" === Bk.status ? Bk.pack.variants : Bk.variants,
+          Xk = (0, Rk.h)(ak, tk);
+        if (Xk && "active" === Bk.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
+        if (Xk) {
+          const kk = this.cantRun(Bk, tk);
+          if (null !== kk) return kk
+        } else if ("blocked" === Bk.status || null === this.deps.core) return null;
+        return this.aX = tk, this.handOver(), Xk && this.refused ? Ak : (this.joined = !0, this.offInThisGame = !Xk, null)
       }
-      async replay(uu) {
-        const Ru = await this.join(uu);
-        null === Ru ? this.playable() : this.deps.failInGame(Ru)
+      async replay(kk) {
+        const Fk = await this.join(kk);
+        null === Fk ? this.playable() : this.deps.failInGame(Fk)
       }
-      cantRun(uu, Ru) {
+      cantRun(kk, Fk) {
         const {
-          core: yu,
-          noWebGpu: Eu
+          core: Bk,
+          noWebGpu: Rk
         } = this.deps;
-        if ("blocked" === uu.status) {
-          return "shaderPack:failedUnchecked" === uu.messageKey && null === yu && Eu.noAdapter ? Eu.messageKey : uu.messageKey
+        if ("blocked" === kk.status) {
+          return "shaderPack:failedUnchecked" === kk.messageKey && null === Bk && Rk.noAdapter ? Rk.messageKey : kk.messageKey
         }
-        return this.refused || this.failedPolicies.has(Ru) ? xu : null
+        return this.refused || this.failedPolicies.has(Fk) ? Ak : null
       }
       runsInJoinedGame() {
         return this.joined && !this.offInThisGame
       }
       reachInJoinedGame() {
-        var uu;
-        return this.runsInJoinedGame() && "active" === (null === (uu = this.loaded) || void 0 === uu ? void 0 : uu.status) ? function(uu, Ru) {
-          const yu = uu.filter((uu => (0, Eu.h)([uu], Ru))),
-            Ku = uu => yu.some((Ru => Ru[uu]));
+        var kk;
+        return this.runsInJoinedGame() && "active" === (null === (kk = this.loaded) || void 0 === kk ? void 0 : kk.status) ? function(kk, Fk) {
+          const Bk = kk.filter((kk => (0, Rk.h)([kk], Fk))),
+            tk = kk => Bk.some((Fk => Fk[kk]));
           return {
-            sceneDepth: Ku("sceneDepth"),
-            sunShadow: Ku("sunShadow"),
-            airShadow: Ku("airShadow")
+            sceneDepth: tk("sceneDepth"),
+            sunShadow: tk("sunShadow"),
+            airShadow: tk("airShadow")
           }
-        }(this.loaded.pack.variants, this.vQ) : null
+        }(this.loaded.pack.variants, this.aX) : null
       }
       couldntRunInJoinedGame() {
         return this.couldntRun
       }
       playable() {
-        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(xu) : (null !== this.couldntRun ? this.notify(Qu.b, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.vQ) && this.notifyModelFallback()))
+        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(Ak) : (null !== this.couldntRun ? this.notify(ak.d, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.aX) && this.notifyModelFallback()))
       }
       leave() {
         this.game++, this.joined = !1, this.playing = !1, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1
       }
-      coreErrors(uu) {
+      coreErrors(kk) {
         for (const {
-            code: Ru,
-            detail: yu
+            code: Fk,
+            detail: Bk
           }
-          of uu)
-          if (Ru === mu.g.RenderShaderPackNotRun) switch (255 & yu) {
-            case Vu:
+          of kk)
+          if (Fk === Xk.g.RenderShaderPackNotRun) switch (255 & Bk) {
+            case sk:
               this.refused = !0, this.failed();
               break;
-            case ru:
-              this.failedPolicies.add(this.vQ), this.failed();
+            case Vk:
+              this.failedPolicies.add(this.aX), this.failed();
               break;
-            case Bu:
-              this.failedModelPolicies.add(this.vQ), this.playing && this.notifyModelFallback()
+            case Jk:
+              this.failedModelPolicies.add(this.aX), this.playing && this.notifyModelFallback()
           }
       }
       failed() {
-        this.joined && !this.offInThisGame && (this.playing ? this.fail(xu) : this.failedWhileJoining = !0)
+        this.joined && !this.offInThisGame && (this.playing ? this.fail(Ak) : this.failedWhileJoining = !0)
       }
-      fail(uu) {
-        this.leave(), this.deps.failInGame(uu)
+      fail(kk) {
+        this.leave(), this.deps.failInGame(kk)
       }
       notifyModelFallback() {
         this.modelsNotified || (this.modelsNotified = !0, this.notify("shaderPack:modelsWithoutPack"))
       }
-      notify(uu, Ru) {
-        const yu = this.game;
-        this.deps.notify(uu, (() => yu === this.game && this.joined), Ru)
+      notify(kk, Fk) {
+        const Bk = this.game;
+        this.deps.notify(kk, (() => Bk === this.game && this.joined), Fk)
       }
       handOver() {
-        var uu;
+        var kk;
         const {
-          core: Ru
+          core: Fk
         } = this.deps;
-        null !== Ru && "active" === (null === (uu = this.loaded) || void 0 === uu ? void 0 : uu.status) && (Xu(Ru, {
+        null !== Fk && "active" === (null === (kk = this.loaded) || void 0 === kk ? void 0 : kk.status) && (dk(Fk, {
           ...this.loaded.pack,
-          vQ: this.vQ
+          aX: this.aX
         }) || (this.refused = !0, this.deps.warn("the core refused the shader pack: the games it runs in fail", null)))
       }
-      handOverToPreviews(uu) {
+      handOverToPreviews(kk) {
         let {
-          pack: Ru,
-          harnessPolicy: yu
-        } = uu;
+          pack: Fk,
+          harnessPolicy: Bk
+        } = kk;
         const {
-          previews: Eu
+          previews: Rk
         } = this.deps;
-        null !== Eu && Xu(Eu, {
-          ...Ru,
-          vQ: null !== yu && void 0 !== yu ? yu : Hu
+        null !== Rk && dk(Rk, {
+          ...Fk,
+          aX: null !== Bk && void 0 !== Bk ? Bk : vk
         })
       }
-      policyOf(uu) {
-        return this.deps.policyOf(uu).catch((uu => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", uu), Hu)))
+      policyOf(kk) {
+        return this.deps.policyOf(kk).catch((kk => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", kk), vk)))
       }
     }
-    const bu = "wasmShaderPackNotice";
+    const Yk = "wasmShaderPackNotice";
 
-    function Cu(uu, Ru, yu, Eu) {
-      return Ku.k.subscribe(bu, (uu => {
+    function Lk(kk, Fk, Bk, Rk) {
+      return tk.o.subscribe(Yk, (kk => {
         let {
-          translationKey: Ru,
-          stillCurrent: yu,
-          reasonKey: Eu
-        } = uu;
-        yu() && Ku.k.Op("chat", (0, Qu.g)(Ru, Eu))
-      })), new du({
-        load: ku,
-        policyOf: eu,
-        core: uu,
-        previews: Ru,
-        noWebGpu: yu,
-        notify: (uu, Ru, yu) => {
-          const Eu = {
-            translationKey: uu,
-            stillCurrent: Ru,
-            reasonKey: yu
+          translationKey: Fk,
+          stillCurrent: Bk,
+          reasonKey: Rk
+        } = kk;
+        Bk() && tk.o.Hf("chat", (0, ak.k)(Fk, Rk))
+      })), new ik({
+        load: Ok,
+        policyOf: Ek,
+        core: kk,
+        previews: Fk,
+        noWebGpu: Bk,
+        notify: (kk, Fk, Bk) => {
+          const Rk = {
+            translationKey: kk,
+            stillCurrent: Fk,
+            reasonKey: Bk
           };
-          Ku.k.Op(bu, Eu, !0)
+          tk.o.Hf(Yk, Rk, !0)
         },
-        failInGame: uu => {
-          Ku.k.Op(Qu.c, uu)
+        failInGame: kk => {
+          tk.o.Hf(ak.h, kk)
         },
-        warn: Eu
+        warn: Rk
       })
     }
-    async function ku() {
+    async function Ok() {
       const [{
-        shaderPackPage: uu,
-        harnessShaderPackMode: Ru
+        shaderPackPage: kk,
+        harnessShaderPackMode: Fk
       }, {
-        shaderPackTextures: Eu
-      }] = await Promise.all([yu.e(129).then((() => yu(38963))), yu.e(130).then((() => yu(6407)))]), Ku = await uu.load();
-      return "active" !== Ku.status ? Ku : {
+        shaderPackTextures: Rk
+      }] = await Promise.all([Bk.e(129).then((() => Bk(38817))), Bk.e(130).then((() => Bk(6340)))]), tk = await kk.load();
+      return "active" !== tk.status ? tk : {
         status: "active",
         pack: {
-          variants: Ku.pack.variants,
-          layers: Eu().layers,
-          keepCircleShadows: Ku.pack.keepCircleShadows
+          variants: tk.pack.variants,
+          layers: Rk().layers,
+          keepCircleShadows: tk.pack.keepCircleShadows
         },
-        harnessPolicy: Ru()
+        harnessPolicy: Fk()
       }
     }
-    async function eu(uu) {
-      var Ru;
+    async function Ek(kk) {
+      var Fk;
       const [{
-        harnessShaderPackMode: Eu
+        harnessShaderPackMode: Rk
       }, {
-        getShaderPackPolicy: Ku
-      }] = await Promise.all([yu.e(129).then((() => yu(38963))), yu.e(89).then((() => yu(40860)))]);
-      return null !== (Ru = Eu()) && void 0 !== Ru ? Ru : Ku(uu)
+        getShaderPackPolicy: tk
+      }] = await Promise.all([Bk.e(129).then((() => Bk(38817))), Bk.e(89).then((() => Bk(40709)))]);
+      return null !== (Fk = Rk()) && void 0 !== Fk ? Fk : tk(kk)
     }
   },
-  40559: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Ju,
-      e: () => Tu,
-      f: () => Nu,
-      g: () => Xu,
-      j: () => Vu,
-      k: () => Bu
+  40407: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => bk,
+      g: () => fk,
+      k: () => wk,
+      n: () => dk,
+      q: () => sk,
+      s: () => Jk
     });
-    var Eu = yu(40564),
-      Ku = yu(40573);
-    const Qu = "atlas:",
-      mu = 3e4;
-    class Ju extends Error {
-      constructor(uu, Ru) {
-        super(`fetching ${uu} answered HTTP ${Ru}`), this.url = uu, this.status = Ru, this.name = "TerrainTextureFetchError"
+    var Rk = Bk(40413),
+      tk = Bk(40421);
+    const ak = "atlas:",
+      Xk = 3e4;
+    class bk extends Error {
+      constructor(kk, Fk) {
+        super(`fetching ${kk} answered HTTP ${Fk}`), this.url = kk, this.status = Fk, this.name = "TerrainTextureFetchError"
       }
     }
 
-    function Nu(uu) {
-      if (!uu.startsWith(Qu)) return null;
-      const Ru = Number(uu.slice(Qu.length));
-      return Number.isInteger(Ru) && Ru >= 0 ? Ru : null
+    function wk(kk) {
+      if (!kk.startsWith(ak)) return null;
+      const Fk = Number(kk.slice(ak.length));
+      return Number.isInteger(Fk) && Fk >= 0 ? Fk : null
     }
-    async function Xu() {
-      const uu = await yu.e(201).then((() => yu(34131)));
+    async function dk() {
+      const kk = await Bk.e(201).then((() => Bk(34024)));
       return {
-        atlasSheets: uu.blockAtlasUrls,
-        texture: Ru => {
-          var yu, Eu, Qu;
-          return null !== (yu = null !== (Eu = null !== (Qu = uu.animatedBlockTextures[Ru]) && void 0 !== Qu ? Qu : uu.rotatedBlockTextures[Ru]) && void 0 !== Eu ? Eu : Ku.d[Ru]) && void 0 !== yu ? yu : null
+        atlasSheets: kk.blockAtlasUrls,
+        texture: Fk => {
+          var Bk, Rk, ak;
+          return null !== (Bk = null !== (Rk = null !== (ak = kk.animatedBlockTextures[Fk]) && void 0 !== ak ? ak : kk.rotatedBlockTextures[Fk]) && void 0 !== Rk ? Rk : tk.b[Fk]) && void 0 !== Bk ? Bk : null
         }
       }
     }
-    async function Vu(uu) {
-      const Ru = new AbortController,
-        yu = setTimeout((() => {
-          Ru.abort(new DOMException(`${uu} took over ${mu} ms`, "TimeoutError"))
-        }), mu);
-      let Eu;
+    async function sk(kk) {
+      const Fk = new AbortController,
+        Bk = setTimeout((() => {
+          Fk.abort(new DOMException(`${kk} took over ${Xk} ms`, "TimeoutError"))
+        }), Xk);
+      let Rk;
       try {
-        const yu = await fetch(uu, {
-          signal: Ru.signal
+        const Bk = await fetch(kk, {
+          signal: Fk.signal
         });
-        if (!yu.ok) throw new Ju(uu, yu.status);
-        Eu = await yu.blob()
+        if (!Bk.ok) throw new bk(kk, Bk.status);
+        Rk = await Bk.blob()
       } finally {
-        clearTimeout(yu)
+        clearTimeout(Bk)
       }
-      const Ku = await createImageBitmap(Eu, {
+      const tk = await createImageBitmap(Rk, {
         premultiplyAlpha: "none",
         colorSpaceConversion: "none"
       });
       try {
-        return Bu(Ku)
+        return Jk(tk)
       } finally {
-        Ku.close()
+        tk.close()
       }
     }
-    const ru = 8192;
+    const Vk = 8192;
 
-    function Bu(uu) {
+    function Jk(kk) {
       const {
-        width: Ru,
-        height: yu
-      } = uu, Ku = Math.max(1, Math.min(yu, ru)), Qu = (0, Eu.f)(Ru, Ku, {
+        width: Fk,
+        height: Bk
+      } = kk, tk = Math.max(1, Math.min(Bk, Vk)), ak = (0, Rk.f)(Fk, tk, {
         willReadFrequently: !0
       });
-      if (!Qu) throw new Error("no 2D context to read the texture back");
-      Qu.globalCompositeOperation = "copy";
-      const mu = new Uint8Array(Ru * yu * 4);
-      for (let Eu = 0; Eu < yu; Eu += Ku) {
-        const Ju = Math.min(Ku, yu - Eu);
-        Qu.drawImage(uu, 0, Eu, Ru, Ju, 0, 0, Ru, Ju), mu.set(Qu.getImageData(0, 0, Ru, Ju).data, Eu * Ru * 4)
+      if (!ak) throw new Error("no 2D context to read the texture back");
+      ak.globalCompositeOperation = "copy";
+      const Xk = new Uint8Array(Fk * Bk * 4);
+      for (let Rk = 0; Rk < Bk; Rk += tk) {
+        const bk = Math.min(tk, Bk - Rk);
+        ak.drawImage(kk, 0, Rk, Fk, bk, 0, 0, Fk, bk), Xk.set(ak.getImageData(0, 0, Fk, bk).data, Rk * Fk * 4)
       }
       return {
-        width: Ru,
-        height: yu,
-        pixels: mu
+        width: Fk,
+        height: Bk,
+        pixels: Xk
       }
     }
-    async function xu(uu, Ru) {
-      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Vu;
-      const Eu = [],
-        Ku = await Promise.all(uu.map((async uu => {
-          var Ku, mu;
-          const Ju = null !== (Ku = null === (mu = Ru.decoded) || void 0 === mu ? void 0 : mu.call(Ru, uu)) && void 0 !== Ku ? Ku : null,
-            Xu = null === Ju ? function(uu, Ru) {
-              if (uu.startsWith(Qu)) {
-                var yu;
-                const Eu = Nu(uu);
-                return null === Eu ? null : null !== (yu = Ru.atlasSheets[Eu]) && void 0 !== yu ? yu : null
+    async function Ak(kk, Fk) {
+      let Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : sk;
+      const Rk = [],
+        tk = await Promise.all(kk.map((async kk => {
+          var tk, Xk;
+          const bk = null !== (tk = null === (Xk = Fk.decoded) || void 0 === Xk ? void 0 : Xk.call(Fk, kk)) && void 0 !== tk ? tk : null,
+            dk = null === bk ? function(kk, Fk) {
+              if (kk.startsWith(ak)) {
+                var Bk;
+                const Rk = wk(kk);
+                return null === Rk ? null : null !== (Bk = Fk.atlasSheets[Rk]) && void 0 !== Bk ? Bk : null
               }
-              return Ru.texture(uu)
-            }(uu, Ru) : null,
-            Vu = null !== Ju && void 0 !== Ju ? Ju : null === Xu ? null : yu(Xu);
-          if (null === Vu) return Eu.push({
-            name: uu,
-            url: Xu,
-            error: new Error(`no URL for terrain texture ${uu}`)
+              return Fk.texture(kk)
+            }(kk, Fk) : null,
+            sk = null !== bk && void 0 !== bk ? bk : null === dk ? null : Bk(dk);
+          if (null === sk) return Rk.push({
+            name: kk,
+            url: dk,
+            error: new Error(`no URL for terrain texture ${kk}`)
           }), null;
           try {
-            const Ru = await Vu;
-            if (Ru.pixels.byteLength !== Ru.width * Ru.height * 4) throw new Error(`decoded ${Ru.pixels.byteLength} bytes for ${Ru.width}x${Ru.height} texels`);
+            const Fk = await sk;
+            if (Fk.pixels.byteLength !== Fk.width * Fk.height * 4) throw new Error(`decoded ${Fk.pixels.byteLength} bytes for ${Fk.width}x${Fk.height} texels`);
             return {
-              name: uu,
-              texture: Ru
+              name: kk,
+              texture: Fk
             }
-          } catch (ru) {
-            return Eu.push({
-              name: uu,
-              url: Xu,
-              error: ru
+          } catch (Vk) {
+            return Rk.push({
+              name: kk,
+              url: dk,
+              error: Vk
             }), null
           }
         }))),
-        mu = Ku.filter((uu => null !== uu)),
-        Ju = new Uint32Array(2 * mu.length);
-      mu.forEach(((uu, Ru) => {
+        Xk = tk.filter((kk => null !== kk)),
+        bk = new Uint32Array(2 * Xk.length);
+      Xk.forEach(((kk, Fk) => {
         let {
-          texture: yu
-        } = uu;
-        Ju[2 * Ru] = yu.width, Ju[2 * Ru + 1] = yu.height
+          texture: Bk
+        } = kk;
+        bk[2 * Fk] = Bk.width, bk[2 * Fk + 1] = Bk.height
       }));
       return {
         handOver: {
-          names: mu.map((uu => {
+          names: Xk.map((kk => {
             let {
-              name: Ru
-            } = uu;
-            return Ru
+              name: Fk
+            } = kk;
+            return Fk
           })),
-          textures: mu.map((uu => {
+          textures: Xk.map((kk => {
             let {
-              texture: Ru
-            } = uu;
-            return Ru.pixels
+              texture: Fk
+            } = kk;
+            return Fk.pixels
           })),
-          sizes: Ju
+          sizes: bk
         },
-        failures: Eu
+        failures: Rk
       }
     }
-    const Su = [2e3, 1e4, 3e4, 6e4, 12e4];
+    const ek = [2e3, 1e4, 3e4, 6e4, 12e4];
 
-    function pu() {}
-    class Tu {
-      constructor(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Su,
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
-        this.core = uu, this.retryMs = Ru, this.keepBelow = yu, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
+    function yk() {}
+    class fk {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ek,
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
+        this.core = kk, this.retryMs = Fk, this.keepBelow = Bk, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
       }
-      async swap(uu) {
-        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Xu,
-          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Eu = ++this.started,
-          Ku = {
-            decode: yu.decode,
-            wholeAtlas: yu.wholeAtlas
+      async swap(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dk,
+          Bk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Rk = ++this.started,
+          tk = {
+            decode: Bk.decode,
+            wholeAtlas: Bk.wholeAtlas
           };
-        return this.loadAndHandOver(Ru, Ku, uu, (() => {
-          var uu;
-          return Eu < this.landed || !1 === (null === (uu = yu.wanted) || void 0 === uu ? void 0 : uu.call(yu))
+        return this.loadAndHandOver(Fk, tk, kk, (() => {
+          var kk;
+          return Rk < this.landed || !1 === (null === (kk = Bk.wanted) || void 0 === kk ? void 0 : kk.call(Bk))
         }), {
-          onTaken: (uu, yu) => {
-            this.landed = Eu, this.current = {
-              mine: Eu,
-              sources: Ru,
-              load: Ku,
-              kx: uu,
-              failed: yu
+          onTaken: (kk, Bk) => {
+            this.landed = Rk, this.current = {
+              mine: Rk,
+              sources: Fk,
+              load: tk,
+              lA: kk,
+              failed: Bk
             }
           }
         })
       }
-      restore(uu) {
-        var Ru;
-        const yu = this.current;
-        if (null === yu) return Promise.resolve(null);
-        if ((null === (Ru = this.restoring) || void 0 === Ru ? void 0 : Ru.mine) === yu.mine) return this.restoring.done;
-        const Eu = {
-          mine: yu.mine,
-          done: this.restoreLanded(yu, uu).finally((() => {
-            this.restoring === Eu && (this.restoring = null)
+      restore(kk) {
+        var Fk;
+        const Bk = this.current;
+        if (null === Bk) return Promise.resolve(null);
+        if ((null === (Fk = this.restoring) || void 0 === Fk ? void 0 : Fk.mine) === Bk.mine) return this.restoring.done;
+        const Rk = {
+          mine: Bk.mine,
+          done: this.restoreLanded(Bk, kk).finally((() => {
+            this.restoring === Rk && (this.restoring = null)
           }))
         };
-        return this.restoring = Eu, Eu.done
+        return this.restoring = Rk, Rk.done
       }
-      async restoreLanded(uu, Ru) {
-        const yu = () => this.landed !== uu.mine,
+      async restoreLanded(kk, Fk) {
+        const Bk = () => this.landed !== kk.mine,
           {
-            kx: Eu
-          } = uu;
-        if (null !== Eu) return this.stopped() ? null : this.core.setTerrainTextures(Eu.names, Eu.textures, Eu.sizes);
-        let Ku = Ru;
-        for (let Qu = 0;; Qu++) {
-          const Ru = this.retryMs.at(Qu),
-            Eu = {
-              allOrNothingExcept: void 0 === Ru ? void 0 : uu.failed
+            lA: Rk
+          } = kk;
+        if (null !== Rk) return this.stopped() ? null : this.core.setTerrainTextures(Rk.names, Rk.textures, Rk.sizes);
+        let tk = Fk;
+        for (let ak = 0;; ak++) {
+          const Fk = this.retryMs.at(ak),
+            Rk = {
+              allOrNothingExcept: void 0 === Fk ? void 0 : kk.failed
             },
-            mu = await this.loadAndHandOver(uu.sources, uu.load, Ku, yu, Eu);
-          if (!1 !== mu || void 0 === Ru || this.stopped()) return mu;
-          if (Ku = pu, await new Promise((uu => {
-              setTimeout(uu, Ru)
-            })), yu()) return null
+            Xk = await this.loadAndHandOver(kk.sources, kk.load, tk, Bk, Rk);
+          if (!1 !== Xk || void 0 === Fk || this.stopped()) return Xk;
+          if (tk = yk, await new Promise((kk => {
+              setTimeout(kk, Fk)
+            })), Bk()) return null
         }
       }
       stopped() {
         return !0 === this.core.isStopped
       }
-      async loadAndHandOver(uu, Ru, yu, Eu) {
-        let Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      async loadAndHandOver(kk, Fk, Bk, Rk) {
+        let tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (this.stopped()) return null;
-        const Qu = this.core.terrainTextureNames();
-        var mu;
-        if (0 === Qu.length) return null === (mu = Ku.onTaken) || void 0 === mu || mu.call(Ku, null, new Set), !0;
-        let Ju, Xu;
+        const ak = this.core.terrainTextureNames();
+        var Xk;
+        if (0 === ak.length) return null === (Xk = tk.onTaken) || void 0 === Xk || Xk.call(tk, null, new Set), !0;
+        let bk, dk;
         try {
-          Ju = await uu(), Xu = await xu(Qu, Ju, Ru.decode)
-        } catch (Tu) {
-          return Eu() ? null : (yu({
+          bk = await kk(), dk = await Ak(ak, bk, Fk.decode)
+        } catch (fk) {
+          return Rk() ? null : (Bk({
             name: null,
             url: null,
-            error: Tu
+            error: fk
           }), !1)
         }
-        if (Eu() || this.stopped()) return null;
-        for (const Nu of Xu.failures) yu(Nu);
-        const Vu = Ku.allOrNothingExcept;
-        if (void 0 !== Vu && Xu.failures.some((uu => {
+        if (Rk() || this.stopped()) return null;
+        for (const wk of dk.failures) Bk(wk);
+        const sk = tk.allOrNothingExcept;
+        if (void 0 !== sk && dk.failures.some((kk => {
             let {
-              name: Ru
-            } = uu;
-            return null === Ru || !Vu.has(Ru)
-          })) || !0 === Ru.wholeAtlas && Xu.failures.some((uu => {
+              name: Fk
+            } = kk;
+            return null === Fk || !sk.has(Fk)
+          })) || !0 === Fk.wholeAtlas && dk.failures.some((kk => {
             let {
-              name: Ru
-            } = uu;
-            return null === Ru || null !== Nu(Ru)
+              name: Fk
+            } = kk;
+            return null === Fk || null !== wk(Fk)
           }))) return !1;
         const {
-          handOver: ru
-        } = Xu, Bu = function(uu) {
-          return uu.textures.reduce(((uu, Ru) => uu + Ru.byteLength), 0)
-        }(ru) < this.keepBelow, Su = this.core.setTerrainTextures(ru.names, ru.textures, ru.sizes, Bu ? void 0 : () => {
-          !async function(uu, Ru) {
-            await Ru;
+          handOver: Vk
+        } = dk, Jk = function(kk) {
+          return kk.textures.reduce(((kk, Fk) => kk + Fk.byteLength), 0)
+        }(Vk) < this.keepBelow, ek = this.core.setTerrainTextures(Vk.names, Vk.textures, Vk.sizes, Jk ? void 0 : () => {
+          !async function(kk, Fk) {
+            await Fk;
             for (const {
-                buffer: Eu
+                buffer: Rk
               }
-              of uu) {
-              const uu = Eu;
-              var yu;
-              if (!uu.detached) null === (yu = uu.transfer) || void 0 === yu || yu.call(uu, 0)
+              of kk) {
+              const kk = Rk;
+              var Bk;
+              if (!kk.detached) null === (Bk = kk.transfer) || void 0 === Bk || Bk.call(kk, 0)
             }
-          }(ru.textures, Ju.heldUntil)
+          }(Vk.textures, bk.heldUntil)
         });
-        if (Su) {
-          var pu;
-          const uu = new Set(Xu.failures.flatMap((uu => {
+        if (ek) {
+          var yk;
+          const kk = new Set(dk.failures.flatMap((kk => {
             let {
-              name: Ru
-            } = uu;
-            return null === Ru ? [] : [Ru]
+              name: Fk
+            } = kk;
+            return null === Fk ? [] : [Fk]
           })));
-          null === (pu = Ku.onTaken) || void 0 === pu || pu.call(Ku, Bu ? ru : null, uu)
+          null === (yk = tk.onTaken) || void 0 === yk || yk.call(tk, Jk ? Vk : null, kk)
         }
-        return Su
+        return ek
       }
     }
   },
-  36615: (uu, Ru, yu) => {
-    function Eu(uu) {
-      return "fetch" === uu || "timeout" === uu || "integrity" === uu ? "download" : "browser"
+  36522: (kk, Fk, Bk) => {
+    function Rk(kk) {
+      return "fetch" === kk || "timeout" === kk || "integrity" === kk ? "download" : "browser"
     }
-    yu.d(Ru, {
-      c: () => Ku,
-      g: () => mu,
-      i: () => Nu,
-      k: () => Ju,
-      o: () => Eu,
-      r: () => Qu
+    Bk.d(Fk, {
+      d: () => tk,
+      f: () => Xk,
+      h: () => wk,
+      l: () => bk,
+      o: () => Rk,
+      s: () => ak
     });
-    const Ku = "https://discord.gg/playbloxd";
+    const tk = "https://discord.gg/playbloxd";
 
-    function Qu(uu) {
-      return "download" === uu ? {
+    function ak(kk) {
+      return "download" === kk ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -3243,21 +3243,21 @@ export const modules = {
       }
     }
 
-    function mu(uu, Ru) {
+    function Xk(kk, Fk) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: Ru ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: Fk ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: uu.code
+          code: kk.code
         },
-        discordLink: Ru,
+        discordLink: Fk,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function Ju() {
+    function bk() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -3269,146 +3269,146 @@ export const modules = {
       }
     }
 
-    function Nu(uu, Ru, yu) {
+    function wk(kk, Fk, Bk) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: yu ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: Bk ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: uu.reason
+          reason: kk.reason
         },
-        discordLink: null === uu.name,
-        confirm: Ru ? "general:reconnect" : uu.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === kk.name,
+        confirm: Fk ? "general:reconnect" : kk.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  6412: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      d: () => du,
-      h: () => bu,
-      l: () => ju,
-      o: () => Wu
+  6343: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      b: () => ik,
+      e: () => Yk,
+      f: () => Wk,
+      g: () => mk
     });
-    var Eu = yu(6418);
-    const Ku = 6,
-      Qu = 3,
-      mu = 1,
-      Ju = 2,
-      Nu = 4,
-      Xu = 8,
-      Vu = 16,
-      ru = 32,
-      Bu = 64,
-      xu = 128,
-      Su = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var Rk = Bk(6349);
+    const tk = 6,
+      ak = 3,
+      Xk = 1,
+      bk = 2,
+      wk = 4,
+      dk = 8,
+      sk = 16,
+      Vk = 32,
+      Jk = 64,
+      Ak = 128,
+      ek = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function pu(uu) {
-      if (!uu) return 0;
-      const Ru = Su.indexOf(uu);
-      if (Ru <= 0) throw new Error(`"${uu}" is not a shader pack hook function`);
-      return Ru
+    function yk(kk) {
+      if (!kk) return 0;
+      const Fk = ek.indexOf(kk);
+      if (Fk <= 0) throw new Error(`"${kk}" is not a shader pack hook function`);
+      return Fk
     }
 
-    function Tu(uu) {
-      if (0 === uu) return null;
-      const Ru = Su[uu];
-      if (void 0 === Ru) throw new Error(`${uu} is not a shader pack hook function id`);
-      return Ru
+    function fk(kk) {
+      if (0 === kk) return null;
+      const Fk = ek[kk];
+      if (void 0 === Fk) throw new Error(`${kk} is not a shader pack hook function id`);
+      return Fk
     }
 
-    function Wu(uu) {
-      const Ru = Eu.c.length;
+    function mk(kk) {
+      const Fk = Rk.d.length;
       return {
-        strict: uu >= Ru,
-        program: Eu.c[uu % Ru]
+        strict: kk >= Fk,
+        program: Rk.d[kk % Fk]
       }
     }
 
-    function ju(uu) {
-      return Number(uu.strict) * Eu.c.length + Eu.c.indexOf(uu.program)
+    function Wk(kk) {
+      return Number(kk.strict) * Rk.d.length + Rk.d.indexOf(kk.program)
     }
 
-    function Hu(uu) {
-      return "" === uu ? [] : uu.split(" ")
+    function vk(kk) {
+      return "" === kk ? [] : kk.split(" ")
     }
 
-    function du(uu) {
-      const Ru = {
-        variantFlags: new Uint8Array(Ku),
-        hooks: new Uint8Array(Ku * Qu),
-        moduleCodes: Array(Ku).fill(""),
-        reads: Array(2 * Ku).fill("")
+    function ik(kk) {
+      const Fk = {
+        variantFlags: new Uint8Array(tk),
+        hooks: new Uint8Array(tk * ak),
+        moduleCodes: Array(tk).fill(""),
+        reads: Array(2 * tk).fill("")
       };
-      for (const yu of uu) {
-        const uu = ju(yu.key),
-          Eu = (uu, Ru) => null === yu.hooks.surface || yu.reads.fragment.includes(uu) ? 0 : Ru;
-        Ru.variantFlags[uu] = (yu.sceneDepth ? mu : 0) | (yu.movesVertices ? Ju : 0) | (yu.sunShadow ? Nu : 0) | (yu.airShadow ? Xu : 0) | (yu.discards ? Vu : 0) | Eu("localPosition", ru) | Eu("enchantSpeed", Bu) | Eu("enchantTier", xu), Ru.hooks[uu * Qu] = pu(yu.hooks.vertex), Ru.hooks[uu * Qu + 1] = pu(yu.hooks.surface), Ru.hooks[uu * Qu + 2] = pu(yu.hooks.light), Ru.moduleCodes[uu] = yu.moduleCode, Ru.reads[2 * uu] = yu.reads.vertex.join(" "), Ru.reads[2 * uu + 1] = yu.reads.fragment.join(" ")
+      for (const Bk of kk) {
+        const kk = Wk(Bk.key),
+          Rk = (kk, Fk) => null === Bk.hooks.surface || Bk.reads.fragment.includes(kk) ? 0 : Fk;
+        Fk.variantFlags[kk] = (Bk.sceneDepth ? Xk : 0) | (Bk.movesVertices ? bk : 0) | (Bk.sunShadow ? wk : 0) | (Bk.airShadow ? dk : 0) | (Bk.discards ? sk : 0) | Rk("localPosition", Vk) | Rk("enchantSpeed", Jk) | Rk("enchantTier", Ak), Fk.hooks[kk * ak] = yk(Bk.hooks.vertex), Fk.hooks[kk * ak + 1] = yk(Bk.hooks.surface), Fk.hooks[kk * ak + 2] = yk(Bk.hooks.light), Fk.moduleCodes[kk] = Bk.moduleCode, Fk.reads[2 * kk] = Bk.reads.vertex.join(" "), Fk.reads[2 * kk + 1] = Bk.reads.fragment.join(" ")
       }
-      return Ru
+      return Fk
     }
 
-    function bu(uu) {
+    function Yk(kk) {
       const {
-        hooks: Ru,
-        moduleCodes: yu,
-        reads: Eu
-      } = uu;
-      return Array.from(uu.variantFlags, ((uu, Ku) => {
-        const ru = Ku * Qu;
+        hooks: Fk,
+        moduleCodes: Bk,
+        reads: Rk
+      } = kk;
+      return Array.from(kk.variantFlags, ((kk, tk) => {
+        const Vk = tk * ak;
         return {
-          key: Wu(Ku),
+          key: mk(tk),
           hooks: {
-            vertex: Tu(Ru[ru]),
-            surface: Tu(Ru[ru + 1]),
-            light: Tu(Ru[ru + 2])
+            vertex: fk(Fk[Vk]),
+            surface: fk(Fk[Vk + 1]),
+            light: fk(Fk[Vk + 2])
           },
-          moduleCode: yu[Ku],
-          sceneDepth: 0 !== (uu & mu),
-          sunShadow: 0 !== (uu & Nu),
-          airShadow: 0 !== (uu & Xu),
-          movesVertices: 0 !== (uu & Ju),
-          discards: 0 !== (uu & Vu),
+          moduleCode: Bk[tk],
+          sceneDepth: 0 !== (kk & Xk),
+          sunShadow: 0 !== (kk & wk),
+          airShadow: 0 !== (kk & dk),
+          movesVertices: 0 !== (kk & bk),
+          discards: 0 !== (kk & sk),
           reads: {
-            vertex: Hu(Eu[2 * Ku]),
-            fragment: Hu(Eu[2 * Ku + 1])
+            vertex: vk(Rk[2 * tk]),
+            fragment: vk(Rk[2 * tk + 1])
           }
         }
       }))
     }
   },
-  40444: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      B: () => pu,
-      D: () => xu,
-      F: () => Su,
-      e: () => Ku,
-      g: () => Eu,
-      k: () => Bu,
-      m: () => Vu,
-      p: () => Tu,
-      s: () => Qu,
-      u: () => Ju,
-      w: () => Nu,
-      y: () => mu
+  40292: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      D: () => ek,
+      e: () => tk,
+      g: () => Rk,
+      h: () => Jk,
+      j: () => sk,
+      m: () => fk,
+      p: () => ak,
+      r: () => bk,
+      s: () => wk,
+      u: () => Xk,
+      v: () => yk,
+      z: () => Ak
     });
-    const Eu = 3,
-      Ku = 0,
-      Qu = 1,
-      mu = 2,
-      Ju = {
+    const Rk = 3,
+      tk = 0,
+      ak = 1,
+      Xk = 2,
+      bk = {
         uniform: 3,
-        WB: 4,
+        jJ: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      Nu = 10,
-      Xu = "BloxdPackInputs",
-      Vu = "bloxdPackInputs",
-      ru = [{
+      wk = 10,
+      dk = "BloxdPackInputs",
+      sk = "bloxdPackInputs",
+      Vk = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -3433,74 +3433,74 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      Bu = 80;
+      Jk = 80;
 
-    function xu() {
-      const uu = ru.map((uu => {
+    function Ak() {
+      const kk = Vk.map((kk => {
         let {
-          name: Ru,
-          type: yu
-        } = uu;
-        return `    ${Ru}: ${yu},\n`
+          name: Fk,
+          type: Bk
+        } = kk;
+        return `    ${Fk}: ${Bk},\n`
       })).join("");
-      return `struct ${Xu} {\n${uu}}\n@group(${Eu}) @binding(${Ku}) var<uniform> ${Vu}: ${Xu};\n`
+      return `struct ${dk} {\n${kk}}\n@group(${Rk}) @binding(${tk}) var<uniform> ${sk}: ${dk};\n`
     }
 
-    function Su(uu, Ru) {
-      const yu = new DataView(uu, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Bu),
-        [Eu, Ku, Qu, mu, Ju, Nu] = ru;
-      yu.setFloat32(Eu.offset, Ru.seconds, !0), yu.setUint32(Ku.offset, Ru.lit ? 1 : 0, !0);
-      for (let Xu = 0; Xu < 3; Xu++) yu.setInt32(Qu.offset + 4 * Xu, Ru.renderOffset[Xu], !0), yu.setFloat32(mu.offset + 4 * Xu, Ru.duu[Xu], !0), yu.setFloat32(Ju.offset + 4 * Xu, Ru.eyePosition[Xu], !0), yu.setFloat32(Nu.offset + 4 * Xu, Ru.shadowDirection[Xu], !0)
+    function ek(kk, Fk) {
+      const Bk = new DataView(kk, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Jk),
+        [Rk, tk, ak, Xk, bk, wk] = Vk;
+      Bk.setFloat32(Rk.offset, Fk.seconds, !0), Bk.setUint32(tk.offset, Fk.lit ? 1 : 0, !0);
+      for (let dk = 0; dk < 3; dk++) Bk.setInt32(ak.offset + 4 * dk, Fk.renderOffset[dk], !0), Bk.setFloat32(Xk.offset + 4 * dk, Fk.w6[dk], !0), Bk.setFloat32(bk.offset + 4 * dk, Fk.eyePosition[dk], !0), Bk.setFloat32(wk.offset + 4 * dk, Fk.shadowDirection[dk], !0)
     }
 
-    function pu(uu) {
-      const Ru = new Uint32Array(Math.max(1, uu.length));
-      return uu.forEach(((uu, yu) => {
+    function yk(kk) {
+      const Fk = new Uint32Array(Math.max(1, kk.length));
+      return kk.forEach(((kk, Bk) => {
         let {
-          id: Eu,
-          rotation: Ku
-        } = uu;
-        Ru[yu] = 65535 & Eu | (3 & Ku) << 16
-      })), Ru
+          id: Rk,
+          rotation: tk
+        } = kk;
+        Fk[Bk] = 65535 & Rk | (3 & tk) << 16
+      })), Fk
     }
-    const Tu = {
+    const fk = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6418: (uu, Ru, yu) => {
-    yu.d(Ru, {
-      c: () => Eu,
-      g: () => mu,
-      h: () => Ju,
-      i: () => Ku,
-      j: () => Qu
+  6349: (kk, Fk, Bk) => {
+    Bk.d(Fk, {
+      d: () => Rk,
+      g: () => Xk,
+      h: () => bk,
+      l: () => tk,
+      m: () => ak
     });
-    const Eu = ["terrain", "liquid", "model"];
+    const Rk = ["terrain", "liquid", "model"];
 
-    function Ku() {
-      const uu = [];
-      for (const Ru of [!1, !0])
-        for (const yu of Eu) uu.push({
-          strict: Ru,
-          program: yu
+    function tk() {
+      const kk = [];
+      for (const Fk of [!1, !0])
+        for (const Bk of Rk) kk.push({
+          strict: Fk,
+          program: Bk
         });
-      return uu
+      return kk
     }
 
-    function Qu(uu) {
-      return `${uu.strict?"strict":"allow"}.${uu.program}`
+    function ak(kk) {
+      return `${kk.strict?"strict":"allow"}.${kk.program}`
     }
 
-    function mu(uu) {
-      return !uu.hooks.vertex && !uu.hooks.surface && !uu.hooks.light
+    function Xk(kk) {
+      return !kk.hooks.vertex && !kk.hooks.surface && !kk.hooks.light
     }
 
-    function Ju(uu, Ru) {
-      return "off" !== Ru && (null === uu || uu.some((uu => uu.key.strict === ("strict" === Ru) && !mu(uu))))
+    function bk(kk, Fk) {
+      return "off" !== Fk && (null === kk || kk.some((kk => kk.key.strict === ("strict" === Fk) && !Xk(kk))))
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);

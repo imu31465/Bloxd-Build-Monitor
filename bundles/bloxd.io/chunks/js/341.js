@@ -1,68 +1,68 @@
 export const id = 341;
 export const ids = [341];
 export const modules = {
-  42109: (uu, Ru, yu) => {
-    function Eu(uu) {
-      return Math.floor(uu / 8)
+  41970: (kk, Fk, Bk) => {
+    function Rk(kk) {
+      return Math.floor(kk / 8)
     }
 
-    function Ku(uu) {
-      return 1 << uu % 8
+    function tk(kk) {
+      return 1 << kk % 8
     }
-    yu.d(Ru, {
-      OptimizeIndices: () => mu
+    Bk.d(Fk, {
+      OptimizeIndices: () => Xk
     });
-    class Qu {
-      constructor(uu) {
-        this.size = uu, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class ak {
+      constructor(kk) {
+        this.size = kk, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(uu) {
-        if (uu >= this.size) throw new RangeError("Bit index out of range");
-        const Ru = Eu(uu),
-          yu = Ku(uu);
-        return 0 !== (this._byteArray[Ru] & yu)
+      get(kk) {
+        if (kk >= this.size) throw new RangeError("Bit index out of range");
+        const Fk = Rk(kk),
+          Bk = tk(kk);
+        return 0 !== (this._byteArray[Fk] & Bk)
       }
-      set(uu, Ru) {
-        if (uu >= this.size) throw new RangeError("Bit index out of range");
-        const yu = Eu(uu),
-          Qu = Ku(uu);
-        Ru ? this._byteArray[yu] |= Qu : this._byteArray[yu] &= ~Qu
+      set(kk, Fk) {
+        if (kk >= this.size) throw new RangeError("Bit index out of range");
+        const Bk = Rk(kk),
+          ak = tk(kk);
+        Fk ? this._byteArray[Bk] |= ak : this._byteArray[Bk] &= ~ak
       }
     }
 
-    function mu(uu) {
-      const Ru = [],
-        yu = uu.length / 3;
-      for (let Qu = 0; Qu < yu; Qu++) Ru.push([uu[3 * Qu], uu[3 * Qu + 1], uu[3 * Qu + 2]]);
-      const Eu = new Map;
-      for (let Qu = 0; Qu < Ru.length; Qu++) {
-        const uu = Ru[Qu];
-        for (const Ru of uu) {
-          let uu = Eu.get(Ru);
-          uu || Eu.set(Ru, uu = []), uu.push(Qu)
+    function Xk(kk) {
+      const Fk = [],
+        Bk = kk.length / 3;
+      for (let ak = 0; ak < Bk; ak++) Fk.push([kk[3 * ak], kk[3 * ak + 1], kk[3 * ak + 2]]);
+      const Rk = new Map;
+      for (let ak = 0; ak < Fk.length; ak++) {
+        const kk = Fk[ak];
+        for (const Fk of kk) {
+          let kk = Rk.get(Fk);
+          kk || Rk.set(Fk, kk = []), kk.push(ak)
         }
       }
-      const Ku = new Qu(yu),
-        mu = [],
-        Ju = uu => {
-          const yu = [uu];
-          for (; yu.length > 0;) {
-            const uu = yu.pop();
-            if (!Ku.get(uu)) {
-              Ku.set(uu, !0), mu.push(Ru[uu]);
-              for (const Qu of Ru[uu]) {
-                const uu = Eu.get(Qu);
-                if (!uu) return;
-                for (const Ru of uu) Ku.get(Ru) || yu.push(Ru)
+      const tk = new ak(Bk),
+        Xk = [],
+        bk = kk => {
+          const Bk = [kk];
+          for (; Bk.length > 0;) {
+            const kk = Bk.pop();
+            if (!tk.get(kk)) {
+              tk.set(kk, !0), Xk.push(Fk[kk]);
+              for (const ak of Fk[kk]) {
+                const kk = Rk.get(ak);
+                if (!kk) return;
+                for (const Fk of kk) tk.get(Fk) || Bk.push(Fk)
               }
             }
           }
         };
-      for (let Qu = 0; Qu < yu; Qu++) Ku.get(Qu) || Ju(Qu);
-      let Nu = 0;
-      for (const Qu of mu) uu[Nu++] = Qu[0], uu[Nu++] = Qu[1], uu[Nu++] = Qu[2]
+      for (let ak = 0; ak < Bk; ak++) tk.get(ak) || bk(ak);
+      let wk = 0;
+      for (const ak of Xk) kk[wk++] = ak[0], kk[wk++] = ak[1], kk[wk++] = ak[2]
     }
   }
 };
 Object.freeze(modules);
-for (const uu in modules) Object.freeze(modules[uu]);
+for (const kk in modules) Object.freeze(modules[kk]);
